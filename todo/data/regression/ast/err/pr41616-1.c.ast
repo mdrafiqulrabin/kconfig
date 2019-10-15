@@ -1,0 +1,64 @@
+../Data/C2AST/pr41616-1.c:4:10: fatal error: 'guality.h' file not found
+#include "guality.h"
+         ^~~~~~~~~~~
+TranslationUnitDecl 0x7fab5582b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab5582b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fab5582b580 '__int128'
+|-TypedefDecl 0x7fab5582b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fab5582b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fab5582bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fab5582b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fab5582b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fab5582bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fab5582bc00 'char *'
+|   `-BuiltinType 0x7fab5582b380 'char'
+|-TypedefDecl 0x7fab5582bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fab5582beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fab5582bd20 'struct __va_list_tag'
+|     `-Record 0x7fab5582bc98 '__va_list_tag'
+|-FunctionDecl 0x7fab56015268 <../Data/C2AST/pr41616-1.c:6:1, line:9:1> line:6:12 used f 'int (int *)' inline
+| |-ParmVarDecl 0x7fab5582bfa0 <col:14, col:19> col:19 used a 'int *'
+| `-CompoundStmt 0x7fab560153e0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fab560153c8 <line:8:3, col:11>
+|     `-ImplicitCastExpr 0x7fab560153b0 <col:10, col:11> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7fab56015390 <col:10, col:11> 'int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fab56015378 <col:11> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fab56015350 <col:11> 'int *' lvalue ParmVar 0x7fab5582bfa0 'a' 'int *'
+`-FunctionDecl 0x7fab56015638 <line:11:1, line:20:1> line:12:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fab56015410 <col:6, col:10> col:10 used argc 'int'
+  |-ParmVarDecl 0x7fab56015520 <col:16, col:27> col:22 argv 'char **':'char **'
+  `-CompoundStmt 0x7fab56015cb8 <line:13:1, line:20:1>
+    |-DeclStmt 0x7fab560157a0 <line:14:3, col:13>
+    | `-VarDecl 0x7fab56015700 <col:3, col:12> col:7 used b 'int' cinit
+    |   `-UnaryOperator 0x7fab56015780 <col:11, col:12> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fab56015760 <col:12> 'int' 1
+    |-CallExpr 0x7fab56015950 <line:15:3, col:16> 'int'
+    | |-ImplicitCastExpr 0x7fab56015938 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fab560158c0 <col:3> 'int ()' Function 0x7fab56015810 'GUALCHKVAL' 'int ()'
+    | `-ImplicitCastExpr 0x7fab56015980 <col:15> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fab560158e8 <col:15> 'int' lvalue Var 0x7fab56015700 'b' 'int'
+    |-IfStmt 0x7fab56015b78 <line:16:3, line:17:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fab560159f8 <line:16:7, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fab560159e0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fab56015998 <col:7> 'int' lvalue ParmVar 0x7fab56015410 'argc' 'int'
+    | | `-IntegerLiteral 0x7fab560159c0 <col:14> 'int' 0
+    | |-BinaryOperator 0x7fab56015b50 <line:17:5, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fab56015a20 <col:5> 'int' lvalue Var 0x7fab56015700 'b' 'int'
+    | | `-UnaryOperator 0x7fab56015b30 <col:9, col:14> 'int' prefix '-'
+    | |   `-CallExpr 0x7fab56015b00 <col:10, col:14> 'int'
+    | |     |-ImplicitCastExpr 0x7fab56015ae8 <col:10> 'int (*)(int *)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fab56015a48 <col:10> 'int (int *)' Function 0x7fab56015268 'f' 'int (int *)'
+    | |     `-UnaryOperator 0x7fab56015a98 <col:12, col:13> 'int *' prefix '&'
+    | |       `-DeclRefExpr 0x7fab56015a70 <col:13> 'int' lvalue Var 0x7fab56015700 'b' 'int'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fab56015c18 <line:18:3, col:16> 'int'
+    | |-ImplicitCastExpr 0x7fab56015c00 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fab56015bb0 <col:3> 'int ()' Function 0x7fab56015810 'GUALCHKVAL' 'int ()'
+    | `-ImplicitCastExpr 0x7fab56015c48 <col:15> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fab56015bd8 <col:15> 'int' lvalue Var 0x7fab56015700 'b' 'int'
+    1 error generated.
+`-ReturnStmt 0x7fab56015ca0 <line:19:3, col:10>
+      `-ImplicitCastExpr 0x7fab56015c88 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fab56015c60 <col:10> 'int' lvalue Var 0x7fab56015700 'b' 'int'

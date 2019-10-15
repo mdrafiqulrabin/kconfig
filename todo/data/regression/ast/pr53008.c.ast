@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f91c882b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f91c8015cb8 <../Data/C2AST/pr53008.c:4:1, col:50> col:42 used fn 'void (*)(void)'
+|-FunctionDecl 0x7f91c8015de8 <line:6:1, line:9:1> line:7:1 used foo 'void (void)' static
+| `-CompoundStmt 0x7f91c8015e88 <line:8:1, line:9:1>
+`-FunctionDecl 0x7f91c8015f28 <line:11:1, line:14:1> line:11:6 set_fn 'void (void)'
+  `-CompoundStmt 0x7f91c8016058 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7f91c8016030 <line:13:3, col:8> 'void (*)(void)' '='
+      |-DeclRefExpr 0x7f91c8015fc8 <col:3> 'void (*)(void)' lvalue Var 0x7f91c8015cb8 'fn' 'void (*)(void)'
+      `-ImplicitCastExpr 0x7f91c8016018 <col:8> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f91c8015ff0 <col:8> 'void (void)' Function 0x7f91c8015de8 'foo' 'void (void)'

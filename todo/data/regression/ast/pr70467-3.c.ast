@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7ff5ea82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff5ea86d8a0 <../Data/C2AST/pr70467-3.c:5:1, line:9:1> line:6:1 foo '__uint128_t (__uint128_t)'
+| |-ParmVarDecl 0x7ff5ea82c990 <col:6, col:18> col:18 used x '__uint128_t':'unsigned __int128'
+| `-CompoundStmt 0x7ff5ea86dac8 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ff5ea86dab0 <line:8:3, col:41>
+|     `-BinaryOperator 0x7ff5ea86da88 <col:10, col:41> 'unsigned __int128' '+'
+|       |-ImplicitCastExpr 0x7ff5ea86da70 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff5ea86d988 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7ff5ea82c990 'x' '__uint128_t':'unsigned __int128'
+|       `-ParenExpr 0x7ff5ea86da50 <col:14, col:41> '__uint128_t':'unsigned __int128'
+|         `-BinaryOperator 0x7ff5ea86da28 <col:15, col:39> '__uint128_t':'unsigned __int128' '<<'
+|           |-CStyleCastExpr 0x7ff5ea86d9e0 <col:15, col:29> '__uint128_t':'unsigned __int128' <IntegralCast>
+|           | `-IntegerLiteral 0x7ff5ea86d9b0 <col:29> 'int' 123456
+|           `-IntegerLiteral 0x7ff5ea86da08 <col:39> 'int' 64
+`-FunctionDecl 0x7ff5ea86db78 <line:11:1, line:15:1> line:12:1 bar '__uint128_t (__uint128_t)'
+  |-ParmVarDecl 0x7ff5ea86daf0 <col:6, col:18> col:18 used x '__uint128_t':'unsigned __int128'
+  `-CompoundStmt 0x7ff5ea86dd60 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7ff5ea86dd48 <line:14:3, col:41>
+      `-BinaryOperator 0x7ff5ea86dd20 <col:10, col:41> 'unsigned __int128' '-'
+        |-ImplicitCastExpr 0x7ff5ea86dd08 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+        | `-DeclRefExpr 0x7ff5ea86dc20 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7ff5ea86daf0 'x' '__uint128_t':'unsigned __int128'
+        `-ParenExpr 0x7ff5ea86dce8 <col:14, col:41> '__uint128_t':'unsigned __int128'
+          `-BinaryOperator 0x7ff5ea86dcc0 <col:15, col:39> '__uint128_t':'unsigned __int128' '<<'
+            |-CStyleCastExpr 0x7ff5ea86dc78 <col:15, col:29> '__uint128_t':'unsigned __int128' <IntegralCast>
+            | `-IntegerLiteral 0x7ff5ea86dc48 <col:29> 'int' 123456
+            `-IntegerLiteral 0x7ff5ea86dca0 <col:39> 'int' 64

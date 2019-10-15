@@ -1,0 +1,1212 @@
+TranslationUnitDecl 0x7fbb5602bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fbb5602c960 <../Data/C2AST/pr50908.c:5:1, line:9:1> line:5:6 Lisp_Type
+| |-EnumConstantDecl 0x7fbb57807040 <line:7:3, col:15> col:3 Lisp_Int0 'int'
+| | `-IntegerLiteral 0x7fbb57807020 <col:15> 'int' 0
+| |-EnumConstantDecl 0x7fbb578070a8 <col:18, col:30> col:18 Lisp_Int1 'int'
+| | `-IntegerLiteral 0x7fbb57807088 <col:30> 'int' 4
+| |-EnumConstantDecl 0x7fbb57807110 <col:33, col:47> col:33 Lisp_Symbol 'int'
+| | `-IntegerLiteral 0x7fbb578070f0 <col:47> 'int' 2
+| |-EnumConstantDecl 0x7fbb57807178 <col:50, col:62> col:50 Lisp_Misc 'int'
+| | `-IntegerLiteral 0x7fbb57807158 <col:62> 'int' 3
+| |-EnumConstantDecl 0x7fbb578071e0 <col:65, line:8:5> line:7:65 Lisp_String 'int'
+| | `-IntegerLiteral 0x7fbb578071c0 <line:8:5> 'int' 1
+| |-EnumConstantDecl 0x7fbb57807248 <col:8, col:26> col:8 referenced Lisp_Vectorlike 'int'
+| | `-IntegerLiteral 0x7fbb57807228 <col:26> 'int' 5
+| |-EnumConstantDecl 0x7fbb578072b0 <col:29, col:41> col:29 Lisp_Cons 'int'
+| | `-IntegerLiteral 0x7fbb57807290 <col:41> 'int' 6
+| `-EnumConstantDecl 0x7fbb57807318 <col:44, col:57> col:44 Lisp_Float 'int'
+|   `-IntegerLiteral 0x7fbb578072f8 <col:57> 'int' 7
+|-TypedefDecl 0x7fbb57807378 <line:10:1, col:14> col:14 referenced Lisp_Object 'long'
+| `-BuiltinType 0x7fbb5602be00 'long'
+|-EnumDecl 0x7fbb578073d0 <line:11:1, line:20:1> line:11:6 pvec_type
+| |-EnumConstantDecl 0x7fbb578074b0 <line:13:3, col:24> col:3 PVEC_NORMAL_VECTOR 'int'
+| | `-IntegerLiteral 0x7fbb57807490 <col:24> 'int' 0
+| |-EnumConstantDecl 0x7fbb57807518 <col:27, col:42> col:27 PVEC_PROCESS 'int'
+| | `-IntegerLiteral 0x7fbb578074f8 <col:42> 'int' 512
+| |-EnumConstantDecl 0x7fbb57807580 <col:49, line:14:5> line:13:49 PVEC_FRAME 'int'
+| | `-IntegerLiteral 0x7fbb57807560 <line:14:5> 'int' 1024
+| |-EnumConstantDecl 0x7fbb578075e8 <col:12, col:28> col:12 PVEC_COMPILED 'int'
+| | `-IntegerLiteral 0x7fbb578075c8 <col:28> 'int' 2048
+| |-EnumConstantDecl 0x7fbb57807650 <col:35, line:15:5> line:14:35 PVEC_WINDOW 'int'
+| | `-IntegerLiteral 0x7fbb57807630 <line:15:5> 'int' 4096
+| |-EnumConstantDecl 0x7fbb578076b8 <col:13, col:41> col:13 PVEC_WINDOW_CONFIGURATION 'int'
+| | `-IntegerLiteral 0x7fbb57807698 <col:41> 'int' 8192
+| |-EnumConstantDecl 0x7fbb57807720 <col:49, line:16:5> line:15:49 PVEC_SUBR 'int'
+| | `-IntegerLiteral 0x7fbb57807700 <line:16:5> 'int' 16384
+| |-EnumConstantDecl 0x7fbb57807788 <col:13, col:31> col:13 PVEC_CHAR_TABLE 'int'
+| | `-IntegerLiteral 0x7fbb57807768 <col:31> 'int' 32768
+| |-EnumConstantDecl 0x7fbb578077f0 <col:39, line:17:5> line:16:39 PVEC_BOOL_VECTOR 'int'
+| | `-IntegerLiteral 0x7fbb578077d0 <line:17:5> 'int' 65536
+| |-EnumConstantDecl 0x7fbb57807858 <col:14, col:28> col:14 PVEC_BUFFER 'int'
+| | `-IntegerLiteral 0x7fbb57807838 <col:28> 'int' 131072
+| |-EnumConstantDecl 0x7fbb578078c0 <col:37, col:55> col:37 PVEC_HASH_TABLE 'int'
+| | `-IntegerLiteral 0x7fbb578078a0 <col:55> 'int' 262144
+| |-EnumConstantDecl 0x7fbb57807928 <col:64, line:18:5> line:17:64 PVEC_TERMINAL 'int'
+| | `-IntegerLiteral 0x7fbb57807908 <line:18:5> 'int' 524288
+| |-EnumConstantDecl 0x7fbb57807990 <col:14, col:36> col:14 referenced PVEC_SUB_CHAR_TABLE 'int'
+| | `-IntegerLiteral 0x7fbb57807970 <col:36> 'int' 1048576
+| |-EnumConstantDecl 0x7fbb578079f8 <col:46, line:19:5> line:18:46 PVEC_FONT 'int'
+| | `-IntegerLiteral 0x7fbb578079d8 <line:19:5> 'int' 2097152
+| |-EnumConstantDecl 0x7fbb57807a60 <col:15, col:28> col:15 PVEC_OTHER 'int'
+| | `-IntegerLiteral 0x7fbb57807a40 <col:28> 'int' 4194304
+| `-EnumConstantDecl 0x7fbb57807ac8 <col:38, col:55> col:38 PVEC_TYPE_MASK 'int'
+|   `-IntegerLiteral 0x7fbb57807aa8 <col:55> 'int' 8388096
+|-RecordDecl 0x7fbb57807b10 <line:21:1, line:24:1> line:21:8 struct Lisp_Vector definition
+| `-FieldDecl 0x7fbb57807bd8 <line:23:3, col:17> col:17 referenced size 'unsigned long'
+|-RecordDecl 0x7fbb57807c20 <line:25:1, line:29:1> line:25:8 struct Lisp_Char_Table definition
+| |-FieldDecl 0x7fbb57807d00 <line:27:3, col:15> col:15 referenced defalt 'Lisp_Object':'long'
+| `-FieldDecl 0x7fbb57807d58 <line:28:3, col:15> col:15 referenced ascii 'Lisp_Object':'long'
+|-RecordDecl 0x7fbb57807da0 <line:30:1, line:33:1> line:30:8 struct Lisp_Sub_Char_Table definition
+| `-FieldDecl 0x7fbb57807f08 <line:32:3, col:25> col:15 referenced contents 'Lisp_Object [1]'
+|-VarDecl 0x7fbb57807f60 <line:34:1, col:20> col:20 used Qnil 'Lisp_Object':'long' extern
+|-VarDecl 0x7fbb5781fa10 <col:1, col:26> col:26 Qt 'Lisp_Object':'long' extern
+|-VarDecl 0x7fbb5781fa80 <col:1, col:30> col:30 Qquote 'Lisp_Object':'long' extern
+|-VarDecl 0x7fbb5781faf0 <col:1, col:38> col:38 Qlambda 'Lisp_Object':'long' extern
+|-VarDecl 0x7fbb5781fb60 <col:1, col:47> col:47 Qsubr 'Lisp_Object':'long' extern
+|-VarDecl 0x7fbb5781fbd0 <col:1, col:54> col:54 Qunbound 'Lisp_Object':'long' extern
+|-RecordDecl 0x7fbb5781fc68 <line:35:1, line:40:1> line:35:8 struct buffer_text definition
+| |-FieldDecl 0x7fbb5781fd50 <line:37:3, col:18> col:18 referenced beg 'unsigned char *'
+| |-FieldDecl 0x7fbb5781fdb0 <line:38:3, col:8> col:8 referenced gpt_byte 'long'
+| `-FieldDecl 0x7fbb5781fe10 <line:39:3, col:8> col:8 referenced gap_size 'long'
+|-RecordDecl 0x7fbb5781fe58 <line:41:1, line:47:1> line:41:8 struct buffer definition
+| |-FieldDecl 0x7fbb5781ffb0 <line:43:3, col:23> col:23 referenced text 'struct buffer_text *'
+| |-RecordDecl 0x7fbb5781fff8 parent 0x7fbb5602bce8 <line:44:3, col:10> col:10 struct region_cache
+| |-FieldDecl 0x7fbb57820160 <col:3, col:24> col:24 referenced width_run_cache 'struct region_cache *'
+| |-FieldDecl 0x7fbb578201b8 <line:45:3, col:15> col:15 referenced tab_width 'Lisp_Object':'long'
+| `-FieldDecl 0x7fbb57820210 <line:46:3, col:15> col:15 referenced ctl_arrow 'Lisp_Object':'long'
+|-VarDecl 0x7fbb57820310 <line:48:1, col:23> col:23 used current_buffer 'struct buffer *' extern
+|-VarDecl 0x7fbb57820380 <line:49:1, col:20> col:20 used Vchar_width_table 'Lisp_Object':'long' extern
+|-RecordDecl 0x7fbb578203e0 <line:50:1, line:53:1> line:50:8 struct frame definition
+| |-FieldDecl 0x7fbb578204a8 <line:52:3, col:8> col:8 text_lines 'long'
+| `-FieldDecl 0x7fbb57820508 <col:3, col:20> col:20 referenced text_cols 'long'
+|-RecordDecl 0x7fbb57820550 <line:54:1, line:57:1> line:54:8 struct window definition
+| `-FieldDecl 0x7fbb57820610 <line:56:3, col:15> col:15 referenced frame 'Lisp_Object':'long'
+|-VarDecl 0x7fbb57820668 <line:58:1, col:20> col:20 used Vtruncate_partial_width_windows 'Lisp_Object':'long' extern
+|-FunctionDecl 0x7fbb57820928 <line:59:1, col:69> col:32 used window_display_table 'struct Lisp_Char_Table *(struct window *)' extern
+| `-ParmVarDecl 0x7fbb57820780 <col:54, col:68> col:69 'struct window *'
+|-FunctionDecl 0x7fbb57825dd8 <line:60:1, col:48> col:6 used find_before_next_newline 'long (long, long, long)'
+| |-ParmVarDecl 0x7fbb57825c00 <col:32> col:36 'long'
+| |-ParmVarDecl 0x7fbb57825c78 <col:38> col:42 'long'
+| `-ParmVarDecl 0x7fbb57825cf0 <col:44> col:48 'long'
+|-FunctionDecl 0x7fbb57826048 <line:61:1, col:53> col:6 used disp_char_vector 'long (struct Lisp_Char_Table *, int)'
+| |-ParmVarDecl 0x7fbb57825eb8 <col:24, col:47> col:48 'struct Lisp_Char_Table *'
+| `-ParmVarDecl 0x7fbb57825f30 <col:50> col:53 'int'
+|-FunctionDecl 0x7fbb57826298 <line:62:1, col:38> col:6 used char_table_ref 'long (Lisp_Object, int)'
+| |-ParmVarDecl 0x7fbb57826108 <col:22> col:33 'Lisp_Object':'long'
+| `-ParmVarDecl 0x7fbb57826180 <col:35> col:38 'int'
+|-RecordDecl 0x7fbb57826348 <line:63:1, col:8> col:8 struct position
+`-FunctionDecl 0x7fbb57827c00 <col:1, line:179:1> line:64:1 compute_motion 'struct position *(long, long, long, int, long, long, long, int, int, int, struct window *)'
+  |-ParmVarDecl 0x7fbb578265e8 <line:67:6, col:11> col:11 from 'long'
+  |-ParmVarDecl 0x7fbb57826660 <col:6, col:17> col:17 fromvpos 'long'
+  |-ParmVarDecl 0x7fbb578266d8 <col:6, col:27> col:27 used fromhpos 'long'
+  |-ParmVarDecl 0x7fbb57826408 <line:66:6, col:10> col:10 did_motion 'int'
+  |-ParmVarDecl 0x7fbb57826750 <line:67:6, col:37> col:37 used to 'long'
+  |-ParmVarDecl 0x7fbb578267c8 <col:6, col:41> col:41 tovpos 'long'
+  |-ParmVarDecl 0x7fbb57826840 <col:6, col:49> col:49 tohpos 'long'
+  |-ParmVarDecl 0x7fbb57826480 <line:66:6, col:22> col:22 used width 'int'
+  |-ParmVarDecl 0x7fbb578264f8 <col:6, col:29> col:29 hscroll 'int'
+  |-ParmVarDecl 0x7fbb57826570 <col:6, col:38> col:38 tab_offset 'int'
+  |-ParmVarDecl 0x7fbb578268c8 <line:68:6, col:21> col:21 used win 'struct window *'
+  `-CompoundStmt 0x7fbb5680d498 <line:69:1, line:179:1>
+    |-DeclStmt 0x7fbb57827db0 <line:70:3, col:32>
+    | `-VarDecl 0x7fbb57827d10 <col:3, col:24> col:17 used hpos 'long' register cinit
+    |   `-ImplicitCastExpr 0x7fbb57827d98 <col:24> 'long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fbb57827d70 <col:24> 'long' lvalue ParmVar 0x7fbb578266d8 'fromhpos' 'long'
+    |-DeclStmt 0x7fbb57827e40 <line:71:3, col:20>
+    | `-VarDecl 0x7fbb57827de0 <col:3, col:17> col:17 used pos 'long' register
+    |-DeclStmt 0x7fbb57827ed0 <line:72:3, col:16>
+    | `-VarDecl 0x7fbb57827e70 <col:3, col:8> col:8 used pos_byte 'long'
+    |-DeclStmt 0x7fbb57827f80 <line:73:3, col:21>
+    | `-VarDecl 0x7fbb57827f00 <col:3, col:20> col:16 used c 'int' register cinit
+    |   `-IntegerLiteral 0x7fbb57827f60 <col:20> 'int' 0
+    |-DeclStmt 0x7fbb57828128 <line:74:3, col:67>
+    | `-VarDecl 0x7fbb57827fc0 <col:3, col:66> col:36 used dp 'struct Lisp_Char_Table *' register cinit
+    |   `-CallExpr 0x7fbb578280e0 <col:41, col:66> 'struct Lisp_Char_Table *'
+    |     |-ImplicitCastExpr 0x7fbb578280c8 <col:41> 'struct Lisp_Char_Table *(*)(struct window *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fbb57828020 <col:41> 'struct Lisp_Char_Table *(struct window *)' Function 0x7fbb57820928 'window_display_table' 'struct Lisp_Char_Table *(struct window *)'
+    |     `-ImplicitCastExpr 0x7fbb57828110 <col:63> 'struct window *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fbb57828048 <col:63> 'struct window *' lvalue ParmVar 0x7fbb578268c8 'win' 'struct window *'
+    |-DeclStmt 0x7fbb578281f0 <line:75:3, col:32>
+    | `-VarDecl 0x7fbb57828158 <col:3, col:31> col:8 used wide_column_end_hpos 'long' cinit
+    |   `-ImplicitCastExpr 0x7fbb578281d8 <col:31> 'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fbb578281b8 <col:31> 'int' 0
+    |-DeclStmt 0x7fbb57828280 <line:76:3, col:32>
+    | `-VarDecl 0x7fbb57828220 <col:3, col:8> col:8 used continuation_glyph_width 'long'
+    `-WhileStmt 0x7fbb5680d478 <line:77:3, line:178:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fbb57828298 <line:77:10> 'int' 1
+      `-CompoundStmt 0x7fbb5680d460 <line:78:5, line:178:5>
+        `-IfStmt 0x7fbb5680d428 <line:79:7, line:177:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fbb57828350 <line:79:11, col:18> 'int' '>'
+          | |-ImplicitCastExpr 0x7fbb57828308 <col:11> 'long' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fbb578282b8 <col:11> 'long' lvalue Var 0x7fbb57827d10 'hpos' 'long'
+          | `-ImplicitCastExpr 0x7fbb57828338 <col:18> 'long' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7fbb57828320 <col:18> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fbb578282e0 <col:18> 'int' lvalue ParmVar 0x7fbb57826480 'width' 'int'
+          |-CompoundStmt 0x7fbb568048f0 <line:80:2, line:98:2>
+          | |-DeclStmt 0x7fbb578284c8 <line:81:4, col:54>
+          | | `-VarDecl 0x7fbb57828390 <col:4, col:30> col:8 used total_width 'int' cinit
+          | |   `-ImplicitCastExpr 0x7fbb578284b0 <col:22, col:30> 'int' <IntegralCast>
+          | |     `-BinaryOperator 0x7fbb57828488 <col:22, col:30> 'long' '+'
+          | |       |-ImplicitCastExpr 0x7fbb57828470 <col:22> 'long' <IntegralCast>
+          | |       | `-ImplicitCastExpr 0x7fbb57828440 <col:22> 'int' <LValueToRValue>
+          | |       |   `-DeclRefExpr 0x7fbb578283f0 <col:22> 'int' lvalue ParmVar 0x7fbb57826480 'width' 'int'
+          | |       `-ImplicitCastExpr 0x7fbb57828458 <col:30> 'long' <LValueToRValue>
+          | |         `-DeclRefExpr 0x7fbb57828418 <col:30> 'long' lvalue Var 0x7fbb57828220 'continuation_glyph_width' 'long'
+          | `-IfStmt 0x7fbb568048b8 <line:82:4, line:97:6>
+          |   |-<<<NULL>>>
+          |   |-<<<NULL>>>
+          |   |-BinaryOperator 0x7fbb56804400 <line:82:8, line:87:28> 'int' '&&'
+          |   | |-UnaryOperator 0x7fbb578285e8 <line:82:8, col:53> 'int' prefix '!'
+          |   | | `-ParenExpr 0x7fbb578285c8 <col:9, col:53> 'int'
+          |   | |   `-BinaryOperator 0x7fbb578285a0 <col:10, col:52> 'int' '=='
+          |   | |     |-ImplicitCastExpr 0x7fbb57828570 <col:10, col:42> 'Lisp_Object':'long' <LValueToRValue>
+          |   | |     | `-ParenExpr 0x7fbb57828508 <col:10, col:42> 'Lisp_Object':'long' lvalue
+          |   | |     |   `-DeclRefExpr 0x7fbb578284e0 <col:11> 'Lisp_Object':'long' lvalue Var 0x7fbb57820668 'Vtruncate_partial_width_windows' 'Lisp_Object':'long'
+          |   | |     `-ImplicitCastExpr 0x7fbb57828588 <col:47, col:52> 'Lisp_Object':'long' <LValueToRValue>
+          |   | |       `-ParenExpr 0x7fbb57828550 <col:47, col:52> 'Lisp_Object':'long' lvalue
+          |   | |         `-DeclRefExpr 0x7fbb57828528 <col:48> 'Lisp_Object':'long' lvalue Var 0x7fbb57807f60 'Qnil' 'Lisp_Object':'long'
+          |   | `-ParenExpr 0x7fbb57828bd8 <line:83:11, line:87:28> 'int'
+          |   |   `-BinaryOperator 0x7fbb57828bb0 <line:83:12, line:87:19> 'int' '<'
+          |   |     |-ImplicitCastExpr 0x7fbb57828b98 <line:83:12> 'long' <IntegralCast>
+          |   |     | `-ImplicitCastExpr 0x7fbb57828b68 <col:12> 'int' <LValueToRValue>
+          |   |     |   `-DeclRefExpr 0x7fbb57828608 <col:12> 'int' lvalue Var 0x7fbb57828390 'total_width' 'int'
+          |   |     `-ImplicitCastExpr 0x7fbb57828b80 <line:84:5, line:87:19> 'long' <LValueToRValue>
+          |   |       `-MemberExpr 0x7fbb57828b30 <line:84:5, line:87:19> 'long' lvalue ->text_cols 0x7fbb57820508
+          |   |         `-ParenExpr 0x7fbb57828b10 <line:84:5, line:87:16> 'struct frame *'
+          |   |           `-ParenExpr 0x7fbb57828af0 <line:84:6, line:87:15> 'struct frame *'
+          |   |             `-BinaryOperator 0x7fbb57828ac8 <line:84:7, line:87:14> 'struct frame *' ','
+          |   |               |-CStyleCastExpr 0x7fbb57828660 <line:84:7, col:14> 'void' <ToVoid>
+          |   |               | `-IntegerLiteral 0x7fbb57828630 <col:14> 'int' 0
+          |   |               `-CStyleCastExpr 0x7fbb57828aa0 <line:85:7, line:87:14> 'struct frame *' <IntegralToPointer>
+          |   |                 `-ParenExpr 0x7fbb57828a80 <line:86:11, line:87:14> 'long'
+          |   |                   `-CStyleCastExpr 0x7fbb57828970 <line:86:12, line:87:13> 'long' <NoOp>
+          |   |                     `-ParenExpr 0x7fbb57828950 <line:86:19, line:87:13> 'long'
+          |   |                       `-BinaryOperator 0x7fbb578288e0 <line:86:20, line:87:12> 'long' '&'
+          |   |                         |-ImplicitCastExpr 0x7fbb578288c8 <line:86:20, col:33> 'Lisp_Object':'long' <LValueToRValue>
+          |   |                         | `-ParenExpr 0x7fbb57828720 <col:20, col:33> 'Lisp_Object':'long' lvalue
+          |   |                         |   `-MemberExpr 0x7fbb578286e8 <col:21, col:28> 'Lisp_Object':'long' lvalue ->frame 0x7fbb57820610
+          |   |                         |     `-ImplicitCastExpr 0x7fbb578286d0 <col:21, col:25> 'struct window *' <LValueToRValue>
+          |   |                         |       `-ParenExpr 0x7fbb578286b0 <col:21, col:25> 'struct window *' lvalue
+          |   |                         |         `-DeclRefExpr 0x7fbb57828688 <col:22> 'struct window *' lvalue ParmVar 0x7fbb578268c8 'win' 'struct window *'
+          |   |                         `-UnaryOperator 0x7fbb578288a8 <col:37, line:87:12> 'long' prefix '~'
+          |   |                           `-ParenExpr 0x7fbb57828888 <line:86:38, line:87:12> 'long'
+          |   |                             `-BinaryOperator 0x7fbb57828860 <line:86:39, line:87:11> 'long' '-'
+          |   |                               |-ParenExpr 0x7fbb57828808 <line:86:39, col:55> 'long'
+          |   |                               | `-BinaryOperator 0x7fbb578287e0 <col:40, col:54> 'long' '<<'
+          |   |                               |   |-ParenExpr 0x7fbb578287a0 <col:40, col:49> 'long'
+          |   |                               |   | `-CStyleCastExpr 0x7fbb57828778 <col:41, col:48> 'long' <IntegralCast>
+          |   |                               |   |   `-IntegerLiteral 0x7fbb57828740 <col:48> 'int' 1
+          |   |                               |   `-IntegerLiteral 0x7fbb578287c0 <col:54> 'int' 3
+          |   |                               `-ImplicitCastExpr 0x7fbb57828848 <line:87:11> 'long' <IntegralCast>
+          |   |                                 `-IntegerLiteral 0x7fbb57828828 <col:11> 'int' 1
+          |   |-CompoundStmt 0x7fbb56804898 <line:88:6, line:97:6>
+          |   | |-IfStmt 0x7fbb56804698 <line:89:8, line:92:3>
+          |   | | |-<<<NULL>>>
+          |   | | |-<<<NULL>>>
+          |   | | |-BinaryOperator 0x7fbb568044a8 <line:89:12, col:19> 'int' '<='
+          |   | | | |-ImplicitCastExpr 0x7fbb56804478 <col:12> 'long' <LValueToRValue>
+          |   | | | | `-DeclRefExpr 0x7fbb56804428 <col:12> 'long' lvalue Var 0x7fbb57827de0 'pos' 'long'
+          |   | | | `-ImplicitCastExpr 0x7fbb56804490 <col:19> 'long' <LValueToRValue>
+          |   | | |   `-DeclRefExpr 0x7fbb56804450 <col:19> 'long' lvalue ParmVar 0x7fbb57826750 'to' 'long'
+          |   | | |-CompoundStmt 0x7fbb56804680 <line:90:3, line:92:3>
+          |   | | | `-BinaryOperator 0x7fbb56804658 <line:91:5, col:47> 'long' '='
+          |   | | |   |-DeclRefExpr 0x7fbb568044d0 <col:5> 'long' lvalue Var 0x7fbb57827de0 'pos' 'long'
+          |   | | |   `-CallExpr 0x7fbb568045d0 <col:11, col:47> 'long'
+          |   | | |     |-ImplicitCastExpr 0x7fbb568045b8 <col:11> 'long (*)(long, long, long)' <FunctionToPointerDecay>
+          |   | | |     | `-DeclRefExpr 0x7fbb568044f8 <col:11> 'long (long, long, long)' Function 0x7fbb57825dd8 'find_before_next_newline' 'long (long, long, long)'
+          |   | | |     |-ImplicitCastExpr 0x7fbb56804610 <col:37> 'long' <LValueToRValue>
+          |   | | |     | `-DeclRefExpr 0x7fbb56804520 <col:37> 'long' lvalue Var 0x7fbb57827de0 'pos' 'long'
+          |   | | |     |-ImplicitCastExpr 0x7fbb56804628 <col:42> 'long' <LValueToRValue>
+          |   | | |     | `-DeclRefExpr 0x7fbb56804548 <col:42> 'long' lvalue ParmVar 0x7fbb57826750 'to' 'long'
+          |   | | |     `-ImplicitCastExpr 0x7fbb56804640 <col:46> 'long' <IntegralCast>
+          |   | | |       `-IntegerLiteral 0x7fbb56804570 <col:46> 'int' 1
+          |   | | `-<<<NULL>>>
+          |   | `-IfStmt 0x7fbb56804860 <line:93:8, line:96:3>
+          |   |   |-<<<NULL>>>
+          |   |   |-<<<NULL>>>
+          |   |   |-BinaryOperator 0x7fbb56804768 <line:93:12, col:35> 'int' '>'
+          |   |   | |-ImplicitCastExpr 0x7fbb56804720 <col:12> 'long' <LValueToRValue>
+          |   |   | | `-DeclRefExpr 0x7fbb568046d0 <col:12> 'long' lvalue Var 0x7fbb57828158 'wide_column_end_hpos' 'long'
+          |   |   | `-ImplicitCastExpr 0x7fbb56804750 <col:35> 'long' <IntegralCast>
+          |   |   |   `-ImplicitCastExpr 0x7fbb56804738 <col:35> 'int' <LValueToRValue>
+          |   |   |     `-DeclRefExpr 0x7fbb568046f8 <col:35> 'int' lvalue ParmVar 0x7fbb57826480 'width' 'int'
+          |   |   |-CompoundStmt 0x7fbb56804848 <line:94:3, line:96:3>
+          |   |   | `-CompoundAssignOperator 0x7fbb56804810 <line:95:5, col:13> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+          |   |   |   |-DeclRefExpr 0x7fbb56804790 <col:5> 'long' lvalue Var 0x7fbb57827d10 'hpos' 'long'
+          |   |   |   `-ImplicitCastExpr 0x7fbb568047f8 <col:13> 'long' <IntegralCast>
+          |   |   |     `-ImplicitCastExpr 0x7fbb568047e0 <col:13> 'int' <LValueToRValue>
+          |   |   |       `-DeclRefExpr 0x7fbb568047b8 <col:13> 'int' lvalue ParmVar 0x7fbb57826480 'width' 'int'
+          |   |   `-<<<NULL>>>
+          |   `-<<<NULL>>>
+          `-CompoundStmt 0x7fbb5680d400 <line:100:2, line:177:2>
+            |-DeclStmt 0x7fbb56804980 <line:101:4, col:23>
+            | `-VarDecl 0x7fbb56804920 <col:4, col:16> col:16 used charvec 'Lisp_Object':'long'
+            |-BinaryOperator 0x7fbb56804fd8 <line:102:4, line:106:60> 'int' '='
+            | |-DeclRefExpr 0x7fbb56804998 <line:102:4> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+            | `-ImplicitCastExpr 0x7fbb56804fc0 <line:103:6, line:106:60> 'int' <IntegralCast>
+            |   `-ImplicitCastExpr 0x7fbb56804fa8 <line:103:6, line:106:60> 'unsigned char' <LValueToRValue>
+            |     `-UnaryOperator 0x7fbb56804f88 <line:103:6, line:106:60> 'unsigned char' lvalue prefix '*'
+            |       `-ParenExpr 0x7fbb56804f68 <line:103:7, line:106:60> 'unsigned char *'
+            |         `-ParenExpr 0x7fbb56804f48 <line:103:8, line:106:59> 'unsigned char *'
+            |           `-BinaryOperator 0x7fbb56804f20 <line:103:9, line:106:58> 'unsigned char *' '-'
+            |             |-BinaryOperator 0x7fbb56804e98 <line:103:9, line:106:50> 'unsigned char *' '+'
+            |             | |-BinaryOperator 0x7fbb56804d70 <line:103:9, line:106:20> 'long' '+'
+            |             | | |-ParenExpr 0x7fbb56804cd0 <line:103:9, line:105:24> 'long'
+            |             | | | `-ConditionalOperator 0x7fbb56804ca0 <line:103:10, line:105:23> 'long'
+            |             | | |   |-BinaryOperator 0x7fbb56804b40 <line:103:10, line:104:34> 'int' '>='
+            |             | | |   | |-ImplicitCastExpr 0x7fbb56804b10 <line:103:10, col:21> 'long' <LValueToRValue>
+            |             | | |   | | `-ParenExpr 0x7fbb56804a08 <col:10, col:21> 'long' lvalue
+            |             | | |   | |   `-ParenExpr 0x7fbb568049e8 <col:11, col:20> 'long' lvalue
+            |             | | |   | |     `-DeclRefExpr 0x7fbb568049c0 <col:12> 'long' lvalue Var 0x7fbb57827e70 'pos_byte' 'long'
+            |             | | |   | `-ImplicitCastExpr 0x7fbb56804b28 <line:104:3, col:34> 'long' <LValueToRValue>
+            |             | | |   |   `-ParenExpr 0x7fbb56804af0 <col:3, col:34> 'long' lvalue
+            |             | | |   |     `-MemberExpr 0x7fbb56804ab8 <col:4, col:26> 'long' lvalue ->gpt_byte 0x7fbb5781fdb0
+            |             | | |   |       `-ImplicitCastExpr 0x7fbb56804aa0 <col:4, col:20> 'struct buffer_text *' <LValueToRValue>
+            |             | | |   |         `-MemberExpr 0x7fbb56804a68 <col:4, col:20> 'struct buffer_text *' lvalue ->text 0x7fbb5781ffb0
+            |             | | |   |           `-ImplicitCastExpr 0x7fbb56804a50 <col:4> 'struct buffer *' <LValueToRValue>
+            |             | | |   |             `-DeclRefExpr 0x7fbb56804a28 <col:4> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+            |             | | |   |-ImplicitCastExpr 0x7fbb56804c70 <col:38, line:105:19> 'long' <LValueToRValue>
+            |             | | |   | `-ParenExpr 0x7fbb56804c30 <line:104:38, line:105:19> 'long' lvalue
+            |             | | |   |   `-MemberExpr 0x7fbb56804bf8 <line:104:39, line:105:11> 'long' lvalue ->gap_size 0x7fbb5781fe10
+            |             | | |   |     `-ImplicitCastExpr 0x7fbb56804be0 <line:104:39, col:55> 'struct buffer_text *' <LValueToRValue>
+            |             | | |   |       `-MemberExpr 0x7fbb56804ba8 <col:39, col:55> 'struct buffer_text *' lvalue ->text 0x7fbb5781ffb0
+            |             | | |   |         `-ImplicitCastExpr 0x7fbb56804b90 <col:39> 'struct buffer *' <LValueToRValue>
+            |             | | |   |           `-DeclRefExpr 0x7fbb56804b68 <col:39> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+            |             | | |   `-ImplicitCastExpr 0x7fbb56804c88 <line:105:23> 'long' <IntegralCast>
+            |             | | |     `-IntegerLiteral 0x7fbb56804c50 <col:23> 'int' 0
+            |             | | `-ImplicitCastExpr 0x7fbb56804d58 <line:106:9, col:20> 'long' <LValueToRValue>
+            |             | |   `-ParenExpr 0x7fbb56804d38 <col:9, col:20> 'long' lvalue
+            |             | |     `-ParenExpr 0x7fbb56804d18 <col:10, col:19> 'long' lvalue
+            |             | |       `-DeclRefExpr 0x7fbb56804cf0 <col:11> 'long' lvalue Var 0x7fbb57827e70 'pos_byte' 'long'
+            |             | `-ImplicitCastExpr 0x7fbb56804e80 <col:24, col:50> 'unsigned char *' <LValueToRValue>
+            |             |   `-ParenExpr 0x7fbb56804e60 <col:24, col:50> 'unsigned char *' lvalue
+            |             |     `-MemberExpr 0x7fbb56804e28 <col:25, col:47> 'unsigned char *' lvalue ->beg 0x7fbb5781fd50
+            |             |       `-ImplicitCastExpr 0x7fbb56804e10 <col:25, col:41> 'struct buffer_text *' <LValueToRValue>
+            |             |         `-MemberExpr 0x7fbb56804dd8 <col:25, col:41> 'struct buffer_text *' lvalue ->text 0x7fbb5781ffb0
+            |             |           `-ImplicitCastExpr 0x7fbb56804dc0 <col:25> 'struct buffer *' <LValueToRValue>
+            |             |             `-DeclRefExpr 0x7fbb56804d98 <col:25> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+            |             `-ParenExpr 0x7fbb56804f00 <col:54, col:58> 'int'
+            |               `-ParenExpr 0x7fbb56804ee0 <col:55, col:57> 'int'
+            |                 `-IntegerLiteral 0x7fbb56804ec0 <col:56> 'int' 1
+            `-IfStmt 0x7fbb5680d3c8 <line:107:4, line:176:6>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-ImplicitCastExpr 0x7fbb56805078 <line:107:8, col:24> 'struct region_cache *' <LValueToRValue>
+              | `-MemberExpr 0x7fbb56805040 <col:8, col:24> 'struct region_cache *' lvalue ->width_run_cache 0x7fbb57820160
+              |   `-ImplicitCastExpr 0x7fbb56805028 <col:8> 'struct buffer *' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fbb56805000 <col:8> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+              |-CompoundStmt 0x7fbb5680d3b0 <line:108:6, line:176:6>
+              | `-IfStmt 0x7fbb5680d378 <line:109:8, line:175:3>
+              |   |-<<<NULL>>>
+              |   |-<<<NULL>>>
+              |   |-ParenExpr 0x7fbb578293e8 <line:109:12, line:116:56> 'int'
+              |   | `-BinaryOperator 0x7fbb578293c0 <line:109:13, line:116:55> 'int' '&&'
+              |   |   |-ParenExpr 0x7fbb57828cc8 <line:109:13, line:111:22> 'int'
+              |   |   | `-BinaryOperator 0x7fbb57828ca0 <line:109:14, line:111:7> 'int' '=='
+              |   |   |   |-ImplicitCastExpr 0x7fbb57828c70 <line:109:14, line:110:36> 'unsigned int' <IntegralCast>
+              |   |   |   | `-ParenExpr 0x7fbb57828c28 <line:109:14, line:110:36> 'enum Lisp_Type':'enum Lisp_Type'
+              |   |   |   |   `-CStyleCastExpr 0x7fbb57828c00 <line:109:15, line:110:35> 'enum Lisp_Type':'enum Lisp_Type' <IntegralCast>
+              |   |   |   |     `-ParenExpr 0x7fbb568053d0 <line:109:32, line:110:35> 'unsigned long'
+              |   |   |   |       `-BinaryOperator 0x7fbb56805320 <line:109:33, line:110:34> 'unsigned long' '&'
+              |   |   |   |         |-ParenExpr 0x7fbb56805180 <line:109:33, col:61> 'unsigned long'
+              |   |   |   |         | `-CStyleCastExpr 0x7fbb56805158 <col:34, col:60> 'unsigned long' <IntegralCast>
+              |   |   |   |         |   `-ImplicitCastExpr 0x7fbb56805140 <col:50, col:60> 'Lisp_Object':'long' <LValueToRValue>
+              |   |   |   |         |     `-ParenExpr 0x7fbb56805120 <col:50, col:60> 'Lisp_Object':'long' lvalue
+              |   |   |   |         |       `-ParenExpr 0x7fbb568050b8 <col:51, col:59> 'Lisp_Object':'long' lvalue
+              |   |   |   |         |         `-DeclRefExpr 0x7fbb56805090 <col:52> 'Lisp_Object':'long' lvalue Var 0x7fbb56804920 'charvec' 'Lisp_Object':'long'
+              |   |   |   |         `-ImplicitCastExpr 0x7fbb56805308 <line:110:12, col:34> 'unsigned long' <IntegralCast>
+              |   |   |   |           `-ParenExpr 0x7fbb568052e8 <col:12, col:34> 'long'
+              |   |   |   |             `-BinaryOperator 0x7fbb568052c0 <col:13, col:33> 'long' '-'
+              |   |   |   |               |-ParenExpr 0x7fbb56805268 <col:13, col:29> 'long'
+              |   |   |   |               | `-BinaryOperator 0x7fbb56805240 <col:14, col:28> 'long' '<<'
+              |   |   |   |               |   |-ParenExpr 0x7fbb56805200 <col:14, col:23> 'long'
+              |   |   |   |               |   | `-CStyleCastExpr 0x7fbb568051d8 <col:15, col:22> 'long' <IntegralCast>
+              |   |   |   |               |   |   `-IntegerLiteral 0x7fbb568051a0 <col:22> 'int' 1
+              |   |   |   |               |   `-IntegerLiteral 0x7fbb56805220 <col:28> 'int' 3
+              |   |   |   |               `-ImplicitCastExpr 0x7fbb568052a8 <col:33> 'long' <IntegralCast>
+              |   |   |   |                 `-IntegerLiteral 0x7fbb56805288 <col:33> 'int' 1
+              |   |   |   `-ImplicitCastExpr 0x7fbb57828c88 <line:111:7> 'unsigned int' <IntegralCast>
+              |   |   |     `-DeclRefExpr 0x7fbb57828c48 <col:7> 'int' EnumConstant 0x7fbb57807248 'Lisp_Vectorlike' 'int'
+              |   |   `-UnaryOperator 0x7fbb578293a0 <line:113:6, line:116:55> 'int' prefix '!'
+              |   |     `-ParenExpr 0x7fbb57829380 <line:113:7, line:116:55> 'unsigned long'
+              |   |       `-BinaryOperator 0x7fbb57829358 <line:113:8, line:116:54> 'unsigned long' '&'
+              |   |         |-ImplicitCastExpr 0x7fbb57829340 <line:113:8, line:116:8> 'unsigned long' <LValueToRValue>
+              |   |         | `-MemberExpr 0x7fbb57829150 <line:113:8, line:116:8> 'unsigned long' lvalue ->size 0x7fbb57807bd8
+              |   |         |   `-ParenExpr 0x7fbb57829130 <line:113:8, line:115:60> 'struct Lisp_Vector *'
+              |   |         |     `-BinaryOperator 0x7fbb57829108 <line:113:9, line:115:59> 'struct Lisp_Vector *' ','
+              |   |         |       |-CStyleCastExpr 0x7fbb57828d18 <line:113:9, col:16> 'void' <ToVoid>
+              |   |         |       | `-IntegerLiteral 0x7fbb57828ce8 <col:16> 'int' 0
+              |   |         |       `-CStyleCastExpr 0x7fbb578290e0 <line:114:9, line:115:59> 'struct Lisp_Vector *' <IntegralToPointer>
+              |   |         |         `-ParenExpr 0x7fbb578290c0 <col:13, col:59> 'long'
+              |   |         |           `-CStyleCastExpr 0x7fbb57828fb8 <col:14, col:58> 'long' <NoOp>
+              |   |         |             `-ParenExpr 0x7fbb57828f98 <col:21, col:58> 'long'
+              |   |         |               `-BinaryOperator 0x7fbb57828f28 <col:22, col:57> 'long' '&'
+              |   |         |                 |-ImplicitCastExpr 0x7fbb57828f10 <col:22, col:30> 'Lisp_Object':'long' <LValueToRValue>
+              |   |         |                 | `-ParenExpr 0x7fbb57828d68 <col:22, col:30> 'Lisp_Object':'long' lvalue
+              |   |         |                 |   `-DeclRefExpr 0x7fbb57828d40 <col:23> 'Lisp_Object':'long' lvalue Var 0x7fbb56804920 'charvec' 'Lisp_Object':'long'
+              |   |         |                 `-UnaryOperator 0x7fbb57828ef0 <col:34, col:57> 'long' prefix '~'
+              |   |         |                   `-ParenExpr 0x7fbb57828ed0 <col:35, col:57> 'long'
+              |   |         |                     `-BinaryOperator 0x7fbb57828ea8 <col:36, col:56> 'long' '-'
+              |   |         |                       |-ParenExpr 0x7fbb57828e50 <col:36, col:52> 'long'
+              |   |         |                       | `-BinaryOperator 0x7fbb57828e28 <col:37, col:51> 'long' '<<'
+              |   |         |                       |   |-ParenExpr 0x7fbb57828de8 <col:37, col:46> 'long'
+              |   |         |                       |   | `-CStyleCastExpr 0x7fbb57828dc0 <col:38, col:45> 'long' <IntegralCast>
+              |   |         |                       |   |   `-IntegerLiteral 0x7fbb57828d88 <col:45> 'int' 1
+              |   |         |                       |   `-IntegerLiteral 0x7fbb57828e08 <col:51> 'int' 3
+              |   |         |                       `-ImplicitCastExpr 0x7fbb57828e90 <col:56> 'long' <IntegralCast>
+              |   |         |                         `-IntegerLiteral 0x7fbb57828e70 <col:56> 'int' 1
+              |   |         `-ParenExpr 0x7fbb57829320 <line:116:15, col:54> 'unsigned long'
+              |   |           `-ParenExpr 0x7fbb57829300 <col:16, col:53> 'unsigned long'
+              |   |             `-BinaryOperator 0x7fbb578292d8 <col:17, col:52> 'unsigned long' '>>'
+              |   |               |-ParenExpr 0x7fbb57829298 <col:17, col:47> 'unsigned long'
+              |   |               | `-BinaryOperator 0x7fbb57829270 <col:18, col:46> 'unsigned long' '<<'
+              |   |               |   |-CStyleCastExpr 0x7fbb578291c0 <col:18, col:34> 'unsigned long' <IntegralCast>
+              |   |               |   | `-IntegerLiteral 0x7fbb57829188 <col:34> 'int' 1
+              |   |               |   `-ParenExpr 0x7fbb57829250 <col:39, col:46> 'int'
+              |   |               |     `-BinaryOperator 0x7fbb57829228 <col:40, col:45> 'int' '-'
+              |   |               |       |-IntegerLiteral 0x7fbb578291e8 <col:40> 'int' 64
+              |   |               |       `-IntegerLiteral 0x7fbb57829208 <col:45> 'int' 1
+              |   |               `-IntegerLiteral 0x7fbb578292b8 <col:52> 'int' 1
+              |   |-CompoundStmt 0x7fbb5680d348 <line:117:3, line:175:3>
+              |   | |-DeclStmt 0x7fbb57829480 <line:118:5, col:23>
+              |   | | `-VarDecl 0x7fbb57829420 <col:5, col:20> col:20 used ptr 'unsigned char *'
+              |   | |-DeclStmt 0x7fbb57829620 <line:119:5, col:34>
+              |   | | |-VarDecl 0x7fbb578294b0 <col:5, col:9> col:9 used bytes 'int'
+              |   | | |-VarDecl 0x7fbb57829528 <col:5, col:16> col:16 used width 'int'
+              |   | | `-VarDecl 0x7fbb578295a0 <col:5, col:23> col:23 used wide_column 'int'
+              |   | |-DoStmt 0x7fbb5680d1a0 <line:120:5, line:172:13>
+              |   | | |-CompoundStmt 0x7fbb5680d168 <line:121:7, line:171:7>
+              |   | | | `-IfStmt 0x7fbb5680d130 <line:122:9, line:170:4>
+              |   | | |   |-<<<NULL>>>
+              |   | | |   |-<<<NULL>>>
+              |   | | |   |-BinaryOperator 0x7fbb56805cf0 <line:122:13, line:124:6> 'int' '!='
+              |   | | |   | |-ParenExpr 0x7fbb56805c90 <line:122:13, line:123:54> 'int'
+              |   | | |   | | `-ConditionalOperator 0x7fbb56805c60 <line:122:14, line:123:53> 'int'
+              |   | | |   | |   |-UnaryOperator 0x7fbb57829750 <line:122:14, col:29> 'int' prefix '!'
+              |   | | |   | |   | `-ParenExpr 0x7fbb57829730 <col:15, col:29> 'int'
+              |   | | |   | |   |   `-BinaryOperator 0x7fbb57829708 <col:16, col:25> 'int' '&'
+              |   | | |   | |   |     |-ImplicitCastExpr 0x7fbb578296f0 <col:16, col:21> 'int' <IntegralCast>
+              |   | | |   | |   |     | `-ImplicitCastExpr 0x7fbb578296d8 <col:16, col:21> 'unsigned char' <LValueToRValue>
+              |   | | |   | |   |     |   `-ParenExpr 0x7fbb57829698 <col:16, col:21> 'unsigned char' lvalue
+              |   | | |   | |   |     |     `-UnaryOperator 0x7fbb57829678 <col:17, col:18> 'unsigned char' lvalue prefix '*'
+              |   | | |   | |   |     |       `-ImplicitCastExpr 0x7fbb57829660 <col:18> 'unsigned char *' <LValueToRValue>
+              |   | | |   | |   |     |         `-DeclRefExpr 0x7fbb57829638 <col:18> 'unsigned char *' lvalue Var 0x7fbb57829420 'ptr' 'unsigned char *'
+              |   | | |   | |   |     `-IntegerLiteral 0x7fbb578296b8 <col:25> 'int' 128
+              |   | | |   | |   |-IntegerLiteral 0x7fbb57829770 <col:33> 'int' 1
+              |   | | |   | |   `-ConditionalOperator 0x7fbb56805c30 <col:37, line:123:53> 'int'
+              |   | | |   | |     |-UnaryOperator 0x7fbb578298a8 <line:122:37, col:52> 'int' prefix '!'
+              |   | | |   | |     | `-ParenExpr 0x7fbb57829888 <col:38, col:52> 'int'
+              |   | | |   | |     |   `-BinaryOperator 0x7fbb57829860 <col:39, col:48> 'int' '&'
+              |   | | |   | |     |     |-ImplicitCastExpr 0x7fbb57829848 <col:39, col:44> 'int' <IntegralCast>
+              |   | | |   | |     |     | `-ImplicitCastExpr 0x7fbb57829830 <col:39, col:44> 'unsigned char' <LValueToRValue>
+              |   | | |   | |     |     |   `-ParenExpr 0x7fbb578297f0 <col:39, col:44> 'unsigned char' lvalue
+              |   | | |   | |     |     |     `-UnaryOperator 0x7fbb578297d0 <col:40, col:41> 'unsigned char' lvalue prefix '*'
+              |   | | |   | |     |     |       `-ImplicitCastExpr 0x7fbb578297b8 <col:41> 'unsigned char *' <LValueToRValue>
+              |   | | |   | |     |     |         `-DeclRefExpr 0x7fbb57829790 <col:41> 'unsigned char *' lvalue Var 0x7fbb57829420 'ptr' 'unsigned char *'
+              |   | | |   | |     |     `-IntegerLiteral 0x7fbb57829810 <col:48> 'int' 32
+              |   | | |   | |     |-IntegerLiteral 0x7fbb578298c8 <col:56> 'int' 2
+              |   | | |   | |     `-ConditionalOperator 0x7fbb56805c00 <line:123:7, col:53> 'int'
+              |   | | |   | |       |-UnaryOperator 0x7fbb57829a00 <col:7, col:22> 'int' prefix '!'
+              |   | | |   | |       | `-ParenExpr 0x7fbb578299e0 <col:8, col:22> 'int'
+              |   | | |   | |       |   `-BinaryOperator 0x7fbb578299b8 <col:9, col:18> 'int' '&'
+              |   | | |   | |       |     |-ImplicitCastExpr 0x7fbb578299a0 <col:9, col:14> 'int' <IntegralCast>
+              |   | | |   | |       |     | `-ImplicitCastExpr 0x7fbb57829988 <col:9, col:14> 'unsigned char' <LValueToRValue>
+              |   | | |   | |       |     |   `-ParenExpr 0x7fbb57829948 <col:9, col:14> 'unsigned char' lvalue
+              |   | | |   | |       |     |     `-UnaryOperator 0x7fbb57829928 <col:10, col:11> 'unsigned char' lvalue prefix '*'
+              |   | | |   | |       |     |       `-ImplicitCastExpr 0x7fbb57829910 <col:11> 'unsigned char *' <LValueToRValue>
+              |   | | |   | |       |     |         `-DeclRefExpr 0x7fbb578298e8 <col:11> 'unsigned char *' lvalue Var 0x7fbb57829420 'ptr' 'unsigned char *'
+              |   | | |   | |       |     `-IntegerLiteral 0x7fbb57829968 <col:18> 'int' 16
+              |   | | |   | |       |-IntegerLiteral 0x7fbb57829a20 <col:26> 'int' 3
+              |   | | |   | |       `-ConditionalOperator 0x7fbb57829bb8 <col:30, col:53> 'int'
+              |   | | |   | |         |-UnaryOperator 0x7fbb57829b58 <col:30, col:45> 'int' prefix '!'
+              |   | | |   | |         | `-ParenExpr 0x7fbb57829b38 <col:31, col:45> 'int'
+              |   | | |   | |         |   `-BinaryOperator 0x7fbb57829b10 <col:32, col:41> 'int' '&'
+              |   | | |   | |         |     |-ImplicitCastExpr 0x7fbb57829af8 <col:32, col:37> 'int' <IntegralCast>
+              |   | | |   | |         |     | `-ImplicitCastExpr 0x7fbb57829ae0 <col:32, col:37> 'unsigned char' <LValueToRValue>
+              |   | | |   | |         |     |   `-ParenExpr 0x7fbb57829aa0 <col:32, col:37> 'unsigned char' lvalue
+              |   | | |   | |         |     |     `-UnaryOperator 0x7fbb57829a80 <col:33, col:34> 'unsigned char' lvalue prefix '*'
+              |   | | |   | |         |     |       `-ImplicitCastExpr 0x7fbb57829a68 <col:34> 'unsigned char *' <LValueToRValue>
+              |   | | |   | |         |     |         `-DeclRefExpr 0x7fbb57829a40 <col:34> 'unsigned char *' lvalue Var 0x7fbb57829420 'ptr' 'unsigned char *'
+              |   | | |   | |         |     `-IntegerLiteral 0x7fbb57829ac0 <col:41> 'int' 8
+              |   | | |   | |         |-IntegerLiteral 0x7fbb57829b78 <col:49> 'int' 4
+              |   | | |   | |         `-IntegerLiteral 0x7fbb57829b98 <col:53> 'int' 5
+              |   | | |   | `-ImplicitCastExpr 0x7fbb56805cd8 <line:124:6> 'int' <LValueToRValue>
+              |   | | |   |   `-DeclRefExpr 0x7fbb56805cb0 <col:6> 'int' lvalue Var 0x7fbb578294b0 'bytes' 'int'
+              |   | | |   |-BinaryOperator 0x7fbb56805dc8 <line:125:4, col:20> 'int' '='
+              |   | | |   | |-DeclRefExpr 0x7fbb56805d18 <col:4> 'int' lvalue Var 0x7fbb57829528 'width' 'int'
+              |   | | |   | `-BinaryOperator 0x7fbb56805da0 <col:12, col:20> 'int' '*'
+              |   | | |   |   |-ImplicitCastExpr 0x7fbb56805d88 <col:12> 'int' <LValueToRValue>
+              |   | | |   |   | `-DeclRefExpr 0x7fbb56805d40 <col:12> 'int' lvalue Var 0x7fbb578294b0 'bytes' 'int'
+              |   | | |   |   `-IntegerLiteral 0x7fbb56805d68 <col:20> 'int' 4
+              |   | | |   `-CompoundStmt 0x7fbb5680d110 <line:127:4, line:170:4>
+              |   | | |     |-IfStmt 0x7fbb5680cf88 <line:128:6, line:167:85>
+              |   | | |     | |-<<<NULL>>>
+              |   | | |     | |-<<<NULL>>>
+              |   | | |     | |-BinaryOperator 0x7fbb56809ed8 <line:128:10, line:140:1240> 'int' '&&'
+              |   | | |     | | |-BinaryOperator 0x7fbb56805e68 <line:128:10, col:16> 'int' '!='
+              |   | | |     | | | |-ImplicitCastExpr 0x7fbb56805e38 <col:10> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | | | | `-DeclRefExpr 0x7fbb56805df0 <col:10> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | | | `-ImplicitCastExpr 0x7fbb56805e50 <col:16> 'struct Lisp_Char_Table *' <NullToPointer>
+              |   | | |     | | |   `-IntegerLiteral 0x7fbb56805e18 <col:16> 'int' 0
+              |   | | |     | | `-ParenExpr 0x7fbb56809eb8 <line:130:10, line:140:1240> 'int'
+              |   | | |     | |   `-BinaryOperator 0x7fbb56809e90 <line:130:11, line:140:1239> 'int' '&&'
+              |   | | |     | |     |-ParenExpr 0x7fbb56807df8 <line:130:11, line:140:534> 'int'
+              |   | | |     | |     | `-BinaryOperator 0x7fbb56807dd0 <line:130:12, line:140:519> 'int' '=='
+              |   | | |     | |     |   |-ImplicitCastExpr 0x7fbb56807da0 <line:130:12, line:140:514> 'unsigned int' <IntegralCast>
+              |   | | |     | |     |   | `-ParenExpr 0x7fbb56807d58 <line:130:12, line:140:514> 'enum Lisp_Type':'enum Lisp_Type'
+              |   | | |     | |     |   |   `-CStyleCastExpr 0x7fbb56807d30 <line:130:13, line:140:513> 'enum Lisp_Type':'enum Lisp_Type' <IntegralCast>
+              |   | | |     | |     |   |     `-ParenExpr 0x7fbb56807d10 <line:131:18, line:140:513> 'unsigned long'
+              |   | | |     | |     |   |       `-BinaryOperator 0x7fbb56807c98 <line:131:19, line:140:512> 'unsigned long' '&'
+              |   | | |     | |     |   |         |-ParenExpr 0x7fbb56807ae8 <line:131:19, line:140:486> 'unsigned long'
+              |   | | |     | |     |   |         | `-CStyleCastExpr 0x7fbb56807ac0 <line:131:20, line:140:485> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |   `-ParenExpr 0x7fbb56807aa0 <line:132:13, line:140:485> 'long'
+              |   | | |     | |     |   |         |     `-ParenExpr 0x7fbb56807a38 <line:132:14, line:140:484> 'long'
+              |   | | |     | |     |   |         |       `-ParenExpr 0x7fbb56807a18 <line:132:15, line:140:483> 'long'
+              |   | | |     | |     |   |         |         `-ConditionalOperator 0x7fbb568079e8 <line:132:16, line:140:482> 'long'
+              |   | | |     | |     |   |         |           |-ParenExpr 0x7fbb56805fc0 <line:132:16, line:133:14> 'int'
+              |   | | |     | |     |   |         |           | `-BinaryOperator 0x7fbb56805f98 <line:132:17, line:133:10> 'int' '<'
+              |   | | |     | |     |   |         |           |   |-CStyleCastExpr 0x7fbb56805f38 <line:132:17, col:30> 'unsigned int' <IntegralCast>
+              |   | | |     | |     |   |         |           |   | `-ImplicitCastExpr 0x7fbb56805f20 <col:28, col:30> 'int' <LValueToRValue>
+              |   | | |     | |     |   |         |           |   |   `-ParenExpr 0x7fbb56805f00 <col:28, col:30> 'int' lvalue
+              |   | | |     | |     |   |         |           |   |     `-DeclRefExpr 0x7fbb56805e90 <col:29> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |     |   |         |           |   `-ImplicitCastExpr 0x7fbb56805f80 <line:133:10> 'unsigned int' <IntegralCast>
+              |   | | |     | |     |   |         |           |     `-IntegerLiteral 0x7fbb56805f60 <col:10> 'int' 128
+              |   | | |     | |     |   |         |           |-ParenExpr 0x7fbb56807830 <line:134:11, line:140:451> 'long'
+              |   | | |     | |     |   |         |           | `-ConditionalOperator 0x7fbb56807800 <line:134:12, line:140:450> 'long'
+              |   | | |     | |     |   |         |           |   |-ParenExpr 0x7fbb56806138 <line:134:12, line:135:19> 'int'
+              |   | | |     | |     |   |         |           |   | `-BinaryOperator 0x7fbb56806110 <line:134:13, line:135:18> 'int' '=='
+              |   | | |     | |     |   |         |           |   |   |-ImplicitCastExpr 0x7fbb568060e0 <line:134:13, col:25> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |   |   | `-ParenExpr 0x7fbb56806078 <col:13, col:25> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |   |   |   `-MemberExpr 0x7fbb56806040 <col:14, col:20> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |     |   |         |           |   |   |     `-ImplicitCastExpr 0x7fbb56806028 <col:14, col:17> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |           |   |   |       `-ParenExpr 0x7fbb56806008 <col:14, col:17> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |           |   |   |         `-DeclRefExpr 0x7fbb56805fe0 <col:15> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |           |   |   `-ImplicitCastExpr 0x7fbb568060f8 <line:135:13, col:18> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |   |     `-ParenExpr 0x7fbb568060c0 <col:13, col:18> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |   |       `-DeclRefExpr 0x7fbb56806098 <col:14> 'Lisp_Object':'long' lvalue Var 0x7fbb57807f60 'Qnil' 'Lisp_Object':'long'
+              |   | | |     | |     |   |         |           |   |-ImplicitCastExpr 0x7fbb568077e8 <col:23, line:136:12> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |   | `-MemberExpr 0x7fbb568061b8 <line:135:23, line:136:12> 'Lisp_Object':'long' lvalue ->defalt 0x7fbb57807d00
+              |   | | |     | |     |   |         |           |   |   `-ImplicitCastExpr 0x7fbb568061a0 <line:135:23, col:26> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |           |   |     `-ParenExpr 0x7fbb56806180 <col:23, col:26> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |           |   |       `-DeclRefExpr 0x7fbb56806158 <col:24> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |           |   `-ParenExpr 0x7fbb568077c8 <line:137:14, line:140:450> 'long'
+              |   | | |     | |     |   |         |           |     `-ConditionalOperator 0x7fbb56807798 <line:137:15, line:140:445> 'long'
+              |   | | |     | |     |   |         |           |       |-ParenExpr 0x7fbb568070c8 <line:137:15, line:140:325> 'int'
+              |   | | |     | |     |   |         |           |       | `-BinaryOperator 0x7fbb568070a0 <line:137:16, line:140:324> 'int' '&&'
+              |   | | |     | |     |   |         |           |       |   |-ParenExpr 0x7fbb56806650 <line:137:16, line:140:83> 'int'
+              |   | | |     | |     |   |         |           |       |   | `-BinaryOperator 0x7fbb56806628 <line:137:17, line:140:68> 'int' '=='
+              |   | | |     | |     |   |         |           |       |   |   |-ImplicitCastExpr 0x7fbb568065f8 <line:137:17, line:140:63> 'unsigned int' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |   | `-ParenExpr 0x7fbb568065b0 <line:137:17, line:140:63> 'enum Lisp_Type':'enum Lisp_Type'
+              |   | | |     | |     |   |         |           |       |   |   |   `-CStyleCastExpr 0x7fbb56806588 <line:137:18, line:140:62> 'enum Lisp_Type':'enum Lisp_Type' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |   |     `-ParenExpr 0x7fbb56806568 <line:139:11, line:140:62> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |   |   |       `-BinaryOperator 0x7fbb568064f0 <line:139:12, line:140:61> 'unsigned long' '&'
+              |   | | |     | |     |   |         |           |       |   |   |         |-ParenExpr 0x7fbb56806350 <line:139:12, line:140:35> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |   |   |         | `-CStyleCastExpr 0x7fbb56806328 <line:139:13, line:140:34> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |   |         |   `-ImplicitCastExpr 0x7fbb56806310 <col:20, col:34> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |   |   |         |     `-ParenExpr 0x7fbb568062f0 <col:20, col:34> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |       |   |   |         |       `-ParenExpr 0x7fbb56806288 <col:21, col:33> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |       |   |   |         |         `-MemberExpr 0x7fbb56806250 <col:22, col:28> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |     |   |         |           |       |   |   |         |           `-ImplicitCastExpr 0x7fbb56806238 <col:22, col:25> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |   |   |         |             `-ParenExpr 0x7fbb56806218 <col:22, col:25> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |           |       |   |   |         |               `-DeclRefExpr 0x7fbb568061f0 <col:23> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |           |       |   |   |         `-ImplicitCastExpr 0x7fbb568064d8 <col:39, col:61> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |   |           `-ParenExpr 0x7fbb568064b8 <col:39, col:61> 'long'
+              |   | | |     | |     |   |         |           |       |   |   |             `-BinaryOperator 0x7fbb56806490 <col:40, col:60> 'long' '-'
+              |   | | |     | |     |   |         |           |       |   |   |               |-ParenExpr 0x7fbb56806438 <col:40, col:56> 'long'
+              |   | | |     | |     |   |         |           |       |   |   |               | `-BinaryOperator 0x7fbb56806410 <col:41, col:55> 'long' '<<'
+              |   | | |     | |     |   |         |           |       |   |   |               |   |-ParenExpr 0x7fbb568063d0 <col:41, col:50> 'long'
+              |   | | |     | |     |   |         |           |       |   |   |               |   | `-CStyleCastExpr 0x7fbb568063a8 <col:42, col:49> 'long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |   |               |   |   `-IntegerLiteral 0x7fbb56806370 <col:49> 'int' 1
+              |   | | |     | |     |   |         |           |       |   |   |               |   `-IntegerLiteral 0x7fbb568063f0 <col:55> 'int' 3
+              |   | | |     | |     |   |         |           |       |   |   |               `-ImplicitCastExpr 0x7fbb56806478 <col:60> 'long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |   |                 `-IntegerLiteral 0x7fbb56806458 <col:60> 'int' 1
+              |   | | |     | |     |   |         |           |       |   |   `-ImplicitCastExpr 0x7fbb56806610 <col:68> 'unsigned int' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |     `-DeclRefExpr 0x7fbb568065d0 <col:68> 'int' EnumConstant 0x7fbb57807248 'Lisp_Vectorlike' 'int'
+              |   | | |     | |     |   |         |           |       |   `-ParenExpr 0x7fbb56807080 <col:88, col:324> 'int'
+              |   | | |     | |     |   |         |           |       |     `-BinaryOperator 0x7fbb56807058 <col:89, col:323> 'int' '=='
+              |   | | |     | |     |   |         |           |       |       |-ParenExpr 0x7fbb56806dd8 <col:89, col:253> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |       | `-ParenExpr 0x7fbb56806db8 <col:90, col:252> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |       |   `-BinaryOperator 0x7fbb56806d90 <col:91, col:251> 'unsigned long' '&'
+              |   | | |     | |     |   |         |           |       |       |     |-ImplicitCastExpr 0x7fbb56806d78 <col:91, col:179> 'unsigned long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |       |     | `-MemberExpr 0x7fbb56806ac0 <col:91, col:179> 'unsigned long' lvalue ->size 0x7fbb57807bd8
+              |   | | |     | |     |   |         |           |       |       |     |   `-ParenExpr 0x7fbb56806aa0 <col:91, col:176> 'struct Lisp_Vector *'
+              |   | | |     | |     |   |         |           |       |       |     |     `-BinaryOperator 0x7fbb56806a78 <col:92, col:175> 'struct Lisp_Vector *' ','
+              |   | | |     | |     |   |         |           |       |       |     |       |-CStyleCastExpr 0x7fbb568066a0 <col:92, col:99> 'void' <ToVoid>
+              |   | | |     | |     |   |         |           |       |       |     |       | `-IntegerLiteral 0x7fbb56806670 <col:99> 'int' 0
+              |   | | |     | |     |   |         |           |       |       |     |       `-CStyleCastExpr 0x7fbb56806a50 <col:102, col:175> 'struct Lisp_Vector *' <IntegralToPointer>
+              |   | | |     | |     |   |         |           |       |       |     |         `-ParenExpr 0x7fbb56806a30 <col:125, col:175> 'long'
+              |   | | |     | |     |   |         |           |       |       |     |           `-CStyleCastExpr 0x7fbb568069b0 <col:126, col:174> 'long' <NoOp>
+              |   | | |     | |     |   |         |           |       |       |     |             `-ParenExpr 0x7fbb56806990 <col:133, col:174> 'long'
+              |   | | |     | |     |   |         |           |       |       |     |               `-BinaryOperator 0x7fbb56806920 <col:134, col:173> 'long' '&'
+              |   | | |     | |     |   |         |           |       |       |     |                 |-ImplicitCastExpr 0x7fbb56806908 <col:134, col:146> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |       |     |                 | `-ParenExpr 0x7fbb56806760 <col:134, col:146> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |       |       |     |                 |   `-MemberExpr 0x7fbb56806728 <col:135, col:141> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |     |   |         |           |       |       |     |                 |     `-ImplicitCastExpr 0x7fbb56806710 <col:135, col:138> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |       |     |                 |       `-ParenExpr 0x7fbb568066f0 <col:135, col:138> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |           |       |       |     |                 |         `-DeclRefExpr 0x7fbb568066c8 <col:136> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |           |       |       |     |                 `-UnaryOperator 0x7fbb568068e8 <col:150, col:173> 'long' prefix '~'
+              |   | | |     | |     |   |         |           |       |       |     |                   `-ParenExpr 0x7fbb568068c8 <col:151, col:173> 'long'
+              |   | | |     | |     |   |         |           |       |       |     |                     `-BinaryOperator 0x7fbb568068a0 <col:152, col:172> 'long' '-'
+              |   | | |     | |     |   |         |           |       |       |     |                       |-ParenExpr 0x7fbb56806848 <col:152, col:168> 'long'
+              |   | | |     | |     |   |         |           |       |       |     |                       | `-BinaryOperator 0x7fbb56806820 <col:153, col:167> 'long' '<<'
+              |   | | |     | |     |   |         |           |       |       |     |                       |   |-ParenExpr 0x7fbb568067e0 <col:153, col:162> 'long'
+              |   | | |     | |     |   |         |           |       |       |     |                       |   | `-CStyleCastExpr 0x7fbb568067b8 <col:154, col:161> 'long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |       |     |                       |   |   `-IntegerLiteral 0x7fbb56806780 <col:161> 'int' 1
+              |   | | |     | |     |   |         |           |       |       |     |                       |   `-IntegerLiteral 0x7fbb56806800 <col:167> 'int' 3
+              |   | | |     | |     |   |         |           |       |       |     |                       `-ImplicitCastExpr 0x7fbb56806888 <col:172> 'long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |       |     |                         `-IntegerLiteral 0x7fbb56806868 <col:172> 'int' 1
+              |   | | |     | |     |   |         |           |       |       |     `-ParenExpr 0x7fbb56806d58 <col:186, col:251> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |       |       `-BinaryOperator 0x7fbb56806d30 <col:187, col:250> 'unsigned long' '|'
+              |   | | |     | |     |   |         |           |       |       |         |-ParenExpr 0x7fbb56806cb0 <col:187, col:226> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |       |         | `-ParenExpr 0x7fbb56806c90 <col:188, col:225> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |       |         |   `-BinaryOperator 0x7fbb56806c68 <col:189, col:224> 'unsigned long' '>>'
+              |   | | |     | |     |   |         |           |       |       |         |     |-ParenExpr 0x7fbb56806c28 <col:189, col:219> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |       |         |     | `-BinaryOperator 0x7fbb56806c00 <col:190, col:218> 'unsigned long' '<<'
+              |   | | |     | |     |   |         |           |       |       |         |     |   |-CStyleCastExpr 0x7fbb56806b30 <col:190, col:206> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |       |         |     |   | `-IntegerLiteral 0x7fbb56806af8 <col:206> 'int' 1
+              |   | | |     | |     |   |         |           |       |       |         |     |   `-ParenExpr 0x7fbb56806bc0 <col:211, col:218> 'int'
+              |   | | |     | |     |   |         |           |       |       |         |     |     `-BinaryOperator 0x7fbb56806b98 <col:212, col:217> 'int' '-'
+              |   | | |     | |     |   |         |           |       |       |         |     |       |-IntegerLiteral 0x7fbb56806b58 <col:212> 'int' 64
+              |   | | |     | |     |   |         |           |       |       |         |     |       `-IntegerLiteral 0x7fbb56806b78 <col:217> 'int' 1
+              |   | | |     | |     |   |         |           |       |       |         |     `-IntegerLiteral 0x7fbb56806c48 <col:224> 'int' 1
+              |   | | |     | |     |   |         |           |       |       |         `-ImplicitCastExpr 0x7fbb56806d18 <col:230, col:250> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |       |           `-ParenExpr 0x7fbb56806cf8 <col:230, col:250> 'int'
+              |   | | |     | |     |   |         |           |       |       |             `-DeclRefExpr 0x7fbb56806cd0 <col:231> 'int' EnumConstant 0x7fbb57807990 'PVEC_SUB_CHAR_TABLE' 'int'
+              |   | | |     | |     |   |         |           |       |       `-ParenExpr 0x7fbb56807038 <col:258, col:323> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |         `-BinaryOperator 0x7fbb56807010 <col:259, col:322> 'unsigned long' '|'
+              |   | | |     | |     |   |         |           |       |           |-ParenExpr 0x7fbb56806f90 <col:259, col:298> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |           | `-ParenExpr 0x7fbb56806f70 <col:260, col:297> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |           |   `-BinaryOperator 0x7fbb56806f48 <col:261, col:296> 'unsigned long' '>>'
+              |   | | |     | |     |   |         |           |       |           |     |-ParenExpr 0x7fbb56806f08 <col:261, col:291> 'unsigned long'
+              |   | | |     | |     |   |         |           |       |           |     | `-BinaryOperator 0x7fbb56806ee0 <col:262, col:290> 'unsigned long' '<<'
+              |   | | |     | |     |   |         |           |       |           |     |   |-CStyleCastExpr 0x7fbb56806e30 <col:262, col:278> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |           |     |   | `-IntegerLiteral 0x7fbb56806df8 <col:278> 'int' 1
+              |   | | |     | |     |   |         |           |       |           |     |   `-ParenExpr 0x7fbb56806ec0 <col:283, col:290> 'int'
+              |   | | |     | |     |   |         |           |       |           |     |     `-BinaryOperator 0x7fbb56806e98 <col:284, col:289> 'int' '-'
+              |   | | |     | |     |   |         |           |       |           |     |       |-IntegerLiteral 0x7fbb56806e58 <col:284> 'int' 64
+              |   | | |     | |     |   |         |           |       |           |     |       `-IntegerLiteral 0x7fbb56806e78 <col:289> 'int' 1
+              |   | | |     | |     |   |         |           |       |           |     `-IntegerLiteral 0x7fbb56806f28 <col:296> 'int' 1
+              |   | | |     | |     |   |         |           |       |           `-ImplicitCastExpr 0x7fbb56806ff8 <col:302, col:322> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |             `-ParenExpr 0x7fbb56806fd8 <col:302, col:322> 'int'
+              |   | | |     | |     |   |         |           |       |               `-DeclRefExpr 0x7fbb56806fb0 <col:303> 'int' EnumConstant 0x7fbb57807990 'PVEC_SUB_CHAR_TABLE' 'int'
+              |   | | |     | |     |   |         |           |       |-ImplicitCastExpr 0x7fbb56807768 <col:329, col:435> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       | `-ArraySubscriptExpr 0x7fbb568076a8 <col:329, col:435> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |       |   |-ImplicitCastExpr 0x7fbb56807678 <col:329, col:425> 'Lisp_Object *' <ArrayToPointerDecay>
+              |   | | |     | |     |   |         |           |       |   | `-MemberExpr 0x7fbb568075c0 <col:329, col:425> 'Lisp_Object [1]' lvalue ->contents 0x7fbb57807f08
+              |   | | |     | |     |   |         |           |       |   |   `-ParenExpr 0x7fbb568075a0 <col:329, col:422> 'struct Lisp_Sub_Char_Table *'
+              |   | | |     | |     |   |         |           |       |   |     `-BinaryOperator 0x7fbb56807578 <col:330, col:421> 'struct Lisp_Sub_Char_Table *' ','
+              |   | | |     | |     |   |         |           |       |   |       |-CStyleCastExpr 0x7fbb56807118 <col:330, col:337> 'void' <ToVoid>
+              |   | | |     | |     |   |         |           |       |   |       | `-IntegerLiteral 0x7fbb568070e8 <col:337> 'int' 0
+              |   | | |     | |     |   |         |           |       |   |       `-CStyleCastExpr 0x7fbb56807550 <col:340, col:421> 'struct Lisp_Sub_Char_Table *' <IntegralToPointer>
+              |   | | |     | |     |   |         |           |       |   |         `-ParenExpr 0x7fbb56807530 <col:371, col:421> 'long'
+              |   | | |     | |     |   |         |           |       |   |           `-CStyleCastExpr 0x7fbb56807428 <col:372, col:420> 'long' <NoOp>
+              |   | | |     | |     |   |         |           |       |   |             `-ParenExpr 0x7fbb56807408 <col:379, col:420> 'long'
+              |   | | |     | |     |   |         |           |       |   |               `-BinaryOperator 0x7fbb56807398 <col:380, col:419> 'long' '&'
+              |   | | |     | |     |   |         |           |       |   |                 |-ImplicitCastExpr 0x7fbb56807380 <col:380, col:392> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |   |                 | `-ParenExpr 0x7fbb568071d8 <col:380, col:392> 'Lisp_Object':'long' lvalue
+              |   | | |     | |     |   |         |           |       |   |                 |   `-MemberExpr 0x7fbb568071a0 <col:381, col:387> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |     |   |         |           |       |   |                 |     `-ImplicitCastExpr 0x7fbb56807188 <col:381, col:384> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |   |                 |       `-ParenExpr 0x7fbb56807168 <col:381, col:384> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |           |       |   |                 |         `-DeclRefExpr 0x7fbb56807140 <col:382> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |           |       |   |                 `-UnaryOperator 0x7fbb56807360 <col:396, col:419> 'long' prefix '~'
+              |   | | |     | |     |   |         |           |       |   |                   `-ParenExpr 0x7fbb56807340 <col:397, col:419> 'long'
+              |   | | |     | |     |   |         |           |       |   |                     `-BinaryOperator 0x7fbb56807318 <col:398, col:418> 'long' '-'
+              |   | | |     | |     |   |         |           |       |   |                       |-ParenExpr 0x7fbb568072c0 <col:398, col:414> 'long'
+              |   | | |     | |     |   |         |           |       |   |                       | `-BinaryOperator 0x7fbb56807298 <col:399, col:413> 'long' '<<'
+              |   | | |     | |     |   |         |           |       |   |                       |   |-ParenExpr 0x7fbb56807258 <col:399, col:408> 'long'
+              |   | | |     | |     |   |         |           |       |   |                       |   | `-CStyleCastExpr 0x7fbb56807230 <col:400, col:407> 'long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |                       |   |   `-IntegerLiteral 0x7fbb568071f8 <col:407> 'int' 1
+              |   | | |     | |     |   |         |           |       |   |                       |   `-IntegerLiteral 0x7fbb56807278 <col:413> 'int' 3
+              |   | | |     | |     |   |         |           |       |   |                       `-ImplicitCastExpr 0x7fbb56807300 <col:418> 'long' <IntegralCast>
+              |   | | |     | |     |   |         |           |       |   |                         `-IntegerLiteral 0x7fbb568072e0 <col:418> 'int' 1
+              |   | | |     | |     |   |         |           |       |   `-ImplicitCastExpr 0x7fbb56807690 <col:434> 'int' <LValueToRValue>
+              |   | | |     | |     |   |         |           |       |     `-DeclRefExpr 0x7fbb568075f8 <col:434> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |     |   |         |           |       `-ImplicitCastExpr 0x7fbb56807780 <col:439, col:445> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |     |   |         |           |         `-MemberExpr 0x7fbb56807730 <col:439, col:445> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |     |   |         |           |           `-ImplicitCastExpr 0x7fbb56807718 <col:439, col:442> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |           |             `-ParenExpr 0x7fbb568076f8 <col:439, col:442> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |           |               `-DeclRefExpr 0x7fbb568076d0 <col:440> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |           `-CallExpr 0x7fbb56807980 <col:455, col:482> 'long'
+              |   | | |     | |     |   |         |             |-ImplicitCastExpr 0x7fbb56807968 <col:455> 'long (*)(struct Lisp_Char_Table *, int)' <FunctionToPointerDecay>
+              |   | | |     | |     |   |         |             | `-DeclRefExpr 0x7fbb56807850 <col:455> 'long (struct Lisp_Char_Table *, int)' Function 0x7fbb57826048 'disp_char_vector' 'long (struct Lisp_Char_Table *, int)'
+              |   | | |     | |     |   |         |             |-ImplicitCastExpr 0x7fbb568079b8 <col:473, col:476> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |     |   |         |             | `-ParenExpr 0x7fbb568078a0 <col:473, col:476> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |     |   |         |             |   `-DeclRefExpr 0x7fbb56807878 <col:474> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |     |   |         |             `-ImplicitCastExpr 0x7fbb568079d0 <col:479, col:481> 'int' <LValueToRValue>
+              |   | | |     | |     |   |         |               `-ParenExpr 0x7fbb568078e8 <col:479, col:481> 'int' lvalue
+              |   | | |     | |     |   |         |                 `-DeclRefExpr 0x7fbb568078c0 <col:480> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |     |   |         `-ImplicitCastExpr 0x7fbb56807c80 <col:490, col:512> 'unsigned long' <IntegralCast>
+              |   | | |     | |     |   |           `-ParenExpr 0x7fbb56807c60 <col:490, col:512> 'long'
+              |   | | |     | |     |   |             `-BinaryOperator 0x7fbb56807c38 <col:491, col:511> 'long' '-'
+              |   | | |     | |     |   |               |-ParenExpr 0x7fbb56807bd0 <col:491, col:507> 'long'
+              |   | | |     | |     |   |               | `-BinaryOperator 0x7fbb56807ba8 <col:492, col:506> 'long' '<<'
+              |   | | |     | |     |   |               |   |-ParenExpr 0x7fbb56807b68 <col:492, col:501> 'long'
+              |   | | |     | |     |   |               |   | `-CStyleCastExpr 0x7fbb56807b40 <col:493, col:500> 'long' <IntegralCast>
+              |   | | |     | |     |   |               |   |   `-IntegerLiteral 0x7fbb56807b08 <col:500> 'int' 1
+              |   | | |     | |     |   |               |   `-IntegerLiteral 0x7fbb56807b88 <col:506> 'int' 3
+              |   | | |     | |     |   |               `-ImplicitCastExpr 0x7fbb56807c20 <col:511> 'long' <IntegralCast>
+              |   | | |     | |     |   |                 `-IntegerLiteral 0x7fbb56807c00 <col:511> 'int' 1
+              |   | | |     | |     |   `-ImplicitCastExpr 0x7fbb56807db8 <col:519> 'unsigned int' <IntegralCast>
+              |   | | |     | |     |     `-DeclRefExpr 0x7fbb56807d78 <col:519> 'int' EnumConstant 0x7fbb57807248 'Lisp_Vectorlike' 'int'
+              |   | | |     | |     `-UnaryOperator 0x7fbb56809e70 <col:539, col:1239> 'int' prefix '!'
+              |   | | |     | |       `-ParenExpr 0x7fbb56809e50 <col:540, col:1239> 'unsigned long'
+              |   | | |     | |         `-BinaryOperator 0x7fbb56809e28 <col:541, col:1238> 'unsigned long' '&'
+              |   | | |     | |           |-ImplicitCastExpr 0x7fbb56809e10 <col:541, col:1192> 'unsigned long' <LValueToRValue>
+              |   | | |     | |           | `-MemberExpr 0x7fbb56809c20 <col:541, col:1192> 'unsigned long' lvalue ->size 0x7fbb57807bd8
+              |   | | |     | |           |   `-ParenExpr 0x7fbb56809c00 <col:541, col:1189> 'struct Lisp_Vector *'
+              |   | | |     | |           |     `-BinaryOperator 0x7fbb56809bd0 <col:542, col:1188> 'struct Lisp_Vector *' ','
+              |   | | |     | |           |       |-CStyleCastExpr 0x7fbb56807e48 <col:542, col:549> 'void' <ToVoid>
+              |   | | |     | |           |       | `-IntegerLiteral 0x7fbb56807e18 <col:549> 'int' 0
+              |   | | |     | |           |       `-CStyleCastExpr 0x7fbb56809ba8 <col:552, col:1188> 'struct Lisp_Vector *' <IntegralToPointer>
+              |   | | |     | |           |         `-ParenExpr 0x7fbb56809b88 <col:575, col:1188> 'long'
+              |   | | |     | |           |           `-CStyleCastExpr 0x7fbb56809b08 <col:576, col:1187> 'long' <NoOp>
+              |   | | |     | |           |             `-ParenExpr 0x7fbb56809ae8 <col:583, col:1187> 'long'
+              |   | | |     | |           |               `-BinaryOperator 0x7fbb56809a78 <col:584, col:1186> 'long' '&'
+              |   | | |     | |           |                 |-ParenExpr 0x7fbb568098d0 <col:584, col:1159> 'long'
+              |   | | |     | |           |                 | `-ParenExpr 0x7fbb568098b0 <col:585, col:1158> 'long'
+              |   | | |     | |           |                 |   `-ConditionalOperator 0x7fbb56809880 <col:586, col:1157> 'long'
+              |   | | |     | |           |                 |     |-ParenExpr 0x7fbb56807fa0 <col:586, col:608> 'int'
+              |   | | |     | |           |                 |     | `-BinaryOperator 0x7fbb56807f78 <col:587, col:604> 'int' '<'
+              |   | | |     | |           |                 |     |   |-CStyleCastExpr 0x7fbb56807f18 <col:587, col:600> 'unsigned int' <IntegralCast>
+              |   | | |     | |           |                 |     |   | `-ImplicitCastExpr 0x7fbb56807f00 <col:598, col:600> 'int' <LValueToRValue>
+              |   | | |     | |           |                 |     |   |   `-ParenExpr 0x7fbb56807ee0 <col:598, col:600> 'int' lvalue
+              |   | | |     | |           |                 |     |   |     `-DeclRefExpr 0x7fbb56807e70 <col:599> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |           |                 |     |   `-ImplicitCastExpr 0x7fbb56807f60 <col:604> 'unsigned int' <IntegralCast>
+              |   | | |     | |           |                 |     |     `-IntegerLiteral 0x7fbb56807f40 <col:604> 'int' 128
+              |   | | |     | |           |                 |     |-ParenExpr 0x7fbb56809728 <col:612, col:1126> 'long'
+              |   | | |     | |           |                 |     | `-ConditionalOperator 0x7fbb568096f8 <col:613, col:1125> 'long'
+              |   | | |     | |           |                 |     |   |-ParenExpr 0x7fbb56808118 <col:613, col:637> 'int'
+              |   | | |     | |           |                 |     |   | `-BinaryOperator 0x7fbb568080f0 <col:614, col:636> 'int' '=='
+              |   | | |     | |           |                 |     |   |   |-ImplicitCastExpr 0x7fbb568080c0 <col:614, col:626> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |   |   | `-ParenExpr 0x7fbb56808058 <col:614, col:626> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |   |   |   `-MemberExpr 0x7fbb56808020 <col:615, col:621> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |           |                 |     |   |   |     `-ImplicitCastExpr 0x7fbb56808008 <col:615, col:618> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |     |   |   |       `-ParenExpr 0x7fbb56807fe8 <col:615, col:618> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |     |   |   |         `-DeclRefExpr 0x7fbb56807fc0 <col:616> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |     |   |   `-ImplicitCastExpr 0x7fbb568080d8 <col:631, col:636> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |   |     `-ParenExpr 0x7fbb568080a0 <col:631, col:636> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |   |       `-DeclRefExpr 0x7fbb56808078 <col:632> 'Lisp_Object':'long' lvalue Var 0x7fbb57807f60 'Qnil' 'Lisp_Object':'long'
+              |   | | |     | |           |                 |     |   |-ImplicitCastExpr 0x7fbb568096e0 <col:641, col:647> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |   | `-MemberExpr 0x7fbb56808198 <col:641, col:647> 'Lisp_Object':'long' lvalue ->defalt 0x7fbb57807d00
+              |   | | |     | |           |                 |     |   |   `-ImplicitCastExpr 0x7fbb56808180 <col:641, col:644> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |     |   |     `-ParenExpr 0x7fbb56808160 <col:641, col:644> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |     |   |       `-DeclRefExpr 0x7fbb56808138 <col:642> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |     |   `-ParenExpr 0x7fbb568096c0 <col:656, col:1125> 'long'
+              |   | | |     | |           |                 |     |     `-ConditionalOperator 0x7fbb56809690 <col:657, col:1120> 'long'
+              |   | | |     | |           |                 |     |       |-ParenExpr 0x7fbb568090a0 <col:657, col:1000> 'int'
+              |   | | |     | |           |                 |     |       | `-BinaryOperator 0x7fbb56809078 <col:658, col:999> 'int' '&&'
+              |   | | |     | |           |                 |     |       |   |-ParenExpr 0x7fbb56808630 <col:658, col:758> 'int'
+              |   | | |     | |           |                 |     |       |   | `-BinaryOperator 0x7fbb56808608 <col:659, col:743> 'int' '=='
+              |   | | |     | |           |                 |     |       |   |   |-ImplicitCastExpr 0x7fbb568085d8 <col:659, col:738> 'unsigned int' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |   | `-ParenExpr 0x7fbb56808590 <col:659, col:738> 'enum Lisp_Type':'enum Lisp_Type'
+              |   | | |     | |           |                 |     |       |   |   |   `-CStyleCastExpr 0x7fbb56808568 <col:660, col:737> 'enum Lisp_Type':'enum Lisp_Type' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |   |     `-ParenExpr 0x7fbb56808548 <col:677, col:737> 'unsigned long'
+              |   | | |     | |           |                 |     |       |   |   |       `-BinaryOperator 0x7fbb568084d0 <col:678, col:736> 'unsigned long' '&'
+              |   | | |     | |           |                 |     |       |   |   |         |-ParenExpr 0x7fbb56808330 <col:678, col:710> 'unsigned long'
+              |   | | |     | |           |                 |     |       |   |   |         | `-CStyleCastExpr 0x7fbb56808308 <col:679, col:709> 'unsigned long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |   |         |   `-ImplicitCastExpr 0x7fbb568082f0 <col:695, col:709> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |   |   |         |     `-ParenExpr 0x7fbb568082d0 <col:695, col:709> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |       |   |   |         |       `-ParenExpr 0x7fbb56808268 <col:696, col:708> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |       |   |   |         |         `-MemberExpr 0x7fbb56808230 <col:697, col:703> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |           |                 |     |       |   |   |         |           `-ImplicitCastExpr 0x7fbb56808218 <col:697, col:700> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |   |   |         |             `-ParenExpr 0x7fbb568081f8 <col:697, col:700> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |     |       |   |   |         |               `-DeclRefExpr 0x7fbb568081d0 <col:698> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |     |       |   |   |         `-ImplicitCastExpr 0x7fbb568084b8 <col:714, col:736> 'unsigned long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |   |           `-ParenExpr 0x7fbb56808498 <col:714, col:736> 'long'
+              |   | | |     | |           |                 |     |       |   |   |             `-BinaryOperator 0x7fbb56808470 <col:715, col:735> 'long' '-'
+              |   | | |     | |           |                 |     |       |   |   |               |-ParenExpr 0x7fbb56808418 <col:715, col:731> 'long'
+              |   | | |     | |           |                 |     |       |   |   |               | `-BinaryOperator 0x7fbb568083f0 <col:716, col:730> 'long' '<<'
+              |   | | |     | |           |                 |     |       |   |   |               |   |-ParenExpr 0x7fbb568083b0 <col:716, col:725> 'long'
+              |   | | |     | |           |                 |     |       |   |   |               |   | `-CStyleCastExpr 0x7fbb56808388 <col:717, col:724> 'long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |   |               |   |   `-IntegerLiteral 0x7fbb56808350 <col:724> 'int' 1
+              |   | | |     | |           |                 |     |       |   |   |               |   `-IntegerLiteral 0x7fbb568083d0 <col:730> 'int' 3
+              |   | | |     | |           |                 |     |       |   |   |               `-ImplicitCastExpr 0x7fbb56808458 <col:735> 'long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |   |                 `-IntegerLiteral 0x7fbb56808438 <col:735> 'int' 1
+              |   | | |     | |           |                 |     |       |   |   `-ImplicitCastExpr 0x7fbb568085f0 <col:743> 'unsigned int' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |     `-DeclRefExpr 0x7fbb568085b0 <col:743> 'int' EnumConstant 0x7fbb57807248 'Lisp_Vectorlike' 'int'
+              |   | | |     | |           |                 |     |       |   `-ParenExpr 0x7fbb56809058 <col:763, col:999> 'int'
+              |   | | |     | |           |                 |     |       |     `-BinaryOperator 0x7fbb56809030 <col:764, col:998> 'int' '=='
+              |   | | |     | |           |                 |     |       |       |-ParenExpr 0x7fbb56808db0 <col:764, col:928> 'unsigned long'
+              |   | | |     | |           |                 |     |       |       | `-ParenExpr 0x7fbb56808d90 <col:765, col:927> 'unsigned long'
+              |   | | |     | |           |                 |     |       |       |   `-BinaryOperator 0x7fbb56808d68 <col:766, col:926> 'unsigned long' '&'
+              |   | | |     | |           |                 |     |       |       |     |-ImplicitCastExpr 0x7fbb56808d50 <col:766, col:854> 'unsigned long' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |       |     | `-MemberExpr 0x7fbb56808aa0 <col:766, col:854> 'unsigned long' lvalue ->size 0x7fbb57807bd8
+              |   | | |     | |           |                 |     |       |       |     |   `-ParenExpr 0x7fbb56808a80 <col:766, col:851> 'struct Lisp_Vector *'
+              |   | | |     | |           |                 |     |       |       |     |     `-BinaryOperator 0x7fbb56808a58 <col:767, col:850> 'struct Lisp_Vector *' ','
+              |   | | |     | |           |                 |     |       |       |     |       |-CStyleCastExpr 0x7fbb56808680 <col:767, col:774> 'void' <ToVoid>
+              |   | | |     | |           |                 |     |       |       |     |       | `-IntegerLiteral 0x7fbb56808650 <col:774> 'int' 0
+              |   | | |     | |           |                 |     |       |       |     |       `-CStyleCastExpr 0x7fbb56808a30 <col:777, col:850> 'struct Lisp_Vector *' <IntegralToPointer>
+              |   | | |     | |           |                 |     |       |       |     |         `-ParenExpr 0x7fbb56808a10 <col:800, col:850> 'long'
+              |   | | |     | |           |                 |     |       |       |     |           `-CStyleCastExpr 0x7fbb56808990 <col:801, col:849> 'long' <NoOp>
+              |   | | |     | |           |                 |     |       |       |     |             `-ParenExpr 0x7fbb56808970 <col:808, col:849> 'long'
+              |   | | |     | |           |                 |     |       |       |     |               `-BinaryOperator 0x7fbb56808900 <col:809, col:848> 'long' '&'
+              |   | | |     | |           |                 |     |       |       |     |                 |-ImplicitCastExpr 0x7fbb568088e8 <col:809, col:821> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |       |     |                 | `-ParenExpr 0x7fbb56808740 <col:809, col:821> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |       |       |     |                 |   `-MemberExpr 0x7fbb56808708 <col:810, col:816> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |           |                 |     |       |       |     |                 |     `-ImplicitCastExpr 0x7fbb568086f0 <col:810, col:813> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |       |     |                 |       `-ParenExpr 0x7fbb568086d0 <col:810, col:813> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |     |       |       |     |                 |         `-DeclRefExpr 0x7fbb568086a8 <col:811> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |     |       |       |     |                 `-UnaryOperator 0x7fbb568088c8 <col:825, col:848> 'long' prefix '~'
+              |   | | |     | |           |                 |     |       |       |     |                   `-ParenExpr 0x7fbb568088a8 <col:826, col:848> 'long'
+              |   | | |     | |           |                 |     |       |       |     |                     `-BinaryOperator 0x7fbb56808880 <col:827, col:847> 'long' '-'
+              |   | | |     | |           |                 |     |       |       |     |                       |-ParenExpr 0x7fbb56808828 <col:827, col:843> 'long'
+              |   | | |     | |           |                 |     |       |       |     |                       | `-BinaryOperator 0x7fbb56808800 <col:828, col:842> 'long' '<<'
+              |   | | |     | |           |                 |     |       |       |     |                       |   |-ParenExpr 0x7fbb568087c0 <col:828, col:837> 'long'
+              |   | | |     | |           |                 |     |       |       |     |                       |   | `-CStyleCastExpr 0x7fbb56808798 <col:829, col:836> 'long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |       |     |                       |   |   `-IntegerLiteral 0x7fbb56808760 <col:836> 'int' 1
+              |   | | |     | |           |                 |     |       |       |     |                       |   `-IntegerLiteral 0x7fbb568087e0 <col:842> 'int' 3
+              |   | | |     | |           |                 |     |       |       |     |                       `-ImplicitCastExpr 0x7fbb56808868 <col:847> 'long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |       |     |                         `-IntegerLiteral 0x7fbb56808848 <col:847> 'int' 1
+              |   | | |     | |           |                 |     |       |       |     `-ParenExpr 0x7fbb56808d30 <col:861, col:926> 'unsigned long'
+              |   | | |     | |           |                 |     |       |       |       `-BinaryOperator 0x7fbb56808d08 <col:862, col:925> 'unsigned long' '|'
+              |   | | |     | |           |                 |     |       |       |         |-ParenExpr 0x7fbb56808c88 <col:862, col:901> 'unsigned long'
+              |   | | |     | |           |                 |     |       |       |         | `-ParenExpr 0x7fbb56808c68 <col:863, col:900> 'unsigned long'
+              |   | | |     | |           |                 |     |       |       |         |   `-BinaryOperator 0x7fbb56808c40 <col:864, col:899> 'unsigned long' '>>'
+              |   | | |     | |           |                 |     |       |       |         |     |-ParenExpr 0x7fbb56808c00 <col:864, col:894> 'unsigned long'
+              |   | | |     | |           |                 |     |       |       |         |     | `-BinaryOperator 0x7fbb56808bc0 <col:865, col:893> 'unsigned long' '<<'
+              |   | | |     | |           |                 |     |       |       |         |     |   |-CStyleCastExpr 0x7fbb56808b10 <col:865, col:881> 'unsigned long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |       |         |     |   | `-IntegerLiteral 0x7fbb56808ad8 <col:881> 'int' 1
+              |   | | |     | |           |                 |     |       |       |         |     |   `-ParenExpr 0x7fbb56808ba0 <col:886, col:893> 'int'
+              |   | | |     | |           |                 |     |       |       |         |     |     `-BinaryOperator 0x7fbb56808b78 <col:887, col:892> 'int' '-'
+              |   | | |     | |           |                 |     |       |       |         |     |       |-IntegerLiteral 0x7fbb56808b38 <col:887> 'int' 64
+              |   | | |     | |           |                 |     |       |       |         |     |       `-IntegerLiteral 0x7fbb56808b58 <col:892> 'int' 1
+              |   | | |     | |           |                 |     |       |       |         |     `-IntegerLiteral 0x7fbb56808c20 <col:899> 'int' 1
+              |   | | |     | |           |                 |     |       |       |         `-ImplicitCastExpr 0x7fbb56808cf0 <col:905, col:925> 'unsigned long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |       |           `-ParenExpr 0x7fbb56808cd0 <col:905, col:925> 'int'
+              |   | | |     | |           |                 |     |       |       |             `-DeclRefExpr 0x7fbb56808ca8 <col:906> 'int' EnumConstant 0x7fbb57807990 'PVEC_SUB_CHAR_TABLE' 'int'
+              |   | | |     | |           |                 |     |       |       `-ParenExpr 0x7fbb56809010 <col:933, col:998> 'unsigned long'
+              |   | | |     | |           |                 |     |       |         `-BinaryOperator 0x7fbb56808fe8 <col:934, col:997> 'unsigned long' '|'
+              |   | | |     | |           |                 |     |       |           |-ParenExpr 0x7fbb56808f68 <col:934, col:973> 'unsigned long'
+              |   | | |     | |           |                 |     |       |           | `-ParenExpr 0x7fbb56808f48 <col:935, col:972> 'unsigned long'
+              |   | | |     | |           |                 |     |       |           |   `-BinaryOperator 0x7fbb56808f20 <col:936, col:971> 'unsigned long' '>>'
+              |   | | |     | |           |                 |     |       |           |     |-ParenExpr 0x7fbb56808ee0 <col:936, col:966> 'unsigned long'
+              |   | | |     | |           |                 |     |       |           |     | `-BinaryOperator 0x7fbb56808eb8 <col:937, col:965> 'unsigned long' '<<'
+              |   | | |     | |           |                 |     |       |           |     |   |-CStyleCastExpr 0x7fbb56808e08 <col:937, col:953> 'unsigned long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |           |     |   | `-IntegerLiteral 0x7fbb56808dd0 <col:953> 'int' 1
+              |   | | |     | |           |                 |     |       |           |     |   `-ParenExpr 0x7fbb56808e98 <col:958, col:965> 'int'
+              |   | | |     | |           |                 |     |       |           |     |     `-BinaryOperator 0x7fbb56808e70 <col:959, col:964> 'int' '-'
+              |   | | |     | |           |                 |     |       |           |     |       |-IntegerLiteral 0x7fbb56808e30 <col:959> 'int' 64
+              |   | | |     | |           |                 |     |       |           |     |       `-IntegerLiteral 0x7fbb56808e50 <col:964> 'int' 1
+              |   | | |     | |           |                 |     |       |           |     `-IntegerLiteral 0x7fbb56808f00 <col:971> 'int' 1
+              |   | | |     | |           |                 |     |       |           `-ImplicitCastExpr 0x7fbb56808fd0 <col:977, col:997> 'unsigned long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |             `-ParenExpr 0x7fbb56808fb0 <col:977, col:997> 'int'
+              |   | | |     | |           |                 |     |       |               `-DeclRefExpr 0x7fbb56808f88 <col:978> 'int' EnumConstant 0x7fbb57807990 'PVEC_SUB_CHAR_TABLE' 'int'
+              |   | | |     | |           |                 |     |       |-ImplicitCastExpr 0x7fbb56809660 <col:1004, col:1110> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |       | `-ArraySubscriptExpr 0x7fbb568095a0 <col:1004, col:1110> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |       |   |-ImplicitCastExpr 0x7fbb56809570 <col:1004, col:1100> 'Lisp_Object *' <ArrayToPointerDecay>
+              |   | | |     | |           |                 |     |       |   | `-MemberExpr 0x7fbb56809510 <col:1004, col:1100> 'Lisp_Object [1]' lvalue ->contents 0x7fbb57807f08
+              |   | | |     | |           |                 |     |       |   |   `-ParenExpr 0x7fbb568094f0 <col:1004, col:1097> 'struct Lisp_Sub_Char_Table *'
+              |   | | |     | |           |                 |     |       |   |     `-BinaryOperator 0x7fbb568094c8 <col:1005, col:1096> 'struct Lisp_Sub_Char_Table *' ','
+              |   | | |     | |           |                 |     |       |   |       |-CStyleCastExpr 0x7fbb568090f0 <col:1005, col:1012> 'void' <ToVoid>
+              |   | | |     | |           |                 |     |       |   |       | `-IntegerLiteral 0x7fbb568090c0 <col:1012> 'int' 0
+              |   | | |     | |           |                 |     |       |   |       `-CStyleCastExpr 0x7fbb568094a0 <col:1015, col:1096> 'struct Lisp_Sub_Char_Table *' <IntegralToPointer>
+              |   | | |     | |           |                 |     |       |   |         `-ParenExpr 0x7fbb56809480 <col:1046, col:1096> 'long'
+              |   | | |     | |           |                 |     |       |   |           `-CStyleCastExpr 0x7fbb56809400 <col:1047, col:1095> 'long' <NoOp>
+              |   | | |     | |           |                 |     |       |   |             `-ParenExpr 0x7fbb568093e0 <col:1054, col:1095> 'long'
+              |   | | |     | |           |                 |     |       |   |               `-BinaryOperator 0x7fbb56809370 <col:1055, col:1094> 'long' '&'
+              |   | | |     | |           |                 |     |       |   |                 |-ImplicitCastExpr 0x7fbb56809358 <col:1055, col:1067> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |   |                 | `-ParenExpr 0x7fbb568091b0 <col:1055, col:1067> 'Lisp_Object':'long' lvalue
+              |   | | |     | |           |                 |     |       |   |                 |   `-MemberExpr 0x7fbb56809178 <col:1056, col:1062> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |           |                 |     |       |   |                 |     `-ImplicitCastExpr 0x7fbb56809160 <col:1056, col:1059> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |   |                 |       `-ParenExpr 0x7fbb56809140 <col:1056, col:1059> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |     |       |   |                 |         `-DeclRefExpr 0x7fbb56809118 <col:1057> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |     |       |   |                 `-UnaryOperator 0x7fbb56809338 <col:1071, col:1094> 'long' prefix '~'
+              |   | | |     | |           |                 |     |       |   |                   `-ParenExpr 0x7fbb56809318 <col:1072, col:1094> 'long'
+              |   | | |     | |           |                 |     |       |   |                     `-BinaryOperator 0x7fbb568092f0 <col:1073, col:1093> 'long' '-'
+              |   | | |     | |           |                 |     |       |   |                       |-ParenExpr 0x7fbb56809298 <col:1073, col:1089> 'long'
+              |   | | |     | |           |                 |     |       |   |                       | `-BinaryOperator 0x7fbb56809270 <col:1074, col:1088> 'long' '<<'
+              |   | | |     | |           |                 |     |       |   |                       |   |-ParenExpr 0x7fbb56809230 <col:1074, col:1083> 'long'
+              |   | | |     | |           |                 |     |       |   |                       |   | `-CStyleCastExpr 0x7fbb56809208 <col:1075, col:1082> 'long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |                       |   |   `-IntegerLiteral 0x7fbb568091d0 <col:1082> 'int' 1
+              |   | | |     | |           |                 |     |       |   |                       |   `-IntegerLiteral 0x7fbb56809250 <col:1088> 'int' 3
+              |   | | |     | |           |                 |     |       |   |                       `-ImplicitCastExpr 0x7fbb568092d8 <col:1093> 'long' <IntegralCast>
+              |   | | |     | |           |                 |     |       |   |                         `-IntegerLiteral 0x7fbb568092b8 <col:1093> 'int' 1
+              |   | | |     | |           |                 |     |       |   `-ImplicitCastExpr 0x7fbb56809588 <col:1109> 'int' <LValueToRValue>
+              |   | | |     | |           |                 |     |       |     `-DeclRefExpr 0x7fbb56809548 <col:1109> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |           |                 |     |       `-ImplicitCastExpr 0x7fbb56809678 <col:1114, col:1120> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |           |                 |     |         `-MemberExpr 0x7fbb56809628 <col:1114, col:1120> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |           |                 |     |           `-ImplicitCastExpr 0x7fbb56809610 <col:1114, col:1117> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |     |             `-ParenExpr 0x7fbb568095f0 <col:1114, col:1117> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |     |               `-DeclRefExpr 0x7fbb568095c8 <col:1115> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |     `-CallExpr 0x7fbb56809818 <col:1130, col:1157> 'long'
+              |   | | |     | |           |                 |       |-ImplicitCastExpr 0x7fbb56809800 <col:1130> 'long (*)(struct Lisp_Char_Table *, int)' <FunctionToPointerDecay>
+              |   | | |     | |           |                 |       | `-DeclRefExpr 0x7fbb56809748 <col:1130> 'long (struct Lisp_Char_Table *, int)' Function 0x7fbb57826048 'disp_char_vector' 'long (struct Lisp_Char_Table *, int)'
+              |   | | |     | |           |                 |       |-ImplicitCastExpr 0x7fbb56809850 <col:1148, col:1151> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |           |                 |       | `-ParenExpr 0x7fbb56809798 <col:1148, col:1151> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |           |                 |       |   `-DeclRefExpr 0x7fbb56809770 <col:1149> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |           |                 |       `-ImplicitCastExpr 0x7fbb56809868 <col:1154, col:1156> 'int' <LValueToRValue>
+              |   | | |     | |           |                 |         `-ParenExpr 0x7fbb568097e0 <col:1154, col:1156> 'int' lvalue
+              |   | | |     | |           |                 |           `-DeclRefExpr 0x7fbb568097b8 <col:1155> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |           |                 `-UnaryOperator 0x7fbb56809a58 <col:1163, col:1186> 'long' prefix '~'
+              |   | | |     | |           |                   `-ParenExpr 0x7fbb56809a38 <col:1164, col:1186> 'long'
+              |   | | |     | |           |                     `-BinaryOperator 0x7fbb56809a10 <col:1165, col:1185> 'long' '-'
+              |   | | |     | |           |                       |-ParenExpr 0x7fbb568099b8 <col:1165, col:1181> 'long'
+              |   | | |     | |           |                       | `-BinaryOperator 0x7fbb56809990 <col:1166, col:1180> 'long' '<<'
+              |   | | |     | |           |                       |   |-ParenExpr 0x7fbb56809950 <col:1166, col:1175> 'long'
+              |   | | |     | |           |                       |   | `-CStyleCastExpr 0x7fbb56809928 <col:1167, col:1174> 'long' <IntegralCast>
+              |   | | |     | |           |                       |   |   `-IntegerLiteral 0x7fbb568098f0 <col:1174> 'int' 1
+              |   | | |     | |           |                       |   `-IntegerLiteral 0x7fbb56809970 <col:1180> 'int' 3
+              |   | | |     | |           |                       `-ImplicitCastExpr 0x7fbb568099f8 <col:1185> 'long' <IntegralCast>
+              |   | | |     | |           |                         `-IntegerLiteral 0x7fbb568099d8 <col:1185> 'int' 1
+              |   | | |     | |           `-ParenExpr 0x7fbb56809df0 <col:1199, col:1238> 'unsigned long'
+              |   | | |     | |             `-ParenExpr 0x7fbb56809dd0 <col:1200, col:1237> 'unsigned long'
+              |   | | |     | |               `-BinaryOperator 0x7fbb56809da8 <col:1201, col:1236> 'unsigned long' '>>'
+              |   | | |     | |                 |-ParenExpr 0x7fbb56809d68 <col:1201, col:1231> 'unsigned long'
+              |   | | |     | |                 | `-BinaryOperator 0x7fbb56809d40 <col:1202, col:1230> 'unsigned long' '<<'
+              |   | | |     | |                 |   |-CStyleCastExpr 0x7fbb56809c90 <col:1202, col:1218> 'unsigned long' <IntegralCast>
+              |   | | |     | |                 |   | `-IntegerLiteral 0x7fbb56809c58 <col:1218> 'int' 1
+              |   | | |     | |                 |   `-ParenExpr 0x7fbb56809d20 <col:1223, col:1230> 'int'
+              |   | | |     | |                 |     `-BinaryOperator 0x7fbb56809cf8 <col:1224, col:1229> 'int' '-'
+              |   | | |     | |                 |       |-IntegerLiteral 0x7fbb56809cb8 <col:1224> 'int' 64
+              |   | | |     | |                 |       `-IntegerLiteral 0x7fbb56809cd8 <col:1229> 'int' 1
+              |   | | |     | |                 `-IntegerLiteral 0x7fbb56809d88 <col:1236> 'int' 1
+              |   | | |     | |-BinaryOperator 0x7fbb5680bd98 <line:141:8, line:149:541> 'int' '='
+              |   | | |     | | |-DeclRefExpr 0x7fbb56809f00 <line:141:8> 'int' lvalue Var 0x7fbb57829528 'width' 'int'
+              |   | | |     | | `-ImplicitCastExpr 0x7fbb5680bd80 <line:142:10, line:149:541> 'int' <IntegralCast>
+              |   | | |     | |   `-ImplicitCastExpr 0x7fbb5680bd68 <line:142:10, line:149:541> 'unsigned long' <LValueToRValue>
+              |   | | |     | |     `-MemberExpr 0x7fbb5680bd30 <line:142:10, line:149:541> 'unsigned long' lvalue ->size 0x7fbb57807bd8
+              |   | | |     | |       `-ParenExpr 0x7fbb5680bd10 <line:142:10, line:149:538> 'struct Lisp_Vector *'
+              |   | | |     | |         `-BinaryOperator 0x7fbb5680bce8 <line:142:11, line:149:537> 'struct Lisp_Vector *' ','
+              |   | | |     | |           |-CStyleCastExpr 0x7fbb56809f58 <line:142:11, col:18> 'void' <ToVoid>
+              |   | | |     | |           | `-IntegerLiteral 0x7fbb56809f28 <col:18> 'int' 0
+              |   | | |     | |           `-CStyleCastExpr 0x7fbb5680bcc0 <line:143:11, line:149:537> 'struct Lisp_Vector *' <IntegralToPointer>
+              |   | | |     | |             `-ParenExpr 0x7fbb5680bca0 <line:144:8, line:149:537> 'long'
+              |   | | |     | |               `-CStyleCastExpr 0x7fbb5680bc20 <line:144:9, line:149:536> 'long' <NoOp>
+              |   | | |     | |                 `-ParenExpr 0x7fbb5680bc00 <line:144:16, line:149:536> 'long'
+              |   | | |     | |                   `-BinaryOperator 0x7fbb5680bb88 <line:144:17, line:149:535> 'long' '&'
+              |   | | |     | |                     |-ParenExpr 0x7fbb5680b9e0 <line:144:17, line:149:508> 'long'
+              |   | | |     | |                     | `-ParenExpr 0x7fbb5680b9c0 <line:144:18, line:149:507> 'long'
+              |   | | |     | |                     |   `-ConditionalOperator 0x7fbb5680b990 <line:144:19, line:149:506> 'long'
+              |   | | |     | |                     |     |-ParenExpr 0x7fbb5680a0b0 <line:144:19, line:145:17> 'int'
+              |   | | |     | |                     |     | `-BinaryOperator 0x7fbb5680a088 <line:144:20, line:145:13> 'int' '<'
+              |   | | |     | |                     |     |   |-CStyleCastExpr 0x7fbb5680a028 <line:144:20, col:33> 'unsigned int' <IntegralCast>
+              |   | | |     | |                     |     |   | `-ImplicitCastExpr 0x7fbb5680a010 <col:31, col:33> 'int' <LValueToRValue>
+              |   | | |     | |                     |     |   |   `-ParenExpr 0x7fbb56809ff0 <col:31, col:33> 'int' lvalue
+              |   | | |     | |                     |     |   |     `-DeclRefExpr 0x7fbb56809f80 <col:32> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |                     |     |   `-ImplicitCastExpr 0x7fbb5680a070 <line:145:13> 'unsigned int' <IntegralCast>
+              |   | | |     | |                     |     |     `-IntegerLiteral 0x7fbb5680a050 <col:13> 'int' 128
+              |   | | |     | |                     |     |-ParenExpr 0x7fbb5680b838 <col:21, line:149:475> 'long'
+              |   | | |     | |                     |     | `-ConditionalOperator 0x7fbb5680b808 <line:145:22, line:149:474> 'long'
+              |   | | |     | |                     |     |   |-ParenExpr 0x7fbb5680a228 <line:145:22, line:146:15> 'int'
+              |   | | |     | |                     |     |   | `-BinaryOperator 0x7fbb5680a200 <line:145:23, line:146:14> 'int' '=='
+              |   | | |     | |                     |     |   |   |-ImplicitCastExpr 0x7fbb5680a1d0 <line:145:23, col:35> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |   |   | `-ParenExpr 0x7fbb5680a168 <col:23, col:35> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |   |   |   `-MemberExpr 0x7fbb5680a130 <col:24, col:30> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |                     |     |   |   |     `-ImplicitCastExpr 0x7fbb5680a118 <col:24, col:27> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |     |   |   |       `-ParenExpr 0x7fbb5680a0f8 <col:24, col:27> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |     |   |   |         `-DeclRefExpr 0x7fbb5680a0d0 <col:25> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |     |   |   `-ImplicitCastExpr 0x7fbb5680a1e8 <line:146:9, col:14> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |   |     `-ParenExpr 0x7fbb5680a1b0 <col:9, col:14> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |   |       `-DeclRefExpr 0x7fbb5680a188 <col:10> 'Lisp_Object':'long' lvalue Var 0x7fbb57807f60 'Qnil' 'Lisp_Object':'long'
+              |   | | |     | |                     |     |   |-ImplicitCastExpr 0x7fbb5680b7f0 <col:19, line:147:8> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |   | `-MemberExpr 0x7fbb5680a2a8 <line:146:19, line:147:8> 'Lisp_Object':'long' lvalue ->defalt 0x7fbb57807d00
+              |   | | |     | |                     |     |   |   `-ImplicitCastExpr 0x7fbb5680a290 <line:146:19, col:22> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |     |   |     `-ParenExpr 0x7fbb5680a270 <col:19, col:22> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |     |   |       `-DeclRefExpr 0x7fbb5680a248 <col:20> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |     |   `-ParenExpr 0x7fbb5680b7d0 <line:148:10, line:149:474> 'long'
+              |   | | |     | |                     |     |     `-ConditionalOperator 0x7fbb5680b7a0 <line:148:11, line:149:469> 'long'
+              |   | | |     | |                     |     |       |-ParenExpr 0x7fbb5680b1b0 <line:148:11, line:149:349> 'int'
+              |   | | |     | |                     |     |       | `-BinaryOperator 0x7fbb5680b188 <line:148:12, line:149:348> 'int' '&&'
+              |   | | |     | |                     |     |       |   |-ParenExpr 0x7fbb5680a740 <line:148:12, line:149:107> 'int'
+              |   | | |     | |                     |     |       |   | `-BinaryOperator 0x7fbb5680a718 <line:148:13, line:149:92> 'int' '=='
+              |   | | |     | |                     |     |       |   |   |-ImplicitCastExpr 0x7fbb5680a6e8 <line:148:13, line:149:87> 'unsigned int' <IntegralCast>
+              |   | | |     | |                     |     |       |   |   | `-ParenExpr 0x7fbb5680a6a0 <line:148:13, line:149:87> 'enum Lisp_Type':'enum Lisp_Type'
+              |   | | |     | |                     |     |       |   |   |   `-CStyleCastExpr 0x7fbb5680a678 <line:148:14, line:149:86> 'enum Lisp_Type':'enum Lisp_Type' <IntegralCast>
+              |   | | |     | |                     |     |       |   |   |     `-ParenExpr 0x7fbb5680a658 <col:26, col:86> 'unsigned long'
+              |   | | |     | |                     |     |       |   |   |       `-BinaryOperator 0x7fbb5680a5e0 <col:27, col:85> 'unsigned long' '&'
+              |   | | |     | |                     |     |       |   |   |         |-ParenExpr 0x7fbb5680a440 <col:27, col:59> 'unsigned long'
+              |   | | |     | |                     |     |       |   |   |         | `-CStyleCastExpr 0x7fbb5680a418 <col:28, col:58> 'unsigned long' <IntegralCast>
+              |   | | |     | |                     |     |       |   |   |         |   `-ImplicitCastExpr 0x7fbb5680a400 <col:44, col:58> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |       |   |   |         |     `-ParenExpr 0x7fbb5680a3e0 <col:44, col:58> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |       |   |   |         |       `-ParenExpr 0x7fbb5680a378 <col:45, col:57> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |       |   |   |         |         `-MemberExpr 0x7fbb5680a340 <col:46, col:52> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |                     |     |       |   |   |         |           `-ImplicitCastExpr 0x7fbb5680a328 <col:46, col:49> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |     |       |   |   |         |             `-ParenExpr 0x7fbb5680a308 <col:46, col:49> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |     |       |   |   |         |               `-DeclRefExpr 0x7fbb5680a2e0 <col:47> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |     |       |   |   |         `-ImplicitCastExpr 0x7fbb5680a5c8 <col:63, col:85> 'unsigned long' <IntegralCast>
+              |   | | |     | |                     |     |       |   |   |           `-ParenExpr 0x7fbb5680a5a8 <col:63, col:85> 'long'
+              |   | | |     | |                     |     |       |   |   |             `-BinaryOperator 0x7fbb5680a580 <col:64, col:84> 'long' '-'
+              |   | | |     | |                     |     |       |   |   |               |-ParenExpr 0x7fbb5680a528 <col:64, col:80> 'long'
+              |   | | |     | |                     |     |       |   |   |               | `-BinaryOperator 0x7fbb5680a500 <col:65, col:79> 'long' '<<'
+              |   | | |     | |                     |     |       |   |   |               |   |-ParenExpr 0x7fbb5680a4c0 <col:65, col:74> 'long'
+              |   | | |     | |                     |     |       |   |   |               |   | `-CStyleCastExpr 0x7fbb5680a498 <col:66, col:73> 'long' <IntegralCast>
+              |   | | |     | |                     |     |       |   |   |               |   |   `-IntegerLiteral 0x7fbb5680a460 <col:73> 'int' 1
+              |   | | |     | |                     |     |       |   |   |               |   `-IntegerLiteral 0x7fbb5680a4e0 <col:79> 'int' 3
+              |   | | |     | |                     |     |       |   |   |               `-ImplicitCastExpr 0x7fbb5680a568 <col:84> 'long' <IntegralCast>
+              |   | | |     | |                     |     |       |   |   |                 `-IntegerLiteral 0x7fbb5680a548 <col:84> 'int' 1
+              |   | | |     | |                     |     |       |   |   `-ImplicitCastExpr 0x7fbb5680a700 <col:92> 'unsigned int' <IntegralCast>
+              |   | | |     | |                     |     |       |   |     `-DeclRefExpr 0x7fbb5680a6c0 <col:92> 'int' EnumConstant 0x7fbb57807248 'Lisp_Vectorlike' 'int'
+              |   | | |     | |                     |     |       |   `-ParenExpr 0x7fbb5680b168 <col:112, col:348> 'int'
+              |   | | |     | |                     |     |       |     `-BinaryOperator 0x7fbb5680b140 <col:113, col:347> 'int' '=='
+              |   | | |     | |                     |     |       |       |-ParenExpr 0x7fbb5680aec0 <col:113, col:277> 'unsigned long'
+              |   | | |     | |                     |     |       |       | `-ParenExpr 0x7fbb5680aea0 <col:114, col:276> 'unsigned long'
+              |   | | |     | |                     |     |       |       |   `-BinaryOperator 0x7fbb5680ae78 <col:115, col:275> 'unsigned long' '&'
+              |   | | |     | |                     |     |       |       |     |-ImplicitCastExpr 0x7fbb5680ae60 <col:115, col:203> 'unsigned long' <LValueToRValue>
+              |   | | |     | |                     |     |       |       |     | `-MemberExpr 0x7fbb5680abb0 <col:115, col:203> 'unsigned long' lvalue ->size 0x7fbb57807bd8
+              |   | | |     | |                     |     |       |       |     |   `-ParenExpr 0x7fbb5680ab90 <col:115, col:200> 'struct Lisp_Vector *'
+              |   | | |     | |                     |     |       |       |     |     `-BinaryOperator 0x7fbb5680ab68 <col:116, col:199> 'struct Lisp_Vector *' ','
+              |   | | |     | |                     |     |       |       |     |       |-CStyleCastExpr 0x7fbb5680a790 <col:116, col:123> 'void' <ToVoid>
+              |   | | |     | |                     |     |       |       |     |       | `-IntegerLiteral 0x7fbb5680a760 <col:123> 'int' 0
+              |   | | |     | |                     |     |       |       |     |       `-CStyleCastExpr 0x7fbb5680ab40 <col:126, col:199> 'struct Lisp_Vector *' <IntegralToPointer>
+              |   | | |     | |                     |     |       |       |     |         `-ParenExpr 0x7fbb5680ab20 <col:149, col:199> 'long'
+              |   | | |     | |                     |     |       |       |     |           `-CStyleCastExpr 0x7fbb5680aaa0 <col:150, col:198> 'long' <NoOp>
+              |   | | |     | |                     |     |       |       |     |             `-ParenExpr 0x7fbb5680aa80 <col:157, col:198> 'long'
+              |   | | |     | |                     |     |       |       |     |               `-BinaryOperator 0x7fbb5680aa10 <col:158, col:197> 'long' '&'
+              |   | | |     | |                     |     |       |       |     |                 |-ImplicitCastExpr 0x7fbb5680a9f8 <col:158, col:170> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |       |       |     |                 | `-ParenExpr 0x7fbb5680a850 <col:158, col:170> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |       |       |     |                 |   `-MemberExpr 0x7fbb5680a818 <col:159, col:165> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |                     |     |       |       |     |                 |     `-ImplicitCastExpr 0x7fbb5680a800 <col:159, col:162> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |     |       |       |     |                 |       `-ParenExpr 0x7fbb5680a7e0 <col:159, col:162> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |     |       |       |     |                 |         `-DeclRefExpr 0x7fbb5680a7b8 <col:160> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |     |       |       |     |                 `-UnaryOperator 0x7fbb5680a9d8 <col:174, col:197> 'long' prefix '~'
+              |   | | |     | |                     |     |       |       |     |                   `-ParenExpr 0x7fbb5680a9b8 <col:175, col:197> 'long'
+              |   | | |     | |                     |     |       |       |     |                     `-BinaryOperator 0x7fbb5680a990 <col:176, col:196> 'long' '-'
+              |   | | |     | |                     |     |       |       |     |                       |-ParenExpr 0x7fbb5680a938 <col:176, col:192> 'long'
+              |   | | |     | |                     |     |       |       |     |                       | `-BinaryOperator 0x7fbb5680a910 <col:177, col:191> 'long' '<<'
+              |   | | |     | |                     |     |       |       |     |                       |   |-ParenExpr 0x7fbb5680a8d0 <col:177, col:186> 'long'
+              |   | | |     | |                     |     |       |       |     |                       |   | `-CStyleCastExpr 0x7fbb5680a8a8 <col:178, col:185> 'long' <IntegralCast>
+              |   | | |     | |                     |     |       |       |     |                       |   |   `-IntegerLiteral 0x7fbb5680a870 <col:185> 'int' 1
+              |   | | |     | |                     |     |       |       |     |                       |   `-IntegerLiteral 0x7fbb5680a8f0 <col:191> 'int' 3
+              |   | | |     | |                     |     |       |       |     |                       `-ImplicitCastExpr 0x7fbb5680a978 <col:196> 'long' <IntegralCast>
+              |   | | |     | |                     |     |       |       |     |                         `-IntegerLiteral 0x7fbb5680a958 <col:196> 'int' 1
+              |   | | |     | |                     |     |       |       |     `-ParenExpr 0x7fbb5680ae40 <col:210, col:275> 'unsigned long'
+              |   | | |     | |                     |     |       |       |       `-BinaryOperator 0x7fbb5680ae18 <col:211, col:274> 'unsigned long' '|'
+              |   | | |     | |                     |     |       |       |         |-ParenExpr 0x7fbb5680ad98 <col:211, col:250> 'unsigned long'
+              |   | | |     | |                     |     |       |       |         | `-ParenExpr 0x7fbb5680ad78 <col:212, col:249> 'unsigned long'
+              |   | | |     | |                     |     |       |       |         |   `-BinaryOperator 0x7fbb5680ad50 <col:213, col:248> 'unsigned long' '>>'
+              |   | | |     | |                     |     |       |       |         |     |-ParenExpr 0x7fbb5680ad10 <col:213, col:243> 'unsigned long'
+              |   | | |     | |                     |     |       |       |         |     | `-BinaryOperator 0x7fbb5680ace8 <col:214, col:242> 'unsigned long' '<<'
+              |   | | |     | |                     |     |       |       |         |     |   |-CStyleCastExpr 0x7fbb5680ac38 <col:214, col:230> 'unsigned long' <IntegralCast>
+              |   | | |     | |                     |     |       |       |         |     |   | `-IntegerLiteral 0x7fbb5680ac00 <col:230> 'int' 1
+              |   | | |     | |                     |     |       |       |         |     |   `-ParenExpr 0x7fbb5680acc8 <col:235, col:242> 'int'
+              |   | | |     | |                     |     |       |       |         |     |     `-BinaryOperator 0x7fbb5680aca0 <col:236, col:241> 'int' '-'
+              |   | | |     | |                     |     |       |       |         |     |       |-IntegerLiteral 0x7fbb5680ac60 <col:236> 'int' 64
+              |   | | |     | |                     |     |       |       |         |     |       `-IntegerLiteral 0x7fbb5680ac80 <col:241> 'int' 1
+              |   | | |     | |                     |     |       |       |         |     `-IntegerLiteral 0x7fbb5680ad30 <col:248> 'int' 1
+              |   | | |     | |                     |     |       |       |         `-ImplicitCastExpr 0x7fbb5680ae00 <col:254, col:274> 'unsigned long' <IntegralCast>
+              |   | | |     | |                     |     |       |       |           `-ParenExpr 0x7fbb5680ade0 <col:254, col:274> 'int'
+              |   | | |     | |                     |     |       |       |             `-DeclRefExpr 0x7fbb5680adb8 <col:255> 'int' EnumConstant 0x7fbb57807990 'PVEC_SUB_CHAR_TABLE' 'int'
+              |   | | |     | |                     |     |       |       `-ParenExpr 0x7fbb5680b120 <col:282, col:347> 'unsigned long'
+              |   | | |     | |                     |     |       |         `-BinaryOperator 0x7fbb5680b0f8 <col:283, col:346> 'unsigned long' '|'
+              |   | | |     | |                     |     |       |           |-ParenExpr 0x7fbb5680b078 <col:283, col:322> 'unsigned long'
+              |   | | |     | |                     |     |       |           | `-ParenExpr 0x7fbb5680b058 <col:284, col:321> 'unsigned long'
+              |   | | |     | |                     |     |       |           |   `-BinaryOperator 0x7fbb5680b030 <col:285, col:320> 'unsigned long' '>>'
+              |   | | |     | |                     |     |       |           |     |-ParenExpr 0x7fbb5680aff0 <col:285, col:315> 'unsigned long'
+              |   | | |     | |                     |     |       |           |     | `-BinaryOperator 0x7fbb5680afc8 <col:286, col:314> 'unsigned long' '<<'
+              |   | | |     | |                     |     |       |           |     |   |-CStyleCastExpr 0x7fbb5680af18 <col:286, col:302> 'unsigned long' <IntegralCast>
+              |   | | |     | |                     |     |       |           |     |   | `-IntegerLiteral 0x7fbb5680aee0 <col:302> 'int' 1
+              |   | | |     | |                     |     |       |           |     |   `-ParenExpr 0x7fbb5680afa8 <col:307, col:314> 'int'
+              |   | | |     | |                     |     |       |           |     |     `-BinaryOperator 0x7fbb5680af80 <col:308, col:313> 'int' '-'
+              |   | | |     | |                     |     |       |           |     |       |-IntegerLiteral 0x7fbb5680af40 <col:308> 'int' 64
+              |   | | |     | |                     |     |       |           |     |       `-IntegerLiteral 0x7fbb5680af60 <col:313> 'int' 1
+              |   | | |     | |                     |     |       |           |     `-IntegerLiteral 0x7fbb5680b010 <col:320> 'int' 1
+              |   | | |     | |                     |     |       |           `-ImplicitCastExpr 0x7fbb5680b0e0 <col:326, col:346> 'unsigned long' <IntegralCast>
+              |   | | |     | |                     |     |       |             `-ParenExpr 0x7fbb5680b0c0 <col:326, col:346> 'int'
+              |   | | |     | |                     |     |       |               `-DeclRefExpr 0x7fbb5680b098 <col:327> 'int' EnumConstant 0x7fbb57807990 'PVEC_SUB_CHAR_TABLE' 'int'
+              |   | | |     | |                     |     |       |-ImplicitCastExpr 0x7fbb5680b770 <col:353, col:459> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |       | `-ArraySubscriptExpr 0x7fbb5680b6b0 <col:353, col:459> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |       |   |-ImplicitCastExpr 0x7fbb5680b680 <col:353, col:449> 'Lisp_Object *' <ArrayToPointerDecay>
+              |   | | |     | |                     |     |       |   | `-MemberExpr 0x7fbb5680b620 <col:353, col:449> 'Lisp_Object [1]' lvalue ->contents 0x7fbb57807f08
+              |   | | |     | |                     |     |       |   |   `-ParenExpr 0x7fbb5680b600 <col:353, col:446> 'struct Lisp_Sub_Char_Table *'
+              |   | | |     | |                     |     |       |   |     `-BinaryOperator 0x7fbb5680b5d8 <col:354, col:445> 'struct Lisp_Sub_Char_Table *' ','
+              |   | | |     | |                     |     |       |   |       |-CStyleCastExpr 0x7fbb5680b200 <col:354, col:361> 'void' <ToVoid>
+              |   | | |     | |                     |     |       |   |       | `-IntegerLiteral 0x7fbb5680b1d0 <col:361> 'int' 0
+              |   | | |     | |                     |     |       |   |       `-CStyleCastExpr 0x7fbb5680b5b0 <col:364, col:445> 'struct Lisp_Sub_Char_Table *' <IntegralToPointer>
+              |   | | |     | |                     |     |       |   |         `-ParenExpr 0x7fbb5680b590 <col:395, col:445> 'long'
+              |   | | |     | |                     |     |       |   |           `-CStyleCastExpr 0x7fbb5680b510 <col:396, col:444> 'long' <NoOp>
+              |   | | |     | |                     |     |       |   |             `-ParenExpr 0x7fbb5680b4f0 <col:403, col:444> 'long'
+              |   | | |     | |                     |     |       |   |               `-BinaryOperator 0x7fbb5680b480 <col:404, col:443> 'long' '&'
+              |   | | |     | |                     |     |       |   |                 |-ImplicitCastExpr 0x7fbb5680b468 <col:404, col:416> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |       |   |                 | `-ParenExpr 0x7fbb5680b2c0 <col:404, col:416> 'Lisp_Object':'long' lvalue
+              |   | | |     | |                     |     |       |   |                 |   `-MemberExpr 0x7fbb5680b288 <col:405, col:411> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |                     |     |       |   |                 |     `-ImplicitCastExpr 0x7fbb5680b270 <col:405, col:408> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |     |       |   |                 |       `-ParenExpr 0x7fbb5680b250 <col:405, col:408> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |     |       |   |                 |         `-DeclRefExpr 0x7fbb5680b228 <col:406> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |     |       |   |                 `-UnaryOperator 0x7fbb5680b448 <col:420, col:443> 'long' prefix '~'
+              |   | | |     | |                     |     |       |   |                   `-ParenExpr 0x7fbb5680b428 <col:421, col:443> 'long'
+              |   | | |     | |                     |     |       |   |                     `-BinaryOperator 0x7fbb5680b400 <col:422, col:442> 'long' '-'
+              |   | | |     | |                     |     |       |   |                       |-ParenExpr 0x7fbb5680b3a8 <col:422, col:438> 'long'
+              |   | | |     | |                     |     |       |   |                       | `-BinaryOperator 0x7fbb5680b380 <col:423, col:437> 'long' '<<'
+              |   | | |     | |                     |     |       |   |                       |   |-ParenExpr 0x7fbb5680b340 <col:423, col:432> 'long'
+              |   | | |     | |                     |     |       |   |                       |   | `-CStyleCastExpr 0x7fbb5680b318 <col:424, col:431> 'long' <IntegralCast>
+              |   | | |     | |                     |     |       |   |                       |   |   `-IntegerLiteral 0x7fbb5680b2e0 <col:431> 'int' 1
+              |   | | |     | |                     |     |       |   |                       |   `-IntegerLiteral 0x7fbb5680b360 <col:437> 'int' 3
+              |   | | |     | |                     |     |       |   |                       `-ImplicitCastExpr 0x7fbb5680b3e8 <col:442> 'long' <IntegralCast>
+              |   | | |     | |                     |     |       |   |                         `-IntegerLiteral 0x7fbb5680b3c8 <col:442> 'int' 1
+              |   | | |     | |                     |     |       |   `-ImplicitCastExpr 0x7fbb5680b698 <col:458> 'int' <LValueToRValue>
+              |   | | |     | |                     |     |       |     `-DeclRefExpr 0x7fbb5680b658 <col:458> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |                     |     |       `-ImplicitCastExpr 0x7fbb5680b788 <col:463, col:469> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     | |                     |     |         `-MemberExpr 0x7fbb5680b738 <col:463, col:469> 'Lisp_Object':'long' lvalue ->ascii 0x7fbb57807d58
+              |   | | |     | |                     |     |           `-ImplicitCastExpr 0x7fbb5680b720 <col:463, col:466> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |     |             `-ParenExpr 0x7fbb5680b700 <col:463, col:466> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |     |               `-DeclRefExpr 0x7fbb5680b6d8 <col:464> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |     `-CallExpr 0x7fbb5680b928 <col:479, col:506> 'long'
+              |   | | |     | |                     |       |-ImplicitCastExpr 0x7fbb5680b910 <col:479> 'long (*)(struct Lisp_Char_Table *, int)' <FunctionToPointerDecay>
+              |   | | |     | |                     |       | `-DeclRefExpr 0x7fbb5680b858 <col:479> 'long (struct Lisp_Char_Table *, int)' Function 0x7fbb57826048 'disp_char_vector' 'long (struct Lisp_Char_Table *, int)'
+              |   | | |     | |                     |       |-ImplicitCastExpr 0x7fbb5680b960 <col:497, col:500> 'struct Lisp_Char_Table *' <LValueToRValue>
+              |   | | |     | |                     |       | `-ParenExpr 0x7fbb5680b8a8 <col:497, col:500> 'struct Lisp_Char_Table *' lvalue
+              |   | | |     | |                     |       |   `-DeclRefExpr 0x7fbb5680b880 <col:498> 'struct Lisp_Char_Table *' lvalue Var 0x7fbb57827fc0 'dp' 'struct Lisp_Char_Table *'
+              |   | | |     | |                     |       `-ImplicitCastExpr 0x7fbb5680b978 <col:503, col:505> 'int' <LValueToRValue>
+              |   | | |     | |                     |         `-ParenExpr 0x7fbb5680b8f0 <col:503, col:505> 'int' lvalue
+              |   | | |     | |                     |           `-DeclRefExpr 0x7fbb5680b8c8 <col:504> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     | |                     `-UnaryOperator 0x7fbb5680bb68 <col:512, col:535> 'long' prefix '~'
+              |   | | |     | |                       `-ParenExpr 0x7fbb5680bb48 <col:513, col:535> 'long'
+              |   | | |     | |                         `-BinaryOperator 0x7fbb5680bb20 <col:514, col:534> 'long' '-'
+              |   | | |     | |                           |-ParenExpr 0x7fbb5680bac8 <col:514, col:530> 'long'
+              |   | | |     | |                           | `-BinaryOperator 0x7fbb5680baa0 <col:515, col:529> 'long' '<<'
+              |   | | |     | |                           |   |-ParenExpr 0x7fbb5680ba60 <col:515, col:524> 'long'
+              |   | | |     | |                           |   | `-CStyleCastExpr 0x7fbb5680ba38 <col:516, col:523> 'long' <IntegralCast>
+              |   | | |     | |                           |   |   `-IntegerLiteral 0x7fbb5680ba00 <col:523> 'int' 1
+              |   | | |     | |                           |   `-IntegerLiteral 0x7fbb5680ba80 <col:529> 'int' 3
+              |   | | |     | |                           `-ImplicitCastExpr 0x7fbb5680bb08 <col:534> 'long' <IntegralCast>
+              |   | | |     | |                             `-IntegerLiteral 0x7fbb5680bae8 <col:534> 'int' 1
+              |   | | |     | `-BinaryOperator 0x7fbb5680cf60 <line:151:8, line:167:85> 'int' '='
+              |   | | |     |   |-DeclRefExpr 0x7fbb5680bdc0 <line:151:8> 'int' lvalue Var 0x7fbb57829528 'width' 'int'
+              |   | | |     |   `-ImplicitCastExpr 0x7fbb5680cf48 <line:152:10, line:167:85> 'int' <IntegralCast>
+              |   | | |     |     `-ParenExpr 0x7fbb5680cf28 <line:152:10, line:167:85> 'long'
+              |   | | |     |       `-ConditionalOperator 0x7fbb5680cef8 <line:152:11, line:167:84> 'long'
+              |   | | |     |         |-ParenExpr 0x7fbb5680bf18 <line:152:11, col:33> 'int'
+              |   | | |     |         | `-BinaryOperator 0x7fbb5680bef0 <col:12, col:29> 'int' '<'
+              |   | | |     |         |   |-CStyleCastExpr 0x7fbb5680be90 <col:12, col:25> 'unsigned int' <IntegralCast>
+              |   | | |     |         |   | `-ImplicitCastExpr 0x7fbb5680be78 <col:23, col:25> 'int' <LValueToRValue>
+              |   | | |     |         |   |   `-ParenExpr 0x7fbb5680be58 <col:23, col:25> 'int' lvalue
+              |   | | |     |         |   |     `-DeclRefExpr 0x7fbb5680bde8 <col:24> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |         |   `-ImplicitCastExpr 0x7fbb5680bed8 <col:29> 'unsigned int' <IntegralCast>
+              |   | | |     |         |     `-IntegerLiteral 0x7fbb5680beb8 <col:29> 'int' 128
+              |   | | |     |         |-ParenExpr 0x7fbb5680c8f8 <col:37, line:162:138> 'long'
+              |   | | |     |         | `-ConditionalOperator 0x7fbb5680c8c8 <line:152:38, line:162:137> 'long'
+              |   | | |     |         |   |-BinaryOperator 0x7fbb5680bf98 <line:152:38, line:153:10> 'int' '<'
+              |   | | |     |         |   | |-ImplicitCastExpr 0x7fbb5680bf80 <line:152:38> 'int' <LValueToRValue>
+              |   | | |     |         |   | | `-DeclRefExpr 0x7fbb5680bf38 <col:38> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |         |   | `-IntegerLiteral 0x7fbb5680bf60 <line:153:10> 'int' 32
+              |   | | |     |         |   |-ParenExpr 0x7fbb5680c590 <col:17, line:162:66> 'long'
+              |   | | |     |         |   | `-ConditionalOperator 0x7fbb5680c560 <line:153:18, line:162:65> 'long'
+              |   | | |     |         |   |   |-BinaryOperator 0x7fbb5680c018 <line:153:18, line:154:11> 'int' '=='
+              |   | | |     |         |   |   | |-ImplicitCastExpr 0x7fbb5680c000 <line:153:18> 'int' <LValueToRValue>
+              |   | | |     |         |   |   | | `-DeclRefExpr 0x7fbb5680bfc0 <col:18> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |         |   |   | `-CharacterLiteral 0x7fbb5680bfe8 <line:154:11> 'int' 9
+              |   | | |     |         |   |   |-ParenExpr 0x7fbb5680c250 <line:155:13, line:159:15> 'long'
+              |   | | |     |         |   |   | `-ParenExpr 0x7fbb5680c230 <line:155:14, line:159:14> 'long'
+              |   | | |     |         |   |   |   `-BinaryOperator 0x7fbb5680c208 <line:155:15, line:159:13> 'long' '>>'
+              |   | | |     |         |   |   |     |-ParenExpr 0x7fbb5680c160 <line:155:15, line:157:20> 'long'
+              |   | | |     |         |   |   |     | `-CStyleCastExpr 0x7fbb5680c138 <line:155:16, line:157:19> 'long' <NoOp>
+              |   | | |     |         |   |   |     |   `-ImplicitCastExpr 0x7fbb5680c120 <line:156:16, line:157:19> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |         |   |   |     |     `-ParenExpr 0x7fbb5680c100 <line:156:16, line:157:19> 'Lisp_Object':'long' lvalue
+              |   | | |     |         |   |   |     |       `-MemberExpr 0x7fbb5680c080 <line:156:17, line:157:10> 'Lisp_Object':'long' lvalue ->tab_width 0x7fbb578201b8
+              |   | | |     |         |   |   |     |         `-ImplicitCastExpr 0x7fbb5680c068 <line:156:17> 'struct buffer *' <LValueToRValue>
+              |   | | |     |         |   |   |     |           `-DeclRefExpr 0x7fbb5680c040 <col:17> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+              |   | | |     |         |   |   |     `-ParenExpr 0x7fbb5680c1e8 <line:158:18, line:159:13> 'int'
+              |   | | |     |         |   |   |       `-BinaryOperator 0x7fbb5680c1c0 <line:158:19, line:159:12> 'int' '-'
+              |   | | |     |         |   |   |         |-IntegerLiteral 0x7fbb5680c180 <line:158:19> 'int' 3
+              |   | | |     |         |   |   |         `-IntegerLiteral 0x7fbb5680c1a0 <line:159:12> 'int' 1
+              |   | | |     |         |   |   `-ImplicitCastExpr 0x7fbb5680c548 <line:160:13, line:162:65> 'long' <IntegralCast>
+              |   | | |     |         |   |     `-ParenExpr 0x7fbb5680c528 <line:160:13, line:162:65> 'int'
+              |   | | |     |         |   |       `-ConditionalOperator 0x7fbb5680c4f8 <line:160:14, line:162:64> 'int'
+              |   | | |     |         |   |         |-BinaryOperator 0x7fbb5680c2c8 <line:160:14, line:161:14> 'int' '=='
+              |   | | |     |         |   |         | |-ImplicitCastExpr 0x7fbb5680c2b0 <line:160:14> 'int' <LValueToRValue>
+              |   | | |     |         |   |         | | `-DeclRefExpr 0x7fbb5680c270 <col:14> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |         |   |         | `-CharacterLiteral 0x7fbb5680c298 <line:161:14> 'int' 10
+              |   | | |     |         |   |         |-IntegerLiteral 0x7fbb5680c2f0 <col:21> 'int' 0
+              |   | | |     |         |   |         `-ParenExpr 0x7fbb5680c4d8 <line:162:16, col:64> 'int'
+              |   | | |     |         |   |           `-ConditionalOperator 0x7fbb5680c4a8 <col:17, col:63> 'int'
+              |   | | |     |         |   |             |-ParenExpr 0x7fbb5680c448 <col:17, col:55> 'int'
+              |   | | |     |         |   |             | `-BinaryOperator 0x7fbb5680c420 <col:18, col:54> 'int' '=='
+              |   | | |     |         |   |             |   |-ImplicitCastExpr 0x7fbb5680c3f0 <col:18, col:44> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |         |   |             |   | `-ParenExpr 0x7fbb5680c388 <col:18, col:44> 'Lisp_Object':'long' lvalue
+              |   | | |     |         |   |             |   |   `-MemberExpr 0x7fbb5680c350 <col:19, col:35> 'Lisp_Object':'long' lvalue ->ctl_arrow 0x7fbb57820210
+              |   | | |     |         |   |             |   |     `-ImplicitCastExpr 0x7fbb5680c338 <col:19> 'struct buffer *' <LValueToRValue>
+              |   | | |     |         |   |             |   |       `-DeclRefExpr 0x7fbb5680c310 <col:19> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+              |   | | |     |         |   |             |   `-ImplicitCastExpr 0x7fbb5680c408 <col:49, col:54> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |         |   |             |     `-ParenExpr 0x7fbb5680c3d0 <col:49, col:54> 'Lisp_Object':'long' lvalue
+              |   | | |     |         |   |             |       `-DeclRefExpr 0x7fbb5680c3a8 <col:50> 'Lisp_Object':'long' lvalue Var 0x7fbb57807f60 'Qnil' 'Lisp_Object':'long'
+              |   | | |     |         |   |             |-IntegerLiteral 0x7fbb5680c468 <col:59> 'int' 4
+              |   | | |     |         |   |             `-IntegerLiteral 0x7fbb5680c488 <col:63> 'int' 2
+              |   | | |     |         |   `-ImplicitCastExpr 0x7fbb5680c8b0 <col:70, col:137> 'long' <IntegralCast>
+              |   | | |     |         |     `-ParenExpr 0x7fbb5680c890 <col:70, col:137> 'int'
+              |   | | |     |         |       `-ConditionalOperator 0x7fbb5680c860 <col:71, col:136> 'int'
+              |   | | |     |         |         |-BinaryOperator 0x7fbb5680c610 <col:71, col:75> 'int' '<'
+              |   | | |     |         |         | |-ImplicitCastExpr 0x7fbb5680c5f8 <col:71> 'int' <LValueToRValue>
+              |   | | |     |         |         | | `-DeclRefExpr 0x7fbb5680c5b0 <col:71> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |         |         | `-IntegerLiteral 0x7fbb5680c5d8 <col:75> 'int' 127
+              |   | | |     |         |         |-IntegerLiteral 0x7fbb5680c638 <col:82> 'int' 1
+              |   | | |     |         |         `-ParenExpr 0x7fbb5680c840 <col:86, col:136> 'int'
+              |   | | |     |         |           `-ParenExpr 0x7fbb5680c820 <col:87, col:135> 'int'
+              |   | | |     |         |             `-ConditionalOperator 0x7fbb5680c7f0 <col:88, col:134> 'int'
+              |   | | |     |         |               |-ParenExpr 0x7fbb5680c790 <col:88, col:126> 'int'
+              |   | | |     |         |               | `-BinaryOperator 0x7fbb5680c768 <col:89, col:125> 'int' '=='
+              |   | | |     |         |               |   |-ImplicitCastExpr 0x7fbb5680c738 <col:89, col:115> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |         |               |   | `-ParenExpr 0x7fbb5680c6d0 <col:89, col:115> 'Lisp_Object':'long' lvalue
+              |   | | |     |         |               |   |   `-MemberExpr 0x7fbb5680c698 <col:90, col:106> 'Lisp_Object':'long' lvalue ->ctl_arrow 0x7fbb57820210
+              |   | | |     |         |               |   |     `-ImplicitCastExpr 0x7fbb5680c680 <col:90> 'struct buffer *' <LValueToRValue>
+              |   | | |     |         |               |   |       `-DeclRefExpr 0x7fbb5680c658 <col:90> 'struct buffer *' lvalue Var 0x7fbb57820310 'current_buffer' 'struct buffer *'
+              |   | | |     |         |               |   `-ImplicitCastExpr 0x7fbb5680c750 <col:120, col:125> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |         |               |     `-ParenExpr 0x7fbb5680c718 <col:120, col:125> 'Lisp_Object':'long' lvalue
+              |   | | |     |         |               |       `-DeclRefExpr 0x7fbb5680c6f0 <col:121> 'Lisp_Object':'long' lvalue Var 0x7fbb57807f60 'Qnil' 'Lisp_Object':'long'
+              |   | | |     |         |               |-IntegerLiteral 0x7fbb5680c7b0 <col:130> 'int' 4
+              |   | | |     |         |               `-IntegerLiteral 0x7fbb5680c7d0 <col:134> 'int' 2
+              |   | | |     |         `-ParenExpr 0x7fbb5680ced8 <col:142, line:167:84> 'long'
+              |   | | |     |           `-BinaryOperator 0x7fbb5680ceb0 <line:162:143, line:167:83> 'long' '>>'
+              |   | | |     |             |-ParenExpr 0x7fbb5680ce08 <line:162:143, line:167:72> 'long'
+              |   | | |     |             | `-CStyleCastExpr 0x7fbb5680cde0 <line:162:144, line:167:71> 'long' <NoOp>
+              |   | | |     |             |   `-ParenExpr 0x7fbb5680cdc0 <line:162:151, line:167:71> 'long'
+              |   | | |     |             |     `-ParenExpr 0x7fbb5680cd58 <line:162:152, line:167:70> 'long'
+              |   | | |     |             |       `-ConditionalOperator 0x7fbb5680cd28 <line:162:153, line:167:69> 'long'
+              |   | | |     |             |         |-ParenExpr 0x7fbb5680ca48 <line:162:153, col:175> 'int'
+              |   | | |     |             |         | `-BinaryOperator 0x7fbb5680ca20 <col:154, col:171> 'int' '<'
+              |   | | |     |             |         |   |-CStyleCastExpr 0x7fbb5680c9c0 <col:154, col:167> 'unsigned int' <IntegralCast>
+              |   | | |     |             |         |   | `-ImplicitCastExpr 0x7fbb5680c9a8 <col:165, col:167> 'int' <LValueToRValue>
+              |   | | |     |             |         |   |   `-ParenExpr 0x7fbb5680c988 <col:165, col:167> 'int' lvalue
+              |   | | |     |             |         |   |     `-DeclRefExpr 0x7fbb5680c918 <col:166> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |             |         |   `-ImplicitCastExpr 0x7fbb5680ca08 <col:171> 'unsigned int' <IntegralCast>
+              |   | | |     |             |         |     `-IntegerLiteral 0x7fbb5680c9e8 <col:171> 'int' 128
+              |   | | |     |             |         |-StmtExpr 0x7fbb5680cb50 <col:179, line:167:4> 'Lisp_Object':'long'
+              |   | | |     |             |         | `-CompoundStmt 0x7fbb5680cb30 <line:163:38, line:166:43>
+              |   | | |     |             |         |   |-DeclStmt 0x7fbb5680cad8 <line:164:38, line:165:42>
+              |   | | |     |             |         |   | `-VarDecl 0x7fbb5680ca78 <line:164:38, line:165:38> col:38 used _val 'Lisp_Object':'long'
+              |   | | |     |             |         |   `-ImplicitCastExpr 0x7fbb5680cb18 <line:166:38> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |             |         |     `-DeclRefExpr 0x7fbb5680caf0 <col:38> 'Lisp_Object':'long' lvalue Var 0x7fbb5680ca78 '_val' 'Lisp_Object':'long'
+              |   | | |     |             |         `-CallExpr 0x7fbb5680ccc0 <line:167:29, col:69> 'long'
+              |   | | |     |             |           |-ImplicitCastExpr 0x7fbb5680cca8 <col:29> 'long (*)(Lisp_Object, int)' <FunctionToPointerDecay>
+              |   | | |     |             |           | `-DeclRefExpr 0x7fbb5680cb70 <col:29> 'long (Lisp_Object, int)' Function 0x7fbb57826298 'char_table_ref' 'long (Lisp_Object, int)'
+              |   | | |     |             |           |-ImplicitCastExpr 0x7fbb5680ccf8 <col:45, col:63> 'Lisp_Object':'long' <LValueToRValue>
+              |   | | |     |             |           | `-ParenExpr 0x7fbb5680cbc0 <col:45, col:63> 'Lisp_Object':'long' lvalue
+              |   | | |     |             |           |   `-DeclRefExpr 0x7fbb5680cb98 <col:46> 'Lisp_Object':'long' lvalue Var 0x7fbb57820380 'Vchar_width_table' 'Lisp_Object':'long'
+              |   | | |     |             |           `-ImplicitCastExpr 0x7fbb5680cd10 <col:66, col:68> 'int' <LValueToRValue>
+              |   | | |     |             |             `-ParenExpr 0x7fbb5680cc28 <col:66, col:68> 'int' lvalue
+              |   | | |     |             |               `-DeclRefExpr 0x7fbb5680cc00 <col:67> 'int' lvalue Var 0x7fbb57827f00 'c' 'int'
+              |   | | |     |             `-ParenExpr 0x7fbb5680ce90 <col:77, col:83> 'int'
+              |   | | |     |               `-BinaryOperator 0x7fbb5680ce68 <col:78, col:82> 'int' '-'
+              |   | | |     |                 |-IntegerLiteral 0x7fbb5680ce28 <col:78> 'int' 3
+              |   | | |     |                 `-IntegerLiteral 0x7fbb5680ce48 <col:82> 'int' 1
+              |   | | |     `-IfStmt 0x7fbb5680d0d8 <line:168:6, line:169:22>
+              |   | | |       |-<<<NULL>>>
+              |   | | |       |-<<<NULL>>>
+              |   | | |       |-BinaryOperator 0x7fbb5680d020 <line:168:10, col:18> 'int' '>'
+              |   | | |       | |-ImplicitCastExpr 0x7fbb5680d008 <col:10> 'int' <LValueToRValue>
+              |   | | |       | | `-DeclRefExpr 0x7fbb5680cfc0 <col:10> 'int' lvalue Var 0x7fbb57829528 'width' 'int'
+              |   | | |       | `-IntegerLiteral 0x7fbb5680cfe8 <col:18> 'int' 1
+              |   | | |       |-BinaryOperator 0x7fbb5680d0b0 <line:169:8, col:22> 'int' '='
+              |   | | |       | |-DeclRefExpr 0x7fbb5680d048 <col:8> 'int' lvalue Var 0x7fbb578295a0 'wide_column' 'int'
+              |   | | |       | `-ImplicitCastExpr 0x7fbb5680d098 <col:22> 'int' <LValueToRValue>
+              |   | | |       |   `-DeclRefExpr 0x7fbb5680d070 <col:22> 'int' lvalue Var 0x7fbb57829528 'width' 'int'
+              |   | | |       `-<<<NULL>>>
+              |   | | `-IntegerLiteral 0x7fbb5680d180 <line:172:12> 'int' 0
+              |   | `-IfStmt 0x7fbb5680d310 <line:173:5, line:174:37>
+              |   |   |-<<<NULL>>>
+              |   |   |-<<<NULL>>>
+              |   |   |-ImplicitCastExpr 0x7fbb5680d1e8 <line:173:9> 'int' <LValueToRValue>
+              |   |   | `-DeclRefExpr 0x7fbb5680d1c0 <col:9> 'int' lvalue Var 0x7fbb578295a0 'wide_column' 'int'
+              |   |   |-BinaryOperator 0x7fbb5680d2e8 <line:174:7, col:37> 'long' '='
+              |   |   | |-DeclRefExpr 0x7fbb5680d200 <col:7> 'long' lvalue Var 0x7fbb57828158 'wide_column_end_hpos' 'long'
+              |   |   | `-BinaryOperator 0x7fbb5680d2c0 <col:30, col:37> 'long' '+'
+              |   |   |   |-ImplicitCastExpr 0x7fbb5680d278 <col:30> 'long' <LValueToRValue>
+              |   |   |   | `-DeclRefExpr 0x7fbb5680d228 <col:30> 'long' lvalue Var 0x7fbb57827d10 'hpos' 'long'
+              |   |   |   `-ImplicitCastExpr 0x7fbb5680d2a8 <col:37> 'long' <IntegralCast>
+              |   |   |     `-ImplicitCastExpr 0x7fbb5680d290 <col:37> 'int' <LValueToRValue>
+              |   |   |       `-DeclRefExpr 0x7fbb5680d250 <col:37> 'int' lvalue Var 0x7fbb578295a0 'wide_column' 'int'
+              |   |   `-<<<NULL>>>
+              |   `-<<<NULL>>>
+              `-<<<NULL>>>

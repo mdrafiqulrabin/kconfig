@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc9938098e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc99380a578 <../Data/C2AST/pr63186.c:5:1, col:7> col:7 used a 'void *'
+|-VarDecl 0x7fc993839a58 <line:6:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7fc993839ad0 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fc993839b48 <col:1, col:11> col:11 used d 'int'
+|-FunctionDecl 0x7fc993839c18 <line:8:1, line:23:1> line:9:1 used bar 'void ()'
+| `-CompoundStmt 0x7fc99383a040 <line:10:1, line:23:1>
+|   |-SwitchStmt 0x7fc993839cf8 <line:11:3, line:19:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fc993839ce0 <line:11:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fc993839cb8 <col:11> 'int' lvalue Var 0x7fc993839ad0 'c' 'int'
+|   | `-CompoundStmt 0x7fc993839ec8 <line:12:5, line:19:5>
+|   |   |-CaseStmt 0x7fc993839d48 <line:13:5, line:15:18>
+|   |   | |-IntegerLiteral 0x7fc993839d28 <line:13:10> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | `-LabelStmt 0x7fc993839e70 <line:14:5, line:15:18> 'lab'
+|   |   |   `-GCCAsmStmt 0x7fc993839de0 <col:7, col:18>
+|   |   |-ReturnStmt 0x7fc993839e88 <line:16:7>
+|   |   `-DefaultStmt 0x7fc993839ea8 <line:17:5, line:18:7>
+|   |     `-BreakStmt 0x7fc993839ea0 <col:7>
+|   |-BinaryOperator 0x7fc993839f38 <line:20:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fc993839ef0 <col:3> 'int' lvalue Var 0x7fc993839a58 'b' 'int'
+|   | `-IntegerLiteral 0x7fc993839f18 <col:7> 'int' 0
+|   |-BinaryOperator 0x7fc993839fa8 <line:21:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fc993839f60 <col:3> 'int' lvalue Var 0x7fc993839b48 'd' 'int'
+|   | `-IntegerLiteral 0x7fc993839f88 <col:7> 'int' 0
+|   `-BinaryOperator 0x7fc99383a018 <line:22:3, col:9> 'void *' '='
+|     |-DeclRefExpr 0x7fc993839fd0 <col:3> 'void *' lvalue Var 0x7fc99380a578 'a' 'void *'
+|     `-AddrLabelExpr 0x7fc993839ff8 <col:7, col:9> 'void *' lab 0x7fc993839e28
+|-FunctionDecl 0x7fc99383a090 <line:25:1, line:29:1> line:26:1 foo 'void ()'
+| `-CompoundStmt 0x7fc99383a1c8 <line:27:1, line:29:1>
+|   `-CallExpr 0x7fc99383a1a0 <line:28:3, col:8> 'void'
+|     `-ImplicitCastExpr 0x7fc99383a188 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fc99383a130 <col:3> 'void ()' Function 0x7fc993839c18 'bar' 'void ()'
+`-FunctionDecl 0x7fc99383a230 <line:31:1, line:34:1> line:32:1 main 'int ()'
+  `-CompoundStmt 0x7fc99383a2d0 <line:33:1, line:34:1>

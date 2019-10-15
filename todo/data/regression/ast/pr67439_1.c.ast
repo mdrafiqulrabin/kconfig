@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7ff5e8817ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff5e8818778 <../Data/C2AST/pr67439_1.c:5:1, col:14> col:8 used h0 '__fp16' cinit
+| `-ImplicitCastExpr 0x7ff5e8859680 <col:13, col:14> '__fp16' <FloatingCast>
+|   `-UnaryOperator 0x7ff5e8859660 <col:13, col:14> 'double' prefix '-'
+|     `-FloatingLiteral 0x7ff5e8859640 <col:14> 'double' 1.000000e+00
+`-FunctionDecl 0x7ff5e88597a0 <line:7:1, line:11:1> line:8:1 f 'void (__fp16 *)'
+  |-ParmVarDecl 0x7ff5e88596e0 <col:4, col:12> col:12 p '__fp16 *'
+  `-CompoundStmt 0x7ff5e88598d0 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7ff5e88598a8 <line:10:3, col:8> '__fp16' '='
+      |-DeclRefExpr 0x7ff5e8859848 <col:3> '__fp16' lvalue Var 0x7ff5e8818778 'h0' '__fp16'
+      `-ImplicitCastExpr 0x7ff5e8859890 <col:8> '__fp16' <FloatingCast>
+        `-FloatingLiteral 0x7ff5e8859870 <col:8> 'double' 1.000000e+00

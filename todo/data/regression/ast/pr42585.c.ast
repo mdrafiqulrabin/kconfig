@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fdbb280f0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdbb280fd60 <../Data/C2AST/pr42585.c:4:1, line:9:1> line:4:8 struct _fat_ptr definition
+| |-FieldDecl 0x7fdbb101d860 <line:6:3, col:18> col:18 referenced curr 'unsigned char *'
+| |-FieldDecl 0x7fdbb101d8c0 <line:7:3, col:18> col:18 base 'unsigned char *'
+| `-FieldDecl 0x7fdbb101d920 <line:8:3, col:18> col:18 last_plus_one 'unsigned char *'
+|-FunctionDecl 0x7fdbb101dba8 <line:10:1, col:57> col:5 Cyc_string_ungetc 'int (int, struct _fat_ptr *)'
+| |-ParmVarDecl 0x7fdbb101d980 <col:24, col:28> col:28 ignore 'int'
+| `-ParmVarDecl 0x7fdbb101da90 <col:36, col:53> col:53 sptr 'struct _fat_ptr *'
+`-FunctionDecl 0x7fdbb101ddd0 prev 0x7fdbb101dba8 <line:11:1, line:32:1> line:12:1 Cyc_string_ungetc 'int (int, struct _fat_ptr *)'
+  |-ParmVarDecl 0x7fdbb101dcb0 <col:20, col:24> col:24 ignore 'int'
+  |-ParmVarDecl 0x7fdbb101dd38 <col:32, col:49> col:49 used sptr 'struct _fat_ptr *'
+  `-CompoundStmt 0x7fdbb180b800 <line:13:1, line:32:1>
+    |-DeclStmt 0x7fdbb101df08 <line:14:3, col:23>
+    | `-VarDecl 0x7fdbb101dea8 <col:3, col:20> col:20 used _T0 'struct _fat_ptr *'
+    |-DeclStmt 0x7fdbb101dfa8 <line:15:3, col:23>
+    | `-VarDecl 0x7fdbb101df48 <col:3, col:20> col:20 used _T1 'struct _fat_ptr *'
+    |-DeclStmt 0x7fdbb101e040 <line:16:3, col:22>
+    | `-VarDecl 0x7fdbb101dfe0 <col:3, col:19> col:19 used _T2 'struct _fat_ptr':'struct _fat_ptr'
+    |-DeclStmt 0x7fdbb101e0d0 <line:17:3, col:10>
+    | `-VarDecl 0x7fdbb101e070 <col:3, col:7> col:7 used _T3 'int'
+    |-DeclStmt 0x7fdbb101e168 <line:18:3, col:23>
+    | `-VarDecl 0x7fdbb101e108 <col:3, col:19> col:19 used _ans 'struct _fat_ptr':'struct _fat_ptr'
+    |-DeclStmt 0x7fdbb101e1f8 <line:19:3, col:14>
+    | `-VarDecl 0x7fdbb101e198 <col:3, col:7> col:7 used _change 'int'
+    `-CompoundStmt 0x7fdbb101e780 <line:21:3, line:31:3>
+      |-BinaryOperator 0x7fdbb101e278 <line:22:5, col:11> 'struct _fat_ptr *' '='
+      | |-DeclRefExpr 0x7fdbb101e210 <col:5> 'struct _fat_ptr *' lvalue Var 0x7fdbb101dea8 '_T0' 'struct _fat_ptr *'
+      | `-ImplicitCastExpr 0x7fdbb101e260 <col:11> 'struct _fat_ptr *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdbb101e238 <col:11> 'struct _fat_ptr *' lvalue ParmVar 0x7fdbb101dd38 'sptr' 'struct _fat_ptr *'
+      |-BinaryOperator 0x7fdbb101e308 <line:23:5, col:11> 'struct _fat_ptr *' '='
+      | |-DeclRefExpr 0x7fdbb101e2a0 <col:5> 'struct _fat_ptr *' lvalue Var 0x7fdbb101df48 '_T1' 'struct _fat_ptr *'
+      | `-ImplicitCastExpr 0x7fdbb101e2f0 <col:11> 'struct _fat_ptr *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdbb101e2c8 <col:11> 'struct _fat_ptr *' lvalue ParmVar 0x7fdbb101dd38 'sptr' 'struct _fat_ptr *'
+      |-BinaryOperator 0x7fdbb101e3d0 <line:24:5, col:12> 'struct _fat_ptr':'struct _fat_ptr' '='
+      | |-DeclRefExpr 0x7fdbb101e330 <col:5> 'struct _fat_ptr':'struct _fat_ptr' lvalue Var 0x7fdbb101dfe0 '_T2' 'struct _fat_ptr':'struct _fat_ptr'
+      | `-ImplicitCastExpr 0x7fdbb101e3b8 <col:11, col:12> 'struct _fat_ptr':'struct _fat_ptr' <LValueToRValue>
+      |   `-UnaryOperator 0x7fdbb101e398 <col:11, col:12> 'struct _fat_ptr':'struct _fat_ptr' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7fdbb101e380 <col:12> 'struct _fat_ptr *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fdbb101e358 <col:12> 'struct _fat_ptr *' lvalue ParmVar 0x7fdbb101dd38 'sptr' 'struct _fat_ptr *'
+      |-BinaryOperator 0x7fdbb101e460 <line:25:5, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fdbb101e3f8 <col:5> 'int' lvalue Var 0x7fdbb101e070 '_T3' 'int'
+      | `-UnaryOperator 0x7fdbb101e440 <col:11, col:12> 'int' prefix '-'
+      |   `-IntegerLiteral 0x7fdbb101e420 <col:12> 'int' 1
+      |-BinaryOperator 0x7fdbb101e4f0 <line:26:5, col:12> 'struct _fat_ptr':'struct _fat_ptr' '='
+      | |-DeclRefExpr 0x7fdbb101e488 <col:5> 'struct _fat_ptr':'struct _fat_ptr' lvalue Var 0x7fdbb101e108 '_ans' 'struct _fat_ptr':'struct _fat_ptr'
+      | `-ImplicitCastExpr 0x7fdbb101e4d8 <col:12> 'struct _fat_ptr':'struct _fat_ptr' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdbb101e4b0 <col:12> 'struct _fat_ptr':'struct _fat_ptr' lvalue Var 0x7fdbb101dfe0 '_T2' 'struct _fat_ptr':'struct _fat_ptr'
+      |-BinaryOperator 0x7fdbb101e580 <line:27:5, col:16> 'int' '='
+      | |-DeclRefExpr 0x7fdbb101e518 <col:5> 'int' lvalue Var 0x7fdbb101e198 '_change' 'int'
+      | `-UnaryOperator 0x7fdbb101e560 <col:15, col:16> 'int' prefix '-'
+      |   `-IntegerLiteral 0x7fdbb101e540 <col:16> 'int' 1
+      |-CompoundAssignOperator 0x7fdbb101e628 <line:28:5, col:18> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+      | |-MemberExpr 0x7fdbb101e5d0 <col:5, col:10> 'unsigned char *' lvalue .curr 0x7fdbb101d860
+      | | `-DeclRefExpr 0x7fdbb101e5a8 <col:5> 'struct _fat_ptr':'struct _fat_ptr' lvalue Var 0x7fdbb101e108 '_ans' 'struct _fat_ptr':'struct _fat_ptr'
+      | `-IntegerLiteral 0x7fdbb101e608 <col:18> 'unsigned int' 4294967295
+      |-BinaryOperator 0x7fdbb101e700 <line:29:5, col:13> 'struct _fat_ptr':'struct _fat_ptr' '='
+      | |-UnaryOperator 0x7fdbb101e6a0 <col:5, col:6> 'struct _fat_ptr':'struct _fat_ptr' lvalue prefix '*'
+      | | `-ImplicitCastExpr 0x7fdbb101e688 <col:6> 'struct _fat_ptr *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fdbb101e660 <col:6> 'struct _fat_ptr *' lvalue ParmVar 0x7fdbb101dd38 'sptr' 'struct _fat_ptr *'
+      | `-ImplicitCastExpr 0x7fdbb101e6e8 <col:13> 'struct _fat_ptr':'struct _fat_ptr' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdbb101e6c0 <col:13> 'struct _fat_ptr':'struct _fat_ptr' lvalue Var 0x7fdbb101e108 '_ans' 'struct _fat_ptr':'struct _fat_ptr'
+      `-ReturnStmt 0x7fdbb101e768 <line:30:5, col:14>
+        `-ParenExpr 0x7fdbb101e748 <col:12, col:14> 'int'
+          `-IntegerLiteral 0x7fdbb101e728 <col:13> 'int' 0

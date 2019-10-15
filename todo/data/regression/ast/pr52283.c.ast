@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa21401ace8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa21401b978 <../Data/C2AST/pr52283.c:5:1, col:21> col:21 used u 'unsigned int' extern
+`-FunctionDecl 0x7fa215022720 <line:7:1, line:15:1> line:8:1 b 'void (int)'
+  |-ParmVarDecl 0x7fa215022658 <col:4, col:8> col:8 used c 'int'
+  `-CompoundStmt 0x7fa215022ad8 <line:9:1, line:15:1>
+    `-SwitchStmt 0x7fa215022808 <line:10:3, line:14:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fa2150227f0 <line:10:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa2150227c8 <col:11> 'int' lvalue ParmVar 0x7fa215022658 'c' 'int'
+      `-CompoundStmt 0x7fa215022ac0 <line:11:5, line:14:5>
+        `-CaseStmt 0x7fa215022a78 <line:12:5, line:13:7>
+          |-CStyleCastExpr 0x7fa215022a50 <line:12:10, col:39> 'int' <IntegralCast>
+          | `-ParenExpr 0x7fa215022a30 <col:16, col:39> 'unsigned int'
+          |   `-BinaryOperator 0x7fa2150229c0 <col:17, col:38> 'unsigned int' '|'
+          |     |-ImplicitCastExpr 0x7fa2150229a8 <col:17> 'unsigned int' <IntegralCast>
+          |     | `-IntegerLiteral 0x7fa215022838 <col:17> 'int' 2
+          |     `-ParenExpr 0x7fa215022988 <col:22, col:38> 'unsigned int'
+          |       `-ConditionalOperator 0x7fa215022958 <col:23, col:37> 'unsigned int'
+          |         |-ParenExpr 0x7fa2150228c0 <col:23, col:29> 'int'
+          |         | `-BinaryOperator 0x7fa215022898 <col:24, col:28> 'int' '<'
+          |         |   |-IntegerLiteral 0x7fa215022858 <col:24> 'int' 4
+          |         |   `-IntegerLiteral 0x7fa215022878 <col:28> 'int' 8
+          |         |-ImplicitCastExpr 0x7fa215022940 <col:33> 'unsigned int' <IntegralCast>
+          |         | `-IntegerLiteral 0x7fa2150228e0 <col:33> 'int' 8
+          |         `-ImplicitCastExpr 0x7fa215022928 <col:37> 'unsigned int' <LValueToRValue>
+          |           `-DeclRefExpr 0x7fa215022900 <col:37> 'unsigned int' lvalue Var 0x7fa21401b978 'u' 'unsigned int'
+          |-<<<NULL>>>
+          `-NullStmt 0x7fa215022ab0 <line:13:7>

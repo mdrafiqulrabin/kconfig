@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7ff43582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff436015228 <../Data/C2AST/pr78451.c:7:1, line:11:1> line:8:1 used bar 'int (void)' static inline
+| |-CompoundStmt 0x7ff436015388 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7ff436015370 <line:10:3, col:10>
+| |   `-IntegerLiteral 0x7ff436015350 <col:10> 'int' 0
+| `-AlwaysInlineAttr 0x7ff4360152c8 <line:7:35> always_inline
+|-FunctionDecl 0x7ff436015438 <line:16:1, line:20:1> line:17:1 foo 'int (void)'
+| `-CompoundStmt 0x7ff436015580 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7ff436015568 <line:19:3, col:15>
+|     `-CallExpr 0x7ff436015540 <col:10, col:15> 'int'
+|       `-ImplicitCastExpr 0x7ff436015528 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7ff4360154d8 <col:10> 'int (void)' Function 0x7ff436015228 'bar' 'int (void)'
+`-FunctionDecl 0x7ff436015630 <line:29:1, line:33:1> line:30:1 baz 'int (void)'
+  `-CompoundStmt 0x7ff436015750 <line:31:1, line:33:1>
+    `-ReturnStmt 0x7ff436015738 <line:32:3, col:15>
+      `-CallExpr 0x7ff436015710 <col:10, col:15> 'int'
+        `-ImplicitCastExpr 0x7ff4360156f8 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ff4360156d0 <col:10> 'int (void)' Function 0x7ff436015228 'bar' 'int (void)'

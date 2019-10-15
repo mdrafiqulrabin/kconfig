@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fcbca8282e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcbca828f78 <../Data/C2AST/pr46865-2.c:5:1, col:22> col:22 used f 'unsigned long' extern
+|-FunctionDecl 0x7fcbca869f00 <line:19:1, line:23:1> line:20:1 foo 'void (void)'
+| `-CompoundStmt 0x7fcbca86a1d0 <line:21:1, line:23:1>
+|   |-IfStmt 0x7fcbca86a188 <line:8:3, line:11:39>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcbca86a018 <line:22:7, line:8:11> 'unsigned long' '&'
+|   | | |-ImplicitCastExpr 0x7fcbca869fe8 <line:22:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fcbca869fa0 <col:7> 'unsigned long' lvalue Var 0x7fcbca828f78 'f' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fcbca86a000 <line:8:11> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fcbca869fc8 <col:11> 'int' 1
+|   | |-GCCAsmStmt 0x7fcbca86a0b8 <line:9:5, col:39>
+|   | `-GCCAsmStmt 0x7fcbca86a140 <line:11:5, col:39>
+|   `-NullStmt 0x7fcbca86a1c0 <line:22:9>
+`-FunctionDecl 0x7fcbca86a280 <line:25:1, line:29:1> line:26:1 bar 'void (void)'
+  `-CompoundStmt 0x7fcbca86a6d0 <line:27:1, line:29:1>
+    |-IfStmt 0x7fcbca86a688 <line:14:3, line:17:58>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcbca86a398 <line:28:7, line:14:11> 'unsigned long' '&'
+    | | |-ImplicitCastExpr 0x7fcbca86a368 <line:28:7> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcbca86a320 <col:7> 'unsigned long' lvalue Var 0x7fcbca828f78 'f' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7fcbca86a380 <line:14:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fcbca86a348 <col:11> 'int' 1
+    | |-GCCAsmStmt 0x7fcbca86a4f8 <line:15:5, col:58>
+    | | `-IntegerLiteral 0x7fcbca86a468 <col:49> 'int' 6
+    | `-GCCAsmStmt 0x7fcbca86a620 <line:17:5, col:58>
+    |   `-IntegerLiteral 0x7fcbca86a5d0 <col:49> 'int' 6
+    `-NullStmt 0x7fcbca86a6c0 <line:28:9>

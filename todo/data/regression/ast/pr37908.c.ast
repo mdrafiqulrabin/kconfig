@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7f987a0242e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9879817e50 <../Data/C2AST/pr37908.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9879817ef0 prev 0x7f9879817e50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9879818058 <line:10:1, line:25:1> line:10:5 main 'int (void)'
+| `-CompoundStmt 0x7f987a055c38 <line:11:1, line:25:1>
+|   |-DeclStmt 0x7f98798181e0 <line:13:3, col:13>
+|   | `-VarDecl 0x7f9879818180 <col:3, col:9> col:9 used xLoc 'short'
+|   |-DeclStmt 0x7f9879818438 <line:14:3, col:34>
+|   | |-VarDecl 0x7f9879818210 <col:3, col:9> col:9 used xIn 'short'
+|   | |-VarDecl 0x7f9879818288 <col:3, col:14> col:14 used xOut 'short'
+|   | |-VarDecl 0x7f9879818300 <col:3, col:20> col:20 used xExpect 'short'
+|   | `-VarDecl 0x7f9879818378 <col:3, col:33> col:29 used i 'short' cinit
+|   |   `-ImplicitCastExpr 0x7f98798183f8 <col:33> 'short' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f98798183d8 <col:33> 'int' 1
+|   |-BinaryOperator 0x7f98798185c0 <line:16:3, col:25> 'short' '='
+|   | |-DeclRefExpr 0x7f9879818450 <col:3> 'short' lvalue Var 0x7f9879818180 'xLoc' 'short'
+|   | `-BinaryOperator 0x7f9879818598 <col:10, col:25> 'short' '='
+|   |   |-DeclRefExpr 0x7f9879818478 <col:10> 'short' lvalue Var 0x7f9879818210 'xIn' 'short'
+|   |   `-ImplicitCastExpr 0x7f9879818580 <col:16, col:25> 'short' <IntegralCast>
+|   |     `-UnaryOperator 0x7f9879818560 <col:16, col:25> 'int' prefix '~'
+|   |       `-ParenExpr 0x7f9879818540 <col:18, col:25> 'int'
+|   |         `-BinaryOperator 0x7f9879818518 <col:19, col:24> 'int' '<<'
+|   |           |-IntegerLiteral 0x7f98798184a0 <col:19> 'int' 1
+|   |           `-ImplicitCastExpr 0x7f9879818500 <col:24> 'int' <IntegralCast>
+|   |             `-ImplicitCastExpr 0x7f98798184e8 <col:24> 'short' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7f98798184c0 <col:24> 'short' lvalue Var 0x7f9879818378 'i' 'short'
+|   |-BinaryOperator 0x7f9879818708 <line:17:3, col:26> 'short' '='
+|   | |-DeclRefExpr 0x7f98798185e8 <col:3> 'short' lvalue Var 0x7f9879818300 'xExpect' 'short'
+|   | `-ImplicitCastExpr 0x7f98798186f0 <col:13, col:26> 'short' <IntegralCast>
+|   |   `-UnaryOperator 0x7f98798186d0 <col:13, col:26> 'int' prefix '~'
+|   |     `-ParenExpr 0x7f98798186b0 <col:15, col:26> 'int'
+|   |       `-BinaryOperator 0x7f9879818688 <col:16, col:22> 'int' '&'
+|   |         |-ImplicitCastExpr 0x7f9879818670 <col:16> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7f9879818658 <col:16> 'short' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7f9879818610 <col:16> 'short' lvalue Var 0x7f9879818210 'xIn' 'short'
+|   |         `-IntegerLiteral 0x7f9879818638 <col:22> 'int' 127
+|   |-BinaryOperator 0x7f9879818c20 <line:19:3, col:44> 'short' '='
+|   | |-DeclRefExpr 0x7f9879818730 <col:3> 'short' lvalue Var 0x7f9879818288 'xOut' 'short'
+|   | `-CallExpr 0x7f9879818930 <col:10, col:44> 'short'
+|   |   |-ImplicitCastExpr 0x7f9879818c08 <col:10> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7f9879818bb0 <col:10> '<builtin fn type>' Function 0x7f98798189e0 '__sync_nand_and_fetch_2' 'short (volatile short *, short, ...)'
+|   |   |-UnaryOperator 0x7f98798188a8 <col:33, col:34> 'short *' prefix '&'
+|   |   | `-DeclRefExpr 0x7f9879818850 <col:34> 'short' lvalue Var 0x7f9879818180 'xLoc' 'short'
+|   |   `-ImplicitCastExpr 0x7f9879818b98 <col:40> 'short' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f98798188c8 <col:40> 'int' 127
+|   |-IfStmt 0x7f9879818db8 <line:21:3, line:22:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9879818cf8 <line:21:7, col:15> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f9879818cb0 <col:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9879818c98 <col:7> 'short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9879818c48 <col:7> 'short' lvalue Var 0x7f9879818288 'xOut' 'short'
+|   | | `-ImplicitCastExpr 0x7f9879818ce0 <col:15> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9879818cc8 <col:15> 'short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9879818c70 <col:15> 'short' lvalue Var 0x7f9879818300 'xExpect' 'short'
+|   | |-CallExpr 0x7f9879818d90 <line:22:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9879818d78 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9879818d20 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9879817ef0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f987a055c20 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7f987a055c00 <col:10> 'int' 0
+|-FunctionDecl 0x7f9879818788 <line:19:10> col:10 implicit used __sync_nand_and_fetch 'void ()' extern
+`-FunctionDecl 0x7f98798189e0 <col:10> col:10 implicit __sync_nand_and_fetch_2 'short (volatile short *, short, ...)' extern
+  |-ParmVarDecl 0x7f9879818a80 <<invalid sloc>> <invalid sloc> 'volatile short *'
+  |-ParmVarDecl 0x7f9879818ae0 <<invalid sloc>> <invalid sloc> 'short'
+  `-NoThrowAttr 0x7f9879818b50 <col:10> Implicit

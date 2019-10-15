@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7ff41082b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff41082bf70 <../Data/C2AST/pr79987.c:4:1, col:13> col:13 used foo 'void' extern
+`-VarDecl 0x7ff411015e58 <line:5:1, col:14> col:7 bar 'void *' cinit
+  `-UnaryOperator 0x7ff411015ee0 <col:13, col:14> 'void *' prefix '&'
+    `-DeclRefExpr 0x7ff411015eb8 <col:14> 'void' Var 0x7ff41082bf70 'foo' 'void'

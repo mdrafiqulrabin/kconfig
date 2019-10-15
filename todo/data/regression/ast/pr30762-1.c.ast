@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fb56e0128e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb56e013560 <../Data/C2AST/pr30762-1.c:7:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7fb56e054438 <col:18, col:22> col:22 referenced i 'int'
+|-TypedefDecl 0x7fb56e0544d0 <col:1, col:27> col:27 referenced D 'struct D':'D'
+| `-ElaboratedType 0x7fb56e054480 'struct D' sugar
+|   `-RecordType 0x7fb56e054400 'D'
+|     `-Record 0x7fb56e013560 ''
+|-FunctionDecl 0x7fb56e054670 <line:8:1, col:19> col:13 used foo 'void (D)' extern
+| `-ParmVarDecl 0x7fb56e054570 <col:18> col:19 'D':'D'
+|-FunctionDecl 0x7fb56e054820 <line:10:1, line:16:1> line:11:1 bar 'void (void)'
+| `-CompoundStmt 0x7fb56e054b48 <line:12:1, line:16:1>
+|   |-DeclStmt 0x7fb56e054930 <line:13:3, col:6>
+|   | `-VarDecl 0x7fb56e0548d0 <col:3, col:5> col:5 used d 'D':'D'
+|   |-BinaryOperator 0x7fb56e0549c8 <line:14:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fb56e054970 <col:3, col:5> 'int' lvalue .i 0x7fb56e054438
+|   | | `-DeclRefExpr 0x7fb56e054948 <col:3> 'D':'D' lvalue Var 0x7fb56e0548d0 'd' 'D':'D'
+|   | `-IntegerLiteral 0x7fb56e0549a8 <col:9> 'int' 1
+|   `-CallExpr 0x7fb56e054b00 <line:15:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fb56e054ae8 <col:3> 'void (*)(D)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb56e054a38 <col:3> 'void (D)' Function 0x7fb56e054670 'foo' 'void (D)'
+|     `-ImplicitCastExpr 0x7fb56e054b30 <col:8> 'D':'D' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb56e054a60 <col:8> 'D':'D' lvalue Var 0x7fb56e0548d0 'd' 'D':'D'
+`-FunctionDecl 0x7fb56e054bc0 <line:18:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fb56e054c98 <col:12, col:24>
+    `-ReturnStmt 0x7fb56e054c80 <col:14, col:21>
+      `-IntegerLiteral 0x7fb56e054c60 <col:21> 'int' 0

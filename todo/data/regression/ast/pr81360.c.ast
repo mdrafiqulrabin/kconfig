@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fca7682bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca7682c978 <../Data/C2AST/pr81360.c:1:1, col:9> col:9 referenced a 'int'
+| `-BuiltinType 0x7fca7682bde0 'int'
+|-FunctionDecl 0x7fca770143a8 <line:2:1, line:5:1> line:2:1 used b 'int (void *, a)'
+| |-ParmVarDecl 0x7fca77014200 <col:3, col:9> col:9 used c 'void *'
+| |-ParmVarDecl 0x7fca77014290 <col:12, col:14> col:14 d 'a':'int'
+| `-CompoundStmt 0x7fca770147c8 <col:17, line:5:1>
+|   `-IfStmt 0x7fca77014790 <line:3:3, line:4:29>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fca770144c0 <line:3:7> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fca77014498 <col:7> 'void *' lvalue ParmVar 0x7fca77014200 'c' 'void *'
+|     |-CallExpr 0x7fca77014740 <line:4:5, col:29> 'int'
+|     | |-ImplicitCastExpr 0x7fca77014728 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fca770145e0 <col:5> 'int ()' Function 0x7fca77014530 'e' 'int ()'
+|     | |-IntegerLiteral 0x7fca77014608 <col:7> 'int' 0
+|     | `-ImplicitCastExpr 0x7fca77014778 <col:10> 'const char *' <ArrayToPointerDecay>
+|     |   `-PredefinedExpr 0x7fca770146e0 <col:10> 'const char [17]' lvalue __PRETTY_FUNCTION__
+|     |     `-StringLiteral 0x7fca770146a8 <col:10> 'const char [17]' lvalue "int b(void *, a)"
+|     `-<<<NULL>>>
+|-TypedefDecl 0x7fca770147f8 <line:6:1, col:9> col:9 referenced f 'int'
+| `-BuiltinType 0x7fca7682bde0 'int'
+|-TypedefDecl 0x7fca77014868 <col:1, col:12> col:12 referenced g 'int'
+| `-BuiltinType 0x7fca7682bde0 'int'
+`-FunctionDecl 0x7fca77014920 <line:7:1, line:10:1> line:7:30 h 'int ()'
+  `-CompoundStmt 0x7fca77014c30 <col:34, line:10:1>
+    |-DeclStmt 0x7fca77014a50 <line:8:3, col:6>
+    | `-VarDecl 0x7fca770149f0 <col:3, col:5> col:5 used i 'g':'int'
+    `-CallExpr 0x7fca77014b80 <line:9:3, col:17> 'int'
+      |-ImplicitCastExpr 0x7fca77014b68 <col:3> 'int (*)(void *, a)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fca77014a68 <col:3> 'int (void *, a)' Function 0x7fca770143a8 'b' 'int (void *, a)'
+      |-ImplicitCastExpr 0x7fca77014bd0 <col:5> 'void *' <IntegralToPointer>
+      | `-ImplicitCastExpr 0x7fca77014bb8 <col:5> 'g':'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fca77014a90 <col:5> 'g':'int' lvalue Var 0x7fca770149f0 'i' 'g':'int'
+      `-ImplicitCastExpr 0x7fca77014c18 <col:8, col:16> 'a':'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fca77014af0 <col:8, col:16> 'unsigned long' sizeof 'f':'int'

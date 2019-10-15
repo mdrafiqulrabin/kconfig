@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fbb1882b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbb1886ce00 <../Data/C2AST/pr31529-1.c:6:1, line:9:1> line:7:1 getline 'int ()'
+| `-CompoundStmt 0x7fbb1886cee0 <line:8:1, line:9:1>
+`-FunctionDecl 0x7fbb1886cf18 <line:11:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fbb1886cff0 <col:12, col:24>
+    `-ReturnStmt 0x7fbb1886cfd8 <col:14, col:21>
+      `-IntegerLiteral 0x7fbb1886cfb8 <col:21> 'int' 0

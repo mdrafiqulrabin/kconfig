@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7ff1d482a2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff1d482af60 <../Data/C2AST/pr32964.c:4:1, line:7:1> line:4:7 union A definition
+| `-FieldDecl 0x7ff1d486be38 <line:6:2, col:8> col:8 referenced a 'float'
+`-FunctionDecl 0x7ff1d486bf68 <line:9:1, line:23:1> line:9:7 t 'float (float)'
+  |-ParmVarDecl 0x7ff1d486be98 <col:9, col:15> col:15 used a 'float'
+  `-CompoundStmt 0x7ff1d486c848 <line:10:1, line:23:1>
+    |-DeclStmt 0x7ff1d486c220 <line:11:3, col:21>
+    | |-VarDecl 0x7ff1d486c0a0 <col:3, col:11> col:11 used a1 'union A':'union A'
+    | |-VarDecl 0x7ff1d486c120 <col:3, col:15> col:15 used a2 'union A':'union A'
+    | `-VarDecl 0x7ff1d486c1a0 <col:3, col:19> col:19 used a3 'union A':'union A'
+    |-DeclStmt 0x7ff1d486c2b0 <line:12:3, col:8>
+    | `-VarDecl 0x7ff1d486c250 <col:3, col:7> col:7 used i 'int'
+    |-BinaryOperator 0x7ff1d486c368 <line:14:3, col:10> 'float' '='
+    | |-MemberExpr 0x7ff1d486c2f0 <col:3, col:6> 'float' lvalue .a 0x7ff1d486be38
+    | | `-DeclRefExpr 0x7ff1d486c2c8 <col:3> 'union A':'union A' lvalue Var 0x7ff1d486c0a0 'a1' 'union A':'union A'
+    | `-ImplicitCastExpr 0x7ff1d486c350 <col:10> 'float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff1d486c328 <col:10> 'float' lvalue ParmVar 0x7ff1d486be98 'a' 'float'
+    |-ForStmt 0x7ff1d486c6f0 <line:15:3, line:20:3>
+    | |-BinaryOperator 0x7ff1d486c3d8 <line:15:7, col:11> 'int' '='
+    | | |-DeclRefExpr 0x7ff1d486c390 <col:7> 'int' lvalue Var 0x7ff1d486c250 'i' 'int'
+    | | `-IntegerLiteral 0x7ff1d486c3b8 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff1d486c460 <col:14, col:16> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff1d486c448 <col:14> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff1d486c400 <col:14> 'int' lvalue Var 0x7ff1d486c250 'i' 'int'
+    | | `-IntegerLiteral 0x7ff1d486c428 <col:16> 'int' 100
+    | |-UnaryOperator 0x7ff1d486c4b0 <col:21, col:22> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff1d486c488 <col:21> 'int' lvalue Var 0x7ff1d486c250 'i' 'int'
+    | `-CompoundStmt 0x7ff1d486c6c8 <line:16:5, line:20:3>
+    |   |-BinaryOperator 0x7ff1d486c538 <line:17:7, col:12> 'union A':'union A' '='
+    |   | |-DeclRefExpr 0x7ff1d486c4d0 <col:7> 'union A':'union A' lvalue Var 0x7ff1d486c120 'a2' 'union A':'union A'
+    |   | `-ImplicitCastExpr 0x7ff1d486c520 <col:12> 'union A':'union A' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff1d486c4f8 <col:12> 'union A':'union A' lvalue Var 0x7ff1d486c0a0 'a1' 'union A':'union A'
+    |   |-CompoundAssignOperator 0x7ff1d486c600 <line:18:7, col:15> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    |   | |-MemberExpr 0x7ff1d486c588 <col:7, col:10> 'float' lvalue .a 0x7ff1d486be38
+    |   | | `-DeclRefExpr 0x7ff1d486c560 <col:7> 'union A':'union A' lvalue Var 0x7ff1d486c120 'a2' 'union A':'union A'
+    |   | `-ImplicitCastExpr 0x7ff1d486c5e8 <col:15> 'float' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff1d486c5c0 <col:15> 'float' lvalue ParmVar 0x7ff1d486be98 'a' 'float'
+    |   `-BinaryOperator 0x7ff1d486c6a0 <line:19:7, col:12> 'union A':'union A' '='
+    |     |-DeclRefExpr 0x7ff1d486c638 <col:7> 'union A':'union A' lvalue Var 0x7ff1d486c0a0 'a1' 'union A':'union A'
+    |     `-ImplicitCastExpr 0x7ff1d486c688 <col:12> 'union A':'union A' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff1d486c660 <col:12> 'union A':'union A' lvalue Var 0x7ff1d486c120 'a2' 'union A':'union A'
+    |-BinaryOperator 0x7ff1d486c790 <line:21:3, col:8> 'union A':'union A' '='
+    | |-DeclRefExpr 0x7ff1d486c728 <col:3> 'union A':'union A' lvalue Var 0x7ff1d486c1a0 'a3' 'union A':'union A'
+    | `-ImplicitCastExpr 0x7ff1d486c778 <col:8> 'union A':'union A' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff1d486c750 <col:8> 'union A':'union A' lvalue Var 0x7ff1d486c0a0 'a1' 'union A':'union A'
+    `-ReturnStmt 0x7ff1d486c830 <line:22:3, col:13>
+      `-ImplicitCastExpr 0x7ff1d486c818 <col:10, col:13> 'float' <LValueToRValue>
+        `-MemberExpr 0x7ff1d486c7e0 <col:10, col:13> 'float' lvalue .a 0x7ff1d486be38
+          `-DeclRefExpr 0x7ff1d486c7b8 <col:10> 'union A':'union A' lvalue Var 0x7ff1d486c1a0 'a3' 'union A':'union A'

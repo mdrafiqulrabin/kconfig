@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fd70a82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd70b89b1d0 <../Data/C2AST/pr38616.c:8:12> col:12 implicit used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7fd70b89b270 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7fd70b89b2d0 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fd70b89b340 prev 0x7fd70b89b1d0 <col:1, col:46> col:12 used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7fd70b89b0c0 <col:20, col:31> col:32 'const char *'
+| `-ParmVarDecl 0x7fd70b89b138 <col:34, col:45> col:46 'const char *'
+|-FunctionDecl 0x7fd70b89b488 <line:11:1, line:16:1> line:11:5 main 'int (void)'
+| `-CompoundStmt 0x7fd70b89c120 <line:12:1, line:16:1>
+|   |-DeclStmt 0x7fd70b89b670 <line:13:3, col:23>
+|   | `-VarDecl 0x7fd70b89b5a8 <col:3, col:21> col:8 used buffer 'char [1024]' cinit
+|   |   `-StringLiteral 0x7fd70b89b648 <col:21> 'char [1024]' lvalue ""
+|   |-CallExpr 0x7fd70b89beb0 </usr/include/secure/_stdio.h:47:3, col:67> 'int'
+|   | |-ImplicitCastExpr 0x7fd70b89be98 <col:3> 'int (*)(char *, int, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fd70b89b920 <col:3> '<builtin fn type>' Function 0x7fd70b89b688 '__builtin___sprintf_chk' 'int (char *, int, unsigned long, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7fd70b89bf00 <../Data/C2AST/pr38616.c:14:12> 'char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd70b89b948 <col:12> 'char [1024]' lvalue Var 0x7fd70b89b5a8 'buffer' 'char [1024]'
+|   | |-IntegerLiteral 0x7fd70b89b970 </usr/include/secure/_stdio.h:47:33> 'int' 0
+|   | |-CallExpr 0x7fd70b89bd10 </usr/include/secure/_common.h:39:31, col:92> 'unsigned long'
+|   | | |-ImplicitCastExpr 0x7fd70b89bcf8 <col:31> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fd70b89bb88 <col:31> '<builtin fn type>' Function 0x7fd70b89b9d0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   | | |-ImplicitCastExpr 0x7fd70b89bd60 <../Data/C2AST/pr38616.c:14:12> 'const void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7fd70b89bd48 <col:12> 'char *' <ArrayToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7fd70b89bbb0 <col:12> 'char [1024]' lvalue Var 0x7fd70b89b5a8 'buffer' 'char [1024]'
+|   | | `-ConditionalOperator 0x7fd70b89bc88 </usr/include/secure/_common.h:30:32, line:39:91> 'int'
+|   | |   |-BinaryOperator 0x7fd70b89bc20 <line:30:32, line:39:83> 'int' '>'
+|   | |   | |-IntegerLiteral 0x7fd70b89bbd8 <line:30:32> 'int' 2
+|   | |   | `-IntegerLiteral 0x7fd70b89bc00 <line:39:83> 'int' 1
+|   | |   |-IntegerLiteral 0x7fd70b89bc48 <col:87> 'int' 1
+|   | |   `-IntegerLiteral 0x7fd70b89bc68 <col:91> 'int' 0
+|   | |-ImplicitCastExpr 0x7fd70b89bf30 <../Data/C2AST/pr38616.c:14:20> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fd70b89bf18 <col:20> 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x7fd70b89bdb8 <col:20> 'char [3]' lvalue "%s"
+|   | `-ImplicitCastExpr 0x7fd70b89bf48 <line:10:16> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7fd70b89be28 <col:16> 'char [26]' lvalue "1234567890abcdefghijklmno"
+|   `-ReturnStmt 0x7fd70b89c108 <line:15:3, col:32>
+|     `-CallExpr 0x7fd70b89c070 <col:10, col:32> 'int'
+|       |-ImplicitCastExpr 0x7fd70b89c058 <col:10> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd70b89bf60 <col:10> 'int (const char *, const char *)' Function 0x7fd70b89b340 'strcmp' 'int (const char *, const char *)'
+|       |-ImplicitCastExpr 0x7fd70b89c0c0 <col:18> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fd70b89c0a8 <col:18> 'char *' <ArrayToPointerDecay>
+|       |   `-DeclRefExpr 0x7fd70b89bf88 <col:18> 'char [1024]' lvalue Var 0x7fd70b89b5a8 'buffer' 'char [1024]'
+|       `-ImplicitCastExpr 0x7fd70b89c0f0 <line:10:16> 'const char *' <BitCast>
+|         `-ImplicitCastExpr 0x7fd70b89c0d8 <col:16> 'char *' <ArrayToPointerDecay>
+|           `-StringLiteral 0x7fd70b89bfb0 <col:16> 'char [26]' lvalue "1234567890abcdefghijklmno"
+|-FunctionDecl 0x7fd70b89b688 </usr/include/secure/_stdio.h:47:3> col:3 implicit used __builtin___sprintf_chk 'int (char *, int, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7fd70b89b728 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fd70b89b788 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fd70b89b7e8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fd70b89b848 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fd70b89b8c8 <col:3> Implicit printf 4 5
+`-FunctionDecl 0x7fd70b89b9d0 </usr/include/secure/_common.h:39:31> col:31 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+  |-ParmVarDecl 0x7fd70b89ba70 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fd70b89bad0 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7fd70b89bb40 <col:31> Implicit

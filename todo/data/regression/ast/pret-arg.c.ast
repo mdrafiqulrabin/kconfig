@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f925282bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f92530147a8 <../Data/C2AST/pret-arg.c:1:1, line:5:1> line:1:1 foo 'int (int, int, int, int, int, int, int, int, int, int, double)'
+  |-ParmVarDecl 0x7f9253014638 <col:6> col:6 a 'int'
+  |-ParmVarDecl 0x7f92530145c0 <col:9> col:9 b 'int'
+  |-ParmVarDecl 0x7f9253014548 <col:12> col:12 c 'int'
+  |-ParmVarDecl 0x7f92530144d0 <col:15> col:15 d 'int'
+  |-ParmVarDecl 0x7f9253014458 <col:18> col:18 e 'int'
+  |-ParmVarDecl 0x7f92530143e0 <col:21> col:21 f 'int'
+  |-ParmVarDecl 0x7f9253014368 <col:24> col:24 g 'int'
+  |-ParmVarDecl 0x7f92530142f0 <col:27> col:27 h 'int'
+  |-ParmVarDecl 0x7f9253014278 <col:30> col:30 i 'int'
+  |-ParmVarDecl 0x7f9253014200 <col:33> col:33 j 'int'
+  |-ParmVarDecl 0x7f925282c978 <line:2:6, col:13> col:13 used xx 'double'
+  `-CompoundStmt 0x7f9253014998 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7f9253014980 <line:4:3, col:15>
+      `-ImplicitCastExpr 0x7f9253014968 <col:10, col:15> 'int' <FloatingToIntegral>
+        `-BinaryOperator 0x7f9253014940 <col:10, col:15> 'double' '+'
+          |-ImplicitCastExpr 0x7f9253014928 <col:10> 'double' <LValueToRValue>
+          | `-DeclRefExpr 0x7f92530148e0 <col:10> 'double' lvalue ParmVar 0x7f925282c978 'xx' 'double'
+          `-FloatingLiteral 0x7f9253014908 <col:15> 'double' 1.234500e+00

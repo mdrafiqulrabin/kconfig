@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fe08102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe08106d820 <../Data/C2AST/pr67400-5.c:4:1, col:22> col:13 used foo 'void (void)' extern
+|-FunctionDecl 0x7fe08106dd10 <line:5:1, col:54> col:13 used bar 'void (int, int, int, int, int, int, void *)' extern
+| |-ParmVarDecl 0x7fe08106d918 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7fe08106d990 <col:23> col:26 'int'
+| |-ParmVarDecl 0x7fe08106da08 <col:28> col:31 'int'
+| |-ParmVarDecl 0x7fe08106da80 <col:33> col:36 'int'
+| |-ParmVarDecl 0x7fe08106daf8 <col:38> col:41 'int'
+| |-ParmVarDecl 0x7fe08106db70 <col:43> col:46 'int'
+| `-ParmVarDecl 0x7fe08106dbe8 <col:48, col:53> col:54 'void *'
+`-FunctionDecl 0x7fe08106de78 <line:7:1, line:11:1> line:8:1 x 'void (void)'
+  `-CompoundStmt 0x7fe08106e128 <line:9:1, line:11:1>
+    `-CallExpr 0x7fe08106e070 <line:10:3, col:29> 'void'
+      |-ImplicitCastExpr 0x7fe08106e058 <col:3> 'void (*)(int, int, int, int, int, int, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe08106df18 <col:3> 'void (int, int, int, int, int, int, void *)' Function 0x7fe08106dd10 'bar' 'void (int, int, int, int, int, int, void *)'
+      |-IntegerLiteral 0x7fe08106df40 <col:8> 'int' 1
+      |-IntegerLiteral 0x7fe08106df60 <col:11> 'int' 2
+      |-IntegerLiteral 0x7fe08106df80 <col:14> 'int' 3
+      |-IntegerLiteral 0x7fe08106dfa0 <col:17> 'int' 4
+      |-IntegerLiteral 0x7fe08106dfc0 <col:20> 'int' 5
+      |-IntegerLiteral 0x7fe08106dfe0 <col:23> 'int' 6
+      `-ImplicitCastExpr 0x7fe08106e110 <col:26> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7fe08106e0f8 <col:26> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fe08106e000 <col:26> 'void (void)' Function 0x7fe08106d820 'foo' 'void (void)'

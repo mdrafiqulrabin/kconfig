@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fac2082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fac21014260 <../Data/C2AST/pr84425.c:3:1, col:14> col:6 used bar 'void (int)'
+| `-ParmVarDecl 0x7fac2082c978 <col:11> col:14 'int'
+|-FunctionDecl 0x7fac210143e8 <line:5:1, line:10:1> line:6:1 used foo 'void (int)'
+| |-ParmVarDecl 0x7fac21014360 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fac21014630 <line:7:1, line:10:1>
+|   `-IfStmt 0x7fac210145f8 <line:8:3, line:9:11>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fac210144f0 <line:8:7, col:11> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fac210144d8 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fac21014490 <col:7> 'int' lvalue ParmVar 0x7fac21014360 'x' 'int'
+|     | `-IntegerLiteral 0x7fac210144b8 <col:11> 'int' 5
+|     |-CallExpr 0x7fac210145b0 <line:9:5, col:11> 'void'
+|     | |-ImplicitCastExpr 0x7fac21014598 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fac21014518 <col:5> 'void (int)' Function 0x7fac21014260 'bar' 'void (int)'
+|     | `-ImplicitCastExpr 0x7fac210145e0 <col:10> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fac21014540 <col:10> 'int' lvalue ParmVar 0x7fac21014360 'x' 'int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fac21014708 prev 0x7fac21014260 <line:12:1, line:17:1> line:13:1 used bar 'void (int)'
+  |-ParmVarDecl 0x7fac21014680 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fac21014920 <line:14:1, line:17:1>
+    `-IfStmt 0x7fac210148e8 <line:15:3, line:16:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fac21014810 <line:15:7, col:11> 'int' '>'
+      | |-ImplicitCastExpr 0x7fac210147f8 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fac210147b0 <col:7> 'int' lvalue ParmVar 0x7fac21014680 'x' 'int'
+      | `-IntegerLiteral 0x7fac210147d8 <col:11> 'int' 10
+      |-CallExpr 0x7fac210148a0 <line:16:5, col:11> 'void'
+      | |-ImplicitCastExpr 0x7fac21014888 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fac21014838 <col:5> 'void (int)' Function 0x7fac210143e8 'foo' 'void (int)'
+      | `-ImplicitCastExpr 0x7fac210148d0 <col:10> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fac21014860 <col:10> 'int' lvalue ParmVar 0x7fac21014680 'x' 'int'
+      `-<<<NULL>>>

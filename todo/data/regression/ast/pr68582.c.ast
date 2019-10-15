@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fcf6d82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcf6e815e20 <../Data/C2AST/pr68582.c:7:1, line:11:1> line:8:1 fn1 'void (void)' static
+| `-CompoundStmt 0x7fcf6e8160a8 <line:9:1, line:11:1>
+|   `-CallExpr 0x7fcf6e816080 <line:10:3, col:20> 'void'
+|     `-ImplicitCastExpr 0x7fcf6e816068 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7fcf6e816018 <col:3> '<builtin fn type>' Function 0x7fcf6e815f30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fcf6e815f30 <col:3> col:3 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fcf6e815fd0 <col:3> Implicit
+|-FunctionDecl 0x7fcf6e816150 <line:13:1, line:18:1> line:15:1 fn2 'void (void) __attribute__((noreturn))' static
+| `-CompoundStmt 0x7fcf6e816258 <line:16:1, line:18:1>
+|   `-CallExpr 0x7fcf6e816230 <line:17:3, col:20> 'void'
+|     `-ImplicitCastExpr 0x7fcf6e816218 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7fcf6e8161f0 <col:3> '<builtin fn type>' Function 0x7fcf6e815f30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fcf6e816300 <line:20:1, line:25:1> line:22:1 fn3 'void (void)' static
+  `-CompoundStmt 0x7fcf6e816408 <line:23:1, line:25:1>
+    `-CallExpr 0x7fcf6e8163e0 <line:24:3, col:20> 'void'
+      `-ImplicitCastExpr 0x7fcf6e8163c8 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+        `-DeclRefExpr 0x7fcf6e8163a0 <col:3> '<builtin fn type>' Function 0x7fcf6e815f30 '__builtin_abort' 'void (void) __attribute__((noreturn))'

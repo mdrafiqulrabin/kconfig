@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7faf4f8228e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7faf50008020 <../Data/C2AST/pr54103-5.c:1:1, line:5:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7faf500081a8 <line:3:1, line:5:1>
+    `-UnaryOperator 0x7faf50008188 <line:4:3, col:10> 'int' prefix '!'
+      `-ParenExpr 0x7faf50008168 <col:4, col:10> 'int'
+        `-BinaryOperator 0x7faf50008140 <col:5, col:9> 'int' '/'
+          |-IntegerLiteral 0x7faf50008100 <col:5> 'int' 0
+          `-IntegerLiteral 0x7faf50008120 <col:9> 'int' 0

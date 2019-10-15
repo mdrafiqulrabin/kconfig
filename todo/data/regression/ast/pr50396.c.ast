@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fcd8e0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcd8e814250 <../Data/C2AST/pr50396.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcd8e8142f0 prev 0x7fcd8e814250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fcd8e8143e8 <line:5:1, col:15> col:15 referenced vf128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fcd8e8143b0 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fcd8e0176e0 'float'
+|-TypedefDecl 0x7fcd8e814498 <line:6:1, col:15> col:15 referenced vf64 '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7fcd8e814460 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7fcd8e0176e0 'float'
+`-FunctionDecl 0x7fcd8e814540 <line:7:1, line:22:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7fcd8e82cc78 <line:8:1, line:22:1>
+    |-DeclStmt 0x7fcd8e814840 <line:11:3, col:42>
+    | `-VarDecl 0x7fcd8e814650 <col:3, col:41> col:9 used v 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-ImplicitCastExpr 0x7fcd8e814828 <col:13, col:41> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fcd8e814800 <col:13, col:41> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+    |       `-InitListExpr 0x7fcd8e8147a0 <col:20, col:41> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |         |-FloatingLiteral 0x7fcd8e8146c0 <col:22> 'float' 0.000000e+00
+    |         |-FloatingLiteral 0x7fcd8e8146e0 <col:27> 'float' 0.000000e+00
+    |         |-FloatingLiteral 0x7fcd8e814700 <col:32> 'float' 0.000000e+00
+    |         `-FloatingLiteral 0x7fcd8e814720 <col:37> 'float' 0.000000e+00
+    |-DeclStmt 0x7fcd8e814a20 <line:12:3, col:30>
+    | `-VarDecl 0x7fcd8e814890 <col:3, col:29> col:8 used u 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+    |   `-ImplicitCastExpr 0x7fcd8e814a08 <col:12, col:29> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fcd8e8149e0 <col:12, col:29> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue
+    |       `-InitListExpr 0x7fcd8e814990 <col:18, col:29> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    |         |-FloatingLiteral 0x7fcd8e814900 <col:20> 'float' 0.000000e+00
+    |         `-FloatingLiteral 0x7fcd8e814920 <col:25> 'float' 0.000000e+00
+    |-BinaryOperator 0x7fcd8e814c58 <line:13:3, col:39> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+    | |-DeclRefExpr 0x7fcd8e814a38 <col:3> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fcd8e814650 'v' 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    | `-BinaryOperator 0x7fcd8e814c30 <col:7, col:39> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '/'
+    |   |-ImplicitCastExpr 0x7fcd8e814c00 <col:7> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fcd8e814a60 <col:7> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fcd8e814650 'v' 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |   `-ImplicitCastExpr 0x7fcd8e814c18 <col:11, col:39> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fcd8e814bd8 <col:11, col:39> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+    |       `-InitListExpr 0x7fcd8e814b78 <col:18, col:39> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |         |-FloatingLiteral 0x7fcd8e814a98 <col:20> 'float' 0.000000e+00
+    |         |-FloatingLiteral 0x7fcd8e814ab8 <col:25> 'float' 0.000000e+00
+    |         |-FloatingLiteral 0x7fcd8e814ad8 <col:30> 'float' 0.000000e+00
+    |         `-FloatingLiteral 0x7fcd8e814af8 <col:35> 'float' 0.000000e+00
+    |-IfStmt 0x7fcd8e814e48 <line:14:3, line:15:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcd8e814d90 <line:14:7, col:18> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fcd8e814d60 <col:7, col:10> 'float' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fcd8e814cc8 <col:7, col:10> 'float' lvalue vectorcomponent
+    | | |   |-DeclRefExpr 0x7fcd8e814c80 <col:7> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fcd8e814650 'v' 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    | | |   `-IntegerLiteral 0x7fcd8e814ca8 <col:9> 'int' 0
+    | | `-ImplicitCastExpr 0x7fcd8e814d78 <col:15, col:18> 'float' <LValueToRValue>
+    | |   `-ArraySubscriptExpr 0x7fcd8e814d38 <col:15, col:18> 'float' lvalue vectorcomponent
+    | |     |-DeclRefExpr 0x7fcd8e814cf0 <col:15> 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fcd8e814650 'v' 'vf128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    | |     `-IntegerLiteral 0x7fcd8e814d18 <col:17> 'int' 0
+    | |-CallExpr 0x7fcd8e814e20 <line:15:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcd8e814e08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcd8e814db8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcd8e8142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fcd8e815040 <line:16:3, col:28> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '='
+    | |-DeclRefExpr 0x7fcd8e814e80 <col:3> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fcd8e814890 'u' 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    | `-BinaryOperator 0x7fcd8e815018 <col:7, col:28> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '/'
+    |   |-ImplicitCastExpr 0x7fcd8e814fe8 <col:7> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fcd8e814ea8 <col:7> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fcd8e814890 'u' 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    |   `-ImplicitCastExpr 0x7fcd8e815000 <col:11, col:28> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+    |     `-CompoundLiteralExpr 0x7fcd8e814fc0 <col:11, col:28> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue
+    |       `-InitListExpr 0x7fcd8e814f70 <col:17, col:28> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    |         |-FloatingLiteral 0x7fcd8e814ee0 <col:19> 'float' 0.000000e+00
+    |         `-FloatingLiteral 0x7fcd8e814f00 <col:24> 'float' 0.000000e+00
+    |-IfStmt 0x7fcd8e82cc08 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcd8e815178 <line:17:7, col:18> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fcd8e815148 <col:7, col:10> 'float' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fcd8e8150b0 <col:7, col:10> 'float' lvalue vectorcomponent
+    | | |   |-DeclRefExpr 0x7fcd8e815068 <col:7> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fcd8e814890 'u' 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    | | |   `-IntegerLiteral 0x7fcd8e815090 <col:9> 'int' 0
+    | | `-ImplicitCastExpr 0x7fcd8e815160 <col:15, col:18> 'float' <LValueToRValue>
+    | |   `-ArraySubscriptExpr 0x7fcd8e815120 <col:15, col:18> 'float' lvalue vectorcomponent
+    | |     |-DeclRefExpr 0x7fcd8e8150d8 <col:15> 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fcd8e814890 'u' 'vf64':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+    | |     `-IntegerLiteral 0x7fcd8e815100 <col:17> 'int' 0
+    | |-CallExpr 0x7fcd8e8151e0 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcd8e8151c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcd8e8151a0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcd8e8142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcd8e82cc60 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fcd8e82cc40 <col:10> 'int' 0

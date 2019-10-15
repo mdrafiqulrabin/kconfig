@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7ff26081d2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff26183fc50 <../Data/C2AST/pr17112-1.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff26183fcf0 prev 0x7ff26183fc50 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7ff26183fd90 <line:8:9, line:10:1> line:8:9 struct definition
+| `-FieldDecl 0x7ff26183fe78 <line:9:3, col:13> col:7 referenced int24 'int'
+|   |-IntegerLiteral 0x7ff26183fe40 <col:13> 'int' 24
+|   `-PackedAttr 0x7ff26183fec0 <col:33>
+|-TypedefDecl 0x7ff26183ff60 <line:8:1, line:10:3> col:3 referenced myint24 'struct myint24':'myint24'
+| `-ElaboratedType 0x7ff26183ff10 'struct myint24' sugar
+|   `-RecordType 0x7ff26183fe20 'myint24'
+|     `-Record 0x7ff26183fd90 ''
+|-VarDecl 0x7ff2618400f8 <line:12:1, line:16:1> line:12:9 used x 'myint24 [3]' cinit
+| `-InitListExpr 0x7ff261840250 <col:16, line:16:1> 'myint24 [3]'
+|   |-InitListExpr 0x7ff2618402a8 <line:13:3> 'myint24':'myint24'
+|   | `-IntegerLiteral 0x7ff261840198 <col:3> 'int' 1193046
+|   |-InitListExpr 0x7ff2618402f0 <line:14:3> 'myint24':'myint24'
+|   | `-IntegerLiteral 0x7ff2618401b8 <col:3> 'int' 7903932
+|   `-InitListExpr 0x7ff261840338 <line:15:3> 'myint24':'myint24'
+|     `-IntegerLiteral 0x7ff2618401d8 <col:3> 'int' 14610450
+|-VarDecl 0x7ff2618403c0 <line:18:1, col:12> col:9 used y 'myint24 [3]'
+|-FunctionDecl 0x7ff261840468 <line:20:1, line:23:1> line:20:6 used foo 'void ()'
+| `-CompoundStmt 0x7ff2618406b0 <line:21:1, line:23:1>
+|   `-BinaryOperator 0x7ff261840688 <line:22:3, col:13> 'myint24':'myint24' '='
+|     |-ArraySubscriptExpr 0x7ff2618405c0 <col:3, col:6> 'myint24':'myint24' lvalue
+|     | |-ImplicitCastExpr 0x7ff2618405a8 <col:3> 'myint24 *' <ArrayToPointerDecay>
+|     | | `-DeclRefExpr 0x7ff261840508 <col:3> 'myint24 [3]' lvalue Var 0x7ff2618403c0 'y' 'myint24 [3]'
+|     | `-IntegerLiteral 0x7ff261840530 <col:5> 'int' 1
+|     `-ImplicitCastExpr 0x7ff261840670 <col:10, col:13> 'myint24':'myint24' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7ff261840648 <col:10, col:13> 'myint24':'myint24' lvalue
+|         |-ImplicitCastExpr 0x7ff261840630 <col:10> 'myint24 *' <ArrayToPointerDecay>
+|         | `-DeclRefExpr 0x7ff2618405e8 <col:10> 'myint24 [3]' lvalue Var 0x7ff2618400f8 'x' 'myint24 [3]'
+|         `-IntegerLiteral 0x7ff261840610 <col:12> 'int' 1
+`-FunctionDecl 0x7ff261840720 <line:25:1, line:32:1> line:25:5 main 'int ()'
+  `-CompoundStmt 0x7ff261840bc8 <line:26:1, line:32:1>
+    |-CallExpr 0x7ff261840830 <line:27:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7ff261840818 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff2618407c0 <col:3> 'void ()' Function 0x7ff261840468 'foo' 'void ()'
+    |-IfStmt 0x7ff261840b58 <line:29:3, line:30:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff261840a98 <line:29:7, col:40> 'int' '||'
+    | | |-BinaryOperator 0x7ff261840950 <col:7, col:21> 'int' '!='
+    | | | |-ImplicitCastExpr 0x7ff261840938 <col:7, col:12> 'int' <LValueToRValue>
+    | | | | `-MemberExpr 0x7ff2618408e0 <col:7, col:12> 'int' lvalue bitfield .int24 0x7ff26183fe78
+    | | | |   `-ArraySubscriptExpr 0x7ff2618408b8 <col:7, col:10> 'myint24':'myint24' lvalue
+    | | | |     |-ImplicitCastExpr 0x7ff2618408a0 <col:7> 'myint24 *' <ArrayToPointerDecay>
+    | | | |     | `-DeclRefExpr 0x7ff261840858 <col:7> 'myint24 [3]' lvalue Var 0x7ff2618403c0 'y' 'myint24 [3]'
+    | | | |     `-IntegerLiteral 0x7ff261840880 <col:9> 'int' 0
+    | | | `-IntegerLiteral 0x7ff261840918 <col:21> 'int' 0
+    | | `-BinaryOperator 0x7ff261840a70 <col:26, col:40> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7ff261840a58 <col:26, col:31> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7ff261840a00 <col:26, col:31> 'int' lvalue bitfield .int24 0x7ff26183fe78
+    | |   |   `-ArraySubscriptExpr 0x7ff2618409d8 <col:26, col:29> 'myint24':'myint24' lvalue
+    | |   |     |-ImplicitCastExpr 0x7ff2618409c0 <col:26> 'myint24 *' <ArrayToPointerDecay>
+    | |   |     | `-DeclRefExpr 0x7ff261840978 <col:26> 'myint24 [3]' lvalue Var 0x7ff2618403c0 'y' 'myint24 [3]'
+    | |   |     `-IntegerLiteral 0x7ff2618409a0 <col:28> 'int' 2
+    | |   `-IntegerLiteral 0x7ff261840a38 <col:40> 'int' 0
+    | |-CallExpr 0x7ff261840b30 <line:30:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7ff261840b18 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff261840ac0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff26183fcf0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff261840bb0 <line:31:3, col:10>
+      `-IntegerLiteral 0x7ff261840b90 <col:10> 'int' 0

@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fe191026ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe1910abcc8 <../Data/C2AST/pr62089.c:6:1, col:18> col:8 struct vfsmount definition
+|-RecordDecl 0x7fe1910abd70 <line:7:1, col:16> col:8 struct dentry definition
+|-RecordDecl 0x7fe1910abe20 <line:9:1, line:12:1> line:9:8 struct path definition
+| |-FieldDecl 0x7fe1910abf80 <line:10:3, col:20> col:20 mnt 'struct vfsmount *'
+| `-FieldDecl 0x7fe190811a80 <line:11:3, col:18> col:18 dentry 'struct dentry *'
+|-RecordDecl 0x7fe190811ac8 <line:14:1, line:21:1> line:14:8 struct fs_struct definition
+| |-FieldDecl 0x7fe190811b88 <line:15:3, col:7> col:7 users 'int'
+| |-FieldDecl 0x7fe190811be8 <line:16:3, col:7> col:7 lock 'int'
+| |-FieldDecl 0x7fe190811c48 <line:17:3, col:7> col:7 seq 'int'
+| |-FieldDecl 0x7fe190811ca8 <line:18:3, col:7> col:7 umask 'int'
+| |-FieldDecl 0x7fe190811d08 <line:19:3, col:7> col:7 in_exec 'int'
+| |-FieldDecl 0x7fe190811da0 <line:20:3, col:15> col:15 referenced root 'struct path':'struct path'
+| `-FieldDecl 0x7fe190811e08 <col:3, col:21> col:21 pwd 'struct path':'struct path'
+|-FunctionDecl 0x7fe1908120a0 <line:23:1, line:26:1> line:24:1 used copy_fs_struct 'void (struct fs_struct *, struct fs_struct *)'
+| |-ParmVarDecl 0x7fe190811f00 <col:16, col:34> col:34 used a 'struct fs_struct *'
+| |-ParmVarDecl 0x7fe190811f88 <col:37, col:55> col:55 used b 'struct fs_struct *'
+| |-CompoundStmt 0x7fe1908122c8 <col:58, line:26:1>
+| | `-BinaryOperator 0x7fe1908122a0 <line:25:3, col:16> 'struct path':'struct path' '='
+| |   |-MemberExpr 0x7fe1908121d8 <col:3, col:6> 'struct path':'struct path' lvalue ->root 0x7fe190811da0
+| |   | `-ImplicitCastExpr 0x7fe1908121c0 <col:3> 'struct fs_struct *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fe190812198 <col:3> 'struct fs_struct *' lvalue ParmVar 0x7fe190811f00 'a' 'struct fs_struct *'
+| |   `-ImplicitCastExpr 0x7fe190812288 <col:13, col:16> 'struct path':'struct path' <LValueToRValue>
+| |     `-MemberExpr 0x7fe190812250 <col:13, col:16> 'struct path':'struct path' lvalue ->root 0x7fe190811da0
+| |       `-ImplicitCastExpr 0x7fe190812238 <col:13> 'struct fs_struct *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fe190812210 <col:13> 'struct fs_struct *' lvalue ParmVar 0x7fe190811f88 'b' 'struct fs_struct *'
+| `-NoInlineAttr 0x7fe190812150 <line:23:21>
+|-VarDecl 0x7fe190812300 <line:28:1, col:18> col:18 used a 'struct fs_struct':'struct fs_struct'
+|-VarDecl 0x7fe190812380 <col:1, col:21> col:21 used b 'struct fs_struct':'struct fs_struct'
+`-FunctionDecl 0x7fe190812450 <line:30:1, line:35:1> line:31:1 main 'int ()'
+  `-CompoundStmt 0x7fe190812900 <col:9, line:35:1>
+    |-CallExpr 0x7fe190812710 <line:32:3, col:56> 'void'
+    | |-ImplicitCastExpr 0x7fe1908126f8 <col:3> 'void (*)(const volatile void *, size_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe1908124f0 <col:3> 'void (const volatile void *, size_t)' Function 0x7fe1910a79b0 '__asan_poison_memory_region' 'void (const volatile void *, size_t)'
+    | |-ImplicitCastExpr 0x7fe190812748 <col:32, col:35> 'const volatile void *' <BitCast>
+    | | `-UnaryOperator 0x7fe1908125d8 <col:32, col:35> 'struct path *' prefix '&'
+    | |   `-MemberExpr 0x7fe190812540 <col:33, col:35> 'struct path':'struct path' lvalue .root 0x7fe190811da0
+    | |     `-DeclRefExpr 0x7fe190812518 <col:33> 'struct fs_struct':'struct fs_struct' lvalue Var 0x7fe190812300 'a' 'struct fs_struct':'struct fs_struct'
+    | `-UnaryExprOrTypeTraitExpr 0x7fe190812678 <col:41, col:55> 'unsigned long' sizeof
+    |   `-ParenExpr 0x7fe190812658 <col:48, col:55> 'struct path':'struct path' lvalue
+    |     `-MemberExpr 0x7fe190812620 <col:49, col:51> 'struct path':'struct path' lvalue .root 0x7fe190811da0
+    |       `-DeclRefExpr 0x7fe1908125f8 <col:49> 'struct fs_struct':'struct fs_struct' lvalue Var 0x7fe190812300 'a' 'struct fs_struct':'struct fs_struct'
+    |-CallExpr 0x7fe190812890 <line:33:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fe190812878 <col:3> 'void (*)(struct fs_struct *, struct fs_struct *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe190812760 <col:3> 'void (struct fs_struct *, struct fs_struct *)' Function 0x7fe1908120a0 'copy_fs_struct' 'void (struct fs_struct *, struct fs_struct *)'
+    | |-UnaryOperator 0x7fe1908127b0 <col:19, col:20> 'struct fs_struct *' prefix '&'
+    | | `-DeclRefExpr 0x7fe190812788 <col:20> 'struct fs_struct':'struct fs_struct' lvalue Var 0x7fe190812300 'a' 'struct fs_struct':'struct fs_struct'
+    | `-UnaryOperator 0x7fe1908127f8 <col:23, col:24> 'struct fs_struct *' prefix '&'
+    |   `-DeclRefExpr 0x7fe1908127d0 <col:24> 'struct fs_struct':'struct fs_struct' lvalue Var 0x7fe190812380 'b' 'struct fs_struct':'struct fs_struct'
+    `-ReturnStmt 0x7fe1908128e8 <line:34:3, col:10>
+      `-IntegerLiteral 0x7fe1908128c8 <col:10> 'int' 0

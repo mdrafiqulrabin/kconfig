@@ -1,0 +1,113 @@
+TranslationUnitDecl 0x7f97ea82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f97eb014268 <../Data/C2AST/pr37780_1.c:6:1, line:10:1> line:7:1 fooctz 'int (int)'
+| |-ParmVarDecl 0x7f97ea82c978 <col:9, col:13> col:13 used i 'int'
+| `-CompoundStmt 0x7f97eb0146f8 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7f97eb0146e0 <line:9:3, col:42>
+|     `-ConditionalOperator 0x7f97eb0146b0 <col:10, col:42> 'int'
+|       |-ParenExpr 0x7f97eb0143d8 <col:10, col:17> 'int'
+|       | `-BinaryOperator 0x7f97eb0143b0 <col:11, col:16> 'int' '=='
+|       |   |-ImplicitCastExpr 0x7f97eb014398 <col:11> 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f97eb014350 <col:11> 'int' lvalue ParmVar 0x7f97ea82c978 'i' 'int'
+|       |   `-IntegerLiteral 0x7f97eb014378 <col:16> 'int' 0
+|       |-IntegerLiteral 0x7f97eb0143f8 <col:21> 'int' 32
+|       `-CallExpr 0x7f97eb014650 <col:26, col:42> 'int'
+|         |-ImplicitCastExpr 0x7f97eb014638 <col:26> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f97eb0145b8 <col:26> '<builtin fn type>' Function 0x7f97eb014458 '__builtin_ctz' 'int (unsigned int)'
+|         `-ImplicitCastExpr 0x7f97eb014698 <col:41> 'unsigned int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7f97eb014680 <col:41> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7f97eb0145e0 <col:41> 'int' lvalue ParmVar 0x7f97ea82c978 'i' 'int'
+|-FunctionDecl 0x7f97eb014458 <col:26> col:26 implicit used __builtin_ctz 'int (unsigned int)' extern
+| |-ParmVarDecl 0x7f97eb0144f8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7f97eb014560 <col:26> Implicit
+| `-ConstAttr 0x7f97eb0145a8 <col:26> Implicit
+|-FunctionDecl 0x7f97eb0147b8 <line:12:1, line:16:1> line:13:1 fooctz2 'int (int)'
+| |-ParmVarDecl 0x7f97eb014728 <col:10, col:14> col:14 used i 'int'
+| `-CompoundStmt 0x7f97eb014a38 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7f97eb014a20 <line:15:3, col:41>
+|     `-ConditionalOperator 0x7f97eb0149f0 <col:10, col:41> 'int'
+|       |-ParenExpr 0x7f97eb0148e8 <col:10, col:17> 'int'
+|       | `-BinaryOperator 0x7f97eb0148c0 <col:11, col:16> 'int' '!='
+|       |   |-ImplicitCastExpr 0x7f97eb0148a8 <col:11> 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f97eb014860 <col:11> 'int' lvalue ParmVar 0x7f97eb014728 'i' 'int'
+|       |   `-IntegerLiteral 0x7f97eb014888 <col:16> 'int' 0
+|       |-CallExpr 0x7f97eb014970 <col:21, col:37> 'int'
+|       | |-ImplicitCastExpr 0x7f97eb014958 <col:21> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7f97eb014908 <col:21> '<builtin fn type>' Function 0x7f97eb014458 '__builtin_ctz' 'int (unsigned int)'
+|       | `-ImplicitCastExpr 0x7f97eb0149b8 <col:36> 'unsigned int' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7f97eb0149a0 <col:36> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f97eb014930 <col:36> 'int' lvalue ParmVar 0x7f97eb014728 'i' 'int'
+|       `-IntegerLiteral 0x7f97eb0149d0 <col:41> 'int' 32
+|-FunctionDecl 0x7f97eb014b38 <line:18:1, line:22:1> line:19:1 fooctz3 'unsigned int (unsigned int)'
+| |-ParmVarDecl 0x7f97eb014a68 <col:10, col:23> col:23 used i 'unsigned int'
+| `-CompoundStmt 0x7f97eb014dd0 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7f97eb014db8 <line:21:3, col:41>
+|     `-ImplicitCastExpr 0x7f97eb014da0 <col:10, col:41> 'unsigned int' <IntegralCast>
+|       `-ConditionalOperator 0x7f97eb014d70 <col:10, col:41> 'int'
+|         |-ParenExpr 0x7f97eb014c80 <col:10, col:16> 'int'
+|         | `-BinaryOperator 0x7f97eb014c58 <col:11, col:15> 'int' '>'
+|         |   |-ImplicitCastExpr 0x7f97eb014c28 <col:11> 'unsigned int' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7f97eb014be0 <col:11> 'unsigned int' lvalue ParmVar 0x7f97eb014a68 'i' 'unsigned int'
+|         |   `-ImplicitCastExpr 0x7f97eb014c40 <col:15> 'unsigned int' <IntegralCast>
+|         |     `-IntegerLiteral 0x7f97eb014c08 <col:15> 'int' 0
+|         |-CallExpr 0x7f97eb014d08 <col:21, col:37> 'int'
+|         | |-ImplicitCastExpr 0x7f97eb014cf0 <col:21> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|         | | `-DeclRefExpr 0x7f97eb014ca0 <col:21> '<builtin fn type>' Function 0x7f97eb014458 '__builtin_ctz' 'int (unsigned int)'
+|         | `-ImplicitCastExpr 0x7f97eb014d38 <col:36> 'unsigned int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f97eb014cc8 <col:36> 'unsigned int' lvalue ParmVar 0x7f97eb014a68 'i' 'unsigned int'
+|         `-IntegerLiteral 0x7f97eb014d50 <col:41> 'int' 32
+|-FunctionDecl 0x7f97eb014e90 <line:26:1, line:30:1> line:27:1 fooclz 'int (int)'
+| |-ParmVarDecl 0x7f97eb014e00 <col:9, col:13> col:13 used i 'int'
+| `-CompoundStmt 0x7f97eb015278 <line:28:1, line:30:1>
+|   `-ReturnStmt 0x7f97eb015260 <line:29:3, col:42>
+|     `-ConditionalOperator 0x7f97eb015230 <col:10, col:42> 'int'
+|       |-ParenExpr 0x7f97eb014fc0 <col:10, col:17> 'int'
+|       | `-BinaryOperator 0x7f97eb014f98 <col:11, col:16> 'int' '=='
+|       |   |-ImplicitCastExpr 0x7f97eb014f80 <col:11> 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f97eb014f38 <col:11> 'int' lvalue ParmVar 0x7f97eb014e00 'i' 'int'
+|       |   `-IntegerLiteral 0x7f97eb014f60 <col:16> 'int' 0
+|       |-IntegerLiteral 0x7f97eb014fe0 <col:21> 'int' 32
+|       `-CallExpr 0x7f97eb0151c8 <col:26, col:42> 'int'
+|         |-ImplicitCastExpr 0x7f97eb0151b0 <col:26> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f97eb015160 <col:26> '<builtin fn type>' Function 0x7f97eb015000 '__builtin_clz' 'int (unsigned int)'
+|         `-ImplicitCastExpr 0x7f97eb015218 <col:41> 'unsigned int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7f97eb015200 <col:41> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7f97eb015188 <col:41> 'int' lvalue ParmVar 0x7f97eb014e00 'i' 'int'
+|-FunctionDecl 0x7f97eb015000 <col:26> col:26 implicit used __builtin_clz 'int (unsigned int)' extern
+| |-ParmVarDecl 0x7f97eb0150a0 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7f97eb015108 <col:26> Implicit
+| `-ConstAttr 0x7f97eb015150 <col:26> Implicit
+|-FunctionDecl 0x7f97eb015338 <line:32:1, line:36:1> line:33:1 fooclz2 'int (int)'
+| |-ParmVarDecl 0x7f97eb0152a8 <col:10, col:14> col:14 used i 'int'
+| `-CompoundStmt 0x7f97eb0155b8 <line:34:1, line:36:1>
+|   `-ReturnStmt 0x7f97eb0155a0 <line:35:3, col:41>
+|     `-ConditionalOperator 0x7f97eb015570 <col:10, col:41> 'int'
+|       |-ParenExpr 0x7f97eb015468 <col:10, col:17> 'int'
+|       | `-BinaryOperator 0x7f97eb015440 <col:11, col:16> 'int' '!='
+|       |   |-ImplicitCastExpr 0x7f97eb015428 <col:11> 'int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f97eb0153e0 <col:11> 'int' lvalue ParmVar 0x7f97eb0152a8 'i' 'int'
+|       |   `-IntegerLiteral 0x7f97eb015408 <col:16> 'int' 0
+|       |-CallExpr 0x7f97eb0154f0 <col:21, col:37> 'int'
+|       | |-ImplicitCastExpr 0x7f97eb0154d8 <col:21> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7f97eb015488 <col:21> '<builtin fn type>' Function 0x7f97eb015000 '__builtin_clz' 'int (unsigned int)'
+|       | `-ImplicitCastExpr 0x7f97eb015538 <col:36> 'unsigned int' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7f97eb015520 <col:36> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f97eb0154b0 <col:36> 'int' lvalue ParmVar 0x7f97eb0152a8 'i' 'int'
+|       `-IntegerLiteral 0x7f97eb015550 <col:41> 'int' 32
+`-FunctionDecl 0x7f97eb015678 <line:38:1, line:42:1> line:39:1 fooclz3 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7f97eb0155e8 <col:10, col:23> col:23 used i 'unsigned int'
+  `-CompoundStmt 0x7f97eb015910 <line:40:1, line:42:1>
+    `-ReturnStmt 0x7f97eb0158f8 <line:41:3, col:40>
+      `-ImplicitCastExpr 0x7f97eb0158e0 <col:10, col:40> 'unsigned int' <IntegralCast>
+        `-ConditionalOperator 0x7f97eb0158b0 <col:10, col:40> 'int'
+          |-ParenExpr 0x7f97eb0157c0 <col:10, col:16> 'int'
+          | `-BinaryOperator 0x7f97eb015798 <col:11, col:15> 'int' '>'
+          |   |-ImplicitCastExpr 0x7f97eb015768 <col:11> 'unsigned int' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7f97eb015720 <col:11> 'unsigned int' lvalue ParmVar 0x7f97eb0155e8 'i' 'unsigned int'
+          |   `-ImplicitCastExpr 0x7f97eb015780 <col:15> 'unsigned int' <IntegralCast>
+          |     `-IntegerLiteral 0x7f97eb015748 <col:15> 'int' 0
+          |-CallExpr 0x7f97eb015848 <col:20, col:36> 'int'
+          | |-ImplicitCastExpr 0x7f97eb015830 <col:20> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+          | | `-DeclRefExpr 0x7f97eb0157e0 <col:20> '<builtin fn type>' Function 0x7f97eb015000 '__builtin_clz' 'int (unsigned int)'
+          | `-ImplicitCastExpr 0x7f97eb015878 <col:35> 'unsigned int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f97eb015808 <col:35> 'unsigned int' lvalue ParmVar 0x7f97eb0155e8 'i' 'unsigned int'
+          `-IntegerLiteral 0x7f97eb015890 <col:40> 'int' 32

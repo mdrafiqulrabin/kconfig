@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f9c5d02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c5d815200 <../Data/C2AST/pr77860.c:5:1, col:24> col:24 referenced V '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7f9c5d02c980 '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' 8
+|   `-BuiltinType 0x7f9c5d02be60 'unsigned short'
+`-FunctionDecl 0x7f9c5d815410 <line:7:1, line:13:1> line:8:1 foo 'V (V, V)'
+  |-ParmVarDecl 0x7f9c5d815290 <col:6, col:8> col:8 used x 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+  |-ParmVarDecl 0x7f9c5d815300 <col:11, col:13> col:13 used y 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+  `-CompoundStmt 0x7f9c5d815790 <line:9:1, line:13:1>
+    |-DeclStmt 0x7f9c5d8155d0 <line:10:3, col:11>
+    | `-VarDecl 0x7f9c5d815510 <col:3, col:10> col:5 used a 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' cinit
+    |   `-UnaryOperator 0x7f9c5d8155b0 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' prefix '-'
+    |     `-ImplicitCastExpr 0x7f9c5d815598 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9c5d815570 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7f9c5d815290 'x' 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+    |-DeclStmt 0x7f9c5d8156b8 <line:11:3, col:11>
+    | `-VarDecl 0x7f9c5d8155f8 <col:3, col:10> col:5 used b 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' cinit
+    |   `-UnaryOperator 0x7f9c5d815698 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' prefix '-'
+    |     `-ImplicitCastExpr 0x7f9c5d815680 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9c5d815658 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue ParmVar 0x7f9c5d815300 'y' 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+    `-ReturnStmt 0x7f9c5d815778 <line:12:3, col:14>
+      `-BinaryOperator 0x7f9c5d815750 <col:10, col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '*'
+        |-ImplicitCastExpr 0x7f9c5d815720 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9c5d8156d0 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7f9c5d815510 'a' 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+        `-ImplicitCastExpr 0x7f9c5d815738 <col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+          `-DeclRefExpr 0x7f9c5d8156f8 <col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7f9c5d8155f8 'b' 'V':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'

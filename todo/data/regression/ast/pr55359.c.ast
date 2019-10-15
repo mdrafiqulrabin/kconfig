@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7ff9e682bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff9e6acba98 <../Data/C2AST/pr55359.c:6:1, line:10:1> line:7:1 f '__m128d (__m256d)'
+  |-ParmVarDecl 0x7ff9e6acba10 <col:4, col:12> col:12 used x '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+  `-CompoundStmt 0x7ff9e6acbd08 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7ff9e6acbcf0 <line:9:3, col:42>
+      `-ImplicitCastExpr 0x7ff9e6acbcd8 <col:10, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-UnaryOperator 0x7ff9e6acbcb8 <col:10, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '*'
+          `-ParenExpr 0x7ff9e6acbc98 <col:11, col:42> '__m128d *'
+            `-CStyleCastExpr 0x7ff9e6acbc70 <col:12, col:41> '__m128d *' <BitCast>
+              `-ParenExpr 0x7ff9e6acbc50 <col:23, col:41> 'double *'
+                `-BinaryOperator 0x7ff9e6acbbe8 <col:24, col:40> 'double *' '+'
+                  |-CStyleCastExpr 0x7ff9e6acbba0 <col:24, col:36> 'double *' <BitCast>
+                  | `-UnaryOperator 0x7ff9e6acbb68 <col:35, col:36> '__m256d *' prefix '&'
+                  |   `-DeclRefExpr 0x7ff9e6acbb40 <col:36> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue ParmVar 0x7ff9e6acba10 'x' '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+                  `-IntegerLiteral 0x7ff9e6acbbc8 <col:40> 'int' 1

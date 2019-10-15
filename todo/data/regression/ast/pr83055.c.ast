@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fbc2f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc2f86e820 <../Data/C2AST/pr83055.c:5:1, col:40> col:33 used a 'void (void)'
+| `-ColdAttr 0x7fbc2f86e8c0 <col:22>
+|-FunctionDecl 0x7fbc2f86e9d8 <line:6:1, col:13> col:6 used b 'void (void)'
+|-FunctionDecl 0x7fbc2f86eb08 <line:7:1, col:50> col:33 used c 'void (void)'
+| |-CompoundStmt 0x7fbc2f86ec88 <col:42, col:50>
+| | `-CallExpr 0x7fbc2f86ec60 <col:44, col:47> 'void'
+| |   `-ImplicitCastExpr 0x7fbc2f86ec48 <col:44> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fbc2f86ebf0 <col:44> 'void (void)' Function 0x7fbc2f86e820 'a' 'void (void)'
+| `-NoInlineAttr 0x7fbc2f86eba8 <col:22>
+`-FunctionDecl 0x7fbc2f86ed30 <line:9:1, line:14:1> line:10:1 d 'void (void)'
+  `-CompoundStmt 0x7fbc2f86eea0 <line:11:1, line:14:1>
+    |-CallExpr 0x7fbc2f86ee10 <line:12:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7fbc2f86edf8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbc2f86edd0 <col:3> 'void (void)' Function 0x7fbc2f86e9d8 'b' 'void (void)'
+    `-CallExpr 0x7fbc2f86ee78 <line:13:3, col:6> 'void'
+      `-ImplicitCastExpr 0x7fbc2f86ee60 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fbc2f86ee38 <col:3> 'void (void)' Function 0x7fbc2f86eb08 'c' 'void (void)'

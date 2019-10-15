@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7fb84102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb84106d850 <../Data/C2AST/pr58554.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb84106d8f0 prev 0x7fb84106d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb84106db20 <line:4:1, line:11:1> line:5:1 used clear_board 'void (unsigned char *, int)'
+| |-ParmVarDecl 0x7fb84106d9d0 <col:13, col:28> col:28 used board 'unsigned char *'
+| |-ParmVarDecl 0x7fb84106da48 <col:35, col:39> col:39 used board_size 'int'
+| |-CompoundStmt 0x7fb84106e048 <line:6:1, line:11:1>
+| | |-DeclStmt 0x7fb84106dcd0 <line:7:3, col:8>
+| | | `-VarDecl 0x7fb84106dc70 <col:3, col:7> col:7 used k 'int'
+| | `-ForStmt 0x7fb84106e010 <line:8:3, line:10:18>
+| |   |-BinaryOperator 0x7fb84106dd30 <line:8:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7fb84106dce8 <col:8> 'int' lvalue Var 0x7fb84106dc70 'k' 'int'
+| |   | `-IntegerLiteral 0x7fb84106dd10 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fb84106ddb8 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fb84106dda0 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fb84106dd58 <col:15> 'int' lvalue Var 0x7fb84106dc70 'k' 'int'
+| |   | `-IntegerLiteral 0x7fb84106dd80 <col:19> 'int' 421
+| |   |-UnaryOperator 0x7fb84106de08 <col:24, col:25> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7fb84106dde0 <col:24> 'int' lvalue Var 0x7fb84106dc70 'k' 'int'
+| |   `-IfStmt 0x7fb84106dfd8 <line:9:5, line:10:18>
+| |     |-<<<NULL>>>
+| |     |-<<<NULL>>>
+| |     |-BinaryOperator 0x7fb84106dea8 <line:9:9, col:13> 'int' '<'
+| |     | |-ImplicitCastExpr 0x7fb84106de78 <col:9> 'int' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7fb84106de28 <col:9> 'int' lvalue Var 0x7fb84106dc70 'k' 'int'
+| |     | `-ImplicitCastExpr 0x7fb84106de90 <col:13> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7fb84106de50 <col:13> 'int' lvalue ParmVar 0x7fb84106da48 'board_size' 'int'
+| |     |-BinaryOperator 0x7fb84106dfb0 <line:10:7, col:18> 'unsigned char' '='
+| |     | |-ArraySubscriptExpr 0x7fb84106df50 <col:7, col:14> 'unsigned char' lvalue
+| |     | | |-ImplicitCastExpr 0x7fb84106df20 <col:7> 'unsigned char *' <LValueToRValue>
+| |     | | | `-DeclRefExpr 0x7fb84106ded0 <col:7> 'unsigned char *' lvalue ParmVar 0x7fb84106d9d0 'board' 'unsigned char *'
+| |     | | `-ImplicitCastExpr 0x7fb84106df38 <col:13> 'int' <LValueToRValue>
+| |     | |   `-DeclRefExpr 0x7fb84106def8 <col:13> 'int' lvalue Var 0x7fb84106dc70 'k' 'int'
+| |     | `-ImplicitCastExpr 0x7fb84106df98 <col:18> 'unsigned char' <IntegralCast>
+| |     |   `-IntegerLiteral 0x7fb84106df78 <col:18> 'int' 3
+| |     `-<<<NULL>>>
+| `-NoInlineAttr 0x7fb84106dbd0 <line:4:21>
+`-FunctionDecl 0x7fb84106e0c0 <line:12:1, line:20:1> line:12:5 main 'int ()'
+  `-CompoundStmt 0x7fb84106e648 <line:13:1, line:20:1>
+    |-DeclStmt 0x7fb84106e240 <line:14:3, col:27>
+    | `-VarDecl 0x7fb84106e1e0 <col:3, col:26> col:17 used board 'unsigned char [421]'
+    |-BinaryOperator 0x7fb84106e318 <line:15:3, col:16> 'unsigned char' '='
+    | |-ArraySubscriptExpr 0x7fb84106e2b8 <col:3, col:12> 'unsigned char' lvalue
+    | | |-ImplicitCastExpr 0x7fb84106e2a0 <col:3> 'unsigned char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb84106e258 <col:3> 'unsigned char [421]' lvalue Var 0x7fb84106e1e0 'board' 'unsigned char [421]'
+    | | `-IntegerLiteral 0x7fb84106e280 <col:9> 'int' 420
+    | `-ImplicitCastExpr 0x7fb84106e300 <col:16> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fb84106e2e0 <col:16> 'int' 1
+    |-CallExpr 0x7fb84106e3f0 <line:16:3, col:26> 'void'
+    | |-ImplicitCastExpr 0x7fb84106e3d8 <col:3> 'void (*)(unsigned char *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb84106e340 <col:3> 'void (unsigned char *, int)' Function 0x7fb84106db20 'clear_board' 'void (unsigned char *, int)'
+    | |-ImplicitCastExpr 0x7fb84106e428 <col:16> 'unsigned char *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7fb84106e368 <col:16> 'unsigned char [421]' lvalue Var 0x7fb84106e1e0 'board' 'unsigned char [421]'
+    | `-IntegerLiteral 0x7fb84106e390 <col:23> 'int' 420
+    |-IfStmt 0x7fb84106e5d8 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb84106e518 <line:17:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb84106e500 <col:7, col:16> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fb84106e4e8 <col:7, col:16> 'unsigned char' <LValueToRValue>
+    | | |   `-ArraySubscriptExpr 0x7fb84106e4a0 <col:7, col:16> 'unsigned char' lvalue
+    | | |     |-ImplicitCastExpr 0x7fb84106e488 <col:7> 'unsigned char *' <ArrayToPointerDecay>
+    | | |     | `-DeclRefExpr 0x7fb84106e440 <col:7> 'unsigned char [421]' lvalue Var 0x7fb84106e1e0 'board' 'unsigned char [421]'
+    | | |     `-IntegerLiteral 0x7fb84106e468 <col:13> 'int' 420
+    | | `-IntegerLiteral 0x7fb84106e4c8 <col:21> 'int' 1
+    | |-CallExpr 0x7fb84106e5b0 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb84106e598 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb84106e540 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb84106d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb84106e630 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fb84106e610 <col:10> 'int' 0

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f9b770200e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9b77061c68 <../Data/C2AST/pr66221_1.c:1:1, line:4:1> line:1:5 test1 'int (const char *)'
+  |-ParmVarDecl 0x7f9b77020d78 <col:12, col:24> col:24 used p 'const char *'
+  `-CompoundStmt 0x7f9b77061e70 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7f9b77061e58 <line:3:3, col:18>
+      `-CStyleCastExpr 0x7f9b77061e30 <col:10, col:18> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f9b77061e18 <col:15, col:18> 'char' <LValueToRValue>
+          `-ParenExpr 0x7f9b77061df8 <col:15, col:18> 'const char' lvalue
+            `-UnaryOperator 0x7f9b77061d90 <col:16, col:17> 'const char' lvalue prefix '*'
+              `-ImplicitCastExpr 0x7f9b77061d78 <col:17> 'const char *' <LValueToRValue>
+                `-DeclRefExpr 0x7f9b77061d50 <col:17> 'const char *' lvalue ParmVar 0x7f9b77020d78 'p' 'const char *'

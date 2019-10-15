@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fc8a802bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc8a802c960 <../Data/C2AST/pr15443-2.c:3:1, line:5:1> line:3:8 struct foo definition
+| `-FieldDecl 0x7fc8a806d838 <line:4:2, col:6> col:6 bar 'int'
+|-TypedefDecl 0x7fc8a806d930 <line:7:1, col:21> col:21 referenced bar 'struct foo *'
+| `-PointerType 0x7fc8a806d8e0 'struct foo *'
+|   `-ElaboratedType 0x7fc8a806d880 'struct foo' sugar
+|     `-RecordType 0x7fc8a806d800 'struct foo'
+|       `-Record 0x7fc8a802c960 'foo'
+|-FunctionDecl 0x7fc8a806d9d8 <line:8:1, col:38> col:6 f 'void ()'
+|-FunctionDecl 0x7fc8a806db10 <line:9:1, col:37> col:5 g 'int ()'
+|-FunctionDecl 0x7fc8a806dc30 <line:10:1, col:38> col:6 h 'int *()'
+| `-RestrictAttr 0x7fc8a806dcd0 <col:27> malloc
+|-FunctionDecl 0x7fc8a806dd70 <line:11:1, col:39> col:7 i 'void *()'
+| `-RestrictAttr 0x7fc8a806de10 <col:28> malloc
+|-FunctionDecl 0x7fc8a806dee8 <line:13:1, col:44> col:12 j 'struct foo ()'
+|-FunctionDecl 0x7fc8a806e020 <line:14:1, col:45> col:13 k 'struct foo *()'
+| `-RestrictAttr 0x7fc8a806e0c0 <col:34> malloc
+`-FunctionDecl 0x7fc8a806e178 <line:15:1, col:32> col:5 l 'bar ()'
+  `-RestrictAttr 0x7fc8a806e218 <col:25> malloc

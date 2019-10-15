@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fac058250e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fac05825d78 <../Data/C2AST/pr52045.c:4:1, col:7> col:7 used vx 'char *'
+|-VarDecl 0x7fac05866cb8 <line:5:1, col:12> col:6 used buf 'char [20]'
+|-FunctionDecl 0x7fac05866de0 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+| `-CompoundStmt 0x7fac058674f8 <line:9:1, line:11:1>
+|   `-BinaryOperator 0x7fac058674d0 <line:10:3, col:65> 'char *' '='
+|     |-DeclRefExpr 0x7fac05866e80 <col:3> 'char *' lvalue Var 0x7fac05825d78 'vx' 'char *'
+|     `-CallExpr 0x7fac05867460 <col:8, col:65> 'char *'
+|       |-ImplicitCastExpr 0x7fac05867448 <col:8> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fac05867118 <col:8> '<builtin fn type>' Function 0x7fac05866ef8 '__builtin___stpcpy_chk' 'char *(char *, const char *, unsigned long)'
+|       |-ImplicitCastExpr 0x7fac058674a0 <col:32> 'char *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7fac05867140 <col:32> 'char [20]' lvalue Var 0x7fac05866cb8 'buf' 'char [20]'
+|       |-ImplicitCastExpr 0x7fac058674b8 <col:37, col:49> 'const char *' <BitCast>
+|       | `-ConditionalOperator 0x7fac05867370 <col:37, col:49> 'char *'
+|       |   |-ImplicitCastExpr 0x7fac05867268 <col:37> 'char *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fac05867168 <col:37> 'char *' lvalue Var 0x7fac05825d78 'vx' 'char *'
+|       |   |-ImplicitCastExpr 0x7fac05867280 <col:42> 'char *' <ArrayToPointerDecay>
+|       |   | `-StringLiteral 0x7fac058671c8 <col:42> 'char [3]' lvalue "gh"
+|       |   `-ImplicitCastExpr 0x7fac05867298 <col:49> 'char *' <ArrayToPointerDecay>
+|       |     `-StringLiteral 0x7fac05867238 <col:49> 'char [2]' lvalue "e"
+|       `-UnaryExprOrTypeTraitExpr 0x7fac058673e8 <col:54, col:64> 'unsigned long' sizeof
+|         `-ParenExpr 0x7fac058673c8 <col:60, col:64> 'char [20]' lvalue
+|           `-DeclRefExpr 0x7fac058673a0 <col:61> 'char [20]' lvalue Var 0x7fac05866cb8 'buf' 'char [20]'
+`-FunctionDecl 0x7fac05866ef8 <col:8> col:8 implicit used __builtin___stpcpy_chk 'char *(char *, const char *, unsigned long)' extern
+  |-ParmVarDecl 0x7fac05866f98 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7fac05866ff8 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-ParmVarDecl 0x7fac05867058 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fac058670d0 <col:8> Implicit

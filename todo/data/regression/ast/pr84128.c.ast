@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7ff2648078e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff264031b98 <../Data/C2AST/pr84128.c:5:1, line:11:1> line:7:1 used f1 'int (long, int (*)(long, void *)) __attribute__((regparm (3)))'
+| |-ParmVarDecl 0x7ff264808598 <col:5, col:10> col:10 used arg0 'long'
+| |-ParmVarDecl 0x7ff264031a00 <col:16, col:39> col:22 used pf 'int (*)(long, void *)'
+| |-CompoundStmt 0x7ff264031f50 <line:8:1, line:11:1>
+| | |-DeclStmt 0x7ff264031de0 <line:9:3, col:27>
+| | | `-VarDecl 0x7ff264031d80 <col:3, col:26> col:17 used buf 'unsigned char [32768]'
+| | `-ReturnStmt 0x7ff264031f38 <line:10:3, col:23>
+| |   `-CallExpr 0x7ff264031e88 <col:10, col:23> 'int'
+| |     |-ImplicitCastExpr 0x7ff264031e70 <col:10> 'int (*)(long, void *)' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ff264031df8 <col:10> 'int (*)(long, void *)' lvalue ParmVar 0x7ff264031a00 'pf' 'int (*)(long, void *)'
+| |     |-ImplicitCastExpr 0x7ff264031ec0 <col:14> 'long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ff264031e20 <col:14> 'long' lvalue ParmVar 0x7ff264808598 'arg0' 'long'
+| |     `-ImplicitCastExpr 0x7ff264031f20 <col:20> 'void *' <BitCast>
+| |       `-ImplicitCastExpr 0x7ff264031f08 <col:20> 'unsigned char *' <ArrayToPointerDecay>
+| |         `-DeclRefExpr 0x7ff264031e48 <col:20> 'unsigned char [32768]' lvalue Var 0x7ff264031d80 'buf' 'unsigned char [32768]'
+| |-WeakAttr 0x7ff264031c48 <line:5:36>
+| |-NoInlineAttr 0x7ff264031c90 <col:17>
+| |-WeakAttr 0x7ff264031ca0 <col:36>
+| `-NoInlineAttr 0x7ff264031cb0 <col:17>
+|-FunctionDecl 0x7ff264032098 <line:13:1, line:20:1> line:15:1 used f2 'int (long, void *)'
+| |-ParmVarDecl 0x7ff264031f88 <col:5, col:10> col:10 used arg0 'long'
+| |-ParmVarDecl 0x7ff264032000 <col:16, col:22> col:22 ignored 'void *'
+| |-CompoundStmt 0x7ff264032458 <line:16:1, line:20:1>
+| | |-IfStmt 0x7ff2640323e8 <line:17:3, line:18:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ff264032218 <line:17:7, col:15> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7ff2640321e8 <col:7> 'long' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7ff2640321a0 <col:7> 'long' lvalue ParmVar 0x7ff264031f88 'arg0' 'long'
+| | | | `-ImplicitCastExpr 0x7ff264032200 <col:15> 'long' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7ff2640321c8 <col:15> 'int' 17
+| | | |-CallExpr 0x7ff2640323c0 <line:18:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7ff2640323a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7ff264032358 <col:5> '<builtin fn type>' Function 0x7ff264032270 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7ff264032440 <line:19:3, col:10>
+| |   `-IntegerLiteral 0x7ff264032420 <col:10> 'int' 19
+| |-WeakAttr 0x7ff264032148 <line:13:36>
+| `-NoInlineAttr 0x7ff264032190 <col:17>
+|-FunctionDecl 0x7ff264032270 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ff264032310 <col:5> Implicit
+`-FunctionDecl 0x7ff264032548 <line:22:1, line:28:1> line:23:1 main 'int (void)'
+  `-CompoundStmt 0x7ff265003498 <line:24:1, line:28:1>
+    |-IfStmt 0x7ff265003428 <line:25:3, line:26:22>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff264032788 <line:25:7, col:22> 'int' '!='
+    | | |-CallExpr 0x7ff264032700 <col:7, col:17> 'int'
+    | | | |-ImplicitCastExpr 0x7ff2640326e8 <col:7> 'int (*)(long, int (*)(long, void *)) __attribute__((regparm (3)))' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ff264032618 <col:7> 'int (long, int (*)(long, void *)) __attribute__((regparm (3)))' Function 0x7ff264031b98 'f1' 'int (long, int (*)(long, void *)) __attribute__((regparm (3)))'
+    | | | |-ImplicitCastExpr 0x7ff264032738 <col:11> 'long' <IntegralCast>
+    | | | | `-IntegerLiteral 0x7ff264032640 <col:11> 'int' 17
+    | | | `-ImplicitCastExpr 0x7ff264032750 <col:15> 'int (*)(long, void *)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7ff264032660 <col:15> 'int (long, void *)' Function 0x7ff264032098 'f2' 'int (long, void *)'
+    | | `-IntegerLiteral 0x7ff264032768 <col:22> 'int' 19
+    | |-CallExpr 0x7ff265003400 <line:26:5, col:22> 'void'
+    | | `-ImplicitCastExpr 0x7ff2640327d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7ff2640327b0 <col:5> '<builtin fn type>' Function 0x7ff264032270 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff265003480 <line:27:3, col:10>
+      `-IntegerLiteral 0x7ff265003460 <col:10> 'int' 0

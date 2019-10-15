@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fd26a0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd26a815228 <../Data/C2AST/pr68648.c:2:1, line:6:1> line:3:1 used foo 'int (void)'
+| |-CompoundStmt 0x7fd26a815388 <line:4:1, line:6:1>
+| | `-ReturnStmt 0x7fd26a815370 <line:5:3, col:10>
+| |   `-IntegerLiteral 0x7fd26a815350 <col:10> 'int' 123
+| `-NoInlineAttr 0x7fd26a8152c8 <line:2:21>
+|-FunctionDecl 0x7fd26a815438 <line:8:1, line:14:1> line:9:1 used bar 'int (void)'
+| |-CompoundStmt 0x7fd26a8157e0 <line:10:1, line:14:1>
+| | |-DeclStmt 0x7fd26a8155b8 <line:11:3, col:12>
+| | | `-VarDecl 0x7fd26a815538 <col:3, col:11> col:7 used c 'int' cinit
+| | |   `-IntegerLiteral 0x7fd26a815598 <col:11> 'int' 1
+| | |-CompoundAssignOperator 0x7fd26a815750 <line:12:3, col:44> 'int' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+| | | |-DeclRefExpr 0x7fd26a8155d0 <col:3> 'int' lvalue Var 0x7fd26a815538 'c' 'int'
+| | | `-BinaryOperator 0x7fd26a815728 <col:8, col:44> 'long' '^'
+| | |   |-IntegerLiteral 0x7fd26a8155f8 <col:8> 'long' 4294967295
+| | |   `-ParenExpr 0x7fd26a815708 <col:21, col:44> 'long'
+| | |     `-BinaryOperator 0x7fd26a8156e0 <col:22, col:31> 'long' '|'
+| | |       |-ImplicitCastExpr 0x7fd26a8156c8 <col:22, col:27> 'long' <IntegralCast>
+| | |       | `-CallExpr 0x7fd26a815680 <col:22, col:27> 'int'
+| | |       |   `-ImplicitCastExpr 0x7fd26a815668 <col:22> 'int (*)(void)' <FunctionToPointerDecay>
+| | |       |     `-DeclRefExpr 0x7fd26a815618 <col:22> 'int (void)' Function 0x7fd26a815228 'foo' 'int (void)'
+| | |       `-IntegerLiteral 0x7fd26a8156a8 <col:31> 'long' 4073709551608
+| | `-ReturnStmt 0x7fd26a8157c8 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fd26a8157b0 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd26a815788 <col:10> 'int' lvalue Var 0x7fd26a815538 'c' 'int'
+| `-NoInlineAttr 0x7fd26a8154d8 <line:8:21>
+|-FunctionDecl 0x7fd26a815860 <line:16:1, line:21:1> line:17:1 main 'int ()'
+| `-CompoundStmt 0x7fd26a815bb0 <line:18:1, line:21:1>
+|   `-IfStmt 0x7fd26a815b78 <line:19:3, line:20:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd26a8159a0 <line:19:7, col:17> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fd26a815988 <col:7, col:12> 'unsigned int' <IntegralCast>
+|     | | `-CallExpr 0x7fd26a815940 <col:7, col:12> 'int'
+|     | |   `-ImplicitCastExpr 0x7fd26a815928 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|     | |     `-DeclRefExpr 0x7fd26a815900 <col:7> 'int (void)' Function 0x7fd26a815438 'bar' 'int (void)'
+|     | `-IntegerLiteral 0x7fd26a815968 <col:17> 'unsigned int' 2214412293
+|     |-CallExpr 0x7fd26a815b50 <line:20:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fd26a815b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fd26a815ae8 <col:5> '<builtin fn type>' Function 0x7fd26a815a00 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd26a815a00 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fd26a815aa0 <col:5> Implicit

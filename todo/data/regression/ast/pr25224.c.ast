@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fb4a382bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb4a382c978 <../Data/C2AST/pr25224.c:5:1, col:14> col:14 used rgam 'float' static
+|-FunctionDecl 0x7fb4a386d928 <line:6:1, col:24> col:14 used jmp 'void *(void *)' extern
+| `-ParmVarDecl 0x7fb4a386d858 <col:18, col:23> col:24 'void *'
+`-FunctionDecl 0x7fb4a386dab0 <line:8:1, line:23:1> line:8:6 drotmg 'void (float)'
+  |-ParmVarDecl 0x7fb4a386d9e8 <col:13, col:19> col:19 used d1 'float'
+  `-CompoundStmt 0x7fb4a386e250 <col:23, line:23:1>
+    |-DeclStmt 0x7fb4a386de28 <line:9:1, col:39>
+    | `-VarDecl 0x7fb4a386dbb0 <col:1, col:38> col:7 used labels 'void *[3]' cinit
+    |   `-InitListExpr 0x7fb4a386dd58 <col:18, col:38> 'void *[3]'
+    |     |-AddrLabelExpr 0x7fb4a386dc58 <col:20, col:22> 'void *' L170 0x7fb4a386dc10
+    |     |-AddrLabelExpr 0x7fb4a386dcc0 <col:28, col:30> 'void *' L180 0x7fb4a386dc78
+    |     `-ImplicitCastExpr 0x7fb4a386ddb0 <col:36> 'void *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fb4a386dce0 <col:36> 'int' 0
+    |-ForStmt 0x7fb4a386e1e8 <line:11:3, line:19:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7fb4a386e1c0 <line:11:11, line:19:3>
+    |   |-IndirectGotoStmt 0x7fb4a386dfa0 <line:12:5, col:21>
+    |   | `-ImplicitCastExpr 0x7fb4a386df88 <col:11, col:21> 'const void *' <BitCast>
+    |   |   `-CallExpr 0x7fb4a386ded0 <col:11, col:21> 'void *'
+    |   |     |-ImplicitCastExpr 0x7fb4a386deb8 <col:11> 'void *(*)(void *)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fb4a386de40 <col:11> 'void *(void *)' Function 0x7fb4a386d928 'jmp' 'void *(void *)'
+    |   |     `-ImplicitCastExpr 0x7fb4a386df40 <col:15> 'void *' <BitCast>
+    |   |       `-ImplicitCastExpr 0x7fb4a386df28 <col:15> 'void **' <ArrayToPointerDecay>
+    |   |         `-DeclRefExpr 0x7fb4a386de68 <col:15> 'void *[3]' lvalue Var 0x7fb4a386dbb0 'labels' 'void *[3]'
+    |   |-IfStmt 0x7fb4a386e078 <line:13:5, line:14:12>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fb4a386e038 <line:13:9, col:15> 'int' '<='
+    |   | | |-ImplicitCastExpr 0x7fb4a386e008 <col:9> 'float' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fb4a386dfb8 <col:9> 'float' lvalue ParmVar 0x7fb4a386d9e8 'd1' 'float'
+    |   | | `-ImplicitCastExpr 0x7fb4a386e020 <col:15> 'float' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fb4a386dfe0 <col:15> 'float' lvalue Var 0x7fb4a382c978 'rgam' 'float'
+    |   | |-GotoStmt 0x7fb4a386e060 <line:14:7, col:12> 'L170' 0x7fb4a386dc10
+    |   | `-<<<NULL>>>
+    |   `-LabelStmt 0x7fb4a386e1a8 <line:16:1, line:18:12> 'L170'
+    |     `-IfStmt 0x7fb4a386e170 <line:17:5, line:18:12>
+    |       |-<<<NULL>>>
+    |       |-<<<NULL>>>
+    |       |-BinaryOperator 0x7fb4a386e130 <line:17:9, col:15> 'int' '<='
+    |       | |-ImplicitCastExpr 0x7fb4a386e100 <col:9> 'float' <LValueToRValue>
+    |       | | `-DeclRefExpr 0x7fb4a386e0b0 <col:9> 'float' lvalue ParmVar 0x7fb4a386d9e8 'd1' 'float'
+    |       | `-ImplicitCastExpr 0x7fb4a386e118 <col:15> 'float' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fb4a386e0d8 <col:15> 'float' lvalue Var 0x7fb4a382c978 'rgam' 'float'
+    |       |-GotoStmt 0x7fb4a386e158 <line:18:7, col:12> 'L170' 0x7fb4a386dc10
+    |       `-<<<NULL>>>
+    `-LabelStmt 0x7fb4a386e238 <line:21:1, line:22:8> 'L180'
+      `-GotoStmt 0x7fb4a386e220 <col:3, col:8> 'L170' 0x7fb4a386dc10

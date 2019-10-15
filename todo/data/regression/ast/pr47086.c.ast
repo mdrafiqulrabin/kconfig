@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fe7400126e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe73e816000 <../Data/C2AST/pr47086.c:4:1, line:13:1> line:5:1 foo 'void ()'
+  `-CompoundStmt 0x7fe73e8163a0 <line:6:1, line:13:1>
+    |-DeclStmt 0x7fe73e816178 <line:7:3, col:12>
+    | `-VarDecl 0x7fe73e8160f8 <col:3, col:11> col:7 used n 'int' cinit
+    |   `-IntegerLiteral 0x7fe73e816158 <col:11> 'int' 0
+    `-WhileStmt 0x7fe73e816380 <line:8:3, line:12:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fe73e816190 <line:8:10> 'int' 1
+      `-CompoundStmt 0x7fe73e816360 <line:9:5, line:12:5>
+        |-DeclStmt 0x7fe73e816300 <line:10:7, col:19>
+        | `-VarDecl 0x7fe73e8162a0 <col:7, col:18> col:11 i 'int [n % 1]'
+        `-UnaryOperator 0x7fe73e816340 <line:11:7, col:8> 'int' postfix '++'
+          `-DeclRefExpr 0x7fe73e816318 <col:7> 'int' lvalue Var 0x7fe73e8160f8 'n' 'int'

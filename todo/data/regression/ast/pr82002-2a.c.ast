@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fa323028ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa322818eb0 <../Data/C2AST/pr82002-2a.c:4:1, col:41> col:32 used a 'void (char *) __attribute__((sysv_abi))':'void (char *)'
+| `-ParmVarDecl 0x7fa323029b78 <col:35, col:40> col:41 'char *'
+`-FunctionDecl 0x7fa322818fe8 <line:5:1, line:12:1> line:6:1 b 'void ()'
+  `-CompoundStmt 0x7fa322819418 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fa322819168 <line:8:3, col:22>
+    | `-VarDecl 0x7fa322819108 <col:3, col:21> col:8 used c 'char [10000000000]'
+    |-BinaryOperator 0x7fa322819238 <line:9:3, col:22> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa3228191e0 <col:3, col:18> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa3228191c8 <col:3> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa322819180 <col:3> 'char [10000000000]' lvalue Var 0x7fa322819108 'c' 'char [10000000000]'
+    | | `-IntegerLiteral 0x7fa3228191a8 <col:5> 'long' 1099511627776
+    | `-ImplicitCastExpr 0x7fa322819220 <col:22> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7fa322819208 <col:22> 'int' 98
+    |-CallExpr 0x7fa322819320 <line:10:3, col:7> 'void'
+    | |-ImplicitCastExpr 0x7fa322819308 <col:3> 'void (*)(char *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa322819260 <col:3> 'void (char *) __attribute__((sysv_abi))':'void (char *)' Function 0x7fa322818eb0 'a' 'void (char *) __attribute__((sysv_abi))':'void (char *)'
+    | `-ImplicitCastExpr 0x7fa322819350 <col:6> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fa322819288 <col:6> 'char [10000000000]' lvalue Var 0x7fa322819108 'c' 'char [10000000000]'
+    `-CallExpr 0x7fa3228193d0 <line:11:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7fa3228193b8 <col:3> 'void (*)(char *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa322819368 <col:3> 'void (char *) __attribute__((sysv_abi))':'void (char *)' Function 0x7fa322818eb0 'a' 'void (char *) __attribute__((sysv_abi))':'void (char *)'
+      `-ImplicitCastExpr 0x7fa322819400 <col:6> 'char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fa322819390 <col:6> 'char [10000000000]' lvalue Var 0x7fa322819108 'c' 'char [10000000000]'

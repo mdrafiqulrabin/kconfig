@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fbe6f02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbe6f814268 <../Data/C2AST/pr64344-1.c:5:1, line:9:1> line:6:1 foo 'int (float)'
+| |-ParmVarDecl 0x7fbe6f02c978 <col:6, col:12> col:12 used x 'float'
+| `-CompoundStmt 0x7fbe6f814630 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fbe6f814618 <line:8:3, col:36>
+|     `-ImplicitCastExpr 0x7fbe6f814600 <col:10, col:36> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7fbe6f8145d0 <col:10, col:36> 'double'
+|         |-ImplicitCastExpr 0x7fbe6f8145b8 <col:10> 'double (*)(double)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fbe6f8144e8 <col:10> '<builtin fn type>' Function 0x7fbe6f814388 '__builtin_log' 'double (double)'
+|         `-CStyleCastExpr 0x7fbe6f814568 <col:25, col:35> 'double' <FloatingCast>
+|           `-ImplicitCastExpr 0x7fbe6f814550 <col:35> 'float' <LValueToRValue>
+|             `-DeclRefExpr 0x7fbe6f814510 <col:35> 'float' lvalue ParmVar 0x7fbe6f02c978 'x' 'float'
+`-FunctionDecl 0x7fbe6f814388 <col:10> col:10 implicit used __builtin_log 'double (double)' extern
+  |-ParmVarDecl 0x7fbe6f814428 <<invalid sloc>> <invalid sloc> 'double'
+  |-ConstAttr 0x7fbe6f814490 <col:10> Implicit
+  `-NoThrowAttr 0x7fbe6f8144d8 <col:10> Implicit

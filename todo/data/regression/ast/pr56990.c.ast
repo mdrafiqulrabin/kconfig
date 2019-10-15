@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7ffdb40166e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffdb4017360 <../Data/C2AST/pr56990.c:5:1, col:10> col:8 struct S definition
+`-FunctionDecl 0x7ffdb40583d0 <line:7:1, line:10:1> line:7:6 foo 'void (struct S *)'
+  |-ParmVarDecl 0x7ffdb40582d0 <col:10, col:20> col:20 used p 'struct S *'
+  `-CompoundStmt 0x7ffdb4058620 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7ffdb40585f8 <line:9:3, col:19> 'struct S':'struct S' '='
+      |-UnaryOperator 0x7ffdb40584f8 <col:3, col:4> 'struct S':'struct S' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7ffdb40584e0 <col:4> 'struct S *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffdb40584b8 <col:4> 'struct S *' lvalue ParmVar 0x7ffdb40582d0 'p' 'struct S *'
+      `-ImplicitCastExpr 0x7ffdb40585e0 <col:8, col:19> 'struct S':'struct S' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7ffdb40585b8 <col:8, col:19> 'struct S':'struct S' lvalue
+          `-InitListExpr 0x7ffdb4058578 <col:18, col:19> 'struct S':'struct S'

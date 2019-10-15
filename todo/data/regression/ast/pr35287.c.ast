@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f7f2e829ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f7f2e82a9a0 <../Data/C2AST/pr35287.c:3:1, col:6> col:6 used gp 'int *'
+`-FunctionDecl 0x7f7f2e86b928 <line:4:1, line:11:1> line:4:5 foo 'int (int)'
+  |-ParmVarDecl 0x7f7f2e86b858 <col:9, col:13> col:13 used p 'int'
+  `-CompoundStmt 0x7f7f2e86bd20 <line:5:1, line:11:1>
+    |-DeclStmt 0x7f7f2e86ba68 <line:6:3, col:12>
+    | `-VarDecl 0x7f7f2e86b9e8 <col:3, col:11> col:7 used t 'int' cinit
+    |   `-IntegerLiteral 0x7f7f2e86ba48 <col:11> 'int' 0
+    |-IfStmt 0x7f7f2e86bbd0 <line:7:3, line:8:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f7f2e86baa8 <line:7:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f7f2e86ba80 <col:7> 'int' lvalue ParmVar 0x7f7f2e86b858 'p' 'int'
+    | |-BinaryOperator 0x7f7f2e86bba8 <line:8:5, col:15> 'int' '='
+    | | |-DeclRefExpr 0x7f7f2e86bac0 <col:5> 'int' lvalue Var 0x7f7f2e86b9e8 't' 'int'
+    | | `-BinaryOperator 0x7f7f2e86bb80 <col:9, col:15> 'int' '+'
+    | |   |-ImplicitCastExpr 0x7f7f2e86bb68 <col:9, col:10> 'int' <LValueToRValue>
+    | |   | `-UnaryOperator 0x7f7f2e86bb28 <col:9, col:10> 'int' lvalue prefix '*'
+    | |   |   `-ImplicitCastExpr 0x7f7f2e86bb10 <col:10> 'int *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7f7f2e86bae8 <col:10> 'int *' lvalue Var 0x7f7f2e82a9a0 'gp' 'int *'
+    | |   `-IntegerLiteral 0x7f7f2e86bb48 <col:15> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f7f2e86bd08 <line:10:3, col:18>
+      `-ParenExpr 0x7f7f2e86bce8 <col:10, col:18> 'int'
+        `-BinaryOperator 0x7f7f2e86bcc0 <col:11, col:17> 'int' '+'
+          |-ImplicitCastExpr 0x7f7f2e86bc90 <col:11, col:12> 'int' <LValueToRValue>
+          | `-UnaryOperator 0x7f7f2e86bc48 <col:11, col:12> 'int' lvalue prefix '*'
+          |   `-ImplicitCastExpr 0x7f7f2e86bc30 <col:12> 'int *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f7f2e86bc08 <col:12> 'int *' lvalue Var 0x7f7f2e82a9a0 'gp' 'int *'
+          `-ImplicitCastExpr 0x7f7f2e86bca8 <col:17> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7f7f2e86bc68 <col:17> 'int' lvalue Var 0x7f7f2e86b9e8 't' 'int'

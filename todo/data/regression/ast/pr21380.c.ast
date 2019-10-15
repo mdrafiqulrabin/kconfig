@@ -1,0 +1,143 @@
+TranslationUnitDecl 0x7f9b1a01a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9b1a05c420 <../Data/C2AST/pr21380.c:1:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7f9b1a05c600 <line:3:1, line:42:1> line:4:1 foo 'void (int *)'
+  |-ParmVarDecl 0x7f9b1a05c540 <col:6, col:11> col:11 used diff 'int *'
+  `-CompoundStmt 0x7f9b1a05d968 <line:5:1, line:42:1>
+    |-DeclStmt 0x7f9b1a05c740 <line:6:3, col:22>
+    | `-VarDecl 0x7f9b1a05c6c0 <col:3, col:19> col:10 used deltay 'double' cinit
+    |   `-FloatingLiteral 0x7f9b1a05c720 <col:19> 'double' 0.000000e+00
+    |-DeclStmt 0x7f9b1a05c7f0 <line:7:3, col:19>
+    | `-VarDecl 0x7f9b1a05c770 <col:3, col:18> col:7 used Stangent 'int' cinit
+    |   `-IntegerLiteral 0x7f9b1a05c7d0 <col:18> 'int' 0
+    |-DeclStmt 0x7f9b1a05c880 <line:8:3, col:14>
+    | `-VarDecl 0x7f9b1a05c820 <col:3, col:7> col:7 used mindiff 'int'
+    |-DeclStmt 0x7f9b1a05c930 <line:9:3, col:19>
+    | `-VarDecl 0x7f9b1a05c8b0 <col:3, col:18> col:7 used Sflipped 'int' cinit
+    |   `-IntegerLiteral 0x7f9b1a05c910 <col:18> 'int' 0
+    |-DeclStmt 0x7f9b1a05c9c0 <line:10:3, col:8>
+    | `-VarDecl 0x7f9b1a05c960 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7f9b1a05cae0 <line:11:3, col:20>
+    | |-VarDecl 0x7f9b1a05c9f0 <col:3, col:7> col:7 used Sturn 'int'
+    | `-VarDecl 0x7f9b1a05ca68 <col:3, col:14> col:14 used Snofit 'int'
+    |-BinaryOperator 0x7f9b1a05cb40 <line:13:3, col:11> 'int' '='
+    | |-DeclRefExpr 0x7f9b1a05caf8 <col:3> 'int' lvalue Var 0x7f9b1a05c9f0 'Sturn' 'int'
+    | `-IntegerLiteral 0x7f9b1a05cb20 <col:11> 'int' 1
+    |-IfStmt 0x7f9b1a05cc18 <line:14:3, line:15:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f9b1a05cb90 <line:14:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9b1a05cb68 <col:7> 'int' lvalue Var 0x7f9b1a05c9f0 'Sturn' 'int'
+    | |-BinaryOperator 0x7f9b1a05cbf0 <line:15:5, col:16> 'int' '='
+    | | |-DeclRefExpr 0x7f9b1a05cba8 <col:5> 'int' lvalue Var 0x7f9b1a05c770 'Stangent' 'int'
+    | | `-IntegerLiteral 0x7f9b1a05cbd0 <col:16> 'int' 1
+    | `-<<<NULL>>>
+    `-IfStmt 0x7f9b1a05d930 <line:16:3, line:41:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f9b1a05cc78 <line:16:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9b1a05cc50 <col:7> 'int' lvalue Var 0x7f9b1a05c9f0 'Sturn' 'int'
+      |-CompoundStmt 0x7f9b1a05d900 <line:17:5, line:41:5>
+      | |-BinaryOperator 0x7f9b1a05ccd8 <line:18:7, col:18> 'int' '='
+      | | |-DeclRefExpr 0x7f9b1a05cc90 <col:7> 'int' lvalue Var 0x7f9b1a05c8b0 'Sflipped' 'int'
+      | | `-IntegerLiteral 0x7f9b1a05ccb8 <col:18> 'int' 0
+      | |-BinaryOperator 0x7f9b1a05cd48 <line:19:7, col:16> 'int' '='
+      | | |-DeclRefExpr 0x7f9b1a05cd00 <col:7> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      | | `-IntegerLiteral 0x7f9b1a05cd28 <col:16> 'int' 1
+      | |-WhileStmt 0x7f9b1a05d7d0 <line:20:7, line:38:9>
+      | | |-<<<NULL>>>
+      | | |-ImplicitCastExpr 0x7f9b1a05cd98 <line:20:14> 'int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7f9b1a05cd70 <col:14> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      | | `-CompoundStmt 0x7f9b1a05d798 <line:21:9, line:38:9>
+      | |   |-BinaryOperator 0x7f9b1a05cdf8 <line:22:11, col:20> 'int' '='
+      | |   | |-DeclRefExpr 0x7f9b1a05cdb0 <col:11> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      | |   | `-IntegerLiteral 0x7f9b1a05cdd8 <col:20> 'int' 0
+      | |   |-BinaryOperator 0x7f9b1a05ce68 <line:23:11, col:21> 'int' '='
+      | |   | |-DeclRefExpr 0x7f9b1a05ce20 <col:11> 'int' lvalue Var 0x7f9b1a05c820 'mindiff' 'int'
+      | |   | `-IntegerLiteral 0x7f9b1a05ce48 <col:21> 'int' 0
+      | |   |-ForStmt 0x7f9b1a05d0e0 <line:24:11, line:25:29>
+      | |   | |-BinaryOperator 0x7f9b1a05ced8 <line:24:16, col:20> 'int' '='
+      | |   | | |-DeclRefExpr 0x7f9b1a05ce90 <col:16> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   | | `-IntegerLiteral 0x7f9b1a05ceb8 <col:20> 'int' 0
+      | |   | |-<<<NULL>>>
+      | |   | |-BinaryOperator 0x7f9b1a05cf60 <col:23, col:27> 'int' '<'
+      | |   | | |-ImplicitCastExpr 0x7f9b1a05cf48 <col:23> 'int' <LValueToRValue>
+      | |   | | | `-DeclRefExpr 0x7f9b1a05cf00 <col:23> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   | | `-IntegerLiteral 0x7f9b1a05cf28 <col:27> 'int' 4
+      | |   | |-UnaryOperator 0x7f9b1a05cfb0 <col:30, col:31> 'int' postfix '++'
+      | |   | | `-DeclRefExpr 0x7f9b1a05cf88 <col:30> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   | `-BinaryOperator 0x7f9b1a05d0b8 <line:25:13, col:29> 'int' '='
+      | |   |   |-DeclRefExpr 0x7f9b1a05cfd0 <col:13> 'int' lvalue Var 0x7f9b1a05c820 'mindiff' 'int'
+      | |   |   `-ImplicitCastExpr 0x7f9b1a05d0a0 <col:23, col:29> 'int' <LValueToRValue>
+      | |   |     `-ArraySubscriptExpr 0x7f9b1a05d078 <col:23, col:29> 'int' lvalue
+      | |   |       |-ImplicitCastExpr 0x7f9b1a05d048 <col:23> 'int *' <LValueToRValue>
+      | |   |       | `-DeclRefExpr 0x7f9b1a05cff8 <col:23> 'int *' lvalue ParmVar 0x7f9b1a05c540 'diff' 'int *'
+      | |   |       `-ImplicitCastExpr 0x7f9b1a05d060 <col:28> 'int' <LValueToRValue>
+      | |   |         `-DeclRefExpr 0x7f9b1a05d020 <col:28> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   |-WhileStmt 0x7f9b1a05d680 <line:26:11, line:34:13>
+      | |   | |-<<<NULL>>>
+      | |   | |-BinaryOperator 0x7f9b1a05d238 <line:26:18, col:43> 'int' '&&'
+      | |   | | |-UnaryOperator 0x7f9b1a05d158 <col:18, col:19> 'int' prefix '!'
+      | |   | | | `-ImplicitCastExpr 0x7f9b1a05d140 <col:19> 'int' <LValueToRValue>
+      | |   | | |   `-DeclRefExpr 0x7f9b1a05d118 <col:19> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      | |   | | `-ParenExpr 0x7f9b1a05d218 <col:29, col:43> 'int'
+      | |   | |   `-BinaryOperator 0x7f9b1a05d1f0 <col:30, col:40> 'int' '<'
+      | |   | |     |-ImplicitCastExpr 0x7f9b1a05d1d8 <col:30> 'double' <IntegralToFloating>
+      | |   | |     | `-ImplicitCastExpr 0x7f9b1a05d1c0 <col:30> 'int' <LValueToRValue>
+      | |   | |     |   `-DeclRefExpr 0x7f9b1a05d178 <col:30> 'int' lvalue Var 0x7f9b1a05c820 'mindiff' 'int'
+      | |   | |     `-FloatingLiteral 0x7f9b1a05d1a0 <col:40> 'double' 0.000000e+00
+      | |   | `-CompoundStmt 0x7f9b1a05d658 <line:27:13, line:34:13>
+      | |   |   |-BinaryOperator 0x7f9b1a05d378 <line:28:15, col:48> 'double' '='
+      | |   |   | |-DeclRefExpr 0x7f9b1a05d260 <col:15> 'double' lvalue Var 0x7f9b1a05c6c0 'deltay' 'double'
+      | |   |   | `-ParenExpr 0x7f9b1a05d358 <col:24, col:48> 'double'
+      | |   |   |   `-ConditionalOperator 0x7f9b1a05d328 <col:25, col:45> 'double'
+      | |   |   |     |-ImplicitCastExpr 0x7f9b1a05d2f8 <col:25> 'int' <LValueToRValue>
+      | |   |   |     | `-DeclRefExpr 0x7f9b1a05d288 <col:25> 'int' lvalue Var 0x7f9b1a05c770 'Stangent' 'int'
+      | |   |   |     |-ImplicitCastExpr 0x7f9b1a05d310 <col:36> 'double' <LValueToRValue>
+      | |   |   |     | `-DeclRefExpr 0x7f9b1a05d2b0 <col:36> 'double' lvalue Var 0x7f9b1a05c6c0 'deltay' 'double'
+      | |   |   |     `-FloatingLiteral 0x7f9b1a05d2d8 <col:45> 'double' 0.000000e+00
+      | |   |   |-IfStmt 0x7f9b1a05d498 <line:29:15, line:30:26>
+      | |   |   | |-<<<NULL>>>
+      | |   |   | |-<<<NULL>>>
+      | |   |   | |-BinaryOperator 0x7f9b1a05d400 <line:29:19, col:28> 'int' '<'
+      | |   |   | | |-ImplicitCastExpr 0x7f9b1a05d3e8 <col:19> 'double' <LValueToRValue>
+      | |   |   | | | `-DeclRefExpr 0x7f9b1a05d3a0 <col:19> 'double' lvalue Var 0x7f9b1a05c6c0 'deltay' 'double'
+      | |   |   | | `-FloatingLiteral 0x7f9b1a05d3c8 <col:28> 'double' 0.000000e+00
+      | |   |   | |-BinaryOperator 0x7f9b1a05d470 <line:30:17, col:26> 'int' '='
+      | |   |   | | |-DeclRefExpr 0x7f9b1a05d428 <col:17> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      | |   |   | | `-IntegerLiteral 0x7f9b1a05d450 <col:26> 'int' 1
+      | |   |   | `-<<<NULL>>>
+      | |   |   `-ForStmt 0x7f9b1a05d620 <line:31:15, line:33:17>
+      | |   |     |-BinaryOperator 0x7f9b1a05d518 <line:31:20, col:24> 'int' '='
+      | |   |     | |-DeclRefExpr 0x7f9b1a05d4d0 <col:20> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   |     | `-IntegerLiteral 0x7f9b1a05d4f8 <col:24> 'int' 0
+      | |   |     |-<<<NULL>>>
+      | |   |     |-BinaryOperator 0x7f9b1a05d5a0 <col:27, col:31> 'int' '<'
+      | |   |     | |-ImplicitCastExpr 0x7f9b1a05d588 <col:27> 'int' <LValueToRValue>
+      | |   |     | | `-DeclRefExpr 0x7f9b1a05d540 <col:27> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   |     | `-IntegerLiteral 0x7f9b1a05d568 <col:31> 'int' 4
+      | |   |     |-UnaryOperator 0x7f9b1a05d5f0 <col:34, col:35> 'int' postfix '++'
+      | |   |     | `-DeclRefExpr 0x7f9b1a05d5c8 <col:34> 'int' lvalue Var 0x7f9b1a05c960 'i' 'int'
+      | |   |     `-CompoundStmt 0x7f9b1a05d610 <line:32:17, line:33:17>
+      | |   `-IfStmt 0x7f9b1a05d760 <line:35:11, line:37:15>
+      | |     |-<<<NULL>>>
+      | |     |-<<<NULL>>>
+      | |     |-ImplicitCastExpr 0x7f9b1a05d6c8 <line:35:15> 'int' <LValueToRValue>
+      | |     | `-DeclRefExpr 0x7f9b1a05d6a0 <col:15> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      | |     |-IfStmt 0x7f9b1a05d728 <line:36:13, line:37:15>
+      | |     | |-<<<NULL>>>
+      | |     | |-<<<NULL>>>
+      | |     | |-ImplicitCastExpr 0x7f9b1a05d708 <line:36:17> 'int' <LValueToRValue>
+      | |     | | `-DeclRefExpr 0x7f9b1a05d6e0 <col:17> 'int' lvalue Var 0x7f9b1a05c8b0 'Sflipped' 'int'
+      | |     | |-BreakStmt 0x7f9b1a05d720 <line:37:15>
+      | |     | `-<<<NULL>>>
+      | |     `-<<<NULL>>>
+      | `-IfStmt 0x7f9b1a05d8c8 <line:39:7, line:40:14>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7f9b1a05d818 <line:39:11> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f9b1a05d7f0 <col:11> 'int' lvalue Var 0x7f9b1a05ca68 'Snofit' 'int'
+      |   |-CallExpr 0x7f9b1a05d8a0 <line:40:9, col:14> 'void'
+      |   | `-ImplicitCastExpr 0x7f9b1a05d888 <col:9> 'void (*)(void)' <FunctionToPointerDecay>
+      |   |   `-DeclRefExpr 0x7f9b1a05d830 <col:9> 'void (void)' Function 0x7f9b1a05c420 'bar' 'void (void)'
+      |   `-<<<NULL>>>
+      `-<<<NULL>>>

@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7feaba82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feaba863800 <../Data/C2AST/pr50202.c:4:1, col:14> col:14 referenced __v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7feaba82c980 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7feaba82bd80 'char'
+|-VarDecl 0x7feaba863890 <line:6:1, col:9> col:9 used v '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|-VarDecl 0x7feaba863948 <line:7:1, col:5> col:5 used i 'int'
+|-FunctionDecl 0x7feaba863a70 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7feaba863f60 <line:11:1, line:14:1>
+|   |-BinaryOperator 0x7feaba863ec8 <line:12:3, col:45> 'int' '='
+|   | |-DeclRefExpr 0x7feaba863b10 <col:3> 'int' lvalue Var 0x7feaba863948 'i' 'int'
+|   | `-CallExpr 0x7feaba863e40 <col:7, col:45> 'int'
+|   |   |-ImplicitCastExpr 0x7feaba863e28 <col:7> 'int (*)(__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7feaba863d60 <col:7> '<builtin fn type>' Function 0x7feaba863b88 '__builtin_ia32_pcmpistri128' 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)'
+|   |   |-ImplicitCastExpr 0x7feaba863e80 <col:36> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7feaba863d88 <col:36> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7feaba863890 'v' '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   |   |-ImplicitCastExpr 0x7feaba863e98 <col:39> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7feaba863db0 <col:39> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7feaba863890 'v' '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   |   `-ImplicitCastExpr 0x7feaba863eb0 <col:42> 'char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7feaba863dd8 <col:42> 'int' 255
+|   `-BinaryOperator 0x7feaba863f38 <line:13:3, col:7> 'int' '='
+|     |-DeclRefExpr 0x7feaba863ef0 <col:3> 'int' lvalue Var 0x7feaba863948 'i' 'int'
+|     `-IntegerLiteral 0x7feaba863f18 <col:7> 'int' 255
+`-FunctionDecl 0x7feaba863b88 <line:12:7> col:7 implicit used __builtin_ia32_pcmpistri128 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' extern
+  |-ParmVarDecl 0x7feaba863c28 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  |-ParmVarDecl 0x7feaba863c88 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7feaba863ce8 <<invalid sloc>> <invalid sloc> 'char'

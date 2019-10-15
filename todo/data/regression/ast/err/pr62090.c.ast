@@ -1,0 +1,77 @@
+../Data/C2AST/pr62090.c:10:48: error: use of unknown builtin '__builtin_va_arg_pack' [-Wimplicit-function-declaration]
+  return __builtin___sprintf_chk (0, 0, a, p2, __builtin_va_arg_pack ());
+                                               ^
+TranslationUnitDecl 0x7fa895826ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa895827460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa895827180 '__int128'
+|-TypedefDecl 0x7fa8958274d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8958271a0 'unsigned __int128'
+|-TypedefDecl 0x7fa8958277a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8958275b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa895827528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa895827840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa895827800 'char *'
+|   `-BuiltinType 0x7fa895826f80 'char'
+|-TypedefDecl 0x7fa895827b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa895827ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa895827920 'struct __va_list_tag'
+|     `-Record 0x7fa895827898 '__va_list_tag'
+|-VarDecl 0x7fa895827b78 <../Data/C2AST/pr62090.c:4:1, col:6> col:6 used a 'long'
+|-VarDecl 0x7fa896025280 <line:5:1, col:6> col:6 used b 'int *'
+|-FunctionDecl 0x7fa896025490 <line:7:38> col:38 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa896025530 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fa896025590 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fa896025600 <col:38> Implicit printf 2 3
+|-FunctionDecl 0x7fa896025658 prev 0x7fa896025490 <line:6:1, line:11:1> line:7:38 used sprintf 'int (int *, char *, ...)' extern inline
+| |-ParmVarDecl 0x7fa8960252f8 <col:47, col:52> col:52 p1 'int *'
+| |-ParmVarDecl 0x7fa896025370 <col:56, col:62> col:62 used p2 'char *'
+| |-CompoundStmt 0x7fa896026170 <line:8:1, line:11:1>
+| | |-BinaryOperator 0x7fa896025ac8 <line:9:3, col:34> 'long' '='
+| | | |-DeclRefExpr 0x7fa896025760 <col:3> 'long' lvalue Var 0x7fa895827b78 'a' 'long'
+| | | `-ImplicitCastExpr 0x7fa896025ab0 <col:7, col:34> 'long' <IntegralCast>
+| | |   `-CallExpr 0x7fa896025a60 <col:7, col:34> 'unsigned long'
+| | |     |-ImplicitCastExpr 0x7fa896025a48 <col:7> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| | |     | `-DeclRefExpr 0x7fa8960259b8 <col:7> '<builtin fn type>' Function 0x7fa896025800 '__builtin_object_size' 'unsigned long (const void *, int)'
+| | |     |-ImplicitCastExpr 0x7fa896025a98 <col:30> 'const void *' <NullToPointer>
+| | |     | `-IntegerLiteral 0x7fa8960259e0 <col:30> 'int' 0
+| | |     `-IntegerLiteral 0x7fa896025a00 <col:33> 'int' 0
+| | `-ReturnStmt 0x7fa896026158 <line:10:3, col:72>
+| |   `-CallExpr 0x7fa896026090 <col:10, col:72> 'int'
+| |     |-ImplicitCastExpr 0x7fa896026078 <col:10> 'int (*)(char *, int, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7fa896025dd8 <col:10> '<builtin fn type>' Function 0x7fa896025b40 '__builtin___sprintf_chk' 'int (char *, int, unsigned long, const char *, ...)'
+| |     |-ImplicitCastExpr 0x7fa8960260e0 <col:35> 'char *' <NullToPointer>
+| |     | `-IntegerLiteral 0x7fa896025e00 <col:35> 'int' 0
+| |     |-IntegerLiteral 0x7fa896025e20 <col:38> 'int' 0
+| |     |-ImplicitCastExpr 0x7fa896026110 <col:41> 'unsigned long' <IntegralCast>
+| |     | `-ImplicitCastExpr 0x7fa8960260f8 <col:41> 'long' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7fa896025e40 <col:41> 'long' lvalue Var 0x7fa895827b78 'a' 'long'
+| |     |-ImplicitCastExpr 0x7fa896026140 <col:44> 'const char *' <BitCast>
+| |     | `-ImplicitCastExpr 0x7fa896026128 <col:44> 'char *' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7fa896025e68 <col:44> 'char *' lvalue ParmVar 0x7fa896025370 'p2' 'char *'
+| |     `-CallExpr 0x7fa896026020 <col:48, col:71> 'int'
+| |       `-ImplicitCastExpr 0x7fa896026008 <col:48> 'int (*)()' <FunctionToPointerDecay>
+| |         `-DeclRefExpr 0x7fa896025fb0 <col:48> 'int ()' Function 0x7fa896025f00 '__builtin_va_arg_pack' 'int ()'
+| |-GNUInlineAttr 0x7fa896025708 <line:7:17>
+| `-AlwaysInlineAttr 0x7fa896025750 <line:6:33> always_inline
+|-Fun1 error generated.
+ctionDecl 0x7fa896025800 <line:9:7> col:7 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7fa8960258a0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fa896025900 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fa896025970 <col:7> Implicit
+|-FunctionDecl 0x7fa896025b40 <line:10:10> col:10 implicit used __builtin___sprintf_chk 'int (char *, int, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa896025be0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fa896025c40 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fa896025ca0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fa896025d00 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fa896025d80 <col:10> Implicit printf 4 5
+`-FunctionDecl 0x7fa89581c800 <line:13:1, line:17:1> line:14:1 log_bad_request 'void ()'
+  `-CompoundStmt 0x7fa89581ca60 <line:15:1, line:17:1>
+    `-CompoundAssignOperator 0x7fa89581ca28 <line:16:3, col:25> 'int *' '+=' ComputeLHSTy='int *' ComputeResultTy='int *'
+      |-DeclRefExpr 0x7fa89581c8a0 <col:3> 'int *' lvalue Var 0x7fa896025280 'b' 'int *'
+      `-CallExpr 0x7fa89581c9c0 <col:8, col:25> 'int'
+        |-ImplicitCastExpr 0x7fa89581c9a8 <col:8> 'int (*)(int *, char *, ...)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa89581c8c8 <col:8> 'int (int *, char *, ...)' Function 0x7fa896025658 'sprintf' 'int (int *, char *, ...)'
+        |-ImplicitCastExpr 0x7fa89581c9f8 <col:17> 'int *' <NullToPointer>
+        | `-IntegerLiteral 0x7fa89581c8f0 <col:17> 'int' 0
+        `-ImplicitCastExpr 0x7fa89581ca10 <col:20> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7fa89581c948 <col:20> 'char [4]' lvalue "foo"

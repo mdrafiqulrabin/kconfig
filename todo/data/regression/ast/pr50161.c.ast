@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7ffcd502bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffcd5814250 <../Data/C2AST/pr50161.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffcd58142f0 prev 0x7ffcd5814250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffcd58143e0 <line:7:1, line:21:1> line:8:1 main 'int ()'
+| `-CompoundStmt 0x7ffcd5815060 <line:9:1, line:21:1>
+|   |-DeclStmt 0x7ffcd5814538 <line:10:3, col:13>
+|   | `-VarDecl 0x7ffcd58144d8 <col:3, col:12> col:12 used i 'unsigned int'
+|   |-DeclStmt 0x7ffcd5814630 <line:11:3, col:22>
+|   | `-VarDecl 0x7ffcd58145d0 <col:3, col:21> col:17 used a 'unsigned long [16]'
+|   |-ForStmt 0x7ffcd58148f8 <line:13:3, line:14:13>
+|   | |-BinaryOperator 0x7ffcd58146a8 <line:13:8, col:12> 'unsigned int' '='
+|   | | |-DeclRefExpr 0x7ffcd5814648 <col:8> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ffcd5814690 <col:12> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ffcd5814670 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffcd5814748 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ffcd5814718 <col:15> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffcd58146d0 <col:15> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ffcd5814730 <col:19> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ffcd58146f8 <col:19> 'int' 16
+|   | |-UnaryOperator 0x7ffcd5814798 <col:23, col:24> 'unsigned int' postfix '++'
+|   | | `-DeclRefExpr 0x7ffcd5814770 <col:23> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   | `-BinaryOperator 0x7ffcd58148d0 <line:14:5, col:13> 'unsigned long' '='
+|   |   |-ArraySubscriptExpr 0x7ffcd5814868 <col:5, col:8> 'unsigned long' lvalue
+|   |   | |-ImplicitCastExpr 0x7ffcd5814838 <col:5> 'unsigned long *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7ffcd58147b8 <col:5> 'unsigned long [16]' lvalue Var 0x7ffcd58145d0 'a' 'unsigned long [16]'
+|   |   | `-ImplicitCastExpr 0x7ffcd5814850 <col:7> 'unsigned int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7ffcd58147e0 <col:7> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   |   `-UnaryOperator 0x7ffcd58148b0 <col:12, col:13> 'unsigned long' prefix '~'
+|   |     `-IntegerLiteral 0x7ffcd5814890 <col:13> 'unsigned long' 0
+|   |-ForStmt 0x7ffcd5814ff0 <line:16:3, line:18:14>
+|   | |-BinaryOperator 0x7ffcd5814990 <line:16:8, col:12> 'unsigned int' '='
+|   | | |-DeclRefExpr 0x7ffcd5814930 <col:8> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ffcd5814978 <col:12> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ffcd5814958 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffcd5814a30 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ffcd5814a00 <col:15> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffcd58149b8 <col:15> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ffcd5814a18 <col:19> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ffcd58149e0 <col:19> 'int' 16
+|   | |-UnaryOperator 0x7ffcd5814a80 <col:23, col:24> 'unsigned int' postfix '++'
+|   | | `-DeclRefExpr 0x7ffcd5814a58 <col:23> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   | `-IfStmt 0x7ffcd5814fb8 <line:17:5, line:18:14>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7ffcd5814ef8 <line:17:9, col:55> 'int' '!='
+|   |   | |-ImplicitCastExpr 0x7ffcd5814ee0 <col:9, col:34> 'unsigned long' <IntegralCast>
+|   |   | | `-CallExpr 0x7ffcd5814d50 <col:9, col:34> 'int'
+|   |   | |   |-ImplicitCastExpr 0x7ffcd5814d38 <col:9> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |   | |   | `-DeclRefExpr 0x7ffcd5814c38 <col:9> '<builtin fn type>' Function 0x7ffcd5814ad8 '__builtin_popcountl' 'int (unsigned long)'
+|   |   | |   `-ImplicitCastExpr 0x7ffcd5814d80 <col:30, col:33> 'unsigned long' <LValueToRValue>
+|   |   | |     `-ArraySubscriptExpr 0x7ffcd5814ce0 <col:30, col:33> 'unsigned long' lvalue
+|   |   | |       |-ImplicitCastExpr 0x7ffcd5814cb0 <col:30> 'unsigned long *' <ArrayToPointerDecay>
+|   |   | |       | `-DeclRefExpr 0x7ffcd5814c60 <col:30> 'unsigned long [16]' lvalue Var 0x7ffcd58145d0 'a' 'unsigned long [16]'
+|   |   | |       `-ImplicitCastExpr 0x7ffcd5814cc8 <col:32> 'unsigned int' <LValueToRValue>
+|   |   | |         `-DeclRefExpr 0x7ffcd5814c88 <col:32> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   |   | `-BinaryOperator 0x7ffcd5814eb8 <col:39, col:55> 'unsigned long' '*'
+|   |   |   |-UnaryExprOrTypeTraitExpr 0x7ffcd5814e60 <col:39, col:51> 'unsigned long' sizeof
+|   |   |   | `-ParenExpr 0x7ffcd5814e40 <col:46, col:51> 'unsigned long' lvalue
+|   |   |   |   `-ArraySubscriptExpr 0x7ffcd5814e18 <col:47, col:50> 'unsigned long' lvalue
+|   |   |   |     |-ImplicitCastExpr 0x7ffcd5814de8 <col:47> 'unsigned long *' <ArrayToPointerDecay>
+|   |   |   |     | `-DeclRefExpr 0x7ffcd5814d98 <col:47> 'unsigned long [16]' lvalue Var 0x7ffcd58145d0 'a' 'unsigned long [16]'
+|   |   |   |     `-ImplicitCastExpr 0x7ffcd5814e00 <col:49> 'unsigned int' <LValueToRValue>
+|   |   |   |       `-DeclRefExpr 0x7ffcd5814dc0 <col:49> 'unsigned int' lvalue Var 0x7ffcd58144d8 'i' 'unsigned int'
+|   |   |   `-ImplicitCastExpr 0x7ffcd5814ea0 <col:55> 'unsigned long' <IntegralCast>
+|   |   |     `-IntegerLiteral 0x7ffcd5814e80 <col:55> 'int' 8
+|   |   |-CallExpr 0x7ffcd5814f90 <line:18:7, col:14> 'void'
+|   |   | `-ImplicitCastExpr 0x7ffcd5814f78 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   |   `-DeclRefExpr 0x7ffcd5814f20 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7ffcd58142f0 'abort' 'void (void) __attribute__((noreturn))'
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffcd5815048 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7ffcd5815028 <col:10> 'int' 0
+`-FunctionDecl 0x7ffcd5814ad8 <line:17:9> col:9 implicit used __builtin_popcountl 'int (unsigned long)' extern
+  |-ParmVarDecl 0x7ffcd5814b78 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-NoThrowAttr 0x7ffcd5814be0 <col:9> Implicit
+  `-ConstAttr 0x7ffcd5814c28 <col:9> Implicit

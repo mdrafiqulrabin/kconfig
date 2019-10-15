@@ -1,0 +1,67 @@
+../Data/C2AST/pr55686.c:15:3: error: indirect goto in function with no address-of-label expressions
+  goto **c;
+  ^
+TranslationUnitDecl 0x7fde740174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde74017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde74017780 '__int128'
+|-TypedefDecl 0x7fde74017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde740177a0 'unsigned __int128'
+|-TypedefDecl 0x7fde74017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde74017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fde74017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde74017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde74017e00 'char *'
+|   `-BuiltinType 0x7fde74017580 'char'
+|-TypedefDecl 0x7fde74018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde740180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde74017f20 'struct __va_list_tag'
+|     `-Record 0x7fde74017e98 '__va_list_tag'
+`-FunctionDecl 0x7fde7400d310 <../Data/C2AST/pr55686.c:5:1, line:16:1> line:6:1 foo 'void (long, long *)'
+  |-ParmVarDecl 0x7fde74018178 <col:6, col:11> col:11 used x 'long'
+  |-ParmVarDecl 0x7fde7400d240 <col:14, col:20> col:20 used y 'long *'
+  `-CompoundStmt 0x7fde7400dbf0 <line:7:1, line:16:1>
+    |-DeclStmt 0x7fde7400d590 <line:8:3, col:22>
+    | |-VarDecl 0x7fde7400d418 <col:3, col:17> col:9 used a 'long *' cinit
+    | | `-BinaryOperator 0x7fde7400d4d8 <col:13, col:17> 'long *' '-'
+    | |   |-ImplicitCastExpr 0x7fde7400d4c0 <col:13> 'long *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fde7400d478 <col:13> 'long *' lvalue ParmVar 0x7fde7400d240 'y' 'long *'
+    | |   `-IntegerLiteral 0x7fde7400d4a0 <col:17> 'int' 64
+    | `-VarDecl 0x7fde7400d518 <col:3, col:21> col:21 used i 'long'
+    |-ForStmt 0x7fde7400d960 <line:9:3, line:13:5>
+    | |-BinaryOperator 0x7fde7400d608 <line:9:8, col:12> 'long' '='
+    | | |-DeclRefExpr 0x7fde7400d5a8 <col:8> 'long' lvalue Var 0x7fde7400d518 'i' 'long'
+    | | `-ImplicitCastExpr 0x7fde7400d5f0 <col:12> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fde7400d5d0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fde7400d6b0 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fde7400d680 <col:15> 'long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fde7400d630 <col:15> 'long' lvalue Var 0x7fde7400d518 'i' 'long'
+    | | `-ImplicitCastExpr 0x7fde7400d698 <col:19> 'long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fde7400d658 <col:19> 'long' lvalue ParmVar 0x7fde74018178 'x' 'long'
+    | |-UnaryOperator 0x7fde7400d700 <col:22, col:23> 'long' postfix '++'
+    | | `-DeclRefExpr 0x7fde7400d6d8 <col:22> 'long' lvalue Var 0x7fde7400d518 'i' 'long'
+    | `-CompoundStmt 0x7fde7400d940 <line:10:5, line:13:5>
+    |   |-DeclStmt 0x7fde7400d858 <line:11:7, col:20>
+    |   | `-VarDecl 0x7fde7400d738 <col:7, col:19> col:12 used v 'long' cinit
+    |   |   `-ImplicitCastExpr 0x7fde7400d840 <col:16, col:19> 'long' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x7fde7400d818 <col:16, col:19> 'long' lvalue
+    |   |       |-ImplicitCastExpr 0x7fde7400d7e8 <col:16> 'long *' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7fde7400d798 <col:16> 'long *' lvalue ParmVar 0x7fde7400d240 'y' 'long *'
+    |   |       `-ImplicitCastExpr 0x7fde7400d800 <col:18> 'long' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fde7400d7c0 <col:18> 'long' lvalue Var 0x7fde7400d518 'i' 'long'
+    |   `-BinaryOperator 0x7fde7400d918 <line:12:7, col:14> 'long' '='
+    |     |-UnaryOperator 0x7fde7400d8b8 <col:7, col:9> 'long' lvalue prefix '*'
+    |     | `-UnaryOperator 0x7fde7400d898 <col:8, col:9> 'long *' postfix '++'
+    |     |   `-DeclRefExpr 0x7fde7400d870 <col:8> 'long *' lvalue Var 0x7fde7400d418 'a' 'long *'
+    |     `-ImplicitCastExpr 0x7fde7400d900 <col:14> 'long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fde7400d8d8 <col:14> 'long' lvalue Var 0x7fde7400d738 'v' 'long'
+    |-DeclStmt 0x7fde7400db08 <line:14:3, col:35>
+    | `-VarDecl 0x7fde7400da1 error generated.
+50 <col:3, col:19> col:19 used c 'void **' register
+    |   `-AsmLabelAttr 0x7fde7400dab0 <col:30> "di"
+    `-IndirectGotoStmt 0x7fde7400dbd8 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fde7400dbc0 <col:9, col:10> 'const void *' <BitCast>
+        `-ImplicitCastExpr 0x7fde7400dba8 <col:9, col:10> 'void *' <LValueToRValue>
+          `-UnaryOperator 0x7fde7400db60 <col:9, col:10> 'void *' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fde7400db48 <col:10> 'void **' <LValueToRValue>
+              `-DeclRefExpr 0x7fde7400db20 <col:10> 'void **' lvalue Var 0x7fde7400da50 'c' 'void **'

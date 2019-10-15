@@ -1,0 +1,32 @@
+../Data/C2AST/pr34965.c:10:16: error: called object type 'int' is not a function or function pointer
+  foo (i && j) ();       
+  ~~~~~~~~~~~~ ^
+../Data/C2AST/pr34965.c:11:18: error: called object type 'int' is not a function or function pointer
+  foo (!i || !j) ();     
+  ~~~~~~~~~~~~~~ ^
+../Data/C2AST/pr34965.c:12:18: error: called object type 'int' is not a function or function pointer
+  foo (!i == !j) ();     
+  ~~~~~~~~~~~~~~ ^
+3 errors generated.
+TranslationUnitDecl 0x7fb81902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb81902c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb81902bf80 '__int128'
+|-TypedefDecl 0x7fb81902c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb81902bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb81902c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb81902c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb81902c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb81902c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb81902c600 'char *'
+|   `-BuiltinType 0x7fb81902bd80 'char'
+|-TypedefDecl 0x7fb81902c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb81902c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb81902c720 'struct __va_list_tag'
+|     `-Record 0x7fb81902c698 '__va_list_tag'
+|-FunctionDecl 0x7fb81906d868 <../Data/C2AST/pr34965.c:5:1, col:13> col:5 used foo 'int (int)'
+| `-ParmVarDecl 0x7fb81902c978 <col:10> col:13 'int'
+`-FunctionDecl 0x7fb81906db40 <line:7:1, line:13:1> line:8:1 bar 'void (int, int, double)'
+  |-ParmVarDecl 0x7fb81906d968 <col:6, col:10> col:10 used i 'int'
+  |-ParmVarDecl 0x7fb81906d9e0 <col:13, col:17> col:17 used j 'int'
+  |-ParmVarDecl 0x7fb81906da58 <col:20, col:27> col:27 k 'double'
+  `-CompoundStmt 0x7fb81906e420 <line:9:1, line:13:1>

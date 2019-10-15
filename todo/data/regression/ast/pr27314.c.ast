@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f8bc882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8bc886d868 <../Data/C2AST/pr27314.c:4:15> col:15 implicit used floor 'double (double)' extern
+| |-ParmVarDecl 0x7f8bc886d908 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f8bc886d970 <col:15> Implicit
+| `-ConstAttr 0x7f8bc886d9b8 <col:15> Implicit
+|-FunctionDecl 0x7f8bc886d9c8 prev 0x7f8bc886d868 <col:1, col:28> col:15 used floor 'double (double)' extern
+| |-ParmVarDecl 0x7f8bc882c978 <col:22> col:28 'double'
+| |-NoThrowAttr 0x7f8bc886daa8 <col:15> Inherited Implicit
+| `-ConstAttr 0x7f8bc886dab8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7f8bc886dba8 <line:6:1, line:9:1> line:6:12 used bar 'int (double)' inline
+| |-ParmVarDecl 0x7f8bc886dae0 <col:17, col:24> col:24 used x 'double'
+| `-CompoundStmt 0x7f8bc886ddc0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f8bc886dda8 <line:8:3, col:24>
+|     `-CStyleCastExpr 0x7f8bc886dd80 <col:10, col:24> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7f8bc886dd20 <col:16, col:24> 'double'
+|         |-ImplicitCastExpr 0x7f8bc886dd08 <col:16> 'double (*)(double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f8bc886dc90 <col:16> 'double (double)' Function 0x7f8bc886d9c8 'floor' 'double (double)'
+|         `-ImplicitCastExpr 0x7f8bc886dd50 <col:23> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f8bc886dcb8 <col:23> 'double' lvalue ParmVar 0x7f8bc886dae0 'x' 'double'
+`-FunctionDecl 0x7f8bc886deb8 <line:11:1, line:14:1> line:11:5 foo 'int (int)'
+  |-ParmVarDecl 0x7f8bc886ddf0 <col:10, col:14> col:14 used i 'int'
+  `-CompoundStmt 0x7f8bc886e068 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f8bc886e050 <line:13:3, col:16>
+      `-CallExpr 0x7f8bc886dff0 <col:10, col:16> 'int'
+        |-ImplicitCastExpr 0x7f8bc886dfd8 <col:10> 'int (*)(double)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8bc886df60 <col:10> 'int (double)' Function 0x7f8bc886dba8 'bar' 'int (double)'
+        `-ImplicitCastExpr 0x7f8bc886e038 <col:15> 'double' <IntegralToFloating>
+          `-ImplicitCastExpr 0x7f8bc886e020 <col:15> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7f8bc886df88 <col:15> 'int' lvalue ParmVar 0x7f8bc886ddf0 'i' 'int'

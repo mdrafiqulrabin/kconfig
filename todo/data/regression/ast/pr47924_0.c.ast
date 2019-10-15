@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f85be02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f85be814220 <../Data/C2AST/pr47924_0.c:4:1, col:29> col:13 used link_error 'void (void)' extern
+|-VarDecl 0x7f85be814340 <line:5:1, col:8> col:8 used p 'short *'
+| `-UsedAttr 0x7f85be8143a0 <col:25>
+|-VarDecl 0x7f85be814400 <line:6:1, col:5> col:5 used i 'int'
+| `-UsedAttr 0x7f85be814460 <col:22>
+`-FunctionDecl 0x7f85be814500 <line:8:1, line:19:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7f85be8148e8 <line:9:1, line:19:1>
+    |-IfStmt 0x7f85be814660 <line:10:3, line:11:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f85be814600 <line:10:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f85be8145e8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f85be8145a0 <col:7> 'int' lvalue Var 0x7f85be814400 'i' 'int'
+    | | `-IntegerLiteral 0x7f85be8145c8 <col:12> 'int' 0
+    | |-ReturnStmt 0x7f85be814648 <line:11:5, col:12>
+    | | `-IntegerLiteral 0x7f85be814628 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7f85be814730 <line:13:3, col:8> 'short' '='
+    | |-UnaryOperator 0x7f85be8146d8 <col:3, col:4> 'short' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7f85be8146c0 <col:4> 'short *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f85be814698 <col:4> 'short *' lvalue Var 0x7f85be814340 'p' 'short *'
+    | `-ImplicitCastExpr 0x7f85be814718 <col:8> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f85be8146f8 <col:8> 'int' 0
+    |-IfStmt 0x7f85be814878 <line:15:3, line:16:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f85be8147b8 <line:15:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f85be8147a0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f85be814758 <col:7> 'int' lvalue Var 0x7f85be814400 'i' 'int'
+    | | `-IntegerLiteral 0x7f85be814780 <col:12> 'int' 0
+    | |-CallExpr 0x7f85be814850 <line:16:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7f85be814838 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f85be8147e0 <col:5> 'void (void)' Function 0x7f85be814220 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f85be8148d0 <line:18:3, col:10>
+      `-IntegerLiteral 0x7f85be8148b0 <col:10> 'int' 0

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fd81b0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd81a028cd0 <../Data/C2AST/pr58492.c:4:1, line:7:1> line:4:6 referenced f 'void (int, short)'
+  |-ParmVarDecl 0x7fd81b018178 <col:8, col:12> col:12 p 'int'
+  |-ParmVarDecl 0x7fd81a028c00 <col:15, col:21> col:21 q 'short'
+  `-CompoundStmt 0x7fd81a028ec0 <line:5:1, line:7:1>
+    `-CallExpr 0x7fd81a028e70 <line:6:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd81a028e58 <col:3> 'void (*)(int, short)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd81a028dc0 <col:3> 'void (int, short)' Function 0x7fd81a028cd0 'f' 'void (int, short)'
+      |-IntegerLiteral 0x7fd81a028de8 <col:5> 'int' 0
+      `-ImplicitCastExpr 0x7fd81a028ea8 <col:8> 'short' <IntegralCast>
+        `-IntegerLiteral 0x7fd81a028e08 <col:8> 'int' 0

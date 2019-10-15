@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7ff38601b4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff386814268 <../Data/C2AST/pr83396.c:5:1, col:13> col:5 used bar 'int (int)'
+| `-ParmVarDecl 0x7ff38601c178 <col:10> col:13 'int'
+|-FunctionDecl 0x7ff3868143f8 <line:6:1, col:13> col:5 used baz 'int (int)'
+| `-ParmVarDecl 0x7ff386814368 <col:10> col:13 'int'
+`-FunctionDecl 0x7ff386814548 <line:8:1, line:12:1> line:9:1 foo 'int (int)'
+  |-ParmVarDecl 0x7ff3868144b8 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7ff386814800 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7ff3868147e8 <line:11:3, col:32>
+      `-BinaryOperator 0x7ff3868147c0 <col:10, col:32> 'int' '||'
+        |-CallExpr 0x7ff386814680 <col:10, col:16> 'int'
+        | |-ImplicitCastExpr 0x7ff386814668 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7ff3868145f0 <col:10> 'int (int)' Function 0x7ff386814268 'bar' 'int (int)'
+        | `-ImplicitCastExpr 0x7ff3868146b0 <col:15> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ff386814618 <col:15> 'int' lvalue ParmVar 0x7ff3868144b8 'x' 'int'
+        `-BinaryOperator 0x7ff386814798 <col:21, col:32> 'int' '!='
+          |-CallExpr 0x7ff386814730 <col:21, col:27> 'int'
+          | |-ImplicitCastExpr 0x7ff386814718 <col:21> 'int (*)(int)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7ff3868146c8 <col:21> 'int (int)' Function 0x7ff3868143f8 'baz' 'int (int)'
+          | `-ImplicitCastExpr 0x7ff386814760 <col:26> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7ff3868146f0 <col:26> 'int' lvalue ParmVar 0x7ff3868144b8 'x' 'int'
+          `-IntegerLiteral 0x7ff386814778 <col:32> 'int' 0

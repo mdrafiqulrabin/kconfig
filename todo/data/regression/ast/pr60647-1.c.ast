@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fcc0282bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcc0282c960 <../Data/C2AST/pr60647-1.c:4:1, line:8:1> line:4:8 struct _wincore definition
+| |-FieldDecl 0x7fcc0286d838 <line:6:3, col:7> col:7 y 'int'
+| `-FieldDecl 0x7fcc0286d898 <line:7:3, col:7> col:7 referenced width 'int'
+|-VarDecl 0x7fcc0286d8f8 <line:9:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fcc0286da60 <line:10:1, col:15> col:6 used fn2 'void (void)'
+|-RecordDecl 0x7fcc0286db00 <line:11:31, col:38> col:38 struct _XDisplay
+|-FunctionDecl 0x7fcc0286de88 <col:1, line:16:1> line:11:12 used fn1 'int (struct _XDisplay *, struct _wincore *)' static
+| |-ParmVarDecl 0x7fcc0286dc60 <col:31, col:49> col:49 dpy 'struct _XDisplay *'
+| |-ParmVarDecl 0x7fcc0286dd70 <line:12:1, col:18> col:18 used winInfo 'struct _wincore *'
+| `-CompoundStmt 0x7fcc0286e0a8 <line:13:1, line:16:1>
+|   |-BinaryOperator 0x7fcc0286dff0 <line:14:3, col:16> 'int' '='
+|   | |-DeclRefExpr 0x7fcc0286df38 <col:3> 'int' lvalue Var 0x7fcc0286d8f8 'a' 'int'
+|   | `-ImplicitCastExpr 0x7fcc0286dfd8 <col:7, col:16> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fcc0286dfa0 <col:7, col:16> 'int' lvalue ->width 0x7fcc0286d898
+|   |     `-ImplicitCastExpr 0x7fcc0286df88 <col:7> 'struct _wincore *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fcc0286df60 <col:7> 'struct _wincore *' lvalue ParmVar 0x7fcc0286dd70 'winInfo' 'struct _wincore *'
+|   `-CallExpr 0x7fcc0286e080 <line:15:3, col:8> 'void'
+|     `-ImplicitCastExpr 0x7fcc0286e068 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fcc0286e018 <col:3> 'void (void)' Function 0x7fcc0286da60 'fn2' 'void (void)'
+|-FunctionDecl 0x7fcc0286e2b0 <line:18:1, col:24> col:6 used fn4 'void (int, int, int)'
+| |-ParmVarDecl 0x7fcc0286e0e0 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7fcc0286e158 <col:16> col:19 'int'
+| `-ParmVarDecl 0x7fcc0286e1d0 <col:21> col:24 'int'
+|-RecordDecl 0x7fcc0286e368 <line:19:39, col:46> col:46 struct _XDisplay
+|-FunctionDecl 0x7fcc0286e6e8 <col:1, line:24:1> line:19:12 used fn3 'int (struct _XDisplay *, int, int)' static
+| |-ParmVarDecl 0x7fcc0286e4c0 <col:39, col:57> col:57 dpy 'struct _XDisplay *'
+| |-ParmVarDecl 0x7fcc0286e538 <line:20:1, col:5> col:5 used winInfo 'int'
+| |-ParmVarDecl 0x7fcc0286e5b0 <col:1, col:14> col:14 used visrgn 'int'
+| `-CompoundStmt 0x7fcc0286eb28 <line:21:1, line:24:1>
+|   |-DeclStmt 0x7fcc0286e9e8 <line:22:3, col:27>
+|   | `-VarDecl 0x7fcc0286e800 <col:3, col:26> col:7 b 'int' cinit
+|   |   `-CallExpr 0x7fcc0286e940 <col:11, col:26> 'int'
+|   |     |-ImplicitCastExpr 0x7fcc0286e928 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fcc0286e888 <col:11> 'int ()' Function 0x7fcc0286de88 'fn1' 'int (struct _XDisplay *, struct _wincore *)'
+|   |     |-ImplicitCastExpr 0x7fcc0286e978 <col:16> 'struct _XDisplay *' <NullToPointer>
+|   |     | `-IntegerLiteral 0x7fcc0286e8b0 <col:16> 'int' 0
+|   |     `-ImplicitCastExpr 0x7fcc0286e9a8 <col:19> 'struct _wincore *' <IntegralToPointer>
+|   |       `-ImplicitCastExpr 0x7fcc0286e990 <col:19> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fcc0286e8d0 <col:19> 'int' lvalue ParmVar 0x7fcc0286e538 'winInfo' 'int'
+|   `-CallExpr 0x7fcc0286ead0 <line:23:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fcc0286eab8 <col:3> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fcc0286ea00 <col:3> 'void (int, int, int)' Function 0x7fcc0286e2b0 'fn4' 'void (int, int, int)'
+|     |-IntegerLiteral 0x7fcc0286ea28 <col:8> 'int' 0
+|     |-IntegerLiteral 0x7fcc0286ea48 <col:11> 'int' 0
+|     `-ImplicitCastExpr 0x7fcc0286eb10 <col:14> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fcc0286ea68 <col:14> 'int' lvalue ParmVar 0x7fcc0286e5b0 'visrgn' 'int'
+|-RecordDecl 0x7fcc0286eb48 <line:27:13, col:20> col:20 struct _XEvent
+`-FunctionDecl 0x7fcc0286eda8 <line:26:1, line:30:1> line:27:1 fn5 'int (struct _XEvent *)'
+  |-ParmVarDecl 0x7fcc0286eca0 <col:13, col:29> col:29 event 'struct _XEvent *'
+  `-CompoundStmt 0x7fcc0286ef48 <line:28:1, line:30:1>
+    `-CallExpr 0x7fcc0286eef0 <line:29:3, col:15> 'int'
+      |-ImplicitCastExpr 0x7fcc0286eed8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcc0286ee50 <col:3> 'int ()' Function 0x7fcc0286e6e8 'fn3' 'int (struct _XDisplay *, int, int)'
+      |-ImplicitCastExpr 0x7fcc0286ef30 <col:8> 'struct _XDisplay *' <NullToPointer>
+      | `-IntegerLiteral 0x7fcc0286ee78 <col:8> 'int' 0
+      |-IntegerLiteral 0x7fcc0286ee98 <col:11> 'int' 0
+      `-IntegerLiteral 0x7fcc0286eeb8 <col:14> 'int' 0

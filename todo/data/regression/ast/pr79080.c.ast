@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f9a7f02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9a7f06d868 <../Data/C2AST/pr79080.c:6:1, line:19:1> line:7:1 foo 'int (char)'
+  |-ParmVarDecl 0x7f9a7f02c970 <col:6, col:11> col:11 used x 'char'
+  `-CompoundStmt 0x7f9a7f06dc38 <line:8:1, line:19:1>
+    |-DeclStmt 0x7f9a7f06d9c8 <line:9:3, col:8>
+    | `-VarDecl 0x7f9a7f06d968 <col:3, col:7> col:7 used a 'int'
+    `-ForStmt 0x7f9a7f06dc00 <line:11:3, line:18:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f9a7f06dbe0 <line:12:5, line:18:5>
+        |-CompoundAssignOperator 0x7f9a7f06da28 <line:13:7, col:12> 'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        | |-DeclRefExpr 0x7f9a7f06d9e0 <col:7> 'char' lvalue ParmVar 0x7f9a7f02c970 'x' 'char'
+        | `-IntegerLiteral 0x7f9a7f06da08 <col:12> 'int' 59
+        `-IfStmt 0x7f9a7f06dba8 <line:14:7, line:17:16>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7f9a7f06dad8 <line:14:11, col:16> 'int' '!='
+          | |-ImplicitCastExpr 0x7f9a7f06dac0 <col:11> 'int' <IntegralCast>
+          | | `-ImplicitCastExpr 0x7f9a7f06daa8 <col:11> 'char' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7f9a7f06da60 <col:11> 'char' lvalue ParmVar 0x7f9a7f02c970 'x' 'char'
+          | `-IntegerLiteral 0x7f9a7f06da88 <col:16> 'int' 0
+          |-BinaryOperator 0x7f9a7f06db48 <line:15:9, col:13> 'int' '='
+          | |-DeclRefExpr 0x7f9a7f06db00 <col:9> 'int' lvalue Var 0x7f9a7f06d968 'a' 'int'
+          | `-IntegerLiteral 0x7f9a7f06db28 <col:13> 'int' 0
+          `-ReturnStmt 0x7f9a7f06db90 <line:17:9, col:16>
+            `-IntegerLiteral 0x7f9a7f06db70 <col:16> 'int' 0

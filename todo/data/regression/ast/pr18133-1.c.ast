@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd70c8174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd70c859020 <../Data/C2AST/pr18133-1.c:4:1, line:11:1> line:4:6 foo 'void (void)'
+  `-CompoundStmt 0x7fd70c859310 <line:5:1, line:11:1>
+    |-DeclStmt 0x7fd70c859178 <line:6:1, col:8>
+    | `-VarDecl 0x7fd70c859118 <col:1, col:7> col:7 used p 'void *'
+    |-BinaryOperator 0x7fd70c859220 <line:7:1, col:7> 'void *' '='
+    | |-DeclRefExpr 0x7fd70c859190 <col:1> 'void *' lvalue Var 0x7fd70c859118 'p' 'void *'
+    | `-AddrLabelExpr 0x7fd70c859200 <col:5, col:7> 'void *' L0 0x7fd70c8591b8
+    |-IndirectGotoStmt 0x7fd70c8592c8 <line:8:1, col:7>
+    | `-ImplicitCastExpr 0x7fd70c8592b0 <col:7> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fd70c859298 <col:7> 'void *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd70c859248 <col:7> 'void *' lvalue Var 0x7fd70c859118 'p' 'void *'
+    `-LabelStmt 0x7fd70c8592f8 <line:9:1, line:10:1> 'L0'
+      `-ReturnStmt 0x7fd70c8592e0 <col:1>

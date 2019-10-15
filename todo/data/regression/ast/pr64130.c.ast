@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fba2d02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba2d02c978 <../Data/C2AST/pr64130.c:5:15, col:39> col:39 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fba2d02be80 'unsigned int'
+|-FunctionDecl 0x7fba2d814308 <line:7:1, line:10:1> line:7:5 funsigned 'int (uint32_t)'
+| |-ParmVarDecl 0x7fba2d814200 <col:16, col:25> col:25 used a 'uint32_t':'unsigned int'
+| `-CompoundStmt 0x7fba2d814508 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fba2d8144f0 <line:9:3, col:30>
+|     `-BinaryOperator 0x7fba2d8144c8 <col:10, col:30> 'int' '=='
+|       |-BinaryOperator 0x7fba2d814468 <col:10, col:25> 'long' '/'
+|       | |-IntegerLiteral 0x7fba2d8143f0 <col:10> 'long' 8589934591
+|       | `-ImplicitCastExpr 0x7fba2d814450 <col:25> 'long' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7fba2d814438 <col:25> 'uint32_t':'unsigned int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fba2d814410 <col:25> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fba2d814200 'a' 'uint32_t':'unsigned int'
+|       `-ImplicitCastExpr 0x7fba2d8144b0 <col:30> 'long' <IntegralCast>
+|         `-IntegerLiteral 0x7fba2d814490 <col:30> 'int' 0
+`-FunctionDecl 0x7fba2d8145c0 <line:12:1, line:16:1> line:12:5 funsigned2 'int (uint32_t)'
+  |-ParmVarDecl 0x7fba2d814530 <col:17, col:26> col:26 used a 'uint32_t':'unsigned int'
+  `-CompoundStmt 0x7fba2d814930 <line:13:1, line:16:1>
+    |-IfStmt 0x7fba2d814740 <line:14:3, col:21>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fba2d8146e0 <col:7, col:11> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fba2d8146b0 <col:7> 'uint32_t':'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fba2d814668 <col:7> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fba2d814530 'a' 'uint32_t':'unsigned int'
+    | | `-ImplicitCastExpr 0x7fba2d8146c8 <col:11> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fba2d814690 <col:11> 'int' 1
+    | |-ReturnStmt 0x7fba2d814728 <col:14, col:21>
+    | | `-IntegerLiteral 0x7fba2d814708 <col:21> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fba2d814918 <line:15:3, col:37>
+      `-BinaryOperator 0x7fba2d8148f0 <col:10, col:37> 'int' '=='
+        |-BinaryOperator 0x7fba2d814890 <col:10, col:32> 'long' '/'
+        | |-ParenExpr 0x7fba2d814818 <col:10, col:28> 'long'
+        | | `-BinaryOperator 0x7fba2d8147f0 <col:11, col:16> 'long' '*'
+        | |   |-ImplicitCastExpr 0x7fba2d8147d8 <col:11, col:12> 'long' <IntegralCast>
+        | |   | `-UnaryOperator 0x7fba2d814798 <col:11, col:12> 'int' prefix '-'
+        | |   |   `-IntegerLiteral 0x7fba2d814778 <col:12> 'int' 1
+        | |   `-IntegerLiteral 0x7fba2d8147b8 <col:16> 'long' 8589934591
+        | `-ImplicitCastExpr 0x7fba2d814878 <col:32> 'long' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7fba2d814860 <col:32> 'uint32_t':'unsigned int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fba2d814838 <col:32> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fba2d814530 'a' 'uint32_t':'unsigned int'
+        `-ImplicitCastExpr 0x7fba2d8148d8 <col:37> 'long' <IntegralCast>
+          `-IntegerLiteral 0x7fba2d8148b8 <col:37> 'int' 0

@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fe70000e4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe70000f178 <../Data/C2AST/pr51799.c:3:1, col:21> col:21 referenced int8_t 'signed char'
+| `-BuiltinType 0x7fe70000e5a0 'signed char'
+|-TypedefDecl 0x7fe700814200 <line:4:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fe70000e640 'unsigned char'
+|-TypedefDecl 0x7fe700814270 <line:5:1, col:22> col:22 int16_t 'short'
+| `-BuiltinType 0x7fe70000e5c0 'short'
+|-TypedefDecl 0x7fe7008142e0 <line:6:1, col:23> col:23 referenced uint32_t 'unsigned long'
+| `-BuiltinType 0x7fe70000e6a0 'unsigned long'
+`-FunctionDecl 0x7fe7008146e0 <line:7:1, line:16:1> line:8:1 f0a 'void (uint32_t *restrict, int8_t *restrict, uint32_t *restrict, int8_t)'
+  |-ParmVarDecl 0x7fe7008143c8 <col:6, col:30> col:30 used result 'uint32_t *restrict'
+  |-ParmVarDecl 0x7fe7008144b8 <col:38, col:60> col:60 used arg1 'int8_t *restrict'
+  |-ParmVarDecl 0x7fe700814528 <line:9:6, col:30> col:30 used arg4 'uint32_t *restrict'
+  |-ParmVarDecl 0x7fe700814598 <col:36, col:43> col:43 used temp_6 'int8_t':'signed char'
+  `-CompoundStmt 0x7fe700814ea8 <line:10:1, line:16:1>
+    |-DeclStmt 0x7fe700814858 <line:11:3, col:10>
+    | `-VarDecl 0x7fe7008147f8 <col:3, col:7> col:7 used idx 'int'
+    `-ForStmt 0x7fe700814e70 <line:12:3, line:15:5>
+      |-BinaryOperator 0x7fe7008148b8 <line:12:8, col:14> 'int' '='
+      | |-DeclRefExpr 0x7fe700814870 <col:8> 'int' lvalue Var 0x7fe7008147f8 'idx' 'int'
+      | `-IntegerLiteral 0x7fe700814898 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe700814940 <col:17, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe700814928 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe7008148e0 <col:17> 'int' lvalue Var 0x7fe7008147f8 'idx' 'int'
+      | `-IntegerLiteral 0x7fe700814908 <col:23> 'int' 416
+      |-CompoundAssignOperator 0x7fe7008149b0 <col:28, col:35> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-DeclRefExpr 0x7fe700814968 <col:28> 'int' lvalue Var 0x7fe7008147f8 'idx' 'int'
+      | `-IntegerLiteral 0x7fe700814990 <col:35> 'int' 1
+      `-CompoundStmt 0x7fe700814e58 <line:13:5, line:15:5>
+        `-BinaryOperator 0x7fe700814e30 <line:14:7, col:70> 'uint32_t':'unsigned long' '='
+          |-ArraySubscriptExpr 0x7fe700814a68 <col:7, col:17> 'uint32_t':'unsigned long' lvalue
+          | |-ImplicitCastExpr 0x7fe700814a38 <col:7> 'uint32_t *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fe7008149e8 <col:7> 'uint32_t *restrict' lvalue ParmVar 0x7fe7008143c8 'result' 'uint32_t *restrict'
+          | `-ImplicitCastExpr 0x7fe700814a50 <col:14> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fe700814a10 <col:14> 'int' lvalue Var 0x7fe7008147f8 'idx' 'int'
+          `-ImplicitCastExpr 0x7fe700814e18 <col:21, col:70> 'uint32_t':'unsigned long' <IntegralCast>
+            `-CStyleCastExpr 0x7fe700814df0 <col:21, col:70> 'uint8_t':'unsigned char' <IntegralCast>
+              `-ParenExpr 0x7fe700814dd0 <col:30, col:70> 'unsigned long'
+                `-BinaryOperator 0x7fe700814d68 <col:31, col:64> 'unsigned long' '*'
+                  |-ParenExpr 0x7fe700814cf0 <col:31, col:60> 'unsigned long'
+                  | `-BinaryOperator 0x7fe700814cc8 <col:32, col:59> 'unsigned long' '+'
+                  |   |-ImplicitCastExpr 0x7fe700814cb0 <col:32, col:47> 'unsigned long' <IntegralCast>
+                  |   | `-ParenExpr 0x7fe700814bd0 <col:32, col:47> 'int'
+                  |   |   `-BinaryOperator 0x7fe700814ba8 <col:33, col:46> 'int' '<<'
+                  |   |     |-ImplicitCastExpr 0x7fe700814b90 <col:33, col:41> 'int' <IntegralCast>
+                  |   |     | `-ImplicitCastExpr 0x7fe700814b78 <col:33, col:41> 'int8_t':'signed char' <LValueToRValue>
+                  |   |     |   `-ArraySubscriptExpr 0x7fe700814b30 <col:33, col:41> 'int8_t':'signed char' lvalue
+                  |   |     |     |-ImplicitCastExpr 0x7fe700814b00 <col:33> 'int8_t *' <LValueToRValue>
+                  |   |     |     | `-DeclRefExpr 0x7fe700814ab0 <col:33> 'int8_t *restrict' lvalue ParmVar 0x7fe7008144b8 'arg1' 'int8_t *restrict'
+                  |   |     |     `-ImplicitCastExpr 0x7fe700814b18 <col:38> 'int' <LValueToRValue>
+                  |   |     |       `-DeclRefExpr 0x7fe700814ad8 <col:38> 'int' lvalue Var 0x7fe7008147f8 'idx' 'int'
+                  |   |     `-IntegerLiteral 0x7fe700814b58 <col:46> 'int' 7
+                  |   `-ImplicitCastExpr 0x7fe700814c98 <col:51, col:59> 'uint32_t':'unsigned long' <LValueToRValue>
+                  |     `-ArraySubscriptExpr 0x7fe700814c70 <col:51, col:59> 'uint32_t':'unsigned long' lvalue
+                  |       |-ImplicitCastExpr 0x7fe700814c40 <col:51> 'uint32_t *' <LValueToRValue>
+                  |       | `-DeclRefExpr 0x7fe700814bf0 <col:51> 'uint32_t *restrict' lvalue ParmVar 0x7fe700814528 'arg4' 'uint32_t *restrict'
+                  |       `-ImplicitCastExpr 0x7fe700814c58 <col:56> 'int' <LValueToRValue>
+                  |         `-DeclRefExpr 0x7fe700814c18 <col:56> 'int' lvalue Var 0x7fe7008147f8 'idx' 'int'
+                  `-ImplicitCastExpr 0x7fe700814d50 <col:64> 'unsigned long' <IntegralCast>
+                    `-ImplicitCastExpr 0x7fe700814d38 <col:64> 'int8_t':'signed char' <LValueToRValue>
+                      `-DeclRefExpr 0x7fe700814d10 <col:64> 'int8_t':'signed char' lvalue ParmVar 0x7fe700814598 'temp_6' 'int8_t':'signed char'

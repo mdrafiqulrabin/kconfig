@@ -1,0 +1,124 @@
+TranslationUnitDecl 0x7f8a4c029ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8a4c02a960 <../Data/C2AST/pr56157.c:4:1, line:9:1> line:4:8 struct Pixel definition
+| |-FieldDecl 0x7f8a4c814238 <line:5:5, col:20> col:20 referenced r 'unsigned short'
+| |-FieldDecl 0x7f8a4c814298 <line:6:5, col:20> col:20 referenced g 'unsigned short'
+| |-FieldDecl 0x7f8a4c8142f8 <line:7:5, col:20> col:20 referenced b 'unsigned short'
+| `-FieldDecl 0x7f8a4c814358 <line:8:5, col:20> col:20 referenced a 'unsigned short'
+|-FunctionDecl 0x7f8a4c814590 <line:11:1, line:25:1> line:11:6 fn 'void (unsigned char *restrict, const unsigned char *restrict)'
+| |-ParmVarDecl 0x7f8a4c8143e0 <col:9, col:36> col:36 used dst 'unsigned char *restrict'
+| |-ParmVarDecl 0x7f8a4c814480 <col:41, col:74> col:74 used src 'const unsigned char *restrict'
+| `-CompoundStmt 0x7f8a4c0203a0 <line:12:1, line:25:1>
+|   |-DeclStmt 0x7f8a4c8146f8 <line:13:3, col:13>
+|   | `-VarDecl 0x7f8a4c814698 <col:3, col:12> col:12 used x 'unsigned int'
+|   `-ForStmt 0x7f8a4c020368 <line:14:3, line:24:5>
+|     |-BinaryOperator 0x7f8a4c814770 <line:14:7, col:11> 'unsigned int' '='
+|     | |-DeclRefExpr 0x7f8a4c814710 <col:7> 'unsigned int' lvalue Var 0x7f8a4c814698 'x' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7f8a4c814758 <col:11> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8a4c814738 <col:11> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8a4c814810 <col:14, col:18> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f8a4c8147e0 <col:14> 'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8a4c814798 <col:14> 'unsigned int' lvalue Var 0x7f8a4c814698 'x' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7f8a4c8147f8 <col:18> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8a4c8147c0 <col:18> 'int' 1024
+|     |-CompoundAssignOperator 0x7f8a4c814898 <col:24, col:29> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|     | |-DeclRefExpr 0x7f8a4c814838 <col:24> 'unsigned int' lvalue Var 0x7f8a4c814698 'x' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7f8a4c814880 <col:29> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8a4c814860 <col:29> 'int' 1
+|     `-CompoundStmt 0x7f8a4c020318 <line:15:5, line:24:5>
+|       |-DeclStmt 0x7f8a4c814980 <line:16:7, col:25>
+|       | `-VarDecl 0x7f8a4c814920 <col:7, col:20> col:20 used pixel 'struct Pixel':'struct Pixel'
+|       |-BinaryOperator 0x7f8a4c814c48 <line:17:7, col:68> 'unsigned short' '='
+|       | |-MemberExpr 0x7f8a4c8149c0 <col:7, col:13> 'unsigned short' lvalue .r 0x7f8a4c814238
+|       | | `-DeclRefExpr 0x7f8a4c814998 <col:7> 'struct Pixel':'struct Pixel' lvalue Var 0x7f8a4c814920 'pixel' 'struct Pixel':'struct Pixel'
+|       | `-CStyleCastExpr 0x7f8a4c814c20 <col:17, col:68> 'unsigned short' <IntegralCast>
+|       |   `-ParenExpr 0x7f8a4c814c00 <col:33, col:68> 'unsigned int'
+|       |     `-BinaryOperator 0x7f8a4c814b90 <col:34, col:64> 'unsigned int' '/'
+|       |       |-BinaryOperator 0x7f8a4c814b30 <col:34, col:55> 'unsigned int' '*'
+|       |       | |-ParenExpr 0x7f8a4c814ad8 <col:34, col:51> 'unsigned int'
+|       |       | | `-CStyleCastExpr 0x7f8a4c814ab0 <col:35, col:50> 'unsigned int' <IntegralCast>
+|       |       | |   `-ImplicitCastExpr 0x7f8a4c814a98 <col:45, col:50> 'unsigned char' <LValueToRValue>
+|       |       | |     `-ArraySubscriptExpr 0x7f8a4c814a58 <col:45, col:50> 'const unsigned char' lvalue
+|       |       | |       |-ImplicitCastExpr 0x7f8a4c814a40 <col:45> 'const unsigned char *' <LValueToRValue>
+|       |       | |       | `-DeclRefExpr 0x7f8a4c8149f8 <col:45> 'const unsigned char *restrict' lvalue ParmVar 0x7f8a4c814480 'src' 'const unsigned char *restrict'
+|       |       | |       `-IntegerLiteral 0x7f8a4c814a20 <col:49> 'int' 0
+|       |       | `-ImplicitCastExpr 0x7f8a4c814b18 <col:55> 'unsigned int' <IntegralCast>
+|       |       |   `-IntegerLiteral 0x7f8a4c814af8 <col:55> 'int' 65535
+|       |       `-ImplicitCastExpr 0x7f8a4c814b78 <col:64> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7f8a4c814b58 <col:64> 'int' 255
+|       |-BinaryOperator 0x7f8a4c814f80 <line:18:7, col:68> 'unsigned short' '='
+|       | |-MemberExpr 0x7f8a4c814cf8 <col:7, col:13> 'unsigned short' lvalue .g 0x7f8a4c814298
+|       | | `-DeclRefExpr 0x7f8a4c814cd0 <col:7> 'struct Pixel':'struct Pixel' lvalue Var 0x7f8a4c814920 'pixel' 'struct Pixel':'struct Pixel'
+|       | `-CStyleCastExpr 0x7f8a4c814f58 <col:17, col:68> 'unsigned short' <IntegralCast>
+|       |   `-ParenExpr 0x7f8a4c814f38 <col:33, col:68> 'unsigned int'
+|       |     `-BinaryOperator 0x7f8a4c814ec8 <col:34, col:64> 'unsigned int' '/'
+|       |       |-BinaryOperator 0x7f8a4c814e68 <col:34, col:55> 'unsigned int' '*'
+|       |       | |-ParenExpr 0x7f8a4c814e10 <col:34, col:51> 'unsigned int'
+|       |       | | `-CStyleCastExpr 0x7f8a4c814de8 <col:35, col:50> 'unsigned int' <IntegralCast>
+|       |       | |   `-ImplicitCastExpr 0x7f8a4c814dd0 <col:45, col:50> 'unsigned char' <LValueToRValue>
+|       |       | |     `-ArraySubscriptExpr 0x7f8a4c814d90 <col:45, col:50> 'const unsigned char' lvalue
+|       |       | |       |-ImplicitCastExpr 0x7f8a4c814d78 <col:45> 'const unsigned char *' <LValueToRValue>
+|       |       | |       | `-DeclRefExpr 0x7f8a4c814d30 <col:45> 'const unsigned char *restrict' lvalue ParmVar 0x7f8a4c814480 'src' 'const unsigned char *restrict'
+|       |       | |       `-IntegerLiteral 0x7f8a4c814d58 <col:49> 'int' 1
+|       |       | `-ImplicitCastExpr 0x7f8a4c814e50 <col:55> 'unsigned int' <IntegralCast>
+|       |       |   `-IntegerLiteral 0x7f8a4c814e30 <col:55> 'int' 65535
+|       |       `-ImplicitCastExpr 0x7f8a4c814eb0 <col:64> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7f8a4c814e90 <col:64> 'int' 255
+|       |-BinaryOperator 0x7f8a4c01fa60 <line:19:7, col:68> 'unsigned short' '='
+|       | |-MemberExpr 0x7f8a4c814fd0 <col:7, col:13> 'unsigned short' lvalue .b 0x7f8a4c8142f8
+|       | | `-DeclRefExpr 0x7f8a4c814fa8 <col:7> 'struct Pixel':'struct Pixel' lvalue Var 0x7f8a4c814920 'pixel' 'struct Pixel':'struct Pixel'
+|       | `-CStyleCastExpr 0x7f8a4c01fa38 <col:17, col:68> 'unsigned short' <IntegralCast>
+|       |   `-ParenExpr 0x7f8a4c01fa18 <col:33, col:68> 'unsigned int'
+|       |     `-BinaryOperator 0x7f8a4c8151a0 <col:34, col:64> 'unsigned int' '/'
+|       |       |-BinaryOperator 0x7f8a4c815140 <col:34, col:55> 'unsigned int' '*'
+|       |       | |-ParenExpr 0x7f8a4c8150e8 <col:34, col:51> 'unsigned int'
+|       |       | | `-CStyleCastExpr 0x7f8a4c8150c0 <col:35, col:50> 'unsigned int' <IntegralCast>
+|       |       | |   `-ImplicitCastExpr 0x7f8a4c8150a8 <col:45, col:50> 'unsigned char' <LValueToRValue>
+|       |       | |     `-ArraySubscriptExpr 0x7f8a4c815068 <col:45, col:50> 'const unsigned char' lvalue
+|       |       | |       |-ImplicitCastExpr 0x7f8a4c815050 <col:45> 'const unsigned char *' <LValueToRValue>
+|       |       | |       | `-DeclRefExpr 0x7f8a4c815008 <col:45> 'const unsigned char *restrict' lvalue ParmVar 0x7f8a4c814480 'src' 'const unsigned char *restrict'
+|       |       | |       `-IntegerLiteral 0x7f8a4c815030 <col:49> 'int' 2
+|       |       | `-ImplicitCastExpr 0x7f8a4c815128 <col:55> 'unsigned int' <IntegralCast>
+|       |       |   `-IntegerLiteral 0x7f8a4c815108 <col:55> 'int' 65535
+|       |       `-ImplicitCastExpr 0x7f8a4c815188 <col:64> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7f8a4c815168 <col:64> 'int' 255
+|       |-BinaryOperator 0x7f8a4c01fd38 <line:20:7, col:68> 'unsigned short' '='
+|       | |-MemberExpr 0x7f8a4c01fab0 <col:7, col:13> 'unsigned short' lvalue .a 0x7f8a4c814358
+|       | | `-DeclRefExpr 0x7f8a4c01fa88 <col:7> 'struct Pixel':'struct Pixel' lvalue Var 0x7f8a4c814920 'pixel' 'struct Pixel':'struct Pixel'
+|       | `-CStyleCastExpr 0x7f8a4c01fd10 <col:17, col:68> 'unsigned short' <IntegralCast>
+|       |   `-ParenExpr 0x7f8a4c01fcf0 <col:33, col:68> 'unsigned int'
+|       |     `-BinaryOperator 0x7f8a4c01fc80 <col:34, col:64> 'unsigned int' '/'
+|       |       |-BinaryOperator 0x7f8a4c01fc20 <col:34, col:55> 'unsigned int' '*'
+|       |       | |-ParenExpr 0x7f8a4c01fbc8 <col:34, col:51> 'unsigned int'
+|       |       | | `-CStyleCastExpr 0x7f8a4c01fba0 <col:35, col:50> 'unsigned int' <IntegralCast>
+|       |       | |   `-ImplicitCastExpr 0x7f8a4c01fb88 <col:45, col:50> 'unsigned char' <LValueToRValue>
+|       |       | |     `-ArraySubscriptExpr 0x7f8a4c01fb48 <col:45, col:50> 'const unsigned char' lvalue
+|       |       | |       |-ImplicitCastExpr 0x7f8a4c01fb30 <col:45> 'const unsigned char *' <LValueToRValue>
+|       |       | |       | `-DeclRefExpr 0x7f8a4c01fae8 <col:45> 'const unsigned char *restrict' lvalue ParmVar 0x7f8a4c814480 'src' 'const unsigned char *restrict'
+|       |       | |       `-IntegerLiteral 0x7f8a4c01fb10 <col:49> 'int' 3
+|       |       | `-ImplicitCastExpr 0x7f8a4c01fc08 <col:55> 'unsigned int' <IntegralCast>
+|       |       |   `-IntegerLiteral 0x7f8a4c01fbe8 <col:55> 'int' 65535
+|       |       `-ImplicitCastExpr 0x7f8a4c01fc68 <col:64> 'unsigned int' <IntegralCast>
+|       |         `-IntegerLiteral 0x7f8a4c01fc48 <col:64> 'int' 255
+|       |-CallExpr 0x7f8a4c020190 <line:21:7, col:49> 'void *'
+|       | |-ImplicitCastExpr 0x7f8a4c020178 <col:7> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7f8a4c01fff8 <col:7> '<builtin fn type>' Function 0x7f8a4c01fdd8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|       | |-ImplicitCastExpr 0x7f8a4c0201e8 <col:24> 'void *' <BitCast>
+|       | | `-ImplicitCastExpr 0x7f8a4c0201d0 <col:24> 'unsigned char *' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7f8a4c020020 <col:24> 'unsigned char *restrict' lvalue ParmVar 0x7f8a4c8143e0 'dst' 'unsigned char *restrict'
+|       | |-ImplicitCastExpr 0x7f8a4c020200 <col:29, col:30> 'const void *' <BitCast>
+|       | | `-UnaryOperator 0x7f8a4c0200c8 <col:29, col:30> 'struct Pixel *' prefix '&'
+|       | |   `-DeclRefExpr 0x7f8a4c020048 <col:30> 'struct Pixel':'struct Pixel' lvalue Var 0x7f8a4c814920 'pixel' 'struct Pixel':'struct Pixel'
+|       | `-UnaryExprOrTypeTraitExpr 0x7f8a4c020110 <col:37, col:44> 'unsigned long' sizeof
+|       |   `-DeclRefExpr 0x7f8a4c0200e8 <col:44> 'struct Pixel':'struct Pixel' lvalue Var 0x7f8a4c814920 'pixel' 'struct Pixel':'struct Pixel'
+|       |-CompoundAssignOperator 0x7f8a4c020260 <line:22:7, col:14> 'const unsigned char *' '+=' ComputeLHSTy='const unsigned char *restrict' ComputeResultTy='const unsigned char *restrict'
+|       | |-DeclRefExpr 0x7f8a4c020218 <col:7> 'const unsigned char *restrict' lvalue ParmVar 0x7f8a4c814480 'src' 'const unsigned char *restrict'
+|       | `-IntegerLiteral 0x7f8a4c020240 <col:14> 'int' 4
+|       `-CompoundAssignOperator 0x7f8a4c0202e0 <line:23:7, col:14> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *restrict' ComputeResultTy='unsigned char *restrict'
+|         |-DeclRefExpr 0x7f8a4c020298 <col:7> 'unsigned char *restrict' lvalue ParmVar 0x7f8a4c8143e0 'dst' 'unsigned char *restrict'
+|         `-IntegerLiteral 0x7f8a4c0202c0 <col:14> 'int' 8
+`-FunctionDecl 0x7f8a4c01fdd8 <line:21:7> col:7 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f8a4c01fe78 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f8a4c01fed8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f8a4c01ff38 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f8a4c01ffb0 <col:7> Implicit

@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7ff9bf82b0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff9c0014fe0 <../Data/C2AST/pr51360.c:5:1, line:27:1> line:6:1 foo 'void (int, int, int, int)'
+  |-ParmVarDecl 0x7ff9bf82bd78 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7ff9c0014e00 <col:13, col:17> col:17 used b 'int'
+  |-ParmVarDecl 0x7ff9c0014e78 <col:20, col:24> col:24 used c 'int'
+  |-ParmVarDecl 0x7ff9c0014ef0 <col:27, col:31> col:31 used d 'int'
+  `-CompoundStmt 0x7ff9c0015a30 <line:7:1, line:27:1>
+    |-DeclStmt 0x7ff9c0015368 <line:8:3, col:20>
+    | |-VarDecl 0x7ff9c00150f8 <col:3, col:7> col:7 used m 'int'
+    | |-VarDecl 0x7ff9c0015170 <col:3, col:10> col:10 used n 'int'
+    | |-VarDecl 0x7ff9c00151e8 <col:3, col:13> col:13 used o 'int'
+    | |-VarDecl 0x7ff9c0015260 <col:3, col:16> col:16 used p 'int'
+    | `-VarDecl 0x7ff9c00152d8 <col:3, col:19> col:19 used i 'int'
+    |-BinaryOperator 0x7ff9c00153c8 <line:9:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c0015380 <col:3> 'int' lvalue Var 0x7ff9c00150f8 'm' 'int'
+    | `-IntegerLiteral 0x7ff9c00153a8 <col:7> 'int' 6
+    |-BinaryOperator 0x7ff9c0015438 <line:10:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c00153f0 <col:3> 'int' lvalue Var 0x7ff9c0015170 'n' 'int'
+    | `-IntegerLiteral 0x7ff9c0015418 <col:7> 'int' 1
+    |-BinaryOperator 0x7ff9c00154a8 <line:11:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c0015460 <col:3> 'int' lvalue Var 0x7ff9c00151e8 'o' 'int'
+    | `-IntegerLiteral 0x7ff9c0015488 <col:7> 'int' 5
+    |-BinaryOperator 0x7ff9c0015518 <line:12:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c00154d0 <col:3> 'int' lvalue Var 0x7ff9c0015260 'p' 'int'
+    | `-IntegerLiteral 0x7ff9c00154f8 <col:7> 'int' 1
+    |-BinaryOperator 0x7ff9c0015588 <line:13:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c0015540 <col:3> 'int' lvalue ParmVar 0x7ff9bf82bd78 'a' 'int'
+    | `-IntegerLiteral 0x7ff9c0015568 <col:7> 'int' 6
+    |-BinaryOperator 0x7ff9c00155f8 <line:14:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c00155b0 <col:3> 'int' lvalue ParmVar 0x7ff9c0014e00 'b' 'int'
+    | `-IntegerLiteral 0x7ff9c00155d8 <col:7> 'int' 1
+    |-BinaryOperator 0x7ff9c0015668 <line:15:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c0015620 <col:3> 'int' lvalue ParmVar 0x7ff9c0014e78 'c' 'int'
+    | `-IntegerLiteral 0x7ff9c0015648 <col:7> 'int' 5
+    |-BinaryOperator 0x7ff9c00156d8 <line:16:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7ff9c0015690 <col:3> 'int' lvalue ParmVar 0x7ff9c0014ef0 'd' 'int'
+    | `-IntegerLiteral 0x7ff9c00156b8 <col:7> 'int' 1
+    |-ForStmt 0x7ff9c0015850 <line:18:3, line:19:5>
+    | |-BinaryOperator 0x7ff9c0015748 <line:18:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7ff9c0015700 <col:8> 'int' lvalue Var 0x7ff9c00152d8 'i' 'int'
+    | | `-IntegerLiteral 0x7ff9c0015728 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff9c00157d0 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff9c00157b8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff9c0015770 <col:15> 'int' lvalue Var 0x7ff9c00152d8 'i' 'int'
+    | | `-IntegerLiteral 0x7ff9c0015798 <col:19> 'int' 10
+    | |-UnaryOperator 0x7ff9c0015820 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff9c00157f8 <col:23> 'int' lvalue Var 0x7ff9c00152d8 'i' 'int'
+    | `-NullStmt 0x7ff9c0015840 <line:19:5>
+    |-ForStmt 0x7ff9c00159d8 <line:21:3, line:22:5>
+    | |-BinaryOperator 0x7ff9c00158d0 <line:21:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7ff9c0015888 <col:8> 'int' lvalue Var 0x7ff9c00152d8 'i' 'int'
+    | | `-IntegerLiteral 0x7ff9c00158b0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff9c0015958 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff9c0015940 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff9c00158f8 <col:15> 'int' lvalue Var 0x7ff9c00152d8 'i' 'int'
+    | | `-IntegerLiteral 0x7ff9c0015920 <col:19> 'int' 10
+    | |-UnaryOperator 0x7ff9c00159a8 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff9c0015980 <col:23> 'int' lvalue Var 0x7ff9c00152d8 'i' 'int'
+    | `-NullStmt 0x7ff9c00159c8 <line:22:5>
+    |-NullStmt 0x7ff9c0015a10 <line:24:5>
+    `-NullStmt 0x7ff9c0015a20 <line:26:5>

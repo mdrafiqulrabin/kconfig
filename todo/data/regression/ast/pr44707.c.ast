@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f8f0d8174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8f0d818160 <../Data/C2AST/pr44707.c:3:8, col:33> col:8 struct definition
+| |-FieldDecl 0x7f8f0e014238 <col:17, col:21> col:21 referenced a 'int'
+| |-FieldDecl 0x7f8f0e014298 <col:17, col:24> col:24 referenced b 'int'
+| |-FieldDecl 0x7f8f0e0142f8 <col:17, col:27> col:27 referenced c 'int'
+| `-FieldDecl 0x7f8f0e014358 <col:17, col:30> col:30 referenced d 'int'
+|-VarDecl 0x7f8f0e0143f0 <col:1, col:35> col:35 used v 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)' extern
+|-VarDecl 0x7f8f0e0144c0 <line:4:1, col:12> col:12 used w 'int' extern
+`-FunctionDecl 0x7f8f0e0145e0 <line:6:1, line:15:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7f8f0e014ef8 <line:8:1, line:15:1>
+    |-DeclStmt 0x7f8f0e014770 <line:9:3, col:15>
+    | `-VarDecl 0x7f8f0e014698 <col:3, col:14> col:7 used e1 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8f0e014758 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f8f0e014720 <col:12, col:14> 'int' lvalue .a 0x7f8f0e014238
+    |       `-DeclRefExpr 0x7f8f0e0146f8 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)' lvalue Var 0x7f8f0e0143f0 'v' 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)'
+    |-DeclStmt 0x7f8f0e014840 <line:10:3, col:13>
+    | `-VarDecl 0x7f8f0e0147a0 <col:3, col:12> col:7 used e2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8f0e014828 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8f0e014800 <col:12> 'int' lvalue Var 0x7f8f0e0144c0 'w' 'int'
+    |-DeclStmt 0x7f8f0e014948 <line:11:3, col:15>
+    | `-VarDecl 0x7f8f0e014870 <col:3, col:14> col:7 used e3 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8f0e014930 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f8f0e0148f8 <col:12, col:14> 'int' lvalue .b 0x7f8f0e014298
+    |       `-DeclRefExpr 0x7f8f0e0148d0 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)' lvalue Var 0x7f8f0e0143f0 'v' 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)'
+    |-DeclStmt 0x7f8f0e014a50 <line:12:3, col:15>
+    | `-VarDecl 0x7f8f0e014978 <col:3, col:14> col:7 used e4 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8f0e014a38 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f8f0e014a00 <col:12, col:14> 'int' lvalue .c 0x7f8f0e0142f8
+    |       `-DeclRefExpr 0x7f8f0e0149d8 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)' lvalue Var 0x7f8f0e0143f0 'v' 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)'
+    |-DeclStmt 0x7f8f0e014b58 <line:13:3, col:15>
+    | `-VarDecl 0x7f8f0e014a80 <col:3, col:14> col:7 used e5 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8f0e014b40 <col:12, col:14> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f8f0e014b08 <col:12, col:14> 'int' lvalue .d 0x7f8f0e014358
+    |       `-DeclRefExpr 0x7f8f0e014ae0 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)' lvalue Var 0x7f8f0e0143f0 'v' 'struct (anonymous struct at ../Data/C2AST/pr44707.c:3:8)':'struct (anonymous at ../Data/C2AST/pr44707.c:3:8)'
+    `-GCCAsmStmt 0x7f8f0e014e38 <line:14:3, col:86>
+      |-ImplicitCastExpr 0x7f8f0e014dc0 <col:35> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8f0e014c38 <col:35> 'int' lvalue Var 0x7f8f0e014698 'e1' 'int'
+      |-ImplicitCastExpr 0x7f8f0e014dd8 <col:47> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8f0e014c90 <col:47> 'int' lvalue Var 0x7f8f0e0147a0 'e2' 'int'
+      |-ImplicitCastExpr 0x7f8f0e014df0 <col:59> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8f0e014ce8 <col:59> 'int' lvalue Var 0x7f8f0e014870 'e3' 'int'
+      |-ImplicitCastExpr 0x7f8f0e014e08 <col:71> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8f0e014d40 <col:71> 'int' lvalue Var 0x7f8f0e014978 'e4' 'int'
+      `-ImplicitCastExpr 0x7f8f0e014e20 <col:83> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8f0e014d98 <col:83> 'int' lvalue Var 0x7f8f0e014a80 'e5' 'int'

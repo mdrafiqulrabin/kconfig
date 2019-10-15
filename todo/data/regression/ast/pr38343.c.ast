@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fc55182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc55182c960 <../Data/C2AST/pr38343.c:3:8, line:6:1> line:3:15 struct A definition
+| `-FieldDecl 0x7fc55186d898 <line:5:3, col:11> col:8 referenced f 'char [6]'
+|-VarDecl 0x7fc55186d998 <line:3:1, line:6:21> col:3 used a 'struct A [1]' static cinit
+| `-InitListExpr 0x7fc55186daf8 <col:9, col:21> 'struct A [1]'
+|   `-InitListExpr 0x7fc55186db38 <col:11, col:19> 'struct A':'struct A'
+|     `-StringLiteral 0x7fc55186da38 <col:12> 'char [6]' lvalue "01000"
+|-FunctionDecl 0x7fc55186dce0 <line:8:1, line:12:1> line:9:1 foo 'void (void)'
+| `-CompoundStmt 0x7fc55186e1e0 <line:10:1, line:12:1>
+|   `-CallExpr 0x7fc55186e160 <line:11:3, col:36> 'char *'
+|     |-ImplicitCastExpr 0x7fc55186e148 <col:3> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fc55186df78 <col:3> '<builtin fn type>' Function 0x7fc55186ddc0 '__builtin_stpcpy' 'char *(char *, const char *)'
+|     |-ImplicitCastExpr 0x7fc55186e198 <col:21, col:26> 'char *' <ArrayToPointerDecay>
+|     | `-MemberExpr 0x7fc55186e088 <col:21, col:26> 'char [6]' lvalue .f 0x7fc55186d898
+|     |   `-ArraySubscriptExpr 0x7fc55186e060 <col:21, col:24> 'struct A':'struct A' lvalue
+|     |     |-ImplicitCastExpr 0x7fc55186e048 <col:21> 'struct A *' <ArrayToPointerDecay>
+|     |     | `-DeclRefExpr 0x7fc55186dfa0 <col:21> 'struct A [1]' lvalue Var 0x7fc55186d998 'a' 'struct A [1]'
+|     |     `-IntegerLiteral 0x7fc55186dfc8 <col:23> 'int' 0
+|     `-ImplicitCastExpr 0x7fc55186e1c8 <col:29> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fc55186e1b0 <col:29> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fc55186e0c0 <col:29> 'char [6]' lvalue "S0022"
+`-FunctionDecl 0x7fc55186ddc0 <col:3> col:3 implicit used __builtin_stpcpy 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7fc55186de60 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7fc55186dec0 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7fc55186df30 <col:3> Implicit

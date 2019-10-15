@@ -1,0 +1,19 @@
+../Data/C2AST/pr68670-1.c:5:10: fatal error: '../gcc.c-torture/execute/pr68376-1.c' file not found
+#include "../gcc.c-torture/execute/pr68376-1.c"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc5180090e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc518009660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc518009380 '__int128'
+|-TypedefDecl 0x7fc5180096d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5180093a0 'unsigned __int128'
+|-TypedefDecl 0x7fc5180099a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5180097b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc518009728 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc518009a40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc518009a00 'char *'
+|   `-BuiltinType 0x7fc518009180 'char'
+`-TypedefDecl 0x7fc518009d08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fc518009cb0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fc518009b20 'struct __va_list_tag'
+      `-Record 0x7fc518009a98 '__va_list_tag'

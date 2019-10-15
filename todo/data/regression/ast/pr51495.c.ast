@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f973182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9732815a20 <../Data/C2AST/pr51495.c:5:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7f9732815be8 <line:7:1, line:16:1> line:8:1 foo 'int (int)'
+  |-ParmVarDecl 0x7f9732815b18 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7f9732816200 <line:9:1, line:16:1>
+    |-DeclStmt 0x7f9732815fc8 <line:10:3, col:56>
+    | `-VarDecl 0x7f9732815d40 <col:3, col:55> col:28 used table 'const void *const [2]' static cinit
+    |   `-InitListExpr 0x7f9732815ec0 <col:38, col:55> 'const void *const [2]'
+    |     |-ImplicitCastExpr 0x7f9732815f00 <col:40, col:42> 'const void *' <BitCast>
+    |     | `-AddrLabelExpr 0x7f9732815de8 <col:40, col:42> 'void *' begin 0x7f9732815da0
+    |     `-ImplicitCastExpr 0x7f9732815f20 <col:49, col:51> 'const void *' <BitCast>
+    |       `-AddrLabelExpr 0x7f9732815e50 <col:49, col:51> 'void *' end 0x7f9732815e08
+    |-IndirectGotoStmt 0x7f97328160e8 <line:11:3, col:18>
+    | `-ImplicitCastExpr 0x7f97328160d0 <col:9, col:18> 'const void *' <LValueToRValue>
+    |   `-ParenExpr 0x7f97328160b0 <col:9, col:18> 'const void *const' lvalue
+    |     `-ArraySubscriptExpr 0x7f9732816088 <col:10, col:17> 'const void *const' lvalue
+    |       |-ImplicitCastExpr 0x7f9732816058 <col:10> 'const void *const *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f9732815fe0 <col:10> 'const void *const [2]' lvalue Var 0x7f9732815d40 'table' 'const void *const [2]'
+    |       `-ImplicitCastExpr 0x7f9732816070 <col:16> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9732816008 <col:16> 'int' lvalue ParmVar 0x7f9732815b18 'i' 'int'
+    |-LabelStmt 0x7f9732816198 <line:12:1, line:13:8> 'begin'
+    | `-CallExpr 0x7f9732816170 <col:3, col:8> 'void'
+    |   `-ImplicitCastExpr 0x7f9732816158 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7f9732816100 <col:3> 'void (void)' Function 0x7f9732815a20 'bar' 'void (void)'
+    `-LabelStmt 0x7f97328161e8 <line:14:1, line:15:10> 'end'
+      `-ReturnStmt 0x7f97328161d0 <col:3, col:10>
+        `-IntegerLiteral 0x7f97328161b0 <col:10> 'int' 0

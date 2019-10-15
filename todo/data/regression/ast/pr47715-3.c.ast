@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fd9ec02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd9ec02c960 <../Data/C2AST/pr47715-3.c:6:1, line:10:1> line:6:8 struct initial_sp definition
+| |-FieldDecl 0x7fd9ec814238 <line:8:3, col:9> col:9 sp 'void *'
+| `-FieldDecl 0x7fd9ec814298 <line:9:3, col:8> col:8 referenced len 'long'
+|-VarDecl 0x7fd9ec814330 <line:11:1, line:12:19> col:19 used __morestack_initial_sp 'struct initial_sp':'struct initial_sp' tls
+|-FunctionDecl 0x7fd9ec8144b0 <line:13:1, col:17> col:6 used bar 'void (void *)'
+| `-ParmVarDecl 0x7fd9ec8143e8 <col:11, col:16> col:17 'void *'
+`-FunctionDecl 0x7fd9ec8145a8 <line:14:1, line:18:1> line:15:1 foo 'void ()'
+  `-CompoundStmt 0x7fd9ec8147a8 <line:16:1, line:18:1>
+    `-CallExpr 0x7fd9ec814760 <line:17:3, col:35> 'void'
+      |-ImplicitCastExpr 0x7fd9ec814748 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd9ec814648 <col:3> 'void (void *)' Function 0x7fd9ec8144b0 'bar' 'void (void *)'
+      `-ImplicitCastExpr 0x7fd9ec814790 <col:8, col:32> 'void *' <BitCast>
+        `-UnaryOperator 0x7fd9ec8146f8 <col:8, col:32> 'long *' prefix '&'
+          `-MemberExpr 0x7fd9ec814698 <col:9, col:32> 'long' lvalue .len 0x7fd9ec814298
+            `-DeclRefExpr 0x7fd9ec814670 <col:9> 'struct initial_sp':'struct initial_sp' lvalue Var 0x7fd9ec814330 '__morestack_initial_sp' 'struct initial_sp':'struct initial_sp'

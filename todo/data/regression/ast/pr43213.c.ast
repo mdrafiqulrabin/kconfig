@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f93af81b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f93af81bf60 <../Data/C2AST/pr43213.c:3:1, line:5:1> line:3:8 struct S definition
+| `-FieldDecl 0x7f93af834838 <line:4:3, col:7> col:7 i 'int'
+`-FunctionDecl 0x7f93af8349e0 <line:7:1, line:10:1> line:7:10 f 'struct S (int)'
+  |-ParmVarDecl 0x7f93af834898 <col:12, col:16> col:16 used i 'int'
+  `-CompoundStmt 0x7f93af834c38 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f93af834c20 <line:9:3, col:24>
+      `-ImplicitCastExpr 0x7f93af834c08 <col:10, col:24> 'struct S':'struct S' <LValueToRValue>
+        `-UnaryOperator 0x7f93af834be8 <col:10, col:24> 'struct S':'struct S' lvalue prefix '*'
+          `-CStyleCastExpr 0x7f93af834bc0 <col:11, col:24> 'struct S *' <BitCast>
+            `-UnaryOperator 0x7f93af834b18 <col:23, col:24> 'int *' prefix '&'
+              `-DeclRefExpr 0x7f93af834ac8 <col:24> 'int' lvalue ParmVar 0x7f93af834898 'i' 'int'

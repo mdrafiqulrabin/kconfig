@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fc45502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc45506dce0 <../Data/C2AST/pr31507-2.c:5:1, line:7:24> line:5:15 referenced closure_test_type3 'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)'
+| `-PointerType 0x7fc45506dc00 'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)'
+|   `-ParenType 0x7fc45506dba0 'int (float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)' sugar
+|     `-FunctionProtoType 0x7fc45506daf0 'int (float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)' cdecl
+|       |-BuiltinType 0x7fc45502bde0 'int'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bf00 'double'
+|       |-BuiltinType 0x7fc45502bde0 'int'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bde0 'int'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       |-BuiltinType 0x7fc45502bee0 'float'
+|       `-BuiltinType 0x7fc45502bde0 'int'
+`-FunctionDecl 0x7fc45506de78 <line:8:1, line:14:1> line:8:5 f 'int (closure_test_type3)'
+  |-ParmVarDecl 0x7fc45506dd70 <col:8, col:27> col:27 used pcl 'closure_test_type3':'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)'
+  `-CompoundStmt 0x7fc45506e488 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fc45506dfd8 <line:10:3, col:10>
+    | `-VarDecl 0x7fc45506df78 <col:3, col:7> col:7 used res 'int'
+    `-BinaryOperator 0x7fc45506e460 <line:11:3, line:13:21> 'int' '='
+      |-DeclRefExpr 0x7fc45506dff0 <line:11:3> 'int' lvalue Var 0x7fc45506df78 'res' 'int'
+      `-CallExpr 0x7fc45506e278 <col:9, line:13:21> 'int'
+        |-ImplicitCastExpr 0x7fc45506e260 <line:11:9, col:13> 'closure_test_type3':'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)' <LValueToRValue>
+        | `-ParenExpr 0x7fc45506e040 <col:9, col:13> 'closure_test_type3':'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)' lvalue
+        |   `-DeclRefExpr 0x7fc45506e018 <col:10> 'closure_test_type3':'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)' lvalue ParmVar 0x7fc45506dd70 'pcl' 'closure_test_type3':'int (*)(float, float, float, float, float, float, float, float, double, int, float, float, int, float, float, int)'
+        |-ImplicitCastExpr 0x7fc45506e320 <line:12:6> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e060 <col:6> 'double' 1.100000e+00
+        |-ImplicitCastExpr 0x7fc45506e338 <col:11> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e080 <col:11> 'double' 2.200000e+00
+        |-ImplicitCastExpr 0x7fc45506e350 <col:16> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e0a0 <col:16> 'double' 3.300000e+00
+        |-ImplicitCastExpr 0x7fc45506e368 <col:21> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e0c0 <col:21> 'double' 4.400000e+00
+        |-ImplicitCastExpr 0x7fc45506e380 <col:26> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e0e0 <col:26> 'double' 5.500000e+00
+        |-ImplicitCastExpr 0x7fc45506e398 <col:31> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e100 <col:31> 'double' 6.600000e+00
+        |-ImplicitCastExpr 0x7fc45506e3b0 <col:36> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e120 <col:36> 'double' 7.700000e+00
+        |-ImplicitCastExpr 0x7fc45506e3c8 <col:41> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e140 <col:41> 'double' 8.800000e+00
+        |-ImplicitCastExpr 0x7fc45506e3e0 <col:46> 'double' <IntegralToFloating>
+        | `-IntegerLiteral 0x7fc45506e160 <col:46> 'int' 9
+        |-IntegerLiteral 0x7fc45506e180 <col:49> 'int' 10
+        |-ImplicitCastExpr 0x7fc45506e400 <col:53> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e1a0 <col:53> 'double' 1.111000e+01
+        |-ImplicitCastExpr 0x7fc45506e418 <col:60> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e1c0 <col:60> 'double' 1.200000e+01
+        |-IntegerLiteral 0x7fc45506e1e0 <col:66> 'int' 13
+        |-ImplicitCastExpr 0x7fc45506e430 <line:13:6> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e200 <col:6> 'double' 1.919000e+01
+        |-ImplicitCastExpr 0x7fc45506e448 <col:13> 'float' <FloatingCast>
+        | `-FloatingLiteral 0x7fc45506e220 <col:13> 'double' 2.121000e+01
+        `-IntegerLiteral 0x7fc45506e240 <col:20> 'int' 1

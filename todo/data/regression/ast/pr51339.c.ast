@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fb0460008e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb046836a00 <../Data/C2AST/pr51339.c:5:1, col:12> col:6 used g 'char [2]' cinit
+| `-StringLiteral 0x7fb046836ad8 <col:12> 'char [2]' lvalue "g"
+`-FunctionDecl 0x7fb046836bd0 <line:7:1, line:15:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb046836d68 <line:9:1, line:15:1>
+    `-CompoundStmt 0x7fb046836d50 <line:11:3, line:14:3>
+      `-BinaryOperator 0x7fb046836d28 <line:13:5, col:12> 'char' '='
+        |-ArraySubscriptExpr 0x7fb046836cd0 <col:5, col:8> 'char' lvalue
+        | |-ImplicitCastExpr 0x7fb046836cb8 <col:5> 'char *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fb046836c70 <col:5> 'char [2]' lvalue Var 0x7fb046836a00 'g' 'char [2]'
+        | `-IntegerLiteral 0x7fb046836c98 <col:7> 'int' 0
+        `-ImplicitCastExpr 0x7fb046836d10 <col:12> 'char' <IntegralCast>
+          `-CharacterLiteral 0x7fb046836cf8 <col:12> 'int' 104

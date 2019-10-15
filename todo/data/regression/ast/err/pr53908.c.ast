@@ -1,0 +1,998 @@
+../Data/C2AST/pr53908.c:286:3: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  __builtin_exit (0);
+  ^
+../Data/C2AST/pr53908.c:286:3: note: did you mean '__builtin_abort'?
+../Data/C2AST/pr53908.c:238:5: note: '__builtin_abort' declared here
+    __builtin_abort ();
+    ^
+TranslationUnitDecl 0x7fa37582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa37582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa37582bf80 '__int128'
+|-TypedefDecl 0x7fa37582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa37582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa37582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa37582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa37582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa37582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa37582c600 'char *'
+|   `-BuiltinType 0x7fa37582bd80 'char'
+|-TypedefDecl 0x7fa37582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa37582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa37582c720 'struct __va_list_tag'
+|     `-Record 0x7fa37582c698 '__va_list_tag'
+|-TypedefDecl 0x7fa37582c978 <../Data/C2AST/pr53908.c:3:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7fa37582be80 'unsigned int'
+|-EnumDecl 0x7fa37586f400 <line:4:9, line:26:1> line:4:14 har
+| |-EnumConstantDecl 0x7fa37586f520 <line:5:3, col:19> col:3 he_fatal 'int'
+| | `-ParenExpr 0x7fa37586f500 <col:14, col:19> 'int'
+| |   `-UnaryOperator 0x7fa37586f4e0 <col:15, col:16> 'int' prefix '-'
+| |     `-IntegerLiteral 0x7fa37586f4c0 <col:16> 'int' 199
+| |-EnumConstantDecl 0x7fa37586f568 <line:6:3> col:3 he_not_initialized 'int'
+| |-EnumConstantDecl 0x7fa37586f5b0 <line:7:3> col:3 he_bad_input 'int'
+| |-EnumConstantDecl 0x7fa37586f5f8 <line:8:3> col:3 referenced he_memory_too_small 'int'
+| |-EnumConstantDecl 0x7fa37586f640 <line:9:3> col:3 he_bad_action 'int'
+| |-EnumConstantDecl 0x7fa37586f688 <line:10:3> col:3 he_duplicate 'int'
+| |-EnumConstantDecl 0x7fa37586f6d0 <line:11:3> col:3 he_bad_nonce 'int'
+| |-EnumConstantDecl 0x7fa37586f718 <line:12:3> col:3 referenced he_stale_nonce 'int'
+| |-EnumConstantDecl 0x7fa37586f760 <line:13:3> col:3 he_bad_credentials 'int'
+| |-EnumConstantDecl 0x7fa37586f7a8 <line:14:3> col:3 he_bad_user 'int'
+| |-EnumConstantDecl 0x7fa37586f7f0 <line:15:3> col:3 he_no_such_user 'int'
+| |-EnumConstantDecl 0x7fa37586f838 <line:16:3> col:3 he_bad_passwd 'int'
+| |-EnumConstantDecl 0x7fa37586f880 <line:17:3> col:3 he_unknown_auth_scheme 'int'
+| |-EnumConstantDecl 0x7fa37586f8c8 <line:18:3> col:3 he_not_found 'int'
+| |-EnumConstantDecl 0x7fa37586f910 <line:19:3> col:3 he_failed_digest_file_check 'int'
+| |-EnumConstantDecl 0x7fa37586f958 <line:20:3> col:3 he_failed_digest_file_save 'int'
+| |-EnumConstantDecl 0x7fa37586f9a0 <line:21:3> col:3 he_process_not_privileged 'int'
+| |-EnumConstantDecl 0x7fa37586f9e8 <line:22:3> col:3 he_other 'int'
+| |-EnumConstantDecl 0x7fa37586fa30 <line:23:3> col:3 he_end_of_range 'int'
+| |-EnumConstantDecl 0x7fa37586fa98 <line:24:3, col:17> col:3 referenced ha_no_error 'int'
+| | `-IntegerLiteral 0x7fa37586fa78 <col:17> 'int' 0
+| `-EnumConstantDecl 0x7fa37586fb00 <line:25:3, col:17> col:3 referenced ha_no_value 'int'
+|   `-IntegerLiteral 0x7fa37586fae0 <col:17> 'int' 1
+|-TypedefDecl 0x7fa37586fba0 <line:4:1, line:26:3> col:3 referenced har 'enum har':'enum har'
+| `-ElaboratedType 0x7fa37586fb50 'enum har' sugar
+|   `-EnumType 0x7fa37586f4a0 'enum har'
+|     `-Enum 0x7fa37586f400 'har'
+|-EnumDecl 0x7fa37586fc10 <line:27:9, line:31:1> line:27:14 realm_type
+| |-EnumConstantDecl 0x7fa37586fcf0 <line:29:3, col:16> col:3 referenced axis_realm 'int'
+| | `-IntegerLiteral 0x7fa37586fcd0 <col:16> 'int' 0
+| `-EnumConstantDecl 0x7fa37586fd38 <line:30:3> col:3 referenced ws_realm 'int'
+|-TypedefDecl 0x7fa37586fdd0 <line:27:1, line:31:3> col:3 referenced realm_type 'enum realm_type':'enum realm_type'
+| `-ElaboratedType 0x7fa37586fd80 'enum realm_type' sugar
+|   `-EnumType 0x7fa37586fcb0 'enum realm_type'
+|     `-Enum 0x7fa37586fc10 'realm_type'
+|-FunctionDecl 0x7fa375870150 <line:33:1, line:34:49> col:5 used has_www_auth 'har (char *, size_t, realm_type, har)'
+| |-ParmVarDecl 0x7fa37586fe78 <col:18, col:23> col:24 'char *'
+| |-ParmVarDecl 0x7fa37586ff10 <col:26> col:32 'size_t':'unsigned int'
+| |-ParmVarDecl 0x7fa37586ffa0 <col:34> col:44 'realm_type':'enum realm_type'
+| |-ParmVarDecl 0x7fa375870010 <col:46> col:49 'har':'enum har'
+| `-NoInlineAttr 0x7fa375870210 <line:33:29>
+|-FunctionDecl 0x7fa37588c1f0 <line:36:1, line:37:73> col:5 used has_auth_user 'har (const char *, const char *, realm_type, char *, size_t)'
+| |-ParmVarDecl 0x7fa3758702b0 <col:19, col:30> col:31 'const char *'
+| |-ParmVarDecl 0x7fa375870328 <col:33, col:44> col:45 'const char *'
+| |-ParmVarDecl 0x7fa375870398 <col:47> col:57 'realm_type':'enum realm_type'
+| |-ParmVarDecl 0x7fa37588c018 <col:59, col:64> col:65 'char *'
+| |-ParmVarDecl 0x7fa37588c088 <col:67> col:73 'size_t':'unsigned int'
+| `-NoInlineAttr 0x7fa37588c2b8 <line:36:29>
+|-FunctionDecl 0x7fa37588c3c8 <line:39:1, line:40:31> col:7 used ha_get_string_value 'char *(void)'
+| `-NoInlineAttr 0x7fa37588c468 <line:39:29>
+|-RecordDecl 0x7fa37588c4b0 <line:42:9, line:49:1> line:42:9 struct definition
+| |-FieldDecl 0x7fa37588c578 <line:44:3, col:16> col:16 track_id 'unsigned int'
+| |-FieldDecl 0x7fa37588c5d8 <line:45:3, col:9> col:9 referenced user 'char *'
+| |-FieldDecl 0x7fa37588c638 <line:46:3, col:9> col:9 realm 'char *'
+| |-FieldDecl 0x7fa37588c698 <line:47:3, col:9> col:9 referenced authent 'char *'
+| `-FieldDecl 0x7fa37588c6f8 <line:48:3, col:7> col:7 referenced internal_realm 'int'
+|-TypedefDecl 0x7fa37588c790 <line:42:1, line:49:3> col:3 referenced request 'struct request':'request'
+| `-ElaboratedType 0x7fa37588c740 'struct request' sugar
+|   `-RecordType 0x7fa37588c540 'request'
+|     `-Record 0x7fa37588c4b0 ''
+|-EnumDecl 0x7fa37588c800 <line:50:1, line:55:1> line:50:6 user_response
+| |-EnumConstantDecl 0x7fa37588c900 <line:51:3, col:35> col:3 file_not_found_user_response 'int'
+| | `-UnaryOperator 0x7fa37588c8e0 <col:34, col:35> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fa37588c8c0 <col:35> 'int' 3
+| |-EnumConstantDecl 0x7fa37588c988 <line:52:3, col:34> col:3 referenced access_denied_user_response 'int'
+| | `-UnaryOperator 0x7fa37588c968 <col:33, col:34> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fa37588c948 <col:34> 'int' 2
+| |-EnumConstantDecl 0x7fa37588ca10 <line:53:3, col:23> col:3 referenced no_user_response 'int'
+| | `-UnaryOperator 0x7fa37588c9f0 <col:22, col:23> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fa37588c9d0 <col:23> 'int' 1
+| `-EnumConstantDecl 0x7fa37588ca78 <line:54:3, col:22> col:3 referenced ok_user_response 'int'
+|   `-IntegerLiteral 0x7fa37588ca58 <col:22> 'int' 0
+|-RecordDecl 0x7fa37588cac0 <line:56:1, line:60:1> line:56:8 struct realm_group definition
+| |-FieldDecl 0x7fa37588cb88 <line:57:3, col:9> col:9 name 'char *'
+| |-FieldDecl 0x7fa37588cbe8 <line:58:3, col:7> col:7 referenced id 'int'
+| `-FieldDecl 0x7fa37588cce0 <line:59:3, col:23> col:23 referenced next 'struct realm_group *'
+|-RecordDecl 0x7fa37588cd28 <line:61:1, line:66:1> line:61:8 struct realm definition
+| |-FieldDecl 0x7fa37588cde8 <line:62:3, col:9> col:9 referenced name 'char *'
+| |-FieldDecl 0x7fa37588ce48 <line:63:3, col:9> col:9 space 'char *'
+| |-FieldDecl 0x7fa37588ceb8 <line:64:3, col:23> col:23 referenced groups 'struct realm_group *'
+| `-FieldDecl 0x7fa37588cfb0 <line:65:3, col:17> col:17 next 'struct realm *'
+|-RecordDecl 0x7fa37588d000 <line:67:1, line:72:1> line:67:8 struct user_info definition
+| |-FieldDecl 0x7fa37588d0c8 <line:68:3, col:9> col:9 referenced name 'char *'
+| |-FieldDecl 0x7fa37588d128 <line:69:3, col:7> col:7 referenced no_groups 'int'
+| |-FieldDecl 0x7fa37588d1f0 <line:70:3, col:17> col:7 referenced groups 'int [128]'
+| `-FieldDecl 0x7fa37588d2f0 <line:71:3, col:21> col:21 referenced next 'struct user_info *'
+|-FunctionDecl 0x7fa37588d468 <line:73:1, col:57> col:26 used find_user 'struct user_info *(const char *)' static
+| `-ParmVarDecl 0x7fa37588d350 <col:36, col:48> col:48 user_name 'const char *'
+|-FunctionDecl 0x7fa37588d788 <line:74:1, line:75:65> line:74:12 used is_member_of_groups 'int (const struct user_info *, const struct realm_group *)' static
+| |-ParmVarDecl 0x7fa37588d590 <col:32, col:56> col:56 user_item 'const struct user_info *'
+| `-ParmVarDecl 0x7fa37588d670 <line:75:33, col:59> col:59 groups 'const struct realm_group *'
+|-FunctionDecl 0x7fa37588d9d8 <line:76:1, col:32> col:5 used authent_author 'int (request *)'
+| `-ParmVarDecl 0x7fa37588d8c8 <col:20, col:29> col:29 req 'request *'
+|-VarDecl 0x7fa37588daa8 <line:77:1, col:34> col:15 used realms 'struct realm *' cinit
+| `-ImplicitCastExpr 0x7fa37588db88 <col:24, col:34> 'struct realm *' <NullToPointer>
+|   `-ParenExpr 0x7fa37588db68 <col:24, col:34> 'void *'
+|     `-CStyleCastExpr 0x7fa37588db40 <col:25, col:33> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fa37588db08 <col:33> 'int' 0
+|-VarDecl 0x7fa37588dbc8 <line:78:1, col:37> col:19 used users 'struct user_info *' cinit
+| `-ImplicitCastExpr 0x7fa37588dca8 <col:27, col:37> 'struct user_info *' <NullToPointer>
+|   `-ParenExpr 0x7fa37588dc88 <col:27, col:37> 'void *'
+|     `-CStyleCastExpr 0x7fa37588dc60 <col:28, col:36> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fa37588dc28 <col:36> 'int' 0
+|-FunctionDecl 0x7fa37588dd78 prev 0x7fa37588d468 <line:79:1, line:91:1> line:80:1 used find_user 'struct user_info *(const char *)' static
+| |-ParmVarDecl 0x7fa37588dcd8 <col:11, col:23> col:23 used user_name 'const char *'
+| `-CompoundStmt 0x7fa37588f630 <line:81:1, line:91:1>
+|   |-DeclStmt 0x7fa37588dea8 <line:82:3, col:30>
+|   | `-VarDecl 0x7fa37588de48 <col:3, col:21> col:21 used user_item 'struct user_info *'
+|   |-BinaryOperator 0x7fa37588df28 <line:83:3, col:15> 'struct user_info *' '='
+|   | |-DeclRefExpr 0x7fa37588dec0 <col:3> 'struct user_info *' lvalue Var 0x7fa37588de48 'user_item' 'struct user_info *'
+|   | `-ImplicitCastExpr 0x7fa37588df10 <col:15> 'struct user_info *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa37588dee8 <col:15> 'struct user_info *' lvalue Var 0x7fa37588dbc8 'users' 'struct user_info *'
+|   |-WhileStmt 0x7fa37588f5b8 <line:84:3, line:89:3>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa37588f030 <line:84:10, col:33> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa37588f000 <col:10> 'struct user_info *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa37588df50 <col:10> 'struct user_info *' lvalue Var 0x7fa37588de48 'user_item' 'struct user_info *'
+|   | | `-ImplicitCastExpr 0x7fa37588f018 <col:23, col:33> 'struct user_info *' <BitCast>
+|   | |   `-ParenExpr 0x7fa37588dfd8 <col:23, col:33> 'void *'
+|   | |     `-CStyleCastExpr 0x7fa37588dfb0 <col:24, col:32> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7fa37588df78 <col:32> 'int' 0
+|   | `-CompoundStmt 0x7fa37588f598 <col:36, line:89:3>
+|   |   |-IfStmt 0x7fa37588f480 <line:86:5, line:87:7>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-ParenExpr 0x7fa37588f458 <line:86:9, col:59> 'int'
+|   |   | | `-BinaryOperator 0x7fa37588f430 <col:10, col:58> 'int' '=='
+|   |   | |   |-CallExpr 0x7fa37588f390 <col:10, col:53> 'int'
+|   |   | |   | |-ImplicitCastExpr 0x7fa37588f378 <col:10> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|   |   | |   | | `-DeclRefExpr 0x7fa37588f258 <col:10> '<builtin fn type>' Function 0x7fa37588f0a0 '__builtin_strcmp' 'int (const char *, const char *)'
+|   |   | |   | |-ImplicitCastExpr 0x7fa37588f3e0 <col:27, col:38> 'const char *' <BitCast>
+|   |   | |   | | `-ImplicitCastExpr 0x7fa37588f3c8 <col:27, col:38> 'char *' <LValueToRValue>
+|   |   | |   | |   `-MemberExpr 0x7fa37588f2c0 <col:27, col:38> 'char *' lvalue ->name 0x7fa37588d0c8
+|   |   | |   | |     `-ImplicitCastExpr 0x7fa37588f2a8 <col:27> 'struct user_info *' <LValueToRValue>
+|   |   | |   | |       `-DeclRefExpr 0x7fa37588f280 <col:27> 'struct user_info *' lvalue Var 0x7fa37588de48 'user_item' 'struct user_info *'
+|   |   | |   | `-ImplicitCastExpr 0x7fa37588f3f8 <col:44> 'const char *' <LValueToRValue>
+|   |   | |   |   `-DeclRefExpr 0x7fa37588f2f8 <col:44> 'const char *' lvalue ParmVar 0x7fa37588dcd8 'user_name' 'const char *'
+|   |   | |   `-IntegerLiteral 0x7fa37588f410 <col:58> 'int' 0
+|   |   | |-BreakStmt 0x7fa37588f478 <line:87:7>
+|   |   | `-<<<NULL>>>
+|   |   `-BinaryOperator 0x7fa37588f570 <line:88:5, col:28> 'struct user_info *' '='
+|   |     |-DeclRefExpr 0x7fa37588f4b8 <col:5> 'struct user_info *' lvalue Var 0x7fa37588de48 'user_item' 'struct user_info *'
+|   |     `-ImplicitCastExpr 0x7fa37588f558 <col:17, col:28> 'struct user_info *' <LValueToRValue>
+|   |       `-MemberExpr 0x7fa37588f520 <col:17, col:28> 'struct user_info *' lvalue ->next 0x7fa37588d2f0
+|   |         `-ImplicitCastExpr 0x7fa37588f508 <col:17> 'struct user_info *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa37588f4e0 <col:17> 'struct user_info *' lvalue Var 0x7fa37588de48 'user_item' 'struct user_info *'
+|   `-ReturnStmt 0x7fa37588f618 <line:90:3, col:10>
+|     `-ImplicitCastExpr 0x7fa37588f600 <col:10> 'struct user_info *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa37588f5d8 <col:10> 'struct user_info *' lvalue Var 0x7fa37588de48 'user_item' 'struct user_info *'
+|-FunctionDecl 0x7fa37588f0a0 <line:86:10> col:10 implicit used __builtin_strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7fa37588f140 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7fa37588f1a0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7fa37588f210 <col:10> Implicit
+|-FunctionDecl 0x7fa37588f7a8 prev 0x7fa37588d788 <line:92:1, line:106:1> line:93:1 used is_member_of_groups 'int (const struct user_info *, const struct realm_group *)' static
+| |-ParmVarDecl 0x7fa37588f688 <col:21, col:45> col:45 used user_item 'const struct user_info *'
+| |-ParmVarDecl 0x7fa37588f710 <line:94:21, col:47> col:47 used groups 'const struct realm_group *'
+| `-CompoundStmt 0x7fa375890528 <line:95:1, line:106:1>
+|   |-DeclStmt 0x7fa37588f8e0 <line:96:3, col:39>
+|   | `-VarDecl 0x7fa37588f880 <col:3, col:29> col:29 used group_item 'const struct realm_group *'
+|   |-DeclStmt 0x7fa37588f970 <line:97:3, col:8>
+|   | `-VarDecl 0x7fa37588f910 <col:3, col:7> col:7 used i 'int'
+|   |-BinaryOperator 0x7fa37588f9f0 <line:98:3, col:16> 'const struct realm_group *' '='
+|   | |-DeclRefExpr 0x7fa37588f988 <col:3> 'const struct realm_group *' lvalue Var 0x7fa37588f880 'group_item' 'const struct realm_group *'
+|   | `-ImplicitCastExpr 0x7fa37588f9d8 <col:16> 'const struct realm_group *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa37588f9b0 <col:16> 'const struct realm_group *' lvalue ParmVar 0x7fa37588f710 'groups' 'const struct realm_group *'
+|   |-WhileStmt 0x7fa3758904b0 <line:99:3, line:104:3>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa37588faf0 <line:99:10, col:34> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa37588fac0 <col:10> 'const struct realm_group *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa37588fa18 <col:10> 'const struct realm_group *' lvalue Var 0x7fa37588f880 'group_item' 'const struct realm_group *'
+|   | | `-ImplicitCastExpr 0x7fa37588fad8 <col:24, col:34> 'const struct realm_group *' <BitCast>
+|   | |   `-ParenExpr 0x7fa37588faa0 <col:24, col:34> 'void *'
+|   | |     `-CStyleCastExpr 0x7fa37588fa78 <col:25, col:33> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7fa37588fa40 <col:33> 'int' 0
+|   | `-CompoundStmt 0x7fa375890490 <col:37, line:104:3>
+|   |   |-ForStmt 0x7fa37588ff40 <line:100:5, line:102:9>
+|   |   | |-BinaryOperator 0x7fa37588fb60 <line:100:10, col:14> 'int' '='
+|   |   | | |-DeclRefExpr 0x7fa37588fb18 <col:10> 'int' lvalue Var 0x7fa37588f910 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fa37588fb40 <col:14> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fa37588fc58 <col:17, col:32> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fa37588fc28 <col:17> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fa37588fb88 <col:17> 'int' lvalue Var 0x7fa37588f910 'i' 'int'
+|   |   | | `-ImplicitCastExpr 0x7fa37588fc40 <col:21, col:32> 'int' <LValueToRValue>
+|   |   | |   `-MemberExpr 0x7fa37588fbf0 <col:21, col:32> 'const int' lvalue ->no_groups 0x7fa37588d128
+|   |   | |     `-ImplicitCastExpr 0x7fa37588fbd8 <col:21> 'const struct user_info *' <LValueToRValue>
+|   |   | |       `-DeclRefExpr 0x7fa37588fbb0 <col:21> 'const struct user_info *' lvalue ParmVar 0x7fa37588f688 'user_item' 'const struct user_info *'
+|   |   | |-UnaryOperator 0x7fa37588fca8 <col:43, col:44> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7fa37588fc80 <col:43> 'int' lvalue Var 0x7fa37588f910 'i' 'int'
+|   |   | `-IfStmt 0x7fa37588ff08 <line:101:7, line:102:9>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-BinaryOperator 0x7fa37588fea8 <line:101:11, col:47> 'int' '=='
+|   |   |   | |-ImplicitCastExpr 0x7fa37588fe78 <col:11, col:30> 'int' <LValueToRValue>
+|   |   |   | | `-ArraySubscriptExpr 0x7fa37588fdd8 <col:11, col:30> 'const int' lvalue
+|   |   |   | |   |-ImplicitCastExpr 0x7fa37588fda8 <col:11, col:22> 'const int *' <ArrayToPointerDecay>
+|   |   |   | |   | `-MemberExpr 0x7fa37588fd08 <col:11, col:22> 'int const[128]' lvalue ->groups 0x7fa37588d1f0
+|   |   |   | |   |   `-ImplicitCastExpr 0x7fa37588fcf0 <col:11> 'const struct user_info *' <LValueToRValue>
+|   |   |   | |   |     `-DeclRefExpr 0x7fa37588fcc8 <col:11> 'const struct user_info *' lvalue ParmVar 0x7fa37588f688 'user_item' 'const struct user_info *'
+|   |   |   | |   `-ImplicitCastExpr 0x7fa37588fdc0 <col:29> 'int' <LValueToRValue>
+|   |   |   | |     `-DeclRefExpr 0x7fa37588fd40 <col:29> 'int' lvalue Var 0x7fa37588f910 'i' 'int'
+|   |   |   | `-ImplicitCastExpr 0x7fa37588fe90 <col:35, col:47> 'int' <LValueToRValue>
+|   |   |   |   `-MemberExpr 0x7fa37588fe40 <col:35, col:47> 'const int' lvalue ->id 0x7fa37588cbe8
+|   |   |   |     `-ImplicitCastExpr 0x7fa37588fe28 <col:35> 'const struct realm_group *' <LValueToRValue>
+|   |   |   |       `-DeclRefExpr 0x7fa37588fe00 <col:35> 'const struct realm_group *' lvalue Var 0x7fa37588f880 'group_item' 'const struct realm_group *'
+|   |   |   |-ReturnStmt 0x7fa37588fef0 <line:102:2, col:9>
+|   |   |   | `-IntegerLiteral 0x7fa37588fed0 <col:9> 'int' 0
+|   |   |   `-<<<NULL>>>
+|   |   `-BinaryOperator 0x7fa375890468 <line:103:5, col:30> 'const struct realm_group *' '='
+|   |     |-DeclRefExpr 0x7fa37588ff78 <col:5> 'const struct realm_group *' lvalue Var 0x7fa37588f880 'group_item' 'const struct realm_group *'
+|   |     `-ImplicitCastExpr 0x7fa375890450 <col:18, col:30> 'const struct realm_group *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7fa375890438 <col:18, col:30> 'struct realm_group *' <LValueToRValue>
+|   |         `-MemberExpr 0x7fa375890400 <col:18, col:30> 'struct realm_group *const' lvalue ->next 0x7fa37588cce0
+|   |           `-ImplicitCastExpr 0x7fa37588ffc8 <col:18> 'const struct realm_group *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fa37588ffa0 <col:18> 'const struct realm_group *' lvalue Var 0x7fa37588f880 'group_item' 'const struct realm_group *'
+|   `-ReturnStmt 0x7fa375890510 <line:105:3, col:11>
+|     `-UnaryOperator 0x7fa3758904f0 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7fa3758904d0 <col:11> 'int' 1
+|-FunctionDecl 0x7fa3758905f8 <line:107:1, col:59> col:7 used foo 'char *(void)'
+| `-NoInlineAttr 0x7fa375890698 <col:46>
+|-FunctionDecl 0x7fa3758907c8 <line:108:1, col:87> col:7 used g_strdup 'char *(const char *)'
+| |-ParmVarDecl 0x7fa3758906f8 <col:17, col:29> col:29 str 'const char *'
+| |-NoInlineAttr 0x7fa375890870 <col:74>
+| `-RestrictAttr 0x7fa3758908b8 <col:49> malloc
+|-FunctionDecl 0x7fa3758909f0 <line:109:1, col:50> col:5 g_strcmp0 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fa3758908e0 <col:16, col:28> col:28 str1 'const char *'
+| `-ParmVarDecl 0x7fa375890958 <col:34, col:46> col:46 str2 'const char *'
+|-FunctionDecl 0x7fa375890ba8 <line:110:1, line:121:1> line:111:1 used is_basic 'int (char **)' static
+| |-ParmVarDecl 0x7fa375890ae0 <col:10, col:17> col:17 used user 'char **'
+| `-CompoundStmt 0x7fa3758914e8 <line:112:1, line:121:1>
+|   |-DeclStmt 0x7fa375890cc8 <line:113:3, col:19>
+|   | `-VarDecl 0x7fa375890c68 <col:3, col:9> col:9 used passwd_ptr 'char *'
+|   |-DeclStmt 0x7fa375890de8 <line:114:3, col:24>
+|   | `-VarDecl 0x7fa375890cf8 <col:3, col:23> col:9 used authent 'char *' cinit
+|   |   `-CallExpr 0x7fa375890dc0 <col:19, col:23> 'char *'
+|   |     `-ImplicitCastExpr 0x7fa375890da8 <col:19> 'char *(*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fa375890d58 <col:19> 'char *(void)' Function 0x7fa3758905f8 'foo' 'char *(void)'
+|   |-BinaryOperator 0x7fa375891158 <line:115:3, col:45> 'char *' '='
+|   | |-DeclRefExpr 0x7fa375890e00 <col:3> 'char *' lvalue Var 0x7fa375890c68 'passwd_ptr' 'char *'
+|   | `-CallExpr 0x7fa3758910f0 <col:16, col:45> 'char *'
+|   |   |-ImplicitCastExpr 0x7fa3758910d8 <col:16> 'char *(*)(const char *, int)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fa375891028 <col:16> '<builtin fn type>' Function 0x7fa375890e70 '__builtin_strchr' 'char *(const char *, int)'
+|   |   |-ImplicitCastExpr 0x7fa375891140 <col:33> 'const char *' <BitCast>
+|   |   | `-ImplicitCastExpr 0x7fa375891128 <col:33> 'char *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa375891050 <col:33> 'char *' lvalue Var 0x7fa375890cf8 'authent' 'char *'
+|   |   `-CharacterLiteral 0x7fa375891078 <col:42> 'int' 58
+|   |-IfStmt 0x7fa375891458 <line:116:3, line:119:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa375891258 <line:116:7, col:31> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa375891228 <col:7> 'char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa375891180 <col:7> 'char *' lvalue Var 0x7fa375890c68 'passwd_ptr' 'char *'
+|   | | `-ImplicitCastExpr 0x7fa375891240 <col:21, col:31> 'char *' <BitCast>
+|   | |   `-ParenExpr 0x7fa375891208 <col:21, col:31> 'void *'
+|   | |     `-CStyleCastExpr 0x7fa3758911e0 <col:22, col:30> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7fa3758911a8 <col:30> 'int' 0
+|   | |-CompoundStmt 0x7fa375891438 <col:34, line:119:3>
+|   | | |-BinaryOperator 0x7fa3758913d0 <line:117:5, col:29> 'char *' '='
+|   | | | |-UnaryOperator 0x7fa3758912c0 <col:5, col:6> 'char *' lvalue prefix '*'
+|   | | | | `-ImplicitCastExpr 0x7fa3758912a8 <col:6> 'char **' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7fa375891280 <col:6> 'char **' lvalue ParmVar 0x7fa375890ae0 'user' 'char **'
+|   | | | `-CallExpr 0x7fa375891370 <col:13, col:29> 'char *'
+|   | | |   |-ImplicitCastExpr 0x7fa375891358 <col:13> 'char *(*)(const char *)' <FunctionToPointerDecay>
+|   | | |   | `-DeclRefExpr 0x7fa3758912e0 <col:13> 'char *(const char *)' Function 0x7fa3758907c8 'g_strdup' 'char *(const char *)'
+|   | | |   `-ImplicitCastExpr 0x7fa3758913b8 <col:22> 'const char *' <BitCast>
+|   | | |     `-ImplicitCastExpr 0x7fa3758913a0 <col:22> 'char *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fa375891308 <col:22> 'char *' lvalue Var 0x7fa375890cf8 'authent' 'char *'
+|   | | `-ReturnStmt 0x7fa375891420 <line:118:5, col:12>
+|   | |   `-IntegerLiteral 0x7fa375891400 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa3758914d0 <line:120:3, col:11>
+|     `-UnaryOperator 0x7fa3758914b0 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7fa375891490 <col:11> 'int' 1
+|-FunctionDecl 0x7fa375890e70 <line:115:16> col:16 implicit used __builtin_strchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7fa375890f10 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7fa375890f70 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fa375890fe0 <col:16> Implicit
+|-FunctionDecl 0x7fa3758915c8 <line:122:1, line:133:1> line:123:1 used is_digest 'int (char **)' static
+| |-ParmVarDecl 0x7fa375891538 <col:11, col:18> col:18 used user 'char **'
+| `-CompoundStmt 0x7fa375891b38 <line:124:1, line:133:1>
+|   |-DeclStmt 0x7fa375891728 <line:125:3, col:19>
+|   | `-VarDecl 0x7fa375891688 <col:3, col:18> col:7 used ret_val 'int' cinit
+|   |   `-UnaryOperator 0x7fa375891708 <col:17, col:18> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x7fa3758916e8 <col:18> 'int' 1
+|   |-DeclStmt 0x7fa3758917b8 <line:126:3, col:16>
+|   | `-VarDecl 0x7fa375891758 <col:3, col:9> col:9 used authent 'char *'
+|   |-BinaryOperator 0x7fa375891860 <line:127:3, col:33> 'char *' '='
+|   | |-DeclRefExpr 0x7fa3758917d0 <col:3> 'char *' lvalue Var 0x7fa375891758 'authent' 'char *'
+|   | `-CallExpr 0x7fa375891838 <col:13, col:33> 'char *'
+|   |   `-ImplicitCastExpr 0x7fa375891820 <col:13> 'char *(*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7fa3758917f8 <col:13> 'char *(void)' Function 0x7fa37588c3c8 'ha_get_string_value' 'char *(void)'
+|   |-IfStmt 0x7fa375891aa8 <line:128:3, line:131:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fa3758918b0 <line:128:7> 'char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa375891888 <col:7> 'char *' lvalue Var 0x7fa375891758 'authent' 'char *'
+|   | |-CompoundStmt 0x7fa375891a88 <col:16, line:131:3>
+|   | | |-BinaryOperator 0x7fa3758919f0 <line:129:5, col:29> 'char *' '='
+|   | | | |-UnaryOperator 0x7fa375891908 <col:5, col:6> 'char *' lvalue prefix '*'
+|   | | | | `-ImplicitCastExpr 0x7fa3758918f0 <col:6> 'char **' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7fa3758918c8 <col:6> 'char **' lvalue ParmVar 0x7fa375891538 'user' 'char **'
+|   | | | `-CallExpr 0x7fa375891990 <col:13, col:29> 'char *'
+|   | | |   |-ImplicitCastExpr 0x7fa375891978 <col:13> 'char *(*)(const char *)' <FunctionToPointerDecay>
+|   | | |   | `-DeclRefExpr 0x7fa375891928 <col:13> 'char *(const char *)' Function 0x7fa3758907c8 'g_strdup' 'char *(const char *)'
+|   | | |   `-ImplicitCastExpr 0x7fa3758919d8 <col:22> 'const char *' <BitCast>
+|   | | |     `-ImplicitCastExpr 0x7fa3758919c0 <col:22> 'char *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fa375891950 <col:22> 'char *' lvalue Var 0x7fa375891758 'authent' 'char *'
+|   | | `-BinaryOperator 0x7fa375891a60 <line:130:5, col:15> 'int' '='
+|   | |   |-DeclRefExpr 0x7fa375891a18 <col:5> 'int' lvalue Var 0x7fa375891688 'ret_val' 'int'
+|   | |   `-IntegerLiteral 0x7fa375891a40 <col:15> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa375891b20 <line:132:3, col:10>
+|     `-ImplicitCastExpr 0x7fa375891b08 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa375891ae0 <col:10> 'int' lvalue Var 0x7fa375891688 'ret_val' 'int'
+|-FunctionDecl 0x7fa375891c50 <line:134:1, line:135:24> col:6 used g_free 'void (void *)'
+| |-ParmVarDecl 0x7fa375891b88 <col:14, col:21> col:21 mem 'void *'
+| `-NoInlineAttr 0x7fa375891cf8 <line:134:29>
+|-FunctionDecl 0x7fa375892020 <line:136:1, line:160:1> line:137:1 used get_user_info_from_header 'enum user_response (const realm_type, char **, struct user_info **)' static
+| |-ParmVarDecl 0x7fa375891d50 <col:27, col:44> col:44 used type 'const realm_type':'const enum realm_type'
+| |-ParmVarDecl 0x7fa375891dc8 <line:138:27, col:34> col:34 used user_name 'char **'
+| |-ParmVarDecl 0x7fa375891eb0 <line:139:27, col:46> col:46 used user_item 'struct user_info **'
+| `-CompoundStmt 0x7fa375893f30 <line:140:1, line:160:1>
+|   |-DeclStmt 0x7fa375892178 <line:141:3, col:33>
+|   | `-VarDecl 0x7fa3758920f0 <col:3, col:17> col:7 used ret_val 'int' cinit
+|   |   `-DeclRefExpr 0x7fa375892150 <col:17> 'int' EnumConstant 0x7fa37588ca10 'no_user_response' 'int'
+|   |-IfStmt 0x7fa375893e88 <line:142:3, line:158:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7fa375892250 <line:142:7, col:24> 'int'
+|   | | `-BinaryOperator 0x7fa375892228 <col:8, col:16> 'int' '=='
+|   | |   |-ImplicitCastExpr 0x7fa3758921f8 <col:8> 'unsigned int' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fa3758921e0 <col:8> 'realm_type':'enum realm_type' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fa375892190 <col:8> 'const realm_type':'const enum realm_type' lvalue ParmVar 0x7fa375891d50 'type' 'const realm_type':'const enum realm_type'
+|   | |   `-ImplicitCastExpr 0x7fa375892210 <col:16> 'unsigned int' <IntegralCast>
+|   | |     `-DeclRefExpr 0x7fa3758921b8 <col:16> 'int' EnumConstant 0x7fa37586fd38 'ws_realm' 'int'
+|   | |-CompoundStmt 0x7fa375893608 <col:27, line:147:3>
+|   | | |-IfStmt 0x7fa375893428 <line:143:5, line:144:17>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-BinaryOperator 0x7fa375892368 <line:143:9, col:32> 'int' '=='
+|   | | | | |-CallExpr 0x7fa375892300 <col:9, col:27> 'int'
+|   | | | | | |-ImplicitCastExpr 0x7fa3758922e8 <col:9> 'int (*)(char **)' <FunctionToPointerDecay>
+|   | | | | | | `-DeclRefExpr 0x7fa375892270 <col:9> 'int (char **)' Function 0x7fa375890ba8 'is_basic' 'int (char **)'
+|   | | | | | `-ImplicitCastExpr 0x7fa375892330 <col:18> 'char **' <LValueToRValue>
+|   | | | | |   `-DeclRefExpr 0x7fa375892298 <col:18> 'char **' lvalue ParmVar 0x7fa375891dc8 'user_name' 'char **'
+|   | | | | `-IntegerLiteral 0x7fa375892348 <col:32> 'int' 0
+|   | | | |-BinaryOperator 0x7fa375893400 <line:144:7, col:17> 'int' '='
+|   | | | | |-DeclRefExpr 0x7fa375892390 <col:7> 'int' lvalue Var 0x7fa3758920f0 'ret_val' 'int'
+|   | | | | `-DeclRefExpr 0x7fa3758923b8 <col:17> 'int' EnumConstant 0x7fa37588c988 'access_denied_user_response' 'int'
+|   | | | `-<<<NULL>>>
+|   | | `-IfStmt 0x7fa3758935d0 <line:145:5, line:146:17>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fa375893530 <line:145:9, col:33> 'int' '=='
+|   | |   | |-CallExpr 0x7fa3758934c8 <col:9, col:28> 'int'
+|   | |   | | |-ImplicitCastExpr 0x7fa3758934b0 <col:9> 'int (*)(char **)' <FunctionToPointerDecay>
+|   | |   | | | `-DeclRefExpr 0x7fa375893460 <col:9> 'int (char **)' Function 0x7fa3758915c8 'is_digest' 'int (char **)'
+|   | |   | | `-ImplicitCastExpr 0x7fa3758934f8 <col:19> 'char **' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fa375893488 <col:19> 'char **' lvalue ParmVar 0x7fa375891dc8 'user_name' 'char **'
+|   | |   | `-IntegerLiteral 0x7fa375893510 <col:33> 'int' 0
+|   | |   |-BinaryOperator 0x7fa3758935a8 <line:146:7, col:17> 'int' '='
+|   | |   | |-DeclRefExpr 0x7fa375893558 <col:7> 'int' lvalue Var 0x7fa3758920f0 'ret_val' 'int'
+|   | |   | `-DeclRefExpr 0x7fa375893580 <col:17> 'int' EnumConstant 0x7fa37588ca78 'ok_user_response' 'int'
+|   | |   `-<<<NULL>>>
+|   | `-CompoundStmt 0x7fa375893e68 <line:147:10, line:158:3>
+|   |   |-IfStmt 0x7fa375893c40 <line:148:5, line:155:17>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fa375893818 <line:148:9, line:150:25> 'int' '&&'
+|   |   | | |-BinaryOperator 0x7fa3758936f8 <line:148:9, col:31> 'int' '<'
+|   |   | | | |-CallExpr 0x7fa375893690 <col:9, col:27> 'int'
+|   |   | | | | |-ImplicitCastExpr 0x7fa375893678 <col:9> 'int (*)(char **)' <FunctionToPointerDecay>
+|   |   | | | | | `-DeclRefExpr 0x7fa375893628 <col:9> 'int (char **)' Function 0x7fa375890ba8 'is_basic' 'int (char **)'
+|   |   | | | | `-ImplicitCastExpr 0x7fa3758936c0 <col:18> 'char **' <LValueToRValue>
+|   |   | | | |   `-DeclRefExpr 0x7fa375893650 <col:18> 'char **' lvalue ParmVar 0x7fa375891dc8 'user_name' 'char **'
+|   |   | | | `-IntegerLiteral 0x7fa3758936d8 <col:31> 'int' 0
+|   |   | | `-BinaryOperator 0x7fa3758937f0 <line:150:2, col:25> 'int' '<'
+|   |   | |   |-CallExpr 0x7fa375893788 <col:2, col:21> 'int'
+|   |   | |   | |-ImplicitCastExpr 0x7fa375893770 <col:2> 'int (*)(char **)' <FunctionToPointerDecay>
+|   |   | |   | | `-DeclRefExpr 0x7fa375893720 <col:2> 'int (char **)' Function 0x7fa3758915c8 'is_digest' 'int (char **)'
+|   |   | |   | `-ImplicitCastExpr 0x7fa3758937b8 <col:12> 'char **' <LValueToRValue>
+|   |   | |   |   `-DeclRefExpr 0x7fa375893748 <col:12> 'char **' lvalue ParmVar 0x7fa375891dc8 'user_name' 'char **'
+|   |   | |   `-IntegerLiteral 0x7fa3758937d0 <col:25> 'int' 0
+|   |   | |-NullStmt 0x7fa375893840 <line:151:7>
+|   |   | `-IfStmt 0x7fa375893c08 <line:152:10, line:155:17>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-BinaryOperator 0x7fa375893af0 <line:152:14, col:64> 'int' '!='
+|   |   |   | |-ParenExpr 0x7fa375893a38 <col:14, col:49> 'struct user_info *'
+|   |   |   | | `-BinaryOperator 0x7fa375893a10 <col:15, col:48> 'struct user_info *' '='
+|   |   |   | |   |-UnaryOperator 0x7fa375893890 <col:15, col:16> 'struct user_info *' lvalue prefix '*'
+|   |   |   | |   | `-ImplicitCastExpr 0x7fa375893878 <col:16> 'struct user_info **' <LValueToRValue>
+|   |   |   | |   |   `-DeclRefExpr 0x7fa375893850 <col:16> 'struct user_info **' lvalue ParmVar 0x7fa375891eb0 'user_item' 'struct user_info **'
+|   |   |   | |   `-CallExpr 0x7fa3758939b0 <col:28, col:48> 'struct user_info *'
+|   |   |   | |     |-ImplicitCastExpr 0x7fa375893998 <col:28> 'struct user_info *(*)(const char *)' <FunctionToPointerDecay>
+|   |   |   | |     | `-DeclRefExpr 0x7fa3758938b0 <col:28> 'struct user_info *(const char *)' Function 0x7fa37588dd78 'find_user' 'struct user_info *(const char *)'
+|   |   |   | |     `-ImplicitCastExpr 0x7fa3758939f8 <col:38, col:39> 'const char *' <BitCast>
+|   |   |   | |       `-ImplicitCastExpr 0x7fa3758939e0 <col:38, col:39> 'char *' <LValueToRValue>
+|   |   |   | |         `-UnaryOperator 0x7fa375893918 <col:38, col:39> 'char *' lvalue prefix '*'
+|   |   |   | |           `-ImplicitCastExpr 0x7fa375893900 <col:39> 'char **' <LValueToRValue>
+|   |   |   | |             `-DeclRefExpr 0x7fa3758938d8 <col:39> 'char **' lvalue ParmVar 0x7fa375891dc8 'user_name' 'char **'
+|   |   |   | `-ImplicitCastExpr 0x7fa375893ad8 <col:54, col:64> 'struct user_info *' <BitCast>
+|   |   |   |   `-ParenExpr 0x7fa375893ab8 <col:54, col:64> 'void *'
+|   |   |   |     `-CStyleCastExpr 0x7fa375893a90 <col:55, col:63> 'void *' <NullToPointer>
+|   |   |   |       `-IntegerLiteral 0x7fa375893a58 <col:63> 'int' 0
+|   |   |   |-BinaryOperator 0x7fa375893b68 <line:153:7, col:17> 'int' '='
+|   |   |   | |-DeclRefExpr 0x7fa375893b18 <col:7> 'int' lvalue Var 0x7fa3758920f0 'ret_val' 'int'
+|   |   |   | `-DeclRefExpr 0x7fa375893b40 <col:17> 'int' EnumConstant 0x7fa37588ca78 'ok_user_response' 'int'
+|   |   |   `-BinaryOperator 0x7fa375893be0 <line:155:7, col:17> 'int' '='
+|   |   |     |-DeclRefExpr 0x7fa375893b90 <col:7> 'int' lvalue Var 0x7fa3758920f0 'ret_val' 'int'
+|   |   |     `-DeclRefExpr 0x7fa375893bb8 <col:17> 'int' EnumConstant 0x7fa37588c988 'access_denied_user_response' 'int'
+|   |   `-IfStmt 0x7fa375893e30 <line:156:5, line:157:24>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fa375893ce0 <line:156:9, col:20> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fa375893cc8 <col:9> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fa375893c78 <col:9> 'int' lvalue Var 0x7fa3758920f0 'ret_val' 'int'
+|   |     | `-DeclRefExpr 0x7fa375893ca0 <col:20> 'int' EnumConstant 0x7fa37588ca78 'ok_user_response' 'int'
+|   |     |-CallExpr 0x7fa375893dd0 <line:157:7, col:24> 'void'
+|   |     | |-ImplicitCastExpr 0x7fa375893db8 <col:7> 'void (*)(void *)' <FunctionToPointerDecay>
+|   |     | | `-DeclRefExpr 0x7fa375893d08 <col:7> 'void (void *)' Function 0x7fa375891c50 'g_free' 'void (void *)'
+|   |     | `-ImplicitCastExpr 0x7fa375893e18 <col:14, col:15> 'void *' <BitCast>
+|   |     |   `-ImplicitCastExpr 0x7fa375893e00 <col:14, col:15> 'char *' <LValueToRValue>
+|   |     |     `-UnaryOperator 0x7fa375893d70 <col:14, col:15> 'char *' lvalue prefix '*'
+|   |     |       `-ImplicitCastExpr 0x7fa375893d58 <col:15> 'char **' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7fa375893d30 <col:15> 'char **' lvalue ParmVar 0x7fa375891dc8 'user_name' 'char **'
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa375893f18 <line:159:3, col:10>
+|     `-ImplicitCastExpr 0x7fa375893f00 <col:10> 'enum user_response':'enum user_response' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fa375893ee8 <col:10> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa375893ec0 <col:10> 'int' lvalue Var 0x7fa3758920f0 'ret_val' 'int'
+|-FunctionDecl 0x7fa3758941b0 <line:161:1, line:187:1> line:162:1 used authenticate_user 'enum user_response (request *, char **, struct user_info **)' static
+| |-ParmVarDecl 0x7fa375893f68 <col:19, col:28> col:28 used req 'request *'
+| |-ParmVarDecl 0x7fa375893fe0 <line:163:19, col:26> col:26 used user_name 'char **'
+| |-ParmVarDecl 0x7fa375894068 <line:164:19, col:38> col:38 used user_item 'struct user_info **'
+| `-CompoundStmt 0x7fa375895dd0 <line:165:1, line:187:1>
+|   |-DeclStmt 0x7fa375894378 <line:166:3, col:30>
+|   | `-VarDecl 0x7fa375894280 <col:3, col:29> col:9 used authent 'char *' cinit
+|   |   `-ImplicitCastExpr 0x7fa375894360 <col:19, col:29> 'char *' <NullToPointer>
+|   |     `-ParenExpr 0x7fa375894340 <col:19, col:29> 'void *'
+|   |       `-CStyleCastExpr 0x7fa375894318 <col:20, col:28> 'void *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7fa3758942e0 <col:28> 'int' 0
+|   |-DeclStmt 0x7fa375894440 <line:167:3, col:25>
+|   | `-VarDecl 0x7fa3758943a0 <col:3, col:14> col:7 used resp 'har':'enum har' cinit
+|   |   `-ImplicitCastExpr 0x7fa375894428 <col:14> 'har':'enum har' <IntegralCast>
+|   |     `-DeclRefExpr 0x7fa375894400 <col:14> 'int' EnumConstant 0x7fa37586fb00 'ha_no_value' 'int'
+|   |-DeclStmt 0x7fa3758944d8 <line:168:3, col:31>
+|   | `-VarDecl 0x7fa375894478 <col:3, col:22> col:22 used user_resp 'enum user_response':'enum user_response'
+|   |-DeclStmt 0x7fa375894590 <line:169:3, col:33>
+|   | `-VarDecl 0x7fa375894508 <col:3, col:17> col:7 used ret_val 'int' cinit
+|   |   `-DeclRefExpr 0x7fa375894568 <col:17> 'int' EnumConstant 0x7fa37588ca10 'no_user_response' 'int'
+|   |-IfStmt 0x7fa3758958e8 <line:170:3, line:183:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa375894918 <line:170:7, col:52> 'int' '&&'
+|   | | |-ImplicitCastExpr 0x7fa375894900 <col:7, col:12> 'char *' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fa3758945e8 <col:7, col:12> 'char *' lvalue ->authent 0x7fa37588c698
+|   | | |   `-ImplicitCastExpr 0x7fa3758945d0 <col:7> 'request *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fa3758945a8 <col:7> 'request *' lvalue ParmVar 0x7fa375893f68 'req' 'request *'
+|   | | `-CallExpr 0x7fa3758948a0 <col:23, col:52> 'unsigned long'
+|   | |   |-ImplicitCastExpr 0x7fa375894888 <col:23> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fa3758947a8 <col:23> '<builtin fn type>' Function 0x7fa375894658 '__builtin_strlen' 'unsigned long (const char *)'
+|   | |   `-ImplicitCastExpr 0x7fa3758948e8 <col:40, col:45> 'const char *' <BitCast>
+|   | |     `-ImplicitCastExpr 0x7fa3758948d0 <col:40, col:45> 'char *' <LValueToRValue>
+|   | |       `-MemberExpr 0x7fa375894810 <col:40, col:45> 'char *' lvalue ->authent 0x7fa37588c698
+|   | |         `-ImplicitCastExpr 0x7fa3758947f8 <col:40> 'request *' <LValueToRValue>
+|   | |           `-DeclRefExpr 0x7fa3758947d0 <col:40> 'request *' lvalue ParmVar 0x7fa375893f68 'req' 'request *'
+|   | |-CompoundStmt 0x7fa3758958c0 <col:55, line:183:3>
+|   | | |-BinaryOperator 0x7fa3758949f8 <line:171:5, col:20> 'char *' '='
+|   | | | |-DeclRefExpr 0x7fa375894940 <col:5> 'char *' lvalue Var 0x7fa375894280 'authent' 'char *'
+|   | | | `-ImplicitCastExpr 0x7fa3758949e0 <col:15, col:20> 'char *' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fa3758949a8 <col:15, col:20> 'char *' lvalue ->authent 0x7fa37588c698
+|   | | |     `-ImplicitCastExpr 0x7fa375894990 <col:15> 'request *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fa375894968 <col:15> 'request *' lvalue ParmVar 0x7fa375893f68 'req' 'request *'
+|   | | |-BinaryOperator 0x7fa375894c50 <line:172:5, line:174:52> 'enum user_response':'enum user_response' '='
+|   | | | |-DeclRefExpr 0x7fa375894a20 <line:172:5> 'enum user_response':'enum user_response' lvalue Var 0x7fa375894478 'user_resp' 'enum user_response':'enum user_response'
+|   | | | `-CallExpr 0x7fa375894bb0 <col:17, line:174:52> 'enum user_response':'enum user_response'
+|   | | |   |-ImplicitCastExpr 0x7fa375894b98 <line:172:17> 'enum user_response (*)(const realm_type, char **, struct user_info **)' <FunctionToPointerDecay>
+|   | | |   | `-DeclRefExpr 0x7fa375894a48 <col:17> 'enum user_response (const realm_type, char **, struct user_info **)' Function 0x7fa375892020 'get_user_info_from_header' 'enum user_response (const realm_type, char **, struct user_info **)'
+|   | | |   |-ImplicitCastExpr 0x7fa375894c08 <col:43, col:48> 'realm_type':'enum realm_type' <IntegralCast>
+|   | | |   | `-ImplicitCastExpr 0x7fa375894bf0 <col:43, col:48> 'int' <LValueToRValue>
+|   | | |   |   `-MemberExpr 0x7fa375894ab0 <col:43, col:48> 'int' lvalue ->internal_realm 0x7fa37588c6f8
+|   | | |   |     `-ImplicitCastExpr 0x7fa375894a98 <col:43> 'request *' <LValueToRValue>
+|   | | |   |       `-DeclRefExpr 0x7fa375894a70 <col:43> 'request *' lvalue ParmVar 0x7fa375893f68 'req' 'request *'
+|   | | |   |-ImplicitCastExpr 0x7fa375894c20 <line:173:43> 'char **' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x7fa375894ae8 <col:43> 'char **' lvalue ParmVar 0x7fa375893fe0 'user_name' 'char **'
+|   | | |   `-ImplicitCastExpr 0x7fa375894c38 <line:174:43> 'struct user_info **' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fa375894b10 <col:43> 'struct user_info **' lvalue ParmVar 0x7fa375894068 'user_item' 'struct user_info **'
+|   | | `-IfStmt 0x7fa375895888 <line:175:5, line:182:17>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fa375894cf8 <line:175:9, col:22> 'int' '=='
+|   | |   | |-ImplicitCastExpr 0x7fa375894ce0 <col:9> 'int' <IntegralCast>
+|   | |   | | `-ImplicitCastExpr 0x7fa375894cc8 <col:9> 'enum user_response':'enum user_response' <LValueToRValue>
+|   | |   | |   `-DeclRefExpr 0x7fa375894c78 <col:9> 'enum user_response':'enum user_response' lvalue Var 0x7fa375894478 'user_resp' 'enum user_response':'enum user_response'
+|   | |   | `-DeclRefExpr 0x7fa375894ca0 <col:22> 'int' EnumConstant 0x7fa37588ca78 'ok_user_response' 'int'
+|   | |   |-CompoundStmt 0x7fa3758952f0 <col:40, line:181:5>
+|   | |   | |-BinaryOperator 0x7fa375895018 <line:176:7, col:66> 'har':'enum har' '='
+|   | |   | | |-DeclRefExpr 0x7fa375894d20 <col:7> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | |   | | `-CallExpr 0x7fa375894f20 <col:14, col:66> 'har':'enum har'
+|   | |   | |   |-ImplicitCastExpr 0x7fa375894f08 <col:14> 'har (*)(const char *, const char *, realm_type, char *, size_t)' <FunctionToPointerDecay>
+|   | |   | |   | `-DeclRefExpr 0x7fa375894d48 <col:14> 'har (const char *, const char *, realm_type, char *, size_t)' Function 0x7fa37588c1f0 'has_auth_user' 'har (const char *, const char *, realm_type, char *, size_t)'
+|   | |   | |   |-ImplicitCastExpr 0x7fa375894f88 <col:28> 'const char *' <BitCast>
+|   | |   | |   | `-ImplicitCastExpr 0x7fa375894f70 <col:28> 'char *' <LValueToRValue>
+|   | |   | |   |   `-DeclRefExpr 0x7fa375894d70 <col:28> 'char *' lvalue Var 0x7fa375894280 'authent' 'char *'
+|   | |   | |   |-ImplicitCastExpr 0x7fa375894fa0 <col:37> 'const char *' <NullToPointer>
+|   | |   | |   | `-IntegerLiteral 0x7fa375894d98 <col:37> 'int' 0
+|   | |   | |   |-ImplicitCastExpr 0x7fa375894fd0 <col:40, col:45> 'realm_type':'enum realm_type' <IntegralCast>
+|   | |   | |   | `-ImplicitCastExpr 0x7fa375894fb8 <col:40, col:45> 'int' <LValueToRValue>
+|   | |   | |   |   `-MemberExpr 0x7fa375894df8 <col:40, col:45> 'int' lvalue ->internal_realm 0x7fa37588c6f8
+|   | |   | |   |     `-ImplicitCastExpr 0x7fa375894de0 <col:40> 'request *' <LValueToRValue>
+|   | |   | |   |       `-DeclRefExpr 0x7fa375894db8 <col:40> 'request *' lvalue ParmVar 0x7fa375893f68 'req' 'request *'
+|   | |   | |   |-ImplicitCastExpr 0x7fa375894fe8 <col:61> 'char *' <ArrayToPointerDecay>
+|   | |   | |   | `-StringLiteral 0x7fa375894e68 <col:61> 'char [1]' lvalue ""
+|   | |   | |   `-ImplicitCastExpr 0x7fa375895000 <col:65> 'size_t':'unsigned int' <IntegralCast>
+|   | |   | |     `-IntegerLiteral 0x7fa375894e90 <col:65> 'int' 1
+|   | |   | `-IfStmt 0x7fa3758952b8 <line:177:7, line:180:12>
+|   | |   |   |-<<<NULL>>>
+|   | |   |   |-<<<NULL>>>
+|   | |   |   |-BinaryOperator 0x7fa3758950c0 <line:177:11, col:19> 'int' '=='
+|   | |   |   | |-ImplicitCastExpr 0x7fa3758950a8 <col:11> 'int' <IntegralCast>
+|   | |   |   | | `-ImplicitCastExpr 0x7fa375895090 <col:11> 'har':'enum har' <LValueToRValue>
+|   | |   |   | |   `-DeclRefExpr 0x7fa375895040 <col:11> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | |   |   | `-DeclRefExpr 0x7fa375895068 <col:19> 'int' EnumConstant 0x7fa37586fa98 'ha_no_error' 'int'
+|   | |   |   |-BinaryOperator 0x7fa375895138 <line:178:2, col:12> 'int' '='
+|   | |   |   | |-DeclRefExpr 0x7fa3758950e8 <col:2> 'int' lvalue Var 0x7fa375894508 'ret_val' 'int'
+|   | |   |   | `-DeclRefExpr 0x7fa375895110 <col:12> 'int' EnumConstant 0x7fa37588ca78 'ok_user_response' 'int'
+|   | |   |   `-IfStmt 0x7fa375895280 <line:179:12, line:180:12>
+|   | |   |     |-<<<NULL>>>
+|   | |   |     |-<<<NULL>>>
+|   | |   |     |-BinaryOperator 0x7fa3758951e0 <line:179:16, col:24> 'int' '!='
+|   | |   |     | |-ImplicitCastExpr 0x7fa3758951c8 <col:16> 'int' <IntegralCast>
+|   | |   |     | | `-ImplicitCastExpr 0x7fa3758951b0 <col:16> 'har':'enum har' <LValueToRValue>
+|   | |   |     | |   `-DeclRefExpr 0x7fa375895160 <col:16> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | |   |     | `-DeclRefExpr 0x7fa375895188 <col:24> 'int' EnumConstant 0x7fa37586f718 'he_stale_nonce' 'int'
+|   | |   |     |-BinaryOperator 0x7fa375895258 <line:180:2, col:12> 'int' '='
+|   | |   |     | |-DeclRefExpr 0x7fa375895208 <col:2> 'int' lvalue Var 0x7fa375894508 'ret_val' 'int'
+|   | |   |     | `-DeclRefExpr 0x7fa375895230 <col:12> 'int' EnumConstant 0x7fa37588c988 'access_denied_user_response' 'int'
+|   | |   |     `-<<<NULL>>>
+|   | |   `-IfStmt 0x7fa375895850 <line:181:12, line:182:17>
+|   | |     |-<<<NULL>>>
+|   | |     |-<<<NULL>>>
+|   | |     |-BinaryOperator 0x7fa375895390 <line:181:16, col:29> 'int' '=='
+|   | |     | |-ImplicitCastExpr 0x7fa375895378 <col:16> 'int' <IntegralCast>
+|   | |     | | `-ImplicitCastExpr 0x7fa375895360 <col:16> 'enum user_response':'enum user_response' <LValueToRValue>
+|   | |     | |   `-DeclRefExpr 0x7fa375895310 <col:16> 'enum user_response':'enum user_response' lvalue Var 0x7fa375894478 'user_resp' 'enum user_response':'enum user_response'
+|   | |     | `-DeclRefExpr 0x7fa375895338 <col:29> 'int' EnumConstant 0x7fa37588c988 'access_denied_user_response' 'int'
+|   | |     |-BinaryOperator 0x7fa375895828 <line:182:7, col:17> 'int' '='
+|   | |     | |-DeclRefExpr 0x7fa3758953b8 <col:7> 'int' lvalue Var 0x7fa375894508 'ret_val' 'int'
+|   | |     | `-DeclRefExpr 0x7fa375895800 <col:17> 'int' EnumConstant 0x7fa37588c988 'access_denied_user_response' 'int'
+|   | |     `-<<<NULL>>>
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fa375895d28 <line:184:3, line:185:57>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa375895a70 <line:184:7, col:46> 'int' '&&'
+|   | | |-BinaryOperator 0x7fa3758959a0 <col:7, col:15> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fa375895988 <col:7> 'int' <IntegralCast>
+|   | | | | `-ImplicitCastExpr 0x7fa375895970 <col:7> 'har':'enum har' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7fa375895920 <col:7> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | | | `-DeclRefExpr 0x7fa375895948 <col:15> 'int' EnumConstant 0x7fa37586f5f8 'he_memory_too_small' 'int'
+|   | | `-BinaryOperator 0x7fa375895a48 <col:38, col:46> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fa375895a30 <col:38> 'int' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fa375895a18 <col:38> 'har':'enum har' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fa3758959c8 <col:38> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | |   `-DeclRefExpr 0x7fa3758959f0 <col:46> 'int' EnumConstant 0x7fa37586fa98 'ha_no_error' 'int'
+|   | |-BinaryOperator 0x7fa375895d00 <line:185:5, col:57> 'har':'enum har' '='
+|   | | |-DeclRefExpr 0x7fa375895a98 <col:5> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | | `-CallExpr 0x7fa375895c40 <col:12, col:57> 'har':'enum har'
+|   | |   |-ImplicitCastExpr 0x7fa375895c28 <col:12> 'har (*)(char *, size_t, realm_type, har)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fa375895ac0 <col:12> 'har (char *, size_t, realm_type, har)' Function 0x7fa375870150 'has_www_auth' 'har (char *, size_t, realm_type, har)'
+|   | |   |-ImplicitCastExpr 0x7fa375895c88 <col:25> 'char *' <ArrayToPointerDecay>
+|   | |   | `-StringLiteral 0x7fa375895ae8 <col:25> 'char [1]' lvalue ""
+|   | |   |-ImplicitCastExpr 0x7fa375895ca0 <col:29> 'size_t':'unsigned int' <IntegralCast>
+|   | |   | `-IntegerLiteral 0x7fa375895b10 <col:29> 'int' 1
+|   | |   |-ImplicitCastExpr 0x7fa375895cd0 <col:32, col:37> 'realm_type':'enum realm_type' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fa375895cb8 <col:32, col:37> 'int' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7fa375895b70 <col:32, col:37> 'int' lvalue ->internal_realm 0x7fa37588c6f8
+|   | |   |     `-ImplicitCastExpr 0x7fa375895b58 <col:32> 'request *' <LValueToRValue>
+|   | |   |       `-DeclRefExpr 0x7fa375895b30 <col:32> 'request *' lvalue ParmVar 0x7fa375893f68 'req' 'request *'
+|   | |   `-ImplicitCastExpr 0x7fa375895ce8 <col:53> 'har':'enum har' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fa375895ba8 <col:53> 'har':'enum har' lvalue Var 0x7fa3758943a0 'resp' 'har':'enum har'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa375895db8 <line:186:3, col:10>
+|     `-ImplicitCastExpr 0x7fa375895da0 <col:10> 'enum user_response':'enum user_response' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fa375895d88 <col:10> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa375895d60 <col:10> 'int' lvalue Var 0x7fa375894508 'ret_val' 'int'
+|-FunctionDecl 0x7fa375894658 <line:170:23> col:23 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+| |-ParmVarDecl 0x7fa3758946f8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7fa375894760 <col:23> Implicit
+|-FunctionDecl 0x7fa375895eb8 prev 0x7fa37588d9d8 <line:189:1, line:212:1> line:190:1 used authent_author 'int (request *)'
+| |-ParmVarDecl 0x7fa375895e28 <col:16, col:25> col:25 used req 'request *'
+| |-CompoundStmt 0x7fa375897538 <line:191:1, line:212:1>
+| | |-DeclStmt 0x7fa375896030 <line:192:3, col:22>
+| | | `-VarDecl 0x7fa375895fd0 <col:3, col:17> col:17 used realm 'struct realm *'
+| | |-DeclStmt 0x7fa375896158 <line:193:3, col:32>
+| | | `-VarDecl 0x7fa375896060 <col:3, col:31> col:9 used user_name 'char *' cinit
+| | |   `-ImplicitCastExpr 0x7fa375896140 <col:21, col:31> 'char *' <NullToPointer>
+| | |     `-ParenExpr 0x7fa375896120 <col:21, col:31> 'void *'
+| | |       `-CStyleCastExpr 0x7fa3758960f8 <col:22, col:30> 'void *' <NullToPointer>
+| | |         `-IntegerLiteral 0x7fa3758960c0 <col:30> 'int' 0
+| | |-DeclStmt 0x7fa375896290 <line:194:3, col:44>
+| | | `-VarDecl 0x7fa375896198 <col:3, col:43> col:21 used user_item 'struct user_info *' cinit
+| | |   `-ImplicitCastExpr 0x7fa375896278 <col:33, col:43> 'struct user_info *' <NullToPointer>
+| | |     `-ParenExpr 0x7fa375896258 <col:33, col:43> 'void *'
+| | |       `-CStyleCastExpr 0x7fa375896230 <col:34, col:42> 'void *' <NullToPointer>
+| | |         `-IntegerLiteral 0x7fa3758961f8 <col:42> 'int' 0
+| | |-DeclStmt 0x7fa375896340 <line:195:3, col:14>
+| | | `-VarDecl 0x7fa3758962c0 <col:3, col:13> col:7 used res 'int' cinit
+| | |   `-IntegerLiteral 0x7fa375896320 <col:13> 'int' 0
+| | |-GCCAsmStmt 0x7fa375896380 <line:196:3, col:10>
+| | |-BinaryOperator 0x7fa375896430 <line:197:3, col:11> 'struct realm *' '='
+| | | |-DeclRefExpr 0x7fa3758963c8 <col:3> 'struct realm *' lvalue Var 0x7fa375895fd0 'realm' 'struct realm *'
+| | | `-ImplicitCastExpr 0x7fa375896418 <col:11> 'struct realm *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa3758963f0 <col:11> 'struct realm *' lvalue Var 0x7fa37588daa8 'realms' 'struct realm *'
+| | |-IfStmt 0x7fa375896c30 <line:198:3, line:201:3>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa375896660 <line:198:7, col:47> 'int' '=='
+| | | | |-CallExpr 0x7fa3758965a8 <col:7, col:42> 'int'
+| | | | | |-ImplicitCastExpr 0x7fa375896590 <col:7> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+| | | | | | `-DeclRefExpr 0x7fa375896458 <col:7> '<builtin fn type>' Function 0x7fa37588f0a0 '__builtin_strcmp' 'int (const char *, const char *)'
+| | | | | |-ImplicitCastExpr 0x7fa3758965f8 <col:24> 'const char *' <BitCast>
+| | | | | | `-ImplicitCastExpr 0x7fa3758965e0 <col:24> 'char *' <ArrayToPointerDecay>
+| | | | | |   `-StringLiteral 0x7fa3758964b8 <col:24> 'char [4]' lvalue "Wsd"
+| | | | | `-ImplicitCastExpr 0x7fa375896628 <col:31, col:38> 'const char *' <BitCast>
+| | | | |   `-ImplicitCastExpr 0x7fa375896610 <col:31, col:38> 'char *' <LValueToRValue>
+| | | | |     `-MemberExpr 0x7fa375896528 <col:31, col:38> 'char *' lvalue ->name 0x7fa37588cde8
+| | | | |       `-ImplicitCastExpr 0x7fa375896510 <col:31> 'struct realm *' <LValueToRValue>
+| | | | |         `-DeclRefExpr 0x7fa3758964e8 <col:31> 'struct realm *' lvalue Var 0x7fa375895fd0 'realm' 'struct realm *'
+| | | | `-IntegerLiteral 0x7fa375896640 <col:47> 'int' 0
+| | | |-CompoundStmt 0x7fa375896c10 <col:50, line:201:3>
+| | | | |-BinaryOperator 0x7fa375896728 <line:199:5, col:27> 'int' '='
+| | | | | |-MemberExpr 0x7fa3758966c8 <col:5, col:10> 'int' lvalue ->internal_realm 0x7fa37588c6f8
+| | | | | | `-ImplicitCastExpr 0x7fa3758966b0 <col:5> 'request *' <LValueToRValue>
+| | | | | |   `-DeclRefExpr 0x7fa375896688 <col:5> 'request *' lvalue ParmVar 0x7fa375895e28 'req' 'request *'
+| | | | | `-DeclRefExpr 0x7fa375896700 <col:27> 'int' EnumConstant 0x7fa37586fd38 'ws_realm' 'int'
+| | | | `-CallExpr 0x7fa3758967d8 <line:200:5, col:25> 'int'
+| | | |   |-ImplicitCastExpr 0x7fa3758967c0 <col:5> 'int (*)(char **)' <FunctionToPointerDecay>
+| | | |   | `-DeclRefExpr 0x7fa375896750 <col:5> 'int (char **)' Function 0x7fa3758915c8 'is_digest' 'int (char **)'
+| | | |   `-UnaryOperator 0x7fa3758967a0 <col:15, col:16> 'char **' prefix '&'
+| | | |     `-DeclRefExpr 0x7fa375896778 <col:16> 'char *' lvalue Var 0x7fa375896060 'user_name' 'char *'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fa3758971a8 <line:202:3, line:207:3>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa375896e50 <line:202:7, col:56> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fa375896e38 <col:7, col:52> 'int' <IntegralCast>
+| | | | | `-CallExpr 0x7fa375896dc0 <col:7, col:52> 'enum user_response':'enum user_response'
+| | | | |   |-ImplicitCastExpr 0x7fa375896da8 <col:7> 'enum user_response (*)(request *, char **, struct user_info **)' <FunctionToPointerDecay>
+| | | | |   | `-DeclRefExpr 0x7fa375896c68 <col:7> 'enum user_response (request *, char **, struct user_info **)' Function 0x7fa3758941b0 'authenticate_user' 'enum user_response (request *, char **, struct user_info **)'
+| | | | |   |-ImplicitCastExpr 0x7fa375896e00 <col:25> 'request *' <LValueToRValue>
+| | | | |   | `-DeclRefExpr 0x7fa375896c90 <col:25> 'request *' lvalue ParmVar 0x7fa375895e28 'req' 'request *'
+| | | | |   |-UnaryOperator 0x7fa375896ce0 <col:30, col:31> 'char **' prefix '&'
+| | | | |   | `-DeclRefExpr 0x7fa375896cb8 <col:31> 'char *' lvalue Var 0x7fa375896060 'user_name' 'char *'
+| | | | |   `-UnaryOperator 0x7fa375896d28 <col:42, col:43> 'struct user_info **' prefix '&'
+| | | | |     `-DeclRefExpr 0x7fa375896d00 <col:43> 'struct user_info *' lvalue Var 0x7fa375896198 'user_item' 'struct user_info *'
+| | | | `-IntegerLiteral 0x7fa375896e18 <col:56> 'int' 0
+| | | |-CompoundStmt 0x7fa375897180 <col:59, line:207:3>
+| | | | |-IfStmt 0x7fa375897058 <line:203:5, line:204:19>
+| | | | | |-<<<NULL>>>
+| | | | | |-<<<NULL>>>
+| | | | | |-BinaryOperator 0x7fa375896f50 <line:203:9, col:32> 'int' '!='
+| | | | | | |-ImplicitCastExpr 0x7fa375896f20 <col:9> 'char *' <LValueToRValue>
+| | | | | | | `-DeclRefExpr 0x7fa375896e78 <col:9> 'char *' lvalue Var 0x7fa375896060 'user_name' 'char *'
+| | | | | | `-ImplicitCastExpr 0x7fa375896f38 <col:22, col:32> 'char *' <BitCast>
+| | | | | |   `-ParenExpr 0x7fa375896f00 <col:22, col:32> 'void *'
+| | | | | |     `-CStyleCastExpr 0x7fa375896ed8 <col:23, col:31> 'void *' <NullToPointer>
+| | | | | |       `-IntegerLiteral 0x7fa375896ea0 <col:31> 'int' 0
+| | | | | |-BinaryOperator 0x7fa375897030 <line:204:7, col:19> 'char *' '='
+| | | | | | |-MemberExpr 0x7fa375896fb8 <col:7, col:12> 'char *' lvalue ->user 0x7fa37588c5d8
+| | | | | | | `-ImplicitCastExpr 0x7fa375896fa0 <col:7> 'request *' <LValueToRValue>
+| | | | | | |   `-DeclRefExpr 0x7fa375896f78 <col:7> 'request *' lvalue ParmVar 0x7fa375895e28 'req' 'request *'
+| | | | | | `-ImplicitCastExpr 0x7fa375897018 <col:19> 'char *' <LValueToRValue>
+| | | | | |   `-DeclRefExpr 0x7fa375896ff0 <col:19> 'char *' lvalue Var 0x7fa375896060 'user_name' 'char *'
+| | | | | `-<<<NULL>>>
+| | | | |-BinaryOperator 0x7fa3758970f8 <line:205:5, col:12> 'int' '='
+| | | | | |-DeclRefExpr 0x7fa375897090 <col:5> 'int' lvalue Var 0x7fa3758962c0 'res' 'int'
+| | | | | `-UnaryOperator 0x7fa3758970d8 <col:11, col:12> 'int' prefix '-'
+| | | | |   `-IntegerLiteral 0x7fa3758970b8 <col:12> 'int' 2
+| | | | `-GotoStmt 0x7fa375897168 <line:206:5, col:10> 'authent_author_return' 0x7fa375897120
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fa375897490 <line:208:3, line:209:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa3758973d8 <line:208:7, col:55> 'int' '<'
+| | | | |-CallExpr 0x7fa375897320 <col:7, col:51> 'int'
+| | | | | |-ImplicitCastExpr 0x7fa375897308 <col:7> 'int (*)(const struct user_info *, const struct realm_group *)' <FunctionToPointerDecay>
+| | | | | | `-DeclRefExpr 0x7fa3758971e0 <col:7> 'int (const struct user_info *, const struct realm_group *)' Function 0x7fa37588f7a8 'is_member_of_groups' 'int (const struct user_info *, const struct realm_group *)'
+| | | | | |-ImplicitCastExpr 0x7fa375897370 <col:27> 'const struct user_info *' <BitCast>
+| | | | | | `-ImplicitCastExpr 0x7fa375897358 <col:27> 'struct user_info *' <LValueToRValue>
+| | | | | |   `-DeclRefExpr 0x7fa375897208 <col:27> 'struct user_info *' lvalue Var 0x7fa375896198 'user_item' 'struct user_info *'
+| | | | | `-ImplicitCastExpr 0x7fa3758973a0 <col:38, col:45> 'const struct realm_group *' <BitCast>
+| | | | |   `-ImplicitCastExpr 0x7fa375897388 <col:38, col:45> 'struct realm_group *' <LValueToRValue>
+| | | | |     `-MemberExpr 0x7fa375897270 <col:38, col:45> 'struct realm_group *' lvalue ->groups 0x7fa37588ceb8
+| | | | |       `-ImplicitCastExpr 0x7fa375897258 <col:38> 'struct realm *' <LValueToRValue>
+| | | | |         `-DeclRefExpr 0x7fa375897230 <col:38> 'struct realm *' lvalue Var 0x7fa375895fd0 'realm' 'struct realm *'
+| | | | `-IntegerLiteral 0x7fa3758973b8 <col:55> 'int' 0
+| | | |-BinaryOperator 0x7fa375897468 <line:209:5, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7fa375897400 <col:5> 'int' lvalue Var 0x7fa3758962c0 'res' 'int'
+| | | | `-UnaryOperator 0x7fa375897448 <col:11, col:12> 'int' prefix '-'
+| | | |   `-IntegerLiteral 0x7fa375897428 <col:12> 'int' 1
+| | | `-<<<NULL>>>
+| | `-LabelStmt 0x7fa375897520 <line:210:1, line:211:10> 'authent_author_return'
+| |   `-ReturnStmt 0x7fa375897508 <col:3, col:10>
+| |     `-ImplicitCastExpr 0x7fa3758974f0 <col:10> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa3758974c8 <col:10> 'int' lvalue Var 0x7fa3758962c0 'res' 'int'
+| `-NoInlineAttr 0x7fa375895f60 <line:189:21>
+|-VarDecl 0x7fa3758975b0 <line:214:1, col:5> col:5 used good0 'int'
+|-VarDecl 0x7fa375897628 <col:1, col:12> col:12 used good1 'int'
+|-VarDecl 0x7fa3758976a0 <col:1, col:19> col:19 used good2 'int'
+|-FunctionDecl 0x7fa3758977b8 prev 0x7fa3758905f8 <line:216:1, line:222:1> line:217:7 used foo 'char *(void)'
+| |-CompoundStmt 0x7fa3758979b0 <line:218:1, line:222:1>
+| | |-GCCAsmStmt 0x7fa3758978c8 <line:219:3, col:10>
+| | |-UnaryOperator 0x7fa375897938 <line:220:3, col:8> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fa375897910 <col:3> 'int' lvalue Var 0x7fa3758975b0 'good0' 'int'
+| | `-ReturnStmt 0x7fa375897998 <line:221:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa375897980 <col:10> 'char *' <ArrayToPointerDecay>
+| |     `-StringLiteral 0x7fa375897958 <col:10> 'char [1]' lvalue ""
+| `-NoInlineAttr 0x7fa375897858 <line:216:17>
+|-FunctionDecl 0x7fa375897a70 prev 0x7fa37588c3c8 <line:224:1, line:230:1> line:225:7 used ha_get_string_value 'char *(void)'
+| |-CompoundStmt 0x7fa375897cb8 <line:226:1, line:230:1>
+| | |-GCCAsmStmt 0x7fa375897b80 <line:227:3, col:10>
+| | |-UnaryOperator 0x7fa375897c00 <line:228:3, col:8> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fa375897bc8 <col:3> 'int' lvalue Var 0x7fa375897628 'good1' 'int'
+| | `-ReturnStmt 0x7fa375897ca0 <line:229:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa375897c88 <col:10> 'char *' <ArrayToPointerDecay>
+| |     `-StringLiteral 0x7fa375897c58 <col:10> 'char [2]' lvalue "f"
+| `-NoInlineAttr 0x7fa375897b10 <line:224:17>
+|-FunctionDecl 0x7fa375897f70 prev 0x7fa37588c1f0 <line:232:1, line:240:1> line:233:5 used has_auth_user 'har (const char *, const char *, realm_type, char *, size_t)'
+| |-ParmVarDecl 0x7fa375897cf8 <col:19, col:31> col:31 used a 'const char *'
+| |-ParmVarDecl 0x7fa375897d70 <col:34, col:46> col:46 used b 'const char *'
+| |-ParmVarDecl 0x7fa375897de0 <col:49, col:60> col:60 used c 'realm_type':'enum realm_type'
+| |-ParmVarDecl 0x7fa375897e58 <col:63, col:69> col:69 used d 'char *'
+| |-ParmVarDecl 0x7fa375897ec8 <col:72, col:79> col:79 used e 'size_t':'unsigned int'
+| |-CompoundStmt 0x7fa375898898 <line:234:1, line:240:1>
+| | |-GCCAsmStmt 0x7fa3758980a8 <line:235:3, col:10>
+| | |-IfStmt 0x7fa375898808 <line:236:3, line:238:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa375898638 <line:236:7, line:237:15> 'int' '||'
+| | | | |-BinaryOperator 0x7fa375898570 <line:236:7, col:68> 'int' '||'
+| | | | | |-BinaryOperator 0x7fa375898470 <col:7, col:48> 'int' '||'
+| | | | | | |-BinaryOperator 0x7fa375898388 <col:7, col:38> 'int' '||'
+| | | | | | | |-BinaryOperator 0x7fa3758982c0 <col:7, col:28> 'int' '||'
+| | | | | | | | |-BinaryOperator 0x7fa375898198 <col:7, col:13> 'int' '!='
+| | | | | | | | | |-ImplicitCastExpr 0x7fa375898180 <col:7, col:8> 'int' <IntegralCast>
+| | | | | | | | | | `-ImplicitCastExpr 0x7fa375898168 <col:7, col:8> 'char' <LValueToRValue>
+| | | | | | | | | |   `-UnaryOperator 0x7fa375898130 <col:7, col:8> 'const char' lvalue prefix '*'
+| | | | | | | | | |     `-ImplicitCastExpr 0x7fa375898118 <col:8> 'const char *' <LValueToRValue>
+| | | | | | | | | |       `-DeclRefExpr 0x7fa3758980f0 <col:8> 'const char *' lvalue ParmVar 0x7fa375897cf8 'a' 'const char *'
+| | | | | | | | | `-CharacterLiteral 0x7fa375898150 <col:13> 'int' 122
+| | | | | | | | `-BinaryOperator 0x7fa375898298 <col:20, col:28> 'int' '!='
+| | | | | | | |   |-ImplicitCastExpr 0x7fa375898280 <col:20, col:23> 'int' <IntegralCast>
+| | | | | | | |   | `-ImplicitCastExpr 0x7fa375898268 <col:20, col:23> 'char' <LValueToRValue>
+| | | | | | | |   |   `-ArraySubscriptExpr 0x7fa375898220 <col:20, col:23> 'const char' lvalue
+| | | | | | | |   |     |-ImplicitCastExpr 0x7fa375898208 <col:20> 'const char *' <LValueToRValue>
+| | | | | | | |   |     | `-DeclRefExpr 0x7fa3758981c0 <col:20> 'const char *' lvalue ParmVar 0x7fa375897cf8 'a' 'const char *'
+| | | | | | | |   |     `-IntegerLiteral 0x7fa3758981e8 <col:22> 'int' 1
+| | | | | | | |   `-IntegerLiteral 0x7fa375898248 <col:28> 'int' 0
+| | | | | | | `-BinaryOperator 0x7fa375898360 <col:33, col:38> 'int' '!='
+| | | | | | |   |-ImplicitCastExpr 0x7fa375898330 <col:33> 'const char *' <LValueToRValue>
+| | | | | | |   | `-DeclRefExpr 0x7fa3758982e8 <col:33> 'const char *' lvalue ParmVar 0x7fa375897d70 'b' 'const char *'
+| | | | | | |   `-ImplicitCastExpr 0x7fa375898348 <col:38> 'const char *' <NullToPointer>
+| | | | | | |     `-IntegerLiteral 0x7fa375898310 <col:38> 'int' 0
+| | | | | | `-BinaryOperator 0x7fa375898448 <col:43, col:48> 'int' '!='
+| | | | | |   |-ImplicitCastExpr 0x7fa375898418 <col:43> 'unsigned int' <IntegralCast>
+| | | | | |   | `-ImplicitCastExpr 0x7fa375898400 <col:43> 'realm_type':'enum realm_type' <LValueToRValue>
+| | | | | |   |   `-DeclRefExpr 0x7fa3758983b0 <col:43> 'realm_type':'enum realm_type' lvalue ParmVar 0x7fa375897de0 'c' 'realm_type':'enum realm_type'
+| | | | | |   `-ImplicitCastExpr 0x7fa375898430 <col:48> 'unsigned int' <IntegralCast>
+| | | | | |     `-DeclRefExpr 0x7fa3758983d8 <col:48> 'int' EnumConstant 0x7fa37586fcf0 'axis_realm' 'int'
+| | | | | `-BinaryOperator 0x7fa375898548 <col:62, col:68> 'int' '!='
+| | | | |   |-ImplicitCastExpr 0x7fa375898530 <col:62, col:63> 'int' <IntegralCast>
+| | | | |   | `-ImplicitCastExpr 0x7fa375898518 <col:62, col:63> 'char' <LValueToRValue>
+| | | | |   |   `-UnaryOperator 0x7fa3758984d8 <col:62, col:63> 'char' lvalue prefix '*'
+| | | | |   |     `-ImplicitCastExpr 0x7fa3758984c0 <col:63> 'char *' <LValueToRValue>
+| | | | |   |       `-DeclRefExpr 0x7fa375898498 <col:63> 'char *' lvalue ParmVar 0x7fa375897e58 'd' 'char *'
+| | | | |   `-IntegerLiteral 0x7fa3758984f8 <col:68> 'int' 0
+| | | | `-BinaryOperator 0x7fa375898610 <line:237:10, col:15> 'int' '!='
+| | | |   |-ImplicitCastExpr 0x7fa3758985e0 <col:10> 'size_t':'unsigned int' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7fa375898598 <col:10> 'size_t':'unsigned int' lvalue ParmVar 0x7fa375897ec8 'e' 'size_t':'unsigned int'
+| | | |   `-ImplicitCastExpr 0x7fa3758985f8 <col:15> 'unsigned int' <IntegralCast>
+| | | |     `-IntegerLiteral 0x7fa3758985c0 <col:15> 'int' 1
+| | | |-CallExpr 0x7fa3758987e0 <line:238:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fa3758987c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fa375898778 <col:5> '<builtin fn type>' Function 0x7fa375898690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fa375898880 <line:239:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa375898868 <col:10> 'har':'enum har' <IntegralCast>
+| |     `-DeclRefExpr 0x7fa375898840 <col:10> 'int' EnumConstant 0x7fa37586fa98 'ha_no_error' 'int'
+| `-NoInlineAttr 0x7fa375898038 <line:232:17>
+|-FunctionDecl 0x7fa375898690 <line:238:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fa375898730 <col:5> Implicit
+|-FunctionDecl 0x7fa375898ac8 prev 0x7fa375870150 <line:242:1, line:248:1> line:243:5 used has_www_auth 'har (char *, size_t, realm_type, har)'
+| |-ParmVarDecl 0x7fa3758988d8 <col:18, col:24> col:24 used a 'char *'
+| |-ParmVarDecl 0x7fa375898948 <col:27, col:34> col:34 used b 'size_t':'unsigned int'
+| |-ParmVarDecl 0x7fa3758989b8 <col:37, col:48> col:48 used c 'realm_type':'enum realm_type'
+| |-ParmVarDecl 0x7fa375898a28 <col:51, col:55> col:55 used d 'har':'enum har'
+| |-CompoundStmt 0x7fa375898f30 <line:244:1, line:248:1>
+| | |-CStyleCastExpr 0x7fa375898e30 <line:245:3, col:18> 'void' <ToVoid>
+| | | `-ParenExpr 0x7fa375898e10 <col:9, col:18> 'unsigned int'
+| | |   `-BinaryOperator 0x7fa375898da8 <col:10, col:17> 'unsigned int' '+'
+| | |     |-BinaryOperator 0x7fa375898d28 <col:10, col:15> 'unsigned int' '+'
+| | |     | |-BinaryOperator 0x7fa375898ca8 <col:10, col:13> 'unsigned int' '+'
+| | |     | | |-ImplicitCastExpr 0x7fa375898c78 <col:10, col:11> 'unsigned int' <IntegralCast>
+| | |     | | | `-ImplicitCastExpr 0x7fa375898c60 <col:10, col:11> 'char' <LValueToRValue>
+| | |     | | |   `-UnaryOperator 0x7fa375898c18 <col:10, col:11> 'char' lvalue prefix '*'
+| | |     | | |     `-ImplicitCastExpr 0x7fa375898c00 <col:11> 'char *' <LValueToRValue>
+| | |     | | |       `-DeclRefExpr 0x7fa375898bd0 <col:11> 'char *' lvalue ParmVar 0x7fa3758988d8 'a' 'char *'
+| | |     | | `-ImplicitCastExpr 0x7fa375898c90 <col:13> 'size_t':'unsigned int' <LValueToRValue>
+| | |     | |   `-DeclRefExpr 0x7fa375898c38 <col:13> 'size_t':'unsigned int' lvalue ParmVar 0x7fa375898948 'b' 'size_t':'unsigned int'
+| | |     | `-ImplicitCastExpr 0x7fa375898d10 <col:15> 'unsigned int' <IntegralCast>
+| | |     |   `-ImplicitCastExpr 0x7fa375898cf8 <col:15> 'realm_type':'enum realm_type' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x7fa375898cd0 <col:15> 'realm_type':'enum realm_type' lvalue ParmVar 0x7fa3758989b8 'c' 'realm_type':'enum realm_type'
+| | |     `-ImplicitCastExpr 0x7fa375898d90 <col:17> 'unsigned int' <IntegralCast>
+| | |       `-ImplicitCastExpr 0x7fa375898d78 <col:17> 'har':'enum har' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fa375898d50 <col:17> 'har':'enum har' lvalue ParmVar 0x7fa375898a28 'd' 'har':'enum har'
+| | |-GCCAsmStmt 0x7fa375898e80 <line:246:3, col:10>
+| | `-CallExpr 0x7fa375898f08 <line:247:3, col:20> 'void'
+| |   `-ImplicitCastExpr 0x7fa375898ef0 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |     `-DeclRefExpr 0x7fa375898ec8 <col:3> '<builtin fn type>' Function 0x7fa375898690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| `-NoInlineAttr 0x7fa375898b88 <line:242:17>
+|-VarDecl 0x7fa375898f70 <line:251:1, col:24> col:7 used strdupped_user 'char *' cinit
+| `-ImplicitCastExpr 0x7fa375899038 <col:24> 'char *' <ArrayToPointerDecay>
+|   `-StringLiteral 0x7fa375899008 <col:24> 'char [3]' lvalue "me"
+|-FunctionDecl 0x7fa3758990f8 prev 0x7fa3758907c8 <line:252:1, line:260:1> line:253:7 used g_strdup 'char *(const char *)'
+| |-ParmVarDecl 0x7fa375899068 <col:17, col:29> col:29 used str 'const char *'
+| |-CompoundStmt 0x7fa375899478 <line:254:1, line:260:1>
+| | |-GCCAsmStmt 0x7fa375899220 <line:255:3, col:10>
+| | |-IfStmt 0x7fa3758993a0 <line:256:3, line:257:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa375899310 <line:256:7, col:15> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fa3758992f8 <col:7, col:8> 'int' <IntegralCast>
+| | | | | `-ImplicitCastExpr 0x7fa3758992e0 <col:7, col:8> 'char' <LValueToRValue>
+| | | | |   `-UnaryOperator 0x7fa3758992a8 <col:7, col:8> 'const char' lvalue prefix '*'
+| | | | |     `-ImplicitCastExpr 0x7fa375899290 <col:8> 'const char *' <LValueToRValue>
+| | | | |       `-DeclRefExpr 0x7fa375899268 <col:8> 'const char *' lvalue ParmVar 0x7fa375899068 'str' 'const char *'
+| | | | `-CharacterLiteral 0x7fa3758992c8 <col:15> 'int' 102
+| | | |-CallExpr 0x7fa375899378 <line:257:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fa375899360 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fa375899338 <col:5> '<builtin fn type>' Function 0x7fa375898690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | |-UnaryOperator 0x7fa375899400 <line:258:3, col:8> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fa3758993d8 <col:3> 'int' lvalue Var 0x7fa3758976a0 'good2' 'int'
+| | `-ReturnStmt 0x7fa375899460 <line:259:3, col:10>
+| |   `-ImplicitCastExpr 0x7fa375899448 <col:10> 'char *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fa375899420 <col:10> 'char *' lvalue Var 0x7fa375898f70 'strdupped_user' 'char *'
+| |-NoInlineAttr 0x7fa3758991a0 <line:252:41>
+| `-RestrictAttr 0x7fa3758991e8 <col:16> malloc
+|-FunctionDecl 0x7fa375899548 prev 0x7fa375891c50 <line:262:1, line:268:1> line:263:6 used g_free 'void (void *)'
+| |-ParmVarDecl 0x7fa3758994c0 <col:14, col:21> col:21 used mem 'void *'
+| |-CompoundStmt 0x7fa375899788 <line:264:1, line:268:1>
+| | |-CStyleCastExpr 0x7fa375899688 <line:265:3, col:9> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x7fa375899670 <col:9> 'void *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fa375899638 <col:9> 'void *' lvalue ParmVar 0x7fa3758994c0 'mem' 'void *'
+| | |-GCCAsmStmt 0x7fa3758996d8 <line:266:3, col:10>
+| | `-CallExpr 0x7fa375899760 <line:267:3, col:20> 'void'
+| |   `-ImplicitCastExpr 0x7fa375899748 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |     `-DeclRefExpr 0x7fa375899720 <col:3> '<builtin fn type>' Function 0x7fa375898690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| `-NoInlineAttr 0x7fa3758995f0 <line:262:29>
+|-VarDecl 0x7fa3758997d0 <line:270:1, col:80> col:18 used me 'struct user_info':'struct user_info' cinit
+| `-InitListExpr 0x7fa375899a68 <col:23, col:80> 'struct user_info':'struct user_info'
+|   |-ImplicitCastExpr 0x7fa375899ac8 <col:33> 'char *' <ArrayToPointerDecay>
+|   | `-StringLiteral 0x7fa375899830 <col:33> 'char [3]' lvalue "me"
+|   |-IntegerLiteral 0x7fa3758998a0 <col:52> 'int' 1
+|   |-InitListExpr 0x7fa375899ae0 <col:65, col:68> 'int [128]'
+|   | |-array filler
+|   | | `-ImplicitValueInitExpr 0x7fa375899b28 <<invalid sloc>> 'int'
+|   | `-IntegerLiteral 0x7fa375899900 <col:66> 'int' 42
+|   `-ImplicitCastExpr 0x7fa375899b38 <col:79> 'struct user_info *' <NullToPointer>
+|     `-IntegerLiteral 0x7fa3758999a8 <col:79> 'int' 0
+|-VarDecl 0x7fa375899b70 <line:271:1, col:52> col:18 used you 'struct user_info':'struct user_info' cinit
+| `-InitListExpr 0x7fa37589a118 <col:24, col:52> 'struct user_info':'struct user_info'
+|   |-ImplicitCastExpr 0x7fa37589a178 <col:34> 'char *' <ArrayToPointerDecay>
+|   | `-StringLiteral 0x7fa375899bd0 <col:34> 'char [4]' lvalue "you"
+|   |-ImplicitValueInitExpr 0x7fa37589a190 <<invalid sloc>> 'int'
+|   |-ImplicitValueInitExpr 0x7fa37589a1a0 <<invalid sloc>> 'int [128]'
+|   `-UnaryOperator 0x7fa37589a068 <col:49, col:50> 'struct user_info *' prefix '&'
+|     `-DeclRefExpr 0x7fa37589a040 <col:50> 'struct user_info':'struct user_info' lvalue Var 0x7fa3758997d0 'me' 'struct user_info':'struct user_info'
+|-VarDecl 0x7fa37589a1d0 <line:272:1, col:64> col:20 used xgroups 'struct realm_group':'struct realm_group' cinit
+| `-InitListExpr 0x7fa37589a3b8 <col:30, col:64> 'struct realm_group':'struct realm_group'
+|   |-ImplicitCastExpr 0x7fa37589a410 <col:40> 'char *' <ArrayToPointerDecay>
+|   | `-StringLiteral 0x7fa37589a230 <col:40> 'char [2]' lvalue "*"
+|   |-IntegerLiteral 0x7fa37589a2a0 <col:51> 'int' 42
+|   `-ImplicitCastExpr 0x7fa37589a428 <col:63> 'struct realm_group *' <NullToPointer>
+|     `-IntegerLiteral 0x7fa37589a300 <col:63> 'int' 0
+`-FunctionDecl 0x7fa37589a508 <line:274:1, line:287:1> line:274:5 main 'int (void)'
+  `-CompoundStmt 0x7fa37589b710 <line:275:1, line:287:1>
+    |-DeclStmt 0x7fa37589a668 <line:276:3, col:24>
+    | `-VarDecl 0x7fa37589a5c0 <col:3, col:21> col:9 used orig_user 'char *' cinit
+    |   `-ImplicitCastExpr 0x7fa37589a650 <col:21> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fa37589a620 <col:21> 'char [2]' lvalue "?"
+    |-DeclStmt 0x7fa37589aa08 <line:277:3, col:84>
+    | `-VarDecl 0x7fa37589a6a0 <col:3, col:83> col:16 used r 'struct realm':'struct realm' cinit
+    |   `-InitListExpr 0x7fa37589a960 <col:20, col:83> 'struct realm':'struct realm'
+    |     |-ImplicitCastExpr 0x7fa37589a9c0 <col:30> 'char *' <ArrayToPointerDecay>
+    |     | `-StringLiteral 0x7fa37589a700 <col:30> 'char [2]' lvalue "x"
+    |     |-ImplicitCastExpr 0x7fa37589a9d8 <col:44> 'char *' <ArrayToPointerDecay>
+    |     | `-StringLiteral 0x7fa37589a7a8 <col:44> 'char [7]' lvalue "space?"
+    |     |-UnaryOperator 0x7fa37589a840 <col:64, col:65> 'struct realm_group *' prefix '&'
+    |     | `-DeclRefExpr 0x7fa37589a818 <col:65> 'struct realm_group':'struct realm_group' lvalue Var 0x7fa37589a1d0 'xgroups' 'struct realm_group':'struct realm_group'
+    |     `-ImplicitCastExpr 0x7fa37589a9f0 <col:82> 'struct realm *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fa37589a8a0 <col:82> 'int' 0
+    |-DeclStmt 0x7fa37589ad60 <line:278:3, line:279:34>
+    | `-VarDecl 0x7fa37589aa30 <line:278:3, line:279:33> line:278:11 used req 'request':'request' cinit
+    |   `-InitListExpr 0x7fa37589aca0 <col:17, line:279:33> 'request':'request'
+    |     |-ImplicitValueInitExpr 0x7fa37589ad50 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitCastExpr 0x7fa37589ad08 <line:278:27> 'char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa37589aa90 <col:27> 'char *' lvalue Var 0x7fa37589a5c0 'orig_user' 'char *'
+    |     |-ImplicitCastExpr 0x7fa37589ad20 <col:47> 'char *' <ArrayToPointerDecay>
+    |     | `-StringLiteral 0x7fa37589aaf8 <col:47> 'char [2]' lvalue "!"
+    |     |-ImplicitCastExpr 0x7fa37589ad38 <col:63> 'char *' <ArrayToPointerDecay>
+    |     | `-StringLiteral 0x7fa37589ab68 <col:63> 'char [2]' lvalue "z"
+    |     `-DeclRefExpr 0x7fa37589abd8 <line:279:23> 'int' EnumConstant 0x7fa37586fcf0 'axis_realm' 'int'
+    |-BinaryOperator 0x7fa37589ade8 <line:280:3, col:13> 'struct realm *' '='
+    | |-DeclRefExpr 0x7fa37589ad78 <col:3> 'struct realm *' lvalue Var 0x7fa37588daa8 'realms' 'struct realm *'
+    | `-UnaryOperator 0x7fa37589adc8 <col:12, col:13> 'struct realm *' prefix '&'
+    |   `-DeclRefExpr 0x7fa37589ada0 <col:13> 'struct realm':'struct realm' lvalue Var 0x7fa37589a6a0 'r' 'struct realm':'struct realm'
+    |-BinaryOperator 0x7fa37589ae80 <line:281:3, col:12> 'struct user_info *' '='
+    | |-DeclRefExpr 0x7fa37589ae10 <col:3> 'struct user_info *' lvalue Var 0x7fa37588dbc8 'users' 'struct user_info *'
+    | `-UnaryOperator 0x7fa37589ae60 <col:11, col:12> 'struct user_info *' prefix '&'
+    |   `-DeclRefExpr 0x7fa37589ae38 <col:12> 'struct user_info':'struct user_info' lvalue Var 0x7fa375899b70 'you' 'struct user_info':'struct user_info'
+    |-IfStmt 0x7fa37589b500 <line:282:3, line:285:22>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa37589b470 <line:282:7, line:284:32> 'int' '||'
+    | | |-BinaryOperator 0x7fa37589b380 <line:282:7, line:283:22> 'int' '||'
+    | | | |-BinaryOperator 0x7fa37589b210 <line:282:7, col:74> 'int' '||'
+    | | | | |-BinaryOperator 0x7fa37589b160 <col:7, col:60> 'int' '||'
+    | | | | | |-BinaryOperator 0x7fa37589b0b0 <col:7, col:46> 'int' '||'
+    | | | | | | |-BinaryOperator 0x7fa37589b000 <col:7, col:32> 'int' '!='
+    | | | | | | | |-CallExpr 0x7fa37589af90 <col:7, col:27> 'int'
+    | | | | | | | | |-ImplicitCastExpr 0x7fa37589af78 <col:7> 'int (*)(request *)' <FunctionToPointerDecay>
+    | | | | | | | | | `-DeclRefExpr 0x7fa37589aea8 <col:7> 'int (request 1 error generated.
+*)' Function 0x7fa375895eb8 'authent_author' 'int (request *)'
+    | | | | | | | | `-UnaryOperator 0x7fa37589aef8 <col:23, col:24> 'request *' prefix '&'
+    | | | | | | | |   `-DeclRefExpr 0x7fa37589aed0 <col:24> 'request':'request' lvalue Var 0x7fa37589aa30 'req' 'request':'request'
+    | | | | | | | `-IntegerLiteral 0x7fa37589afc0 <col:32> 'int' 0
+    | | | | | | `-BinaryOperator 0x7fa37589b088 <col:37, col:46> 'int' '!='
+    | | | | | |   |-ImplicitCastExpr 0x7fa37589b070 <col:37> 'int' <LValueToRValue>
+    | | | | | |   | `-DeclRefExpr 0x7fa37589b028 <col:37> 'int' lvalue Var 0x7fa3758975b0 'good0' 'int'
+    | | | | | |   `-IntegerLiteral 0x7fa37589b050 <col:46> 'int' 1
+    | | | | | `-BinaryOperator 0x7fa37589b138 <col:51, col:60> 'int' '!='
+    | | | | |   |-ImplicitCastExpr 0x7fa37589b120 <col:51> 'int' <LValueToRValue>
+    | | | | |   | `-DeclRefExpr 0x7fa37589b0d8 <col:51> 'int' lvalue Var 0x7fa375897628 'good1' 'int'
+    | | | | |   `-IntegerLiteral 0x7fa37589b100 <col:60> 'int' 1
+    | | | | `-BinaryOperator 0x7fa37589b1e8 <col:65, col:74> 'int' '!='
+    | | | |   |-ImplicitCastExpr 0x7fa37589b1d0 <col:65> 'int' <LValueToRValue>
+    | | | |   | `-DeclRefExpr 0x7fa37589b188 <col:65> 'int' lvalue Var 0x7fa3758976a0 'good2' 'int'
+    | | | |   `-IntegerLiteral 0x7fa37589b1b0 <col:74> 'int' 1
+    | | | `-BinaryOperator 0x7fa37589b2f0 <line:283:10, col:22> 'int' '!='
+    | | |   |-ImplicitCastExpr 0x7fa37589b2c0 <col:10, col:14> 'char *' <LValueToRValue>
+    | | |   | `-MemberExpr 0x7fa37589b260 <col:10, col:14> 'char *' lvalue .user 0x7fa37588c5d8
+    | | |   |   `-DeclRefExpr 0x7fa37589b238 <col:10> 'request':'request' lvalue Var 0x7fa37589aa30 'req' 'request':'request'
+    | | |   `-ImplicitCastExpr 0x7fa37589b2d8 <col:22> 'char *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fa37589b298 <col:22> 'char *' lvalue Var 0x7fa37589a5c0 'orig_user' 'char *'
+    | | `-BinaryOperator 0x7fa37589b448 <line:284:10, col:32> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fa37589b430 <col:10, col:14> 'int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fa37589b3d0 <col:10, col:14> 'int' lvalue .internal_realm 0x7fa37588c6f8
+    | |   |   `-DeclRefExpr 0x7fa37589b3a8 <col:10> 'request':'request' lvalue Var 0x7fa37589aa30 'req' 'request':'request'
+    | |   `-DeclRefExpr 0x7fa37589b408 <col:32> 'int' EnumConstant 0x7fa37586fcf0 'axis_realm' 'int'
+    | |-CallExpr 0x7fa37589b4d8 <line:285:5, col:22> 'void'
+    | | `-ImplicitCastExpr 0x7fa37589b4c0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7fa37589b498 <col:5> '<builtin fn type>' Function 0x7fa375898690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fa37589b6e0 <line:286:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7fa37589b6c8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa37589b650 <col:3> 'int ()' Function 0x7fa37589b5a0 '__builtin_exit' 'int ()'
+      `-IntegerLiteral 0x7fa37589b678 <col:19> 'int' 0

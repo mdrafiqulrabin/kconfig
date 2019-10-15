@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f84f982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f84fa015200 <../Data/C2AST/pr61925-2.c:8:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7f84f982c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7f84f982bee0 'float'
+| `-MayAliasAttr 0x7f84fa015258 <col:60>
+|-FunctionDecl 0x7f84fa0153b0 <line:9:1, line:12:1> line:10:1 foo '__m128 (void)' extern inline
+| |-CompoundStmt 0x7f84fa0154e8 <line:11:1, line:12:1>
+| |-AlwaysInlineAttr 0x7f84fa015450 <line:9:56> always_inline
+| `-GNUInlineAttr 0x7f84fa015498 <col:40>
+`-FunctionDecl 0x7f84fa0156e0 <line:17:1, line:21:1> line:18:1 bar '__attribute__((__vector_size__(4 * sizeof(int)))) int (__attribute__((__vector_size__(4 * sizeof(int)))) int, __attribute__((__vector_size__(4 * sizeof(int)))) int)'
+  |-ParmVarDecl 0x7f84fa015578 <col:6, col:45> col:45 used a '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7f84fa015608 <col:48, col:87> col:87 used b '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7f84fa015850 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7f84fa015838 <line:20:3, col:14>
+      `-BinaryOperator 0x7f84fa015810 <col:10, col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7f84fa0157e0 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f84fa015790 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7f84fa015578 'a' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7f84fa0157f8 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7f84fa0157b8 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7f84fa015608 'b' '__attribute__((__vector_size__(4 * sizeof(int)))) int'

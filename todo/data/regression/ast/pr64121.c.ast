@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fcfa48262e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcfa4836e00 <../Data/C2AST/pr64121.c:5:1, col:18> col:12 used tab 'int [16]' extern
+`-FunctionDecl 0x7fcfa4837030 <line:7:1, line:16:1> line:8:1 execute 'void (int *, int)'
+  |-ParmVarDecl 0x7fcfa4836ee0 <col:10, col:15> col:15 used ip 'int *'
+  |-ParmVarDecl 0x7fcfa4836f58 <col:19, col:23> col:23 used x 'int'
+  `-CompoundStmt 0x7fcfa48374e8 <line:9:1, line:16:1>
+    |-DeclStmt 0x7fcfa4837198 <line:10:3, col:16>
+    | `-VarDecl 0x7fcfa48370f8 <col:3, col:13> col:8 used xp 'int *' cinit
+    |   `-ImplicitCastExpr 0x7fcfa4837180 <col:13> 'int *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fcfa4837158 <col:13> 'int [16]' lvalue Var 0x7fcfa4836e00 'tab' 'int [16]'
+    |-LabelStmt 0x7fcfa4837288 <line:11:1, line:13:5> 'base'
+    | `-IfStmt 0x7fcfa4837208 <line:12:3, line:13:5>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7fcfa48371d8 <line:12:7> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fcfa48371b0 <col:7> 'int' lvalue ParmVar 0x7fcfa4836f58 'x' 'int'
+    |   |-ReturnStmt 0x7fcfa48371f0 <line:13:5>
+    |   `-<<<NULL>>>
+    |-BinaryOperator 0x7fcfa4837380 <line:14:3, col:12> 'int' '='
+    | |-UnaryOperator 0x7fcfa48372e8 <col:3, col:6> 'int' lvalue prefix '*'
+    | | `-UnaryOperator 0x7fcfa48372c8 <col:4, col:6> 'int *' postfix '++'
+    | |   `-DeclRefExpr 0x7fcfa48372a0 <col:4> 'int *' lvalue Var 0x7fcfa48370f8 'xp' 'int *'
+    | `-ImplicitCastExpr 0x7fcfa4837368 <col:11, col:12> 'int' <LValueToRValue>
+    |   `-UnaryOperator 0x7fcfa4837348 <col:11, col:12> 'int' lvalue prefix '*'
+    |     `-ImplicitCastExpr 0x7fcfa4837330 <col:12> 'int *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcfa4837308 <col:12> 'int *' lvalue ParmVar 0x7fcfa4836ee0 'ip' 'int *'
+    `-IndirectGotoStmt 0x7fcfa48374d0 <line:15:3, col:22>
+      `-ImplicitCastExpr 0x7fcfa48374b8 <col:9, col:22> 'const void *' <BitCast>
+        `-ParenExpr 0x7fcfa4837468 <col:9, col:22> 'void *'
+          `-BinaryOperator 0x7fcfa4837440 <col:10, col:20> 'void *' '+'
+            |-AddrLabelExpr 0x7fcfa48373a8 <col:10, col:12> 'void *' base 0x7fcfa4837240
+            `-ImplicitCastExpr 0x7fcfa4837428 <col:19, col:20> 'int' <LValueToRValue>
+              `-UnaryOperator 0x7fcfa4837408 <col:19, col:20> 'int' lvalue prefix '*'
+                `-ImplicitCastExpr 0x7fcfa48373f0 <col:20> 'int *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fcfa48373c8 <col:20> 'int *' lvalue ParmVar 0x7fcfa4836ee0 'ip' 'int *'

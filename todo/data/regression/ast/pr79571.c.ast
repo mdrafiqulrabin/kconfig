@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fdd6d82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdd6d82c960 <../Data/C2AST/pr79571.c:5:1, line:9:1> line:5:8 struct a definition
+| |-FieldDecl 0x7fdd6d86d838 <line:7:3, col:7> col:7 b 'int'
+| `-FieldDecl 0x7fdd6d86d8c0 <line:8:3, col:8> col:8 c 'int *'
+|-VarDecl 0x7fdd6d86d960 <line:5:1, line:9:3> col:3 used h 'struct a':'struct a'
+|-RecordDecl 0x7fdd6d86da18 <line:10:1, line:13:1> line:10:8 struct d definition
+| `-FieldDecl 0x7fdd6d86dae0 <line:12:3, col:12> col:12 referenced e 'struct a':'struct a'
+|-RecordDecl 0x7fdd6d86db78 <line:14:1, line:17:1> line:14:8 struct fd definition
+| `-FieldDecl 0x7fdd6d86dcd0 <line:16:3, col:13> col:13 referenced d 'struct d *'
+|-VarDecl 0x7fdd6d86dd70 <line:14:1, line:17:3> col:3 used i 'struct fd':'struct fd'
+|-VarDecl 0x7fdd6d86de00 <line:18:1> col:1 used g 'int'
+`-FunctionDecl 0x7fdd6d86deb0 <line:19:1, line:25:1> line:19:1 j 'int ()'
+  `-CompoundStmt 0x7fdd6d86e420 <line:20:1, line:25:1>
+    |-DeclStmt 0x7fdd6d86e020 <line:21:3, col:17>
+    | `-VarDecl 0x7fdd6d86df68 <col:3, col:16> col:12 used a 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fdd6d86e008 <col:16> 'unsigned int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fdd6d86dff0 <col:16> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fdd6d86dfc8 <col:16> 'int' lvalue Var 0x7fdd6d86de00 'g' 'int'
+    |-BinaryOperator 0x7fdd6d86e208 <line:22:3, col:24> 'struct fd':'struct fd' '='
+    | |-DeclRefExpr 0x7fdd6d86e038 <col:3> 'struct fd':'struct fd' lvalue Var 0x7fdd6d86dd70 'i' 'struct fd':'struct fd'
+    | `-ImplicitCastExpr 0x7fdd6d86e1f0 <col:7, col:24> 'struct fd':'struct fd' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fdd6d86e1c8 <col:7, col:24> 'struct fd':'struct fd' lvalue
+    |     `-InitListExpr 0x7fdd6d86e168 <col:18, col:24> 'struct fd':'struct fd'
+    |       `-ImplicitCastExpr 0x7fdd6d86e1b0 <col:19, col:23> 'struct d *' <IntegralToPointer>
+    |         `-BinaryOperator 0x7fdd6d86e0f8 <col:19, col:23> 'unsigned int' '&'
+    |           |-ImplicitCastExpr 0x7fdd6d86e0c8 <col:19> 'unsigned int' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7fdd6d86e080 <col:19> 'unsigned int' lvalue Var 0x7fdd6d86df68 'a' 'unsigned int'
+    |           `-ImplicitCastExpr 0x7fdd6d86e0e0 <col:23> 'unsigned int' <IntegralCast>
+    |             `-IntegerLiteral 0x7fdd6d86e0a8 <col:23> 'int' 3
+    |-DeclStmt 0x7fdd6d86e2f0 <line:23:3, col:18>
+    | `-VarDecl 0x7fdd6d86e250 <col:3, col:17> col:13 used f 'struct fd':'struct fd' cinit
+    |   `-ImplicitCastExpr 0x7fdd6d86e2d8 <col:17> 'struct fd':'struct fd' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fdd6d86e2b0 <col:17> 'struct fd':'struct fd' lvalue Var 0x7fdd6d86dd70 'i' 'struct fd':'struct fd'
+    `-BinaryOperator 0x7fdd6d86e3f8 <line:24:3, col:12> 'struct a':'struct a' '='
+      |-DeclRefExpr 0x7fdd6d86e308 <col:3> 'struct a':'struct a' lvalue Var 0x7fdd6d86d960 'h' 'struct a':'struct a'
+      `-ImplicitCastExpr 0x7fdd6d86e3e0 <col:7, col:12> 'struct a':'struct a' <LValueToRValue>
+        `-MemberExpr 0x7fdd6d86e3a8 <col:7, col:12> 'struct a':'struct a' lvalue ->e 0x7fdd6d86dae0
+          `-ImplicitCastExpr 0x7fdd6d86e390 <col:7, col:9> 'struct d *' <LValueToRValue>
+            `-MemberExpr 0x7fdd6d86e358 <col:7, col:9> 'struct d *' lvalue .d 0x7fdd6d86dcd0
+              `-DeclRefExpr 0x7fdd6d86e330 <col:7> 'struct fd':'struct fd' lvalue Var 0x7fdd6d86e250 'f' 'struct fd':'struct fd'

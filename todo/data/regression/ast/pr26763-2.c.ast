@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7ffe4c8292e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffe4c86ae50 <../Data/C2AST/pr26763-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffe4c86aef0 prev 0x7ffe4c86ae50 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffe4c86b0f8 <line:5:1, line:8:1> line:5:5 used try 'int (char *, unsigned long)'
+| |-ParmVarDecl 0x7ffe4c86afa8 <col:10, col:16> col:16 used a 'char *'
+| |-ParmVarDecl 0x7ffe4c86b020 <<built-in>:81:23, ../Data/C2AST/pr26763-2.c:5:33> col:33 used d 'unsigned long'
+| `-CompoundStmt 0x7ffe4c86b310 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7ffe4c86b2f8 <line:7:3, col:18>
+|     `-BinaryOperator 0x7ffe4c86b2d0 <col:10, col:18> 'int' '>'
+|       |-BinaryOperator 0x7ffe4c86b268 <col:10, col:14> 'char *' '+'
+|       | |-ImplicitCastExpr 0x7ffe4c86b238 <col:10> 'char *' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7ffe4c86b1e8 <col:10> 'char *' lvalue ParmVar 0x7ffe4c86afa8 'a' 'char *'
+|       | `-ImplicitCastExpr 0x7ffe4c86b250 <col:14> 'unsigned long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7ffe4c86b210 <col:14> 'unsigned long' lvalue ParmVar 0x7ffe4c86b020 'd' 'unsigned long'
+|       `-ImplicitCastExpr 0x7ffe4c86b2b8 <col:18> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffe4c86b290 <col:18> 'char *' lvalue ParmVar 0x7ffe4c86afa8 'a' 'char *'
+`-FunctionDecl 0x7ffe4c86b3f8 <line:10:1, line:18:1> line:10:5 main 'int (void)'
+  `-CompoundStmt 0x7ffe4c86b848 <line:11:1, line:18:1>
+    |-DeclStmt 0x7ffe4c86b5a8 <line:12:3, col:16>
+    | `-VarDecl 0x7ffe4c86b548 <col:3, col:15> col:8 used bla 'char [100]'
+    |-IfStmt 0x7ffe4c86b7d8 <line:14:3, line:15:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7ffe4c86b6f0 <line:14:7, col:24> 'int'
+    | | |-ImplicitCastExpr 0x7ffe4c86b6d8 <col:7> 'int (*)(char *, unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7ffe4c86b5c0 <col:7> 'int (char *, unsigned long)' Function 0x7ffe4c86b0f8 'try' 'int (char *, unsigned long)'
+    | | |-BinaryOperator 0x7ffe4c86b648 <col:12, col:18> 'char *' '+'
+    | | | |-ImplicitCastExpr 0x7ffe4c86b630 <col:12> 'char *' <ArrayToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ffe4c86b5e8 <col:12> 'char [100]' lvalue Var 0x7ffe4c86b548 'bla' 'char [100]'
+    | | | `-IntegerLiteral 0x7ffe4c86b610 <col:18> 'int' 50
+    | | `-ImplicitCastExpr 0x7ffe4c86b728 <col:22, col:23> 'unsigned long' <IntegralCast>
+    | |   `-UnaryOperator 0x7ffe4c86b690 <col:22, col:23> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7ffe4c86b670 <col:23> 'int' 1
+    | |-CallExpr 0x7ffe4c86b7b0 <line:15:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ffe4c86b798 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ffe4c86b740 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffe4c86aef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ffe4c86b830 <line:17:3, col:10>
+      `-IntegerLiteral 0x7ffe4c86b810 <col:10> 'int' 0

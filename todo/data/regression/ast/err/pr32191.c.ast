@@ -1,0 +1,32 @@
+../Data/C2AST/pr32191.c:4:39: error: unsupported machine mode 'TC'
+typedef _Complex float __attribute__((mode(TC))) _Complex128;
+                                      ^
+1 error generated.
+TranslationUnitDecl 0x7fe244028ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe244029460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe244029180 '__int128'
+|-TypedefDecl 0x7fe2440294d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe2440291a0 'unsigned __int128'
+|-TypedefDecl 0x7fe2440297a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe2440295b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe244029528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe244029840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe244029800 'char *'
+|   `-BuiltinType 0x7fe244028f80 'char'
+|-TypedefDecl 0x7fe244029b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe244029ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe244029920 'struct __va_list_tag'
+|     `-Record 0x7fe244029898 '__va_list_tag'
+|-TypedefDecl 0x7fe244029b80 <../Data/C2AST/pr32191.c:4:1, col:50> col:50 referenced _Complex128 '_Complex float'
+| `-ComplexType 0x7fe2440292c0 '_Complex float'
+|   `-BuiltinType 0x7fe2440290e0 'float'
+`-FunctionDecl 0x7fe24405a990 <line:6:1, line:9:1> line:6:13 foo '_Complex128 (_Complex128, _Complex128)'
+  |-ParmVarDecl 0x7fe24405a810 <col:18, col:30> col:30 used x '_Complex128':'_Complex float'
+  |-ParmVarDecl 0x7fe24405a880 <col:33, col:45> col:45 used y '_Complex128':'_Complex float'
+  `-CompoundStmt 0x7fe24405ab40 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fe24405ab28 <line:8:3, col:14>
+      `-BinaryOperator 0x7fe24405ab00 <col:10, col:14> '_Complex float' '*'
+        |-ImplicitCastExpr 0x7fe24405aad0 <col:10> '_Complex128':'_Complex float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe24405aa80 <col:10> '_Complex128':'_Complex float' lvalue ParmVar 0x7fe24405a810 'x' '_Complex128':'_Complex float'
+        `-ImplicitCastExpr 0x7fe24405aae8 <col:14> '_Complex128':'_Complex float' <LValueToRValue>
+          `-DeclRefExpr 0x7fe24405aaa8 <col:14> '_Complex128':'_Complex float' lvalue ParmVar 0x7fe24405a880 'y' '_Complex128':'_Complex float'

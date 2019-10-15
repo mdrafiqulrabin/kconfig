@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7fa19882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa19886d828 <../Data/C2AST/pr16458-4.c:10:1, col:23> col:12 used case0 'int (void)' extern
+|-FunctionDecl 0x7fa19886d9a0 <line:11:1, col:23> col:12 used case1 'int (void)' extern
+|-FunctionDecl 0x7fa19886dad8 <line:12:1, col:23> col:12 used case2 'int (void)' extern
+|-FunctionDecl 0x7fa19886dc10 <line:13:1, col:23> col:12 used case3 'int (void)' extern
+|-FunctionDecl 0x7fa19886dd48 <line:14:1, col:23> col:12 used case4 'int (void)' extern
+|-EnumDecl 0x7fa19886dde8 <line:16:1, line:23:1> line:16:6 CASE_VALUES
+| |-EnumConstantDecl 0x7fa19886dec0 <line:18:3, col:11> col:3 referenced CASE0 'int'
+| | `-IntegerLiteral 0x7fa19886dea0 <col:11> 'int' 1
+| |-EnumConstantDecl 0x7fa19886df08 <line:19:3> col:3 referenced CASE1 'int'
+| |-EnumConstantDecl 0x7fa19886df50 <line:20:3> col:3 referenced CASE2 'int'
+| |-EnumConstantDecl 0x7fa19886df98 <line:21:3> col:3 referenced CASE3 'int'
+| `-EnumConstantDecl 0x7fa19886dfe0 <line:22:3> col:3 referenced CASE4 'int'
+`-FunctionDecl 0x7fa19886e1e8 <line:25:1, line:43:1> line:26:1 foo 'int (enum CASE_VALUES *)'
+  |-ParmVarDecl 0x7fa19886e0e0 <col:6, col:24> col:24 used index 'enum CASE_VALUES *'
+  `-CompoundStmt 0x7fa19886e8e8 <line:27:1, line:43:1>
+    |-SwitchStmt 0x7fa19886e320 <line:28:3, line:40:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa19886e308 <line:28:11, col:12> 'unsigned int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7fa19886e2f0 <col:11, col:12> 'enum CASE_VALUES':'enum CASE_VALUES' <LValueToRValue>
+    | |   `-UnaryOperator 0x7fa19886e2d0 <col:11, col:12> 'enum CASE_VALUES':'enum CASE_VALUES' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7fa19886e2b8 <col:12> 'enum CASE_VALUES *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa19886e290 <col:12> 'enum CASE_VALUES *' lvalue ParmVar 0x7fa19886e0e0 'index' 'enum CASE_VALUES *'
+    | `-CompoundStmt 0x7fa19886e800 <line:29:5, line:40:5>
+    |   |-CaseStmt 0x7fa19886e378 <line:30:5, line:31:21>
+    |   | |-ImplicitCastExpr 0x7fa19886e898 <line:30:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa19886e350 <col:10> 'int' EnumConstant 0x7fa19886dec0 'CASE0' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa19886e448 <line:31:7, col:21>
+    |   |   `-CallExpr 0x7fa19886e420 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa19886e408 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa19886e3b0 <col:14> 'int (void)' Function 0x7fa19886d828 'case0' 'int (void)'
+    |   |-CaseStmt 0x7fa19886e488 <line:32:5, line:33:21>
+    |   | |-ImplicitCastExpr 0x7fa19886e880 <line:32:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa19886e460 <col:10> 'int' EnumConstant 0x7fa19886df08 'CASE1' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa19886e528 <line:33:7, col:21>
+    |   |   `-CallExpr 0x7fa19886e500 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa19886e4e8 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa19886e4c0 <col:14> 'int (void)' Function 0x7fa19886d9a0 'case1' 'int (void)'
+    |   |-CaseStmt 0x7fa19886e568 <line:34:5, line:35:21>
+    |   | |-ImplicitCastExpr 0x7fa19886e868 <line:34:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa19886e540 <col:10> 'int' EnumConstant 0x7fa19886df50 'CASE2' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa19886e608 <line:35:7, col:21>
+    |   |   `-CallExpr 0x7fa19886e5e0 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa19886e5c8 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa19886e5a0 <col:14> 'int (void)' Function 0x7fa19886dad8 'case2' 'int (void)'
+    |   |-CaseStmt 0x7fa19886e648 <line:36:5, line:37:21>
+    |   | |-ImplicitCastExpr 0x7fa19886e850 <line:36:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7fa19886e620 <col:10> 'int' EnumConstant 0x7fa19886df98 'CASE3' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-ReturnStmt 0x7fa19886e6e8 <line:37:7, col:21>
+    |   |   `-CallExpr 0x7fa19886e6c0 <col:14, col:21> 'int'
+    |   |     `-ImplicitCastExpr 0x7fa19886e6a8 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7fa19886e680 <col:14> 'int (void)' Function 0x7fa19886dc10 'case3' 'int (void)'
+    |   `-CaseStmt 0x7fa19886e728 <line:38:5, line:39:21>
+    |     |-ImplicitCastExpr 0x7fa19886e838 <line:38:10> 'unsigned int' <IntegralCast>
+    |     | `-DeclRefExpr 0x7fa19886e700 <col:10> 'int' EnumConstant 0x7fa19886dfe0 'CASE4' 'int'
+    |     |-<<<NULL>>>
+    |     `-ReturnStmt 0x7fa19886e7c8 <line:39:7, col:21>
+    |       `-CallExpr 0x7fa19886e7a0 <col:14, col:21> 'int'
+    |         `-ImplicitCastExpr 0x7fa19886e788 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7fa19886e760 <col:14> 'int (void)' Function 0x7fa19886dd48 'case4' 'int (void)'
+    `-ReturnStmt 0x7fa19886e8d0 <line:42:3, col:10>
+      `-IntegerLiteral 0x7fa19886e8b0 <col:10> 'int' 0

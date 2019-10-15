@@ -1,0 +1,105 @@
+TranslationUnitDecl 0x7fb4598174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb45a09d3c8 <../Data/C2AST/pr34456.c:5:1, col:57> col:32 used debug 'int (void)'
+| |-CompoundStmt 0x7fb45a09d4e8 <col:45, col:57>
+| | `-ReturnStmt 0x7fb45a09d4d0 <col:47, col:54>
+| |   `-IntegerLiteral 0x7fb45a09d4b0 <col:54> 'int' 1
+| `-NoInlineAttr 0x7fb45a09d468 <col:21>
+|-VarDecl 0x7fb45a09d518 <line:6:1, col:5> col:5 used errors 'int'
+|-RecordDecl 0x7fb45a09d578 <line:8:1, col:43> col:8 struct s definition
+| |-FieldDecl 0x7fb45a09d638 <col:12, col:16> col:16 referenced elt 'int'
+| `-FieldDecl 0x7fb45a09d7c8 <col:21, col:40> col:27 referenced compare 'int (*)(int)'
+|-FunctionDecl 0x7fb45a09d938 <line:10:1, line:22:1> line:11:1 used compare 'int (const void *, const void *)' static
+| |-ParmVarDecl 0x7fb45a09d828 <col:10, col:22> col:22 used x 'const void *'
+| |-ParmVarDecl 0x7fb45a09d8a0 <col:25, col:37> col:37 used y 'const void *'
+| `-CompoundStmt 0x7fb45a09e3f8 <line:12:1, line:22:1>
+|   |-DeclStmt 0x7fb45a09dc60 <line:13:3, col:34>
+|   | |-VarDecl 0x7fb45a09dab0 <col:3, col:24> col:19 used s1 'const struct s *' cinit
+|   | | `-ImplicitCastExpr 0x7fb45a09db50 <col:24> 'const struct s *' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7fb45a09db38 <col:24> 'const void *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fb45a09db10 <col:24> 'const void *' lvalue ParmVar 0x7fb45a09d828 'x' 'const void *'
+|   | `-VarDecl 0x7fb45a09db90 <col:3, col:33> col:28 used s2 'const struct s *' cinit
+|   |   `-ImplicitCastExpr 0x7fb45a09dc30 <col:33> 'const struct s *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fb45a09dc18 <col:33> 'const void *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb45a09dbf0 <col:33> 'const void *' lvalue ParmVar 0x7fb45a09d8a0 'y' 'const void *'
+|   |-DeclStmt 0x7fb45a09dd90 <line:14:3, col:24>
+|   | `-VarDecl 0x7fb45a09dd30 <col:3, col:23> col:9 used compare1 'int (*)(int)'
+|   |-DeclStmt 0x7fb45a09de20 <line:15:3, col:11>
+|   | `-VarDecl 0x7fb45a09ddc0 <col:3, col:7> col:7 used elt2 'int'
+|   |-BinaryOperator 0x7fb45a09def0 <line:17:3, col:18> 'int (*)(int)' '='
+|   | |-DeclRefExpr 0x7fb45a09de38 <col:3> 'int (*)(int)' lvalue Var 0x7fb45a09dd30 'compare1' 'int (*)(int)'
+|   | `-ImplicitCastExpr 0x7fb45a09ded8 <col:14, col:18> 'int (*)(int)' <LValueToRValue>
+|   |   `-MemberExpr 0x7fb45a09dea0 <col:14, col:18> 'int (*const)(int)' lvalue ->compare 0x7fb45a09d7c8
+|   |     `-ImplicitCastExpr 0x7fb45a09de88 <col:14> 'const struct s *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb45a09de60 <col:14> 'const struct s *' lvalue Var 0x7fb45a09dab0 's1' 'const struct s *'
+|   |-BinaryOperator 0x7fb45a09dfd0 <line:18:3, col:14> 'int' '='
+|   | |-DeclRefExpr 0x7fb45a09df18 <col:3> 'int' lvalue Var 0x7fb45a09ddc0 'elt2' 'int'
+|   | `-ImplicitCastExpr 0x7fb45a09dfb8 <col:10, col:14> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fb45a09df80 <col:10, col:14> 'const int' lvalue ->elt 0x7fb45a09d638
+|   |     `-ImplicitCastExpr 0x7fb45a09df68 <col:10> 'const struct s *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb45a09df40 <col:10> 'const struct s *' lvalue Var 0x7fb45a09db90 's2' 'const struct s *'
+|   |-IfStmt 0x7fb45a09e2f8 <line:19:3, line:20:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb45a09e288 <line:19:7, col:54> 'int' '&&'
+|   | | |-BinaryOperator 0x7fb45a09e118 <col:7, col:27> 'int' '&&'
+|   | | | |-BinaryOperator 0x7fb45a09e058 <col:7, col:15> 'int' '!='
+|   | | | | |-ImplicitCastExpr 0x7fb45a09e040 <col:7> 'int' <LValueToRValue>
+|   | | | | | `-DeclRefExpr 0x7fb45a09dff8 <col:7> 'int' lvalue Var 0x7fb45a09ddc0 'elt2' 'int'
+|   | | | | `-IntegerLiteral 0x7fb45a09e020 <col:15> 'int' 0
+|   | | | `-CallExpr 0x7fb45a09e0f0 <col:20, col:27> 'int'
+|   | | |   `-ImplicitCastExpr 0x7fb45a09e0d8 <col:20> 'int (*)(void)' <FunctionToPointerDecay>
+|   | | |     `-DeclRefExpr 0x7fb45a09e080 <col:20> 'int (void)' Function 0x7fb45a09d3c8 'debug' 'int (void)'
+|   | | `-BinaryOperator 0x7fb45a09e260 <col:32, col:54> 'int' '!='
+|   | |   |-CallExpr 0x7fb45a09e1f8 <col:32, col:49> 'int'
+|   | |   | |-ImplicitCastExpr 0x7fb45a09e1e0 <col:32> 'int (*)(int)' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fb45a09e140 <col:32> 'int (*)(int)' lvalue Var 0x7fb45a09dd30 'compare1' 'int (*)(int)'
+|   | |   | `-ImplicitCastExpr 0x7fb45a09e228 <col:42, col:46> 'int' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7fb45a09e1a8 <col:42, col:46> 'const int' lvalue ->elt 0x7fb45a09d638
+|   | |   |     `-ImplicitCastExpr 0x7fb45a09e190 <col:42> 'const struct s *' <LValueToRValue>
+|   | |   |       `-DeclRefExpr 0x7fb45a09e168 <col:42> 'const struct s *' lvalue Var 0x7fb45a09dab0 's1' 'const struct s *'
+|   | |   `-IntegerLiteral 0x7fb45a09e240 <col:54> 'int' 0
+|   | |-UnaryOperator 0x7fb45a09e2d8 <line:20:5, col:11> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fb45a09e2b0 <col:5> 'int' lvalue Var 0x7fb45a09d518 'errors' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb45a09e3e0 <line:21:3, col:24>
+|     `-CallExpr 0x7fb45a09e398 <col:10, col:24> 'int'
+|       |-ImplicitCastExpr 0x7fb45a09e380 <col:10> 'int (*)(int)' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb45a09e330 <col:10> 'int (*)(int)' lvalue Var 0x7fb45a09dd30 'compare1' 'int (*)(int)'
+|       `-ImplicitCastExpr 0x7fb45a09e3c8 <col:20> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb45a09e358 <col:20> 'int' lvalue Var 0x7fb45a09ddc0 'elt2' 'int'
+|-FunctionDecl 0x7fb45a09e4e8 <line:24:1, col:38> col:5 used bad_compare 'int (int)'
+| |-ParmVarDecl 0x7fb45a09e458 <col:18, col:22> col:22 used x 'int'
+| `-CompoundStmt 0x7fb45a09e608 <col:25, col:38>
+|   `-ReturnStmt 0x7fb45a09e5f0 <col:27, col:35>
+|     `-UnaryOperator 0x7fb45a09e5d0 <col:34, col:35> 'int' prefix '-'
+|       `-ImplicitCastExpr 0x7fb45a09e5b8 <col:35> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb45a09e590 <col:35> 'int' lvalue ParmVar 0x7fb45a09e458 'x' 'int'
+|-VarDecl 0x7fb45a09e738 <line:25:1, col:63> col:10 used array 'struct s [2]' cinit
+| `-InitListExpr 0x7fb45a09e938 <col:21, col:63> 'struct s [2]'
+|   |-InitListExpr 0x7fb45a09e988 <col:23, col:40> 'struct s':'struct s'
+|   | |-IntegerLiteral 0x7fb45a09e798 <col:25> 'int' 1
+|   | `-ImplicitCastExpr 0x7fb45a09e9d8 <col:28> 'int (*)(int)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fb45a09e7b8 <col:28> 'int (int)' Function 0x7fb45a09e4e8 'bad_compare' 'int (int)'
+|   `-InitListExpr 0x7fb45a09ea00 <col:43, col:61> 'struct s':'struct s'
+|     |-UnaryOperator 0x7fb45a09e850 <col:45, col:46> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7fb45a09e830 <col:46> 'int' 1
+|     `-ImplicitCastExpr 0x7fb45a09ea50 <col:49> 'int (*)(int)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fb45a09e870 <col:49> 'int (int)' Function 0x7fb45a09e4e8 'bad_compare' 'int (int)'
+`-FunctionDecl 0x7fb45a09eb00 <line:27:1, line:32:1> line:28:1 main 'int (void)'
+  `-CompoundStmt 0x7fb45a09ee98 <line:29:1, line:32:1>
+    |-CallExpr 0x7fb45a09ecf0 <line:30:3, col:46> 'void'
+    | |-ImplicitCastExpr 0x7fb45a09ecd8 <col:3> 'void (*)(void *, size_t, size_t, int (* _Nonnull)(const void *, const void *))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb45a09eba0 <col:3> 'void (void *, size_t, size_t, int (* _Nonnull)(const void *, const void *))' Function 0x7fb45a07d1a0 'qsort' 'void (void *, size_t, size_t, int (* _Nonnull)(const void *, const void *))'
+    | |-ImplicitCastExpr 0x7fb45a09edb0 <col:10> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fb45a09ed98 <col:10> 'struct s *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb45a09ebc8 <col:10> 'struct s [2]' lvalue Var 0x7fb45a09e738 'array' 'struct s [2]'
+    | |-ImplicitCastExpr 0x7fb45a09edc8 <col:17> 'size_t':'unsigned long' <IntegralCast>
+    | | `-IntegerLiteral 0x7fb45a09ebf0 <col:17> 'int' 2
+    | |-UnaryExprOrTypeTraitExpr 0x7fb45a09ec30 <col:20, col:36> 'unsigned long' sizeof 'struct s':'struct s'
+    | `-ImplicitCastExpr 0x7fb45a09ede0 <col:39> 'int (*)(const void *, const void *)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fb45a09ec50 <col:39> 'int (const void *, const void *)' Function 0x7fb45a09d938 'compare' 'int (const void *, const void *)'
+    `-ReturnStmt 0x7fb45a09ee80 <line:31:3, col:20>
+      `-BinaryOperator 0x7fb45a09ee58 <col:10, col:20> 'int' '=='
+        |-ImplicitCastExpr 0x7fb45a09ee40 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb45a09edf8 <col:10> 'int' lvalue Var 0x7fb45a09d518 'errors' 'int'
+        `-IntegerLiteral 0x7fb45a09ee20 <col:20> 'int' 0

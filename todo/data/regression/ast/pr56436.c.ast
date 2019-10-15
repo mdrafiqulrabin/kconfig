@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f947e02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f947e02c978 <../Data/C2AST/pr56436.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f947e837480 <col:1, col:9> col:9 used c 'int *'
+`-FunctionDecl 0x7f947e8375c0 <line:7:1, line:22:1> line:8:1 f 'void (void)'
+  `-CompoundStmt 0x7f947e837a78 <line:9:1, line:22:1>
+    |-DeclStmt 0x7f947e8376f8 <line:10:3, col:12>
+    | `-VarDecl 0x7f947e837678 <col:3, col:11> col:7 used b 'int' cinit
+    |   `-IntegerLiteral 0x7f947e8376d8 <col:11> 'int' 0
+    `-ForStmt 0x7f947e837a40 <line:12:3, line:21:7>
+      |-BinaryOperator 0x7f947e837758 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f947e837710 <col:8> 'int' lvalue Var 0x7f947e02c978 'a' 'int'
+      | `-IntegerLiteral 0x7f947e837738 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f947e8377a8 <col:16, col:17> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f947e837780 <col:16> 'int' lvalue Var 0x7f947e02c978 'a' 'int'
+      `-IfStmt 0x7f947e837a08 <line:13:5, line:21:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-UnaryOperator 0x7f947e8377f0 <line:13:9, col:11> 'int' prefix '--'
+        | `-DeclRefExpr 0x7f947e8377c8 <col:11> 'int' lvalue Var 0x7f947e837678 'b' 'int'
+        |-CompoundStmt 0x7f947e8379e0 <line:14:7, line:21:7>
+        | |-IfStmt 0x7f947e8378f8 <line:15:2, line:17:5>
+        | | |-<<<NULL>>>
+        | | |-<<<NULL>>>
+        | | |-ImplicitCastExpr 0x7f947e837838 <line:15:6> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f947e837810 <col:6> 'int' lvalue Var 0x7f947e02c978 'a' 'int'
+        | | |-LabelStmt 0x7f947e8378e0 <line:16:2, line:17:5> 'lbl'
+        | | | `-UnaryOperator 0x7f947e837878 <col:4, col:5> 'int' postfix '++'
+        | | |   `-DeclRefExpr 0x7f947e837850 <col:4> 'int' lvalue Var 0x7f947e02c978 'a' 'int'
+        | | `-<<<NULL>>>
+        | |-BinaryOperator 0x7f947e8379a0 <line:19:2, col:7> 'int *' '='
+        | | |-DeclRefExpr 0x7f947e837930 <col:2> 'int *' lvalue Var 0x7f947e837480 'c' 'int *'
+        | | `-UnaryOperator 0x7f947e837980 <col:6, col:7> 'int *' prefix '&'
+        | |   `-DeclRefExpr 0x7f947e837958 <col:7> 'int' lvalue Var 0x7f947e837678 'b' 'int'
+        | `-GotoStmt 0x7f947e8379c8 <line:20:2, col:7> 'lbl' 0x7f947e837898
+        `-<<<NULL>>>

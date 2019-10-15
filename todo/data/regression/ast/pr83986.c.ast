@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fe96381d6e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe96381e378 <../Data/C2AST/pr83986.c:5:1, col:5> col:5 used v 'int'
+`-FunctionDecl 0x7fe96385f328 <line:7:1, line:14:1> line:8:1 referenced foo 'int (int)'
+  |-ParmVarDecl 0x7fe96385f258 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fe96385f710 <line:9:1, line:14:1>
+    |-CompoundAssignOperator 0x7fe96385f520 <line:10:3, col:17> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fe96385f3d0 <col:3> 'int' lvalue Var 0x7fe96381e378 'v' 'int'
+    | `-BinaryOperator 0x7fe96385f4f8 <col:8, col:17> 'int' '&&'
+    |   |-UnaryOperator 0x7fe96385f458 <col:8, col:10> 'int' prefix '!'
+    |   | `-UnaryOperator 0x7fe96385f438 <col:9, col:10> 'int' prefix '!'
+    |   |   `-ImplicitCastExpr 0x7fe96385f420 <col:10> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fe96385f3f8 <col:10> 'int' lvalue Var 0x7fe96381e378 'v' 'int'
+    |   `-UnaryOperator 0x7fe96385f4d8 <col:15, col:17> 'int' prefix '!'
+    |     `-UnaryOperator 0x7fe96385f4b8 <col:16, col:17> 'int' prefix '!'
+    |       `-ImplicitCastExpr 0x7fe96385f4a0 <col:17> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe96385f478 <col:17> 'int' lvalue ParmVar 0x7fe96385f258 'x' 'int'
+    |-IfStmt 0x7fe96385f6a0 <line:11:3, line:12:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe96385f5b8 <line:11:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe96385f5a0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe96385f558 <col:7> 'int' lvalue Var 0x7fe96381e378 'v' 'int'
+    | | `-IntegerLiteral 0x7fe96385f580 <col:12> 'int' 0
+    | |-CallExpr 0x7fe96385f670 <line:12:5, col:11> 'int'
+    | | |-ImplicitCastExpr 0x7fe96385f658 <col:5> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fe96385f5e0 <col:5> 'int (int)' Function 0x7fe96385f328 'foo' 'int (int)'
+    | | `-IntegerLiteral 0x7fe96385f608 <col:10> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe96385f6f8 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fe96385f6d8 <col:10> 'int' 0

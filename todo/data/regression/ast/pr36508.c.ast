@@ -1,0 +1,780 @@
+TranslationUnitDecl 0x7f8b9d8128e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8b9d025a60 <../Data/C2AST/pr36508.c:5:1, line:29:1> line:6:1 foo 'void (short *)'
+  |-ParmVarDecl 0x7f8b9d8135a0 <col:6, col:13> col:13 used sp 'short *'
+  `-CompoundStmt 0x7f8b9c809618 <line:7:1, line:29:1>
+    |-DeclStmt 0x7f8b9d025bc0 <line:8:3, col:8>
+    | `-VarDecl 0x7f8b9d025b60 <col:3, col:7> col:7 used k 'int'
+    |-BinaryOperator 0x7f8b9d025c20 <line:9:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7f8b9d025bd8 <col:3> 'int' lvalue Var 0x7f8b9d025b60 'k' 'int'
+    | `-IntegerLiteral 0x7f8b9d025c00 <col:7> 'int' 1
+    |-WhileStmt 0x7f8b9d025e68 <line:11:3, line:17:5>
+    | |-<<<NULL>>>
+    | |-IntegerLiteral 0x7f8b9d025c48 <line:11:10> 'int' 1
+    | `-CompoundStmt 0x7f8b9d025e40 <line:12:5, line:17:5>
+    |   |-IfStmt 0x7f8b9d025cf8 <line:13:7, line:14:2>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7f8b9d025cc8 <line:13:11, col:15> 'int' '>'
+    |   | | |-ImplicitCastExpr 0x7f8b9d025cb0 <col:11> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7f8b9d025c68 <col:11> 'int' lvalue Var 0x7f8b9d025b60 'k' 'int'
+    |   | | `-IntegerLiteral 0x7f8b9d025c90 <col:15> 'int' 6
+    |   | |-BreakStmt 0x7f8b9d025cf0 <line:14:2>
+    |   | `-<<<NULL>>>
+    |   |-BinaryOperator 0x7f8b9d025dd0 <line:10:13, col:21> 'short' '='
+    |   | |-UnaryOperator 0x7f8b9d025d78 <col:13, col:16> 'short' lvalue prefix '*'
+    |   | | `-UnaryOperator 0x7f8b9d025d58 <col:14, col:16> 'short *' postfix '++'
+    |   | |   `-DeclRefExpr 0x7f8b9d025d30 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    |   | `-ImplicitCastExpr 0x7f8b9d025db8 <col:21> 'short' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7f8b9d025d98 <col:21> 'int' 1
+    |   `-UnaryOperator 0x7f8b9d025e20 <line:16:7, col:8> 'int' postfix '++'
+    |     `-DeclRefExpr 0x7f8b9d025df8 <col:7> 'int' lvalue Var 0x7f8b9d025b60 'k' 'int'
+    |-BinaryOperator 0x7f8b9d025ed0 <line:18:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7f8b9d025e88 <col:3> 'int' lvalue Var 0x7f8b9d025b60 'k' 'int'
+    | `-IntegerLiteral 0x7f8b9d025eb0 <col:7> 'int' 1
+    |-WhileStmt 0x7f8b9d026118 <line:19:3, line:25:5>
+    | |-<<<NULL>>>
+    | |-IntegerLiteral 0x7f8b9d025ef8 <line:19:10> 'int' 1
+    | `-CompoundStmt 0x7f8b9d0260f0 <line:20:5, line:25:5>
+    |   |-IfStmt 0x7f8b9d025fa8 <line:21:7, line:22:2>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7f8b9d025f78 <line:21:11, col:15> 'int' '>'
+    |   | | |-ImplicitCastExpr 0x7f8b9d025f60 <col:11> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7f8b9d025f18 <col:11> 'int' lvalue Var 0x7f8b9d025b60 'k' 'int'
+    |   | | `-IntegerLiteral 0x7f8b9d025f40 <col:15> 'int' 6
+    |   | |-BreakStmt 0x7f8b9d025fa0 <line:22:2>
+    |   | `-<<<NULL>>>
+    |   |-BinaryOperator 0x7f8b9d026080 <line:10:13, col:21> 'short' '='
+    |   | |-UnaryOperator 0x7f8b9d026028 <col:13, col:16> 'short' lvalue prefix '*'
+    |   | | `-UnaryOperator 0x7f8b9d026008 <col:14, col:16> 'short *' postfix '++'
+    |   | |   `-DeclRefExpr 0x7f8b9d025fe0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    |   | `-ImplicitCastExpr 0x7f8b9d026068 <col:21> 'short' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7f8b9d026048 <col:21> 'int' 1
+    |   `-UnaryOperator 0x7f8b9d0260d0 <line:24:7, col:8> 'int' postfix '++'
+    |     `-DeclRefExpr 0x7f8b9d0260a8 <col:7> 'int' lvalue Var 0x7f8b9d025b60 'k' 'int'
+    |-BinaryOperator 0x7f8b9d0261d8 <line:10:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026180 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026160 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026138 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d0261c0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d0261a0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d0262a0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026248 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026228 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026200 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026288 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d026268 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d026368 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026310 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d0262f0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d0262c8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026350 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d026330 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d026430 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d0263d8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d0263b8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026390 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026418 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d0263f8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d0264f8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d0264a0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026480 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026458 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d0264e0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d0264c0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d0265c0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026568 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026548 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026520 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d0265a8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d026588 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d026688 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026630 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026610 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d0265e8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026670 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d026650 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d026750 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d0266f8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d0266d8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d0266b0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026738 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d026718 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d026818 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d0267c0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d0267a0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026778 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026800 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d0267e0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d0268e0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026888 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026868 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026840 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d0268c8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d0268a8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d0269a8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d026950 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d026930 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d026908 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d026990 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d026970 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844878 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844820 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844800 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d0269d0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844860 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844840 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844940 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8448e8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d8448c8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d8448a0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844928 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844908 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844a08 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8449b0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844990 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844968 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d8449f0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d8449d0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844ad0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844a78 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844a58 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844a30 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844ab8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844a98 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844b98 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844b40 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844b20 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844af8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844b80 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844b60 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844c60 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844c08 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844be8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844bc0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844c48 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844c28 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844d28 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844cd0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844cb0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844c88 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844d10 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844cf0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844df0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844d98 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844d78 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844d50 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844dd8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844db8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844eb8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844e60 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844e40 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844e18 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844ea0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844e80 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d844f80 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844f28 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844f08 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844ee0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d844f68 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d844f48 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d845048 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d844ff0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d844fd0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d844fa8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d845030 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d845010 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d845110 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8450b8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d845098 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845070 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d8450f8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d8450d8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d8451d8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d845180 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d845160 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845138 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d8451c0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d8451a0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d8452a0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d845248 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d845228 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845200 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d845288 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d845268 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d845368 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d845310 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d8452f0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d8452c8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d845350 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d845330 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d845430 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8453d8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d8453b8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845390 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d845418 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d8453f8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d8454f8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8454a0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d845480 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845458 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d8454e0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d8454c0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d8455c0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d845568 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d845548 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845520 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d8455a8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d845588 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d845688 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d845630 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d845610 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d8455e8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d845670 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d845650 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9d845750 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8456f8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d8456d8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d8456b0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9d845738 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d845718 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001018 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9d8457c0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9d8457a0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9d845778 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001000 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9d8457e0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c0010e0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001088 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001068 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001040 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c0010c8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c0010a8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c0011a8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001150 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001130 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001108 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001190 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001170 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001270 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001218 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c0011f8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c0011d0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001258 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001238 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001338 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c0012e0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c0012c0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001298 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001320 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001300 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001400 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c0013a8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001388 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001360 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c0013e8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c0013c8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c0014c8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001470 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001450 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001428 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c0014b0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001490 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001590 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001538 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001518 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c0014f0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001578 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001558 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001658 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001600 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c0015e0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c0015b8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001640 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001620 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001720 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c0016c8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c0016a8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001680 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001708 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c0016e8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c0017e8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001790 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001770 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001748 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c0017d0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c0017b0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c0018b0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001858 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001838 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001810 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001898 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001878 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001978 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001920 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001900 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c0018d8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001960 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001940 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001a40 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c0019e8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c0019c8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c0019a0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001a28 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001a08 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001b08 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001ab0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001a90 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001a68 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001af0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001ad0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001bd0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001b78 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001b58 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001b30 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001bb8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001b98 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001c98 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001c40 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001c20 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001bf8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001c80 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001c60 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001d60 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001d08 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001ce8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001cc0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001d48 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001d28 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001e28 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001dd0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001db0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001d88 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001e10 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001df0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001ef0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001e98 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001e78 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001e50 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001ed8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001eb8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c001fb8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c001f60 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c001f40 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c001f18 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c001fa0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c001f80 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8042a0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804248 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804228 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804200 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804288 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804268 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804368 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804310 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8042f0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8042c8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804350 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804330 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804430 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8043d8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8043b8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804390 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804418 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8043f8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8044f8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8044a0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804480 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804458 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8044e0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8044c0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8045c0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804568 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804548 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804520 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8045a8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804588 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804688 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804630 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804610 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8045e8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804670 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804650 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804750 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8046f8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8046d8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8046b0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804738 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804718 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804818 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8047c0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8047a0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804778 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804800 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8047e0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8048e0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804888 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804868 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804840 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8048c8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8048a8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8049a8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804950 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804930 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804908 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804990 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804970 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804a70 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804a18 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8049f8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8049d0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804a58 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804a38 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804b38 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804ae0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804ac0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804a98 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804b20 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804b00 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804c00 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804ba8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804b88 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804b60 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804be8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804bc8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804cc8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804c70 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804c50 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804c28 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804cb0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804c90 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804d90 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804d38 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804d18 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804cf0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804d78 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804d58 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804e58 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804e00 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804de0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804db8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804e40 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804e20 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804f20 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804ec8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804ea8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804e80 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804f08 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804ee8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c804fe8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c804f90 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c804f70 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c804f48 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c804fd0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c804fb0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8050b0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805058 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805038 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805010 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805098 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805078 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805178 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805120 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805100 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8050d8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805160 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805140 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805858 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805800 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8051c8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8051a0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805840 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805820 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805920 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8058c8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8058a8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805880 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805908 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8058e8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8059e8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805990 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805970 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805948 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8059d0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8059b0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805ab0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805a58 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805a38 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805a10 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805a98 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805a78 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805b78 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805b20 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805b00 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805ad8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805b60 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805b40 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805c40 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805be8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805bc8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805ba0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805c28 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805c08 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805d08 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805cb0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805c90 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805c68 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805cf0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805cd0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805dd0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805d78 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805d58 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805d30 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805db8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805d98 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805e98 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805e40 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805e20 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805df8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805e80 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805e60 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c805f60 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805f08 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805ee8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805ec0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c805f48 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805f28 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806028 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c805fd0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c805fb0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c805f88 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806010 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c805ff0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8060f0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806098 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806078 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806050 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8060d8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8060b8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8061b8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806160 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806140 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806118 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8061a0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806180 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806280 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806228 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806208 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8061e0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806268 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806248 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806348 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8062f0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8062d0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8062a8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806330 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806310 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806410 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8063b8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806398 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806370 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8063f8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8063d8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8064d8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806480 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806460 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806438 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8064c0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8064a0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8065a0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806548 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806528 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806500 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806588 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806568 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806668 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806610 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8065f0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8065c8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806650 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806630 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806730 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8066d8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8066b8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806690 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806718 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8066f8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806800 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8067a0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806780 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806758 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8067e0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8067c0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8068c8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806870 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806850 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806828 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8068b0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806890 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806990 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806938 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806918 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8068f0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806978 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806958 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806a58 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806a00 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8069e0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8069b8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806a40 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806a20 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806b20 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806ac8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806aa8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806a80 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806b08 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806ae8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806be8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806b90 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806b70 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806b48 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806bd0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806bb0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806cb0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806c58 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806c38 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806c10 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806c98 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806c78 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806d78 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806d20 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806d00 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806cd8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806d60 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806d40 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806e40 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806de8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806dc8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806da0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806e28 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806e08 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806f08 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806eb0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806e90 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806e68 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806ef0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806ed0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c806fd0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c806f78 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c806f58 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806f30 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c806fb8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c806f98 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c807098 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807040 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807020 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c806ff8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c807080 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c807060 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c807160 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807108 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8070e8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8070c0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c807148 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c807128 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c807228 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8071d0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8071b0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c807188 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c807210 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8071f0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8072f0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807298 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807278 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c807250 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8072d8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8072b8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8073b8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807360 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807340 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c807318 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8073a0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c807380 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c807480 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807428 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807408 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8073e0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c807468 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c807448 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c807548 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8074f0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8074d0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8074a8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c807530 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c807510 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c807610 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8075b8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807598 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c807570 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8075f8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8075d8 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8076d8 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807680 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807660 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c807638 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8076c0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8076a0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8077a0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c807748 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c807728 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c807700 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c807788 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c807768 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c809078 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c809020 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c809000 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8077c8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c809060 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c809040 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c809140 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8090e8 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8090c8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8090a0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c809128 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c809108 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c809208 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8091b0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c809190 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c809168 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8091f0 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8091d0 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c8092d0 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c809278 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c809258 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c809230 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c8092b8 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c809298 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c809398 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c809340 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c809320 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8092f8 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c809380 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c809360 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c809460 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c809408 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8093e8 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c8093c0 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c809448 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c809428 <col:21> 'int' 1
+    |-BinaryOperator 0x7f8b9c809528 <col:13, col:21> 'short' '='
+    | |-UnaryOperator 0x7f8b9c8094d0 <col:13, col:16> 'short' lvalue prefix '*'
+    | | `-UnaryOperator 0x7f8b9c8094b0 <col:14, col:16> 'short *' postfix '++'
+    | |   `-DeclRefExpr 0x7f8b9c809488 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+    | `-ImplicitCastExpr 0x7f8b9c809510 <col:21> 'short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8b9c8094f0 <col:21> 'int' 1
+    `-BinaryOperator 0x7f8b9c8095f0 <col:13, col:21> 'short' '='
+      |-UnaryOperator 0x7f8b9c809598 <col:13, col:16> 'short' lvalue prefix '*'
+      | `-UnaryOperator 0x7f8b9c809578 <col:14, col:16> 'short *' postfix '++'
+      |   `-DeclRefExpr 0x7f8b9c809550 <col:14> 'short *' lvalue ParmVar 0x7f8b9d8135a0 'sp' 'short *'
+      `-ImplicitCastExpr 0x7f8b9c8095d8 <col:21> 'short' <IntegralCast>
+        `-IntegerLiteral 0x7f8b9c8095b8 <col:21> 'int' 1

@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fc1358128e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc135813560 <../Data/C2AST/pr41302.c:5:1, line:7:1> line:5:8 struct pts definition
+| `-FieldDecl 0x7fc136014238 <line:6:3, col:7> col:7 c 'int'
+|-FunctionDecl 0x7fc1360144c8 <line:9:1, col:39> col:14 used bar 'unsigned int (struct pts *, int)'
+| |-ParmVarDecl 0x7fc136014330 <col:19, col:31> col:31 a 'struct pts *'
+| `-ParmVarDecl 0x7fc1360143a8 <col:34, col:38> col:38 b 'int'
+`-FunctionDecl 0x7fc136014788 <line:11:1, line:14:1> line:11:14 foo 'struct pts *(struct pts *, int)'
+  |-ParmVarDecl 0x7fc1360145e0 <col:19, col:31> col:31 used a 'struct pts *'
+  |-ParmVarDecl 0x7fc136014658 <col:34, col:38> col:38 used b 'int'
+  `-CompoundStmt 0x7fc1360149f0 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fc1360149d8 <line:13:3, col:34>
+      `-CStyleCastExpr 0x7fc1360149b0 <col:10, col:34> 'struct pts *' <IntegralToPointer>
+        `-CallExpr 0x7fc136014920 <col:25, col:34> 'unsigned int'
+          |-ImplicitCastExpr 0x7fc136014908 <col:25> 'unsigned int (*)(struct pts *, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fc136014838 <col:25> 'unsigned int (struct pts *, int)' Function 0x7fc1360144c8 'bar' 'unsigned int (struct pts *, int)'
+          |-ImplicitCastExpr 0x7fc136014958 <col:30> 'struct pts *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fc136014860 <col:30> 'struct pts *' lvalue ParmVar 0x7fc1360145e0 'a' 'struct pts *'
+          `-ImplicitCastExpr 0x7fc136014970 <col:33> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fc136014888 <col:33> 'int' lvalue ParmVar 0x7fc136014658 'b' 'int'

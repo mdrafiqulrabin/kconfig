@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fdf8802b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdf8802bf60 <../Data/C2AST/pr40351.c:3:1, line:9:1> line:3:8 struct IO_APIC_route_entry definition
+| |-PackedAttr 0x7fdf888144a0 <line:9:19>
+| |-FieldDecl 0x7fdf88814258 <line:4:5, col:27> col:18 vector 'unsigned int'
+| | `-IntegerLiteral 0x7fdf88814220 <col:27> 'int' 8
+| |-FieldDecl 0x7fdf888142d8 <line:5:5, col:34> col:18 delivery_mode 'unsigned int'
+| | `-IntegerLiteral 0x7fdf888142a0 <col:34> 'int' 1
+| |-FieldDecl 0x7fdf88814358 <line:6:5, col:25> col:18 mask 'unsigned int'
+| | `-IntegerLiteral 0x7fdf88814320 <col:25> 'int' 1
+| |-FieldDecl 0x7fdf888143d8 <line:7:5, col:33> col:18 __reserved_2 'unsigned int'
+| | `-IntegerLiteral 0x7fdf888143a0 <col:33> 'int' 15
+| `-FieldDecl 0x7fdf88814458 <line:8:5, col:33> col:18 __reserved_3 'unsigned int'
+|   `-IntegerLiteral 0x7fdf88814420 <col:33> 'int' 8
+|-RecordDecl 0x7fdf888144e8 <line:10:1, line:15:1> line:10:7 union entry_union definition
+| |-RecordDecl 0x7fdf88814590 <line:11:5, line:13:5> line:11:5 struct definition
+| | |-FieldDecl 0x7fdf88814658 <line:12:9, col:22> col:22 referenced w1 'unsigned int'
+| | `-FieldDecl 0x7fdf888146b8 <col:9, col:26> col:26 w2 'unsigned int'
+| |-FieldDecl 0x7fdf88814750 <line:11:5> col:5 implicit referenced 'struct entry_union::(anonymous at ../Data/C2AST/pr40351.c:11:5)'
+| |-IndirectFieldDecl 0x7fdf888147a8 <line:12:22> col:22 implicit w1 'unsigned int'
+| | |-Field 0x7fdf88814750 '' 'struct entry_union::(anonymous at ../Data/C2AST/pr40351.c:11:5)'
+| | `-Field 0x7fdf88814658 'w1' 'unsigned int'
+| |-IndirectFieldDecl 0x7fdf888147f8 <col:26> col:26 implicit w2 'unsigned int'
+| | |-Field 0x7fdf88814750 '' 'struct entry_union::(anonymous at ../Data/C2AST/pr40351.c:11:5)'
+| | `-Field 0x7fdf888146b8 'w2' 'unsigned int'
+| `-FieldDecl 0x7fdf88814890 <line:14:5, col:32> col:32 referenced entry 'struct IO_APIC_route_entry':'struct IO_APIC_route_entry'
+|-FunctionDecl 0x7fdf888149f8 <line:16:1, col:31> col:14 used io_apic_read 'unsigned int (void)'
+`-FunctionDecl 0x7fdf88814be0 <line:17:1, line:22:1> line:17:28 ioapic_read_entry 'struct IO_APIC_route_entry (void)'
+  `-CompoundStmt 0x7fdf88814ff8 <line:18:1, line:22:1>
+    |-DeclStmt 0x7fdf88814d30 <line:19:3, col:23>
+    | `-VarDecl 0x7fdf88814cd0 <col:3, col:21> col:21 used eu 'union entry_union':'union entry_union'
+    |-BinaryOperator 0x7fdf88814e88 <line:20:3, col:24> 'unsigned int' '='
+    | |-MemberExpr 0x7fdf88814dc0 <col:3, col:6> 'unsigned int' lvalue .w1 0x7fdf88814658
+    | | `-MemberExpr 0x7fdf88814d70 <col:3, col:6> 'struct entry_union::(anonymous at ../Data/C2AST/pr40351.c:11:5)' lvalue . 0x7fdf88814750
+    | |   `-DeclRefExpr 0x7fdf88814d48 <col:3> 'union entry_union':'union entry_union' lvalue Var 0x7fdf88814cd0 'eu' 'union entry_union':'union entry_union'
+    | `-CallExpr 0x7fdf88814e60 <col:11, col:24> 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fdf88814e48 <col:11> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fdf88814df8 <col:11> 'unsigned int (void)' Function 0x7fdf888149f8 'io_apic_read' 'unsigned int (void)'
+    `-ReturnStmt 0x7fdf88814fe0 <line:21:3, col:13>
+      `-ImplicitCastExpr 0x7fdf88814fc8 <col:10, col:13> 'struct IO_APIC_route_entry':'struct IO_APIC_route_entry' <LValueToRValue>
+        `-MemberExpr 0x7fdf88814f90 <col:10, col:13> 'struct IO_APIC_route_entry':'struct IO_APIC_route_entry' lvalue .entry 0x7fdf88814890
+          `-DeclRefExpr 0x7fdf88814f68 <col:10> 'union entry_union':'union entry_union' lvalue Var 0x7fdf88814cd0 'eu' 'union entry_union':'union entry_union'

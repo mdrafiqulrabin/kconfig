@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fe84982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe84a034420 <../Data/C2AST/pr21658.c:6:1, col:22> col:6 used link_error 'void (void)'
+`-FunctionDecl 0x7fe84a034590 <line:8:1, line:16:1> line:9:1 f 'void (void)'
+  `-CompoundStmt 0x7fe84a034b80 <line:10:1, line:16:1>
+    |-DeclStmt 0x7fe84a034710 <line:11:3, col:12>
+    | `-VarDecl 0x7fe84a0346b0 <col:3, col:11> col:7 used a 'int [10]'
+    |-DeclStmt 0x7fe84a034878 <line:12:3, col:17>
+    | `-VarDecl 0x7fe84a034770 <col:3, col:16> col:8 used p 'int *' cinit
+    |   `-UnaryOperator 0x7fe84a034858 <col:12, col:16> 'int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7fe84a034830 <col:13, col:16> 'int' lvalue
+    |       |-ImplicitCastExpr 0x7fe84a034818 <col:13> 'int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fe84a0347d0 <col:13> 'int [10]' lvalue Var 0x7fe84a0346b0 'a' 'int [10]'
+    |       `-IntegerLiteral 0x7fe84a0347f8 <col:15> 'int' 5
+    |-DeclStmt 0x7fe84a034990 <line:13:3, col:17>
+    | `-VarDecl 0x7fe84a0348a8 <col:3, col:16> col:8 used q 'int *' cinit
+    |   `-BinaryOperator 0x7fe84a034968 <col:12, col:16> 'int *' '-'
+    |     |-ImplicitCastExpr 0x7fe84a034950 <col:12> 'int *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fe84a034908 <col:12> 'int *' lvalue Var 0x7fe84a034770 'p' 'int *'
+    |     `-IntegerLiteral 0x7fe84a034930 <col:16> 'int' 1
+    `-IfStmt 0x7fe84a034b48 <line:14:3, line:15:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe84a034a90 <line:14:7, col:16> 'int' '!='
+      | |-ImplicitCastExpr 0x7fe84a034a78 <col:7> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe84a0349a8 <col:7> 'int *' lvalue Var 0x7fe84a0348a8 'q' 'int *'
+      | `-UnaryOperator 0x7fe84a034a58 <col:12, col:16> 'int *' prefix '&'
+      |   `-ArraySubscriptExpr 0x7fe84a034a30 <col:13, col:16> 'int' lvalue
+      |     |-ImplicitCastExpr 0x7fe84a034a18 <col:13> 'int *' <ArrayToPointerDecay>
+      |     | `-DeclRefExpr 0x7fe84a0349d0 <col:13> 'int [10]' lvalue Var 0x7fe84a0346b0 'a' 'int [10]'
+      |     `-IntegerLiteral 0x7fe84a0349f8 <col:15> 'int' 4
+      |-CallExpr 0x7fe84a034b20 <line:15:5, col:17> 'void'
+      | `-ImplicitCastExpr 0x7fe84a034b08 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fe84a034ab8 <col:5> 'void (void)' Function 0x7fe84a034420 'link_error' 'void (void)'
+      `-<<<NULL>>>

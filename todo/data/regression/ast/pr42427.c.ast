@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fa3bc8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa3bb853600 <../Data/C2AST/pr42427.c:8:1, col:36> col:15 used myabs 'double (_Complex double)' extern
+| `-ParmVarDecl 0x7fa3bb853570 </usr/include/complex.h:37:17, ../Data/C2AST/pr42427.c:8:30> col:36 '_Complex double'
+`-FunctionDecl 0x7fa3bb853920 <line:10:1, line:22:1> line:11:1 test 'void (double *, _Complex double *, long)'
+  |-ParmVarDecl 0x7fa3bb853730 <col:7, col:15> col:15 used help 'double *'
+  |-ParmVarDecl 0x7fa3bb8537c8 </usr/include/complex.h:37:17, ../Data/C2AST/pr42427.c:11:37> col:37 used wm '_Complex double *'
+  |-ParmVarDecl 0x7fa3bb853840 <col:41, col:46> col:46 used nz 'long'
+  `-CompoundStmt 0x7fa3bb854140 <line:12:1, line:22:1>
+    |-DeclStmt 0x7fa3bb853a60 <line:13:3, col:9>
+    | `-VarDecl 0x7fa3bb853a00 <col:3, col:8> col:8 used k 'long'
+    |-DeclStmt 0x7fa3bb853af0 <line:14:3, col:14>
+    | `-VarDecl 0x7fa3bb853a90 <col:3, col:10> col:10 used znew 'double'
+    |-DeclStmt 0x7fa3bb853b80 <line:15:3, col:14>
+    | `-VarDecl 0x7fa3bb853b20 <col:3, col:10> col:10 used zold 'double'
+    `-ForStmt 0x7fa3bb854108 <line:16:3, line:21:5>
+      |-BinaryOperator 0x7fa3bb853bf8 <line:16:8, col:12> 'long' '='
+      | |-DeclRefExpr 0x7fa3bb853b98 <col:8> 'long' lvalue Var 0x7fa3bb853a00 'k' 'long'
+      | `-ImplicitCastExpr 0x7fa3bb853be0 <col:12> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fa3bb853bc0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa3bb853ca0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa3bb853c70 <col:15> 'long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa3bb853c20 <col:15> 'long' lvalue Var 0x7fa3bb853a00 'k' 'long'
+      | `-ImplicitCastExpr 0x7fa3bb853c88 <col:19> 'long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa3bb853c48 <col:19> 'long' lvalue ParmVar 0x7fa3bb853840 'nz' 'long'
+      |-UnaryOperator 0x7fa3bb853cf0 <col:23, col:24> 'long' postfix '++'
+      | `-DeclRefExpr 0x7fa3bb853cc8 <col:23> 'long' lvalue Var 0x7fa3bb853a00 'k' 'long'
+      `-CompoundStmt 0x7fa3bb8540e0 <line:17:5, line:21:5>
+        |-BinaryOperator 0x7fa3bb853e98 <line:18:7, col:26> 'double' '='
+        | |-DeclRefExpr 0x7fa3bb853d10 <col:7> 'double' lvalue Var 0x7fa3bb853a90 'znew' 'double'
+        | `-CallExpr 0x7fa3bb853e50 <col:14, col:26> 'double'
+        |   |-ImplicitCastExpr 0x7fa3bb853e38 <col:14> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fa3bb853d38 <col:14> 'double (_Complex double)' Function 0x7fa3bb853600 'myabs' 'double (_Complex double)'
+        |   `-ImplicitCastExpr 0x7fa3bb853e80 <col:21, col:25> '_Complex double' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fa3bb853de0 <col:21, col:25> '_Complex double' lvalue
+        |       |-ImplicitCastExpr 0x7fa3bb853db0 <col:21> '_Complex double *' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7fa3bb853d60 <col:21> '_Complex double *' lvalue ParmVar 0x7fa3bb8537c8 'wm' '_Complex double *'
+        |       `-ImplicitCastExpr 0x7fa3bb853dc8 <col:24> 'long' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fa3bb853d88 <col:24> 'long' lvalue Var 0x7fa3bb853a00 'k' 'long'
+        |-BinaryOperator 0x7fa3bb853fa8 <line:19:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fa3bb853ec0 <col:7> 'double' lvalue Var 0x7fa3bb853b20 'zold' 'double'
+        | `-ImplicitCastExpr 0x7fa3bb853f90 <col:14, col:20> 'double' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fa3bb853f68 <col:14, col:20> 'double' lvalue
+        |     |-ImplicitCastExpr 0x7fa3bb853f38 <col:14> 'double *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fa3bb853ee8 <col:14> 'double *' lvalue ParmVar 0x7fa3bb853730 'help' 'double *'
+        |     `-ImplicitCastExpr 0x7fa3bb853f50 <col:19> 'long' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fa3bb853f10 <col:19> 'long' lvalue Var 0x7fa3bb853a00 'k' 'long'
+        `-BinaryOperator 0x7fa3bb8540b8 <line:20:7, col:17> 'double' '='
+          |-ArraySubscriptExpr 0x7fa3bb854050 <col:7, col:13> 'double' lvalue
+          | |-ImplicitCastExpr 0x7fa3bb854020 <col:7> 'double *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fa3bb853fd0 <col:7> 'double *' lvalue ParmVar 0x7fa3bb853730 'help' 'double *'
+          | `-ImplicitCastExpr 0x7fa3bb854038 <col:12> 'long' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fa3bb853ff8 <col:12> 'long' lvalue Var 0x7fa3bb853a00 'k' 'long'
+          `-ImplicitCastExpr 0x7fa3bb8540a0 <col:17> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fa3bb854078 <col:17> 'double' lvalue Var 0x7fa3bb853a90 'znew' 'double'

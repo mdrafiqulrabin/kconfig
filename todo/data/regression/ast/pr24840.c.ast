@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fe3a90174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe3a9018160 <../Data/C2AST/pr24840.c:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7fe3a9059038 <line:6:3, col:7> col:7 referenced tag 'int'
+| `-FieldDecl 0x7fe3a9059098 <col:3, col:12> col:12 y 'int'
+|-TypedefDecl 0x7fe3a9059130 <line:4:1, line:7:3> col:3 referenced Object 'struct Object':'Object'
+| `-ElaboratedType 0x7fe3a90590e0 'struct Object' sugar
+|   `-RecordType 0x7fe3a9059000 'Object'
+|     `-Record 0x7fe3a9018160 ''
+|-FunctionDecl 0x7fe3a9059218 <line:9:1, col:50> col:6 used Err_Handler 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7fe3a90594c0 <line:10:1, col:29> col:6 used Wrong_Type 'void (Object, int)'
+| |-ParmVarDecl 0x7fe3a9059330 <col:18> col:24 'Object':'Object'
+| `-ParmVarDecl 0x7fe3a90593a8 <col:26> col:29 'int'
+`-FunctionDecl 0x7fe3a9059778 <line:12:1, line:18:1> line:13:1 P_Error 'int (int, Object *)'
+  |-ParmVarDecl 0x7fe3a9059588 <col:10, col:14> col:14 used argc 'int'
+  |-ParmVarDecl 0x7fe3a9059658 <col:20, col:29> col:29 used argv 'Object *'
+  `-CompoundStmt 0x7fe3a9059e98 <line:14:1, line:18:1>
+    |-IfStmt 0x7fe3a9059b60 <line:15:5, line:16:30>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe3a90599a8 <line:15:9, col:33> 'int' '!='
+    | | |-ParenExpr 0x7fe3a9059968 <col:9, col:28> 'int'
+    | | | `-BinaryOperator 0x7fe3a9059940 <col:10, col:27> 'int' '>>'
+    | | |   |-ImplicitCastExpr 0x7fe3a9059928 <col:10, col:20> 'int' <LValueToRValue>
+    | | |   | `-MemberExpr 0x7fe3a90598d0 <col:10, col:20> 'int' lvalue .tag 0x7fe3a9059038
+    | | |   |   `-ParenExpr 0x7fe3a90598b0 <col:10, col:18> 'Object':'Object' lvalue
+    | | |   |     `-ArraySubscriptExpr 0x7fe3a9059888 <col:11, col:17> 'Object':'Object' lvalue
+    | | |   |       |-ImplicitCastExpr 0x7fe3a9059870 <col:11> 'Object *' <LValueToRValue>
+    | | |   |       | `-DeclRefExpr 0x7fe3a9059828 <col:11> 'Object *' lvalue ParmVar 0x7fe3a9059658 'argv' 'Object *'
+    | | |   |       `-IntegerLiteral 0x7fe3a9059850 <col:16> 'int' 1
+    | | |   `-IntegerLiteral 0x7fe3a9059908 <col:27> 'int' 1
+    | | `-IntegerLiteral 0x7fe3a9059988 <col:33> 'int' 11
+    | |-CallExpr 0x7fe3a9059b10 <line:16:7, col:30> 'void'
+    | | |-ImplicitCastExpr 0x7fe3a9059af8 <col:7> 'void (*)(Object, int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fe3a90599d0 <col:7> 'void (Object, int)' Function 0x7fe3a90594c0 'Wrong_Type' 'void (Object, int)'
+    | | |-ImplicitCastExpr 0x7fe3a9059b48 <col:19, col:25> 'Object':'Object' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fe3a9059a58 <col:19, col:25> 'Object':'Object' lvalue
+    | | |   |-ImplicitCastExpr 0x7fe3a9059a40 <col:19> 'Object *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7fe3a90599f8 <col:19> 'Object *' lvalue ParmVar 0x7fe3a9059658 'argv' 'Object *'
+    | | |   `-IntegerLiteral 0x7fe3a9059a20 <col:24> 'int' 1
+    | | `-IntegerLiteral 0x7fe3a9059a80 <col:28> 'int' 11
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fe3a9059e20 <line:17:3, col:52> 'void'
+      |-ImplicitCastExpr 0x7fe3a9059e08 <col:3> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe3a9059b98 <col:3> 'void () __attribute__((noreturn))' Function 0x7fe3a9059218 'Err_Handler' 'void () __attribute__((noreturn))'
+      |-ImplicitCastExpr 0x7fe3a9059e68 <col:16, col:22> 'Object':'Object' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fe3a9059c20 <col:16, col:22> 'Object':'Object' lvalue
+      |   |-ImplicitCastExpr 0x7fe3a9059c08 <col:16> 'Object *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fe3a9059bc0 <col:16> 'Object *' lvalue ParmVar 0x7fe3a9059658 'argv' 'Object *'
+      |   `-IntegerLiteral 0x7fe3a9059be8 <col:21> 'int' 0
+      |-ImplicitCastExpr 0x7fe3a9059e80 <col:25, col:31> 'Object':'Object' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fe3a9059ca8 <col:25, col:31> 'Object':'Object' lvalue
+      |   |-ImplicitCastExpr 0x7fe3a9059c90 <col:25> 'Object *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fe3a9059c48 <col:25> 'Object *' lvalue ParmVar 0x7fe3a9059658 'argv' 'Object *'
+      |   `-IntegerLiteral 0x7fe3a9059c70 <col:30> 'int' 1
+      |-BinaryOperator 0x7fe3a9059d30 <col:34, col:41> 'int' '-'
+      | |-ImplicitCastExpr 0x7fe3a9059d18 <col:34> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe3a9059cd0 <col:34> 'int' lvalue ParmVar 0x7fe3a9059588 'argc' 'int'
+      | `-IntegerLiteral 0x7fe3a9059cf8 <col:41> 'int' 2
+      `-BinaryOperator 0x7fe3a9059db8 <col:44, col:51> 'Object *' '+'
+        |-ImplicitCastExpr 0x7fe3a9059da0 <col:44> 'Object *' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe3a9059d58 <col:44> 'Object *' lvalue ParmVar 0x7fe3a9059658 'argv' 'Object *'
+        `-IntegerLiteral 0x7fe3a9059d80 <col:51> 'int' 2

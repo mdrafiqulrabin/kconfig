@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fdd9702bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fdd97814200 <../Data/C2AST/pr79593.c:5:1, col:30> col:14 used global_data 'float [1024]' extern
+|-FunctionDecl 0x7fdd97814408 <line:7:1, col:79> col:20 used MIN 'long double (long double, long double)' static
+| |-ParmVarDecl 0x7fdd978142b8 <col:25, col:37> col:37 used a 'long double'
+| |-ParmVarDecl 0x7fdd97814330 <col:40, col:52> col:52 used b 'long double'
+| `-CompoundStmt 0x7fdd97814628 <col:55, col:79>
+|   `-ReturnStmt 0x7fdd97814610 <col:57, col:76>
+|     `-ConditionalOperator 0x7fdd978145e0 <col:64, col:76> 'long double'
+|       |-BinaryOperator 0x7fdd97814538 <col:64, col:68> 'int' '<'
+|       | |-ImplicitCastExpr 0x7fdd97814508 <col:64> 'long double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fdd978144b8 <col:64> 'long double' lvalue ParmVar 0x7fdd978142b8 'a' 'long double'
+|       | `-ImplicitCastExpr 0x7fdd97814520 <col:68> 'long double' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fdd978144e0 <col:68> 'long double' lvalue ParmVar 0x7fdd97814330 'b' 'long double'
+|       |-ImplicitCastExpr 0x7fdd978145b0 <col:72> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fdd97814560 <col:72> 'long double' lvalue ParmVar 0x7fdd978142b8 'a' 'long double'
+|       `-ImplicitCastExpr 0x7fdd978145c8 <col:76> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdd97814588 <col:76> 'long double' lvalue ParmVar 0x7fdd97814330 'b' 'long double'
+|-FunctionDecl 0x7fdd97814768 <line:8:1, col:79> col:20 used MAX 'long double (long double, long double)' static
+| |-ParmVarDecl 0x7fdd97814658 <col:25, col:37> col:37 used a 'long double'
+| |-ParmVarDecl 0x7fdd978146d0 <col:40, col:52> col:52 used b 'long double'
+| `-CompoundStmt 0x7fdd97814988 <col:55, col:79>
+|   `-ReturnStmt 0x7fdd97814970 <col:57, col:76>
+|     `-ConditionalOperator 0x7fdd97814940 <col:64, col:76> 'long double'
+|       |-BinaryOperator 0x7fdd97814898 <col:64, col:68> 'int' '>'
+|       | |-ImplicitCastExpr 0x7fdd97814868 <col:64> 'long double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fdd97814818 <col:64> 'long double' lvalue ParmVar 0x7fdd97814658 'a' 'long double'
+|       | `-ImplicitCastExpr 0x7fdd97814880 <col:68> 'long double' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fdd97814840 <col:68> 'long double' lvalue ParmVar 0x7fdd978146d0 'b' 'long double'
+|       |-ImplicitCastExpr 0x7fdd97814910 <col:72> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fdd978148c0 <col:72> 'long double' lvalue ParmVar 0x7fdd97814658 'a' 'long double'
+|       `-ImplicitCastExpr 0x7fdd97814928 <col:76> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdd978148e8 <col:76> 'long double' lvalue ParmVar 0x7fdd978146d0 'b' 'long double'
+`-FunctionDecl 0x7fdd97814a68 <line:10:1, line:15:1> line:10:7 bar 'float (void)'
+  `-CompoundStmt 0x7fdd97814eb0 <line:11:1, line:15:1>
+    |-DeclStmt 0x7fdd97814c88 <line:12:3, col:39>
+    | `-VarDecl 0x7fdd97814b20 <col:3, col:38> col:15 used delta 'long double' cinit
+    |   `-ImplicitCastExpr 0x7fdd97814c70 <col:23, col:38> 'long double' <FloatingCast>
+    |     `-ImplicitCastExpr 0x7fdd97814c58 <col:23, col:38> 'float' <LValueToRValue>
+    |       `-ParenExpr 0x7fdd97814c38 <col:23, col:38> 'float' lvalue
+    |         `-ArraySubscriptExpr 0x7fdd97814c10 <col:24, col:37> 'float' lvalue
+    |           |-ImplicitCastExpr 0x7fdd97814bf8 <col:24> 'float *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7fdd97814b80 <col:24> 'float [1024]' lvalue Var 0x7fdd97814200 'global_data' 'float [1024]'
+    |           `-IntegerLiteral 0x7fdd97814ba8 <col:36> 'int' 0
+    `-ReturnStmt 0x7fdd97814e98 <line:14:3, col:40>
+      `-ImplicitCastExpr 0x7fdd97814e80 <col:10, col:40> 'float' <FloatingCast>
+        `-ParenExpr 0x7fdd97814e60 <col:10, col:40> 'long double'
+          `-CallExpr 0x7fdd97814e28 <col:11, col:39> 'long double'
+            |-ImplicitCastExpr 0x7fdd97814e10 <col:11> 'long double (*)(long double, long double)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7fdd97814ca0 <col:11> 'long double (long double, long double)' Function 0x7fdd97814408 'MIN' 'long double (long double, long double)'
+            |-CallExpr 0x7fdd97814d90 <col:16, col:32> 'long double'
+            | |-ImplicitCastExpr 0x7fdd97814d78 <col:16> 'long double (*)(long double, long double)' <FunctionToPointerDecay>
+            | | `-DeclRefExpr 0x7fdd97814cc8 <col:16> 'long double (long double, long double)' Function 0x7fdd97814768 'MAX' 'long double (long double, long double)'
+            | |-ImplicitCastExpr 0x7fdd97814dc8 <col:21> 'long double' <LValueToRValue>
+            | | `-DeclRefExpr 0x7fdd97814cf0 <col:21> 'long double' lvalue Var 0x7fdd97814b20 'delta' 'long double'
+            | `-FloatingLiteral 0x7fdd97814d18 <col:28> 'long double' 0.000000e+00
+            `-FloatingLiteral 0x7fdd97814de0 <col:35> 'long double' 1.000000e+00

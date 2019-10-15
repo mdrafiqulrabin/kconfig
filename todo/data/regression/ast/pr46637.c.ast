@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fb1fc0262e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb1fc026f60 <../Data/C2AST/pr46637.c:3:1, col:22> col:8 struct S definition
+| `-FieldDecl 0x7fb1fc8142a0 <col:12, col:19> col:16 referenced s 'int [5]'
+|-VarDecl 0x7fb1fc8143a0 <col:1, col:25> col:25 used p 'struct S *'
+`-FunctionDecl 0x7fb1fc814530 <line:5:1, line:11:1> line:6:1 foo 'void (long)'
+  |-ParmVarDecl 0x7fb1fc814470 <col:6, col:11> col:11 used x 'long'
+  `-CompoundStmt 0x7fb1fc814ac8 <line:7:1, line:11:1>
+    |-DeclStmt 0x7fb1fc814760 <line:8:3, col:28>
+    | `-VarDecl 0x7fb1fc8145f0 <col:3, col:26> col:8 used a 'long' cinit
+    |   `-ConditionalOperator 0x7fb1fc814730 <col:12, col:26> 'long'
+    |     |-BinaryOperator 0x7fb1fc8146c8 <col:12, col:17> 'int' '=='
+    |     | |-ImplicitCastExpr 0x7fb1fc814698 <col:12> 'long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fb1fc814650 <col:12> 'long' lvalue ParmVar 0x7fb1fc814470 'x' 'long'
+    |     | `-ImplicitCastExpr 0x7fb1fc8146b0 <col:17> 'long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fb1fc814678 <col:17> 'int' 1
+    |     |-IntegerLiteral 0x7fb1fc8146f0 <col:21> 'long' 4
+    |     `-IntegerLiteral 0x7fb1fc814710 <col:26> 'long' 1
+    |-GCCAsmStmt 0x7fb1fc814970 <line:9:3, col:27>
+    | `-ArraySubscriptExpr 0x7fb1fc814948 <col:19, col:25> 'int' lvalue
+    |   |-ImplicitCastExpr 0x7fb1fc814918 <col:19, col:22> 'int *' <ArrayToPointerDecay>
+    |   | `-MemberExpr 0x7fb1fc814888 <col:19, col:22> 'int [5]' lvalue ->s 0x7fb1fc8142a0
+    |   |   `-ImplicitCastExpr 0x7fb1fc814870 <col:19> 'struct S *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fb1fc814848 <col:19> 'struct S *' lvalue Var 0x7fb1fc8143a0 'p' 'struct S *'
+    |   `-ImplicitCastExpr 0x7fb1fc814930 <col:24> 'long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb1fc8148c0 <col:24> 'long' lvalue Var 0x7fb1fc8145f0 'a' 'long'
+    `-UnaryOperator 0x7fb1fc814aa8 <line:10:3, col:10> 'int' postfix '++'
+      `-ArraySubscriptExpr 0x7fb1fc814a80 <col:3, col:9> 'int' lvalue
+        |-ImplicitCastExpr 0x7fb1fc814a68 <col:3, col:6> 'int *' <ArrayToPointerDecay>
+        | `-MemberExpr 0x7fb1fc814a10 <col:3, col:6> 'int [5]' lvalue ->s 0x7fb1fc8142a0
+        |   `-ImplicitCastExpr 0x7fb1fc8149f8 <col:3> 'struct S *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fb1fc8149d0 <col:3> 'struct S *' lvalue Var 0x7fb1fc8143a0 'p' 'struct S *'
+        `-IntegerLiteral 0x7fb1fc814a48 <col:8> 'int' 0

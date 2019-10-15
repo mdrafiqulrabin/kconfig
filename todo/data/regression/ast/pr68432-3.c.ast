@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7ff30b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff30b815268 <../Data/C2AST/pr68432-3.c:4:1, line:8:1> line:5:1 f1 'float (float)'
+| |-ParmVarDecl 0x7ff30b02c978 <col:5, col:11> col:11 used f 'float'
+| |-CompoundStmt 0x7ff30b8155f0 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7ff30b8155d8 <line:7:3, col:28>
+| |   `-CallExpr 0x7ff30b815590 <col:10, col:28> 'float'
+| |     |-ImplicitCastExpr 0x7ff30b815578 <col:10> 'float (*)(float)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7ff30b8154f8 <col:10> '<builtin fn type>' Function 0x7ff30b815398 '__builtin_rintf' 'float (float)'
+| |     `-ImplicitCastExpr 0x7ff30b8155c0 <col:27> 'float' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ff30b815520 <col:27> 'float' lvalue ParmVar 0x7ff30b02c978 'f' 'float'
+| `-ColdAttr 0x7ff30b815310 <line:4:23>
+|-FunctionDecl 0x7ff30b815398 <line:7:10> col:10 implicit used __builtin_rintf 'float (float)' extern
+| |-ParmVarDecl 0x7ff30b815438 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ff30b8154a0 <col:10> Implicit
+| `-ConstAttr 0x7ff30b8154e8 <col:10> Implicit
+|-FunctionDecl 0x7ff30b8156e8 <line:10:1, line:14:1> line:11:1 f2 'double (double)'
+| |-ParmVarDecl 0x7ff30b815620 <col:5, col:12> col:12 used f 'double'
+| |-CompoundStmt 0x7ff30b815a30 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7ff30b815a18 <line:13:3, col:27>
+| |   `-CallExpr 0x7ff30b8159d0 <col:10, col:27> 'double'
+| |     |-ImplicitCastExpr 0x7ff30b8159b8 <col:10> 'double (*)(double)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7ff30b815938 <col:10> '<builtin fn type>' Function 0x7ff30b8157d8 '__builtin_rint' 'double (double)'
+| |     `-ImplicitCastExpr 0x7ff30b815a00 <col:26> 'double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ff30b815960 <col:26> 'double' lvalue ParmVar 0x7ff30b815620 'f' 'double'
+| `-ColdAttr 0x7ff30b815790 <line:10:24>
+`-FunctionDecl 0x7ff30b8157d8 <line:13:10> col:10 implicit used __builtin_rint 'double (double)' extern
+  |-ParmVarDecl 0x7ff30b815878 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7ff30b8158e0 <col:10> Implicit
+  `-ConstAttr 0x7ff30b815928 <col:10> Implicit

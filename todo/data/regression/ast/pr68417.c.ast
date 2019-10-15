@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7fe45280a6e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe45280b360 <../Data/C2AST/pr68417.c:7:9, line:10:1> line:7:9 struct definition
+| |-FieldDecl 0x7fe451818438 <line:8:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7fe451818498 <line:9:3, col:7> col:7 referenced y 'int'
+|-TypedefDecl 0x7fe451818530 <line:7:1, line:10:3> col:3 referenced Point 'struct Point':'Point'
+| `-ElaboratedType 0x7fe4518184e0 'struct Point' sugar
+|   `-RecordType 0x7fe451818400 'Point'
+|     `-Record 0x7fe45280b360 ''
+`-FunctionDecl 0x7fe4518188f0 <line:12:1, line:30:1> line:13:1 foo 'void (Point *, Point *, Point *, int *)'
+  |-ParmVarDecl 0x7fe451818628 <col:5, col:12> col:12 used p1 'Point *'
+  |-ParmVarDecl 0x7fe451818698 <col:16, col:23> col:23 used p2 'Point *'
+  |-ParmVarDecl 0x7fe451818708 <col:27, col:34> col:34 used p3 'Point *'
+  |-ParmVarDecl 0x7fe4518187b0 <col:38, col:43> col:43 used data 'int *'
+  `-CompoundStmt 0x7fe4518194e8 <line:14:1, line:30:1>
+    |-DeclStmt 0x7fe451818b78 <line:15:3, col:16>
+    | |-VarDecl 0x7fe451818a08 <col:3, col:7> col:7 used m 'int'
+    | |-VarDecl 0x7fe451818a80 <col:3, col:10> col:10 used m1 'int'
+    | `-VarDecl 0x7fe451818af8 <col:3, col:14> col:14 used m2 'int'
+    |-DeclStmt 0x7fe451818c08 <line:16:3, col:8>
+    | `-VarDecl 0x7fe451818ba8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fe4518194b0 <line:18:3, line:29:3>
+      |-BinaryOperator 0x7fe451818c68 <line:18:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fe451818c20 <col:8> 'int' lvalue Var 0x7fe451818ba8 'i' 'int'
+      | `-IntegerLiteral 0x7fe451818c48 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe451818cf0 <col:15, line:5:11> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe451818cd8 <line:18:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe451818c90 <col:15> 'int' lvalue Var 0x7fe451818ba8 'i' 'int'
+      | `-IntegerLiteral 0x7fe451818cb8 <line:5:11> 'int' 16
+      |-UnaryOperator 0x7fe451818d40 <line:18:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe451818d18 <col:22> 'int' lvalue Var 0x7fe451818ba8 'i' 'int'
+      `-CompoundStmt 0x7fe451819468 <col:27, line:29:3>
+        |-BinaryOperator 0x7fe451818e08 <line:19:5, col:14> 'int' '='
+        | |-DeclRefExpr 0x7fe451818d60 <col:5> 'int' lvalue Var 0x7fe451818a08 'm' 'int'
+        | `-ImplicitCastExpr 0x7fe451818df0 <col:9, col:14> 'int' <LValueToRValue>
+        |   `-UnaryOperator 0x7fe451818dd0 <col:9, col:14> 'int' lvalue prefix '*'
+        |     `-UnaryOperator 0x7fe451818db0 <col:10, col:14> 'int *' postfix '++'
+        |       `-DeclRefExpr 0x7fe451818d88 <col:10> 'int *' lvalue ParmVar 0x7fe4518187b0 'data' 'int *'
+        |-BinaryOperator 0x7fe451818f50 <line:21:5, col:18> 'int' '='
+        | |-DeclRefExpr 0x7fe451818e30 <col:5> 'int' lvalue Var 0x7fe451818a80 'm1' 'int'
+        | `-BinaryOperator 0x7fe451818f28 <col:10, col:18> 'int' '-'
+        |   |-ImplicitCastExpr 0x7fe451818ef8 <col:10, col:14> 'int' <LValueToRValue>
+        |   | `-MemberExpr 0x7fe451818e98 <col:10, col:14> 'int' lvalue ->x 0x7fe451818438
+        |   |   `-ImplicitCastExpr 0x7fe451818e80 <col:10> 'Point *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fe451818e58 <col:10> 'Point *' lvalue ParmVar 0x7fe451818628 'p1' 'Point *'
+        |   `-ImplicitCastExpr 0x7fe451818f10 <col:18> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fe451818ed0 <col:18> 'int' lvalue Var 0x7fe451818a08 'm' 'int'
+        |-BinaryOperator 0x7fe451819098 <line:22:5, col:18> 'int' '='
+        | |-DeclRefExpr 0x7fe451818f78 <col:5> 'int' lvalue Var 0x7fe451818af8 'm2' 'int'
+        | `-BinaryOperator 0x7fe451819070 <col:10, col:18> 'int' '+'
+        |   |-ImplicitCastExpr 0x7fe451819040 <col:10, col:14> 'int' <LValueToRValue>
+        |   | `-MemberExpr 0x7fe451818fe0 <col:10, col:14> 'int' lvalue ->x 0x7fe451818438
+        |   |   `-ImplicitCastExpr 0x7fe451818fc8 <col:10> 'Point *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fe451818fa0 <col:10> 'Point *' lvalue ParmVar 0x7fe451818698 'p2' 'Point *'
+        |   `-ImplicitCastExpr 0x7fe451819058 <col:18> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fe451819018 <col:18> 'int' lvalue Var 0x7fe451818a08 'm' 'int'
+        |-BinaryOperator 0x7fe451819350 <line:24:5, col:38> 'int' '='
+        | |-MemberExpr 0x7fe451819100 <col:5, col:9> 'int' lvalue ->y 0x7fe451818498
+        | | `-ImplicitCastExpr 0x7fe4518190e8 <col:5> 'Point *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fe4518190c0 <col:5> 'Point *' lvalue ParmVar 0x7fe451818708 'p3' 'Point *'
+        | `-ConditionalOperator 0x7fe451819320 <col:13, col:38> 'int'
+        |   |-ParenExpr 0x7fe4518191e0 <col:13, col:22> 'int'
+        |   | `-BinaryOperator 0x7fe4518191b8 <col:14, col:20> 'int' '>='
+        |   |   |-ImplicitCastExpr 0x7fe451819188 <col:14> 'int' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7fe451819138 <col:14> 'int' lvalue Var 0x7fe451818a80 'm1' 'int'
+        |   |   `-ImplicitCastExpr 0x7fe4518191a0 <col:20> 'int' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fe451819160 <col:20> 'int' lvalue Var 0x7fe451818af8 'm2' 'int'
+        |   |-ImplicitCastExpr 0x7fe4518192f0 <col:26, col:30> 'int' <LValueToRValue>
+        |   | `-MemberExpr 0x7fe451819240 <col:26, col:30> 'int' lvalue ->y 0x7fe451818498
+        |   |   `-ImplicitCastExpr 0x7fe451819228 <col:26> 'Point *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fe451819200 <col:26> 'Point *' lvalue ParmVar 0x7fe451818628 'p1' 'Point *'
+        |   `-ImplicitCastExpr 0x7fe451819308 <col:34, col:38> 'int' <LValueToRValue>
+        |     `-MemberExpr 0x7fe4518192b8 <col:34, col:38> 'int' lvalue ->y 0x7fe451818498
+        |       `-ImplicitCastExpr 0x7fe4518192a0 <col:34> 'Point *' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fe451819278 <col:34> 'Point *' lvalue ParmVar 0x7fe451818698 'p2' 'Point *'
+        |-UnaryOperator 0x7fe4518193a0 <line:26:5, col:7> 'Point *' postfix '++'
+        | `-DeclRefExpr 0x7fe451819378 <col:5> 'Point *' lvalue ParmVar 0x7fe451818628 'p1' 'Point *'
+        |-UnaryOperator 0x7fe451819400 <line:27:5, col:7> 'Point *' postfix '++'
+        | `-DeclRefExpr 0x7fe4518193c0 <col:5> 'Point *' lvalue ParmVar 0x7fe451818698 'p2' 'Point *'
+        `-UnaryOperator 0x7fe451819448 <line:28:5, col:7> 'Point *' postfix '++'
+          `-DeclRefExpr 0x7fe451819420 <col:5> 'Point *' lvalue ParmVar 0x7fe451818708 'p3' 'Point *'

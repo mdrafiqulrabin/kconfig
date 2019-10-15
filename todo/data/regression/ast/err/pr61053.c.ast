@@ -1,0 +1,266 @@
+../Data/C2AST/pr61053.c:14:1: error: requested alignment is less than minimum alignment of 2 for type 'short'
+_Alignas (char) short int sc;  
+^
+../Data/C2AST/pr61053.c:23:1: error: requested alignment is less than minimum alignment of 4 for type 'int'
+_Alignas (char) int ic;  
+^
+../Data/C2AST/pr61053.c:24:1: error: requested alignment is less than minimum alignment of 4 for type 'int'
+_Alignas (short int) int is;  
+^
+../Data/C2AST/pr61053.c:32:1: error: requested alignment is less than minimum alignment of 8 for type 'long'
+_Alignas (char) long int lic;  
+^
+../Data/C2AST/pr61053.c:33:1: error: requested alignment is less than minimum alignment of 8 for type 'long'
+_Alignas (short int) long int lis;  
+^
+../Data/C2AST/pr61053.c:34:1: error: requested alignment is less than minimum alignment of 8 for type 'long'
+_Alignas (int) long int lii;  
+^
+../Data/C2AST/pr61053.c:37:1: error: requested alignment is less than minimum alignment of 8 for type 'long'
+_Alignas (float) long int lif;  
+^
+../Data/C2AST/pr61053.c:41:1: error: requested alignment is less than minimum alignment of 8 for type 'long long'
+_Alignas (char) long long int llic;  
+^
+../Data/C2AST/pr61053.c:42:1: error: requested alignment is less than minimum alignment of 8 for type 'long long'
+_Alignas (short int) long long int llis;  
+^
+../Data/C2AST/pr61053.c:43:1: error: requested alignment is less than minimum alignment of 8 for type 'long long'
+_Alignas (int) long long int llii;  
+^
+../Data/C2AST/pr61053.c:46:1: error: requested alignment is less than minimum alignment of 8 for type 'long long'
+_Alignas (float) long long int llif;  
+^
+../Data/C2AST/pr61053.c:50:1: error: requested alignment is less than minimum alignment of 4 for type 'float'
+_Alignas (char) float fc;  
+^
+../Data/C2AST/pr61053.c:51:1: error: requested alignment is less than minimum alignment of 4 for type 'float'
+_Alignas (short int) float fs;  
+^
+../Data/C2AST/pr61053.c:59:1: error: requested alignment is less than minimum alignment of 8 for type 'double'
+_Alignas (char) double dc;  
+^
+../Data/C2AST/pr61053.c:60:1: error: requested alignment is less than minimum alignment of 8 for type 'double'
+_Alignas (short int) double ds;  
+^
+../Data/C2AST/pr61053.c:61:1: error: requested alignment is less than minimum alignment of 8 for type 'double'
+_Alignas (int) double di;  
+^
+../Data/C2AST/pr61053.c:64:1: error: requested alignment is less than minimum alignment of 8 for type 'double'
+_Alignas (float) double df;  
+^
+../Data/C2AST/pr61053.c:68:1: error: requested alignment is less than minimum alignment of 16 for type 'long double'
+_Alignas (char) long double ldc;  
+^
+../Data/C2AST/pr61053.c:69:1: error: requested alignment is less than minimum alignment of 16 for type 'long double'
+_Alignas (short int) long double lds;  
+^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+TranslationUnitDecl 0x7fedcd017ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fedcd018460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fedcd018180 '__int128'
+|-TypedefDecl 0x7fedcd0184d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fedcd0181a0 'unsigned __int128'
+|-TypedefDecl 0x7fedcd0187a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fedcd0185b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fedcd018528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fedcd018840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fedcd018800 'char *'
+|   `-BuiltinType 0x7fedcd017f80 'char'
+|-TypedefDecl 0x7fedcd018b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fedcd018ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fedcd018920 'struct __va_list_tag'
+|     `-Record 0x7fedcd018898 '__va_list_tag'
+|-VarDecl 0x7fedcd018ba0 <../Data/C2AST/pr61053.c:5:1, col:22> col:22 cc 'char'
+| `-AlignedAttr 0x7fedcd061400 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd018b70 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd0614d8 <line:6:1, col:27> col:27 cs 'char'
+| `-AlignedAttr 0x7fedcd061538 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd0614a8 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd0615d0 <line:7:1, col:21> col:21 ci 'char'
+| `-AlignedAttr 0x7fedcd061630 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd0615a0 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd0616c8 <line:8:1, col:26> col:26 cl 'char'
+| `-AlignedAttr 0x7fedcd061728 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd061698 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd0617c0 <line:9:1, col:31> col:31 cll 'char'
+| `-AlignedAttr 0x7fedcd061820 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd061790 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd0618b8 <line:10:1, col:23> col:23 cf 'char'
+| `-AlignedAttr 0x7fedcd061918 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd061888 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd0619b0 <line:11:1, col:24> col:24 cd 'char'
+| `-AlignedAttr 0x7fedcd061a10 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd061980 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd061aa8 <line:12:1, col:29> col:29 cld 'char'
+| `-AlignedAttr 0x7fedcd061b08 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd061a78 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd061ba0 <line:14:1, col:27> col:27 sc 'short'
+| `-AlignedAttr 0x7fedcd061c00 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd061b68 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd062050 <line:15:1, col:32> col:32 ss 'short'
+| `-AlignedAttr 0x7fedcd0620b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062018 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd062150 <line:16:1, col:26> col:26 si 'short'
+| `-AlignedAttr 0x7fedcd0621b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062118 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd062250 <line:17:1, col:31> col:31 sl 'short'
+| `-AlignedAttr 0x7fedcd0622b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062218 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd062350 <line:18:1, col:36> col:36 sll 'short'
+| `-AlignedAttr 0x7fedcd0623b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062318 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd062450 <line:19:1, col:28> col:28 sf 'short'
+| `-AlignedAttr 0x7fedcd0624b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062418 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd062550 <line:20:1, col:29> col:29 sd 'short'
+| `-AlignedAttr 0x7fedcd0625b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062518 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd062650 <line:21:1, col:34> col:34 sld 'short'
+| `-AlignedAttr 0x7fedcd0626b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062618 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd062748 <line:23:1, col:21> col:21 ic 'int'
+| `-AlignedAttr 0x7fedcd0627a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062710 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd062848 <line:24:1, col:26> col:26 is 'int'
+| `-AlignedAttr 0x7fedcd0628a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062810 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd062948 <line:25:1, col:20> col:20 ii 'int'
+| `-AlignedAttr 0x7fedcd0629a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062910 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd062a48 <line:26:1, col:25> col:25 il 'int'
+| `-AlignedAttr 0x7fedcd062aa8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062a10 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd062b48 <line:27:1, col:30> col:30 ill 'int'
+| `-AlignedAttr 0x7fedcd062ba8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062b10 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd062c48 <line:28:1, col:22> col:22 if_ 'int'
+| `-AlignedAttr 0x7fedcd062ca8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062c10 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd062d48 <line:29:1, col:23> col:23 id 'int'
+| `-AlignedAttr 0x7fedcd062da8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062d10 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd062e48 <line:30:1, col:28> col:28 ild 'int'
+| `-AlignedAttr 0x7fedcd062ea8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062e10 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd062f40 <line:32:1, col:26> col:26 lic 'long'
+| `-AlignedAttr 0x7fedcd062fa0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd062f08 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd063040 <line:33:1, col:31> col:31 lis 'long'
+| `-AlignedAttr 0x7fedcd0630a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063008 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd063140 <line:34:1, col:25> col:25 lii 'long'
+| `-AlignedAttr 0x7fedcd0631a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063108 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd063240 <line:35:1, col:30> col:30 lil 'long'
+| `-AlignedAttr 0x7fedcd0632a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063208 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd063340 <line:36:1, col:35> col:35 lill 'long'
+| `-AlignedAttr 0x7fedcd0633a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063308 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd063450 <line:37:1, col:27> col:27 lif 'long'
+| `-AlignedAttr 0x7fedcd0634b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063418 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd063550 <line:38:1, col:28> col:28 lid 'long'
+| `-AlignedAttr 0x7fedcd0635b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063518 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd063650 <line:39:1, col:33> col:33 lild 'long'
+| `-AlignedAttr 0x7fedcd0636b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063618 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd063748 <line:41:1, col:31> col:31 llic 'long long'
+| `-AlignedAttr 0x7fedcd0637a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063710 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd063848 <line:42:1, col:36> col:36 llis 'long long'
+| `-AlignedAttr 0x7fedcd0638a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063810 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd063948 <line:43:1, col:30> col:30 llii 'long long'
+| `-AlignedAttr 0x7fedcd0639a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063910 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd063a48 <line:44:1, col:35> col:35 llil 'long long'
+| `-AlignedAttr 0x7fedcd063aa8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063a10 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd063b48 <line:45:1, col:40> col:40 llill 'long long'
+| `-AlignedAttr 0x7fedcd063ba8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063b10 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd063c48 <line:46:1, col:32> col:32 llif 'long long'
+| `-AlignedAttr 0x7fedcd063ca8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063c10 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd063d48 <line:47:1, col:33> col:33 llid 'long long'
+| `-AlignedAttr 0x7fedcd063da8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063d10 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd063e48 <line:48:1, col:38> col:38 llild 'long long'
+| `-AlignedAttr 0x7fedcd063ea8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063e10 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd063f40 <line:50:1, col:23> col:23 fc 'float'
+| `-AlignedAttr 0x7fedcd063fa0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd063f08 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd064040 <line:51:1, col:28> col:28 fs 'float'
+| `-AlignedAttr 0x7fedcd0640a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064008 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd064140 <line:52:1, col:22> col:22 fi 'float'
+| `-AlignedAttr 0x7fedcd0641a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064108 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd064240 <line:53:1, col:27> col:27 fl 'float'
+| `-AlignedAttr 0x7fedcd0642a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064208 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd064340 <line:54:1, col:32> col:32 fll 'float'
+| `-AlignedAttr 0x7fedcd0643a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064308 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd064450 <line:55:1, col:24> col:24 ff 'float'
+| `-AlignedAttr 0x7fedcd0644b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064418 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd064550 <line:56:1, col:25> col:25 fd 'float'
+| `-AlignedAttr 0x7fedcd0645b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064518 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd064650 <line:57:1, col:30> col:30 fld 'float'
+| `-AlignedAttr 0x7fedcd0646b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064618 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd064748 <line:59:1, col:24> col:24 dc 'double'
+| `-AlignedAttr 0x7fedcd0647a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064710 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd064848 <line:60:1, col:29> col:29 ds 'double'
+| `-AlignedAttr 0x7fedcd0648a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064810 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd064948 <line:61:1, col:23> col:23 di 'double'
+| `-AlignedAttr 0x7fedcd0649a8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064910 <col:11, col:14> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd064a48 <line:62:1, col:28> col:28 dl 'double'
+| `-AlignedAttr 0x7fedcd064aa8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064a10 <col:11, col:19> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd064b48 <line:63:1, col:33> col:33 dll 'double'
+| `-AlignedAttr 0x7fedcd064ba8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064b10 <col:11, col:24> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd064c48 <line:64:1, col:25> col:25 df 'double'
+| `-AlignedAttr 0x7fedcd064ca8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064c10 <col:11, col:16> 'unsigned long' alignof 'float'
+|-VarDecl 020 errors generated.
+x7fedcd064d48 <line:65:1, col:26> col:26 dd 'double'
+| `-AlignedAttr 0x7fedcd064da8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064d10 <col:11, col:17> 'unsigned long' alignof 'double'
+|-VarDecl 0x7fedcd064e48 <line:66:1, col:31> col:31 dld 'double'
+| `-AlignedAttr 0x7fedcd064ea8 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064e10 <col:11, col:22> 'unsigned long' alignof 'long double'
+|-VarDecl 0x7fedcd064f40 <line:68:1, col:29> col:29 ldc 'long double'
+| `-AlignedAttr 0x7fedcd064fa0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd064f08 <col:11, col:15> 'unsigned long' alignof 'char'
+|-VarDecl 0x7fedcd065040 <line:69:1, col:34> col:34 lds 'long double'
+| `-AlignedAttr 0x7fedcd0650a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd065008 <col:11, col:20> 'unsigned long' alignof 'short'
+|-VarDecl 0x7fedcd065140 <line:78:1, col:32> col:32 ldi 'long double'
+| `-AlignedAttr 0x7fedcd0651a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd065108 <col:14, col:18> 'unsigned long' alignof 'int'
+|-VarDecl 0x7fedcd065240 <line:79:1, col:37> col:37 ldl 'long double'
+| `-AlignedAttr 0x7fedcd0652a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd065208 <col:14, col:23> 'unsigned long' alignof 'long'
+|-VarDecl 0x7fedcd065340 <line:80:1, col:42> col:42 ldll 'long double'
+| `-AlignedAttr 0x7fedcd0653a0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd065308 <col:14, col:28> 'unsigned long' alignof 'long long'
+|-VarDecl 0x7fedcd065450 <line:81:1, col:34> col:34 ldf 'long double'
+| `-AlignedAttr 0x7fedcd0654b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd065418 <col:14, col:20> 'unsigned long' alignof 'float'
+|-VarDecl 0x7fedcd065550 <line:82:1, col:35> col:35 ldd 'long double'
+| `-AlignedAttr 0x7fedcd0655b0 <col:1> _Alignas
+|   `-UnaryExprOrTypeTraitExpr 0x7fedcd065518 <col:14, col:21> 'unsigned long' alignof 'double'
+`-VarDecl 0x7fedcd065650 <line:83:1, col:36> col:36 ldld 'long double'
+  `-AlignedAttr 0x7fedcd0656b0 <col:1> _Alignas
+    `-UnaryExprOrTypeTraitExpr 0x7fedcd065618 <col:11, col:22> 'unsigned long' alignof 'long double'

@@ -1,0 +1,125 @@
+TranslationUnitDecl 0x7fef838174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fef838731e0 <../Data/C2AST/pr48258-2.c:16:1, col:19> col:8 used values 'double [1024]'
+| `-AlignedAttr 0x7fef83873240 <col:36, col:50> aligned
+|   `-IntegerLiteral 0x7fef83873158 <col:48> 'int' 32
+|-FunctionDecl 0x7fef83873398 <line:18:1, line:28:1> line:19:1 vector_sum 'double (void)'
+| `-CompoundStmt 0x7fef838738e0 <line:20:1, line:28:1>
+|   |-DeclStmt 0x7fef838734d0 <line:21:3, col:11>
+|   | `-VarDecl 0x7fef83873470 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7fef83873580 <line:22:3, col:19>
+|   | `-VarDecl 0x7fef83873500 <col:3, col:16> col:10 used sum 'double' cinit
+|   |   `-FloatingLiteral 0x7fef83873560 <col:16> 'double' 0.000000e+00
+|   |-ForStmt 0x7fef83873850 <line:24:3, line:25:20>
+|   | |-BinaryOperator 0x7fef838735f8 <line:24:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fef83873598 <col:8> 'size_t':'unsigned long' lvalue Var 0x7fef83873470 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fef838735e0 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef838735c0 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fef83873698 <col:15, line:13:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fef83873668 <line:24:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fef83873620 <col:15> 'size_t':'unsigned long' lvalue Var 0x7fef83873470 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fef83873680 <line:13:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef83873648 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fef838736e8 <line:24:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7fef838736c0 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fef83873470 'i' 'size_t':'unsigned long'
+|   | `-CompoundAssignOperator 0x7fef83873818 <line:25:5, col:20> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   |   |-DeclRefExpr 0x7fef83873708 <col:5> 'double' lvalue Var 0x7fef83873500 'sum' 'double'
+|   |   `-ImplicitCastExpr 0x7fef83873800 <col:12, col:20> 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fef838737d8 <col:12, col:20> 'double' lvalue
+|   |       |-ImplicitCastExpr 0x7fef838737a8 <col:12> 'double *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fef83873730 <col:12> 'double [1024]' lvalue Var 0x7fef838731e0 'values' 'double [1024]'
+|   |       `-ImplicitCastExpr 0x7fef838737c0 <col:19> 'size_t':'unsigned long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fef83873758 <col:19> 'size_t':'unsigned long' lvalue Var 0x7fef83873470 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fef838738c8 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fef838738b0 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fef83873888 <col:10> 'double' lvalue Var 0x7fef83873500 'sum' 'double'
+|-FunctionDecl 0x7fef838739a8 <line:30:1, line:40:1> line:31:1 vector_min 'double (void)'
+| `-CompoundStmt 0x7fef83875210 <line:32:1, line:40:1>
+|   |-DeclStmt 0x7fef83873ab8 <line:33:3, col:11>
+|   | `-VarDecl 0x7fef83873a58 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7fef83873be8 <line:34:3, col:25>
+|   | `-VarDecl 0x7fef83873ae8 <col:3, col:24> col:10 used min 'double' cinit
+|   |   `-ImplicitCastExpr 0x7fef83873bd0 <col:16, col:24> 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fef83873ba8 <col:16, col:24> 'double' lvalue
+|   |       |-ImplicitCastExpr 0x7fef83873b90 <col:16> 'double *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fef83873b48 <col:16> 'double [1024]' lvalue Var 0x7fef838731e0 'values' 'double [1024]'
+|   |       `-IntegerLiteral 0x7fef83873b70 <col:23> 'int' 0
+|   |-ForStmt 0x7fef83875180 <line:36:3, line:37:41>
+|   | |-BinaryOperator 0x7fef83873c60 <line:36:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fef83873c00 <col:8> 'size_t':'unsigned long' lvalue Var 0x7fef83873a58 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fef83873c48 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef83873c28 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fef83873d00 <col:15, line:13:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fef83873cd0 <line:36:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fef83873c88 <col:15> 'size_t':'unsigned long' lvalue Var 0x7fef83873a58 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fef83873ce8 <line:13:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef83873cb0 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fef83873d50 <line:36:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7fef83873d28 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fef83873a58 'i' 'size_t':'unsigned long'
+|   | `-BinaryOperator 0x7fef83875158 <line:37:5, col:41> 'double' '='
+|   |   |-DeclRefExpr 0x7fef83873d70 <col:5> 'double' lvalue Var 0x7fef83873ae8 'min' 'double'
+|   |   `-CallExpr 0x7fef838750f0 <col:11, col:41> 'double'
+|   |     |-ImplicitCastExpr 0x7fef838750d8 <col:11> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fef83873fa8 <col:11> '<builtin fn type>' Function 0x7fef83873de0 '__builtin_fmin' 'double (double, double)'
+|   |     |-ImplicitCastExpr 0x7fef83875128 <col:27> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fef83873fd0 <col:27> 'double' lvalue Var 0x7fef83873ae8 'min' 'double'
+|   |     `-ImplicitCastExpr 0x7fef83875140 <col:32, col:40> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fef83875080 <col:32, col:40> 'double' lvalue
+|   |         |-ImplicitCastExpr 0x7fef83875050 <col:32> 'double *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fef83875000 <col:32> 'double [1024]' lvalue Var 0x7fef838731e0 'values' 'double [1024]'
+|   |         `-ImplicitCastExpr 0x7fef83875068 <col:39> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fef83875028 <col:39> 'size_t':'unsigned long' lvalue Var 0x7fef83873a58 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fef838751f8 <line:39:3, col:10>
+|     `-ImplicitCastExpr 0x7fef838751e0 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fef838751b8 <col:10> 'double' lvalue Var 0x7fef83873ae8 'min' 'double'
+|-FunctionDecl 0x7fef83873de0 <line:37:11> col:11 implicit used __builtin_fmin 'double (double, double)' extern
+| |-ParmVarDecl 0x7fef83873e80 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fef83873ee0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fef83873f50 <col:11> Implicit
+| `-ConstAttr 0x7fef83873f98 <col:11> Implicit
+|-FunctionDecl 0x7fef838752d8 <line:42:1, line:52:1> line:43:1 vector_max 'double (void)'
+| `-CompoundStmt 0x7fef83875ac0 <line:44:1, line:52:1>
+|   |-DeclStmt 0x7fef838753e8 <line:45:3, col:11>
+|   | `-VarDecl 0x7fef83875388 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7fef83875518 <line:46:3, col:25>
+|   | `-VarDecl 0x7fef83875418 <col:3, col:24> col:10 used max 'double' cinit
+|   |   `-ImplicitCastExpr 0x7fef83875500 <col:16, col:24> 'double' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fef838754d8 <col:16, col:24> 'double' lvalue
+|   |       |-ImplicitCastExpr 0x7fef838754c0 <col:16> 'double *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fef83875478 <col:16> 'double [1024]' lvalue Var 0x7fef838731e0 'values' 'double [1024]'
+|   |       `-IntegerLiteral 0x7fef838754a0 <col:23> 'int' 0
+|   |-ForStmt 0x7fef83875a30 <line:48:3, line:49:41>
+|   | |-BinaryOperator 0x7fef83875590 <line:48:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7fef83875530 <col:8> 'size_t':'unsigned long' lvalue Var 0x7fef83875388 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fef83875578 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef83875558 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fef83875630 <col:15, line:13:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fef83875600 <line:48:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fef838755b8 <col:15> 'size_t':'unsigned long' lvalue Var 0x7fef83875388 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fef83875618 <line:13:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef838755e0 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7fef83875680 <line:48:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7fef83875658 <col:25> 'size_t':'unsigned long' lvalue Var 0x7fef83875388 'i' 'size_t':'unsigned long'
+|   | `-BinaryOperator 0x7fef83875a08 <line:49:5, col:41> 'double' '='
+|   |   |-DeclRefExpr 0x7fef838756a0 <col:5> 'double' lvalue Var 0x7fef83875418 'max' 'double'
+|   |   `-CallExpr 0x7fef838759a0 <col:11, col:41> 'double'
+|   |     |-ImplicitCastExpr 0x7fef83875988 <col:11> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fef83875890 <col:11> '<builtin fn type>' Function 0x7fef838756c8 '__builtin_fmax' 'double (double, double)'
+|   |     |-ImplicitCastExpr 0x7fef838759d8 <col:27> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fef838758b8 <col:27> 'double' lvalue Var 0x7fef83875418 'max' 'double'
+|   |     `-ImplicitCastExpr 0x7fef838759f0 <col:32, col:40> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fef83875960 <col:32, col:40> 'double' lvalue
+|   |         |-ImplicitCastExpr 0x7fef83875930 <col:32> 'double *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fef838758e0 <col:32> 'double [1024]' lvalue Var 0x7fef838731e0 'values' 'double [1024]'
+|   |         `-ImplicitCastExpr 0x7fef83875948 <col:39> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fef83875908 <col:39> 'size_t':'unsigned long' lvalue Var 0x7fef83875388 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fef83875aa8 <line:51:3, col:10>
+|     `-ImplicitCastExpr 0x7fef83875a90 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fef83875a68 <col:10> 'double' lvalue Var 0x7fef83875418 'max' 'double'
+`-FunctionDecl 0x7fef838756c8 <line:49:11> col:11 implicit used __builtin_fmax 'double (double, double)' extern
+  |-ParmVarDecl 0x7fef83875768 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fef838757c8 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fef83875838 <col:11> Implicit
+  `-ConstAttr 0x7fef83875880 <col:11> Implicit

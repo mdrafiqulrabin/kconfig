@@ -1,0 +1,166 @@
+TranslationUnitDecl 0x7fa3ff823ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3ff824b78 <../Data/C2AST/pr38510.c:2:1, col:18> col:18 referenced integer 'long'
+| `-BuiltinType 0x7fa3ff824000 'long'
+|-TypedefDecl 0x7fa40001c200 <line:3:1, col:16> col:16 referenced doublereal 'double'
+| `-BuiltinType 0x7fa3ff824100 'double'
+|-FunctionDecl 0x7fa40001c6b8 <line:5:1, line:33:1> line:5:12 used balanc_ 'int (int, int, doublereal *, int, int, int)' static
+| |-ParmVarDecl 0x7fa40001c270 <line:6:1, col:5> col:5 nm 'int'
+| |-ParmVarDecl 0x7fa40001c2e8 <col:1, col:9> col:9 n 'int'
+| |-ParmVarDecl 0x7fa40001c538 <line:7:1, col:13> col:13 used a 'doublereal *'
+| |-ParmVarDecl 0x7fa40001c360 <line:6:1, col:12> col:12 low 'int'
+| |-ParmVarDecl 0x7fa40001c3d8 <col:1, col:17> col:17 igh 'int'
+| |-ParmVarDecl 0x7fa40001c450 <col:1, col:22> col:22 scale 'int'
+| `-CompoundStmt 0x7fa40001da18 <line:8:1, line:33:1>
+|   |-DeclStmt 0x7fa40001c9d8 <line:9:2, col:38>
+|   | |-VarDecl 0x7fa40001c800 <col:2, col:10> col:10 used a_dim1 'integer':'long'
+|   | |-VarDecl 0x7fa40001c870 <col:2, col:18> col:18 a_offset 'integer':'long'
+|   | |-VarDecl 0x7fa40001c8e0 <col:2, col:28> col:28 used i__1 'integer':'long'
+|   | `-VarDecl 0x7fa40001c950 <col:2, col:34> col:34 i__2 'integer':'long'
+|   |-DeclStmt 0x7fa40001ca60 <line:10:2, col:14>
+|   | `-VarDecl 0x7fa40001ca00 <col:2, col:10> col:10 used iexc 'integer':'long'
+|   |-DeclStmt 0x7fa40001ccd8 <line:11:2, col:25>
+|   | |-VarDecl 0x7fa40001ca88 <col:2, col:10> col:10 used i__ 'integer':'long'
+|   | |-VarDecl 0x7fa40001caf8 <col:2, col:15> col:15 used j 'integer':'long'
+|   | |-VarDecl 0x7fa40001cb68 <col:2, col:18> col:18 used k 'integer':'long'
+|   | |-VarDecl 0x7fa40001cbd8 <col:2, col:21> col:21 l 'integer':'long'
+|   | `-VarDecl 0x7fa40001cc48 <col:2, col:24> col:24 used m 'integer':'long'
+|   |-DeclStmt 0x7fa40001cd60 <line:12:2, col:12>
+|   | `-VarDecl 0x7fa40001cd00 <col:2, col:10> col:10 used jj 'integer':'long'
+|   |-GotoStmt 0x7fa40001cdc0 <line:13:1, col:6> 'L100' 0x7fa40001cd78
+|   |-LabelStmt 0x7fa40001cf78 <line:14:1, line:17:1> 'L20'
+|   | `-IfStmt 0x7fa40001cef8 <line:15:1, line:17:1>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fa40001ce58 <line:15:5, col:10> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7fa40001ce28 <col:5> 'integer':'long' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa40001cdd8 <col:5> 'integer':'long' lvalue Var 0x7fa40001caf8 'j' 'integer':'long'
+|   |   | `-ImplicitCastExpr 0x7fa40001ce40 <col:10> 'integer':'long' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa40001ce00 <col:10> 'integer':'long' lvalue Var 0x7fa40001cc48 'm' 'integer':'long'
+|   |   |-CompoundStmt 0x7fa40001cee0 <col:13, line:17:1>
+|   |   | `-GotoStmt 0x7fa40001cec8 <line:16:1, col:6> 'L50' 0x7fa40001ce80
+|   |   `-<<<NULL>>>
+|   |-ForStmt 0x7fa40001d450 <line:18:1, line:20:1>
+|   | |-BinaryOperator 0x7fa40001cff0 <line:18:6, col:12> 'integer':'long' '='
+|   | | |-DeclRefExpr 0x7fa40001cf90 <col:6> 'integer':'long' lvalue Var 0x7fa40001ca88 'i__' 'integer':'long'
+|   | | `-ImplicitCastExpr 0x7fa40001cfd8 <col:12> 'integer':'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fa40001cfb8 <col:12> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa40001d098 <col:15, col:22> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7fa40001d068 <col:15> 'integer':'long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa40001d018 <col:15> 'integer':'long' lvalue Var 0x7fa40001ca88 'i__' 'integer':'long'
+|   | | `-ImplicitCastExpr 0x7fa40001d080 <col:22> 'integer':'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa40001d040 <col:22> 'integer':'long' lvalue Var 0x7fa40001c8e0 'i__1' 'integer':'long'
+|   | |-UnaryOperator 0x7fa40001d0e8 <col:28, col:30> 'integer':'long' prefix '++'
+|   | | `-DeclRefExpr 0x7fa40001d0c0 <col:30> 'integer':'long' lvalue Var 0x7fa40001ca88 'i__' 'integer':'long'
+|   | `-CompoundStmt 0x7fa40001d438 <col:35, line:20:1>
+|   |   `-BinaryOperator 0x7fa40001d410 <line:19:1, col:41> 'doublereal':'double' '='
+|   |     |-ArraySubscriptExpr 0x7fa40001d258 <col:1, col:19> 'doublereal':'double' lvalue
+|   |     | |-ImplicitCastExpr 0x7fa40001d240 <col:1> 'doublereal *' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fa40001d108 <col:1> 'doublereal *' lvalue ParmVar 0x7fa40001c538 'a' 'doublereal *'
+|   |     | `-BinaryOperator 0x7fa40001d218 <col:3, col:13> 'long' '+'
+|   |     |   |-ImplicitCastExpr 0x7fa40001d200 <col:3> 'integer':'long' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fa40001d130 <col:3> 'integer':'long' lvalue Var 0x7fa40001ca88 'i__' 'integer':'long'
+|   |     |   `-BinaryOperator 0x7fa40001d1d8 <col:9, col:13> 'long' '*'
+|   |     |     |-ImplicitCastExpr 0x7fa40001d1a8 <col:9> 'integer':'long' <LValueToRValue>
+|   |     |     | `-DeclRefExpr 0x7fa40001d158 <col:9> 'integer':'long' lvalue Var 0x7fa40001caf8 'j' 'integer':'long'
+|   |     |     `-ImplicitCastExpr 0x7fa40001d1c0 <col:13> 'integer':'long' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7fa40001d180 <col:13> 'integer':'long' lvalue Var 0x7fa40001c800 'a_dim1' 'integer':'long'
+|   |     `-ImplicitCastExpr 0x7fa40001d3f8 <col:23, col:41> 'doublereal':'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fa40001d3d0 <col:23, col:41> 'doublereal':'double' lvalue
+|   |         |-ImplicitCastExpr 0x7fa40001d3b8 <col:23> 'doublereal *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fa40001d280 <col:23> 'doublereal *' lvalue ParmVar 0x7fa40001c538 'a' 'doublereal *'
+|   |         `-BinaryOperator 0x7fa40001d390 <col:25, col:35> 'long' '+'
+|   |           |-ImplicitCastExpr 0x7fa40001d378 <col:25> 'integer':'long' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x7fa40001d2a8 <col:25> 'integer':'long' lvalue Var 0x7fa40001ca88 'i__' 'integer':'long'
+|   |           `-BinaryOperator 0x7fa40001d350 <col:31, col:35> 'long' '*'
+|   |             |-ImplicitCastExpr 0x7fa40001d320 <col:31> 'integer':'long' <LValueToRValue>
+|   |             | `-DeclRefExpr 0x7fa40001d2d0 <col:31> 'integer':'long' lvalue Var 0x7fa40001cc48 'm' 'integer':'long'
+|   |             `-ImplicitCastExpr 0x7fa40001d338 <col:35> 'integer':'long' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7fa40001d2f8 <col:35> 'integer':'long' lvalue Var 0x7fa40001c800 'a_dim1' 'integer':'long'
+|   |-LabelStmt 0x7fa40001d608 <line:21:1, line:24:1> 'L50'
+|   | `-SwitchStmt 0x7fa40001d508 <line:22:1, line:24:1>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-CStyleCastExpr 0x7fa40001d4e0 <line:22:9, col:14> 'int' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fa40001d4c8 <col:14> 'integer':'long' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa40001d488 <col:14> 'integer':'long' lvalue Var 0x7fa40001ca00 'iexc' 'integer':'long'
+|   |   `-CompoundStmt 0x7fa40001d5f0 <col:20, line:24:1>
+|   |     `-CaseStmt 0x7fa40001d558 <line:23:1, col:14>
+|   |       |-IntegerLiteral 0x7fa40001d538 <col:6> 'int' 2
+|   |       |-<<<NULL>>>
+|   |       `-GotoStmt 0x7fa40001d5d8 <col:9, col:14> 'L130' 0x7fa40001d590
+|   |-LabelStmt 0x7fa40001d800 <line:25:1, line:28:1> 'L100'
+|   | `-ForStmt 0x7fa40001d7c8 <line:26:1, line:28:1>
+|   |   |-BinaryOperator 0x7fa40001d680 <line:26:6, col:11> 'integer':'long' '='
+|   |   | |-DeclRefExpr 0x7fa40001d620 <col:6> 'integer':'long' lvalue Var 0x7fa40001cd00 'jj' 'integer':'long'
+|   |   | `-ImplicitCastExpr 0x7fa40001d668 <col:11> 'integer':'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fa40001d648 <col:11> 'int' 1
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fa40001d728 <col:14, col:20> 'int' '<='
+|   |   | |-ImplicitCastExpr 0x7fa40001d6f8 <col:14> 'integer':'long' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa40001d6a8 <col:14> 'integer':'long' lvalue Var 0x7fa40001cd00 'jj' 'integer':'long'
+|   |   | `-ImplicitCastExpr 0x7fa40001d710 <col:20> 'integer':'long' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa40001d6d0 <col:20> 'integer':'long' lvalue Var 0x7fa40001c8e0 'i__1' 'integer':'long'
+|   |   |-UnaryOperator 0x7fa40001d778 <col:26, col:28> 'integer':'long' prefix '++'
+|   |   | `-DeclRefExpr 0x7fa40001d750 <col:28> 'integer':'long' lvalue Var 0x7fa40001cd00 'jj' 'integer':'long'
+|   |   `-CompoundStmt 0x7fa40001d7b0 <col:32, line:28:1>
+|   |     `-GotoStmt 0x7fa40001d798 <line:27:1, col:6> 'L20' 0x7fa40001cf30
+|   `-LabelStmt 0x7fa40001da00 <line:29:1, line:32:1> 'L130'
+|     `-ForStmt 0x7fa40001d9c8 <line:30:1, line:32:1>
+|       |-BinaryOperator 0x7fa40001d880 <line:30:6, col:10> 'integer':'long' '='
+|       | |-DeclRefExpr 0x7fa40001d818 <col:6> 'integer':'long' lvalue Var 0x7fa40001caf8 'j' 'integer':'long'
+|       | `-ImplicitCastExpr 0x7fa40001d868 <col:10> 'integer':'long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa40001d840 <col:10> 'integer':'long' lvalue Var 0x7fa40001cb68 'k' 'integer':'long'
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7fa40001d928 <col:13, col:18> 'int' '<='
+|       | |-ImplicitCastExpr 0x7fa40001d8f8 <col:13> 'integer':'long' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fa40001d8a8 <col:13> 'integer':'long' lvalue Var 0x7fa40001caf8 'j' 'integer':'long'
+|       | `-ImplicitCastExpr 0x7fa40001d910 <col:18> 'integer':'long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa40001d8d0 <col:18> 'integer':'long' lvalue Var 0x7fa40001c8e0 'i__1' 'integer':'long'
+|       |-UnaryOperator 0x7fa40001d978 <col:24, col:26> 'integer':'long' prefix '++'
+|       | `-DeclRefExpr 0x7fa40001d950 <col:26> 'integer':'long' lvalue Var 0x7fa40001caf8 'j' 'integer':'long'
+|       `-CompoundStmt 0x7fa40001d9b0 <col:29, line:32:1>
+|         `-GotoStmt 0x7fa40001d998 <line:31:1, col:6> 'L20' 0x7fa40001cf30
+`-FunctionDecl 0x7fa40001de98 <line:35:1, line:41:1> line:35:5 pymol_rg_ 'int (integer *, integer *, doublereal *, doublereal *, doublereal *, integer *)'
+  |-ParmVarDecl 0x7fa40001dae8 <col:15, col:24> col:24 used nm 'integer *'
+  |-ParmVarDecl 0x7fa40001db58 <col:28, col:37> col:37 used n 'integer *'
+  |-ParmVarDecl 0x7fa40001dbc8 <col:40, col:52> col:52 used a 'doublereal *'
+  |-ParmVarDecl 0x7fa40001dc38 <col:55, col:67> col:67 wr 'doublereal *'
+  |-ParmVarDecl 0x7fa40001dca8 <line:36:15, col:27> col:27 used fv1 'doublereal *'
+  |-ParmVarDecl 0x7fa40001dd18 <col:31, col:40> col:40 ierr 'integer *'
+  `-CompoundStmt 0x7fa400035070 <line:37:1, line:41:1>
+    |-DeclStmt 0x7fa40001e150 <line:38:5, col:47>
+    | |-VarDecl 0x7fa40001df78 <col:5, col:13> col:13 a_dim1 'integer':'long'
+    | |-VarDecl 0x7fa40001dfe8 <col:5, col:21> col:21 used a_offset 'integer':'long'
+    | |-VarDecl 0x7fa40001e058 <col:5, col:31> col:31 z_dim1 'integer':'long'
+    | `-VarDecl 0x7fa40001e0c8 <col:5, col:39> col:39 z_offset 'integer':'long'
+    |-DeclStmt 0x7fa400034c78 <line:39:5, col:21>
+    | |-VarDecl 0x7fa40001e178 <col:5, col:13> col:13 used is1 'integer':'long'
+    | `-VarDecl 0x7fa400034c00 <col:5, col:18> col:18 used is2 'integer':'long'
+    `-CallExpr 0x7fa400034f70 <line:40:5, col:53> 'int'
+      |-ImplicitCastExpr 0x7fa400034f58 <col:5> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa400034cb8 <col:5> 'int ()' Function 0x7fa40001c6b8 'balanc_' 'int (int, int, doublereal *, int, int, int)'
+      |-ImplicitCastExpr 0x7fa400034fe0 <col:13> 'int' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fa400034fc8 <col:13> 'integer *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa400034ce0 <col:13> 'integer *' lvalue ParmVar 0x7fa40001dae8 'nm' 'integer *'
+      |-ImplicitCastExpr 0x7fa400035010 <col:17> 'int' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fa400034ff8 <col:17> 'integer *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa400034d08 <col:17> 'integer *' lvalue ParmVar 0x7fa40001db58 'n' 'integer *'
+      |-UnaryOperator 0x7fa400034dd8 <col:20, col:31> 'doublereal *' prefix '&'
+      | `-ArraySubscriptExpr 0x7fa400034db0 <col:21, col:31> 'doublereal':'double' lvalue
+      |   |-ImplicitCastExpr 0x7fa400034d80 <col:21> 'doublereal *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fa400034d30 <col:21> 'doublereal *' lvalue ParmVar 0x7fa40001dbc8 'a' 'doublereal *'
+      |   `-ImplicitCastExpr 0x7fa400034d98 <col:23> 'integer':'long' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fa400034d58 <col:23> 'integer':'long' lvalue Var 0x7fa40001dfe8 'a_offset' 'integer':'long'
+      |-ImplicitCastExpr 0x7fa400035028 <col:34, col:35> 'int' <PointerToIntegral>
+      | `-UnaryOperator 0x7fa400034e20 <col:34, col:35> 'integer *' prefix '&'
+      |   `-DeclRefExpr 0x7fa400034df8 <col:35> 'integer':'long' lvalue Var 0x7fa40001e178 'is1' 'integer':'long'
+      |-ImplicitCastExpr 0x7fa400035040 <col:40, col:41> 'int' <PointerToIntegral>
+      | `-UnaryOperator 0x7fa400034e68 <col:40, col:41> 'integer *' prefix '&'
+      |   `-DeclRefExpr 0x7fa400034e40 <col:41> 'integer':'long' lvalue Var 0x7fa400034c00 'is2' 'integer':'long'
+      `-ImplicitCastExpr 0x7fa400035058 <col:46, col:52> 'int' <PointerToIntegral>
+        `-UnaryOperator 0x7fa400034f10 <col:46, col:52> 'doublereal *' prefix '&'
+          `-ArraySubscriptExpr 0x7fa400034ee8 <col:47, col:52> 'doublereal':'double' lvalue
+            |-ImplicitCastExpr 0x7fa400034ed0 <col:47> 'doublereal *' <LValueToRValue>
+            | `-DeclRefExpr 0x7fa400034e88 <col:47> 'doublereal *' lvalue ParmVar 0x7fa40001dca8 'fv1' 'doublereal *'
+            `-IntegerLiteral 0x7fa400034eb0 <col:51> 'int' 1

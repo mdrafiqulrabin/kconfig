@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7ff2f582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff2f582c960 <../Data/C2AST/pr43879_2.c:1:1, line:3:1> line:1:8 struct TBL definition
+| `-FieldDecl 0x7ff2f586d9c8 <line:2:2, col:17> col:8 p 'int (*)(int *)'
+|-FunctionDecl 0x7ff2f586daf0 <line:5:1, col:22> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7ff2f586da28 <col:17, col:21> col:21 i 'int'
+|-FunctionDecl 0x7ff2f586dcb0 <line:6:1, col:23> col:13 used baz 'void (int *)' extern
+| `-ParmVarDecl 0x7ff2f586dbf0 <col:17, col:22> col:22 i 'int *'
+|-FunctionDecl 0x7ff2f586de00 <line:8:1, line:14:1> line:8:12 used foo 'int (int *)' static
+| |-ParmVarDecl 0x7ff2f586dd70 <col:16, col:21> col:21 used i 'int *'
+| `-CompoundStmt 0x7ff2f586e210 <line:9:1, line:14:1>
+|   |-CallExpr 0x7ff2f586df70 <line:10:2, col:8> 'void'
+|   | |-ImplicitCastExpr 0x7ff2f586df58 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff2f586dea8 <col:2> 'void (int)' Function 0x7ff2f586daf0 'bar' 'void (int)'
+|   | `-ImplicitCastExpr 0x7ff2f586dfa0 <col:6, col:7> 'int' <LValueToRValue>
+|   |   `-UnaryOperator 0x7ff2f586df10 <col:6, col:7> 'int' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7ff2f586def8 <col:7> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff2f586ded0 <col:7> 'int *' lvalue ParmVar 0x7ff2f586dd70 'i' 'int *'
+|   |-CallExpr 0x7ff2f586e050 <line:11:2, col:7> 'void'
+|   | |-ImplicitCastExpr 0x7ff2f586e038 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff2f586dfb8 <col:2> 'void (int *)' Function 0x7ff2f586dcb0 'baz' 'void (int *)'
+|   | `-ImplicitCastExpr 0x7ff2f586e080 <col:6> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ff2f586dfe0 <col:6> 'int *' lvalue ParmVar 0x7ff2f586dd70 'i' 'int *'
+|   |-CallExpr 0x7ff2f586e138 <line:12:2, col:8> 'void'
+|   | |-ImplicitCastExpr 0x7ff2f586e120 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff2f586e098 <col:2> 'void (int)' Function 0x7ff2f586daf0 'bar' 'void (int)'
+|   | `-ImplicitCastExpr 0x7ff2f586e168 <col:6, col:7> 'int' <LValueToRValue>
+|   |   `-UnaryOperator 0x7ff2f586e100 <col:6, col:7> 'int' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7ff2f586e0e8 <col:7> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff2f586e0c0 <col:7> 'int *' lvalue ParmVar 0x7ff2f586dd70 'i' 'int *'
+|   `-ReturnStmt 0x7ff2f586e1f8 <line:13:2, col:10>
+|     `-ImplicitCastExpr 0x7ff2f586e1e0 <col:9, col:10> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7ff2f586e1c0 <col:9, col:10> 'int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7ff2f586e1a8 <col:10> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7ff2f586e180 <col:10> 'int *' lvalue ParmVar 0x7ff2f586dd70 'i' 'int *'
+`-VarDecl 0x7ff2f586e290 <line:16:1, col:24> col:12 tbl 'struct TBL':'struct TBL' cinit
+  `-InitListExpr 0x7ff2f586e360 <col:18, col:24> 'struct TBL':'struct TBL'
+    `-ImplicitCastExpr 0x7ff2f586e3a8 <col:20> 'int (*)(int *)' <FunctionToPointerDecay>
+      `-DeclRefExpr 0x7ff2f586e2f0 <col:20> 'int (int *)' Function 0x7ff2f586de00 'foo' 'int (int *)'

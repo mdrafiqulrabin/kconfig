@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff1e30280e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff1e3814268 <../Data/C2AST/pr35227.c:4:1, line:10:1> line:5:1 mandel 'int (_Complex double)'
+| |-ParmVarDecl 0x7ff1e3028d70 <col:8, col:24> col:24 used C '_Complex double'
+| `-CompoundStmt 0x7ff1e3814818 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7ff1e38143c8 <line:7:3, col:9>
+|   | `-VarDecl 0x7ff1e3814368 <col:3, col:7> col:7 used py 'int'
+|   |-BinaryOperator 0x7ff1e3814540 <line:8:3, col:39> '_Complex double' '='
+|   | |-DeclRefExpr 0x7ff1e38143e0 <col:3> '_Complex double' lvalue ParmVar 0x7ff1e3028d70 'C' '_Complex double'
+|   | `-BinaryOperator 0x7ff1e3814518 <col:7, col:39> '_Complex double' '*'
+|   |   |-ImplicitCastExpr 0x7ff1e3814500 <col:7, col:27> '_Complex double' <FloatingComplexCast>
+|   |   | `-ParenExpr 0x7ff1e3814460 <col:7, col:27> '_Complex float'
+|   |   |   `-UnaryOperator 0x7ff1e3814440 <col:8, col:22> '_Complex float' prefix '__extension__'
+|   |   |     `-ImaginaryLiteral 0x7ff1e3814428 <col:22> '_Complex float'
+|   |   |       `-FloatingLiteral 0x7ff1e3814408 <col:22> 'float' 1.000000e+00
+|   |   `-CStyleCastExpr 0x7ff1e38144d8 <col:31, col:39> 'double' <IntegralToFloating>
+|   |     `-ImplicitCastExpr 0x7ff1e38144c0 <col:39> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff1e3814480 <col:39> 'int' lvalue Var 0x7ff1e3814368 'py' 'int'
+|   `-ReturnStmt 0x7ff1e3814800 <line:9:3, col:16>
+|     `-ImplicitCastExpr 0x7ff1e38147e8 <col:10, col:16> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7ff1e38147a0 <col:10, col:16> 'double'
+|         |-ImplicitCastExpr 0x7ff1e3814788 <col:10> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7ff1e3814708 <col:10> 'double (_Complex double)' Function 0x7ff1e38145a8 'cabs' 'double (_Complex double)'
+|         `-ImplicitCastExpr 0x7ff1e38147d0 <col:15> '_Complex double' <LValueToRValue>
+|           `-DeclRefExpr 0x7ff1e3814730 <col:15> '_Complex double' lvalue ParmVar 0x7ff1e3028d70 'C' '_Complex double'
+`-FunctionDecl 0x7ff1e38145a8 <col:10> col:10 implicit used cabs 'double (_Complex double)' extern
+  |-ParmVarDecl 0x7ff1e3814648 <<invalid sloc>> <invalid sloc> '_Complex double'
+  |-ConstAttr 0x7ff1e38146b0 <col:10> Implicit
+  `-NoThrowAttr 0x7ff1e38146f8 <col:10> Implicit

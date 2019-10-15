@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f9bc98204e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9bc98630b8 <../Data/C2AST/pr67995-3.c:4:1, line:16:1> line:6:1 __x86_rdrand 'unsigned int (void)'
+| |-CompoundStmt 0x7f9bc98637a8 <line:7:1, line:16:1>
+| | |-DeclStmt 0x7f9bc98632a0 <line:8:3, col:29>
+| | | `-VarDecl 0x7f9bc9863208 <col:3, col:26> col:16 used retries 'unsigned int' cinit
+| | |   `-ImplicitCastExpr 0x7f9bc9863288 <col:26> 'unsigned int' <IntegralCast>
+| | |     `-IntegerLiteral 0x7f9bc9863268 <col:26> 'int' 100
+| | |-DeclStmt 0x7f9bc9863330 <line:9:3, col:19>
+| | | `-VarDecl 0x7f9bc98632d0 <col:3, col:16> col:16 used val 'unsigned int'
+| | |-WhileStmt 0x7f9bc9863730 <line:11:3, line:13:14>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f9bc98635d8 <line:11:10, col:48> 'int' '=='
+| | | | |-CallExpr 0x7f9bc9863570 <col:10, col:43> 'unsigned int'
+| | | | | |-ImplicitCastExpr 0x7f9bc9863558 <col:10> 'unsigned int (*)(unsigned int *)' <BuiltinFnToFnPtr>
+| | | | | | `-DeclRefExpr 0x7f9bc98634c0 <col:10> '<builtin fn type>' Function 0x7f9bc98633b8 '__builtin_ia32_rdrand32_step' 'unsigned int (unsigned int *)'
+| | | | | `-UnaryOperator 0x7f9bc9863510 <col:39, col:40> 'unsigned int *' prefix '&'
+| | | | |   `-DeclRefExpr 0x7f9bc98634e8 <col:40> 'unsigned int' lvalue Var 0x7f9bc98632d0 'val' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7f9bc98635c0 <col:48> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7f9bc98635a0 <col:48> 'int' 0
+| | | `-IfStmt 0x7f9bc98636f8 <line:12:5, line:13:14>
+| | |   |-<<<NULL>>>
+| | |   |-<<<NULL>>>
+| | |   |-BinaryOperator 0x7f9bc9863680 <line:12:9, col:22> 'int' '=='
+| | |   | |-UnaryOperator 0x7f9bc9863628 <col:9, col:11> 'unsigned int' prefix '--'
+| | |   | | `-DeclRefExpr 0x7f9bc9863600 <col:11> 'unsigned int' lvalue Var 0x7f9bc9863208 'retries' 'unsigned int'
+| | |   | `-ImplicitCastExpr 0x7f9bc9863668 <col:22> 'unsigned int' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7f9bc9863648 <col:22> 'int' 0
+| | |   |-ReturnStmt 0x7f9bc98636e0 <line:13:7, col:14>
+| | |   | `-ImplicitCastExpr 0x7f9bc98636c8 <col:14> 'unsigned int' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7f9bc98636a8 <col:14> 'int' 0
+| | |   `-<<<NULL>>>
+| | `-ReturnStmt 0x7f9bc9863790 <line:15:3, col:10>
+| |   `-ImplicitCastExpr 0x7f9bc9863778 <col:10> 'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9bc9863750 <col:10> 'unsigned int' lvalue Var 0x7f9bc98632d0 'val' 'unsigned int'
+| `-TargetAttr 0x7f9bc9863158 <line:5:17, col:31> "rdrnd"
+`-FunctionDecl 0x7f9bc98633b8 <line:11:10> col:10 implicit used __builtin_ia32_rdrand32_step 'unsigned int (unsigned int *)' extern
+  `-ParmVarDecl 0x7f9bc9863458 <<invalid sloc>> <invalid sloc> 'unsigned int *'

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fe9af82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe9b0014228 <<built-in>:73:26, ../Data/C2AST/pr83164.c:7:1> line:4:1 referenced foo 'long (void)'
+  `-CompoundStmt 0x7fe9b0014458 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fe9b0014440 <line:6:3, col:34>
+      `-BinaryOperator 0x7fe9b0014418 <col:10, col:34> 'long' '-'
+        |-CStyleCastExpr 0x7fe9b0014390 <col:10, col:19> 'char *' <BitCast>
+        | `-ImplicitCastExpr 0x7fe9b0014378 <col:19> 'long (*)(void)' <FunctionToPointerDecay>
+        |   `-DeclRefExpr 0x7fe9b0014308 <col:19> 'long (void)' Function 0x7fe9b0014228 'foo' 'long (void)'
+        `-CStyleCastExpr 0x7fe9b00143f0 <col:25, col:34> 'char *' <IntegralToPointer>
+          `-IntegerLiteral 0x7fe9b00143b8 <col:34> 'int' 4656

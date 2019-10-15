@@ -1,0 +1,121 @@
+TranslationUnitDecl 0x7fa399025ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa399026b78 <../Data/C2AST/pr20314-2.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fa399068058 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fa3990680d0 <col:1, col:11> col:11 used c 'int'
+|-VarDecl 0x7fa399068148 <col:1, col:14> col:14 used d 'int'
+|-VarDecl 0x7fa3990681c0 <col:1, col:17> col:17 used e 'int'
+|-VarDecl 0x7fa399068238 <col:1, col:20> col:20 used f 'int'
+|-VarDecl 0x7fa3990682b0 <col:1, col:23> col:23 used g 'int'
+|-VarDecl 0x7fa399068328 <col:1, col:26> col:26 used h 'int'
+|-VarDecl 0x7fa3990683a0 <col:1, col:29> col:29 used i 'int'
+|-VarDecl 0x7fa399068418 <col:1, col:32> col:32 used j 'int'
+|-VarDecl 0x7fa399068490 <col:1, col:35> col:35 used k 'int'
+|-VarDecl 0x7fa399068508 <col:1, col:38> col:38 used l 'int'
+|-FunctionDecl 0x7fa399068690 <line:7:1, line:14:1> line:8:1 f1 'void (void)'
+| `-CompoundStmt 0x7fa399068d50 <line:9:1, line:14:1>
+|   `-GCCAsmStmt 0x7fa399068be8 <line:10:3, line:13:63>
+|     |-DeclRefExpr 0x7fa3990687f8 <line:11:19> 'int' lvalue Var 0x7fa399026b78 'a' 'int'
+|     |-DeclRefExpr 0x7fa399068850 <col:33> 'int' lvalue Var 0x7fa399068058 'b' 'int'
+|     |-DeclRefExpr 0x7fa3990688a8 <col:47> 'int' lvalue Var 0x7fa3990680d0 'c' 'int'
+|     |-DeclRefExpr 0x7fa399068900 <col:61> 'int' lvalue Var 0x7fa399068148 'd' 'int'
+|     |-DeclRefExpr 0x7fa399068958 <line:12:19> 'int' lvalue Var 0x7fa3990681c0 'e' 'int'
+|     |-DeclRefExpr 0x7fa3990689b0 <col:33> 'int' lvalue Var 0x7fa399068238 'f' 'int'
+|     |-DeclRefExpr 0x7fa399068a08 <col:47> 'int' lvalue Var 0x7fa3990682b0 'g' 'int'
+|     |-DeclRefExpr 0x7fa399068a60 <col:61> 'int' lvalue Var 0x7fa399068328 'h' 'int'
+|     |-DeclRefExpr 0x7fa399068ab8 <line:13:19> 'int' lvalue Var 0x7fa3990683a0 'i' 'int'
+|     |-DeclRefExpr 0x7fa399068b10 <col:33> 'int' lvalue Var 0x7fa399068418 'j' 'int'
+|     |-DeclRefExpr 0x7fa399068b68 <col:47> 'int' lvalue Var 0x7fa399068490 'k' 'int'
+|     `-DeclRefExpr 0x7fa399068bc0 <col:61> 'int' lvalue Var 0x7fa399068508 'l' 'int'
+|-FunctionDecl 0x7fa399068df8 <line:16:1, line:23:1> line:17:1 f2 'void (void)'
+| `-CompoundStmt 0x7fa399069480 <line:18:1, line:23:1>
+|   `-GCCAsmStmt 0x7fa399069318 <line:19:3, line:22:71>
+|     |-DeclRefExpr 0x7fa399068f28 <line:20:21> 'int' lvalue Var 0x7fa399026b78 'a' 'int'
+|     |-DeclRefExpr 0x7fa399068f80 <col:37> 'int' lvalue Var 0x7fa399068058 'b' 'int'
+|     |-DeclRefExpr 0x7fa399068fd8 <col:53> 'int' lvalue Var 0x7fa3990680d0 'c' 'int'
+|     |-DeclRefExpr 0x7fa399069030 <col:69> 'int' lvalue Var 0x7fa399068148 'd' 'int'
+|     |-DeclRefExpr 0x7fa399069088 <line:21:21> 'int' lvalue Var 0x7fa3990681c0 'e' 'int'
+|     |-DeclRefExpr 0x7fa3990690e0 <col:37> 'int' lvalue Var 0x7fa399068238 'f' 'int'
+|     |-DeclRefExpr 0x7fa399069138 <col:53> 'int' lvalue Var 0x7fa3990682b0 'g' 'int'
+|     |-DeclRefExpr 0x7fa399069190 <col:69> 'int' lvalue Var 0x7fa399068328 'h' 'int'
+|     |-DeclRefExpr 0x7fa3990691e8 <line:22:21> 'int' lvalue Var 0x7fa3990683a0 'i' 'int'
+|     |-DeclRefExpr 0x7fa399069240 <col:37> 'int' lvalue Var 0x7fa399068418 'j' 'int'
+|     |-DeclRefExpr 0x7fa399069298 <col:53> 'int' lvalue Var 0x7fa399068490 'k' 'int'
+|     `-DeclRefExpr 0x7fa3990692f0 <col:69> 'int' lvalue Var 0x7fa399068508 'l' 'int'
+|-FunctionDecl 0x7fa399069528 <line:25:1, line:35:1> line:26:1 f3 'void (void)'
+| `-CompoundStmt 0x7fa39907fc40 <line:27:1, line:35:1>
+|   `-GCCAsmStmt 0x7fa399069f88 <line:28:3, line:34:51>
+|     |-DeclRefExpr 0x7fa399069620 <line:29:19> 'int' lvalue Var 0x7fa399026b78 'a' 'int'
+|     |-DeclRefExpr 0x7fa399069678 <col:33> 'int' lvalue Var 0x7fa399068058 'b' 'int'
+|     |-DeclRefExpr 0x7fa3990696d0 <col:47> 'int' lvalue Var 0x7fa3990680d0 'c' 'int'
+|     |-DeclRefExpr 0x7fa399069728 <col:61> 'int' lvalue Var 0x7fa399068148 'd' 'int'
+|     |-DeclRefExpr 0x7fa399069780 <line:30:19> 'int' lvalue Var 0x7fa3990681c0 'e' 'int'
+|     |-DeclRefExpr 0x7fa3990697d8 <col:33> 'int' lvalue Var 0x7fa399068238 'f' 'int'
+|     |-DeclRefExpr 0x7fa399069830 <col:47> 'int' lvalue Var 0x7fa3990682b0 'g' 'int'
+|     |-DeclRefExpr 0x7fa399069888 <col:61> 'int' lvalue Var 0x7fa399068328 'h' 'int'
+|     |-DeclRefExpr 0x7fa3990698e0 <line:31:19> 'int' lvalue Var 0x7fa3990683a0 'i' 'int'
+|     |-DeclRefExpr 0x7fa399069938 <col:33> 'int' lvalue Var 0x7fa399068418 'j' 'int'
+|     |-DeclRefExpr 0x7fa399069990 <col:47> 'int' lvalue Var 0x7fa399068490 'k' 'int'
+|     |-DeclRefExpr 0x7fa3990699e8 <col:61> 'int' lvalue Var 0x7fa399068508 'l' 'int'
+|     |-ImplicitCastExpr 0x7fa399069e68 <line:32:16> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069a78 <col:16> 'int' lvalue Var 0x7fa399026b78 'a' 'int'
+|     |-ImplicitCastExpr 0x7fa399069e80 <col:27> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069ad0 <col:27> 'int' lvalue Var 0x7fa399068058 'b' 'int'
+|     |-ImplicitCastExpr 0x7fa399069e98 <col:38> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069b28 <col:38> 'int' lvalue Var 0x7fa3990680d0 'c' 'int'
+|     |-ImplicitCastExpr 0x7fa399069eb0 <col:49> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069b80 <col:49> 'int' lvalue Var 0x7fa399068148 'd' 'int'
+|     |-ImplicitCastExpr 0x7fa399069ec8 <line:33:16> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069bd8 <col:16> 'int' lvalue Var 0x7fa3990681c0 'e' 'int'
+|     |-ImplicitCastExpr 0x7fa399069ee0 <col:27> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069c30 <col:27> 'int' lvalue Var 0x7fa399068238 'f' 'int'
+|     |-ImplicitCastExpr 0x7fa399069ef8 <col:38> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069c88 <col:38> 'int' lvalue Var 0x7fa3990682b0 'g' 'int'
+|     |-ImplicitCastExpr 0x7fa399069f10 <col:49> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069ce0 <col:49> 'int' lvalue Var 0x7fa399068328 'h' 'int'
+|     |-ImplicitCastExpr 0x7fa399069f28 <line:34:16> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069d38 <col:16> 'int' lvalue Var 0x7fa3990683a0 'i' 'int'
+|     |-ImplicitCastExpr 0x7fa399069f40 <col:27> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069d90 <col:27> 'int' lvalue Var 0x7fa399068418 'j' 'int'
+|     |-ImplicitCastExpr 0x7fa399069f58 <col:38> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa399069de8 <col:38> 'int' lvalue Var 0x7fa399068490 'k' 'int'
+|     `-ImplicitCastExpr 0x7fa399069f70 <col:49> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa399069e40 <col:49> 'int' lvalue Var 0x7fa399068508 'l' 'int'
+`-FunctionDecl 0x7fa39907fce8 <line:37:1, line:47:1> line:38:1 f4 'void (void)'
+  `-CompoundStmt 0x7fa3990809d0 <line:39:1, line:47:1>
+    `-GCCAsmStmt 0x7fa399080748 <line:40:3, line:46:59>
+      |-DeclRefExpr 0x7fa39907fde0 <line:41:21> 'int' lvalue Var 0x7fa399026b78 'a' 'int'
+      |-DeclRefExpr 0x7fa39907fe38 <col:37> 'int' lvalue Var 0x7fa399068058 'b' 'int'
+      |-DeclRefExpr 0x7fa39907fe90 <col:53> 'int' lvalue Var 0x7fa3990680d0 'c' 'int'
+      |-DeclRefExpr 0x7fa39907fee8 <col:69> 'int' lvalue Var 0x7fa399068148 'd' 'int'
+      |-DeclRefExpr 0x7fa39907ff40 <line:42:21> 'int' lvalue Var 0x7fa3990681c0 'e' 'int'
+      |-DeclRefExpr 0x7fa39907ff98 <col:37> 'int' lvalue Var 0x7fa399068238 'f' 'int'
+      |-DeclRefExpr 0x7fa39907fff0 <col:53> 'int' lvalue Var 0x7fa3990682b0 'g' 'int'
+      |-DeclRefExpr 0x7fa399080048 <col:69> 'int' lvalue Var 0x7fa399068328 'h' 'int'
+      |-DeclRefExpr 0x7fa3990800a0 <line:43:21> 'int' lvalue Var 0x7fa3990683a0 'i' 'int'
+      |-DeclRefExpr 0x7fa3990800f8 <col:37> 'int' lvalue Var 0x7fa399068418 'j' 'int'
+      |-DeclRefExpr 0x7fa399080150 <col:53> 'int' lvalue Var 0x7fa399068490 'k' 'int'
+      |-DeclRefExpr 0x7fa3990801a8 <col:69> 'int' lvalue Var 0x7fa399068508 'l' 'int'
+      |-ImplicitCastExpr 0x7fa399080628 <line:44:18> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa399080238 <col:18> 'int' lvalue Var 0x7fa399026b78 'a' 'int'
+      |-ImplicitCastExpr 0x7fa399080640 <col:31> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa399080290 <col:31> 'int' lvalue Var 0x7fa399068058 'b' 'int'
+      |-ImplicitCastExpr 0x7fa399080658 <col:44> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa3990802e8 <col:44> 'int' lvalue Var 0x7fa3990680d0 'c' 'int'
+      |-ImplicitCastExpr 0x7fa399080670 <col:57> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa399080340 <col:57> 'int' lvalue Var 0x7fa399068148 'd' 'int'
+      |-ImplicitCastExpr 0x7fa399080688 <line:45:18> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa399080398 <col:18> 'int' lvalue Var 0x7fa3990681c0 'e' 'int'
+      |-ImplicitCastExpr 0x7fa3990806a0 <col:31> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa3990803f0 <col:31> 'int' lvalue Var 0x7fa399068238 'f' 'int'
+      |-ImplicitCastExpr 0x7fa3990806b8 <col:44> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa399080448 <col:44> 'int' lvalue Var 0x7fa3990682b0 'g' 'int'
+      |-ImplicitCastExpr 0x7fa3990806d0 <col:57> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa3990804a0 <col:57> 'int' lvalue Var 0x7fa399068328 'h' 'int'
+      |-ImplicitCastExpr 0x7fa3990806e8 <line:46:18> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa3990804f8 <col:18> 'int' lvalue Var 0x7fa3990683a0 'i' 'int'
+      |-ImplicitCastExpr 0x7fa399080700 <col:31> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa399080550 <col:31> 'int' lvalue Var 0x7fa399068418 'j' 'int'
+      |-ImplicitCastExpr 0x7fa399080718 <col:44> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa3990805a8 <col:44> 'int' lvalue Var 0x7fa399068490 'k' 'int'
+      `-ImplicitCastExpr 0x7fa399080730 <col:57> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa399080600 <col:57> 'int' lvalue Var 0x7fa399068508 'l' 'int'

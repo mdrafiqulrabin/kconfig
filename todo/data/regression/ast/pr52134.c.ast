@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fa93e00a6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa93f811268 <../Data/C2AST/pr52134.c:4:1, line:7:1> line:4:10 f 'unsigned int (unsigned int)'
+| |-ParmVarDecl 0x7fa93e00b378 <col:12, col:21> col:21 used t 'unsigned int'
+| `-CompoundStmt 0x7fa93f8114a8 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fa93f811490 <line:6:5, col:19>
+|     `-BinaryOperator 0x7fa93f811468 <col:12, col:19> 'unsigned int' '&'
+|       |-ParenExpr 0x7fa93f8113f0 <col:12, col:16> 'unsigned int'
+|       | `-BinaryOperator 0x7fa93f8113c8 <col:13, col:15> 'unsigned int' '*'
+|       |   |-ImplicitCastExpr 0x7fa93f811398 <col:13> 'unsigned int' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fa93f811350 <col:13> 'unsigned int' lvalue ParmVar 0x7fa93e00b378 't' 'unsigned int'
+|       |   `-ImplicitCastExpr 0x7fa93f8113b0 <col:15> 'unsigned int' <IntegralCast>
+|       |     `-IntegerLiteral 0x7fa93f811378 <col:15> 'int' 4
+|       `-ImplicitCastExpr 0x7fa93f811450 <col:18, col:19> 'unsigned int' <IntegralCast>
+|         `-UnaryOperator 0x7fa93f811430 <col:18, col:19> 'int' prefix '-'
+|           `-IntegerLiteral 0x7fa93f811410 <col:19> 'int' 4
+`-FunctionDecl 0x7fa93f8115a8 <line:8:1, line:11:1> line:8:5 f1 'int (int)'
+  |-ParmVarDecl 0x7fa93f8114d8 <col:8, col:12> col:12 used t 'int'
+  `-CompoundStmt 0x7fa93f811778 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fa93f811760 <line:10:5, col:19>
+      `-BinaryOperator 0x7fa93f811738 <col:12, col:19> 'int' '&'
+        |-ParenExpr 0x7fa93f8116d8 <col:12, col:16> 'int'
+        | `-BinaryOperator 0x7fa93f8116b0 <col:13, col:15> 'int' '*'
+        |   |-ImplicitCastExpr 0x7fa93f811698 <col:13> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fa93f811650 <col:13> 'int' lvalue ParmVar 0x7fa93f8114d8 't' 'int'
+        |   `-IntegerLiteral 0x7fa93f811678 <col:15> 'int' 4
+        `-UnaryOperator 0x7fa93f811718 <col:18, col:19> 'int' prefix '-'
+          `-IntegerLiteral 0x7fa93f8116f8 <col:19> 'int' 4

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7f963e0278e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f963e817a28 <../Data/C2AST/pr59351.c:4:1, line:8:1> line:5:1 foo 'unsigned int (void)'
+  `-CompoundStmt 0x7f963e817cb0 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f963e817c98 <line:7:3, col:28>
+      `-ImplicitCastExpr 0x7f963e817c80 <col:10, col:28> 'unsigned int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7f963e817c60 <col:10, col:28> 'unsigned long' sizeof
+          `-ParenExpr 0x7f963e817c40 <col:17, col:28> 'int [0]' lvalue
+            `-CompoundLiteralExpr 0x7f963e817c18 <col:18, col:27> 'int [0]' lvalue
+              `-InitListExpr 0x7f963e817ba0 <col:26, col:27> 'int [0]'

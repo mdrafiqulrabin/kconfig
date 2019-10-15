@@ -1,0 +1,149 @@
+../Data/C2AST/pr61096-1.c:22:6: error: initializing char array with wide string literal
+char w1[] = L"foo";  
+     ^
+../Data/C2AST/pr61096-1.c:23:16: error: initializing wide char array with non-wide string literal
+__WCHAR_TYPE__ w2[] = "foo";  
+               ^
+../Data/C2AST/pr61096-1.c:24:16: error: initializing wide char array with incompatible wide string literal
+__WCHAR_TYPE__ w3[] = U"foo";  
+               ^
+../Data/C2AST/pr61096-1.c:25:7: error: initializing wide char array with non-wide string literal
+schar a1[] = "foo";  
+      ^
+../Data/C2AST/pr61096-1.c:28:10: error: initializer element is not a compile-time constant
+int a3 = e;  
+         ^
+../Data/C2AST/pr61096-1.c:29:12: error: initializer element is not a compile-time constant
+int a4 = (e, 1);  
+          ~^~~
+../Data/C2AST/pr61096-1.c:31:10: error: initializer element is not a compile-time constant
+int a6 = &a3 - &a4;  
+         ^~~~~~~~~
+../Data/C2AST/pr61096-1.c:32:5: error: array initializer must be an initializer list or wide string literal
+int a7[] = a7;  
+    ^
+../Data/C2AST/pr61096-1.c:36:21: error: initialization of flexible array member is not allowed
+struct g g1 = { {0, { 1 } } };  
+                    ^
+../Data/C2AST/pr61096-1.c:15:7: note: initialized flexible array member 'x' is here
+  int x[];
+      ^
+../Data/C2AST/pr61096-1.c:37:19: error: array designator cannot initialize non-array type 'struct f'
+struct g g2 = { .f[0] = 1 };  
+                  ^
+../Data/C2AST/pr61096-1.c:39:24: error: scalar initializer cannot be empty
+__extension__ int a8 = { };  
+                       ^~~
+../Data/C2AST/pr61096-1.c:40:16: error: expression is not an integer constant expression
+int a9[10] = {[1.2] = 2 };  
+               ^~~
+../Data/C2AST/pr61096-1.c:41:17: error: expression is not an integer constant expression
+int a10[10] = {[e] = 2 };  
+                ^
+../Data/C2AST/pr61096-1.c:42:37: error: expression is not an integer constant expression
+__extension__ int a11[10] = {[1 ... e] = 1 };  
+                                    ^
+../Data/C2AST/pr61096-1.c:43:12: error: designator in initializer for scalar type 'int'
+int a12 = {[1] = 2 };  
+           ^~~~~~~
+../Data/C2AST/pr61096-1.c:44:16: error: array designator value '-1' is negative
+int a13[2] = {[-1] = 4 };  
+               ^~
+../Data/C2AST/pr61096-1.c:45:16: error: array designator index (64) exceeds array bounds (2)
+int a14[2] = {[64] = 4 };  
+               ^~
+../Data/C2AST/pr61096-1.c:46:33: error: array designator range [2, 1] is empty
+__extension__ int a15[10] = {[2 ... 1] = 4 };  
+                              ~ ^   ~
+../Data/C2AST/pr61096-1.c:47:37: error: array designator index (100) exceeds array bounds (10)
+__extension__ int a16[10] = {[2 ... 100] = 4 };  
+                                    ^~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+TranslationUnitDecl 0x7fec2682bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec2682c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec2682bf80 '__int128'
+|-TypedefDecl 0x7fec2682c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec2682bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fec2682c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec2682c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fec2682c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec2682c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec2682c600 'char *'
+|   `-BuiltinType 0x7fec2682bd80 'char'
+|-TypedefDecl 0x7fec2682c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec2682c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec2682c720 'struct __va_list_tag'
+|     `-Record 0x7fec2682c698 '__va_list_tag'
+|-EnumDecl 0x7fec2682c960 <../Data/C2AST/pr61096-1.c:6:9, col:18> col:9
+| `-EnumConstantDecl 0x7fec27014220 <col:16> col:16 A 'int'
+|-TypedefDecl 0x7fec270142c0 <col:1, col:20> col:20 referenced schar 'enum schar':'schar'
+| `-ElaboratedType 0x7fec27014270 'enum schar' sugar
+|   `-EnumType 0x7fec27014200 'schar'
+|     `-Enum 0x7fec2682c960 ''
+|-VarDecl 0x7fec27014348 <line:7:1, col:12> col:12 used e 'int' extern
+|-RecordDecl 0x7fec270143e8 <line:8:1, line:11:1> line:8:8 struct S definition
+| `-FieldDecl 0x7fec27014510 <line:10:3, col:10> col:7 a 'int [3]'
+|-RecordDecl 0x7fec27014558 <line:12:1, line:16:1> line:12:8 struct f definition
+| |-FieldDecl 0x7fec27014618 <line:14:3, col:7> col:7 w 'int'
+| `-FieldDecl 0x7fec270146b0 <line:15:3, col:9> col:7 x 'int []'
+|-RecordDecl 0x7fec270146f8 <line:17:1, line:20:1> line:17:8 struct g definition
+| `-FieldDecl 0x7fec270147f0 <line:19:3, col:12> col:12 f 'struct f':'struct f'
+|-VarDecl 0x7fec270148d8 <line:22:1, col:9> col:6 invalid w1 'char []'
+|-VarDecl 0x7fec270149d8 <<built-in>:87:24, ../Data/C2AST/pr61096-1.c:23:19> col:16 invalid w2 'int []'
+|-VarDecl 0x7fec27014ad0 <<built-in>:87:24, ../Data/C2AST/pr61096-1.c:24:19> col:16 invalid w3 'int []'
+|-VarDecl 0x7fec27014c38 <line:25:1, col:10> col:7 invalid a1 'schar []'
+|-VarDecl 0x7fec27014cf0 <line:26:1, col:24> col:5 a2 'int [1]' cinit
+| `-CompoundLiteralExpr 0x7fec27014e68 <col:12, col:24> 'int [1]' lvalue
+|   `-InitListExpr 0x7fec27014de0 <col:20, col:24> 'int [1]'
+|     `-IntegerLiteral 0x7fec27014d78 <col:22> 'int' 1
+|-VarDecl 0x7fec27014ea8 <line:28:1, col:10> col:5 used a3 'int' cinit
+| `-ImplicitCastExpr 0x7fec27014f30 <col:10> 'int' <LValueToRValue>
+|   `-DeclRefExpr 0x7fec27014f08 <col:10> 'int' lvalue Var 0x7fec27014348 'e' 'int'
+|-VarDecl 0x7fec27014f60 <line:29:1, col:15> col:5 used a4 'int' cinit
+| `-ParenExpr 0x7fec27015048 <col:10, col:15> 'int'
+|   `-BinaryOperator 0x7fec27015020 <col:11, col:14> 'int' ','
+|     |-ImplicitCastExpr 0x7fec27015008 <col:11> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fec27014fc0 <col:11> 'int' lvalue Var 0x7fec27014348 'e' 'int'
+|     `-IntegerLiteral 0x7fec27014fe8 <col:14> 'int' 1
+|-VarDecl 0x7fec27015080 <line:30:1, col:5> col:5 a5 'int'
+|-VarDecl 0x7fec27015118 <line:31:1, col:17> col:5 a6 'int' cinit
+| `-ImplicitCastExpr 0x7fec27030e70 <col:10, col:17> 'int' <IntegralCast>
+|   `-BinaryOperator 0x7fec27030e48 <col:10, col:17> 'long' '-'
+|     |-UnaryOperator 0x7fec270151c8 <col:10, col:11> 'int *' prefix '&'
+|     | `-DeclRefExpr 0x7fec27015178 <col:11> 'int' lvalue Var 0x7fec27014ea8 'a3' 'int'
+|     `-UnaryOperator 0x7fec27030e28 <col:16, col:17> 'int *' prefix '&'
+|       `-DeclRefExpr 0x7fec27030e00 <col:17> 'int' lvalue Var 0x7fec27014f60 'a4' 'int'
+|-VarDecl 0x7fec27030eb0 <line:32:1, col:8> col:5 used invalid a7 'int []'
+|-VarDecl 0x7fec27030f90 <line:34:1, col:29> col:10 s 'struct S':'struct S' cinit
+| `-InitListExpr 0x7fec27031110 <col:14, col:29> 'struct S':'struct S'
+|   `-InitListExpr 0x7fec27031158 <col:16, col:20> 'int [3]'
+| 20 errors generated.
+    |-array filler
+|     | `-ImplicitValueInitExpr 0x7fec270311a0 <<invalid sloc>> 'int'
+|     `-IntegerLiteral 0x7fec27030ff0 <col:18> 'int' 1
+|-VarDecl 0x7fec27031200 <line:36:1, col:10> col:10 invalid g1 'struct g':'struct g'
+|-VarDecl 0x7fec27031438 <line:37:1, col:10> col:10 invalid g2 'struct g':'struct g'
+|-VarDecl 0x7fec270319e8 <line:39:15, col:19> col:19 invalid a8 'int'
+|-VarDecl 0x7fec27031b50 <line:40:1, col:10> col:5 a9 'int [10]'
+|-VarDecl 0x7fec27031c38 <line:41:1, col:11> col:5 a10 'int [10]'
+|-VarDecl 0x7fec27031d28 <line:42:15, col:25> col:19 a11 'int [10]'
+|-VarDecl 0x7fec27031e18 <line:43:1, col:5> col:5 invalid a12 'int'
+|-VarDecl 0x7fec27032010 <line:44:1, col:10> col:5 a13 'int [2]'
+|-VarDecl 0x7fec27032118 <line:45:1, col:10> col:5 invalid a14 'int [2]'
+|-VarDecl 0x7fec270322d0 <line:46:15, col:25> col:19 a15 'int [10]'
+|-VarDecl 0x7fec270323d8 <line:47:15, col:25> col:19 invalid a16 'int [10]'
+|-VarDecl 0x7fec27032598 <line:48:1, col:9> col:5 invalid a17 'int []'
+|-VarDecl 0x7fec27032708 <line:49:1, col:17> col:5 a18 'int [1]' cinit
+| `-InitListExpr 0x7fec270327d8 <col:13, col:17> 'int [1]'
+|   `-ImplicitCastExpr 0x7fec27032818 <col:15> 'int' <LValueToRValue>
+|     `-DeclRefExpr 0x7fec27032768 <col:15> 'int' lvalue Var 0x7fec27014348 'e' 'int'
+|-VarDecl 0x7fec270328b8 <line:50:1, col:26> col:6 a19 'char [1]' cinit
+| `-InitListExpr 0x7fec27032a08 <col:15, col:26> 'char [1]'
+|   `-StringLiteral 0x7fec27032958 <col:17> 'char [1]' lvalue "x"
+|-FunctionDecl 0x7fec27032b10 <line:52:1, line:56:1> line:53:1 bar 'void (void)'
+| `-CompoundStmt 0x7fec27032d38 <line:54:1, line:56:1>
+|   `-DeclStmt 0x7fec27032d20 <line:55:3, col:26>
+|     `-VarDecl 0x7fec27032bd0 <col:3, col:12> col:12 invalid f 'struct f':'struct f'
+|-RecordDecl 0x7fec27032d50 <line:58:1, line:61:1> line:58:1 struct definition
+| `-FieldDecl 0x7fec27032e18 <line:60:3, col:9> col:9 v 'char *'
+`-VarDecl 0x7fec27032f18 <line:58:1, line:61:6> col:3 invalid sx 'struct (anonymous struct at ../Data/C2AST/pr61096-1.c:58:1) []'

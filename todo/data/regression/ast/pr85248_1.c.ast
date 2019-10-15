@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ff35b82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff35c8152d0 <../Data/C2AST/pr85248_1.c:3:1, line:9:1> line:4:1 test 'void (int, int)'
+| |-ParmVarDecl 0x7ff35b82c978 <col:7, col:11> col:11 used s 'int'
+| |-ParmVarDecl 0x7ff35c815200 <col:14, col:18> col:18 used e 'int'
+| `-CompoundStmt 0x7ff35c815820 <line:5:1, line:9:1>
+|   |-GCCAsmStmt 0x7ff35c815578 <line:6:3, col:53>
+|   | |-DeclRefExpr 0x7ff35c815488 <col:28> 'int' lvalue ParmVar 0x7ff35b82c978 's' 'int'
+|   | `-DeclRefExpr 0x7ff35c8154e0 <col:38> 'int' lvalue ParmVar 0x7ff35c815200 'e' 'int'
+|   `-IfStmt 0x7ff35c8157e8 <line:7:3, line:8:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7ff35c815620 <line:7:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff35c8155f8 <col:7> 'int' lvalue ParmVar 0x7ff35b82c978 's' 'int'
+|     |-CallExpr 0x7ff35c8157c0 <line:8:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7ff35c8157a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7ff35c815758 <col:5> '<builtin fn type>' Function 0x7ff35c815670 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff35c815670 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff35c815710 <col:5> Implicit

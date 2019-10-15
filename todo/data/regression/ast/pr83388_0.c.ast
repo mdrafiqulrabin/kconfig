@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7f86be8274e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7f86be828160 <../Data/C2AST/pr83388_0.c:5:1, col:10> col:1
+| `-EnumConstantDecl 0x7f86bd814c20 <col:8> col:8 referenced a 'int'
+|-FunctionDecl 0x7f86bd814da0 <col:1, col:18> col:12 used e 'enum (anonymous enum at ../Data/C2AST/pr83388_0.c:5:1) (void)'
+|-RecordDecl 0x7f86bd814e98 <line:6:1, line:8:1> line:6:8 struct C definition
+| `-FieldDecl 0x7f86bd814f58 <line:7:5, col:9> col:9 referenced d 'int'
+|-VarDecl 0x7f86bd814ff0 <line:6:1, line:8:3> col:3 used c 'struct C':'struct C'
+|-VarDecl 0x7f86bd815080 <line:9:1, col:6> col:6 used f 'long'
+|-FunctionDecl 0x7f86bd8151c0 <line:10:1, col:12> col:6 used g 'void (long)'
+| `-ParmVarDecl 0x7f86bd8150f8 <col:8> col:12 'long'
+|-FunctionDecl 0x7f86bd815340 <line:11:1, line:17:1> line:11:13 used i 'void (_Bool)' static
+| |-ParmVarDecl 0x7f86bd815278 <col:15, col:21> col:21 h '_Bool'
+| `-CompoundStmt 0x7f86bd8158c0 <col:24, line:17:1>
+|   |-DeclStmt 0x7f86bd815588 <line:12:5, col:35>
+|   | `-VarDecl 0x7f86bd815470 <col:5, col:34> col:15 used a 'struct C *' cinit
+|   |   `-StmtExpr 0x7f86bd815568 <col:19, col:34> 'struct C *'
+|   |     `-CompoundStmt 0x7f86bd815550 <col:20, col:33>
+|   |       `-StmtExpr 0x7f86bd815530 <col:22, col:30> 'struct C *'
+|   |         `-CompoundStmt 0x7f86bd815518 <col:23, col:29>
+|   |           `-UnaryOperator 0x7f86bd8154f8 <col:25, col:26> 'struct C *' prefix '&'
+|   |             `-DeclRefExpr 0x7f86bd8154d0 <col:26> 'struct C':'struct C' lvalue Var 0x7f86bd814ff0 'c' 'struct C':'struct C'
+|   `-IfStmt 0x7f86bd815888 <line:13:5, line:16:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7f86bd815640 <line:13:9, col:11> 'enum (anonymous enum at ../Data/C2AST/pr83388_0.c:5:1)':'enum (anonymous at ../Data/C2AST/pr83388_0.c:5:1)'
+|     | `-ImplicitCastExpr 0x7f86bd815628 <col:9> 'enum (anonymous enum at ../Data/C2AST/pr83388_0.c:5:1) (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f86bd8155a0 <col:9> 'enum (anonymous enum at ../Data/C2AST/pr83388_0.c:5:1) (void)' Function 0x7f86bd814da0 'e' 'enum (anonymous enum at ../Data/C2AST/pr83388_0.c:5:1) (void)'
+|     |-CompoundStmt 0x7f86bd815868 <col:14, line:16:5>
+|     | |-DeclStmt 0x7f86bd815770 <line:14:2, col:14>
+|     | | `-VarDecl 0x7f86bd815680 <col:2, col:13> col:6 b 'int' cinit
+|     | |   `-ImplicitCastExpr 0x7f86bd815758 <col:10, col:13> 'int' <LValueToRValue>
+|     | |     `-MemberExpr 0x7f86bd815720 <col:10, col:13> 'int' lvalue ->d 0x7f86bd814f58
+|     | |       `-ImplicitCastExpr 0x7f86bd815708 <col:10> 'struct C *' <LValueToRValue>
+|     | |         `-DeclRefExpr 0x7f86bd8156e0 <col:10> 'struct C *' lvalue Var 0x7f86bd815470 'a' 'struct C *'
+|     | `-CallExpr 0x7f86bd815820 <line:15:2, col:5> 'void'
+|     |   |-ImplicitCastExpr 0x7f86bd815808 <col:2> 'void (*)(long)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f86bd815788 <col:2> 'void (long)' Function 0x7f86bd8151c0 'g' 'void (long)'
+|     |   `-ImplicitCastExpr 0x7f86bd815850 <col:4> 'long' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f86bd8157b0 <col:4> 'long' lvalue Var 0x7f86bd815080 'f' 'long'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f86bd8159a0 <line:18:1, col:22> col:6 j 'void (void)'
+  `-CompoundStmt 0x7f86bd815b18 <col:14, col:22>
+    `-CallExpr 0x7f86bd815ad0 <col:16, col:19> 'void'
+      |-ImplicitCastExpr 0x7f86bd815ab8 <col:16> 'void (*)(_Bool)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f86bd815a40 <col:16> 'void (_Bool)' Function 0x7f86bd815340 'i' 'void (_Bool)'
+      `-ImplicitCastExpr 0x7f86bd815b00 <col:18> '_Bool' <IntegralToBoolean>
+        `-DeclRefExpr 0x7f86bd815a68 <col:18> 'int' EnumConstant 0x7f86bd814c20 'a' 'int'

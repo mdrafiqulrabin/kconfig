@@ -1,0 +1,75 @@
+../Data/C2AST/pr18596-1.c:6:3: error: function declared in block scope cannot have 'static' storage class
+  static int g();  
+  ^
+../Data/C2AST/pr18596-1.c:7:18: error: function definition is not allowed here
+  static int g() { return i; }  
+                 ^
+../Data/C2AST/pr18596-1.c:13:3: error: function declared in block scope cannot have 'static' storage class
+  static int g ();  
+  ^
+../Data/C2AST/pr18596-1.c:14:12: error: function definition is not allowed here
+  int g () {
+           ^
+../Data/C2AST/pr18596-1.c:23:3: error: illegal storage class on function
+  auto int g ();
+  ^
+../Data/C2AST/pr18596-1.c:24:19: error: function definition is not allowed here
+  static int g () {  
+                  ^
+../Data/C2AST/pr18596-1.c:28:19: error: function definition is not allowed here
+  static int h () {  
+                  ^
+../Data/C2AST/pr18596-1.c:36:3: error: function declared in block scope cannot have 'static' storage class
+  static g ();   
+  ^
+../Data/C2AST/pr18596-1.c:37:15: error: function definition is not allowed here
+  static g () { return i; }  
+              ^
+9 errors generated.
+TranslationUnitDecl 0x7f861702bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f861702c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f861702bf80 '__int128'
+|-TypedefDecl 0x7f861702c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f861702bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f861702c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f861702c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f861702c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f861702c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f861702c600 'char *'
+|   `-BuiltinType 0x7f861702bd80 'char'
+|-TypedefDecl 0x7f861702c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f861702c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f861702c720 'struct __va_list_tag'
+|     `-Record 0x7f861702c698 '__va_list_tag'
+|-FunctionDecl 0x7f861706d868 <../Data/C2AST/pr18596-1.c:4:1, line:9:1> line:4:5 f 'int (int)'
+| |-ParmVarDecl 0x7f861702c978 <col:7, col:11> col:11 i 'int'
+| `-CompoundStmt 0x7f861706db10 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7f861706da50 <line:6:3, col:17>
+|   | `-FunctionDecl 0x7f861706d9a0 parent 0x7f861702bce8 <col:3, col:16> col:14 used g 'int ()'
+|   `-ReturnStmt 0x7f861706daf8 <line:8:3, col:12>
+|     `-CallExpr 0x7f861706dad0 <col:10, col:12> 'int'
+|       `-ImplicitCastExpr 0x7f861706dab8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f861706da68 <col:10> 'int ()' Function 0x7f861706d9a0 'g' 'int ()'
+|-FunctionDecl 0x7f861706dbd8 <line:11:1, line:19:1> line:11:5 k 'int (int)'
+| |-ParmVarDecl 0x7f861706db48 <col:8, col:12> col:12 i 'int'
+| `-CompoundStmt 0x7f861706ddf0 <line:12:1, line:19:1>
+|   |-DeclStmt 0x7f861706dd58 <line:13:3, col:18>
+|   | `-FunctionDecl 0x7f861706dca8 parent 0x7f861702bce8 prev 0x7f861706d9a0 <col:3, col:17> col:14 used g 'int ()'
+|   `-ReturnStmt 0x7f861706ddd8 <line:18:3, col:13>
+|     `-CallExpr 0x7f861706ddb0 <col:10, col:13> 'int'
+|       `-ImplicitCastExpr 0x7f861706dd98 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f861706dd70 <col:10> 'int ()' Function 0x7f861706dca8 'g' 'int ()'
+|-FunctionDecl 0x7f861706deb8 <line:21:1, line:32:1> line:21:5 l 'int (int)'
+| |-ParmVarDecl 0x7f861706de28 <col:8, col:12> col:12 i 'int'
+| `-CompoundStmt 0x7f861706e190 <line:22:1, line:32:1>
+|   `-DeclStmt 0x7f861706e038 <line:23:3, col:16>
+|     `-FunctionDecl 0x7f861706df88 parent 0x7f861702bce8 <col:3, col:15> col:12 invalid g 'int ()'
+`-FunctionDecl 0x7f861706e250 <line:34:1, line:39:1> line:34:5 m 'int (int)'
+  |-ParmVarDecl 0x7f861706e1c0 <col:8, col:12> col:12 i 'int'
+  `-CompoundStmt 0x7f861706e468 <line:35:1, line:39:1>
+    |-DeclStmt 0x7f861706e3d0 <line:36:3, col:14>
+    | `-FunctionDecl 0x7f861706e320 parent 0x7f861702bce8 prev 0x7f861706dca8 <col:3, col:13> col:10 used g 'int ()'
+    `-ReturnStmt 0x7f861706e450 <line:38:3, col:13>
+      `-CallExpr 0x7f861706e428 <col:10, col:13> 'int'
+        `-ImplicitCastExpr 0x7f861706e410 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f861706e3e8 <col:10> 'int ()' Function 0x7f861706e320 'g' 'int ()'

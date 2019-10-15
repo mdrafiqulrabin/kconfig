@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fbcc101a2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbcc101af60 <../Data/C2AST/pr41488.c:4:1, line:7:1> line:4:8 struct struct_t definition
+| `-FieldDecl 0x7fbcc102ee60 <line:6:3, col:8> col:8 referenced data 'int *'
+`-FunctionDecl 0x7fbcc102f180 <line:9:1, line:15:1> line:9:6 foo 'void (struct struct_t *, int, int)'
+  |-ParmVarDecl 0x7fbcc102ef60 <col:11, col:28> col:28 used sp 'struct struct_t *'
+  |-ParmVarDecl 0x7fbcc102efd8 <col:32, col:36> col:36 used start 'int'
+  |-ParmVarDecl 0x7fbcc102f050 <col:43, col:47> col:47 used end 'int'
+  `-CompoundStmt 0x7fbcc102f6b0 <line:10:1, line:15:1>
+    |-DeclStmt 0x7fbcc102f2f0 <line:11:3, col:8>
+    | `-VarDecl 0x7fbcc102f290 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fbcc102f678 <line:13:3, line:14:25>
+      |-BinaryOperator 0x7fbcc102f350 <line:13:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fbcc102f308 <col:8> 'int' lvalue Var 0x7fbcc102f290 'i' 'int'
+      | `-IntegerLiteral 0x7fbcc102f330 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbcc102f460 <col:15, col:25> 'int' '<'
+      | |-BinaryOperator 0x7fbcc102f3f8 <col:15, col:17> 'int' '+'
+      | | |-ImplicitCastExpr 0x7fbcc102f3c8 <col:15> 'int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fbcc102f378 <col:15> 'int' lvalue Var 0x7fbcc102f290 'i' 'int'
+      | | `-ImplicitCastExpr 0x7fbcc102f3e0 <col:17> 'int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fbcc102f3a0 <col:17> 'int' lvalue ParmVar 0x7fbcc102efd8 'start' 'int'
+      | `-ImplicitCastExpr 0x7fbcc102f448 <col:25> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbcc102f420 <col:25> 'int' lvalue ParmVar 0x7fbcc102f050 'end' 'int'
+      |-UnaryOperator 0x7fbcc102f4b0 <col:30, col:31> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fbcc102f488 <col:30> 'int' lvalue Var 0x7fbcc102f290 'i' 'int'
+      `-BinaryOperator 0x7fbcc102f650 <line:14:5, col:25> 'int' '='
+        |-ArraySubscriptExpr 0x7fbcc102f608 <col:5, col:21> 'int' lvalue
+        | |-ImplicitCastExpr 0x7fbcc102f5f0 <col:5, col:9> 'int *' <LValueToRValue>
+        | | `-MemberExpr 0x7fbcc102f510 <col:5, col:9> 'int *' lvalue ->data 0x7fbcc102ee60
+        | |   `-ImplicitCastExpr 0x7fbcc102f4f8 <col:5> 'struct struct_t *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fbcc102f4d0 <col:5> 'struct struct_t *' lvalue ParmVar 0x7fbcc102ef60 'sp' 'struct struct_t *'
+        | `-BinaryOperator 0x7fbcc102f5c8 <col:14, col:16> 'int' '+'
+        |   |-ImplicitCastExpr 0x7fbcc102f598 <col:14> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fbcc102f548 <col:14> 'int' lvalue Var 0x7fbcc102f290 'i' 'int'
+        |   `-ImplicitCastExpr 0x7fbcc102f5b0 <col:16> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fbcc102f570 <col:16> 'int' lvalue ParmVar 0x7fbcc102efd8 'start' 'int'
+        `-IntegerLiteral 0x7fbcc102f630 <col:25> 'int' 0

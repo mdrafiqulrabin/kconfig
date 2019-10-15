@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fb1d782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb1d8014268 <../Data/C2AST/pr38590-1.c:2:1, line:5:1> line:2:5 func_75 'int (int)'
+  |-ParmVarDecl 0x7fb1d782c978 <col:14, col:18> col:18 used p_76 'int'
+  `-CompoundStmt 0x7fb1d80144b0 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7fb1d8014498 <line:4:3, col:40>
+      `-ParenExpr 0x7fb1d8014478 <col:10, col:40> 'int'
+        `-BinaryOperator 0x7fb1d8014450 <col:11, col:36> 'int' '/'
+          |-IntegerLiteral 0x7fb1d8014350 <col:11> 'int' 1
+          `-CStyleCastExpr 0x7fb1d8014428 <col:15, col:36> 'int' <IntegralCast>
+            `-UnaryOperator 0x7fb1d80143f0 <col:21, col:36> 'unsigned int' prefix '-'
+              `-CStyleCastExpr 0x7fb1d80143c8 <col:22, col:36> 'unsigned int' <IntegralCast>
+                `-ImplicitCastExpr 0x7fb1d80143b0 <col:36> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fb1d8014370 <col:36> 'int' lvalue ParmVar 0x7fb1d782c978 'p_76' 'int'

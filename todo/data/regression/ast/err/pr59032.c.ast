@@ -1,0 +1,44 @@
+../Data/C2AST/pr59032.c:8:4: error: cannot increment value of type '__attribute__((__vector_size__(2 * sizeof(float)))) float' (vector of 2 'float' values)
+  v++;
+  ~^
+../Data/C2AST/pr59032.c:15:3: error: cannot increment value of type '__attribute__((__vector_size__(2 * sizeof(float)))) float' (vector of 2 'float' values)
+  ++v;
+  ^ ~
+../Data/C2AST/pr59032.c:22:4: error: cannot decrement value of type '__attribute__((__vector_size__(2 * sizeof(float)))) float' (vector of 2 'float' values)
+  v--;
+  ~^
+../Data/C2AST/pr59032.c:29:3: error: cannot decrement value of type '__attribute__((__vector_size__(2 * sizeof(float)))) float' (vector of 2 'float' values)
+  --v;
+  ^ ~
+4 errors generated.
+TranslationUnitDecl 0x7f908982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f908982c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f908982bf80 '__int128'
+|-TypedefDecl 0x7f908982c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f908982bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f908982c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f908982c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f908982c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f908982c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f908982c600 'char *'
+|   `-BuiltinType 0x7f908982bd80 'char'
+|-TypedefDecl 0x7f908982c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f908982c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f908982c720 'struct __va_list_tag'
+|     `-Record 0x7f908982c698 '__va_list_tag'
+|-FunctionDecl 0x7f908a039400 <../Data/C2AST/pr59032.c:4:1, line:9:1> line:5:1 foo 'void ()'
+| `-CompoundStmt 0x7f908a039990 <line:6:1, line:9:1>
+|   `-DeclStmt 0x7f908a039598 <line:7:3, col:42>
+|     `-VarDecl 0x7f908a039538 <col:3, col:9> col:9 used v '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|-FunctionDecl 0x7f908a0399c8 <line:11:1, line:16:1> line:12:1 foo2 'void ()'
+| `-CompoundStmt 0x7f908a039b38 <line:13:1, line:16:1>
+|   `-DeclStmt 0x7f908a039af8 <line:14:3, col:42>
+|     `-VarDecl 0x7f908a039a98 <col:3, col:9> col:9 used v '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|-FunctionDecl 0x7f908a039b70 <line:18:1, line:23:1> line:19:1 foo3 'void ()'
+| `-CompoundStmt 0x7f908a039ce0 <line:20:1, line:23:1>
+|   `-DeclStmt 0x7f908a039ca0 <line:21:3, col:42>
+|     `-VarDecl 0x7f908a039c40 <col:3, col:9> col:9 used v '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+`-FunctionDecl 0x7f908a039d18 <line:25:1, line:30:1> line:26:1 foo4 'void ()'
+  `-CompoundStmt 0x7f908a039e88 <line:27:1, line:30:1>
+    `-DeclStmt 0x7f908a039e48 <line:28:3, col:42>
+      `-VarDecl 0x7f908a039de8 <col:3, col:9> col:9 used v '__attribute__((__vector_size__(2 * sizeof(float)))) float'

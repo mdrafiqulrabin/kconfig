@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f9f0b02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9f0b02c960 <../Data/C2AST/pr17906.c:1:1, col:24> col:8 struct usc_bigstack_t definition
+`-FunctionDecl 0x7f9f0b06da90 <line:3:1, line:7:1> line:4:1 referenced usc_recressive_func 'void (int, int, struct usc_bigstack_t)'
+  |-ParmVarDecl 0x7f9f0b06d838 <col:21, col:25> col:25 used cnt 'int'
+  |-ParmVarDecl 0x7f9f0b06d8b0 <col:30, col:34> col:34 used max 'int'
+  |-ParmVarDecl 0x7f9f0b06d960 <col:39, col:61> col:61 used bstack 'struct usc_bigstack_t':'struct usc_bigstack_t'
+  `-CompoundStmt 0x7f9f0b06dd70 <line:5:1, line:7:1>
+    `-CallExpr 0x7f9f0b06dd00 <line:6:3, col:41> 'void'
+      |-ImplicitCastExpr 0x7f9f0b06dce8 <col:3> 'void (*)(int, int, struct usc_bigstack_t)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9f0b06db88 <col:3> 'void (int, int, struct usc_bigstack_t)' Function 0x7f9f0b06da90 'usc_recressive_func' 'void (int, int, struct usc_bigstack_t)'
+      |-BinaryOperator 0x7f9f0b06dc10 <col:23, col:27> 'int' '+'
+      | |-ImplicitCastExpr 0x7f9f0b06dbf8 <col:23> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9f0b06dbb0 <col:23> 'int' lvalue ParmVar 0x7f9f0b06d838 'cnt' 'int'
+      | `-IntegerLiteral 0x7f9f0b06dbd8 <col:27> 'int' 1
+      |-ImplicitCastExpr 0x7f9f0b06dd40 <col:30> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9f0b06dc38 <col:30> 'int' lvalue ParmVar 0x7f9f0b06d8b0 'max' 'int'
+      `-ImplicitCastExpr 0x7f9f0b06dd58 <col:35> 'struct usc_bigstack_t':'struct usc_bigstack_t' <LValueToRValue>
+        `-DeclRefExpr 0x7f9f0b06dc60 <col:35> 'struct usc_bigstack_t':'struct usc_bigstack_t' lvalue ParmVar 0x7f9f0b06d960 'bstack' 'struct usc_bigstack_t':'struct usc_bigstack_t'

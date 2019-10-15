@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7ff91e81d6e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff91e81e378 <../Data/C2AST/pragma-diag-7.c:3:1, col:20> col:15 ok 'unsigned long' cinit
+| `-IntegerLiteral 0x7ff91e03d840 <col:20> 'unsigned long' 0
+|-VarDecl 0x7ff91e03d878 <line:6:1, col:21> col:15 bad 'unsigned long' cinit
+| `-IntegerLiteral 0x7ff91e03d8d8 <col:21> 'unsigned long' 1
+`-VarDecl 0x7ff91e03d910 <line:9:1, col:26> col:15 ok_again 'unsigned long' cinit
+  `-IntegerLiteral 0x7ff91e03d970 <col:26> 'unsigned long' 2

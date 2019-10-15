@@ -1,0 +1,34 @@
+../Data/C2AST/pr35899.c:13:1: error: conflicting types for 'bar'
+bar (void)
+^
+../Data/C2AST/pr35899.c:8:11: note: previous implicit declaration is here
+  int a = bar ();  
+          ^
+1 error generated.
+TranslationUnitDecl 0x7fd5b802bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5b802c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5b802bf80 '__int128'
+|-TypedefDecl 0x7fd5b802c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5b802bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fd5b802c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5b802c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5b802c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5b802c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5b802c600 'char *'
+|   `-BuiltinType 0x7fd5b802bd80 'char'
+|-TypedefDecl 0x7fd5b802c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5b802c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5b802c720 'struct __va_list_tag'
+|     `-Record 0x7fd5b802c698 '__va_list_tag'
+|-FunctionDecl 0x7fd5b780d628 <../Data/C2AST/pr35899.c:5:1, line:10:1> line:6:1 foo 'int (void)'
+| `-CompoundStmt 0x7fd5b780d988 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7fd5b780d918 <line:8:3, col:17>
+|   | `-VarDecl 0x7fd5b780d720 <col:3, col:16> col:7 used a 'int' cinit
+|   |   `-CallExpr 0x7fd5b780d8f0 <col:11, col:16> 'int'
+|   |     `-ImplicitCastExpr 0x7fd5b780d8d8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fd5b780d880 <col:11> 'int ()' Function 0x7fd5b780d7d0 'bar' 'int ()'
+|   `-ReturnStmt 0x7fd5b780d970 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7fd5b780d958 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd5b780d930 <col:10> 'int' lvalue Var 0x7fd5b780d720 'a' 'int'
+`-FunctionDecl 0x7fd5b780da70 <line:12:1, line:17:1> line:13:1 invalid bar 'void (void)'
+  `-CompoundStmt 0x7fd5b780db10 <line:16:1, line:17:1>

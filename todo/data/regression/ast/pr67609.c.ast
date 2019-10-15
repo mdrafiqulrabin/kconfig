@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fb9f18216e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb9f211e1e0 <../Data/C2AST/pr67609.c:7:1, col:9> col:9 used reg '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7fb9f211e320 <line:8:1, line:14:1> line:8:6 set_lower 'void (double)'
+  |-ParmVarDecl 0x7fb9f211e258 <col:16, col:23> col:23 used b 'double'
+  `-CompoundStmt 0x7fb9f211e828 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fb9f211e4b0 <line:10:3, col:14>
+    | `-VarDecl 0x7fb9f211e450 <col:3, col:13> col:10 used v 'double [2]'
+    |-CallExpr 0x7fb9f211e558 <line:11:3, col:22> 'void'
+    | |-ImplicitCastExpr 0x7fb9f211e540 <col:3> 'void (*)(double *, __m128d)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb9f211e4c8 <col:3> 'void (double *, __m128d)' Function 0x7fb9f20df8c0 '_mm_store_pd' 'void (double *, __m128d)'
+    | |-ImplicitCastExpr 0x7fb9f211e590 <col:16> 'double *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7fb9f211e4f0 <col:16> 'double [2]' lvalue Var 0x7fb9f211e450 'v' 'double [2]'
+    | `-ImplicitCastExpr 0x7fb9f211e5a8 <col:19> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb9f211e518 <col:19> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fb9f211e1e0 'reg' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |-BinaryOperator 0x7fb9f211e688 <line:12:3, col:10> 'double' '='
+    | |-ArraySubscriptExpr 0x7fb9f211e620 <col:3, col:6> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7fb9f211e608 <col:3> 'double *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb9f211e5c0 <col:3> 'double [2]' lvalue Var 0x7fb9f211e450 'v' 'double [2]'
+    | | `-IntegerLiteral 0x7fb9f211e5e8 <col:5> 'int' 0
+    | `-ImplicitCastExpr 0x7fb9f211e670 <col:10> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb9f211e648 <col:10> 'double' lvalue ParmVar 0x7fb9f211e258 'b' 'double'
+    `-BinaryOperator 0x7fb9f211e800 <line:13:3, col:22> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+      |-DeclRefExpr 0x7fb9f211e6b0 <col:3> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fb9f211e1e0 'reg' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+      `-CallExpr 0x7fb9f211e7a0 <col:9, col:22> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+        |-ImplicitCastExpr 0x7fb9f211e788 <col:9> '__m128d (*)(const double *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb9f211e6d8 <col:9> '__m128d (const double *)' Function 0x7fb9f20d7e40 '_mm_load_pd' '__m128d (const double *)'
+        `-ImplicitCastExpr 0x7fb9f211e7e8 <col:21> 'const double *' <BitCast>
+          `-ImplicitCastExpr 0x7fb9f211e7d0 <col:21> 'double *' <ArrayToPointerDecay>
+            `-DeclRefExpr 0x7fb9f211e700 <col:21> 'double [2]' lvalue Var 0x7fb9f211e450 'v' 'double [2]'

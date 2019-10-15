@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb73f80d4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb73f81b4d0 <../Data/C2AST/pr51261.c:5:1, line:9:1> line:6:1 foo 'void (void *, int)'
+| |-ParmVarDecl 0x7fb73f80e178 <col:6, col:12> col:12 used p 'void *'
+| |-ParmVarDecl 0x7fb73f81b400 <col:15, col:19> col:19 used n 'int'
+| `-CompoundStmt 0x7fb73f81b9b8 <line:7:1, line:9:1>
+|   `-CallExpr 0x7fb73f81b930 <line:8:3, col:31> 'void *'
+|     |-ImplicitCastExpr 0x7fb73f81b918 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fb73f81b828 <col:3> '<builtin fn type>' Function 0x7fb73f81b608 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|     |-ImplicitCastExpr 0x7fb73f81b970 <col:21> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fb73f81b850 <col:21> 'void *' lvalue ParmVar 0x7fb73f80e178 'p' 'void *'
+|     |-IntegerLiteral 0x7fb73f81b878 <col:24> 'int' 255
+|     `-ImplicitCastExpr 0x7fb73f81b9a0 <col:30> 'unsigned long' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fb73f81b988 <col:30> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb73f81b898 <col:30> 'int' lvalue ParmVar 0x7fb73f81b400 'n' 'int'
+`-FunctionDecl 0x7fb73f81b608 <col:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fb73f81b6a8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fb73f81b708 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fb73f81b768 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fb73f81b7e0 <col:3> Implicit

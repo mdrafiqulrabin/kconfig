@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fce05825ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fce0501a660 <../Data/C2AST/pr55130.c:5:1, col:26> col:13 used bar 'void (long long)' extern
+| `-ParmVarDecl 0x7fce05826b78 <col:17, col:22> col:26 'long long'
+`-FunctionDecl 0x7fce0501a9b8 <line:7:1, line:15:1> line:7:5 foo 'int (long long, char, long long, long long)'
+  |-ParmVarDecl 0x7fce0501a760 <col:9, col:19> col:19 used a 'long long'
+  |-ParmVarDecl 0x7fce0501a7d0 <col:22, col:27> col:27 used b 'char'
+  |-ParmVarDecl 0x7fce0501a848 <col:30, col:40> col:40 used c 'long long'
+  |-ParmVarDecl 0x7fce0501a8c0 <col:43, col:53> col:53 used d 'long long'
+  `-CompoundStmt 0x7fce0501ae00 <line:8:1, line:15:1>
+    |-IfStmt 0x7fce0501aba8 <line:9:3, line:10:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fce0501aaf0 <line:9:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fce0501aac0 <col:7> 'long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fce0501aa78 <col:7> 'long long' lvalue ParmVar 0x7fce0501a848 'c' 'long long'
+    | | `-ImplicitCastExpr 0x7fce0501aad8 <col:12> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fce0501aaa0 <col:12> 'int' 0
+    | |-BinaryOperator 0x7fce0501ab80 <line:10:5, col:9> 'long long' '='
+    | | |-DeclRefExpr 0x7fce0501ab18 <col:5> 'long long' lvalue ParmVar 0x7fce0501a848 'c' 'long long'
+    | | `-ImplicitCastExpr 0x7fce0501ab68 <col:9> 'long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fce0501ab40 <col:9> 'long long' lvalue ParmVar 0x7fce0501a8c0 'd' 'long long'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fce0501ad10 <line:12:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fce0501acf8 <col:3> 'void (*)(long long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fce0501abe0 <col:3> 'void (long long)' Function 0x7fce0501a660 'bar' 'void (long long)'
+    | `-BinaryOperator 0x7fce0501aca0 <col:7, col:11> 'long long' '+'
+    |   |-ImplicitCastExpr 0x7fce0501ac70 <col:7> 'long long' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fce0501ac58 <col:7> 'char' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fce0501ac08 <col:7> 'char' lvalue ParmVar 0x7fce0501a7d0 'b' 'char'
+    |   `-ImplicitCastExpr 0x7fce0501ac88 <col:11> 'long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fce0501ac30 <col:11> 'long long' lvalue ParmVar 0x7fce0501a848 'c' 'long long'
+    `-ReturnStmt 0x7fce0501ade8 <line:14:3, col:15>
+      `-BinaryOperator 0x7fce0501adc0 <col:10, col:15> 'int' '=='
+        |-ImplicitCastExpr 0x7fce0501ad90 <col:10> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fce0501ad40 <col:10> 'long long' lvalue ParmVar 0x7fce0501a760 'a' 'long long'
+        `-ImplicitCastExpr 0x7fce0501ada8 <col:15> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fce0501ad68 <col:15> 'long long' lvalue ParmVar 0x7fce0501a8c0 'd' 'long long'

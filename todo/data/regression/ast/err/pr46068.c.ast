@@ -1,0 +1,36 @@
+../Data/C2AST/pr46068.c:6:7: error: 'asm goto' constructs are not supported yet
+  asm goto (""::::l1);
+      ^
+1 error generated.
+TranslationUnitDecl 0x7f950e80b6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f950e80bc60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f950e80b980 '__int128'
+|-TypedefDecl 0x7f950e80bcd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f950e80b9a0 'unsigned __int128'
+|-TypedefDecl 0x7f950e80bfa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f950e80bdb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f950e80bd28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f950e80c040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f950e80c000 'char *'
+|   `-BuiltinType 0x7f950e80b780 'char'
+|-TypedefDecl 0x7f950e80c308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f950e80c2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f950e80c120 'struct __va_list_tag'
+|     `-Record 0x7f950e80c098 '__va_list_tag'
+|-FunctionDecl 0x7f950f000600 <../Data/C2AST/pr46068.c:3:1, line:9:1> line:4:1 used foo 'void ()'
+| `-CompoundStmt 0x7f950f0008f8 <line:5:1, line:9:1>
+|   |-CallExpr 0x7f950f000860 <line:7:3, col:26> 'void'
+|   | `-ImplicitCastExpr 0x7f950f000848 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7f950f0007f8 <col:3> '<builtin fn type>' Function 0x7f950f000710 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-LabelStmt 0x7f950f0008e0 <line:8:1, col:4> 'l1'
+|     `-NullStmt 0x7f950f000888 <col:4>
+|-FunctionDecl 0x7f950f000710 <line:7:3> col:3 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f950f0007b0 <col:3> Implicit
+`-FunctionDecl 0x7f950f000938 <line:11:1, line:16:1> line:12:1 bar 'void ()'
+  `-CompoundStmt 0x7f950f000ad0 <line:13:1, line:16:1>
+    |-CallExpr 0x7f950f000a40 <line:14:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7f950f000a28 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f950f0009d8 <col:3> 'void ()' Function 0x7f950f000600 'foo' 'void ()'
+    `-CallExpr 0x7f950f000aa8 <line:15:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7f950f000a90 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f950f000a68 <col:3> 'void ()' Function 0x7f950f000600 'foo' 'void ()'

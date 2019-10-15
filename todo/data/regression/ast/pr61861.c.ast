@@ -1,0 +1,98 @@
+TranslationUnitDecl 0x7fc88e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc88e86d860 <../Data/C2AST/pr61861.c:4:1, col:21> col:13 used foo 'void (int)' extern
+| `-ParmVarDecl 0x7fc88e82c978 <col:18> col:21 'int'
+|-FunctionDecl 0x7fc88e86dab0 <line:5:1, col:29> col:13 used bar 'void (int, char *)' extern
+| |-ParmVarDecl 0x7fc88e86d960 <col:18> col:21 'int'
+| `-ParmVarDecl 0x7fc88e86d9d8 <col:23, col:28> col:29 'char *'
+`-FunctionDecl 0x7fc88e86dc20 <line:17:1, line:37:1> line:18:1 f 'void (void)'
+  `-CompoundStmt 0x7fc88e8950d0 <line:19:1, line:37:1>
+    |-CallExpr 0x7fc88e86ddb0 <line:20:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86dd98 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86dcc0 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86ddf8 <<scratch space>:2:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86dde0 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86dd28 <col:1> 'char [24]' lvalue "../Data/C2AST/pr61861.c"
+    |-CallExpr 0x7fc88e86de90 <../Data/C2AST/pr61861.c:21:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86de78 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86de10 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86ded8 <<scratch space>:3:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86dec0 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86de38 <col:1> 'char [24]' lvalue "../Data/C2AST/pr61861.c"
+    |-CallExpr 0x7fc88e86dfa0 <../Data/C2AST/pr61861.c:22:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86df88 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86def0 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86dfe8 <<scratch space>:5:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86dfd0 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86df58 <col:1> 'char [9]' lvalue "16:57:33"
+    |-CallExpr 0x7fc88e86e0b8 <../Data/C2AST/pr61861.c:23:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e0a0 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e000 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86e100 <<scratch space>:4:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86e0e8 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86e068 <col:1> 'char [12]' lvalue "Aug 23 2019"
+    |-CallExpr 0x7fc88e86e1d0 <../Data/C2AST/pr61861.c:24:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e1b8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e118 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86e218 <<scratch space>:6:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86e200 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86e178 <col:1> 'char [25]' lvalue "Fri Aug 16 15:22:10 2019"
+    |-CallExpr 0x7fc88e86e2e0 <../Data/C2AST/pr61861.c:25:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e2c8 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e230 <col:3> 'void (int, char *)' Function 0x7fc88e86dab0 'bar' 'void (int, char *)'
+    | |-IntegerLiteral 0x7fc88e86e258 <col:8> 'int' 1
+    | `-ImplicitCastExpr 0x7fc88e86e318 <<scratch space>:7:1> 'char *' <IntegralToPointer>
+    |   `-IntegerLiteral 0x7fc88e86e278 <col:1> 'int' 25
+    |-CallExpr 0x7fc88e86e3b0 <../Data/C2AST/pr61861.c:26:3, col:32> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e398 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e330 <col:3> 'void (int, char *)' Function 0x7fc88e86dab0 'bar' 'void (int, char *)'
+    | |-IntegerLiteral 0x7fc88e86e358 <<scratch space>:8:1> 'int' 0
+    | `-ImplicitCastExpr 0x7fc88e86e3e8 <line:9:1> 'char *' <IntegralToPointer>
+    |   `-IntegerLiteral 0x7fc88e86e378 <col:1> 'int' 1
+    |-CallExpr 0x7fc88e86e480 <../Data/C2AST/pr61861.c:28:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e468 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e400 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86e4c8 <<scratch space>:10:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86e4b0 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86e428 <col:1> 'char [24]' lvalue "../Data/C2AST/pr61861.c"
+    |-CallExpr 0x7fc88e86e550 <../Data/C2AST/pr61861.c:29:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e538 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e4e0 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86e598 <<scratch space>:5:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86e580 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86e508 <col:1> 'char [9]' lvalue "16:57:33"
+    |-CallExpr 0x7fc88e86e628 <../Data/C2AST/pr61861.c:30:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e610 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e5b0 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e86e670 <<scratch space>:4:1> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e86e658 <col:1> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86e5d8 <col:1> 'char [12]' lvalue "Aug 23 2019"
+    |-CallExpr 0x7fc88e86e708 <../Data/C2AST/pr61861.c:31:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e6f0 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e688 <col:3> 'void (int, char *)' Function 0x7fc88e86dab0 'bar' 'void (int, char *)'
+    | |-IntegerLiteral 0x7fc88e86e6b0 <col:8> 'int' 1
+    | `-ImplicitCastExpr 0x7fc88e86e740 <<scratch space>:11:1> 'char *' <IntegralToPointer>
+    |   `-IntegerLiteral 0x7fc88e86e6d0 <col:1> 'int' 31
+    |-CallExpr 0x7fc88e894e00 <../Data/C2AST/pr61861.c:33:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc88e86e7e8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e86e758 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e894e48 <line:12:12> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e894e30 <col:12> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e86e7b8 <col:12> 'char [4]' lvalue "foo"
+    |-CallExpr 0x7fc88e894ed0 <line:34:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc88e894eb8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e894e60 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e894f18 <line:13:12> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e894f00 <col:12> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e894e88 <col:12> 'char [4]' lvalue "foo"
+    |-CallExpr 0x7fc88e894fa0 <line:35:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc88e894f88 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc88e894f30 <col:3> 'void (int)' Function 0x7fc88e86d860 'foo' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc88e894fe8 <line:14:12> 'int' <PointerToIntegral>
+    |   `-ImplicitCastExpr 0x7fc88e894fd0 <col:12> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fc88e894f58 <col:12> 'char [4]' lvalue "foo"
+    `-CallExpr 0x7fc88e895080 <line:36:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7fc88e895068 <col:3> 'void (*)(int, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc88e895000 <col:3> 'void (int, char *)' Function 0x7fc88e86dab0 'bar' 'void (int, char *)'
+      |-IntegerLiteral 0x7fc88e895028 <col:8> 'int' 1
+      `-ImplicitCastExpr 0x7fc88e8950b8 <line:15:12> 'char *' <IntegralToPointer>
+        `-IntegerLiteral 0x7fc88e895048 <col:12> 'int' 42

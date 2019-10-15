@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fb39682bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb397015250 <../Data/C2AST/pr37913.c:3:1, col:42> col:6 used foo 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fb397015428 <line:5:1, line:9:1> line:6:1 used bar 'int (void) __attribute__((noreturn))' static
+| `-CompoundStmt 0x7fb397015558 <line:7:1, line:9:1>
+|   `-CallExpr 0x7fb397015530 <line:8:3, col:8> 'void'
+|     `-ImplicitCastExpr 0x7fb397015518 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fb3970154c8 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fb397015250 'foo' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fb397015600 <line:11:1, line:15:1> line:12:1 baz 'void (void)'
+  `-CompoundStmt 0x7fb3970157c0 <line:13:1, line:15:1>
+    `-DeclStmt 0x7fb3970157a8 <line:14:3, col:17>
+      `-VarDecl 0x7fb3970156b8 <col:3, col:16> col:7 i 'int' cinit
+        `-CallExpr 0x7fb397015780 <col:11, col:16> 'int'
+          `-ImplicitCastExpr 0x7fb397015768 <col:11> 'int (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fb397015718 <col:11> 'int (void) __attribute__((noreturn))' Function 0x7fb397015428 'bar' 'int (void) __attribute__((noreturn))'

@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fd49302bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd49302c9a0 <../Data/C2AST/pr70992-2.c:4:1, col:15> col:15 used od 'unsigned int *'
+`-FunctionDecl 0x7fd493814308 <line:5:1, line:9:1> line:6:1 fn 'int (void)'
+  `-CompoundStmt 0x7fd4938145c0 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fd4938145a8 <line:8:3, col:30>
+      `-ImplicitCastExpr 0x7fd493814590 <col:10, col:30> 'int' <IntegralCast>
+        `-BinaryOperator 0x7fd493814568 <col:10, col:30> 'unsigned int' '*'
+          |-BinaryOperator 0x7fd493814508 <col:10, col:25> 'unsigned int' '*'
+          | |-ImplicitCastExpr 0x7fd4938144f0 <col:10, col:20> 'unsigned int' <IntegralCast>
+          | | `-ParenExpr 0x7fd493814458 <col:10, col:20> 'int'
+          | |   `-BinaryOperator 0x7fd493814430 <col:11, col:19> 'int' '+'
+          | |     |-BinaryOperator 0x7fd4938143e8 <col:11, col:15> 'int' '%'
+          | |     | |-IntegerLiteral 0x7fd4938143a8 <col:11> 'int' 0
+          | |     | `-IntegerLiteral 0x7fd4938143c8 <col:15> 'int' 0
+          | |     `-IntegerLiteral 0x7fd493814410 <col:19> 'int' 1
+          | `-ImplicitCastExpr 0x7fd4938144d8 <col:24, col:25> 'unsigned int' <LValueToRValue>
+          |   `-UnaryOperator 0x7fd4938144b8 <col:24, col:25> 'unsigned int' lvalue prefix '*'
+          |     `-ImplicitCastExpr 0x7fd4938144a0 <col:25> 'unsigned int *' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fd493814478 <col:25> 'unsigned int *' lvalue Var 0x7fd49302c9a0 'od' 'unsigned int *'
+          `-ImplicitCastExpr 0x7fd493814550 <col:30> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7fd493814530 <col:30> 'int' 2

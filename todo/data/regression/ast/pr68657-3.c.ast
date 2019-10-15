@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f9c500058e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9c4f020800 <../Data/C2AST/pr68657-3.c:6:1, col:13> col:5 a 'int [131072]'
+|-VarDecl 0x7f9c4f020920 <line:7:1, col:11> col:5 b 'int [1024]'
+|-VarDecl 0x7f9c4f0209c8 <line:9:1, col:13> col:5 c 'int [131072]'
+|-VarDecl 0x7f9c4f020a70 <line:10:1, col:11> col:5 d 'int [1024]'
+|-VarDecl 0x7f9c4f020b18 <line:12:1, col:13> col:5 e 'int [131072]'
+`-VarDecl 0x7f9c4f020bc0 <line:13:1, col:11> col:5 f 'int [1024]'

@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fbf2982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbf2986d8c0 <../Data/C2AST/pr45721_1.c:1:1, col:54> col:13 used bar 'void (void)' static
+| |-AliasAttr 0x7fbf2986d960 <col:39, col:52> "baz"
+| `-WeakRefAttr 0x7fbf2986d9b8 <col:39, col:52> ""
+`-VarDecl 0x7fbf2986da28 <line:2:1, col:19> col:7 x 'void *' cinit
+  `-CStyleCastExpr 0x7fbf2986db10 <col:11, col:19> 'void *' <BitCast>
+    `-ImplicitCastExpr 0x7fbf2986daf8 <col:19> 'void (*)(void)' <FunctionToPointerDecay>
+      `-DeclRefExpr 0x7fbf2986da88 <col:19> 'void (void)' Function 0x7fbf2986d8c0 'bar' 'void (void)'

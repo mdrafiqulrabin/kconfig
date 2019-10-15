@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fbced8174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbced818178 <../Data/C2AST/pr37878.c:3:1, col:8> col:8 used y 'double'
+|-VarDecl 0x7fbced02d858 <col:1, col:11> col:11 used z 'double'
+`-FunctionDecl 0x7fbced02d9b0 <line:4:1, line:8:1> line:4:6 foo 'void (long)'
+  |-ParmVarDecl 0x7fbced02d8e8 <col:11, col:16> col:16 used x 'long'
+  `-CompoundStmt 0x7fbced02dfc8 <line:5:1, line:8:1>
+    |-BinaryOperator 0x7fbced02dd10 <line:6:3, col:40> 'double' '='
+    | |-DeclRefExpr 0x7fbced02da58 <col:3> 'double' lvalue Var 0x7fbced818178 'y' 'double'
+    | `-ImplicitCastExpr 0x7fbced02dcf8 <col:7, col:40> 'double' <LValueToRValue>
+    |   `-UnaryOperator 0x7fbced02dcd8 <col:7, col:40> 'double' lvalue prefix '*'
+    |     `-CStyleCastExpr 0x7fbced02dcb0 <col:8, col:40> 'double *' <BitCast>
+    |       `-ParenExpr 0x7fbced02dc90 <col:19, col:40> 'long *'
+    |         `-BinaryOperator 0x7fbced02dbf8 <col:20, col:39> 'long *' '+'
+    |           |-CStyleCastExpr 0x7fbced02dbb0 <col:20, col:35> 'long *' <IntegralToPointer>
+    |           | `-ParenExpr 0x7fbced02db90 <col:29, col:35> 'long'
+    |           |   `-BinaryOperator 0x7fbced02daf8 <col:30, col:34> 'long' '-'
+    |           |     |-ImplicitCastExpr 0x7fbced02dac8 <col:30> 'long' <LValueToRValue>
+    |           |     | `-DeclRefExpr 0x7fbced02da80 <col:30> 'long' lvalue ParmVar 0x7fbced02d8e8 'x' 'long'
+    |           |     `-ImplicitCastExpr 0x7fbced02dae0 <col:34> 'long' <IntegralCast>
+    |           |       `-IntegerLiteral 0x7fbced02daa8 <col:34> 'int' 1
+    |           `-IntegerLiteral 0x7fbced02dbd8 <col:39> 'int' 1
+    `-BinaryOperator 0x7fbced02dfa0 <line:7:3, col:40> 'double' '='
+      |-DeclRefExpr 0x7fbced02dd38 <col:3> 'double' lvalue Var 0x7fbced02d858 'z' 'double'
+      `-ImplicitCastExpr 0x7fbced02df88 <col:7, col:40> 'double' <LValueToRValue>
+        `-UnaryOperator 0x7fbced02df68 <col:7, col:40> 'double' lvalue prefix '*'
+          `-CStyleCastExpr 0x7fbced02df40 <col:8, col:40> 'double *' <BitCast>
+            `-ParenExpr 0x7fbced02df20 <col:19, col:40> 'long *'
+              `-BinaryOperator 0x7fbced02deb0 <col:20, col:39> 'long *' '+'
+                |-CStyleCastExpr 0x7fbced02de68 <col:20, col:35> 'long *' <IntegralToPointer>
+                | `-ParenExpr 0x7fbced02de48 <col:29, col:35> 'long'
+                |   `-BinaryOperator 0x7fbced02ddd8 <col:30, col:34> 'long' '-'
+                |     |-ImplicitCastExpr 0x7fbced02dda8 <col:30> 'long' <LValueToRValue>
+                |     | `-DeclRefExpr 0x7fbced02dd60 <col:30> 'long' lvalue ParmVar 0x7fbced02d8e8 'x' 'long'
+                |     `-ImplicitCastExpr 0x7fbced02ddc0 <col:34> 'long' <IntegralCast>
+                |       `-IntegerLiteral 0x7fbced02dd88 <col:34> 'int' 1
+                `-IntegerLiteral 0x7fbced02de90 <col:39> 'int' 1

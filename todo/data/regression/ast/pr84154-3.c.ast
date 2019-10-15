@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7fe64f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe650014310 <../Data/C2AST/pr84154-3.c:9:1, line:13:1> line:10:1 double_to_uc 'void (double, unsigned char *)'
+| |-ParmVarDecl 0x7fe64f82c978 <col:15, col:22> col:22 used x 'double'
+| |-ParmVarDecl 0x7fe650014240 <col:25, col:40> col:40 used p 'unsigned char *'
+| `-CompoundStmt 0x7fe650014508 <line:11:1, line:13:1>
+|   `-BinaryOperator 0x7fe6500144e0 <line:12:3, col:10> 'unsigned char' '='
+|     |-ArraySubscriptExpr 0x7fe650014460 <col:3, col:6> 'unsigned char' lvalue
+|     | |-ImplicitCastExpr 0x7fe650014448 <col:3> 'unsigned char *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe650014400 <col:3> 'unsigned char *' lvalue ParmVar 0x7fe650014240 'p' 'unsigned char *'
+|     | `-IntegerLiteral 0x7fe650014428 <col:5> 'int' 3
+|     `-ImplicitCastExpr 0x7fe6500144c8 <col:10> 'unsigned char' <FloatingToIntegral>
+|       `-ImplicitCastExpr 0x7fe6500144b0 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe650014488 <col:10> 'double' lvalue ParmVar 0x7fe64f82c978 'x' 'double'
+|-FunctionDecl 0x7fe6500146b0 <line:15:1, line:19:1> line:16:1 double_to_sc 'void (double, signed char *)'
+| |-ParmVarDecl 0x7fe650014538 <col:15, col:22> col:22 used x 'double'
+| |-ParmVarDecl 0x7fe6500145e0 <col:25, col:38> col:38 used p 'signed char *'
+| `-CompoundStmt 0x7fe650014868 <line:17:1, line:19:1>
+|   `-BinaryOperator 0x7fe650014840 <line:18:3, col:10> 'signed char' '='
+|     |-ArraySubscriptExpr 0x7fe6500147c0 <col:3, col:6> 'signed char' lvalue
+|     | |-ImplicitCastExpr 0x7fe6500147a8 <col:3> 'signed char *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe650014760 <col:3> 'signed char *' lvalue ParmVar 0x7fe6500145e0 'p' 'signed char *'
+|     | `-IntegerLiteral 0x7fe650014788 <col:5> 'int' 3
+|     `-ImplicitCastExpr 0x7fe650014828 <col:10> 'signed char' <FloatingToIntegral>
+|       `-ImplicitCastExpr 0x7fe650014810 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe6500147e8 <col:10> 'double' lvalue ParmVar 0x7fe650014538 'x' 'double'
+|-FunctionDecl 0x7fe650014a10 <line:21:1, line:25:1> line:22:1 double_to_us 'void (double, unsigned short *)'
+| |-ParmVarDecl 0x7fe650014898 <col:15, col:22> col:22 used x 'double'
+| |-ParmVarDecl 0x7fe650014940 <col:25, col:41> col:41 used p 'unsigned short *'
+| `-CompoundStmt 0x7fe650014bc8 <line:23:1, line:25:1>
+|   `-BinaryOperator 0x7fe650014ba0 <line:24:3, col:10> 'unsigned short' '='
+|     |-ArraySubscriptExpr 0x7fe650014b20 <col:3, col:6> 'unsigned short' lvalue
+|     | |-ImplicitCastExpr 0x7fe650014b08 <col:3> 'unsigned short *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe650014ac0 <col:3> 'unsigned short *' lvalue ParmVar 0x7fe650014940 'p' 'unsigned short *'
+|     | `-IntegerLiteral 0x7fe650014ae8 <col:5> 'int' 3
+|     `-ImplicitCastExpr 0x7fe650014b88 <col:10> 'unsigned short' <FloatingToIntegral>
+|       `-ImplicitCastExpr 0x7fe650014b70 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe650014b48 <col:10> 'double' lvalue ParmVar 0x7fe650014898 'x' 'double'
+|-FunctionDecl 0x7fe650014d70 <line:27:1, line:31:1> line:28:1 double_to_ss 'void (double, short *)'
+| |-ParmVarDecl 0x7fe650014bf8 <col:15, col:22> col:22 used x 'double'
+| |-ParmVarDecl 0x7fe650014ca0 <col:25, col:32> col:32 used p 'short *'
+| `-CompoundStmt 0x7fe650014f28 <line:29:1, line:31:1>
+|   `-BinaryOperator 0x7fe650014f00 <line:30:3, col:10> 'short' '='
+|     |-ArraySubscriptExpr 0x7fe650014e80 <col:3, col:6> 'short' lvalue
+|     | |-ImplicitCastExpr 0x7fe650014e68 <col:3> 'short *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe650014e20 <col:3> 'short *' lvalue ParmVar 0x7fe650014ca0 'p' 'short *'
+|     | `-IntegerLiteral 0x7fe650014e48 <col:5> 'int' 3
+|     `-ImplicitCastExpr 0x7fe650014ee8 <col:10> 'short' <FloatingToIntegral>
+|       `-ImplicitCastExpr 0x7fe650014ed0 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe650014ea8 <col:10> 'double' lvalue ParmVar 0x7fe650014bf8 'x' 'double'
+|-FunctionDecl 0x7fe6500150d0 <line:33:1, line:37:1> line:34:1 double_to_ui 'void (double, unsigned int *)'
+| |-ParmVarDecl 0x7fe650014f58 <col:15, col:22> col:22 used x 'double'
+| |-ParmVarDecl 0x7fe650015000 <col:25, col:39> col:39 used p 'unsigned int *'
+| `-CompoundStmt 0x7fe6500152a8 <line:35:1, line:37:1>
+|   `-BinaryOperator 0x7fe650015280 <line:36:3, col:10> 'unsigned int' '='
+|     |-ArraySubscriptExpr 0x7fe650015200 <col:3, col:6> 'unsigned int' lvalue
+|     | |-ImplicitCastExpr 0x7fe6500151c8 <col:3> 'unsigned int *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe650015180 <col:3> 'unsigned int *' lvalue ParmVar 0x7fe650015000 'p' 'unsigned int *'
+|     | `-IntegerLiteral 0x7fe6500151a8 <col:5> 'int' 3
+|     `-ImplicitCastExpr 0x7fe650015268 <col:10> 'unsigned int' <FloatingToIntegral>
+|       `-ImplicitCastExpr 0x7fe650015250 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe650015228 <col:10> 'double' lvalue ParmVar 0x7fe650014f58 'x' 'double'
+`-FunctionDecl 0x7fe650015450 <line:39:1, line:43:1> line:40:1 double_to_si 'void (double, int *)'
+  |-ParmVarDecl 0x7fe6500152d8 <col:15, col:22> col:22 used x 'double'
+  |-ParmVarDecl 0x7fe650015380 <col:25, col:30> col:30 used p 'int *'
+  `-CompoundStmt 0x7fe650015608 <line:41:1, line:43:1>
+    `-BinaryOperator 0x7fe6500155e0 <line:42:3, col:10> 'int' '='
+      |-ArraySubscriptExpr 0x7fe650015560 <col:3, col:6> 'int' lvalue
+      | |-ImplicitCastExpr 0x7fe650015548 <col:3> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe650015500 <col:3> 'int *' lvalue ParmVar 0x7fe650015380 'p' 'int *'
+      | `-IntegerLiteral 0x7fe650015528 <col:5> 'int' 3
+      `-ImplicitCastExpr 0x7fe6500155c8 <col:10> 'int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fe6500155b0 <col:10> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fe650015588 <col:10> 'double' lvalue ParmVar 0x7fe6500152d8 'x' 'double'

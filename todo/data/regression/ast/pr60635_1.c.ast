@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fbd6a0174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbd6a071aa8 <../Data/C2AST/pr60635_1.c:4:1, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:32:14> ../Data/C2AST/pr60635_1.c:4:13 used littleendian 'bool' static cinit
+| `-ImplicitCastExpr 0x7fbd6a071b68 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:32:14> 'bool' <IntegralToBoolean>
+|   `-IntegerLiteral 0x7fbd6a071b48 <col:14> 'int' 1
+|-RecordDecl 0x7fbd6a071b80 <../Data/C2AST/pr60635_1.c:6:20, col:50> col:20 union definition
+| |-FieldDecl 0x7fbd6a071c98 <col:26, col:37> col:37 referenced n 'uint16_t *'
+| `-FieldDecl 0x7fbd6a071d48 <col:39, col:48> col:48 referenced b 'uint8_t *'
+`-FunctionDecl 0x7fbd6a071ee0 <col:1, line:13:1> line:6:10 bigendc16 'uint16_t (union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20))'
+  |-ParmVarDecl 0x7fbd6a071de0 <col:20, col:51> col:51 used x 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)'
+  `-CompoundStmt 0x7fbd6a07a618 <col:53, line:13:1>
+    |-IfStmt 0x7fbd6a0720b0 <line:8:5, col:34>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fbd6a071fc8 <col:9, col:10> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fbd6a071fb0 <col:10> 'bool' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fbd6a071f88 <col:10> 'bool' lvalue Var 0x7fbd6a071aa8 'littleendian' 'bool'
+    | |-ReturnStmt 0x7fbd6a072098 <col:24, col:34>
+    | | `-ImplicitCastExpr 0x7fbd6a072080 <col:31, col:34> 'uint16_t':'unsigned short' <LValueToRValue>
+    | |   `-UnaryOperator 0x7fbd6a072060 <col:31, col:34> 'uint16_t':'unsigned short' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7fbd6a072048 <col:32, col:34> 'uint16_t *' <LValueToRValue>
+    | |       `-MemberExpr 0x7fbd6a072010 <col:32, col:34> 'uint16_t *' lvalue .n 0x7fbd6a071c98
+    | |         `-DeclRefExpr 0x7fbd6a071fe8 <col:32> 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)' lvalue ParmVar 0x7fbd6a071de0 'x' 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)'
+    | `-<<<NULL>>>
+    |-DeclStmt 0x7fbd6a0725a8 <line:10:5, line:11:25>
+    | `-VarDecl 0x7fbd6a0720f8 <line:10:5, line:11:24> line:10:14 used res 'uint16_t':'unsigned short' cinit
+    |   `-ImplicitCastExpr 0x7fbd6a072590 <col:20, line:11:24> 'uint16_t':'unsigned short' <IntegralCast>
+    |     `-BinaryOperator 0x7fbd6a072568 <line:10:20, line:11:24> 'int' '|'
+    |       |-ParenExpr 0x7fbd6a072368 <line:10:20, col:42> 'int'
+    |       | `-BinaryOperator 0x7fbd6a072340 <col:21, col:41> 'int' '<<'
+    |       |   |-ImplicitCastExpr 0x7fbd6a0722d8 <col:21, col:38> 'int' <IntegralCast>
+    |       |   | `-CStyleCastExpr 0x7fbd6a072290 <col:21, col:38> 'uint16_t':'unsigned short' <IntegralCast>
+    |       |   |   `-ImplicitCastExpr 0x7fbd6a072278 <col:31, col:38> 'uint8_t':'unsigned char' <LValueToRValue>
+    |       |   |     `-ParenExpr 0x7fbd6a072258 <col:31, col:38> 'uint8_t':'unsigned char' lvalue
+    |       |   |       `-ArraySubscriptExpr 0x7fbd6a0721f0 <col:32, col:37> 'uint8_t':'unsigned char' lvalue
+    |       |   |         |-ImplicitCastExpr 0x7fbd6a0721d8 <col:32, col:34> 'uint8_t *' <LValueToRValue>
+    |       |   |         | `-MemberExpr 0x7fbd6a072180 <col:32, col:34> 'uint8_t *' lvalue .b 0x7fbd6a071d48
+    |       |   |         |   `-DeclRefExpr 0x7fbd6a072158 <col:32> 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)' lvalue ParmVar 0x7fbd6a071de0 'x' 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)'
+    |       |   |         `-IntegerLiteral 0x7fbd6a0721b8 <col:36> 'int' 1
+    |       |   `-IntegerLiteral 0x7fbd6a0722b8 <col:41> 'int' 0
+    |       `-ParenExpr 0x7fbd6a072548 <line:11:2, col:24> 'int'
+    |         `-BinaryOperator 0x7fbd6a072520 <col:3, col:23> 'int' '<<'
+    |           |-ImplicitCastExpr 0x7fbd6a072508 <col:3, col:20> 'int' <IntegralCast>
+    |           | `-CStyleCastExpr 0x7fbd6a0724c0 <col:3, col:20> 'uint16_t':'unsigned short' <IntegralCast>
+    |           |   `-ImplicitCastExpr 0x7fbd6a0724a8 <col:13, col:20> 'uint8_t':'unsigned char' <LValueToRValue>
+    |           |     `-ParenExpr 0x7fbd6a072488 <col:13, col:20> 'uint8_t':'unsigned char' lvalue
+    |           |       `-ArraySubscriptExpr 0x7fbd6a072420 <col:14, col:19> 'uint8_t':'unsigned char' lvalue
+    |           |         |-ImplicitCastExpr 0x7fbd6a072408 <col:14, col:16> 'uint8_t *' <LValueToRValue>
+    |           |         | `-MemberExpr 0x7fbd6a0723b0 <col:14, col:16> 'uint8_t *' lvalue .b 0x7fbd6a071d48
+    |           |         |   `-DeclRefExpr 0x7fbd6a072388 <col:14> 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)' lvalue ParmVar 0x7fbd6a071de0 'x' 'union (anonymous union at ../Data/C2AST/pr60635_1.c:6:20)':'union (anonymous at ../Data/C2AST/pr60635_1.c:6:20)'
+    |           |         `-IntegerLiteral 0x7fbd6a0723e8 <col:18> 'int' 0
+    |           `-IntegerLiteral 0x7fbd6a0724e8 <col:23> 'int' 8
+    `-ReturnStmt 0x7fbd6a07a600 <line:12:5, col:12>
+      `-ImplicitCastExpr 0x7fbd6a0725e8 <col:12> 'uint16_t':'unsigned short' <LValueToRValue>
+        `-DeclRefExpr 0x7fbd6a0725c0 <col:12> 'uint16_t':'unsigned short' lvalue Var 0x7fbd6a0720f8 'res' 'uint16_t':'unsigned short'

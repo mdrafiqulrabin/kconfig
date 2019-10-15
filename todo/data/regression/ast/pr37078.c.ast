@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fd2038118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd203853468 <../Data/C2AST/pr37078.c:1:1, line:6:1> line:1:5 foo 'int (int)'
+| |-ParmVarDecl 0x7fd203812578 <col:10, col:14> col:14 used b 'int'
+| `-CompoundStmt 0x7fd2038538e0 <line:2:1, line:6:1>
+|   |-IfStmt 0x7fd203853870 <line:3:3, line:4:28>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd2038535f0 <line:3:7, col:17> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fd2038535d8 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd203853550 <col:7> 'int' lvalue ParmVar 0x7fd203812578 'b' 'int'
+|   | | `-CStyleCastExpr 0x7fd2038535b0 <col:12, col:17> 'int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fd203853578 <col:17> 'unsigned int' 2147483648
+|   | |-ReturnStmt 0x7fd203853858 <line:4:5, col:28>
+|   | | `-CallExpr 0x7fd203853810 <col:12, col:28> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd2038537f8 <col:12> 'int (*)(int)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fd203853778 <col:12> '<builtin fn type>' Function 0x7fd203853618 '__builtin_abs' 'int (int)'
+|   | |   `-ImplicitCastExpr 0x7fd203853840 <col:27> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd2038537a0 <col:27> 'int' lvalue ParmVar 0x7fd203812578 'b' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd2038538c8 <line:5:3, col:10>
+|     `-IntegerLiteral 0x7fd2038538a8 <col:10> 'int' 0
+`-FunctionDecl 0x7fd203853618 <line:4:12> col:12 implicit used __builtin_abs 'int (int)' extern
+  |-ParmVarDecl 0x7fd2038536b8 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fd203853720 <col:12> Implicit
+  `-ConstAttr 0x7fd203853768 <col:12> Implicit

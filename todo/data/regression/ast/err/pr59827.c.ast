@@ -1,0 +1,26 @@
+../Data/C2AST/pr59827.c:5:11: error: array has incomplete element type 'int []'
+foo (int p[2][])  
+          ^
+1 error generated.
+TranslationUnitDecl 0x7fa793017ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa793018060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa793017d80 '__int128'
+|-TypedefDecl 0x7fa7930180d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa793017da0 'unsigned __int128'
+|-TypedefDecl 0x7fa7930183a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa7930181b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa793018128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa793018440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa793018400 'char *'
+|   `-BuiltinType 0x7fa793017b80 'char'
+|-TypedefDecl 0x7fa793018708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa7930186b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa793018520 'struct __va_list_tag'
+|     `-Record 0x7fa793018498 '__va_list_tag'
+|-FunctionDecl 0x7fa792026c68 <../Data/C2AST/pr59827.c:4:1, line:8:1> line:5:1 invalid foo 'int (int)'
+| |-ParmVarDecl 0x7fa792026b98 <col:6, col:10> col:10 invalid p 'int'
+| `-CompoundStmt 0x7fa792026d50 <line:6:1, line:8:1>
+`-FunctionDecl 0x7fa792026e20 <line:10:1, line:15:1> line:11:1 bar 'void (void)'
+  `-CompoundStmt 0x7fa792027090 <line:12:1, line:15:1>
+    `-DeclStmt 0x7fa792027050 <line:13:3, col:14>
+      `-VarDecl 0x7fa792026ff0 <col:3, col:13> col:7 used p 'int [2][1]'

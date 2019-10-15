@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fbfac02b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbfab814c68 <../Data/C2AST/pr57371-2.c:6:1, line:9:1> line:6:5 foo1 'int (int)'
+| |-ParmVarDecl 0x7fbfac02bf78 <col:10, col:14> col:14 used x 'int'
+| `-CompoundStmt 0x7fbfab814e48 <col:17, line:9:1>
+|   `-ReturnStmt 0x7fbfab814e30 <line:7:3, col:23>
+|     `-BinaryOperator 0x7fbfab814e08 <col:10, col:23> 'int' '!='
+|       |-CStyleCastExpr 0x7fbfab814da8 <col:10, col:18> 'float' <IntegralToFloating>
+|       | `-ImplicitCastExpr 0x7fbfab814d90 <col:18> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fbfab814d50 <col:18> 'int' lvalue ParmVar 0x7fbfac02bf78 'x' 'int'
+|       `-ImplicitCastExpr 0x7fbfab814df0 <col:23> 'float' <IntegralToFloating>
+|         `-IntegerLiteral 0x7fbfab814dd0 <col:23> 'int' 0
+`-FunctionDecl 0x7fbfab814f48 <line:11:1, line:14:1> line:11:5 foo2 'int (long long)'
+  |-ParmVarDecl 0x7fbfab814e78 <col:10, col:20> col:20 used x 'long long'
+  `-CompoundStmt 0x7fbfab8150e8 <col:23, line:14:1>
+    `-ReturnStmt 0x7fbfab8150d0 <line:13:3, col:24>
+      `-BinaryOperator 0x7fbfab8150a8 <col:10, col:24> 'int' '!='
+        |-CStyleCastExpr 0x7fbfab815048 <col:10, col:19> 'double' <IntegralToFloating>
+        | `-ImplicitCastExpr 0x7fbfab815030 <col:19> 'long long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fbfab814ff0 <col:19> 'long long' lvalue ParmVar 0x7fbfab814e78 'x' 'long long'
+        `-ImplicitCastExpr 0x7fbfab815090 <col:24> 'double' <IntegralToFloating>
+          `-IntegerLiteral 0x7fbfab815070 <col:24> 'int' 0

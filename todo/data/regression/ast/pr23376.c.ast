@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7f95250174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9524816a00 <../Data/C2AST/pr23376.c:4:1, col:13> col:13 referenced __m64 '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7f9525018180 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7f95250175e0 'int'
+|-TypedefDecl 0x7f9524816a88 <line:5:1, col:13> col:13 referenced __v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7f9525018180 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7f95250175e0 'int'
+|-FunctionDecl 0x7f9524816c90 <line:7:1, line:11:1> line:8:1 used _mm_add_pi32 '__m64 (__m64, __m64)' static inline
+| |-ParmVarDecl 0x7f9524816b10 <col:15, col:21> col:21 used __m1 '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7f9524816b80 <col:27, col:33> col:33 used __m2 '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-CompoundStmt 0x7f9524817138 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7f9524817120 <line:10:3, col:66>
+| |   `-CStyleCastExpr 0x7f95248170f8 <col:10, col:66> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+| |     `-CallExpr 0x7f95248170b0 <col:18, col:66> '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |       |-ImplicitCastExpr 0x7f9524817098 <col:18> '__attribute__((__vector_size__(2 * sizeof(int)))) int (*)(__attribute__((__vector_size__(2 * sizeof(int)))) int, __attribute__((__vector_size__(2 * sizeof(int)))) int)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7f9524816f38 <col:18> '<builtin fn type>' Function 0x7f9524816dc8 '__builtin_ia32_paddd' '__attribute__((__vector_size__(2 * sizeof(int)))) int (__attribute__((__vector_size__(2 * sizeof(int)))) int, __attribute__((__vector_size__(2 * sizeof(int)))) int)'
+| |       |-CStyleCastExpr 0x7f9524816fd0 <col:40, col:48> '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+| |       | `-ImplicitCastExpr 0x7f9524816fb8 <col:48> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7f9524816f80 <col:48> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f9524816b10 '__m1' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |       `-CStyleCastExpr 0x7f9524817048 <col:54, col:62> '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+| |         `-ImplicitCastExpr 0x7f9524817030 <col:62> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+| |           `-DeclRefExpr 0x7f9524816ff8 <col:62> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f9524816b80 '__m2' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-AlwaysInlineAttr 0x7f9524816d40 <line:7:38> always_inline
+|-FunctionDecl 0x7f9524816dc8 <line:10:18> col:18 implicit used __builtin_ia32_paddd '__attribute__((__vector_size__(2 * sizeof(int)))) int (__attribute__((__vector_size__(2 * sizeof(int)))) int, __attribute__((__vector_size__(2 * sizeof(int)))) int)' extern
+| |-ParmVarDecl 0x7f9524816e68 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-ParmVarDecl 0x7f9524816ec8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+`-FunctionDecl 0x7f95248172f0 <line:13:1, line:21:1> line:14:1 simple_block_diff_up_mmx_4 '__m64 (const int, __m64)'
+  |-ParmVarDecl 0x7f9524817168 <col:29, col:39> col:39 used width 'const int'
+  |-ParmVarDecl 0x7f95248171d8 <col:46, col:52> col:52 used ref1 '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  `-CompoundStmt 0x7f9524817778 <line:15:1, line:21:1>
+    |-DeclStmt 0x7f9524817410 <line:16:3, col:12>
+    | `-VarDecl 0x7f95248173b0 <col:3, col:9> col:9 used sum '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-DeclStmt 0x7f9524817528 <line:17:3, col:24>
+    | `-VarDecl 0x7f9524817440 <col:3, col:23> col:7 used count 'int' cinit
+    |   `-BinaryOperator 0x7f9524817500 <col:15, col:23> 'int' '>>'
+    |     |-ImplicitCastExpr 0x7f95248174e8 <col:15> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f95248174a0 <col:15> 'const int' lvalue ParmVar 0x7f9524817168 'width' 'const int'
+    |     `-IntegerLiteral 0x7f95248174c8 <col:23> 'int' 1
+    |-WhileStmt 0x7f9524817700 <line:18:3, line:19:34>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f9524817568 <line:18:10, col:15> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7f9524817540 <col:10> 'int' lvalue Var 0x7f9524817440 'count' 'int'
+    | `-BinaryOperator 0x7f95248176d8 <line:19:5, col:34> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    |   |-DeclRefExpr 0x7f9524817588 <col:5> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f95248173b0 'sum' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-CallExpr 0x7f9524817670 <col:11, col:34> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |     |-ImplicitCastExpr 0x7f9524817658 <col:11> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f95248175b0 <col:11> '__m64 (__m64, __m64)' Function 0x7f9524816c90 '_mm_add_pi32' '__m64 (__m64, __m64)'
+    |     |-ImplicitCastExpr 0x7f95248176a8 <col:25> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f95248175d8 <col:25> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f95248173b0 'sum' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |     `-ImplicitCastExpr 0x7f95248176c0 <col:30> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9524817600 <col:30> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f95248171d8 'ref1' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    `-ReturnStmt 0x7f9524817760 <line:20:3, col:10>
+      `-ImplicitCastExpr 0x7f9524817748 <col:10> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9524817720 <col:10> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f95248173b0 'sum' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'

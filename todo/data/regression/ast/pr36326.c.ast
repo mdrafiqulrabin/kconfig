@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fbea18174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbea1818160 <../Data/C2AST/pr36326.c:4:1, col:28> col:7 union X definition
+| |-FieldDecl 0x7fbea0814c38 <col:11, col:15> col:15 i 'int'
+| `-FieldDecl 0x7fbea0814c98 <col:18, col:25> col:25 referenced x 'double'
+`-FunctionDecl 0x7fbea0814e98 <line:6:1, line:10:1> line:6:5 foo 'int (union X *)'
+  |-ParmVarDecl 0x7fbea0814d90 <col:10, col:19> col:19 used p 'union X *'
+  `-CompoundStmt 0x7fbea0815188 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fbea0815078 <line:8:3, col:17>
+    | `-VarDecl 0x7fbea0814fa0 <col:3, col:16> col:11 used x 'union X':'union X' cinit
+    |   `-ImplicitCastExpr 0x7fbea0815060 <col:15, col:16> 'union X':'union X' <LValueToRValue>
+    |     `-UnaryOperator 0x7fbea0815040 <col:15, col:16> 'union X':'union X' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fbea0815028 <col:16> 'union X *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fbea0815000 <col:16> 'union X *' lvalue ParmVar 0x7fbea0814d90 'p' 'union X *'
+    `-ReturnStmt 0x7fbea0815170 <line:9:3, col:12>
+      `-ImplicitCastExpr 0x7fbea0815108 <col:10, col:12> 'int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fbea08150f0 <col:10, col:12> 'double' <LValueToRValue>
+          `-MemberExpr 0x7fbea08150b8 <col:10, col:12> 'double' lvalue .x 0x7fbea0814c98
+            `-DeclRefExpr 0x7fbea0815090 <col:10> 'union X':'union X' lvalue Var 0x7fbea0814fa0 'x' 'union X':'union X'

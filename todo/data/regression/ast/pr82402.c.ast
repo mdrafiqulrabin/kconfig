@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fca1f01c6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca1f05e200 <../Data/C2AST/pr82402.c:3:1, col:22> col:13 referenced jmp_buf 'int [1]'
+| `-ConstantArrayType 0x7fca1f01d380 'int [1]' 1 
+|   `-BuiltinType 0x7fca1f01c7e0 'int'
+|-FunctionDecl 0x7fca1f05e370 <line:5:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fca1f05e410 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fca1f05e478 prev 0x7fca1f05e370 <col:1, col:51> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fca1f05e270 <col:18> col:21 'int'
+|-FunctionDecl 0x7fca1f05e6b8 <line:6:1, col:62> col:12 used setjmpx 'int (int *)' extern
+| |-ParmVarDecl 0x7fca1f05e5b0 <col:20> col:27 'int *':'int *'
+| `-ReturnsTwiceAttr 0x7fca1f05e760 <col:44>
+|-VarDecl 0x7fca1f05e7f8 <line:8:1, col:9> col:9 used jbAnagram 'jmp_buf':'int [1]'
+|-VarDecl 0x7fca1f05e8e0 <line:9:1, col:8> col:5 used a 'int [6]'
+|-VarDecl 0x7fca1f05e958 <line:10:1, col:5> col:5 used d 'int'
+|-FunctionDecl 0x7fca1f05ea10 <line:11:1, col:22> col:5 used b 'int ()'
+| `-CompoundStmt 0x7fca1f05eb70 <col:10, col:22>
+|   `-CallExpr 0x7fca1f05eb40 <col:12, col:19> 'void'
+|     |-ImplicitCastExpr 0x7fca1f05eb28 <col:12> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fca1f05eab0 <col:12> 'void (int) __attribute__((noreturn))' Function 0x7fca1f05e478 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fca1f05ead8 <col:18> 'int' 1
+|-FunctionDecl 0x7fca1f05ebb0 <line:12:1, col:18> col:5 used c 'int ()'
+| `-CompoundStmt 0x7fca1f05ece8 <col:10, col:18>
+|   `-CallExpr 0x7fca1f05ecc0 <col:12, col:15> 'int'
+|     `-ImplicitCastExpr 0x7fca1f05eca8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fca1f05ec50 <col:12> 'int ()' Function 0x7fca1f05ea10 'b' 'int ()'
+`-FunctionDecl 0x7fca1f05ed28 <line:13:1, line:20:1> line:13:5 e 'int ()'
+  `-CompoundStmt 0x7fca1f075c18 <line:14:1, line:20:1>
+    |-DeclStmt 0x7fca1f05ee60 <line:15:3, col:12>
+    | `-VarDecl 0x7fca1f05ede0 <col:3, col:11> col:7 used f 'int' cinit
+    |   `-IntegerLiteral 0x7fca1f05ee40 <col:11> 'int' 0
+    |-ForStmt 0x7fca1f05f058 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fca1f05eed8 <line:16:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fca1f05eec0 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fca1f05ee78 <col:10> 'int' lvalue Var 0x7fca1f05ede0 'f' 'int'
+    | | `-IntegerLiteral 0x7fca1f05eea0 <col:14> 'int' 6
+    | |-UnaryOperator 0x7fca1f05ef28 <col:17, col:18> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fca1f05ef00 <col:17> 'int' lvalue Var 0x7fca1f05ede0 'f' 'int'
+    | `-BinaryOperator 0x7fca1f05f030 <line:17:5, col:12> 'int' '='
+    |   |-ArraySubscriptExpr 0x7fca1f05efc8 <col:5, col:8> 'int' lvalue
+    |   | |-ImplicitCastExpr 0x7fca1f05ef98 <col:5> 'int *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fca1f05ef48 <col:5> 'int [6]' lvalue Var 0x7fca1f05e8e0 'a' 'int [6]'
+    |   | `-ImplicitCastExpr 0x7fca1f05efb0 <col:7> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fca1f05ef70 <col:7> 'int' lvalue Var 0x7fca1f05ede0 'f' 'int'
+    |   `-ImplicitCastExpr 0x7fca1f05f018 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fca1f05eff0 <col:12> 'int' lvalue Var 0x7fca1f05e958 'd' 'int'
+    |-CallExpr 0x7fca1f05f0d0 <line:18:3, col:6> 'int'
+    | `-ImplicitCastExpr 0x7fca1f05f0b8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fca1f05f090 <col:3> 'int ()' Function 0x7fca1f05ebb0 'c' 'int ()'
+    `-CallExpr 0x7fca1f05f1c0 <line:19:3, col:21> 'int'
+      |-ImplicitCastExpr 0x7fca1f05f1a8 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fca1f05f0f8 <col:3> 'int (int *)' Function 0x7fca1f05e6b8 'setjmpx' 'int (int *)'
+      `-ImplicitCastExpr 0x7fca1f075c00 <col:12> 'int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fca1f05f120 <col:12> 'jmp_buf':'int [1]' lvalue Var 0x7fca1f05e7f8 'jbAnagram' 'jmp_buf':'int [1]'

@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7fc37282bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fc37282c960 <../Data/C2AST/pr65241.c:1:1, col:21> col:6 E
+| |-EnumConstantDecl 0x7fc37286c820 <col:10> col:10 A 'int'
+| |-EnumConstantDecl 0x7fc37286c868 <col:13> col:13 B 'int'
+| |-EnumConstantDecl 0x7fc37286c8b0 <col:16> col:16 referenced C 'int'
+| `-EnumConstantDecl 0x7fc37286c8f8 <col:19> col:19 referenced D 'int'
+|-FunctionDecl 0x7fc37286ca00 <line:2:1, col:15> col:6 used fn4 'void (void)'
+|-FunctionDecl 0x7fc37286cc38 <line:4:1, line:12:1> line:5:1 used fn1 'int (enum E)'
+| |-ParmVarDecl 0x7fc37286cb30 <col:6, col:13> col:13 used p1 'enum E':'enum E'
+| `-CompoundStmt 0x7fc37286d100 <line:6:1, line:12:1>
+|   |-DeclStmt 0x7fc37286cdd0 <line:7:3, col:18>
+|   | `-VarDecl 0x7fc37286cd70 <col:3, col:17> col:14 used w 'int [3]' static
+|   `-IfStmt 0x7fc37286d0c8 <line:8:3, line:11:15>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc37286cec0 <line:8:7, col:11> 'int' <LValueToRValue>
+|     | `-ArraySubscriptExpr 0x7fc37286ce98 <col:7, col:11> 'int' lvalue
+|     |   |-ImplicitCastExpr 0x7fc37286ce68 <col:7> 'int *' <ArrayToPointerDecay>
+|     |   | `-DeclRefExpr 0x7fc37286cde8 <col:7> 'int [3]' lvalue Var 0x7fc37286cd70 'w' 'int [3]'
+|     |   `-ImplicitCastExpr 0x7fc37286ce80 <col:9> 'enum E':'enum E' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fc37286ce10 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7fc37286cb30 'p1' 'enum E':'enum E'
+|     |-SwitchStmt 0x7fc37286cf30 <line:9:5, line:11:15>
+|     | |-<<<NULL>>>
+|     | |-<<<NULL>>>
+|     | |-ImplicitCastExpr 0x7fc37286cf18 <line:9:13> 'unsigned int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7fc37286cf00 <col:13> 'enum E':'enum E' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fc37286ced8 <col:13> 'enum E':'enum E' lvalue ParmVar 0x7fc37286cb30 'p1' 'enum E':'enum E'
+|     | `-CaseStmt 0x7fc37286cf88 <line:10:7, line:11:15>
+|     |   |-ImplicitCastExpr 0x7fc37286d0b0 <line:10:12> 'unsigned int' <IntegralCast>
+|     |   | `-DeclRefExpr 0x7fc37286cf60 <col:12> 'int' EnumConstant 0x7fc37286c8b0 'C' 'int'
+|     |   |-<<<NULL>>>
+|     |   `-BinaryOperator 0x7fc37286d088 <line:11:7, col:15> 'int' '='
+|     |     |-ArraySubscriptExpr 0x7fc37286d040 <col:7, col:11> 'int' lvalue
+|     |     | |-ImplicitCastExpr 0x7fc37286d010 <col:7> 'int *' <ArrayToPointerDecay>
+|     |     | | `-DeclRefExpr 0x7fc37286cfc0 <col:7> 'int [3]' lvalue Var 0x7fc37286cd70 'w' 'int [3]'
+|     |     | `-ImplicitCastExpr 0x7fc37286d028 <col:9> 'enum E':'enum E' <LValueToRValue>
+|     |     |   `-DeclRefExpr 0x7fc37286cfe8 <col:9> 'enum E':'enum E' lvalue ParmVar 0x7fc37286cb30 'p1' 'enum E':'enum E'
+|     |     `-IntegerLiteral 0x7fc37286d068 <col:15> 'int' 0
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fc37286d200 <line:14:1, line:18:1> line:15:1 used fn2 'void (int)'
+| |-ParmVarDecl 0x7fc37286d138 <col:6> col:6 used p1 'int'
+| `-CompoundStmt 0x7fc37286d3d0 <line:16:1, line:18:1>
+|   `-CallExpr 0x7fc37286d370 <line:17:3, col:10> 'int'
+|     |-ImplicitCastExpr 0x7fc37286d358 <col:3> 'int (*)(enum E)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc37286d2a8 <col:3> 'int (enum E)' Function 0x7fc37286cc38 'fn1' 'int (enum E)'
+|     `-ImplicitCastExpr 0x7fc37286d3b8 <col:8> 'enum E':'enum E' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fc37286d3a0 <col:8> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc37286d2d0 <col:8> 'int' lvalue ParmVar 0x7fc37286d138 'p1' 'int'
+`-FunctionDecl 0x7fc37286d510 <line:20:1, line:26:1> line:21:1 fn3 'void (enum E)'
+  |-ParmVarDecl 0x7fc37286d408 <col:6, col:13> col:13 used p1 'enum E':'enum E'
+  `-CompoundStmt 0x7fc37286d840 <line:22:1, line:26:1>
+    |-CallExpr 0x7fc37286d680 <line:23:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc37286d668 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc37286d5e8 <col:3> 'void ()' Function 0x7fc37286d200 'fn2' 'void (int)'
+    | `-ImplicitCastExpr 0x7fc37286d6c8 <col:8> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fc37286d6b0 <col:8> 'enum E':'enum E' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc37286d610 <col:8> 'enum E':'enum E' lvalue ParmVar 0x7fc37286d408 'p1' 'enum E':'enum E'
+    |-CallExpr 0x7fc37286d750 <line:24:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fc37286d738 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc37286d6e0 <col:3> 'void (void)' Function 0x7fc37286ca00 'fn4' 'void (void)'
+    `-CallExpr 0x7fc37286d7e0 <line:25:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fc37286d7c8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc37286d778 <col:3> 'void ()' Function 0x7fc37286d200 'fn2' 'void (int)'
+      `-ImplicitCastExpr 0x7fc37286d828 <col:8> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fc37286d810 <col:8> 'enum E':'enum E' <LValueToRValue>
+          `-DeclRefExpr 0x7fc37286d7a0 <col:8> 'enum E':'enum E' lvalue ParmVar 0x7fc37286d408 'p1' 'enum E':'enum E'

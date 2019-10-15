@@ -1,0 +1,48 @@
+../Data/C2AST/pr60226.c:8:29: error: requested alignment must be 268435456 bytes or smaller
+typedef int __attribute__ ((aligned (1 << 29))) int29;  
+                            ^        ~~~~~~~
+../Data/C2AST/pr60226.c:14:27: error: requested alignment must be 268435456 bytes or smaller
+  struct { __attribute__((aligned (1 << 29))) double a; } x2;  
+                          ^        ~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7f9d708134e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9d70813a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9d70813780 '__int128'
+|-TypedefDecl 0x7f9d70813ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9d708137a0 'unsigned __int128'
+|-TypedefDecl 0x7f9d70813da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9d70813bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9d70813b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9d70813e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9d70813e00 'char *'
+|   `-BuiltinType 0x7f9d70813580 'char'
+|-TypedefDecl 0x7f9d70814108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9d708140b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9d70813f20 'struct __va_list_tag'
+|     `-Record 0x7f9d70813e98 '__va_list_tag'
+|-TypedefDecl 0x7f9d71027400 <../Data/C2AST/pr60226.c:6:1, col:49> col:49 referenced int28 'int'
+| |-BuiltinType 0x7f9d708135e0 'int'
+| `-AlignedAttr 0x7f9d71027458 <col:29, col:45> aligned
+|   `-BinaryOperator 0x7f9d708141a0 <col:38, col:43> 'int' '<<'
+|     |-IntegerLiteral 0x7f9d70814160 <col:38> 'int' 1
+|     `-IntegerLiteral 0x7f9d70814180 <col:43> 'int' 28
+|-VarDecl 0x7f9d71027588 <line:7:1, col:17> col:7 foo 'int28 [4]' cinit
+| `-InitListExpr 0x7f9d71027668 <col:16, col:17> 'int28 [4]'
+|   `-array filler
+|     `-ImplicitValueInitExpr 0x7f9d710276a8 <<invalid sloc>> 'int28':'int'
+|-TypedefDecl 0x7f9d71027738 <line:8:1, col:49> col:49 int29 'int'
+| `-BuiltinType 0x7f9d708135e0 'int'
+`-FunctionDecl 0x7f9d71027850 <line:10:1, line:15:1> line:11:1 f 'void (void)'
+  `-CompoundStmt 0x7f9d71027e00 <line:12:1, line:15:1>
+    |-DeclStmt 0x7f9d71027b88 <line:13:3, col:61>
+    | |-RecordDecl 0x7f9d710278f0 <col:3, col:57> col:3 struct definition
+    | | `-FieldDecl 0x7f9d71027a20 <col:12, col:54> col:54 a 'double'
+    | |   `-AlignedAttr 0x7f9d71027a68 <col:27, col:43> aligned
+    | |     `-BinaryOperator 0x7f9d710279e0 <col:36, col:41> 'int' '<<'
+    | |       |-IntegerLiteral 0x7f9d710279a0 <col:36> 'int' 1
+    | |       `-IntegerLiteral 0x7f9d710279c0 <col:41> 'int' 28
+    | `-VarDecl 0x7f9d71027b10 <col:3, col:59> col:59 x1 'struct (anonymous struct at ../Data/C2AST/pr60226.c:13:3)':'struct (anonymous at ../Data/C2AST/pr60226.c:13:3)'
+    `-DeclStmt 0x7f9d71027de8 <line:14:3, col:61>
+      |-RecordDecl 0x7f9d71027ba0 <col:3, col:57> col:3 struct definition
+      | `-FieldDecl 0x7f9d71027cd0 <col:12, col:54> col:54 a 'double'
+      `-VarDecl 0x7f9d71027d70 <col:3, col:59> col:59 x2 'struct (anonymous struct at ../Data/C2AST/pr60226.c:14:3)':'struct (anonymous at ../Data/C2AST/pr60226.c:14:3)'

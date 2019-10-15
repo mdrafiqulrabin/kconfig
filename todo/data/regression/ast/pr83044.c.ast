@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ff45002bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff45002c960 <../Data/C2AST/pr83044.c:5:1, col:22> col:8 struct A definition
+| `-FieldDecl 0x7ff4508142a0 <col:12, col:19> col:16 referenced b 'int [0]'
+|-RecordDecl 0x7ff4508142e8 <line:6:1, col:27> col:8 struct B definition
+| `-FieldDecl 0x7ff450814488 <col:12, col:24> col:21 referenced c 'struct A [0]'
+|-FunctionDecl 0x7ff450814620 <line:7:1, col:16> col:6 used bar 'void (int *)'
+| `-ParmVarDecl 0x7ff450814560 <col:11, col:15> col:16 'int *'
+`-FunctionDecl 0x7ff4508147d0 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff450814af8 <line:11:1, line:14:1>
+    |-DeclStmt 0x7ff450814920 <line:12:3, col:13>
+    | `-VarDecl 0x7ff4508148c0 <col:3, col:12> col:12 used d 'struct B':'struct B'
+    `-CallExpr 0x7ff450814ab0 <line:13:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7ff450814a98 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff450814938 <col:3> 'void (int *)' Function 0x7ff450814620 'bar' 'void (int *)'
+      `-ImplicitCastExpr 0x7ff450814ae0 <col:8, col:13> 'int *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7ff450814a30 <col:8, col:13> 'int [0]' lvalue ->b 0x7ff4508142a0
+          `-ImplicitCastExpr 0x7ff450814a18 <col:8, col:10> 'struct A *' <ArrayToPointerDecay>
+            `-MemberExpr 0x7ff450814988 <col:8, col:10> 'struct A [0]' lvalue .c 0x7ff450814488
+              `-DeclRefExpr 0x7ff450814960 <col:8> 'struct B':'struct B' lvalue Var 0x7ff4508148c0 'd' 'struct B':'struct B'

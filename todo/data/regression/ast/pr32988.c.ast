@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7f965d02b6e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7f965d02c360 <../Data/C2AST/pr32988.c:1:1, line:6:1> line:1:6 zone_type
+| |-EnumConstantDecl 0x7f965e014220 <line:2:3> col:3 ZONE_DMA 'int'
+| |-EnumConstantDecl 0x7f965e014268 <line:3:3> col:3 ZONE_NORMAL 'int'
+| |-EnumConstantDecl 0x7f965e0142b0 <line:4:3> col:3 referenced ZONE_MOVABLE 'int'
+| `-EnumConstantDecl 0x7f965e0142f8 <line:5:3> col:3 referenced MAX_NR_ZONES 'int'
+|-VarDecl 0x7f965e0143d0 <line:7:1, col:64> col:22 used arch_zone_lowest_possible_pfn 'unsigned long [3]' static
+|-VarDecl 0x7f965e0144c0 <line:8:1, col:65> col:22 used arch_zone_highest_possible_pfn 'unsigned long [3]' static
+`-FunctionDecl 0x7f965e014620 <line:9:1, line:20:1> line:9:6 free_area_init_nodes 'void (unsigned long *)'
+  |-ParmVarDecl 0x7f965e014560 <col:27, col:42> col:42 used max_zone_pfn 'unsigned long *'
+  `-CompoundStmt 0x7f965e014f58 <line:10:1, line:20:1>
+    |-DeclStmt 0x7f965e014780 <line:11:3, col:19>
+    | `-VarDecl 0x7f965e014720 <col:3, col:18> col:18 used i 'enum zone_type':'enum zone_type'
+    `-ForStmt 0x7f965e014f20 <line:12:3, line:19:3>
+      |-BinaryOperator 0x7f965e0147f8 <line:12:8, col:12> 'enum zone_type':'enum zone_type' '='
+      | |-DeclRefExpr 0x7f965e014798 <col:8> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+      | `-ImplicitCastExpr 0x7f965e0147e0 <col:12> 'enum zone_type':'enum zone_type' <IntegralCast>
+      |   `-IntegerLiteral 0x7f965e0147c0 <col:12> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f965e0148b8 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f965e014888 <col:15> 'unsigned int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7f965e014870 <col:15> 'enum zone_type':'enum zone_type' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f965e014820 <col:15> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+      | `-ImplicitCastExpr 0x7f965e0148a0 <col:19> 'unsigned int' <IntegralCast>
+      |   `-DeclRefExpr 0x7f965e014848 <col:19> 'int' EnumConstant 0x7f965e0142f8 'MAX_NR_ZONES' 'int'
+      |-UnaryOperator 0x7f965e014908 <col:33, col:34> 'enum zone_type':'enum zone_type' postfix '++'
+      | `-DeclRefExpr 0x7f965e0148e0 <col:33> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+      `-CompoundStmt 0x7f965e014ef0 <line:13:3, line:19:3>
+        |-IfStmt 0x7f965e0149f0 <line:14:5, line:15:7>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f965e0149c0 <line:14:9, col:14> 'int' '=='
+        | | |-ImplicitCastExpr 0x7f965e014990 <col:9> 'unsigned int' <IntegralCast>
+        | | | `-ImplicitCastExpr 0x7f965e014978 <col:9> 'enum zone_type':'enum zone_type' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7f965e014928 <col:9> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+        | | `-ImplicitCastExpr 0x7f965e0149a8 <col:14> 'unsigned int' <IntegralCast>
+        | |   `-DeclRefExpr 0x7f965e014950 <col:14> 'int' EnumConstant 0x7f965e0142b0 'ZONE_MOVABLE' 'int'
+        | |-ContinueStmt 0x7f965e0149e8 <line:15:7>
+        | `-<<<NULL>>>
+        |-DeclStmt 0x7f965e014b60 <line:16:5, col:39>
+        | `-VarDecl 0x7f965e014a40 <col:5, col:38> col:19 used _x 'unsigned long' cinit
+        |   `-ImplicitCastExpr 0x7f965e014b48 <col:24, col:38> 'unsigned long' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7f965e014b20 <col:24, col:38> 'unsigned long' lvalue
+        |       |-ImplicitCastExpr 0x7f965e014af0 <col:24> 'unsigned long *' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7f965e014aa0 <col:24> 'unsigned long *' lvalue ParmVar 0x7f965e014560 'max_zone_pfn' 'unsigned long *'
+        |       `-ImplicitCastExpr 0x7f965e014b08 <col:37> 'enum zone_type':'enum zone_type' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f965e014ac8 <col:37> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+        |-DeclStmt 0x7f965e014cb0 <line:17:5, col:56>
+        | `-VarDecl 0x7f965e014b90 <col:5, col:55> col:19 used _y 'unsigned long' cinit
+        |   `-ImplicitCastExpr 0x7f965e014c98 <col:24, col:55> 'unsigned long' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7f965e014c70 <col:24, col:55> 'unsigned long' lvalue
+        |       |-ImplicitCastExpr 0x7f965e014c40 <col:24> 'unsigned long *' <ArrayToPointerDecay>
+        |       | `-DeclRefExpr 0x7f965e014bf0 <col:24> 'unsigned long [3]' lvalue Var 0x7f965e0143d0 'arch_zone_lowest_possible_pfn' 'unsigned long [3]'
+        |       `-ImplicitCastExpr 0x7f965e014c58 <col:54> 'enum zone_type':'enum zone_type' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f965e014c18 <col:54> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+        `-BinaryOperator 0x7f965e014ec8 <line:18:5, col:56> 'unsigned long' '='
+          |-ArraySubscriptExpr 0x7f965e014d48 <col:5, col:37> 'unsigned long' lvalue
+          | |-ImplicitCastExpr 0x7f965e014d18 <col:5> 'unsigned long *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7f965e014cc8 <col:5> 'unsigned long [3]' lvalue Var 0x7f965e0144c0 'arch_zone_highest_possible_pfn' 'unsigned long [3]'
+          | `-ImplicitCastExpr 0x7f965e014d30 <col:36> 'enum zone_type':'enum zone_type' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f965e014cf0 <col:36> 'enum zone_type':'enum zone_type' lvalue Var 0x7f965e014720 'i' 'enum zone_type':'enum zone_type'
+          `-ConditionalOperator 0x7f965e014e98 <col:41, col:56> 'unsigned long'
+            |-BinaryOperator 0x7f965e014df0 <col:41, col:46> 'int' '>'
+            | |-ImplicitCastExpr 0x7f965e014dc0 <col:41> 'unsigned long' <LValueToRValue>
+            | | `-DeclRefExpr 0x7f965e014d70 <col:41> 'unsigned long' lvalue Var 0x7f965e014a40 '_x' 'unsigned long'
+            | `-ImplicitCastExpr 0x7f965e014dd8 <col:46> 'unsigned long' <LValueToRValue>
+            |   `-DeclRefExpr 0x7f965e014d98 <col:46> 'unsigned long' lvalue Var 0x7f965e014b90 '_y' 'unsigned long'
+            |-ImplicitCastExpr 0x7f965e014e68 <col:51> 'unsigned long' <LValueToRValue>
+            | `-DeclRefExpr 0x7f965e014e18 <col:51> 'unsigned long' lvalue Var 0x7f965e014a40 '_x' 'unsigned long'
+            `-ImplicitCastExpr 0x7f965e014e80 <col:56> 'unsigned long' <LValueToRValue>
+              `-DeclRefExpr 0x7f965e014e40 <col:56> 'unsigned long' lvalue Var 0x7f965e014b90 '_y' 'unsigned long'

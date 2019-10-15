@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7fb21e8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb21e859050 <../Data/C2AST/pr48124-4.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb21e8590f0 prev 0x7fb21e859050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fb21e859190 <line:5:1, line:11:1> line:5:8 struct S1 definition
+| |-FieldDecl 0x7fb21e859258 <line:6:5, col:14> col:14 f0 'unsigned int'
+| |-FieldDecl 0x7fb21e8592b8 <col:5, col:18> col:18 f1 'unsigned int'
+| |-FieldDecl 0x7fb21e859318 <line:7:5, col:20> col:20 f2 'unsigned short'
+| |-FieldDecl 0x7fb21e859378 <col:5, col:24> col:24 f3 'unsigned short'
+| |-FieldDecl 0x7fb21e8593f8 <line:8:5, col:19> col:14 referenced f4 'unsigned int'
+| | `-IntegerLiteral 0x7fb21e8593c0 <col:19> 'int' 16
+| |-FieldDecl 0x7fb21e859458 <line:9:5, col:14> col:14 f5 'unsigned int'
+| |-FieldDecl 0x7fb21e8594b8 <col:5, col:18> col:18 f6 'unsigned int'
+| `-FieldDecl 0x7fb21e859538 <line:10:5, col:28> col:23 referenced f7 'volatile unsigned int'
+|   `-IntegerLiteral 0x7fb21e859500 <col:28> 'int' 28
+|-VarDecl 0x7fb21e8595d0 <line:12:1, col:18> col:18 used g_76 'struct S1':'struct S1' static
+|-VarDecl 0x7fb21e859690 <line:13:1, col:42> col:18 used g_245 'struct S1':'struct S1' static cinit
+| `-InitListExpr 0x7fb21e859870 <col:26, col:42> 'struct S1':'struct S1'
+|   |-ImplicitCastExpr 0x7fb21e8598f0 <col:27> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e8596f0 <col:27> 'int' 0
+|   |-ImplicitCastExpr 0x7fb21e859908 <col:29> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e859710 <col:29> 'int' 0
+|   |-ImplicitCastExpr 0x7fb21e859920 <col:31> 'unsigned short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e859730 <col:31> 'int' 0
+|   |-ImplicitCastExpr 0x7fb21e859938 <col:33> 'unsigned short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e859750 <col:33> 'int' 0
+|   |-ImplicitCastExpr 0x7fb21e859950 <col:35> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e859770 <col:35> 'int' 0
+|   |-ImplicitCastExpr 0x7fb21e859968 <col:37> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e859790 <col:37> 'int' 0
+|   |-ImplicitCastExpr 0x7fb21e859980 <col:39> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb21e8597b0 <col:39> 'int' 0
+|   `-ImplicitCastExpr 0x7fb21e859998 <col:41> 'unsigned int' <IntegralCast>
+|     `-IntegerLiteral 0x7fb21e8597d0 <col:41> 'int' 1
+|-VarDecl 0x7fb21e8599c8 <line:14:1, col:28> col:20 used g_323 'signed char' static cinit
+| `-ImplicitCastExpr 0x7fb21e859a48 <col:28> 'signed char' <IntegralCast>
+|   `-IntegerLiteral 0x7fb21e859a28 <col:28> 'int' 128
+|-FunctionDecl 0x7fb21e859af0 <line:15:1, line:22:1> line:15:13 used func_1 'void (void)' static
+| `-CompoundStmt 0x7fb21e85a038 <line:16:1, line:22:1>
+|   |-CompoundAssignOperator 0x7fb21e859c10 <line:17:3, col:15> 'unsigned int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fb21e859bb8 <col:3, col:9> 'volatile unsigned int' lvalue bitfield .f7 0x7fb21e859538
+|   | | `-DeclRefExpr 0x7fb21e859b90 <col:3> 'struct S1':'struct S1' lvalue Var 0x7fb21e859690 'g_245' 'struct S1':'struct S1'
+|   | `-IntegerLiteral 0x7fb21e859bf0 <col:15> 'int' 1
+|   `-ForStmt 0x7fb21e85a000 <line:18:3, line:21:3>
+|     |-BinaryOperator 0x7fb21e859d28 <line:18:8, col:16> 'signed char' '='
+|     | |-DeclRefExpr 0x7fb21e859cc8 <col:8> 'signed char' lvalue Var 0x7fb21e8599c8 'g_323' 'signed char'
+|     | `-ImplicitCastExpr 0x7fb21e859d10 <col:16> 'signed char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fb21e859cf0 <col:16> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb21e859de8 <col:19, col:29> 'int' '<='
+|     | |-ImplicitCastExpr 0x7fb21e859dd0 <col:19> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7fb21e859db8 <col:19> 'signed char' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fb21e859d50 <col:19> 'signed char' lvalue Var 0x7fb21e8599c8 'g_323' 'signed char'
+|     | `-UnaryOperator 0x7fb21e859d98 <col:28, col:29> 'int' prefix '-'
+|     |   `-IntegerLiteral 0x7fb21e859d78 <col:29> 'int' 1
+|     |-CompoundAssignOperator 0x7fb21e859e58 <col:32, col:41> 'signed char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|     | |-DeclRefExpr 0x7fb21e859e10 <col:32> 'signed char' lvalue Var 0x7fb21e8599c8 'g_323' 'signed char'
+|     | `-IntegerLiteral 0x7fb21e859e38 <col:41> 'int' 2
+|     `-CompoundStmt 0x7fb21e859fd8 <col:44, line:21:3>
+|       |-BinaryOperator 0x7fb21e859ef8 <line:19:7, col:14> 'struct S1':'struct S1' '='
+|       | |-DeclRefExpr 0x7fb21e859e90 <col:7> 'struct S1':'struct S1' lvalue Var 0x7fb21e8595d0 'g_76' 'struct S1':'struct S1'
+|       | `-ImplicitCastExpr 0x7fb21e859ee0 <col:14> 'struct S1':'struct S1' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fb21e859eb8 <col:14> 'struct S1':'struct S1' lvalue Var 0x7fb21e8595d0 'g_76' 'struct S1':'struct S1'
+|       `-CompoundAssignOperator 0x7fb21e859fa0 <line:20:7, col:18> 'unsigned int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|         |-MemberExpr 0x7fb21e859f48 <col:7, col:12> 'unsigned int' lvalue bitfield .f4 0x7fb21e8593f8
+|         | `-DeclRefExpr 0x7fb21e859f20 <col:7> 'struct S1':'struct S1' lvalue Var 0x7fb21e8595d0 'g_76' 'struct S1':'struct S1'
+|         `-IntegerLiteral 0x7fb21e859f80 <col:18> 'int' 11
+`-FunctionDecl 0x7fb21e85a0b0 <line:23:1, line:29:1> line:23:5 main 'int ()'
+  `-CompoundStmt 0x7fb21e85a488 <line:24:1, line:29:1>
+    |-CallExpr 0x7fb21e85a1c0 <line:25:3, col:10> 'void'
+    | `-ImplicitCastExpr 0x7fb21e85a1a8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fb21e85a150 <col:3> 'void (void)' Function 0x7fb21e859af0 'func_1' 'void (void)'
+    |-IfStmt 0x7fb21e85a418 <line:26:3, line:27:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb21e85a360 <line:26:7, col:33> 'int' '||'
+    | | |-BinaryOperator 0x7fb21e85a260 <col:7, col:16> 'int' '!='
+    | | | |-ImplicitCastExpr 0x7fb21e85a248 <col:7> 'int' <IntegralCast>
+    | | | | `-ImplicitCastExpr 0x7fb21e85a230 <col:7> 'signed char' <LValueToRValue>
+    | | | |   `-DeclRefExpr 0x7fb21e85a1e8 <col:7> 'signed char' lvalue Var 0x7fb21e8599c8 'g_323' 'signed char'
+    | | | `-IntegerLiteral 0x7fb21e85a210 <col:16> 'int' 0
+    | | `-BinaryOperator 0x7fb21e85a338 <col:21, col:33> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fb21e85a320 <col:21, col:27> 'int' <IntegralCast>
+    | |   | `-ImplicitCastExpr 0x7fb21e85a308 <col:21, col:27> 'unsigned int' <LValueToRValue>
+    | |   |   `-MemberExpr 0x7fb21e85a2b0 <col:21, col:27> 'volatile unsigned int' lvalue bitfield .f7 0x7fb21e859538
+    | |   |     `-DeclRefExpr 0x7fb21e85a288 <col:21> 'struct S1':'struct S1' lvalue Var 0x7fb21e859690 'g_245' 'struct S1':'struct S1'
+    | |   `-IntegerLiteral 0x7fb21e85a2e8 <col:33> 'int' 1
+    | |-CallExpr 0x7fb21e85a3f0 <line:27:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb21e85a3d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb21e85a388 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb21e8590f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb21e85a470 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fb21e85a450 <col:10> 'int' 0

@@ -1,0 +1,56 @@
+../Data/C2AST/pr67964.c:20:30: error: aliases are not supported on darwin
+extern int a __attribute__ ((alias ("i") unused));  
+                             ^
+../Data/C2AST/pr67964.c:21:31: error: aliases are not supported on darwin
+extern int a2 __attribute__ ((alias ("i" "i")));
+                              ^
+2 errors generated.
+TranslationUnitDecl 0x7fa2a182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa2a182c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa2a182bf80 '__int128'
+|-TypedefDecl 0x7fa2a182c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa2a182bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa2a182c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa2a182c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa2a182c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa2a182c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa2a182c600 'char *'
+|   `-BuiltinType 0x7fa2a182bd80 'char'
+|-TypedefDecl 0x7fa2a182c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa2a182c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa2a182c720 'struct __va_list_tag'
+|     `-Record 0x7fa2a182c698 '__va_list_tag'
+|-FunctionDecl 0x7fa2a2815228 <../Data/C2AST/pr67964.c:5:1, col:51> col:12 fn0 'int (void)' extern
+| |-ConstAttr 0x7fa2a28152c8 <col:45>
+| `-ConstAttr 0x7fa2a2815310 <col:39>
+|-FunctionDecl 0x7fa2a28153f8 <line:6:1, col:52> col:12 fn1 'int (void)' extern
+| |-ConstAttr 0x7fa2a2815498 <col:46>
+| `-ConstAttr 0x7fa2a28154e0 <col:39>
+|-FunctionDecl 0x7fa2a28155a8 <line:7:1, col:58> col:12 fn2 'int (void)' extern
+| `-ConstAttr 0x7fa2a2815648 <col:52>
+|-FunctionDecl 0x7fa2a2815748 <line:8:1, col:59> col:12 fn3 'int (void)' extern
+| `-ConstAttr 0x7fa2a28157e8 <col:53>
+|-FunctionDecl 0x7fa2a28158c8 <line:10:1, col:47> col:12 fn4 'int (void)' extern
+| `-ConstAttr 0x7fa2a2815968 <col:41>
+|-FunctionDecl 0x7fa2a2815a48 <line:11:1, col:47> col:12 fn5 'int (void)' extern
+| `-ConstAttr 0x7fa2a2815ae8 <col:39>
+|-FunctionDecl 0x7fa2a2815bc8 <line:12:1, col:56> col:12 fn6 'int (void)' extern
+| `-ConstAttr 0x7fa2a2815c68 <col:44>
+|-FunctionDecl 0x7fa2a2815d48 <line:13:1, col:41> col:12 fn7 'int (void)' extern
+|-FunctionDecl 0x7fa2a2815eb8 <line:14:1, col:65> col:12 fn8 'int (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa2a2815ff0 <line:15:1, col:66> col:12 fn9 'int (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa2a2816128 <line:16:1, col:70> col:12 fn10 'int (void)' extern
+| |-PureAttr 0x7fa2a28161c8 <col:49>
+| `-ColdAttr 0x7fa2a282bc38 <col:40>
+|-FunctionDecl 0x7fa2a282bce0 <line:17:1, col:71> col:12 fn11 'int (void)' extern
+| |-PureAttr 0x7fa2a282bd80 <col:50>
+| `-ColdAttr 0x7fa2a282bdc8 <col:40>
+|-VarDecl 0x7fa2a282bdf0 <line:18:1, col:5> col:5 i 'int'
+|-VarDecl 0x7fa2a282be68 <line:19:1, col:5> col:5 ii 'int'
+|-VarDecl 0x7fa2a282bf50 <line:20:1, col:12> col:12 a 'int' extern
+| `-UnusedAttr 0x7fa2a282bfb0 <col:42> unused
+|-VarDecl 0x7fa2a282c088 <line:21:1, col:12> col:12 a2 'int' extern
+`-RecordDecl 0x7fa2a282c0e8 <line:22:1, col:23> col:8 struct A definition
+  |-PackedAttr 0x7fa2a282c250 <col:51>
+  |-PackedAttr 0x7fa2a282c298 <col:40>
+  `-FieldDecl 0x7fa2a282c208 <col:12, col:20> col:17 p 'char [6]'

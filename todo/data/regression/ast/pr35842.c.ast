@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f8c0181dee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8c02015e00 <../Data/C2AST/pr35842.c:2:1, col:68> col:45 used SSL_ImplementedCiphers 'const int []' extern
+|-FunctionDecl 0x7f8c02015f80 <line:3:1, col:51> col:13 used SSL_GetCipherSuiteInfo 'void (int)' extern
+| `-ParmVarDecl 0x7f8c02015eb8 <col:36, col:40> col:40 cipherSuite 'int'
+`-FunctionDecl 0x7f8c020160c8 <line:4:1, line:12:1> line:4:6 nsCipherInfo 'void (int)'
+  |-ParmVarDecl 0x7f8c02016040 <col:19, col:23> col:23 used SSL_NumImplementedCiphers 'int'
+  `-CompoundStmt 0x7f8c020165e0 <line:5:1, line:12:1>
+    |-DeclStmt 0x7f8c020161e8 <line:6:3, col:8>
+    | `-VarDecl 0x7f8c02016188 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f8c020165a8 <line:7:3, line:11:5>
+      |-BinaryOperator 0x7f8c02016248 <line:7:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f8c02016200 <col:8> 'int' lvalue Var 0x7f8c02016188 'i' 'int'
+      | `-IntegerLiteral 0x7f8c02016228 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8c020162f0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8c020162c0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8c02016270 <col:15> 'int' lvalue Var 0x7f8c02016188 'i' 'int'
+      | `-ImplicitCastExpr 0x7f8c020162d8 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8c02016298 <col:19> 'int' lvalue ParmVar 0x7f8c02016040 'SSL_NumImplementedCiphers' 'int'
+      |-UnaryOperator 0x7f8c02016340 <col:46, col:48> 'int' prefix '++'
+      | `-DeclRefExpr 0x7f8c02016318 <col:48> 'int' lvalue Var 0x7f8c02016188 'i' 'int'
+      `-CompoundStmt 0x7f8c02016588 <line:8:5, line:11:5>
+        |-DeclStmt 0x7f8c02016498 <line:9:7, col:49>
+        | `-VarDecl 0x7f8c02016378 <col:7, col:48> col:17 used i_id 'const int' cinit
+        |   `-ImplicitCastExpr 0x7f8c02016480 <col:24, col:48> 'int' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7f8c02016458 <col:24, col:48> 'const int' lvalue
+        |       |-ImplicitCastExpr 0x7f8c02016428 <col:24> 'const int *' <ArrayToPointerDecay>
+        |       | `-DeclRefExpr 0x7f8c020163d8 <col:24> 'const int []' lvalue Var 0x7f8c02015e00 'SSL_ImplementedCiphers' 'const int []'
+        |       `-ImplicitCastExpr 0x7f8c02016440 <col:47> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f8c02016400 <col:47> 'int' lvalue Var 0x7f8c02016188 'i' 'int'
+        `-CallExpr 0x7f8c02016540 <line:10:7, col:34> 'void'
+          |-ImplicitCastExpr 0x7f8c02016528 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f8c020164b0 <col:7> 'void (int)' Function 0x7f8c02015f80 'SSL_GetCipherSuiteInfo' 'void (int)'
+          `-ImplicitCastExpr 0x7f8c02016570 <col:30> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7f8c020164d8 <col:30> 'const int' lvalue Var 0x7f8c02016378 'i_id' 'const int'

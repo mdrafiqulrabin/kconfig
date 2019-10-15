@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f87f402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f87f4815200 <../Data/C2AST/pr70708.c:4:1, col:16> col:16 referenced __m128d '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-VectorType 0x7f87f402c980 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+| | `-BuiltinType 0x7f87f402bf00 'double'
+| `-MayAliasAttr 0x7f87f4815258 <col:62>
+`-FunctionDecl 0x7f87f48153e0 <line:6:1, line:10:1> line:7:1 foo '__m128d (double)'
+  |-ParmVarDecl 0x7f87f48152d8 <col:6, col:13> col:13 used d 'double'
+  `-CompoundStmt 0x7f87f4815650 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f87f4815638 <line:9:3, col:42>
+      `-ImplicitCastExpr 0x7f87f4815620 <col:10, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-UnaryOperator 0x7f87f4815600 <col:10, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '__extension__'
+          `-CompoundLiteralExpr 0x7f87f48155d8 <col:24, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+            `-InitListExpr 0x7f87f4815570 <col:33, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+              |-ImplicitCastExpr 0x7f87f48155c0 <col:35> 'double' <LValueToRValue>
+              | `-DeclRefExpr 0x7f87f48154d8 <col:35> 'double' lvalue ParmVar 0x7f87f48152d8 'd' 'double'
+              `-FloatingLiteral 0x7f87f4815500 <col:38> 'double' 0.000000e+00

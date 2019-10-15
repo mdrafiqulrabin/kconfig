@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7ff73b82b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff73b86ce50 <../Data/C2AST/pr17141-2.c:6:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff73b86cef0 prev 0x7ff73b86ce50 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7ff73b86cf90 <line:7:1, line:10:1> line:7:8 struct a definition
+| `-FieldDecl 0x7ff73b86d058 <line:9:3, col:7> col:7 referenced i 'int'
+|-VarDecl 0x7ff73b86d150 <line:7:1, line:10:4> col:4 used a 'struct a *'
+`-FunctionDecl 0x7ff73b86d2d8 <line:11:1, line:25:1> line:11:5 f 'int (void)'
+  `-CompoundStmt 0x7ff73b86d9e0 <line:12:1, line:25:1>
+    |-DeclStmt 0x7ff73b86d4b8 <line:13:3, col:18>
+    | `-VarDecl 0x7ff73b86d3c0 <col:3, col:17> col:8 used ii 'int *' cinit
+    |   `-UnaryOperator 0x7ff73b86d498 <col:13, col:17> 'int *' prefix '&'
+    |     `-MemberExpr 0x7ff73b86d460 <col:14, col:17> 'int' lvalue ->i 0x7ff73b86d058
+    |       `-ImplicitCastExpr 0x7ff73b86d448 <col:14> 'struct a *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ff73b86d420 <col:14> 'struct a *' lvalue Var 0x7ff73b86d150 'a' 'struct a *'
+    |-DeclStmt 0x7ff73b86d548 <line:14:3, col:10>
+    | `-VarDecl 0x7ff73b86d4e8 <col:3, col:9> col:9 used l 'void *'
+    |-BinaryOperator 0x7ff73b86d5f8 <line:15:3, col:10> 'int' '='
+    | |-MemberExpr 0x7ff73b86d5a0 <col:3, col:6> 'int' lvalue ->i 0x7ff73b86d058
+    | | `-ImplicitCastExpr 0x7ff73b86d588 <col:3> 'struct a *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff73b86d560 <col:3> 'struct a *' lvalue Var 0x7ff73b86d150 'a' 'struct a *'
+    | `-IntegerLiteral 0x7ff73b86d5d8 <col:10> 'int' 1
+    |-IfStmt 0x7ff73b86d808 <line:16:3, line:19:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff73b86d680 <line:16:7, col:8> 'int' <LValueToRValue>
+    | | `-UnaryOperator 0x7ff73b86d660 <col:7, col:8> 'int' lvalue prefix '*'
+    | |   `-ImplicitCastExpr 0x7ff73b86d648 <col:8> 'int *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ff73b86d620 <col:8> 'int *' lvalue Var 0x7ff73b86d3c0 'ii' 'int *'
+    | |-BinaryOperator 0x7ff73b86d728 <line:17:4, col:10> 'void *' '='
+    | | |-DeclRefExpr 0x7ff73b86d698 <col:4> 'void *' lvalue Var 0x7ff73b86d4e8 'l' 'void *'
+    | | `-AddrLabelExpr 0x7ff73b86d708 <col:8, col:10> 'void *' l1 0x7ff73b86d6c0
+    | `-BinaryOperator 0x7ff73b86d7e0 <line:19:4, col:10> 'void *' '='
+    |   |-DeclRefExpr 0x7ff73b86d750 <col:4> 'void *' lvalue Var 0x7ff73b86d4e8 'l' 'void *'
+    |   `-AddrLabelExpr 0x7ff73b86d7c0 <col:8, col:10> 'void *' l2 0x7ff73b86d778
+    |-IndirectGotoStmt 0x7ff73b86d8c8 <line:20:3, col:9>
+    | `-ImplicitCastExpr 0x7ff73b86d8b0 <col:9> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7ff73b86d898 <col:9> 'void *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7ff73b86d840 <col:9> 'void *' lvalue Var 0x7ff73b86d4e8 'l' 'void *'
+    |-LabelStmt 0x7ff73b86d918 <line:21:1, line:22:10> 'l1'
+    | `-ReturnStmt 0x7ff73b86d900 <col:3, col:10>
+    |   `-IntegerLiteral 0x7ff73b86d8e0 <col:10> 'int' 0
+    `-LabelStmt 0x7ff73b86d9c8 <line:23:1, line:24:10> 'l2'
+      `-CallExpr 0x7ff73b86d9a0 <col:3, col:10> 'void'
+        `-ImplicitCastExpr 0x7ff73b86d988 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ff73b86d930 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7ff73b86cef0 'abort' 'void (void) __attribute__((noreturn))'

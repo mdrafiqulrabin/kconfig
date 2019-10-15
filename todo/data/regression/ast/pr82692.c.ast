@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7ffd6301f4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffd64034eb0 <../Data/C2AST/pr82692.c:7:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffd64034f50 prev 0x7ffd64034eb0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffd64035108 <line:8:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffd640351a8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7ffd64035210 prev 0x7ffd64035108 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffd64035008 <col:19> col:22 'int'
+|-FunctionDecl 0x7ffd64035398 <line:10:1, line:16:1> line:11:1 used foo 'double (double)'
+| |-ParmVarDecl 0x7ffd640352d0 <col:6, col:13> col:13 used x 'double'
+| |-CompoundStmt 0x7ffd64036a60 <line:12:1, line:16:1>
+| | |-IfStmt 0x7ffd64036968 <line:13:3, line:14:16>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ffd64036880 <line:13:7, col:68> 'int' '||'
+| | | | |-CallExpr 0x7ffd64036660 <col:7, col:36> 'int'
+| | | | | |-ImplicitCastExpr 0x7ffd64036648 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+| | | | | | `-DeclRefExpr 0x7ffd640355b0 <col:7> '<builtin fn type>' Function 0x7ffd640354b8 '__builtin_islessequal' 'int ()'
+| | | | | |-ImplicitCastExpr 0x7ffd64036698 <col:30> 'double' <LValueToRValue>
+| | | | | | `-DeclRefExpr 0x7ffd640355d8 <col:30> 'double' lvalue ParmVar 0x7ffd640352d0 'x' 'double'
+| | | | | `-FloatingLiteral 0x7ffd64036600 <col:33> 'double' 0.000000e+00
+| | | | `-CallExpr 0x7ffd64036830 <col:41, col:68> 'int'
+| | | |   |-ImplicitCastExpr 0x7ffd64036818 <col:41> 'int (*)()' <BuiltinFnToFnPtr>
+| | | |   | `-DeclRefExpr 0x7ffd640367a8 <col:41> '<builtin fn type>' Function 0x7ffd640366b0 '__builtin_isgreater' 'int ()'
+| | | |   |-ImplicitCastExpr 0x7ffd64036868 <col:62> 'double' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7ffd640367d0 <col:62> 'double' lvalue ParmVar 0x7ffd640352d0 'x' 'double'
+| | | |   `-FloatingLiteral 0x7ffd640367f8 <col:65> 'double' 1.000000e+00
+| | | |-ReturnStmt 0x7ffd64036950 <line:14:5, col:16>
+| | | | `-BinaryOperator 0x7ffd64036928 <col:12, col:16> 'double' '+'
+| | | |   |-ImplicitCastExpr 0x7ffd640368f8 <col:12> 'double' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7ffd640368a8 <col:12> 'double' lvalue ParmVar 0x7ffd640352d0 'x' 'double'
+| | | |   `-ImplicitCastExpr 0x7ffd64036910 <col:16> 'double' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7ffd640368d0 <col:16> 'double' lvalue ParmVar 0x7ffd640352d0 'x' 'double'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7ffd64036a48 <line:15:3, col:14>
+| |   `-BinaryOperator 0x7ffd64036a20 <col:10, col:14> 'double' '*'
+| |     |-ImplicitCastExpr 0x7ffd640369f0 <col:10> 'double' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ffd640369a0 <col:10> 'double' lvalue ParmVar 0x7ffd640352d0 'x' 'double'
+| |     `-ImplicitCastExpr 0x7ffd64036a08 <col:14> 'double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ffd640369c8 <col:14> 'double' lvalue ParmVar 0x7ffd640352d0 'x' 'double'
+| `-NoInlineAttr 0x7ffd64035440 <line:10:24>
+|-FunctionDecl 0x7ffd640354b8 <line:13:7> col:7 implicit used __builtin_islessequal 'int ()' extern
+| |-NoThrowAttr 0x7ffd64035558 <col:7> Implicit
+| `-ConstAttr 0x7ffd640355a0 <col:7> Implicit
+|-FunctionDecl 0x7ffd640366b0 <col:41> col:41 implicit used __builtin_isgreater 'int ()' extern
+| |-NoThrowAttr 0x7ffd64036750 <col:41> Implicit
+| `-ConstAttr 0x7ffd64036798 <col:41> Implicit
+|-FunctionDecl 0x7ffd64036b18 <line:18:1, line:25:1> line:19:1 main 'int (void)'
+| `-CompoundStmt 0x7ffd64037240 <line:20:1, line:25:1>
+|   |-DeclStmt 0x7ffd64036fe0 <line:21:3, col:47>
+|   | `-VarDecl 0x7ffd64036c00 <col:3, col:46> col:19 x 'volatile double' cinit
+|   |   `-CallExpr 0x7ffd64036fb0 <col:23, col:46> 'double'
+|   |     |-ImplicitCastExpr 0x7ffd64036f98 <col:23> 'double (*)(double)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ffd64036c60 <col:23> 'double (double)' Function 0x7ffd64035398 'foo' 'double (double)'
+|   |     `-CallExpr 0x7ffd64036f10 <col:28, col:45> 'double'
+|   |       |-ImplicitCastExpr 0x7ffd64036ef8 <col:28> 'double (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7ffd64036e28 <col:28> '<builtin fn type>' Function 0x7ffd64036cc8 '__builtin_nan' 'double (const char *)'
+|   |       `-ImplicitCastExpr 0x7ffd64036f58 <col:43> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7ffd64036f40 <col:43> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7ffd64036e88 <col:43> 'char [1]' lvalue ""
+|   |-IfStmt 0x7ffd64037148 <line:22:3, line:23:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7ffd64037080 <line:22:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7ffd64037068 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7ffd64036ff8 <col:7> 'int (int)' Function 0x7ffd6401d970 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7ffd64037020 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7ffd64037120 <../Data/C2AST/pr82692.c:23:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7ffd64037108 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ffd640370b0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffd64034f50 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7ffd64037210 <line:24:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7ffd640371f8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffd64037180 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7ffd64035210 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7ffd640371a8 <col:9> 'int' 0
+`-FunctionDecl 0x7ffd64036cc8 <line:21:28> col:28 implicit used __builtin_nan 'double (const char *)' extern
+  |-ParmVarDecl 0x7ffd64036d68 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-NoThrowAttr 0x7ffd64036dd0 <col:28> Implicit
+  `-ConstAttr 0x7ffd64036e18 <col:28> Implicit

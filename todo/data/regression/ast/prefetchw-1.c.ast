@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fce7b82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fce7b50a818 <../Data/C2AST/prefetchw-1.c:7:1, col:7> col:7 used p 'void *'
+`-FunctionDecl 0x7fce7b50a908 <line:9:1, line:13:1> line:10:1 prefetchw__test 'void (void)' extern
+  `-CompoundStmt 0x7fce7b50ab88 <line:11:1, line:13:1>
+    `-CallExpr 0x7fce7b50ab40 <line:12:5, col:20> 'int'
+      |-ImplicitCastExpr 0x7fce7b50ab28 <col:5> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fce7b50aab0 <col:5> 'int ()' Function 0x7fce7b50aa00 '_m_prefetchw' 'int ()'
+      `-ImplicitCastExpr 0x7fce7b50ab70 <col:19> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fce7b50aad8 <col:19> 'void *' lvalue Var 0x7fce7b50a818 'p' 'void *'

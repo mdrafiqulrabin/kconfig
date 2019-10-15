@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fa8d58174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa8d5818160 <../Data/C2AST/pr17322.c:3:1, col:29> col:8 struct s definition
+| |-FieldDecl 0x7fa8d5859038 <col:12, col:16> col:16 referenced a 'int'
+| `-FieldDecl 0x7fa8d5859100 <col:19, col:26> col:23 referenced b 'int [1]'
+|-VarDecl 0x7fa8d58591a0 <line:4:1, col:10> col:10 used x 'struct s':'struct s'
+`-VarDecl 0x7fa8d5859280 <line:5:1, col:30> col:6 y 'int *' cinit
+  `-ImplicitCastExpr 0x7fa8d5859460 <col:10, col:30> 'int *' <ArrayToPointerDecay>
+    `-MemberExpr 0x7fa8d5859428 <col:10, col:30> 'int [1]' lvalue ->b 0x7fa8d5859100
+      `-ParenExpr 0x7fa8d5859408 <col:10, col:27> 'struct s *'
+        `-CStyleCastExpr 0x7fa8d58593e0 <col:11, col:26> 'struct s *' <BitCast>
+          `-UnaryOperator 0x7fa8d5859340 <col:23, col:26> 'int *' prefix '&'
+            `-MemberExpr 0x7fa8d5859308 <col:24, col:26> 'int' lvalue .a 0x7fa8d5859038
+              `-DeclRefExpr 0x7fa8d58592e0 <col:24> 'struct s':'struct s' lvalue Var 0x7fa8d58591a0 'x' 'struct s':'struct s'

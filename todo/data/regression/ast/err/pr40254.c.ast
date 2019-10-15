@@ -1,0 +1,109 @@
+../Data/C2AST/pr40254.c:2:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7fd5c70294e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5c7029a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5c7029780 '__int128'
+|-TypedefDecl 0x7fd5c7029ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5c70297a0 'unsigned __int128'
+|-TypedefDecl 0x7fd5c7029da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5c7029bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5c7029b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5c7029e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5c7029e00 'char *'
+|   `-BuiltinType 0x7fd5c7029580 'char'
+|-TypedefDecl 0x7fd5c702a108 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5c702a0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5c7029f20 'struct __va_list_tag'
+|     `-Record 0x7fd5c7029e98 '__va_list_tag'
+|-TypedefDecl 0x7fd5c702a190 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:30:1, col:27> col:27 va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fd5c702a160 '__builtin_va_list' sugar
+|   |-Typedef 0x7fd5c702a108 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fd5c702a0b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fd5c7029f20 'struct __va_list_tag'
+|       `-Record 0x7fd5c7029e98 '__va_list_tag'
+|-TypedefDecl 0x7fd5c682e800 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fd5c702a160 '__builtin_va_list' sugar
+|   |-Typedef 0x7fd5c702a108 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fd5c702a0b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fd5c7029f20 'struct __va_list_tag'
+|       `-Record 0x7fd5c7029e98 '__va_list_tag'
+|-RecordDecl 0x7fd5c682e858 <../Data/C2AST/pr40254.c:4:1, line:11:1> line:4:8 struct s definition
+| |-FieldDecl 0x7fd5c682e940 <line:6:3, col:8> col:8 referenced x 'int *'
+| |-FieldDecl 0x7fd5c682e9a0 <line:7:3, col:7> col:7 x1 'int'
+| |-FieldDecl 0x7fd5c682ea00 <line:8:3, col:7> col:7 x2 'int'
+| |-FieldDecl 0x7fd5c682ea60 <line:9:3, col:7> col:7 x3 'int'
+| `-FieldDecl 0x7fd5c682eac0 <line:10:3, col:8> col:8 referenced y 'int *'
+|-VarDecl 0x7fd5c682ec98 <line:13:1, col:16> col:10 used arr 'struct s [64]'
+| `-AlignedAttr 0x7fd5c682ecf8 <col:34, col:67> aligned
+|   `-IntegerLiteral 0x7fd5c682eb28 <<built-in>:159:31> 'int' 16
+|-FunctionDecl 0x7fd5c682ef70 <../Data/C2AST/pr40254.c:15:1, line:20:1> line:16:1 used foo 'void (int, int *, int *)'
+| |-ParmVarDecl 0x7fd5c682eda0 <col:6, col:10> col:10 used i 'int'
+| |-ParmVarDecl 0x7fd5c682ee18 <col:13, col:18> col:18 used in_x 'int *'
+| |-ParmVarDecl 0x7fd5c682ee90 <col:24, col:29> col:29 used in_y 'int *'
+| |-CompoundStmt 0x7fd5c682f358 <line:17:1, line:20:1>
+| | |-BinaryOperator 0x7fd5c682f1e8 <line:18:3, col:14> 'int *' '='
+| | | |-MemberExpr 0x7fd5c682f170 <col:3, col:10> 'int *' lvalue .x 0x7fd5c682e940
+| | | | `-ArraySubscriptExpr 0x7fd5c682f148 <col:3, col:8> 'struct s':'struct s' lvalue
+| | | |   |-ImplicitCastExpr 0x7fd5c682f118 <col:3> 'struct s *' <ArrayToPointerDecay>
+| | | |   | `-DeclRefExpr 0x7fd5c682f070 <col:3> 'struct s [64]' lvalue Var 0x7fd5c682ec98 'arr' 'struct s [64]'
+| | | |   `-ImplicitCastExpr 0x7fd5c682f130 <col:7> 'int' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fd5c682f098 <col:7> 'int' lvalue ParmVar 0x7fd5c682eda0 'i' 'int'
+| | | `-ImplicitCastExpr 0x7fd5c682f1d0 <col:14> 'int *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fd5c682f1a8 <col:14> 'int *' lvalue ParmVar 0x7fd5c682ee18 'in_x' 'int *'
+| | `-BinaryOperator 0x7fd5c682f330 <line:19:3, col:14> 'int *' '='
+| |   |-MemberExpr 0x7fd5c682f2b8 <col:3, col:10> 'int *' lvalue .y 0x7fd5c682eac0
+| |   | `-ArraySubscriptExpr 0x7fd5c682f290 <col:3, col:8> 'struct s':'struct s' lvalue
+| |   |   |-ImplicitCastExpr 0x7fd5c682f260 <col:3> 'struct s *' <ArrayToPointerDecay>
+| |   1 error generated.
+|   | `-DeclRefExpr 0x7fd5c682f210 <col:3> 'struct s [64]' lvalue Var 0x7fd5c682ec98 'arr' 'struct s [64]'
+| |   |   `-ImplicitCastExpr 0x7fd5c682f278 <col:7> 'int' <LValueToRValue>
+| |   |     `-DeclRefExpr 0x7fd5c682f238 <col:7> 'int' lvalue ParmVar 0x7fd5c682eda0 'i' 'int'
+| |   `-ImplicitCastExpr 0x7fd5c682f318 <col:14> 'int *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd5c682f2f0 <col:14> 'int *' lvalue ParmVar 0x7fd5c682ee90 'in_y' 'int *'
+| `-NoInlineAttr 0x7fd5c682f028 <line:15:17>
+|-FunctionDecl 0x7fd5c682f448 <line:22:1, line:35:1> line:23:1 main 'int (void)'
+| `-CompoundStmt 0x7fd5c6830dc8 <line:24:1, line:35:1>
+|   |-DeclStmt 0x7fd5c682f620 <line:25:3, col:11>
+|   | |-VarDecl 0x7fd5c682f530 <col:3, col:7> col:7 used a 'int'
+|   | `-VarDecl 0x7fd5c682f5a8 <col:3, col:10> col:10 used b 'int'
+|   |-CallExpr 0x7fd5c682f7b0 <line:27:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fd5c682f798 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd5c682f740 <col:3> 'int ()' Function 0x7fd5c682f690 'check_vect' 'int ()'
+|   |-CallExpr 0x7fd5c68308f0 <line:29:3, col:17> 'void'
+|   | |-ImplicitCastExpr 0x7fd5c68308d8 <col:3> 'void (*)(int, int *, int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd5c682f7d8 <col:3> 'void (int, int *, int *)' Function 0x7fd5c682ef70 'foo' 'void (int, int *, int *)'
+|   | |-IntegerLiteral 0x7fd5c6830800 <col:8> 'int' 5
+|   | |-UnaryOperator 0x7fd5c6830848 <col:11, col:12> 'int *' prefix '&'
+|   | | `-DeclRefExpr 0x7fd5c6830820 <col:12> 'int' lvalue Var 0x7fd5c682f530 'a' 'int'
+|   | `-UnaryOperator 0x7fd5c6830890 <col:15, col:16> 'int *' prefix '&'
+|   |   `-DeclRefExpr 0x7fd5c6830868 <col:16> 'int' lvalue Var 0x7fd5c682f5a8 'b' 'int'
+|   |-IfStmt 0x7fd5c6830d58 <line:31:3, line:32:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd5c6830bc0 <line:31:7, col:38> 'int' '||'
+|   | | |-BinaryOperator 0x7fd5c6830a50 <col:7, col:20> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fd5c6830a38 <col:7, col:14> 'int *' <LValueToRValue>
+|   | | | | `-MemberExpr 0x7fd5c68309b8 <col:7, col:14> 'int *' lvalue .x 0x7fd5c682e940
+|   | | | |   `-ArraySubscriptExpr 0x7fd5c6830990 <col:7, col:12> 'struct s':'struct s' lvalue
+|   | | | |     |-ImplicitCastExpr 0x7fd5c6830978 <col:7> 'struct s *' <ArrayToPointerDecay>
+|   | | | |     | `-DeclRefExpr 0x7fd5c6830930 <col:7> 'struct s [64]' lvalue Var 0x7fd5c682ec98 'arr' 'struct s [64]'
+|   | | | |     `-IntegerLiteral 0x7fd5c6830958 <col:11> 'int' 5
+|   | | | `-UnaryOperator 0x7fd5c6830a18 <col:19, col:20> 'int *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7fd5c68309f0 <col:20> 'int' lvalue Var 0x7fd5c682f530 'a' 'int'
+|   | | `-BinaryOperator 0x7fd5c6830b98 <col:25, col:38> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fd5c6830b80 <col:25, col:32> 'int *' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7fd5c6830b00 <col:25, col:32> 'int *' lvalue .y 0x7fd5c682eac0
+|   | |   |   `-ArraySubscriptExpr 0x7fd5c6830ad8 <col:25, col:30> 'struct s':'struct s' lvalue
+|   | |   |     |-ImplicitCastExpr 0x7fd5c6830ac0 <col:25> 'struct s *' <ArrayToPointerDecay>
+|   | |   |     | `-DeclRefExpr 0x7fd5c6830a78 <col:25> 'struct s [64]' lvalue Var 0x7fd5c682ec98 'arr' 'struct s [64]'
+|   | |   |     `-IntegerLiteral 0x7fd5c6830aa0 <col:29> 'int' 5
+|   | |   `-UnaryOperator 0x7fd5c6830b60 <col:37, col:38> 'int *' prefix '&'
+|   | |     `-DeclRefExpr 0x7fd5c6830b38 <col:38> 'int' lvalue Var 0x7fd5c682f5a8 'b' 'int'
+|   | |-CallExpr 0x7fd5c6830d30 <line:32:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fd5c6830d18 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fd5c6830cc0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd5c6830c20 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd5c6830db0 <line:34:3, col:10>
+|     `-IntegerLiteral 0x7fd5c6830d90 <col:10> 'int' 0
+`-FunctionDecl 0x7fd5c6830c20 <line:32:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

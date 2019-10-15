@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fac2002bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fac208152c0 <../Data/C2AST/pr57631.c:4:1, col:61> col:30 func1 'void (void)'
+| `-AsmLabelAttr 0x7fac20815360 <col:50> "__vector1"
+|-FunctionDecl 0x7fac20815490 prev 0x7fac208152c0 <line:5:1, line:7:1> line:5:6 func1 'void (void)'
+| |-CompoundStmt 0x7fac20815590 <line:6:1, line:7:1>
+| `-AsmLabelAttr 0x7fac20815568 <line:4:50> Inherited "__vector1"
+|-FunctionDecl 0x7fac20815698 <line:9:1, col:61> col:30 func2 'void (void)'
+| `-AsmLabelAttr 0x7fac20815738 <col:51> "__vecto1"
+|-FunctionDecl 0x7fac20815820 prev 0x7fac20815698 <line:10:1, line:12:1> line:10:6 func2 'void (void)'
+| |-CompoundStmt 0x7fac20815918 <line:11:1, line:12:1>
+| `-AsmLabelAttr 0x7fac208158f8 <line:9:51> Inherited "__vecto1"
+|-FunctionDecl 0x7fac208159e8 <line:14:1, col:66> col:30 __vector_3 'void (void)'
+| `-AsmLabelAttr 0x7fac20815a88 <col:56> "__vecto1"
+`-FunctionDecl 0x7fac20815b70 prev 0x7fac208159e8 <line:15:1, line:17:1> line:15:6 __vector_3 'void (void)'
+  |-CompoundStmt 0x7fac20815c68 <line:16:1, line:17:1>
+  `-AsmLabelAttr 0x7fac20815c48 <line:14:56> Inherited "__vecto1"

@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f86e282bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f86e282c978 <../Data/C2AST/predict-4.c:4:1, col:12> col:12 used global 'int' extern
+|-FunctionDecl 0x7f86e3014328 <line:6:1, col:12> col:5 used bar 'int (int)'
+| `-ParmVarDecl 0x7f86e3014258 <col:9> col:12 'int'
+`-FunctionDecl 0x7f86e30144b0 <line:8:1, line:16:1> line:8:6 foo 'void (int)'
+  |-ParmVarDecl 0x7f86e30143e8 <col:11, col:15> col:15 bound 'int'
+  `-CompoundStmt 0x7f86e3014a28 <line:9:1, line:16:1>
+    |-DeclStmt 0x7f86e3014680 <line:10:3, col:17>
+    | |-VarDecl 0x7f86e3014570 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7f86e30145e8 <col:3, col:16> col:10 ret 'int' cinit
+    |   `-IntegerLiteral 0x7f86e3014648 <col:16> 'int' 0
+    `-ForStmt 0x7f86e30149f0 <line:11:3, line:15:5>
+      |-BinaryOperator 0x7f86e30146e0 <line:11:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f86e3014698 <col:8> 'int' lvalue Var 0x7f86e3014570 'i' 'int'
+      | `-IntegerLiteral 0x7f86e30146c0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f86e3014768 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f86e3014750 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f86e3014708 <col:15> 'int' lvalue Var 0x7f86e3014570 'i' 'int'
+      | `-IntegerLiteral 0x7f86e3014730 <col:19> 'int' 10
+      |-UnaryOperator 0x7f86e30147b8 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f86e3014790 <col:23> 'int' lvalue Var 0x7f86e3014570 'i' 'int'
+      `-CompoundStmt 0x7f86e30149d8 <line:12:5, line:15:5>
+        `-IfStmt 0x7f86e30149a0 <line:13:7, line:14:18>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7f86e3014838 <line:13:11, col:15> 'int' '<'
+          | |-ImplicitCastExpr 0x7f86e3014820 <col:11> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f86e30147d8 <col:11> 'int' lvalue Var 0x7f86e3014570 'i' 'int'
+          | `-IntegerLiteral 0x7f86e3014800 <col:15> 'int' 5
+          |-CompoundAssignOperator 0x7f86e3014968 <line:14:2, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+          | |-DeclRefExpr 0x7f86e3014860 <col:2> 'int' lvalue Var 0x7f86e282c978 'global' 'int'
+          | `-CallExpr 0x7f86e3014920 <col:12, col:18> 'int'
+          |   |-ImplicitCastExpr 0x7f86e3014908 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+          |   | `-DeclRefExpr 0x7f86e3014888 <col:12> 'int (int)' Function 0x7f86e3014328 'bar' 'int (int)'
+          |   `-ImplicitCastExpr 0x7f86e3014950 <col:17> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f86e30148b0 <col:17> 'int' lvalue Var 0x7f86e3014570 'i' 'int'
+          `-<<<NULL>>>

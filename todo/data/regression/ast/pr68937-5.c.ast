@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fa9e602bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa9e7006a00 <../Data/C2AST/pr68937-5.c:4:1, col:16> col:14 used f 'void *()' extern
+`-FunctionDecl 0x7fa9e7006ba0 <line:5:1, line:9:1> line:5:6 dmi_scan_machine 'void (void)'
+  `-CompoundStmt 0x7fa9e7007018 <col:29, line:9:1>
+    |-DeclStmt 0x7fa9e7006df0 <line:6:3, col:20>
+    | |-VarDecl 0x7fa9e7006c58 <col:3, col:15> col:9 used p 'char *' cinit
+    | | `-ImplicitCastExpr 0x7fa9e7006d48 <col:13, col:15> 'char *' <BitCast>
+    | |   `-CallExpr 0x7fa9e7006d20 <col:13, col:15> 'void *'
+    | |     `-ImplicitCastExpr 0x7fa9e7006d08 <col:13> 'void *(*)()' <FunctionToPointerDecay>
+    | |       `-DeclRefExpr 0x7fa9e7006cb8 <col:13> 'void *()' Function 0x7fa9e7006a00 'f' 'void *()'
+    | `-VarDecl 0x7fa9e7006d78 <col:3, col:19> col:19 used q 'char *'
+    `-ForStmt 0x7fa9e7006fe0 <line:7:3, line:8:5>
+      |-BinaryOperator 0x7fa9e7006e70 <line:7:8, col:12> 'char *' '='
+      | |-DeclRefExpr 0x7fa9e7006e08 <col:8> 'char *' lvalue Var 0x7fa9e7006d78 'q' 'char *'
+      | `-ImplicitCastExpr 0x7fa9e7006e58 <col:12> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa9e7006e30 <col:12> 'char *' lvalue Var 0x7fa9e7006c58 'p' 'char *'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa9e7006f60 <col:15, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa9e7006f48 <col:15> 'char *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa9e7006e98 <col:15> 'char *' lvalue Var 0x7fa9e7006d78 'q' 'char *'
+      | `-BinaryOperator 0x7fa9e7006f20 <col:19, col:23> 'char *' '+'
+      |   |-ImplicitCastExpr 0x7fa9e7006f08 <col:19> 'char *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fa9e7006ec0 <col:19> 'char *' lvalue Var 0x7fa9e7006c58 'p' 'char *'
+      |   `-IntegerLiteral 0x7fa9e7006ee8 <col:23> 'int' 10
+      |-UnaryOperator 0x7fa9e7006fb0 <col:27, col:28> 'char *' postfix '++'
+      | `-DeclRefExpr 0x7fa9e7006f88 <col:27> 'char *' lvalue Var 0x7fa9e7006d78 'q' 'char *'
+      `-NullStmt 0x7fa9e7006fd0 <line:8:5>

@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7f9b3802bce8 <<invalid sloc>> <invalid sloc>
+`-TypedefDecl 0x7f9b39028c00 <../Data/C2AST/pr34993.c:5:1, col:15> col:13 x 'int []'
+  |-IncompleteArrayType 0x7f9b3802c960 'int []' 
+  | `-BuiltinType 0x7f9b3802bde0 'int'
+  `-MayAliasAttr 0x7f9b39028c58 <col:30>

@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fa13b8068e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fa13b807560 <../Data/C2AST/pr59397.c:4:9, col:25> col:14 E
+| `-EnumConstantDecl 0x7fa13c014260 <col:18, col:23> col:18 referenced A 'int'
+|   `-UnaryOperator 0x7fa13c014240 <col:22, col:23> 'int' prefix '-'
+|     `-IntegerLiteral 0x7fa13c014220 <col:23> 'int' 1
+|-TypedefDecl 0x7fa13c014300 <col:1, col:27> col:27 referenced e 'enum E':'enum E'
+| `-ElaboratedType 0x7fa13c0142b0 'enum E' sugar
+|   `-EnumType 0x7fa13c014200 'enum E'
+|     `-Enum 0x7fa13b807560 'E'
+`-FunctionDecl 0x7fa13c014438 <line:5:1, line:10:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fa13c0146c0 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fa13c0145f0 <line:8:3, col:10>
+    | `-VarDecl 0x7fa13c014550 <col:3, col:9> col:5 used e 'e':'enum E' cinit
+    |   `-ImplicitCastExpr 0x7fa13c0145d8 <col:9> 'e':'enum E' <IntegralCast>
+    |     `-DeclRefExpr 0x7fa13c0145b0 <col:9> 'int' EnumConstant 0x7fa13c014260 'A' 'int'
+    `-ReturnStmt 0x7fa13c0146a8 <line:9:3, col:14>
+      `-BinaryOperator 0x7fa13c014680 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7fa13c014668 <col:10> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7fa13c014650 <col:10> 'e':'enum E' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fa13c014608 <col:10> 'e':'enum E' lvalue Var 0x7fa13c014550 'e' 'e':'enum E'
+        `-IntegerLiteral 0x7fa13c014630 <col:14> 'int' 1

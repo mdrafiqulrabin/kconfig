@@ -1,0 +1,29 @@
+../Data/C2AST/pr55890-2.c:4:21: error: too few arguments to function call, expected 3, have 0
+int main() { memcpy(); }
+             ~~~~~~ ^
+1 error generated.
+TranslationUnitDecl 0x7fd8700268e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd870026e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd870026b80 '__int128'
+|-TypedefDecl 0x7fd870026ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd870026ba0 'unsigned __int128'
+|-TypedefDecl 0x7fd8700271a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd870026fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd870026f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd870027240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd870027200 'char *'
+|   `-BuiltinType 0x7fd870026980 'char'
+|-TypedefDecl 0x7fd870027508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd8700274b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd870027320 'struct __va_list_tag'
+|     `-Record 0x7fd870027298 '__va_list_tag'
+|-FunctionDecl 0x7fd86f819048 <../Data/C2AST/pr55890-2.c:3:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd86f8190e8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fd86f819148 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fd86f8191a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd86f819220 prev 0x7fd86f819048 <col:1, col:21> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd86f8192c0 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7fd86f819320 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7fd86f819380 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+`-FunctionDecl 0x7fd86f819450 <line:4:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fd86f8195e0 <col:12, col:24>

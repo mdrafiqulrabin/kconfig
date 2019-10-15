@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd09801d4e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd09801e160 <../Data/C2AST/pr25254.c:6:7, col:30> col:7 struct definition
+| |-FieldDecl 0x7fd09805f238 <col:16, col:20> col:20 i 'int'
+| `-FieldDecl 0x7fd09805f298 <col:23, col:27> col:27 j 'int'
+|-VarDecl 0x7fd09805f330 <col:1, col:43> col:32 c 'const struct (anonymous struct at ../Data/C2AST/pr25254.c:6:7)':'const struct (anonymous at ../Data/C2AST/pr25254.c:6:7)' cinit
+| `-InitListExpr 0x7fd09805f460 <col:36, col:43> 'struct (anonymous struct at ../Data/C2AST/pr25254.c:6:7)':'struct (anonymous at ../Data/C2AST/pr25254.c:6:7)'
+|   |-IntegerLiteral 0x7fd09805f3d0 <col:38> 'int' 2
+|   `-IntegerLiteral 0x7fd09805f3f0 <col:41> 'int' 6
+`-FunctionDecl 0x7fd09805f598 <line:8:1, line:12:1> line:9:1 foo 'const char *(void)'
+  `-CompoundStmt 0x7fd09805f6f0 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fd09805f6d8 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7fd09805f6c0 <col:10> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7fd09805f6a8 <col:10> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7fd09805f678 <col:10> 'char [3]' lvalue "OK"

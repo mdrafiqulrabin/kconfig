@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f82f082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f82f180aa50 <../Data/C2AST/predict-14.c:4:1, col:42> col:6 used test 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7f82f180acc8 <line:6:1, line:19:1> line:6:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7f82f180ab48 <col:10, col:14> col:14 used argc 'int'
+  |-ParmVarDecl 0x7f82f180abf0 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7f82f180b080 <line:7:1, line:19:1>
+    |-SwitchStmt 0x7f82f180adb8 <line:8:3, line:16:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f82f180ada0 <line:8:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f82f180ad78 <col:11> 'int' lvalue ParmVar 0x7f82f180ab48 'argc' 'int'
+    | `-CompoundStmt 0x7f82f180b020 <line:9:5, line:16:5>
+    |   |-CaseStmt 0x7f82f180ae08 <line:10:5, line:11:12>
+    |   | |-IntegerLiteral 0x7f82f180ade8 <line:10:10> 'int' 1
+    |   | |-<<<NULL>>>
+    |   | `-CallExpr 0x7f82f180aeb0 <line:11:7, col:12> 'void'
+    |   |   `-ImplicitCastExpr 0x7f82f180ae98 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   |     `-DeclRefExpr 0x7f82f180ae40 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f82f180aa50 'test' 'void (void) __attribute__((noreturn))'
+    |   |-CaseStmt 0x7f82f180aef8 <line:12:5, line:13:12>
+    |   | |-IntegerLiteral 0x7f82f180aed8 <line:12:10> 'int' 4
+    |   | |-<<<NULL>>>
+    |   | `-CallExpr 0x7f82f180af70 <line:13:7, col:12> 'void'
+    |   |   `-ImplicitCastExpr 0x7f82f180af58 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   |     `-DeclRefExpr 0x7f82f180af30 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f82f180aa50 'test' 'void (void) __attribute__((noreturn))'
+    |   `-DefaultStmt 0x7f82f180b000 <line:14:5, line:15:12>
+    |     `-CallExpr 0x7f82f180afd8 <col:7, col:12> 'void'
+    |       `-ImplicitCastExpr 0x7f82f180afc0 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7f82f180af98 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f82f180aa50 'test' 'void (void) __attribute__((noreturn))'
+    `-ReturnStmt 0x7f82f180b068 <line:18:3, col:10>
+      `-IntegerLiteral 0x7f82f180b048 <col:10> 'int' 10

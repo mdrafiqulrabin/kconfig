@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7ff5970174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff597018160 <../Data/C2AST/pr8788-1.c:5:9, line:7:1> line:5:9 struct definition
+| `-FieldDecl 0x7ff5968292a0 <line:6:5, col:13> col:10 x 'long [6]'
+|-TypedefDecl 0x7ff596829340 <line:5:1, line:7:3> col:3 referenced myjmp_buf 'struct myjmp_buf':'myjmp_buf'
+| `-ElaboratedType 0x7ff5968292f0 'struct myjmp_buf' sugar
+|   `-RecordType 0x7ff596829200 'myjmp_buf'
+|     `-Record 0x7ff597018160 ''
+|-RecordDecl 0x7ff5968293b0 <line:9:9, line:11:1> line:9:9 struct definition
+| `-FieldDecl 0x7ff596829490 <line:10:5, col:15> col:15 referenced regs 'myjmp_buf':'myjmp_buf'
+|-TypedefDecl 0x7ff596829570 <line:9:1, line:11:3> col:3 referenced my_stack 'struct my_stack':'my_stack'
+| `-ElaboratedType 0x7ff596829520 'struct my_stack' sugar
+|   `-RecordType 0x7ff596829440 'my_stack'
+|     `-Record 0x7ff5968293b0 ''
+`-FunctionDecl 0x7ff596829770 <line:13:1, line:19:1> line:13:6 switch_to_stack 'void (my_stack *)'
+  |-ParmVarDecl 0x7ff596829668 <col:23, col:33> col:33 used stack 'my_stack *'
+  `-CompoundStmt 0x7ff596829a10 <col:39, line:19:1>
+    `-GCCAsmStmt 0x7ff5968299b0 <line:14:5, line:18:5>
+      `-MemberExpr 0x7ff596829978 <line:17:17, col:24> 'myjmp_buf':'myjmp_buf' lvalue ->regs 0x7ff596829490
+        `-ImplicitCastExpr 0x7ff596829960 <col:17> 'my_stack *' <LValueToRValue>
+          `-DeclRefExpr 0x7ff596829938 <col:17> 'my_stack *' lvalue ParmVar 0x7ff596829668 'stack' 'my_stack *'

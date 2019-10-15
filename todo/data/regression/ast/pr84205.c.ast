@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fa54902b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa54902bf78 <../Data/C2AST/pr84205.c:4:1, col:24> col:24 used od 'unsigned long long'
+|-VarDecl 0x7fa548014258 <line:5:1, col:5> col:5 used zj 'int'
+|-VarDecl 0x7fa5480142d0 <col:1, col:9> col:9 used fk 'int'
+|-VarDecl 0x7fa548014348 <col:1, col:13> col:13 used ea 'int'
+`-FunctionDecl 0x7fa548014490 <line:7:1, line:23:1> line:8:1 ke 'void (void)'
+  `-CompoundStmt 0x7fa548014b80 <line:9:1, line:23:1>
+    `-IfStmt 0x7fa548014b48 <line:10:3, line:22:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa548014658 <line:10:7, col:24> 'int' '&&'
+      | |-BinaryOperator 0x7fa5480145a8 <col:7, col:13> 'int' '!='
+      | | |-ImplicitCastExpr 0x7fa548014578 <col:7> 'unsigned long long' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fa548014530 <col:7> 'unsigned long long' lvalue Var 0x7fa54902bf78 'od' 'unsigned long long'
+      | | `-ImplicitCastExpr 0x7fa548014590 <col:13> 'unsigned long long' <IntegralCast>
+      | |   `-IntegerLiteral 0x7fa548014558 <col:13> 'int' 0
+      | `-BinaryOperator 0x7fa548014630 <col:18, col:24> 'int' '!='
+      |   |-ImplicitCastExpr 0x7fa548014618 <col:18> 'int' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fa5480145d0 <col:18> 'int' lvalue Var 0x7fa548014258 'zj' 'int'
+      |   `-IntegerLiteral 0x7fa5480145f8 <col:24> 'int' 0
+      |-CompoundStmt 0x7fa548014b20 <line:11:5, line:22:5>
+      | |-ForStmt 0x7fa5480147d0 <line:12:7, line:14:2>
+      | | |-BinaryOperator 0x7fa5480146c8 <line:12:12, col:17> 'int' '='
+      | | | |-DeclRefExpr 0x7fa548014680 <col:12> 'int' lvalue Var 0x7fa5480142d0 'fk' 'int'
+      | | | `-IntegerLiteral 0x7fa5480146a8 <col:17> 'int' 0
+      | | |-<<<NULL>>>
+      | | |-BinaryOperator 0x7fa548014750 <col:20, col:25> 'int' '<'
+      | | | |-ImplicitCastExpr 0x7fa548014738 <col:20> 'int' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fa5480146f0 <col:20> 'int' lvalue Var 0x7fa5480142d0 'fk' 'int'
+      | | | `-IntegerLiteral 0x7fa548014718 <col:25> 'int' 2
+      | | |-UnaryOperator 0x7fa5480147a0 <col:28, col:30> 'int' prefix '++'
+      | | | `-DeclRefExpr 0x7fa548014778 <col:30> 'int' lvalue Var 0x7fa5480142d0 'fk' 'int'
+      | | `-CompoundStmt 0x7fa5480147c0 <line:13:2, line:14:2>
+      | |-IfStmt 0x7fa548014960 <line:16:7, line:17:7>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-BinaryOperator 0x7fa5480148c8 <line:16:11, col:42> 'int' '=='
+      | | | |-ImplicitCastExpr 0x7fa5480148b0 <col:11> 'unsigned long long' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fa548014808 <col:11> 'unsigned long long' lvalue Var 0x7fa54902bf78 'od' 'unsigned long long'
+      | | | `-CStyleCastExpr 0x7fa548014888 <col:17, col:42> 'unsigned long long' <IntegralCast>
+      | | |   `-ImplicitCastExpr 0x7fa548014870 <col:42> 'int' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7fa548014830 <col:42> 'int' lvalue Var 0x7fa548014258 'zj' 'int'
+      | | |-BinaryOperator 0x7fa548014938 <line:17:2, col:7> 'int' '='
+      | | | |-DeclRefExpr 0x7fa5480148f0 <col:2> 'int' lvalue Var 0x7fa548014258 'zj' 'int'
+      | | | `-IntegerLiteral 0x7fa548014918 <col:7> 'int' 0
+      | | `-<<<NULL>>>
+      | `-ForStmt 0x7fa548014ae8 <line:19:7, line:21:2>
+      |   |-BinaryOperator 0x7fa5480149e0 <line:19:12, col:17> 'int' '='
+      |   | |-DeclRefExpr 0x7fa548014998 <col:12> 'int' lvalue Var 0x7fa548014348 'ea' 'int'
+      |   | `-IntegerLiteral 0x7fa5480149c0 <col:17> 'int' 0
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7fa548014a68 <col:20, col:25> 'int' '<'
+      |   | |-ImplicitCastExpr 0x7fa548014a50 <col:20> 'int' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fa548014a08 <col:20> 'int' lvalue Var 0x7fa548014348 'ea' 'int'
+      |   | `-IntegerLiteral 0x7fa548014a30 <col:25> 'int' 2
+      |   |-UnaryOperator 0x7fa548014ab8 <col:28, col:30> 'int' prefix '++'
+      |   | `-DeclRefExpr 0x7fa548014a90 <col:30> 'int' lvalue Var 0x7fa548014348 'ea' 'int'
+      |   `-CompoundStmt 0x7fa548014ad8 <line:20:2, line:21:2>
+      `-<<<NULL>>>

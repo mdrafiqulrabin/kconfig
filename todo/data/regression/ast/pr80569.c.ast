@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd7f482bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd7f486d860 <../Data/C2AST/pr80569.c:5:1, line:9:1> line:5:6 load_kernel 'void (void *)'
+  |-ParmVarDecl 0x7fd7f482c978 <col:18, col:24> col:24 used setup_addr 'void *'
+  `-CompoundStmt 0x7fd7f486dc18 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fd7f486da88 <line:7:5, col:53>
+    | `-VarDecl 0x7fd7f486d960 <col:5, col:52> col:18 used seg 'unsigned int' cinit
+    |   `-BinaryOperator 0x7fd7f486da60 <col:24, col:52> 'unsigned int' '>>'
+    |     |-CStyleCastExpr 0x7fd7f486da18 <col:24, col:38> 'unsigned int' <PointerToIntegral>
+    |     | `-ImplicitCastExpr 0x7fd7f486da00 <col:38> 'void *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fd7f486d9c0 <col:38> 'void *' lvalue ParmVar 0x7fd7f482c978 'setup_addr' 'void *'
+    |     `-IntegerLiteral 0x7fd7f486da40 <col:52> 'int' 4
+    `-GCCAsmStmt 0x7fd7f486dbb8 <line:8:5, col:37>
+      `-ImplicitCastExpr 0x7fd7f486dba0 <col:33> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd7f486db78 <col:33> 'unsigned int' lvalue Var 0x7fd7f486d960 'seg' 'unsigned int'

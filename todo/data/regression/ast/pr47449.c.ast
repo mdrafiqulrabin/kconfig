@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f9cc182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9cc20142d0 <../Data/C2AST/pr47449.c:4:1, col:25> col:6 used bar 'void (void *, void *)'
+| |-ParmVarDecl 0x7f9cc182c978 <col:11, col:16> col:17 'void *'
+| `-ParmVarDecl 0x7f9cc2014200 <col:19, col:24> col:25 'void *'
+`-FunctionDecl 0x7f9cc2014528 <line:5:1, line:12:1> line:6:1 foo 'int (void *, void *)'
+  |-ParmVarDecl 0x7f9cc20143d8 <col:6, col:12> col:12 used p1 'void *'
+  |-ParmVarDecl 0x7f9cc2014450 <col:16, col:22> col:22 used p2 'void *'
+  `-CompoundStmt 0x7f9cc2014aa8 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f9cc20146e0 <line:8:3, col:17>
+    | |-VarDecl 0x7f9cc20145f0 <col:3, col:7> col:7 used ret1 'int'
+    | `-VarDecl 0x7f9cc2014668 <col:3, col:13> col:13 used ret2 'int'
+    |-GCCAsmStmt 0x7f9cc2014848 <line:9:3, col:39>
+    | |-DeclRefExpr 0x7f9cc20147c8 <col:21> 'int' lvalue Var 0x7f9cc20145f0 'ret1' 'int'
+    | `-DeclRefExpr 0x7f9cc2014820 <col:34> 'int' lvalue Var 0x7f9cc2014668 'ret2' 'int'
+    |-CallExpr 0x7f9cc2014980 <line:10:3, col:14> 'void'
+    | |-ImplicitCastExpr 0x7f9cc2014968 <col:3> 'void (*)(void *, void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9cc20148c0 <col:3> 'void (void *, void *)' Function 0x7f9cc20142d0 'bar' 'void (void *, void *)'
+    | |-ImplicitCastExpr 0x7f9cc20149b8 <col:8> 'void *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9cc20148e8 <col:8> 'void *' lvalue ParmVar 0x7f9cc20143d8 'p1' 'void *'
+    | `-ImplicitCastExpr 0x7f9cc20149d0 <col:12> 'void *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9cc2014910 <col:12> 'void *' lvalue ParmVar 0x7f9cc2014450 'p2' 'void *'
+    `-ReturnStmt 0x7f9cc2014a90 <line:11:3, col:17>
+      `-BinaryOperator 0x7f9cc2014a68 <col:10, col:17> 'int' '+'
+        |-ImplicitCastExpr 0x7f9cc2014a38 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9cc20149e8 <col:10> 'int' lvalue Var 0x7f9cc20145f0 'ret1' 'int'
+        `-ImplicitCastExpr 0x7f9cc2014a50 <col:17> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9cc2014a10 <col:17> 'int' lvalue Var 0x7f9cc2014668 'ret2' 'int'

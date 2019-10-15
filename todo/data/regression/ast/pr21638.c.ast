@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7f91a48268e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f91a4827560 <../Data/C2AST/pr21638.c:1:9, line:3:1> line:1:16 struct hashhdr definition
+| `-FieldDecl 0x7f91a50254a0 <line:2:2, col:16> col:6 referenced bitmaps 'int [32]'
+|-TypedefDecl 0x7f91a5025540 <line:1:1, line:3:3> col:3 referenced HASHHDR 'struct hashhdr':'struct hashhdr'
+| `-ElaboratedType 0x7f91a50254f0 'struct hashhdr' sugar
+|   `-RecordType 0x7f91a5025400 'struct hashhdr'
+|     `-Record 0x7f91a4827560 'hashhdr'
+|-FunctionDecl 0x7f91a50257c0 <line:5:1, line:11:1> line:6:1 used swap_header_copy 'void (HASHHDR *, HASHHDR *)' static
+| |-ParmVarDecl 0x7f91a5025638 <col:18, col:27> col:27 used srcp 'HASHHDR *'
+| |-ParmVarDecl 0x7f91a50256a8 <col:33, col:42> col:42 used destp 'HASHHDR *'
+| `-CompoundStmt 0x7f91a5025ee0 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7f91a5025928 <line:8:3, col:8>
+|   | `-VarDecl 0x7f91a50258c8 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7f91a5025ea8 <line:9:3, line:10:72>
+|     |-BinaryOperator 0x7f91a5025988 <line:9:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f91a5025940 <col:8> 'int' lvalue Var 0x7f91a50258c8 'i' 'int'
+|     | `-IntegerLiteral 0x7f91a5025968 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f91a5025a10 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f91a50259f8 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f91a50259b0 <col:15> 'int' lvalue Var 0x7f91a50258c8 'i' 'int'
+|     | `-IntegerLiteral 0x7f91a50259d8 <col:19> 'int' 32
+|     |-UnaryOperator 0x7f91a5025a60 <col:23, col:24> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f91a5025a38 <col:23> 'int' lvalue Var 0x7f91a50258c8 'i' 'int'
+|     `-BinaryOperator 0x7f91a5025e80 <line:10:5, col:72> 'char' '='
+|       |-ArraySubscriptExpr 0x7f91a5025c60 <col:5, col:37> 'char' lvalue
+|       | |-ParenExpr 0x7f91a5025c20 <col:5, col:34> 'char *'
+|       | | `-CStyleCastExpr 0x7f91a5025bf8 <col:6, col:33> 'char *' <BitCast>
+|       | |   `-UnaryOperator 0x7f91a5025bc0 <col:14, col:33> 'int *' prefix '&'
+|       | |     `-ParenExpr 0x7f91a5025ba0 <col:15, col:33> 'int' lvalue
+|       | |       `-ArraySubscriptExpr 0x7f91a5025b78 <col:16, col:32> 'int' lvalue
+|       | |         |-ImplicitCastExpr 0x7f91a5025b48 <col:16, col:23> 'int *' <ArrayToPointerDecay>
+|       | |         | `-MemberExpr 0x7f91a5025ac0 <col:16, col:23> 'int [32]' lvalue ->bitmaps 0x7f91a50254a0
+|       | |         |   `-ImplicitCastExpr 0x7f91a5025aa8 <col:16> 'HASHHDR *' <LValueToRValue>
+|       | |         |     `-DeclRefExpr 0x7f91a5025a80 <col:16> 'HASHHDR *' lvalue ParmVar 0x7f91a50256a8 'destp' 'HASHHDR *'
+|       | |         `-ImplicitCastExpr 0x7f91a5025b60 <col:31> 'int' <LValueToRValue>
+|       | |           `-DeclRefExpr 0x7f91a5025af8 <col:31> 'int' lvalue Var 0x7f91a50258c8 'i' 'int'
+|       | `-IntegerLiteral 0x7f91a5025c40 <col:36> 'int' 0
+|       `-ImplicitCastExpr 0x7f91a5025e68 <col:41, col:72> 'char' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f91a5025e40 <col:41, col:72> 'char' lvalue
+|           |-ParenExpr 0x7f91a5025e00 <col:41, col:69> 'char *'
+|           | `-CStyleCastExpr 0x7f91a5025dd8 <col:42, col:68> 'char *' <BitCast>
+|           |   `-UnaryOperator 0x7f91a5025da0 <col:50, col:68> 'int *' prefix '&'
+|           |     `-ParenExpr 0x7f91a5025d80 <col:51, col:68> 'int' lvalue
+|           |       `-ArraySubscriptExpr 0x7f91a5025d58 <col:52, col:67> 'int' lvalue
+|           |         |-ImplicitCastExpr 0x7f91a5025d28 <col:52, col:58> 'int *' <ArrayToPointerDecay>
+|           |         | `-MemberExpr 0x7f91a5025cc8 <col:52, col:58> 'int [32]' lvalue ->bitmaps 0x7f91a50254a0
+|           |         |   `-ImplicitCastExpr 0x7f91a5025cb0 <col:52> 'HASHHDR *' <LValueToRValue>
+|           |         |     `-DeclRefExpr 0x7f91a5025c88 <col:52> 'HASHHDR *' lvalue ParmVar 0x7f91a5025638 'srcp' 'HASHHDR *'
+|           |         `-ImplicitCastExpr 0x7f91a5025d40 <col:66> 'int' <LValueToRValue>
+|           |           `-DeclRefExpr 0x7f91a5025d00 <col:66> 'int' lvalue Var 0x7f91a50258c8 'i' 'int'
+|           `-IntegerLiteral 0x7f91a5025e20 <col:71> 'int' 1
+`-FunctionDecl 0x7f91a5026018 <line:13:1, line:21:1> line:14:1 flush_meta 'int (HASHHDR *)'
+  |-ParmVarDecl 0x7f91a5025f10 <col:12, col:21> col:21 used whdrp1 'HASHHDR *'
+  `-CompoundStmt 0x7f91a481ac18 <line:15:1, line:21:1>
+    |-DeclStmt 0x7f91a5026130 <line:16:2, col:16>
+    | `-VarDecl 0x7f91a50260d0 <col:2, col:11> col:11 used whdrp 'HASHHDR *'
+    |-DeclStmt 0x7f91a50261b8 <line:17:2, col:14>
+    | `-VarDecl 0x7f91a5026158 <col:2, col:10> col:10 used whdr 'HASHHDR':'struct hashhdr'
+    |-BinaryOperator 0x7f91a5026240 <line:18:2, col:11> 'HASHHDR *' '='
+    | |-DeclRefExpr 0x7f91a50261d0 <col:2> 'HASHHDR *' lvalue Var 0x7f91a50260d0 'whdrp' 'HASHHDR *'
+    | `-UnaryOperator 0x7f91a5026220 <col:10, col:11> 'HASHHDR *' prefix '&'
+    |   `-DeclRefExpr 0x7f91a50261f8 <col:11> 'HASHHDR':'struct hashhdr' lvalue Var 0x7f91a5026158 'whdr' 'HASHHDR':'struct hashhdr'
+    |-CallExpr 0x7f91a5026350 <line:19:2, col:32> 'void'
+    | |-ImplicitCastExpr 0x7f91a5026338 <col:2> 'void (*)(HASHHDR *, HASHHDR *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f91a5026268 <col:2> 'void (HASHHDR *, HASHHDR *)' Function 0x7f91a50257c0 'swap_header_copy' 'void (HASHHDR *, HASHHDR *)'
+    | |-ImplicitCastExpr 0x7f91a5026388 <col:19> 'HASHHDR *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f91a5026290 <col:19> 'HASHHDR *' lvalue ParmVar 0x7f91a5025f10 'whdrp1' 'HASHHDR *'
+    | `-ImplicitCastExpr 0x7f91a50263a0 <col:27> 'HASHHDR *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f91a50262b8 <col:27> 'HASHHDR *' lvalue Var 0x7f91a50260d0 'whdrp' 'HASHHDR *'
+    `-ReturnStmt 0x7f91a481ac00 <line:20:2, col:11>
+      `-ParenExpr 0x7f91a50263d8 <col:9, col:11> 'int'
+        `-IntegerLiteral 0x7f91a50263b8 <col:10> 'int' 0

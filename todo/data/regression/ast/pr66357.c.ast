@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fe42000b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe42000bf78 <../Data/C2AST/pr66357.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe42002b258 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fe42002b2d0 <col:1, col:11> col:11 used e 'int'
+|-VarDecl 0x7fe42002b348 <col:1, col:14> col:14 used f 'int'
+|-VarDecl 0x7fe42002b3e8 <line:4:1, col:14> col:14 used d 'volatile int'
+`-FunctionDecl 0x7fe42002b498 <line:6:1, line:26:1> line:7:1 fn1 'void ()'
+  `-CompoundStmt 0x7fe42002baf8 <line:8:1, line:26:1>
+    `-IfStmt 0x7fe42002bac0 <line:9:3, line:25:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fe42002b578 <line:9:7, col:8> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7fe42002b560 <col:8> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe42002b538 <col:8> 'int' lvalue Var 0x7fe42002b2d0 'e' 'int'
+      |-ForStmt 0x7fe42002ba88 <line:10:5, line:25:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-ImplicitCastExpr 0x7fe42002b5c0 <line:10:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe42002b598 <col:12> 'int' lvalue Var 0x7fe42000bf78 'a' 'int'
+      | |-UnaryOperator 0x7fe42002b600 <col:15, col:16> 'int' postfix '++'
+      | | `-DeclRefExpr 0x7fe42002b5d8 <col:15> 'int' lvalue Var 0x7fe42000bf78 'a' 'int'
+      | `-CompoundStmt 0x7fe42002ba68 <line:11:7, line:25:7>
+      |   |-IfStmt 0x7fe42002b870 <line:12:2, line:17:6>
+      |   | |-<<<NULL>>>
+      |   | |-<<<NULL>>>
+      |   | |-ImplicitCastExpr 0x7fe42002b648 <line:12:6> 'int' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fe42002b620 <col:6> 'int' lvalue Var 0x7fe42002b2d0 'e' 'int'
+      |   | |-ForStmt 0x7fe42002b6f8 <line:13:4, line:14:6>
+      |   | | |-UnaryOperator 0x7fe42002b688 <line:13:9, col:10> 'int' postfix '++'
+      |   | | | `-DeclRefExpr 0x7fe42002b660 <col:9> 'volatile int' lvalue Var 0x7fe42002b3e8 'd' 'volatile int'
+      |   | | |-<<<NULL>>>
+      |   | | |-ImplicitCastExpr 0x7fe42002b6d0 <col:14> 'int' <LValueToRValue>
+      |   | | | `-DeclRefExpr 0x7fe42002b6a8 <col:14> 'volatile int' lvalue Var 0x7fe42002b3e8 'd' 'volatile int'
+      |   | | |-<<<NULL>>>
+      |   | | `-NullStmt 0x7fe42002b6e8 <line:14:6>
+      |   | `-ForStmt 0x7fe42002b838 <line:16:4, line:17:6>
+      |   |   |-BinaryOperator 0x7fe42002b778 <line:16:9, col:13> 'int' '='
+      |   |   | |-DeclRefExpr 0x7fe42002b730 <col:9> 'int' lvalue Var 0x7fe42002b258 'c' 'int'
+      |   |   | `-IntegerLiteral 0x7fe42002b758 <col:13> 'int' 0
+      |   |   |-<<<NULL>>>
+      |   |   |-ImplicitCastExpr 0x7fe42002b7c8 <col:16> 'int' <LValueToRValue>
+      |   |   | `-DeclRefExpr 0x7fe42002b7a0 <col:16> 'int' lvalue Var 0x7fe42002b258 'c' 'int'
+      |   |   |-UnaryOperator 0x7fe42002b808 <col:19, col:21> 'int' prefix '--'
+      |   |   | `-DeclRefExpr 0x7fe42002b7e0 <col:21> 'int' lvalue Var 0x7fe42002b258 'c' 'int'
+      |   |   `-NullStmt 0x7fe42002b828 <line:17:6>
+      |   `-IfStmt 0x7fe42002ba30 <line:18:2, line:24:6>
+      |     |-<<<NULL>>>
+      |     |-<<<NULL>>>
+      |     |-ImplicitCastExpr 0x7fe42002b8d0 <line:18:6> 'int' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fe42002b8a8 <col:6> 'int' lvalue Var 0x7fe42002b348 'f' 'int'
+      |     |-ForStmt 0x7fe42002b9f8 <line:19:4, line:24:6>
+      |     | |-<<<NULL>>>
+      |     | |-<<<NULL>>>
+      |     | |-<<<NULL>>>
+      |     | |-<<<NULL>>>
+      |     | `-CompoundStmt 0x7fe42002b9d8 <line:20:6, line:24:6>
+      |     |   |-IfStmt 0x7fe42002b930 <line:21:8, line:22:3>
+      |     |   | |-<<<NULL>>>
+      |     |   | |-<<<NULL>>>
+      |     |   | |-ImplicitCastExpr 0x7fe42002b910 <line:21:12> 'int' <LValueToRValue>
+      |     |   | | `-DeclRefExpr 0x7fe42002b8e8 <col:12> 'int' lvalue Var 0x7fe42002b2d0 'e' 'int'
+      |     |   | |-BreakStmt 0x7fe42002b928 <line:22:3>
+      |     |   | `-<<<NULL>>>
+      |     |   `-BinaryOperator 0x7fe42002b9b0 <line:23:8, col:12> 'int' '='
+      |     |     |-DeclRefExpr 0x7fe42002b968 <col:8> 'int' lvalue Var 0x7fe42000bf78 'a' 'int'
+      |     |     `-IntegerLiteral 0x7fe42002b990 <col:12> 'int' 0
+      |     `-<<<NULL>>>
+      `-<<<NULL>>>

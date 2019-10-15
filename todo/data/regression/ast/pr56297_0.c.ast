@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fee5182bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fee52014200 <../Data/C2AST/pr56297_0.c:5:1, col:14> col:14 used i 'int' register
+| `-AsmLabelAttr 0x7fee52014260 <col:20> "esp"
+`-FunctionDecl 0x7fee520143c8 <line:10:1, line:13:1> line:10:5 main 'int (void)'
+  `-CompoundStmt 0x7fee520144f0 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7fee520144d8 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fee520144c0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fee52014498 <col:10> 'int' lvalue Var 0x7fee52014200 'i' 'int'

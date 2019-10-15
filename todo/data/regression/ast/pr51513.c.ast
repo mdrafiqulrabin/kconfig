@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f843f02b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f843f8143e8 <../Data/C2AST/pr51513.c:10:1, line:25:1> line:11:1 bug 'long (long, long, long, long)'
+| |-ParmVarDecl 0x7f843f02bf78 <col:6, col:11> col:11 used cond 'long'
+| |-ParmVarDecl 0x7f843f814200 <col:17, col:22> col:22 used v0 'long'
+| |-ParmVarDecl 0x7f843f814278 <col:26, col:31> col:31 used v1 'long'
+| |-ParmVarDecl 0x7f843f8142f0 <col:35, col:40> col:40 used v2 'long'
+| `-CompoundStmt 0x7f843f814b00 <line:12:1, line:25:1>
+|   |-SwitchStmt 0x7f843f814528 <line:13:3, line:23:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f843f814510 <line:13:11> 'long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f843f8144e8 <col:11> 'long' lvalue ParmVar 0x7f843f02bf78 'cond' 'long'
+|   | `-CompoundStmt 0x7f843f814938 <line:14:5, line:23:5>
+|   |   |-CaseStmt 0x7f843f814578 <line:15:7, line:16:9>
+|   |   | |-ImplicitCastExpr 0x7f843f814998 <line:15:12> 'long' <IntegralCast>
+|   |   | | `-IntegerLiteral 0x7f843f814558 <col:12> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7f843f8145f0 <line:16:2, col:9>
+|   |   |   `-ImplicitCastExpr 0x7f843f8145d8 <col:9> 'long' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f843f8145b0 <col:9> 'long' lvalue ParmVar 0x7f843f814200 'v0' 'long'
+|   |   |-CaseStmt 0x7f843f814628 <line:17:7, line:18:9>
+|   |   | |-ImplicitCastExpr 0x7f843f814980 <line:17:12> 'long' <IntegralCast>
+|   |   | | `-IntegerLiteral 0x7f843f814608 <col:12> 'int' 1
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7f843f8146a0 <line:18:2, col:9>
+|   |   |   `-ImplicitCastExpr 0x7f843f814688 <col:9> 'long' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f843f814660 <col:9> 'long' lvalue ParmVar 0x7f843f814278 'v1' 'long'
+|   |   |-CaseStmt 0x7f843f8146d8 <line:19:7, line:20:9>
+|   |   | |-ImplicitCastExpr 0x7f843f814968 <line:19:12> 'long' <IntegralCast>
+|   |   | | `-IntegerLiteral 0x7f843f8146b8 <col:12> 'int' 2
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7f843f814750 <line:20:2, col:9>
+|   |   |   `-ImplicitCastExpr 0x7f843f814738 <col:9> 'long' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f843f814710 <col:9> 'long' lvalue ParmVar 0x7f843f8142f0 'v2' 'long'
+|   |   `-DefaultStmt 0x7f843f814918 <line:21:7, line:22:25>
+|   |     `-CallExpr 0x7f843f8148f0 <col:2, col:25> 'void'
+|   |       `-ImplicitCastExpr 0x7f843f8148d8 <col:2> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7f843f814888 <col:2> '<builtin fn type>' Function 0x7f843f8147a0 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-CallExpr 0x7f843f814ad8 <line:24:3, col:20> 'void'
+|     `-ImplicitCastExpr 0x7f843f814ac0 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7f843f814a98 <col:3> '<builtin fn type>' Function 0x7f843f8149b0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7f843f8147a0 <line:22:2> col:2 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f843f814840 <col:2> Implicit
+`-FunctionDecl 0x7f843f8149b0 <line:24:3> col:3 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f843f814a50 <col:3> Implicit

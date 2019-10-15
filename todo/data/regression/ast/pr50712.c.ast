@@ -1,0 +1,124 @@
+TranslationUnitDecl 0x7fea9c8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea9c818190 <../Data/C2AST/pr50712.c:5:1, col:27> col:27 referenced __va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fea9c818160 '__builtin_va_list' sugar
+|   |-Typedef 0x7fea9c818108 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fea9c8180b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fea9c817f20 'struct __va_list_tag'
+|       `-Record 0x7fea9c817e98 '__va_list_tag'
+|-TypedefDecl 0x7fea9c029230 <line:6:1, col:19> col:19 referenced __gnuc_va_list '__va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fea9c029200 '__va_list' sugar
+|   |-Typedef 0x7fea9c818190 '__va_list'
+|   `-TypedefType 0x7fea9c818160 '__builtin_va_list' sugar
+|     |-Typedef 0x7fea9c818108 '__builtin_va_list'
+|     `-ConstantArrayType 0x7fea9c8180b0 'struct __va_list_tag [1]' 1 
+|       `-RecordType 0x7fea9c817f20 'struct __va_list_tag'
+|         `-Record 0x7fea9c817e98 '__va_list_tag'
+|-TypedefDecl 0x7fea9c0292c0 <line:7:1, col:24> col:24 referenced va_list '__gnuc_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fea9c029290 '__gnuc_va_list' sugar
+|   |-Typedef 0x7fea9c029230 '__gnuc_va_list'
+|   `-TypedefType 0x7fea9c029200 '__va_list' sugar
+|     |-Typedef 0x7fea9c818190 '__va_list'
+|     `-TypedefType 0x7fea9c818160 '__builtin_va_list' sugar
+|       |-Typedef 0x7fea9c818108 '__builtin_va_list'
+|       `-ConstantArrayType 0x7fea9c8180b0 'struct __va_list_tag [1]' 1 
+|         `-RecordType 0x7fea9c817f20 'struct __va_list_tag'
+|           `-Record 0x7fea9c817e98 '__va_list_tag'
+|-RecordDecl 0x7fea9c029318 <line:8:1, col:24> col:8 struct MSVCRT__iobuf definition
+|-TypedefDecl 0x7fea9c029410 <line:9:1, col:30> col:30 referenced MSVCRT_FILE 'struct MSVCRT__iobuf':'struct MSVCRT__iobuf'
+| `-ElaboratedType 0x7fea9c0293c0 'struct MSVCRT__iobuf' sugar
+|   `-RecordType 0x7fea9c0293a0 'struct MSVCRT__iobuf'
+|     `-Record 0x7fea9c029318 'MSVCRT__iobuf'
+|-RecordDecl 0x7fea9c029468 <line:10:9, col:29> col:15 union _printf_arg definition
+|-TypedefDecl 0x7fea9c029560 <col:1, col:31> col:31 printf_arg 'union _printf_arg':'union _printf_arg'
+| `-ElaboratedType 0x7fea9c029510 'union _printf_arg' sugar
+|   `-RecordType 0x7fea9c0294f0 'union _printf_arg'
+|     `-Record 0x7fea9c029468 '_printf_arg'
+|-VarDecl 0x7fea9c0296e8 <line:11:1, col:27> col:13 used MSVCRT__iob 'MSVCRT_FILE [20]'
+|-FunctionDecl 0x7fea9c029928 <line:12:1, col:26> col:5 pf_print_a 'int (va_list *)'
+| `-ParmVarDecl 0x7fea9c029818 <col:17, col:25> col:26 'va_list *'
+|-FunctionDecl 0x7fea9c029d08 <line:13:1, line:21:1> line:14:1 used MSVCRT_vfprintf_s 'int (MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))':'int (MSVCRT_FILE *, const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7fea9c029a38 <col:19, col:32> col:32 used file 'MSVCRT_FILE *'
+| |-ParmVarDecl 0x7fea9c029ab0 <col:38, col:50> col:50 format 'const char *'
+| |-ParmVarDecl 0x7fea9c029b80 <col:58, col:66> col:66 used valist 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-CompoundStmt 0x7fea9c041fc8 <line:15:1, line:21:1>
+|   |-IfStmt 0x7fea9c041d90 <line:16:3, line:19:15>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fea9c041d18 <line:16:6, line:18:31> 'int' prefix '!'
+|   | | `-ParenExpr 0x7fea9c041cf8 <line:16:7, line:18:31> 'int'
+|   | |   `-BinaryOperator 0x7fea9c041cd0 <line:16:8, line:18:30> 'int' '||'
+|   | |     |-ParenExpr 0x7fea9c029ec0 <line:16:8, col:28> 'int'
+|   | |     | `-BinaryOperator 0x7fea9c029e98 <col:9, col:27> 'int' '!='
+|   | |     |   |-ImplicitCastExpr 0x7fea9c029e68 <col:9> 'MSVCRT_FILE *' <LValueToRValue>
+|   | |     |   | `-DeclRefExpr 0x7fea9c029dc0 <col:9> 'MSVCRT_FILE *' lvalue ParmVar 0x7fea9c029a38 'file' 'MSVCRT_FILE *'
+|   | |     |   `-ImplicitCastExpr 0x7fea9c029e80 <col:17, col:27> 'MSVCRT_FILE *' <BitCast>
+|   | |     |     `-ParenExpr 0x7fea9c029e48 <col:17, col:27> 'void *'
+|   | |     |       `-CStyleCastExpr 0x7fea9c029e20 <col:18, col:26> 'void *' <NullToPointer>
+|   | |     |         `-IntegerLiteral 0x7fea9c029de8 <col:26> 'int' 0
+|   | |     `-ParenExpr 0x7fea9c041cb0 <line:17:11, line:18:30> 'int'
+|   | |       `-BinaryOperator 0x7fea9c041c88 <line:17:12, line:18:29> 'int' ','
+|   | |         |-CallExpr 0x7fea9c041c18 <line:17:12, line:18:27> 'int'
+|   | |         | |-ImplicitCastExpr 0x7fea9c041c00 <line:17:12> 'int (*)()' <FunctionToPointerDecay>
+|   | |         | | `-DeclRefExpr 0x7fea9c029fe0 <col:12> 'int ()' Function 0x7fea9c029f30 'MSVCRT__invalid_parameter' 'int ()'
+|   | |         | |-ParenExpr 0x7fea9c02a068 <col:38, col:48> 'void *'
+|   | |         | | `-CStyleCastExpr 0x7fea9c02a040 <col:39, col:47> 'void *' <NullToPointer>
+|   | |         | |   `-IntegerLiteral 0x7fea9c02a008 <col:47> 'int' 0
+|   | |         | |-ParenExpr 0x7fea9c02a0e8 <col:51, col:61> 'void *'
+|   | |         | | `-CStyleCastExpr 0x7fea9c02a0c0 <col:52, col:60> 'void *' <NullToPointer>
+|   | |         | |   `-IntegerLiteral 0x7fea9c02a088 <col:60> 'int' 0
+|   | |         | |-ParenExpr 0x7fea9c02a168 <line:18:10, col:20> 'void *'
+|   | |         | | `-CStyleCastExpr 0x7fea9c02a140 <col:11, col:19> 'void *' <NullToPointer>
+|   | |         | |   `-IntegerLiteral 0x7fea9c02a108 <col:19> 'int' 0
+|   | |         | |-IntegerLiteral 0x7fea9c02a188 <col:23> 'int' 0
+|   | |         | `-IntegerLiteral 0x7fea9c02a1a8 <col:26> 'int' 0
+|   | |         `-IntegerLiteral 0x7fea9c041c68 <col:29> 'int' 0
+|   | |-ReturnStmt 0x7fea9c041d78 <line:19:7, col:15>
+|   | | `-UnaryOperator 0x7fea9c041d58 <col:14, col:15> 'int' prefix '-'
+|   | |   `-IntegerLiteral 0x7fea9c041d38 <col:15> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fea9c041fb0 <line:20:3, col:29>
+|     `-CallExpr 0x7fea9c041f80 <col:10, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fea9c041f68 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fea9c041ea0 <col:10> 'int ()' Function 0x7fea9c041df0 'pf_printf_a' 'int ()'
+|       `-UnaryOperator 0x7fea9c041f48 <col:22, col:23> 'struct __va_list_tag **' prefix '&'
+|         `-DeclRefExpr 0x7fea9c041ec8 <col:23> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fea9c029b80 'valist' 'struct __va_list_tag *':'struct __va_list_tag *'
+|-FunctionDecl 0x7fea9c0421d0 <line:22:1, line:26:1> line:23:1 MSVCRT_vprintf_s 'int (const char *, struct __va_list_tag *) __attribute__((cdecl))':'int (const char *, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7fea9c042000 <col:18, col:30> col:30 used format 'const char *'
+| |-ParmVarDecl 0x7fea9c042070 <col:38, col:46> col:46 used valist 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-CompoundStmt 0x7fea9c042498 <line:24:1, line:26:1>
+|   `-ReturnStmt 0x7fea9c042480 <line:25:3, col:57>
+|     `-CallExpr 0x7fea9c042410 <col:10, col:57> 'int'
+|       |-ImplicitCastExpr 0x7fea9c0423f8 <col:10> 'int (*)(MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fea9c042280 <col:10> 'int (MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))':'int (MSVCRT_FILE *, const char *, struct __va_list_tag *)' Function 0x7fea9c029d08 'MSVCRT_vfprintf_s' 'int (MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))':'int (MSVCRT_FILE *, const char *, struct __va_list_tag *)'
+|       |-ParenExpr 0x7fea9c042330 <col:28, col:42> 'MSVCRT_FILE *'
+|       | `-BinaryOperator 0x7fea9c042308 <col:29, col:41> 'MSVCRT_FILE *' '+'
+|       |   |-ImplicitCastExpr 0x7fea9c0422f0 <col:29> 'MSVCRT_FILE *' <ArrayToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fea9c0422a8 <col:29> 'MSVCRT_FILE [20]' lvalue Var 0x7fea9c0296e8 'MSVCRT__iob' 'MSVCRT_FILE [20]'
+|       |   `-IntegerLiteral 0x7fea9c0422d0 <col:41> 'int' 1
+|       |-ImplicitCastExpr 0x7fea9c042450 <col:44> 'const char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fea9c042350 <col:44> 'const char *' lvalue ParmVar 0x7fea9c042000 'format' 'const char *'
+|       `-ImplicitCastExpr 0x7fea9c042468 <col:51> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fea9c042378 <col:51> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fea9c042070 'valist' 'struct __va_list_tag *':'struct __va_list_tag *'
+`-FunctionDecl 0x7fea9c0426a0 <line:27:1, line:33:1> line:28:1 MSVCRT_fprintf_s 'int (MSVCRT_FILE *, const char *, ...) __attribute__((cdecl))':'int (MSVCRT_FILE *, const char *, ...)'
+  |-ParmVarDecl 0x7fea9c0424c0 <col:18, col:31> col:31 used file 'MSVCRT_FILE *'
+  |-ParmVarDecl 0x7fea9c042538 <col:37, col:49> col:49 used format 'const char *'
+  `-CompoundStmt 0x7fea9c042b00 <line:29:1, line:33:1>
+    |-DeclStmt 0x7fea9c0427c0 <line:30:3, col:17>
+    | `-VarDecl 0x7fea9c042760 <col:3, col:11> col:11 used valist 'va_list':'struct __va_list_tag [1]'
+    |-CallExpr 0x7fea9c042940 <line:31:3, col:27> 'int'
+    | |-ImplicitCastExpr 0x7fea9c042928 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fea9c0428b0 <col:3> 'int ()' Function 0x7fea9c042800 'va_start' 'int ()'
+    | |-ImplicitCastExpr 0x7fea9c042978 <col:13> 'struct __va_list_tag *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7fea9c0428d8 <col:13> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fea9c042760 'valist' 'va_list':'struct __va_list_tag [1]'
+    | `-ImplicitCastExpr 0x7fea9c042990 <col:21> 'const char *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fea9c042900 <col:21> 'const char *' lvalue ParmVar 0x7fea9c042538 'format' 'const char *'
+    `-ReturnStmt 0x7fea9c042ae8 <line:32:3, col:48>
+      `-CallExpr 0x7fea9c042a60 <col:10, col:48> 'int'
+        |-ImplicitCastExpr 0x7fea9c042a48 <col:10> 'int (*)(MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fea9c0429a8 <col:10> 'int (MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))':'int (MSVCRT_FILE *, const char *, struct __va_list_tag *)' Function 0x7fea9c029d08 'MSVCRT_vfprintf_s' 'int (MSVCRT_FILE *, const char *, struct __va_list_tag *) __attribute__((cdecl))':'int (MSVCRT_FILE *, const char *, struct __va_list_tag *)'
+        |-ImplicitCastExpr 0x7fea9c042aa0 <col:28> 'MSVCRT_FILE *' <LValueToRValue>
+        | `-DeclRefExpr 0x7fea9c0429d0 <col:28> 'MSVCRT_FILE *' lvalue ParmVar 0x7fea9c0424c0 'file' 'MSVCRT_FILE *'
+        |-ImplicitCastExpr 0x7fea9c042ab8 <col:34> 'const char *' <LValueToRValue>
+        | `-DeclRefExpr 0x7fea9c0429f8 <col:34> 'const char *' lvalue ParmVar 0x7fea9c042538 'format' 'const char *'
+        `-ImplicitCastExpr 0x7fea9c042ad0 <col:42> 'struct __va_list_tag *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fea9c042a20 <col:42> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7fea9c042760 'valist' 'va_list':'struct __va_list_tag [1]'

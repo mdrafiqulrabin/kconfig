@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fe1e982bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe1e986d800 <../Data/C2AST/pr26983.c:6:1, col:15> col:7 used jmpbuf 'void *[6]'
+|-FunctionDecl 0x7fe1e986d960 <line:8:1, line:12:1> line:9:1 foo 'void (void)'
+| `-CompoundStmt 0x7fe1e986dca8 <line:10:1, line:12:1>
+|   `-CallExpr 0x7fe1e986dc60 <line:11:3, col:27> 'int'
+|     |-ImplicitCastExpr 0x7fe1e986dc48 <col:3> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fe1e986dbb8 <col:3> '<builtin fn type>' Function 0x7fe1e986da68 '__builtin_setjmp' 'int (void **)'
+|     `-ImplicitCastExpr 0x7fe1e986dc90 <col:21> 'void **' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7fe1e986dbe0 <col:21> 'void *[6]' lvalue Var 0x7fe1e986d800 'jmpbuf' 'void *[6]'
+|-FunctionDecl 0x7fe1e986da68 <col:3> col:3 implicit used __builtin_setjmp 'int (void **)' extern
+| |-ParmVarDecl 0x7fe1e986db08 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ReturnsTwiceAttr 0x7fe1e986db70 <col:3> Implicit
+`-FunctionDecl 0x7fe1e986dd88 <line:14:1, line:18:1> line:15:1 main 'int (void)'
+  `-CompoundStmt 0x7fe1e986de90 <line:16:1, line:18:1>
+    `-ReturnStmt 0x7fe1e986de78 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fe1e986de58 <col:10> 'int' 0

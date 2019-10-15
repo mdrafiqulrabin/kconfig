@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fa5a282bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa5a282c978 <../Data/C2AST/pr27341-1.c:1:1, col:15> col:15 used R_NaReal 'double' extern
+`-FunctionDecl 0x7fa5a286d9c0 <line:2:1, line:6:1> line:2:6 z_atan2 'void (_Complex double *, _Complex double *)'
+  |-ParmVarDecl 0x7fa5a286d878 <col:15, col:33> col:33 used r '_Complex double *'
+  |-ParmVarDecl 0x7fa5a286d8e8 <col:36, col:54> col:54 used ccs '_Complex double *'
+  `-CompoundStmt 0x7fa5a286dc80 <line:3:1, line:6:1>
+    `-IfStmt 0x7fa5a286dc48 <line:4:5, line:5:23>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa5a286db38 <line:4:9, col:17> 'int' '=='
+      | |-ImplicitCastExpr 0x7fa5a286daf0 <col:9, col:10> '_Complex double' <LValueToRValue>
+      | | `-UnaryOperator 0x7fa5a286dab0 <col:9, col:10> '_Complex double' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7fa5a286da98 <col:10> '_Complex double *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fa5a286da70 <col:10> '_Complex double *' lvalue ParmVar 0x7fa5a286d8e8 'ccs' '_Complex double *'
+      | `-ImplicitCastExpr 0x7fa5a286db20 <col:17> '_Complex double' <FloatingRealToComplex>
+      |   `-ImplicitCastExpr 0x7fa5a286db08 <col:17> 'double' <IntegralToFloating>
+      |     `-IntegerLiteral 0x7fa5a286dad0 <col:17> 'int' 0
+      |-BinaryOperator 0x7fa5a286dc20 <line:5:9, col:23> 'double' '='
+      | |-UnaryOperator 0x7fa5a286dbc0 <col:9, col:19> 'double' lvalue prefix '__imag'
+      | | `-UnaryOperator 0x7fa5a286dba0 <col:18, col:19> '_Complex double' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7fa5a286db88 <col:19> '_Complex double *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fa5a286db60 <col:19> '_Complex double *' lvalue ParmVar 0x7fa5a286d878 'r' '_Complex double *'
+      | `-ImplicitCastExpr 0x7fa5a286dc08 <col:23> 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa5a286dbe0 <col:23> 'double' lvalue Var 0x7fa5a282c978 'R_NaReal' 'double'
+      `-<<<NULL>>>

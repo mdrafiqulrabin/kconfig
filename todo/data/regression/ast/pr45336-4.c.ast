@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fb84f8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb850838a90 <../Data/C2AST/pr45336-4.c:12:1, col:71> col:15 foo8 'long long (__m128i)'
+| |-ParmVarDecl 0x7fb850838a00 <col:20, col:28> col:28 used x '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fb850838f48 <col:31, col:71>
+|   `-ReturnStmt 0x7fb850838f30 <col:33, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1066:73>
+|     `-ImplicitCastExpr 0x7fb850838f18 <../Data/C2AST/pr45336-4.c:12:40, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1066:73> 'long long' <IntegralCast>
+|       `-CStyleCastExpr 0x7fb850838ef0 <../Data/C2AST/pr45336-4.c:12:40, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1066:73> 'char' <IntegralCast>
+|         `-ParenExpr 0x7fb850838ed0 <line:1064:32, line:1066:73> 'int'
+|           `-UnaryOperator 0x7fb850838e70 <line:1064:33, line:1066:72> 'int' prefix '__extension__'
+|             `-StmtExpr 0x7fb850838e50 <line:1065:33, line:1066:72> 'int'
+|               `-CompoundStmt 0x7fb850838e30 <line:1065:34, line:1066:71>
+|                 |-DeclStmt 0x7fb850838ca8 <line:1065:36, col:71>
+|                 | `-VarDecl 0x7fb850838b48 <col:36, col:70> col:44 used __a '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' cinit
+|                 |   `-CStyleCastExpr 0x7fb850838c80 <col:50, col:70> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <BitCast>
+|                 |     `-CStyleCastExpr 0x7fb850838c48 <col:59, col:70> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+|                 |       `-ImplicitCastExpr 0x7fb850838c30 <col:68, col:70> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|                 |         `-ParenExpr 0x7fb850838c10 <col:68, col:70> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+|                 |           `-DeclRefExpr 0x7fb850838ba8 <../Data/C2AST/pr45336-4.c:12:64> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fb850838a00 'x' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|                 `-CStyleCastExpr 0x7fb850838e08 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1066:36, col:69> 'int' <IntegralCast>
+|                   `-CStyleCastExpr 0x7fb850838dc8 <col:41, col:69> 'unsigned char' <IntegralCast>
+|                     `-ImplicitCastExpr 0x7fb850838db0 <col:57, col:69> 'char' <LValueToRValue>
+|                       `-ArraySubscriptExpr 0x7fb850838d70 <col:57, col:69> 'char' lvalue vectorcomponent
+|                         |-DeclRefExpr 0x7fb850838cc0 <col:57> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7fb850838b48 '__a' '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|                         `-BinaryOperator 0x7fb850838d48 <col:61, col:67> 'int' '&'
+|                           |-ParenExpr 0x7fb850838d08 <col:61, col:63> 'int'
+|                           | `-IntegerLiteral 0x7fb850838ce8 <../Data/C2AST/pr45336-4.c:12:67> 'int' 4
+|                           `-IntegerLiteral 0x7fb850838d28 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1066:67> 'int' 15
+|-FunctionDecl 0x7fb850839000 <../Data/C2AST/pr45336-4.c:13:1, col:74> col:15 foo16 'long long (__m128i)'
+| |-ParmVarDecl 0x7fb850838f70 <col:21, col:29> col:29 used x '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fb850839250 <col:32, col:74>
+|   `-ReturnStmt 0x7fb850839238 <col:34, col:71>
+|     `-ImplicitCastExpr 0x7fb850839220 <col:41, col:71> 'long long' <IntegralCast>
+|       `-CStyleCastExpr 0x7fb8508391f8 <col:41, col:71> 'short' <IntegralCast>
+|         `-CallExpr 0x7fb850839190 <col:49, col:71> 'int'
+|           |-ImplicitCastExpr 0x7fb850839178 <col:49> 'int (*)(__m128i, int)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fb8508390a8 <col:49> 'int (__m128i, int)' Function 0x7fb8500d9078 '_mm_extract_epi16' 'int (__m128i, int)'
+|           |-ImplicitCastExpr 0x7fb8508391c8 <col:67> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fb8508390d0 <col:67> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fb850838f70 'x' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|           `-IntegerLiteral 0x7fb8508390f8 <col:70> 'int' 3
+`-FunctionDecl 0x7fb850839308 <line:14:1, col:72> col:15 foo32 'long long (__m128i)'
+  |-ParmVarDecl 0x7fb850839278 <col:21, col:29> col:29 used x '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fb850839788 <col:32, col:72>
+    `-ReturnStmt 0x7fb850839770 <col:34, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1092:57>
+      `-ImplicitCastExpr 0x7fb850839758 <../Data/C2AST/pr45336-4.c:14:41, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1092:57> 'long long' <IntegralCast>
+        `-CStyleCastExpr 0x7fb850839730 <../Data/C2AST/pr45336-4.c:14:41, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1092:57> 'int' <NoOp>
+          `-ParenExpr 0x7fb850839710 <line:1090:33, line:1092:57> 'int'
+            `-UnaryOperator 0x7fb8508396a8 <line:1090:34, line:1092:56> 'int' prefix '__extension__'
+              `-StmtExpr 0x7fb850839688 <line:1091:34, line:1092:56> 'int'
+                `-CompoundStmt 0x7fb850839668 <line:1091:35, line:1092:55>
+                  |-DeclStmt 0x7fb850839520 <line:1091:37, col:70>
+                  | `-VarDecl 0x7fb8508393c0 <col:37, col:69> col:44 used __a '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+                  |   `-CStyleCastExpr 0x7fb8508394f8 <col:50, col:69> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <BitCast>
+                  |     `-CStyleCastExpr 0x7fb8508394c0 <col:58, col:69> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+                  |       `-ImplicitCastExpr 0x7fb8508394a8 <col:67, col:69> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+                  |         `-ParenExpr 0x7fb850839488 <col:67, col:69> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+                  |           `-DeclRefExpr 0x7fb850839420 <../Data/C2AST/pr45336-4.c:14:65> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fb850839278 'x' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                  `-CStyleCastExpr 0x7fb850839640 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1092:37, col:53> 'int' <NoOp>
+                    `-ImplicitCastExpr 0x7fb850839628 <col:42, col:53> 'int' <LValueToRValue>
+                      `-ArraySubscriptExpr 0x7fb8508395e8 <col:42, col:53> 'int' lvalue vectorcomponent
+                        |-DeclRefExpr 0x7fb850839538 <col:42> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fb8508393c0 '__a' '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+                        `-BinaryOperator 0x7fb8508395c0 <col:46, col:52> 'int' '&'
+                          |-ParenExpr 0x7fb850839580 <col:46, col:48> 'int'
+                          | `-IntegerLiteral 0x7fb850839560 <../Data/C2AST/pr45336-4.c:14:68> 'int' 2
+                          `-IntegerLiteral 0x7fb8508395a0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:1092:52> 'int' 3

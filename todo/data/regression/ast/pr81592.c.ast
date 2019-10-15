@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fa2cb82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa2cc09b218 <../Data/C2AST/pr81592.c:6:1, line:18:1> line:6:5 proc_keys_show 'int (long, long)'
+| |-ParmVarDecl 0x7fa2cc09b0c0 <col:20, col:25> col:25 used expiry 'long'
+| |-ParmVarDecl 0x7fa2cc09b138 <col:33, col:38> col:38 used now 'long'
+| `-CompoundStmt 0x7fa2cc09bfe8 <line:7:1, line:18:1>
+|   |-DeclStmt 0x7fa2cc09b340 <line:8:2, col:20>
+|   | `-VarDecl 0x7fa2cc09b2e0 <col:2, col:16> col:16 used timo 'unsigned long'
+|   |-DeclStmt 0x7fa2cc09b438 <line:9:2, col:14>
+|   | `-VarDecl 0x7fa2cc09b3d8 <col:2, col:13> col:7 used xbuf 'char [4]'
+|   |-IfStmt 0x7fa2cc09bf78 <line:11:2, line:15:2>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa2cc09b4d0 <line:11:6, col:12> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fa2cc09b4a0 <col:6> 'long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa2cc09b450 <col:6> 'long' lvalue ParmVar 0x7fa2cc09b138 'now' 'long'
+|   | | `-ImplicitCastExpr 0x7fa2cc09b4b8 <col:12> 'long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa2cc09b478 <col:12> 'long' lvalue ParmVar 0x7fa2cc09b0c0 'expiry' 'long'
+|   | |-CompoundStmt 0x7fa2cc09bf58 <col:20, line:15:2>
+|   | | |-BinaryOperator 0x7fa2cc09b5e0 <line:12:3, col:19> 'unsigned long' '='
+|   | | | |-DeclRefExpr 0x7fa2cc09b4f8 <col:3> 'unsigned long' lvalue Var 0x7fa2cc09b2e0 'timo' 'unsigned long'
+|   | | | `-ImplicitCastExpr 0x7fa2cc09b5c8 <col:10, col:19> 'unsigned long' <IntegralCast>
+|   | | |   `-BinaryOperator 0x7fa2cc09b5a0 <col:10, col:19> 'long' '-'
+|   | | |     |-ImplicitCastExpr 0x7fa2cc09b570 <col:10> 'long' <LValueToRValue>
+|   | | |     | `-DeclRefExpr 0x7fa2cc09b520 <col:10> 'long' lvalue ParmVar 0x7fa2cc09b0c0 'expiry' 'long'
+|   | | |     `-ImplicitCastExpr 0x7fa2cc09b588 <col:19> 'long' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fa2cc09b548 <col:19> 'long' lvalue ParmVar 0x7fa2cc09b138 'now' 'long'
+|   | | `-IfStmt 0x7fa2cc09bf20 <line:13:3, /usr/include/secure/_stdio.h:47:67>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fa2cc09b680 <../Data/C2AST/pr81592.c:13:7, col:14> 'int' '<'
+|   | |   | |-ImplicitCastExpr 0x7fa2cc09b650 <col:7> 'unsigned long' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fa2cc09b608 <col:7> 'unsigned long' lvalue Var 0x7fa2cc09b2e0 'timo' 'unsigned long'
+|   | |   | `-ImplicitCastExpr 0x7fa2cc09b668 <col:14> 'unsigned long' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7fa2cc09b630 <col:14> 'int' 60
+|   | |   |-CallExpr 0x7fa2cc09be70 </usr/include/secure/_stdio.h:47:3, col:67> 'int'
+|   | |   | |-ImplicitCastExpr 0x7fa2cc09be58 <col:3> 'int (*)(char *, int, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|   | |   | | `-DeclRefExpr 0x7fa2cc09b940 <col:3> '<builtin fn type>' Function 0x7fa2cc09b6a8 '__builtin___sprintf_chk' 'int (char *, int, unsigned long, const char *, ...)'
+|   | |   | |-ImplicitCastExpr 0x7fa2cc09bec0 <../Data/C2AST/pr81592.c:14:12> 'char *' <ArrayToPointerDecay>
+|   | |   | | `-DeclRefExpr 0x7fa2cc09b968 <col:12> 'char [4]' lvalue Var 0x7fa2cc09b3d8 'xbuf' 'char [4]'
+|   | |   | |-IntegerLiteral 0x7fa2cc09b990 </usr/include/secure/_stdio.h:47:33> 'int' 0
+|   | |   | |-CallExpr 0x7fa2cc09bd30 </usr/include/secure/_common.h:39:31, col:92> 'unsigned long'
+|   | |   | | |-ImplicitCastExpr 0x7fa2cc09bd18 <col:31> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   | |   | | | `-DeclRefExpr 0x7fa2cc09bba8 <col:31> '<builtin fn type>' Function 0x7fa2cc09b9f0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   | |   | | |-ImplicitCastExpr 0x7fa2cc09bd80 <../Data/C2AST/pr81592.c:14:12> 'const void *' <BitCast>
+|   | |   | | | `-ImplicitCastExpr 0x7fa2cc09bd68 <col:12> 'char *' <ArrayToPointerDecay>
+|   | |   | | |   `-DeclRefExpr 0x7fa2cc09bbd0 <col:12> 'char [4]' lvalue Var 0x7fa2cc09b3d8 'xbuf' 'char [4]'
+|   | |   | | `-ConditionalOperator 0x7fa2cc09bca8 </usr/include/secure/_common.h:30:32, line:39:91> 'int'
+|   | |   | |   |-BinaryOperator 0x7fa2cc09bc40 <line:30:32, line:39:83> 'int' '>'
+|   | |   | |   | |-IntegerLiteral 0x7fa2cc09bc00 <line:30:32> 'int' 2
+|   | |   | |   | `-IntegerLiteral 0x7fa2cc09bc20 <line:39:83> 'int' 1
+|   | |   | |   |-IntegerLiteral 0x7fa2cc09bc68 <col:87> 'int' 1
+|   | |   | |   `-IntegerLiteral 0x7fa2cc09bc88 <col:91> 'int' 0
+|   | |   | |-ImplicitCastExpr 0x7fa2cc09bef0 <../Data/C2AST/pr81592.c:14:18> 'const char *' <BitCast>
+|   | |   | | `-ImplicitCastExpr 0x7fa2cc09bed8 <col:18> 'char *' <ArrayToPointerDecay>
+|   | |   | |   `-StringLiteral 0x7fa2cc09bdd8 <col:18> 'char [5]' lvalue "%lus"
+|   | |   | `-ImplicitCastExpr 0x7fa2cc09bf08 <col:26> 'unsigned long' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fa2cc09be08 <col:26> 'unsigned long' lvalue Var 0x7fa2cc09b2e0 'timo' 'unsigned long'
+|   | |   `-<<<NULL>>>
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa2cc09bfd0 <line:17:2, col:9>
+|     `-IntegerLiteral 0x7fa2cc09bfb0 <col:9> 'int' 0
+|-FunctionDecl 0x7fa2cc09b6a8 </usr/include/secure/_stdio.h:47:3> col:3 implicit used __builtin___sprintf_chk 'int (char *, int, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa2cc09b748 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fa2cc09b7a8 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fa2cc09b808 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fa2cc09b868 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fa2cc09b8e8 <col:3> Implicit printf 4 5
+`-FunctionDecl 0x7fa2cc09b9f0 </usr/include/secure/_common.h:39:31> col:31 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+  |-ParmVarDecl 0x7fa2cc09ba90 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fa2cc09baf0 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7fa2cc09bb60 <col:31> Implicit

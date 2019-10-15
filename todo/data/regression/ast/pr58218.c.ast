@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fb2570186e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb257019360 <../Data/C2AST/pr58218.c:5:1, col:26> col:1 struct definition
+| `-FieldDecl 0x7fb2580142a0 <col:10, col:23> col:16 x 'float [16385]'
+`-VarDecl 0x7fb258014340 <col:1, col:43> col:28 a 'struct (anonymous struct at ../Data/C2AST/pr58218.c:5:1)':'struct (anonymous at ../Data/C2AST/pr58218.c:5:1)' cinit
+  `-InitListExpr 0x7fb258014490 <col:32, col:43> 'struct (anonymous struct at ../Data/C2AST/pr58218.c:5:1)':'struct (anonymous at ../Data/C2AST/pr58218.c:5:1)'
+    `-InitListExpr 0x7fb2580144d8 <col:34, col:41> 'float [16385]'
+      |-array filler
+      | `-ImplicitValueInitExpr 0x7fb258014520 <<invalid sloc>> 'float'
+      `-FloatingLiteral 0x7fb2580143e0 <col:36> 'float' 0.000000e+00

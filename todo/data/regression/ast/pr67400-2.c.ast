@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fbc6e818ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc6e85a820 <../Data/C2AST/pr67400-2.c:4:1, col:22> col:13 used bar 'void (void)' extern
+|-VarDecl 0x7fbc6e85a918 <line:5:1, col:14> col:14 used p 'void *' extern
+`-FunctionDecl 0x7fbc6e85aa08 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fbc6e85ab88 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fbc6e85ab60 <line:10:3, col:8> 'void *' '='
+      |-DeclRefExpr 0x7fbc6e85aaa8 <col:3> 'void *' lvalue Var 0x7fbc6e85a918 'p' 'void *'
+      `-ImplicitCastExpr 0x7fbc6e85ab48 <col:7, col:8> 'void *' <BitCast>
+        `-UnaryOperator 0x7fbc6e85ab28 <col:7, col:8> 'void (*)(void)' prefix '&'
+          `-DeclRefExpr 0x7fbc6e85aad0 <col:8> 'void (void)' Function 0x7fbc6e85a820 'bar' 'void (void)'

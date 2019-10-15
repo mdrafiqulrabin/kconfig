@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7f8e5182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e5182c978 <../Data/C2AST/pr79733.c:5:1, col:24> col:24 referenced __mmask16 'unsigned short'
+| `-BuiltinType 0x7f8e5182be60 'unsigned short'
+|-FunctionDecl 0x7f8e52015388 <line:7:1, line:13:1> line:9:1 used _mm512_kortestc 'int (__mmask16, __mmask16)' extern inline
+| |-ParmVarDecl 0x7f8e52015200 <col:18, col:28> col:28 used __A '__mmask16':'unsigned short'
+| |-ParmVarDecl 0x7f8e52015270 <col:33, col:43> col:43 used __B '__mmask16':'unsigned short'
+| |-CompoundStmt 0x7f8e52015840 <line:10:1, line:13:1>
+| | `-ReturnStmt 0x7f8e52015828 <line:11:3, line:12:64>
+| |   `-ImplicitCastExpr 0x7f8e52015810 <line:11:10, line:12:64> 'int' <IntegralCast>
+| |     `-CStyleCastExpr 0x7f8e520157e8 <line:11:10, line:12:64> '__mmask16':'unsigned short' <IntegralCast>
+| |       `-CallExpr 0x7f8e520157a0 <line:11:22, line:12:64> 'int'
+| |         |-ImplicitCastExpr 0x7f8e52015788 <line:11:22> 'int (*)(unsigned short, unsigned short)' <BuiltinFnToFnPtr>
+| |         | `-DeclRefExpr 0x7f8e52015640 <col:22> '<builtin fn type>' Function 0x7f8e520154d0 '__builtin_ia32_kortestchi' 'int (unsigned short, unsigned short)'
+| |         |-CStyleCastExpr 0x7f8e520156b8 <col:49, col:61> '__mmask16':'unsigned short' <NoOp>
+| |         | `-ImplicitCastExpr 0x7f8e520156a0 <col:61> '__mmask16':'unsigned short' <LValueToRValue>
+| |         |   `-DeclRefExpr 0x7f8e52015668 <col:61> '__mmask16':'unsigned short' lvalue ParmVar 0x7f8e52015200 '__A' '__mmask16':'unsigned short'
+| |         `-CStyleCastExpr 0x7f8e52015730 <line:12:49, col:61> '__mmask16':'unsigned short' <NoOp>
+| |           `-ImplicitCastExpr 0x7f8e52015718 <col:61> '__mmask16':'unsigned short' <LValueToRValue>
+| |             `-DeclRefExpr 0x7f8e520156e0 <col:61> '__mmask16':'unsigned short' lvalue ParmVar 0x7f8e52015270 '__B' '__mmask16':'unsigned short'
+| |-AlwaysInlineAttr 0x7f8e52015438 <line:8:33> always_inline
+| `-GNUInlineAttr 0x7f8e52015480 <col:17>
+|-FunctionDecl 0x7f8e520154d0 <line:11:22> col:22 implicit used __builtin_ia32_kortestchi 'int (unsigned short, unsigned short)' extern
+| |-ParmVarDecl 0x7f8e52015570 <<invalid sloc>> <invalid sloc> 'unsigned short'
+| `-ParmVarDecl 0x7f8e520155d0 <<invalid sloc>> <invalid sloc> 'unsigned short'
+`-FunctionDecl 0x7f8e520158a8 <line:15:1, line:23:1> line:16:1 avx512f_test 'void ()'
+  `-CompoundStmt 0x7f8e52015ce8 <line:17:1, line:23:1>
+    |-DeclStmt 0x7f8e520159f0 <line:18:3, col:28>
+    | `-VarDecl 0x7f8e52015958 <col:3, col:27> col:22 used k1 'volatile __mmask16':'volatile unsigned short' cinit
+    |   `-ImplicitCastExpr 0x7f8e520159d8 <col:27> '__mmask16':'unsigned short' <IntegralCast>
+    |     `-IntegerLiteral 0x7f8e520159b8 <col:27> 'int' 0
+    |-DeclStmt 0x7f8e52015ab0 <line:19:3, col:19>
+    | `-VarDecl 0x7f8e52015a18 <col:3, col:18> col:13 used k2 '__mmask16':'unsigned short' cinit
+    |   `-ImplicitCastExpr 0x7f8e52015a98 <col:18> '__mmask16':'unsigned short' <IntegralCast>
+    |     `-IntegerLiteral 0x7f8e52015a78 <col:18> 'int' 0
+    |-DeclStmt 0x7f8e52015b40 <line:20:3, col:19>
+    | `-VarDecl 0x7f8e52015ae0 <col:3, col:18> col:18 used r 'volatile short'
+    `-BinaryOperator 0x7f8e52015cc0 <line:22:3, col:30> 'short' '='
+      |-DeclRefExpr 0x7f8e52015b58 <col:3> 'volatile short' lvalue Var 0x7f8e52015ae0 'r' 'volatile short'
+      `-ImplicitCastExpr 0x7f8e52015ca8 <col:7, col:30> 'short' <IntegralCast>
+        `-CallExpr 0x7f8e52015c40 <col:7, col:30> 'int'
+          |-ImplicitCastExpr 0x7f8e52015c28 <col:7> 'int (*)(__mmask16, __mmask16)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f8e52015b80 <col:7> 'int (__mmask16, __mmask16)' Function 0x7f8e52015388 '_mm512_kortestc' 'int (__mmask16, __mmask16)'
+          |-ImplicitCastExpr 0x7f8e52015c78 <col:24> '__mmask16':'unsigned short' <LValueToRValue>
+          | `-DeclRefExpr 0x7f8e52015ba8 <col:24> 'volatile __mmask16':'volatile unsigned short' lvalue Var 0x7f8e52015958 'k1' 'volatile __mmask16':'volatile unsigned short'
+          `-ImplicitCastExpr 0x7f8e52015c90 <col:28> '__mmask16':'unsigned short' <LValueToRValue>
+            `-DeclRefExpr 0x7f8e52015bd0 <col:28> '__mmask16':'unsigned short' lvalue Var 0x7f8e52015a18 'k2' '__mmask16':'unsigned short'

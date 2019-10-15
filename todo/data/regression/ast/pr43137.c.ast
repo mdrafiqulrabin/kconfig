@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fdd738292e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdd75047e00 <../Data/C2AST/pr43137.c:4:1, col:9> col:5 used foo 'int ()'
+`-FunctionDecl 0x7fdd75047f30 <line:5:1, line:9:1> line:5:11 bar22 'long long ()'
+  `-CompoundStmt 0x7fdd75048160 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fdd750480d8 <line:7:3, col:21>
+    | `-VarDecl 0x7fdd75047fe8 <col:3, col:20> col:7 used result 'int' cinit
+    |   `-CallExpr 0x7fdd750480b0 <col:16, col:20> 'int'
+    |     `-ImplicitCastExpr 0x7fdd75048098 <col:16> 'int (*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fdd75048048 <col:16> 'int ()' Function 0x7fdd75047e00 'foo' 'int ()'
+    `-ReturnStmt 0x7fdd75048148 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7fdd75048130 <col:10> 'long long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fdd75048118 <col:10> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fdd750480f0 <col:10> 'int' lvalue Var 0x7fdd75047fe8 'result' 'int'

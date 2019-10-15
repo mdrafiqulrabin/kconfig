@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f826b017ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f826b83dc38 <../Data/C2AST/pr57980.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7f826b83dc00 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7f826b017fe0 'int'
+|-FunctionDecl 0x7f826b83dda0 <line:6:1, col:17> col:10 used f 'V (void)' extern
+|-FunctionDecl 0x7f826b83df10 <line:8:1, line:12:1> line:9:1 bar 'V (void)'
+| `-CompoundStmt 0x7f826b83e0b0 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7f826b83e098 <line:11:3, col:14>
+|     `-UnaryOperator 0x7f826b83e078 <col:10, col:14> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int' prefix '-'
+|       `-CallExpr 0x7f826b83e050 <col:11, col:14> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|         `-ImplicitCastExpr 0x7f826b83e038 <col:11> 'V (*)(void)' <FunctionToPointerDecay>
+|           `-DeclRefExpr 0x7f826b83dfb0 <col:11> 'V (void)' Function 0x7f826b83dda0 'f' 'V (void)'
+`-FunctionDecl 0x7f826b83e158 <line:14:1, line:19:1> line:15:1 foo 'V (void)'
+  `-CompoundStmt 0x7f826b83e418 <line:16:1, line:19:1>
+    |-DeclStmt 0x7f826b83e318 <line:17:3, col:12>
+    | `-VarDecl 0x7f826b83e208 <col:3, col:11> col:5 used v 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+    |   `-InitListExpr 0x7f826b83e2a8 <col:9, col:11> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    `-ReturnStmt 0x7f826b83e400 <line:18:3, col:17>
+      `-BinaryOperator 0x7f826b83e3d8 <col:10, col:17> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '-'
+        |-ImplicitCastExpr 0x7f826b83e3c0 <col:10> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f826b83e330 <col:10> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f826b83e208 'v' 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        `-CallExpr 0x7f826b83e398 <col:14, col:17> 'V':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7f826b83e380 <col:14> 'V (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7f826b83e358 <col:14> 'V (void)' Function 0x7f826b83dda0 'f' 'V (void)'

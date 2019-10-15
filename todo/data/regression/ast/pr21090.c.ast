@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fb6b002bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb6b002c978 <../Data/C2AST/pr21090.c:4:1, col:5> col:5 used g 'int'
+|-VarDecl 0x7fb6b006d858 <col:1, col:8> col:8 used h 'int'
+`-FunctionDecl 0x7fb6b006d9b8 <line:6:1, line:20:1> line:7:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fb6b006d8e8 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fb6b006de08 <line:8:1, line:20:1>
+    |-DeclStmt 0x7fb6b006db00 <line:9:3, col:9>
+    | `-VarDecl 0x7fb6b006daa0 <col:3, col:8> col:8 used p 'int *'
+    |-IfStmt 0x7fb6b006dc88 <line:11:3, line:14:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb6b006db40 <line:11:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb6b006db18 <col:7> 'int' lvalue ParmVar 0x7fb6b006d8e8 'a' 'int'
+    | |-BinaryOperator 0x7fb6b006dbc8 <line:12:5, col:10> 'int *' '='
+    | | |-DeclRefExpr 0x7fb6b006db58 <col:5> 'int *' lvalue Var 0x7fb6b006daa0 'p' 'int *'
+    | | `-UnaryOperator 0x7fb6b006dba8 <col:9, col:10> 'int *' prefix '&'
+    | |   `-DeclRefExpr 0x7fb6b006db80 <col:10> 'int' lvalue Var 0x7fb6b002c978 'g' 'int'
+    | `-BinaryOperator 0x7fb6b006dc60 <line:14:5, col:10> 'int *' '='
+    |   |-DeclRefExpr 0x7fb6b006dbf0 <col:5> 'int *' lvalue Var 0x7fb6b006daa0 'p' 'int *'
+    |   `-UnaryOperator 0x7fb6b006dc40 <col:9, col:10> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fb6b006dc18 <col:10> 'int' lvalue Var 0x7fb6b006d858 'h' 'int'
+    `-IfStmt 0x7fb6b006ddd0 <line:16:3, line:19:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb6b006dd38 <line:16:7, col:12> 'int' '!='
+      | |-ImplicitCastExpr 0x7fb6b006dd08 <col:7> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb6b006dcc0 <col:7> 'int *' lvalue Var 0x7fb6b006daa0 'p' 'int *'
+      | `-ImplicitCastExpr 0x7fb6b006dd20 <col:12> 'int *' <NullToPointer>
+      |   `-IntegerLiteral 0x7fb6b006dce8 <col:12> 'int' 0
+      |-ReturnStmt 0x7fb6b006dd80 <line:17:5, col:12>
+      | `-IntegerLiteral 0x7fb6b006dd60 <col:12> 'int' 1
+      `-ReturnStmt 0x7fb6b006ddb8 <line:19:5, col:12>
+        `-IntegerLiteral 0x7fb6b006dd98 <col:12> 'int' 0

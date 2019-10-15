@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fd67881cce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd678811fa0 <../Data/C2AST/pr44391.c:3:1, line:7:1> line:3:6 byte_insert_op1 'void (unsigned char *, unsigned char *, unsigned int *)'
+  |-ParmVarDecl 0x7fd67881d9a0 <col:23, col:38> col:38 used loc 'unsigned char *'
+  |-ParmVarDecl 0x7fd678811e18 <col:43, col:58> col:58 used end 'unsigned char *'
+  |-ParmVarDecl 0x7fd678811ec0 <col:63, col:73> col:73 used pto 'unsigned int *'
+  `-CompoundStmt 0x7fd678812280 <line:4:1, line:7:1>
+    `-WhileStmt 0x7fd678812260 <line:5:3, line:6:15>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd678812118 <line:5:10, col:17> 'int' '!='
+      | |-ImplicitCastExpr 0x7fd6788120e8 <col:10> 'unsigned char *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd678812098 <col:10> 'unsigned char *' lvalue ParmVar 0x7fd678811e18 'end' 'unsigned char *'
+      | `-ImplicitCastExpr 0x7fd678812100 <col:17> 'unsigned char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd6788120c0 <col:17> 'unsigned char *' lvalue ParmVar 0x7fd67881d9a0 'loc' 'unsigned char *'
+      `-BinaryOperator 0x7fd678812238 <line:6:5, col:15> 'unsigned int' '='
+        |-UnaryOperator 0x7fd678812180 <col:5, col:6> 'unsigned int' lvalue prefix '*'
+        | `-ImplicitCastExpr 0x7fd678812168 <col:6> 'unsigned int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd678812140 <col:6> 'unsigned int *' lvalue ParmVar 0x7fd678811ec0 'pto' 'unsigned int *'
+        `-ImplicitCastExpr 0x7fd678812220 <col:12, col:15> 'unsigned int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fd678812208 <col:12, col:15> 'unsigned char' <LValueToRValue>
+            `-UnaryOperator 0x7fd6788121e8 <col:12, col:15> 'unsigned char' lvalue prefix '*'
+              `-UnaryOperator 0x7fd6788121c8 <col:13, col:15> 'unsigned char *' prefix '--'
+                `-DeclRefExpr 0x7fd6788121a0 <col:15> 'unsigned char *' lvalue ParmVar 0x7fd678811e18 'end' 'unsigned char *'

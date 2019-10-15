@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fd06e02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd06e814268 <../Data/C2AST/pr85286.c:5:1, line:18:1> line:6:1 foo 'int (short)'
+  |-ParmVarDecl 0x7fd06e02c978 <col:6, col:12> col:12 used x 'short'
+  `-CompoundStmt 0x7fd06e814ae0 <line:7:1, line:18:1>
+    |-DeclStmt 0x7fd06e814458 <line:8:3, col:13>
+    | |-VarDecl 0x7fd06e814368 <col:3, col:9> col:9 used i 'short'
+    | `-VarDecl 0x7fd06e8143e0 <col:3, col:12> col:12 used y 'short'
+    |-DeclStmt 0x7fd06e8144e8 <line:9:3, col:10>
+    | `-VarDecl 0x7fd06e814488 <col:3, col:7> col:7 used sum 'int'
+    |-ForStmt 0x7fd06e8147e8 <line:11:3, line:12:13>
+    | |-BinaryOperator 0x7fd06e814560 <line:11:8, col:12> 'short' '='
+    | | |-DeclRefExpr 0x7fd06e814500 <col:8> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    | | `-ImplicitCastExpr 0x7fd06e814548 <col:12> 'short' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fd06e814528 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd06e814638 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd06e8145f0 <col:15> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fd06e8145d8 <col:15> 'short' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fd06e814588 <col:15> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    | | `-ImplicitCastExpr 0x7fd06e814620 <col:19> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fd06e814608 <col:19> 'short' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fd06e8145b0 <col:19> 'short' lvalue ParmVar 0x7fd06e02c978 'x' 'short'
+    | |-UnaryOperator 0x7fd06e814688 <col:22, col:23> 'short' postfix '++'
+    | | `-DeclRefExpr 0x7fd06e814660 <col:22> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    | `-BinaryOperator 0x7fd06e8147c0 <line:12:5, col:13> 'short' '='
+    |   |-DeclRefExpr 0x7fd06e8146a8 <col:5> 'short' lvalue Var 0x7fd06e8143e0 'y' 'short'
+    |   `-ImplicitCastExpr 0x7fd06e8147a8 <col:9, col:13> 'short' <IntegralCast>
+    |     `-BinaryOperator 0x7fd06e814780 <col:9, col:13> 'int' '*'
+    |       |-ImplicitCastExpr 0x7fd06e814738 <col:9> 'int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7fd06e814720 <col:9> 'short' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fd06e8146d0 <col:9> 'short' lvalue ParmVar 0x7fd06e02c978 'x' 'short'
+    |       `-ImplicitCastExpr 0x7fd06e814768 <col:13> 'int' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7fd06e814750 <col:13> 'short' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fd06e8146f8 <col:13> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    |-ForStmt 0x7fd06e814a50 <line:14:3, line:15:12>
+    | |-BinaryOperator 0x7fd06e814888 <line:14:8, col:12> 'short' '='
+    | | |-DeclRefExpr 0x7fd06e814820 <col:8> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    | | `-ImplicitCastExpr 0x7fd06e814870 <col:12> 'short' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd06e814848 <col:12> 'short' lvalue ParmVar 0x7fd06e02c978 'x' 'short'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd06e814928 <col:15, col:19> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fd06e814910 <col:15> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fd06e8148f8 <col:15> 'short' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fd06e8148b0 <col:15> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    | | `-IntegerLiteral 0x7fd06e8148d8 <col:19> 'int' 0
+    | |-UnaryOperator 0x7fd06e814978 <col:22, col:23> 'short' postfix '--'
+    | | `-DeclRefExpr 0x7fd06e814950 <col:22> 'short' lvalue Var 0x7fd06e814368 'i' 'short'
+    | `-CompoundAssignOperator 0x7fd06e814a18 <line:15:5, col:12> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fd06e814998 <col:5> 'int' lvalue Var 0x7fd06e814488 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7fd06e814a00 <col:12> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fd06e8149e8 <col:12> 'short' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd06e8149c0 <col:12> 'short' lvalue Var 0x7fd06e8143e0 'y' 'short'
+    `-ReturnStmt 0x7fd06e814ac8 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fd06e814ab0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd06e814a88 <col:10> 'int' lvalue Var 0x7fd06e814488 'sum' 'int'

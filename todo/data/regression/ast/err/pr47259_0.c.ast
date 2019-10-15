@@ -1,0 +1,33 @@
+../Data/C2AST/pr47259_0.c:5:20: error: register 'esi' unsuitable for global register variables on this target
+register int r asm("esi");
+                   ^
+1 error generated.
+TranslationUnitDecl 0x7fa5bf82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa5bf82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa5bf82bf80 '__int128'
+|-TypedefDecl 0x7fa5bf82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa5bf82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa5bf82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa5bf82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa5bf82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa5bf82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa5bf82c600 'char *'
+|   `-BuiltinType 0x7fa5bf82bd80 'char'
+|-TypedefDecl 0x7fa5bf82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa5bf82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa5bf82c720 'struct __va_list_tag'
+|     `-Record 0x7fa5bf82c698 '__va_list_tag'
+|-VarDecl 0x7fa5c0014200 <../Data/C2AST/pr47259_0.c:5:1, col:14> col:14 used r 'int' register
+| `-AsmLabelAttr 0x7fa5c0014260 <col:20> "esi"
+`-FunctionDecl 0x7fa5c00143c0 <line:7:1, line:12:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7fa5c0014720 <line:8:1, line:12:1>
+    |-IfStmt 0x7fa5c0014600 <line:9:3, line:10:33>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa5c0014488 <line:9:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa5c0014460 <col:7> 'int' lvalue Var 0x7fa5c0014200 'r' 'int'
+    | |-GCCAsmStmt 0x7fa5c00145a0 <line:10:5, col:33>
+    | | `-DeclRefExpr 0x7fa5c0014578 <col:31> 'int' lvalue Var 0x7fa5c0014200 'r' 'int'
+    | `-<<<NULL>>>
+    `-GCCAsmStmt 0x7fa5c00146c0 <line:11:3, col:31>
+      `-DeclRefExpr 0x7fa5c0014698 <col:29> 'int' lvalue Var 0x7fa5c0014200 'r' 'int'

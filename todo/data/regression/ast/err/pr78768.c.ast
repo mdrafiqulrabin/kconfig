@@ -1,0 +1,43 @@
+../Data/C2AST/pr78768.c:7:3: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  __builtin_sprintf (d, "%32s", "x");    
+  ^
+1 error generated.
+TranslationUnitDecl 0x7ff87f82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff87f82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff87f82bf80 '__int128'
+|-TypedefDecl 0x7ff87f82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff87f82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff87f82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff87f82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff87f82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff87f82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff87f82c600 'char *'
+|   `-BuiltinType 0x7ff87f82bd80 'char'
+|-TypedefDecl 0x7ff87f82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff87f82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff87f82c720 'struct __va_list_tag'
+|     `-Record 0x7ff87f82c698 '__va_list_tag'
+|-FunctionDecl 0x7ff87f86d828 <../Data/C2AST/pr78768.c:3:1, line:10:1> line:3:5 main 'int (void)'
+| `-CompoundStmt 0x7ff87f86dfb0 <line:4:1, line:10:1>
+|   |-DeclStmt 0x7ff87f86dc48 <line:5:3, col:42>
+|   | `-VarDecl 0x7ff87f86d950 <col:3, col:41> col:9 used d 'char *' cinit
+|   |   `-CStyleCastExpr 0x7ff87f86dc20 <col:13, col:41> 'char *' <BitCast>
+|   |     `-CallExpr 0x7ff87f86dbc0 <col:21, col:41> 'void *'
+|   |       |-ImplicitCastExpr 0x7ff87f86dba8 <col:21> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7ff87f86db38 <col:21> '<builtin fn type>' Function 0x7ff87f86d9e8 '__builtin_alloca' 'void *(unsigned long)'
+|   |       `-ImplicitCastExpr 0x7ff87f86dbf0 <col:39> 'unsigned long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7ff87f86db60 <col:39> 'int' 12
+|   |-CallExpr 0x7ff87f86def0 <line:7:3, col:36> 'int'
+|   | |-ImplicitCastExpr 0x7ff87f86ded8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff87f86dd80 <col:3> 'int ()' Function 0x7ff87f86dcd0 '__builtin_sprintf' 'int ()'
+|   | |-ImplicitCastExpr 0x7ff87f86df30 <col:22> 'char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff87f86dda8 <col:22> 'char *' lvalue Var 0x7ff87f86d950 'd' 'char *'
+|   | |-ImplicitCastExpr 0x7ff87f86df48 <col:25> 'char *' <ArrayToPointerDecay>
+|   | | `-StringLiteral 0x7ff87f86de08 <col:25> 'char [5]' lvalue "%32s"
+|   | `-ImplicitCastExpr 0x7ff87f86df60 <col:33> 'char *' <ArrayToPointerDecay>
+|   |   `-StringLiteral 0x7ff87f86de78 <col:33> 'char [2]' lvalue "x"
+|   `-ReturnStmt 0x7ff87f86df98 <line:9:3, col:10>
+|     `-IntegerLiteral 0x7ff87f86df78 <col:10> 'int' 0
+`-FunctionDecl 0x7ff87f86d9e8 <line:5:21> col:21 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7ff87f86da88 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7ff87f86daf0 <col:21> Implicit

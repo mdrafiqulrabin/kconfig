@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f868582aae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8685015420 <../Data/C2AST/pr66415-2.c:24:1, line:29:1> line:25:1 fn1 'void (void)'
+| `-CompoundStmt 0x7f8685015810 <line:26:1, line:29:1>
+|   `-CallExpr 0x7f86850157b0 <line:27:3, col:128> 'int'
+|     |-ImplicitCastExpr 0x7f8685015798 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f8685015698 <col:3> '<builtin fn type>' Function 0x7f8685015538 '__builtin_printf' 'int (const char *, ...)'
+|     `-ImplicitCastExpr 0x7f86850157f8 <col:52> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f86850157e0 <col:52> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7f86850156f8 <col:52> 'char [75]' lvalue "xxxxxxxxxxxxxxxxx%dxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+`-FunctionDecl 0x7f8685015538 <col:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+  |-ParmVarDecl 0x7f86850155d8 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-FormatAttr 0x7f8685015640 <col:3> Implicit printf 1 2

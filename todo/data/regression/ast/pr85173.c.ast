@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fef3d82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fef3d86a860 <../Data/C2AST/pr85173.c:7:1, line:11:1> line:8:1 used foo 'void (char *)'
+| |-ParmVarDecl 0x7fef3d82c978 <col:6, col:12> col:12 used p 'char *'
+| |-CompoundStmt 0x7fef3d86ab68 <line:9:1, line:11:1>
+| | `-GCCAsmStmt 0x7fef3d86ab00 <line:10:3, col:42>
+| |   `-ImplicitCastExpr 0x7fef3d86aae8 <col:29> 'char *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fef3d86aa58 <col:29> 'char *' lvalue ParmVar 0x7fef3d82c978 'p' 'char *'
+| `-NoInlineAttr 0x7fef3d86a908 <line:7:16>
+|-FunctionDecl 0x7fef3d86ac60 <line:14:1, line:20:1> line:15:1 f5 'void (int)'
+| |-ParmVarDecl 0x7fef3d86ab98 <col:5, col:9> col:9 used x 'int'
+| |-CompoundStmt 0x7fef3d86b258 <line:16:1, line:20:1>
+| | |-DeclStmt 0x7fef3d86ae28 <line:17:3, col:19>
+| | | `-VarDecl 0x7fef3d86adc8 <col:3, col:18> col:8 locals 'char [128]'
+| | |-DeclStmt 0x7fef3d86b168 <line:18:3, col:35>
+| | | `-VarDecl 0x7fef3d86ae58 <col:3, col:34> col:9 used vla 'char *' cinit
+| | |   `-ImplicitCastExpr 0x7fef3d86b150 <col:15, col:34> 'char *' <BitCast>
+| | |     `-CallExpr 0x7fef3d86b0f0 <col:15, col:34> 'void *'
+| | |       |-ImplicitCastExpr 0x7fef3d86b0d8 <col:15> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+| | |       | `-DeclRefExpr 0x7fef3d86b048 <col:15> '<builtin fn type>' Function 0x7fef3d86aef8 '__builtin_alloca' 'void *(unsigned long)'
+| | |       `-ImplicitCastExpr 0x7fef3d86b138 <col:33> 'unsigned long' <IntegralCast>
+| | |         `-ImplicitCastExpr 0x7fef3d86b120 <col:33> 'int' <LValueToRValue>
+| | |           `-DeclRefExpr 0x7fef3d86b070 <col:33> 'int' lvalue ParmVar 0x7fef3d86ab98 'x' 'int'
+| | `-CallExpr 0x7fef3d86b210 <line:19:3, col:11> 'void'
+| |   |-ImplicitCastExpr 0x7fef3d86b1f8 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fef3d86b180 <col:3> 'void (char *)' Function 0x7fef3d86a860 'foo' 'void (char *)'
+| |   `-ImplicitCastExpr 0x7fef3d86b240 <col:8> 'char *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fef3d86b1a8 <col:8> 'char *' lvalue Var 0x7fef3d86ae58 'vla' 'char *'
+| `-NoInlineAttr 0x7fef3d86ad08 <line:14:16>
+`-FunctionDecl 0x7fef3d86aef8 <line:18:15> col:15 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7fef3d86af98 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fef3d86b000 <col:15> Implicit

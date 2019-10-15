@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fb01f02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb01f02c960 <../Data/C2AST/pr58346.c:5:1, col:11> col:8 struct U definition
+|-VarDecl 0x7fb020806158 <line:6:1, col:26> col:17 used b 'struct U [1]' static cinit
+| `-InitListExpr 0x7fb020806238 <col:24, col:26> 'struct U [1]'
+|   `-array filler
+|     `-ImplicitValueInitExpr 0x7fb020806278 <<invalid sloc>> 'struct U':'struct U'
+|-FunctionDecl 0x7fb0208063b0 <line:7:1, col:26> col:13 used bar 'void (struct U)' extern
+| `-ParmVarDecl 0x7fb0208062a8 <col:18, col:25> col:26 'struct U':'struct U'
+|-FunctionDecl 0x7fb020806520 <line:9:1, line:13:1> line:10:1 used foo 'void (void)'
+| `-CompoundStmt 0x7fb020806788 <line:11:1, line:13:1>
+|   `-CallExpr 0x7fb020806740 <line:12:3, col:12> 'void'
+|     |-ImplicitCastExpr 0x7fb020806728 <col:3> 'void (*)(struct U)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb0208065c0 <col:3> 'void (struct U)' Function 0x7fb0208063b0 'bar' 'void (struct U)'
+|     `-ImplicitCastExpr 0x7fb020806770 <col:8, col:11> 'struct U':'struct U' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fb0208066a0 <col:8, col:11> 'struct U':'struct U' lvalue
+|         |-ImplicitCastExpr 0x7fb020806688 <col:8> 'struct U *' <ArrayToPointerDecay>
+|         | `-DeclRefExpr 0x7fb0208065e8 <col:8> 'struct U [1]' lvalue Var 0x7fb020806158 'b' 'struct U [1]'
+|         `-IntegerLiteral 0x7fb020806610 <col:10> 'int' 0
+`-FunctionDecl 0x7fb020806830 <line:15:1, line:19:1> line:16:1 baz 'void (void)'
+  `-CompoundStmt 0x7fb020806968 <line:17:1, line:19:1>
+    `-CallExpr 0x7fb020806940 <line:18:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7fb020806928 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fb0208068d0 <col:3> 'void (void)' Function 0x7fb020806520 'foo' 'void (void)'

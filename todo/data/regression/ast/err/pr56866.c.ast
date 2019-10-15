@@ -1,0 +1,24 @@
+../Data/C2AST/pr56866.c:7:10: fatal error: '../../gcc.c-torture/execute/pr56866.c' file not found
+#include "../../gcc.c-torture/execute/pr56866.c"
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fccab02b4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccab02ba60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fccab02b780 '__int128'
+|-TypedefDecl 0x7fccab02bad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fccab02b7a0 'unsigned __int128'
+|-TypedefDecl 0x7fccab02bda8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fccab02bbb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fccab02bb28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fccab02be40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fccab02be00 'char *'
+|   `-BuiltinType 0x7fccab02b580 'char'
+|-TypedefDecl 0x7fccab02c108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fccab02c0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fccab02bf20 'struct __va_list_tag'
+|     `-Record 0x7fccab02be98 '__va_list_tag'
+`-FunctionDecl 0x7fccab01fe20 <../Data/C2AST/pr56866.c:12:1, line:16:1> line:13:1 xop_test 'void (void)' static
+  `-CompoundStmt 0x7fccab020098 <line:14:1, line:16:1>
+    `-CallExpr 0x7fccab020070 <line:15:3, col:18> 'int'
+      `-ImplicitCastExpr 0x7fccab020058 <col:3> 'int (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fccab020000 <col:3> 'int ()' Function 0x7fccab01ff50 'xop_test_main' 'int ()'

@@ -1,0 +1,99 @@
+TranslationUnitDecl 0x7fd3ac02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd3ac02c978 <../Data/C2AST/pr55142-2.c:7:1, col:13> col:13 referenced int32_t 'int'
+| `-BuiltinType 0x7fd3ac02bde0 'int'
+|-TypedefDecl 0x7fd3ac814200 <line:8:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fd3ac02be80 'unsigned int'
+|-TypedefDecl 0x7fd3ac814290 <line:9:1, col:18> col:18 referenced Elf32_Word 'uint32_t':'unsigned int'
+| `-TypedefType 0x7fd3ac814260 'uint32_t' sugar
+|   |-Typedef 0x7fd3ac814200 'uint32_t'
+|   `-BuiltinType 0x7fd3ac02be80 'unsigned int'
+|-TypedefDecl 0x7fd3ac814320 <line:10:1, col:17> col:17 referenced Elf32_Sword 'int32_t':'int'
+| `-TypedefType 0x7fd3ac8142f0 'int32_t' sugar
+|   |-Typedef 0x7fd3ac02c978 'int32_t'
+|   `-BuiltinType 0x7fd3ac02bde0 'int'
+|-TypedefDecl 0x7fd3ac814388 <line:11:1, col:18> col:18 referenced Elf32_Addr 'uint32_t':'unsigned int'
+| `-TypedefType 0x7fd3ac814260 'uint32_t' sugar
+|   |-Typedef 0x7fd3ac814200 'uint32_t'
+|   `-BuiltinType 0x7fd3ac02be80 'unsigned int'
+|-RecordDecl 0x7fd3ac8143e0 <line:12:9, line:18:1> line:12:9 struct definition
+| |-FieldDecl 0x7fd3ac8144c0 <line:13:3, col:15> col:15 referenced d_tag 'Elf32_Sword':'int'
+| |-RecordDecl 0x7fd3ac814508 <line:14:3, line:17:3> line:14:3 union definition
+| | |-FieldDecl 0x7fd3ac8145e0 <line:15:5, col:16> col:16 d_val 'Elf32_Word':'unsigned int'
+| | `-FieldDecl 0x7fd3ac814660 <line:16:5, col:16> col:16 d_ptr 'Elf32_Addr':'unsigned int'
+| `-FieldDecl 0x7fd3ac814700 <line:14:3, line:17:5> col:5 d_un 'union (anonymous union at ../Data/C2AST/pr55142-2.c:14:3)':'union Elf32_Dyn::(anonymous at ../Data/C2AST/pr55142-2.c:14:3)'
+|-TypedefDecl 0x7fd3ac8147a0 <line:12:1, line:18:3> col:3 referenced Elf32_Dyn 'struct Elf32_Dyn':'Elf32_Dyn'
+| `-ElaboratedType 0x7fd3ac814750 'struct Elf32_Dyn' sugar
+|   `-RecordType 0x7fd3ac814470 'Elf32_Dyn'
+|     `-Record 0x7fd3ac8143e0 ''
+|-RecordDecl 0x7fd3ac814810 <line:19:1, line:22:1> line:19:8 struct link_map definition
+| |-FieldDecl 0x7fd3ac814948 <line:20:3, col:14> col:14 referenced l_ld 'Elf32_Dyn *'
+| `-FieldDecl 0x7fd3ac814b68 <line:21:3, col:42> col:14 referenced l_info 'Elf32_Dyn *[76]'
+`-FunctionDecl 0x7fd3ac814d60 <line:23:1, line:34:1> line:24:1 elf_get_dynamic_info 'void (struct link_map *)'
+  |-ParmVarDecl 0x7fd3ac814c60 <col:23, col:40> col:40 used l 'struct link_map *'
+  `-CompoundStmt 0x7fd3ac8157c8 <line:25:1, line:34:1>
+    |-DeclStmt 0x7fd3ac814f48 <line:26:3, col:27>
+    | `-VarDecl 0x7fd3ac814e58 <col:3, col:23> col:14 used dyn 'Elf32_Dyn *' cinit
+    |   `-ImplicitCastExpr 0x7fd3ac814f30 <col:20, col:23> 'Elf32_Dyn *' <LValueToRValue>
+    |     `-MemberExpr 0x7fd3ac814ef8 <col:20, col:23> 'Elf32_Dyn *' lvalue ->l_ld 0x7fd3ac814948
+    |       `-ImplicitCastExpr 0x7fd3ac814ee0 <col:20> 'struct link_map *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fd3ac814eb8 <col:20> 'struct link_map *' lvalue ParmVar 0x7fd3ac814c60 'l' 'struct link_map *'
+    |-DeclStmt 0x7fd3ac8150c0 <line:27:3, col:31>
+    | `-VarDecl 0x7fd3ac814fd0 <col:3, col:25> col:15 used info 'Elf32_Dyn **' cinit
+    |   `-ImplicitCastExpr 0x7fd3ac8150a8 <col:22, col:25> 'Elf32_Dyn **' <ArrayToPointerDecay>
+    |     `-MemberExpr 0x7fd3ac815070 <col:22, col:25> 'Elf32_Dyn *[76]' lvalue ->l_info 0x7fd3ac814b68
+    |       `-ImplicitCastExpr 0x7fd3ac815058 <col:22> 'struct link_map *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fd3ac815030 <col:22> 'struct link_map *' lvalue ParmVar 0x7fd3ac814c60 'l' 'struct link_map *'
+    |-DeclStmt 0x7fd3ac815140 <line:28:3, col:33>
+    | `-TypedefDecl 0x7fd3ac8150e8 <col:3, col:22> col:22 referenced d_tag_utype 'Elf32_Word':'unsigned int'
+    |   `-TypedefType 0x7fd3ac8145b0 'Elf32_Word' sugar
+    |     |-Typedef 0x7fd3ac814290 'Elf32_Word'
+    |     `-TypedefType 0x7fd3ac814260 'uint32_t' sugar
+    |       |-Typedef 0x7fd3ac814200 'uint32_t'
+    |       `-BuiltinType 0x7fd3ac02be80 'unsigned int'
+    `-WhileStmt 0x7fd3ac8157a8 <line:29:3, line:33:3>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd3ac815218 <line:29:10, col:24> 'int' '!='
+      | |-ImplicitCastExpr 0x7fd3ac815200 <col:10, col:15> 'Elf32_Sword':'int' <LValueToRValue>
+      | | `-MemberExpr 0x7fd3ac815198 <col:10, col:15> 'Elf32_Sword':'int' lvalue ->d_tag 0x7fd3ac8144c0
+      | |   `-ImplicitCastExpr 0x7fd3ac815180 <col:10> 'Elf32_Dyn *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fd3ac815158 <col:10> 'Elf32_Dyn *' lvalue Var 0x7fd3ac814e58 'dyn' 'Elf32_Dyn *'
+      | `-IntegerLiteral 0x7fd3ac8151d0 <col:24> 'int' 0
+      `-CompoundStmt 0x7fd3ac815788 <col:27, line:33:3>
+        |-IfStmt 0x7fd3ac815708 <line:30:5, line:31:60>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fd3ac8153f8 <line:30:9, col:51> 'int' '<'
+        | | |-CStyleCastExpr 0x7fd3ac815398 <col:9, col:47> 'd_tag_utype':'unsigned int' <IntegralCast>
+        | | | `-ParenExpr 0x7fd3ac815378 <col:23, col:47> 'int'
+        | | |   `-BinaryOperator 0x7fd3ac815310 <col:24, col:42> 'int' '-'
+        | | |     |-IntegerLiteral 0x7fd3ac815260 <col:24> 'int' 1879047935
+        | | |     `-ImplicitCastExpr 0x7fd3ac8152f8 <col:37, col:42> 'Elf32_Sword':'int' <LValueToRValue>
+        | | |       `-MemberExpr 0x7fd3ac8152c0 <col:37, col:42> 'Elf32_Sword':'int' lvalue ->d_tag 0x7fd3ac8144c0
+        | | |         `-ImplicitCastExpr 0x7fd3ac8152a8 <col:37> 'Elf32_Dyn *' <LValueToRValue>
+        | | |           `-DeclRefExpr 0x7fd3ac815280 <col:37> 'Elf32_Dyn *' lvalue Var 0x7fd3ac814e58 'dyn' 'Elf32_Dyn *'
+        | | `-ImplicitCastExpr 0x7fd3ac8153e0 <col:51> 'unsigned int' <IntegralCast>
+        | |   `-IntegerLiteral 0x7fd3ac8153c0 <col:51> 'int' 11
+        | |-BinaryOperator 0x7fd3ac8156e0 <line:31:7, col:60> 'Elf32_Dyn *' '='
+        | | |-ArraySubscriptExpr 0x7fd3ac815678 <col:7, col:56> 'Elf32_Dyn *' lvalue
+        | | | |-ImplicitCastExpr 0x7fd3ac815660 <col:7> 'Elf32_Dyn **' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7fd3ac815420 <col:7> 'Elf32_Dyn **' lvalue Var 0x7fd3ac814fd0 'info' 'Elf32_Dyn **'
+        | | | `-BinaryOperator 0x7fd3ac815638 <col:12, col:54> 'int' '+'
+        | | |   |-BinaryOperator 0x7fd3ac8155f0 <col:12, col:50> 'int' '+'
+        | | |   | |-BinaryOperator 0x7fd3ac8155a8 <col:12, col:45> 'int' '+'
+        | | |   | | |-BinaryOperator 0x7fd3ac815560 <col:12, col:40> 'int' '+'
+        | | |   | | | |-ParenExpr 0x7fd3ac815520 <col:12, col:36> 'int'
+        | | |   | | | | `-BinaryOperator 0x7fd3ac8154f8 <col:13, col:31> 'int' '-'
+        | | |   | | | |   |-IntegerLiteral 0x7fd3ac815448 <col:13> 'int' 1879047935
+        | | |   | | | |   `-ImplicitCastExpr 0x7fd3ac8154e0 <col:26, col:31> 'Elf32_Sword':'int' <LValueToRValue>
+        | | |   | | | |     `-MemberExpr 0x7fd3ac8154a8 <col:26, col:31> 'Elf32_Sword':'int' lvalue ->d_tag 0x7fd3ac8144c0
+        | | |   | | | |       `-ImplicitCastExpr 0x7fd3ac815490 <col:26> 'Elf32_Dyn *' <LValueToRValue>
+        | | |   | | | |         `-DeclRefExpr 0x7fd3ac815468 <col:26> 'Elf32_Dyn *' lvalue Var 0x7fd3ac814e58 'dyn' 'Elf32_Dyn *'
+        | | |   | | | `-IntegerLiteral 0x7fd3ac815540 <col:40> 'int' 34
+        | | |   | | `-IntegerLiteral 0x7fd3ac815588 <col:45> 'int' 16
+        | | |   | `-IntegerLiteral 0x7fd3ac8155d0 <col:50> 'int' 3
+        | | |   `-IntegerLiteral 0x7fd3ac815618 <col:54> 'int' 12
+        | | `-ImplicitCastExpr 0x7fd3ac8156c8 <col:60> 'Elf32_Dyn *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fd3ac8156a0 <col:60> 'Elf32_Dyn *' lvalue Var 0x7fd3ac814e58 'dyn' 'Elf32_Dyn *'
+        | `-<<<NULL>>>
+        `-UnaryOperator 0x7fd3ac815768 <line:32:5, col:7> 'Elf32_Dyn *' prefix '++'
+          `-DeclRefExpr 0x7fd3ac815740 <col:7> 'Elf32_Dyn *' lvalue Var 0x7fd3ac814e58 'dyn' 'Elf32_Dyn *'

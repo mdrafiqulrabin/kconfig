@@ -1,0 +1,37 @@
+../Data/C2AST/pr69974.c:6:10: error: tentative definition has type 'struct S' that is never completed
+struct S a;      
+         ^
+../Data/C2AST/pr69974.c:4:8: note: forward declaration of 'struct S'
+struct S;
+       ^
+1 error generated.
+TranslationUnitDecl 0x7f940f02b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f940f02b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f940f02b580 '__int128'
+|-TypedefDecl 0x7f940f02b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f940f02b5a0 'unsigned __int128'
+|-TypedefDecl 0x7f940f02bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f940f02b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f940f02b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f940f02bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f940f02bc00 'char *'
+|   `-BuiltinType 0x7f940f02b380 'char'
+|-TypedefDecl 0x7f940f02bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f940f02beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f940f02bd20 'struct __va_list_tag'
+|     `-Record 0x7f940f02bc98 '__va_list_tag'
+|-RecordDecl 0x7f940f02bf60 <../Data/C2AST/pr69974.c:4:1, col:8> col:8 struct S
+|-FunctionDecl 0x7f940f8143d0 <line:5:1, col:21> col:6 used foo 'char (struct S *)'
+| `-ParmVarDecl 0x7f940f8142d0 <col:11, col:20> col:21 'struct S *'
+|-VarDecl 0x7f940f8144d8 <line:6:1, col:10> col:10 used invalid a 'struct S':'struct S'
+|-VarDecl 0x7f940f814550 <line:7:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7f940f8145f8 <line:9:1, line:13:1> line:10:1 bar 'void ()'
+  `-CompoundStmt 0x7f940f814820 <line:11:1, line:13:1>
+    `-CompoundAssignOperator 0x7f940f8147e8 <line:12:3, col:15> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-DeclRefExpr 0x7f940f814698 <col:3> 'int' lvalue Var 0x7f940f814550 'b' 'int'
+      `-ImplicitCastExpr 0x7f940f8147d0 <col:8, col:15> 'int' <IntegralCast>
+        `-CallExpr 0x7f940f8147a0 <col:8, col:15> 'char'
+          |-ImplicitCastExpr 0x7f940f814788 <col:8> 'char (*)(struct S *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f940f8146c0 <col:8> 'char (struct S *)' Function 0x7f940f8143d0 'foo' 'char (struct S *)'
+          `-UnaryOperator 0x7f940f814710 <col:13, col:14> 'struct S *' prefix '&'
+            `-DeclRefExpr 0x7f940f8146e8 <col:14> 'struct S':'struct S' lvalue Var 0x7f940f8144d8 'a' 'struct S':'struct S'

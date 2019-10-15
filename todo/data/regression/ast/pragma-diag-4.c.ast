@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7ff81f0002e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff81f810800 <../Data/C2AST/pragma-diag-4.c:5:1, line:22:1> line:5:5 bar 'int ()'
+| `-CompoundStmt 0x7ff81f810fc0 <line:6:1, line:22:1>
+|   |-DeclStmt 0x7ff81f810990 <line:7:3, col:17>
+|   | `-VarDecl 0x7ff81f8108f8 <col:3, col:16> col:12 used x 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ff81f810978 <col:16> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7ff81f810958 <col:16> 'int' 0
+|   |-DeclStmt 0x7ff81f810a40 <line:8:3, col:12>
+|   | `-VarDecl 0x7ff81f8109c0 <col:3, col:11> col:7 used y 'int' cinit
+|   |   `-IntegerLiteral 0x7ff81f810a20 <col:11> 'int' 1
+|   |-CompoundAssignOperator 0x7ff81f810bc8 <line:11:3, col:20> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-DeclRefExpr 0x7ff81f810a58 <col:3> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7ff81f810bb0 <col:8, col:20> 'unsigned int' <IntegralCast>
+|   |   `-ConditionalOperator 0x7ff81f810b80 <col:8, col:20> 'int'
+|   |     |-BinaryOperator 0x7ff81f810b18 <col:8, col:12> 'int' '<'
+|   |     | |-ImplicitCastExpr 0x7ff81f810ad0 <col:8> 'unsigned int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7ff81f810a80 <col:8> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|   |     | `-ImplicitCastExpr 0x7ff81f810b00 <col:12> 'unsigned int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7ff81f810ae8 <col:12> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff81f810aa8 <col:12> 'int' lvalue Var 0x7ff81f8109c0 'y' 'int'
+|   |     |-IntegerLiteral 0x7ff81f810b40 <col:16> 'int' 1
+|   |     `-IntegerLiteral 0x7ff81f810b60 <col:20> 'int' 0
+|   |-CompoundAssignOperator 0x7ff81f810d70 <line:16:3, col:20> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-DeclRefExpr 0x7ff81f810c00 <col:3> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7ff81f810d58 <col:8, col:20> 'unsigned int' <IntegralCast>
+|   |   `-ConditionalOperator 0x7ff81f810d28 <col:8, col:20> 'int'
+|   |     |-BinaryOperator 0x7ff81f810cc0 <col:8, col:12> 'int' '<'
+|   |     | |-ImplicitCastExpr 0x7ff81f810c78 <col:8> 'unsigned int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7ff81f810c28 <col:8> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|   |     | `-ImplicitCastExpr 0x7ff81f810ca8 <col:12> 'unsigned int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7ff81f810c90 <col:12> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff81f810c50 <col:12> 'int' lvalue Var 0x7ff81f8109c0 'y' 'int'
+|   |     |-IntegerLiteral 0x7ff81f810ce8 <col:16> 'int' 1
+|   |     `-IntegerLiteral 0x7ff81f810d08 <col:20> 'int' 0
+|   |-CompoundAssignOperator 0x7ff81f810f18 <line:19:3, col:20> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-DeclRefExpr 0x7ff81f810da8 <col:3> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7ff81f810f00 <col:8, col:20> 'unsigned int' <IntegralCast>
+|   |   `-ConditionalOperator 0x7ff81f810ed0 <col:8, col:20> 'int'
+|   |     |-BinaryOperator 0x7ff81f810e68 <col:8, col:12> 'int' '<'
+|   |     | |-ImplicitCastExpr 0x7ff81f810e20 <col:8> 'unsigned int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7ff81f810dd0 <col:8> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|   |     | `-ImplicitCastExpr 0x7ff81f810e50 <col:12> 'unsigned int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7ff81f810e38 <col:12> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff81f810df8 <col:12> 'int' lvalue Var 0x7ff81f8109c0 'y' 'int'
+|   |     |-IntegerLiteral 0x7ff81f810e90 <col:16> 'int' 1
+|   |     `-IntegerLiteral 0x7ff81f810eb0 <col:20> 'int' 0
+|   `-ReturnStmt 0x7ff81f810fa8 <line:21:3, col:10>
+|     `-ImplicitCastExpr 0x7ff81f810f90 <col:10> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7ff81f810f78 <col:10> 'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff81f810f50 <col:10> 'unsigned int' lvalue Var 0x7ff81f8108f8 'x' 'unsigned int'
+|-EnumDecl 0x7ff81f811000 <line:24:1, col:20> col:6 EE
+| |-EnumConstantDecl 0x7ff81f8110c0 <col:11> col:11 referenced ONE 'int'
+| `-EnumConstantDecl 0x7ff81f811108 <col:16> col:16 TWO 'int'
+`-FunctionDecl 0x7ff81f8112a8 <line:26:1, line:48:1> line:26:5 f 'int (enum EE)'
+  |-ParmVarDecl 0x7ff81f8111a0 <col:8, col:16> col:16 used e 'enum EE':'enum EE'
+  `-CompoundStmt 0x7ff81f811788 <line:27:1, line:48:1>
+    |-DeclStmt 0x7ff81f8113e8 <line:28:3, col:12>
+    | `-VarDecl 0x7ff81f811368 <col:3, col:11> col:7 used r 'int' cinit
+    |   `-IntegerLiteral 0x7ff81f8113c8 <col:11> 'int' 0
+    |-SwitchStmt 0x7ff81f811458 <line:33:3, line:38:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff81f811440 <line:33:11> 'unsigned int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ff81f811428 <col:11> 'enum EE':'enum EE' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff81f811400 <col:11> 'enum EE':'enum EE' lvalue ParmVar 0x7ff81f8111a0 'e' 'enum EE':'enum EE'
+    | `-CompoundStmt 0x7ff81f811560 <line:34:5, line:38:5>
+    |   |-CaseStmt 0x7ff81f8114b0 <line:35:5, line:36:11>
+    |   | |-ImplicitCastExpr 0x7ff81f811580 <line:35:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7ff81f811488 <col:10> 'int' EnumConstant 0x7ff81f8110c0 'ONE' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7ff81f811530 <line:36:7, col:11> 'int' '='
+    |   |   |-DeclRefExpr 0x7ff81f8114e8 <col:7> 'int' lvalue Var 0x7ff81f811368 'r' 'int'
+    |   |   `-IntegerLiteral 0x7ff81f811510 <col:11> 'int' 1
+    |   `-BreakStmt 0x7ff81f811558 <line:37:7>
+    |-SwitchStmt 0x7ff81f8115f0 <line:41:3, line:46:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff81f8115d8 <line:41:11> 'unsigned int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ff81f8115c0 <col:11> 'enum EE':'enum EE' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff81f811598 <col:11> 'enum EE':'enum EE' lvalue ParmVar 0x7ff81f8111a0 'e' 'enum EE':'enum EE'
+    | `-CompoundStmt 0x7ff81f8116f8 <line:42:5, line:46:5>
+    |   |-CaseStmt 0x7ff81f811648 <line:43:5, line:44:11>
+    |   | |-ImplicitCastExpr 0x7ff81f811718 <line:43:10> 'unsigned int' <IntegralCast>
+    |   | | `-DeclRefExpr 0x7ff81f811620 <col:10> 'int' EnumConstant 0x7ff81f8110c0 'ONE' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7ff81f8116c8 <line:44:7, col:11> 'int' '='
+    |   |   |-DeclRefExpr 0x7ff81f811680 <col:7> 'int' lvalue Var 0x7ff81f811368 'r' 'int'
+    |   |   `-IntegerLiteral 0x7ff81f8116a8 <col:11> 'int' 1
+    |   `-BreakStmt 0x7ff81f8116f0 <line:45:7>
+    `-ReturnStmt 0x7ff81f811770 <line:47:3, col:10>
+      `-ImplicitCastExpr 0x7ff81f811758 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff81f811730 <col:10> 'int' lvalue Var 0x7ff81f811368 'r' 'int'

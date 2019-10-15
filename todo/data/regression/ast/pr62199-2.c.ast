@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f91aa82b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f91aa82bf70 <../Data/C2AST/pr62199-2.c:6:15, line:9:6> col:6 used r 'bool'
+`-FunctionDecl 0x7f91aa025f10 <line:11:1, line:20:1> line:12:1 foo 'void (bool)'
+  |-ParmVarDecl 0x7f91aa025e50 <line:6:15, line:12:11> col:11 used b 'bool'
+  `-CompoundStmt 0x7f91aa026618 <line:13:1, line:20:1>
+    |-BinaryOperator 0x7f91aa0260a0 <line:14:3, col:13> 'bool' '='
+    | |-DeclRefExpr 0x7f91aa025fb8 <col:3> 'bool' lvalue Var 0x7f91aa82bf70 'r' 'bool'
+    | `-ImplicitCastExpr 0x7f91aa026088 <col:7, col:13> 'bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7f91aa026060 <col:7, col:13> 'int' '=='
+    |     |-UnaryOperator 0x7f91aa026020 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7f91aa026008 <col:8> 'bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f91aa025fe0 <col:8> 'bool' lvalue ParmVar 0x7f91aa025e50 'b' 'bool'
+    |     `-IntegerLiteral 0x7f91aa026040 <col:13> 'int' 1
+    |-BinaryOperator 0x7f91aa0261b0 <line:15:3, col:13> 'bool' '='
+    | |-DeclRefExpr 0x7f91aa0260c8 <col:3> 'bool' lvalue Var 0x7f91aa82bf70 'r' 'bool'
+    | `-ImplicitCastExpr 0x7f91aa026198 <col:7, col:13> 'bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7f91aa026170 <col:7, col:13> 'int' '!='
+    |     |-UnaryOperator 0x7f91aa026130 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7f91aa026118 <col:8> 'bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f91aa0260f0 <col:8> 'bool' lvalue ParmVar 0x7f91aa025e50 'b' 'bool'
+    |     `-IntegerLiteral 0x7f91aa026150 <col:13> 'int' 1
+    |-BinaryOperator 0x7f91aa0262c0 <line:16:3, col:12> 'bool' '='
+    | |-DeclRefExpr 0x7f91aa0261d8 <col:3> 'bool' lvalue Var 0x7f91aa82bf70 'r' 'bool'
+    | `-ImplicitCastExpr 0x7f91aa0262a8 <col:7, col:12> 'bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7f91aa026280 <col:7, col:12> 'int' '>'
+    |     |-UnaryOperator 0x7f91aa026240 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7f91aa026228 <col:8> 'bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f91aa026200 <col:8> 'bool' lvalue ParmVar 0x7f91aa025e50 'b' 'bool'
+    |     `-IntegerLiteral 0x7f91aa026260 <col:12> 'int' 1
+    |-BinaryOperator 0x7f91aa0263d0 <line:17:3, col:13> 'bool' '='
+    | |-DeclRefExpr 0x7f91aa0262e8 <col:3> 'bool' lvalue Var 0x7f91aa82bf70 'r' 'bool'
+    | `-ImplicitCastExpr 0x7f91aa0263b8 <col:7, col:13> 'bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7f91aa026390 <col:7, col:13> 'int' '>='
+    |     |-UnaryOperator 0x7f91aa026350 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7f91aa026338 <col:8> 'bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f91aa026310 <col:8> 'bool' lvalue ParmVar 0x7f91aa025e50 'b' 'bool'
+    |     `-IntegerLiteral 0x7f91aa026370 <col:13> 'int' 1
+    |-BinaryOperator 0x7f91aa0264e0 <line:18:3, col:12> 'bool' '='
+    | |-DeclRefExpr 0x7f91aa0263f8 <col:3> 'bool' lvalue Var 0x7f91aa82bf70 'r' 'bool'
+    | `-ImplicitCastExpr 0x7f91aa0264c8 <col:7, col:12> 'bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7f91aa0264a0 <col:7, col:12> 'int' '<'
+    |     |-UnaryOperator 0x7f91aa026460 <col:7, col:8> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7f91aa026448 <col:8> 'bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f91aa026420 <col:8> 'bool' lvalue ParmVar 0x7f91aa025e50 'b' 'bool'
+    |     `-IntegerLiteral 0x7f91aa026480 <col:12> 'int' 1
+    `-BinaryOperator 0x7f91aa0265f0 <line:19:3, col:13> 'bool' '='
+      |-DeclRefExpr 0x7f91aa026508 <col:3> 'bool' lvalue Var 0x7f91aa82bf70 'r' 'bool'
+      `-ImplicitCastExpr 0x7f91aa0265d8 <col:7, col:13> 'bool' <IntegralToBoolean>
+        `-BinaryOperator 0x7f91aa0265b0 <col:7, col:13> 'int' '<='
+          |-UnaryOperator 0x7f91aa026570 <col:7, col:8> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7f91aa026558 <col:8> 'bool' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f91aa026530 <col:8> 'bool' lvalue ParmVar 0x7f91aa025e50 'b' 'bool'
+          `-IntegerLiteral 0x7f91aa026590 <col:13> 'int' 1

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f9cf78174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9cf8011200 <../Data/C2AST/pr55619.c:4:1, col:8> col:5 used y 'int [4]'
+`-FunctionDecl 0x7f9cf80112e8 <line:6:1, line:11:1> line:7:1 f 'void ()'
+  `-CompoundStmt 0x7f9cf8011750 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f9cf8011570 <line:9:3, col:28>
+    | `-VarDecl 0x7f9cf80113d0 <col:3, col:27> col:7 used x 'int [4]' cinit
+    |   `-InitListExpr 0x7f9cf8011510 <col:14, col:27> 'int [4]'
+    |     |-IntegerLiteral 0x7f9cf8011430 <col:16> 'int' 0
+    |     |-IntegerLiteral 0x7f9cf8011450 <col:19> 'int' 1
+    |     |-IntegerLiteral 0x7f9cf8011470 <col:22> 'int' 2
+    |     `-IntegerLiteral 0x7f9cf8011490 <col:25> 'int' 3
+    `-GCCAsmStmt 0x7f9cf80116d8 <line:10:3, col:42>
+      |-DeclRefExpr 0x7f9cf8011658 <col:31> 'int [4]' lvalue Var 0x7f9cf80113d0 'x' 'int [4]'
+      `-DeclRefExpr 0x7f9cf80116b0 <col:40> 'int [4]' lvalue Var 0x7f9cf8011200 'y' 'int [4]'

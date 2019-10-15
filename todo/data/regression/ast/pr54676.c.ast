@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fee6e82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fee6e82c960 <../Data/C2AST/pr54676.c:5:1, line:8:1> line:5:8 struct S definition
+| `-FieldDecl 0x7fee6e867e58 <line:7:3, col:9> col:7 referenced s 'int'
+|   `-IntegerLiteral 0x7fee6e867e20 <col:9> 'int' 1
+|-FunctionDecl 0x7fee6e867fd0 <line:10:1, col:19> col:10 used bar 'struct S (void)'
+|-VarDecl 0x7fee6e8680c8 <line:16:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fee6e868200 <line:18:1, line:27:1> line:19:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fee6e868140 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fee6e868748 <line:20:1, line:27:1>
+    |-DeclStmt 0x7fee6e8683e8 <line:21:3, col:22>
+    | `-VarDecl 0x7fee6e8682c8 <col:3, col:21> col:12 used s 'struct S':'struct S' cinit
+    |   `-CallExpr 0x7fee6e8683c0 <col:16, col:21> 'struct S':'struct S'
+    |     `-ImplicitCastExpr 0x7fee6e8683a8 <col:16> 'struct S (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fee6e868328 <col:16> 'struct S (void)' Function 0x7fee6e867fd0 'bar' 'struct S (void)'
+    `-WhileStmt 0x7fee6e868728 <line:22:3, line:26:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fee6e868440 <line:22:10, col:11> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7fee6e868428 <col:11> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fee6e868400 <col:11> 'int' lvalue Var 0x7fee6e8680c8 'a' 'int'
+      `-CompoundStmt 0x7fee6e868708 <line:23:5, line:26:5>
+        |-DeclStmt 0x7fee6e8684f8 <line:24:7, col:23>
+        | `-VarDecl 0x7fee6e868478 <col:7, col:15> col:11 used l 'int' cinit
+        |   `-IntegerLiteral 0x7fee6e8684d8 <col:15> 'int' 94967295
+        `-BinaryOperator 0x7fee6e868698 <line:25:7, col:25> 'int' '='
+          |-DeclRefExpr 0x7fee6e868510 <col:7> 'int' lvalue Var 0x7fee6e8680c8 'a' 'int'
+          `-BinaryOperator 0x7fee6e868670 <col:11, col:25> 'int' '||'
+            |-ImplicitCastExpr 0x7fee6e868658 <col:11> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fee6e868538 <col:11> 'int' lvalue ParmVar 0x7fee6e868140 'x' 'int'
+            `-ParenExpr 0x7fee6e868638 <col:16, col:25> 'int'
+              `-CompoundAssignOperator 0x7fee6e868600 <col:17, col:24> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+                |-MemberExpr 0x7fee6e868588 <col:17, col:19> 'int' lvalue bitfield .s 0x7fee6e867e58
+                | `-DeclRefExpr 0x7fee6e868560 <col:17> 'struct S':'struct S' lvalue Var 0x7fee6e8682c8 's' 'struct S':'struct S'
+                `-ImplicitCastExpr 0x7fee6e8685e8 <col:24> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fee6e8685c0 <col:24> 'int' lvalue Var 0x7fee6e868478 'l' 'int'

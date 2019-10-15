@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fa6cf82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa6cf82c970 <../Data/C2AST/pr84710.c:5:1, col:6> col:6 used a 'char'
+|-VarDecl 0x7fa6cf86d858 <line:6:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fa6cf86d980 <line:8:1, line:13:1> line:9:1 foo 'void (void)'
+| `-CompoundStmt 0x7fa6cf86ddc0 <line:10:1, line:13:1>
+|   |-DeclStmt 0x7fa6cf86da98 <line:11:3, col:8>
+|   | `-VarDecl 0x7fa6cf86da38 <col:3, col:7> col:7 used d 'int'
+|   `-BinaryOperator 0x7fa6cf86dd98 <line:12:3, col:49> 'int' '='
+|     |-DeclRefExpr 0x7fa6cf86dab0 <col:3> 'int' lvalue Var 0x7fa6cf86d858 'b' 'int'
+|     `-ImplicitCastExpr 0x7fa6cf86dd80 <col:7, col:49> 'int' <IntegralCast>
+|       `-CallExpr 0x7fa6cf86dd40 <col:7, col:49> '_Bool'
+|         |-ImplicitCastExpr 0x7fa6cf86dd28 <col:7> 'void (*)()' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fa6cf86dbf0 <col:7> '<builtin fn type>' Function 0x7fa6cf86db08 '__builtin_mul_overflow' 'void ()'
+|         |-CStyleCastExpr 0x7fa6cf86dc68 <col:31, col:38> 'char' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fa6cf86dc50 <col:38> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fa6cf86dc18 <col:38> 'int' lvalue Var 0x7fa6cf86da38 'd' 'int'
+|         |-IntegerLiteral 0x7fa6cf86dc90 <col:41> 'int' 254
+|         `-UnaryOperator 0x7fa6cf86dcd8 <col:47, col:48> 'char *' prefix '&'
+|           `-DeclRefExpr 0x7fa6cf86dcb0 <col:48> 'char' lvalue Var 0x7fa6cf82c970 'a' 'char'
+`-FunctionDecl 0x7fa6cf86db08 <col:7> col:7 implicit used __builtin_mul_overflow 'void ()' extern
+  `-NoThrowAttr 0x7fa6cf86dba8 <col:7> Implicit

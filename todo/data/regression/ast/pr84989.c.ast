@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fa4bd02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa4bd526da0 <../Data/C2AST/pr84989.c:7:1, line:12:1> line:8:1 foo '__m512 (float, float *)'
+  |-ParmVarDecl 0x7fa4bd526c18 <col:6, col:12> col:12 used a 'float'
+  |-ParmVarDecl 0x7fa4bd526c90 <col:15, col:22> col:22 used b 'float *'
+  `-CompoundStmt 0x7fa4bd527138 <line:9:1, line:12:1>
+    `-ReturnStmt 0x7fa4bd527120 <line:10:3, line:11:44>
+      `-CallExpr 0x7fa4bd5270e8 <line:10:10, line:11:44> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+        |-ImplicitCastExpr 0x7fa4bd5270d0 <line:10:10> '__m512 (*)(__m512, __m512)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa4bd526e50 <col:10> '__m512 (__m512, __m512)' Function 0x7fa4bda04ca8 '_mm512_sub_ps' '__m512 (__m512, __m512)'
+        |-CallExpr 0x7fa4bd526f80 <col:25, col:64> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+        | |-ImplicitCastExpr 0x7fa4bd526f68 <col:25> '__m512 (*)(__m128)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fa4bd526e78 <col:25> '__m512 (__m128)' Function 0x7fa4bdb97550 '_mm512_broadcast_f32x4' '__m512 (__m128)'
+        | `-CallExpr 0x7fa4bd526f08 <col:49, col:63> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |   |-ImplicitCastExpr 0x7fa4bd526ef0 <col:49> '__m128 (*)(const float *)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fa4bd526ea0 <col:49> '__m128 (const float *)' Function 0x7fa4bd928ec8 '_mm_load_ps' '__m128 (const float *)'
+        |   `-ImplicitCastExpr 0x7fa4bd526f50 <col:62> 'const float *' <BitCast>
+        |     `-ImplicitCastExpr 0x7fa4bd526f38 <col:62> 'float *' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fa4bd526ec8 <col:62> 'float *' lvalue ParmVar 0x7fa4bd526c90 'b' 'float *'
+        `-CallExpr 0x7fa4bd5270a0 <line:11:4, col:43> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+          |-ImplicitCastExpr 0x7fa4bd527088 <col:4> '__m512 (*)(__m128)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fa4bd526fb0 <col:4> '__m512 (__m128)' Function 0x7fa4bdb97550 '_mm512_broadcast_f32x4' '__m512 (__m128)'
+          `-CallExpr 0x7fa4bd527040 <col:28, col:42> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+            |-ImplicitCastExpr 0x7fa4bd527028 <col:28> '__m128 (*)(float)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7fa4bd526fd8 <col:28> '__m128 (float)' Function 0x7fa4bd92a6a8 '_mm_set1_ps' '__m128 (float)'
+            `-ImplicitCastExpr 0x7fa4bd527070 <col:41> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fa4bd527000 <col:41> 'float' lvalue ParmVar 0x7fa4bd526c18 'a' 'float'

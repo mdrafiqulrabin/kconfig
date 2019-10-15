@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fc73d82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc73d867e68 <../Data/C2AST/pr47364-2.c:1:22> col:22 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7fc73d867f08 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fc73d867f70 prev 0x7fc73d867e68 <col:1, col:42> col:22 used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7fc73d82c978 <col:30, col:41> col:42 'const char *'
+|-FunctionDecl 0x7fc73d868180 <line:2:1, col:31> col:6 used foo 'void (char *, const char *)'
+| |-ParmVarDecl 0x7fc73d868030 <col:11, col:16> col:17 'char *'
+| `-ParmVarDecl 0x7fc73d8680a8 <col:19, col:30> col:31 'const char *'
+`-FunctionDecl 0x7fc73d868358 <line:3:1, line:8:1> line:3:5 bar 'int (const char *)'
+  |-ParmVarDecl 0x7fc73d868288 <col:10, col:22> col:22 used prefix 'const char *'
+  `-CompoundStmt 0x7fc73d868750 <line:4:1, line:8:1>
+    |-DeclStmt 0x7fc73d8684d8 <line:5:5, col:19>
+    | `-VarDecl 0x7fc73d868478 <col:5, col:18> col:10 used buff 'char [256]'
+    |-CallExpr 0x7fc73d8685b0 <line:6:5, col:22> 'void'
+    | |-ImplicitCastExpr 0x7fc73d868598 <col:5> 'void (*)(char *, const char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc73d8684f0 <col:5> 'void (char *, const char *)' Function 0x7fc73d868180 'foo' 'void (char *, const char *)'
+    | |-ImplicitCastExpr 0x7fc73d8685e8 <col:10> 'char *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7fc73d868518 <col:10> 'char [256]' lvalue Var 0x7fc73d868478 'buff' 'char [256]'
+    | `-ImplicitCastExpr 0x7fc73d868600 <col:16> 'const char *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc73d868540 <col:16> 'const char *' lvalue ParmVar 0x7fc73d868288 'prefix' 'const char *'
+    `-ReturnStmt 0x7fc73d868738 <line:7:5, col:23>
+      `-ImplicitCastExpr 0x7fc73d868720 <col:12, col:23> 'int' <IntegralCast>
+        `-CallExpr 0x7fc73d8686c0 <col:12, col:23> 'unsigned long'
+          |-ImplicitCastExpr 0x7fc73d8686a8 <col:12> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fc73d868618 <col:12> 'unsigned long (const char *)' Function 0x7fc73d867f70 'strlen' 'unsigned long (const char *)'
+          `-ImplicitCastExpr 0x7fc73d868708 <col:19> 'const char *' <BitCast>
+            `-ImplicitCastExpr 0x7fc73d8686f0 <col:19> 'char *' <ArrayToPointerDecay>
+              `-DeclRefExpr 0x7fc73d868640 <col:19> 'char [256]' lvalue Var 0x7fc73d868478 'buff' 'char [256]'

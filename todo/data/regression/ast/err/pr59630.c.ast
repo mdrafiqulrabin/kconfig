@@ -1,0 +1,27 @@
+../Data/C2AST/pr59630.c:6:21: error: builtin functions must be directly called
+  _Bool (*f)(int) = __builtin_abs;  
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7fd6688174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd668817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd668817780 '__int128'
+|-TypedefDecl 0x7fd668817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6688177a0 'unsigned __int128'
+|-TypedefDecl 0x7fd668817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd668817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd668817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd668817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd668817e00 'char *'
+|   `-BuiltinType 0x7fd668817580 'char'
+|-TypedefDecl 0x7fd668818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd6688180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd668817f20 'struct __va_list_tag'
+|     `-Record 0x7fd668817e98 '__va_list_tag'
+|-FunctionDecl 0x7fd66701d800 <../Data/C2AST/pr59630.c:4:1, line:8:1> line:4:7 foo '_Bool ()'
+| `-CompoundStmt 0x7fd66701dcb8 <line:5:1, line:8:1>
+|   `-DeclStmt 0x7fd66701dc80 <line:6:3, col:34>
+|     `-VarDecl 0x7fd66701da60 <col:3, col:17> col:11 invalid f '_Bool (*)(int)'
+`-FunctionDecl 0x7fd66701daf8 <col:21> col:21 implicit used __builtin_abs 'int (int)' extern
+  |-ParmVarDecl 0x7fd66701db98 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fd66701dc00 <col:21> Implicit
+  `-ConstAttr 0x7fd66701dc48 <col:21> Implicit

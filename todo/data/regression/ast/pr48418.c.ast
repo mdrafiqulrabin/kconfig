@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fadb282bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fadb3014268 <../Data/C2AST/pr48418.c:5:1, line:20:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fadb282c978 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fadb3015048 <line:7:1, line:20:1>
+    |-DeclStmt 0x7fadb3014478 <line:8:3, col:44>
+    | `-VarDecl 0x7fadb3014368 <col:3, <built-in>:35:22> ../Data/C2AST/pr48418.c:8:13 used a 'const int' cinit
+    |   `-ImplicitCastExpr 0x7fadb3014460 <col:17, <built-in>:35:22> 'int' <IntegralCast>
+    |     `-BinaryOperator 0x7fadb3014438 <../Data/C2AST/pr48418.c:8:17, <built-in>:35:22> 'unsigned long' '*'
+    |       |-UnaryExprOrTypeTraitExpr 0x7fadb30143e0 <../Data/C2AST/pr48418.c:8:17, col:28> 'unsigned long' sizeof 'int'
+    |       `-ImplicitCastExpr 0x7fadb3014420 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fadb3014400 <col:22> 'int' 8
+    |-DeclStmt 0x7fadb3014548 <../Data/C2AST/pr48418.c:9:3, col:19>
+    | `-VarDecl 0x7fadb30144a8 <col:3, col:18> col:13 used b 'const int' cinit
+    |   `-UnaryOperator 0x7fadb3014528 <col:17, col:18> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fadb3014508 <col:18> 'int' 7
+    |-DeclStmt 0x7fadb30145f8 <line:10:3, col:12>
+    | `-VarDecl 0x7fadb3014578 <col:3, col:11> col:7 used c 'int' cinit
+    |   `-IntegerLiteral 0x7fadb30145d8 <col:11> 'int' 0
+    |-CompoundAssignOperator 0x7fadb3014738 <line:11:3, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014610 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014710 <col:8, col:13> 'int' '<<'
+    |   |-ImplicitCastExpr 0x7fadb3014688 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014638 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fadb30146a0 <col:13> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fadb3014660 <col:13> 'const int' lvalue Var 0x7fadb3014368 'a' 'const int'
+    |-CompoundAssignOperator 0x7fadb3014898 <line:12:3, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014770 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014870 <col:8, col:13> 'int' '<<'
+    |   |-ImplicitCastExpr 0x7fadb30147e8 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014798 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fadb3014800 <col:13> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fadb30147c0 <col:13> 'const int' lvalue Var 0x7fadb30144a8 'b' 'const int'
+    |-CompoundAssignOperator 0x7fadb3014a18 <line:13:3, col:41> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb30148d0 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb30149f0 <col:8, col:41> 'int' '<<'
+    |   |-ImplicitCastExpr 0x7fadb30149d8 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb30148f8 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-ParenExpr 0x7fadb30149b8 <col:13, col:41> 'unsigned long'
+    |     `-BinaryOperator 0x7fadb3014990 <col:14, <built-in>:35:22> 'unsigned long' '*'
+    |       |-UnaryExprOrTypeTraitExpr 0x7fadb3014938 <../Data/C2AST/pr48418.c:13:14, col:25> 'unsigned long' sizeof 'int'
+    |       `-ImplicitCastExpr 0x7fadb3014978 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fadb3014958 <col:22> 'int' 8
+    |-CompoundAssignOperator 0x7fadb3014b20 <../Data/C2AST/pr48418.c:14:3, col:14> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014a50 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014af8 <col:8, col:14> 'int' '<<'
+    |   |-ImplicitCastExpr 0x7fadb3014ae0 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014a78 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-UnaryOperator 0x7fadb3014ac0 <col:13, col:14> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fadb3014aa0 <col:14> 'int' 7
+    |-CompoundAssignOperator 0x7fadb3014c28 <line:15:3, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014b58 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014c00 <col:8, col:13> 'int' '>>'
+    |   |-ImplicitCastExpr 0x7fadb3014bd0 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014b80 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fadb3014be8 <col:13> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fadb3014ba8 <col:13> 'const int' lvalue Var 0x7fadb3014368 'a' 'const int'
+    |-CompoundAssignOperator 0x7fadb3014d30 <line:16:3, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014c60 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014d08 <col:8, col:13> 'int' '>>'
+    |   |-ImplicitCastExpr 0x7fadb3014cd8 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014c88 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-ImplicitCastExpr 0x7fadb3014cf0 <col:13> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fadb3014cb0 <col:13> 'const int' lvalue Var 0x7fadb30144a8 'b' 'const int'
+    |-CompoundAssignOperator 0x7fadb3014eb0 <line:17:3, col:41> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014d68 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014e88 <col:8, col:41> 'int' '>>'
+    |   |-ImplicitCastExpr 0x7fadb3014e70 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014d90 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-ParenExpr 0x7fadb3014e50 <col:13, col:41> 'unsigned long'
+    |     `-BinaryOperator 0x7fadb3014e28 <col:14, <built-in>:35:22> 'unsigned long' '*'
+    |       |-UnaryExprOrTypeTraitExpr 0x7fadb3014dd0 <../Data/C2AST/pr48418.c:17:14, col:25> 'unsigned long' sizeof 'int'
+    |       `-ImplicitCastExpr 0x7fadb3014e10 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fadb3014df0 <col:22> 'int' 8
+    |-CompoundAssignOperator 0x7fadb3014fb8 <../Data/C2AST/pr48418.c:18:3, col:14> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fadb3014ee8 <col:3> 'int' lvalue Var 0x7fadb3014578 'c' 'int'
+    | `-BinaryOperator 0x7fadb3014f90 <col:8, col:14> 'int' '>>'
+    |   |-ImplicitCastExpr 0x7fadb3014f78 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fadb3014f10 <col:8> 'int' lvalue ParmVar 0x7fadb282c978 'x' 'int'
+    |   `-UnaryOperator 0x7fadb3014f58 <col:13, col:14> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fadb3014f38 <col:14> 'int' 7
+    `-ReturnStmt 0x7fadb3015030 <line:19:3, col:10>
+      `-ImplicitCastExpr 0x7fadb3015018 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fadb3014ff0 <col:10> 'int' lvalue Var 0x7fadb3014578 'c' 'int'

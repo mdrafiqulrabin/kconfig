@@ -1,0 +1,88 @@
+TranslationUnitDecl 0x7fecdc01eee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fecdc01fb60 <../Data/C2AST/pr59743.c:3:9, line:9:1> line:3:9 union definition
+| |-FieldDecl 0x7fecdc820638 <line:4:3, col:8> col:8 referenced all 'long'
+| |-RecordDecl 0x7fecdc820680 <line:5:3, line:8:3> line:5:3 struct definition
+| | |-FieldDecl 0x7fecdc820748 <line:6:5, col:9> col:9 referenced low 'int'
+| | `-FieldDecl 0x7fecdc8207a8 <line:7:5, col:9> col:9 referenced high 'int'
+| `-FieldDecl 0x7fecdc820840 <line:5:3, line:8:5> col:5 referenced s 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)'
+|-TypedefDecl 0x7fecdc8208e0 <line:3:1, line:9:3> col:3 referenced udwords 'union udwords':'udwords'
+| `-ElaboratedType 0x7fecdc820890 'union udwords' sugar
+|   `-RecordType 0x7fecdc820600 'udwords'
+|     `-Record 0x7fecdc01fb60 ''
+|-VarDecl 0x7fecdc820968 <line:10:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fecdc820a20 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fecdc820a98 <col:1, col:11> col:11 used c 'int'
+|-VarDecl 0x7fecdc820b10 <col:1, col:14> col:14 used d 'int'
+|-FunctionDecl 0x7fecdc820be8 <line:11:1, line:22:1> line:11:6 __udivmoddi4 'void ()'
+| `-CompoundStmt 0x7fecdc8219e8 <col:21, line:22:1>
+|   |-DeclStmt 0x7fecdc820d20 <line:12:3, col:12>
+|   | `-VarDecl 0x7fecdc820cc0 <col:3, col:11> col:11 used r 'udwords':'udwords'
+|   |-BinaryOperator 0x7fecdc820fc8 <line:13:3, col:22> 'int' '='
+|   | |-DeclRefExpr 0x7fecdc820d38 <col:3> 'int' lvalue Var 0x7fecdc820b10 'd' 'int'
+|   | `-CallExpr 0x7fecdc820f80 <col:7, col:22> 'int'
+|   |   |-ImplicitCastExpr 0x7fecdc820f68 <col:7> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fecdc820ef8 <col:7> '<builtin fn type>' Function 0x7fecdc820d98 '__builtin_clz' 'int (unsigned int)'
+|   |   `-ImplicitCastExpr 0x7fecdc820fb0 <col:21> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fecdc820f20 <col:21> 'int' 0
+|   |-BinaryOperator 0x7fecdc8210a8 <line:14:3, col:13> 'int' '='
+|   | |-MemberExpr 0x7fecdc821050 <col:3, col:7> 'int' lvalue .low 0x7fecdc820748
+|   | | `-MemberExpr 0x7fecdc821018 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)' lvalue .s 0x7fecdc820840
+|   | |   `-DeclRefExpr 0x7fecdc820ff0 <col:3> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|   | `-IntegerLiteral 0x7fecdc821088 <col:13> 'int' 0
+|   `-ForStmt 0x7fecdc8219b0 <line:15:3, line:21:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fecdc821198 <line:15:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fecdc821170 <col:10> 'int' lvalue Var 0x7fecdc820b10 'd' 'int'
+|     |-UnaryOperator 0x7fecdc8211d8 <col:13, col:15> 'int' prefix '--'
+|     | `-DeclRefExpr 0x7fecdc8211b0 <col:15> 'int' lvalue Var 0x7fecdc820b10 'd' 'int'
+|     `-CompoundStmt 0x7fecdc821978 <col:18, line:21:3>
+|       |-BinaryOperator 0x7fecdc8214c8 <line:16:5, col:43> 'int' '='
+|       | |-MemberExpr 0x7fecdc821258 <col:5, col:9> 'int' lvalue .high 0x7fecdc8207a8
+|       | | `-MemberExpr 0x7fecdc821220 <col:5, col:7> 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)' lvalue .s 0x7fecdc820840
+|       | |   `-DeclRefExpr 0x7fecdc8211f8 <col:5> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|       | `-BinaryOperator 0x7fecdc8214a0 <col:16, col:43> 'int' '|'
+|       |   |-BinaryOperator 0x7fecdc821360 <col:16, col:28> 'int' '<<'
+|       |   | |-ImplicitCastExpr 0x7fecdc821348 <col:16, col:20> 'int' <LValueToRValue>
+|       |   | | `-MemberExpr 0x7fecdc8212f0 <col:16, col:20> 'int' lvalue .high 0x7fecdc8207a8
+|       |   | |   `-MemberExpr 0x7fecdc8212b8 <col:16, col:18> 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)' lvalue .s 0x7fecdc820840
+|       |   | |     `-DeclRefExpr 0x7fecdc821290 <col:16> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|       |   | `-IntegerLiteral 0x7fecdc821328 <col:28> 'int' 1
+|       |   `-BinaryOperator 0x7fecdc821478 <col:32, col:43> 'int' '>>'
+|       |     |-ImplicitCastExpr 0x7fecdc821448 <col:32, col:36> 'int' <LValueToRValue>
+|       |     | `-MemberExpr 0x7fecdc8213e8 <col:32, col:36> 'int' lvalue .low 0x7fecdc820748
+|       |     |   `-MemberExpr 0x7fecdc8213b0 <col:32, col:34> 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)' lvalue .s 0x7fecdc820840
+|       |     |     `-DeclRefExpr 0x7fecdc821388 <col:32> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|       |     `-ImplicitCastExpr 0x7fecdc821460 <col:43> 'int' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fecdc821420 <col:43> 'int' lvalue Var 0x7fecdc820968 'a' 'int'
+|       |-BinaryOperator 0x7fecdc821700 <line:17:5, col:31> 'int' '='
+|       | |-MemberExpr 0x7fecdc821550 <col:5, col:9> 'int' lvalue .low 0x7fecdc820748
+|       | | `-MemberExpr 0x7fecdc821518 <col:5, col:7> 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)' lvalue .s 0x7fecdc820840
+|       | |   `-DeclRefExpr 0x7fecdc8214f0 <col:5> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|       | `-BinaryOperator 0x7fecdc8216d8 <col:15, col:31> 'int' '>>'
+|       |   |-BinaryOperator 0x7fecdc821690 <col:15, col:26> 'int' '<<'
+|       |   | |-ImplicitCastExpr 0x7fecdc821660 <col:15, col:19> 'int' <LValueToRValue>
+|       |   | | `-MemberExpr 0x7fecdc821600 <col:15, col:19> 'int' lvalue .low 0x7fecdc820748
+|       |   | |   `-MemberExpr 0x7fecdc8215b0 <col:15, col:17> 'struct (anonymous struct at ../Data/C2AST/pr59743.c:5:3)':'struct udwords::(anonymous at ../Data/C2AST/pr59743.c:5:3)' lvalue .s 0x7fecdc820840
+|       |   | |     `-DeclRefExpr 0x7fecdc821588 <col:15> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|       |   | `-ImplicitCastExpr 0x7fecdc821678 <col:26> 'int' <LValueToRValue>
+|       |   |   `-DeclRefExpr 0x7fecdc821638 <col:26> 'int' lvalue Var 0x7fecdc820a20 'b' 'int'
+|       |   `-IntegerLiteral 0x7fecdc8216b8 <col:31> 'int' 1
+|       |-DeclStmt 0x7fecdc821850 <line:18:5, col:19>
+|       | `-VarDecl 0x7fecdc821740 <col:5, col:16> col:9 used s 'int' cinit
+|       |   `-ImplicitCastExpr 0x7fecdc821838 <col:13, col:16> 'int' <IntegralCast>
+|       |     `-UnaryOperator 0x7fecdc821818 <col:13, col:16> 'long' prefix '-'
+|       |       `-ImplicitCastExpr 0x7fecdc821800 <col:14, col:16> 'long' <LValueToRValue>
+|       |         `-MemberExpr 0x7fecdc8217c8 <col:14, col:16> 'long' lvalue .all 0x7fecdc820638
+|       |           `-DeclRefExpr 0x7fecdc8217a0 <col:14> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+|       |-BinaryOperator 0x7fecdc8218d0 <line:19:5, col:9> 'int' '='
+|       | |-DeclRefExpr 0x7fecdc821868 <col:5> 'int' lvalue Var 0x7fecdc820a98 'c' 'int'
+|       | `-ImplicitCastExpr 0x7fecdc8218b8 <col:9> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fecdc821890 <col:9> 'int' lvalue Var 0x7fecdc821740 's' 'int'
+|       `-UnaryOperator 0x7fecdc821958 <line:20:5, col:10> 'long' postfix '--'
+|         `-MemberExpr 0x7fecdc821920 <col:5, col:7> 'long' lvalue .all 0x7fecdc820638
+|           `-DeclRefExpr 0x7fecdc8218f8 <col:5> 'udwords':'udwords' lvalue Var 0x7fecdc820cc0 'r' 'udwords':'udwords'
+`-FunctionDecl 0x7fecdc820d98 <line:13:7> col:7 implicit used __builtin_clz 'int (unsigned int)' extern
+  |-ParmVarDecl 0x7fecdc820e38 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  |-NoThrowAttr 0x7fecdc820ea0 <col:7> Implicit
+  `-ConstAttr 0x7fecdc820ee8 <col:7> Implicit

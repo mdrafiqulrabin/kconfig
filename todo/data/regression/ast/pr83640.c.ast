@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fed44827ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fed4582a228 <../Data/C2AST/pr83640.c:3:1, col:16> col:7 used foo 'char *(void)'
+|-FunctionDecl 0x7fed4582a470 <line:5:1, line:12:1> line:6:1 bar 'void (char *, char *)'
+| |-ParmVarDecl 0x7fed4582a320 <col:6, col:12> col:12 used b 'char *'
+| |-ParmVarDecl 0x7fed4582a398 <col:15, col:21> col:21 used c 'char *'
+| `-CompoundStmt 0x7fed4582ab80 <line:7:1, line:12:1>
+|   |-BinaryOperator 0x7fed4582a588 <line:8:3, col:7> 'char *' '='
+|   | |-DeclRefExpr 0x7fed4582a520 <col:3> 'char *' lvalue ParmVar 0x7fed4582a320 'b' 'char *'
+|   | `-ImplicitCastExpr 0x7fed4582a570 <col:7> 'char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fed4582a548 <col:7> 'char *' lvalue ParmVar 0x7fed4582a398 'c' 'char *'
+|   |-BinaryOperator 0x7fed4582a668 <line:9:3, col:12> 'char *' '='
+|   | |-DeclRefExpr 0x7fed4582a5b0 <col:3> 'char *' lvalue ParmVar 0x7fed4582a398 'c' 'char *'
+|   | `-CallExpr 0x7fed4582a640 <col:7, col:12> 'char *'
+|   |   `-ImplicitCastExpr 0x7fed4582a628 <col:7> 'char *(*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7fed4582a5d8 <col:7> 'char *(void)' Function 0x7fed4582a228 'foo' 'char *(void)'
+|   |-CallExpr 0x7fed4582a9c0 <line:10:3, col:28> 'char *'
+|   | |-ImplicitCastExpr 0x7fed4582a9a8 <col:3> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fed4582a888 <col:3> '<builtin fn type>' Function 0x7fed4582a6d0 '__builtin_strcat' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7fed4582a9f8 <col:21> 'char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fed4582a8b0 <col:21> 'char *' lvalue ParmVar 0x7fed4582a398 'c' 'char *'
+|   | `-ImplicitCastExpr 0x7fed4582aa28 <col:24> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fed4582aa10 <col:24> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7fed4582a918 <col:24> 'char [3]' lvalue "*/"
+|   `-CallExpr 0x7fed4582ab00 <line:11:3, col:25> 'char *'
+|     |-ImplicitCastExpr 0x7fed4582aae8 <col:3> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fed4582aa40 <col:3> '<builtin fn type>' Function 0x7fed4582a6d0 '__builtin_strcat' 'char *(char *, const char *)'
+|     |-ImplicitCastExpr 0x7fed4582ab38 <col:21> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fed4582aa68 <col:21> 'char *' lvalue ParmVar 0x7fed4582a398 'c' 'char *'
+|     `-ImplicitCastExpr 0x7fed4582ab68 <col:24> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fed4582ab50 <col:24> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fed4582aa90 <col:24> 'char *' lvalue ParmVar 0x7fed4582a320 'b' 'char *'
+`-FunctionDecl 0x7fed4582a6d0 <line:10:3> col:3 implicit used __builtin_strcat 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7fed4582a770 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7fed4582a7d0 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7fed4582a840 <col:3> Implicit

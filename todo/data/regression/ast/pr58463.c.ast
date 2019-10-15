@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fb17f02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb17f02c960 <../Data/C2AST/pr58463.c:4:9, line:7:1> line:4:9 struct definition
+| `-FieldDecl 0x7fb17f81fa38 <line:6:3, col:7> col:7 referenced data16 'int'
+|-TypedefDecl 0x7fb17f81fad0 <line:4:1, line:8:1> col:1 referenced list_data 'struct list_data':'list_data'
+| `-ElaboratedType 0x7fb17f81fa80 'struct list_data' sugar
+|   `-RecordType 0x7fb17f81fa00 'list_data'
+|     `-Record 0x7fb17f02c960 ''
+`-FunctionDecl 0x7fb17f81fcd0 <line:9:1, line:13:1> line:10:1 fn1 'void (list_data *)'
+  |-ParmVarDecl 0x7fb17f81fbc8 <col:6, col:18> col:18 used p1 'list_data *'
+  `-CompoundStmt 0x7fb17f820030 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fb17f820008 <line:12:5, col:49> 'int' '='
+      |-MemberExpr 0x7fb17f81fdf8 <col:5, col:9> 'int' lvalue ->data16 0x7fb17f81fa38
+      | `-ImplicitCastExpr 0x7fb17f81fde0 <col:5> 'list_data *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb17f81fdb8 <col:5> 'list_data *' lvalue ParmVar 0x7fb17f81fbc8 'p1' 'list_data *'
+      `-BinaryOperator 0x7fb17f81ffe0 <col:18, col:49> 'int' '&'
+        |-BinaryOperator 0x7fb17f81fee0 <col:18, col:31> 'int' '&'
+        | |-ImplicitCastExpr 0x7fb17f81fec8 <col:18, col:22> 'int' <LValueToRValue>
+        | | `-MemberExpr 0x7fb17f81fe70 <col:18, col:22> 'int' lvalue ->data16 0x7fb17f81fa38
+        | |   `-ImplicitCastExpr 0x7fb17f81fe58 <col:18> 'list_data *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fb17f81fe30 <col:18> 'list_data *' lvalue ParmVar 0x7fb17f81fbc8 'p1' 'list_data *'
+        | `-IntegerLiteral 0x7fb17f81fea8 <col:31> 'int' 1
+        `-BinaryOperator 0x7fb17f81ffb8 <col:35, col:49> 'int' '>>'
+          |-ImplicitCastExpr 0x7fb17f81ffa0 <col:35, col:39> 'int' <LValueToRValue>
+          | `-MemberExpr 0x7fb17f81ff48 <col:35, col:39> 'int' lvalue ->data16 0x7fb17f81fa38
+          |   `-ImplicitCastExpr 0x7fb17f81ff30 <col:35> 'list_data *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fb17f81ff08 <col:35> 'list_data *' lvalue ParmVar 0x7fb17f81fbc8 'p1' 'list_data *'
+          `-IntegerLiteral 0x7fb17f81ff80 <col:49> 'int' 1

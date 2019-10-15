@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fa3340288e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa334029578 <../Data/C2AST/pr54087.c:7:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fa333015328 <line:9:1, line:12:1> line:9:5 f1 'int (int)'
+| |-ParmVarDecl 0x7fa333015258 <col:8, col:12> col:12 used p 'int'
+| `-CompoundStmt 0x7fa3330156d0 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fa3330156b8 <line:11:3, col:57>
+|     `-BinaryOperator 0x7fa333015690 <col:10, col:57> 'int' '=='
+|       |-AtomicExpr 0x7fa333015618 <col:10, col:52> 'int'
+|       | |-UnaryOperator 0x7fa333015518 <col:29, col:30> 'int *' prefix '&'
+|       | | `-DeclRefExpr 0x7fa3330154c0 <col:30> 'int' lvalue Var 0x7fa334029578 'a' 'int'
+|       | |-IntegerLiteral 0x7fa333015560 <<built-in>:16:26> 'int' 5
+|       | `-ImplicitCastExpr 0x7fa333015600 <../Data/C2AST/pr54087.c:11:33> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa333015538 <col:33> 'int' lvalue ParmVar 0x7fa333015258 'p' 'int'
+|       `-IntegerLiteral 0x7fa333015670 <col:57> 'int' 0
+|-FunctionDecl 0x7fa3330153f8 <col:10> col:10 implicit used __atomic_sub_fetch 'void ()' extern
+|-FunctionDecl 0x7fa333015790 <line:14:1, line:17:1> line:14:5 f2 'int (int)'
+| |-ParmVarDecl 0x7fa333015700 <col:8, col:12> col:12 used p 'int'
+| `-CompoundStmt 0x7fa333015b20 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fa333015b08 <line:16:3, col:61>
+|     `-BinaryOperator 0x7fa333015ae0 <col:10, col:61> 'int' '=='
+|       |-BinaryOperator 0x7fa333015a98 <col:10, col:56> 'int' '-'
+|       | |-AtomicExpr 0x7fa333015a00 <col:10, col:52> 'int'
+|       | | |-UnaryOperator 0x7fa333015928 <col:29, col:30> 'int *' prefix '&'
+|       | | | `-DeclRefExpr 0x7fa333015900 <col:30> 'int' lvalue Var 0x7fa334029578 'a' 'int'
+|       | | |-IntegerLiteral 0x7fa333015970 <<built-in>:16:26> 'int' 5
+|       | | `-ImplicitCastExpr 0x7fa3330159e8 <../Data/C2AST/pr54087.c:16:33> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fa333015948 <col:33> 'int' lvalue ParmVar 0x7fa333015700 'p' 'int'
+|       | `-ImplicitCastExpr 0x7fa333015a80 <col:56> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa333015a58 <col:56> 'int' lvalue ParmVar 0x7fa333015700 'p' 'int'
+|       `-IntegerLiteral 0x7fa333015ac0 <col:61> 'int' 0
+`-FunctionDecl 0x7fa333015838 <col:10> col:10 implicit used __atomic_fetch_sub 'void ()' extern

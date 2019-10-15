@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7ffcfb0174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffcfb018178 <../Data/C2AST/pr78546-2.c:4:1, col:27> col:27 referenced u128 'unsigned __int128'
+| `-BuiltinType 0x7ffcfb0177a0 'unsigned __int128'
+|-VarDecl 0x7ffcfb00be00 <line:5:1, col:6> col:6 used b 'u128':'unsigned __int128'
+|-FunctionDecl 0x7ffcfb00bef0 <line:7:1, line:16:1> line:8:1 main 'int ()'
+| `-CompoundStmt 0x7ffcfb00c618 <line:9:1, line:16:1>
+|   |-GCCAsmStmt 0x7ffcfb00c058 <line:10:3, col:34>
+|   |-DeclStmt 0x7ffcfb00c218 <line:11:3, col:46>
+|   | `-VarDecl 0x7ffcfb00c0b8 <col:3, col:45> col:8 used x 'u128':'unsigned __int128' cinit
+|   |   `-BinaryOperator 0x7ffcfb00c1f0 <col:12, col:45> 'unsigned __int128' '-'
+|   |     |-ParenExpr 0x7ffcfb00c190 <col:12, col:41> 'u128':'unsigned __int128'
+|   |     | `-CStyleCastExpr 0x7ffcfb00c168 <col:13, col:21> 'u128':'unsigned __int128' <IntegralCast>
+|   |     |   `-UnaryOperator 0x7ffcfb00c138 <col:20, col:21> 'long long' prefix '~'
+|   |     |     `-IntegerLiteral 0x7ffcfb00c118 <col:21> 'long long' 9223372036854775807
+|   |     `-ImplicitCastExpr 0x7ffcfb00c1d8 <col:45> 'u128':'unsigned __int128' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffcfb00c1b0 <col:45> 'u128':'unsigned __int128' lvalue Var 0x7ffcfb00be00 'b' 'u128':'unsigned __int128'
+|   |-DeclStmt 0x7ffcfb00c340 <line:12:3, col:17>
+|   | `-VarDecl 0x7ffcfb00c240 <col:3, col:16> col:8 used y 'u128':'unsigned __int128' cinit
+|   |   `-BinaryOperator 0x7ffcfb00c318 <col:12, col:16> 'unsigned __int128' '-'
+|   |     |-ImplicitCastExpr 0x7ffcfb00c300 <col:12> 'unsigned __int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ffcfb00c2a0 <col:12> 'int' 1
+|   |     `-ImplicitCastExpr 0x7ffcfb00c2e8 <col:16> 'u128':'unsigned __int128' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffcfb00c2c0 <col:16> 'u128':'unsigned __int128' lvalue Var 0x7ffcfb00c0b8 'x' 'u128':'unsigned __int128'
+|   |-IfStmt 0x7ffcfb00c5a8 <line:13:3, line:14:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffcfb00c3d0 <line:13:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ffcfb00c3a0 <col:7> 'u128':'unsigned __int128' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffcfb00c358 <col:7> 'u128':'unsigned __int128' lvalue Var 0x7ffcfb00c240 'y' 'u128':'unsigned __int128'
+|   | | `-ImplicitCastExpr 0x7ffcfb00c3b8 <col:12> 'unsigned __int128' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ffcfb00c380 <col:12> 'unsigned long long' 9223372036854775809
+|   | |-CallExpr 0x7ffcfb00c580 <line:14:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffcfb00c568 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffcfb00c518 <col:5> '<builtin fn type>' Function 0x7ffcfb00c430 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffcfb00c600 <line:15:3, col:10>
+|     `-IntegerLiteral 0x7ffcfb00c5e0 <col:10> 'int' 0
+`-FunctionDecl 0x7ffcfb00c430 <line:14:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ffcfb00c4d0 <col:5> Implicit

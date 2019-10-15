@@ -1,0 +1,187 @@
+TranslationUnitDecl 0x7fa5298258e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa52a014200 <../Data/C2AST/pr70919.c:5:1, line:12:1> line:5:8 struct S0 definition
+| |-MaxFieldAlignmentAttr 0x7fa52a0142b0 <<invalid sloc>> Implicit 8
+| `-FieldDecl 0x7fa52a014330 <<built-in>:168:24, ../Data/C2AST/pr70919.c:10:21> col:18 referenced f0 'int'
+|   `-IntegerLiteral 0x7fa52a0142f8 <col:21> 'int' 24
+|-RecordDecl 0x7fa52a014378 <line:14:1, line:17:1> line:14:8 struct S1 definition
+| |-MaxFieldAlignmentAttr 0x7fa52a014420 <<invalid sloc>> Implicit 8
+| `-FieldDecl 0x7fa52a014480 <line:16:3, col:7> col:7 f1 'int'
+|-VarDecl 0x7fa52a014520 <line:14:1, line:17:3> col:3 used a 'struct S1':'struct S1'
+|-VarDecl 0x7fa52a0145f0 <line:19:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7fa52a014668 <col:1, col:8> col:8 used c 'int'
+|-FunctionDecl 0x7fa52a014800 <line:21:1, line:25:1> line:22:1 used fn1 'char (struct S1)'
+| |-ParmVarDecl 0x7fa52a014700 <col:6, col:16> col:16 p1 'struct S1':'struct S1'
+| `-CompoundStmt 0x7fa52a0148f8 <line:23:1, line:25:1>
+|   `-ReturnStmt 0x7fa52a0148e0 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7fa52a0148c8 <col:10> 'char' <IntegralCast>
+|       `-IntegerLiteral 0x7fa52a0148a8 <col:10> 'int' 0
+|-FunctionDecl 0x7fa52a014960 <line:27:1, line:50:1> line:28:1 main 'int ()'
+| `-CompoundStmt 0x7fa52a02dc70 <line:29:1, line:50:1>
+|   |-BinaryOperator 0x7fa52a014b50 <line:30:3, col:13> 'int' '='
+|   | |-DeclRefExpr 0x7fa52a014a00 <col:3> 'int' lvalue Var 0x7fa52a014668 'c' 'int'
+|   | `-ImplicitCastExpr 0x7fa52a014b38 <col:7, col:13> 'int' <IntegralCast>
+|   |   `-CallExpr 0x7fa52a014af0 <col:7, col:13> 'char'
+|   |     |-ImplicitCastExpr 0x7fa52a014ad8 <col:7> 'char (*)(struct S1)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fa52a014a28 <col:7> 'char (struct S1)' Function 0x7fa52a014800 'fn1' 'char (struct S1)'
+|   |     `-ImplicitCastExpr 0x7fa52a014b20 <col:12> 'struct S1':'struct S1' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa52a014a50 <col:12> 'struct S1':'struct S1' lvalue Var 0x7fa52a014520 'a' 'struct S1':'struct S1'
+|   |-IfStmt 0x7fa52a02c100 <line:31:3, line:39:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fa52a014ba0 <line:31:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa52a014b78 <col:7> 'int' lvalue Var 0x7fa52a0145f0 'b' 'int'
+|   | |-CompoundStmt 0x7fa52a02c0e0 <line:32:5, line:39:5>
+|   | | |-DeclStmt 0x7fa52a02be88 <line:33:7, line:37:3>
+|   | | | `-VarDecl 0x7fa52a014db8 <line:33:7, line:37:2> line:33:17 used f 'struct S0 [3][9]' cinit
+|   | | |   `-InitListExpr 0x7fa52a015b00 <line:34:2, line:37:2> 'struct S0 [3][9]'
+|   | | |     |-InitListExpr 0x7fa52a015b58 <line:34:4, col:68> 'struct S0 [9]'
+|   | | |     | |-InitListExpr 0x7fa52a015be0 <col:6, col:10> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a014e18 <col:8> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015c28 <col:13, col:17> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a014e80 <col:15> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015c70 <col:20, col:24> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a014ee8 <col:22> 'int' 1
+|   | | |     | |-InitListExpr 0x7fa52a015cb8 <col:27, col:31> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a014f50 <col:29> 'int' 1
+|   | | |     | |-InitListExpr 0x7fa52a015d00 <col:34, col:38> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a014fb8 <col:36> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015d48 <col:41, col:45> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015020 <col:43> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015d90 <col:48, col:52> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015088 <col:50> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015dd8 <col:55, col:59> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a0150f0 <col:57> 'int' 1
+|   | | |     | `-InitListExpr 0x7fa52a015e20 <col:62, col:66> 'struct S0':'struct S0'
+|   | | |     |   `-IntegerLiteral 0x7fa52a015158 <col:64> 'int' 1
+|   | | |     |-InitListExpr 0x7fa52a015e68 <line:35:4, col:68> 'struct S0 [9]'
+|   | | |     | |-InitListExpr 0x7fa52a015ef0 <col:6, col:10> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015248 <col:8> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015f38 <col:13, col:17> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a0152b0 <col:15> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a015f80 <col:20, col:24> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015318 <col:22> 'int' 1
+|   | | |     | |-InitListExpr 0x7fa52a015fc8 <col:27, col:31> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015380 <col:29> 'int' 1
+|   | | |     | |-InitListExpr 0x7fa52a016010 <col:34, col:38> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a0153e8 <col:36> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a016058 <col:41, col:45> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015450 <col:43> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a0160a0 <col:48, col:52> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a0154b8 <col:50> 'int' 0
+|   | | |     | |-InitListExpr 0x7fa52a0160e8 <col:55, col:59> 'struct S0':'struct S0'
+|   | | |     | | `-IntegerLiteral 0x7fa52a015520 <col:57> 'int' 1
+|   | | |     | `-InitListExpr 0x7fa52a016130 <col:62, col:66> 'struct S0':'struct S0'
+|   | | |     |   `-IntegerLiteral 0x7fa52a015588 <col:64> 'int' 1
+|   | | |     `-InitListExpr 0x7fa52a016178 <line:36:4, col:68> 'struct S0 [9]'
+|   | | |       |-InitListExpr 0x7fa52a02bc00 <col:6, col:10> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a015678 <col:8> 'int' 0
+|   | | |       |-InitListExpr 0x7fa52a02bc48 <col:13, col:17> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a0156e0 <col:15> 'int' 0
+|   | | |       |-InitListExpr 0x7fa52a02bc90 <col:20, col:24> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a015748 <col:22> 'int' 1
+|   | | |       |-InitListExpr 0x7fa52a02bcd8 <col:27, col:31> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a0157b0 <col:29> 'int' 1
+|   | | |       |-InitListExpr 0x7fa52a02bd20 <col:34, col:38> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a015818 <col:36> 'int' 0
+|   | | |       |-InitListExpr 0x7fa52a02bd68 <col:41, col:45> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a015880 <col:43> 'int' 0
+|   | | |       |-InitListExpr 0x7fa52a02bdb0 <col:48, col:52> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a0158e8 <col:50> 'int' 0
+|   | | |       |-InitListExpr 0x7fa52a02bdf8 <col:55, col:59> 'struct S0':'struct S0'
+|   | | |       | `-IntegerLiteral 0x7fa52a015950 <col:57> 'int' 1
+|   | | |       `-InitListExpr 0x7fa52a02be40 <col:62, col:66> 'struct S0':'struct S0'
+|   | | |         `-IntegerLiteral 0x7fa52a0159b8 <col:64> 'int' 1
+|   | | `-BinaryOperator 0x7fa52a02c0b8 <line:38:7, col:19> 'int' '='
+|   | |   |-DeclRefExpr 0x7fa52a02bea0 <col:7> 'int' lvalue Var 0x7fa52a0145f0 'b' 'int'
+|   | |   `-ImplicitCastExpr 0x7fa52a02c0a0 <col:11, col:19> 'int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fa52a02c068 <col:11, col:19> 'int' lvalue bitfield .f0 0x7fa52a014330
+|   | |       `-ArraySubscriptExpr 0x7fa52a02c040 <col:11, col:17> 'struct S0':'struct S0' lvalue
+|   | |         |-ImplicitCastExpr 0x7fa52a02c028 <col:11, col:14> 'struct S0 *' <ArrayToPointerDecay>
+|   | |         | `-ArraySubscriptExpr 0x7fa52a02bf80 <col:11, col:14> 'struct S0 [9]' lvalue
+|   | |         |   |-ImplicitCastExpr 0x7fa52a02bf68 <col:11> 'struct S0 (*)[9]' <ArrayToPointerDecay>
+|   | |         |   | `-DeclRefExpr 0x7fa52a02bec8 <col:11> 'struct S0 [3][9]' lvalue Var 0x7fa52a014db8 'f' 'struct S0 [3][9]'
+|   | |         |   `-IntegerLiteral 0x7fa52a02bef0 <col:13> 'int' 1
+|   | |         `-IntegerLiteral 0x7fa52a02bfa8 <col:16> 'int' 8
+|   | `-<<<NULL>>>
+|   |-DeclStmt 0x7fa52a02d8b8 <line:40:3, line:44:3>
+|   | `-VarDecl 0x7fa52a02c1b8 <line:40:3, line:44:2> line:40:13 used g 'struct S0 [3][9]' cinit
+|   |   `-InitListExpr 0x7fa52a02cf30 <line:41:2, line:44:2> 'struct S0 [3][9]'
+|   |     |-InitListExpr 0x7fa52a02cf88 <line:41:4, col:68> 'struct S0 [9]'
+|   |     | |-InitListExpr 0x7fa52a02d010 <col:6, col:10> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c218 <col:8> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d058 <col:13, col:17> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c280 <col:15> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d0a0 <col:20, col:24> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c2e8 <col:22> 'int' 1
+|   |     | |-InitListExpr 0x7fa52a02d0e8 <col:27, col:31> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c350 <col:29> 'int' 1
+|   |     | |-InitListExpr 0x7fa52a02d130 <col:34, col:38> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c3b8 <col:36> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d178 <col:41, col:45> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c420 <col:43> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d1c0 <col:48, col:52> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c488 <col:50> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d208 <col:55, col:59> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c4f0 <col:57> 'int' 1
+|   |     | `-InitListExpr 0x7fa52a02d250 <col:62, col:66> 'struct S0':'struct S0'
+|   |     |   `-IntegerLiteral 0x7fa52a02c558 <col:64> 'int' 1
+|   |     |-InitListExpr 0x7fa52a02d298 <line:42:4, col:68> 'struct S0 [9]'
+|   |     | |-InitListExpr 0x7fa52a02d320 <col:6, col:10> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c648 <col:8> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d368 <col:13, col:17> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c6b0 <col:15> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d3b0 <col:20, col:24> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c718 <col:22> 'int' 1
+|   |     | |-InitListExpr 0x7fa52a02d3f8 <col:27, col:31> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c780 <col:29> 'int' 1
+|   |     | |-InitListExpr 0x7fa52a02d440 <col:34, col:38> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c7e8 <col:36> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d488 <col:41, col:45> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c850 <col:43> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d4d0 <col:48, col:52> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c8b8 <col:50> 'int' 0
+|   |     | |-InitListExpr 0x7fa52a02d518 <col:55, col:59> 'struct S0':'struct S0'
+|   |     | | `-IntegerLiteral 0x7fa52a02c920 <col:57> 'int' 1
+|   |     | `-InitListExpr 0x7fa52a02d560 <col:62, col:66> 'struct S0':'struct S0'
+|   |     |   `-IntegerLiteral 0x7fa52a02c988 <col:64> 'int' 1
+|   |     `-InitListExpr 0x7fa52a02d5a8 <line:43:4, col:68> 'struct S0 [9]'
+|   |       |-InitListExpr 0x7fa52a02d630 <col:6, col:10> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02ca78 <col:8> 'int' 0
+|   |       |-InitListExpr 0x7fa52a02d678 <col:13, col:17> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02cae0 <col:15> 'int' 0
+|   |       |-InitListExpr 0x7fa52a02d6c0 <col:20, col:24> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02cb48 <col:22> 'int' 1
+|   |       |-InitListExpr 0x7fa52a02d708 <col:27, col:31> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02cbb0 <col:29> 'int' 1
+|   |       |-InitListExpr 0x7fa52a02d750 <col:34, col:38> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02cc48 <col:36> 'int' 0
+|   |       |-InitListExpr 0x7fa52a02d798 <col:41, col:45> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02ccb0 <col:43> 'int' 0
+|   |       |-InitListExpr 0x7fa52a02d7e0 <col:48, col:52> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02cd18 <col:50> 'int' 0
+|   |       |-InitListExpr 0x7fa52a02d828 <col:55, col:59> 'struct S0':'struct S0'
+|   |       | `-IntegerLiteral 0x7fa52a02cd80 <col:57> 'int' 1
+|   |       `-InitListExpr 0x7fa52a02d870 <col:62, col:66> 'struct S0':'struct S0'
+|   |         `-IntegerLiteral 0x7fa52a02cde8 <col:64> 'int' 1
+|   |-IfStmt 0x7fa52a02dc00 <line:46:3, line:47:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa52a02da28 <line:46:7, col:21> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fa52a02da10 <col:7, col:15> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fa52a02d9b8 <col:7, col:15> 'int' lvalue bitfield .f0 0x7fa52a014330
+|   | | |   `-ArraySubscriptExpr 0x7fa52a02d990 <col:7, col:13> 'struct S0':'struct S0' lvalue
+|   | | |     |-ImplicitCastExpr 0x7fa52a02d978 <col:7, col:10> 'struct S0 *' <ArrayToPointerDecay>
+|   | | |     | `-ArraySubscriptExpr 0x7fa52a02d930 <col:7, col:10> 'struct S0 [9]' lvalue
+|   | | |     |   |-ImplicitCastExpr 0x7fa52a02d918 <col:7> 'struct S0 (*)[9]' <ArrayToPointerDecay>
+|   | | |     |   | `-DeclRefExpr 0x7fa52a02d8d0 <col:7> 'struct S0 [3][9]' lvalue Var 0x7fa52a02c1b8 'g' 'struct S0 [3][9]'
+|   | | |     |   `-IntegerLiteral 0x7fa52a02d8f8 <col:9> 'int' 1
+|   | | |     `-IntegerLiteral 0x7fa52a02d958 <col:12> 'int' 8
+|   | | `-IntegerLiteral 0x7fa52a02d9f0 <col:21> 'int' 1
+|   | |-CallExpr 0x7fa52a02dbd0 <line:47:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fa52a02dbb8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fa52a02db68 <col:5> '<builtin fn type>' Function 0x7fa52a02da80 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa52a02dc58 <line:49:3, col:10>
+|     `-IntegerLiteral 0x7fa52a02dc38 <col:10> 'int' 0
+`-FunctionDecl 0x7fa52a02da80 <line:47:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fa52a02db20 <col:5> Implicit

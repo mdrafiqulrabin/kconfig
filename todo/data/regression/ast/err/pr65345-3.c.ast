@@ -1,0 +1,206 @@
+../Data/C2AST/pr65345-3.c:18:12: error: initializer element is not a compile-time constant
+float c1 = i;  
+           ^
+../Data/C2AST/pr65345-3.c:19:12: error: initializer element is not a compile-time constant
+float c2 = (i ? 1 : 2);  
+           ^~~~~~~~~~~
+../Data/C2AST/pr65345-3.c:20:7: error: variable length array declaration not allowed at file scope
+float c3[(int) i];  
+      ^  ~~~~~~~
+../Data/C2AST/pr65345-3.c:21:12: error: initializer element is not a compile-time constant
+float c4 = 0 || i;  
+           ^~~~~~
+../Data/C2AST/pr65345-3.c:22:7: error: initializing 'float' with an expression of incompatible type '_Atomic(float)'
+float c5 = (i += 10);  
+      ^    ~~~~~~~~~
+../Data/C2AST/pr65345-3.c:26:1: error: static_assert failed "3"
+_Static_assert (_Generic (i = 0, float: 1, default: 0) == 1, "3");
+^               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr65345-3.c:32:19: error: size of array has non-integer type '_Atomic(int)'
+void fn2 (float a[sz = 0]);
+                  ^~~~~~
+TranslationUnitDecl 0x7ffbaa82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffbaa82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffbaa82bf80 '__int128'
+|-TypedefDecl 0x7ffbaa82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffbaa82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffbaa82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffbaa82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffbaa82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffbaa82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffbaa82c600 'char *'
+|   `-BuiltinType 0x7ffbaa82bd80 'char'
+|-TypedefDecl 0x7ffbaa82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffbaa82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffbaa82c720 'struct __va_list_tag'
+|     `-Record 0x7ffbaa82c698 '__va_list_tag'
+|-VarDecl 0x7ffbab014200 <../Data/C2AST/pr65345-3.c:4:1, col:19> col:15 used i '_Atomic(float)' cinit
+| `-ImplicitCastExpr 0x7ffbab0142c0 <col:19> '_Atomic(float)' <NonAtomicToAtomic>
+|   `-FloatingLiteral 0x7ffbab0142a0 <col:19> 'float' 3.000000e+00
+|-VarDecl 0x7ffbab0142f0 <line:6:1, col:27> col:7 a1 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014448 <col:12, col:27> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014428 <col:12, col:27> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ffbab014408 <col:19, col:27> 'double'
+|       `-BinaryOperator 0x7ffbab0143e0 <col:20, col:24> 'double' '+'
+|         |-ImplicitCastExpr 0x7ffbab0143c8 <col:20> 'double' <FloatingCast>
+|         | `-ImplicitCastExpr 0x7ffbab0143b0 <col:20> 'float' <AtomicToNonAtomic>
+|         |   `-ImplicitCastExpr 0x7ffbab014398 <col:20> '_Atomic(float)' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7ffbab014350 <col:20> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|         `-FloatingLiteral 0x7ffbab014378 <col:24> 'double' 1.200000e+00
+|-VarDecl 0x7ffbab014478 <line:7:1, col:25> col:7 a2 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab0145b8 <col:12, col:25> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014598 <col:12, col:25> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ffbab014578 <col:19, col:25> '_Atomic(float)'
+|       `-BinaryOperator 0x7ffbab014550 <col:20, col:24> '_Atomic(float)' '='
+|         |-DeclRefExpr 0x7ffbab0144d8 <col:20> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|         `-ImplicitCastExpr 0x7ffbab014538 <col:24> '_Atomic(float)' <NonAtomicToAtomic>
+|           `-ImplicitCastExpr 0x7ffbab014520 <col:24> 'float' <IntegralToFloating>
+|             `-IntegerLiteral 0x7ffbab014500 <col:24> 'int' 0
+|-VarDecl 0x7ffbab0145e8 <line:8:1, col:23> col:7 a3 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab0146d0 <col:12, col:23> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab0146b0 <col:12, col:23> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ffbab014690 <col:19, col:23> 'float'
+|       `-UnaryOperator 0x7ffbab014670 <col:20, col:21> 'float' postfix '++'
+|         `-DeclRefExpr 0x7ffbab014648 <col:20> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab014700 <line:9:1, col:23> col:7 a4 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab0147e8 <col:12, col:23> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab0147c8 <col:12, col:23> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ffbab0147a8 <col:19, col:23> 'float'
+|       `-UnaryOperator 0x7ffbab014788 <col:20, col:21> 'float' postfix '--'
+|         `-DeclRefExpr 0x7ffbab014760 <col:20> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab014818 <line:10:1, col:22> col:7 a5 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014930 <col:12, col:22> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014910 <col:12, col:22> 'unsigned long' sizeof
+|     `-ParenExpr 0x7ffbab0148f0 <col:19, col:22> 'float'
+|       `-UnaryOperator 0x7ffbab0148d0 <col:20, col:21> 'float' prefix '-'
+|         `-ImplicitCastExpr 0x7ffbab0148b8 <col:21> 'float' <AtomicToNonAtomic>
+|           `-ImplicitCastExpr 0x7ffbab0148a0 <col:21> '_Atomic(float)' <LValueToRValue>
+|             `-DeclRefExpr 0x7ffbab014878 <col:21> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab014960 <line:12:1, col:27> col:7 b1 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014ab8 <col:12, col:27> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014a98 <col:12, col:27> 'unsigned long' alignof
+|     `-ParenExpr 0x7ffbab014a78 <col:21, col:27> 'float'
+|       `-BinaryOperator 0x7ffbab014a50 <col:22, col:26> 'float' '+'
+|         |-ImplicitCastExpr 0x7ffbab014a20 <col:22> 'float' <AtomicToNonAtomic>
+|         | `-ImplicitCastExpr 0x7ffbab014a08 <col:22> '_Atomic(float)' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7ffbab0149c0 <col:22> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|         `-ImplicitCastExpr 0x7ffbab014a38 <col:26> 'float' <IntegralToFloating>
+|           `-IntegerLiteral 0x7ffbab0149e8 <col:26> 'int' 1
+|-VarDecl 0x7ffbab014ae8 <line:13:1, col:27> col:7 b2 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014c28 <col:12, col:27> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014c08 <col:12, col:27> 'unsigned long' alignof
+|     `-ParenExpr 0x7ffbab014be8 <col:21, col:27> '_Atomic(float)'
+|       `-BinaryOperator 0x7ffbab014bc0 <col:22, col:26> '_Atomic(float)' '='
+|         |-DeclRefExpr 0x7ffbab014b48 <col:22> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|         `-ImplicitCastExpr 0x7ffbab014ba8 <col:26> '_Atomic(float)' <NonAtomicToAtomic>
+|           `-ImplicitCastExpr 0x7ffbab014b90 <col:26> 'float' <IntegralToFloating>
+|             `-IntegerLiteral 0x7ffbab014b70 <col:26> 'int' 0
+|-VarDecl 0x7ffbab014c58 <line:14:1, col:25> col:7 b3 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014d40 <col:12, col:25> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014d20 <col:12, col:25> 'unsigned long' alignof
+|     `-ParenExpr 0x7ffbab014d00 <col:21, col:25> 'float'
+|       `-UnaryOperator 0x7ffbab014ce0 <col:22, col:23> 'float' postfix '++'
+|         `-DeclRefExpr 0x7ffbab014cb8 <col:22> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab014d70 <line:15:1, col:25> col:7 b4 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014e58 <col:12, col:25> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014e38 <col:12, col:25> 'unsigned long' alignof
+|     `-ParenExpr 0x7ffbab014e18 <col:21, col:25> 'float'
+|       `-UnaryOperator 0x7ffbab014df8 <col:22, col:23> 'float' postfix '--'
+|         `-DeclRefExpr 0x7ffbab014dd0 <col:22> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab014e88 <line:16:1, col:24> col:7 b5 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab014fa0 <col:12, col:24> 'float' <IntegralToFloating>
+|   `-UnaryExprOrTypeTraitExpr 0x7ffbab014f80 <col:12, col:24> 'unsigned long' alignof
+|     `-ParenExpr 0x7ffbab014f60 <col:21, col:24> 'float'
+|       `-UnaryOperator 0x7ffbab014f40 <col:22, col:23> 'float' prefix '-'
+|         `-ImplicitCastExpr 0x7ffbab014f28 <col:23> 'float' <AtomicToNonAtomic>
+|           `-ImplicitCastExpr 0x7ffbab014f10 <col:23> '_Atomic(float)' <LValueToRValue>
+|             `-DeclRefExpr 0x7ffbab014ee8 <col:23> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab014fd0 <line:18:1, col:12> col:7 c1 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab015070 <col:12> 'float' <AtomicToNonAtomic>
+|   `-ImplicitCastExpr 0x7ffbab015058 <col:12> '_Atomic(float)' <LValueToRValue>
+|     `-DeclRefExpr 0x7ffbab015030 <col:12> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab0150a0 <line:19:1, col:22> col:7 c2 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab0151e8 <col:12, col:22> 'float' <IntegralToFloating>
+|   `-ParenExpr 0x7ffbab0151c8 <col:12, col:22> 'int'
+|     `-ConditionalOperator 0x7ffbab015198 <col:13, col:21> 'int'
+|       |-ImplicitCastExpr 0x7ffbab015180 <col:13> 'float' <AtomicToNonAtomic>
+|       | `-ImplicitCastExpr 0x7ffbab015168 <col:13> '_Atomic(float)' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7ffbab015100 <col:13> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|       |-IntegerLiteral 0x7ffbab015128 <col:17> 'int' 1
+|       `-IntegerLiteral 0x7ffbab015148 <col:21> 'int' 2
+|-VarDecl 0x7ffbab015300 <line:20:1, col:17> col:7 invalid c3 'float [(int)i]'
+|-VarDecl 0x7ffbab015378 <line:21:1, col:17> col:7 c4 'float' cinit
+| `-ImplicitCastExpr 0x7ffbab015478 <col:12, col:17> 'float' <IntegralToFloating>
+|   `-BinaryOperator 0x7ffbab015450 <col:12, col:17> 'int' '||'
+|     |-IntegerLiteral 0x7ffbab0153d8 <col:12> 'int' 0
+|     `-ImplicitCastExpr 0x7ffbab015438 <col:17> 'float' <AtomicToNonAtomic>
+|       `-ImplicitCastExpr 0x7ffbab015420 <col:17> '_Atomic(float)' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffbab0153f8 <col:17> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+|-VarDecl 0x7ffbab0154a8 <line:22:1, col:7> col:7 invalid c5 'float'
+|-StaticAssertDecl 0x7ffbab015b50 <line:24:1, col:61> col:1
+| |-BinaryOperator 0x7ffbab015aa0 <col:17, col:55> 'int' '=='
+| | |-GenericSelectionExpr 0x7ffbab015a20 <col:17, col:50> 'int'
+| | | |-ImplicitCastExpr 0x7ffbab015a08 <col:27> 'float' <AtomicToNonAtomic>
+| | | | `-ImplicitCastExpr 0x7ffbab0159f0 <col:27> '_Atomic(float)' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ffbab015970 <col:27> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+| | | |-IntegerLiteral 0x7ffbab0159b0 <col:37> 'int' 1
+| | | `-IntegerLiteral 0x7ffbab0159d0 <col:49> 'int' 0
+| | `-IntegerLiteral 0x7ffbab015a80 <col:55> 'int' 1
+| `-StringLiteral 0x7ffbab015b08 <col:58> 'char [2]' lvalue "1"
+|-StaticAssertDecl 0x7ffbab015d88 <line:25:1, col:65> col:1
+| |-BinaryOperator 0x7ffbab015d18 <col:17, col:59> 'int' '=='
+| | |-GenericSelectionExpr 0x7ffbab015c98 <col:17, col:54> 'int'
+| | | |-BinaryOperator 0x7ffbab015c18 <col:27, col:31> 'float' '+'
+| | | | |-ImplicitCastExpr 0x7ffbab015be8 <col:27> 'float' <AtomicToNonAtomic>
+| | | | | `-ImplicitCastExpr 0x7ffbab015bd0 <col:27> '_Atomic(float)' <LValueToRValue>
+| | | | |   `-DeclRefExpr 0x7ffbab015b88 <col:27> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+| | | | `-ImplicitCastExpr 0x7ffbab015c00 <col:31> 'float' <IntegralToFloating>
+| | | |   `-IntegerLiteral 0x7ffbab015bb0 <col:31> 'int' 1
+| | | |-IntegerLiteral 0x7ffbab015c58 <col:41> 'int' 1
+| | | `-IntegerLiteral 0x7ffbab015c78 <col:53> 'int' 0
+| | `-IntegerLiteral 0x7ffbab015cf8 <col:59> 'int' 1
+| `-StringLiteral 0x7ffbab015d40 <col:62> 'char [2]' lvalue "2"
+|-StaticAssertDecl 0x7ffbab015fa8 <line:26:1, col:65> col:1
+| |-BinaryOperator 0x7ffbab015f38 <col:17, col:59> 'int' '=='
+| | |-GenericSelectionExpr 0x7ffbab015eb8 <col:17, col:54> 'int'
+| | | |-BinaryOperator 0x7ffbab015e38 <col:27, col:31> '_Atomic(float)' '='
+| | | | |-DeclRefExpr 0x7ffbab015dc0 <col:27> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+| | | | `-ImplicitCastExpr 0x7ffbab015e20 <col:31> '_Atomic(float)' <NonAtomicToAtomic>
+| | | |   `-ImplicitCastExpr 0x7ffbab015e08 <col:31> 'float' <IntegralToFloating>
+| | | |     `-IntegerLiteral 0x7ffbab015de8 <col:31> 'int' 0
+| | | |-IntegerLiteral 0x7ffbab015e78 <col:41> 'int' 1
+| | | `-IntegerLiteral 0x7ffbab015e98 <col:53> 'int' 0
+| | `-IntegerLiteral 0x7ffbab015f18 <col:59> 'int' 1
+| `-StringLiteral 0x7ffbab015f60 <col:62> 'char [2]' lvalue "3"
+|-StaticAssertDecl 0x7ffbab016170 <line:27:1, col:63> col:1
+| |-BinaryOperator 0x7ffbab016100 <col:17, col:57> 'int' '=='
+| | |-GenericSelectionExpr 0x7ffbab016080 <col:17, col:52> 'int'
+| | | |-UnaryOperator 0x7ffbab016008 <col:27, col:28> 'float' postfix '++'
+| | | | `-DeclRefExpr 0x7ffbab015fe0 <col:27> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+| | | |-IntegerLiteral 0x7ffbab016040 <col:39> 'int' 1
+| | | `-IntegerLiteral 0x7ffbab016060 <col:51> 'int' 0
+| | `-IntegerLiteral 0x7ffbab0160e0 <col:57> 'int' 1
+| `-StringLiteral 0x7ffbab016128 <col:60> 7 errors generated.
+'char [2]' lvalue "4"
+|-StaticAssertDecl 0x7ffbab02cd48 <line:28:1, col:63> col:1
+| |-BinaryOperator 0x7ffbab02ccd8 <col:17, col:57> 'int' '=='
+| | |-GenericSelectionExpr 0x7ffbab02cc58 <col:17, col:52> 'int'
+| | | |-UnaryOperator 0x7ffbab0161d0 <col:27, col:28> 'float' postfix '--'
+| | | | `-DeclRefExpr 0x7ffbab0161a8 <col:27> '_Atomic(float)' lvalue Var 0x7ffbab014200 'i' '_Atomic(float)'
+| | | |-IntegerLiteral 0x7ffbab02cc18 <col:39> 'int' 1
+| | | `-IntegerLiteral 0x7ffbab02cc38 <col:51> 'int' 0
+| | `-IntegerLiteral 0x7ffbab02ccb8 <col:57> 'int' 1
+| `-StringLiteral 0x7ffbab02cd00 <col:60> 'char [2]' lvalue "5"
+|-VarDecl 0x7ffbab02cdc8 <line:30:1, col:18> col:13 used sz '_Atomic(int)' cinit
+| `-ImplicitCastExpr 0x7ffbab02ce48 <col:18> '_Atomic(int)' <NonAtomicToAtomic>
+|   `-IntegerLiteral 0x7ffbab02ce28 <col:18> 'int' 2
+|-FunctionDecl 0x7ffbab02d0c0 <line:31:1, col:26> col:6 fn1 'void (float *)'
+| `-ParmVarDecl 0x7ffbab02cfc0 <col:11, col:25> col:17 a 'float *':'float *'
+|-FunctionDecl 0x7ffbab02d2d0 <line:32:1, col:26> col:6 invalid fn2 'void (int)'
+| `-ParmVarDecl 0x7ffbab02d208 <col:11, col:17> col:17 invalid a 'int'
+|-FunctionDecl 0x7ffbab02d510 <line:33:1, col:24> col:6 fn3 'void (float *)'
+| `-ParmVarDecl 0x7ffbab02d450 <col:11, col:23> col:17 a 'float *':'float *'
+|-FunctionDecl 0x7ffbab02d750 <line:34:1, col:24> col:6 fn4 'void (float *)'
+| `-ParmVarDecl 0x7ffbab02d690 <col:11, col:23> col:17 a 'float *':'float *'
+`-FunctionDecl 0x7ffbab02d9c0 <line:35:1, col:23> col:6 fn5 'void (float *)'
+  `-ParmVarDecl 0x7ffbab02d900 <col:11, col:22> col:17 a 'float *':'float *'

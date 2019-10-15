@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fbc3882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc3903c800 <../Data/C2AST/pr59063-2.c:5:1, line:6:47> line:5:12 used weak_gettime 'int (clockid_t, struct timespec *)' static
+| |-ParmVarDecl 0x7fbc3903c640 <col:26, col:36> col:36 clk_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7fbc3903c6c8 <col:44, col:61> col:61 tp 'struct timespec *'
+| |-AliasAttr 0x7fbc3903c8b0 <line:6:18, col:45> "clock_gettime"
+| `-WeakRefAttr 0x7fbc3903c910 <col:18, col:45> ""
+`-FunctionDecl 0x7fbc3903c980 <line:7:1, line:12:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7fbc3903cd00 <col:12, line:12:1>
+    |-IfStmt 0x7fbc3903cb18 <line:8:3, line:9:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fbc3903cac0 <line:8:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fbc3903caa8 <col:8> 'int (*)(clockid_t, struct timespec *)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbc3903ca20 <col:8> 'int (clockid_t, struct timespec *)' Function 0x7fbc3903bb58 'clock_gettime' 'int (clockid_t, struct timespec *)'
+    | |-ReturnStmt 0x7fbc3903cb00 <line:9:5, col:12>
+    | | `-IntegerLiteral 0x7fbc3903cae0 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-DeclStmt 0x7fbc3903cbd0 <line:10:3, col:21>
+    | `-VarDecl 0x7fbc3903cb70 <col:3, col:19> col:19 used ts 'struct timespec':'struct timespec'
+    `-ReturnStmt 0x7fbc3903cce8 <line:11:3, col:43>
+      `-CallExpr 0x7fbc3903cc98 <col:10, col:43> 'int'
+        |-ImplicitCastExpr 0x7fbc3903cc80 <col:10> 'int (*)(clockid_t, struct timespec *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fbc3903cbe8 <col:10> 'int (clockid_t, struct timespec *)' Function 0x7fbc3903c800 'weak_gettime' 'int (clockid_t, struct timespec *)'
+        |-ImplicitCastExpr 0x7fbc3903ccd0 </usr/include/time.h:156:25> 'clockid_t':'clockid_t' <IntegralCast>
+        | `-DeclRefExpr 0x7fbc3903cc10 <col:25> 'int' EnumConstant 0x7fbc39032360 '_CLOCK_MONOTONIC' 'int'
+        `-UnaryOperator 0x7fbc3903cc60 <../Data/C2AST/pr59063-2.c:11:40, col:41> 'struct timespec *' prefix '&'
+          `-DeclRefExpr 0x7fbc3903cc38 <col:41> 'struct timespec':'struct timespec' lvalue Var 0x7fbc3903cb70 'ts' 'struct timespec':'struct timespec'

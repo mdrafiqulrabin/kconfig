@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7f876b005ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f876a028620 <../Data/C2AST/pr58346-3.c:4:1, line:16:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7f876a0291d8 <line:6:1, line:16:1>
+    |-DeclStmt 0x7f876a028778 <<built-in>:73:26, ../Data/C2AST/pr58346-3.c:7:21>
+    | `-VarDecl 0x7f876a028718 <<built-in>:73:26, ../Data/C2AST/pr58346-3.c:7:20> col:20 used d 'long'
+    |-DeclStmt 0x7f876a028828 <line:8:3, col:18>
+    | `-VarDecl 0x7f876a0287a8 <col:3, col:17> col:13 used i 'const int' cinit
+    |   `-IntegerLiteral 0x7f876a028808 <col:17> 'int' 0
+    |-DeclStmt 0x7f876a028a80 <line:9:3, col:25>
+    | |-VarDecl 0x7f876a028930 <col:3, col:14> col:7 used a1 'int [2][0]'
+    | `-VarDecl 0x7f876a028a08 <col:3, col:24> col:17 used a2 'int [2][0]'
+    |-DeclStmt 0x7f876a028d68 <line:10:3, col:25>
+    | |-VarDecl 0x7f876a028bc0 <col:3, col:14> col:7 used b1 'int [3][0]'
+    | `-VarDecl 0x7f876a028cf0 <col:3, col:24> col:17 used b2 'int [4][0]'
+    |-BinaryOperator 0x7f876a028e80 <line:11:3, col:12> 'long' '='
+    | |-DeclRefExpr 0x7f876a028d80 <col:3> 'long' lvalue Var 0x7f876a028718 'd' 'long'
+    | `-BinaryOperator 0x7f876a028e58 <col:7, col:12> 'long' '-'
+    |   |-ImplicitCastExpr 0x7f876a028e28 <col:7> 'int (*)[0]' <ArrayToPointerDecay>
+    |   | `-DeclRefExpr 0x7f876a028da8 <col:7> 'int [2][0]' lvalue Var 0x7f876a028930 'a1' 'int [2][0]'
+    |   `-ImplicitCastExpr 0x7f876a028e40 <col:12> 'int (*)[0]' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7f876a028dd0 <col:12> 'int [2][0]' lvalue Var 0x7f876a028a08 'a2' 'int [2][0]'
+    |-GCCAsmStmt 0x7f876a028fa0 <line:12:3, col:32>
+    | `-DeclRefExpr 0x7f876a028f78 <col:30> 'long' lvalue Var 0x7f876a028718 'd' 'long'
+    |-BinaryOperator 0x7f876a0290d0 <line:14:3, col:12> 'long' '='
+    | |-DeclRefExpr 0x7f876a029000 <col:3> 'long' lvalue Var 0x7f876a028718 'd' 'long'
+    | `-BinaryOperator 0x7f876a0290a8 <col:7, col:12> 'long' '-'
+    |   |-ImplicitCastExpr 0x7f876a029078 <col:7> 'int (*)[0]' <ArrayToPointerDecay>
+    |   | `-DeclRefExpr 0x7f876a029028 <col:7> 'int [3][0]' lvalue Var 0x7f876a028bc0 'b1' 'int [3][0]'
+    |   `-ImplicitCastExpr 0x7f876a029090 <col:12> 'int (*)[0]' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7f876a029050 <col:12> 'int [4][0]' lvalue Var 0x7f876a028cf0 'b2' 'int [4][0]'
+    `-GCCAsmStmt 0x7f876a029178 <line:15:3, col:32>
+      `-DeclRefExpr 0x7f876a029150 <col:30> 'long' lvalue Var 0x7f876a028718 'd' 'long'

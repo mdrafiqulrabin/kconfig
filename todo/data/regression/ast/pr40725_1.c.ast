@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ff954024ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff954025960 <../Data/C2AST/pr40725_1.c:1:9, line:4:1> line:1:16 struct c_type_1 definition
+| `-FieldDecl 0x7ff954812e38 <line:3:3, col:7> col:7 referenced j 'int'
+|-TypedefDecl 0x7ff954812ed0 <line:1:1, line:4:3> col:3 referenced c_type_1_t 'struct c_type_1':'struct c_type_1'
+| `-ElaboratedType 0x7ff954812e80 'struct c_type_1' sugar
+|   `-RecordType 0x7ff954812e00 'struct c_type_1'
+|     `-Record 0x7ff954025960 'c_type_1'
+|-FunctionDecl 0x7ff954813150 <line:5:1, col:45> col:6 used sub0 'void (c_type_1_t *, int)'
+| |-ParmVarDecl 0x7ff954812fc8 <col:11, col:23> col:23 c_type 'c_type_1_t *'
+| `-ParmVarDecl 0x7ff954813040 <col:31, col:35> col:35 expected_j 'int'
+`-FunctionDecl 0x7ff9548133d8 <line:6:1, line:12:1> line:6:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7ff954813258 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7ff954813300 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7ff9548137c8 <line:7:1, line:12:1>
+    |-DeclStmt 0x7ff9548134f8 <line:8:3, col:20>
+    | `-VarDecl 0x7ff954813498 <col:3, col:14> col:14 used c_type 'c_type_1_t':'struct c_type_1'
+    |-BinaryOperator 0x7ff954813590 <line:9:3, col:14> 'int' '='
+    | |-MemberExpr 0x7ff954813538 <col:3, col:10> 'int' lvalue .j 0x7ff954812e38
+    | | `-DeclRefExpr 0x7ff954813510 <col:3> 'c_type_1_t':'struct c_type_1' lvalue Var 0x7ff954813498 'c_type' 'c_type_1_t':'struct c_type_1'
+    | `-IntegerLiteral 0x7ff954813570 <col:14> 'int' 11
+    |-CallExpr 0x7ff954813740 <line:10:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7ff954813728 <col:3> 'void (*)(c_type_1_t *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff954813600 <col:3> 'void (c_type_1_t *, int)' Function 0x7ff954813150 'sub0' 'void (c_type_1_t *, int)'
+    | |-UnaryOperator 0x7ff954813650 <col:8, col:9> 'c_type_1_t *' prefix '&'
+    | | `-DeclRefExpr 0x7ff954813628 <col:9> 'c_type_1_t':'struct c_type_1' lvalue Var 0x7ff954813498 'c_type' 'c_type_1_t':'struct c_type_1'
+    | `-ImplicitCastExpr 0x7ff954813778 <col:17, col:24> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7ff954813698 <col:17, col:24> 'int' lvalue .j 0x7ff954812e38
+    |     `-DeclRefExpr 0x7ff954813670 <col:17> 'c_type_1_t':'struct c_type_1' lvalue Var 0x7ff954813498 'c_type' 'c_type_1_t':'struct c_type_1'
+    `-ReturnStmt 0x7ff9548137b0 <line:11:3, col:10>
+      `-IntegerLiteral 0x7ff954813790 <col:10> 'int' 0

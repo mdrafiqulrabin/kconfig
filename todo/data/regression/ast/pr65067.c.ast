@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fac0982bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fac0982c960 <../Data/C2AST/pr65067.c:5:1, line:15:1> line:5:8 struct tmp definition
+| |-FieldDecl 0x7fac0986d838 <line:6:2, col:15> col:15 dummy 'unsigned int'
+| |-RecordDecl 0x7fac0986d880 <line:7:2, line:14:2> line:7:2 union definition
+| | |-RecordDecl 0x7fac0986d930 <line:8:3, line:12:3> line:8:3 struct definition
+| | | |-FieldDecl 0x7fac0986da18 <line:9:4, col:23> col:17 xyz 'unsigned int'
+| | | | `-IntegerLiteral 0x7fac0986d9e0 <col:23> 'int' 1
+| | | |-FieldDecl 0x7fac0986da98 <line:10:4, col:23> col:17 referenced mode 'unsigned int'
+| | | | `-IntegerLiteral 0x7fac0986da60 <col:23> 'int' 3
+| | | `-FieldDecl 0x7fac0986db18 <line:11:4, col:23> col:17 res 'unsigned int'
+| | |   `-IntegerLiteral 0x7fac0986dae0 <col:23> 'int' 28
+| | |-FieldDecl 0x7fac0986dbb0 <line:8:3, line:12:5> col:5 referenced bf 'struct (anonymous struct at ../Data/C2AST/pr65067.c:8:3)':'struct tmp::(anonymous at ../Data/C2AST/pr65067.c:8:3)'
+| | `-FieldDecl 0x7fac0986dc10 <line:13:3, col:16> col:16 wordval 'unsigned int'
+| `-FieldDecl 0x7fac0986dd00 <line:7:2, line:14:4> col:4 referenced reg 'union (anonymous union at ../Data/C2AST/pr65067.c:7:2)':'union tmp::(anonymous at ../Data/C2AST/pr65067.c:7:2)'
+`-FunctionDecl 0x7fac0986de20 <line:17:1, line:21:1> line:17:6 set_mode 'void (int)'
+  |-ParmVarDecl 0x7fac0986dd60 <col:15, col:19> col:19 used mode 'int'
+  `-CompoundStmt 0x7fac0986e280 <line:18:1, line:21:1>
+    |-DeclStmt 0x7fac0986e100 <line:19:2, col:48>
+    | `-VarDecl 0x7fac0986dfc0 <col:2, col:42> col:23 used t 'volatile struct tmp *' cinit
+    |   `-ImplicitCastExpr 0x7fac0986e0e8 <col:27, col:42> 'volatile struct tmp *' <BitCast>
+    |     `-CStyleCastExpr 0x7fac0986e0c0 <col:27, col:42> 'struct tmp *' <IntegralToPointer>
+    |       `-IntegerLiteral 0x7fac0986e020 <col:42> 'int' 4096
+    `-BinaryOperator 0x7fac0986e258 <line:20:2, col:19> 'unsigned int' '='
+      |-MemberExpr 0x7fac0986e1c8 <col:2, col:12> 'volatile unsigned int' lvalue bitfield .mode 0x7fac0986da98
+      | `-MemberExpr 0x7fac0986e190 <col:2, col:9> 'volatile struct (anonymous struct at ../Data/C2AST/pr65067.c:8:3)':'volatile struct tmp::(anonymous at ../Data/C2AST/pr65067.c:8:3)' lvalue .bf 0x7fac0986dbb0
+      |   `-MemberExpr 0x7fac0986e158 <col:2, col:5> 'volatile union (anonymous union at ../Data/C2AST/pr65067.c:7:2)':'volatile union tmp::(anonymous at ../Data/C2AST/pr65067.c:7:2)' lvalue ->reg 0x7fac0986dd00
+      |     `-ImplicitCastExpr 0x7fac0986e140 <col:2> 'volatile struct tmp *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fac0986e118 <col:2> 'volatile struct tmp *' lvalue Var 0x7fac0986dfc0 't' 'volatile struct tmp *'
+      `-ImplicitCastExpr 0x7fac0986e240 <col:19> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fac0986e228 <col:19> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fac0986e200 <col:19> 'int' lvalue ParmVar 0x7fac0986dd60 'mode' 'int'

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ffe9302bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffe9302c978 <../Data/C2AST/pr60465-gprel64-c37.c:7:1, col:20> col:20 used s90 'const char *' static
+|-FunctionDecl 0x7ffe93814288 <line:8:1, col:31> col:6 f 'void ()'
+| `-CompoundStmt 0x7ffe93814418 <col:10, col:31>
+|   `-BinaryOperator 0x7ffe938143f0 <col:12, col:18> 'const char *' '='
+|     |-DeclRefExpr 0x7ffe93814328 <col:12> 'const char *' lvalue Var 0x7ffe9302c978 's90' 'const char *'
+|     `-ImplicitCastExpr 0x7ffe938143d8 <col:18> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7ffe938143c0 <col:18> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7ffe93814388 <col:18> 'char [10]' lvalue "string 90"
+`-FunctionDecl 0x7ffe93814480 <line:9:1, col:32> col:14 g 'const char *()'
+  `-CompoundStmt 0x7ffe93814578 <col:18, col:32>
+    `-ReturnStmt 0x7ffe93814560 <col:20, col:27>
+      `-ImplicitCastExpr 0x7ffe93814548 <col:27> 'const char *' <LValueToRValue>
+        `-DeclRefExpr 0x7ffe93814520 <col:27> 'const char *' lvalue Var 0x7ffe9302c978 's90' 'const char *'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fe92b82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe92b82c978 <../Data/C2AST/pr70738-6.c:4:1, col:14> col:14 used a 'float' extern
+|-VarDecl 0x7fe92c814258 <col:1, col:17> col:17 used b 'float' extern
+|-VarDecl 0x7fe92c8142d0 <col:1, col:20> col:20 used c 'float' extern
+`-FunctionDecl 0x7fe92c814410 <line:6:1, line:10:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe92c8145a8 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7fe92c814580 <line:9:3, col:11> 'float' '='
+      |-DeclRefExpr 0x7fe92c8144b0 <col:3> 'float' lvalue Var 0x7fe92c8142d0 'c' 'float'
+      `-BinaryOperator 0x7fe92c814558 <col:7, col:11> 'float' '*'
+        |-ImplicitCastExpr 0x7fe92c814528 <col:7> 'float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe92c8144d8 <col:7> 'float' lvalue Var 0x7fe92b82c978 'a' 'float'
+        `-ImplicitCastExpr 0x7fe92c814540 <col:11> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7fe92c814500 <col:11> 'float' lvalue Var 0x7fe92c814258 'b' 'float'

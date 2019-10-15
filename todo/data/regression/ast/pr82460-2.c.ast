@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fdea402bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdea48143f0 <../Data/C2AST/pr82460-2.c:8:1, line:16:1> line:9:1 foo 'void (unsigned char *restrict, const unsigned short *restrict, unsigned long)'
+  |-ParmVarDecl 0x7fdea402c9a0 <col:6, col:34> col:34 used x 'unsigned char *restrict'
+  |-ParmVarDecl 0x7fdea4814240 <col:37, col:72> col:72 used y 'const unsigned short *restrict'
+  |-ParmVarDecl 0x7fdea48142b8 <line:10:6, col:20> col:20 used z 'unsigned long'
+  `-CompoundStmt 0x7fdea4814870 <line:11:1, line:16:1>
+    |-DeclStmt 0x7fdea4814608 <line:12:3, col:27>
+    | `-VarDecl 0x7fdea4814500 <col:3, col:26> col:18 used w 'unsigned char *' cinit
+    |   `-BinaryOperator 0x7fdea48145e0 <col:22, col:26> 'unsigned char *' '+'
+    |     |-ImplicitCastExpr 0x7fdea48145b0 <col:22> 'unsigned char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fdea4814560 <col:22> 'unsigned char *restrict' lvalue ParmVar 0x7fdea402c9a0 'x' 'unsigned char *restrict'
+    |     `-ImplicitCastExpr 0x7fdea48145c8 <col:26> 'unsigned long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fdea4814588 <col:26> 'unsigned long' lvalue ParmVar 0x7fdea48142b8 'z' 'unsigned long'
+    `-DoStmt 0x7fdea4814850 <line:13:3, line:15:15>
+      |-BinaryOperator 0x7fdea4814780 <line:14:5, col:20> 'unsigned char' '='
+      | |-UnaryOperator 0x7fdea4814668 <col:5, col:7> 'unsigned char' lvalue prefix '*'
+      | | `-UnaryOperator 0x7fdea4814648 <col:6, col:7> 'unsigned char *' postfix '++'
+      | |   `-DeclRefExpr 0x7fdea4814620 <col:6> 'unsigned char *restrict' lvalue ParmVar 0x7fdea402c9a0 'x' 'unsigned char *restrict'
+      | `-ImplicitCastExpr 0x7fdea4814768 <col:12, col:20> 'unsigned char' <IntegralCast>
+      |   `-BinaryOperator 0x7fdea4814740 <col:12, col:20> 'int' '>>'
+      |     |-ImplicitCastExpr 0x7fdea4814728 <col:12, col:14> 'int' <IntegralCast>
+      |     | `-ImplicitCastExpr 0x7fdea4814710 <col:12, col:14> 'unsigned short' <LValueToRValue>
+      |     |   `-UnaryOperator 0x7fdea48146d0 <col:12, col:14> 'const unsigned short' lvalue prefix '*'
+      |     |     `-UnaryOperator 0x7fdea48146b0 <col:13, col:14> 'const unsigned short *' postfix '++'
+      |     |       `-DeclRefExpr 0x7fdea4814688 <col:13> 'const unsigned short *restrict' lvalue ParmVar 0x7fdea4814240 'y' 'const unsigned short *restrict'
+      |     `-IntegerLiteral 0x7fdea48146f0 <col:20> 'int' 8
+      `-BinaryOperator 0x7fdea4814828 <line:15:10, col:14> 'int' '<'
+        |-ImplicitCastExpr 0x7fdea48147f8 <col:10> 'unsigned char *' <LValueToRValue>
+        | `-DeclRefExpr 0x7fdea48147a8 <col:10> 'unsigned char *restrict' lvalue ParmVar 0x7fdea402c9a0 'x' 'unsigned char *restrict'
+        `-ImplicitCastExpr 0x7fdea4814810 <col:14> 'unsigned char *' <LValueToRValue>
+          `-DeclRefExpr 0x7fdea48147d0 <col:14> 'unsigned char *' lvalue Var 0x7fdea4814500 'w' 'unsigned char *'

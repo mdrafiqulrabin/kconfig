@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fc79b8234e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc79b824160 <../Data/C2AST/pr44971.c:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7fc79c03d838 <line:7:3, col:7> col:7 default_screen 'int'
+|-TypedefDecl 0x7fc79c03d930 <line:5:1, line:8:4> col:4 _XPrivint 'struct (anonymous struct at ../Data/C2AST/pr44971.c:5:9) *'
+| `-PointerType 0x7fc79c03d8e0 'struct (anonymous struct at ../Data/C2AST/pr44971.c:5:9) *'
+|   `-ElaboratedType 0x7fc79c03d880 'struct (anonymous struct at ../Data/C2AST/pr44971.c:5:9)' sugar
+|     `-RecordType 0x7fc79c03d800 'struct (anonymous at ../Data/C2AST/pr44971.c:5:9)'
+|       `-Record 0x7fc79b824160 ''
+|-TypedefDecl 0x7fc79c03d9b8 <line:9:1, col:13> col:13 referenced FcBool 'int'
+| `-BuiltinType 0x7fc79b8235e0 'int'
+|-RecordDecl 0x7fc79c03da10 <line:10:9, line:13:1> line:10:9 struct definition
+| |-RecordDecl 0x7fc79c03dac0 parent 0x7fc79b8234e8 <line:12:3, col:10> col:10 struct _XftintInfo
+| `-FieldDecl 0x7fc79c03dc30 <col:3, col:23> col:23 referenced next 'struct _XftintInfo *'
+|-TypedefDecl 0x7fc79c03dcd0 <line:10:1, line:13:3> col:3 referenced XftintInfo 'struct XftintInfo':'XftintInfo'
+| `-ElaboratedType 0x7fc79c03dc80 'struct XftintInfo' sugar
+|   `-RecordType 0x7fc79c03daa0 'XftintInfo'
+|     `-Record 0x7fc79c03da10 ''
+|-VarDecl 0x7fc79c03dd58 <line:14:1, col:5> col:5 used _XftintInfo 'int'
+|-FunctionDecl 0x7fc79c03dfe0 <line:16:1, line:21:1> line:16:6 used _XftintInfoGet 'void (int *, FcBool)'
+| |-ParmVarDecl 0x7fc79c03de40 <col:22, col:28> col:28 used dpy 'int *'
+| |-ParmVarDecl 0x7fc79c03ded0 <col:33, col:40> col:40 used createIfNecessary 'FcBool':'int'
+| `-CompoundStmt 0x7fc79c03e298 <line:17:1, line:21:1>
+|   |-DeclStmt 0x7fc79c03e108 <line:18:3, col:17>
+|   | `-VarDecl 0x7fc79c03e0a8 <col:3, col:7> col:7 used event_base 'int'
+|   `-BinaryOperator 0x7fc79c03e270 <line:19:3, line:20:33> 'int' '&&'
+|     |-UnaryOperator 0x7fc79c03e148 <line:19:3, col:4> 'int *' prefix '&'
+|     | `-DeclRefExpr 0x7fc79c03e120 <col:4> 'int' lvalue Var 0x7fc79c03e0a8 'event_base' 'int'
+|     `-BinaryOperator 0x7fc79c03e248 <line:20:7, col:33> 'int' '!='
+|       |-ImplicitCastExpr 0x7fc79c03e230 <col:7, col:28> 'int' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7fc79c03e1e8 <col:7, col:28> 'int' lvalue
+|       |   |-ImplicitCastExpr 0x7fc79c03e1b8 <col:7> 'int *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fc79c03e168 <col:7> 'int *' lvalue ParmVar 0x7fc79c03de40 'dpy' 'int *'
+|       |   `-ImplicitCastExpr 0x7fc79c03e1d0 <col:11> 'FcBool':'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fc79c03e190 <col:11> 'FcBool':'int' lvalue ParmVar 0x7fc79c03ded0 'createIfNecessary' 'FcBool':'int'
+|       `-IntegerLiteral 0x7fc79c03e210 <col:33> 'int' 0
+`-FunctionDecl 0x7fc79c03e5c0 <line:23:1, line:28:1> line:23:6 _XftCloseint 'void (int, XftintInfo *, XftintInfo **)'
+  |-ParmVarDecl 0x7fc79c03e2d0 <col:20, col:24> col:24 used dpy 'int'
+  |-ParmVarDecl 0x7fc79c03e3b8 <col:29, col:42> col:42 used info 'XftintInfo *'
+  |-ParmVarDecl 0x7fc79c03e490 <col:47, col:62> col:62 used prev 'XftintInfo **'
+  `-CompoundStmt 0x7fc79c03eb50 <line:24:1, line:28:1>
+    |-CallExpr 0x7fc79c03e760 <line:25:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fc79c03e748 <col:3> 'void (*)(int *, FcBool)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc79c03e678 <col:3> 'void (int *, FcBool)' Function 0x7fc79c03dfe0 '_XftintInfoGet' 'void (int *, FcBool)'
+    | |-ImplicitCastExpr 0x7fc79c03e7b0 <col:19> 'int *' <IntegralToPointer>
+    | | `-ImplicitCastExpr 0x7fc79c03e798 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc79c03e6a0 <col:19> 'int' lvalue ParmVar 0x7fc79c03e2d0 'dpy' 'int'
+    | `-IntegerLiteral 0x7fc79c03e6c8 <col:24> 'int' 0
+    `-ForStmt 0x7fc79c03eb18 <line:26:3, line:27:5>
+      |-BinaryOperator 0x7fc79c03e860 <line:26:8, col:16> 'XftintInfo **' '='
+      | |-DeclRefExpr 0x7fc79c03e7c8 <col:8> 'XftintInfo **' lvalue ParmVar 0x7fc79c03e490 'prev' 'XftintInfo **'
+      | `-ImplicitCastExpr 0x7fc79c03e848 <col:15, col:16> 'XftintInfo **' <BitCast>
+      |   `-UnaryOperator 0x7fc79c03e828 <col:15, col:16> 'int *' prefix '&'
+      |     `-DeclRefExpr 0x7fc79c03e800 <col:16> 'int' lvalue Var 0x7fc79c03dd58 '_XftintInfo' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc79c03e928 <col:29, col:37> 'XftintInfo *' '='
+      | |-DeclRefExpr 0x7fc79c03e888 <col:29> 'XftintInfo *' lvalue ParmVar 0x7fc79c03e3b8 'info' 'XftintInfo *'
+      | `-ImplicitCastExpr 0x7fc79c03e910 <col:36, col:37> 'XftintInfo *' <LValueToRValue>
+      |   `-UnaryOperator 0x7fc79c03e8f0 <col:36, col:37> 'XftintInfo *' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7fc79c03e8d8 <col:37> 'XftintInfo **' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fc79c03e8b0 <col:37> 'XftintInfo **' lvalue ParmVar 0x7fc79c03e490 'prev' 'XftintInfo **'
+      |-BinaryOperator 0x7fc79c03eae0 <col:43, col:60> 'XftintInfo **' '='
+      | |-DeclRefExpr 0x7fc79c03e950 <col:43> 'XftintInfo **' lvalue ParmVar 0x7fc79c03e490 'prev' 'XftintInfo **'
+      | `-ImplicitCastExpr 0x7fc79c03eac8 <col:50, col:60> 'XftintInfo **' <BitCast>
+      |   `-UnaryOperator 0x7fc79c03eaa8 <col:50, col:60> 'struct _XftintInfo **' prefix '&'
+      |     `-MemberExpr 0x7fc79c03ea10 <col:51, col:60> 'struct _XftintInfo *' lvalue ->next 0x7fc79c03dc30
+      |       `-ImplicitCastExpr 0x7fc79c03e9f8 <col:51, col:57> 'XftintInfo *' <LValueToRValue>
+      |         `-ParenExpr 0x7fc79c03e9d8 <col:51, col:57> 'XftintInfo *' lvalue
+      |           `-UnaryOperator 0x7fc79c03e9b8 <col:52, col:53> 'XftintInfo *' lvalue prefix '*'
+      |             `-ImplicitCastExpr 0x7fc79c03e9a0 <col:53> 'XftintInfo **' <LValueToRValue>
+      |               `-DeclRefExpr 0x7fc79c03e978 <col:53> 'XftintInfo **' lvalue ParmVar 0x7fc79c03e490 'prev' 'XftintInfo **'
+      `-NullStmt 0x7fc79c03eb08 <line:27:5>

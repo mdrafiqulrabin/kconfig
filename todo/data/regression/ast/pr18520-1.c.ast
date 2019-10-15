@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fa4bc82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa4bc86e868 <../Data/C2AST/pr18520-1.c:5:1, col:61> col:12 used isnan 'int (double)' extern
+| |-ParmVarDecl 0x7fa4bc82c978 <col:19, col:26> col:26 __value 'double'
+| `-ConstAttr 0x7fa4bc86e910 <col:51>
+`-FunctionDecl 0x7fa4bc86ea78 <line:7:1, line:10:1> line:7:5 gsl_isnan 'int (const double)'
+  |-ParmVarDecl 0x7fa4bc86e9b0 <col:16, col:29> col:29 used x 'const double'
+  `-CompoundStmt 0x7fa4bc86ec10 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fa4bc86ebf8 <line:9:3, col:17>
+      `-CallExpr 0x7fa4bc86ebb0 <col:10, col:17> 'int'
+        |-ImplicitCastExpr 0x7fa4bc86eb98 <col:10> 'int (*)(double)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa4bc86eb20 <col:10> 'int (double)' Function 0x7fa4bc86e868 'isnan' 'int (double)'
+        `-ImplicitCastExpr 0x7fa4bc86ebe0 <col:16> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fa4bc86eb48 <col:16> 'const double' lvalue ParmVar 0x7fa4bc86e9b0 'x' 'const double'

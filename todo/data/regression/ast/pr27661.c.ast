@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fd5a5824ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd5a5866978 <../Data/C2AST/pr27661.c:6:12> col:12 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd5a5866a18 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fd5a5866a78 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fd5a5866ad8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd5a5866b50 prev 0x7fd5a5866978 <col:1, col:67> col:12 used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd5a58259a0 <col:20, col:32> col:32 s1 'const void *'
+| |-ParmVarDecl 0x7fd5a5866818 <col:36, col:48> col:48 s2 'const void *'
+| `-ParmVarDecl 0x7fd5a5866890 <col:52, col:66> col:66 n 'unsigned long'
+|-FunctionDecl 0x7fd5a5866d28 <line:7:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fd5a5866dc8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fd5a5866e30 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fd5a5866e88 prev 0x7fd5a5866d28 <col:1, col:58> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fd5a5866c20 <col:20, col:45> col:45 __format 'const char *restrict'
+| `-FormatAttr 0x7fd5a5866f68 <col:12> Inherited printf 1 2
+|-RecordDecl 0x7fd5a5866f88 <line:9:1, line:13:1> line:9:8 struct test definition
+| |-FieldDecl 0x7fd5a58670a8 <line:11:3, col:16> col:8 tmp 'char [4096]'
+| `-FieldDecl 0x7fd5a5867168 <line:12:3, col:17> col:8 referenced msgtype 'char [2]'
+`-FunctionDecl 0x7fd5a5867360 <line:15:1, line:24:1> line:15:6 test 'void (struct test *)'
+  |-ParmVarDecl 0x7fd5a5867260 <col:12, col:25> col:25 used testtb 'struct test *'
+  `-CompoundStmt 0x7fd5a6005db0 <line:16:1, line:24:1>
+    |-IfStmt 0x7fd5a5867580 <line:17:3, line:18:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd5a5867470 <line:17:7> 'struct test *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd5a5867448 <col:7> 'struct test *' lvalue ParmVar 0x7fd5a5867260 'testtb' 'struct test *'
+    | |-CallExpr 0x7fd5a5867520 <line:18:5, col:16> 'int'
+    | | |-ImplicitCastExpr 0x7fd5a5867508 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fd5a5867488 <col:5> 'int (const char *, ...)' Function 0x7fd5a5866e88 'printf' 'int (const char *, ...)'
+    | | `-ImplicitCastExpr 0x7fd5a5867568 <col:13> 'const char *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7fd5a5867550 <col:13> 'char *' <ArrayToPointerDecay>
+    | |     `-StringLiteral 0x7fd5a58674b0 <col:13> 'char [2]' lvalue "a"
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd5a6005ca8 <line:20:3, line:21:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fd5a5867720 <line:20:7, col:37> 'int'
+    | | |-ImplicitCastExpr 0x7fd5a5867708 <col:7> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fd5a58675b8 <col:7> 'int (const void *, const void *, unsigned long)' Function 0x7fd5a5866b50 'memcmp' 'int (const void *, const void *, unsigned long)'
+    | | |-ImplicitCastExpr 0x7fd5a5867778 <col:14, col:22> 'const void *' <BitCast>
+    | | | `-ImplicitCastExpr 0x7fd5a5867760 <col:14, col:22> 'char *' <ArrayToPointerDecay>
+    | | |   `-MemberExpr 0x7fd5a5867620 <col:14, col:22> 'char [2]' lvalue ->msgtype 0x7fd5a5867168
+    | | |     `-ImplicitCastExpr 0x7fd5a5867608 <col:14> 'struct test *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fd5a58675e0 <col:14> 'struct test *' lvalue ParmVar 0x7fd5a5867260 'testtb' 'struct test *'
+    | | |-ImplicitCastExpr 0x7fd5a58677a8 <col:31> 'const void *' <BitCast>
+    | | | `-ImplicitCastExpr 0x7fd5a5867790 <col:31> 'char *' <ArrayToPointerDecay>
+    | | |   `-StringLiteral 0x7fd5a5867658 <col:31> 'char [2]' lvalue "a"
+    | | `-ImplicitCastExpr 0x7fd5a58677c0 <col:36> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fd5a5867688 <col:36> 'int' 2
+    | |-CallExpr 0x7fd5a6005c48 <line:21:5, col:16> 'int'
+    | | |-ImplicitCastExpr 0x7fd5a6005c30 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fd5a58677d8 <col:5> 'int (const char *, ...)' Function 0x7fd5a5866e88 'printf' 'int (const char *, ...)'
+    | | `-ImplicitCastExpr 0x7fd5a6005c90 <col:13> 'const char *' <BitCast>
+    | |   `-ImplicitCastExpr 0x7fd5a6005c78 <col:13> 'char *' <ArrayToPointerDecay>
+    | |     `-StringLiteral 0x7fd5a6005c00 <col:13> 'char [2]' lvalue "a"
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fd5a6005d50 <line:23:3, col:14> 'int'
+      |-ImplicitCastExpr 0x7fd5a6005d38 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd5a6005ce0 <col:3> 'int (const char *, ...)' Function 0x7fd5a5866e88 'printf' 'int (const char *, ...)'
+      `-ImplicitCastExpr 0x7fd5a6005d98 <col:11> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7fd5a6005d80 <col:11> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7fd5a6005d08 <col:11> 'char [2]' lvalue "b"

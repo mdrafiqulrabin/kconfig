@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fec178180e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec18021e00 <../Data/C2AST/pr45500.c:5:1, col:14> col:14 referenced V '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7fec17818d80 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7fec17818180 'char'
+`-VarDecl 0x7fec18021e90 <line:6:1, col:44> col:16 s 'const V':'__attribute__((__vector_size__(16 * sizeof(char)))) char const' static cinit
+  `-InitListExpr 0x7fec18021ff0 <col:20, col:44> 'V':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+    |-ImplicitCastExpr 0x7fec180220b0 <col:22> 'char' <IntegralCast>
+    | `-CharacterLiteral 0x7fec18021f30 <col:22> 'int' 10
+    |-ImplicitCastExpr 0x7fec180220c8 <col:28> 'char' <IntegralCast>
+    | `-CharacterLiteral 0x7fec18021f48 <col:28> 'int' 13
+    |-ImplicitCastExpr 0x7fec180220e0 <col:34> 'char' <IntegralCast>
+    | `-CharacterLiteral 0x7fec18021f60 <col:34> 'int' 63
+    `-ImplicitCastExpr 0x7fec180220f8 <col:39> 'char' <IntegralCast>
+      `-CharacterLiteral 0x7fec18021f78 <col:39> 'int' 92

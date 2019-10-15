@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fb88402bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb885014200 <../Data/C2AST/pr84300.c:5:1, col:35> col:6 trap 'void ()'
+| `-CompoundStmt 0x7fb885014488 <col:14, col:35>
+|   `-CallExpr 0x7fb885014460 <col:16, col:32> 'void'
+|     `-ImplicitCastExpr 0x7fb885014448 <col:16> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7fb8850143f8 <col:16> '<builtin fn type>' Function 0x7fb885014310 '__builtin_trap' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fb885014310 <col:16> col:16 implicit used __builtin_trap 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb8850143b0 <col:16> Implicit

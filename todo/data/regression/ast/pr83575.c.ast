@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7f84f602bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f84f602c978 <../Data/C2AST/pr83575.c:2:1, col:5> col:5 used tw 'int'
+|-VarDecl 0x7f84f6814258 <col:1, col:9> col:9 used be 'int'
+`-FunctionDecl 0x7f84f6814390 <line:4:1, line:32:1> line:5:1 fp 'void (void)'
+  `-CompoundStmt 0x7f84f6814b28 <line:6:1, line:32:1>
+    |-IfStmt 0x7f84f6814650 <line:7:3, line:12:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f84f6814490 <line:7:7, col:13> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f84f6814478 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f84f6814430 <col:7> 'int' lvalue Var 0x7f84f602c978 'tw' 'int'
+    | | `-IntegerLiteral 0x7f84f6814458 <col:13> 'int' 0
+    | |-GotoStmt 0x7f84f6814500 <line:8:5, col:10> 'gq' 0x7f84f68144b8
+    | `-IfStmt 0x7f84f6814618 <line:9:8, line:12:5>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f84f6814578 <line:9:12, col:18> 'int' '=='
+    |   | |-ImplicitCastExpr 0x7f84f6814560 <col:12> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7f84f6814518 <col:12> 'int' lvalue Var 0x7f84f6814258 'be' 'int'
+    |   | `-IntegerLiteral 0x7f84f6814540 <col:18> 'int' 0
+    |   |-GotoStmt 0x7f84f68145e8 <line:10:5, col:10> 'ob' 0x7f84f68145a0
+    |   `-ReturnStmt 0x7f84f6814600 <line:12:5>
+    `-ForStmt 0x7f84f6814af0 <line:14:3, line:31:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-IfStmt 0x7f84f6814ab8 <line:15:5, line:31:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7f84f68146e8 <line:15:9, col:14> 'int' '<'
+        | |-ImplicitCastExpr 0x7f84f68146d0 <col:9> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f84f6814688 <col:9> 'int' lvalue Var 0x7f84f602c978 'tw' 'int'
+        | `-IntegerLiteral 0x7f84f68146b0 <col:14> 'int' 1
+        |-CompoundStmt 0x7f84f6814a90 <line:16:7, line:31:7>
+        | |-WhileStmt 0x7f84f6814838 <line:17:9, line:21:11>
+        | | |-<<<NULL>>>
+        | | |-BinaryOperator 0x7f84f6814770 <line:17:16, col:21> 'int' '<'
+        | | | |-ImplicitCastExpr 0x7f84f6814758 <col:16> 'int' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7f84f6814710 <col:16> 'int' lvalue Var 0x7f84f602c978 'tw' 'int'
+        | | | `-IntegerLiteral 0x7f84f6814738 <col:21> 'int' 1
+        | | `-CompoundStmt 0x7f84f6814820 <line:18:11, line:21:11>
+        | |   `-LabelStmt 0x7f84f6814808 <line:19:2, line:20:18> 'gq'
+        | |     `-BinaryOperator 0x7f84f68147e0 <col:13, col:18> 'int' '='
+        | |       |-DeclRefExpr 0x7f84f6814798 <col:13> 'int' lvalue Var 0x7f84f602c978 'tw' 'int'
+        | |       `-IntegerLiteral 0x7f84f68147c0 <col:18> 'int' 0
+        | |-WhileStmt 0x7f84f6814980 <line:23:9, line:27:11>
+        | | |-<<<NULL>>>
+        | | |-BinaryOperator 0x7f84f68148b8 <line:23:16, col:21> 'int' '<'
+        | | | |-ImplicitCastExpr 0x7f84f68148a0 <col:16> 'int' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7f84f6814858 <col:16> 'int' lvalue Var 0x7f84f6814258 'be' 'int'
+        | | | `-IntegerLiteral 0x7f84f6814880 <col:21> 'int' 1
+        | | `-CompoundStmt 0x7f84f6814968 <line:24:11, line:27:11>
+        | |   `-LabelStmt 0x7f84f6814950 <line:25:2, line:26:18> 'ob'
+        | |     `-BinaryOperator 0x7f84f6814928 <col:13, col:18> 'int' '='
+        | |       |-DeclRefExpr 0x7f84f68148e0 <col:13> 'int' lvalue Var 0x7f84f602c978 'tw' 'int'
+        | |       `-IntegerLiteral 0x7f84f6814908 <col:18> 'int' 0
+        | `-WhileStmt 0x7f84f6814a70 <line:29:9, line:30:13>
+        |   |-<<<NULL>>>
+        |   |-BinaryOperator 0x7f84f6814a00 <line:29:16, col:21> 'int' '<'
+        |   | |-ImplicitCastExpr 0x7f84f68149e8 <col:16> 'int' <LValueToRValue>
+        |   | | `-DeclRefExpr 0x7f84f68149a0 <col:16> 'int' lvalue Var 0x7f84f6814258 'be' 'int'
+        |   | `-IntegerLiteral 0x7f84f68149c8 <col:21> 'int' 1
+        |   `-UnaryOperator 0x7f84f6814a50 <line:30:11, col:13> 'int' prefix '++'
+        |     `-DeclRefExpr 0x7f84f6814a28 <col:13> 'int' lvalue Var 0x7f84f6814258 'be' 'int'
+        `-<<<NULL>>>

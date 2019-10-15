@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fe83d02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe83d8142d8 <../Data/C2AST/pr33693.c:5:1, line:8:1> line:5:15 modify_field 'unsigned long (unsigned long, long)'
+  |-ParmVarDecl 0x7fe83d02c978 <col:29, col:43> col:43 used mask 'unsigned long'
+  |-ParmVarDecl 0x7fe83d814200 <col:49, col:54> col:54 used fieldval 'long'
+  `-CompoundStmt 0x7fe83d814500 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fe83d8144e8 <line:7:3, col:28>
+      `-ParenExpr 0x7fe83d8144c8 <col:10, col:28> 'unsigned long'
+        `-BinaryOperator 0x7fe83d8144a0 <col:11, col:24> 'unsigned long' '&'
+          |-ImplicitCastExpr 0x7fe83d814488 <col:11, col:12> 'unsigned long' <IntegralCast>
+          | `-UnaryOperator 0x7fe83d814408 <col:11, col:12> 'long' prefix '~'
+          |   `-ImplicitCastExpr 0x7fe83d8143f0 <col:12> 'long' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fe83d8143c8 <col:12> 'long' lvalue ParmVar 0x7fe83d814200 'fieldval' 'long'
+          `-UnaryOperator 0x7fe83d814468 <col:23, col:24> 'unsigned long' prefix '~'
+            `-ImplicitCastExpr 0x7fe83d814450 <col:24> 'unsigned long' <LValueToRValue>
+              `-DeclRefExpr 0x7fe83d814428 <col:24> 'unsigned long' lvalue ParmVar 0x7fe83d02c978 'mask' 'unsigned long'

@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb90902bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb90902c960 <../Data/C2AST/pr45101.c:5:1, line:8:1> line:5:1 struct definition
+| `-FieldDecl 0x7fb909061638 <line:7:3, col:7> col:7 referenced i 'int'
+|-VarDecl 0x7fb909061730 <line:5:1, line:8:4> col:4 used s 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *'
+|-FunctionDecl 0x7fb9090618b0 <line:10:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fb909061998 <line:12:1, line:15:1> line:12:6 foo 'void ()'
+  `-CompoundStmt 0x7fb909061c10 <line:13:1, line:15:1>
+    `-ConditionalOperator 0x7fb909061be0 <line:14:3, col:22> 'void'
+      |-UnaryOperator 0x7fb909061a78 <col:3, col:4> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7fb909061a60 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb909061a38 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *' lvalue Var 0x7fb909061730 's' 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *'
+      |-ImplicitCastExpr 0x7fb909061bc8 <col:8, col:12> 'void' <ToVoid>
+      | `-UnaryOperator 0x7fb909061b10 <col:8, col:12> 'int' postfix '++'
+      |   `-MemberExpr 0x7fb909061ad8 <col:8, col:11> 'int' lvalue ->i 0x7fb909061638
+      |     `-ImplicitCastExpr 0x7fb909061ac0 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fb909061a98 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *' lvalue Var 0x7fb909061730 's' 'struct (anonymous struct at ../Data/C2AST/pr45101.c:5:1) *'
+      `-CallExpr 0x7fb909061ba0 <col:17, col:22> 'void'
+        `-ImplicitCastExpr 0x7fb909061b88 <col:17> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fb909061b30 <col:17> 'void (void)' Function 0x7fb9090618b0 'bar' 'void (void)'

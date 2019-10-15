@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f82f282bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f82f282c960 <../Data/C2AST/pr56997-4.c:7:9, line:10:1> line:7:16 struct s definition
+| |-AlignedAttr 0x7f82f286d968 <line:10:26, col:39> aligned
+| | `-IntegerLiteral 0x7f82f286d948 <col:38> 'int' 4
+| |-PackedAttr 0x7f82f286d9b8 <col:15>
+| |-FieldDecl 0x7f82f286d8a0 <line:8:2, col:24> col:16 Prefix 'unsigned char [1]'
+| `-FieldDecl 0x7f82f286d900 <line:9:2, col:21> col:21 referenced Type 'volatile unsigned short'
+|-TypedefDecl 0x7f82f286da20 <line:7:1, line:10:43> col:43 referenced ss 'struct s':'struct s'
+| `-ElaboratedType 0x7f82f286d9d0 'struct s' sugar
+|   `-RecordType 0x7f82f286d800 'struct s'
+|     `-Record 0x7f82f282c960 's'
+|-VarDecl 0x7f82f286dac0 <line:12:1, col:20> col:20 used v 'volatile ss':'volatile struct s' extern
+`-FunctionDecl 0x7f82f286dc40 <line:14:1, line:18:1> line:15:1 foo 'void (unsigned short)'
+  |-ParmVarDecl 0x7f82f286db78 <line:5:19, line:15:16> col:16 used u 'unsigned short'
+  `-CompoundStmt 0x7f82f286de00 <line:16:1, line:18:1>
+    `-BinaryOperator 0x7f82f286dd88 <line:17:3, col:12> 'unsigned short' '='
+      |-MemberExpr 0x7f82f286dd10 <col:3, col:5> 'volatile unsigned short' lvalue .Type 0x7f82f286d900
+      | `-DeclRefExpr 0x7f82f286dce8 <col:3> 'volatile ss':'volatile struct s' lvalue Var 0x7f82f286dac0 'v' 'volatile ss':'volatile struct s'
+      `-ImplicitCastExpr 0x7f82f286dd70 <col:12> 'unsigned short' <LValueToRValue>
+        `-DeclRefExpr 0x7f82f286dd48 <col:12> 'unsigned short' lvalue ParmVar 0x7f82f286db78 'u' 'unsigned short'

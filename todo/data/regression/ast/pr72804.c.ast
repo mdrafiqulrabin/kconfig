@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fb214018ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb21405a900 <../Data/C2AST/pr72804.c:6:1, line:10:1> line:7:1 foo '__int128_t (__int128_t *)'
+| |-ParmVarDecl 0x7fb21405a800 <col:6, col:18> col:18 used src '__int128_t *'
+| `-CompoundStmt 0x7fb21405aa98 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fb21405aa80 <line:9:3, col:12>
+|     `-UnaryOperator 0x7fb21405aa60 <col:10, col:12> '__int128_t':'__int128' prefix '~'
+|       `-ImplicitCastExpr 0x7fb21405aa48 <col:11, col:12> '__int128_t':'__int128' <LValueToRValue>
+|         `-UnaryOperator 0x7fb21405aa28 <col:11, col:12> '__int128_t':'__int128' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fb21405aa10 <col:12> '__int128_t *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fb21405a9e8 <col:12> '__int128_t *' lvalue ParmVar 0x7fb21405a800 'src' '__int128_t *'
+`-FunctionDecl 0x7fb21405ac40 <line:12:1, line:16:1> line:13:1 bar 'void (__int128_t *, __int128_t)'
+  |-ParmVarDecl 0x7fb21405aac0 <col:6, col:18> col:18 used dst '__int128_t *'
+  |-ParmVarDecl 0x7fb21405ab30 <col:23, col:34> col:34 used src '__int128_t':'__int128'
+  `-CompoundStmt 0x7fb21405add8 <line:14:1, line:16:1>
+    `-BinaryOperator 0x7fb21405adb0 <line:15:3, col:12> '__int128_t':'__int128' '='
+      |-UnaryOperator 0x7fb21405ad30 <col:3, col:4> '__int128_t':'__int128' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb21405ad18 <col:4> '__int128_t *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb21405acf0 <col:4> '__int128_t *' lvalue ParmVar 0x7fb21405aac0 'dst' '__int128_t *'
+      `-UnaryOperator 0x7fb21405ad90 <col:11, col:12> '__int128_t':'__int128' prefix '~'
+        `-ImplicitCastExpr 0x7fb21405ad78 <col:12> '__int128_t':'__int128' <LValueToRValue>
+          `-DeclRefExpr 0x7fb21405ad50 <col:12> '__int128_t':'__int128' lvalue ParmVar 0x7fb21405ab30 'src' '__int128_t':'__int128'

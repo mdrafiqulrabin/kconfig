@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f9c63829ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9c639ac800 <../Data/C2AST/pr84336.c:7:1, col:23> col:8 struct S definition
+| `-FieldDecl 0x7f9c639ac8c0 <col:12, col:20> col:20 referenced h '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7f9c639ac960 <col:1, col:25> col:25 used b 'struct S':'struct S'
+`-FunctionDecl 0x7f9c639acb60 <line:9:1, line:13:1> line:10:1 foo '__m512 (__m512, __mmask16, __m512)'
+  |-ParmVarDecl 0x7f9c639ac9e8 <col:6, col:13> col:13 used a '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+  |-ParmVarDecl 0x7f9c639aca58 <col:16, col:26> col:26 used c '__mmask16':'unsigned short'
+  |-ParmVarDecl 0x7f9c639acac8 <col:29, col:36> col:36 used d '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+  `-CompoundStmt 0x7f9c639ace50 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7f9c639ace38 <line:12:3, col:52>
+      `-CallExpr 0x7f9c639acd90 <col:10, col:52> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+        |-ImplicitCastExpr 0x7f9c639acd78 <col:10> '__m512 (*)(__m512, __m512i, __mmask16, __m512)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9c639acc18 <col:10> '__m512 (__m512, __m512i, __mmask16, __m512)' Function 0x7f9c632058f0 '_mm512_mask2_permutex2var_ps' '__m512 (__m512, __m512i, __mmask16, __m512)'
+        |-ImplicitCastExpr 0x7f9c639acdd8 <col:40> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9c639acc40 <col:40> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue ParmVar 0x7f9c639ac9e8 'a' '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+        |-ImplicitCastExpr 0x7f9c639acdf0 <col:43, col:45> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-MemberExpr 0x7f9c639acc90 <col:43, col:45> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue .h 0x7f9c639ac8c0
+        |   `-DeclRefExpr 0x7f9c639acc68 <col:43> 'struct S':'struct S' lvalue Var 0x7f9c639ac960 'b' 'struct S':'struct S'
+        |-ImplicitCastExpr 0x7f9c639ace08 <col:48> '__mmask16':'unsigned short' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9c639accc8 <col:48> '__mmask16':'unsigned short' lvalue ParmVar 0x7f9c639aca58 'c' '__mmask16':'unsigned short'
+        `-ImplicitCastExpr 0x7f9c639ace20 <col:51> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+          `-DeclRefExpr 0x7f9c639accf0 <col:51> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue ParmVar 0x7f9c639acac8 'd' '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'

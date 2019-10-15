@@ -1,0 +1,34 @@
+../Data/C2AST/pr82333.c:9:19: error: expected ';' after top level declarator
+_Complex _Float128 vf128;
+                  ^
+                  ;
+../Data/C2AST/pr82333.c:17:19: error: expected ';' after top level declarator
+_Complex _Float128
+                  ^
+                  ;
+2 errors generated.
+TranslationUnitDecl 0x7f8c6602bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c6602c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c6602bf80 '__int128'
+|-TypedefDecl 0x7f8c6602c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c6602bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f8c6602c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c6602c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c6602c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c6602c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c6602c600 'char *'
+|   `-BuiltinType 0x7f8c6602bd80 'char'
+|-TypedefDecl 0x7f8c6602c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c6602c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c6602c720 'struct __va_list_tag'
+|     `-Record 0x7f8c6602c698 '__va_list_tag'
+|-VarDecl 0x7f8c6602c970 <../Data/C2AST/pr82333.c:8:1, col:22> col:22 vld '_Complex long double'
+|-VarDecl 0x7f8c66814250 <line:9:1, col:10> col:10 _Float128 '_Complex double'
+|-FunctionDecl 0x7f8c66814380 <line:11:1, line:15:1> line:12:1 fld '_Complex long double (_Complex long double)'
+| |-ParmVarDecl 0x7f8c668142c0 <col:6, col:27> col:27 arg0 '_Complex long double'
+| `-CompoundStmt 0x7f8c66814490 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7f8c66814478 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f8c66814460 <col:10> '_Complex long double' <FloatingRealToComplex>
+|       `-ImplicitCastExpr 0x7f8c66814448 <col:10> 'long double' <IntegralToFloating>
+|         `-IntegerLiteral 0x7f8c66814428 <col:10> 'int' 0
+`-VarDecl 0x7f8c668144b8 prev 0x7f8c66814250 <line:17:1, col:10> col:10 _Float128 '_Complex double'

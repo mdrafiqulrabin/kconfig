@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f9c0182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9c0182c960 <../Data/C2AST/pr55920.c:3:1, col:24> col:8 struct A definition
+| |-PackedAttr 0x7f9c02801a80 <col:41>
+| `-FieldDecl 0x7f9c02801a38 <col:12, col:21> col:21 referenced a 'unsigned int'
+|-RecordDecl 0x7f9c02801ac8 <line:4:1, col:40> col:8 struct B definition
+| |-FieldDecl 0x7f9c02801b88 <col:12, col:16> col:16 referenced b 'int'
+| `-FieldDecl 0x7f9c02801c50 <col:19, col:37> col:33 referenced c 'unsigned char [16]'
+|-FunctionDecl 0x7f9c02801df0 <line:5:1, col:19> col:6 used bar 'void (struct A)'
+| `-ParmVarDecl 0x7f9c02801cf0 <col:11, col:18> col:19 'struct A':'struct A'
+|-FunctionDecl 0x7f9c02802090 <line:7:1, line:16:1> line:8:1 foo 'void (struct B *)'
+| |-ParmVarDecl 0x7f9c02801f90 <col:6, col:16> col:16 used x 'struct B *'
+| `-CompoundStmt 0x7f9c03000400 <line:9:1, line:16:1>
+|   |-DeclStmt 0x7f9c028021b8 <line:10:3, col:13>
+|   | `-VarDecl 0x7f9c02802158 <col:3, col:12> col:12 used a 'struct A':'struct A'
+|   |-IfStmt 0x7f9c028028a0 <line:11:3, line:14:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9c02802248 <line:11:7, col:10> 'int' <LValueToRValue>
+|   | | `-MemberExpr 0x7f9c02802210 <col:7, col:10> 'int' lvalue ->b 0x7f9c02801b88
+|   | |   `-ImplicitCastExpr 0x7f9c028021f8 <col:7> 'struct B *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9c028021d0 <col:7> 'struct B *' lvalue ParmVar 0x7f9c02801f90 'x' 'struct B *'
+|   | |-CallExpr 0x7f9c02802710 <line:12:5, col:41> 'void *'
+|   | | |-ImplicitCastExpr 0x7f9c028026f8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f9c028024f8 <col:5> '<builtin fn type>' Function 0x7f9c028022d8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7f9c02802750 <col:23, col:24> 'void *' <BitCast>
+|   | | | `-UnaryOperator 0x7f9c028025a8 <col:23, col:24> 'struct A *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7f9c02802520 <col:24> 'struct A':'struct A' lvalue Var 0x7f9c02802158 'a' 'struct A':'struct A'
+|   | | |-ImplicitCastExpr 0x7f9c02802780 <col:27, col:30> 'const void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7f9c02802768 <col:27, col:30> 'unsigned char *' <ArrayToPointerDecay>
+|   | | |   `-MemberExpr 0x7f9c02802608 <col:27, col:30> 'unsigned char [16]' lvalue ->c 0x7f9c02801c50
+|   | | |     `-ImplicitCastExpr 0x7f9c028025f0 <col:27> 'struct B *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f9c028025c8 <col:27> 'struct B *' lvalue ParmVar 0x7f9c02801f90 'x' 'struct B *'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f9c02802668 <col:33, col:40> 'unsigned long' sizeof
+|   | |   `-DeclRefExpr 0x7f9c02802640 <col:40> 'struct A':'struct A' lvalue Var 0x7f9c02802158 'a' 'struct A':'struct A'
+|   | `-BinaryOperator 0x7f9c02802830 <line:14:5, col:11> 'unsigned int' '='
+|   |   |-MemberExpr 0x7f9c028027c0 <col:5, col:7> 'unsigned int' lvalue .a 0x7f9c02801a38
+|   |   | `-DeclRefExpr 0x7f9c02802798 <col:5> 'struct A':'struct A' lvalue Var 0x7f9c02802158 'a' 'struct A':'struct A'
+|   |   `-ImplicitCastExpr 0x7f9c02802818 <col:11> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f9c028027f8 <col:11> 'int' 0
+|   `-CallExpr 0x7f9c028029a0 <line:15:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7f9c02802988 <col:3> 'void (*)(struct A)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f9c028028d8 <col:3> 'void (struct A)' Function 0x7f9c02801df0 'bar' 'void (struct A)'
+|     `-ImplicitCastExpr 0x7f9c028029d0 <col:8> 'struct A':'struct A' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9c02802900 <col:8> 'struct A':'struct A' lvalue Var 0x7f9c02802158 'a' 'struct A':'struct A'
+`-FunctionDecl 0x7f9c028022d8 <line:12:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f9c02802378 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f9c028023d8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f9c02802438 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f9c028024b0 <col:5> Implicit

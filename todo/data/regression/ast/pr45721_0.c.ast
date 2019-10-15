@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fe9a600fae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe9a6823e20 <../Data/C2AST/pr45721_0.c:2:1, col:17> col:6 used baz 'void (void)'
+| `-CompoundStmt 0x7fe9a6823f00 <col:16, col:17>
+|-VarDecl 0x7fe9a6823f28 <line:3:1, col:19> col:7 y 'void *' cinit
+| `-CStyleCastExpr 0x7fe9a6824010 <col:11, col:19> 'void *' <BitCast>
+|   `-ImplicitCastExpr 0x7fe9a6823ff8 <col:19> 'void (*)(void)' <FunctionToPointerDecay>
+|     `-DeclRefExpr 0x7fe9a6823f88 <col:19> 'void (void)' Function 0x7fe9a6823e20 'baz' 'void (void)'
+`-FunctionDecl 0x7fe9a6824090 <line:4:1, col:25> col:5 main 'int ()'
+  `-CompoundStmt 0x7fe9a6824168 <col:13, col:25>
+    `-ReturnStmt 0x7fe9a6824150 <col:15, col:22>
+      `-IntegerLiteral 0x7fe9a6824130 <col:22> 'int' 0

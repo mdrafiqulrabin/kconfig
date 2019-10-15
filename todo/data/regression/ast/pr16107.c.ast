@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fa09d0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa09c8212e8 <../Data/C2AST/pr16107.c:6:1, line:13:1> line:6:8 t 'double (double)'
+  |-ParmVarDecl 0x7fa09c821258 <col:11, col:18> col:18 used x 'double'
+  `-CompoundStmt 0x7fa09c821748 <line:7:1, line:13:1>
+    |-BinaryOperator 0x7fa09c821418 <line:8:2, col:7> 'double' '='
+    | |-DeclRefExpr 0x7fa09c821390 <col:2> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    | `-UnaryOperator 0x7fa09c8213f8 <col:6, col:7> 'double' prefix '-'
+    |   `-ImplicitCastExpr 0x7fa09c8213e0 <col:7> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa09c8213b8 <col:7> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    |-BinaryOperator 0x7fa09c821518 <line:9:2, col:12> 'double' '='
+    | |-DeclRefExpr 0x7fa09c821440 <col:2> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    | `-CallExpr 0x7fa09c8214d0 <col:6, col:12> 'double'
+    |   |-ImplicitCastExpr 0x7fa09c8214b8 <col:6> 'double (*)(double)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa09c821468 <col:6> 'double (double)' Function 0x7fa09d816fc8 'cos' 'double (double)'
+    |   `-ImplicitCastExpr 0x7fa09c821500 <col:11> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa09c821490 <col:11> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    |-BinaryOperator 0x7fa09c8215c8 <line:10:2, col:7> 'double' '='
+    | |-DeclRefExpr 0x7fa09c821540 <col:2> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    | `-UnaryOperator 0x7fa09c8215a8 <col:6, col:7> 'double' prefix '-'
+    |   `-ImplicitCastExpr 0x7fa09c821590 <col:7> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa09c821568 <col:7> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    |-BinaryOperator 0x7fa09c8216c8 <line:11:2, col:13> 'double' '='
+    | |-DeclRefExpr 0x7fa09c8215f0 <col:2> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    | `-CallExpr 0x7fa09c821680 <col:6, col:13> 'double'
+    |   |-ImplicitCastExpr 0x7fa09c821668 <col:6> 'double (*)(double)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa09c821618 <col:6> 'double (double)' Function 0x7fa09d81a6a8 'cosh' 'double (double)'
+    |   `-ImplicitCastExpr 0x7fa09c8216b0 <col:12> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa09c821640 <col:12> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'
+    `-ReturnStmt 0x7fa09c821730 <line:12:2, col:9>
+      `-ImplicitCastExpr 0x7fa09c821718 <col:9> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa09c8216f0 <col:9> 'double' lvalue ParmVar 0x7fa09c821258 'x' 'double'

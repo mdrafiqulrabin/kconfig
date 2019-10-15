@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7ffea982bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffea982c960 <../Data/C2AST/pr51761.c:3:1, col:30> col:8 struct S definition
+| `-FieldDecl 0x7ffea9869e38 <col:12, col:25> col:25 len 'unsigned int'
+|-FunctionDecl 0x7ffea9869fe0 <line:4:1, col:23> col:10 used foo 'struct S (struct S)'
+| `-ParmVarDecl 0x7ffea9869ed0 <col:15, col:22> col:23 'struct S':'struct S'
+`-FunctionDecl 0x7ffea986a180 <line:6:1, line:10:1> line:7:1 bar 'struct S (struct S)'
+  |-ParmVarDecl 0x7ffea986a0e8 <col:6, col:15> col:15 used x 'struct S':'struct S'
+  `-CompoundStmt 0x7ffea986a460 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7ffea986a448 <line:9:3, col:39>
+      `-StmtExpr 0x7ffea986a428 <col:10, col:39> 'struct S':'struct S'
+        `-CompoundStmt 0x7ffea986a408 <col:11, col:38>
+          |-DeclStmt 0x7ffea986a2e8 <col:13, col:27>
+          | `-VarDecl 0x7ffea986a248 <col:13, col:26> col:22 used a 'struct S':'struct S' cinit
+          |   `-ImplicitCastExpr 0x7ffea986a2d0 <col:26> 'struct S':'struct S' <LValueToRValue>
+          |     `-DeclRefExpr 0x7ffea986a2a8 <col:26> 'struct S':'struct S' lvalue ParmVar 0x7ffea986a0e8 'x' 'struct S':'struct S'
+          `-CallExpr 0x7ffea986a3c0 <col:29, col:35> 'struct S':'struct S'
+            |-ImplicitCastExpr 0x7ffea986a3a8 <col:29> 'struct S (*)(struct S)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7ffea986a300 <col:29> 'struct S (struct S)' Function 0x7ffea9869fe0 'foo' 'struct S (struct S)'
+            `-ImplicitCastExpr 0x7ffea986a3f0 <col:34> 'struct S':'struct S' <LValueToRValue>
+              `-DeclRefExpr 0x7ffea986a328 <col:34> 'struct S':'struct S' lvalue Var 0x7ffea986a248 'a' 'struct S':'struct S'

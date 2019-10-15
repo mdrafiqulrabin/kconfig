@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fb28982aae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb28986c660 <../Data/C2AST/pr70370.c:3:1, line:8:1> line:4:1 test1 '_Complex float (_Complex float)'
+| |-ParmVarDecl 0x7fb28982b770 <col:8, col:23> col:23 used f '_Complex float'
+| `-CompoundStmt 0x7fb28986c918 <line:5:1, line:8:1>
+|   |-GCCAsmStmt 0x7fb28986c860 <line:6:3, col:32>
+|   | `-UnaryOperator 0x7fb28986c840 <col:23, col:30> 'float' lvalue prefix '__real'
+|   |   `-DeclRefExpr 0x7fb28986c818 <col:30> '_Complex float' lvalue ParmVar 0x7fb28982b770 'f' '_Complex float'
+|   `-ReturnStmt 0x7fb28986c900 <line:7:3, col:10>
+|     `-ImplicitCastExpr 0x7fb28986c8e8 <col:10> '_Complex float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb28986c8c0 <col:10> '_Complex float' lvalue ParmVar 0x7fb28982b770 'f' '_Complex float'
+|-FunctionDecl 0x7fb28986c9d0 <line:10:1, line:15:1> line:11:1 test2 '_Complex float (_Complex float)'
+| |-ParmVarDecl 0x7fb28986c948 <col:8, col:23> col:23 used f '_Complex float'
+| `-CompoundStmt 0x7fb28986cbd0 <line:12:1, line:15:1>
+|   |-GCCAsmStmt 0x7fb28986cb18 <line:13:3, col:32>
+|   | `-UnaryOperator 0x7fb28986caf8 <col:23, col:30> 'float' lvalue prefix '__real'
+|   |   `-DeclRefExpr 0x7fb28986cad0 <col:30> '_Complex float' lvalue ParmVar 0x7fb28986c948 'f' '_Complex float'
+|   `-ReturnStmt 0x7fb28986cbb8 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7fb28986cba0 <col:10> '_Complex float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb28986cb78 <col:10> '_Complex float' lvalue ParmVar 0x7fb28986c948 'f' '_Complex float'
+|-RecordDecl 0x7fb28986cbf0 <line:17:1, col:19> col:8 struct X definition
+| `-FieldDecl 0x7fb28986ccb8 <col:12, col:16> col:16 referenced i 'int'
+|-FunctionDecl 0x7fb28986ce60 <line:19:1, line:24:1> line:20:1 test3 'struct X (struct X)'
+| |-ParmVarDecl 0x7fb28986cd50 <col:8, col:17> col:17 used x 'struct X':'struct X'
+| `-CompoundStmt 0x7fb28986d078 <line:21:1, line:24:1>
+|   |-GCCAsmStmt 0x7fb28986cfc0 <line:22:3, col:27>
+|   | `-MemberExpr 0x7fb28986cf88 <col:23, col:25> 'int' lvalue .i 0x7fb28986ccb8
+|   |   `-DeclRefExpr 0x7fb28986cf60 <col:23> 'struct X':'struct X' lvalue ParmVar 0x7fb28986cd50 'x' 'struct X':'struct X'
+|   `-ReturnStmt 0x7fb28986d060 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7fb28986d048 <col:10> 'struct X':'struct X' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb28986d020 <col:10> 'struct X':'struct X' lvalue ParmVar 0x7fb28986cd50 'x' 'struct X':'struct X'
+|-FunctionDecl 0x7fb28986d150 <line:26:1, line:31:1> line:27:1 test4 'struct X (struct X)'
+| |-ParmVarDecl 0x7fb28986d0b8 <col:8, col:17> col:17 used x 'struct X':'struct X'
+| `-CompoundStmt 0x7fb28986d368 <line:28:1, line:31:1>
+|   |-GCCAsmStmt 0x7fb28986d2b0 <line:29:3, col:27>
+|   | `-MemberExpr 0x7fb28986d278 <col:23, col:25> 'int' lvalue .i 0x7fb28986ccb8
+|   |   `-DeclRefExpr 0x7fb28986d250 <col:23> 'struct X':'struct X' lvalue ParmVar 0x7fb28986d0b8 'x' 'struct X':'struct X'
+|   `-ReturnStmt 0x7fb28986d350 <line:30:3, col:10>
+|     `-ImplicitCastExpr 0x7fb28986d338 <col:10> 'struct X':'struct X' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb28986d310 <col:10> 'struct X':'struct X' lvalue ParmVar 0x7fb28986d0b8 'x' 'struct X':'struct X'
+|-FunctionDecl 0x7fb28986d440 <line:33:1, line:38:1> line:34:1 test5 'struct X (struct X)'
+| |-ParmVarDecl 0x7fb28986d3a8 <col:8, col:17> col:17 used x 'struct X':'struct X'
+| `-CompoundStmt 0x7fb28986d668 <line:35:1, line:38:1>
+|   |-GCCAsmStmt 0x7fb28986d5b0 <line:36:3, col:25>
+|   | `-DeclRefExpr 0x7fb28986d540 <col:23> 'struct X':'struct X' lvalue ParmVar 0x7fb28986d3a8 'x' 'struct X':'struct X'
+|   `-ReturnStmt 0x7fb28986d650 <line:37:3, col:10>
+|     `-ImplicitCastExpr 0x7fb28986d638 <col:10> 'struct X':'struct X' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb28986d610 <col:10> 'struct X':'struct X' lvalue ParmVar 0x7fb28986d3a8 'x' 'struct X':'struct X'
+`-FunctionDecl 0x7fb28986d740 <line:40:1, line:45:1> line:41:1 test6 'struct X (struct X)'
+  |-ParmVarDecl 0x7fb28986d6a8 <col:8, col:17> col:17 used x 'struct X':'struct X'
+  `-CompoundStmt 0x7fb28986d920 <line:42:1, line:45:1>
+    |-GCCAsmStmt 0x7fb28986d868 <line:43:3, col:25>
+    | `-DeclRefExpr 0x7fb28986d840 <col:23> 'struct X':'struct X' lvalue ParmVar 0x7fb28986d6a8 'x' 'struct X':'struct X'
+    `-ReturnStmt 0x7fb28986d908 <line:44:3, col:10>
+      `-ImplicitCastExpr 0x7fb28986d8f0 <col:10> 'struct X':'struct X' <LValueToRValue>
+        `-DeclRefExpr 0x7fb28986d8c8 <col:10> 'struct X':'struct X' lvalue ParmVar 0x7fb28986d6a8 'x' 'struct X':'struct X'

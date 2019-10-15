@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fce3780b4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fce37851660 <../Data/C2AST/pragma-diagnostic-1.c:3:1, col:17> col:6 used f 'void (unsigned int)'
+| `-ParmVarDecl 0x7fce3780c178 <col:9> col:17 'unsigned int'
+|-FunctionDecl 0x7fce37851810 <line:11:1, line:15:1> line:12:1 g 'void (void)'
+| `-CompoundStmt 0x7fce37851a30 <line:13:1, line:15:1>
+|   |-DeclStmt 0x7fce37851928 <line:6:3, col:8>
+|   | `-VarDecl 0x7fce378518c8 <col:3, col:7> col:7 used a 'int'
+|   `-CallExpr 0x7fce378519d0 <line:7:3, col:7> 'void'
+|     |-ImplicitCastExpr 0x7fce378519b8 <col:3> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fce37851940 <col:3> 'void (unsigned int)' Function 0x7fce37851660 'f' 'void (unsigned int)'
+|     `-ImplicitCastExpr 0x7fce37851a18 <col:6> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fce37851a00 <col:6> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fce37851968 <col:6> 'int' lvalue Var 0x7fce378518c8 'a' 'int'
+`-FunctionDecl 0x7fce37851ae0 <line:21:1, line:25:1> line:22:1 h 'void (void)'
+  `-CompoundStmt 0x7fce37851cd8 <line:23:1, line:25:1>
+    |-DeclStmt 0x7fce37851bf8 <line:6:3, col:8>
+    | `-VarDecl 0x7fce37851b98 <col:3, col:7> col:7 used a 'int'
+    `-CallExpr 0x7fce37851c78 <line:7:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7fce37851c60 <col:3> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fce37851c10 <col:3> 'void (unsigned int)' Function 0x7fce37851660 'f' 'void (unsigned int)'
+      `-ImplicitCastExpr 0x7fce37851cc0 <col:6> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fce37851ca8 <col:6> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fce37851c38 <col:6> 'int' lvalue Var 0x7fce37851b98 'a' 'int'

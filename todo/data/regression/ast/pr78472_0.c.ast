@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fc9868166e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc986817360 <../Data/C2AST/pr78472_0.c:3:8, line:7:1> line:3:15 struct S definition
+| |-FieldDecl 0x7fc986858258 <line:5:3, col:14> col:12 i 'unsigned int'
+| | `-IntegerLiteral 0x7fc986858220 <col:14> 'int' 4
+| `-FieldDecl 0x7fc9868582d8 <line:6:3, col:13> col:3 'unsigned int'
+|   `-IntegerLiteral 0x7fc9868582a0 <col:13> 'int' 0
+|-VarDecl 0x7fc986858370 <line:3:1, line:7:3> col:3 used s 'struct S':'struct S' extern
+|-FunctionDecl 0x7fc9868584f8 <line:8:1, line:11:1> line:8:14 f 'void *(void)' static
+| `-CompoundStmt 0x7fc986858668 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fc986858650 <line:10:3, col:11>
+|     `-ImplicitCastExpr 0x7fc986858638 <col:10, col:11> 'void *' <BitCast>
+|       `-UnaryOperator 0x7fc986858618 <col:10, col:11> 'struct S *' prefix '&'
+|         `-DeclRefExpr 0x7fc986858598 <col:11> 'struct S':'struct S' lvalue Var 0x7fc986858370 's' 'struct S':'struct S'
+`-FunctionDecl 0x7fc9868586d0 <line:12:1, col:13> col:5 main 'int ()'
+  `-CompoundStmt 0x7fc986858770 <col:12, col:13>

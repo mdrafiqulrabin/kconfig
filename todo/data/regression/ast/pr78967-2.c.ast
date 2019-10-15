@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fcbbe8002e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcbbe800f78 <../Data/C2AST/pr78967-2.c:7:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fcbbe8004a0 'unsigned long'
+|-RecordDecl 0x7fcbbf022200 <line:9:1, line:14:1> line:9:8 struct S1 definition
+| |-FieldDecl 0x7fcbbf0222c8 <line:11:3, col:17> col:17 pad1 'unsigned char'
+| |-FieldDecl 0x7fcbbf022328 <line:12:3, col:17> col:17 referenced val 'unsigned char'
+| `-FieldDecl 0x7fcbbf022388 <line:13:3, col:18> col:18 pad2 'unsigned short'
+|-VarDecl 0x7fcbbf022450 <line:16:1, col:27> col:22 used t 'unsigned char [256]' extern
+`-FunctionDecl 0x7fcbbf0226f0 <line:18:1, line:23:1> line:18:11 foo 'struct S1 (struct S1, size_t)'
+  |-ParmVarDecl 0x7fcbbf022540 <col:16, col:26> col:26 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fcbbf0225d0 <col:29, col:36> col:36 used i 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fcbbf0229c0 <line:19:1, line:23:1>
+    |-BinaryOperator 0x7fcbbf0228e8 <line:20:3, col:14> 'unsigned char' '='
+    | |-MemberExpr 0x7fcbbf0227c8 <col:3, col:5> 'unsigned char' lvalue .val 0x7fcbbf022328
+    | | `-DeclRefExpr 0x7fcbbf0227a0 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fcbbf022540 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7fcbbf0228d0 <col:11, col:14> 'unsigned char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fcbbf0228a8 <col:11, col:14> 'unsigned char' lvalue
+    |     |-ImplicitCastExpr 0x7fcbbf022878 <col:11> 'unsigned char *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcbbf022800 <col:11> 'unsigned char [256]' lvalue Var 0x7fcbbf022450 't' 'unsigned char [256]'
+    |     `-ImplicitCastExpr 0x7fcbbf022890 <col:13> 'size_t':'unsigned long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcbbf022828 <col:13> 'size_t':'unsigned long' lvalue ParmVar 0x7fcbbf0225d0 'i' 'size_t':'unsigned long'
+    `-ReturnStmt 0x7fcbbf0229a8 <line:22:3, col:10>
+      `-ImplicitCastExpr 0x7fcbbf022990 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fcbbf022968 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fcbbf022540 'a' 'struct S1':'struct S1'

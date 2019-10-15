@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f883002bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f883002c960 <../Data/C2AST/pr79671_1.c:1:1, line:4:1> line:1:8 struct X definition
+| `-FieldDecl 0x7f883006d8c0 <line:3:3, col:33> col:17 referenced buf 'unsigned char [4]'
+`-FunctionDecl 0x7f883006d958 <line:5:1, col:56> col:6 bar 'void ()'
+  `-CompoundStmt 0x7f883006dd08 <col:13, col:56>
+    |-DeclStmt 0x7f883006daf0 <col:15, col:25>
+    | `-VarDecl 0x7f883006da90 <col:15, col:24> col:24 used x 'struct X':'struct X'
+    `-BinaryOperator 0x7f883006dc98 <col:27, col:53> 'char' '='
+      |-UnaryOperator 0x7f883006dc40 <col:27, col:47> 'volatile char' lvalue prefix '*'
+      | `-CStyleCastExpr 0x7f883006dc18 <col:28, col:47> 'volatile char *' <BitCast>
+      |   `-ImplicitCastExpr 0x7f883006dbd8 <col:45, col:47> 'unsigned char *' <ArrayToPointerDecay>
+      |     `-MemberExpr 0x7f883006db30 <col:45, col:47> 'unsigned char [4]' lvalue .buf 0x7f883006d8c0
+      |       `-DeclRefExpr 0x7f883006db08 <col:45> 'struct X':'struct X' lvalue Var 0x7f883006da90 'x' 'struct X':'struct X'
+      `-ImplicitCastExpr 0x7f883006dc80 <col:53> 'char' <IntegralCast>
+        `-IntegerLiteral 0x7f883006dc60 <col:53> 'int' 1

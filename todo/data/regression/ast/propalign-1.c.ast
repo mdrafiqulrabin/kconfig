@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fb1c282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb1c3023178 <../Data/C2AST/propalign-1.c:7:1, col:32> col:12 used fail_the_test 'int (void *)' extern
+| `-ParmVarDecl 0x7fb1c30230b0 <col:26, col:31> col:32 'void *'
+|-FunctionDecl 0x7fb1c3023308 <line:8:1, col:32> col:12 used pass_the_test 'int (void *)' extern
+| `-ParmVarDecl 0x7fb1c3023278 <col:26, col:31> col:32 'void *'
+|-FunctionDecl 0x7fb1c3023458 <line:9:1, col:29> col:12 diversion 'int (void *)' extern
+| `-ParmVarDecl 0x7fb1c30233c8 <col:23, col:28> col:29 'void *'
+|-FunctionDecl 0x7fb1c30235a8 <line:11:1, line:20:1> line:12:1 used foo 'int (void *)' static
+| |-ParmVarDecl 0x7fb1c3023518 <col:6, col:12> col:12 used p 'void *'
+| |-CompoundStmt 0x7fb1c3023a50 <line:13:1, line:20:1>
+| | |-DeclStmt 0x7fb1c30237a8 <line:14:3, col:30>
+| | | `-VarDecl 0x7fb1c30236d0 <col:3, col:29> col:13 used a 'uintptr_t':'unsigned long' cinit
+| | |   `-CStyleCastExpr 0x7fb1c3023780 <col:17, col:29> 'uintptr_t':'unsigned long' <PointerToIntegral>
+| | |     `-ImplicitCastExpr 0x7fb1c3023768 <col:29> 'void *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fb1c3023730 <col:29> 'void *' lvalue ParmVar 0x7fb1c3023518 'p' 'void *'
+| | `-IfStmt 0x7fb1c3023a18 <line:16:3, line:19:28>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fb1c3023838 <line:16:7, col:11> 'unsigned long' '%'
+| |   | |-ImplicitCastExpr 0x7fb1c3023808 <col:7> 'uintptr_t':'unsigned long' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fb1c30237c0 <col:7> 'uintptr_t':'unsigned long' lvalue Var 0x7fb1c30236d0 'a' 'uintptr_t':'unsigned long'
+| |   | `-ImplicitCastExpr 0x7fb1c3023820 <col:11> 'unsigned long' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fb1c30237e8 <col:11> 'int' 4
+| |   |-ReturnStmt 0x7fb1c3023938 <line:17:5, col:28>
+| |   | `-CallExpr 0x7fb1c30238f0 <col:12, col:28> 'int'
+| |   |   |-ImplicitCastExpr 0x7fb1c30238d8 <col:12> 'int (*)(void *)' <FunctionToPointerDecay>
+| |   |   | `-DeclRefExpr 0x7fb1c3023860 <col:12> 'int (void *)' Function 0x7fb1c3023178 'fail_the_test' 'int (void *)'
+| |   |   `-ImplicitCastExpr 0x7fb1c3023920 <col:27> 'void *' <LValueToRValue>
+| |   |     `-DeclRefExpr 0x7fb1c3023888 <col:27> 'void *' lvalue ParmVar 0x7fb1c3023518 'p' 'void *'
+| |   `-ReturnStmt 0x7fb1c3023a00 <line:19:5, col:28>
+| |     `-CallExpr 0x7fb1c30239b8 <col:12, col:28> 'int'
+| |       |-ImplicitCastExpr 0x7fb1c30239a0 <col:12> 'int (*)(void *)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7fb1c3023950 <col:12> 'int (void *)' Function 0x7fb1c3023308 'pass_the_test' 'int (void *)'
+| |       `-ImplicitCastExpr 0x7fb1c30239e8 <col:27> 'void *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fb1c3023978 <col:27> 'void *' lvalue ParmVar 0x7fb1c3023518 'p' 'void *'
+| `-NoInlineAttr 0x7fb1c3023650 <line:11:27>
+`-FunctionDecl 0x7fb1c3023b38 <line:22:1, line:27:1> line:23:1 bar 'int (void)'
+  `-CompoundStmt 0x7fb1c3804c60 <line:24:1, line:27:1>
+    |-DeclStmt 0x7fb1c3804b30 <line:25:3, col:69>
+    | `-VarDecl 0x7fb1c3804a80 <col:3, col:15> col:10 used buf 'double [8]'
+    |   `-AlignedAttr 0x7fb1c3804ae0 <col:33, col:66> aligned
+    |     `-IntegerLiteral 0x7fb1c3804a00 <<built-in>:159:31> 'int' 16
+    `-ReturnStmt 0x7fb1c3804c48 <../Data/C2AST/propalign-1.c:26:3, col:19>
+      `-CallExpr 0x7fb1c3804c00 <col:10, col:19> 'int'
+        |-ImplicitCastExpr 0x7fb1c3804be8 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb1c3804b48 <col:10> 'int (void *)' Function 0x7fb1c30235a8 'foo' 'int (void *)'
+        `-ImplicitCastExpr 0x7fb1c3804c30 <col:15, col:16> 'void *' <BitCast>
+          `-UnaryOperator 0x7fb1c3804bc8 <col:15, col:16> 'double (*)[8]' prefix '&'
+            `-DeclRefExpr 0x7fb1c3804b70 <col:16> 'double [8]' lvalue Var 0x7fb1c3804a80 'buf' 'double [8]'

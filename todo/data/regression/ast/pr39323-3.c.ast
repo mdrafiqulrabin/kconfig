@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fc9ce0126e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc9cd836e00 <../Data/C2AST/pr39323-3.c:4:1, col:48> col:48 referenced int28 'int'
+| |-BuiltinType 0x7fc9ce0127e0 'int'
+| `-AlignedAttr 0x7fc9cd836e58 <col:29, col:44> aligned
+|   `-BinaryOperator 0x7fc9ce0133a0 <col:37, col:42> 'int' '<<'
+|     |-IntegerLiteral 0x7fc9ce013360 <col:37> 'int' 1
+|     `-IntegerLiteral 0x7fc9ce013380 <col:42> 'int' 28
+`-VarDecl 0x7fc9cd836ee0 <line:5:1, col:13> col:7 foo 'int28':'int' cinit
+  `-IntegerLiteral 0x7fc9cd836f80 <col:13> 'int' 20

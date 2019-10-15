@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f93bd0234e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f93bd024160 <../Data/C2AST/pr43190.c:6:9, col:27> col:16 struct S definition
+| `-FieldDecl 0x7f93bd065038 <col:20, col:24> col:24 referenced i 'int'
+|-TypedefDecl 0x7f93bd065130 <col:1, col:30> col:30 referenced T 'struct S *'
+| `-PointerType 0x7f93bd0650e0 'struct S *'
+|   `-ElaboratedType 0x7f93bd065080 'struct S' sugar
+|     `-RecordType 0x7f93bd065000 'struct S'
+|       `-Record 0x7f93bd024160 'S'
+`-FunctionDecl 0x7f93bd065280 <line:9:1, line:13:1> line:10:1 foo 'void (void *)'
+  |-ParmVarDecl 0x7f93bd0651b8 <col:6, col:12> col:12 used p 'void *'
+  `-CompoundStmt 0x7f93bd0654d0 <line:11:1, line:13:1>
+    `-UnaryOperator 0x7f93bd0654b0 <line:7:14, line:12:11> 'int' postfix '++'
+      `-MemberExpr 0x7f93bd065478 <line:7:14, line:12:10> 'int' lvalue ->i 0x7f93bd065038
+        `-ParenExpr 0x7f93bd065458 <line:7:14, col:22> 'T':'struct S *'
+          `-CStyleCastExpr 0x7f93bd065430 <col:15, col:21> 'T':'struct S *' <BitCast>
+            `-ImplicitCastExpr 0x7f93bd065418 <col:19, col:21> 'void *' <LValueToRValue>
+              `-ParenExpr 0x7f93bd0653f8 <col:19, col:21> 'void *' lvalue
+                `-DeclRefExpr 0x7f93bd065390 <line:12:6> 'void *' lvalue ParmVar 0x7f93bd0651b8 'p' 'void *'

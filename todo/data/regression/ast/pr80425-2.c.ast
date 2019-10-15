@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fd9dd00e8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd9dccbc218 <../Data/C2AST/pr80425-2.c:6:1, col:12> col:12 used a 'int' extern
+`-FunctionDecl 0x7fd9dccbc310 <line:8:1, line:12:1> line:9:1 f1 '__m512i (__m512i)'
+  |-ParmVarDecl 0x7fd9dccbc288 <col:5, col:13> col:13 used x '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fd9dccbc4c8 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fd9dccbc4b0 <line:11:3, col:33>
+      `-CallExpr 0x7fd9dccbc448 <col:10, col:33> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fd9dccbc430 <col:10> '__m512i (*)(__m512i, int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fd9dccbc3b8 <col:10> '__m512i (__m512i, int)' Function 0x7fd9dda70788 '_mm512_srai_epi32' '__m512i (__m512i, int)'
+        |-ImplicitCastExpr 0x7fd9dccbc480 <col:29> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd9dccbc3e0 <col:29> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7fd9dccbc288 'x' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fd9dccbc498 <col:32> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd9dccbc408 <col:32> 'int' lvalue Var 0x7fd9dccbc218 'a' 'int'

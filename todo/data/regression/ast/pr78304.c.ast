@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fcb668258e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcb670de2d8 <../Data/C2AST/pr78304.c:7:1, line:10:1> line:7:6 test 'void (const char *)'
+  |-ParmVarDecl 0x7fcb670de250 <col:12, col:24> col:24 used msg 'const char *'
+  `-CompoundStmt 0x7fcb670de510 <line:8:1, line:10:1>
+    `-CallExpr 0x7fcb670de490 <line:9:3, col:37> 'int'
+      |-ImplicitCastExpr 0x7fcb670de478 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcb670de380 <col:3> 'int (const char *, ...)' Function 0x7fcb670c8da8 'printf' 'int (const char *, ...)'
+      |-ImplicitCastExpr 0x7fcb670de4e0 <col:11, col:28> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fcb670de4c8 <col:11, col:28> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fcb670de3e8 <col:11, col:28> 'char [10]' lvalue "size: %u\n"
+      `-ImplicitCastExpr 0x7fcb670de4f8 <col:34> 'const char *' <LValueToRValue>
+        `-DeclRefExpr 0x7fcb670de428 <col:34> 'const char *' lvalue ParmVar 0x7fcb670de250 'msg' 'const char *'

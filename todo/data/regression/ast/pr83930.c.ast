@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fcdad817ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcdae800000 <../Data/C2AST/pr83930.c:5:1, col:49> col:49 used v '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|-FunctionDecl 0x7fcdae800180 <line:7:1, line:11:1> line:8:1 used bar 'void (unsigned char)' static inline
+| |-ParmVarDecl 0x7fcdae8000b8 <col:6, col:20> col:20 used d 'unsigned char'
+| `-CompoundStmt 0x7fcdae8002f8 <line:9:1, line:11:1>
+|   `-CompoundAssignOperator 0x7fcdae8002c0 <line:10:3, col:8> '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '/=' ComputeLHSTy='__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|     |-DeclRefExpr 0x7fcdae800228 <col:3> '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fcdae800000 'v' '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+|     `-ImplicitCastExpr 0x7fcdae8002a8 <col:8> '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <VectorSplat>
+|       `-ImplicitCastExpr 0x7fcdae800290 <col:8> 'unsigned int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fcdae800278 <col:8> 'unsigned char' <LValueToRValue>
+|           `-DeclRefExpr 0x7fcdae800250 <col:8> 'unsigned char' lvalue ParmVar 0x7fcdae8000b8 'd' 'unsigned char'
+`-FunctionDecl 0x7fcdae8003d0 <line:13:1, line:17:1> line:14:1 foo 'void (void)'
+  |-CompoundStmt 0x7fcdae800588 <line:15:1, line:17:1>
+  | `-CallExpr 0x7fcdae800540 <line:16:3, col:9> 'void'
+  |   |-ImplicitCastExpr 0x7fcdae800528 <col:3> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7fcdae8004b8 <col:3> 'void (unsigned char)' Function 0x7fcdae800180 'bar' 'void (unsigned char)'
+  |   `-ImplicitCastExpr 0x7fcdae800570 <col:8> 'unsigned char' <IntegralCast>
+  |     `-IntegerLiteral 0x7fcdae8004e0 <col:8> 'int' 4
+  `-AlwaysInlineAttr 0x7fcdae800470 <line:13:17> always_inline

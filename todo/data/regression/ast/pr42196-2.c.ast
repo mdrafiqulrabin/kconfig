@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7f8711806ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8711807b60 <../Data/C2AST/pr42196-2.c:1:1, line:5:1> line:1:7 union U definition
+| |-FieldDecl 0x7f871001b658 <line:3:3, col:19> col:19 referenced ci '_Complex int'
+| `-FieldDecl 0x7f871001b6b0 <line:4:3, col:21> col:21 referenced cf '_Complex float'
+|-VarDecl 0x7f871001b710 <line:7:1, col:7> col:7 gd 'float'
+|-FunctionDecl 0x7f871001b908 <line:8:1, col:26> col:14 used bar 'float (union U)' extern
+| `-ParmVarDecl 0x7f871001b800 <col:19, col:25> col:26 'union U':'union U'
+`-FunctionDecl 0x7f871001bcb8 <line:10:1, line:28:1> line:10:7 foo 'float (int, double, double, int, int)'
+  |-ParmVarDecl 0x7f871001b9c8 <col:12, col:16> col:16 used b 'int'
+  |-ParmVarDecl 0x7f871001ba40 <col:19, col:26> col:26 used f1 'double'
+  |-ParmVarDecl 0x7f871001bab8 <col:30, col:37> col:37 used f2 'double'
+  |-ParmVarDecl 0x7f871001bb30 <col:41, col:45> col:45 used c1 'int'
+  |-ParmVarDecl 0x7f871001bba8 <col:49, col:53> col:53 used c2 'int'
+  `-CompoundStmt 0x7f871001c568 <line:11:1, line:28:1>
+    |-DeclStmt 0x7f871001be00 <line:12:3, col:12>
+    | `-VarDecl 0x7f871001bda0 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-DeclStmt 0x7f871001be90 <line:13:3, col:11>
+    | `-VarDecl 0x7f871001be30 <col:3, col:10> col:10 used r 'double'
+    |-IfStmt 0x7f871001c348 <line:15:3, line:24:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f871001bed0 <line:15:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f871001bea8 <col:7> 'int' lvalue ParmVar 0x7f871001b9c8 'b' 'int'
+    | |-CompoundStmt 0x7f871001c0e8 <line:16:5, line:19:5>
+    | | |-BinaryOperator 0x7f871001bfc0 <line:17:7, col:23> 'float' '='
+    | | | |-UnaryOperator 0x7f871001bf48 <col:7, col:18> 'float' lvalue prefix '__real'
+    | | | | `-MemberExpr 0x7f871001bf10 <col:16, col:18> '_Complex float' lvalue .cf 0x7f871001b6b0
+    | | | |   `-DeclRefExpr 0x7f871001bee8 <col:16> 'union U':'union U' lvalue Var 0x7f871001bda0 'u' 'union U':'union U'
+    | | | `-ImplicitCastExpr 0x7f871001bfa8 <col:23> 'float' <FloatingCast>
+    | | |   `-ImplicitCastExpr 0x7f871001bf90 <col:23> 'double' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f871001bf68 <col:23> 'double' lvalue ParmVar 0x7f871001ba40 'f1' 'double'
+    | | `-BinaryOperator 0x7f871001c0c0 <line:18:7, col:23> 'float' '='
+    | |   |-UnaryOperator 0x7f871001c048 <col:7, col:18> 'float' lvalue prefix '__imag'
+    | |   | `-MemberExpr 0x7f871001c010 <col:16, col:18> '_Complex float' lvalue .cf 0x7f871001b6b0
+    | |   |   `-DeclRefExpr 0x7f871001bfe8 <col:16> 'union U':'union U' lvalue Var 0x7f871001bda0 'u' 'union U':'union U'
+    | |   `-ImplicitCastExpr 0x7f871001c0a8 <col:23> 'float' <FloatingCast>
+    | |     `-ImplicitCastExpr 0x7f871001c090 <col:23> 'double' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f871001c068 <col:23> 'double' lvalue ParmVar 0x7f871001bab8 'f2' 'double'
+    | `-CompoundStmt 0x7f871001c328 <line:21:5, line:24:5>
+    |   |-BinaryOperator 0x7f871001c1c8 <line:22:7, col:23> 'int' '='
+    |   | |-UnaryOperator 0x7f871001c168 <col:7, col:18> 'int' lvalue prefix '__real'
+    |   | | `-MemberExpr 0x7f871001c130 <col:16, col:18> '_Complex int' lvalue .ci 0x7f871001b658
+    |   | |   `-DeclRefExpr 0x7f871001c108 <col:16> 'union U':'union U' lvalue Var 0x7f871001bda0 'u' 'union U':'union U'
+    |   | `-ImplicitCastExpr 0x7f871001c1b0 <col:23> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f871001c188 <col:23> 'int' lvalue ParmVar 0x7f871001bb30 'c1' 'int'
+    |   `-BinaryOperator 0x7f871001c300 <line:23:7, col:23> 'int' '='
+    |     |-UnaryOperator 0x7f871001c2a0 <col:7, col:18> 'int' lvalue prefix '__imag'
+    |     | `-MemberExpr 0x7f871001c268 <col:16, col:18> '_Complex int' lvalue .ci 0x7f871001b658
+    |     |   `-DeclRefExpr 0x7f871001c240 <col:16> 'union U':'union U' lvalue Var 0x7f871001bda0 'u' 'union U':'union U'
+    |     `-ImplicitCastExpr 0x7f871001c2e8 <col:23> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f871001c2c0 <col:23> 'int' lvalue ParmVar 0x7f871001bba8 'c2' 'int'
+    |-BinaryOperator 0x7f871001c4d0 <line:26:3, col:13> 'double' '='
+    | |-DeclRefExpr 0x7f871001c380 <col:3> 'double' lvalue Var 0x7f871001be30 'r' 'double'
+    | `-ImplicitCastExpr 0x7f871001c4b8 <col:7, col:13> 'double' <FloatingCast>
+    |   `-CallExpr 0x7f871001c470 <col:7, col:13> 'float'
+    |     |-ImplicitCastExpr 0x7f871001c458 <col:7> 'float (*)(union U)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f871001c3a8 <col:7> 'float (union U)' Function 0x7f871001b908 'bar' 'float (union U)'
+    |     `-ImplicitCastExpr 0x7f871001c4a0 <col:12> 'union U':'union U' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f871001c3d0 <col:12> 'union U':'union U' lvalue Var 0x7f871001bda0 'u' 'union U':'union U'
+    `-ReturnStmt 0x7f871001c550 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7f871001c538 <col:10> 'float' <FloatingCast>
+        `-ImplicitCastExpr 0x7f871001c520 <col:10> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7f871001c4f8 <col:10> 'double' lvalue Var 0x7f871001be30 'r' 'double'

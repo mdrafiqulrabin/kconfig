@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fbc2c017ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbc2c018978 <../Data/C2AST/pr78362.c:3:1, col:6> col:6 used a 'long'
+`-FunctionDecl 0x7fbc2c052100 <line:5:1, line:11:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fbc2c0522e0 <line:7:1, line:11:1>
+    `-ForStmt 0x7fbc2c0522a8 <line:8:3, line:10:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fbc2c0521c8 <line:8:11, col:12> 'long' postfix '--'
+      | `-DeclRefExpr 0x7fbc2c0521a0 <col:11> 'long' lvalue Var 0x7fbc2c018978 'a' 'long'
+      `-IfStmt 0x7fbc2c052270 <line:9:5, line:10:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-CStyleCastExpr 0x7fbc2c052240 <line:9:9, col:15> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7fbc2c052228 <col:15> 'long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fbc2c0521e8 <col:15> 'long' lvalue Var 0x7fbc2c018978 'a' 'long'
+        |-BreakStmt 0x7fbc2c052268 <line:10:7>
+        `-<<<NULL>>>

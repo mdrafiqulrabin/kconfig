@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7ffa240208e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffa24021560 <../Data/C2AST/pr71310.c:8:1, line:11:1> line:8:8 struct mmu_gather definition
+| |-FieldDecl 0x7ffa24814838 <line:9:9, col:14> col:14 referenced end 'long'
+| `-FieldDecl 0x7ffa248148b8 <line:10:9, col:22> col:13 referenced fullmm 'int'
+|   `-IntegerLiteral 0x7ffa24814880 <col:22> 'int' 1
+|-FunctionDecl 0x7ffa24814ab0 <line:13:1, line:17:1> line:13:6 used __tlb_reset_range 'void (struct mmu_gather *)'
+| |-ParmVarDecl 0x7ffa248149b0 <col:24, col:43> col:43 used p1 'struct mmu_gather *'
+| `-CompoundStmt 0x7ffa24814d38 <line:14:1, line:17:1>
+|   `-IfStmt 0x7ffa24814d00 <line:15:9, line:16:27>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7ffa24814c10 <line:15:13, col:17> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7ffa24814bd8 <col:13, col:17> 'int' lvalue bitfield ->fullmm 0x7ffa248148b8
+|     |   `-ImplicitCastExpr 0x7ffa24814bc0 <col:13> 'struct mmu_gather *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7ffa24814b98 <col:13> 'struct mmu_gather *' lvalue ParmVar 0x7ffa248149b0 'p1' 'struct mmu_gather *'
+|     |-BinaryOperator 0x7ffa24814cd8 <line:16:17, col:27> 'long' '='
+|     | |-MemberExpr 0x7ffa24814c68 <col:17, col:21> 'long' lvalue ->end 0x7ffa24814838
+|     | | `-ImplicitCastExpr 0x7ffa24814c50 <col:17> 'struct mmu_gather *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7ffa24814c28 <col:17> 'struct mmu_gather *' lvalue ParmVar 0x7ffa248149b0 'p1' 'struct mmu_gather *'
+|     | `-ImplicitCastExpr 0x7ffa24814cc0 <col:27> 'long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7ffa24814ca0 <col:27> 'int' 0
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ffa24814e00 <line:19:1, line:23:1> line:19:6 tlb_gather_mmu 'void (struct mmu_gather *)'
+  |-ParmVarDecl 0x7ffa24814d78 <col:21, col:40> col:40 used p1 'struct mmu_gather *'
+  `-CompoundStmt 0x7ffa24815078 <line:20:1, line:23:1>
+    |-BinaryOperator 0x7ffa24814f40 <line:21:9, col:22> 'int' '='
+    | |-MemberExpr 0x7ffa24814ee8 <col:9, col:13> 'int' lvalue bitfield ->fullmm 0x7ffa248148b8
+    | | `-ImplicitCastExpr 0x7ffa24814ed0 <col:9> 'struct mmu_gather *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa24814ea8 <col:9> 'struct mmu_gather *' lvalue ParmVar 0x7ffa24814d78 'p1' 'struct mmu_gather *'
+    | `-IntegerLiteral 0x7ffa24814f20 <col:22> 'int' 1
+    `-CallExpr 0x7ffa24815030 <line:22:9, col:29> 'void'
+      |-ImplicitCastExpr 0x7ffa24815018 <col:9> 'void (*)(struct mmu_gather *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffa24814f68 <col:9> 'void (struct mmu_gather *)' Function 0x7ffa24814ab0 '__tlb_reset_range' 'void (struct mmu_gather *)'
+      `-ImplicitCastExpr 0x7ffa24815060 <col:27> 'struct mmu_gather *' <LValueToRValue>
+        `-DeclRefExpr 0x7ffa24814f90 <col:27> 'struct mmu_gather *' lvalue ParmVar 0x7ffa24814d78 'p1' 'struct mmu_gather *'

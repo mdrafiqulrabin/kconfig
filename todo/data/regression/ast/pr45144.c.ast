@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7fbbe28174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbbe2029260 <../Data/C2AST/pr45144.c:5:1, col:19> col:6 used baz 'void (unsigned int)'
+| `-ParmVarDecl 0x7fbbe2818178 <col:11> col:19 'unsigned int'
+|-VarDecl 0x7fbbe20293a0 <line:7:1, col:21> col:17 buf 'unsigned int []' extern
+|-RecordDecl 0x7fbbe2029400 <line:9:1, line:14:1> line:9:8 struct A definition
+| |-FieldDecl 0x7fbbe20294e8 <line:11:3, col:15> col:12 referenced a1 'unsigned int'
+| | `-IntegerLiteral 0x7fbbe20294b0 <col:15> 'int' 10
+| |-FieldDecl 0x7fbbe2029568 <line:12:3, col:15> col:12 referenced a2 'unsigned int'
+| | `-IntegerLiteral 0x7fbbe2029530 <col:15> 'int' 3
+| `-FieldDecl 0x7fbbe20295e8 <line:13:3, col:12> col:3 'unsigned int'
+|   `-IntegerLiteral 0x7fbbe20295b0 <col:12> 'int' 19
+|-RecordDecl 0x7fbbe2029630 <line:16:1, line:20:1> line:16:7 union TMP definition
+| |-FieldDecl 0x7fbbe2029730 <line:18:3, col:12> col:12 referenced a 'struct A':'struct A'
+| `-FieldDecl 0x7fbbe2029790 <line:19:3, col:16> col:16 referenced b 'unsigned int'
+|-FunctionDecl 0x7fbbe20299b8 <line:22:1, line:31:1> line:23:1 used foo 'unsigned int (struct A *)' static
+| |-ParmVarDecl 0x7fbbe20298b0 <col:6, col:16> col:16 used p 'struct A *'
+| `-CompoundStmt 0x7fbbe2029de0 <line:24:1, line:31:1>
+|   |-DeclStmt 0x7fbbe2029b10 <line:25:3, col:14>
+|   | `-VarDecl 0x7fbbe2029ab0 <col:3, col:13> col:13 used t 'union TMP':'union TMP'
+|   |-DeclStmt 0x7fbbe2029ba8 <line:26:3, col:13>
+|   | `-VarDecl 0x7fbbe2029b48 <col:3, col:12> col:12 used x 'struct A':'struct A'
+|   |-BinaryOperator 0x7fbbe2029c60 <line:28:3, col:8> 'struct A':'struct A' '='
+|   | |-DeclRefExpr 0x7fbbe2029bc0 <col:3> 'struct A':'struct A' lvalue Var 0x7fbbe2029b48 'x' 'struct A':'struct A'
+|   | `-ImplicitCastExpr 0x7fbbe2029c48 <col:7, col:8> 'struct A':'struct A' <LValueToRValue>
+|   |   `-UnaryOperator 0x7fbbe2029c28 <col:7, col:8> 'struct A':'struct A' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7fbbe2029c10 <col:8> 'struct A *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fbbe2029be8 <col:8> 'struct A *' lvalue ParmVar 0x7fbbe20298b0 'p' 'struct A *'
+|   |-BinaryOperator 0x7fbbe2029d28 <line:29:3, col:9> 'struct A':'struct A' '='
+|   | |-MemberExpr 0x7fbbe2029cb0 <col:3, col:5> 'struct A':'struct A' lvalue .a 0x7fbbe2029730
+|   | | `-DeclRefExpr 0x7fbbe2029c88 <col:3> 'union TMP':'union TMP' lvalue Var 0x7fbbe2029ab0 't' 'union TMP':'union TMP'
+|   | `-ImplicitCastExpr 0x7fbbe2029d10 <col:9> 'struct A':'struct A' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fbbe2029ce8 <col:9> 'struct A':'struct A' lvalue Var 0x7fbbe2029b48 'x' 'struct A':'struct A'
+|   `-ReturnStmt 0x7fbbe2029dc8 <line:30:3, col:12>
+|     `-ImplicitCastExpr 0x7fbbe2029db0 <col:10, col:12> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fbbe2029d78 <col:10, col:12> 'unsigned int' lvalue .b 0x7fbbe2029790
+|         `-DeclRefExpr 0x7fbbe2029d50 <col:10> 'union TMP':'union TMP' lvalue Var 0x7fbbe2029ab0 't' 'union TMP':'union TMP'
+`-FunctionDecl 0x7fbbe2029fa0 <line:33:1, line:44:1> line:34:1 bar 'void (unsigned int, unsigned int *)'
+  |-ParmVarDecl 0x7fbbe2029e30 <col:6, col:15> col:15 used orig 'unsigned int'
+  |-ParmVarDecl 0x7fbbe2029ed0 <col:21, col:31> col:31 used new 'unsigned int *'
+  `-CompoundStmt 0x7fbbe202a6d8 <line:35:1, line:44:1>
+    |-DeclStmt 0x7fbbe202a0d0 <line:36:3, col:13>
+    | `-VarDecl 0x7fbbe202a070 <col:3, col:12> col:12 used a 'struct A':'struct A'
+    |-DeclStmt 0x7fbbe202a168 <line:37:3, col:14>
+    | `-VarDecl 0x7fbbe202a108 <col:3, col:13> col:13 used s 'union TMP':'union TMP'
+    |-BinaryOperator 0x7fbbe202a240 <line:39:3, col:9> 'unsigned int' '='
+    | |-MemberExpr 0x7fbbe202a1a8 <col:3, col:5> 'unsigned int' lvalue .b 0x7fbbe2029790
+    | | `-DeclRefExpr 0x7fbbe202a180 <col:3> 'union TMP':'union TMP' lvalue Var 0x7fbbe202a108 's' 'union TMP':'union TMP'
+    | `-ImplicitCastExpr 0x7fbbe202a228 <col:9> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbbe202a200 <col:9> 'unsigned int' lvalue ParmVar 0x7fbbe2029e30 'orig' 'unsigned int'
+    |-BinaryOperator 0x7fbbe202a358 <line:40:3, col:9> 'struct A':'struct A' '='
+    | |-DeclRefExpr 0x7fbbe202a2b8 <col:3> 'struct A':'struct A' lvalue Var 0x7fbbe202a070 'a' 'struct A':'struct A'
+    | `-ImplicitCastExpr 0x7fbbe202a340 <col:7, col:9> 'struct A':'struct A' <LValueToRValue>
+    |   `-MemberExpr 0x7fbbe202a308 <col:7, col:9> 'struct A':'struct A' lvalue .a 0x7fbbe2029730
+    |     `-DeclRefExpr 0x7fbbe202a2e0 <col:7> 'union TMP':'union TMP' lvalue Var 0x7fbbe202a108 's' 'union TMP':'union TMP'
+    |-IfStmt 0x7fbbe202a508 <line:41:3, line:42:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fbbe202a3e0 <line:41:7, col:9> 'unsigned int' <LValueToRValue>
+    | | `-MemberExpr 0x7fbbe202a3a8 <col:7, col:9> 'unsigned int' lvalue bitfield .a1 0x7fbbe20294e8
+    | |   `-DeclRefExpr 0x7fbbe202a380 <col:7> 'struct A':'struct A' lvalue Var 0x7fbbe202a070 'a' 'struct A':'struct A'
+    | |-CallExpr 0x7fbbe202a4c0 <line:42:5, col:14> 'void'
+    | | |-ImplicitCastExpr 0x7fbbe202a4a8 <col:5> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbbe202a3f8 <col:5> 'void (unsigned int)' Function 0x7fbbe2029260 'baz' 'void (unsigned int)'
+    | | `-ImplicitCastExpr 0x7fbbe202a4f0 <col:10, col:12> 'unsigned int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fbbe202a448 <col:10, col:12> 'unsigned int' lvalue bitfield .a2 0x7fbbe2029568
+    | |     `-DeclRefExpr 0x7fbbe202a420 <col:10> 'struct A':'struct A' lvalue Var 0x7fbbe202a070 'a' 'struct A':'struct A'
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7fbbe202a6b0 <line:43:3, col:17> 'unsigned int' '='
+      |-UnaryOperator 0x7fbbe202a580 <col:3, col:4> 'unsigned int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fbbe202a568 <col:4> 'unsigned int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbbe202a540 <col:4> 'unsigned int *' lvalue ParmVar 0x7fbbe2029ed0 'new' 'unsigned int *'
+      `-CallExpr 0x7fbbe202a680 <col:10, col:17> 'unsigned int'
+        |-ImplicitCastExpr 0x7fbbe202a668 <col:10> 'unsigned int (*)(struct A *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fbbe202a5a0 <col:10> 'unsigned int (struct A *)' Function 0x7fbbe20299b8 'foo' 'unsigned int (struct A *)'
+        `-UnaryOperator 0x7fbbe202a5f0 <col:15, col:16> 'struct A *' prefix '&'
+          `-DeclRefExpr 0x7fbbe202a5c8 <col:16> 'struct A':'struct A' lvalue Var 0x7fbbe202a070 'a' 'struct A':'struct A'

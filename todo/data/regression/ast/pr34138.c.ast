@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fbab9022ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbab9814260 <../Data/C2AST/pr34138.c:1:1, col:30> col:13 used free 'void (void *)' extern
+| `-ParmVarDecl 0x7fbab9023b78 <col:19, col:25> col:25 __ptr 'void *'
+|-RecordDecl 0x7fbab9814348 <line:2:1, line:6:1> line:2:8 struct shparam definition
+| |-FieldDecl 0x7fbab9814430 <line:4:3, col:10> col:10 referenced p 'char **'
+| `-FieldDecl 0x7fbab9814490 <line:5:3, col:7> col:7 foo 'int'
+|-VarDecl 0x7fbab9814530 <line:7:1, col:23> col:23 used shellparam 'struct shparam':'struct shparam' static
+|-FunctionDecl 0x7fbab98147a0 <line:8:1, line:12:1> line:8:13 used freeparam 'void (volatile struct shparam *, char **)' inline
+| |-ParmVarDecl 0x7fbab9814610 <col:24, col:49> col:49 used param 'volatile struct shparam *'
+| |-ParmVarDecl 0x7fbab9814688 <col:56, col:63> col:63 used ap 'char **'
+| `-CompoundStmt 0x7fbab9814b80 <line:9:1, line:12:1>
+|   |-CallExpr 0x7fbab98149c0 <line:10:3, col:23> 'void'
+|   | |-ImplicitCastExpr 0x7fbab98149a8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fbab9814850 <col:3> 'void (void *)' Function 0x7fbab9814260 'free' 'void (void *)'
+|   | `-CStyleCastExpr 0x7fbab9814958 <col:9, col:22> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fbab9814940 <col:18, col:22> 'char *' <LValueToRValue>
+|   |     `-ParenExpr 0x7fbab9814920 <col:18, col:22> 'char *' lvalue
+|   |       `-UnaryOperator 0x7fbab98148b8 <col:19, col:20> 'char *' lvalue prefix '*'
+|   |         `-ImplicitCastExpr 0x7fbab98148a0 <col:20> 'char **' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fbab9814878 <col:20> 'char **' lvalue ParmVar 0x7fbab9814688 'ap' 'char **'
+|   `-CallExpr 0x7fbab9814b50 <line:11:3, col:28> 'void'
+|     |-ImplicitCastExpr 0x7fbab9814b38 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbab98149f0 <col:3> 'void (void *)' Function 0x7fbab9814260 'free' 'void (void *)'
+|     `-CStyleCastExpr 0x7fbab9814b10 <col:9, col:27> 'void *' <BitCast>
+|       `-ImplicitCastExpr 0x7fbab9814af8 <col:18, col:27> 'char **' <LValueToRValue>
+|         `-ParenExpr 0x7fbab9814ad8 <col:18, col:27> 'char **volatile' lvalue
+|           `-MemberExpr 0x7fbab9814a58 <col:19, col:26> 'char **volatile' lvalue ->p 0x7fbab9814430
+|             `-ImplicitCastExpr 0x7fbab9814a40 <col:19> 'volatile struct shparam *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fbab9814a18 <col:19> 'volatile struct shparam *' lvalue ParmVar 0x7fbab9814610 'param' 'volatile struct shparam *'
+|-FunctionDecl 0x7fbab9814c80 <line:13:1, line:16:1> line:13:6 used dotcmd 'void (char **)'
+| |-ParmVarDecl 0x7fbab9814bb8 <col:14, col:21> col:21 used p 'char **'
+| `-CompoundStmt 0x7fbab9814ef8 <line:14:1, line:16:1>
+|   `-CallExpr 0x7fbab9814e90 <line:15:3, col:28> 'void'
+|     |-ImplicitCastExpr 0x7fbab9814e78 <col:3> 'void (*)(volatile struct shparam *, char **)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbab9814d28 <col:3> 'void (volatile struct shparam *, char **)' Function 0x7fbab98147a0 'freeparam' 'void (volatile struct shparam *, char **)'
+|     |-ImplicitCastExpr 0x7fbab9814ec8 <col:14, col:15> 'volatile struct shparam *' <BitCast>
+|     | `-UnaryOperator 0x7fbab9814dd8 <col:14, col:15> 'struct shparam *' prefix '&'
+|     |   `-DeclRefExpr 0x7fbab9814d50 <col:15> 'struct shparam':'struct shparam' lvalue Var 0x7fbab9814530 'shellparam' 'struct shparam':'struct shparam'
+|     `-ImplicitCastExpr 0x7fbab9814ee0 <col:27> 'char **' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbab9814df8 <col:27> 'char **' lvalue ParmVar 0x7fbab9814bb8 'p' 'char **'
+`-FunctionDecl 0x7fbab9814fd0 <line:17:1, line:21:1> line:17:6 evaltree 'void (void)'
+  `-CompoundStmt 0x7fbab982bd08 <line:18:1, line:21:1>
+    |-DeclStmt 0x7fbab982bc60 <line:19:3, col:27>
+    | `-VarDecl 0x7fbab982bc00 <col:3, col:26> col:10 used evalfn 'void (*)(char **)'
+    `-BinaryOperator 0x7fbab982bce0 <line:20:3, col:12> 'void (*)(char **)' '='
+      |-DeclRefExpr 0x7fbab982bc78 <col:3> 'void (*)(char **)' lvalue Var 0x7fbab982bc00 'evalfn' 'void (*)(char **)'
+      `-ImplicitCastExpr 0x7fbab982bcc8 <col:12> 'void (*)(char **)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fbab982bca0 <col:12> 'void (char **)' Function 0x7fbab9814c80 'dotcmd' 'void (char **)'

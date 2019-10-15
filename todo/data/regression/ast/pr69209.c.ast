@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7f995d8288e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f995d829578 <../Data/C2AST/pr69209.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f995e017658 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7f995e017700 <col:1, col:12> col:12 used d 'int *'
+|-VarDecl 0x7f995e017778 <col:1, col:15> col:15 used e 'int'
+|-FunctionDecl 0x7f995e0178f0 <line:5:1, col:46> col:6 used foo 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7f995e017a58 <line:7:1, line:22:1> line:8:1 used bar 'int (void)'
+| `-CompoundStmt 0x7f995e018038 <line:9:1, line:22:1>
+|   |-DeclStmt 0x7f995e017b70 <line:10:3, col:8>
+|   | `-VarDecl 0x7f995e017b10 <col:3, col:7> col:7 used f 'int'
+|   |-IfStmt 0x7f995e017d58 <line:11:3, line:16:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f995e017bb0 <line:11:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f995e017b88 <col:7> 'int' lvalue Var 0x7f995d829578 'a' 'int'
+|   | |-CompoundStmt 0x7f995e017d38 <line:12:5, line:16:5>
+|   | | |-IfStmt 0x7f995e017c98 <line:13:7, line:14:7>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-ImplicitCastExpr 0x7f995e017bf0 <line:13:11> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7f995e017bc8 <col:11> 'int' lvalue Var 0x7f995e017778 'e' 'int'
+|   | | | |-CallExpr 0x7f995e017c70 <line:14:2, col:7> 'void'
+|   | | | | `-ImplicitCastExpr 0x7f995e017c58 <col:2> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | | | |   `-DeclRefExpr 0x7f995e017c08 <col:2> 'void (void) __attribute__((noreturn))' Function 0x7f995e0178f0 'foo' 'void (void) __attribute__((noreturn))'
+|   | | | `-<<<NULL>>>
+|   | | `-CallExpr 0x7f995e017d10 <line:15:7, col:12> 'void'
+|   | |   `-ImplicitCastExpr 0x7f995e017cf8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7f995e017cd0 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f995e0178f0 'foo' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f995e017ea8 <line:17:3, line:18:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f995e017e18 <line:17:7, col:13> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f995e017e00 <col:7> 'int *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f995e017d90 <col:7> 'int *' lvalue Var 0x7f995e017700 'd' 'int *'
+|   | | `-UnaryOperator 0x7f995e017de0 <col:12, col:13> 'int *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f995e017db8 <col:13> 'int' lvalue Var 0x7f995e017b10 'f' 'int'
+|   | |-CallExpr 0x7f995e017e80 <line:18:5, col:10> 'void'
+|   | | `-ImplicitCastExpr 0x7f995e017e68 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f995e017e40 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f995e0178f0 'foo' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f995e017fa8 <line:19:3, line:20:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f995e017f20 <line:19:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f995e017f08 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f995e017ee0 <col:8> 'int' lvalue Var 0x7f995e017658 'c' 'int'
+|   | |-CallExpr 0x7f995e017f80 <line:20:5, col:10> 'void'
+|   | | `-ImplicitCastExpr 0x7f995e017f68 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f995e017f40 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f995e0178f0 'foo' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f995e018020 <line:21:3, col:10>
+|     `-ImplicitCastExpr 0x7f995e018008 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f995e017fe0 <col:10> 'int' lvalue Var 0x7f995e017b10 'f' 'int'
+`-FunctionDecl 0x7f995e0180b8 <line:24:1, line:28:1> line:25:1 baz 'void ()'
+  `-CompoundStmt 0x7f995e0181e8 <line:26:1, line:28:1>
+    `-CallExpr 0x7f995e0181c0 <line:27:3, col:8> 'int'
+      `-ImplicitCastExpr 0x7f995e0181a8 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f995e018158 <col:3> 'int (void)' Function 0x7f995e017a58 'bar' 'int (void)'

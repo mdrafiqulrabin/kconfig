@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fade682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fade682c960 <../Data/C2AST/pr40797.c:1:9, col:33> col:16 struct str definition
+| |-FieldDecl 0x7fade7014238 <col:22, col:28> col:28 referenced x 'short'
+| `-FieldDecl 0x7fade7014298 <col:22, col:31> col:31 referenced y 'short'
+|-TypedefDecl 0x7fade7014330 <col:1, col:35> col:35 referenced S 'struct str':'struct str'
+| `-ElaboratedType 0x7fade70142e0 'struct str' sugar
+|   `-RecordType 0x7fade7014200 'struct str'
+|     `-Record 0x7fade682c960 'str'
+|-FunctionDecl 0x7fade70146a8 <line:3:1, line:7:1> line:4:1 used bar 'short (short, short, short, short, short)' static
+| |-ParmVarDecl 0x7fade70143b8 <col:6, col:12> col:12 ch 'short'
+| |-ParmVarDecl 0x7fade7014430 <col:16, col:22> col:22 sl 'short'
+| |-ParmVarDecl 0x7fade70144a8 <col:26, col:32> col:32 sr 'short'
+| |-ParmVarDecl 0x7fade7014520 <col:36, col:42> col:42 tl 'short'
+| |-ParmVarDecl 0x7fade7014598 <col:46, col:52> col:52 tr 'short'
+| `-CompoundStmt 0x7fade7014800 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fade70147e8 <line:6:3, col:10>
+|     `-ImplicitCastExpr 0x7fade70147d0 <col:10> 'short' <IntegralCast>
+|       `-IntegerLiteral 0x7fade70147b0 <col:10> 'int' 0
+`-FunctionDecl 0x7fade7014b40 <line:9:1, line:16:1> line:10:1 foo 'void (short, S *, short, S *)'
+  |-ParmVarDecl 0x7fade7014830 <col:6, col:12> col:12 used ch 'short'
+  |-ParmVarDecl 0x7fade7014918 <col:16, col:19> col:19 used pi 'S *'
+  |-ParmVarDecl 0x7fade7014990 <col:23, col:29> col:29 nc 'short'
+  |-ParmVarDecl 0x7fade7014a00 <col:33, col:36> col:36 used po 'S *'
+  `-CompoundStmt 0x7fade7015620 <line:11:1, line:16:1>
+    |-DeclStmt 0x7fade7014e08 <line:12:3, col:25>
+    | |-VarDecl 0x7fade7014c18 <col:3, col:9> col:9 used clo 'short'
+    | |-VarDecl 0x7fade7014c90 <col:3, col:14> col:14 used chi 'short'
+    | |-VarDecl 0x7fade7014d08 <col:3, col:19> col:19 used lo 'short'
+    | `-VarDecl 0x7fade7014d80 <col:3, col:23> col:23 used hi 'short'
+    |-BinaryOperator 0x7fade7015218 <line:14:3, col:48> 'short' '='
+    | |-MemberExpr 0x7fade7014e60 <col:3, col:7> 'short' lvalue ->x 0x7fade7014238
+    | | `-ImplicitCastExpr 0x7fade7014e48 <col:3> 'S *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fade7014e20 <col:3> 'S *' lvalue ParmVar 0x7fade7014a00 'po' 'S *'
+    | `-CallExpr 0x7fade7015140 <col:11, col:48> 'short'
+    |   |-ImplicitCastExpr 0x7fade7015128 <col:11> 'short (*)(short, short, short, short, short)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fade7014e98 <col:11> 'short (short, short, short, short, short)' Function 0x7fade70146a8 'bar' 'short (short, short, short, short, short)'
+    |   |-ImplicitCastExpr 0x7fade7015190 <col:16> 'short' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fade7014ec0 <col:16> 'short' lvalue ParmVar 0x7fade7014830 'ch' 'short'
+    |   |-ImplicitCastExpr 0x7fade70151a8 <col:20> 'short' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fade7014ee8 <col:20> 'short' lvalue Var 0x7fade7014c18 'clo' 'short'
+    |   |-ImplicitCastExpr 0x7fade70151c0 <col:25> 'short' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fade7014f10 <col:25> 'short' lvalue Var 0x7fade7014c90 'chi' 'short'
+    |   |-ImplicitCastExpr 0x7fade70151d8 <col:30, col:37> 'short' <LValueToRValue>
+    |   | `-MemberExpr 0x7fade7014fe0 <col:30, col:37> 'short' lvalue .x 0x7fade7014238
+    |   |   `-ArraySubscriptExpr 0x7fade7014fb8 <col:30, col:35> 'S':'struct str' lvalue
+    |   |     |-ImplicitCastExpr 0x7fade7014f88 <col:30> 'S *' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fade7014f38 <col:30> 'S *' lvalue ParmVar 0x7fade7014918 'pi' 'S *'
+    |   |     `-ImplicitCastExpr 0x7fade7014fa0 <col:33> 'short' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fade7014f60 <col:33> 'short' lvalue Var 0x7fade7014d08 'lo' 'short'
+    |   `-ImplicitCastExpr 0x7fade7015200 <col:40, col:47> 'short' <LValueToRValue>
+    |     `-MemberExpr 0x7fade70150c0 <col:40, col:47> 'short' lvalue .x 0x7fade7014238
+    |       `-ArraySubscriptExpr 0x7fade7015098 <col:40, col:45> 'S':'struct str' lvalue
+    |         |-ImplicitCastExpr 0x7fade7015068 <col:40> 'S *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7fade7015018 <col:40> 'S *' lvalue ParmVar 0x7fade7014918 'pi' 'S *'
+    |         `-ImplicitCastExpr 0x7fade7015080 <col:43> 'short' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fade7015040 <col:43> 'short' lvalue Var 0x7fade7014d80 'hi' 'short'
+    `-BinaryOperator 0x7fade70155f8 <line:15:3, col:48> 'short' '='
+      |-MemberExpr 0x7fade7015280 <col:3, col:7> 'short' lvalue ->y 0x7fade7014298
+      | `-ImplicitCastExpr 0x7fade7015268 <col:3> 'S *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fade7015240 <col:3> 'S *' lvalue ParmVar 0x7fade7014a00 'po' 'S *'
+      `-CallExpr 0x7fade7015530 <col:11, col:48> 'short'
+        |-ImplicitCastExpr 0x7fade7015518 <col:11> 'short (*)(short, short, short, short, short)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fade70152b8 <col:11> 'short (short, short, short, short, short)' Function 0x7fade70146a8 'bar' 'short (short, short, short, short, short)'
+        |-ImplicitCastExpr 0x7fade7015580 <col:16> 'short' <LValueToRValue>
+        | `-DeclRefExpr 0x7fade70152e0 <col:16> 'short' lvalue ParmVar 0x7fade7014830 'ch' 'short'
+        |-ImplicitCastExpr 0x7fade7015598 <col:20> 'short' <LValueToRValue>
+        | `-DeclRefExpr 0x7fade7015308 <col:20> 'short' lvalue Var 0x7fade7014c18 'clo' 'short'
+        |-ImplicitCastExpr 0x7fade70155b0 <col:25> 'short' <LValueToRValue>
+        | `-DeclRefExpr 0x7fade7015330 <col:25> 'short' lvalue Var 0x7fade7014c90 'chi' 'short'
+        |-ImplicitCastExpr 0x7fade70155c8 <col:30, col:37> 'short' <LValueToRValue>
+        | `-MemberExpr 0x7fade7015400 <col:30, col:37> 'short' lvalue .y 0x7fade7014298
+        |   `-ArraySubscriptExpr 0x7fade70153d8 <col:30, col:35> 'S':'struct str' lvalue
+        |     |-ImplicitCastExpr 0x7fade70153a8 <col:30> 'S *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fade7015358 <col:30> 'S *' lvalue ParmVar 0x7fade7014918 'pi' 'S *'
+        |     `-ImplicitCastExpr 0x7fade70153c0 <col:33> 'short' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fade7015380 <col:33> 'short' lvalue Var 0x7fade7014d08 'lo' 'short'
+        `-ImplicitCastExpr 0x7fade70155e0 <col:40, col:47> 'short' <LValueToRValue>
+          `-MemberExpr 0x7fade70154e0 <col:40, col:47> 'short' lvalue .y 0x7fade7014298
+            `-ArraySubscriptExpr 0x7fade70154b8 <col:40, col:45> 'S':'struct str' lvalue
+              |-ImplicitCastExpr 0x7fade7015488 <col:40> 'S *' <LValueToRValue>
+              | `-DeclRefExpr 0x7fade7015438 <col:40> 'S *' lvalue ParmVar 0x7fade7014918 'pi' 'S *'
+              `-ImplicitCastExpr 0x7fade70154a0 <col:43> 'short' <LValueToRValue>
+                `-DeclRefExpr 0x7fade7015460 <col:43> 'short' lvalue Var 0x7fade7014d80 'hi' 'short'

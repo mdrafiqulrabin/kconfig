@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7faa40018ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7faa40019960 <../Data/C2AST/pr57358.c:4:1, col:33> col:8 struct t definition
+| `-FieldDecl 0x7faa3f815fa0 <col:12, col:30> col:19 referenced func 'void (*)(void *)'
+|-FunctionDecl 0x7faa3f816210 <line:5:1, col:59> col:6 test_func 'void (struct t *)'
+| `-ParmVarDecl 0x7faa3f8160a0 <col:16, col:26> col:26 a 'struct t *'
+`-FunctionDecl 0x7faa3f8163a8 prev 0x7faa3f816210 <line:6:1, line:9:1> line:6:6 test_func 'void (struct t *)'
+  |-ParmVarDecl 0x7faa3f816320 <col:16, col:26> col:26 used a 'struct t *'
+  `-CompoundStmt 0x7faa3f816548 <line:7:1, line:9:1>
+    `-CallExpr 0x7faa3f816500 <line:8:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7faa3f8164e8 <col:3, col:6> 'void (*)(void *)' <LValueToRValue>
+      | `-MemberExpr 0x7faa3f816490 <col:3, col:6> 'void (*)(void *)' lvalue ->func 0x7faa3f815fa0
+      |   `-ImplicitCastExpr 0x7faa3f816478 <col:3> 'struct t *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7faa3f816450 <col:3> 'struct t *' lvalue ParmVar 0x7faa3f816320 'a' 'struct t *'
+      `-ImplicitCastExpr 0x7faa3f816530 <col:11> 'void *' <NullToPointer>
+        `-IntegerLiteral 0x7faa3f8164c8 <col:11> 'int' 0

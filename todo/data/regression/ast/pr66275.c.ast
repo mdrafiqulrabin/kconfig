@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fabaa817ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fabab01c600 <../Data/C2AST/pr66275.c:4:1, line:6:9> col:1 foo 'void () __attribute__((sysv_abi))':'void ()'
+| `-CompoundStmt 0x7fabab01c6e0 <col:8, col:9>
+`-EmptyDecl 0x7fabab01c6f0 <col:10> col:10

@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f882682b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f882601d310 <../Data/C2AST/pr68661-1a.c:5:1, line:6:46> line:5:13 used bar0 'void (int, int, int, int, int, int, int, int, int) __attribute__((no_caller_saved_registers))' extern
+| |-ParmVarDecl 0x7f882682bf78 <col:19> col:22 'int'
+| |-ParmVarDecl 0x7f882601ce00 <col:24> col:27 'int'
+| |-ParmVarDecl 0x7f882601ce78 <col:29> col:32 'int'
+| |-ParmVarDecl 0x7f882601cef0 <col:34> col:37 'int'
+| |-ParmVarDecl 0x7f882601cf68 <col:39> col:42 'int'
+| |-ParmVarDecl 0x7f882601cfe0 <col:44> col:47 'int'
+| |-ParmVarDecl 0x7f882601d058 <col:49> col:52 'int'
+| |-ParmVarDecl 0x7f882601d0d0 <col:54> col:57 'int'
+| |-ParmVarDecl 0x7f882601d148 <col:59> col:62 'int'
+| `-AnyX86NoCallerSavedRegistersAttr 0x7f882601d3f8 <line:6:20>
+|-FunctionDecl 0x7f882601d540 <line:8:1, line:12:1> line:9:1 foo 'void (void)'
+| `-CompoundStmt 0x7f882601d7e0 <line:10:1, line:12:1>
+|   `-CallExpr 0x7f882601d770 <line:11:3, col:34> 'void'
+|     |-ImplicitCastExpr 0x7f882601d758 <col:3> 'void (*)(int, int, int, int, int, int, int, int, int) __attribute__((no_caller_saved_registers))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f882601d5e0 <col:3> 'void (int, int, int, int, int, int, int, int, int) __attribute__((no_caller_saved_registers))' Function 0x7f882601d310 'bar0' 'void (int, int, int, int, int, int, int, int, int) __attribute__((no_caller_saved_registers))'
+|     |-IntegerLiteral 0x7f882601d608 <col:9> 'int' 0
+|     |-IntegerLiteral 0x7f882601d628 <col:12> 'int' 1
+|     |-IntegerLiteral 0x7f882601d648 <col:15> 'int' 2
+|     |-IntegerLiteral 0x7f882601d668 <col:18> 'int' 3
+|     |-IntegerLiteral 0x7f882601d688 <col:21> 'int' 4
+|     |-IntegerLiteral 0x7f882601d6a8 <col:24> 'int' 5
+|     |-IntegerLiteral 0x7f882601d6c8 <col:27> 'int' 6
+|     |-IntegerLiteral 0x7f882601d6e8 <col:30> 'int' 7
+|     `-IntegerLiteral 0x7f882601d708 <col:33> 'int' 8
+|-FunctionDecl 0x7f882601d888 <line:14:1, line:18:1> line:15:1 bad 'void (void)'
+| `-CompoundStmt 0x7f882601dad8 <line:16:1, line:18:1>
+|   `-CallExpr 0x7f882601dab0 <line:17:3, col:20> 'void'
+|     `-ImplicitCastExpr 0x7f882601da98 <col:3> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7f882601da48 <col:3> '<builtin fn type>' Function 0x7f882601d960 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7f882601d960 <col:3> col:3 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f882601da00 <col:3> Implicit

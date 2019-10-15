@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fcb8e0294e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcb8e06b060 <../Data/C2AST/pr21032.c:4:1, col:17> col:6 used bar 'void (float)'
+| `-ParmVarDecl 0x7fcb8e02a178 <col:10, col:16> col:16 x 'float'
+`-FunctionDecl 0x7fcb8e06b220 <line:5:1, line:8:1> line:5:6 foo 'void (double)'
+  |-ParmVarDecl 0x7fcb8e06b160 <col:10, col:17> col:17 used x 'double'
+  `-CompoundStmt 0x7fcb8e06b3d8 <line:6:1, line:8:1>
+    `-CallExpr 0x7fcb8e06b390 <line:7:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fcb8e06b378 <col:3> 'void (*)(float)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcb8e06b2c8 <col:3> 'void (float)' Function 0x7fcb8e06b060 'bar' 'void (float)'
+      `-ImplicitCastExpr 0x7fcb8e06b3c0 <col:7, col:8> 'float' <FloatingCast>
+        `-UnaryOperator 0x7fcb8e06b330 <col:7, col:8> 'double' prefix '-'
+          `-ImplicitCastExpr 0x7fcb8e06b318 <col:8> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fcb8e06b2f0 <col:8> 'double' lvalue ParmVar 0x7fcb8e06b160 'x' 'double'

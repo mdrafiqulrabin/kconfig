@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7fd23502bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd23502c978 <../Data/C2AST/pr65862-1.c:4:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fd235814258 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fd235814310 <line:5:1, col:6> col:6 used b 'int *'
+|-VarDecl 0x7fd235814388 <col:1, col:10> col:10 used d 'int *'
+`-FunctionDecl 0x7fd235814a40 <line:6:1, line:16:1> line:7:1 fn1 'void (int, int *(*)(void *, void *), void *(*)(void *, void *, int))'
+  |-ParmVarDecl 0x7fd235814418 <col:5, col:9> col:9 used p1 'int'
+  |-ParmVarDecl 0x7fd235814650 <col:13, col:35> col:18 used p2 'int *(*)(void *, void *)':'int *(*)(void *, void *)'
+  |-ParmVarDecl 0x7fd235814910 <col:38, col:66> col:44 used p3 'void *(*)(void *, void *, int)':'void *(*)(void *, void *, int)'
+  `-CompoundStmt 0x7fd235021658 <col:69, line:16:1>
+    |-DeclStmt 0x7fd235814bb0 <line:8:3, col:12>
+    | `-VarDecl 0x7fd235814b10 <col:3, col:11> col:7 used n 'int' cinit
+    |   `-ImplicitCastExpr 0x7fd235814b98 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd235814b70 <col:11> 'int' lvalue Var 0x7fd235814258 'c' 'int'
+    `-ForStmt 0x7fd235021620 <line:9:3, line:15:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fd235021600 <line:9:12, line:15:3>
+        |-BinaryOperator 0x7fd235814c10 <line:10:5, col:9> 'int' '='
+        | |-DeclRefExpr 0x7fd235814bc8 <col:5> 'int' lvalue Var 0x7fd23502c978 'a' 'int'
+        | `-IntegerLiteral 0x7fd235814bf0 <col:9> 'int' 1
+        `-ForStmt 0x7fd2358151c0 <line:11:5, line:14:5>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fd235814cb8 <line:11:12, col:16> 'int' '<'
+          | |-ImplicitCastExpr 0x7fd235814c88 <col:12> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fd235814c38 <col:12> 'int' lvalue Var 0x7fd23502c978 'a' 'int'
+          | `-ImplicitCastExpr 0x7fd235814ca0 <col:16> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd235814c60 <col:16> 'int' lvalue Var 0x7fd235814b10 'n' 'int'
+          |-<<<NULL>>>
+          `-CompoundStmt 0x7fd2358151a0 <col:20, line:14:5>
+            |-BinaryOperator 0x7fd235814fe0 <line:12:7, col:46> 'int' '='
+            | |-UnaryOperator 0x7fd235814d20 <col:7, col:8> 'int' lvalue prefix '*'
+            | | `-ImplicitCastExpr 0x7fd235814d08 <col:8> 'int *' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7fd235814ce0 <col:8> 'int *' lvalue Var 0x7fd235814388 'd' 'int *'
+            | `-BinaryOperator 0x7fd235814fb8 <col:12, col:46> 'int' '&&'
+            |   |-ImplicitCastExpr 0x7fd235814fa0 <col:12> 'int' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7fd235814d40 <col:12> 'int' lvalue ParmVar 0x7fd235814418 'p1' 'int'
+            |   `-CallExpr 0x7fd235814f38 <col:18, col:46> 'int *'
+            |     |-ImplicitCastExpr 0x7fd235814f20 <col:18> 'int *(*)(void *, void *)':'int *(*)(void *, void *)' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7fd235814d68 <col:18> 'int *(*)(void *, void *)':'int *(*)(void *, void *)' lvalue ParmVar 0x7fd235814650 'p2' 'int *(*)(void *, void *)':'int *(*)(void *, void *)'
+            |     |-ImplicitCastExpr 0x7fd235814f70 <col:21> 'void *' <NullToPointer>
+            |     | `-IntegerLiteral 0x7fd235814d90 <col:21> 'int' 0
+            |     `-ImplicitCastExpr 0x7fd235814f88 <col:24, col:45> 'void *' <BitCast>
+            |       `-CStyleCastExpr 0x7fd235814ef8 <col:24, col:45> 'int *' <IntegralToPointer>
+            |         `-ParenExpr 0x7fd235814ed8 <col:32, col:45> 'long'
+            |           `-BinaryOperator 0x7fd235814e68 <col:33, col:44> 'long' '+'
+            |             |-CStyleCastExpr 0x7fd235814e08 <col:33, col:39> 'long' <IntegralCast>
+            |             | `-ImplicitCastExpr 0x7fd235814df0 <col:39> 'int' <LValueToRValue>
+            |             |   `-DeclRefExpr 0x7fd235814db0 <col:39> 'int' lvalue ParmVar 0x7fd235814418 'p1' 'int'
+            |             `-ImplicitCastExpr 0x7fd235814e50 <col:44> 'long' <IntegralCast>
+            |               `-IntegerLiteral 0x7fd235814e30 <col:44> 'int' 1
+            `-CallExpr 0x7fd235815130 <line:13:7, col:22> 'void *'
+              |-ImplicitCastExpr 0x7fd235815118 <col:7> 'void *(*)(void *, void *, int)':'void *(*)(void *, void *, int)' <LValueToRValue>
+              | `-DeclRefExpr 0x7fd235815008 <col:7> 'void *(*)(void *, void *, int)':'void *(*)(void *, void *, int)' lvalue ParmVar 0x7fd235814910 'p3' 'void *(*)(void *, void *, int)':'void *(*)(void *, void *, int)'
+              |-ImplicitCastExpr 0x7fd235815170 <col:10> 'void *' <NullToPointer>
+              | `-IntegerLiteral 0x7fd235815030 <col:10> 'int' 0
+              |-ImplicitCastExpr 0x7fd235815188 <col:13, col:17> 'void *' <BitCast>
+              | `-BinaryOperator 0x7fd2358150d0 <col:13, col:17> 'int *' '+'
+              |   |-ImplicitCastExpr 0x7fd2358150a0 <col:13> 'int *' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7fd235815050 <col:13> 'int *' lvalue Var 0x7fd235814310 'b' 'int *'
+              |   `-ImplicitCastExpr 0x7fd2358150b8 <col:17> 'int' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fd235815078 <col:17> 'int' lvalue ParmVar 0x7fd235814418 'p1' 'int'
+              `-IntegerLiteral 0x7fd2358150f8 <col:21> 'int' 0

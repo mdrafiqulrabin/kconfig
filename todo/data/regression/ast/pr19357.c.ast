@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fd33681aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd33681bb60 <../Data/C2AST/pr19357.c:2:1, line:4:1> line:2:8 struct f definition
+| `-FieldDecl 0x7fd3368584a0 <line:3:3, col:12> col:9 f 'float [8]'
+`-FunctionDecl 0x7fd3368586d8 <line:6:1, line:8:1> line:6:13 ftest 'long double (struct f, long double)'
+  |-ParmVarDecl 0x7fd336858540 <col:19, col:28> col:28 arg1 'struct f':'struct f'
+  |-ParmVarDecl 0x7fd3368585b8 <col:34, col:46> col:46 used arg2 'long double'
+  `-CompoundStmt 0x7fd336858820 <col:52, line:8:1>
+    `-ReturnStmt 0x7fd336858808 <line:7:3, col:10>
+      `-ImplicitCastExpr 0x7fd3368587f0 <col:10> 'long double' <LValueToRValue>
+        `-DeclRefExpr 0x7fd3368587c8 <col:10> 'long double' lvalue ParmVar 0x7fd3368585b8 'arg2' 'long double'

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fda7680f4e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fda76810160 <../Data/C2AST/pr34989-1_0.c:3:8, col:15> col:15 struct globals
+|-VarDecl 0x7fda7684fad0 <col:1, col:30> col:30 used ptr_to_globals 'struct globals *const' extern
+|-RecordDecl 0x7fda7684fb88 prev 0x7fda76810160 <line:4:1, col:18> col:8 struct globals definition
+|-FunctionDecl 0x7fda7684fda8 <line:5:1, line:8:1> line:5:5 syslogd_main 'int (int, char **)'
+| |-ParmVarDecl 0x7fda7684fc28 <col:18, col:22> col:22 argc 'int'
+| |-ParmVarDecl 0x7fda7684fcd0 <col:28, col:35> col:35 argv 'char **'
+| `-CompoundStmt 0x7fda768500a0 <line:6:1, line:8:1>
+|   `-BinaryOperator 0x7fda76850078 <line:7:2, col:41> 'struct globals *' '='
+|     |-ParenExpr 0x7fda76850020 <col:2, col:37> 'struct globals *' lvalue
+|     | `-UnaryOperator 0x7fda76850000 <col:3, col:23> 'struct globals *' lvalue prefix '*'
+|     |   `-CStyleCastExpr 0x7fda7684ffd8 <col:4, col:23> 'struct globals **' <BitCast>
+|     |     `-UnaryOperator 0x7fda7684fed8 <col:22, col:23> 'struct globals *const *' prefix '&'
+|     |       `-DeclRefExpr 0x7fda7684fe58 <col:23> 'struct globals *const' lvalue Var 0x7fda7684fad0 'ptr_to_globals' 'struct globals *const'
+|     `-ImplicitCastExpr 0x7fda76850060 <col:41> 'struct globals *' <NullToPointer>
+|       `-IntegerLiteral 0x7fda76850040 <col:41> 'int' 0
+`-FunctionDecl 0x7fda76850110 <line:10:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fda768501e8 <col:12, col:24>
+    `-ReturnStmt 0x7fda768501d0 <col:14, col:21>
+      `-IntegerLiteral 0x7fda768501b0 <col:21> 'int' 0

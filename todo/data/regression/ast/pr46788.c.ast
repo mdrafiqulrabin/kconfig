@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f857f8280e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f857f828d60 <../Data/C2AST/pr46788.c:5:9, line:13:1> line:5:9 union definition
+| |-FieldDecl 0x7f857f869c38 <line:7:3, col:21> col:21 referenced u_32_value 'unsigned long'
+| |-RecordDecl 0x7f857f869c80 <line:8:3, line:12:3> line:8:3 struct definition
+| | |-FieldDecl 0x7f857f869d48 <line:10:5, col:24> col:24 referenced u_16_value_0 'unsigned short'
+| | `-FieldDecl 0x7f857f869da8 <line:11:5, col:24> col:24 referenced u_16_value_1 'unsigned short'
+| `-FieldDecl 0x7f857f869e40 <line:8:3, line:12:5> col:5 referenced u_16_values 'struct (anonymous struct at ../Data/C2AST/pr46788.c:8:3)':'struct my_union::(anonymous at ../Data/C2AST/pr46788.c:8:3)'
+|-TypedefDecl 0x7f857f869ee0 <line:5:1, line:13:3> col:3 referenced my_union 'union my_union':'my_union'
+| `-ElaboratedType 0x7f857f869e90 'union my_union' sugar
+|   `-RecordType 0x7f857f869c00 'my_union'
+|     `-Record 0x7f857f828d60 ''
+`-FunctionDecl 0x7f857f86a078 <line:16:1, line:26:1> line:16:19 Test 'unsigned long (const unsigned short)'
+  |-ParmVarDecl 0x7f857f869f68 <col:24, col:49> col:49 used wXe 'const unsigned short'
+  `-CompoundStmt 0x7f857f86a620 <line:17:1, line:26:1>
+    |-DeclStmt 0x7f857f86a1f0 <line:18:3, col:21>
+    | `-VarDecl 0x7f857f86a190 <col:3, col:12> col:12 used dwCalcVal 'my_union':'my_union'
+    |-BinaryOperator 0x7f857f86a2e0 <line:20:3, col:38> 'unsigned short' '='
+    | |-MemberExpr 0x7f857f86a268 <col:3, col:25> 'unsigned short' lvalue .u_16_value_0 0x7f857f869d48
+    | | `-MemberExpr 0x7f857f86a230 <col:3, col:13> 'struct (anonymous struct at ../Data/C2AST/pr46788.c:8:3)':'struct my_union::(anonymous at ../Data/C2AST/pr46788.c:8:3)' lvalue .u_16_values 0x7f857f869e40
+    | |   `-DeclRefExpr 0x7f857f86a208 <col:3> 'my_union':'my_union' lvalue Var 0x7f857f86a190 'dwCalcVal' 'my_union':'my_union'
+    | `-ImplicitCastExpr 0x7f857f86a2c8 <col:38> 'unsigned short' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f857f86a2a0 <col:38> 'const unsigned short' lvalue ParmVar 0x7f857f869f68 'wXe' 'const unsigned short'
+    |-BinaryOperator 0x7f857f86a478 <line:21:3, col:38> 'unsigned short' '='
+    | |-MemberExpr 0x7f857f86a408 <col:3, col:25> 'unsigned short' lvalue .u_16_value_1 0x7f857f869da8
+    | | `-MemberExpr 0x7f857f86a3d0 <col:3, col:13> 'struct (anonymous struct at ../Data/C2AST/pr46788.c:8:3)':'struct my_union::(anonymous at ../Data/C2AST/pr46788.c:8:3)' lvalue .u_16_values 0x7f857f869e40
+    | |   `-DeclRefExpr 0x7f857f86a3a8 <col:3> 'my_union':'my_union' lvalue Var 0x7f857f86a190 'dwCalcVal' 'my_union':'my_union'
+    | `-ImplicitCastExpr 0x7f857f86a460 <col:38> 'unsigned short' <IntegralCast>
+    |   `-IntegerLiteral 0x7f857f86a440 <col:38> 'unsigned int' 32768
+    |-CompoundAssignOperator 0x7f857f86a538 <line:23:3, col:26> 'unsigned long' '/=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |-MemberExpr 0x7f857f86a4c8 <col:3, col:13> 'unsigned long' lvalue .u_32_value 0x7f857f869c38
+    | | `-DeclRefExpr 0x7f857f86a4a0 <col:3> 'my_union':'my_union' lvalue Var 0x7f857f86a190 'dwCalcVal' 'my_union':'my_union'
+    | `-ImplicitCastExpr 0x7f857f86a520 <col:26> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f857f86a500 <col:26> 'int' 3
+    `-ReturnStmt 0x7f857f86a608 <line:25:3, col:31>
+      `-ImplicitCastExpr 0x7f857f86a5f0 <col:10, col:31> 'unsigned long' <LValueToRValue>
+        `-ParenExpr 0x7f857f86a5d0 <col:10, col:31> 'unsigned long' lvalue
+          `-MemberExpr 0x7f857f86a598 <col:11, col:21> 'unsigned long' lvalue .u_32_value 0x7f857f869c38
+            `-DeclRefExpr 0x7f857f86a570 <col:11> 'my_union':'my_union' lvalue Var 0x7f857f86a190 'dwCalcVal' 'my_union':'my_union'

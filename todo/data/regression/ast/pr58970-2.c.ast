@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f96e002bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f96e002c960 <../Data/C2AST/pr58970-2.c:3:1, col:36> col:8 struct T definition
+| |-FieldDecl 0x7f96e0814250 <col:12, col:21> col:17 a 'char'
+| | `-IntegerLiteral 0x7f96e0814220 <col:21> 'int' 8
+| `-FieldDecl 0x7f96e08142c8 <col:24, col:33> col:29 referenced b 'char'
+|   `-IntegerLiteral 0x7f96e0814298 <col:33> 'int' 1
+|-RecordDecl 0x7f96e0814310 <line:4:1, col:35> col:8 struct S definition
+| |-FieldDecl 0x7f96e08143d0 <col:12, col:17> col:17 x 'char'
+| `-FieldDecl 0x7f96e0814568 <col:20, col:32> col:29 referenced t 'struct T [1]'
+`-FunctionDecl 0x7f96e08147f0 <line:6:1, line:11:1> line:7:1 foo 'void (int, struct S *)'
+  |-ParmVarDecl 0x7f96e08145c8 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7f96e08146e0 <col:13, col:23> col:23 used s 'struct S *'
+  `-CompoundStmt 0x7f96e0814bb0 <line:8:1, line:11:1>
+    `-IfStmt 0x7f96e0814b78 <line:9:3, line:10:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f96e0814960 <line:9:7, col:13> 'int' '=='
+      | |-ImplicitCastExpr 0x7f96e0814948 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f96e08148e0 <col:7> 'int' lvalue ParmVar 0x7f96e08145c8 'x' 'int'
+      | `-UnaryOperator 0x7f96e0814928 <col:12, col:13> 'int' prefix '-'
+      |   `-IntegerLiteral 0x7f96e0814908 <col:13> 'int' 1
+      |-BinaryOperator 0x7f96e0814b50 <line:10:5, col:17> 'char' '='
+      | |-MemberExpr 0x7f96e0814ae0 <col:5, col:13> 'char' lvalue bitfield .b 0x7f96e08142c8
+      | | `-ArraySubscriptExpr 0x7f96e0814ab8 <col:5, col:11> 'struct T':'struct T' lvalue
+      | |   |-ImplicitCastExpr 0x7f96e0814a88 <col:5, col:8> 'struct T *' <ArrayToPointerDecay>
+      | |   | `-MemberExpr 0x7f96e08149c8 <col:5, col:8> 'struct T [1]' lvalue ->t 0x7f96e0814568
+      | |   |   `-ImplicitCastExpr 0x7f96e08149b0 <col:5> 'struct S *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7f96e0814988 <col:5> 'struct S *' lvalue ParmVar 0x7f96e08146e0 's' 'struct S *'
+      | |   `-ImplicitCastExpr 0x7f96e0814aa0 <col:10> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f96e0814a00 <col:10> 'int' lvalue ParmVar 0x7f96e08145c8 'x' 'int'
+      | `-ImplicitCastExpr 0x7f96e0814b38 <col:17> 'char' <IntegralCast>
+      |   `-IntegerLiteral 0x7f96e0814b18 <col:17> 'int' 0
+      `-<<<NULL>>>

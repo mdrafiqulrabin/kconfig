@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7ff33c02bce8 <<invalid sloc>> <invalid sloc>
+`-RecordDecl 0x7ff33c06e800 <../Data/C2AST/pr18479.c:3:1, col:63> col:48 struct Foo definition
+  |-VisibilityAttr 0x7ff33c06e8b0 <col:24, col:44> Default
+  `-FieldDecl 0x7ff33c06e910 <col:54, col:58> col:58 foo 'int'

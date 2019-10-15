@@ -1,0 +1,130 @@
+TranslationUnitDecl 0x7fd7f582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd7f593e640 <../Data/C2AST/pr61403.c:6:1, line:11:1> line:6:8 struct XYZ definition
+| |-FieldDecl 0x7fd7f593e708 <line:8:3, col:9> col:9 referenced x 'float'
+| |-FieldDecl 0x7fd7f593e768 <line:9:3, col:9> col:9 referenced y 'float'
+| `-FieldDecl 0x7fd7f593e7c8 <line:10:3, col:9> col:9 referenced z 'float'
+`-FunctionDecl 0x7fd7f593eaf0 <line:13:1, line:24:1> line:14:1 norm 'void (struct XYZ *, struct XYZ *, int)'
+  |-ParmVarDecl 0x7fd7f593e8c0 <col:7, col:19> col:19 used in 'struct XYZ *'
+  |-ParmVarDecl 0x7fd7f593e948 <col:23, col:35> col:35 used out 'struct XYZ *'
+  |-ParmVarDecl 0x7fd7f593e9c0 <col:40, col:44> col:44 used size 'int'
+  `-CompoundStmt 0x7fd7f58d0150 <line:15:1, line:24:1>
+    |-DeclStmt 0x7fd7f593ec20 <line:16:3, col:8>
+    | `-VarDecl 0x7fd7f593ebc0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fd7f58d0118 <line:17:3, line:23:5>
+      |-BinaryOperator 0x7fd7f593ec80 <line:17:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fd7f593ec38 <col:8> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+      | `-IntegerLiteral 0x7fd7f593ec60 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd7f593ed28 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd7f593ecf8 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd7f593eca8 <col:15> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+      | `-ImplicitCastExpr 0x7fd7f593ed10 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd7f593ecd0 <col:19> 'int' lvalue ParmVar 0x7fd7f593e9c0 'size' 'int'
+      |-UnaryOperator 0x7fd7f593ed78 <col:25, col:27> 'int' prefix '++'
+      | `-DeclRefExpr 0x7fd7f593ed50 <col:27> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+      `-CompoundStmt 0x7fd7f58d00e8 <line:18:5, line:23:5>
+        |-DeclStmt 0x7fd7f58cf998 <line:19:7, col:81>
+        | `-VarDecl 0x7fd7f58cf200 <col:7, col:80> col:13 used n 'float' cinit
+        |   `-ImplicitCastExpr 0x7fd7f58cf980 <col:17, col:80> 'float' <FloatingCast>
+        |     `-CallExpr 0x7fd7f58cf938 <col:17, col:80> 'double'
+        |       |-ImplicitCastExpr 0x7fd7f58cf920 <col:17> 'double (*)(double)' <FunctionToPointerDecay>
+        |       | `-DeclRefExpr 0x7fd7f58cf260 <col:17> 'double (double)' Function 0x7fd7f5919f60 'sqrt' 'double (double)'
+        |       `-ImplicitCastExpr 0x7fd7f58cf968 <col:23, col:79> 'double' <FloatingCast>
+        |         `-BinaryOperator 0x7fd7f58cf8f8 <col:23, col:79> 'float' '+'
+        |           |-BinaryOperator 0x7fd7f58cf6b8 <col:23, col:59> 'float' '+'
+        |           | |-BinaryOperator 0x7fd7f58cf478 <col:23, col:39> 'float' '*'
+        |           | | |-ImplicitCastExpr 0x7fd7f58cf448 <col:23, col:29> 'float' <LValueToRValue>
+        |           | | | `-MemberExpr 0x7fd7f58cf330 <col:23, col:29> 'float' lvalue .x 0x7fd7f593e708
+        |           | | |   `-ArraySubscriptExpr 0x7fd7f58cf308 <col:23, col:27> 'struct XYZ':'struct XYZ' lvalue
+        |           | | |     |-ImplicitCastExpr 0x7fd7f58cf2d8 <col:23> 'struct XYZ *' <LValueToRValue>
+        |           | | |     | `-DeclRefExpr 0x7fd7f58cf288 <col:23> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |           | | |     `-ImplicitCastExpr 0x7fd7f58cf2f0 <col:26> 'int' <LValueToRValue>
+        |           | | |       `-DeclRefExpr 0x7fd7f58cf2b0 <col:26> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |           | | `-ImplicitCastExpr 0x7fd7f58cf460 <col:33, col:39> 'float' <LValueToRValue>
+        |           | |   `-MemberExpr 0x7fd7f58cf410 <col:33, col:39> 'float' lvalue .x 0x7fd7f593e708
+        |           | |     `-ArraySubscriptExpr 0x7fd7f58cf3e8 <col:33, col:37> 'struct XYZ':'struct XYZ' lvalue
+        |           | |       |-ImplicitCastExpr 0x7fd7f58cf3b8 <col:33> 'struct XYZ *' <LValueToRValue>
+        |           | |       | `-DeclRefExpr 0x7fd7f58cf368 <col:33> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |           | |       `-ImplicitCastExpr 0x7fd7f58cf3d0 <col:36> 'int' <LValueToRValue>
+        |           | |         `-DeclRefExpr 0x7fd7f58cf390 <col:36> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |           | `-BinaryOperator 0x7fd7f58cf690 <col:43, col:59> 'float' '*'
+        |           |   |-ImplicitCastExpr 0x7fd7f58cf660 <col:43, col:49> 'float' <LValueToRValue>
+        |           |   | `-MemberExpr 0x7fd7f58cf548 <col:43, col:49> 'float' lvalue .y 0x7fd7f593e768
+        |           |   |   `-ArraySubscriptExpr 0x7fd7f58cf520 <col:43, col:47> 'struct XYZ':'struct XYZ' lvalue
+        |           |   |     |-ImplicitCastExpr 0x7fd7f58cf4f0 <col:43> 'struct XYZ *' <LValueToRValue>
+        |           |   |     | `-DeclRefExpr 0x7fd7f58cf4a0 <col:43> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |           |   |     `-ImplicitCastExpr 0x7fd7f58cf508 <col:46> 'int' <LValueToRValue>
+        |           |   |       `-DeclRefExpr 0x7fd7f58cf4c8 <col:46> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |           |   `-ImplicitCastExpr 0x7fd7f58cf678 <col:53, col:59> 'float' <LValueToRValue>
+        |           |     `-MemberExpr 0x7fd7f58cf628 <col:53, col:59> 'float' lvalue .y 0x7fd7f593e768
+        |           |       `-ArraySubscriptExpr 0x7fd7f58cf600 <col:53, col:57> 'struct XYZ':'struct XYZ' lvalue
+        |           |         |-ImplicitCastExpr 0x7fd7f58cf5d0 <col:53> 'struct XYZ *' <LValueToRValue>
+        |           |         | `-DeclRefExpr 0x7fd7f58cf580 <col:53> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |           |         `-ImplicitCastExpr 0x7fd7f58cf5e8 <col:56> 'int' <LValueToRValue>
+        |           |           `-DeclRefExpr 0x7fd7f58cf5a8 <col:56> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |           `-BinaryOperator 0x7fd7f58cf8d0 <col:63, col:79> 'float' '*'
+        |             |-ImplicitCastExpr 0x7fd7f58cf8a0 <col:63, col:69> 'float' <LValueToRValue>
+        |             | `-MemberExpr 0x7fd7f58cf788 <col:63, col:69> 'float' lvalue .z 0x7fd7f593e7c8
+        |             |   `-ArraySubscriptExpr 0x7fd7f58cf760 <col:63, col:67> 'struct XYZ':'struct XYZ' lvalue
+        |             |     |-ImplicitCastExpr 0x7fd7f58cf730 <col:63> 'struct XYZ *' <LValueToRValue>
+        |             |     | `-DeclRefExpr 0x7fd7f58cf6e0 <col:63> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |             |     `-ImplicitCastExpr 0x7fd7f58cf748 <col:66> 'int' <LValueToRValue>
+        |             |       `-DeclRefExpr 0x7fd7f58cf708 <col:66> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |             `-ImplicitCastExpr 0x7fd7f58cf8b8 <col:73, col:79> 'float' <LValueToRValue>
+        |               `-MemberExpr 0x7fd7f58cf868 <col:73, col:79> 'float' lvalue .z 0x7fd7f593e7c8
+        |                 `-ArraySubscriptExpr 0x7fd7f58cf840 <col:73, col:77> 'struct XYZ':'struct XYZ' lvalue
+        |                   |-ImplicitCastExpr 0x7fd7f58cf810 <col:73> 'struct XYZ *' <LValueToRValue>
+        |                   | `-DeclRefExpr 0x7fd7f58cf7c0 <col:73> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |                   `-ImplicitCastExpr 0x7fd7f58cf828 <col:76> 'int' <LValueToRValue>
+        |                     `-DeclRefExpr 0x7fd7f58cf7e8 <col:76> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |-BinaryOperator 0x7fd7f58cfbf0 <line:20:7, col:28> 'float' '='
+        | |-MemberExpr 0x7fd7f58cfa58 <col:7, col:14> 'float' lvalue .x 0x7fd7f593e708
+        | | `-ArraySubscriptExpr 0x7fd7f58cfa30 <col:7, col:12> 'struct XYZ':'struct XYZ' lvalue
+        | |   |-ImplicitCastExpr 0x7fd7f58cfa00 <col:7> 'struct XYZ *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fd7f58cf9b0 <col:7> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e948 'out' 'struct XYZ *'
+        | |   `-ImplicitCastExpr 0x7fd7f58cfa18 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fd7f58cf9d8 <col:11> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        | `-BinaryOperator 0x7fd7f58cfbc8 <col:18, col:28> 'float' '/'
+        |   |-ImplicitCastExpr 0x7fd7f58cfb98 <col:18, col:24> 'float' <LValueToRValue>
+        |   | `-MemberExpr 0x7fd7f58cfb38 <col:18, col:24> 'float' lvalue .x 0x7fd7f593e708
+        |   |   `-ArraySubscriptExpr 0x7fd7f58cfb10 <col:18, col:22> 'struct XYZ':'struct XYZ' lvalue
+        |   |     |-ImplicitCastExpr 0x7fd7f58cfae0 <col:18> 'struct XYZ *' <LValueToRValue>
+        |   |     | `-DeclRefExpr 0x7fd7f58cfa90 <col:18> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |   |     `-ImplicitCastExpr 0x7fd7f58cfaf8 <col:21> 'int' <LValueToRValue>
+        |   |       `-DeclRefExpr 0x7fd7f58cfab8 <col:21> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |   `-ImplicitCastExpr 0x7fd7f58cfbb0 <col:28> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd7f58cfb70 <col:28> 'float' lvalue Var 0x7fd7f58cf200 'n' 'float'
+        |-BinaryOperator 0x7fd7f58cfe58 <line:21:7, col:28> 'float' '='
+        | |-MemberExpr 0x7fd7f58cfcc0 <col:7, col:14> 'float' lvalue .y 0x7fd7f593e768
+        | | `-ArraySubscriptExpr 0x7fd7f58cfc98 <col:7, col:12> 'struct XYZ':'struct XYZ' lvalue
+        | |   |-ImplicitCastExpr 0x7fd7f58cfc68 <col:7> 'struct XYZ *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fd7f58cfc18 <col:7> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e948 'out' 'struct XYZ *'
+        | |   `-ImplicitCastExpr 0x7fd7f58cfc80 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fd7f58cfc40 <col:11> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        | `-BinaryOperator 0x7fd7f58cfe30 <col:18, col:28> 'float' '/'
+        |   |-ImplicitCastExpr 0x7fd7f58cfe00 <col:18, col:24> 'float' <LValueToRValue>
+        |   | `-MemberExpr 0x7fd7f58cfda0 <col:18, col:24> 'float' lvalue .y 0x7fd7f593e768
+        |   |   `-ArraySubscriptExpr 0x7fd7f58cfd78 <col:18, col:22> 'struct XYZ':'struct XYZ' lvalue
+        |   |     |-ImplicitCastExpr 0x7fd7f58cfd48 <col:18> 'struct XYZ *' <LValueToRValue>
+        |   |     | `-DeclRefExpr 0x7fd7f58cfcf8 <col:18> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+        |   |     `-ImplicitCastExpr 0x7fd7f58cfd60 <col:21> 'int' <LValueToRValue>
+        |   |       `-DeclRefExpr 0x7fd7f58cfd20 <col:21> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+        |   `-ImplicitCastExpr 0x7fd7f58cfe18 <col:28> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd7f58cfdd8 <col:28> 'float' lvalue Var 0x7fd7f58cf200 'n' 'float'
+        `-BinaryOperator 0x7fd7f58d00c0 <line:22:7, col:28> 'float' '='
+          |-MemberExpr 0x7fd7f58cff28 <col:7, col:14> 'float' lvalue .z 0x7fd7f593e7c8
+          | `-ArraySubscriptExpr 0x7fd7f58cff00 <col:7, col:12> 'struct XYZ':'struct XYZ' lvalue
+          |   |-ImplicitCastExpr 0x7fd7f58cfed0 <col:7> 'struct XYZ *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fd7f58cfe80 <col:7> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e948 'out' 'struct XYZ *'
+          |   `-ImplicitCastExpr 0x7fd7f58cfee8 <col:11> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fd7f58cfea8 <col:11> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+          `-BinaryOperator 0x7fd7f58d0098 <col:18, col:28> 'float' '/'
+            |-ImplicitCastExpr 0x7fd7f58d0068 <col:18, col:24> 'float' <LValueToRValue>
+            | `-MemberExpr 0x7fd7f58d0008 <col:18, col:24> 'float' lvalue .z 0x7fd7f593e7c8
+            |   `-ArraySubscriptExpr 0x7fd7f58cffe0 <col:18, col:22> 'struct XYZ':'struct XYZ' lvalue
+            |     |-ImplicitCastExpr 0x7fd7f58cffb0 <col:18> 'struct XYZ *' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7fd7f58cff60 <col:18> 'struct XYZ *' lvalue ParmVar 0x7fd7f593e8c0 'in' 'struct XYZ *'
+            |     `-ImplicitCastExpr 0x7fd7f58cffc8 <col:21> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fd7f58cff88 <col:21> 'int' lvalue Var 0x7fd7f593ebc0 'i' 'int'
+            `-ImplicitCastExpr 0x7fd7f58d0080 <col:28> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fd7f58d0040 <col:28> 'float' lvalue Var 0x7fd7f58cf200 'n' 'float'

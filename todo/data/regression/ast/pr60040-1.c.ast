@@ -1,0 +1,111 @@
+TranslationUnitDecl 0x7fdca301b4e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fdca305d000 <../Data/C2AST/pr60040-1.c:4:1, col:18> col:7 used dhistory 'float [10]'
+|-VarDecl 0x7fdca305d0b8 <line:5:1, col:7> col:7 used test 'float'
+|-FunctionDecl 0x7fdca305d2d8 <line:7:1, line:25:1> line:7:7 used getSlope 'float (float *)'
+| |-ParmVarDecl 0x7fdca305d1d0 <col:16, col:30> col:22 used history 'float *':'float *'
+| `-CompoundStmt 0x7fdca305e248 <col:33, line:25:1>
+|   |-DeclStmt 0x7fdca305d430 <line:8:3, col:17>
+|   | `-VarDecl 0x7fdca305d398 <col:3, col:16> col:9 used sumx 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fdca305d418 <col:16> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7fdca305d3f8 <col:16> 'int' 0
+|   |-DeclStmt 0x7fdca305d4f8 <line:9:3, col:17>
+|   | `-VarDecl 0x7fdca305d460 <col:3, col:16> col:9 used sumy 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fdca305d4e0 <col:16> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7fdca305d4c0 <col:16> 'int' 0
+|   |-DeclStmt 0x7fdca305d5c0 <line:10:3, col:18>
+|   | `-VarDecl 0x7fdca305d528 <col:3, col:17> col:9 sumxy 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fdca305d5a8 <col:17> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7fdca305d588 <col:17> 'int' 0
+|   |-DeclStmt 0x7fdca305d688 <line:11:3, col:19>
+|   | `-VarDecl 0x7fdca305d5f0 <col:3, col:18> col:9 used sumxsq 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fdca305d670 <col:18> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7fdca305d650 <col:18> 'int' 0
+|   |-DeclStmt 0x7fdca305d750 <line:12:3, col:17>
+|   | `-VarDecl 0x7fdca305d6b8 <col:3, col:16> col:9 used rate 'float' cinit
+|   |   `-ImplicitCastExpr 0x7fdca305d738 <col:16> 'float' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7fdca305d718 <col:16> 'int' 0
+|   |-DeclStmt 0x7fdca305d800 <line:13:3, col:13>
+|   | `-VarDecl 0x7fdca305d780 <col:3, col:11> col:7 n 'int' cinit
+|   |   `-IntegerLiteral 0x7fdca305d7e0 <col:11> 'int' 10
+|   |-DeclStmt 0x7fdca305d890 <line:15:3, col:8>
+|   | `-VarDecl 0x7fdca305d830 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7fdca305e058 <line:16:3, line:21:3>
+|   | |-BinaryOperator 0x7fdca305d8f0 <line:16:8, col:10> 'int' '='
+|   | | |-DeclRefExpr 0x7fdca305d8a8 <col:8> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   | | `-IntegerLiteral 0x7fdca305d8d0 <col:10> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdca305d978 <col:13, col:16> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fdca305d960 <col:13> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fdca305d918 <col:13> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   | | `-IntegerLiteral 0x7fdca305d940 <col:16> 'int' 11
+|   | |-UnaryOperator 0x7fdca305d9c8 <col:20, col:21> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fdca305d9a0 <col:20> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   | `-CompoundStmt 0x7fdca305e028 <col:25, line:21:3>
+|   |   |-BinaryOperator 0x7fdca305dad0 <line:17:5, col:19> 'float' '='
+|   |   | |-DeclRefExpr 0x7fdca305d9e8 <col:5> 'float' lvalue Var 0x7fdca305d398 'sumx' 'float'
+|   |   | `-BinaryOperator 0x7fdca305daa8 <col:12, col:19> 'float' '+'
+|   |   |   |-ImplicitCastExpr 0x7fdca305da60 <col:12> 'float' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fdca305da10 <col:12> 'float' lvalue Var 0x7fdca305d398 'sumx' 'float'
+|   |   |   `-ImplicitCastExpr 0x7fdca305da90 <col:19> 'float' <IntegralToFloating>
+|   |   |     `-ImplicitCastExpr 0x7fdca305da78 <col:19> 'int' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fdca305da38 <col:19> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   |   |-BinaryOperator 0x7fdca305dc90 <line:18:5, col:30> 'float' '='
+|   |   | |-DeclRefExpr 0x7fdca305daf8 <col:5> 'float' lvalue Var 0x7fdca305d460 'sumy' 'float'
+|   |   | `-BinaryOperator 0x7fdca305dc68 <col:12, col:30> 'float' '+'
+|   |   |   |-ImplicitCastExpr 0x7fdca305dc38 <col:12> 'float' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fdca305db20 <col:12> 'float' lvalue Var 0x7fdca305d460 'sumy' 'float'
+|   |   |   `-ImplicitCastExpr 0x7fdca305dc50 <col:19, col:30> 'float' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7fdca305dc10 <col:19, col:30> 'float' lvalue
+|   |   |       |-ImplicitCastExpr 0x7fdca305dbf8 <col:19> 'float *':'float *' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7fdca305db48 <col:19> 'float *':'float *' lvalue ParmVar 0x7fdca305d1d0 'history' 'float *':'float *'
+|   |   |       `-BinaryOperator 0x7fdca305dbd0 <col:27, col:29> 'int' '-'
+|   |   |         |-ImplicitCastExpr 0x7fdca305dbb8 <col:27> 'int' <LValueToRValue>
+|   |   |         | `-DeclRefExpr 0x7fdca305db70 <col:27> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   |   |         `-IntegerLiteral 0x7fdca305db98 <col:29> 'int' 1
+|   |   |-BinaryOperator 0x7fdca305de50 <line:19:5, col:30> 'float' '='
+|   |   | |-DeclRefExpr 0x7fdca305dcb8 <col:5> 'float' lvalue Var 0x7fdca305d460 'sumy' 'float'
+|   |   | `-BinaryOperator 0x7fdca305de28 <col:12, col:30> 'float' '+'
+|   |   |   |-ImplicitCastExpr 0x7fdca305ddf8 <col:12> 'float' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fdca305dce0 <col:12> 'float' lvalue Var 0x7fdca305d460 'sumy' 'float'
+|   |   |   `-ImplicitCastExpr 0x7fdca305de10 <col:19, col:30> 'float' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7fdca305ddd0 <col:19, col:30> 'float' lvalue
+|   |   |       |-ImplicitCastExpr 0x7fdca305ddb8 <col:19> 'float *':'float *' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7fdca305dd08 <col:19> 'float *':'float *' lvalue ParmVar 0x7fdca305d1d0 'history' 'float *':'float *'
+|   |   |       `-BinaryOperator 0x7fdca305dd90 <col:27, col:29> 'int' '-'
+|   |   |         |-ImplicitCastExpr 0x7fdca305dd78 <col:27> 'int' <LValueToRValue>
+|   |   |         | `-DeclRefExpr 0x7fdca305dd30 <col:27> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   |   |         `-IntegerLiteral 0x7fdca305dd58 <col:29> 'int' 1
+|   |   `-BinaryOperator 0x7fdca305e000 <line:20:5, col:27> 'float' '='
+|   |     |-DeclRefExpr 0x7fdca305de78 <col:5> 'float' lvalue Var 0x7fdca305d5f0 'sumxsq' 'float'
+|   |     `-BinaryOperator 0x7fdca305dfc0 <col:14, col:27> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fdca305df90 <col:14> 'float' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fdca305dea0 <col:14> 'float' lvalue Var 0x7fdca305d5f0 'sumxsq' 'float'
+|   |       `-ImplicitCastExpr 0x7fdca305dfa8 <col:23, col:27> 'float' <IntegralToFloating>
+|   |         `-ParenExpr 0x7fdca305df70 <col:23, col:27> 'int'
+|   |           `-BinaryOperator 0x7fdca305df48 <col:24, col:26> 'int' '*'
+|   |             |-ImplicitCastExpr 0x7fdca305df18 <col:24> 'int' <LValueToRValue>
+|   |             | `-DeclRefExpr 0x7fdca305dec8 <col:24> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   |             `-ImplicitCastExpr 0x7fdca305df30 <col:26> 'int' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7fdca305def0 <col:26> 'int' lvalue Var 0x7fdca305d830 'i' 'int'
+|   |-BinaryOperator 0x7fdca305e1c8 <line:23:3, col:20> 'float' '='
+|   | |-DeclRefExpr 0x7fdca305e090 <col:3> 'float' lvalue Var 0x7fdca305d6b8 'rate' 'float'
+|   | `-BinaryOperator 0x7fdca305e1a0 <col:10, col:20> 'float' '+'
+|   |   |-BinaryOperator 0x7fdca305e138 <col:10, col:15> 'float' '+'
+|   |   | |-ImplicitCastExpr 0x7fdca305e108 <col:10> 'float' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fdca305e0b8 <col:10> 'float' lvalue Var 0x7fdca305d460 'sumy' 'float'
+|   |   | `-ImplicitCastExpr 0x7fdca305e120 <col:15> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fdca305e0e0 <col:15> 'float' lvalue Var 0x7fdca305d398 'sumx' 'float'
+|   |   `-ImplicitCastExpr 0x7fdca305e188 <col:20> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fdca305e160 <col:20> 'float' lvalue Var 0x7fdca305d5f0 'sumxsq' 'float'
+|   `-ReturnStmt 0x7fdca305e230 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7fdca305e218 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fdca305e1f0 <col:10> 'float' lvalue Var 0x7fdca305d6b8 'rate' 'float'
+`-FunctionDecl 0x7fdca305e2f8 <line:27:1, line:29:1> line:27:6 loop 'void ()'
+  `-CompoundStmt 0x7fdca305e4f0 <col:13, line:29:1>
+    `-BinaryOperator 0x7fdca305e4c8 <line:28:3, col:27> 'float' '='
+      |-DeclRefExpr 0x7fdca305e398 <col:3> 'float' lvalue Var 0x7fdca305d0b8 'test' 'float'
+      `-CallExpr 0x7fdca305e480 <col:10, col:27> 'float'
+        |-ImplicitCastExpr 0x7fdca305e468 <col:10> 'float (*)(float *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fdca305e3c0 <col:10> 'float (float *)' Function 0x7fdca305d2d8 'getSlope' 'float (float *)'
+        `-ImplicitCastExpr 0x7fdca305e4b0 <col:19> 'float *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fdca305e3e8 <col:19> 'float [10]' lvalue Var 0x7fdca305d000 'dhistory' 'float [10]'

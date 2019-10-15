@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fdcfa82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdcfa86d800 <../Data/C2AST/pr40989.c:3:1, line:5:1> line:3:5 main 'int ()'
+  `-CompoundStmt 0x7fdcfa86da60 <col:12, line:5:1>
+    `-ReturnStmt 0x7fdcfa86da48 <line:4:3, col:16>
+      `-CallExpr 0x7fdcfa86da20 <col:10, col:16> 'int'
+        `-ImplicitCastExpr 0x7fdcfa86da08 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fdcfa86d9b8 <col:10> 'int ()' Function 0x7fdcfa86d908 'pippo' 'int ()'

@@ -1,0 +1,57 @@
+../Data/C2AST/pr39035.c:7:10: fatal error: 'dfp-dbg.h' file not found
+#include "dfp-dbg.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fc7488166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc748816c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc748816980 '__int128'
+|-TypedefDecl 0x7fc748816cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc7488169a0 'unsigned __int128'
+|-TypedefDecl 0x7fc748816fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc748816db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc748816d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc748817040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc748817000 'char *'
+|   `-BuiltinType 0x7fc748816780 'char'
+|-TypedefDecl 0x7fc748817308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc7488172b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc748817120 'struct __va_list_tag'
+|     `-Record 0x7fc748817098 '__va_list_tag'
+|-FunctionDecl 0x7fc747823a20 <../Data/C2AST/pr39035.c:11:1, line:18:1> line:12:1 used runtime32 'void (void)'
+| `-CompoundStmt 0x7fc747823b90 <line:13:1, line:18:1>
+|   `-DeclStmt 0x7fc747823b78 <line:14:3, col:24>
+|     `-VarDecl 0x7fc747823b18 <col:3, col:23> col:23 invalid d 'volatile int'
+|-FunctionDecl 0x7fc747823c38 <line:20:1, line:27:1> line:21:1 used runtime64 'void (void)'
+| `-CompoundStmt 0x7fc747823d68 <line:22:1, line:27:1>
+|   `-DeclStmt 0x7fc747823d50 <line:23:3, col:24>
+|     `-VarDecl 0x7fc747823cf0 <col:3, col:23> col:23 invalid d 'volatile int'
+|-FunctionDecl 0x7fc747823e10 <line:29:1, line:36:1> line:30:1 used runtime128 'void (void)'
+| `-CompoundStmt 0x7fc747823f40 <line:31:1, line:36:1>
+|   `-DeclStmt 0x7fc747823f28 <line:32:3, col:25>
+|     `-VarDecl 0x7fc747823ec8 <col:3, col:24> col:24 invalid d 'volatile int'
+|-FunctionDecl 0x7fc747823fe8 <line:38:1, line:43:1> line:39:1 used fold32 'void (void)'
+| `-CompoundStmt 0x7fc747824088 <line:40:1, line:43:1>
+|-FunctionDecl 0x7fc747824128 <line:45:1, line:50:1> line:46:1 used fold64 'void (void)'
+| `-CompoundStmt 0x7fc7478241c8 <line:47:1, line:50:1>
+|-FunctionDecl 0x7fc747824268 <line:52:1, line:57:1> line:53:1 used fold128 'void (void)'
+| `-CompoundStmt 0x7fc747824308 <line:54:1, line:57:1>
+`-FunctionDecl 0x7fc7478243e8 <line:59:1, line:71:1> line:60:1 main 'int (void)'
+  `-CompoundStmt 0x7fc747824750 <line:61:1, line:71:1>
+    |-CallExpr 0x7fc747824520 <line:62:3, col:14> 'void'
+    | `-ImplicitCastExpr 0x7fc747824508 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc7478244b8 <col:3> 'void (void)' Function 0x7fc747823a20 'runtime32' 'void (void)'
+    |-CallExpr 0x7fc747824588 <line:63:3, col:14> 'void'
+    | `-ImplicitCastExpr 0x7fc747824570 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc747824548 <col:3> 'void (void)' Function 0x7fc747823c38 'runtime64' 'void (void)'
+    |-CallExpr 0x7fc7478245f0 <line:64:3, col:15> 'void'
+    | `-ImplicitCastExpr 0x7fc7478245d8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc7478245b0 <col:3> 'void (void)' Function 0x7fc747823e10 'runtime128' 'void (void)'
+    |-CallExpr 0x7fc747824658 <line:66:3, col:11> 'void'
+    | `-ImplicitCastExpr 0x7fc747824640 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc747824618 <col:3> 'void (void)' Function 0x7fc747823fe8 'fold32' 'void (void)'
+    |-CallExpr 0x7fc7478246c0 <line:67:3, col:11> 'void'
+    | `-ImplicitCastExpr 0x7fc7478246a8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc747824680 <col:3> 'void (void)' Function 0x7fc747824128 'fold64' 'void (void)'
+    `-CallExpr 0x7fc747824728 <line:68:3, col:12> 'void'
+      `-ImplicitCastExpr 0x7fc747824710 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fc7478246e8 <col:3> 'void (void)' Function 0x7fc747824268 'fold128' 'void (void)'

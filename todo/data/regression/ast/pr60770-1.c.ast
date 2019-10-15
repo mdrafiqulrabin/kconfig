@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fc37c8288e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc37c018468 <../Data/C2AST/pr60770-1.c:4:1, line:11:1> line:4:5 f 'int (int)'
+  |-ParmVarDecl 0x7fc37c829578 <col:7, col:11> col:11 used n 'int'
+  `-CompoundStmt 0x7fc37c018820 <col:13, line:11:1>
+    |-DeclStmt 0x7fc37c0185f0 <line:5:3, col:8>
+    | `-VarDecl 0x7fc37c018590 <col:3, col:7> col:7 used p 'int *'
+    |-CompoundStmt 0x7fc37c018770 <line:6:3, line:9:3>
+    | |-DeclStmt 0x7fc37c0186c0 <line:7:5, col:14>
+    | | `-VarDecl 0x7fc37c018620 <col:5, col:13> col:9 used yyy 'int' cinit
+    | |   `-ImplicitCastExpr 0x7fc37c0186a8 <col:13> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fc37c018680 <col:13> 'int' lvalue ParmVar 0x7fc37c829578 'n' 'int'
+    | `-BinaryOperator 0x7fc37c018748 <line:8:5, col:8> 'int *' '='
+    |   |-DeclRefExpr 0x7fc37c0186d8 <col:5> 'int *' lvalue Var 0x7fc37c018590 'p' 'int *'
+    |   `-UnaryOperator 0x7fc37c018728 <col:7, col:8> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fc37c018700 <col:8> 'int' lvalue Var 0x7fc37c018620 'yyy' 'int'
+    `-ReturnStmt 0x7fc37c018808 <line:10:3, col:11>
+      `-ImplicitCastExpr 0x7fc37c0187f0 <col:10, col:11> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7fc37c0187d0 <col:10, col:11> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fc37c0187b8 <col:11> 'int *' <LValueToRValue>
+            `-DeclRefExpr 0x7fc37c018790 <col:11> 'int *' lvalue Var 0x7fc37c018590 'p' 'int *'

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fb10d8094e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb10e814220 <../Data/C2AST/pr46585.c:3:1, line:11:1> line:4:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb10e814390 <line:5:1, line:11:1>
+    `-SwitchStmt 0x7fb10e814320 <line:6:3, line:10:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fb10e814300 <line:6:11> 'int' 0
+      `-CompoundStmt 0x7fb10e814378 <line:7:5, line:10:5>
+        `-DefaultStmt 0x7fb10e814358 <line:8:5, line:9:7>
+          `-BreakStmt 0x7fb10e814350 <col:7>

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7f908c02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f908c814268 <../Data/C2AST/pr80833-1.c:5:1, line:9:1> line:5:11 test 'long long (long long)'
+  |-ParmVarDecl 0x7f908c02c978 <col:17, col:27> col:27 used a 'long long'
+  `-CompoundStmt 0x7f908c8144f8 <line:6:1, line:9:1>
+    |-GCCAsmStmt 0x7f908c814440 <line:7:3, col:21>
+    | `-DeclRefExpr 0x7f908c814418 <col:19> 'long long' lvalue ParmVar 0x7f908c02c978 'a' 'long long'
+    `-ReturnStmt 0x7f908c8144e0 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7f908c8144c8 <col:10> 'long long' <LValueToRValue>
+        `-DeclRefExpr 0x7f908c8144a0 <col:10> 'long long' lvalue ParmVar 0x7f908c02c978 'a' 'long long'

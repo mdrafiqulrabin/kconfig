@@ -1,0 +1,73 @@
+../Data/C2AST/pr53992.c:13:9: error: use of undeclared identifier '__transaction_atomic'
+        __transaction_atomic
+        ^
+TranslationUnitDecl 0x7fefa780f0e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefa780f660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefa780f380 '__int128'
+|-TypedefDecl 0x7fefa780f6d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefa780f3a0 'unsigned __int128'
+|-TypedefDecl 0x7fefa780f9a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefa780f7b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fefa780f728 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefa780fa40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefa780fa00 'char *'
+|   `-BuiltinType 0x7fefa780f180 'char'
+|-TypedefDecl 0x7fefa780fd08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefa780fcb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefa780fb20 'struct __va_list_tag'
+|     `-Record 0x7fefa780fa98 '__va_list_tag'
+`-FunctionDecl 0x7fefa7008c00 <../Data/C2AST/pr53992.c:6:1, line:21:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7fefa7009518 <col:12, line:21:1>
+    |-DeclStmt 0x7fefa7008dc0 <line:7:5, col:21>
+    | `-VarDecl 0x7fefa7008d60 <col:5, col:20> col:10 used data 'long [10000]'
+    |-DeclStmt 0x7fefa7008f18 <line:8:5, col:22>
+    | |-VarDecl 0x7fefa7008df0 <col:5, col:10> col:10 used i 'long'
+    | `-VarDecl 0x7fefa7008e68 <col:5, col:17> col:13 used min 'long' cinit
+    |   `-ImplicitCastExpr 0x7fefa7008ee8 <col:17> 'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fefa7008ec8 <col:17> 'int' 10000
+    |-ForStmt 0x7fefa70091f8 <line:9:5, col:40>
+    | |-BinaryOperator 0x7fefa7008f90 <col:10, col:12> 'long' '='
+    | | |-DeclRefExpr 0x7fefa7008f30 <col:10> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    | | `-ImplicitCastExpr 0x7fefa7008f78 <col:12> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fefa7008f58 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fefa7009030 <col:15, col:17> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fefa7009000 <col:15> 'long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fefa7008fb8 <col:15> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    | | `-ImplicitCastExpr 0x7fefa7009018 <col:17> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fefa7008fe0 <col:17> 'int' 10000
+    | |-UnaryOperator 0x7fefa7009080 <col:24, col:25> 'long' postfix '++'
+    | | `-DeclRefExpr 0x7fefa7009058 <col:24> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    | `-BinaryOperator 0x7fefa70091d0 <col:29, col:40> 'long' '='
+    |   |-ArraySubscriptExpr 0x7fefa7009148 <col:29, col:35> 'long' lvalue
+    |   | |-ImplicitCastExpr 0x7fefa7009118 <col:29> 'long *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fefa70090a0 <col:29> 'long [10000]' lvalue Var 0x7fefa7008d60 'data' 'long [10000]'
+    |   | `-ImplicitCastExpr 0x7fefa7009130 <col:34> 'long' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fefa70090c8 <col:34> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    |   `-UnaryOperator 0x7fefa70091b0 <col:39, col:40> 'long' prefix '-'
+    |     `-ImplicitCastExpr 0x7fefa7009198 <col:40> 'long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fefa7009170 <col:40> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    |-ForStmt 0x7fefa70093c8 <line:12:5, line:18:5>
+    | |-BinaryOperator 0x7fefa7009290 <line:12:10, col:12> 'long' '='
+    | | |-DeclRefExpr 0x7fefa7009230 <col:10> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    | | `-ImplicitCastExpr 0x7fefa7009278 <col:12> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fefa7009258 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fefa7009330 <col:15, col:17> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fefa7009300 <col:15> 'long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fefa70092b8 <col:15> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    | | `-ImplicitCastExpr 0x7fefa7009318 <col:17> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fefa70092e0 <col:17> 'int' 10000
+    | |-UnaryOperator 0x7fefa7009380 <col:24, col:25> 'long' postfix1 error generated.
+ '++'
+    | | `-DeclRefExpr 0x7fefa7009358 <col:24> 'long' lvalue Var 0x7fefa7008df0 'i' 'long'
+    | `-CompoundStmt 0x7fefa70093b8 <col:29, line:18:5>
+    `-ReturnStmt 0x7fefa7009500 <line:20:5, col:26>
+      `-UnaryOperator 0x7fefa70094e0 <col:12, col:26> 'int' prefix '!'
+        `-ParenExpr 0x7fefa70094c0 <col:13, col:26> 'int'
+          `-BinaryOperator 0x7fefa7009498 <col:14, col:22> 'int' '=='
+            |-ImplicitCastExpr 0x7fefa7009468 <col:14> 'long' <LValueToRValue>
+            | `-DeclRefExpr 0x7fefa7009400 <col:14> 'long' lvalue Var 0x7fefa7008e68 'min' 'long'
+            `-ImplicitCastExpr 0x7fefa7009480 <col:21, col:22> 'long' <IntegralCast>
+              `-UnaryOperator 0x7fefa7009448 <col:21, col:22> 'int' prefix '-'
+                `-IntegerLiteral 0x7fefa7009428 <col:22> 'int' 9999

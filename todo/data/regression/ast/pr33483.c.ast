@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fce3402b8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fce34814a68 <../Data/C2AST/pr33483.c:4:1, line:7:1> line:4:13 f1 'long double (long double)'
+| |-ParmVarDecl 0x7fce3402c578 <col:17, col:29> col:29 used x 'long double'
+| `-CompoundStmt 0x7fce34814e90 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fce34814e78 <line:6:3, col:31>
+|     `-CallExpr 0x7fce34814e10 <col:10, col:31> 'long double'
+|       |-ImplicitCastExpr 0x7fce34814df8 <col:10> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fce34814d58 <col:10> '<builtin fn type>' Function 0x7fce34814b90 '__builtin_fmodl' 'long double (long double, long double)'
+|       |-ImplicitCastExpr 0x7fce34814e48 <col:27> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fce34814d80 <col:27> 'long double' lvalue ParmVar 0x7fce3402c578 'x' 'long double'
+|       `-ImplicitCastExpr 0x7fce34814e60 <col:30> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fce34814da8 <col:30> 'long double' lvalue ParmVar 0x7fce3402c578 'x' 'long double'
+|-FunctionDecl 0x7fce34814b90 <col:10> col:10 implicit used __builtin_fmodl 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7fce34814c30 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ParmVarDecl 0x7fce34814c90 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7fce34814d00 <col:10> Implicit
+| `-NoThrowAttr 0x7fce34814d48 <col:10> Implicit
+|-FunctionDecl 0x7fce34814f50 <line:9:1, line:12:1> line:9:13 f2 'long double (long double)'
+| |-ParmVarDecl 0x7fce34814ec0 <col:17, col:29> col:29 used x 'long double'
+| `-CompoundStmt 0x7fce348152d0 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fce348152b8 <line:11:3, col:36>
+|     `-CallExpr 0x7fce34815250 <col:10, col:36> 'long double'
+|       |-ImplicitCastExpr 0x7fce34815238 <col:10> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fce348151c0 <col:10> '<builtin fn type>' Function 0x7fce34814ff8 '__builtin_remainderl' 'long double (long double, long double)'
+|       |-ImplicitCastExpr 0x7fce34815288 <col:32> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fce348151e8 <col:32> 'long double' lvalue ParmVar 0x7fce34814ec0 'x' 'long double'
+|       `-ImplicitCastExpr 0x7fce348152a0 <col:35> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fce34815210 <col:35> 'long double' lvalue ParmVar 0x7fce34814ec0 'x' 'long double'
+`-FunctionDecl 0x7fce34814ff8 <col:10> col:10 implicit used __builtin_remainderl 'long double (long double, long double)' extern
+  |-ParmVarDecl 0x7fce34815098 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ParmVarDecl 0x7fce348150f8 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ConstAttr 0x7fce34815168 <col:10> Implicit
+  `-NoThrowAttr 0x7fce348151b0 <col:10> Implicit

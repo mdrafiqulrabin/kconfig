@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7feb4902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7feb4906e850 <../Data/C2AST/pr56167.c:4:1, col:50> col:13 used foo 'void (void)' extern
+|-FunctionDecl 0x7feb4906e9e0 <line:5:1, col:52> col:13 used bar 'void (void)' extern
+|-VarDecl 0x7feb4906eb00 <line:6:1, col:5> col:5 used var 'int'
+`-FunctionDecl 0x7feb4906ebb0 <line:8:1, line:15:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7feb4906edd0 <line:10:1, line:15:1>
+    |-CallExpr 0x7feb4906ecc0 <line:11:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7feb4906eca8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7feb4906ec50 <col:3> 'void (void)' Function 0x7feb4906e850 'foo' 'void (void)'
+    |-CallExpr 0x7feb4906ed28 <line:12:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7feb4906ed10 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7feb4906ece8 <col:3> 'void (void)' Function 0x7feb4906e9e0 'bar' 'void (void)'
+    |-UnaryOperator 0x7feb4906ed78 <line:13:3, col:6> 'int' postfix '++'
+    | `-DeclRefExpr 0x7feb4906ed50 <col:3> 'int' lvalue Var 0x7feb4906eb00 'var' 'int'
+    `-ReturnStmt 0x7feb4906edb8 <line:14:3, col:10>
+      `-IntegerLiteral 0x7feb4906ed98 <col:10> 'int' 0

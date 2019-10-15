@@ -1,0 +1,64 @@
+../Data/C2AST/pr39902-2.c:8:8: error: GNU decimal type extension not supported
+extern _Decimal32 a32, b32;
+       ^
+../Data/C2AST/pr39902-2.c:9:8: error: GNU decimal type extension not supported
+extern _Decimal64 a64, b64;
+       ^
+../Data/C2AST/pr39902-2.c:10:8: error: GNU decimal type extension not supported
+extern _Decimal128 a128, b128;
+       ^
+../Data/C2AST/pr39902-2.c:15:3: error: use of undeclared identifier 'b32'; did you mean 'a32'?
+  b32 = a32 * -1.0DF;
+  ^~~
+  a32
+../Data/C2AST/pr39902-2.c:8:19: note: 'a32' declared here
+extern _Decimal32 a32, b32;
+                  ^
+../Data/C2AST/pr39902-2.c:15:19: error: invalid suffix 'DF' on floating constant
+  b32 = a32 * -1.0DF;
+                  ^
+../Data/C2AST/pr39902-2.c:21:3: error: use of undeclared identifier 'b64'; did you mean 'a64'?
+  b64 = a64 * -1.0DD;
+  ^~~
+  a64
+../Data/C2AST/pr39902-2.c:9:19: note: 'a64' declared here
+extern _Decimal64 a64, b64;
+                  ^
+../Data/C2AST/pr39902-2.c:21:19: error: invalid suffix 'DD' on floating constant
+  b64 = a64 * -1.0DD;
+                  ^
+../Data/C2AST/pr39902-2.c:27:3: error: use of undeclared identifier 'b128'; did you mean 'a128'?
+  b128 = a128 * -1.0DL;
+  ^~~~
+  a128
+../Data/C2AST/pr39902-2.c:10:20: note: 'a128' declared here
+extern _Decimal128 a128, b128;
+                   ^
+../Data/C2AST/pr39902-2.c:27:21: error: invalid suffix 'DL' on floating constant
+  b128 = a128 * -1.0DL;
+                    ^
+9 errors generated.
+TranslationUnitDecl 0x7fbc640128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc64012e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc64012b80 '__int128'
+|-TypedefDecl 0x7fbc64012ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc64012ba0 'unsigned __int128'
+|-TypedefDecl 0x7fbc640131a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc64012fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc64012f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc64013240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc64013200 'char *'
+|   `-BuiltinType 0x7fbc64012980 'char'
+|-TypedefDecl 0x7fbc64013508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc640134b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc64013320 'struct __va_list_tag'
+|     `-Record 0x7fbc64013298 '__va_list_tag'
+|-VarDecl 0x7fbc64013578 <../Data/C2AST/pr39902-2.c:8:1, col:19> col:19 invalid a32 'int' extern
+|-VarDecl 0x7fbc63808a00 <line:9:1, col:19> col:19 invalid a64 'int' extern
+|-VarDecl 0x7fbc63808a78 <line:10:1, col:20> col:20 invalid a128 'int' extern
+|-FunctionDecl 0x7fbc63808ba0 <line:12:1, line:16:1> line:13:1 foo32 'void (void)'
+| `-CompoundStmt 0x7fbc63808c98 <line:14:1, line:16:1>
+|-FunctionDecl 0x7fbc63808d38 <line:18:1, line:22:1> line:19:1 foo64 'void (void)'
+| `-CompoundStmt 0x7fbc63808dd8 <line:20:1, line:22:1>
+`-FunctionDecl 0x7fbc63808e78 <line:24:1, line:28:1> line:25:1 foo128 'void (void)'
+  `-CompoundStmt 0x7fbc63808f18 <line:26:1, line:28:1>

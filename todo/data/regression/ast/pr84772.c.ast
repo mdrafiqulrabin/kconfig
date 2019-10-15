@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f8f9102b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8f91084b40 <../Data/C2AST/pr84772.c:7:1, line:13:1> line:8:1 foo 'void (int *, int, struct __va_list_tag *)'
+| |-ParmVarDecl 0x7f8f910848a0 <col:6, col:11> col:11 used x 'int *'
+| |-ParmVarDecl 0x7f8f91084918 <col:14, col:18> col:18 used y 'int'
+| |-ParmVarDecl 0x7f8f91084a10 <col:21, col:29> col:29 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-CompoundStmt 0x7f8f91085298 <line:9:1, line:13:1>
+|   |-CallExpr 0x7f8f91084fb0 <line:10:3, col:39> 'void *'
+|   | |-ImplicitCastExpr 0x7f8f91084f98 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8f91084ea8 <col:3> '<builtin fn type>' Function 0x7f8f91084c88 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8f91085008 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f8f91084ff0 <col:21> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8f91084ed0 <col:21> 'int *' lvalue ParmVar 0x7f8f910848a0 'x' 'int *'
+|   | |-IntegerLiteral 0x7f8f91084ef8 <col:24> 'int' 0
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8f91084f30 <col:27, col:38> 'unsigned long' sizeof 'int'
+|   `-ForStmt 0x7f8f91085260 <line:11:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:35:54>
+|     |-DeclStmt 0x7f8f910850b8 <../Data/C2AST/pr84772.c:11:8, col:17>
+|     | `-VarDecl 0x7f8f91085038 <col:8, col:16> col:12 used i 'int' cinit
+|     |   `-IntegerLiteral 0x7f8f91085098 <col:16> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8f91085150 <col:19, col:23> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f8f91085120 <col:19> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8f910850d0 <col:19> 'int' lvalue Var 0x7f8f91085038 'i' 'int'
+|     | `-ImplicitCastExpr 0x7f8f91085138 <col:23> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8f910850f8 <col:23> 'int' lvalue ParmVar 0x7f8f91084918 'y' 'int'
+|     |-UnaryOperator 0x7f8f910851a0 <col:26, col:27> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f8f91085178 <col:26> 'int' lvalue Var 0x7f8f91085038 'i' 'int'
+|     `-VAArgExpr 0x7f8f91085238 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:35:29, col:54> 'long double'
+|       `-ImplicitCastExpr 0x7f8f91085220 <../Data/C2AST/pr84772.c:12:13> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8f910851c0 <col:13> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7f8f91084a10 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+`-FunctionDecl 0x7f8f91084c88 <line:10:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7f8f91084d28 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f8f91084d88 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7f8f91084de8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f8f91084e60 <col:3> Implicit

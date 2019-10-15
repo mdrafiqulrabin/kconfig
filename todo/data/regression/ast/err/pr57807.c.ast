@@ -1,0 +1,33 @@
+../Data/C2AST/pr57807.c:10:19: error: use of unknown builtin '__builtin_ia32_unpcklpd' [-Wimplicit-function-declaration]
+  return (__m128d)__builtin_ia32_unpcklpd((__v2df)__A, (__v2df)__B);
+                  ^
+../Data/C2AST/pr57807.c:10:10: error: invalid conversion between vector type '__m128d' (vector of 2 'double' values) and integer type 'int' of different size
+  return (__m128d)__builtin_ia32_unpcklpd((__v2df)__A, (__v2df)__B);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fafba8018e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fafba801e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fafba801b80 '__int128'
+|-TypedefDecl 0x7fafba801ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fafba801ba0 'unsigned __int128'
+|-TypedefDecl 0x7fafba8021a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fafba801fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fafba801f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fafba802240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fafba802200 'char *'
+|   `-BuiltinType 0x7fafba801980 'char'
+|-TypedefDecl 0x7fafba802508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fafba8024b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fafba802320 'struct __va_list_tag'
+|     `-Record 0x7fafba802298 '__va_list_tag'
+|-TypedefDecl 0x7fafba83ae00 <../Data/C2AST/pr57807.c:6:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fafba802580 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fafba801b00 'double'
+|-TypedefDecl 0x7fafba83ae88 <line:7:1, col:16> col:16 referenced __m128d '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-VectorType 0x7fafba802580 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+| | `-BuiltinType 0x7fafba801b00 'double'
+| `-MayAliasAttr 0x7fafba83aee0 <col:60>
+`-FunctionDecl 0x7fafba83b0e0 <line:9:1, line:11:1> line:9:9 _mm_unpacklo_pd '__m128d (__m128d, __m128d)'
+  |-ParmVarDecl 0x7fafba83af60 <col:25, col:33> col:33 used __A '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  |-ParmVarDecl 0x7fafba83afd0 <col:38, col:46> col:46 used __B '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  `-CompoundStmt 0x7fafba83b870 <col:51, line:11:1>

@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f836782bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f836782c978 <../Data/C2AST/pr21356.c:4:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f836786d858 <line:5:1, col:7> col:7 used p 'void *'
+`-FunctionDecl 0x7f836786d980 <line:7:1, line:16:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7f836786de90 <line:8:1, line:16:1>
+    |-SwitchStmt 0x7f836786da60 <line:9:3, line:14:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f836786da48 <line:9:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f836786da20 <col:11> 'int' lvalue Var 0x7f836782c978 'a' 'int'
+    | `-CompoundStmt 0x7f836786ddd0 <line:10:3, line:14:3>
+    |   |-LabelStmt 0x7f836786dbe8 <line:11:5, col:25> 'a0'
+    |   | `-CaseStmt 0x7f836786dab0 <col:9, col:25>
+    |   |   |-IntegerLiteral 0x7f836786da90 <col:14> 'int' 0
+    |   |   |-<<<NULL>>>
+    |   |   `-BinaryOperator 0x7f836786db78 <col:19, col:25> 'void *' '='
+    |   |     |-DeclRefExpr 0x7f836786dae8 <col:19> 'void *' lvalue Var 0x7f836786d858 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7f836786db58 <col:23, col:25> 'void *' a1 0x7f836786db10
+    |   |-LabelStmt 0x7f836786dd10 <line:12:5, col:25> 'a1'
+    |   | `-CaseStmt 0x7f836786dc20 <col:9, col:25>
+    |   |   |-IntegerLiteral 0x7f836786dc00 <col:14> 'int' 1
+    |   |   |-<<<NULL>>>
+    |   |   `-BinaryOperator 0x7f836786dce8 <col:19, col:25> 'void *' '='
+    |   |     |-DeclRefExpr 0x7f836786dc58 <col:19> 'void *' lvalue Var 0x7f836786d858 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7f836786dcc8 <col:23, col:25> 'void *' a2 0x7f836786dc80
+    |   `-LabelStmt 0x7f836786ddb8 <line:13:5, col:25> 'a2'
+    |     `-DefaultStmt 0x7f836786dd98 <col:9, col:25>
+    |       `-BinaryOperator 0x7f836786dd70 <col:19, col:25> 'void *' '='
+    |         |-DeclRefExpr 0x7f836786dd28 <col:19> 'void *' lvalue Var 0x7f836786d858 'p' 'void *'
+    |         `-AddrLabelExpr 0x7f836786dd50 <col:23, col:25> 'void *' a1 0x7f836786db10
+    `-IndirectGotoStmt 0x7f836786de78 <line:15:3, col:9>
+      `-ImplicitCastExpr 0x7f836786de60 <col:9> 'const void *' <BitCast>
+        `-ImplicitCastExpr 0x7f836786de48 <col:9> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7f836786ddf8 <col:9> 'void *' lvalue Var 0x7f836786d858 'p' 'void *'

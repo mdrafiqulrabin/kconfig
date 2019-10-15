@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7f987d819ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f987e805468 <../Data/C2AST/pr33846.c:5:1, line:8:1> line:5:5 used clamp_val 'int (int)'
+| |-ParmVarDecl 0x7f987d81a978 <col:16, col:20> col:20 used i 'int'
+| `-CompoundStmt 0x7f987e805610 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7f987e8055f8 <line:7:3, col:16>
+|     `-BinaryOperator 0x7f987e8055d0 <col:10, col:16> 'int' '>>'
+|       |-UnaryOperator 0x7f987e805590 <col:10, col:11> 'int' prefix '~'
+|       | `-ImplicitCastExpr 0x7f987e805578 <col:11> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f987e805550 <col:11> 'int' lvalue ParmVar 0x7f987d81a978 'i' 'int'
+|       `-IntegerLiteral 0x7f987e8055b0 <col:16> 'int' 31
+|-TypedefDecl 0x7f987e805640 <line:10:1, col:26> col:26 referenced intptr_t 'long'
+| `-BuiltinType 0x7f987d819e00 'long'
+`-FunctionDecl 0x7f987e805920 <line:12:1, line:22:1> line:12:6 _mix_some_samples 'void (intptr_t, int *, int)'
+  |-ParmVarDecl 0x7f987e8056d0 <col:25, col:34> col:34 used buf 'intptr_t':'long'
+  |-ParmVarDecl 0x7f987e805770 <col:39, col:44> col:44 used mix_buffer 'int *'
+  |-ParmVarDecl 0x7f987e8057e8 <col:56, col:60> col:60 used mix_size 'int'
+  `-CompoundStmt 0x7f987e806080 <line:13:1, line:22:1>
+    |-DeclStmt 0x7f987e805a50 <line:14:3, col:8>
+    | `-VarDecl 0x7f987e8059f0 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7f987e805b20 <line:15:3, col:29>
+    | `-VarDecl 0x7f987e805a80 <col:3, col:19> col:15 used p 'int *' cinit
+    |   `-ImplicitCastExpr 0x7f987e805b08 <col:19> 'int *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f987e805ae0 <col:19> 'int *' lvalue ParmVar 0x7f987e805770 'mix_buffer' 'int *'
+    `-ForStmt 0x7f987e806048 <line:16:3, line:21:3>
+      |-BinaryOperator 0x7f987e805ba0 <line:16:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f987e805b38 <col:8> 'int' lvalue Var 0x7f987e8059f0 'i' 'int'
+      | `-ImplicitCastExpr 0x7f987e805b88 <col:12> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f987e805b60 <col:12> 'int' lvalue ParmVar 0x7f987e8057e8 'mix_size' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f987e805c28 <col:23, col:27> 'int' '>'
+      | |-ImplicitCastExpr 0x7f987e805c10 <col:23> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f987e805bc8 <col:23> 'int' lvalue Var 0x7f987e8059f0 'i' 'int'
+      | `-IntegerLiteral 0x7f987e805bf0 <col:27> 'int' 0
+      |-UnaryOperator 0x7f987e805c78 <col:30, col:31> 'int' postfix '--'
+      | `-DeclRefExpr 0x7f987e805c50 <col:30> 'int' lvalue Var 0x7f987e8059f0 'i' 'int'
+      `-CompoundStmt 0x7f987e806020 <line:17:3, line:21:3>
+        |-BinaryOperator 0x7f987e805f18 <line:18:5, col:50> 'short' '='
+        | |-UnaryOperator 0x7f987e805d60 <col:5, col:20> 'short' lvalue prefix '*'
+        | | `-ParenExpr 0x7f987e805d40 <col:6, col:20> 'short *'
+        | |   `-CStyleCastExpr 0x7f987e805d18 <col:7, col:17> 'short *' <IntegralToPointer>
+        | |     `-ImplicitCastExpr 0x7f987e805d00 <col:17> 'intptr_t':'long' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7f987e805c98 <col:17> 'intptr_t':'long' lvalue ParmVar 0x7f987e8056d0 'buf' 'intptr_t':'long'
+        | `-ImplicitCastExpr 0x7f987e805f00 <col:24, col:50> 'short' <IntegralCast>
+        |   `-CallExpr 0x7f987e805ed0 <col:24, col:50> 'int'
+        |     |-ImplicitCastExpr 0x7f987e805eb8 <col:24> 'int (*)(int)' <FunctionToPointerDecay>
+        |     | `-DeclRefExpr 0x7f987e805d80 <col:24> 'int (int)' Function 0x7f987e805468 'clamp_val' 'int (int)'
+        |     `-BinaryOperator 0x7f987e805e60 <col:35, col:42> 'int' '+'
+        |       |-ImplicitCastExpr 0x7f987e805e48 <col:35, col:38> 'int' <LValueToRValue>
+        |       | `-ParenExpr 0x7f987e805e08 <col:35, col:38> 'int' lvalue
+        |       |   `-UnaryOperator 0x7f987e805de8 <col:36, col:37> 'int' lvalue prefix '*'
+        |       |     `-ImplicitCastExpr 0x7f987e805dd0 <col:37> 'int *' <LValueToRValue>
+        |       |       `-DeclRefExpr 0x7f987e805da8 <col:37> 'int *' lvalue Var 0x7f987e805a80 'p' 'int *'
+        |       `-IntegerLiteral 0x7f987e805e28 <col:42> 'int' 8388608
+        |-CompoundAssignOperator 0x7f987e805fa0 <line:19:5, col:12> 'intptr_t':'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+        | |-DeclRefExpr 0x7f987e805f40 <col:5> 'intptr_t':'long' lvalue ParmVar 0x7f987e8056d0 'buf' 'intptr_t':'long'
+        | `-ImplicitCastExpr 0x7f987e805f88 <col:12> 'long' <IntegralCast>
+        |   `-IntegerLiteral 0x7f987e805f68 <col:12> 'int' 2
+        `-UnaryOperator 0x7f987e806000 <line:20:5, col:6> 'int *' postfix '++'
+          `-DeclRefExpr 0x7f987e805fd8 <col:5> 'int *' lvalue Var 0x7f987e805a80 'p' 'int *'

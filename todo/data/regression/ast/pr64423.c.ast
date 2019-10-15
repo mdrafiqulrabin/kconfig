@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe70a80cce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe70a01c600 <../Data/C2AST/pr64423.c:5:1, col:10> col:5 used a 'int [100]'
+`-FunctionDecl 0x7fe70a01c778 <line:7:1, line:13:1> line:8:1 f 'int (char)'
+  |-ParmVarDecl 0x7fe70a01c6b0 <col:4, col:9> col:9 used c 'char'
+  `-CompoundStmt 0x7fe70a01caf0 <line:9:1, line:13:1>
+    `-ReturnStmt 0x7fe70a01cad8 <line:10:3, line:12:18>
+      `-BinaryOperator 0x7fe70a01cab0 <line:10:10, line:12:18> 'int' '+'
+        |-BinaryOperator 0x7fe70a01c9c8 <line:10:10, line:11:16> 'int' '+'
+        | |-ImplicitCastExpr 0x7fe70a01c998 <line:10:10, col:13> 'int' <LValueToRValue>
+        | | `-ArraySubscriptExpr 0x7fe70a01c8c8 <col:10, col:13> 'int' lvalue
+        | |   |-ImplicitCastExpr 0x7fe70a01c898 <col:10> 'int *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fe70a01c820 <col:10> 'int [100]' lvalue Var 0x7fe70a01c600 'a' 'int [100]'
+        | |   `-ImplicitCastExpr 0x7fe70a01c8b0 <col:12> 'char' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fe70a01c848 <col:12> 'char' lvalue ParmVar 0x7fe70a01c6b0 'c' 'char'
+        | `-ImplicitCastExpr 0x7fe70a01c9b0 <line:11:13, col:16> 'int' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fe70a01c970 <col:13, col:16> 'int' lvalue
+        |     |-ImplicitCastExpr 0x7fe70a01c940 <col:13> 'int *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7fe70a01c8f0 <col:13> 'int [100]' lvalue Var 0x7fe70a01c600 'a' 'int [100]'
+        |     `-ImplicitCastExpr 0x7fe70a01c958 <col:15> 'char' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fe70a01c918 <col:15> 'char' lvalue ParmVar 0x7fe70a01c6b0 'c' 'char'
+        `-ImplicitCastExpr 0x7fe70a01ca98 <line:12:15, col:18> 'int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fe70a01ca70 <col:15, col:18> 'int' lvalue
+            |-ImplicitCastExpr 0x7fe70a01ca40 <col:15> 'int *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7fe70a01c9f0 <col:15> 'int [100]' lvalue Var 0x7fe70a01c600 'a' 'int [100]'
+            `-ImplicitCastExpr 0x7fe70a01ca58 <col:17> 'char' <LValueToRValue>
+              `-DeclRefExpr 0x7fe70a01ca18 <col:17> 'char' lvalue ParmVar 0x7fe70a01c6b0 'c' 'char'

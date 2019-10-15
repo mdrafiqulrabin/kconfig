@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fb21f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb220016200 <../Data/C2AST/pr68306-3.c:6:1, col:17> col:13 used fn2 'void ()' extern
+|-RecordDecl 0x7fb2200162e0 <line:7:1, line:11:1> line:7:1 struct definition
+| |-FieldDecl 0x7fb2200163a8 <line:8:5, col:14> col:14 referenced qp_num 'unsigned int'
+| |-FieldDecl 0x7fb220016408 <line:9:5, col:14> col:14 referenced starting_psn 'unsigned int'
+| `-FieldDecl 0x7fb220016468 <line:10:5, col:11> col:11 private_data 'void *'
+|-VarDecl 0x7fb220016500 <line:7:1, line:11:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:7:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:7:1)'
+|-RecordDecl 0x7fb220016578 <line:12:1, line:16:1> line:12:1 struct definition
+| |-FieldDecl 0x7fb220016638 <line:13:5, col:14> col:14 referenced id 'unsigned int'
+| |-FieldDecl 0x7fb220016698 <line:14:5, col:14> col:14 referenced qpn 'unsigned int'
+| `-FieldDecl 0x7fb2200166f8 <line:15:5, col:14> col:14 referenced psn 'unsigned int'
+|-VarDecl 0x7fb220016790 <line:12:1, line:16:3> col:3 used b 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)'
+`-FunctionDecl 0x7fb220016828 <line:17:1, line:21:1> line:17:6 fn1 'void ()'
+  `-CompoundStmt 0x7fb220016c88 <col:12, line:21:1>
+    |-BinaryOperator 0x7fb2200169a0 <line:18:5, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fb2200168f0 <col:5, col:7> 'unsigned int' lvalue .qp_num 0x7fb2200163a8
+    | | `-DeclRefExpr 0x7fb2200168c8 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:7:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:7:1)' lvalue Var 0x7fb220016500 'a' 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:7:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:7:1)'
+    | `-ImplicitCastExpr 0x7fb220016988 <col:16, col:18> 'unsigned int' <LValueToRValue>
+    |   `-MemberExpr 0x7fb220016950 <col:16, col:18> 'unsigned int' lvalue .qpn 0x7fb220016698
+    |     `-DeclRefExpr 0x7fb220016928 <col:16> 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)' lvalue Var 0x7fb220016790 'b' 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)'
+    |-BinaryOperator 0x7fb220016b50 <line:19:5, col:24> 'unsigned int' '='
+    | |-MemberExpr 0x7fb220016aa0 <col:5, col:7> 'unsigned int' lvalue .starting_psn 0x7fb220016408
+    | | `-DeclRefExpr 0x7fb220016a78 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:7:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:7:1)' lvalue Var 0x7fb220016500 'a' 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:7:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:7:1)'
+    | `-ImplicitCastExpr 0x7fb220016b38 <col:22, col:24> 'unsigned int' <LValueToRValue>
+    |   `-MemberExpr 0x7fb220016b00 <col:22, col:24> 'unsigned int' lvalue .psn 0x7fb2200166f8
+    |     `-DeclRefExpr 0x7fb220016ad8 <col:22> 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)' lvalue Var 0x7fb220016790 'b' 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)'
+    `-CallExpr 0x7fb220016c40 <line:20:5, col:13> 'void'
+      |-ImplicitCastExpr 0x7fb220016c28 <col:5> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb220016b78 <col:5> 'void ()' Function 0x7fb220016200 'fn2' 'void ()'
+      `-ImplicitCastExpr 0x7fb220016c70 <col:9, col:11> 'unsigned int' <LValueToRValue>
+        `-MemberExpr 0x7fb220016bc8 <col:9, col:11> 'unsigned int' lvalue .id 0x7fb220016638
+          `-DeclRefExpr 0x7fb220016ba0 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)' lvalue Var 0x7fb220016790 'b' 'struct (anonymous struct at ../Data/C2AST/pr68306-3.c:12:1)':'struct (anonymous at ../Data/C2AST/pr68306-3.c:12:1)'

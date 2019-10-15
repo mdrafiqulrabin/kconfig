@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7ffab702bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffab706d868 <../Data/C2AST/pr84827.c:5:1, line:9:1> line:6:1 f1 'double (double)'
+| |-ParmVarDecl 0x7ffab702c978 <col:5, col:12> col:12 used a 'double'
+| `-CompoundStmt 0x7ffab706dba0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ffab706db88 <line:8:3, col:28>
+|     `-CallExpr 0x7ffab706db40 <col:10, col:28> 'double'
+|       |-ImplicitCastExpr 0x7ffab706db28 <col:10> 'double (*)(double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ffab706dab0 <col:10> '<builtin fn type>' Function 0x7ffab706d950 '__builtin_round' 'double (double)'
+|       `-ImplicitCastExpr 0x7ffab706db70 <col:27> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffab706dad8 <col:27> 'double' lvalue ParmVar 0x7ffab702c978 'a' 'double'
+|-FunctionDecl 0x7ffab706d950 <col:10> col:10 implicit used __builtin_round 'double (double)' extern
+| |-ParmVarDecl 0x7ffab706d9f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7ffab706da58 <col:10> Implicit
+| `-ConstAttr 0x7ffab706daa0 <col:10> Implicit
+|-FunctionDecl 0x7ffab706dc98 <line:11:1, line:15:1> line:12:1 f2 'float (float)'
+| |-ParmVarDecl 0x7ffab706dbd0 <col:5, col:11> col:11 used a 'float'
+| `-CompoundStmt 0x7ffab706df90 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ffab706df78 <line:14:3, col:29>
+|     `-CallExpr 0x7ffab706df30 <col:10, col:29> 'float'
+|       |-ImplicitCastExpr 0x7ffab706df18 <col:10> 'float (*)(float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ffab706dea0 <col:10> '<builtin fn type>' Function 0x7ffab706dd40 '__builtin_roundf' 'float (float)'
+|       `-ImplicitCastExpr 0x7ffab706df60 <col:28> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffab706dec8 <col:28> 'float' lvalue ParmVar 0x7ffab706dbd0 'a' 'float'
+|-FunctionDecl 0x7ffab706dd40 <col:10> col:10 implicit used __builtin_roundf 'float (float)' extern
+| |-ParmVarDecl 0x7ffab706dde0 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7ffab706de48 <col:10> Implicit
+| `-ConstAttr 0x7ffab706de90 <col:10> Implicit
+|-FunctionDecl 0x7ffab706e088 <line:17:1, line:21:1> line:18:1 f3 'long double (long double)'
+| |-ParmVarDecl 0x7ffab706dfc0 <col:5, col:17> col:17 used a 'long double'
+| `-CompoundStmt 0x7ffab706e380 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7ffab706e368 <line:20:3, col:29>
+|     `-CallExpr 0x7ffab706e320 <col:10, col:29> 'long double'
+|       |-ImplicitCastExpr 0x7ffab706e308 <col:10> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ffab706e290 <col:10> '<builtin fn type>' Function 0x7ffab706e130 '__builtin_roundl' 'long double (long double)'
+|       `-ImplicitCastExpr 0x7ffab706e350 <col:28> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffab706e2b8 <col:28> 'long double' lvalue ParmVar 0x7ffab706dfc0 'a' 'long double'
+`-FunctionDecl 0x7ffab706e130 <col:10> col:10 implicit used __builtin_roundl 'long double (long double)' extern
+  |-ParmVarDecl 0x7ffab706e1d0 <<invalid sloc>> <invalid sloc> 'long double'
+  |-NoThrowAttr 0x7ffab706e238 <col:10> Implicit
+  `-ConstAttr 0x7ffab706e280 <col:10> Implicit

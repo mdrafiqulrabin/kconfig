@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fd5ce8174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd5ce818160 <../Data/C2AST/pr42891.c:4:1, col:27> col:7 union B definition
+| |-FieldDecl 0x7fd5ce057e38 <col:11, col:15> col:15 referenced i 'int'
+| `-FieldDecl 0x7fd5ce057e98 <col:18, col:24> col:24 referenced f 'float'
+|-FunctionDecl 0x7fd5ce057fa0 <line:6:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fd5ce058260 <line:8:1, line:13:1> line:9:1 foo 'void (union B, union B)'
+  |-ParmVarDecl 0x7fd5ce0580d0 <col:6, col:14> col:14 used x 'union B':'union B'
+  |-ParmVarDecl 0x7fd5ce058150 <col:17, col:25> col:25 used y 'union B':'union B'
+  `-CompoundStmt 0x7fd5ce058550 <line:10:1, line:13:1>
+    `-IfStmt 0x7fd5ce058518 <line:11:3, line:12:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fd5ce058460 <line:11:7, col:18> 'int' prefix '!'
+      | `-ParenExpr 0x7fd5ce058440 <col:8, col:18> 'int'
+      |   `-BinaryOperator 0x7fd5ce058418 <col:9, col:17> 'int' '>'
+      |     |-ImplicitCastExpr 0x7fd5ce0583d0 <col:9, col:11> 'float' <LValueToRValue>
+      |     | `-MemberExpr 0x7fd5ce058338 <col:9, col:11> 'float' lvalue .f 0x7fd5ce057e98
+      |     |   `-DeclRefExpr 0x7fd5ce058310 <col:9> 'union B':'union B' lvalue ParmVar 0x7fd5ce058150 'y' 'union B':'union B'
+      |     `-ImplicitCastExpr 0x7fd5ce058400 <col:15, col:17> 'float' <IntegralToFloating>
+      |       `-ImplicitCastExpr 0x7fd5ce0583e8 <col:15, col:17> 'int' <LValueToRValue>
+      |         `-MemberExpr 0x7fd5ce058398 <col:15, col:17> 'int' lvalue .i 0x7fd5ce057e38
+      |           `-DeclRefExpr 0x7fd5ce058370 <col:15> 'union B':'union B' lvalue ParmVar 0x7fd5ce0580d0 'x' 'union B':'union B'
+      |-CallExpr 0x7fd5ce0584f0 <line:12:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7fd5ce0584d8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd5ce058480 <col:5> 'void (void)' Function 0x7fd5ce057fa0 'bar' 'void (void)'
+      `-<<<NULL>>>

@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fd65702bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd65702c978 <../Data/C2AST/pr49888.c:5:1, col:12> col:12 used v 'int' static
+| `-UsedAttr 0x7fd65702c9d8 <col:29>
+|-FunctionDecl 0x7fd657815380 <line:7:1, line:15:1> line:8:1 used f 'void (int *)' static
+| |-ParmVarDecl 0x7fd6578152c0 <col:4, col:9> col:9 used p 'int *'
+| |-CompoundStmt 0x7fd657815720 <line:9:1, line:15:1>
+| | |-DeclStmt 0x7fd657815560 <line:10:3, col:13>
+| | | `-VarDecl 0x7fd657815488 <col:3, col:12> col:7 used c 'int' cinit
+| | |   `-ImplicitCastExpr 0x7fd657815548 <col:11, col:12> 'int' <LValueToRValue>
+| | |     `-UnaryOperator 0x7fd657815528 <col:11, col:12> 'int' lvalue prefix '*'
+| | |       `-ImplicitCastExpr 0x7fd657815510 <col:12> 'int *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fd6578154e8 <col:12> 'int *' lvalue ParmVar 0x7fd6578152c0 'p' 'int *'
+| | |-BinaryOperator 0x7fd6578155e0 <line:11:3, col:7> 'int' '='
+| | | |-DeclRefExpr 0x7fd657815578 <col:3> 'int' lvalue Var 0x7fd65702c978 'v' 'int'
+| | | `-ImplicitCastExpr 0x7fd6578155c8 <col:7> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fd6578155a0 <col:7> 'int' lvalue Var 0x7fd657815488 'c' 'int'
+| | |-BinaryOperator 0x7fd657815688 <line:12:3, col:8> 'int' '='
+| | | |-UnaryOperator 0x7fd657815648 <col:3, col:4> 'int' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fd657815630 <col:4> 'int *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fd657815608 <col:4> 'int *' lvalue ParmVar 0x7fd6578152c0 'p' 'int *'
+| | | `-IntegerLiteral 0x7fd657815668 <col:8> 'int' 1
+| | `-BinaryOperator 0x7fd6578156f8 <line:14:3, col:7> 'int' '='
+| |   |-DeclRefExpr 0x7fd6578156b0 <col:3> 'int' lvalue Var 0x7fd65702c978 'v' 'int'
+| |   `-IntegerLiteral 0x7fd6578156d8 <col:7> 'int' 0
+| `-NoInlineAttr 0x7fd657815428 <line:7:28>
+`-FunctionDecl 0x7fd6578157a0 <line:16:1, line:22:1> line:17:1 main 'int ()'
+  `-CompoundStmt 0x7fd657815a08 <line:18:1, line:22:1>
+    |-DeclStmt 0x7fd6578158d8 <line:19:3, col:12>
+    | `-VarDecl 0x7fd657815858 <col:3, col:11> col:7 used a 'int' cinit
+    |   `-IntegerLiteral 0x7fd6578158b8 <col:11> 'int' 0
+    |-CallExpr 0x7fd6578159a0 <line:20:3, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fd657815988 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd6578158f0 <col:3> 'void (int *)' Function 0x7fd657815380 'f' 'void (int *)'
+    | `-UnaryOperator 0x7fd657815940 <col:6, col:7> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7fd657815918 <col:7> 'int' lvalue Var 0x7fd657815858 'a' 'int'
+    `-ReturnStmt 0x7fd6578159f0 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fd6578159d0 <col:10> 'int' 0

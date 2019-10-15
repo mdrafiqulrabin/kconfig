@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fcd8002bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcd8002c960 <../Data/C2AST/pr38736_x.c:4:1, line:7:1> line:4:8 struct alignment_test_struct definition
+| `-FieldDecl 0x7fcd8006d898 <line:6:3, col:15> col:8 space 'char [4]'
+|   `-AlignedAttr 0x7fcd8006d8e0 <col:32> aligned
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fcd8006d9f8 <line:9:1, col:27> ../Data/C2AST/pr38736_y.c:4:19 aligned_y_avx 'int (void)' extern
+`-FunctionDecl 0x7fcd8006db70 prev 0x7fcd8006d9f8 <../Data/C2AST/pr38736_x.c:11:1, line:15:1> ../Data/C2AST/pr38736_y.c:4:19 aligned_y_avx 'int (void)'
+  `-CompoundStmt 0x7fcd8006dcf8 <../Data/C2AST/pr38736_x.c:13:1, line:15:1>
+    `-ReturnStmt 0x7fcd8006dce0 <line:14:3, col:50>
+      `-ImplicitCastExpr 0x7fcd8006dc80 <col:10, col:50> 'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fcd8006dc60 <col:10, col:50> 'unsigned long' alignof 'struct alignment_test_struct':'struct alignment_test_struct'

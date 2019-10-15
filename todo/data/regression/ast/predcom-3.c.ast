@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fbba282bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbba2866e00 <../Data/C2AST/predcom-3.c:4:1, col:11> col:5 used a 'int [1000]'
+|-VarDecl 0x7fbba2866ee8 <col:1, col:20> col:14 used b 'int [1000]'
+`-FunctionDecl 0x7fbba2867020 <line:6:1, line:12:1> line:6:6 test 'void (void)'
+  `-CompoundStmt 0x7fbba2867748 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fbba2867138 <line:8:3, col:8>
+    | `-VarDecl 0x7fbba28670d8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fbba2867710 <line:10:3, line:11:43>
+      |-BinaryOperator 0x7fbba2867198 <line:10:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fbba2867150 <col:8> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+      | `-IntegerLiteral 0x7fbba2867178 <col:12> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbba2867220 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fbba2867208 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbba28671c0 <col:15> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+      | `-IntegerLiteral 0x7fbba28671e8 <col:19> 'int' 999
+      |-UnaryOperator 0x7fbba2867270 <col:24, col:25> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fbba2867248 <col:24> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+      `-BinaryOperator 0x7fbba28676e8 <line:11:5, col:43> 'int' '='
+        |-ArraySubscriptExpr 0x7fbba2867338 <col:5, col:8> 'int' lvalue
+        | |-ImplicitCastExpr 0x7fbba2867308 <col:5> 'int *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fbba2867290 <col:5> 'int [1000]' lvalue Var 0x7fbba2866ee8 'b' 'int [1000]'
+        | `-ImplicitCastExpr 0x7fbba2867320 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fbba28672b8 <col:7> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+        `-BinaryOperator 0x7fbba28676c0 <col:12, col:43> 'int' '/'
+          |-ParenExpr 0x7fbba2867680 <col:12, col:39> 'int'
+          | `-BinaryOperator 0x7fbba2867658 <col:13, col:38> 'int' '+'
+          |   |-BinaryOperator 0x7fbba2867528 <col:13, col:27> 'int' '+'
+          |   | |-ImplicitCastExpr 0x7fbba28674f8 <col:13, col:20> 'int' <LValueToRValue>
+          |   | | `-ArraySubscriptExpr 0x7fbba2867428 <col:13, col:20> 'int' lvalue
+          |   | |   |-ImplicitCastExpr 0x7fbba2867410 <col:13> 'int *' <ArrayToPointerDecay>
+          |   | |   | `-DeclRefExpr 0x7fbba2867360 <col:13> 'int [1000]' lvalue Var 0x7fbba2866e00 'a' 'int [1000]'
+          |   | |   `-BinaryOperator 0x7fbba28673e8 <col:15, col:19> 'int' '+'
+          |   | |     |-ImplicitCastExpr 0x7fbba28673d0 <col:15> 'int' <LValueToRValue>
+          |   | |     | `-DeclRefExpr 0x7fbba2867388 <col:15> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+          |   | |     `-IntegerLiteral 0x7fbba28673b0 <col:19> 'int' 1
+          |   | `-ImplicitCastExpr 0x7fbba2867510 <col:24, col:27> 'int' <LValueToRValue>
+          |   |   `-ArraySubscriptExpr 0x7fbba28674d0 <col:24, col:27> 'int' lvalue
+          |   |     |-ImplicitCastExpr 0x7fbba28674a0 <col:24> 'int *' <ArrayToPointerDecay>
+          |   |     | `-DeclRefExpr 0x7fbba2867450 <col:24> 'int [1000]' lvalue Var 0x7fbba2866e00 'a' 'int [1000]'
+          |   |     `-ImplicitCastExpr 0x7fbba28674b8 <col:26> 'int' <LValueToRValue>
+          |   |       `-DeclRefExpr 0x7fbba2867478 <col:26> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+          |   `-ImplicitCastExpr 0x7fbba2867640 <col:31, col:38> 'int' <LValueToRValue>
+          |     `-ArraySubscriptExpr 0x7fbba2867618 <col:31, col:38> 'int' lvalue
+          |       |-ImplicitCastExpr 0x7fbba2867600 <col:31> 'int *' <ArrayToPointerDecay>
+          |       | `-DeclRefExpr 0x7fbba2867550 <col:31> 'int [1000]' lvalue Var 0x7fbba2866e00 'a' 'int [1000]'
+          |       `-BinaryOperator 0x7fbba28675d8 <col:33, col:37> 'int' '-'
+          |         |-ImplicitCastExpr 0x7fbba28675c0 <col:33> 'int' <LValueToRValue>
+          |         | `-DeclRefExpr 0x7fbba2867578 <col:33> 'int' lvalue Var 0x7fbba28670d8 'i' 'int'
+          |         `-IntegerLiteral 0x7fbba28675a0 <col:37> 'int' 1
+          `-IntegerLiteral 0x7fbba28676a0 <col:43> 'int' 3

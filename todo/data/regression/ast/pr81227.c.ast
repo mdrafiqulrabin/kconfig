@@ -1,0 +1,85 @@
+TranslationUnitDecl 0x7f92e401a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f92e401b560 <../Data/C2AST/pr81227.c:5:1, col:23> col:8 struct S definition
+| `-FieldDecl 0x7f92e405d058 <col:12, col:20> col:16 referenced a 'int'
+|   `-IntegerLiteral 0x7f92e405d020 <col:20> 'int' 1
+|-VarDecl 0x7f92e405d0f0 <col:1, col:25> col:25 used b 'struct S':'struct S'
+|-VarDecl 0x7f92e405d1b0 <col:1, col:28> col:28 used c 'struct S':'struct S'
+|-VarDecl 0x7f92e405d248 <line:6:1, col:13> col:13 used d 'signed char'
+|-VarDecl 0x7f92e405d2c0 <col:1, col:16> col:16 used e 'signed char'
+|-VarDecl 0x7f92e405d338 <col:1, col:19> col:19 used f 'signed char'
+`-FunctionDecl 0x7f92e405d408 <line:8:1, line:22:1> line:9:1 foo 'void ()'
+  `-CompoundStmt 0x7f92e405deb0 <line:10:1, line:22:1>
+    `-WhileStmt 0x7f92e405de90 <line:11:3, line:21:5>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f92e405d4d0 <line:11:10> 'signed char' <LValueToRValue>
+      | `-DeclRefExpr 0x7f92e405d4a8 <col:10> 'signed char' lvalue Var 0x7f92e405d338 'f' 'signed char'
+      `-CompoundStmt 0x7f92e405de58 <line:12:5, line:21:5>
+        |-DeclStmt 0x7f92e405d638 <line:13:7, col:26>
+        | `-VarDecl 0x7f92e405d500 <col:7, col:25> col:19 used g 'signed char' cinit
+        |   `-ImplicitCastExpr 0x7f92e405d5d8 <col:23, col:25> 'signed char' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7f92e405d5c0 <col:23, col:25> 'int' <LValueToRValue>
+        |       `-MemberExpr 0x7f92e405d588 <col:23, col:25> 'int' lvalue bitfield .a 0x7f92e405d058
+        |         `-DeclRefExpr 0x7f92e405d560 <col:23> 'struct S':'struct S' lvalue Var 0x7f92e405d0f0 'b' 'struct S':'struct S'
+        |-IfStmt 0x7f92e405d8b8 <line:14:7, line:15:24>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7f92e405d678 <line:14:11> 'signed char' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f92e405d650 <col:11> 'signed char' lvalue Var 0x7f92e405d500 'g' 'signed char'
+        | |-BinaryOperator 0x7f92e405d890 <line:15:2, col:24> 'int' '='
+        | | |-MemberExpr 0x7f92e405d6b8 <col:2, col:4> 'int' lvalue bitfield .a 0x7f92e405d058
+        | | | `-DeclRefExpr 0x7f92e405d690 <col:2> 'struct S':'struct S' lvalue Var 0x7f92e405d0f0 'b' 'struct S':'struct S'
+        | | `-UnaryOperator 0x7f92e405d870 <col:8, col:24> 'int' prefix '~'
+        | |   `-ParenExpr 0x7f92e405d850 <col:9, col:24> 'int'
+        | |     `-BinaryOperator 0x7f92e405d828 <col:10, col:23> 'int' '+'
+        | |       |-IntegerLiteral 0x7f92e405d6f0 <col:10> 'int' 1
+        | |       `-ParenExpr 0x7f92e405d808 <col:14, col:23> 'int'
+        | |         `-BinaryOperator 0x7f92e405d7e0 <col:15, col:22> 'int' '||'
+        | |           |-ImplicitCastExpr 0x7f92e405d7b0 <col:15> 'int' <IntegralCast>
+        | |           | `-ImplicitCastExpr 0x7f92e405d798 <col:15> 'signed char' <LValueToRValue>
+        | |           |   `-DeclRefExpr 0x7f92e405d710 <col:15> 'signed char' lvalue Var 0x7f92e405d248 'd' 'signed char'
+        | |           `-ImplicitCastExpr 0x7f92e405d7c8 <col:20, col:22> 'int' <LValueToRValue>
+        | |             `-MemberExpr 0x7f92e405d760 <col:20, col:22> 'int' lvalue bitfield .a 0x7f92e405d058
+        | |               `-DeclRefExpr 0x7f92e405d738 <col:20> 'struct S':'struct S' lvalue Var 0x7f92e405d1b0 'c' 'struct S':'struct S'
+        | `-<<<NULL>>>
+        |-IfStmt 0x7f92e405db10 <line:16:7, line:17:6>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f92e405da60 <line:16:11, col:24> 'int' '&&'
+        | | |-BinaryOperator 0x7f92e405d9c0 <col:11, col:17> 'int' '<'
+        | | | |-ImplicitCastExpr 0x7f92e405d978 <col:11, col:13> 'int' <LValueToRValue>
+        | | | | `-MemberExpr 0x7f92e405d918 <col:11, col:13> 'int' lvalue bitfield .a 0x7f92e405d058
+        | | | |   `-DeclRefExpr 0x7f92e405d8f0 <col:11> 'struct S':'struct S' lvalue Var 0x7f92e405d0f0 'b' 'struct S':'struct S'
+        | | | `-ImplicitCastExpr 0x7f92e405d9a8 <col:17> 'int' <IntegralCast>
+        | | |   `-ImplicitCastExpr 0x7f92e405d990 <col:17> 'signed char' <LValueToRValue>
+        | | |     `-DeclRefExpr 0x7f92e405d950 <col:17> 'signed char' lvalue Var 0x7f92e405d500 'g' 'signed char'
+        | | `-ImplicitCastExpr 0x7f92e405da48 <col:22, col:24> 'int' <LValueToRValue>
+        | |   `-MemberExpr 0x7f92e405da10 <col:22, col:24> 'int' lvalue bitfield .a 0x7f92e405d058
+        | |     `-DeclRefExpr 0x7f92e405d9e8 <col:22> 'struct S':'struct S' lvalue Var 0x7f92e405d0f0 'b' 'struct S':'struct S'
+        | |-BinaryOperator 0x7f92e405dae8 <line:17:2, col:6> 'signed char' '='
+        | | |-DeclRefExpr 0x7f92e405da88 <col:2> 'signed char' lvalue Var 0x7f92e405d500 'g' 'signed char'
+        | | `-ImplicitCastExpr 0x7f92e405dad0 <col:6> 'signed char' <IntegralCast>
+        | |   `-IntegerLiteral 0x7f92e405dab0 <col:6> 'int' 0
+        | `-<<<NULL>>>
+        |-IfStmt 0x7f92e405dd40 <line:18:7, line:19:8>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f92e405dc38 <line:18:11, col:19> 'int' '>'
+        | | |-ImplicitCastExpr 0x7f92e405dc08 <col:11, col:13> 'int' <LValueToRValue>
+        | | | `-MemberExpr 0x7f92e405db70 <col:11, col:13> 'int' lvalue bitfield .a 0x7f92e405d058
+        | | |   `-DeclRefExpr 0x7f92e405db48 <col:11> 'struct S':'struct S' lvalue Var 0x7f92e405d0f0 'b' 'struct S':'struct S'
+        | | `-ImplicitCastExpr 0x7f92e405dc20 <col:17, col:19> 'int' <LValueToRValue>
+        | |   `-MemberExpr 0x7f92e405dbd0 <col:17, col:19> 'int' lvalue bitfield .a 0x7f92e405d058
+        | |     `-DeclRefExpr 0x7f92e405dba8 <col:17> 'struct S':'struct S' lvalue Var 0x7f92e405d1b0 'c' 'struct S':'struct S'
+        | |-BinaryOperator 0x7f92e405dd18 <line:19:2, col:8> 'int' '='
+        | | |-MemberExpr 0x7f92e405dc88 <col:2, col:4> 'int' lvalue bitfield .a 0x7f92e405d058
+        | | | `-DeclRefExpr 0x7f92e405dc60 <col:2> 'struct S':'struct S' lvalue Var 0x7f92e405d0f0 'b' 'struct S':'struct S'
+        | | `-ImplicitCastExpr 0x7f92e405dd00 <col:8> 'int' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7f92e405dce8 <col:8> 'signed char' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f92e405dcc0 <col:8> 'signed char' lvalue Var 0x7f92e405d500 'g' 'signed char'
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7f92e405de30 <line:20:7, col:13> 'int' '='
+          |-MemberExpr 0x7f92e405dda0 <col:7, col:9> 'int' lvalue bitfield .a 0x7f92e405d058
+          | `-DeclRefExpr 0x7f92e405dd78 <col:7> 'struct S':'struct S' lvalue Var 0x7f92e405d1b0 'c' 'struct S':'struct S'
+          `-ImplicitCastExpr 0x7f92e405de18 <col:13> 'int' <IntegralCast>
+            `-ImplicitCastExpr 0x7f92e405de00 <col:13> 'signed char' <LValueToRValue>
+              `-DeclRefExpr 0x7f92e405ddd8 <col:13> 'signed char' lvalue Var 0x7f92e405d2c0 'e' 'signed char'

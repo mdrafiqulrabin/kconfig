@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7ff46f8232e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff46f823f60 <../Data/C2AST/pr28776-1.c:1:9, line:4:1> line:1:16 struct dw_fde_struct definition
+| `-FieldDecl 0x7ff470811e38 <line:3:3, col:7> col:7 referenced decl 'int'
+|-TypedefDecl 0x7ff470811f30 <line:1:1, line:4:4> col:4 referenced dw_fde_ref 'struct dw_fde_struct *'
+| `-PointerType 0x7ff470811ee0 'struct dw_fde_struct *'
+|   `-ElaboratedType 0x7ff470811e80 'struct dw_fde_struct' sugar
+|     `-RecordType 0x7ff470811e00 'struct dw_fde_struct'
+|       `-Record 0x7ff46f823f60 'dw_fde_struct'
+|-VarDecl 0x7ff470811fd0 <line:5:1, col:12> col:12 used fde_table 'dw_fde_ref':'struct dw_fde_struct *'
+|-VarDecl 0x7ff470812088 <line:6:1, col:10> col:10 used fde_table_in_use 'unsigned int'
+`-FunctionDecl 0x7ff4708121b0 <line:7:1, line:16:1> line:7:6 output_call_frame_info 'void (void)'
+  `-CompoundStmt 0x7ff4708128f0 <line:8:1, line:16:1>
+    |-DeclStmt 0x7ff4708122c8 <line:9:3, col:17>
+    | `-VarDecl 0x7ff470812268 <col:3, col:16> col:16 used i 'unsigned int'
+    |-DeclStmt 0x7ff470812350 <line:10:3, col:17>
+    | `-VarDecl 0x7ff4708122f0 <col:3, col:14> col:14 used fde 'dw_fde_ref':'struct dw_fde_struct *'
+    `-ForStmt 0x7ff4708128b8 <line:11:3, line:15:5>
+      |-BinaryOperator 0x7ff4708123c8 <line:11:8, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7ff470812368 <col:8> 'unsigned int' lvalue Var 0x7ff470812268 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7ff4708123b0 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7ff470812390 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff470812470 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff470812440 <col:15> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff4708123f0 <col:15> 'unsigned int' lvalue Var 0x7ff470812268 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7ff470812458 <col:19> 'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff470812418 <col:19> 'unsigned int' lvalue Var 0x7ff470812088 'fde_table_in_use' 'unsigned int'
+      |-UnaryOperator 0x7ff4708124c0 <col:37, col:38> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7ff470812498 <col:37> 'unsigned int' lvalue Var 0x7ff470812268 'i' 'unsigned int'
+      `-CompoundStmt 0x7ff470812898 <line:12:5, line:15:5>
+        |-BinaryOperator 0x7ff4708125d0 <line:13:7, col:25> 'dw_fde_ref':'struct dw_fde_struct *' '='
+        | |-DeclRefExpr 0x7ff4708124e0 <col:7> 'dw_fde_ref':'struct dw_fde_struct *' lvalue Var 0x7ff4708122f0 'fde' 'dw_fde_ref':'struct dw_fde_struct *'
+        | `-UnaryOperator 0x7ff4708125b0 <col:13, col:25> 'struct dw_fde_struct *' prefix '&'
+        |   `-ArraySubscriptExpr 0x7ff470812588 <col:14, col:25> 'struct dw_fde_struct':'struct dw_fde_struct' lvalue
+        |     |-ImplicitCastExpr 0x7ff470812558 <col:14> 'dw_fde_ref':'struct dw_fde_struct *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7ff470812508 <col:14> 'dw_fde_ref':'struct dw_fde_struct *' lvalue Var 0x7ff470811fd0 'fde_table' 'dw_fde_ref':'struct dw_fde_struct *'
+        |     `-ImplicitCastExpr 0x7ff470812570 <col:24> 'unsigned int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7ff470812530 <col:24> 'unsigned int' lvalue Var 0x7ff470812268 'i' 'unsigned int'
+        `-CallExpr 0x7ff470812850 <line:14:7, col:59> 'int'
+          |-ImplicitCastExpr 0x7ff470812838 <col:7> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff470812700 <col:7> 'int ()' Function 0x7ff470812650 'tree_contains_struct_check_failed' 'int ()'
+          `-ImplicitCastExpr 0x7ff470812880 <col:42, col:55> 'int' <LValueToRValue>
+            `-MemberExpr 0x7ff4708127d0 <col:42, col:55> 'int' lvalue .decl 0x7ff470811e38
+              `-ArraySubscriptExpr 0x7ff4708127a8 <col:42, col:53> 'struct dw_fde_struct':'struct dw_fde_struct' lvalue
+                |-ImplicitCastExpr 0x7ff470812778 <col:42> 'dw_fde_ref':'struct dw_fde_struct *' <LValueToRValue>
+                | `-DeclRefExpr 0x7ff470812728 <col:42> 'dw_fde_ref':'struct dw_fde_struct *' lvalue Var 0x7ff470811fd0 'fde_table' 'dw_fde_ref':'struct dw_fde_struct *'
+                `-ImplicitCastExpr 0x7ff470812790 <col:52> 'unsigned int' <LValueToRValue>
+                  `-DeclRefExpr 0x7ff470812750 <col:52> 'unsigned int' lvalue Var 0x7ff470812268 'i' 'unsigned int'

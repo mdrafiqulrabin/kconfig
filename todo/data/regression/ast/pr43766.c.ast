@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fd59181a2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd59282a6f0 <../Data/C2AST/pr43766.c:5:1, line:8:1> line:5:6 p 'void (int *, int)'
+| |-ParmVarDecl 0x7fd59181afa0 <col:9, col:14> col:14 used a 'int *'
+| |-ParmVarDecl 0x7fd59282a618 <col:17, col:21> col:21 used i 'int'
+| `-CompoundStmt 0x7fd59282ab28 <line:6:1, line:8:1>
+|   `-CallExpr 0x7fd59282aae0 <line:7:3, col:28> 'void'
+|     |-ImplicitCastExpr 0x7fd59282aac8 <col:3> 'void (*)(const void *, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fd59282a9a8 <col:3> '<builtin fn type>' Function 0x7fd59282a848 '__builtin_prefetch' 'void (const void *, ...)'
+|     `-ImplicitCastExpr 0x7fd59282ab10 <col:23, col:27> 'const void *' <BitCast>
+|       `-UnaryOperator 0x7fd59282aa78 <col:23, col:27> 'int *' prefix '&'
+|         `-ArraySubscriptExpr 0x7fd59282aa50 <col:24, col:27> 'int' lvalue
+|           |-ImplicitCastExpr 0x7fd59282aa20 <col:24> 'int *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fd59282a9d0 <col:24> 'int *' lvalue ParmVar 0x7fd59181afa0 'a' 'int *'
+|           `-ImplicitCastExpr 0x7fd59282aa38 <col:26> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd59282a9f8 <col:26> 'int' lvalue ParmVar 0x7fd59282a618 'i' 'int'
+`-FunctionDecl 0x7fd59282a848 <col:3> col:3 implicit used __builtin_prefetch 'void (const void *, ...)' extern
+  |-ParmVarDecl 0x7fd59282a8e8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-NoThrowAttr 0x7fd59282a950 <col:3> Implicit
+  `-ConstAttr 0x7fd59282a998 <col:3> Implicit

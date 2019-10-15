@@ -1,0 +1,754 @@
+In file included from ../Data/C2AST/pragma_arch_attribute.c:6:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/arm_acle.h:28:2: error: "ACLE intrinsics support not enabled."
+#error "ACLE intrinsics support not enabled."
+ ^
+../Data/C2AST/pragma_arch_attribute.c:15:3: error: "__ARM_FEATURE_CRC32 is not defined in push 1."
+# error "__ARM_FEATURE_CRC32 is not defined in push 1."
+  ^
+../Data/C2AST/pragma_arch_attribute.c:26:3: error: "__ARM_FEATURE_CRC32 is not defined in push 2."
+# error "__ARM_FEATURE_CRC32 is not defined in push 2."
+  ^
+TranslationUnitDecl 0x7ffec38068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffec3806e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffec3806b80 '__int128'
+|-TypedefDecl 0x7ffec3806ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffec3806ba0 'unsigned __int128'
+|-TypedefDecl 0x7ffec38071a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffec3806fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffec3806f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffec3807240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffec3807200 'char *'
+|   `-BuiltinType 0x7ffec3806980 'char'
+|-TypedefDecl 0x7ffec3807508 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffec38074b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffec3807320 'struct __va_list_tag'
+|     `-Record 0x7ffec3807298 '__va_list_tag'
+|-TypedefDecl 0x7ffec3807578 </usr/include/sys/_types/_int8_t.h:30:1, col:24> col:24 referenced int8_t 'signed char'
+| `-BuiltinType 0x7ffec38069a0 'signed char'
+|-TypedefDecl 0x7ffec402f400 </usr/include/sys/_types/_int16_t.h:30:1, col:17> col:17 referenced int16_t 'short'
+| `-BuiltinType 0x7ffec38069c0 'short'
+|-TypedefDecl 0x7ffec402f470 </usr/include/sys/_types/_int32_t.h:30:1, col:15> col:15 referenced int32_t 'int'
+| `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec402f4e0 </usr/include/sys/_types/_int64_t.h:30:1, col:20> col:20 referenced int64_t 'long long'
+| `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec402f550 </usr/include/_types/_uint8_t.h:31:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7ffec3806a40 'unsigned char'
+|-TypedefDecl 0x7ffec402f5c0 </usr/include/_types/_uint16_t.h:31:1, col:24> col:24 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7ffec3806a60 'unsigned short'
+|-TypedefDecl 0x7ffec402f630 </usr/include/_types/_uint32_t.h:31:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec402f6a0 </usr/include/_types/_uint64_t.h:31:1, col:28> col:28 referenced uint64_t 'unsigned long long'
+| `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec402f730 </usr/include/stdint.h:29:1, col:26> col:26 int_least8_t 'int8_t':'signed char'
+| `-TypedefType 0x7ffec402f700 'int8_t' sugar
+|   |-Typedef 0x7ffec3807578 'int8_t'
+|   `-BuiltinType 0x7ffec38069a0 'signed char'
+|-TypedefDecl 0x7ffec402f7c0 <line:30:1, col:25> col:25 int_least16_t 'int16_t':'short'
+| `-TypedefType 0x7ffec402f790 'int16_t' sugar
+|   |-Typedef 0x7ffec402f400 'int16_t'
+|   `-BuiltinType 0x7ffec38069c0 'short'
+|-TypedefDecl 0x7ffec402f850 <line:31:1, col:25> col:25 int_least32_t 'int32_t':'int'
+| `-TypedefType 0x7ffec402f820 'int32_t' sugar
+|   |-Typedef 0x7ffec402f470 'int32_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec402f8e0 <line:32:1, col:25> col:25 int_least64_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec402f970 <line:33:1, col:25> col:25 uint_least8_t 'uint8_t':'unsigned char'
+| `-TypedefType 0x7ffec402f940 'uint8_t' sugar
+|   |-Typedef 0x7ffec402f550 'uint8_t'
+|   `-BuiltinType 0x7ffec3806a40 'unsigned char'
+|-TypedefDecl 0x7ffec402fa00 <line:34:1, col:24> col:24 uint_least16_t 'uint16_t':'unsigned short'
+| `-TypedefType 0x7ffec402f9d0 'uint16_t' sugar
+|   |-Typedef 0x7ffec402f5c0 'uint16_t'
+|   `-BuiltinType 0x7ffec3806a60 'unsigned short'
+|-TypedefDecl 0x7ffec402fa90 <line:35:1, col:24> col:24 uint_least32_t 'uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec402fa60 'uint32_t' sugar
+|   |-Typedef 0x7ffec402f630 'uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec402fb20 <line:36:1, col:24> col:24 uint_least64_t 'uint64_t':'unsigned long long'
+| `-TypedefType 0x7ffec402faf0 'uint64_t' sugar
+|   |-Typedef 0x7ffec402f6a0 'uint64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec402fb88 <line:40:1, col:27> col:27 int_fast8_t 'int8_t':'signed char'
+| `-TypedefType 0x7ffec402f700 'int8_t' sugar
+|   |-Typedef 0x7ffec3807578 'int8_t'
+|   `-BuiltinType 0x7ffec38069a0 'signed char'
+|-TypedefDecl 0x7ffec402fbf0 <line:41:1, col:26> col:26 int_fast16_t 'int16_t':'short'
+| `-TypedefType 0x7ffec402f790 'int16_t' sugar
+|   |-Typedef 0x7ffec402f400 'int16_t'
+|   `-BuiltinType 0x7ffec38069c0 'short'
+|-TypedefDecl 0x7ffec402fc58 <line:42:1, col:26> col:26 int_fast32_t 'int32_t':'int'
+| `-TypedefType 0x7ffec402f820 'int32_t' sugar
+|   |-Typedef 0x7ffec402f470 'int32_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec402fcc0 <line:43:1, col:26> col:26 int_fast64_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec402fd28 <line:44:1, col:26> col:26 uint_fast8_t 'uint8_t':'unsigned char'
+| `-TypedefType 0x7ffec402f940 'uint8_t' sugar
+|   |-Typedef 0x7ffec402f550 'uint8_t'
+|   `-BuiltinType 0x7ffec3806a40 'unsigned char'
+|-TypedefDecl 0x7ffec402fd90 <line:45:1, col:25> col:25 uint_fast16_t 'uint16_t':'unsigned short'
+| `-TypedefType 0x7ffec402f9d0 'uint16_t' sugar
+|   |-Typedef 0x7ffec402f5c0 'uint16_t'
+|   `-BuiltinType 0x7ffec3806a60 'unsigned short'
+|-TypedefDecl 0x7ffec402fdf8 <line:46:1, col:25> col:25 uint_fast32_t 'uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec402fa60 'uint32_t' sugar
+|   |-Typedef 0x7ffec402f630 'uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec402fe60 <line:47:1, col:25> col:25 uint_fast64_t 'uint64_t':'unsigned long long'
+| `-TypedefType 0x7ffec402faf0 'uint64_t' sugar
+|   |-Typedef 0x7ffec402f6a0 'uint64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec402fed0 </usr/include/i386/_types.h:37:1, col:24> col:24 __int8_t 'signed char'
+| `-BuiltinType 0x7ffec38069a0 'signed char'
+|-TypedefDecl 0x7ffec402ff40 <line:41:1, col:24> col:24 __uint8_t 'unsigned char'
+| `-BuiltinType 0x7ffec3806a40 'unsigned char'
+|-TypedefDecl 0x7ffec402ffb0 <line:42:1, col:17> col:17 __int16_t 'short'
+| `-BuiltinType 0x7ffec38069c0 'short'
+|-TypedefDecl 0x7ffec4030020 <line:43:1, col:25> col:25 referenced __uint16_t 'unsigned short'
+| `-BuiltinType 0x7ffec3806a60 'unsigned short'
+|-TypedefDecl 0x7ffec4030090 <line:44:1, col:15> col:15 referenced __int32_t 'int'
+| `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec4030100 <line:45:1, col:23> col:23 referenced __uint32_t 'unsigned int'
+| `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4030170 <line:46:1, col:20> col:20 referenced __int64_t 'long long'
+| `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec40301e0 <line:47:1, col:28> col:28 referenced __uint64_t 'unsigned long long'
+| `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec4030250 <line:49:1, col:16> col:16 referenced __darwin_intptr_t 'long'
+| `-BuiltinType 0x7ffec3806a00 'long'
+|-TypedefDecl 0x7ffec40302c0 <line:50:1, col:23> col:23 referenced __darwin_natural_t 'unsigned int'
+| `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4030330 <line:70:1, col:15> col:15 __darwin_ct_rune_t 'int'
+| `-BuiltinType 0x7ffec38069e0 'int'
+|-RecordDecl 0x7ffec4032200 <line:76:9, line:79:1> line:76:9 union definition
+| |-FieldDecl 0x7ffec4032328 <line:77:2, col:22> col:8 __mbstate8 'char [128]'
+| `-FieldDecl 0x7ffec4032388 <line:78:2, col:12> col:12 _mbstateL 'long long'
+|-TypedefDecl 0x7ffec4032420 <line:76:1, line:79:3> col:3 referenced __mbstate_t 'union __mbstate_t':'__mbstate_t'
+| `-ElaboratedType 0x7ffec40323d0 'union __mbstate_t' sugar
+|   `-RecordType 0x7ffec4032290 '__mbstate_t'
+|     `-Record 0x7ffec4032200 ''
+|-TypedefDecl 0x7ffec40324c0 <line:81:1, col:22> col:22 __darwin_mbstate_t '__mbstate_t':'__mbstate_t'
+| `-TypedefType 0x7ffec4032490 '__mbstate_t' sugar
+|   |-Typedef 0x7ffec4032420 '__mbstate_t'
+|   `-ElaboratedType 0x7ffec40323d0 'union __mbstate_t' sugar
+|     `-RecordType 0x7ffec4032290 '__mbstate_t'
+|       `-Record 0x7ffec4032200 ''
+|-TypedefDecl 0x7ffec4032530 <line:84:1, col:26> col:26 __darwin_ptrdiff_t 'long'
+| `-BuiltinType 0x7ffec3806a00 'long'
+|-TypedefDecl 0x7ffec40325a0 <line:92:1, col:24> col:24 __darwin_size_t 'unsigned long'
+| `-BuiltinType 0x7ffec3806aa0 'unsigned long'
+|-TypedefDecl 0x7ffec4032630 <line:98:1, col:27> col:27 __darwin_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7ffec4032600 '__builtin_va_list' sugar
+|   |-Typedef 0x7ffec3807508 '__builtin_va_list'
+|   `-ConstantArrayType 0x7ffec38074b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7ffec3807320 'struct __va_list_tag'
+|       `-Record 0x7ffec3807298 '__va_list_tag'
+|-TypedefDecl 0x7ffec40326a0 <line:104:1, col:25> col:25 referenced __darwin_wchar_t 'int'
+| `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec4032730 <line:109:1, col:26> col:26 __darwin_rune_t '__darwin_wchar_t':'int'
+| `-TypedefType 0x7ffec4032700 '__darwin_wchar_t' sugar
+|   |-Typedef 0x7ffec40326a0 '__darwin_wchar_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec40327a0 <line:112:1, col:24> col:24 __darwin_wint_t 'int'
+| `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec4032810 <line:117:1, col:24> col:24 __darwin_clock_t 'unsigned long'
+| `-BuiltinType 0x7ffec3806aa0 'unsigned long'
+|-TypedefDecl 0x7ffec40328a0 <line:118:1, col:21> col:21 __darwin_socklen_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec4032870 '__uint32_t' sugar
+|   |-Typedef 0x7ffec4030100 '__uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032910 <line:119:1, col:16> col:16 __darwin_ssize_t 'long'
+| `-BuiltinType 0x7ffec3806a00 'long'
+|-TypedefDecl 0x7ffec4032980 <line:120:1, col:16> col:16 __darwin_time_t 'long'
+| `-BuiltinType 0x7ffec3806a00 'long'
+|-TypedefDecl 0x7ffec4032a10 </usr/include/sys/_types.h:55:1, col:19> col:19 __darwin_blkcnt_t '__int64_t':'long long'
+| `-TypedefType 0x7ffec40329e0 '__int64_t' sugar
+|   |-Typedef 0x7ffec4030170 '__int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec4032aa0 <line:56:1, col:19> col:19 __darwin_blksize_t '__int32_t':'int'
+| `-TypedefType 0x7ffec4032a70 '__int32_t' sugar
+|   |-Typedef 0x7ffec4030090 '__int32_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec4032b08 <line:57:1, col:19> col:19 __darwin_dev_t '__int32_t':'int'
+| `-TypedefType 0x7ffec4032a70 '__int32_t' sugar
+|   |-Typedef 0x7ffec4030090 '__int32_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec4032b78 <line:58:1, col:22> col:22 __darwin_fsblkcnt_t 'unsigned int'
+| `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032be8 <line:59:1, col:22> col:22 __darwin_fsfilcnt_t 'unsigned int'
+| `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032c50 <line:60:1, col:20> col:20 __darwin_gid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec4032870 '__uint32_t' sugar
+|   |-Typedef 0x7ffec4030100 '__uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032cb8 <line:61:1, col:20> col:20 __darwin_id_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec4032870 '__uint32_t' sugar
+|   |-Typedef 0x7ffec4030100 '__uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032d40 <line:62:1, col:20> col:20 referenced __darwin_ino64_t '__uint64_t':'unsigned long long'
+| `-TypedefType 0x7ffec4032d10 '__uint64_t' sugar
+|   |-Typedef 0x7ffec40301e0 '__uint64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec4032dd0 <line:64:1, col:26> col:26 __darwin_ino_t '__darwin_ino64_t':'unsigned long long'
+| `-TypedefType 0x7ffec4032da0 '__darwin_ino64_t' sugar
+|   |-Typedef 0x7ffec4032d40 '__darwin_ino64_t'
+|   `-TypedefType 0x7ffec4032d10 '__uint64_t' sugar
+|     |-Typedef 0x7ffec40301e0 '__uint64_t'
+|     `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec4032e60 <line:68:1, col:28> col:28 referenced __darwin_mach_port_name_t '__darwin_natural_t':'unsigned int'
+| `-TypedefType 0x7ffec4032e30 '__darwin_natural_t' sugar
+|   |-Typedef 0x7ffec40302c0 '__darwin_natural_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032ef0 <line:69:1, col:35> col:35 __darwin_mach_port_t '__darwin_mach_port_name_t':'unsigned int'
+| `-TypedefType 0x7ffec4032ec0 '__darwin_mach_port_name_t' sugar
+|   |-Typedef 0x7ffec4032e60 '__darwin_mach_port_name_t'
+|   `-TypedefType 0x7ffec4032e30 '__darwin_natural_t' sugar
+|     |-Typedef 0x7ffec40302c0 '__darwin_natural_t'
+|     `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4032f80 <line:70:1, col:20> col:20 __darwin_mode_t '__uint16_t':'unsigned short'
+| `-TypedefType 0x7ffec4032f50 '__uint16_t' sugar
+|   |-Typedef 0x7ffec4030020 '__uint16_t'
+|   `-BuiltinType 0x7ffec3806a60 'unsigned short'
+|-TypedefDecl 0x7ffec4032fe8 <line:71:1, col:19> col:19 __darwin_off_t '__int64_t':'long long'
+| `-TypedefType 0x7ffec40329e0 '__int64_t' sugar
+|   |-Typedef 0x7ffec4030170 '__int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec4033050 <line:72:1, col:19> col:19 __darwin_pid_t '__int32_t':'int'
+| `-TypedefType 0x7ffec4032a70 '__int32_t' sugar
+|   |-Typedef 0x7ffec4030090 '__int32_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec40330b8 <line:73:1, col:20> col:20 __darwin_sigset_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec4032870 '__uint32_t' sugar
+|   |-Typedef 0x7ffec4030100 '__uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4033120 <line:74:1, col:19> col:19 __darwin_suseconds_t '__int32_t':'int'
+| `-TypedefType 0x7ffec4032a70 '__int32_t' sugar
+|   |-Typedef 0x7ffec4030090 '__int32_t'
+|   `-BuiltinType 0x7ffec38069e0 'int'
+|-TypedefDecl 0x7ffec4033188 <line:75:1, col:20> col:20 __darwin_uid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec4032870 '__uint32_t' sugar
+|   |-Typedef 0x7ffec4030100 '__uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4033200 <line:76:1, col:20> col:20 __darwin_useconds_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7ffec4032870 '__uint32_t' sugar
+|   |-Typedef 0x7ffec4030100 '__uint32_t'
+|   `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec40332e0 <line:77:1, col:41> col:23 __darwin_uuid_t 'unsigned char [16]'
+| `-ConstantArrayType 0x7ffec4033280 'unsigned char [16]' 16 
+|   `-BuiltinType 0x7ffec3806a40 'unsigned char'
+|-TypedefDecl 0x7ffec40333b8 <line:78:1, col:39> col:14 __darwin_uuid_string_t 'char [37]'
+| `-ConstantArrayType 0x7ffec4033360 'char [37]' 37 
+|   `-BuiltinType 0x7ffec3806980 'char'
+|-RecordDecl 0x7ffec4033410 </usr/include/sys/_pthread/_pthread_types.h:57:1, line:61:1> line:57:8 struct __darwin_pthread_handler_rec definition
+| |-FieldDecl 0x7ffec4033640 <line:58:2, col:26> col:9 __routine 'void (*)(void *)'
+| |-FieldDecl 0x7ffec40336a0 <line:59:2, col:8> col:8 __arg 'void *'
+| `-FieldDecl 0x7ffec40337a0 <line:60:2, col:39> col:39 __next 'struct __darwin_pthread_handler_rec *'
+|-RecordDecl 0x7ffec40337e8 <line:63:1, line:66:1> line:63:8 struct _opaque_pthread_attr_t definition
+| |-FieldDecl 0x7ffec40338a8 <line:64:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4033968 <line:65:2, col:37> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7ffec40339b0 <line:68:1, line:71:1> line:68:8 struct _opaque_pthread_cond_t definition
+| |-FieldDecl 0x7ffec4033a78 <line:69:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4033b38 <line:70:2, col:37> col:7 __opaque 'char [40]'
+|-RecordDecl 0x7ffec4033b80 <line:73:1, line:76:1> line:73:8 struct _opaque_pthread_condattr_t definition
+| |-FieldDecl 0x7ffec4033c48 <line:74:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4033d08 <line:75:2, col:41> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7ffec4033d50 <line:78:1, line:81:1> line:78:8 struct _opaque_pthread_mutex_t definition
+| |-FieldDecl 0x7ffec4033e18 <line:79:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4033ea0 <line:80:2, col:38> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7ffec4033ee8 <line:83:1, line:86:1> line:83:8 struct _opaque_pthread_mutexattr_t definition
+| |-FieldDecl 0x7ffec4033fa8 <line:84:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4034030 <line:85:2, col:42> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7ffec4034078 <line:88:1, line:91:1> line:88:8 struct _opaque_pthread_once_t definition
+| |-FieldDecl 0x7ffec4034138 <line:89:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4036200 <line:90:2, col:37> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7ffec4036248 <line:93:1, line:96:1> line:93:8 struct _opaque_pthread_rwlock_t definition
+| |-FieldDecl 0x7ffec4036308 <line:94:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec40363c8 <line:95:2, col:39> col:7 __opaque 'char [192]'
+|-RecordDecl 0x7ffec4036410 <line:98:1, line:101:1> line:98:8 struct _opaque_pthread_rwlockattr_t definition
+| |-FieldDecl 0x7ffec40364d8 <line:99:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7ffec4036598 <line:100:2, col:43> col:7 __opaque 'char [16]'
+|-RecordDecl 0x7ffec40365e0 <line:103:1, line:107:1> line:103:8 struct _opaque_pthread_t definition
+| |-FieldDecl 0x7ffec40366a8 <line:104:2, col:7> col:7 __sig 'long'
+| |-FieldDecl 0x7ffec4036718 <line:105:2, col:40> col:40 __cleanup_stack 'struct __darwin_pthread_handler_rec *'
+| `-FieldDecl 0x7ffec40367d8 <line:106:2, col:32> col:7 __opaque 'char [8176]'
+|-TypedefDecl 0x7ffec4036870 <line:109:1, col:39> col:39 __darwin_pthread_attr_t 'struct _opaque_pthread_attr_t':'struct _opaque_pthread_attr_t'
+| `-ElaboratedType 0x7ffec4036820 'struct _opaque_pthread_attr_t' sugar
+|   `-RecordType 0x7ffec4033870 'struct _opaque_pthread_attr_t'
+|     `-Record 0x7ffec40337e8 '_opaque_pthread_attr_t'
+|-TypedefDecl 0x7ffec4036920 <line:110:1, col:39> col:39 __darwin_pthread_cond_t 'struct _opaque_pthread_cond_t':'struct _opaque_pthread_cond_t'
+| `-ElaboratedType 0x7ffec40368d0 'struct _opaque_pthread_cond_t' sugar
+|   `-RecordType 0x7ffec4033a40 'struct _opaque_pthread_cond_t'
+|     `-Record 0x7ffec40339b0 '_opaque_pthread_cond_t'
+|-TypedefDecl 0x7ffec40369d0 <line:111:1, col:43> col:43 __darwin_pthread_condattr_t 'struct _opaque_pthread_condattr_t':'struct _opaque_pthread_condattr_t'
+| `-ElaboratedType 0x7ffec4036980 'struct _opaque_pthread_condattr_t' sugar
+|   `-RecordType 0x7ffec4033c10 'struct _opaque_pthread_condattr_t'
+|     `-Record 0x7ffec4033b80 '_opaque_pthread_condattr_t'
+|-TypedefDecl 0x7ffec4036a40 <line:112:1, col:23> col:23 __darwin_pthread_key_t 'unsigned long'
+| `-BuiltinType 0x7ffec3806aa0 'unsigned long'
+|-TypedefDecl 0x7ffec4036af0 <line:113:1, col:40> col:40 __darwin_pthread_mutex_t 'struct _opaque_pthread_mutex_t':'struct _opaque_pthread_mutex_t'
+| `-ElaboratedType 0x7ffec4036aa0 'struct _opaque_pthread_mutex_t' sugar
+|   `-RecordType 0x7ffec4033de0 'struct _opaque_pthread_mutex_t'
+|     `-Record 0x7ffec4033d50 '_opaque_pthread_mutex_t'
+|-TypedefDecl 0x7ffec4036ba0 <line:114:1, col:44> col:44 __darwin_pthread_mutexattr_t 'struct _opaque_pthread_mutexattr_t':'struct _opaque_pthread_mutexattr_t'
+| `-ElaboratedType 0x7ffec4036b50 'struct _opaque_pthread_mutexattr_t' sugar
+|   `-RecordType 0x7ffec4033f70 'struct _opaque_pthread_mutexattr_t'
+|     `-Record 0x7ffec4033ee8 '_opaque_pthread_mutexattr_t'
+|-TypedefDecl 0x7ffec4036c50 <line:115:1, col:39> col:39 __darwin_pthread_once_t 'struct _opaque_pthread_once_t':'struct _opaque_pthread_once_t'
+| `-ElaboratedType 0x7ffec4036c00 'struct _opaque_pthread_once_t' sugar
+|   `-RecordType 0x7ffec4034100 'struct _opaque_pthread_once_t'
+|     `-Record 0x7ffec4034078 '_opaque_pthread_once_t'
+|-TypedefDecl 0x7ffec4036d00 <line:116:1, col:41> col:41 __darwin_pthread_rwlock_t 'struct _opaque_pthread_rwlock_t':'struct _opaque_pthread_rwlock_t'
+| `-ElaboratedType 0x7ffec4036cb0 'struct _opaque_pthread_rwlock_t' sugar
+|   `-RecordType 0x7ffec40362d0 'struct _opaque_pthread_rwlock_t'
+|     `-Record 0x7ffec4036248 '_opaque_pthread_rwlock_t'
+|-TypedefDecl 0x7ffec4036db0 <line:117:1, col:45> col:45 __darwin_pthread_rwlockattr_t 'struct _opaque_pthread_rwlockattr_t':'struct _opaque_pthread_rwlockattr_t'
+| `-ElaboratedType 0x7ffec4036d60 'struct _opaque_pthread_rwlockattr_t' sugar
+|   `-RecordType 0x7ffec40364a0 'struct _opaque_pthread_rwlockattr_t'
+|     `-Record 0x7ffec4036410 '_opaque_pthread_rwlockattr_t'
+|-TypedefDecl 0x7ffec4036ec0 <line:118:1, col:35> col:35 __darwin_pthread_t 'struct _opaque_pthread_t *'
+| `-PointerType 0x7ffec4036e70 'struct _opaque_pthread_t *'
+|   `-ElaboratedType 0x7ffec4036e10 'struct _opaque_pthread_t' sugar
+|     `-RecordType 0x7ffec4036670 'struct _opaque_pthread_t'
+|       `-Record 0x7ffec40365e0 '_opaque_pthread_t'
+|-TypedefDecl 0x7ffec4036f30 </usr/include/sys/_types/_u_int8_t.h:30:1, col:24> col:24 u_int8_t 'unsigned char'
+| `-BuiltinType 0x7ffec3806a40 'unsigned char'
+|-TypedefDecl 0x7ffec4036fa0 </usr/include/sys/_types/_u_int16_t.h:30:1, col:26> col:26 u_int16_t 'unsigned short'
+| `-BuiltinType 0x7ffec3806a60 'unsigned short'
+|-TypedefDecl 0x7ffec4037010 </usr/include/sys/_types/_u_int32_t.h:30:1, col:23> col:23 u_int32_t 'unsigned int'
+| `-BuiltinType 0x7ffec3806a80 'unsigned int'
+|-TypedefDecl 0x7ffec4037080 </usr/include/sys/_types/_u_int64_t.h:30:1, col:28> col:28 referenced u_int64_t 'unsigned long long'
+| `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec40370e8 </usr/include/i386/types.h:87:1, col:19> col:19 register_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec4037158 </usr/include/sys/_types/_uintptr_t.h:30:1, col:24> col:24 uintptr_t 'unsigned long'
+| `-BuiltinType 0x7ffec3806aa0 'unsigned long'
+|-TypedefDecl 0x7ffec403ea00 </usr/include/i386/types.h:97:1, col:20> col:20 user_addr_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ffec40371b0 'u_int64_t' sugar
+|   |-Typedef 0x7ffec4037080 'u_int64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec403ea68 <line:98:1, col:20> col:20 user_size_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ffec40371b0 'u_int64_t' sugar
+|   |-Typedef 0x7ffec4037080 'u_int64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec403ead0 <line:99:1, col:19> col:19 user_ssize_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec403eb38 <line:100:1, col:19> col:19 user_long_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec403eba0 <line:101:1, col:20> col:20 user_ulong_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ffec40371b0 'u_int64_t' sugar
+|   |-Typedef 0x7ffec4037080 'u_int64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec403ec08 <line:102:1, col:19> col:19 user_time_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec403ec70 <line:103:1, col:19> col:19 user_off_t 'int64_t':'long long'
+| `-TypedefType 0x7ffec402f8b0 'int64_t' sugar
+|   |-Typedef 0x7ffec402f4e0 'int64_t'
+|   `-BuiltinType 0x7ffec3806a20 'long long'
+|-TypedefDecl 0x7ffec403ecd8 <line:111:1, col:20> col:20 syscall_arg_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7ffec40371b0 'u_int64_t' sugar
+|   |-Typedef 0x7ffec4037080 'u_int64_t'
+|   `-BuiltinType 0x7ffec3806ac0 'unsigned long long'
+|-TypedefDecl 0x7ffec403ed60 </usr/include/sys/_types/_intptr_t.h:32:1, col:27> col:27 intptr_t '__darwin_intptr_t':'long'
+| `-TypedefType 0x7ffec403ed30 '__darwin_intptr_t' sugar
+|   |-Typedef 0x7ffec4030250 '__darwin_intptr_t'
+|   `-BuiltinType 0x7ffec3806a00 'long'
+|-TypedefDecl 0x7ffec403edd0 </usr/include/_types/_intmax_t.h:32:1, col:25> col:25 intmax_t 'long'
+| `-BuiltinType 0x7ffec3806a00 'long'
+|-TypedefDecl 0x7ffec403ee40 </usr/include/_types/_uintmax_t.h:32:1, col:26> col:26 uintmax_t 'unsigned long'
+| `-BuiltinType 0x7ffec3806aa0 'unsigned long'
+|-FunctionDecl 0x7ffec403ef60 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/arm_acle.h:48:1, line:50:1> line:48:72 __wfi 'void (void)' static inline
+| |-CompoundStmt 0x7ffec403f238 <col:84, line:50:1>
+| | `-CallExpr 0x7ffec403f210 <line:49:3, col:21> 'int'
+| |   `-ImplicitCastExpr 0x7ffec403f1f8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ffec403f1a0 <col:3> 'int ()' Function 0x7ffec403f0f0 '__builtin_arm_wfi' 'int ()'
+| |-NoDebugAttr 0x7ffec403f000 <line:48:58>
+| `-AlwaysInlineAttr 0x7ffec403f048 <col:39> always_inline
+|-FunctionDecl 0x7ffec403f2e0 <line:52:1, line:54:1> line:52:72 __wfe 'void (void)' static inline
+| |-CompoundStmt 0x7ffec403f518 <col:84, line:54:1>
+| | `-CallExpr 0x7ffec403f4f0 <line:53:3, col:21> 'int'
+| |   `-ImplicitCastExpr 0x7ffec403f4d8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ffec403f4b0 <col:3> 'int ()' Function 0x7ffec403f400 '__builtin_arm_wfe' 'int ()'
+| |-NoDebugAttr 0x7ffec403f380 <line:52:58>
+| `-AlwaysInlineAttr 0x7ffec403f3c8 <col:39> always_inline
+|-FunctionDecl 0x7ffec403f5c0 <line:56:1, line:58:1> line:56:72 __sev 'void (void)' static inline
+| |-CompoundStmt 0x7ffec403f7f8 <col:84, line:58:1>
+| | `-CallExpr 0x7ffec403f7d0 <line:57:3, col:21> 'int'
+| |   `-ImplicitCastExpr 0x7ffec403f7b8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ffec403f790 <col:3> 'int ()' Function 0x7ffec403f6e0 '__builtin_arm_sev' 'int ()'
+| |-NoDebugAttr 0x7ffec403f660 <line:56:58>
+| `-AlwaysInlineAttr 0x7ffec403f6a8 <col:39> always_inline
+|-FunctionDecl 0x7ffec403f8a0 <line:60:1, line:62:1> line:60:72 __sevl 'void (void)' static inline
+| |-CompoundStmt 0x7ffec4047f18 <col:85, line:62:1>
+| | `-CallExpr 0x7ffec4047ef0 <line:61:3, col:22> 'int'
+| |   `-ImplicitCastExpr 0x7ffec4047ed8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ffec4047eb0 <col:3> 'int ()' Function 0x7ffec4047e00 '__builtin_arm_sevl' 'int ()'
+| |-NoDebugAttr 0x7ffec403f940 <line:60:58>
+| `-AlwaysInlineAttr 0x7ffec403f988 <col:39> always_inline
+|-FunctionDecl 0x7ffec4047fc0 <line:64:1, line:66:1> line:64:72 __yield 'void (void)' static inline
+| |-CompoundStmt 0x7ffec40481f8 <col:86, line:66:1>
+| | `-CallExpr 0x7ffec40481d0 <line:65:3, col:23> 'int'
+| |   `-ImplicitCastExpr 0x7ffec40481b8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ffec4048190 <col:3> 'int ()' Function 0x7ffec40480e0 '__builtin_arm_yield' 'int ()'
+| |-NoDebugAttr 0x7ffec4048060 <line:64:58>
+| `-AlwaysInlineAttr 0x7ffec40480a8 <col:39> always_inline
+|-FunctionDecl 0x7ffec4048400 <line:74:1, line:81:1> line:75:1 __swp 'uint32_t (uint32_t, volatile uint32_t *)' static inline
+| |-ParmVarDecl 0x7ffec4048220 <col:7, col:16> col:16 used __x 'uint32_t':'unsigned int'
+| |-ParmVarDecl 0x7ffec40482e8 <col:21, col:40> col:40 used __p 'volatile uint32_t *'
+| |-CompoundStmt 0x7ffec40489c8 <col:45, line:81:1>
+| | |-DeclStmt 0x7ffec4048578 <line:76:3, col:13>
+| | | `-VarDecl 0x7ffec4048518 <col:3, col:12> col:12 used v 'uint32_t':'unsigned int'
+| | |-DoStmt 0x7ffec4048950 <line:77:3, line:79:39>
+| | | |-BinaryOperator 0x7ffec4048758 <line:78:5, col:32> 'uint32_t':'unsigned int' '='
+| | | | |-DeclRefExpr 0x7ffec4048590 <col:5> 'uint32_t':'unsigned int' lvalue Var 0x7ffec4048518 'v' 'uint32_t':'unsigned int'
+| | | | `-ImplicitCastExpr 0x7ffec4048740 <col:9, col:32> 'uint32_t':'unsigned int' <IntegralCast>
+| | | |   `-CallExpr 0x7ffec40486f8 <col:9, col:32> 'int'
+| | | |     |-ImplicitCastExpr 0x7ffec40486e0 <col:9> 'int (*)()' <FunctionToPointerDecay>
+| | | |     | `-DeclRefExpr 0x7ffec4048690 <col:9> 'int ()' Function 0x7ffec40485e0 '__builtin_arm_ldrex' 'int ()'
+| | | |     `-ImplicitCastExpr 0x7ffec4048728 <col:29> 'volatile uint32_t *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7ffec40486b8 <col:29> 'volatile uint32_t *' lvalue ParmVar 0x7ffec40482e8 '__p' 'volatile uint32_t *'
+| | | `-CallExpr 0x7ffec40488e8 <line:79:10, col:38> 'int'
+| | |   |-ImplicitCastExpr 0x7ffec40488d0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| | |   | `-DeclRefExpr 0x7ffec4048858 <col:10> 'int ()' Function 0x7ffec40487a8 '__builtin_arm_strex' 'int ()'
+| | |   |-ImplicitCastExpr 0x7ffec4048920 <col:30> 'uint32_t':'unsigned int' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7ffec4048880 <col:30> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048220 '__x' 'uint32_t':'unsigned int'
+| | |   `-ImplicitCastExpr 0x7ffec4048938 <col:35> 'volatile uint32_t *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7ffec40488a8 <col:35> 'volatile uint32_t *' lvalue ParmVar 0x7ffec40482e8 '__p' 'volatile uint32_t *'
+| | `-ReturnStmt 0x7ffec40489b0 <line:80:3, col:10>
+| |   `-ImplicitCastExpr 0x7ffec4048998 <col:10> 'uint32_t':'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7ffec4048970 <col:10> 'uint32_t':'unsigned int' lvalue Var 0x7ffec4048518 'v' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec40484b0 <line:74:62>
+| `-AlwaysInlineAttr 0x7ffec40484f8 <col:43> always_inline
+|-FunctionDecl 0x7ffec4048a80 <line:107:1, line:109:1> line:107:72 __nop 'void (void)' static inline
+| |-CompoundStmt 0x7ffec4048cb8 <col:84, line:109:1>
+| | `-CallExpr 0x7ffec4048c90 <line:108:3, col:21> 'int'
+| |   `-ImplicitCastExpr 0x7ffec4048c78 <col:3> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7ffec4048c50 <col:3> 'int ()' Function 0x7ffec4048ba0 '__builtin_arm_nop' 'int ()'
+| |-NoDebugAttr 0x7ffec4048b20 <line:107:58>
+| `-AlwaysInlineAttr 0x7ffec4048b68 <col:39> always_inline
+|-FunctionDecl 0x7ffec4049e70 <line:114:1, line:120:1> line:115:1 used __ror 'uint32_t (uint32_t, uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec4048ce0 <col:7, col:16> col:16 used __x 'uint32_t':'unsigned int'
+| |-ParmVarDecl 0x7ffec4048d50 <col:21, col:30> col:30 used __y 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404a390 <col:35, line:120:1>
+| | |-CompoundAssignOperator 0x7ffec4049fd8 <line:116:3, col:10> 'uint32_t':'unsigned int' '%=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7ffec4049f78 <col:3> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048d50 '__y' 'uint32_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7ffec4049fc0 <col:10> 'unsigned int' <IntegralCast>
+| | |   `-IntegerLiteral 0x7ffec4049fa0 <col:10> 'int' 32
+| | |-IfStmt 0x7ffec404a108 <line:117:3, line:118:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ffec404a088 <line:117:7, col:14> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7ffec404a058 <col:7> 'uint32_t':'unsigned int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7ffec404a010 <col:7> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048d50 '__y' 'uint32_t':'unsigned int'
+| | | | `-ImplicitCastExpr 0x7ffec404a070 <col:14> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7ffec404a038 <col:14> 'int' 0
+| | | |-ReturnStmt 0x7ffec404a0f0 <line:118:5, col:12>
+| | | | `-ImplicitCastExpr 0x7ffec404a0d8 <col:12> 'uint32_t':'unsigned int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ffec404a0b0 <col:12> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048ce0 '__x' 'uint32_t':'unsigned int'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7ffec404a378 <line:119:3, col:43>
+| |   `-BinaryOperator 0x7ffec404a350 <col:10, col:43> 'unsigned int' '|'
+| |     |-ParenExpr 0x7ffec404a1e8 <col:10, col:21> 'uint32_t':'unsigned int'
+| |     | `-BinaryOperator 0x7ffec404a1c0 <col:11, col:18> 'uint32_t':'unsigned int' '>>'
+| |     |   |-ImplicitCastExpr 0x7ffec404a190 <col:11> 'uint32_t':'unsigned int' <LValueToRValue>
+| |     |   | `-DeclRefExpr 0x7ffec404a140 <col:11> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048ce0 '__x' 'uint32_t':'unsigned int'
+| |     |   `-ImplicitCastExpr 0x7ffec404a1a8 <col:18> 'uint32_t':'unsigned int' <LValueToRValue>
+| |     |     `-DeclRefExpr 0x7ffec404a168 <col:18> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048d50 '__y' 'uint32_t':'unsigned int'
+| |     `-ParenExpr 0x7ffec404a330 <col:25, col:43> 'uint32_t':'unsigned int'
+| |       `-BinaryOperator 0x7ffec404a308 <col:26, col:42> 'uint32_t':'unsigned int' '<<'
+| |         |-ImplicitCastExpr 0x7ffec404a2f0 <col:26> 'uint32_t':'unsigned int' <LValueToRValue>
+| |         | `-DeclRefExpr 0x7ffec404a208 <col:26> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048ce0 '__x' 'uint32_t':'unsigned int'
+| |         `-ParenExpr 0x7ffec404a2d0 <col:33, col:42> 'unsigned int'
+| |           `-BinaryOperator 0x7ffec404a2a8 <col:34, col:39> 'unsigned int' '-'
+| |             |-ImplicitCastExpr 0x7ffec404a290 <col:34> 'unsigned int' <IntegralCast>
+| |             | `-IntegerLiteral 0x7ffec404a230 <col:34> 'int' 32
+| |             `-ImplicitCastExpr 0x7ffec404a278 <col:39> 'uint32_t':'unsigned int' <LValueToRValue>
+| |               `-DeclRefExpr 0x7ffec404a250 <col:39> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec4048d50 '__y' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec4049f20 <line:114:62>
+| `-AlwaysInlineAttr 0x7ffec4049f68 <col:43> always_inline
+|-FunctionDecl 0x7ffec404a550 <line:122:1, line:128:1> line:123:1 used __rorll 'uint64_t (uint64_t, uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec404a3c8 <col:9, col:18> col:18 used __x 'uint64_t':'unsigned long long'
+| |-ParmVarDecl 0x7ffec404a438 <col:23, col:32> col:32 used __y 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404aa70 <col:37, line:128:1>
+| | |-CompoundAssignOperator 0x7ffec404a6b8 <line:124:3, col:10> 'uint32_t':'unsigned int' '%=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+| | | |-DeclRefExpr 0x7ffec404a658 <col:3> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404a438 '__y' 'uint32_t':'unsigned int'
+| | | `-ImplicitCastExpr 0x7ffec404a6a0 <col:10> 'unsigned int' <IntegralCast>
+| | |   `-IntegerLiteral 0x7ffec404a680 <col:10> 'int' 64
+| | |-IfStmt 0x7ffec404a7e8 <line:125:3, line:126:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ffec404a768 <line:125:7, col:14> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7ffec404a738 <col:7> 'uint32_t':'unsigned int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7ffec404a6f0 <col:7> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404a438 '__y' 'uint32_t':'unsigned int'
+| | | | `-ImplicitCastExpr 0x7ffec404a750 <col:14> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7ffec404a718 <col:14> 'int' 0
+| | | |-ReturnStmt 0x7ffec404a7d0 <line:126:5, col:12>
+| | | | `-ImplicitCastExpr 0x7ffec404a7b8 <col:12> 'uint64_t':'unsigned long long' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ffec404a790 <col:12> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404a3c8 '__x' 'uint64_t':'unsigned long long'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7ffec404aa58 <line:127:3, col:43>
+| |   `-BinaryOperator 0x7ffec404aa30 <col:10, col:43> 'unsigned long long' '|'
+| |     |-ParenExpr 0x7ffec404a8c8 <col:10, col:21> 'uint64_t':'unsigned long long'
+| |     | `-BinaryOperator 0x7ffec404a8a0 <col:11, col:18> 'uint64_t':'unsigned long long' '>>'
+| |     |   |-ImplicitCastExpr 0x7ffec404a870 <col:11> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |     |   | `-DeclRefExpr 0x7ffec404a820 <col:11> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404a3c8 '__x' 'uint64_t':'unsigned long long'
+| |     |   `-ImplicitCastExpr 0x7ffec404a888 <col:18> 'uint32_t':'unsigned int' <LValueToRValue>
+| |     |     `-DeclRefExpr 0x7ffec404a848 <col:18> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404a438 '__y' 'uint32_t':'unsigned int'
+| |     `-ParenExpr 0x7ffec404aa10 <col:25, col:43> 'uint64_t':'unsigned long long'
+| |       `-BinaryOperator 0x7ffec404a9e8 <col:26, col:42> 'uint64_t':'unsigned long long' '<<'
+| |         |-ImplicitCastExpr 0x7ffec404a9d0 <col:26> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |         | `-DeclRefExpr 0x7ffec404a8e8 <col:26> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404a3c8 '__x' 'uint64_t':'unsigned long long'
+| |         `-ParenExpr 0x7ffec404a9b0 <col:33, col:42> 'unsigned int'
+| |           `-BinaryOperator 0x7ffec404a988 <col:34, col:39> 'unsigned int' '-'
+| |             |-ImplicitCastExpr 0x7ffec404a970 <col:34> 'unsigned int' <IntegralCast>
+| |             | `-IntegerLiteral 0x7ffec404a910 <col:34> 'int' 64
+| |             `-ImplicitCastExpr 0x7ffec404a958 <col:39> 'uint32_t':'unsigned int' <LValueToRValue>
+| |               `-DeclRefExpr 0x7ffec404a930 <col:39> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404a438 '__y' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec404a600 <line:122:62>
+| `-AlwaysInlineAttr 0x7ffec404a648 <col:43> always_inline
+|-FunctionDecl 0x7ffec404ac38 <line:130:1, line:137:1> line:131:1 __rorl 'unsigned long (unsigned long, uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec404aab0 <col:8, col:22> col:22 used __x 'unsigned long'
+| |-ParmVarDecl 0x7ffec404ab20 <col:27, col:36> col:36 used __y 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404aef0 <col:41, line:137:1>
+| | `-ReturnStmt 0x7ffec404aed8 <line:135:3, col:26>
+| |   `-ImplicitCastExpr 0x7ffec404aec0 <col:10, col:26> 'unsigned long' <IntegralCast>
+| |     `-CallExpr 0x7ffec404ae40 <col:10, col:26> 'uint64_t':'unsigned long long'
+| |       |-ImplicitCastExpr 0x7ffec404ae28 <col:10> 'uint64_t (*)(uint64_t, uint32_t)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7ffec404ad40 <col:10> 'uint64_t (uint64_t, uint32_t)' Function 0x7ffec404a550 '__rorll' 'uint64_t (uint64_t, uint32_t)'
+| |       |-ImplicitCastExpr 0x7ffec404ae90 <col:18> 'uint64_t':'unsigned long long' <IntegralCast>
+| |       | `-ImplicitCastExpr 0x7ffec404ae78 <col:18> 'unsigned long' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7ffec404ad68 <col:18> 'unsigned long' lvalue ParmVar 0x7ffec404aab0 '__x' 'unsigned long'
+| |       `-ImplicitCastExpr 0x7ffec404aea8 <col:23> 'uint32_t':'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffec404ad90 <col:23> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404ab20 '__y' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec404ace8 <line:130:67>
+| `-AlwaysInlineAttr 0x7ffec404ad30 <col:48> always_inline
+|-FunctionDecl 0x7ffec404b020 <line:141:1, line:144:1> line:142:1 __clz 'uint32_t (uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec404af18 <col:7, col:16> col:16 used __t 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404b3c8 <col:21, line:144:1>
+| | `-ReturnStmt 0x7ffec404b3b0 <line:143:3, col:27>
+| |   `-ImplicitCastExpr 0x7ffec404b398 <col:10, col:27> 'uint32_t':'unsigned int' <IntegralCast>
+| |     `-CallExpr 0x7ffec404b350 <col:10, col:27> 'int'
+| |       |-ImplicitCastExpr 0x7ffec404b338 <col:10> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7ffec404b2b8 <col:10> '<builtin fn type>' Function 0x7ffec404b158 '__builtin_clz' 'int (unsigned int)'
+| |       `-ImplicitCastExpr 0x7ffec404b380 <col:24> 'uint32_t':'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffec404b2e0 <col:24> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404af18 '__t' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec404b0c8 <line:141:62>
+| `-AlwaysInlineAttr 0x7ffec404b110 <col:43> always_inline
+|-FunctionDecl 0x7ffec404b158 <line:143:10> col:10 implicit used __builtin_clz 'int (unsigned int)' extern
+| |-ParmVarDecl 0x7ffec404b1f8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7ffec404b260 <col:10> Implicit
+| `-ConstAttr 0x7ffec404b2a8 <col:10> Implicit
+|-FunctionDecl 0x7ffec404b4c8 <line:146:1, line:149:1> line:147:1 __clzl 'unsigned long (unsigned long)' static inline
+| |-ParmVarDecl 0x7ffec404b3f8 <col:8, col:22> col:22 used __t 'unsigned long'
+| |-CompoundStmt 0x7ffec404b878 <col:27, line:149:1>
+| | `-ReturnStmt 0x7ffec404b860 <line:148:3, col:28>
+| |   `-ImplicitCastExpr 0x7ffec404b848 <col:10, col:28> 'unsigned long' <IntegralCast>
+| |     `-CallExpr 0x7ffec404b800 <col:10, col:28> 'int'
+| |       |-ImplicitCastExpr 0x7ffec404b7e8 <col:10> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7ffec404b768 <col:10> '<builtin fn type>' Function 0x7ffec404b608 '__builtin_clzl' 'int (unsigned long)'
+| |       `-ImplicitCastExpr 0x7ffec404b830 <col:25> 'unsigned long' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffec404b790 <col:25> 'unsigned long' lvalue ParmVar 0x7ffec404b3f8 '__t' 'unsigned long'
+| |-NoDebugAttr 0x7ffec404b570 <line:146:67>
+| `-AlwaysInlineAttr 0x7ffec404b5b8 <col:48> always_inline
+|-FunctionDecl 0x7ffec404b608 <line:148:10> col:10 implicit used __builtin_clzl 'int (unsigned long)' extern
+| |-ParmVarDecl 0x7ffec404b6a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-NoThrowAttr 0x7ffec404b710 <col:10> Implicit
+| `-ConstAttr 0x7ffec404b758 <col:10> Implicit
+|-FunctionDecl 0x7ffec404b9a0 <line:151:1, line:154:1> line:152:1 __clzll 'uint64_t (uint64_t)' static inline
+| |-ParmVarDecl 0x7ffec404b8a0 <col:9, col:18> col:18 used __t 'uint64_t':'unsigned long long'
+| |-CompoundStmt 0x7ffec404bd48 <col:23, line:154:1>
+| | `-ReturnStmt 0x7ffec404bd30 <line:153:3, col:29>
+| |   `-ImplicitCastExpr 0x7ffec404bd18 <col:10, col:29> 'uint64_t':'unsigned long long' <IntegralCast>
+| |     `-CallExpr 0x7ffec404bcd0 <col:10, col:29> 'int'
+| |       |-ImplicitCastExpr 0x7ffec404bcb8 <col:10> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7ffec404bc38 <col:10> '<builtin fn type>' Function 0x7ffec404bad8 '__builtin_clzll' 'int (unsigned long long)'
+| |       `-ImplicitCastExpr 0x7ffec404bd00 <col:26> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffec404bc60 <col:26> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404b8a0 '__t' 'uint64_t':'unsigned long long'
+| |-NoDebugAttr 0x7ffec404ba48 <line:151:62>
+| `-AlwaysInlineAttr 0x7ffec404ba90 <col:43> always_inline
+|-FunctionDecl 0x7ffec404bad8 <line:153:10> col:10 implicit used __builtin_clzll 'int (unsigned long long)' extern
+| |-ParmVarDecl 0x7ffec404bb78 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7ffec404bbe0 <col:10> Implicit
+| `-ConstAttr 0x7ffec404bc28 <col:10> Implicit
+|-FunctionDecl 0x7ffec404c600 <line:157:1, line:160:1> line:158:1 used __rev 'uint32_t (uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec404bd70 <col:7, col:16> col:16 used __t 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404c950 <col:21, line:160:1>
+| | `-ReturnStmt 0x7ffec404c938 <line:159:3, col:31>
+| |   `-CallExpr 0x7ffec404c8f0 <col:10, col:31> 'unsigned int'
+| |     |-ImplicitCastExpr 0x7ffec404c8d8 <col:10> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7ffec404c860 <col:10> '<builtin fn type>' Function 0x7ffec404c700 '__builtin_bswap32' 'unsigned int (unsigned int)'
+| |     `-ImplicitCastExpr 0x7ffec404c920 <col:28> 'uint32_t':'unsigned int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ffec404c888 <col:28> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404bd70 '__t' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec404c6a8 <line:157:62>
+| `-AlwaysInlineAttr 0x7ffec404c6f0 <col:43> always_inline
+|-FunctionDecl 0x7ffec404c700 <line:159:10> col:10 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+| |-ParmVarDecl 0x7ffec404c7a0 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7ffec404c808 <col:10> Implicit
+| `-ConstAttr 0x7ffec404c850 <col:10> Implicit
+|-FunctionDecl 0x7ffec404ca10 <line:162:1, line:169:1> line:163:1 __revl 'unsigned long (unsigned long)' static inline
+| |-ParmVarDecl 0x7ffec404c980 <col:8, col:22> col:22 used __t 'unsigned long'
+| |-CompoundStmt 0x7ffec404cd90 <col:27, line:169:1>
+| | `-ReturnStmt 0x7ffec404cd78 <line:167:3, col:31>
+| |   `-ImplicitCastExpr 0x7ffec404cd60 <col:10, col:31> 'unsigned long' <IntegralCast>
+| |     `-CallExpr 0x7ffec404cd00 <col:10, col:31> 'unsigned long long'
+| |       |-ImplicitCastExpr 0x7ffec404cce8 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7ffec404cc70 <col:10> '<builtin fn type>' Function 0x7ffec404cb10 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+| |       `-ImplicitCastExpr 0x7ffec404cd48 <col:28> 'unsigned long long' <IntegralCast>
+| |         `-ImplicitCastExpr 0x7ffec404cd30 <col:28> 'unsigned long' <LValueToRValue>
+| |           `-DeclRefExpr 0x7ffec404cc98 <col:28> 'unsigned long' lvalue ParmVar 0x7ffec404c980 '__t' 'unsigned long'
+| |-NoDebugAttr 0x7ffec404cab8 <line:162:67>
+| `-AlwaysInlineAttr 0x7ffec404cb00 <col:48> always_inline
+|-FunctionDecl 0x7ffec404cb10 <line:167:10> col:10 implicit used __builtin_bswap64 'unsigned long long (unsigned long long)' extern
+| |-ParmVarDecl 0x7ffec404cbb0 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7ffec404cc18 <col:10> Implicit
+| `-ConstAttr 0x7ffec404cc60 <col:10> Implicit
+|-FunctionDecl 0x7ffec404ce40 <line:171:1, line:174:1> line:172:1 __revll 'uint64_t (uint64_t)' static inline
+| |-ParmVarDecl 0x7ffec404cdb8 <col:9, col:18> col:18 used __t 'uint64_t':'unsigned long long'
+| |-CompoundStmt 0x7ffec404d008 <col:23, line:174:1>
+| | `-ReturnStmt 0x7ffec404cff0 <line:173:3, col:31>
+| |   `-CallExpr 0x7ffec404cfa8 <col:10, col:31> 'unsigned long long'
+| |     |-ImplicitCastExpr 0x7ffec404cf90 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7ffec404cf40 <col:10> '<builtin fn type>' Function 0x7ffec404cb10 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+| |     `-ImplicitCastExpr 0x7ffec404cfd8 <col:28> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ffec404cf68 <col:28> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404cdb8 '__t' 'uint64_t':'unsigned long long'
+| |-NoDebugAttr 0x7ffec404cee8 <line:171:62>
+| `-AlwaysInlineAttr 0x7ffec404cf30 <col:43> always_inline
+|-FunctionDecl 0x7ffec404d0b8 <line:177:1, line:180:1> line:178:1 used __rev16 'uint32_t (uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec404d030 <col:9, col:18> col:18 used __t 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404d3b8 <col:23, line:180:1>
+| | `-ReturnStmt 0x7ffec404d3a0 <line:179:3, col:30>
+| |   `-CallExpr 0x7ffec404d350 <col:10, col:30> 'uint32_t':'unsigned int'
+| |     |-ImplicitCastExpr 0x7ffec404d338 <col:10> 'uint32_t (*)(uint32_t, uint32_t)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7ffec404d1b8 <col:10> 'uint32_t (uint32_t, uint32_t)' Function 0x7ffec4049e70 '__ror' 'uint32_t (uint32_t, uint32_t)'
+| |     |-CallExpr 0x7ffec404d270 <col:16, col:25> 'uint32_t':'unsigned int'
+| |     | |-ImplicitCastExpr 0x7ffec404d258 <col:16> 'uint32_t (*)(uint32_t)' <FunctionToPointerDecay>
+| |     | | `-DeclRefExpr 0x7ffec404d1e0 <col:16> 'uint32_t (uint32_t)' Function 0x7ffec404c600 '__rev' 'uint32_t (uint32_t)'
+| |     | `-ImplicitCastExpr 0x7ffec404d2a0 <col:22> 'uint32_t':'unsigned int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ffec404d208 <col:22> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404d030 '__t' 'uint32_t':'unsigned int'
+| |     `-ImplicitCastExpr 0x7ffec404d388 <col:28> 'uint32_t':'unsigned int' <IntegralCast>
+| |       `-IntegerLiteral 0x7ffec404d2b8 <col:28> 'int' 16
+| |-NoDebugAttr 0x7ffec404d160 <line:177:62>
+| `-AlwaysInlineAttr 0x7ffec404d1a8 <col:43> always_inline
+|-FunctionDecl 0x7ffec404d468 <line:182:1, line:185:1> line:183:1 used __rev16ll 'uint64_t (uint64_t)' static inline
+| |-ParmVarDecl 0x7ffec404d3e0 <col:11, col:20> col:20 used __t 'uint64_t':'unsigned long long'
+| |-CompoundStmt 0x7ffec404d868 <col:25, line:185:1>
+| | `-ReturnStmt 0x7ffec404d850 <line:184:3, col:62>
+| |   `-BinaryOperator 0x7ffec404d828 <col:10, col:62> 'unsigned long long' '|'
+| |     |-ParenExpr 0x7ffec404d728 <col:10, col:47> 'uint64_t':'unsigned long long'
+| |     | `-BinaryOperator 0x7ffec404d700 <col:11, col:45> 'uint64_t':'unsigned long long' '<<'
+| |     |   |-ParenExpr 0x7ffec404d6c0 <col:11, col:40> 'uint64_t':'unsigned long long'
+| |     |   | `-CStyleCastExpr 0x7ffec404d698 <col:12, col:39> 'uint64_t':'unsigned long long' <IntegralCast>
+| |     |   |   `-CallExpr 0x7ffec404d640 <col:22, col:39> 'uint32_t':'unsigned int'
+| |     |   |     |-ImplicitCastExpr 0x7ffec404d628 <col:22> 'uint32_t (*)(uint32_t)' <FunctionToPointerDecay>
+| |     |   |     | `-DeclRefExpr 0x7ffec404d568 <col:22> 'uint32_t (uint32_t)' Function 0x7ffec404d0b8 '__rev16' 'uint32_t (uint32_t)'
+| |     |   |     `-ImplicitCastExpr 0x7ffec404d670 <col:30, col:37> 'uint32_t':'unsigned int' <IntegralCast>
+| |     |   |       `-BinaryOperator 0x7ffec404d600 <col:30, col:37> 'uint64_t':'unsigned long long' '>>'
+| |     |   |         |-ImplicitCastExpr 0x7ffec404d5d8 <col:30> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |     |   |         | `-DeclRefExpr 0x7ffec404d590 <col:30> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404d3e0 '__t' 'uint64_t':'unsigned long long'
+| |     |   |         `-IntegerLiteral 0x7ffec404d5b8 <col:37> 'int' 32
+| |     |   `-IntegerLiteral 0x7ffec404d6e0 <col:45> 'int' 32
+| |     `-ImplicitCastExpr 0x7ffec404d810 <col:51, col:62> 'unsigned long long' <IntegralCast>
+| |       `-CallExpr 0x7ffec404d7b0 <col:51, col:62> 'uint32_t':'unsigned int'
+| |         |-ImplicitCastExpr 0x7ffec404d798 <col:51> 'uint32_t (*)(uint32_t)' <FunctionToPointerDecay>
+| |         | `-DeclRefExpr 0x7ffec404d748 <col:51> 'uint32_t (uint32_t)' Function 0x7ffec404d0b8 '__rev16' 'uint32_t (uint32_t)'
+| |         `-ImplicitCastExpr 0x7ffec404d7f8 <col:59> 'uint32_t':'unsigned int' <IntegralCast>
+| |           `-ImplicitCastExpr 0x7ffec404d7e0 <col:59> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |             `-DeclRefExpr 0x7ffec404d770 <col:59> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404d3e0 '__t' 'uint64_t':'unsigned long long'
+| |-NoDebugAttr 0x7ffec404d510 <line:182:62>
+| `-AlwaysInlineAttr 0x7ffec404d558 <col:43> always_inline
+|-FunctionDecl 0x7ffec404d928 <line:187:1, line:194:1> line:188:1 __rev16l 'unsigned long (unsigned long)' static inline
+| |-ParmVarDecl 0x7ffec404d898 <col:10, col:24> col:24 used __t 'unsigned long'
+| |-CompoundStmt 0x7ffec404db50 <col:29, line:194:1>
+| | `-ReturnStmt 0x7ffec404db38 <line:192:5, col:25>
+| |   `-ImplicitCastExpr 0x7ffec404db20 <col:12, col:25> 'unsigned long' <IntegralCast>
+| |     `-CallExpr 0x7ffec404dac0 <col:12, col:25> 'uint64_t':'unsigned long long'
+| |       |-ImplicitCastExpr 0x7ffec404daa8 <col:12> 'uint64_t (*)(uint64_t)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7ffec404da28 <col:12> 'uint64_t (uint64_t)' Function 0x7ffec404d468 '__rev16ll' 'uint64_t (uint64_t)'
+| |       `-ImplicitCastExpr 0x7ffec404db08 <col:22> 'uint64_t':'unsigned long long' <IntegralCast>
+| |         `-ImplicitCastExpr 0x7ffec404daf0 <col:22> 'unsigned long' <LValueToRValue>
+| |           `-DeclRefExpr 0x7ffec404da50 <col:22> 'unsigned long' lvalue ParmVar 0x7ffec404d898 '__t' 'unsigned long'
+| |-NoDebugAttr 0x7ffec404d9d0 <line:187:67>
+| `-AlwaysInlineAttr 0x7ffec404da18 <col:48> always_inline
+|-FunctionDecl 0x7ffec404dc80 <line:197:1, line:200:1> line:198:1 __revsh 'int16_t (int16_t)' static inline
+| |-ParmVarDecl 0x7ffec404db78 <col:9, col:17> col:17 used __t 'int16_t':'short'
+| |-CompoundStmt 0x7ffec404e040 <col:22, line:200:1>
+| | `-ReturnStmt 0x7ffec404e028 <line:199:3, col:31>
+| |   `-ImplicitCastExpr 0x7ffec404e010 <col:10, col:31> 'int16_t':'short' <IntegralCast>
+| |     `-CallExpr 0x7ffec404dfb0 <col:10, col:31> 'unsigned short'
+| |       |-ImplicitCastExpr 0x7ffec404df98 <col:10> 'unsigned short (*)(unsigned short)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7ffec404df18 <col:10> '<builtin fn type>' Function 0x7ffec404ddb8 '__builtin_bswap16' 'unsigned short (unsigned short)'
+| |       `-ImplicitCastExpr 0x7ffec404dff8 <col:28> 'unsigned short' <IntegralCast>
+| |         `-ImplicitCastExpr 0x7ffec404dfe0 <col:28> 'int16_t':'short' <LValueToRValue>
+| |           `-DeclRefExpr 0x7ffec404df40 <col:28> 'int16_t':'short' lvalue ParmVar 0x7ffec404db78 '__t' 'int16_t':'short'
+| |-NoDebugAttr 0x7ffec404dd28 <line:197:61>
+| `-AlwaysInlineAttr 0x7ffec404dd70 <col:42> always_inline
+|-FunctionDecl 0x7ffec404ddb8 <line:199:10> col:10 implicit used __builtin_bswap16 'unsigned short (unsigned short)' extern
+| |-ParmVarDecl 0x7ffec404de58 <<invalid sloc>> <invalid sloc> 'unsigned short'
+| |-NoThrowAttr 0x7ffec404dec0 <col:10> Implicit
+| `-ConstAttr 0x7ffec404df08 <col:10> Implicit
+|-FunctionDecl 0x7ffec404e0f0 <line:203:1, line:206:1> line:204:1 __rbit 'uint32_t (uint32_t)' static inline
+| |-ParmVarDecl 0x7ffec404e068 <col:8, col:17> col:17 used __t 'uint32_t':'unsigned int'
+| |-CompoundStmt 0x7ffec404e3a8 <col:22, line:206:1>
+| | `-ReturnStmt 0x7ffec404e390 <line:205:3, col:32>
+| |   `-ImplicitCastExpr 0x7ffec404e378 <col:10, col:32> 'uint32_t':'unsigned int' <IntegralCast>
+| |     `-CallExpr 0x7ffec404e330 <col:10, col:32> 'int'
+| |       |-ImplicitCastExpr 0x7ffec404e318 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7ffec404e2c8 <col:10> 'int3 errors generated.
+ ()' Function 0x7ffec404e218 '__builtin_arm_rbit' 'int ()'
+| |       `-ImplicitCastExpr 0x7ffec404e360 <col:29> 'uint32_t':'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffec404e2f0 <col:29> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ffec404e068 '__t' 'uint32_t':'unsigned int'
+| |-NoDebugAttr 0x7ffec404e198 <line:203:62>
+| `-AlwaysInlineAttr 0x7ffec404e1e0 <col:43> always_inline
+|-FunctionDecl 0x7ffec404e458 <line:208:1, line:216:1> line:209:1 used __rbitll 'uint64_t (uint64_t)' static inline
+| |-ParmVarDecl 0x7ffec404e3d0 <col:10, col:19> col:19 used __t 'uint64_t':'unsigned long long'
+| |-CompoundStmt 0x7ffec4050f90 <col:24, line:216:1>
+| | `-ReturnStmt 0x7ffec4050f78 <line:214:3, col:34>
+| |   `-ImplicitCastExpr 0x7ffec4050f60 <col:10, col:34> 'uint64_t':'unsigned long long' <IntegralCast>
+| |     `-CallExpr 0x7ffec4050f18 <col:10, col:34> 'int'
+| |       |-ImplicitCastExpr 0x7ffec4050f00 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7ffec4050eb0 <col:10> 'int ()' Function 0x7ffec4050e00 '__builtin_arm_rbit64' 'int ()'
+| |       `-ImplicitCastExpr 0x7ffec4050f48 <col:31> 'uint64_t':'unsigned long long' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffec4050ed8 <col:31> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7ffec404e3d0 '__t' 'uint64_t':'unsigned long long'
+| |-NoDebugAttr 0x7ffec404e500 <line:208:62>
+| `-AlwaysInlineAttr 0x7ffec404e548 <col:43> always_inline
+|-FunctionDecl 0x7ffec4051050 <line:218:1, line:225:1> line:219:1 __rbitl 'unsigned long (unsigned long)' static inline
+| |-ParmVarDecl 0x7ffec4050fc0 <col:9, col:23> col:23 used __t 'unsigned long'
+| |-CompoundStmt 0x7ffec4051248 <col:28, line:225:1>
+| | `-ReturnStmt 0x7ffec4051230 <line:223:3, col:22>
+| |   `-ImplicitCastExpr 0x7ffec4051218 <col:10, col:22> 'unsigned long' <IntegralCast>
+| |     `-CallExpr 0x7ffec40511b8 <col:10, col:22> 'uint64_t':'unsigned long long'
+| |       |-ImplicitCastExpr 0x7ffec40511a0 <col:10> 'uint64_t (*)(uint64_t)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7ffec4051150 <col:10> 'uint64_t (uint64_t)' Function 0x7ffec404e458 '__rbitll' 'uint64_t (uint64_t)'
+| |       `-ImplicitCastExpr 0x7ffec4051200 <col:19> 'uint64_t':'unsigned long long' <IntegralCast>
+| |         `-ImplicitCastExpr 0x7ffec40511e8 <col:19> 'unsigned long' <LValueToRValue>
+| |           `-DeclRefExpr 0x7ffec4051178 <col:19> 'unsigned long' lvalue ParmVar 0x7ffec4050fc0 '__t' 'unsigned long'
+| |-NoDebugAttr 0x7ffec40510f8 <line:218:67>
+| `-AlwaysInlineAttr 0x7ffec4051140 <col:48> always_inline
+|-FunctionDecl 0x7ffec4051318 <../Data/C2AST/pragma_arch_attribute.c:34:1, line:38:1> line:35:6 test_crc_unknown_ok_attr_1 'void ()'
+| |-CompoundStmt 0x7ffec40515a0 <line:36:1, line:38:1>
+| | `-CallExpr 0x7ffec4051568 <line:37:2, col:16> 'int'
+| |   |-ImplicitCastExpr 0x7ffec4051550 <col:2> 'int (*)()' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7ffec40514e8 <col:2> 'int ()' Function 0x7ffec4051438 '__crc32b' 'int ()'
+| |   |-IntegerLiteral 0x7ffec4051510 <col:12> 'int' 0
+| |   `-IntegerLiteral 0x7ffec4051530 <col:15> 'int' 0
+| `-TargetAttr 0x7ffec40513b8 <line:34:16, col:29> "+crc"
+`-FunctionDecl 0x7ffec4051650 <line:44:1, line:48:1> line:45:6 test_crc_unknown_ok_attr_2 'void ()'
+  |-CompoundStmt 0x7ffec4051808 <line:46:1, line:48:1>
+  | `-CallExpr 0x7ffec40517d0 <line:47:2, col:16> 'int'
+  |   |-ImplicitCastExpr 0x7ffec40517b8 <col:2> 'int (*)()' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7ffec4051750 <col:2> 'int ()' Function 0x7ffec4051438 '__crc32b' 'int ()'
+  |   |-IntegerLiteral 0x7ffec4051778 <col:12> 'int' 0
+  |   `-IntegerLiteral 0x7ffec4051798 <col:15> 'int' 0
+  `-TargetAttr 0x7ffec40516f0 <line:44:16, col:41> "arch=armv8-a+crc"

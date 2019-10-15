@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7ff9c2816ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff9c2015468 <../Data/C2AST/pr67789.c:10:1, col:26> col:12 used fesetround 'int (int)' extern
+| `-ParmVarDecl 0x7ff9c2817978 <col:23> col:26 'int'
+`-FunctionDecl 0x7ff9c2015630 <line:12:1, line:40:1> line:13:1 set_fpu_rounding_mode 'void (int)'
+  |-ParmVarDecl 0x7ff9c2015568 <col:24, col:28> col:28 used mode 'int'
+  `-CompoundStmt 0x7ff9c2015c88 <line:14:1, line:40:1>
+    |-DeclStmt 0x7ff9c2015750 <line:15:3, col:15>
+    | `-VarDecl 0x7ff9c20156f0 <col:3, col:7> col:7 used rnd_mode 'int'
+    |-SwitchStmt 0x7ff9c20157a8 <line:17:3, line:37:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff9c2015790 <line:17:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff9c2015768 <col:11> 'int' lvalue ParmVar 0x7ff9c2015568 'mode' 'int'
+    | `-CompoundStmt 0x7ff9c2015b50 <line:18:5, line:37:5>
+    |   |-CaseStmt 0x7ff9c20157f8 <line:19:7, line:5:22>
+    |   | |-IntegerLiteral 0x7ff9c20157d8 <line:19:12> 'int' 2
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7ff9c2015878 <line:20:8, line:5:22> 'int' '='
+    |   |   |-DeclRefExpr 0x7ff9c2015830 <line:20:8> 'int' lvalue Var 0x7ff9c20156f0 'rnd_mode' 'int'
+    |   |   `-IntegerLiteral 0x7ff9c2015858 <line:5:22> 'int' 0
+    |   |-BreakStmt 0x7ff9c20158a0 <line:21:8>
+    |   |-CaseStmt 0x7ff9c20158c8 <line:23:7, line:6:19>
+    |   | |-IntegerLiteral 0x7ff9c20158a8 <line:23:12> 'int' 4
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7ff9c2015948 <line:24:9, line:6:19> 'int' '='
+    |   |   |-DeclRefExpr 0x7ff9c2015900 <line:24:9> 'int' lvalue Var 0x7ff9c20156f0 'rnd_mode' 'int'
+    |   |   `-IntegerLiteral 0x7ff9c2015928 <line:6:19> 'int' 1
+    |   |-BreakStmt 0x7ff9c2015970 <line:25:9>
+    |   |-CaseStmt 0x7ff9c2015998 <line:27:7, line:7:21>
+    |   | |-IntegerLiteral 0x7ff9c2015978 <line:27:12> 'int' 1
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7ff9c2015a18 <line:28:9, line:7:21> 'int' '='
+    |   |   |-DeclRefExpr 0x7ff9c20159d0 <line:28:9> 'int' lvalue Var 0x7ff9c20156f0 'rnd_mode' 'int'
+    |   |   `-IntegerLiteral 0x7ff9c20159f8 <line:7:21> 'int' 2
+    |   |-BreakStmt 0x7ff9c2015a40 <line:29:9>
+    |   |-CaseStmt 0x7ff9c2015a68 <line:31:7, line:8:23>
+    |   | |-IntegerLiteral 0x7ff9c2015a48 <line:31:12> 'int' 3
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7ff9c2015ae8 <line:32:9, line:8:23> 'int' '='
+    |   |   |-DeclRefExpr 0x7ff9c2015aa0 <line:32:9> 'int' lvalue Var 0x7ff9c20156f0 'rnd_mode' 'int'
+    |   |   `-IntegerLiteral 0x7ff9c2015ac8 <line:8:23> 'int' 3
+    |   |-BreakStmt 0x7ff9c2015b10 <line:33:9>
+    |   `-DefaultStmt 0x7ff9c2015b30 <line:35:7, line:36:9>
+    |     `-ReturnStmt 0x7ff9c2015b18 <col:9>
+    `-CallExpr 0x7ff9c2015c40 <line:39:3, col:23> 'int'
+      |-ImplicitCastExpr 0x7ff9c2015c28 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff9c2015ba8 <col:3> 'int (int)' Function 0x7ff9c2015468 'fesetround' 'int (int)'
+      `-ImplicitCastExpr 0x7ff9c2015c70 <col:15> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff9c2015bd0 <col:15> 'int' lvalue Var 0x7ff9c20156f0 'rnd_mode' 'int'

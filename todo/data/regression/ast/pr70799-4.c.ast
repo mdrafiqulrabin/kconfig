@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f901702bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f901702c978 <../Data/C2AST/pr70799-4.c:7:1, col:20> col:20 used a 'unsigned long long'
+|-VarDecl 0x7f901706d858 <col:1, col:23> col:23 used b 'unsigned long long'
+|-FunctionDecl 0x7f901706d9b0 <line:9:1, line:12:1> line:9:6 test1 'void (int)'
+| |-ParmVarDecl 0x7f901706d8e8 <col:13, col:17> col:17 used c 'int'
+| `-CompoundStmt 0x7f901706db50 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7f901706db28 <line:11:3, col:12> 'unsigned long long' '='
+|     |-DeclRefExpr 0x7f901706da58 <col:3> 'unsigned long long' lvalue Var 0x7f901702c978 'a' 'unsigned long long'
+|     `-BinaryOperator 0x7f901706db00 <col:7, col:12> 'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7f901706dad0 <col:7> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f901706da80 <col:7> 'unsigned long long' lvalue Var 0x7f901706d858 'b' 'unsigned long long'
+|       `-ImplicitCastExpr 0x7f901706dae8 <col:12> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f901706daa8 <col:12> 'int' lvalue ParmVar 0x7f901706d8e8 'c' 'int'
+`-FunctionDecl 0x7f901706dc08 <line:14:1, line:17:1> line:14:6 test2 'void (int)'
+  |-ParmVarDecl 0x7f901706db80 <col:13, col:17> col:17 used c 'int'
+  `-CompoundStmt 0x7f901706dda8 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7f901706dd80 <line:16:3, col:12> 'unsigned long long' '='
+      |-DeclRefExpr 0x7f901706dcb0 <col:3> 'unsigned long long' lvalue Var 0x7f901702c978 'a' 'unsigned long long'
+      `-BinaryOperator 0x7f901706dd58 <col:7, col:12> 'unsigned long long' '>>'
+        |-ImplicitCastExpr 0x7f901706dd28 <col:7> 'unsigned long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f901706dcd8 <col:7> 'unsigned long long' lvalue Var 0x7f901706d858 'b' 'unsigned long long'
+        `-ImplicitCastExpr 0x7f901706dd40 <col:12> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f901706dd00 <col:12> 'int' lvalue ParmVar 0x7f901706db80 'c' 'int'

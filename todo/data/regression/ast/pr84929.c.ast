@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f80eb82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f80eb86d800 <../Data/C2AST/pr84929.c:4:1, col:8> col:5 used a 'int [4]'
+`-FunctionDecl 0x7f80eb86d8e8 <line:5:1, line:10:1> line:5:6 fn1 'void ()'
+  `-CompoundStmt 0x7f80eb86dc68 <line:6:1, line:10:1>
+    |-DeclStmt 0x7f80eb86da38 <<built-in>:200:25, ../Data/C2AST/pr84929.c:7:42>
+    | `-VarDecl 0x7f80eb86d9a0 <<built-in>:200:25, ../Data/C2AST/pr84929.c:7:23> col:19 used b 'unsigned long long' cinit
+    |   `-ImplicitCastExpr 0x7f80eb86da20 <col:23> 'unsigned long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f80eb86da00 <col:23> 'long' 7818038963515661296
+    `-ForStmt 0x7f80eb86dc30 <line:8:3, line:9:32>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f80eb86da78 <line:8:11, col:12> 'unsigned long long' postfix '++'
+      | `-DeclRefExpr 0x7f80eb86da50 <col:11> 'unsigned long long' lvalue Var 0x7f80eb86d9a0 'b' 'unsigned long long'
+      `-BinaryOperator 0x7f80eb86dc08 <line:9:5, col:32> 'int' '='
+        |-ArraySubscriptExpr 0x7f80eb86db20 <col:5, col:25> 'int' lvalue
+        | |-ImplicitCastExpr 0x7f80eb86db08 <col:5> 'int *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7f80eb86da98 <col:5> 'int [4]' lvalue Var 0x7f80eb86d800 'a' 'int [4]'
+        | `-IntegerLiteral 0x7f80eb86dac0 <col:7> 'unsigned long' 12004886671696372640
+        `-ImplicitCastExpr 0x7f80eb86dbf0 <col:29, col:32> 'int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7f80eb86dbc8 <col:29, col:32> 'int' lvalue
+            |-ImplicitCastExpr 0x7f80eb86db98 <col:29> 'int *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7f80eb86db48 <col:29> 'int [4]' lvalue Var 0x7f80eb86d800 'a' 'int [4]'
+            `-ImplicitCastExpr 0x7f80eb86dbb0 <col:31> 'unsigned long long' <LValueToRValue>
+              `-DeclRefExpr 0x7f80eb86db70 <col:31> 'unsigned long long' lvalue Var 0x7f80eb86d9a0 'b' 'unsigned long long'

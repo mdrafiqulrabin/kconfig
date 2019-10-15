@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7ff8d502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8d6001000 <../Data/C2AST/pr70061.c:1:1, col:13> col:13 referenced v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7ff8d502c980 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7ff8d502bde0 'int'
+`-FunctionDecl 0x7ff8d6001218 <line:3:1, line:10:1> line:4:1 foo 'int (v8si, v8si)'
+  |-ParmVarDecl 0x7ff8d6001090 <col:5, col:10> col:10 used c 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7ff8d6001100 <col:13, col:18> col:18 used d 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  `-CompoundStmt 0x7ff8d6001568 <line:5:1, line:10:1>
+    |-LabelStmt 0x7ff8d60014b0 <line:6:1, line:8:10> 'l0'
+    | `-IfStmt 0x7ff8d6001430 <line:7:3, line:8:10>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7ff8d6001378 <line:7:7, col:10> 'int' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7ff8d6001350 <col:7, col:10> 'int' lvalue vectorcomponent
+    |   |   |-DeclRefExpr 0x7ff8d6001308 <col:7> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7ff8d6001090 'c' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    |   |   `-IntegerLiteral 0x7ff8d6001330 <col:9> 'int' 2
+    |   |-CompoundAssignOperator 0x7ff8d60013f8 <line:8:5, col:10> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^=' ComputeLHSTy='v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' ComputeResultTy='v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    |   | |-DeclRefExpr 0x7ff8d6001390 <col:5> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7ff8d6001100 'd' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    |   | `-ImplicitCastExpr 0x7ff8d60013e0 <col:10> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff8d60013b8 <col:10> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7ff8d6001090 'c' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7ff8d6001550 <line:9:3, col:13>
+      `-ImplicitCastExpr 0x7ff8d6001538 <col:10, col:13> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7ff8d6001510 <col:10, col:13> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7ff8d60014c8 <col:10> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7ff8d6001100 'd' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          `-IntegerLiteral 0x7ff8d60014f0 <col:12> 'int' 3

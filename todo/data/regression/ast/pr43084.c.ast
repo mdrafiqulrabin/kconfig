@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7ffcfb0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffcfb018160 <../Data/C2AST/pr43084.c:6:1, line:9:1> line:6:8 struct S definition
+| `-FieldDecl 0x7ffcfa829238 <line:8:3, col:7> col:7 referenced a 'int'
+`-FunctionDecl 0x7ffcfa8292d0 <line:11:1, line:17:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7ffcfa829668 <line:13:1, line:17:1>
+    |-DeclStmt 0x7ffcfa829460 <line:14:3, col:13>
+    | `-VarDecl 0x7ffcfa829400 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-DeclStmt 0x7ffcfa8295a8 <line:15:3, col:19>
+    | `-VarDecl 0x7ffcfa829500 <col:3, col:18> col:13 used p 'struct S *' cinit
+    |   `-UnaryOperator 0x7ffcfa829588 <col:17, col:18> 'struct S *' prefix '&'
+    |     `-DeclRefExpr 0x7ffcfa829560 <col:18> 'struct S':'struct S' lvalue Var 0x7ffcfa829400 's' 'struct S':'struct S'
+    `-ReturnStmt 0x7ffcfa829650 <line:16:3, col:13>
+      `-ImplicitCastExpr 0x7ffcfa829638 <col:10, col:13> 'int' <LValueToRValue>
+        `-MemberExpr 0x7ffcfa829600 <col:10, col:13> 'int' lvalue ->a 0x7ffcfa829238
+          `-ImplicitCastExpr 0x7ffcfa8295e8 <col:10> 'struct S *' <LValueToRValue>
+            `-DeclRefExpr 0x7ffcfa8295c0 <col:10> 'struct S *' lvalue Var 0x7ffcfa829500 'p' 'struct S *'

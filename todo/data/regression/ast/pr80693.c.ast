@@ -1,0 +1,95 @@
+TranslationUnitDecl 0x7ff0b382bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0b382c978 <../Data/C2AST/pr80693.c:3:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7ff0b382be40 'unsigned char'
+|-TypedefDecl 0x7ff0b4014200 <line:4:1, col:24> col:24 referenced u16 'unsigned short'
+| `-BuiltinType 0x7ff0b382be60 'unsigned short'
+|-TypedefDecl 0x7ff0b4014270 <line:5:1, col:18> col:18 referenced u32 'unsigned int'
+| `-BuiltinType 0x7ff0b382be80 'unsigned int'
+|-TypedefDecl 0x7ff0b40142e0 <line:6:1, col:28> col:28 referenced u64 'unsigned long long'
+| `-BuiltinType 0x7ff0b382bec0 'unsigned long long'
+|-FunctionDecl 0x7ff0b40146f0 <line:8:1, line:17:1> line:9:1 used foo 'u64 (u8, u16, u32, u64, u16)' static
+| |-ParmVarDecl 0x7ff0b4014390 <col:5, col:8> col:8 used u8_0 'u8':'unsigned char'
+| |-ParmVarDecl 0x7ff0b4014420 <col:14, col:18> col:18 used u16_0 'u16':'unsigned short'
+| |-ParmVarDecl 0x7ff0b40144b0 <col:25, col:29> col:29 used u32_0 'u32':'unsigned int'
+| |-ParmVarDecl 0x7ff0b4014520 <col:36, col:40> col:40 used u64_0 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7ff0b4014590 <col:48, col:52> col:52 used u16_1 'u16':'unsigned short'
+| |-CompoundStmt 0x7ff0b4014ee0 <line:10:1, line:17:1>
+| | |-CompoundAssignOperator 0x7ff0b4014888 <line:11:3, col:12> 'u16':'unsigned short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7ff0b4014840 <col:3> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014590 'u16_1' 'u16':'unsigned short'
+| | | `-IntegerLiteral 0x7ff0b4014868 <col:12> 'int' 4177
+| | |-CompoundAssignOperator 0x7ff0b4014908 <line:12:3, col:12> 'u16':'unsigned short' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7ff0b40148c0 <col:3> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014590 'u16_1' 'u16':'unsigned short'
+| | | `-IntegerLiteral 0x7ff0b40148e8 <col:12> 'int' 1
+| | |-CompoundAssignOperator 0x7ff0b4014a38 <line:13:3, col:20> 'u8':'unsigned char' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7ff0b4014940 <col:3> 'u8':'unsigned char' lvalue ParmVar 0x7ff0b4014390 'u8_0' 'u8':'unsigned char'
+| | | `-BinaryOperator 0x7ff0b40149e0 <col:12, col:20> 'unsigned int' '&'
+| | |   |-ImplicitCastExpr 0x7ff0b40149b0 <col:12> 'u32':'unsigned int' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7ff0b4014968 <col:12> 'u32':'unsigned int' lvalue ParmVar 0x7ff0b40144b0 'u32_0' 'u32':'unsigned int'
+| | |   `-ImplicitCastExpr 0x7ff0b40149c8 <col:20> 'unsigned int' <IntegralCast>
+| | |     `-IntegerLiteral 0x7ff0b4014990 <col:20> 'int' 7
+| | |-CompoundAssignOperator 0x7ff0b4014af8 <line:14:3, col:13> 'u16':'unsigned short' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7ff0b4014a70 <col:3> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014420 'u16_0' 'u16':'unsigned short'
+| | | `-UnaryOperator 0x7ff0b4014ad8 <col:12, col:13> 'int' prefix '!'
+| | |   `-ImplicitCastExpr 0x7ff0b4014ac0 <col:13> 'u16':'unsigned short' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7ff0b4014a98 <col:13> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014590 'u16_1' 'u16':'unsigned short'
+| | |-CompoundAssignOperator 0x7ff0b4014cb8 <line:15:3, col:32> 'u16':'unsigned short' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7ff0b4014b30 <col:3> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014590 'u16_1' 'u16':'unsigned short'
+| | | `-ParenExpr 0x7ff0b4014c68 <col:13, col:32> 'int'
+| | |   `-BinaryOperator 0x7ff0b4014c40 <col:14, col:28> 'int' '!='
+| | |     |-ImplicitCastExpr 0x7ff0b4014c28 <col:14, col:20> 'int' <IntegralCast>
+| | |     | `-CStyleCastExpr 0x7ff0b4014be0 <col:14, col:20> 'u16':'unsigned short' <IntegralCast>
+| | |     |   `-UnaryOperator 0x7ff0b4014bb0 <col:19, col:20> 'int' prefix '-'
+| | |     |     `-ImplicitCastExpr 0x7ff0b4014b98 <col:20> 'int' <IntegralCast>
+| | |     |       `-ImplicitCastExpr 0x7ff0b4014b80 <col:20> 'u8':'unsigned char' <LValueToRValue>
+| | |     |         `-DeclRefExpr 0x7ff0b4014b58 <col:20> 'u8':'unsigned char' lvalue ParmVar 0x7ff0b4014390 'u8_0' 'u8':'unsigned char'
+| | |     `-IntegerLiteral 0x7ff0b4014c08 <col:28> 'int' 255
+| | `-ReturnStmt 0x7ff0b4014ec8 <line:16:3, col:33>
+| |   `-BinaryOperator 0x7ff0b4014ea0 <col:10, col:33> 'unsigned long long' '+'
+| |     |-BinaryOperator 0x7ff0b4014e20 <col:10, col:25> 'unsigned long long' '+'
+| |     | |-ImplicitCastExpr 0x7ff0b4014e08 <col:10, col:17> 'unsigned long long' <IntegralCast>
+| |     | | `-BinaryOperator 0x7ff0b4014da0 <col:10, col:17> 'int' '+'
+| |     | |   |-ImplicitCastExpr 0x7ff0b4014d58 <col:10> 'int' <IntegralCast>
+| |     | |   | `-ImplicitCastExpr 0x7ff0b4014d40 <col:10> 'u8':'unsigned char' <LValueToRValue>
+| |     | |   |   `-DeclRefExpr 0x7ff0b4014cf0 <col:10> 'u8':'unsigned char' lvalue ParmVar 0x7ff0b4014390 'u8_0' 'u8':'unsigned char'
+| |     | |   `-ImplicitCastExpr 0x7ff0b4014d88 <col:17> 'int' <IntegralCast>
+| |     | |     `-ImplicitCastExpr 0x7ff0b4014d70 <col:17> 'u16':'unsigned short' <LValueToRValue>
+| |     | |       `-DeclRefExpr 0x7ff0b4014d18 <col:17> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014420 'u16_0' 'u16':'unsigned short'
+| |     | `-ImplicitCastExpr 0x7ff0b4014df0 <col:25> 'u64':'unsigned long long' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7ff0b4014dc8 <col:25> 'u64':'unsigned long long' lvalue ParmVar 0x7ff0b4014520 'u64_0' 'u64':'unsigned long long'
+| |     `-ImplicitCastExpr 0x7ff0b4014e88 <col:33> 'unsigned long long' <IntegralCast>
+| |       `-ImplicitCastExpr 0x7ff0b4014e70 <col:33> 'u16':'unsigned short' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ff0b4014e48 <col:33> 'u16':'unsigned short' lvalue ParmVar 0x7ff0b4014590 'u16_1' 'u16':'unsigned short'
+| `-NoInlineAttr 0x7ff0b40147b8 <line:8:27>
+|-FunctionDecl 0x7ff0b4014fe8 <line:19:1, line:26:1> line:20:1 main 'int (void)'
+| `-CompoundStmt 0x7ff0b4801408 <line:21:1, line:26:1>
+|   |-DeclStmt 0x7ff0b4801138 <line:22:3, col:34>
+|   | `-VarDecl 0x7ff0b40150c8 <col:3, col:33> col:7 used x 'u64':'unsigned long long' cinit
+|   |   `-CallExpr 0x7ff0b4801070 <col:11, col:33> 'u64':'unsigned long long'
+|   |     |-ImplicitCastExpr 0x7ff0b4801058 <col:11> 'u64 (*)(u8, u16, u32, u64, u16)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff0b4015128 <col:11> 'u64 (u8, u16, u32, u64, u16)' Function 0x7ff0b40146f0 'foo' 'u64 (u8, u16, u32, u64, u16)'
+|   |     |-ImplicitCastExpr 0x7ff0b48010c0 <col:15> 'u8':'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ff0b4015150 <col:15> 'int' 1
+|   |     |-ImplicitCastExpr 0x7ff0b48010d8 <col:18> 'u16':'unsigned short' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ff0b4015170 <col:18> 'int' 1
+|   |     |-ImplicitCastExpr 0x7ff0b48010f0 <col:21> 'u32':'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ff0b4015190 <col:21> 'int' 65535
+|   |     |-ImplicitCastExpr 0x7ff0b4801108 <col:29> 'u64':'unsigned long long' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7ff0b40151b0 <col:29> 'int' 0
+|   |     `-ImplicitCastExpr 0x7ff0b4801120 <col:32> 'u16':'unsigned short' <IntegralCast>
+|   |       `-IntegerLiteral 0x7ff0b40151d0 <col:32> 'int' 1
+|   |-IfStmt 0x7ff0b4801398 <line:23:3, line:24:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff0b48011c8 <line:23:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff0b4801198 <col:7> 'u64':'unsigned long long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff0b4801150 <col:7> 'u64':'unsigned long long' lvalue Var 0x7ff0b40150c8 'x' 'u64':'unsigned long long'
+|   | | `-ImplicitCastExpr 0x7ff0b48011b0 <col:12> 'unsigned long long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ff0b4801178 <col:12> 'int' 128
+|   | |-CallExpr 0x7ff0b4801370 <line:24:5, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7ff0b4801358 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff0b4801308 <col:5> '<builtin fn type>' Function 0x7ff0b4801220 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff0b48013f0 <line:25:3, col:10>
+|     `-IntegerLiteral 0x7ff0b48013d0 <col:10> 'int' 0
+`-FunctionDecl 0x7ff0b4801220 <line:24:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff0b48012c0 <col:5> Implicit

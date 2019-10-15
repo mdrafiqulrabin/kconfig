@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd51402b6e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd51402c378 <../Data/C2AST/pr56151.c:5:1, col:5> col:5 used vara 'int'
+|-VarDecl 0x7fd51406d258 <col:1, col:11> col:11 used varb 'int'
+`-FunctionDecl 0x7fd51406d430 <line:7:1, line:11:1> line:8:1 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fd51406d2e8 <col:6, col:10> col:10 i 'int'
+  |-ParmVarDecl 0x7fd51406d360 <col:13, col:17> col:17 j 'int'
+  `-CompoundStmt 0x7fd51406d5d8 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fd51406d5b0 <line:10:3, col:17> 'int' '='
+      |-DeclRefExpr 0x7fd51406d4e0 <col:3> 'int' lvalue Var 0x7fd51402c378 'vara' 'int'
+      `-BinaryOperator 0x7fd51406d588 <col:10, col:17> 'int' '|'
+        |-ImplicitCastExpr 0x7fd51406d558 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd51406d508 <col:10> 'int' lvalue Var 0x7fd51406d258 'varb' 'int'
+        `-ImplicitCastExpr 0x7fd51406d570 <col:17> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd51406d530 <col:17> 'int' lvalue Var 0x7fd51402c378 'vara' 'int'

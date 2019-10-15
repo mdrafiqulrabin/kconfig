@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fa29c02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa29c814200 <../Data/C2AST/pr71981.c:4:1, col:7> col:7 used a 'int **'
+|-FunctionDecl 0x7fa29c8143a0 <line:5:1, line:9:1> line:5:13 used fn1 'void (char **)' static
+| |-ParmVarDecl 0x7fa29c8142e0 <col:17, col:24> col:24 used p1 'char **'
+| `-CompoundStmt 0x7fa29c8148d0 <col:28, line:9:1>
+|   |-DeclStmt 0x7fa29c814630 <line:6:3, col:23>
+|   | |-VarDecl 0x7fa29c814458 <col:3, col:13> col:8 used s 'char' cinit
+|   | | `-ImplicitCastExpr 0x7fa29c814530 <col:12, col:13> 'char' <PointerToIntegral>
+|   | |   `-ImplicitCastExpr 0x7fa29c814518 <col:12, col:13> 'char *' <LValueToRValue>
+|   | |     `-UnaryOperator 0x7fa29c8144f8 <col:12, col:13> 'char *' lvalue prefix '*'
+|   | |       `-ImplicitCastExpr 0x7fa29c8144e0 <col:13> 'char **' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fa29c8144b8 <col:13> 'char **' lvalue ParmVar 0x7fa29c8142e0 'p1' 'char **'
+|   | `-VarDecl 0x7fa29c814558 <col:3, col:22> col:17 b 'char' cinit
+|   |   `-ImplicitCastExpr 0x7fa29c814600 <col:21, col:22> 'char' <PointerToIntegral>
+|   |     `-UnaryOperator 0x7fa29c8145e0 <col:21, col:22> 'char *' prefix '&'
+|   |       `-DeclRefExpr 0x7fa29c8145b8 <col:22> 'char' lvalue Var 0x7fa29c814458 's' 'char'
+|   `-WhileStmt 0x7fa29c8148b0 <line:7:3, line:8:5>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fa29c814888 <line:7:10, col:18> 'int' <LValueToRValue>
+|     | `-UnaryOperator 0x7fa29c814868 <col:10, col:18> 'int' lvalue prefix '*'
+|     |   `-ImplicitCastExpr 0x7fa29c814850 <col:11, col:18> 'int *' <LValueToRValue>
+|     |     `-ArraySubscriptExpr 0x7fa29c814828 <col:11, col:18> 'int *' lvalue
+|     |       |-CallExpr 0x7fa29c8147c0 <col:11, col:15> 'int'
+|     |       | `-ImplicitCastExpr 0x7fa29c8147a8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|     |       |   `-DeclRefExpr 0x7fa29c814750 <col:11> 'int ()' Function 0x7fa29c8146a0 'fn2' 'int ()'
+|     |       `-ImplicitCastExpr 0x7fa29c814810 <col:17> 'int **' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7fa29c8147e8 <col:17> 'int **' lvalue Var 0x7fa29c814200 'a' 'int **'
+|     `-NullStmt 0x7fa29c8148a0 <line:8:5>
+`-FunctionDecl 0x7fa29c814918 <line:10:1, col:33> col:5 main 'int ()'
+  `-CompoundStmt 0x7fa29c814b40 <col:12, col:33>
+    |-CallExpr 0x7fa29c814a80 <col:14, col:20> 'void'
+    | |-ImplicitCastExpr 0x7fa29c814a68 <col:14> 'void (*)(char **)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa29c8149b8 <col:14> 'void (char **)' Function 0x7fa29c8143a0 'fn1' 'void (char **)'
+    | `-ImplicitCastExpr 0x7fa29c814ac8 <col:18> 'char **' <BitCast>
+    |   `-ImplicitCastExpr 0x7fa29c814ab0 <col:18> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fa29c814a18 <col:18> 'char [1]' lvalue ""
+    `-ReturnStmt 0x7fa29c814b28 <col:23, col:30>
+      `-IntegerLiteral 0x7fa29c814b08 <col:30> 'int' 0

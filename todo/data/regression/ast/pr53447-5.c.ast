@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7fbdd60174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fbdd5821060 <../Data/C2AST/pr53447-5.c:5:1, line:16:1> line:5:6 foo 'void (long long *)'
+  |-ParmVarDecl 0x7fbdd60181a0 <col:10, col:21> col:21 used p 'long long *'
+  `-CompoundStmt 0x7fbdd5821ae0 <line:6:1, line:16:1>
+    |-CompoundAssignOperator 0x7fbdd5821208 <line:7:3, col:11> 'long long' '|=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd58211a8 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd5821190 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821148 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd5821170 <col:5> 'int' 1
+    | `-ImplicitCastExpr 0x7fbdd58211f0 <col:11> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbdd58211d0 <col:11> 'long' 4294967297
+    |-CompoundAssignOperator 0x7fbdd5821300 <line:8:3, col:11> 'long long' '&=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd58212a0 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd5821288 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821240 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd5821268 <col:5> 'int' 2
+    | `-ImplicitCastExpr 0x7fbdd58212e8 <col:11> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbdd58212c8 <col:11> 'long' 4294967297
+    |-CompoundAssignOperator 0x7fbdd58213f8 <line:9:3, col:11> 'long long' '^=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd5821398 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd5821380 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821338 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd5821360 <col:5> 'int' 3
+    | `-ImplicitCastExpr 0x7fbdd58213e0 <col:11> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbdd58213c0 <col:11> 'long' 4294967297
+    |-CompoundAssignOperator 0x7fbdd58214f0 <line:10:3, col:11> 'long long' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd5821490 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd5821478 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821430 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd5821458 <col:5> 'int' 4
+    | `-ImplicitCastExpr 0x7fbdd58214d8 <col:11> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbdd58214b8 <col:11> 'long' 4294967297
+    |-CompoundAssignOperator 0x7fbdd58215e8 <line:11:3, col:11> 'long long' '-=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd5821588 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd5821570 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821528 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd5821550 <col:5> 'int' 5
+    | `-ImplicitCastExpr 0x7fbdd58215d0 <col:11> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbdd58215b0 <col:11> 'long' 4294967297
+    |-BinaryOperator 0x7fbdd5821768 <line:12:3, col:14> 'long long' '='
+    | |-ArraySubscriptExpr 0x7fbdd5821680 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd5821668 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821620 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd5821648 <col:5> 'int' 6
+    | `-UnaryOperator 0x7fbdd5821748 <col:10, col:14> 'long long' prefix '~'
+    |   `-ImplicitCastExpr 0x7fbdd5821730 <col:11, col:14> 'long long' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fbdd5821708 <col:11, col:14> 'long long' lvalue
+    |       |-ImplicitCastExpr 0x7fbdd58216f0 <col:11> 'long long *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fbdd58216a8 <col:11> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    |       `-IntegerLiteral 0x7fbdd58216d0 <col:13> 'int' 6
+    |-CompoundAssignOperator 0x7fbdd5821850 <line:13:3, col:12> 'long long' '<<=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd58217f0 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd58217d8 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821790 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd58217b8 <col:5> 'int' 7
+    | `-IntegerLiteral 0x7fbdd5821818 <col:12> 'int' 5
+    |-CompoundAssignOperator 0x7fbdd5821948 <line:14:3, col:12> 'long long' '>>=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-ArraySubscriptExpr 0x7fbdd58218e8 <col:3, col:6> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7fbdd58218d0 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbdd5821888 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+    | | `-IntegerLiteral 0x7fbdd58218b0 <col:5> 'int' 8
+    | `-IntegerLiteral 0x7fbdd5821910 <col:12> 'int' 5
+    `-CompoundAssignOperator 0x7fbdd5821aa8 <line:15:3, col:15> 'long long' '-=' ComputeLHSTy='long long' ComputeResultTy='long long'
+      |-ArraySubscriptExpr 0x7fbdd58219e0 <col:3, col:6> 'long long' lvalue
+      | |-ImplicitCastExpr 0x7fbdd58219c8 <col:3> 'long long *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbdd5821980 <col:3> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+      | `-IntegerLiteral 0x7fbdd58219a8 <col:5> 'int' 9
+      `-ImplicitCastExpr 0x7fbdd5821a90 <col:11, col:15> 'long long' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fbdd5821a68 <col:11, col:15> 'long long' lvalue
+          |-ImplicitCastExpr 0x7fbdd5821a50 <col:11> 'long long *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fbdd5821a08 <col:11> 'long long *' lvalue ParmVar 0x7fbdd60181a0 'p' 'long long *'
+          `-IntegerLiteral 0x7fbdd5821a30 <col:13> 'int' 10

@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fde2c81aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fde2c81bb60 <../Data/C2AST/pr71700.c:1:1, line:5:1> line:1:8 struct S definition
+| |-FieldDecl 0x7fde2c85ca58 <line:3:3, col:15> col:10 f0 'int'
+| | `-IntegerLiteral 0x7fde2c85ca20 <col:15> 'int' 16
+| `-FieldDecl 0x7fde2c85cad8 <line:4:3, col:17> col:12 referenced f1 'unsigned int'
+|   `-IntegerLiteral 0x7fde2c85caa0 <col:17> 'int' 1
+|-VarDecl 0x7fde2c85cb38 <line:7:1, col:5> col:5 b 'int'
+|-VarDecl 0x7fde2c85cc98 <line:8:1, col:40> col:17 used c 'struct S [2]' static cinit
+| `-InitListExpr 0x7fde2c85cea8 <col:23, col:40> 'struct S [2]'
+|   |-InitListExpr 0x7fde2c85cee8 <col:24, col:30> 'struct S':'struct S'
+|   | |-UnaryOperator 0x7fde2c85cd18 <col:25, col:26> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7fde2c85ccf8 <col:26> 'int' 1
+|   | `-ImplicitCastExpr 0x7fde2c85cf40 <col:29> 'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fde2c85cd38 <col:29> 'int' 0
+|   `-InitListExpr 0x7fde2c85cf58 <col:33, col:39> 'struct S':'struct S'
+|     |-UnaryOperator 0x7fde2c85cdc8 <col:34, col:35> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7fde2c85cda8 <col:35> 'int' 1
+|     `-ImplicitCastExpr 0x7fde2c85cfb8 <col:38> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7fde2c85cde8 <col:38> 'int' 0
+|-VarDecl 0x7fde2c85d068 <line:9:1, col:10> col:10 used d 'struct S':'struct S'
+|-FunctionDecl 0x7fde2c85d120 <line:11:1, line:19:1> line:12:1 main 'int ()'
+| `-CompoundStmt 0x7fde2c85d728 <line:13:1, line:19:1>
+|   |-DeclStmt 0x7fde2c85d340 <line:14:3, col:20>
+|   | `-VarDecl 0x7fde2c85d1e0 <col:3, col:19> col:12 used e 'struct S':'struct S' cinit
+|   |   `-ImplicitCastExpr 0x7fde2c85d328 <col:16, col:19> 'struct S':'struct S' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fde2c85d300 <col:16, col:19> 'struct S':'struct S' lvalue
+|   |       |-ImplicitCastExpr 0x7fde2c85d2e8 <col:16> 'struct S *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fde2c85d240 <col:16> 'struct S [2]' lvalue Var 0x7fde2c85cc98 'c' 'struct S [2]'
+|   |       `-IntegerLiteral 0x7fde2c85d268 <col:18> 'int' 0
+|   |-BinaryOperator 0x7fde2c85d3c0 <line:15:3, col:7> 'struct S':'struct S' '='
+|   | |-DeclRefExpr 0x7fde2c85d358 <col:3> 'struct S':'struct S' lvalue Var 0x7fde2c85d068 'd' 'struct S':'struct S'
+|   | `-ImplicitCastExpr 0x7fde2c85d3a8 <col:7> 'struct S':'struct S' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fde2c85d380 <col:7> 'struct S':'struct S' lvalue Var 0x7fde2c85d1e0 'e' 'struct S':'struct S'
+|   |-IfStmt 0x7fde2c85d6b8 <line:16:3, line:17:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fde2c85d498 <line:16:7, col:15> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fde2c85d480 <col:7, col:9> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fde2c85d468 <col:7, col:9> 'unsigned int' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fde2c85d410 <col:7, col:9> 'unsigned int' lvalue bitfield .f1 0x7fde2c85cad8
+|   | | |     `-DeclRefExpr 0x7fde2c85d3e8 <col:7> 'struct S':'struct S' lvalue Var 0x7fde2c85d068 'd' 'struct S':'struct S'
+|   | | `-IntegerLiteral 0x7fde2c85d448 <col:15> 'int' 0
+|   | |-CallExpr 0x7fde2c85d690 <line:17:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fde2c85d678 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fde2c85d628 <col:5> '<builtin fn type>' Function 0x7fde2c85d540 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fde2c85d710 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7fde2c85d6f0 <col:10> 'int' 0
+`-FunctionDecl 0x7fde2c85d540 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fde2c85d5e0 <col:5> Implicit

@@ -1,0 +1,27 @@
+../Data/C2AST/pr35802.c:7:1: error: unknown type name 'NOMIPS16'
+NOMIPS16 void
+^
+../Data/C2AST/pr35802.c:7:10: error: expected identifier or '('
+NOMIPS16 void
+         ^
+2 errors generated.
+TranslationUnitDecl 0x7fac41817ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac41818260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac41817f80 '__int128'
+|-TypedefDecl 0x7fac418182d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac41817fa0 'unsigned __int128'
+|-TypedefDecl 0x7fac418185a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac418183b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fac41818328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac41818640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac41818600 'char *'
+|   `-BuiltinType 0x7fac41817d80 'char'
+|-TypedefDecl 0x7fac41818908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac418188b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac41818720 'struct __va_list_tag'
+|     `-Record 0x7fac41818698 '__va_list_tag'
+|-VarDecl 0x7fac41029a00 <../Data/C2AST/pr35802.c:2:1, col:14> col:14 x 'int' tls
+| `-TLSModelAttr 0x7fac41029a60 <col:31, col:55> "initial-exec"
+|-VarDecl 0x7fac41029b50 <line:3:1, col:14> col:14 y 'int' tls
+| `-TLSModelAttr 0x7fac41029bb0 <col:31, col:55> "initial-exec"
+`-FunctionDecl 0x7fac41029cd8 <line:5:1, col:14> col:5 bar 'int (void)'

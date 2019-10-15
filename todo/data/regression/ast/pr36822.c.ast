@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fd46b02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd46b814200 <../Data/C2AST/pr36822.c:6:1, line:14:1> line:6:5 boo 'int ()'
+  `-CompoundStmt 0x7fd46b8149d0 <line:7:1, line:14:1>
+    |-DeclStmt 0x7fd46b8145e8 <line:8:3, line:11:9>
+    | |-RecordDecl 0x7fd46b8142e0 <line:8:3, line:11:3> line:8:3 struct definition
+    | | |-FieldDecl 0x7fd46b814410 <line:9:5, col:27> col:19 pad 'unsigned char [4096]'
+    | | `-FieldDecl 0x7fd46b814470 <line:10:5, col:19> col:19 referenced bar 'unsigned long'
+    | `-VarDecl 0x7fd46b814570 <line:8:3, line:11:6> col:6 used foo 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *'
+    `-GCCAsmStmt 0x7fd46b814958 <line:12:3, line:13:20>
+      |-UnaryOperator 0x7fd46b814810 <line:12:28, col:59> 'unsigned long long' lvalue prefix '*'
+      | `-CStyleCastExpr 0x7fd46b8147e8 <col:29, col:59> 'unsigned long long *' <IntegralToPointer>
+      |   `-ImplicitCastExpr 0x7fd46b8147d0 <col:50, col:59> 'unsigned long' <LValueToRValue>
+      |     `-ParenExpr 0x7fd46b8147b0 <col:50, col:59> 'unsigned long' lvalue
+      |       `-MemberExpr 0x7fd46b814708 <col:51, col:56> 'unsigned long' lvalue ->bar 0x7fd46b814470
+      |         `-ImplicitCastExpr 0x7fd46b8146f0 <col:51> 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *' <LValueToRValue>
+      |           `-DeclRefExpr 0x7fd46b8146c8 <col:51> 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *' lvalue Var 0x7fd46b814570 'foo' 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *'
+      `-UnaryOperator 0x7fd46b814938 <line:13:10, col:16> 'unsigned long *' prefix '&'
+        `-MemberExpr 0x7fd46b8148d8 <col:11, col:16> 'unsigned long' lvalue ->bar 0x7fd46b814470
+          `-ImplicitCastExpr 0x7fd46b8148c0 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *' <LValueToRValue>
+            `-DeclRefExpr 0x7fd46b814898 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *' lvalue Var 0x7fd46b814570 'foo' 'struct (anonymous struct at ../Data/C2AST/pr36822.c:8:3) *'

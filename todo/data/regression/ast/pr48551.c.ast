@@ -1,0 +1,235 @@
+TranslationUnitDecl 0x7fe97b02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe97b02c978 <../Data/C2AST/pr48551.c:6:1, col:5> col:5 used frob 'int'
+|-TypedefDecl 0x7fe97b06dc58 <line:7:1, col:16> col:16 referenced SplashCoord 'double'
+| `-BuiltinType 0x7fe97b02bf00 'double'
+|-FunctionDecl 0x7fe97b06de60 <line:8:1, col:47> col:6 used transform 'void (SplashCoord, SplashCoord)'
+| |-ParmVarDecl 0x7fe97b06dce0 <col:17, col:29> col:29 xi 'SplashCoord':'double'
+| `-ParmVarDecl 0x7fe97b06dd50 <col:33, col:45> col:45 yi 'SplashCoord':'double'
+`-FunctionDecl 0x7fe97b06e540 <line:9:1, line:43:1> line:10:1 arf 'void (SplashCoord, SplashCoord, SplashCoord, SplashCoord, SplashCoord, SplashCoord, SplashCoord, SplashCoord, SplashCoord *, SplashCoord)'
+  |-ParmVarDecl 0x7fe97b06df20 <col:6, col:18> col:18 x0 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06df90 <col:22, col:34> col:34 y0 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e000 <col:38, col:50> col:50 x1 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e070 <col:54, col:66> col:66 y1 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e0e0 <line:11:6, col:18> col:18 x2 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e150 <col:22, col:34> col:34 y2 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e1c0 <col:38, col:50> col:50 x3 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e230 <col:54, col:66> col:66 y3 'SplashCoord':'double'
+  |-ParmVarDecl 0x7fe97b06e2f8 <line:12:6, col:20> col:20 matrix 'SplashCoord *'
+  |-ParmVarDecl 0x7fe97b06e368 <col:28, col:40> col:40 flatness2 'SplashCoord':'double'
+  `-CompoundStmt 0x7fe97b086988 <line:13:1, line:43:1>
+    |-DeclStmt 0x7fe97b06e8a8 <line:14:3, col:35>
+    | `-VarDecl 0x7fe97b06e848 <col:3, col:34> col:15 used cx 'SplashCoord [1025][3]'
+    |-DeclStmt 0x7fe97b06ea40 <line:15:3, col:35>
+    | `-VarDecl 0x7fe97b06e9e0 <col:3, col:34> col:15 used cy 'SplashCoord [1025][3]'
+    |-DeclStmt 0x7fe97b06ef58 <line:16:3, col:62>
+    | |-VarDecl 0x7fe97b06ea68 <col:3, col:15> col:15 used xl0 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06ead8 <col:3, col:20> col:20 used xl1 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06eb48 <col:3, col:25> col:25 used xl2 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06ec00 <col:3, col:30> col:30 used xr0 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06ec70 <col:3, col:35> col:35 used xr1 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06ece0 <col:3, col:40> col:40 used xr2 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06ed50 <col:3, col:45> col:45 used xr3 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06edc0 <col:3, col:50> col:50 used xx1 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06ee30 <col:3, col:55> col:55 used xx2 'SplashCoord':'double'
+    | `-VarDecl 0x7fe97b06eea0 <col:3, col:60> col:60 used xh 'SplashCoord':'double'
+    |-DeclStmt 0x7fe97b06f428 <line:17:3, col:62>
+    | |-VarDecl 0x7fe97b06ef80 <col:3, col:15> col:15 yl0 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06eff0 <col:3, col:20> col:20 used yl1 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f060 <col:3, col:25> col:25 used yl2 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f0d0 <col:3, col:30> col:30 used yr0 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f140 <col:3, col:35> col:35 used yr1 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f1b0 <col:3, col:40> col:40 used yr2 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f220 <col:3, col:45> col:45 used yr3 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f290 <col:3, col:50> col:50 yy1 'SplashCoord':'double'
+    | |-VarDecl 0x7fe97b06f300 <col:3, col:55> col:55 used yy2 'SplashCoord':'double'
+    | `-VarDecl 0x7fe97b06f370 <col:3, col:60> col:60 used yh 'SplashCoord':'double'
+    |-DeclStmt 0x7fe97b06f5c8 <line:18:3, col:17>
+    | |-VarDecl 0x7fe97b06f458 <col:3, col:7> col:7 used p1 'int'
+    | |-VarDecl 0x7fe97b06f4d0 <col:3, col:11> col:11 p2 'int'
+    | `-VarDecl 0x7fe97b06f548 <col:3, col:15> col:15 used p3 'int'
+    `-WhileStmt 0x7fe97b086968 <line:19:3, line:42:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe97b06f6a8 <line:19:10, col:24> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe97b06f690 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe97b06f5e0 <col:10> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+      | `-ParenExpr 0x7fe97b06f670 <col:16, col:24> 'int'
+      |   `-BinaryOperator 0x7fe97b06f648 <col:17, col:22> 'int' '<<'
+      |     |-IntegerLiteral 0x7fe97b06f608 <col:17> 'int' 1
+      |     `-IntegerLiteral 0x7fe97b06f628 <col:22> 'int' 10
+      `-CompoundStmt 0x7fe97b086930 <line:20:5, line:42:5>
+        |-BinaryOperator 0x7fe97b06f878 <line:21:7, col:21> 'SplashCoord':'double' '='
+        | |-DeclRefExpr 0x7fe97b06f6d0 <col:7> 'SplashCoord':'double' lvalue Var 0x7fe97b06ea68 'xl0' 'SplashCoord':'double'
+        | `-ImplicitCastExpr 0x7fe97b06f860 <col:13, col:21> 'SplashCoord':'double' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fe97b06f838 <col:13, col:21> 'SplashCoord':'double' lvalue
+        |     |-ImplicitCastExpr 0x7fe97b06f820 <col:13, col:18> 'SplashCoord *' <ArrayToPointerDecay>
+        |     | `-ArraySubscriptExpr 0x7fe97b06f7d8 <col:13, col:18> 'SplashCoord [3]' lvalue
+        |     |   |-ImplicitCastExpr 0x7fe97b06f7a8 <col:13> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+        |     |   | `-DeclRefExpr 0x7fe97b06f6f8 <col:13> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e848 'cx' 'SplashCoord [1025][3]'
+        |     |   `-ImplicitCastExpr 0x7fe97b06f7c0 <col:16> 'int' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7fe97b06f720 <col:16> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+        |     `-IntegerLiteral 0x7fe97b06f800 <col:20> 'int' 0
+        |-BinaryOperator 0x7fe97b06f9e8 <line:22:7, col:21> 'SplashCoord':'double' '='
+        | |-DeclRefExpr 0x7fe97b06f8a0 <col:7> 'SplashCoord':'double' lvalue Var 0x7fe97b06ee30 'xx2' 'SplashCoord':'double'
+        | `-ImplicitCastExpr 0x7fe97b06f9d0 <col:13, col:21> 'SplashCoord':'double' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fe97b06f9a8 <col:13, col:21> 'SplashCoord':'double' lvalue
+        |     |-ImplicitCastExpr 0x7fe97b06f990 <col:13, col:18> 'SplashCoord *' <ArrayToPointerDecay>
+        |     | `-ArraySubscriptExpr 0x7fe97b06f948 <col:13, col:18> 'SplashCoord [3]' lvalue
+        |     |   |-ImplicitCastExpr 0x7fe97b06f918 <col:13> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+        |     |   | `-DeclRefExpr 0x7fe97b06f8c8 <col:13> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e848 'cx' 'SplashCoord [1025][3]'
+        |     |   `-ImplicitCastExpr 0x7fe97b06f930 <col:16> 'int' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7fe97b06f8f0 <col:16> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+        |     `-IntegerLiteral 0x7fe97b06f970 <col:20> 'int' 2
+        |-BinaryOperator 0x7fe97b06fb58 <line:23:7, col:21> 'SplashCoord':'double' '='
+        | |-DeclRefExpr 0x7fe97b06fa10 <col:7> 'SplashCoord':'double' lvalue Var 0x7fe97b06f300 'yy2' 'SplashCoord':'double'
+        | `-ImplicitCastExpr 0x7fe97b06fb40 <col:13, col:21> 'SplashCoord':'double' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fe97b06fb18 <col:13, col:21> 'SplashCoord':'double' lvalue
+        |     |-ImplicitCastExpr 0x7fe97b06fb00 <col:13, col:18> 'SplashCoord *' <ArrayToPointerDecay>
+        |     | `-ArraySubscriptExpr 0x7fe97b06fab8 <col:13, col:18> 'SplashCoord [3]' lvalue
+        |     |   |-ImplicitCastExpr 0x7fe97b06fa88 <col:13> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+        |     |   | `-DeclRefExpr 0x7fe97b06fa38 <col:13> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e9e0 'cy' 'SplashCoord [1025][3]'
+        |     |   `-ImplicitCastExpr 0x7fe97b06faa0 <col:16> 'int' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7fe97b06fa60 <col:16> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+        |     `-IntegerLiteral 0x7fe97b06fae0 <col:20> 'int' 2
+        |-CallExpr 0x7fe97b085670 <line:24:7, col:26> 'void'
+        | |-ImplicitCastExpr 0x7fe97b085658 <col:7> 'void (*)(SplashCoord, SplashCoord)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fe97b06fb80 <col:7> 'void (SplashCoord, SplashCoord)' Function 0x7fe97b06de60 'transform' 'void (SplashCoord, SplashCoord)'
+        | |-ImplicitCastExpr 0x7fe97b0856a8 <col:18> 'SplashCoord':'double' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fe97b06fba8 <col:18> 'SplashCoord':'double' lvalue Var 0x7fe97b06ee30 'xx2' 'SplashCoord':'double'
+        | `-ImplicitCastExpr 0x7fe97b0856c0 <col:23> 'SplashCoord':'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe97b06fbd0 <col:23> 'SplashCoord':'double' lvalue Var 0x7fe97b06f300 'yy2' 'SplashCoord':'double'
+        `-IfStmt 0x7fe97b0868f8 <line:25:7, line:41:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fe97b085700 <line:25:11> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fe97b0856d8 <col:11> 'int' lvalue Var 0x7fe97b02c978 'frob' 'int'
+          |-CompoundStmt 0x7fe97b086878 <line:26:2, line:41:2>
+          | |-BinaryOperator 0x7fe97b085808 <line:27:4, col:20> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085718 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06ead8 'xl1' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b0857e8 <col:10, col:20> 'double'
+          | |   `-BinaryOperator 0x7fe97b0857c0 <col:11, col:17> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b085790 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085740 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06ea68 'xl0' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b0857a8 <col:17> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085768 <col:17> 'SplashCoord':'double' lvalue Var 0x7fe97b06edc0 'xx1' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b085920 <line:28:4, col:19> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085830 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06eea0 'xh' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b085900 <col:9, col:19> 'double'
+          | |   `-BinaryOperator 0x7fe97b0858d8 <col:10, col:16> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b0858a8 <col:10> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085858 <col:10> 'SplashCoord':'double' lvalue Var 0x7fe97b06edc0 'xx1' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b0858c0 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085880 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06ee30 'xx2' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b085a38 <line:29:4, col:19> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085948 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06f060 'yl2' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b085a18 <col:10, col:19> 'double'
+          | |   `-BinaryOperator 0x7fe97b0859f0 <col:11, col:17> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b0859c0 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085970 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06eff0 'yl1' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b0859d8 <col:17> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085998 <col:17> 'SplashCoord':'double' lvalue Var 0x7fe97b06f370 'yh' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b085b50 <line:30:4, col:20> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085a60 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06ece0 'xr2' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b085b30 <col:10, col:20> 'double'
+          | |   `-BinaryOperator 0x7fe97b085b08 <col:11, col:17> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b085ad8 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085a88 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06ee30 'xx2' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b085af0 <col:17> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085ab0 <col:17> 'SplashCoord':'double' lvalue Var 0x7fe97b06ed50 'xr3' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b085cb0 <line:31:4, col:24> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085b78 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06f1b0 'yr2' 'SplashCoord':'double'
+          | | `-BinaryOperator 0x7fe97b085c88 <col:10, col:24> 'double' '*'
+          | |   |-ParenExpr 0x7fe97b085c48 <col:10, col:20> 'double'
+          | |   | `-BinaryOperator 0x7fe97b085c20 <col:11, col:17> 'double' '+'
+          | |   |   |-ImplicitCastExpr 0x7fe97b085bf0 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |   |   | `-DeclRefExpr 0x7fe97b085ba0 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06f300 'yy2' 'SplashCoord':'double'
+          | |   |   `-ImplicitCastExpr 0x7fe97b085c08 <col:17> 'SplashCoord':'double' <LValueToRValue>
+          | |   |     `-DeclRefExpr 0x7fe97b085bc8 <col:17> 'SplashCoord':'double' lvalue Var 0x7fe97b06f220 'yr3' 'SplashCoord':'double'
+          | |   `-FloatingLiteral 0x7fe97b085c68 <col:24> 'double' 5.000000e-01
+          | |-BinaryOperator 0x7fe97b085dc8 <line:32:4, col:19> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085cd8 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06ec70 'xr1' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b085da8 <col:10, col:19> 'double'
+          | |   `-BinaryOperator 0x7fe97b085d80 <col:11, col:16> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b085d50 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085d00 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06eea0 'xh' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b085d68 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085d28 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06ece0 'xr2' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b085ee0 <line:33:4, col:19> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085df0 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06f140 'yr1' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b085ec0 <col:10, col:19> 'double'
+          | |   `-BinaryOperator 0x7fe97b085e98 <col:11, col:16> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b085e68 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085e18 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06f370 'yh' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b085e80 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085e40 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06f1b0 'yr2' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b085ff8 <line:34:4, col:20> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b085f08 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06ec00 'xr0' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b085fd8 <col:10, col:20> 'double'
+          | |   `-BinaryOperator 0x7fe97b085fb0 <col:11, col:17> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b085f80 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b085f30 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06eb48 'xl2' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b085f98 <col:17> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b085f58 <col:17> 'SplashCoord':'double' lvalue Var 0x7fe97b06ec70 'xr1' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b086110 <line:35:4, col:20> 'SplashCoord':'double' '='
+          | | |-DeclRefExpr 0x7fe97b086020 <col:4> 'SplashCoord':'double' lvalue Var 0x7fe97b06f0d0 'yr0' 'SplashCoord':'double'
+          | | `-ParenExpr 0x7fe97b0860f0 <col:10, col:20> 'double'
+          | |   `-BinaryOperator 0x7fe97b0860c8 <col:11, col:17> 'double' '+'
+          | |     |-ImplicitCastExpr 0x7fe97b086098 <col:11> 'SplashCoord':'double' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fe97b086048 <col:11> 'SplashCoord':'double' lvalue Var 0x7fe97b06f060 'yl2' 'SplashCoord':'double'
+          | |     `-ImplicitCastExpr 0x7fe97b0860b0 <col:17> 'SplashCoord':'double' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7fe97b086070 <col:17> 'SplashCoord':'double' lvalue Var 0x7fe97b06f140 'yr1' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b086280 <line:36:4, col:16> 'SplashCoord':'double' '='
+          | | |-ArraySubscriptExpr 0x7fe97b086218 <col:4, col:12> 'SplashCoord':'double' lvalue
+          | | | |-ImplicitCastExpr 0x7fe97b086200 <col:4, col:9> 'SplashCoord *' <ArrayToPointerDecay>
+          | | | | `-ArraySubscriptExpr 0x7fe97b0861b8 <col:4, col:9> 'SplashCoord [3]' lvalue
+          | | | |   |-ImplicitCastExpr 0x7fe97b086188 <col:4> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+          | | | |   | `-DeclRefExpr 0x7fe97b086138 <col:4> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e848 'cx' 'SplashCoord [1025][3]'
+          | | | |   `-ImplicitCastExpr 0x7fe97b0861a0 <col:7> 'int' <LValueToRValue>
+          | | | |     `-DeclRefExpr 0x7fe97b086160 <col:7> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+          | | | `-IntegerLiteral 0x7fe97b0861e0 <col:11> 'int' 1
+          | | `-ImplicitCastExpr 0x7fe97b086268 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7fe97b086240 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06ead8 'xl1' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b0863f0 <line:37:4, col:16> 'SplashCoord':'double' '='
+          | | |-ArraySubscriptExpr 0x7fe97b086388 <col:4, col:12> 'SplashCoord':'double' lvalue
+          | | | |-ImplicitCastExpr 0x7fe97b086370 <col:4, col:9> 'SplashCoord *' <ArrayToPointerDecay>
+          | | | | `-ArraySubscriptExpr 0x7fe97b086328 <col:4, col:9> 'SplashCoord [3]' lvalue
+          | | | |   |-ImplicitCastExpr 0x7fe97b0862f8 <col:4> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+          | | | |   | `-DeclRefExpr 0x7fe97b0862a8 <col:4> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e9e0 'cy' 'SplashCoord [1025][3]'
+          | | | |   `-ImplicitCastExpr 0x7fe97b086310 <col:7> 'int' <LValueToRValue>
+          | | | |     `-DeclRefExpr 0x7fe97b0862d0 <col:7> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+          | | | `-IntegerLiteral 0x7fe97b086350 <col:11> 'int' 1
+          | | `-ImplicitCastExpr 0x7fe97b0863d8 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7fe97b0863b0 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06eff0 'yl1' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b086560 <line:38:4, col:16> 'SplashCoord':'double' '='
+          | | |-ArraySubscriptExpr 0x7fe97b0864f8 <col:4, col:12> 'SplashCoord':'double' lvalue
+          | | | |-ImplicitCastExpr 0x7fe97b0864e0 <col:4, col:9> 'SplashCoord *' <ArrayToPointerDecay>
+          | | | | `-ArraySubscriptExpr 0x7fe97b086498 <col:4, col:9> 'SplashCoord [3]' lvalue
+          | | | |   |-ImplicitCastExpr 0x7fe97b086468 <col:4> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+          | | | |   | `-DeclRefExpr 0x7fe97b086418 <col:4> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e848 'cx' 'SplashCoord [1025][3]'
+          | | | |   `-ImplicitCastExpr 0x7fe97b086480 <col:7> 'int' <LValueToRValue>
+          | | | |     `-DeclRefExpr 0x7fe97b086440 <col:7> 'int' lvalue Var 0x7fe97b06f458 'p1' 'int'
+          | | | `-IntegerLiteral 0x7fe97b0864c0 <col:11> 'int' 2
+          | | `-ImplicitCastExpr 0x7fe97b086548 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7fe97b086520 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06eb48 'xl2' 'SplashCoord':'double'
+          | |-BinaryOperator 0x7fe97b0866e0 <line:39:4, col:16> 'SplashCoord':'double' '='
+          | | |-ArraySubscriptExpr 0x7fe97b086678 <col:4, col:12> 'SplashCoord':'double' lvalue
+          | | | |-ImplicitCastExpr 0x7fe97b086660 <col:4, col:9> 'SplashCoord *' <ArrayToPointerDecay>
+          | | | | `-ArraySubscriptExpr 0x7fe97b086618 <col:4, col:9> 'SplashCoord [3]' lvalue
+          | | | |   |-ImplicitCastExpr 0x7fe97b0865d8 <col:4> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+          | | | |   | `-DeclRefExpr 0x7fe97b086588 <col:4> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e848 'cx' 'SplashCoord [1025][3]'
+          | | | |   `-ImplicitCastExpr 0x7fe97b086600 <col:7> 'int' <LValueToRValue>
+          | | | |     `-DeclRefExpr 0x7fe97b0865b0 <col:7> 'int' lvalue Var 0x7fe97b06f548 'p3' 'int'
+          | | | `-IntegerLiteral 0x7fe97b086640 <col:11> 'int' 0
+          | | `-ImplicitCastExpr 0x7fe97b0866c8 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7fe97b0866a0 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06ec00 'xr0' 'SplashCoord':'double'
+          | `-BinaryOperator 0x7fe97b086850 <line:40:4, col:16> 'SplashCoord':'double' '='
+          |   |-ArraySubscriptExpr 0x7fe97b0867e8 <col:4, col:12> 'SplashCoord':'double' lvalue
+          |   | |-ImplicitCastExpr 0x7fe97b0867d0 <col:4, col:9> 'SplashCoord *' <ArrayToPointerDecay>
+          |   | | `-ArraySubscriptExpr 0x7fe97b086788 <col:4, col:9> 'SplashCoord [3]' lvalue
+          |   | |   |-ImplicitCastExpr 0x7fe97b086758 <col:4> 'SplashCoord (*)[3]' <ArrayToPointerDecay>
+          |   | |   | `-DeclRefExpr 0x7fe97b086708 <col:4> 'SplashCoord [1025][3]' lvalue Var 0x7fe97b06e9e0 'cy' 'SplashCoord [1025][3]'
+          |   | |   `-ImplicitCastExpr 0x7fe97b086770 <col:7> 'int' <LValueToRValue>
+          |   | |     `-DeclRefExpr 0x7fe97b086730 <col:7> 'int' lvalue Var 0x7fe97b06f548 'p3' 'int'
+          |   | `-IntegerLiteral 0x7fe97b0867b0 <col:11> 'int' 0
+          |   `-ImplicitCastExpr 0x7fe97b086838 <col:16> 'SplashCoord':'double' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fe97b086810 <col:16> 'SplashCoord':'double' lvalue Var 0x7fe97b06f0d0 'yr0' 'SplashCoord':'double'
+          `-<<<NULL>>>

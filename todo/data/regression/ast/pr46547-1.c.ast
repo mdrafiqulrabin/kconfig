@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fca3a02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fca3a03c820 <../Data/C2AST/pr46547-1.c:1:1, line:6:1> line:1:6 foo 'void (void)'
+  `-CompoundStmt 0x7fca3a03cb28 <col:17, line:6:1>
+    |-DeclStmt 0x7fca3a03c970 <line:2:3, col:10>
+    | `-VarDecl 0x7fca3a03c910 <col:3, col:9> col:9 used d '_Bool'
+    |-DeclStmt 0x7fca3a03ca28 <line:3:3, col:26>
+    | `-VarDecl 0x7fca3a03c9c8 <col:3, col:25> col:25 used s '_Complex long double *'
+    `-BinaryOperator 0x7fca3a03cb00 <line:5:3, col:9> '_Bool' '='
+      |-DeclRefExpr 0x7fca3a03ca40 <col:3> '_Bool' lvalue Var 0x7fca3a03c910 'd' '_Bool'
+      `-ImplicitCastExpr 0x7fca3a03cae8 <col:7, col:9> '_Bool' <FloatingComplexToBoolean>
+        `-ImplicitCastExpr 0x7fca3a03cad0 <col:7, col:9> '_Complex long double' <LValueToRValue>
+          `-UnaryOperator 0x7fca3a03cab0 <col:7, col:9> '_Complex long double' lvalue prefix '*'
+            `-UnaryOperator 0x7fca3a03ca90 <col:8, col:9> '_Complex long double *' postfix '++'
+              `-DeclRefExpr 0x7fca3a03ca68 <col:8> '_Complex long double *' lvalue Var 0x7fca3a03c9c8 's' '_Complex long double *'

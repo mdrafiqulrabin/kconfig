@@ -1,0 +1,101 @@
+../Data/C2AST/pr51074.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7fc51f02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc51f02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc51f02bf80 '__int128'
+|-TypedefDecl 0x7fc51f02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc51f02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc51f02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc51f02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc51f02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc51f02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc51f02c600 'char *'
+|   `-BuiltinType 0x7fc51f02bd80 'char'
+|-TypedefDecl 0x7fc51f02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc51f02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc51f02c720 'struct __va_list_tag'
+|     `-Record 0x7fc51f02c698 '__va_list_tag'
+|-RecordDecl 0x7fc51f02c960 <../Data/C2AST/pr51074.c:5:1, col:22> col:8 struct S definition
+| |-FieldDecl 0x7fc51f815238 <col:12, col:16> col:16 referenced a 'int'
+| `-FieldDecl 0x7fc51f815298 <col:12, col:19> col:19 referenced b 'int'
+|-VarDecl 0x7fc51f815428 <col:1, col:27> col:24 used s 'struct S [8]'
+|-FunctionDecl 0x7fc51f815530 <line:7:1, line:22:1> line:8:1 main 'int ()'
+| `-CompoundStmt 0x7fc51f82bde0 <line:9:1, line:22:1>
+|   |-DeclStmt 0x7fc51f815648 <line:10:3, col:8>
+|   | `-VarDecl 0x7fc51f8155e8 <col:3, col:7> col:7 used i 'int'
+|   |-CallExpr 0x7fc51f8157a0 <line:11:3, col:15> 'int'
+|   | `-ImplicitCastExpr 0x7fc51f815788 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fc51f815738 <col:3> 'int ()' Function 0x7fc51f815688 'check_vect' 'int ()'
+|   |-ForStmt 0x7fc51f815bf8 <line:12:3, line:16:5>
+|   | |-BinaryOperator 0x7fc51f815810 <line:12:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fc51f8157c8 <col:8> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc51f8157f0 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc51f815898 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc51f815880 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc51f815838 <col:15> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc51f815860 <col:19> 'int' 8
+|   | |-UnaryOperator 0x7fc51f8158e8 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc51f8158c0 <col:22> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   | `-CompoundStmt 0x7fc51f815bd8 <line:13:5, line:16:5>
+|   |   |-BinaryOperator 0x7fc51f815a68 <line:14:7, col:16> 'int' '='
+|   |   | |-MemberExpr 0x7fc51f815a10 <col:7, col:12> 'int' lvalue .b 0x7fc51f815298
+|   |   | | `-ArraySubscriptExpr 0x7fc51f8159e8 <col:7, col:10> 'struct S':'struct S' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fc51f8159b8 <col:7> 'struct S *' <ArrayToPointerDecay>
+|   |   | |   | `-DeclRefExpr 0x7fc51f815908 <col:7> 'struct S [8]' lvalue Var 0x7fc51f815428 's' 'struct S [8]'
+|   |   | |   `-ImplicitCastExpr 0x7fc51f8159d0 <col:9> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fc51f815930 <col:9> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   |   | `-IntegerLiteral 0x7fc51f815a48 <col:16> 'int' 0
+|   |   `-BinaryOperator 0x7fc51f815bb0 <line:15:7, col:16> 'int' '='
+|   |     |-MemberExpr 0x7fc51f815b38 <col:7, col:12> 'int' lvalue .a 0x7fc51f815238
+|   |     | `-ArraySubscriptExpr 0x7fc51f815b10 <col:7, col:10> 'struct S':'struct S' lvalue
+|   |     |   |-ImplicitCastExpr 0x7fc51f815ae0 <col:7> 'struct S *' <ArrayToPointerDecay>
+|   |     |   | `-DeclRefExpr 0x7fc51f815a90 <col:7> 'struct S [8]' lvalue Var 0x7fc51f815428 's' 'struct S [8]'
+|   |     |   `-ImplicitCastExpr 0x7fc51f815af8 <col:9> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fc51f815ab8 <col:9> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   |     `-ImplicitCastExpr 0x7fc51f815b98 <col:16> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fc51f815b70 <col:16> 'int' lvalue Var 0x7fc51f811 error generated.
+55e8 'i' 'int'
+|   |-GCCAsmStmt 0x7fc51f815cf8 <line:17:3, col:34>
+|   |-ForStmt 0x7fc51f82bd70 <line:18:3, line:20:14>
+|   | |-BinaryOperator 0x7fc51f815d90 <line:18:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fc51f815d48 <col:8> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc51f815d70 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc51f815e18 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc51f815e00 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc51f815db8 <col:15> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7fc51f815de0 <col:19> 'int' 8
+|   | |-UnaryOperator 0x7fc51f815e68 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc51f815e40 <col:22> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   | `-IfStmt 0x7fc51f82bd38 <line:19:5, line:20:14>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fc51f816128 <line:19:9, col:34> 'int' '||'
+|   |   | |-BinaryOperator 0x7fc51f815fa0 <col:9, col:19> 'int' '!='
+|   |   | | |-ImplicitCastExpr 0x7fc51f815f88 <col:9, col:14> 'int' <LValueToRValue>
+|   |   | | | `-MemberExpr 0x7fc51f815f30 <col:9, col:14> 'int' lvalue .b 0x7fc51f815298
+|   |   | | |   `-ArraySubscriptExpr 0x7fc51f815f08 <col:9, col:12> 'struct S':'struct S' lvalue
+|   |   | | |     |-ImplicitCastExpr 0x7fc51f815ed8 <col:9> 'struct S *' <ArrayToPointerDecay>
+|   |   | | |     | `-DeclRefExpr 0x7fc51f815e88 <col:9> 'struct S [8]' lvalue Var 0x7fc51f815428 's' 'struct S [8]'
+|   |   | | |     `-ImplicitCastExpr 0x7fc51f815ef0 <col:11> 'int' <LValueToRValue>
+|   |   | | |       `-DeclRefExpr 0x7fc51f815eb0 <col:11> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7fc51f815f68 <col:19> 'int' 0
+|   |   | `-BinaryOperator 0x7fc51f816100 <col:24, col:34> 'int' '!='
+|   |   |   |-ImplicitCastExpr 0x7fc51f8160d0 <col:24, col:29> 'int' <LValueToRValue>
+|   |   |   | `-MemberExpr 0x7fc51f816070 <col:24, col:29> 'int' lvalue .a 0x7fc51f815238
+|   |   |   |   `-ArraySubscriptExpr 0x7fc51f816048 <col:24, col:27> 'struct S':'struct S' lvalue
+|   |   |   |     |-ImplicitCastExpr 0x7fc51f816018 <col:24> 'struct S *' <ArrayToPointerDecay>
+|   |   |   |     | `-DeclRefExpr 0x7fc51f815fc8 <col:24> 'struct S [8]' lvalue Var 0x7fc51f815428 's' 'struct S [8]'
+|   |   |   |     `-ImplicitCastExpr 0x7fc51f816030 <col:26> 'int' <LValueToRValue>
+|   |   |   |       `-DeclRefExpr 0x7fc51f815ff0 <col:26> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   |   |   `-ImplicitCastExpr 0x7fc51f8160e8 <col:34> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fc51f8160a8 <col:34> 'int' lvalue Var 0x7fc51f8155e8 'i' 'int'
+|   |   |-CallExpr 0x7fc51f82bd10 <line:20:7, col:14> 'void'
+|   |   | `-ImplicitCastExpr 0x7fc51f82bcf8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   |   `-DeclRefExpr 0x7fc51f82bca0 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fc51f82bc00 'abort' 'void (void) __attribute__((noreturn))'
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc51f82bdc8 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7fc51f82bda8 <col:10> 'int' 0
+`-FunctionDecl 0x7fc51f82bc00 <line:20:7> col:7 implicit used abort 'void (void) __attribute__((noreturn))' extern

@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fac788222e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fac7900b850 <../Data/C2AST/pr57108.c:3:1, col:56> col:6 used __assert_func 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fac7900ba90 <line:5:1, line:17:1> line:6:1 ATATransfer 'void (int, int)'
+  |-ParmVarDecl 0x7fac7900b948 <col:14, col:18> col:18 used num 'int'
+  |-ParmVarDecl 0x7fac7900b9c0 <col:23, col:27> col:27 used buffer 'int'
+  `-CompoundStmt 0x7fac7900c270 <line:7:1, line:17:1>
+    |-DeclStmt 0x7fac7900bbb8 <line:8:3, col:16>
+    | `-VarDecl 0x7fac7900bb58 <col:3, col:7> col:7 used wordCount 'int'
+    `-WhileStmt 0x7fac7900c250 <line:10:3, line:16:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fac7900bc30 <line:10:10, col:16> 'int' '>'
+      | |-ImplicitCastExpr 0x7fac7900bc18 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fac7900bbd0 <col:10> 'int' lvalue ParmVar 0x7fac7900b948 'num' 'int'
+      | `-IntegerLiteral 0x7fac7900bbf8 <col:16> 'int' 0
+      `-CompoundStmt 0x7fac7900c228 <line:11:5, line:16:5>
+        |-BinaryOperator 0x7fac7900bd98 <line:12:7, col:42> 'int' '='
+        | |-DeclRefExpr 0x7fac7900bc58 <col:7> 'int' lvalue Var 0x7fac7900bb58 'wordCount' 'int'
+        | `-ImplicitCastExpr 0x7fac7900bd80 <col:19, col:42> 'int' <IntegralCast>
+        |   `-BinaryOperator 0x7fac7900bd58 <col:19, col:42> 'unsigned long' '/'
+        |     |-ImplicitCastExpr 0x7fac7900bd40 <col:19, col:25> 'unsigned long' <IntegralCast>
+        |     | `-BinaryOperator 0x7fac7900bce0 <col:19, col:25> 'int' '*'
+        |     |   |-ImplicitCastExpr 0x7fac7900bcc8 <col:19> 'int' <LValueToRValue>
+        |     |   | `-DeclRefExpr 0x7fac7900bc80 <col:19> 'int' lvalue ParmVar 0x7fac7900b948 'num' 'int'
+        |     |   `-IntegerLiteral 0x7fac7900bca8 <col:25> 'int' 512
+        |     `-UnaryExprOrTypeTraitExpr 0x7fac7900bd20 <col:31, col:42> 'unsigned long' sizeof 'int'
+        |-ParenExpr 0x7fac7900bfe8 <line:14:7, col:58> 'void'
+        | `-ConditionalOperator 0x7fac7900bfb8 <col:8, col:56> 'void'
+        |   |-ParenExpr 0x7fac7900beb0 <col:8, col:27> 'int'
+        |   | `-BinaryOperator 0x7fac7900be88 <col:9, col:26> 'int' '=='
+        |   |   |-IntegerLiteral 0x7fac7900bdc0 <col:9> 'int' 0
+        |   |   `-ParenExpr 0x7fac7900be68 <col:14, col:26> 'int'
+        |   |     `-BinaryOperator 0x7fac7900be40 <col:15, col:24> 'int' '&'
+        |   |       |-ImplicitCastExpr 0x7fac7900be28 <col:15> 'int' <LValueToRValue>
+        |   |       | `-DeclRefExpr 0x7fac7900bde0 <col:15> 'int' lvalue ParmVar 0x7fac7900b9c0 'buffer' 'int'
+        |   |       `-IntegerLiteral 0x7fac7900be08 <col:24> 'int' 63
+        |   |-CStyleCastExpr 0x7fac7900bf00 <col:31, col:37> 'void' <ToVoid>
+        |   | `-IntegerLiteral 0x7fac7900bed0 <col:37> 'int' 0
+        |   `-CallExpr 0x7fac7900bf90 <col:41, col:56> 'void'
+        |     `-ImplicitCastExpr 0x7fac7900bf78 <col:41> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7fac7900bf28 <col:41> 'void (void) __attribute__((noreturn))' Function 0x7fac7900b850 '__assert_func' 'void (void) __attribute__((noreturn))'
+        `-ParenExpr 0x7fac7900c208 <line:15:7, col:60> 'void'
+          `-ConditionalOperator 0x7fac7900c1d8 <col:8, col:59> 'void'
+            |-ParenExpr 0x7fac7900c0f8 <col:8, col:30> 'int'
+            | `-BinaryOperator 0x7fac7900c0d0 <col:9, col:29> 'int' '=='
+            |   |-IntegerLiteral 0x7fac7900c008 <col:9> 'int' 0
+            |   `-ParenExpr 0x7fac7900c0b0 <col:14, col:29> 'int'
+            |     `-BinaryOperator 0x7fac7900c088 <col:15, col:27> 'int' '&'
+            |       |-ImplicitCastExpr 0x7fac7900c070 <col:15> 'int' <LValueToRValue>
+            |       | `-DeclRefExpr 0x7fac7900c028 <col:15> 'int' lvalue Var 0x7fac7900bb58 'wordCount' 'int'
+            |       `-IntegerLiteral 0x7fac7900c050 <col:27> 'int' 31
+            |-CStyleCastExpr 0x7fac7900c148 <col:34, col:40> 'void' <ToVoid>
+            | `-IntegerLiteral 0x7fac7900c118 <col:40> 'int' 0
+            `-CallExpr 0x7fac7900c1b0 <col:44, col:59> 'void'
+              `-ImplicitCastExpr 0x7fac7900c198 <col:44> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+                `-DeclRefExpr 0x7fac7900c170 <col:44> 'void (void) __attribute__((noreturn))' Function 0x7fac7900b850 '__assert_func' 'void (void) __attribute__((noreturn))'

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f94ee82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f94ee86d820 <../Data/C2AST/pr85252.c:4:1, line:11:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7f94ee86dd90 <line:6:1, line:11:1>
+    |-DeclStmt 0x7f94ee86da40 <line:7:3, col:24>
+    | `-VarDecl 0x7f94ee86d978 <col:3, col:22> col:15 a 'char [0]' static cinit
+    |   `-StringLiteral 0x7f94ee86da18 <col:22> 'char [0]' lvalue ""
+    |-DeclStmt 0x7f94ee86db68 <line:8:3, col:25>
+    | `-VarDecl 0x7f94ee86da98 <col:3, col:22> col:15 b 'char [0]' static cinit
+    |   `-StringLiteral 0x7f94ee86db38 <col:22> 'char [0]' lvalue "b"
+    |-DeclStmt 0x7f94ee86dc50 <line:9:3, col:25>
+    | `-VarDecl 0x7f94ee86dbc0 <col:3, col:22> col:15 c 'char [1]' static cinit
+    |   `-StringLiteral 0x7f94ee86dc20 <col:22> 'char [1]' lvalue "c"
+    `-DeclStmt 0x7f94ee86dd78 <line:10:3, col:26>
+      `-VarDecl 0x7f94ee86dca8 <col:3, col:22> col:15 d 'char [1]' static cinit
+        `-StringLiteral 0x7f94ee86dd48 <col:22> 'char [1]' lvalue "de"

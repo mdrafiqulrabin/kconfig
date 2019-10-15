@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fdc1f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdc21000a20 <../Data/C2AST/pr54838.c:5:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7fdc21000c90 <line:7:1, line:24:1> line:8:1 foo 'void (void *, int *)'
+  |-ParmVarDecl 0x7fdc21000b18 <col:6, col:12> col:12 used b 'void *'
+  |-ParmVarDecl 0x7fdc21000bc0 <col:15, col:20> col:20 used c 'int *'
+  `-CompoundStmt 0x7fdc21001150 <line:9:1, line:24:1>
+    `-LabelStmt 0x7fdc21001138 <line:10:1, line:23:5> 'again'
+      `-SwitchStmt 0x7fdc21000db8 <line:11:3, line:23:5>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7fdc21000da0 <line:11:11, col:12> 'int' <LValueToRValue>
+        | `-UnaryOperator 0x7fdc21000d80 <col:11, col:12> 'int' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fdc21000d68 <col:12> 'int *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fdc21000d40 <col:12> 'int *' lvalue ParmVar 0x7fdc21000bc0 'c' 'int *'
+        `-CompoundStmt 0x7fdc21001110 <line:12:5, line:23:5>
+          |-CaseStmt 0x7fdc21000e08 <line:13:5, line:18:2>
+          | |-IntegerLiteral 0x7fdc21000de8 <line:13:10> 'int' 1
+          | |-<<<NULL>>>
+          | `-IfStmt 0x7fdc21000f70 <line:14:7, line:18:2>
+          |   |-<<<NULL>>>
+          |   |-<<<NULL>>>
+          |   |-UnaryOperator 0x7fdc21000e80 <line:14:11, col:12> 'int' prefix '!'
+          |   | `-ImplicitCastExpr 0x7fdc21000e68 <col:12> 'void *' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7fdc21000e40 <col:12> 'void *' lvalue ParmVar 0x7fdc21000b18 'b' 'void *'
+          |   |-CompoundStmt 0x7fdc21000f50 <line:15:2, line:18:2>
+          |   | |-CallExpr 0x7fdc21000f10 <line:16:4, col:9> 'void'
+          |   | | `-ImplicitCastExpr 0x7fdc21000ef8 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+          |   | |   `-DeclRefExpr 0x7fdc21000ea0 <col:4> 'void (void)' Function 0x7fdc21000a20 'bar' 'void (void)'
+          |   | `-ReturnStmt 0x7fdc21000f38 <line:17:4>
+          |   `-<<<NULL>>>
+          |-GotoStmt 0x7fdc21000ff0 <line:19:7, col:12> 'again' 0x7fdc21000fa8
+          `-CaseStmt 0x7fdc21001028 <line:20:5, line:22:7>
+            |-IntegerLiteral 0x7fdc21001008 <line:20:10> 'int' 3
+            |-<<<NULL>>>
+            `-IfStmt 0x7fdc210010d8 <line:21:7, line:22:7>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-UnaryOperator 0x7fdc210010a0 <line:21:11, col:12> 'int' prefix '!'
+              | `-ImplicitCastExpr 0x7fdc21001088 <col:12> 'void *' <LValueToRValue>
+              |   `-DeclRefExpr 0x7fdc21001060 <col:12> 'void *' lvalue ParmVar 0x7fdc21000b18 'b' 'void *'
+              |-GotoStmt 0x7fdc210010c0 <line:22:2, col:7> 'again' 0x7fdc21000fa8
+              `-<<<NULL>>>

@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ff85101d8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff85105f468 <../Data/C2AST/pr57150.c:15:1, col:39> col:20 used modify 'long double (long double)' extern
+| `-ParmVarDecl 0x7ff85101e578 <col:28, col:33> col:39 'long double'
+`-FunctionDecl 0x7ff85105f760 <line:17:1, line:24:1> line:18:1 sum 'void (long double *, long double, unsigned long)'
+  |-ParmVarDecl 0x7ff85105f590 <col:6, col:19> col:19 used ptr 'long double *'
+  |-ParmVarDecl 0x7ff85105f608 <col:24, col:36> col:36 used value 'long double'
+  |-ParmVarDecl 0x7ff85105f680 <col:43, col:57> col:57 used n 'unsigned long'
+  `-CompoundStmt 0x7ff85105fc18 <line:19:1, line:24:1>
+    |-DeclStmt 0x7ff85105f890 <line:20:3, col:18>
+    | `-VarDecl 0x7ff85105f830 <col:3, col:17> col:17 used i 'unsigned long'
+    `-ForStmt 0x7ff85105fbe0 <line:22:3, line:23:28>
+      |-BinaryOperator 0x7ff85105f908 <line:22:8, col:12> 'unsigned long' '='
+      | |-DeclRefExpr 0x7ff85105f8a8 <col:8> 'unsigned long' lvalue Var 0x7ff85105f830 'i' 'unsigned long'
+      | `-ImplicitCastExpr 0x7ff85105f8f0 <col:12> 'unsigned long' <IntegralCast>
+      |   `-IntegerLiteral 0x7ff85105f8d0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff85105f9b0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff85105f980 <col:15> 'unsigned long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff85105f930 <col:15> 'unsigned long' lvalue Var 0x7ff85105f830 'i' 'unsigned long'
+      | `-ImplicitCastExpr 0x7ff85105f998 <col:19> 'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff85105f958 <col:19> 'unsigned long' lvalue ParmVar 0x7ff85105f680 'n' 'unsigned long'
+      |-UnaryOperator 0x7ff85105fa00 <col:22, col:23> 'unsigned long' postfix '++'
+      | `-DeclRefExpr 0x7ff85105f9d8 <col:22> 'unsigned long' lvalue Var 0x7ff85105f830 'i' 'unsigned long'
+      `-CompoundAssignOperator 0x7ff85105fba8 <line:23:5, col:28> 'long double' '+=' ComputeLHSTy='long double' ComputeResultTy='long double'
+        |-ArraySubscriptExpr 0x7ff85105faa0 <col:5, col:10> 'long double' lvalue
+        | |-ImplicitCastExpr 0x7ff85105fa70 <col:5> 'long double *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff85105fa20 <col:5> 'long double *' lvalue ParmVar 0x7ff85105f590 'ptr' 'long double *'
+        | `-ImplicitCastExpr 0x7ff85105fa88 <col:9> 'unsigned long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ff85105fa48 <col:9> 'unsigned long' lvalue Var 0x7ff85105f830 'i' 'unsigned long'
+        `-CallExpr 0x7ff85105fb60 <col:15, col:28> 'long double'
+          |-ImplicitCastExpr 0x7ff85105fb48 <col:15> 'long double (*)(long double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff85105fac8 <col:15> 'long double (long double)' Function 0x7ff85105f468 'modify' 'long double (long double)'
+          `-ImplicitCastExpr 0x7ff85105fb90 <col:23> 'long double' <LValueToRValue>
+            `-DeclRefExpr 0x7ff85105faf0 <col:23> 'long double' lvalue ParmVar 0x7ff85105f608 'value' 'long double'

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fc9298222e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc92a80e970 <../Data/C2AST/pr48084-3.c:4:1, line:8:1> line:5:1 _mm_monitor 'void (const void *, unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7fc929822fa0 <col:14, col:27> col:27 used __P 'const void *'
+| |-ParmVarDecl 0x7fc92a80e818 <col:32, col:45> col:45 used __E 'unsigned int'
+| |-ParmVarDecl 0x7fc92a80e890 <col:50, col:63> col:63 used __H 'unsigned int'
+| `-CompoundStmt 0x7fc92a80ee60 <line:6:1, line:8:1>
+|   `-CallExpr 0x7fc92a80edc0 <line:7:4, col:41> 'void'
+|     |-ImplicitCastExpr 0x7fc92a80eda8 <col:4> 'void (*)(void *, unsigned int, unsigned int)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fc92a80ec90 <col:4> '<builtin fn type>' Function 0x7fc92a80eab8 '__builtin_ia32_monitor' 'void (void *, unsigned int, unsigned int)'
+|     |-ImplicitCastExpr 0x7fc92a80ee18 <col:28> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fc92a80ee00 <col:28> 'const void *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fc92a80ecb8 <col:28> 'const void *' lvalue ParmVar 0x7fc929822fa0 '__P' 'const void *'
+|     |-ImplicitCastExpr 0x7fc92a80ee30 <col:33> 'unsigned int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fc92a80ece0 <col:33> 'unsigned int' lvalue ParmVar 0x7fc92a80e818 '__E' 'unsigned int'
+|     `-ImplicitCastExpr 0x7fc92a80ee48 <col:38> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc92a80ed08 <col:38> 'unsigned int' lvalue ParmVar 0x7fc92a80e890 '__H' 'unsigned int'
+`-FunctionDecl 0x7fc92a80eab8 <col:4> col:4 implicit used __builtin_ia32_monitor 'void (void *, unsigned int, unsigned int)' extern
+  |-ParmVarDecl 0x7fc92a80eb58 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fc92a80ebb8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  `-ParmVarDecl 0x7fc92a80ec18 <<invalid sloc>> <invalid sloc> 'unsigned int'

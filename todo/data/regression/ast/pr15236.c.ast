@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fc3000234e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fc300024160 <../Data/C2AST/pr15236.c:4:9, line:8:1> line:4:14 OMX_ERRORTYPE
+| |-EnumConstantDecl 0x7fc300065040 <line:6:3, col:19> col:3 OMX_ErrorNone 'int'
+| | `-IntegerLiteral 0x7fc300065020 <col:19> 'int' 0
+| `-EnumConstantDecl 0x7fc3000650a8 <line:7:3, col:36> col:3 OMX_ErrorInsufficientResources 'unsigned int'
+|   `-IntegerLiteral 0x7fc300065088 <col:36> 'unsigned int' 2147487744
+`-TypedefDecl 0x7fc300065140 <line:4:1, line:8:3> col:3 OMX_ERRORTYPE 'enum OMX_ERRORTYPE':'enum OMX_ERRORTYPE'
+  `-ElaboratedType 0x7fc3000650f0 'enum OMX_ERRORTYPE' sugar
+    `-EnumType 0x7fc300065000 'enum OMX_ERRORTYPE'
+      `-Enum 0x7fc300024160 'OMX_ERRORTYPE'

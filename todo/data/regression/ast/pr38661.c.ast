@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fd28e8262e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd28f014268 <../Data/C2AST/pr38661.c:3:1, line:8:1> line:3:13 func 'const char *(int)'
+  |-ParmVarDecl 0x7fd28e826f78 <col:18, col:22> col:22 used val 'int'
+  `-CompoundStmt 0x7fd28f0145b8 <col:27, line:8:1>
+    `-SwitchStmt 0x7fd28f014390 <line:4:2, line:7:2>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd28f014378 <line:4:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd28f014350 <col:10> 'int' lvalue ParmVar 0x7fd28e826f78 'val' 'int'
+      `-CompoundStmt 0x7fd28f014598 <col:15, line:7:2>
+        |-CaseStmt 0x7fd28f0143e0 <line:5:4, col:29>
+        | |-IntegerLiteral 0x7fd28f0143c0 <<built-in>:38:21> 'int' 2147483647
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fd28f0144b8 <../Data/C2AST/pr38661.c:5:22, col:29>
+        |   `-ImplicitCastExpr 0x7fd28f0144a0 <col:29> 'const char *' <BitCast>
+        |     `-ImplicitCastExpr 0x7fd28f014488 <col:29> 'char *' <ArrayToPointerDecay>
+        |       `-StringLiteral 0x7fd28f014458 <col:29> 'char [4]' lvalue "foo"
+        `-DefaultStmt 0x7fd28f014578 <line:6:4, col:20>
+          `-ReturnStmt 0x7fd28f014560 <col:13, col:20>
+            `-ImplicitCastExpr 0x7fd28f014548 <col:20> 'const char *' <BitCast>
+              `-ImplicitCastExpr 0x7fd28f014530 <col:20> 'char *' <ArrayToPointerDecay>
+                `-StringLiteral 0x7fd28f014508 <col:20> 'char [1]' lvalue ""

@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fcc778068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcc7681c650 <../Data/C2AST/pr54824.c:4:1, line:6:1> line:4:32 used bar 'void (void) __attribute__((noreturn))'
+| `-CompoundStmt 0x7fcc7681c730 <line:5:1, line:6:1>
+`-FunctionDecl 0x7fcc7681c930 <line:8:1, line:16:1> line:8:6 foo 'void (int, char *, char *)'
+  |-ParmVarDecl 0x7fcc7681c758 <col:10, col:14> col:14 used i 'int'
+  |-ParmVarDecl 0x7fcc7681c7d0 <col:17, col:23> col:23 used p 'char *'
+  |-ParmVarDecl 0x7fcc7681c848 <col:26, col:32> col:32 used q 'char *'
+  `-CompoundStmt 0x7fcc7681ccd0 <line:9:1, line:16:1>
+    `-WhileStmt 0x7fcc7681ccb0 <line:10:3, line:15:3>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fcc7681ca50 <line:10:10, col:12> 'char' <LValueToRValue>
+      | `-UnaryOperator 0x7fcc7681ca30 <col:10, col:12> 'char' lvalue prefix '*'
+      |   `-UnaryOperator 0x7fcc7681ca10 <col:11, col:12> 'char *' postfix '++'
+      |     `-DeclRefExpr 0x7fcc7681c9e8 <col:11> 'char *' lvalue ParmVar 0x7fcc7681c7d0 'p' 'char *'
+      `-CompoundStmt 0x7fcc7681cc90 <col:16, line:15:3>
+        |-IfStmt 0x7fcc7681caf0 <line:11:7, line:12:3>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fcc7681ca90 <line:11:11> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fcc7681ca68 <col:11> 'int' lvalue ParmVar 0x7fcc7681c758 'i' 'int'
+        | |-UnaryOperator 0x7fcc7681cad0 <line:12:2, col:3> 'char *' postfix '++'
+        | | `-DeclRefExpr 0x7fcc7681caa8 <col:2> 'char *' lvalue ParmVar 0x7fcc7681c7d0 'p' 'char *'
+        | `-<<<NULL>>>
+        `-IfStmt 0x7fcc7681cc58 <line:13:7, line:14:6>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-UnaryOperator 0x7fcc7681cba8 <line:13:11, col:14> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7fcc7681cb90 <col:12, col:14> 'char' <LValueToRValue>
+          |   `-UnaryOperator 0x7fcc7681cb70 <col:12, col:14> 'char' lvalue prefix '*'
+          |     `-UnaryOperator 0x7fcc7681cb50 <col:13, col:14> 'char *' postfix '++'
+          |       `-DeclRefExpr 0x7fcc7681cb28 <col:13> 'char *' lvalue ParmVar 0x7fcc7681c848 'q' 'char *'
+          |-CallExpr 0x7fcc7681cc30 <line:14:2, col:6> 'void'
+          | `-ImplicitCastExpr 0x7fcc7681cc18 <col:2> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+          |   `-DeclRefExpr 0x7fcc7681cbc8 <col:2> 'void (void) __attribute__((noreturn))' Function 0x7fcc7681c650 'bar' 'void (void) __attribute__((noreturn))'
+          `-<<<NULL>>>

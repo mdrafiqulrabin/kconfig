@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ffe2d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffe2e014250 <../Data/C2AST/pr42544.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffe2e0142f0 prev 0x7ffe2e014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7ffe2e0143e0 <line:5:1, line:14:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7ffe2e014898 <line:7:1, line:14:1>
+    |-DeclStmt 0x7ffe2e014590 <line:8:3, col:22>
+    | `-VarDecl 0x7ffe2e0144d8 <col:3, col:21> col:16 used s 'short' cinit
+    |   `-ImplicitCastExpr 0x7ffe2e014578 <col:20, col:21> 'short' <IntegralCast>
+    |     `-UnaryOperator 0x7ffe2e014558 <col:20, col:21> 'int' prefix '-'
+    |       `-IntegerLiteral 0x7ffe2e014538 <col:21> 'int' 1
+    |-IfStmt 0x7ffe2e014678 <line:9:3, line:10:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffe2e014618 <line:9:7, col:49> 'int' '=='
+    | | |-UnaryExprOrTypeTraitExpr 0x7ffe2e0145c0 <col:7, col:24> 'unsigned long' sizeof 'long long'
+    | | `-UnaryExprOrTypeTraitExpr 0x7ffe2e0145f8 <col:29, col:49> 'unsigned long' sizeof 'unsigned int'
+    | |-ReturnStmt 0x7ffe2e014660 <line:10:5, col:12>
+    | | `-IntegerLiteral 0x7ffe2e014640 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ffe2e014828 <line:11:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffe2e014768 <line:11:7, col:27> 'int' '>='
+    | | |-ImplicitCastExpr 0x7ffe2e014750 <col:7, col:22> 'unsigned long long' <IntegralCast>
+    | | | `-CStyleCastExpr 0x7ffe2e014708 <col:7, col:22> 'unsigned int' <IntegralCast>
+    | | |   `-ImplicitCastExpr 0x7ffe2e0146f0 <col:22> 'short' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7ffe2e0146b0 <col:22> 'short' lvalue Var 0x7ffe2e0144d8 's' 'short'
+    | | `-IntegerLiteral 0x7ffe2e014730 <col:27> 'unsigned long long' 4294967296
+    | |-CallExpr 0x7ffe2e014800 <line:12:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ffe2e0147e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ffe2e014790 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffe2e0142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ffe2e014880 <line:13:3, col:10>
+      `-IntegerLiteral 0x7ffe2e014860 <col:10> 'int' 0

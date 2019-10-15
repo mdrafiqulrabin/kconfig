@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fddc78268e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fddc7827578 <../Data/C2AST/pr41445-1.c:7:1, col:5> col:5 varh 'int'
+|-VarDecl 0x7fddc7868458 <line:11:5, col:9> col:9 vari 'int'
+`-VarDecl 0x7fddc78684d0 <line:12:1, col:5> col:5 varj 'int'

@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fb0738128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb07301ee68 <../Data/C2AST/pr49294.c:5:1, col:68> col:68 referenced V '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+| `-VectorType 0x7fb07301ee30 '__attribute__((__vector_size__(8 * sizeof(short)))) short' 8
+|   `-BuiltinType 0x7fb0738129c0 'short'
+|-VarDecl 0x7fb07301eed8 <line:7:1, col:5> col:5 used k 'int'
+|-VarDecl 0x7fb07301efb0 <line:8:1, col:3> col:3 used v 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+`-FunctionDecl 0x7fb07301f0d0 <line:10:1, line:15:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb07301f6e8 <line:12:1, line:15:1>
+    |-DeclStmt 0x7fb07301f5a0 <line:13:3, col:35>
+    | `-VarDecl 0x7fb07301f180 <col:3, col:34> col:5 used w 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+    |   `-InitListExpr 0x7fb07301f3a0 <col:9, col:34> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+    |     |-ImplicitCastExpr 0x7fb07301f438 <col:11> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f420 <col:11> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f1e0 <col:11> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7fb07301f468 <col:14> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f450 <col:14> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f208 <col:14> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7fb07301f498 <col:17> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f480 <col:17> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f230 <col:17> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7fb07301f4c8 <col:20> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f4b0 <col:20> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f258 <col:20> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7fb07301f4f8 <col:23> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f4e0 <col:23> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f280 <col:23> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7fb07301f528 <col:26> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f510 <col:26> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f2a8 <col:26> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     |-ImplicitCastExpr 0x7fb07301f558 <col:29> 'short' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb07301f540 <col:29> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb07301f2d0 <col:29> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    |     `-ImplicitCastExpr 0x7fb07301f588 <col:32> 'short' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fb07301f570 <col:32> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb07301f2f8 <col:32> 'int' lvalue Var 0x7fb07301eed8 'k' 'int'
+    `-DeclStmt 0x7fb07301f6d0 <line:14:3, col:15>
+      `-VarDecl 0x7fb07301f5c8 <col:3, col:14> col:5 x 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+        `-BinaryOperator 0x7fb07301f6a8 <col:9, col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' '>>'
+          |-ImplicitCastExpr 0x7fb07301f678 <col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb07301f628 <col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7fb07301efb0 'v' 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+          `-ImplicitCastExpr 0x7fb07301f690 <col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+            `-DeclRefExpr 0x7fb07301f650 <col:14> 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7fb07301f180 'w' 'V':'__attribute__((__vector_size__(8 * sizeof(short)))) short'

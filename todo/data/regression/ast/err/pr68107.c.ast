@@ -1,0 +1,180 @@
+../Data/C2AST/pr68107.c:6:19: error: array is too large (2305843009213693952 elements)
+typedef int (*T1)[N];  
+                  ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:7:19: error: array is too large (2305843009213693951 elements)
+typedef int (*T2)[N - 1];
+                  ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:8:22: error: array is too large (2305843009213693952 elements)
+typedef int (*T3)[N][N];  
+                     ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:8:19: error: array is too large (2305843009213693952 elements)
+typedef int (*T3)[N][N];  
+                  ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:9:26: error: array is too large (2305843009213693951 elements)
+typedef int (*T4)[N - 1][N - 1];  
+                         ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:9:19: error: array is too large (2305843009213693951 elements)
+typedef int (*T4)[N - 1][N - 1];  
+                  ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:10:20: error: array is too large (2305843009213693952 elements)
+typedef int (**T5)[N];  
+                   ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:13:13: error: array is too large (2305843009213693952 elements)
+  int (*q1)[N];  
+            ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:14:13: error: array is too large (2305843009213693951 elements)
+  int (*q2)[N - 1];
+            ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:15:16: error: array is too large (2305843009213693952 elements)
+  int (*q3)[N][N];  
+               ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:15:13: error: array is too large (2305843009213693952 elements)
+  int (*q3)[N][N];  
+            ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:16:20: error: array is too large (2305843009213693951 elements)
+  int (*q4)[N - 1][N - 1];  
+                   ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:16:13: error: array is too large (2305843009213693951 elements)
+  int (*q4)[N - 1][N - 1];  
+            ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:17:14: error: array is too large (2305843009213693952 elements)
+  int (**q5)[N];  
+             ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:20:21: error: array is too large (2305843009213693952 elements)
+void fn1 (int (*p1)[N]);  
+                    ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:21:21: error: array is too large (2305843009213693951 elements)
+void fn2 (int (*p1)[N - 1]);
+                    ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+../Data/C2AST/pr68107.c:22:24: error: array is too large (2305843009213693952 elements)
+void fn3 (int (*p3)[N][N]);  
+                       ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:22:21: error: array is too large (2305843009213693952 elements)
+void fn3 (int (*p3)[N][N]);  
+                    ^
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr68107.c:23:28: error: array is too large (2305843009213693951 elements)
+void fn4 (int (*p4)[N - 1][N - 1]);  
+                           ^~~~~
+../Data/C2AST/pr68107.c:4:11: note: expanded from macro 'N'
+#define N ((__SIZE_MAX__ / sizeof (int)) / 2 + 1)
+          ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+TranslationUnitDecl 0x7fb95b82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb95b82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb95b82bf80 '__int128'
+|-TypedefDecl 0x7fb95b82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb95b82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb95b82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb95b82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb95b82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb95b82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb95b82c600 'char *'
+|   `-BuiltinType 0x7fb95b82bd80 'char'
+|-TypedefDecl 0x7fb95b82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb95b82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb95b82c720 'struct __va_list_tag'
+|     `-Record 0x7fb95b82c698 '__va_list_tag'
+|-TypedefDecl 0x7fb95b86e988 <../Data/C2AST/pr68107.c:6:1, <invalid sloc>> col:15 invalid T1 'int (*)'
+| `-PointerType 0x7fb95b86e940 'int (*)'
+|   `-ParenType 0x7fb95b86e8e0 'int' sugar
+|     `-BuiltinType 0x7fb95b82bde0 'int'
+|-TypedefDecl 0x7fb95b86ebe0 <line:7:1, <invalid sloc>> col:15 invalid T2 'int (*)'
+| `-PointerType 0x7fb95b86e940 'int (*)'
+|   `-ParenType 0x7fb95b86e8e0 'int' sugar
+|     `-BuiltinType 0x7fb95b82bde0 'int'
+|-TypedefDecl 0x7fb95b86ef58 <line:8:1, <invalid sloc>> col:15 invalid T3 'int (*)'
+| `-PointerType 0x7fb95b86e940 'int (*)'
+|   `-ParenType 0x7fb95b86e8e0 'int' sugar
+|     `-BuiltinType 0x7fb95b82bde0 'int'
+|-TypedefDecl 0x7fb95b86f390 <line:9:1, <invalid sloc>> col:15 invalid T4 'int (*)'
+| `-PointerType 0x7fb95b86e940 'int (*)'
+|   `-ParenType 0x7fb95b86e8e0 'int' sugar
+|     `-BuiltinType 0x7fb95b82bde0 'int'
+|-TypedefDecl 0x7fb95b86f5f0 <line:10:1, <invalid sloc>> col:16 invalid T5 'int (**)'
+| `-PointerType 0x7fb95b86f5a0 'int (**)'
+|   `-PointerType 0x7fb95b86e940 'int (*)'
+|     `-ParenType 0x7fb95b86e8e0 'int' sugar
+|       `-BuiltinType 0x7fb95b82bde0 'int'
+|-RecordDecl 0x7fb95b86f648 <line:12:1, line:18:1> line:12:8 invalid struct S definition
+| |-FieldDecl 0x7fb95b8852a0 <line:13:3, <invalid sloc>> col:9 invalid q1 'int (*)'
+| |-FieldDecl 0x7fb95b8854e8 <line:14:3, <invalid sloc>> col:9 invalid q2 'int (*)'
+| |-FieldDecl 0x7fb95b885850 <line:15:3, <invalid sloc>> col:9 invalid q3 'int (*)'
+| |-FieldDecl 0x7fb95b885c78 <line:16:3, <invalid sloc>> col:9 invalid q4 'int (*)'
+| `-FieldDecl 0x7fb95b885e68 <line:17:3, <invalid sloc>> col:10 invalid q5 'int (**)'
+|-FunctionDecl 0x7fb95b886150 <line:20:1, col:23> col:6 invalid fn1 'void (int (*))'
+| `-ParmVarDecl 0x7fb95b886050 <col:11, <invalid sloc>> col:17 invalid p1 'int (*)'
+|-FunctionDecl 0x7fb95c000888 <line:21:1, col:27> col:6 invalid fn2 'void (int (*))'
+| `-ParmVarDecl 0x7fb95c000800 <col:11, <invalid sloc>> col:17 invalid p1 'int (*)'
+|-FunctionDecl 0x7fb95c000cd8 <line:22:1, col:26> col:6 invalid fn3 'void (int (*))'
+| `-ParmVarDecl 0x7fb95c000c50 <col:11, <invalid sloc>> col:17 invalid p3 'int (*)'
+|-FunctionDecl 0x7fb95c0011e8 <line:23:1, col:34> col:6 invalid fn4 'void (int (*))'
+| `-ParmVarDecl 0x7fb95c001160 <col:11, <invalid sloc>> col:17 invalid p4 'int (*)'
+|-FunctionDecl 0x7fb95c001540 <line:24:1, col:24> col:6 invalid fn5 'void (int (**))'
+| `-ParmVarDecl 0x7fb95c001438 <col:11, <invalid sloc>> col:18 invalid p5 'int (**)'
+`-FunctionDecl 0x7fb95c0016b0 <line:26:1, line:37:1> line:27:1 fn 'void (void)'
+  `-CompoundStmt 0x7fb95c0029b0 <line:28:1, line:37:1>
+    |-DeclStmt 0x7fb95c001990 <line:29:3, col:15>
+    | `-VarDecl 0x7fb95c001930 <col:3, <invalid sloc>> col:9 invalid n1 'int (*)'
+    |-DeclStmt 0x7fb95c001c08 <line:30:3, col:19>
+    | `-VarDecl 0x7fb95c001ba8 <col:3, <invalid sloc>> col:9 invalid n2 'int (*)'
+    |-DeclStmt 0x7fb95c001fa0 <line:31:3, col:18>
+    | `-VarDecl 0x7fb95c001f40 <col:3, <invalid sloc>> col:9 invalid n3 'int (*)'
+    |-DeclStmt 0x7fb95c0023f8 <line:32:320 errors generated.
+, col:26>
+    | `-VarDecl 0x7fb95c002398 <col:3, <invalid sloc>> col:9 invalid n4 'int (*)'
+    `-DeclStmt 0x7fb95c002660 <line:33:3, col:16>
+      `-VarDecl 0x7fb95c002600 <col:3, <invalid sloc>> col:10 invalid n5 'int (**)'

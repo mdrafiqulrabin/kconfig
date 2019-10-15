@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fa65b01f4e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fa65b020160 <../Data/C2AST/pr79897.c:5:1, line:9:1> line:5:6 E
+| |-EnumConstantDecl 0x7fa65b814640 <line:7:3, col:7> col:3 referenced A 'int'
+| | `-IntegerLiteral 0x7fa65b814620 <col:7> 'int' 0
+| `-EnumConstantDecl 0x7fa65b814728 <line:8:3, col:13> col:3 B 'unsigned long'
+|   `-ImplicitCastExpr 0x7fa65b814770 <col:7, col:13> 'unsigned long' <IntegralCast>
+|     `-BinaryOperator 0x7fa65b814700 <col:7, col:13> 'long long' '+'
+|       |-ImplicitCastExpr 0x7fa65b8146e8 <col:7, col:8> 'long long' <IntegralCast>
+|       | `-UnaryOperator 0x7fa65b8146a8 <col:7, col:8> 'unsigned int' prefix '~'
+|       |   `-IntegerLiteral 0x7fa65b814688 <col:8> 'unsigned int' 0
+|       `-IntegerLiteral 0x7fa65b8146c8 <col:13> 'long long' 1
+|-VarDecl 0x7fa65b8147e0 <line:5:1, line:9:7> col:3 used x 'enum E':'enum E' cinit
+| `-ImplicitCastExpr 0x7fa65b8148a8 <col:7> 'enum E':'enum E' <IntegralCast>
+|   `-DeclRefExpr 0x7fa65b814880 <col:7> 'int' EnumConstant 0x7fa65b814640 'A' 'int'
+`-FunctionDecl 0x7fa65b814930 <line:11:1, line:15:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7fa65b814aa8 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fa65b814a90 <line:14:3, col:15>
+      `-BinaryOperator 0x7fa65b814a68 <col:10, col:15> 'int' '!='
+        |-ImplicitCastExpr 0x7fa65b814a38 <col:10> 'unsigned long' <IntegralCast>
+        | `-ImplicitCastExpr 0x7fa65b814a20 <col:10> 'enum E':'enum E' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fa65b8149d0 <col:10> 'enum E':'enum E' lvalue Var 0x7fa65b8147e0 'x' 'enum E':'enum E'
+        `-ImplicitCastExpr 0x7fa65b814a50 <col:15> 'unsigned long' <IntegralCast>
+          `-DeclRefExpr 0x7fa65b8149f8 <col:15> 'int' EnumConstant 0x7fa65b814640 'A' 'int'

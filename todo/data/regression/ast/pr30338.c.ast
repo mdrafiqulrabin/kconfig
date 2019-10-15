@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7f8e4282bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8e4282c978 <../Data/C2AST/pr30338.c:3:1, col:14> col:14 used grub_scratch_mem 'char *' extern
+`-FunctionDecl 0x7f8e438001a8 <line:4:1, line:12:1> line:4:5 testload_func 'int (char *, int)'
+  |-ParmVarDecl 0x7f8e43800058 <col:20, col:26> col:26 arg 'char *'
+  |-ParmVarDecl 0x7f8e438000d0 <col:31, col:35> col:35 flags 'int'
+  `-CompoundStmt 0x7f8e43800a00 <line:5:1, line:12:1>
+    |-DeclStmt 0x7f8e438002d0 <line:6:3, col:8>
+    | `-VarDecl 0x7f8e43800270 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7f8e43800990 <line:7:3, line:10:14>
+    | |-BinaryOperator 0x7f8e43800330 <line:7:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f8e438002e8 <col:8> 'int' lvalue Var 0x7f8e43800270 'i' 'int'
+    | | `-IntegerLiteral 0x7f8e43800310 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8e438003b8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8e438003a0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8e43800358 <col:15> 'int' lvalue Var 0x7f8e43800270 'i' 'int'
+    | | `-IntegerLiteral 0x7f8e43800380 <col:19> 'int' 68288
+    | |-UnaryOperator 0x7f8e43800408 <col:28, col:29> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f8e438003e0 <col:28> 'int' lvalue Var 0x7f8e43800270 'i' 'int'
+    | `-IfStmt 0x7f8e43800958 <line:8:5, line:10:14>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f8e438008f8 <line:8:9, line:9:73> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7f8e438008b0 <line:8:9, col:70> 'int' <IntegralCast>
+    |   | | `-ImplicitCastExpr 0x7f8e43800898 <col:9, col:70> 'unsigned char' <LValueToRValue>
+    |   | |   `-UnaryOperator 0x7f8e43800658 <col:9, col:70> 'unsigned char' lvalue prefix '*'
+    |   | |     `-ParenExpr 0x7f8e43800638 <col:10, col:70> 'unsigned char *'
+    |   | |       `-CStyleCastExpr 0x7f8e43800610 <col:11, col:69> 'unsigned char *' <IntegralToPointer>
+    |   | |         `-ParenExpr 0x7f8e438005f0 <col:29, col:69> 'int'
+    |   | |           `-ParenExpr 0x7f8e43800558 <col:30, col:68> 'int'
+    |   | |             `-BinaryOperator 0x7f8e43800530 <col:31, col:52> 'int' '+'
+    |   | |               |-BinaryOperator 0x7f8e43800488 <col:31, col:42> 'int' '+'
+    |   | |               | |-IntegerLiteral 0x7f8e43800428 <col:31> 'int' 2097152
+    |   | |               | `-ImplicitCastExpr 0x7f8e43800470 <col:42> 'int' <LValueToRValue>
+    |   | |               |   `-DeclRefExpr 0x7f8e43800448 <col:42> 'int' lvalue Var 0x7f8e43800270 'i' 'int'
+    |   | |               `-CStyleCastExpr 0x7f8e43800508 <col:46, col:52> 'int' <PointerToIntegral>
+    |   | |                 `-ImplicitCastExpr 0x7f8e438004f0 <col:52> 'char *' <LValueToRValue>
+    |   | |                   `-DeclRefExpr 0x7f8e438004b0 <col:52> 'char *' lvalue Var 0x7f8e4282c978 'grub_scratch_mem' 'char *'
+    |   | `-ImplicitCastExpr 0x7f8e438008e0 <line:9:12, col:73> 'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7f8e438008c8 <col:12, col:73> 'unsigned char' <LValueToRValue>
+    |   |     `-UnaryOperator 0x7f8e43800878 <col:12, col:73> 'unsigned char' lvalue prefix '*'
+    |   |       `-ParenExpr 0x7f8e43800858 <col:13, col:73> 'unsigned char *'
+    |   |         `-CStyleCastExpr 0x7f8e43800830 <col:14, col:72> 'unsigned char *' <IntegralToPointer>
+    |   |           `-ParenExpr 0x7f8e43800810 <col:32, col:72> 'int'
+    |   |             `-ParenExpr 0x7f8e438007a8 <col:33, col:71> 'int'
+    |   |               `-BinaryOperator 0x7f8e43800780 <col:34, col:55> 'int' '+'
+    |   |                 |-BinaryOperator 0x7f8e438006d8 <col:34, col:45> 'int' '+'
+    |   |                 | |-IntegerLiteral 0x7f8e43800678 <col:34> 'int' 3145728
+    |   |                 | `-ImplicitCastExpr 0x7f8e438006c0 <col:45> 'int' <LValueToRValue>
+    |   |                 |   `-DeclRefExpr 0x7f8e43800698 <col:45> 'int' lvalue Var 0x7f8e43800270 'i' 'int'
+    |   |                 `-CStyleCastExpr 0x7f8e43800758 <col:49, col:55> 'int' <PointerToIntegral>
+    |   |                   `-ImplicitCastExpr 0x7f8e43800740 <col:55> 'char *' <LValueToRValue>
+    |   |                     `-DeclRefExpr 0x7f8e43800700 <col:55> 'char *' lvalue Var 0x7f8e4282c978 'grub_scratch_mem' 'char *'
+    |   |-ReturnStmt 0x7f8e43800940 <line:10:7, col:14>
+    |   | `-IntegerLiteral 0x7f8e43800920 <col:14> 'int' 0
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7f8e438009e8 <line:11:3, col:10>
+      `-IntegerLiteral 0x7f8e438009c8 <col:10> 'int' 1

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f84eb82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f84eb82c960 <../Data/C2AST/pr70700.c:4:1, line:7:1> line:4:8 struct S definition
+| `-FieldDecl 0x7f84eb86d838 <line:6:3, col:8> col:8 referenced m 'long'
+`-FunctionDecl 0x7f84eb86da40 <line:9:1, line:15:1> line:10:1 fn1 'struct S (struct S *)'
+  |-ParmVarDecl 0x7f84eb86d930 <col:6, col:16> col:16 used a 'struct S *'
+  `-CompoundStmt 0x7f84eb86dd68 <line:11:1, line:15:1>
+    |-IfStmt 0x7f84eb86dca0 <line:12:3, line:13:13>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f84eb86dba0 <line:12:7, col:10> 'long' <LValueToRValue>
+    | | `-MemberExpr 0x7f84eb86db68 <col:7, col:10> 'long' lvalue ->m 0x7f84eb86d838
+    | |   `-ImplicitCastExpr 0x7f84eb86db50 <col:7> 'struct S *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f84eb86db28 <col:7> 'struct S *' lvalue ParmVar 0x7f84eb86d930 'a' 'struct S *'
+    | |-CompoundAssignOperator 0x7f84eb86dc68 <line:13:5, col:13> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+    | | |-MemberExpr 0x7f84eb86dbf8 <col:5, col:8> 'long' lvalue ->m 0x7f84eb86d838
+    | | | `-ImplicitCastExpr 0x7f84eb86dbe0 <col:5> 'struct S *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f84eb86dbb8 <col:5> 'struct S *' lvalue ParmVar 0x7f84eb86d930 'a' 'struct S *'
+    | | `-ImplicitCastExpr 0x7f84eb86dc50 <col:13> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f84eb86dc30 <col:13> 'int' 2
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f84eb86dd50 <line:14:3, col:11>
+      `-ImplicitCastExpr 0x7f84eb86dd38 <col:10, col:11> 'struct S':'struct S' <LValueToRValue>
+        `-UnaryOperator 0x7f84eb86dd18 <col:10, col:11> 'struct S':'struct S' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7f84eb86dd00 <col:11> 'struct S *' <LValueToRValue>
+            `-DeclRefExpr 0x7f84eb86dcd8 <col:11> 'struct S *' lvalue ParmVar 0x7f84eb86d930 'a' 'struct S *'

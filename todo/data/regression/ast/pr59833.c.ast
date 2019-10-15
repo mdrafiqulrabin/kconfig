@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f968f0186e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f968f8806d8 <../Data/C2AST/pr59833.c:9:1, line:19:1> line:9:5 main 'int (void)'
+| `-CompoundStmt 0x7f968f80e230 <line:10:1, line:19:1>
+|   |-DeclStmt 0x7f968f880ad0 <line:11:3, col:36>
+|   | `-VarDecl 0x7f968f8807c0 <col:3, col:35> col:9 used sNaN 'float' cinit
+|   |   `-CallExpr 0x7f968f880a70 <col:16, col:35> 'float'
+|   |     |-ImplicitCastExpr 0x7f968f880a58 <col:16> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f968f880980 <col:16> '<builtin fn type>' Function 0x7f968f880820 '__builtin_nansf' 'float (const char *)'
+|   |     `-ImplicitCastExpr 0x7f968f880ab8 <col:33> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7f968f880aa0 <col:33> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7f968f8809e8 <col:33> 'char [1]' lvalue ""
+|   |-DeclStmt 0x7f968f880be0 <line:12:3, col:27>
+|   | `-VarDecl 0x7f968f880b00 <col:3, col:23> col:10 used x 'double' cinit
+|   |   `-CStyleCastExpr 0x7f968f880bb8 <col:14, col:23> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7f968f880ba0 <col:23> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f968f880b60 <col:23> 'float' lvalue Var 0x7f968f8807c0 'sNaN' 'float'
+|   |-IfStmt 0x7f968f80e1c0 <line:13:3, line:16:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f968f880d90 <line:13:7, col:20> 'int'
+|   | | |-ImplicitCastExpr 0x7f968f880d78 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f968f880d00 <col:7> 'int ()' Function 0x7f968f880c50 'issignaling' 'int ()'
+|   | | `-ImplicitCastExpr 0x7f968f880dc0 <col:19> 'double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f968f880d28 <col:19> 'double' lvalue Var 0x7f968f880b00 'x' 'double'
+|   | |-CompoundStmt 0x7f968f80e1a8 <line:14:3, line:16:3>
+|   | | `-CallExpr 0x7f968f80e180 <line:15:5, col:21> 'void'
+|   | |   `-ImplicitCastExpr 0x7f968f80e168 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |     `-DeclRefExpr 0x7f968f80e118 <col:5> '<builtin fn type>' Function 0x7f968f80e030 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f968f80e218 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7f968f80e1f8 <col:10> 'int' 0
+|-FunctionDecl 0x7f968f880820 <line:11:16> col:16 implicit used __builtin_nansf 'float (const char *)' extern
+| |-ParmVarDecl 0x7f968f8808c0 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7f968f880928 <col:16> Implicit
+| `-ConstAttr 0x7f968f880970 <col:16> Implicit
+`-FunctionDecl 0x7f968f80e030 <line:15:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f968f80e0d0 <col:5> Implicit

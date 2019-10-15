@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fda2f02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fda30953e18 <../Data/C2AST/prefetchwt1-1.c:7:1, col:7> col:7 used p 'void *'
+|-FunctionDecl 0x7fda30953f08 <line:9:1, line:13:1> line:10:1 prefetchw__test 'void (void)' extern
+| `-CompoundStmt 0x7fda30954478 <line:11:1, line:13:1>
+|   `-ParenExpr 0x7fda30954458 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2073:30, line:2074:80> 'void'
+|     `-CallExpr 0x7fda30954400 <line:2073:31, line:2074:79> 'void'
+|       |-ImplicitCastExpr 0x7fda309543e8 <line:2073:31> 'void (*)(const void *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fda30954148 <col:31> '<builtin fn type>' Function 0x7fda30953fe8 '__builtin_prefetch' 'void (const void *, ...)'
+|       |-ImplicitCastExpr 0x7fda30954440 <col:50, col:60> 'const void *' <BitCast>
+|       | `-CStyleCastExpr 0x7fda30954218 <col:50, col:60> 'void *' <NoOp>
+|       |   `-ImplicitCastExpr 0x7fda30954200 <col:58, col:60> 'void *' <LValueToRValue>
+|       |     `-ParenExpr 0x7fda309541e0 <col:58, col:60> 'void *' lvalue
+|       |       `-DeclRefExpr 0x7fda30954170 <../Data/C2AST/prefetchwt1-1.c:12:19> 'void *' lvalue Var 0x7fda30953e18 'p' 'void *'
+|       |-BinaryOperator 0x7fda30954308 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2074:50, col:65> 'int' '&'
+|       | |-ParenExpr 0x7fda309542c8 <col:50, col:61> 'int'
+|       | | `-BinaryOperator 0x7fda309542a0 <col:51, col:60> 'int' '>>'
+|       | |   |-ParenExpr 0x7fda30954260 <col:51, col:55> 'int'
+|       | |   | `-IntegerLiteral 0x7fda30954240 <line:2039:22> 'int' 6
+|       | |   `-IntegerLiteral 0x7fda30954280 <line:2074:60> 'int' 2
+|       | `-IntegerLiteral 0x7fda309542e8 <col:65> 'int' 1
+|       `-BinaryOperator 0x7fda30954390 <col:68, col:76> 'int' '&'
+|         |-ParenExpr 0x7fda30954350 <col:68, col:72> 'int'
+|         | `-IntegerLiteral 0x7fda30954330 <line:2039:22> 'int' 6
+|         `-IntegerLiteral 0x7fda30954370 <line:2074:76> 'int' 3
+`-FunctionDecl 0x7fda30953fe8 <line:2073:31> col:31 implicit used __builtin_prefetch 'void (const void *, ...)' extern
+  |-ParmVarDecl 0x7fda30954088 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-NoThrowAttr 0x7fda309540f0 <col:31> Implicit
+  `-ConstAttr 0x7fda30954138 <col:31> Implicit

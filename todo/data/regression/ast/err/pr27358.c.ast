@@ -1,0 +1,22 @@
+../Data/C2AST/pr27358.c:4:10: error: unknown type name 'error'
+void foo(error i)                
+         ^
+1 error generated.
+TranslationUnitDecl 0x7fcec981a4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcec981aa60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcec981a780 '__int128'
+|-TypedefDecl 0x7fcec981aad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcec981a7a0 'unsigned __int128'
+|-TypedefDecl 0x7fcec981ada8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcec981abb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcec981ab28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcec981ae40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcec981ae00 'char *'
+|   `-BuiltinType 0x7fcec981a580 'char'
+|-TypedefDecl 0x7fcec981b108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcec981b0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcec981af20 'struct __va_list_tag'
+|     `-Record 0x7fcec981ae98 '__va_list_tag'
+`-FunctionDecl 0x7fcec985d060 <../Data/C2AST/pr27358.c:4:1, line:8:1> line:4:6 invalid foo 'void (int)'
+  |-ParmVarDecl 0x7fcec981b190 <col:10, col:16> col:16 invalid i 'int'
+  `-CompoundStmt 0x7fcec985d128 <line:5:1, line:8:1>

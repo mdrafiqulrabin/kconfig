@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fd5d1816ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd5d1817978 <../Data/C2AST/pr78580.c:5:1, col:26> col:26 used a 'const signed char' extern
+|-FunctionDecl 0x7fd5d1857928 <line:7:1, line:11:1> line:8:1 used foo 'int (signed char)'
+| |-ParmVarDecl 0x7fd5d1857858 <col:6, col:18> col:18 used x 'signed char'
+| `-CompoundStmt 0x7fd5d1857a40 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fd5d1857a28 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7fd5d1857a10 <col:10> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fd5d18579f8 <col:10> 'signed char' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd5d18579d0 <col:10> 'signed char' lvalue ParmVar 0x7fd5d1857858 'x' 'signed char'
+`-FunctionDecl 0x7fd5d1857ab0 <line:13:1, line:18:1> line:14:1 main 'int ()'
+  `-CompoundStmt 0x7fd5d1857c60 <line:15:1, line:18:1>
+    |-CallExpr 0x7fd5d1857be0 <line:16:3, col:9> 'int'
+    | |-ImplicitCastExpr 0x7fd5d1857bc8 <col:3> 'int (*)(signed char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd5d1857b50 <col:3> 'int (signed char)' Function 0x7fd5d1857928 'foo' 'int (signed char)'
+    | `-ImplicitCastExpr 0x7fd5d1857c10 <col:8> 'signed char' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd5d1857b78 <col:8> 'const signed char' lvalue Var 0x7fd5d1817978 'a' 'const signed char'
+    `-ReturnStmt 0x7fd5d1857c48 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fd5d1857c28 <col:10> 'int' 0

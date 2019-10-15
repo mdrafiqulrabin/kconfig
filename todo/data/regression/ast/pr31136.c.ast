@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fd3d282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd3d286d850 <../Data/C2AST/pr31136.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd3d286d8f0 prev 0x7fd3d286d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fd3d286d990 <line:3:1, line:6:1> line:3:8 struct S definition
+| |-FieldDecl 0x7fd3d286da78 <line:4:3, col:15> col:12 referenced b4 'unsigned int'
+| | `-IntegerLiteral 0x7fd3d286da40 <col:15> 'int' 4
+| `-FieldDecl 0x7fd3d286daf8 <line:5:3, col:15> col:12 referenced b6 'unsigned int'
+|   `-IntegerLiteral 0x7fd3d286dac0 <col:15> 'int' 6
+|-VarDecl 0x7fd3d286db90 <line:3:1, line:6:3> col:3 used s 'struct S':'struct S'
+`-FunctionDecl 0x7fd3d286dca0 <line:8:1, line:16:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fd3d286e228 <line:9:1, line:16:1>
+    |-BinaryOperator 0x7fd3d286ddd8 <line:10:3, col:10> 'unsigned int' '='
+    | |-MemberExpr 0x7fd3d286dd68 <col:3, col:5> 'unsigned int' lvalue bitfield .b6 0x7fd3d286daf8
+    | | `-DeclRefExpr 0x7fd3d286dd40 <col:3> 'struct S':'struct S' lvalue Var 0x7fd3d286db90 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fd3d286ddc0 <col:10> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fd3d286dda0 <col:10> 'int' 31
+    |-BinaryOperator 0x7fd3d286df28 <line:11:3, col:12> 'unsigned int' '='
+    | |-MemberExpr 0x7fd3d286de78 <col:3, col:5> 'unsigned int' lvalue bitfield .b4 0x7fd3d286da78
+    | | `-DeclRefExpr 0x7fd3d286de50 <col:3> 'struct S':'struct S' lvalue Var 0x7fd3d286db90 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fd3d286df10 <col:10, col:12> 'unsigned int' <LValueToRValue>
+    |   `-MemberExpr 0x7fd3d286ded8 <col:10, col:12> 'unsigned int' lvalue bitfield .b6 0x7fd3d286daf8
+    |     `-DeclRefExpr 0x7fd3d286deb0 <col:10> 'struct S':'struct S' lvalue Var 0x7fd3d286db90 's' 'struct S':'struct S'
+    |-BinaryOperator 0x7fd3d286e028 <line:12:3, col:12> 'unsigned int' '='
+    | |-MemberExpr 0x7fd3d286df78 <col:3, col:5> 'unsigned int' lvalue bitfield .b6 0x7fd3d286daf8
+    | | `-DeclRefExpr 0x7fd3d286df50 <col:3> 'struct S':'struct S' lvalue Var 0x7fd3d286db90 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fd3d286e010 <col:10, col:12> 'unsigned int' <LValueToRValue>
+    |   `-MemberExpr 0x7fd3d286dfd8 <col:10, col:12> 'unsigned int' lvalue bitfield .b4 0x7fd3d286da78
+    |     `-DeclRefExpr 0x7fd3d286dfb0 <col:10> 'struct S':'struct S' lvalue Var 0x7fd3d286db90 's' 'struct S':'struct S'
+    |-IfStmt 0x7fd3d286e1b8 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd3d286e100 <line:13:7, col:15> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fd3d286e0e8 <col:7, col:9> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fd3d286e0d0 <col:7, col:9> 'unsigned int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fd3d286e078 <col:7, col:9> 'unsigned int' lvalue bitfield .b6 0x7fd3d286daf8
+    | | |     `-DeclRefExpr 0x7fd3d286e050 <col:7> 'struct S':'struct S' lvalue Var 0x7fd3d286db90 's' 'struct S':'struct S'
+    | | `-IntegerLiteral 0x7fd3d286e0b0 <col:15> 'int' 15
+    | |-CallExpr 0x7fd3d286e190 <line:14:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd3d286e178 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd3d286e128 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd3d286d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd3d286e210 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fd3d286e1f0 <col:10> 'int' 0

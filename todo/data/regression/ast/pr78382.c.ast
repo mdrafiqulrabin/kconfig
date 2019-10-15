@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fa4a382bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa4a382c978 <../Data/C2AST/pr78382.c:4:1, col:14> col:14 used abc 'int' tls
+`-FunctionDecl 0x7fa4a4014288 <line:5:1, line:10:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7fa4a4014480 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fa4a40143d0 <line:8:3, col:9>
+    | `-VarDecl 0x7fa4a4014370 <col:3, col:8> col:8 used p 'int *'
+    `-BinaryOperator 0x7fa4a4014458 <line:9:3, col:8> 'int *' '='
+      |-DeclRefExpr 0x7fa4a40143e8 <col:3> 'int *' lvalue Var 0x7fa4a4014370 'p' 'int *'
+      `-UnaryOperator 0x7fa4a4014438 <col:7, col:8> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fa4a4014410 <col:8> 'int' lvalue Var 0x7fa4a382c978 'abc' 'int'

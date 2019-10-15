@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f99bd81f0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f99be8136c8 <../Data/C2AST/pr48022-2.c:7:1, line:11:1> line:8:1 foo 'int (const char *)'
+  |-ParmVarDecl 0x7f99be813600 <col:6, col:18> col:18 used x 'const char *'
+  `-CompoundStmt 0x7f99be813938 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7f99be813920 <line:10:3, col:24>
+      `-CallExpr 0x7f99be8138a0 <col:10, col:24> 'int'
+        |-ImplicitCastExpr 0x7f99be813888 <col:10> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f99be813770 <col:10> 'int (const char *, const char *)' Function 0x7f99bd8f3bd8 'strcmp' 'int (const char *, const char *)'
+        |-ImplicitCastExpr 0x7f99be8138d8 <col:18> 'const char *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f99be813798 <col:18> 'const char *' lvalue ParmVar 0x7f99be813600 'x' 'const char *'
+        `-ImplicitCastExpr 0x7f99be813908 <col:21> 'const char *' <BitCast>
+          `-ImplicitCastExpr 0x7f99be8138f0 <col:21> 'char *' <ArrayToPointerDecay>
+            `-StringLiteral 0x7f99be8137f8 <col:21> 'char [2]' lvalue "/"

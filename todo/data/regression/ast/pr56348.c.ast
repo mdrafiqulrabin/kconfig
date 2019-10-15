@@ -1,0 +1,150 @@
+TranslationUnitDecl 0x7f82fa8288e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82fa829578 <../Data/C2AST/pr56348.c:5:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7f82fa828a80 'unsigned int'
+|-FunctionDecl 0x7f82fb8082c8 <line:7:15> col:15 implicit used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7f82fb808368 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f82fb8083d0 <col:15> Implicit
+| `-ConstAttr 0x7f82fb808418 <col:15> Implicit
+|-FunctionDecl 0x7f82fb808428 prev 0x7f82fb8082c8 <col:1, line:8:29> line:7:15 used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7f82fb808200 <col:21, col:28> col:28 __x 'double'
+| |-ConstAttr 0x7f82fb8084d0 <line:8:19>
+| `-NoThrowAttr 0x7f82fb808518 <line:7:49>
+|-RecordDecl 0x7f82fb808528 <line:10:9, line:14:1> line:10:16 struct cholmod_sparse_struct definition
+| |-FieldDecl 0x7f82fb808600 <line:12:3, col:10> col:10 referenced ncol 'size_t':'unsigned int'
+| `-FieldDecl 0x7f82fb808660 <line:13:3, col:9> col:9 referenced p 'void *'
+|-TypedefDecl 0x7f82fb808700 <line:10:1, line:14:3> col:3 referenced cholmod_sparse 'struct cholmod_sparse_struct':'struct cholmod_sparse_struct'
+| `-ElaboratedType 0x7f82fb8086b0 'struct cholmod_sparse_struct' sugar
+|   `-RecordType 0x7f82fb8085b0 'struct cholmod_sparse_struct'
+|     `-Record 0x7f82fb808528 'cholmod_sparse_struct'
+|-FunctionDecl 0x7f82fb808a18 <line:16:1, col:66> col:5 used cholmod_l_reallocate_sparse 'int (size_t, cholmod_sparse *, void *)'
+| |-ParmVarDecl 0x7f82fb808780 <col:34> col:40 'size_t':'unsigned int'
+| |-ParmVarDecl 0x7f82fb808868 <col:42, col:57> col:58 'cholmod_sparse *'
+| `-ParmVarDecl 0x7f82fb8088e0 <col:60, col:65> col:66 'void *'
+`-FunctionDecl 0x7f82fb808cb8 <line:18:1, line:38:1> line:19:1 cholmod_l_drop 'int (double, cholmod_sparse *)'
+  |-ParmVarDecl 0x7f82fb808b28 <col:17, col:24> col:24 used tol 'double'
+  |-ParmVarDecl 0x7f82fb808b98 <col:29, col:46> col:46 used A 'cholmod_sparse *'
+  `-CompoundStmt 0x7f82fb80b380 <line:20:1, line:38:1>
+    |-DeclStmt 0x7f82fb808de0 <line:21:3, col:13>
+    | `-VarDecl 0x7f82fb808d80 <col:3, col:10> col:10 used aij 'double'
+    |-DeclStmt 0x7f82fb808ea0 <line:22:3, col:13>
+    | `-VarDecl 0x7f82fb808e40 <col:3, col:11> col:11 used Ax 'double *'
+    |-DeclStmt 0x7f82fb809070 <line:23:3, col:27>
+    | |-VarDecl 0x7f82fb808f00 <col:3, col:14> col:14 used Ap 'long long *'
+    | |-VarDecl 0x7f82fb808f78 <col:3, col:19> col:19 used Ai 'long long *'
+    | `-VarDecl 0x7f82fb808ff0 <col:3, col:24> col:24 Anz 'long long *'
+    |-DeclStmt 0x7f82fb80a520 <line:24:3, col:58>
+    | |-VarDecl 0x7f82fb8090a0 <col:3, col:13> col:13 packed 'long long'
+    | |-VarDecl 0x7f82fb809118 <col:3, col:21> col:21 used i 'long long'
+    | |-VarDecl 0x7f82fb809190 <col:3, col:24> col:24 used j 'long long'
+    | |-VarDecl 0x7f82fb80a218 <col:3, col:27> col:27 nrow 'long long'
+    | |-VarDecl 0x7f82fb80a290 <col:3, col:33> col:33 used ncol 'long long'
+    | |-VarDecl 0x7f82fb80a308 <col:3, col:39> col:39 used p 'long long'
+    | |-VarDecl 0x7f82fb80a380 <col:3, col:42> col:42 used pend 'long long'
+    | |-VarDecl 0x7f82fb80a3f8 <col:3, col:48> col:48 used nz 'long long'
+    | `-VarDecl 0x7f82fb80a470 <col:3, col:52> col:52 values 'long long'
+    |-BinaryOperator 0x7f82fb80a608 <line:25:3, col:11> 'long long *' '='
+    | |-DeclRefExpr 0x7f82fb80a538 <col:3> 'long long *' lvalue Var 0x7f82fb808f00 'Ap' 'long long *'
+    | `-ImplicitCastExpr 0x7f82fb80a5f0 <col:8, col:11> 'long long *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f82fb80a5d8 <col:8, col:11> 'void *' <LValueToRValue>
+    |     `-MemberExpr 0x7f82fb80a5a0 <col:8, col:11> 'void *' lvalue ->p 0x7f82fb808660
+    |       `-ImplicitCastExpr 0x7f82fb80a588 <col:8> 'cholmod_sparse *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f82fb80a560 <col:8> 'cholmod_sparse *' lvalue ParmVar 0x7f82fb808b98 'A' 'cholmod_sparse *'
+    |-BinaryOperator 0x7f82fb80a700 <line:26:3, col:13> 'long long' '='
+    | |-DeclRefExpr 0x7f82fb80a630 <col:3> 'long long' lvalue Var 0x7f82fb80a290 'ncol' 'long long'
+    | `-ImplicitCastExpr 0x7f82fb80a6e8 <col:10, col:13> 'long long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7f82fb80a6d0 <col:10, col:13> 'size_t':'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7f82fb80a698 <col:10, col:13> 'size_t':'unsigned int' lvalue ->ncol 0x7f82fb808600
+    |       `-ImplicitCastExpr 0x7f82fb80a680 <col:10> 'cholmod_sparse *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f82fb80a658 <col:10> 'cholmod_sparse *' lvalue ParmVar 0x7f82fb808b98 'A' 'cholmod_sparse *'
+    |-BinaryOperator 0x7f82fb80a788 <line:27:3, col:8> 'long long' '='
+    | |-DeclRefExpr 0x7f82fb80a728 <col:3> 'long long' lvalue Var 0x7f82fb80a3f8 'nz' 'long long'
+    | `-ImplicitCastExpr 0x7f82fb80a770 <col:8> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f82fb80a750 <col:8> 'int' 0
+    |-ForStmt 0x7f82fb80b078 <line:28:3, line:35:7>
+    | |-BinaryOperator 0x7f82fb80a810 <line:28:8, col:12> 'long long' '='
+    | | |-DeclRefExpr 0x7f82fb80a7b0 <col:8> 'long long' lvalue Var 0x7f82fb809190 'j' 'long long'
+    | | `-ImplicitCastExpr 0x7f82fb80a7f8 <col:12> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f82fb80a7d8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f82fb80a8b8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f82fb80a888 <col:15> 'long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f82fb80a838 <col:15> 'long long' lvalue Var 0x7f82fb809190 'j' 'long long'
+    | | `-ImplicitCastExpr 0x7f82fb80a8a0 <col:19> 'long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f82fb80a860 <col:19> 'long long' lvalue Var 0x7f82fb80a290 'ncol' 'long long'
+    | |-UnaryOperator 0x7f82fb80a908 <col:25, col:26> 'long long' postfix '++'
+    | | `-DeclRefExpr 0x7f82fb80a8e0 <col:25> 'long long' lvalue Var 0x7f82fb809190 'j' 'long long'
+    | `-ForStmt 0x7f82fb80b040 <line:29:5, line:35:7>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f82fb80a9a8 <line:29:12, col:16> 'int' '<'
+    |   | |-ImplicitCastExpr 0x7f82fb80a978 <col:12> 'long long' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7f82fb80a928 <col:12> 'long long' lvalue Var 0x7f82fb80a308 'p' 'long long'
+    |   | `-ImplicitCastExpr 0x7f82fb80a990 <col:16> 'long long' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f82fb80a950 <col:16> 'long long' lvalue Var 0x7f82fb80a380 'pend' 'long long'
+    |   |-UnaryOperator 0x7f82fb80a9f8 <col:22, col:23> 'long long' postfix '++'
+    |   | `-DeclRefExpr 0x7f82fb80a9d0 <col:22> 'long long' lvalue Var 0x7f82fb80a308 'p' 'long long'
+    |   `-CompoundStmt 0x7f82fb80b018 <line:30:7, line:35:7>
+    |     |-BinaryOperator 0x7f82fb80ab00 <line:31:9, col:17> 'long long' '='
+    |     | |-DeclRefExpr 0x7f82fb80aa18 <col:9> 'long long' lvalue Var 0x7f82fb809118 'i' 'long long'
+    |     | `-ImplicitCastExpr 0x7f82fb80aae8 <col:13, col:17> 'long long' <LValueToRValue>
+    |     |   `-ArraySubscriptExpr 0x7f82fb80aac0 <col:13, col:17> 'long long' lvalue
+    |     |     |-ImplicitCastExpr 0x7f82fb80aa90 <col:13> 'long long *' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x7f82fb80aa40 <col:13> 'long long *' lvalue Var 0x7f82fb808f78 'Ai' 'long long *'
+    |     |     `-ImplicitCastExpr 0x7f82fb80aaa8 <col:16> 'long long' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7f82fb80aa68 <col:16> 'long long' lvalue Var 0x7f82fb80a308 'p' 'long long'
+    |     |-BinaryOperator 0x7f82fb80ac10 <line:32:9, col:19> 'double' '='
+    |     | |-DeclRefExpr 0x7f82fb80ab28 <col:9> 'double' lvalue Var 0x7f82fb808d80 'aij' 'double'
+    |     | `-ImplicitCastExpr 0x7f82fb80abf8 <col:15, col:19> 'double' <LValueToRValue>
+    |     |   `-ArraySubscriptExpr 0x7f82fb80abd0 <col:15, col:19> 'double' lvalue
+    |     |     |-ImplicitCastExpr 0x7f82fb80aba0 <col:15> 'double *' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x7f82fb80ab50 <col:15> 'double *' lvalue Var 0x7f82fb808e40 'Ax' 'double *'
+    |     |     `-ImplicitCastExpr 0x7f82fb80abb8 <col:18> 'long long' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7f82fb80ab78 <col:18> 'long long' lvalue Var 0x7f82fb80a308 'p' 'long long'
+    |     `-IfStmt 0x7f82fb80afe0 <line:33:9, line:34:13>
+    |       |-<<<NULL>>>
+    |       |-<<<NULL>>>
+    |       |-BinaryOperator 0x7f82fb80af70 <line:33:13, col:60> 'int' '&&'
+    |       | |-BinaryOperator 0x7f82fb80acb8 <col:13, col:18> 'int' '<='
+    |       | | |-ImplicitCastExpr 0x7f82fb80ac88 <col:13> 'long long' <LValueToRValue>
+    |       | | | `-DeclRefExpr 0x7f82fb80ac38 <col:13> 'long long' lvalue Var 0x7f82fb809118 'i' 'long long'
+    |       | | `-ImplicitCastExpr 0x7f82fb80aca0 <col:18> 'long long' <LValueToRValue>
+    |       | |   `-DeclRefExpr 0x7f82fb80ac60 <col:18> 'long long' lvalue Var 0x7f82fb809190 'j' 'long long'
+    |       | `-ParenExpr 0x7f82fb80af50 <col:23, col:60> 'int'
+    |       |   `-BinaryOperator 0x7f82fb80af28 <col:24, col:59> 'int' '||'
+    |       |     |-BinaryOperator 0x7f82fb80adf8 <col:24, col:37> 'int' '>'
+    |       |     | |-CallExpr 0x7f82fb80ad70 <col:24, col:33> 'double'
+    |       |     | | |-ImplicitCastExpr 0x7f82fb80ad58 <col:24> 'double (*)(double)' <FunctionToPointerDecay>
+    |       |     | | | `-DeclRefExpr 0x7f82fb80ace0 <col:24> 'double (double)' Function 0x7f82fb808428 'fabs' 'double (double)'
+    |       |     | | `-ImplicitCastExpr 0x7f82fb80ada0 <col:30> 'double' <LValueToRValue>
+    |       |     | |   `-DeclRefExpr 0x7f82fb80ad08 <col:30> 'double' lvalue Var 0x7f82fb808d80 'aij' 'double'
+    |       |     | `-ImplicitCastExpr 0x7f82fb80ade0 <col:37> 'double' <LValueToRValue>
+    |       |     |   `-DeclRefExpr 0x7f82fb80adb8 <col:37> 'double' lvalue ParmVar 0x7f82fb808b28 'tol' 'double'
+    |       |     `-ParenExpr 0x7f82fb80af08 <col:44, col:59> 'int'
+    |       |       `-BinaryOperator 0x7f82fb80aee0 <col:45, col:58> 'int' '!='
+    |       |         |-ImplicitCastExpr 0x7f82fb80aeb0 <col:45, col:49> 'double' <LValueToRValue>
+    |       |         | `-ParenExpr 0x7f82fb80ae48 <col:45, col:49> 'double' lvalue
+    |       |         |   `-DeclRefExpr 0x7f82fb80ae20 <col:46> 'double' lvalue Var 0x7f82fb808d80 'aij' 'double'
+    |       |         `-ImplicitCastExpr 0x7f82fb80aec8 <col:54, col:58> 'double' <LValueToRValue>
+    |       |           `-ParenExpr 0x7f82fb80ae90 <col:54, col:58> 'double' lvalue
+    |       |             `-DeclRefExpr 0x7f82fb80ae68 <col:55> 'double' lvalue Var 0x7f82fb808d80 'aij' 'double'
+    |       |-UnaryOperator 0x7f82fb80afc0 <line:34:11, col:13> 'long long' postfix '++'
+    |       | `-DeclRefExpr 0x7f82fb80af98 <col:11> 'long long' lvalue Var 0x7f82fb80a3f8 'nz' 'long long'
+    |       `-<<<NULL>>>
+    |-BinaryOperator 0x7f82fb80b198 <line:36:3, col:14> 'long long' '='
+    | |-ArraySubscriptExpr 0x7f82fb80b130 <col:3, col:10> 'long long' lvalue
+    | | |-ImplicitCastExpr 0x7f82fb80b100 <col:3> 'long long *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f82fb80b0b0 <col:3> 'long long *' lvalue Var 0x7f82fb808f00 'Ap' 'long long *'
+    | | `-ImplicitCastExpr 0x7f82fb80b118 <col:6> 'long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f82fb80b0d8 <col:6> 'long long' lvalue Var 0x7f82fb80a290 'ncol' 'long long'
+    | `-ImplicitCastExpr 0x7f82fb80b180 <col:14> 'long long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f82fb80b158 <col:14> 'long long' lvalue Var 0x7f82fb80a3f8 'nz' 'long long'
+    `-CallExpr 0x7f82fb80b2e0 <line:37:3, col:40> 'int'
+      |-ImplicitCastExpr 0x7f82fb80b2c8 <col:3> 'int (*)(size_t, cholmod_sparse *, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f82fb80b1c0 <col:3> 'int (size_t, cholmod_sparse *, void *)' Function 0x7f82fb808a18 'cholmod_l_reallocate_sparse' 'int (size_t, cholmod_sparse *, void *)'
+      |-ImplicitCastExpr 0x7f82fb80b338 <col:32> 'size_t':'unsigned int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7f82fb80b320 <col:32> 'long long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f82fb80b200 <col:32> 'long long' lvalue Var 0x7f82fb80a3f8 'nz' 'long long'
+      |-ImplicitCastExpr 0x7f82fb80b350 <col:36> 'cholmod_sparse *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f82fb80b228 <col:36> 'cholmod_sparse *' lvalue ParmVar 0x7f82fb808b98 'A' 'cholmod_sparse *'
+      `-ImplicitCastExpr 0x7f82fb80b368 <col:39> 'void *' <NullToPointer>
+        `-IntegerLiteral 0x7f82fb80b250 <col:39> 'int' 0

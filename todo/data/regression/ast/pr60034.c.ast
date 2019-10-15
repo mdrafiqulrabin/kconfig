@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fac040118e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fac04012578 <../Data/C2AST/pr60034.c:4:1, col:22> col:22 used global_max_fast 'unsigned long' static
+`-FunctionDecl 0x7fac03819fa0 <line:6:1, line:10:1> line:6:6 __libc_mallopt 'void (int, int)'
+  |-ParmVarDecl 0x7fac03819e58 <col:22, col:26> col:26 param_number 'int'
+  |-ParmVarDecl 0x7fac03819ed0 <col:40, col:44> col:44 value 'int'
+  `-CompoundStmt 0x7fac0381a270 <line:7:1, line:10:1>
+    |-GCCAsmStmt 0x7fac0381a188 <line:8:2, col:79>
+    | `-ImplicitCastExpr 0x7fac0381a170 <col:61, col:77> 'unsigned long' <LValueToRValue>
+    |   `-ParenExpr 0x7fac0381a150 <col:61, col:77> 'unsigned long' lvalue
+    |     `-DeclRefExpr 0x7fac0381a128 <col:62> 'unsigned long' lvalue Var 0x7fac04012578 'global_max_fast' 'unsigned long'
+    `-BinaryOperator 0x7fac0381a248 <line:9:2, col:20> 'unsigned long' '='
+      |-DeclRefExpr 0x7fac0381a1e8 <col:2> 'unsigned long' lvalue Var 0x7fac04012578 'global_max_fast' 'unsigned long'
+      `-ImplicitCastExpr 0x7fac0381a230 <col:20> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fac0381a210 <col:20> 'int' 1

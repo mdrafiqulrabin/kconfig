@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fa4368174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa436895400 <../Data/C2AST/pr23047.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa4368954a0 prev 0x7fa436895400 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa436895678 <line:4:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fa436895718 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fa436895780 prev 0x7fa436895678 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fa436895580 <col:19> col:22 'int'
+|-FunctionDecl 0x7fa4368958c8 <line:5:1, line:11:1> line:5:6 used f 'void (int)'
+| |-ParmVarDecl 0x7fa436895840 <col:8, col:12> col:12 used i 'int'
+| `-CompoundStmt 0x7fa436895cc8 <line:6:1, line:11:1>
+|   |-BinaryOperator 0x7fa436895b30 <line:7:3, col:20> 'int' '='
+|   | |-DeclRefExpr 0x7fa4368959b0 <col:3> 'int' lvalue ParmVar 0x7fa436895840 'i' 'int'
+|   | `-ConditionalOperator 0x7fa436895b00 <col:7, col:20> 'int'
+|   |   |-BinaryOperator 0x7fa436895a38 <col:7, col:11> 'int' '>'
+|   |   | |-ImplicitCastExpr 0x7fa436895a20 <col:7> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa4368959d8 <col:7> 'int' lvalue ParmVar 0x7fa436895840 'i' 'int'
+|   |   | `-IntegerLiteral 0x7fa436895a00 <col:11> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fa436895ae8 <col:15> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fa436895a60 <col:15> 'int' lvalue ParmVar 0x7fa436895840 'i' 'int'
+|   |   `-UnaryOperator 0x7fa436895ac8 <col:19, col:20> 'int' prefix '-'
+|   |     `-ImplicitCastExpr 0x7fa436895ab0 <col:20> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa436895a88 <col:20> 'int' lvalue ParmVar 0x7fa436895840 'i' 'int'
+|   |-IfStmt 0x7fa436895bf8 <line:8:3, line:9:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa436895bb8 <line:8:7, col:9> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fa436895ba0 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa436895b58 <col:7> 'int' lvalue ParmVar 0x7fa436895840 'i' 'int'
+|   | | `-IntegerLiteral 0x7fa436895b80 <col:9> 'int' 0
+|   | |-ReturnStmt 0x7fa436895be0 <line:9:5>
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fa436895ca0 <line:10:3, col:10> 'void'
+|     `-ImplicitCastExpr 0x7fa436895c88 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fa436895c30 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fa4368954a0 'abort' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fa436895f38 <line:13:1, line:17:1> line:13:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fa436895d08 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7fa436895e20 <col:20, col:31> col:26 argv 'char **':'char **'
+  `-CompoundStmt 0x7fa4368961f0 <line:14:1, line:17:1>
+    |-CallExpr 0x7fa436896100 <line:15:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fa4368960e8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa436895fe8 <col:3> 'void (int)' Function 0x7fa4368958c8 'f' 'void (int)'
+    | `-ParenExpr 0x7fa436896098 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:19, col:36> 'int'
+    |   `-BinaryOperator 0x7fa436896070 <col:20, col:35> 'int' '-'
+    |     |-UnaryOperator 0x7fa436896030 <col:20, <built-in>:38:21> 'int' prefix '-'
+    |     | `-IntegerLiteral 0x7fa436896010 <col:21> 'int' 2147483647
+    |     `-IntegerLiteral 0x7fa436896050 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:35> 'int' 1
+    `-CallExpr 0x7fa4368961c0 <../Data/C2AST/pr23047.c:16:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fa4368961a8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa436896130 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fa436895780 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fa436896158 <col:9> 'int' 0

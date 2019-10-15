@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fc7510104e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc751803468 <../Data/C2AST/pr51513-1.c:6:1, line:25:1> line:7:1 frob 'int (int)'
+| |-ParmVarDecl 0x7fc751011178 <col:7, col:11> col:11 used i 'int'
+| |-CompoundStmt 0x7fc751803b90 <line:8:1, line:25:1>
+| | |-SwitchStmt 0x7fc7518035d8 <line:9:3, line:23:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fc7518035c0 <line:9:11> 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fc751803598 <col:11> 'int' lvalue ParmVar 0x7fc751011178 'i' 'int'
+| | | `-CompoundStmt 0x7fc751803af8 <line:10:5, line:23:5>
+| | |   |-CaseStmt 0x7fc751803648 <line:11:5, line:12:15>
+| | |   | |-UnaryOperator 0x7fc751803628 <line:11:10, col:11> 'int' prefix '-'
+| | |   | | `-IntegerLiteral 0x7fc751803608 <col:11> 'int' 5
+| | |   | |-<<<NULL>>>
+| | |   | `-ReturnStmt 0x7fc7518036c0 <line:12:7, col:15>
+| | |   |   `-UnaryOperator 0x7fc7518036a0 <col:14, col:15> 'int' prefix '-'
+| | |   |     `-IntegerLiteral 0x7fc751803680 <col:15> 'int' 2
+| | |   |-CaseStmt 0x7fc751803718 <line:13:5, line:14:15>
+| | |   | |-UnaryOperator 0x7fc7518036f8 <line:13:10, col:11> 'int' prefix '-'
+| | |   | | `-IntegerLiteral 0x7fc7518036d8 <col:11> 'int' 3
+| | |   | |-<<<NULL>>>
+| | |   | `-ReturnStmt 0x7fc751803790 <line:14:7, col:15>
+| | |   |   `-UnaryOperator 0x7fc751803770 <col:14, col:15> 'int' prefix '-'
+| | |   |     `-IntegerLiteral 0x7fc751803750 <col:15> 'int' 1
+| | |   |-CaseStmt 0x7fc7518037c8 <line:15:5, line:16:14>
+| | |   | |-IntegerLiteral 0x7fc7518037a8 <line:15:10> 'int' 0
+| | |   | |-<<<NULL>>>
+| | |   | `-ReturnStmt 0x7fc751803820 <line:16:7, col:14>
+| | |   |   `-IntegerLiteral 0x7fc751803800 <col:14> 'int' 0
+| | |   |-CaseStmt 0x7fc751803858 <line:17:5, line:18:14>
+| | |   | |-IntegerLiteral 0x7fc751803838 <line:17:10> 'int' 3
+| | |   | |-<<<NULL>>>
+| | |   | `-ReturnStmt 0x7fc7518038b0 <line:18:7, col:14>
+| | |   |   `-IntegerLiteral 0x7fc751803890 <col:14> 'int' 1
+| | |   |-CaseStmt 0x7fc7518038e8 <line:19:5, line:20:7>
+| | |   | |-IntegerLiteral 0x7fc7518038c8 <line:19:10> 'int' 5
+| | |   | |-<<<NULL>>>
+| | |   | `-BreakStmt 0x7fc751803920 <line:20:7>
+| | |   `-DefaultStmt 0x7fc751803ad8 <line:21:5, line:22:30>
+| | |     `-CallExpr 0x7fc751803ab0 <col:7, col:30> 'void'
+| | |       `-ImplicitCastExpr 0x7fc751803a98 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | |         `-DeclRefExpr 0x7fc751803a48 <col:7> '<builtin fn type>' Function 0x7fc751803960 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+| | `-ReturnStmt 0x7fc751803b78 <line:24:3, col:10>
+| |   `-ImplicitCastExpr 0x7fc751803b60 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc751803b38 <col:10> 'int' lvalue ParmVar 0x7fc751011178 'i' 'int'
+| `-WeakAttr 0x7fc751803510 <line:6:21>
+`-FunctionDecl 0x7fc751803960 <line:22:7> col:7 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc751803a00 <col:7> Implicit

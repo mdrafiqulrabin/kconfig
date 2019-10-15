@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7ff2498134e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff249814178 <../Data/C2AST/pr63538.c:6:1, col:20> col:14 used str 'char *' static cinit
+| `-ImplicitCastExpr 0x7ff24a023eb0 <col:20> 'char *' <ArrayToPointerDecay>
+|   `-StringLiteral 0x7ff24a023e78 <col:20> 'char [12]' lvalue "Hello World"
+`-FunctionDecl 0x7ff24a023f20 <line:8:1, line:11:1> line:8:7 foo 'char *()'
+  `-CompoundStmt 0x7ff24a024018 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7ff24a024000 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7ff24a023fe8 <col:10> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff24a023fc0 <col:10> 'char *' lvalue Var 0x7ff249814178 'str' 'char *'

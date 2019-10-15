@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f973602bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f973606d8a8 <../Data/C2AST/pr64223-2.c:5:1, col:76> col:5 used myprintf 'int (const char *, ...)'
+| |-ParmVarDecl 0x7f973602c978 <col:15, col:26> col:27 'const char *'
+| `-FormatAttr 0x7f973606d950 <col:50, col:74> printf 1 2
+|-FunctionDecl 0x7f973606dae0 prev 0x7f973606d8a8 <line:6:1, col:80> col:5 used myprintf 'int (const char *, ...)'
+| |-ParmVarDecl 0x7f973606da00 <col:15, col:26> col:27 'const char *'
+| `-FormatAttr 0x7f973606db88 <col:50, col:78> printf 1 2
+`-FunctionDecl 0x7f973606dca0 <line:8:1, line:13:1> line:9:1 foo 'void (void)'
+  `-CompoundStmt 0x7f973606dea8 <line:10:1, line:13:1>
+    `-CallExpr 0x7f973606de40 <line:11:3, col:24> 'int'
+      |-ImplicitCastExpr 0x7f973606de28 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f973606dd40 <col:3> 'int (const char *, ...)' Function 0x7f973606dae0 'myprintf' 'int (const char *, ...)'
+      |-ImplicitCastExpr 0x7f973606de90 <col:13> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7f973606de78 <col:13> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7f973606dda8 <col:13> 'char [4]' lvalue "%d\n"
+      `-IntegerLiteral 0x7f973606ddd8 <col:21> 'unsigned long' 0

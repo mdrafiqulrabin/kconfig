@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7ff04001b8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff041810868 <<built-in>:172:24, ../Data/C2AST/pr80131-1.c:10:1> line:7:16 f1 'long long (long long)'
+| |-ParmVarDecl 0x7ff04001c578 <<built-in>:172:24, ../Data/C2AST/pr80131-1.c:7:35> col:35 used i 'long long'
+| `-CompoundStmt 0x7ff041810ab0 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7ff041810a98 <line:9:3, col:38>
+|     `-BinaryOperator 0x7ff041810a70 <col:10, col:38> 'long long' '<<'
+|       |-CStyleCastExpr 0x7ff041810988 <col:10, col:26> 'long long' <IntegralCast>
+|       | `-IntegerLiteral 0x7ff041810950 <col:26> 'int' 1
+|       `-ParenExpr 0x7ff041810a50 <col:31, col:38> 'long long'
+|         `-BinaryOperator 0x7ff041810a28 <col:32, col:37> 'long long' '-'
+|           |-ImplicitCastExpr 0x7ff041810a10 <col:32> 'long long' <IntegralCast>
+|           | `-IntegerLiteral 0x7ff0418109b0 <col:32> 'int' 31
+|           `-ImplicitCastExpr 0x7ff0418109f8 <col:37> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff0418109d0 <col:37> 'long long' lvalue ParmVar 0x7ff04001c578 'i' 'long long'
+|-FunctionDecl 0x7ff041810b70 <<built-in>:172:24, ../Data/C2AST/pr80131-1.c:15:1> line:12:16 f2 'long long (long long)'
+| |-ParmVarDecl 0x7ff041810ae0 <<built-in>:172:24, ../Data/C2AST/pr80131-1.c:12:35> col:35 used i 'long long'
+| `-CompoundStmt 0x7ff041810d78 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ff041810d60 <line:14:3, col:38>
+|     `-BinaryOperator 0x7ff041810d38 <col:10, col:38> 'long long' '<<'
+|       |-CStyleCastExpr 0x7ff041810c50 <col:10, col:26> 'long long' <IntegralCast>
+|       | `-IntegerLiteral 0x7ff041810c18 <col:26> 'int' 1
+|       `-ParenExpr 0x7ff041810d18 <col:31, col:38> 'long long'
+|         `-BinaryOperator 0x7ff041810cf0 <col:32, col:37> 'long long' '-'
+|           |-ImplicitCastExpr 0x7ff041810cd8 <col:32> 'long long' <IntegralCast>
+|           | `-IntegerLiteral 0x7ff041810c78 <col:32> 'int' 63
+|           `-ImplicitCastExpr 0x7ff041810cc0 <col:37> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff041810c98 <col:37> 'long long' lvalue ParmVar 0x7ff041810ae0 'i' 'long long'
+|-FunctionDecl 0x7ff041810e78 <<built-in>:200:25, ../Data/C2AST/pr80131-1.c:20:1> line:17:17 f3 'unsigned long long (long long)'
+| |-ParmVarDecl 0x7ff041810da8 <<built-in>:172:24, ../Data/C2AST/pr80131-1.c:17:36> col:36 used i 'long long'
+| `-CompoundStmt 0x7ff041811080 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7ff041811068 <line:19:3, col:39>
+|     `-BinaryOperator 0x7ff041811040 <col:10, col:39> 'unsigned long long' '<<'
+|       |-CStyleCastExpr 0x7ff041810f58 <col:10, col:27> 'unsigned long long' <IntegralCast>
+|       | `-IntegerLiteral 0x7ff041810f20 <col:27> 'int' 1
+|       `-ParenExpr 0x7ff041811020 <col:32, col:39> 'long long'
+|         `-BinaryOperator 0x7ff041810ff8 <col:33, col:38> 'long long' '-'
+|           |-ImplicitCastExpr 0x7ff041810fe0 <col:33> 'long long' <IntegralCast>
+|           | `-IntegerLiteral 0x7ff041810f80 <col:33> 'int' 63
+|           `-ImplicitCastExpr 0x7ff041810fc8 <col:38> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff041810fa0 <col:38> 'long long' lvalue ParmVar 0x7ff041810da8 'i' 'long long'
+`-FunctionDecl 0x7ff041811178 <<built-in>:168:24, ../Data/C2AST/pr80131-1.c:25:1> line:22:16 f4 'int (int)'
+  |-ParmVarDecl 0x7ff0418110b0 <<built-in>:168:24, ../Data/C2AST/pr80131-1.c:22:35> col:35 used i 'int'
+  `-CompoundStmt 0x7ff041811368 <line:23:1, line:25:1>
+    `-ReturnStmt 0x7ff041811350 <line:24:3, col:38>
+      `-BinaryOperator 0x7ff041811328 <col:10, col:38> 'int' '<<'
+        |-CStyleCastExpr 0x7ff041811258 <col:10, col:26> 'int' <NoOp>
+        | `-IntegerLiteral 0x7ff041811220 <col:26> 'int' 1
+        `-ParenExpr 0x7ff041811308 <col:31, col:38> 'int'
+          `-BinaryOperator 0x7ff0418112e0 <col:32, col:37> 'int' '-'
+            |-IntegerLiteral 0x7ff041811280 <col:32> 'int' 31
+            `-ImplicitCastExpr 0x7ff0418112c8 <col:37> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7ff0418112a0 <col:37> 'int' lvalue ParmVar 0x7ff0418110b0 'i' 'int'

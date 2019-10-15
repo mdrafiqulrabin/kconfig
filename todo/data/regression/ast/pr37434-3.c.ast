@@ -1,0 +1,109 @@
+TranslationUnitDecl 0x7ffae58118e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffae5844400 <../Data/C2AST/pr37434-3.c:4:1, col:14> col:14 referenced __v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7ffae5812580 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7ffae5811980 'char'
+|-TypedefDecl 0x7ffae58444b8 <line:5:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7ffae5844480 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7ffae5811a20 'long long'
+`-FunctionDecl 0x7ffae5844650 <line:6:1, line:17:1> line:6:9 Set_AC4R_SETUP_I '__m128i (const char *)'
+  |-ParmVarDecl 0x7ffae5844548 <col:27, col:39> col:39 used val 'const char *'
+  `-CompoundStmt 0x7ffae585b168 <col:45, line:17:1>
+    |-DeclStmt 0x7ffae5844820 <line:7:3, col:20>
+    | `-VarDecl 0x7ffae5844748 <col:3, col:17> col:8 used D2073 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5844808 <col:16, col:17> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae58447e8 <col:16, col:17> 'const char' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7ffae58447d0 <col:17> 'const char *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffae58447a8 <col:17> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |-DeclStmt 0x7ffae5844988 <line:8:3, col:26>
+    | `-VarDecl 0x7ffae5844848 <col:3, col:25> col:8 used D2074 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5844970 <col:16, col:25> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae5844950 <col:16, col:25> 'const char' lvalue prefix '*'
+    |       `-ParenExpr 0x7ffae5844930 <col:17, col:25> 'const char *'
+    |         `-BinaryOperator 0x7ffae5844908 <col:18, col:24> 'const char *' '+'
+    |           |-ImplicitCastExpr 0x7ffae58448f0 <col:18> 'const char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffae58448a8 <col:18> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |           `-IntegerLiteral 0x7ffae58448d0 <col:24> 'int' 1
+    |-DeclStmt 0x7ffae5844af0 <line:9:3, col:26>
+    | `-VarDecl 0x7ffae58449b0 <col:3, col:25> col:8 used D2075 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5844ad8 <col:16, col:25> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae5844ab8 <col:16, col:25> 'const char' lvalue prefix '*'
+    |       `-ParenExpr 0x7ffae5844a98 <col:17, col:25> 'const char *'
+    |         `-BinaryOperator 0x7ffae5844a70 <col:18, col:24> 'const char *' '+'
+    |           |-ImplicitCastExpr 0x7ffae5844a58 <col:18> 'const char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffae5844a10 <col:18> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |           `-IntegerLiteral 0x7ffae5844a38 <col:24> 'int' 2
+    |-DeclStmt 0x7ffae5844c58 <line:10:3, col:26>
+    | `-VarDecl 0x7ffae5844b18 <col:3, col:25> col:8 used D2076 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5844c40 <col:16, col:25> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae5844c20 <col:16, col:25> 'const char' lvalue prefix '*'
+    |       `-ParenExpr 0x7ffae5844c00 <col:17, col:25> 'const char *'
+    |         `-BinaryOperator 0x7ffae5844bd8 <col:18, col:24> 'const char *' '+'
+    |           |-ImplicitCastExpr 0x7ffae5844bc0 <col:18> 'const char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffae5844b78 <col:18> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |           `-IntegerLiteral 0x7ffae5844ba0 <col:24> 'int' 3
+    |-DeclStmt 0x7ffae5844dc0 <line:11:3, col:26>
+    | `-VarDecl 0x7ffae5844c80 <col:3, col:25> col:8 used D2077 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5844da8 <col:16, col:25> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae5844d88 <col:16, col:25> 'const char' lvalue prefix '*'
+    |       `-ParenExpr 0x7ffae5844d68 <col:17, col:25> 'const char *'
+    |         `-BinaryOperator 0x7ffae5844d40 <col:18, col:24> 'const char *' '+'
+    |           |-ImplicitCastExpr 0x7ffae5844d28 <col:18> 'const char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffae5844ce0 <col:18> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |           `-IntegerLiteral 0x7ffae5844d08 <col:24> 'int' 4
+    |-DeclStmt 0x7ffae5844f28 <line:12:3, col:26>
+    | `-VarDecl 0x7ffae5844de8 <col:3, col:25> col:8 used D2078 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5844f10 <col:16, col:25> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae5844ef0 <col:16, col:25> 'const char' lvalue prefix '*'
+    |       `-ParenExpr 0x7ffae5844ed0 <col:17, col:25> 'const char *'
+    |         `-BinaryOperator 0x7ffae5844ea8 <col:18, col:24> 'const char *' '+'
+    |           |-ImplicitCastExpr 0x7ffae5844e90 <col:18> 'const char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffae5844e48 <col:18> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |           `-IntegerLiteral 0x7ffae5844e70 <col:24> 'int' 5
+    |-DeclStmt 0x7ffae5845090 <line:13:3, col:26>
+    | `-VarDecl 0x7ffae5844f50 <col:3, col:25> col:8 used D2079 'char' cinit
+    |   `-ImplicitCastExpr 0x7ffae5845078 <col:16, col:25> 'char' <LValueToRValue>
+    |     `-UnaryOperator 0x7ffae5845058 <col:16, col:25> 'const char' lvalue prefix '*'
+    |       `-ParenExpr 0x7ffae5845038 <col:17, col:25> 'const char *'
+    |         `-BinaryOperator 0x7ffae5845010 <col:18, col:24> 'const char *' '+'
+    |           |-ImplicitCastExpr 0x7ffae5844ff8 <col:18> 'const char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffae5844fb0 <col:18> 'const char *' lvalue ParmVar 0x7ffae5844548 'val' 'const char *'
+    |           `-IntegerLiteral 0x7ffae5844fd8 <col:24> 'int' 6
+    |-DeclStmt 0x7ffae585b0c0 <line:14:3, line:15:55>
+    | `-VarDecl 0x7ffae58450e0 <line:14:3, line:15:54> line:14:11 used D2094 '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' cinit
+    |   `-InitListExpr 0x7ffae585ae80 <col:19, line:15:54> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+    |     |-ImplicitCastExpr 0x7ffae585af40 <line:14:20> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845140 <col:20> 'char' lvalue Var 0x7ffae5844748 'D2073' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585af58 <col:27> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845168 <col:27> 'char' lvalue Var 0x7ffae5844848 'D2074' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585af70 <col:34> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845190 <col:34> 'char' lvalue Var 0x7ffae58449b0 'D2075' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585af88 <col:41> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae58451b8 <col:41> 'char' lvalue Var 0x7ffae5844b18 'D2076' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585afa0 <col:49> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae58451e0 <col:49> 'char' lvalue Var 0x7ffae5844c80 'D2077' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585afb8 <col:56> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845208 <col:56> 'char' lvalue Var 0x7ffae5844de8 'D2078' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585afd0 <col:63> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845230 <col:63> 'char' lvalue Var 0x7ffae5844f50 'D2079' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585afe8 <col:70> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7ffae5845258 <col:70> 'int' 0
+    |     |-ImplicitCastExpr 0x7ffae585b000 <line:15:3> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845278 <col:3> 'char' lvalue Var 0x7ffae5844748 'D2073' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585b018 <col:10> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae58452a0 <col:10> 'char' lvalue Var 0x7ffae5844848 'D2074' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585b030 <col:17> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae58452c8 <col:17> 'char' lvalue Var 0x7ffae58449b0 'D2075' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585b048 <col:24> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae58452f0 <col:24> 'char' lvalue Var 0x7ffae5844b18 'D2076' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585b060 <col:32> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845318 <col:32> 'char' lvalue Var 0x7ffae5844c80 'D2077' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585b078 <col:39> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845340 <col:39> 'char' lvalue Var 0x7ffae5844de8 'D2078' 'char'
+    |     |-ImplicitCastExpr 0x7ffae585b090 <col:46> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffae5845368 <col:46> 'char' lvalue Var 0x7ffae5844f50 'D2079' 'char'
+    |     `-ImplicitCastExpr 0x7ffae585b0a8 <col:53> 'char' <IntegralCast>
+    |       `-IntegerLiteral 0x7ffae5845390 <col:53> 'int' 0
+    `-ReturnStmt 0x7ffae585b150 <line:16:3, col:19>
+      `-CStyleCastExpr 0x7ffae585b128 <col:10, col:19> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+        `-ImplicitCastExpr 0x7ffae585b110 <col:19> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+          `-DeclRefExpr 0x7ffae585b0d8 <col:19> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7ffae58450e0 'D2094' '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'

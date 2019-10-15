@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f9fe20174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9fe2059028 <../Data/C2AST/pr59503.c:4:1, line:13:1> line:5:1 main 'int (void)'
+| `-CompoundStmt 0x7f9fe20597e8 <line:6:1, line:13:1>
+|   |-DeclStmt 0x7f9fe20591e8 <line:7:3, col:23>
+|   | `-VarDecl 0x7f9fe2059150 <col:3, col:21> col:17 used a 'long long' cinit
+|   |   `-ImplicitCastExpr 0x7f9fe20591d0 <col:21> 'long long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f9fe20591b0 <col:21> 'int' 14
+|   |-DeclStmt 0x7f9fe20592b0 <line:8:3, col:17>
+|   | `-VarDecl 0x7f9fe2059218 <col:3, col:16> col:12 used b 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f9fe2059298 <col:16> 'long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f9fe2059278 <col:16> 'int' 9
+|   |-GCCAsmStmt 0x7f9fe2059418 <line:9:3, col:40>
+|   | |-DeclRefExpr 0x7f9fe2059398 <col:28> 'long long' lvalue Var 0x7f9fe2059150 'a' 'long long'
+|   | `-DeclRefExpr 0x7f9fe20593f0 <col:38> 'long' lvalue Var 0x7f9fe2059218 'b' 'long'
+|   |-IfStmt 0x7f9fe2059778 <line:10:3, line:11:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9fe20595a8 <line:10:7, col:18> 'int' '!='
+|   | | |-ParenExpr 0x7f9fe2059550 <col:7, col:13> 'long long'
+|   | | | `-BinaryOperator 0x7f9fe2059528 <col:8, col:12> 'long long' '-'
+|   | | |   |-ImplicitCastExpr 0x7f9fe20594e0 <col:8> 'long long' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x7f9fe2059490 <col:8> 'long long' lvalue Var 0x7f9fe2059150 'a' 'long long'
+|   | | |   `-ImplicitCastExpr 0x7f9fe2059510 <col:12> 'long long' <IntegralCast>
+|   | | |     `-ImplicitCastExpr 0x7f9fe20594f8 <col:12> 'long' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f9fe20594b8 <col:12> 'long' lvalue Var 0x7f9fe2059218 'b' 'long'
+|   | | `-ImplicitCastExpr 0x7f9fe2059590 <col:18> 'long long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9fe2059570 <col:18> 'int' 5
+|   | |-CallExpr 0x7f9fe2059750 <line:11:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f9fe2059738 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f9fe20596e8 <col:5> '<builtin fn type>' Function 0x7f9fe2059600 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9fe20597d0 <line:12:3, col:10>
+|     `-IntegerLiteral 0x7f9fe20597b0 <col:10> 'int' 0
+`-FunctionDecl 0x7f9fe2059600 <line:11:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f9fe20596a0 <col:5> Implicit

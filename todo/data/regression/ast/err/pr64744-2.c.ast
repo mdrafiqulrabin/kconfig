@@ -1,0 +1,33 @@
+../Data/C2AST/pr64744-2.c:12:3: error: non-ASM statement in naked function is not supported
+  struct s x = {};  
+  ^
+../Data/C2AST/pr64744-2.c:10:16: note: attribute is here
+__attribute__((naked))
+               ^
+1 error generated.
+TranslationUnitDecl 0x7feb4682bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb4682c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb4682bf80 '__int128'
+|-TypedefDecl 0x7feb4682c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb4682bfa0 'unsigned __int128'
+|-TypedefDecl 0x7feb4682c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb4682c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7feb4682c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb4682c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb4682c600 'char *'
+|   `-BuiltinType 0x7feb4682bd80 'char'
+|-TypedefDecl 0x7feb4682c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb4682c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb4682c720 'struct __va_list_tag'
+|     `-Record 0x7feb4682c698 '__va_list_tag'
+|-RecordDecl 0x7feb4682c960 <../Data/C2AST/pr64744-2.c:5:1, line:8:1> line:5:8 struct s definition
+| |-FieldDecl 0x7feb47014230 <line:6:3, col:8> col:8 a 'char'
+| `-FieldDecl 0x7feb47014290 <line:7:5, col:9> col:9 b 'int'
+`-FunctionDecl 0x7feb47014328 <line:10:1, line:13:1> line:11:6 invalid foo 'void ()'
+  |-CompoundStmt 0x7feb470145c8 <col:13, line:13:1>
+  | `-DeclStmt 0x7feb470145b0 <line:12:3, col:18>
+  |   `-VarDecl 0x7feb470144a0 <col:3, col:17> col:12 x 'struct s':'struct s' cinit
+  |     `-InitListExpr 0x7feb47014540 <col:16, col:17> 'struct s':'struct s'
+  |       |-ImplicitValueInitExpr 0x7feb47014590 <<invalid sloc>> 'char'
+  |       `-ImplicitValueInitExpr 0x7feb470145a0 <<invalid sloc>> 'int'
+  `-NakedAttr 0x7feb470143c8 <line:10:16>

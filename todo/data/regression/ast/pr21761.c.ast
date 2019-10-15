@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f91560002e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f915504a000 <../Data/C2AST/pr21761.c:1:1, line:8:1> line:1:6 f1 'void ()'
+  `-CompoundStmt 0x7f915504a600 <line:2:1, line:8:1>
+    |-DeclStmt 0x7f915504a220 <line:3:3, col:23>
+    | |-VarDecl 0x7f915504a0f8 <col:3, col:12> col:8 used bit 'long' cinit
+    | | `-ImplicitCastExpr 0x7f915504a178 <col:12> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f915504a158 <col:12> 'int' 0
+    | `-VarDecl 0x7f915504a1a8 <col:3, col:15> col:15 used exponent 'long'
+    |-BinaryOperator 0x7f915504a2c0 <line:4:3, col:15> 'long' '='
+    | |-DeclRefExpr 0x7f915504a238 <col:3> 'long' lvalue Var 0x7f915504a1a8 'exponent' 'long'
+    | `-UnaryOperator 0x7f915504a2a0 <col:14, col:15> 'long' prefix '-'
+    |   `-ImplicitCastExpr 0x7f915504a288 <col:15> 'long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f915504a260 <col:15> 'long' lvalue Var 0x7f915504a1a8 'exponent' 'long'
+    `-ForStmt 0x7f915504a5c8 <line:5:3, line:7:27>
+      |-BinaryOperator 0x7f915504a348 <line:5:8, col:14> 'long' '='
+      | |-DeclRefExpr 0x7f915504a2e8 <col:8> 'long' lvalue Var 0x7f915504a0f8 'bit' 'long'
+      | `-ImplicitCastExpr 0x7f915504a330 <col:14> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7f915504a310 <col:14> 'int' 1
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f915504a398 <col:17> 'long' <LValueToRValue>
+      | `-DeclRefExpr 0x7f915504a370 <col:17> 'long' lvalue Var 0x7f915504a1a8 'exponent' 'long'
+      |-CompoundAssignOperator 0x7f915504a410 <col:27, col:35> 'long' '<<=' ComputeLHSTy='long' ComputeResultTy='long'
+      | |-DeclRefExpr 0x7f915504a3b0 <col:27> 'long' lvalue Var 0x7f915504a0f8 'bit' 'long'
+      | `-IntegerLiteral 0x7f915504a3d8 <col:35> 'int' 1
+      `-IfStmt 0x7f915504a590 <line:6:7, line:7:27>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7f915504a4c8 <line:6:11, col:22> 'long' '&'
+        | |-ImplicitCastExpr 0x7f915504a498 <col:11> 'long' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f915504a448 <col:11> 'long' lvalue Var 0x7f915504a1a8 'exponent' 'long'
+        | `-ImplicitCastExpr 0x7f915504a4b0 <col:22> 'long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f915504a470 <col:22> 'long' lvalue Var 0x7f915504a0f8 'bit' 'long'
+        |-CompoundAssignOperator 0x7f915504a558 <line:7:15, col:27> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+        | |-DeclRefExpr 0x7f915504a4f0 <col:15> 'long' lvalue Var 0x7f915504a1a8 'exponent' 'long'
+        | `-ImplicitCastExpr 0x7f915504a540 <col:27> 'long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f915504a518 <col:27> 'long' lvalue Var 0x7f915504a0f8 'bit' 'long'
+        `-<<<NULL>>>

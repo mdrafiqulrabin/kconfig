@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7fde688198e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fde69836a00 <../Data/C2AST/pragma-pack-5.c:5:1, line:8:1> line:5:8 struct S definition
+| |-MaxFieldAlignmentAttr 0x7fde69836ab0 <<invalid sloc>> Implicit 8
+| `-FieldDecl 0x7fde69836b08 <line:7:3, col:8> col:8 a 'char'
+`-VarDecl 0x7fde69836d60 <line:10:1, col:39> col:5 test 'int [1]'

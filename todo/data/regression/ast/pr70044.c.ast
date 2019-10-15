@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb04d0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb04d058868 <../Data/C2AST/pr70044.c:5:1, col:30> col:12 used atoi 'int (const char *)' extern
+| `-ParmVarDecl 0x7fb04d018178 <col:18, col:29> col:30 'const char *'
+`-FunctionDecl 0x7fb04d058ae8 <line:7:1, line:11:1> line:8:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fb04d058968 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7fb04d058a10 <col:17, col:24> col:24 used argv 'char **'
+  `-CompoundStmt 0x7fb04d058d50 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fb04d058d38 <line:10:3, col:27>
+      `-BinaryOperator 0x7fb04d058d10 <col:10, col:27> 'int' '+'
+        |-CallExpr 0x7fb04d058c90 <col:10, col:23> 'int'
+        | |-ImplicitCastExpr 0x7fb04d058c78 <col:10> 'int (*)(const char *)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fb04d058b98 <col:10> 'int (const char *)' Function 0x7fb04d058868 'atoi' 'int (const char *)'
+        | `-ImplicitCastExpr 0x7fb04d058cd8 <col:16, col:22> 'const char *' <BitCast>
+        |   `-ImplicitCastExpr 0x7fb04d058cc0 <col:16, col:22> 'char *' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fb04d058c20 <col:16, col:22> 'char *' lvalue
+        |       |-ImplicitCastExpr 0x7fb04d058c08 <col:16> 'char **' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7fb04d058bc0 <col:16> 'char **' lvalue ParmVar 0x7fb04d058a10 'argv' 'char **'
+        |       `-IntegerLiteral 0x7fb04d058be8 <col:21> 'int' 0
+        `-IntegerLiteral 0x7fb04d058cf0 <col:27> 'int' 1

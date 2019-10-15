@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fc11702bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc11702c978 <../Data/C2AST/pr61602.c:1:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fc11706d880 <line:2:1, col:11> col:6 used b 'int *' cinit
+| `-UnaryOperator 0x7fc11706d908 <col:10, col:11> 'int *' prefix '&'
+|   `-DeclRefExpr 0x7fc11706d8e0 <col:11> 'int' lvalue Var 0x7fc11702c978 'a' 'int'
+|-VarDecl 0x7fc11706d978 <col:1, col:21> col:16 c 'int **' cinit
+| `-UnaryOperator 0x7fc11706da00 <col:20, col:21> 'int **' prefix '&'
+|   `-DeclRefExpr 0x7fc11706d9d8 <col:21> 'int *' lvalue Var 0x7fc11706d880 'b' 'int *'
+`-FunctionDecl 0x7fc11706da90 <line:3:1, line:8:1> line:4:1 main 'int ()'
+  `-CompoundStmt 0x7fc11706dcd0 <line:5:1, line:8:1>
+    |-DeclStmt 0x7fc11706dbf8 <line:6:3, col:15>
+    | `-VarDecl 0x7fc11706db50 <col:3, col:14> col:9 used d 'int **' cinit
+    |   `-UnaryOperator 0x7fc11706dbd8 <col:13, col:14> 'int **' prefix '&'
+    |     `-DeclRefExpr 0x7fc11706dbb0 <col:14> 'int *' lvalue Var 0x7fc11706d880 'b' 'int *'
+    `-BinaryOperator 0x7fc11706dca8 <line:7:3, col:8> 'int *' '='
+      |-UnaryOperator 0x7fc11706dc50 <col:3, col:4> 'int *' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fc11706dc38 <col:4> 'int **' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc11706dc10 <col:4> 'int **' lvalue Var 0x7fc11706db50 'd' 'int **'
+      `-ImplicitCastExpr 0x7fc11706dc90 <col:8> 'int *' <NullToPointer>
+        `-IntegerLiteral 0x7fc11706dc70 <col:8> 'int' 0

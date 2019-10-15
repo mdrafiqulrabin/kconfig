@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fae3b021ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fae3b022978 <../Data/C2AST/pr17408.c:2:1, col:12> col:12 used t 'int' extern
+|-VarDecl 0x7fae3b811a58 prev 0x7fae3b022978 <line:3:1, col:16> col:12 used t 'int' extern cinit
+| `-IntegerLiteral 0x7fae3b811ab8 <col:16> 'int' 0
+|-FunctionDecl 0x7fae3b811b28 <line:4:1, col:15> col:6 f 'void ()'
+| `-CompoundStmt 0x7fae3b811c38 <col:9, col:15>
+|   `-BinaryOperator 0x7fae3b811c10 <col:10, col:13> 'int' '='
+|     |-DeclRefExpr 0x7fae3b811bc8 <col:10> 'int' lvalue Var 0x7fae3b811a58 't' 'int'
+|     `-IntegerLiteral 0x7fae3b811bf0 <col:13> 'int' 0
+`-FunctionDecl 0x7fae3b811c70 <line:5:1, col:16> col:6 g 'void ()'
+  `-CompoundStmt 0x7fae3b811f20 <col:9, col:16>
+    `-CallExpr 0x7fae3b811ef0 <col:10, col:14> 'int'
+      |-ImplicitCastExpr 0x7fae3b811ed8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fae3b811e10 <col:10> 'int ()' Function 0x7fae3b811d60 'h' 'int ()'
+      `-UnaryOperator 0x7fae3b811e88 <col:12, col:13> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fae3b811e38 <col:13> 'int' lvalue Var 0x7fae3b811a58 't' 'int'

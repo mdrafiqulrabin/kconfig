@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fc75b82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc75c014200 <../Data/C2AST/pr69242.c:4:1, col:8> col:5 used a 'int [1]'
+|-FunctionDecl 0x7fc75c014368 <line:5:7> col:7 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc75c014408 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fc75c014468 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fc75c0144c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fc75c014540 prev 0x7fc75c014368 <col:1, col:14> col:7 used memcpy 'void *(void *, const void *, unsigned long)'
+| |-ParmVarDecl 0x7fc75c0145e0 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7fc75c014640 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7fc75c0146a0 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+|-FunctionDecl 0x7fc75c014770 <line:6:1, col:47> col:5 used smx_ctx_base_factory_create_context_sized 'int ()'
+|-FunctionDecl 0x7fc75c014858 <line:7:1, col:17> col:6 used getcontext 'void ()'
+| `-ReturnsTwiceAttr 0x7fc75c0148f8 <col:6> Implicit
+`-FunctionDecl 0x7fc75c014960 <line:8:1, line:14:1> line:8:6 smx_ctx_sysv_create_context 'void ()'
+  `-CompoundStmt 0x7fc75c014ee8 <col:36, line:14:1>
+    |-DeclStmt 0x7fc75c014b78 <line:9:5, col:64>
+    | `-VarDecl 0x7fc75c014a40 <col:5, col:63> col:10 used b 'int *' cinit
+    |   `-CStyleCastExpr 0x7fc75c014b50 <col:14, col:63> 'int *' <IntegralToPointer>
+    |     `-CallExpr 0x7fc75c014b10 <col:21, col:63> 'int'
+    |       `-ImplicitCastExpr 0x7fc75c014af8 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fc75c014aa0 <col:21> 'int ()' Function 0x7fc75c014770 'smx_ctx_base_factory_create_context_sized' 'int ()'
+    |-CallExpr 0x7fc75c014c00 <line:10:5, col:16> 'void'
+    | `-ImplicitCastExpr 0x7fc75c014be8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc75c014b90 <col:5> 'void ()' Function 0x7fc75c014858 'getcontext' 'void ()'
+    |-CallExpr 0x7fc75c014d80 <line:11:5, col:30> 'void *'
+    | |-ImplicitCastExpr 0x7fc75c014d68 <col:5> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc75c014c28 <col:5> 'void *(void *, const void *, unsigned long)' Function 0x7fc75c014540 'memcpy' 'void *(void *, const void *, unsigned long)'
+    | |-ImplicitCastExpr 0x7fc75c014dd8 <col:12> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fc75c014dc0 <col:12> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc75c014c50 <col:12> 'int [1]' lvalue Var 0x7fc75c014200 'a' 'int [1]'
+    | |-ImplicitCastExpr 0x7fc75c014df0 <col:15, col:16> 'const void *' <BitCast>
+    | | `-UnaryOperator 0x7fc75c014cc8 <col:15, col:16> 'int **' prefix '&'
+    | |   `-DeclRefExpr 0x7fc75c014c78 <col:16> 'int *' lvalue Var 0x7fc75c014a40 'b' 'int *'
+    | `-UnaryExprOrTypeTraitExpr 0x7fc75c014d00 <col:19, col:29> 'unsigned long' sizeof 'int'
+    `-SwitchStmt 0x7fc75c014ea8 <line:12:5, line:13:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc75c014e90 <line:12:13, col:16> 'int' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fc75c014e68 <col:13, col:16> 'int' lvalue
+      |   |-ImplicitCastExpr 0x7fc75c014e50 <col:13> 'int *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7fc75c014e08 <col:13> 'int [1]' lvalue Var 0x7fc75c014200 'a' 'int [1]'
+      |   `-IntegerLiteral 0x7fc75c014e30 <col:15> 'int' 0
+      `-NullStmt 0x7fc75c014ed8 <line:13:7>

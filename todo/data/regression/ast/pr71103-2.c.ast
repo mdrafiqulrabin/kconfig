@@ -1,0 +1,114 @@
+TranslationUnitDecl 0x7f8213018ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8213019960 <../Data/C2AST/pr71103-2.c:6:1, line:10:1> line:6:8 struct S12 definition
+| |-FieldDecl 0x7f8212014e30 <line:8:3, col:8> col:8 referenced c 'char'
+| `-FieldDecl 0x7f8212014e90 <line:9:3, col:15> col:15 referenced p 'const char *'
+|-RecordDecl 0x7f8212014ed8 <line:12:1, line:16:1> line:12:8 struct S12f definition
+| |-FieldDecl 0x7f8212014f90 <line:14:3, col:8> col:8 referenced c 'char'
+| `-FieldDecl 0x7f82120151a8 <line:15:3, col:24> col:17 referenced f 'struct S12f (*)(void)'
+|-RecordDecl 0x7f82120151f0 <line:18:1, line:22:1> line:18:8 struct S12labl definition
+| |-FieldDecl 0x7f82120152b0 <line:20:3, col:8> col:8 referenced c 'char'
+| `-FieldDecl 0x7f8212015340 <line:21:3, col:10> col:10 referenced labl 'void **'
+|-RecordDecl 0x7f8212015388 <line:24:1, line:29:1> line:24:8 struct S121 definition
+| |-FieldDecl 0x7f8212015440 <line:26:3, col:8> col:8 referenced c 'char'
+| |-FieldDecl 0x7f82120154a0 <line:27:3, col:15> col:15 referenced p 'const char *'
+| `-FieldDecl 0x7f82120154f8 <line:28:3, col:8> col:8 referenced d 'char'
+|-VarDecl 0x7f82120155f8 <line:31:1, col:21> col:12 used str 'const char [5]' cinit
+| `-StringLiteral 0x7f8212015698 <col:21> 'const char [5]' lvalue "abcd"
+|-FunctionDecl 0x7f8212015800 <line:33:1, line:39:1> line:33:12 test_S12_0 'struct S12 (void)'
+| `-CompoundStmt 0x7f8212015b60 <line:34:1, line:39:1>
+|   |-DeclStmt 0x7f8212015920 <line:35:3, col:15>
+|   | `-VarDecl 0x7f82120158c0 <col:3, col:14> col:14 used s 'struct S12':'struct S12' nrvo
+|   |-BinaryOperator 0x7f82120159c8 <line:36:3, col:9> 'char' '='
+|   | |-MemberExpr 0x7f8212015960 <col:3, col:5> 'char' lvalue .c 0x7f8212014e30
+|   | | `-DeclRefExpr 0x7f8212015938 <col:3> 'struct S12':'struct S12' lvalue Var 0x7f82120158c0 's' 'struct S12':'struct S12'
+|   | `-ImplicitCastExpr 0x7f82120159b0 <col:9> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7f8212015998 <col:9> 'int' 65
+|   |-BinaryOperator 0x7f8212015ae0 <line:37:3, col:9> 'const char *' '='
+|   | |-MemberExpr 0x7f8212015a68 <col:3, col:5> 'const char *' lvalue .p 0x7f8212014e90
+|   | | `-DeclRefExpr 0x7f8212015a40 <col:3> 'struct S12':'struct S12' lvalue Var 0x7f82120158c0 's' 'struct S12':'struct S12'
+|   | `-ImplicitCastExpr 0x7f8212015ac8 <col:9> 'const char *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8212015aa0 <col:9> 'const char [5]' lvalue Var 0x7f82120155f8 'str' 'const char [5]'
+|   `-ReturnStmt 0x7f8212015b48 <line:38:3, col:10>
+|     `-ImplicitCastExpr 0x7f8212015b30 <col:10> 'struct S12':'struct S12' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8212015b08 <col:10> 'struct S12':'struct S12' lvalue Var 0x7f82120158c0 's' 'struct S12':'struct S12'
+|-FunctionDecl 0x7f8212015c30 <line:41:1, line:47:1> line:41:12 test_S12_4 'struct S12 (void)'
+| `-CompoundStmt 0x7f8212015f90 <line:42:1, line:47:1>
+|   |-DeclStmt 0x7f8212015d50 <line:43:3, col:15>
+|   | `-VarDecl 0x7f8212015cf0 <col:3, col:14> col:14 used s 'struct S12':'struct S12' nrvo
+|   |-BinaryOperator 0x7f8212015e00 <line:44:3, col:9> 'char' '='
+|   | |-MemberExpr 0x7f8212015d90 <col:3, col:5> 'char' lvalue .c 0x7f8212014e30
+|   | | `-DeclRefExpr 0x7f8212015d68 <col:3> 'struct S12':'struct S12' lvalue Var 0x7f8212015cf0 's' 'struct S12':'struct S12'
+|   | `-ImplicitCastExpr 0x7f8212015de0 <col:9> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7f8212015dc8 <col:9> 'int' 65
+|   |-BinaryOperator 0x7f8212015f10 <line:45:3, col:15> 'const char *' '='
+|   | |-MemberExpr 0x7f8212015e50 <col:3, col:5> 'const char *' lvalue .p 0x7f8212014e90
+|   | | `-DeclRefExpr 0x7f8212015e28 <col:3> 'struct S12':'struct S12' lvalue Var 0x7f8212015cf0 's' 'struct S12':'struct S12'
+|   | `-BinaryOperator 0x7f8212015ee8 <col:9, col:15> 'const char *' '+'
+|   |   |-ImplicitCastExpr 0x7f8212015ed0 <col:9> 'const char *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f8212015e88 <col:9> 'const char [5]' lvalue Var 0x7f82120155f8 'str' 'const char [5]'
+|   |   `-IntegerLiteral 0x7f8212015eb0 <col:15> 'int' 4
+|   `-ReturnStmt 0x7f8212015f78 <line:46:3, col:10>
+|     `-ImplicitCastExpr 0x7f8212015f60 <col:10> 'struct S12':'struct S12' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8212015f38 <col:10> 'struct S12':'struct S12' lvalue Var 0x7f8212015cf0 's' 'struct S12':'struct S12'
+|-FunctionDecl 0x7f8212016060 <line:49:1, line:55:1> line:49:13 referenced test_S12f 'struct S12f (void)'
+| `-CompoundStmt 0x7f82120163f0 <line:50:1, line:55:1>
+|   |-DeclStmt 0x7f8212016180 <line:51:3, col:16>
+|   | `-VarDecl 0x7f8212016120 <col:3, col:15> col:15 used s 'struct S12f':'struct S12f' nrvo
+|   |-BinaryOperator 0x7f8212016228 <line:52:3, col:9> 'char' '='
+|   | |-MemberExpr 0x7f82120161c0 <col:3, col:5> 'char' lvalue .c 0x7f8212014f90
+|   | | `-DeclRefExpr 0x7f8212016198 <col:3> 'struct S12f':'struct S12f' lvalue Var 0x7f8212016120 's' 'struct S12f':'struct S12f'
+|   | `-ImplicitCastExpr 0x7f8212016210 <col:9> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7f82120161f8 <col:9> 'int' 65
+|   |-BinaryOperator 0x7f8212016370 <line:53:3, col:9> 'struct S12f (*)(void)' '='
+|   | |-MemberExpr 0x7f82120162c8 <col:3, col:5> 'struct S12f (*)(void)' lvalue .f 0x7f82120151a8
+|   | | `-DeclRefExpr 0x7f82120162a0 <col:3> 'struct S12f':'struct S12f' lvalue Var 0x7f8212016120 's' 'struct S12f':'struct S12f'
+|   | `-ImplicitCastExpr 0x7f8212016358 <col:9> 'struct S12f (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f8212016300 <col:9> 'struct S12f (void)' Function 0x7f8212016060 'test_S12f' 'struct S12f (void)'
+|   `-ReturnStmt 0x7f82120163d8 <line:54:3, col:10>
+|     `-ImplicitCastExpr 0x7f82120163c0 <col:10> 'struct S12f':'struct S12f' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8212016398 <col:10> 'struct S12f':'struct S12f' lvalue Var 0x7f8212016120 's' 'struct S12f':'struct S12f'
+|-FunctionDecl 0x7f8212016550 <line:57:1, line:64:1> line:57:13 test_S121 'struct S121 (void)'
+| `-CompoundStmt 0x7f82120169b8 <line:58:1, line:64:1>
+|   |-DeclStmt 0x7f8212016670 <line:59:3, col:16>
+|   | `-VarDecl 0x7f8212016610 <col:3, col:15> col:15 used s 'struct S121':'struct S121' nrvo
+|   |-BinaryOperator 0x7f8212016718 <line:60:3, col:9> 'char' '='
+|   | |-MemberExpr 0x7f82120166b0 <col:3, col:5> 'char' lvalue .c 0x7f8212015440
+|   | | `-DeclRefExpr 0x7f8212016688 <col:3> 'struct S121':'struct S121' lvalue Var 0x7f8212016610 's' 'struct S121':'struct S121'
+|   | `-ImplicitCastExpr 0x7f8212016700 <col:9> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7f82120166e8 <col:9> 'int' 99
+|   |-BinaryOperator 0x7f8212016880 <line:61:3, col:15> 'const char *' '='
+|   | |-MemberExpr 0x7f82120167c0 <col:3, col:5> 'const char *' lvalue .p 0x7f82120154a0
+|   | | `-DeclRefExpr 0x7f8212016798 <col:3> 'struct S121':'struct S121' lvalue Var 0x7f8212016610 's' 'struct S121':'struct S121'
+|   | `-BinaryOperator 0x7f8212016858 <col:9, col:15> 'const char *' '+'
+|   |   |-ImplicitCastExpr 0x7f8212016840 <col:9> 'const char *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f82120167f8 <col:9> 'const char [5]' lvalue Var 0x7f82120155f8 'str' 'const char [5]'
+|   |   `-IntegerLiteral 0x7f8212016820 <col:15> 'int' 4
+|   |-BinaryOperator 0x7f8212016938 <line:62:3, col:9> 'char' '='
+|   | |-MemberExpr 0x7f82120168d0 <col:3, col:5> 'char' lvalue .d 0x7f82120154f8
+|   | | `-DeclRefExpr 0x7f82120168a8 <col:3> 'struct S121':'struct S121' lvalue Var 0x7f8212016610 's' 'struct S121':'struct S121'
+|   | `-ImplicitCastExpr 0x7f8212016920 <col:9> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7f8212016908 <col:9> 'int' 100
+|   `-ReturnStmt 0x7f82120169a0 <line:63:3, col:10>
+|     `-ImplicitCastExpr 0x7f8212016988 <col:10> 'struct S121':'struct S121' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8212016960 <col:10> 'struct S121':'struct S121' lvalue Var 0x7f8212016610 's' 'struct S121':'struct S121'
+|-FunctionDecl 0x7f8212016ba0 <line:66:1, col:40> col:13 use_S12lab 'void (struct S12labl *)' extern
+| `-ParmVarDecl 0x7f8212016aa0 <col:25, col:39> col:40 'struct S12labl *'
+`-FunctionDecl 0x7f8212016d50 <line:68:1, line:75:1> line:68:16 test_S12lab 'struct S12labl (void)'
+  `-CompoundStmt 0x7f821202cf28 <line:69:1, line:75:1>
+    |-DeclStmt 0x7f821202cc80 <line:70:3, col:19>
+    | `-VarDecl 0x7f821202cc20 <col:3, col:18> col:18 used s 'struct S12labl':'struct S12labl' nrvo
+    |-LabelStmt 0x7f821202ccf0 <line:71:1, col:6> 'labl'
+    | `-NullStmt 0x7f821202cc98 <col:6>
+    |-BinaryOperator 0x7f821202cd98 <line:72:3, col:9> 'char' '='
+    | |-MemberExpr 0x7f821202cd30 <col:3, col:5> 'char' lvalue .c 0x7f82120152b0
+    | | `-DeclRefExpr 0x7f821202cd08 <col:3> 'struct S12labl':'struct S12labl' lvalue Var 0x7f821202cc20 's' 'struct S12labl':'struct S12labl'
+    | `-ImplicitCastExpr 0x7f821202cd80 <col:9> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f821202cd68 <col:9> 'int' 65
+    |-BinaryOperator 0x7f821202cea8 <line:73:3, col:14> 'void **' '='
+    | |-MemberExpr 0x7f821202ce38 <col:3, col:5> 'void **' lvalue .labl 0x7f8212015340
+    | | `-DeclRefExpr 0x7f821202ce10 <col:3> 'struct S12labl':'struct S12labl' lvalue Var 0x7f821202cc20 's' 'struct S12labl':'struct S12labl'
+    | `-ImplicitCastExpr 0x7f821202ce90 <col:12, col:14> 'void **' <BitCast>
+    |   `-AddrLabelExpr 0x7f821202ce70 <col:12, col:14> 'void *' labl 0x7f821202cca8
+    `-ReturnStmt 0x7f821202cf10 <line:74:3, col:10>
+      `-ImplicitCastExpr 0x7f821202cef8 <col:10> 'struct S12labl':'struct S12labl' <LValueToRValue>
+        `-DeclRefExpr 0x7f821202ced0 <col:10> 'struct S12labl':'struct S12labl' lvalue Var 0x7f821202cc20 's' 'struct S12labl':'struct S12labl'

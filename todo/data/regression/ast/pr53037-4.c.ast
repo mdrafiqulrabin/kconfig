@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fb1af8174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb1af818198 <../Data/C2AST/pr53037-4.c:5:1, col:5> col:5 foo1 'int'
+|-FunctionDecl 0x7fb1b0015320 <line:7:1, line:11:1> line:9:1 foo2 'void (void)'
+| `-CompoundStmt 0x7fb1b00153c0 <line:10:1, line:11:1>
+|-RecordDecl 0x7fb1b00153d0 <line:13:1, line:16:1> line:13:8 struct foo3 definition
+| `-FieldDecl 0x7fb1b00154d8 <line:15:3, col:11> col:7 i 'int'
+|   `-IntegerLiteral 0x7fb1b0015480 <col:11> 'int' 2
+|-TypedefDecl 0x7fb1b0015578 <line:18:1, col:22> col:22 referenced __u32 'unsigned int'
+| |-BuiltinType 0x7fb1af817680 'unsigned int'
+| `-AlignedAttr 0x7fb1b00155d0 <line:19:18, col:27> aligned
+|   `-IntegerLiteral 0x7fb1b0015520 <col:26> 'int' 4
+`-RecordDecl 0x7fb1b0015620 <line:21:1, line:24:1> line:21:8 struct foo4 definition
+  `-FieldDecl 0x7fb1b0015720 <line:23:3, col:13> col:9 i '__u32':'unsigned int'
+    `-IntegerLiteral 0x7fb1b00156f0 <col:13> 'int' 2

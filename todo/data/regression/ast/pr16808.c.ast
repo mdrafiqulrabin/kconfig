@@ -1,0 +1,126 @@
+TranslationUnitDecl 0x7fc1c382bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc1c386d868 <../Data/C2AST/pr16808.c:3:8> col:8 implicit used exp 'double (double)' extern
+| |-ParmVarDecl 0x7fc1c386d908 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fc1c386d970 <col:8> Implicit
+| `-NoThrowAttr 0x7fc1c386d9b8 <col:8> Implicit
+|-FunctionDecl 0x7fc1c386d9c8 prev 0x7fc1c386d868 <col:1, col:18> col:8 used exp 'double (double)'
+| |-ParmVarDecl 0x7fc1c382c978 <col:12> col:18 'double'
+| |-ConstAttr 0x7fc1c386daa8 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7fc1c386dab8 <col:8> Inherited Implicit
+|-FunctionDecl 0x7fc1c386db90 <line:4:1, col:13> col:6 used f0 'void (void)'
+|-FunctionDecl 0x7fc1c386dd50 <line:5:1, col:14> col:6 used f 'void (double)'
+| `-ParmVarDecl 0x7fc1c386dc88 <col:8> col:14 'double'
+|-RecordDecl 0x7fc1c386ddf8 <line:6:9, line:9:1> line:6:16 struct Parser definition
+| |-FieldDecl 0x7fc1c386deb8 <line:7:5, col:9> col:9 referenced x 'int'
+| `-FieldDecl 0x7fc1c386df18 <line:8:5, col:11> col:11 referenced s 'char *'
+|-TypedefDecl 0x7fc1c386dfb0 <line:6:1, line:9:3> col:3 referenced Parser 'struct Parser':'struct Parser'
+| `-ElaboratedType 0x7fc1c386df60 'struct Parser' sugar
+|   `-RecordType 0x7fc1c386de80 'struct Parser'
+|     `-Record 0x7fc1c386ddf8 'Parser'
+|-FunctionDecl 0x7fc1c386e1b8 <line:10:1, line:17:1> line:10:15 used pop 'double (Parser *)' static
+| |-ParmVarDecl 0x7fc1c386e0a8 <col:19, col:27> col:27 used p 'Parser *'
+| `-CompoundStmt 0x7fc1c386e5d8 <col:30, line:17:1>
+|   |-IfStmt 0x7fc1c386e4b8 <line:11:5, line:14:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc1c386e388 <line:11:9, col:20> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7fc1c386e370 <col:9, col:15> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fc1c386e358 <col:9, col:15> 'char' <LValueToRValue>
+|   | | |   `-ArraySubscriptExpr 0x7fc1c386e310 <col:9, col:15> 'char' lvalue
+|   | | |     |-ImplicitCastExpr 0x7fc1c386e2f8 <col:9, col:12> 'char *' <LValueToRValue>
+|   | | |     | `-MemberExpr 0x7fc1c386e2a0 <col:9, col:12> 'char *' lvalue ->s 0x7fc1c386df18
+|   | | |     |   `-ImplicitCastExpr 0x7fc1c386e288 <col:9> 'Parser *' <LValueToRValue>
+|   | | |     |     `-DeclRefExpr 0x7fc1c386e260 <col:9> 'Parser *' lvalue ParmVar 0x7fc1c386e0a8 'p' 'Parser *'
+|   | | |     `-IntegerLiteral 0x7fc1c386e2d8 <col:14> 'int' 0
+|   | | `-IntegerLiteral 0x7fc1c386e338 <col:20> 'int' 0
+|   | |-CompoundStmt 0x7fc1c386e498 <col:23, line:14:5>
+|   | | |-CallExpr 0x7fc1c386e420 <line:12:2, col:5> 'void'
+|   | | | `-ImplicitCastExpr 0x7fc1c386e408 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7fc1c386e3b0 <col:2> 'void (void)' Function 0x7fc1c386db90 'f0' 'void (void)'
+|   | | `-ReturnStmt 0x7fc1c386e480 <line:13:2, col:9>
+|   | |   `-ImplicitCastExpr 0x7fc1c386e468 <col:9> 'double' <IntegralToFloating>
+|   | |     `-IntegerLiteral 0x7fc1c386e448 <col:9> 'int' 0
+|   | `-<<<NULL>>>
+|   |-UnaryOperator 0x7fc1c386e568 <line:15:5, col:10> 'int' prefix '--'
+|   | `-MemberExpr 0x7fc1c386e530 <col:7, col:10> 'int' lvalue ->x 0x7fc1c386deb8
+|   |   `-ImplicitCastExpr 0x7fc1c386e518 <col:7> 'Parser *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc1c386e4f0 <col:7> 'Parser *' lvalue ParmVar 0x7fc1c386e0a8 'p' 'Parser *'
+|   `-ReturnStmt 0x7fc1c386e5c0 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fc1c386e5a8 <col:12> 'double' <IntegralToFloating>
+|       `-IntegerLiteral 0x7fc1c386e588 <col:12> 'int' 0
+|-FunctionDecl 0x7fc1c386e710 <line:18:1, line:21:1> line:18:13 used evalFactor 'void (Parser *)' static
+| |-ParmVarDecl 0x7fc1c386e610 <col:24, col:32> col:32 used p 'Parser *'
+| `-CompoundStmt 0x7fc1c386eab0 <col:35, line:21:1>
+|   `-WhileStmt 0x7fc1c386ea90 <line:19:5, line:20:15>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc1c386e838 <line:19:12, col:15> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7fc1c386e800 <col:12, col:15> 'int' lvalue ->x 0x7fc1c386deb8
+|     |   `-ImplicitCastExpr 0x7fc1c386e7e0 <col:12> 'Parser *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fc1c386e7b8 <col:12> 'Parser *' lvalue ParmVar 0x7fc1c386e610 'p' 'Parser *'
+|     `-CallExpr 0x7fc1c386ea60 <line:20:2, col:15> 'void'
+|       |-ImplicitCastExpr 0x7fc1c386ea48 <col:2> 'void (*)(double)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc1c386e850 <col:2> 'void (double)' Function 0x7fc1c386dd50 'f' 'void (double)'
+|       `-CallExpr 0x7fc1c386e9f0 <col:4, col:14> 'double'
+|         |-ImplicitCastExpr 0x7fc1c386e9d8 <col:4> 'double (*)(double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fc1c386e878 <col:4> 'double (double)' Function 0x7fc1c386d9c8 'exp' 'double (double)'
+|         `-CallExpr 0x7fc1c386e960 <col:8, col:13> 'double'
+|           |-ImplicitCastExpr 0x7fc1c386e948 <col:8> 'double (*)(Parser *)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fc1c386e8a0 <col:8> 'double (Parser *)' Function 0x7fc1c386e1b8 'pop' 'double (Parser *)'
+|           `-ImplicitCastExpr 0x7fc1c386e990 <col:12> 'Parser *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fc1c386e8c8 <col:12> 'Parser *' lvalue ParmVar 0x7fc1c386e610 'p' 'Parser *'
+|-FunctionDecl 0x7fc1c386eb60 <line:22:1, line:25:1> line:22:13 used evalTerm 'void (Parser *)' static
+| |-ParmVarDecl 0x7fc1c386ead8 <col:22, col:30> col:30 used p 'Parser *'
+| `-CompoundStmt 0x7fc1c386ee28 <col:33, line:25:1>
+|   `-WhileStmt 0x7fc1c386ee08 <line:23:5, line:24:14>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc1c386ece0 <line:23:12, col:18> 'char' <LValueToRValue>
+|     | `-ArraySubscriptExpr 0x7fc1c386ecb8 <col:12, col:18> 'char' lvalue
+|     |   |-ImplicitCastExpr 0x7fc1c386eca0 <col:12, col:15> 'char *' <LValueToRValue>
+|     |   | `-MemberExpr 0x7fc1c386ec48 <col:12, col:15> 'char *' lvalue ->s 0x7fc1c386df18
+|     |   |   `-ImplicitCastExpr 0x7fc1c386ec30 <col:12> 'Parser *' <LValueToRValue>
+|     |   |     `-DeclRefExpr 0x7fc1c386ec08 <col:12> 'Parser *' lvalue ParmVar 0x7fc1c386ead8 'p' 'Parser *'
+|     |   `-IntegerLiteral 0x7fc1c386ec80 <col:17> 'int' 0
+|     `-CallExpr 0x7fc1c386edc0 <line:24:2, col:14> 'void'
+|       |-ImplicitCastExpr 0x7fc1c386eda8 <col:2> 'void (*)(Parser *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc1c386ecf8 <col:2> 'void (Parser *)' Function 0x7fc1c386e710 'evalFactor' 'void (Parser *)'
+|       `-ImplicitCastExpr 0x7fc1c386edf0 <col:13> 'Parser *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc1c386ed20 <col:13> 'Parser *' lvalue ParmVar 0x7fc1c386ead8 'p' 'Parser *'
+|-FunctionDecl 0x7fc1c386eed8 <line:26:1, line:30:1> line:26:13 used evalExpression 'void (Parser *)' static
+| |-ParmVarDecl 0x7fc1c386ee50 <col:28, col:36> col:36 used p 'Parser *'
+| `-CompoundStmt 0x7fc1c386f1f0 <col:39, line:30:1>
+|   |-CallExpr 0x7fc1c386efe8 <line:27:5, col:15> 'void'
+|   | |-ImplicitCastExpr 0x7fc1c386efd0 <col:5> 'void (*)(Parser *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc1c386ef80 <col:5> 'void (Parser *)' Function 0x7fc1c386eb60 'evalTerm' 'void (Parser *)'
+|   | `-ImplicitCastExpr 0x7fc1c386f018 <col:14> 'Parser *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc1c386efa8 <col:14> 'Parser *' lvalue ParmVar 0x7fc1c386ee50 'p' 'Parser *'
+|   `-WhileStmt 0x7fc1c386f1d0 <line:28:5, line:29:12>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc1c386f108 <line:28:12, col:18> 'char' <LValueToRValue>
+|     | `-ArraySubscriptExpr 0x7fc1c386f0e0 <col:12, col:18> 'char' lvalue
+|     |   |-ImplicitCastExpr 0x7fc1c386f0c8 <col:12, col:15> 'char *' <LValueToRValue>
+|     |   | `-MemberExpr 0x7fc1c386f070 <col:12, col:15> 'char *' lvalue ->s 0x7fc1c386df18
+|     |   |   `-ImplicitCastExpr 0x7fc1c386f058 <col:12> 'Parser *' <LValueToRValue>
+|     |   |     `-DeclRefExpr 0x7fc1c386f030 <col:12> 'Parser *' lvalue ParmVar 0x7fc1c386ee50 'p' 'Parser *'
+|     |   `-IntegerLiteral 0x7fc1c386f0a8 <col:17> 'int' 0
+|     `-CallExpr 0x7fc1c386f188 <line:29:2, col:12> 'void'
+|       |-ImplicitCastExpr 0x7fc1c386f170 <col:2> 'void (*)(Parser *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fc1c386f120 <col:2> 'void (Parser *)' Function 0x7fc1c386eb60 'evalTerm' 'void (Parser *)'
+|       `-ImplicitCastExpr 0x7fc1c386f1b8 <col:11> 'Parser *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc1c386f148 <col:11> 'Parser *' lvalue ParmVar 0x7fc1c386ee50 'p' 'Parser *'
+`-FunctionDecl 0x7fc1c386f2a8 <line:31:1, line:35:1> line:31:6 evalPrimary 'void (Parser *)'
+  |-ParmVarDecl 0x7fc1c386f220 <col:18, col:26> col:26 used p 'Parser *'
+  `-CompoundStmt 0x7fc1c386f4e0 <col:29, line:35:1>
+    |-IfStmt 0x7fc1c386f3f8 <line:32:5, line:33:2>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc1c386f3c8 <line:32:9, col:12> 'char *' <LValueToRValue>
+    | | `-MemberExpr 0x7fc1c386f390 <col:9, col:12> 'char *' lvalue ->s 0x7fc1c386df18
+    | |   `-ImplicitCastExpr 0x7fc1c386f378 <col:9> 'Parser *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fc1c386f350 <col:9> 'Parser *' lvalue ParmVar 0x7fc1c386f220 'p' 'Parser *'
+    | |-ReturnStmt 0x7fc1c386f3e0 <line:33:2>
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fc1c386f498 <line:34:5, col:21> 'void'
+      |-ImplicitCastExpr 0x7fc1c386f480 <col:5> 'void (*)(Parser *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc1c386f430 <col:5> 'void (Parser *)' Function 0x7fc1c386eed8 'evalExpression' 'void (Parser *)'
+      `-ImplicitCastExpr 0x7fc1c386f4c8 <col:20> 'Parser *' <LValueToRValue>
+        `-DeclRefExpr 0x7fc1c386f458 <col:20> 'Parser *' lvalue ParmVar 0x7fc1c386f220 'p' 'Parser *'

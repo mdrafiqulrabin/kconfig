@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fb532821ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb532822960 <../Data/C2AST/pr55730.c:5:1, line:9:1> line:5:7 union U definition
+| |-FieldDecl 0x7fb53201e438 <line:7:3, col:9> col:9 referenced f 'float'
+| `-FieldDecl 0x7fb53201e498 <line:8:3, col:7> col:7 referenced i 'int'
+`-FunctionDecl 0x7fb53201e670 <line:11:1, line:24:1> line:12:1 foo 'void (unsigned short *, unsigned char)'
+  |-ParmVarDecl 0x7fb53201e520 <col:6, col:22> col:22 used x 'unsigned short *'
+  |-ParmVarDecl 0x7fb53201e598 <col:25, col:39> col:39 used y 'unsigned char'
+  `-CompoundStmt 0x7fb53201ef88 <line:13:1, line:24:1>
+    |-DeclStmt 0x7fb53201e7d8 <line:14:3, col:18>
+    | `-VarDecl 0x7fb53201e778 <col:3, col:17> col:17 used g 'unsigned char'
+    |-DeclStmt 0x7fb53201e8a0 <line:15:3, col:12>
+    | `-VarDecl 0x7fb53201e840 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-IfStmt 0x7fb53201ed70 <line:16:3, line:22:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb53201e950 <line:16:7, col:13> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb53201e938 <col:7, col:9> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fb53201e8e0 <col:7, col:9> 'int' lvalue .i 0x7fb53201e498
+    | | |   `-DeclRefExpr 0x7fb53201e8b8 <col:7> 'union U':'union U' lvalue Var 0x7fb53201e840 'u' 'union U':'union U'
+    | | `-IntegerLiteral 0x7fb53201e918 <col:13> 'int' 0
+    | |-BinaryOperator 0x7fb53201ea28 <line:17:5, col:9> 'unsigned char' '='
+    | | |-DeclRefExpr 0x7fb53201e9c8 <col:5> 'unsigned char' lvalue Var 0x7fb53201e778 'g' 'unsigned char'
+    | | `-ImplicitCastExpr 0x7fb53201ea10 <col:9> 'unsigned char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fb53201e9f0 <col:9> 'int' 0
+    | `-CompoundStmt 0x7fb53201ed50 <line:19:5, line:22:5>
+    |   |-BinaryOperator 0x7fb53201ec20 <line:20:7, col:39> 'float' '='
+    |   | |-MemberExpr 0x7fb53201ea78 <col:7, col:9> 'float' lvalue .f 0x7fb53201e438
+    |   | | `-DeclRefExpr 0x7fb53201ea50 <col:7> 'union U':'union U' lvalue Var 0x7fb53201e840 'u' 'union U':'union U'
+    |   | `-BinaryOperator 0x7fb53201ebf8 <col:13, col:39> 'float' '+'
+    |   |   |-BinaryOperator 0x7fb53201ebb0 <col:13, col:35> 'float' '*'
+    |   |   | |-ImplicitCastExpr 0x7fb53201eb98 <col:13, col:15> 'float' <LValueToRValue>
+    |   |   | | `-MemberExpr 0x7fb53201ead8 <col:13, col:15> 'float' lvalue .f 0x7fb53201e438
+    |   |   | |   `-DeclRefExpr 0x7fb53201eab0 <col:13> 'union U':'union U' lvalue Var 0x7fb53201e840 'u' 'union U':'union U'
+    |   |   | `-ParenExpr 0x7fb53201eb78 <col:19, col:35> 'float'
+    |   |   |   `-BinaryOperator 0x7fb53201eb50 <col:20, col:29> 'float' '/'
+    |   |   |     |-FloatingLiteral 0x7fb53201eb10 <col:20> 'float' 2.550000e+02
+    |   |   |     `-FloatingLiteral 0x7fb53201eb30 <col:29> 'float' 2.560000e+02
+    |   |   `-FloatingLiteral 0x7fb53201ebd8 <col:39> 'float' 3.276800e+04
+    |   `-BinaryOperator 0x7fb53201ed28 <line:21:7, col:29> 'unsigned char' '='
+    |     |-DeclRefExpr 0x7fb53201ec48 <col:7> 'unsigned char' lvalue Var 0x7fb53201e778 'g' 'unsigned char'
+    |     `-CStyleCastExpr 0x7fb53201ed00 <col:11, col:29> 'unsigned char' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fb53201ece8 <col:27, col:29> 'int' <LValueToRValue>
+    |         `-MemberExpr 0x7fb53201ec98 <col:27, col:29> 'int' lvalue .i 0x7fb53201e498
+    |           `-DeclRefExpr 0x7fb53201ec70 <col:27> 'union U':'union U' lvalue Var 0x7fb53201e840 'u' 'union U':'union U'
+    `-BinaryOperator 0x7fb53201ef60 <line:23:3, col:19> 'unsigned short' '='
+      |-UnaryOperator 0x7fb53201ede8 <col:3, col:4> 'unsigned short' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb53201edd0 <col:4> 'unsigned short *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb53201eda8 <col:4> 'unsigned short *' lvalue ParmVar 0x7fb53201e520 'x' 'unsigned short *'
+      `-ImplicitCastExpr 0x7fb53201ef48 <col:8, col:19> 'unsigned short' <IntegralCast>
+        `-BinaryOperator 0x7fb53201ef20 <col:8, col:19> 'int' '|'
+          |-ParenExpr 0x7fb53201eea8 <col:8, col:15> 'int'
+          | `-BinaryOperator 0x7fb53201ee80 <col:9, col:14> 'int' '<<'
+          |   |-ImplicitCastExpr 0x7fb53201ee68 <col:9> 'int' <IntegralCast>
+          |   | `-ImplicitCastExpr 0x7fb53201ee50 <col:9> 'unsigned char' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7fb53201ee08 <col:9> 'unsigned char' lvalue Var 0x7fb53201e778 'g' 'unsigned char'
+          |   `-IntegerLiteral 0x7fb53201ee30 <col:14> 'int' 8
+          `-ImplicitCastExpr 0x7fb53201ef08 <col:19> 'int' <IntegralCast>
+            `-ImplicitCastExpr 0x7fb53201eef0 <col:19> 'unsigned char' <LValueToRValue>
+              `-DeclRefExpr 0x7fb53201eec8 <col:19> 'unsigned char' lvalue ParmVar 0x7fb53201e598 'y' 'unsigned char'

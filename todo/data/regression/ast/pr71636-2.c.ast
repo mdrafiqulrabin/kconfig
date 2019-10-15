@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fb8740258e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb874063ed8 <../Data/C2AST/pr71636-2.c:4:1, line:10:1> line:4:10 f 'unsigned int (unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7fb874026578 <col:12, col:21> col:21 used x 'unsigned int'
+  |-ParmVarDecl 0x7fb874063e00 <col:24, col:33> col:33 used b 'unsigned int'
+  `-CompoundStmt 0x7fb8740643a0 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fb8740640c8 <line:6:3, col:24>
+    | `-VarDecl 0x7fb874063fe0 <col:3, col:23> col:12 used t1 'unsigned int' cinit
+    |   `-BinaryOperator 0x7fb8740640a0 <col:17, col:23> 'unsigned int' '<<'
+    |     |-IntegerLiteral 0x7fb874064040 <col:17> 'unsigned int' 1
+    |     `-ImplicitCastExpr 0x7fb874064088 <col:23> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb874064060 <col:23> 'unsigned int' lvalue ParmVar 0x7fb874063e00 'b' 'unsigned int'
+    |-DeclStmt 0x7fb8740641f8 <line:7:3, col:23>
+    | `-VarDecl 0x7fb8740640f8 <col:3, col:22> col:12 used t2 'unsigned int' cinit
+    |   `-BinaryOperator 0x7fb8740641d0 <col:17, col:22> 'unsigned int' '-'
+    |     |-ImplicitCastExpr 0x7fb8740641a0 <col:17> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb874064158 <col:17> 'unsigned int' lvalue Var 0x7fb874063fe0 't1' 'unsigned int'
+    |     `-ImplicitCastExpr 0x7fb8740641b8 <col:22> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7fb874064180 <col:22> 'int' 1
+    |-DeclStmt 0x7fb874064330 <line:8:3, col:23>
+    | `-VarDecl 0x7fb874064228 <col:3, col:21> col:12 used t3 'unsigned int' cinit
+    |   `-BinaryOperator 0x7fb874064308 <col:17, col:21> 'unsigned int' '&'
+    |     |-ImplicitCastExpr 0x7fb8740642d8 <col:17> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb874064288 <col:17> 'unsigned int' lvalue ParmVar 0x7fb874026578 'x' 'unsigned int'
+    |     `-ImplicitCastExpr 0x7fb8740642f0 <col:21> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb8740642b0 <col:21> 'unsigned int' lvalue Var 0x7fb8740640f8 't2' 'unsigned int'
+    `-ReturnStmt 0x7fb874064388 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fb874064370 <col:10> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb874064348 <col:10> 'unsigned int' lvalue Var 0x7fb874064228 't3' 'unsigned int'

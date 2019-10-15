@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fe70702bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe707814450 <../Data/C2AST/pr35503-2.c:4:1, col:60> col:6 used f 'void (int *restrict, int *, int *restrict, int *)'
+| |-ParmVarDecl 0x7fe70702c9a0 <col:8, col:24> col:24 x 'int *restrict'
+| |-ParmVarDecl 0x7fe707814218 <col:27, col:32> col:32 y 'int *'
+| |-ParmVarDecl 0x7fe707814290 <col:35, col:51> col:51 z 'int *restrict'
+| `-ParmVarDecl 0x7fe707814308 <col:54, col:59> col:59 w 'int *'
+`-FunctionDecl 0x7fe7078146b0 <line:6:1, line:11:1> line:6:6 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fe707814568 <col:10, col:14> col:14 used alpha 'int'
+  |-ParmVarDecl 0x7fe7078145e0 <col:21, col:25> col:25 used beta 'int'
+  `-CompoundStmt 0x7fe707814968 <line:7:1, line:11:1>
+    `-CallExpr 0x7fe707814920 <line:8:3, col:35> 'void'
+      |-ImplicitCastExpr 0x7fe707814908 <col:3> 'void (*)(int *restrict, int *, int *restrict, int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe707814760 <col:3> 'void (int *restrict, int *, int *restrict, int *)' Function 0x7fe707814450 'f' 'void (int *restrict, int *, int *restrict, int *)'
+      |-UnaryOperator 0x7fe7078147b0 <col:6, col:7> 'int *' prefix '&'
+      | `-DeclRefExpr 0x7fe707814788 <col:7> 'int' lvalue ParmVar 0x7fe707814568 'alpha' 'int'
+      |-UnaryOperator 0x7fe7078147f8 <col:14, col:15> 'int *' prefix '&'
+      | `-DeclRefExpr 0x7fe7078147d0 <col:15> 'int' lvalue ParmVar 0x7fe7078145e0 'beta' 'int'
+      |-UnaryOperator 0x7fe707814840 <col:21, col:22> 'int *' prefix '&'
+      | `-DeclRefExpr 0x7fe707814818 <col:22> 'int' lvalue ParmVar 0x7fe707814568 'alpha' 'int'
+      `-UnaryOperator 0x7fe707814888 <col:29, col:30> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fe707814860 <col:30> 'int' lvalue ParmVar 0x7fe707814568 'alpha' 'int'

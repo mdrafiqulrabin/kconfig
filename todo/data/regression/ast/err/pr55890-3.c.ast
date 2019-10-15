@@ -1,0 +1,29 @@
+../Data/C2AST/pr55890-3.c:8:19: error: too few arguments to function call, expected 3, have 0
+  return memmove ();
+         ~~~~~~~  ^
+1 error generated.
+TranslationUnitDecl 0x7fd5ea02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd5ea02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd5ea02bf80 '__int128'
+|-TypedefDecl 0x7fd5ea02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd5ea02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fd5ea02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd5ea02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd5ea02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd5ea02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd5ea02c600 'char *'
+|   `-BuiltinType 0x7fd5ea02bd80 'char'
+|-TypedefDecl 0x7fd5ea02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5ea02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd5ea02c720 'struct __va_list_tag'
+|     `-Record 0x7fd5ea02c698 '__va_list_tag'
+|-FunctionDecl 0x7fd5ea814248 <../Data/C2AST/pr55890-3.c:3:7> col:7 implicit used memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd5ea8142e8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fd5ea814348 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fd5ea8143a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd5ea814420 prev 0x7fd5ea814248 <col:1, col:16> col:7 used memmove 'void *(void *, const void *, unsigned long)'
+| |-ParmVarDecl 0x7fd5ea8144c0 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7fd5ea814520 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7fd5ea814580 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+`-FunctionDecl 0x7fd5ea814620 <line:5:1, line:9:1> line:6:1 bar 'void *()'
+  `-CompoundStmt 0x7fd5ea8147b0 <line:7:1, line:9:1>

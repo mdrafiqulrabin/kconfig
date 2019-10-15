@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fb51a021ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb51a063860 <../Data/C2AST/pr82484.c:4:1, col:27> col:6 used foo 'void (volatile int *)'
+| `-ParmVarDecl 0x7fb51a0229a0 <col:10, col:24> col:24 ptr 'volatile int *'
+`-FunctionDecl 0x7fb51a063a60 <line:5:1, col:36> col:6 a 'void (volatile int)'
+  |-ParmVarDecl 0x7fb51a063960 <col:9, col:22> col:22 used b 'volatile int'
+  `-CompoundStmt 0x7fb51a063bf0 <col:25, col:36>
+    `-CallExpr 0x7fb51a063bc0 <col:27, col:33> 'void'
+      |-ImplicitCastExpr 0x7fb51a063ba8 <col:27> 'void (*)(volatile int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb51a063b08 <col:27> 'void (volatile int *)' Function 0x7fb51a063860 'foo' 'void (volatile int *)'
+      `-UnaryOperator 0x7fb51a063b58 <col:31, col:32> 'volatile int *' prefix '&'
+        `-DeclRefExpr 0x7fb51a063b30 <col:32> 'volatile int' lvalue ParmVar 0x7fb51a063960 'b' 'volatile int'

@@ -1,0 +1,24 @@
+../Data/C2AST/pr45296.c:4:30: error: register 'st' unsuitable for global register variables on this target
+register long double F80 asm("st");  
+                             ^
+../Data/C2AST/pr45296.c:4:1: error: bad type for named register variable
+register long double F80 asm("st");  
+^
+2 errors generated.
+TranslationUnitDecl 0x7f891d02b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f891d02b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f891d02b580 '__int128'
+|-TypedefDecl 0x7f891d02b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f891d02b5a0 'unsigned __int128'
+|-TypedefDecl 0x7f891d02bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f891d02b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f891d02b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f891d02bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f891d02bc00 'char *'
+|   `-BuiltinType 0x7f891d02b380 'char'
+|-TypedefDecl 0x7f891d02bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f891d02beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f891d02bd20 'struct __va_list_tag'
+|     `-Record 0x7f891d02bc98 '__va_list_tag'
+`-VarDecl 0x7f891c814c00 <../Data/C2AST/pr45296.c:4:1, col:22> col:22 invalid F80 'long double' register
+  `-AsmLabelAttr 0x7f891c814c60 <col:30> "st"

@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fa19d82a4e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa19c815318 <../Data/C2AST/predict-15.c:4:1, line:15:1> line:4:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fa19d82b178 <col:10, col:14> col:14 used argc 'int'
+  |-ParmVarDecl 0x7fa19c815240 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7fa19c8155c8 <line:5:1, line:15:1>
+    |-IfStmt 0x7fa19c815540 <line:6:3, line:11:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa19c815468 <line:6:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fa19c815450 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa19c815408 <col:7> 'int' lvalue ParmVar 0x7fa19d82b178 'argc' 'int'
+    | | `-IntegerLiteral 0x7fa19c815430 <col:15> 'int' 123
+    | |-GotoStmt 0x7fa19c8154d8 <line:7:5, col:10> 'exit' 0x7fa19c815490
+    | `-CompoundStmt 0x7fa19c815528 <line:9:5, line:11:5>
+    |   `-ReturnStmt 0x7fa19c815510 <line:10:7, col:14>
+    |     `-IntegerLiteral 0x7fa19c8154f0 <col:14> 'int' 0
+    `-LabelStmt 0x7fa19c8155b0 <line:13:1, line:14:10> 'exit'
+      `-ReturnStmt 0x7fa19c815598 <col:3, col:10>
+        `-IntegerLiteral 0x7fa19c815578 <col:10> 'int' 1

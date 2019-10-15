@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fc842823ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc8428656d0 <../Data/C2AST/pr81455.c:4:1, line:15:1> line:5:1 jh 'void (unsigned int, int)'
+  |-ParmVarDecl 0x7fc842824778 <col:5, col:18> col:18 used aw 'unsigned int'
+  |-ParmVarDecl 0x7fc842865600 <col:22, col:26> col:26 used sn 'int'
+  `-CompoundStmt 0x7fc842865be8 <line:6:1, line:15:1>
+    |-DeclStmt 0x7fc842865838 <line:7:3, col:9>
+    | `-VarDecl 0x7fc8428657d8 <col:3, col:7> col:7 used xs 'int'
+    |-ForStmt 0x7fc842865a28 <line:9:3, line:10:11>
+    | |-BinaryOperator 0x7fc842865898 <line:9:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fc842865850 <col:8> 'int' lvalue Var 0x7fc8428657d8 'xs' 'int'
+    | | `-IntegerLiteral 0x7fc842865878 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc842865920 <col:16, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fc842865908 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc8428658c0 <col:16> 'int' lvalue Var 0x7fc8428657d8 'xs' 'int'
+    | | `-IntegerLiteral 0x7fc8428658e8 <col:21> 'int' 1
+    | |-UnaryOperator 0x7fc842865970 <col:24, col:26> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7fc842865948 <col:26> 'int' lvalue Var 0x7fc8428657d8 'xs' 'int'
+    | `-CompoundAssignOperator 0x7fc8428659f0 <line:10:5, col:11> 'unsigned int' '&=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   |-DeclRefExpr 0x7fc842865990 <col:5> 'unsigned int' lvalue ParmVar 0x7fc842824778 'aw' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fc8428659d8 <col:11> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fc8428659b8 <col:11> 'int' 1
+    `-WhileStmt 0x7fc842865bc8 <line:12:3, line:14:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc842865b90 <line:12:10, col:27> 'int' '||'
+      | |-BinaryOperator 0x7fc842865ad8 <col:10, col:15> 'int' '<'
+      | | |-ImplicitCastExpr 0x7fc842865aa8 <col:10> 'unsigned int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fc842865a60 <col:10> 'unsigned int' lvalue ParmVar 0x7fc842824778 'aw' 'unsigned int'
+      | | `-ImplicitCastExpr 0x7fc842865ac0 <col:15> 'unsigned int' <IntegralCast>
+      | |   `-IntegerLiteral 0x7fc842865a88 <col:15> 'int' 1
+      | `-BinaryOperator 0x7fc842865b68 <col:20, col:27> 'int' '<'
+      |   |-UnaryOperator 0x7fc842865b28 <col:20, col:22> 'int' prefix '++'
+      |   | `-DeclRefExpr 0x7fc842865b00 <col:22> 'int' lvalue ParmVar 0x7fc842865600 'sn' 'int'
+      |   `-IntegerLiteral 0x7fc842865b48 <col:27> 'int' 1
+      `-CompoundStmt 0x7fc842865bb8 <line:13:5, line:14:5>

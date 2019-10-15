@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fabb10282e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fabb00184d8 <../Data/C2AST/pr64906.c:5:1, line:12:1> line:6:1 fn1 'int (int, int)'
+  |-ParmVarDecl 0x7fabb1028f78 <col:6, col:10> col:10 used f 'int'
+  |-ParmVarDecl 0x7fabb0018400 <col:13, col:17> col:17 used s 'int'
+  `-CompoundStmt 0x7fabb0018958 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fabb0018660 <line:8:3, col:14>
+    | `-VarDecl 0x7fabb00185e0 <col:3, col:13> col:7 used ret 'int' cinit
+    |   `-IntegerLiteral 0x7fabb0018640 <col:13> 'int' 0
+    |-IfStmt 0x7fabb00188c8 <line:9:3, line:10:41>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fabb00186a0 <line:9:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fabb0018678 <col:7> 'int' lvalue ParmVar 0x7fabb1028f78 'f' 'int'
+    | |-BinaryOperator 0x7fabb00188a0 <line:10:5, col:41> 'int' '='
+    | | |-DeclRefExpr 0x7fabb00186b8 <col:5> 'int' lvalue Var 0x7fabb00185e0 'ret' 'int'
+    | | `-ImplicitCastExpr 0x7fabb0018888 <col:11, col:41> 'int' <IntegralCast>
+    | |   `-BinaryOperator 0x7fabb0018860 <col:11, col:41> 'unsigned long' '/'
+    | |     |-ImplicitCastExpr 0x7fabb0018848 <col:11> 'unsigned long' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fabb0018830 <col:11> 'int' <LValueToRValue>
+    | |     |   `-DeclRefExpr 0x7fabb00186e0 <col:11> 'int' lvalue ParmVar 0x7fabb0018400 's' 'int'
+    | |     `-ParenExpr 0x7fabb0018810 <col:15, col:41> 'unsigned long'
+    | |       `-ConditionalOperator 0x7fabb00187e0 <col:16, col:40> 'unsigned long'
+    | |         |-ImplicitCastExpr 0x7fabb00187b0 <col:16> 'int' <LValueToRValue>
+    | |         | `-DeclRefExpr 0x7fabb0018708 <col:16> 'int' lvalue ParmVar 0x7fabb1028f78 'f' 'int'
+    | |         |-CStyleCastExpr 0x7fabb0018768 <col:20, col:36> 'unsigned long' <IntegralCast>
+    | |         | `-IntegerLiteral 0x7fabb0018730 <col:36> 'int' 8
+    | |         `-ImplicitCastExpr 0x7fabb00187c8 <col:40> 'unsigned long' <IntegralCast>
+    | |           `-IntegerLiteral 0x7fabb0018790 <col:40> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fabb0018940 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7fabb0018928 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fabb0018900 <col:10> 'int' lvalue Var 0x7fabb00185e0 'ret' 'int'

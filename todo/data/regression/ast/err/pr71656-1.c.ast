@@ -1,0 +1,30 @@
+../Data/C2AST/pr71656-1.c:13:22: error: unknown register name 'r0' in asm
+                   : "r0", "r3", "r4", "r5", "r6", "r7",
+                     ^
+1 error generated.
+TranslationUnitDecl 0x7fee428128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fee42812e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fee42812b80 '__int128'
+|-TypedefDecl 0x7fee42812ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fee42812ba0 'unsigned __int128'
+|-TypedefDecl 0x7fee428131a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fee42812fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fee42812f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fee42813240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fee42813200 'char *'
+|   `-BuiltinType 0x7fee42812980 'char'
+|-TypedefDecl 0x7fee42813508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fee428134b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fee42813320 'struct __va_list_tag'
+|     `-Record 0x7fee42813298 '__va_list_tag'
+|-TypedefDecl 0x7fee42813588 <../Data/C2AST/pr71656-1.c:6:1, col:48> col:48 referenced type_t 'int'
+| `-BuiltinType 0x7fee428129e0 'int'
+`-FunctionDecl 0x7fee4284f570 <line:7:1, line:18:1> line:8:1 func 'type_t (type_t *)'
+  |-ParmVarDecl 0x7fee4284f468 <col:7, col:15> col:15 used src 'type_t *'
+  `-CompoundStmt 0x7fee4284fda0 <line:9:1, line:18:1>
+    `-ReturnStmt 0x7fee4284fd88 <line:17:3, col:15>
+      `-ImplicitCastExpr 0x7fee4284fd70 <col:10, col:15> 'type_t':'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fee4284fd48 <col:10, col:15> 'type_t':'int' lvalue
+          |-ImplicitCastExpr 0x7fee4284fd30 <col:10> 'type_t *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fee4284fce8 <col:10> 'type_t *' lvalue ParmVar 0x7fee4284f468 'src' 'type_t *'
+          `-IntegerLiteral 0x7fee4284fd10 <col:14> 'int' 1

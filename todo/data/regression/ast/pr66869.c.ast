@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7fc71702bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc717814220 <../Data/C2AST/pr66869.c:5:1, col:23> col:13 test 'void (void)' static
+`-VarDecl 0x7fc717814318 <line:6:1, col:5> col:5 i 'int'

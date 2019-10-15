@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f9b66829ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9b66016028 <../Data/C2AST/pr48716.c:5:1, line:24:1> line:6:1 main 'int (void)'
+  `-CompoundStmt 0x7f9b66016538 <line:7:1, line:24:1>
+    |-CompoundStmt 0x7f9b66016308 <line:9:3, line:15:3>
+    | |-DeclStmt 0x7f9b660161b0 <line:10:5, col:17>
+    | | `-VarDecl 0x7f9b66016150 <col:5, col:16> col:16 used s 'int' static
+    | |-DeclStmt 0x7f9b66016260 <line:11:5, col:14>
+    | | `-VarDecl 0x7f9b660161e0 <col:5, col:13> col:9 used t 'int' cinit
+    | |   `-IntegerLiteral 0x7f9b66016240 <col:13> 'int' 0
+    | |-UnaryOperator 0x7f9b660162a0 <line:13:5, col:6> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f9b66016278 <col:5> 'int' lvalue Var 0x7f9b66016150 's' 'int'
+    | `-UnaryOperator 0x7f9b660162e8 <line:14:5, col:6> 'int' postfix '++'
+    |   `-DeclRefExpr 0x7f9b660162c0 <col:5> 'int' lvalue Var 0x7f9b660161e0 't' 'int'
+    `-CompoundStmt 0x7f9b66016508 <line:17:3, line:23:3>
+      |-DeclStmt 0x7f9b660163b0 <line:18:5, col:17>
+      | `-VarDecl 0x7f9b66016350 <col:5, col:16> col:16 used s 'int' static
+      |-DeclStmt 0x7f9b66016460 <line:19:5, col:14>
+      | `-VarDecl 0x7f9b660163e0 <col:5, col:13> col:9 used t 'int' cinit
+      |   `-IntegerLiteral 0x7f9b66016440 <col:13> 'int' 0
+      |-UnaryOperator 0x7f9b660164a0 <line:21:5, col:6> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f9b66016478 <col:5> 'int' lvalue Var 0x7f9b66016350 's' 'int'
+      `-UnaryOperator 0x7f9b660164e8 <line:22:5, col:6> 'int' postfix '++'
+        `-DeclRefExpr 0x7f9b660164c0 <col:5> 'int' lvalue Var 0x7f9b660163e0 't' 'int'

@@ -1,0 +1,26 @@
+../Data/C2AST/pr39323-1.c:4:25: error: requested alignment must be 268435456 bytes or smaller
+int foo __attribute__ ((aligned(1 << 29))) =  20;  
+                        ^       ~~~~~~~
+../Data/C2AST/pr39323-1.c:5:29: error: requested alignment must be 268435456 bytes or smaller
+typedef int __attribute__ ((aligned(1 << 29))) int29;  
+                            ^       ~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7ffad902b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffad902b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffad902b580 '__int128'
+|-TypedefDecl 0x7ffad902b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffad902b5a0 'unsigned __int128'
+|-TypedefDecl 0x7ffad902bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffad902b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffad902b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffad902bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffad902bc00 'char *'
+|   `-BuiltinType 0x7ffad902b380 'char'
+|-TypedefDecl 0x7ffad902bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffad902beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffad902bd20 'struct __va_list_tag'
+|     `-Record 0x7ffad902bc98 '__va_list_tag'
+|-VarDecl 0x7ffad906de00 <../Data/C2AST/pr39323-1.c:4:1, col:47> col:5 foo 'int' cinit
+| `-IntegerLiteral 0x7ffad906dea0 <col:47> 'int' 20
+`-TypedefDecl 0x7ffad906df40 <line:5:1, col:48> col:48 int29 'int'
+  `-BuiltinType 0x7ffad902b3e0 'int'

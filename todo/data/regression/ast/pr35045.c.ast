@@ -1,0 +1,91 @@
+TranslationUnitDecl 0x7fdf7c02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdf7c054850 <../Data/C2AST/pr35045.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdf7c0548f0 prev 0x7fdf7c054850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdf7c054a50 <line:7:1, line:14:1> line:8:1 used give_neg1 '_Complex float (void)'
+| |-CompoundStmt 0x7fdf7c054dc8 <line:9:1, line:14:1>
+| | |-DeclStmt 0x7fdf7c054be8 <line:10:3, col:24>
+| | | `-VarDecl 0x7fdf7c054b88 <col:3, col:21> col:21 used res '_Complex float'
+| | |-BinaryOperator 0x7fdf7c054ca0 <line:11:3, col:19> 'float' '='
+| | | |-UnaryOperator 0x7fdf7c054c28 <col:3, col:12> 'float' lvalue prefix '__real'
+| | | | `-DeclRefExpr 0x7fdf7c054c00 <col:12> '_Complex float' lvalue Var 0x7fdf7c054b88 'res' '_Complex float'
+| | | `-ImplicitCastExpr 0x7fdf7c054c88 <col:18, col:19> 'float' <FloatingCast>
+| | |   `-UnaryOperator 0x7fdf7c054c68 <col:18, col:19> 'double' prefix '-'
+| | |     `-FloatingLiteral 0x7fdf7c054c48 <col:19> 'double' 1.000000e+00
+| | |-BinaryOperator 0x7fdf7c054d48 <line:12:3, col:18> 'float' '='
+| | | |-UnaryOperator 0x7fdf7c054cf0 <col:3, col:12> 'float' lvalue prefix '__imag'
+| | | | `-DeclRefExpr 0x7fdf7c054cc8 <col:12> '_Complex float' lvalue Var 0x7fdf7c054b88 'res' '_Complex float'
+| | | `-ImplicitCastExpr 0x7fdf7c054d30 <col:18> 'float' <FloatingCast>
+| | |   `-FloatingLiteral 0x7fdf7c054d10 <col:18> 'double' 1.000000e+00
+| | `-ReturnStmt 0x7fdf7c054db0 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fdf7c054d98 <col:10> '_Complex float' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fdf7c054d70 <col:10> '_Complex float' lvalue Var 0x7fdf7c054b88 'res' '_Complex float'
+| `-NoInlineAttr 0x7fdf7c054af0 <line:7:16>
+|-FunctionDecl 0x7fdf7c054ed0 <line:16:1, line:30:1> line:17:1 used mycacoshf '_Complex float (_Complex float)'
+| |-ParmVarDecl 0x7fdf7c054e08 <col:12, col:30> col:30 x '_Complex float'
+| |-CompoundStmt 0x7fdf7d000210 <line:18:1, line:30:1>
+| | |-DeclStmt 0x7fdf7c055030 <line:19:3, col:24>
+| | | `-VarDecl 0x7fdf7c054fd0 <col:3, col:21> col:21 used res '_Complex float'
+| | |-BinaryOperator 0x7fdf7c055108 <line:20:3, col:20> '_Complex float' '='
+| | | |-DeclRefExpr 0x7fdf7c055048 <col:3> '_Complex float' lvalue Var 0x7fdf7c054fd0 'res' '_Complex float'
+| | | `-CallExpr 0x7fdf7c0550e0 <col:9, col:20> '_Complex float'
+| | |   `-ImplicitCastExpr 0x7fdf7c0550c8 <col:9> '_Complex float (*)(void)' <FunctionToPointerDecay>
+| | |     `-DeclRefExpr 0x7fdf7c055070 <col:9> '_Complex float (void)' Function 0x7fdf7c054a50 'give_neg1' '_Complex float (void)'
+| | |-IfStmt 0x7fdf7d000180 <line:23:3, line:28:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fdf7c0551c8 <line:23:7, col:22> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fdf7c0551b0 <col:7, col:16> 'double' <FloatingCast>
+| | | | | `-ImplicitCastExpr 0x7fdf7c055198 <col:7, col:16> 'float' <LValueToRValue>
+| | | | |   `-UnaryOperator 0x7fdf7c055158 <col:7, col:16> 'float' lvalue prefix '__real'
+| | | | |     `-DeclRefExpr 0x7fdf7c055130 <col:16> '_Complex float' lvalue Var 0x7fdf7c054fd0 'res' '_Complex float'
+| | | | `-FloatingLiteral 0x7fdf7c055178 <col:22> 'double' 0.000000e+00
+| | | |-CompoundStmt 0x7fdf7d000158 <line:24:5, line:28:5>
+| | | | |-DeclStmt 0x7fdf7c0554f8 <line:25:7, col:27>
+| | | | | |-VarDecl 0x7fdf7c055208 <col:7, col:16> col:16 used a 'unsigned int'
+| | | | | |-VarDecl 0x7fdf7c055280 <col:7, col:18> col:18 used b 'unsigned int'
+| | | | | |-VarDecl 0x7fdf7c0552f8 <col:7, col:20> col:20 used c 'unsigned int'
+| | | | | |-VarDecl 0x7fdf7c055370 <col:7, col:22> col:22 used d 'unsigned int'
+| | | | | |-VarDecl 0x7fdf7c0553e8 <col:7, col:24> col:24 used e 'unsigned int'
+| | | | | `-VarDecl 0x7fdf7c055460 <col:7, col:26> col:26 used f 'unsigned int'
+| | | | |-BinaryOperator 0x7fdf7c055598 <line:26:7, col:14> '_Complex float' '='
+| | | | | |-DeclRefExpr 0x7fdf7c055510 <col:7> '_Complex float' lvalue Var 0x7fdf7c054fd0 'res' '_Complex float'
+| | | | | `-UnaryOperator 0x7fdf7c055578 <col:13, col:14> '_Complex float' prefix '-'
+| | | | |   `-ImplicitCastExpr 0x7fdf7c055560 <col:14> '_Complex float' <LValueToRValue>
+| | | | |     `-DeclRefExpr 0x7fdf7c055538 <col:14> '_Complex float' lvalue Var 0x7fdf7c054fd0 'res' '_Complex float'
+| | | | `-GCCAsmStmt 0x7fdf7d000080 <line:27:7, col:88>
+| | | |   |-DeclRefExpr 0x7fdf7c055688 <col:36> 'unsigned int' lvalue Var 0x7fdf7c055208 'a' 'unsigned int'
+| | | |   |-DeclRefExpr 0x7fdf7c0556e0 <col:46> 'unsigned int' lvalue Var 0x7fdf7c055280 'b' 'unsigned int'
+| | | |   |-DeclRefExpr 0x7fdf7c055738 <col:56> 'unsigned int' lvalue Var 0x7fdf7c0552f8 'c' 'unsigned int'
+| | | |   |-DeclRefExpr 0x7fdf7c055790 <col:66> 'unsigned int' lvalue Var 0x7fdf7c055370 'd' 'unsigned int'
+| | | |   |-DeclRefExpr 0x7fdf7d000000 <col:76> 'unsigned int' lvalue Var 0x7fdf7c0553e8 'e' 'unsigned int'
+| | | |   `-DeclRefExpr 0x7fdf7d000058 <col:86> 'unsigned int' lvalue Var 0x7fdf7c055460 'f' 'unsigned int'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fdf7d0001f8 <line:29:3, col:10>
+| |   `-ImplicitCastExpr 0x7fdf7d0001e0 <col:10> '_Complex float' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fdf7d0001b8 <col:10> '_Complex float' lvalue Var 0x7fdf7c054fd0 'res' '_Complex float'
+| `-NoInlineAttr 0x7fdf7c054f78 <line:16:16>
+`-FunctionDecl 0x7fdf7d000290 <line:32:1, line:38:1> line:32:5 main 'int ()'
+  `-CompoundStmt 0x7fdf7d000668 <line:33:1, line:38:1>
+    |-DeclStmt 0x7fdf7d000490 <line:34:3, col:41>
+    | `-VarDecl 0x7fdf7d000340 <col:3, col:40> col:21 used res '_Complex float' cinit
+    |   `-CallExpr 0x7fdf7d000430 <col:27, col:40> '_Complex float'
+    |     |-ImplicitCastExpr 0x7fdf7d000418 <col:27> '_Complex float (*)(_Complex float)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fdf7d0003a0 <col:27> '_Complex float (_Complex float)' Function 0x7fdf7c054ed0 'mycacoshf' '_Complex float (_Complex float)'
+    |     `-ImplicitCastExpr 0x7fdf7d000478 <col:37> '_Complex float' <FloatingRealToComplex>
+    |       `-ImplicitCastExpr 0x7fdf7d000460 <col:37> 'float' <FloatingCast>
+    |         `-FloatingLiteral 0x7fdf7d0003c8 <col:37> 'double' 1.000000e+00
+    |-IfStmt 0x7fdf7d0005f8 <line:35:3, line:36:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdf7d000540 <line:35:7, col:23> 'int' '>='
+    | | |-ImplicitCastExpr 0x7fdf7d000528 <col:7, col:16> 'double' <FloatingCast>
+    | | | `-ImplicitCastExpr 0x7fdf7d000510 <col:7, col:16> 'float' <LValueToRValue>
+    | | |   `-UnaryOperator 0x7fdf7d0004d0 <col:7, col:16> 'float' lvalue prefix '__imag'
+    | | |     `-DeclRefExpr 0x7fdf7d0004a8 <col:16> '_Complex float' lvalue Var 0x7fdf7d000340 'res' '_Complex float'
+    | | `-FloatingLiteral 0x7fdf7d0004f0 <col:23> 'double' 0.000000e+00
+    | |-CallExpr 0x7fdf7d0005d0 <line:36:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fdf7d0005b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fdf7d000568 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdf7c0548f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fdf7d000650 <line:37:3, col:10>
+      `-IntegerLiteral 0x7fdf7d000630 <col:10> 'int' 0

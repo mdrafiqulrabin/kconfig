@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f9417022ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9417800060 <../Data/C2AST/pr40640.c:1:1, col:31> col:6 used decode_opic_address 'void (int *)'
+| `-ParmVarDecl 0x7f9417023ba0 <col:26, col:30> col:31 'int *'
+|-FunctionDecl 0x7f94178002b0 <line:2:1, col:44> col:6 used sim_io_printf_filtered2 'void (int, unsigned int)'
+| |-ParmVarDecl 0x7f9417800160 <col:31> col:34 'int'
+| `-ParmVarDecl 0x7f94178001d8 <col:36> col:44 'unsigned int'
+`-FunctionDecl 0x7f9417800440 <line:3:1, line:14:1> line:4:1 hw_opic_io_read_buffer 'void (int)'
+  |-ParmVarDecl 0x7f9417800378 <col:24, col:28> col:28 used index 'int'
+  `-CompoundStmt 0x7f9417800918 <line:5:1, line:14:1>
+    |-DeclStmt 0x7f9417800598 <line:6:3, col:19>
+    | `-VarDecl 0x7f9417800500 <col:3, col:18> col:12 used reg 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f9417800580 <col:18> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7f9417800560 <col:18> 'int' 0
+    |-CallExpr 0x7f9417800660 <line:7:3, col:29> 'void'
+    | |-ImplicitCastExpr 0x7f9417800648 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f94178005b0 <col:3> 'void (int *)' Function 0x7f9417800060 'decode_opic_address' 'void (int *)'
+    | `-UnaryOperator 0x7f9417800600 <col:23, col:24> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7f94178005d8 <col:24> 'int' lvalue ParmVar 0x7f9417800378 'index' 'int'
+    |-SwitchStmt 0x7f94178006d0 <line:8:3, line:12:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f94178006b8 <line:8:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9417800690 <col:11> 'int' lvalue ParmVar 0x7f9417800378 'index' 'int'
+    | `-CompoundStmt 0x7f94178007e0 <line:9:5, line:12:5>
+    |   `-CaseStmt 0x7f9417800720 <line:10:7, line:11:10>
+    |     |-IntegerLiteral 0x7f9417800700 <line:10:12> 'int' 0
+    |     |-<<<NULL>>>
+    |     `-BinaryOperator 0x7f94178007b8 <line:11:4, col:10> 'unsigned int' '='
+    |       |-DeclRefExpr 0x7f9417800758 <col:4> 'unsigned int' lvalue Var 0x7f9417800500 'reg' 'unsigned int'
+    |       `-ImplicitCastExpr 0x7f94178007a0 <col:10> 'unsigned int' <IntegralCast>
+    |         `-IntegerLiteral 0x7f9417800780 <col:10> 'int' 1
+    `-CallExpr 0x7f94178008b0 <line:13:3, col:38> 'void'
+      |-ImplicitCastExpr 0x7f9417800898 <col:3> 'void (*)(int, unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f94178007f8 <col:3> 'void (int, unsigned int)' Function 0x7f94178002b0 'sim_io_printf_filtered2' 'void (int, unsigned int)'
+      |-ImplicitCastExpr 0x7f94178008e8 <col:28> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9417800820 <col:28> 'int' lvalue ParmVar 0x7f9417800378 'index' 'int'
+      `-ImplicitCastExpr 0x7f9417800900 <col:35> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9417800848 <col:35> 'unsigned int' lvalue Var 0x7f9417800500 'reg' 'unsigned int'

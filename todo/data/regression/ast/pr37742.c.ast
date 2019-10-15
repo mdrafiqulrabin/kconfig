@@ -1,0 +1,75 @@
+TranslationUnitDecl 0x7f810182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8101820850 <../Data/C2AST/pr37742.c:1:1, line:10:1> line:1:6 foo 'void (int *restrict, int *, int *, int *)'
+| |-ParmVarDecl 0x7f810182c9a0 <col:10, col:28> col:28 used p 'int *restrict'
+| |-ParmVarDecl 0x7f8101820618 <col:31, col:36> col:36 used q 'int *'
+| |-ParmVarDecl 0x7f8101820690 <col:39, col:44> col:44 used p1 'int *'
+| |-ParmVarDecl 0x7f8101820708 <col:48, col:53> col:53 used q1 'int *'
+| `-CompoundStmt 0x7f8101820dd0 <line:2:1, line:10:1>
+|   |-DeclStmt 0x7f81018209c8 <line:3:3, col:8>
+|   | `-VarDecl 0x7f8101820968 <col:3, col:7> col:7 used i 'int'
+|   |-BinaryOperator 0x7f8101820a48 <line:5:3, col:7> 'int *' '='
+|   | |-DeclRefExpr 0x7f81018209e0 <col:3> 'int *restrict' lvalue ParmVar 0x7f810182c9a0 'p' 'int *restrict'
+|   | `-ImplicitCastExpr 0x7f8101820a30 <col:7> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8101820a08 <col:7> 'int *' lvalue ParmVar 0x7f8101820690 'p1' 'int *'
+|   |-BinaryOperator 0x7f8101820ad8 <line:6:3, col:7> 'int *' '='
+|   | |-DeclRefExpr 0x7f8101820a70 <col:3> 'int *' lvalue ParmVar 0x7f8101820618 'q' 'int *'
+|   | `-ImplicitCastExpr 0x7f8101820ac0 <col:7> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f8101820a98 <col:7> 'int *' lvalue ParmVar 0x7f8101820708 'q1' 'int *'
+|   `-ForStmt 0x7f8101820d98 <line:8:3, line:9:19>
+|     |-BinaryOperator 0x7f8101820b48 <line:8:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f8101820b00 <col:8> 'int' lvalue Var 0x7f8101820968 'i' 'int'
+|     | `-IntegerLiteral 0x7f8101820b28 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8101820bd0 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f8101820bb8 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8101820b70 <col:15> 'int' lvalue Var 0x7f8101820968 'i' 'int'
+|     | `-IntegerLiteral 0x7f8101820b98 <col:19> 'int' 4
+|     |-UnaryOperator 0x7f8101820c20 <col:22, col:24> 'int' prefix '++'
+|     | `-DeclRefExpr 0x7f8101820bf8 <col:24> 'int' lvalue Var 0x7f8101820968 'i' 'int'
+|     `-BinaryOperator 0x7f8101820d70 <line:9:5, col:19> 'int' '='
+|       |-UnaryOperator 0x7f8101820c88 <col:5, col:8> 'int' lvalue prefix '*'
+|       | `-UnaryOperator 0x7f8101820c68 <col:6, col:8> 'int *' prefix '++'
+|       |   `-DeclRefExpr 0x7f8101820c40 <col:8> 'int *' lvalue ParmVar 0x7f8101820618 'q' 'int *'
+|       `-BinaryOperator 0x7f8101820d48 <col:12, col:19> 'int' '+'
+|         |-ImplicitCastExpr 0x7f8101820d30 <col:12, col:15> 'int' <LValueToRValue>
+|         | `-UnaryOperator 0x7f8101820cf0 <col:12, col:15> 'int' lvalue prefix '*'
+|         |   `-UnaryOperator 0x7f8101820cd0 <col:13, col:15> 'int *' prefix '++'
+|         |     `-DeclRefExpr 0x7f8101820ca8 <col:15> 'int *restrict' lvalue ParmVar 0x7f810182c9a0 'p' 'int *restrict'
+|         `-IntegerLiteral 0x7f8101820d10 <col:19> 'int' 1
+`-FunctionDecl 0x7f8101821070 <line:12:1, line:21:1> line:12:6 bar 'void (int *, int *restrict, int *, int *)'
+  |-ParmVarDecl 0x7f8101820e18 <col:10, col:15> col:15 used p 'int *'
+  |-ParmVarDecl 0x7f8101820e90 <col:18, col:36> col:36 used q 'int *restrict'
+  |-ParmVarDecl 0x7f8101820f08 <col:39, col:44> col:44 used p1 'int *'
+  |-ParmVarDecl 0x7f8101820f80 <col:48, col:53> col:53 used q1 'int *'
+  `-CompoundStmt 0x7f81018215b0 <line:13:1, line:21:1>
+    |-DeclStmt 0x7f81018211a8 <line:14:3, col:8>
+    | `-VarDecl 0x7f8101821148 <col:3, col:7> col:7 used i 'int'
+    |-BinaryOperator 0x7f8101821228 <line:16:3, col:7> 'int *' '='
+    | |-DeclRefExpr 0x7f81018211c0 <col:3> 'int *' lvalue ParmVar 0x7f8101820e18 'p' 'int *'
+    | `-ImplicitCastExpr 0x7f8101821210 <col:7> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f81018211e8 <col:7> 'int *' lvalue ParmVar 0x7f8101820f08 'p1' 'int *'
+    |-BinaryOperator 0x7f81018212b8 <line:17:3, col:7> 'int *' '='
+    | |-DeclRefExpr 0x7f8101821250 <col:3> 'int *restrict' lvalue ParmVar 0x7f8101820e90 'q' 'int *restrict'
+    | `-ImplicitCastExpr 0x7f81018212a0 <col:7> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8101821278 <col:7> 'int *' lvalue ParmVar 0x7f8101820f80 'q1' 'int *'
+    `-ForStmt 0x7f8101821578 <line:19:3, line:20:19>
+      |-BinaryOperator 0x7f8101821328 <line:19:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f81018212e0 <col:8> 'int' lvalue Var 0x7f8101821148 'i' 'int'
+      | `-IntegerLiteral 0x7f8101821308 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f81018213b0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8101821398 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8101821350 <col:15> 'int' lvalue Var 0x7f8101821148 'i' 'int'
+      | `-IntegerLiteral 0x7f8101821378 <col:19> 'int' 4
+      |-UnaryOperator 0x7f8101821400 <col:22, col:24> 'int' prefix '++'
+      | `-DeclRefExpr 0x7f81018213d8 <col:24> 'int' lvalue Var 0x7f8101821148 'i' 'int'
+      `-BinaryOperator 0x7f8101821550 <line:20:5, col:19> 'int' '='
+        |-UnaryOperator 0x7f8101821468 <col:5, col:8> 'int' lvalue prefix '*'
+        | `-UnaryOperator 0x7f8101821448 <col:6, col:8> 'int *' prefix '++'
+        |   `-DeclRefExpr 0x7f8101821420 <col:8> 'int *restrict' lvalue ParmVar 0x7f8101820e90 'q' 'int *restrict'
+        `-BinaryOperator 0x7f8101821528 <col:12, col:19> 'int' '+'
+          |-ImplicitCastExpr 0x7f8101821510 <col:12, col:15> 'int' <LValueToRValue>
+          | `-UnaryOperator 0x7f81018214d0 <col:12, col:15> 'int' lvalue prefix '*'
+          |   `-UnaryOperator 0x7f81018214b0 <col:13, col:15> 'int *' prefix '++'
+          |     `-DeclRefExpr 0x7f8101821488 <col:15> 'int *' lvalue ParmVar 0x7f8101820e18 'p' 'int *'
+          `-IntegerLiteral 0x7f81018214f0 <col:19> 'int' 1

@@ -1,0 +1,180 @@
+TranslationUnitDecl 0x7ffbe78062e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffbe8a908a0 <../Data/C2AST/pr54400.c:6:1, line:9:1> line:6:8 f 'double (__m128d)'
+| |-ParmVarDecl 0x7ffbe8a90810 <col:11, col:19> col:19 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a90a98 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ffbe8a90a80 <line:8:3, col:20>
+|     `-BinaryOperator 0x7ffbe8a90a58 <col:10, col:20> 'double' '-'
+|       |-ImplicitCastExpr 0x7ffbe8a90a28 <col:10, col:13> 'double' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7ffbe8a90990 <col:10, col:13> 'double' lvalue vectorcomponent
+|       |   |-DeclRefExpr 0x7ffbe8a90948 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a90810 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|       |   `-IntegerLiteral 0x7ffbe8a90970 <col:12> 'int' 0
+|       `-ImplicitCastExpr 0x7ffbe8a90a40 <col:17, col:20> 'double' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7ffbe8a90a00 <col:17, col:20> 'double' lvalue vectorcomponent
+|           |-DeclRefExpr 0x7ffbe8a909b8 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a90810 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|           `-IntegerLiteral 0x7ffbe8a909e0 <col:19> 'int' 1
+|-FunctionDecl 0x7ffbe8a90b50 <line:11:1, line:14:1> line:11:8 g1 'double (__m128d)'
+| |-ParmVarDecl 0x7ffbe8a90ac0 <col:12, col:20> col:20 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a90d48 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7ffbe8a90d30 <line:13:3, col:20>
+|     `-BinaryOperator 0x7ffbe8a90d08 <col:10, col:20> 'double' '+'
+|       |-ImplicitCastExpr 0x7ffbe8a90cd8 <col:10, col:13> 'double' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7ffbe8a90c40 <col:10, col:13> 'double' lvalue vectorcomponent
+|       |   |-DeclRefExpr 0x7ffbe8a90bf8 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a90ac0 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|       |   `-IntegerLiteral 0x7ffbe8a90c20 <col:12> 'int' 0
+|       `-ImplicitCastExpr 0x7ffbe8a90cf0 <col:17, col:20> 'double' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7ffbe8a90cb0 <col:17, col:20> 'double' lvalue vectorcomponent
+|           |-DeclRefExpr 0x7ffbe8a90c68 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a90ac0 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|           `-IntegerLiteral 0x7ffbe8a90c90 <col:19> 'int' 1
+|-FunctionDecl 0x7ffbe8a90e00 <line:16:1, line:19:1> line:16:8 g2 'double (__m128d)'
+| |-ParmVarDecl 0x7ffbe8a90d70 <col:12, col:20> col:20 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a90ff8 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7ffbe8a90fe0 <line:18:3, col:20>
+|     `-BinaryOperator 0x7ffbe8a90fb8 <col:10, col:20> 'double' '+'
+|       |-ImplicitCastExpr 0x7ffbe8a90f88 <col:10, col:13> 'double' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7ffbe8a90ef0 <col:10, col:13> 'double' lvalue vectorcomponent
+|       |   |-DeclRefExpr 0x7ffbe8a90ea8 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a90d70 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|       |   `-IntegerLiteral 0x7ffbe8a90ed0 <col:12> 'int' 1
+|       `-ImplicitCastExpr 0x7ffbe8a90fa0 <col:17, col:20> 'double' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7ffbe8a90f60 <col:17, col:20> 'double' lvalue vectorcomponent
+|           |-DeclRefExpr 0x7ffbe8a90f18 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a90d70 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|           `-IntegerLiteral 0x7ffbe8a90f40 <col:19> 'int' 0
+|-FunctionDecl 0x7ffbe8a91120 <line:21:1, line:25:1> line:21:9 h '__m128d (__m128d, __m128d)'
+| |-ParmVarDecl 0x7ffbe8a91020 <col:12, col:20> col:20 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffbe8a91090 <col:23, col:31> col:31 used q '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a915c0 <line:22:1, line:25:1>
+|   |-DeclStmt 0x7ffbe8a91550 <line:23:3, col:43>
+|   | `-VarDecl 0x7ffbe8a911e0 <col:3, col:42> col:11 used r '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7ffbe8a91500 <col:15, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-BinaryOperator 0x7ffbe8a91350 <col:17, col:27> 'double' '-'
+|   |     | |-ImplicitCastExpr 0x7ffbe8a91320 <col:17, col:20> 'double' <LValueToRValue>
+|   |     | | `-ArraySubscriptExpr 0x7ffbe8a91288 <col:17, col:20> 'double' lvalue vectorcomponent
+|   |     | |   |-DeclRefExpr 0x7ffbe8a91240 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91020 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     | |   `-IntegerLiteral 0x7ffbe8a91268 <col:19> 'int' 0
+|   |     | `-ImplicitCastExpr 0x7ffbe8a91338 <col:24, col:27> 'double' <LValueToRValue>
+|   |     |   `-ArraySubscriptExpr 0x7ffbe8a912f8 <col:24, col:27> 'double' lvalue vectorcomponent
+|   |     |     |-DeclRefExpr 0x7ffbe8a912b0 <col:24> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91020 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |     `-IntegerLiteral 0x7ffbe8a912d8 <col:26> 'int' 1
+|   |     `-BinaryOperator 0x7ffbe8a91488 <col:30, col:40> 'double' '-'
+|   |       |-ImplicitCastExpr 0x7ffbe8a91458 <col:30, col:33> 'double' <LValueToRValue>
+|   |       | `-ArraySubscriptExpr 0x7ffbe8a913c0 <col:30, col:33> 'double' lvalue vectorcomponent
+|   |       |   |-DeclRefExpr 0x7ffbe8a91378 <col:30> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91090 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |       |   `-IntegerLiteral 0x7ffbe8a913a0 <col:32> 'int' 0
+|   |       `-ImplicitCastExpr 0x7ffbe8a91470 <col:37, col:40> 'double' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7ffbe8a91430 <col:37, col:40> 'double' lvalue vectorcomponent
+|   |           |-DeclRefExpr 0x7ffbe8a913e8 <col:37> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91090 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |           `-IntegerLiteral 0x7ffbe8a91410 <col:39> 'int' 1
+|   `-ReturnStmt 0x7ffbe8a915a8 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7ffbe8a91590 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffbe8a91568 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ffbe8a911e0 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7ffbe8a916f0 <line:27:1, line:31:1> line:27:9 i1 '__m128d (__m128d, __m128d)'
+| |-ParmVarDecl 0x7ffbe8a915f0 <col:13, col:21> col:21 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffbe8a91660 <col:24, col:32> col:32 used q '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a91b90 <line:28:1, line:31:1>
+|   |-DeclStmt 0x7ffbe8a91b20 <line:29:3, col:43>
+|   | `-VarDecl 0x7ffbe8a917b0 <col:3, col:42> col:11 used r '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7ffbe8a91ad0 <col:15, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-BinaryOperator 0x7ffbe8a91920 <col:17, col:27> 'double' '+'
+|   |     | |-ImplicitCastExpr 0x7ffbe8a918f0 <col:17, col:20> 'double' <LValueToRValue>
+|   |     | | `-ArraySubscriptExpr 0x7ffbe8a91858 <col:17, col:20> 'double' lvalue vectorcomponent
+|   |     | |   |-DeclRefExpr 0x7ffbe8a91810 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a915f0 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     | |   `-IntegerLiteral 0x7ffbe8a91838 <col:19> 'int' 0
+|   |     | `-ImplicitCastExpr 0x7ffbe8a91908 <col:24, col:27> 'double' <LValueToRValue>
+|   |     |   `-ArraySubscriptExpr 0x7ffbe8a918c8 <col:24, col:27> 'double' lvalue vectorcomponent
+|   |     |     |-DeclRefExpr 0x7ffbe8a91880 <col:24> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a915f0 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |     `-IntegerLiteral 0x7ffbe8a918a8 <col:26> 'int' 1
+|   |     `-BinaryOperator 0x7ffbe8a91a58 <col:30, col:40> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7ffbe8a91a28 <col:30, col:33> 'double' <LValueToRValue>
+|   |       | `-ArraySubscriptExpr 0x7ffbe8a91990 <col:30, col:33> 'double' lvalue vectorcomponent
+|   |       |   |-DeclRefExpr 0x7ffbe8a91948 <col:30> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91660 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |       |   `-IntegerLiteral 0x7ffbe8a91970 <col:32> 'int' 0
+|   |       `-ImplicitCastExpr 0x7ffbe8a91a40 <col:37, col:40> 'double' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7ffbe8a91a00 <col:37, col:40> 'double' lvalue vectorcomponent
+|   |           |-DeclRefExpr 0x7ffbe8a919b8 <col:37> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91660 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |           `-IntegerLiteral 0x7ffbe8a919e0 <col:39> 'int' 1
+|   `-ReturnStmt 0x7ffbe8a91b78 <line:30:3, col:10>
+|     `-ImplicitCastExpr 0x7ffbe8a91b60 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffbe8a91b38 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ffbe8a917b0 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7ffbe8a91cc0 <line:33:1, line:37:1> line:33:9 i2 '__m128d (__m128d, __m128d)'
+| |-ParmVarDecl 0x7ffbe8a91bc0 <col:13, col:21> col:21 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffbe8a91c30 <col:24, col:32> col:32 used q '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a92160 <line:34:1, line:37:1>
+|   |-DeclStmt 0x7ffbe8a920f0 <line:35:3, col:43>
+|   | `-VarDecl 0x7ffbe8a91d80 <col:3, col:42> col:11 used r '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7ffbe8a920a0 <col:15, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-BinaryOperator 0x7ffbe8a91ef0 <col:17, col:27> 'double' '+'
+|   |     | |-ImplicitCastExpr 0x7ffbe8a91ec0 <col:17, col:20> 'double' <LValueToRValue>
+|   |     | | `-ArraySubscriptExpr 0x7ffbe8a91e28 <col:17, col:20> 'double' lvalue vectorcomponent
+|   |     | |   |-DeclRefExpr 0x7ffbe8a91de0 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91bc0 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     | |   `-IntegerLiteral 0x7ffbe8a91e08 <col:19> 'int' 0
+|   |     | `-ImplicitCastExpr 0x7ffbe8a91ed8 <col:24, col:27> 'double' <LValueToRValue>
+|   |     |   `-ArraySubscriptExpr 0x7ffbe8a91e98 <col:24, col:27> 'double' lvalue vectorcomponent
+|   |     |     |-DeclRefExpr 0x7ffbe8a91e50 <col:24> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91bc0 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |     `-IntegerLiteral 0x7ffbe8a91e78 <col:26> 'int' 1
+|   |     `-BinaryOperator 0x7ffbe8a92028 <col:30, col:40> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7ffbe8a91ff8 <col:30, col:33> 'double' <LValueToRValue>
+|   |       | `-ArraySubscriptExpr 0x7ffbe8a91f60 <col:30, col:33> 'double' lvalue vectorcomponent
+|   |       |   |-DeclRefExpr 0x7ffbe8a91f18 <col:30> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91c30 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |       |   `-IntegerLiteral 0x7ffbe8a91f40 <col:32> 'int' 1
+|   |       `-ImplicitCastExpr 0x7ffbe8a92010 <col:37, col:40> 'double' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7ffbe8a91fd0 <col:37, col:40> 'double' lvalue vectorcomponent
+|   |           |-DeclRefExpr 0x7ffbe8a91f88 <col:37> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a91c30 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |           `-IntegerLiteral 0x7ffbe8a91fb0 <col:39> 'int' 0
+|   `-ReturnStmt 0x7ffbe8a92148 <line:36:3, col:10>
+|     `-ImplicitCastExpr 0x7ffbe8a92130 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffbe8a92108 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ffbe8a91d80 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7ffbe8a92290 <line:39:1, line:43:1> line:39:9 i3 '__m128d (__m128d, __m128d)'
+| |-ParmVarDecl 0x7ffbe8a92190 <col:13, col:21> col:21 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffbe8a92200 <col:24, col:32> col:32 used q '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffbe8a92730 <line:40:1, line:43:1>
+|   |-DeclStmt 0x7ffbe8a926c0 <line:41:3, col:43>
+|   | `-VarDecl 0x7ffbe8a92350 <col:3, col:42> col:11 used r '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7ffbe8a92670 <col:15, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-BinaryOperator 0x7ffbe8a924c0 <col:17, col:27> 'double' '+'
+|   |     | |-ImplicitCastExpr 0x7ffbe8a92490 <col:17, col:20> 'double' <LValueToRValue>
+|   |     | | `-ArraySubscriptExpr 0x7ffbe8a923f8 <col:17, col:20> 'double' lvalue vectorcomponent
+|   |     | |   |-DeclRefExpr 0x7ffbe8a923b0 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a92190 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     | |   `-IntegerLiteral 0x7ffbe8a923d8 <col:19> 'int' 1
+|   |     | `-ImplicitCastExpr 0x7ffbe8a924a8 <col:24, col:27> 'double' <LValueToRValue>
+|   |     |   `-ArraySubscriptExpr 0x7ffbe8a92468 <col:24, col:27> 'double' lvalue vectorcomponent
+|   |     |     |-DeclRefExpr 0x7ffbe8a92420 <col:24> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a92190 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |     `-IntegerLiteral 0x7ffbe8a92448 <col:26> 'int' 0
+|   |     `-BinaryOperator 0x7ffbe8a925f8 <col:30, col:40> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7ffbe8a925c8 <col:30, col:33> 'double' <LValueToRValue>
+|   |       | `-ArraySubscriptExpr 0x7ffbe8a92530 <col:30, col:33> 'double' lvalue vectorcomponent
+|   |       |   |-DeclRefExpr 0x7ffbe8a924e8 <col:30> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a92200 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |       |   `-IntegerLiteral 0x7ffbe8a92510 <col:32> 'int' 0
+|   |       `-ImplicitCastExpr 0x7ffbe8a925e0 <col:37, col:40> 'double' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7ffbe8a925a0 <col:37, col:40> 'double' lvalue vectorcomponent
+|   |           |-DeclRefExpr 0x7ffbe8a92558 <col:37> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a92200 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |           `-IntegerLiteral 0x7ffbe8a92580 <col:39> 'int' 1
+|   `-ReturnStmt 0x7ffbe8a92718 <line:42:3, col:10>
+|     `-ImplicitCastExpr 0x7ffbe8a92700 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffbe8a926d8 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ffbe8a92350 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7ffbe8a92860 <line:45:1, line:49:1> line:45:9 i4 '__m128d (__m128d, __m128d)'
+  |-ParmVarDecl 0x7ffbe8a92760 <col:13, col:21> col:21 used p '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  |-ParmVarDecl 0x7ffbe8a927d0 <col:24, col:32> col:32 used q '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  `-CompoundStmt 0x7ffbe8a92d00 <line:46:1, line:49:1>
+    |-DeclStmt 0x7ffbe8a92c90 <line:47:3, col:43>
+    | `-VarDecl 0x7ffbe8a92920 <col:3, col:42> col:11 used r '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-InitListExpr 0x7ffbe8a92c40 <col:15, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-BinaryOperator 0x7ffbe8a92a90 <col:17, col:27> 'double' '+'
+    |     | |-ImplicitCastExpr 0x7ffbe8a92a60 <col:17, col:20> 'double' <LValueToRValue>
+    |     | | `-ArraySubscriptExpr 0x7ffbe8a929c8 <col:17, col:20> 'double' lvalue vectorcomponent
+    |     | |   |-DeclRefExpr 0x7ffbe8a92980 <col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a92760 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     | |   `-IntegerLiteral 0x7ffbe8a929a8 <col:19> 'int' 1
+    |     | `-ImplicitCastExpr 0x7ffbe8a92a78 <col:24, col:27> 'double' <LValueToRValue>
+    |     |   `-ArraySubscriptExpr 0x7ffbe8a92a38 <col:24, col:27> 'double' lvalue vectorcomponent
+    |     |     |-DeclRefExpr 0x7ffbe8a929f0 <col:24> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a92760 'p' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |     `-IntegerLiteral 0x7ffbe8a92a18 <col:26> 'int' 0
+    |     `-BinaryOperator 0x7ffbe8a92bc8 <col:30, col:40> 'double' '+'
+    |       |-ImplicitCastExpr 0x7ffbe8a92b98 <col:30, col:33> 'double' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7ffbe8a92b00 <col:30, col:33> 'double' lvalue vectorcomponent
+    |       |   |-DeclRefExpr 0x7ffbe8a92ab8 <col:30> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a927d0 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |       |   `-IntegerLiteral 0x7ffbe8a92ae0 <col:32> 'int' 1
+    |       `-ImplicitCastExpr 0x7ffbe8a92bb0 <col:37, col:40> 'double' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7ffbe8a92b70 <col:37, col:40> 'double' lvalue vectorcomponent
+    |           |-DeclRefExpr 0x7ffbe8a92b28 <col:37> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffbe8a927d0 'q' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |           `-IntegerLiteral 0x7ffbe8a92b50 <col:39> 'int' 0
+    `-ReturnStmt 0x7ffbe8a92ce8 <line:48:3, col:10>
+      `-ImplicitCastExpr 0x7ffbe8a92cd0 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7ffbe8a92ca8 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ffbe8a92920 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

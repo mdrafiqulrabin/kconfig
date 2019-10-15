@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7ff7e602bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff7e602c978 <../Data/C2AST/pr71059.c:3:1, col:7> col:7 used a 'short'
+|-VarDecl 0x7ff7e6814258 <col:1, col:10> col:10 used c 'short'
+|-RecordDecl 0x7ff7e68142d0 <line:4:1, line:7:1> line:4:1 union definition
+| |-FieldDecl 0x7ff7e6814398 <line:5:5, col:14> col:14 referenced f0 'unsigned int'
+| `-FieldDecl 0x7ff7e68143f8 <line:6:5, col:20> col:20 referenced f1 'unsigned short'
+|-VarDecl 0x7ff7e6814490 <line:4:1, line:7:3> col:3 used b 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)'
+|-VarDecl 0x7ff7e6814520 <line:8:1, col:14> col:14 used d 'volatile int'
+|-FunctionDecl 0x7ff7e6814668 <line:9:1, col:38> col:7 used fn1 'short (short)'
+| |-ParmVarDecl 0x7ff7e6814598 <col:11, col:17> col:17 used p1 'short'
+| `-CompoundStmt 0x7ff7e6814818 <col:21, col:38>
+|   `-ReturnStmt 0x7ff7e6814800 <col:23, col:35>
+|     `-ImplicitCastExpr 0x7ff7e68147e8 <col:30, col:35> 'short' <IntegralCast>
+|       `-BinaryOperator 0x7ff7e68147c0 <col:30, col:35> 'int' '+'
+|         |-ImplicitCastExpr 0x7ff7e6814778 <col:30> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7ff7e6814760 <col:30> 'short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7ff7e6814710 <col:30> 'short' lvalue ParmVar 0x7ff7e6814598 'p1' 'short'
+|         `-ImplicitCastExpr 0x7ff7e68147a8 <col:35> 'int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff7e6814790 <col:35> 'short' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff7e6814738 <col:35> 'short' lvalue Var 0x7ff7e602c978 'a' 'short'
+`-FunctionDecl 0x7ff7e6814878 <line:10:1, line:15:1> line:10:6 fn2 'void ()'
+  `-CompoundStmt 0x7ff7e6814dc0 <line:11:1, line:15:1>
+    |-BinaryOperator 0x7ff7e68149b0 <line:12:3, col:10> 'unsigned int' '='
+    | |-MemberExpr 0x7ff7e6814940 <col:3, col:5> 'unsigned int' lvalue .f0 0x7ff7e6814398
+    | | `-DeclRefExpr 0x7ff7e6814918 <col:3> 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)' lvalue Var 0x7ff7e6814490 'b' 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)'
+    | `-ImplicitCastExpr 0x7ff7e6814998 <col:10> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7ff7e6814978 <col:10> 'int' 0
+    `-ForStmt 0x7ff7e6814d88 <line:13:3, line:14:20>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff7e6814bc8 <line:13:11, col:26> 'unsigned int' '='
+      | |-MemberExpr 0x7ff7e6814a50 <col:11, col:13> 'unsigned int' lvalue .f0 0x7ff7e6814398
+      | | `-DeclRefExpr 0x7ff7e6814a28 <col:11> 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)' lvalue Var 0x7ff7e6814490 'b' 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)'
+      | `-ImplicitCastExpr 0x7ff7e6814bb0 <col:18, col:26> 'unsigned int' <IntegralCast>
+      |   `-CallExpr 0x7ff7e6814b50 <col:18, col:26> 'short'
+      |     |-ImplicitCastExpr 0x7ff7e6814b38 <col:18> 'short (*)(short)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7ff7e6814a88 <col:18> 'short (short)' Function 0x7ff7e6814668 'fn1' 'short (short)'
+      |     `-ImplicitCastExpr 0x7ff7e6814b98 <col:22, col:24> 'short' <IntegralCast>
+      |       `-ImplicitCastExpr 0x7ff7e6814b80 <col:22, col:24> 'unsigned int' <LValueToRValue>
+      |         `-MemberExpr 0x7ff7e6814ad8 <col:22, col:24> 'unsigned int' lvalue .f0 0x7ff7e6814398
+      |           `-DeclRefExpr 0x7ff7e6814ab0 <col:22> 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)' lvalue Var 0x7ff7e6814490 'b' 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)'
+      `-BinaryOperator 0x7ff7e6814d60 <line:14:5, col:20> 'int' '||'
+        |-ParenExpr 0x7ff7e6814d00 <col:5, col:15> 'int'
+        | `-BinaryOperator 0x7ff7e6814cd8 <col:6, col:13> 'int' '&&'
+        |   |-ImplicitCastExpr 0x7ff7e6814c90 <col:6> 'int' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7ff7e6814c78 <col:6> 'short' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7ff7e6814bf0 <col:6> 'short' lvalue Var 0x7ff7e6814258 'c' 'short'
+        |   `-ImplicitCastExpr 0x7ff7e6814cc0 <col:11, col:13> 'int' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7ff7e6814ca8 <col:11, col:13> 'unsigned short' <LValueToRValue>
+        |       `-MemberExpr 0x7ff7e6814c40 <col:11, col:13> 'unsigned short' lvalue .f1 0x7ff7e68143f8
+        |         `-DeclRefExpr 0x7ff7e6814c18 <col:11> 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)' lvalue Var 0x7ff7e6814490 'b' 'union (anonymous union at ../Data/C2AST/pr71059.c:4:1)':'union (anonymous at ../Data/C2AST/pr71059.c:4:1)'
+        `-ImplicitCastExpr 0x7ff7e6814d48 <col:20> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7ff7e6814d20 <col:20> 'volatile int' lvalue Var 0x7ff7e6814520 'd' 'volatile int'

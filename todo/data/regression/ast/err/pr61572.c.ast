@@ -1,0 +1,112 @@
+../Data/C2AST/pr61572.c:26:35: error: invalid input constraint '' in asm
+       asm("" : "=a"(d) : "0"(e), ""(0));
+                                  ^
+TranslationUnitDecl 0x7f98540174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9854017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9854017780 '__int128'
+|-TypedefDecl 0x7f9854017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98540177a0 'unsigned __int128'
+|-TypedefDecl 0x7f9854017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9854017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9854017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9854017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9854017e00 'char *'
+|   `-BuiltinType 0x7f9854017580 'char'
+|-TypedefDecl 0x7f9854018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98540180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9854017f20 'struct __va_list_tag'
+|     `-Record 0x7f9854017e98 '__va_list_tag'
+|-RecordDecl 0x7f9854018160 <../Data/C2AST/pr61572.c:4:1, line:7:1> line:4:8 struct autofs_sb_info definition
+| `-FieldDecl 0x7f9854059038 <line:6:3, col:7> col:7 referenced exp_timeout 'int'
+|-VarDecl 0x7f9854059098 <line:8:1, col:7> col:7 used f 'void *'
+|-VarDecl 0x7f9854059150 <line:9:1, col:5> col:5 used g 'int'
+|-FunctionDecl 0x7f9854059368 <line:10:1, line:34:1> line:10:12 used fn1 'int (struct autofs_sb_info *)' static
+| |-ParmVarDecl 0x7f9854059260 <col:17, col:40> col:40 used p1 'struct autofs_sb_info *'
+| `-CompoundStmt 0x7f9854059fb0 <line:11:1, line:34:1>
+|   |-DeclStmt 0x7f9854059518 <line:12:3, col:11>
+|   | |-VarDecl 0x7f9854059428 <col:3, col:7> col:7 used a 'int'
+|   | `-VarDecl 0x7f98540594a0 <col:3, col:10> col:10 used b 'int'
+|   |-BinaryOperator 0x7f9854059d68 <line:13:3, line:28:9> 'int' '='
+|   | |-DeclRefExpr 0x7f9854059530 <line:13:3> 'int' lvalue Var 0x7f9854059428 'a' 'int'
+|   | `-StmtExpr 0x7f9854059d48 <col:7, line:28:9> 'int'
+|   |   `-CompoundStmt 0x7f9854059d00 <line:14:8, line:28:8>
+|   |     |-DeclStmt 0x7f9854059700 <line:15:8, line:19:8>
+|   |     | `-VarDecl 0x7f9854059648 <line:15:8, col:31> col:31 used c 'typeof (0)':'int' register
+|   |     |   `-AsmLabelAttr 0x7f98540596a8 <line:17:12> "rdx"
+|   |     |-BinaryOperator 0x7f9854059780 <line:20:8, col:12> 'int' '='
+|   |     | |-DeclRefExpr 0x7f9854059718 <col:8> 'int' lvalue Var 0x7f98540594a0 'b' 'int'
+|   |     | `-ImplicitCastExpr 0x7f9854059768 <col:12> 'typeof (0)':'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7f9854059740 <col:12> 'typeof (0)':'int' lvalue Var 0x7f9854059648 'c' 'typeof (0)':'int'
+|   |     |-DeclStmt 0x7f9854059820 <line:21:8, col:13>
+|   |     | `-VarDecl 0x7f98540597c0 <col:8, col:12> col:12 used d 'int'
+|   |     |-DeclStmt 0x7f9854059918 <line:22:8, col:23>
+|   |     | `-VarDecl 0x7f98540598b8 <col:8, col:22> col:22 used e 'typeof (0)':'int'
+|   |     |-BinaryOperator 0x7f9854059a30 <line:23:8, col:30> 'typeof (0)':'int' '='
+|   |     | |-DeclRefExpr 0x7f9854059930 <col:8> 'typeof (0)':'int' lvalue Var 0x7f98540598b8 'e' 'typeof (0)':'int'
+|   |     | `-BinaryOperator 0x7f9854059a08 <col:12, col:30> 'int' '/'
+|   |     |   |-ImplicitCastExpr 0x7f98540599f0 <col:12, col:16> 'int' <LValueToRValue>
+|   |     |   | `-MemberExpr 0x7f9854059998 <col:12, col:16> 'int' lvalue ->exp_timeout 0x7f9854059038
+|   |     |   |   `-ImplicitCastExpr 0x7f9854059980 <col:12> 'struct autofs_sb_info *' <LValueToRValue>
+|   |     |   |     `-DeclRefExpr 0x7f9854059958 <col:12> 'struct autofs_sb_info *' lvalue ParmVar 0x7f9854059260 'p1' 'struct autofs_sb_info *'
+|   |     |   `-IntegerLiteral 0x7f98540599d0 <col:30> 'int' 1000
+|   |     |-SwitchStmt 0x7f9854059a78 <line:24:8, line:25:15>
+|   |     | |-<<<NULL>>>
+|   |     | |-<<<NULL>>>
+|   |     | |-IntegerLiteral 0x7f9854059a58 <line:24:16> 'int' 0
+|   |     | `-DefaultStmt 0x7f9854059ca0 <line:25:8, col:15>
+|   |     |   `-NullStmt 0x7f9854059c90 <col:15>
+|   |     `-ImplicitCastExpr 0x7f9854059ce8 <line:27:8> 'int' <LValueToRValue>1 error generated.
+
+|   |       `-DeclRefExpr 0x7f9854059cc0 <col:8> 'int' lvalue Var 0x7f98540597c0 'd' 'int'
+|   |-IfStmt 0x7f9854059e08 <line:29:3, line:30:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9854059db8 <line:29:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9854059d90 <col:7> 'int' lvalue Var 0x7f9854059428 'a' 'int'
+|   | |-ReturnStmt 0x7f9854059df0 <line:30:5, col:12>
+|   | | `-IntegerLiteral 0x7f9854059dd0 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9854059f40 <line:31:3, line:32:23>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9854059e68 <line:31:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9854059e40 <col:7> 'int' lvalue Var 0x7f98540594a0 'b' 'int'
+|   | |-BinaryOperator 0x7f9854059f18 <line:32:5, col:23> 'int' '='
+|   | | |-MemberExpr 0x7f9854059ec0 <col:5, col:9> 'int' lvalue ->exp_timeout 0x7f9854059038
+|   | | | `-ImplicitCastExpr 0x7f9854059ea8 <col:5> 'struct autofs_sb_info *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9854059e80 <col:5> 'struct autofs_sb_info *' lvalue ParmVar 0x7f9854059260 'p1' 'struct autofs_sb_info *'
+|   | | `-IntegerLiteral 0x7f9854059ef8 <col:23> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9854059f98 <line:33:3, col:10>
+|     `-IntegerLiteral 0x7f9854059f78 <col:10> 'int' 0
+`-FunctionDecl 0x7f985380e850 <line:36:1, line:46:1> line:36:5 fn2 'int ()'
+  `-CompoundStmt 0x7f985380ecc8 <line:37:1, line:46:1>
+    |-DeclStmt 0x7f985380e9d0 <line:38:3, col:31>
+    | `-VarDecl 0x7f985380e918 <col:3, col:30> col:26 used h 'struct autofs_sb_info *' cinit
+    |   `-ImplicitCastExpr 0x7f985380e9b8 <col:30> 'struct autofs_sb_info *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f985380e9a0 <col:30> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f985380e978 <col:30> 'void *' lvalue Var 0x7f9854059098 'f' 'void *'
+    `-SwitchStmt 0x7f985380ea28 <line:39:3, line:45:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f985380ea10 <line:39:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f985380e9e8 <col:11> 'int' lvalue Var 0x7f9854059150 'g' 'int'
+      `-CompoundStmt 0x7f985380eca8 <line:40:5, line:45:5>
+        |-CaseStmt 0x7f985380eaf8 <line:41:7, line:42:18>
+        | |-BinaryConditionalOperator 0x7f985380eab8 <line:41:12, line:42:1> 'int'
+        | | |-IntegerLiteral 0x7f985380ea58 <line:41:12> 'int' 0
+        | | |-OpaqueValueExpr 0x7f985380ea98 <col:12> 'int'
+        | | | `-IntegerLiteral 0x7f985380ea58 <col:12> 'int' 0
+        | | |-OpaqueValueExpr 0x7f985380ea98 <col:12> 'int'
+        | | | `-IntegerLiteral 0x7f985380ea58 <col:12> 'int' 0
+        | | `-IntegerLiteral 0x7f985380ea78 <line:42:1> 'int' 0
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7f985380ec38 <col:5, col:18>
+        |   `-CallExpr 0x7f985380ebf0 <col:12, col:18> 'int'
+        |     |-ImplicitCastExpr 0x7f985380ebd8 <col:12> 'int (*)(struct autofs_sb_info *)' <FunctionToPointerDecay>
+        |     | `-DeclRefExpr 0x7f985380eb30 <col:12> 'int (struct autofs_sb_info *)' Function 0x7f9854059368 'fn1' 'int (struct autofs_sb_info *)'
+        |     `-ImplicitCastExpr 0x7f985380ec20 <col:17> 'struct autofs_sb_info *' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f985380eb58 <col:17> 'struct autofs_sb_info *' lvalue Var 0x7f985380e918 'h' 'struct autofs_sb_info *'
+        `-DefaultStmt 0x7f985380ec88 <line:43:7, line:44:12>
+          `-ReturnStmt 0x7f985380ec70 <col:5, col:12>
+            `-IntegerLiteral 0x7f985380ec50 <col:12> 'int' 0

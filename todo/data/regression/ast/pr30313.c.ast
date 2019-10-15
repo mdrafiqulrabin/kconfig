@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fda7082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fda7086d800 <../Data/C2AST/pr30313.c:3:1, col:26> col:20 bar 'void ()' static inline
+| `-CompoundStmt 0x7fda7086d8e0 <col:25, col:26>
+|-RecordDecl 0x7fda7086d8f0 <line:5:1, line:16:1> line:5:8 struct S definition
+| `-FieldDecl 0x7fda7086d9d8 <line:10:3, col:17> col:14 referenced i 'int'
+|   `-IntegerLiteral 0x7fda7086d9a0 <col:17> 'int' 32
+`-FunctionDecl 0x7fda7086da70 <line:18:1, line:23:1> line:18:5 main 'int ()'
+  `-CompoundStmt 0x7fda7086ddc0 <line:19:1, line:23:1>
+    |-DeclStmt 0x7fda7086dc70 <line:20:3, col:20>
+    | `-VarDecl 0x7fda7086db60 <col:3, col:19> col:12 referenced x 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fda7086dc28 <col:16, col:19> 'struct S':'struct S'
+    |     `-IntegerLiteral 0x7fda7086dbc0 <col:17> 'int' 32
+    |-UnaryExprOrTypeTraitExpr 0x7fda7086dd68 <line:21:3, col:15> 'unsigned long' sizeof
+    | `-ParenExpr 0x7fda7086dd48 <col:9, col:15> 'int'
+    |   `-BinaryOperator 0x7fda7086dd20 <col:10, col:14> 'int' '+'
+    |     |-ImplicitCastExpr 0x7fda7086dd08 <col:10, col:12> 'int' <LValueToRValue>
+    |     | `-MemberExpr 0x7fda7086dcb0 <col:10, col:12> 'int' lvalue bitfield .i 0x7fda7086d9d8
+    |     |   `-DeclRefExpr 0x7fda7086dc88 <col:10> 'struct S':'struct S' lvalue Var 0x7fda7086db60 'x' 'struct S':'struct S'
+    |     `-IntegerLiteral 0x7fda7086dce8 <col:14> 'int' 0
+    `-ReturnStmt 0x7fda7086dda8 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fda7086dd88 <col:10> 'int' 0

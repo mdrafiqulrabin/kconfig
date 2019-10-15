@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fcc84825ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcc85591968 <../Data/C2AST/pr82990-1.c:6:1, col:16> col:16 used y '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' extern
+|-VarDecl 0x7fcc855919d8 <col:1, col:19> col:19 used z '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' extern
+`-FunctionDecl 0x7fcc85591a70 <line:8:1, line:12:1> line:9:1 pr82941 'void ()'
+  `-CompoundStmt 0x7fcc85591ba0 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7fcc85591b78 <line:11:3, col:7> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' '='
+      |-DeclRefExpr 0x7fcc85591b10 <col:3> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fcc855919d8 'z' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+      `-ImplicitCastExpr 0x7fcc85591b60 <col:7> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7fcc85591b38 <col:7> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fcc85591968 'y' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'

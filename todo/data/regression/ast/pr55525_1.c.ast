@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fc13782bce8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fc13782c978 <../Data/C2AST/pr55525_1.c:1:1, col:20> col:7 s 'char *' cinit
+  `-CStyleCastExpr 0x7fc138014278 <col:11, col:20> 'char *' <NullToPointer>
+    `-IntegerLiteral 0x7fc138014240 <col:20> 'int' 0

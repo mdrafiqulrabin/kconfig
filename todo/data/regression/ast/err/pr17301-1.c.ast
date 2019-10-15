@@ -1,0 +1,27 @@
+../Data/C2AST/pr17301-1.c:9:24: error: too few arguments to function call, expected at least 2, have 1
+  __builtin_va_start (p);  
+                       ^
+1 error generated.
+TranslationUnitDecl 0x7fa33602bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa33602c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa33602bf80 '__int128'
+|-TypedefDecl 0x7fa33602c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa33602bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa33602c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa33602c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa33602c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa33602c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa33602c600 'char *'
+|   `-BuiltinType 0x7fa33602bd80 'char'
+|-TypedefDecl 0x7fa33602c908 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa33602c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa33602c720 'struct __va_list_tag'
+|     `-Record 0x7fa33602c698 '__va_list_tag'
+|-FunctionDecl 0x7fa33606d868 <../Data/C2AST/pr17301-1.c:5:1, line:10:1> line:6:1 write_format 'int (char *, ...)'
+| |-ParmVarDecl 0x7fa33602c978 <col:15, col:21> col:21 format 'char *'
+| `-CompoundStmt 0x7fa33606dc80 <line:7:1, line:10:1>
+|   `-DeclStmt 0x7fa33606d9e0 <line:8:3, col:22>
+|     `-VarDecl 0x7fa33606d980 <col:3, col:21> col:21 used p '__builtin_va_list':'struct __va_list_tag [1]'
+`-FunctionDecl 0x7fa33606da68 <line:9:3> col:3 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+  |-ParmVarDecl 0x7fa33606db08 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+  `-NoThrowAttr 0x7fa33606db70 <col:3> Implicit

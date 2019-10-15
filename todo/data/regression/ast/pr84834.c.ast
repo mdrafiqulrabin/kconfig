@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fbb6d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbb6d06d890 <../Data/C2AST/pr84834.c:5:1, line:9:1> line:6:1 foo '_Complex int (int)'
+| |-ParmVarDecl 0x7fbb6d02c978 <col:6, col:10> col:10 used a 'int'
+| `-CompoundStmt 0x7fbb6d06da30 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fbb6d06da18 <line:8:3, col:14>
+|     `-ImplicitCastExpr 0x7fbb6d06da00 <col:10, col:14> '_Complex int' <IntegralRealToComplex>
+|       `-BinaryOperator 0x7fbb6d06d9d8 <col:10, col:14> 'int' '<'
+|         |-ImplicitCastExpr 0x7fbb6d06d9c0 <col:10> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fbb6d06d978 <col:10> 'int' lvalue ParmVar 0x7fbb6d02c978 'a' 'int'
+|         `-IntegerLiteral 0x7fbb6d06d9a0 <col:14> 'int' 0
+`-FunctionDecl 0x7fbb6d06dae8 <line:11:1, line:15:1> line:12:1 bar '_Complex int (int)'
+  |-ParmVarDecl 0x7fbb6d06da60 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fbb6d06dd30 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fbb6d06dd18 <line:14:3, col:55>
+      `-ConditionalOperator 0x7fbb6d06dce8 <col:10, col:55> '_Complex int'
+        |-ParenExpr 0x7fbb6d06dc18 <col:10, col:16> 'int'
+        | `-BinaryOperator 0x7fbb6d06dbf0 <col:11, col:15> 'int' '&'
+        |   |-ImplicitCastExpr 0x7fbb6d06dbd8 <col:11> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fbb6d06db90 <col:11> 'int' lvalue ParmVar 0x7fbb6d06da60 'a' 'int'
+        |   `-IntegerLiteral 0x7fbb6d06dbb8 <col:15> 'int' 8
+        |-CStyleCastExpr 0x7fbb6d06dc68 <col:20, col:35> '_Complex int' <IntegralRealToComplex>
+        | `-IntegerLiteral 0x7fbb6d06dc38 <col:35> 'int' 16
+        `-CStyleCastExpr 0x7fbb6d06dcc0 <col:40, col:55> '_Complex int' <IntegralRealToComplex>
+          `-IntegerLiteral 0x7fbb6d06dc90 <col:55> 'int' 0

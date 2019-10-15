@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fefd602bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fefd602c960 <../Data/C2AST/pr52199.c:7:1, line:11:1> line:7:8 struct locale_time_t definition
+| |-FieldDecl 0x7fefd68142a0 <line:9:3, col:22> col:15 referenced abday 'const char *[7]'
+| `-FieldDecl 0x7fefd68143a0 <line:10:3, col:31> col:23 referenced wabday 'const unsigned int *[7]'
+|-VarDecl 0x7fefd68144b0 <line:13:1, col:47> col:27 used empty_wstr 'const unsigned int [1]' static cinit
+| `-InitListExpr 0x7fefd68145b8 <col:43, col:47> 'const unsigned int [1]'
+|   `-ImplicitCastExpr 0x7fefd6814600 <col:45> 'unsigned int' <IntegralCast>
+|     `-IntegerLiteral 0x7fefd6814550 <col:45> 'int' 0
+`-FunctionDecl 0x7fefd68147d0 <line:15:1, line:25:1> line:16:1 time_read 'void (struct locale_time_t *)'
+  |-ParmVarDecl 0x7fefd68146d0 <col:12, col:34> col:34 used time 'struct locale_time_t *'
+  `-CompoundStmt 0x7fefd6814e10 <line:17:1, line:25:1>
+    |-DeclStmt 0x7fefd68148f0 <line:18:3, col:10>
+    | `-VarDecl 0x7fefd6814890 <col:3, col:7> col:7 used cnt 'int'
+    `-ForStmt 0x7fefd6814dd8 <line:20:3, line:24:5>
+      |-BinaryOperator 0x7fefd6814950 <line:20:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fefd6814908 <col:8> 'int' lvalue Var 0x7fefd6814890 'cnt' 'int'
+      | `-IntegerLiteral 0x7fefd6814930 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fefd68149d8 <col:15, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7fefd68149c0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fefd6814978 <col:15> 'int' lvalue Var 0x7fefd6814890 'cnt' 'int'
+      | `-IntegerLiteral 0x7fefd68149a0 <col:21> 'int' 7
+      |-UnaryOperator 0x7fefd6814a28 <col:24, col:27> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fefd6814a00 <col:24> 'int' lvalue Var 0x7fefd6814890 'cnt' 'int'
+      `-CompoundStmt 0x7fefd6814db8 <line:21:5, line:24:5>
+        |-BinaryOperator 0x7fefd6814c00 <line:22:7, col:26> 'const char *' '='
+        | |-ArraySubscriptExpr 0x7fefd6814b48 <col:7, col:22> 'const char *' lvalue
+        | | |-ImplicitCastExpr 0x7fefd6814b18 <col:7, col:13> 'const char **' <ArrayToPointerDecay>
+        | | | `-MemberExpr 0x7fefd6814a88 <col:7, col:13> 'const char *[7]' lvalue ->abday 0x7fefd68142a0
+        | | |   `-ImplicitCastExpr 0x7fefd6814a70 <col:7> 'struct locale_time_t *' <LValueToRValue>
+        | | |     `-DeclRefExpr 0x7fefd6814a48 <col:7> 'struct locale_time_t *' lvalue ParmVar 0x7fefd68146d0 'time' 'struct locale_time_t *'
+        | | `-ImplicitCastExpr 0x7fefd6814b30 <col:19> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fefd6814ac0 <col:19> 'int' lvalue Var 0x7fefd6814890 'cnt' 'int'
+        | `-ImplicitCastExpr 0x7fefd6814be8 <col:26> 'const char *' <BitCast>
+        |   `-ImplicitCastExpr 0x7fefd6814bd0 <col:26> 'char *' <ArrayToPointerDecay>
+        |     `-StringLiteral 0x7fefd6814ba8 <col:26> 'char [1]' lvalue ""
+        `-BinaryOperator 0x7fefd6814d90 <line:23:7, col:27> 'const unsigned int *' '='
+          |-ArraySubscriptExpr 0x7fefd6814d28 <col:7, col:23> 'const unsigned int *' lvalue
+          | |-ImplicitCastExpr 0x7fefd6814cf8 <col:7, col:13> 'const unsigned int **' <ArrayToPointerDecay>
+          | | `-MemberExpr 0x7fefd6814c68 <col:7, col:13> 'const unsigned int *[7]' lvalue ->wabday 0x7fefd68143a0
+          | |   `-ImplicitCastExpr 0x7fefd6814c50 <col:7> 'struct locale_time_t *' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7fefd6814c28 <col:7> 'struct locale_time_t *' lvalue ParmVar 0x7fefd68146d0 'time' 'struct locale_time_t *'
+          | `-ImplicitCastExpr 0x7fefd6814d10 <col:20> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fefd6814ca0 <col:20> 'int' lvalue Var 0x7fefd6814890 'cnt' 'int'
+          `-ImplicitCastExpr 0x7fefd6814d78 <col:27> 'const unsigned int *' <ArrayToPointerDecay>
+            `-DeclRefExpr 0x7fefd6814d50 <col:27> 'const unsigned int [1]' lvalue Var 0x7fefd68144b0 'empty_wstr' 'const unsigned int [1]'

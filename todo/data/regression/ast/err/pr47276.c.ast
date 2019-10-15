@@ -1,0 +1,117 @@
+../Data/C2AST/pr47276.c:26:157: error: aliases are not supported on darwin
+extern __typeof (__vsyslog_chk) __EI___vsyslog_chk __asm__("" ASMNAME ("__vsyslog_chk")); extern __typeof (__vsyslog_chk) __EI___vsyslog_chk __attribute__((alias ("" "__GI___vsyslog_chk")));
+                                                                                                                                                            ^
+../Data/C2AST/pr47276.c:31:51: error: aliases are not supported on darwin
+extern __typeof (__syslog) syslog __attribute__ ((alias ("__syslog")));
+                                                  ^
+../Data/C2AST/pr47276.c:32:122: error: aliases are not supported on darwin
+extern __typeof (syslog) __EI_syslog __asm__("" ASMNAME ("syslog")); extern __typeof (syslog) __EI_syslog __attribute__((alias ("" "__GI_syslog")));
+                                                                                                                         ^
+../Data/C2AST/pr47276.c:33:53: error: aliases are not supported on darwin
+extern __typeof (__vsyslog) vsyslog __attribute__ ((alias ("__vsyslog")));
+                                                    ^
+../Data/C2AST/pr47276.c:34:127: error: aliases are not supported on darwin
+extern __typeof (vsyslog) __EI_vsyslog __asm__("" ASMNAME ("vsyslog")); extern __typeof (vsyslog) __EI_vsyslog __attribute__((alias ("" "__GI_vsyslog")));
+                                                                                                                              ^
+TranslationUnitDecl 0x7fa75582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa75582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa75582bf80 '__int128'
+|-TypedefDecl 0x7fa75582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa75582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa75582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa75582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa75582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa75582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa75582c600 'char *'
+|   `-BuiltinType 0x7fa75582bd80 'char'
+|-TypedefDecl 0x7fa75582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa75582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa75582c720 'struct __va_list_tag'
+|     `-Record 0x7fa75582c698 '__va_list_tag'
+|-FunctionDecl 0x7fa756014320 <../Data/C2AST/pr47276.c:10:1, line:11:52> line:10:13 syslog 'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa75582c978 <col:21, col:25> col:25 __pri 'int'
+| |-ParmVarDecl 0x7fa756014200 <col:32, col:46> col:46 __fmt 'const char *'
+| `-FormatAttr 0x7fa7560143d0 <line:11:22, col:50> printf 2 3
+|-FunctionDecl 0x7fa7560146a0 <line:12:1, line:13:52> line:12:13 vsyslog 'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa756014480 <col:22, col:26> col:26 __pri 'int'
+| |-ParmVarDecl 0x7fa7560144f8 <col:33, col:47> col:47 __fmt 'const char *'
+| |-ParmVarDecl 0x7fa756014570 <col:54, col:58> col:58 __ap 'int'
+| `-FormatAttr 0x7fa756014758 <line:13:22, col:50> printf 2 0
+|-FunctionDecl 0x7fa756014950 <line:14:1, line:17:1> line:15:1 referenced __vsyslog 'void (int, const char *, int)'
+| |-ParmVarDecl 0x7fa7560147c8 <col:11, col:15> col:15 pri 'int'
+| |-ParmVarDecl 0x7fa756014840 <col:20, col:32> col:32 fmt 'const char *'
+| |-ParmVarDecl 0x7fa7560148b8 <col:37, col:41> col:41 ap 'int'
+| `-CompoundStmt 0x7fa756014a08 <line:16:1, line:17:1>
+|-FunctionDecl 0x7fa756014c00 <line:18:1, line:21:1> line:19:1 __syslog_chk 'void (int, int, const char *, ...)'
+| |-ParmVarDecl 0x7fa756014a30 <col:14, col:18> col:18 pri 'int'
+| |-ParmVarDecl 0x7fa756014aa8 <col:23, col:27> col:27 flag 'int'
+| |-ParmVarDecl 0x7fa756014b20 <col:33, col:45> col:45 fmt 'const char *'
+| `-CompoundStmt 0x7fa756014cb8 <line:20:1, line:21:1>
+|-FunctionDecl 0x7fa756014f40 <line:22:1, line:25:1> line:23:1 referenced __vsyslog_chk 'void (int, int, const char *, int)'
+| |-ParmVarDecl 0x7fa756014ce0 <col:15, col:19> col:19 pri 'int'
+| |-ParmVarDecl 0x7fa756014d58 <col:24, col:28> col:28 flag 'int'
+| |-ParmVarDecl 0x7fa756014dd0 <col:34, col:46> col:46 fmt 'const char *'
+| |-ParmVarDecl 0x7fa756014e48 <col:51, col:55> col:55 ap 'int'
+| `-CompoundStmt 0x7fa756015000 <line:24:1, line:25:1>
+|-FunctionDecl 0x7fa756015118 <line:26:1, col:88> col:33 __EI___vsyslog_chk 'typeof (__vsyslog_chk)':'void (int, int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa75602ce50 <col:33> col:33 implicit 'int'
+| |-ParmVarDecl 0x7fa75602cec8 <col:33> col:33 implicit 'int'
+| |-ParmVarDecl 0x7fa75602cf40 <col:33> col:33 implicit 'const char *'
+| |-ParmVarDecl 0x7fa75602cfb8 <col:33> col:33 implicit 'int'
+| `-AsmLabelAttr 0x7fa7560151b8 <col:60> "___vsyslog_chk"
+|-FunctionDecl 0x7fa75602d138 prev 0x7fa756015118 <col:91, col:189> col:123 __EI___vsyslog_chk 'typeof (__vsyslog_chk)':'void (int, int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa75602d1f0 <col:123> col:123 implicit 'int'
+| |-ParmVarDecl 0x7fa75602d268 <col:123> col:123 implicit 'int'
+| |-ParmVarDecl 0x7fa75602d2e0 <col:123> col:123 implicit 'const char *'
+| |-ParmVarDecl 0x7fa75602d358 <col:123> col:123 implicit 'int'
+| `-AsmLabelAttr 0x7fa75602d410 <col:60> Inherited "___vsyslog_chk"
+|-FunctionDecl 0x7fa75602d558 <line:27:1, line:30:1> line:28:1 referenced __syslog 'void (int, const char *, ...)'
+| |-ParmVarDecl 0x7fa75602d450 <col:10, col:14> col:14 pr5 errors generated.
+i 'int'
+| |-ParmVarDecl 0x7fa75602d4c8 <col:19, col:31> col:31 fmt 'const char *'
+| `-CompoundStmt 0x7fa75602d608 <line:29:1, line:30:1>
+|-FunctionDecl 0x7fa75602d708 prev 0x7fa756014320 <line:31:1, col:70> col:28 referenced syslog 'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa75602d7c0 <col:28> col:28 implicit 'int'
+| |-ParmVarDecl 0x7fa75602d838 <col:28> col:28 implicit 'const char *'
+| `-FormatAttr 0x7fa75602d8e0 <line:11:22, col:50> Inherited printf 2 3
+|-FunctionDecl 0x7fa75602d9f8 <line:32:1, col:67> col:26 __EI_syslog 'typeof (syslog)':'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa75602db08 <col:26> col:26 implicit 'int'
+| |-ParmVarDecl 0x7fa75602db80 <col:26> col:26 implicit 'const char *'
+| `-AsmLabelAttr 0x7fa75602da98 <col:46> "_syslog"
+|-FunctionDecl 0x7fa75602dcf8 prev 0x7fa75602d9f8 <col:70, col:147> col:95 __EI_syslog 'typeof (syslog)':'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa75602de00 <col:95> col:95 implicit 'int'
+| |-ParmVarDecl 0x7fa75602de78 <col:95> col:95 implicit 'const char *'
+| `-AsmLabelAttr 0x7fa75602df20 <col:46> Inherited "_syslog"
+|-FunctionDecl 0x7fa75602e038 prev 0x7fa7560146a0 <line:33:1, col:73> col:29 referenced vsyslog 'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa75602e0f0 <col:29> col:29 implicit 'int'
+| |-ParmVarDecl 0x7fa75602e168 <col:29> col:29 implicit 'const char *'
+| |-ParmVarDecl 0x7fa75602e1e0 <col:29> col:29 implicit 'int'
+| `-FormatAttr 0x7fa75602e290 <line:13:22, col:50> Inherited printf 2 0
+|-FunctionDecl 0x7fa75602e368 <line:34:1, col:70> col:27 __EI_vsyslog 'typeof (vsyslog)':'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa75602e478 <col:27> col:27 implicit 'int'
+| |-ParmVarDecl 0x7fa75602e4f0 <col:27> col:27 implicit 'const char *'
+| |-ParmVarDecl 0x7fa75602e568 <col:27> col:27 implicit 'int'
+| `-AsmLabelAttr 0x7fa75602e408 <col:48> "_vsyslog"
+|-FunctionDecl 0x7fa75602e6e8 prev 0x7fa75602e368 <col:73, col:153> col:99 __EI_vsyslog 'typeof (vsyslog)':'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa75602e7a0 <col:99> col:99 implicit 'int'
+| |-ParmVarDecl 0x7fa75602e818 <col:99> col:99 implicit 'const char *'
+| |-ParmVarDecl 0x7fa75602e890 <col:99> col:99 implicit 'int'
+| `-AsmLabelAttr 0x7fa75602e940 <col:48> Inherited "_vsyslog"
+|-FunctionDecl 0x7fa75602ea98 prev 0x7fa75602d708 <line:35:1, col:108> col:26 syslog 'void (int, const char *, ...)' extern
+| |-ParmVarDecl 0x7fa75602ebb0 <col:26> col:26 implicit 'int'
+| |-ParmVarDecl 0x7fa75602ec28 <col:26> col:26 implicit 'const char *'
+| |-AsmLabelAttr 0x7fa75602eb38 <col:42> "___GI_syslog"
+| |-VisibilityAttr 0x7fa75602ec98 <col:86, col:106> Hidden
+| `-FormatAttr 0x7fa75602eca8 <line:11:22, col:50> Inherited printf 2 3
+|-FunctionDecl 0x7fa75602f200 prev 0x7fa75602e038 <line:36:1, col:111> col:27 vsyslog 'void (int, const char *, int)' extern
+| |-ParmVarDecl 0x7fa75602f318 <col:27> col:27 implicit 'int'
+| |-ParmVarDecl 0x7fa75602f390 <col:27> col:27 implicit 'const char *'
+| |-ParmVarDecl 0x7fa75602f408 <col:27> col:27 implicit 'int'
+| |-AsmLabelAttr 0x7fa75602f2a0 <col:44> "___GI_vsyslog"
+| |-VisibilityAttr 0x7fa75602f480 <col:89, col:109> Hidden
+| `-FormatAttr 0x7fa75602f490 <line:13:22, col:50> Inherited printf 2 0
+`-FunctionDecl 0x7fa75602f5e8 prev 0x7fa756014f40 <line:37:1, col:129> col:33 __vsyslog_chk 'void (int, int, const char *, int)' extern
+  |-ParmVarDecl 0x7fa75602f708 <col:33> col:33 implicit 'int'
+  |-ParmVarDecl 0x7fa75602f780 <col:33> col:33 implicit 'int'
+  |-ParmVarDecl 0x7fa75602f7f8 <col:33> col:33 implicit 'const char *'
+  `-ParmVarDecl 0x7fa75602f870 <col:33> col:33 implicit 'int'

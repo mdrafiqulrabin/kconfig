@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fec7202a4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec7201e948 <../Data/C2AST/pr57698.c:1:1, col:44> col:15 referenced IsAcceptableThis 'int (*)(const int)'
+| `-PointerType 0x7fec7201e8e0 'int (*)(const int)'
+|   `-ParenType 0x7fec7201e880 'int (const int)' sugar
+|     `-FunctionProtoType 0x7fec7201e840 'int (const int)' cdecl
+|       |-BuiltinType 0x7fec7202a5e0 'int'
+|       `-QualType 0x7fec7202a5e1 'const int' const
+|         `-BuiltinType 0x7fec7202a5e0 'int'
+|-FunctionDecl 0x7fec7201ead8 <line:2:1, line:7:1> line:3:1 used fn1 'int (IsAcceptableThis)' inline
+| |-ParmVarDecl 0x7fec7201e9d0 <col:6, col:23> col:23 used p1 'IsAcceptableThis':'int (*)(const int)'
+| `-CompoundStmt 0x7fec7201ec88 <line:4:1, line:7:1>
+|   |-CallExpr 0x7fec7201ec20 <line:5:5, col:10> 'int'
+|   | |-ImplicitCastExpr 0x7fec7201ec08 <col:5> 'IsAcceptableThis':'int (*)(const int)' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fec7201ebc0 <col:5> 'IsAcceptableThis':'int (*)(const int)' lvalue ParmVar 0x7fec7201e9d0 'p1' 'IsAcceptableThis':'int (*)(const int)'
+|   | `-IntegerLiteral 0x7fec7201ebe8 <col:9> 'int' 0
+|   `-ReturnStmt 0x7fec7201ec70 <line:6:5, col:12>
+|     `-IntegerLiteral 0x7fec7201ec50 <col:12> 'int' 0
+|-FunctionDecl 0x7fec7201ed50 <line:9:1, line:13:1> line:10:12 used fn2 'int (const int)' inline
+| |-ParmVarDecl 0x7fec7201ecc0 <col:17, col:27> col:27 a 'const int'
+| |-CompoundStmt 0x7fec7201ee78 <line:11:1, line:13:1>
+| | `-ReturnStmt 0x7fec7201ee60 <line:12:5, col:12>
+| |   `-IntegerLiteral 0x7fec7201ee40 <col:12> 'int' 0
+| `-AlwaysInlineAttr 0x7fec7201edf8 <line:9:17> always_inline
+`-FunctionDecl 0x7fec7201eed8 <line:15:1, line:19:1> line:16:1 fn3 'void ()'
+  `-CompoundStmt 0x7fec7201f0b0 <line:17:1, line:19:1>
+    `-CallExpr 0x7fec7201f040 <line:18:5, col:13> 'int'
+      |-ImplicitCastExpr 0x7fec7201f028 <col:5> 'int (*)(IsAcceptableThis)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fec7201ef78 <col:5> 'int (IsAcceptableThis)' Function 0x7fec7201ead8 'fn1' 'int (IsAcceptableThis)'
+      `-ImplicitCastExpr 0x7fec7201f098 <col:10> 'int (*)(const int)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fec7201efa0 <col:10> 'int (const int)' Function 0x7fec7201ed50 'fn2' 'int (const int)'

@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fdcf10128e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdcef814c60 <../Data/C2AST/pr84682-1.c:3:1, line:5:1> line:3:6 b 'void (char)'
+  |-ParmVarDecl 0x7fdcf1013570 <col:8, col:13> col:13 used a 'char'
+  `-CompoundStmt 0x7fdcef814eb8 <col:16, line:5:1>
+    `-GCCAsmStmt 0x7fdcef814e58 <line:4:9, col:29>
+      `-ImplicitCastExpr 0x7fdcef814e40 <col:27> 'char' <LValueToRValue>
+        `-DeclRefExpr 0x7fdcef814e18 <col:27> 'char' lvalue ParmVar 0x7fdcf1013570 'a' 'char'

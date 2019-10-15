@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f99d882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f99d9014368 <../Data/C2AST/pr70852.c:5:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f99d9014408 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f99d9014468 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f99d90144c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99d9014540 prev 0x7f99d9014368 <col:1, col:48> col:14 used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f99d882c978 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7f99d9014200 <col:30> col:33 'int'
+| `-ParmVarDecl 0x7f99d9014278 <<built-in>:81:23, col:37> ../Data/C2AST/pr70852.c:5:48 'unsigned long'
+|-VarDecl 0x7f99d9014650 <line:6:1, col:14> col:12 used A 'int []' extern
+`-FunctionDecl 0x7f99d90147b0 <line:7:1, line:11:1> line:8:1 fn1 'void (void)'
+  `-CompoundStmt 0x7f99d90149e8 <line:9:1, line:11:1>
+    `-CallExpr 0x7f99d9014960 <line:10:3, col:18> 'void *'
+      |-ImplicitCastExpr 0x7f99d9014948 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f99d9014850 <col:3> 'void *(void *, int, unsigned long)' Function 0x7f99d9014540 'memset' 'void *(void *, int, unsigned long)'
+      |-ImplicitCastExpr 0x7f99d90149b8 <col:11> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7f99d90149a0 <col:11> 'int *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7f99d9014878 <col:11> 'int []' lvalue Var 0x7f99d9014650 'A' 'int []'
+      |-IntegerLiteral 0x7f99d90148a0 <col:14> 'int' 0
+      `-ImplicitCastExpr 0x7f99d90149d0 <col:17> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7f99d90148c0 <col:17> 'int' 1

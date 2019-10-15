@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fca988216e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fca98863260 <../Data/C2AST/pr26717.c:3:1, line:7:1> line:3:16 f '_Complex float (_Complex float)'
+  |-ParmVarDecl 0x7fca98822370 <col:19, col:34> col:34 used a '_Complex float'
+  `-CompoundStmt 0x7fca988634d0 <line:4:1, line:7:1>
+    |-DeclStmt 0x7fca98863460 <line:5:3, col:27>
+    | `-VarDecl 0x7fca98863358 <col:3, col:26> col:18 used b '_Complex float' cinit
+    |   `-BinaryOperator 0x7fca98863438 <col:22, col:26> '_Complex float' '/'
+    |     |-ImplicitCastExpr 0x7fca98863408 <col:22> '_Complex float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fca988633b8 <col:22> '_Complex float' lvalue ParmVar 0x7fca98822370 'a' '_Complex float'
+    |     `-ImplicitCastExpr 0x7fca98863420 <col:26> '_Complex float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fca988633e0 <col:26> '_Complex float' lvalue ParmVar 0x7fca98822370 'a' '_Complex float'
+    `-ReturnStmt 0x7fca988634b8 <line:6:3, col:10>
+      `-ImplicitCastExpr 0x7fca988634a0 <col:10> '_Complex float' <LValueToRValue>
+        `-DeclRefExpr 0x7fca98863478 <col:10> '_Complex float' lvalue Var 0x7fca98863358 'b' '_Complex float'

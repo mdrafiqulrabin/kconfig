@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fb5b30258e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb5b3026578 <../Data/C2AST/pr79197.c:5:1, col:10> col:10 used a 'unsigned int'
+`-FunctionDecl 0x7fb5b3814300 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb5b3814510 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fb5b38144e8 <line:10:3, col:38> 'unsigned int' '='
+      |-DeclRefExpr 0x7fb5b38143a0 <col:3> 'unsigned int' lvalue Var 0x7fb5b3026578 'a' 'unsigned int'
+      `-ImplicitCastExpr 0x7fb5b38144d0 <col:7, col:38> 'unsigned int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fb5b38144b8 <col:7, col:38> 'double' <LValueToRValue>
+          `-UnaryOperator 0x7fb5b3814498 <col:7, col:38> 'double' lvalue prefix '*'
+            `-CStyleCastExpr 0x7fb5b3814470 <col:8, col:38> 'double *' <IntegralToPointer>
+              `-CStyleCastExpr 0x7fb5b3814400 <col:19, col:38> 'unsigned long' <IntegralCast>
+                `-IntegerLiteral 0x7fb5b38143c8 <col:38> 'int' 4194304

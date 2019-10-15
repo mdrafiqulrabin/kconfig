@@ -1,0 +1,34 @@
+../Data/C2AST/pr35767-4.c:8:25: error: GNU decimal type extension not supported
+extern _Decimal128 foo (_Decimal128, _Decimal128, _Decimal128);
+                        ^
+../Data/C2AST/pr35767-4.c:8:38: error: GNU decimal type extension not supported
+extern _Decimal128 foo (_Decimal128, _Decimal128, _Decimal128);
+                                     ^
+../Data/C2AST/pr35767-4.c:8:51: error: GNU decimal type extension not supported
+extern _Decimal128 foo (_Decimal128, _Decimal128, _Decimal128);
+                                                  ^
+../Data/C2AST/pr35767-4.c:8:8: error: GNU decimal type extension not supported
+extern _Decimal128 foo (_Decimal128, _Decimal128, _Decimal128);
+       ^
+4 errors generated.
+TranslationUnitDecl 0x7fe11702bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe11702c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe11702bf80 '__int128'
+|-TypedefDecl 0x7fe11702c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe11702bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe11702c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe11702c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe11702c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe11702c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe11702c600 'char *'
+|   `-BuiltinType 0x7fe11702bd80 'char'
+|-TypedefDecl 0x7fe11702c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe11702c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe11702c720 'struct __va_list_tag'
+|     `-Record 0x7fe11702c698 '__va_list_tag'
+|-FunctionDecl 0x7fe11706d968 <../Data/C2AST/pr35767-4.c:8:1, col:62> col:20 invalid foo 'int (int, int, int)' extern
+| |-ParmVarDecl 0x7fe11702c978 <col:25, <invalid sloc>> col:36 invalid 'int'
+| |-ParmVarDecl 0x7fe11706d800 <col:38, <invalid sloc>> col:49 invalid 'int'
+| `-ParmVarDecl 0x7fe11706d878 <col:51, <invalid sloc>> col:62 invalid 'int'
+`-FunctionDecl 0x7fe11706dae0 <line:10:1, line:14:1> line:11:1 bar 'void (void)'
+  `-CompoundStmt 0x7fe11706dc20 <line:12:1, line:14:1>

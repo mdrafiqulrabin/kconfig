@@ -1,0 +1,46 @@
+../Data/C2AST/pr11001-strlen-3.c:8:25: error: register '%ecx' unsuitable for global register variables on this target
+register int regvar asm("%ecx");
+                        ^
+1 error generated.
+TranslationUnitDecl 0x7f857e82b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f857e82b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f857e82b580 '__int128'
+|-TypedefDecl 0x7f857e82b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f857e82b5a0 'unsigned __int128'
+|-TypedefDecl 0x7f857e82bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f857e82b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f857e82b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f857e82bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f857e82bc00 'char *'
+|   `-BuiltinType 0x7f857e82b380 'char'
+|-TypedefDecl 0x7f857e82bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f857e82beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f857e82bd20 'struct __va_list_tag'
+|     `-Record 0x7f857e82bc98 '__va_list_tag'
+|-FunctionDecl 0x7f857f000068 <../Data/C2AST/pr11001-strlen-3.c:5:22> col:22 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7f857f000108 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f857f000170 prev 0x7f857f000068 <col:1, col:42> col:22 used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7f857e82bf78 <col:30, col:41> col:42 'const char *'
+|-FunctionDecl 0x7f857f0002f8 <line:6:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f857f000398 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f857f000400 prev 0x7f857f0002f8 <col:1, col:35> col:14 used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f857f000230 <<built-in>:81:23, col:37> ../Data/C2AST/pr11001-strlen-3.c:6:35 'unsigned long'
+|-VarDecl 0x7f857f000530 <line:8:1, col:14> col:14 regvar 'int' register
+| `-AsmLabelAttr 0x7f857f000590 <col:25> "%ecx"
+`-FunctionDecl 0x7f857f000708 <line:10:1, line:14:1> line:11:1 do_copy 'char *(char *)'
+  |-ParmVarDecl 0x7f857f000640 <col:10, col:16> col:16 used str 'char *'
+  `-CompoundStmt 0x7f857f0009e0 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f857f0009c8 <line:13:3, col:34>
+      `-ImplicitCastExpr 0x7f857f0009b0 <col:10, col:34> 'char *' <BitCast>
+        `-CallExpr 0x7f857f000980 <col:10, col:34> 'void *'
+          |-ImplicitCastExpr 0x7f857f000968 <col:10> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f857f0007b0 <col:10> 'void *(unsigned long)' Function 0x7f857f000400 'malloc' 'void *(unsigned long)'
+          `-BinaryOperator 0x7f857f000918 <col:18, col:33> 'unsigned long' '+'
+            |-CallExpr 0x7f857f000880 <col:18, col:29> 'unsigned long'
+            | |-ImplicitCastExpr 0x7f857f000868 <col:18> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+            | | `-DeclRefExpr 0x7f857f0007d8 <col:18> 'unsigned long (const char *)' Function 0x7f857f000170 'strlen' 'unsigned long (const char *)'
+            | `-ImplicitCastExpr 0x7f857f0008c8 <col:26> 'const char *' <BitCast>
+            |   `-ImplicitCastExpr 0x7f857f0008b0 <col:26> 'char *' <LValueToRValue>
+            |     `-DeclRefExpr 0x7f857f000800 <col:26> 'char *' lvalue ParmVar 0x7f857f000640 'str' 'char *'
+            `-ImplicitCastExpr 0x7f857f000900 <col:33> 'unsigned long' <IntegralCast>
+              `-IntegerLiteral 0x7f857f0008e0 <col:33> 'int' 1

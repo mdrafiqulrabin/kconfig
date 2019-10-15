@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fb9e10002e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb9e1018368 <../Data/C2AST/pr66776.c:4:1, line:8:1> line:5:1 foo 'unsigned long long (unsigned int, unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7fb9e1000f78 <col:6, col:19> col:19 used a 'unsigned int'
+  |-ParmVarDecl 0x7fb9e1018200 <col:22, col:35> col:35 used b 'unsigned int'
+  |-ParmVarDecl 0x7fb9e1018278 <col:38, col:51> col:51 used c 'unsigned int'
+  `-CompoundStmt 0x7fb9e1018580 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fb9e1018568 <line:7:3, col:18>
+      `-ImplicitCastExpr 0x7fb9e1018550 <col:10, col:18> 'unsigned long long' <IntegralCast>
+        `-ConditionalOperator 0x7fb9e1018520 <col:10, col:18> 'unsigned int'
+          |-ImplicitCastExpr 0x7fb9e10184d8 <col:10> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb9e1018460 <col:10> 'unsigned int' lvalue ParmVar 0x7fb9e1000f78 'a' 'unsigned int'
+          |-ImplicitCastExpr 0x7fb9e10184f0 <col:14> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb9e1018488 <col:14> 'unsigned int' lvalue ParmVar 0x7fb9e1018200 'b' 'unsigned int'
+          `-ImplicitCastExpr 0x7fb9e1018508 <col:18> 'unsigned int' <LValueToRValue>
+            `-DeclRefExpr 0x7fb9e10184b0 <col:18> 'unsigned int' lvalue ParmVar 0x7fb9e1018278 'c' 'unsigned int'

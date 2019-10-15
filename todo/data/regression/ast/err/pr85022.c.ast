@@ -1,0 +1,26 @@
+../Data/C2AST/pr85022.c:8:21: error: dereference of pointer to incomplete type 'struct B'
+  __asm ("" : "+m" (b));
+                    ^
+../Data/C2AST/pr85022.c:3:15: note: forward declaration of 'struct B'
+extern struct B b;
+              ^
+1 error generated.
+TranslationUnitDecl 0x7facee02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7facee02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7facee02bf80 '__int128'
+|-TypedefDecl 0x7facee02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7facee02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7facee02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7facee02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7facee02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7facee02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7facee02c600 'char *'
+|   `-BuiltinType 0x7facee02bd80 'char'
+|-TypedefDecl 0x7facee02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7facee02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7facee02c720 'struct __va_list_tag'
+|     `-Record 0x7facee02c698 '__va_list_tag'
+|-RecordDecl 0x7facee02c960 <../Data/C2AST/pr85022.c:3:8, col:15> col:15 struct B
+|-VarDecl 0x7facee814270 <col:1, col:17> col:17 used b 'struct B':'struct B' extern
+`-FunctionDecl 0x7facee814378 <line:5:1, line:9:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7facee8148c0 <line:7:1, line:9:1>

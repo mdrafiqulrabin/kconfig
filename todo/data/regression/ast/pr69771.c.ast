@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa2d9016ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa2d9017978 <../Data/C2AST/pr69771.c:5:1, col:19> col:15 used a 'unsigned char' cinit
+| `-ImplicitCastExpr 0x7fa2d9058860 <col:19> 'unsigned char' <IntegralCast>
+|   `-IntegerLiteral 0x7fa2d9058840 <col:19> 'int' 5
+|-VarDecl 0x7fa2d9058890 <col:1, col:22> col:22 used c 'unsigned char'
+|-VarDecl 0x7fa2d9058920 <line:6:1, col:20> col:16 used b 'unsigned short' cinit
+| `-ImplicitCastExpr 0x7fa2d90589a0 <col:20> 'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7fa2d9058980 <col:20> 'int' 0
+|-VarDecl 0x7fa2d90589d0 <line:7:1, col:14> col:10 used d 'unsigned int' cinit
+| `-ImplicitCastExpr 0x7fa2d9058a50 <col:14> 'unsigned int' <IntegralCast>
+|   `-IntegerLiteral 0x7fa2d9058a30 <col:14> 'int' 1985229328
+`-FunctionDecl 0x7fa2d9058b30 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa2d9058dd8 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fa2d9058db0 <line:12:3, col:21> 'unsigned char' '='
+      |-DeclRefExpr 0x7fa2d9058bd0 <col:3> 'unsigned char' lvalue Var 0x7fa2d9058890 'c' 'unsigned char'
+      `-ImplicitCastExpr 0x7fa2d9058d98 <col:7, col:21> 'unsigned char' <IntegralCast>
+        `-BinaryOperator 0x7fa2d9058d70 <col:7, col:21> 'unsigned int' '>>'
+          |-ImplicitCastExpr 0x7fa2d9058d58 <col:7> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fa2d9058bf8 <col:7> 'unsigned int' lvalue Var 0x7fa2d90589d0 'd' 'unsigned int'
+          `-UnaryOperator 0x7fa2d9058d38 <col:12, col:21> 'int' prefix '~'
+            `-ParenExpr 0x7fa2d9058d18 <col:13, col:21> 'int'
+              `-BinaryOperator 0x7fa2d9058cf0 <col:14, col:20> 'int' '||'
+                |-ImplicitCastExpr 0x7fa2d9058cd8 <col:14> 'int' <IntegralCast>
+                | `-ImplicitCastExpr 0x7fa2d9058cc0 <col:14> 'unsigned char' <LValueToRValue>
+                |   `-DeclRefExpr 0x7fa2d9058c20 <col:14> 'unsigned char' lvalue Var 0x7fa2d9017978 'a' 'unsigned char'
+                `-UnaryOperator 0x7fa2d9058ca0 <col:19, col:20> 'int' prefix '~'
+                  `-ImplicitCastExpr 0x7fa2d9058c88 <col:20> 'int' <IntegralCast>
+                    `-ImplicitCastExpr 0x7fa2d9058c70 <col:20> 'unsigned short' <LValueToRValue>
+                      `-DeclRefExpr 0x7fa2d9058c48 <col:20> 'unsigned short' lvalue Var 0x7fa2d9058920 'b' 'unsigned short'

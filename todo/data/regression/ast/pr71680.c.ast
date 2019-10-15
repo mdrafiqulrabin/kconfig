@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fd71a02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd71a06d800 <../Data/C2AST/pr71680.c:7:1, line:10:1> line:7:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7fd71a06d8b0 <<invalid sloc>> Implicit 8
+| `-FieldDecl 0x7fd71a06d910 <line:9:3, col:9> col:9 referenced f0 'float'
+|-VarDecl 0x7fd71a06d9b0 <line:7:1, line:10:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr71680.c:7:1)':'struct (anonymous at ../Data/C2AST/pr71680.c:7:1)'
+|-FunctionDecl 0x7fd71a06db40 <line:12:1, col:21> col:13 used foo 'void (int)' extern
+| `-ParmVarDecl 0x7fd71a06da80 <col:18> col:21 'int'
+`-FunctionDecl 0x7fd71a06dcb8 <line:14:1, line:19:1> line:15:1 main 'int (void)'
+  `-CompoundStmt 0x7fd71a06df18 <line:16:1, line:19:1>
+    `-ForStmt 0x7fd71a06dee0 <line:17:3, line:18:20>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CallExpr 0x7fd71a06deb0 <col:5, col:20> 'void'
+        |-ImplicitCastExpr 0x7fd71a06de98 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fd71a06dd88 <col:5> 'void (int)' Function 0x7fd71a06db40 'foo' 'void (int)'
+        `-CStyleCastExpr 0x7fd71a06de40 <col:10, col:18> 'int' <FloatingToIntegral>
+          `-ImplicitCastExpr 0x7fd71a06de28 <col:16, col:18> 'float' <LValueToRValue>
+            `-MemberExpr 0x7fd71a06ddd8 <col:16, col:18> 'float' lvalue .f0 0x7fd71a06d910
+              `-DeclRefExpr 0x7fd71a06ddb0 <col:16> 'struct (anonymous struct at ../Data/C2AST/pr71680.c:7:1)':'struct (anonymous at ../Data/C2AST/pr71680.c:7:1)' lvalue Var 0x7fd71a06d9b0 'a' 'struct (anonymous struct at ../Data/C2AST/pr71680.c:7:1)':'struct (anonymous at ../Data/C2AST/pr71680.c:7:1)'

@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f87e58166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f87e543bd18 <../Data/C2AST/pr80381.c:7:1, line:11:1> line:8:1 f1 '__m512i (__m512i, int)'
+| |-ParmVarDecl 0x7f87e543bc10 <col:5, col:13> col:13 used x '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7f87e543bc88 <col:16, col:20> col:20 used a 'int'
+| `-CompoundStmt 0x7f87e543bed8 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f87e543bec0 <line:10:3, col:33>
+|     `-CallExpr 0x7f87e543be58 <col:10, col:33> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f87e543be40 <col:10> '__m512i (*)(__m512i, int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f87e543bdc8 <col:10> '__m512i (__m512i, int)' Function 0x7f87e60ca788 '_mm512_srai_epi32' '__m512i (__m512i, int)'
+|       |-ImplicitCastExpr 0x7f87e543be90 <col:29> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87e543bdf0 <col:29> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f87e543bc10 'x' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7f87e543bea8 <col:32> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f87e543be18 <col:32> 'int' lvalue ParmVar 0x7f87e543bc88 'a' 'int'
+|-FunctionDecl 0x7f87e543c1a0 <line:13:1, line:17:1> line:14:1 f2 '__m512i (__m512i, __m512i, __mmask16, int)'
+| |-ParmVarDecl 0x7f87e543bf00 <col:5, col:13> col:13 used x '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7f87e543bf70 <col:16, col:24> col:24 used y '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7f87e543bfe0 <col:27, col:37> col:37 used m '__mmask16':'unsigned short'
+| |-ParmVarDecl 0x7f87e543c058 <col:40, col:44> col:44 used a 'int'
+| `-CompoundStmt 0x7f87e543c460 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7f87e543c448 <line:16:3, col:44>
+|     `-CallExpr 0x7f87e543c3a0 <col:10, col:44> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f87e543c388 <col:10> '__m512i (*)(__m512i, __mmask16, __m512i, int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f87e543c260 <col:10> '__m512i (__m512i, __mmask16, __m512i, int)' Function 0x7f87e60cddf8 '_mm512_mask_srai_epi32' '__m512i (__m512i, __mmask16, __m512i, int)'
+|       |-ImplicitCastExpr 0x7f87e543c3e8 <col:34> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87e543c288 <col:34> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f87e543bf70 'y' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f87e543c400 <col:37> '__mmask16':'unsigned short' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87e543c2b0 <col:37> '__mmask16':'unsigned short' lvalue ParmVar 0x7f87e543bfe0 'm' '__mmask16':'unsigned short'
+|       |-ImplicitCastExpr 0x7f87e543c418 <col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87e543c2d8 <col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f87e543bf00 'x' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7f87e543c430 <col:43> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f87e543c300 <col:43> 'int' lvalue ParmVar 0x7f87e543c058 'a' 'int'
+|-FunctionDecl 0x7f87e543c510 <line:19:1, line:23:1> line:20:1 f3 '__m512i (__m512i)'
+| |-ParmVarDecl 0x7f87e543c488 <col:5, col:13> col:13 used x '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7f87e543c6a8 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7f87e543c690 <line:22:3, col:33>
+|     `-CallExpr 0x7f87e543c640 <col:10, col:33> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f87e543c628 <col:10> '__m512i (*)(__m512i, int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f87e543c5b8 <col:10> '__m512i (__m512i, int)' Function 0x7f87e60ca788 '_mm512_srai_epi32' '__m512i (__m512i, int)'
+|       |-ImplicitCastExpr 0x7f87e543c678 <col:29> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87e543c5e0 <col:29> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f87e543c488 'x' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|       `-IntegerLiteral 0x7f87e543c608 <col:32> 'int' 6
+`-FunctionDecl 0x7f87e543c8e0 <line:25:1, line:29:1> line:26:1 f4 '__m512i (__m512i, __m512i, __mmask16)'
+  |-ParmVarDecl 0x7f87e543c6d0 <col:5, col:13> col:13 used x '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+  |-ParmVarDecl 0x7f87e543c740 <col:16, col:24> col:24 used y '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+  |-ParmVarDecl 0x7f87e543c7b0 <col:27, col:37> col:37 used m '__mmask16':'unsigned short'
+  `-CompoundStmt 0x7f87e543cb18 <line:27:1, line:29:1>
+    `-ReturnStmt 0x7f87e543cb00 <line:28:3, col:44>
+      `-CallExpr 0x7f87e543ca70 <col:10, col:44> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7f87e543ca58 <col:10> '__m512i (*)(__m512i, __mmask16, __m512i, int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f87e543c998 <col:10> '__m512i (__m512i, __mmask16, __m512i, int)' Function 0x7f87e60cddf8 '_mm512_mask_srai_epi32' '__m512i (__m512i, __mmask16, __m512i, int)'
+        |-ImplicitCastExpr 0x7f87e543cab8 <col:34> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f87e543c9c0 <col:34> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f87e543c740 'y' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7f87e543cad0 <col:37> '__mmask16':'unsigned short' <LValueToRValue>
+        | `-DeclRefExpr 0x7f87e543c9e8 <col:37> '__mmask16':'unsigned short' lvalue ParmVar 0x7f87e543c7b0 'm' '__mmask16':'unsigned short'
+        |-ImplicitCastExpr 0x7f87e543cae8 <col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f87e543ca10 <col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f87e543c6d0 'x' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        `-IntegerLiteral 0x7f87e543ca38 <col:43> 'int' 6

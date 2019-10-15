@@ -1,0 +1,79 @@
+TranslationUnitDecl 0x7fa6540174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa653828860 <../Data/C2AST/pr39829.c:4:1, line:26:1> line:4:6 foo 'void (void *)'
+  |-ParmVarDecl 0x7fa654018178 <col:11, col:18> col:18 used DAG_temp117584 'void *'
+  `-CompoundStmt 0x7fa653840540 <line:5:1, line:26:1>
+    |-DeclStmt 0x7fa6538289b8 <line:6:3, col:11>
+    | `-VarDecl 0x7fa653828958 <col:3, col:9> col:9 used uA 'char'
+    |-DeclStmt 0x7fa653828a48 <line:7:3, col:11>
+    | `-VarDecl 0x7fa6538289e8 <col:3, col:9> col:9 used pA 'void *'
+    |-DeclStmt 0x7fa653828ad8 <line:8:3, col:11>
+    | `-VarDecl 0x7fa653828a78 <col:3, col:9> col:9 used pB 'void *'
+    |-DeclStmt 0x7fa653828b68 <line:9:3, col:11>
+    | `-VarDecl 0x7fa653828b08 <col:3, col:9> col:9 used pC 'void *'
+    `-DoStmt 0x7fa653840520 <line:10:3, line:25:13>
+      |-CompoundStmt 0x7fa653840498 <line:10:6, line:25:3>
+      | |-DeclStmt 0x7fa653828bf8 <line:11:7, col:25>
+      | | `-VarDecl 0x7fa653828b98 <col:7, col:11> col:11 used DAG_temp117585 'int'
+      | |-DeclStmt 0x7fa653828c88 <line:12:7, col:25>
+      | | `-VarDecl 0x7fa653828c28 <col:7, col:11> col:11 used DAG_temp117586 'int'
+      | |-DeclStmt 0x7fa653828dc0 <line:13:7, col:54>
+      | | `-VarDecl 0x7fa653828ce0 <col:7, col:40> col:15 used __indir_union1 'void **' cinit
+      | |   `-CStyleCastExpr 0x7fa653828d98 <col:32, col:40> 'void **' <BitCast>
+      | |     `-ImplicitCastExpr 0x7fa653828d80 <col:40> 'void *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7fa653828d40 <col:40> 'void *' lvalue ParmVar 0x7fa654018178 'DAG_temp117584' 'void *'
+      | |-BinaryOperator 0x7fa653828ed0 <line:14:7, col:31> 'int' '='
+      | | |-DeclRefExpr 0x7fa653828dd8 <col:7> 'int' lvalue Var 0x7fa653828b98 'DAG_temp117585' 'int'
+      | | `-ImplicitCastExpr 0x7fa653828eb8 <col:24, col:31> 'int' <IntegralCast>
+      | |   `-CStyleCastExpr 0x7fa653828e90 <col:24, col:31> 'long' <PointerToIntegral>
+      | |     `-ImplicitCastExpr 0x7fa653828e78 <col:30, col:31> 'void *' <LValueToRValue>
+      | |       `-UnaryOperator 0x7fa653828e40 <col:30, col:31> 'void *' lvalue prefix '*'
+      | |         `-ImplicitCastExpr 0x7fa653828e28 <col:31> 'void **' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7fa653828e00 <col:31> 'void **' lvalue Var 0x7fa653828ce0 '__indir_union1' 'void **'
+      | |-BinaryOperator 0x7fa653828f60 <line:15:7, col:24> 'int' '='
+      | | |-DeclRefExpr 0x7fa653828ef8 <col:7> 'int' lvalue Var 0x7fa653828c28 'DAG_temp117586' 'int'
+      | | `-ImplicitCastExpr 0x7fa653828f48 <col:24> 'int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa653828f20 <col:24> 'int' lvalue Var 0x7fa653828b98 'DAG_temp117585' 'int'
+      | |-IfStmt 0x7fa653829128 <line:16:7, line:17:15>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-BinaryOperator 0x7fa653829028 <line:16:12, col:35> 'int' '!='
+      | | | |-ImplicitCastExpr 0x7fa653829010 <col:12> 'int' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fa653828f88 <col:12> 'int' lvalue Var 0x7fa653828c28 'DAG_temp117586' 'int'
+      | | | `-CStyleCastExpr 0x7fa653828fe8 <col:30, col:35> 'int' <NoOp>
+      | | |   `-IntegerLiteral 0x7fa653828fb0 <col:35> 'int' 268435456
+      | | |-BinaryOperator 0x7fa653829100 <line:17:2, col:15> 'void *' '='
+      | | | |-DeclRefExpr 0x7fa653829050 <col:2> 'void *' lvalue Var 0x7fa6538289e8 'pA' 'void *'
+      | | | `-CStyleCastExpr 0x7fa6538290d8 <col:7, col:15> 'void *' <BitCast>
+      | | |   `-UnaryOperator 0x7fa6538290a0 <col:14, col:15> 'char *' prefix '&'
+      | | |     `-DeclRefExpr 0x7fa653829078 <col:15> 'char' lvalue Var 0x7fa653828958 'uA' 'char'
+      | | `-<<<NULL>>>
+      | |-BinaryOperator 0x7fa653829210 <line:18:7, col:20> 'void *' '='
+      | | |-DeclRefExpr 0x7fa653829160 <col:7> 'void *' lvalue Var 0x7fa653828a78 'pB' 'void *'
+      | | `-CStyleCastExpr 0x7fa6538291e8 <col:12, col:20> 'void *' <BitCast>
+      | |   `-UnaryOperator 0x7fa6538291b0 <col:19, col:20> 'void **' prefix '&'
+      | |     `-DeclRefExpr 0x7fa653829188 <col:20> 'void *' lvalue Var 0x7fa6538289e8 'pA' 'void *'
+      | |-BinaryOperator 0x7fa6538292a0 <line:19:7, col:12> 'void *' '='
+      | | |-DeclRefExpr 0x7fa653829238 <col:7> 'void *' lvalue Var 0x7fa653828b08 'pC' 'void *'
+      | | `-ImplicitCastExpr 0x7fa653829288 <col:12> 'void *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa653829260 <col:12> 'void *' lvalue Var 0x7fa653828a78 'pB' 'void *'
+      | |-DeclStmt 0x7fa653829718 <line:20:7, line:21:52>
+      | | |-RecordDecl 0x7fa6538292c8 <line:20:7, col:72> col:13 union __block_indir0_u definition
+      | | | |-RecordDecl 0x7fa653829370 <col:33, col:53> col:33 struct definition
+      | | | | `-FieldDecl 0x7fa653829438 <col:43, col:48> col:48 referenced val 'long'
+      | | | `-FieldDecl 0x7fa6538294d0 <col:33, col:56> col:56 referenced __indir_struct 'struct (anonymous struct at ../Data/C2AST/pr39829.c:20:33)':'struct __block_indir0_u::(anonymous at ../Data/C2AST/pr39829.c:20:33)'
+      | | `-VarDecl 0x7fa653829610 <col:7, line:21:50> col:9 used __indir_union 'union __block_indir0_u *' cinit
+      | |   `-CStyleCastExpr 0x7fa6538296d8 <col:25, col:50> 'union __block_indir0_u *' <BitCast>
+      | |     `-ImplicitCastExpr 0x7fa6538296c0 <col:50> 'void *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7fa653829670 <col:50> 'void *' lvalue Var 0x7fa653828b08 'pC' 'void *'
+      | |-CallExpr 0x7fa6538403d0 <line:22:7, col:42> 'int'
+      | | |-ImplicitCastExpr 0x7fa6538403b8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fa6538402b0 <col:7> 'int ()' Function 0x7fa653840200 'f' 'int ()'
+      | | `-ImplicitCastExpr 0x7fa653840400 <col:9, col:39> 'long' <LValueToRValue>
+      | |   `-MemberExpr 0x7fa653840350 <col:9, col:39> 'long' lvalue .val 0x7fa653829438
+      | |     `-MemberExpr 0x7fa653840318 <col:9, col:24> 'struct (anonymous struct at ../Data/C2AST/pr39829.c:20:33)':'struct __block_indir0_u::(anonymous at ../Data/C2AST/pr39829.c:20:33)' lvalue ->__indir_struct 0x7fa6538294d0
+      | |       `-ImplicitCastExpr 0x7fa653840300 <col:9> 'union __block_indir0_u *' <LValueToRValue>
+      | |         `-DeclRefExpr 0x7fa6538402d8 <col:9> 'union __block_indir0_u *' lvalue Var 0x7fa653829610 '__indir_union' 'union __block_indir0_u *'
+      | `-CompoundAssignOperator 0x7fa653840460 <line:24:7, col:25> 'void *' '+=' ComputeLHSTy='void *' ComputeResultTy='void *'
+      |   |-DeclRefExpr 0x7fa653840418 <col:7> 'void *' lvalue ParmVar 0x7fa654018178 'DAG_temp117584' 'void *'
+      |   `-IntegerLiteral 0x7fa653840440 <col:25> 'int' 64
+      `-IntegerLiteral 0x7fa653840500 <line:25:12> 'int' 1

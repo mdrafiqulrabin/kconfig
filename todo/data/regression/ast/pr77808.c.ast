@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fc66d0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc66d814460 <../Data/C2AST/pr77808.c:4:1, line:11:1> line:5:1 daxpy 'void (int, double, double *restrict, double *restrict)'
+  |-ParmVarDecl 0x7fc66d018178 <col:7, col:11> col:11 used n 'int'
+  |-ParmVarDecl 0x7fc66d814200 <col:14, col:21> col:21 used da 'double'
+  |-ParmVarDecl 0x7fc66d8142a0 <col:25, col:45> col:45 used dx 'double *restrict'
+  |-ParmVarDecl 0x7fc66d814318 <col:49, col:69> col:69 used dy 'double *restrict'
+  `-CompoundStmt 0x7fc66d814a68 <line:6:1, line:11:1>
+    |-DeclStmt 0x7fc66d8145d8 <line:7:3, col:8>
+    | `-VarDecl 0x7fc66d814578 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fc66d814a30 <line:9:3, line:10:28>
+      |-BinaryOperator 0x7fc66d814638 <line:9:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc66d8145f0 <col:8> 'int' lvalue Var 0x7fc66d814578 'i' 'int'
+      | `-IntegerLiteral 0x7fc66d814618 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc66d8146e0 <col:14, col:18> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc66d8146b0 <col:14> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc66d814660 <col:14> 'int' lvalue Var 0x7fc66d814578 'i' 'int'
+      | `-ImplicitCastExpr 0x7fc66d8146c8 <col:18> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc66d814688 <col:18> 'int' lvalue ParmVar 0x7fc66d018178 'n' 'int'
+      |-UnaryOperator 0x7fc66d814730 <col:21, col:22> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fc66d814708 <col:21> 'int' lvalue Var 0x7fc66d814578 'i' 'int'
+      `-BinaryOperator 0x7fc66d814a08 <line:10:5, col:28> 'double' '='
+        |-ArraySubscriptExpr 0x7fc66d8147d0 <col:5, col:9> 'double' lvalue
+        | |-ImplicitCastExpr 0x7fc66d8147a0 <col:5> 'double *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fc66d814750 <col:5> 'double *restrict' lvalue ParmVar 0x7fc66d814318 'dy' 'double *restrict'
+        | `-ImplicitCastExpr 0x7fc66d8147b8 <col:8> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fc66d814778 <col:8> 'int' lvalue Var 0x7fc66d814578 'i' 'int'
+        `-BinaryOperator 0x7fc66d8149e0 <col:13, col:28> 'double' '+'
+          |-ImplicitCastExpr 0x7fc66d8149c8 <col:13, col:17> 'double' <LValueToRValue>
+          | `-ArraySubscriptExpr 0x7fc66d814878 <col:13, col:17> 'double' lvalue
+          |   |-ImplicitCastExpr 0x7fc66d814848 <col:13> 'double *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fc66d8147f8 <col:13> 'double *restrict' lvalue ParmVar 0x7fc66d814318 'dy' 'double *restrict'
+          |   `-ImplicitCastExpr 0x7fc66d814860 <col:16> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fc66d814820 <col:16> 'int' lvalue Var 0x7fc66d814578 'i' 'int'
+          `-BinaryOperator 0x7fc66d8149a0 <col:21, col:28> 'double' '*'
+            |-ImplicitCastExpr 0x7fc66d814970 <col:21> 'double' <LValueToRValue>
+            | `-DeclRefExpr 0x7fc66d8148a0 <col:21> 'double' lvalue ParmVar 0x7fc66d814200 'da' 'double'
+            `-ImplicitCastExpr 0x7fc66d814988 <col:24, col:28> 'double' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7fc66d814948 <col:24, col:28> 'double' lvalue
+                |-ImplicitCastExpr 0x7fc66d814918 <col:24> 'double *' <LValueToRValue>
+                | `-DeclRefExpr 0x7fc66d8148c8 <col:24> 'double *restrict' lvalue ParmVar 0x7fc66d8142a0 'dx' 'double *restrict'
+                `-ImplicitCastExpr 0x7fc66d814930 <col:27> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fc66d8148f0 <col:27> 'int' lvalue Var 0x7fc66d814578 'i' 'int'

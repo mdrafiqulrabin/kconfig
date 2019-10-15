@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7ff8918174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff8918181a0 <../Data/C2AST/pr61195.c:5:1, col:8> col:8 used g 'float *'
+|-FunctionDecl 0x7ff891859128 <line:7:1, line:11:1> line:8:1 foo 'float (float)'
+| |-ParmVarDecl 0x7ff891859058 <col:5, col:11> col:11 used f 'float'
+| `-CompoundStmt 0x7ff891859228 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7ff891859210 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7ff8918591f8 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff8918591d0 <col:10> 'float' lvalue ParmVar 0x7ff891859058 'f' 'float'
+`-FunctionDecl 0x7ff891859308 <line:13:1, line:17:1> line:14:1 foo1 'float (void)'
+  `-CompoundStmt 0x7ff891859438 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7ff891859420 <line:16:3, col:11>
+      `-ImplicitCastExpr 0x7ff891859408 <col:10, col:11> 'float' <LValueToRValue>
+        `-UnaryOperator 0x7ff8918593e8 <col:10, col:11> 'float' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7ff8918593d0 <col:11> 'float *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff8918593a8 <col:11> 'float *' lvalue Var 0x7ff8918181a0 'g' 'float *'

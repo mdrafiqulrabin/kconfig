@@ -1,0 +1,29 @@
+../Data/C2AST/pr65508.c:9:3: error: function definition is not allowed here
+  {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f830a0114e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f830a011a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f830a011780 '__int128'
+|-TypedefDecl 0x7f830a011ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f830a0117a0 'unsigned __int128'
+|-TypedefDecl 0x7f830a011da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f830a011bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f830a011b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f830a011e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f830a011e00 'char *'
+|   `-BuiltinType 0x7f830a011580 'char'
+|-TypedefDecl 0x7f830a012108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f830a0120b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f830a011f20 'struct __va_list_tag'
+|     `-Record 0x7f830a011e98 '__va_list_tag'
+`-FunctionDecl 0x7f8309024c60 <../Data/C2AST/pr65508.c:4:1, line:12:1> line:5:1 bar 'void (int)'
+  |-ParmVarDecl 0x7f830a012178 <col:6, col:10> col:10 used N 'int'
+  `-CompoundStmt 0x7f83090251a8 <line:6:1, line:12:1>
+    |-DeclStmt 0x7f8309024e50 <line:7:3, col:11>
+    | `-VarDecl 0x7f8309024df0 <col:3, col:10> col:7 used a 'int [N]'
+    `-CallExpr 0x7f8309025160 <line:11:3, col:9> 'int'
+      |-ImplicitCastExpr 0x7f8309025148 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f83090250d0 <col:3> 'int ()' Function 0x7f8309025020 'foo' 'int ()'
+      `-ImplicitCastExpr 0x7f8309025190 <col:8> 'int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f83090250f8 <col:8> 'int [N]' lvalue Var 0x7f8309024df0 'a' 'int [N]'

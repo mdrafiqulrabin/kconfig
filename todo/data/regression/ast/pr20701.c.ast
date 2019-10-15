@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7ffdb202bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffdb202c960 <../Data/C2AST/pr20701.c:4:9, line:6:1> line:4:9 struct definition
+| `-FieldDecl 0x7ffdb206d838 <line:5:3, col:7> col:7 referenced code 'int'
+|-TypedefDecl 0x7ffdb206d930 <line:4:1, line:6:4> col:4 referenced rtx 'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+| `-PointerType 0x7ffdb206d8e0 'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+|   `-ElaboratedType 0x7ffdb206d880 'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9)' sugar
+|     `-RecordType 0x7ffdb206d800 'struct (anonymous at ../Data/C2AST/pr20701.c:4:9)'
+|       `-Record 0x7ffdb202c960 ''
+|-FunctionDecl 0x7ffdb206d9f0 <line:8:1, line:11:1> line:8:21 used zero 'void *()' static inline
+| `-CompoundStmt 0x7ffdb206db20 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7ffdb206db08 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7ffdb206daf0 <col:10> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7ffdb206dad0 <col:10> 'int' 0
+|-FunctionDecl 0x7ffdb206db90 <line:12:1, line:15:1> line:12:19 used three 'int ()' static inline
+| `-CompoundStmt 0x7ffdb206dc68 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ffdb206dc50 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7ffdb206dc30 <col:10> 'int' 3
+`-FunctionDecl 0x7ffdb206de38 <line:17:1, line:36:1> line:18:1 can_combine_p 'int (rtx, rtx)'
+  |-ParmVarDecl 0x7ffdb206dcb0 <col:16, col:20> col:20 used insn 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+  |-ParmVarDecl 0x7ffdb206dd20 <col:26, col:30> col:30 used elt 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+  `-CompoundStmt 0x7ffdb206e618 <line:19:1, line:36:1>
+    |-DeclStmt 0x7ffdb206df58 <line:20:3, col:10>
+    | `-VarDecl 0x7ffdb206def8 <col:3, col:7> col:7 used set 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    |-BinaryOperator 0x7ffdb206e040 <line:22:3, col:15> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' '='
+    | |-DeclRefExpr 0x7ffdb206df70 <col:3> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue Var 0x7ffdb206def8 'set' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    | `-ImplicitCastExpr 0x7ffdb206e028 <col:9, col:15> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <BitCast>
+    |   `-CallExpr 0x7ffdb206e000 <col:9, col:15> 'void *'
+    |     `-ImplicitCastExpr 0x7ffdb206dfe8 <col:9> 'void *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7ffdb206df98 <col:9> 'void *()' Function 0x7ffdb206d9f0 'zero' 'void *()'
+    |-IfStmt 0x7ffdb206e450 <line:23:3, line:30:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffdb206e190 <line:23:7, col:28> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ffdb206e178 <col:7, col:13> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7ffdb206e0a8 <col:7, col:13> 'int' lvalue ->code 0x7ffdb206d838
+    | | |   `-ImplicitCastExpr 0x7ffdb206e090 <col:7> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7ffdb206e068 <col:7> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue ParmVar 0x7ffdb206dcb0 'insn' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    | | `-CallExpr 0x7ffdb206e150 <col:21, col:28> 'int'
+    | |   `-ImplicitCastExpr 0x7ffdb206e138 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7ffdb206e0e0 <col:21> 'int ()' Function 0x7ffdb206db90 'three' 'int ()'
+    | |-BinaryOperator 0x7ffdb206e220 <line:24:5, col:11> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' '='
+    | | |-DeclRefExpr 0x7ffdb206e1b8 <col:5> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue Var 0x7ffdb206def8 'set' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    | | `-ImplicitCastExpr 0x7ffdb206e208 <col:11> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffdb206e1e0 <col:11> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue ParmVar 0x7ffdb206dcb0 'insn' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    | `-CompoundStmt 0x7ffdb206e430 <line:26:5, line:30:5>
+    |   |-BinaryOperator 0x7ffdb206e2b0 <line:27:7, col:13> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' '='
+    |   | |-DeclRefExpr 0x7ffdb206e248 <col:7> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue Var 0x7ffdb206def8 'set' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    |   | `-ImplicitCastExpr 0x7ffdb206e298 <col:13> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ffdb206e270 <col:13> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue ParmVar 0x7ffdb206dd20 'elt' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    |   `-IfStmt 0x7ffdb206e3f8 <line:28:7, line:29:9>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7ffdb206e398 <line:28:11, col:24> 'int' '=='
+    |     | |-ImplicitCastExpr 0x7ffdb206e368 <col:11> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7ffdb206e2d8 <col:11> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue Var 0x7ffdb206def8 'set' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    |     | `-ImplicitCastExpr 0x7ffdb206e380 <col:18, col:24> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <BitCast>
+    |     |   `-CallExpr 0x7ffdb206e340 <col:18, col:24> 'void *'
+    |     |     `-ImplicitCastExpr 0x7ffdb206e328 <col:18> 'void *(*)()' <FunctionToPointerDecay>
+    |     |       `-DeclRefExpr 0x7ffdb206e300 <col:18> 'void *()' Function 0x7ffdb206d9f0 'zero' 'void *()'
+    |     |-ReturnStmt 0x7ffdb206e3e0 <line:29:2, col:9>
+    |     | `-IntegerLiteral 0x7ffdb206e3c0 <col:9> 'int' 0
+    |     `-<<<NULL>>>
+    |-IfStmt 0x7ffdb206e5a8 <line:32:3, line:33:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffdb206e548 <line:32:7, col:20> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ffdb206e518 <col:7> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffdb206e488 <col:7> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' lvalue Var 0x7ffdb206def8 'set' 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *'
+    | | `-ImplicitCastExpr 0x7ffdb206e530 <col:14, col:20> 'rtx':'struct (anonymous struct at ../Data/C2AST/pr20701.c:4:9) *' <BitCast>
+    | |   `-CallExpr 0x7ffdb206e4f0 <col:14, col:20> 'void *'
+    | |     `-ImplicitCastExpr 0x7ffdb206e4d8 <col:14> 'void *(*)()' <FunctionToPointerDecay>
+    | |       `-DeclRefExpr 0x7ffdb206e4b0 <col:14> 'void *()' Function 0x7ffdb206d9f0 'zero' 'void *()'
+    | |-ReturnStmt 0x7ffdb206e590 <line:33:5, col:12>
+    | | `-IntegerLiteral 0x7ffdb206e570 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ffdb206e600 <line:35:3, col:10>
+      `-IntegerLiteral 0x7ffdb206e5e0 <col:10> 'int' 0

@@ -1,0 +1,39 @@
+../Data/C2AST/pr44290-1.c:8:29: error: parameter references not allowed in naked functions
+  asm volatile("dummy"::"r"(from), "r"(to));
+                            ^
+../Data/C2AST/pr44290-1.c:5:28: note: attribute is here
+static void __attribute__((naked))
+                           ^
+1 error generated.
+TranslationUnitDecl 0x7fc05382bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc05382c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc05382bf80 '__int128'
+|-TypedefDecl 0x7fc05382c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc05382bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc05382c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc05382c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc05382c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc05382c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc05382c600 'char *'
+|   `-BuiltinType 0x7fc05382bd80 'char'
+|-TypedefDecl 0x7fc05382c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc05382c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc05382c720 'struct __va_list_tag'
+|     `-Record 0x7fc05382c698 '__va_list_tag'
+|-FunctionDecl 0x7fc0540152d0 <../Data/C2AST/pr44290-1.c:5:1, line:9:1> line:6:1 used foo 'void (void *, void *)' static
+| |-ParmVarDecl 0x7fc05382c978 <col:5, col:11> col:11 used from 'void *'
+| |-ParmVarDecl 0x7fc054015200 <col:17, col:23> col:23 used to 'void *'
+| |-CompoundStmt 0x7fc054015568 <line:7:1, line:9:1>
+| `-NakedAttr 0x7fc054015380 <line:5:28>
+|-VarDecl 0x7fc054015600 <line:11:1, col:19> col:14 used fie 'unsigned int [2]'
+`-FunctionDecl 0x7fc054015740 <line:13:1, line:16:1> line:13:6 fum 'void (void *)'
+  |-ParmVarDecl 0x7fc054015678 <col:10, col:16> col:16 used to 'void *'
+  `-CompoundStmt 0x7fc054015950 <line:14:1, line:16:1>
+    `-CallExpr 0x7fc0540158a0 <line:15:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7fc054015888 <col:3> 'void (*)(void *, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc0540157e8 <col:3> 'void (void *, void *)' Function 0x7fc0540152d0 'foo' 'void (void *, void *)'
+      |-ImplicitCastExpr 0x7fc054015920 <col:7> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fc054015908 <col:7> 'unsigned int *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7fc054015810 <col:7> 'unsigned int [2]' lvalue Var 0x7fc054015600 'fie' 'unsigned int [2]'
+      `-ImplicitCastExpr 0x7fc054015938 <col:12> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fc054015838 <col:12> 'void *' lvalue ParmVar 0x7fc054015678 'to' 'void *'

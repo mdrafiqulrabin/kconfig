@@ -1,0 +1,31 @@
+../Data/C2AST/pr32065-2.c:6:10: fatal error: 'sse-check.h' file not found
+#include "sse-check.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f896f82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f896f82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f896f82bf80 '__int128'
+|-TypedefDecl 0x7f896f82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f896f82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f896f82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f896f82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f896f82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f896f82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f896f82c600 'char *'
+|   `-BuiltinType 0x7f896f82bd80 'char'
+|-TypedefDecl 0x7f896f82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f896f82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f896f82c720 'struct __va_list_tag'
+|     `-Record 0x7f896f82c698 '__va_list_tag'
+|-FunctionDecl 0x7f8970015250 <../Data/C2AST/pr32065-2.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f89700152f0 prev 0x7f8970015250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f8970015420 <line:10:1, line:16:1> line:11:1 sse_test 'void (void)' static
+  `-CompoundStmt 0x7f8970015780 <line:12:1, line:16:1>
+    `-IfStmt 0x7f8970015748 <line:13:3, line:15:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-OpaqueValueExpr 0x7f8970015728 <<invalid sloc>> '_Bool'
+      |-CallExpr 0x7f8970015700 <col:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7f89700156e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f8970015698 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f89700152f0 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

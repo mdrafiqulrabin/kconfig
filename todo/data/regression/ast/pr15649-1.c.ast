@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f92738276e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9273869268 <../Data/C2AST/pr15649-1.c:4:1, line:7:1> line:4:8 foo 'double (double)'
+| |-ParmVarDecl 0x7f9273828378 <col:13, col:20> col:20 used x 'double'
+| `-CompoundStmt 0x7f9273869618 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f9273869600 <line:6:3, col:47>
+|     `-ConditionalOperator 0x7f92738695d0 <col:10, col:47> 'double'
+|       |-CallExpr 0x7f9273869520 <col:10, col:37> 'int'
+|       | |-ImplicitCastExpr 0x7f9273869508 <col:10> 'int (*)()' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7f9273869470 <col:10> '<builtin fn type>' Function 0x7f9273869378 '__builtin_isgreater' 'int ()'
+|       | |-ImplicitCastExpr 0x7f9273869558 <col:31> 'double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f9273869498 <col:31> 'double' lvalue ParmVar 0x7f9273828378 'x' 'double'
+|       | `-FloatingLiteral 0x7f92738694c0 <col:34> 'double' 0.000000e+00
+|       |-FloatingLiteral 0x7f9273869570 <col:41> 'double' 0.000000e+00
+|       `-ImplicitCastExpr 0x7f92738695b8 <col:47> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9273869590 <col:47> 'double' lvalue ParmVar 0x7f9273828378 'x' 'double'
+`-FunctionDecl 0x7f9273869378 <col:10> col:10 implicit used __builtin_isgreater 'int ()' extern
+  |-NoThrowAttr 0x7f9273869418 <col:10> Implicit
+  `-ConstAttr 0x7f9273869460 <col:10> Implicit

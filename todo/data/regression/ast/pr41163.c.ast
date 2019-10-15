@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ff41a022ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff41a023960 <../Data/C2AST/pr41163.c:1:1, line:3:1> line:1:8 struct option definition
+| `-FieldDecl 0x7ff41a814838 <line:2:5, col:11> col:11 value 'void *'
+|-FunctionDecl 0x7ff41a814a30 <line:4:1, col:36> col:6 used parse_options 'void (struct option *)'
+| `-ParmVarDecl 0x7ff41a814930 <col:21, col:35> col:36 'struct option *'
+`-FunctionDecl 0x7ff41a814be0 <line:5:1, line:9:1> line:5:6 cmd_grep 'void (void)'
+  `-CompoundStmt 0x7ff41a8150d8 <line:6:1, line:9:1>
+    |-DeclStmt 0x7ff41a814fb8 <line:7:3, col:45>
+    | `-VarDecl 0x7ff41a814d08 <col:3, col:44> col:17 used options 'struct option [1]' cinit
+    |   `-InitListExpr 0x7ff41a814e98 <col:29, col:44> 'struct option [1]'
+    |     `-InitListExpr 0x7ff41a814ed8 <col:31, col:42> 'struct option':'struct option'
+    |       `-ImplicitCastExpr 0x7ff41a814f28 <col:33, col:34> 'void *' <BitCast>
+    |         `-UnaryOperator 0x7ff41a814de8 <col:33, col:34> 'struct option (*)[]' prefix '&'
+    |           `-DeclRefExpr 0x7ff41a814d68 <col:34> 'struct option []' lvalue Var 0x7ff41a814d08 'options' 'struct option [1]'
+    `-CallExpr 0x7ff41a815090 <line:8:3, col:24> 'void'
+      |-ImplicitCastExpr 0x7ff41a815078 <col:3> 'void (*)(struct option *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff41a814fd0 <col:3> 'void (struct option *)' Function 0x7ff41a814a30 'parse_options' 'void (struct option *)'
+      `-ImplicitCastExpr 0x7ff41a8150c0 <col:17> 'struct option *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7ff41a814ff8 <col:17> 'struct option [1]' lvalue Var 0x7ff41a814d08 'options' 'struct option [1]'

@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f8df90274e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8df9814860 <../Data/C2AST/pr52330.c:4:1, line:7:1> line:4:6 foo 'void (int)'
+  |-ParmVarDecl 0x7f8df9028178 <col:11, col:15> col:15 used a 'int'
+  `-CompoundStmt 0x7f8df9814ac8 <line:5:1, line:7:1>
+    `-GCCAsmStmt 0x7f8df9814a68 <line:6:3, col:36>
+      `-ImplicitCastExpr 0x7f8df9814a50 <col:34> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8df9814a28 <col:34> 'int' lvalue ParmVar 0x7f8df9028178 'a' 'int'

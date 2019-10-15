@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fca9582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fca96814200 <../Data/C2AST/pr67619.c:4:1, line:13:1> line:5:1 foo 'void ()'
+| `-CompoundStmt 0x7fca96814938 <line:6:1, line:13:1>
+|   |-DeclStmt 0x7fca96814358 <line:7:3, col:18>
+|   | `-VarDecl 0x7fca968142f8 <col:3, col:17> col:17 used l 'unsigned long'
+|   |-DeclStmt 0x7fca96814420 <line:8:3, col:14>
+|   | `-VarDecl 0x7fca96814388 <col:3, col:13> col:9 used p 'void *' cinit
+|   |   `-ImplicitCastExpr 0x7fca96814408 <col:13> 'void *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7fca968143e8 <col:13> 'int' 0
+|   |-CallExpr 0x7fca96814580 <line:10:3, col:26> 'void'
+|   | `-ImplicitCastExpr 0x7fca96814568 <col:3> 'void (*)(void)' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7fca96814510 <col:3> '<builtin fn type>' Function 0x7fca96814470 '__builtin_unwind_init' 'void (void)'
+|   |-BinaryOperator 0x7fca96814608 <line:11:3, col:7> 'unsigned long' '='
+|   | |-DeclRefExpr 0x7fca968145a8 <col:3> 'unsigned long' lvalue Var 0x7fca968142f8 'l' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7fca968145f0 <col:7> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fca968145d0 <col:7> 'int' 0
+|   `-CallExpr 0x7fca968148d0 <line:12:3, col:28> 'void'
+|     |-ImplicitCastExpr 0x7fca968148b8 <col:3> 'void (*)(unsigned long, void *) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fca968147e0 <col:3> '<builtin fn type>' Function 0x7fca96814670 '__builtin_eh_return' 'void (unsigned long, void *) __attribute__((noreturn))'
+|     |-ImplicitCastExpr 0x7fca96814908 <col:24> 'unsigned long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fca96814808 <col:24> 'unsigned long' lvalue Var 0x7fca968142f8 'l' 'unsigned long'
+|     `-ImplicitCastExpr 0x7fca96814920 <col:27> 'void *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fca96814830 <col:27> 'void *' lvalue Var 0x7fca96814388 'p' 'void *'
+|-FunctionDecl 0x7fca96814470 <line:10:3> col:3 implicit used __builtin_unwind_init 'void (void)' extern
+`-FunctionDecl 0x7fca96814670 <line:12:3> col:3 implicit used __builtin_eh_return 'void (unsigned long, void *) __attribute__((noreturn))' extern
+  |-ParmVarDecl 0x7fca96814710 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-ParmVarDecl 0x7fca96814770 <<invalid sloc>> <invalid sloc> 'void *'

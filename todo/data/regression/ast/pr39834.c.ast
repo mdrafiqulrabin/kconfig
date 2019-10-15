@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc7920252e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc791818c00 <../Data/C2AST/pr39834.c:2:1, col:18> col:6 used quit_mined 'void ()'
+|-FunctionDecl 0x7fc791818d00 <line:3:1, col:19> col:6 used bottom_line 'void ()'
+|-EnumDecl 0x7fc791818da0 <line:4:9, col:28> col:9
+| |-EnumConstantDecl 0x7fc791818e60 <col:16> col:16 False 'int'
+| `-EnumConstantDecl 0x7fc791818ea8 <col:23> col:23 referenced True 'int'
+|-TypedefDecl 0x7fc791818f40 <col:1, col:30> col:30 referenced FLAG 'enum FLAG':'FLAG'
+| `-ElaboratedType 0x7fc791818ef0 'enum FLAG' sugar
+|   `-EnumType 0x7fc791818e40 'FLAG'
+|     `-Enum 0x7fc791818da0 ''
+`-FunctionDecl 0x7fc7918190e0 <line:5:1, line:13:1> line:6:1 referenced nextfile 'void (FLAG)' inline
+  |-ParmVarDecl 0x7fc791818fe0 <col:11, col:16> col:16 used exitiflast 'FLAG':'FLAG'
+  `-CompoundStmt 0x7fc791819408 <line:7:1, line:13:1>
+    |-IfStmt 0x7fc7918192c0 <line:8:3, line:11:18>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc7918191b0 <line:8:7> 'FLAG':'FLAG' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc791819188 <col:7> 'FLAG':'FLAG' lvalue ParmVar 0x7fc791818fe0 'exitiflast' 'FLAG':'FLAG'
+    | |-CallExpr 0x7fc791819230 <line:9:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc791819218 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc7918191c8 <col:5> 'void ()' Function 0x7fc791818c00 'quit_mined' 'void ()'
+    | `-CallExpr 0x7fc791819298 <line:11:5, col:18> 'void'
+    |   `-ImplicitCastExpr 0x7fc791819280 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fc791819258 <col:5> 'void ()' Function 0x7fc791818d00 'bottom_line' 'void ()'
+    `-CallExpr 0x7fc7918193c0 <line:12:3, col:17> 'void'
+      |-ImplicitCastExpr 0x7fc7918193a8 <col:3> 'void (*)(FLAG)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc7918192f8 <col:3> 'void (FLAG)' Function 0x7fc7918190e0 'nextfile' 'void (FLAG)'
+      `-ImplicitCastExpr 0x7fc7918193f0 <col:13> 'FLAG':'FLAG' <IntegralCast>
+        `-DeclRefExpr 0x7fc791819320 <col:13> 'int' EnumConstant 0x7fc791818ea8 'True' 'int'

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc28c02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc28c06e858 <../Data/C2AST/pr20000.c:5:1, col:37> col:5 g 'int (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fc28c06e9d0 <line:6:1, col:38> col:5 g2 'int (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fc28c06eb60 <line:7:1, col:38> col:6 used h 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fc28c06ec98 prev 0x7fc28c06e858 <line:10:1, line:12:1> line:10:5 g 'int (void) __attribute__((noreturn))'
+| `-CompoundStmt 0x7fc28c06ed70 <col:13, line:12:1>
+|   `-ReturnStmt 0x7fc28c06ed58 <line:11:3, col:10>
+|     `-IntegerLiteral 0x7fc28c06ed38 <col:10> 'int' 1
+|-FunctionDecl 0x7fc28c06ee20 prev 0x7fc28c06e9d0 <line:14:1, line:16:1> line:14:5 g2 'int (void) __attribute__((noreturn))'
+| `-CompoundStmt 0x7fc28c06ef58 <col:14, line:16:1>
+|   `-CallExpr 0x7fc28c06ef30 <line:15:3, col:5> 'void'
+|     `-ImplicitCastExpr 0x7fc28c06ef18 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fc28c06eec0 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fc28c06eb60 'h' 'void (void) __attribute__((noreturn))'
+|-TypedefDecl 0x7fc28c06f008 <line:18:1, col:20> col:13 referenced ft 'int (void)'
+| `-FunctionProtoType 0x7fc28c02c9d0 'int (void)' cdecl
+|   `-BuiltinType 0x7fc28c02bde0 'int'
+|-FunctionDecl 0x7fc28c06f090 <line:19:1, col:13> col:13 vg 'ft':'int (void)'
+|-FunctionDecl 0x7fc28c06f140 <line:20:1, col:13> col:13 vg2 'ft':'int (void)'
+|-FunctionDecl 0x7fc28c06f278 prev 0x7fc28c06f090 <line:22:1, col:12> col:5 vg 'ft':'int (void)'
+|-FunctionDecl 0x7fc28c06f3b0 prev 0x7fc28c06f140 <line:23:1, col:13> col:5 vg2 'ft':'int (void)'
+|-FunctionDecl 0x7fc28c06f4e8 prev 0x7fc28c06f278 <line:25:1, line:27:1> line:25:5 vg 'ft':'int (void)'
+| `-CompoundStmt 0x7fc28c06f5c0 <col:14, line:27:1>
+|   `-ReturnStmt 0x7fc28c06f5a8 <line:26:3, col:10>
+|     `-IntegerLiteral 0x7fc28c06f588 <col:10> 'int' 1
+`-FunctionDecl 0x7fc28c06f670 prev 0x7fc28c06f3b0 <line:29:1, line:31:1> line:29:5 vg2 'ft':'int (void)'
+  `-CompoundStmt 0x7fc28c06f778 <col:15, line:31:1>
+    `-CallExpr 0x7fc28c06f750 <line:30:3, col:5> 'void'
+      `-ImplicitCastExpr 0x7fc28c06f738 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fc28c06f710 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fc28c06eb60 'h' 'void (void) __attribute__((noreturn))'

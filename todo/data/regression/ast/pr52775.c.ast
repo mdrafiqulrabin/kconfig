@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f819f0274e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f819f814268 <../Data/C2AST/pr52775.c:7:1, line:11:1> line:8:1 int_to_double 'double (int *)'
+| |-ParmVarDecl 0x7f819f0281a0 <col:16, col:21> col:21 used p 'int *'
+| `-CompoundStmt 0x7f819f814420 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f819f814408 <line:10:3, col:19>
+|     `-CStyleCastExpr 0x7f819f8143e0 <col:10, col:19> 'double' <IntegralToFloating>
+|       `-ImplicitCastExpr 0x7f819f8143c8 <col:18, col:19> 'int' <LValueToRValue>
+|         `-UnaryOperator 0x7f819f814390 <col:18, col:19> 'int' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7f819f814378 <col:19> 'int *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f819f814350 <col:19> 'int *' lvalue ParmVar 0x7f819f0281a0 'p' 'int *'
+`-FunctionDecl 0x7f819f814548 <line:13:1, line:17:1> line:14:1 long_long_to_double 'double (long long *)'
+  |-ParmVarDecl 0x7f819f814480 <col:22, col:33> col:33 used p 'long long *'
+  `-CompoundStmt 0x7f819f8146c0 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7f819f8146a8 <line:16:3, col:19>
+      `-CStyleCastExpr 0x7f819f814680 <col:10, col:19> 'double' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7f819f814668 <col:18, col:19> 'long long' <LValueToRValue>
+          `-UnaryOperator 0x7f819f814630 <col:18, col:19> 'long long' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7f819f814618 <col:19> 'long long *' <LValueToRValue>
+              `-DeclRefExpr 0x7f819f8145f0 <col:19> 'long long *' lvalue ParmVar 0x7f819f814480 'p' 'long long *'

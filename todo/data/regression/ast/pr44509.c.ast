@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7f8c8d016ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8c8b826c28 <../Data/C2AST/pr44509.c:5:1, line:9:1> line:6:1 foo 'double (void)'
+  `-CompoundStmt 0x7f8c8b826da0 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7f8c8b826d88 <line:8:3, <built-in>:126:21>
+      `-BinaryOperator 0x7f8c8b826d60 <line:140:21, line:126:21> 'double' '-'
+        |-FloatingLiteral 0x7f8c8b826d08 <line:140:21> 'double' 1.797693e+308
+        `-ImplicitCastExpr 0x7f8c8b826d48 <line:126:21> 'double' <FloatingCast>
+          `-FloatingLiteral 0x7f8c8b826d28 <col:21> 'float' 3.402823e+38

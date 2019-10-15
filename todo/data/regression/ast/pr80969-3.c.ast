@@ -1,0 +1,87 @@
+TranslationUnitDecl 0x7fa1ef82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa1ef8a24d0 <../Data/C2AST/pr80969-3.c:10:1, col:9> col:5 used a 'int [56]'
+|-VarDecl 0x7fa1ef8a2588 <line:11:1, col:19> col:14 used b 'volatile int' cinit
+| `-UnaryOperator 0x7fa1ef8a2608 <col:18, col:19> 'int' prefix '-'
+|   `-IntegerLiteral 0x7fa1ef8a25e8 <col:19> 'int' 12345
+|-VarDecl 0x7fa1ef8a2640 <line:12:1, col:24> col:20 used d 'const volatile int' cinit
+| `-IntegerLiteral 0x7fa1ef8a26a0 <col:24> 'int' 42
+|-FunctionDecl 0x7fa1ef8a28d0 <line:14:1, line:16:1> line:14:6 used foo 'void (int *, int, int)'
+| |-ParmVarDecl 0x7fa1ef8a2700 <col:11, col:16> col:16 x 'int *'
+| |-ParmVarDecl 0x7fa1ef8a2778 <col:19, col:23> col:23 y 'int'
+| |-ParmVarDecl 0x7fa1ef8a27f0 <col:26, col:30> col:30 z 'int'
+| `-CompoundStmt 0x7fa1ef8a2988 <line:15:1, line:16:1>
+|-VarDecl 0x7fa1ef8a2bd0 <line:18:1, col:54> col:23 used foo_noinfo 'void (*const volatile)(int *, int, int)' cinit
+| `-ImplicitCastExpr 0x7fa1ef8a2c58 <col:54> 'void (*)(int *, int, int)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fa1ef8a2c30 <col:54> 'void (int *, int, int)' Function 0x7fa1ef8a28d0 'foo' 'void (int *, int, int)'
+|-FunctionDecl 0x7fa1ef8a56b8 <line:20:1, line:32:1> line:20:5 main 'int (int, char **)'
+| |-ParmVarDecl 0x7fa1ef8a2c88 <col:11, col:15> col:15 argc 'int'
+| |-ParmVarDecl 0x7fa1ef8a2da0 <col:21, col:32> col:27 argv 'char **':'char **'
+| `-CompoundStmt 0x7fa1ef8a61e0 <col:35, line:32:1>
+|   |-DeclStmt 0x7fa1ef8a57e0 <line:21:3, col:8>
+|   | `-VarDecl 0x7fa1ef8a5780 <col:3, col:7> col:7 used c 'int'
+|   |-DeclStmt 0x7fa1ef8a5ae8 <line:22:3, col:22>
+|   | `-VarDecl 0x7fa1ef8a5810 <col:3, /usr/include/alloca.h:40:45> ../Data/C2AST/pr80969-3.c:22:8 used e 'int *' cinit
+|   |   `-ImplicitCastExpr 0x7fa1ef8a5ad0 </usr/include/alloca.h:40:24, col:45> 'int *' <BitCast>
+|   |     `-CallExpr 0x7fa1ef8a5a70 <col:24, col:45> 'void *'
+|   |       |-ImplicitCastExpr 0x7fa1ef8a5a58 <col:24> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fa1ef8a59c0 <col:24> '<builtin fn type>' Function 0x7fa1ef8a5870 '__builtin_alloca' 'void *(unsigned long)'
+|   |       `-ImplicitCastExpr 0x7fa1ef8a5ab8 <../Data/C2AST/pr80969-3.c:22:20> 'unsigned long' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7fa1ef8a5aa0 <col:20> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa1ef8a59e8 <col:20> 'const volatile int' lvalue Var 0x7fa1ef8a2640 'd' 'const volatile int'
+|   |-CallExpr 0x7fa1ef8a5bb0 <line:23:3, col:22> 'void'
+|   | |-ImplicitCastExpr 0x7fa1ef8a5b98 <col:3> 'void (*)(int *, int, int)' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa1ef8a5b00 <col:3> 'void (*const volatile)(int *, int, int)' lvalue Var 0x7fa1ef8a2bd0 'foo_noinfo' 'void (*const volatile)(int *, int, int)'
+|   | |-ImplicitCastExpr 0x7fa1ef8a5bf0 <col:15> 'int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa1ef8a5b28 <col:15> 'int *' lvalue Var 0x7fa1ef8a5810 'e' 'int *'
+|   | |-ImplicitCastExpr 0x7fa1ef8a5c08 <col:18> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa1ef8a5b50 <col:18> 'const volatile int' lvalue Var 0x7fa1ef8a2640 'd' 'const volatile int'
+|   | `-IntegerLiteral 0x7fa1ef8a5b78 <col:21> 'int' 0
+|   |-ForStmt 0x7fa1ef8a6170 <line:24:3, line:30:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fa1ef8a5c48 <line:24:10> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fa1ef8a5c20 <col:10> 'volatile int' lvalue Var 0x7fa1ef8a2588 'b' 'volatile int'
+|   | |-UnaryOperator 0x7fa1ef8a5c88 <col:13, col:14> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fa1ef8a5c60 <col:13> 'volatile int' lvalue Var 0x7fa1ef8a2588 'b' 'volatile int'
+|   | `-CompoundStmt 0x7fa1ef8a6140 <col:18, line:30:3>
+|   |   |-BinaryOperator 0x7fa1ef8a5d10 <line:25:5, col:9> 'int' '='
+|   |   | |-DeclRefExpr 0x7fa1ef8a5ca8 <col:5> 'int' lvalue Var 0x7fa1ef8a5780 'c' 'int'
+|   |   | `-ImplicitCastExpr 0x7fa1ef8a5cf8 <col:9> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa1ef8a5cd0 <col:9> 'volatile int' lvalue Var 0x7fa1ef8a2588 'b' 'volatile int'
+|   |   |-IfStmt 0x7fa1ef8a5e30 <line:26:5, line:27:11>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fa1ef8a5d98 <line:26:9, col:13> 'int' '&'
+|   |   | | |-ImplicitCastExpr 0x7fa1ef8a5d80 <col:9> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fa1ef8a5d38 <col:9> 'volatile int' lvalue Var 0x7fa1ef8a2588 'b' 'volatile int'
+|   |   | | `-IntegerLiteral 0x7fa1ef8a5d60 <col:13> 'int' 1
+|   |   | |-BinaryOperator 0x7fa1ef8a5e08 <line:27:7, col:11> 'int' '='
+|   |   | | |-DeclRefExpr 0x7fa1ef8a5dc0 <col:7> 'int' lvalue Var 0x7fa1ef8a5780 'c' 'int'
+|   |   | | `-IntegerLiteral 0x7fa1ef8a5de8 <col:11> 'int' 2
+|   |   | `-<<<NULL>>>
+|   |   |-CallExpr 0x7fa1ef8a5f20 <line:28:5, col:24> 'void'
+|   |   | |-ImplicitCastExpr 0x7fa1ef8a5f08 <col:5> 'void (*)(int *, int, int)' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa1ef8a5e68 <col:5> 'void (*const volatile)(int *, int, int)' lvalue Var 0x7fa1ef8a2bd0 'foo_noinfo' 'void (*const volatile)(int *, int, int)'
+|   |   | |-ImplicitCastExpr 0x7fa1ef8a5f60 <col:17> 'int *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa1ef8a5e90 <col:17> 'int *' lvalue Var 0x7fa1ef8a5810 'e' 'int *'
+|   |   | |-ImplicitCastExpr 0x7fa1ef8a5f78 <col:20> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa1ef8a5eb8 <col:20> 'const volatile int' lvalue Var 0x7fa1ef8a2640 'd' 'const volatile int'
+|   |   | `-ImplicitCastExpr 0x7fa1ef8a5f90 <col:23> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa1ef8a5ee0 <col:23> 'int' lvalue Var 0x7fa1ef8a5780 'c' 'int'
+|   |   `-BinaryOperator 0x7fa1ef8a6118 <line:29:5, col:20> 'int' '='
+|   |     |-ArraySubscriptExpr 0x7fa1ef8a60b0 <col:5, col:16> 'int' lvalue
+|   |     | |-ImplicitCastExpr 0x7fa1ef8a6098 <col:5> 'int *' <ArrayToPointerDecay>
+|   |     | | `-DeclRefExpr 0x7fa1ef8a5fa8 <col:5> 'int [56]' lvalue Var 0x7fa1ef8a24d0 'a' 'int [56]'
+|   |     | `-UnaryOperator 0x7fa1ef8a6078 <col:7, col:15> 'int' prefix '-'
+|   |     |   `-ParenExpr 0x7fa1ef8a6058 <col:8, col:15> 'int'
+|   |     |     `-BinaryOperator 0x7fa1ef8a6030 <col:9, col:13> 'int' '%'
+|   |     |       |-ImplicitCastExpr 0x7fa1ef8a6018 <col:9> 'int' <LValueToRValue>
+|   |     |       | `-DeclRefExpr 0x7fa1ef8a5fd0 <col:9> 'volatile int' lvalue Var 0x7fa1ef8a2588 'b' 'volatile int'
+|   |     |       `-IntegerLiteral 0x7fa1ef8a5ff8 <col:13> 'int' 56
+|   |     `-ImplicitCastExpr 0x7fa1ef8a6100 <col:20> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa1ef8a60d8 <col:20> 'int' lvalue Var 0x7fa1ef8a5780 'c' 'int'
+|   `-ReturnStmt 0x7fa1ef8a61c8 <line:31:3, col:10>
+|     `-IntegerLiteral 0x7fa1ef8a61a8 <col:10> 'int' 0
+`-FunctionDecl 0x7fa1ef8a5870 </usr/include/alloca.h:40:24> col:24 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7fa1ef8a5910 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fa1ef8a5978 <col:24> Implicit

@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7f9a7182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9a72014268 <../Data/C2AST/pr83862.c:13:1, col:50> col:5 sbr 'int (long double)'
+| |-ParmVarDecl 0x7f9a7182c978 <line:10:14, line:13:15> col:15 used a 'long double'
+| `-CompoundStmt 0x7f9a72014560 <col:18, col:50>
+|   `-ReturnStmt 0x7f9a72014548 <col:20, col:47>
+|     `-CallExpr 0x7f9a72014500 <col:27, col:47> 'int'
+|       |-ImplicitCastExpr 0x7f9a720144e8 <col:27> 'int (*)()' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f9a72014470 <col:27> '<builtin fn type>' Function 0x7f9a72014378 '__builtin_signbit' 'int ()'
+|       `-ImplicitCastExpr 0x7f9a72014530 <col:46> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9a72014498 <col:46> 'long double' lvalue ParmVar 0x7f9a7182c978 'a' 'long double'
+|-FunctionDecl 0x7f9a72014378 <col:27> col:27 implicit used __builtin_signbit 'int ()' extern
+| |-NoThrowAttr 0x7f9a72014418 <col:27> Implicit
+| `-ConstAttr 0x7f9a72014460 <col:27> Implicit
+|-FunctionDecl 0x7f9a72014688 <line:14:1, col:52> col:5 sbm 'int (long double *)'
+| |-ParmVarDecl 0x7f9a720145c0 <line:10:14, line:14:16> col:16 used a 'long double *'
+| `-CompoundStmt 0x7f9a72014830 <col:19, col:52>
+|   `-ReturnStmt 0x7f9a72014818 <col:21, col:49>
+|     `-CallExpr 0x7f9a720147d0 <col:28, col:49> 'int'
+|       |-ImplicitCastExpr 0x7f9a720147b8 <col:28> 'int (*)()' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f9a72014730 <col:28> '<builtin fn type>' Function 0x7f9a72014378 '__builtin_signbit' 'int ()'
+|       `-ImplicitCastExpr 0x7f9a72014800 <col:47, col:48> 'long double' <LValueToRValue>
+|         `-UnaryOperator 0x7f9a72014798 <col:47, col:48> 'long double' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7f9a72014780 <col:48> 'long double *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9a72014758 <col:48> 'long double *' lvalue ParmVar 0x7f9a720145c0 'a' 'long double *'
+|-FunctionDecl 0x7f9a720148f0 <line:15:1, col:54> col:5 sbo 'int (long double *)'
+| |-ParmVarDecl 0x7f9a72014860 <line:10:14, line:15:16> col:16 used a 'long double *'
+| `-CompoundStmt 0x7f9a72014ac0 <col:19, col:54>
+|   `-ReturnStmt 0x7f9a72014aa8 <col:21, col:51>
+|     `-CallExpr 0x7f9a72014a60 <col:28, col:51> 'int'
+|       |-ImplicitCastExpr 0x7f9a72014a48 <col:28> 'int (*)()' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f9a72014998 <col:28> '<builtin fn type>' Function 0x7f9a72014378 '__builtin_signbit' 'int ()'
+|       `-ImplicitCastExpr 0x7f9a72014a90 <col:47, col:50> 'long double' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f9a72014a20 <col:47, col:50> 'long double' lvalue
+|           |-ImplicitCastExpr 0x7f9a72014a08 <col:47> 'long double *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f9a720149c0 <col:47> 'long double *' lvalue ParmVar 0x7f9a72014860 'a' 'long double *'
+|           `-IntegerLiteral 0x7f9a720149e8 <col:49> 'int' 4
+|-FunctionDecl 0x7f9a72014c48 <line:16:1, col:71> col:5 sbi 'int (long double *, unsigned long)'
+| |-ParmVarDecl 0x7f9a72014af0 <line:10:14, line:16:16> col:16 used a 'long double *'
+| |-ParmVarDecl 0x7f9a72014b68 <col:19, col:33> col:33 used n 'unsigned long'
+| `-CompoundStmt 0x7f9a72014e40 <col:36, col:71>
+|   `-ReturnStmt 0x7f9a72014e28 <col:38, col:68>
+|     `-CallExpr 0x7f9a72014de0 <col:45, col:68> 'int'
+|       |-ImplicitCastExpr 0x7f9a72014dc8 <col:45> 'int (*)()' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f9a72014cf8 <col:45> '<builtin fn type>' Function 0x7f9a72014378 '__builtin_signbit' 'int ()'
+|       `-ImplicitCastExpr 0x7f9a72014e10 <col:64, col:67> 'long double' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f9a72014da0 <col:64, col:67> 'long double' lvalue
+|           |-ImplicitCastExpr 0x7f9a72014d70 <col:64> 'long double *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f9a72014d20 <col:64> 'long double *' lvalue ParmVar 0x7f9a72014af0 'a' 'long double *'
+|           `-ImplicitCastExpr 0x7f9a72014d88 <col:66> 'unsigned long' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9a72014d48 <col:66> 'unsigned long' lvalue ParmVar 0x7f9a72014b68 'n' 'unsigned long'
+`-FunctionDecl 0x7f9a72014ff0 <line:17:1, col:57> col:6 sbs 'void (int *, long double)'
+  |-ParmVarDecl 0x7f9a72014ea0 <col:11, col:16> col:16 used p 'int *'
+  |-ParmVarDecl 0x7f9a72014f18 <line:10:14, line:17:24> col:24 used a 'long double'
+  `-CompoundStmt 0x7f9a720151d8 <col:27, col:57>
+    `-BinaryOperator 0x7f9a720151b0 <col:29, col:54> 'int' '='
+      |-UnaryOperator 0x7f9a720150e0 <col:29, col:30> 'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7f9a720150c8 <col:30> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9a720150a0 <col:30> 'int *' lvalue ParmVar 0x7f9a72014ea0 'p' 'int *'
+      `-CallExpr 0x7f9a72015168 <col:34, col:54> 'int'
+        |-ImplicitCastExpr 0x7f9a72015150 <col:34> 'int (*)()' <BuiltinFnToFnPtr>
+        | `-DeclRefExpr 0x7f9a72015100 <col:34> '<builtin fn type>' Function 0x7f9a72014378 '__builtin_signbit' 'int ()'
+        `-ImplicitCastExpr 0x7f9a72015198 <col:53> 'long double' <LValueToRValue>
+          `-DeclRefExpr 0x7f9a72015128 <col:53> 'long double' lvalue ParmVar 0x7f9a72014f18 'a' 'long double'

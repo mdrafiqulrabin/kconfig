@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7fdb2802bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdb28814220 <../Data/C2AST/pr52448.c:5:1, col:41> col:13 used perhaps_free_something 'void (void)' extern
+|-FunctionDecl 0x7fdb28814620 <line:7:1, line:14:1> line:7:6 f1 'void (int *, int, int, int, int)'
+| |-ParmVarDecl 0x7fdb28814340 <col:10, col:15> col:15 used p 'int *'
+| |-ParmVarDecl 0x7fdb288143b8 <col:18, col:22> col:22 used a 'int'
+| |-ParmVarDecl 0x7fdb28814430 <col:25, col:29> col:29 used b 'int'
+| |-ParmVarDecl 0x7fdb288144a8 <col:32, col:36> col:36 used cond 'int'
+| |-ParmVarDecl 0x7fdb28814520 <col:42, col:46> col:46 used cond2 'int'
+| `-CompoundStmt 0x7fdb28814a00 <line:8:1, line:14:1>
+|   |-BinaryOperator 0x7fdb28814788 <line:9:3, col:8> 'int' '='
+|   | |-UnaryOperator 0x7fdb28814728 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fdb28814710 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fdb288146e8 <col:4> 'int *' lvalue ParmVar 0x7fdb28814340 'p' 'int *'
+|   | `-ImplicitCastExpr 0x7fdb28814770 <col:8> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fdb28814748 <col:8> 'int' lvalue ParmVar 0x7fdb288143b8 'a' 'int'
+|   |-IfStmt 0x7fdb28814888 <line:10:3, line:11:29>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fdb288147d8 <line:10:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fdb288147b0 <col:7> 'int' lvalue ParmVar 0x7fdb288144a8 'cond' 'int'
+|   | |-CallExpr 0x7fdb28814860 <line:11:5, col:29> 'void'
+|   | | `-ImplicitCastExpr 0x7fdb28814848 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fdb288147f0 <col:5> 'void (void)' Function 0x7fdb28814220 'perhaps_free_something' 'void (void)'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7fdb288149c8 <line:12:3, line:13:10>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fdb288148e8 <line:12:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fdb288148c0 <col:7> 'int' lvalue ParmVar 0x7fdb28814520 'cond2' 'int'
+|     |-BinaryOperator 0x7fdb288149a0 <line:13:5, col:10> 'int' '='
+|     | |-UnaryOperator 0x7fdb28814940 <col:5, col:6> 'int' lvalue prefix '*'
+|     | | `-ImplicitCastExpr 0x7fdb28814928 <col:6> 'int *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fdb28814900 <col:6> 'int *' lvalue ParmVar 0x7fdb28814340 'p' 'int *'
+|     | `-ImplicitCastExpr 0x7fdb28814988 <col:10> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fdb28814960 <col:10> 'int' lvalue ParmVar 0x7fdb28814430 'b' 'int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fdb28814d20 <line:16:1, line:26:1> line:16:6 f2 'void (int *, int, int, int *, int *)'
+  |-ParmVarDecl 0x7fdb28814a40 <col:10, col:15> col:15 used p 'int *'
+  |-ParmVarDecl 0x7fdb28814ab8 <col:18, col:22> col:22 used a 'int'
+  |-ParmVarDecl 0x7fdb28814b30 <col:25, col:29> col:29 used b 'int'
+  |-ParmVarDecl 0x7fdb28814ba8 <col:32, col:37> col:37 used cond 'int *'
+  |-ParmVarDecl 0x7fdb28814c20 <col:43, col:48> col:48 used cond2 'int *'
+  `-CompoundStmt 0x7fdb28815338 <line:17:1, line:26:1>
+    |-DeclStmt 0x7fdb28814e60 <line:18:3, col:8>
+    | `-VarDecl 0x7fdb28814e00 <col:3, col:7> col:7 used i 'int'
+    |-BinaryOperator 0x7fdb28814f18 <line:19:3, col:8> 'int' '='
+    | |-UnaryOperator 0x7fdb28814eb8 <col:3, col:4> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fdb28814ea0 <col:4> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fdb28814e78 <col:4> 'int *' lvalue ParmVar 0x7fdb28814a40 'p' 'int *'
+    | `-ImplicitCastExpr 0x7fdb28814f00 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdb28814ed8 <col:8> 'int' lvalue ParmVar 0x7fdb28814ab8 'a' 'int'
+    `-ForStmt 0x7fdb28815300 <line:20:3, line:25:5>
+      |-BinaryOperator 0x7fdb28814f88 <line:20:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fdb28814f40 <col:8> 'int' lvalue Var 0x7fdb28814e00 'i' 'int'
+      | `-IntegerLiteral 0x7fdb28814f68 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fdb28815058 <col:15, col:21> 'int' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fdb28815030 <col:15, col:21> 'int' lvalue
+      |   |-ImplicitCastExpr 0x7fdb28815000 <col:15> 'int *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fdb28814fb0 <col:15> 'int *' lvalue ParmVar 0x7fdb28814ba8 'cond' 'int *'
+      |   `-ImplicitCastExpr 0x7fdb28815018 <col:20> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fdb28814fd8 <col:20> 'int' lvalue Var 0x7fdb28814e00 'i' 'int'
+      |-UnaryOperator 0x7fdb28815098 <col:24, col:25> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fdb28815070 <col:24> 'int' lvalue Var 0x7fdb28814e00 'i' 'int'
+      `-CompoundStmt 0x7fdb288152e0 <line:21:5, line:25:5>
+        |-IfStmt 0x7fdb28815240 <line:22:7, line:23:14>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fdb28815160 <line:22:11, col:18> 'int' <LValueToRValue>
+        | | `-ArraySubscriptExpr 0x7fdb28815138 <col:11, col:18> 'int' lvalue
+        | |   |-ImplicitCastExpr 0x7fdb28815108 <col:11> 'int *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fdb288150b8 <col:11> 'int *' lvalue ParmVar 0x7fdb28814c20 'cond2' 'int *'
+        | |   `-ImplicitCastExpr 0x7fdb28815120 <col:17> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fdb288150e0 <col:17> 'int' lvalue Var 0x7fdb28814e00 'i' 'int'
+        | |-BinaryOperator 0x7fdb28815218 <line:23:9, col:14> 'int' '='
+        | | |-UnaryOperator 0x7fdb288151b8 <col:9, col:10> 'int' lvalue prefix '*'
+        | | | `-ImplicitCastExpr 0x7fdb288151a0 <col:10> 'int *' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fdb28815178 <col:10> 'int *' lvalue ParmVar 0x7fdb28814a40 'p' 'int *'
+        | | `-ImplicitCastExpr 0x7fdb28815200 <col:14> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fdb288151d8 <col:14> 'int' lvalue ParmVar 0x7fdb28814b30 'b' 'int'
+        | `-<<<NULL>>>
+        `-CallExpr 0x7fdb288152b8 <line:24:7, col:31> 'void'
+          `-ImplicitCastExpr 0x7fdb288152a0 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fdb28815278 <col:7> 'void (void)' Function 0x7fdb28814220 'perhaps_free_something' 'void (void)'

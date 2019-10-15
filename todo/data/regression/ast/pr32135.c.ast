@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fa70102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa70102c960 <../Data/C2AST/pr32135.c:3:1, line:6:1> line:3:8 struct PhaseEntryType definition
+| `-FieldDecl 0x7fa7018142e8 <line:5:3, col:24> col:8 referenced raw_field 'char [51]'
+|-FunctionDecl 0x7fa7018146a8 <line:7:1, line:11:1> line:8:1 ParsePhase 'int (char (*)[250], struct PhaseEntryType *)'
+| |-ParmVarDecl 0x7fa701814480 <col:13, col:33> col:18 used in_cols 'char (*)[250]':'char (*)[250]'
+| |-ParmVarDecl 0x7fa701814590 <col:36, col:59> col:59 used P 'struct PhaseEntryType *'
+| `-CompoundStmt 0x7fa701814c60 <line:9:1, line:11:1>
+|   `-CallExpr 0x7fa701814bc0 <line:10:3, col:50> 'char *'
+|     |-ImplicitCastExpr 0x7fa701814ba8 <col:3> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fa701814a08 <col:3> '<builtin fn type>' Function 0x7fa7018147e8 '__builtin_strncpy' 'char *(char *, const char *, unsigned long)'
+|     |-ImplicitCastExpr 0x7fa701814c00 <col:22, col:25> 'char *' <ArrayToPointerDecay>
+|     | `-MemberExpr 0x7fa701814a70 <col:22, col:25> 'char [51]' lvalue ->raw_field 0x7fa7018142e8
+|     |   `-ImplicitCastExpr 0x7fa701814a58 <col:22> 'struct PhaseEntryType *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fa701814a30 <col:22> 'struct PhaseEntryType *' lvalue ParmVar 0x7fa701814590 'P' 'struct PhaseEntryType *'
+|     |-ImplicitCastExpr 0x7fa701814c30 <col:36, col:45> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fa701814c18 <col:36, col:45> 'char *' <ArrayToPointerDecay>
+|     |   `-ArraySubscriptExpr 0x7fa701814b08 <col:36, col:45> 'char [250]' lvalue
+|     |     |-ImplicitCastExpr 0x7fa701814af0 <col:36> 'char (*)[250]':'char (*)[250]' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7fa701814aa8 <col:36> 'char (*)[250]':'char (*)[250]' lvalue ParmVar 0x7fa701814480 'in_cols' 'char (*)[250]':'char (*)[250]'
+|     |     `-IntegerLiteral 0x7fa701814ad0 <col:44> 'int' 2
+|     `-ImplicitCastExpr 0x7fa701814c48 <col:48> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7fa701814b30 <col:48> 'int' 50
+`-FunctionDecl 0x7fa7018147e8 <col:3> col:3 implicit used __builtin_strncpy 'char *(char *, const char *, unsigned long)' extern
+  |-ParmVarDecl 0x7fa701814888 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7fa7018148e8 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-ParmVarDecl 0x7fa701814948 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fa7018149c0 <col:3> Implicit

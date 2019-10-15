@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f80fd82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f80fd86e800 <../Data/C2AST/pr28268.c:3:1, col:37> col:37 used a '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+`-FunctionDecl 0x7f80fd86e8e8 <line:5:1, line:8:1> line:5:6 foo 'void ()'
+  `-CompoundStmt 0x7f80fd86ea90 <line:6:1, line:8:1>
+    `-CompoundAssignOperator 0x7f80fd86ea58 <line:7:5, col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '+=' ComputeLHSTy='__attribute__((__vector_size__(2 * sizeof(int)))) int' ComputeResultTy='__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      |-DeclRefExpr 0x7f80fd86e988 <col:5> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f80fd86e800 'a' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      `-BinaryOperator 0x7f80fd86ea30 <col:10, col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+        |-ImplicitCastExpr 0x7f80fd86ea00 <col:10> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f80fd86e9b0 <col:10> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f80fd86e800 'a' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7f80fd86ea18 <col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7f80fd86e9d8 <col:12> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f80fd86e800 'a' '__attribute__((__vector_size__(2 * sizeof(int)))) int'

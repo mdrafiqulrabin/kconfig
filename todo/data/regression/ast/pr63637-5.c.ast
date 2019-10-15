@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f9d868246e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9d8581ae28 <../Data/C2AST/pr63637-5.c:5:1, line:13:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7f9d8581b8f0 <line:7:1, line:13:1>
+    |-DeclStmt 0x7f9d8581b210 <line:8:3, col:23>
+    | |-VarDecl 0x7f9d8581af20 <col:3, col:7> col:7 used a 'int'
+    | |-VarDecl 0x7f9d8581af98 <col:3, col:10> col:10 used b 'int'
+    | |-VarDecl 0x7f9d8581b010 <col:3, col:13> col:13 used c 'int'
+    | |-VarDecl 0x7f9d8581b088 <col:3, col:16> col:16 used d 'int'
+    | |-VarDecl 0x7f9d8581b100 <col:3, col:19> col:19 used e 'int'
+    | `-VarDecl 0x7f9d8581b178 <col:3, col:22> col:22 used f 'int'
+    |-GCCAsmStmt 0x7f9d8581b408 <line:9:3, col:60>
+    | |-DeclRefExpr 0x7f9d8581b318 <col:38> 'int' lvalue Var 0x7f9d8581af20 'a' 'int'
+    | `-DeclRefExpr 0x7f9d8581b370 <col:48> 'int' lvalue Var 0x7f9d8581b088 'd' 'int'
+    |-GCCAsmStmt 0x7f9d8581b5a8 <line:10:3, col:60>
+    | |-DeclRefExpr 0x7f9d8581b4f8 <col:38> 'int' lvalue Var 0x7f9d8581af98 'b' 'int'
+    | `-DeclRefExpr 0x7f9d8581b550 <col:48> 'int' lvalue Var 0x7f9d8581b100 'e' 'int'
+    |-GCCAsmStmt 0x7f9d8581b748 <line:11:3, col:60>
+    | |-DeclRefExpr 0x7f9d8581b698 <col:38> 'int' lvalue Var 0x7f9d8581b010 'c' 'int'
+    | `-DeclRefExpr 0x7f9d8581b6f0 <col:48> 'int' lvalue Var 0x7f9d8581b178 'f' 'int'
+    `-ReturnStmt 0x7f9d8581b8d8 <line:12:3, col:18>
+      `-BinaryOperator 0x7f9d8581b8b0 <col:10, col:18> 'int' '+'
+        |-BinaryOperator 0x7f9d8581b848 <col:10, col:14> 'int' '+'
+        | |-ImplicitCastExpr 0x7f9d8581b818 <col:10> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f9d8581b7c8 <col:10> 'int' lvalue Var 0x7f9d8581af20 'a' 'int'
+        | `-ImplicitCastExpr 0x7f9d8581b830 <col:14> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f9d8581b7f0 <col:14> 'int' lvalue Var 0x7f9d8581af98 'b' 'int'
+        `-ImplicitCastExpr 0x7f9d8581b898 <col:18> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9d8581b870 <col:18> 'int' lvalue Var 0x7f9d8581b010 'c' 'int'

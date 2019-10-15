@@ -1,0 +1,1033 @@
+TranslationUnitDecl 0x7f951e02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f951e02c960 <../Data/C2AST/pr40692.c:9:1, col:28> col:8 struct A definition
+| |-FieldDecl 0x7f951f011e30 <col:12, col:17> col:17 e 'char'
+| `-FieldDecl 0x7f951f011e88 <col:20, col:25> col:25 referenced f 'char'
+`-FunctionDecl 0x7f951f011f98 <line:11:1, line:15:1> line:12:1 foo 'long (void)'
+  `-CompoundStmt 0x7f951f038ba0 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f951f038b88 <line:14:3, line:7:66>
+      `-ImplicitCastExpr 0x7f951f038b20 <col:15, col:66> 'long' <IntegralCast>
+        `-ParenExpr 0x7f951f038b00 <col:15, col:66> 'unsigned long'
+          `-ConditionalOperator 0x7f951f038ad0 <col:16, line:6:64> 'unsigned long'
+            |-ParenExpr 0x7f951f012310 <line:7:16, col:33> 'unsigned long'
+            | `-BinaryOperator 0x7f951f0122e8 <col:17, col:23> 'unsigned long' '&'
+            |   |-ParenExpr 0x7f951f012290 <col:17, col:19> 'unsigned long'
+            |   | `-BinaryOperator 0x7f951f012268 <line:14:14, col:49> 'unsigned long' '-'
+            |   |   |-IntegerLiteral 0x7f951f012078 <col:14> 'unsigned long' 4096
+            |   |   `-ImplicitCastExpr 0x7f951f012250 <col:23, col:49> 'unsigned long' <IntegralCast>
+            |   |     `-CStyleCastExpr 0x7f951f012228 <col:23, col:49> 'long' <PointerToIntegral>
+            |   |       `-UnaryOperator 0x7f951f0121f0 <col:30, col:49> 'char *' prefix '&'
+            |   |         `-MemberExpr 0x7f951f0121b8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            |   |           `-ParenExpr 0x7f951f012198 <col:31, col:46> 'struct A *'
+            |   |             `-CStyleCastExpr 0x7f951f012170 <col:32, col:45> 'struct A *' <NullToPointer>
+            |   |               `-IntegerLiteral 0x7f951f012098 <col:45> 'int' 0
+            |   `-ImplicitCastExpr 0x7f951f0122d0 <line:7:23> 'unsigned long' <IntegralCast>
+            |     `-IntegerLiteral 0x7f951f0122b0 <col:23> 'unsigned int' 4294901760
+            |-BinaryOperator 0x7f951f0334a8 <line:6:15, line:7:55> 'unsigned long' '<<'
+            | |-ParenExpr 0x7f951f033468 <line:6:15, col:64> 'unsigned long'
+            | | `-ConditionalOperator 0x7f951f033438 <col:16, line:5:64> 'unsigned long'
+            | |   |-ParenExpr 0x7f951f0125a0 <line:6:16, col:33> 'unsigned long'
+            | |   | `-BinaryOperator 0x7f951f012578 <col:17, col:23> 'unsigned long' '&'
+            | |   |   |-ParenExpr 0x7f951f012520 <col:17, col:19> 'unsigned long'
+            | |   |   | `-BinaryOperator 0x7f951f0124f8 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   |   |   |-ParenExpr 0x7f951f0124b8 <col:41, col:43> 'unsigned long'
+            | |   |   |   | `-BinaryOperator 0x7f951f012490 <line:14:14, col:49> 'unsigned long' '-'
+            | |   |   |   |   |-IntegerLiteral 0x7f951f012330 <col:14> 'unsigned long' 4096
+            | |   |   |   |   `-ImplicitCastExpr 0x7f951f012478 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   |   |   |     `-CStyleCastExpr 0x7f951f012450 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   |   |   |       `-UnaryOperator 0x7f951f012418 <col:30, col:49> 'char *' prefix '&'
+            | |   |   |   |         `-MemberExpr 0x7f951f0123e0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   |   |   |           `-ParenExpr 0x7f951f0123c0 <col:31, col:46> 'struct A *'
+            | |   |   |   |             `-CStyleCastExpr 0x7f951f012398 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   |   |   |               `-IntegerLiteral 0x7f951f012350 <col:45> 'int' 0
+            | |   |   |   `-IntegerLiteral 0x7f951f0124d8 <line:7:48> 'int' 16
+            | |   |   `-ImplicitCastExpr 0x7f951f012560 <line:6:23> 'unsigned long' <IntegralCast>
+            | |   |     `-IntegerLiteral 0x7f951f012540 <col:23> 'int' 65280
+            | |   |-BinaryOperator 0x7f951f031040 <line:5:15, line:6:54> 'unsigned long' '<<'
+            | |   | |-ParenExpr 0x7f951f031000 <line:5:15, col:64> 'unsigned long'
+            | |   | | `-ConditionalOperator 0x7f951f030fc8 <col:16, line:4:64> 'unsigned long'
+            | |   | |   |-ParenExpr 0x7f951f012898 <line:5:16, col:33> 'unsigned long'
+            | |   | |   | `-BinaryOperator 0x7f951f012870 <col:17, col:23> 'unsigned long' '&'
+            | |   | |   |   |-ParenExpr 0x7f951f012818 <col:17, col:19> 'unsigned long'
+            | |   | |   |   | `-BinaryOperator 0x7f951f0127f0 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |   |   |   |-ParenExpr 0x7f951f0127b0 <col:41, col:43> 'unsigned long'
+            | |   | |   |   |   | `-BinaryOperator 0x7f951f012788 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |   |   |   |   |-ParenExpr 0x7f951f012748 <col:41, col:43> 'unsigned long'
+            | |   | |   |   |   |   | `-BinaryOperator 0x7f951f012720 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |   |   |   |   |   |-IntegerLiteral 0x7f951f0125c0 <col:14> 'unsigned long' 4096
+            | |   | |   |   |   |   |   `-ImplicitCastExpr 0x7f951f012708 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |   |   |   |   |     `-CStyleCastExpr 0x7f951f0126e0 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |   |   |   |   |       `-UnaryOperator 0x7f951f0126a8 <col:30, col:49> 'char *' prefix '&'
+            | |   | |   |   |   |   |         `-MemberExpr 0x7f951f012670 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |   |   |   |   |           `-ParenExpr 0x7f951f012650 <col:31, col:46> 'struct A *'
+            | |   | |   |   |   |   |             `-CStyleCastExpr 0x7f951f012628 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |   |   |   |   |               `-IntegerLiteral 0x7f951f0125e0 <col:45> 'int' 0
+            | |   | |   |   |   |   `-IntegerLiteral 0x7f951f012768 <line:7:48> 'int' 16
+            | |   | |   |   |   `-IntegerLiteral 0x7f951f0127d0 <line:6:48> 'int' 8
+            | |   | |   |   `-ImplicitCastExpr 0x7f951f012858 <line:5:23> 'unsigned long' <IntegralCast>
+            | |   | |   |     `-IntegerLiteral 0x7f951f012838 <col:23> 'int' 240
+            | |   | |   |-BinaryOperator 0x7f951f02fe50 <line:4:15, line:5:54> 'unsigned long' '<<'
+            | |   | |   | |-ParenExpr 0x7f951f02fe10 <line:4:15, col:64> 'unsigned long'
+            | |   | |   | | `-ConditionalOperator 0x7f951f02fde0 <col:16, line:3:54> 'unsigned long'
+            | |   | |   | |   |-ParenExpr 0x7f951f012bf8 <line:4:16, col:33> 'unsigned long'
+            | |   | |   | |   | `-BinaryOperator 0x7f951f012bd0 <col:17, col:23> 'unsigned long' '&'
+            | |   | |   | |   |   |-ParenExpr 0x7f951f012b78 <col:17, col:19> 'unsigned long'
+            | |   | |   | |   |   | `-BinaryOperator 0x7f951f012b50 <line:5:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   |   |   |-ParenExpr 0x7f951f012b10 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   |   |   | `-BinaryOperator 0x7f951f012ae8 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   |   |   |   |-ParenExpr 0x7f951f012aa8 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   |   |   |   | `-BinaryOperator 0x7f951f012a80 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   |   |   |   |   |-ParenExpr 0x7f951f012a40 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   |   |   |   |   | `-BinaryOperator 0x7f951f012a18 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |   | |   |   |   |   |   |   |-IntegerLiteral 0x7f951f0128b8 <col:14> 'unsigned long' 4096
+            | |   | |   | |   |   |   |   |   |   `-ImplicitCastExpr 0x7f951f012a00 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |   | |   |   |   |   |   |     `-CStyleCastExpr 0x7f951f0129d8 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |   | |   |   |   |   |   |       `-UnaryOperator 0x7f951f0129a0 <col:30, col:49> 'char *' prefix '&'
+            | |   | |   | |   |   |   |   |   |         `-MemberExpr 0x7f951f012968 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |   | |   |   |   |   |   |           `-ParenExpr 0x7f951f012948 <col:31, col:46> 'struct A *'
+            | |   | |   | |   |   |   |   |   |             `-CStyleCastExpr 0x7f951f012920 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |   | |   |   |   |   |   |               `-IntegerLiteral 0x7f951f0128d8 <col:45> 'int' 0
+            | |   | |   | |   |   |   |   |   `-IntegerLiteral 0x7f951f012a60 <line:7:48> 'int' 16
+            | |   | |   | |   |   |   |   `-IntegerLiteral 0x7f951f012ac8 <line:6:48> 'int' 8
+            | |   | |   | |   |   |   `-IntegerLiteral 0x7f951f012b30 <line:5:48> 'int' 4
+            | |   | |   | |   |   `-ImplicitCastExpr 0x7f951f012bb8 <line:4:23> 'unsigned long' <IntegralCast>
+            | |   | |   | |   |     `-IntegerLiteral 0x7f951f012b98 <col:23> 'int' 12
+            | |   | |   | |   |-BinaryOperator 0x7f951f02f670 <line:3:15, line:4:54> 'unsigned long' '<<'
+            | |   | |   | |   | |-ParenExpr 0x7f951f02f630 <line:3:15, col:54> 'unsigned long'
+            | |   | |   | |   | | `-ConditionalOperator 0x7f951f02f600 <col:16, col:53> 'unsigned long'
+            | |   | |   | |   | |   |-ParenExpr 0x7f951f02f1e0 <col:16, col:33> 'unsigned long'
+            | |   | |   | |   | |   | `-BinaryOperator 0x7f951f02f1b8 <col:17, col:23> 'unsigned long' '&'
+            | |   | |   | |   | |   |   |-ParenExpr 0x7f951f02f160 <col:17, col:19> 'unsigned long'
+            | |   | |   | |   | |   |   | `-BinaryOperator 0x7f951f02f138 <line:4:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |   |   |   |-ParenExpr 0x7f951f02f0f8 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |   |   |   | `-BinaryOperator 0x7f951f02f0d0 <line:5:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |   |   |   |   |-ParenExpr 0x7f951f02f090 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |   |   |   |   | `-BinaryOperator 0x7f951f02f068 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |   |   |   |   |   |-ParenExpr 0x7f951f02f028 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |   |   |   |   |   | `-BinaryOperator 0x7f951f02f000 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |   |   |   |   |   |   |-ParenExpr 0x7f951f012da0 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |   |   |   |   |   |   | `-BinaryOperator 0x7f951f012d78 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |   | |   | |   |   |   |   |   |   |   |-IntegerLiteral 0x7f951f012c18 <col:14> 'unsigned long' 4096
+            | |   | |   | |   | |   |   |   |   |   |   |   `-ImplicitCastExpr 0x7f951f012d60 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |   | |   | |   |   |   |   |   |   |     `-CStyleCastExpr 0x7f951f012d38 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |   | |   | |   |   |   |   |   |   |       `-UnaryOperator 0x7f951f012d00 <col:30, col:49> 'char *' prefix '&'
+            | |   | |   | |   | |   |   |   |   |   |   |         `-MemberExpr 0x7f951f012cc8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |   | |   | |   |   |   |   |   |   |           `-ParenExpr 0x7f951f012ca8 <col:31, col:46> 'struct A *'
+            | |   | |   | |   | |   |   |   |   |   |   |             `-CStyleCastExpr 0x7f951f012c80 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |   | |   | |   |   |   |   |   |   |               `-IntegerLiteral 0x7f951f012c38 <col:45> 'int' 0
+            | |   | |   | |   | |   |   |   |   |   |   `-IntegerLiteral 0x7f951f012dc0 <line:7:48> 'int' 16
+            | |   | |   | |   | |   |   |   |   |   `-IntegerLiteral 0x7f951f02f048 <line:6:48> 'int' 8
+            | |   | |   | |   | |   |   |   |   `-IntegerLiteral 0x7f951f02f0b0 <line:5:48> 'int' 4
+            | |   | |   | |   | |   |   |   `-IntegerLiteral 0x7f951f02f118 <line:4:48> 'int' 2
+            | |   | |   | |   | |   |   `-ImplicitCastExpr 0x7f951f02f1a0 <line:3:23> 'unsigned long' <IntegralCast>
+            | |   | |   | |   | |   |     `-IntegerLiteral 0x7f951f02f180 <col:23> 'int' 2
+            | |   | |   | |   | |   |-ImplicitCastExpr 0x7f951f02f5e8 <col:37> 'unsigned long' <IntegralCast>
+            | |   | |   | |   | |   | `-IntegerLiteral 0x7f951f02f200 <col:37> 'int' 2
+            | |   | |   | |   | |   `-ParenExpr 0x7f951f02f5c8 <col:43, col:53> 'unsigned long'
+            | |   | |   | |   | |     `-BinaryOperator 0x7f951f02f5a0 <col:44, col:50> 'unsigned long' '&'
+            | |   | |   | |   | |       |-ParenExpr 0x7f951f02f548 <col:44, col:46> 'unsigned long'
+            | |   | |   | |   | |       | `-BinaryOperator 0x7f951f02f520 <line:4:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |       |   |-ParenExpr 0x7f951f02f4e0 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |       |   | `-BinaryOperator 0x7f951f02f4b8 <line:5:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |       |   |   |-ParenExpr 0x7f951f02f478 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |       |   |   | `-BinaryOperator 0x7f951f02f450 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |       |   |   |   |-ParenExpr 0x7f951f02f410 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |       |   |   |   | `-BinaryOperator 0x7f951f02f3e8 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |   | |       |   |   |   |   |-ParenExpr 0x7f951f02f3a8 <col:41, col:43> 'unsigned long'
+            | |   | |   | |   | |       |   |   |   |   | `-BinaryOperator 0x7f951f02f380 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |   | |   | |       |   |   |   |   |   |-IntegerLiteral 0x7f951f02f220 <col:14> 'unsigned long' 4096
+            | |   | |   | |   | |       |   |   |   |   |   `-ImplicitCastExpr 0x7f951f02f368 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |   | |   | |       |   |   |   |   |     `-CStyleCastExpr 0x7f951f02f340 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |   | |   | |       |   |   |   |   |       `-UnaryOperator 0x7f951f02f308 <col:30, col:49> 'char *' prefix '&'
+            | |   | |   | |   | |       |   |   |   |   |         `-MemberExpr 0x7f951f02f2d0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |   | |   | |       |   |   |   |   |           `-ParenExpr 0x7f951f02f2b0 <col:31, col:46> 'struct A *'
+            | |   | |   | |   | |       |   |   |   |   |             `-CStyleCastExpr 0x7f951f02f288 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |   | |   | |       |   |   |   |   |               `-IntegerLiteral 0x7f951f02f240 <col:45> 'int' 0
+            | |   | |   | |   | |       |   |   |   |   `-IntegerLiteral 0x7f951f02f3c8 <line:7:48> 'int' 16
+            | |   | |   | |   | |       |   |   |   `-IntegerLiteral 0x7f951f02f430 <line:6:48> 'int' 8
+            | |   | |   | |   | |       |   |   `-IntegerLiteral 0x7f951f02f498 <line:5:48> 'int' 4
+            | |   | |   | |   | |       |   `-IntegerLiteral 0x7f951f02f500 <line:4:48> 'int' 2
+            | |   | |   | |   | |       `-ImplicitCastExpr 0x7f951f02f588 <line:3:50> 'unsigned long' <IntegralCast>
+            | |   | |   | |   | |         `-IntegerLiteral 0x7f951f02f568 <col:50> 'int' 1
+            | |   | |   | |   | `-IntegerLiteral 0x7f951f02f650 <line:4:54> 'int' 2
+            | |   | |   | |   `-ParenExpr 0x7f951f02fdc0 <line:3:15, col:54> 'unsigned long'
+            | |   | |   | |     `-ConditionalOperator 0x7f951f02fd90 <col:16, col:53> 'unsigned long'
+            | |   | |   | |       |-ParenExpr 0x7f951f02f9d8 <col:16, col:33> 'unsigned long'
+            | |   | |   | |       | `-BinaryOperator 0x7f951f02f9b0 <col:17, col:23> 'unsigned long' '&'
+            | |   | |   | |       |   |-ParenExpr 0x7f951f02f958 <col:17, col:19> 'unsigned long'
+            | |   | |   | |       |   | `-BinaryOperator 0x7f951f02f930 <line:5:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |       |   |   |-ParenExpr 0x7f951f02f8f0 <col:41, col:43> 'unsigned long'
+            | |   | |   | |       |   |   | `-BinaryOperator 0x7f951f02f8c8 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |       |   |   |   |-ParenExpr 0x7f951f02f888 <col:41, col:43> 'unsigned long'
+            | |   | |   | |       |   |   |   | `-BinaryOperator 0x7f951f02f860 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |       |   |   |   |   |-ParenExpr 0x7f951f02f820 <col:41, col:43> 'unsigned long'
+            | |   | |   | |       |   |   |   |   | `-BinaryOperator 0x7f951f02f7f8 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |   | |       |   |   |   |   |   |-IntegerLiteral 0x7f951f02f698 <col:14> 'unsigned long' 4096
+            | |   | |   | |       |   |   |   |   |   `-ImplicitCastExpr 0x7f951f02f7e0 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |   | |       |   |   |   |   |     `-CStyleCastExpr 0x7f951f02f7b8 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |   | |       |   |   |   |   |       `-UnaryOperator 0x7f951f02f780 <col:30, col:49> 'char *' prefix '&'
+            | |   | |   | |       |   |   |   |   |         `-MemberExpr 0x7f951f02f748 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |   | |       |   |   |   |   |           `-ParenExpr 0x7f951f02f728 <col:31, col:46> 'struct A *'
+            | |   | |   | |       |   |   |   |   |             `-CStyleCastExpr 0x7f951f02f700 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |   | |       |   |   |   |   |               `-IntegerLiteral 0x7f951f02f6b8 <col:45> 'int' 0
+            | |   | |   | |       |   |   |   |   `-IntegerLiteral 0x7f951f02f840 <line:7:48> 'int' 16
+            | |   | |   | |       |   |   |   `-IntegerLiteral 0x7f951f02f8a8 <line:6:48> 'int' 8
+            | |   | |   | |       |   |   `-IntegerLiteral 0x7f951f02f910 <line:5:48> 'int' 4
+            | |   | |   | |       |   `-ImplicitCastExpr 0x7f951f02f998 <line:3:23> 'unsigned long' <IntegralCast>
+            | |   | |   | |       |     `-IntegerLiteral 0x7f951f02f978 <col:23> 'int' 2
+            | |   | |   | |       |-ImplicitCastExpr 0x7f951f02fd78 <col:37> 'unsigned long' <IntegralCast>
+            | |   | |   | |       | `-IntegerLiteral 0x7f951f02f9f8 <col:37> 'int' 2
+            | |   | |   | |       `-ParenExpr 0x7f951f02fd58 <col:43, col:53> 'unsigned long'
+            | |   | |   | |         `-BinaryOperator 0x7f951f02fd30 <col:44, col:50> 'unsigned long' '&'
+            | |   | |   | |           |-ParenExpr 0x7f951f02fcd8 <col:44, col:46> 'unsigned long'
+            | |   | |   | |           | `-BinaryOperator 0x7f951f02fcb0 <line:5:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |           |   |-ParenExpr 0x7f951f02fc70 <col:41, col:43> 'unsigned long'
+            | |   | |   | |           |   | `-BinaryOperator 0x7f951f02fc48 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |           |   |   |-ParenExpr 0x7f951f02fc08 <col:41, col:43> 'unsigned long'
+            | |   | |   | |           |   |   | `-BinaryOperator 0x7f951f02fbe0 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |   | |           |   |   |   |-ParenExpr 0x7f951f02fba0 <col:41, col:43> 'unsigned long'
+            | |   | |   | |           |   |   |   | `-BinaryOperator 0x7f951f02fb78 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |   | |           |   |   |   |   |-IntegerLiteral 0x7f951f02fa18 <col:14> 'unsigned long' 4096
+            | |   | |   | |           |   |   |   |   `-ImplicitCastExpr 0x7f951f02fb60 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |   | |           |   |   |   |     `-CStyleCastExpr 0x7f951f02fb38 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |   | |           |   |   |   |       `-UnaryOperator 0x7f951f02fb00 <col:30, col:49> 'char *' prefix '&'
+            | |   | |   | |           |   |   |   |         `-MemberExpr 0x7f951f02fac8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |   | |           |   |   |   |           `-ParenExpr 0x7f951f02faa8 <col:31, col:46> 'struct A *'
+            | |   | |   | |           |   |   |   |             `-CStyleCastExpr 0x7f951f02fa80 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |   | |           |   |   |   |               `-IntegerLiteral 0x7f951f02fa38 <col:45> 'int' 0
+            | |   | |   | |           |   |   |   `-IntegerLiteral 0x7f951f02fbc0 <line:7:48> 'int' 16
+            | |   | |   | |           |   |   `-IntegerLiteral 0x7f951f02fc28 <line:6:48> 'int' 8
+            | |   | |   | |           |   `-IntegerLiteral 0x7f951f02fc90 <line:5:48> 'int' 4
+            | |   | |   | |           `-ImplicitCastExpr 0x7f951f02fd18 <line:3:50> 'unsigned long' <IntegralCast>
+            | |   | |   | |             `-IntegerLiteral 0x7f951f02fcf8 <col:50> 'int' 1
+            | |   | |   | `-IntegerLiteral 0x7f951f02fe30 <line:5:54> 'int' 4
+            | |   | |   `-ParenExpr 0x7f951f030fa8 <line:4:15, col:64> 'unsigned long'
+            | |   | |     `-ConditionalOperator 0x7f951f030f78 <col:16, line:3:54> 'unsigned long'
+            | |   | |       |-ParenExpr 0x7f951f030150 <line:4:16, col:33> 'unsigned long'
+            | |   | |       | `-BinaryOperator 0x7f951f030128 <col:17, col:23> 'unsigned long' '&'
+            | |   | |       |   |-ParenExpr 0x7f951f0300d0 <col:17, col:19> 'unsigned long'
+            | |   | |       |   | `-BinaryOperator 0x7f951f0300a8 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |       |   |   |-ParenExpr 0x7f951f030068 <col:41, col:43> 'unsigned long'
+            | |   | |       |   |   | `-BinaryOperator 0x7f951f030040 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |       |   |   |   |-ParenExpr 0x7f951f030000 <col:41, col:43> 'unsigned long'
+            | |   | |       |   |   |   | `-BinaryOperator 0x7f951f02ffd8 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |       |   |   |   |   |-IntegerLiteral 0x7f951f02fe78 <col:14> 'unsigned long' 4096
+            | |   | |       |   |   |   |   `-ImplicitCastExpr 0x7f951f02ffc0 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |       |   |   |   |     `-CStyleCastExpr 0x7f951f02ff98 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |       |   |   |   |       `-UnaryOperator 0x7f951f02ff60 <col:30, col:49> 'char *' prefix '&'
+            | |   | |       |   |   |   |         `-MemberExpr 0x7f951f02ff28 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |       |   |   |   |           `-ParenExpr 0x7f951f02ff08 <col:31, col:46> 'struct A *'
+            | |   | |       |   |   |   |             `-CStyleCastExpr 0x7f951f02fee0 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |       |   |   |   |               `-IntegerLiteral 0x7f951f02fe98 <col:45> 'int' 0
+            | |   | |       |   |   |   `-IntegerLiteral 0x7f951f030020 <line:7:48> 'int' 16
+            | |   | |       |   |   `-IntegerLiteral 0x7f951f030088 <line:6:48> 'int' 8
+            | |   | |       |   `-ImplicitCastExpr 0x7f951f030110 <line:4:23> 'unsigned long' <IntegralCast>
+            | |   | |       |     `-IntegerLiteral 0x7f951f0300f0 <col:23> 'int' 12
+            | |   | |       |-BinaryOperator 0x7f951f0308d8 <line:3:15, line:4:54> 'unsigned long' '<<'
+            | |   | |       | |-ParenExpr 0x7f951f030898 <line:3:15, col:54> 'unsigned long'
+            | |   | |       | | `-ConditionalOperator 0x7f951f030868 <col:16, col:53> 'unsigned long'
+            | |   | |       | |   |-ParenExpr 0x7f951f0304b0 <col:16, col:33> 'unsigned long'
+            | |   | |       | |   | `-BinaryOperator 0x7f951f030488 <col:17, col:23> 'unsigned long' '&'
+            | |   | |       | |   |   |-ParenExpr 0x7f951f030430 <col:17, col:19> 'unsigned long'
+            | |   | |       | |   |   | `-BinaryOperator 0x7f951f030408 <line:4:41, col:48> 'unsigned long' '>>'
+            | |   | |       | |   |   |   |-ParenExpr 0x7f951f0303c8 <col:41, col:43> 'unsigned long'
+            | |   | |       | |   |   |   | `-BinaryOperator 0x7f951f0303a0 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |       | |   |   |   |   |-ParenExpr 0x7f951f030360 <col:41, col:43> 'unsigned long'
+            | |   | |       | |   |   |   |   | `-BinaryOperator 0x7f951f030338 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |       | |   |   |   |   |   |-ParenExpr 0x7f951f0302f8 <col:41, col:43> 'unsigned long'
+            | |   | |       | |   |   |   |   |   | `-BinaryOperator 0x7f951f0302d0 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |       | |   |   |   |   |   |   |-IntegerLiteral 0x7f951f030170 <col:14> 'unsigned long' 4096
+            | |   | |       | |   |   |   |   |   |   `-ImplicitCastExpr 0x7f951f0302b8 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |       | |   |   |   |   |   |     `-CStyleCastExpr 0x7f951f030290 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |       | |   |   |   |   |   |       `-UnaryOperator 0x7f951f030258 <col:30, col:49> 'char *' prefix '&'
+            | |   | |       | |   |   |   |   |   |         `-MemberExpr 0x7f951f030220 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |       | |   |   |   |   |   |           `-ParenExpr 0x7f951f030200 <col:31, col:46> 'struct A *'
+            | |   | |       | |   |   |   |   |   |             `-CStyleCastExpr 0x7f951f0301d8 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |       | |   |   |   |   |   |               `-IntegerLiteral 0x7f951f030190 <col:45> 'int' 0
+            | |   | |       | |   |   |   |   |   `-IntegerLiteral 0x7f951f030318 <line:7:48> 'int' 16
+            | |   | |       | |   |   |   |   `-IntegerLiteral 0x7f951f030380 <line:6:48> 'int' 8
+            | |   | |       | |   |   |   `-IntegerLiteral 0x7f951f0303e8 <line:4:48> 'int' 2
+            | |   | |       | |   |   `-ImplicitCastExpr 0x7f951f030470 <line:3:23> 'unsigned long' <IntegralCast>
+            | |   | |       | |   |     `-IntegerLiteral 0x7f951f030450 <col:23> 'int' 2
+            | |   | |       | |   |-ImplicitCastExpr 0x7f951f030850 <col:37> 'unsigned long' <IntegralCast>
+            | |   | |       | |   | `-IntegerLiteral 0x7f951f0304d0 <col:37> 'int' 2
+            | |   | |       | |   `-ParenExpr 0x7f951f030830 <col:43, col:53> 'unsigned long'
+            | |   | |       | |     `-BinaryOperator 0x7f951f030808 <col:44, col:50> 'unsigned long' '&'
+            | |   | |       | |       |-ParenExpr 0x7f951f0307b0 <col:44, col:46> 'unsigned long'
+            | |   | |       | |       | `-BinaryOperator 0x7f951f030788 <line:4:41, col:48> 'unsigned long' '>>'
+            | |   | |       | |       |   |-ParenExpr 0x7f951f030748 <col:41, col:43> 'unsigned long'
+            | |   | |       | |       |   | `-BinaryOperator 0x7f951f030720 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |       | |       |   |   |-ParenExpr 0x7f951f0306e0 <col:41, col:43> 'unsigned long'
+            | |   | |       | |       |   |   | `-BinaryOperator 0x7f951f0306b8 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |       | |       |   |   |   |-ParenExpr 0x7f951f030678 <col:41, col:43> 'unsigned long'
+            | |   | |       | |       |   |   |   | `-BinaryOperator 0x7f951f030650 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |       | |       |   |   |   |   |-IntegerLiteral 0x7f951f0304f0 <col:14> 'unsigned long' 4096
+            | |   | |       | |       |   |   |   |   `-ImplicitCastExpr 0x7f951f030638 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |       | |       |   |   |   |     `-CStyleCastExpr 0x7f951f030610 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |       | |       |   |   |   |       `-UnaryOperator 0x7f951f0305d8 <col:30, col:49> 'char *' prefix '&'
+            | |   | |       | |       |   |   |   |         `-MemberExpr 0x7f951f0305a0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |       | |       |   |   |   |           `-ParenExpr 0x7f951f030580 <col:31, col:46> 'struct A *'
+            | |   | |       | |       |   |   |   |             `-CStyleCastExpr 0x7f951f030558 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |       | |       |   |   |   |               `-IntegerLiteral 0x7f951f030510 <col:45> 'int' 0
+            | |   | |       | |       |   |   |   `-IntegerLiteral 0x7f951f030698 <line:7:48> 'int' 16
+            | |   | |       | |       |   |   `-IntegerLiteral 0x7f951f030700 <line:6:48> 'int' 8
+            | |   | |       | |       |   `-IntegerLiteral 0x7f951f030768 <line:4:48> 'int' 2
+            | |   | |       | |       `-ImplicitCastExpr 0x7f951f0307f0 <line:3:50> 'unsigned long' <IntegralCast>
+            | |   | |       | |         `-IntegerLiteral 0x7f951f0307d0 <col:50> 'int' 1
+            | |   | |       | `-IntegerLiteral 0x7f951f0308b8 <line:4:54> 'int' 2
+            | |   | |       `-ParenExpr 0x7f951f030f58 <line:3:15, col:54> 'unsigned long'
+            | |   | |         `-ConditionalOperator 0x7f951f030f28 <col:16, col:53> 'unsigned long'
+            | |   | |           |-ParenExpr 0x7f951f030bd8 <col:16, col:33> 'unsigned long'
+            | |   | |           | `-BinaryOperator 0x7f951f030bb0 <col:17, col:23> 'unsigned long' '&'
+            | |   | |           |   |-ParenExpr 0x7f951f030b58 <col:17, col:19> 'unsigned long'
+            | |   | |           |   | `-BinaryOperator 0x7f951f030b30 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |           |   |   |-ParenExpr 0x7f951f030af0 <col:41, col:43> 'unsigned long'
+            | |   | |           |   |   | `-BinaryOperator 0x7f951f030ac8 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |           |   |   |   |-ParenExpr 0x7f951f030a88 <col:41, col:43> 'unsigned long'
+            | |   | |           |   |   |   | `-BinaryOperator 0x7f951f030a60 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |           |   |   |   |   |-IntegerLiteral 0x7f951f030900 <col:14> 'unsigned long' 4096
+            | |   | |           |   |   |   |   `-ImplicitCastExpr 0x7f951f030a48 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |           |   |   |   |     `-CStyleCastExpr 0x7f951f030a20 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |           |   |   |   |       `-UnaryOperator 0x7f951f0309e8 <col:30, col:49> 'char *' prefix '&'
+            | |   | |           |   |   |   |         `-MemberExpr 0x7f951f0309b0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |           |   |   |   |           `-ParenExpr 0x7f951f030990 <col:31, col:46> 'struct A *'
+            | |   | |           |   |   |   |             `-CStyleCastExpr 0x7f951f030968 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |           |   |   |   |               `-IntegerLiteral 0x7f951f030920 <col:45> 'int' 0
+            | |   | |           |   |   |   `-IntegerLiteral 0x7f951f030aa8 <line:7:48> 'int' 16
+            | |   | |           |   |   `-IntegerLiteral 0x7f951f030b10 <line:6:48> 'int' 8
+            | |   | |           |   `-ImplicitCastExpr 0x7f951f030b98 <line:3:23> 'unsigned long' <IntegralCast>
+            | |   | |           |     `-IntegerLiteral 0x7f951f030b78 <col:23> 'int' 2
+            | |   | |           |-ImplicitCastExpr 0x7f951f030f10 <col:37> 'unsigned long' <IntegralCast>
+            | |   | |           | `-IntegerLiteral 0x7f951f030bf8 <col:37> 'int' 2
+            | |   | |           `-ParenExpr 0x7f951f030ef0 <col:43, col:53> 'unsigned long'
+            | |   | |             `-BinaryOperator 0x7f951f030ec8 <col:44, col:50> 'unsigned long' '&'
+            | |   | |               |-ParenExpr 0x7f951f030e70 <col:44, col:46> 'unsigned long'
+            | |   | |               | `-BinaryOperator 0x7f951f030e48 <line:6:41, col:48> 'unsigned long' '>>'
+            | |   | |               |   |-ParenExpr 0x7f951f030e08 <col:41, col:43> 'unsigned long'
+            | |   | |               |   | `-BinaryOperator 0x7f951f030de0 <line:7:41, col:48> 'unsigned long' '>>'
+            | |   | |               |   |   |-ParenExpr 0x7f951f030da0 <col:41, col:43> 'unsigned long'
+            | |   | |               |   |   | `-BinaryOperator 0x7f951f030d78 <line:14:14, col:49> 'unsigned long' '-'
+            | |   | |               |   |   |   |-IntegerLiteral 0x7f951f030c18 <col:14> 'unsigned long' 4096
+            | |   | |               |   |   |   `-ImplicitCastExpr 0x7f951f030d60 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |   | |               |   |   |     `-CStyleCastExpr 0x7f951f030d38 <col:23, col:49> 'long' <PointerToIntegral>
+            | |   | |               |   |   |       `-UnaryOperator 0x7f951f030d00 <col:30, col:49> 'char *' prefix '&'
+            | |   | |               |   |   |         `-MemberExpr 0x7f951f030cc8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |   | |               |   |   |           `-ParenExpr 0x7f951f030ca8 <col:31, col:46> 'struct A *'
+            | |   | |               |   |   |             `-CStyleCastExpr 0x7f951f030c80 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |   | |               |   |   |               `-IntegerLiteral 0x7f951f030c38 <col:45> 'int' 0
+            | |   | |               |   |   `-IntegerLiteral 0x7f951f030dc0 <line:7:48> 'int' 16
+            | |   | |               |   `-IntegerLiteral 0x7f951f030e28 <line:6:48> 'int' 8
+            | |   | |               `-ImplicitCastExpr 0x7f951f030eb0 <line:3:50> 'unsigned long' <IntegralCast>
+            | |   | |                 `-IntegerLiteral 0x7f951f030e90 <col:50> 'int' 1
+            | |   | `-IntegerLiteral 0x7f951f031020 <line:6:54> 'int' 8
+            | |   `-ParenExpr 0x7f951f033418 <line:5:15, col:64> 'unsigned long'
+            | |     `-ConditionalOperator 0x7f951f0333e8 <col:16, line:4:64> 'unsigned long'
+            | |       |-ParenExpr 0x7f951f0312d8 <line:5:16, col:33> 'unsigned long'
+            | |       | `-BinaryOperator 0x7f951f0312b0 <col:17, col:23> 'unsigned long' '&'
+            | |       |   |-ParenExpr 0x7f951f031258 <col:17, col:19> 'unsigned long'
+            | |       |   | `-BinaryOperator 0x7f951f031230 <line:7:41, col:48> 'unsigned long' '>>'
+            | |       |   |   |-ParenExpr 0x7f951f0311f0 <col:41, col:43> 'unsigned long'
+            | |       |   |   | `-BinaryOperator 0x7f951f0311c8 <line:14:14, col:49> 'unsigned long' '-'
+            | |       |   |   |   |-IntegerLiteral 0x7f951f031068 <col:14> 'unsigned long' 4096
+            | |       |   |   |   `-ImplicitCastExpr 0x7f951f0311b0 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |       |   |   |     `-CStyleCastExpr 0x7f951f031188 <col:23, col:49> 'long' <PointerToIntegral>
+            | |       |   |   |       `-UnaryOperator 0x7f951f031150 <col:30, col:49> 'char *' prefix '&'
+            | |       |   |   |         `-MemberExpr 0x7f951f031118 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |       |   |   |           `-ParenExpr 0x7f951f0310f8 <col:31, col:46> 'struct A *'
+            | |       |   |   |             `-CStyleCastExpr 0x7f951f0310d0 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |       |   |   |               `-IntegerLiteral 0x7f951f031088 <col:45> 'int' 0
+            | |       |   |   `-IntegerLiteral 0x7f951f031210 <line:7:48> 'int' 16
+            | |       |   `-ImplicitCastExpr 0x7f951f031298 <line:5:23> 'unsigned long' <IntegralCast>
+            | |       |     `-IntegerLiteral 0x7f951f031278 <col:23> 'int' 240
+            | |       |-BinaryOperator 0x7f951f032470 <line:4:15, line:5:54> 'unsigned long' '<<'
+            | |       | |-ParenExpr 0x7f951f032430 <line:4:15, col:64> 'unsigned long'
+            | |       | | `-ConditionalOperator 0x7f951f032400 <col:16, line:3:54> 'unsigned long'
+            | |       | |   |-ParenExpr 0x7f951f0315d0 <line:4:16, col:33> 'unsigned long'
+            | |       | |   | `-BinaryOperator 0x7f951f0315a8 <col:17, col:23> 'unsigned long' '&'
+            | |       | |   |   |-ParenExpr 0x7f951f031550 <col:17, col:19> 'unsigned long'
+            | |       | |   |   | `-BinaryOperator 0x7f951f031528 <line:5:41, col:48> 'unsigned long' '>>'
+            | |       | |   |   |   |-ParenExpr 0x7f951f0314e8 <col:41, col:43> 'unsigned long'
+            | |       | |   |   |   | `-BinaryOperator 0x7f951f0314c0 <line:7:41, col:48> 'unsigned long' '>>'
+            | |       | |   |   |   |   |-ParenExpr 0x7f951f031480 <col:41, col:43> 'unsigned long'
+            | |       | |   |   |   |   | `-BinaryOperator 0x7f951f031458 <line:14:14, col:49> 'unsigned long' '-'
+            | |       | |   |   |   |   |   |-IntegerLiteral 0x7f951f0312f8 <col:14> 'unsigned long' 4096
+            | |       | |   |   |   |   |   `-ImplicitCastExpr 0x7f951f031440 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |       | |   |   |   |   |     `-CStyleCastExpr 0x7f951f031418 <col:23, col:49> 'long' <PointerToIntegral>
+            | |       | |   |   |   |   |       `-UnaryOperator 0x7f951f0313e0 <col:30, col:49> 'char *' prefix '&'
+            | |       | |   |   |   |   |         `-MemberExpr 0x7f951f0313a8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |       | |   |   |   |   |           `-ParenExpr 0x7f951f031388 <col:31, col:46> 'struct A *'
+            | |       | |   |   |   |   |             `-CStyleCastExpr 0x7f951f031360 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |       | |   |   |   |   |               `-IntegerLiteral 0x7f951f031318 <col:45> 'int' 0
+            | |       | |   |   |   |   `-IntegerLiteral 0x7f951f0314a0 <line:7:48> 'int' 16
+            | |       | |   |   |   `-IntegerLiteral 0x7f951f031508 <line:5:48> 'int' 4
+            | |       | |   |   `-ImplicitCastExpr 0x7f951f031590 <line:4:23> 'unsigned long' <IntegralCast>
+            | |       | |   |     `-IntegerLiteral 0x7f951f031570 <col:23> 'int' 12
+            | |       | |   |-BinaryOperator 0x7f951f031d58 <line:3:15, line:4:54> 'unsigned long' '<<'
+            | |       | |   | |-ParenExpr 0x7f951f031d18 <line:3:15, col:54> 'unsigned long'
+            | |       | |   | | `-ConditionalOperator 0x7f951f031ce8 <col:16, col:53> 'unsigned long'
+            | |       | |   | |   |-ParenExpr 0x7f951f031930 <col:16, col:33> 'unsigned long'
+            | |       | |   | |   | `-BinaryOperator 0x7f951f031908 <col:17, col:23> 'unsigned long' '&'
+            | |       | |   | |   |   |-ParenExpr 0x7f951f0318b0 <col:17, col:19> 'unsigned long'
+            | |       | |   | |   |   | `-BinaryOperator 0x7f951f031888 <line:4:41, col:48> 'unsigned long' '>>'
+            | |       | |   | |   |   |   |-ParenExpr 0x7f951f031848 <col:41, col:43> 'unsigned long'
+            | |       | |   | |   |   |   | `-BinaryOperator 0x7f951f031820 <line:5:41, col:48> 'unsigned long' '>>'
+            | |       | |   | |   |   |   |   |-ParenExpr 0x7f951f0317e0 <col:41, col:43> 'unsigned long'
+            | |       | |   | |   |   |   |   | `-BinaryOperator 0x7f951f0317b8 <line:7:41, col:48> 'unsigned long' '>>'
+            | |       | |   | |   |   |   |   |   |-ParenExpr 0x7f951f031778 <col:41, col:43> 'unsigned long'
+            | |       | |   | |   |   |   |   |   | `-BinaryOperator 0x7f951f031750 <line:14:14, col:49> 'unsigned long' '-'
+            | |       | |   | |   |   |   |   |   |   |-IntegerLiteral 0x7f951f0315f0 <col:14> 'unsigned long' 4096
+            | |       | |   | |   |   |   |   |   |   `-ImplicitCastExpr 0x7f951f031738 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |       | |   | |   |   |   |   |   |     `-CStyleCastExpr 0x7f951f031710 <col:23, col:49> 'long' <PointerToIntegral>
+            | |       | |   | |   |   |   |   |   |       `-UnaryOperator 0x7f951f0316d8 <col:30, col:49> 'char *' prefix '&'
+            | |       | |   | |   |   |   |   |   |         `-MemberExpr 0x7f951f0316a0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |       | |   | |   |   |   |   |   |           `-ParenExpr 0x7f951f031680 <col:31, col:46> 'struct A *'
+            | |       | |   | |   |   |   |   |   |             `-CStyleCastExpr 0x7f951f031658 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |       | |   | |   |   |   |   |   |               `-IntegerLiteral 0x7f951f031610 <col:45> 'int' 0
+            | |       | |   | |   |   |   |   |   `-IntegerLiteral 0x7f951f031798 <line:7:48> 'int' 16
+            | |       | |   | |   |   |   |   `-IntegerLiteral 0x7f951f031800 <line:5:48> 'int' 4
+            | |       | |   | |   |   |   `-IntegerLiteral 0x7f951f031868 <line:4:48> 'int' 2
+            | |       | |   | |   |   `-ImplicitCastExpr 0x7f951f0318f0 <line:3:23> 'unsigned long' <IntegralCast>
+            | |       | |   | |   |     `-IntegerLiteral 0x7f951f0318d0 <col:23> 'int' 2
+            | |       | |   | |   |-ImplicitCastExpr 0x7f951f031cd0 <col:37> 'unsigned long' <IntegralCast>
+            | |       | |   | |   | `-IntegerLiteral 0x7f951f031950 <col:37> 'int' 2
+            | |       | |   | |   `-ParenExpr 0x7f951f031cb0 <col:43, col:53> 'unsigned long'
+            | |       | |   | |     `-BinaryOperator 0x7f951f031c88 <col:44, col:50> 'unsigned long' '&'
+            | |       | |   | |       |-ParenExpr 0x7f951f031c30 <col:44, col:46> 'unsigned long'
+            | |       | |   | |       | `-BinaryOperator 0x7f951f031c08 <line:4:41, col:48> 'unsigned long' '>>'
+            | |       | |   | |       |   |-ParenExpr 0x7f951f031bc8 <col:41, col:43> 'unsigned long'
+            | |       | |   | |       |   | `-BinaryOperator 0x7f951f031ba0 <line:5:41, col:48> 'unsigned long' '>>'
+            | |       | |   | |       |   |   |-ParenExpr 0x7f951f031b60 <col:41, col:43> 'unsigned long'
+            | |       | |   | |       |   |   | `-BinaryOperator 0x7f951f031b38 <line:7:41, col:48> 'unsigned long' '>>'
+            | |       | |   | |       |   |   |   |-ParenExpr 0x7f951f031af8 <col:41, col:43> 'unsigned long'
+            | |       | |   | |       |   |   |   | `-BinaryOperator 0x7f951f031ad0 <line:14:14, col:49> 'unsigned long' '-'
+            | |       | |   | |       |   |   |   |   |-IntegerLiteral 0x7f951f031970 <col:14> 'unsigned long' 4096
+            | |       | |   | |       |   |   |   |   `-ImplicitCastExpr 0x7f951f031ab8 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |       | |   | |       |   |   |   |     `-CStyleCastExpr 0x7f951f031a90 <col:23, col:49> 'long' <PointerToIntegral>
+            | |       | |   | |       |   |   |   |       `-UnaryOperator 0x7f951f031a58 <col:30, col:49> 'char *' prefix '&'
+            | |       | |   | |       |   |   |   |         `-MemberExpr 0x7f951f031a20 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |       | |   | |       |   |   |   |           `-ParenExpr 0x7f951f031a00 <col:31, col:46> 'struct A *'
+            | |       | |   | |       |   |   |   |             `-CStyleCastExpr 0x7f951f0319d8 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |       | |   | |       |   |   |   |               `-IntegerLiteral 0x7f951f031990 <col:45> 'int' 0
+            | |       | |   | |       |   |   |   `-IntegerLiteral 0x7f951f031b18 <line:7:48> 'int' 16
+            | |       | |   | |       |   |   `-IntegerLiteral 0x7f951f031b80 <line:5:48> 'int' 4
+            | |       | |   | |       |   `-IntegerLiteral 0x7f951f031be8 <line:4:48> 'int' 2
+            | |       | |   | |       `-ImplicitCastExpr 0x7f951f031c70 <line:3:50> 'unsigned long' <IntegralCast>
+            | |       | |   | |         `-IntegerLiteral 0x7f951f031c50 <col:50> 'int' 1
+            | |       | |   | `-IntegerLiteral 0x7f951f031d38 <line:4:54> 'int' 2
+            | |       | |   `-ParenExpr 0x7f951f0323e0 <line:3:15, col:54> 'unsigned long'
+            | |       | |     `-ConditionalOperator 0x7f951f0323b0 <col:16, col:53> 'unsigned long'
+            | |       | |       |-ParenExpr 0x7f951f032060 <col:16, col:33> 'unsigned long'
+            | |       | |       | `-BinaryOperator 0x7f951f032038 <col:17, col:23> 'unsigned long' '&'
+            | |       | |       |   |-ParenExpr 0x7f951f031fd8 <col:17, col:19> 'unsigned long'
+            | |       | |       |   | `-BinaryOperator 0x7f951f031fb0 <line:5:41, col:48> 'unsigned long' '>>'
+            | |       | |       |   |   |-ParenExpr 0x7f951f031f70 <col:41, col:43> 'unsigned long'
+            | |       | |       |   |   | `-BinaryOperator 0x7f951f031f48 <line:7:41, col:48> 'unsigned long' '>>'
+            | |       | |       |   |   |   |-ParenExpr 0x7f951f031f08 <col:41, col:43> 'unsigned long'
+            | |       | |       |   |   |   | `-BinaryOperator 0x7f951f031ee0 <line:14:14, col:49> 'unsigned long' '-'
+            | |       | |       |   |   |   |   |-IntegerLiteral 0x7f951f031d80 <col:14> 'unsigned long' 4096
+            | |       | |       |   |   |   |   `-ImplicitCastExpr 0x7f951f031ec8 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |       | |       |   |   |   |     `-CStyleCastExpr 0x7f951f031ea0 <col:23, col:49> 'long' <PointerToIntegral>
+            | |       | |       |   |   |   |       `-UnaryOperator 0x7f951f031e68 <col:30, col:49> 'char *' prefix '&'
+            | |       | |       |   |   |   |         `-MemberExpr 0x7f951f031e30 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |       | |       |   |   |   |           `-ParenExpr 0x7f951f031e10 <col:31, col:46> 'struct A *'
+            | |       | |       |   |   |   |             `-CStyleCastExpr 0x7f951f031de8 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |       | |       |   |   |   |               `-IntegerLiteral 0x7f951f031da0 <col:45> 'int' 0
+            | |       | |       |   |   |   `-IntegerLiteral 0x7f951f031f28 <line:7:48> 'int' 16
+            | |       | |       |   |   `-IntegerLiteral 0x7f951f031f90 <line:5:48> 'int' 4
+            | |       | |       |   `-ImplicitCastExpr 0x7f951f032020 <line:3:23> 'unsigned long' <IntegralCast>
+            | |       | |       |     `-IntegerLiteral 0x7f951f032000 <col:23> 'int' 2
+            | |       | |       |-ImplicitCastExpr 0x7f951f032398 <col:37> 'unsigned long' <IntegralCast>
+            | |       | |       | `-IntegerLiteral 0x7f951f032080 <col:37> 'int' 2
+            | |       | |       `-ParenExpr 0x7f951f032378 <col:43, col:53> 'unsigned long'
+            | |       | |         `-BinaryOperator 0x7f951f032350 <col:44, col:50> 'unsigned long' '&'
+            | |       | |           |-ParenExpr 0x7f951f0322f8 <col:44, col:46> 'unsigned long'
+            | |       | |           | `-BinaryOperator 0x7f951f0322d0 <line:5:41, col:48> 'unsigned long' '>>'
+            | |       | |           |   |-ParenExpr 0x7f951f032290 <col:41, col:43> 'unsigned long'
+            | |       | |           |   | `-BinaryOperator 0x7f951f032268 <line:7:41, col:48> 'unsigned long' '>>'
+            | |       | |           |   |   |-ParenExpr 0x7f951f032228 <col:41, col:43> 'unsigned long'
+            | |       | |           |   |   | `-BinaryOperator 0x7f951f032200 <line:14:14, col:49> 'unsigned long' '-'
+            | |       | |           |   |   |   |-IntegerLiteral 0x7f951f0320a0 <col:14> 'unsigned long' 4096
+            | |       | |           |   |   |   `-ImplicitCastExpr 0x7f951f0321e8 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |       | |           |   |   |     `-CStyleCastExpr 0x7f951f0321c0 <col:23, col:49> 'long' <PointerToIntegral>
+            | |       | |           |   |   |       `-UnaryOperator 0x7f951f032188 <col:30, col:49> 'char *' prefix '&'
+            | |       | |           |   |   |         `-MemberExpr 0x7f951f032150 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |       | |           |   |   |           `-ParenExpr 0x7f951f032130 <col:31, col:46> 'struct A *'
+            | |       | |           |   |   |             `-CStyleCastExpr 0x7f951f032108 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |       | |           |   |   |               `-IntegerLiteral 0x7f951f0320c0 <col:45> 'int' 0
+            | |       | |           |   |   `-IntegerLiteral 0x7f951f032248 <line:7:48> 'int' 16
+            | |       | |           |   `-IntegerLiteral 0x7f951f0322b0 <line:5:48> 'int' 4
+            | |       | |           `-ImplicitCastExpr 0x7f951f032338 <line:3:50> 'unsigned long' <IntegralCast>
+            | |       | |             `-IntegerLiteral 0x7f951f032318 <col:50> 'int' 1
+            | |       | `-IntegerLiteral 0x7f951f032450 <line:5:54> 'int' 4
+            | |       `-ParenExpr 0x7f951f0333c8 <line:4:15, col:64> 'unsigned long'
+            | |         `-ConditionalOperator 0x7f951f033398 <col:16, line:3:54> 'unsigned long'
+            | |           |-ParenExpr 0x7f951f032708 <line:4:16, col:33> 'unsigned long'
+            | |           | `-BinaryOperator 0x7f951f0326e0 <col:17, col:23> 'unsigned long' '&'
+            | |           |   |-ParenExpr 0x7f951f032688 <col:17, col:19> 'unsigned long'
+            | |           |   | `-BinaryOperator 0x7f951f032660 <line:7:41, col:48> 'unsigned long' '>>'
+            | |           |   |   |-ParenExpr 0x7f951f032620 <col:41, col:43> 'unsigned long'
+            | |           |   |   | `-BinaryOperator 0x7f951f0325f8 <line:14:14, col:49> 'unsigned long' '-'
+            | |           |   |   |   |-IntegerLiteral 0x7f951f032498 <col:14> 'unsigned long' 4096
+            | |           |   |   |   `-ImplicitCastExpr 0x7f951f0325e0 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |           |   |   |     `-CStyleCastExpr 0x7f951f0325b8 <col:23, col:49> 'long' <PointerToIntegral>
+            | |           |   |   |       `-UnaryOperator 0x7f951f032580 <col:30, col:49> 'char *' prefix '&'
+            | |           |   |   |         `-MemberExpr 0x7f951f032548 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |           |   |   |           `-ParenExpr 0x7f951f032528 <col:31, col:46> 'struct A *'
+            | |           |   |   |             `-CStyleCastExpr 0x7f951f032500 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |           |   |   |               `-IntegerLiteral 0x7f951f0324b8 <col:45> 'int' 0
+            | |           |   |   `-IntegerLiteral 0x7f951f032640 <line:7:48> 'int' 16
+            | |           |   `-ImplicitCastExpr 0x7f951f0326c8 <line:4:23> 'unsigned long' <IntegralCast>
+            | |           |     `-IntegerLiteral 0x7f951f0326a8 <col:23> 'int' 12
+            | |           |-BinaryOperator 0x7f951f032dc0 <line:3:15, line:4:54> 'unsigned long' '<<'
+            | |           | |-ParenExpr 0x7f951f032d80 <line:3:15, col:54> 'unsigned long'
+            | |           | | `-ConditionalOperator 0x7f951f032d50 <col:16, col:53> 'unsigned long'
+            | |           | |   |-ParenExpr 0x7f951f032a00 <col:16, col:33> 'unsigned long'
+            | |           | |   | `-BinaryOperator 0x7f951f0329d8 <col:17, col:23> 'unsigned long' '&'
+            | |           | |   |   |-ParenExpr 0x7f951f032980 <col:17, col:19> 'unsigned long'
+            | |           | |   |   | `-BinaryOperator 0x7f951f032958 <line:4:41, col:48> 'unsigned long' '>>'
+            | |           | |   |   |   |-ParenExpr 0x7f951f032918 <col:41, col:43> 'unsigned long'
+            | |           | |   |   |   | `-BinaryOperator 0x7f951f0328f0 <line:7:41, col:48> 'unsigned long' '>>'
+            | |           | |   |   |   |   |-ParenExpr 0x7f951f0328b0 <col:41, col:43> 'unsigned long'
+            | |           | |   |   |   |   | `-BinaryOperator 0x7f951f032888 <line:14:14, col:49> 'unsigned long' '-'
+            | |           | |   |   |   |   |   |-IntegerLiteral 0x7f951f032728 <col:14> 'unsigned long' 4096
+            | |           | |   |   |   |   |   `-ImplicitCastExpr 0x7f951f032870 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |           | |   |   |   |   |     `-CStyleCastExpr 0x7f951f032848 <col:23, col:49> 'long' <PointerToIntegral>
+            | |           | |   |   |   |   |       `-UnaryOperator 0x7f951f032810 <col:30, col:49> 'char *' prefix '&'
+            | |           | |   |   |   |   |         `-MemberExpr 0x7f951f0327d8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |           | |   |   |   |   |           `-ParenExpr 0x7f951f0327b8 <col:31, col:46> 'struct A *'
+            | |           | |   |   |   |   |             `-CStyleCastExpr 0x7f951f032790 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |           | |   |   |   |   |               `-IntegerLiteral 0x7f951f032748 <col:45> 'int' 0
+            | |           | |   |   |   |   `-IntegerLiteral 0x7f951f0328d0 <line:7:48> 'int' 16
+            | |           | |   |   |   `-IntegerLiteral 0x7f951f032938 <line:4:48> 'int' 2
+            | |           | |   |   `-ImplicitCastExpr 0x7f951f0329c0 <line:3:23> 'unsigned long' <IntegralCast>
+            | |           | |   |     `-IntegerLiteral 0x7f951f0329a0 <col:23> 'int' 2
+            | |           | |   |-ImplicitCastExpr 0x7f951f032d38 <col:37> 'unsigned long' <IntegralCast>
+            | |           | |   | `-IntegerLiteral 0x7f951f032a20 <col:37> 'int' 2
+            | |           | |   `-ParenExpr 0x7f951f032d18 <col:43, col:53> 'unsigned long'
+            | |           | |     `-BinaryOperator 0x7f951f032cf0 <col:44, col:50> 'unsigned long' '&'
+            | |           | |       |-ParenExpr 0x7f951f032c98 <col:44, col:46> 'unsigned long'
+            | |           | |       | `-BinaryOperator 0x7f951f032c70 <line:4:41, col:48> 'unsigned long' '>>'
+            | |           | |       |   |-ParenExpr 0x7f951f032c30 <col:41, col:43> 'unsigned long'
+            | |           | |       |   | `-BinaryOperator 0x7f951f032c08 <line:7:41, col:48> 'unsigned long' '>>'
+            | |           | |       |   |   |-ParenExpr 0x7f951f032bc8 <col:41, col:43> 'unsigned long'
+            | |           | |       |   |   | `-BinaryOperator 0x7f951f032ba0 <line:14:14, col:49> 'unsigned long' '-'
+            | |           | |       |   |   |   |-IntegerLiteral 0x7f951f032a40 <col:14> 'unsigned long' 4096
+            | |           | |       |   |   |   `-ImplicitCastExpr 0x7f951f032b88 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |           | |       |   |   |     `-CStyleCastExpr 0x7f951f032b60 <col:23, col:49> 'long' <PointerToIntegral>
+            | |           | |       |   |   |       `-UnaryOperator 0x7f951f032b28 <col:30, col:49> 'char *' prefix '&'
+            | |           | |       |   |   |         `-MemberExpr 0x7f951f032af0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |           | |       |   |   |           `-ParenExpr 0x7f951f032ad0 <col:31, col:46> 'struct A *'
+            | |           | |       |   |   |             `-CStyleCastExpr 0x7f951f032aa8 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |           | |       |   |   |               `-IntegerLiteral 0x7f951f032a60 <col:45> 'int' 0
+            | |           | |       |   |   `-IntegerLiteral 0x7f951f032be8 <line:7:48> 'int' 16
+            | |           | |       |   `-IntegerLiteral 0x7f951f032c50 <line:4:48> 'int' 2
+            | |           | |       `-ImplicitCastExpr 0x7f951f032cd8 <line:3:50> 'unsigned long' <IntegralCast>
+            | |           | |         `-IntegerLiteral 0x7f951f032cb8 <col:50> 'int' 1
+            | |           | `-IntegerLiteral 0x7f951f032da0 <line:4:54> 'int' 2
+            | |           `-ParenExpr 0x7f951f033378 <line:3:15, col:54> 'unsigned long'
+            | |             `-ConditionalOperator 0x7f951f033348 <col:16, col:53> 'unsigned long'
+            | |               |-ParenExpr 0x7f951f033060 <col:16, col:33> 'unsigned long'
+            | |               | `-BinaryOperator 0x7f951f033038 <col:17, col:23> 'unsigned long' '&'
+            | |               |   |-ParenExpr 0x7f951f032fd8 <col:17, col:19> 'unsigned long'
+            | |               |   | `-BinaryOperator 0x7f951f032fb0 <line:7:41, col:48> 'unsigned long' '>>'
+            | |               |   |   |-ParenExpr 0x7f951f032f70 <col:41, col:43> 'unsigned long'
+            | |               |   |   | `-BinaryOperator 0x7f951f032f48 <line:14:14, col:49> 'unsigned long' '-'
+            | |               |   |   |   |-IntegerLiteral 0x7f951f032de8 <col:14> 'unsigned long' 4096
+            | |               |   |   |   `-ImplicitCastExpr 0x7f951f032f30 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |               |   |   |     `-CStyleCastExpr 0x7f951f032f08 <col:23, col:49> 'long' <PointerToIntegral>
+            | |               |   |   |       `-UnaryOperator 0x7f951f032ed0 <col:30, col:49> 'char *' prefix '&'
+            | |               |   |   |         `-MemberExpr 0x7f951f032e98 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |               |   |   |           `-ParenExpr 0x7f951f032e78 <col:31, col:46> 'struct A *'
+            | |               |   |   |             `-CStyleCastExpr 0x7f951f032e50 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |               |   |   |               `-IntegerLiteral 0x7f951f032e08 <col:45> 'int' 0
+            | |               |   |   `-IntegerLiteral 0x7f951f032f90 <line:7:48> 'int' 16
+            | |               |   `-ImplicitCastExpr 0x7f951f033020 <line:3:23> 'unsigned long' <IntegralCast>
+            | |               |     `-IntegerLiteral 0x7f951f033000 <col:23> 'int' 2
+            | |               |-ImplicitCastExpr 0x7f951f033330 <col:37> 'unsigned long' <IntegralCast>
+            | |               | `-IntegerLiteral 0x7f951f033080 <col:37> 'int' 2
+            | |               `-ParenExpr 0x7f951f033310 <col:43, col:53> 'unsigned long'
+            | |                 `-BinaryOperator 0x7f951f0332e8 <col:44, col:50> 'unsigned long' '&'
+            | |                   |-ParenExpr 0x7f951f033290 <col:44, col:46> 'unsigned long'
+            | |                   | `-BinaryOperator 0x7f951f033268 <line:7:41, col:48> 'unsigned long' '>>'
+            | |                   |   |-ParenExpr 0x7f951f033228 <col:41, col:43> 'unsigned long'
+            | |                   |   | `-BinaryOperator 0x7f951f033200 <line:14:14, col:49> 'unsigned long' '-'
+            | |                   |   |   |-IntegerLiteral 0x7f951f0330a0 <col:14> 'unsigned long' 4096
+            | |                   |   |   `-ImplicitCastExpr 0x7f951f0331e8 <col:23, col:49> 'unsigned long' <IntegralCast>
+            | |                   |   |     `-CStyleCastExpr 0x7f951f0331c0 <col:23, col:49> 'long' <PointerToIntegral>
+            | |                   |   |       `-UnaryOperator 0x7f951f033188 <col:30, col:49> 'char *' prefix '&'
+            | |                   |   |         `-MemberExpr 0x7f951f033150 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+            | |                   |   |           `-ParenExpr 0x7f951f033130 <col:31, col:46> 'struct A *'
+            | |                   |   |             `-CStyleCastExpr 0x7f951f033108 <col:32, col:45> 'struct A *' <NullToPointer>
+            | |                   |   |               `-IntegerLiteral 0x7f951f0330c0 <col:45> 'int' 0
+            | |                   |   `-IntegerLiteral 0x7f951f033248 <line:7:48> 'int' 16
+            | |                   `-ImplicitCastExpr 0x7f951f0332d0 <line:3:50> 'unsigned long' <IntegralCast>
+            | |                     `-IntegerLiteral 0x7f951f0332b0 <col:50> 'int' 1
+            | `-IntegerLiteral 0x7f951f033488 <line:7:55> 'int' 16
+            `-ParenExpr 0x7f951f038ab0 <line:6:15, col:64> 'unsigned long'
+              `-ConditionalOperator 0x7f951f038a80 <col:16, line:5:64> 'unsigned long'
+                |-ParenExpr 0x7f951f0336d8 <line:6:16, col:33> 'unsigned long'
+                | `-BinaryOperator 0x7f951f0336b0 <col:17, col:23> 'unsigned long' '&'
+                |   |-ParenExpr 0x7f951f033658 <col:17, col:19> 'unsigned long'
+                |   | `-BinaryOperator 0x7f951f033630 <line:14:14, col:49> 'unsigned long' '-'
+                |   |   |-IntegerLiteral 0x7f951f0334d0 <col:14> 'unsigned long' 4096
+                |   |   `-ImplicitCastExpr 0x7f951f033618 <col:23, col:49> 'unsigned long' <IntegralCast>
+                |   |     `-CStyleCastExpr 0x7f951f0335f0 <col:23, col:49> 'long' <PointerToIntegral>
+                |   |       `-UnaryOperator 0x7f951f0335b8 <col:30, col:49> 'char *' prefix '&'
+                |   |         `-MemberExpr 0x7f951f033580 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                |   |           `-ParenExpr 0x7f951f033560 <col:31, col:46> 'struct A *'
+                |   |             `-CStyleCastExpr 0x7f951f033538 <col:32, col:45> 'struct A *' <NullToPointer>
+                |   |               `-IntegerLiteral 0x7f951f0334f0 <col:45> 'int' 0
+                |   `-ImplicitCastExpr 0x7f951f033698 <line:6:23> 'unsigned long' <IntegralCast>
+                |     `-IntegerLiteral 0x7f951f033678 <col:23> 'int' 65280
+                |-BinaryOperator 0x7f951f02b0f8 <line:5:15, line:6:54> 'unsigned long' '<<'
+                | |-ParenExpr 0x7f951f02b0b8 <line:5:15, col:64> 'unsigned long'
+                | | `-ConditionalOperator 0x7f951f02b088 <col:16, line:4:64> 'unsigned long'
+                | |   |-ParenExpr 0x7f951f033968 <line:5:16, col:33> 'unsigned long'
+                | |   | `-BinaryOperator 0x7f951f033940 <col:17, col:23> 'unsigned long' '&'
+                | |   |   |-ParenExpr 0x7f951f0338e8 <col:17, col:19> 'unsigned long'
+                | |   |   | `-BinaryOperator 0x7f951f0338c0 <line:6:41, col:48> 'unsigned long' '>>'
+                | |   |   |   |-ParenExpr 0x7f951f033880 <col:41, col:43> 'unsigned long'
+                | |   |   |   | `-BinaryOperator 0x7f951f033858 <line:14:14, col:49> 'unsigned long' '-'
+                | |   |   |   |   |-IntegerLiteral 0x7f951f0336f8 <col:14> 'unsigned long' 4096
+                | |   |   |   |   `-ImplicitCastExpr 0x7f951f033840 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |   |   |   |     `-CStyleCastExpr 0x7f951f033818 <col:23, col:49> 'long' <PointerToIntegral>
+                | |   |   |   |       `-UnaryOperator 0x7f951f0337e0 <col:30, col:49> 'char *' prefix '&'
+                | |   |   |   |         `-MemberExpr 0x7f951f0337a8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |   |   |   |           `-ParenExpr 0x7f951f033788 <col:31, col:46> 'struct A *'
+                | |   |   |   |             `-CStyleCastExpr 0x7f951f033760 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |   |   |   |               `-IntegerLiteral 0x7f951f033718 <col:45> 'int' 0
+                | |   |   |   `-IntegerLiteral 0x7f951f0338a0 <line:6:48> 'int' 8
+                | |   |   `-ImplicitCastExpr 0x7f951f033928 <line:5:23> 'unsigned long' <IntegralCast>
+                | |   |     `-IntegerLiteral 0x7f951f033908 <col:23> 'int' 240
+                | |   |-BinaryOperator 0x7f951f02a0f8 <line:4:15, line:5:54> 'unsigned long' '<<'
+                | |   | |-ParenExpr 0x7f951f02a0b8 <line:4:15, col:64> 'unsigned long'
+                | |   | | `-ConditionalOperator 0x7f951f02a088 <col:16, line:3:54> 'unsigned long'
+                | |   | |   |-ParenExpr 0x7f951f033c60 <line:4:16, col:33> 'unsigned long'
+                | |   | |   | `-BinaryOperator 0x7f951f033c38 <col:17, col:23> 'unsigned long' '&'
+                | |   | |   |   |-ParenExpr 0x7f951f033be0 <col:17, col:19> 'unsigned long'
+                | |   | |   |   | `-BinaryOperator 0x7f951f033bb8 <line:5:41, col:48> 'unsigned long' '>>'
+                | |   | |   |   |   |-ParenExpr 0x7f951f033b78 <col:41, col:43> 'unsigned long'
+                | |   | |   |   |   | `-BinaryOperator 0x7f951f033b50 <line:6:41, col:48> 'unsigned long' '>>'
+                | |   | |   |   |   |   |-ParenExpr 0x7f951f033b10 <col:41, col:43> 'unsigned long'
+                | |   | |   |   |   |   | `-BinaryOperator 0x7f951f033ae8 <line:14:14, col:49> 'unsigned long' '-'
+                | |   | |   |   |   |   |   |-IntegerLiteral 0x7f951f033988 <col:14> 'unsigned long' 4096
+                | |   | |   |   |   |   |   `-ImplicitCastExpr 0x7f951f033ad0 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |   | |   |   |   |   |     `-CStyleCastExpr 0x7f951f033aa8 <col:23, col:49> 'long' <PointerToIntegral>
+                | |   | |   |   |   |   |       `-UnaryOperator 0x7f951f033a70 <col:30, col:49> 'char *' prefix '&'
+                | |   | |   |   |   |   |         `-MemberExpr 0x7f951f033a38 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |   | |   |   |   |   |           `-ParenExpr 0x7f951f033a18 <col:31, col:46> 'struct A *'
+                | |   | |   |   |   |   |             `-CStyleCastExpr 0x7f951f0339f0 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |   | |   |   |   |   |               `-IntegerLiteral 0x7f951f0339a8 <col:45> 'int' 0
+                | |   | |   |   |   |   `-IntegerLiteral 0x7f951f033b30 <line:6:48> 'int' 8
+                | |   | |   |   |   `-IntegerLiteral 0x7f951f033b98 <line:5:48> 'int' 4
+                | |   | |   |   `-ImplicitCastExpr 0x7f951f033c20 <line:4:23> 'unsigned long' <IntegralCast>
+                | |   | |   |     `-IntegerLiteral 0x7f951f033c00 <col:23> 'int' 12
+                | |   | |   |-BinaryOperator 0x7f951f0299e8 <line:3:15, line:4:54> 'unsigned long' '<<'
+                | |   | |   | |-ParenExpr 0x7f951f0299a8 <line:3:15, col:54> 'unsigned long'
+                | |   | |   | | `-ConditionalOperator 0x7f951f029978 <col:16, col:53> 'unsigned long'
+                | |   | |   | |   |-ParenExpr 0x7f951f033fc0 <col:16, col:33> 'unsigned long'
+                | |   | |   | |   | `-BinaryOperator 0x7f951f033f98 <col:17, col:23> 'unsigned long' '&'
+                | |   | |   | |   |   |-ParenExpr 0x7f951f033f40 <col:17, col:19> 'unsigned long'
+                | |   | |   | |   |   | `-BinaryOperator 0x7f951f033f18 <line:4:41, col:48> 'unsigned long' '>>'
+                | |   | |   | |   |   |   |-ParenExpr 0x7f951f033ed8 <col:41, col:43> 'unsigned long'
+                | |   | |   | |   |   |   | `-BinaryOperator 0x7f951f033eb0 <line:5:41, col:48> 'unsigned long' '>>'
+                | |   | |   | |   |   |   |   |-ParenExpr 0x7f951f033e70 <col:41, col:43> 'unsigned long'
+                | |   | |   | |   |   |   |   | `-BinaryOperator 0x7f951f033e48 <line:6:41, col:48> 'unsigned long' '>>'
+                | |   | |   | |   |   |   |   |   |-ParenExpr 0x7f951f033e08 <col:41, col:43> 'unsigned long'
+                | |   | |   | |   |   |   |   |   | `-BinaryOperator 0x7f951f033de0 <line:14:14, col:49> 'unsigned long' '-'
+                | |   | |   | |   |   |   |   |   |   |-IntegerLiteral 0x7f951f033c80 <col:14> 'unsigned long' 4096
+                | |   | |   | |   |   |   |   |   |   `-ImplicitCastExpr 0x7f951f033dc8 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |   | |   | |   |   |   |   |   |     `-CStyleCastExpr 0x7f951f033da0 <col:23, col:49> 'long' <PointerToIntegral>
+                | |   | |   | |   |   |   |   |   |       `-UnaryOperator 0x7f951f033d68 <col:30, col:49> 'char *' prefix '&'
+                | |   | |   | |   |   |   |   |   |         `-MemberExpr 0x7f951f033d30 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |   | |   | |   |   |   |   |   |           `-ParenExpr 0x7f951f033d10 <col:31, col:46> 'struct A *'
+                | |   | |   | |   |   |   |   |   |             `-CStyleCastExpr 0x7f951f033ce8 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |   | |   | |   |   |   |   |   |               `-IntegerLiteral 0x7f951f033ca0 <col:45> 'int' 0
+                | |   | |   | |   |   |   |   |   `-IntegerLiteral 0x7f951f033e28 <line:6:48> 'int' 8
+                | |   | |   | |   |   |   |   `-IntegerLiteral 0x7f951f033e90 <line:5:48> 'int' 4
+                | |   | |   | |   |   |   `-IntegerLiteral 0x7f951f033ef8 <line:4:48> 'int' 2
+                | |   | |   | |   |   `-ImplicitCastExpr 0x7f951f033f80 <line:3:23> 'unsigned long' <IntegralCast>
+                | |   | |   | |   |     `-IntegerLiteral 0x7f951f033f60 <col:23> 'int' 2
+                | |   | |   | |   |-ImplicitCastExpr 0x7f951f029960 <col:37> 'unsigned long' <IntegralCast>
+                | |   | |   | |   | `-IntegerLiteral 0x7f951f033fe0 <col:37> 'int' 2
+                | |   | |   | |   `-ParenExpr 0x7f951f029940 <col:43, col:53> 'unsigned long'
+                | |   | |   | |     `-BinaryOperator 0x7f951f029918 <col:44, col:50> 'unsigned long' '&'
+                | |   | |   | |       |-ParenExpr 0x7f951f0298c0 <col:44, col:46> 'unsigned long'
+                | |   | |   | |       | `-BinaryOperator 0x7f951f029898 <line:4:41, col:48> 'unsigned long' '>>'
+                | |   | |   | |       |   |-ParenExpr 0x7f951f029858 <col:41, col:43> 'unsigned long'
+                | |   | |   | |       |   | `-BinaryOperator 0x7f951f029830 <line:5:41, col:48> 'unsigned long' '>>'
+                | |   | |   | |       |   |   |-ParenExpr 0x7f951f0297f0 <col:41, col:43> 'unsigned long'
+                | |   | |   | |       |   |   | `-BinaryOperator 0x7f951f0297c8 <line:6:41, col:48> 'unsigned long' '>>'
+                | |   | |   | |       |   |   |   |-ParenExpr 0x7f951f029788 <col:41, col:43> 'unsigned long'
+                | |   | |   | |       |   |   |   | `-BinaryOperator 0x7f951f029760 <line:14:14, col:49> 'unsigned long' '-'
+                | |   | |   | |       |   |   |   |   |-IntegerLiteral 0x7f951f029600 <col:14> 'unsigned long' 4096
+                | |   | |   | |       |   |   |   |   `-ImplicitCastExpr 0x7f951f029748 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |   | |   | |       |   |   |   |     `-CStyleCastExpr 0x7f951f029720 <col:23, col:49> 'long' <PointerToIntegral>
+                | |   | |   | |       |   |   |   |       `-UnaryOperator 0x7f951f0296e8 <col:30, col:49> 'char *' prefix '&'
+                | |   | |   | |       |   |   |   |         `-MemberExpr 0x7f951f0296b0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |   | |   | |       |   |   |   |           `-ParenExpr 0x7f951f029690 <col:31, col:46> 'struct A *'
+                | |   | |   | |       |   |   |   |             `-CStyleCastExpr 0x7f951f029668 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |   | |   | |       |   |   |   |               `-IntegerLiteral 0x7f951f029620 <col:45> 'int' 0
+                | |   | |   | |       |   |   |   `-IntegerLiteral 0x7f951f0297a8 <line:6:48> 'int' 8
+                | |   | |   | |       |   |   `-IntegerLiteral 0x7f951f029810 <line:5:48> 'int' 4
+                | |   | |   | |       |   `-IntegerLiteral 0x7f951f029878 <line:4:48> 'int' 2
+                | |   | |   | |       `-ImplicitCastExpr 0x7f951f029900 <line:3:50> 'unsigned long' <IntegralCast>
+                | |   | |   | |         `-IntegerLiteral 0x7f951f0298e0 <col:50> 'int' 1
+                | |   | |   | `-IntegerLiteral 0x7f951f0299c8 <line:4:54> 'int' 2
+                | |   | |   `-ParenExpr 0x7f951f02a068 <line:3:15, col:54> 'unsigned long'
+                | |   | |     `-ConditionalOperator 0x7f951f02a038 <col:16, col:53> 'unsigned long'
+                | |   | |       |-ParenExpr 0x7f951f029ce8 <col:16, col:33> 'unsigned long'
+                | |   | |       | `-BinaryOperator 0x7f951f029cc0 <col:17, col:23> 'unsigned long' '&'
+                | |   | |       |   |-ParenExpr 0x7f951f029c68 <col:17, col:19> 'unsigned long'
+                | |   | |       |   | `-BinaryOperator 0x7f951f029c40 <line:5:41, col:48> 'unsigned long' '>>'
+                | |   | |       |   |   |-ParenExpr 0x7f951f029c00 <col:41, col:43> 'unsigned long'
+                | |   | |       |   |   | `-BinaryOperator 0x7f951f029bd8 <line:6:41, col:48> 'unsigned long' '>>'
+                | |   | |       |   |   |   |-ParenExpr 0x7f951f029b98 <col:41, col:43> 'unsigned long'
+                | |   | |       |   |   |   | `-BinaryOperator 0x7f951f029b70 <line:14:14, col:49> 'unsigned long' '-'
+                | |   | |       |   |   |   |   |-IntegerLiteral 0x7f951f029a10 <col:14> 'unsigned long' 4096
+                | |   | |       |   |   |   |   `-ImplicitCastExpr 0x7f951f029b58 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |   | |       |   |   |   |     `-CStyleCastExpr 0x7f951f029b30 <col:23, col:49> 'long' <PointerToIntegral>
+                | |   | |       |   |   |   |       `-UnaryOperator 0x7f951f029af8 <col:30, col:49> 'char *' prefix '&'
+                | |   | |       |   |   |   |         `-MemberExpr 0x7f951f029ac0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |   | |       |   |   |   |           `-ParenExpr 0x7f951f029aa0 <col:31, col:46> 'struct A *'
+                | |   | |       |   |   |   |             `-CStyleCastExpr 0x7f951f029a78 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |   | |       |   |   |   |               `-IntegerLiteral 0x7f951f029a30 <col:45> 'int' 0
+                | |   | |       |   |   |   `-IntegerLiteral 0x7f951f029bb8 <line:6:48> 'int' 8
+                | |   | |       |   |   `-IntegerLiteral 0x7f951f029c20 <line:5:48> 'int' 4
+                | |   | |       |   `-ImplicitCastExpr 0x7f951f029ca8 <line:3:23> 'unsigned long' <IntegralCast>
+                | |   | |       |     `-IntegerLiteral 0x7f951f029c88 <col:23> 'int' 2
+                | |   | |       |-ImplicitCastExpr 0x7f951f02a020 <col:37> 'unsigned long' <IntegralCast>
+                | |   | |       | `-IntegerLiteral 0x7f951f029d08 <col:37> 'int' 2
+                | |   | |       `-ParenExpr 0x7f951f02a000 <col:43, col:53> 'unsigned long'
+                | |   | |         `-BinaryOperator 0x7f951f029fd8 <col:44, col:50> 'unsigned long' '&'
+                | |   | |           |-ParenExpr 0x7f951f029f80 <col:44, col:46> 'unsigned long'
+                | |   | |           | `-BinaryOperator 0x7f951f029f58 <line:5:41, col:48> 'unsigned long' '>>'
+                | |   | |           |   |-ParenExpr 0x7f951f029f18 <col:41, col:43> 'unsigned long'
+                | |   | |           |   | `-BinaryOperator 0x7f951f029ef0 <line:6:41, col:48> 'unsigned long' '>>'
+                | |   | |           |   |   |-ParenExpr 0x7f951f029eb0 <col:41, col:43> 'unsigned long'
+                | |   | |           |   |   | `-BinaryOperator 0x7f951f029e88 <line:14:14, col:49> 'unsigned long' '-'
+                | |   | |           |   |   |   |-IntegerLiteral 0x7f951f029d28 <col:14> 'unsigned long' 4096
+                | |   | |           |   |   |   `-ImplicitCastExpr 0x7f951f029e70 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |   | |           |   |   |     `-CStyleCastExpr 0x7f951f029e48 <col:23, col:49> 'long' <PointerToIntegral>
+                | |   | |           |   |   |       `-UnaryOperator 0x7f951f029e10 <col:30, col:49> 'char *' prefix '&'
+                | |   | |           |   |   |         `-MemberExpr 0x7f951f029dd8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |   | |           |   |   |           `-ParenExpr 0x7f951f029db8 <col:31, col:46> 'struct A *'
+                | |   | |           |   |   |             `-CStyleCastExpr 0x7f951f029d90 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |   | |           |   |   |               `-IntegerLiteral 0x7f951f029d48 <col:45> 'int' 0
+                | |   | |           |   |   `-IntegerLiteral 0x7f951f029ed0 <line:6:48> 'int' 8
+                | |   | |           |   `-IntegerLiteral 0x7f951f029f38 <line:5:48> 'int' 4
+                | |   | |           `-ImplicitCastExpr 0x7f951f029fc0 <line:3:50> 'unsigned long' <IntegralCast>
+                | |   | |             `-IntegerLiteral 0x7f951f029fa0 <col:50> 'int' 1
+                | |   | `-IntegerLiteral 0x7f951f02a0d8 <line:5:54> 'int' 4
+                | |   `-ParenExpr 0x7f951f02b068 <line:4:15, col:64> 'unsigned long'
+                | |     `-ConditionalOperator 0x7f951f02b038 <col:16, line:3:54> 'unsigned long'
+                | |       |-ParenExpr 0x7f951f02a390 <line:4:16, col:33> 'unsigned long'
+                | |       | `-BinaryOperator 0x7f951f02a368 <col:17, col:23> 'unsigned long' '&'
+                | |       |   |-ParenExpr 0x7f951f02a310 <col:17, col:19> 'unsigned long'
+                | |       |   | `-BinaryOperator 0x7f951f02a2e8 <line:6:41, col:48> 'unsigned long' '>>'
+                | |       |   |   |-ParenExpr 0x7f951f02a2a8 <col:41, col:43> 'unsigned long'
+                | |       |   |   | `-BinaryOperator 0x7f951f02a280 <line:14:14, col:49> 'unsigned long' '-'
+                | |       |   |   |   |-IntegerLiteral 0x7f951f02a120 <col:14> 'unsigned long' 4096
+                | |       |   |   |   `-ImplicitCastExpr 0x7f951f02a268 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |       |   |   |     `-CStyleCastExpr 0x7f951f02a240 <col:23, col:49> 'long' <PointerToIntegral>
+                | |       |   |   |       `-UnaryOperator 0x7f951f02a208 <col:30, col:49> 'char *' prefix '&'
+                | |       |   |   |         `-MemberExpr 0x7f951f02a1d0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |       |   |   |           `-ParenExpr 0x7f951f02a1b0 <col:31, col:46> 'struct A *'
+                | |       |   |   |             `-CStyleCastExpr 0x7f951f02a188 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |       |   |   |               `-IntegerLiteral 0x7f951f02a140 <col:45> 'int' 0
+                | |       |   |   `-IntegerLiteral 0x7f951f02a2c8 <line:6:48> 'int' 8
+                | |       |   `-ImplicitCastExpr 0x7f951f02a350 <line:4:23> 'unsigned long' <IntegralCast>
+                | |       |     `-IntegerLiteral 0x7f951f02a330 <col:23> 'int' 12
+                | |       |-BinaryOperator 0x7f951f02aa68 <line:3:15, line:4:54> 'unsigned long' '<<'
+                | |       | |-ParenExpr 0x7f951f02aa28 <line:3:15, col:54> 'unsigned long'
+                | |       | | `-ConditionalOperator 0x7f951f02a9f8 <col:16, col:53> 'unsigned long'
+                | |       | |   |-ParenExpr 0x7f951f02a6a8 <col:16, col:33> 'unsigned long'
+                | |       | |   | `-BinaryOperator 0x7f951f02a680 <col:17, col:23> 'unsigned long' '&'
+                | |       | |   |   |-ParenExpr 0x7f951f02a628 <col:17, col:19> 'unsigned long'
+                | |       | |   |   | `-BinaryOperator 0x7f951f02a600 <line:4:41, col:48> 'unsigned long' '>>'
+                | |       | |   |   |   |-ParenExpr 0x7f951f02a5a0 <col:41, col:43> 'unsigned long'
+                | |       | |   |   |   | `-BinaryOperator 0x7f951f02a578 <line:6:41, col:48> 'unsigned long' '>>'
+                | |       | |   |   |   |   |-ParenExpr 0x7f951f02a538 <col:41, col:43> 'unsigned long'
+                | |       | |   |   |   |   | `-BinaryOperator 0x7f951f02a510 <line:14:14, col:49> 'unsigned long' '-'
+                | |       | |   |   |   |   |   |-IntegerLiteral 0x7f951f02a3b0 <col:14> 'unsigned long' 4096
+                | |       | |   |   |   |   |   `-ImplicitCastExpr 0x7f951f02a4f8 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |       | |   |   |   |   |     `-CStyleCastExpr 0x7f951f02a4d0 <col:23, col:49> 'long' <PointerToIntegral>
+                | |       | |   |   |   |   |       `-UnaryOperator 0x7f951f02a498 <col:30, col:49> 'char *' prefix '&'
+                | |       | |   |   |   |   |         `-MemberExpr 0x7f951f02a460 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |       | |   |   |   |   |           `-ParenExpr 0x7f951f02a440 <col:31, col:46> 'struct A *'
+                | |       | |   |   |   |   |             `-CStyleCastExpr 0x7f951f02a418 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |       | |   |   |   |   |               `-IntegerLiteral 0x7f951f02a3d0 <col:45> 'int' 0
+                | |       | |   |   |   |   `-IntegerLiteral 0x7f951f02a558 <line:6:48> 'int' 8
+                | |       | |   |   |   `-IntegerLiteral 0x7f951f02a5c0 <line:4:48> 'int' 2
+                | |       | |   |   `-ImplicitCastExpr 0x7f951f02a668 <line:3:23> 'unsigned long' <IntegralCast>
+                | |       | |   |     `-IntegerLiteral 0x7f951f02a648 <col:23> 'int' 2
+                | |       | |   |-ImplicitCastExpr 0x7f951f02a9e0 <col:37> 'unsigned long' <IntegralCast>
+                | |       | |   | `-IntegerLiteral 0x7f951f02a6c8 <col:37> 'int' 2
+                | |       | |   `-ParenExpr 0x7f951f02a9c0 <col:43, col:53> 'unsigned long'
+                | |       | |     `-BinaryOperator 0x7f951f02a998 <col:44, col:50> 'unsigned long' '&'
+                | |       | |       |-ParenExpr 0x7f951f02a940 <col:44, col:46> 'unsigned long'
+                | |       | |       | `-BinaryOperator 0x7f951f02a918 <line:4:41, col:48> 'unsigned long' '>>'
+                | |       | |       |   |-ParenExpr 0x7f951f02a8d8 <col:41, col:43> 'unsigned long'
+                | |       | |       |   | `-BinaryOperator 0x7f951f02a8b0 <line:6:41, col:48> 'unsigned long' '>>'
+                | |       | |       |   |   |-ParenExpr 0x7f951f02a870 <col:41, col:43> 'unsigned long'
+                | |       | |       |   |   | `-BinaryOperator 0x7f951f02a848 <line:14:14, col:49> 'unsigned long' '-'
+                | |       | |       |   |   |   |-IntegerLiteral 0x7f951f02a6e8 <col:14> 'unsigned long' 4096
+                | |       | |       |   |   |   `-ImplicitCastExpr 0x7f951f02a830 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |       | |       |   |   |     `-CStyleCastExpr 0x7f951f02a808 <col:23, col:49> 'long' <PointerToIntegral>
+                | |       | |       |   |   |       `-UnaryOperator 0x7f951f02a7d0 <col:30, col:49> 'char *' prefix '&'
+                | |       | |       |   |   |         `-MemberExpr 0x7f951f02a798 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |       | |       |   |   |           `-ParenExpr 0x7f951f02a778 <col:31, col:46> 'struct A *'
+                | |       | |       |   |   |             `-CStyleCastExpr 0x7f951f02a750 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |       | |       |   |   |               `-IntegerLiteral 0x7f951f02a708 <col:45> 'int' 0
+                | |       | |       |   |   `-IntegerLiteral 0x7f951f02a890 <line:6:48> 'int' 8
+                | |       | |       |   `-IntegerLiteral 0x7f951f02a8f8 <line:4:48> 'int' 2
+                | |       | |       `-ImplicitCastExpr 0x7f951f02a980 <line:3:50> 'unsigned long' <IntegralCast>
+                | |       | |         `-IntegerLiteral 0x7f951f02a960 <col:50> 'int' 1
+                | |       | `-IntegerLiteral 0x7f951f02aa48 <line:4:54> 'int' 2
+                | |       `-ParenExpr 0x7f951f02b018 <line:3:15, col:54> 'unsigned long'
+                | |         `-ConditionalOperator 0x7f951f02afe8 <col:16, col:53> 'unsigned long'
+                | |           |-ParenExpr 0x7f951f02ad00 <col:16, col:33> 'unsigned long'
+                | |           | `-BinaryOperator 0x7f951f02acd8 <col:17, col:23> 'unsigned long' '&'
+                | |           |   |-ParenExpr 0x7f951f02ac80 <col:17, col:19> 'unsigned long'
+                | |           |   | `-BinaryOperator 0x7f951f02ac58 <line:6:41, col:48> 'unsigned long' '>>'
+                | |           |   |   |-ParenExpr 0x7f951f02ac18 <col:41, col:43> 'unsigned long'
+                | |           |   |   | `-BinaryOperator 0x7f951f02abf0 <line:14:14, col:49> 'unsigned long' '-'
+                | |           |   |   |   |-IntegerLiteral 0x7f951f02aa90 <col:14> 'unsigned long' 4096
+                | |           |   |   |   `-ImplicitCastExpr 0x7f951f02abd8 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |           |   |   |     `-CStyleCastExpr 0x7f951f02abb0 <col:23, col:49> 'long' <PointerToIntegral>
+                | |           |   |   |       `-UnaryOperator 0x7f951f02ab78 <col:30, col:49> 'char *' prefix '&'
+                | |           |   |   |         `-MemberExpr 0x7f951f02ab40 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |           |   |   |           `-ParenExpr 0x7f951f02ab20 <col:31, col:46> 'struct A *'
+                | |           |   |   |             `-CStyleCastExpr 0x7f951f02aaf8 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |           |   |   |               `-IntegerLiteral 0x7f951f02aab0 <col:45> 'int' 0
+                | |           |   |   `-IntegerLiteral 0x7f951f02ac38 <line:6:48> 'int' 8
+                | |           |   `-ImplicitCastExpr 0x7f951f02acc0 <line:3:23> 'unsigned long' <IntegralCast>
+                | |           |     `-IntegerLiteral 0x7f951f02aca0 <col:23> 'int' 2
+                | |           |-ImplicitCastExpr 0x7f951f02afd0 <col:37> 'unsigned long' <IntegralCast>
+                | |           | `-IntegerLiteral 0x7f951f02ad20 <col:37> 'int' 2
+                | |           `-ParenExpr 0x7f951f02afb0 <col:43, col:53> 'unsigned long'
+                | |             `-BinaryOperator 0x7f951f02af88 <col:44, col:50> 'unsigned long' '&'
+                | |               |-ParenExpr 0x7f951f02af30 <col:44, col:46> 'unsigned long'
+                | |               | `-BinaryOperator 0x7f951f02af08 <line:6:41, col:48> 'unsigned long' '>>'
+                | |               |   |-ParenExpr 0x7f951f02aec8 <col:41, col:43> 'unsigned long'
+                | |               |   | `-BinaryOperator 0x7f951f02aea0 <line:14:14, col:49> 'unsigned long' '-'
+                | |               |   |   |-IntegerLiteral 0x7f951f02ad40 <col:14> 'unsigned long' 4096
+                | |               |   |   `-ImplicitCastExpr 0x7f951f02ae88 <col:23, col:49> 'unsigned long' <IntegralCast>
+                | |               |   |     `-CStyleCastExpr 0x7f951f02ae60 <col:23, col:49> 'long' <PointerToIntegral>
+                | |               |   |       `-UnaryOperator 0x7f951f02ae28 <col:30, col:49> 'char *' prefix '&'
+                | |               |   |         `-MemberExpr 0x7f951f02adf0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                | |               |   |           `-ParenExpr 0x7f951f02add0 <col:31, col:46> 'struct A *'
+                | |               |   |             `-CStyleCastExpr 0x7f951f02ada8 <col:32, col:45> 'struct A *' <NullToPointer>
+                | |               |   |               `-IntegerLiteral 0x7f951f02ad60 <col:45> 'int' 0
+                | |               |   `-IntegerLiteral 0x7f951f02aee8 <line:6:48> 'int' 8
+                | |               `-ImplicitCastExpr 0x7f951f02af70 <line:3:50> 'unsigned long' <IntegralCast>
+                | |                 `-IntegerLiteral 0x7f951f02af50 <col:50> 'int' 1
+                | `-IntegerLiteral 0x7f951f02b0d8 <line:6:54> 'int' 8
+                `-ParenExpr 0x7f951f038a60 <line:5:15, col:64> 'unsigned long'
+                  `-ConditionalOperator 0x7f951f038a30 <col:16, line:4:64> 'unsigned long'
+                    |-ParenExpr 0x7f951f02b328 <line:5:16, col:33> 'unsigned long'
+                    | `-BinaryOperator 0x7f951f02b300 <col:17, col:23> 'unsigned long' '&'
+                    |   |-ParenExpr 0x7f951f02b2a8 <col:17, col:19> 'unsigned long'
+                    |   | `-BinaryOperator 0x7f951f02b280 <line:14:14, col:49> 'unsigned long' '-'
+                    |   |   |-IntegerLiteral 0x7f951f02b120 <col:14> 'unsigned long' 4096
+                    |   |   `-ImplicitCastExpr 0x7f951f02b268 <col:23, col:49> 'unsigned long' <IntegralCast>
+                    |   |     `-CStyleCastExpr 0x7f951f02b240 <col:23, col:49> 'long' <PointerToIntegral>
+                    |   |       `-UnaryOperator 0x7f951f02b208 <col:30, col:49> 'char *' prefix '&'
+                    |   |         `-MemberExpr 0x7f951f02b1d0 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                    |   |           `-ParenExpr 0x7f951f02b1b0 <col:31, col:46> 'struct A *'
+                    |   |             `-CStyleCastExpr 0x7f951f02b188 <col:32, col:45> 'struct A *' <NullToPointer>
+                    |   |               `-IntegerLiteral 0x7f951f02b140 <col:45> 'int' 0
+                    |   `-ImplicitCastExpr 0x7f951f02b2e8 <line:5:23> 'unsigned long' <IntegralCast>
+                    |     `-IntegerLiteral 0x7f951f02b2c8 <col:23> 'int' 240
+                    |-BinaryOperator 0x7f951f037cb8 <line:4:15, line:5:54> 'unsigned long' '<<'
+                    | |-ParenExpr 0x7f951f037c78 <line:4:15, col:64> 'unsigned long'
+                    | | `-ConditionalOperator 0x7f951f037c48 <col:16, line:3:54> 'unsigned long'
+                    | |   |-ParenExpr 0x7f951f02b5b8 <line:4:16, col:33> 'unsigned long'
+                    | |   | `-BinaryOperator 0x7f951f02b590 <col:17, col:23> 'unsigned long' '&'
+                    | |   |   |-ParenExpr 0x7f951f02b538 <col:17, col:19> 'unsigned long'
+                    | |   |   | `-BinaryOperator 0x7f951f02b510 <line:5:41, col:48> 'unsigned long' '>>'
+                    | |   |   |   |-ParenExpr 0x7f951f02b4d0 <col:41, col:43> 'unsigned long'
+                    | |   |   |   | `-BinaryOperator 0x7f951f02b4a8 <line:14:14, col:49> 'unsigned long' '-'
+                    | |   |   |   |   |-IntegerLiteral 0x7f951f02b348 <col:14> 'unsigned long' 4096
+                    | |   |   |   |   `-ImplicitCastExpr 0x7f951f02b490 <col:23, col:49> 'unsigned long' <IntegralCast>
+                    | |   |   |   |     `-CStyleCastExpr 0x7f951f02b468 <col:23, col:49> 'long' <PointerToIntegral>
+                    | |   |   |   |       `-UnaryOperator 0x7f951f02b430 <col:30, col:49> 'char *' prefix '&'
+                    | |   |   |   |         `-MemberExpr 0x7f951f02b3f8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                    | |   |   |   |           `-ParenExpr 0x7f951f02b3d8 <col:31, col:46> 'struct A *'
+                    | |   |   |   |             `-CStyleCastExpr 0x7f951f02b3b0 <col:32, col:45> 'struct A *' <NullToPointer>
+                    | |   |   |   |               `-IntegerLiteral 0x7f951f02b368 <col:45> 'int' 0
+                    | |   |   |   `-IntegerLiteral 0x7f951f02b4f0 <line:5:48> 'int' 4
+                    | |   |   `-ImplicitCastExpr 0x7f951f02b578 <line:4:23> 'unsigned long' <IntegralCast>
+                    | |   |     `-IntegerLiteral 0x7f951f02b558 <col:23> 'int' 12
+                    | |   |-BinaryOperator 0x7f951f037678 <line:3:15, line:4:54> 'unsigned long' '<<'
+                    | |   | |-ParenExpr 0x7f951f037638 <line:3:15, col:54> 'unsigned long'
+                    | |   | | `-ConditionalOperator 0x7f951f037608 <col:16, col:53> 'unsigned long'
+                    | |   | |   |-ParenExpr 0x7f951f0372b8 <col:16, col:33> 'unsigned long'
+                    | |   | |   | `-BinaryOperator 0x7f951f037290 <col:17, col:23> 'unsigned long' '&'
+                    | |   | |   |   |-ParenExpr 0x7f951f037238 <col:17, col:19> 'unsigned long'
+                    | |   | |   |   | `-BinaryOperator 0x7f951f037210 <line:4:41, col:48> 'unsigned long' '>>'
+                    | |   | |   |   |   |-ParenExpr 0x7f951f0371d0 <col:41, col:43> 'unsigned long'
+                    | |   | |   |   |   | `-BinaryOperator 0x7f951f0371a8 <line:5:41, col:48> 'unsigned long' '>>'
+                    | |   | |   |   |   |   |-ParenExpr 0x7f951f037168 <col:41, col:43> 'unsigned long'
+                    | |   | |   |   |   |   | `-BinaryOperator 0x7f951f037140 <line:14:14, col:49> 'unsigned long' '-'
+                    | |   | |   |   |   |   |   |-IntegerLiteral 0x7f951f02b5d8 <col:14> 'unsigned long' 4096
+                    | |   | |   |   |   |   |   `-ImplicitCastExpr 0x7f951f037128 <col:23, col:49> 'unsigned long' <IntegralCast>
+                    | |   | |   |   |   |   |     `-CStyleCastExpr 0x7f951f037100 <col:23, col:49> 'long' <PointerToIntegral>
+                    | |   | |   |   |   |   |       `-UnaryOperator 0x7f951f0370c8 <col:30, col:49> 'char *' prefix '&'
+                    | |   | |   |   |   |   |         `-MemberExpr 0x7f951f037090 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                    | |   | |   |   |   |   |           `-ParenExpr 0x7f951f037070 <col:31, col:46> 'struct A *'
+                    | |   | |   |   |   |   |             `-CStyleCastExpr 0x7f951f037048 <col:32, col:45> 'struct A *' <NullToPointer>
+                    | |   | |   |   |   |   |               `-IntegerLiteral 0x7f951f037000 <col:45> 'int' 0
+                    | |   | |   |   |   |   `-IntegerLiteral 0x7f951f037188 <line:5:48> 'int' 4
+                    | |   | |   |   |   `-IntegerLiteral 0x7f951f0371f0 <line:4:48> 'int' 2
+                    | |   | |   |   `-ImplicitCastExpr 0x7f951f037278 <line:3:23> 'unsigned long' <IntegralCast>
+                    | |   | |   |     `-IntegerLiteral 0x7f951f037258 <col:23> 'int' 2
+                    | |   | |   |-ImplicitCastExpr 0x7f951f0375f0 <col:37> 'unsigned long' <IntegralCast>
+                    | |   | |   | `-IntegerLiteral 0x7f951f0372d8 <col:37> 'int' 2
+                    | |   | |   `-ParenExpr 0x7f951f0375d0 <col:43, col:53> 'unsigned long'
+                    | |   | |     `-BinaryOperator 0x7f951f0375a8 <col:44, col:50> 'unsigned long' '&'
+                    | |   | |       |-ParenExpr 0x7f951f037550 <col:44, col:46> 'unsigned long'
+                    | |   | |       | `-BinaryOperator 0x7f951f037528 <line:4:41, col:48> 'unsigned long' '>>'
+                    | |   | |       |   |-ParenExpr 0x7f951f0374e8 <col:41, col:43> 'unsigned long'
+                    | |   | |       |   | `-BinaryOperator 0x7f951f0374c0 <line:5:41, col:48> 'unsigned long' '>>'
+                    | |   | |       |   |   |-ParenExpr 0x7f951f037480 <col:41, col:43> 'unsigned long'
+                    | |   | |       |   |   | `-BinaryOperator 0x7f951f037458 <line:14:14, col:49> 'unsigned long' '-'
+                    | |   | |       |   |   |   |-IntegerLiteral 0x7f951f0372f8 <col:14> 'unsigned long' 4096
+                    | |   | |       |   |   |   `-ImplicitCastExpr 0x7f951f037440 <col:23, col:49> 'unsigned long' <IntegralCast>
+                    | |   | |       |   |   |     `-CStyleCastExpr 0x7f951f037418 <col:23, col:49> 'long' <PointerToIntegral>
+                    | |   | |       |   |   |       `-UnaryOperator 0x7f951f0373e0 <col:30, col:49> 'char *' prefix '&'
+                    | |   | |       |   |   |         `-MemberExpr 0x7f951f0373a8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                    | |   | |       |   |   |           `-ParenExpr 0x7f951f037388 <col:31, col:46> 'struct A *'
+                    | |   | |       |   |   |             `-CStyleCastExpr 0x7f951f037360 <col:32, col:45> 'struct A *' <NullToPointer>
+                    | |   | |       |   |   |               `-IntegerLiteral 0x7f951f037318 <col:45> 'int' 0
+                    | |   | |       |   |   `-IntegerLiteral 0x7f951f0374a0 <line:5:48> 'int' 4
+                    | |   | |       |   `-IntegerLiteral 0x7f951f037508 <line:4:48> 'int' 2
+                    | |   | |       `-ImplicitCastExpr 0x7f951f037590 <line:3:50> 'unsigned long' <IntegralCast>
+                    | |   | |         `-IntegerLiteral 0x7f951f037570 <col:50> 'int' 1
+                    | |   | `-IntegerLiteral 0x7f951f037658 <line:4:54> 'int' 2
+                    | |   `-ParenExpr 0x7f951f037c28 <line:3:15, col:54> 'unsigned long'
+                    | |     `-ConditionalOperator 0x7f951f037bf8 <col:16, col:53> 'unsigned long'
+                    | |       |-ParenExpr 0x7f951f037910 <col:16, col:33> 'unsigned long'
+                    | |       | `-BinaryOperator 0x7f951f0378e8 <col:17, col:23> 'unsigned long' '&'
+                    | |       |   |-ParenExpr 0x7f951f037890 <col:17, col:19> 'unsigned long'
+                    | |       |   | `-BinaryOperator 0x7f951f037868 <line:5:41, col:48> 'unsigned long' '>>'
+                    | |       |   |   |-ParenExpr 0x7f951f037828 <col:41, col:43> 'unsigned long'
+                    | |       |   |   | `-BinaryOperator 0x7f951f037800 <line:14:14, col:49> 'unsigned long' '-'
+                    | |       |   |   |   |-IntegerLiteral 0x7f951f0376a0 <col:14> 'unsigned long' 4096
+                    | |       |   |   |   `-ImplicitCastExpr 0x7f951f0377e8 <col:23, col:49> 'unsigned long' <IntegralCast>
+                    | |       |   |   |     `-CStyleCastExpr 0x7f951f0377c0 <col:23, col:49> 'long' <PointerToIntegral>
+                    | |       |   |   |       `-UnaryOperator 0x7f951f037788 <col:30, col:49> 'char *' prefix '&'
+                    | |       |   |   |         `-MemberExpr 0x7f951f037750 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                    | |       |   |   |           `-ParenExpr 0x7f951f037730 <col:31, col:46> 'struct A *'
+                    | |       |   |   |             `-CStyleCastExpr 0x7f951f037708 <col:32, col:45> 'struct A *' <NullToPointer>
+                    | |       |   |   |               `-IntegerLiteral 0x7f951f0376c0 <col:45> 'int' 0
+                    | |       |   |   `-IntegerLiteral 0x7f951f037848 <line:5:48> 'int' 4
+                    | |       |   `-ImplicitCastExpr 0x7f951f0378d0 <line:3:23> 'unsigned long' <IntegralCast>
+                    | |       |     `-IntegerLiteral 0x7f951f0378b0 <col:23> 'int' 2
+                    | |       |-ImplicitCastExpr 0x7f951f037be0 <col:37> 'unsigned long' <IntegralCast>
+                    | |       | `-IntegerLiteral 0x7f951f037930 <col:37> 'int' 2
+                    | |       `-ParenExpr 0x7f951f037bc0 <col:43, col:53> 'unsigned long'
+                    | |         `-BinaryOperator 0x7f951f037b98 <col:44, col:50> 'unsigned long' '&'
+                    | |           |-ParenExpr 0x7f951f037b40 <col:44, col:46> 'unsigned long'
+                    | |           | `-BinaryOperator 0x7f951f037b18 <line:5:41, col:48> 'unsigned long' '>>'
+                    | |           |   |-ParenExpr 0x7f951f037ad8 <col:41, col:43> 'unsigned long'
+                    | |           |   | `-BinaryOperator 0x7f951f037ab0 <line:14:14, col:49> 'unsigned long' '-'
+                    | |           |   |   |-IntegerLiteral 0x7f951f037950 <col:14> 'unsigned long' 4096
+                    | |           |   |   `-ImplicitCastExpr 0x7f951f037a98 <col:23, col:49> 'unsigned long' <IntegralCast>
+                    | |           |   |     `-CStyleCastExpr 0x7f951f037a70 <col:23, col:49> 'long' <PointerToIntegral>
+                    | |           |   |       `-UnaryOperator 0x7f951f037a38 <col:30, col:49> 'char *' prefix '&'
+                    | |           |   |         `-MemberExpr 0x7f951f037a00 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                    | |           |   |           `-ParenExpr 0x7f951f0379e0 <col:31, col:46> 'struct A *'
+                    | |           |   |             `-CStyleCastExpr 0x7f951f0379b8 <col:32, col:45> 'struct A *' <NullToPointer>
+                    | |           |   |               `-IntegerLiteral 0x7f951f037970 <col:45> 'int' 0
+                    | |           |   `-IntegerLiteral 0x7f951f037af8 <line:5:48> 'int' 4
+                    | |           `-ImplicitCastExpr 0x7f951f037b80 <line:3:50> 'unsigned long' <IntegralCast>
+                    | |             `-IntegerLiteral 0x7f951f037b60 <col:50> 'int' 1
+                    | `-IntegerLiteral 0x7f951f037c98 <line:5:54> 'int' 4
+                    `-ParenExpr 0x7f951f038a10 <line:4:15, col:64> 'unsigned long'
+                      `-ConditionalOperator 0x7f951f0389e0 <col:16, line:3:54> 'unsigned long'
+                        |-ParenExpr 0x7f951f037ee8 <line:4:16, col:33> 'unsigned long'
+                        | `-BinaryOperator 0x7f951f037ec0 <col:17, col:23> 'unsigned long' '&'
+                        |   |-ParenExpr 0x7f951f037e68 <col:17, col:19> 'unsigned long'
+                        |   | `-BinaryOperator 0x7f951f037e40 <line:14:14, col:49> 'unsigned long' '-'
+                        |   |   |-IntegerLiteral 0x7f951f037ce0 <col:14> 'unsigned long' 4096
+                        |   |   `-ImplicitCastExpr 0x7f951f037e28 <col:23, col:49> 'unsigned long' <IntegralCast>
+                        |   |     `-CStyleCastExpr 0x7f951f037e00 <col:23, col:49> 'long' <PointerToIntegral>
+                        |   |       `-UnaryOperator 0x7f951f037dc8 <col:30, col:49> 'char *' prefix '&'
+                        |   |         `-MemberExpr 0x7f951f037d90 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                        |   |           `-ParenExpr 0x7f951f037d70 <col:31, col:46> 'struct A *'
+                        |   |             `-CStyleCastExpr 0x7f951f037d48 <col:32, col:45> 'struct A *' <NullToPointer>
+                        |   |               `-IntegerLiteral 0x7f951f037d00 <col:45> 'int' 0
+                        |   `-ImplicitCastExpr 0x7f951f037ea8 <line:4:23> 'unsigned long' <IntegralCast>
+                        |     `-IntegerLiteral 0x7f951f037e88 <col:23> 'int' 12
+                        |-BinaryOperator 0x7f951f0384e0 <line:3:15, line:4:54> 'unsigned long' '<<'
+                        | |-ParenExpr 0x7f951f0384a0 <line:3:15, col:54> 'unsigned long'
+                        | | `-ConditionalOperator 0x7f951f038470 <col:16, col:53> 'unsigned long'
+                        | |   |-ParenExpr 0x7f951f038188 <col:16, col:33> 'unsigned long'
+                        | |   | `-BinaryOperator 0x7f951f038160 <col:17, col:23> 'unsigned long' '&'
+                        | |   |   |-ParenExpr 0x7f951f038108 <col:17, col:19> 'unsigned long'
+                        | |   |   | `-BinaryOperator 0x7f951f0380e0 <line:4:41, col:48> 'unsigned long' '>>'
+                        | |   |   |   |-ParenExpr 0x7f951f0380a0 <col:41, col:43> 'unsigned long'
+                        | |   |   |   | `-BinaryOperator 0x7f951f038078 <line:14:14, col:49> 'unsigned long' '-'
+                        | |   |   |   |   |-IntegerLiteral 0x7f951f037f08 <col:14> 'unsigned long' 4096
+                        | |   |   |   |   `-ImplicitCastExpr 0x7f951f038060 <col:23, col:49> 'unsigned long' <IntegralCast>
+                        | |   |   |   |     `-CStyleCastExpr 0x7f951f038038 <col:23, col:49> 'long' <PointerToIntegral>
+                        | |   |   |   |       `-UnaryOperator 0x7f951f038000 <col:30, col:49> 'char *' prefix '&'
+                        | |   |   |   |         `-MemberExpr 0x7f951f037fb8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                        | |   |   |   |           `-ParenExpr 0x7f951f037f98 <col:31, col:46> 'struct A *'
+                        | |   |   |   |             `-CStyleCastExpr 0x7f951f037f70 <col:32, col:45> 'struct A *' <NullToPointer>
+                        | |   |   |   |               `-IntegerLiteral 0x7f951f037f28 <col:45> 'int' 0
+                        | |   |   |   `-IntegerLiteral 0x7f951f0380c0 <line:4:48> 'int' 2
+                        | |   |   `-ImplicitCastExpr 0x7f951f038148 <line:3:23> 'unsigned long' <IntegralCast>
+                        | |   |     `-IntegerLiteral 0x7f951f038128 <col:23> 'int' 2
+                        | |   |-ImplicitCastExpr 0x7f951f038458 <col:37> 'unsigned long' <IntegralCast>
+                        | |   | `-IntegerLiteral 0x7f951f0381a8 <col:37> 'int' 2
+                        | |   `-ParenExpr 0x7f951f038438 <col:43, col:53> 'unsigned long'
+                        | |     `-BinaryOperator 0x7f951f038410 <col:44, col:50> 'unsigned long' '&'
+                        | |       |-ParenExpr 0x7f951f0383b8 <col:44, col:46> 'unsigned long'
+                        | |       | `-BinaryOperator 0x7f951f038390 <line:4:41, col:48> 'unsigned long' '>>'
+                        | |       |   |-ParenExpr 0x7f951f038350 <col:41, col:43> 'unsigned long'
+                        | |       |   | `-BinaryOperator 0x7f951f038328 <line:14:14, col:49> 'unsigned long' '-'
+                        | |       |   |   |-IntegerLiteral 0x7f951f0381c8 <col:14> 'unsigned long' 4096
+                        | |       |   |   `-ImplicitCastExpr 0x7f951f038310 <col:23, col:49> 'unsigned long' <IntegralCast>
+                        | |       |   |     `-CStyleCastExpr 0x7f951f0382e8 <col:23, col:49> 'long' <PointerToIntegral>
+                        | |       |   |       `-UnaryOperator 0x7f951f0382b0 <col:30, col:49> 'char *' prefix '&'
+                        | |       |   |         `-MemberExpr 0x7f951f038278 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                        | |       |   |           `-ParenExpr 0x7f951f038258 <col:31, col:46> 'struct A *'
+                        | |       |   |             `-CStyleCastExpr 0x7f951f038230 <col:32, col:45> 'struct A *' <NullToPointer>
+                        | |       |   |               `-IntegerLiteral 0x7f951f0381e8 <col:45> 'int' 0
+                        | |       |   `-IntegerLiteral 0x7f951f038370 <line:4:48> 'int' 2
+                        | |       `-ImplicitCastExpr 0x7f951f0383f8 <line:3:50> 'unsigned long' <IntegralCast>
+                        | |         `-IntegerLiteral 0x7f951f0383d8 <col:50> 'int' 1
+                        | `-IntegerLiteral 0x7f951f0384c0 <line:4:54> 'int' 2
+                        `-ParenExpr 0x7f951f0389c0 <line:3:15, col:54> 'unsigned long'
+                          `-ConditionalOperator 0x7f951f038990 <col:16, col:53> 'unsigned long'
+                            |-ParenExpr 0x7f951f038710 <col:16, col:33> 'unsigned long'
+                            | `-BinaryOperator 0x7f951f0386e8 <col:17, col:23> 'unsigned long' '&'
+                            |   |-ParenExpr 0x7f951f038690 <col:17, col:19> 'unsigned long'
+                            |   | `-BinaryOperator 0x7f951f038668 <line:14:14, col:49> 'unsigned long' '-'
+                            |   |   |-IntegerLiteral 0x7f951f038508 <col:14> 'unsigned long' 4096
+                            |   |   `-ImplicitCastExpr 0x7f951f038650 <col:23, col:49> 'unsigned long' <IntegralCast>
+                            |   |     `-CStyleCastExpr 0x7f951f038628 <col:23, col:49> 'long' <PointerToIntegral>
+                            |   |       `-UnaryOperator 0x7f951f0385f0 <col:30, col:49> 'char *' prefix '&'
+                            |   |         `-MemberExpr 0x7f951f0385b8 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                            |   |           `-ParenExpr 0x7f951f038598 <col:31, col:46> 'struct A *'
+                            |   |             `-CStyleCastExpr 0x7f951f038570 <col:32, col:45> 'struct A *' <NullToPointer>
+                            |   |               `-IntegerLiteral 0x7f951f038528 <col:45> 'int' 0
+                            |   `-ImplicitCastExpr 0x7f951f0386d0 <line:3:23> 'unsigned long' <IntegralCast>
+                            |     `-IntegerLiteral 0x7f951f0386b0 <col:23> 'int' 2
+                            |-ImplicitCastExpr 0x7f951f038978 <col:37> 'unsigned long' <IntegralCast>
+                            | `-IntegerLiteral 0x7f951f038730 <col:37> 'int' 2
+                            `-ParenExpr 0x7f951f038958 <col:43, col:53> 'unsigned long'
+                              `-BinaryOperator 0x7f951f038930 <col:44, col:50> 'unsigned long' '&'
+                                |-ParenExpr 0x7f951f0388d8 <col:44, col:46> 'unsigned long'
+                                | `-BinaryOperator 0x7f951f0388b0 <line:14:14, col:49> 'unsigned long' '-'
+                                |   |-IntegerLiteral 0x7f951f038750 <col:14> 'unsigned long' 4096
+                                |   `-ImplicitCastExpr 0x7f951f038898 <col:23, col:49> 'unsigned long' <IntegralCast>
+                                |     `-CStyleCastExpr 0x7f951f038870 <col:23, col:49> 'long' <PointerToIntegral>
+                                |       `-UnaryOperator 0x7f951f038838 <col:30, col:49> 'char *' prefix '&'
+                                |         `-MemberExpr 0x7f951f038800 <col:31, col:49> 'char' lvalue ->f 0x7f951f011e88
+                                |           `-ParenExpr 0x7f951f0387e0 <col:31, col:46> 'struct A *'
+                                |             `-CStyleCastExpr 0x7f951f0387b8 <col:32, col:45> 'struct A *' <NullToPointer>
+                                |               `-IntegerLiteral 0x7f951f038770 <col:45> 'int' 0
+                                `-ImplicitCastExpr 0x7f951f038918 <line:3:50> 'unsigned long' <IntegralCast>
+                                  `-IntegerLiteral 0x7f951f0388f8 <col:50> 'int' 1

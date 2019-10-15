@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fe79602bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe79602c978 <../Data/C2AST/pr64494.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe796814258 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fe7968142e8 <line:4:1, col:15> col:15 used c 'unsigned char'
+`-FunctionDecl 0x7fe7968143a0 <line:6:1, line:18:1> line:7:1 main 'int ()'
+  `-CompoundStmt 0x7fe796814b78 <line:8:1, line:18:1>
+    |-DeclStmt 0x7fe7968144b8 <line:9:3, col:8>
+    | `-VarDecl 0x7fe796814458 <col:3, col:7> col:7 used d 'int'
+    |-BinaryOperator 0x7fe796814518 <line:10:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe7968144d0 <col:3> 'int' lvalue Var 0x7fe79602c978 'a' 'int'
+    | `-IntegerLiteral 0x7fe7968144f8 <col:7> 'int' 0
+    |-ForStmt 0x7fe796814b08 <line:11:3, line:16:5>
+    | |-BinaryOperator 0x7fe796814588 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fe796814540 <col:8> 'int' lvalue Var 0x7fe796814458 'd' 'int'
+    | | `-IntegerLiteral 0x7fe796814568 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe796814610 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fe7968145f8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe7968145b0 <col:15> 'int' lvalue Var 0x7fe796814458 'd' 'int'
+    | | `-IntegerLiteral 0x7fe7968145d8 <col:19> 'int' 2
+    | |-UnaryOperator 0x7fe796814660 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fe796814638 <col:22> 'int' lvalue Var 0x7fe796814458 'd' 'int'
+    | `-CompoundStmt 0x7fe796814ae0 <line:12:5, line:16:5>
+    |   |-CompoundAssignOperator 0x7fe796814750 <line:13:7, col:19> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7fe796814680 <col:7> 'int' lvalue Var 0x7fe79602c978 'a' 'int'
+    |   | `-ParenExpr 0x7fe796814730 <col:12, col:19> 'int'
+    |   |   `-BinaryOperator 0x7fe796814708 <col:13, col:18> 'int' '>='
+    |   |     |-ImplicitCastExpr 0x7fe7968146f0 <col:13> 'int' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fe7968146a8 <col:13> 'int' lvalue Var 0x7fe796814258 'b' 'int'
+    |   |     `-IntegerLiteral 0x7fe7968146d0 <col:18> 'int' 1
+    |   |-BinaryOperator 0x7fe796814a48 <line:14:7, col:60> 'unsigned char' '='
+    |   | |-DeclRefExpr 0x7fe796814788 <col:7> 'unsigned char' lvalue Var 0x7fe7968142e8 'c' 'unsigned char'
+    |   | `-ImplicitCastExpr 0x7fe796814a30 <col:11, col:60> 'unsigned char' <IntegralCast>
+    |   |   `-ConditionalOperator 0x7fe796814a00 <col:11, col:60> 'int'
+    |   |     |-ParenExpr 0x7fe796814938 <col:11, col:45> 'int'
+    |   |     | `-BinaryOperator 0x7fe796814910 <col:12, col:44> 'int' '>'
+    |   |     |   |-IntegerLiteral 0x7fe7968147b0 <col:12> 'int' 204
+    |   |     |   `-ParenExpr 0x7fe7968148f0 <col:18, col:44> 'int'
+    |   |     |     `-BinaryOperator 0x7fe7968148c8 <col:19, col:43> 'int' '>>'
+    |   |     |       |-ImplicitCastExpr 0x7fe796814898 <col:19, col:38> 'int' <IntegralCast>
+    |   |     |       | `-ParenExpr 0x7fe796814850 <col:19, col:38> 'unsigned char'
+    |   |     |       |   `-CStyleCastExpr 0x7fe796814828 <col:20, col:37> 'unsigned char' <IntegralCast>
+    |   |     |       |     `-UnaryOperator 0x7fe7968147f0 <col:36, col:37> 'int' prefix '~'
+    |   |     |       |       `-IntegerLiteral 0x7fe7968147d0 <col:37> 'int' 0
+    |   |     |       `-ImplicitCastExpr 0x7fe7968148b0 <col:43> 'int' <LValueToRValue>
+    |   |     |         `-DeclRefExpr 0x7fe796814870 <col:43> 'int' lvalue Var 0x7fe79602c978 'a' 'int'
+    |   |     |-IntegerLiteral 0x7fe796814958 <col:49> 'int' 0
+    |   |     `-BinaryOperator 0x7fe7968149d8 <col:53, col:60> 'int' '<<'
+    |   |       |-IntegerLiteral 0x7fe796814978 <col:53> 'int' 204
+    |   |       `-ImplicitCastExpr 0x7fe7968149c0 <col:60> 'int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fe796814998 <col:60> 'int' lvalue Var 0x7fe79602c978 'a' 'int'
+    |   `-BinaryOperator 0x7fe796814ab8 <line:15:7, col:11> 'int' '='
+    |     |-DeclRefExpr 0x7fe796814a70 <col:7> 'int' lvalue Var 0x7fe796814258 'b' 'int'
+    |     `-IntegerLiteral 0x7fe796814a98 <col:11> 'int' 0
+    `-ReturnStmt 0x7fe796814b60 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fe796814b40 <col:10> 'int' 0

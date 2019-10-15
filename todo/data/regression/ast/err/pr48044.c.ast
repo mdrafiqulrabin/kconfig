@@ -1,0 +1,29 @@
+../Data/C2AST/pr48044.c:10:54: error: aliases are not supported on darwin
+extern int c __asm__ (ASMNAME ("a")) __attribute__ ((alias ("b")));
+                                                     ^
+../Data/C2AST/pr48044.c:11:36: error: aliases are not supported on darwin
+extern int d __attribute__ ((weak, alias ("a")));
+                                   ^
+2 errors generated.
+TranslationUnitDecl 0x7fefc702bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fefc702c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fefc702bf80 '__int128'
+|-TypedefDecl 0x7fefc702c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fefc702bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fefc702c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fefc702c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fefc702c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fefc702c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fefc702c600 'char *'
+|   `-BuiltinType 0x7fefc702bd80 'char'
+|-TypedefDecl 0x7fefc702c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fefc702c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fefc702c720 'struct __va_list_tag'
+|     `-Record 0x7fefc702c698 '__va_list_tag'
+|-VarDecl 0x7fefc782bc00 <../Data/C2AST/pr48044.c:9:1, col:33> col:5 a 'int' cinit
+| |-IntegerLiteral 0x7fefc782bcf8 <col:33> 'int' 0
+| `-AsmLabelAttr 0x7fefc782bc60 <<scratch space>:2:1> "_b"
+|-VarDecl 0x7fefc782bdd0 <../Data/C2AST/pr48044.c:10:1, col:12> col:12 c 'int' extern
+| `-AsmLabelAttr 0x7fefc782be30 <<scratch space>:3:1> "_a"
+`-VarDecl 0x7fefc782bed0 <../Data/C2AST/pr48044.c:11:1, col:12> col:12 d 'int' extern
+  `-WeakAttr 0x7fefc782bf30 <col:30>

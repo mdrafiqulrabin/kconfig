@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fdebb023ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdebb0a7f18 <../Data/C2AST/pragma_fpu_attribute_2.c:10:1, col:21> col:17 used bar 'uint32_t ()' extern
+|-FunctionDecl 0x7fdebb0a81e8 <line:14:14> col:14 implicit used fmaf 'float (float, float, float)' extern
+| |-ParmVarDecl 0x7fdebb0a8288 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7fdebb0a82e8 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7fdebb0a8348 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7fdebb0a83c0 <col:14> Implicit
+| `-NoThrowAttr 0x7fdebb0a8408 <col:14> Implicit
+|-FunctionDecl 0x7fdebb0a8418 prev 0x7fdebb0a81e8 <col:1, col:39> col:14 used fmaf 'float (float, float, float)' extern
+| |-ParmVarDecl 0x7fdebb0a8010 <col:20> col:25 'float'
+| |-ParmVarDecl 0x7fdebb0a8088 <col:27> col:32 'float'
+| |-ParmVarDecl 0x7fdebb0a8100 <col:34> col:39 'float'
+| |-ConstAttr 0x7fdebb0a8508 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7fdebb0a8518 <col:14> Inherited Implicit
+|-FunctionDecl 0x7fdebb0a86d0 <line:16:1, line:20:1> line:17:1 vfma32 'float (float, float, float)'
+| |-ParmVarDecl 0x7fdebb0a8540 <col:9, col:15> col:15 used x 'float'
+| |-ParmVarDecl 0x7fdebb0a85b8 <col:18, col:24> col:24 used y 'float'
+| |-ParmVarDecl 0x7fdebb0a8630 <col:27, col:33> col:33 used z 'float'
+| `-CompoundStmt 0x7fdebb0a8910 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7fdebb0a88f8 <line:19:3, col:23>
+|     `-CallExpr 0x7fdebb0a8870 <col:10, col:23> 'float'
+|       |-ImplicitCastExpr 0x7fdebb0a8858 <col:10> 'float (*)(float, float, float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fdebb0a8788 <col:10> 'float (float, float, float)' Function 0x7fdebb0a8418 'fmaf' 'float (float, float, float)'
+|       |-ImplicitCastExpr 0x7fdebb0a88b0 <col:16> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fdebb0a87b0 <col:16> 'float' lvalue ParmVar 0x7fdebb0a8540 'x' 'float'
+|       |-ImplicitCastExpr 0x7fdebb0a88c8 <col:19> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fdebb0a87d8 <col:19> 'float' lvalue ParmVar 0x7fdebb0a85b8 'y' 'float'
+|       `-ImplicitCastExpr 0x7fdebb0a88e0 <col:22> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fdebb0a8800 <col:22> 'float' lvalue ParmVar 0x7fdebb0a8630 'z' 'float'
+`-FunctionDecl 0x7fdebb0a8948 <line:23:1, line:26:1> line:23:10 restored 'uint32_t ()'
+  `-CompoundStmt 0x7fdebb0af2e0 <line:24:1, line:26:1>
+    `-ReturnStmt 0x7fdebb0af2c8 <line:25:3, col:14>
+      `-CallExpr 0x7fdebb0af2a0 <col:10, col:14> 'uint32_t':'unsigned int'
+        `-ImplicitCastExpr 0x7fdebb0af288 <col:10> 'uint32_t (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fdebb0af200 <col:10> 'uint32_t ()' Function 0x7fdebb0a7f18 'bar' 'uint32_t ()'

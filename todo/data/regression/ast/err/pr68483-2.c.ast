@@ -1,0 +1,43 @@
+../Data/C2AST/pr68483-2.c:12:8: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  *a = __builtin_shuffle (*b, c, d);
+       ^
+../Data/C2AST/pr68483-2.c:12:6: error: assigning to 'V' (vector of 4 'int' values) from incompatible type 'int'
+  *a = __builtin_shuffle (*b, c, d);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7f9b108198e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b10819e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b10819b80 '__int128'
+|-TypedefDecl 0x7f9b10819ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b10819ba0 'unsigned __int128'
+|-TypedefDecl 0x7f9b1081a1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b10819fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b10819f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b1081a240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b1081a200 'char *'
+|   `-BuiltinType 0x7f9b10819980 'char'
+|-TypedefDecl 0x7f9b1081a508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b1081a4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b1081a320 'struct __va_list_tag'
+|     `-Record 0x7f9b1081a298 '__va_list_tag'
+|-TypedefDecl 0x7f9b1100d000 <../Data/C2AST/pr68483-2.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f9b1081a580 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f9b108199e0 'int'
+`-FunctionDecl 0x7f9b1100d270 <line:7:1, line:13:1> line:8:1 foo 'void (V *, V *)'
+  |-ParmVarDecl 0x7f9b1100d0e8 <col:6, col:9> col:9 used a 'V *'
+  |-ParmVarDecl 0x7f9b1100d158 <col:12, col:15> col:15 used b 'V *'
+  `-CompoundStmt 0x7f9b1100ddd0 <line:9:1, line:13:1>
+    |-DeclStmt 0x7f9b1100d510 <line:10:3, col:23>
+    | `-VarDecl 0x7f9b1100d370 <col:3, col:22> col:5 used c 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+    |   `-InitListExpr 0x7f9b1100d4b0 <col:9, col:22> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |     |-IntegerLiteral 0x7f9b1100d3d0 <col:11> 'int' 0
+    |     |-IntegerLiteral 0x7f9b1100d3f0 <col:14> 'int' 0
+    |     |-IntegerLiteral 0x7f9b1100d410 <col:17> 'int' 0
+    |     `-IntegerLiteral 0x7f9b1100d430 <col:20> 'int' 0
+    `-DeclStmt 0x7f9b1100d6d8 <line:11:3, col:23>
+      `-VarDecl 0x7f9b1100d538 <col:3, col:22> col:5 used d 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+        `-InitListExpr 0x7f9b1100d678 <col:9, col:22> 'V':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          |-IntegerLiteral 0x7f9b1100d598 <col:11> 'int' 1
+          |-IntegerLiteral 0x7f9b1100d5b8 <col:14> 'int' 2
+          |-IntegerLiteral 0x7f9b1100d5d8 <col:17> 'int' 3
+          `-IntegerLiteral 0x7f9b1100d5f8 <col:20> 'int' 4

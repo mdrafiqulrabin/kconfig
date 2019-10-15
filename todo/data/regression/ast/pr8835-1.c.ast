@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f959c82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f959c82c960 <../Data/C2AST/pr8835-1.c:3:1, line:5:1> line:3:8 struct s definition
+| `-FieldDecl 0x7f959d014230 <line:4:3, col:8> col:8 c 'char'
+`-FunctionDecl 0x7f959d0143b0 <line:7:1, line:12:1> line:8:1 foo 'struct s (void)'
+  `-CompoundStmt 0x7f959d014648 <line:9:1, line:12:1>
+    |-DeclStmt 0x7f959d0145d8 <line:10:3, col:21>
+    | `-VarDecl 0x7f959d0144b0 <col:3, col:20> col:12 used s 'struct s':'struct s' nrvo cinit
+    |   `-InitListExpr 0x7f959d014578 <col:16, col:20> 'struct s':'struct s'
+    |     `-ImplicitCastExpr 0x7f959d0145c0 <col:18> 'char' <IntegralCast>
+    |       `-IntegerLiteral 0x7f959d014510 <col:18> 'int' 0
+    `-ReturnStmt 0x7f959d014630 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f959d014618 <col:10> 'struct s':'struct s' <LValueToRValue>
+        `-DeclRefExpr 0x7f959d0145f0 <col:10> 'struct s':'struct s' lvalue Var 0x7f959d0144b0 's' 'struct s':'struct s'

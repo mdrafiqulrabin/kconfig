@@ -1,0 +1,415 @@
+TranslationUnitDecl 0x7f885582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8856014250 <../Data/C2AST/pr35800.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f88560142f0 prev 0x7f8856014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8856014478 <line:3:1, line:84:1> line:3:5 used stab_xcoff_builtin_type 'int (int)'
+| |-ParmVarDecl 0x7f88560143a8 <col:30, col:34> col:34 used typenum 'int'
+| `-CompoundStmt 0x7f885602cb40 <line:4:1, line:84:1>
+|   |-DeclStmt 0x7f88560145d8 <line:5:3, col:19>
+|   | `-VarDecl 0x7f8856014578 <col:3, col:15> col:15 used name 'const char *'
+|   |-IfStmt 0x7f8856014798 <line:6:3, line:9:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8856014720 <line:6:7, col:34> 'int' '||'
+|   | | |-BinaryOperator 0x7f8856014650 <col:7, col:18> 'int' '>='
+|   | | | |-ImplicitCastExpr 0x7f8856014638 <col:7> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7f88560145f0 <col:7> 'int' lvalue ParmVar 0x7f88560143a8 'typenum' 'int'
+|   | | | `-IntegerLiteral 0x7f8856014618 <col:18> 'int' 0
+|   | | `-BinaryOperator 0x7f88560146f8 <col:23, col:34> 'int' '<'
+|   | |   |-ImplicitCastExpr 0x7f88560146e0 <col:23> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f8856014678 <col:23> 'int' lvalue ParmVar 0x7f88560143a8 'typenum' 'int'
+|   | |   `-UnaryOperator 0x7f88560146c0 <col:33, col:34> 'int' prefix '-'
+|   | |     `-IntegerLiteral 0x7f88560146a0 <col:34> 'int' 34
+|   | |-CompoundStmt 0x7f8856014780 <line:7:5, line:9:5>
+|   | | `-ReturnStmt 0x7f8856014768 <line:8:7, col:14>
+|   | |   `-IntegerLiteral 0x7f8856014748 <col:14> 'int' 0
+|   | `-<<<NULL>>>
+|   |-SwitchStmt 0x7f8856014830 <line:10:3, line:82:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f8856014810 <line:10:11, col:12> 'int' prefix '-'
+|   | | `-ImplicitCastExpr 0x7f88560147f8 <col:12> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f88560147d0 <col:12> 'int' lvalue ParmVar 0x7f88560143a8 'typenum' 'int'
+|   | `-CompoundStmt 0x7f885602c940 <line:11:5, line:82:5>
+|   |   |-CaseStmt 0x7f8856014880 <line:12:5, line:13:14>
+|   |   | |-IntegerLiteral 0x7f8856014860 <line:12:10> 'int' 1
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856014978 <line:13:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f88560148b8 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856014960 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856014948 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856014918 <col:14> 'char [4]' lvalue "int"
+|   |   |-BreakStmt 0x7f88560149a0 <line:14:7>
+|   |   |-CaseStmt 0x7f88560149c8 <line:15:5, line:16:14>
+|   |   | |-IntegerLiteral 0x7f88560149a8 <line:15:10> 'int' 2
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856014ac8 <line:16:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856014a00 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856014ab0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856014a98 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856014a68 <col:14> 'char [5]' lvalue "char"
+|   |   |-CaseStmt 0x7f8856014b10 <line:17:5, line:18:14>
+|   |   | |-IntegerLiteral 0x7f8856014af0 <line:17:10> 'int' 3
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856014c08 <line:18:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856014b48 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856014bf0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856014bd8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856014ba8 <col:14> 'char [6]' lvalue "short"
+|   |   |-BreakStmt 0x7f8856014c30 <line:19:7>
+|   |   |-CaseStmt 0x7f8856014c58 <line:20:5, line:21:14>
+|   |   | |-IntegerLiteral 0x7f8856014c38 <line:20:10> 'int' 4
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856014d18 <line:21:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856014c90 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856014d00 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856014ce8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856014cb8 <col:14> 'char [5]' lvalue "long"
+|   |   |-CaseStmt 0x7f8856014d60 <line:22:5, line:23:14>
+|   |   | |-IntegerLiteral 0x7f8856014d40 <line:22:10> 'int' 5
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856014e60 <line:23:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856014d98 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856014e48 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856014e30 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856014df8 <col:14> 'char [14]' lvalue "unsigned char"
+|   |   |-CaseStmt 0x7f8856014ea8 <line:24:5, line:25:14>
+|   |   | |-IntegerLiteral 0x7f8856014e88 <line:24:10> 'int' 6
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856014fb0 <line:25:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856014ee0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856014f98 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856014f80 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856014f48 <col:14> 'char [12]' lvalue "signed char"
+|   |   |-CaseStmt 0x7f8856014ff8 <line:26:5, line:27:14>
+|   |   | |-IntegerLiteral 0x7f8856014fd8 <line:26:10> 'int' 7
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015100 <line:27:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015030 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f88560150e8 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f88560150d0 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015098 <col:14> 'char [15]' lvalue "unsigned short"
+|   |   |-CaseStmt 0x7f8856015148 <line:28:5, line:29:14>
+|   |   | |-IntegerLiteral 0x7f8856015128 <line:28:10> 'int' 8
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015268 <line:29:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015180 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015250 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015238 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015200 <col:14> 'char [13]' lvalue "unsigned int"
+|   |   |-CaseStmt 0x7f88560152b0 <line:30:5, line:31:14>
+|   |   | |-IntegerLiteral 0x7f8856015290 <line:30:10> 'int' 9
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f88560153a8 <line:31:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f88560152e8 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015390 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015378 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015348 <col:14> 'char [9]' lvalue "unsigned"
+|   |   |-CaseStmt 0x7f88560153f0 <line:32:5, line:33:14>
+|   |   | |-IntegerLiteral 0x7f88560153d0 <line:32:10> 'int' 10
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f88560154b8 <line:33:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015428 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f88560154a0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015488 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015450 <col:14> 'char [14]' lvalue "unsigned long"
+|   |   |-CaseStmt 0x7f8856015500 <line:34:5, line:35:14>
+|   |   | |-IntegerLiteral 0x7f88560154e0 <line:34:10> 'int' 11
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f88560155c0 <line:35:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015538 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f88560155a8 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015590 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015560 <col:14> 'char [5]' lvalue "void"
+|   |   |-CaseStmt 0x7f8856015608 <line:36:5, line:37:14>
+|   |   | |-IntegerLiteral 0x7f88560155e8 <line:36:10> 'int' 12
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f88560156c8 <line:37:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015640 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f88560156b0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015698 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015668 <col:14> 'char [6]' lvalue "float"
+|   |   |-CaseStmt 0x7f8856015710 <line:38:5, line:39:14>
+|   |   | |-IntegerLiteral 0x7f88560156f0 <line:38:10> 'int' 13
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015808 <line:39:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015748 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f88560157f0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f88560157d8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f88560157a8 <col:14> 'char [7]' lvalue "double"
+|   |   |-CaseStmt 0x7f8856015850 <line:40:5, line:41:14>
+|   |   | |-IntegerLiteral 0x7f8856015830 <line:40:10> 'int' 14
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015918 <line:41:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015888 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015900 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f88560158e8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f88560158b0 <col:14> 'char [12]' lvalue "long double"
+|   |   |-CaseStmt 0x7f8856015960 <line:42:5, line:43:14>
+|   |   | |-IntegerLiteral 0x7f8856015940 <line:42:10> 'int' 15
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015a58 <line:43:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015998 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015a40 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015a28 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f88560159f8 <col:14> 'char [8]' lvalue "integer"
+|   |   |-CaseStmt 0x7f8856015aa0 <line:44:5, line:45:14>
+|   |   | |-IntegerLiteral 0x7f8856015a80 <line:44:10> 'int' 16
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015b60 <line:45:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015ad8 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015b48 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015b30 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015b00 <col:14> 'char [8]' lvalue "boolean"
+|   |   |-CaseStmt 0x7f8856015ba8 <line:46:5, line:47:14>
+|   |   | |-IntegerLiteral 0x7f8856015b88 <line:46:10> 'int' 17
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015cb0 <line:47:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015be0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015c98 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015c80 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015c48 <col:14> 'char [11]' lvalue "short real"
+|   |   |-CaseStmt 0x7f8856015cf8 <line:48:5, line:49:14>
+|   |   | |-IntegerLiteral 0x7f8856015cd8 <line:48:10> 'int' 18
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015db8 <line:49:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015d30 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015da0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015d88 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015d58 <col:14> 'char [5]' lvalue "real"
+|   |   |-CaseStmt 0x7f8856015e00 <line:50:5, line:51:14>
+|   |   | |-IntegerLiteral 0x7f8856015de0 <line:50:10> 'int' 19
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856015f00 <line:51:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015e38 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015ee8 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015ed0 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015e98 <col:14> 'char [10]' lvalue "stringptr"
+|   |   |-CaseStmt 0x7f8856015f48 <line:52:5, line:53:14>
+|   |   | |-IntegerLiteral 0x7f8856015f28 <line:52:10> 'int' 20
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856016010 <line:53:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856015f80 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856015ff8 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f8856015fe0 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f8856015fa8 <col:14> 'char [10]' lvalue "character"
+|   |   |-CaseStmt 0x7f8856016058 <line:54:5, line:55:14>
+|   |   | |-IntegerLiteral 0x7f8856016038 <line:54:10> 'int' 21
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f8856016120 <line:55:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f8856016090 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f8856016108 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f88560160f0 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f88560160b8 <col:14> 'char [10]' lvalue "logical*1"
+|   |   |-CaseStmt 0x7f8856016168 <line:56:5, line:57:14>
+|   |   | |-IntegerLiteral 0x7f8856016148 <line:56:10> 'int' 22
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602bc30 <line:57:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f88560161a0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602bc18 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602bc00 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f88560161c8 <col:14> 'char [10]' lvalue "logical*2"
+|   |   |-CaseStmt 0x7f885602bc78 <line:58:5, line:59:14>
+|   |   | |-IntegerLiteral 0x7f885602bc58 <line:58:10> 'int' 23
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602bd40 <line:59:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602bcb0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602bd28 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602bd10 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602bcd8 <col:14> 'char [10]' lvalue "logical*4"
+|   |   |-CaseStmt 0x7f885602bd88 <line:60:5, line:61:14>
+|   |   | |-IntegerLiteral 0x7f885602bd68 <line:60:10> 'int' 24
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602be48 <line:61:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602bdc0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602be30 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602be18 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602bde8 <col:14> 'char [8]' lvalue "logical"
+|   |   |-CaseStmt 0x7f885602be90 <line:62:5, line:63:14>
+|   |   | |-IntegerLiteral 0x7f885602be70 <line:62:10> 'int' 25
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602bf50 <line:63:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602bec8 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602bf38 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602bf20 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602bef0 <col:14> 'char [8]' lvalue "complex"
+|   |   |-CaseStmt 0x7f885602bf98 <line:64:5, line:65:14>
+|   |   | |-IntegerLiteral 0x7f885602bf78 <line:64:10> 'int' 26
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c060 <line:65:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602bfd0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c048 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c030 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602bff8 <col:14> 'char [15]' lvalue "double complex"
+|   |   |-CaseStmt 0x7f885602c0a8 <line:66:5, line:67:14>
+|   |   | |-IntegerLiteral 0x7f885602c088 <line:66:10> 'int' 27
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c170 <line:67:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c0e0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c158 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c140 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c108 <col:14> 'char [10]' lvalue "integer*1"
+|   |   |-CaseStmt 0x7f885602c1b8 <line:68:5, line:69:14>
+|   |   | |-IntegerLiteral 0x7f885602c198 <line:68:10> 'int' 28
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c280 <line:69:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c1f0 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c268 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c250 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c218 <col:14> 'char [10]' lvalue "integer*2"
+|   |   |-CaseStmt 0x7f885602c2c8 <line:70:5, line:71:14>
+|   |   | |-IntegerLiteral 0x7f885602c2a8 <line:70:10> 'int' 29
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c390 <line:71:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c300 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c378 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c360 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c328 <col:14> 'char [10]' lvalue "integer*4"
+|   |   |-CaseStmt 0x7f885602c3d8 <line:72:5, line:73:14>
+|   |   | |-IntegerLiteral 0x7f885602c3b8 <line:72:10> 'int' 30
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c498 <line:73:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c410 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c480 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c468 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c438 <col:14> 'char [6]' lvalue "wchar"
+|   |   |-CaseStmt 0x7f885602c4e0 <line:74:5, line:75:14>
+|   |   | |-IntegerLiteral 0x7f885602c4c0 <line:74:10> 'int' 31
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c5a8 <line:75:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c518 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c590 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c578 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c540 <col:14> 'char [10]' lvalue "long long"
+|   |   |-CaseStmt 0x7f885602c5f0 <line:76:5, line:77:14>
+|   |   | |-IntegerLiteral 0x7f885602c5d0 <line:76:10> 'int' 32
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c6f8 <line:77:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c628 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c6e0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c6c8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c688 <col:14> 'char [19]' lvalue "unsigned long long"
+|   |   |-CaseStmt 0x7f885602c740 <line:78:5, line:79:14>
+|   |   | |-IntegerLiteral 0x7f885602c720 <line:78:10> 'int' 33
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f885602c808 <line:79:7, col:14> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f885602c778 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f885602c7f0 <col:14> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f885602c7d8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f885602c7a0 <col:14> 'char [10]' lvalue "logical*8"
+|   |   `-CaseStmt 0x7f885602c850 <line:80:5, line:81:14>
+|   |     |-IntegerLiteral 0x7f885602c830 <line:80:10> 'int' 34
+|   |     |-<<<NULL>>>
+|   |     `-BinaryOperator 0x7f885602c918 <line:81:7, col:14> 'const char *' '='
+|   |       |-DeclRefExpr 0x7f885602c888 <col:7> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|   |       `-ImplicitCastExpr 0x7f885602c900 <col:14> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7f885602c8e8 <col:14> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7f885602c8b0 <col:14> 'char [10]' lvalue "integer*8"
+|   `-ReturnStmt 0x7f885602cb28 <line:83:3, col:16>
+|     `-ImplicitCastExpr 0x7f885602cb10 <col:10, col:16> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f885602caf8 <col:10, col:16> 'char' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f885602cad0 <col:10, col:16> 'const char' lvalue
+|           |-ImplicitCastExpr 0x7f885602cab8 <col:10> 'const char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f885602ca70 <col:10> 'const char *' lvalue Var 0x7f8856014578 'name' 'const char *'
+|           `-IntegerLiteral 0x7f885602ca98 <col:15> 'int' 0
+`-FunctionDecl 0x7f885602cc00 <line:86:1, line:103:1> line:86:5 main 'int ()'
+  `-CompoundStmt 0x7f885602d8c8 <line:87:1, line:103:1>
+    |-DeclStmt 0x7f885602cd18 <line:88:3, col:8>
+    | `-VarDecl 0x7f885602ccb8 <col:3, col:7> col:7 used i 'int'
+    |-IfStmt 0x7f885602cec8 <line:89:3, line:90:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f885602ce10 <line:89:7, col:37> 'int' '!='
+    | | |-CallExpr 0x7f885602cdc0 <col:7, col:32> 'int'
+    | | | |-ImplicitCastExpr 0x7f885602cda8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f885602cd30 <col:7> 'int (int)' Function 0x7f8856014478 'stab_xcoff_builtin_type' 'int (int)'
+    | | | `-IntegerLiteral 0x7f885602cd58 <col:31> 'int' 0
+    | | `-IntegerLiteral 0x7f885602cdf0 <col:37> 'int' 0
+    | |-CallExpr 0x7f885602cea0 <line:90:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f885602ce88 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f885602ce38 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f88560142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f885602d058 <line:91:3, line:92:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f885602cfc8 <line:91:7, col:38> 'int' '!='
+    | | |-CallExpr 0x7f885602cf80 <col:7, col:33> 'int'
+    | | | |-ImplicitCastExpr 0x7f885602cf68 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f885602cf00 <col:7> 'int (int)' Function 0x7f8856014478 'stab_xcoff_builtin_type' 'int (int)'
+    | | | `-UnaryOperator 0x7f885602cf48 <col:31, col:32> 'int' prefix '-'
+    | | |   `-IntegerLiteral 0x7f885602cf28 <col:32> 'int' 1
+    | | `-CharacterLiteral 0x7f885602cfb0 <col:38> 'int' 105
+    | |-CallExpr 0x7f885602d030 <line:92:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f885602d018 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f885602cff0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f88560142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f885602d1e8 <line:93:3, line:94:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f885602d158 <line:93:7, col:38> 'int' '!='
+    | | |-CallExpr 0x7f885602d110 <col:7, col:33> 'int'
+    | | | |-ImplicitCastExpr 0x7f885602d0f8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f885602d090 <col:7> 'int (int)' Function 0x7f8856014478 'stab_xcoff_builtin_type' 'int (int)'
+    | | | `-UnaryOperator 0x7f885602d0d8 <col:31, col:32> 'int' prefix '-'
+    | | |   `-IntegerLiteral 0x7f885602d0b8 <col:32> 'int' 2
+    | | `-CharacterLiteral 0x7f885602d140 <col:38> 'int' 115
+    | |-CallExpr 0x7f885602d1c0 <line:94:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f885602d1a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f885602d180 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f88560142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f885602d378 <line:95:3, line:96:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f885602d2e8 <line:95:7, col:38> 'int' '!='
+    | | |-CallExpr 0x7f885602d2a0 <col:7, col:33> 'int'
+    | | | |-ImplicitCastExpr 0x7f885602d288 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f885602d220 <col:7> 'int (int)' Function 0x7f8856014478 'stab_xcoff_builtin_type' 'int (int)'
+    | | | `-UnaryOperator 0x7f885602d268 <col:31, col:32> 'int' prefix '-'
+    | | |   `-IntegerLiteral 0x7f885602d248 <col:32> 'int' 3
+    | | `-CharacterLiteral 0x7f885602d2d0 <col:38> 'int' 115
+    | |-CallExpr 0x7f885602d350 <line:96:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f885602d338 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f885602d310 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f88560142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-ForStmt 0x7f885602d6c0 <line:97:3, line:99:14>
+    | |-BinaryOperator 0x7f885602d418 <line:97:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7f885602d3b0 <col:8> 'int' lvalue Var 0x7f885602ccb8 'i' 'int'
+    | | `-UnaryOperator 0x7f885602d3f8 <col:12, col:13> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7f885602d3d8 <col:13> 'int' 4
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f885602d4c0 <col:16, col:22> 'int' '>='
+    | | |-ImplicitCastExpr 0x7f885602d4a8 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f885602d440 <col:16> 'int' lvalue Var 0x7f885602ccb8 'i' 'int'
+    | | `-UnaryOperator 0x7f885602d488 <col:21, col:22> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7f885602d468 <col:22> 'int' 34
+    | |-UnaryOperator 0x7f885602d510 <col:26, col:28> 'int' prefix '--'
+    | | `-DeclRefExpr 0x7f885602d4e8 <col:28> 'int' lvalue Var 0x7f885602ccb8 'i' 'int'
+    | `-IfStmt 0x7f885602d688 <line:98:5, line:99:14>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7f885602d5f8 <line:98:9, col:39> 'int' '!='
+    |   | |-CallExpr 0x7f885602d598 <col:9, col:34> 'int'
+    |   | | |-ImplicitCastExpr 0x7f885602d580 <col:9> 'int (*)(int)' <FunctionToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7f885602d530 <col:9> 'int (int)' Function 0x7f8856014478 'stab_xcoff_builtin_type' 'int (int)'
+    |   | | `-ImplicitCastExpr 0x7f885602d5c8 <col:33> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f885602d558 <col:33> 'int' lvalue Var 0x7f885602ccb8 'i' 'int'
+    |   | `-CharacterLiteral 0x7f885602d5e0 <col:39> 'int' 105
+    |   |-CallExpr 0x7f885602d660 <line:99:7, col:14> 'void'
+    |   | `-ImplicitCastExpr 0x7f885602d648 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7f885602d620 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7f88560142f0 'abort' 'void (void) __attribute__((noreturn))'
+    |   `-<<<NULL>>>
+    |-IfStmt 0x7f885602d858 <line:100:3, line:101:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f885602d7c8 <line:100:7, col:39> 'int' '!='
+    | | |-CallExpr 0x7f885602d778 <col:7, col:34> 'int'
+    | | | |-ImplicitCastExpr 0x7f885602d760 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f885602d6f8 <col:7> 'int (int)' Function 0x7f8856014478 'stab_xcoff_builtin_type' 'int (int)'
+    | | | `-UnaryOperator 0x7f885602d740 <col:31, col:32> 'int' prefix '-'
+    | | |   `-IntegerLiteral 0x7f885602d720 <col:32> 'int' 35
+    | | `-IntegerLiteral 0x7f885602d7a8 <col:39> 'int' 0
+    | |-CallExpr 0x7f885602d830 <line:101:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f885602d818 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f885602d7f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f88560142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f885602d8b0 <line:102:3, col:10>
+      `-IntegerLiteral 0x7f885602d890 <col:10> 'int' 0

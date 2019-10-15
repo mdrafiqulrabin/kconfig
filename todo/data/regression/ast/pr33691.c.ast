@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fc0780058e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc078007668 <../Data/C2AST/pr33691.c:5:1, line:8:1> line:5:14 mgaSetTexImages 'unsigned int (int)'
+  |-ParmVarDecl 0x7fc078006578 <col:30, col:34> col:34 used i 'int'
+  `-CompoundStmt 0x7fc078007890 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fc078007878 <line:7:5, col:36>
+      `-ParenExpr 0x7fc078007858 <col:12, col:36> 'unsigned int'
+        `-BinaryOperator 0x7fc078007830 <col:13, col:26> 'unsigned int' '&'
+          |-ImplicitCastExpr 0x7fc078007818 <col:13, col:22> 'unsigned int' <IntegralCast>
+          | `-ParenExpr 0x7fc0780077d8 <col:13, col:22> 'int'
+          |   `-BinaryOperator 0x7fc0780077b0 <col:14, col:18> 'int' '|'
+          |     |-ImplicitCastExpr 0x7fc078007798 <col:14> 'int' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7fc078007750 <col:14> 'int' lvalue ParmVar 0x7fc078006578 'i' 'int'
+          |     `-IntegerLiteral 0x7fc078007778 <col:18> 'int' 64
+          `-IntegerLiteral 0x7fc0780077f8 <col:26> 'unsigned int' 4294967232

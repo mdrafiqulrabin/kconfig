@@ -1,0 +1,28 @@
+../Data/C2AST/pr63549.c:7:10: error: array subscript is not an integer
+int i = a[e];  
+         ^~
+../Data/C2AST/pr63549.c:5:8: error: tentative definition has type 'enum E' that is never completed
+enum E e;   
+       ^
+../Data/C2AST/pr63549.c:5:6: note: forward declaration of 'enum E'
+enum E e;   
+     ^
+2 errors generated.
+TranslationUnitDecl 0x7fe2d680a6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe2d680ac60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe2d680a980 '__int128'
+|-TypedefDecl 0x7fe2d680acd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe2d680a9a0 'unsigned __int128'
+|-TypedefDecl 0x7fe2d680afa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe2d680adb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe2d680ad28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe2d680b040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe2d680b000 'char *'
+|   `-BuiltinType 0x7fe2d680a780 'char'
+|-TypedefDecl 0x7fe2d680b308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe2d680b2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe2d680b120 'struct __va_list_tag'
+|     `-Record 0x7fe2d680b098 '__va_list_tag'
+|-VarDecl 0x7fe2d782d670 <../Data/C2AST/pr63549.c:5:1, col:8> col:8 used invalid e 'enum E':'enum E'
+|-VarDecl 0x7fe2d782d7b0 <line:6:1, col:9> col:5 used a 'int [10]'
+`-VarDecl 0x7fe2d782d828 <line:7:1, col:5> col:5 i 'int'

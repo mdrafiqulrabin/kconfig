@@ -1,0 +1,52 @@
+../Data/C2AST/pr40906-3.c:6:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ff26e8258e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff26e825e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff26e825b80 '__int128'
+|-TypedefDecl 0x7ff26e825ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff26e825ba0 'unsigned __int128'
+|-TypedefDecl 0x7ff26e8261a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff26e825fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff26e825f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff26e826240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff26e826200 'char *'
+|   `-BuiltinType 0x7ff26e825980 'char'
+|-TypedefDecl 0x7ff26e826508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff26e8264b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff26e826320 'struct __va_list_tag'
+|     `-Record 0x7ff26e826298 '__va_list_tag'
+|-FunctionDecl 0x7ff26e85e060 <../Data/C2AST/pr40906-3.c:8:1, line:13:1> line:9:1 used f 'void (__float128)'
+| |-ParmVarDecl 0x7ff26e826578 <col:4, col:15> col:15 used a '__float128'
+| |-CompoundStmt 0x7ff26e85e3d0 <line:10:1, line:13:1>
+| | `-IfStmt 0x7ff26e85e398 <line:11:3, line:12:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff26e85e200 <line:11:7, col:12> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7ff26e85e1e8 <col:7> '__float128' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7ff26e85e190 <col:7> '__float128' lvalue ParmVar 0x7ff26e826578 'a' '__float128'
+| |   | `-FloatingLiteral 0x7ff26e85e1b8 <col:12> '__float128' 1.230000e+00
+| |   |-CallExpr 0x7ff26e85e370 <line:12:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7ff26e85e358 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7ff26e85e300 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff26e85e260 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff26e85e108 <line:8:21>
+|-FunctionDecl 0x7ff26e85e260 <line:12:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff26e85e4c8 <line:15:1, line:20:1> line:16:1 used g 'int (__float128)'
+| |-ParmVarDecl 0x7ff26e85e400 <col:4, col:15> col:15 used b '__float128'
+| |-CompoundStmt 0x7ff26e85e6d0 <line:17:1, line:20:1>
+| | |-CallExpr 0x7ff26e85e650 <line:18:3, col:7> 'void'
+| | | |-ImplicitCastExpr 0x7ff26e85e638 <col:3> 'void (*)(__float128)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7ff26e85e5b8 <col:3> 'void (__float128)' Function 0x7ff26e85e060 'f' 'void (__float128)'
+| | | `-ImplicitCastExpr 0x7ff26e85e680 <col:6> '__float128' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7ff26e85e5e0 <col:6> '__float128' lvalue ParmVar 0x7ff26e85e400 'b' '__float128'
+| | `-ReturnStmt 0x7ff26e85e6b8 <line:19:3, col:10>
+| |   `-IntegerLiteral 0x7ff26e85e698 <col:10> 'int' 0
+| `-NoInlineAttr 0x7ff26e85e570 <line:15:20>
+`-FunctionDecl 0x7ff26e85e7b0 <line:22:1, line:26:1> line:23:1 sse2_test 'void (void)' static
+  `-CompoundStmt 0x7ff26e85e920 <line:24:1, line:26:1>
+    `-CallExpr 0x7ff26e85e8f0 <line:25:3, col:11> 'int'
+      |-ImplicitCastExpr 0x7ff26e85e8d8 <col:3> 'int (*)(__float128)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff26e85e850 <col:3> 'int (__float128)' Function 0x7ff26e85e4c8 'g' 'int (__float128)'
+      `-FloatingLiteral 0x7ff26e85e878 <col:6> '__float128' 1.230000e+00

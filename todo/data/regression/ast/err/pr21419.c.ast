@@ -1,0 +1,29 @@
+../Data/C2AST/pr21419.c:6:36: error: invalid lvalue in asm output
+  __asm__ __volatile__ ("" : "=m" (i));  
+                                   ^
+../Data/C2AST/pr21419.c:12:36: error: invalid lvalue in asm output
+  __asm__ __volatile__ ("" : "=r" (set));  
+                                   ^~~
+2 errors generated.
+TranslationUnitDecl 0x7fa58882bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa58882c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa58882bf80 '__int128'
+|-TypedefDecl 0x7fa58882c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa58882bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa58882c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa58882c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa58882c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa58882c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa58882c600 'char *'
+|   `-BuiltinType 0x7fa58882bd80 'char'
+|-TypedefDecl 0x7fa58882c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa58882c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa58882c720 'struct __va_list_tag'
+|     `-Record 0x7fa58882c698 '__va_list_tag'
+|-VarDecl 0x7fa58882c978 <../Data/C2AST/pr21419.c:2:1, col:15> col:11 used i 'const int' cinit
+| `-IntegerLiteral 0x7fa58886d840 <col:15> 'int' 0
+|-FunctionDecl 0x7fa58886d920 <line:4:1, line:8:1> line:4:6 f 'void (void)'
+| `-CompoundStmt 0x7fa58886dab0 <line:5:1, line:8:1>
+`-FunctionDecl 0x7fa58886dbe0 <line:10:1, line:13:1> line:10:6 g 'void (const int)'
+  |-ParmVarDecl 0x7fa58886dad8 <col:8, col:18> col:18 used set 'const int'
+  `-CompoundStmt 0x7fa58886dd08 <line:11:1, line:13:1>

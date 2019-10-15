@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f93a882bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f93a882c960 <../Data/C2AST/pr23467.c:1:1, line:4:1> line:1:8 struct s1 definition
+| `-FieldDecl 0x7f93a886d858 <line:3:3, col:37> col:37 a 'int'
+|   `-AlignedAttr 0x7f93a886d8a0 <col:23, col:33> aligned
+|     `-IntegerLiteral 0x7f93a886d820 <col:32> 'int' 8
+|-RecordDecl 0x7f93a886d8f0 <line:6:1, line:10:1> line:6:1 struct definition
+| |-FieldDecl 0x7f93a886d9b0 <line:8:3, col:8> col:8 c 'char'
+| `-FieldDecl 0x7f93a886da50 <line:9:3, col:13> col:13 referenced m 'struct s1':'struct s1'
+|-VarDecl 0x7f93a886daf0 <line:6:1, line:10:3> col:3 used v 'struct (anonymous struct at ../Data/C2AST/pr23467.c:6:1)':'struct (anonymous at ../Data/C2AST/pr23467.c:6:1)'
+|-FunctionDecl 0x7f93a886dc78 <line:12:1, line:18:1> line:13:1 main 'int (void)'
+| `-CompoundStmt 0x7f93a886e2f0 <line:14:1, line:18:1>
+|   |-IfStmt 0x7f93a886e0b8 <line:15:3, line:16:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f93a886de88 <line:15:7, col:19> 'int' '&'
+|   | | |-CStyleCastExpr 0x7f93a886de40 <col:7, col:15> 'int' <PointerToIntegral>
+|   | | | `-UnaryOperator 0x7f93a886de08 <col:12, col:15> 'struct s1 *' prefix '&'
+|   | | |   `-MemberExpr 0x7f93a886dd70 <col:13, col:15> 'struct s1':'struct s1' lvalue .m 0x7f93a886da50
+|   | | |     `-DeclRefExpr 0x7f93a886dd48 <col:13> 'struct (anonymous struct at ../Data/C2AST/pr23467.c:6:1)':'struct (anonymous at ../Data/C2AST/pr23467.c:6:1)' lvalue Var 0x7f93a886daf0 'v' 'struct (anonymous struct at ../Data/C2AST/pr23467.c:6:1)':'struct (anonymous at ../Data/C2AST/pr23467.c:6:1)'
+|   | | `-IntegerLiteral 0x7f93a886de68 <col:19> 'int' 7
+|   | |-CallExpr 0x7f93a886e090 <line:16:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f93a886e078 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f93a886e020 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f93a886df80 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7f93a886e2c0 <line:17:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7f93a886e2a8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f93a886e230 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f93a886e128 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7f93a886e258 <col:9> 'int' 0
+|-FunctionDecl 0x7f93a886df80 <line:16:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f93a886e128 <line:17:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7f93a886e1c8 <<invalid sloc>> <invalid sloc> 'int'

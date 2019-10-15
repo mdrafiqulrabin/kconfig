@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fc77802bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc779014220 <../Data/C2AST/pr44337.c:5:1, line:10:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fc779014520 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fc7790143d8 <line:8:3, col:22>
+    | `-VarDecl 0x7fc779014378 <col:3, col:21> col:18 used v '_Complex float [1]'
+    `-BinaryOperator 0x7fc7790144f8 <line:9:3, col:10> '_Complex float' '='
+      |-ArraySubscriptExpr 0x7fc779014480 <col:3, col:6> '_Complex float' lvalue
+      | |-ImplicitCastExpr 0x7fc779014468 <col:3> '_Complex float *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7fc7790143f0 <col:3> '_Complex float [1]' lvalue Var 0x7fc779014378 'v' '_Complex float [1]'
+      | `-IntegerLiteral 0x7fc779014418 <col:5> 'int' 1
+      `-ImplicitCastExpr 0x7fc7790144e0 <col:10> '_Complex float' <FloatingRealToComplex>
+        `-ImplicitCastExpr 0x7fc7790144c8 <col:10> 'float' <IntegralToFloating>
+          `-IntegerLiteral 0x7fc7790144a8 <col:10> 'int' 0

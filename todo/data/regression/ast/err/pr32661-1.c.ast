@@ -1,0 +1,51 @@
+../Data/C2AST/pr32661-1.c:8:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v2di' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v2di(*val, 0);
+         ^
+../Data/C2AST/pr32661-1.c:13:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v2di' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v2di(*val, 1);
+         ^
+2 errors generated.
+TranslationUnitDecl 0x7fe60c0252e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe60c025860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe60c025580 '__int128'
+|-TypedefDecl 0x7fe60c0258d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe60c0255a0 'unsigned __int128'
+|-TypedefDecl 0x7fe60c025ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe60c0259b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe60c025928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe60c025c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe60c025c00 'char *'
+|   `-BuiltinType 0x7fe60c025380 'char'
+|-TypedefDecl 0x7fe60c025f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe60c025eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe60c025d20 'struct __va_list_tag'
+|     `-Record 0x7fe60c025c98 '__va_list_tag'
+|-TypedefDecl 0x7fe60c067e00 <../Data/C2AST/pr32661-1.c:4:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fe60c025f80 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fe60c025420 'long long'
+|-FunctionDecl 0x7fe60c067ff8 <line:6:1, line:9:1> line:6:11 foo_0 'long long (__m128i *)'
+| |-ParmVarDecl 0x7fe60c067ee8 <col:17, col:26> col:26 used val '__m128i *'
+| `-CompoundStmt 0x7fe60c068370 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fe60c068358 <line:8:3, col:45>
+|     `-ImplicitCastExpr 0x7fe60c068340 <col:10, col:45> 'long long' <IntegralCast>
+|       `-CallExpr 0x7fe60c0682f0 <col:10, col:45> 'int'
+|         |-ImplicitCastExpr 0x7fe60c0682d8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fe60c068200 <col:10> 'int ()' Function 0x7fe60c068150 '__builtin_ia32_vec_ext_v2di' 'int ()'
+|         |-ImplicitCastExpr 0x7fe60c068328 <col:38, col:39> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|         | `-UnaryOperator 0x7fe60c068268 <col:38, col:39> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+|         |   `-ImplicitCastExpr 0x7fe60c068250 <col:39> '__m128i *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fe60c068228 <col:39> '__m128i *' lvalue ParmVar 0x7fe60c067ee8 'val' '__m128i *'
+|         `-IntegerLiteral 0x7fe60c068288 <col:44> 'int' 0
+`-FunctionDecl 0x7fe60c068428 <line:11:1, line:14:1> line:11:11 foo_1 'long long (__m128i *)'
+  |-ParmVarDecl 0x7fe60c068398 <col:17, col:26> col:26 used val '__m128i *'
+  `-CompoundStmt 0x7fe60c068610 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fe60c0685f8 <line:13:3, col:45>
+      `-ImplicitCastExpr 0x7fe60c0685e0 <col:10, col:45> 'long long' <IntegralCast>
+        `-CallExpr 0x7fe60c068590 <col:10, col:45> 'int'
+          |-ImplicitCastExpr 0x7fe60c068578 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe60c0684d0 <col:10> 'int ()' Function 0x7fe60c068150 '__builtin_ia32_vec_ext_v2di' 'int ()'
+          |-ImplicitCastExpr 0x7fe60c0685c8 <col:38, col:39> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+          | `-UnaryOperator 0x7fe60c068538 <col:38, col:39> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+          |   `-ImplicitCastExpr 0x7fe60c068520 <col:39> '__m128i *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fe60c0684f8 <col:39> '__m128i *' lvalue ParmVar 0x7fe60c068398 'val' '__m128i *'
+          `-IntegerLiteral 0x7fe60c068558 <col:44> 'int' 1

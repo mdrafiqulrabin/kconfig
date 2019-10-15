@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fa0340128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa034055400 <../Data/C2AST/pr46253.c:4:1, col:13> col:13 referenced __m256i '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fa034013580 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fa0340129e0 'int'
+|-FunctionDecl 0x7fa034055570 <line:6:1, col:18> col:9 used bar '__m256i (void)'
+|-FunctionDecl 0x7fa034055710 <line:7:1, line:13:1> line:7:6 foo 'void (void)'
+| `-CompoundStmt 0x7fa034055ae0 <line:8:1, line:13:1>
+|   |-DeclStmt 0x7fa034055860 <line:9:3, col:21>
+|   | `-VarDecl 0x7fa0340557c8 <col:3, col:20> col:16 used i 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fa034055848 <col:20> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fa034055828 <col:20> 'int' 0
+|   |-CallExpr 0x7fa034055910 <line:10:3, col:8> '__m256i':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | `-ImplicitCastExpr 0x7fa0340558f8 <col:3> '__m256i (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fa034055878 <col:3> '__m256i (void)' Function 0x7fa034055570 'bar' '__m256i (void)'
+|   |-CallExpr 0x7fa034055a40 <line:11:3, col:30> 'void'
+|   | `-ImplicitCastExpr 0x7fa034055a28 <col:3> 'void (*)(void)' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7fa0340559d8 <col:3> '<builtin fn type>' Function 0x7fa034055938 '__builtin_ia32_vzeroupper' 'void (void)'
+|   `-WhileStmt 0x7fa034055ac0 <line:12:3, col:14>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fa034055a90 <col:10, col:12> 'unsigned int' prefix '++'
+|     | `-DeclRefExpr 0x7fa034055a68 <col:12> 'unsigned int' lvalue Var 0x7fa0340557c8 'i' 'unsigned int'
+|     `-NullStmt 0x7fa034055ab0 <col:14>
+`-FunctionDecl 0x7fa034055938 <line:11:3> col:3 implicit used __builtin_ia32_vzeroupper 'void (void)' extern

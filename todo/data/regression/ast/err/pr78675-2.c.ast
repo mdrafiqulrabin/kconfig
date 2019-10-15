@@ -1,0 +1,24 @@
+../Data/C2AST/pr78675-2.c:5:10: fatal error: 'avx512f-check.h' file not found
+#include "avx512f-check.h"
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe36a0258e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe36a025e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe36a025b80 '__int128'
+|-TypedefDecl 0x7fe36a025ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe36a025ba0 'unsigned __int128'
+|-TypedefDecl 0x7fe36a0261a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe36a025fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe36a025f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe36a026240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe36a026200 'char *'
+|   `-BuiltinType 0x7fe36a025980 'char'
+|-TypedefDecl 0x7fe36a026508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe36a0264b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe36a026320 'struct __va_list_tag'
+|     `-Record 0x7fe36a026298 '__va_list_tag'
+`-FunctionDecl 0x7fe36902c620 <../Data/C2AST/pr78675-2.c:11:1, line:15:1> line:12:1 avx512f_test 'void (void)' static
+  `-CompoundStmt 0x7fe36902c898 <line:13:1, line:15:1>
+    `-CallExpr 0x7fe36902c870 <line:14:3, col:12> 'int'
+      `-ImplicitCastExpr 0x7fe36902c858 <col:3> 'int (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fe36902c800 <col:3> 'int ()' Function 0x7fe36902c750 'do_main' 'int ()'

@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fa7ba81a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa7ba85c400 <../Data/C2AST/pr82072-2.c:5:1, line:13:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fa7ba85c8f8 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fa7ba85c5f8 <line:8:3, col:43>
+    | `-VarDecl 0x7fa7ba85c4f8 <col:3, col:42> col:17 used l 'long long' cinit
+    |   `-BinaryOperator 0x7fa7ba85c5d0 <col:21, col:42> 'long long' '-'
+    |     |-UnaryOperator 0x7fa7ba85c578 <col:21, <built-in>:40:27> 'long long' prefix '-'
+    |     | `-IntegerLiteral 0x7fa7ba85c558 <col:27> 'long long' 9223372036854775807
+    |     `-ImplicitCastExpr 0x7fa7ba85c5b8 <../Data/C2AST/pr82072-2.c:8:42> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fa7ba85c598 <col:42> 'int' 1
+    |-DeclStmt 0x7fa7ba85c688 <line:9:3, col:17>
+    | `-VarDecl 0x7fa7ba85c628 <col:3, col:16> col:16 used u 'unsigned int'
+    |-BinaryOperator 0x7fa7ba85c740 <line:10:3, col:8> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fa7ba85c6a0 <col:3> 'unsigned int' lvalue Var 0x7fa7ba85c628 'u' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fa7ba85c728 <col:7, col:8> 'unsigned int' <IntegralCast>
+    |   `-UnaryOperator 0x7fa7ba85c708 <col:7, col:8> 'long long' prefix '-'
+    |     `-ImplicitCastExpr 0x7fa7ba85c6f0 <col:8> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa7ba85c6c8 <col:8> 'long long' lvalue Var 0x7fa7ba85c4f8 'l' 'long long'
+    |-GCCAsmStmt 0x7fa7ba85c860 <line:11:3, col:30>
+    | `-DeclRefExpr 0x7fa7ba85c838 <col:28> 'unsigned int' lvalue Var 0x7fa7ba85c628 'u' 'unsigned int'
+    `-ReturnStmt 0x7fa7ba85c8e0 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fa7ba85c8c0 <col:10> 'int' 0

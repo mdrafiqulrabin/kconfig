@@ -1,0 +1,33 @@
+../Data/C2AST/pr48928.c:6:6: error: GNU decimal type extension not supported
+foo (_Decimal32 x)
+     ^
+../Data/C2AST/pr48928.c:5:1: error: GNU decimal type extension not supported
+_Decimal32
+^
+../Data/C2AST/pr48928.c:8:3: error: GNU decimal type extension not supported
+  _Decimal32 y = (x + x) / (9.DF * x);
+  ^
+../Data/C2AST/pr48928.c:8:31: error: invalid suffix 'DF' on floating constant
+  _Decimal32 y = (x + x) / (9.DF * x);
+                              ^
+4 errors generated.
+TranslationUnitDecl 0x7fd17b82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd17b82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd17b82bf80 '__int128'
+|-TypedefDecl 0x7fd17b82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd17b82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fd17b82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd17b82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd17b82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd17b82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd17b82c600 'char *'
+|   `-BuiltinType 0x7fd17b82bd80 'char'
+|-TypedefDecl 0x7fd17b82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd17b82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd17b82c720 'struct __va_list_tag'
+|     `-Record 0x7fd17b82c698 '__va_list_tag'
+`-FunctionDecl 0x7fd17c014268 <../Data/C2AST/pr48928.c:5:1, line:10:1> line:6:1 invalid foo 'int (int)'
+  |-ParmVarDecl 0x7fd17b82c978 <col:6, col:17> col:17 invalid x 'int'
+  `-CompoundStmt 0x7fd17c0143a0 <line:7:1, line:10:1>
+    `-DeclStmt 0x7fd17c014388 <line:8:3, col:38>
+      `-VarDecl 0x7fd17c014328 <col:3, col:14> col:14 invalid y 'int'

@@ -1,0 +1,74 @@
+TranslationUnitDecl 0x7faa6902bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7faa6902c960 <../Data/C2AST/pr46856.c:1:1, line:4:1> line:1:8 struct data definition
+| |-FieldDecl 0x7faa69814238 <line:2:5, col:9> col:9 referenced prio 'int'
+| `-FieldDecl 0x7faa69814298 <line:3:5, col:17> col:17 referenced status 'signed char'
+|-RecordDecl 0x7faa698142e0 <line:6:1, line:9:1> line:6:8 struct base definition
+| |-FieldDecl 0x7faa698143a8 <line:7:5, col:14> col:14 _num 'unsigned int'
+| `-FieldDecl 0x7faa69814538 <line:8:5, col:23> col:17 referenced vec 'struct data [10]'
+|-FunctionDecl 0x7faa69814838 <line:11:1, line:14:1> line:11:21 used ix 'struct data *(struct base *, unsigned int)' static
+| |-ParmVarDecl 0x7faa69814630 <col:24, col:37> col:37 used base 'struct base *'
+| |-ParmVarDecl 0x7faa698146a8 <col:43, col:52> col:52 used i 'unsigned int'
+| `-CompoundStmt 0x7faa69814a58 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7faa69814a40 <line:13:5, col:24>
+|     `-UnaryOperator 0x7faa69814a20 <col:12, col:24> 'struct data *' prefix '&'
+|       `-ArraySubscriptExpr 0x7faa698149f8 <col:13, col:24> 'struct data':'struct data' lvalue
+|         |-ImplicitCastExpr 0x7faa698149c8 <col:13, col:19> 'struct data *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7faa69814968 <col:13, col:19> 'struct data [10]' lvalue ->vec 0x7faa69814538
+|         |   `-ImplicitCastExpr 0x7faa69814950 <col:13> 'struct base *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7faa69814928 <col:13> 'struct base *' lvalue ParmVar 0x7faa69814630 'base' 'struct base *'
+|         `-ImplicitCastExpr 0x7faa698149e0 <col:23> 'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7faa698149a0 <col:23> 'unsigned int' lvalue ParmVar 0x7faa698146a8 'i' 'unsigned int'
+|-RecordDecl 0x7faa69814a70 <line:16:1, line:18:1> line:16:8 struct heap definition
+| `-FieldDecl 0x7faa69814b40 <line:17:5, col:17> col:17 referenced base 'struct base':'struct base'
+|-VarDecl 0x7faa69814c90 <line:20:1, col:14> col:14 used heap 'struct heap *'
+`-FunctionDecl 0x7faa69814e80 <line:22:1, line:26:1> line:22:6 increase_insn_priority 'void (int *, int)'
+  |-ParmVarDecl 0x7faa69814d30 <col:30, col:35> col:35 used fld 'int *'
+  |-ParmVarDecl 0x7faa69814da8 <col:40, col:44> col:44 used amount 'int'
+  `-CompoundStmt 0x7faa698155e0 <line:23:1, line:26:1>
+    `-IfStmt 0x7faa698155a8 <line:24:5, line:25:44>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7faa69815288 <line:24:9, col:52> 'int' '>'
+      | |-ImplicitCastExpr 0x7faa69815270 <col:9, col:43> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7faa69815258 <col:9, col:43> 'signed char' <LValueToRValue>
+      | |   `-MemberExpr 0x7faa69815200 <col:9, col:43> 'signed char' lvalue ->status 0x7faa69814298
+      | |     `-CallExpr 0x7faa69815170 <col:9, col:40> 'struct data *'
+      | |       |-ImplicitCastExpr 0x7faa69815158 <col:9> 'struct data *(*)(struct base *, unsigned int)' <FunctionToPointerDecay>
+      | |       | `-DeclRefExpr 0x7faa69814f30 <col:9> 'struct data *(struct base *, unsigned int)' Function 0x7faa69814838 'ix' 'struct data *(struct base *, unsigned int)'
+      | |       |-ConditionalOperator 0x7faa69815068 <col:12, col:33> 'struct base *'
+      | |       | |-ImplicitCastExpr 0x7faa69815038 <col:12> 'struct heap *' <LValueToRValue>
+      | |       | | `-DeclRefExpr 0x7faa69814f58 <col:12> 'struct heap *' lvalue Var 0x7faa69814c90 'heap' 'struct heap *'
+      | |       | |-UnaryOperator 0x7faa69814ff8 <col:19, col:26> 'struct base *' prefix '&'
+      | |       | | `-MemberExpr 0x7faa69814fc0 <col:20, col:26> 'struct base':'struct base' lvalue ->base 0x7faa69814b40
+      | |       | |   `-ImplicitCastExpr 0x7faa69814fa8 <col:20> 'struct heap *' <LValueToRValue>
+      | |       | |     `-DeclRefExpr 0x7faa69814f80 <col:20> 'struct heap *' lvalue Var 0x7faa69814c90 'heap' 'struct heap *'
+      | |       | `-ImplicitCastExpr 0x7faa69815050 <col:33> 'struct base *' <NullToPointer>
+      | |       |   `-IntegerLiteral 0x7faa69815018 <col:33> 'int' 0
+      | |       `-ImplicitCastExpr 0x7faa698151c0 <col:36, col:37> 'unsigned int' <IntegralCast>
+      | |         `-ImplicitCastExpr 0x7faa698151a8 <col:36, col:37> 'int' <LValueToRValue>
+      | |           `-UnaryOperator 0x7faa698150d8 <col:36, col:37> 'int' lvalue prefix '*'
+      | |             `-ImplicitCastExpr 0x7faa698150c0 <col:37> 'int *' <LValueToRValue>
+      | |               `-DeclRefExpr 0x7faa69815098 <col:37> 'int *' lvalue ParmVar 0x7faa69814d30 'fld' 'int *'
+      | `-IntegerLiteral 0x7faa69815238 <col:52> 'int' 0
+      |-CompoundAssignOperator 0x7faa69815570 <line:25:2, col:44> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-MemberExpr 0x7faa698154f8 <col:2, col:36> 'int' lvalue ->prio 0x7faa69814238
+      | | `-CallExpr 0x7faa69815490 <col:2, col:33> 'struct data *'
+      | |   |-ImplicitCastExpr 0x7faa69815478 <col:2> 'struct data *(*)(struct base *, unsigned int)' <FunctionToPointerDecay>
+      | |   | `-DeclRefExpr 0x7faa698152b0 <col:2> 'struct data *(struct base *, unsigned int)' Function 0x7faa69814838 'ix' 'struct data *(struct base *, unsigned int)'
+      | |   |-ConditionalOperator 0x7faa698153e8 <col:5, col:26> 'struct base *'
+      | |   | |-ImplicitCastExpr 0x7faa698153b8 <col:5> 'struct heap *' <LValueToRValue>
+      | |   | | `-DeclRefExpr 0x7faa698152d8 <col:5> 'struct heap *' lvalue Var 0x7faa69814c90 'heap' 'struct heap *'
+      | |   | |-UnaryOperator 0x7faa69815378 <col:12, col:19> 'struct base *' prefix '&'
+      | |   | | `-MemberExpr 0x7faa69815340 <col:13, col:19> 'struct base':'struct base' lvalue ->base 0x7faa69814b40
+      | |   | |   `-ImplicitCastExpr 0x7faa69815328 <col:13> 'struct heap *' <LValueToRValue>
+      | |   | |     `-DeclRefExpr 0x7faa69815300 <col:13> 'struct heap *' lvalue Var 0x7faa69814c90 'heap' 'struct heap *'
+      | |   | `-ImplicitCastExpr 0x7faa698153d0 <col:26> 'struct base *' <NullToPointer>
+      | |   |   `-IntegerLiteral 0x7faa69815398 <col:26> 'int' 0
+      | |   `-ImplicitCastExpr 0x7faa698154e0 <col:29, col:30> 'unsigned int' <IntegralCast>
+      | |     `-ImplicitCastExpr 0x7faa698154c8 <col:29, col:30> 'int' <LValueToRValue>
+      | |       `-UnaryOperator 0x7faa69815458 <col:29, col:30> 'int' lvalue prefix '*'
+      | |         `-ImplicitCastExpr 0x7faa69815440 <col:30> 'int *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7faa69815418 <col:30> 'int *' lvalue ParmVar 0x7faa69814d30 'fld' 'int *'
+      | `-ImplicitCastExpr 0x7faa69815558 <col:44> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faa69815530 <col:44> 'int' lvalue ParmVar 0x7faa69814da8 'amount' 'int'
+      `-<<<NULL>>>

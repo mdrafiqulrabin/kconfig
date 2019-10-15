@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fdc3e8174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fdc3e818178 <../Data/C2AST/pr71477.c:4:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fdc3f013288 <line:5:1, line:11:1> line:5:6 fn1 'void ()'
+  `-CompoundStmt 0x7fdc3f0136e8 <line:6:1, line:11:1>
+    |-DeclStmt 0x7fdc3f0133c0 <line:7:3, col:12>
+    | `-VarDecl 0x7fdc3f013340 <col:3, col:11> col:7 used k 'int' cinit
+    |   `-IntegerLiteral 0x7fdc3f0133a0 <col:11> 'int' 0
+    `-ForStmt 0x7fdc3f0136b0 <line:8:3, line:3:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fdc3f013438 <line:8:10, line:3:11> 'int' '<'
+      | |-ImplicitCastExpr 0x7fdc3f013420 <line:8:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fdc3f0133d8 <col:10> 'int' lvalue Var 0x7fdc3f013340 'k' 'int'
+      | `-IntegerLiteral 0x7fdc3f013400 <line:3:11> 'int' 6
+      |-<<<NULL>>>
+      `-ForStmt 0x7fdc3f013678 <line:9:5, line:3:11>
+        |-BinaryOperator 0x7fdc3f0134a8 <line:9:10, col:14> 'int' '='
+        | |-DeclRefExpr 0x7fdc3f013460 <col:10> 'int' lvalue Var 0x7fdc3e818178 'a' 'int'
+        | `-IntegerLiteral 0x7fdc3f013488 <col:14> 'int' 0
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fdc3f013530 <col:17, line:3:11> 'int' '<'
+        | |-ImplicitCastExpr 0x7fdc3f013518 <line:9:17> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fdc3f0134d0 <col:17> 'int' lvalue Var 0x7fdc3e818178 'a' 'int'
+        | `-IntegerLiteral 0x7fdc3f0134f8 <line:3:11> 'int' 6
+        |-UnaryOperator 0x7fdc3f013580 <line:9:24, col:25> 'int' postfix '++'
+        | `-DeclRefExpr 0x7fdc3f013558 <col:24> 'int' lvalue Var 0x7fdc3f013340 'k' 'int'
+        `-BinaryOperator 0x7fdc3f013650 <line:10:7, line:3:11> 'int' '='
+          |-DeclRefExpr 0x7fdc3f0135a0 <line:10:7> 'int' lvalue Var 0x7fdc3e818178 'a' 'int'
+          `-BinaryOperator 0x7fdc3f013628 <col:11, line:3:11> 'int' '+'
+            |-ImplicitCastExpr 0x7fdc3f013610 <line:10:11> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdc3f0135c8 <col:11> 'int' lvalue Var 0x7fdc3f013340 'k' 'int'
+            `-IntegerLiteral 0x7fdc3f0135f0 <line:3:11> 'int' 6

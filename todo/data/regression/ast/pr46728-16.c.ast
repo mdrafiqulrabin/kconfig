@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fcbf582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcbf585a8d8 <../Data/C2AST/pr46728-16.c:5:1, line:8:1> line:5:8 foo 'double (double, double)'
+| |-ParmVarDecl 0x7fcbf582c978 <col:13, col:20> col:20 used x 'double'
+| |-ParmVarDecl 0x7fcbf585a800 <col:23, col:30> col:30 used y 'double'
+| `-CompoundStmt 0x7fcbf585ad10 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fcbf585acf8 <line:7:3, col:36>
+|     `-BinaryOperator 0x7fcbf585acd0 <col:10, col:36> 'double' '+'
+|       |-CallExpr 0x7fcbf585ac40 <col:10, col:32> 'double'
+|       | |-ImplicitCastExpr 0x7fcbf585ac28 <col:10> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7fcbf585ab90 <col:10> '<builtin fn type>' Function 0x7fcbf585a9c8 '__builtin_pow' 'double (double, double)'
+|       | |-ImplicitCastExpr 0x7fcbf585ac78 <col:25> 'double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fcbf585abb8 <col:25> 'double' lvalue ParmVar 0x7fcbf582c978 'x' 'double'
+|       | `-FloatingLiteral 0x7fcbf585abe0 <col:28> 'double' 7.500000e-01
+|       `-ImplicitCastExpr 0x7fcbf585acb8 <col:36> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fcbf585ac90 <col:36> 'double' lvalue ParmVar 0x7fcbf585a800 'y' 'double'
+`-FunctionDecl 0x7fcbf585a9c8 <col:10> col:10 implicit used __builtin_pow 'double (double, double)' extern
+  |-ParmVarDecl 0x7fcbf585aa68 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fcbf585aac8 <<invalid sloc>> <invalid sloc> 'double'
+  |-ConstAttr 0x7fcbf585ab38 <col:10> Implicit
+  `-NoThrowAttr 0x7fcbf585ab80 <col:10> Implicit

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fe57282b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe572014c68 <../Data/C2AST/pr50099.c:4:1, line:10:1> line:4:11 foo 'long long (signed char *)'
+  |-ParmVarDecl 0x7fe57282bfa0 <col:16, col:30> col:30 used arg 'signed char *'
+  `-CompoundStmt 0x7fe572014f40 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fe572014dc8 <line:6:3, col:19>
+    | `-VarDecl 0x7fe572014d68 <col:3, col:13> col:13 used temp_1 'long long'
+    |-BinaryOperator 0x7fe572014ec0 <line:8:3, col:19> 'long long' '='
+    | |-DeclRefExpr 0x7fe572014de0 <col:3> 'long long' lvalue Var 0x7fe572014d68 'temp_1' 'long long'
+    | `-ImplicitCastExpr 0x7fe572014ea8 <col:12, col:19> 'long long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fe572014e90 <col:12, col:19> 'signed char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fe572014e68 <col:12, col:19> 'signed char' lvalue
+    |       |-ImplicitCastExpr 0x7fe572014e50 <col:12> 'signed char *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fe572014e08 <col:12> 'signed char *' lvalue ParmVar 0x7fe57282bfa0 'arg' 'signed char *'
+    |       `-IntegerLiteral 0x7fe572014e30 <col:16> 'int' 256
+    `-ReturnStmt 0x7fe572014f28 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fe572014f10 <col:10> 'long long' <LValueToRValue>
+        `-DeclRefExpr 0x7fe572014ee8 <col:10> 'long long' lvalue Var 0x7fe572014d68 'temp_1' 'long long'

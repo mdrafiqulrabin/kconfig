@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fa3320294e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa33202a178 <../Data/C2AST/pr49551.c:5:1, col:9> col:5 x 'int' cinit
+| `-IntegerLiteral 0x7fa331816e40 <col:9> 'int' 1
+`-VarDecl 0x7fa331816e78 prev 0x7fa33202a178 <line:6:1, col:5> col:5 x 'int'

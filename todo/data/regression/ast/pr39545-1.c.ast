@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fa5f50058e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa5f5006560 <../Data/C2AST/pr39545-1.c:6:1, line:10:1> line:6:8 struct flex definition
+| |-FieldDecl 0x7fa5f3853038 <line:8:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7fa5f38530d0 <line:9:3, col:13> col:7 flex 'int []'
+|-FunctionDecl 0x7fa5f3853278 <line:12:1, line:16:1> line:13:1 foo 'int (struct flex)'
+| |-ParmVarDecl 0x7fa5f3853170 <col:6, col:18> col:18 used s 'struct flex':'struct flex'
+| `-CompoundStmt 0x7fa5f38533f0 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7fa5f38533d8 <line:15:3, col:12>
+|     `-ImplicitCastExpr 0x7fa5f38533c0 <col:10, col:12> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7fa5f3853388 <col:10, col:12> 'int' lvalue .i 0x7fa5f3853038
+|         `-DeclRefExpr 0x7fa5f3853360 <col:10> 'struct flex':'struct flex' lvalue ParmVar 0x7fa5f3853170 's' 'struct flex':'struct flex'
+`-FunctionDecl 0x7fa5f3853530 <line:18:1, line:24:1> line:19:1 bar 'struct flex (int)'
+  |-ParmVarDecl 0x7fa5f3853420 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fa5f38537e0 <line:20:1, line:24:1>
+    |-DeclStmt 0x7fa5f3853658 <line:21:3, col:16>
+    | `-VarDecl 0x7fa5f38535f8 <col:3, col:15> col:15 used s 'struct flex':'struct flex' nrvo
+    |-BinaryOperator 0x7fa5f3853710 <line:22:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fa5f3853698 <col:3, col:5> 'int' lvalue .i 0x7fa5f3853038
+    | | `-DeclRefExpr 0x7fa5f3853670 <col:3> 'struct flex':'struct flex' lvalue Var 0x7fa5f38535f8 's' 'struct flex':'struct flex'
+    | `-ImplicitCastExpr 0x7fa5f38536f8 <col:9> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa5f38536d0 <col:9> 'int' lvalue ParmVar 0x7fa5f3853420 'x' 'int'
+    `-ReturnStmt 0x7fa5f38537c8 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7fa5f38537b0 <col:10> 'struct flex':'struct flex' <LValueToRValue>
+        `-DeclRefExpr 0x7fa5f3853788 <col:10> 'struct flex':'struct flex' lvalue Var 0x7fa5f38535f8 's' 'struct flex':'struct flex'

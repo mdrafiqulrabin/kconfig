@@ -1,0 +1,151 @@
+TranslationUnitDecl 0x7fda2182b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fda2182bf60 <../Data/C2AST/pr32571.c:2:1, line:4:1> line:2:8 struct list_head definition
+| |-FieldDecl 0x7fda2186ced0 <line:3:2, col:20> col:20 referenced next 'struct list_head *'
+| `-FieldDecl 0x7fda2186cf40 <col:2, col:27> col:27 prev 'struct list_head *'
+|-RecordDecl 0x7fda2186cf88 <line:5:1, line:8:1> line:5:8 struct ib_fmr definition
+| |-FieldDecl 0x7fda2186d070 <line:6:2, col:7> col:7 device 'int *'
+| `-FieldDecl 0x7fda2186d0d8 <line:7:2, col:19> col:19 referenced list 'struct list_head':'struct list_head'
+|-RecordDecl 0x7fda2186d120 <line:10:1, col:8> col:8 struct mthca_fmr
+|-FunctionDecl 0x7fda2186d428 <line:9:1, line:14:1> line:10:19 used to_mfmr 'struct mthca_fmr *(struct ib_fmr *)' static inline
+| |-ParmVarDecl 0x7fda2186d280 <col:27, col:42> col:42 used ibmr 'struct ib_fmr *'
+| `-CompoundStmt 0x7fda2186d7e8 <line:11:1, line:14:1>
+|   |-DeclStmt 0x7fda2186d668 <line:12:2, col:38>
+|   | `-VarDecl 0x7fda2186d590 <col:2, col:37> col:23 used __mptr 'const struct ib_fmr *' cinit
+|   |   `-ImplicitCastExpr 0x7fda2186d650 <col:32, col:37> 'const struct ib_fmr *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fda2186d638 <col:32, col:37> 'struct ib_fmr *' <LValueToRValue>
+|   |       `-ParenExpr 0x7fda2186d618 <col:32, col:37> 'struct ib_fmr *' lvalue
+|   |         `-DeclRefExpr 0x7fda2186d5f0 <col:33> 'struct ib_fmr *' lvalue ParmVar 0x7fda2186d280 'ibmr' 'struct ib_fmr *'
+|   `-ReturnStmt 0x7fda2186d7d0 <line:13:2, col:46>
+|     `-CStyleCastExpr 0x7fda2186d7a8 <col:9, col:46> 'struct mthca_fmr *' <BitCast>
+|       `-ParenExpr 0x7fda2186d788 <col:29, col:46> 'char *'
+|         `-CStyleCastExpr 0x7fda2186d708 <col:31, col:39> 'char *' <BitCast>
+|           `-ImplicitCastExpr 0x7fda2186d6c0 <col:39> 'const struct ib_fmr *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fda2186d680 <col:39> 'const struct ib_fmr *' lvalue Var 0x7fda2186d590 '__mptr' 'const struct ib_fmr *'
+`-FunctionDecl 0x7fda2186d930 <line:15:1, line:38:1> line:15:6 mthca_unmap_fmr 'void (struct list_head *)'
+  |-ParmVarDecl 0x7fda2186d830 <col:22, col:40> col:40 used fmr_list 'struct list_head *'
+  `-CompoundStmt 0x7fda21885c10 <line:16:1, line:38:1>
+    |-DeclStmt 0x7fda2186da60 <line:17:2, col:20>
+    | `-VarDecl 0x7fda2186da00 <col:2, col:17> col:17 used fmr 'struct ib_fmr *'
+    `-IfStmt 0x7fda21885bd8 <line:18:2, line:37:37>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fda2186dbf0 <line:18:6, col:23> 'int'
+      | `-ImplicitCastExpr 0x7fda2186dbd8 <col:6> 'int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fda2186db80 <col:6> 'int ()' Function 0x7fda2186dad0 'mthca_is_memfree' 'int ()'
+      |-CompoundStmt 0x7fda21885148 <line:19:2, line:28:2>
+      | `-ForStmt 0x7fda21885110 <line:20:2, line:27:37>
+      |   |-BinaryOperator 0x7fda218849d8 <line:20:7, line:22:23> 'struct ib_fmr *' '='
+      |   | |-DeclRefExpr 0x7fda2186dc18 <line:20:7> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+      |   | `-StmtExpr 0x7fda218849b8 <line:21:2, line:22:23> 'struct ib_fmr *'
+      |   |   `-CompoundStmt 0x7fda21884998 <line:21:3, line:22:22>
+      |   |     |-DeclStmt 0x7fda21884818 <line:21:5, col:56>
+      |   |     | `-VarDecl 0x7fda2186dcc0 <col:5, col:55> col:29 used __mptr 'const struct list_head *' cinit
+      |   |     |   `-ImplicitCastExpr 0x7fda21884800 <col:38, col:55> 'const struct list_head *' <BitCast>
+      |   |     |     `-ImplicitCastExpr 0x7fda2186ddd8 <col:38, col:55> 'struct list_head *' <LValueToRValue>
+      |   |     |       `-ParenExpr 0x7fda2186ddb8 <col:38, col:55> 'struct list_head *' lvalue
+      |   |     |         `-MemberExpr 0x7fda2186dd80 <col:39, col:51> 'struct list_head *' lvalue ->next 0x7fda2186ced0
+      |   |     |           `-ImplicitCastExpr 0x7fda2186dd68 <col:39, col:48> 'struct list_head *' <LValueToRValue>
+      |   |     |             `-ParenExpr 0x7fda2186dd48 <col:39, col:48> 'struct list_head *' lvalue
+      |   |     |               `-DeclRefExpr 0x7fda2186dd20 <col:40> 'struct list_head *' lvalue ParmVar 0x7fda2186d830 'fmr_list' 'struct list_head *'
+      |   |     `-CStyleCastExpr 0x7fda21884970 <col:58, line:22:20> 'struct ib_fmr *' <BitCast>
+      |   |       `-ParenExpr 0x7fda21884950 <line:21:75, line:22:20> 'char *'
+      |   |         `-BinaryOperator 0x7fda218848d0 <col:1, col:18> 'char *' '-'
+      |   |           |-CStyleCastExpr 0x7fda21884888 <col:1, col:9> 'char *' <BitCast>
+      |   |           | `-ImplicitCastExpr 0x7fda21884870 <col:9> 'const struct list_head *' <LValueToRValue>
+      |   |           |   `-DeclRefExpr 0x7fda21884830 <col:9> 'const struct list_head *' lvalue Var 0x7fda2186dcc0 '__mptr' 'const struct list_head *'
+      |   |           `-IntegerLiteral 0x7fda218848b0 <col:18> 'int' 8
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7fda21884af8 <line:23:2, col:25> 'int' '!='
+      |   | |-UnaryOperator 0x7fda21884a78 <col:2, col:8> 'struct list_head *' prefix '&'
+      |   | | `-MemberExpr 0x7fda21884a40 <col:3, col:8> 'struct list_head':'struct list_head' lvalue ->list 0x7fda2186d0d8
+      |   | |   `-ImplicitCastExpr 0x7fda21884a28 <col:3> 'struct ib_fmr *' <LValueToRValue>
+      |   | |     `-DeclRefExpr 0x7fda21884a00 <col:3> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+      |   | `-ImplicitCastExpr 0x7fda21884ae0 <col:16, col:25> 'struct list_head *' <LValueToRValue>
+      |   |   `-ParenExpr 0x7fda21884ac0 <col:16, col:25> 'struct list_head *' lvalue
+      |   |     `-DeclRefExpr 0x7fda21884a98 <col:17> 'struct list_head *' lvalue ParmVar 0x7fda2186d830 'fmr_list' 'struct list_head *'
+      |   |-BinaryOperator 0x7fda21884e90 <line:24:2, line:25:26> 'struct ib_fmr *' '='
+      |   | |-DeclRefExpr 0x7fda21884b20 <line:24:2> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+      |   | `-StmtExpr 0x7fda21884e70 <col:8, line:25:26> 'struct ib_fmr *'
+      |   |   `-CompoundStmt 0x7fda21884e50 <line:24:9, line:25:25>
+      |   |     |-DeclStmt 0x7fda21884cd0 <line:24:11, col:60>
+      |   |     | `-VarDecl 0x7fda21884b70 <col:11, col:59> col:35 used __mptr 'const struct list_head *' cinit
+      |   |     |   `-ImplicitCastExpr 0x7fda21884cb8 <col:44, col:59> 'const struct list_head *' <BitCast>
+      |   |     |     `-ImplicitCastExpr 0x7fda21884ca0 <col:44, col:59> 'struct list_head *' <LValueToRValue>
+      |   |     |       `-ParenExpr 0x7fda21884c80 <col:44, col:59> 'struct list_head *' lvalue
+      |   |     |         `-MemberExpr 0x7fda21884c48 <col:45, col:55> 'struct list_head *' lvalue .next 0x7fda2186ced0
+      |   |     |           `-MemberExpr 0x7fda21884c10 <col:45, col:50> 'struct list_head':'struct list_head' lvalue ->list 0x7fda2186d0d8
+      |   |     |             `-ImplicitCastExpr 0x7fda21884bf8 <col:45> 'struct ib_fmr *' <LValueToRValue>
+      |   |     |               `-DeclRefExpr 0x7fda21884bd0 <col:45> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+      |   |     `-CStyleCastExpr 0x7fda21884e28 <col:62, line:25:23> 'struct ib_fmr *' <BitCast>
+      |   |       `-ParenExpr 0x7fda21884e08 <col:3, col:23> 'char *'
+      |   |         `-BinaryOperator 0x7fda21884d88 <col:5, col:22> 'char *' '-'
+      |   |           |-CStyleCastExpr 0x7fda21884d40 <col:5, col:13> 'char *' <BitCast>
+      |   |           | `-ImplicitCastExpr 0x7fda21884d28 <col:13> 'const struct list_head *' <LValueToRValue>
+      |   |           |   `-DeclRefExpr 0x7fda21884ce8 <col:13> 'const struct list_head *' lvalue Var 0x7fda21884b70 '__mptr' 'const struct list_head *'
+      |   |           `-IntegerLiteral 0x7fda21884d68 <col:22> 'int' 8
+      |   `-CallExpr 0x7fda218850e0 <line:27:3, col:37> 'int'
+      |     |-ImplicitCastExpr 0x7fda218850c8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7fda21884f90 <col:3> 'int ()' Function 0x7fda21884ee0 'mthca_arbel_fmr_unmap' 'int ()'
+      |     `-CallExpr 0x7fda21885080 <col:25, col:36> 'struct mthca_fmr *'
+      |       |-ImplicitCastExpr 0x7fda21885068 <col:25> 'struct mthca_fmr *(*)(struct ib_fmr *)' <FunctionToPointerDecay>
+      |       | `-DeclRefExpr 0x7fda21884fb8 <col:25> 'struct mthca_fmr *(struct ib_fmr *)' Function 0x7fda2186d428 'to_mfmr' 'struct mthca_fmr *(struct ib_fmr *)'
+      |       `-ImplicitCastExpr 0x7fda218850b0 <col:33> 'struct ib_fmr *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fda21884fe0 <col:33> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+      `-ForStmt 0x7fda21885ba0 <line:30:2, line:37:37>
+        |-BinaryOperator 0x7fda218854b8 <line:30:7, line:32:22> 'struct ib_fmr *' '='
+        | |-DeclRefExpr 0x7fda21885160 <line:30:7> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+        | `-StmtExpr 0x7fda21885498 <line:31:2, line:32:22> 'struct ib_fmr *'
+        |   `-CompoundStmt 0x7fda21885478 <line:31:3, line:32:21>
+        |     |-DeclStmt 0x7fda218852f8 <line:31:5, col:56>
+        |     | `-VarDecl 0x7fda218851b0 <col:5, col:55> col:29 used __mptr 'const struct list_head *' cinit
+        |     |   `-ImplicitCastExpr 0x7fda218852e0 <col:38, col:55> 'const struct list_head *' <BitCast>
+        |     |     `-ImplicitCastExpr 0x7fda218852c8 <col:38, col:55> 'struct list_head *' <LValueToRValue>
+        |     |       `-ParenExpr 0x7fda218852a8 <col:38, col:55> 'struct list_head *' lvalue
+        |     |         `-MemberExpr 0x7fda21885270 <col:39, col:51> 'struct list_head *' lvalue ->next 0x7fda2186ced0
+        |     |           `-ImplicitCastExpr 0x7fda21885258 <col:39, col:48> 'struct list_head *' <LValueToRValue>
+        |     |             `-ParenExpr 0x7fda21885238 <col:39, col:48> 'struct list_head *' lvalue
+        |     |               `-DeclRefExpr 0x7fda21885210 <col:40> 'struct list_head *' lvalue ParmVar 0x7fda2186d830 'fmr_list' 'struct list_head *'
+        |     `-CStyleCastExpr 0x7fda21885450 <col:58, line:32:19> 'struct ib_fmr *' <BitCast>
+        |       `-ParenExpr 0x7fda21885430 <line:31:75, line:32:19> 'char *'
+        |         `-BinaryOperator 0x7fda218853b0 <col:1, col:18> 'char *' '-'
+        |           |-CStyleCastExpr 0x7fda21885368 <col:1, col:9> 'char *' <BitCast>
+        |           | `-ImplicitCastExpr 0x7fda21885350 <col:9> 'const struct list_head *' <LValueToRValue>
+        |           |   `-DeclRefExpr 0x7fda21885310 <col:9> 'const struct list_head *' lvalue Var 0x7fda218851b0 '__mptr' 'const struct list_head *'
+        |           `-IntegerLiteral 0x7fda21885390 <col:18> 'int' 8
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fda218855d8 <line:33:3, col:26> 'int' '!='
+        | |-UnaryOperator 0x7fda21885558 <col:3, col:9> 'struct list_head *' prefix '&'
+        | | `-MemberExpr 0x7fda21885520 <col:4, col:9> 'struct list_head':'struct list_head' lvalue ->list 0x7fda2186d0d8
+        | |   `-ImplicitCastExpr 0x7fda21885508 <col:4> 'struct ib_fmr *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fda218854e0 <col:4> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+        | `-ImplicitCastExpr 0x7fda218855c0 <col:17, col:26> 'struct list_head *' <LValueToRValue>
+        |   `-ParenExpr 0x7fda218855a0 <col:17, col:26> 'struct list_head *' lvalue
+        |     `-DeclRefExpr 0x7fda21885578 <col:18> 'struct list_head *' lvalue ParmVar 0x7fda2186d830 'fmr_list' 'struct list_head *'
+        |-BinaryOperator 0x7fda21885980 <line:34:3, line:35:26> 'struct ib_fmr *' '='
+        | |-DeclRefExpr 0x7fda21885600 <line:34:3> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+        | `-StmtExpr 0x7fda21885960 <col:9, line:35:26> 'struct ib_fmr *'
+        |   `-CompoundStmt 0x7fda21885940 <line:34:10, line:35:25>
+        |     |-DeclStmt 0x7fda218857b0 <line:34:12, col:61>
+        |     | `-VarDecl 0x7fda21885650 <col:12, col:60> col:36 used __mptr 'const struct list_head *' cinit
+        |     |   `-ImplicitCastExpr 0x7fda21885798 <col:45, col:60> 'const struct list_head *' <BitCast>
+        |     |     `-ImplicitCastExpr 0x7fda21885780 <col:45, col:60> 'struct list_head *' <LValueToRValue>
+        |     |       `-ParenExpr 0x7fda21885760 <col:45, col:60> 'struct list_head *' lvalue
+        |     |         `-MemberExpr 0x7fda21885728 <col:46, col:56> 'struct list_head *' lvalue .next 0x7fda2186ced0
+        |     |           `-MemberExpr 0x7fda218856f0 <col:46, col:51> 'struct list_head':'struct list_head' lvalue ->list 0x7fda2186d0d8
+        |     |             `-ImplicitCastExpr 0x7fda218856d8 <col:46> 'struct ib_fmr *' <LValueToRValue>
+        |     |               `-DeclRefExpr 0x7fda218856b0 <col:46> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'
+        |     `-CStyleCastExpr 0x7fda21885918 <col:63, line:35:23> 'struct ib_fmr *' <BitCast>
+        |       `-ParenExpr 0x7fda218858f8 <col:3, col:23> 'char *'
+        |         `-BinaryOperator 0x7fda21885878 <col:5, col:22> 'char *' '-'
+        |           |-CStyleCastExpr 0x7fda21885830 <col:5, col:13> 'char *' <BitCast>
+        |           | `-ImplicitCastExpr 0x7fda21885818 <col:13> 'const struct list_head *' <LValueToRValue>
+        |           |   `-DeclRefExpr 0x7fda218857c8 <col:13> 'const struct list_head *' lvalue Var 0x7fda21885650 '__mptr' 'const struct list_head *'
+        |           `-IntegerLiteral 0x7fda21885858 <col:22> 'int' 8
+        `-CallExpr 0x7fda21885b70 <line:37:3, col:37> 'int'
+          |-ImplicitCastExpr 0x7fda21885b58 <col:3> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fda21885a80 <col:3> 'int ()' Function 0x7fda218859d0 'mthca_tavor_fmr_unmap' 'int ()'
+          `-CallExpr 0x7fda21885b10 <col:25, col:36> 'struct mthca_fmr *'
+            |-ImplicitCastExpr 0x7fda21885af8 <col:25> 'struct mthca_fmr *(*)(struct ib_fmr *)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7fda21885aa8 <col:25> 'struct mthca_fmr *(struct ib_fmr *)' Function 0x7fda2186d428 'to_mfmr' 'struct mthca_fmr *(struct ib_fmr *)'
+            `-ImplicitCastExpr 0x7fda21885b40 <col:33> 'struct ib_fmr *' <LValueToRValue>
+              `-DeclRefExpr 0x7fda21885ad0 <col:33> 'struct ib_fmr *' lvalue Var 0x7fda2186da00 'fmr' 'struct ib_fmr *'

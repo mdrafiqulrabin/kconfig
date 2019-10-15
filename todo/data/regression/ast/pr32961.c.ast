@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f845b82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f845c0f8a70 <../Data/C2AST/pr32961.c:6:1, line:10:1> line:6:6 x 'void (int)'
+  |-ParmVarDecl 0x7f845c0f89e8 <col:9, col:13> col:13 used n 'int'
+  `-CompoundStmt 0x7f845c0f8d10 <line:7:1, line:10:1>
+    |-DeclStmt 0x7f845c0f8b88 <line:8:3, col:12>
+    | `-VarDecl 0x7f845c0f8b28 <col:3, col:11> col:11 used a '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    `-BinaryOperator 0x7f845c0f8ce8 <line:9:3, col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+      |-DeclRefExpr 0x7f845c0f8ba0 <col:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7f845c0f8b28 'a' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+      `-CallExpr 0x7f845c0f8c80 <col:7, col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7f845c0f8c68 <col:7> '__m128i (*)(__m128i, int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f845c0f8bc8 <col:7> '__m128i (__m128i, int)' Function 0x7f845c07c3b8 '_mm_slli_epi32' '__m128i (__m128i, int)'
+        |-ImplicitCastExpr 0x7f845c0f8cb8 <col:23> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f845c0f8bf0 <col:23> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7f845c0f8b28 'a' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7f845c0f8cd0 <col:26> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f845c0f8c18 <col:26> 'int' lvalue ParmVar 0x7f845c0f89e8 'n' 'int'

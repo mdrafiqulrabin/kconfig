@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fbc5102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc51815200 <../Data/C2AST/pr66891.c:4:1, col:39> col:35 used fn1 'void () __attribute__((stdcall))':'void ()'
+|-VarDecl 0x7fbc518152f8 <line:6:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fbc51815378 <line:8:1, line:11:1> line:8:13 used fn2 'void ()' static
+| `-CompoundStmt 0x7fbc51815460 <col:19, line:11:1>
+|   `-ForStmt 0x7fbc51815428 <line:9:3, line:10:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-NullStmt 0x7fbc51815418 <col:5>
+`-FunctionDecl 0x7fbc51815498 <line:13:1, line:16:1> line:13:6 fn3 'void ()'
+  `-CompoundStmt 0x7fbc51815718 <col:12, line:16:1>
+    |-CallExpr 0x7fbc518155f0 <line:14:3, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fbc518155d8 <col:3> 'void (*)() __attribute__((stdcall))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbc51815538 <col:3> 'void () __attribute__((stdcall))':'void ()' Function 0x7fbc51815200 'fn1' 'void () __attribute__((stdcall))':'void ()'
+    | `-IntegerLiteral 0x7fbc51815560 <col:7> 'int' 0
+    `-CallExpr 0x7fbc518156e8 <line:15:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7fbc518156d0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbc51815620 <col:3> 'void ()' Function 0x7fbc51815378 'fn2' 'void ()'
+      `-BinaryOperator 0x7fbc518156a8 <col:7, col:12> 'int' '=='
+        |-ImplicitCastExpr 0x7fbc51815690 <col:7> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fbc51815648 <col:7> 'int' lvalue Var 0x7fbc518152f8 'a' 'int'
+        `-IntegerLiteral 0x7fbc51815670 <col:12> 'int' 0

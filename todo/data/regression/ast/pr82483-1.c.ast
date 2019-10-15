@@ -1,0 +1,467 @@
+TranslationUnitDecl 0x7fe94c02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe94cb9c590 <../Data/C2AST/pr82483-1.c:8:1, col:68> col:6 f1 'void (__m64, __m64, char *)'
+| |-ParmVarDecl 0x7fe94cb9c410 <col:10, col:16> col:16 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9c480 <col:19, col:25> col:25 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9c4f8 <col:28, col:34> col:34 used z 'char *'
+| `-CompoundStmt 0x7fe94cb9c7e8 <col:37, col:68>
+|   `-CallExpr 0x7fe94cb9c760 <col:39, col:65> 'void'
+|     |-ImplicitCastExpr 0x7fe94cb9c748 <col:39> 'void (*)(__m64, __m64, char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe94cb9c648 <col:39> 'void (__m64, __m64, char *)' Function 0x7fe94d00c480 '_mm_maskmove_si64' 'void (__m64, __m64, char *)'
+|     |-ImplicitCastExpr 0x7fe94cb9c7a0 <col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe94cb9c670 <col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9c410 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|     |-ImplicitCastExpr 0x7fe94cb9c7b8 <col:61> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe94cb9c698 <col:61> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9c480 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|     `-ImplicitCastExpr 0x7fe94cb9c7d0 <col:64> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe94cb9c6c0 <col:64> 'char *' lvalue ParmVar 0x7fe94cb9c4f8 'z' 'char *'
+|-FunctionDecl 0x7fe94cb9c8a0 <line:9:1, col:52> col:5 f2 'int (__m64)'
+| |-ParmVarDecl 0x7fe94cb9c810 <col:9, col:15> col:15 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9cd40 <col:18, col:52>
+|   `-ReturnStmt 0x7fe94cb9cd28 <col:20, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2154:56>
+|     `-UnaryOperator 0x7fe94cb9cd08 <line:2153:32, line:2154:56> 'int' prefix '__extension__'
+|       `-StmtExpr 0x7fe94cb9cce8 <line:2153:46, line:2154:56> 'int'
+|         `-CompoundStmt 0x7fe94cb9ccd0 <line:2153:47, line:2154:55>
+|           `-CStyleCastExpr 0x7fe94cb9cca8 <col:3, col:52> 'int' <NoOp>
+|             `-CallExpr 0x7fe94cb9cc40 <col:8, col:52> 'int'
+|               |-ImplicitCastExpr 0x7fe94cb9cc28 <col:8> 'int (*)(__attribute__((__vector_size__(4 * sizeof(short)))) short, int)' <BuiltinFnToFnPtr>
+|               | `-DeclRefExpr 0x7fe94cb9cb00 <col:8> '<builtin fn type>' Function 0x7fe94cb9c990 '__builtin_ia32_vec_ext_v4hi' 'int (__attribute__((__vector_size__(4 * sizeof(short)))) short, int)'
+|               |-ImplicitCastExpr 0x7fe94cb9cc78 <col:36, ../Data/C2AST/pr82483-1.c:9:45> '__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+|               | `-CStyleCastExpr 0x7fe94cb9cb78 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2154:36, ../Data/C2AST/pr82483-1.c:9:45> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|               |   `-ImplicitCastExpr 0x7fe94cb9cb60 <col:45> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|               |     `-DeclRefExpr 0x7fe94cb9cb28 <col:45> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9c810 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|               `-CStyleCastExpr 0x7fe94cb9cbd8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2154:46, ../Data/C2AST/pr82483-1.c:9:48> 'int' <NoOp>
+|                 `-IntegerLiteral 0x7fe94cb9cba0 <col:48> 'int' 1
+|-FunctionDecl 0x7fe94cb9c990 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2154:8> col:8 implicit used __builtin_ia32_vec_ext_v4hi 'int (__attribute__((__vector_size__(4 * sizeof(short)))) short, int)' extern
+| |-ParmVarDecl 0x7fe94cb9ca30 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-ParmVarDecl 0x7fe94cb9ca90 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fe94cb9ce70 <../Data/C2AST/pr82483-1.c:10:1, col:63> col:7 f3 '__m64 (__m64, int)'
+| |-ParmVarDecl 0x7fe94cb9cd68 <col:11, col:17> col:17 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9cde0 <col:20, col:24> col:24 used y 'int'
+| `-CompoundStmt 0x7fe94cb9d400 <col:27, col:63>
+|   `-ReturnStmt 0x7fe94cb9d3e8 <col:29, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2185:66>
+|     `-UnaryOperator 0x7fe94cb9d3c8 <line:2184:34, line:2185:66> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' prefix '__extension__'
+|       `-StmtExpr 0x7fe94cb9d3a8 <line:2184:48, line:2185:66> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|         `-CompoundStmt 0x7fe94cb9d390 <line:2184:49, line:2185:65>
+|           `-CStyleCastExpr 0x7fe94cb9d368 <col:3, col:62> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|             `-CallExpr 0x7fe94cb9d300 <col:10, col:62> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|               |-ImplicitCastExpr 0x7fe94cb9d2e8 <col:10> '__attribute__((__vector_size__(4 * sizeof(short)))) short (*)(__attribute__((__vector_size__(4 * sizeof(short)))) short, int, int)' <BuiltinFnToFnPtr>
+|               | `-DeclRefExpr 0x7fe94cb9d140 <col:10> '<builtin fn type>' Function 0x7fe94cb9cf68 '__builtin_ia32_vec_set_v4hi' '__attribute__((__vector_size__(4 * sizeof(short)))) short (__attribute__((__vector_size__(4 * sizeof(short)))) short, int, int)'
+|               |-ImplicitCastExpr 0x7fe94cb9d340 <col:38, ../Data/C2AST/pr82483-1.c:10:53> '__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+|               | `-CStyleCastExpr 0x7fe94cb9d1b8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2185:38, ../Data/C2AST/pr82483-1.c:10:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|               |   `-ImplicitCastExpr 0x7fe94cb9d1a0 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|               |     `-DeclRefExpr 0x7fe94cb9d168 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9cd68 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|               |-CStyleCastExpr 0x7fe94cb9d238 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2185:48, ../Data/C2AST/pr82483-1.c:10:56> 'int' <NoOp>
+|               | `-ImplicitCastExpr 0x7fe94cb9d220 <col:56> 'int' <LValueToRValue>
+|               |   `-DeclRefExpr 0x7fe94cb9d1e0 <col:56> 'int' lvalue ParmVar 0x7fe94cb9cde0 'y' 'int'
+|               `-CStyleCastExpr 0x7fe94cb9d298 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2185:56, ../Data/C2AST/pr82483-1.c:10:59> 'int' <NoOp>
+|                 `-IntegerLiteral 0x7fe94cb9d260 <col:59> 'int' 1
+|-FunctionDecl 0x7fe94cb9cf68 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2185:10> col:10 implicit used __builtin_ia32_vec_set_v4hi '__attribute__((__vector_size__(4 * sizeof(short)))) short (__attribute__((__vector_size__(4 * sizeof(short)))) short, int, int)' extern
+| |-ParmVarDecl 0x7fe94cb9d008 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| |-ParmVarDecl 0x7fe94cb9d068 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fe94cb9d0c8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fe94cb9d4b0 <../Data/C2AST/pr82483-1.c:11:1, col:50> col:7 f4 '__m64 (__m128)'
+| |-ParmVarDecl 0x7fe94cb9d428 <col:11, col:18> col:18 used x '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fe94cb9d620 <col:21, col:50>
+|   `-ReturnStmt 0x7fe94cb9d608 <col:23, col:47>
+|     `-CallExpr 0x7fe94cb9d5c0 <col:30, col:47> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9d5a8 <col:30> '__m64 (*)(__m128)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9d558 <col:30> '__m64 (__m128)' Function 0x7fe94c8c7280 '_mm_cvtps_pi32' '__m64 (__m128)'
+|       `-ImplicitCastExpr 0x7fe94cb9d5f0 <col:46> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9d580 <col:46> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fe94cb9d428 'x' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fe94cb9d6d0 <line:12:1, col:51> col:7 f5 '__m64 (__m128)'
+| |-ParmVarDecl 0x7fe94cb9d648 <col:11, col:18> col:18 used x '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-CompoundStmt 0x7fe94cb9d840 <col:21, col:51>
+|   `-ReturnStmt 0x7fe94cb9d828 <col:23, col:48>
+|     `-CallExpr 0x7fe94cb9d7e0 <col:30, col:48> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9d7c8 <col:30> '__m64 (*)(__m128)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9d778 <col:30> '__m64 (__m128)' Function 0x7fe94c8de530 '_mm_cvttps_pi32' '__m64 (__m128)'
+|       `-ImplicitCastExpr 0x7fe94cb9d810 <col:47> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9d7a0 <col:47> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fe94cb9d648 'x' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fe94cb9d968 <line:13:1, col:63> col:8 f6 '__m128 (__m128, __m64)'
+| |-ParmVarDecl 0x7fe94cb9d868 <col:12, col:19> col:19 used x '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7fe94cb9d8d8 <col:22, col:28> col:28 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9db28 <col:31, col:63>
+|   `-ReturnStmt 0x7fe94cb9db10 <col:33, col:60>
+|     `-CallExpr 0x7fe94cb9daa8 <col:40, col:60> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |-ImplicitCastExpr 0x7fe94cb9da90 <col:40> '__m128 (*)(__m128, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9da18 <col:40> '__m128 (__m128, __m64)' Function 0x7fe94d8009e0 '_mm_cvtpi32_ps' '__m128 (__m128, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9dae0 <col:56> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9da40 <col:56> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fe94cb9d868 'x' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       `-ImplicitCastExpr 0x7fe94cb9daf8 <col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9da68 <col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9d8d8 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9dc50 <line:14:1, col:58> col:7 f7 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9db50 <col:11, col:17> col:17 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9dbc0 <col:20, col:26> col:26 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9de10 <col:29, col:58>
+|   `-ReturnStmt 0x7fe94cb9ddf8 <col:31, col:55>
+|     `-CallExpr 0x7fe94cb9dd90 <col:38, col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9dd78 <col:38> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9dd00 <col:38> '__m64 (__m64, __m64)' Function 0x7fe94d00cb40 '_mm_avg_pu8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9ddc8 <col:51> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9dd28 <col:51> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9db50 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9dde0 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9dd50 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9dbc0 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9df38 <line:15:1, col:59> col:7 f8 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9de38 <col:11, col:17> col:17 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9dea8 <col:20, col:26> col:26 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9e0f8 <col:29, col:59>
+|   `-ReturnStmt 0x7fe94cb9e0e0 <col:31, col:56>
+|     `-CallExpr 0x7fe94cb9e078 <col:38, col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9e060 <col:38> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9dfe8 <col:38> '__m64 (__m64, __m64)' Function 0x7fe94d00d0e8 '_mm_avg_pu16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9e0b0 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9e010 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9de38 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9e0c8 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9e038 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9dea8 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9e220 <line:16:1, col:61> col:7 f9 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9e120 <col:11, col:17> col:17 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9e190 <col:20, col:26> col:26 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9e3e0 <col:29, col:61>
+|   `-ReturnStmt 0x7fe94cb9e3c8 <col:31, col:58>
+|     `-CallExpr 0x7fe94cb9e360 <col:38, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9e348 <col:38> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9e2d0 <col:38> '__m64 (__m64, __m64)' Function 0x7fe94d00bdc0 '_mm_mulhi_pu16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9e398 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9e2f8 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e120 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9e3b0 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9e320 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e190 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9e508 <line:17:1, col:59> col:7 f10 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9e408 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9e478 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9e6c8 <col:30, col:59>
+|   `-ReturnStmt 0x7fe94cb9e6b0 <col:32, col:56>
+|     `-CallExpr 0x7fe94cb9e648 <col:39, col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9e630 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9e5b8 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94d00a838 '_mm_max_pu8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9e680 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9e5e0 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e408 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9e698 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9e608 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e478 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9e7f0 <line:18:1, col:60> col:7 f11 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9e6f0 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9e760 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9e9b0 <col:30, col:60>
+|   `-ReturnStmt 0x7fe94cb9e998 <col:32, col:57>
+|     `-CallExpr 0x7fe94cb9e930 <col:39, col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9e918 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9e8a0 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94d00a290 '_mm_max_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9e968 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9e8c8 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e6f0 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9e980 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9e8f0 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e760 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9ead8 <line:19:1, col:59> col:7 f12 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9e9d8 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9ea48 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9ec98 <col:30, col:59>
+|   `-ReturnStmt 0x7fe94cb9ec80 <col:32, col:56>
+|     `-CallExpr 0x7fe94cb9ec18 <col:39, col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9ec00 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9eb88 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94d00b388 '_mm_min_pu8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9ec50 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9ebb0 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9e9d8 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9ec68 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9ebd8 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9ea48 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9edc0 <line:20:1, col:60> col:7 f13 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9ecc0 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9ed30 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9ef80 <col:30, col:60>
+|   `-ReturnStmt 0x7fe94cb9ef68 <col:32, col:57>
+|     `-CallExpr 0x7fe94cb9ef00 <col:39, col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9eee8 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9ee70 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94d00ade0 '_mm_min_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9ef38 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9ee98 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9ecc0 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9ef50 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9eec0 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9ed30 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9f0a8 <line:21:1, col:59> col:7 f14 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cb9efa8 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cb9f018 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9f268 <col:30, col:59>
+|   `-ReturnStmt 0x7fe94cb9f250 <col:32, col:56>
+|     `-CallExpr 0x7fe94cb9f1e8 <col:39, col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9f1d0 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9f158 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94d00d690 '_mm_sad_pu8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cb9f220 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cb9f180 <col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9efa8 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cb9f238 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9f1a8 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9f018 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9f320 <line:22:1, col:50> col:5 f15 'int (__m64)'
+| |-ParmVarDecl 0x7fe94cb9f290 <col:10, col:16> col:16 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9f4f0 <col:19, col:50>
+|   `-ReturnStmt 0x7fe94cb9f4d8 <col:21, col:47>
+|     `-CallExpr 0x7fe94cb9f490 <col:28, col:47> 'int'
+|       |-ImplicitCastExpr 0x7fe94cb9f478 <col:28> 'int (*)(__m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9f3c8 <col:28> 'int (__m64)' Function 0x7fe94d00b8c0 '_mm_movemask_pi8' 'int (__m64)'
+|       `-ImplicitCastExpr 0x7fe94cb9f4c0 <col:46> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9f3f0 <col:46> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9f290 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cb9f5a0 <line:23:1, col:55> col:7 f16 '__m64 (__m64)'
+| |-ParmVarDecl 0x7fe94cb9f518 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cb9faa8 <col:21, col:55>
+|   `-ReturnStmt 0x7fe94cb9fa90 <col:23, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2332:59>
+|     `-UnaryOperator 0x7fe94cb9fa70 <line:2331:32, line:2332:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' prefix '__extension__'
+|       `-StmtExpr 0x7fe94cb9fa50 <line:2331:46, line:2332:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|         `-CompoundStmt 0x7fe94cb9fa38 <line:2331:47, line:2332:58>
+|           `-CStyleCastExpr 0x7fe94cb9fa10 <col:3, col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|             `-CallExpr 0x7fe94cb9f9b0 <col:10, col:55> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|               |-ImplicitCastExpr 0x7fe94cb9f998 <col:10> '__attribute__((__vector_size__(4 * sizeof(short)))) short (*)(__attribute__((__vector_size__(4 * sizeof(short)))) short, char)' <BuiltinFnToFnPtr>
+|               | `-DeclRefExpr 0x7fe94cb9f800 <col:10> '<builtin fn type>' Function 0x7fe94cb9f690 '__builtin_ia32_pshufw' '__attribute__((__vector_size__(4 * sizeof(short)))) short (__attribute__((__vector_size__(4 * sizeof(short)))) short, char)'
+|               |-CStyleCastExpr 0x7fe94cb9f900 <col:32, col:49> '__v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+|               | `-CStyleCastExpr 0x7fe94cb9f8c8 <col:40, col:49> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|               |   `-ImplicitCastExpr 0x7fe94cb9f8b0 <col:47, col:49> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|               |     `-ParenExpr 0x7fe94cb9f890 <col:47, col:49> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue
+|               |       `-DeclRefExpr 0x7fe94cb9f828 <../Data/C2AST/pr82483-1.c:23:48> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9f518 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|               `-ImplicitCastExpr 0x7fe94cb9f9e8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2332:52, col:54> 'char' <IntegralCast>
+|                 `-ParenExpr 0x7fe94cb9f948 <col:52, col:54> 'int'
+|                   `-IntegerLiteral 0x7fe94cb9f928 <../Data/C2AST/pr82483-1.c:23:51> 'int' 1
+|-FunctionDecl 0x7fe94cb9f690 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/xmmintrin.h:2332:10> col:10 implicit used __builtin_ia32_pshufw '__attribute__((__vector_size__(4 * sizeof(short)))) short (__attribute__((__vector_size__(4 * sizeof(short)))) short, char)' extern
+| |-ParmVarDecl 0x7fe94cb9f730 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-ParmVarDecl 0x7fe94cb9f790 <<invalid sloc>> <invalid sloc> 'char'
+|-FunctionDecl 0x7fe94cb9fb58 <../Data/C2AST/pr82483-1.c:24:1, col:52> col:7 f17 '__m64 (__m128d)'
+| |-ParmVarDecl 0x7fe94cb9fad0 <col:12, col:20> col:20 used x '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fe94cb9fd20 <col:23, col:52>
+|   `-ReturnStmt 0x7fe94cb9fd08 <col:25, col:49>
+|     `-CallExpr 0x7fe94cb9fcc0 <col:32, col:49> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9fca8 <col:32> '__m64 (*)(__m128d)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9fc00 <col:32> '__m64 (__m128d)' Function 0x7fe94d0361c0 '_mm_cvtpd_pi32' '__m64 (__m128d)'
+|       `-ImplicitCastExpr 0x7fe94cb9fcf0 <col:48> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9fc28 <col:48> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fe94cb9fad0 'x' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fe94cb9fdd0 <line:25:1, col:53> col:7 f18 '__m64 (__m128d)'
+| |-ParmVarDecl 0x7fe94cb9fd48 <col:12, col:20> col:20 used x '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fe94cb9ff40 <col:23, col:53>
+|   `-ReturnStmt 0x7fe94cb9ff28 <col:25, col:50>
+|     `-CallExpr 0x7fe94cb9fee0 <col:32, col:50> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cb9fec8 <col:32> '__m64 (*)(__m128d)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cb9fe78 <col:32> '__m64 (__m128d)' Function 0x7fe94d036660 '_mm_cvttpd_pi32' '__m64 (__m128d)'
+|       `-ImplicitCastExpr 0x7fe94cb9ff10 <col:49> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cb9fea0 <col:49> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fe94cb9fd48 'x' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fe94cb9fff0 <line:26:1, col:52> col:9 f19 '__m128d (__m64)'
+| |-ParmVarDecl 0x7fe94cb9ff68 <col:14, col:20> col:20 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cba01c0 <col:23, col:52>
+|   `-ReturnStmt 0x7fe94cba01a8 <col:25, col:49>
+|     `-CallExpr 0x7fe94cba0160 <col:32, col:49> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|       |-ImplicitCastExpr 0x7fe94cba0148 <col:32> '__m128d (*)(__m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cba0098 <col:32> '__m128d (__m64)' Function 0x7fe94d036b20 '_mm_cvtpi32_pd' '__m128d (__m64)'
+|       `-ImplicitCastExpr 0x7fe94cba0190 <col:48> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cba00c0 <col:48> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cb9ff68 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cba02e8 <line:27:1, col:60> col:7 f20 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94cba01e8 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94cba0258 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94cba04a8 <col:30, col:60>
+|   `-ReturnStmt 0x7fe94cba0490 <col:32, col:57>
+|     `-CallExpr 0x7fe94cba0428 <col:39, col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94cba0410 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94cba0398 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94d04ac28 '_mm_mul_su32' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94cba0460 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94cba03c0 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cba01e8 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94cba0478 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94cba03e8 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cba0258 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94cba0558 <line:28:1, col:47> col:7 f21 '__m64 (__m64)'
+| |-ParmVarDecl 0x7fe94cba04d0 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c495b20 <col:21, col:47>
+|   `-ReturnStmt 0x7fe94c495b08 <col:23, col:44>
+|     `-CallExpr 0x7fe94c495ac0 <col:30, col:44> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c495aa8 <col:30> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c495a00 <col:30> '__m64 (__m64)' Function 0x7fe94c8f3650 '_mm_abs_pi8' '__m64 (__m64)'
+|       `-ImplicitCastExpr 0x7fe94c495af0 <col:43> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c495a28 <col:43> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94cba04d0 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c495bd0 <line:29:1, col:48> col:7 f22 '__m64 (__m64)'
+| |-ParmVarDecl 0x7fe94c495b48 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c495d40 <col:21, col:48>
+|   `-ReturnStmt 0x7fe94c495d28 <col:23, col:45>
+|     `-CallExpr 0x7fe94c495ce0 <col:30, col:45> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c495cc8 <col:30> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c495c78 <col:30> '__m64 (__m64)' Function 0x7fe94c8f3f90 '_mm_abs_pi16' '__m64 (__m64)'
+|       `-ImplicitCastExpr 0x7fe94c495d10 <col:44> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c495ca0 <col:44> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c495b48 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c495df0 <line:30:1, col:48> col:7 f23 '__m64 (__m64)'
+| |-ParmVarDecl 0x7fe94c495d68 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c495f60 <col:21, col:48>
+|   `-ReturnStmt 0x7fe94c495f48 <col:23, col:45>
+|     `-CallExpr 0x7fe94c495f00 <col:30, col:45> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c495ee8 <col:30> '__m64 (*)(__m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c495e98 <col:30> '__m64 (__m64)' Function 0x7fe94c8f48d0 '_mm_abs_pi32' '__m64 (__m64)'
+|       `-ImplicitCastExpr 0x7fe94c495f30 <col:44> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c495ec0 <col:44> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c495d68 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c496088 <line:31:1, col:61> col:7 f24 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c495f88 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c495ff8 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c496248 <col:30, col:61>
+|   `-ReturnStmt 0x7fe94c496230 <col:32, col:58>
+|     `-CallExpr 0x7fe94c4961c8 <col:39, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c4961b0 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c496138 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8f5e28 '_mm_hadd_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c496200 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c496160 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c495f88 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c496218 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c496188 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c495ff8 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c496370 <line:32:1, col:61> col:7 f25 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c496270 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c4962e0 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c496530 <col:30, col:61>
+|   `-ReturnStmt 0x7fe94c496518 <col:32, col:58>
+|     `-CallExpr 0x7fe94c4964b0 <col:39, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c496498 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c496420 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8f63d0 '_mm_hadd_pi32' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c4964e8 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c496448 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496270 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c496500 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c496470 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4962e0 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c496658 <line:33:1, col:62> col:7 f26 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c496558 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c4965c8 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c496818 <col:30, col:62>
+|   `-ReturnStmt 0x7fe94c496800 <col:32, col:59>
+|     `-CallExpr 0x7fe94c496798 <col:39, col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c496780 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c496708 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8f6f20 '_mm_hadds_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c4967d0 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c496730 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496558 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c4967e8 <col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c496758 <col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4965c8 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c496940 <line:34:1, col:61> col:7 f27 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c496840 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c4968b0 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c496b00 <col:30, col:61>
+|   `-ReturnStmt 0x7fe94c496ae8 <col:32, col:58>
+|     `-CallExpr 0x7fe94c496a80 <col:39, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c496a68 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c4969f0 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8f8050 '_mm_hsub_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c496ab8 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c496a18 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496840 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c496ad0 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c496a40 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4968b0 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c496c28 <line:35:1, col:61> col:7 f28 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c496b28 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c496b98 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c496de8 <col:30, col:61>
+|   `-ReturnStmt 0x7fe94c496dd0 <col:32, col:58>
+|     `-CallExpr 0x7fe94c496d68 <col:39, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c496d50 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c496cd8 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8f85f8 '_mm_hsub_pi32' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c496da0 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c496d00 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496b28 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c496db8 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c496d28 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496b98 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c496f10 <line:36:1, col:62> col:7 f29 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c496e10 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c496e80 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c4970d0 <col:30, col:62>
+|   `-ReturnStmt 0x7fe94c4970b8 <col:32, col:59>
+|     `-CallExpr 0x7fe94c497050 <col:39, col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c497038 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c496fc0 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8f9148 '_mm_hsubs_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c497088 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c496fe8 <col:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496e10 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c4970a0 <col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c497010 <col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c496e80 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c4971f8 <line:37:1, col:64> col:7 f30 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c4970f8 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c497168 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c4973b8 <col:30, col:64>
+|   `-ReturnStmt 0x7fe94c4973a0 <col:32, col:61>
+|     `-CallExpr 0x7fe94c497338 <col:39, col:61> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c497320 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c4972a8 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8fad30 '_mm_maddubs_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c497370 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c4972d0 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4970f8 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c497388 <col:60> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c4972f8 <col:60> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497168 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c4974e0 <line:38:1, col:63> col:7 f31 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c4973e0 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c497450 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c4976a0 <col:30, col:63>
+|   `-ReturnStmt 0x7fe94c497688 <col:32, col:60>
+|     `-CallExpr 0x7fe94c497620 <col:39, col:60> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c497608 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c497590 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8fb880 '_mm_mulhrs_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c497658 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c4975b8 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4973e0 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c497670 <col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c4975e0 <col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497450 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c4977c8 <line:39:1, col:63> col:7 f32 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c4976c8 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c497738 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c497988 <col:30, col:63>
+|   `-ReturnStmt 0x7fe94c497970 <col:32, col:60>
+|     `-CallExpr 0x7fe94c497908 <col:39, col:60> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c4978f0 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c497878 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8fd400 '_mm_shuffle_pi8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c497940 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c4978a0 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4976c8 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c497958 <col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c4978c8 <col:59> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497738 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c497ab0 <line:40:1, col:60> col:7 f33 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c4979b0 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c497a20 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c497c70 <col:30, col:60>
+|   `-ReturnStmt 0x7fe94c497c58 <col:32, col:57>
+|     `-CallExpr 0x7fe94c497bf0 <col:39, col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c497bd8 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c497b60 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8feaa0 '_mm_sign_pi8' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c497c28 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c497b88 <col:53> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4979b0 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c497c40 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c497bb0 <col:56> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497a20 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c497d98 <line:41:1, col:61> col:7 f34 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c497c98 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c497d08 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c497f58 <col:30, col:61>
+|   `-ReturnStmt 0x7fe94c497f40 <col:32, col:58>
+|     `-CallExpr 0x7fe94c497ed8 <col:39, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c497ec0 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c497e48 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8ff048 '_mm_sign_pi16' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c497f10 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c497e70 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497c98 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c497f28 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c497e98 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497d08 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c498080 <line:42:1, col:61> col:7 f35 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c497f80 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c497ff0 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c498240 <col:30, col:61>
+|   `-ReturnStmt 0x7fe94c498228 <col:32, col:58>
+|     `-CallExpr 0x7fe94c4981c0 <col:39, col:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fe94c4981a8 <col:39> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe94c498130 <col:39> '__m64 (__m64, __m64)' Function 0x7fe94c8ff5f8 '_mm_sign_pi32' '__m64 (__m64, __m64)'
+|       |-ImplicitCastExpr 0x7fe94c4981f8 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe94c498158 <col:54> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497f80 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fe94c498210 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe94c498180 <col:57> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c497ff0 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c498368 <line:43:1, col:54> col:6 f36 'void (__m64 *, __m64)'
+| |-ParmVarDecl 0x7fe94c498268 <col:11, col:18> col:18 used x '__m64 *'
+| |-ParmVarDecl 0x7fe94c4982d8 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c498538 <col:30, col:54>
+|   `-CallExpr 0x7fe94c4984d0 <col:32, col:51> 'void'
+|     |-ImplicitCastExpr 0x7fe94c4984b8 <col:32> 'void (*)(__m64 *, __m64)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe94c498418 <col:32> 'void (__m64 *, __m64)' Function 0x7fe94d0096c0 '_mm_stream_pi' 'void (__m64 *, __m64)'
+|     |-ImplicitCastExpr 0x7fe94c498508 <col:47> '__m64 *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe94c498440 <col:47> '__m64 *' lvalue ParmVar 0x7fe94c498268 'x' '__m64 *'
+|     `-ImplicitCastExpr 0x7fe94c498520 <col:50> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe94c498468 <col:50> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4982d8 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-FunctionDecl 0x7fe94c498660 <line:44:1, col:65> col:7 f37 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe94c498560 <col:12, col:18> col:18 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe94c4985d0 <col:21, col:27> col:27 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe94c498ce0 <col:30, col:65>
+|   `-ReturnStmt 0x7fe94c498cc8 <col:32, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/tmmintrin.h:184:80>
+|     `-UnaryOperator 0x7fe94c498ca8 <line:183:33, line:184:80> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' prefix '__extension__'
+|       `-StmtExpr 0x7fe94c498c88 <line:183:47, line:184:80> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|         `-CompoundStmt 0x7fe94c498c70 <line:183:48, line:184:79>
+|           `-CStyleCastExpr 0x7fe94c498c48 <col:3, col:76> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|             `-CallExpr 0x7fe94c498be0 <col:10, col:76> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|               |-ImplicitCastExpr 0x7fe94c498bc8 <col:10> '__attribute__((__vector_size__(8 * sizeof(char)))) char (*)(__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char, char)' <BuiltinFnToFnPtr>
+|               | `-DeclRefExpr 0x7fe94c498930 <col:10> '<builtin fn type>' Function 0x7fe94c498758 '__builtin_ia32_palignr' '__attribute__((__vector_size__(8 * sizeof(char)))) char (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char, char)'
+|               |-CStyleCastExpr 0x7fe94c498a30 <col:33, col:50> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|               | `-CStyleCastExpr 0x7fe94c4989f8 <col:41, col:50> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|               |   `-ImplicitCastExpr 0x7fe94c4989e0 <col:48, col:50> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|               |     `-ParenExpr 0x7fe94c4989c0 <col:48, col:50> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue
+|               |       `-DeclRefExpr 0x7fe94c498958 <../Data/C2AST/pr82483-1.c:44:55> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c498560 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|               |-CStyleCastExpr 0x7fe94c498b30 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/tmmintrin.h:184:53, col:70> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|               | `-CStyleCastExpr 0x7fe94c498af8 <col:61, col:70> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+|               |   `-ImplicitCastExpr 0x7fe94c498ae0 <col:68, col:70> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|               |     `-ParenExpr 0x7fe94c498ac0 <col:68, col:70> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue
+|               |       `-DeclRefExpr 0x7fe94c498a58 <../Data/C2AST/pr82483-1.c:44:58> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe94c4985d0 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|               `-ImplicitCastExpr 0x7fe94c498c20 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/tmmintrin.h:184:73, col:75> 'char' <IntegralCast>
+|                 `-ParenExpr 0x7fe94c498b78 <col:73, col:75> 'int'
+|                   `-IntegerLiteral 0x7fe94c498b58 <../Data/C2AST/pr82483-1.c:44:61> 'int' 3
+`-FunctionDecl 0x7fe94c498758 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/tmmintrin.h:184:10> col:10 implicit used __builtin_ia32_palignr '__attribute__((__vector_size__(8 * sizeof(char)))) char (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char, char)' extern
+  |-ParmVarDecl 0x7fe94c4987f8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+  |-ParmVarDecl 0x7fe94c498858 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7fe94c4988b8 <<invalid sloc>> <invalid sloc> 'char'

@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fe7500294e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe75002a178 <../Data/C2AST/pr81065.c:4:1, col:19> col:15 used x 'unsigned char' cinit
+| `-ImplicitCastExpr 0x7fe750814260 <col:19> 'unsigned char' <IntegralCast>
+|   `-IntegerLiteral 0x7fe750814240 <col:19> 'int' 154
+|-FunctionDecl 0x7fe7508142d0 <line:5:1, line:8:1> line:5:5 used foo 'int ()'
+| `-CompoundStmt 0x7fe7508144d8 <col:11, line:8:1>
+|   `-ReturnStmt 0x7fe7508144c0 <line:7:3, col:33>
+|     `-BinaryOperator 0x7fe750814498 <col:10, col:33> 'int' '*'
+|       |-IntegerLiteral 0x7fe750814370 <col:10> 'int' 8575
+|       `-ParenExpr 0x7fe750814478 <col:17, col:33> 'int'
+|         `-BinaryOperator 0x7fe750814450 <col:18, col:29> 'int' '-'
+|           |-BinaryOperator 0x7fe750814408 <col:18, col:25> 'int' '*'
+|           | |-IntegerLiteral 0x7fe750814390 <col:18> 'int' 1652
+|           | `-ImplicitCastExpr 0x7fe7508143f0 <col:25> 'int' <IntegralCast>
+|           |   `-ImplicitCastExpr 0x7fe7508143d8 <col:25> 'unsigned char' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fe7508143b0 <col:25> 'unsigned char' lvalue Var 0x7fe75002a178 'x' 'unsigned char'
+|           `-IntegerLiteral 0x7fe750814430 <col:29> 'int' 9057
+`-FunctionDecl 0x7fe750814518 <line:10:1, line:13:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7fe750814680 <col:12, line:13:1>
+    |-CallExpr 0x7fe750814620 <line:11:3, col:7> 'int'
+    | `-ImplicitCastExpr 0x7fe750814608 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fe7508145b8 <col:3> 'int ()' Function 0x7fe7508142d0 'foo' 'int ()'
+    `-ReturnStmt 0x7fe750814668 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fe750814648 <col:10> 'int' 0

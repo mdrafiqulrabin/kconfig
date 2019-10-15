@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb53802bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb53802c960 <../Data/C2AST/pr47286.c:5:1, col:41> col:8 struct thread_info definition
+| `-FieldDecl 0x7fb538814238 <col:22, col:26> col:26 referenced preempt_count 'int'
+|-FunctionDecl 0x7fb538814418 <line:6:1, line:10:1> line:6:35 used current_thread_info 'struct thread_info *(void)' static inline
+| `-CompoundStmt 0x7fb5388146b8 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7fb538814648 <line:8:3, col:45>
+|   | `-VarDecl 0x7fb538814590 <col:3, col:32> col:32 used sp 'struct thread_info *' register
+|   |   `-AsmLabelAttr 0x7fb5388145f0 <col:39> "esp"
+|   `-ReturnStmt 0x7fb5388146a0 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7fb538814688 <col:10> 'struct thread_info *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb538814660 <col:10> 'struct thread_info *' lvalue Var 0x7fb538814590 'sp' 'struct thread_info *'
+`-FunctionDecl 0x7fb5388147a0 <line:11:1, line:14:1> line:11:6 testcase 'void (void)'
+  `-CompoundStmt 0x7fb538814998 <line:12:1, line:14:1>
+    `-CompoundAssignOperator 0x7fb538814960 <line:13:3, col:43> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-MemberExpr 0x7fb538814908 <col:3, col:26> 'int' lvalue ->preempt_count 0x7fb538814238
+      | `-CallExpr 0x7fb5388148e0 <col:3, col:23> 'struct thread_info *'
+      |   `-ImplicitCastExpr 0x7fb5388148c8 <col:3> 'struct thread_info *(*)(void)' <FunctionToPointerDecay>
+      |     `-DeclRefExpr 0x7fb538814840 <col:3> 'struct thread_info *(void)' Function 0x7fb538814418 'current_thread_info' 'struct thread_info *(void)'
+      `-IntegerLiteral 0x7fb538814940 <col:43> 'int' 1

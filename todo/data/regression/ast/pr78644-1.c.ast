@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7ff8d782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8d782c978 <../Data/C2AST/pr78644-1.c:4:1, col:27> col:27 referenced u128 'unsigned __int128'
+| `-BuiltinType 0x7ff8d782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff8d786e838 <line:5:1, col:27> col:27 referenced V '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+| `-VectorType 0x7ff8d786e800 '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' 4
+|   `-BuiltinType 0x7ff8d782bfa0 'unsigned __int128'
+|-VarDecl 0x7ff8d786e8c0 <line:7:1, col:3> col:3 used x4 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+|-FunctionDecl 0x7ff8d786eb10 <line:9:1, line:15:1> line:10:1 used bar 'V (u128, u128)' static
+| |-ParmVarDecl 0x7ff8d786e990 <col:6, col:11> col:11 used x2 'u128':'unsigned __int128'
+| |-ParmVarDecl 0x7ff8d786ea00 <col:15, col:20> col:20 used x3 'u128':'unsigned __int128'
+| `-CompoundStmt 0x7ff8d786eea8 <line:11:1, line:15:1>
+|   |-WhileStmt 0x7ff8d786ed48 <line:12:3, line:13:18>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7ff8d786ec30 <line:12:10, col:15> 'unsigned __int128' postfix '--'
+|   | | `-ArraySubscriptExpr 0x7ff8d786ec08 <col:10, col:14> 'unsigned __int128' lvalue vectorcomponent
+|   | |   |-DeclRefExpr 0x7ff8d786ebc0 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue Var 0x7ff8d786e8c0 'x4' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+|   | |   `-IntegerLiteral 0x7ff8d786ebe8 <col:13> 'int' 0
+|   | `-CompoundAssignOperator 0x7ff8d786ed10 <line:13:5, col:18> 'u128':'unsigned __int128' '/=' ComputeLHSTy='unsigned __int128' ComputeResultTy='unsigned __int128'
+|   |   |-DeclRefExpr 0x7ff8d786ec50 <col:5> 'u128':'unsigned __int128' lvalue ParmVar 0x7ff8d786e990 'x2' 'u128':'unsigned __int128'
+|   |   `-CompoundAssignOperator 0x7ff8d786ecd8 <col:11, col:18> 'u128':'unsigned __int128' '>>=' ComputeLHSTy='u128':'unsigned __int128' ComputeResultTy='u128':'unsigned __int128'
+|   |     |-DeclRefExpr 0x7ff8d786ec78 <col:11> 'u128':'unsigned __int128' lvalue ParmVar 0x7ff8d786ea00 'x3' 'u128':'unsigned __int128'
+|   |     `-IntegerLiteral 0x7ff8d786eca0 <col:18> 'int' 1
+|   `-ReturnStmt 0x7ff8d786ee90 <line:14:3, col:20>
+|     `-BinaryOperator 0x7ff8d786ee68 <col:10, col:20> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' '+'
+|       |-ImplicitCastExpr 0x7ff8d786ee50 <col:10, col:15> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <VectorSplat>
+|       | `-BinaryOperator 0x7ff8d786ede8 <col:10, col:15> 'unsigned __int128' '+'
+|       |   |-ImplicitCastExpr 0x7ff8d786edb8 <col:10> 'u128':'unsigned __int128' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7ff8d786ed68 <col:10> 'u128':'unsigned __int128' lvalue ParmVar 0x7ff8d786e990 'x2' 'u128':'unsigned __int128'
+|       |   `-ImplicitCastExpr 0x7ff8d786edd0 <col:15> 'u128':'unsigned __int128' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7ff8d786ed90 <col:15> 'u128':'unsigned __int128' lvalue ParmVar 0x7ff8d786ea00 'x3' 'u128':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7ff8d786ee38 <col:20> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff8d786ee10 <col:20> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue Var 0x7ff8d786e8c0 'x4' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+`-FunctionDecl 0x7ff8d786ef90 <line:17:1, line:21:1> line:18:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff8d786f178 <line:19:1, line:21:1>
+    `-CallExpr 0x7ff8d786f110 <line:20:3, col:12> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+      |-ImplicitCastExpr 0x7ff8d786f0f8 <col:3> 'V (*)(u128, u128)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff8d786f030 <col:3> 'V (u128, u128)' Function 0x7ff8d786eb10 'bar' 'V (u128, u128)'
+      |-ImplicitCastExpr 0x7ff8d786f148 <col:8> 'u128':'unsigned __int128' <IntegralCast>
+      | `-IntegerLiteral 0x7ff8d786f058 <col:8> 'int' 0
+      `-ImplicitCastExpr 0x7ff8d786f160 <col:11> 'u128':'unsigned __int128' <IntegralCast>
+        `-IntegerLiteral 0x7ff8d786f078 <col:11> 'int' 0

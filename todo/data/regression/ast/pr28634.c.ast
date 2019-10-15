@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7f86b08230e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f86b0823d78 <../Data/C2AST/pr28634.c:2:1, col:13> col:8 used x 'double' cinit
+| `-UnaryOperator 0x7f86b0864c60 <col:12, col:13> 'double' prefix '-'
+|   `-FloatingLiteral 0x7f86b0864c40 <col:13> 'double' 9.007199e+15
+|-VarDecl 0x7f86b0864c98 <line:3:1, col:12> col:8 used y 'double' cinit
+| `-ImplicitCastExpr 0x7f86b0864d18 <col:12> 'double' <IntegralToFloating>
+|   `-IntegerLiteral 0x7f86b0864cf8 <col:12> 'int' 1
+|-FunctionDecl 0x7f86b0864df8 <line:4:1, line:12:1> line:5:1 main 'int (void)'
+| `-CompoundStmt 0x7f86b08654d0 <line:6:1, line:12:1>
+|   |-WhileStmt 0x7f86b0865008 <line:7:3, line:8:10>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f86b0864f40 <line:7:10, col:14> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7f86b0864f10 <col:10> 'double' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f86b0864ec8 <col:10> 'double' lvalue Var 0x7f86b0864c98 'y' 'double'
+|   | | `-ImplicitCastExpr 0x7f86b0864f28 <col:14> 'double' <IntegralToFloating>
+|   | |   `-IntegerLiteral 0x7f86b0864ef0 <col:14> 'int' 0
+|   | `-CompoundAssignOperator 0x7f86b0864fd0 <line:8:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   |   |-DeclRefExpr 0x7f86b0864f68 <col:5> 'double' lvalue Var 0x7f86b0864c98 'y' 'double'
+|   |   `-ImplicitCastExpr 0x7f86b0864fb8 <col:10> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f86b0864f90 <col:10> 'double' lvalue Var 0x7f86b0823d78 'x' 'double'
+|   |-IfStmt 0x7f86b0865298 <line:9:3, line:10:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f86b0865108 <line:9:7, col:16> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f86b08650f0 <col:7> 'double' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f86b0865028 <col:7> 'double' lvalue Var 0x7f86b0864c98 'y' 'double'
+|   | | `-BinaryOperator 0x7f86b08650c8 <col:12, col:16> 'double' '+'
+|   | |   |-ImplicitCastExpr 0x7f86b0865098 <col:12> 'double' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f86b0865050 <col:12> 'double' lvalue Var 0x7f86b0823d78 'x' 'double'
+|   | |   `-ImplicitCastExpr 0x7f86b08650b0 <col:16> 'double' <IntegralToFloating>
+|   | |     `-IntegerLiteral 0x7f86b0865078 <col:16> 'int' 1
+|   | |-CallExpr 0x7f86b0865270 <line:10:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f86b0865258 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f86b0865200 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f86b0865160 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7f86b08654a0 <line:11:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7f86b0865488 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f86b0865410 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f86b0865308 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7f86b0865438 <col:9> 'int' 0
+|-FunctionDecl 0x7f86b0865160 <line:10:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f86b0865308 <line:11:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7f86b08653a8 <<invalid sloc>> <invalid sloc> 'int'

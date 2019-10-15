@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fa9dd0166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa9dd059200 <../Data/C2AST/pr79904-2.c:5:1, col:21> col:21 referenced V '__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7fa9dd017380 '__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' 8
+|   `-BuiltinType 0x7fa9dd0167a0 'signed char'
+`-FunctionDecl 0x7fa9dd0593f0 <line:7:1, line:11:1> line:8:1 foo 'void (V *)'
+  |-ParmVarDecl 0x7fa9dd0592e8 <col:6, col:9> col:9 used a 'V *'
+  `-CompoundStmt 0x7fa9dd059910 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fa9dd0598e8 <line:10:3, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '='
+      |-UnaryOperator 0x7fa9dd059518 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fa9dd059500 <col:4> 'V *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa9dd0594d8 <col:4> 'V *' lvalue ParmVar 0x7fa9dd0592e8 'a' 'V *'
+      `-BinaryOperator 0x7fa9dd0598c0 <col:8, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' '*'
+        |-ImplicitCastExpr 0x7fa9dd059890 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <LValueToRValue>
+        | `-UnaryOperator 0x7fa9dd059578 <col:8, col:9> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fa9dd059560 <col:9> 'V *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fa9dd059538 <col:9> 'V *' lvalue ParmVar 0x7fa9dd0592e8 'a' 'V *'
+        `-ImplicitCastExpr 0x7fa9dd0598a8 <col:13, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' <LValueToRValue>
+          `-CompoundLiteralExpr 0x7fa9dd059868 <col:13, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char' lvalue
+            `-InitListExpr 0x7fa9dd059728 <col:17, col:43> 'V':'__attribute__((__vector_size__(8 * sizeof(signed char)))) signed char'
+              |-ImplicitCastExpr 0x7fa9dd0597a8 <col:19> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd0595a8 <col:19> 'int' 3
+              |-ImplicitCastExpr 0x7fa9dd0597c0 <col:22> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd0595c8 <col:22> 'int' 4
+              |-ImplicitCastExpr 0x7fa9dd0597d8 <col:25> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd0595e8 <col:25> 'int' 5
+              |-ImplicitCastExpr 0x7fa9dd0597f0 <col:28> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd059608 <col:28> 'int' 6
+              |-ImplicitCastExpr 0x7fa9dd059808 <col:31> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd059628 <col:31> 'int' 7
+              |-ImplicitCastExpr 0x7fa9dd059820 <col:34> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd059648 <col:34> 'int' 8
+              |-ImplicitCastExpr 0x7fa9dd059838 <col:37> 'signed char' <IntegralCast>
+              | `-IntegerLiteral 0x7fa9dd059668 <col:37> 'int' 9
+              `-ImplicitCastExpr 0x7fa9dd059850 <col:40> 'signed char' <IntegralCast>
+                `-IntegerLiteral 0x7fa9dd059688 <col:40> 'int' 10

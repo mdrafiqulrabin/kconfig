@@ -1,0 +1,94 @@
+TranslationUnitDecl 0x7f9de88216e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9de884e200 <../Data/C2AST/pr54445-1.c:5:1, col:36> col:24 used tls_array 'unsigned char [64]' tls
+|-FunctionDecl 0x7f9de884e388 <line:7:1, line:11:1> line:9:1 used tls_array_lookup_with_negative_constant 'unsigned char (long long)'
+| |-ParmVarDecl 0x7f9de884e2b8 <col:41, col:55> col:55 used position 'long long'
+| |-CompoundStmt 0x7f9de884e5d8 <col:65, line:11:1>
+| | `-ReturnStmt 0x7f9de884e5c0 <line:10:3, col:32>
+| |   `-ImplicitCastExpr 0x7f9de884e5a8 <col:10, col:32> 'unsigned char' <LValueToRValue>
+| |     `-ArraySubscriptExpr 0x7f9de884e580 <col:10, col:32> 'unsigned char' lvalue
+| |       |-ImplicitCastExpr 0x7f9de884e568 <col:10> 'unsigned char *' <ArrayToPointerDecay>
+| |       | `-DeclRefExpr 0x7f9de884e478 <col:10> 'unsigned char [64]' lvalue Var 0x7f9de884e200 'tls_array' 'unsigned char [64]'
+| |       `-BinaryOperator 0x7f9de884e518 <col:20, col:31> 'long long' '-'
+| |         |-ImplicitCastExpr 0x7f9de884e4e8 <col:20> 'long long' <LValueToRValue>
+| |         | `-DeclRefExpr 0x7f9de884e4a0 <col:20> 'long long' lvalue ParmVar 0x7f9de884e2b8 'position' 'long long'
+| |         `-ImplicitCastExpr 0x7f9de884e500 <col:31> 'long long' <IntegralCast>
+| |           `-IntegerLiteral 0x7f9de884e4c8 <col:31> 'int' 1
+| `-NoInlineAttr 0x7f9de884e430 <line:8:17>
+|-FunctionDecl 0x7f9de884e640 <line:13:1, line:25:1> line:14:1 main 'int ()'
+| `-CompoundStmt 0x7f9de8865c00 <line:15:1, line:25:1>
+|   |-DeclStmt 0x7f9de884e758 <line:16:3, col:8>
+|   | `-VarDecl 0x7f9de884e6f8 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7f9de884eb28 <line:18:3, line:19:20>
+|   | |-BinaryOperator 0x7f9de884e7b8 <line:18:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f9de884e770 <col:8> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   | | `-IntegerLiteral 0x7f9de884e798 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9de884e990 <col:15, col:60> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9de884e978 <col:15> 'unsigned long' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9de884e960 <col:15> 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9de884e7e0 <col:15> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   | | `-BinaryOperator 0x7f9de884e938 <col:19, col:60> 'unsigned long' '/'
+|   | |   |-UnaryExprOrTypeTraitExpr 0x7f9de884e850 <col:19, col:36> 'unsigned long' sizeof
+|   | |   | `-ParenExpr 0x7f9de884e830 <col:26, col:36> 'unsigned char [64]' lvalue
+|   | |   |   `-DeclRefExpr 0x7f9de884e808 <col:27> 'unsigned char [64]' lvalue Var 0x7f9de884e200 'tls_array' 'unsigned char [64]'
+|   | |   `-UnaryExprOrTypeTraitExpr 0x7f9de884e918 <col:40, col:60> 'unsigned long' sizeof
+|   | |     `-ParenExpr 0x7f9de884e8f8 <col:47, col:60> 'unsigned char' lvalue
+|   | |       `-ArraySubscriptExpr 0x7f9de884e8d0 <col:48, col:59> 'unsigned char' lvalue
+|   | |         |-ImplicitCastExpr 0x7f9de884e8b8 <col:48> 'unsigned char *' <ArrayToPointerDecay>
+|   | |         | `-DeclRefExpr 0x7f9de884e870 <col:48> 'unsigned char [64]' lvalue Var 0x7f9de884e200 'tls_array' 'unsigned char [64]'
+|   | |         `-IntegerLiteral 0x7f9de884e898 <col:58> 'int' 0
+|   | |-UnaryOperator 0x7f9de884e9e0 <col:63, col:64> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9de884e9b8 <col:63> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   | `-BinaryOperator 0x7f9de884eb00 <line:19:5, col:20> 'unsigned char' '='
+|   |   |-ArraySubscriptExpr 0x7f9de884ea80 <col:5, col:16> 'unsigned char' lvalue
+|   |   | |-ImplicitCastExpr 0x7f9de884ea50 <col:5> 'unsigned char *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f9de884ea00 <col:5> 'unsigned char [64]' lvalue Var 0x7f9de884e200 'tls_array' 'unsigned char [64]'
+|   |   | `-ImplicitCastExpr 0x7f9de884ea68 <col:15> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f9de884ea28 <col:15> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   |   `-ImplicitCastExpr 0x7f9de884eae8 <col:20> 'unsigned char' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7f9de884ead0 <col:20> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9de884eaa8 <col:20> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   |-ForStmt 0x7f9de884f190 <line:21:3, line:23:24>
+|   | |-BinaryOperator 0x7f9de884eba8 <line:21:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f9de884eb60 <col:8> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   | | `-IntegerLiteral 0x7f9de884eb88 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9de884ed80 <col:15, col:60> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9de884ed68 <col:15> 'unsigned long' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9de884ed50 <col:15> 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9de884ebd0 <col:15> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   | | `-BinaryOperator 0x7f9de884ed28 <col:19, col:60> 'unsigned long' '/'
+|   | |   |-UnaryExprOrTypeTraitExpr 0x7f9de884ec40 <col:19, col:36> 'unsigned long' sizeof
+|   | |   | `-ParenExpr 0x7f9de884ec20 <col:26, col:36> 'unsigned char [64]' lvalue
+|   | |   |   `-DeclRefExpr 0x7f9de884ebf8 <col:27> 'unsigned char [64]' lvalue Var 0x7f9de884e200 'tls_array' 'unsigned char [64]'
+|   | |   `-UnaryExprOrTypeTraitExpr 0x7f9de884ed08 <col:40, col:60> 'unsigned long' sizeof
+|   | |     `-ParenExpr 0x7f9de884ece8 <col:47, col:60> 'unsigned char' lvalue
+|   | |       `-ArraySubscriptExpr 0x7f9de884ecc0 <col:48, col:59> 'unsigned char' lvalue
+|   | |         |-ImplicitCastExpr 0x7f9de884eca8 <col:48> 'unsigned char *' <ArrayToPointerDecay>
+|   | |         | `-DeclRefExpr 0x7f9de884ec60 <col:48> 'unsigned char [64]' lvalue Var 0x7f9de884e200 'tls_array' 'unsigned char [64]'
+|   | |         `-IntegerLiteral 0x7f9de884ec88 <col:58> 'int' 0
+|   | |-UnaryOperator 0x7f9de884edd0 <col:63, col:64> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9de884eda8 <col:63> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   | `-IfStmt 0x7f9de884f158 <line:22:5, line:23:24>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7f9de884ef88 <line:22:9, col:60> 'int' '!='
+|   |   | |-ImplicitCastExpr 0x7f9de884ef58 <col:9> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f9de884edf0 <col:9> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   |   | `-ImplicitCastExpr 0x7f9de884ef70 <col:14, col:60> 'int' <IntegralCast>
+|   |   |   `-CallExpr 0x7f9de884ef10 <col:14, col:60> 'unsigned char'
+|   |   |     |-ImplicitCastExpr 0x7f9de884eef8 <col:14> 'unsigned char (*)(long long)' <FunctionToPointerDecay>
+|   |   |     | `-DeclRefExpr 0x7f9de884ee18 <col:14> 'unsigned char (long long)' Function 0x7f9de884e388 'tls_array_lookup_with_negative_constant' 'unsigned char (long long)'
+|   |   |     `-ImplicitCastExpr 0x7f9de884ef40 <col:55, col:59> 'long long' <IntegralCast>
+|   |   |       `-BinaryOperator 0x7f9de884eea0 <col:55, col:59> 'int' '+'
+|   |   |         |-ImplicitCastExpr 0x7f9de884ee88 <col:55> 'int' <LValueToRValue>
+|   |   |         | `-DeclRefExpr 0x7f9de884ee40 <col:55> 'int' lvalue Var 0x7f9de884e6f8 'i' 'int'
+|   |   |         `-IntegerLiteral 0x7f9de884ee68 <col:59> 'int' 1
+|   |   |-CallExpr 0x7f9de884f130 <line:23:7, col:24> 'void'
+|   |   | `-ImplicitCastExpr 0x7f9de884f118 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |   |   `-DeclRefExpr 0x7f9de884f0c8 <col:7> '<builtin fn type>' Function 0x7f9de884efe0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9de884f1e8 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7f9de884f1c8 <col:10> 'int' 0
+`-FunctionDecl 0x7f9de884efe0 <line:23:7> col:7 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f9de884f080 <col:7> Implicit

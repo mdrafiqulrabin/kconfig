@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fb33b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb33b06d860 <../Data/C2AST/pr34127.c:1:1, line:5:1> line:2:1 used whichtable 'void (char **)' static
+| |-ParmVarDecl 0x7fb33b02c9a0 <col:12, col:19> col:19 used pfmt 'char **'
+| `-CompoundStmt 0x7fb33b06d9c8 <line:3:1, line:5:1>
+|   `-UnaryOperator 0x7fb33b06d9a8 <line:4:3, col:6> 'char *' prefix '--'
+|     `-UnaryOperator 0x7fb33b06d988 <col:5, col:6> 'char *' lvalue prefix '*'
+|       `-ImplicitCastExpr 0x7fb33b06d970 <col:6> 'char **' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb33b06d948 <col:6> 'char **' lvalue ParmVar 0x7fb33b02c9a0 'pfmt' 'char **'
+`-FunctionDecl 0x7fb33b06dac0 <line:6:1, line:9:1> line:6:6 prepare_s 'void (const char *)'
+  |-ParmVarDecl 0x7fb33b06d9f8 <col:16, col:28> col:28 used fmt 'const char *'
+  `-CompoundStmt 0x7fb33b06dd40 <line:7:1, line:9:1>
+    `-CallExpr 0x7fb33b06dd10 <line:8:3, col:27> 'void'
+      |-ImplicitCastExpr 0x7fb33b06dcf8 <col:3> 'void (*)(char **)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb33b06db68 <col:3> 'void (char **)' Function 0x7fb33b06d860 'whichtable' 'void (char **)'
+      `-CStyleCastExpr 0x7fb33b06dca8 <col:14, col:24> 'char **' <BitCast>
+        `-UnaryOperator 0x7fb33b06dbe8 <col:23, col:24> 'const char **' prefix '&'
+          `-DeclRefExpr 0x7fb33b06db90 <col:24> 'const char *' lvalue ParmVar 0x7fb33b06d9f8 'fmt' 'const char *'

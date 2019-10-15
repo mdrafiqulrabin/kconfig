@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fbfe782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fbfe7866868 <../Data/C2AST/pr25861.c:1:1, line:4:1> line:1:5 f 'int (void *)'
+  |-ParmVarDecl 0x7fbfe782c978 <col:7, col:13> col:13 used a 'void *'
+  `-CompoundStmt 0x7fbfe7866a20 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7fbfe7866a08 <line:3:3, col:14>
+      `-UnaryOperator 0x7fbfe78669e8 <col:10, col:14> 'int' prefix '!'
+        `-ParenExpr 0x7fbfe78669c8 <col:11, col:14> 'void **'
+          `-UnaryOperator 0x7fbfe78669a8 <col:12, col:13> 'void **' prefix '&'
+            `-DeclRefExpr 0x7fbfe7866950 <col:13> 'void *' lvalue ParmVar 0x7fbfe782c978 'a' 'void *'

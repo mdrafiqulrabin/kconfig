@@ -1,0 +1,624 @@
+TranslationUnitDecl 0x7ffb7f8134e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb7f814178 <../Data/C2AST/pr70416.c:4:1, col:23> col:23 referenced VALUE 'unsigned long'
+| `-BuiltinType 0x7ffb7f8136a0 'unsigned long'
+|-TypedefDecl 0x7ffb80021e00 <line:5:1, col:23> col:23 referenced ID 'unsigned long'
+| `-BuiltinType 0x7ffb7f8136a0 'unsigned long'
+|-RecordDecl 0x7ffb80021e58 <line:7:9, line:11:1> line:7:16 struct rb_callable_method_entry_struct definition
+| |-FieldDecl 0x7ffb80021f30 <line:9:3, col:6> col:6 referenced called_id 'ID':'unsigned long'
+| `-FieldDecl 0x7ffb80021fb0 <line:10:3, col:15> col:15 referenced owner 'const VALUE':'const unsigned long'
+|-TypedefDecl 0x7ffb80022050 <line:7:1, line:11:3> col:3 referenced rb_callable_method_entry_t 'struct rb_callable_method_entry_struct':'struct rb_callable_method_entry_struct'
+| `-ElaboratedType 0x7ffb80022000 'struct rb_callable_method_entry_struct' sugar
+|   `-RecordType 0x7ffb80021ee0 'struct rb_callable_method_entry_struct'
+|     `-Record 0x7ffb80021e58 'rb_callable_method_entry_struct'
+|-RecordDecl 0x7ffb800220c0 <line:13:9, col:16> col:16 struct rb_iseq_struct
+|-TypedefDecl 0x7ffb800221c0 <col:1, col:31> col:31 referenced rb_iseq_t 'struct rb_iseq_struct':'struct rb_iseq_struct'
+| `-ElaboratedType 0x7ffb80022170 'struct rb_iseq_struct' sugar
+|   `-RecordType 0x7ffb80022150 'struct rb_iseq_struct'
+|     `-Record 0x7ffb800224e0 'rb_iseq_struct'
+|-RecordDecl 0x7ffb80022230 <line:15:1, col:32> col:8 struct __jmp_buf_tag definition
+| `-FieldDecl 0x7ffb800222f8 <col:24, col:28> col:28 xx 'int'
+|-TypedefDecl 0x7ffb80022488 <line:16:1, col:39> col:30 referenced jmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7ffb80022420 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7ffb80022360 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7ffb800222c0 'struct __jmp_buf_tag'
+|       `-Record 0x7ffb80022230 '__jmp_buf_tag'
+|-RecordDecl 0x7ffb800224e0 prev 0x7ffb800220c0 <line:18:1, line:21:1> line:18:8 struct rb_iseq_struct definition
+| |-RecordDecl 0x7ffb80022568 parent 0x7ffb7f8134e8 <line:20:9, col:16> col:16 struct iseq_catch_table
+| `-FieldDecl 0x7ffb800226d0 <col:3, col:34> col:34 referenced catch_table 'const struct iseq_catch_table *'
+|-RecordDecl 0x7ffb80022718 <line:23:9, line:30:1> line:23:16 struct rb_control_frame_struct definition
+| |-FieldDecl 0x7ffb80022828 <line:25:3, col:16> col:16 referenced pc 'const VALUE *'
+| |-FieldDecl 0x7ffb800228d8 <line:26:3, col:10> col:10 sp 'VALUE *'
+| |-FieldDecl 0x7ffb800229a8 <line:27:3, col:20> col:20 referenced iseq 'const rb_iseq_t *'
+| |-FieldDecl 0x7ffb80022a00 <line:28:3, col:9> col:9 referenced flag 'VALUE':'unsigned long'
+| `-FieldDecl 0x7ffb80022a58 <line:29:3, col:10> col:10 ep 'VALUE *'
+|-TypedefDecl 0x7ffb80022af0 <line:23:1, line:30:3> col:3 referenced rb_control_frame_t 'struct rb_control_frame_struct':'struct rb_control_frame_struct'
+| `-ElaboratedType 0x7ffb80022aa0 'struct rb_control_frame_struct' sugar
+|   `-RecordType 0x7ffb800227a0 'struct rb_control_frame_struct'
+|     `-Record 0x7ffb80022718 'rb_control_frame_struct'
+|-TypedefDecl 0x7ffb80022b90 <line:32:1, col:17> col:17 referenced rb_jmpbuf_t 'jmp_buf':'struct __jmp_buf_tag [1]'
+| `-TypedefType 0x7ffb80022b60 'jmp_buf' sugar
+|   |-Typedef 0x7ffb80022488 'jmp_buf'
+|   `-ConstantArrayType 0x7ffb80022420 'struct __jmp_buf_tag [1]' 1 
+|     `-ElaboratedType 0x7ffb80022360 'struct __jmp_buf_tag' sugar
+|       `-RecordType 0x7ffb800222c0 'struct __jmp_buf_tag'
+|         `-Record 0x7ffb80022230 '__jmp_buf_tag'
+|-RecordDecl 0x7ffb80022be8 <line:33:1, line:36:1> line:33:8 struct rb_vm_tag definition
+| `-FieldDecl 0x7ffb80022cc0 <line:35:3, col:15> col:15 referenced buf 'rb_jmpbuf_t':'struct __jmp_buf_tag [1]'
+|-VarDecl 0x7ffb80022d60 <line:33:1, line:36:2> col:2 rb_ensure_list_t 'struct rb_vm_tag':'struct rb_vm_tag'
+|-RecordDecl 0x7ffb80038e18 <line:38:9, line:42:1> line:38:16 struct rb_thread_struct definition
+| |-FieldDecl 0x7ffb80038f48 <line:40:3, col:23> col:23 referenced cfp 'rb_control_frame_t *'
+| `-FieldDecl 0x7ffb80039010 <line:41:3, col:21> col:21 referenced tag 'struct rb_vm_tag *'
+|-TypedefDecl 0x7ffb800390b0 <line:38:1, line:42:3> col:3 referenced rb_thread_t 'struct rb_thread_struct':'struct rb_thread_struct'
+| `-ElaboratedType 0x7ffb80039060 'struct rb_thread_struct' sugar
+|   `-RecordType 0x7ffb80038ea0 'struct rb_thread_struct'
+|     `-Record 0x7ffb80038e18 'rb_thread_struct'
+|-RecordDecl 0x7ffb80039120 <line:44:1, line:47:1> line:44:8 struct iseq_catch_table_entry definition
+| `-FieldDecl 0x7ffb800391e0 <line:46:3, col:20> col:20 referenced iseq 'const rb_iseq_t *'
+|-RecordDecl 0x7ffb80039228 prev 0x7ffb80022568 <line:49:1, line:52:1> line:49:8 struct iseq_catch_table definition
+| `-FieldDecl 0x7ffb800392c8 <line:51:3, col:16> col:16 referenced size 'unsigned int'
+|-VarDecl 0x7ffb80039328 <line:54:1, col:27> col:27 used __sdt_unsp 'unsigned long long' extern
+|-VarDecl 0x7ffb800393a0 <line:55:1, col:23> col:23 used ruby_cmethod__return_semaphore 'unsigned short' extern
+|-RecordDecl 0x7ffb80039400 <line:57:1, line:63:1> line:57:8 struct ruby_dtrace_method_hook_args definition
+| |-FieldDecl 0x7ffb800394c8 <line:59:3, col:15> col:15 referenced classname 'const char *'
+| |-FieldDecl 0x7ffb80039528 <line:60:3, col:15> col:15 referenced methodname 'const char *'
+| |-FieldDecl 0x7ffb80039588 <line:61:3, col:15> col:15 referenced filename 'const char *'
+| `-FieldDecl 0x7ffb800395e8 <line:62:3, col:7> col:7 referenced line_no 'int'
+|-FunctionDecl 0x7ffb800399f8 <line:65:1, col:104> col:5 used ruby_th_dtrace_setup 'int (rb_thread_t *, VALUE, ID, struct ruby_dtrace_method_hook_args *)'
+| |-ParmVarDecl 0x7ffb800396b8 <col:26, col:39> col:39 th 'rb_thread_t *'
+| |-ParmVarDecl 0x7ffb80039728 <col:43, col:49> col:49 klass 'VALUE':'unsigned long'
+| |-ParmVarDecl 0x7ffb80039798 <col:56, col:59> col:59 id 'ID':'unsigned long'
+| `-ParmVarDecl 0x7ffb800398b0 <col:63, col:100> col:100 args 'struct ruby_dtrace_method_hook_args *'
+|-FunctionDecl 0x7ffb80039bd8 <line:66:1, col:44> col:5 used rb_threadptr_tag_state 'int (rb_thread_t *)'
+| `-ParmVarDecl 0x7ffb80039ac8 <col:29, col:42> col:42 th 'rb_thread_t *'
+|-FunctionDecl 0x7ffb7f808030 <line:67:1, col:51> col:7 used vm_exec_core 'VALUE (rb_thread_t *, VALUE)'
+| |-ParmVarDecl 0x7ffb80039c90 <col:21, col:34> col:34 th 'rb_thread_t *'
+| `-ParmVarDecl 0x7ffb80039d00 <col:38, col:44> col:44 initial 'VALUE':'unsigned long'
+|-FunctionDecl 0x7ffb7f8082d0 <line:68:1, col:90> col:35 used rb_vm_frame_method_entry 'const rb_callable_method_entry_t *(const rb_control_frame_t *)'
+| `-ParmVarDecl 0x7ffb7f808168 <col:61, col:87> col:87 cfp 'const rb_control_frame_t *'
+|-RecordDecl 0x7ffb7f808378 <line:70:1, col:8> col:8 struct vm_throw_data
+|-FunctionDecl 0x7ffb7f8085d0 <line:71:1, col:82> col:28 used THROW_DATA_CATCH_FRAME 'const rb_control_frame_t *(const struct vm_throw_data *)'
+| `-ParmVarDecl 0x7ffb7f8084d0 <col:51, col:79> col:79 obj 'const struct vm_throw_data *'
+|-FunctionDecl 0x7ffb7f808c60 <line:72:1, col:190> col:22 used vm_push_frame 'rb_control_frame_t *(rb_thread_t *, const rb_iseq_t *, VALUE, VALUE, VALUE, VALUE, const VALUE *, VALUE *, int, int)'
+| |-ParmVarDecl 0x7ffb7f808688 <col:36, col:49> col:49 th 'rb_thread_t *'
+| |-ParmVarDecl 0x7ffb7f8086f8 <col:53, col:70> col:70 iseq 'const rb_iseq_t *'
+| |-ParmVarDecl 0x7ffb7f808768 <col:76, col:82> col:82 type 'VALUE':'unsigned long'
+| |-ParmVarDecl 0x7ffb7f8087d8 <col:88, col:94> col:94 self 'VALUE':'unsigned long'
+| |-ParmVarDecl 0x7ffb7f808848 <col:100, col:106> col:106 specval 'VALUE':'unsigned long'
+| |-ParmVarDecl 0x7ffb7f8088b8 <col:115, col:121> col:121 cref_or_me 'VALUE':'unsigned long'
+| |-ParmVarDecl 0x7ffb7f808928 <col:133, col:146> col:146 pc 'const VALUE *'
+| |-ParmVarDecl 0x7ffb7f808998 <col:150, col:157> col:157 sp 'VALUE *'
+| |-ParmVarDecl 0x7ffb7f808a10 <col:161, col:165> col:165 local_size 'int'
+| `-ParmVarDecl 0x7ffb7f808a88 <col:177, col:181> col:181 stack_max 'int'
+|-FunctionDecl 0x7ffb7f808e60 <line:75:1, line:136:1> line:75:7 vm_exec 'VALUE (rb_thread_t *)'
+| |-ParmVarDecl 0x7ffb7f808d60 <col:15, col:28> col:28 used th 'rb_thread_t *'
+| `-CompoundStmt 0x7ffb8003f6e8 <line:76:1, line:136:1>
+|   |-DeclStmt 0x7ffb7f808f80 <line:77:3, col:12>
+|   | `-VarDecl 0x7ffb7f808f20 <col:3, col:7> col:7 used state 'int'
+|   |-DeclStmt 0x7ffb80039e60 <line:78:3, col:15>
+|   | `-VarDecl 0x7ffb80039e00 <col:3, col:9> col:9 used result 'VALUE':'unsigned long'
+|   |-DeclStmt 0x7ffb80039f20 <line:79:3, col:20>
+|   | `-VarDecl 0x7ffb80039e88 <col:3, col:19> col:9 used initial 'VALUE':'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7ffb80039f08 <col:19> 'VALUE':'unsigned long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7ffb80039ee8 <col:19> 'int' 0
+|   |-DeclStmt 0x7ffb8003a020 <line:80:3, col:28>
+|   | `-VarDecl 0x7ffb80039fc0 <col:3, col:25> col:25 used err 'struct vm_throw_data *'
+|   |-DeclStmt 0x7ffb8003a108 <line:81:3, col:33>
+|   | `-VarDecl 0x7ffb8003a048 <col:3, col:32> col:23 used _th 'rb_thread_t *const' cinit
+|   |   `-ImplicitCastExpr 0x7ffb8003a0f0 <col:29, col:32> 'rb_thread_t *' <LValueToRValue>
+|   |     `-ParenExpr 0x7ffb8003a0d0 <col:29, col:32> 'rb_thread_t *' lvalue
+|   |       `-DeclRefExpr 0x7ffb8003a0a8 <col:30> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|   |-DeclStmt 0x7ffb8003a1a0 <line:82:3, col:24>
+|   | `-VarDecl 0x7ffb8003a140 <col:3, col:20> col:20 used _tag 'struct rb_vm_tag':'struct rb_vm_tag'
+|   `-IfStmt 0x7ffb8003f6b0 <line:84:3, line:135:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ffb8003a938 <line:84:7, col:115> 'int' '=='
+|     | |-ParenExpr 0x7ffb8003a8f8 <col:7, col:110> 'int'
+|     | | `-BinaryOperator 0x7ffb8003a8d0 <col:8, col:109> 'int' '='
+|     | |   |-DeclRefExpr 0x7ffb8003a1b8 <col:8> 'int' lvalue Var 0x7ffb7f808f20 'state' 'int'
+|     | |   `-ParenExpr 0x7ffb8003a8b0 <col:16, col:109> 'int'
+|     | |     `-ConditionalOperator 0x7ffb8003a880 <col:17, col:108> 'int'
+|     | |       |-CallExpr 0x7ffb8003a4f0 <col:17, col:44> 'int'
+|     | |       | |-ImplicitCastExpr 0x7ffb8003a4d8 <col:17> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|     | |       | | `-DeclRefExpr 0x7ffb8003a398 <col:17> '<builtin fn type>' Function 0x7ffb8003a248 '__builtin_setjmp' 'int (void **)'
+|     | |       | `-ImplicitCastExpr 0x7ffb8003a538 <col:34, col:43> 'void **' <BitCast>
+|     | |       |   `-ImplicitCastExpr 0x7ffb8003a520 <col:34, col:43> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+|     | |       |     `-ParenExpr 0x7ffb8003a420 <col:34, col:43> 'rb_jmpbuf_t':'struct __jmp_buf_tag [1]' lvalue
+|     | |       |       `-MemberExpr 0x7ffb8003a3e8 <col:35, col:40> 'rb_jmpbuf_t':'struct __jmp_buf_tag [1]' lvalue .buf 0x7ffb80022cc0
+|     | |       |         `-DeclRefExpr 0x7ffb8003a3c0 <col:35> 'struct rb_vm_tag':'struct rb_vm_tag' lvalue Var 0x7ffb8003a140 '_tag' 'struct rb_vm_tag':'struct rb_vm_tag'
+|     | |       |-CallExpr 0x7ffb8003a660 <col:48, col:76> 'int'
+|     | |       | |-ImplicitCastExpr 0x7ffb8003a648 <col:48> 'int (*)(rb_thread_t *)' <FunctionToPointerDecay>
+|     | |       | | `-DeclRefExpr 0x7ffb8003a578 <col:48> 'int (rb_thread_t *)' Function 0x7ffb80039bd8 'rb_threadptr_tag_state' 'int (rb_thread_t *)'
+|     | |       | `-ImplicitCastExpr 0x7ffb8003a690 <col:71, col:75> 'rb_thread_t *' <LValueToRValue>
+|     | |       |   `-ParenExpr 0x7ffb8003a5c8 <col:71, col:75> 'rb_thread_t *const' lvalue
+|     | |       |     `-DeclRefExpr 0x7ffb8003a5a0 <col:72> 'rb_thread_t *const' lvalue Var 0x7ffb8003a048 '_th' 'rb_thread_t *const'
+|     | |       `-ParenExpr 0x7ffb8003a860 <col:80, col:108> 'int'
+|     | |         `-BinaryOperator 0x7ffb8003a838 <col:81, col:107> 'int' ','
+|     | |           |-CStyleCastExpr 0x7ffb8003a7f0 <col:81, col:104> 'void' <ToVoid>
+|     | |           | `-ParenExpr 0x7ffb8003a7d0 <col:87, col:104> 'struct rb_vm_tag *'
+|     | |           |   `-BinaryOperator 0x7ffb8003a768 <col:88, col:100> 'struct rb_vm_tag *' '='
+|     | |           |     |-MemberExpr 0x7ffb8003a6e8 <col:88, col:93> 'struct rb_vm_tag *' lvalue ->tag 0x7ffb80039010
+|     | |           |     | `-ImplicitCastExpr 0x7ffb8003a6d0 <col:88> 'rb_thread_t *' <LValueToRValue>
+|     | |           |     |   `-DeclRefExpr 0x7ffb8003a6a8 <col:88> 'rb_thread_t *const' lvalue Var 0x7ffb8003a048 '_th' 'rb_thread_t *const'
+|     | |           |     `-UnaryOperator 0x7ffb8003a748 <col:99, col:100> 'struct rb_vm_tag *' prefix '&'
+|     | |           |       `-DeclRefExpr 0x7ffb8003a720 <col:100> 'struct rb_vm_tag':'struct rb_vm_tag' lvalue Var 0x7ffb8003a140 '_tag' 'struct rb_vm_tag':'struct rb_vm_tag'
+|     | |           `-IntegerLiteral 0x7ffb8003a818 <col:107> 'int' 0
+|     | `-IntegerLiteral 0x7ffb8003a918 <col:115> 'int' 0
+|     |-CompoundStmt 0x7ffb8003ab00 <line:85:3, line:87:3>
+|     | `-BinaryOperator 0x7ffb8003aad8 <line:86:5, col:38> 'VALUE':'unsigned long' '='
+|     |   |-DeclRefExpr 0x7ffb8003a960 <col:5> 'VALUE':'unsigned long' lvalue Var 0x7ffb80039e00 'result' 'VALUE':'unsigned long'
+|     |   `-CallExpr 0x7ffb8003aa70 <col:14, col:38> 'VALUE':'unsigned long'
+|     |     |-ImplicitCastExpr 0x7ffb8003aa58 <col:14> 'VALUE (*)(rb_thread_t *, VALUE)' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7ffb8003a988 <col:14> 'VALUE (rb_thread_t *, VALUE)' Function 0x7ffb7f808030 'vm_exec_core' 'VALUE (rb_thread_t *, VALUE)'
+|     |     |-ImplicitCastExpr 0x7ffb8003aaa8 <col:27> 'rb_thread_t *' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7ffb8003a9b0 <col:27> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|     |     `-ImplicitCastExpr 0x7ffb8003aac0 <col:31> 'VALUE':'unsigned long' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7ffb8003a9d8 <col:31> 'VALUE':'unsigned long' lvalue Var 0x7ffb80039e88 'initial' 'VALUE':'unsigned long'
+|     `-CompoundStmt 0x7ffb8003f648 <line:89:3, line:135:3>
+|       |-DeclStmt 0x7ffb8003ab90 <line:90:5, col:19>
+|       | `-VarDecl 0x7ffb8003ab30 <col:5, col:18> col:18 used i 'unsigned int'
+|       |-DeclStmt 0x7ffb8003acc0 <line:91:5, col:47>
+|       | `-VarDecl 0x7ffb8003ac60 <col:5, col:42> col:42 used entry 'const struct iseq_catch_table_entry *'
+|       |-DeclStmt 0x7ffb8003ad60 <line:92:5, col:38>
+|       | `-VarDecl 0x7ffb8003ad00 <col:5, col:36> col:36 used ct 'const struct iseq_catch_table *'
+|       |-DeclStmt 0x7ffb7f809110 <line:93:5, col:40>
+|       | |-VarDecl 0x7ffb8003ad90 <col:5, col:19> col:19 epc 'unsigned long'
+|       | |-VarDecl 0x7ffb7f809018 <col:5, col:24> col:24 cont_pc 'unsigned long'
+|       | `-VarDecl 0x7ffb7f809090 <col:5, col:33> col:33 cont_sp 'unsigned long'
+|       |-DeclStmt 0x7ffb7f809198 <line:94:5, col:32>
+|       | `-VarDecl 0x7ffb7f809138 <col:5, col:22> col:22 used catch_iseq 'const rb_iseq_t *'
+|       |-DeclStmt 0x7ffb7f809220 <line:95:5, col:28>
+|       | `-VarDecl 0x7ffb7f8091c0 <col:5, col:25> col:25 used cfp 'rb_control_frame_t *'
+|       |-DeclStmt 0x7ffb7f8092a8 <line:96:5, col:41>
+|       | `-VarDecl 0x7ffb7f809248 <col:5, col:31> col:31 used escape_cfp 'const rb_control_frame_t *'
+|       |-WhileStmt 0x7ffb7f848128 <line:98:5, line:119:5>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7ffb7f809540 <line:98:12, col:49> 'int' '||'
+|       | | |-BinaryOperator 0x7ffb7f8093d8 <col:12, col:27> 'int' '=='
+|       | | | |-ImplicitCastExpr 0x7ffb7f8093a8 <col:12, col:21> 'const VALUE *' <LValueToRValue>
+|       | | | | `-MemberExpr 0x7ffb7f809350 <col:12, col:21> 'const VALUE *' lvalue ->pc 0x7ffb80022828
+|       | | | |   `-ImplicitCastExpr 0x7ffb7f809338 <col:12, col:16> 'rb_control_frame_t *' <LValueToRValue>
+|       | | | |     `-MemberExpr 0x7ffb7f809300 <col:12, col:16> 'rb_control_frame_t *' lvalue ->cfp 0x7ffb80038f48
+|       | | | |       `-ImplicitCastExpr 0x7ffb7f8092e8 <col:12> 'rb_thread_t *' <LValueToRValue>
+|       | | | |         `-DeclRefExpr 0x7ffb7f8092c0 <col:12> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|       | | | `-ImplicitCastExpr 0x7ffb7f8093c0 <col:27> 'const VALUE *' <NullToPointer>
+|       | | |   `-IntegerLiteral 0x7ffb7f809388 <col:27> 'int' 0
+|       | | `-BinaryOperator 0x7ffb7f809518 <col:32, col:49> 'int' '=='
+|       | |   |-ImplicitCastExpr 0x7ffb7f8094e8 <col:32, col:41> 'const rb_iseq_t *' <LValueToRValue>
+|       | |   | `-MemberExpr 0x7ffb7f809490 <col:32, col:41> 'const rb_iseq_t *' lvalue ->iseq 0x7ffb800229a8
+|       | |   |   `-ImplicitCastExpr 0x7ffb7f809478 <col:32, col:36> 'rb_control_frame_t *' <LValueToRValue>
+|       | |   |     `-MemberExpr 0x7ffb7f809440 <col:32, col:36> 'rb_control_frame_t *' lvalue ->cfp 0x7ffb80038f48
+|       | |   |       `-ImplicitCastExpr 0x7ffb7f809428 <col:32> 'rb_thread_t *' <LValueToRValue>
+|       | |   |         `-DeclRefExpr 0x7ffb7f809400 <col:32> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|       | |   `-ImplicitCastExpr 0x7ffb7f809500 <col:49> 'const rb_iseq_t *' <NullToPointer>
+|       | |     `-IntegerLiteral 0x7ffb7f8094c8 <col:49> 'int' 0
+|       | `-CompoundStmt 0x7ffb7f848110 <line:99:5, line:119:5>
+|       |   `-IfStmt 0x7ffb7f8480d8 <line:100:7, line:118:7>
+|       |     |-<<<NULL>>>
+|       |     |-<<<NULL>>>
+|       |     |-ImplicitCastExpr 0x7ffb7f809590 <line:100:11> 'unsigned short' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7ffb7f809568 <col:11> 'unsigned short' lvalue Var 0x7ffb800393a0 'ruby_cmethod__return_semaphore' 'unsigned short'
+|       |     |-CompoundStmt 0x7ffb7f8480b8 <line:101:7, line:118:7>
+|       |     | |-DeclStmt 0x7ffb7f809628 <line:102:9, col:49>
+|       |     | | `-VarDecl 0x7ffb7f8095c8 <col:9, col:45> col:45 used args 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     | `-IfStmt 0x7ffb7f848080 <line:103:9, line:117:9>
+|       |     |   |-<<<NULL>>>
+|       |     |   |-<<<NULL>>>
+|       |     |   |-CallExpr 0x7ffb7f809a40 <line:103:13, col:131> 'int'
+|       |     |   | |-ImplicitCastExpr 0x7ffb7f809a28 <col:13> 'int (*)(rb_thread_t *, VALUE, ID, struct ruby_dtrace_method_hook_args *)' <FunctionToPointerDecay>
+|       |     |   | | `-DeclRefExpr 0x7ffb7f809640 <col:13> 'int (rb_thread_t *, VALUE, ID, struct ruby_dtrace_method_hook_args *)' Function 0x7ffb800399f8 'ruby_th_dtrace_setup' 'int (rb_thread_t *, VALUE, ID, struct ruby_dtrace_method_hook_args *)'
+|       |     |   | |-ImplicitCastExpr 0x7ffb7f809a88 <col:34> 'rb_thread_t *' <LValueToRValue>
+|       |     |   | | `-DeclRefExpr 0x7ffb7f809668 <col:34> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|       |     |   | |-ImplicitCastExpr 0x7ffb7f809aa0 <col:38, col:73> 'VALUE':'unsigned long' <LValueToRValue>
+|       |     |   | | `-MemberExpr 0x7ffb7f809800 <col:38, col:73> 'const VALUE':'const unsigned long' lvalue ->owner 0x7ffb80021fb0
+|       |     |   | |   `-CallExpr 0x7ffb7f8097a0 <col:38, col:70> 'const rb_callable_method_entry_t *'
+|       |     |   | |     |-ImplicitCastExpr 0x7ffb7f809788 <col:38> 'const rb_callable_method_entry_t *(*)(const rb_control_frame_t *)' <FunctionToPointerDecay>
+|       |     |   | |     | `-DeclRefExpr 0x7ffb7f809690 <col:38> 'const rb_callable_method_entry_t *(const rb_control_frame_t *)' Function 0x7ffb7f8082d0 'rb_vm_frame_method_entry' 'const rb_callable_method_entry_t *(const rb_control_frame_t *)'
+|       |     |   | |     `-ImplicitCastExpr 0x7ffb7f8097e8 <col:63, col:67> 'const rb_control_frame_t *' <BitCast>
+|       |     |   | |       `-ImplicitCastExpr 0x7ffb7f8097d0 <col:63, col:67> 'rb_control_frame_t *' <LValueToRValue>
+|       |     |   | |         `-MemberExpr 0x7ffb7f8096f8 <col:63, col:67> 'rb_control_frame_t *' lvalue ->cfp 0x7ffb80038f48
+|       |     |   | |           `-ImplicitCastExpr 0x7ffb7f8096e0 <col:63> 'rb_thread_t *' <LValueToRValue>
+|       |     |   | |             `-DeclRefExpr 0x7ffb7f8096b8 <col:63> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|       |     |   | |-ImplicitCastExpr 0x7ffb7f809ab8 <col:80, col:115> 'ID':'unsigned long' <LValueToRValue>
+|       |     |   | | `-MemberExpr 0x7ffb7f809950 <col:80, col:115> 'const ID':'const unsigned long' lvalue ->called_id 0x7ffb80021f30
+|       |     |   | |   `-CallExpr 0x7ffb7f8098f0 <col:80, col:112> 'const rb_callable_method_entry_t *'
+|       |     |   | |     |-ImplicitCastExpr 0x7ffb7f8098d8 <col:80> 'const rb_callable_method_entry_t *(*)(const rb_control_frame_t *)' <FunctionToPointerDecay>
+|       |     |   | |     | `-DeclRefExpr 0x7ffb7f809838 <col:80> 'const rb_callable_method_entry_t *(const rb_control_frame_t *)' Function 0x7ffb7f8082d0 'rb_vm_frame_method_entry' 'const rb_callable_method_entry_t *(const rb_control_frame_t *)'
+|       |     |   | |     `-ImplicitCastExpr 0x7ffb7f809938 <col:105, col:109> 'const rb_control_frame_t *' <BitCast>
+|       |     |   | |       `-ImplicitCastExpr 0x7ffb7f809920 <col:105, col:109> 'rb_control_frame_t *' <LValueToRValue>
+|       |     |   | |         `-MemberExpr 0x7ffb7f8098a0 <col:105, col:109> 'rb_control_frame_t *' lvalue ->cfp 0x7ffb80038f48
+|       |     |   | |           `-ImplicitCastExpr 0x7ffb7f809888 <col:105> 'rb_thread_t *' <LValueToRValue>
+|       |     |   | |             `-DeclRefExpr 0x7ffb7f809860 <col:105> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|       |     |   | `-UnaryOperator 0x7ffb7f8099b0 <col:126, col:127> 'struct ruby_dtrace_method_hook_args *' prefix '&'
+|       |     |   |   `-DeclRefExpr 0x7ffb7f809988 <col:127> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |-CompoundStmt 0x7ffb7f848068 <line:104:9, line:117:9>
+|       |     |   | `-GCCAsmStmt 0x7ffb7f847f60 <line:105:11, line:116:11>
+|       |     |   |   |-BinaryOperator 0x7ffb7f80a208 <line:108:31, col:724> 'int' '*'
+|       |     |   |   | |-ParenExpr 0x7ffb8003d3c0 <col:31, col:566> 'int'
+|       |     |   |   | | `-ConditionalOperator 0x7ffb8003d390 <col:32, col:565> 'int'
+|       |     |   |   | |   |-ParenExpr 0x7ffb8003d310 <col:32, col:556> 'int'
+|       |     |   |   | |   | `-UnaryOperator 0x7ffb8003d2f0 <col:33, col:555> 'int' prefix '!'
+|       |     |   |   | |   |   `-UnaryOperator 0x7ffb8003d2d0 <col:34, col:555> 'int' prefix '__extension__'
+|       |     |   |   | |   |     `-ParenExpr 0x7ffb8003d2b0 <col:48, col:555> 'int'
+|       |     |   |   | |   |       `-BinaryOperator 0x7ffb8003d288 <col:49, col:554> 'int' '||'
+|       |     |   |   | |   |         |-CallExpr 0x7ffb8003cb08 <col:49, col:300> 'int'
+|       |     |   |   | |   |         | |-ImplicitCastExpr 0x7ffb8003caf0 <col:49> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   | |   |         | | `-DeclRefExpr 0x7ffb7f809d30 <col:49> '<builtin fn type>' Function 0x7ffb7f809c38 '__builtin_constant_p' 'int ()'
+|       |     |   |   | |   |         | `-BinaryOperator 0x7ffb8003cac8 <col:71, col:299> 'int' '=='
+|       |     |   |   | |   |         |   |-ParenExpr 0x7ffb8003ca70 <col:71, col:294> 'unsigned long long'
+|       |     |   |   | |   |         |   | `-BinaryOperator 0x7ffb8003ca48 <col:72, col:293> 'unsigned long long' '&'
+|       |     |   |   | |   |         |   |   |-ParenExpr 0x7ffb8003c868 <col:72, col:226> 'unsigned long long'
+|       |     |   |   | |   |         |   |   | `-CStyleCastExpr 0x7ffb8003c840 <col:73, col:216> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |   |   `-CStyleCastExpr 0x7ffb8003c800 <col:94, col:216> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.classname) + 3) & -4) == 4, (args.classname), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |         |   |   |     `-ImplicitCastExpr 0x7ffb8003c7e8 <col:216> 'unsigned long long' <LValueToRValue>
+|       |     |   |   | |   |         |   |   |       `-DeclRefExpr 0x7ffb8003c788 <col:216> 'unsigned long long' lvalue Var 0x7ffb80039328 '__sdt_unsp' 'unsigned long long'
+|       |     |   |   | |   |         |   |   `-ParenExpr 0x7ffb8003ca28 <col:230, col:293> 'unsigned long long'
+|       |     |   |   | |   |         |   |     `-BinaryOperator 0x7ffb8003ca00 <col:231, col:292> 'unsigned long long' '<<'
+|       |     |   |   | |   |         |   |       |-CStyleCastExpr 0x7ffb8003c8c0 <col:231, col:251> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |       | `-IntegerLiteral 0x7ffb8003c888 <col:251> 'int' 1
+|       |     |   |   | |   |         |   |       `-ParenExpr 0x7ffb8003c9e0 <col:256, col:292> 'unsigned long'
+|       |     |   |   | |   |         |   |         `-BinaryOperator 0x7ffb8003c9b8 <col:257, col:291> 'unsigned long' '-'
+|       |     |   |   | |   |         |   |           |-BinaryOperator 0x7ffb8003c958 <col:257, col:287> 'unsigned long' '*'
+|       |     |   |   | |   |         |   |           | |-UnaryExprOrTypeTraitExpr 0x7ffb8003c900 <col:257, col:283> 'unsigned long' sizeof 'unsigned long long'
+|       |     |   |   | |   |         |   |           | `-ImplicitCastExpr 0x7ffb8003c940 <col:287> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |           |   `-IntegerLiteral 0x7ffb8003c920 <col:287> 'int' 8
+|       |     |   |   | |   |         |   |           `-ImplicitCastExpr 0x7ffb8003c9a0 <col:291> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |             `-IntegerLiteral 0x7ffb8003c980 <col:291> 'int' 1
+|       |     |   |   | |   |         |   `-ImplicitCastExpr 0x7ffb8003cab0 <col:299> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |     `-IntegerLiteral 0x7ffb8003ca90 <col:299> 'int' 0
+|       |     |   |   | |   |         `-BinaryOperator 0x7ffb8003d260 <col:305, col:554> 'int' '>'
+|       |     |   |   | |   |           |-CStyleCastExpr 0x7ffb8003ceb8 <col:305, col:428> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.classname) + 3) & -4) == 4, (args.classname), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |           | `-UnaryOperator 0x7ffb8003ce58 <col:427, col:428> 'int' prefix '-'
+|       |     |   |   | |   |           |   `-IntegerLiteral 0x7ffb8003ce38 <col:428> 'int' 1
+|       |     |   |   | |   |           `-CStyleCastExpr 0x7ffb8003d238 <col:432, col:554> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.classname) + 3) & -4) == 4, (args.classname), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |             `-IntegerLiteral 0x7ffb8003d1e0 <col:554> 'int' 0
+|       |     |   |   | |   |-IntegerLiteral 0x7ffb8003d330 <col:560> 'int' 1
+|       |     |   |   | |   `-UnaryOperator 0x7ffb8003d370 <col:564, col:565> 'int' prefix '-'
+|       |     |   |   | |     `-IntegerLiteral 0x7ffb8003d350 <col:565> 'int' 1
+|       |     |   |   | `-CStyleCastExpr 0x7ffb7f80a1e0 <col:570, col:724> 'int' <IntegralCast>
+|       |     |   |   |   `-ParenExpr 0x7ffb7f80a1c0 <col:576, col:724> 'unsigned long'
+|       |     |   |   |     `-ConditionalOperator 0x7ffb7f80a148 <col:577, col:723> 'unsigned long'
+|       |     |   |   |       |-ParenExpr 0x7ffb7f80a050 <col:577, col:677> 'int'
+|       |     |   |   |       | `-BinaryOperator 0x7ffb7f80a028 <col:578, col:676> 'int' '||'
+|       |     |   |   |       |   |-BinaryOperator 0x7ffb8003d4d0 <col:578, col:624> 'int' '=='
+|       |     |   |   |       |   | |-CallExpr 0x7ffb8003d480 <col:578, col:619> 'int'
+|       |     |   |   |       |   | | |-ImplicitCastExpr 0x7ffb8003d468 <col:578> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |   | | | `-DeclRefExpr 0x7ffb8003d3e0 <col:578> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |   | | `-MemberExpr 0x7ffb8003d430 <col:604, col:609> 'const char *' lvalue .classname 0x7ffb800394c8
+|       |     |   |   |       |   | |   `-DeclRefExpr 0x7ffb8003d408 <col:604> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |   | `-IntegerLiteral 0x7ffb8003d4b0 <col:624> 'int' 14
+|       |     |   |   |       |   `-BinaryOperator 0x7ffb7f80a000 <col:630, col:676> 'int' '=='
+|       |     |   |   |       |     |-CallExpr 0x7ffb8003d598 <col:630, col:671> 'int'
+|       |     |   |   |       |     | |-ImplicitCastExpr 0x7ffb8003d580 <col:630> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |     | | `-DeclRefExpr 0x7ffb8003d4f8 <col:630> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |     | `-MemberExpr 0x7ffb8003d548 <col:656, col:661> 'const char *' lvalue .classname 0x7ffb800394c8
+|       |     |   |   |       |     |   `-DeclRefExpr 0x7ffb8003d520 <col:656> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |     `-IntegerLiteral 0x7ffb8003d5c8 <col:676> 'int' 5
+|       |     |   |   |       |-UnaryExprOrTypeTraitExpr 0x7ffb7f80a088 <col:681, col:695> 'unsigned long' sizeof 'void *'
+|       |     |   |   |       `-UnaryExprOrTypeTraitExpr 0x7ffb7f80a128 <col:699, col:723> 'unsigned long' sizeof
+|       |     |   |   |         `-ParenExpr 0x7ffb7f80a108 <col:706, col:723> 'const char *' lvalue
+|       |     |   |   |           `-MemberExpr 0x7ffb7f80a0d0 <col:708, col:713> 'const char *' lvalue .classname 0x7ffb800394c8
+|       |     |   |   |             `-DeclRefExpr 0x7ffb7f80a0a8 <col:708> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |-ImplicitCastExpr 0x7ffb7f847f00 <line:109:33, col:50> 'const char *' <LValueToRValue>
+|       |     |   |   | `-ParenExpr 0x7ffb7f80a2f8 <col:33, col:50> 'const char *' lvalue
+|       |     |   |   |   `-MemberExpr 0x7ffb7f80a2c0 <col:35, col:40> 'const char *' lvalue .classname 0x7ffb800394c8
+|       |     |   |   |     `-DeclRefExpr 0x7ffb7f80a298 <col:35> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |-BinaryOperator 0x7ffb7f80b6e0 <line:110:31, col:733> 'int' '*'
+|       |     |   |   | |-ParenExpr 0x7ffb7f80b2b0 <col:31, col:572> 'int'
+|       |     |   |   | | `-ConditionalOperator 0x7ffb7f80b280 <col:32, col:571> 'int'
+|       |     |   |   | |   |-ParenExpr 0x7ffb7f80b200 <col:32, col:562> 'int'
+|       |     |   |   | |   | `-UnaryOperator 0x7ffb7f80b1e0 <col:33, col:561> 'int' prefix '!'
+|       |     |   |   | |   |   `-UnaryOperator 0x7ffb7f80b1c0 <col:34, col:561> 'int' prefix '__extension__'
+|       |     |   |   | |   |     `-ParenExpr 0x7ffb7f80b1a0 <col:48, col:561> 'int'
+|       |     |   |   | |   |       `-BinaryOperator 0x7ffb7f80b178 <col:49, col:560> 'int' '||'
+|       |     |   |   | |   |         |-CallExpr 0x7ffb7f80a9f8 <col:49, col:302> 'int'
+|       |     |   |   | |   |         | |-ImplicitCastExpr 0x7ffb7f80a9e0 <col:49> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   | |   |         | | `-DeclRefExpr 0x7ffb7f80a348 <col:49> '<builtin fn type>' Function 0x7ffb7f809c38 '__builtin_constant_p' 'int ()'
+|       |     |   |   | |   |         | `-BinaryOperator 0x7ffb7f80a9b8 <col:71, col:301> 'int' '=='
+|       |     |   |   | |   |         |   |-ParenExpr 0x7ffb7f80a960 <col:71, col:296> 'unsigned long long'
+|       |     |   |   | |   |         |   | `-BinaryOperator 0x7ffb7f80a938 <col:72, col:295> 'unsigned long long' '&'
+|       |     |   |   | |   |         |   |   |-ParenExpr 0x7ffb7f80a758 <col:72, col:228> 'unsigned long long'
+|       |     |   |   | |   |         |   |   | `-CStyleCastExpr 0x7ffb7f80a730 <col:73, col:218> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |   |   `-CStyleCastExpr 0x7ffb7f80a6f0 <col:94, col:218> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.methodname) + 3) & -4) == 4, (args.methodname), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |         |   |   |     `-ImplicitCastExpr 0x7ffb7f80a6d8 <col:218> 'unsigned long long' <LValueToRValue>
+|       |     |   |   | |   |         |   |   |       `-DeclRefExpr 0x7ffb7f80a670 <col:218> 'unsigned long long' lvalue Var 0x7ffb80039328 '__sdt_unsp' 'unsigned long long'
+|       |     |   |   | |   |         |   |   `-ParenExpr 0x7ffb7f80a918 <col:232, col:295> 'unsigned long long'
+|       |     |   |   | |   |         |   |     `-BinaryOperator 0x7ffb7f80a8f0 <col:233, col:294> 'unsigned long long' '<<'
+|       |     |   |   | |   |         |   |       |-CStyleCastExpr 0x7ffb7f80a7b0 <col:233, col:253> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |       | `-IntegerLiteral 0x7ffb7f80a778 <col:253> 'int' 1
+|       |     |   |   | |   |         |   |       `-ParenExpr 0x7ffb7f80a8d0 <col:258, col:294> 'unsigned long'
+|       |     |   |   | |   |         |   |         `-BinaryOperator 0x7ffb7f80a8a8 <col:259, col:293> 'unsigned long' '-'
+|       |     |   |   | |   |         |   |           |-BinaryOperator 0x7ffb7f80a848 <col:259, col:289> 'unsigned long' '*'
+|       |     |   |   | |   |         |   |           | |-UnaryExprOrTypeTraitExpr 0x7ffb7f80a7f0 <col:259, col:285> 'unsigned long' sizeof 'unsigned long long'
+|       |     |   |   | |   |         |   |           | `-ImplicitCastExpr 0x7ffb7f80a830 <col:289> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |           |   `-IntegerLiteral 0x7ffb7f80a810 <col:289> 'int' 8
+|       |     |   |   | |   |         |   |           `-ImplicitCastExpr 0x7ffb7f80a890 <col:293> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |             `-IntegerLiteral 0x7ffb7f80a870 <col:293> 'int' 1
+|       |     |   |   | |   |         |   `-ImplicitCastExpr 0x7ffb7f80a9a0 <col:301> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |     `-IntegerLiteral 0x7ffb7f80a980 <col:301> 'int' 0
+|       |     |   |   | |   |         `-BinaryOperator 0x7ffb7f80b150 <col:307, col:560> 'int' '>'
+|       |     |   |   | |   |           |-CStyleCastExpr 0x7ffb7f80ada8 <col:307, col:432> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.methodname) + 3) & -4) == 4, (args.methodname), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |           | `-UnaryOperator 0x7ffb7f80ad48 <col:431, col:432> 'int' prefix '-'
+|       |     |   |   | |   |           |   `-IntegerLiteral 0x7ffb7f80ad28 <col:432> 'int' 1
+|       |     |   |   | |   |           `-CStyleCastExpr 0x7ffb7f80b128 <col:436, col:560> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.methodname) + 3) & -4) == 4, (args.methodname), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |             `-IntegerLiteral 0x7ffb7f80b0d0 <col:560> 'int' 0
+|       |     |   |   | |   |-IntegerLiteral 0x7ffb7f80b220 <col:566> 'int' 1
+|       |     |   |   | |   `-UnaryOperator 0x7ffb7f80b260 <col:570, col:571> 'int' prefix '-'
+|       |     |   |   | |     `-IntegerLiteral 0x7ffb7f80b240 <col:571> 'int' 1
+|       |     |   |   | `-CStyleCastExpr 0x7ffb7f80b6b8 <col:576, col:733> 'int' <IntegralCast>
+|       |     |   |   |   `-ParenExpr 0x7ffb7f80b698 <col:582, col:733> 'unsigned long'
+|       |     |   |   |     `-ConditionalOperator 0x7ffb7f80b620 <col:583, col:732> 'unsigned long'
+|       |     |   |   |       |-ParenExpr 0x7ffb7f80b528 <col:583, col:685> 'int'
+|       |     |   |   |       | `-BinaryOperator 0x7ffb7f80b500 <col:584, col:684> 'int' '||'
+|       |     |   |   |       |   |-BinaryOperator 0x7ffb7f80b3c0 <col:584, col:631> 'int' '=='
+|       |     |   |   |       |   | |-CallExpr 0x7ffb7f80b370 <col:584, col:626> 'int'
+|       |     |   |   |       |   | | |-ImplicitCastExpr 0x7ffb7f80b358 <col:584> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |   | | | `-DeclRefExpr 0x7ffb7f80b2d0 <col:584> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |   | | `-MemberExpr 0x7ffb7f80b320 <col:610, col:615> 'const char *' lvalue .methodname 0x7ffb80039528
+|       |     |   |   |       |   | |   `-DeclRefExpr 0x7ffb7f80b2f8 <col:610> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |   | `-IntegerLiteral 0x7ffb7f80b3a0 <col:631> 'int' 14
+|       |     |   |   |       |   `-BinaryOperator 0x7ffb7f80b4d8 <col:637, col:684> 'int' '=='
+|       |     |   |   |       |     |-CallExpr 0x7ffb7f80b488 <col:637, col:679> 'int'
+|       |     |   |   |       |     | |-ImplicitCastExpr 0x7ffb7f80b470 <col:637> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |     | | `-DeclRefExpr 0x7ffb7f80b3e8 <col:637> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |     | `-MemberExpr 0x7ffb7f80b438 <col:663, col:668> 'const char *' lvalue .methodname 0x7ffb80039528
+|       |     |   |   |       |     |   `-DeclRefExpr 0x7ffb7f80b410 <col:663> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |     `-IntegerLiteral 0x7ffb7f80b4b8 <col:684> 'int' 5
+|       |     |   |   |       |-UnaryExprOrTypeTraitExpr 0x7ffb7f80b560 <col:689, col:703> 'unsigned long' sizeof 'void *'
+|       |     |   |   |       `-UnaryExprOrTypeTraitExpr 0x7ffb7f80b600 <col:707, col:732> 'unsigned long' sizeof
+|       |     |   |   |         `-ParenExpr 0x7ffb7f80b5e0 <col:714, col:732> 'const char *' lvalue
+|       |     |   |   |           `-MemberExpr 0x7ffb7f80b5a8 <col:716, col:721> 'const char *' lvalue .methodname 0x7ffb80039528
+|       |     |   |   |             `-DeclRefExpr 0x7ffb7f80b580 <col:716> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |-ImplicitCastExpr 0x7ffb7f847f18 <line:111:33, col:51> 'const char *' <LValueToRValue>
+|       |     |   |   | `-ParenExpr 0x7ffb7f80b798 <col:33, col:51> 'const char *' lvalue
+|       |     |   |   |   `-MemberExpr 0x7ffb7f80b760 <col:35, col:40> 'const char *' lvalue .methodname 0x7ffb80039528
+|       |     |   |   |     `-DeclRefExpr 0x7ffb7f80b738 <col:35> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |-BinaryOperator 0x7ffb7f847980 <line:112:31, col:715> 'int' '*'
+|       |     |   |   | |-ParenExpr 0x7ffb7f847550 <col:31, col:560> 'int'
+|       |     |   |   | | `-ConditionalOperator 0x7ffb7f847520 <col:32, col:559> 'int'
+|       |     |   |   | |   |-ParenExpr 0x7ffb7f8474a0 <col:32, col:550> 'int'
+|       |     |   |   | |   | `-UnaryOperator 0x7ffb7f847480 <col:33, col:549> 'int' prefix '!'
+|       |     |   |   | |   |   `-UnaryOperator 0x7ffb7f847460 <col:34, col:549> 'int' prefix '__extension__'
+|       |     |   |   | |   |     `-ParenExpr 0x7ffb7f847440 <col:48, col:549> 'int'
+|       |     |   |   | |   |       `-BinaryOperator 0x7ffb7f847418 <col:49, col:548> 'int' '||'
+|       |     |   |   | |   |         |-CallExpr 0x7ffb7f80be98 <col:49, col:298> 'int'
+|       |     |   |   | |   |         | |-ImplicitCastExpr 0x7ffb7f80be80 <col:49> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   | |   |         | | `-DeclRefExpr 0x7ffb7f80b7e8 <col:49> '<builtin fn type>' Function 0x7ffb7f809c38 '__builtin_constant_p' 'int ()'
+|       |     |   |   | |   |         | `-BinaryOperator 0x7ffb7f80be58 <col:71, col:297> 'int' '=='
+|       |     |   |   | |   |         |   |-ParenExpr 0x7ffb7f80be00 <col:71, col:292> 'unsigned long long'
+|       |     |   |   | |   |         |   | `-BinaryOperator 0x7ffb7f80bdd8 <col:72, col:291> 'unsigned long long' '&'
+|       |     |   |   | |   |         |   |   |-ParenExpr 0x7ffb7f80bbf8 <col:72, col:224> 'unsigned long long'
+|       |     |   |   | |   |         |   |   | `-CStyleCastExpr 0x7ffb7f80bbd0 <col:73, col:214> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |   |   `-CStyleCastExpr 0x7ffb7f80bb90 <col:94, col:214> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.filename) + 3) & -4) == 4, (args.filename), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |         |   |   |     `-ImplicitCastExpr 0x7ffb7f80bb78 <col:214> 'unsigned long long' <LValueToRValue>
+|       |     |   |   | |   |         |   |   |       `-DeclRefExpr 0x7ffb7f80bb10 <col:214> 'unsigned long long' lvalue Var 0x7ffb80039328 '__sdt_unsp' 'unsigned long long'
+|       |     |   |   | |   |         |   |   `-ParenExpr 0x7ffb7f80bdb8 <col:228, col:291> 'unsigned long long'
+|       |     |   |   | |   |         |   |     `-BinaryOperator 0x7ffb7f80bd90 <col:229, col:290> 'unsigned long long' '<<'
+|       |     |   |   | |   |         |   |       |-CStyleCastExpr 0x7ffb7f80bc50 <col:229, col:249> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |       | `-IntegerLiteral 0x7ffb7f80bc18 <col:249> 'int' 1
+|       |     |   |   | |   |         |   |       `-ParenExpr 0x7ffb7f80bd70 <col:254, col:290> 'unsigned long'
+|       |     |   |   | |   |         |   |         `-BinaryOperator 0x7ffb7f80bd48 <col:255, col:289> 'unsigned long' '-'
+|       |     |   |   | |   |         |   |           |-BinaryOperator 0x7ffb7f80bce8 <col:255, col:285> 'unsigned long' '*'
+|       |     |   |   | |   |         |   |           | |-UnaryExprOrTypeTraitExpr 0x7ffb7f80bc90 <col:255, col:281> 'unsigned long' sizeof 'unsigned long long'
+|       |     |   |   | |   |         |   |           | `-ImplicitCastExpr 0x7ffb7f80bcd0 <col:285> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |           |   `-IntegerLiteral 0x7ffb7f80bcb0 <col:285> 'int' 8
+|       |     |   |   | |   |         |   |           `-ImplicitCastExpr 0x7ffb7f80bd30 <col:289> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |             `-IntegerLiteral 0x7ffb7f80bd10 <col:289> 'int' 1
+|       |     |   |   | |   |         |   `-ImplicitCastExpr 0x7ffb7f80be40 <col:297> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |     `-IntegerLiteral 0x7ffb7f80be20 <col:297> 'int' 0
+|       |     |   |   | |   |         `-BinaryOperator 0x7ffb7f8473f0 <col:303, col:548> 'int' '>'
+|       |     |   |   | |   |           |-CStyleCastExpr 0x7ffb7f847048 <col:303, col:424> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.filename) + 3) & -4) == 4, (args.filename), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |           | `-UnaryOperator 0x7ffb7f846fe8 <col:423, col:424> 'int' prefix '-'
+|       |     |   |   | |   |           |   `-IntegerLiteral 0x7ffb7f846fc8 <col:424> 'int' 1
+|       |     |   |   | |   |           `-CStyleCastExpr 0x7ffb7f8473c8 <col:428, col:548> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.filename) + 3) & -4) == 4, (args.filename), 0U))':'unsigned int' <IntegralCast>
+|       |     |   |   | |   |             `-IntegerLiteral 0x7ffb7f847370 <col:548> 'int' 0
+|       |     |   |   | |   |-IntegerLiteral 0x7ffb7f8474c0 <col:554> 'int' 1
+|       |     |   |   | |   `-UnaryOperator 0x7ffb7f847500 <col:558, col:559> 'int' prefix '-'
+|       |     |   |   | |     `-IntegerLiteral 0x7ffb7f8474e0 <col:559> 'int' 1
+|       |     |   |   | `-CStyleCastExpr 0x7ffb7f847958 <col:564, col:715> 'int' <IntegralCast>
+|       |     |   |   |   `-ParenExpr 0x7ffb7f847938 <col:570, col:715> 'unsigned long'
+|       |     |   |   |     `-ConditionalOperator 0x7ffb7f8478c0 <col:571, col:714> 'unsigned long'
+|       |     |   |   |       |-ParenExpr 0x7ffb7f8477c8 <col:571, col:669> 'int'
+|       |     |   |   |       | `-BinaryOperator 0x7ffb7f8477a0 <col:572, col:668> 'int' '||'
+|       |     |   |   |       |   |-BinaryOperator 0x7ffb7f847660 <col:572, col:617> 'int' '=='
+|       |     |   |   |       |   | |-CallExpr 0x7ffb7f847610 <col:572, col:612> 'int'
+|       |     |   |   |       |   | | |-ImplicitCastExpr 0x7ffb7f8475f8 <col:572> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |   | | | `-DeclRefExpr 0x7ffb7f847570 <col:572> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |   | | `-MemberExpr 0x7ffb7f8475c0 <col:598, col:603> 'const char *' lvalue .filename 0x7ffb80039588
+|       |     |   |   |       |   | |   `-DeclRefExpr 0x7ffb7f847598 <col:598> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |   | `-IntegerLiteral 0x7ffb7f847640 <col:617> 'int' 14
+|       |     |   |   |       |   `-BinaryOperator 0x7ffb7f847778 <col:623, col:668> 'int' '=='
+|       |     |   |   |       |     |-CallExpr 0x7ffb7f847728 <col:623, col:663> 'int'
+|       |     |   |   |       |     | |-ImplicitCastExpr 0x7ffb7f847710 <col:623> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |     | | `-DeclRefExpr 0x7ffb7f847688 <col:623> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |     | `-MemberExpr 0x7ffb7f8476d8 <col:649, col:654> 'const char *' lvalue .filename 0x7ffb80039588
+|       |     |   |   |       |     |   `-DeclRefExpr 0x7ffb7f8476b0 <col:649> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |     `-IntegerLiteral 0x7ffb7f847758 <col:668> 'int' 5
+|       |     |   |   |       |-UnaryExprOrTypeTraitExpr 0x7ffb7f847800 <col:673, col:687> 'unsigned long' sizeof 'void *'
+|       |     |   |   |       `-UnaryExprOrTypeTraitExpr 0x7ffb7f8478a0 <col:691, col:714> 'unsigned long' sizeof
+|       |     |   |   |         `-ParenExpr 0x7ffb7f847880 <col:698, col:714> 'const char *' lvalue
+|       |     |   |   |           `-MemberExpr 0x7ffb7f847848 <col:700, col:705> 'const char *' lvalue .filename 0x7ffb80039588
+|       |     |   |   |             `-DeclRefExpr 0x7ffb7f847820 <col:700> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |-ImplicitCastExpr 0x7ffb7f847f30 <line:113:33, col:49> 'const char *' <LValueToRValue>
+|       |     |   |   | `-ParenExpr 0x7ffb7f847a38 <col:33, col:49> 'const char *' lvalue
+|       |     |   |   |   `-MemberExpr 0x7ffb7f847a00 <col:35, col:40> 'const char *' lvalue .filename 0x7ffb80039588
+|       |     |   |   |     `-DeclRefExpr 0x7ffb7f8479d8 <col:35> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |-BinaryOperator 0x7ffb7f847e28 <line:114:31, col:706> 'int' '*'
+|       |     |   |   | |-ParenExpr 0x7ffb8003f1f0 <col:31, col:554> 'int'
+|       |     |   |   | | `-ConditionalOperator 0x7ffb8003f1c0 <col:32, col:553> 'int'
+|       |     |   |   | |   |-ParenExpr 0x7ffb8003f140 <col:32, col:544> 'int'
+|       |     |   |   | |   | `-UnaryOperator 0x7ffb8003f120 <col:33, col:543> 'int' prefix '!'
+|       |     |   |   | |   |   `-UnaryOperator 0x7ffb8003f100 <col:34, col:543> 'int' prefix '__extension__'
+|       |     |   |   | |   |     `-ParenExpr 0x7ffb8003f0e0 <col:48, col:543> 'int'
+|       |     |   |   | |   |       `-BinaryOperator 0x7ffb8003f0b8 <col:49, col:542> 'int' '||'
+|       |     |   |   | |   |         |-CallExpr 0x7ffb8003e938 <col:49, col:296> 'int'
+|       |     |   |   | |   |         | |-ImplicitCastExpr 0x7ffb8003e920 <col:49> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   | |   |         | | `-DeclRefExpr 0x7ffb7f847a88 <col:49> '<builtin fn type>' Function 0x7ffb7f809c38 '__builtin_constant_p' 'int ()'
+|       |     |   |   | |   |         | `-BinaryOperator 0x7ffb8003e8f8 <col:71, col:295> 'int' '=='
+|       |     |   |   | |   |         |   |-ParenExpr 0x7ffb8003e8a0 <col:71, col:290> 'unsigned long long'
+|       |     |   |   | |   |         |   | `-BinaryOperator 0x7ffb8003e878 <col:72, col:289> 'unsigned long long' '&'
+|       |     |   |   | |   |         |   |   |-ParenExpr 0x7ffb8003e698 <col:72, col:222> 'unsigned long long'
+|       |     |   |   | |   |         |   |   | `-CStyleCastExpr 0x7ffb8003e670 <col:73, col:212> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |   |   `-CStyleCastExpr 0x7ffb8003e630 <col:94, col:212> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.line_no) + 3) & -4) == 4, (args.line_no), 0U))':'int' <IntegralCast>
+|       |     |   |   | |   |         |   |   |     `-ImplicitCastExpr 0x7ffb8003e618 <col:212> 'unsigned long long' <LValueToRValue>
+|       |     |   |   | |   |         |   |   |       `-DeclRefExpr 0x7ffb7f847db0 <col:212> 'unsigned long long' lvalue Var 0x7ffb80039328 '__sdt_unsp' 'unsigned long long'
+|       |     |   |   | |   |         |   |   `-ParenExpr 0x7ffb8003e858 <col:226, col:289> 'unsigned long long'
+|       |     |   |   | |   |         |   |     `-BinaryOperator 0x7ffb8003e830 <col:227, col:288> 'unsigned long long' '<<'
+|       |     |   |   | |   |         |   |       |-CStyleCastExpr 0x7ffb8003e6f0 <col:227, col:247> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |   |       | `-IntegerLiteral 0x7ffb8003e6b8 <col:247> 'int' 1
+|       |     |   |   | |   |         |   |       `-ParenExpr 0x7ffb8003e810 <col:252, col:288> 'unsigned long'
+|       |     |   |   | |   |         |   |         `-BinaryOperator 0x7ffb8003e7e8 <col:253, col:287> 'unsigned long' '-'
+|       |     |   |   | |   |         |   |           |-BinaryOperator 0x7ffb8003e788 <col:253, col:283> 'unsigned long' '*'
+|       |     |   |   | |   |         |   |           | |-UnaryExprOrTypeTraitExpr 0x7ffb8003e730 <col:253, col:279> 'unsigned long' sizeof 'unsigned long long'
+|       |     |   |   | |   |         |   |           | `-ImplicitCastExpr 0x7ffb8003e770 <col:283> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |           |   `-IntegerLiteral 0x7ffb8003e750 <col:283> 'int' 8
+|       |     |   |   | |   |         |   |           `-ImplicitCastExpr 0x7ffb8003e7d0 <col:287> 'unsigned long' <IntegralCast>
+|       |     |   |   | |   |         |   |             `-IntegerLiteral 0x7ffb8003e7b0 <col:287> 'int' 1
+|       |     |   |   | |   |         |   `-ImplicitCastExpr 0x7ffb8003e8e0 <col:295> 'unsigned long long' <IntegralCast>
+|       |     |   |   | |   |         |     `-IntegerLiteral 0x7ffb8003e8c0 <col:295> 'int' 0
+|       |     |   |   | |   |         `-BinaryOperator 0x7ffb8003f090 <col:301, col:542> 'int' '>'
+|       |     |   |   | |   |           |-CStyleCastExpr 0x7ffb8003ece8 <col:301, col:420> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.line_no) + 3) & -4) == 4, (args.line_no), 0U))':'int' <NoOp>
+|       |     |   |   | |   |           | `-UnaryOperator 0x7ffb8003ec88 <col:419, col:420> 'int' prefix '-'
+|       |     |   |   | |   |           |   `-IntegerLiteral 0x7ffb8003ec68 <col:420> 'int' 1
+|       |     |   |   | |   |           `-CStyleCastExpr 0x7ffb8003f068 <col:424, col:542> 'typeof (__builtin_choose_expr(((__builtin_classify_type(args.line_no) + 3) & -4) == 4, (args.line_no), 0U))':'int' <NoOp>
+|       |     |   |   | |   |             `-IntegerLiteral 0x7ffb8003f010 <col:542> 'int' 0
+|       |     |   |   | |   |-IntegerLiteral 0x7ffb8003f160 <col:548> 'int' 1
+|       |     |   |   | |   `-UnaryOperator 0x7ffb8003f1a0 <col:552, col:553> 'int' prefix '-'
+|       |     |   |   | |     `-IntegerLiteral 0x7ffb8003f180 <col:553> 'int' 1
+|       |     |   |   | `-CStyleCastExpr 0x7ffb7f847e00 <col:558, col:706> 'int' <IntegralCast>
+|       |     |   |   |   `-ParenExpr 0x7ffb8003f5d8 <col:564, col:706> 'unsigned long'
+|       |     |   |   |     `-ConditionalOperator 0x7ffb8003f560 <col:565, col:705> 'unsigned long'
+|       |     |   |   |       |-ParenExpr 0x7ffb8003f468 <col:565, col:661> 'int'
+|       |     |   |   |       | `-BinaryOperator 0x7ffb8003f440 <col:566, col:660> 'int' '||'
+|       |     |   |   |       |   |-BinaryOperator 0x7ffb8003f300 <col:566, col:610> 'int' '=='
+|       |     |   |   |       |   | |-CallExpr 0x7ffb8003f2b0 <col:566, col:605> 'int'
+|       |     |   |   |       |   | | |-ImplicitCastExpr 0x7ffb8003f298 <col:566> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |   | | | `-DeclRefExpr 0x7ffb8003f210 <col:566> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |   | | `-MemberExpr 0x7ffb8003f260 <col:592, col:597> 'int' lvalue .line_no 0x7ffb800395e8
+|       |     |   |   |       |   | |   `-DeclRefExpr 0x7ffb8003f238 <col:592> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |   | `-IntegerLiteral 0x7ffb8003f2e0 <col:610> 'int' 14
+|       |     |   |   |       |   `-BinaryOperator 0x7ffb8003f418 <col:616, col:660> 'int' '=='
+|       |     |   |   |       |     |-CallExpr 0x7ffb8003f3c8 <col:616, col:655> 'int'
+|       |     |   |   |       |     | |-ImplicitCastExpr 0x7ffb8003f3b0 <col:616> 'int (*)()' <BuiltinFnToFnPtr>
+|       |     |   |   |       |     | | `-DeclRefExpr 0x7ffb8003f328 <col:616> '<builtin fn type>' Function 0x7ffb7f809d58 '__builtin_classify_type' 'int ()'
+|       |     |   |   |       |     | `-MemberExpr 0x7ffb8003f378 <col:642, col:647> 'int' lvalue .line_no 0x7ffb800395e8
+|       |     |   |   |       |     |   `-DeclRefExpr 0x7ffb8003f350 <col:642> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   |       |     `-IntegerLiteral 0x7ffb8003f3f8 <col:660> 'int' 5
+|       |     |   |   |       |-UnaryExprOrTypeTraitExpr 0x7ffb8003f4a0 <col:665, col:679> 'unsigned long' sizeof 'void *'
+|       |     |   |   |       `-UnaryExprOrTypeTraitExpr 0x7ffb8003f540 <col:683, col:705> 'unsigned long' sizeof
+|       |     |   |   |         `-ParenExpr 0x7ffb8003f520 <col:690, col:705> 'int' lvalue
+|       |     |   |   |           `-MemberExpr 0x7ffb8003f4e8 <col:692, col:697> 'int' lvalue .line_no 0x7ffb800395e8
+|       |     |   |   |             `-DeclRefExpr 0x7ffb8003f4c0 <col:692> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   |   `-ImplicitCastExpr 0x7ffb7f847f48 <line:115:33, col:48> 'int' <LValueToRValue>
+|       |     |   |     `-ParenExpr 0x7ffb7f847ee0 <col:33, col:48> 'int' lvalue
+|       |     |   |       `-MemberExpr 0x7ffb7f847ea8 <col:35, col:40> 'int' lvalue .line_no 0x7ffb800395e8
+|       |     |   |         `-DeclRefExpr 0x7ffb7f847e80 <col:35> 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args' lvalue Var 0x7ffb7f8095c8 'args' 'struct ruby_dtrace_method_hook_args':'struct ruby_dtrace_method_hook_args'
+|       |     |   `-<<<NULL>>>
+|       |     `-<<<NULL>>>
+|       |-IfStmt 0x7ffb7f8484e0 <line:121:5, line:122:27>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7ffb7f8483d8 <line:121:9, col:59> 'int' '&&'
+|       | | |-BinaryOperator 0x7ffb7f8481e0 <col:9, col:16> 'int' '=='
+|       | | | |-ImplicitCastExpr 0x7ffb7f848198 <col:9> 'rb_control_frame_t *' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7ffb7f848148 <col:9> 'rb_control_frame_t *' lvalue Var 0x7ffb7f8091c0 'cfp' 'rb_control_frame_t *'
+|       | | | `-ImplicitCastExpr 0x7ffb7f8481c8 <col:16> 'rb_control_frame_t *' <BitCast>
+|       | | |   `-ImplicitCastExpr 0x7ffb7f8481b0 <col:16> 'const rb_control_frame_t *' <LValueToRValue>
+|       | | |     `-DeclRefExpr 0x7ffb7f848170 <col:16> 'const rb_control_frame_t *' lvalue Var 0x7ffb7f809248 'escape_cfp' 'const rb_control_frame_t *'
+|       | | `-UnaryOperator 0x7ffb7f8483b8 <col:30, col:59> 'int' prefix '!'
+|       | |   `-ParenExpr 0x7ffb7f848398 <col:31, col:59> 'int'
+|       | |     `-BinaryOperator 0x7ffb7f848370 <col:32, col:58> 'int' '!='
+|       | |       |-ParenExpr 0x7ffb7f848318 <col:32, col:53> 'unsigned long'
+|       | |       | `-BinaryOperator 0x7ffb7f8482f0 <col:33, col:47> 'unsigned long' '&'
+|       | |       |   |-ImplicitCastExpr 0x7ffb7f8482c0 <col:33, col:40> 'VALUE':'unsigned long' <LValueToRValue>
+|       | |       |   | `-MemberExpr 0x7ffb7f848268 <col:33, col:40> 'VALUE':'unsigned long' lvalue ->flag 0x7ffb80022a00
+|       | |       |   |   `-ImplicitCastExpr 0x7ffb7f848250 <col:33, col:37> 'rb_control_frame_t *' <LValueToRValue>
+|       | |       |   |     `-ParenExpr 0x7ffb7f848230 <col:33, col:37> 'rb_control_frame_t *' lvalue
+|       | |       |   |       `-DeclRefExpr 0x7ffb7f848208 <col:34> 'rb_control_frame_t *' lvalue Var 0x7ffb7f8091c0 'cfp' 'rb_control_frame_t *'
+|       | |       |   `-ImplicitCastExpr 0x7ffb7f8482d8 <col:47> 'unsigned long' <IntegralCast>
+|       | |       |     `-IntegerLiteral 0x7ffb7f8482a0 <col:47> 'int' 512
+|       | |       `-ImplicitCastExpr 0x7ffb7f848358 <col:58> 'unsigned long' <IntegralCast>
+|       | |         `-IntegerLiteral 0x7ffb7f848338 <col:58> 'int' 0
+|       | |-BinaryOperator 0x7ffb7f8484b8 <line:122:7, col:27> 'const rb_iseq_t *' '='
+|       | | |-DeclRefExpr 0x7ffb7f848400 <col:7> 'const rb_iseq_t *' lvalue Var 0x7ffb7f809138 'catch_iseq' 'const rb_iseq_t *'
+|       | | `-ImplicitCastExpr 0x7ffb7f8484a0 <col:20, col:27> 'const rb_iseq_t *' <LValueToRValue>
+|       | |   `-MemberExpr 0x7ffb7f848468 <col:20, col:27> 'const rb_iseq_t *const' lvalue ->iseq 0x7ffb800391e0
+|       | |     `-ImplicitCastExpr 0x7ffb7f848450 <col:20> 'const struct iseq_catch_table_entry *' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7ffb7f848428 <col:20> 'const struct iseq_catch_table_entry *' lvalue Var 0x7ffb8003ac60 'entry' 'const struct iseq_catch_table_entry *'
+|       | `-<<<NULL>>>
+|       |-IfStmt 0x7ffb7f848af0 <line:124:5, line:132:23>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7ffb7f848578 <line:124:9, col:18> 'int' '=='
+|       | | |-ImplicitCastExpr 0x7ffb7f848560 <col:9> 'int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7ffb7f848518 <col:9> 'int' lvalue Var 0x7ffb7f808f20 'state' 'int'
+|       | | `-IntegerLiteral 0x7ffb7f848540 <col:18> 'int' 6
+|       | |-CompoundStmt 0x7ffb7f8489a0 <line:125:5, line:130:5>
+|       | | |-BinaryOperator 0x7ffb7f8486f0 <line:126:7, col:46> 'const rb_control_frame_t *' '='
+|       | | | |-DeclRefExpr 0x7ffb7f8485a0 <col:7> 'const rb_control_frame_t *' lvalue Var 0x7ffb7f809248 'escape_cfp' 'const rb_control_frame_t *'
+|       | | | `-CallExpr 0x7ffb7f848690 <col:20, col:46> 'const rb_control_frame_t *'
+|       | | |   |-ImplicitCastExpr 0x7ffb7f848678 <col:20> 'const rb_control_frame_t *(*)(const struct vm_throw_data *)' <FunctionToPointerDecay>
+|       | | |   | `-DeclRefExpr 0x7ffb7f8485c8 <col:20> 'const rb_control_frame_t *(const struct vm_throw_data *)' Function 0x7ffb7f8085d0 'THROW_DATA_CATCH_FRAME' 'const rb_control_frame_t *(const struct vm_throw_data *)'
+|       | | |   `-ImplicitCastExpr 0x7ffb7f8486d8 <col:43> 'const struct vm_throw_data *' <BitCast>
+|       | | |     `-ImplicitCastExpr 0x7ffb7f8486c0 <col:43> 'struct vm_throw_data *' <LValueToRValue>
+|       | | |       `-DeclRefExpr 0x7ffb7f8485f0 <col:43> 'struct vm_throw_data *' lvalue Var 0x7ffb80039fc0 'err' 'struct vm_throw_data *'
+|       | | `-IfStmt 0x7ffb7f848968 <line:128:7, line:129:42>
+|       | |   |-<<<NULL>>>
+|       | |   |-<<<NULL>>>
+|       | |   |-ImplicitCastExpr 0x7ffb7f848740 <line:128:11> 'const struct iseq_catch_table *' <LValueToRValue>
+|       | |   | `-DeclRefExpr 0x7ffb7f848718 <col:11> 'const struct iseq_catch_table *' lvalue Var 0x7ffb8003ad00 'ct' 'const struct iseq_catch_table *'
+|       | |   |-ForStmt 0x7ffb7f848930 <line:129:9, col:42>
+|       | |   | |-BinaryOperator 0x7ffb7f8487b8 <col:14, col:18> 'unsigned int' '='
+|       | |   | | |-DeclRefExpr 0x7ffb7f848758 <col:14> 'unsigned int' lvalue Var 0x7ffb8003ab30 'i' 'unsigned int'
+|       | |   | | `-ImplicitCastExpr 0x7ffb7f8487a0 <col:18> 'unsigned int' <IntegralCast>
+|       | |   | |   `-IntegerLiteral 0x7ffb7f848780 <col:18> 'int' 0
+|       | |   | |-<<<NULL>>>
+|       | |   | |-BinaryOperator 0x7ffb7f8488b0 <col:21, col:29> 'int' '<'
+|       | |   | | |-ImplicitCastExpr 0x7ffb7f848880 <col:21> 'unsigned int' <LValueToRValue>
+|       | |   | | | `-DeclRefExpr 0x7ffb7f8487e0 <col:21> 'unsigned int' lvalue Var 0x7ffb8003ab30 'i' 'unsigned int'
+|       | |   | | `-ImplicitCastExpr 0x7ffb7f848898 <col:25, col:29> 'unsigned int' <LValueToRValue>
+|       | |   | |   `-MemberExpr 0x7ffb7f848848 <col:25, col:29> 'const unsigned int' lvalue ->size 0x7ffb800392c8
+|       | |   | |     `-ImplicitCastExpr 0x7ffb7f848830 <col:25> 'const struct iseq_catch_table *' <LValueToRValue>
+|       | |   | |       `-DeclRefExpr 0x7ffb7f848808 <col:25> 'const struct iseq_catch_table *' lvalue Var 0x7ffb8003ad00 'ct' 'const struct iseq_catch_table *'
+|       | |   | |-UnaryOperator 0x7ffb7f848900 <col:35, col:36> 'unsigned int' postfix '++'
+|       | |   | | `-DeclRefExpr 0x7ffb7f8488d8 <col:35> 'unsigned int' lvalue Var 0x7ffb8003ab30 'i' 'unsigned int'
+|       | |   | `-CompoundStmt 0x7ffb7f848920 <col:40, col:42>
+|       | |   `-<<<NULL>>>
+|       | `-BinaryOperator 0x7ffb7f848ac8 <line:132:7, col:23> 'const struct iseq_catch_table *' '='
+|       |   |-DeclRefExpr 0x7ffb7f8489c0 <col:7> 'const struct iseq_catch_table *' lvalue Var 0x7ffb8003ad00 'ct' 'const struct iseq_catch_table *'
+|       |   `-ImplicitCastExpr 0x7ffb7f848ab0 <col:12, col:23> 'const struct iseq_catch_table *' <LValueToRValue>
+|       |     `-MemberExpr 0x7ffb7f848a78 <col:12, col:23> 'const struct iseq_catch_table *const' lvalue ->catch_table 0x7ffb800226d0
+|       |       `-ImplicitCastExpr 0x7ffb7f848a60 <col:12, col:17> 'const rb_iseq_t *' <LValueToRValue>
+|       |         `-MemberExpr 0x7ffb7f848a28 <col:12, col:17> 'const rb_iseq_t *' lvalue ->iseq 0x7ffb800229a8
+|       |           `-ImplicitCastExpr 0x7ffb7f848a10 <col:12> 'rb_control_frame_t *' <LValueToRValue>
+|       |             `-DeclRefExpr 0x7ffb7f8489e8 <col:12> 'rb_control_frame_t *' lvalue Var 0x7ffb7f8091c0 'cfp' 'rb_control_frame_t *'
+|       `-CallExpr 0x7ffb7f848d10 <line:134:5, col:62> 'rb_control_frame_t *'
+|         |-ImplicitCastExpr 0x7ffb7f848cf8 <col:5> 'rb_control_frame_t *(*)(rb_thread_t *, const rb_iseq_t *, VALUE, VALUE, VALUE, VALUE, const VALUE *, VALUE *, int, int)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7ffb7f848b28 <col:5> 'rb_control_frame_t *(rb_thread_t *, const rb_iseq_t *, VALUE, VALUE, VALUE, VALUE, const VALUE *, VALUE *, int, int)' Function 0x7ffb7f808c60 'vm_push_frame' 'rb_control_frame_t *(rb_thread_t *, const rb_iseq_t *, VALUE, VALUE, VALUE, VALUE, const VALUE *, VALUE *, int, int)'
+|         |-ImplicitCastExpr 0x7ffb7f848d88 <col:19> 'rb_thread_t *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ffb7f848b50 <col:19> 'rb_thread_t *' lvalue ParmVar 0x7ffb7f808d60 'th' 'rb_thread_t *'
+|         |-ImplicitCastExpr 0x7ffb7f848da0 <col:23> 'const rb_iseq_t *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ffb7f848b78 <col:23> 'const rb_iseq_t *' lvalue Var 0x7ffb7f809138 'catch_iseq' 'const rb_iseq_t *'
+|         |-ImplicitCastExpr 0x7ffb7f848db8 <col:35> 'VALUE':'unsigned long' <IntegralCast>
+|         | `-IntegerLiteral 0x7ffb7f848ba0 <col:35> 'int' 177
+|         |-ImplicitCastExpr 0x7ffb7f848dd0 <col:41> 'VALUE':'unsigned long' <IntegralCast>
+|         | `-IntegerLiteral 0x7ffb7f848bc0 <col:41> 'int' 0
+|         |-ImplicitCastExpr 0x7ffb7f848de8 <col:44> 'VALUE':'unsigned long' <IntegralCast>
+|         | `-IntegerLiteral 0x7ffb7f848be0 <col:44> 'int' 1
+|         |-ImplicitCastExpr 0x7ffb8003f600 <col:47> 'VALUE':'unsigned long' <IntegralCast>
+|         | `-IntegerLiteral 0x7ffb7f848c00 <col:47> 'int' 0
+|         |-ImplicitCastExpr 0x7ffb8003f618 <col:50> 'const VALUE *' <NullToPointer>
+|         | `-IntegerLiteral 0x7ffb7f848c20 <col:50> 'int' 0
+|         |-ImplicitCastExpr 0x7ffb8003f630 <col:53> 'VALUE *' <NullToPointer>
+|         | `-IntegerLiteral 0x7ffb7f848c40 <col:53> 'int' 0
+|         |-IntegerLiteral 0x7ffb7f848c60 <col:56> 'int' 5
+|         `-IntegerLiteral 0x7ffb7f848c80 <col:59> 'int' 123
+|-FunctionDecl 0x7ffb8003a248 <line:84:17> col:17 implicit used __builtin_setjmp 'int (void **)' extern
+| |-ParmVarDecl 0x7ffb8003a2e8 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ReturnsTwiceAttr 0x7ffb8003a350 <col:17> Implicit
+|-FunctionDecl 0x7ffb7f809c38 <line:108:49> col:49 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7ffb7f809cd8 <col:49> Implicit
+| `-ConstAttr 0x7ffb7f809d20 <col:49> Implicit
+`-FunctionDecl 0x7ffb7f809d58 <col:130> col:130 implicit used __builtin_classify_type 'int ()' extern
+  |-NoThrowAttr 0x7ffb7f809df8 <col:130> Implicit
+  `-ConstAttr 0x7ffb7f809e40 <col:130> Implicit

@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f9f838262e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9f83826f60 <../Data/C2AST/pr31254.c:3:1, line:7:1> line:3:8 struct timespec definition
+| |-FieldDecl 0x7f9f84041238 <line:5:3, col:8> col:8 tv_sec 'long'
+| `-FieldDecl 0x7f9f84041298 <line:6:3, col:8> col:8 tv_nsec 'long'
+|-RecordDecl 0x7f9f840412e0 <line:8:1, line:12:1> line:8:8 struct inode definition
+| |-FieldDecl 0x7f9f840413e0 <line:10:3, col:19> col:19 referenced i_atime 'struct timespec':'struct timespec'
+| `-FieldDecl 0x7f9f84041448 <line:11:3, col:19> col:19 referenced i_mtime 'struct timespec':'struct timespec'
+|-RecordDecl 0x7f9f840414e0 <line:13:1, line:16:1> line:13:8 struct afs_vnode definition
+| `-FieldDecl 0x7f9f840415e0 <line:15:3, col:16> col:16 referenced vfs_inode 'struct inode':'struct inode'
+|-FunctionDecl 0x7f9f840418a8 <line:17:1, line:21:1> line:18:17 used AFS_VNODE_TO_I 'struct inode *(struct afs_vnode *)' static inline
+| |-ParmVarDecl 0x7f9f84041730 <col:33, col:51> col:51 used vnode 'struct afs_vnode *'
+| `-CompoundStmt 0x7f9f84041a40 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7f9f84041a28 <line:20:3, col:18>
+|     `-UnaryOperator 0x7f9f84041a08 <col:10, col:18> 'struct inode *' prefix '&'
+|       `-MemberExpr 0x7f9f840419d0 <col:11, col:18> 'struct inode':'struct inode' lvalue ->vfs_inode 0x7f9f840415e0
+|         `-ImplicitCastExpr 0x7f9f840419b8 <col:11> 'struct afs_vnode *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f9f84041990 <col:11> 'struct afs_vnode *' lvalue ParmVar 0x7f9f84041730 'vnode' 'struct afs_vnode *'
+|-EmptyDecl 0x7f9f84041a58 <line:21:2> col:2
+`-FunctionDecl 0x7f9f84041ba0 <line:22:1, line:27:1> line:23:1 afs_inode_map_status 'void (struct afs_vnode *)'
+  |-ParmVarDecl 0x7f9f84041aa0 <col:23, col:41> col:41 used vnode 'struct afs_vnode *'
+  `-CompoundStmt 0x7f9f84041f20 <line:24:1, line:27:1>
+    |-DeclStmt 0x7f9f84041dd8 <line:25:3, col:47>
+    | `-VarDecl 0x7f9f84041c70 <col:3, col:46> col:17 used inode 'struct inode *' cinit
+    |   `-CallExpr 0x7f9f84041d90 <col:25, col:46> 'struct inode *'
+    |     |-ImplicitCastExpr 0x7f9f84041d78 <col:25> 'struct inode *(*)(struct afs_vnode *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9f84041cd0 <col:25> 'struct inode *(struct afs_vnode *)' Function 0x7f9f840418a8 'AFS_VNODE_TO_I' 'struct inode *(struct afs_vnode *)'
+    |     `-ImplicitCastExpr 0x7f9f84041dc0 <col:41> 'struct afs_vnode *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9f84041cf8 <col:41> 'struct afs_vnode *' lvalue ParmVar 0x7f9f84041aa0 'vnode' 'struct afs_vnode *'
+    `-BinaryOperator 0x7f9f84041ef8 <line:26:3, col:27> 'struct timespec':'struct timespec' '='
+      |-MemberExpr 0x7f9f84041e30 <col:3, col:10> 'struct timespec':'struct timespec' lvalue ->i_atime 0x7f9f840413e0
+      | `-ImplicitCastExpr 0x7f9f84041e18 <col:3> 'struct inode *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9f84041df0 <col:3> 'struct inode *' lvalue Var 0x7f9f84041c70 'inode' 'struct inode *'
+      `-ImplicitCastExpr 0x7f9f84041ee0 <col:20, col:27> 'struct timespec':'struct timespec' <LValueToRValue>
+        `-MemberExpr 0x7f9f84041ea8 <col:20, col:27> 'struct timespec':'struct timespec' lvalue ->i_mtime 0x7f9f84041448
+          `-ImplicitCastExpr 0x7f9f84041e90 <col:20> 'struct inode *' <LValueToRValue>
+            `-DeclRefExpr 0x7f9f84041e68 <col:20> 'struct inode *' lvalue Var 0x7f9f84041c70 'inode' 'struct inode *'

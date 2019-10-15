@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f99e701e2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f99e701ef70 <../Data/C2AST/pr78517.c:3:1, col:6> col:6 used a 'char'
+`-FunctionDecl 0x7f99e8026690 <line:4:1, col:38> col:5 fn1 'int ()'
+  `-CompoundStmt 0x7f99e8026888 <col:11, col:38>
+    `-ReturnStmt 0x7f99e8026870 <col:13, col:35>
+      `-ConditionalOperator 0x7f99e8026840 <col:20, col:35> 'int'
+        |-BinaryOperator 0x7f99e80267a0 <col:20, col:25> 'int' '=='
+        | |-ImplicitCastExpr 0x7f99e8026788 <col:20> 'int' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7f99e8026770 <col:20> 'char' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f99e8026730 <col:20> 'char' lvalue Var 0x7f99e701ef70 'a' 'char'
+        | `-CharacterLiteral 0x7f99e8026758 <col:25> 'int' 91
+        |-ImplicitCastExpr 0x7f99e8026828 <col:31> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7f99e8026810 <col:31> 'char' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f99e80267c8 <col:31> 'char' lvalue Var 0x7f99e701ef70 'a' 'char'
+        `-IntegerLiteral 0x7f99e80267f0 <col:35> 'int' 0

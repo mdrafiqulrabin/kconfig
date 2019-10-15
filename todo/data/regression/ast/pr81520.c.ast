@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fdb430058e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdb42836060 <../Data/C2AST/pr81520.c:6:1, line:11:1> line:7:1 referenced a 'char (int)'
+  |-ParmVarDecl 0x7fdb43006578 <col:4, col:8> col:8 used b 'int'
+  `-CompoundStmt 0x7fdb42836278 <line:8:1, line:11:1>
+    |-CallExpr 0x7fdb428361e0 <line:9:3, col:7> 'char'
+    | |-ImplicitCastExpr 0x7fdb428361c8 <col:3> 'char (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdb42836148 <col:3> 'char (int)' Function 0x7fdb42836060 'a' 'char (int)'
+    | `-ImplicitCastExpr 0x7fdb42836210 <col:6> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdb42836170 <col:6> 'int' lvalue ParmVar 0x7fdb43006578 'b' 'int'
+    `-ReturnStmt 0x7fdb42836260 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fdb42836248 <col:10> 'char' <IntegralCast>
+        `-IntegerLiteral 0x7fdb42836228 <col:10> 'int' 0

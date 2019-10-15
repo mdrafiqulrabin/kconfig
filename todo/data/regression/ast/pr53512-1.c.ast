@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fd2c68166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd2c78168e8 <../Data/C2AST/pr53512-1.c:8:1, line:12:1> line:9:1 test_func_00 'float (float)'
+| |-ParmVarDecl 0x7fd2c7816858 <col:15, col:21> col:21 used x 'float'
+| `-CompoundStmt 0x7fd2c7816b30 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fd2c7816b18 <line:11:3, col:28>
+|     `-BinaryOperator 0x7fd2c7816af0 <col:10, col:28> 'float' '+'
+|       |-CallExpr 0x7fd2c78169f8 <col:10, col:17> 'float'
+|       | |-ImplicitCastExpr 0x7fd2c78169e0 <col:10> 'float (*)(float)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fd2c7816990 <col:10> 'float (float)' Function 0x7fd2c60293d8 'sinf' 'float (float)'
+|       | `-ImplicitCastExpr 0x7fd2c7816a28 <col:16> 'float' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fd2c78169b8 <col:16> 'float' lvalue ParmVar 0x7fd2c7816858 'x' 'float'
+|       `-CallExpr 0x7fd2c7816aa8 <col:21, col:28> 'float'
+|         |-ImplicitCastExpr 0x7fd2c7816a90 <col:21> 'float (*)(float)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fd2c7816a40 <col:21> 'float (float)' Function 0x7fd2c6028ac0 'cosf' 'float (float)'
+|         `-ImplicitCastExpr 0x7fd2c7816ad8 <col:27> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd2c7816a68 <col:27> 'float' lvalue ParmVar 0x7fd2c7816858 'x' 'float'
+|-FunctionDecl 0x7fd2c7816bf0 <line:14:1, line:18:1> line:15:1 test_func_01 'float (float)'
+| |-ParmVarDecl 0x7fd2c7816b60 <col:15, col:21> col:21 used x 'float'
+| `-CompoundStmt 0x7fd2c7816d60 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7fd2c7816d48 <line:17:3, col:17>
+|     `-CallExpr 0x7fd2c7816d00 <col:10, col:17> 'float'
+|       |-ImplicitCastExpr 0x7fd2c7816ce8 <col:10> 'float (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd2c7816c98 <col:10> 'float (float)' Function 0x7fd2c60293d8 'sinf' 'float (float)'
+|       `-ImplicitCastExpr 0x7fd2c7816d30 <col:16> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd2c7816cc0 <col:16> 'float' lvalue ParmVar 0x7fd2c7816b60 'x' 'float'
+`-FunctionDecl 0x7fd2c7816e20 <line:20:1, line:24:1> line:21:1 test_func_02 'float (float)'
+  |-ParmVarDecl 0x7fd2c7816d90 <col:15, col:21> col:21 used x 'float'
+  `-CompoundStmt 0x7fd2c7816f90 <line:22:1, line:24:1>
+    `-ReturnStmt 0x7fd2c7816f78 <line:23:3, col:17>
+      `-CallExpr 0x7fd2c7816f30 <col:10, col:17> 'float'
+        |-ImplicitCastExpr 0x7fd2c7816f18 <col:10> 'float (*)(float)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fd2c7816ec8 <col:10> 'float (float)' Function 0x7fd2c6028ac0 'cosf' 'float (float)'
+        `-ImplicitCastExpr 0x7fd2c7816f60 <col:16> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7fd2c7816ef0 <col:16> 'float' lvalue ParmVar 0x7fd2c7816d90 'x' 'float'

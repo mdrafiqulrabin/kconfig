@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa3f102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3f1815200 <../Data/C2AST/pr72717.c:7:1, col:14> col:14 referenced V '__attribute__((__vector_size__(4 * sizeof(long)))) long'
+| `-VectorType 0x7fa3f102c980 '__attribute__((__vector_size__(4 * sizeof(long)))) long' 4
+|   `-BuiltinType 0x7fa3f102be00 'long'
+|-FunctionDecl 0x7fa3f1815470 <line:9:1, col:25> col:13 foo 'void (V *, V *)' extern
+| |-ParmVarDecl 0x7fa3f18152e8 <col:18, col:20> col:21 'V *'
+| `-ParmVarDecl 0x7fa3f1815358 <col:23, col:24> col:25 'V *'
+`-FunctionDecl 0x7fa3f1815670 prev 0x7fa3f1815470 <line:13:1, line:18:1> line:14:1 foo 'void (V *, V *)'
+  |-ParmVarDecl 0x7fa3f1815570 <col:5, col:8> col:8 used p 'V *'
+  |-ParmVarDecl 0x7fa3f18155e0 <col:11, col:14> col:14 used q 'V *'
+  `-CompoundStmt 0x7fa3f18159e0 <line:15:1, line:18:1>
+    |-DeclStmt 0x7fa3f1815808 <line:16:3, col:11>
+    | `-VarDecl 0x7fa3f1815730 <col:3, col:10> col:5 used v 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' cinit
+    |   `-ImplicitCastExpr 0x7fa3f18157f0 <col:9, col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' <LValueToRValue>
+    |     `-UnaryOperator 0x7fa3f18157d0 <col:9, col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fa3f18157b8 <col:10> 'V *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fa3f1815790 <col:10> 'V *' lvalue ParmVar 0x7fa3f18155e0 'q' 'V *'
+    `-BinaryOperator 0x7fa3f18159b8 <line:17:3, col:16> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' '='
+      |-UnaryOperator 0x7fa3f1815860 <col:3, col:4> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fa3f1815848 <col:4> 'V *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa3f1815820 <col:4> 'V *' lvalue ParmVar 0x7fa3f1815570 'p' 'V *'
+      `-BinaryOperator 0x7fa3f1815990 <col:8, col:16> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' '<<'
+        |-ImplicitCastExpr 0x7fa3f1815918 <col:8> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fa3f1815880 <col:8> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue Var 0x7fa3f1815730 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+        `-ImplicitCastExpr 0x7fa3f1815978 <col:13, col:16> 'long __attribute__((ext_vector_type(4)))' <VectorSplat>
+          `-ImplicitCastExpr 0x7fa3f1815930 <col:13, col:16> 'long' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fa3f18158f0 <col:13, col:16> 'long' lvalue vectorcomponent
+              |-DeclRefExpr 0x7fa3f18158a8 <col:13> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue Var 0x7fa3f1815730 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+              `-IntegerLiteral 0x7fa3f18158d0 <col:15> 'int' 0

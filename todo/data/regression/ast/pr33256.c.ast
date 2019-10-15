@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fef2d02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fef2d06d800 <../Data/C2AST/pr33256.c:3:1, col:24> col:22 used a 'unsigned long []' extern
+|-FunctionDecl 0x7fef2d06d988 <line:4:1, col:11> col:5 used b 'int (int)'
+| `-ParmVarDecl 0x7fef2d06d8b8 <col:8> col:11 'int'
+`-FunctionDecl 0x7fef2d06daf8 <line:6:1, line:10:1> line:7:1 c 'int (void)'
+  `-CompoundStmt 0x7fef2d06dd38 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fef2d06dd20 <line:9:3, col:17>
+      `-CallExpr 0x7fef2d06dcc0 <col:10, col:17> 'int'
+        |-ImplicitCastExpr 0x7fef2d06dca8 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fef2d06db98 <col:10> 'int (int)' Function 0x7fef2d06d988 'b' 'int (int)'
+        `-ImplicitCastExpr 0x7fef2d06dd08 <col:13, col:16> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fef2d06dcf0 <col:13, col:16> 'unsigned long' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fef2d06dc50 <col:13, col:16> 'unsigned long' lvalue
+              |-ImplicitCastExpr 0x7fef2d06dc38 <col:13> 'unsigned long *' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7fef2d06dbc0 <col:13> 'unsigned long []' lvalue Var 0x7fef2d06d800 'a' 'unsigned long []'
+              `-IntegerLiteral 0x7fef2d06dbe8 <col:15> 'int' 0

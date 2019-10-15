@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7f925a8118e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f925a016868 <../Data/C2AST/pr55146.c:6:1, line:49:1> line:7:1 test 'int (int)'
+  |-ParmVarDecl 0x7f925a812578 <col:7, col:11> col:11 used arg 'int'
+  `-CompoundStmt 0x7f925a017658 <line:8:1, line:49:1>
+    |-DeclStmt 0x7f925a0169c8 <line:9:3, col:9>
+    | `-VarDecl 0x7f925a016968 <col:3, col:7> col:7 used rc 'int'
+    |-SwitchStmt 0x7f925a016a20 <line:10:3, line:47:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f925a016a08 <line:10:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f925a0169e0 <col:11> 'int' lvalue ParmVar 0x7f925a812578 'arg' 'int'
+    | `-CompoundStmt 0x7f925a0175a0 <line:11:5, line:47:5>
+    |   |-CaseStmt 0x7f925a016a70 <line:12:5, line:17:16>
+    |   | |-IntegerLiteral 0x7f925a016a50 <line:12:10> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | `-GCCAsmStmt 0x7f925a016c98 <line:13:7, line:17:16>
+    |   |   |-DeclRefExpr 0x7f925a016bc8 <line:16:13> 'int' lvalue Var 0x7f925a016968 'rc' 'int'
+    |   |   `-ImplicitCastExpr 0x7f925a016c80 <line:17:12> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f925a016c58 <col:12> 'int' lvalue ParmVar 0x7f925a812578 'arg' 'int'
+    |   |-BreakStmt 0x7f925a016d10 <line:18:7>
+    |   |-CaseStmt 0x7f925a016d38 <line:19:5, line:24:16>
+    |   | |-IntegerLiteral 0x7f925a016d18 <line:19:10> 'int' 1
+    |   | |-<<<NULL>>>
+    |   | `-GCCAsmStmt 0x7f925a016ea8 <line:20:7, line:24:16>
+    |   |   |-DeclRefExpr 0x7f925a016e10 <line:23:13> 'int' lvalue Var 0x7f925a016968 'rc' 'int'
+    |   |   `-ImplicitCastExpr 0x7f925a016e90 <line:24:12> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f925a016e68 <col:12> 'int' lvalue ParmVar 0x7f925a812578 'arg' 'int'
+    |   |-BreakStmt 0x7f925a016f20 <line:25:7>
+    |   |-CaseStmt 0x7f925a016f48 <line:26:5, line:31:16>
+    |   | |-IntegerLiteral 0x7f925a016f28 <line:26:10> 'int' 2
+    |   | |-<<<NULL>>>
+    |   | `-GCCAsmStmt 0x7f925a0170b8 <line:27:7, line:31:16>
+    |   |   |-DeclRefExpr 0x7f925a017020 <line:30:13> 'int' lvalue Var 0x7f925a016968 'rc' 'int'
+    |   |   `-ImplicitCastExpr 0x7f925a0170a0 <line:31:12> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f925a017078 <col:12> 'int' lvalue ParmVar 0x7f925a812578 'arg' 'int'
+    |   |-BreakStmt 0x7f925a017130 <line:32:7>
+    |   |-CaseStmt 0x7f925a017158 <line:33:5, line:38:16>
+    |   | |-IntegerLiteral 0x7f925a017138 <line:33:10> 'int' 3
+    |   | |-<<<NULL>>>
+    |   | `-GCCAsmStmt 0x7f925a017308 <line:34:7, line:38:16>
+    |   |   |-DeclRefExpr 0x7f925a017270 <line:37:13> 'int' lvalue Var 0x7f925a016968 'rc' 'int'
+    |   |   `-ImplicitCastExpr 0x7f925a0172f0 <line:38:12> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f925a0172c8 <col:12> 'int' lvalue ParmVar 0x7f925a812578 'arg' 'int'
+    |   |-BreakStmt 0x7f925a017380 <line:39:7>
+    |   |-CaseStmt 0x7f925a0173a8 <line:40:5, line:45:16>
+    |   | |-IntegerLiteral 0x7f925a017388 <line:40:10> 'int' 4
+    |   | |-<<<NULL>>>
+    |   | `-GCCAsmStmt 0x7f925a017520 <line:41:7, line:45:16>
+    |   |   |-DeclRefExpr 0x7f925a017488 <line:44:13> 'int' lvalue Var 0x7f925a016968 'rc' 'int'
+    |   |   `-ImplicitCastExpr 0x7f925a017508 <line:45:12> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f925a0174e0 <col:12> 'int' lvalue ParmVar 0x7f925a812578 'arg' 'int'
+    |   `-BreakStmt 0x7f925a017598 <line:46:7>
+    `-ReturnStmt 0x7f925a017640 <line:48:3, col:10>
+      `-ImplicitCastExpr 0x7f925a017628 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f925a017600 <col:10> 'int' lvalue Var 0x7f925a016968 'rc' 'int'

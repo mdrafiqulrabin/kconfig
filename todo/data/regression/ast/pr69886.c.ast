@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7ff6f202bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6f206e800 <../Data/C2AST/pr69886.c:6:1, col:18> col:18 referenced v32su '__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7ff6f202c980 '__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' 8
+|   `-BuiltinType 0x7ff6f202be80 'unsigned int'
+`-FunctionDecl 0x7ff6f206ebb8 <line:8:1, line:15:1> line:9:1 foo 'unsigned int (v32su, v32su, v32su, v32su, v32su)'
+  |-ParmVarDecl 0x7ff6f206e890 <col:6, col:12> col:12 used v32su_0 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+  |-ParmVarDecl 0x7ff6f206e900 <col:21, col:27> col:27 used v32su_1 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+  |-ParmVarDecl 0x7ff6f206e970 <col:36, col:42> col:42 used v32su_2 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+  |-ParmVarDecl 0x7ff6f206e9e0 <col:51, col:57> col:57 used v32su_3 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+  |-ParmVarDecl 0x7ff6f206ea50 <col:66, col:72> col:72 used v32su_4 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+  `-CompoundStmt 0x7ff6f206f3b0 <line:10:1, line:15:1>
+    |-CompoundAssignOperator 0x7ff6f206ede8 <line:11:3, col:34> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' '+=' ComputeLHSTy='v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | |-DeclRefExpr 0x7ff6f206ecc0 <col:3> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e9e0 'v32su_3' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | `-CompoundAssignOperator 0x7ff6f206edb0 <col:14, col:34> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' '*=' ComputeLHSTy='v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    |   |-DeclRefExpr 0x7ff6f206ece8 <col:14> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e970 'v32su_2' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    |   `-ImplicitCastExpr 0x7ff6f206ed98 <col:25, col:34> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <VectorSplat>
+    |     `-ImplicitCastExpr 0x7ff6f206ed80 <col:25, col:34> 'unsigned int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7ff6f206ed58 <col:25, col:34> 'unsigned int' lvalue vectorcomponent
+    |         |-DeclRefExpr 0x7ff6f206ed10 <col:25> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e970 'v32su_2' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    |         `-IntegerLiteral 0x7ff6f206ed38 <col:33> 'int' 3
+    |-IfStmt 0x7ff6f206f178 <line:12:3, line:13:48>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff6f206ee90 <line:12:7, col:16> 'unsigned int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7ff6f206ee68 <col:7, col:16> 'unsigned int' lvalue vectorcomponent
+    | |   |-DeclRefExpr 0x7ff6f206ee20 <col:7> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206ea50 'v32su_4' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | |   `-IntegerLiteral 0x7ff6f206ee48 <col:15> 'int' 3
+    | |-CompoundAssignOperator 0x7ff6f206f140 <line:13:5, col:48> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' '&=' ComputeLHSTy='v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' ComputeResultTy='v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | | |-DeclRefExpr 0x7ff6f206eea8 <col:5> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e970 'v32su_2' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | | `-ImplicitCastExpr 0x7ff6f206f128 <col:16, col:48> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    | |   `-CompoundLiteralExpr 0x7ff6f206f100 <col:16, col:48> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue
+    | |     `-InitListExpr 0x7ff6f206efe8 <col:23, col:48> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | |       |-ImplicitCastExpr 0x7ff6f206f068 <col:25, col:34> 'unsigned int' <LValueToRValue>
+    | |       | `-ArraySubscriptExpr 0x7ff6f206ef28 <col:25, col:34> 'unsigned int' lvalue vectorcomponent
+    | |       |   |-DeclRefExpr 0x7ff6f206eee0 <col:25> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e900 'v32su_1' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+    | |       |   `-IntegerLiteral 0x7ff6f206ef08 <col:33> 'int' 3
+    | |       |-ImplicitCastExpr 0x7ff6f206f080 <col:37> 'unsigned int' <IntegralCast>
+    | |       | `-IntegerLiteral 0x7ff6f206ef50 <col:37> 'int' 47986
+    | |       `-ImplicitCastExpr 0x7ff6f206f098 <col:45> 'unsigned int' <IntegralCast>
+    | |         `-IntegerLiteral 0x7ff6f206ef70 <col:45> 'int' 64
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff6f206f398 <line:14:3, col:45>
+      `-BinaryOperator 0x7ff6f206f370 <col:10, col:45> 'unsigned int' '+'
+        |-BinaryOperator 0x7ff6f206f2c0 <col:10, col:32> 'unsigned int' '+'
+        | |-ImplicitCastExpr 0x7ff6f206f290 <col:10, col:19> 'unsigned int' <LValueToRValue>
+        | | `-ArraySubscriptExpr 0x7ff6f206f1f8 <col:10, col:19> 'unsigned int' lvalue vectorcomponent
+        | |   |-DeclRefExpr 0x7ff6f206f1b0 <col:10> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e890 'v32su_0' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+        | |   `-IntegerLiteral 0x7ff6f206f1d8 <col:18> 'int' 2
+        | `-ImplicitCastExpr 0x7ff6f206f2a8 <col:23, col:32> 'unsigned int' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7ff6f206f268 <col:23, col:32> 'unsigned int' lvalue vectorcomponent
+        |     |-DeclRefExpr 0x7ff6f206f220 <col:23> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e970 'v32su_2' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+        |     `-IntegerLiteral 0x7ff6f206f248 <col:31> 'int' 4
+        `-ImplicitCastExpr 0x7ff6f206f358 <col:36, col:45> 'unsigned int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ff6f206f330 <col:36, col:45> 'unsigned int' lvalue vectorcomponent
+            |-DeclRefExpr 0x7ff6f206f2e8 <col:36> 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue ParmVar 0x7ff6f206e9e0 'v32su_3' 'v32su':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+            `-IntegerLiteral 0x7ff6f206f310 <col:44> 'int' 1

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fa8c382bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa8c4014228 <../Data/C2AST/pr79145.c:10:1, line:16:1> line:11:1 main 'int (void)'
+  `-CompoundStmt 0x7fa8c4014498 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fa8c40143b0 <line:13:3, col:24>
+    | `-VarDecl 0x7fa8c4014350 <col:3, col:22> col:22 used t1 'volatile long long'
+    |-CompoundAssignOperator 0x7fa8c4014428 <line:14:3, col:9> 'long long' '^=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-DeclRefExpr 0x7fa8c40143c8 <col:3> 'volatile long long' lvalue Var 0x7fa8c4014350 't1' 'volatile long long'
+    | `-ImplicitCastExpr 0x7fa8c4014410 <col:9> 'long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa8c40143f0 <col:9> 'int' 85
+    `-ReturnStmt 0x7fa8c4014480 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fa8c4014460 <col:10> 'int' 0

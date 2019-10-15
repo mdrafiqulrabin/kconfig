@@ -1,0 +1,95 @@
+TranslationUnitDecl 0x7fb46401a4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb463808468 <../Data/C2AST/pr37870.c:5:1, line:11:1> line:6:1 used foo 'unsigned int (long double)'
+| |-ParmVarDecl 0x7fb46401b178 <col:6, col:18> col:18 used x 'long double'
+| `-CompoundStmt 0x7fb463808da0 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7fb463808808 <line:8:3, col:44>
+|   | |-RecordDecl 0x7fb463808550 <col:3, col:41> col:3 struct definition
+|   | | |-FieldDecl 0x7fb463808678 <col:12, col:20> col:17 a 'char [8]'
+|   | | `-FieldDecl 0x7fb4638086f8 <col:23, col:38> col:36 referenced b 'unsigned int'
+|   | |   `-IntegerLiteral 0x7fb4638086c0 <col:38> 'int' 7
+|   | `-VarDecl 0x7fb463808790 <col:3, col:43> col:43 used c 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)'
+|   |-CallExpr 0x7fb463808ca0 <line:9:3, col:39> 'void *'
+|   | |-ImplicitCastExpr 0x7fb463808c88 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fb463808ab8 <col:3> '<builtin fn type>' Function 0x7fb463808898 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fb463808ce0 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fb463808b68 <col:21, col:22> 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3) *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fb463808ae0 <col:22> 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)' lvalue Var 0x7fb463808790 'c' 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)'
+|   | |-ImplicitCastExpr 0x7fb463808cf8 <col:25, col:26> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7fb463808bd8 <col:25, col:26> 'long double *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fb463808b88 <col:26> 'long double' lvalue ParmVar 0x7fb46401b178 'x' 'long double'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fb463808c40 <col:29, col:38> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7fb463808c20 <col:36, col:38> 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)' lvalue
+|   |     `-DeclRefExpr 0x7fb463808bf8 <col:37> 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)' lvalue Var 0x7fb463808790 'c' 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)'
+|   `-ReturnStmt 0x7fb463808d88 <line:10:3, col:12>
+|     `-ImplicitCastExpr 0x7fb463808d70 <col:10, col:12> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fb463808d38 <col:10, col:12> 'unsigned int' lvalue bitfield .b 0x7fb4638086f8
+|         `-DeclRefExpr 0x7fb463808d10 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)' lvalue Var 0x7fb463808790 'c' 'struct (anonymous struct at ../Data/C2AST/pr37870.c:8:3)':'struct (anonymous at ../Data/C2AST/pr37870.c:8:3)'
+|-FunctionDecl 0x7fb463808898 <line:9:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fb463808938 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb463808998 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fb4638089f8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fb463808a70 <col:3> Implicit
+|-FunctionDecl 0x7fb463808e70 <line:13:1, line:19:1> line:14:1 used bar 'unsigned int (long double)'
+| |-ParmVarDecl 0x7fb463808de0 <col:6, col:18> col:18 used x 'long double'
+| `-CompoundStmt 0x7fb464025368 <line:15:1, line:19:1>
+|   |-DeclStmt 0x7fb463809398 <line:16:3, col:72>
+|   | |-RecordDecl 0x7fb463808f18 <col:3, col:69> col:3 union definition
+|   | | |-RecordDecl 0x7fb463808fc0 <col:11, col:49> col:11 struct definition
+|   | | | |-FieldDecl 0x7fb4638090b0 <col:20, col:28> col:25 a 'char [8]'
+|   | | | `-FieldDecl 0x7fb463809130 <col:31, col:46> col:44 referenced b 'unsigned int'
+|   | | |   `-IntegerLiteral 0x7fb4638090f8 <col:46> 'int' 7
+|   | | |-FieldDecl 0x7fb4638091d0 <col:11, col:51> col:51 referenced c 'struct (anonymous struct at ../Data/C2AST/pr37870.c:16:11)':'struct (anonymous at ../Data/C2AST/pr37870.c:16:11)'
+|   | | `-FieldDecl 0x7fb463809230 <col:54, col:66> col:66 referenced d 'long double'
+|   | `-VarDecl 0x7fb463809320 <col:3, col:71> col:71 used u 'union (anonymous union at ../Data/C2AST/pr37870.c:16:3)':'union (anonymous at ../Data/C2AST/pr37870.c:16:3)'
+|   |-BinaryOperator 0x7fb464025278 <line:17:3, col:9> 'long double' '='
+|   | |-MemberExpr 0x7fb464025200 <col:3, col:5> 'long double' lvalue .d 0x7fb463809230
+|   | | `-DeclRefExpr 0x7fb4638093b0 <col:3> 'union (anonymous union at ../Data/C2AST/pr37870.c:16:3)':'union (anonymous at ../Data/C2AST/pr37870.c:16:3)' lvalue Var 0x7fb463809320 'u' 'union (anonymous union at ../Data/C2AST/pr37870.c:16:3)':'union (anonymous at ../Data/C2AST/pr37870.c:16:3)'
+|   | `-ImplicitCastExpr 0x7fb464025260 <col:9> 'long double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb464025238 <col:9> 'long double' lvalue ParmVar 0x7fb463808de0 'x' 'long double'
+|   `-ReturnStmt 0x7fb464025350 <line:18:3, col:14>
+|     `-ImplicitCastExpr 0x7fb464025338 <col:10, col:14> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fb464025300 <col:10, col:14> 'unsigned int' lvalue bitfield .b 0x7fb463809130
+|         `-MemberExpr 0x7fb4640252c8 <col:10, col:12> 'struct (anonymous struct at ../Data/C2AST/pr37870.c:16:11)':'struct (anonymous at ../Data/C2AST/pr37870.c:16:11)' lvalue .c 0x7fb4638091d0
+|           `-DeclRefExpr 0x7fb4640252a0 <col:10> 'union (anonymous union at ../Data/C2AST/pr37870.c:16:3)':'union (anonymous at ../Data/C2AST/pr37870.c:16:3)' lvalue Var 0x7fb463809320 'u' 'union (anonymous union at ../Data/C2AST/pr37870.c:16:3)':'union (anonymous at ../Data/C2AST/pr37870.c:16:3)'
+|-FunctionDecl 0x7fb464025458 <line:21:1, line:29:1> line:22:1 main 'int (void)'
+| `-CompoundStmt 0x7fb464025bf8 <line:23:1, line:29:1>
+|   |-IfStmt 0x7fb464025b88 <line:24:3, line:27:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb4640259b0 <line:24:7, line:26:41> 'int' '||'
+|   | | |-BinaryOperator 0x7fb464025820 <line:24:7, line:25:39> 'int' '||'
+|   | | | |-BinaryOperator 0x7fb464025690 <line:24:7, col:34> 'int' '!='
+|   | | | | |-CallExpr 0x7fb4640255c0 <col:7, col:18> 'unsigned int'
+|   | | | | | |-ImplicitCastExpr 0x7fb4640255a8 <col:7> 'unsigned int (*)(long double)' <FunctionToPointerDecay>
+|   | | | | | | `-DeclRefExpr 0x7fb464025528 <col:7> 'unsigned int (long double)' Function 0x7fb463808468 'foo' 'unsigned int (long double)'
+|   | | | | | `-FloatingLiteral 0x7fb464025550 <col:12> 'long double' 1.245000e+00
+|   | | | | `-CallExpr 0x7fb464025660 <col:23, col:34> 'unsigned int'
+|   | | | |   |-ImplicitCastExpr 0x7fb464025648 <col:23> 'unsigned int (*)(long double)' <FunctionToPointerDecay>
+|   | | | |   | `-DeclRefExpr 0x7fb4640255f0 <col:23> 'unsigned int (long double)' Function 0x7fb463808e70 'bar' 'unsigned int (long double)'
+|   | | | |   `-FloatingLiteral 0x7fb464025618 <col:28> 'long double' 1.245000e+00
+|   | | | `-BinaryOperator 0x7fb4640257f8 <line:25:10, col:39> 'int' '!='
+|   | | |   |-CallExpr 0x7fb464025728 <col:10, col:22> 'unsigned int'
+|   | | |   | |-ImplicitCastExpr 0x7fb464025710 <col:10> 'unsigned int (*)(long double)' <FunctionToPointerDecay>
+|   | | |   | | `-DeclRefExpr 0x7fb4640256b8 <col:10> 'unsigned int (long double)' Function 0x7fb463808468 'foo' 'unsigned int (long double)'
+|   | | |   | `-FloatingLiteral 0x7fb4640256e0 <col:15> 'long double' 2.456700e+02
+|   | | |   `-CallExpr 0x7fb4640257c8 <col:27, col:39> 'unsigned int'
+|   | | |     |-ImplicitCastExpr 0x7fb4640257b0 <col:27> 'unsigned int (*)(long double)' <FunctionToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7fb464025758 <col:27> 'unsigned int (long double)' Function 0x7fb463808e70 'bar' 'unsigned int (long double)'
+|   | | |     `-FloatingLiteral 0x7fb464025780 <col:32> 'long double' 2.456700e+02
+|   | | `-BinaryOperator 0x7fb464025988 <line:26:10, col:41> 'int' '!='
+|   | |   |-CallExpr 0x7fb4640258b8 <col:10, col:23> 'unsigned int'
+|   | |   | |-ImplicitCastExpr 0x7fb4640258a0 <col:10> 'unsigned int (*)(long double)' <FunctionToPointerDecay>
+|   | |   | | `-DeclRefExpr 0x7fb464025848 <col:10> 'unsigned int (long double)' Function 0x7fb463808468 'foo' 'unsigned int (long double)'
+|   | |   | `-FloatingLiteral 0x7fb464025870 <col:15> 'long double' 5.670000e-03
+|   | |   `-CallExpr 0x7fb464025958 <col:28, col:41> 'unsigned int'
+|   | |     |-ImplicitCastExpr 0x7fb464025940 <col:28> 'unsigned int (*)(long double)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fb4640258e8 <col:28> 'unsigned int (long double)' Function 0x7fb463808e70 'bar' 'unsigned int (long double)'
+|   | |     `-FloatingLiteral 0x7fb464025910 <col:33> 'long double' 5.670000e-03
+|   | |-CallExpr 0x7fb464025b60 <line:27:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb464025b48 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb464025af8 <col:5> '<builtin fn type>' Function 0x7fb464025a10 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb464025be0 <line:28:3, col:10>
+|     `-IntegerLiteral 0x7fb464025bc0 <col:10> 'int' 0
+`-FunctionDecl 0x7fb464025a10 <line:27:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb464025ab0 <col:5> Implicit

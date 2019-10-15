@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fcd4f023ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcd4f065668 <../Data/C2AST/pr27132.c:4:1, line:7:1> line:4:5 foo 'int (int)'
+  |-ParmVarDecl 0x7fcd4f024778 <col:9, col:13> col:13 used i 'int'
+  `-CompoundStmt 0x7fcd4f065810 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fcd4f0657f8 <line:6:3, col:15>
+      `-BinaryOperator 0x7fcd4f0657d0 <col:10, col:15> 'int' '-'
+        |-ImplicitCastExpr 0x7fcd4f0657b8 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fcd4f065750 <col:10> 'int' lvalue ParmVar 0x7fcd4f024778 'i' 'int'
+        `-UnaryOperator 0x7fcd4f065798 <col:14, col:15> 'int' prefix '-'
+          `-IntegerLiteral 0x7fcd4f065778 <col:15> 'int' 1

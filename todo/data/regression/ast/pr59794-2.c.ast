@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fb5f080e8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb5f1015200 <../Data/C2AST/pr59794-2.c:7:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fb5f080f580 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fb5f080eb00 'double'
+|-VarDecl 0x7fb5f1015290 <line:9:1, col:15> col:15 used x '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' extern
+|-FunctionDecl 0x7fb5f1015440 <line:11:1, col:24> col:13 used bar 'void (__v2df)' extern
+| `-ParmVarDecl 0x7fb5f1015340 <col:18> col:24 '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7fb5f10155b0 <line:12:1, line:16:1> line:13:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb5f1015758 <line:14:1, line:16:1>
+    `-CallExpr 0x7fb5f1015710 <line:15:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fb5f10156f8 <col:3> 'void (*)(__v2df)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb5f1015650 <col:3> 'void (__v2df)' Function 0x7fb5f1015440 'bar' 'void (__v2df)'
+      `-ImplicitCastExpr 0x7fb5f1015740 <col:8> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7fb5f1015678 <col:8> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fb5f1015290 'x' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

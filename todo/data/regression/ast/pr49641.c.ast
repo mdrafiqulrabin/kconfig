@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fb0df8128e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb0df813560 <../Data/C2AST/pr49641.c:5:9, line:7:1> line:5:9 struct definition
+| |-FieldDecl 0x7fb0df843e38 <line:6:3, col:9> col:9 referenced t1 'void *'
+| |-FieldDecl 0x7fb0df843e98 <col:3, col:14> col:14 referenced t2 'void *'
+| `-FieldDecl 0x7fb0df843ef8 <col:3, col:19> col:19 referenced t3 'void *'
+|-TypedefDecl 0x7fb0df843f90 <line:5:1, line:7:3> col:3 referenced z 'struct z':'z'
+| `-ElaboratedType 0x7fb0df843f40 'struct z' sugar
+|   `-RecordType 0x7fb0df843e00 'z'
+|     `-Record 0x7fb0df813560 ''
+|-VarDecl 0x7fb0df844018 <line:8:1, col:21> col:21 used y 'volatile int' extern
+|-FunctionDecl 0x7fb0df844250 <line:9:1, line:13:1> line:9:20 used foo 'void (z *)' static inline
+| |-ParmVarDecl 0x7fb0df844148 <col:24, col:27> col:27 used x 'z *'
+| `-CompoundStmt 0x7fb0df8446e8 <col:30, line:13:1>
+|   |-BinaryOperator 0x7fb0df844450 <line:10:3, col:15> 'void *' '='
+|   | |-MemberExpr 0x7fb0df844338 <col:3, col:6> 'void *' lvalue ->t1 0x7fb0df843e38
+|   | | `-ImplicitCastExpr 0x7fb0df844320 <col:3> 'z *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb0df8442f8 <col:3> 'z *' lvalue ParmVar 0x7fb0df844148 'x' 'z *'
+|   | `-ImplicitCastExpr 0x7fb0df844438 <col:11, col:15> 'void *' <BitCast>
+|   |   `-UnaryOperator 0x7fb0df844418 <col:11, col:15> 'void **' prefix '&'
+|   |     `-MemberExpr 0x7fb0df8443b0 <col:12, col:15> 'void *' lvalue ->t2 0x7fb0df843e98
+|   |       `-ImplicitCastExpr 0x7fb0df844398 <col:12> 'z *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fb0df844370 <col:12> 'z *' lvalue ParmVar 0x7fb0df844148 'x' 'z *'
+|   |-BinaryOperator 0x7fb0df844570 <line:11:3, col:21> 'void *' '='
+|   | |-MemberExpr 0x7fb0df8444b8 <col:3, col:6> 'void *' lvalue ->t2 0x7fb0df843e98
+|   | | `-ImplicitCastExpr 0x7fb0df8444a0 <col:3> 'z *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fb0df844478 <col:3> 'z *' lvalue ParmVar 0x7fb0df844148 'x' 'z *'
+|   | `-ParenExpr 0x7fb0df844550 <col:11, col:21> 'void *'
+|   |   `-CStyleCastExpr 0x7fb0df844528 <col:12, col:20> 'void *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7fb0df8444f0 <col:20> 'int' 0
+|   `-BinaryOperator 0x7fb0df8446c0 <line:12:3, col:15> 'void *' '='
+|     |-MemberExpr 0x7fb0df8445d8 <col:3, col:6> 'void *' lvalue ->t3 0x7fb0df843ef8
+|     | `-ImplicitCastExpr 0x7fb0df8445c0 <col:3> 'z *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb0df844598 <col:3> 'z *' lvalue ParmVar 0x7fb0df844148 'x' 'z *'
+|     `-ImplicitCastExpr 0x7fb0df8446a8 <col:11, col:15> 'void *' <BitCast>
+|       `-UnaryOperator 0x7fb0df844688 <col:11, col:15> 'void **' prefix '&'
+|         `-MemberExpr 0x7fb0df844650 <col:12, col:15> 'void *' lvalue ->t1 0x7fb0df843e38
+|           `-ImplicitCastExpr 0x7fb0df844638 <col:12> 'z *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fb0df844610 <col:12> 'z *' lvalue ParmVar 0x7fb0df844148 'x' 'z *'
+|-VarDecl 0x7fb0df844720 <line:14:1, col:10> col:10 used v 'z':'z' extern
+`-FunctionDecl 0x7fb0df844840 <line:15:1, line:18:1> line:15:6 bar 'void (void)'
+  `-CompoundStmt 0x7fb0df844a60 <col:17, line:18:1>
+    |-BinaryOperator 0x7fb0df844928 <line:16:4, col:8> 'int' '='
+    | |-DeclRefExpr 0x7fb0df8448e0 <col:4> 'volatile int' lvalue Var 0x7fb0df844018 'y' 'volatile int'
+    | `-IntegerLiteral 0x7fb0df844908 <col:8> 'int' 0
+    `-CallExpr 0x7fb0df844a30 <line:17:4, col:10> 'void'
+      |-ImplicitCastExpr 0x7fb0df844a18 <col:4> 'void (*)(z *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb0df844950 <col:4> 'void (z *)' Function 0x7fb0df844250 'foo' 'void (z *)'
+      `-UnaryOperator 0x7fb0df8449a0 <col:8, col:9> 'z *' prefix '&'
+        `-DeclRefExpr 0x7fb0df844978 <col:9> 'z':'z' lvalue Var 0x7fb0df844720 'v' 'z':'z'

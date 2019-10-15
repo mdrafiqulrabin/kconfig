@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fd6520174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd651829200 <../Data/C2AST/pr70281.c:2:1, line:6:1> line:2:5 bch_stats_show 'int ()'
+  `-CompoundStmt 0x7fd651829520 <line:3:1, line:6:1>
+    `-ReturnStmt 0x7fd651829508 <line:4:3, col:62>
+      `-ImplicitCastExpr 0x7fd6518294f0 <col:10, col:62> 'int' <PointerToIntegral>
+        `-ConditionalOperator 0x7fd6518294c0 <col:10, col:62> 'char *'
+          |-TypeTraitExpr 0x7fd651829310 <col:10, col:53> 'int'
+          |-ImplicitCastExpr 0x7fd6518293c8 <col:57> 'char *' <ArrayToPointerDecay>
+          | `-StringLiteral 0x7fd651829378 <col:57> 'char [1]' lvalue ""
+          `-ImplicitCastExpr 0x7fd6518293e0 <col:62> 'char *' <ArrayToPointerDecay>
+            `-StringLiteral 0x7fd6518293a0 <col:62> 'char [1]' lvalue ""

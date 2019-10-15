@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f9e7002bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9e71008028 <../Data/C2AST/pr33434-4.c:5:1, col:16> col:7 used baz 'void *(void)'
+|-FunctionDecl 0x7f9e710081e8 <line:7:1, line:12:1> line:8:1 used bar 'void *(void *)' static
+| |-ParmVarDecl 0x7f9e71008120 <col:6, col:12> col:12 used x 'void *'
+| `-CompoundStmt 0x7f9e710083c8 <line:9:1, line:12:1>
+|   |-BinaryOperator 0x7f9e71008348 <line:10:3, col:12> 'void *' '='
+|   | |-DeclRefExpr 0x7f9e71008290 <col:3> 'void *' lvalue ParmVar 0x7f9e71008120 'x' 'void *'
+|   | `-CallExpr 0x7f9e71008320 <col:7, col:12> 'void *'
+|   |   `-ImplicitCastExpr 0x7f9e71008308 <col:7> 'void *(*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7f9e710082b8 <col:7> 'void *(void)' Function 0x7f9e71008028 'baz' 'void *(void)'
+|   `-ReturnStmt 0x7f9e710083b0 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7f9e71008398 <col:10> 'void *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9e71008370 <col:10> 'void *' lvalue ParmVar 0x7f9e71008120 'x' 'void *'
+`-FunctionDecl 0x7f9e71008490 <line:14:1, line:18:1> line:15:1 foo 'void *(void *)'
+  |-ParmVarDecl 0x7f9e71008400 <col:6, col:12> col:12 used x 'void *'
+  `-CompoundStmt 0x7f9e71008630 <line:16:1, line:18:1>
+    `-ReturnStmt 0x7f9e71008618 <line:17:3, col:16>
+      `-CallExpr 0x7f9e710085d0 <col:10, col:16> 'void *'
+        |-ImplicitCastExpr 0x7f9e710085b8 <col:10> 'void *(*)(void *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9e71008538 <col:10> 'void *(void *)' Function 0x7f9e710081e8 'bar' 'void *(void *)'
+        `-ImplicitCastExpr 0x7f9e71008600 <col:15> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7f9e71008560 <col:15> 'void *' lvalue ParmVar 0x7f9e71008400 'x' 'void *'

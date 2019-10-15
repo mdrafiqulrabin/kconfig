@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7ffc8401a8e8 <<invalid sloc>> <invalid sloc>
+`-RecordDecl 0x7ffc8401b560 <../Data/C2AST/pragma-ms_struct.c:16:1, line:21:1> line:16:8 struct foo definition
+  |-FieldDecl 0x7ffc8405c438 <line:18:3, col:7> col:7 a 'int'
+  |-FieldDecl 0x7ffc8405c498 <line:19:3, col:7> col:7 b 'int'
+  `-FieldDecl 0x7ffc8405c4f0 <line:20:3, col:8> col:8 c 'char'

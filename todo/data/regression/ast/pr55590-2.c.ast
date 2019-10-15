@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f941102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9411625358 <../Data/C2AST/pr55590-2.c:6:1, line:9:1> line:6:8 struct S definition
+| |-FieldDecl 0x7f9411625410 <line:8:3, col:10> col:10 a '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-FieldDecl 0x7f9411625468 <col:3, col:13> col:13 referenced b '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-RecordDecl 0x7f94116254b0 <line:11:1, line:15:1> line:11:8 struct T definition
+| |-FieldDecl 0x7f9411625578 <line:13:3, col:7> col:7 a 'int'
+| `-FieldDecl 0x7f9411625708 <line:14:3, col:15> col:12 referenced s 'struct S [8]'
+`-FunctionDecl 0x7f9411625a20 <line:18:1, line:25:1> line:18:6 foo 'void (struct T *, int, __m128)'
+  |-ParmVarDecl 0x7f9411625800 <col:11, col:21> col:21 used p 'struct T *'
+  |-ParmVarDecl 0x7f9411625878 <col:24, col:28> col:28 used i 'int'
+  |-ParmVarDecl 0x7f94116258e8 <col:31, col:38> col:38 used v '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  `-CompoundStmt 0x7f9411626048 <line:19:1, line:25:1>
+    |-DeclStmt 0x7f9411625b58 <line:20:3, col:13>
+    | `-VarDecl 0x7f9411625af8 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-BinaryOperator 0x7f9411625d08 <line:22:3, col:13> 'struct S':'struct S' '='
+    | |-DeclRefExpr 0x7f9411625b70 <col:3> 'struct S':'struct S' lvalue Var 0x7f9411625af8 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7f9411625cf0 <col:7, col:13> 'struct S':'struct S' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7f9411625cc8 <col:7, col:13> 'struct S':'struct S' lvalue
+    |     |-ImplicitCastExpr 0x7f9411625c98 <col:7, col:10> 'struct S *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7f9411625bd8 <col:7, col:10> 'struct S [8]' lvalue ->s 0x7f9411625708
+    |     |   `-ImplicitCastExpr 0x7f9411625bc0 <col:7> 'struct T *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7f9411625b98 <col:7> 'struct T *' lvalue ParmVar 0x7f9411625800 'p' 'struct T *'
+    |     `-ImplicitCastExpr 0x7f9411625cb0 <col:12> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9411625c10 <col:12> 'int' lvalue ParmVar 0x7f9411625878 'i' 'int'
+    |-BinaryOperator 0x7f9411625ec0 <line:23:3, col:26> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+    | |-MemberExpr 0x7f9411625d58 <col:3, col:5> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue .b 0x7f9411625468
+    | | `-DeclRefExpr 0x7f9411625d30 <col:3> 'struct S':'struct S' lvalue Var 0x7f9411625af8 's' 'struct S':'struct S'
+    | `-CallExpr 0x7f9411625e58 <col:9, col:26> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |   |-ImplicitCastExpr 0x7f9411625e40 <col:9> '__m128 (*)(__m128, __m128)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f9411625d90 <col:9> '__m128 (__m128, __m128)' Function 0x7f941195da50 '_mm_add_ps' '__m128 (__m128, __m128)'
+    |   |-ImplicitCastExpr 0x7f9411625e90 <col:20, col:22> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   | `-MemberExpr 0x7f9411625de0 <col:20, col:22> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue .b 0x7f9411625468
+    |   |   `-DeclRefExpr 0x7f9411625db8 <col:20> 'struct S':'struct S' lvalue Var 0x7f9411625af8 's' 'struct S':'struct S'
+    |   `-ImplicitCastExpr 0x7f9411625ea8 <col:25> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f9411625e18 <col:25> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7f94116258e8 'v' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    `-BinaryOperator 0x7f9411626020 <line:24:3, col:13> 'struct S':'struct S' '='
+      |-ArraySubscriptExpr 0x7f9411625fb8 <col:3, col:9> 'struct S':'struct S' lvalue
+      | |-ImplicitCastExpr 0x7f9411625f88 <col:3, col:6> 'struct S *' <ArrayToPointerDecay>
+      | | `-MemberExpr 0x7f9411625f28 <col:3, col:6> 'struct S [8]' lvalue ->s 0x7f9411625708
+      | |   `-ImplicitCastExpr 0x7f9411625f10 <col:3> 'struct T *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f9411625ee8 <col:3> 'struct T *' lvalue ParmVar 0x7f9411625800 'p' 'struct T *'
+      | `-ImplicitCastExpr 0x7f9411625fa0 <col:8> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9411625f60 <col:8> 'int' lvalue ParmVar 0x7f9411625878 'i' 'int'
+      `-ImplicitCastExpr 0x7f9411626008 <col:13> 'struct S':'struct S' <LValueToRValue>
+        `-DeclRefExpr 0x7f9411625fe0 <col:13> 'struct S':'struct S' lvalue Var 0x7f9411625af8 's' 'struct S':'struct S'

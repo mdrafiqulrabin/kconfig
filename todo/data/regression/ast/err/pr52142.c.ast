@@ -1,0 +1,28 @@
+../Data/C2AST/pr52142.c:16:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fbd7501b8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbd7501be60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbd7501bb80 '__int128'
+|-TypedefDecl 0x7fbd7501bed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbd7501bba0 'unsigned __int128'
+|-TypedefDecl 0x7fbd7501c1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbd7501bfb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbd7501bf28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbd7501c240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbd7501c200 'char *'
+|   `-BuiltinType 0x7fbd7501b980 'char'
+|-TypedefDecl 0x7fbd7501c508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbd7501c4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbd7501c320 'struct __va_list_tag'
+|     `-Record 0x7fbd7501c298 '__va_list_tag'
+|-VarDecl 0x7fbd7501c578 <../Data/C2AST/pr52142.c:3:1, col:21> col:12 used global 'int' static cinit
+| `-IntegerLiteral 0x7fbd7581f240 <col:21> 'int' 0
+|-FunctionDecl 0x7fbd7581f2a8 <line:5:1, line:9:1> line:6:20 purefunc 'void ()' static inline
+| `-CompoundStmt 0x7fbd7581f390 <line:7:1, line:9:1>
+|   `-UnaryOperator 0x7fbd7581f370 <line:8:3, col:9> 'int' postfix '++'
+|     `-DeclRefExpr 0x7fbd7581f348 <col:3> 'int' lvalue Var 0x7fbd7501c578 'global' 'int'
+|-FunctionDecl 0x7fbd7581f3c8 <line:11:1, line:12:8> col:6 f 'void ()'
+`-FunctionDecl 0x7fbd7581f488 <line:14:1, line:20:1> line:14:6 push 'void ()'
+  `-CompoundStmt 0x7fbd7581f540 <line:15:1, line:20:1>

@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f925b0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f925b059050 <../Data/C2AST/pr25805.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f925b0590f0 prev 0x7f925b059050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f925b0592a8 <line:6:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f925b059348 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f925b0593b0 prev 0x7f925b0592a8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f925b0591a8 <col:19> col:22 'int'
+|-RecordDecl 0x7f925b059458 <line:8:1, col:26> col:1 struct definition
+| |-FieldDecl 0x7f925b059518 <col:10, col:14> col:14 a 'int'
+| `-FieldDecl 0x7f925b0595b0 <col:17, col:23> col:21 referenced x 'int []'
+|-VarDecl 0x7f925b059650 <col:1, col:40> col:28 used d1 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)' cinit
+| `-InitListExpr 0x7f925b059780 <col:33, col:40> 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)'
+|   |-IntegerLiteral 0x7f925b0596f0 <col:35> 'int' 0
+|   `-InitListExpr 0x7f925b0597d0 <col:38> 'int [1]'
+|     `-IntegerLiteral 0x7f925b059710 <col:38> 'int' 0
+|-VarDecl 0x7f925b059888 <line:9:1, col:10> col:5 used d2 'int' cinit
+| `-IntegerLiteral 0x7f925b0598e8 <col:10> 'int' 0
+`-FunctionDecl 0x7f925b059960 <line:11:1, line:20:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7f925b059ef0 <line:13:1, line:20:1>
+    |-BinaryOperator 0x7f925b059a48 <line:14:3, col:8> 'int' '='
+    | |-DeclRefExpr 0x7f925b059a00 <col:3> 'int' lvalue Var 0x7f925b059888 'd2' 'int'
+    | `-IntegerLiteral 0x7f925b059a28 <col:8> 'int' 1
+    |-IfStmt 0x7f925b059c18 <line:15:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f925b059b10 <line:15:7, col:33> 'int' '!='
+    | | |-UnaryExprOrTypeTraitExpr 0x7f925b059ab8 <col:7, col:17> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7f925b059a98 <col:14, col:17> 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)' lvalue
+    | | |   `-DeclRefExpr 0x7f925b059a70 <col:15> 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)' lvalue Var 0x7f925b059650 'd1' 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)'
+    | | `-UnaryExprOrTypeTraitExpr 0x7f925b059af0 <col:22, col:33> 'unsigned long' sizeof 'int'
+    | |-CallExpr 0x7f925b059bf0 <line:16:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f925b059bd8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f925b059b88 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f925b0590f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f925b059e00 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f925b059d70 <line:17:7, col:18> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f925b059d58 <col:7, col:13> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7f925b059d10 <col:7, col:13> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7f925b059cf8 <col:7, col:10> 'int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7f925b059c78 <col:7, col:10> 'int []' lvalue .x 0x7f925b0595b0
+    | | |   |   `-DeclRefExpr 0x7f925b059c50 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)' lvalue Var 0x7f925b059650 'd1' 'struct (anonymous struct at ../Data/C2AST/pr25805.c:8:1)':'struct (anonymous at ../Data/C2AST/pr25805.c:8:1)'
+    | | |   `-IntegerLiteral 0x7f925b059cb0 <col:12> 'int' 0
+    | | `-IntegerLiteral 0x7f925b059d38 <col:18> 'int' 0
+    | |-CallExpr 0x7f925b059dd8 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f925b059dc0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f925b059d98 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f925b0590f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f925b059ec0 <line:19:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f925b059ea8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f925b059e38 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f925b0593b0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7f925b059e60 <col:9> 'int' 0

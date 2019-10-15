@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7ffd6900a6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffd6a000068 <../Data/C2AST/pr42269-2.c:3:1, line:7:1> line:4:1 used foo 'long long (unsigned short)' static
+| |-ParmVarDecl 0x7ffd6900b378 <col:6, col:21> col:21 used s 'unsigned short'
+| |-CompoundStmt 0x7ffd6a000248 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7ffd6a000230 <line:6:3, col:18>
+| |   `-ImplicitCastExpr 0x7ffd6a000218 <col:10, col:18> 'long long' <IntegralCast>
+| |     `-CStyleCastExpr 0x7ffd6a0001f0 <col:10, col:18> 'short' <IntegralCast>
+| |       `-ImplicitCastExpr 0x7ffd6a0001d8 <col:18> 'unsigned short' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ffd6a000198 <col:18> 'unsigned short' lvalue ParmVar 0x7ffd6900b378 's' 'unsigned short'
+| `-NoInlineAttr 0x7ffd6a000110 <line:3:33>
+|-VarDecl 0x7ffd6a000278 <line:9:1, col:20> col:16 used s 'unsigned short' cinit
+| `-ImplicitCastExpr 0x7ffd6a0002f8 <col:20> 'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7ffd6a0002d8 <col:20> 'int' 65535
+`-FunctionDecl 0x7ffd6a0003d8 <line:11:1, line:15:1> line:12:1 main 'int (void)'
+  `-CompoundStmt 0x7ffd6a000660 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7ffd6a000648 <line:14:3, col:25>
+      `-BinaryOperator 0x7ffd6a000620 <col:10, col:25> 'int' '!='
+        |-BinaryOperator 0x7ffd6a0005c0 <col:10, col:20> 'long long' '+'
+        | |-CallExpr 0x7ffd6a000540 <col:10, col:16> 'long long'
+        | | |-ImplicitCastExpr 0x7ffd6a000528 <col:10> 'long long (*)(unsigned short)' <FunctionToPointerDecay>
+        | | | `-DeclRefExpr 0x7ffd6a0004a8 <col:10> 'long long (unsigned short)' Function 0x7ffd6a000068 'foo' 'long long (unsigned short)'
+        | | `-ImplicitCastExpr 0x7ffd6a000570 <col:15> 'unsigned short' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7ffd6a0004d0 <col:15> 'unsigned short' lvalue Var 0x7ffd6a000278 's' 'unsigned short'
+        | `-ImplicitCastExpr 0x7ffd6a0005a8 <col:20> 'long long' <IntegralCast>
+        |   `-IntegerLiteral 0x7ffd6a000588 <col:20> 'int' 1
+        `-ImplicitCastExpr 0x7ffd6a000608 <col:25> 'long long' <IntegralCast>
+          `-IntegerLiteral 0x7ffd6a0005e8 <col:25> 'int' 0

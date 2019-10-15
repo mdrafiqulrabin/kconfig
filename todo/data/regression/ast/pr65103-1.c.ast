@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ff6b0028ae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff6b0029760 <../Data/C2AST/pr65103-1.c:6:9, line:11:1> line:6:16 struct S definition
+| |-FieldDecl 0x7ff6b0817438 <line:8:3, col:7> col:7 referenced a 'int'
+| |-FieldDecl 0x7ff6b0817498 <line:9:3, col:7> col:7 referenced sum 'int'
+| `-FieldDecl 0x7ff6b08174f8 <line:10:3, col:7> col:7 referenced delta 'int'
+|-TypedefDecl 0x7ff6b0817590 <line:6:1, line:11:3> col:3 referenced S 'struct S':'struct S'
+| `-ElaboratedType 0x7ff6b0817540 'struct S' sugar
+|   `-RecordType 0x7ff6b0817400 'struct S'
+|     `-Record 0x7ff6b0029760 'S'
+|-VarDecl 0x7ff6b0817630 <line:13:1, col:3> col:3 used gs 'S':'struct S'
+`-FunctionDecl 0x7ff6b08177b8 <line:14:1, line:19:1> line:14:5 global_opt 'int (int)'
+  |-ParmVarDecl 0x7ff6b08176e8 <col:17, col:21> col:21 used max 'int'
+  `-CompoundStmt 0x7ff6b0817b58 <line:15:1, line:19:1>
+    |-WhileStmt 0x7ff6b0817aa8 <line:16:3, line:17:18>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff6b0817918 <line:16:10, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff6b08178e8 <col:10, col:13> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7ff6b0817888 <col:10, col:13> 'int' lvalue .sum 0x7ff6b0817498
+    | | |   `-DeclRefExpr 0x7ff6b0817860 <col:10> 'S':'struct S' lvalue Var 0x7ff6b0817630 'gs' 'S':'struct S'
+    | | `-ImplicitCastExpr 0x7ff6b0817900 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff6b08178c0 <col:19> 'int' lvalue ParmVar 0x7ff6b08176e8 'max' 'int'
+    | `-CompoundAssignOperator 0x7ff6b0817a70 <line:17:5, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-MemberExpr 0x7ff6b08179c0 <col:5, col:8> 'int' lvalue .sum 0x7ff6b0817498
+    |   | `-DeclRefExpr 0x7ff6b0817998 <col:5> 'S':'struct S' lvalue Var 0x7ff6b0817630 'gs' 'S':'struct S'
+    |   `-ImplicitCastExpr 0x7ff6b0817a58 <col:15, col:18> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7ff6b0817a20 <col:15, col:18> 'int' lvalue .delta 0x7ff6b08174f8
+    |       `-DeclRefExpr 0x7ff6b08179f8 <col:15> 'S':'struct S' lvalue Var 0x7ff6b0817630 'gs' 'S':'struct S'
+    `-ReturnStmt 0x7ff6b0817b40 <line:18:3, col:13>
+      `-ImplicitCastExpr 0x7ff6b0817b28 <col:10, col:13> 'int' <LValueToRValue>
+        `-MemberExpr 0x7ff6b0817af0 <col:10, col:13> 'int' lvalue .a 0x7ff6b0817438
+          `-DeclRefExpr 0x7ff6b0817ac8 <col:10> 'S':'struct S' lvalue Var 0x7ff6b0817630 'gs' 'S':'struct S'

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fad390272e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fad39027f78 <../Data/C2AST/pr65058.c:5:1, col:12> col:12 used externvar 'int' extern
+|-FunctionDecl 0x7fad39069100 <line:6:1, col:28> col:13 used externfunc 'void (void)' extern
+|-VarDecl 0x7fad390691e0 <line:8:1, col:18> col:6 localvar 'int *' cinit
+| `-UnaryOperator 0x7fad39069268 <col:17, col:18> 'int *' prefix '&'
+|   `-DeclRefExpr 0x7fad39069240 <col:18> 'int' lvalue Var 0x7fad39027f78 'externvar' 'int'
+`-VarDecl 0x7fad390693b8 <line:9:1, col:27> col:8 localfunc 'void (*)(void)' cinit
+  `-ImplicitCastExpr 0x7fad39069440 <col:27> 'void (*)(void)' <FunctionToPointerDecay>
+    `-DeclRefExpr 0x7fad39069418 <col:27> 'void (void)' Function 0x7fad39069100 'externfunc' 'void (void)'

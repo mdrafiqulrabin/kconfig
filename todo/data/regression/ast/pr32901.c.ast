@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f95fe8164e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f95fe817160 <../Data/C2AST/pr32901.c:4:1, line:8:1> line:4:8 struct foo definition
+| |-FieldDecl 0x7f95ff020458 <line:5:9, col:22> col:18 a1 'unsigned int'
+| | `-IntegerLiteral 0x7f95ff020420 <col:22> 'int' 1
+| |-FieldDecl 0x7f95ff0204d8 <line:6:9, col:22> col:18 a2 'unsigned int'
+| | `-IntegerLiteral 0x7f95ff0204a0 <col:22> 'int' 3
+| `-FieldDecl 0x7f95ff020558 <line:7:9, col:20> col:9 'unsigned int'
+|   `-IntegerLiteral 0x7f95ff020520 <col:20> 'int' 4
+|-VarDecl 0x7f95ff0205f0 <line:10:1, col:19> col:19 used thefoo 'struct foo':'struct foo' extern
+|-VarDecl 0x7f95ff0206b0 <col:1, col:27> col:27 used theotherfoo 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7f95ff0207f0 <line:12:1, line:24:1> line:12:6 setup_foo 'void (void)'
+  `-CompoundStmt 0x7f95ff020e10 <line:13:1, line:24:1>
+    |-DeclStmt 0x7f95ff020aa8 <line:14:9, line:17:10>
+    | `-VarDecl 0x7f95ff0208b0 <line:14:9, line:17:9> line:14:26 used init 'const struct foo':'const struct foo' cinit
+    |   `-InitListExpr 0x7f95ff020a20 <col:33, line:17:9> 'struct foo':'struct foo'
+    |     |-ImplicitCastExpr 0x7f95ff020a78 <line:15:23> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f95ff020910 <col:23> 'int' 1
+    |     `-ImplicitCastExpr 0x7f95ff020a90 <line:16:23> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7f95ff020970 <col:23> 'int' 5
+    |-DeclStmt 0x7f95ff020cd8 <line:18:2, line:21:3>
+    | `-VarDecl 0x7f95ff020ae0 <line:18:2, line:21:2> line:18:28 used volinit 'const volatile struct foo':'const volatile struct foo' cinit
+    |   `-InitListExpr 0x7f95ff020c50 <col:38, line:21:2> 'struct foo':'struct foo'
+    |     |-ImplicitCastExpr 0x7f95ff020ca8 <line:19:9> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f95ff020b40 <col:9> 'int' 0
+    |     `-ImplicitCastExpr 0x7f95ff020cc0 <line:20:9> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7f95ff020ba0 <col:9> 'int' 6
+    |-BinaryOperator 0x7f95ff020d58 <line:22:9, col:18> 'struct foo':'struct foo' '='
+    | |-DeclRefExpr 0x7f95ff020cf0 <col:9> 'struct foo':'struct foo' lvalue Var 0x7f95ff0205f0 'thefoo' 'struct foo':'struct foo'
+    | `-ImplicitCastExpr 0x7f95ff020d40 <col:18> 'struct foo':'struct foo' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f95ff020d18 <col:18> 'const struct foo':'const struct foo' lvalue Var 0x7f95ff0208b0 'init' 'const struct foo':'const struct foo'
+    `-BinaryOperator 0x7f95ff020de8 <line:23:2, col:16> 'struct foo':'struct foo' '='
+      |-DeclRefExpr 0x7f95ff020d80 <col:2> 'struct foo':'struct foo' lvalue Var 0x7f95ff0206b0 'theotherfoo' 'struct foo':'struct foo'
+      `-ImplicitCastExpr 0x7f95ff020dd0 <col:16> 'struct foo':'struct foo' <LValueToRValue>
+        `-DeclRefExpr 0x7f95ff020da8 <col:16> 'const volatile struct foo':'const volatile struct foo' lvalue Var 0x7f95ff020ae0 'volinit' 'const volatile struct foo':'const volatile struct foo'

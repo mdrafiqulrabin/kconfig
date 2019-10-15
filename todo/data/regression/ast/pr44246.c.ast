@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fe1fa0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe1f98293c8 <../Data/C2AST/pr44246.c:1:1, line:5:1> line:1:5 main 'int (int, char **)'
+| |-ParmVarDecl 0x7fe1fa018178 <col:10, col:14> col:14 argc 'int'
+| |-ParmVarDecl 0x7fe1f98292b0 <col:20, col:31> col:26 used argv 'char **':'char **'
+| `-CompoundStmt 0x7fe1f9829b60 <line:2:1, line:5:1>
+|   |-CallExpr 0x7fe1f9829800 <line:3:3, col:22> 'char *'
+|   | |-ImplicitCastExpr 0x7fe1f98297e8 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe1f9829670 <col:3> 'char *(char *, const char *)' Function 0x7fe1f9829500 'strcat' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7fe1f9829838 <col:10, col:16> 'char *' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7fe1f98296f8 <col:10, col:16> 'char *' lvalue
+|   | |   |-ImplicitCastExpr 0x7fe1f98296e0 <col:10> 'char **':'char **' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fe1f9829698 <col:10> 'char **':'char **' lvalue ParmVar 0x7fe1f98292b0 'argv' 'char **':'char **'
+|   | |   `-IntegerLiteral 0x7fe1f98296c0 <col:15> 'int' 0
+|   | `-ImplicitCastExpr 0x7fe1f9829868 <col:19> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fe1f9829850 <col:19> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7fe1f9829758 <col:19> 'char [2]' lvalue "X"
+|   `-ReturnStmt 0x7fe1f9829b48 <line:4:3, col:24>
+|     `-ImplicitCastExpr 0x7fe1f9829b30 <col:10, col:24> 'int' <IntegralCast>
+|       `-CallExpr 0x7fe1f9829ad0 <col:10, col:24> 'unsigned long'
+|         |-ImplicitCastExpr 0x7fe1f9829ab8 <col:10> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fe1f98299c0 <col:10> 'unsigned long (const char *)' Function 0x7fe1f98298b8 'strlen' 'unsigned long (const char *)'
+|         `-ImplicitCastExpr 0x7fe1f9829b18 <col:17, col:23> 'const char *' <BitCast>
+|           `-ImplicitCastExpr 0x7fe1f9829b00 <col:17, col:23> 'char *' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7fe1f9829a48 <col:17, col:23> 'char *' lvalue
+|               |-ImplicitCastExpr 0x7fe1f9829a30 <col:17> 'char **':'char **' <LValueToRValue>
+|               | `-DeclRefExpr 0x7fe1f98299e8 <col:17> 'char **':'char **' lvalue ParmVar 0x7fe1f98292b0 'argv' 'char **':'char **'
+|               `-IntegerLiteral 0x7fe1f9829a10 <col:22> 'int' 0
+|-FunctionDecl 0x7fe1f9829500 <line:3:3> col:3 implicit used strcat 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7fe1f98295a0 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7fe1f9829600 <<invalid sloc>> <invalid sloc> 'const char *'
+`-FunctionDecl 0x7fe1f98298b8 <line:4:10> col:10 implicit used strlen 'unsigned long (const char *)' extern
+  `-ParmVarDecl 0x7fe1f9829958 <<invalid sloc>> <invalid sloc> 'const char *'

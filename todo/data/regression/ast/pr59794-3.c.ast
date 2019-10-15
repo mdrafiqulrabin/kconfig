@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fe1090166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe109813400 <../Data/C2AST/pr59794-3.c:7:1, col:13> col:13 referenced __v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fe109017380 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fe1090167e0 'int'
+|-VarDecl 0x7fe109813490 <line:9:1, col:15> col:15 used x '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' extern
+|-FunctionDecl 0x7fe109813640 <line:11:1, col:24> col:13 used bar 'void (__v8si)' extern
+| `-ParmVarDecl 0x7fe109813540 <col:18> col:24 '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+`-FunctionDecl 0x7fe1098137b0 <line:12:1, line:16:1> line:13:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe109813958 <line:14:1, line:16:1>
+    `-CallExpr 0x7fe109813910 <line:15:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fe1098138f8 <col:3> 'void (*)(__v8si)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe109813850 <col:3> 'void (__v8si)' Function 0x7fe109813640 'bar' 'void (__v8si)'
+      `-ImplicitCastExpr 0x7fe109813940 <col:8> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe109813878 <col:8> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fe109813490 'x' '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'

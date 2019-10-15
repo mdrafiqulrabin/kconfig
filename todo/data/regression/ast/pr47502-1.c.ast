@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f8eaf00e8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8eaf050b70 <../Data/C2AST/pr47502-1.c:4:1, line:8:1> line:5:1 foo 'void (const void *, void *, long)'
+  |-ParmVarDecl 0x7f8eaf00f5a0 <col:6, col:18> col:18 used xxxxx 'const void *'
+  |-ParmVarDecl 0x7f8eaf050a18 <col:25, col:31> col:31 used yyyyy 'void *'
+  |-ParmVarDecl 0x7f8eaf050a90 <col:38, col:43> col:43 used y 'long'
+  `-CompoundStmt 0x7f8eaf050f28 <line:6:1, line:8:1>
+    `-GCCAsmStmt 0x7f8eaf050e98 <line:7:3, col:60>
+      |-ImplicitCastExpr 0x7f8eaf050e50 <col:28, col:34> 'const void *' <LValueToRValue>
+      | `-ParenExpr 0x7f8eaf050d60 <col:28, col:34> 'const void *' lvalue
+      |   `-DeclRefExpr 0x7f8eaf050d38 <col:29> 'const void *' lvalue ParmVar 0x7f8eaf00f5a0 'xxxxx' 'const void *'
+      |-ImplicitCastExpr 0x7f8eaf050e68 <col:43, col:49> 'void *' <LValueToRValue>
+      | `-ParenExpr 0x7f8eaf050dd8 <col:43, col:49> 'void *' lvalue
+      |   `-DeclRefExpr 0x7f8eaf050db0 <col:44> 'void *' lvalue ParmVar 0x7f8eaf050a18 'yyyyy' 'void *'
+      `-ImplicitCastExpr 0x7f8eaf050e80 <col:58> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7f8eaf050e28 <col:58> 'long' lvalue ParmVar 0x7f8eaf050a90 'y' 'long'

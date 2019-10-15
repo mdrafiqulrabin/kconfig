@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7ffabb0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffabb814268 <../Data/C2AST/pr68412.c:7:1, line:11:1> line:8:1 fn1 'int (int)'
+| |-ParmVarDecl 0x7ffabb018178 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ffabb814478 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7ffabb814460 <line:10:3, col:23>
+|     `-BinaryOperator 0x7ffabb814438 <col:10, col:23> 'int' '=='
+|       |-ImplicitCastExpr 0x7ffabb814420 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffabb814350 <col:10> 'int' lvalue ParmVar 0x7ffabb018178 'i' 'int'
+|       `-ParenExpr 0x7ffabb814400 <col:15, col:23> 'int'
+|         `-BinaryOperator 0x7ffabb8143d8 <col:16, col:22> 'int' '<<'
+|           |-UnaryOperator 0x7ffabb814398 <col:16, col:17> 'int' prefix '-'
+|           | `-IntegerLiteral 0x7ffabb814378 <col:17> 'int' 1
+|           `-IntegerLiteral 0x7ffabb8143b8 <col:22> 'int' 8
+|-FunctionDecl 0x7ffabb814538 <line:13:1, line:17:1> line:14:1 fn2 'int (int)'
+| |-ParmVarDecl 0x7ffabb8144a8 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ffabb814780 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7ffabb814768 <line:16:3, col:22>
+|     `-BinaryOperator 0x7ffabb814740 <col:10, col:22> 'int' '=='
+|       |-ImplicitCastExpr 0x7ffabb814728 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffabb8145e0 <col:10> 'int' lvalue ParmVar 0x7ffabb8144a8 'i' 'int'
+|       `-ParenExpr 0x7ffabb814708 <col:15, col:22> 'int'
+|         `-BinaryOperator 0x7ffabb8146e0 <col:16, line:5:39> 'int' '<<'
+|           |-IntegerLiteral 0x7ffabb814608 <line:16:16> 'int' 1
+|           `-ParenExpr 0x7ffabb8146c0 <line:5:11, col:39> 'unsigned long'
+|             `-BinaryOperator 0x7ffabb814698 <col:12, <built-in>:35:22> 'unsigned long' '*'
+|               |-UnaryExprOrTypeTraitExpr 0x7ffabb814640 <../Data/C2AST/pr68412.c:5:12, col:23> 'unsigned long' sizeof 'int'
+|               `-ImplicitCastExpr 0x7ffabb814680 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+|                 `-IntegerLiteral 0x7ffabb814660 <col:22> 'int' 8
+|-FunctionDecl 0x7ffabb814840 <../Data/C2AST/pr68412.c:19:1, line:23:1> line:20:1 fn3 'int (int)'
+| |-ParmVarDecl 0x7ffabb8147b0 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ffabb814ae8 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7ffabb814ad0 <line:22:3, col:27>
+|     `-BinaryOperator 0x7ffabb814aa8 <col:10, col:27> 'int' '=='
+|       |-ImplicitCastExpr 0x7ffabb814a90 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffabb8148e8 <col:10> 'int' lvalue ParmVar 0x7ffabb8147b0 'i' 'int'
+|       `-BinaryOperator 0x7ffabb814a68 <col:15, col:27> 'int' '<<'
+|         |-IntegerLiteral 0x7ffabb814910 <col:15> 'int' 10
+|         `-ParenExpr 0x7ffabb814a48 <col:21, col:27> 'unsigned long'
+|           `-BinaryOperator 0x7ffabb814a20 <line:5:11, line:22:26> 'unsigned long' '-'
+|             |-ParenExpr 0x7ffabb8149c8 <line:5:11, col:39> 'unsigned long'
+|             | `-BinaryOperator 0x7ffabb8149a0 <col:12, <built-in>:35:22> 'unsigned long' '*'
+|             |   |-UnaryExprOrTypeTraitExpr 0x7ffabb814948 <../Data/C2AST/pr68412.c:5:12, col:23> 'unsigned long' sizeof 'int'
+|             |   `-ImplicitCastExpr 0x7ffabb814988 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+|             |     `-IntegerLiteral 0x7ffabb814968 <col:22> 'int' 8
+|             `-ImplicitCastExpr 0x7ffabb814a08 <../Data/C2AST/pr68412.c:22:26> 'unsigned long' <IntegralCast>
+|               `-IntegerLiteral 0x7ffabb8149e8 <col:26> 'int' 1
+|-FunctionDecl 0x7ffabb814ba8 <line:25:1, line:29:1> line:26:1 fn4 'int (int)'
+| |-ParmVarDecl 0x7ffabb814b18 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ffabb814d58 <line:27:1, line:29:1>
+|   `-ReturnStmt 0x7ffabb814d40 <line:28:3, col:21>
+|     `-BinaryOperator 0x7ffabb814d18 <col:10, col:21> 'int' '=='
+|       |-ImplicitCastExpr 0x7ffabb814d00 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffabb814c50 <col:10> 'int' lvalue ParmVar 0x7ffabb814b18 'i' 'int'
+|       `-BinaryOperator 0x7ffabb814cd8 <col:15, col:21> 'int' '<<'
+|         |-IntegerLiteral 0x7ffabb814c78 <col:15> 'int' 1
+|         `-UnaryOperator 0x7ffabb814cb8 <col:20, col:21> 'int' prefix '-'
+|           `-IntegerLiteral 0x7ffabb814c98 <col:21> 'int' 1
+|-FunctionDecl 0x7ffabb814e18 <line:31:1, line:35:1> line:32:1 fn5 'int (int)'
+| |-ParmVarDecl 0x7ffabb814d88 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7ffabb815040 <line:33:1, line:35:1>
+|   `-ReturnStmt 0x7ffabb815028 <line:34:3, line:5:39>
+|     `-BinaryOperator 0x7ffabb815000 <line:34:10, line:5:39> 'int' '=='
+|       |-ImplicitCastExpr 0x7ffabb814fe8 <line:34:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffabb814ec0 <col:10> 'int' lvalue ParmVar 0x7ffabb814d88 'i' 'int'
+|       `-BinaryOperator 0x7ffabb814fc0 <col:15, line:5:39> 'int' '>>'
+|         |-IntegerLiteral 0x7ffabb814ee8 <line:34:15> 'int' 1
+|         `-ParenExpr 0x7ffabb814fa0 <line:5:11, col:39> 'unsigned long'
+|           `-BinaryOperator 0x7ffabb814f78 <col:12, <built-in>:35:22> 'unsigned long' '*'
+|             |-UnaryExprOrTypeTraitExpr 0x7ffabb814f20 <../Data/C2AST/pr68412.c:5:12, col:23> 'unsigned long' sizeof 'int'
+|             `-ImplicitCastExpr 0x7ffabb814f60 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+|               `-IntegerLiteral 0x7ffabb814f40 <col:22> 'int' 8
+`-FunctionDecl 0x7ffabb815100 <../Data/C2AST/pr68412.c:37:1, line:41:1> line:38:1 fn6 'int (int)'
+  |-ParmVarDecl 0x7ffabb815070 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7ffabb82bcc0 <line:39:1, line:41:1>
+    `-ReturnStmt 0x7ffabb82bca8 <line:40:3, col:21>
+      `-BinaryOperator 0x7ffabb82bc80 <col:10, col:21> 'int' '=='
+        |-ImplicitCastExpr 0x7ffabb82bc68 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7ffabb8151a8 <col:10> 'int' lvalue ParmVar 0x7ffabb815070 'i' 'int'
+        `-BinaryOperator 0x7ffabb82bc40 <col:15, col:21> 'int' '>>'
+          |-IntegerLiteral 0x7ffabb8151d0 <col:15> 'int' 1
+          `-UnaryOperator 0x7ffabb82bc20 <col:20, col:21> 'int' prefix '-'
+            `-IntegerLiteral 0x7ffabb82bc00 <col:21> 'int' 1

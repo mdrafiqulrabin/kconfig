@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fd6f882b4e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd6f886d000 <../Data/C2AST/pr32216.c:4:1, col:26> col:14 used wlookup2 'unsigned int [203]'
+`-FunctionDecl 0x7fd6f886d180 <line:6:1, line:13:1> line:7:1 SetSoundVariables 'void (int)'
+  |-ParmVarDecl 0x7fd6f886d0b8 <col:20, col:24> col:24 used x 'int'
+  `-CompoundStmt 0x7fd6f886d5b0 <line:8:1, line:13:1>
+    `-ForStmt 0x7fd6f886d578 <line:9:3, line:12:3>
+      |-BinaryOperator 0x7fd6f886d270 <line:9:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fd6f886d228 <col:8> 'int' lvalue ParmVar 0x7fd6f886d0b8 'x' 'int'
+      | `-IntegerLiteral 0x7fd6f886d250 <col:12> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd6f886d2f8 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd6f886d2e0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd6f886d298 <col:15> 'int' lvalue ParmVar 0x7fd6f886d0b8 'x' 'int'
+      | `-IntegerLiteral 0x7fd6f886d2c0 <col:19> 'int' 32
+      |-UnaryOperator 0x7fd6f886d348 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd6f886d320 <col:23> 'int' lvalue ParmVar 0x7fd6f886d0b8 'x' 'int'
+      `-CompoundStmt 0x7fd6f886d560 <line:10:3, line:12:3>
+        `-BinaryOperator 0x7fd6f886d538 <line:11:5, col:33> 'unsigned int' '='
+          |-ArraySubscriptExpr 0x7fd6f886d418 <col:5, col:15> 'unsigned int' lvalue
+          | |-ImplicitCastExpr 0x7fd6f886d3e8 <col:5> 'unsigned int *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7fd6f886d368 <col:5> 'unsigned int [203]' lvalue Var 0x7fd6f886d000 'wlookup2' 'unsigned int [203]'
+          | `-ImplicitCastExpr 0x7fd6f886d400 <col:14> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd6f886d390 <col:14> 'int' lvalue ParmVar 0x7fd6f886d0b8 'x' 'int'
+          `-ImplicitCastExpr 0x7fd6f886d520 <col:19, col:33> 'unsigned int' <FloatingToIntegral>
+            `-BinaryOperator 0x7fd6f886d4f8 <col:19, col:33> 'double' '/'
+              |-CStyleCastExpr 0x7fd6f886d478 <col:19, col:28> 'double' <IntegralToFloating>
+              | `-IntegerLiteral 0x7fd6f886d440 <col:28> 'int' 16
+              `-ImplicitCastExpr 0x7fd6f886d4e0 <col:33> 'double' <IntegralToFloating>
+                `-ImplicitCastExpr 0x7fd6f886d4c8 <col:33> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fd6f886d4a0 <col:33> 'int' lvalue ParmVar 0x7fd6f886d0b8 'x' 'int'

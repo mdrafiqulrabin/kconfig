@@ -1,0 +1,148 @@
+../Data/C2AST/pr64744-1.c:8:3: error: non-ASM statement in naked function is not supported
+  int aa = 0;
+  ^
+../Data/C2AST/pr64744-1.c:5:16: note: attribute is here
+__attribute__((naked))
+               ^
+../Data/C2AST/pr64744-1.c:14:3: error: non-ASM statement in naked function is not supported
+  char aa [ ] = {};  
+  ^
+../Data/C2AST/pr64744-1.c:12:16: note: attribute is here
+__attribute__((naked))
+               ^
+../Data/C2AST/pr64744-1.c:22:3: error: non-ASM statement in naked function is not supported
+  char aa [1] = {0};
+  ^
+../Data/C2AST/pr64744-1.c:20:16: note: attribute is here
+__attribute__((naked))
+               ^
+../Data/C2AST/pr64744-1.c:30:3: error: non-ASM statement in naked function is not supported
+  char aa [2] = {0,0};  
+  ^
+../Data/C2AST/pr64744-1.c:28:16: note: attribute is here
+__attribute__((naked))
+               ^
+../Data/C2AST/pr64744-1.c:34:3: error: non-ASM statement in naked function is not supported
+  char aa [3] = {0,0,0};  
+  ^
+../Data/C2AST/pr64744-1.c:32:16: note: attribute is here
+__attribute__((naked))
+               ^
+../Data/C2AST/pr64744-1.c:39:3: error: non-ASM statement in naked function is not supported
+  char aa [4] = {0,0,0,0};  
+  ^
+../Data/C2AST/pr64744-1.c:37:16: note: attribute is here
+__attribute__((naked))
+               ^
+TranslationUnitDecl 0x7f96e782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f96e782c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f96e782bf80 '__int128'
+|-TypedefDecl 0x7f96e782c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f96e782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f96e782c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f96e782c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f96e782c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f96e782c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f96e782c600 'char *'
+|   `-BuiltinType 0x7f96e782bd80 'char'
+|-TypedefDecl 0x7f96e782c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f96e782c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f96e782c720 'struct __va_list_tag'
+|     `-Record 0x7f96e782c698 '__va_list_tag'
+|-FunctionDecl 0x7f96e786e800 <../Data/C2AST/pr64744-1.c:5:1, line:10:1> line:6:6 invalid foo1 'void ()'
+| |-CompoundStmt 0x7f96e786eb18 <line:7:1, line:10:1>
+| | |-DeclStmt 0x7f96e786e9c0 <line:8:3, col:13>
+| | | `-VarDecl 0x7f96e786e940 <col:3, col:12> col:7 aa 'int' cinit
+| | |   `-IntegerLiteral 0x7f96e786e9a0 <col:12> 'int' 0
+| | `-DeclStmt 0x7f96e786eb00 <line:9:3, col:15>
+| |   `-VarDecl 0x7f96e786e9f0 <col:3, col:14> col:7 ab 'int' cinit
+| |     `-InitListExpr 0x7f96e786eab8 <col:12, col:14> 'int'
+| |       `-IntegerLiteral 0x7f96e786ea50 <col:13> 'int' 0
+| `-NakedAttr 0x7f96e786e8a0 <line:5:16>
+|-FunctionDecl 0x7f96e786eb58 <line:12:1, line:18:1> line:13:6 invalid foo2 'void ()'
+| |-CompoundStmt 0x7f96e786f240 <col:13, line:18:1>
+| | |-DeclStmt 0x7f96e786eda8 <line:14:3, col:19>
+| | | `-VarDecl 0x7f96e786ec88 <col:3, col:18> col:8 aa 'char [0]' cinit
+| | |   `-InitListExpr 0x7f96e786ed28 <col:17, col:18> 'char [0]'
+| | |-DeclStmt 0x7f96e786ef28 <line:15:3, col:19>
+| | | `-VarDecl 0x7f96e786ee38 <col:3, col:18> col:8 ab 'char [1]' cinit
+| | |   `-InitListExpr 0x7f96e786eed8 <col:17, col:18> 'char [1]'
+| | |     `-array filler
+| | |       `-ImplicitValueInitExpr 0x7f96e786ef18 <<invalid sloc>> 'char'
+| | |-DeclStmt 0x7f96e786f0a8 <line:16:3, col:19>
+| | | `-VarDecl 0x7f96e786efb8 <col:3, col:18> col:8 ac 'char [2]' cinit
+| | |   `-InitListExpr 0x7f96e786f058 <col:17, col:18> 'char [2]'
+| | |     `-array filler
+| | |       `-ImplicitValueInitExpr 0x7f96e786f098 <<invalid sloc>> 'char'
+| | `-DeclStmt 0x7f96e786f228 <line:17:3, col:19>
+| |   `-VarDecl 0x7f96e786f138 <col:3, col:18> col:8 ad 'char [3]' cinit
+| |     `-InitListExpr 0x7f96e786f1d8 <col:17, col:18> 'char [3]'
+| |       `-array filler
+| |         `-ImplicitValueInitExpr 0x7f96e786f218 <<invalid sloc>> 'char'
+| `-NakedAttr 0x7f96e786ebf8 <line:12:16>
+|-FunctionDecl 0x7f96e786f290 <line:20:1, line:26:1> line:21:6 invalid foo3 'void ()'
+| |-CompoundStmt 0x7f96e78853e8 <col:13, line:26:1>
+| | |-DeclStmt 0x7f96e786f4e0 <line:22:3, col:20>
+| | | `-VarDecl 0x7f96e786f3b8 <col:3, col:19> col:8 aa 'char [1]' cinit
+| | |   `-InitListExpr 0x7f96e786f480 <col:17, col:19> 'char [1]'
+| | |     `-ImplicitCastExpr 0x7f96e786f4c8 <col:18> 'char' <IntegralCast>
+| | |       `-IntegerLiteral 0x7f96e786f418 <col:18> 'int' 0
+| | |-DeclStmt 0x7f96e786f670 <line:23:3, col:20>
+| | | `-VarDecl 0x7f96e786f538 <col:3, col:19> col:8 ab 'char [2]' cinit
+| | |   `-InitListExpr 0x7f96e786f600 <col:17, col:19> 'char [2]'
+| | |     |-array filler
+| | |     | `-ImplicitValueInitExpr 0x7f96e786f660 <<invalid sloc>> 'char'
+| | |     `-ImplicitCastExpr 0x7f96e786f640 <col:18> 'char' <IntegralCast>
+| | |       `-IntegerLiteral 0x7f96e786f598 <col:18> 'int' 0
+| | |-DeclStmt 0x7f96e7885200 <line:24:3, col:20>
+| | | `-VarDecl 0x7f96e786f6c8 <col:3, col:19> col:8 ac 'char [3]' cinit
+| | |   `-InitListExpr 0x7f96e786f790 <col:17, col:19> 'char [3]'
+| | |     |-array filler
+| | |     | `-ImplicitValueInitExpr 0x7f96e786f7f0 <<invalid sloc>> 'char'
+| | |     `-Implici6 errors generated.
+tCastExpr 0x7f96e786f7d0 <col:18> 'char' <IntegralCast>
+| | |       `-IntegerLiteral 0x7f96e786f728 <col:18> 'int' 0
+| | `-DeclStmt 0x7f96e78853d0 <line:25:3, col:20>
+| |   `-VarDecl 0x7f96e7885298 <col:3, col:19> col:8 ad 'char [4]' cinit
+| |     `-InitListExpr 0x7f96e7885360 <col:17, col:19> 'char [4]'
+| |       |-array filler
+| |       | `-ImplicitValueInitExpr 0x7f96e78853c0 <<invalid sloc>> 'char'
+| |       `-ImplicitCastExpr 0x7f96e78853a0 <col:18> 'char' <IntegralCast>
+| |         `-IntegerLiteral 0x7f96e78852f8 <col:18> 'int' 0
+| `-NakedAttr 0x7f96e786f330 <line:20:16>
+|-FunctionDecl 0x7f96e7885438 <line:28:1, line:31:1> line:29:6 invalid foo4 'void ()'
+| |-CompoundStmt 0x7f96e78856e8 <col:13, line:31:1>
+| | `-DeclStmt 0x7f96e78856d0 <line:30:3, col:22>
+| |   `-VarDecl 0x7f96e7885560 <col:3, col:21> col:8 aa 'char [2]' cinit
+| |     `-InitListExpr 0x7f96e7885650 <col:17, col:21> 'char [2]'
+| |       |-ImplicitCastExpr 0x7f96e78856a0 <col:18> 'char' <IntegralCast>
+| |       | `-IntegerLiteral 0x7f96e78855c0 <col:18> 'int' 0
+| |       `-ImplicitCastExpr 0x7f96e78856b8 <col:20> 'char' <IntegralCast>
+| |         `-IntegerLiteral 0x7f96e78855e0 <col:20> 'int' 0
+| `-NakedAttr 0x7f96e78854d8 <line:28:16>
+|-FunctionDecl 0x7f96e7885720 <line:32:1, line:35:1> line:33:6 invalid foo5 'void ()'
+| |-CompoundStmt 0x7f96e7885a18 <col:13, line:35:1>
+| | `-DeclStmt 0x7f96e7885a00 <line:34:3, col:24>
+| |   `-VarDecl 0x7f96e7885848 <col:3, col:23> col:8 aa 'char [3]' cinit
+| |     `-InitListExpr 0x7f96e7885960 <col:17, col:23> 'char [3]'
+| |       |-ImplicitCastExpr 0x7f96e78859b8 <col:18> 'char' <IntegralCast>
+| |       | `-IntegerLiteral 0x7f96e78858a8 <col:18> 'int' 0
+| |       |-ImplicitCastExpr 0x7f96e78859d0 <col:20> 'char' <IntegralCast>
+| |       | `-IntegerLiteral 0x7f96e78858c8 <col:20> 'int' 0
+| |       `-ImplicitCastExpr 0x7f96e78859e8 <col:22> 'char' <IntegralCast>
+| |         `-IntegerLiteral 0x7f96e78858e8 <col:22> 'int' 0
+| `-NakedAttr 0x7f96e78857c0 <line:32:16>
+`-FunctionDecl 0x7f96e7885a50 <line:37:1, line:40:1> line:38:6 invalid foo6 'void ()'
+  |-CompoundStmt 0x7f96e7885d90 <col:13, line:40:1>
+  | `-DeclStmt 0x7f96e7885d78 <line:39:3, col:26>
+  |   `-VarDecl 0x7f96e7885b78 <col:3, col:25> col:8 aa 'char [4]' cinit
+  |     `-InitListExpr 0x7f96e7885cb8 <col:17, col:25> 'char [4]'
+  |       |-ImplicitCastExpr 0x7f96e7885d18 <col:18> 'char' <IntegralCast>
+  |       | `-IntegerLiteral 0x7f96e7885bd8 <col:18> 'int' 0
+  |       |-ImplicitCastExpr 0x7f96e7885d30 <col:20> 'char' <IntegralCast>
+  |       | `-IntegerLiteral 0x7f96e7885bf8 <col:20> 'int' 0
+  |       |-ImplicitCastExpr 0x7f96e7885d48 <col:22> 'char' <IntegralCast>
+  |       | `-IntegerLiteral 0x7f96e7885c18 <col:22> 'int' 0
+  |       `-ImplicitCastExpr 0x7f96e7885d60 <col:24> 'char' <IntegralCast>
+  |         `-IntegerLiteral 0x7f96e7885c38 <col:24> 'int' 0
+  `-NakedAttr 0x7f96e7885af0 <line:37:16>

@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fdf4182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdf418eb338 <../Data/C2AST/pr47809.c:6:1, col:27> col:8 used bar 'double (double, double)'
+| |-ParmVarDecl 0x7fdf418eb1e8 <col:13> col:19 'double'
+| `-ParmVarDecl 0x7fdf418eb260 <col:21> col:27 'double'
+`-FunctionDecl 0x7fdf418eb480 <line:8:1, line:13:1> line:9:1 foo '__m128d (__m128d)'
+  |-ParmVarDecl 0x7fdf418eb3f8 <col:6, col:14> col:14 used x '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  `-CompoundStmt 0x7fdf418eba20 <line:10:1, line:13:1>
+    |-CompoundAssignOperator 0x7fdf418eb748 <line:11:3, col:40> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '*=' ComputeLHSTy='__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' ComputeResultTy='__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    | |-DeclRefExpr 0x7fdf418eb528 <col:3> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fdf418eb3f8 'x' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    | `-ImplicitCastExpr 0x7fdf418eb730 <col:8, col:40> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fdf418eb708 <col:8, col:40> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+    |     `-InitListExpr 0x7fdf418eb6b8 <col:18, col:40> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |       |-CallExpr 0x7fdf418eb610 <col:20, col:33> 'double'
+    |       | |-ImplicitCastExpr 0x7fdf418eb5f8 <col:20> 'double (*)(double, double)' <FunctionToPointerDecay>
+    |       | | `-DeclRefExpr 0x7fdf418eb560 <col:20> 'double (double, double)' Function 0x7fdf418eb338 'bar' 'double (double, double)'
+    |       | |-FloatingLiteral 0x7fdf418eb588 <col:25> 'double' 1.000000e+00
+    |       | `-FloatingLiteral 0x7fdf418eb5a8 <col:30> 'double' 1.000000e+00
+    |       `-FloatingLiteral 0x7fdf418eb648 <col:36> 'double' 0.000000e+00
+    `-ReturnStmt 0x7fdf418eba08 <line:12:3, col:52>
+      `-CStyleCastExpr 0x7fdf418eb9e0 <col:10, col:52> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <BitCast>
+        `-ParenExpr 0x7fdf418eb9c0 <col:20, col:52> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+          `-BinaryOperator 0x7fdf418eb958 <col:21, col:51> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '^'
+            |-CStyleCastExpr 0x7fdf418eb7d0 <col:21, col:31> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+            | `-ImplicitCastExpr 0x7fdf418eb7b8 <col:31> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+            |   `-DeclRefExpr 0x7fdf418eb780 <col:31> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fdf418eb3f8 'x' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+            `-ImplicitCastExpr 0x7fdf418eb940 <col:35, col:51> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+              `-CompoundLiteralExpr 0x7fdf418eb918 <col:35, col:51> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+                `-InitListExpr 0x7fdf418eb898 <col:45, col:51> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                  |-ImplicitCastExpr 0x7fdf418eb8e8 <col:47> 'long long' <IntegralCast>
+                  | `-IntegerLiteral 0x7fdf418eb808 <col:47> 'int' 0
+                  `-ImplicitCastExpr 0x7fdf418eb900 <col:50> 'long long' <IntegralCast>
+                    `-IntegerLiteral 0x7fdf418eb828 <col:50> 'int' 0

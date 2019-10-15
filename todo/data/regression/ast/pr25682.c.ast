@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff43d82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff43d82c960 <../Data/C2AST/pr25682.c:7:1, line:11:1> line:7:8 struct S definition
+| |-FieldDecl 0x7ff43d86d898 <line:9:3, col:11> col:8 a 'char [4]'
+| `-FieldDecl 0x7ff43d86d8f8 <line:10:3, col:7> col:7 referenced b 'int'
+|-VarDecl 0x7ff43d86dc10 <line:13:1, col:50> col:6 referenced c 'char [4]'
+|-VarDecl 0x7ff43d86de38 <line:14:1, col:47> col:6 referenced d 'char [12]'
+|-VarDecl 0x7ff43d86e068 <line:15:1, col:63> col:6 e 'char [1]'
+|-VarDecl 0x7ff43d86e2c0 <line:16:1, col:67> col:6 f 'char [1]'
+|-FunctionDecl 0x7ff43d86e480 <line:18:1, col:32> col:13 used bar 'void (char *, char *)' extern
+| |-ParmVarDecl 0x7ff43d86e338 <col:18, col:23> col:24 'char *'
+| `-ParmVarDecl 0x7ff43d86e3b0 <col:26, col:31> col:32 'char *'
+`-FunctionDecl 0x7ff43d86e5f0 <line:20:1, line:28:1> line:21:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff43d885a48 <line:22:1, line:28:1>
+    |-DeclStmt 0x7ff43d8852d0 <line:23:3, col:53>
+    | `-VarDecl 0x7ff43d885270 <col:3, col:52> col:8 used g 'char [4]'
+    |-DeclStmt 0x7ff43d885490 <line:24:3, col:50>
+    | `-VarDecl 0x7ff43d885430 <col:3, col:49> col:8 used h 'char [12]'
+    |-DeclStmt 0x7ff43d8856a0 <line:25:3, col:66>
+    | `-VarDecl 0x7ff43d885640 <col:3, col:65> col:8 i 'char [1]'
+    |-DeclStmt 0x7ff43d885910 <line:26:3, col:70>
+    | `-VarDecl 0x7ff43d8858b0 <col:3, col:69> col:8 j 'char [1]'
+    `-CallExpr 0x7ff43d8859e0 <line:27:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7ff43d8859c8 <col:3> 'void (*)(char *, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff43d885928 <col:3> 'void (char *, char *)' Function 0x7ff43d86e480 'bar' 'void (char *, char *)'
+      |-ImplicitCastExpr 0x7ff43d885a18 <col:8> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7ff43d885950 <col:8> 'char [4]' lvalue Var 0x7ff43d885270 'g' 'char [4]'
+      `-ImplicitCastExpr 0x7ff43d885a30 <col:11> 'char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7ff43d885978 <col:11> 'char [12]' lvalue Var 0x7ff43d885430 'h' 'char [12]'

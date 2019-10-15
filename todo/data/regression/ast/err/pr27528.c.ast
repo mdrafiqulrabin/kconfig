@@ -1,0 +1,37 @@
+../Data/C2AST/pr27528.c:33:28: error: constraint 's' expects an integer constant expression
+  asm volatile ("" :: "s" (x), "i" (x));
+                           ^
+../Data/C2AST/pr27528.c:35:28: error: constraint 's' expects an integer constant expression
+  asm volatile ("" :: "s" ("string"), "i" ("string"));
+                           ^~~~~~~~
+../Data/C2AST/pr27528.c:36:28: error: constraint 's' expects an integer constant expression
+  asm volatile ("" :: "s" (__FILE__), "i" (__FILE__));
+                           ^~~~~~~~
+<scratch space>:2:1: note: expanded from here
+"../Data/C2AST/pr27528.c"
+^~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr27528.c:37:28: error: constraint 's' expects an integer constant expression
+  asm volatile ("" :: "s" (__FUNCTION__), "i" (__FUNCTION__));
+                           ^~~~~~~~~~~~
+4 errors generated.
+TranslationUnitDecl 0x7fa62f82aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa62f82b060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa62f82ad80 '__int128'
+|-TypedefDecl 0x7fa62f82b0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa62f82ada0 'unsigned __int128'
+|-TypedefDecl 0x7fa62f82b3a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa62f82b1b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa62f82b128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa62f82b440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa62f82b400 'char *'
+|   `-BuiltinType 0x7fa62f82ab80 'char'
+|-TypedefDecl 0x7fa62f82b708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa62f82b6b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa62f82b520 'struct __va_list_tag'
+|     `-Record 0x7fa62f82b498 '__va_list_tag'
+|-VarDecl 0x7fa62f86c600 <../Data/C2AST/pr27528.c:4:1, col:19> col:5 used x 'int [2]' cinit
+| `-InitListExpr 0x7fa62f86c730 <col:12, col:19> 'int [2]'
+|   |-IntegerLiteral 0x7fa62f86c6a0 <col:14> 'int' 1
+|   `-IntegerLiteral 0x7fa62f86c6c0 <col:17> 'int' 2
+`-FunctionDecl 0x7fa62f86c840 <line:20:1, line:38:1> line:21:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa62f86ce28 <line:22:1, line:38:1>

@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7fc3bc8288e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc3bd014220 <../Data/C2AST/pr82659-5.c:5:1, line:8:1> line:6:1 used test 'void (void)' static
+| `-CompoundStmt 0x7fc3bd014300 <line:7:1, line:8:1>
+`-VarDecl 0x7fc3bd014438 <line:10:1, col:25> col:8 test_p 'void (*)(void)' cinit
+  `-ImplicitCastExpr 0x7fc3bd0144c0 <col:25> 'void (*)(void)' <FunctionToPointerDecay>
+    `-DeclRefExpr 0x7fc3bd014498 <col:25> 'void (void)' Function 0x7fc3bd014220 'test' 'void (void)'

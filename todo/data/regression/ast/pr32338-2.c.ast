@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7fa3898174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa389818160 <../Data/C2AST/pr32338-2.c:5:1, line:7:1> line:5:8 struct S definition
+|-FunctionDecl 0x7fa38a0142e8 <line:9:1, line:14:1> line:11:1 used foo 'int (void)'
+| |-CompoundStmt 0x7fa38a014448 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7fa38a014430 <line:13:3, col:10>
+| |   `-IntegerLiteral 0x7fa38a014410 <col:10> 'int' 2
+| `-NoInlineAttr 0x7fa38a014388 <line:10:16>
+|-FunctionDecl 0x7fa38a0144f8 <line:16:1, line:21:1> line:18:1 used bar 'int (void)'
+| |-CompoundStmt 0x7fa38a014618 <line:19:1, line:21:1>
+| | `-ReturnStmt 0x7fa38a014600 <line:20:3, col:10>
+| |   `-IntegerLiteral 0x7fa38a0145e0 <col:10> 'int' 4
+| `-NoInlineAttr 0x7fa38a014598 <line:17:16>
+|-FunctionDecl 0x7fa38a0146c8 <line:23:1, line:28:1> line:25:1 used fnl 'int (void)'
+| |-CompoundStmt 0x7fa38a0147e8 <line:26:1, line:28:1>
+| | `-ReturnStmt 0x7fa38a0147d0 <line:27:3, col:10>
+| |   `-IntegerLiteral 0x7fa38a0147b0 <col:10> 'int' 6
+| `-NoInlineAttr 0x7fa38a014768 <line:24:16>
+|-FunctionDecl 0x7fa38a014898 <line:30:1, line:39:1> line:32:1 used baz 'int (void)'
+| |-CompoundStmt 0x7fa38a014ce0 <line:33:1, line:39:1>
+| | |-DeclStmt 0x7fa38a0149f8 <line:34:3, col:19>
+| | | `-VarDecl 0x7fa38a014998 <col:3, col:16> col:16 used len 'unsigned int'
+| | |-BinaryOperator 0x7fa38a014ae0 <line:35:3, col:14> 'unsigned int' '='
+| | | |-DeclRefExpr 0x7fa38a014a10 <col:3> 'unsigned int' lvalue Var 0x7fa38a014998 'len' 'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa38a014ac8 <col:9, col:14> 'unsigned int' <IntegralCast>
+| | |   `-CallExpr 0x7fa38a014aa0 <col:9, col:14> 'int'
+| | |     `-ImplicitCastExpr 0x7fa38a014a88 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+| | |       `-DeclRefExpr 0x7fa38a014a38 <col:9> 'int (void)' Function 0x7fa38a0146c8 'fnl' 'int (void)'
+| | |-IfStmt 0x7fa38a014c28 <line:36:3, line:37:17>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa38a014b80 <line:36:7, col:13> 'int' '>'
+| | | | |-ImplicitCastExpr 0x7fa38a014b50 <col:7> 'unsigned int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fa38a014b08 <col:7> 'unsigned int' lvalue Var 0x7fa38a014998 'len' 'unsigned int'
+| | | | `-ImplicitCastExpr 0x7fa38a014b68 <col:13> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fa38a014b30 <col:13> 'int' 512
+| | | |-ReturnStmt 0x7fa38a014c10 <line:37:5, col:17>
+| | | | `-CallExpr 0x7fa38a014be8 <col:12, col:17> 'int'
+| | | |   `-ImplicitCastExpr 0x7fa38a014bd0 <col:12> 'int (*)(void)' <FunctionToPointerDecay>
+| | | |     `-DeclRefExpr 0x7fa38a014ba8 <col:12> 'int (void)' Function 0x7fa38a0144f8 'bar' 'int (void)'
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fa38a014cc8 <line:38:3, col:15>
+| |   `-CallExpr 0x7fa38a014ca0 <col:10, col:15> 'int'
+| |     `-ImplicitCastExpr 0x7fa38a014c88 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+| |       `-DeclRefExpr 0x7fa38a014c60 <col:10> 'int (void)' Function 0x7fa38a0142e8 'foo' 'int (void)'
+| `-NoInlineAttr 0x7fa38a014938 <line:31:16>
+`-FunctionDecl 0x7fa38a014f58 <line:41:1, line:47:1> line:42:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fa38a014d28 <col:7, col:11> col:11 used argc 'int'
+  |-ParmVarDecl 0x7fa38a014e40 <col:17, col:28> col:23 argv 'char **':'char **'
+  `-CompoundStmt 0x7fa38a015180 <line:43:1, line:47:1>
+    |-IfStmt 0x7fa38a015110 <line:44:3, line:45:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa38a015068 <line:44:7, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fa38a015050 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa38a015008 <col:7> 'int' lvalue ParmVar 0x7fa38a014d28 'argc' 'int'
+    | | `-IntegerLiteral 0x7fa38a015030 <col:14> 'int' 30
+    | |-ReturnStmt 0x7fa38a0150f8 <line:45:5, col:17>
+    | | `-CallExpr 0x7fa38a0150d0 <col:12, col:17> 'int'
+    | |   `-ImplicitCastExpr 0x7fa38a0150b8 <col:12> 'int (*)(void)' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7fa38a015090 <col:12> 'int (void)' Function 0x7fa38a014898 'baz' 'int (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa38a015168 <line:46:3, col:10>
+      `-IntegerLiteral 0x7fa38a015148 <col:10> 'int' 0

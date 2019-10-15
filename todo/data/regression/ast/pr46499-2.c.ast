@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fbda781a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbda6829850 <../Data/C2AST/pr46499-2.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbda68298f0 prev 0x7fbda6829850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbda6829a58 <line:7:1, line:11:1> line:8:1 used foo 'int (void)' static inline
+| `-CompoundStmt 0x7fbda6829b70 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fbda6829b58 <line:10:3, col:10>
+|     `-IntegerLiteral 0x7fbda6829b38 <col:10> 'int' 0
+`-FunctionDecl 0x7fbda6829be0 <line:13:1, line:19:1> line:14:1 main 'int ()'
+  `-CompoundStmt 0x7fbda6829f78 <line:15:1, line:19:1>
+    |-IfStmt 0x7fbda6829f08 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbda6829e50 <line:16:7, col:35> 'int' '&'
+    | | |-ParenExpr 0x7fbda6829d60 <col:7, col:19> 'int'
+    | | | `-BinaryOperator 0x7fbda6829d38 <col:8, col:18> 'int' '=='
+    | | |   |-CallExpr 0x7fbda6829cf0 <col:8, col:13> 'int'
+    | | |   | `-ImplicitCastExpr 0x7fbda6829cd8 <col:8> 'int (*)(void)' <FunctionToPointerDecay>
+    | | |   |   `-DeclRefExpr 0x7fbda6829c80 <col:8> 'int (void)' Function 0x7fbda6829a58 'foo' 'int (void)'
+    | | |   `-IntegerLiteral 0x7fbda6829d18 <col:18> 'int' 1
+    | | `-ParenExpr 0x7fbda6829e30 <col:23, col:35> 'int'
+    | |   `-BinaryOperator 0x7fbda6829e08 <col:24, col:34> 'int' '=='
+    | |     |-CallExpr 0x7fbda6829dc0 <col:24, col:29> 'int'
+    | |     | `-ImplicitCastExpr 0x7fbda6829da8 <col:24> 'int (*)(void)' <FunctionToPointerDecay>
+    | |     |   `-DeclRefExpr 0x7fbda6829d80 <col:24> 'int (void)' Function 0x7fbda6829a58 'foo' 'int (void)'
+    | |     `-IntegerLiteral 0x7fbda6829de8 <col:34> 'int' 1
+    | |-CallExpr 0x7fbda6829ee0 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbda6829ec8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbda6829e78 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbda68298f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbda6829f60 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fbda6829f40 <col:10> 'int' 0

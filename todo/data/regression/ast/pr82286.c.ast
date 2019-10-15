@@ -1,0 +1,238 @@
+TranslationUnitDecl 0x7fc2ad82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc2af063f20 <../Data/C2AST/pr82286.c:9:9, line:14:1> line:9:9 struct definition
+| |-FieldDecl 0x7fc2af063fe8 <line:11:3, col:16> col:16 referenced nof_rows 'unsigned int'
+| |-FieldDecl 0x7fc2af064048 <line:12:3, col:16> col:16 referenced nof_cols 'unsigned int'
+| `-FieldDecl 0x7fc2af070200 <line:13:3, col:46> col:9 referenced data 'float [10][10]'
+|-TypedefDecl 0x7fc2af0702a0 <line:9:1, line:14:3> col:3 referenced MATRIX_TYPE 'struct MATRIX_TYPE':'MATRIX_TYPE'
+| `-ElaboratedType 0x7fc2af070250 'struct MATRIX_TYPE' sugar
+|   `-RecordType 0x7fc2af063fb0 'MATRIX_TYPE'
+|     `-Record 0x7fc2af063f20 ''
+|-FunctionDecl 0x7fc2af0704a0 <line:16:1, col:64> col:13 mtrx_decompose_matrix 'void (MATRIX_TYPE *)' extern
+| `-ParmVarDecl 0x7fc2af070398 <col:36, col:50> col:50 p_input_matrix 'MATRIX_TYPE *'
+`-FunctionDecl 0x7fc2af0705e0 prev 0x7fc2af0704a0 <line:18:1, line:59:1> line:19:1 mtrx_decompose_matrix 'void (MATRIX_TYPE *)'
+  |-ParmVarDecl 0x7fc2af070558 <col:24, col:38> col:38 used p_input_matrix 'MATRIX_TYPE *'
+  `-CompoundStmt 0x7fc2af072a10 <line:20:1, line:59:1>
+    |-DeclStmt 0x7fc2af070700 <line:21:3, col:19>
+    | `-VarDecl 0x7fc2af0706a0 <col:3, col:16> col:16 used row 'unsigned int'
+    |-DeclStmt 0x7fc2af070790 <line:22:3, col:19>
+    | `-VarDecl 0x7fc2af070730 <col:3, col:16> col:16 used col 'unsigned int'
+    |-DeclStmt 0x7fc2af070820 <line:23:3, col:19>
+    | `-VarDecl 0x7fc2af0707c0 <col:3, col:16> col:16 used sub 'unsigned int'
+    |-DeclStmt 0x7fc2af0708b0 <line:24:3, col:12>
+    | `-VarDecl 0x7fc2af070850 <col:3, col:9> col:9 used sum 'float'
+    |-DeclStmt 0x7fc2af070938 <line:25:3, col:18>
+    | `-VarDecl 0x7fc2af0708d8 <col:3, col:15> col:15 used tmp 'MATRIX_TYPE':'MATRIX_TYPE'
+    |-ForStmt 0x7fc2af070ec8 <line:27:3, line:31:3>
+    | |-BinaryOperator 0x7fc2af0709b0 <line:27:8, col:14> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7fc2af070950 <col:8> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fc2af070998 <col:14> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc2af070978 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc2af070a70 <col:17, line:7:33> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fc2af070a40 <line:27:17> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc2af0709d8 <col:17> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fc2af070a58 <line:7:30, col:33> 'unsigned int' <IntegralCast>
+    | |   `-ParenExpr 0x7fc2af070a20 <col:30, col:33> 'int'
+    | |     `-IntegerLiteral 0x7fc2af070a00 <col:31> 'int' 10
+    | |-UnaryOperator 0x7fc2af070ac0 <line:27:40, col:43> 'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7fc2af070a98 <col:40> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+    | `-CompoundStmt 0x7fc2af070eb0 <col:47, line:31:3>
+    |   `-ForStmt 0x7fc2af070e78 <line:28:5, line:30:5>
+    |     |-BinaryOperator 0x7fc2af070b40 <line:28:10, col:16> 'unsigned int' '='
+    |     | |-DeclRefExpr 0x7fc2af070ae0 <col:10> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+    |     | `-ImplicitCastExpr 0x7fc2af070b28 <col:16> 'unsigned int' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc2af070b08 <col:16> 'int' 0
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fc2af070c00 <col:19, line:7:33> 'int' '<'
+    |     | |-ImplicitCastExpr 0x7fc2af070bd0 <line:28:19> 'unsigned int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc2af070b68 <col:19> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+    |     | `-ImplicitCastExpr 0x7fc2af070be8 <line:7:30, col:33> 'unsigned int' <IntegralCast>
+    |     |   `-ParenExpr 0x7fc2af070bb0 <col:30, col:33> 'int'
+    |     |     `-IntegerLiteral 0x7fc2af070b90 <col:31> 'int' 10
+    |     |-UnaryOperator 0x7fc2af070c50 <line:28:42, col:45> 'unsigned int' postfix '++'
+    |     | `-DeclRefExpr 0x7fc2af070c28 <col:42> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+    |     `-CompoundStmt 0x7fc2af070e60 <col:49, line:30:5>
+    |       `-BinaryOperator 0x7fc2af070e38 <line:29:7, col:28> 'float' '='
+    |         |-ArraySubscriptExpr 0x7fc2af070dd8 <col:7, col:24> 'float' lvalue
+    |         | |-ImplicitCastExpr 0x7fc2af070da8 <col:7, col:19> 'float *' <ArrayToPointerDecay>
+    |         | | `-ArraySubscriptExpr 0x7fc2af070d58 <col:7, col:19> 'float [10]' lvalue
+    |         | |   |-ImplicitCastExpr 0x7fc2af070d28 <col:7, col:11> 'float (*)[10]' <ArrayToPointerDecay>
+    |         | |   | `-MemberExpr 0x7fc2af070c98 <col:7, col:11> 'float [10][10]' lvalue .data 0x7fc2af070200
+    |         | |   |   `-DeclRefExpr 0x7fc2af070c70 <col:7> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+    |         | |   `-ImplicitCastExpr 0x7fc2af070d40 <col:16> 'unsigned int' <LValueToRValue>
+    |         | |     `-DeclRefExpr 0x7fc2af070cd0 <col:16> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+    |         | `-ImplicitCastExpr 0x7fc2af070dc0 <col:21> 'unsigned int' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fc2af070d80 <col:21> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+    |         `-ImplicitCastExpr 0x7fc2af070e20 <col:28> 'float' <FloatingCast>
+    |           `-FloatingLiteral 0x7fc2af070e00 <col:28> 'double' 0.000000e+00
+    |-BinaryOperator 0x7fc2af070f98 <line:32:3, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fc2af070f28 <col:3, col:7> 'unsigned int' lvalue .nof_cols 0x7fc2af064048
+    | | `-DeclRefExpr 0x7fc2af070f00 <col:3> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+    | `-ImplicitCastExpr 0x7fc2af070f80 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc2af070f60 <col:18> 'int' 0
+    |-BinaryOperator 0x7fc2af0710b0 <line:33:3, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fc2af071040 <col:3, col:7> 'unsigned int' lvalue .nof_rows 0x7fc2af063fe8
+    | | `-DeclRefExpr 0x7fc2af071018 <col:3> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+    | `-ImplicitCastExpr 0x7fc2af071098 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fc2af071078 <col:18> 'int' 0
+    `-ForStmt 0x7fc2af0729d8 <line:35:3, line:58:3>
+      |-BinaryOperator 0x7fc2af071138 <line:35:8, col:14> 'unsigned int' '='
+      | |-DeclRefExpr 0x7fc2af0710d8 <col:8> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fc2af071120 <col:14> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fc2af071100 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc2af071630 <col:17, col:39> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc2af071600 <col:17> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc2af071160 <col:17> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fc2af071618 <col:23, col:39> 'unsigned int' <LValueToRValue>
+      |   `-MemberExpr 0x7fc2af0711c8 <col:23, col:39> 'unsigned int' lvalue ->nof_rows 0x7fc2af063fe8
+      |     `-ImplicitCastExpr 0x7fc2af0711b0 <col:23> 'MATRIX_TYPE *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fc2af071188 <col:23> 'MATRIX_TYPE *' lvalue ParmVar 0x7fc2af070558 'p_input_matrix' 'MATRIX_TYPE *'
+      |-UnaryOperator 0x7fc2af071680 <col:49, col:52> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7fc2af071658 <col:49> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+      `-CompoundStmt 0x7fc2af0729c0 <col:56, line:58:3>
+        `-ForStmt 0x7fc2af072988 <line:36:5, line:57:5>
+          |-BinaryOperator 0x7fc2af071708 <line:36:10, col:16> 'unsigned int' '='
+          | |-DeclRefExpr 0x7fc2af0716a0 <col:10> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+          | `-ImplicitCastExpr 0x7fc2af0716f0 <col:16> 'unsigned int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc2af0716c8 <col:16> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fc2af071800 <col:21, col:43> 'int' '<'
+          | |-ImplicitCastExpr 0x7fc2af0717d0 <col:21> 'unsigned int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fc2af071730 <col:21> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+          | `-ImplicitCastExpr 0x7fc2af0717e8 <col:27, col:43> 'unsigned int' <LValueToRValue>
+          |   `-MemberExpr 0x7fc2af071798 <col:27, col:43> 'unsigned int' lvalue ->nof_cols 0x7fc2af064048
+          |     `-ImplicitCastExpr 0x7fc2af071780 <col:27> 'MATRIX_TYPE *' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fc2af071758 <col:27> 'MATRIX_TYPE *' lvalue ParmVar 0x7fc2af070558 'p_input_matrix' 'MATRIX_TYPE *'
+          |-UnaryOperator 0x7fc2af071850 <col:53, col:56> 'unsigned int' postfix '++'
+          | `-DeclRefExpr 0x7fc2af071828 <col:53> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+          `-CompoundStmt 0x7fc2af072958 <col:60, line:57:5>
+            |-BinaryOperator 0x7fc2af0718b8 <line:37:7, col:13> 'float' '='
+            | |-DeclRefExpr 0x7fc2af071870 <col:7> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+            | `-FloatingLiteral 0x7fc2af071898 <col:13> 'float' 0.000000e+00
+            |-ForStmt 0x7fc2af071de8 <line:38:7, line:40:7>
+            | |-BinaryOperator 0x7fc2af071940 <line:38:12, col:18> 'unsigned int' '='
+            | | |-DeclRefExpr 0x7fc2af0718e0 <col:12> 'unsigned int' lvalue Var 0x7fc2af0707c0 'sub' 'unsigned int'
+            | | `-ImplicitCastExpr 0x7fc2af071928 <col:18> 'unsigned int' <IntegralCast>
+            | |   `-IntegerLiteral 0x7fc2af071908 <col:18> 'int' 0
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7fc2af0719e8 <col:21, col:27> 'int' '<'
+            | | |-ImplicitCastExpr 0x7fc2af0719b8 <col:21> 'unsigned int' <LValueToRValue>
+            | | | `-DeclRefExpr 0x7fc2af071968 <col:21> 'unsigned int' lvalue Var 0x7fc2af0707c0 'sub' 'unsigned int'
+            | | `-ImplicitCastExpr 0x7fc2af0719d0 <col:27> 'unsigned int' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7fc2af071990 <col:27> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+            | |-UnaryOperator 0x7fc2af071a38 <col:32, col:35> 'unsigned int' postfix '++'
+            | | `-DeclRefExpr 0x7fc2af071a10 <col:32> 'unsigned int' lvalue Var 0x7fc2af0707c0 'sub' 'unsigned int'
+            | `-CompoundStmt 0x7fc2af071dd0 <col:39, line:40:7>
+            |   `-CompoundAssignOperator 0x7fc2af071d98 <line:39:2, col:47> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+            |     |-DeclRefExpr 0x7fc2af071a58 <col:2> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+            |     `-BinaryOperator 0x7fc2af071d70 <col:9, col:47> 'float' '*'
+            |       |-ImplicitCastExpr 0x7fc2af071d40 <col:9, col:26> 'float' <LValueToRValue>
+            |       | `-ArraySubscriptExpr 0x7fc2af071bb8 <col:9, col:26> 'float' lvalue
+            |       |   |-ImplicitCastExpr 0x7fc2af071b88 <col:9, col:21> 'float *' <ArrayToPointerDecay>
+            |       |   | `-ArraySubscriptExpr 0x7fc2af071b38 <col:9, col:21> 'float [10]' lvalue
+            |       |   |   |-ImplicitCastExpr 0x7fc2af071b08 <col:9, col:13> 'float (*)[10]' <ArrayToPointerDecay>
+            |       |   |   | `-MemberExpr 0x7fc2af071aa8 <col:9, col:13> 'float [10][10]' lvalue .data 0x7fc2af070200
+            |       |   |   |   `-DeclRefExpr 0x7fc2af071a80 <col:9> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+            |       |   |   `-ImplicitCastExpr 0x7fc2af071b20 <col:18> 'unsigned int' <LValueToRValue>
+            |       |   |     `-DeclRefExpr 0x7fc2af071ae0 <col:18> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+            |       |   `-ImplicitCastExpr 0x7fc2af071ba0 <col:23> 'unsigned int' <LValueToRValue>
+            |       |     `-DeclRefExpr 0x7fc2af071b60 <col:23> 'unsigned int' lvalue Var 0x7fc2af0707c0 'sub' 'unsigned int'
+            |       `-ImplicitCastExpr 0x7fc2af071d58 <col:30, col:47> 'float' <LValueToRValue>
+            |         `-ArraySubscriptExpr 0x7fc2af071d18 <col:30, col:47> 'float' lvalue
+            |           |-ImplicitCastExpr 0x7fc2af071ce8 <col:30, col:42> 'float *' <ArrayToPointerDecay>
+            |           | `-ArraySubscriptExpr 0x7fc2af071c98 <col:30, col:42> 'float [10]' lvalue
+            |           |   |-ImplicitCastExpr 0x7fc2af071c68 <col:30, col:34> 'float (*)[10]' <ArrayToPointerDecay>
+            |           |   | `-MemberExpr 0x7fc2af071c08 <col:30, col:34> 'float [10][10]' lvalue .data 0x7fc2af070200
+            |           |   |   `-DeclRefExpr 0x7fc2af071be0 <col:30> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+            |           |   `-ImplicitCastExpr 0x7fc2af071c80 <col:39> 'unsigned int' <LValueToRValue>
+            |           |     `-DeclRefExpr 0x7fc2af071c40 <col:39> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+            |           `-ImplicitCastExpr 0x7fc2af071d00 <col:44> 'unsigned int' <LValueToRValue>
+            |             `-DeclRefExpr 0x7fc2af071cc0 <col:44> 'unsigned int' lvalue Var 0x7fc2af0707c0 'sub' 'unsigned int'
+            |-BinaryOperator 0x7fc2af072040 <line:41:7, col:46> 'float' '='
+            | |-DeclRefExpr 0x7fc2af071e20 <col:7> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+            | `-BinaryOperator 0x7fc2af072018 <col:13, col:46> 'float' '-'
+            |   |-ImplicitCastExpr 0x7fc2af071fe8 <col:13, col:42> 'float' <LValueToRValue>
+            |   | `-ArraySubscriptExpr 0x7fc2af071f98 <col:13, col:42> 'float' lvalue
+            |   |   |-ImplicitCastExpr 0x7fc2af071f68 <col:13, col:37> 'float *' <ArrayToPointerDecay>
+            |   |   | `-ArraySubscriptExpr 0x7fc2af071f18 <col:13, col:37> 'float [10]' lvalue
+            |   |   |   |-ImplicitCastExpr 0x7fc2af071ee8 <col:13, col:29> 'float (*)[10]' <ArrayToPointerDecay>
+            |   |   |   | `-MemberExpr 0x7fc2af071e88 <col:13, col:29> 'float [10][10]' lvalue ->data 0x7fc2af070200
+            |   |   |   |   `-ImplicitCastExpr 0x7fc2af071e70 <col:13> 'MATRIX_TYPE *' <LValueToRValue>
+            |   |   |   |     `-DeclRefExpr 0x7fc2af071e48 <col:13> 'MATRIX_TYPE *' lvalue ParmVar 0x7fc2af070558 'p_input_matrix' 'MATRIX_TYPE *'
+            |   |   |   `-ImplicitCastExpr 0x7fc2af071f00 <col:34> 'unsigned int' <LValueToRValue>
+            |   |   |     `-DeclRefExpr 0x7fc2af071ec0 <col:34> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+            |   |   `-ImplicitCastExpr 0x7fc2af071f80 <col:39> 'unsigned int' <LValueToRValue>
+            |   |     `-DeclRefExpr 0x7fc2af071f40 <col:39> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+            |   `-ImplicitCastExpr 0x7fc2af072000 <col:46> 'float' <LValueToRValue>
+            |     `-DeclRefExpr 0x7fc2af071fc0 <col:46> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+            `-IfStmt 0x7fc2af072920 <line:42:7, line:56:7>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-BinaryOperator 0x7fc2af0720e8 <line:42:11, col:18> 'int' '=='
+              | |-ImplicitCastExpr 0x7fc2af0720b8 <col:11> 'unsigned int' <LValueToRValue>
+              | | `-DeclRefExpr 0x7fc2af072068 <col:11> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+              | `-ImplicitCastExpr 0x7fc2af0720d0 <col:18> 'unsigned int' <LValueToRValue>
+              |   `-DeclRefExpr 0x7fc2af072090 <col:18> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+              |-CompoundStmt 0x7fc2af072588 <col:23, line:53:7>
+              | `-IfStmt 0x7fc2af072550 <line:43:2, line:52:2>
+              |   |-<<<NULL>>>
+              |   |-<<<NULL>>>
+              |   |-BinaryOperator 0x7fc2af072188 <line:43:6, col:13> 'int' '>='
+              |   | |-ImplicitCastExpr 0x7fc2af072170 <col:6> 'double' <FloatingCast>
+              |   | | `-ImplicitCastExpr 0x7fc2af072158 <col:6> 'float' <LValueToRValue>
+              |   | |   `-DeclRefExpr 0x7fc2af072110 <col:6> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+              |   | `-FloatingLiteral 0x7fc2af072138 <col:13> 'double' 0.000000e+00
+              |   |-CompoundStmt 0x7fc2af072378 <col:18, line:49:2>
+              |   | `-BinaryOperator 0x7fc2af072350 <line:47:4, col:25> 'float' '='
+              |   |   |-ArraySubscriptExpr 0x7fc2af0722e8 <col:4, col:21> 'float' lvalue
+              |   |   | |-ImplicitCastExpr 0x7fc2af0722b8 <col:4, col:16> 'float *' <ArrayToPointerDecay>
+              |   |   | | `-ArraySubscriptExpr 0x7fc2af072268 <col:4, col:16> 'float [10]' lvalue
+              |   |   | |   |-ImplicitCastExpr 0x7fc2af072238 <col:4, col:8> 'float (*)[10]' <ArrayToPointerDecay>
+              |   |   | |   | `-MemberExpr 0x7fc2af0721d8 <col:4, col:8> 'float [10][10]' lvalue .data 0x7fc2af070200
+              |   |   | |   |   `-DeclRefExpr 0x7fc2af0721b0 <col:4> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+              |   |   | |   `-ImplicitCastExpr 0x7fc2af072250 <col:13> 'unsigned int' <LValueToRValue>
+              |   |   | |     `-DeclRefExpr 0x7fc2af072210 <col:13> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+              |   |   | `-ImplicitCastExpr 0x7fc2af0722d0 <col:18> 'unsigned int' <LValueToRValue>
+              |   |   |   `-DeclRefExpr 0x7fc2af072290 <col:18> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+              |   |   `-ImplicitCastExpr 0x7fc2af072338 <col:25> 'float' <LValueToRValue>
+              |   |     `-DeclRefExpr 0x7fc2af072310 <col:25> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+              |   `-CompoundStmt 0x7fc2af072538 <line:50:7, line:52:2>
+              |     `-BinaryOperator 0x7fc2af072510 <line:51:4, col:25> 'float' '='
+              |       |-ArraySubscriptExpr 0x7fc2af0724c8 <col:4, col:21> 'float' lvalue
+              |       | |-ImplicitCastExpr 0x7fc2af072498 <col:4, col:16> 'float *' <ArrayToPointerDecay>
+              |       | | `-ArraySubscriptExpr 0x7fc2af072448 <col:4, col:16> 'float [10]' lvalue
+              |       | |   |-ImplicitCastExpr 0x7fc2af072418 <col:4, col:8> 'float (*)[10]' <ArrayToPointerDecay>
+              |       | |   | `-MemberExpr 0x7fc2af0723b8 <col:4, col:8> 'float [10][10]' lvalue .data 0x7fc2af070200
+              |       | |   |   `-DeclRefExpr 0x7fc2af072390 <col:4> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+              |       | |   `-ImplicitCastExpr 0x7fc2af072430 <col:13> 'unsigned int' <LValueToRValue>
+              |       | |     `-DeclRefExpr 0x7fc2af0723f0 <col:13> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+              |       | `-ImplicitCastExpr 0x7fc2af0724b0 <col:18> 'unsigned int' <LValueToRValue>
+              |       |   `-DeclRefExpr 0x7fc2af072470 <col:18> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+              |       `-FloatingLiteral 0x7fc2af0724f0 <col:25> 'float' 0.000000e+00
+              `-CompoundStmt 0x7fc2af072908 <line:54:12, line:56:7>
+                `-BinaryOperator 0x7fc2af0728e0 <line:55:2, col:46> 'float' '='
+                  |-ArraySubscriptExpr 0x7fc2af0726d8 <col:2, col:19> 'float' lvalue
+                  | |-ImplicitCastExpr 0x7fc2af0726a8 <col:2, col:14> 'float *' <ArrayToPointerDecay>
+                  | | `-ArraySubscriptExpr 0x7fc2af072658 <col:2, col:14> 'float [10]' lvalue
+                  | |   |-ImplicitCastExpr 0x7fc2af072628 <col:2, col:6> 'float (*)[10]' <ArrayToPointerDecay>
+                  | |   | `-MemberExpr 0x7fc2af0725c8 <col:2, col:6> 'float [10][10]' lvalue .data 0x7fc2af070200
+                  | |   |   `-DeclRefExpr 0x7fc2af0725a0 <col:2> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+                  | |   `-ImplicitCastExpr 0x7fc2af072640 <col:11> 'unsigned int' <LValueToRValue>
+                  | |     `-DeclRefExpr 0x7fc2af072600 <col:11> 'unsigned int' lvalue Var 0x7fc2af070730 'col' 'unsigned int'
+                  | `-ImplicitCastExpr 0x7fc2af0726c0 <col:16> 'unsigned int' <LValueToRValue>
+                  |   `-DeclRefExpr 0x7fc2af072680 <col:16> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+                  `-BinaryOperator 0x7fc2af0728b8 <col:23, col:46> 'float' '/'
+                    |-ImplicitCastExpr 0x7fc2af072888 <col:23> 'float' <LValueToRValue>
+                    | `-DeclRefExpr 0x7fc2af072700 <col:23> 'float' lvalue Var 0x7fc2af070850 'sum' 'float'
+                    `-ImplicitCastExpr 0x7fc2af0728a0 <col:29, col:46> 'float' <LValueToRValue>
+                      `-ArraySubscriptExpr 0x7fc2af072860 <col:29, col:46> 'float' lvalue
+                        |-ImplicitCastExpr 0x7fc2af072830 <col:29, col:41> 'float *' <ArrayToPointerDecay>
+                        | `-ArraySubscriptExpr 0x7fc2af0727e0 <col:29, col:41> 'float [10]' lvalue
+                        |   |-ImplicitCastExpr 0x7fc2af0727b0 <col:29, col:33> 'float (*)[10]' <ArrayToPointerDecay>
+                        |   | `-MemberExpr 0x7fc2af072750 <col:29, col:33> 'float [10][10]' lvalue .data 0x7fc2af070200
+                        |   |   `-DeclRefExpr 0x7fc2af072728 <col:29> 'MATRIX_TYPE':'MATRIX_TYPE' lvalue Var 0x7fc2af0708d8 'tmp' 'MATRIX_TYPE':'MATRIX_TYPE'
+                        |   `-ImplicitCastExpr 0x7fc2af0727c8 <col:38> 'unsigned int' <LValueToRValue>
+                        |     `-DeclRefExpr 0x7fc2af072788 <col:38> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'
+                        `-ImplicitCastExpr 0x7fc2af072848 <col:43> 'unsigned int' <LValueToRValue>
+                          `-DeclRefExpr 0x7fc2af072808 <col:43> 'unsigned int' lvalue Var 0x7fc2af0706a0 'row' 'unsigned int'

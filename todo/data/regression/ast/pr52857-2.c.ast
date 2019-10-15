@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fb7f182b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb7f1011860 <../Data/C2AST/pr52857-2.c:4:1, col:31> col:6 used uw_init_context_1 'void (void *)'
+| `-ParmVarDecl 0x7fb7f182bf78 <col:25, col:30> col:31 'void *'
+|-FunctionDecl 0x7fb7f1011a10 <line:5:1, line:8:1> line:5:6 _Unwind_ForcedUnwind 'void (void)'
+| `-CompoundStmt 0x7fb7f1011d00 <line:6:1, line:8:1>
+|   `-CallExpr 0x7fb7f1011cd0 <line:7:3, col:44> 'void'
+|     |-ImplicitCastExpr 0x7fb7f1011cb8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fb7f1011ab0 <col:3> 'void (void *)' Function 0x7fb7f1011860 'uw_init_context_1' 'void (void *)'
+|     `-CallExpr 0x7fb7f1011c60 <col:22, col:43> 'void *'
+|       `-ImplicitCastExpr 0x7fb7f1011c48 <col:22> 'void *(*)(void)' <BuiltinFnToFnPtr>
+|         `-DeclRefExpr 0x7fb7f1011bf8 <col:22> '<builtin fn type>' Function 0x7fb7f1011b10 '__builtin_dwarf_cfa' 'void *(void)'
+`-FunctionDecl 0x7fb7f1011b10 <col:22> col:22 implicit used __builtin_dwarf_cfa 'void *(void)' extern
+  `-NoThrowAttr 0x7fb7f1011bb0 <col:22> Implicit

@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fd6730294e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd67302a1a0 <../Data/C2AST/pr32374.c:4:1, col:13> col:13 used stderr 'int *' extern
+|-FunctionDecl 0x7fd6728169a0 <line:6:1, col:33> col:6 used f 'void (int *, const char *, ...)'
+| |-ParmVarDecl 0x7fd672816858 <col:9, col:13> col:14 'int *'
+| `-ParmVarDecl 0x7fd6728168d0 <col:16, col:27> col:28 'const char *'
+`-FunctionDecl 0x7fd672816b30 <line:8:1, line:20:1> line:8:6 g 'void (const char *)'
+  |-ParmVarDecl 0x7fd672816a68 <col:9, col:21> col:21 used conf_name 'const char *'
+  `-CompoundStmt 0x7fd672817848 <line:9:1, line:20:1>
+    |-DeclStmt 0x7fd672816e00 <line:10:3, line:14:12>
+    | |-RecordDecl 0x7fd672816bd8 <line:10:11, line:14:3> line:10:11 struct definition
+    | | |-FieldDecl 0x7fd672816c98 <line:12:5, col:17> col:17 label 'const char *'
+    | | `-FieldDecl 0x7fd672816cf8 <line:13:5, col:15> col:15 value 'const int'
+    | `-TypedefDecl 0x7fd672816d90 <line:10:3, line:14:5> col:5 referenced Section 'struct Section':'Section'
+    |   `-ElaboratedType 0x7fd672816d40 'struct Section' sugar
+    |     `-RecordType 0x7fd672816c60 'Section'
+    |       `-Record 0x7fd672816bd8 ''
+    |-DeclStmt 0x7fd6728172b8 <line:16:3, col:51>
+    | `-VarDecl 0x7fd672816f48 <col:3, col:50> col:17 used sections 'const Section [2]' cinit
+    |   `-InitListExpr 0x7fd672817168 <col:31, col:50> 'const Section [2]'
+    |     |-InitListExpr 0x7fd6728171b8 <col:33, col:39> 'Section':'Section'
+    |     | |-ImplicitCastExpr 0x7fd672817220 <col:34> 'const char *' <BitCast>
+    |     | | `-ImplicitCastExpr 0x7fd672817208 <col:34> 'char *' <ArrayToPointerDecay>
+    |     | |   `-StringLiteral 0x7fd672816fe8 <col:34> 'char [1]' lvalue ""
+    |     | `-IntegerLiteral 0x7fd672817010 <col:38> 'int' 0
+    |     `-InitListExpr 0x7fd672817238 <col:42, col:48> 'Section':'Section'
+    |       |-ImplicitCastExpr 0x7fd6728172a0 <col:43> 'const char *' <BitCast>
+    |       | `-ImplicitCastExpr 0x7fd672817288 <col:43> 'char *' <ArrayToPointerDecay>
+    |       |   `-StringLiteral 0x7fd672817080 <col:43> 'char [1]' lvalue ""
+    |       `-IntegerLiteral 0x7fd6728170a8 <col:47> 'int' 1
+    |-CallExpr 0x7fd6728174e0 <line:18:3, col:47> 'void'
+    | |-ImplicitCastExpr 0x7fd6728174c8 <col:3> 'void (*)(int *, const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd6728172d0 <col:3> 'void (int *, const char *, ...)' Function 0x7fd6728169a0 'f' 'void (int *, const char *, ...)'
+    | |-ImplicitCastExpr 0x7fd672817538 <col:6> 'int *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd6728172f8 <col:6> 'int *' lvalue Var 0x7fd67302a1a0 'stderr' 'int *'
+    | |-ImplicitCastExpr 0x7fd672817568 <col:14> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fd672817550 <col:14> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7fd672817320 <col:14> 'char [1]' lvalue ""
+    | |-ImplicitCastExpr 0x7fd672817580 <col:18> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7fd672817348 <col:18> 'char [1]' lvalue ""
+    | |-ImplicitCastExpr 0x7fd672817598 <col:22> 'const char *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd672817370 <col:22> 'const char *' lvalue ParmVar 0x7fd672816a68 'conf_name' 'const char *'
+    | |-IntegerLiteral 0x7fd672817398 <col:33> 'int' 0
+    | `-ImplicitCastExpr 0x7fd6728175b0 <col:36, col:46> 'Section':'Section' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fd672817470 <col:36, col:46> 'const Section':'const Section' lvalue
+    |     |-ImplicitCastExpr 0x7fd672817458 <col:36> 'const Section *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fd6728173b8 <col:36> 'const Section [2]' lvalue Var 0x7fd672816f48 'sections' 'const Section [2]'
+    |     `-IntegerLiteral 0x7fd6728173e0 <col:45> 'int' 0
+    `-CallExpr 0x7fd672817750 <line:19:3, col:47> 'void'
+      |-ImplicitCastExpr 0x7fd672817738 <col:3> 'void (*)(int *, const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd6728175c8 <col:3> 'void (int *, const char *, ...)' Function 0x7fd6728169a0 'f' 'void (int *, const char *, ...)'
+      |-ImplicitCastExpr 0x7fd6728177a8 <col:6> 'int *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd6728175f0 <col:6> 'int *' lvalue Var 0x7fd67302a1a0 'stderr' 'int *'
+      |-ImplicitCastExpr 0x7fd6728177d8 <col:14> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fd6728177c0 <col:14> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fd672817618 <col:14> 'char [1]' lvalue ""
+      |-ImplicitCastExpr 0x7fd672817800 <col:18> 'char *' <ArrayToPointerDecay>
+      | `-StringLiteral 0x7fd672817640 <col:18> 'char [1]' lvalue ""
+      |-ImplicitCastExpr 0x7fd672817818 <col:22> 'const char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd672817668 <col:22> 'const char *' lvalue ParmVar 0x7fd672816a68 'conf_name' 'const char *'
+      |-IntegerLiteral 0x7fd672817690 <col:33> 'int' 0
+      `-ImplicitCastExpr 0x7fd672817830 <col:36, col:46> 'Section':'Section' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fd672817710 <col:36, col:46> 'const Section':'const Section' lvalue
+          |-ImplicitCastExpr 0x7fd6728176f8 <col:36> 'const Section *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7fd6728176b0 <col:36> 'const Section [2]' lvalue Var 0x7fd672816f48 'sections' 'const Section [2]'
+          `-IntegerLiteral 0x7fd6728176d8 <col:45> 'int' 0

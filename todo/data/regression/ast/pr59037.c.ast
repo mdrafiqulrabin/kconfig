@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fdecf817ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fded1009000 <../Data/C2AST/pr59037.c:4:1, col:13> col:13 referenced v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fdecf818b80 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fdecf817fe0 'int'
+`-FunctionDecl 0x7fded10091e8 <line:6:1, line:12:1> line:7:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fded1009070 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7fded1009110 <col:17, col:24> col:24 argv 'char **'
+  `-CompoundStmt 0x7fded1009968 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fded10094b0 <line:9:3, col:21>
+    | `-VarDecl 0x7fded1009310 <col:3, col:20> col:8 used x 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+    |   `-InitListExpr 0x7fded1009450 <col:12, col:20> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |     |-IntegerLiteral 0x7fded1009370 <col:13> 'int' 0
+    |     |-IntegerLiteral 0x7fded1009390 <col:15> 'int' 1
+    |     |-IntegerLiteral 0x7fded10093b0 <col:17> 'int' 2
+    |     `-IntegerLiteral 0x7fded10093d0 <col:19> 'int' 3
+    |-BinaryOperator 0x7fded10098a0 <line:10:3, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7fded10094c8 <col:3> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fded1009310 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    | `-ImplicitCastExpr 0x7fded1009888 <col:7, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fded1009860 <col:7, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |     `-InitListExpr 0x7fded10097a0 <col:14, col:45> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |-ImplicitCastExpr 0x7fded1009800 <col:15, col:20> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7fded1009568 <col:15, col:20> 'int' lvalue vectorcomponent
+    |       |   |-ParenExpr 0x7fded1009528 <col:15, col:17> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   | `-DeclRefExpr 0x7fded1009500 <col:16> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fded1009310 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |   `-IntegerLiteral 0x7fded1009548 <col:19> 'int' 3
+    |       |-ImplicitCastExpr 0x7fded1009818 <col:23, col:28> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7fded10095f8 <col:23, col:28> 'int' lvalue vectorcomponent
+    |       |   |-ParenExpr 0x7fded10095b8 <col:23, col:25> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   | `-DeclRefExpr 0x7fded1009590 <col:24> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fded1009310 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |   `-IntegerLiteral 0x7fded10095d8 <col:27> 'int' 2
+    |       |-ImplicitCastExpr 0x7fded1009830 <col:31, col:36> 'int' <LValueToRValue>
+    |       | `-ArraySubscriptExpr 0x7fded1009688 <col:31, col:36> 'int' lvalue vectorcomponent
+    |       |   |-ParenExpr 0x7fded1009648 <col:31, col:33> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |       |   | `-DeclRefExpr 0x7fded1009620 <col:32> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fded1009310 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |       |   `-IntegerLiteral 0x7fded1009668 <col:35> 'int' 1
+    |       `-ImplicitCastExpr 0x7fded1009848 <col:39, col:44> 'int' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7fded1009718 <col:39, col:44> 'int' lvalue vectorcomponent
+    |           |-ParenExpr 0x7fded10096d8 <col:39, col:41> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+    |           | `-DeclRefExpr 0x7fded10096b0 <col:40> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fded1009310 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+    |           `-IntegerLiteral 0x7fded10096f8 <col:43> 'int' 0
+    `-ReturnStmt 0x7fded1009950 <line:11:3, col:13>
+      `-ImplicitCastExpr 0x7fded1009938 <col:10, col:13> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fded1009910 <col:10, col:13> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7fded10098c8 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fded1009310 'x' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-IntegerLiteral 0x7fded10098f0 <col:12> 'int' 4

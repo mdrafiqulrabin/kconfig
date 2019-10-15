@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f9184818ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f918485aac8 <<built-in>:73:26, ../Data/C2AST/pr58346-2.c:8:1> line:5:1 foo 'long (int (*)[0], int (*)[0])'
+  |-ParmVarDecl 0x7f918485a8d0 <col:6, col:16> col:10 used p 'int (*)[0]':'int (*)[0]'
+  |-ParmVarDecl 0x7f918485a9a8 <col:19, col:29> col:23 used q 'int (*)[0]':'int (*)[0]'
+  `-CompoundStmt 0x7f918485ac78 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f918485ac60 <line:7:3, col:14>
+      `-BinaryOperator 0x7f918485ac38 <col:10, col:14> 'long' '-'
+        |-ImplicitCastExpr 0x7f918485ac08 <col:10> 'int (*)[0]':'int (*)[0]' <LValueToRValue>
+        | `-DeclRefExpr 0x7f918485abb8 <col:10> 'int (*)[0]':'int (*)[0]' lvalue ParmVar 0x7f918485a8d0 'p' 'int (*)[0]':'int (*)[0]'
+        `-ImplicitCastExpr 0x7f918485ac20 <col:14> 'int (*)[0]':'int (*)[0]' <LValueToRValue>
+          `-DeclRefExpr 0x7f918485abe0 <col:14> 'int (*)[0]':'int (*)[0]' lvalue ParmVar 0x7f918485a9a8 'q' 'int (*)[0]':'int (*)[0]'

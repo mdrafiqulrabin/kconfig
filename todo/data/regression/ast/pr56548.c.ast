@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ff50782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff508014268 <../Data/C2AST/pr56548.c:6:1, line:16:1> line:7:1 foo 'short (short)'
+  |-ParmVarDecl 0x7ff50782c978 <col:6, col:12> col:12 used x 'short'
+  `-CompoundStmt 0x7ff5080146d0 <line:8:1, line:16:1>
+    |-DeclStmt 0x7ff5080143c8 <line:9:3, col:8>
+    | `-VarDecl 0x7ff508014368 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7ff508014640 <line:11:3, line:13:8>
+    | |-BinaryOperator 0x7ff508014428 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7ff5080143e0 <col:8> 'int' lvalue Var 0x7ff508014368 'i' 'int'
+    | | `-IntegerLiteral 0x7ff508014408 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff5080144b0 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff508014498 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff508014450 <col:15> 'int' lvalue Var 0x7ff508014368 'i' 'int'
+    | | `-IntegerLiteral 0x7ff508014478 <col:19> 'int' 3
+    | |-UnaryOperator 0x7ff508014500 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff5080144d8 <col:22> 'int' lvalue Var 0x7ff508014368 'i' 'int'
+    | `-IfStmt 0x7ff508014608 <line:12:5, line:13:8>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7ff508014598 <line:12:9, col:13> 'int' '>'
+    |   | |-ImplicitCastExpr 0x7ff508014580 <col:9> 'int' <IntegralCast>
+    |   | | `-ImplicitCastExpr 0x7ff508014568 <col:9> 'short' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7ff508014520 <col:9> 'short' lvalue ParmVar 0x7ff50782c978 'x' 'short'
+    |   | `-IntegerLiteral 0x7ff508014548 <col:13> 'int' 0
+    |   |-UnaryOperator 0x7ff5080145e8 <line:13:7, col:8> 'short' postfix '--'
+    |   | `-DeclRefExpr 0x7ff5080145c0 <col:7> 'short' lvalue ParmVar 0x7ff50782c978 'x' 'short'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7ff5080146b8 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7ff5080146a0 <col:10> 'short' <LValueToRValue>
+        `-DeclRefExpr 0x7ff508014678 <col:10> 'short' lvalue ParmVar 0x7ff50782c978 'x' 'short'

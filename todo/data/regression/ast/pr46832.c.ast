@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f893182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f89320000d8 <../Data/C2AST/pr46832.c:1:8> col:8 implicit used pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7f8932000178 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f89320001d8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f8932000248 <col:8> Implicit
+| `-NoThrowAttr 0x7f8932000290 <col:8> Implicit
+|-FunctionDecl 0x7f89320002a0 prev 0x7f89320000d8 <col:1, col:30> col:8 used pow 'double (double, double)'
+| |-ParmVarDecl 0x7f893182c978 <col:12, col:19> col:19 x 'double'
+| |-ParmVarDecl 0x7f8932000000 <col:22, col:29> col:29 y 'double'
+| |-ConstAttr 0x7f8932000388 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7f8932000398 <col:8> Inherited Implicit
+`-FunctionDecl 0x7f8932000480 <line:2:1, line:4:1> line:2:6 foo 'void (double)'
+  |-ParmVarDecl 0x7f89320003c0 <col:11, col:18> col:18 used x 'double'
+  `-CompoundStmt 0x7f8932000ae8 <col:22, line:4:1>
+    `-DeclStmt 0x7f8932000ad0 <line:3:4, col:73>
+      `-VarDecl 0x7f8932000580 <col:4, col:72> col:8 j 'int' cinit
+        `-CStyleCastExpr 0x7f8932000aa8 <col:12, col:72> 'int' <FloatingToIntegral>
+          `-ParenExpr 0x7f8932000a88 <col:18, col:72> 'double'
+            `-ConditionalOperator 0x7f8932000a10 <col:19, col:69> 'double'
+              |-BinaryOperator 0x7f8932000738 <col:19, col:33> 'int' '<'
+              | |-ParenExpr 0x7f89320006f8 <col:19, col:29> 'double'
+              | | `-CallExpr 0x7f8932000690 <col:20, col:28> 'double'
+              | |   |-ImplicitCastExpr 0x7f8932000678 <col:20> 'double (*)(double, double)' <FunctionToPointerDecay>
+              | |   | `-DeclRefExpr 0x7f89320005e0 <col:20> 'double (double, double)' Function 0x7f89320002a0 'pow' 'double (double, double)'
+              | |   |-ImplicitCastExpr 0x7f89320006c8 <col:24> 'double' <LValueToRValue>
+              | |   | `-DeclRefExpr 0x7f8932000608 <col:24> 'double' lvalue ParmVar 0x7f89320003c0 'x' 'double'
+              | |   `-ImplicitCastExpr 0x7f89320006e0 <col:27> 'double' <IntegralToFloating>
+              | |     `-IntegerLiteral 0x7f8932000630 <col:27> 'int' 2
+              | `-FloatingLiteral 0x7f8932000718 <col:33> 'double' 0.000000e+00
+              |-BinaryOperator 0x7f8932000890 <col:39, col:51> 'double' '-'
+              | |-ParenExpr 0x7f8932000850 <col:39, col:49> 'double'
+              | | `-CallExpr 0x7f89320007e8 <col:40, col:48> 'double'
+              | |   |-ImplicitCastExpr 0x7f89320007d0 <col:40> 'double (*)(double, double)' <FunctionToPointerDecay>
+              | |   | `-DeclRefExpr 0x7f8932000760 <col:40> 'double (double, double)' Function 0x7f89320002a0 'pow' 'double (double, double)'
+              | |   |-ImplicitCastExpr 0x7f8932000820 <col:44> 'double' <LValueToRValue>
+              | |   | `-DeclRefExpr 0x7f8932000788 <col:44> 'double' lvalue ParmVar 0x7f89320003c0 'x' 'double'
+              | |   `-ImplicitCastExpr 0x7f8932000838 <col:47> 'double' <IntegralToFloating>
+              | |     `-IntegerLiteral 0x7f89320007b0 <col:47> 'int' 2
+              | `-FloatingLiteral 0x7f8932000870 <col:51> 'double' 5.000000e-01
+              `-BinaryOperator 0x7f89320009e8 <col:57, col:69> 'double' '+'
+                |-ParenExpr 0x7f89320009a8 <col:57, col:67> 'double'
+                | `-CallExpr 0x7f8932000940 <col:58, col:66> 'double'
+                |   |-ImplicitCastExpr 0x7f8932000928 <col:58> 'double (*)(double, double)' <FunctionToPointerDecay>
+                |   | `-DeclRefExpr 0x7f89320008b8 <col:58> 'double (double, double)' Function 0x7f89320002a0 'pow' 'double (double, double)'
+                |   |-ImplicitCastExpr 0x7f8932000978 <col:62> 'double' <LValueToRValue>
+                |   | `-DeclRefExpr 0x7f89320008e0 <col:62> 'double' lvalue ParmVar 0x7f89320003c0 'x' 'double'
+                |   `-ImplicitCastExpr 0x7f8932000990 <col:65> 'double' <IntegralToFloating>
+                |     `-IntegerLiteral 0x7f8932000908 <col:65> 'int' 2
+                `-FloatingLiteral 0x7f89320009c8 <col:69> 'double' 5.000000e-01

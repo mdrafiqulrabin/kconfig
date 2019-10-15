@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7ffe7201a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffe7201b560 <../Data/C2AST/pr56564-3.c:6:10, col:32> col:17 struct S definition
+| |-FieldDecl 0x7ffe71821a38 <col:21, col:26> col:26 a 'long'
+| `-FieldDecl 0x7ffe71821a98 <col:21, col:29> col:29 b 'long'
+|-VarDecl 0x7ffe71821b30 <col:1, col:45> col:34 used s 'struct S':'struct S' tls cinit
+| `-InitListExpr 0x7ffe71821c60 <col:38, col:45> 'struct S':'struct S'
+|   |-ImplicitCastExpr 0x7ffe71821cb0 <col:40> 'long' <IntegralCast>
+|   | `-IntegerLiteral 0x7ffe71821bd0 <col:40> 'int' 5
+|   `-ImplicitCastExpr 0x7ffe71821cc8 <col:43> 'long' <IntegralCast>
+|     `-IntegerLiteral 0x7ffe71821bf0 <col:43> 'int' 6
+|-VarDecl 0x7ffe71821d78 <line:7:1, col:27> col:15 used t 'char [16]' tls cinit
+| `-InitListExpr 0x7ffe71821e40 <col:23, col:27> 'char [16]'
+|   |-array filler
+|   | `-ImplicitValueInitExpr 0x7ffe71821ea0 <<invalid sloc>> 'char'
+|   `-ImplicitCastExpr 0x7ffe71821e80 <col:25> 'char' <IntegralCast>
+|     `-IntegerLiteral 0x7ffe71821dd8 <col:25> 'int' 7
+|-FunctionDecl 0x7ffe71821f78 <line:9:1, line:13:1> line:10:1 foo 'int (void)'
+| `-CompoundStmt 0x7ffe718221a8 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7ffe71822190 <line:12:3, col:36>
+|     `-ImplicitCastExpr 0x7ffe71822178 <col:10, col:36> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7ffe71822150 <col:10, col:36> 'unsigned long' '&'
+|         |-ParenExpr 0x7ffe718220f8 <col:10, col:32> 'unsigned long'
+|         | `-CStyleCastExpr 0x7ffe718220d0 <col:11, col:31> 'unsigned long' <PointerToIntegral>
+|         |   `-UnaryOperator 0x7ffe71822098 <col:30, col:31> 'struct S *' prefix '&'
+|         |     `-DeclRefExpr 0x7ffe71822018 <col:31> 'struct S':'struct S' lvalue Var 0x7ffe71821b30 's' 'struct S':'struct S'
+|         `-ImplicitCastExpr 0x7ffe71822138 <col:36> 'unsigned long' <IntegralCast>
+|           `-IntegerLiteral 0x7ffe71822118 <col:36> 'int' 15
+`-FunctionDecl 0x7ffe71822258 <line:17:1, line:21:1> line:18:1 bar 'int (void)'
+  `-CompoundStmt 0x7ffe71822490 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7ffe71822478 <line:20:3, col:39>
+      `-ImplicitCastExpr 0x7ffe71822460 <col:10, col:39> 'int' <IntegralCast>
+        `-BinaryOperator 0x7ffe71822438 <col:10, col:39> 'unsigned long' '&'
+          |-ParenExpr 0x7ffe718223e0 <col:10, col:35> 'unsigned long'
+          | `-CStyleCastExpr 0x7ffe718223b8 <col:11, col:34> 'unsigned long' <PointerToIntegral>
+          |   `-UnaryOperator 0x7ffe71822380 <col:30, col:34> 'char *' prefix '&'
+          |     `-ArraySubscriptExpr 0x7ffe71822358 <col:31, col:34> 'char' lvalue
+          |       |-ImplicitCastExpr 0x7ffe71822340 <col:31> 'char *' <ArrayToPointerDecay>
+          |       | `-DeclRefExpr 0x7ffe718222f8 <col:31> 'char [16]' lvalue Var 0x7ffe71821d78 't' 'char [16]'
+          |       `-IntegerLiteral 0x7ffe71822320 <col:33> 'int' 0
+          `-ImplicitCastExpr 0x7ffe71822420 <col:39> 'unsigned long' <IntegralCast>
+            `-IntegerLiteral 0x7ffe71822400 <col:39> 'int' 15

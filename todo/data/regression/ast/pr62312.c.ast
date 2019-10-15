@@ -1,0 +1,128 @@
+TranslationUnitDecl 0x7fc0b281a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc0b281b560 <../Data/C2AST/pr62312.c:3:9, col:41> col:9 struct definition
+| `-FieldDecl 0x7fc0b38142a0 <col:18, col:38> col:31 referenced arg 'unsigned int [100]'
+|-TypedefDecl 0x7fc0b38143a0 <col:1, col:44> col:44 referenced FunctionCallInfo 'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *'
+| `-PointerType 0x7fc0b3814350 'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *'
+|   `-ElaboratedType 0x7fc0b38142f0 'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9)' sugar
+|     `-RecordType 0x7fc0b3814200 'struct (anonymous at ../Data/C2AST/pr62312.c:3:9)'
+|       `-Record 0x7fc0b281b560 ''
+|-RecordDecl 0x7fc0b3814410 <line:4:9, col:38> col:9 struct definition
+| |-FieldDecl 0x7fc0b38144d8 <col:18, col:22> col:22 referenced day 'int'
+| `-FieldDecl 0x7fc0b3814538 <col:27, col:31> col:31 referenced month 'int'
+|-TypedefDecl 0x7fc0b38145d0 <col:1, col:40> col:40 referenced Interval 'struct Interval':'Interval'
+| `-ElaboratedType 0x7fc0b3814580 'struct Interval' sugar
+|   `-RecordType 0x7fc0b38144a0 'Interval'
+|     `-Record 0x7fc0b3814410 ''
+|-FunctionDecl 0x7fc0b3814728 <line:5:1, col:27> col:7 used palloc 'void *(unsigned int)'
+| `-ParmVarDecl 0x7fc0b3814658 <col:15, col:24> col:27 'unsigned int'
+|-FunctionDecl 0x7fc0b38148d8 <line:6:1, col:14> col:5 used bar 'int (void)'
+|-FunctionDecl 0x7fc0b3814a40 <line:7:1, col:15> col:6 used baz 'void (void)'
+`-FunctionDecl 0x7fc0b3814c10 <line:9:1, line:23:1> line:10:1 interval_pl 'void (FunctionCallInfo)'
+  |-ParmVarDecl 0x7fc0b3814b10 <col:14, col:31> col:31 used fcinfo 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *'
+  `-CompoundStmt 0x7fc0b2002c08 <line:11:1, line:23:1>
+    |-DeclStmt 0x7fc0b3815018 <line:12:3, col:65>
+    | `-VarDecl 0x7fc0b3814d48 <col:3, col:64> col:13 used span1 'Interval *' cinit
+    |   `-ParenExpr 0x7fc0b3814ff8 <col:21, col:64> 'Interval *'
+    |     `-CStyleCastExpr 0x7fc0b3814fd0 <col:22, col:63> 'Interval *' <BitCast>
+    |       `-ParenExpr 0x7fc0b3814fb0 <col:35, col:63> 'char *'
+    |         `-CStyleCastExpr 0x7fc0b3814f48 <col:36, col:62> 'char *' <IntegralToPointer>
+    |           `-ImplicitCastExpr 0x7fc0b3814f30 <col:45, col:62> 'unsigned int' <LValueToRValue>
+    |             `-ParenExpr 0x7fc0b3814f10 <col:45, col:62> 'unsigned int' lvalue
+    |               `-ParenExpr 0x7fc0b3814ea8 <col:46, col:61> 'unsigned int' lvalue
+    |                 `-ArraySubscriptExpr 0x7fc0b3814e80 <col:47, col:60> 'unsigned int' lvalue
+    |                   |-ImplicitCastExpr 0x7fc0b3814e68 <col:47, col:55> 'unsigned int *' <ArrayToPointerDecay>
+    |                   | `-MemberExpr 0x7fc0b3814de8 <col:47, col:55> 'unsigned int [100]' lvalue ->arg 0x7fc0b38142a0
+    |                   |   `-ImplicitCastExpr 0x7fc0b3814dd0 <col:47> 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *' <LValueToRValue>
+    |                   |     `-DeclRefExpr 0x7fc0b3814da8 <col:47> 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *' lvalue ParmVar 0x7fc0b3814b10 'fcinfo' 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *'
+    |                   `-IntegerLiteral 0x7fc0b3814e20 <col:59> 'int' 0
+    |-DeclStmt 0x7fc0b20020e8 <line:13:3, col:65>
+    | `-VarDecl 0x7fc0b3815040 <col:3, col:64> col:13 used span2 'Interval *' cinit
+    |   `-ParenExpr 0x7fc0b20020c8 <col:21, col:64> 'Interval *'
+    |     `-CStyleCastExpr 0x7fc0b20020a0 <col:22, col:63> 'Interval *' <BitCast>
+    |       `-ParenExpr 0x7fc0b2002080 <col:35, col:63> 'char *'
+    |         `-CStyleCastExpr 0x7fc0b2002018 <col:36, col:62> 'char *' <IntegralToPointer>
+    |           `-ImplicitCastExpr 0x7fc0b2002000 <col:45, col:62> 'unsigned int' <LValueToRValue>
+    |             `-ParenExpr 0x7fc0b38151e0 <col:45, col:62> 'unsigned int' lvalue
+    |               `-ParenExpr 0x7fc0b3815178 <col:46, col:61> 'unsigned int' lvalue
+    |                 `-ArraySubscriptExpr 0x7fc0b3815150 <col:47, col:60> 'unsigned int' lvalue
+    |                   |-ImplicitCastExpr 0x7fc0b3815138 <col:47, col:55> 'unsigned int *' <ArrayToPointerDecay>
+    |                   | `-MemberExpr 0x7fc0b38150e0 <col:47, col:55> 'unsigned int [100]' lvalue ->arg 0x7fc0b38142a0
+    |                   |   `-ImplicitCastExpr 0x7fc0b38150c8 <col:47> 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *' <LValueToRValue>
+    |                   |     `-DeclRefExpr 0x7fc0b38150a0 <col:47> 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *' lvalue ParmVar 0x7fc0b3814b10 'fcinfo' 'FunctionCallInfo':'struct (anonymous struct at ../Data/C2AST/pr62312.c:3:9) *'
+    |                   `-IntegerLiteral 0x7fc0b3815118 <col:59> 'int' 1
+    |-DeclStmt 0x7fc0b20022e0 <line:14:3, col:61>
+    | `-VarDecl 0x7fc0b2002110 <col:3, col:60> col:13 used result 'Interval *' cinit
+    |   `-CStyleCastExpr 0x7fc0b2002268 <col:22, col:60> 'Interval *' <BitCast>
+    |     `-CallExpr 0x7fc0b2002210 <col:35, col:60> 'void *'
+    |       |-ImplicitCastExpr 0x7fc0b20021f8 <col:35> 'void *(*)(unsigned int)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fc0b2002170 <col:35> 'void *(unsigned int)' Function 0x7fc0b3814728 'palloc' 'void *(unsigned int)'
+    |       `-ImplicitCastExpr 0x7fc0b2002240 <col:43, col:59> 'unsigned int' <IntegralCast>
+    |         `-UnaryExprOrTypeTraitExpr 0x7fc0b20021a8 <col:43, col:59> 'unsigned long' sizeof 'Interval':'Interval'
+    |-IfStmt 0x7fc0b20029e8 <line:16:3, line:21:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc0b2002808 <line:16:7, line:17:57> 'int' '&&'
+    | | |-ParenExpr 0x7fc0b2002550 <line:16:7, col:52> 'int'
+    | | | `-BinaryOperator 0x7fc0b2002528 <col:8, col:51> 'int' '=='
+    | | |   |-ParenExpr 0x7fc0b20023f0 <col:8, col:27> 'int'
+    | | |   | `-BinaryOperator 0x7fc0b20023c8 <col:9, col:26> 'int' '<'
+    | | |   |   |-ImplicitCastExpr 0x7fc0b20023b0 <col:9, col:22> 'int' <LValueToRValue>
+    | | |   |   | `-ParenExpr 0x7fc0b2002370 <col:9, col:22> 'int' lvalue
+    | | |   |   |   `-MemberExpr 0x7fc0b2002338 <col:10, col:17> 'int' lvalue ->month 0x7fc0b3814538
+    | | |   |   |     `-ImplicitCastExpr 0x7fc0b2002320 <col:10> 'Interval *' <LValueToRValue>
+    | | |   |   |       `-DeclRefExpr 0x7fc0b20022f8 <col:10> 'Interval *' lvalue Var 0x7fc0b3814d48 'span1' 'Interval *'
+    | | |   |   `-IntegerLiteral 0x7fc0b2002390 <col:26> 'int' 0
+    | | |   `-ParenExpr 0x7fc0b2002508 <col:32, col:51> 'int'
+    | | |     `-BinaryOperator 0x7fc0b20024e0 <col:33, col:50> 'int' '<'
+    | | |       |-ImplicitCastExpr 0x7fc0b20024c8 <col:33, col:46> 'int' <LValueToRValue>
+    | | |       | `-ParenExpr 0x7fc0b2002488 <col:33, col:46> 'int' lvalue
+    | | |       |   `-MemberExpr 0x7fc0b2002450 <col:34, col:41> 'int' lvalue ->month 0x7fc0b3814538
+    | | |       |     `-ImplicitCastExpr 0x7fc0b2002438 <col:34> 'Interval *' <LValueToRValue>
+    | | |       |       `-DeclRefExpr 0x7fc0b2002410 <col:34> 'Interval *' lvalue Var 0x7fc0b3815040 'span2' 'Interval *'
+    | | |       `-IntegerLiteral 0x7fc0b20024a8 <col:50> 'int' 0
+    | | `-UnaryOperator 0x7fc0b20027e8 <line:17:10, col:57> 'int' prefix '!'
+    | |   `-ParenExpr 0x7fc0b20027c8 <col:11, col:57> 'int'
+    | |     `-BinaryOperator 0x7fc0b20027a0 <col:12, col:56> 'int' '=='
+    | |       |-ParenExpr 0x7fc0b2002668 <col:12, col:32> 'int'
+    | |       | `-BinaryOperator 0x7fc0b2002640 <col:13, col:31> 'int' '<'
+    | |       |   |-ImplicitCastExpr 0x7fc0b2002628 <col:13, col:27> 'int' <LValueToRValue>
+    | |       |   | `-ParenExpr 0x7fc0b20025e8 <col:13, col:27> 'int' lvalue
+    | |       |   |   `-MemberExpr 0x7fc0b20025b0 <col:14, col:22> 'int' lvalue ->month 0x7fc0b3814538
+    | |       |   |     `-ImplicitCastExpr 0x7fc0b2002598 <col:14> 'Interval *' <LValueToRValue>
+    | |       |   |       `-DeclRefExpr 0x7fc0b2002570 <col:14> 'Interval *' lvalue Var 0x7fc0b2002110 'result' 'Interval *'
+    | |       |   `-IntegerLiteral 0x7fc0b2002608 <col:31> 'int' 0
+    | |       `-ParenExpr 0x7fc0b2002780 <col:37, col:56> 'int'
+    | |         `-BinaryOperator 0x7fc0b2002758 <col:38, col:55> 'int' '<'
+    | |           |-ImplicitCastExpr 0x7fc0b2002740 <col:38, col:51> 'int' <LValueToRValue>
+    | |           | `-ParenExpr 0x7fc0b2002700 <col:38, col:51> 'int' lvalue
+    | |           |   `-MemberExpr 0x7fc0b20026c8 <col:39, col:46> 'int' lvalue ->month 0x7fc0b3814538
+    | |           |     `-ImplicitCastExpr 0x7fc0b20026b0 <col:39> 'Interval *' <LValueToRValue>
+    | |           |       `-DeclRefExpr 0x7fc0b2002688 <col:39> 'Interval *' lvalue Var 0x7fc0b3814d48 'span1' 'Interval *'
+    | |           `-IntegerLiteral 0x7fc0b2002720 <col:55> 'int' 0
+    | |-DoStmt 0x7fc0b20029c8 <line:18:5, line:21:14>
+    | | |-CompoundStmt 0x7fc0b2002990 <line:18:8, line:21:5>
+    | | | `-IfStmt 0x7fc0b2002958 <line:19:7, line:20:7>
+    | | |   |-<<<NULL>>>
+    | | |   |-<<<NULL>>>
+    | | |   |-CallExpr 0x7fc0b20028a0 <line:19:11, col:16> 'int'
+    | | |   | `-ImplicitCastExpr 0x7fc0b2002888 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+    | | |   |   `-DeclRefExpr 0x7fc0b2002830 <col:11> 'int (void)' Function 0x7fc0b38148d8 'bar' 'int (void)'
+    | | |   |-CallExpr 0x7fc0b2002930 <line:20:2, col:7> 'void'
+    | | |   | `-ImplicitCastExpr 0x7fc0b2002918 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    | | |   |   `-DeclRefExpr 0x7fc0b20028c8 <col:2> 'void (void)' Function 0x7fc0b3814a40 'baz' 'void (void)'
+    | | |   `-<<<NULL>>>
+    | | `-IntegerLiteral 0x7fc0b20029a8 <line:21:13> 'int' 0
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7fc0b2002be0 <line:22:3, col:37> 'int' '='
+      |-MemberExpr 0x7fc0b2002a60 <col:3, col:11> 'int' lvalue ->day 0x7fc0b38144d8
+      | `-ImplicitCastExpr 0x7fc0b2002a48 <col:3> 'Interval *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc0b2002a20 <col:3> 'Interval *' lvalue Var 0x7fc0b2002110 'result' 'Interval *'
+      `-BinaryOperator 0x7fc0b2002bb8 <col:17, col:37> 'int' '+'
+        |-ImplicitCastExpr 0x7fc0b2002b88 <col:17, col:24> 'int' <LValueToRValue>
+        | `-MemberExpr 0x7fc0b2002ad8 <col:17, col:24> 'int' lvalue ->day 0x7fc0b38144d8
+        |   `-ImplicitCastExpr 0x7fc0b2002ac0 <col:17> 'Interval *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fc0b2002a98 <col:17> 'Interval *' lvalue Var 0x7fc0b3814d48 'span1' 'Interval *'
+        `-ImplicitCastExpr 0x7fc0b2002ba0 <col:30, col:37> 'int' <LValueToRValue>
+          `-MemberExpr 0x7fc0b2002b50 <col:30, col:37> 'int' lvalue ->day 0x7fc0b38144d8
+            `-ImplicitCastExpr 0x7fc0b2002b38 <col:30> 'Interval *' <LValueToRValue>
+              `-DeclRefExpr 0x7fc0b2002b10 <col:30> 'Interval *' lvalue Var 0x7fc0b3815040 'span2' 'Interval *'

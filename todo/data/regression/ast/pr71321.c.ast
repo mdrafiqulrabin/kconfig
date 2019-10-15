@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fc13c02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc13c02c978 <../Data/C2AST/pr71321.c:4:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fc13c02be40 'unsigned char'
+|-TypedefDecl 0x7fc13c814200 <line:5:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fc13c02be80 'unsigned int'
+|-FunctionDecl 0x7fc13c814418 <line:7:1, line:10:1> line:7:10 used cvt_to_2digit 'unsigned int (uint8_t, uint8_t)'
+| |-ParmVarDecl 0x7fc13c814290 <col:24, col:32> col:32 used i 'uint8_t':'unsigned char'
+| |-ParmVarDecl 0x7fc13c814300 <col:35, col:43> col:43 used base 'uint8_t':'unsigned char'
+| `-CompoundStmt 0x7fc13c814840 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fc13c814828 <line:9:3, col:47>
+|     `-ParenExpr 0x7fc13c814808 <col:10, col:47> 'unsigned int'
+|       `-BinaryOperator 0x7fc13c8147e0 <col:11, col:46> 'unsigned int' '|'
+|         |-ImplicitCastExpr 0x7fc13c8147c8 <col:11, col:20> 'unsigned int' <IntegralCast>
+|         | `-ParenExpr 0x7fc13c8145e0 <col:11, col:20> 'int'
+|         |   `-BinaryOperator 0x7fc13c8145b8 <col:12, col:16> 'int' '/'
+|         |     |-ImplicitCastExpr 0x7fc13c814570 <col:12> 'int' <IntegralCast>
+|         |     | `-ImplicitCastExpr 0x7fc13c814558 <col:12> 'uint8_t':'unsigned char' <LValueToRValue>
+|         |     |   `-DeclRefExpr 0x7fc13c814508 <col:12> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc13c814290 'i' 'uint8_t':'unsigned char'
+|         |     `-ImplicitCastExpr 0x7fc13c8145a0 <col:16> 'int' <IntegralCast>
+|         |       `-ImplicitCastExpr 0x7fc13c814588 <col:16> 'uint8_t':'unsigned char' <LValueToRValue>
+|         |         `-DeclRefExpr 0x7fc13c814530 <col:16> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc13c814300 'base' 'uint8_t':'unsigned char'
+|         `-BinaryOperator 0x7fc13c8147a0 <col:24, col:46> 'uint32_t':'unsigned int' '<<'
+|           |-CStyleCastExpr 0x7fc13c814758 <col:24, col:43> 'uint32_t':'unsigned int' <IntegralCast>
+|           | `-ParenExpr 0x7fc13c814738 <col:34, col:43> 'int'
+|           |   `-BinaryOperator 0x7fc13c8146d0 <col:35, col:39> 'int' '%'
+|           |     |-ImplicitCastExpr 0x7fc13c814688 <col:35> 'int' <IntegralCast>
+|           |     | `-ImplicitCastExpr 0x7fc13c814670 <col:35> 'uint8_t':'unsigned char' <LValueToRValue>
+|           |     |   `-DeclRefExpr 0x7fc13c814620 <col:35> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc13c814290 'i' 'uint8_t':'unsigned char'
+|           |     `-ImplicitCastExpr 0x7fc13c8146b8 <col:39> 'int' <IntegralCast>
+|           |       `-ImplicitCastExpr 0x7fc13c8146a0 <col:39> 'uint8_t':'unsigned char' <LValueToRValue>
+|           |         `-DeclRefExpr 0x7fc13c814648 <col:39> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc13c814300 'base' 'uint8_t':'unsigned char'
+|           `-IntegerLiteral 0x7fc13c814780 <col:46> 'int' 8
+`-FunctionDecl 0x7fc13c814978 <line:11:1, line:14:1> line:11:10 cvt_to_2digit_ascii 'unsigned int (uint8_t)'
+  |-ParmVarDecl 0x7fc13c814868 <col:30, col:38> col:38 used i 'uint8_t':'unsigned char'
+  `-CompoundStmt 0x7fc13c814be0 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fc13c814bc8 <line:13:3, col:33>
+      `-BinaryOperator 0x7fc13c814ba0 <col:10, col:33> 'unsigned int' '+'
+        |-CallExpr 0x7fc13c814b00 <col:10, col:29> 'unsigned int'
+        | |-ImplicitCastExpr 0x7fc13c814ae8 <col:10> 'unsigned int (*)(uint8_t, uint8_t)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fc13c814a20 <col:10> 'unsigned int (uint8_t, uint8_t)' Function 0x7fc13c814418 'cvt_to_2digit' 'unsigned int (uint8_t, uint8_t)'
+        | |-ImplicitCastExpr 0x7fc13c814b38 <col:24> 'uint8_t':'unsigned char' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fc13c814a48 <col:24> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc13c814868 'i' 'uint8_t':'unsigned char'
+        | `-ImplicitCastExpr 0x7fc13c814b50 <col:27> 'uint8_t':'unsigned char' <IntegralCast>
+        |   `-IntegerLiteral 0x7fc13c814a70 <col:27> 'int' 10
+        `-ImplicitCastExpr 0x7fc13c814b88 <col:33> 'unsigned int' <IntegralCast>
+          `-IntegerLiteral 0x7fc13c814b68 <col:33> 'int' 667696

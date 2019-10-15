@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f896300e8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f896300f560 <../Data/C2AST/pr20927.c:6:1, col:29> col:8 struct point definition
+| |-FieldDecl 0x7f8961810038 <col:16, col:23> col:23 referenced x 'double'
+| `-FieldDecl 0x7f8961810098 <col:16, col:26> col:26 referenced y 'double'
+|-FunctionDecl 0x7f8961810230 <line:7:1, col:30> col:13 used use 'void (struct point)' extern
+| `-ParmVarDecl 0x7f8961810130 <col:18, col:25> col:30 'struct point':'struct point'
+`-FunctionDecl 0x7f8961810530 <line:9:1, line:22:1> line:9:6 test 'void (struct point *, struct point)'
+  |-ParmVarDecl 0x7f89618103a0 <col:12, col:26> col:26 used pc 'struct point *'
+  |-ParmVarDecl 0x7f8961810420 <col:30, col:43> col:43 used p1 'struct point':'struct point'
+  `-CompoundStmt 0x7f89618110d8 <line:10:1, line:22:1>
+    |-DeclStmt 0x7f89618106d8 <line:11:3, col:24>
+    | `-VarDecl 0x7f8961810600 <col:3, col:22> col:16 used p0 'struct point':'struct point' cinit
+    |   `-ImplicitCastExpr 0x7f89618106c0 <col:21, col:22> 'struct point':'struct point' <LValueToRValue>
+    |     `-UnaryOperator 0x7f89618106a0 <col:21, col:22> 'struct point':'struct point' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7f8961810688 <col:22> 'struct point *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8961810660 <col:22> 'struct point *' lvalue ParmVar 0x7f89618103a0 'pc' 'struct point *'
+    |-IfStmt 0x7f8961810aa8 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8961810970 <line:13:7, col:34> 'int' '&&'
+    | | |-BinaryOperator 0x7f89618107e0 <col:7, col:18> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7f89618107b0 <col:7, col:10> 'double' <LValueToRValue>
+    | | | | `-MemberExpr 0x7f8961810718 <col:7, col:10> 'double' lvalue .x 0x7f8961810038
+    | | | |   `-DeclRefExpr 0x7f89618106f0 <col:7> 'struct point':'struct point' lvalue Var 0x7f8961810600 'p0' 'struct point':'struct point'
+    | | | `-ImplicitCastExpr 0x7f89618107c8 <col:15, col:18> 'double' <LValueToRValue>
+    | | |   `-MemberExpr 0x7f8961810778 <col:15, col:18> 'double' lvalue .x 0x7f8961810038
+    | | |     `-DeclRefExpr 0x7f8961810750 <col:15> 'struct point':'struct point' lvalue ParmVar 0x7f8961810420 'p1' 'struct point':'struct point'
+    | | `-BinaryOperator 0x7f89618108f8 <col:23, col:34> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7f89618108c8 <col:23, col:26> 'double' <LValueToRValue>
+    | |   | `-MemberExpr 0x7f8961810830 <col:23, col:26> 'double' lvalue .y 0x7f8961810098
+    | |   |   `-DeclRefExpr 0x7f8961810808 <col:23> 'struct point':'struct point' lvalue Var 0x7f8961810600 'p0' 'struct point':'struct point'
+    | |   `-ImplicitCastExpr 0x7f89618108e0 <col:31, col:34> 'double' <LValueToRValue>
+    | |     `-MemberExpr 0x7f8961810890 <col:31, col:34> 'double' lvalue .y 0x7f8961810098
+    | |       `-DeclRefExpr 0x7f8961810868 <col:31> 'struct point':'struct point' lvalue ParmVar 0x7f8961810420 'p1' 'struct point':'struct point'
+    | |-CallExpr 0x7f8961810a60 <line:14:5, col:12> 'void'
+    | | |-ImplicitCastExpr 0x7f8961810a48 <col:5> 'void (*)(struct point)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f8961810998 <col:5> 'void (struct point)' Function 0x7f8961810230 'use' 'void (struct point)'
+    | | `-ImplicitCastExpr 0x7f8961810a90 <col:10> 'struct point':'struct point' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f89618109c0 <col:10> 'struct point':'struct point' lvalue Var 0x7f8961810600 'p0' 'struct point':'struct point'
+    | `-<<<NULL>>>
+    |-GCCAsmStmt 0x7f8961810dc8 <line:16:3, col:71>
+    |-CompoundAssignOperator 0x7f8961810f40 <line:18:3, col:14> 'double' '-=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-MemberExpr 0x7f8961810e90 <col:3, col:6> 'double' lvalue .y 0x7f8961810098
+    | | `-DeclRefExpr 0x7f8961810e68 <col:3> 'struct point':'struct point' lvalue ParmVar 0x7f8961810420 'p1' 'struct point':'struct point'
+    | `-ImplicitCastExpr 0x7f8961810f28 <col:11, col:14> 'double' <LValueToRValue>
+    |   `-MemberExpr 0x7f8961810ef0 <col:11, col:14> 'double' lvalue .y 0x7f8961810098
+    |     `-DeclRefExpr 0x7f8961810ec8 <col:11> 'struct point':'struct point' lvalue Var 0x7f8961810600 'p0' 'struct point':'struct point'
+    |-CallExpr 0x7f8961810fe0 <line:20:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f8961810fc8 <col:3> 'void (*)(struct point)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8961810f78 <col:3> 'void (struct point)' Function 0x7f8961810230 'use' 'void (struct point)'
+    | `-ImplicitCastExpr 0x7f8961811010 <col:8> 'struct point':'struct point' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8961810fa0 <col:8> 'struct point':'struct point' lvalue Var 0x7f8961810600 'p0' 'struct point':'struct point'
+    `-CallExpr 0x7f8961811090 <line:21:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f8961811078 <col:3> 'void (*)(struct point)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8961811028 <col:3> 'void (struct point)' Function 0x7f8961810230 'use' 'void (struct point)'
+      `-ImplicitCastExpr 0x7f89618110c0 <col:8> 'struct point':'struct point' <LValueToRValue>
+        `-DeclRefExpr 0x7f8961811050 <col:8> 'struct point':'struct point' lvalue ParmVar 0x7f8961810420 'p1' 'struct point':'struct point'

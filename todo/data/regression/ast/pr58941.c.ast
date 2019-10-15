@@ -1,0 +1,109 @@
+TranslationUnitDecl 0x7ff49582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff496014250 <../Data/C2AST/pr58941.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff4960142f0 prev 0x7ff496014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7ff496014390 <line:5:9, line:8:1> line:5:9 struct definition
+| |-FieldDecl 0x7ff496014458 <line:6:5, col:9> col:9 msgLength 'int'
+| `-FieldDecl 0x7ff496014520 <line:7:5, col:28> col:19 referenced data 'unsigned char [1000]'
+|-TypedefDecl 0x7ff4960145c0 <line:5:1, line:8:3> col:3 referenced SMsg 'struct SMsg':'SMsg'
+| `-ElaboratedType 0x7ff496014570 'struct SMsg' sugar
+|   `-RecordType 0x7ff496014420 'SMsg'
+|     `-Record 0x7ff496014390 ''
+|-RecordDecl 0x7ff496014630 <line:10:9, line:13:1> line:10:9 struct definition
+| |-FieldDecl 0x7ff4960146f8 <line:11:5, col:9> col:9 dummy 'int'
+| `-FieldDecl 0x7ff4960147c0 <line:12:5, col:12> col:9 referenced d 'int [0]'
+|-TypedefDecl 0x7ff496014860 <line:10:1, line:13:3> col:3 referenced SData 'struct SData':'SData'
+| `-ElaboratedType 0x7ff496014810 'struct SData' sugar
+|   `-RecordType 0x7ff4960146c0 'SData'
+|     `-Record 0x7ff496014630 ''
+|-VarDecl 0x7ff4960148e8 <line:15:1, col:17> col:5 used condition 'int' cinit
+| `-IntegerLiteral 0x7ff496014988 <col:17> 'int' 3
+`-FunctionDecl 0x7ff496014a00 <line:17:1, line:33:1> line:17:5 main 'int ()'
+  `-CompoundStmt 0x7ff49602c1f8 <line:18:1, line:33:1>
+    |-DeclStmt 0x7ff496014b30 <line:19:3, col:11>
+    | `-VarDecl 0x7ff496014ad0 <col:3, col:8> col:8 used msg 'SMsg':'SMsg'
+    |-DeclStmt 0x7ff496014d68 <line:20:3, col:36>
+    | `-VarDecl 0x7ff496014bd8 <col:3, col:35> col:10 used pData 'SData *' cinit
+    |   `-CStyleCastExpr 0x7ff496014d40 <col:18, col:35> 'SData *' <BitCast>
+    |     `-ImplicitCastExpr 0x7ff496014d28 <col:26, col:35> 'unsigned char *' <ArrayToPointerDecay>
+    |       `-ParenExpr 0x7ff496014cd8 <col:26, col:35> 'unsigned char [1000]' lvalue
+    |         `-MemberExpr 0x7ff496014c60 <col:27, col:31> 'unsigned char [1000]' lvalue .data 0x7ff496014520
+    |           `-DeclRefExpr 0x7ff496014c38 <col:27> 'SMsg':'SMsg' lvalue Var 0x7ff496014ad0 'msg' 'SMsg':'SMsg'
+    |-DeclStmt 0x7ff496014e30 <line:21:3, col:21>
+    | `-VarDecl 0x7ff496014d98 <col:3, col:20> col:16 used i 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7ff496014e18 <col:20> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff496014df8 <col:20> 'int' 0
+    |-ForStmt 0x7ff49602bf80 <line:22:3, line:29:5>
+    | |-BinaryOperator 0x7ff496014ea8 <line:22:8, col:12> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7ff496014e48 <col:8> 'unsigned int' lvalue Var 0x7ff496014d98 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7ff496014e90 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ff496014e70 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff496014f48 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff496014f18 <col:15> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff496014ed0 <col:15> 'unsigned int' lvalue Var 0x7ff496014d98 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7ff496014f30 <col:19> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ff496014ef8 <col:19> 'int' 1
+    | |-UnaryOperator 0x7ff496014f98 <col:22, col:23> 'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7ff496014f70 <col:22> 'unsigned int' lvalue Var 0x7ff496014d98 'i' 'unsigned int'
+    | `-CompoundStmt 0x7ff49602bf58 <line:23:5, line:29:5>
+    |   |-BinaryOperator 0x7ff496015100 <line:24:7, col:21> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7ff4960150b8 <col:7, col:17> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7ff496015088 <col:7, col:14> 'int *' <ArrayToPointerDecay>
+    |   | | | `-MemberExpr 0x7ff496014ff8 <col:7, col:14> 'int [0]' lvalue ->d 0x7ff4960147c0
+    |   | | |   `-ImplicitCastExpr 0x7ff496014fe0 <col:7> 'SData *' <LValueToRValue>
+    |   | | |     `-DeclRefExpr 0x7ff496014fb8 <col:7> 'SData *' lvalue Var 0x7ff496014bd8 'pData' 'SData *'
+    |   | | `-ImplicitCastExpr 0x7ff4960150a0 <col:16> 'unsigned int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7ff496015030 <col:16> 'unsigned int' lvalue Var 0x7ff496014d98 'i' 'unsigned int'
+    |   | `-IntegerLiteral 0x7ff4960150e0 <col:21> 'int' 0
+    |   |-IfStmt 0x7ff49602bd10 <line:25:7, line:26:17>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7ff496015188 <line:25:10, col:22> 'int' '&'
+    |   | | |-ImplicitCastExpr 0x7ff496015170 <col:10> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7ff496015128 <col:10> 'int' lvalue Var 0x7ff4960148e8 'condition' 'int'
+    |   | | `-IntegerLiteral 0x7ff496015150 <col:22> 'int' 1
+    |   | |-CompoundAssignOperator 0x7ff49602bcd8 <line:26:2, col:17> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | | |-ArraySubscriptExpr 0x7ff49602bc90 <col:2, col:12> 'int' lvalue
+    |   | | | |-ImplicitCastExpr 0x7ff49602bc60 <col:2, col:9> 'int *' <ArrayToPointerDecay>
+    |   | | | | `-MemberExpr 0x7ff49602bc00 <col:2, col:9> 'int [0]' lvalue ->d 0x7ff4960147c0
+    |   | | | |   `-ImplicitCastExpr 0x7ff4960151d8 <col:2> 'SData *' <LValueToRValue>
+    |   | | | |     `-DeclRefExpr 0x7ff4960151b0 <col:2> 'SData *' lvalue Var 0x7ff496014bd8 'pData' 'SData *'
+    |   | | | `-ImplicitCastExpr 0x7ff49602bc78 <col:11> 'unsigned int' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7ff49602bc38 <col:11> 'unsigned int' lvalue Var 0x7ff496014d98 'i' 'unsigned int'
+    |   | | `-IntegerLiteral 0x7ff49602bcb8 <col:17> 'int' 85
+    |   | `-<<<NULL>>>
+    |   `-IfStmt 0x7ff49602bf20 <line:27:7, line:28:17>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7ff49602bda8 <line:27:10, col:22> 'int' '&'
+    |     | |-ImplicitCastExpr 0x7ff49602bd90 <col:10> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7ff49602bd48 <col:10> 'int' lvalue Var 0x7ff4960148e8 'condition' 'int'
+    |     | `-IntegerLiteral 0x7ff49602bd70 <col:22> 'int' 2
+    |     |-CompoundAssignOperator 0x7ff49602bee8 <line:28:2, col:17> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     | |-ArraySubscriptExpr 0x7ff49602bea0 <col:2, col:12> 'int' lvalue
+    |     | | |-ImplicitCastExpr 0x7ff49602be70 <col:2, col:9> 'int *' <ArrayToPointerDecay>
+    |     | | | `-MemberExpr 0x7ff49602be10 <col:2, col:9> 'int [0]' lvalue ->d 0x7ff4960147c0
+    |     | | |   `-ImplicitCastExpr 0x7ff49602bdf8 <col:2> 'SData *' <LValueToRValue>
+    |     | | |     `-DeclRefExpr 0x7ff49602bdd0 <col:2> 'SData *' lvalue Var 0x7ff496014bd8 'pData' 'SData *'
+    |     | | `-ImplicitCastExpr 0x7ff49602be88 <col:11> 'unsigned int' <LValueToRValue>
+    |     | |   `-DeclRefExpr 0x7ff49602be48 <col:11> 'unsigned int' lvalue Var 0x7ff496014d98 'i' 'unsigned int'
+    |     | `-IntegerLiteral 0x7ff49602bec8 <col:17> 'int' 170
+    |     `-<<<NULL>>>
+    |-IfStmt 0x7ff49602c188 <line:30:3, line:31:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff49602c0c8 <line:30:7, col:22> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff49602c0b0 <col:7, col:17> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7ff49602c068 <col:7, col:17> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7ff49602c050 <col:7, col:14> 'int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7ff49602bff8 <col:7, col:14> 'int [0]' lvalue ->d 0x7ff4960147c0
+    | | |   |   `-ImplicitCastExpr 0x7ff49602bfe0 <col:7> 'SData *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7ff49602bfb8 <col:7> 'SData *' lvalue Var 0x7ff496014bd8 'pData' 'SData *'
+    | | |   `-IntegerLiteral 0x7ff49602c030 <col:16> 'int' 0
+    | | `-IntegerLiteral 0x7ff49602c090 <col:22> 'int' 255
+    | |-CallExpr 0x7ff49602c160 <line:31:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff49602c148 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff49602c0f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff4960142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff49602c1e0 <line:32:3, col:10>
+      `-IntegerLiteral 0x7ff49602c1c0 <col:10> 'int' 0

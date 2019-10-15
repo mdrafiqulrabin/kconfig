@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7ff5a382bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff5a4014268 <../Data/C2AST/pr53922.c:10:1, line:13:1> line:10:5 used x 'int (int)'
+| |-ParmVarDecl 0x7ff5a382c978 <col:7, col:11> col:11 used a 'int'
+| `-CompoundStmt 0x7ff5a40143a8 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7ff5a4014390 <line:12:3, col:10>
+|     `-ImplicitCastExpr 0x7ff5a4014378 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff5a4014350 <col:10> 'int' lvalue ParmVar 0x7ff5a382c978 'a' 'int'
+|-FunctionDecl 0x7ff5a4014468 <line:14:1, col:35> col:5 used y 'int (int)'
+| |-ParmVarDecl 0x7ff5a40143d8 <col:7, col:11> col:11 a 'int'
+| `-WeakAttr 0x7ff5a4014510 <col:30>
+|-VarDecl 0x7ff5a4014570 <line:15:1, col:9> col:5 used g 'int' cinit
+| `-IntegerLiteral 0x7ff5a40145d0 <col:9> 'int' 0
+`-FunctionDecl 0x7ff5a4014640 <line:16:1, line:28:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7ff5a4014bc8 <line:17:1, line:28:1>
+    |-DeclStmt 0x7ff5a4014888 <line:18:3, col:24>
+    | `-VarDecl 0x7ff5a4014828 <col:3, col:23> col:9 used scan_func 'int (*)(int)'
+    |-IfStmt 0x7ff5a4014a00 <line:19:3, line:22:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff5a40148c8 <line:19:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff5a40148a0 <col:7> 'int' lvalue Var 0x7ff5a4014570 'g' 'int'
+    | |-BinaryOperator 0x7ff5a4014948 <line:20:5, col:17> 'int (*)(int)' '='
+    | | |-DeclRefExpr 0x7ff5a40148e0 <col:5> 'int (*)(int)' lvalue Var 0x7ff5a4014828 'scan_func' 'int (*)(int)'
+    | | `-ImplicitCastExpr 0x7ff5a4014930 <col:17> 'int (*)(int)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff5a4014908 <col:17> 'int (int)' Function 0x7ff5a4014268 'x' 'int (int)'
+    | `-BinaryOperator 0x7ff5a40149d8 <line:22:5, col:17> 'int (*)(int)' '='
+    |   |-DeclRefExpr 0x7ff5a4014970 <col:5> 'int (*)(int)' lvalue Var 0x7ff5a4014828 'scan_func' 'int (*)(int)'
+    |   `-ImplicitCastExpr 0x7ff5a40149c0 <col:17> 'int (*)(int)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7ff5a4014998 <col:17> 'int (int)' Function 0x7ff5a4014468 'y' 'int (int)'
+    |-IfStmt 0x7ff5a4014b58 <line:24:3, line:25:21>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff5a4014a60 <line:24:7> 'int (*)(int)' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff5a4014a38 <col:7> 'int (*)(int)' lvalue Var 0x7ff5a4014828 'scan_func' 'int (*)(int)'
+    | |-BinaryOperator 0x7ff5a4014b30 <line:25:5, col:21> 'int' '='
+    | | |-DeclRefExpr 0x7ff5a4014a78 <col:5> 'int' lvalue Var 0x7ff5a4014570 'g' 'int'
+    | | `-CallExpr 0x7ff5a4014b00 <col:9, col:21> 'int'
+    | |   |-ImplicitCastExpr 0x7ff5a4014ae8 <col:9> 'int (*)(int)' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7ff5a4014aa0 <col:9> 'int (*)(int)' lvalue Var 0x7ff5a4014828 'scan_func' 'int (*)(int)'
+    | |   `-IntegerLiteral 0x7ff5a4014ac8 <col:19> 'int' 10
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff5a4014bb0 <line:27:3, col:10>
+      `-IntegerLiteral 0x7ff5a4014b90 <col:10> 'int' 0

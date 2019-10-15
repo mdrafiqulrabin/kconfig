@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fb2138174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb213818160 <../Data/C2AST/pr69454-1.c:4:9, col:36> col:9 struct definition
+| `-FieldDecl 0x7fb2130288a0 <col:18, col:33> col:28 referenced w64 'long long [2]'
+|-TypedefDecl 0x7fb213028940 <col:1, col:38> col:38 referenced V128 'struct V128':'V128'
+| `-ElaboratedType 0x7fb2130288f0 'struct V128' sugar
+|   `-RecordType 0x7fb213028800 'V128'
+|     `-Record 0x7fb213818160 ''
+|-FunctionDecl 0x7fb213028b20 <line:5:1, col:22> col:14 used fn2 'V128 *(void)' extern
+|-VarDecl 0x7fb213028c18 <line:6:1, col:11> col:11 used a 'long long'
+|-VarDecl 0x7fb213028c88 <line:7:1, col:6> col:6 used b 'V128':'V128'
+`-FunctionDecl 0x7fb213028d38 <line:8:1, line:11:1> line:8:6 fn1 'void ()'
+  `-CompoundStmt 0x7fb2130291d8 <col:12, line:11:1>
+    |-DeclStmt 0x7fb213028f08 <line:9:3, col:18>
+    | `-VarDecl 0x7fb213028de8 <col:3, col:17> col:9 used c 'V128 *' cinit
+    |   `-CallExpr 0x7fb213028ee0 <col:13, col:17> 'V128 *'
+    |     `-ImplicitCastExpr 0x7fb213028ec8 <col:13> 'V128 *(*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fb213028e48 <col:13> 'V128 *(void)' Function 0x7fb213028b20 'fn2' 'V128 *(void)'
+    `-BinaryOperator 0x7fb213029168 <line:10:3, col:26> 'long long' '='
+      |-ArraySubscriptExpr 0x7fb213029000 <col:3, col:11> 'long long' lvalue
+      | |-ImplicitCastExpr 0x7fb213028fe8 <col:3, col:6> 'long long *' <ArrayToPointerDecay>
+      | | `-MemberExpr 0x7fb213028f60 <col:3, col:6> 'long long [2]' lvalue ->w64 0x7fb2130288a0
+      | |   `-ImplicitCastExpr 0x7fb213028f48 <col:3> 'V128 *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fb213028f20 <col:3> 'V128 *' lvalue Var 0x7fb213028de8 'c' 'V128 *'
+      | `-IntegerLiteral 0x7fb213028f98 <col:10> 'int' 0
+      `-BinaryOperator 0x7fb213029140 <col:15, col:26> 'long long' '^'
+        |-ImplicitCastExpr 0x7fb213029110 <col:15> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb213029028 <col:15> 'long long' lvalue Var 0x7fb213028c18 'a' 'long long'
+        `-ImplicitCastExpr 0x7fb213029128 <col:19, col:26> 'long long' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fb2130290e8 <col:19, col:26> 'long long' lvalue
+            |-ImplicitCastExpr 0x7fb2130290d0 <col:19, col:21> 'long long *' <ArrayToPointerDecay>
+            | `-MemberExpr 0x7fb213029078 <col:19, col:21> 'long long [2]' lvalue .w64 0x7fb2130288a0
+            |   `-DeclRefExpr 0x7fb213029050 <col:19> 'V128':'V128' lvalue Var 0x7fb213028c88 'b' 'V128':'V128'
+            `-IntegerLiteral 0x7fb2130290b0 <col:25> 'int' 0

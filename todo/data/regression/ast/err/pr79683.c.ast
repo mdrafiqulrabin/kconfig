@@ -1,0 +1,34 @@
+../Data/C2AST/pr79683.c:8:29: error: expected ')'
+void test(struct s __seg_gs *x) {
+                            ^
+../Data/C2AST/pr79683.c:8:10: note: to match this '('
+void test(struct s __seg_gs *x) {
+         ^
+../Data/C2AST/pr79683.c:9:5: error: use of undeclared identifier 'x'
+    x->a += 1;
+    ^
+../Data/C2AST/pr79683.c:10:5: error: use of undeclared identifier 'x'
+    x->b -= 1;
+    ^
+3 errors generated.
+TranslationUnitDecl 0x7f868402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f868402c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f868402bf80 '__int128'
+|-TypedefDecl 0x7f868402c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f868402bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f868402c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f868402c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f868402c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f868402c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f868402c600 'char *'
+|   `-BuiltinType 0x7f868402bd80 'char'
+|-TypedefDecl 0x7f868402c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f868402c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f868402c720 'struct __va_list_tag'
+|     `-Record 0x7f868402c698 '__va_list_tag'
+|-RecordDecl 0x7f868402c960 <../Data/C2AST/pr79683.c:4:1, line:7:1> line:4:8 struct s definition
+| |-FieldDecl 0x7f868406d838 <<built-in>:172:24, ../Data/C2AST/pr79683.c:5:20> col:20 a 'long long'
+| `-FieldDecl 0x7f868406d898 <<built-in>:172:24, ../Data/C2AST/pr79683.c:6:20> col:20 b 'long long'
+`-FunctionDecl 0x7f868406da30 <line:8:1, line:11:1> line:8:6 test 'void (struct s)'
+  |-ParmVarDecl 0x7f868406d930 <col:11, col:20> col:20 __seg_gs 'struct s':'struct s'
+  `-CompoundStmt 0x7f868406db70 <col:33, line:11:1>

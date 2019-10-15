@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f84a28272e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f84a2827f78 <../Data/C2AST/pr58809.c:5:1, col:5> col:5 i 'int'
+`-FunctionDecl 0x7f84a4014288 <line:8:1, line:13:1> line:8:6 foo 'void ()'
+  `-CompoundStmt 0x7f84a40143f0 <line:9:1, line:13:1>
+    |-DeclStmt 0x7f84a40143c8 <line:10:3, col:17>
+    | `-VarDecl 0x7f84a4014368 <col:3, col:16> col:16 j '_Complex int'
+    `-NullStmt 0x7f84a40143e0 <line:12:3>

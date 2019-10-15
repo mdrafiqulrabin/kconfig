@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ffac5824ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffac4819a00 <../Data/C2AST/pr30771.c:4:1, col:10> col:5 used a 'int [128]'
+`-FunctionDecl 0x7ffac4819af0 <line:6:1, line:15:1> line:7:1 main 'int ()'
+  `-CompoundStmt 0x7ffac4819f90 <line:8:1, line:15:1>
+    |-DeclStmt 0x7ffac4819c08 <line:9:3, col:10>
+    | `-VarDecl 0x7ffac4819ba8 <col:3, col:9> col:9 used i 'short'
+    |-ForStmt 0x7ffac4819f20 <line:11:3, line:13:3>
+    | |-BinaryOperator 0x7ffac4819c80 <line:11:8, col:10> 'short' '='
+    | | |-DeclRefExpr 0x7ffac4819c20 <col:8> 'short' lvalue Var 0x7ffac4819ba8 'i' 'short'
+    | | `-ImplicitCastExpr 0x7ffac4819c68 <col:10> 'short' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ffac4819c48 <col:10> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffac4819d20 <col:13, col:15> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ffac4819d08 <col:13> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7ffac4819cf0 <col:13> 'short' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ffac4819ca8 <col:13> 'short' lvalue Var 0x7ffac4819ba8 'i' 'short'
+    | | `-IntegerLiteral 0x7ffac4819cd0 <col:15> 'int' 64
+    | |-UnaryOperator 0x7ffac4819d70 <col:19, col:20> 'short' postfix '++'
+    | | `-DeclRefExpr 0x7ffac4819d48 <col:19> 'short' lvalue Var 0x7ffac4819ba8 'i' 'short'
+    | `-CompoundStmt 0x7ffac4819f08 <col:23, line:13:3>
+    |   `-BinaryOperator 0x7ffac4819ee0 <line:12:5, col:17> 'int' '='
+    |     |-ArraySubscriptExpr 0x7ffac4819e38 <col:5, col:8> 'int' lvalue
+    |     | |-ImplicitCastExpr 0x7ffac4819e08 <col:5> 'int *' <ArrayToPointerDecay>
+    |     | | `-DeclRefExpr 0x7ffac4819d90 <col:5> 'int [128]' lvalue Var 0x7ffac4819a00 'a' 'int [128]'
+    |     | `-ImplicitCastExpr 0x7ffac4819e20 <col:7> 'short' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ffac4819db8 <col:7> 'short' lvalue Var 0x7ffac4819ba8 'i' 'short'
+    |     `-CStyleCastExpr 0x7ffac4819eb8 <col:12, col:17> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7ffac4819ea0 <col:17> 'short' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffac4819e60 <col:17> 'short' lvalue Var 0x7ffac4819ba8 'i' 'short'
+    `-ReturnStmt 0x7ffac4819f78 <line:14:3, col:10>
+      `-IntegerLiteral 0x7ffac4819f58 <col:10> 'int' 0

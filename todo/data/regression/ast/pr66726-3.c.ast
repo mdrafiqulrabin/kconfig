@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fe11001a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe110814200 <../Data/C2AST/pr66726-3.c:5:1, col:33> col:23 used mode_size 'unsigned short []' extern
+`-FunctionDecl 0x7fe110814388 <line:7:1, line:16:1> line:8:1 oof 'int (int)'
+  |-ParmVarDecl 0x7fe1108142b8 <col:6, col:10> col:10 used mode 'int'
+  `-CompoundStmt 0x7fe110814830 <line:9:1, line:16:1>
+    |-DeclStmt 0x7fe1108144a8 <line:10:3, col:10>
+    | `-VarDecl 0x7fe110814448 <col:3, col:7> col:7 used tem 'int'
+    |-IfStmt 0x7fe1108147a0 <line:11:3, line:14:25>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe1108145e0 <line:11:7, col:26> 'int' '<'
+    | | |-IntegerLiteral 0x7fe1108144c0 <col:7> 'int' 64
+    | | `-ImplicitCastExpr 0x7fe1108145c8 <col:12, col:26> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fe1108145b0 <col:12, col:26> 'unsigned short' <LValueToRValue>
+    | |     `-ArraySubscriptExpr 0x7fe110814588 <col:12, col:26> 'unsigned short' lvalue
+    | |       |-ImplicitCastExpr 0x7fe110814558 <col:12> 'unsigned short *' <ArrayToPointerDecay>
+    | |       | `-DeclRefExpr 0x7fe1108144e0 <col:12> 'unsigned short []' lvalue Var 0x7fe110814200 'mode_size' 'unsigned short []'
+    | |       `-ImplicitCastExpr 0x7fe110814570 <col:22> 'int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fe110814508 <col:22> 'int' lvalue ParmVar 0x7fe1108142b8 'mode' 'int'
+    | |-BinaryOperator 0x7fe110814650 <line:12:5, col:11> 'int' '='
+    | | |-DeclRefExpr 0x7fe110814608 <col:5> 'int' lvalue Var 0x7fe110814448 'tem' 'int'
+    | | `-IntegerLiteral 0x7fe110814630 <col:11> 'int' 64
+    | `-BinaryOperator 0x7fe110814778 <line:14:5, col:25> 'int' '='
+    |   |-DeclRefExpr 0x7fe110814678 <col:5> 'int' lvalue Var 0x7fe110814448 'tem' 'int'
+    |   `-ImplicitCastExpr 0x7fe110814760 <col:11, col:25> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fe110814748 <col:11, col:25> 'unsigned short' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fe110814720 <col:11, col:25> 'unsigned short' lvalue
+    |         |-ImplicitCastExpr 0x7fe1108146f0 <col:11> 'unsigned short *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fe1108146a0 <col:11> 'unsigned short []' lvalue Var 0x7fe110814200 'mode_size' 'unsigned short []'
+    |         `-ImplicitCastExpr 0x7fe110814708 <col:21> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fe1108146c8 <col:21> 'int' lvalue ParmVar 0x7fe1108142b8 'mode' 'int'
+    `-ReturnStmt 0x7fe110814818 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fe110814800 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe1108147d8 <col:10> 'int' lvalue Var 0x7fe110814448 'tem' 'int'

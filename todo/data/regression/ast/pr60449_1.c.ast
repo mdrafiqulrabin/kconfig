@@ -1,0 +1,144 @@
+TranslationUnitDecl 0x7f9bde82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9bdf0142a8 <../Data/C2AST/pr60449_1.c:1:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f9bdf014348 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f9bdf0143b0 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7f9bdf014408 prev 0x7f9bdf0142a8 <col:1, col:56> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f9bde82c978 <col:20, col:43> col:43 __format 'const char *restrict'
+| `-FormatAttr 0x7f9bdf0144e8 <col:12> Inherited printf 1 2
+|-TypedefDecl 0x7f9bdf014520 <line:2:1, col:18> col:18 referenced __time_t 'long'
+| `-BuiltinType 0x7f9bde82be00 'long'
+|-TypedefDecl 0x7f9bdf014590 <line:3:1, col:18> col:18 referenced __suseconds_t 'long'
+| `-BuiltinType 0x7f9bde82be00 'long'
+|-RecordDecl 0x7f9bdf0145e8 <line:4:1, line:8:3> line:4:8 struct timeval definition
+| |-FieldDecl 0x7f9bdf0146c0 <line:6:5, col:14> col:14 tv_sec '__time_t':'long'
+| `-FieldDecl 0x7f9bdf014740 <line:7:5, col:19> col:19 tv_usec '__suseconds_t':'long'
+|-RecordDecl 0x7f9bdf014788 <line:9:1, line:13:3> line:9:8 struct timezone definition
+| |-FieldDecl 0x7f9bdf014848 <line:11:5, col:9> col:9 tz_minuteswest 'int'
+| `-FieldDecl 0x7f9bdf0148a8 <line:12:5, col:9> col:9 referenced tz_dsttime 'int'
+|-TypedefDecl 0x7f9bdf0149a0 <line:14:1, col:37> col:37 referenced __timezone_ptr_t 'struct timezone *restrict'
+| `-QualType 0x7f9bdf014952 'struct timezone *restrict' __restrict
+|   `-PointerType 0x7f9bdf014950 'struct timezone *'
+|     `-ElaboratedType 0x7f9bdf0148f0 'struct timezone' sugar
+|       `-RecordType 0x7f9bdf014810 'struct timezone'
+|         `-Record 0x7f9bdf014788 'timezone'
+|-FunctionDecl 0x7f9bdf014c78 <line:15:1, line:16:101> line:15:12 used gettimeofday 'int (struct timeval *restrict, __timezone_ptr_t)' extern
+| |-ParmVarDecl 0x7f9bdf014ab0 <col:26, col:53> col:53 __tv 'struct timeval *restrict'
+| |-ParmVarDecl 0x7f9bdf014b40 <line:16:5, col:22> col:22 __tz '__timezone_ptr_t':'struct timezone *restrict'
+| |-NonNullAttr 0x7f9bdf014d28 <col:85, col:99> 0
+| `-NoThrowAttr 0x7f9bdf014d80 <col:44>
+|-TypedefDecl 0x7f9bdf014e50 <line:18:1, col:29> col:18 referenced __jmp_buf 'long [8]'
+| `-ConstantArrayType 0x7f9bdf014df0 'long [8]' 8 
+|   `-BuiltinType 0x7f9bde82be00 'long'
+|-RecordDecl 0x7f9bdf014ea8 <line:19:9, line:22:3> line:19:9 struct definition
+| `-FieldDecl 0x7f9bdf0150f0 <line:21:5, col:70> col:23 __val 'unsigned long [16]'
+|-TypedefDecl 0x7f9bdf015190 <line:19:1, line:22:5> col:5 referenced __sigset_t 'struct __sigset_t':'__sigset_t'
+| `-ElaboratedType 0x7f9bdf015140 'struct __sigset_t' sugar
+|   `-RecordType 0x7f9bdf014f30 '__sigset_t'
+|     `-Record 0x7f9bdf014ea8 ''
+|-RecordDecl 0x7f9bdf02cc00 <line:23:1, line:28:3> line:23:8 struct __jmp_buf_tag definition
+| |-FieldDecl 0x7f9bdf02cce0 <line:25:5, col:15> col:15 __jmpbuf '__jmp_buf':'long [8]'
+| |-FieldDecl 0x7f9bdf02cd40 <line:26:5, col:9> col:9 __mask_was_saved 'int'
+| `-FieldDecl 0x7f9bdf02cdc0 <line:27:5, col:16> col:16 __saved_mask '__sigset_t':'__sigset_t'
+|-TypedefDecl 0x7f9bdf02cfa8 <line:29:1, col:39> col:30 referenced jmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7f9bdf02cf40 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7f9bdf02ce30 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7f9bdf02cc90 'struct __jmp_buf_tag'
+|       `-Record 0x7f9bdf02cc00 '__jmp_buf_tag'
+|-FunctionDecl 0x7f9bdf02d208 <line:31:12> col:12 implicit used setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7f9bdf02d2a8 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7f9bdf02d310 <col:12> Implicit
+|-FunctionDecl 0x7f9bdf02d358 prev 0x7f9bdf02d208 <col:1, col:63> col:12 used setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7f9bdf02d0c0 <col:20, col:28> col:28 __env 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| |-NoThrowAttr 0x7f9bdf02d400 <col:51>
+| `-ReturnsTwiceAttr 0x7f9bdf02d448 <col:12> Inherited Implicit
+|-FunctionDecl 0x7f9bdf02d730 <line:32:13> col:13 implicit used longjmp 'void (struct __jmp_buf_tag *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f9bdf02d7d0 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| `-ParmVarDecl 0x7f9bdf02d830 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f9bdf02d8a0 prev 0x7f9bdf02d730 <col:1, line:33:65> line:32:13 used longjmp 'void (struct __jmp_buf_tag *, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f9bdf02d4e0 <col:22, col:50> col:43 __env 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7f9bdf02d558 <col:53, col:57> col:57 __val 'int'
+| `-NoThrowAttr 0x7f9bdf02d950 <line:33:22>
+|-FunctionDecl 0x7f9bdf02da68 <line:35:1, col:21> col:12 used bar 'int (void)' extern
+|-FunctionDecl 0x7f9bdf02dc00 <line:37:1, line:41:1> line:38:1 used get_input 'int (void)'
+| |-CompoundStmt 0x7f9bdf02dd20 <line:39:1, line:41:1>
+| | `-ReturnStmt 0x7f9bdf02dd08 <line:40:3, col:10>
+| |   `-IntegerLiteral 0x7f9bdf02dce8 <col:10> 'int' 0
+| `-NoInlineAttr 0x7f9bdf02dca0 <line:37:21>
+|-VarDecl 0x7f9bdf02dd48 <line:43:1, col:16> col:16 used buf 'jmp_buf':'struct __jmp_buf_tag [1]' static
+|-FunctionDecl 0x7f9bdf02de40 <line:45:1, line:50:1> line:45:5 used foo 'int (void)'
+| `-CompoundStmt 0x7f9bdf02e120 <line:46:1, line:50:1>
+|   |-IfStmt 0x7f9bdf02e0b0 <line:47:3, line:48:19>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f9bdf02df50 <line:47:7, col:18> 'int'
+|   | | `-ImplicitCastExpr 0x7f9bdf02df38 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9bdf02dee0 <col:7> 'int (void)' Function 0x7f9bdf02dc00 'get_input' 'int (void)'
+|   | |-CallExpr 0x7f9bdf02e060 <line:48:5, col:19> 'void'
+|   | | |-ImplicitCastExpr 0x7f9bdf02e048 <col:5> 'void (*)(struct __jmp_buf_tag *, int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f9bdf02df78 <col:5> 'void (struct __jmp_buf_tag *, int) __attribute__((noreturn))' Function 0x7f9bdf02d8a0 'longjmp' 'void (struct __jmp_buf_tag *, int) __attribute__((noreturn))'
+|   | | |-ImplicitCastExpr 0x7f9bdf02e098 <col:13> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f9bdf02dfa0 <col:13> 'jmp_buf':'struct __jmp_buf_tag [1]' lvalue Var 0x7f9bdf02dd48 'buf' 'jmp_buf':'struct __jmp_buf_tag [1]'
+|   | | `-IntegerLiteral 0x7f9bdf02dfc8 <col:18> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9bdf02e108 <line:49:3, col:10>
+|     `-IntegerLiteral 0x7f9bdf02e0e8 <col:10> 'int' 0
+|-VarDecl 0x7f9bdf02e158 <line:52:1, col:14> col:14 used z 'volatile int'
+`-FunctionDecl 0x7f9bdf02e250 <line:55:1, line:76:1> line:55:5 main 'int (void)'
+  `-CompoundStmt 0x7f9bdf02ec38 <line:56:1, line:76:1>
+    |-DeclStmt 0x7f9bdf02e398 <line:57:3, col:20>
+    | `-VarDecl 0x7f9bdf02e338 <col:3, col:18> col:18 used tv 'struct timeval':'struct timeval'
+    |-DeclStmt 0x7f9bdf02e430 <line:58:3, col:21>
+    | `-VarDecl 0x7f9bdf02e3d0 <col:3, col:19> col:19 used tz 'struct timezone':'struct timezone'
+    |-CallExpr 0x7f9bdf02e488 <line:60:3, col:7> 'int'
+    | `-ImplicitCastExpr 0x7f9bdf02e470 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9bdf02e448 <col:3> 'int (void)' Function 0x7f9bdf02da68 'bar' 'int (void)'
+    |-IfStmt 0x7f9bdf02e5f0 <line:61:3, line:62:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7f9bdf02e570 <line:61:7, col:18> 'int'
+    | | |-ImplicitCastExpr 0x7f9bdf02e558 <col:7> 'int (*)(struct __jmp_buf_tag *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f9bdf02e4b0 <col:7> 'int (struct __jmp_buf_tag *)' Function 0x7f9bdf02d358 'setjmp' 'int (struct __jmp_buf_tag *)'
+    | | `-ImplicitCastExpr 0x7f9bdf02e5a0 <col:15> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9bdf02e4d8 <col:15> 'jmp_buf':'struct __jmp_buf_tag [1]' lvalue Var 0x7f9bdf02dd48 'buf' 'jmp_buf':'struct __jmp_buf_tag [1]'
+    | |-ReturnStmt 0x7f9bdf02e5d8 <line:62:5, col:12>
+    | | `-IntegerLiteral 0x7f9bdf02e5b8 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f9bdf02ea78 <line:64:3, line:69:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f9bdf02e690 <line:64:7, col:19> 'int' prefix '!'
+    | | `-CallExpr 0x7f9bdf02e668 <col:8, col:19> 'int'
+    | |   `-ImplicitCastExpr 0x7f9bdf02e650 <col:8> 'int (*)(void)' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7f9bdf02e628 <col:8> 'int (void)' Function 0x7f9bdf02dc00 'get_input' 'int (void)'
+    | |-CompoundStmt 0x7f9bdf02ea50 <line:65:5, line:69:5>
+    | | |-CallExpr 0x7f9bdf02e7e0 <line:66:7, col:29> 'int'
+    | | | |-ImplicitCastExpr 0x7f9bdf02e7c8 <col:7> 'int (*)(struct timeval *restrict, __timezone_ptr_t)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f9bdf02e6b0 <col:7> 'int (struct timeval *restrict, __timezone_ptr_t)' Function 0x7f9bdf014c78 'gettimeofday' 'int (struct timeval *restrict, __timezone_ptr_t)'
+    | | | |-UnaryOperator 0x7f9bdf02e700 <col:21, col:22> 'struct timeval *' prefix '&'
+    | | | | `-DeclRefExpr 0x7f9bdf02e6d8 <col:22> 'struct timeval':'struct timeval' lvalue Var 0x7f9bdf02e338 'tv' 'struct timeval':'struct timeval'
+    | | | `-UnaryOperator 0x7f9bdf02e748 <col:26, col:27> 'struct timezone *' prefix '&'
+    | | |   `-DeclRefExpr 0x7f9bdf02e720 <col:27> 'struct timezone':'struct timezone' lvalue Var 0x7f9bdf02e3d0 'tz' 'struct timezone':'struct timezone'
+    | | |-BinaryOperator 0x7f9bdf02e860 <line:67:7, col:11> 'int' '='
+    | | | |-DeclRefExpr 0x7f9bdf02e818 <col:7> 'volatile int' lvalue Var 0x7f9bdf02e158 'z' 'volatile int'
+    | | | `-IntegerLiteral 0x7f9bdf02e840 <col:11> 'int' 0
+    | | `-CallExpr 0x7f9bdf02e9d0 <line:68:7, col:54> 'int'
+    | |   |-ImplicitCastExpr 0x7f9bdf02e9b8 <col:7> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f9bdf02e888 <col:7> 'int (const char *, ...)' Function 0x7f9bdf014408 'printf' 'int (const char *, ...)'
+    | |   |-ImplicitCastExpr 0x7f9bdf02ea20 <col:15> 'const char *' <BitCast>
+    | |   | `-ImplicitCastExpr 0x7f9bdf02ea08 <col:15> 'char *' <ArrayToPointerDecay>
+    | |   |   `-StringLiteral 0x7f9bdf02e8e8 <col:15> 'char [22]' lvalue "This is from main %i\n"
+    | |   `-ImplicitCastExpr 0x7f9bdf02ea38 <col:41, col:44> 'int' <LValueToRValue>
+    | |     `-MemberExpr 0x7f9bdf02e950 <col:41, col:44> 'int' lvalue .tz_dsttime 0x7f9bdf0148a8
+    | |       `-DeclRefExpr 0x7f9bdf02e928 <col:41> 'struct timezone':'struct timezone' lvalue Var 0x7f9bdf02e3d0 'tz' 'struct timezone':'struct timezone'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7f9bdf02eaf0 <line:71:3, col:8> 'int'
+    | `-ImplicitCastExpr 0x7f9bdf02ead8 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9bdf02eab0 <col:3> 'int (void)' Function 0x7f9bdf02de40 'foo' 'int (void)'
+    |-CallExpr 0x7f9bdf02eb58 <line:72:3, col:8> 'int'
+    | `-ImplicitCastExpr 0x7f9bdf02eb40 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9bdf02eb18 <col:3> 'int (void)' Function 0x7f9bdf02da68 'bar' 'int (void)'
+    |-CallExpr 0x7f9bdf02ebc0 <line:73:3, col:8> 'int'
+    | `-ImplicitCastExpr 0x7f9bdf02eba8 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9bdf02eb80 <col:3> 'int (void)' Function 0x7f9bdf02da68 'bar' 'int (void)'
+    `-ReturnStmt 0x7f9bdf02ec20 <line:75:3, col:10>
+      `-IntegerLiteral 0x7f9bdf02ec00 <col:10> 'int' 0

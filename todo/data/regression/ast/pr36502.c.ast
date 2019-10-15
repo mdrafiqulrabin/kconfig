@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7f843f02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f843f02c978 <../Data/C2AST/pr36502.c:4:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7f844000a088 <line:5:1, col:15> col:6 f 'void ()'
+  `-CompoundStmt 0x7f844000a170 <col:10, col:15>
+    `-UnaryOperator 0x7f844000a150 <col:11, col:12> 'int' postfix '++'
+      `-DeclRefExpr 0x7f844000a128 <col:11> 'int' lvalue Var 0x7f843f02c978 'a' 'int'

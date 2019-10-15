@@ -1,0 +1,202 @@
+TranslationUnitDecl 0x7ffd5782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd5782c978 <../Data/C2AST/pr28402.c:2:1, col:19> col:19 referenced ll 'long long'
+| `-BuiltinType 0x7ffd5782be20 'long long'
+|-TypedefDecl 0x7ffd5786d800 <line:3:1, col:28> col:28 referenced ull 'unsigned long long'
+| `-BuiltinType 0x7ffd5782bec0 'unsigned long long'
+|-VarDecl 0x7ffd5786d870 <line:5:1, col:5> col:5 used global 'int'
+|-FunctionDecl 0x7ffd5786da40 <line:8:3, col:44> <scratch space>:2:1 left1 'll (ll)'
+| |-ParmVarDecl 0x7ffd5786d940 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd5786db88 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd5786db70 <col:27, line:12:16>
+|     `-BinaryOperator 0x7ffd5786db48 <line:8:34, line:12:16> 'll':'long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786db30 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786dae8 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd5786d940 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd5786db10 <line:12:16> 'int' 1
+|-FunctionDecl 0x7ffd5786dcd0 <line:9:3, col:51> <scratch space>:4:1 left1u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd5786dbd0 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd5786de18 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd5786de00 <col:34, line:12:16>
+|     `-BinaryOperator 0x7ffd5786ddd8 <line:9:41, line:12:16> 'ull':'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786ddc0 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786dd78 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd5786dbd0 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd5786dda0 <line:12:16> 'int' 1
+|-FunctionDecl 0x7ffd5786dec8 <line:8:3, col:44> <scratch space>:5:1 left10 'll (ll)'
+| |-ParmVarDecl 0x7ffd5786de40 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd5786e010 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd5786dff8 <col:27, line:13:16>
+|     `-BinaryOperator 0x7ffd5786dfd0 <line:8:34, line:13:16> 'll':'long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786dfb8 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786df70 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd5786de40 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd5786df98 <line:13:16> 'int' 10
+|-FunctionDecl 0x7ffd5786e0c0 <line:9:3, col:51> <scratch space>:7:1 left10u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd5786e038 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd5786e208 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd5786e1f0 <col:34, line:13:16>
+|     `-BinaryOperator 0x7ffd5786e1c8 <line:9:41, line:13:16> 'ull':'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786e1b0 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786e168 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd5786e038 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd5786e190 <line:13:16> 'int' 10
+|-FunctionDecl 0x7ffd5786e2b8 <line:8:3, col:44> <scratch space>:8:1 left31 'll (ll)'
+| |-ParmVarDecl 0x7ffd5786e230 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd5786e400 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd5786e3e8 <col:27, line:14:16>
+|     `-BinaryOperator 0x7ffd5786e3c0 <line:8:34, line:14:16> 'll':'long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786e3a8 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786e360 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd5786e230 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd5786e388 <line:14:16> 'int' 31
+|-FunctionDecl 0x7ffd5786e4b0 <line:9:3, col:51> <scratch space>:10:1 left31u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd5786e428 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd5786e5f8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd5786e5e0 <col:34, line:14:16>
+|     `-BinaryOperator 0x7ffd5786e5b8 <line:9:41, line:14:16> 'ull':'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786e5a0 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786e558 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd5786e428 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd5786e580 <line:14:16> 'int' 31
+|-FunctionDecl 0x7ffd5786e6a8 <line:8:3, col:44> <scratch space>:11:1 left33 'll (ll)'
+| |-ParmVarDecl 0x7ffd5786e620 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd57886400 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd5786e7d8 <col:27, line:15:16>
+|     `-BinaryOperator 0x7ffd5786e7b0 <line:8:34, line:15:16> 'll':'long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd5786e798 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd5786e750 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd5786e620 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd5786e778 <line:15:16> 'int' 33
+|-FunctionDecl 0x7ffd578864b0 <line:9:3, col:51> <scratch space>:13:1 left33u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57886428 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd578865f8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd578865e0 <col:34, line:15:16>
+|     `-BinaryOperator 0x7ffd578865b8 <line:9:41, line:15:16> 'ull':'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd578865a0 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57886558 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57886428 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57886580 <line:15:16> 'int' 33
+|-FunctionDecl 0x7ffd578866a8 <line:8:3, col:44> <scratch space>:14:1 left61 'll (ll)'
+| |-ParmVarDecl 0x7ffd57886620 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd578867f0 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd578867d8 <col:27, line:16:16>
+|     `-BinaryOperator 0x7ffd578867b0 <line:8:34, line:16:16> 'll':'long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd57886798 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57886750 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57886620 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd57886778 <line:16:16> 'int' 61
+|-FunctionDecl 0x7ffd578868a0 <line:9:3, col:51> <scratch space>:16:1 left61u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57886818 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd578869e8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd578869d0 <col:34, line:16:16>
+|     `-BinaryOperator 0x7ffd578869a8 <line:9:41, line:16:16> 'ull':'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd57886990 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57886948 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57886818 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57886970 <line:16:16> 'int' 61
+|-FunctionDecl 0x7ffd57886a98 <line:8:3, col:44> <scratch space>:17:1 leftglobal 'll (ll)'
+| |-ParmVarDecl 0x7ffd57886a10 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd57886c00 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd57886be8 <col:27, line:17:16>
+|     `-BinaryOperator 0x7ffd57886bc0 <line:8:34, line:17:16> 'll':'long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd57886b90 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57886b40 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57886a10 'x' 'll':'long long'
+|       `-ImplicitCastExpr 0x7ffd57886ba8 <line:17:16> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffd57886b68 <col:16> 'int' lvalue Var 0x7ffd5786d870 'global' 'int'
+|-FunctionDecl 0x7ffd57886cb0 <line:9:3, col:51> <scratch space>:19:1 leftglobalu 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57886c28 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd57886e18 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd57886e00 <col:34, line:17:16>
+|     `-BinaryOperator 0x7ffd57886dd8 <line:9:41, line:17:16> 'ull':'unsigned long long' '<<'
+|       |-ImplicitCastExpr 0x7ffd57886da8 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57886d58 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57886c28 'x' 'ull':'unsigned long long'
+|       `-ImplicitCastExpr 0x7ffd57886dc0 <line:17:16> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffd57886d80 <col:16> 'int' lvalue Var 0x7ffd5786d870 'global' 'int'
+|-FunctionDecl 0x7ffd57886ec8 <line:8:3, col:44> <scratch space>:20:1 right1 'll (ll)'
+| |-ParmVarDecl 0x7ffd57886e40 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd57887010 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd57886ff8 <col:27, line:12:16>
+|     `-BinaryOperator 0x7ffd57886fd0 <line:8:34, line:12:16> 'll':'long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57886fb8 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57886f70 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57886e40 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd57886f98 <line:12:16> 'int' 1
+|-FunctionDecl 0x7ffd578870c0 <line:9:3, col:51> <scratch space>:22:1 right1u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57887038 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd57887208 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd578871f0 <col:34, line:12:16>
+|     `-BinaryOperator 0x7ffd578871c8 <line:9:41, line:12:16> 'ull':'unsigned long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd578871b0 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57887168 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57887038 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57887190 <line:12:16> 'int' 1
+|-FunctionDecl 0x7ffd578872b8 <line:8:3, col:44> <scratch space>:23:1 right10 'll (ll)'
+| |-ParmVarDecl 0x7ffd57887230 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd57888000 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd578873e8 <col:27, line:13:16>
+|     `-BinaryOperator 0x7ffd578873c0 <line:8:34, line:13:16> 'll':'long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd578873a8 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57887360 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57887230 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd57887388 <line:13:16> 'int' 10
+|-FunctionDecl 0x7ffd578880b0 <line:9:3, col:51> <scratch space>:25:1 right10u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57888028 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd578881f8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd578881e0 <col:34, line:13:16>
+|     `-BinaryOperator 0x7ffd578881b8 <line:9:41, line:13:16> 'ull':'unsigned long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd578881a0 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888158 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57888028 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57888180 <line:13:16> 'int' 10
+|-FunctionDecl 0x7ffd578882a8 <line:8:3, col:44> <scratch space>:26:1 right31 'll (ll)'
+| |-ParmVarDecl 0x7ffd57888220 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd578883f0 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd578883d8 <col:27, line:14:16>
+|     `-BinaryOperator 0x7ffd578883b0 <line:8:34, line:14:16> 'll':'long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888398 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888350 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57888220 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd57888378 <line:14:16> 'int' 31
+|-FunctionDecl 0x7ffd578884a0 <line:9:3, col:51> <scratch space>:28:1 right31u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57888418 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd578885e8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd578885d0 <col:34, line:14:16>
+|     `-BinaryOperator 0x7ffd578885a8 <line:9:41, line:14:16> 'ull':'unsigned long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888590 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888548 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57888418 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57888570 <line:14:16> 'int' 31
+|-FunctionDecl 0x7ffd57888698 <line:8:3, col:44> <scratch space>:29:1 right33 'll (ll)'
+| |-ParmVarDecl 0x7ffd57888610 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd578887e0 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd578887c8 <col:27, line:15:16>
+|     `-BinaryOperator 0x7ffd578887a0 <line:8:34, line:15:16> 'll':'long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888788 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888740 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57888610 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd57888768 <line:15:16> 'int' 33
+|-FunctionDecl 0x7ffd57888890 <line:9:3, col:51> <scratch space>:31:1 right33u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57888808 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd578889d8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd578889c0 <col:34, line:15:16>
+|     `-BinaryOperator 0x7ffd57888998 <line:9:41, line:15:16> 'ull':'unsigned long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888980 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888938 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57888808 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57888960 <line:15:16> 'int' 33
+|-FunctionDecl 0x7ffd57888a88 <line:8:3, col:44> <scratch space>:32:1 right61 'll (ll)'
+| |-ParmVarDecl 0x7ffd57888a00 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd57888bd0 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd57888bb8 <col:27, line:16:16>
+|     `-BinaryOperator 0x7ffd57888b90 <line:8:34, line:16:16> 'll':'long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888b78 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888b30 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57888a00 'x' 'll':'long long'
+|       `-IntegerLiteral 0x7ffd57888b58 <line:16:16> 'int' 61
+|-FunctionDecl 0x7ffd57888c80 <line:9:3, col:51> <scratch space>:34:1 right61u 'ull (ull)'
+| |-ParmVarDecl 0x7ffd57888bf8 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+| `-CompoundStmt 0x7ffd57888dc8 <col:32, col:51>
+|   `-ReturnStmt 0x7ffd57888db0 <col:34, line:16:16>
+|     `-BinaryOperator 0x7ffd57888d88 <line:9:41, line:16:16> 'ull':'unsigned long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888d70 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888d28 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd57888bf8 'x' 'ull':'unsigned long long'
+|       `-IntegerLiteral 0x7ffd57888d50 <line:16:16> 'int' 61
+|-FunctionDecl 0x7ffd57888e78 <line:8:3, col:44> <scratch space>:35:1 rightglobal 'll (ll)'
+| |-ParmVarDecl 0x7ffd57888df0 <../Data/C2AST/pr28402.c:8:19, col:22> col:22 used x 'll':'long long'
+| `-CompoundStmt 0x7ffd57888fe0 <col:25, col:44>
+|   `-ReturnStmt 0x7ffd57888fc8 <col:27, line:17:16>
+|     `-BinaryOperator 0x7ffd57888fa0 <line:8:34, line:17:16> 'll':'long long' '>>'
+|       |-ImplicitCastExpr 0x7ffd57888f70 <line:8:34> 'll':'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffd57888f20 <col:34> 'll':'long long' lvalue ParmVar 0x7ffd57888df0 'x' 'll':'long long'
+|       `-ImplicitCastExpr 0x7ffd57888f88 <line:17:16> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffd57888f48 <col:16> 'int' lvalue Var 0x7ffd5786d870 'global' 'int'
+`-FunctionDecl 0x7ffd5788a898 <line:9:3, col:51> <scratch space>:37:1 rightglobalu 'ull (ull)'
+  |-ParmVarDecl 0x7ffd5788a810 <../Data/C2AST/pr28402.c:9:25, col:29> col:29 used x 'ull':'unsigned long long'
+  `-CompoundStmt 0x7ffd5788aa00 <col:32, col:51>
+    `-ReturnStmt 0x7ffd5788a9e8 <col:34, line:17:16>
+      `-BinaryOperator 0x7ffd5788a9c0 <line:9:41, line:17:16> 'ull':'unsigned long long' '>>'
+        |-ImplicitCastExpr 0x7ffd5788a990 <line:9:41> 'ull':'unsigned long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7ffd5788a940 <col:41> 'ull':'unsigned long long' lvalue ParmVar 0x7ffd5788a810 'x' 'ull':'unsigned long long'
+        `-ImplicitCastExpr 0x7ffd5788a9a8 <line:17:16> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7ffd5788a968 <col:16> 'int' lvalue Var 0x7ffd5786d870 'global' 'int'

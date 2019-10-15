@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7fbefa8178e8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fbefa818578 <../Data/C2AST/pr83100-3.c:6:1, col:15> col:11 a 'const int' cinit
+  `-IntegerLiteral 0x7fbefb007a40 <col:15> 'int' 7

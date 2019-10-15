@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fe0e482bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe0e486d800 <../Data/C2AST/pr82072.c:5:1, line:16:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fe0e486df70 <line:7:1, line:16:1>
+    |-DeclStmt 0x7fe0e486d9f8 <line:8:3, col:39>
+    | `-VarDecl 0x7fe0e486d8f8 <col:3, col:38> col:13 used l 'long long' cinit
+    |   `-BinaryOperator 0x7fe0e486d9d0 <col:17, col:38> 'long long' '-'
+    |     |-UnaryOperator 0x7fe0e486d978 <col:17, <built-in>:40:27> 'long long' prefix '-'
+    |     | `-IntegerLiteral 0x7fe0e486d958 <col:27> 'long long' 9223372036854775807
+    |     `-ImplicitCastExpr 0x7fe0e486d9b8 <../Data/C2AST/pr82072.c:8:38> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fe0e486d998 <col:38> 'int' 1
+    |-DeclStmt 0x7fe0e486daa8 <line:9:3, col:12>
+    | `-VarDecl 0x7fe0e486da28 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fe0e486da88 <col:11> 'int' 0
+    |-GCCAsmStmt 0x7fe0e486dbb0 <line:10:3, col:30>
+    | `-DeclRefExpr 0x7fe0e486db88 <col:28> 'int' lvalue Var 0x7fe0e486da28 'i' 'int'
+    |-CompoundAssignOperator 0x7fe0e486dc78 <line:11:3, col:8> 'int' '-=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-DeclRefExpr 0x7fe0e486dc10 <col:3> 'int' lvalue Var 0x7fe0e486da28 'i' 'int'
+    | `-ImplicitCastExpr 0x7fe0e486dc60 <col:8> 'long long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe0e486dc38 <col:8> 'long long' lvalue Var 0x7fe0e486d8f8 'l' 'long long'
+    |-GCCAsmStmt 0x7fe0e486dd30 <line:12:3, col:30>
+    | `-DeclRefExpr 0x7fe0e486dd08 <col:28> 'int' lvalue Var 0x7fe0e486da28 'i' 'int'
+    |-BinaryOperator 0x7fe0e486de30 <line:13:3, col:8> 'int' '='
+    | |-DeclRefExpr 0x7fe0e486dd90 <col:3> 'int' lvalue Var 0x7fe0e486da28 'i' 'int'
+    | `-ImplicitCastExpr 0x7fe0e486de18 <col:7, col:8> 'int' <IntegralCast>
+    |   `-UnaryOperator 0x7fe0e486ddf8 <col:7, col:8> 'long long' prefix '-'
+    |     `-ImplicitCastExpr 0x7fe0e486dde0 <col:8> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe0e486ddb8 <col:8> 'long long' lvalue Var 0x7fe0e486d8f8 'l' 'long long'
+    |-GCCAsmStmt 0x7fe0e486ded8 <line:14:3, col:30>
+    | `-DeclRefExpr 0x7fe0e486deb0 <col:28> 'int' lvalue Var 0x7fe0e486da28 'i' 'int'
+    `-ReturnStmt 0x7fe0e486df58 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fe0e486df38 <col:10> 'int' 0

@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f981d015ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f981c814a68 <../Data/C2AST/pr71016.c:6:1, line:10:1> line:7:1 foo 'long (long)'
+| |-ParmVarDecl 0x7f981d016b78 <col:6, col:15> col:15 used i 'long'
+| `-CompoundStmt 0x7f981c814f00 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7f981c814ee8 <line:9:3, col:41>
+|     `-ImplicitCastExpr 0x7f981c814ed0 <col:10, col:41> 'long' <IntegralCast>
+|       `-ConditionalOperator 0x7f981c814ea0 <col:10, col:41> 'int'
+|         |-BinaryOperator 0x7f981c814bc8 <col:10, col:15> 'int' '=='
+|         | |-ImplicitCastExpr 0x7f981c814b98 <col:10> 'long' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7f981c814b50 <col:10> 'long' lvalue ParmVar 0x7f981d016b78 'i' 'long'
+|         | `-ImplicitCastExpr 0x7f981c814bb0 <col:15> 'long' <IntegralCast>
+|         |   `-IntegerLiteral 0x7f981c814b78 <col:15> 'int' 0
+|         |-IntegerLiteral 0x7f981c814bf0 <col:19> 'int' 17
+|         `-CallExpr 0x7f981c814e40 <col:24, col:41> 'int'
+|           |-ImplicitCastExpr 0x7f981c814e28 <col:24> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7f981c814da8 <col:24> '<builtin fn type>' Function 0x7f981c814c48 '__builtin_clzl' 'int (unsigned long)'
+|           `-ImplicitCastExpr 0x7f981c814e88 <col:40> 'unsigned long' <IntegralCast>
+|             `-ImplicitCastExpr 0x7f981c814e70 <col:40> 'long' <LValueToRValue>
+|               `-DeclRefExpr 0x7f981c814dd0 <col:40> 'long' lvalue ParmVar 0x7f981d016b78 'i' 'long'
+`-FunctionDecl 0x7f981c814c48 <col:24> col:24 implicit used __builtin_clzl 'int (unsigned long)' extern
+  |-ParmVarDecl 0x7f981c814ce8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-NoThrowAttr 0x7f981c814d50 <col:24> Implicit
+  `-ConstAttr 0x7f981c814d98 <col:24> Implicit

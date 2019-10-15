@@ -1,0 +1,89 @@
+TranslationUnitDecl 0x7fe3c382b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe3c382bf78 <../Data/C2AST/pr34808.c:4:1, col:12> col:12 used flags 'int' extern
+|-RecordDecl 0x7fe3c386ce40 <line:6:1, col:30> col:8 struct r definition
+| |-FieldDecl 0x7fe3c386cf08 <col:12, col:16> col:16 referenced code 'int'
+| `-FieldDecl 0x7fe3c386cf68 <col:22, col:26> col:26 referenced val 'int'
+|-FunctionDecl 0x7fe3c386d070 <line:8:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7fe3c386d1a0 <line:9:1, col:15> col:6 used baz 'void (void)'
+`-FunctionDecl 0x7fe3c386d3f8 <line:11:1, line:31:1> line:12:1 foo 'int (struct r *)'
+  |-ParmVarDecl 0x7fe3c386d2f0 <col:6, col:16> col:16 used home 'struct r *'
+  `-CompoundStmt 0x7fe3c38849a8 <line:13:1, line:31:1>
+    |-DeclStmt 0x7fe3c386d538 <line:14:3, col:12>
+    | `-VarDecl 0x7fe3c386d4b8 <col:3, col:11> col:7 used n 'int' cinit
+    |   `-IntegerLiteral 0x7fe3c386d518 <col:11> 'int' 0
+    |-DeclStmt 0x7fe3c386d608 <line:15:3, col:17>
+    | `-VarDecl 0x7fe3c386d568 <col:3, col:16> col:7 used regno 'int' cinit
+    |   `-UnaryOperator 0x7fe3c386d5e8 <col:15, col:16> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe3c386d5c8 <col:16> 'int' 1
+    |-IfStmt 0x7fe3c386d7d8 <line:17:3, line:18:19>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe3c386d6d0 <line:17:7, col:21> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe3c386d6b8 <col:7, col:13> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fe3c386d660 <col:7, col:13> 'int' lvalue ->code 0x7fe3c386cf08
+    | | |   `-ImplicitCastExpr 0x7fe3c386d648 <col:7> 'struct r *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fe3c386d620 <col:7> 'struct r *' lvalue ParmVar 0x7fe3c386d2f0 'home' 'struct r *'
+    | | `-IntegerLiteral 0x7fe3c386d698 <col:21> 'int' 0
+    | |-BinaryOperator 0x7fe3c386d7b0 <line:18:5, col:19> 'int' '='
+    | | |-DeclRefExpr 0x7fe3c386d6f8 <col:5> 'int' lvalue Var 0x7fe3c386d568 'regno' 'int'
+    | | `-ImplicitCastExpr 0x7fe3c386d798 <col:13, col:19> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fe3c386d760 <col:13, col:19> 'int' lvalue ->val 0x7fe3c386cf68
+    | |     `-ImplicitCastExpr 0x7fe3c386d748 <col:13> 'struct r *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fe3c386d720 <col:13> 'struct r *' lvalue ParmVar 0x7fe3c386d2f0 'home' 'struct r *'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fe3c38848b0 <line:20:3, line:27:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe3c386d8c0 <line:20:7, col:21> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe3c386d8a8 <col:7, col:13> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fe3c386d850 <col:7, col:13> 'int' lvalue ->code 0x7fe3c386cf08
+    | | |   `-ImplicitCastExpr 0x7fe3c386d838 <col:7> 'struct r *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fe3c386d810 <col:7> 'struct r *' lvalue ParmVar 0x7fe3c386d2f0 'home' 'struct r *'
+    | | `-IntegerLiteral 0x7fe3c386d888 <col:21> 'int' 1
+    | |-CallExpr 0x7fe3c386d950 <line:21:7, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe3c386d938 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe3c386d8e8 <col:7> 'void (void)' Function 0x7fe3c386d070 'bar' 'void (void)'
+    | `-IfStmt 0x7fe3c3884878 <line:22:8, line:27:11>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fe3c386d9d8 <line:22:12, col:21> 'int' '>='
+    |   | |-ImplicitCastExpr 0x7fe3c386d9c0 <col:12> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fe3c386d978 <col:12> 'int' lvalue Var 0x7fe3c386d568 'regno' 'int'
+    |   | `-IntegerLiteral 0x7fe3c386d9a0 <col:21> 'int' 0
+    |   |-BinaryOperator 0x7fe3c3884850 <line:23:5, line:27:11> 'int' '='
+    |   | |-DeclRefExpr 0x7fe3c386da00 <line:23:5> 'int' lvalue Var 0x7fe3c386d4b8 'n' 'int'
+    |   | `-ParenExpr 0x7fe3c3884830 <col:9, line:27:11> 'int'
+    |   |   `-ConditionalOperator 0x7fe3c3884800 <line:23:10, line:27:10> 'int'
+    |   |     |-BinaryOperator 0x7fe3c386da88 <line:23:10, col:19> 'int' '=='
+    |   |     | |-ImplicitCastExpr 0x7fe3c386da70 <col:10> 'int' <LValueToRValue>
+    |   |     | | `-DeclRefExpr 0x7fe3c386da28 <col:10> 'int' lvalue Var 0x7fe3c386d568 'regno' 'int'
+    |   |     | `-IntegerLiteral 0x7fe3c386da50 <col:19> 'int' 16
+    |   |     |-IntegerLiteral 0x7fe3c386dab0 <line:24:5> 'int' 16
+    |   |     `-ParenExpr 0x7fe3c386ddd0 <line:25:5, line:27:10> 'int'
+    |   |       `-ConditionalOperator 0x7fe3c386dda0 <line:25:6, line:27:9> 'int'
+    |   |         |-BinaryOperator 0x7fe3c386dcb0 <line:25:6, col:56> 'unsigned long long' '-'
+    |   |         | |-ImplicitCastExpr 0x7fe3c386dc98 <col:6> 'unsigned long long' <IntegralCast>
+    |   |         | | `-ImplicitCastExpr 0x7fe3c386dc80 <col:6> 'int' <LValueToRValue>
+    |   |         | |   `-DeclRefExpr 0x7fe3c386dad0 <col:6> 'int' lvalue Var 0x7fe3c386d568 'regno' 'int'
+    |   |         | `-CStyleCastExpr 0x7fe3c386dc58 <col:14, col:56> 'unsigned long long' <IntegralCast>
+    |   |         |   `-ParenExpr 0x7fe3c386dc38 <col:35, col:56> 'int'
+    |   |         |     `-ConditionalOperator 0x7fe3c386dbc0 <col:36, col:54> 'int'
+    |   |         |       |-BinaryOperator 0x7fe3c386db58 <col:36, col:45> 'int' '!='
+    |   |         |       | |-ImplicitCastExpr 0x7fe3c386db40 <col:36> 'int' <LValueToRValue>
+    |   |         |       | | `-DeclRefExpr 0x7fe3c386daf8 <col:36> 'int' lvalue Var 0x7fe3c382bf78 'flags' 'int'
+    |   |         |       | `-IntegerLiteral 0x7fe3c386db20 <col:45> 'int' 0
+    |   |         |       |-IntegerLiteral 0x7fe3c386db80 <col:49> 'int' 63
+    |   |         |       `-IntegerLiteral 0x7fe3c386dba0 <col:54> 'int' 15
+    |   |         |-BinaryOperator 0x7fe3c386dd38 <line:26:8, col:16> 'int' '-'
+    |   |         | |-ImplicitCastExpr 0x7fe3c386dd20 <col:8> 'int' <LValueToRValue>
+    |   |         | | `-DeclRefExpr 0x7fe3c386dcd8 <col:8> 'int' lvalue Var 0x7fe3c386d568 'regno' 'int'
+    |   |         | `-IntegerLiteral 0x7fe3c386dd00 <col:16> 'int' 128
+    |   |         `-UnaryOperator 0x7fe3c386dd80 <line:27:8, col:9> 'int' prefix '-'
+    |   |           `-IntegerLiteral 0x7fe3c386dd60 <col:9> 'int' 1
+    |   `-<<<NULL>>>
+    |-CallExpr 0x7fe3c3884928 <line:29:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fe3c3884910 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fe3c38848e8 <col:3> 'void (void)' Function 0x7fe3c386d1a0 'baz' 'void (void)'
+    `-ReturnStmt 0x7fe3c3884990 <line:30:3, col:10>
+      `-ImplicitCastExpr 0x7fe3c3884978 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe3c3884950 <col:10> 'int' lvalue Var 0x7fe3c386d4b8 'n' 'int'

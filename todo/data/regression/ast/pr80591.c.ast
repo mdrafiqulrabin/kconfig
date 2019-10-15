@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f981882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f981886e858 <../Data/C2AST/pr80591.c:6:1, line:12:1> line:7:1 used foo 'int *(void)' static inline
+| |-CompoundStmt 0x7f981886ebf8 <line:8:1, line:12:1>
+| | |-DeclStmt 0x7f981886e9f8 <<built-in>:96:26, ../Data/C2AST/pr80591.c:9:22>
+| | | `-VarDecl 0x7f981886e998 <<built-in>:96:26, ../Data/C2AST/pr80591.c:9:20> col:20 used sp 'unsigned long'
+| | |-GCCAsmStmt 0x7f981886eb00 <line:10:3, col:22>
+| | | `-DeclRefExpr 0x7f981886ead8 <col:19> 'unsigned long' lvalue Var 0x7f981886e998 'sp' 'unsigned long'
+| | `-ReturnStmt 0x7f981886ebe0 <line:11:3, col:18>
+| |   `-CStyleCastExpr 0x7f981886ebb8 <col:10, col:18> 'int *' <IntegralToPointer>
+| |     `-ImplicitCastExpr 0x7f981886eba0 <col:18> 'unsigned long' <LValueToRValue>
+| |       `-DeclRefExpr 0x7f981886eb60 <col:18> 'unsigned long' lvalue Var 0x7f981886e998 'sp' 'unsigned long'
+| `-AlwaysInlineAttr 0x7f981886e8f8 <line:6:30> always_inline
+`-FunctionDecl 0x7f981886ece0 <line:14:1, line:18:1> line:15:1 bar 'void (void)'
+  `-CompoundStmt 0x7f981886eeb8 <line:16:1, line:18:1>
+    `-CompoundAssignOperator 0x7f981886ee80 <line:17:3, col:16> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-ArraySubscriptExpr 0x7f981886ee38 <col:3, col:11> 'int' lvalue
+      | |-CallExpr 0x7f981886edf0 <col:3, col:8> 'int *'
+      | | `-ImplicitCastExpr 0x7f981886edd8 <col:3> 'int *(*)(void)' <FunctionToPointerDecay>
+      | |   `-DeclRefExpr 0x7f981886ed80 <col:3> 'int *(void)' Function 0x7f981886e858 'foo' 'int *(void)'
+      | `-IntegerLiteral 0x7f981886ee18 <col:10> 'int' 0
+      `-IntegerLiteral 0x7f981886ee60 <col:16> 'int' 26

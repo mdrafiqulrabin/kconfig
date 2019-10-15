@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f94910174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9491018160 <../Data/C2AST/pr45819.c:4:1, line:7:1> line:4:8 struct ehci_regs definition
+| |-PackedAttr 0x7f9491814348 <line:7:19>
+| |-FieldDecl 0x7f9491814230 <line:5:5, col:10> col:10 x 'char'
+| `-FieldDecl 0x7f9491814300 <line:6:5, col:31> col:18 referenced port_status 'unsigned int [0]'
+|-RecordDecl 0x7f9491814390 <line:9:1, line:11:1> line:9:8 struct ehci_hcd definition
+| `-FieldDecl 0x7f94918144f0 <line:10:5, col:23> col:23 referenced regs 'struct ehci_regs *'
+`-FunctionDecl 0x7f9491814788 <line:13:1, line:17:1> line:13:5 ehci_hub_control 'int (struct ehci_hcd *, int)'
+  |-ParmVarDecl 0x7f94918145f0 <col:23, col:40> col:40 used ehci 'struct ehci_hcd *'
+  |-ParmVarDecl 0x7f9491814668 <col:46, col:50> col:50 used wIndex 'int'
+  `-CompoundStmt 0x7f9491814be8 <line:14:1, line:17:1>
+    |-DeclStmt 0x7f9491814a88 <line:15:3, col:62>
+    | `-VarDecl 0x7f94918148c0 <col:3, col:61> col:17 used status_reg 'unsigned int *' cinit
+    |   `-UnaryOperator 0x7f9491814a68 <col:30, col:61> 'unsigned int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f9491814a40 <col:31, col:61> 'unsigned int' lvalue
+    |       |-ImplicitCastExpr 0x7f9491814a10 <col:31, col:43> 'unsigned int *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7f94918149b0 <col:31, col:43> 'unsigned int [0]' lvalue ->port_status 0x7f9491814300
+    |       |   `-ImplicitCastExpr 0x7f9491814998 <col:31, col:37> 'struct ehci_regs *' <LValueToRValue>
+    |       |     `-MemberExpr 0x7f9491814960 <col:31, col:37> 'struct ehci_regs *' lvalue ->regs 0x7f94918144f0
+    |       |       `-ImplicitCastExpr 0x7f9491814948 <col:31> 'struct ehci_hcd *' <LValueToRValue>
+    |       |         `-DeclRefExpr 0x7f9491814920 <col:31> 'struct ehci_hcd *' lvalue ParmVar 0x7f94918145f0 'ehci' 'struct ehci_hcd *'
+    |       `-ImplicitCastExpr 0x7f9491814a28 <col:55> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f94918149e8 <col:55> 'int' lvalue ParmVar 0x7f9491814668 'wIndex' 'int'
+    `-ReturnStmt 0x7f9491814bd0 <line:16:3, col:36>
+      `-ImplicitCastExpr 0x7f9491814bb8 <col:10, col:36> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f9491814ba0 <col:10, col:36> 'unsigned int' <LValueToRValue>
+          `-UnaryOperator 0x7f9491814b80 <col:10, col:36> 'volatile unsigned int' lvalue prefix '*'
+            `-CStyleCastExpr 0x7f9491814b58 <col:11, col:36> 'volatile unsigned int *' <BitCast>
+              `-ImplicitCastExpr 0x7f9491814b10 <col:36> 'unsigned int *' <LValueToRValue>
+                `-DeclRefExpr 0x7f9491814aa0 <col:36> 'unsigned int *' lvalue Var 0x7f94918148c0 'status_reg' 'unsigned int *'

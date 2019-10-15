@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fc74700a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc74700b560 <../Data/C2AST/pr59917-1.c:5:1, col:25> col:8 struct J definition
+| `-FieldDecl 0x7fc746014ca0 <col:12, col:22> col:17 buf 'long [8]'
+|-FunctionDecl 0x7fc746014fd8 <line:6:1, col:31> col:12 used setjmp 'int (struct J *)' extern
+| |-ParmVarDecl 0x7fc746014ed0 <col:20, col:30> col:28 'struct J *':'struct J *'
+| `-ReturnsTwiceAttr 0x7fc7460150c0 <col:12> Implicit
+|-VarDecl 0x7fc746015158 <line:7:1, col:20> col:17 used j 'struct J [1]' extern
+|-FunctionDecl 0x7fc746015290 <line:8:1, col:14> col:6 used foo 'void (int)'
+| `-ParmVarDecl 0x7fc7460151d0 <col:11> col:14 'int'
+`-FunctionDecl 0x7fc746015400 <line:10:1, line:22:1> line:11:1 bar 'void (void)'
+  `-CompoundStmt 0x7fc746015aa0 <line:12:1, line:22:1>
+    `-IfStmt 0x7fc746015a68 <line:13:3, line:21:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc7460155c8 <line:13:7, col:21> 'int' '=='
+      | |-CallExpr 0x7fc746015560 <col:7, col:16> 'int'
+      | | |-ImplicitCastExpr 0x7fc746015548 <col:7> 'int (*)(struct J *)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fc7460154a0 <col:7> 'int (struct J *)' Function 0x7fc746014fd8 'setjmp' 'int (struct J *)'
+      | | `-ImplicitCastExpr 0x7fc746015590 <col:15> 'struct J *' <ArrayToPointerDecay>
+      | |   `-DeclRefExpr 0x7fc7460154c8 <col:15> 'struct J [1]' lvalue Var 0x7fc746015158 'j' 'struct J [1]'
+      | `-IntegerLiteral 0x7fc7460155a8 <col:21> 'int' 0
+      |-CompoundStmt 0x7fc746015a38 <line:14:5, line:21:5>
+      | |-DeclStmt 0x7fc746015668 <line:15:7, col:12>
+      | | `-VarDecl 0x7fc746015608 <col:7, col:11> col:11 used k 'int'
+      | |-CallExpr 0x7fc746015730 <line:16:7, col:14> 'void'
+      | | |-ImplicitCastExpr 0x7fc746015718 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fc746015680 <col:7> 'void (int)' Function 0x7fc746015290 'foo' 'void (int)'
+      | | `-UnaryOperator 0x7fc7460156c8 <col:12, col:13> 'int' prefix '-'
+      | |   `-IntegerLiteral 0x7fc7460156a8 <col:13> 'int' 1
+      | |-ForStmt 0x7fc746015950 <line:18:7, line:19:8>
+      | | |-BinaryOperator 0x7fc7460157a8 <line:18:12, col:16> 'int' '='
+      | | | |-DeclRefExpr 0x7fc746015760 <col:12> 'int' lvalue Var 0x7fc746015608 'k' 'int'
+      | | | `-IntegerLiteral 0x7fc746015788 <col:16> 'int' 0
+      | | |-<<<NULL>>>
+      | | |-BinaryOperator 0x7fc746015830 <col:19, col:23> 'int' '<'
+      | | | |-ImplicitCastExpr 0x7fc746015818 <col:19> 'int' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x7fc7460157d0 <col:19> 'int' lvalue Var 0x7fc746015608 'k' 'int'
+      | | | `-IntegerLiteral 0x7fc7460157f8 <col:23> 'int' 10
+      | | |-UnaryOperator 0x7fc746015880 <col:27, col:29> 'int' prefix '++'
+      | | | `-DeclRefExpr 0x7fc746015858 <col:29> 'int' lvalue Var 0x7fc746015608 'k' 'int'
+      | | `-CallExpr 0x7fc746015908 <line:19:2, col:8> 'void'
+      | |   |-ImplicitCastExpr 0x7fc7460158f0 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+      | |   | `-DeclRefExpr 0x7fc7460158a0 <col:2> 'void (int)' Function 0x7fc746015290 'foo' 'void (int)'
+      | |   `-ImplicitCastExpr 0x7fc746015938 <col:7> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fc7460158c8 <col:7> 'int' lvalue Var 0x7fc746015608 'k' 'int'
+      | `-CallExpr 0x7fc746015a08 <line:20:7, col:14> 'void'
+      |   |-ImplicitCastExpr 0x7fc7460159f0 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7fc746015988 <col:7> 'void (int)' Function 0x7fc746015290 'foo' 'void (int)'
+      |   `-UnaryOperator 0x7fc7460159d0 <col:12, col:13> 'int' prefix '-'
+      |     `-IntegerLiteral 0x7fc7460159b0 <col:13> 'int' 2
+      `-<<<NULL>>>

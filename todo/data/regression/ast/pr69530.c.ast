@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fdcab8228e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdcab002600 <../Data/C2AST/pr69530.c:4:1, col:27> col:27 referenced v32u128 '__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+| `-VectorType 0x7fdcab823580 '__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' 2
+|   `-BuiltinType 0x7fdcab822ba0 'unsigned __int128'
+`-FunctionDecl 0x7fdcab002790 <line:6:1, line:11:1> line:7:1 foo 'v32u128 (v32u128)'
+  |-ParmVarDecl 0x7fdcab002690 <col:6, col:14> col:14 used v32u128_0 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+  `-CompoundStmt 0x7fdcab002a00 <line:8:1, line:11:1>
+    |-CompoundAssignOperator 0x7fdcab002970 <line:9:3, col:30> 'unsigned __int128' '*=' ComputeLHSTy='unsigned __int128' ComputeResultTy='unsigned __int128'
+    | |-ArraySubscriptExpr 0x7fdcab0028c0 <col:3, col:14> 'unsigned __int128' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fdcab002878 <col:3> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fdcab002690 'v32u128_0' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+    | | `-IntegerLiteral 0x7fdcab0028a0 <col:13> 'int' 0
+    | `-ImplicitCastExpr 0x7fdcab002958 <col:19, col:30> 'unsigned __int128' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fdcab002930 <col:19, col:30> 'unsigned __int128' lvalue vectorcomponent
+    |     |-DeclRefExpr 0x7fdcab0028e8 <col:19> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fdcab002690 'v32u128_0' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+    |     `-IntegerLiteral 0x7fdcab002910 <col:29> 'int' 1
+    `-ReturnStmt 0x7fdcab0029e8 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fdcab0029d0 <col:10> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fdcab0029a8 <col:10> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fdcab002690 'v32u128_0' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'

@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7f806682b0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f806701f7b8 <../Data/C2AST/pr22076.c:7:1, line:16:1> line:7:8 test '__v8qi ()'
+  `-CompoundStmt 0x7f8067020180 <line:8:1, line:16:1>
+    |-DeclStmt 0x7f806701fb88 <line:9:3, col:33>
+    | `-VarDecl 0x7f806701f868 <col:3, col:32> col:10 used mm0 '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' cinit
+    |   `-InitListExpr 0x7f806701fa48 <col:16, col:32> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+    |     |-ImplicitCastExpr 0x7f806701fac8 <col:17> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f8c8 <col:17> 'int' 1
+    |     |-ImplicitCastExpr 0x7f806701fae0 <col:19> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f8e8 <col:19> 'int' 2
+    |     |-ImplicitCastExpr 0x7f806701faf8 <col:21> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f908 <col:21> 'int' 3
+    |     |-ImplicitCastExpr 0x7f806701fb10 <col:23> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f928 <col:23> 'int' 4
+    |     |-ImplicitCastExpr 0x7f806701fb28 <col:25> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f948 <col:25> 'int' 5
+    |     |-ImplicitCastExpr 0x7f806701fb40 <col:27> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f968 <col:27> 'int' 6
+    |     |-ImplicitCastExpr 0x7f806701fb58 <col:29> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701f988 <col:29> 'int' 7
+    |     `-ImplicitCastExpr 0x7f806701fb70 <col:31> 'char' <IntegralCast>
+    |       `-IntegerLiteral 0x7f806701f9a8 <col:31> 'int' 8
+    |-DeclStmt 0x7f806701fed0 <line:10:3, col:41>
+    | `-VarDecl 0x7f806701fbb0 <col:3, col:40> col:10 used mm1 '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' cinit
+    |   `-InitListExpr 0x7f806701fd90 <col:16, col:40> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+    |     |-ImplicitCastExpr 0x7f806701fe10 <col:17> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fc10 <col:17> 'int' 11
+    |     |-ImplicitCastExpr 0x7f806701fe28 <col:20> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fc30 <col:20> 'int' 22
+    |     |-ImplicitCastExpr 0x7f806701fe40 <col:23> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fc50 <col:23> 'int' 33
+    |     |-ImplicitCastExpr 0x7f806701fe58 <col:26> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fc70 <col:26> 'int' 44
+    |     |-ImplicitCastExpr 0x7f806701fe70 <col:29> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fc90 <col:29> 'int' 55
+    |     |-ImplicitCastExpr 0x7f806701fe88 <col:32> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fcb0 <col:32> 'int' 66
+    |     |-ImplicitCastExpr 0x7f806701fea0 <col:35> 'char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f806701fcd0 <col:35> 'int' 77
+    |     `-ImplicitCastExpr 0x7f806701feb8 <col:38> 'char' <IntegralCast>
+    |       `-IntegerLiteral 0x7f806701fcf0 <col:38> 'int' 88
+    |-DeclStmt 0x7f806701ff58 <line:11:3, col:19>
+    | `-VarDecl 0x7f806701fef8 <col:3, col:18> col:18 used x 'volatile __m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long volatile'
+    |-BinaryOperator 0x7f80670200e8 <line:13:3, col:28> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7f806701ff70 <col:3> 'volatile __m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long volatile' lvalue Var 0x7f806701fef8 'x' 'volatile __m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long volatile'
+    | `-CallExpr 0x7f8067020050 <col:7, col:28> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7f8067020038 <col:7> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f806701ff98 <col:7> '__m64 (__m64, __m64)' Function 0x7f8067008430 '_mm_add_pi8' '__m64 (__m64, __m64)'
+    |   |-ImplicitCastExpr 0x7f80670200a0 <col:20> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+    |   | `-ImplicitCastExpr 0x7f8067020088 <col:20> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f806701ffc0 <col:20> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' lvalue Var 0x7f806701f868 'mm0' '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+    |   `-ImplicitCastExpr 0x7f80670200d0 <col:25> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <BitCast>
+    |     `-ImplicitCastExpr 0x7f80670200b8 <col:25> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f806701ffe8 <col:25> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' lvalue Var 0x7f806701fbb0 'mm1' '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+    `-ReturnStmt 0x7f8067020168 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7f8067020150 <col:10> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+        `-ImplicitCastExpr 0x7f8067020138 <col:10> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f8067020110 <col:10> 'volatile __m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long volatile' lvalue Var 0x7f806701fef8 'x' 'volatile __m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long volatile'

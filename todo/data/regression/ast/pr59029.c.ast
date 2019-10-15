@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f8eaf82b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8eaf86be00 <../Data/C2AST/pr59029.c:3:1, line:7:1> line:4:1 foo 'int ()'
+| `-CompoundStmt 0x7f8eaf86c3a8 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f8eaf86c390 <line:6:3, col:44>
+|     `-CallExpr 0x7f8eaf86c0c0 <col:10, col:44> 'int'
+|       |-ImplicitCastExpr 0x7f8eaf86c378 <col:10> 'int (*)(volatile int *, int, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f8eaf86c328 <col:10> '<builtin fn type>' Function 0x7f8eaf86c170 '__sync_fetch_and_add_4' 'int (volatile int *, int, ...)'
+|       |-CStyleCastExpr 0x7f8eaf86c030 <col:32, col:40> 'int *' <NullToPointer>
+|       | `-IntegerLiteral 0x7f8eaf86bfd0 <col:40> 'int' 0
+|       `-IntegerLiteral 0x7f8eaf86c058 <col:43> 'int' 1
+|-FunctionDecl 0x7f8eaf86bf08 <col:10> col:10 implicit used __sync_fetch_and_add 'void ()' extern
+`-FunctionDecl 0x7f8eaf86c170 <col:10> col:10 implicit __sync_fetch_and_add_4 'int (volatile int *, int, ...)' extern
+  |-ParmVarDecl 0x7f8eaf86c210 <<invalid sloc>> <invalid sloc> 'volatile int *'
+  |-ParmVarDecl 0x7f8eaf86c270 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7f8eaf86c2e0 <col:10> Implicit

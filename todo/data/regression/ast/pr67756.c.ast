@@ -1,0 +1,185 @@
+TranslationUnitDecl 0x7fe2dd82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe2de014200 <../Data/C2AST/pr67756.c:5:1, col:23> col:5 used inode_permission 'int ()'
+|-FunctionDecl 0x7fe2de014308 <col:1, col:43> col:26 used try_break_deleg 'int ()'
+|-FunctionDecl 0x7fe2de0143e8 <line:6:1, col:17> col:5 used mutex_lock 'int ()'
+|-FunctionDecl 0x7fe2de0144b0 <col:1, col:34> col:20 used mutex_unlock 'int ()'
+|-RecordDecl 0x7fe2de014568 <line:7:1, line:9:1> line:7:8 struct mutex definition
+|-RecordDecl 0x7fe2de014610 <line:10:1, line:13:1> line:10:8 struct dentry definition
+| |-RecordDecl 0x7fe2de0146c0 parent 0x7fe2dd82bce8 <line:12:3, col:10> col:10 struct inode
+| `-FieldDecl 0x7fe2de014830 <col:3, col:17> col:17 referenced d_inode 'struct inode *'
+|-RecordDecl 0x7fe2de014878 prev 0x7fe2de0146c0 <line:14:1, line:24:1> line:14:8 struct inode definition
+| |-RecordDecl 0x7fe2de014900 parent 0x7fe2dd82bce8 <line:16:9, col:16> col:16 struct inode_operations
+| |-FieldDecl 0x7fe2de014a70 <col:3, col:34> col:34 referenced i_op 'const struct inode_operations *'
+| |-RecordDecl 0x7fe2de014ab8 parent 0x7fe2dd82bce8 <line:17:3, col:10> col:10 struct super_block
+| |-FieldDecl 0x7fe2de014c20 <col:3, col:23> col:23 referenced i_sb 'struct super_block *'
+| |-RecordDecl 0x7fe2de014c68 <line:18:5, line:21:5> line:18:5 union definition
+| | `-FieldDecl 0x7fe2de014d28 <line:20:7, col:26> col:26 referenced i_nlink 'const unsigned int'
+| |-FieldDecl 0x7fe2de014dc0 <line:18:5> col:5 implicit referenced 'union inode::(anonymous at ../Data/C2AST/pr67756.c:18:5)'
+| |-IndirectFieldDecl 0x7fe2de014e18 <line:20:26> col:26 implicit i_nlink 'const unsigned int'
+| | |-Field 0x7fe2de014dc0 '' 'union inode::(anonymous at ../Data/C2AST/pr67756.c:18:5)'
+| | `-Field 0x7fe2de014d28 'i_nlink' 'const unsigned int'
+| |-FieldDecl 0x7fe2de014e70 <line:22:3, col:17> col:17 referenced i_state 'unsigned long'
+| `-FieldDecl 0x7fe2de014f10 <line:23:3, col:16> col:16 referenced i_mutex 'struct mutex':'struct mutex'
+|-RecordDecl 0x7fe2de014f58 prev 0x7fe2de014ab8 <line:25:1, line:28:1> line:25:8 struct super_block definition
+| `-FieldDecl 0x7fe2de014ff8 <line:27:3, col:16> col:16 referenced s_max_links 'unsigned int'
+|-RecordDecl 0x7fe2de015040 prev 0x7fe2de014900 <line:29:1, line:32:1> line:29:8 struct inode_operations definition
+| |-AlignedAttr 0x7fe2de015558 <line:32:19, col:40> aligned
+| | `-ParenExpr 0x7fe2de015538 <col:32, col:39> 'int'
+| |   `-BinaryOperator 0x7fe2de015510 <col:33, col:38> 'int' '<<'
+| |     |-IntegerLiteral 0x7fe2de0154d0 <col:33> 'int' 1
+| |     `-IntegerLiteral 0x7fe2de0154f0 <col:38> 'int' 6
+| `-FieldDecl 0x7fe2de015488 <line:31:3, col:64> col:9 referenced link 'int (*)(struct dentry *, struct inode *, struct dentry *)'
+|-FunctionDecl 0x7fe2de015778 <line:33:1, line:40:1> line:35:5 used may_create 'int (struct inode *, struct dentry *)' static inline
+| |-ParmVarDecl 0x7fe2de0155d0 <col:17, col:31> col:31 used dir 'struct inode *'
+| |-ParmVarDecl 0x7fe2de015658 <col:36, col:51> col:51 used child 'struct dentry *'
+| |-CompoundStmt 0x7fe2de015b08 <line:36:1, line:40:1>
+| | |-IfStmt 0x7fe2de015968 <line:37:3, line:38:13>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fe2de0158f8 <line:37:7, col:14> 'struct inode *' <LValueToRValue>
+| | | | `-MemberExpr 0x7fe2de0158c0 <col:7, col:14> 'struct inode *' lvalue ->d_inode 0x7fe2de014830
+| | | |   `-ImplicitCastExpr 0x7fe2de0158a8 <col:7> 'struct dentry *' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fe2de015880 <col:7> 'struct dentry *' lvalue ParmVar 0x7fe2de015658 'child' 'struct dentry *'
+| | | |-ReturnStmt 0x7fe2de015950 <line:38:5, col:13>
+| | | | `-UnaryOperator 0x7fe2de015930 <col:12, col:13> 'int' prefix '-'
+| | | |   `-IntegerLiteral 0x7fe2de015910 <col:13> 'int' 17
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fe2de015af0 <line:39:3, col:56>
+| |   `-CallExpr 0x7fe2de015aa0 <col:10, col:56> 'int'
+| |     |-ImplicitCastExpr 0x7fe2de015a88 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fe2de0159a0 <col:10> 'int ()' Function 0x7fe2de014200 'inode_permission' 'int ()'
+| |     |-ImplicitCastExpr 0x7fe2de015ad8 <col:28> 'struct inode *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fe2de0159c8 <col:28> 'struct inode *' lvalue ParmVar 0x7fe2de0155d0 'dir' 'struct inode *'
+| |     `-BinaryOperator 0x7fe2de015a30 <col:33, col:46> 'int' '|'
+| |       |-IntegerLiteral 0x7fe2de0159f0 <col:33> 'int' 2
+| |       `-IntegerLiteral 0x7fe2de015a10 <col:46> 'int' 1
+| |-NoInstrumentFunctionAttr 0x7fe2de015828 <line:34:17>
+| `-AlwaysInlineAttr 0x7fe2de015870 <line:33:31> always_inline
+`-FunctionDecl 0x7fe2de015e88 <line:42:1, line:64:1> line:43:1 vfs_link 'int (struct dentry *, struct inode *, struct dentry *, struct inode **)'
+  |-ParmVarDecl 0x7fe2de015b50 <col:11, col:26> col:26 used old_dentry 'struct dentry *'
+  |-ParmVarDecl 0x7fe2de015bd8 <col:38, col:52> col:52 used dir 'struct inode *'
+  |-ParmVarDecl 0x7fe2de015c60 <line:44:4, col:19> col:19 used new_dentry 'struct dentry *'
+  |-ParmVarDecl 0x7fe2de015d40 <col:31, col:46> col:46 used delegated_inode 'struct inode **'
+  `-CompoundStmt 0x7fe2de032d88 <line:45:1, line:64:1>
+    |-DeclStmt 0x7fe2de016060 <line:46:3, col:44>
+    | `-VarDecl 0x7fe2de015f70 <col:3, col:37> col:17 used inode 'struct inode *' cinit
+    |   `-ImplicitCastExpr 0x7fe2de016048 <col:25, col:37> 'struct inode *' <LValueToRValue>
+    |     `-MemberExpr 0x7fe2de016010 <col:25, col:37> 'struct inode *' lvalue ->d_inode 0x7fe2de014830
+    |       `-ImplicitCastExpr 0x7fe2de015ff8 <col:25> 'struct dentry *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe2de015fd0 <col:25> 'struct dentry *' lvalue ParmVar 0x7fe2de015b50 'old_dentry' 'struct dentry *'
+    |-DeclStmt 0x7fe2de0161d0 <line:47:3, col:46>
+    | `-VarDecl 0x7fe2de016090 <col:3, col:35> col:12 used max_links 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fe2de0161b8 <col:24, col:35> 'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7fe2de016180 <col:24, col:35> 'unsigned int' lvalue ->s_max_links 0x7fe2de014ff8
+    |       `-ImplicitCastExpr 0x7fe2de016168 <col:24, col:29> 'struct super_block *' <LValueToRValue>
+    |         `-MemberExpr 0x7fe2de016130 <col:24, col:29> 'struct super_block *' lvalue ->i_sb 0x7fe2de014c20
+    |           `-ImplicitCastExpr 0x7fe2de016118 <col:24> 'struct inode *' <LValueToRValue>
+    |             `-DeclRefExpr 0x7fe2de0160f0 <col:24> 'struct inode *' lvalue ParmVar 0x7fe2de015bd8 'dir' 'struct inode *'
+    |-DeclStmt 0x7fe2de031e60 <line:48:3, col:12>
+    | `-VarDecl 0x7fe2de031e00 <col:3, col:7> col:7 used error 'int'
+    |-BinaryOperator 0x7fe2de031ff8 <line:49:3, col:38> 'int' '='
+    | |-DeclRefExpr 0x7fe2de031e78 <col:3> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    | `-CallExpr 0x7fe2de031f90 <col:11, col:38> 'int'
+    |   |-ImplicitCastExpr 0x7fe2de031f78 <col:11> 'int (*)(struct inode *, struct dentry *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe2de031ea0 <col:11> 'int (struct inode *, struct dentry *)' Function 0x7fe2de015778 'may_create' 'int (struct inode *, struct dentry *)'
+    |   |-ImplicitCastExpr 0x7fe2de031fc8 <col:23> 'struct inode *' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fe2de031ec8 <col:23> 'struct inode *' lvalue ParmVar 0x7fe2de015bd8 'dir' 'struct inode *'
+    |   `-ImplicitCastExpr 0x7fe2de031fe0 <col:28> 'struct dentry *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe2de031ef0 <col:28> 'struct dentry *' lvalue ParmVar 0x7fe2de015c60 'new_dentry' 'struct dentry *'
+    |-IfStmt 0x7fe2de0320b8 <line:50:3, line:51:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe2de032048 <line:50:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe2de032020 <col:7> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    | |-ReturnStmt 0x7fe2de0320a0 <line:51:5, col:12>
+    | | `-ImplicitCastExpr 0x7fe2de032088 <col:12> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe2de032060 <col:12> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fe2de032220 <line:52:3, col:30> 'int'
+    | |-ImplicitCastExpr 0x7fe2de032208 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe2de0320f0 <col:3> 'int ()' Function 0x7fe2de0143e8 'mutex_lock' 'int ()'
+    | `-UnaryOperator 0x7fe2de0321e8 <col:15, col:23> 'struct mutex *' prefix '&'
+    |   `-MemberExpr 0x7fe2de032158 <col:16, col:23> 'struct mutex':'struct mutex' lvalue ->i_mutex 0x7fe2de014f10
+    |     `-ImplicitCastExpr 0x7fe2de032140 <col:16> 'struct inode *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe2de032118 <col:16> 'struct inode *' lvalue Var 0x7fe2de015f70 'inode' 'struct inode *'
+    |-IfStmt 0x7fe2de032bf0 <line:53:3, line:61:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe2de032528 <line:53:7, col:58> 'int' '&&'
+    | | |-BinaryOperator 0x7fe2de032368 <col:7, col:25> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fe2de032338 <col:7, col:14> 'unsigned int' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fe2de0322e0 <col:7, col:14> 'const unsigned int' lvalue .i_nlink 0x7fe2de014d28
+    | | | |   `-MemberExpr 0x7fe2de032290 <col:7, col:14> 'union inode::(anonymous at ../Data/C2AST/pr67756.c:18:5)' lvalue -> 0x7fe2de014dc0
+    | | | |     `-ImplicitCastExpr 0x7fe2de032278 <col:7> 'struct inode *' <LValueToRValue>
+    | | | |       `-DeclRefExpr 0x7fe2de032250 <col:7> 'struct inode *' lvalue Var 0x7fe2de015f70 'inode' 'struct inode *'
+    | | | `-ImplicitCastExpr 0x7fe2de032350 <col:25> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe2de032318 <col:25> 'int' 0
+    | | `-UnaryOperator 0x7fe2de032508 <col:30, col:58> 'int' prefix '!'
+    | |   `-ParenExpr 0x7fe2de0324e8 <col:31, col:58> 'unsigned long'
+    | |     `-BinaryOperator 0x7fe2de0324c0 <col:32, col:57> 'unsigned long' '&'
+    | |       |-ImplicitCastExpr 0x7fe2de032490 <col:32, col:39> 'unsigned long' <LValueToRValue>
+    | |       | `-MemberExpr 0x7fe2de0323d0 <col:32, col:39> 'unsigned long' lvalue ->i_state 0x7fe2de014e70
+    | |       |   `-ImplicitCastExpr 0x7fe2de0323b8 <col:32> 'struct inode *' <LValueToRValue>
+    | |       |     `-DeclRefExpr 0x7fe2de032390 <col:32> 'struct inode *' lvalue Var 0x7fe2de015f70 'inode' 'struct inode *'
+    | |       `-ImplicitCastExpr 0x7fe2de0324a8 <col:49, col:57> 'unsigned long' <IntegralCast>
+    | |         `-ParenExpr 0x7fe2de032470 <col:49, col:57> 'int'
+    | |           `-BinaryOperator 0x7fe2de032448 <col:50, col:55> 'int' '<<'
+    | |             |-IntegerLiteral 0x7fe2de032408 <col:50> 'int' 1
+    | |             `-IntegerLiteral 0x7fe2de032428 <col:55> 'int' 10
+    | |-BinaryOperator 0x7fe2de0325b8 <line:54:5, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fe2de032550 <col:5> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    | | `-UnaryOperator 0x7fe2de032598 <col:13, col:14> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7fe2de032578 <col:14> 'int' 2
+    | `-IfStmt 0x7fe2de032bb8 <line:55:8, line:61:5>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fe2de032768 <line:55:12, col:43> 'int' '&&'
+    |   | |-ImplicitCastExpr 0x7fe2de032750 <col:12> 'unsigned int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fe2de0325e0 <col:12> 'unsigned int' lvalue Var 0x7fe2de016090 'max_links' 'unsigned int'
+    |   | `-BinaryOperator 0x7fe2de032728 <col:25, col:43> 'int' '>='
+    |   |   |-ImplicitCastExpr 0x7fe2de0326f8 <col:25, col:32> 'unsigned int' <LValueToRValue>
+    |   |   | `-MemberExpr 0x7fe2de032698 <col:25, col:32> 'const unsigned int' lvalue .i_nlink 0x7fe2de014d28
+    |   |   |   `-MemberExpr 0x7fe2de032648 <col:25, col:32> 'union inode::(anonymous at ../Data/C2AST/pr67756.c:18:5)' lvalue -> 0x7fe2de014dc0
+    |   |   |     `-ImplicitCastExpr 0x7fe2de032630 <col:25> 'struct inode *' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7fe2de032608 <col:25> 'struct inode *' lvalue Var 0x7fe2de015f70 'inode' 'struct inode *'
+    |   |   `-ImplicitCastExpr 0x7fe2de032710 <col:43> 'unsigned int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fe2de0326d0 <col:43> 'unsigned int' lvalue Var 0x7fe2de016090 'max_links' 'unsigned int'
+    |   |-BinaryOperator 0x7fe2de0327f8 <line:56:5, col:14> 'int' '='
+    |   | |-DeclRefExpr 0x7fe2de032790 <col:5> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    |   | `-UnaryOperator 0x7fe2de0327d8 <col:13, col:14> 'int' prefix '-'
+    |   |   `-IntegerLiteral 0x7fe2de0327b8 <col:14> 'int' 31
+    |   `-CompoundStmt 0x7fe2de032b98 <line:58:5, line:61:5>
+    |     |-BinaryOperator 0x7fe2de032940 <line:59:7, col:54> 'int' '='
+    |     | |-DeclRefExpr 0x7fe2de032820 <col:7> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    |     | `-CallExpr 0x7fe2de0328d8 <col:15, col:54> 'int'
+    |     |   |-ImplicitCastExpr 0x7fe2de0328c0 <col:15> 'int (*)()' <FunctionToPointerDecay>
+    |     |   | `-DeclRefExpr 0x7fe2de032848 <col:15> 'int ()' Function 0x7fe2de014308 'try_break_deleg' 'int ()'
+    |     |   |-ImplicitCastExpr 0x7fe2de032910 <col:32> 'struct inode *' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x7fe2de032870 <col:32> 'struct inode *' lvalue Var 0x7fe2de015f70 'inode' 'struct inode *'
+    |     |   `-ImplicitCastExpr 0x7fe2de032928 <col:39> 'struct inode **' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fe2de032898 <col:39> 'struct inode **' lvalue ParmVar 0x7fe2de015d40 'delegated_inode' 'struct inode **'
+    |     `-BinaryOperator 0x7fe2de032b70 <line:60:7, col:59> 'int' '='
+    |       |-DeclRefExpr 0x7fe2de032968 <col:7> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'
+    |       `-CallExpr 0x7fe2de032ae8 <col:15, col:59> 'int'
+    |         |-ImplicitCastExpr 0x7fe2de032ad0 <col:15, col:26> 'int (*)(struct dentry *, struct inode *, struct dentry *)' <LValueToRValue>
+    |         | `-MemberExpr 0x7fe2de032a20 <col:15, col:26> 'int (*const)(struct dentry *, struct inode *, struct dentry *)' lvalue ->link 0x7fe2de015488
+    |         |   `-ImplicitCastExpr 0x7fe2de032a08 <col:15, col:20> 'const struct inode_operations *' <LValueToRValue>
+    |         |     `-MemberExpr 0x7fe2de0329d0 <col:15, col:20> 'const struct inode_operations *' lvalue ->i_op 0x7fe2de014a70
+    |         |       `-ImplicitCastExpr 0x7fe2de0329b8 <col:15> 'struct inode *' <LValueToRValue>
+    |         |         `-DeclRefExpr 0x7fe2de032990 <col:15> 'struct inode *' lvalue ParmVar 0x7fe2de015bd8 'dir' 'struct inode *'
+    |         |-ImplicitCastExpr 0x7fe2de032b28 <col:32> 'struct dentry *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7fe2de032a58 <col:32> 'struct dentry *' lvalue ParmVar 0x7fe2de015b50 'old_dentry' 'struct dentry *'
+    |         |-ImplicitCastExpr 0x7fe2de032b40 <col:44> 'struct inode *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7fe2de032a80 <col:44> 'struct inode *' lvalue ParmVar 0x7fe2de015bd8 'dir' 'struct inode *'
+    |         `-ImplicitCastExpr 0x7fe2de032b58 <col:49> 'struct dentry *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fe2de032aa8 <col:49> 'struct dentry *' lvalue ParmVar 0x7fe2de015c60 'new_dentry' 'struct dentry *'
+    |-CallExpr 0x7fe2de032d00 <line:62:3, col:32> 'int'
+    | |-ImplicitCastExpr 0x7fe2de032ce8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe2de032c28 <col:3> 'int ()' Function 0x7fe2de0144b0 'mutex_unlock' 'int ()'
+    | `-UnaryOperator 0x7fe2de032cc8 <col:17, col:25> 'struct mutex *' prefix '&'
+    |   `-MemberExpr 0x7fe2de032c90 <col:18, col:25> 'struct mutex':'struct mutex' lvalue ->i_mutex 0x7fe2de014f10
+    |     `-ImplicitCastExpr 0x7fe2de032c78 <col:18> 'struct inode *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe2de032c50 <col:18> 'struct inode *' lvalue Var 0x7fe2de015f70 'inode' 'struct inode *'
+    `-ReturnStmt 0x7fe2de032d70 <line:63:3, col:10>
+      `-ImplicitCastExpr 0x7fe2de032d58 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe2de032d30 <col:10> 'int' lvalue Var 0x7fe2de031e00 'error' 'int'

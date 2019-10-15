@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fcda402bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcda4814200 <../Data/C2AST/pr80880.c:5:1, line:10:1> line:5:6 referenced fn1 'int *()'
+  `-CompoundStmt 0x7fcda4814570 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fcda48143e8 <line:7:3, col:17>
+    | `-VarDecl 0x7fcda48142f8 <col:3, col:16> col:8 used r 'int *' cinit
+    |   `-CallExpr 0x7fcda48143c0 <col:12, col:16> 'int *'
+    |     `-ImplicitCastExpr 0x7fcda48143a8 <col:12> 'int *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fcda4814358 <col:12> 'int *()' Function 0x7fcda4814200 'fn1' 'int *()'
+    `-IfStmt 0x7fcda4814538 <line:8:3, line:9:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcda48144b8 <line:8:7, col:20> 'int' '=='
+      | |-ImplicitCastExpr 0x7fcda4814488 <col:7> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fcda4814400 <col:7> 'int *' lvalue Var 0x7fcda48142f8 'r' 'int *'
+      | `-ImplicitCastExpr 0x7fcda48144a0 <col:12, col:20> 'int *' <BitCast>
+      |   `-CStyleCastExpr 0x7fcda4814460 <col:12, col:20> 'void *' <NullToPointer>
+      |     `-IntegerLiteral 0x7fcda4814428 <col:20> 'int' 0
+      |-ReturnStmt 0x7fcda4814520 <line:9:5, col:12>
+      | `-ImplicitCastExpr 0x7fcda4814508 <col:12> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcda48144e0 <col:12> 'int *' lvalue Var 0x7fcda48142f8 'r' 'int *'
+      `-<<<NULL>>>

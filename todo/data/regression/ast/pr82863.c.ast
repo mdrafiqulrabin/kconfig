@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f7f4502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7f4502c978 <../Data/C2AST/pr82863.c:5:1, col:19> col:19 referenced a 'long long'
+| `-BuiltinType 0x7f7f4502be20 'long long'
+|-VarDecl 0x7f7f45814200 <line:6:1, col:3> col:3 used b 'a':'long long'
+`-FunctionDecl 0x7f7f458142f0 <line:7:1, line:12:1> line:8:1 c 'float ()'
+  `-CompoundStmt 0x7f7f45814530 <line:9:1, line:12:1>
+    |-DeclStmt 0x7f7f458144c0 <line:10:3, col:18>
+    | `-VarDecl 0x7f7f458143a8 <col:3, col:17> col:9 used d 'float' cinit
+    |   `-ImplicitCastExpr 0x7f7f458144a8 <col:13, col:17> 'float' <IntegralToFloating>
+    |     `-BinaryOperator 0x7f7f45814480 <col:13, col:17> 'int' '>'
+    |       |-ImplicitCastExpr 0x7f7f45814450 <col:13> 'a':'long long' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7f7f45814408 <col:13> 'a':'long long' lvalue Var 0x7f7f45814200 'b' 'a':'long long'
+    |       `-ImplicitCastExpr 0x7f7f45814468 <col:17> 'long long' <IntegralCast>
+    |         `-IntegerLiteral 0x7f7f45814430 <col:17> 'int' 0
+    `-ReturnStmt 0x7f7f45814518 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f7f45814500 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7f7f458144d8 <col:10> 'float' lvalue Var 0x7f7f458143a8 'd' 'float'

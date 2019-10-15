@@ -1,0 +1,92 @@
+../Data/C2AST/pr43008.c:8:17: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  struct X *p = __builtin_malloc (sizeof (struct X));
+                ^
+TranslationUnitDecl 0x7fb7c0006ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb7c0007460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb7c0007180 '__int128'
+|-TypedefDecl 0x7fb7c00074d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb7c00071a0 'unsigned __int128'
+|-TypedefDecl 0x7fb7c00077a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb7c00075b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb7c0007528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb7c0007840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb7c0007800 'char *'
+|   `-BuiltinType 0x7fb7c0006f80 'char'
+|-TypedefDecl 0x7fb7c0007b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb7c0007ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb7c0007920 'struct __va_list_tag'
+|     `-Record 0x7fb7c0007898 '__va_list_tag'
+|-VarDecl 0x7fb7c0007b78 <../Data/C2AST/pr43008.c:1:1, col:5> col:5 used i 'int'
+|-RecordDecl 0x7fb7c101bc40 <line:2:1, line:4:1> line:2:8 struct X definition
+| `-FieldDecl 0x7fb7c101bd30 <line:3:3, col:8> col:8 referenced p 'int *'
+|-FunctionDecl 0x7fb7c101bf18 <line:5:1, line:11:1> line:6:1 used my_alloc 'struct X *(void)'
+| |-CompoundStmt 0x7fb7c101c3f0 <line:7:1, line:11:1>
+| | |-DeclStmt 0x7fb7c101c298 <line:8:3, col:53>
+| | | `-VarDecl 0x7fb7c101c028 <col:3, col:52> col:13 used p 'struct X *' cinit
+| | |   `-ImplicitCastExpr 0x7fb7c101c280 <col:17, col:52> 'struct X *' <IntegralToPointer>
+| | |     `-CallExpr 0x7fb7c101c250 <col:17, col:52> 'int'
+| | |       |-ImplicitCastExpr 0x7fb7c101c238 <col:17> 'int (*)()' <FunctionToPointerDecay>
+| | |       | `-DeclRefExpr 0x7fb7c101c1a0 <col:17> 'int ()' Function 0x7fb7c101c0f0 '__builtin_malloc' 'int ()'
+| | |       `-UnaryExprOrTypeTraitExpr 0x7fb7c101c1e8 <col:35, col:51> 'unsigned long' sizeof 'struct X':'struct X'
+| | |-BinaryOperator 0x7fb7c101c370 <line:9:3, col:11> 'int *' '='
+| | | |-MemberExpr 0x7fb7c101c2f0 <col:3, col:6> 'int *' lvalue ->p 0x7fb7c101bd30
+| | | | `-ImplicitCastExpr 0x7fb7c101c2d8 <col:3> 'struct X *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fb7c101c2b0 <col:3> 'struct X *' lvalue Var 0x7fb7c101c028 'p' 'struct X *'
+| | | `-UnaryOperator 0x7fb7c101c350 <col:10, col:11> 'int *' prefix '&'
+| | |   `-DeclRefExpr 0x7fb7c101c328 <col:11> 'int' lvalue Var 0x7fb7c0007b78 'i' 'int'
+| | `-ReturnStmt 0x7fb7c101c3d8 <line:10:3, col:10>
+| |   `-ImplicitCastExpr 0x7fb7c101c3c0 <col:10> 'struct X *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fb7c101c398 <col:10> 'struct X *' lvalue Var 0x7fb7c101c028 'p' 'struct X *'
+| `-RestrictAttr 0x7fb7c101bfb8 <line:5:27> malloc
+|-FunctionDecl 0x7fb7c101c510 <line:12:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb7c101c5b0 prev 0x7fb7c101c510 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fb7c101c678 <line:13:1, line:23:1> line:13:5 main 'int ()'
+  `-CompoundStmt 0x7fb7c1034e98 <line:14:1, line:23:1>
+    |-DeclStmt 0x7fb7c101c840 <line:15:3, col:18>
+    | |-VarDecl 0x7fb7c101c740 <col:3, col:13> col:13 used p 'struct X *'
+    | `-VarDecl 0x7fb7c101c7c8 <col:3, col:17> col:17 used q 'struct X *'
+    |-BinaryOperator 0x7fb7c101c948 <line:16:3, col:17> 'struct X *' '='
+    | |-DeclRefExpr 0x7fb7c101c858 <col:3> 'struct X *' lvalue Var 0x7fb7c101c740 'p' 'struct X *'
+    | `-CallExpr 0x7fb7c101c920 <col:7, col:17> 'struct X *'
+    |   `-ImplicitCastExpr 0x7fb7c101c908 <col:7> 'struct X *(*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fb7c101c880 <col:7> 'struct X *(void)' Function 0x7fb7c101bf18 'my_alloc' 'struct X *(void)'
+    |-BinaryOperator 0x7fb7c101ca00 <line:17:3, col:17> 'struct X *' '='
+    | |-DeclRefExpr 0x7fb7c101c970 <col:3> 'struct X *' lvalue Var 0x7fb7c101c7c8 'q' 'struct X *'
+    | `-CallExpr 0x7fb7c101c9d8 <col:7, col:17> 'struct X *'
+    |   `-ImplicitCast1 error generated.
+Expr 0x7fb7c101c9c0 <col:7> 'struct X *(*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fb7c101c998 <col:7> 'struct X *(void)' Function 0x7fb7c101bf18 'my_alloc' 'struct X *(void)'
+    |-BinaryOperator 0x7fb7c101cb18 <line:18:3, col:13> 'int' '='
+    | |-UnaryOperator 0x7fb7c101cad8 <col:3, col:9> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb7c101cac0 <col:4, col:9> 'int *' <LValueToRValue>
+    | |   `-ParenExpr 0x7fb7c101caa0 <col:4, col:9> 'int *' lvalue
+    | |     `-MemberExpr 0x7fb7c101ca68 <col:5, col:8> 'int *' lvalue ->p 0x7fb7c101bd30
+    | |       `-ImplicitCastExpr 0x7fb7c101ca50 <col:5> 'struct X *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fb7c101ca28 <col:5> 'struct X *' lvalue Var 0x7fb7c101c740 'p' 'struct X *'
+    | `-IntegerLiteral 0x7fb7c101caf8 <col:13> 'int' 1
+    |-BinaryOperator 0x7fb7c1034c40 <line:19:3, col:13> 'int' '='
+    | |-UnaryOperator 0x7fb7c1034c00 <col:3, col:9> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb7c101cbd8 <col:4, col:9> 'int *' <LValueToRValue>
+    | |   `-ParenExpr 0x7fb7c101cbb8 <col:4, col:9> 'int *' lvalue
+    | |     `-MemberExpr 0x7fb7c101cb80 <col:5, col:8> 'int *' lvalue ->p 0x7fb7c101bd30
+    | |       `-ImplicitCastExpr 0x7fb7c101cb68 <col:5> 'struct X *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fb7c101cb40 <col:5> 'struct X *' lvalue Var 0x7fb7c101c7c8 'q' 'struct X *'
+    | `-IntegerLiteral 0x7fb7c1034c20 <col:13> 'int' 0
+    |-IfStmt 0x7fb7c1034e28 <line:20:3, line:21:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb7c1034d70 <line:20:7, col:18> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb7c1034d58 <col:7, col:13> 'int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7fb7c1034d18 <col:7, col:13> 'int' lvalue prefix '*'
+    | | |   `-ImplicitCastExpr 0x7fb7c1034d00 <col:8, col:13> 'int *' <LValueToRValue>
+    | | |     `-ParenExpr 0x7fb7c1034ce0 <col:8, col:13> 'int *' lvalue
+    | | |       `-MemberExpr 0x7fb7c1034ca8 <col:9, col:12> 'int *' lvalue ->p 0x7fb7c101bd30
+    | | |         `-ImplicitCastExpr 0x7fb7c1034c90 <col:9> 'struct X *' <LValueToRValue>
+    | | |           `-DeclRefExpr 0x7fb7c1034c68 <col:9> 'struct X *' lvalue Var 0x7fb7c101c740 'p' 'struct X *'
+    | | `-IntegerLiteral 0x7fb7c1034d38 <col:18> 'int' 0
+    | |-CallExpr 0x7fb7c1034e00 <line:21:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb7c1034de8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb7c1034d98 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb7c101c5b0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb7c1034e80 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fb7c1034e60 <col:10> 'int' 0

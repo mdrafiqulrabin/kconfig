@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fcc0082bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcc0085b950 <../Data/C2AST/pr56605.c:8:1, line:13:1> line:8:6 foo 'void (short *restrict, int *restrict)'
+  |-ParmVarDecl 0x7fcc0082c9a0 <col:11, col:29> col:29 used sb 'short *restrict'
+  |-ParmVarDecl 0x7fcc0085b840 <col:33, col:49> col:49 used ia 'int *restrict'
+  `-CompoundStmt 0x7fcc0085be18 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fcc0085bab8 <line:10:3, col:8>
+    | `-VarDecl 0x7fcc0085ba58 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fcc0085bde0 <line:11:3, line:12:23>
+      |-BinaryOperator 0x7fcc0085bb18 <line:11:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fcc0085bad0 <col:8> 'int' lvalue Var 0x7fcc0085ba58 'i' 'int'
+      | `-IntegerLiteral 0x7fcc0085baf8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcc0085bba0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fcc0085bb88 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fcc0085bb40 <col:15> 'int' lvalue Var 0x7fcc0085ba58 'i' 'int'
+      | `-IntegerLiteral 0x7fcc0085bb68 <col:19> 'int' 4000
+      |-UnaryOperator 0x7fcc0085bbf0 <col:25, col:26> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fcc0085bbc8 <col:25> 'int' lvalue Var 0x7fcc0085ba58 'i' 'int'
+      `-BinaryOperator 0x7fcc0085bdb8 <line:12:5, col:23> 'int' '='
+        |-ArraySubscriptExpr 0x7fcc0085bc90 <col:5, col:9> 'int' lvalue
+        | |-ImplicitCastExpr 0x7fcc0085bc60 <col:5> 'int *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fcc0085bc10 <col:5> 'int *restrict' lvalue ParmVar 0x7fcc0085b840 'ia' 'int *restrict'
+        | `-ImplicitCastExpr 0x7fcc0085bc78 <col:8> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fcc0085bc38 <col:8> 'int' lvalue Var 0x7fcc0085ba58 'i' 'int'
+        `-CStyleCastExpr 0x7fcc0085bd90 <col:13, col:23> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fcc0085bd78 <col:19, col:23> 'short' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fcc0085bd38 <col:19, col:23> 'short' lvalue
+              |-ImplicitCastExpr 0x7fcc0085bd08 <col:19> 'short *' <LValueToRValue>
+              | `-DeclRefExpr 0x7fcc0085bcb8 <col:19> 'short *restrict' lvalue ParmVar 0x7fcc0082c9a0 'sb' 'short *restrict'
+              `-ImplicitCastExpr 0x7fcc0085bd20 <col:22> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fcc0085bce0 <col:22> 'int' lvalue Var 0x7fcc0085ba58 'i' 'int'

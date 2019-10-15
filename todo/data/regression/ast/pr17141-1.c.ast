@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fa15b82b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa15b82bf60 <../Data/C2AST/pr17141-1.c:4:1, col:19> col:8 struct A definition
+| `-FieldDecl 0x7fa15b011a38 <col:12, col:16> col:16 referenced i 'int'
+`-FunctionDecl 0x7fa15b011cc8 <line:5:1, line:12:1> line:6:1 foo 'int (struct A *, int)'
+  |-ParmVarDecl 0x7fa15b011b30 <col:5, col:15> col:15 used locp 'struct A *'
+  |-ParmVarDecl 0x7fa15b011ba8 <col:21, col:25> col:25 used str 'int'
+  `-CompoundStmt 0x7fa15b012158 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fa15b011ee8 <line:8:3, col:18>
+    | |-VarDecl 0x7fa15b011dd0 <col:3, col:7> col:7 T355 'int'
+    | `-VarDecl 0x7fa15b011e70 <col:3, col:14> col:14 used T356 'int *'
+    |-BinaryOperator 0x7fa15b011fc0 <line:9:3, col:17> 'int *' '='
+    | |-DeclRefExpr 0x7fa15b011f00 <col:3> 'int *' lvalue Var 0x7fa15b011e70 'T356' 'int *'
+    | `-UnaryOperator 0x7fa15b011fa0 <col:10, col:17> 'int *' prefix '&'
+    |   `-MemberExpr 0x7fa15b011f68 <col:11, col:17> 'int' lvalue ->i 0x7fa15b011a38
+    |     `-ImplicitCastExpr 0x7fa15b011f50 <col:11> 'struct A *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa15b011f28 <col:11> 'struct A *' lvalue ParmVar 0x7fa15b011b30 'locp' 'struct A *'
+    |-BinaryOperator 0x7fa15b012088 <line:10:3, col:11> 'int' '='
+    | |-UnaryOperator 0x7fa15b012028 <col:3, col:4> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fa15b012010 <col:4> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa15b011fe8 <col:4> 'int *' lvalue Var 0x7fa15b011e70 'T356' 'int *'
+    | `-ImplicitCastExpr 0x7fa15b012070 <col:11> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa15b012048 <col:11> 'int' lvalue ParmVar 0x7fa15b011ba8 'str' 'int'
+    `-ReturnStmt 0x7fa15b012140 <line:11:3, col:16>
+      `-ImplicitCastExpr 0x7fa15b012128 <col:10, col:16> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fa15b0120f0 <col:10, col:16> 'int' lvalue ->i 0x7fa15b011a38
+          `-ImplicitCastExpr 0x7fa15b0120d8 <col:10> 'struct A *' <LValueToRValue>
+            `-DeclRefExpr 0x7fa15b0120b0 <col:10> 'struct A *' lvalue ParmVar 0x7fa15b011b30 'locp' 'struct A *'

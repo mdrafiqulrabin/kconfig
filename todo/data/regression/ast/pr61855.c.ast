@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7ff3d6826ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff3d77c1698 <../Data/C2AST/pr61855.c:6:1, line:9:1> line:6:8 test '__m512 (__m512)'
+| |-ParmVarDecl 0x7ff3d77c1610 <col:14, col:21> col:21 used x '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+| `-CompoundStmt 0x7ff3d77c1f08 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ff3d77c1ef0 <line:8:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7938:72>
+|     `-UnaryOperator 0x7ff3d77c1ed0 <line:7933:36, line:7938:72> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' prefix '__extension__'
+|       `-StmtExpr 0x7ff3d77c1eb0 <line:7933:50, line:7938:72> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|         `-CompoundStmt 0x7ff3d77c1e98 <line:7933:51, line:7938:71>
+|           `-CStyleCastExpr 0x7ff3d77c1e70 <line:7934:3, line:7938:68> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <BitCast>
+|             `-CallExpr 0x7ff3d77c1e10 <line:7934:11, line:7938:68> '__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|               |-ImplicitCastExpr 0x7ff3d77c1df8 <line:7934:11> '__attribute__((__vector_size__(16 * sizeof(float)))) float (*)(__attribute__((__vector_size__(16 * sizeof(float)))) float, int, __attribute__((__vector_size__(16 * sizeof(float)))) float, unsigned short, int)' <BuiltinFnToFnPtr>
+|               | `-DeclRefExpr 0x7ff3d77c19e8 <col:11> '<builtin fn type>' Function 0x7ff3d77c1740 '__builtin_ia32_getmantps512_mask' '__attribute__((__vector_size__(16 * sizeof(float)))) float (__attribute__((__vector_size__(16 * sizeof(float)))) float, int, __attribute__((__vector_size__(16 * sizeof(float)))) float, unsigned short, int)'
+|               |-CStyleCastExpr 0x7ff3d77c1ae8 <col:44, col:63> '__v16sf':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <BitCast>
+|               | `-CStyleCastExpr 0x7ff3d77c1ab0 <col:53, col:63> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <BitCast>
+|               |   `-ImplicitCastExpr 0x7ff3d77c1a98 <col:61, col:63> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+|               |     `-ParenExpr 0x7ff3d77c1a78 <col:61, col:63> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue
+|               |       `-DeclRefExpr 0x7ff3d77c1a10 <../Data/C2AST/pr61855.c:8:28> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue ParmVar 0x7ff3d77c1610 'x' '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|               |-CStyleCastExpr 0x7ff3d77c1c98 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7935:44, col:62> 'int' <NoOp>
+|               | `-ParenExpr 0x7ff3d77c1c78 <col:49, col:62> 'int'
+|               |   `-BinaryOperator 0x7ff3d77c1c08 <col:50, col:61> 'int' '|'
+|               |     |-ParenExpr 0x7ff3d77c1ba0 <col:50, col:57> 'int'
+|               |     | `-BinaryOperator 0x7ff3d77c1b78 <col:51, col:56> 'int' '<<'
+|               |     |   |-ParenExpr 0x7ff3d77c1b38 <col:51, col:53> 'int'
+|               |     |   | `-DeclRefExpr 0x7ff3d77c1b10 <../Data/C2AST/pr61855.c:8:50> 'int' EnumConstant 0x7ff3d733b978 '_MM_MANT_SIGN_zero' 'int'
+|               |     |   `-IntegerLiteral 0x7ff3d77c1b58 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7935:56> 'int' 2
+|               |     `-ParenExpr 0x7ff3d77c1be8 <col:59, col:61> 'int'
+|               |       `-DeclRefExpr 0x7ff3d77c1bc0 <../Data/C2AST/pr61855.c:8:31> 'int' EnumConstant 0x7ff3d733b690 '_MM_MANT_NORM_1_2' 'int'
+|               |-CStyleCastExpr 0x7ff3d77c1d38 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7936:44, col:73> '__v16sf':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <BitCast>
+|               | `-CallExpr 0x7ff3d77c1d00 <col:53, col:73> '__m512':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|               |   `-ImplicitCastExpr 0x7ff3d77c1ce8 <col:53> '__m512 (*)(void)' <FunctionToPointerDecay>
+|               |     `-DeclRefExpr 0x7ff3d77c1cc0 <col:53> '__m512 (void)' Function 0x7ff3d733d908 '_mm512_undefined_ps' '__m512 (void)'
+|               |-CStyleCastExpr 0x7ff3d77c1db0 <line:7937:44, col:56> '__mmask16':'unsigned short' <IntegralCast>
+|               | `-UnaryOperator 0x7ff3d77c1d80 <col:55, col:56> 'int' prefix '-'
+|               |   `-IntegerLiteral 0x7ff3d77c1d60 <col:56> 'int' 1
+|               `-IntegerLiteral 0x7ff3d77c1dd8 <line:55:37> 'int' 4
+`-FunctionDecl 0x7ff3d77c1740 <line:7934:11> col:11 implicit used __builtin_ia32_getmantps512_mask '__attribute__((__vector_size__(16 * sizeof(float)))) float (__attribute__((__vector_size__(16 * sizeof(float)))) float, int, __attribute__((__vector_size__(16 * sizeof(float)))) float, unsigned short, int)' extern
+  |-ParmVarDecl 0x7ff3d77c17e0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(float)))) float'
+  |-ParmVarDecl 0x7ff3d77c1840 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7ff3d77c18a0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(float)))) float'
+  |-ParmVarDecl 0x7ff3d77c1900 <<invalid sloc>> <invalid sloc> 'unsigned short'
+  `-ParmVarDecl 0x7ff3d77c1960 <<invalid sloc>> <invalid sloc> 'int'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7ff73c81bae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff73d800a20 <../Data/C2AST/pr52150.c:4:1, col:27> col:6 used foo 'void ()'
+| `-AsmLabelAttr 0x7ff73d800ac0 <col:22> "bar"
+|-FunctionDecl 0x7ff73d800b78 prev 0x7ff73d800a20 <line:6:1, line:9:1> line:7:1 used foo 'void ()'
+| |-CompoundStmt 0x7ff73d800c70 <line:8:1, line:9:1>
+| `-AsmLabelAttr 0x7ff73d800c50 <line:4:22> Inherited "bar"
+`-FunctionDecl 0x7ff73d800cd0 <line:11:1, line:16:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7ff73d800e40 <line:13:1, line:16:1>
+    |-CallExpr 0x7ff73d800de0 <line:14:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7ff73d800dc8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff73d800d70 <col:3> 'void ()' Function 0x7ff73d800b78 'foo' 'void ()'
+    `-ReturnStmt 0x7ff73d800e28 <line:15:3, col:10>
+      `-IntegerLiteral 0x7ff73d800e08 <col:10> 'int' 0

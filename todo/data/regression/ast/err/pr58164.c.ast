@@ -1,0 +1,28 @@
+../Data/C2AST/pr58164.c:8:3: error: indirect goto in function with no address-of-label expressions
+  goto *&x;
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f968a82b0e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f968a82b660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f968a82b380 '__int128'
+|-TypedefDecl 0x7f968a82b6d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f968a82b3a0 'unsigned __int128'
+|-TypedefDecl 0x7f968a82b9a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f968a82b7b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f968a82b728 '__NSConstantString_tag'
+|-TypedefDecl 0x7f968a82ba40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f968a82ba00 'char *'
+|   `-BuiltinType 0x7f968a82b180 'char'
+|-TypedefDecl 0x7f968a82bd08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f968a82bcb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f968a82bb20 'struct __va_list_tag'
+|     `-Record 0x7f968a82ba98 '__va_list_tag'
+`-FunctionDecl 0x7f968b014e28 <../Data/C2AST/pr58164.c:4:1, line:9:1> line:5:1 foo 'int (void)'
+  `-CompoundStmt 0x7f968b015088 <line:6:1, line:9:1>
+    |-DeclStmt 0x7f968b014fa0 <line:7:3, col:12>
+    | `-VarDecl 0x7f968b014f20 <col:3, col:11> col:7 used x 'int' cinit
+    |   `-IntegerLiteral 0x7f968b014f80 <col:11> 'int' 0
+    `-IndirectGotoStmt 0x7f968b015070 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7f968b015058 <col:9, col:10> 'const void *' <BitCast>
+        `-UnaryOperator 0x7f968b015008 <col:9, col:10> 'int *' prefix '&'
+          `-DeclRefExpr 0x7f968b014fb8 <col:10> 'int' lvalue Var 0x7f968b014f20 'x' 'int'

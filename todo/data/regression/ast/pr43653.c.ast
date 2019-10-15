@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7facba0192e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7facba019f60 <../Data/C2AST/pr43653.c:4:9, col:17> col:9 struct definition
+|-TypedefDecl 0x7facba80e870 <col:1, col:19> col:19 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7facba80e820 'struct S' sugar
+|   `-RecordType 0x7facba80e800 'S'
+|     `-Record 0x7facba019f60 ''
+`-FunctionDecl 0x7facba80e930 <line:6:1, line:14:1> line:6:7 foo 'void *()'
+  `-CompoundStmt 0x7facba80f208 <line:7:1, line:14:1>
+    |-DeclStmt 0x7facba80ed20 <line:8:3, col:18>
+    | |-VarDecl 0x7facba80eb28 <col:3, col:9> col:5 used a 'S [64]'
+    | `-VarDecl 0x7facba80eca8 <col:3, col:17> col:13 used p 'S *[64]'
+    |-DeclStmt 0x7facba80edb0 <line:9:3, col:8>
+    | `-VarDecl 0x7facba80ed50 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7facba80f100 <line:11:3, line:12:16>
+    | |-BinaryOperator 0x7facba80ee10 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7facba80edc8 <col:8> 'int' lvalue Var 0x7facba80ed50 'i' 'int'
+    | | `-IntegerLiteral 0x7facba80edf0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7facba80ee98 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7facba80ee80 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7facba80ee38 <col:15> 'int' lvalue Var 0x7facba80ed50 'i' 'int'
+    | | `-IntegerLiteral 0x7facba80ee60 <col:19> 'int' 64
+    | |-UnaryOperator 0x7facba80eee8 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7facba80eec0 <col:23> 'int' lvalue Var 0x7facba80ed50 'i' 'int'
+    | `-BinaryOperator 0x7facba80f0d8 <line:12:5, col:16> 'S *' '='
+    |   |-ArraySubscriptExpr 0x7facba80efe8 <col:5, col:8> 'S *' lvalue
+    |   | |-ImplicitCastExpr 0x7facba80efb8 <col:5> 'S **' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7facba80ef08 <col:5> 'S *[64]' lvalue Var 0x7facba80eca8 'p' 'S *[64]'
+    |   | `-ImplicitCastExpr 0x7facba80efd0 <col:7> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7facba80ef30 <col:7> 'int' lvalue Var 0x7facba80ed50 'i' 'int'
+    |   `-UnaryOperator 0x7facba80f0b8 <col:12, col:16> 'S *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7facba80f090 <col:13, col:16> 'S':'S' lvalue
+    |       |-ImplicitCastExpr 0x7facba80f060 <col:13> 'S *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7facba80f010 <col:13> 'S [64]' lvalue Var 0x7facba80eb28 'a' 'S [64]'
+    |       `-ImplicitCastExpr 0x7facba80f078 <col:15> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7facba80f038 <col:15> 'int' lvalue Var 0x7facba80ed50 'i' 'int'
+    `-ReturnStmt 0x7facba80f1f0 <line:13:3, col:13>
+      `-ImplicitCastExpr 0x7facba80f1d8 <col:10, col:13> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7facba80f1c0 <col:10, col:13> 'S *' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7facba80f198 <col:10, col:13> 'S *' lvalue
+            |-ImplicitCastExpr 0x7facba80f180 <col:10> 'S **' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7facba80f138 <col:10> 'S *[64]' lvalue Var 0x7facba80eca8 'p' 'S *[64]'
+            `-IntegerLiteral 0x7facba80f160 <col:12> 'int' 0

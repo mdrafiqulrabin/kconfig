@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f93b182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f93b2014200 <../Data/C2AST/pr79179.c:9:1, line:12:1> line:9:1 struct definition
+| |-MaxFieldAlignmentAttr 0x7f93b20142b0 <<invalid sloc>> Implicit 8
+| |-FieldDecl 0x7f93b2014330 <line:10:9, col:18> col:9 'int'
+| | `-IntegerLiteral 0x7f93b20142f8 <col:18> 'int' 1
+| `-FieldDecl 0x7f93b2014390 <line:11:9, col:23> col:23 referenced a 'unsigned long'
+|-VarDecl 0x7f93b2014430 <line:9:1, line:12:3> col:3 used b 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)'
+`-FunctionDecl 0x7f93b20145b0 <line:14:1, line:19:1> line:14:6 c 'void (void)'
+  `-CompoundStmt 0x7f93b2014a38 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7f93b20146e8 <line:16:9, col:15> 'unsigned long' '='
+    | |-MemberExpr 0x7f93b2014678 <col:9, col:11> 'unsigned long' lvalue .a 0x7f93b2014390
+    | | `-DeclRefExpr 0x7f93b2014650 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)' lvalue Var 0x7f93b2014430 'b' 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)'
+    | `-ImplicitCastExpr 0x7f93b20146d0 <col:15> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f93b20146b0 <col:15> 'int' 0
+    `-ForStmt 0x7f93b2014a00 <line:17:9, line:18:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f93b2014810 <line:17:16, col:23> 'int' '<='
+      | |-ImplicitCastExpr 0x7f93b20147e0 <col:16, col:18> 'unsigned long' <LValueToRValue>
+      | | `-MemberExpr 0x7f93b2014788 <col:16, col:18> 'unsigned long' lvalue .a 0x7f93b2014390
+      | |   `-DeclRefExpr 0x7f93b2014760 <col:16> 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)' lvalue Var 0x7f93b2014430 'b' 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)'
+      | `-ImplicitCastExpr 0x7f93b20147f8 <col:23> 'unsigned long' <IntegralCast>
+      |   `-IntegerLiteral 0x7f93b20147c0 <col:23> 'int' 45
+      |-BinaryOperator 0x7f93b20149c8 <col:27, col:45> 'unsigned long' '='
+      | |-MemberExpr 0x7f93b2014860 <col:27, col:29> 'unsigned long' lvalue .a 0x7f93b2014390
+      | | `-DeclRefExpr 0x7f93b2014838 <col:27> 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)' lvalue Var 0x7f93b2014430 'b' 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)'
+      | `-ImplicitCastExpr 0x7f93b20149b0 <col:33, col:45> 'unsigned long' <IntegralCast>
+      |   `-BinaryOperator 0x7f93b2014988 <col:33, col:45> 'long' '+'
+      |     |-CStyleCastExpr 0x7f93b2014928 <col:33, col:41> 'long' <IntegralCast>
+      |     | `-ImplicitCastExpr 0x7f93b2014910 <col:39, col:41> 'unsigned long' <LValueToRValue>
+      |     |   `-MemberExpr 0x7f93b20148c0 <col:39, col:41> 'unsigned long' lvalue .a 0x7f93b2014390
+      |     |     `-DeclRefExpr 0x7f93b2014898 <col:39> 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)' lvalue Var 0x7f93b2014430 'b' 'struct (anonymous struct at ../Data/C2AST/pr79179.c:9:1)':'struct (anonymous at ../Data/C2AST/pr79179.c:9:1)'
+      |     `-ImplicitCastExpr 0x7f93b2014970 <col:45> 'long' <IntegralCast>
+      |       `-IntegerLiteral 0x7f93b2014950 <col:45> 'int' 1
+      `-NullStmt 0x7f93b20149f0 <line:18:17>

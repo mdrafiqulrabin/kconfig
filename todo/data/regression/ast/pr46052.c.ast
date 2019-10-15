@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7f9392017ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9392018b78 <../Data/C2AST/pr46052.c:3:1, col:5> col:5 used i 'int'
+|-VarDecl 0x7f939301acc0 <line:4:1, col:8> col:5 used a 'int [2]'
+|-FunctionDecl 0x7f939301ade0 <line:6:1, line:9:1> line:6:20 used bar 'char (void)' static inline
+| `-CompoundStmt 0x7f939301af80 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f939301af68 <line:8:3, col:18>
+|     `-ImplicitCastExpr 0x7f939301af50 <col:10, col:18> 'char' <IntegralCast>
+|       `-ConditionalOperator 0x7f939301af20 <col:10, col:18> 'int'
+|         |-ImplicitCastExpr 0x7f939301aef0 <col:10> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f939301ae80 <col:10> 'int' lvalue Var 0x7f9392018b78 'i' 'int'
+|         |-ImplicitCastExpr 0x7f939301af08 <col:14> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f939301aea8 <col:14> 'int' lvalue Var 0x7f9392018b78 'i' 'int'
+|         `-IntegerLiteral 0x7f939301aed0 <col:18> 'int' 1
+|-FunctionDecl 0x7f939301b070 <line:11:1, line:18:1> line:11:6 foo 'void (int)'
+| |-ParmVarDecl 0x7f939301afb0 <col:11, col:15> col:15 used n 'int'
+| `-CompoundStmt 0x7f939301b478 <line:12:1, line:18:1>
+|   `-WhileStmt 0x7f939301b458 <line:13:3, line:17:5>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f939301b140 <line:13:10, col:11> 'int' postfix '--'
+|     | `-DeclRefExpr 0x7f939301b118 <col:10> 'int' lvalue ParmVar 0x7f939301afb0 'n' 'int'
+|     `-CompoundStmt 0x7f939301b438 <line:14:5, line:17:5>
+|       |-CompoundAssignOperator 0x7f939301b2c0 <line:15:7, col:20> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|       | |-ArraySubscriptExpr 0x7f939301b1f0 <col:7, col:10> 'int' lvalue
+|       | | |-ImplicitCastExpr 0x7f939301b1d8 <col:7> 'int *' <ArrayToPointerDecay>
+|       | | | `-DeclRefExpr 0x7f939301b160 <col:7> 'int [2]' lvalue Var 0x7f939301acc0 'a' 'int [2]'
+|       | | `-IntegerLiteral 0x7f939301b188 <col:9> 'int' 0
+|       | `-ImplicitCastExpr 0x7f939301b2a8 <col:15, col:20> 'int' <IntegralCast>
+|       |   `-CallExpr 0x7f939301b280 <col:15, col:20> 'char'
+|       |     `-ImplicitCastExpr 0x7f939301b268 <col:15> 'char (*)(void)' <FunctionToPointerDecay>
+|       |       `-DeclRefExpr 0x7f939301b218 <col:15> 'char (void)' Function 0x7f939301ade0 'bar' 'char (void)'
+|       `-CompoundAssignOperator 0x7f939301b400 <line:16:7, col:20> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|         |-ArraySubscriptExpr 0x7f939301b358 <col:7, col:10> 'int' lvalue
+|         | |-ImplicitCastExpr 0x7f939301b340 <col:7> 'int *' <ArrayToPointerDecay>
+|         | | `-DeclRefExpr 0x7f939301b2f8 <col:7> 'int [2]' lvalue Var 0x7f939301acc0 'a' 'int [2]'
+|         | `-IntegerLiteral 0x7f939301b320 <col:9> 'int' 1
+|         `-ImplicitCastExpr 0x7f939301b3e8 <col:15, col:20> 'int' <IntegralCast>
+|           `-CallExpr 0x7f939301b3c0 <col:15, col:20> 'char'
+|             `-ImplicitCastExpr 0x7f939301b3a8 <col:15> 'char (*)(void)' <FunctionToPointerDecay>
+|               `-DeclRefExpr 0x7f939301b380 <col:15> 'char (void)' Function 0x7f939301ade0 'bar' 'char (void)'
+|-FunctionDecl 0x7f939301b520 <line:20:1, line:22:1> line:20:20 used bar1 'char (void)' static inline
+| `-CompoundStmt 0x7f939301b5c0 <line:21:1, line:22:1>
+`-FunctionDecl 0x7f939301b670 <line:24:1, line:31:1> line:24:6 foo1 'void (int)'
+  |-ParmVarDecl 0x7f939301b5e8 <col:12, col:16> col:16 used n 'int'
+  `-CompoundStmt 0x7f939301ba20 <line:25:1, line:31:1>
+    `-WhileStmt 0x7f939301ba00 <line:26:3, line:30:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f939301b740 <line:26:10, col:11> 'int' postfix '--'
+      | `-DeclRefExpr 0x7f939301b718 <col:10> 'int' lvalue ParmVar 0x7f939301b5e8 'n' 'int'
+      `-CompoundStmt 0x7f939301b9e0 <line:27:5, line:30:5>
+        |-CompoundAssignOperator 0x7f939301b868 <line:28:7, col:21> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+        | |-ArraySubscriptExpr 0x7f939301b7c0 <col:7, col:10> 'int' lvalue
+        | | |-ImplicitCastExpr 0x7f939301b7a8 <col:7> 'int *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7f939301b760 <col:7> 'int [2]' lvalue Var 0x7f939301acc0 'a' 'int [2]'
+        | | `-IntegerLiteral 0x7f939301b788 <col:9> 'int' 0
+        | `-ImplicitCastExpr 0x7f939301b850 <col:15, col:21> 'int' <IntegralCast>
+        |   `-CallExpr 0x7f939301b828 <col:15, col:21> 'char'
+        |     `-ImplicitCastExpr 0x7f939301b810 <col:15> 'char (*)(void)' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7f939301b7e8 <col:15> 'char (void)' Function 0x7f939301b520 'bar1' 'char (void)'
+        `-CompoundAssignOperator 0x7f939301b9a8 <line:29:7, col:21> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+          |-ArraySubscriptExpr 0x7f939301b900 <col:7, col:10> 'int' lvalue
+          | |-ImplicitCastExpr 0x7f939301b8e8 <col:7> 'int *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7f939301b8a0 <col:7> 'int [2]' lvalue Var 0x7f939301acc0 'a' 'int [2]'
+          | `-IntegerLiteral 0x7f939301b8c8 <col:9> 'int' 1
+          `-ImplicitCastExpr 0x7f939301b990 <col:15, col:21> 'int' <IntegralCast>
+            `-CallExpr 0x7f939301b968 <col:15, col:21> 'char'
+              `-ImplicitCastExpr 0x7f939301b950 <col:15> 'char (*)(void)' <FunctionToPointerDecay>
+                `-DeclRefExpr 0x7f939301b928 <col:15> 'char (void)' Function 0x7f939301b520 'bar1' 'char (void)'

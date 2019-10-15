@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fbf0702a2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf0702af78 <../Data/C2AST/pr57147-3.c:3:1, col:16> col:16 referenced ptr_t 'char *'
+| `-PointerType 0x7fbf0702ac00 'char *'
+|   `-BuiltinType 0x7fbf0702a380 'char'
+|-RecordDecl 0x7fbf08814200 <line:4:1, line:5:1> line:4:8 struct __jmp_buf_tag definition
+|-TypedefDecl 0x7fbf088143e8 <line:6:1, col:42> col:30 referenced sigjmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7fbf08814380 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7fbf088142d0 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7fbf08814290 'struct __jmp_buf_tag'
+|       `-Record 0x7fbf08814200 '__jmp_buf_tag'
+|-VarDecl 0x7fbf08814470 <line:7:1, col:12> col:12 used GC_jmp_buf 'sigjmp_buf':'struct __jmp_buf_tag [1]'
+|-FunctionDecl 0x7fbf08814790 <line:8:5> col:5 implicit used __sigsetjmp 'int (struct __jmp_buf_tag *, int)' extern
+| |-ParmVarDecl 0x7fbf08814830 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7fbf08814890 <<invalid sloc>> <invalid sloc> 'int'
+| `-ReturnsTwiceAttr 0x7fbf08814900 <col:5> Implicit
+|-FunctionDecl 0x7fbf08814948 prev 0x7fbf08814790 <col:1, col:33> col:5 used __sigsetjmp 'int (struct __jmp_buf_tag *, int)'
+| |-ParmVarDecl 0x7fbf088145b0 <col:18> col:28 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| |-ParmVarDecl 0x7fbf08814628 <col:30> col:33 'int'
+| `-ReturnsTwiceAttr 0x7fbf08814a30 <col:5> Inherited Implicit
+|-FunctionDecl 0x7fbf08814cc0 <line:9:1, col:50> col:6 used GC_set_and_save_fault_handler 'void (void (*)(int))'
+| `-ParmVarDecl 0x7fbf08814bc0 <col:37, col:49> col:44 'void (*)(int)'
+|-FunctionDecl 0x7fbf08814e08 <line:10:1, line:12:1> line:10:6 used GC_fault_handler 'void (int)'
+| |-ParmVarDecl 0x7fbf08814d80 <col:23, col:27> col:27 sig 'int'
+| `-CompoundStmt 0x7fbf08814eb0 <line:11:1, line:12:1>
+|-FunctionDecl 0x7fbf08814f08 <line:13:1, line:15:1> line:13:6 used GC_setup_temporary_fault_handler 'void ()'
+| `-CompoundStmt 0x7fbf088150b8 <col:45, line:15:1>
+|   `-CallExpr 0x7fbf08815070 <line:14:5, col:51> 'void'
+|     |-ImplicitCastExpr 0x7fbf08815058 <col:5> 'void (*)(void (*)(int))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbf08814fa8 <col:5> 'void (void (*)(int))' Function 0x7fbf08814cc0 'GC_set_and_save_fault_handler' 'void (void (*)(int))'
+|     `-ImplicitCastExpr 0x7fbf088150a0 <col:35> 'void (*)(int)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fbf08814fd0 <col:35> 'void (int)' Function 0x7fbf08814e08 'GC_fault_handler' 'void (int)'
+`-FunctionDecl 0x7fbf0701ec00 <line:16:1, line:22:1> line:16:7 GC_find_limit 'ptr_t (ptr_t)'
+  |-ParmVarDecl 0x7fbf08815100 <col:21, col:27> col:27 p 'ptr_t':'char *'
+  `-CompoundStmt 0x7fbf0701ef38 <line:17:1, line:22:1>
+    |-CallExpr 0x7fbf0701ed10 <line:18:3, col:36> 'void'
+    | `-ImplicitCastExpr 0x7fbf0701ecf8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbf0701eca8 <col:3> 'void ()' Function 0x7fbf08814f08 'GC_setup_temporary_fault_handler' 'void ()'
+    `-IfStmt 0x7fbf0701ef00 <line:19:3, line:21:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbf0701ee90 <line:19:7, col:38> 'int' '=='
+      | |-CallExpr 0x7fbf0701ee20 <col:7, col:33> 'int'
+      | | |-ImplicitCastExpr 0x7fbf0701ee08 <col:7> 'int (*)(struct __jmp_buf_tag *, int)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fbf0701ed38 <col:7> 'int (struct __jmp_buf_tag *, int)' Function 0x7fbf08814948 '__sigsetjmp' 'int (struct __jmp_buf_tag *, int)'
+      | | |-ImplicitCastExpr 0x7fbf0701ee58 <col:20> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+      | | | `-DeclRefExpr 0x7fbf0701ed60 <col:20> 'sigjmp_buf':'struct __jmp_buf_tag [1]' lvalue Var 0x7fbf08814470 'GC_jmp_buf' 'sigjmp_buf':'struct __jmp_buf_tag [1]'
+      | | `-IntegerLiteral 0x7fbf0701ed88 <col:32> 'int' 1
+      | `-IntegerLiteral 0x7fbf0701ee70 <col:38> 'int' 0
+      |-ForStmt 0x7fbf0701eec8 <line:20:5, line:21:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | `-NullStmt 0x7fbf0701eeb8 <col:7>
+      `-<<<NULL>>>

@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fefd082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fefd082c960 <../Data/C2AST/pr70985.c:4:1, line:7:1> line:4:1 struct definition
+| `-FieldDecl 0x7fefd1811258 <line:6:3, col:10> col:7 referenced f0 'int'
+|   `-IntegerLiteral 0x7fefd1811220 <col:10> 'int' 24
+|-VarDecl 0x7fefd18112f0 <line:4:1, line:7:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)'
+|-VarDecl 0x7fefd18113b0 <line:4:1, line:7:6> col:6 used c 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)'
+|-VarDecl 0x7fefd1811430 <line:4:1, line:7:9> col:9 used d 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)'
+|-VarDecl 0x7fefd18114d0 <line:9:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fefd1811580 <line:11:1, line:15:1> line:12:1 used fn1 'int ()'
+| `-CompoundStmt 0x7fefd1811658 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fefd1811640 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7fefd1811620 <col:10> 'int' 0
+`-FunctionDecl 0x7fefd18116b8 <line:17:1, line:28:1> line:18:1 fn2 'void ()'
+  `-CompoundStmt 0x7fefd1811bb0 <line:19:1, line:28:1>
+    |-DeclStmt 0x7fefd18117d0 <line:20:3, col:8>
+    | `-VarDecl 0x7fefd1811770 <col:3, col:7> col:7 used e 'int'
+    `-IfStmt 0x7fefd1811b78 <line:21:3, line:27:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fefd1811810 <line:21:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fefd18117e8 <col:7> 'int' lvalue Var 0x7fefd18114d0 'b' 'int'
+      |-ForStmt 0x7fefd1811b40 <line:22:5, line:27:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-ImplicitCastExpr 0x7fefd1811850 <line:22:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fefd1811828 <col:12> 'int' lvalue Var 0x7fefd1811770 'e' 'int'
+      | |-<<<NULL>>>
+      | `-CompoundStmt 0x7fefd1811b20 <line:23:7, line:27:7>
+      |   |-BinaryOperator 0x7fefd18118d0 <line:24:2, col:6> 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)' '='
+      |   | |-DeclRefExpr 0x7fefd1811868 <col:2> 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)' lvalue Var 0x7fefd1811430 'd' 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)'
+      |   | `-ImplicitCastExpr 0x7fefd18118b8 <col:6> 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fefd1811890 <col:6> 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)' lvalue Var 0x7fefd18113b0 'c' 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)'
+      |   `-IfStmt 0x7fefd1811ae8 <line:25:2, line:26:10>
+      |     |-<<<NULL>>>
+      |     |-<<<NULL>>>
+      |     |-CallExpr 0x7fefd1811990 <line:25:6, col:12> 'int'
+      |     | |-ImplicitCastExpr 0x7fefd1811978 <col:6> 'int (*)()' <FunctionToPointerDecay>
+      |     | | `-DeclRefExpr 0x7fefd18118f8 <col:6> 'int ()' Function 0x7fefd1811580 'fn1' 'int ()'
+      |     | `-ImplicitCastExpr 0x7fefd18119c0 <col:11> 'int' <LValueToRValue>
+      |     |   `-DeclRefExpr 0x7fefd1811920 <col:11> 'int' lvalue Var 0x7fefd18114d0 'b' 'int'
+      |     |-BinaryOperator 0x7fefd1811a78 <line:26:4, col:10> 'int' '='
+      |     | |-DeclRefExpr 0x7fefd18119d8 <col:4> 'int' lvalue Var 0x7fefd18114d0 'b' 'int'
+      |     | `-ImplicitCastExpr 0x7fefd1811a60 <col:8, col:10> 'int' <LValueToRValue>
+      |     |   `-MemberExpr 0x7fefd1811a28 <col:8, col:10> 'int' lvalue bitfield .f0 0x7fefd1811258
+      |     |     `-DeclRefExpr 0x7fefd1811a00 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)' lvalue Var 0x7fefd18112f0 'a' 'struct (anonymous struct at ../Data/C2AST/pr70985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr70985.c:4:1)'
+      |     `-<<<NULL>>>
+      `-<<<NULL>>>

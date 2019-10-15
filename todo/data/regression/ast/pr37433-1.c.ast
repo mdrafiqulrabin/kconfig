@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f9502817ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9503814220 <../Data/C2AST/pr37433-1.c:1:1, line:5:1> line:1:6 regex_subst 'void (void)'
+| `-CompoundStmt 0x7f95038146d8 <line:2:1, line:5:1>
+|   |-DeclStmt 0x7f9503814430 <line:3:3, col:25>
+|   | `-VarDecl 0x7f9503814340 <col:3, col:23> col:15 used subst 'const void *' cinit
+|   |   `-ImplicitCastExpr 0x7f9503814418 <col:23> 'const void *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7f9503814400 <col:23> 'char *' <ArrayToPointerDecay>
+|   |       `-StringLiteral 0x7f95038143d8 <col:23> 'char [1]' lvalue ""
+|   `-CallExpr 0x7f95038146a8 <line:4:3, col:29> 'void'
+|     |-ImplicitCastExpr 0x7f9503814690 <col:3, col:25> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-ParenExpr 0x7f9503814650 <col:3, col:25> 'void (int)':'void (int)'
+|     |   `-UnaryOperator 0x7f9503814630 <col:4, col:20> 'void (int)':'void (int)' prefix '*'
+|     |     `-CStyleCastExpr 0x7f9503814608 <col:5, col:20> 'void (*)(int)' <BitCast>
+|     |       `-ImplicitCastExpr 0x7f95038145f0 <col:20> 'const void *' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7f95038144c0 <col:20> 'const void *' lvalue Var 0x7f9503814340 'subst' 'const void *'
+|     `-IntegerLiteral 0x7f9503814670 <col:28> 'int' 0
+`-FunctionDecl 0x7f9503814788 <line:7:1, line:11:1> line:7:6 foobar 'void (void)'
+  `-CompoundStmt 0x7f9503814b00 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f95038148a0 <line:9:3, col:8>
+    | `-VarDecl 0x7f9503814840 <col:3, col:7> col:7 used x 'int'
+    `-CallExpr 0x7f9503814ad8 <line:10:3, col:26> 'void'
+      `-ImplicitCastExpr 0x7f9503814ac0 <col:3, col:23> 'void (*)(void)' <FunctionToPointerDecay>
+        `-ParenExpr 0x7f9503814aa0 <col:3, col:23> 'void (void)':'void (void)'
+          `-UnaryOperator 0x7f9503814a80 <col:4, col:22> 'void (void)':'void (void)' prefix '*'
+            `-CStyleCastExpr 0x7f9503814a58 <col:5, col:22> 'void (*)(void)' <BitCast>
+              `-UnaryOperator 0x7f9503814978 <col:21, col:22> 'int *' prefix '&'
+                `-DeclRefExpr 0x7f9503814928 <col:22> 'int' lvalue Var 0x7f9503814840 'x' 'int'

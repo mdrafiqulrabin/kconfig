@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f94d980eee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f94d980fb60 <../Data/C2AST/pr65990.c:4:1, line:7:1> line:4:8 struct U9 definition
+| `-FieldDecl 0x7f94d9024ea0 <line:6:3, col:15> col:12 a 'unsigned int [9]'
+|-VarDecl 0x7f94d9024f40 <line:9:1, col:11> col:11 used u9 'struct U9':'struct U9'
+`-FunctionDecl 0x7f94d9025028 <line:11:1, line:27:1> line:12:1 foo 'void ()'
+  `-CompoundStmt 0x7f94d9025550 <line:13:1, line:27:1>
+    `-BinaryOperator 0x7f94d9025528 <line:14:3, line:26:3> 'struct U9':'struct U9' '='
+      |-DeclRefExpr 0x7f94d90250c8 <line:14:3> 'struct U9':'struct U9' lvalue Var 0x7f94d9024f40 'u9' 'struct U9':'struct U9'
+      `-ImplicitCastExpr 0x7f94d9025510 <col:8, line:26:3> 'struct U9':'struct U9' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7f94d90254e8 <line:14:8, line:26:3> 'struct U9':'struct U9' lvalue
+          `-InitListExpr 0x7f94d9025340 <line:14:20, line:26:3> 'struct U9':'struct U9'
+            `-InitListExpr 0x7f94d9025388 <line:15:10, line:25:5> 'unsigned int [9]'
+              |-ImplicitCastExpr 0x7f94d9025410 <line:16:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d9025110 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d9025428 <line:17:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d9025130 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d9025440 <line:18:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d9025150 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d9025458 <line:19:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d9025170 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d9025470 <line:20:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d9025190 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d9025488 <line:21:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d90251b0 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d90254a0 <line:22:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d90251d0 <col:7> 'int' 255
+              |-ImplicitCastExpr 0x7f94d90254b8 <line:23:7> 'unsigned int' <IntegralCast>
+              | `-IntegerLiteral 0x7f94d90251f0 <col:7> 'int' 255
+              `-ImplicitCastExpr 0x7f94d90254d0 <line:24:7> 'unsigned int' <IntegralCast>
+                `-IntegerLiteral 0x7f94d9025210 <col:7> 'int' 255

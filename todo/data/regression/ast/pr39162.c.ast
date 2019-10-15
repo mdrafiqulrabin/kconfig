@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fcb2e8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcb2e80ce00 <../Data/C2AST/pr39162.c:6:1, col:19> col:19 referenced __m256i '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+| |-VectorType 0x7fcb2e818180 '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' 4
+| | `-BuiltinType 0x7fcb2e817620 'long long'
+| `-MayAliasAttr 0x7fcb2e80ce58 <col:65>
+|-VarDecl 0x7fcb2e80ced0 <line:8:1, col:16> col:16 used y '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' extern
+`-FunctionDecl 0x7fcb2e80d080 <line:10:1, line:14:1> line:11:1 bar 'void (__m256i)'
+  |-ParmVarDecl 0x7fcb2e80cf80 <col:6, col:14> col:14 used x '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fcb2e80d1b8 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7fcb2e80d190 <line:13:3, col:7> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' '='
+      |-DeclRefExpr 0x7fcb2e80d128 <col:3> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue Var 0x7fcb2e80ced0 'y' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+      `-ImplicitCastExpr 0x7fcb2e80d178 <col:7> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+        `-DeclRefExpr 0x7fcb2e80d150 <col:7> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue ParmVar 0x7fcb2e80cf80 'x' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'

@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f8bc602bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8bc6814220 <../Data/C2AST/pr79890.c:4:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7f8bc68143e0 <line:6:1, line:11:1> line:7:1 foo 'void (int)'
+| |-ParmVarDecl 0x7f8bc6814318 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7f8bc68148f8 <line:8:1, line:11:1>
+|   |-CallExpr 0x7f8bc6814590 <line:9:3, col:26> 'void'
+|   | `-ImplicitCastExpr 0x7f8bc6814578 <col:3> 'void (*)(void)' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7f8bc6814528 <col:3> '<builtin fn type>' Function 0x7f8bc6814488 '__builtin_unwind_init' 'void (void)'
+|   `-CallExpr 0x7f8bc6814860 <line:10:3, col:30> 'void'
+|     |-ImplicitCastExpr 0x7f8bc6814848 <col:3> 'void (*)(unsigned long, void *) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f8bc6814770 <col:3> '<builtin fn type>' Function 0x7f8bc6814600 '__builtin_eh_return' 'void (unsigned long, void *) __attribute__((noreturn))'
+|     |-ImplicitCastExpr 0x7f8bc68148b0 <col:24> 'unsigned long' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7f8bc6814898 <col:24> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8bc6814798 <col:24> 'int' lvalue ParmVar 0x7f8bc6814318 'x' 'int'
+|     `-ImplicitCastExpr 0x7f8bc68148e0 <col:27> 'void *' <BitCast>
+|       `-ImplicitCastExpr 0x7f8bc68148c8 <col:27> 'void (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f8bc68147c0 <col:27> 'void (void)' Function 0x7f8bc6814220 'bar' 'void (void)'
+|-FunctionDecl 0x7f8bc6814488 <line:9:3> col:3 implicit used __builtin_unwind_init 'void (void)' extern
+`-FunctionDecl 0x7f8bc6814600 <line:10:3> col:3 implicit used __builtin_eh_return 'void (unsigned long, void *) __attribute__((noreturn))' extern
+  |-ParmVarDecl 0x7f8bc68146a0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-ParmVarDecl 0x7f8bc6814700 <<invalid sloc>> <invalid sloc> 'void *'

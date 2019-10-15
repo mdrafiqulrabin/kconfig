@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7ff0740166e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff074017360 <../Data/C2AST/pr65556.c:4:1, line:10:1> line:4:8 struct S definition
+| |-FieldDecl 0x7ff074814258 <line:6:3, col:11> col:8 referenced l 'long'
+| | `-IntegerLiteral 0x7ff074814220 <col:11> 'int' 1
+| |-FieldDecl 0x7ff0748142d8 <line:7:3, col:12> col:8 referenced l2 'long'
+| | `-IntegerLiteral 0x7ff0748142a0 <col:12> 'int' 21
+| |-FieldDecl 0x7ff074814358 <line:8:3, col:21> col:17 referenced ul 'unsigned long'
+| | `-IntegerLiteral 0x7ff074814320 <col:21> 'int' 1
+| `-FieldDecl 0x7ff0748143d8 <line:9:3, col:22> col:17 referenced ul2 'unsigned long'
+|   `-IntegerLiteral 0x7ff0748143a0 <col:22> 'int' 21
+|-VarDecl 0x7ff074814470 <line:4:1, line:10:3> col:3 used s 'struct S':'struct S'
+`-FunctionDecl 0x7ff074814578 <line:12:1, line:23:1> line:13:1 fn 'void ()'
+  `-CompoundStmt 0x7ff074814b18 <line:14:1, line:23:1>
+    |-SwitchStmt 0x7ff074814708 <line:15:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff074814690 <line:15:11, col:13> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ff074814678 <col:11, col:13> 'long' <LValueToRValue>
+    | |   `-MemberExpr 0x7ff074814640 <col:11, col:13> 'long' lvalue bitfield .l 0x7ff074814258
+    | |     `-DeclRefExpr 0x7ff074814618 <col:11> 'struct S':'struct S' lvalue Var 0x7ff074814470 's' 'struct S':'struct S'
+    | `-CaseStmt 0x7ff074814758 <line:16:5, col:12>
+    |   |-IntegerLiteral 0x7ff074814738 <col:10> 'int' 0
+    |   |-<<<NULL>>>
+    |   `-NullStmt 0x7ff074814790 <col:12>
+    |-SwitchStmt 0x7ff074814830 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff074814818 <line:17:11, col:13> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ff074814800 <col:11, col:13> 'unsigned long' <LValueToRValue>
+    | |   `-MemberExpr 0x7ff0748147c8 <col:11, col:13> 'unsigned long' lvalue bitfield .ul 0x7ff074814358
+    | |     `-DeclRefExpr 0x7ff0748147a0 <col:11> 'struct S':'struct S' lvalue Var 0x7ff074814470 's' 'struct S':'struct S'
+    | `-CaseStmt 0x7ff074814880 <line:18:5, col:12>
+    |   |-IntegerLiteral 0x7ff074814860 <col:10> 'int' 0
+    |   |-<<<NULL>>>
+    |   `-NullStmt 0x7ff0748148b8 <col:12>
+    |-SwitchStmt 0x7ff074814958 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff074814940 <line:19:11, col:13> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ff074814928 <col:11, col:13> 'long' <LValueToRValue>
+    | |   `-MemberExpr 0x7ff0748148f0 <col:11, col:13> 'long' lvalue bitfield .l2 0x7ff0748142d8
+    | |     `-DeclRefExpr 0x7ff0748148c8 <col:11> 'struct S':'struct S' lvalue Var 0x7ff074814470 's' 'struct S':'struct S'
+    | `-CaseStmt 0x7ff0748149a8 <line:20:5, col:12>
+    |   |-IntegerLiteral 0x7ff074814988 <col:10> 'int' 0
+    |   |-<<<NULL>>>
+    |   `-NullStmt 0x7ff0748149e0 <col:12>
+    `-SwitchStmt 0x7ff074814a80 <line:21:3, line:22:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff074814a68 <line:21:11, col:13> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7ff074814a50 <col:11, col:13> 'unsigned long' <LValueToRValue>
+      |   `-MemberExpr 0x7ff074814a18 <col:11, col:13> 'unsigned long' lvalue bitfield .ul2 0x7ff0748143d8
+      |     `-DeclRefExpr 0x7ff0748149f0 <col:11> 'struct S':'struct S' lvalue Var 0x7ff074814470 's' 'struct S':'struct S'
+      `-CaseStmt 0x7ff074814ad0 <line:22:5, col:12>
+        |-IntegerLiteral 0x7ff074814ab0 <col:10> 'int' 0
+        |-<<<NULL>>>
+        `-NullStmt 0x7ff074814b08 <col:12>

@@ -1,0 +1,90 @@
+TranslationUnitDecl 0x7fd99982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd99982c978 <../Data/C2AST/pr68619-3.c:3:1, col:22> col:22 referenced hashval_t 'unsigned int'
+| `-BuiltinType 0x7fd99982be80 'unsigned int'
+|-EnumDecl 0x7fd99a000000 <line:4:1, line:7:1> line:4:6 ETYPE
+| |-EnumConstantDecl 0x7fd99a0000c0 <line:6:3> col:3 ETYPE_ARRAY 'int'
+| |-EnumConstantDecl 0x7fd99a000108 <col:16> col:16 referenced ETYPE_STRUCT 'int'
+| `-EnumConstantDecl 0x7fd99a000150 <col:30> col:30 referenced ETYPE_UNION 'int'
+|-RecordDecl 0x7fd99a000198 <line:8:1, line:13:1> line:8:8 struct entry definition
+| |-FieldDecl 0x7fd99a0002b0 <line:10:3, col:20> col:14 referenced etype 'enum ETYPE':'enum ETYPE'
+| | `-IntegerLiteral 0x7fd99a000240 <col:20> 'int' 8
+| |-FieldDecl 0x7fd99a000310 <line:11:3, col:18> col:18 referenced len 'unsigned short'
+| `-FieldDecl 0x7fd99a000370 <line:12:3, col:15> col:15 attrib 'const char *'
+|-FunctionDecl 0x7fd99a0004c8 <line:14:1, line:26:1> line:14:1 e_hash 'int (const void *)'
+| |-ParmVarDecl 0x7fd99a000400 <col:9, col:21> col:21 used a 'const void *'
+| `-CompoundStmt 0x7fd99a0013b8 <line:15:1, line:26:1>
+|   |-DeclStmt 0x7fd99a000718 <line:16:3, col:28>
+|   | `-VarDecl 0x7fd99a000660 <col:3, col:27> col:23 used e 'const struct entry *' cinit
+|   |   `-ImplicitCastExpr 0x7fd99a000700 <col:27> 'const struct entry *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fd99a0006e8 <col:27> 'const void *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd99a0006c0 <col:27> 'const void *' lvalue ParmVar 0x7fd99a000400 'a' 'const void *'
+|   |-DeclStmt 0x7fd99a0007f8 <line:17:3, col:20>
+|   | `-VarDecl 0x7fd99a000760 <col:3, col:19> col:13 used ret 'hashval_t':'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fd99a0007e0 <col:19> 'hashval_t':'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fd99a0007c0 <col:19> 'int' 0
+|   |-DeclStmt 0x7fd99a000888 <line:18:3, col:8>
+|   | `-VarDecl 0x7fd99a000828 <col:3, col:7> col:7 used i 'int'
+|   |-IfStmt 0x7fd99a000cb8 <line:19:3, line:20:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd99a000b20 <line:19:7, col:51> 'int' '&&'
+|   | | |-BinaryOperator 0x7fd99a0009b8 <col:7, col:21> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fd99a0009a0 <col:7, col:12> 'int' <IntegralCast>
+|   | | | | `-ImplicitCastExpr 0x7fd99a000988 <col:7, col:12> 'enum ETYPE':'enum ETYPE' <LValueToRValue>
+|   | | | |   `-MemberExpr 0x7fd99a000928 <col:7, col:12> 'const enum ETYPE':'const enum ETYPE' lvalue bitfield .etype 0x7fd99a0002b0
+|   | | | |     `-ArraySubscriptExpr 0x7fd99a000900 <col:7, col:10> 'const struct entry':'const struct entry' lvalue
+|   | | | |       |-ImplicitCastExpr 0x7fd99a0008e8 <col:7> 'const struct entry *' <LValueToRValue>
+|   | | | |       | `-DeclRefExpr 0x7fd99a0008a0 <col:7> 'const struct entry *' lvalue Var 0x7fd99a000660 'e' 'const struct entry *'
+|   | | | |       `-IntegerLiteral 0x7fd99a0008c8 <col:9> 'int' 0
+|   | | | `-DeclRefExpr 0x7fd99a000960 <col:21> 'int' EnumConstant 0x7fd99a000108 'ETYPE_STRUCT' 'int'
+|   | | `-BinaryOperator 0x7fd99a000af8 <col:37, col:51> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fd99a000ae0 <col:37, col:42> 'int' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fd99a000ac8 <col:37, col:42> 'enum ETYPE':'enum ETYPE' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7fd99a000a68 <col:37, col:42> 'const enum ETYPE':'const enum ETYPE' lvalue bitfield .etype 0x7fd99a0002b0
+|   | |   |     `-ArraySubscriptExpr 0x7fd99a000a40 <col:37, col:40> 'const struct entry':'const struct entry' lvalue
+|   | |   |       |-ImplicitCastExpr 0x7fd99a000a28 <col:37> 'const struct entry *' <LValueToRValue>
+|   | |   |       | `-DeclRefExpr 0x7fd99a0009e0 <col:37> 'const struct entry *' lvalue Var 0x7fd99a000660 'e' 'const struct entry *'
+|   | |   |       `-IntegerLiteral 0x7fd99a000a08 <col:39> 'int' 0
+|   | |   `-DeclRefExpr 0x7fd99a000aa0 <col:51> 'int' EnumConstant 0x7fd99a000150 'ETYPE_UNION' 'int'
+|   | |-CallExpr 0x7fd99a000c90 <line:20:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fd99a000c78 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fd99a000c20 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd99a000b80 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-ForStmt 0x7fd99a001310 <line:21:3, line:24:5>
+|   | |-BinaryOperator 0x7fd99a000d38 <line:21:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fd99a000cf0 <col:8> 'int' lvalue Var 0x7fd99a000828 'i' 'int'
+|   | | `-IntegerLiteral 0x7fd99a000d18 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd99a000e90 <col:15, col:25> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7fd99a000e48 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd99a000d60 <col:15> 'int' lvalue Var 0x7fd99a000828 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fd99a000e78 <col:20, col:25> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7fd99a000e60 <col:20, col:25> 'unsigned short' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fd99a000e10 <col:20, col:25> 'const unsigned short' lvalue .len 0x7fd99a000310
+|   | |       `-ArraySubscriptExpr 0x7fd99a000de8 <col:20, col:23> 'const struct entry':'const struct entry' lvalue
+|   | |         |-ImplicitCastExpr 0x7fd99a000dd0 <col:20> 'const struct entry *' <LValueToRValue>
+|   | |         | `-DeclRefExpr 0x7fd99a000d88 <col:20> 'const struct entry *' lvalue Var 0x7fd99a000660 'e' 'const struct entry *'
+|   | |         `-IntegerLiteral 0x7fd99a000db0 <col:22> 'int' 0
+|   | |-UnaryOperator 0x7fd99a000ee0 <col:30, col:32> 'int' prefix '++'
+|   | | `-DeclRefExpr 0x7fd99a000eb8 <col:32> 'int' lvalue Var 0x7fd99a000828 'i' 'int'
+|   | `-CompoundStmt 0x7fd99a0012f8 <line:22:5, line:24:5>
+|   |   `-BinaryOperator 0x7fd99a0012d0 <line:23:7, col:82> 'hashval_t':'unsigned int' '='
+|   |     |-DeclRefExpr 0x7fd99a000f00 <col:7> 'hashval_t':'unsigned int' lvalue Var 0x7fd99a000760 'ret' 'hashval_t':'unsigned int'
+|   |     `-ImplicitCastExpr 0x7fd99a0012b8 <col:13, col:82> 'hashval_t':'unsigned int' <IntegralCast>
+|   |       `-CallExpr 0x7fd99a001260 <col:13, col:82> 'int'
+|   |         |-ImplicitCastExpr 0x7fd99a001248 <col:13> 'int (*)()' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fd99a0010b0 <col:13> 'int ()' Function 0x7fd99a001000 'iterative_hash' 'int ()'
+|   |         |-UnaryOperator 0x7fd99a001180 <col:29, col:33> 'const struct entry *' prefix '&'
+|   |         | `-ArraySubscriptExpr 0x7fd99a001158 <col:30, col:33> 'const struct entry':'const struct entry' lvalue
+|   |         |   |-ImplicitCastExpr 0x7fd99a001128 <col:30> 'const struct entry *' <LValueToRValue>
+|   |         |   | `-DeclRefExpr 0x7fd99a0010d8 <col:30> 'const struct entry *' lvalue Var 0x7fd99a000660 'e' 'const struct entry *'
+|   |         |   `-ImplicitCastExpr 0x7fd99a001140 <col:32> 'int' <LValueToRValue>
+|   |         |     `-DeclRefExpr 0x7fd99a001100 <col:32> 'int' lvalue Var 0x7fd99a000828 'i' 'int'
+|   |         |-OffsetOfExpr 0x7fd99a0011c0 <col:36, col:76> 'unsigned long'
+|   |         `-ImplicitCastExpr 0x7fd99a0012a0 <col:79> 'hashval_t':'unsigned int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fd99a0011f8 <col:79> 'hashval_t':'unsigned int' lvalue Var 0x7fd99a000760 'ret' 'hashval_t':'unsigned int'
+|   `-ReturnStmt 0x7fd99a0013a0 <line:25:3, col:10>
+|     `-ImplicitCastExpr 0x7fd99a001388 <col:10> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fd99a001370 <col:10> 'hashval_t':'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd99a001348 <col:10> 'hashval_t':'unsigned int' lvalue Var 0x7fd99a000760 'ret' 'hashval_t':'unsigned int'
+`-FunctionDecl 0x7fd99a000b80 <line:20:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

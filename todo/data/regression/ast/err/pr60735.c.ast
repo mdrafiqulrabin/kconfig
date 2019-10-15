@@ -1,0 +1,26 @@
+../Data/C2AST/pr60735.c:8:10: error: GNU decimal type extension not supported
+pr60735 (_Decimal64 *p, _Decimal64 *q)
+         ^
+../Data/C2AST/pr60735.c:8:25: error: GNU decimal type extension not supported
+pr60735 (_Decimal64 *p, _Decimal64 *q)
+                        ^
+2 errors generated.
+TranslationUnitDecl 0x7fe7ce0068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7ce006e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7ce006b80 '__int128'
+|-TypedefDecl 0x7fe7ce006ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7ce006ba0 'unsigned __int128'
+|-TypedefDecl 0x7fe7ce0071a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7ce006fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7ce006f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7ce007240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7ce007200 'char *'
+|   `-BuiltinType 0x7fe7ce006980 'char'
+|-TypedefDecl 0x7fe7ce007508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7ce0074b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7ce007320 'struct __va_list_tag'
+|     `-Record 0x7fe7ce007298 '__va_list_tag'
+`-FunctionDecl 0x7fe7ce8086f0 <../Data/C2AST/pr60735.c:7:1, line:11:1> line:8:1 invalid pr60735 'void (int *, int *)'
+  |-ParmVarDecl 0x7fe7ce0075a0 <col:10, col:22> col:22 invalid p 'int *'
+  |-ParmVarDecl 0x7fe7ce808618 <col:25, col:37> col:37 invalid q 'int *'
+  `-CompoundStmt 0x7fe7ce8087a0 <line:9:1, line:11:1>

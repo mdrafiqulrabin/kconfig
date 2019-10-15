@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f89fb029ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f89fb02ab78 <../Data/C2AST/pr79239.c:7:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f89fc015a58 <col:1, col:8> col:8 used b 'int'
+|-FunctionDecl 0x7f89fc015b20 <line:8:1, col:60> col:53 fn1 'int ()' extern inline
+| |-CompoundStmt 0x7f89fc015c08 <col:59, col:60>
+| `-GNUInlineAttr 0x7f89fc015bc0 <col:32>
+`-FunctionDecl 0x7f89fc015c68 <line:11:1, line:15:1> line:12:1 fn2 'void ()'
+  `-CompoundStmt 0x7f89fc015e98 <col:7, line:15:1>
+    `-IfStmt 0x7f89fc015e60 <line:13:3, line:14:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f89fc015dc8 <line:13:7, col:18> 'double' '+'
+      | |-BinaryOperator 0x7f89fc015d80 <col:7, col:11> 'double' '*'
+      | | |-ImplicitCastExpr 0x7f89fc015d68 <col:7> 'double' <IntegralToFloating>
+      | | | `-ImplicitCastExpr 0x7f89fc015d50 <col:7> 'int' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7f89fc015d08 <col:7> 'int' lvalue Var 0x7f89fc015a58 'b' 'int'
+      | | `-FloatingLiteral 0x7f89fc015d30 <col:11> 'double' 7.700000e-01
+      | `-FloatingLiteral 0x7f89fc015da8 <col:18> 'double' 5.000000e-01
+      |-BinaryOperator 0x7f89fc015e38 <line:14:5, col:9> 'int' '='
+      | |-DeclRefExpr 0x7f89fc015df0 <col:5> 'int' lvalue Var 0x7f89fb02ab78 'a' 'int'
+      | `-IntegerLiteral 0x7f89fc015e18 <col:9> 'int' 0
+      `-<<<NULL>>>

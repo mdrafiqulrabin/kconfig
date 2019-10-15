@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f999082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f999082c960 <../Data/C2AST/pr71103.c:4:1, line:7:1> line:4:8 struct ResponseStruct definition
+| |-FieldDecl 0x7f9991014238 <line:5:5, col:19> col:19 referenced responseLength 'unsigned char'
+| `-FieldDecl 0x7f9991014298 <line:6:5, col:11> col:11 referenced response 'char *'
+|-VarDecl 0x7f9991014358 <line:9:1, col:23> col:13 used response 'char [5]' static
+`-FunctionDecl 0x7f99910144b8 <line:10:1, line:15:1> line:10:23 something 'struct ResponseStruct ()'
+  `-CompoundStmt 0x7f9991014820 <col:34, line:15:1>
+    |-DeclStmt 0x7f99910145d8 <line:11:5, col:38>
+    | `-VarDecl 0x7f9991014578 <col:5, col:27> col:27 used returnValue 'struct ResponseStruct':'struct ResponseStruct' nrvo
+    |-BinaryOperator 0x7f9991014688 <line:12:5, col:34> 'unsigned char' '='
+    | |-MemberExpr 0x7f9991014618 <col:5, col:17> 'unsigned char' lvalue .responseLength 0x7f9991014238
+    | | `-DeclRefExpr 0x7f99910145f0 <col:5> 'struct ResponseStruct':'struct ResponseStruct' lvalue Var 0x7f9991014578 'returnValue' 'struct ResponseStruct':'struct ResponseStruct'
+    | `-ImplicitCastExpr 0x7f9991014670 <col:34> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9991014650 <col:34> 'int' 5
+    |-BinaryOperator 0x7f99910147a0 <line:13:5, col:28> 'char *' '='
+    | |-MemberExpr 0x7f9991014728 <col:5, col:17> 'char *' lvalue .response 0x7f9991014298
+    | | `-DeclRefExpr 0x7f9991014700 <col:5> 'struct ResponseStruct':'struct ResponseStruct' lvalue Var 0x7f9991014578 'returnValue' 'struct ResponseStruct':'struct ResponseStruct'
+    | `-ImplicitCastExpr 0x7f9991014788 <col:28> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f9991014760 <col:28> 'char [5]' lvalue Var 0x7f9991014358 'response' 'char [5]'
+    `-ReturnStmt 0x7f9991014808 <line:14:5, col:12>
+      `-ImplicitCastExpr 0x7f99910147f0 <col:12> 'struct ResponseStruct':'struct ResponseStruct' <LValueToRValue>
+        `-DeclRefExpr 0x7f99910147c8 <col:12> 'struct ResponseStruct':'struct ResponseStruct' lvalue Var 0x7f9991014578 'returnValue' 'struct ResponseStruct':'struct ResponseStruct'

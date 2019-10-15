@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7ff44180eee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff44102e000 <../Data/C2AST/pr62120.c:4:1, line:8:1> line:4:6 foo 'void ()'
+  `-CompoundStmt 0x7ff44102e380 <line:5:1, line:8:1>
+    |-DeclStmt 0x7ff44102e218 <line:6:3, col:36>
+    | `-VarDecl 0x7ff44102e160 <col:3, col:16> col:16 zmm_var 'int' register
+    |   `-AsmLabelAttr 0x7ff44102e1c0 <col:29> "ymm9"
+    `-DeclStmt 0x7ff44102e368 <line:7:3, col:35>
+      `-VarDecl 0x7ff44102e2b0 <col:3, col:16> col:16 zmm_var2 'int' register
+        `-AsmLabelAttr 0x7ff44102e310 <col:30> "23"

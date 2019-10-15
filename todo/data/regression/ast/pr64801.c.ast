@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f9a02828ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9a02829b78 <../Data/C2AST/pr64801.c:3:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7f9a02004108 <line:4:1, line:8:1> line:5:1 elantech_detect 'int (void)'
+| `-CompoundStmt 0x7f9a02004200 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7f9a020041e8 <line:7:3, col:11>
+|     `-UnaryOperator 0x7f9a020041c8 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7f9a020041a8 <col:11> 'int' 38
+|-FunctionDecl 0x7f9a020042b0 <line:9:1, line:13:1> line:10:1 used fsp_detect 'int (void)' inline
+| `-CompoundStmt 0x7f9a020043a8 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7f9a02004390 <line:12:3, col:11>
+|     `-UnaryOperator 0x7f9a02004370 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7f9a02004350 <col:11> 'int' 38
+`-FunctionDecl 0x7f9a02004480 <line:14:1, line:19:1> line:15:1 psmouse_extensions 'void (void)'
+  `-CompoundStmt 0x7f9a020047c8 <line:16:1, line:19:1>
+    |-DeclStmt 0x7f9a020046f8 <line:17:3, col:26>
+    | `-VarDecl 0x7f9a02004610 <col:3, col:16> col:9 used b 'int (*)()' cinit
+    |   `-ImplicitCastExpr 0x7f9a020046e0 <col:16> 'int (*)()' <BitCast>
+    |     `-ImplicitCastExpr 0x7f9a020046c8 <col:16> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f9a02004670 <col:16> 'int (void)' Function 0x7f9a020042b0 'fsp_detect' 'int (void)'
+    `-BinaryOperator 0x7f9a020047a0 <line:18:3, col:10> 'int' '='
+      |-DeclRefExpr 0x7f9a02004710 <col:3> 'int' lvalue Var 0x7f9a02829b78 'a' 'int'
+      `-CallExpr 0x7f9a02004778 <col:7, col:10> 'int'
+        `-ImplicitCastExpr 0x7f9a02004760 <col:7> 'int (*)()' <LValueToRValue>
+          `-DeclRefExpr 0x7f9a02004738 <col:7> 'int (*)()' lvalue Var 0x7f9a02004610 'b' 'int (*)()'

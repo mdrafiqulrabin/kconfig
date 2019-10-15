@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fecc80174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fecc7831e68 <../Data/C2AST/pr24227.c:1:1, line:6:1> line:1:5 Fdisplay_buffer 'int (int)'
+  |-ParmVarDecl 0x7fecc8018178 <col:24, col:28> col:28 used buffer 'int'
+  `-CompoundStmt 0x7fecc78324a0 <line:2:1, line:6:1>
+    `-IfStmt 0x7fecc7832468 <line:3:3, line:5:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fecc7832408 <line:3:7, line:4:59> 'int' '=='
+      | |-ParenExpr 0x7fecc78321a8 <line:3:7, col:49> 'struct buffer *'
+      | | `-CStyleCastExpr 0x7fecc7832180 <col:8, col:48> 'struct buffer *' <IntegralToPointer>
+      | |   `-ParenExpr 0x7fecc7832160 <col:26, col:48> 'unsigned int'
+      | |     `-CStyleCastExpr 0x7fecc7832058 <col:27, col:42> 'unsigned int' <IntegralCast>
+      | |       `-ImplicitCastExpr 0x7fecc7832040 <col:42> 'int' <LValueToRValue>
+      | |         `-DeclRefExpr 0x7fecc7832000 <col:42> 'int' lvalue ParmVar 0x7fecc8018178 'buffer' 'int'
+      | `-ParenExpr 0x7fecc78323e8 <line:4:7, col:59> 'struct buffer *'
+      |   `-BinaryOperator 0x7fecc78323c0 <col:8, col:58> 'struct buffer *' ','
+      |     |-IntegerLiteral 0x7fecc78321c8 <col:8> 'int' 0
+      |     `-CStyleCastExpr 0x7fecc7832398 <col:10, col:58> 'struct buffer *' <IntegralToPointer>
+      |       `-ParenExpr 0x7fecc7832378 <col:28, col:58> 'unsigned int'
+      |         `-CStyleCastExpr 0x7fecc78322f8 <col:29, col:57> 'unsigned int' <IntegralCast>
+      |           `-ParenExpr 0x7fecc78322d8 <col:44, col:57> 'int'
+      |             `-BinaryOperator 0x7fecc7832268 <col:45, col:56> 'int' '&'
+      |               |-ImplicitCastExpr 0x7fecc7832250 <col:45, col:52> 'int' <LValueToRValue>
+      |               | `-ParenExpr 0x7fecc7832210 <col:45, col:52> 'int' lvalue
+      |               |   `-DeclRefExpr 0x7fecc78321e8 <col:46> 'int' lvalue ParmVar 0x7fecc8018178 'buffer' 'int'
+      |               `-IntegerLiteral 0x7fecc7832230 <col:56> 'int' 1
+      |-ReturnStmt 0x7fecc7832450 <line:5:5, col:12>
+      | `-IntegerLiteral 0x7fecc7832430 <col:12> 'int' 1
+      `-<<<NULL>>>

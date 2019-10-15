@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f8c5702bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8c5702c978 <../Data/C2AST/pr60636.c:5:1, col:24> col:24 used a 'volatile long long'
+`-FunctionDecl 0x7f8c5800ca90 <line:7:1, line:13:1> line:8:1 main 'int ()'
+  `-CompoundStmt 0x7f8c5800ce58 <line:9:1, line:13:1>
+    |-DeclStmt 0x7f8c5800cc48 <line:10:3, col:43>
+    | `-VarDecl 0x7f8c5800cb48 <col:3, col:42> col:17 used u 'long long' cinit
+    |   `-BinaryOperator 0x7f8c5800cc20 <col:21, col:42> 'long long' '-'
+    |     |-UnaryOperator 0x7f8c5800cbc8 <col:21, <built-in>:40:27> 'long long' prefix '-'
+    |     | `-IntegerLiteral 0x7f8c5800cba8 <col:27> 'long long' 9223372036854775807
+    |     `-ImplicitCastExpr 0x7f8c5800cc08 <../Data/C2AST/pr60636.c:10:42> 'long long' <IntegralCast>
+    |       `-IntegerLiteral 0x7f8c5800cbe8 <col:42> 'int' 1
+    |-BinaryOperator 0x7f8c5800cdf8 <line:11:3, col:20> 'long long' '='
+    | |-DeclRefExpr 0x7f8c5800cc60 <col:3> 'volatile long long' lvalue Var 0x7f8c5702c978 'a' 'volatile long long'
+    | `-ConditionalOperator 0x7f8c5800cdc8 <col:7, col:20> 'long long'
+    |   |-BinaryOperator 0x7f8c5800cd00 <col:7, col:11> 'int' '>'
+    |   | |-ImplicitCastExpr 0x7f8c5800ccd0 <col:7> 'long long' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7f8c5800cc88 <col:7> 'long long' lvalue Var 0x7f8c5800cb48 'u' 'long long'
+    |   | `-ImplicitCastExpr 0x7f8c5800cce8 <col:11> 'long long' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7f8c5800ccb0 <col:11> 'int' 0
+    |   |-ImplicitCastExpr 0x7f8c5800cdb0 <col:15> 'long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8c5800cd28 <col:15> 'long long' lvalue Var 0x7f8c5800cb48 'u' 'long long'
+    |   `-UnaryOperator 0x7f8c5800cd90 <col:19, col:20> 'long long' prefix '-'
+    |     `-ImplicitCastExpr 0x7f8c5800cd78 <col:20> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8c5800cd50 <col:20> 'long long' lvalue Var 0x7f8c5800cb48 'u' 'long long'
+    `-ReturnStmt 0x7f8c5800ce40 <line:12:3, col:10>
+      `-IntegerLiteral 0x7f8c5800ce20 <col:10> 'int' 0

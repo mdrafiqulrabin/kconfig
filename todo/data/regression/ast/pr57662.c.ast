@@ -1,0 +1,142 @@
+TranslationUnitDecl 0x7fe3e98246e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe3e9825360 <../Data/C2AST/pr57662.c:4:1, line:8:1> line:4:8 struct intC definition
+| |-FieldDecl 0x7fe3ea014238 <line:6:3, col:9> col:9 referenced x 'short'
+| `-FieldDecl 0x7fe3ea014298 <line:7:3, col:9> col:9 referenced y 'short'
+|-FunctionDecl 0x7fe3ea0143a0 <line:10:1, col:14> col:6 used Get 'void (void)'
+|-VarDecl 0x7fe3ea014498 <line:12:1, col:5> col:5 used size_x 'int'
+|-RecordDecl 0x7fe3ea0144f8 <line:14:1, line:19:1> line:14:1 struct definition
+| |-FieldDecl 0x7fe3ea0145e0 <line:16:3, col:8> col:8 referenced depot_table 'int *'
+| |-FieldDecl 0x7fe3ea0146e0 <line:17:3, col:16> col:16 referenced ti 'struct intC *'
+| `-FieldDecl 0x7fe3ea014740 <line:18:3, col:7> col:7 referenced size 'int'
+|-VarDecl 0x7fe3ea0147e0 <line:14:1, line:19:3> col:3 used dummy 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+|-FunctionDecl 0x7fe3ea014a08 <line:21:1, line:38:1> line:22:1 used GetRotatedTileFromOffset 'int (int *, struct intC)' static inline
+| |-ParmVarDecl 0x7fe3ea014870 <col:27, col:32> col:32 used a 'int *'
+| |-ParmVarDecl 0x7fe3ea0148f0 <col:35, col:47> col:47 used tidc 'struct intC':'struct intC'
+| `-CompoundStmt 0x7fe3ea0157a0 <line:23:1, line:38:1>
+|   |-IfStmt 0x7fe3ea014be8 <line:24:3, line:25:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fe3ea014b30 <line:24:7, col:9> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7fe3ea014b18 <col:8, col:9> 'int' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7fe3ea014af8 <col:8, col:9> 'int' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7fe3ea014ae0 <col:9> 'int *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fe3ea014ab8 <col:9> 'int *' lvalue ParmVar 0x7fe3ea014870 'a' 'int *'
+|   | |-CallExpr 0x7fe3ea014bc0 <line:25:5, col:10> 'void'
+|   | | `-ImplicitCastExpr 0x7fe3ea014ba8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fe3ea014b50 <col:5> 'void (void)' Function 0x7fe3ea0143a0 'Get' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-SwitchStmt 0x7fe3ea014c98 <line:26:3, line:36:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fe3ea014c80 <line:26:11, col:12> 'int' <LValueToRValue>
+|   | | `-UnaryOperator 0x7fe3ea014c60 <col:11, col:12> 'int' lvalue prefix '*'
+|   | |   `-ImplicitCastExpr 0x7fe3ea014c48 <col:12> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fe3ea014c20 <col:12> 'int *' lvalue ParmVar 0x7fe3ea014870 'a' 'int *'
+|   | `-CompoundStmt 0x7fe3ea015738 <line:27:5, line:36:5>
+|   |   |-CaseStmt 0x7fe3ea014ce8 <line:28:5, line:29:40>
+|   |   | |-IntegerLiteral 0x7fe3ea014cc8 <line:28:10> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fe3ea014f40 <line:29:7, col:40>
+|   |   |   `-BinaryOperator 0x7fe3ea014ec8 <col:14, col:40> 'int' '+'
+|   |   |     |-ParenExpr 0x7fe3ea014e18 <col:14, col:31> 'int'
+|   |   |     | `-BinaryOperator 0x7fe3ea014df0 <col:15, col:25> 'int' '<<'
+|   |   |     |   |-ImplicitCastExpr 0x7fe3ea014dc0 <col:15, col:20> 'int' <IntegralCast>
+|   |   |     |   | `-ImplicitCastExpr 0x7fe3ea014da8 <col:15, col:20> 'short' <LValueToRValue>
+|   |   |     |   |   `-MemberExpr 0x7fe3ea014d48 <col:15, col:20> 'short' lvalue .y 0x7fe3ea014298
+|   |   |     |   |     `-DeclRefExpr 0x7fe3ea014d20 <col:15> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   |   |     |   `-ImplicitCastExpr 0x7fe3ea014dd8 <col:25> 'int' <LValueToRValue>
+|   |   |     |     `-DeclRefExpr 0x7fe3ea014d80 <col:25> 'int' lvalue Var 0x7fe3ea014498 'size_x' 'int'
+|   |   |     `-ImplicitCastExpr 0x7fe3ea014eb0 <col:35, col:40> 'int' <IntegralCast>
+|   |   |       `-ImplicitCastExpr 0x7fe3ea014e98 <col:35, col:40> 'short' <LValueToRValue>
+|   |   |         `-MemberExpr 0x7fe3ea014e60 <col:35, col:40> 'short' lvalue .x 0x7fe3ea014238
+|   |   |           `-DeclRefExpr 0x7fe3ea014e38 <col:35> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   |   |-CaseStmt 0x7fe3ea014f78 <line:30:5, line:31:47>
+|   |   | |-IntegerLiteral 0x7fe3ea014f58 <line:30:10> 'int' 1
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fe3ea015280 <line:31:7, col:47>
+|   |   |   `-BinaryOperator 0x7fe3ea015200 <col:14, col:47> 'int' '+'
+|   |   |     |-ImplicitCastExpr 0x7fe3ea0151e0 <col:14, col:19> 'int' <IntegralCast>
+|   |   |     | `-ImplicitCastExpr 0x7fe3ea0151c8 <col:14, col:19> 'short' <LValueToRValue>
+|   |   |     |   `-MemberExpr 0x7fe3ea014fd8 <col:14, col:19> 'short' lvalue .y 0x7fe3ea014298
+|   |   |     |     `-DeclRefExpr 0x7fe3ea014fb0 <col:14> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   |   |     `-BinaryOperator 0x7fe3ea0151a0 <col:23, col:47> 'int' '*'
+|   |   |       |-ParenExpr 0x7fe3ea015140 <col:23, col:43> 'int'
+|   |   |       | `-BinaryOperator 0x7fe3ea015118 <col:24, col:42> 'int' '-'
+|   |   |       |   |-ImplicitCastExpr 0x7fe3ea0150d0 <col:24, col:30> 'int' <LValueToRValue>
+|   |   |       |   | `-MemberExpr 0x7fe3ea015038 <col:24, col:30> 'int' lvalue .size 0x7fe3ea014740
+|   |   |       |   |   `-DeclRefExpr 0x7fe3ea015010 <col:24> 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)' lvalue Var 0x7fe3ea0147e0 'dummy' 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+|   |   |       |   `-ImplicitCastExpr 0x7fe3ea015100 <col:37, col:42> 'int' <IntegralCast>
+|   |   |       |     `-ImplicitCastExpr 0x7fe3ea0150e8 <col:37, col:42> 'short' <LValueToRValue>
+|   |   |       |       `-MemberExpr 0x7fe3ea015098 <col:37, col:42> 'short' lvalue .x 0x7fe3ea014238
+|   |   |       |         `-DeclRefExpr 0x7fe3ea015070 <col:37> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   |   |       `-ImplicitCastExpr 0x7fe3ea015188 <col:47> 'int' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fe3ea015160 <col:47> 'int' lvalue Var 0x7fe3ea014498 'size_x' 'int'
+|   |   |-CaseStmt 0x7fe3ea0152b8 <line:32:5, line:33:47>
+|   |   | |-IntegerLiteral 0x7fe3ea015298 <line:32:10> 'int' 2
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fe3ea015560 <line:33:7, col:47>
+|   |   |   `-BinaryOperator 0x7fe3ea015538 <col:14, col:47> 'int' '+'
+|   |   |     |-ImplicitCastExpr 0x7fe3ea015520 <col:14, col:19> 'int' <IntegralCast>
+|   |   |     | `-ImplicitCastExpr 0x7fe3ea015508 <col:14, col:19> 'short' <LValueToRValue>
+|   |   |     |   `-MemberExpr 0x7fe3ea015318 <col:14, col:19> 'short' lvalue .x 0x7fe3ea014238
+|   |   |     |     `-DeclRefExpr 0x7fe3ea0152f0 <col:14> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   |   |     `-BinaryOperator 0x7fe3ea0154e0 <col:23, col:47> 'int' '*'
+|   |   |       |-ParenExpr 0x7fe3ea015480 <col:23, col:43> 'int'
+|   |   |       | `-BinaryOperator 0x7fe3ea015458 <col:24, col:42> 'int' '-'
+|   |   |       |   |-ImplicitCastExpr 0x7fe3ea015410 <col:24, col:30> 'int' <LValueToRValue>
+|   |   |       |   | `-MemberExpr 0x7fe3ea015378 <col:24, col:30> 'int' lvalue .size 0x7fe3ea014740
+|   |   |       |   |   `-DeclRefExpr 0x7fe3ea015350 <col:24> 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)' lvalue Var 0x7fe3ea0147e0 'dummy' 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+|   |   |       |   `-ImplicitCastExpr 0x7fe3ea015440 <col:37, col:42> 'int' <IntegralCast>
+|   |   |       |     `-ImplicitCastExpr 0x7fe3ea015428 <col:37, col:42> 'short' <LValueToRValue>
+|   |   |       |       `-MemberExpr 0x7fe3ea0153d8 <col:37, col:42> 'short' lvalue .y 0x7fe3ea014298
+|   |   |       |         `-DeclRefExpr 0x7fe3ea0153b0 <col:37> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   |   |       `-ImplicitCastExpr 0x7fe3ea0154c8 <col:47> 'int' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fe3ea0154a0 <col:47> 'int' lvalue Var 0x7fe3ea014498 'size_x' 'int'
+|   |   `-CaseStmt 0x7fe3ea015598 <line:34:5, line:35:34>
+|   |     |-IntegerLiteral 0x7fe3ea015578 <line:34:10> 'int' 3
+|   |     |-<<<NULL>>>
+|   |     `-ReturnStmt 0x7fe3ea015720 <line:35:7, col:34>
+|   |       `-ParenExpr 0x7fe3ea015700 <col:14, col:34> 'int'
+|   |         `-BinaryOperator 0x7fe3ea0156d8 <col:15, col:33> 'int' '-'
+|   |           |-ImplicitCastExpr 0x7fe3ea015690 <col:15, col:21> 'int' <LValueToRValue>
+|   |           | `-MemberExpr 0x7fe3ea0155f8 <col:15, col:21> 'int' lvalue .size 0x7fe3ea014740
+|   |           |   `-DeclRefExpr 0x7fe3ea0155d0 <col:15> 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)' lvalue Var 0x7fe3ea0147e0 'dummy' 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+|   |           `-ImplicitCastExpr 0x7fe3ea0156c0 <col:28, col:33> 'int' <IntegralCast>
+|   |             `-ImplicitCastExpr 0x7fe3ea0156a8 <col:28, col:33> 'short' <LValueToRValue>
+|   |               `-MemberExpr 0x7fe3ea015658 <col:28, col:33> 'short' lvalue .x 0x7fe3ea014238
+|   |                 `-DeclRefExpr 0x7fe3ea015630 <col:28> 'struct intC':'struct intC' lvalue ParmVar 0x7fe3ea0148f0 'tidc' 'struct intC':'struct intC'
+|   `-ReturnStmt 0x7fe3ea015788 <line:37:3, col:10>
+|     `-IntegerLiteral 0x7fe3ea015768 <col:10> 'int' 0
+`-FunctionDecl 0x7fe3ea015938 <line:40:1, line:47:1> line:41:1 GetHangarNum 'int (int *, int)'
+  |-ParmVarDecl 0x7fe3ea0157e0 <col:15, col:20> col:20 used a 'int *'
+  |-ParmVarDecl 0x7fe3ea015858 <col:23, col:27> col:27 used i 'int'
+  `-CompoundStmt 0x7fe3ea015dc0 <line:42:1, line:47:1>
+    |-WhileStmt 0x7fe3ea015d68 <line:43:3, line:45:21>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe3ea015a48 <line:43:10, col:16> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7fe3ea015a10 <col:10, col:16> 'int' lvalue .size 0x7fe3ea014740
+    | |   `-DeclRefExpr 0x7fe3ea0159e8 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)' lvalue Var 0x7fe3ea0147e0 'dummy' 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+    | `-IfStmt 0x7fe3ea015d30 <line:44:5, line:45:21>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-CallExpr 0x7fe3ea015c00 <line:44:9, col:49> 'int'
+    |   | |-ImplicitCastExpr 0x7fe3ea015be8 <col:9> 'int (*)(int *, struct intC)' <FunctionToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fe3ea015a60 <col:9> 'int (int *, struct intC)' Function 0x7fe3ea014a08 'GetRotatedTileFromOffset' 'int (int *, struct intC)'
+    |   | |-ImplicitCastExpr 0x7fe3ea015c38 <col:35> 'int *' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fe3ea015a88 <col:35> 'int *' lvalue ParmVar 0x7fe3ea0157e0 'a' 'int *'
+    |   | `-ImplicitCastExpr 0x7fe3ea015c50 <col:38, col:48> 'struct intC':'struct intC' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7fe3ea015b68 <col:38, col:48> 'struct intC':'struct intC' lvalue
+    |   |     |-ImplicitCastExpr 0x7fe3ea015b38 <col:38, col:44> 'struct intC *' <LValueToRValue>
+    |   |     | `-MemberExpr 0x7fe3ea015ad8 <col:38, col:44> 'struct intC *' lvalue .ti 0x7fe3ea0146e0
+    |   |     |   `-DeclRefExpr 0x7fe3ea015ab0 <col:38> 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)' lvalue Var 0x7fe3ea0147e0 'dummy' 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+    |   |     `-ImplicitCastExpr 0x7fe3ea015b50 <col:47> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fe3ea015b10 <col:47> 'int' lvalue ParmVar 0x7fe3ea015858 'i' 'int'
+    |   |-ReturnStmt 0x7fe3ea015d18 <line:45:7, col:21>
+    |   | `-ImplicitCastExpr 0x7fe3ea015d00 <col:14, col:21> 'int' <LValueToRValue>
+    |   |   `-UnaryOperator 0x7fe3ea015ce0 <col:14, col:21> 'int' lvalue prefix '*'
+    |   |     `-ImplicitCastExpr 0x7fe3ea015cc8 <col:15, col:21> 'int *' <LValueToRValue>
+    |   |       `-MemberExpr 0x7fe3ea015c90 <col:15, col:21> 'int *' lvalue .depot_table 0x7fe3ea0145e0
+    |   |         `-DeclRefExpr 0x7fe3ea015c68 <col:15> 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)' lvalue Var 0x7fe3ea0147e0 'dummy' 'struct (anonymous struct at ../Data/C2AST/pr57662.c:14:1)':'struct (anonymous at ../Data/C2AST/pr57662.c:14:1)'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7fe3ea015da8 <line:46:3, col:10>
+      `-IntegerLiteral 0x7fe3ea015d88 <col:10> 'int' 0

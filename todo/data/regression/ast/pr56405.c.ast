@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7ff6190234e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff619050220 <../Data/C2AST/pr56405.c:3:1, line:7:1> line:4:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff6190504d8 <line:5:1, line:7:1>
+    `-GCCAsmStmt 0x7ff619050478 <line:6:3, col:66>
+      `-UnaryOperator 0x7ff619050458 <col:28, col:57> 'volatile unsigned short' lvalue prefix '*'
+        `-CStyleCastExpr 0x7ff619050430 <col:29, col:57> 'volatile unsigned short *' <IntegralToPointer>
+          `-IntegerLiteral 0x7ff6190503c8 <col:57> 'unsigned long' 4097

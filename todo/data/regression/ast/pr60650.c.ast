@@ -1,0 +1,114 @@
+TranslationUnitDecl 0x7f85ee02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f85ee02c960 <../Data/C2AST/pr60650.c:6:1, line:9:1> line:6:8 struct super_block definition
+| `-FieldDecl 0x7f85ee814238 <line:8:3, col:7> col:7 referenced s_blocksize_bits 'int'
+|-RecordDecl 0x7f85ee814280 <line:10:1, line:13:1> line:10:8 struct btrfs_fs_info definition
+| `-FieldDecl 0x7f85ee8143e0 <line:12:3, col:23> col:23 referenced sb 'struct super_block *'
+|-RecordDecl 0x7f85ee814428 <line:14:1, line:17:1> line:14:8 struct btrfs_root definition
+| `-FieldDecl 0x7f85ee814580 <line:16:3, col:25> col:25 referenced fs_info 'struct btrfs_fs_info *'
+|-VarDecl 0x7f85ee814680 <line:14:1, line:17:4> col:4 used b 'struct btrfs_root *'
+|-VarDecl 0x7f85ee814750 <line:20:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f85ee8147c8 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7f85ee814840 <col:1, col:11> col:11 used d 'int'
+|-VarDecl 0x7f85ee8148d8 <line:21:1, col:11> col:11 used e 'long long'
+|-FunctionDecl 0x7f85ee814c18 <line:23:1, col:52> col:12 used foo1 'int (struct btrfs_root *, int, int, int)' extern
+| |-ParmVarDecl 0x7f85ee814960 <col:18, col:36> col:37 'struct btrfs_root *'
+| |-ParmVarDecl 0x7f85ee8149d8 <col:39> col:42 'int'
+| |-ParmVarDecl 0x7f85ee814a50 <col:44> col:47 'int'
+| `-ParmVarDecl 0x7f85ee814ac8 <col:49> col:52 'int'
+|-FunctionDecl 0x7f85ee814f28 <line:24:1, col:47> col:12 used foo2 'int (struct btrfs_root *, int, int)' extern
+| |-ParmVarDecl 0x7f85ee814d00 <col:18, col:36> col:37 'struct btrfs_root *'
+| |-ParmVarDecl 0x7f85ee814d78 <col:39> col:42 'int'
+| `-ParmVarDecl 0x7f85ee814df0 <col:44> col:47 'int'
+|-FunctionDecl 0x7f85ee815240 <line:26:1, line:45:1> line:27:1 truncate_one_csum 'int (struct btrfs_root *, long long, long long)'
+| |-ParmVarDecl 0x7f85ee815008 <col:20, col:39> col:39 used p1 'struct btrfs_root *'
+| |-ParmVarDecl 0x7f85ee815080 <col:43, col:53> col:53 used p2 'long long'
+| |-ParmVarDecl 0x7f85ee8150f8 <col:57, col:67> col:67 used p3 'long long'
+| `-CompoundStmt 0x7f85ee82bd20 <line:28:1, line:45:1>
+|   |-DeclStmt 0x7f85ee8155b0 <line:29:3, col:50>
+|   | |-VarDecl 0x7f85ee815310 <col:3, col:7> col:7 used f 'int'
+|   | |-VarDecl 0x7f85ee815388 <col:3, col:10> col:10 used g 'int'
+|   | `-VarDecl 0x7f85ee815400 <col:3, col:34> col:13 used i 'int' cinit
+|   |   `-ImplicitCastExpr 0x7f85ee815578 <col:17, col:34> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x7f85ee815540 <col:17, col:34> 'int' lvalue ->s_blocksize_bits 0x7f85ee814238
+|   |       `-ImplicitCastExpr 0x7f85ee815528 <col:17, col:30> 'struct super_block *' <LValueToRValue>
+|   |         `-MemberExpr 0x7f85ee8154f0 <col:17, col:30> 'struct super_block *' lvalue ->sb 0x7f85ee8143e0
+|   |           `-ImplicitCastExpr 0x7f85ee8154d8 <col:17, col:21> 'struct btrfs_fs_info *' <LValueToRValue>
+|   |             `-MemberExpr 0x7f85ee8154a0 <col:17, col:21> 'struct btrfs_fs_info *' lvalue ->fs_info 0x7f85ee814580
+|   |               `-ImplicitCastExpr 0x7f85ee815488 <col:17> 'struct btrfs_root *' <LValueToRValue>
+|   |                 `-DeclRefExpr 0x7f85ee815460 <col:17> 'struct btrfs_root *' lvalue ParmVar 0x7f85ee815008 'p1' 'struct btrfs_root *'
+|   |-BinaryOperator 0x7f85ee815630 <line:30:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7f85ee8155c8 <col:3> 'int' lvalue Var 0x7f85ee815388 'g' 'int'
+|   | `-ImplicitCastExpr 0x7f85ee815618 <col:7> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f85ee8155f0 <col:7> 'int' lvalue Var 0x7f85ee814750 'a' 'int'
+|   |-DeclStmt 0x7f85ee815778 <line:31:3, col:24>
+|   | `-VarDecl 0x7f85ee815670 <col:3, col:22> col:13 used h 'long long' cinit
+|   |   `-BinaryOperator 0x7f85ee815750 <col:17, col:22> 'long long' '+'
+|   |     |-ImplicitCastExpr 0x7f85ee815720 <col:17> 'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f85ee8156d0 <col:17> 'long long' lvalue ParmVar 0x7f85ee815080 'p2' 'long long'
+|   |     `-ImplicitCastExpr 0x7f85ee815738 <col:22> 'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f85ee8156f8 <col:22> 'long long' lvalue ParmVar 0x7f85ee8150f8 'p3' 'long long'
+|   |-BinaryOperator 0x7f85ee815958 <line:32:3, col:23> 'int' '='
+|   | |-DeclRefExpr 0x7f85ee815790 <col:3> 'int' lvalue Var 0x7f85ee815310 'f' 'int'
+|   | `-CallExpr 0x7f85ee8158e0 <col:7, col:23> 'int'
+|   |   |-ImplicitCastExpr 0x7f85ee8158c8 <col:7> 'int (*)(struct btrfs_root *, int, int, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f85ee8157b8 <col:7> 'int (struct btrfs_root *, int, int, int)' Function 0x7f85ee814c18 'foo1' 'int (struct btrfs_root *, int, int, int)'
+|   |   |-ImplicitCastExpr 0x7f85ee815928 <col:13> 'struct btrfs_root *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f85ee8157e0 <col:13> 'struct btrfs_root *' lvalue Var 0x7f85ee814680 'b' 'struct btrfs_root *'
+|   |   |-IntegerLiteral 0x7f85ee815808 <col:16> 'int' 0
+|   |   |-ImplicitCastExpr 0x7f85ee815940 <col:19> 'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f85ee815828 <col:19> 'int' lvalue Var 0x7f85ee8147c8 'c' 'int'
+|   |   `-IntegerLiteral 0x7f85ee815850 <col:22> 'int' 0
+|   |-BinaryOperator 0x7f85ee815a68 <line:33:3, col:11> 'long long' '='
+|   | |-DeclRefExpr 0x7f85ee815980 <col:3> 'long long' lvalue Var 0x7f85ee8148d8 'e' 'long long'
+|   | `-ImplicitCastExpr 0x7f85ee815a50 <col:7, col:11> 'long long' <IntegralCast>
+|   |   `-BinaryOperator 0x7f85ee815a28 <col:7, col:11> 'int' '/'
+|   |     |-ImplicitCastExpr 0x7f85ee8159f8 <col:7> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f85ee8159a8 <col:7> 'int' lvalue Var 0x7f85ee815310 'f' 'int'
+|   |     `-ImplicitCastExpr 0x7f85ee815a10 <col:11> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f85ee8159d0 <col:11> 'int' lvalue Var 0x7f85ee815388 'g' 'int'
+|   |-CompoundAssignOperator 0x7f85ee815c00 <line:34:3, col:26> 'long long' '<<=' ComputeLHSTy='long long' ComputeResultTy='long long'
+|   | |-DeclRefExpr 0x7f85ee815a90 <col:3> 'long long' lvalue Var 0x7f85ee8148d8 'e' 'long long'
+|   | `-ImplicitCastExpr 0x7f85ee815be8 <col:9, col:26> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7f85ee815b98 <col:9, col:26> 'int' lvalue ->s_blocksize_bits 0x7f85ee814238
+|   |     `-ImplicitCastExpr 0x7f85ee815b80 <col:9, col:22> 'struct super_block *' <LValueToRValue>
+|   |       `-MemberExpr 0x7f85ee815b48 <col:9, col:22> 'struct super_block *' lvalue ->sb 0x7f85ee8143e0
+|   |         `-ImplicitCastExpr 0x7f85ee815b30 <col:9, col:13> 'struct btrfs_fs_info *' <LValueToRValue>
+|   |           `-MemberExpr 0x7f85ee815af8 <col:9, col:13> 'struct btrfs_fs_info *' lvalue ->fs_info 0x7f85ee814580
+|   |             `-ImplicitCastExpr 0x7f85ee815ae0 <col:9> 'struct btrfs_root *' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7f85ee815ab8 <col:9> 'struct btrfs_root *' lvalue ParmVar 0x7f85ee815008 'p1' 'struct btrfs_root *'
+|   `-IfStmt 0x7f85ee82bce8 <line:35:3, line:44:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f85ee815cd0 <line:35:7, col:11> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f85ee815cb8 <col:7> 'long long' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f85ee815c88 <col:7> 'int' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f85ee815c38 <col:7> 'int' lvalue Var 0x7f85ee814840 'd' 'int'
+|     | `-ImplicitCastExpr 0x7f85ee815ca0 <col:11> 'long long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f85ee815c60 <col:11> 'long long' lvalue ParmVar 0x7f85ee815080 'p2' 'long long'
+|     |-CompoundStmt 0x7f85ee816030 <line:36:5, line:39:5>
+|     | |-DeclStmt 0x7f85ee815e98 <line:37:7, col:25>
+|     | | `-VarDecl 0x7f85ee815d10 <col:7, col:24> col:11 used j 'int' cinit
+|     | |   `-ImplicitCastExpr 0x7f85ee815e80 <col:15, col:24> 'int' <IntegralCast>
+|     | |     `-BinaryOperator 0x7f85ee815e58 <col:15, col:24> 'long long' '>>'
+|     | |       |-BinaryOperator 0x7f85ee815df0 <col:15, col:19> 'long long' '-'
+|     | |       | |-ImplicitCastExpr 0x7f85ee815dc0 <col:15> 'long long' <LValueToRValue>
+|     | |       | | `-DeclRefExpr 0x7f85ee815d70 <col:15> 'long long' lvalue Var 0x7f85ee8148d8 'e' 'long long'
+|     | |       | `-ImplicitCastExpr 0x7f85ee815dd8 <col:19> 'long long' <LValueToRValue>
+|     | |       |   `-DeclRefExpr 0x7f85ee815d98 <col:19> 'long long' lvalue Var 0x7f85ee815670 'h' 'long long'
+|     | |       `-ImplicitCastExpr 0x7f85ee815e40 <col:24> 'int' <LValueToRValue>
+|     | |         `-DeclRefExpr 0x7f85ee815e18 <col:24> 'int' lvalue Var 0x7f85ee815400 'i' 'int'
+|     | `-CallExpr 0x7f85ee815fc0 <line:38:7, col:21> 'int'
+|     |   |-ImplicitCastExpr 0x7f85ee815fa8 <col:7> 'int (*)(struct btrfs_root *, int, int)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f85ee815eb0 <col:7> 'int (struct btrfs_root *, int, int)' Function 0x7f85ee814f28 'foo2' 'int (struct btrfs_root *, int, int)'
+|     |   |-ImplicitCastExpr 0x7f85ee816000 <col:13> 'struct btrfs_root *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f85ee815ed8 <col:13> 'struct btrfs_root *' lvalue ParmVar 0x7f85ee815008 'p1' 'struct btrfs_root *'
+|     |   |-IntegerLiteral 0x7f85ee815f00 <col:17> 'int' 0
+|     |   `-ImplicitCastExpr 0x7f85ee816018 <col:20> 'int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f85ee815f20 <col:20> 'int' lvalue Var 0x7f85ee815d10 'j' 'int'
+|     `-CompoundStmt 0x7f85ee82bcc8 <line:41:5, line:44:5>
+|       |-GCCAsmStmt 0x7f85ee8160b8 <line:42:7, col:23>
+|       `-CallExpr 0x7f85ee82bca0 <line:43:7, col:30> 'void'
+|         `-ImplicitCastExpr 0x7f85ee82bc88 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|           `-DeclRefExpr 0x7f85ee82bc38 <col:7> '<builtin fn type>' Function 0x7f85ee816130 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7f85ee816130 <col:7> col:7 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f85ee8161d0 <col:7> Implicit

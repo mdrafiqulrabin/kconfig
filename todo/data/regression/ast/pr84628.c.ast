@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fba4302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fba4306d828 <../Data/C2AST/pr84628.c:5:1, col:13> col:5 used f0 'int (void)'
+|-FunctionDecl 0x7fba4306da40 <line:6:1, col:63> col:37 f1 'void (void)'
+| `-CompoundStmt 0x7fba4306dbe0 <col:47, col:63>
+|   |-CallExpr 0x7fba4306db50 <col:49, col:53> 'int'
+|   | `-ImplicitCastExpr 0x7fba4306db38 <col:49> 'int (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fba4306dae0 <col:49> 'int (void)' Function 0x7fba4306d828 'f0' 'int (void)'
+|   `-CallExpr 0x7fba4306dbb8 <col:56, col:60> 'int'
+|     `-ImplicitCastExpr 0x7fba4306dba0 <col:56> 'int (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fba4306db78 <col:56> 'int (void)' Function 0x7fba4306d828 'f0' 'int (void)'
+`-FunctionDecl 0x7fba4306dcc0 <line:7:1, col:63> col:37 f2 'void (void)'
+  `-CompoundStmt 0x7fba4306de30 <col:47, col:63>
+    |-CallExpr 0x7fba4306dda0 <col:49, col:53> 'int'
+    | `-ImplicitCastExpr 0x7fba4306dd88 <col:49> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fba4306dd60 <col:49> 'int (void)' Function 0x7fba4306d828 'f0' 'int (void)'
+    `-CallExpr 0x7fba4306de08 <col:56, col:60> 'int'
+      `-ImplicitCastExpr 0x7fba4306ddf0 <col:56> 'int (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fba4306ddc8 <col:56> 'int (void)' Function 0x7fba4306d828 'f0' 'int (void)'

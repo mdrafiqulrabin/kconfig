@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f8d8b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8d8b814228 <../Data/C2AST/pr38736_main.c:7:1, col:27> col:12 used aligned_x 'int (void)' extern
+|-FunctionDecl 0x7f8d8b8143a0 <line:8:1, col:31> col:12 used aligned_y_avx 'int (void)' extern
+|-FunctionDecl 0x7f8d8b814530 <line:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8d8b8145d0 prev 0x7f8d8b814530 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f8d8b8146c0 <line:11:1, line:18:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7f8d8b814988 <line:13:1, line:18:1>
+    |-IfStmt 0x7f8d8b814918 <line:14:3, line:15:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8d8b814860 <line:14:7, col:38> 'int' '!='
+    | | |-CallExpr 0x7f8d8b8147d0 <col:7, col:18> 'int'
+    | | | `-ImplicitCastExpr 0x7f8d8b8147b8 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7f8d8b814760 <col:7> 'int (void)' Function 0x7f8d8b814228 'aligned_x' 'int (void)'
+    | | `-CallExpr 0x7f8d8b814838 <col:23, col:38> 'int'
+    | |   `-ImplicitCastExpr 0x7f8d8b814820 <col:23> 'int (*)(void)' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7f8d8b8147f8 <col:23> 'int (void)' Function 0x7f8d8b8143a0 'aligned_y_avx' 'int (void)'
+    | |-CallExpr 0x7f8d8b8148f0 <line:15:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f8d8b8148d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f8d8b814888 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f8d8b8145d0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8d8b814970 <line:17:3, col:10>
+      `-IntegerLiteral 0x7f8d8b814950 <col:10> 'int' 0

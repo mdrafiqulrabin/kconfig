@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fd3a402bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd3a402c960 <../Data/C2AST/pr42893.c:4:1, col:8> col:8 struct frame_info
+|-FunctionDecl 0x7fd3a406d8e0 <line:5:1, col:38> col:6 tui_registers_changed_hook 'void (void)'
+|-VarDecl 0x7fd3a406da70 <line:6:1, col:27> col:27 used deprecated_selected_frame 'struct frame_info *' extern
+|-VarDecl 0x7fd3a406dae8 <line:7:1, col:32> col:5 used tui_refreshing_registers 'int' cinit
+| `-IntegerLiteral 0x7fd3a406db48 <col:32> 'int' 0
+`-FunctionDecl 0x7fd3a406dbf8 prev 0x7fd3a406d8e0 <line:8:1, line:24:1> line:9:1 tui_registers_changed_hook 'void (void)'
+  `-CompoundStmt 0x7fd3a406e030 <line:10:1, line:24:1>
+    |-DeclStmt 0x7fd3a406dd20 <line:11:3, col:24>
+    | `-VarDecl 0x7fd3a406dcc0 <col:3, col:22> col:22 used fi 'struct frame_info *'
+    |-BinaryOperator 0x7fd3a406dda0 <line:12:3, col:8> 'struct frame_info *' '='
+    | |-DeclRefExpr 0x7fd3a406dd38 <col:3> 'struct frame_info *' lvalue Var 0x7fd3a406dcc0 'fi' 'struct frame_info *'
+    | `-ImplicitCastExpr 0x7fd3a406dd88 <col:8> 'struct frame_info *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd3a406dd60 <col:8> 'struct frame_info *' lvalue Var 0x7fd3a406da70 'deprecated_selected_frame' 'struct frame_info *'
+    |-IfStmt 0x7fd3a406dfe0 <line:13:3, line:22:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd3a406ddf0 <line:13:7> 'struct frame_info *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd3a406ddc8 <col:7> 'struct frame_info *' lvalue Var 0x7fd3a406dcc0 'fi' 'struct frame_info *'
+    | |-CompoundStmt 0x7fd3a406dfc8 <line:15:5, line:22:5>
+    | | `-IfStmt 0x7fd3a406df90 <line:16:7, line:21:2>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-BinaryOperator 0x7fd3a406de68 <line:16:11, col:39> 'int' '=='
+    | |   | |-ImplicitCastExpr 0x7fd3a406de50 <col:11> 'int' <LValueToRValue>
+    | |   | | `-DeclRefExpr 0x7fd3a406de08 <col:11> 'int' lvalue Var 0x7fd3a406dae8 'tui_refreshing_registers' 'int'
+    | |   | `-IntegerLiteral 0x7fd3a406de30 <col:39> 'int' 0
+    | |   |-CompoundStmt 0x7fd3a406df70 <line:18:2, line:21:2>
+    | |   | |-BinaryOperator 0x7fd3a406ded8 <line:19:4, col:31> 'int' '='
+    | |   | | |-DeclRefExpr 0x7fd3a406de90 <col:4> 'int' lvalue Var 0x7fd3a406dae8 'tui_refreshing_registers' 'int'
+    | |   | | `-IntegerLiteral 0x7fd3a406deb8 <col:31> 'int' 1
+    | |   | `-BinaryOperator 0x7fd3a406df48 <line:20:4, col:31> 'int' '='
+    | |   |   |-DeclRefExpr 0x7fd3a406df00 <col:4> 'int' lvalue Var 0x7fd3a406dae8 'tui_refreshing_registers' 'int'
+    | |   |   `-IntegerLiteral 0x7fd3a406df28 <col:31> 'int' 0
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd3a406e018 <line:23:3>

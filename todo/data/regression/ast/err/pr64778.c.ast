@@ -1,0 +1,30 @@
+../Data/C2AST/pr64778.c:8:13: error: expected expression
+  a ^= foo (,);  
+            ^
+../Data/C2AST/pr64778.c:8:14: error: expected expression
+  a ^= foo (,);  
+             ^
+2 errors generated.
+TranslationUnitDecl 0x7f843502b6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f843502bc60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f843502b980 '__int128'
+|-TypedefDecl 0x7f843502bcd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f843502b9a0 'unsigned __int128'
+|-TypedefDecl 0x7f843502bfa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f843502bdb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f843502bd28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f843502c040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f843502c000 'char *'
+|   `-BuiltinType 0x7f843502b780 'char'
+|-TypedefDecl 0x7f843502c308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f843502c2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f843502c120 'struct __va_list_tag'
+|     `-Record 0x7f843502c098 '__va_list_tag'
+`-FunctionDecl 0x7f8435062068 <../Data/C2AST/pr64778.c:4:1, line:10:1> line:5:1 referenced foo 'int (int)'
+  |-ParmVarDecl 0x7f843502c378 <col:6, col:10> col:10 p 'int'
+  `-CompoundStmt 0x7f8435062288 <line:6:1, line:10:1>
+    |-DeclStmt 0x7f84350621c8 <line:7:3, col:8>
+    | `-VarDecl 0x7f8435062168 <col:3, col:7> col:7 used a 'int'
+    `-ReturnStmt 0x7f8435062270 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7f8435062258 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8435062230 <col:10> 'int' lvalue Var 0x7f8435062168 'a' 'int'

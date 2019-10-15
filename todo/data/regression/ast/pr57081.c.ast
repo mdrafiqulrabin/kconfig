@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fe32a8288e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe32a829578 <../Data/C2AST/pr57081.c:3:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fe32b017700 <line:5:1, line:22:1> line:5:6 f 'void (void)'
+  `-CompoundStmt 0x7fe32b017b60 <line:6:1, line:22:1>
+    |-DeclStmt 0x7fe32b017818 <line:7:3, col:8>
+    | `-VarDecl 0x7fe32b0177b8 <col:3, col:7> col:7 used b 'int'
+    |-IfStmt 0x7fe32b0178c8 <line:9:3, line:11:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-IntegerLiteral 0x7fe32b017830 <line:9:6> 'int' 0
+    | |-LabelStmt 0x7fe32b0178b0 <line:10:5, line:11:7> 'lbl'
+    | | `-GotoStmt 0x7fe32b017898 <col:2, col:7> 'lbl' 0x7fe32b017850
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fe32b017a28 <line:13:3, line:17:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe32b017928 <line:13:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe32b017900 <col:6> 'int' lvalue Var 0x7fe32b0177b8 'b' 'int'
+    | |-CompoundStmt 0x7fe32b017a08 <line:14:5, line:17:5>
+    | | |-DeclStmt 0x7fe32b0179d8 <line:15:7, col:16>
+    | | | `-VarDecl 0x7fe32b017958 <col:7, col:15> col:11 p 'int' cinit
+    | | |   `-IntegerLiteral 0x7fe32b0179b8 <col:15> 'int' 0
+    | | `-GotoStmt 0x7fe32b0179f0 <line:16:7, col:12> 'lbl' 0x7fe32b017850
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fe32b017aa8 <line:19:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe32b017a60 <col:3> 'int' lvalue Var 0x7fe32a829578 'a' 'int'
+    | `-IntegerLiteral 0x7fe32b017a88 <col:7> 'int' 0
+    |-WhileStmt 0x7fe32b017b28 <line:20:3, col:13>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fe32b017af8 <col:9, col:10> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fe32b017ad0 <col:9> 'int' lvalue Var 0x7fe32b0177b8 'b' 'int'
+    | `-NullStmt 0x7fe32b017b18 <col:13>
+    `-GotoStmt 0x7fe32b017b48 <line:21:3, col:8> 'lbl' 0x7fe32b017850

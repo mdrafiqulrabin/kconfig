@@ -1,0 +1,285 @@
+TranslationUnitDecl 0x7fc7430240e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc743024d60 <../Data/C2AST/pr50908-2.c:4:9, col:16> col:16 struct rtx_def
+|-TypedefDecl 0x7fc7438142d0 <col:1, col:25> col:25 referenced rtx 'struct rtx_def *'
+| `-PointerType 0x7fc743814280 'struct rtx_def *'
+|   `-ElaboratedType 0x7fc743814220 'struct rtx_def' sugar
+|     `-RecordType 0x7fc743814200 'struct rtx_def'
+|       `-Record 0x7fc74382bd70 'rtx_def'
+|-EnumDecl 0x7fc743814340 <line:5:1, line:8:1> line:5:6 debug_info_levels
+| |-EnumConstantDecl 0x7fc743814400 <line:7:3> col:3 ARM_FLOAT_ABI_SOFT 'int'
+| |-EnumConstantDecl 0x7fc743814448 <col:23> col:23 ARM_FLOAT_ABI_SOFTFP 'int'
+| `-EnumConstantDecl 0x7fc743814490 <col:45> col:45 ARM_FLOAT_ABI_HARD 'int'
+|-RecordDecl 0x7fc7438144d8 <line:9:1, line:12:1> line:9:8 struct gcc_options definition
+| `-FieldDecl 0x7fc743814598 <line:11:3, col:7> col:7 referenced x_target_flags 'int'
+|-VarDecl 0x7fc743814630 <line:13:1, col:27> col:27 used global_options 'struct gcc_options':'struct gcc_options' extern
+|-VarDecl 0x7fc7438146e8 <line:14:1, col:12> col:12 used arm_arch_thumb2 'int' extern
+|-EnumDecl 0x7fc743814748 <line:15:1, line:32:1> line:15:6 rtx_code
+| |-EnumConstantDecl 0x7fc743814800 <line:17:3> col:3 UNSPEC 'int'
+| |-EnumConstantDecl 0x7fc743814848 <col:11> col:11 UNSPEC_VOLATILE 'int'
+| |-EnumConstantDecl 0x7fc743814890 <col:28> col:28 ADDR_VEC 'int'
+| |-EnumConstantDecl 0x7fc7438148d8 <col:38> col:38 SET 'int'
+| |-EnumConstantDecl 0x7fc743814920 <col:43> col:43 CLOBBER 'int'
+| |-EnumConstantDecl 0x7fc743814968 <col:52> col:52 CALL 'int'
+| |-EnumConstantDecl 0x7fc7438149b0 <col:58> col:58 RETURN 'int'
+| |-EnumConstantDecl 0x7fc7438149f8 <line:18:5> col:5 SIMPLE_RETURN 'int'
+| |-EnumConstantDecl 0x7fc743814a40 <col:20> col:20 EH_RETURN 'int'
+| |-EnumConstantDecl 0x7fc743814a88 <col:31> col:31 TRAP_IF 'int'
+| |-EnumConstantDecl 0x7fc743814ad0 <col:40> col:40 referenced CONST_INT 'int'
+| |-EnumConstantDecl 0x7fc743814b18 <col:51> col:51 CONST_FIXED 'int'
+| |-EnumConstantDecl 0x7fc743814b60 <col:64> col:64 CONST_DOUBLE 'int'
+| |-EnumConstantDecl 0x7fc743814ba8 <line:19:5> col:5 CONST_VECTOR 'int'
+| |-EnumConstantDecl 0x7fc743814bf0 <col:19> col:19 CONST_STRING 'int'
+| |-EnumConstantDecl 0x7fc743814c38 <col:33> col:33 CONST 'int'
+| |-EnumConstantDecl 0x7fc743814c80 <col:40> col:40 PC 'int'
+| |-EnumConstantDecl 0x7fc743814cc8 <col:44> col:44 REG 'int'
+| |-EnumConstantDecl 0x7fc743814d10 <col:49> col:49 SCRATCH 'int'
+| |-EnumConstantDecl 0x7fc743814d58 <col:58> col:58 SUBREG 'int'
+| |-EnumConstantDecl 0x7fc743814da0 <line:20:5> col:5 STRICT_LOW_PART 'int'
+| |-EnumConstantDecl 0x7fc743814de8 <col:22> col:22 CONCAT 'int'
+| |-EnumConstantDecl 0x7fc743814e30 <col:30> col:30 CONCATN 'int'
+| |-EnumConstantDecl 0x7fc743814e78 <col:39> col:39 MEM 'int'
+| |-EnumConstantDecl 0x7fc743814ec0 <col:44> col:44 LABEL_REF 'int'
+| |-EnumConstantDecl 0x7fc743814f08 <col:55> col:55 SYMBOL_REF 'int'
+| |-EnumConstantDecl 0x7fc743814f50 <col:67> col:67 CC0 'int'
+| |-EnumConstantDecl 0x7fc743814f98 <line:21:5> col:5 IF_THEN_ELSE 'int'
+| |-EnumConstantDecl 0x7fc743814fe0 <col:19> col:19 COMPARE 'int'
+| |-EnumConstantDecl 0x7fc743815028 <col:28> col:28 PLUS 'int'
+| |-EnumConstantDecl 0x7fc743815070 <col:34> col:34 MINUS 'int'
+| |-EnumConstantDecl 0x7fc7438150b8 <col:41> col:41 NEG 'int'
+| |-EnumConstantDecl 0x7fc743815100 <col:46> col:46 MULT 'int'
+| |-EnumConstantDecl 0x7fc743815148 <col:52> col:52 SS_MULT 'int'
+| |-EnumConstantDecl 0x7fc743815190 <col:61> col:61 US_MULT 'int'
+| |-EnumConstantDecl 0x7fc743815200 <col:70> col:70 DIV 'int'
+| |-EnumConstantDecl 0x7fc743815248 <line:22:5> col:5 SS_DIV 'int'
+| |-EnumConstantDecl 0x7fc743815290 <col:13> col:13 US_DIV 'int'
+| |-EnumConstantDecl 0x7fc7438152d8 <col:21> col:21 MOD 'int'
+| |-EnumConstantDecl 0x7fc743815320 <col:26> col:26 UDIV 'int'
+| |-EnumConstantDecl 0x7fc743815368 <col:32> col:32 UMOD 'int'
+| |-EnumConstantDecl 0x7fc7438153b0 <col:38> col:38 AND 'int'
+| |-EnumConstantDecl 0x7fc7438153f8 <col:43> col:43 IOR 'int'
+| |-EnumConstantDecl 0x7fc743815440 <col:48> col:48 XOR 'int'
+| |-EnumConstantDecl 0x7fc743815488 <col:53> col:53 NOT 'int'
+| |-EnumConstantDecl 0x7fc7438154d0 <col:58> col:58 ASHIFT 'int'
+| |-EnumConstantDecl 0x7fc743815518 <col:66> col:66 ROTATE 'int'
+| |-EnumConstantDecl 0x7fc743815560 <line:23:5> col:5 ASHIFTRT 'int'
+| |-EnumConstantDecl 0x7fc7438155a8 <col:15> col:15 LSHIFTRT 'int'
+| |-EnumConstantDecl 0x7fc7438155f0 <col:25> col:25 ROTATERT 'int'
+| |-EnumConstantDecl 0x7fc743815638 <col:35> col:35 PRE_DEC 'int'
+| |-EnumConstantDecl 0x7fc743815680 <col:44> col:44 PRE_INC 'int'
+| |-EnumConstantDecl 0x7fc7438156c8 <col:53> col:53 POST_DEC 'int'
+| |-EnumConstantDecl 0x7fc743815710 <col:63> col:63 POST_INC 'int'
+| |-EnumConstantDecl 0x7fc743815758 <line:24:5> col:5 PRE_MODIFY 'int'
+| |-EnumConstantDecl 0x7fc7438157a0 <col:17> col:17 POST_MODIFY 'int'
+| |-EnumConstantDecl 0x7fc7438157e8 <col:30> col:30 NE 'int'
+| |-EnumConstantDecl 0x7fc743815830 <col:34> col:34 EQ 'int'
+| |-EnumConstantDecl 0x7fc743815878 <col:38> col:38 GE 'int'
+| |-EnumConstantDecl 0x7fc7438158c0 <col:42> col:42 GT 'int'
+| |-EnumConstantDecl 0x7fc743815908 <col:46> col:46 LE 'int'
+| |-EnumConstantDecl 0x7fc743815950 <col:50> col:50 LT 'int'
+| |-EnumConstantDecl 0x7fc743815998 <col:54> col:54 GEU 'int'
+| |-EnumConstantDecl 0x7fc7438159e0 <col:59> col:59 GTU 'int'
+| |-EnumConstantDecl 0x7fc743815a28 <col:64> col:64 LEU 'int'
+| |-EnumConstantDecl 0x7fc743815a70 <col:69> col:69 LTU 'int'
+| |-EnumConstantDecl 0x7fc743815ab8 <line:25:5> col:5 UNORDERED 'int'
+| |-EnumConstantDecl 0x7fc743815b00 <col:16> col:16 ORDERED 'int'
+| |-EnumConstantDecl 0x7fc743815b48 <col:25> col:25 UNEQ 'int'
+| |-EnumConstantDecl 0x7fc743815b90 <col:31> col:31 UNGE 'int'
+| |-EnumConstantDecl 0x7fc743815bd8 <col:37> col:37 UNGT 'int'
+| |-EnumConstantDecl 0x7fc743815c20 <col:43> col:43 UNLE 'int'
+| |-EnumConstantDecl 0x7fc743815c68 <col:49> col:49 UNLT 'int'
+| |-EnumConstantDecl 0x7fc743815cb0 <col:55> col:55 LTGT 'int'
+| |-EnumConstantDecl 0x7fc743815cf8 <col:61> col:61 SIGN_EXTEND 'int'
+| |-EnumConstantDecl 0x7fc743815d40 <line:26:5> col:5 ZERO_EXTEND 'int'
+| |-EnumConstantDecl 0x7fc743815d88 <col:18> col:18 TRUNCATE 'int'
+| |-EnumConstantDecl 0x7fc743815dd0 <col:28> col:28 FLOAT_EXTEND 'int'
+| |-EnumConstantDecl 0x7fc743815e18 <col:42> col:42 FLOAT_TRUNCATE 'int'
+| |-EnumConstantDecl 0x7fc743815e60 <col:58> col:58 FLOAT 'int'
+| |-EnumConstantDecl 0x7fc743815ea8 <col:65> col:65 FIX 'int'
+| |-EnumConstantDecl 0x7fc743815ef0 <line:27:5> col:5 UNSIGNED_FLOAT 'int'
+| |-EnumConstantDecl 0x7fc743815f38 <col:21> col:21 UNSIGNED_FIX 'int'
+| |-EnumConstantDecl 0x7fc743815f80 <col:35> col:35 SIGN_EXTRACT 'int'
+| |-EnumConstantDecl 0x7fc743815fc8 <col:49> col:49 ZERO_EXTRACT 'int'
+| |-EnumConstantDecl 0x7fc743816010 <col:63> col:63 referenced HIGH 'int'
+| |-EnumConstantDecl 0x7fc743816058 <col:69> col:69 LO_SUM 'int'
+| |-EnumConstantDecl 0x7fc7438160a0 <line:28:5> col:5 VEC_MERGE 'int'
+| |-EnumConstantDecl 0x7fc7438160e8 <col:16> col:16 VEC_SELECT 'int'
+| |-EnumConstantDecl 0x7fc743816130 <col:28> col:28 VEC_CONCAT 'int'
+| |-EnumConstantDecl 0x7fc743816178 <col:40> col:40 VEC_DUPLICATE 'int'
+| |-EnumConstantDecl 0x7fc74382b800 <col:55> col:55 SS_PLUS 'int'
+| |-EnumConstantDecl 0x7fc74382b848 <col:64> col:64 US_PLUS 'int'
+| |-EnumConstantDecl 0x7fc74382b890 <line:29:5> col:5 SS_MINUS 'int'
+| |-EnumConstantDecl 0x7fc74382b8d8 <col:15> col:15 SS_NEG 'int'
+| |-EnumConstantDecl 0x7fc74382b920 <col:23> col:23 US_NEG 'int'
+| |-EnumConstantDecl 0x7fc74382b968 <col:31> col:31 SS_ABS 'int'
+| |-EnumConstantDecl 0x7fc74382b9b0 <col:39> col:39 SS_ASHIFT 'int'
+| |-EnumConstantDecl 0x7fc74382b9f8 <col:50> col:50 US_ASHIFT 'int'
+| |-EnumConstantDecl 0x7fc74382ba40 <col:61> col:61 US_MINUS 'int'
+| |-EnumConstantDecl 0x7fc74382ba88 <line:30:5> col:5 SS_TRUNCATE 'int'
+| |-EnumConstantDecl 0x7fc74382bad0 <col:18> col:18 US_TRUNCATE 'int'
+| |-EnumConstantDecl 0x7fc74382bb18 <col:31> col:31 FMA 'int'
+| |-EnumConstantDecl 0x7fc74382bb60 <col:36> col:36 VAR_LOCATION 'int'
+| |-EnumConstantDecl 0x7fc74382bba8 <col:50> col:50 DEBUG_IMPLICIT_PTR 'int'
+| |-EnumConstantDecl 0x7fc74382bbf0 <line:31:5> col:5 ENTRY_VALUE 'int'
+| |-EnumConstantDecl 0x7fc74382bc38 <col:18> col:18 DEBUG_PARAMETER_REF 'int'
+| `-EnumConstantDecl 0x7fc74382bc80 <col:39> col:39 LAST_AND_UNUSED_RTX_CODE 'int'
+|-RecordDecl 0x7fc74382bcc8 <line:33:1, line:35:1> line:33:7 union rtunion_def definition
+|-RecordDecl 0x7fc74382bd70 prev 0x7fc743024d60 <line:36:1, line:39:1> line:36:8 struct rtx_def definition
+| `-FieldDecl 0x7fc74382be70 <line:38:3, col:22> col:17 referenced code 'enum rtx_code':'enum rtx_code'
+|   `-IntegerLiteral 0x7fc74382bdf8 <col:22> 'int' 16
+|-VarDecl 0x7fc74382bed8 <line:36:1, line:40:1> col:1 builtin_info_type 'struct rtx_def':'struct rtx_def'
+|-EnumDecl 0x7fc74382bf50 <line:41:1, line:56:1> line:41:6 constraint_num
+| |-EnumConstantDecl 0x7fc74382c030 <line:43:3, line:44:5> line:43:3 CONSTRAINT__UNKNOWN 'int'
+| | `-IntegerLiteral 0x7fc74382c010 <line:44:5> 'int' 0
+| |-EnumConstantDecl 0x7fc74382c078 <col:8> col:8 CONSTRAINT_f 'int'
+| |-EnumConstantDecl 0x7fc74382c0c0 <col:22> col:22 CONSTRAINT_t 'int'
+| |-EnumConstantDecl 0x7fc74382c108 <col:36> col:36 CONSTRAINT_v 'int'
+| |-EnumConstantDecl 0x7fc74382c150 <col:50> col:50 CONSTRAINT_w 'int'
+| |-EnumConstantDecl 0x7fc74382c198 <col:64> col:64 CONSTRAINT_x 'int'
+| |-EnumConstantDecl 0x7fc74382c1e0 <line:45:5> col:5 CONSTRAINT_y 'int'
+| |-EnumConstantDecl 0x7fc74382c228 <col:19> col:19 CONSTRAINT_z 'int'
+| |-EnumConstantDecl 0x7fc74382c270 <col:33> col:33 CONSTRAINT_l 'int'
+| |-EnumConstantDecl 0x7fc74382c2b8 <col:47> col:47 CONSTRAINT_h 'int'
+| |-EnumConstantDecl 0x7fc74382c300 <col:61> col:61 referenced CONSTRAINT_j 'int'
+| |-EnumConstantDecl 0x7fc74382c348 <line:46:5> col:5 CONSTRAINT_Pj 'int'
+| |-EnumConstantDecl 0x7fc74382c390 <col:20> col:20 CONSTRAINT_PJ 'int'
+| |-EnumConstantDecl 0x7fc74382c3d8 <col:35> col:35 CONSTRAINT_k 'int'
+| |-EnumConstantDecl 0x7fc74382c420 <col:49> col:49 CONSTRAINT_b 'int'
+| |-EnumConstantDecl 0x7fc74382c468 <col:63> col:63 CONSTRAINT_c 'int'
+| |-EnumConstantDecl 0x7fc74382c4b0 <line:47:5> col:5 CONSTRAINT_I 'int'
+| |-EnumConstantDecl 0x7fc74382c4f8 <col:19> col:19 CONSTRAINT_J 'int'
+| |-EnumConstantDecl 0x7fc74382c540 <col:33> col:33 CONSTRAINT_K 'int'
+| |-EnumConstantDecl 0x7fc74382c588 <col:47> col:47 CONSTRAINT_L 'int'
+| |-EnumConstantDecl 0x7fc74382c5d0 <col:61> col:61 CONSTRAINT_M 'int'
+| |-EnumConstantDecl 0x7fc74382c618 <line:48:5> col:5 CONSTRAINT_N 'int'
+| |-EnumConstantDecl 0x7fc74382c660 <col:19> col:19 CONSTRAINT_O 'int'
+| |-EnumConstantDecl 0x7fc74382c6a8 <col:33> col:33 CONSTRAINT_Pa 'int'
+| |-EnumConstantDecl 0x7fc74382c6f0 <col:48> col:48 CONSTRAINT_Pb 'int'
+| |-EnumConstantDecl 0x7fc74382c738 <col:63> col:63 CONSTRAINT_Pc 'int'
+| |-EnumConstantDecl 0x7fc74382c780 <line:49:5> col:5 CONSTRAINT_Pd 'int'
+| |-EnumConstantDecl 0x7fc74382c800 <col:20> col:20 CONSTRAINT_Ps 'int'
+| |-EnumConstantDecl 0x7fc74382c848 <col:35> col:35 CONSTRAINT_Pt 'int'
+| |-EnumConstantDecl 0x7fc74382c890 <col:50> col:50 CONSTRAINT_Pu 'int'
+| |-EnumConstantDecl 0x7fc74382c8d8 <col:65> col:65 CONSTRAINT_Pv 'int'
+| |-EnumConstantDecl 0x7fc74382c920 <line:50:5> col:5 CONSTRAINT_Pw 'int'
+| |-EnumConstantDecl 0x7fc74382c968 <col:20> col:20 CONSTRAINT_Px 'int'
+| |-EnumConstantDecl 0x7fc74382c9b0 <col:35> col:35 CONSTRAINT_Py 'int'
+| |-EnumConstantDecl 0x7fc74382c9f8 <col:50> col:50 CONSTRAINT_G 'int'
+| |-EnumConstantDecl 0x7fc74382ca40 <col:64> col:64 CONSTRAINT_H 'int'
+| |-EnumConstantDecl 0x7fc74382ca88 <line:51:5> col:5 CONSTRAINT_Dz 'int'
+| |-EnumConstantDecl 0x7fc74382cad0 <col:20> col:20 CONSTRAINT_Da 'int'
+| |-EnumConstantDecl 0x7fc74382cb18 <col:35> col:35 CONSTRAINT_Db 'int'
+| |-EnumConstantDecl 0x7fc74382cb60 <col:50> col:50 CONSTRAINT_Dc 'int'
+| |-EnumConstantDecl 0x7fc74382cba8 <col:65> col:65 CONSTRAINT_Di 'int'
+| |-EnumConstantDecl 0x7fc74382cbf0 <line:52:5> col:5 CONSTRAINT_Dn 'int'
+| |-EnumConstantDecl 0x7fc74382cc38 <col:20> col:20 CONSTRAINT_Dl 'int'
+| |-EnumConstantDecl 0x7fc74382cc80 <col:35> col:35 CONSTRAINT_DL 'int'
+| |-EnumConstantDecl 0x7fc74382ccc8 <col:50> col:50 CONSTRAINT_Dv 'int'
+| |-EnumConstantDecl 0x7fc74382cd10 <col:65> col:65 CONSTRAINT_Dy 'int'
+| |-EnumConstantDecl 0x7fc74382cd58 <line:53:5> col:5 CONSTRAINT_Ut 'int'
+| |-EnumConstantDecl 0x7fc74382cda0 <col:20> col:20 CONSTRAINT_Uv 'int'
+| |-EnumConstantDecl 0x7fc74382cde8 <col:35> col:35 CONSTRAINT_Uy 'int'
+| |-EnumConstantDecl 0x7fc74382ce30 <col:50> col:50 CONSTRAINT_Un 'int'
+| |-EnumConstantDecl 0x7fc74382ce78 <col:65> col:65 CONSTRAINT_Um 'int'
+| |-EnumConstantDecl 0x7fc74382cec0 <line:54:5> col:5 CONSTRAINT_Us 'int'
+| |-EnumConstantDecl 0x7fc74382cf08 <col:20> col:20 CONSTRAINT_Uq 'int'
+| |-EnumConstantDecl 0x7fc74382cf50 <col:35> col:35 CONSTRAINT_Q 'int'
+| |-EnumConstantDecl 0x7fc74382cf98 <col:49> col:49 CONSTRAINT_Uu 'int'
+| |-EnumConstantDecl 0x7fc74382cfe0 <col:64> col:64 CONSTRAINT_Uw 'int'
+| `-EnumConstantDecl 0x7fc74382d028 <line:55:5> col:5 CONSTRAINT__LIMIT 'int'
+|-RecordDecl 0x7fc74382d070 <line:57:9, line:59:1> line:57:16 struct VEC_char_base definition
+|-TypedefDecl 0x7fc74382d170 <col:1, line:60:1> col:1 VEC_int_heap 'struct VEC_char_base':'struct VEC_char_base'
+| `-ElaboratedType 0x7fc74382d120 'struct VEC_char_base' sugar
+|   `-RecordType 0x7fc74382d100 'struct VEC_char_base'
+|     `-Record 0x7fc74382d070 'VEC_char_base'
+|-FunctionDecl 0x7fc74382d318 <line:61:1, line:70:1> line:62:1 used satisfies_constraint_j 'int (rtx)' static inline
+| |-ParmVarDecl 0x7fc74382d210 <col:25, col:29> col:29 used op 'rtx':'struct rtx_def *'
+| `-CompoundStmt 0x7fc743834bf0 <line:63:1, line:70:1>
+|   |-DeclStmt 0x7fc74382d470 <line:64:3, col:21>
+|   | `-VarDecl 0x7fc74382d3d8 <col:3, col:20> col:13 used ival 'long long' cinit
+|   |   `-ImplicitCastExpr 0x7fc74382d458 <col:20> 'long long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fc74382d438 <col:20> 'int' 0
+|   `-ReturnStmt 0x7fc743834bd8 <line:65:3, line:69:38>
+|     `-BinaryOperator 0x7fc743834b68 <line:65:10, line:69:38> 'int' '&&'
+|       |-ParenExpr 0x7fc74382d788 <line:65:10, line:66:45> 'int'
+|       | `-ParenExpr 0x7fc74382d768 <line:65:11, line:66:44> 'int'
+|       |   `-BinaryOperator 0x7fc74382d740 <line:65:12, line:66:29> 'int' '&&'
+|       |     |-ParenExpr 0x7fc74382d6e0 <line:65:12, line:66:24> 'int'
+|       |     | `-BinaryOperator 0x7fc74382d6b8 <line:65:13, line:66:9> 'int' '||'
+|       |     |   |-ParenExpr 0x7fc74382d658 <line:65:13, col:65> 'int'
+|       |     |   | `-UnaryOperator 0x7fc74382d638 <col:14, col:64> 'int' prefix '!'
+|       |     |   |   `-ParenExpr 0x7fc74382d618 <col:15, col:64> 'int'
+|       |     |   |     `-BinaryOperator 0x7fc74382d5f0 <col:16, col:63> 'int' '!='
+|       |     |   |       |-ParenExpr 0x7fc74382d5b0 <col:16, col:58> 'int'
+|       |     |   |       | `-BinaryOperator 0x7fc74382d588 <col:17, col:57> 'int' '&'
+|       |     |   |       |   |-ImplicitCastExpr 0x7fc74382d570 <col:17, col:32> 'int' <LValueToRValue>
+|       |     |   |       |   | `-MemberExpr 0x7fc74382d4b0 <col:17, col:32> 'int' lvalue .x_target_flags 0x7fc743814598
+|       |     |   |       |   |   `-DeclRefExpr 0x7fc74382d488 <col:17> 'struct gcc_options':'struct gcc_options' lvalue Var 0x7fc743814630 'global_options' 'struct gcc_options':'struct gcc_options'
+|       |     |   |       |   `-ParenExpr 0x7fc74382d550 <col:49, col:57> 'int'
+|       |     |   |       |     `-BinaryOperator 0x7fc74382d528 <col:50, col:55> 'int' '<<'
+|       |     |   |       |       |-IntegerLiteral 0x7fc74382d4e8 <col:50> 'int' 1
+|       |     |   |       |       `-IntegerLiteral 0x7fc74382d508 <col:55> 'int' 14
+|       |     |   |       `-IntegerLiteral 0x7fc74382d5d0 <col:63> 'int' 0
+|       |     |   `-ImplicitCastExpr 0x7fc74382d6a0 <line:66:9> 'int' <LValueToRValue>
+|       |     |     `-DeclRefExpr 0x7fc74382d678 <col:9> 'int' lvalue Var 0x7fc7438146e8 'arm_arch_thumb2' 'int'
+|       |     `-ImplicitCastExpr 0x7fc74382d728 <col:29> 'int' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fc74382d700 <col:29> 'int' lvalue Var 0x7fc7438146e8 'arm_arch_thumb2' 'int'
+|       `-ParenExpr 0x7fc743834b48 <line:67:8, line:69:38> 'int'
+|         `-BinaryOperator 0x7fc743834b20 <line:67:9, line:69:37> 'int' '||'
+|           |-ParenExpr 0x7fc743834770 <line:67:9, col:46> 'int'
+|           | `-BinaryOperator 0x7fc743834748 <col:10, col:42> 'int' '=='
+|           |   |-ImplicitCastExpr 0x7fc743834718 <col:10, col:37> 'unsigned int' <IntegralCast>
+|           |   | `-ParenExpr 0x7fc7438346d0 <col:10, col:37> 'enum rtx_code':'enum rtx_code'
+|           |   |   `-CStyleCastExpr 0x7fc7438346a8 <col:11, col:33> 'enum rtx_code':'enum rtx_code' <NoOp>
+|           |   |     `-ImplicitCastExpr 0x7fc743834690 <col:27, col:33> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|           |   |       `-MemberExpr 0x7fc743834638 <col:27, col:33> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7fc74382be70
+|           |   |         `-ImplicitCastExpr 0x7fc743834620 <col:27, col:30> 'rtx':'struct rtx_def *' <LValueToRValue>
+|           |   |           `-ParenExpr 0x7fc743834600 <col:27, col:30> 'rtx':'struct rtx_def *' lvalue
+|           |   |             `-DeclRefExpr 0x7fc74382d7a8 <col:28> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7fc74382d210 'op' 'rtx':'struct rtx_def *'
+|           |   `-ImplicitCastExpr 0x7fc743834730 <col:42> 'unsigned int' <IntegralCast>
+|           |     `-DeclRefExpr 0x7fc7438346f0 <col:42> 'int' EnumConstant 0x7fc743816010 'HIGH' 'int'
+|           `-ParenExpr 0x7fc743834b00 <line:68:5, line:69:37> 'int'
+|             `-BinaryOperator 0x7fc743834ad8 <line:68:6, line:69:36> 'int' '&&'
+|               |-ParenExpr 0x7fc743834958 <line:68:6, col:48> 'int'
+|               | `-BinaryOperator 0x7fc743834930 <col:7, col:39> 'int' '=='
+|               |   |-ImplicitCastExpr 0x7fc743834900 <col:7, col:34> 'unsigned int' <IntegralCast>
+|               |   | `-ParenExpr 0x7fc7438348b8 <col:7, col:34> 'enum rtx_code':'enum rtx_code'
+|               |   |   `-CStyleCastExpr 0x7fc743834890 <col:8, col:30> 'enum rtx_code':'enum rtx_code' <NoOp>
+|               |   |     `-ImplicitCastExpr 0x7fc743834878 <col:24, col:30> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|               |   |       `-MemberExpr 0x7fc743834820 <col:24, col:30> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7fc74382be70
+|               |   |         `-ImplicitCastExpr 0x7fc743834808 <col:24, col:27> 'rtx':'struct rtx_def *' <LValueToRValue>
+|               |   |           `-ParenExpr 0x7fc7438347e8 <col:24, col:27> 'rtx':'struct rtx_def *' lvalue
+|               |   |             `-DeclRefExpr 0x7fc743834790 <col:25> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7fc74382d210 'op' 'rtx':'struct rtx_def *'
+|               |   `-ImplicitCastExpr 0x7fc743834918 <col:39> 'unsigned int' <IntegralCast>
+|               |     `-DeclRefExpr 0x7fc7438348d8 <col:39> 'int' EnumConstant 0x7fc743814ad0 'CONST_INT' 'int'
+|               `-ParenExpr 0x7fc743834ab8 <line:69:9, col:36> 'int'
+|                 `-ParenExpr 0x7fc743834a98 <col:10, col:35> 'int'
+|                   `-BinaryOperator 0x7fc743834a70 <col:11, col:34> 'int' '=='
+|                     |-ParenExpr 0x7fc743834a18 <col:11, col:29> 'long long'
+|                     | `-BinaryOperator 0x7fc7438349f0 <col:12, col:19> 'long long' '&'
+|                     |   |-ImplicitCastExpr 0x7fc7438349c0 <col:12> 'long long' <LValueToRValue>
+|                     |   | `-DeclRefExpr 0x7fc743834978 <col:12> 'long long' lvalue Var 0x7fc74382d3d8 'ival' 'long long'
+|                     |   `-ImplicitCastExpr 0x7fc7438349d8 <col:19> 'long long' <IntegralCast>
+|                     |     `-IntegerLiteral 0x7fc7438349a0 <col:19> 'unsigned int' 4294901760
+|                     `-ImplicitCastExpr 0x7fc743834a58 <col:34> 'long long' <IntegralCast>
+|                       `-IntegerLiteral 0x7fc743834a38 <col:34> 'int' 0
+`-FunctionDecl 0x7fc743834de8 <line:72:1, line:80:1> line:73:1 constraint_satisfied_p 'int (rtx, enum constraint_num)'
+  |-ParmVarDecl 0x7fc743834c20 <col:25, col:29> col:29 used op 'rtx':'struct rtx_def *'
+  |-ParmVarDecl 0x7fc743834cd0 <col:33, col:53> col:53 used c 'enum constraint_num':'enum constraint_num'
+  `-CompoundStmt 0x7fc7438350d0 <line:74:1, line:80:1>
+    `-SwitchStmt 0x7fc743834ef0 <line:75:3, line:79:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc743834ed8 <line:75:11> 'unsigned int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc743834ec0 <col:11> 'enum constraint_num':'enum constraint_num' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc743834e98 <col:11> 'enum constraint_num':'enum constraint_num' lvalue ParmVar 0x7fc743834cd0 'c' 'enum constraint_num':'enum constraint_num'
+      `-CompoundStmt 0x7fc7438350a0 <line:76:5, line:79:5>
+        `-CaseStmt 0x7fc743834f48 <line:77:5, line:78:40>
+          |-ImplicitCastExpr 0x7fc7438350b8 <line:77:10> 'unsigned int' <IntegralCast>
+          | `-DeclRefExpr 0x7fc743834f20 <col:10> 'int' EnumConstant 0x7fc74382c300 'CONSTRAINT_j' 'int'
+          |-<<<NULL>>>
+          `-ReturnStmt 0x7fc743835088 <line:78:7, col:40>
+            `-CallExpr 0x7fc743835040 <col:14, col:40> 'int'
+              |-ImplicitCastExpr 0x7fc743835028 <col:14> 'int (*)(rtx)' <FunctionToPointerDecay>
+              | `-DeclRefExpr 0x7fc743834f80 <col:14> 'int (rtx)' Function 0x7fc74382d318 'satisfies_constraint_j' 'int (rtx)'
+              `-ImplicitCastExpr 0x7fc743835070 <col:38> 'rtx':'struct rtx_def *' <LValueToRValue>
+                `-DeclRefExpr 0x7fc743834fa8 <col:38> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7fc743834c20 'op' 'rtx':'struct rtx_def *'

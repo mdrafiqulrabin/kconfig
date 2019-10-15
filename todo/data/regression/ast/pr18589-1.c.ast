@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7ffad8825ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffad88678d8 <../Data/C2AST/pr18589-1.c:4:1, line:7:1> line:4:8 baz 'double (double, double)'
+  |-ParmVarDecl 0x7ffad8826978 <col:13, col:20> col:20 used x 'double'
+  |-ParmVarDecl 0x7ffad8867800 <col:23, col:30> col:30 used y 'double'
+  `-CompoundStmt 0x7ffad8867cf8 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7ffad8867ce0 <line:6:3, col:38>
+      `-BinaryOperator 0x7ffad8867cb8 <col:10, col:38> 'double' '*'
+        |-BinaryOperator 0x7ffad8867c50 <col:10, col:34> 'double' '*'
+        | |-BinaryOperator 0x7ffad8867be8 <col:10, col:30> 'double' '*'
+        | | |-BinaryOperator 0x7ffad8867b80 <col:10, col:26> 'double' '*'
+        | | | |-BinaryOperator 0x7ffad8867b18 <col:10, col:22> 'double' '*'
+        | | | | |-BinaryOperator 0x7ffad8867ab0 <col:10, col:18> 'double' '*'
+        | | | | | |-BinaryOperator 0x7ffad8867a48 <col:10, col:14> 'double' '*'
+        | | | | | | |-ImplicitCastExpr 0x7ffad8867a18 <col:10> 'double' <LValueToRValue>
+        | | | | | | | `-DeclRefExpr 0x7ffad88679c8 <col:10> 'double' lvalue ParmVar 0x7ffad8826978 'x' 'double'
+        | | | | | | `-ImplicitCastExpr 0x7ffad8867a30 <col:14> 'double' <LValueToRValue>
+        | | | | | |   `-DeclRefExpr 0x7ffad88679f0 <col:14> 'double' lvalue ParmVar 0x7ffad8826978 'x' 'double'
+        | | | | | `-ImplicitCastExpr 0x7ffad8867a98 <col:18> 'double' <LValueToRValue>
+        | | | | |   `-DeclRefExpr 0x7ffad8867a70 <col:18> 'double' lvalue ParmVar 0x7ffad8826978 'x' 'double'
+        | | | | `-ImplicitCastExpr 0x7ffad8867b00 <col:22> 'double' <LValueToRValue>
+        | | | |   `-DeclRefExpr 0x7ffad8867ad8 <col:22> 'double' lvalue ParmVar 0x7ffad8826978 'x' 'double'
+        | | | `-ImplicitCastExpr 0x7ffad8867b68 <col:26> 'double' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7ffad8867b40 <col:26> 'double' lvalue ParmVar 0x7ffad8867800 'y' 'double'
+        | | `-ImplicitCastExpr 0x7ffad8867bd0 <col:30> 'double' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7ffad8867ba8 <col:30> 'double' lvalue ParmVar 0x7ffad8867800 'y' 'double'
+        | `-ImplicitCastExpr 0x7ffad8867c38 <col:34> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffad8867c10 <col:34> 'double' lvalue ParmVar 0x7ffad8867800 'y' 'double'
+        `-ImplicitCastExpr 0x7ffad8867ca0 <col:38> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7ffad8867c78 <col:38> 'double' lvalue ParmVar 0x7ffad8867800 'y' 'double'

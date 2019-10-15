@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa16c81d0e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa16c000a68 <../Data/C2AST/pr67215-1.c:4:1, col:22> col:14 used bar 'char *(int)' extern
+| `-ParmVarDecl 0x7fa16c81dd78 <col:19> col:22 'int'
+|-VarDecl 0x7fa16c000bd0 <line:5:1, col:20> col:14 used arr 'char *[32]' extern
+`-FunctionDecl 0x7fa16c000cf0 <line:7:1, line:14:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa16c001150 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fa16c000e08 <line:10:3, col:8>
+    | `-VarDecl 0x7fa16c000da8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fa16c001118 <line:12:3, line:13:22>
+      |-BinaryOperator 0x7fa16c000e68 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fa16c000e20 <col:8> 'int' lvalue Var 0x7fa16c000da8 'i' 'int'
+      | `-IntegerLiteral 0x7fa16c000e48 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa16c000ef0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa16c000ed8 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa16c000e90 <col:15> 'int' lvalue Var 0x7fa16c000da8 'i' 'int'
+      | `-IntegerLiteral 0x7fa16c000eb8 <col:19> 'int' 32
+      |-UnaryOperator 0x7fa16c000f40 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fa16c000f18 <col:23> 'int' lvalue Var 0x7fa16c000da8 'i' 'int'
+      `-BinaryOperator 0x7fa16c0010f0 <line:13:5, col:22> 'char *' '='
+        |-ArraySubscriptExpr 0x7fa16c001008 <col:5, col:10> 'char *' lvalue
+        | |-ImplicitCastExpr 0x7fa16c000fd8 <col:5> 'char **' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fa16c000f60 <col:5> 'char *[32]' lvalue Var 0x7fa16c000bd0 'arr' 'char *[32]'
+        | `-ImplicitCastExpr 0x7fa16c000ff0 <col:9> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fa16c000f88 <col:9> 'int' lvalue Var 0x7fa16c000da8 'i' 'int'
+        `-CallExpr 0x7fa16c0010c0 <col:14, col:22> 'char *'
+          |-ImplicitCastExpr 0x7fa16c0010a8 <col:14> 'char *(*)(int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fa16c001030 <col:14> 'char *(int)' Function 0x7fa16c000a68 'bar' 'char *(int)'
+          `-IntegerLiteral 0x7fa16c001058 <col:19> 'int' 128

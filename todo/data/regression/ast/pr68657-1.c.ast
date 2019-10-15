@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fae568080e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fae56838020 <../Data/C2AST/pr68657-1.c:5:1, line:10:1> line:6:1 f1 'void (void)'
+| `-CompoundStmt 0x7fae56838260 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7fae568381d0 <line:8:3, col:22>
+|   | `-VarDecl 0x7fae56838118 <col:3, col:21> col:16 used a 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fae568381b8 <col:20, col:21> 'unsigned int' <IntegralCast>
+|   |     `-UnaryOperator 0x7fae56838198 <col:20, col:21> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7fae56838178 <col:21> 'int' 5
+|   `-CStyleCastExpr 0x7fae56838238 <line:9:3, col:10> 'void' <ToVoid>
+|     `-ImplicitCastExpr 0x7fae56838220 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fae568381e8 <col:10> 'unsigned int' lvalue Var 0x7fae56838118 'a' 'unsigned int'
+|-FunctionDecl 0x7fae56838348 <line:12:1, line:16:1> line:13:1 f2 'int (void)'
+| `-CompoundStmt 0x7fae56838438 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7fae56838420 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7fae56838408 <col:10> 'int' <FloatingToIntegral>
+|       `-FloatingLiteral 0x7fae568383e8 <col:10> 'float' 3.100000e+00
+|-FunctionDecl 0x7fae56838538 <line:18:1, col:15> col:5 used f3 'int (char *)'
+| `-ParmVarDecl 0x7fae56838468 <col:9, col:14> col:15 'char *'
+`-FunctionDecl 0x7fae56838678 <line:20:1, line:25:1> line:21:1 f4 'int (void)'
+  `-CompoundStmt 0x7fae56838900 <line:22:1, line:25:1>
+    |-DeclStmt 0x7fae568387f8 <line:23:3, col:19>
+    | `-VarDecl 0x7fae56838798 <col:3, col:18> col:8 used buf 'char [131072]'
+    `-ReturnStmt 0x7fae568388e8 <line:24:3, col:17>
+      `-CallExpr 0x7fae568388a0 <col:10, col:17> 'int'
+        |-ImplicitCastExpr 0x7fae56838888 <col:10> 'int (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fae56838810 <col:10> 'int (char *)' Function 0x7fae56838538 'f3' 'int (char *)'
+        `-ImplicitCastExpr 0x7fae568388d0 <col:14> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fae56838838 <col:14> 'char [131072]' lvalue Var 0x7fae56838798 'buf' 'char [131072]'

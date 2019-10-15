@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fe3b482bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe3b5666d20 <../Data/C2AST/pr55448.c:6:1, line:9:1> line:6:22 used add1 '__m256 (const __m256 *, const __m256 *)' static inline
+| |-ParmVarDecl 0x7fe3b5666b98 <col:27, col:41> col:41 used a 'const __m256 *'
+| |-ParmVarDecl 0x7fe3b5666c08 <col:44, col:58> col:58 used b 'const __m256 *'
+| `-CompoundStmt 0x7fe3b5666f50 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fe3b5666f38 <line:8:3, col:30>
+|     `-CallExpr 0x7fe3b5666ed0 <col:10, col:30> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|       |-ImplicitCastExpr 0x7fe3b5666eb8 <col:10> '__m256 (*)(__m256, __m256)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe3b5666dd0 <col:10> '__m256 (__m256, __m256)' Function 0x7fe3b51af4d0 '_mm256_add_ps' '__m256 (__m256, __m256)'
+|       |-ImplicitCastExpr 0x7fe3b5666f08 <col:24, col:25> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|       | `-UnaryOperator 0x7fe3b5666e38 <col:24, col:25> 'const __m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float const' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7fe3b5666e20 <col:25> 'const __m256 *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fe3b5666df8 <col:25> 'const __m256 *' lvalue ParmVar 0x7fe3b5666b98 'a' 'const __m256 *'
+|       `-ImplicitCastExpr 0x7fe3b5666f20 <col:28, col:29> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|         `-UnaryOperator 0x7fe3b5666e98 <col:28, col:29> 'const __m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float const' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fe3b5666e80 <col:29> 'const __m256 *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe3b5666e58 <col:29> 'const __m256 *' lvalue ParmVar 0x7fe3b5666c08 'b' 'const __m256 *'
+|-FunctionDecl 0x7fe3b5667100 <line:11:1, line:14:1> line:11:6 foo1 'void (__m256 *, const __m256)'
+| |-ParmVarDecl 0x7fe3b5666f78 <col:11, col:19> col:19 used a '__m256 *'
+| |-ParmVarDecl 0x7fe3b5666fe8 <col:22, col:35> col:35 used b 'const __m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float const'
+| `-CompoundStmt 0x7fe3b56673b0 <line:12:1, line:14:1>
+|   `-BinaryOperator 0x7fe3b5667388 <line:13:3, col:18> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' '='
+|     |-UnaryOperator 0x7fe3b56671f0 <col:3, col:4> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fe3b56671d8 <col:4> '__m256 *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe3b56671b0 <col:4> '__m256 *' lvalue ParmVar 0x7fe3b5666f78 'a' '__m256 *'
+|     `-CallExpr 0x7fe3b5667320 <col:8, col:18> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|       |-ImplicitCastExpr 0x7fe3b5667308 <col:8> '__m256 (*)(const __m256 *, const __m256 *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe3b5667210 <col:8> '__m256 (const __m256 *, const __m256 *)' Function 0x7fe3b5666d20 'add1' '__m256 (const __m256 *, const __m256 *)'
+|       |-ImplicitCastExpr 0x7fe3b5667370 <col:13> 'const __m256 *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fe3b5667358 <col:13> '__m256 *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe3b5667238 <col:13> '__m256 *' lvalue ParmVar 0x7fe3b5666f78 'a' '__m256 *'
+|       `-UnaryOperator 0x7fe3b5667288 <col:16, col:17> 'const __m256 *' prefix '&'
+|         `-DeclRefExpr 0x7fe3b5667260 <col:17> 'const __m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float const' lvalue ParmVar 0x7fe3b5666fe8 'b' 'const __m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float const'
+|-FunctionDecl 0x7fe3b5667560 <line:16:1, line:19:1> line:16:22 used add2 '__m128 (const __m128 *, const __m128 *)' static inline
+| |-ParmVarDecl 0x7fe3b56673d8 <col:27, col:41> col:41 used a 'const __m128 *'
+| |-ParmVarDecl 0x7fe3b5667448 <col:44, col:58> col:58 used b 'const __m128 *'
+| `-CompoundStmt 0x7fe3b5667790 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7fe3b5667778 <line:18:3, col:27>
+|     `-CallExpr 0x7fe3b5667710 <col:10, col:27> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |-ImplicitCastExpr 0x7fe3b56676f8 <col:10> '__m128 (*)(__m128, __m128)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe3b5667610 <col:10> '__m128 (__m128, __m128)' Function 0x7fe3b600f050 '_mm_add_ps' '__m128 (__m128, __m128)'
+|       |-ImplicitCastExpr 0x7fe3b5667748 <col:21, col:22> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       | `-UnaryOperator 0x7fe3b5667678 <col:21, col:22> 'const __m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float const' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7fe3b5667660 <col:22> 'const __m128 *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fe3b5667638 <col:22> 'const __m128 *' lvalue ParmVar 0x7fe3b56673d8 'a' 'const __m128 *'
+|       `-ImplicitCastExpr 0x7fe3b5667760 <col:25, col:26> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|         `-UnaryOperator 0x7fe3b56676d8 <col:25, col:26> 'const __m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float const' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fe3b56676c0 <col:26> 'const __m128 *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe3b5667698 <col:26> 'const __m128 *' lvalue ParmVar 0x7fe3b5667448 'b' 'const __m128 *'
+`-FunctionDecl 0x7fe3b5667940 <line:21:1, line:24:1> line:21:6 foo2 'void (__m128 *, const __m128)'
+  |-ParmVarDecl 0x7fe3b56677b8 <col:11, col:19> col:19 used a '__m128 *'
+  |-ParmVarDecl 0x7fe3b5667828 <col:22, col:35> col:35 used b 'const __m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float const'
+  `-CompoundStmt 0x7fe3b5667bf0 <line:22:1, line:24:1>
+    `-BinaryOperator 0x7fe3b5667bc8 <line:23:3, col:18> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+      |-UnaryOperator 0x7fe3b5667a30 <col:3, col:4> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe3b5667a18 <col:4> '__m128 *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe3b56679f0 <col:4> '__m128 *' lvalue ParmVar 0x7fe3b56677b8 'a' '__m128 *'
+      `-CallExpr 0x7fe3b5667b60 <col:8, col:18> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |-ImplicitCastExpr 0x7fe3b5667b48 <col:8> '__m128 (*)(const __m128 *, const __m128 *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fe3b5667a50 <col:8> '__m128 (const __m128 *, const __m128 *)' Function 0x7fe3b5667560 'add2' '__m128 (const __m128 *, const __m128 *)'
+        |-ImplicitCastExpr 0x7fe3b5667bb0 <col:13> 'const __m128 *' <BitCast>
+        | `-ImplicitCastExpr 0x7fe3b5667b98 <col:13> '__m128 *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe3b5667a78 <col:13> '__m128 *' lvalue ParmVar 0x7fe3b56677b8 'a' '__m128 *'
+        `-UnaryOperator 0x7fe3b5667ac8 <col:16, col:17> 'const __m128 *' prefix '&'
+          `-DeclRefExpr 0x7fe3b5667aa0 <col:17> 'const __m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float const' lvalue ParmVar 0x7fe3b5667828 'b' 'const __m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float const'

@@ -1,0 +1,27 @@
+../Data/C2AST/pr41993.c:7:3: error: use of unknown builtin '__builtin_return' [-Wimplicit-function-declaration]
+  __builtin_return (rframe);
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fb3fe01a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb3fe01ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb3fe01ab80 '__int128'
+|-TypedefDecl 0x7fb3fe01aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb3fe01aba0 'unsigned __int128'
+|-TypedefDecl 0x7fb3fe01b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb3fe01afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb3fe01af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb3fe01b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb3fe01b200 'char *'
+|   `-BuiltinType 0x7fb3fe01a980 'char'
+|-TypedefDecl 0x7fb3fe01b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb3fe01b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb3fe01b320 'struct __va_list_tag'
+|     `-Record 0x7fb3fe01b298 '__va_list_tag'
+`-FunctionDecl 0x7fb3fd833c68 <../Data/C2AST/pr41993.c:5:1, line:8:1> line:5:7 retframe_short 'short (void *)'
+  |-ParmVarDecl 0x7fb3fe01b578 <col:23, col:29> col:29 used rframe 'void *'
+  `-CompoundStmt 0x7fb3fd833f48 <line:6:1, line:8:1>
+    `-CallExpr 0x7fb3fd833f00 <line:7:3, col:27> 'int'
+      |-ImplicitCastExpr 0x7fb3fd833ee8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb3fd833e70 <col:3> 'int ()' Function 0x7fb3fd833dc0 '__builtin_return' 'int ()'
+      `-ImplicitCastExpr 0x7fb3fd833f30 <col:21> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fb3fd833e98 <col:21> 'void *' lvalue ParmVar 0x7fb3fe01b578 'rframe' 'void *'

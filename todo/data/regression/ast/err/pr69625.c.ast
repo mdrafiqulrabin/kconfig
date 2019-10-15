@@ -1,0 +1,107 @@
+../Data/C2AST/pr69625.c:14:44: error: unknown register name 'r6' in asm
+  __asm__ __volatile__ ("lhi %%r6,1" : : : "r6");
+                                           ^
+TranslationUnitDecl 0x7ff7df8166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff7df816c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff7df816980 '__int128'
+|-TypedefDecl 0x7ff7df816cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff7df8169a0 'unsigned __int128'
+|-TypedefDecl 0x7ff7df816fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff7df816db0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff7df816d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff7df817040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff7df817000 'char *'
+|   `-BuiltinType 0x7ff7df816780 'char'
+|-TypedefDecl 0x7ff7df817308 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff7df8172b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff7df817120 'struct __va_list_tag'
+|     `-Record 0x7ff7df817098 '__va_list_tag'
+|-FunctionDecl 0x7ff7e0000050 <../Data/C2AST/pr69625.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff7e00000f0 prev 0x7ff7e0000050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff7e0000278 <line:7:1, line:21:1> line:9:1 used foo 'int (int, ...)'
+| |-ParmVarDecl 0x7ff7e00001a8 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7ff7e0000dd0 <line:10:1, line:21:1>
+| | |-DeclStmt 0x7ff7e0000440 <line:11:3, col:23>
+| | | `-VarDecl 0x7ff7e00003e0 <col:3, col:21> col:21 used vl '__builtin_va_list':'struct __va_list_tag [1]'
+| | |-DeclStmt 0x7ff7e00004d0 <line:12:3, col:8>
+| | | `-VarDecl 0x7ff7e0000470 <col:3, col:7> col:7 used i 'int'
+| | |-CallExpr 0x7ff7e0000840 <line:15:3, col:27> 'void'
+| | | |-ImplicitCastExpr 0x7ff7e0000828 <col:3> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7ff7e0000788 <col:3> '<builtin fn type>' Function 0x7ff7e0000638 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+| | | |-ImplicitCastExpr 0x7ff7e0000878 <col:22> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | | | `-DeclRefExpr 0x7ff7e00007b0 <col:22> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7ff7e00003e0 'vl' '__builtin_va_list':'struct __va_list_tag [1]'
+| | | `-DeclRefExpr 0x7ff7e00007d8 <col:26> 'int' lvalue ParmVar 0x7ff7e00001a8 'x' 'int'
+| | |-ForStmt 0x7ff7e0000ad8 <line:16:3, line:17:34>
+| | | |-BinaryOperator 0x7ff7e00008d8 <line:16:8, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7ff7e0000890 <col:8> 'int' lvalue Var 0x7ff7e0000470 'i' 'int'
+| | | | `-IntegerLiteral 0x7ff7e00008b8 <col:12> 'int' 2
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ff7e0000960 <col:15, col:20> 'int' '<='
+| | | | |-ImplicitCastExpr 0x7ff7e0000948 <col:15> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7ff7e0000900 <col:15> 'int' lvalue Var 0x7ff7e0000470 'i' 'int'
+| | | | `-IntegerLiteral 0x7ff7e0000928 <col:20> 'int' 6
+| | | |-UnaryOperator 0x7ff7e00009b0 <col:23, col:24> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7ff7e0000988 <col:23> 'int' lvalue Var 0x7ff7e0000470 'i' 'int'
+| | | `-CompoundAssignOperator 0x7ff7e0000aa0 <line:17:5, col:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+| | |   |-DeclRefExpr 0x7ff7e00009d0 <col:5> 'int' lvalue ParmVar 0x7ff7e00001a8 'x' 'int'
+| | |   `-VAArgExpr 0x7ff7e0000a78 <col:10, col:34> 'int'
+| | |     `-ImplicitCastExpr 0x7ff7e0000a60 <col:27> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |       `-DeclRefExpr 0x7ff7e00009f8 <col:27> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7ff7e00003e0 'vl' '__builtin_va_list':'struct __va_list_tag [1]'
+| | |-CallExpr 0x7ff7e0000d30 <line:18:3, col:23> 'void'
+| | | |-ImplicitCastExpr 0x7ff7e0000d18 <col:3> 'void (*)(struct __va_list_tag *)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7ff7e0000c98 <col:3> '<builtin fn type>' Function 0x7ff7e0000b48 '__builtin_va_end' 'void (struct __va_list_tag *)'
+| | | `-ImplicitCastExpr 0x7ff7e0000d60 <co1 error generated.
+l:21> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |   `-DeclRefExpr 0x7ff7e0000cc0 <col:21> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7ff7e00003e0 'vl' '__builtin_va_list':'struct __va_list_tag [1]'
+| | `-ReturnStmt 0x7ff7e0000db8 <line:20:3, col:10>
+| |   `-ImplicitCastExpr 0x7ff7e0000da0 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7ff7e0000d78 <col:10> 'int' lvalue ParmVar 0x7ff7e00001a8 'x' 'int'
+| `-NoInlineAttr 0x7ff7e0000320 <line:7:17>
+|-FunctionDecl 0x7ff7e0000638 <line:15:3> col:3 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+| |-ParmVarDecl 0x7ff7e00006d8 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7ff7e0000740 <col:3> Implicit
+|-FunctionDecl 0x7ff7e0000b48 <line:18:3> col:3 implicit used __builtin_va_end 'void (struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7ff7e0000be8 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7ff7e0000c50 <col:3> Implicit
+|-FunctionDecl 0x7ff7df86fd20 <line:23:1, line:30:1> line:25:1 used bar 'void (int, int, int, int, int)'
+| |-ParmVarDecl 0x7ff7e0000e28 <col:6, col:10> col:10 used r2 'int'
+| |-ParmVarDecl 0x7ff7e0000ea0 <col:14, col:18> col:18 used r3 'int'
+| |-ParmVarDecl 0x7ff7e0000f18 <col:22, col:26> col:26 used r4 'int'
+| |-ParmVarDecl 0x7ff7e0000f90 <col:30, col:34> col:34 used r5 'int'
+| |-ParmVarDecl 0x7ff7df86fc18 <col:38, col:42> col:42 used r6 'int'
+| |-CompoundStmt 0x7ff7df870180 <line:26:1, line:30:1>
+| | |-CallExpr 0x7ff7df86ff60 <line:27:3, col:26> 'int'
+| | | |-ImplicitCastExpr 0x7ff7df86ff48 <col:3> 'int (*)(int, ...)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7ff7df86fe30 <col:3> 'int (int, ...)' Function 0x7ff7e0000278 'foo' 'int (int, ...)'
+| | | |-ImplicitCastExpr 0x7ff7df86ffb0 <col:8> 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7ff7df86fe58 <col:8> 'int' lvalue ParmVar 0x7ff7e0000e28 'r2' 'int'
+| | | |-ImplicitCastExpr 0x7ff7df86ffc8 <col:12> 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7ff7df86fe80 <col:12> 'int' lvalue ParmVar 0x7ff7e0000ea0 'r3' 'int'
+| | | |-ImplicitCastExpr 0x7ff7df86ffe0 <col:16> 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7ff7df86fea8 <col:16> 'int' lvalue ParmVar 0x7ff7e0000f18 'r4' 'int'
+| | | |-ImplicitCastExpr 0x7ff7df86fff8 <col:20> 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7ff7df86fed0 <col:20> 'int' lvalue ParmVar 0x7ff7e0000f90 'r5' 'int'
+| | | `-ImplicitCastExpr 0x7ff7df870010 <col:24> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7ff7df86fef8 <col:24> 'int' lvalue ParmVar 0x7ff7df86fc18 'r6' 'int'
+| | `-IfStmt 0x7ff7df870148 <line:28:3, line:29:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff7df870088 <line:28:7, col:13> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7ff7df870070 <col:7> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7ff7df870028 <col:7> 'int' lvalue ParmVar 0x7ff7df86fc18 'r6' 'int'
+| |   | `-IntegerLiteral 0x7ff7df870050 <col:13> 'int' 6
+| |   |-CallExpr 0x7ff7df870120 <line:29:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7ff7df870108 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7ff7df8700b0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff7e00000f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff7df86fde8 <line:23:17>
+`-FunctionDecl 0x7ff7df870268 <line:32:1, line:36:1> line:33:1 main 'int (void)'
+  `-CompoundStmt 0x7ff7df870490 <line:34:1, line:36:1>
+    `-CallExpr 0x7ff7df870440 <line:35:3, col:21> 'void'
+      |-ImplicitCastExpr 0x7ff7df870428 <col:3> 'void (*)(int, int, int, int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff7df870338 <col:3> 'void (int, int, int, int, int)' Function 0x7ff7df86fd20 'bar' 'void (int, int, int, int, int)'
+      |-IntegerLiteral 0x7ff7df870360 <col:8> 'int' 2
+      |-IntegerLiteral 0x7ff7df870380 <col:11> 'int' 3
+      |-IntegerLiteral 0x7ff7df8703a0 <col:14> 'int' 4
+      |-IntegerLiteral 0x7ff7df8703c0 <col:17> 'int' 5
+      `-IntegerLiteral 0x7ff7df8703e0 <col:20> 'int' 6

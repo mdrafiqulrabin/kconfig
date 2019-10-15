@@ -1,0 +1,85 @@
+TranslationUnitDecl 0x7fd6aa0234e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd6aa0661f0 <../Data/C2AST/pr21518.c:6:1, line:7:47> col:1 used drawPointsLines 'void (char, int, int *) __attribute__((regparm (3)))' extern
+| |-ParmVarDecl 0x7fd6aa024190 <col:18, col:23> col:23 type 'char'
+| |-ParmVarDecl 0x7fd6aa066018 <col:29, col:33> col:33 first 'int'
+| `-ParmVarDecl 0x7fd6aa0660c0 <col:40, col:45> col:45 dd 'int *'
+`-FunctionDecl 0x7fd6aa0663c8 <line:9:1, line:33:1> line:10:1 do_locator 'int (int *)'
+  |-ParmVarDecl 0x7fd6aa066300 <col:13, col:18> col:18 used call 'int *'
+  `-CompoundStmt 0x7fd6aa066fb8 <line:11:1, line:33:1>
+    |-DeclStmt 0x7fd6aa0664e0 <line:12:3, col:18>
+    | `-VarDecl 0x7fd6aa066480 <col:3, col:8> col:8 used prephitmp5 'char'
+    |-DeclStmt 0x7fd6aa066570 <line:13:3, col:11>
+    | `-VarDecl 0x7fd6aa066510 <col:3, col:7> col:7 used type 'int'
+    |-DeclStmt 0x7fd6aa066600 <line:14:3, col:8>
+    | `-VarDecl 0x7fd6aa0665a0 <col:3, col:7> col:7 used i 'int'
+    |-IfStmt 0x7fd6aa066dd0 <line:16:3, line:30:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd6aa066690 <line:16:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fd6aa066660 <col:7> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd6aa066618 <col:7> 'int *' lvalue ParmVar 0x7fd6aa066300 'call' 'int *'
+    | | `-ImplicitCastExpr 0x7fd6aa066678 <col:15> 'int *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7fd6aa066640 <col:15> 'int' 0
+    | |-BinaryOperator 0x7fd6aa066718 <line:17:5, col:18> 'char' '='
+    | | |-DeclRefExpr 0x7fd6aa0666b8 <col:5> 'char' lvalue Var 0x7fd6aa066480 'prephitmp5' 'char'
+    | | `-ImplicitCastExpr 0x7fd6aa066700 <col:18> 'char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fd6aa0666e0 <col:18> 'int' 1
+    | `-CompoundStmt 0x7fd6aa066da0 <line:19:5, line:30:5>
+    |   |-BinaryOperator 0x7fd6aa0667e0 <line:20:7, col:15> 'int' '='
+    |   | |-DeclRefExpr 0x7fd6aa066740 <col:7> 'int' lvalue Var 0x7fd6aa066510 'type' 'int'
+    |   | `-ImplicitCastExpr 0x7fd6aa0667c8 <col:14, col:15> 'int' <LValueToRValue>
+    |   |   `-UnaryOperator 0x7fd6aa0667a8 <col:14, col:15> 'int' lvalue prefix '*'
+    |   |     `-ImplicitCastExpr 0x7fd6aa066790 <col:15> 'int *' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fd6aa066768 <col:15> 'int *' lvalue ParmVar 0x7fd6aa066300 'call' 'int *'
+    |   |-BinaryOperator 0x7fd6aa066850 <line:21:7, col:11> 'int' '='
+    |   | |-DeclRefExpr 0x7fd6aa066808 <col:7> 'int' lvalue Var 0x7fd6aa0665a0 'i' 'int'
+    |   | `-IntegerLiteral 0x7fd6aa066830 <col:11> 'int' 0
+    |   |-DoStmt 0x7fd6aa066cb8 <line:22:7, line:28:20>
+    |   | |-CompoundStmt 0x7fd6aa066c10 <line:23:2, line:27:2>
+    |   | | |-IfStmt 0x7fd6aa066b00 <line:24:4, line:25:49>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-<<<NULL>>>
+    |   | | | |-BinaryOperator 0x7fd6aa0668f8 <line:24:8, col:13> 'int' '!='
+    |   | | | | |-ImplicitCastExpr 0x7fd6aa0668c8 <col:8> 'int' <LValueToRValue>
+    |   | | | | | `-DeclRefExpr 0x7fd6aa066878 <col:8> 'int' lvalue Var 0x7fd6aa0665a0 'i' 'int'
+    |   | | | | `-ImplicitCastExpr 0x7fd6aa0668e0 <col:13> 'int' <LValueToRValue>
+    |   | | | |   `-DeclRefExpr 0x7fd6aa0668a0 <col:13> 'int' lvalue Var 0x7fd6aa066510 'type' 'int'
+    |   | | | |-CallExpr 0x7fd6aa066a90 <line:25:6, col:49> 'void'
+    |   | | | | |-ImplicitCastExpr 0x7fd6aa066a78 <col:6> 'void (*)(char, int, int *) __attribute__((regparm (3)))' <FunctionToPointerDecay>
+    |   | | | | | `-DeclRefExpr 0x7fd6aa066920 <col:6> 'void (char, int, int *) __attribute__((regparm (3)))' Function 0x7fd6aa0661f0 'drawPointsLines' 'void (char, int, int *) __attribute__((regparm (3)))'
+    |   | | | | |-ImplicitCastExpr 0x7fd6aa066ad0 <col:23, col:36> 'char' <IntegralCast>
+    |   | | | | | `-CStyleCastExpr 0x7fd6aa0669d8 <col:23, col:36> 'int' <IntegralCast>
+    |   | | | | |   `-CStyleCastExpr 0x7fd6aa066998 <col:29, col:36> 'char' <IntegralCast>
+    |   | | | | |     `-ImplicitCastExpr 0x7fd6aa066980 <col:36> 'int' <LValueToRValue>
+    |   | | | | |       `-DeclRefExpr 0x7fd6aa066948 <col:36> 'int' lvalue Var 0x7fd6aa066510 'type' 'int'
+    |   | | | | |-IntegerLiteral 0x7fd6aa066a00 <col:42> 'int' 0
+    |   | | | | `-ImplicitCastExpr 0x7fd6aa066ae8 <col:45> 'int *' <LValueToRValue>
+    |   | | | |   `-DeclRefExpr 0x7fd6aa066a20 <col:45> 'int *' lvalue ParmVar 0x7fd6aa066300 'call' 'int *'
+    |   | | | `-<<<NULL>>>
+    |   | | `-BinaryOperator 0x7fd6aa066be8 <line:26:4, col:12> 'int' '='
+    |   | |   |-DeclRefExpr 0x7fd6aa066b38 <col:4> 'int' lvalue Var 0x7fd6aa0665a0 'i' 'int'
+    |   | |   `-BinaryOperator 0x7fd6aa066bc0 <col:8, col:12> 'int' '+'
+    |   | |     |-ImplicitCastExpr 0x7fd6aa066ba8 <col:8> 'int' <LValueToRValue>
+    |   | |     | `-DeclRefExpr 0x7fd6aa066b60 <col:8> 'int' lvalue Var 0x7fd6aa0665a0 'i' 'int'
+    |   | |     `-IntegerLiteral 0x7fd6aa066b88 <col:12> 'int' 1
+    |   | `-BinaryOperator 0x7fd6aa066c90 <line:28:14, col:19> 'int' '!='
+    |   |   |-ImplicitCastExpr 0x7fd6aa066c78 <col:14> 'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fd6aa066c30 <col:14> 'int' lvalue Var 0x7fd6aa0665a0 'i' 'int'
+    |   |   `-IntegerLiteral 0x7fd6aa066c58 <col:19> 'int' 2
+    |   `-BinaryOperator 0x7fd6aa066d78 <line:29:7, col:27> 'char' '='
+    |     |-DeclRefExpr 0x7fd6aa066cd8 <col:7> 'char' lvalue Var 0x7fd6aa066480 'prephitmp5' 'char'
+    |     `-CStyleCastExpr 0x7fd6aa066d50 <col:20, col:27> 'char' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fd6aa066d38 <col:27> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fd6aa066d00 <col:27> 'int' lvalue Var 0x7fd6aa066510 'type' 'int'
+    |-CallExpr 0x7fd6aa066f10 <line:31:3, col:45> 'void'
+    | |-ImplicitCastExpr 0x7fd6aa066ef8 <col:3> 'void (*)(char, int, int *) __attribute__((regparm (3)))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd6aa066e08 <col:3> 'void (char, int, int *) __attribute__((regparm (3)))' Function 0x7fd6aa0661f0 'drawPointsLines' 'void (char, int, int *) __attribute__((regparm (3)))'
+    | |-ImplicitCastExpr 0x7fd6aa066f50 <col:20, col:26> 'char' <IntegralCast>
+    | | `-CStyleCastExpr 0x7fd6aa066e88 <col:20, col:26> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fd6aa066e70 <col:26> 'char' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fd6aa066e30 <col:26> 'char' lvalue Var 0x7fd6aa066480 'prephitmp5' 'char'
+    | |-IntegerLiteral 0x7fd6aa066eb0 <col:38> 'int' 0
+    | `-ImplicitCastExpr 0x7fd6aa066f68 <col:41> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd6aa066ed0 <col:41> 'int *' lvalue ParmVar 0x7fd6aa066300 'call' 'int *'
+    `-ReturnStmt 0x7fd6aa066fa0 <line:32:3, col:10>
+      `-IntegerLiteral 0x7fd6aa066f80 <col:10> 'int' 0

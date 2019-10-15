@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fa88202bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa88202c978 <../Data/C2AST/pr33667.c:4:15, col:37> col:37 size_t 'unsigned long'
+| `-BuiltinType 0x7fa88202bea0 'unsigned long'
+|-TypedefDecl 0x7fa882814200 <line:5:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fa88202be40 'unsigned char'
+|-TypedefDecl 0x7fa882814270 <line:6:1, col:28> col:28 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7fa88202be60 'unsigned short'
+|-TypedefDecl 0x7fa8828142e0 <line:7:1, col:32> col:32 referenced uint64_t 'unsigned long long'
+| `-BuiltinType 0x7fa88202bec0 'unsigned long long'
+|-RecordDecl 0x7fa882814338 <line:8:1, line:16:1> line:8:8 struct magic definition
+| |-FieldDecl 0x7fa882814410 <line:9:3, col:11> col:11 mask_op 'uint8_t':'unsigned char'
+| |-RecordDecl 0x7fa882814458 <line:10:3, line:12:3> line:10:3 union definition
+| | `-FieldDecl 0x7fa882814530 <line:11:4, col:13> col:13 referenced _mask 'uint64_t':'unsigned long long'
+| |-FieldDecl 0x7fa8828145d0 <line:10:3, line:12:5> col:5 referenced _u 'union (anonymous union at ../Data/C2AST/pr33667.c:10:3)':'union magic::(anonymous at ../Data/C2AST/pr33667.c:10:3)'
+| |-RecordDecl 0x7fa882814618 parent 0x7fa88202bce8 <line:13:3, line:15:3> line:13:9 union VALUETYPE definition
+| | `-FieldDecl 0x7fa882814700 <line:14:4, col:13> col:13 referenced h 'uint16_t':'unsigned short'
+| `-FieldDecl 0x7fa8828147a0 <line:13:3, line:15:5> col:5 value 'union VALUETYPE':'union VALUETYPE'
+`-FunctionDecl 0x7fa882814a90 <line:17:1, line:21:1> line:17:6 cvt_16 'void (union VALUETYPE *, const struct magic *)'
+  |-ParmVarDecl 0x7fa882814870 <col:13, col:30> col:30 used p 'union VALUETYPE *'
+  |-ParmVarDecl 0x7fa882814980 <col:33, col:53> col:53 used m 'const struct magic *'
+  `-CompoundStmt 0x7fa882814e48 <line:18:1, line:21:1>
+    `-IfStmt 0x7fa882814e10 <line:19:3, line:20:30>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fa882814c30 <line:19:7, col:13> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-MemberExpr 0x7fa882814bf8 <col:7, col:13> 'const uint64_t':'const unsigned long long' lvalue ._mask 0x7fa882814530
+      |   `-MemberExpr 0x7fa882814bc0 <col:7, col:10> 'const union (anonymous union at ../Data/C2AST/pr33667.c:10:3)':'const union magic::(anonymous at ../Data/C2AST/pr33667.c:10:3)' lvalue ->_u 0x7fa8828145d0
+      |     `-ImplicitCastExpr 0x7fa882814ba8 <col:7> 'const struct magic *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fa882814b80 <col:7> 'const struct magic *' lvalue ParmVar 0x7fa882814980 'm' 'const struct magic *'
+      |-CompoundAssignOperator 0x7fa882814dd8 <line:20:5, col:30> 'uint16_t':'unsigned short' '%=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-MemberExpr 0x7fa882814c88 <col:5, col:8> 'uint16_t':'unsigned short' lvalue ->h 0x7fa882814700
+      | | `-ImplicitCastExpr 0x7fa882814c70 <col:5> 'union VALUETYPE *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa882814c48 <col:5> 'union VALUETYPE *' lvalue ParmVar 0x7fa882814870 'p' 'union VALUETYPE *'
+      | `-ImplicitCastExpr 0x7fa882814dc0 <col:13, col:30> 'int' <IntegralCast>
+      |   `-CStyleCastExpr 0x7fa882814d98 <col:13, col:30> 'uint16_t':'unsigned short' <IntegralCast>
+      |     `-ImplicitCastExpr 0x7fa882814d80 <col:24, col:30> 'uint64_t':'unsigned long long' <LValueToRValue>
+      |       `-MemberExpr 0x7fa882814d38 <col:24, col:30> 'const uint64_t':'const unsigned long long' lvalue ._mask 0x7fa882814530
+      |         `-MemberExpr 0x7fa882814d00 <col:24, col:27> 'const union (anonymous union at ../Data/C2AST/pr33667.c:10:3)':'const union magic::(anonymous at ../Data/C2AST/pr33667.c:10:3)' lvalue ->_u 0x7fa8828145d0
+      |           `-ImplicitCastExpr 0x7fa882814ce8 <col:24> 'const struct magic *' <LValueToRValue>
+      |             `-DeclRefExpr 0x7fa882814cc0 <col:24> 'const struct magic *' lvalue ParmVar 0x7fa882814980 'm' 'const struct magic *'
+      `-<<<NULL>>>

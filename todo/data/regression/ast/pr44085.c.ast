@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb48282bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb48282c978 <../Data/C2AST/pr44085.c:6:1, col:5> col:5 used thr1 'int'
+|-VarDecl 0x7fb483014258 <col:1, col:11> col:11 used thr2 'int'
+|-FunctionDecl 0x7fb483014390 <line:9:1, line:17:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7fb483014518 <line:11:1, line:17:1>
+|   `-CompoundStmt 0x7fb4830144f8 <line:13:3, line:16:3>
+|     |-UnaryOperator 0x7fb483014458 <line:14:5, col:9> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fb483014430 <col:5> 'int' lvalue Var 0x7fb48282c978 'thr1' 'int'
+|     `-CompoundAssignOperator 0x7fb4830144c0 <line:15:5, col:13> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|       |-DeclRefExpr 0x7fb483014478 <col:5> 'int' lvalue Var 0x7fb483014258 'thr2' 'int'
+|       `-IntegerLiteral 0x7fb4830144a0 <col:13> 'int' 4
+`-FunctionDecl 0x7fb4830145c0 <line:19:1, line:27:1> line:20:1 bar 'void (void)'
+  `-CompoundStmt 0x7fb483014748 <line:21:1, line:27:1>
+    `-CompoundStmt 0x7fb483014728 <line:23:3, line:26:3>
+      |-UnaryOperator 0x7fb483014688 <line:24:5, col:9> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fb483014660 <col:5> 'int' lvalue Var 0x7fb48282c978 'thr1' 'int'
+      `-CompoundAssignOperator 0x7fb4830146f0 <line:25:5, col:13> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+        |-DeclRefExpr 0x7fb4830146a8 <col:5> 'int' lvalue Var 0x7fb483014258 'thr2' 'int'
+        `-IntegerLiteral 0x7fb4830146d0 <col:13> 'int' 4

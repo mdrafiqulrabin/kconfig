@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f81c78118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f81c8014220 <../Data/C2AST/pr57036-1.c:3:1, col:20> col:13 used g 'void (void)' extern
+|-FunctionDecl 0x7f81c8014350 <line:4:1, col:13> col:5 used _setjmp 'int ()'
+| `-ReturnsTwiceAttr 0x7f81c80143f0 <col:5> Implicit
+|-FunctionDecl 0x7f81c8014508 <line:5:1, col:24> col:5 used read_buf_open 'int (void)'
+|-FunctionDecl 0x7f81c80145f8 <line:6:1, line:11:1> line:8:1 used f 'void ()' extern inline
+| |-CompoundStmt 0x7f81c8014778 <line:9:1, line:11:1>
+| | `-CallExpr 0x7f81c8014750 <line:10:3, col:6> 'void'
+| |   `-ImplicitCastExpr 0x7f81c8014738 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7f81c80146e0 <col:3> 'void (void)' Function 0x7f81c8014220 'g' 'void (void)'
+| `-AlwaysInlineAttr 0x7f81c8014698 <line:6:33> always_inline
+|-RecordDecl 0x7f81c8014790 <line:12:1, col:8> col:8 struct __jmp_buf_tag
+|-VarDecl 0x7f81c80148f0 <col:1, col:23> col:23 used b 'struct __jmp_buf_tag *'
+`-FunctionDecl 0x7f81c8014a48 <line:13:1, line:19:1> line:13:5 jpgDecode_convert 'int (unsigned int)'
+  |-ParmVarDecl 0x7f81c8014980 <col:24, col:33> col:33 used i 'unsigned int'
+  `-CompoundStmt 0x7f81c8014df0 <line:14:1, line:19:1>
+    |-IfStmt 0x7f81c8014c28 <line:15:3, line:16:8>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f81c8014b68 <line:15:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f81c8014b38 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f81c8014af0 <col:7> 'unsigned int' lvalue ParmVar 0x7f81c8014980 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f81c8014b50 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f81c8014b18 <col:12> 'int' 0
+    | |-CallExpr 0x7f81c8014c00 <line:16:5, col:8> 'void'
+    | | `-ImplicitCastExpr 0x7f81c8014be8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f81c8014b90 <col:5> 'void ()' Function 0x7f81c80145f8 'f' 'void ()'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7f81c8014cd0 <line:17:3, col:18> 'int'
+    | `-ImplicitCastExpr 0x7f81c8014cb8 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f81c8014c60 <col:3> 'int (void)' Function 0x7f81c8014508 'read_buf_open' 'int (void)'
+    `-ReturnStmt 0x7f81c8014dd8 <line:18:3, col:20>
+      `-CallExpr 0x7f81c8014d90 <col:10, col:20> 'int'
+        |-ImplicitCastExpr 0x7f81c8014d78 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f81c8014cf8 <col:10> 'int ()' Function 0x7f81c8014350 '_setjmp' 'int ()'
+        `-ImplicitCastExpr 0x7f81c8014dc0 <col:19> 'struct __jmp_buf_tag *' <LValueToRValue>
+          `-DeclRefExpr 0x7f81c8014d20 <col:19> 'struct __jmp_buf_tag *' lvalue Var 0x7f81c80148f0 'b' 'struct __jmp_buf_tag *'

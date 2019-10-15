@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f85f802bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f85f802c960 <../Data/C2AST/pr61929.c:4:9, line:7:1> line:4:16 struct m definition
+| |-FieldDecl 0x7f85f806d838 <line:5:3, col:9> col:9 referenced A 'char *'
+| `-FieldDecl 0x7f85f806d898 <line:6:3, col:9> col:9 referenced B 'char *'
+|-TypedefDecl 0x7f85f806d930 <line:4:1, line:7:3> col:3 referenced mystruct 'struct m':'struct m'
+| `-ElaboratedType 0x7f85f806d8e0 'struct m' sugar
+|   `-RecordType 0x7f85f806d800 'struct m'
+|     `-Record 0x7f85f802c960 'm'
+|-VarDecl 0x7f85f806dac8 <line:8:1, col:16> col:10 used arr 'mystruct [52]'
+|-FunctionDecl 0x7f85f806dbb8 <line:10:1, col:15> col:6 main 'void ()'
+| `-CompoundStmt 0x7f85f806dc58 <col:14, col:15>
+`-FunctionDecl 0x7f85f806dd30 <line:11:1, line:19:1> line:11:6 generateICE 'void (void)'
+  `-CompoundStmt 0x7f85f806e318 <line:12:1, line:19:1>
+    |-DeclStmt 0x7f85f806de48 <line:13:3, col:8>
+    | `-VarDecl 0x7f85f806dde8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f85f806e2e0 <line:14:3, line:18:5>
+      |-BinaryOperator 0x7f85f806dea8 <line:14:8, col:10> 'int' '='
+      | |-DeclRefExpr 0x7f85f806de60 <col:8> 'int' lvalue Var 0x7f85f806dde8 'i' 'int'
+      | `-IntegerLiteral 0x7f85f806de88 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f85f806df30 <col:13, col:15> 'int' '<'
+      | |-ImplicitCastExpr 0x7f85f806df18 <col:13> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f85f806ded0 <col:13> 'int' lvalue Var 0x7f85f806dde8 'i' 'int'
+      | `-IntegerLiteral 0x7f85f806def8 <col:15> 'int' 52
+      |-UnaryOperator 0x7f85f806df80 <col:19, col:20> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f85f806df58 <col:19> 'int' lvalue Var 0x7f85f806dde8 'i' 'int'
+      `-CompoundStmt 0x7f85f806e2c0 <line:15:5, line:18:5>
+        |-BinaryOperator 0x7f85f806e158 <line:16:7, col:18> 'char *' '='
+        | |-MemberExpr 0x7f85f806e0a0 <col:7, col:14> 'char *' lvalue .A 0x7f85f806d838
+        | | `-ArraySubscriptExpr 0x7f85f806e078 <col:7, col:12> 'mystruct':'struct m' lvalue
+        | |   |-ImplicitCastExpr 0x7f85f806e048 <col:7> 'mystruct *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7f85f806dfa0 <col:7> 'mystruct [52]' lvalue Var 0x7f85f806dac8 'arr' 'mystruct [52]'
+        | |   `-ImplicitCastExpr 0x7f85f806e060 <col:11> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f85f806dfc8 <col:11> 'int' lvalue Var 0x7f85f806dde8 'i' 'int'
+        | `-ImplicitCastExpr 0x7f85f806e140 <col:18> 'char *' <ArrayToPointerDecay>
+        |   `-StringLiteral 0x7f85f806e118 <col:18> 'char [1]' lvalue ""
+        `-BinaryOperator 0x7f85f806e298 <line:17:7, col:18> 'char *' '='
+          |-MemberExpr 0x7f85f806e228 <col:7, col:14> 'char *' lvalue .B 0x7f85f806d898
+          | `-ArraySubscriptExpr 0x7f85f806e200 <col:7, col:12> 'mystruct':'struct m' lvalue
+          |   |-ImplicitCastExpr 0x7f85f806e1d0 <col:7> 'mystruct *' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7f85f806e180 <col:7> 'mystruct [52]' lvalue Var 0x7f85f806dac8 'arr' 'mystruct [52]'
+          |   `-ImplicitCastExpr 0x7f85f806e1e8 <col:11> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f85f806e1a8 <col:11> 'int' lvalue Var 0x7f85f806dde8 'i' 'int'
+          `-ImplicitCastExpr 0x7f85f806e280 <col:18> 'char *' <NullToPointer>
+            `-IntegerLiteral 0x7f85f806e260 <col:18> 'int' 0

@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fe60e82aae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe60e82b778 <../Data/C2AST/pr50739.c:4:1, col:12> col:7 ca 'char *' cinit
+| `-ImplicitCastExpr 0x7fe6100142a8 <col:12> 'char *' <ArrayToPointerDecay>
+|   `-StringLiteral 0x7fe610014278 <col:12> 'char [4]' lvalue "123"
+|-VarDecl 0x7fe610014338 <line:6:1, col:46> col:12 a 'const char [2]' cinit
+| `-StringLiteral 0x7fe6100143d8 <col:46> 'const char [2]' lvalue "a"
+`-VarDecl 0x7fe610014468 <line:7:1, col:46> col:12 b 'const char [2]' cinit
+  `-StringLiteral 0x7fe6100144c8 <col:46> 'const char [2]' lvalue "b"

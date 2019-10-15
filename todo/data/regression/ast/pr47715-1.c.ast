@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fd94802bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd94802c978 <../Data/C2AST/pr47715-1.c:6:1, col:21> col:21 used h_errno 'int' extern tls
+`-FunctionDecl 0x7fd948814338 <line:7:1, line:11:1> line:8:1 __h_errno_location 'int *(void)'
+  `-CompoundStmt 0x7fd948814438 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fd948814420 <line:10:3, col:11>
+      `-UnaryOperator 0x7fd948814400 <col:10, col:11> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fd9488143d8 <col:11> 'int' lvalue Var 0x7fd94802c978 'h_errno' 'int'

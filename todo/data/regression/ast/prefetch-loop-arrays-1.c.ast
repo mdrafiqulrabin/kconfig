@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7faadb02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faadb02c978 <../Data/C2AST/prefetch-loop-arrays-1.c:6:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7faadb02bea0 'unsigned long'
+|-RecordDecl 0x7faadb814200 <line:8:1, line:11:1> line:8:8 struct re_pattern_buffer definition
+| `-FieldDecl 0x7faadb8142e0 <line:10:3, col:10> col:10 referenced re_nsub 'size_t':'unsigned long'
+|-EnumDecl 0x7faadb814328 <line:13:9, line:16:1> line:13:9
+| `-EnumConstantDecl 0x7faadb8143e0 <line:15:3> col:3 start_memory 'int'
+|-TypedefDecl 0x7faadb814480 <line:13:1, line:16:3> col:3 re_opcode_t 'enum re_opcode_t':'re_opcode_t'
+| `-ElaboratedType 0x7faadb814430 'enum re_opcode_t' sugar
+|   `-EnumType 0x7faadb8143c0 're_opcode_t'
+|     `-Enum 0x7faadb814328 ''
+|-RecordDecl 0x7faadb8144f0 <line:18:9, line:24:1> line:18:9 union definition
+| |-RecordDecl 0x7faadb8145a0 <line:20:3, line:23:3> line:20:3 struct definition
+| | `-FieldDecl 0x7faadb814688 <line:22:5, col:32> col:14 referenced matched_something 'unsigned int'
+| |   `-IntegerLiteral 0x7faadb814650 <col:32> 'int' 1
+| `-FieldDecl 0x7faadb814720 <line:20:3, line:23:5> col:5 referenced bits 'struct (anonymous struct at ../Data/C2AST/prefetch-loop-arrays-1.c:20:3)':'struct byte_register_info_type::(anonymous at ../Data/C2AST/prefetch-loop-arrays-1.c:20:3)'
+|-TypedefDecl 0x7faadb814800 <line:18:1, line:24:3> col:3 referenced byte_register_info_type 'union byte_register_info_type':'byte_register_info_type'
+| `-ElaboratedType 0x7faadb8147b0 'union byte_register_info_type' sugar
+|   `-RecordType 0x7faadb814580 'byte_register_info_type'
+|     `-Record 0x7faadb8144f0 ''
+`-FunctionDecl 0x7faadb814a20 <line:26:1, line:35:1> line:26:6 byte_re_match_2_internal 'void (struct re_pattern_buffer *)'
+  |-ParmVarDecl 0x7faadb814920 <col:32, col:58> col:58 used bufp 'struct re_pattern_buffer *'
+  `-CompoundStmt 0x7faadb8151d0 <line:27:1, line:35:1>
+    |-DeclStmt 0x7faadb814b80 <line:28:3, col:11>
+    | `-VarDecl 0x7faadb814b20 <col:3, col:7> col:7 used mcnt 'int'
+    |-DeclStmt 0x7faadb814cf8 <line:29:3, col:38>
+    | `-VarDecl 0x7faadb814ba8 <col:3, col:37> col:10 used num_regs 'size_t':'unsigned long' cinit
+    |   `-BinaryOperator 0x7faadb814cd0 <col:21, col:37> 'unsigned long' '+'
+    |     |-ImplicitCastExpr 0x7faadb814ca0 <col:21, col:27> 'size_t':'unsigned long' <LValueToRValue>
+    |     | `-MemberExpr 0x7faadb814c48 <col:21, col:27> 'size_t':'unsigned long' lvalue ->re_nsub 0x7faadb8142e0
+    |     |   `-ImplicitCastExpr 0x7faadb814c30 <col:21> 'struct re_pattern_buffer *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7faadb814c08 <col:21> 'struct re_pattern_buffer *' lvalue ParmVar 0x7faadb814920 'bufp' 'struct re_pattern_buffer *'
+    |     `-ImplicitCastExpr 0x7faadb814cb8 <col:37> 'unsigned long' <IntegralCast>
+    |       `-IntegerLiteral 0x7faadb814c80 <col:37> 'int' 1
+    |-DeclStmt 0x7faadb814df8 <line:30:3, col:36>
+    | `-VarDecl 0x7faadb814d98 <col:3, col:28> col:28 used reg_info 'byte_register_info_type *'
+    `-ForStmt 0x7faadb815198 <line:31:3, line:34:5>
+      |-BinaryOperator 0x7faadb814e58 <line:31:8, col:15> 'int' '='
+      | |-DeclRefExpr 0x7faadb814e10 <col:8> 'int' lvalue Var 0x7faadb814b20 'mcnt' 'int'
+      | `-IntegerLiteral 0x7faadb814e38 <col:15> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7faadb814f58 <col:18, col:36> 'int' '<'
+      | |-ImplicitCastExpr 0x7faadb814f40 <col:18, col:29> 'unsigned long' <IntegralCast>
+      | | `-CStyleCastExpr 0x7faadb814ed8 <col:18, col:29> 'unsigned int' <IntegralCast>
+      | |   `-ImplicitCastExpr 0x7faadb814ec0 <col:29> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7faadb814e80 <col:29> 'int' lvalue Var 0x7faadb814b20 'mcnt' 'int'
+      | `-ImplicitCastExpr 0x7faadb814f28 <col:36> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faadb814f00 <col:36> 'size_t':'unsigned long' lvalue Var 0x7faadb814ba8 'num_regs' 'size_t':'unsigned long'
+      |-UnaryOperator 0x7faadb814fa8 <col:46, col:50> 'int' postfix '++'
+      | `-DeclRefExpr 0x7faadb814f80 <col:46> 'int' lvalue Var 0x7faadb814b20 'mcnt' 'int'
+      `-CompoundStmt 0x7faadb815180 <line:32:5, line:34:5>
+        `-BinaryOperator 0x7faadb815158 <line:33:7, col:51> 'unsigned int' '='
+          |-ParenExpr 0x7faadb815100 <col:7, col:47> 'unsigned int' lvalue bitfield
+          | `-MemberExpr 0x7faadb8150c8 <col:8, col:30> 'unsigned int' lvalue bitfield .matched_something 0x7faadb814688
+          |   `-MemberExpr 0x7faadb815090 <col:8, col:25> 'struct (anonymous struct at ../Data/C2AST/prefetch-loop-arrays-1.c:20:3)':'struct byte_register_info_type::(anonymous at ../Data/C2AST/prefetch-loop-arrays-1.c:20:3)' lvalue .bits 0x7faadb814720
+          |     `-ParenExpr 0x7faadb815070 <col:8, col:23> 'byte_register_info_type':'byte_register_info_type' lvalue
+          |       `-ArraySubscriptExpr 0x7faadb815048 <col:9, col:22> 'byte_register_info_type':'byte_register_info_type' lvalue
+          |         |-ImplicitCastExpr 0x7faadb815018 <col:9> 'byte_register_info_type *' <LValueToRValue>
+          |         | `-DeclRefExpr 0x7faadb814fc8 <col:9> 'byte_register_info_type *' lvalue Var 0x7faadb814d98 'reg_info' 'byte_register_info_type *'
+          |         `-ImplicitCastExpr 0x7faadb815030 <col:18> 'int' <LValueToRValue>
+          |           `-DeclRefExpr 0x7faadb814ff0 <col:18> 'int' lvalue Var 0x7faadb814b20 'mcnt' 'int'
+          `-ImplicitCastExpr 0x7faadb815140 <col:51> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7faadb815120 <col:51> 'int' 0

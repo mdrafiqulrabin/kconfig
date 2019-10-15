@@ -1,0 +1,465 @@
+TranslationUnitDecl 0x7f8ff302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8ff306e050 <../Data/C2AST/pr23135.c:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8ff306e0f0 prev 0x7f8ff306e050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8ff306e2a8 <line:10:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f8ff306e348 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f8ff306e3b0 prev 0x7f8ff306e2a8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f8ff306e1a8 <col:19> col:22 'int'
+|-RecordDecl 0x7f8ff306e458 <line:12:9, col:40> col:9 struct definition
+| `-FieldDecl 0x7f8ff306e628 <col:18, col:37> col:23 c 'char [131072]'
+|-TypedefDecl 0x7f8ff306e6c0 <col:1, col:42> col:42 referenced big_t 'struct big_t':'big_t'
+| `-ElaboratedType 0x7f8ff306e670 'struct big_t' sugar
+|   `-RecordType 0x7f8ff306e4e0 'big_t'
+|     `-Record 0x7f8ff306e458 ''
+|-TypedefDecl 0x7f8ff306e798 <line:14:1, col:72> col:72 referenced vecint '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-VectorType 0x7f8ff306e760 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+| | `-BuiltinType 0x7f8ff302bde0 'int'
+| `-ModeAttr 0x7f8ff306e800 <col:28, col:35> SI
+|-TypedefDecl 0x7f8ff306e878 <line:15:1, col:39> col:39 referenced siint 'int'
+| |-BuiltinType 0x7f8ff302bde0 'int'
+| `-ModeAttr 0x7f8ff306e8e0 <col:28, col:35> SI
+|-VarDecl 0x7f8ff306e960 <line:17:1, col:23> col:8 used i 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+| `-InitListExpr 0x7f8ff306ea90 <col:12, col:23> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |-IntegerLiteral 0x7f8ff306ea00 <col:14> 'int' 150
+|   `-IntegerLiteral 0x7f8ff306ea20 <col:19> 'int' 100
+|-VarDecl 0x7f8ff306eaf0 <line:18:1, col:21> col:8 used j 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+| `-InitListExpr 0x7f8ff306ebe0 <col:12, col:21> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |-IntegerLiteral 0x7f8ff306eb50 <col:14> 'int' 10
+|   `-IntegerLiteral 0x7f8ff306eb70 <col:18> 'int' 13
+|-VarDecl 0x7f8ff306ec40 <line:19:1, col:8> col:8 used k 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-RecordDecl 0x7f8ff306eca0 <line:21:1, line:24:1> line:21:1 union definition
+| |-FieldDecl 0x7f8ff306ed60 <line:22:3, col:10> col:10 referenced v 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-FieldDecl 0x7f8ff306ee88 <line:23:3, col:12> col:9 referenced i 'siint [2]'
+|-VarDecl 0x7f8ff306ef20 <line:21:1, line:24:3> col:3 used res 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+|-FunctionDecl 0x7f8ff308af40 <line:26:1, line:32:1> line:27:1 used verify 'void (siint, siint, siint, siint, big_t)'
+| |-ParmVarDecl 0x7f8ff308ac00 <col:9, col:15> col:15 used a1 'siint':'int'
+| |-ParmVarDecl 0x7f8ff308ac70 <col:19, col:25> col:25 used a2 'siint':'int'
+| |-ParmVarDecl 0x7f8ff308ace0 <col:29, col:35> col:35 used b1 'siint':'int'
+| |-ParmVarDecl 0x7f8ff308ad50 <col:39, col:45> col:45 used b2 'siint':'int'
+| |-ParmVarDecl 0x7f8ff308ade0 <col:49, col:55> col:55 big 'big_t':'big_t'
+| `-CompoundStmt 0x7f8ff308b250 <line:28:1, line:32:1>
+|   `-IfStmt 0x7f8ff308b218 <line:29:3, line:31:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8ff308b158 <line:29:7, line:30:16> 'int' '||'
+|     | |-BinaryOperator 0x7f8ff308b088 <line:29:7, col:13> 'int' '!='
+|     | | |-ImplicitCastExpr 0x7f8ff308b058 <col:7> 'siint':'int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7f8ff308b008 <col:7> 'siint':'int' lvalue ParmVar 0x7f8ff308ac00 'a1' 'siint':'int'
+|     | | `-ImplicitCastExpr 0x7f8ff308b070 <col:13> 'siint':'int' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f8ff308b030 <col:13> 'siint':'int' lvalue ParmVar 0x7f8ff308ace0 'b1' 'siint':'int'
+|     | `-BinaryOperator 0x7f8ff308b130 <line:30:10, col:16> 'int' '!='
+|     |   |-ImplicitCastExpr 0x7f8ff308b100 <col:10> 'siint':'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f8ff308b0b0 <col:10> 'siint':'int' lvalue ParmVar 0x7f8ff308ac70 'a2' 'siint':'int'
+|     |   `-ImplicitCastExpr 0x7f8ff308b118 <col:16> 'siint':'int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f8ff308b0d8 <col:16> 'siint':'int' lvalue ParmVar 0x7f8ff308ad50 'b2' 'siint':'int'
+|     |-CallExpr 0x7f8ff308b1f0 <line:31:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f8ff308b1d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8ff308b180 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f8ff306e0f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f8ff308b2c0 <line:34:1, line:94:1> line:35:1 main 'int ()'
+  `-CompoundStmt 0x7f8ff308f180 <line:36:1, line:94:1>
+    |-DeclStmt 0x7f8ff308b3d0 <line:37:3, col:12>
+    | `-VarDecl 0x7f8ff308b370 <col:3, col:9> col:9 used big 'big_t':'big_t'
+    |-DeclStmt 0x7f8ff308b7b0 <line:38:3, col:40>
+    | |-VarDecl 0x7f8ff308b3f8 <col:3, col:10> col:10 used k0 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |-VarDecl 0x7f8ff308b468 <col:3, col:14> col:14 used k1 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |-VarDecl 0x7f8ff308b4d8 <col:3, col:18> col:18 used k2 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |-VarDecl 0x7f8ff308b548 <col:3, col:22> col:22 used k3 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |-VarDecl 0x7f8ff308b5b8 <col:3, col:26> col:26 used k4 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |-VarDecl 0x7f8ff308b628 <col:3, col:30> col:30 used k5 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |-VarDecl 0x7f8ff308b698 <col:3, col:34> col:34 used k6 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-VarDecl 0x7f8ff308b708 <col:3, col:38> col:38 used k7 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308b898 <line:40:3, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308b7c8 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b3f8 'k0' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308b870 <col:8, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   |-ImplicitCastExpr 0x7f8ff308b840 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8ff308b7f0 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308b858 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308b818 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306eaf0 'j' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308b960 <line:41:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308b8e8 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308b8c0 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308b948 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308b920 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b3f8 'k0' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308bc70 <line:43:3, col:44> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308bc58 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308b988 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308bcc0 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308baa0 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308ba88 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308b9d8 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308b9b0 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308ba10 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308bcd8 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308bb60 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308bb48 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308baf0 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308bac8 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308bb28 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308bb88 <col:31> 'int' 160
+    | |-IntegerLiteral 0x7f8ff308bba8 <col:36> 'int' 113
+    | `-ImplicitCastExpr 0x7f8ff308bcf0 <col:41> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308bbc8 <col:41> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308bdd8 <line:45:3, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308bd08 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b468 'k1' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308bdb0 <col:8, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   |-ImplicitCastExpr 0x7f8ff308bd80 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8ff308bd30 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308bd98 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308bd58 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306eaf0 'j' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308bea0 <line:46:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308be28 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308be00 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308be88 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308be60 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b468 'k1' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308c0f0 <line:48:3, col:46> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308c0d8 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308bec8 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308c140 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308bf88 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308bf70 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308bf18 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308bef0 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308bf50 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308c158 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308c048 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308c030 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308bfd8 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308bfb0 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308c010 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308c070 <col:31> 'int' 1500
+    | |-IntegerLiteral 0x7f8ff308c090 <col:37> 'int' 1300
+    | `-ImplicitCastExpr 0x7f8ff308c170 <col:43> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308c0b0 <col:43> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308c258 <line:50:3, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308c188 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b4d8 'k2' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308c230 <col:8, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   |-ImplicitCastExpr 0x7f8ff308c200 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8ff308c1b0 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308c218 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308c1d8 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306eaf0 'j' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308c320 <line:54:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308c2a8 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308c280 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308c308 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308c2e0 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b4d8 'k2' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308c570 <line:56:3, col:41> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308c558 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308c348 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308c5c0 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308c408 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308c3f0 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308c398 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308c370 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308c3d0 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308c5d8 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308c4c8 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308c4b0 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308c458 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308c430 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308c490 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308c4f0 <col:31> 'int' 15
+    | |-IntegerLiteral 0x7f8ff308c510 <col:35> 'int' 7
+    | `-ImplicitCastExpr 0x7f8ff308c5f0 <col:38> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308c530 <col:38> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308c6d8 <line:58:3, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308c608 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b548 'k3' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308c6b0 <col:8, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '&'
+    |   |-ImplicitCastExpr 0x7f8ff308c680 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8ff308c630 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308c698 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308c658 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306eaf0 'j' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308c7a0 <line:59:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308c728 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308c700 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308c788 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308c760 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b548 'k3' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308c9f0 <line:61:3, col:40> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308c9d8 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308c7c8 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308ca40 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308c888 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308c870 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308c818 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308c7f0 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308c850 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308ca58 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308c948 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308c930 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308c8d8 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308c8b0 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308c910 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308c970 <col:31> 'int' 2
+    | |-IntegerLiteral 0x7f8ff308c990 <col:34> 'int' 4
+    | `-ImplicitCastExpr 0x7f8ff308ca70 <col:37> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308c9b0 <col:37> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308cb58 <line:63:3, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308ca88 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b5b8 'k4' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308cb30 <col:8, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '|'
+    |   |-ImplicitCastExpr 0x7f8ff308cb00 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8ff308cab0 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308cb18 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308cad8 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306eaf0 'j' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308cc40 <line:64:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308cba8 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308cb80 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308cc28 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308cc00 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b5b8 'k4' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308ce90 <line:66:3, col:44> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308ce78 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308cc68 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308cee0 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308cd28 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308cd10 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308ccb8 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308cc90 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308ccf0 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308cef8 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308cde8 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308cdd0 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308cd78 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308cd50 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308cdb0 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308ce10 <col:31> 'int' 158
+    | |-IntegerLiteral 0x7f8ff308ce30 <col:36> 'int' 109
+    | `-ImplicitCastExpr 0x7f8ff308cf10 <col:41> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308ce50 <col:41> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308cff8 <line:68:3, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308cf28 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b628 'k5' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308cfd0 <col:8, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '^'
+    |   |-ImplicitCastExpr 0x7f8ff308cfa0 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f8ff308cf50 <col:8> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308cfb8 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308cf78 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306eaf0 'j' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308d0c0 <line:69:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308d048 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308d020 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308d0a8 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308d080 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b628 'k5' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308d310 <line:71:3, col:44> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308d2f8 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308d0e8 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308d360 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308d1a8 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308d190 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308d138 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308d110 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308d170 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308d378 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308d268 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308d250 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308d1f8 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308d1d0 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308d230 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308d290 <col:31> 'int' 156
+    | |-IntegerLiteral 0x7f8ff308d2b0 <col:36> 'int' 105
+    | `-ImplicitCastExpr 0x7f8ff308d390 <col:41> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308d2d0 <col:41> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308d430 <line:73:3, col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308d3a8 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b698 'k6' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-UnaryOperator 0x7f8ff308d410 <col:8, col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' prefix '-'
+    |   `-ImplicitCastExpr 0x7f8ff308d3f8 <col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308d3d0 <col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308d4f8 <line:74:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308d480 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308d458 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308d4e0 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308d4b8 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b698 'k6' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308d788 <line:75:3, col:46> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308d770 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308d520 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308d7d8 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308d5e0 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308d5c8 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308d570 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308d548 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308d5a8 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308d7f0 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308d6a0 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308d688 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308d630 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308d608 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308d668 <col:27> 'int' 1
+    | |-UnaryOperator 0x7f8ff308d6e8 <col:31, col:32> 'int' prefix '-'
+    | | `-IntegerLiteral 0x7f8ff308d6c8 <col:32> 'int' 150
+    | |-UnaryOperator 0x7f8ff308d728 <col:37, col:38> 'int' prefix '-'
+    | | `-IntegerLiteral 0x7f8ff308d708 <col:38> 'int' 100
+    | `-ImplicitCastExpr 0x7f8ff308d808 <col:43> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308d748 <col:43> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308d8a8 <line:77:3, col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308d820 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b708 'k7' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-UnaryOperator 0x7f8ff308d888 <col:8, col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' prefix '~'
+    |   `-ImplicitCastExpr 0x7f8ff308d870 <col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308d848 <col:9> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306e960 'i' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308d970 <line:78:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308d8f8 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308d8d0 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308d958 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308d930 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b708 'k7' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308dc00 <line:79:3, col:46> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308dbe8 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308d998 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308dc50 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308da58 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308da40 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308d9e8 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308d9c0 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308da20 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308dc68 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308db18 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308db00 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308daa8 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308da80 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308dae0 <col:27> 'int' 1
+    | |-UnaryOperator 0x7f8ff308db60 <col:31, col:32> 'int' prefix '-'
+    | | `-IntegerLiteral 0x7f8ff308db40 <col:32> 'int' 151
+    | |-UnaryOperator 0x7f8ff308dba0 <col:37, col:38> 'int' prefix '-'
+    | | `-IntegerLiteral 0x7f8ff308db80 <col:38> 'int' 101
+    | `-ImplicitCastExpr 0x7f8ff308dc80 <col:43> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308dbc0 <col:43> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308df70 <line:81:3, col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308dc98 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306ec40 'k' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308df48 <col:7, col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   |-BinaryOperator 0x7f8ff308dee0 <col:7, col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   | |-BinaryOperator 0x7f8ff308de78 <col:7, col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   | | |-BinaryOperator 0x7f8ff308de10 <col:7, col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   | | | |-BinaryOperator 0x7f8ff308dda8 <col:7, col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   | | | | |-BinaryOperator 0x7f8ff308dd40 <col:7, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   | | | | | |-ImplicitCastExpr 0x7f8ff308dd10 <col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | | | `-DeclRefExpr 0x7f8ff308dcc0 <col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b3f8 'k0' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | | `-ImplicitCastExpr 0x7f8ff308dd28 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | |   `-DeclRefExpr 0x7f8ff308dce8 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b468 'k1' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | `-ImplicitCastExpr 0x7f8ff308dd90 <col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | |   `-DeclRefExpr 0x7f8ff308dd68 <col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b548 'k3' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | `-ImplicitCastExpr 0x7f8ff308ddf8 <col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7f8ff308ddd0 <col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b5b8 'k4' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | `-ImplicitCastExpr 0x7f8ff308de60 <col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f8ff308de38 <col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b628 'k5' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | `-ImplicitCastExpr 0x7f8ff308dec8 <col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8ff308dea0 <col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b698 'k6' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308df30 <col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308df08 <col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b708 'k7' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308e038 <line:82:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308dfc0 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308df98 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308e020 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308dff8 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306ec40 'k' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308e288 <line:83:3, col:46> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308e270 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308e060 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308e2d8 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308e120 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308e108 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308e0b0 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308e088 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308e0e8 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308e2f0 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308e1e0 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308e1c8 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308e170 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308e148 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308e1a8 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308e208 <col:31> 'int' 1675
+    | |-IntegerLiteral 0x7f8ff308e228 <col:37> 'int' 1430
+    | `-ImplicitCastExpr 0x7f8ff308e308 <col:43> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308e248 <col:43> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308e5f8 <line:85:3, col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308e320 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306ec40 'k' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308e5d0 <col:7, col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   |-BinaryOperator 0x7f8ff308e568 <col:7, col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   | |-BinaryOperator 0x7f8ff308e500 <col:7, col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   | | |-BinaryOperator 0x7f8ff308e498 <col:7, col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   | | | |-BinaryOperator 0x7f8ff308e430 <col:7, col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   | | | | |-BinaryOperator 0x7f8ff308e3c8 <col:7, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '*'
+    |   | | | | | |-ImplicitCastExpr 0x7f8ff308e398 <col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | | | `-DeclRefExpr 0x7f8ff308e348 <col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b3f8 'k0' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | | `-ImplicitCastExpr 0x7f8ff308e3b0 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | |   `-DeclRefExpr 0x7f8ff308e370 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b468 'k1' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | `-ImplicitCastExpr 0x7f8ff308e418 <col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | |   `-DeclRefExpr 0x7f8ff308e3f0 <col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b548 'k3' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | `-ImplicitCastExpr 0x7f8ff308e480 <col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7f8ff308e458 <col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b5b8 'k4' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | `-ImplicitCastExpr 0x7f8ff308e4e8 <col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f8ff308e4c0 <col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b628 'k5' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | `-ImplicitCastExpr 0x7f8ff308e550 <col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8ff308e528 <col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b698 'k6' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308e5b8 <col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308e590 <col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b708 'k7' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308e6c0 <line:86:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308e648 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308e620 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308e6a8 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308e680 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306ec40 'k' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308e930 <line:87:3, col:59> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308e918 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308e6e8 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308e980 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308e7a8 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308e790 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308e738 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308e710 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308e770 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308e998 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308e868 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308e850 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308e7f8 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308e7d0 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308e830 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308e890 <col:31> 'int' 1456467968
+    | |-UnaryOperator 0x7f8ff308e8d0 <col:43, col:44> 'int' prefix '-'
+    | | `-IntegerLiteral 0x7f8ff308e8b0 <col:44> 'int' 1579586240
+    | `-ImplicitCastExpr 0x7f8ff308e9b0 <col:56> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308e8f0 <col:56> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    |-BinaryOperator 0x7f8ff308ed10 <line:89:3, col:42> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f8ff308e9c8 <col:3> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306ec40 'k' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f8ff308ece8 <col:7, col:42> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   |-BinaryOperator 0x7f8ff308ec80 <col:7, col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   | |-BinaryOperator 0x7f8ff308ec18 <col:7, col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   | | |-BinaryOperator 0x7f8ff308eba8 <col:7, col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   | | | |-BinaryOperator 0x7f8ff308eb40 <col:7, col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   | | | | |-BinaryOperator 0x7f8ff308ead8 <col:7, col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   | | | | | |-BinaryOperator 0x7f8ff308ea70 <col:7, col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '/'
+    |   | | | | | | |-ImplicitCastExpr 0x7f8ff308ea40 <col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | | | | `-DeclRefExpr 0x7f8ff308e9f0 <col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b3f8 'k0' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | | | `-ImplicitCastExpr 0x7f8ff308ea58 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | | |   `-DeclRefExpr 0x7f8ff308ea18 <col:12> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b468 'k1' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | | `-ImplicitCastExpr 0x7f8ff308eac0 <col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | | |   `-DeclRefExpr 0x7f8ff308ea98 <col:17> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b4d8 'k2' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | | `-ImplicitCastExpr 0x7f8ff308eb28 <col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | | |   `-DeclRefExpr 0x7f8ff308eb00 <col:22> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b548 'k3' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | | `-ImplicitCastExpr 0x7f8ff308eb90 <col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7f8ff308eb68 <col:27> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b5b8 'k4' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | | `-ImplicitCastExpr 0x7f8ff308ec00 <col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7f8ff308ebd0 <col:32> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b628 'k5' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   | `-ImplicitCastExpr 0x7f8ff308ec68 <col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8ff308ec40 <col:37> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b698 'k6' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f8ff308ecd0 <col:42> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8ff308eca8 <col:42> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff308b708 'k7' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-BinaryOperator 0x7f8ff308edd8 <line:90:3, col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-MemberExpr 0x7f8ff308ed60 <col:3, col:7> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue .v 0x7f8ff306ed60
+    | | `-DeclRefExpr 0x7f8ff308ed38 <col:3> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | `-ImplicitCastExpr 0x7f8ff308edc0 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308ed98 <col:11> 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f8ff306ec40 'k' 'vecint':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |-CallExpr 0x7f8ff308f028 <line:91:3, col:40> 'void'
+    | |-ImplicitCastExpr 0x7f8ff308f010 <col:3> 'void (*)(siint, siint, siint, siint, big_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8ff308ee00 <col:3> 'void (siint, siint, siint, siint, big_t)' Function 0x7f8ff308af40 'verify' 'void (siint, siint, siint, siint, big_t)'
+    | |-ImplicitCastExpr 0x7f8ff308f078 <col:11, col:18> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308eec0 <col:11, col:18> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308eea8 <col:11, col:15> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308ee50 <col:11, col:15> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308ee28 <col:11> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308ee88 <col:17> 'int' 0
+    | |-ImplicitCastExpr 0x7f8ff308f090 <col:21, col:28> 'siint':'int' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7f8ff308ef80 <col:21, col:28> 'siint':'int' lvalue
+    | |   |-ImplicitCastExpr 0x7f8ff308ef68 <col:21, col:25> 'siint *' <ArrayToPointerDecay>
+    | |   | `-MemberExpr 0x7f8ff308ef10 <col:21, col:25> 'siint [2]' lvalue .i 0x7f8ff306ee88
+    | |   |   `-DeclRefExpr 0x7f8ff308eee8 <col:21> 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)' lvalue Var 0x7f8ff306ef20 'res' 'union (anonymous union at ../Data/C2AST/pr23135.c:21:1)':'union (anonymous at ../Data/C2AST/pr23135.c:21:1)'
+    | |   `-IntegerLiteral 0x7f8ff308ef48 <col:27> 'int' 1
+    | |-IntegerLiteral 0x7f8ff308efa8 <col:31> 'int' 0
+    | |-IntegerLiteral 0x7f8ff308efc8 <col:34> 'int' 0
+    | `-ImplicitCastExpr 0x7f8ff308f0a8 <col:37> 'big_t':'big_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8ff308efe8 <col:37> 'big_t':'big_t' lvalue Var 0x7f8ff308b370 'big' 'big_t':'big_t'
+    `-CallExpr 0x7f8ff308f150 <line:93:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f8ff308f138 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8ff308f0c0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f8ff306e3b0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7f8ff308f0e8 <col:9> 'int' 0

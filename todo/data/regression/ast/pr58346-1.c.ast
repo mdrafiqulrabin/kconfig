@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7ffd938174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffd93818160 <../Data/C2AST/pr58346-1.c:5:1, line:9:1> line:5:8 struct U definition
+|-VarDecl 0x7ffd94015358 <line:10:1, col:20> col:17 used b 'struct U [6]' static
+|-VarDecl 0x7ffd94015480 <line:11:1, col:18> col:18 used u1 'struct U *' static
+|-VarDecl 0x7ffd94015508 <col:1, col:23> col:23 used u2 'struct U *' static
+|-FunctionDecl 0x7ffd94015748 <line:13:1, line:17:1> line:14:1 used foo 'int (struct U *, struct U *)'
+| |-ParmVarDecl 0x7ffd940155a8 <col:6, col:16> col:16 used p 'struct U *'
+| |-ParmVarDecl 0x7ffd94015630 <col:19, col:29> col:29 used q 'struct U *'
+| `-CompoundStmt 0x7ffd940158d0 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7ffd940158b8 <line:16:3, col:14>
+|     `-ImplicitCastExpr 0x7ffd940158a0 <col:10, col:14> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7ffd94015878 <col:10, col:14> 'long' '-'
+|         |-ImplicitCastExpr 0x7ffd94015848 <col:10> 'struct U *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ffd940157f8 <col:10> 'struct U *' lvalue ParmVar 0x7ffd94015630 'q' 'struct U *'
+|         `-ImplicitCastExpr 0x7ffd94015860 <col:14> 'struct U *' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffd94015820 <col:14> 'struct U *' lvalue ParmVar 0x7ffd940155a8 'p' 'struct U *'
+`-FunctionDecl 0x7ffd940159b0 <line:19:1, line:25:1> line:20:1 bar 'void (void)'
+  `-CompoundStmt 0x7ffd94015f08 <line:21:1, line:25:1>
+    |-DeclStmt 0x7ffd94015b70 <<built-in>:73:26, ../Data/C2AST/pr58346-1.c:22:31>
+    | `-VarDecl 0x7ffd94015a68 <<built-in>:73:26, ../Data/C2AST/pr58346-1.c:22:29> col:20 used d 'long' cinit
+    |   `-BinaryOperator 0x7ffd94015b48 <col:24, col:29> 'long' '-'
+    |     |-ImplicitCastExpr 0x7ffd94015b18 <col:24> 'struct U *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffd94015ac8 <col:24> 'struct U *' lvalue Var 0x7ffd94015480 'u1' 'struct U *'
+    |     `-ImplicitCastExpr 0x7ffd94015b30 <col:29> 'struct U *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffd94015af0 <col:29> 'struct U *' lvalue Var 0x7ffd94015508 'u2' 'struct U *'
+    |-GCCAsmStmt 0x7ffd94015c80 <line:23:3, col:32>
+    | `-DeclRefExpr 0x7ffd94015c58 <col:30> 'long' lvalue Var 0x7ffd94015a68 'd' 'long'
+    `-CallExpr 0x7ffd94015ed0 <line:24:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7ffd94015eb8 <col:3> 'int (*)(struct U *, struct U *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffd94015ce0 <col:3> 'int (struct U *, struct U *)' Function 0x7ffd94015748 'foo' 'int (struct U *, struct U *)'
+      |-UnaryOperator 0x7ffd94015d90 <col:8, col:12> 'struct U *' prefix '&'
+      | `-ArraySubscriptExpr 0x7ffd94015d68 <col:9, col:12> 'struct U':'struct U' lvalue
+      |   |-ImplicitCastExpr 0x7ffd94015d50 <col:9> 'struct U *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7ffd94015d08 <col:9> 'struct U [6]' lvalue Var 0x7ffd94015358 'b' 'struct U [6]'
+      |   `-IntegerLiteral 0x7ffd94015d30 <col:11> 'int' 0
+      `-UnaryOperator 0x7ffd94015e38 <col:15, col:19> 'struct U *' prefix '&'
+        `-ArraySubscriptExpr 0x7ffd94015e10 <col:16, col:19> 'struct U':'struct U' lvalue
+          |-ImplicitCastExpr 0x7ffd94015df8 <col:16> 'struct U *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7ffd94015db0 <col:16> 'struct U [6]' lvalue Var 0x7ffd94015358 'b' 'struct U [6]'
+          `-IntegerLiteral 0x7ffd94015dd8 <col:18> 'int' 4

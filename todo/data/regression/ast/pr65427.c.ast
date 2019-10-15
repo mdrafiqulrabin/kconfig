@@ -1,0 +1,162 @@
+TranslationUnitDecl 0x7fac3c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac3d032e38 <../Data/C2AST/pr65427.c:3:1, col:13> col:13 referenced V '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fac3d032e00 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fac3c82bde0 'int'
+|-VarDecl 0x7fac3d032ec0 <line:4:1, col:3> col:3 used a 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-VarDecl 0x7fac3d032f70 <col:1, col:6> col:6 used b 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-VarDecl 0x7fac3d032fe0 <col:1, col:9> col:9 used c 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-VarDecl 0x7fac3d033050 <col:1, col:12> col:12 used d 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-VarDecl 0x7fac3d0330c0 <col:1, col:15> col:15 used e 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-VarDecl 0x7fac3d033130 <col:1, col:18> col:18 used f 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-FunctionDecl 0x7fac3d033330 <line:6:1, line:17:1> line:7:1 used foo 'void (int, int)'
+| |-ParmVarDecl 0x7fac3d0331e0 <col:6, col:10> col:10 used x 'int'
+| |-ParmVarDecl 0x7fac3d033258 <col:13, col:17> col:17 used y 'int'
+| |-CompoundStmt 0x7fac3d033708 <line:8:1, line:17:1>
+| | `-DoStmt 0x7fac3d0336e8 <line:9:3, line:16:11>
+| |   |-CompoundStmt 0x7fac3d033690 <line:10:5, line:15:5>
+| |   | `-IfStmt 0x7fac3d033658 <line:11:7, line:14:10>
+| |   |   |-<<<NULL>>>
+| |   |   |-<<<NULL>>>
+| |   |   |-ImplicitCastExpr 0x7fac3d033450 <line:11:11> 'int' <LValueToRValue>
+| |   |   | `-DeclRefExpr 0x7fac3d033428 <col:11> 'int' lvalue ParmVar 0x7fac3d0331e0 'x' 'int'
+| |   |   |-BinaryOperator 0x7fac3d033538 <line:12:2, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+| |   |   | |-DeclRefExpr 0x7fac3d033468 <col:2> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d033050 'd' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |   |   | `-BinaryOperator 0x7fac3d033510 <col:6, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^'
+| |   |   |   |-ImplicitCastExpr 0x7fac3d0334e0 <col:6> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7fac3d033490 <col:6> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032ec0 'a' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |   |   |   `-ImplicitCastExpr 0x7fac3d0334f8 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+| |   |   |     `-DeclRefExpr 0x7fac3d0334b8 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032fe0 'c' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |   |   `-BinaryOperator 0x7fac3d033630 <line:14:2, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+| |   |     |-DeclRefExpr 0x7fac3d033560 <col:2> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d033050 'd' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |   |     `-BinaryOperator 0x7fac3d033608 <col:6, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^'
+| |   |       |-ImplicitCastExpr 0x7fac3d0335d8 <col:6> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+| |   |       | `-DeclRefExpr 0x7fac3d033588 <col:6> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032ec0 'a' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |   |       `-ImplicitCastExpr 0x7fac3d0335f0 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+| |   |         `-DeclRefExpr 0x7fac3d0335b0 <col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032f70 'b' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |   `-ImplicitCastExpr 0x7fac3d0336d0 <line:16:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fac3d0336a8 <col:10> 'int' lvalue ParmVar 0x7fac3d033258 'y' 'int'
+| `-NoInlineAttr 0x7fac3d0333e0 <line:6:16>
+|-FunctionDecl 0x7fac3d033770 <line:19:1, line:34:1> line:20:1 main 'int ()'
+| `-CompoundStmt 0x7fac3d035040 <line:21:1, line:34:1>
+|   |-BinaryOperator 0x7fac3d033a88 <line:22:3, col:36> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fac3d033810 <col:3> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032ec0 'a' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | `-ImplicitCastExpr 0x7fac3d033a70 <col:7, col:36> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fac3d033a48 <col:7, col:36> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|   |     `-InitListExpr 0x7fac3d0339c8 <col:11, col:36> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |       |-IntegerLiteral 0x7fac3d033848 <col:13> 'int' 1
+|   |       |-IntegerLiteral 0x7fac3d033868 <col:16> 'int' 2
+|   |       |-IntegerLiteral 0x7fac3d033888 <col:19> 'int' 3
+|   |       |-IntegerLiteral 0x7fac3d0338a8 <col:22> 'int' 4
+|   |       |-IntegerLiteral 0x7fac3d0338c8 <col:25> 'int' 5
+|   |       |-IntegerLiteral 0x7fac3d0338e8 <col:28> 'int' 6
+|   |       |-IntegerLiteral 0x7fac3d033908 <col:31> 'int' 7
+|   |       `-IntegerLiteral 0x7fac3d033928 <col:34> 'int' 8
+|   |-BinaryOperator 0x7fac3d033d28 <line:23:3, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fac3d033ab0 <col:3> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032f70 'b' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | `-ImplicitCastExpr 0x7fac3d033d10 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fac3d033ce8 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|   |     `-InitListExpr 0x7fac3d033c68 <col:11, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |       |-IntegerLiteral 0x7fac3d033ae8 <col:13> 'int' 64
+|   |       |-IntegerLiteral 0x7fac3d033b08 <col:19> 'int' 128
+|   |       |-IntegerLiteral 0x7fac3d033b28 <col:25> 'int' 64
+|   |       |-IntegerLiteral 0x7fac3d033b48 <col:31> 'int' 128
+|   |       |-IntegerLiteral 0x7fac3d033b68 <col:37> 'int' 64
+|   |       |-IntegerLiteral 0x7fac3d033b88 <col:43> 'int' 128
+|   |       |-IntegerLiteral 0x7fac3d033ba8 <col:49> 'int' 64
+|   |       `-IntegerLiteral 0x7fac3d033bc8 <col:55> 'int' 128
+|   |-BinaryOperator 0x7fac3d033fe0 <line:24:3, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fac3d033d50 <col:3> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d0330c0 'e' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | `-ImplicitCastExpr 0x7fac3d033fc8 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fac3d033fa0 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|   |     `-InitListExpr 0x7fac3d033f20 <col:11, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |       |-IntegerLiteral 0x7fac3d033d88 <col:13> 'int' 65
+|   |       |-IntegerLiteral 0x7fac3d033da8 <col:19> 'int' 130
+|   |       |-IntegerLiteral 0x7fac3d033dc8 <col:25> 'int' 67
+|   |       |-IntegerLiteral 0x7fac3d033e00 <col:31> 'int' 132
+|   |       |-IntegerLiteral 0x7fac3d033e20 <col:37> 'int' 69
+|   |       |-IntegerLiteral 0x7fac3d033e40 <col:43> 'int' 134
+|   |       |-IntegerLiteral 0x7fac3d033e60 <col:49> 'int' 71
+|   |       `-IntegerLiteral 0x7fac3d033e80 <col:55> 'int' 136
+|   |-CallExpr 0x7fac3d0340b0 <line:25:3, col:12> 'void'
+|   | |-ImplicitCastExpr 0x7fac3d034098 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fac3d034008 <col:3> 'void (int, int)' Function 0x7fac3d033330 'foo' 'void (int, int)'
+|   | |-IntegerLiteral 0x7fac3d034030 <col:8> 'int' 0
+|   | `-IntegerLiteral 0x7fac3d034050 <col:11> 'int' 0
+|   |-IfStmt 0x7fac3d034778 <line:26:3, line:27:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fac3d0345a0 <line:26:7, col:48> 'int' '!='
+|   | | |-CallExpr 0x7fac3d034510 <col:7, col:43> 'int'
+|   | | | |-ImplicitCastExpr 0x7fac3d0344f8 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fac3d034388 <col:7> '<builtin fn type>' Function 0x7fac3d034168 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | | |-ImplicitCastExpr 0x7fac3d034550 <col:25, col:26> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fac3d034438 <col:25, col:26> 'V *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fac3d0343b0 <col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d033050 'd' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | | | |-ImplicitCastExpr 0x7fac3d034568 <col:29, col:30> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fac3d034480 <col:29, col:30> 'V *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fac3d034458 <col:30> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d0330c0 'e' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | | | `-UnaryExprOrTypeTraitExpr 0x7fac3d0344b0 <col:33, col:42> 'unsigned long' sizeof 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | | `-IntegerLiteral 0x7fac3d034580 <col:48> 'int' 0
+|   | |-CallExpr 0x7fac3d034750 <line:27:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fac3d034738 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fac3d0346e8 <col:5> '<builtin fn type>' Function 0x7fac3d034600 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fac3d034a28 <line:28:3, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fac3d0347b0 <col:3> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d032fe0 'c' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | `-ImplicitCastExpr 0x7fac3d034a10 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fac3d0349e8 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|   |     `-InitListExpr 0x7fac3d034968 <col:11, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |       |-IntegerLiteral 0x7fac3d0347e8 <col:13> 'int' 128
+|   |       |-IntegerLiteral 0x7fac3d034808 <col:19> 'int' 64
+|   |       |-IntegerLiteral 0x7fac3d034828 <col:25> 'int' 128
+|   |       |-IntegerLiteral 0x7fac3d034848 <col:31> 'int' 64
+|   |       |-IntegerLiteral 0x7fac3d034868 <col:37> 'int' 128
+|   |       |-IntegerLiteral 0x7fac3d034888 <col:43> 'int' 64
+|   |       |-IntegerLiteral 0x7fac3d0348a8 <col:49> 'int' 128
+|   |       `-IntegerLiteral 0x7fac3d0348c8 <col:55> 'int' 64
+|   |-BinaryOperator 0x7fac3d034cc8 <line:29:3, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|   | |-DeclRefExpr 0x7fac3d034a50 <col:3> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d033130 'f' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | `-ImplicitCastExpr 0x7fac3d034cb0 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|   |   `-CompoundLiteralExpr 0x7fac3d034c88 <col:7, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|   |     `-InitListExpr 0x7fac3d034c08 <col:11, col:60> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |       |-IntegerLiteral 0x7fac3d034a88 <col:13> 'int' 129
+|   |       |-IntegerLiteral 0x7fac3d034aa8 <col:19> 'int' 66
+|   |       |-IntegerLiteral 0x7fac3d034ac8 <col:25> 'int' 131
+|   |       |-IntegerLiteral 0x7fac3d034ae8 <col:31> 'int' 68
+|   |       |-IntegerLiteral 0x7fac3d034b08 <col:37> 'int' 133
+|   |       |-IntegerLiteral 0x7fac3d034b28 <col:43> 'int' 70
+|   |       |-IntegerLiteral 0x7fac3d034b48 <col:49> 'int' 135
+|   |       `-IntegerLiteral 0x7fac3d034b68 <col:55> 'int' 72
+|   |-CallExpr 0x7fac3d034d70 <line:30:3, col:12> 'void'
+|   | |-ImplicitCastExpr 0x7fac3d034d58 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fac3d034cf0 <col:3> 'void (int, int)' Function 0x7fac3d033330 'foo' 'void (int, int)'
+|   | |-IntegerLiteral 0x7fac3d034d18 <col:8> 'int' 1
+|   | `-IntegerLiteral 0x7fac3d034d38 <col:11> 'int' 0
+|   |-IfStmt 0x7fac3d034fd0 <line:31:3, line:32:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fac3d034f40 <line:31:7, col:48> 'int' '!='
+|   | | |-CallExpr 0x7fac3d034eb0 <col:7, col:43> 'int'
+|   | | | |-ImplicitCastExpr 0x7fac3d034e98 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fac3d034da8 <col:7> '<builtin fn type>' Function 0x7fac3d034168 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | | |-ImplicitCastExpr 0x7fac3d034ef0 <col:25, col:26> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fac3d034e00 <col:25, col:26> 'V *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fac3d034dd0 <col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d033050 'd' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | | | |-ImplicitCastExpr 0x7fac3d034f08 <col:29, col:30> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fac3d034e48 <col:29, col:30> 'V *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fac3d034e20 <col:30> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fac3d033130 'f' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | | | `-UnaryExprOrTypeTraitExpr 0x7fac3d034e78 <col:33, col:42> 'unsigned long' sizeof 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   | | `-IntegerLiteral 0x7fac3d034f20 <col:48> 'int' 0
+|   | |-CallExpr 0x7fac3d034fa8 <line:32:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fac3d034f90 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fac3d034f68 <col:5> '<builtin fn type>' Function 0x7fac3d034600 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fac3d035028 <line:33:3, col:10>
+|     `-IntegerLiteral 0x7fac3d035008 <col:10> 'int' 0
+|-FunctionDecl 0x7fac3d034168 <line:26:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fac3d034208 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fac3d034268 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fac3d0342c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fac3d034340 <col:7> Implicit
+`-FunctionDecl 0x7fac3d034600 <line:27:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fac3d0346a0 <col:5> Implicit

@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7f81a802bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7f81a802c960 <../Data/C2AST/pr59338.c:3:9, line:6:1> line:3:9
+| `-EnumConstantDecl 0x7f81a8814220 <line:5:3> col:3 XYZZY 'int'
+|-TypedefDecl 0x7f81a88142c0 <line:3:1, line:6:3> col:3 referenced enumType 'enum enumType':'enumType'
+| `-ElaboratedType 0x7f81a8814270 'enum enumType' sugar
+|   `-EnumType 0x7f81a8814200 'enumType'
+|     `-Enum 0x7f81a802c960 ''
+|-RecordDecl 0x7f81a8814330 <line:8:9, line:11:1> line:8:9 struct definition
+| `-FieldDecl 0x7f81a8814418 <line:10:3, col:24> col:17 referenced More 'unsigned char'
+|   `-IntegerLiteral 0x7f81a88143e0 <col:24> 'int' 1
+|-TypedefDecl 0x7f81a88144b0 <line:8:1, line:11:3> col:3 referenced tResp 'struct tResp':'tResp'
+| `-ElaboratedType 0x7f81a8814460 'struct tResp' sugar
+|   `-RecordType 0x7f81a88143c0 'tResp'
+|     `-Record 0x7f81a8814330 ''
+|-RecordDecl 0x7f81a8814520 <line:13:9, line:20:1> line:13:9 struct definition
+| |-FieldDecl 0x7f81a8814600 <line:15:3, col:12> col:12 QueryType 'enumType':'enumType'
+| |-RecordDecl 0x7f81a8814648 <line:16:3, line:19:5> line:16:3 union definition
+| | `-FieldDecl 0x7f81a88147c8 <line:18:7, col:16> col:13 referenced l 'tResp [0]'
+| `-FieldDecl 0x7f81a88148b0 <line:16:3, line:19:7> col:7 referenced u 'union (anonymous union at ../Data/C2AST/pr59338.c:16:3)':'union tQResp::(anonymous at ../Data/C2AST/pr59338.c:16:3)'
+|-TypedefDecl 0x7f81a8814950 <line:13:1, line:20:3> col:3 referenced tQResp 'struct tQResp':'tQResp'
+| `-ElaboratedType 0x7f81a8814900 'struct tQResp' sugar
+|   `-RecordType 0x7f81a88145b0 'tQResp'
+|     `-Record 0x7f81a8814520 ''
+`-FunctionDecl 0x7f81a8814a80 <line:22:1, line:27:1> line:22:6 test 'void (void)'
+  `-CompoundStmt 0x7f81a8814f28 <line:23:1, line:27:1>
+    |-DeclStmt 0x7f81a8814ca0 <line:24:3, col:22>
+    | `-VarDecl 0x7f81a8814be8 <col:3, col:21> col:11 used qResp 'tQResp *' cinit
+    |   `-ImplicitCastExpr 0x7f81a8814c88 <col:19, col:21> 'tQResp *' <NullToPointer>
+    |     `-ParenExpr 0x7f81a8814c68 <col:19, col:21> 'int'
+    |       `-IntegerLiteral 0x7f81a8814c48 <col:20> 'int' 0
+    `-IfStmt 0x7f81a8814ef0 <line:25:3, line:26:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f81a8814eb0 <line:25:7, col:29> 'int' '=='
+      | |-ImplicitCastExpr 0x7f81a8814e98 <col:7, col:21> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7f81a8814e80 <col:7, col:21> 'unsigned char' <LValueToRValue>
+      | |   `-MemberExpr 0x7f81a8814e28 <col:7, col:21> 'unsigned char' lvalue bitfield .More 0x7f81a8814418
+      | |     `-ArraySubscriptExpr 0x7f81a8814e00 <col:7, col:19> 'tResp':'tResp' lvalue
+      | |       |-ImplicitCastExpr 0x7f81a8814de8 <col:7, col:16> 'tResp *' <ArrayToPointerDecay>
+      | |       | `-MemberExpr 0x7f81a8814d30 <col:7, col:16> 'tResp [0]' lvalue .l 0x7f81a88147c8
+      | |       |   `-MemberExpr 0x7f81a8814cf8 <col:7, col:14> 'union (anonymous union at ../Data/C2AST/pr59338.c:16:3)':'union tQResp::(anonymous at ../Data/C2AST/pr59338.c:16:3)' lvalue ->u 0x7f81a88148b0
+      | |       |     `-ImplicitCastExpr 0x7f81a8814ce0 <col:7> 'tQResp *' <LValueToRValue>
+      | |       |       `-DeclRefExpr 0x7f81a8814cb8 <col:7> 'tQResp *' lvalue Var 0x7f81a8814be8 'qResp' 'tQResp *'
+      | |       `-IntegerLiteral 0x7f81a8814d68 <col:18> 'int' 0
+      | `-IntegerLiteral 0x7f81a8814e60 <col:29> 'int' 0
+      |-ReturnStmt 0x7f81a8814ed8 <line:26:5>
+      `-<<<NULL>>>

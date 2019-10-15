@@ -1,0 +1,46 @@
+../Data/C2AST/pr80321.c:12:3: error: function definition is not allowed here
+  {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fad0f82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fad0f82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fad0f82bf80 '__int128'
+|-TypedefDecl 0x7fad0f82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fad0f82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fad0f82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fad0f82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fad0f82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fad0f82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fad0f82c600 'char *'
+|   `-BuiltinType 0x7fad0f82bd80 'char'
+|-TypedefDecl 0x7fad0f82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fad0f82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fad0f82c720 'struct __va_list_tag'
+|     `-Record 0x7fad0f82c698 '__va_list_tag'
+|-FunctionDecl 0x7fad10014220 <../Data/C2AST/pr80321.c:5:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7fad100143e0 <line:7:1, line:20:1> line:8:1 used test 'void (int)' static inline
+| |-ParmVarDecl 0x7fad10014318 <col:7, col:11> col:11 used x 'int'
+| `-CompoundStmt 0x7fad10014830 <line:9:1, line:20:1>
+|   `-IfStmt 0x7fad100147f8 <line:16:3, line:19:10>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fad10014560 <line:16:7, col:12> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fad10014548 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fad10014500 <col:7> 'int' lvalue ParmVar 0x7fad10014318 'x' 'int'
+|     | `-IntegerLiteral 0x7fad10014528 <col:12> 'int' 0
+|     |-CallExpr 0x7fad10014720 <line:17:5, col:11> 'int'
+|     | |-ImplicitCastExpr 0x7fad10014708 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fad10014690 <col:5> 'int ()' Function 0x7fad100145e0 'foo' 'int ()'
+|     | `-ImplicitCastExpr 0x7fad10014750 <col:10> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fad100146b8 <col:10> 'int' lvalue ParmVar 0x7fad10014318 'x' 'int'
+|     `-CallExpr 0x7fad100147d0 <line:19:5, col:10> 'void'
+|       `-ImplicitCastExpr 0x7fad100147b8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fad10014768 <col:5> 'void (void)' Function 0x7fad10014220 'bar' 'void (void)'
+`-FunctionDecl 0x7fad100148e8 <line:22:1, line:26:1> line:23:1 baz 'void (int)'
+  |-ParmVarDecl 0x7fad10014860 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fad10014a68 <line:24:1, line:26:1>
+    `-CallExpr 0x7fad10014a20 <line:25:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fad10014a08 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fad10014990 <col:3> 'void (int)' Function 0x7fad100143e0 'test' 'void (int)'
+      `-ImplicitCastExpr 0x7fad10014a50 <col:9> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fad100149b8 <col:9> 'int' lvalue ParmVar 0x7fad10014860 'x' 'int'

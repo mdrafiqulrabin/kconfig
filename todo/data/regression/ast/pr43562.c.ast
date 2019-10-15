@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff1dd82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff1de014228 <../Data/C2AST/pr43562.c:4:1, col:26> col:17 used foo 'unsigned int (void)' extern
+|-FunctionDecl 0x7ff1de0143d0 <line:5:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7ff1de014528 <line:7:1, line:20:1> line:8:6 bak 'void ()'
+  `-CompoundStmt 0x7ff1de014948 <line:9:1, line:20:1>
+    |-DeclStmt 0x7ff1de014640 <line:10:3, col:13>
+    | `-VarDecl 0x7ff1de0145e0 <col:3, col:12> col:12 used a 'unsigned int'
+    `-WhileStmt 0x7ff1de014928 <line:11:3, line:19:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7ff1de014658 <line:11:10> 'int' 1
+      `-CompoundStmt 0x7ff1de014908 <line:12:5, line:19:5>
+        |-BinaryOperator 0x7ff1de014738 <line:13:7, col:16> 'unsigned int' '='
+        | |-DeclRefExpr 0x7ff1de014678 <col:7> 'unsigned int' lvalue Var 0x7ff1de0145e0 'a' 'unsigned int'
+        | `-CallExpr 0x7ff1de014710 <col:11, col:16> 'unsigned int'
+        |   `-ImplicitCastExpr 0x7ff1de0146f8 <col:11> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7ff1de0146a0 <col:11> 'unsigned int (void)' Function 0x7ff1de014228 'foo' 'unsigned int (void)'
+        `-WhileStmt 0x7ff1de0148e8 <line:14:7, line:18:2>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7ff1de014788 <line:14:14> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff1de014760 <col:14> 'unsigned int' lvalue Var 0x7ff1de0145e0 'a' 'unsigned int'
+          `-CompoundStmt 0x7ff1de0148c8 <line:15:2, line:18:2>
+            |-CompoundAssignOperator 0x7ff1de014800 <line:16:4, col:9> 'unsigned int' '&=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+            | |-DeclRefExpr 0x7ff1de0147a0 <col:4> 'unsigned int' lvalue Var 0x7ff1de0145e0 'a' 'unsigned int'
+            | `-ImplicitCastExpr 0x7ff1de0147e8 <col:9> 'unsigned int' <IntegralCast>
+            |   `-IntegerLiteral 0x7ff1de0147c8 <col:9> 'int' 1
+            `-CallExpr 0x7ff1de0148a0 <line:17:4, col:9> 'void'
+              `-ImplicitCastExpr 0x7ff1de014888 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+                `-DeclRefExpr 0x7ff1de014838 <col:4> 'void (void)' Function 0x7ff1de0143d0 'bar' 'void (void)'

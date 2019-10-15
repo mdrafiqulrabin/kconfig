@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f8fa20274e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8fa181ac00 <../Data/C2AST/pr35318.c:4:1, line:9:1> line:5:1 foo 'void ()'
+  `-CompoundStmt 0x7f8fa181b128 <line:6:1, line:9:1>
+    |-DeclStmt 0x7f8fa181ae20 <line:7:3, col:18>
+    | |-VarDecl 0x7f8fa181acf8 <col:3, col:14> col:10 used x 'double' cinit
+    | | `-ImplicitCastExpr 0x7f8fa181ad78 <col:14> 'double' <IntegralToFloating>
+    | |   `-IntegerLiteral 0x7f8fa181ad58 <col:14> 'int' 4
+    | `-VarDecl 0x7f8fa181ada8 <col:3, col:17> col:17 used y 'double'
+    `-GCCAsmStmt 0x7f8fa181b080 <line:8:3, col:72>
+      |-DeclRefExpr 0x7f8fa181af08 <col:34> 'double' lvalue Var 0x7f8fa181acf8 'x' 'double'
+      |-DeclRefExpr 0x7f8fa181af60 <col:46> 'double' lvalue Var 0x7f8fa181ada8 'y' 'double'
+      |-ImplicitCastExpr 0x7f8fa181b068 <col:59> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8fa181afb8 <col:59> 'double' lvalue Var 0x7f8fa181acf8 'x' 'double'
+      `-IntegerLiteral 0x7f8fa181b048 <col:70> 'int' 8

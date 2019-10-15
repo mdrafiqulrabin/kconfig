@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f9fad82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9fad86d868 <../Data/C2AST/pr55303-3.c:7:1, line:12:1> line:8:1 test_00 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7f9fad82c978 <col:10, col:23> col:23 used a 'unsigned int'
+  `-CompoundStmt 0x7f9fad86dab0 <line:9:1, line:12:1>
+    `-ReturnStmt 0x7f9fad86da98 <line:11:3, col:22>
+      `-ConditionalOperator 0x7f9fad86da68 <col:10, col:22> 'unsigned int'
+        |-BinaryOperator 0x7f9fad86d9c8 <col:10, col:14> 'int' '>'
+        | |-ImplicitCastExpr 0x7f9fad86d998 <col:10> 'unsigned int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f9fad86d950 <col:10> 'unsigned int' lvalue ParmVar 0x7f9fad82c978 'a' 'unsigned int'
+        | `-ImplicitCastExpr 0x7f9fad86d9b0 <col:14> 'unsigned int' <IntegralCast>
+        |   `-IntegerLiteral 0x7f9fad86d978 <col:14> 'int' 1
+        |-ImplicitCastExpr 0x7f9fad86da50 <col:18> 'unsigned int' <IntegralCast>
+        | `-IntegerLiteral 0x7f9fad86d9f0 <col:18> 'int' 1
+        `-ImplicitCastExpr 0x7f9fad86da38 <col:22> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9fad86da10 <col:22> 'unsigned int' lvalue ParmVar 0x7f9fad82c978 'a' 'unsigned int'

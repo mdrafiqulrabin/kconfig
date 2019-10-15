@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fdc988022e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc9782b200 <../Data/C2AST/pr84335.c:4:1, col:19> col:19 referenced V '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fdc98802f80 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fdc98802420 'long long'
+|-FunctionDecl 0x7fdc9782b470 <line:6:1, line:10:1> line:7:1 foo 'V (V *, V *)'
+| |-ParmVarDecl 0x7fdc9782b2e8 <col:6, col:9> col:9 used a 'V *'
+| |-ParmVarDecl 0x7fdc9782b358 <col:12, col:15> col:15 used b 'V *'
+| `-CompoundStmt 0x7fdc9782b8c0 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fdc9782b8a8 <line:9:3, col:42>
+|     `-CallExpr 0x7fdc9782b840 <col:10, col:42> '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fdc9782b828 <col:10> '__attribute__((__vector_size__(2 * sizeof(long long)))) long long (*)(__attribute__((__vector_size__(2 * sizeof(long long)))) long long, __attribute__((__vector_size__(2 * sizeof(long long)))) long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fdc9782b710 <col:10> '<builtin fn type>' Function 0x7fdc9782b5a0 '__builtin_ia32_aesenc128' '__attribute__((__vector_size__(2 * sizeof(long long)))) long long (__attribute__((__vector_size__(2 * sizeof(long long)))) long long, __attribute__((__vector_size__(2 * sizeof(long long)))) long long)'
+|       |-ImplicitCastExpr 0x7fdc9782b878 <col:36, col:37> 'V':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-UnaryOperator 0x7fdc9782b778 <col:36, col:37> 'V':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7fdc9782b760 <col:37> 'V *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fdc9782b738 <col:37> 'V *' lvalue ParmVar 0x7fdc9782b2e8 'a' 'V *'
+|       `-ImplicitCastExpr 0x7fdc9782b890 <col:40, col:41> 'V':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-UnaryOperator 0x7fdc9782b7d8 <col:40, col:41> 'V':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fdc9782b7c0 <col:41> 'V *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fdc9782b798 <col:41> 'V *' lvalue ParmVar 0x7fdc9782b358 'b' 'V *'
+`-FunctionDecl 0x7fdc9782b5a0 <col:10> col:10 implicit used __builtin_ia32_aesenc128 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long (__attribute__((__vector_size__(2 * sizeof(long long)))) long long, __attribute__((__vector_size__(2 * sizeof(long long)))) long long)' extern
+  |-ParmVarDecl 0x7fdc9782b640 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-ParmVarDecl 0x7fdc9782b6a0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'

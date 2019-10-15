@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fd564009ce8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fd56400a978 <../Data/C2AST/pr30433.c:1:1, col:34> col:5 f 'int' cinit
+  `-BinaryOperator 0x7fd564060938 <col:9, col:34> 'int' '=='
+    |-ImplicitCastExpr 0x7fd564060920 <col:9, col:29> '_Complex double' <FloatingComplexCast>
+    | `-CStyleCastExpr 0x7fd5640608d8 <col:9, col:29> '_Complex float' <FloatingRealToComplex>
+    |   `-ImplicitCastExpr 0x7fd5640608c0 <col:25, col:29> 'float' <FloatingCast>
+    |     `-ParenExpr 0x7fd5640608a0 <col:25, col:29> 'double'
+    |       `-FloatingLiteral 0x7fd564060840 <col:26> 'double' 5.000000e-01
+    `-FloatingLiteral 0x7fd564060900 <col:34> 'double' 5.000000e-01

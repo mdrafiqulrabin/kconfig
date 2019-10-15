@@ -1,0 +1,34 @@
+../Data/C2AST/pr31490.c:9:42: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment and section separated by a comma
+const uintptr_t x __attribute__((section("foo"))) =  (uintptr_t)&cpu;
+                                         ^
+../Data/C2AST/pr31490.c:10:42: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment and section separated by a comma
+const uintptr_t g __attribute__((section("foo"))) = 0;
+                                         ^
+2 errors generated.
+TranslationUnitDecl 0x7ff2c78174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff2c7817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff2c7817780 '__int128'
+|-TypedefDecl 0x7ff2c7817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff2c78177a0 'unsigned __int128'
+|-TypedefDecl 0x7ff2c7817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff2c7817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff2c7817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff2c7817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff2c7817e00 'char *'
+|   `-BuiltinType 0x7ff2c7817580 'char'
+|-TypedefDecl 0x7ff2c7818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff2c78180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff2c7817f20 'struct __va_list_tag'
+|     `-Record 0x7ff2c7817e98 '__va_list_tag'
+|-TypedefDecl 0x7ff2c7818178 <../Data/C2AST/pr31490.c:6:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7ff2c78176a0 'unsigned long'
+|-FunctionDecl 0x7ff2c80142c8 <line:8:1, col:23> col:5 used cpu 'int (void *)'
+| |-ParmVarDecl 0x7ff2c8014200 <col:10, col:16> col:16 attr 'void *'
+| `-CompoundStmt 0x7ff2c80143b0 <col:22, col:23>
+|-VarDecl 0x7ff2c8014458 <line:9:1, col:66> col:17 x 'const uintptr_t':'const unsigned long' cinit
+| `-CStyleCastExpr 0x7ff2c8014538 <col:54, col:66> 'uintptr_t':'unsigned long' <PointerToIntegral>
+|   `-UnaryOperator 0x7ff2c8014508 <col:65, col:66> 'int (*)(void *)' prefix '&'
+|     `-DeclRefExpr 0x7ff2c80144b8 <col:66> 'int (void *)' Function 0x7ff2c80142c8 'cpu' 'int (void *)'
+`-VarDecl 0x7ff2c80145a0 <line:10:1, col:53> col:17 g 'const uintptr_t':'const unsigned long' cinit
+  `-ImplicitCastExpr 0x7ff2c8014620 <col:53> 'uintptr_t':'unsigned long' <IntegralCast>
+    `-IntegerLiteral 0x7ff2c8014600 <col:53> 'int' 0

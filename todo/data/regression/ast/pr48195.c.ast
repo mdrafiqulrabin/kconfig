@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fdd290068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdd29023250 <../Data/C2AST/pr48195.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdd290232f0 prev 0x7fdd29023250 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fdd290233a8 <line:7:1, col:5> col:5 used i 'int'
+|-FunctionDecl 0x7fdd29023498 <line:9:1, line:14:1> line:10:1 c2 'void ()'
+| |-CompoundStmt 0x7fdd29023690 <line:11:1, line:14:1>
+| | `-IfStmt 0x7fdd29023658 <line:12:3, line:13:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-ImplicitCastExpr 0x7fdd290235a8 <line:12:7> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fdd29023580 <col:7> 'int' lvalue Var 0x7fdd290233a8 'i' 'int'
+| |   |-CallExpr 0x7fdd29023630 <line:13:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fdd29023618 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fdd290235c0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdd290232f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-ConstructorAttr 0x7fdd29023538 <line:9:22> 65535
+|-FunctionDecl 0x7fdd290236c8 <line:16:1, line:21:1> line:17:1 d1 'void ()'
+| |-CompoundStmt 0x7fdd29023890 <line:18:1, line:21:1>
+| | `-IfStmt 0x7fdd29023858 <line:19:3, line:20:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-ImplicitCastExpr 0x7fdd290237d8 <line:19:7> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7fdd290237b0 <col:7> 'int' lvalue Var 0x7fdd290233a8 'i' 'int'
+| |   |-CallExpr 0x7fdd29023830 <line:20:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fdd29023818 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fdd290237f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdd290232f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-DestructorAttr 0x7fdd29023768 <line:16:22> 65535
+`-FunctionDecl 0x7fdd290238c8 <line:23:1, line:25:1> line:23:6 main 'void ()'
+  `-CompoundStmt 0x7fdd29023968 <line:24:1, line:25:1>

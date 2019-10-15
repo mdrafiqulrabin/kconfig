@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fefc58240e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fefc5824d70 <../Data/C2AST/pr69740-1.c:1:1, col:6> col:6 used a 'char'
+|-VarDecl 0x7fefc501c058 <line:2:1, col:7> col:7 used b 'short'
+`-FunctionDecl 0x7fefc501c108 <line:3:1, line:12:1> line:3:6 fn1 'void ()'
+  `-CompoundStmt 0x7fefc501c500 <col:12, line:12:1>
+    |-IfStmt 0x7fefc501c438 <line:4:3, line:9:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fefc501c1d0 <line:4:7> 'short' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fefc501c1a8 <col:7> 'short' lvalue Var 0x7fefc501c058 'b' 'short'
+    | |-NullStmt 0x7fefc501c1e8 <line:5:5>
+    | `-CompoundStmt 0x7fefc501c418 <line:6:8, line:9:3>
+    |   |-DeclStmt 0x7fefc501c390 <line:7:5, col:19>
+    |   | `-VarDecl 0x7fefc501c280 <col:5, col:18> col:9 c 'int [1]' cinit
+    |   |   `-InitListExpr 0x7fefc501c348 <col:16, col:18> 'int [1]'
+    |   |     `-IntegerLiteral 0x7fefc501c2e0 <col:17> 'int' 0
+    |   `-LabelStmt 0x7fefc501c400 <line:8:3, col:6> 'l1'
+    |     `-NullStmt 0x7fefc501c3a8 <col:6>
+    `-IfStmt 0x7fefc501c4c8 <line:10:3, line:11:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fefc501c498 <line:10:7> 'char' <LValueToRValue>
+      | `-DeclRefExpr 0x7fefc501c470 <col:7> 'char' lvalue Var 0x7fefc5824d70 'a' 'char'
+      |-GotoStmt 0x7fefc501c4b0 <line:11:5, col:10> 'l1' 0x7fefc501c3b8
+      `-<<<NULL>>>

@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fd21c81dee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd21c81eb60 <../Data/C2AST/pr39226.c:14:1, line:19:1> line:14:8 struct A definition
+| |-FieldDecl 0x7fd21e01fa38 <line:16:3, col:9> col:9 referenced a 'char *'
+| |-FieldDecl 0x7fd21e01fab8 <line:17:3, col:20> col:16 referenced b 'unsigned int'
+| | `-IntegerLiteral 0x7fd21e01fa80 <col:20> 'int' 1
+| `-FieldDecl 0x7fd21e01fb38 <line:18:3, col:20> col:16 referenced c 'unsigned int'
+|   `-IntegerLiteral 0x7fd21e01fb00 <col:20> 'int' 31
+|-RecordDecl 0x7fd21e01fb80 <line:22:1, line:25:1> line:22:8 struct B definition
+| `-FieldDecl 0x7fd21e01fce0 <line:24:3, col:13> col:13 referenced d 'struct A *'
+`-FunctionDecl 0x7fd21e01ff70 <line:27:1, line:34:1> line:28:1 foo 'void (struct B *, unsigned long)'
+  |-ParmVarDecl 0x7fd21e01fde0 <col:6, col:16> col:16 used x 'struct B *'
+  |-ParmVarDecl 0x7fd21e01fe58 <col:19, col:33> col:33 used y 'unsigned long'
+  `-CompoundStmt 0x7fd21e020508 <line:29:1, line:34:1>
+    |-IfStmt 0x7fd21e0201c0 <line:30:3, line:31:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd21e020190 <line:30:7, col:15> 'unsigned int' <LValueToRValue>
+    | | `-MemberExpr 0x7fd21e020158 <col:7, col:15> 'unsigned int' lvalue bitfield .c 0x7fd21e01fb38
+    | |   `-ArraySubscriptExpr 0x7fd21e020130 <col:7, col:13> 'struct A':'struct A' lvalue
+    | |     |-ImplicitCastExpr 0x7fd21e020100 <col:7, col:10> 'struct A *' <LValueToRValue>
+    | |     | `-MemberExpr 0x7fd21e0200a0 <col:7, col:10> 'struct A *' lvalue ->d 0x7fd21e01fce0
+    | |     |   `-ImplicitCastExpr 0x7fd21e020088 <col:7> 'struct B *' <LValueToRValue>
+    | |     |     `-DeclRefExpr 0x7fd21e020060 <col:7> 'struct B *' lvalue ParmVar 0x7fd21e01fde0 'x' 'struct B *'
+    | |     `-ImplicitCastExpr 0x7fd21e020118 <col:12> 'unsigned long' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fd21e0200d8 <col:12> 'unsigned long' lvalue ParmVar 0x7fd21e01fe58 'y' 'unsigned long'
+    | |-ReturnStmt 0x7fd21e0201a8 <line:31:5>
+    | `-<<<NULL>>>
+    `-IfStmt 0x7fd21e0204d0 <line:32:3, line:33:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd21e020328 <line:32:7, col:15> 'unsigned int' <LValueToRValue>
+      | `-MemberExpr 0x7fd21e0202f0 <col:7, col:15> 'unsigned int' lvalue bitfield .b 0x7fd21e01fab8
+      |   `-ArraySubscriptExpr 0x7fd21e0202c8 <col:7, col:13> 'struct A':'struct A' lvalue
+      |     |-ImplicitCastExpr 0x7fd21e020298 <col:7, col:10> 'struct A *' <LValueToRValue>
+      |     | `-MemberExpr 0x7fd21e020238 <col:7, col:10> 'struct A *' lvalue ->d 0x7fd21e01fce0
+      |     |   `-ImplicitCastExpr 0x7fd21e020220 <col:7> 'struct B *' <LValueToRValue>
+      |     |     `-DeclRefExpr 0x7fd21e0201f8 <col:7> 'struct B *' lvalue ParmVar 0x7fd21e01fde0 'x' 'struct B *'
+      |     `-ImplicitCastExpr 0x7fd21e0202b0 <col:12> 'unsigned long' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fd21e020270 <col:12> 'unsigned long' lvalue ParmVar 0x7fd21e01fe58 'y' 'unsigned long'
+      |-BinaryOperator 0x7fd21e0204a8 <line:33:5, col:17> 'char *' '='
+      | |-MemberExpr 0x7fd21e020438 <col:5, col:13> 'char *' lvalue .a 0x7fd21e01fa38
+      | | `-ArraySubscriptExpr 0x7fd21e020410 <col:5, col:11> 'struct A':'struct A' lvalue
+      | |   |-ImplicitCastExpr 0x7fd21e0203e0 <col:5, col:8> 'struct A *' <LValueToRValue>
+      | |   | `-MemberExpr 0x7fd21e020380 <col:5, col:8> 'struct A *' lvalue ->d 0x7fd21e01fce0
+      | |   |   `-ImplicitCastExpr 0x7fd21e020368 <col:5> 'struct B *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7fd21e020340 <col:5> 'struct B *' lvalue ParmVar 0x7fd21e01fde0 'x' 'struct B *'
+      | |   `-ImplicitCastExpr 0x7fd21e0203f8 <col:10> 'unsigned long' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fd21e0203b8 <col:10> 'unsigned long' lvalue ParmVar 0x7fd21e01fe58 'y' 'unsigned long'
+      | `-ImplicitCastExpr 0x7fd21e020490 <col:17> 'char *' <NullToPointer>
+      |   `-IntegerLiteral 0x7fd21e020470 <col:17> 'int' 0
+      `-<<<NULL>>>

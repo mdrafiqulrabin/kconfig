@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7ff60d82bce8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7ff60d82c988 <../Data/C2AST/pr79641.c:4:1, col:50> col:46 i 'signed char' cinit
+  |-ImplicitCastExpr 0x7ff60e014898 <col:50> 'signed char' <IntegralCast>
+  | `-IntegerLiteral 0x7ff60e014878 <col:50> 'int' 0
+  `-ModeAttr 0x7ff60d82c9e8 <col:26, col:42> __QI__

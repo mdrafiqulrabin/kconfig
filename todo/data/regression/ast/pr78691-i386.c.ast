@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7ffb7502bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffb758108d8 <../Data/C2AST/pr78691-i386.c:4:1, line:14:1> line:4:5 fn1 'int (char *, char *)'
+  |-ParmVarDecl 0x7ffb7502c978 <col:9, col:15> col:15 used p1 'char *'
+  |-ParmVarDecl 0x7ffb75810800 <col:19, col:25> col:25 used p2 'char *'
+  `-CompoundStmt 0x7ffb75810dc8 <col:29, line:14:1>
+    |-DeclStmt 0x7ffb75810a40 <line:5:3, col:8>
+    | `-VarDecl 0x7ffb758109e0 <col:3, col:7> col:7 used a 'int'
+    `-ForStmt 0x7ffb75810d90 <line:6:3, line:13:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-SwitchStmt 0x7ffb75810ae8 <line:7:5, line:13:5>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7ffb75810ad0 <line:7:13, col:14> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7ffb75810ab8 <col:13, col:14> 'char' <LValueToRValue>
+        |   `-UnaryOperator 0x7ffb75810a98 <col:13, col:14> 'char' lvalue prefix '*'
+        |     `-ImplicitCastExpr 0x7ffb75810a80 <col:14> 'char *' <LValueToRValue>
+        |       `-DeclRefExpr 0x7ffb75810a58 <col:14> 'char *' lvalue ParmVar 0x7ffb75810800 'p2' 'char *'
+        `-CompoundStmt 0x7ffb75810d68 <col:18, line:13:5>
+          |-CaseStmt 0x7ffb75810b30 <line:8:5, line:10:17>
+          | |-CharacterLiteral 0x7ffb75810b18 <line:8:10> 'int' 99
+          | |-<<<NULL>>>
+          | `-WhileStmt 0x7ffb75810cb8 <line:9:7, line:10:17>
+          |   |-<<<NULL>>>
+          |   |-BinaryOperator 0x7ffb75810bd0 <line:9:14, col:20> 'int' '>'
+          |   | |-UnaryOperator 0x7ffb75810b90 <col:14, col:16> 'int' prefix '--'
+          |   | | `-DeclRefExpr 0x7ffb75810b68 <col:16> 'int' lvalue Var 0x7ffb758109e0 'a' 'int'
+          |   | `-IntegerLiteral 0x7ffb75810bb0 <col:20> 'int' 0
+          |   `-BinaryOperator 0x7ffb75810c90 <line:10:9, col:17> 'char' '='
+          |     |-UnaryOperator 0x7ffb75810c40 <col:9, col:12> 'char' lvalue prefix '*'
+          |     | `-UnaryOperator 0x7ffb75810c20 <col:10, col:12> 'char *' postfix '++'
+          |     |   `-DeclRefExpr 0x7ffb75810bf8 <col:10> 'char *' lvalue ParmVar 0x7ffb7502c978 'p1' 'char *'
+          |     `-ImplicitCastExpr 0x7ffb75810c78 <col:17> 'char' <IntegralCast>
+          |       `-CharacterLiteral 0x7ffb75810c60 <col:17> 'int' 32
+          |-UnaryOperator 0x7ffb75810d00 <line:11:7, col:9> 'char *' postfix '++'
+          | `-DeclRefExpr 0x7ffb75810cd8 <col:7> 'char *' lvalue ParmVar 0x7ffb7502c978 'p1' 'char *'
+          `-UnaryOperator 0x7ffb75810d48 <line:12:7, col:8> 'int' postfix '--'
+            `-DeclRefExpr 0x7ffb75810d20 <col:7> 'int' lvalue Var 0x7ffb758109e0 'a' 'int'

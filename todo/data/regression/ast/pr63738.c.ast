@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fc7930272e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc793874420 <../Data/C2AST/pr63738.c:6:1, line:8:1> line:6:8 struct longjmp_buffer definition
+| `-FieldDecl 0x7fc7938744e0 <line:7:3, col:11> col:11 referenced buf 'jmp_buf':'int [37]'
+|-FunctionDecl 0x7fc793874578 <line:10:1, col:12> col:6 used plouf 'void ()'
+`-FunctionDecl 0x7fc793874670 <line:12:1, line:28:1> line:12:13 interprete 'long ()' extern
+  `-CompoundStmt 0x7fc7938750b0 <line:13:1, line:28:1>
+    |-DeclStmt 0x7fc7938747b0 <line:14:3, col:12>
+    | `-VarDecl 0x7fc793874750 <col:3, col:10> col:10 used sp 'long *'
+    |-DeclStmt 0x7fc793874860 <line:15:3, col:8>
+    | `-VarDecl 0x7fc793874800 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fc7938748f0 <line:16:3, col:13>
+    | `-VarDecl 0x7fc793874890 <col:3, col:9> col:9 used args 'long *'
+    |-DeclStmt 0x7fc793874980 <line:17:3, col:8>
+    | `-VarDecl 0x7fc793874920 <col:3, col:7> col:7 used n 'int'
+    |-DeclStmt 0x7fc793874a50 <line:19:3, col:34>
+    | `-VarDecl 0x7fc7938749f0 <col:3, col:25> col:25 used raise_buf 'struct longjmp_buffer':'struct longjmp_buffer'
+    |-CallExpr 0x7fc793874b30 <line:20:3, col:24> 'int'
+    | |-ImplicitCastExpr 0x7fc793874b18 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc793874a68 <col:3> 'int (int *)' Function 0x7fc793871e98 'setjmp' 'int (int *)'
+    | `-ImplicitCastExpr 0x7fc793874b60 <col:11, col:21> 'int *' <ArrayToPointerDecay>
+    |   `-MemberExpr 0x7fc793874ab8 <col:11, col:21> 'jmp_buf':'int [37]' lvalue .buf 0x7fc7938744e0
+    |     `-DeclRefExpr 0x7fc793874a90 <col:11> 'struct longjmp_buffer':'struct longjmp_buffer' lvalue Var 0x7fc7938749f0 'raise_buf' 'struct longjmp_buffer':'struct longjmp_buffer'
+    |-CallExpr 0x7fc793874be0 <line:22:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fc793874bc8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc793874b78 <col:3> 'void ()' Function 0x7fc793874578 'plouf' 'void ()'
+    |-CompoundAssignOperator 0x7fc793874c50 <line:23:3, col:9> 'long *' '-=' ComputeLHSTy='long *' ComputeResultTy='long *'
+    | |-DeclRefExpr 0x7fc793874c08 <col:3> 'long *' lvalue Var 0x7fc793874750 'sp' 'long *'
+    | `-IntegerLiteral 0x7fc793874c30 <col:9> 'int' 4
+    |-ForStmt 0x7fc793874fc0 <line:24:3, line:25:22>
+    | |-BinaryOperator 0x7fc793874cd0 <line:24:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fc793874c88 <col:8> 'int' lvalue Var 0x7fc793874800 'i' 'int'
+    | | `-IntegerLiteral 0x7fc793874cb0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc793874d78 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fc793874d48 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc793874cf8 <col:15> 'int' lvalue Var 0x7fc793874800 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fc793874d60 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc793874d20 <col:19> 'int' lvalue Var 0x7fc793874920 'n' 'int'
+    | |-UnaryOperator 0x7fc793874dc8 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fc793874da0 <col:22> 'int' lvalue Var 0x7fc793874800 'i' 'int'
+    | `-BinaryOperator 0x7fc793874f98 <line:25:5, col:22> 'long' '='
+    |   |-ArraySubscriptExpr 0x7fc793874e68 <col:5, col:11> 'long' lvalue
+    |   | |-ImplicitCastExpr 0x7fc793874e38 <col:5> 'long *' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fc793874de8 <col:5> 'long *' lvalue Var 0x7fc793874890 'args' 'long *'
+    |   | `-ImplicitCastExpr 0x7fc793874e50 <col:10> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fc793874e10 <col:10> 'int' lvalue Var 0x7fc793874800 'i' 'int'
+    |   `-ImplicitCastExpr 0x7fc793874f80 <col:15, col:22> 'long' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fc793874f58 <col:15, col:22> 'long' lvalue
+    |       |-ImplicitCastExpr 0x7fc793874f40 <col:15> 'long *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fc793874e90 <col:15> 'long *' lvalue Var 0x7fc793874750 'sp' 'long *'
+    |       `-BinaryOperator 0x7fc793874f18 <col:18, col:21> 'int' '-'
+    |         |-IntegerLiteral 0x7fc793874eb8 <col:18> 'int' 10
+    |         `-ImplicitCastExpr 0x7fc793874f00 <col:21> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fc793874ed8 <col:21> 'int' lvalue Var 0x7fc793874800 'i' 'int'
+    |-CallExpr 0x7fc793875038 <line:26:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fc793875020 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc793874ff8 <col:3> 'void ()' Function 0x7fc793874578 'plouf' 'void ()'
+    `-ReturnStmt 0x7fc793875098 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7fc793875080 <col:10> 'long' <IntegralCast>
+        `-IntegerLiteral 0x7fc793875060 <col:10> 'int' 0

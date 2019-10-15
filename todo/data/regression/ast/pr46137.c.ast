@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fdf3e0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdf3e018160 <../Data/C2AST/pr46137.c:3:1, col:12> col:8 struct X definition
+|-FunctionDecl 0x7fdf3d01af88 <line:5:1, line:10:1> line:6:1 used bar 'void *(void *, void *)' static inline
+| |-ParmVarDecl 0x7fdf3d01ae38 <col:6, col:12> col:12 used dst 'void *'
+| |-ParmVarDecl 0x7fdf3d01aeb0 <col:17, col:23> col:23 used src 'void *'
+| `-CompoundStmt 0x7fdf3d01b8f8 <line:7:1, line:10:1>
+|   `-ReturnStmt 0x7fdf3d01b8e0 <line:8:3, line:9:36>
+|     `-CallExpr 0x7fdf3d01b810 <line:8:10, line:9:36> 'void *'
+|       |-ImplicitCastExpr 0x7fdf3d01b7f8 <line:8:10> 'void *(*)(void *, const void *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fdf3d01b388 <col:10> '<builtin fn type>' Function 0x7fdf3d01b100 '__builtin___memcpy_chk' 'void *(void *, const void *, unsigned long, unsigned long)'
+|       |-ImplicitCastExpr 0x7fdf3d01b858 <col:34> 'void *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fdf3d01b3b0 <col:34> 'void *' lvalue ParmVar 0x7fdf3d01ae38 'dst' 'void *'
+|       |-ImplicitCastExpr 0x7fdf3d01b888 <col:39> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fdf3d01b870 <col:39> 'void *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fdf3d01b3d8 <col:39> 'void *' lvalue ParmVar 0x7fdf3d01aeb0 'src' 'void *'
+|       |-UnaryExprOrTypeTraitExpr 0x7fdf3d01b450 <col:44, col:60> 'unsigned long' sizeof 'struct X':'struct X'
+|       `-CallExpr 0x7fdf3d01b730 <line:9:6, col:35> 'unsigned long'
+|         |-ImplicitCastExpr 0x7fdf3d01b718 <col:6> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fdf3d01b668 <col:6> '<builtin fn type>' Function 0x7fdf3d01b4b0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|         |-ImplicitCastExpr 0x7fdf3d01b780 <col:29> 'const void *' <BitCast>
+|         | `-ImplicitCastExpr 0x7fdf3d01b768 <col:29> 'void *' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fdf3d01b690 <col:29> 'void *' lvalue ParmVar 0x7fdf3d01ae38 'dst' 'void *'
+|         `-IntegerLiteral 0x7fdf3d01b6b8 <col:34> 'int' 0
+|-FunctionDecl 0x7fdf3d01b100 <line:8:10> col:10 implicit used __builtin___memcpy_chk 'void *(void *, const void *, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fdf3d01b1a0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fdf3d01b200 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fdf3d01b260 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fdf3d01b2c0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fdf3d01b340 <col:10> Implicit
+|-FunctionDecl 0x7fdf3d01b4b0 <line:9:6> col:6 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7fdf3d01b550 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fdf3d01b5b0 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fdf3d01b620 <col:6> Implicit
+`-FunctionDecl 0x7fdf3d01baa0 <line:12:1, line:18:1> line:13:1 foo 'struct X (struct X *)'
+  |-ParmVarDecl 0x7fdf3d01b990 <col:6, col:16> col:16 used x 'struct X *'
+  `-CompoundStmt 0x7fdf3d01bd98 <line:14:1, line:18:1>
+    |-DeclStmt 0x7fdf3d01bbc8 <line:15:3, col:15>
+    | `-VarDecl 0x7fdf3d01bb68 <col:3, col:12> col:12 used any 'struct X':'struct X' nrvo
+    |-CallExpr 0x7fdf3d01bcc0 <line:16:3, col:15> 'void *'
+    | |-ImplicitCastExpr 0x7fdf3d01bca8 <col:3> 'void *(*)(void *, void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdf3d01bbe0 <col:3> 'void *(void *, void *)' Function 0x7fdf3d01af88 'bar' 'void *(void *, void *)'
+    | |-ImplicitCastExpr 0x7fdf3d01bcf8 <col:8, col:9> 'void *' <BitCast>
+    | | `-UnaryOperator 0x7fdf3d01bc30 <col:8, col:9> 'struct X *' prefix '&'
+    | |   `-DeclRefExpr 0x7fdf3d01bc08 <col:9> 'struct X':'struct X' lvalue Var 0x7fdf3d01bb68 'any' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fdf3d01bd28 <col:14> 'void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fdf3d01bd10 <col:14> 'struct X *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fdf3d01bc50 <col:14> 'struct X *' lvalue ParmVar 0x7fdf3d01b990 'x' 'struct X *'
+    `-ReturnStmt 0x7fdf3d01bd80 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fdf3d01bd68 <col:10> 'struct X':'struct X' <LValueToRValue>
+        `-DeclRefExpr 0x7fdf3d01bd40 <col:10> 'struct X':'struct X' lvalue Var 0x7fdf3d01bb68 'any' 'struct X':'struct X'

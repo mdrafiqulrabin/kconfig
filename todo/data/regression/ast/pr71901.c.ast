@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7fc4628252e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc462825f60 <../Data/C2AST/pr71901.c:4:9, col:32> col:9 struct definition
+| `-FieldDecl 0x7fc461814c38 <col:18, col:22> col:22 referenced _mp_size 'int'
+|-TypedefDecl 0x7fc461814dc8 <col:1, col:41> col:34 referenced mpz_t 'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9) [1]'
+| `-ConstantArrayType 0x7fc461814d60 'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9) [1]' 1 
+|   `-ElaboratedType 0x7fc461814ca0 'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9)' sugar
+|     `-RecordType 0x7fc461814c00 'struct (anonymous at ../Data/C2AST/pr71901.c:4:9)'
+|       `-Record 0x7fc462825f60 ''
+|-VarDecl 0x7fc461814e50 <line:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fc461814f08 <col:1, col:8> col:8 used b 'int'
+`-FunctionDecl 0x7fc461814fc8 <line:6:1, line:15:1> line:6:6 fn1 'void ()'
+  `-CompoundStmt 0x7fc461815d00 <line:7:1, line:15:1>
+    |-DeclStmt 0x7fc461815278 <line:8:3, col:16>
+    | `-VarDecl 0x7fc461815218 <col:3, col:15> col:9 used c 'mpz_t [1][b]'
+    `-ForStmt 0x7fc461815cc8 <line:9:3, line:14:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fc461815ca8 <line:9:12, line:14:3>
+        |-DeclStmt 0x7fc461815b50 <line:10:7, line:11:60>
+        | |-VarDecl 0x7fc4618152a8 <line:10:7, col:66> col:11 used d 'int' cinit
+        | | `-ConditionalOperator 0x7fc461815740 <col:15, col:66> 'int'
+        | |   |-BinaryOperator 0x7fc461815348 <col:15, col:20> 'int' '>='
+        | |   | |-IntegerLiteral 0x7fc461815308 <col:15> 'int' 0
+        | |   | `-IntegerLiteral 0x7fc461815328 <col:20> 'int' 0
+        | |   |-ConditionalOperator 0x7fc4618156f0 <col:24, col:62> 'int'
+        | |   | |-BinaryOperator 0x7fc4618153b0 <col:24, col:29> 'int' '=='
+        | |   | | |-IntegerLiteral 0x7fc461815370 <col:24> 'int' 0
+        | |   | | `-IntegerLiteral 0x7fc461815390 <col:29> 'int' 0
+        | |   | |-ConditionalOperator 0x7fc4618156a0 <col:33, col:58> 'int'
+        | |   | | |-ImplicitCastExpr 0x7fc461815688 <col:33, col:42> 'int' <LValueToRValue>
+        | |   | | | `-MemberExpr 0x7fc4618155f0 <col:33, col:42> 'int' lvalue ->_mp_size 0x7fc461814c38
+        | |   | | |   `-ImplicitCastExpr 0x7fc4618155d8 <col:33, col:39> 'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9) *' <ArrayToPointerDecay>
+        | |   | | |     `-ArraySubscriptExpr 0x7fc461815550 <col:33, col:39> 'mpz_t':'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9) [1]' lvalue
+        | |   | | |       |-ImplicitCastExpr 0x7fc461815538 <col:33, col:36> 'mpz_t *' <ArrayToPointerDecay>
+        | |   | | |       | `-ArraySubscriptExpr 0x7fc461815490 <col:33, col:36> 'mpz_t [b]' lvalue
+        | |   | | |       |   |-ImplicitCastExpr 0x7fc461815478 <col:33> 'mpz_t (*)[b]' <ArrayToPointerDecay>
+        | |   | | |       |   | `-DeclRefExpr 0x7fc4618153d8 <col:33> 'mpz_t [1][b]' lvalue Var 0x7fc461815218 'c' 'mpz_t [1][b]'
+        | |   | | |       |   `-IntegerLiteral 0x7fc461815400 <col:35> 'int' 0
+        | |   | | |       `-IntegerLiteral 0x7fc4618154b8 <col:38> 'int' 0
+        | |   | | |-UnaryOperator 0x7fc461815648 <col:53, col:54> 'int' prefix '-'
+        | |   | | | `-IntegerLiteral 0x7fc461815628 <col:54> 'int' 1
+        | |   | | `-IntegerLiteral 0x7fc461815668 <col:58> 'int' 0
+        | |   | `-IntegerLiteral 0x7fc4618156d0 <col:62> 'int' 0
+        | |   `-IntegerLiteral 0x7fc461815720 <col:66> 'int' 0
+        | `-VarDecl 0x7fc461815788 <col:7, line:11:59> col:4 used e 'int' cinit
+        |   `-ConditionalOperator 0x7fc461815b08 <col:8, col:59> 'int'
+        |     |-BinaryOperator 0x7fc461815828 <col:8, col:13> 'int' '>='
+        |     | |-IntegerLiteral 0x7fc4618157e8 <col:8> 'int' 0
+        |     | `-IntegerLiteral 0x7fc461815808 <col:13> 'int' 0
+        |     |-ConditionalOperator 0x7fc461815ab8 <col:17, col:55> 'int'
+        |     | |-BinaryOperator 0x7fc461815890 <col:17, col:22> 'int' '=='
+        |     | | |-IntegerLiteral 0x7fc461815850 <col:17> 'int' 0
+        |     | | `-IntegerLiteral 0x7fc461815870 <col:22> 'int' 0
+        |     | |-ConditionalOperator 0x7fc461815a68 <col:26, col:51> 'int'
+        |     | | |-ImplicitCastExpr 0x7fc461815a50 <col:26, col:35> 'int' <LValueToRValue>
+        |     | | | `-MemberExpr 0x7fc4618159b8 <col:26, col:35> 'int' lvalue ->_mp_size 0x7fc461814c38
+        |     | | |   `-ImplicitCastExpr 0x7fc4618159a0 <col:26, col:32> 'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9) *' <ArrayToPointerDecay>
+        |     | | |     `-ArraySubscriptExpr 0x7fc461815978 <col:26, col:32> 'mpz_t':'struct (anonymous struct at ../Data/C2AST/pr71901.c:4:9) [1]' lvalue
+        |     | | |       |-ImplicitCastExpr 0x7fc461815960 <col:26, col:29> 'mpz_t *' <ArrayToPointerDecay>
+        |     | | |       | `-ArraySubscriptExpr 0x7fc461815918 <col:26, col:29> 'mpz_t [b]' lvalue
+        |     | | |       |   |-ImplicitCastExpr 0x7fc461815900 <col:26> 'mpz_t (*)[b]' <ArrayToPointerDecay>
+        |     | | |       |   | `-DeclRefExpr 0x7fc4618158b8 <col:26> 'mpz_t [1][b]' lvalue Var 0x7fc461815218 'c' 'mpz_t [1][b]'
+        |     | | |       |   `-IntegerLiteral 0x7fc4618158e0 <col:28> 'int' 1
+        |     | | |       `-IntegerLiteral 0x7fc461815940 <col:31> 'int' 1
+        |     | | |-UnaryOperator 0x7fc461815a10 <col:46, col:47> 'int' prefix '-'
+        |     | | | `-IntegerLiteral 0x7fc4618159f0 <col:47> 'int' 1
+        |     | | `-IntegerLiteral 0x7fc461815a30 <col:51> 'int' 0
+        |     | `-IntegerLiteral 0x7fc461815a98 <col:55> 'int' 0
+        |     `-IntegerLiteral 0x7fc461815ae8 <col:59> 'int' 0
+        `-IfStmt 0x7fc461815c70 <line:12:7, line:13:3>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fc461815c00 <line:12:11, col:16> 'int' '!='
+          | |-ImplicitCastExpr 0x7fc461815bb8 <col:11> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fc461815b68 <col:11> 'int' lvalue Var 0x7fc4618152a8 'd' 'int'
+          | `-ImplicitCastExpr 0x7fc461815bd0 <col:16> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc461815b90 <col:16> 'int' lvalue Var 0x7fc461815788 'e' 'int'
+          |-UnaryOperator 0x7fc461815c50 <line:13:2, col:3> 'int' postfix '++'
+          | `-DeclRefExpr 0x7fc461815c28 <col:2> 'int' lvalue Var 0x7fc461814e50 'a' 'int'
+          `-<<<NULL>>>

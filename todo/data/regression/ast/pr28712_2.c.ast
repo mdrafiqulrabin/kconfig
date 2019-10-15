@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f9fc68212e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9fc6821f60 <../Data/C2AST/pr28712_2.c:3:1, col:8> col:8 struct A
+|-VarDecl 0x7f9fc6034ad0 <line:5:1, col:18> col:18 a 'struct A *' extern
+|-RecordDecl 0x7f9fc6034b70 prev 0x7f9fc6821f60 <line:7:1, col:12> col:8 struct A definition
+| `-PackedAttr 0x7f9fc6034bf8 <col:29>
+|-RecordDecl 0x7f9fc6034c40 <line:9:1, col:8> col:8 struct B
+|-VarDecl 0x7f9fc6034de0 <line:11:1, col:18> col:18 b 'struct B *' extern
+`-RecordDecl 0x7f9fc6034e40 prev 0x7f9fc6034c40 <line:13:1, col:19> col:8 struct B definition
+  |-PackedAttr 0x7f9fc6034f28 <col:36>
+  `-FieldDecl 0x7f9fc6034ee0 <col:12, col:16> col:16 i 'int'

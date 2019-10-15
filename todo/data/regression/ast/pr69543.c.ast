@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f809302bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f809381a260 <../Data/C2AST/pr69543.c:12:1, line:18:1> line:12:6 test 'void (char)'
+  |-ParmVarDecl 0x7f809302c970 <col:12, col:17> col:17 used yylval 'char'
+  `-CompoundStmt 0x7f809381a4a8 <line:13:1, line:18:1>
+    |-DeclStmt 0x7f809381a3c0 <line:14:3, col:14>
+    | `-VarDecl 0x7f809381a360 <col:3, col:9> col:9 used yyvsp 'char *'
+    `-BinaryOperator 0x7f809381a480 <line:16:3, col:14> 'char' '='
+      |-UnaryOperator 0x7f809381a420 <col:3, col:6> 'char' lvalue prefix '*'
+      | `-UnaryOperator 0x7f809381a400 <col:4, col:6> 'char *' prefix '++'
+      |   `-DeclRefExpr 0x7f809381a3d8 <col:6> 'char *' lvalue Var 0x7f809381a360 'yyvsp' 'char *'
+      `-ImplicitCastExpr 0x7f809381a468 <col:14> 'char' <LValueToRValue>
+        `-DeclRefExpr 0x7f809381a440 <col:14> 'char' lvalue ParmVar 0x7f809302c970 'yylval' 'char'

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fdc2902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdc2906ae50 <../Data/C2AST/pragma-isr-trap-exit.c:7:1, col:47> col:6 isr 'void (void)'
+|-FunctionDecl 0x7fdc2906afc0 prev 0x7fdc2906ae50 <line:9:1, line:12:1> line:10:1 isr 'void (void)'
+| `-CompoundStmt 0x7fdc2906b060 <line:11:1, line:12:1>
+|-FunctionDecl 0x7fdc2906b150 <line:14:1, line:17:1> line:15:1 delay 'void (int)'
+| |-ParmVarDecl 0x7fdc2906b088 <col:8, col:12> col:12 a 'int'
+| `-CompoundStmt 0x7fdc2906b1f8 <line:16:1, line:17:1>
+`-FunctionDecl 0x7fdc2906b2d8 <line:19:1, line:23:1> line:20:1 main 'int (void)'
+  `-CompoundStmt 0x7fdc2906b3e0 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7fdc2906b3c8 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fdc2906b3a8 <col:10> 'int' 0

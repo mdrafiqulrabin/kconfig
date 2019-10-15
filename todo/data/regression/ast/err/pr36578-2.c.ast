@@ -1,0 +1,88 @@
+../Data/C2AST/pr36578-2.c:6:10: fatal error: 'sse2-check.h' file not found
+#include "sse2-check.h"
+         ^~~~~~~~~~~~~~
+TranslationUnitDecl 0x7f8d9c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8d9c82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8d9c82bf80 '__int128'
+|-TypedefDecl 0x7f8d9c82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8d9c82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f8d9c82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8d9c82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8d9c82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8d9c82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8d9c82c600 'char *'
+|   `-BuiltinType 0x7f8d9c82bd80 'char'
+|-TypedefDecl 0x7f8d9c82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8d9c82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8d9c82c720 'struct __va_list_tag'
+|     `-Record 0x7f8d9c82c698 '__va_list_tag'
+|-FunctionDecl 0x7f8d9d015250 <../Data/C2AST/pr36578-2.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8d9d0152f0 prev 0x7f8d9d015250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8d9d0154a8 <line:9:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f8d9d015548 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f8d9d0155b0 prev 0x7f8d9d0154a8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f8d9d0153a8 <col:19> col:22 'int'
+|-FunctionDecl 0x7f8d9d015738 <line:10:12> col:12 implicit printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f8d9d0157d8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f8d9d015840 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7f8d9d015898 prev 0x7f8d9d015738 <col:1, col:36> col:12 printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f8d9d015670 <col:19, col:30> col:31 'const char *'
+| `-FormatAttr 0x7f8d9d015978 <col:12> Inherited printf 1 2
+|-VarDecl 0x7f8d9d0159b0 <line:12:1, col:22> col:17 used d1 'volatile double' cinit
+| `-FloatingLiteral 0x7f8d9d015a50 <col:22> 'double' 1.000000e+00
+|-VarDecl 0x7f8d9d015a88 <line:13:1, col:22> col:17 used d2 'volatile double' cinit
+| `-FloatingLiteral 0x7f8d9d015ae8 <col:22> 'double' 5.551115e-17
+|-VarDecl 0x7f8d9d015b20 <line:14:1, col:23> col:17 used d2d 'volatile double' cinit
+| `-FloatingLiteral 0x7f8d9d015b80 <col:23> 'double' 2.220446e-16
+|-VarDecl 0x7f8d9d015bb8 <line:15:1, col:20> col:16 used f 'volatile float' cinit
+| `-FloatingLiteral 0x7f8d9d015c18 <col:20> 'float' 1.000000e+00
+|-VarDecl 0x7f8d9d015c50 <line:16:1, col:16> col:16 used f2 'volatile float'
+`-FunctionDecl 0x7f8d9d015d40 <line:18:1, line:29:1> line:19:1 sse2_test 'void (void)' static
+  `-CompoundStmt 0x7f8d9d02cf40 <line:20:1, line:29:1>
+    |-IfStmt 0x7f8d9d02ccd0 <line:21:3, line:25:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8d9d015e50 <line:21:7, col:42> 'int' '>'
+    | | |-UnaryExprOrTypeTraitExpr 0x7f8d9d015df8 <col:7, col:25> 'unsigned long' sizeof 'long double'
+    | | `-UnaryExprOrTypeTraitExpr 0x7f8d9d015e30 <col:29, col:42> 'unsigned long' sizeof 'double'
+    | |-CompoundStmt 0x7f8d9d016080 <col:47, line:23:3>
+    | | `-BinaryOperator 0x7f8d9d016058 <line:22:2, col:48> 'float' '='
+    | |   |-DeclRefExpr 0x7f8d9d015e78 <col:2> 'volatile float' lvalue Var 0x7f8d9d015c50 'f2' 'volatile float'
+    | |   `-CStyleCastExpr 0x7f8d9d016030 <col:7, col:48> 'float' <FloatingCast>
+    | |     `-ParenExpr 0x7f8d9d016010 <col:14, col:48> 'long double'
+    | |       `-BinaryOperator 0x7f8d9d015fa0 <col:15, col:46> 'long double' '+'
+    | |         |-CStyleCastExpr 0x7f8d9d015ef8 <col:15, col:28> 'long double' <FloatingCast>
+    | |         | `-ImplicitCastExpr 0x7f8d9d015ee0 <col:28> 'double' <LValueToRValue>
+    | |         |   `-DeclRefExpr 0x7f8d9d015ea0 <col:28> 'volatile double' lvalue Var 0x7f8d9d1 error generated.
+0159b0 'd1' 'volatile double'
+    | |         `-CStyleCastExpr 0x7f8d9d015f78 <col:33, col:46> 'long double' <FloatingCast>
+    | |           `-ImplicitCastExpr 0x7f8d9d015f60 <col:46> 'double' <LValueToRValue>
+    | |             `-DeclRefExpr 0x7f8d9d015f20 <col:46> 'volatile double' lvalue Var 0x7f8d9d015a88 'd2' 'volatile double'
+    | `-CompoundStmt 0x7f8d9d02ccb8 <line:23:10, line:25:3>
+    |   `-BinaryOperator 0x7f8d9d02cc90 <line:24:2, col:49> 'float' '='
+    |     |-DeclRefExpr 0x7f8d9d016098 <col:2> 'volatile float' lvalue Var 0x7f8d9d015c50 'f2' 'volatile float'
+    |     `-CStyleCastExpr 0x7f8d9d02cc68 <col:7, col:49> 'float' <FloatingCast>
+    |       `-ParenExpr 0x7f8d9d02cc48 <col:14, col:49> 'long double'
+    |         `-BinaryOperator 0x7f8d9d0161c0 <col:15, col:46> 'long double' '+'
+    |           |-CStyleCastExpr 0x7f8d9d016118 <col:15, col:28> 'long double' <FloatingCast>
+    |           | `-ImplicitCastExpr 0x7f8d9d016100 <col:28> 'double' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x7f8d9d0160c0 <col:28> 'volatile double' lvalue Var 0x7f8d9d0159b0 'd1' 'volatile double'
+    |           `-CStyleCastExpr 0x7f8d9d016198 <col:33, col:46> 'long double' <FloatingCast>
+    |             `-ImplicitCastExpr 0x7f8d9d016180 <col:46> 'double' <LValueToRValue>
+    |               `-DeclRefExpr 0x7f8d9d016140 <col:46> 'volatile double' lvalue Var 0x7f8d9d015b20 'd2d' 'volatile double'
+    |-IfStmt 0x7f8d9d02ce48 <line:26:3, line:27:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8d9d02cd88 <line:26:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f8d9d02cd58 <col:7> 'float' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8d9d02cd08 <col:7> 'volatile float' lvalue Var 0x7f8d9d015bb8 'f' 'volatile float'
+    | | `-ImplicitCastExpr 0x7f8d9d02cd70 <col:12> 'float' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8d9d02cd30 <col:12> 'volatile float' lvalue Var 0x7f8d9d015c50 'f2' 'volatile float'
+    | |-CallExpr 0x7f8d9d02ce20 <line:27:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f8d9d02ce08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f8d9d02cdb0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f8d9d0152f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f8d9d02cf10 <line:28:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f8d9d02cef8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8d9d02ce80 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f8d9d0155b0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7f8d9d02cea8 <col:9> 'int' 0

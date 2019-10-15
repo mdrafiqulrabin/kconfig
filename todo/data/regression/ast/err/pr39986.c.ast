@@ -1,0 +1,25 @@
+../Data/C2AST/pr39986.c:3:10: fatal error: 'dfp-dbg.h' file not found
+#include "dfp-dbg.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f7fc982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f7fc982c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f7fc982bf80 '__int128'
+|-TypedefDecl 0x7f7fc982c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f7fc982bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f7fc982c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f7fc982c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f7fc982c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f7fc982c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f7fc982c600 'char *'
+|   `-BuiltinType 0x7f7fc982bd80 'char'
+|-TypedefDecl 0x7f7fc982c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f7fc982c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f7fc982c720 'struct __va_list_tag'
+|     `-Record 0x7f7fc982c698 '__va_list_tag'
+|-VarDecl 0x7f7fc982c978 <../Data/C2AST/pr39986.c:7:1, col:12> col:12 invalid a 'int'
+|-VarDecl 0x7f7fca015200 <line:8:1, col:12> col:12 invalid b 'int'
+|-VarDecl 0x7f7fca015278 <line:9:1, col:12> col:12 invalid c 'int'
+|-VarDecl 0x7f7fca0152f0 <line:10:1, col:12> col:12 invalid d 'int'
+|-VarDecl 0x7f7fca015368 <line:11:1, col:13> col:13 invalid e 'int'
+`-VarDecl 0x7f7fca0153e0 <line:12:1, col:13> col:13 invalid f 'int'

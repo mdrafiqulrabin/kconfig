@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7facc00258e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7facc0026578 <../Data/C2AST/pr57558-1.c:4:1, col:22> col:22 referenced u_int 'unsigned int'
+| `-BuiltinType 0x7facc0025a80 'unsigned int'
+`-FunctionDecl 0x7facc003b680 <line:5:1, line:10:1> line:5:6 foo 'void (u_int *restrict, u_int *restrict, u_int)'
+  |-ParmVarDecl 0x7facc003b468 <col:11, col:29> col:29 used x 'u_int *restrict'
+  |-ParmVarDecl 0x7facc003b4d8 <col:32, col:50> col:50 used y 'u_int *restrict'
+  |-ParmVarDecl 0x7facc003b548 <col:53, col:59> col:59 used n 'u_int':'unsigned int'
+  `-CompoundStmt 0x7facc003bba0 <line:6:1, line:10:1>
+    |-DeclStmt 0x7facc003b7e8 <line:7:3, col:10>
+    | `-VarDecl 0x7facc003b788 <col:3, col:9> col:9 used i 'u_int':'unsigned int'
+    `-ForStmt 0x7facc003bb68 <line:8:3, line:9:12>
+      |-BinaryOperator 0x7facc003b860 <line:8:8, col:10> 'u_int':'unsigned int' '='
+      | |-DeclRefExpr 0x7facc003b800 <col:8> 'u_int':'unsigned int' lvalue Var 0x7facc003b788 'i' 'u_int':'unsigned int'
+      | `-ImplicitCastExpr 0x7facc003b848 <col:10> 'u_int':'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7facc003b828 <col:10> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7facc003b908 <col:13, col:16> 'int' '<='
+      | |-ImplicitCastExpr 0x7facc003b8d8 <col:13> 'u_int':'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7facc003b888 <col:13> 'u_int':'unsigned int' lvalue Var 0x7facc003b788 'i' 'u_int':'unsigned int'
+      | `-ImplicitCastExpr 0x7facc003b8f0 <col:16> 'u_int':'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7facc003b8b0 <col:16> 'u_int':'unsigned int' lvalue ParmVar 0x7facc003b548 'n' 'u_int':'unsigned int'
+      |-BinaryOperator 0x7facc003ba30 <col:19, col:30> 'u_int *' ','
+      | |-BinaryOperator 0x7facc003b9c0 <col:19, col:25> 'u_int *' ','
+      | | |-UnaryOperator 0x7facc003b958 <col:19, col:20> 'u_int':'unsigned int' postfix '++'
+      | | | `-DeclRefExpr 0x7facc003b930 <col:19> 'u_int':'unsigned int' lvalue Var 0x7facc003b788 'i' 'u_int':'unsigned int'
+      | | `-UnaryOperator 0x7facc003b9a0 <col:24, col:25> 'u_int *' postfix '++'
+      | |   `-DeclRefExpr 0x7facc003b978 <col:24> 'u_int *restrict' lvalue ParmVar 0x7facc003b468 'x' 'u_int *restrict'
+      | `-UnaryOperator 0x7facc003ba10 <col:29, col:30> 'u_int *' postfix '++'
+      |   `-DeclRefExpr 0x7facc003b9e8 <col:29> 'u_int *restrict' lvalue ParmVar 0x7facc003b4d8 'y' 'u_int *restrict'
+      `-CompoundAssignOperator 0x7facc003bb30 <line:9:5, col:12> 'u_int':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+        |-UnaryOperator 0x7facc003ba98 <col:5, col:6> 'u_int':'unsigned int' lvalue prefix '*'
+        | `-ImplicitCastExpr 0x7facc003ba80 <col:6> 'u_int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7facc003ba58 <col:6> 'u_int *restrict' lvalue ParmVar 0x7facc003b468 'x' 'u_int *restrict'
+        `-ImplicitCastExpr 0x7facc003bb18 <col:11, col:12> 'u_int':'unsigned int' <LValueToRValue>
+          `-UnaryOperator 0x7facc003baf8 <col:11, col:12> 'u_int':'unsigned int' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7facc003bae0 <col:12> 'u_int *' <LValueToRValue>
+              `-DeclRefExpr 0x7facc003bab8 <col:12> 'u_int *restrict' lvalue ParmVar 0x7facc003b4d8 'y' 'u_int *restrict'

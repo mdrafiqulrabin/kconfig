@@ -1,0 +1,184 @@
+TranslationUnitDecl 0x7ff6fc02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff6fc02c978 <../Data/C2AST/pr36064.c:5:1, col:19> col:19 referenced ogg_int64_t 'long long'
+| `-BuiltinType 0x7ff6fc02be20 'long long'
+|-RecordDecl 0x7ff6fc06de00 <line:7:9, line:10:1> line:7:16 struct vorbis_info definition
+| `-FieldDecl 0x7ff6fc06dec8 <line:9:3, col:8> col:8 referenced rate 'long'
+|-TypedefDecl 0x7ff6fc06df60 <line:7:1, line:10:3> col:3 referenced vorbis_info 'struct vorbis_info':'struct vorbis_info'
+| `-ElaboratedType 0x7ff6fc06df10 'struct vorbis_info' sugar
+|   `-RecordType 0x7ff6fc06de90 'struct vorbis_info'
+|     `-Record 0x7ff6fc06de00 'vorbis_info'
+|-RecordDecl 0x7ff6fc06dfd0 <line:12:9, line:19:1> line:12:16 struct OggVorbis_File definition
+| |-FieldDecl 0x7ff6fc06e098 <line:14:3, col:7> col:7 referenced seekable 'int'
+| |-FieldDecl 0x7ff6fc06e0f8 <line:15:3, col:7> col:7 referenced links 'int'
+| |-FieldDecl 0x7ff6fc06e1c8 <line:16:3, col:16> col:16 referenced pcmlengths 'ogg_int64_t *'
+| |-FieldDecl 0x7ff6fc06e298 <line:17:3, col:16> col:16 referenced vi 'vorbis_info *'
+| `-FieldDecl 0x7ff6fc06e2f8 <line:18:3, col:7> col:7 referenced ready_state 'int'
+|-TypedefDecl 0x7ff6fc06e390 <line:12:1, line:19:3> col:3 referenced OggVorbis_File 'struct OggVorbis_File':'struct OggVorbis_File'
+| `-ElaboratedType 0x7ff6fc06e340 'struct OggVorbis_File' sugar
+|   `-RecordType 0x7ff6fc06e060 'struct OggVorbis_File'
+|     `-Record 0x7ff6fc06dfd0 'OggVorbis_File'
+|-FunctionDecl 0x7ff6fc06e618 <line:21:1, col:56> col:15 used ov_time_total 'double (OggVorbis_File *, int)' extern
+| |-ParmVarDecl 0x7ff6fc06e488 <col:30, col:47> col:47 vf 'OggVorbis_File *'
+| `-ParmVarDecl 0x7ff6fc06e500 <col:51, col:55> col:55 i 'int'
+|-FunctionDecl 0x7ff6fc06e8a8 <line:22:1, col:66> col:12 used ov_pcm_seek_page 'int (OggVorbis_File *, ogg_int64_t)' extern
+| |-ParmVarDecl 0x7ff6fc06e718 <col:30, col:47> col:47 vf 'OggVorbis_File *'
+| `-ParmVarDecl 0x7ff6fc06e788 <col:51, col:63> col:63 pos 'ogg_int64_t':'long long'
+`-FunctionDecl 0x7ff6fc06eaf8 <line:24:1, line:55:1> line:25:1 ov_time_seek_page 'int (OggVorbis_File *, double)'
+  |-ParmVarDecl 0x7ff6fc06e968 <col:20, col:37> col:37 used vf 'OggVorbis_File *'
+  |-ParmVarDecl 0x7ff6fc06e9e0 <col:41, col:48> col:48 used seconds 'double'
+  `-CompoundStmt 0x7ff6fc08acf0 <line:26:1, line:55:1>
+    |-DeclStmt 0x7ff6fc06ec60 <line:27:3, col:16>
+    | `-VarDecl 0x7ff6fc06ebc0 <col:3, col:15> col:7 used link 'int' cinit
+    |   `-UnaryOperator 0x7ff6fc06ec40 <col:14, col:15> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7ff6fc06ec20 <col:15> 'int' 1
+    |-DeclStmt 0x7ff6fc06ed20 <line:28:3, col:28>
+    | `-VarDecl 0x7ff6fc06ec88 <col:3, col:27> col:15 used pcm_total 'ogg_int64_t':'long long' cinit
+    |   `-ImplicitCastExpr 0x7ff6fc06ed08 <col:27> 'ogg_int64_t':'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff6fc06ece8 <col:27> 'int' 0
+    |-DeclStmt 0x7ff6fc06edd0 <line:29:3, col:25>
+    | `-VarDecl 0x7ff6fc06ed50 <col:3, col:23> col:10 used time_total 'double' cinit
+    |   `-FloatingLiteral 0x7ff6fc06edb0 <col:23> 'double' 0.000000e+00
+    |-IfStmt 0x7ff6fc06ef50 <line:31:3, line:32:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff6fc06eeb0 <line:31:7, col:25> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff6fc06ee98 <col:7, col:11> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7ff6fc06ee40 <col:7, col:11> 'int' lvalue ->ready_state 0x7ff6fc06e2f8
+    | | |   `-ImplicitCastExpr 0x7ff6fc06ee28 <col:7> 'OggVorbis_File *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7ff6fc06ee00 <col:7> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+    | | `-IntegerLiteral 0x7ff6fc06ee78 <col:25> 'int' 2
+    | |-ReturnStmt 0x7ff6fc06ef38 <line:32:5, col:17>
+    | | `-ParenExpr 0x7ff6fc06ef18 <col:12, col:17> 'int'
+    | |   `-UnaryOperator 0x7ff6fc06eef8 <col:13, col:14> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7ff6fc06eed8 <col:14> 'int' 131
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff6fc06f0b0 <line:33:3, line:34:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7ff6fc06f018 <line:33:7, col:12> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7ff6fc06f000 <col:8, col:12> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7ff6fc06efc8 <col:8, col:12> 'int' lvalue ->seekable 0x7ff6fc06e098
+    | |     `-ImplicitCastExpr 0x7ff6fc06efb0 <col:8> 'OggVorbis_File *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7ff6fc06ef88 <col:8> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+    | |-ReturnStmt 0x7ff6fc06f098 <line:34:5, col:17>
+    | | `-ParenExpr 0x7ff6fc06f078 <col:12, col:17> 'int'
+    | |   `-UnaryOperator 0x7ff6fc06f058 <col:13, col:14> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7ff6fc06f038 <col:14> 'int' 138
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff6fc06f200 <line:35:3, line:36:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff6fc06f160 <line:35:7, col:17> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff6fc06f130 <col:7> 'double' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff6fc06f0e8 <col:7> 'double' lvalue ParmVar 0x7ff6fc06e9e0 'seconds' 'double'
+    | | `-ImplicitCastExpr 0x7ff6fc06f148 <col:17> 'double' <IntegralToFloating>
+    | |   `-IntegerLiteral 0x7ff6fc06f110 <col:17> 'int' 0
+    | |-ReturnStmt 0x7ff6fc06f1e8 <line:36:5, col:17>
+    | | `-ParenExpr 0x7ff6fc06f1c8 <col:12, col:17> 'int'
+    | |   `-UnaryOperator 0x7ff6fc06f1a8 <col:13, col:14> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7ff6fc06f188 <col:14> 'int' 131
+    | `-<<<NULL>>>
+    |-ForStmt 0x7ff6fc06f9f0 <line:38:3, line:45:5>
+    | |-BinaryOperator 0x7ff6fc06f280 <line:38:8, col:15> 'int' '='
+    | | |-DeclRefExpr 0x7ff6fc06f238 <col:8> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+    | | `-IntegerLiteral 0x7ff6fc06f260 <col:15> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff6fc06f378 <col:18, col:29> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff6fc06f348 <col:18> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff6fc06f2a8 <col:18> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+    | | `-ImplicitCastExpr 0x7ff6fc06f360 <col:25, col:29> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7ff6fc06f310 <col:25, col:29> 'int' lvalue ->links 0x7ff6fc06e0f8
+    | |     `-ImplicitCastExpr 0x7ff6fc06f2f8 <col:25> 'OggVorbis_File *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7ff6fc06f2d0 <col:25> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+    | |-UnaryOperator 0x7ff6fc06f3c8 <col:36, col:40> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff6fc06f3a0 <col:36> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+    | `-CompoundStmt 0x7ff6fc06f9c0 <line:39:5, line:45:5>
+    |   |-DeclStmt 0x7ff6fc06f5b8 <line:40:7, col:47>
+    |   | `-VarDecl 0x7ff6fc06f400 <col:7, col:46> col:14 used addsec 'double' cinit
+    |   |   `-CallExpr 0x7ff6fc06f550 <col:23, col:46> 'double'
+    |   |     |-ImplicitCastExpr 0x7ff6fc06f538 <col:23> 'double (*)(OggVorbis_File *, int)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7ff6fc06f460 <col:23> 'double (OggVorbis_File *, int)' Function 0x7ff6fc06e618 'ov_time_total' 'double (OggVorbis_File *, int)'
+    |   |     |-ImplicitCastExpr 0x7ff6fc06f588 <col:38> 'OggVorbis_File *' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7ff6fc06f488 <col:38> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+    |   |     `-ImplicitCastExpr 0x7ff6fc06f5a0 <col:42> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7ff6fc06f4b0 <col:42> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+    |   |-IfStmt 0x7ff6fc06f6e8 <line:41:7, line:42:2>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7ff6fc06f6b8 <line:41:11, col:34> 'int' '<'
+    |   | | |-ImplicitCastExpr 0x7ff6fc06f6a0 <col:11> 'double' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7ff6fc06f5d0 <col:11> 'double' lvalue ParmVar 0x7ff6fc06e9e0 'seconds' 'double'
+    |   | | `-BinaryOperator 0x7ff6fc06f678 <col:21, col:34> 'double' '+'
+    |   | |   |-ImplicitCastExpr 0x7ff6fc06f648 <col:21> 'double' <LValueToRValue>
+    |   | |   | `-DeclRefExpr 0x7ff6fc06f5f8 <col:21> 'double' lvalue Var 0x7ff6fc06ed50 'time_total' 'double'
+    |   | |   `-ImplicitCastExpr 0x7ff6fc06f660 <col:34> 'double' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7ff6fc06f620 <col:34> 'double' lvalue Var 0x7ff6fc06f400 'addsec' 'double'
+    |   | |-BreakStmt 0x7ff6fc06f6e0 <line:42:2>
+    |   | `-<<<NULL>>>
+    |   |-CompoundAssignOperator 0x7ff6fc06f788 <line:43:7, col:21> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7ff6fc06f720 <col:7> 'double' lvalue Var 0x7ff6fc06ed50 'time_total' 'double'
+    |   | `-ImplicitCastExpr 0x7ff6fc06f770 <col:21> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff6fc06f748 <col:21> 'double' lvalue Var 0x7ff6fc06f400 'addsec' 'double'
+    |   `-CompoundAssignOperator 0x7ff6fc06f988 <line:44:7, col:47> 'ogg_int64_t':'long long' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    |     |-DeclRefExpr 0x7ff6fc06f7c0 <col:7> 'ogg_int64_t':'long long' lvalue Var 0x7ff6fc06ec88 'pcm_total' 'ogg_int64_t':'long long'
+    |     `-ImplicitCastExpr 0x7ff6fc06f970 <col:20, col:47> 'ogg_int64_t':'long long' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7ff6fc06f948 <col:20, col:47> 'ogg_int64_t':'long long' lvalue
+    |         |-ImplicitCastExpr 0x7ff6fc06f930 <col:20, col:24> 'ogg_int64_t *' <LValueToRValue>
+    |         | `-MemberExpr 0x7ff6fc06f828 <col:20, col:24> 'ogg_int64_t *' lvalue ->pcmlengths 0x7ff6fc06e1c8
+    |         |   `-ImplicitCastExpr 0x7ff6fc06f810 <col:20> 'OggVorbis_File *' <LValueToRValue>
+    |         |     `-DeclRefExpr 0x7ff6fc06f7e8 <col:20> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+    |         `-BinaryOperator 0x7ff6fc06f908 <col:35, col:46> 'int' '+'
+    |           |-BinaryOperator 0x7ff6fc06f8c0 <col:35, col:42> 'int' '*'
+    |           | |-ImplicitCastExpr 0x7ff6fc06f8a8 <col:35> 'int' <LValueToRValue>
+    |           | | `-DeclRefExpr 0x7ff6fc06f860 <col:35> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+    |           | `-IntegerLiteral 0x7ff6fc06f888 <col:42> 'int' 2
+    |           `-IntegerLiteral 0x7ff6fc06f8e8 <col:46> 'int' 1
+    |-IfStmt 0x7ff6fc06fb98 <line:47:3, line:48:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff6fc06faf8 <line:47:7, col:19> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ff6fc06fac8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff6fc06fa28 <col:7> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+    | | `-ImplicitCastExpr 0x7ff6fc06fae0 <col:15, col:19> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7ff6fc06fa90 <col:15, col:19> 'int' lvalue ->links 0x7ff6fc06e0f8
+    | |     `-ImplicitCastExpr 0x7ff6fc06fa78 <col:15> 'OggVorbis_File *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7ff6fc06fa50 <col:15> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+    | |-ReturnStmt 0x7ff6fc06fb80 <line:48:5, col:17>
+    | | `-ParenExpr 0x7ff6fc06fb60 <col:12, col:17> 'int'
+    | |   `-UnaryOperator 0x7ff6fc06fb40 <col:13, col:14> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7ff6fc06fb20 <col:14> 'int' 131
+    | `-<<<NULL>>>
+    `-CompoundStmt 0x7ff6fc08acd0 <line:50:3, line:54:3>
+      |-DeclStmt 0x7ff6fc08ab28 <line:51:5, line:52:61>
+      | `-VarDecl 0x7ff6fc06fbe0 <line:51:5, line:52:57> line:51:17 used target 'ogg_int64_t':'long long' cinit
+      |   `-ImplicitCastExpr 0x7ff6fc08ab10 <line:52:7, col:57> 'ogg_int64_t':'long long' <FloatingToIntegral>
+      |     `-BinaryOperator 0x7ff6fc08aae8 <col:7, col:57> 'double' '+'
+      |       |-ImplicitCastExpr 0x7ff6fc08aad0 <col:7> 'double' <IntegralToFloating>
+      |       | `-ImplicitCastExpr 0x7ff6fc08aab8 <col:7> 'ogg_int64_t':'long long' <LValueToRValue>
+      |       |   `-DeclRefExpr 0x7ff6fc06fc40 <col:7> 'ogg_int64_t':'long long' lvalue Var 0x7ff6fc06ec88 'pcm_total' 'ogg_int64_t':'long long'
+      |       `-BinaryOperator 0x7ff6fc08aa90 <col:19, col:57> 'double' '*'
+      |         |-ParenExpr 0x7ff6fc06fd10 <col:19, col:40> 'double'
+      |         | `-BinaryOperator 0x7ff6fc06fce8 <col:20, col:30> 'double' '-'
+      |         |   |-ImplicitCastExpr 0x7ff6fc06fcb8 <col:20> 'double' <LValueToRValue>
+      |         |   | `-DeclRefExpr 0x7ff6fc06fc68 <col:20> 'double' lvalue ParmVar 0x7ff6fc06e9e0 'seconds' 'double'
+      |         |   `-ImplicitCastExpr 0x7ff6fc06fcd0 <col:30> 'double' <LValueToRValue>
+      |         |     `-DeclRefExpr 0x7ff6fc06fc90 <col:30> 'double' lvalue Var 0x7ff6fc06ed50 'time_total' 'double'
+      |         `-ImplicitCastExpr 0x7ff6fc08aa78 <col:44, col:57> 'double' <IntegralToFloating>
+      |           `-ImplicitCastExpr 0x7ff6fc08aa60 <col:44, col:57> 'long' <LValueToRValue>
+      |             `-MemberExpr 0x7ff6fc08aa28 <col:44, col:57> 'long' lvalue .rate 0x7ff6fc06dec8
+      |               `-ArraySubscriptExpr 0x7ff6fc08aa00 <col:44, col:55> 'vorbis_info':'struct vorbis_info' lvalue
+      |                 |-ImplicitCastExpr 0x7ff6fc06fdd0 <col:44, col:48> 'vorbis_info *' <LValueToRValue>
+      |                 | `-MemberExpr 0x7ff6fc06fd70 <col:44, col:48> 'vorbis_info *' lvalue ->vi 0x7ff6fc06e298
+      |                 |   `-ImplicitCastExpr 0x7ff6fc06fd58 <col:44> 'OggVorbis_File *' <LValueToRValue>
+      |                 |     `-DeclRefExpr 0x7ff6fc06fd30 <col:44> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+      |                 `-ImplicitCastExpr 0x7ff6fc06fde8 <col:51> 'int' <LValueToRValue>
+      |                   `-DeclRefExpr 0x7ff6fc06fda8 <col:51> 'int' lvalue Var 0x7ff6fc06ebc0 'link' 'int'
+      `-ReturnStmt 0x7ff6fc08acb8 <line:53:5, col:42>
+        `-ParenExpr 0x7ff6fc08ac98 <col:12, col:42> 'int'
+          `-CallExpr 0x7ff6fc08ac30 <col:13, col:41> 'int'
+            |-ImplicitCastExpr 0x7ff6fc08ac18 <col:13> 'int (*)(OggVorbis_File *, ogg_int64_t)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7ff6fc08ab40 <col:13> 'int (OggVorbis_File *, ogg_int64_t)' Function 0x7ff6fc06e8a8 'ov_pcm_seek_page' 'int (OggVorbis_File *, ogg_int64_t)'
+            |-ImplicitCastExpr 0x7ff6fc08ac68 <col:31> 'OggVorbis_File *' <LValueToRValue>
+            | `-DeclRefExpr 0x7ff6fc08ab68 <col:31> 'OggVorbis_File *' lvalue ParmVar 0x7ff6fc06e968 'vf' 'OggVorbis_File *'
+            `-ImplicitCastExpr 0x7ff6fc08ac80 <col:35> 'ogg_int64_t':'long long' <LValueToRValue>
+              `-DeclRefExpr 0x7ff6fc08ab90 <col:35> 'ogg_int64_t':'long long' lvalue Var 0x7ff6fc06fbe0 'target' 'ogg_int64_t':'long long'

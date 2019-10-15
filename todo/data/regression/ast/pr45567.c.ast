@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fcd6882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcd69014268 <../Data/C2AST/pr45567.c:5:1, line:9:1> line:6:1 foo 'unsigned int (char)'
+| |-ParmVarDecl 0x7fcd6882c970 <col:6, col:11> col:11 used c 'char'
+| `-CompoundStmt 0x7fcd69014630 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fcd69014618 <line:8:3, col:48>
+|     `-ImplicitCastExpr 0x7fcd69014600 <col:10, col:48> 'unsigned int' <IntegralCast>
+|       `-CallExpr 0x7fcd690145d0 <col:10, col:48> 'int'
+|         |-ImplicitCastExpr 0x7fcd690145b8 <col:10> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fcd690144e8 <col:10> '<builtin fn type>' Function 0x7fcd69014388 '__builtin_popcountl' 'int (unsigned long)'
+|         `-CStyleCastExpr 0x7fcd69014568 <col:31, col:47> 'unsigned long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fcd69014550 <col:47> 'char' <LValueToRValue>
+|             `-DeclRefExpr 0x7fcd69014510 <col:47> 'char' lvalue ParmVar 0x7fcd6882c970 'c' 'char'
+`-FunctionDecl 0x7fcd69014388 <col:10> col:10 implicit used __builtin_popcountl 'int (unsigned long)' extern
+  |-ParmVarDecl 0x7fcd69014428 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-NoThrowAttr 0x7fcd69014490 <col:10> Implicit
+  `-ConstAttr 0x7fcd690144d8 <col:10> Implicit

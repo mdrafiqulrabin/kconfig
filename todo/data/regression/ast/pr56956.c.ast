@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fe02a82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe02b015268 <../Data/C2AST/pr56956.c:4:1, line:8:1> line:5:1 used foo 'unsigned int (unsigned int)'
+| |-ParmVarDecl 0x7fe02a82c978 <col:6, col:19> col:19 used x 'unsigned int'
+| |-CompoundStmt 0x7fe02b015520 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7fe02b015508 <line:7:3, col:34>
+| |   `-ConditionalOperator 0x7fe02b0154d8 <col:10, col:34> 'unsigned int'
+| |     |-BinaryOperator 0x7fe02b015410 <col:10, <built-in>:38:21> 'int' '<='
+| |     | |-ImplicitCastExpr 0x7fe02b0153e0 <../Data/C2AST/pr56956.c:7:10> 'unsigned int' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7fe02b015398 <col:10> 'unsigned int' lvalue ParmVar 0x7fe02a82c978 'x' 'unsigned int'
+| |     | `-ImplicitCastExpr 0x7fe02b0153f8 <<built-in>:38:21> 'unsigned int' <IntegralCast>
+| |     |   `-IntegerLiteral 0x7fe02b0153c0 <col:21> 'int' 2147483647
+| |     |-ImplicitCastExpr 0x7fe02b0154c0 <../Data/C2AST/pr56956.c:7:29> 'unsigned int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fe02b015438 <col:29> 'unsigned int' lvalue ParmVar 0x7fe02a82c978 'x' 'unsigned int'
+| |     `-UnaryOperator 0x7fe02b0154a0 <col:33, col:34> 'unsigned int' prefix '-'
+| |       `-ImplicitCastExpr 0x7fe02b015488 <col:34> 'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fe02b015460 <col:34> 'unsigned int' lvalue ParmVar 0x7fe02a82c978 'x' 'unsigned int'
+| `-NoInlineAttr 0x7fe02b015310 <line:4:29>
+`-FunctionDecl 0x7fe02b015590 <line:10:1, line:15:1> line:11:1 main 'int ()'
+  `-CompoundStmt 0x7fe02b015838 <line:12:1, line:15:1>
+    |-DeclStmt 0x7fe02b0157e8 <line:13:3, col:53>
+    | `-VarDecl 0x7fe02b015648 <col:3, col:52> col:25 tem 'volatile unsigned int' cinit
+    |   `-CallExpr 0x7fe02b0157a0 <col:31, col:52> 'unsigned int'
+    |     |-ImplicitCastExpr 0x7fe02b015788 <col:31> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe02b0156a8 <col:31> 'unsigned int (unsigned int)' Function 0x7fe02b015268 'foo' 'unsigned int (unsigned int)'
+    |     `-ImplicitCastExpr 0x7fe02b0157d0 <col:36, col:51> 'unsigned int' <IntegralCast>
+    |       `-BinaryOperator 0x7fe02b015730 <col:36, col:51> 'int' '-'
+    |         |-UnaryOperator 0x7fe02b0156f0 <col:36, <built-in>:38:21> 'int' prefix '-'
+    |         | `-IntegerLiteral 0x7fe02b0156d0 <col:21> 'int' 2147483647
+    |         `-IntegerLiteral 0x7fe02b015710 <../Data/C2AST/pr56956.c:13:51> 'int' 1
+    `-ReturnStmt 0x7fe02b015820 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fe02b015800 <col:10> 'int' 0

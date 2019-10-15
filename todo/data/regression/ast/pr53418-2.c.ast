@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f9b5e825ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9b5e00ac20 <../Data/C2AST/pr53418-2.c:1:1, line:5:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7f9b5e00aed0 <line:3:1, line:5:1>
+    `-DeclStmt 0x7f9b5e00aeb8 <line:4:3, col:27>
+      `-VarDecl 0x7f9b5e00ad18 <col:3, col:26> col:7 i 'int' cinit
+        `-ImplicitCastExpr 0x7f9b5e00aea0 <col:11, col:26> 'int' <IntegralCast>
+          `-ParenExpr 0x7f9b5e00ae80 <col:11, col:26> 'unsigned int'
+            `-ConditionalOperator 0x7f9b5e00ae50 <col:12, col:25> 'unsigned int'
+              |-IntegerLiteral 0x7f9b5e00ad78 <col:12> 'int' 1
+              |-BinaryOperator 0x7f9b5e00adf0 <col:16, col:21> 'unsigned int' '/'
+              | |-IntegerLiteral 0x7f9b5e00ad98 <col:16> 'unsigned int' 0
+              | `-ImplicitCastExpr 0x7f9b5e00add8 <col:21> 'unsigned int' <IntegralCast>
+              |   `-IntegerLiteral 0x7f9b5e00adb8 <col:21> 'int' 0
+              `-ImplicitCastExpr 0x7f9b5e00ae38 <col:25> 'unsigned int' <IntegralCast>
+                `-IntegerLiteral 0x7f9b5e00ae18 <col:25> 'int' 1

@@ -1,0 +1,32 @@
+../Data/C2AST/pr81223.c:10:19: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct S { char a[x]; } v;
+                  ^
+1 error generated.
+TranslationUnitDecl 0x7fb6010216e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb601021c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb601021980 '__int128'
+|-TypedefDecl 0x7fb601021cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6010219a0 'unsigned __int128'
+|-TypedefDecl 0x7fb601021fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb601021db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb601021d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb601022040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb601022000 'char *'
+|   `-BuiltinType 0x7fb601021780 'char'
+|-TypedefDecl 0x7fb601022308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6010222b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb601022120 'struct __va_list_tag'
+|     `-Record 0x7fb601022098 '__va_list_tag'
+|-FunctionDecl 0x7fb601063200 <../Data/C2AST/pr81223.c:5:1, col:11> col:6 used bar 'void ()'
+`-FunctionDecl 0x7fb6010633c0 <line:7:1, line:12:1> line:8:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fb6010632f8 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fb6010637a8 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fb6010636b8 <line:10:3, col:28>
+    | |-RecordDecl 0x7fb601063468 <col:3, col:25> col:10 invalid struct S definition
+    | | `-FieldDecl 0x7fb6010635a8 <col:14, col:22> col:19 invalid a 'char [x]'
+    | `-VarDecl 0x7fb601063640 <col:3, col:27> col:27 used v 'struct S':'struct S'
+    `-CallExpr 0x7fb601063760 <line:11:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fb601063748 <col:3> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb6010636d0 <col:3> 'void ()' Function 0x7fb601063200 'bar' 'void ()'
+      `-ImplicitCastExpr 0x7fb601063790 <col:8> 'struct S':'struct S' <LValueToRValue>
+        `-DeclRefExpr 0x7fb6010636f8 <col:8> 'struct S':'struct S' lvalue Var 0x7fb601063640 'v' 'struct S':'struct S'

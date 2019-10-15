@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fe48e00b8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe48d800068 <../Data/C2AST/pr65520.c:5:1, col:16> col:5 used foo 'int (void *)'
+| `-ParmVarDecl 0x7fe48e00c578 <col:10, col:15> col:16 'void *'
+`-FunctionDecl 0x7fe48d800210 <line:7:1, line:18:1> line:8:1 bar 'void (void)'
+  `-CompoundStmt 0x7fe48d8006f8 <line:9:1, line:18:1>
+    |-DeclStmt 0x7fe48d800360 <line:10:3, col:19>
+    | `-VarDecl 0x7fe48d8002c8 <col:3, col:16> col:12 used s 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fe48d800348 <col:16> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fe48d800328 <col:16> 'int' 128
+    `-WhileStmt 0x7fe48d8006d8 <line:11:3, line:17:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fe48d800378 <line:11:10> 'int' 1
+      `-CompoundStmt 0x7fe48d8006b0 <line:12:5, line:17:5>
+        |-DeclStmt 0x7fe48d8004a0 <line:13:7, col:20>
+        | `-VarDecl 0x7fe48d800440 <col:7, col:19> col:16 used b 'unsigned int [s]'
+        |-IfStmt 0x7fe48d8005e0 <line:14:7, line:15:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-CallExpr 0x7fe48d800550 <line:14:11, col:17> 'int'
+        | | |-ImplicitCastExpr 0x7fe48d800538 <col:11> 'int (*)(void *)' <FunctionToPointerDecay>
+        | | | `-DeclRefExpr 0x7fe48d8004b8 <col:11> 'int (void *)' Function 0x7fe48d800068 'foo' 'int (void *)'
+        | | `-ImplicitCastExpr 0x7fe48d8005c0 <col:16> 'void *' <BitCast>
+        | |   `-ImplicitCastExpr 0x7fe48d8005a8 <col:16> 'unsigned int *' <ArrayToPointerDecay>
+        | |     `-DeclRefExpr 0x7fe48d8004e0 <col:16> 'unsigned int [s]' lvalue Var 0x7fe48d800440 'b' 'unsigned int [s]'
+        | |-BreakStmt 0x7fe48d8005d8 <line:15:2>
+        | `-<<<NULL>>>
+        `-CompoundAssignOperator 0x7fe48d800678 <line:16:7, col:12> 'unsigned int' '*=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+          |-DeclRefExpr 0x7fe48d800618 <col:7> 'unsigned int' lvalue Var 0x7fe48d8002c8 's' 'unsigned int'
+          `-ImplicitCastExpr 0x7fe48d800660 <col:12> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7fe48d800640 <col:12> 'int' 2

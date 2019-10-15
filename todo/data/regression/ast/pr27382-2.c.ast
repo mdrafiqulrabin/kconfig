@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7ffd19825ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffd1981c200 <../Data/C2AST/pr27382-2.c:3:1, line:7:1> line:3:6 foo 'void ()'
+  `-CompoundStmt 0x7ffd1981c3c0 <line:4:1, line:7:1>
+    `-LabelStmt 0x7ffd1981c3a8 <line:5:5, line:6:12> 'L'
+      `-BinaryOperator 0x7ffd1981c380 <col:5, col:12> 'int' '!='
+        |-AddrLabelExpr 0x7ffd1981c328 <col:5, col:7> 'void *' L 0x7ffd1981c2e0
+        `-ImplicitCastExpr 0x7ffd1981c368 <col:12> 'void *' <NullToPointer>
+          `-IntegerLiteral 0x7ffd1981c348 <col:12> 'int' 0

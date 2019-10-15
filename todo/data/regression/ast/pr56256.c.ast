@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f871f02b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f871f814228 <../Data/C2AST/pr56256.c:5:1, line:11:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7f871f8145f8 <line:7:1, line:11:1>
+    |-DeclStmt 0x7f871f814380 <line:8:3, col:8>
+    | `-VarDecl 0x7f871f814320 <col:3, col:7> col:7 used a 'int'
+    |-GCCAsmStmt 0x7f871f814528 <line:9:3, col:50>
+    | |-DeclRefExpr 0x7f871f814478 <col:37> 'int' lvalue Var 0x7f871f814320 'a' 'int'
+    | `-IntegerLiteral 0x7f871f814508 <col:47> 'int' 26
+    `-ReturnStmt 0x7f871f8145e0 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7f871f8145c8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f871f8145a0 <col:10> 'int' lvalue Var 0x7f871f814320 'a' 'int'

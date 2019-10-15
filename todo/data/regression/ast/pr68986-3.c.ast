@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7faefd006ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7faefd007b78 <../Data/C2AST/pr68986-3.c:6:1, col:21> col:21 used msgdata 'int' extern tls
+`-FunctionDecl 0x7faefd02fe90 <line:7:1, line:11:1> line:8:1 foo 'int ()'
+  `-CompoundStmt 0x7faefd02ff88 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7faefd02ff70 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7faefd02ff58 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7faefd02ff30 <col:10> 'int' lvalue Var 0x7faefd007b78 'msgdata' 'int'

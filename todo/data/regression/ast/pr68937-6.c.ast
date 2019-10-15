@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fe20d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe20d06d960 <../Data/C2AST/pr68937-6.c:4:1, col:31> col:13 foo 'void (int, int, int)' extern
+| |-ParmVarDecl 0x7fe20d02c978 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7fe20d06d800 <col:23> col:26 'int'
+| `-ParmVarDecl 0x7fe20d06d878 <col:28> col:31 'int'
+|-FunctionDecl 0x7fe20d06dc60 <line:5:1, col:69> col:13 used bar 'void (int, int, int)' extern
+| |-ParmVarDecl 0x7fe20d06da70 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7fe20d06dae8 <col:23> col:26 'int'
+| |-ParmVarDecl 0x7fe20d06db60 <col:28> col:31 'int'
+| `-VisibilityAttr 0x7fe20d06dd18 <col:48, col:67> Hidden
+`-FunctionDecl 0x7fe20d06df00 prev 0x7fe20d06d960 <line:7:1, line:14:1> line:8:1 referenced foo 'void (int, int, int)'
+  |-ParmVarDecl 0x7fe20d06dd78 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7fe20d06ddf0 <col:13, col:17> col:17 used b 'int'
+  |-ParmVarDecl 0x7fe20d06de68 <col:20, col:24> col:24 used c 'int'
+  `-CompoundStmt 0x7fe20d06e4e8 <line:9:1, line:14:1>
+    |-CallExpr 0x7fe20d06e0a0 <line:10:3, col:15> 'void'
+    | |-ImplicitCastExpr 0x7fe20d06e088 <col:3> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe20d06dfb8 <col:3> 'void (int, int, int)' Function 0x7fe20d06df00 'foo' 'void (int, int, int)'
+    | |-ImplicitCastExpr 0x7fe20d06e0e0 <col:8> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe20d06dfe0 <col:8> 'int' lvalue ParmVar 0x7fe20d06dd78 'a' 'int'
+    | |-ImplicitCastExpr 0x7fe20d06e0f8 <col:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe20d06e008 <col:11> 'int' lvalue ParmVar 0x7fe20d06ddf0 'b' 'int'
+    | `-ImplicitCastExpr 0x7fe20d06e110 <col:14> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe20d06e030 <col:14> 'int' lvalue ParmVar 0x7fe20d06de68 'c' 'int'
+    |-CallExpr 0x7fe20d06e1e0 <line:11:3, col:15> 'void'
+    | |-ImplicitCastExpr 0x7fe20d06e1c8 <col:3> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe20d06e128 <col:3> 'void (int, int, int)' Function 0x7fe20d06dc60 'bar' 'void (int, int, int)'
+    | |-ImplicitCastExpr 0x7fe20d06e220 <col:8> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe20d06e150 <col:8> 'int' lvalue ParmVar 0x7fe20d06dd78 'a' 'int'
+    | |-ImplicitCastExpr 0x7fe20d06e238 <col:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe20d06e178 <col:11> 'int' lvalue ParmVar 0x7fe20d06ddf0 'b' 'int'
+    | `-ImplicitCastExpr 0x7fe20d06e250 <col:14> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe20d06e1a0 <col:14> 'int' lvalue ParmVar 0x7fe20d06de68 'c' 'int'
+    |-CallExpr 0x7fe20d06e320 <line:12:3, col:15> 'void'
+    | |-ImplicitCastExpr 0x7fe20d06e308 <col:3> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe20d06e268 <col:3> 'void (int, int, int)' Function 0x7fe20d06df00 'foo' 'void (int, int, int)'
+    | |-ImplicitCastExpr 0x7fe20d06e360 <col:8> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe20d06e290 <col:8> 'int' lvalue ParmVar 0x7fe20d06dd78 'a' 'int'
+    | |-ImplicitCastExpr 0x7fe20d06e378 <col:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe20d06e2b8 <col:11> 'int' lvalue ParmVar 0x7fe20d06ddf0 'b' 'int'
+    | `-ImplicitCastExpr 0x7fe20d06e390 <col:14> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe20d06e2e0 <col:14> 'int' lvalue ParmVar 0x7fe20d06de68 'c' 'int'
+    `-CallExpr 0x7fe20d06e460 <line:13:3, col:15> 'void'
+      |-ImplicitCastExpr 0x7fe20d06e448 <col:3> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe20d06e3a8 <col:3> 'void (int, int, int)' Function 0x7fe20d06dc60 'bar' 'void (int, int, int)'
+      |-ImplicitCastExpr 0x7fe20d06e4a0 <col:8> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe20d06e3d0 <col:8> 'int' lvalue ParmVar 0x7fe20d06dd78 'a' 'int'
+      |-ImplicitCastExpr 0x7fe20d06e4b8 <col:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe20d06e3f8 <col:11> 'int' lvalue ParmVar 0x7fe20d06ddf0 'b' 'int'
+      `-ImplicitCastExpr 0x7fe20d06e4d0 <col:14> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe20d06e420 <col:14> 'int' lvalue ParmVar 0x7fe20d06de68 'c' 'int'

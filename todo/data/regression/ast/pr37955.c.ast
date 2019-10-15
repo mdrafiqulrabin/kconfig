@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fd04f81aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd04f81bb60 <../Data/C2AST/pr37955.c:1:9, line:5:1> line:1:9 struct definition
+| |-EnumDecl 0x7fd04f01ea20 <line:3:3, col:27> col:3
+| | `-EnumConstantDecl 0x7fd04f01eb00 <col:10, col:25> col:10 referenced NotConnected 'int'
+| |   `-IntegerLiteral 0x7fd04f01eae0 <col:25> 'int' 0
+| |-FieldDecl 0x7fd04f01eba0 <col:3, col:29> col:29 referenced conn_state 'enum (anonymous enum at ../Data/C2AST/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at ../Data/C2AST/pr37955.c:3:3)'
+| `-FieldDecl 0x7fd04f01ec00 <line:4:3, col:16> col:16 referenced conn_hndl 'unsigned int'
+|-TypedefDecl 0x7fd04f01eca0 <line:1:1, line:5:3> col:3 referenced AEP_CONNECTION_ENTRY 'struct AEP_CONNECTION_ENTRY':'AEP_CONNECTION_ENTRY'
+| `-ElaboratedType 0x7fd04f01ec50 'struct AEP_CONNECTION_ENTRY' sugar
+|   `-RecordType 0x7fd04f01ea00 'AEP_CONNECTION_ENTRY'
+|     `-Record 0x7fd04f81bb60 ''
+|-VarDecl 0x7fd04f01ee38 <line:7:1, col:51> col:29 used aep_app_conn_table 'AEP_CONNECTION_ENTRY [256]' static
+`-FunctionDecl 0x7fd04f01efa0 <line:9:1, line:18:1> line:9:6 aep_mod_exp 'void (void)'
+  `-CompoundStmt 0x7fd04f01f548 <line:10:1, line:18:1>
+    |-DeclStmt 0x7fd04f01f0b8 <line:11:3, col:12>
+    | `-VarDecl 0x7fd04f01f058 <col:3, col:7> col:7 used count 'int'
+    `-ForStmt 0x7fd04f01f510 <line:13:3, line:17:5>
+      |-BinaryOperator 0x7fd04f01f118 <line:13:8, col:16> 'int' '='
+      | |-DeclRefExpr 0x7fd04f01f0d0 <col:8> 'int' lvalue Var 0x7fd04f01f058 'count' 'int'
+      | `-IntegerLiteral 0x7fd04f01f0f8 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd04f01f1a0 <col:19, col:27> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd04f01f188 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd04f01f140 <col:19> 'int' lvalue Var 0x7fd04f01f058 'count' 'int'
+      | `-IntegerLiteral 0x7fd04f01f168 <col:27> 'int' 256
+      |-UnaryOperator 0x7fd04f01f1f0 <col:32, col:37> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd04f01f1c8 <col:32> 'int' lvalue Var 0x7fd04f01f058 'count' 'int'
+      `-CompoundStmt 0x7fd04f01f4f0 <line:14:5, line:17:5>
+        |-BinaryOperator 0x7fd04f01f388 <line:15:7, col:46> 'enum (anonymous enum at ../Data/C2AST/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at ../Data/C2AST/pr37955.c:3:3)' '='
+        | |-MemberExpr 0x7fd04f01f310 <col:7, col:33> 'enum (anonymous enum at ../Data/C2AST/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at ../Data/C2AST/pr37955.c:3:3)' lvalue .conn_state 0x7fd04f01eba0
+        | | `-ArraySubscriptExpr 0x7fd04f01f2e8 <col:7, col:31> 'AEP_CONNECTION_ENTRY':'AEP_CONNECTION_ENTRY' lvalue
+        | |   |-ImplicitCastExpr 0x7fd04f01f2b8 <col:7> 'AEP_CONNECTION_ENTRY *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fd04f01f210 <col:7> 'AEP_CONNECTION_ENTRY [256]' lvalue Var 0x7fd04f01ee38 'aep_app_conn_table' 'AEP_CONNECTION_ENTRY [256]'
+        | |   `-ImplicitCastExpr 0x7fd04f01f2d0 <col:26> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fd04f01f238 <col:26> 'int' lvalue Var 0x7fd04f01f058 'count' 'int'
+        | `-ImplicitCastExpr 0x7fd04f01f370 <col:46> 'enum (anonymous enum at ../Data/C2AST/pr37955.c:3:3)':'enum AEP_CONNECTION_ENTRY::(anonymous at ../Data/C2AST/pr37955.c:3:3)' <IntegralCast>
+        |   `-DeclRefExpr 0x7fd04f01f348 <col:46> 'int' EnumConstant 0x7fd04f01eb00 'NotConnected' 'int'
+        `-BinaryOperator 0x7fd04f01f4c8 <line:16:7, col:45> 'unsigned int' '='
+          |-MemberExpr 0x7fd04f01f458 <col:7, col:33> 'unsigned int' lvalue .conn_hndl 0x7fd04f01ec00
+          | `-ArraySubscriptExpr 0x7fd04f01f430 <col:7, col:31> 'AEP_CONNECTION_ENTRY':'AEP_CONNECTION_ENTRY' lvalue
+          |   |-ImplicitCastExpr 0x7fd04f01f400 <col:7> 'AEP_CONNECTION_ENTRY *' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7fd04f01f3b0 <col:7> 'AEP_CONNECTION_ENTRY [256]' lvalue Var 0x7fd04f01ee38 'aep_app_conn_table' 'AEP_CONNECTION_ENTRY [256]'
+          |   `-ImplicitCastExpr 0x7fd04f01f418 <col:26> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fd04f01f3d8 <col:26> 'int' lvalue Var 0x7fd04f01f058 'count' 'int'
+          `-ImplicitCastExpr 0x7fd04f01f4b0 <col:45> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7fd04f01f490 <col:45> 'int' 0

@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fe04502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe0450e57e8 <../Data/C2AST/pr48708.c:6:1, col:19> col:19 referenced T 'long long'
+| |-BuiltinType 0x7fe04502be20 'long long'
+| `-MayAliasAttr 0x7fe0450e5840 <col:36>
+|-RecordDecl 0x7fe0450e5888 <line:7:1, col:23> col:8 struct S definition
+| `-FieldDecl 0x7fe0450e5940 <col:12, col:20> col:20 referenced d '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+`-FunctionDecl 0x7fe0450e5c50 <line:9:1, line:15:1> line:10:1 foo '__m128i (long long *, struct S *, __m128i *)'
+  |-ParmVarDecl 0x7fe0450e59a0 <col:6, col:17> col:17 used x 'long long *'
+  |-ParmVarDecl 0x7fe0450e5ab0 <col:20, col:30> col:30 used y 'struct S *'
+  |-ParmVarDecl 0x7fe0450e5b20 <col:33, col:42> col:42 used z '__m128i *'
+  `-CompoundStmt 0x7fe0450e61f0 <line:11:1, line:15:1>
+    |-DeclStmt 0x7fe0450e5e00 <line:12:3, col:18>
+    | `-VarDecl 0x7fe0450e5d28 <col:3, col:17> col:12 used s 'struct S':'struct S' cinit
+    |   `-ImplicitCastExpr 0x7fe0450e5de8 <col:16, col:17> 'struct S':'struct S' <LValueToRValue>
+    |     `-UnaryOperator 0x7fe0450e5dc8 <col:16, col:17> 'struct S':'struct S' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fe0450e5db0 <col:17> 'struct S *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe0450e5d88 <col:17> 'struct S *' lvalue ParmVar 0x7fe0450e5ab0 'y' 'struct S *'
+    |-BinaryOperator 0x7fe0450e6000 <line:13:3, col:22> 'T':'long long' '='
+    | |-ArraySubscriptExpr 0x7fe0450e5f60 <col:3, col:17> 'T':'long long' lvalue
+    | | |-ParenExpr 0x7fe0450e5f20 <col:3, col:14> 'T *'
+    | | | `-CStyleCastExpr 0x7fe0450e5ef8 <col:4, col:13> 'T *' <BitCast>
+    | | |   `-UnaryOperator 0x7fe0450e5ea0 <col:10, col:13> '__m128i *' prefix '&'
+    | | |     `-MemberExpr 0x7fe0450e5e68 <col:11, col:13> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue .d 0x7fe0450e5940
+    | | |       `-DeclRefExpr 0x7fe0450e5e40 <col:11> 'struct S':'struct S' lvalue Var 0x7fe0450e5d28 's' 'struct S':'struct S'
+    | | `-IntegerLiteral 0x7fe0450e5f40 <col:16> 'int' 0
+    | `-ImplicitCastExpr 0x7fe0450e5fe8 <col:21, col:22> 'long long' <LValueToRValue>
+    |   `-UnaryOperator 0x7fe0450e5fc8 <col:21, col:22> 'long long' lvalue prefix '*'
+    |     `-ImplicitCastExpr 0x7fe0450e5fb0 <col:22> 'long long *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe0450e5f88 <col:22> 'long long *' lvalue ParmVar 0x7fe0450e59a0 'x' 'long long *'
+    `-ReturnStmt 0x7fe0450e61d8 <line:14:3, col:34>
+      `-CallExpr 0x7fe0450e6170 <col:10, col:34> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fe0450e6158 <col:10> '__m128i (*)(__m128i, __m128i)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fe0450e6070 <col:10> '__m128i (__m128i, __m128i)' Function 0x7fe04681f4e0 '_mm_cmpeq_epi16' '__m128i (__m128i, __m128i)'
+        |-ImplicitCastExpr 0x7fe0450e61a8 <col:27, col:29> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-MemberExpr 0x7fe0450e60c0 <col:27, col:29> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue .d 0x7fe0450e5940
+        |   `-DeclRefExpr 0x7fe0450e6098 <col:27> 'struct S':'struct S' lvalue Var 0x7fe0450e5d28 's' 'struct S':'struct S'
+        `-ImplicitCastExpr 0x7fe0450e61c0 <col:32, col:33> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+          `-UnaryOperator 0x7fe0450e6138 <col:32, col:33> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fe0450e6120 <col:33> '__m128i *' <LValueToRValue>
+              `-DeclRefExpr 0x7fe0450e60f8 <col:33> '__m128i *' lvalue ParmVar 0x7fe0450e5b20 'z' '__m128i *'

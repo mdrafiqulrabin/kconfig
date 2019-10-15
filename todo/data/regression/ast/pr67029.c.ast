@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f8d7a024ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8d7a815a60 <../Data/C2AST/pr67029.c:5:1, col:24> col:13 used fn2 'void (char *)' extern
+| `-ParmVarDecl 0x7f8d7a025978 <col:18, col:23> col:24 'char *'
+|-VarDecl 0x7f8d7a815b60 <line:6:1, col:10> col:10 used a '__int128'
+|-VarDecl 0x7f8d7a815bd8 <col:1, col:13> col:13 used b '__int128'
+`-FunctionDecl 0x7f8d7a815d18 <line:7:1, line:14:1> line:8:1 fn1 'int (void)'
+  `-CompoundStmt 0x7f8d7a816118 <line:9:1, line:14:1>
+    |-DeclStmt 0x7f8d7a815e98 <line:10:3, col:13>
+    | `-VarDecl 0x7f8d7a815e38 <col:3, col:12> col:8 used e 'char [32]'
+    |-CallExpr 0x7f8d7a815f40 <line:11:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7f8d7a815f28 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8d7a815eb0 <col:3> 'void (char *)' Function 0x7f8d7a815a60 'fn2' 'void (char *)'
+    | `-ImplicitCastExpr 0x7f8d7a815f70 <col:8> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f8d7a815ed8 <col:8> 'char [32]' lvalue Var 0x7f8d7a815e38 'e' 'char [32]'
+    |-BinaryOperator 0x7f8d7a8160b8 <line:12:3, col:18> '__int128' '='
+    | |-DeclRefExpr 0x7f8d7a815f88 <col:3> '__int128' lvalue Var 0x7f8d7a815bd8 'b' '__int128'
+    | `-BinaryOperator 0x7f8d7a816090 <col:7, col:18> '__int128' '*'
+    |   |-ImplicitCastExpr 0x7f8d7a816078 <col:7> '__int128' <IntegralCast>
+    |   | `-IntegerLiteral 0x7f8d7a815fb0 <col:7> 'int' 9
+    |   `-ParenExpr 0x7f8d7a816058 <col:11, col:18> '__int128'
+    |     `-BinaryOperator 0x7f8d7a816030 <col:12, col:17> '__int128' '>>'
+    |       |-ImplicitCastExpr 0x7f8d7a816018 <col:12> '__int128' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7f8d7a815fd0 <col:12> '__int128' lvalue Var 0x7f8d7a815b60 'a' '__int128'
+    |       `-IntegerLiteral 0x7f8d7a815ff8 <col:17> 'int' 1
+    `-ReturnStmt 0x7f8d7a816100 <line:13:3, col:10>
+      `-IntegerLiteral 0x7f8d7a8160e0 <col:10> 'int' 0

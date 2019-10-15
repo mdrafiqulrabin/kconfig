@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ff1b3824ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff1b3867800 <../Data/C2AST/pr77403.c:7:1, col:18> col:18 referenced V '__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| `-VectorType 0x7ff1b3825980 '__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' 4
+|   `-BuiltinType 0x7ff1b3824f80 '__int128'
+|-VarDecl 0x7ff1b3867890 <line:9:1, col:3> col:3 used v 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+`-FunctionDecl 0x7ff1b3867978 <line:11:1, line:15:1> line:12:1 foo 'void ()'
+  `-CompoundStmt 0x7ff1b3867bd8 <line:13:1, line:15:1>
+    `-CompoundAssignOperator 0x7ff1b3867ba0 <line:14:3, col:13> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' '^=' ComputeLHSTy='V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' ComputeResultTy='V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+      |-DeclRefExpr 0x7ff1b3867a18 <col:3> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue Var 0x7ff1b3867890 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+      `-ImplicitCastExpr 0x7ff1b3867b88 <col:8, col:13> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7ff1b3867b60 <col:8, col:13> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' lvalue
+          `-InitListExpr 0x7ff1b3867ab8 <col:11, col:13> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+            `-ImplicitCastExpr 0x7ff1b3867b18 <col:12> '__int128' <IntegralCast>
+              `-IntegerLiteral 0x7ff1b3867a50 <col:12> 'int' 1

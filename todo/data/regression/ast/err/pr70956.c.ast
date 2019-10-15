@@ -1,0 +1,19 @@
+../Data/C2AST/pr70956.c:4:10: fatal error: '../tree-ssa/vrp66.c' file not found
+#include "../tree-ssa/vrp66.c"
+         ^~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f86a88174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f86a8817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f86a8817780 '__int128'
+|-TypedefDecl 0x7f86a8817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f86a88177a0 'unsigned __int128'
+|-TypedefDecl 0x7f86a8817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f86a8817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f86a8817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f86a8817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f86a8817e00 'char *'
+|   `-BuiltinType 0x7f86a8817580 'char'
+`-TypedefDecl 0x7f86a8818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7f86a88180b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7f86a8817f20 'struct __va_list_tag'
+      `-Record 0x7f86a8817e98 '__va_list_tag'

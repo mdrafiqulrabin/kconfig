@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fa2f6024ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa2f6066800 <../Data/C2AST/pr27639.c:4:1, col:16> col:6 used heap 'char [50000]'
+`-FunctionDecl 0x7fa2f60668f0 <line:8:1, line:14:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7fa2f6066c80 <line:10:1, line:14:1>
+    |-ForStmt 0x7fa2f6066c10 <line:11:3, line:12:16>
+    | |-DeclStmt 0x7fa2f6066a88 <line:11:8, col:35>
+    | | `-VarDecl 0x7fa2f60669a8 <col:8, col:34> col:17 used ix 'unsigned int' cinit
+    | |   `-ImplicitCastExpr 0x7fa2f6066a70 <col:22, col:34> 'unsigned int' <IntegralCast>
+    | |     `-UnaryExprOrTypeTraitExpr 0x7fa2f6066a50 <col:22, col:34> 'unsigned long' sizeof
+    | |       `-ParenExpr 0x7fa2f6066a30 <col:29, col:34> 'char [50000]' lvalue
+    | |         `-DeclRefExpr 0x7fa2f6066a08 <col:30> 'char [50000]' lvalue Var 0x7fa2f6066800 'heap' 'char [50000]'
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fa2f6066ac8 <col:37, col:39> 'unsigned int' postfix '--'
+    | | `-DeclRefExpr 0x7fa2f6066aa0 <col:37> 'unsigned int' lvalue Var 0x7fa2f60669a8 'ix' 'unsigned int'
+    | |-<<<NULL>>>
+    | `-BinaryOperator 0x7fa2f6066be8 <line:12:5, col:16> 'char' '='
+    |   |-ArraySubscriptExpr 0x7fa2f6066b68 <col:5, col:12> 'char' lvalue
+    |   | |-ImplicitCastExpr 0x7fa2f6066b38 <col:5> 'char *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7fa2f6066ae8 <col:5> 'char [50000]' lvalue Var 0x7fa2f6066800 'heap' 'char [50000]'
+    |   | `-ImplicitCastExpr 0x7fa2f6066b50 <col:10> 'unsigned int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fa2f6066b10 <col:10> 'unsigned int' lvalue Var 0x7fa2f60669a8 'ix' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fa2f6066bd0 <col:16> 'char' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fa2f6066bb8 <col:16> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa2f6066b90 <col:16> 'unsigned int' lvalue Var 0x7fa2f60669a8 'ix' 'unsigned int'
+    `-ReturnStmt 0x7fa2f6066c68 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fa2f6066c48 <col:10> 'int' 0

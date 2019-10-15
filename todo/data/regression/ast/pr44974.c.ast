@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fc59501a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc5958152a0 <../Data/C2AST/pr44974.c:5:1, col:72> col:13 foo 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fc59501b578 <col:18, col:22> col:22 status 'int'
+| `-NoInlineAttr 0x7fc595815348 <col:59>
+|-FunctionDecl 0x7fc595815470 <line:6:1, col:72> col:13 used bar 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fc5958153e8 <col:18, col:22> col:22 status 'int'
+| `-NoInlineAttr 0x7fc595815518 <col:59>
+|-FunctionDecl 0x7fc595815600 <line:7:13> col:13 implicit used _Exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fc5958156a0 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fc595815708 prev 0x7fc595815600 <col:1, col:74> col:13 used _Exit 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fc595815578 <col:20, col:24> col:24 status 'int'
+| `-NoInlineAttr 0x7fc5958157b0 <col:61>
+|-FunctionDecl 0x7fc595815898 prev 0x7fc5958152a0 <line:9:1, line:13:1> line:10:1 foo 'void (int) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fc595815810 <col:6, col:10> col:10 used status 'int'
+| |-CompoundStmt 0x7fc595815a68 <line:11:1, line:13:1>
+| | `-CallExpr 0x7fc595815a20 <line:12:3, col:16> 'void'
+| |   |-ImplicitCastExpr 0x7fc595815a08 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fc595815988 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fc595815708 '_Exit' 'void (int) __attribute__((noreturn))'
+| |   `-ImplicitCastExpr 0x7fc595815a50 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc5958159b0 <col:10> 'int' lvalue ParmVar 0x7fc595815810 'status' 'int'
+| `-NoInlineAttr 0x7fc595815978 <line:5:59> Inherited
+`-FunctionDecl 0x7fc595815b20 prev 0x7fc595815708 <line:15:1, line:19:1> line:16:1 used _Exit 'void (int) __attribute__((noreturn))'
+  |-ParmVarDecl 0x7fc595815a98 <col:8, col:12> col:12 used status 'int'
+  |-CompoundStmt 0x7fc595815cc0 <line:17:1, line:19:1>
+  | `-CallExpr 0x7fc595815c78 <line:18:3, col:14> 'void'
+  |   |-ImplicitCastExpr 0x7fc595815c60 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7fc595815c10 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fc595815470 'bar' 'void (int) __attribute__((noreturn))'
+  |   `-ImplicitCastExpr 0x7fc595815ca8 <col:8> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7fc595815c38 <col:8> 'int' lvalue ParmVar 0x7fc595815a98 'status' 'int'
+  `-NoInlineAttr 0x7fc595815c00 <line:7:61> Inherited

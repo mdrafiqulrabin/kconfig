@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fe4aa82b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe4aa82bf78 <../Data/C2AST/pr69173.c:3:1, col:10> col:10 used a 'unsigned int'
+|-VarDecl 0x7fe4ab811a80 <line:4:1, col:11> col:11 used b 'unsigned int *'
+`-FunctionDecl 0x7fe4ab811b28 <line:5:1, line:12:1> line:5:6 referenced fn1 'void ()'
+  `-CompoundStmt 0x7fe4ab811f70 <col:12, line:12:1>
+    |-DeclStmt 0x7fe4ab811c38 <line:6:5, col:11>
+    | `-VarDecl 0x7fe4ab811bd8 <col:5, col:10> col:10 used c 'char'
+    `-WhileStmt 0x7fe4ab811f50 <line:7:5, line:11:7>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe4ab811d40 <line:7:12, col:28> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe4ab811d28 <col:12> 'unsigned int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe4ab811c50 <col:12> 'unsigned int *' lvalue Var 0x7fe4ab811a80 'b' 'unsigned int *'
+      | `-CStyleCastExpr 0x7fe4ab811d00 <col:16, col:28> 'unsigned int *' <BitCast>
+      |   `-ImplicitCastExpr 0x7fe4ab811ce8 <col:28> 'void (*)()' <FunctionToPointerDecay>
+      |     `-DeclRefExpr 0x7fe4ab811c78 <col:28> 'void ()' Function 0x7fe4ab811b28 'fn1' 'void ()'
+      `-CompoundStmt 0x7fe4ab811f30 <line:8:7, line:11:7>
+        |-CompoundAssignOperator 0x7fe4ab811eb0 <line:9:2, col:14> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+        | |-DeclRefExpr 0x7fe4ab811d68 <col:2> 'unsigned int' lvalue Var 0x7fe4aa82bf78 'a' 'unsigned int'
+        | `-BinaryOperator 0x7fe4ab811e88 <col:7, col:14> 'unsigned int' '+'
+        |   |-ImplicitCastExpr 0x7fe4ab811e40 <col:7, col:10> 'unsigned int' <LValueToRValue>
+        |   | `-ArraySubscriptExpr 0x7fe4ab811df0 <col:7, col:10> 'unsigned int' lvalue
+        |   |   |-ImplicitCastExpr 0x7fe4ab811dd8 <col:7> 'unsigned int *' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7fe4ab811d90 <col:7> 'unsigned int *' lvalue Var 0x7fe4ab811a80 'b' 'unsigned int *'
+        |   |   `-IntegerLiteral 0x7fe4ab811db8 <col:9> 'int' 2
+        |   `-ImplicitCastExpr 0x7fe4ab811e70 <col:14> 'unsigned int' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7fe4ab811e58 <col:14> 'char' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fe4ab811e18 <col:14> 'char' lvalue Var 0x7fe4ab811bd8 'c' 'char'
+        `-UnaryOperator 0x7fe4ab811f10 <line:10:2, col:3> 'unsigned int *' postfix '++'
+          `-DeclRefExpr 0x7fe4ab811ee8 <col:2> 'unsigned int *' lvalue Var 0x7fe4ab811a80 'b' 'unsigned int *'

@@ -1,0 +1,54 @@
+../Data/C2AST/pr13804-1.c:21:6: error: no member named 'c' in 'struct s0'
+  x0.c;  
+  ~~ ^
+../Data/C2AST/pr13804-1.c:22:6: error: no member named 'c' in 'struct s0'
+  x1.c;  
+  ~~ ^
+../Data/C2AST/pr13804-1.c:23:6: error: no member named 'c' in 'union u0'
+  x2.c;  
+  ~~ ^
+../Data/C2AST/pr13804-1.c:24:6: error: no member named 'c' in 'union u0'
+  x3.c;  
+  ~~ ^
+../Data/C2AST/pr13804-1.c:25:7: error: no member named 'c' in 'struct s0'
+  x4->c;  
+  ~~  ^
+../Data/C2AST/pr13804-1.c:26:7: error: no member named 'c' in 'union u0'
+  x5->c;  
+  ~~  ^
+6 errors generated.
+TranslationUnitDecl 0x7fd95882bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd95882c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd95882bf80 '__int128'
+|-TypedefDecl 0x7fd95882c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd95882bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fd95882c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd95882c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd95882c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd95882c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd95882c600 'char *'
+|   `-BuiltinType 0x7fd95882bd80 'char'
+|-TypedefDecl 0x7fd95882c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd95882c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd95882c720 'struct __va_list_tag'
+|     `-Record 0x7fd95882c698 '__va_list_tag'
+|-RecordDecl 0x7fd95882c960 <../Data/C2AST/pr13804-1.c:6:1, col:20> col:8 struct s0 definition
+| `-FieldDecl 0x7fd95886d838 <col:13, col:17> col:17 a 'int'
+|-RecordDecl 0x7fd95886d880 <line:7:1, col:20> col:7 union u0 definition
+| `-FieldDecl 0x7fd95886d948 <col:12, col:17> col:17 b 'long'
+|-TypedefDecl 0x7fd95886d9e0 <line:8:1, col:19> col:19 referenced S0 'struct s0':'struct s0'
+| `-ElaboratedType 0x7fd95886d990 'struct s0' sugar
+|   `-RecordType 0x7fd95886d800 'struct s0'
+|     `-Record 0x7fd95882c960 's0'
+|-TypedefDecl 0x7fd95886da90 <line:9:1, col:18> col:18 referenced U0 'union u0':'union u0'
+| `-ElaboratedType 0x7fd95886da40 'union u0' sugar
+|   `-RecordType 0x7fd95886d910 'union u0'
+|     `-Record 0x7fd95886d880 'u0'
+|-VarDecl 0x7fd95886db08 <line:11:1, col:11> col:11 used x0 'struct s0':'struct s0'
+|-VarDecl 0x7fd95886dbe0 <line:12:1, col:4> col:4 used x1 'S0':'struct s0'
+|-VarDecl 0x7fd95886dc60 <line:13:1, col:10> col:10 used x2 'union u0':'union u0'
+|-VarDecl 0x7fd95886dcf0 <line:14:1, col:4> col:4 used x3 'U0':'union u0'
+|-VarDecl 0x7fd95886ddd0 <line:15:1, col:12> col:12 used x4 'struct s0 *'
+|-VarDecl 0x7fd95886deb0 <line:16:1, col:11> col:11 used x5 'union u0 *'
+`-FunctionDecl 0x7fd95886dfd0 <line:18:1, line:27:1> line:19:1 f 'void (void)'
+  `-CompoundStmt 0x7fd95886e558 <line:20:1, line:27:1>

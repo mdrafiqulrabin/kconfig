@@ -1,0 +1,36 @@
+../Data/C2AST/pr51472.c:11:16: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  vectype *p = __builtin_malloc (sizeof (vectype));
+               ^
+../Data/C2AST/pr51472.c:12:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic
+  ^
+2 errors generated.
+TranslationUnitDecl 0x7fac6f002ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac6f003260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac6f002f80 '__int128'
+|-TypedefDecl 0x7fac6f0032d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac6f002fa0 'unsigned __int128'
+|-TypedefDecl 0x7fac6f0035a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac6f0033b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fac6f003328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac6f003640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac6f003600 'char *'
+|   `-BuiltinType 0x7fac6f002d80 'char'
+|-TypedefDecl 0x7fac6f003908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac6f0038b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac6f003720 'struct __va_list_tag'
+|     `-Record 0x7fac6f003698 '__va_list_tag'
+|-TypedefDecl 0x7fac6f82e800 <../Data/C2AST/pr51472.c:5:1, col:48> col:48 referenced vectype '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fac6f003980 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fac6f002de0 'int'
+|-VarDecl 0x7fac6f82e890 <line:6:1, col:9> col:9 v 'vectype':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+`-FunctionDecl 0x7fac6f82ea10 <line:8:1, line:18:1> line:9:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fac6f82e948 <col:6, col:10> col:10 c 'int'
+  `-CompoundStmt 0x7fac6f82eda0 <line:10:1, line:18:1>
+    `-DeclStmt 0x7fac6f82ed88 <line:11:3, col:51>
+      `-VarDecl 0x7fac6f82eb28 <col:3, col:50> col:12 p 'vectype *' cinit
+        `-ImplicitCastExpr 0x7fac6f82ed70 <col:16, col:50> 'vectype *' <IntegralToPointer>
+          `-CallExpr 0x7fac6f82ed40 <col:16, col:50> 'int'
+            |-ImplicitCastExpr 0x7fac6f82ed28 <col:16> 'int (*)()' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7fac6f82eca0 <col:16> 'int ()' Function 0x7fac6f82ebf0 '__builtin_malloc' 'int ()'
+            `-UnaryExprOrTypeTraitExpr 0x7fac6f82ecd8 <col:34, col:49> 'unsigned long' sizeof 'vectype':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

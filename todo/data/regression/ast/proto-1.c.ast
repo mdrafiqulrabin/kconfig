@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fda5d0262e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fda5d814228 <../Data/C2AST/proto-1.c:3:1, line:12:1> line:3:5 f 'int (void)'
+  `-CompoundStmt 0x7fda5d8145d8 <line:4:1, line:12:1>
+    |-DeclStmt 0x7fda5d8143a0 <line:5:3, col:20>
+    | `-VarDecl 0x7fda5d814320 <col:3, col:19> col:13 used dev 'const int' cinit
+    |   `-IntegerLiteral 0x7fda5d814380 <col:19> 'int' 4
+    `-ReturnStmt 0x7fda5d8145c0 <line:11:3, col:19>
+      `-UnaryOperator 0x7fda5d8145a0 <col:10, col:19> 'int' prefix '!'
+        `-CallExpr 0x7fda5d814570 <col:11, col:19> 'int'
+          |-ImplicitCastExpr 0x7fda5d814558 <col:11> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fda5d8144c0 <col:11> 'int ()' Function 0x7fda5d814410 'foo' 'int ()'
+          `-UnaryOperator 0x7fda5d814510 <col:15, col:16> 'const int *' prefix '&'
+            `-DeclRefExpr 0x7fda5d8144e8 <col:16> 'const int' lvalue Var 0x7fda5d814320 'dev' 'const int'

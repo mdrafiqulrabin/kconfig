@@ -1,0 +1,73 @@
+../Data/C2AST/propmalloc-3.c:18:9: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+    p = __builtin_malloc (n);
+        ^
+TranslationUnitDecl 0x7fb34802bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb34802c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb34802bf80 '__int128'
+|-TypedefDecl 0x7fb34802c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb34802bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb34802c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb34802c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb34802c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb34802c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb34802c600 'char *'
+|   `-BuiltinType 0x7fb34802bd80 'char'
+|-TypedefDecl 0x7fb34802c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb34802c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb34802c720 'struct __va_list_tag'
+|     `-Record 0x7fb34802c698 '__va_list_tag'
+|-FunctionDecl 0x7fb3488142d8 <../Data/C2AST/propmalloc-3.c:4:1, col:76> col:14 used foo 'void *(unsigned long, int)' static
+| |-ParmVarDecl 0x7fb34802c978 <<built-in>:81:23, col:37> ../Data/C2AST/propmalloc-3.c:4:31 'unsigned long'
+| |-ParmVarDecl 0x7fb348814200 <col:33> col:36 'int'
+| |-UsedAttr 0x7fb348814388 <col:71>
+| `-NoInlineAttr 0x7fb3488143d0 <col:53>
+|-FunctionDecl 0x7fb348814548 <line:6:1, line:10:1> line:7:14 used bar 'void *(unsigned long, int)' static
+| |-ParmVarDecl 0x7fb348814438 <<built-in>:81:23, ../Data/C2AST/propmalloc-3.c:7:32> col:32 used n 'unsigned long'
+| |-ParmVarDecl 0x7fb3488144b0 <col:35, col:39> col:39 used m 'int'
+| |-CompoundStmt 0x7fb348814790 <line:8:1, line:10:1>
+| | `-ReturnStmt 0x7fb348814778 <line:9:3, col:19>
+| |   `-CallExpr 0x7fb348814710 <col:10, col:19> 'void *'
+| |     |-ImplicitCastExpr 0x7fb3488146f8 <col:10> 'void *(*)(unsigned long, int)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fb348814650 <col:10> 'void *(unsigned long, int)' Function 0x7fb3488142d8 'foo' 'void *(unsigned long, int)'
+| |     |-ImplicitCastExpr 0x7fb348814748 <col:15> 'unsigned long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fb348814678 <col:15> 'unsigned long' lvalue ParmVar 0x7fb348814438 'n' 'unsigned long'
+| |     `-ImplicitCastExpr 0x7fb348814760 <col:18> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fb3488146a0 <col:18> 'int' lvalue ParmVar 0x7fb3488144b0 'm' 'int'
+| |-UsedAttr 0x7fb3488145f8 <line:6:26>
+| `-NoInlineAttr 0x7fb348814640 <col:16>
+`-FunctionDecl 0x7fb3488148d0 prev 0x7fb3488142d8 <line:12:1, line:21:1> line:12:14 used foo 'void *(unsigned long, int)' static
+  |-ParmVarDecl 0x7fb3488147c0 <<built-in>:81:23, ../Data/C2AST/propmalloc-3.c:12:32> col:32 used n 'unsigned long'
+  |-ParmVarDecl 0x7fb348814838 <col:35, col:39> col:39 used m 'int'
+  |-CompoundStmt 0x7fb348814f28 <line:13:1, line:21:1>
+  | |-DeclStmt 0x7fb348814a50 <line:14:3, col:10>
+  | | `-VarDecl 0x7fb3488149f0 <col:3, col:9> col:9 used p 'void *'
+  | |-IfStmt 0x7fb348814e98 <line:15:3, line:18:28>
+  | | |-<<<NULL>>>
+  | | |-<<<NULL>>>
+  | | |-BinaryOperator 0x7fb348814ac8 <line:15:7, col:11> 'int' '>'
+  | | | |-ImplicitCastExpr 0x7fb348814ab0 <col:7> 'int' <LValueToRValue>
+  | | | | `-DeclRefExpr 0x7fb348814a68 <col:7> 'int' lvalue ParmVar 0x7fb348814838 'm' 'int'
+  | | | `-IntegerLiteral 0x7fb348814a90 <col:11> 'int' 0
+  | | |-BinaryOperator 0x7fb348814c18 <line:16:5, col:20> 'void *' '='
+  | | | |-DeclRefExpr 0x7fb348814af0 <col:5> 'void *' lvalue Var 0x7fb3488149f0 'p' 'void *'
+  | | | `-CallExpr 0x7fb348814bc8 <col:9, col:20> 'void *'
+  | | |   |-ImplicitCastExpr 0x7fb348814bb0 <col:9> 'void *(*)(unsigned long, int)' <FunctionToPointerDecay>
+  | | |   | `-DeclRefExpr 0x7fb348814b18 <col:9> 'void *(unsigned long, int)' Function 0x7fb348814548 'bar' 'void *(unsigned long, int)'
+  | | |   |-ImplicitCastExpr 0x7fb348814c00 <col:14> 'unsigned long' <LValueToRValue>
+  | | |   | `-DeclRefExpr 0x7fb348814b40 <col:14> 'unsigned long' lvalue ParmVar 0x7fb3488147c0 'n' 'unsigned lon1 error generated.
+g'
+  | | |   `-UnaryOperator 0x7fb348814b90 <col:17, col:19> 'int' prefix '--'
+  | | |     `-DeclRefExpr 0x7fb348814b68 <col:19> 'int' lvalue ParmVar 0x7fb348814838 'm' 'int'
+  | | `-BinaryOperator 0x7fb348814e70 <line:18:5, col:28> 'void *' '='
+  | |   |-DeclRefExpr 0x7fb348814c40 <col:5> 'void *' lvalue Var 0x7fb3488149f0 'p' 'void *'
+  | |   `-ImplicitCastExpr 0x7fb348814e58 <col:9, col:28> 'void *' <IntegralToPointer>
+  | |     `-CallExpr 0x7fb348814e10 <col:9, col:28> 'int'
+  | |       |-ImplicitCastExpr 0x7fb348814df8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+  | |       | `-DeclRefExpr 0x7fb348814d80 <col:9> 'int ()' Function 0x7fb348814cd0 '__builtin_malloc' 'int ()'
+  | |       `-ImplicitCastExpr 0x7fb348814e40 <col:27> 'unsigned long' <LValueToRValue>
+  | |         `-DeclRefExpr 0x7fb348814da8 <col:27> 'unsigned long' lvalue ParmVar 0x7fb3488147c0 'n' 'unsigned long'
+  | `-ReturnStmt 0x7fb348814f10 <line:20:3, col:10>
+  |   `-ImplicitCastExpr 0x7fb348814ef8 <col:10> 'void *' <LValueToRValue>
+  |     `-DeclRefExpr 0x7fb348814ed0 <col:10> 'void *' lvalue Var 0x7fb3488149f0 'p' 'void *'
+  |-UsedAttr 0x7fb348814980 <line:4:71> Inherited
+  `-NoInlineAttr 0x7fb3488149c8 <col:53> Inherited

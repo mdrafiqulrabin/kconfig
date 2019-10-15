@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fc2f70216e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc2f705b268 <../Data/C2AST/pr59153.c:4:1, line:13:1> line:4:5 foo 'int (float)'
+  |-ParmVarDecl 0x7fc2f7022378 <col:10, col:16> col:16 used f 'float'
+  `-CompoundStmt 0x7fc2f705b7d8 <line:5:1, line:13:1>
+    |-DeclStmt 0x7fc2f705b698 <line:6:3, line:10:19>
+    | |-RecordDecl 0x7fc2f705b350 <line:6:3, line:10:3> line:6:3 union definition
+    | | |-FieldDecl 0x7fc2f705b418 <line:8:5, col:11> col:11 f 'float'
+    | | `-FieldDecl 0x7fc2f705b478 <line:9:5, col:9> col:9 referenced i 'int'
+    | `-VarDecl 0x7fc2f705b510 <line:6:3, line:10:18> col:5 used z 'union (anonymous union at ../Data/C2AST/pr59153.c:6:3)':'union (anonymous at ../Data/C2AST/pr59153.c:6:3)' cinit
+    |   `-InitListExpr 0x7fc2f705b620 <col:9, col:18> 'union (anonymous union at ../Data/C2AST/pr59153.c:6:3)':'union (anonymous at ../Data/C2AST/pr59153.c:6:3)' field Field 0x7fc2f705b418 'f' 'float'
+    |     `-ImplicitCastExpr 0x7fc2f705b668 <col:16> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fc2f705b570 <col:16> 'float' lvalue ParmVar 0x7fc2f7022378 'f' 'float'
+    `-ReturnStmt 0x7fc2f705b7c0 <line:12:3, col:16>
+      `-BinaryOperator 0x7fc2f705b748 <col:10, col:16> 'int' '-'
+        |-ImplicitCastExpr 0x7fc2f705b730 <col:10, col:12> 'int' <LValueToRValue>
+        | `-MemberExpr 0x7fc2f705b6d8 <col:10, col:12> 'int' lvalue .i 0x7fc2f705b478
+        |   `-DeclRefExpr 0x7fc2f705b6b0 <col:10> 'union (anonymous union at ../Data/C2AST/pr59153.c:6:3)':'union (anonymous at ../Data/C2AST/pr59153.c:6:3)' lvalue Var 0x7fc2f705b510 'z' 'union (anonymous union at ../Data/C2AST/pr59153.c:6:3)':'union (anonymous at ../Data/C2AST/pr59153.c:6:3)'
+        `-IntegerLiteral 0x7fc2f705b710 <col:16> 'int' 1

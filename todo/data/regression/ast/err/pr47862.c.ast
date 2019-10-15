@@ -1,0 +1,29 @@
+../Data/C2AST/pr47862.c:9:8: error: unknown type name 'vector'
+extern vector double dd[15];
+       ^
+../Data/C2AST/pr47862.c:9:15: error: expected identifier or '('
+extern vector double dd[15];
+              ^
+../Data/C2AST/pr47862.c:12:1: error: unknown type name 'vector'
+vector double foo() {
+^
+../Data/C2AST/pr47862.c:12:8: error: expected identifier or '('
+vector double foo() {
+       ^
+4 errors generated.
+TranslationUnitDecl 0x7f8d45022ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8d45023460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8d45023180 '__int128'
+|-TypedefDecl 0x7f8d450234d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8d450231a0 'unsigned __int128'
+|-TypedefDecl 0x7f8d450237a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8d450235b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8d45023528 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8d45023840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8d45023800 'char *'
+|   `-BuiltinType 0x7f8d45022f80 'char'
+|-TypedefDecl 0x7f8d45023b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8d45023ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8d45023920 'struct __va_list_tag'
+|     `-Record 0x7f8d45023898 '__va_list_tag'
+`-FunctionDecl 0x7f8d4401dc50 <../Data/C2AST/pr47862.c:10:1, col:15> col:6 bar 'void (void)'

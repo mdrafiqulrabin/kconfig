@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7ff1a60168e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff1a6017560 <../Data/C2AST/pr27898_1.c:1:1, col:30> col:7 union u definition
+| |-RecordDecl 0x7ff1a5845020 <col:11, col:27> col:11 struct definition
+| | `-FieldDecl 0x7ff1a58450e8 <col:20, col:24> col:24 i 'int'
+| |-FieldDecl 0x7ff1a5845180 <col:11> col:11 implicit 'struct u::(anonymous at ../Data/C2AST/pr27898_1.c:1:11)'
+| `-IndirectFieldDecl 0x7ff1a58451d8 <col:24> col:24 implicit i 'int'
+|   |-Field 0x7ff1a5845180 '' 'struct u::(anonymous at ../Data/C2AST/pr27898_1.c:1:11)'
+|   `-Field 0x7ff1a58450e8 'i' 'int'
+`-FunctionDecl 0x7ff1a5845418 <line:3:1, col:26> col:12 foo 'int (union u *)' extern
+  `-ParmVarDecl 0x7ff1a5845310 <col:17, col:25> col:26 'union u *'

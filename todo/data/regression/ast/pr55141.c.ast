@@ -1,0 +1,95 @@
+TranslationUnitDecl 0x7fe34e02b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe34e02bf60 <../Data/C2AST/pr55141.c:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7fe34e06ce38 <line:6:3, col:12> col:12 referenced p_x 'long'
+| `-FieldDecl 0x7fe34e06ce98 <col:3, col:17> col:17 p_y 'long'
+|-TypedefDecl 0x7fe34e06cf30 <line:4:1, line:7:3> col:3 referenced Point 'struct Point':'Point'
+| `-ElaboratedType 0x7fe34e06cee0 'struct Point' sugar
+|   `-RecordType 0x7fe34e06ce00 'Point'
+|     `-Record 0x7fe34e02bf60 ''
+|-FunctionDecl 0x7fe34e06d260 <line:9:1, line:17:1> line:10:11 used foo 'void (Point, Point, Point, Point)' static
+| |-ParmVarDecl 0x7fe34e06cfd0 <col:16, col:22> col:22 used p0 'Point':'Point'
+| |-ParmVarDecl 0x7fe34e06d040 <col:26, col:32> col:32 used p1 'Point':'Point'
+| |-ParmVarDecl 0x7fe34e06d0b0 <col:36, col:42> col:42 used p2 'Point':'Point'
+| |-ParmVarDecl 0x7fe34e06d120 <col:46, col:52> col:52 used p3 'Point':'Point'
+| |-CompoundStmt 0x7fe34e06d9b0 <line:11:1, line:17:1>
+| | `-IfStmt 0x7fe34e06d978 <line:12:3, line:16:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fe34e06d7a8 <line:12:7, line:15:20> 'int' '||'
+| |   | |-BinaryOperator 0x7fe34e06d6a8 <line:12:7, line:14:20> 'int' '||'
+| |   | | |-BinaryOperator 0x7fe34e06d5a8 <line:12:7, line:13:20> 'int' '||'
+| |   | | | |-BinaryOperator 0x7fe34e06d458 <line:12:7, col:17> 'int' '!='
+| |   | | | | |-ImplicitCastExpr 0x7fe34e06d428 <col:7, col:10> 'long' <LValueToRValue>
+| |   | | | | | `-MemberExpr 0x7fe34e06d3d0 <col:7, col:10> 'long' lvalue .p_x 0x7fe34e06ce38
+| |   | | | | |   `-DeclRefExpr 0x7fe34e06d3a8 <col:7> 'Point':'Point' lvalue ParmVar 0x7fe34e06cfd0 'p0' 'Point':'Point'
+| |   | | | | `-ImplicitCastExpr 0x7fe34e06d440 <col:17> 'long' <IntegralCast>
+| |   | | | |   `-IntegerLiteral 0x7fe34e06d408 <col:17> 'int' 1
+| |   | | | `-BinaryOperator 0x7fe34e06d530 <line:13:10, col:20> 'int' '!='
+| |   | | |   |-ImplicitCastExpr 0x7fe34e06d500 <col:10, col:13> 'long' <LValueToRValue>
+| |   | | |   | `-MemberExpr 0x7fe34e06d4a8 <col:10, col:13> 'long' lvalue .p_x 0x7fe34e06ce38
+| |   | | |   |   `-DeclRefExpr 0x7fe34e06d480 <col:10> 'Point':'Point' lvalue ParmVar 0x7fe34e06d040 'p1' 'Point':'Point'
+| |   | | |   `-ImplicitCastExpr 0x7fe34e06d518 <col:20> 'long' <IntegralCast>
+| |   | | |     `-IntegerLiteral 0x7fe34e06d4e0 <col:20> 'int' 3
+| |   | | `-BinaryOperator 0x7fe34e06d680 <line:14:10, col:20> 'int' '!='
+| |   | |   |-ImplicitCastExpr 0x7fe34e06d650 <col:10, col:13> 'long' <LValueToRValue>
+| |   | |   | `-MemberExpr 0x7fe34e06d5f8 <col:10, col:13> 'long' lvalue .p_x 0x7fe34e06ce38
+| |   | |   |   `-DeclRefExpr 0x7fe34e06d5d0 <col:10> 'Point':'Point' lvalue ParmVar 0x7fe34e06d0b0 'p2' 'Point':'Point'
+| |   | |   `-ImplicitCastExpr 0x7fe34e06d668 <col:20> 'long' <IntegralCast>
+| |   | |     `-IntegerLiteral 0x7fe34e06d630 <col:20> 'int' 5
+| |   | `-BinaryOperator 0x7fe34e06d780 <line:15:10, col:20> 'int' '!='
+| |   |   |-ImplicitCastExpr 0x7fe34e06d750 <col:10, col:13> 'long' <LValueToRValue>
+| |   |   | `-MemberExpr 0x7fe34e06d6f8 <col:10, col:13> 'long' lvalue .p_x 0x7fe34e06ce38
+| |   |   |   `-DeclRefExpr 0x7fe34e06d6d0 <col:10> 'Point':'Point' lvalue ParmVar 0x7fe34e06d120 'p3' 'Point':'Point'
+| |   |   `-ImplicitCastExpr 0x7fe34e06d768 <col:20> 'long' <IntegralCast>
+| |   |     `-IntegerLiteral 0x7fe34e06d730 <col:20> 'int' 7
+| |   |-CallExpr 0x7fe34e06d950 <line:16:5, col:22> 'void'
+| |   | `-ImplicitCastExpr 0x7fe34e06d938 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7fe34e06d8e8 <col:5> '<builtin fn type>' Function 0x7fe34e06d800 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fe34e06d320 <line:9:24>
+|-FunctionDecl 0x7fe34e06d800 <line:16:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fe34e06d8a0 <col:5> Implicit
+`-FunctionDecl 0x7fe34e06dc08 <line:19:1, line:29:1> line:20:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fe34e06d9e0 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7fe34e06daf0 <col:17, col:28> col:23 argv 'char **':'char **'
+  `-CompoundStmt 0x7fe34e084f20 <line:21:1, line:29:1>
+    |-DeclStmt 0x7fe34e0849e8 <line:22:3, col:31>
+    | |-VarDecl 0x7fe34e06dcc8 <col:3, col:9> col:9 used p0 'Point':'Point'
+    | |-VarDecl 0x7fe34e06dd38 <col:3, col:13> col:13 used p1 'Point':'Point'
+    | |-VarDecl 0x7fe34e084800 <col:3, col:17> col:17 used p2 'Point':'Point'
+    | |-VarDecl 0x7fe34e084870 <col:3, col:21> col:21 used p3 'Point':'Point'
+    | |-VarDecl 0x7fe34e0848e0 <col:3, col:25> col:25 p4 'Point':'Point'
+    | `-VarDecl 0x7fe34e084950 <col:3, col:29> col:29 p5 'Point':'Point'
+    |-BinaryOperator 0x7fe34e084a98 <line:23:3, col:12> 'long' '='
+    | |-MemberExpr 0x7fe34e084a28 <col:3, col:6> 'long' lvalue .p_x 0x7fe34e06ce38
+    | | `-DeclRefExpr 0x7fe34e084a00 <col:3> 'Point':'Point' lvalue Var 0x7fe34e06dcc8 'p0' 'Point':'Point'
+    | `-ImplicitCastExpr 0x7fe34e084a80 <col:12> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe34e084a60 <col:12> 'int' 1
+    |-BinaryOperator 0x7fe34e084b58 <line:24:3, col:12> 'long' '='
+    | |-MemberExpr 0x7fe34e084ae8 <col:3, col:6> 'long' lvalue .p_x 0x7fe34e06ce38
+    | | `-DeclRefExpr 0x7fe34e084ac0 <col:3> 'Point':'Point' lvalue Var 0x7fe34e06dd38 'p1' 'Point':'Point'
+    | `-ImplicitCastExpr 0x7fe34e084b40 <col:12> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe34e084b20 <col:12> 'int' 3
+    |-BinaryOperator 0x7fe34e084c18 <line:25:3, col:12> 'long' '='
+    | |-MemberExpr 0x7fe34e084ba8 <col:3, col:6> 'long' lvalue .p_x 0x7fe34e06ce38
+    | | `-DeclRefExpr 0x7fe34e084b80 <col:3> 'Point':'Point' lvalue Var 0x7fe34e084800 'p2' 'Point':'Point'
+    | `-ImplicitCastExpr 0x7fe34e084c00 <col:12> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe34e084be0 <col:12> 'int' 5
+    |-BinaryOperator 0x7fe34e084cd8 <line:26:3, col:12> 'long' '='
+    | |-MemberExpr 0x7fe34e084c68 <col:3, col:6> 'long' lvalue .p_x 0x7fe34e06ce38
+    | | `-DeclRefExpr 0x7fe34e084c40 <col:3> 'Point':'Point' lvalue Var 0x7fe34e084870 'p3' 'Point':'Point'
+    | `-ImplicitCastExpr 0x7fe34e084cc0 <col:12> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe34e084ca0 <col:12> 'int' 7
+    |-CallExpr 0x7fe34e084e40 <line:27:3, col:22> 'void'
+    | |-ImplicitCastExpr 0x7fe34e084e28 <col:3> 'void (*)(Point, Point, Point, Point)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe34e084d00 <col:3> 'void (Point, Point, Point, Point)' Function 0x7fe34e06d260 'foo' 'void (Point, Point, Point, Point)'
+    | |-ImplicitCastExpr 0x7fe34e084e88 <col:8> 'Point':'Point' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe34e084d28 <col:8> 'Point':'Point' lvalue Var 0x7fe34e06dcc8 'p0' 'Point':'Point'
+    | |-ImplicitCastExpr 0x7fe34e084ea0 <col:12> 'Point':'Point' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe34e084d50 <col:12> 'Point':'Point' lvalue Var 0x7fe34e06dd38 'p1' 'Point':'Point'
+    | |-ImplicitCastExpr 0x7fe34e084eb8 <col:16> 'Point':'Point' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe34e084d78 <col:16> 'Point':'Point' lvalue Var 0x7fe34e084800 'p2' 'Point':'Point'
+    | `-ImplicitCastExpr 0x7fe34e084ed0 <col:20> 'Point':'Point' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe34e084da0 <col:20> 'Point':'Point' lvalue Var 0x7fe34e084870 'p3' 'Point':'Point'
+    `-ReturnStmt 0x7fe34e084f08 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fe34e084ee8 <col:10> 'int' 0

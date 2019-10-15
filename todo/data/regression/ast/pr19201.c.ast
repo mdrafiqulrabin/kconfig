@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fcabb02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcabb02c960 <../Data/C2AST/pr19201.c:4:1, line:8:1> line:4:8 struct X definition
+| |-FieldDecl 0x7fcabb06d838 <line:5:3, col:9> col:9 referenced a 'char *'
+| `-FieldDecl 0x7fcabb06d898 <line:7:3, col:7> col:7 referenced b 'int'
+`-FunctionDecl 0x7fcabb06da90 <line:10:1, line:13:1> line:10:6 f 'void (struct X *)'
+  |-ParmVarDecl 0x7fcabb06d990 <col:9, col:19> col:19 used x 'struct X *'
+  `-CompoundStmt 0x7fcabb06dd20 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fcabb06dcf8 <line:12:3, col:16> 'char' '='
+      |-ArraySubscriptExpr 0x7fcabb06dc98 <col:3, col:12> 'char' lvalue
+      | |-ImplicitCastExpr 0x7fcabb06dc68 <col:3, col:6> 'char *' <LValueToRValue>
+      | | `-MemberExpr 0x7fcabb06dbb8 <col:3, col:6> 'char *' lvalue ->a 0x7fcabb06d838
+      | |   `-ImplicitCastExpr 0x7fcabb06dba0 <col:3> 'struct X *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fcabb06db78 <col:3> 'struct X *' lvalue ParmVar 0x7fcabb06d990 'x' 'struct X *'
+      | `-ImplicitCastExpr 0x7fcabb06dc80 <col:8, col:11> 'int' <LValueToRValue>
+      |   `-MemberExpr 0x7fcabb06dc30 <col:8, col:11> 'int' lvalue ->b 0x7fcabb06d898
+      |     `-ImplicitCastExpr 0x7fcabb06dc18 <col:8> 'struct X *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fcabb06dbf0 <col:8> 'struct X *' lvalue ParmVar 0x7fcabb06d990 'x' 'struct X *'
+      `-ImplicitCastExpr 0x7fcabb06dce0 <col:16> 'char' <IntegralCast>
+        `-IntegerLiteral 0x7fcabb06dcc0 <col:16> 'int' 0

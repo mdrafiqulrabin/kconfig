@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f8e6b0166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8e6b058260 <../Data/C2AST/pr14341.c:5:1, col:18> col:6 used fn_call 'void (int)'
+| `-ParmVarDecl 0x7f8e6b017378 <col:15> col:18 'int'
+|-FunctionDecl 0x7f8e6b0584b8 <line:6:1, col:15> col:5 h 'int (int, int)'
+| |-ParmVarDecl 0x7f8e6b058360 <col:7> col:10 'int'
+| `-ParmVarDecl 0x7f8e6b0583d8 <col:12> col:15 'int'
+`-FunctionDecl 0x7f8e6b0585b8 <line:7:1, line:14:1> line:7:6 t 'void ()'
+  `-CompoundStmt 0x7f8e6b058a30 <line:8:1, line:14:1>
+    |-DeclStmt 0x7f8e6b0586d0 <line:9:3, col:8>
+    | `-VarDecl 0x7f8e6b058670 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7f8e6b058760 <line:10:3, col:8>
+    | `-VarDecl 0x7f8e6b058700 <col:3, col:7> col:7 x 'int'
+    `-ForStmt 0x7f8e6b0589f8 <line:11:5, line:13:5>
+      |-BinaryOperator 0x7f8e6b0587c0 <line:11:10, col:14> 'int' '='
+      | |-DeclRefExpr 0x7f8e6b058778 <col:10> 'int' lvalue Var 0x7f8e6b058670 'i' 'int'
+      | `-IntegerLiteral 0x7f8e6b0587a0 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8e6b058848 <col:17, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8e6b058830 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8e6b0587e8 <col:17> 'int' lvalue Var 0x7f8e6b058670 'i' 'int'
+      | `-IntegerLiteral 0x7f8e6b058810 <col:21> 'int' 100000000
+      |-UnaryOperator 0x7f8e6b058898 <col:32, col:33> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f8e6b058870 <col:32> 'int' lvalue Var 0x7f8e6b058670 'i' 'int'
+      `-CompoundStmt 0x7f8e6b0589e0 <col:37, line:13:5>
+        `-CallExpr 0x7f8e6b0589b0 <line:12:3, col:25> 'void'
+          |-ImplicitCastExpr 0x7f8e6b058998 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f8e6b0588b8 <col:3> 'void (int)' Function 0x7f8e6b058260 'fn_call' 'void (int)'
+          `-BinaryOperator 0x7f8e6b058940 <col:12, col:16> 'int' '<'
+            |-ImplicitCastExpr 0x7f8e6b058928 <col:12> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7f8e6b0588e0 <col:12> 'int' lvalue Var 0x7f8e6b058670 'i' 'int'
+            `-IntegerLiteral 0x7f8e6b058908 <col:16> 'int' 100000000

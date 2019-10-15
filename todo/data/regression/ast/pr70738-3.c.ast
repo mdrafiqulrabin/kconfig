@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fc94982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc94a015200 <../Data/C2AST/pr70738-3.c:4:1, col:13> col:13 referenced int32x4_t '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fc94982c9a0 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fc94982bde0 'int'
+|-VarDecl 0x7fc94a015290 <line:5:1, col:18> col:18 used c 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' extern
+`-FunctionDecl 0x7fc94a0154c0 <line:7:1, line:11:1> line:8:1 test 'void (int32x4_t, int32x4_t)'
+  |-ParmVarDecl 0x7fc94a015340 <col:7, col:17> col:17 used a 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fc94a0153b0 <col:20, col:30> col:30 used b 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fc94a015668 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fc94a015640 <line:10:3, col:11> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '='
+      |-DeclRefExpr 0x7fc94a015570 <col:3> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fc94a015290 'c' 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+      `-BinaryOperator 0x7fc94a015618 <col:7, col:11> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7fc94a0155e8 <col:7> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc94a015598 <col:7> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc94a015340 'a' 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7fc94a015600 <col:11> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7fc94a0155c0 <col:11> 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc94a0153b0 'b' 'int32x4_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

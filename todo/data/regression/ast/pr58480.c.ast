@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7ff61f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff621004020 <../Data/C2AST/pr58480.c:4:1, col:28> col:13 used eliminate 'void (void)' extern
+|-FunctionDecl 0x7ff621004268 <line:5:1, col:59> col:14 used f1 'void *(void *, void *)' extern
+| |-ParmVarDecl 0x7ff621004118 <col:18, col:24> col:24 a 'void *'
+| |-ParmVarDecl 0x7ff621004190 <col:27, col:33> col:33 b 'void *'
+| `-NonNullAttr 0x7ff621004318 <col:51>
+|-FunctionDecl 0x7ff6210044b0 <line:6:1, col:62> col:14 used f2 'void *(void *, void *)' extern
+| |-ParmVarDecl 0x7ff621004380 <col:18, col:24> col:24 a 'void *'
+| |-ParmVarDecl 0x7ff6210043f8 <col:27, col:33> col:33 b 'void *'
+| `-NonNullAttr 0x7ff621004560 <col:51, col:60> 1
+|-FunctionDecl 0x7ff621004720 <line:7:1, line:11:1> line:7:6 g1 'void (void *, void *)'
+| |-ParmVarDecl 0x7ff6210045d8 <col:10, col:15> col:15 used p 'void *'
+| |-ParmVarDecl 0x7ff621004650 <col:18, col:23> col:23 used q 'void *'
+| `-CompoundStmt 0x7ff621004a60 <col:25, line:11:1>
+|   |-CallExpr 0x7ff621004890 <line:8:3, col:11> 'void *'
+|   | |-ImplicitCastExpr 0x7ff621004878 <col:3> 'void *(*)(void *, void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff6210047d0 <col:3> 'void *(void *, void *)' Function 0x7ff621004268 'f1' 'void *(void *, void *)'
+|   | |-ImplicitCastExpr 0x7ff6210048c8 <col:7> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff6210047f8 <col:7> 'void *' lvalue ParmVar 0x7ff621004650 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7ff6210048e0 <col:10> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ff621004820 <col:10> 'void *' lvalue ParmVar 0x7ff6210045d8 'p' 'void *'
+|   `-IfStmt 0x7ff621004a28 <line:9:3, line:10:16>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff621004970 <line:9:7, col:12> 'int' '=='
+|     | |-ImplicitCastExpr 0x7ff621004940 <col:7> 'void *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff6210048f8 <col:7> 'void *' lvalue ParmVar 0x7ff6210045d8 'p' 'void *'
+|     | `-ImplicitCastExpr 0x7ff621004958 <col:12> 'void *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7ff621004920 <col:12> 'int' 0
+|     |-CallExpr 0x7ff621004a00 <line:10:5, col:16> 'void'
+|     | `-ImplicitCastExpr 0x7ff6210049e8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ff621004998 <col:5> 'void (void)' Function 0x7ff621004020 'eliminate' 'void (void)'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff621004ba0 <line:12:1, line:16:1> line:12:6 g2 'void (void *, void *)'
+  |-ParmVarDecl 0x7ff621004a98 <col:10, col:15> col:15 used p 'void *'
+  |-ParmVarDecl 0x7ff621004b10 <col:18, col:23> col:23 used q 'void *'
+  `-CompoundStmt 0x7ff621004e88 <col:25, line:16:1>
+    |-CallExpr 0x7ff621004ce0 <line:13:3, col:11> 'void *'
+    | |-ImplicitCastExpr 0x7ff621004cc8 <col:3> 'void *(*)(void *, void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff621004c50 <col:3> 'void *(void *, void *)' Function 0x7ff6210044b0 'f2' 'void *(void *, void *)'
+    | |-ImplicitCastExpr 0x7ff621004d18 <col:7> 'void *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff621004c78 <col:7> 'void *' lvalue ParmVar 0x7ff621004b10 'q' 'void *'
+    | `-ImplicitCastExpr 0x7ff621004d30 <col:10> 'void *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff621004ca0 <col:10> 'void *' lvalue ParmVar 0x7ff621004a98 'p' 'void *'
+    `-IfStmt 0x7ff621004e50 <line:14:3, line:15:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff621004dc0 <line:14:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7ff621004d90 <col:7> 'void *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff621004d48 <col:7> 'void *' lvalue ParmVar 0x7ff621004a98 'p' 'void *'
+      | `-ImplicitCastExpr 0x7ff621004da8 <col:12> 'void *' <NullToPointer>
+      |   `-IntegerLiteral 0x7ff621004d70 <col:12> 'int' 0
+      |-CallExpr 0x7ff621004e28 <line:15:5, col:16> 'void'
+      | `-ImplicitCastExpr 0x7ff621004e10 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7ff621004de8 <col:5> 'void (void)' Function 0x7ff621004020 'eliminate' 'void (void)'
+      `-<<<NULL>>>

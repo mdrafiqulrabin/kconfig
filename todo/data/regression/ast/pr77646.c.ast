@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fa63582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa63582c960 <../Data/C2AST/pr77646.c:3:1, line:6:1> line:3:8 struct e definition
+| |-FieldDecl 0x7fa636014310 <line:4:5, col:14> col:11 referenced f 'int (*)()'
+| `-FieldDecl 0x7fa636014448 <line:5:5, col:15> col:12 referenced g 'void (*)()'
+|-VarDecl 0x7fa636014540 <line:3:1, line:6:5> col:5 used c 'struct e *'
+|-VarDecl 0x7fa636014610 <line:7:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fa6360146c0 <line:8:1, col:9> col:7 used h 'void *()'
+|-RecordDecl 0x7fa636014760 <line:9:9, col:30> col:9 struct definition
+| `-FieldDecl 0x7fa636014830 <col:18, col:27> col:27 referenced j 'struct e':'struct e'
+|-TypedefDecl 0x7fa636014920 <col:1, col:32> col:32 referenced k 'struct k':'k'
+| `-ElaboratedType 0x7fa6360148d0 'struct k' sugar
+|   `-RecordType 0x7fa6360147f0 'k'
+|     `-Record 0x7fa636014760 ''
+|-FunctionDecl 0x7fa6360149b8 <line:10:1, col:21> col:5 used l 'int ()'
+| `-CompoundStmt 0x7fa636014ab0 <col:9, col:21>
+|   `-ReturnStmt 0x7fa636014a98 <col:11, col:18>
+|     `-ImplicitCastExpr 0x7fa636014a80 <col:18> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa636014a58 <col:18> 'int' lvalue Var 0x7fa636014610 'a' 'int'
+|-VarDecl 0x7fa636014ae8 <line:11:1, col:22> col:16 used b 'const struct e':'const struct e' cinit
+| `-InitListExpr 0x7fa636014bb8 <col:20, col:22> 'struct e':'struct e'
+|   |-ImplicitCastExpr 0x7fa636014c08 <col:21> 'int (*)()' <FunctionToPointerDecay>
+|   | `-DeclRefExpr 0x7fa636014b48 <col:21> 'int ()' Function 0x7fa6360149b8 'l' 'int ()'
+|   `-ImplicitValueInitExpr 0x7fa636014c20 <<invalid sloc>> 'void (*)()'
+`-FunctionDecl 0x7fa636014c50 <line:12:1, line:21:1> line:12:6 m 'void ()'
+  `-CompoundStmt 0x7fa63602be58 <line:13:1, line:21:1>
+    |-DeclStmt 0x7fa636014e80 <line:14:3, col:13>
+    | `-VarDecl 0x7fa636014d78 <col:3, col:12> col:6 used d 'k *' cinit
+    |   `-ImplicitCastExpr 0x7fa636014e68 <col:10, col:12> 'k *' <BitCast>
+    |     `-CallExpr 0x7fa636014e40 <col:10, col:12> 'void *'
+    |       `-ImplicitCastExpr 0x7fa636014e28 <col:10> 'void *(*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fa636014dd8 <col:10> 'void *()' Function 0x7fa6360146c0 'h' 'void *()'
+    |-BinaryOperator 0x7fa636014f50 <line:15:3, col:10> 'struct e':'struct e' '='
+    | |-MemberExpr 0x7fa636014ed8 <col:3, col:6> 'struct e':'struct e' lvalue ->j 0x7fa636014830
+    | | `-ImplicitCastExpr 0x7fa636014ec0 <col:3> 'k *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa636014e98 <col:3> 'k *' lvalue Var 0x7fa636014d78 'd' 'k *'
+    | `-ImplicitCastExpr 0x7fa636014f38 <col:10> 'struct e':'struct e' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa636014f10 <col:10> 'const struct e':'const struct e' lvalue Var 0x7fa636014ae8 'b' 'const struct e':'const struct e'
+    |-BinaryOperator 0x7fa636015030 <line:16:3, col:19> 'struct e *' '='
+    | |-DeclRefExpr 0x7fa636014f78 <col:3> 'struct e *' lvalue Var 0x7fa636014540 'c' 'struct e *'
+    | `-CStyleCastExpr 0x7fa636015008 <col:7, col:19> 'struct e *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fa636014ff0 <col:19> 'k *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa636014fa0 <col:19> 'k *' lvalue Var 0x7fa636014d78 'd' 'k *'
+    |-DeclStmt 0x7fa636015120 <line:17:3, col:18>
+    | `-VarDecl 0x7fa636015080 <col:3, col:17> col:13 used i 'struct e *' cinit
+    |   `-ImplicitCastExpr 0x7fa636015108 <col:17> 'struct e *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa6360150e0 <col:17> 'struct e *' lvalue Var 0x7fa636014540 'c' 'struct e *'
+    `-IfStmt 0x7fa63602be20 <line:18:3, line:20:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fa63602bc00 <line:18:7, col:13> 'int'
+      | |-ImplicitCastExpr 0x7fa6360151d8 <col:7, col:10> 'int (*)()' <LValueToRValue>
+      | | `-MemberExpr 0x7fa636015178 <col:7, col:10> 'int (*)()' lvalue ->f 0x7fa636014310
+      | |   `-ImplicitCastExpr 0x7fa636015160 <col:7> 'struct e *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fa636015138 <col:7> 'struct e *' lvalue Var 0x7fa636015080 'i' 'struct e *'
+      | `-ImplicitCastExpr 0x7fa63602bc30 <col:12> 'struct e *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa6360151b0 <col:12> 'struct e *' lvalue Var 0x7fa636014540 'c' 'struct e *'
+      |-WhileStmt 0x7fa63602be00 <line:19:5, line:20:12>
+      | |-<<<NULL>>>
+      | |-CallExpr 0x7fa63602bd00 <line:19:12, col:18> 'int'
+      | | |-ImplicitCastExpr 0x7fa63602bce8 <col:12, col:15> 'int (*)()' <LValueToRValue>
+      | | | `-MemberExpr 0x7fa63602bc88 <col:12, col:15> 'int (*)()' lvalue ->f 0x7fa636014310
+      | | |   `-ImplicitCastExpr 0x7fa63602bc70 <col:12> 'struct e *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7fa63602bc48 <col:12> 'struct e *' lvalue Var 0x7fa636015080 'i' 'struct e *'
+      | | `-ImplicitCastExpr 0x7fa63602bd30 <col:17> 'struct e *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa63602bcc0 <col:17> 'struct e *' lvalue Var 0x7fa636014540 'c' 'struct e *'
+      | `-CallExpr 0x7fa63602bdd8 <line:20:7, col:12> 'void'
+      |   `-ImplicitCastExpr 0x7fa63602bdc0 <col:7, col:10> 'void (*)()' <LValueToRValue>
+      |     `-MemberExpr 0x7fa63602bd88 <col:7, col:10> 'void (*)()' lvalue ->g 0x7fa636014448
+      |       `-ImplicitCastExpr 0x7fa63602bd70 <col:7> 'struct e *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fa63602bd48 <col:7> 'struct e *' lvalue Var 0x7fa636015080 'i' 'struct e *'
+      `-<<<NULL>>>

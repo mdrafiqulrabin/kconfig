@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fa9ed01a0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa9ec013c00 <../Data/C2AST/pr63495.c:5:1, col:50> col:38 struct S definition
+| |-AlignedAttr 0x7fa9ec013cb0 <col:24, col:34> aligned
+| | `-IntegerLiteral 0x7fa9ed01ad60 <col:33> 'int' 8
+| `-FieldDecl 0x7fa9ec013d10 <col:42, col:47> col:47 c 'char'
+`-StaticAssertDecl 0x7fa9ec013f00 <line:6:1, col:60> col:1
+  |-BinaryOperator 0x7fa9ec013e08 <col:17, col:40> 'int' '>='
+  | |-UnaryExprOrTypeTraitExpr 0x7fa9ec013db0 <col:17, col:35> 'unsigned long' alignof 'struct S':'struct S'
+  | `-ImplicitCastExpr 0x7fa9ec013df0 <col:40> 'unsigned long' <IntegralCast>
+  |   `-IntegerLiteral 0x7fa9ec013dd0 <col:40> 'int' 8
+  `-StringLiteral 0x7fa9ec013e68 <col:43> 'char [16]' lvalue "wrong alignment"

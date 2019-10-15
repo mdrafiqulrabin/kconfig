@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fef5d826ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fef5c8eb950 <../Data/C2AST/pr78102.c:8:1, line:12:1> line:9:1 foo '__m128i (const __m128i, const __m128i)'
+| |-ParmVarDecl 0x7fef5c8eb810 <col:6, col:20> col:20 used x 'const __m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+| |-ParmVarDecl 0x7fef5c8eb880 <col:23, col:37> col:37 used y 'const __m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+| `-CompoundStmt 0x7fef5c8ebb10 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fef5c8ebaf8 <line:11:3, col:31>
+|     `-CallExpr 0x7fef5c8eba90 <col:10, col:31> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fef5c8eba78 <col:10> '__m128i (*)(__m128i, __m128i)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fef5c8eba00 <col:10> '__m128i (__m128i, __m128i)' Function 0x7fef5d945848 '_mm_cmpeq_epi64' '__m128i (__m128i, __m128i)'
+|       |-ImplicitCastExpr 0x7fef5c8ebac8 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fef5c8eba28 <col:27> 'const __m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const' lvalue ParmVar 0x7fef5c8eb810 'x' 'const __m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+|       `-ImplicitCastExpr 0x7fef5c8ebae0 <col:30> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fef5c8eba50 <col:30> 'const __m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const' lvalue ParmVar 0x7fef5c8eb880 'y' 'const __m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+|-FunctionDecl 0x7fef5c8ebc80 <line:14:1, line:18:1> line:15:1 bar '__v2di (const __v2di, const __v2di)'
+| |-ParmVarDecl 0x7fef5c8ebb38 <col:6, col:19> col:19 used x 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+| |-ParmVarDecl 0x7fef5c8ebba8 <col:22, col:35> col:35 used y 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+| `-CompoundStmt 0x7fef5c8ebdf0 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7fef5c8ebdd8 <line:17:3, col:15>
+|     `-BinaryOperator 0x7fef5c8ebdb0 <col:10, col:15> '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '=='
+|       |-ImplicitCastExpr 0x7fef5c8ebd80 <col:10> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fef5c8ebd30 <col:10> 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const' lvalue ParmVar 0x7fef5c8ebb38 'x' 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+|       `-ImplicitCastExpr 0x7fef5c8ebd98 <col:15> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fef5c8ebd58 <col:15> 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const' lvalue ParmVar 0x7fef5c8ebba8 'y' 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+`-FunctionDecl 0x7fef5c8ebf18 <line:20:1, line:24:1> line:21:1 baz '__v2di (const __v2di, const __v2di)'
+  |-ParmVarDecl 0x7fef5c8ebe18 <col:6, col:19> col:19 used x 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+  |-ParmVarDecl 0x7fef5c8ebe88 <col:22, col:35> col:35 used y 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+  `-CompoundStmt 0x7fef5c8ec088 <line:22:1, line:24:1>
+    `-ReturnStmt 0x7fef5c8ec070 <line:23:3, col:15>
+      `-BinaryOperator 0x7fef5c8ec048 <col:10, col:15> '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '!='
+        |-ImplicitCastExpr 0x7fef5c8ec018 <col:10> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fef5c8ebfc8 <col:10> 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const' lvalue ParmVar 0x7fef5c8ebe18 'x' 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'
+        `-ImplicitCastExpr 0x7fef5c8ec030 <col:15> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fef5c8ebff0 <col:15> 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const' lvalue ParmVar 0x7fef5c8ebe88 'y' 'const __v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long const'

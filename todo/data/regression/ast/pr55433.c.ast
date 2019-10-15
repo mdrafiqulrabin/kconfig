@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fcef602bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcef602c978 <../Data/C2AST/pr55433.c:4:1, col:28> col:28 referenced tick_t 'unsigned long long'
+| `-BuiltinType 0x7fcef602bec0 'unsigned long long'
+|-FunctionDecl 0x7fcef68142b8 <line:5:1, col:20> col:12 used foo 'int (void)' extern
+|-FunctionDecl 0x7fcef68144b0 <line:6:1, col:24> col:15 used tick 'tick_t (void)' extern
+`-FunctionDecl 0x7fcef6814618 <line:7:1, line:12:1> line:7:8 test 'double (void)'
+  `-CompoundStmt 0x7fcef6814b98 <col:19, line:12:1>
+    |-DeclStmt 0x7fcef6814888 <line:8:3, col:30>
+    | |-RecordDecl 0x7fcef68146b8 <col:3, col:26> col:3 struct definition
+    | | `-FieldDecl 0x7fcef6814770 <col:12, col:19> col:19 referenced ticks 'tick_t':'unsigned long long'
+    | `-VarDecl 0x7fcef6814810 <col:3, col:28> col:28 used st 'struct (anonymous struct at ../Data/C2AST/pr55433.c:8:3)':'struct (anonymous at ../Data/C2AST/pr55433.c:8:3)'
+    |-BinaryOperator 0x7fcef68149c8 <line:9:3, col:19> 'tick_t':'unsigned long long' '='
+    | |-MemberExpr 0x7fcef68148c8 <col:3, col:6> 'tick_t':'unsigned long long' lvalue .ticks 0x7fcef6814770
+    | | `-DeclRefExpr 0x7fcef68148a0 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr55433.c:8:3)':'struct (anonymous at ../Data/C2AST/pr55433.c:8:3)' lvalue Var 0x7fcef6814810 'st' 'struct (anonymous struct at ../Data/C2AST/pr55433.c:8:3)':'struct (anonymous at ../Data/C2AST/pr55433.c:8:3)'
+    | `-CallExpr 0x7fcef68149a0 <col:14, col:19> 'tick_t':'unsigned long long'
+    |   `-ImplicitCastExpr 0x7fcef6814988 <col:14> 'tick_t (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fcef6814900 <col:14> 'tick_t (void)' Function 0x7fcef68144b0 'tick' 'tick_t (void)'
+    |-CallExpr 0x7fcef6814aa0 <line:10:3, col:7> 'int'
+    | `-ImplicitCastExpr 0x7fcef6814a88 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fcef6814a38 <col:3> 'int (void)' Function 0x7fcef68142b8 'foo' 'int (void)'
+    `-ReturnStmt 0x7fcef6814b80 <line:11:3, col:21>
+      `-CStyleCastExpr 0x7fcef6814b58 <col:10, col:21> 'double' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7fcef6814b40 <col:18, col:21> 'tick_t':'unsigned long long' <LValueToRValue>
+          `-MemberExpr 0x7fcef6814af0 <col:18, col:21> 'tick_t':'unsigned long long' lvalue .ticks 0x7fcef6814770
+            `-DeclRefExpr 0x7fcef6814ac8 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr55433.c:8:3)':'struct (anonymous at ../Data/C2AST/pr55433.c:8:3)' lvalue Var 0x7fcef6814810 'st' 'struct (anonymous struct at ../Data/C2AST/pr55433.c:8:3)':'struct (anonymous at ../Data/C2AST/pr55433.c:8:3)'

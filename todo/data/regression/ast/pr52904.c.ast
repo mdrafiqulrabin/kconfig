@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fd73882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd739814268 <../Data/C2AST/pr52904.c:3:1, col:20> col:12 used foo 'int (int)' extern
+| `-ParmVarDecl 0x7fd73882c978 <col:17> col:20 'int'
+`-FunctionDecl 0x7fd739814418 <line:5:1, line:20:1> line:6:1 wait_reading_process_output 'int (void)'
+  `-CompoundStmt 0x7fd739814a18 <line:7:1, line:20:1>
+    |-DeclStmt 0x7fd739814550 <line:8:3, col:15>
+    | `-VarDecl 0x7fd7398144d0 <col:3, col:14> col:7 used nfds 'int' cinit
+    |   `-IntegerLiteral 0x7fd739814530 <col:14> 'int' 0
+    |-DeclStmt 0x7fd7398145e0 <line:9:3, col:14>
+    | `-VarDecl 0x7fd739814580 <col:3, col:7> col:7 used channel 'int'
+    |-ForStmt 0x7fd7398148b0 <line:11:3, line:15:5>
+    | |-BinaryOperator 0x7fd739814640 <line:11:8, col:18> 'int' '='
+    | | |-DeclRefExpr 0x7fd7398145f8 <col:8> 'int' lvalue Var 0x7fd739814580 'channel' 'int'
+    | | `-IntegerLiteral 0x7fd739814620 <col:18> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd7398146c8 <col:21, col:31> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd7398146b0 <col:21> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd739814668 <col:21> 'int' lvalue Var 0x7fd739814580 'channel' 'int'
+    | | `-IntegerLiteral 0x7fd739814690 <col:31> 'int' 1024
+    | |-UnaryOperator 0x7fd739814718 <col:37, col:39> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7fd7398146f0 <col:39> 'int' lvalue Var 0x7fd739814580 'channel' 'int'
+    | `-CompoundStmt 0x7fd739814898 <line:12:5, line:15:5>
+    |   `-IfStmt 0x7fd739814860 <line:13:7, line:14:6>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-CallExpr 0x7fd7398147d0 <line:13:11, col:23> 'int'
+    |     | |-ImplicitCastExpr 0x7fd7398147b8 <col:11> 'int (*)(int)' <FunctionToPointerDecay>
+    |     | | `-DeclRefExpr 0x7fd739814738 <col:11> 'int (int)' Function 0x7fd739814268 'foo' 'int (int)'
+    |     | `-ImplicitCastExpr 0x7fd739814800 <col:16> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fd739814760 <col:16> 'int' lvalue Var 0x7fd739814580 'channel' 'int'
+    |     |-UnaryOperator 0x7fd739814840 <line:14:2, col:6> 'int' postfix '++'
+    |     | `-DeclRefExpr 0x7fd739814818 <col:2> 'int' lvalue Var 0x7fd7398144d0 'nfds' 'int'
+    |     `-<<<NULL>>>
+    |-IfStmt 0x7fd7398149a8 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd739814948 <line:17:7, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd739814930 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd7398148e8 <col:7> 'int' lvalue Var 0x7fd7398144d0 'nfds' 'int'
+    | | `-IntegerLiteral 0x7fd739814910 <col:14> 'int' 0
+    | |-ReturnStmt 0x7fd739814990 <line:18:5, col:12>
+    | | `-IntegerLiteral 0x7fd739814970 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd739814a00 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fd7398149e0 <col:10> 'int' 0

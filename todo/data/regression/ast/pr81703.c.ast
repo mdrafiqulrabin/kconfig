@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f85460158e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f854683c828 <../Data/C2AST/pr81703.c:4:1, line:10:1> line:4:10 g 'unsigned int (void)'
+| `-CompoundStmt 0x7f854683d2d0 <line:5:1, line:10:1>
+|   |-DeclStmt 0x7f854683c9e8 <line:6:3, col:12>
+|   | `-VarDecl 0x7f854683c988 <col:3, col:11> col:8 used d 'char [8]'
+|   |-DeclStmt 0x7f854683cb88 <line:7:3, col:26>
+|   | `-VarDecl 0x7f854683ca78 <col:3, col:20> col:14 used s 'const char [5]' cinit
+|   |   `-StringLiteral 0x7f854683cb18 <col:20> 'const char [5]' lvalue "0123"
+|   |-CallExpr 0x7f854683cf70 <line:8:3, col:35> 'void *'
+|   | |-ImplicitCastExpr 0x7f854683cf58 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f854683ce38 <col:3> '<builtin fn type>' Function 0x7f854683cc18 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f854683cfc8 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f854683cfb0 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f854683ce60 <col:21> 'char [8]' lvalue Var 0x7f854683c988 'd' 'char [8]'
+|   | |-ImplicitCastExpr 0x7f854683cff8 <col:24> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f854683cfe0 <col:24> 'const char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f854683ce88 <col:24> 'const char [5]' lvalue Var 0x7f854683ca78 's' 'const char [5]'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f854683ced8 <col:27, col:34> 'unsigned long' sizeof
+|   |   `-DeclRefExpr 0x7f854683ceb0 <col:34> 'const char [5]' lvalue Var 0x7f854683ca78 's' 'const char [5]'
+|   `-ReturnStmt 0x7f854683d2b8 <line:9:3, col:29>
+|     `-ImplicitCastExpr 0x7f854683d2a0 <col:10, col:29> 'unsigned int' <IntegralCast>
+|       `-CallExpr 0x7f854683d240 <col:10, col:29> 'unsigned long'
+|         |-ImplicitCastExpr 0x7f854683d228 <col:10> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f854683d198 <col:10> '<builtin fn type>' Function 0x7f854683d048 '__builtin_strlen' 'unsigned long (const char *)'
+|         `-ImplicitCastExpr 0x7f854683d288 <col:28> 'const char *' <BitCast>
+|           `-ImplicitCastExpr 0x7f854683d270 <col:28> 'char *' <ArrayToPointerDecay>
+|             `-DeclRefExpr 0x7f854683d1c0 <col:28> 'char [8]' lvalue Var 0x7f854683c988 'd' 'char [8]'
+|-FunctionDecl 0x7f854683cc18 <line:8:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f854683ccb8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f854683cd18 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f854683cd78 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7f854683cdf0 <col:3> Implicit
+`-FunctionDecl 0x7f854683d048 <line:9:10> col:10 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+  |-ParmVarDecl 0x7f854683d0e8 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f854683d150 <col:10> Implicit

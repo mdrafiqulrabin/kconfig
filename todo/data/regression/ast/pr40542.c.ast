@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ff0eb02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff0eb814310 <../Data/C2AST/pr40542.c:3:1, line:10:1> line:4:1 volarr_cpy 'void (char *, volatile char *)'
+  |-ParmVarDecl 0x7ff0eb02c978 <col:12, col:18> col:18 used d 'char *'
+  |-ParmVarDecl 0x7ff0eb814240 <col:21, col:36> col:36 used s 'volatile char *'
+  `-CompoundStmt 0x7ff0eb814798 <line:5:1, line:10:1>
+    |-DeclStmt 0x7ff0eb814478 <line:6:3, col:8>
+    | `-VarDecl 0x7ff0eb814418 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ff0eb814760 <line:8:3, line:9:15>
+      |-BinaryOperator 0x7ff0eb8144d8 <line:8:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ff0eb814490 <col:8> 'int' lvalue Var 0x7ff0eb814418 'i' 'int'
+      | `-IntegerLiteral 0x7ff0eb8144b8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff0eb814560 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff0eb814548 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff0eb814500 <col:15> 'int' lvalue Var 0x7ff0eb814418 'i' 'int'
+      | `-IntegerLiteral 0x7ff0eb814528 <col:19> 'int' 16
+      |-UnaryOperator 0x7ff0eb8145b0 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff0eb814588 <col:23> 'int' lvalue Var 0x7ff0eb814418 'i' 'int'
+      `-BinaryOperator 0x7ff0eb814738 <line:9:5, col:15> 'char' '='
+        |-ArraySubscriptExpr 0x7ff0eb814650 <col:5, col:8> 'char' lvalue
+        | |-ImplicitCastExpr 0x7ff0eb814620 <col:5> 'char *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff0eb8145d0 <col:5> 'char *' lvalue ParmVar 0x7ff0eb02c978 'd' 'char *'
+        | `-ImplicitCastExpr 0x7ff0eb814638 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ff0eb8145f8 <col:7> 'int' lvalue Var 0x7ff0eb814418 'i' 'int'
+        `-ImplicitCastExpr 0x7ff0eb814720 <col:12, col:15> 'char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ff0eb8146f8 <col:12, col:15> 'volatile char' lvalue
+            |-ImplicitCastExpr 0x7ff0eb8146c8 <col:12> 'volatile char *' <LValueToRValue>
+            | `-DeclRefExpr 0x7ff0eb814678 <col:12> 'volatile char *' lvalue ParmVar 0x7ff0eb814240 's' 'volatile char *'
+            `-ImplicitCastExpr 0x7ff0eb8146e0 <col:14> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7ff0eb8146a0 <col:14> 'int' lvalue Var 0x7ff0eb814418 'i' 'int'

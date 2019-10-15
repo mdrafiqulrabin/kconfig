@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7f90d982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f90da014250 <../Data/C2AST/pr52876.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f90da0142f0 prev 0x7f90da014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7f90da0143a8 <line:6:1, col:11> col:11 used li 'long long'
+|-FunctionDecl 0x7f90da014528 <line:8:1, line:15:1> line:10:1 used testfunc 'long long (void *)'
+| |-ParmVarDecl 0x7f90da014460 <col:11, col:17> col:17 used addr 'void *'
+| |-CompoundStmt 0x7f90da014818 <line:11:1, line:15:1>
+| | |-BinaryOperator 0x7f90da014700 <line:12:3, col:24> 'long long' '='
+| | | |-DeclRefExpr 0x7f90da014618 <col:3> 'long long' lvalue Var 0x7f90da0143a8 'li' 'long long'
+| | | `-CStyleCastExpr 0x7f90da0146d8 <col:8, col:24> 'long long' <IntegralCast>
+| | |   `-CStyleCastExpr 0x7f90da014698 <col:19, col:24> 'int' <PointerToIntegral>
+| | |     `-ImplicitCastExpr 0x7f90da014680 <col:24> 'void *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f90da014640 <col:24> 'void *' lvalue ParmVar 0x7f90da014460 'addr' 'void *'
+| | |-CompoundAssignOperator 0x7f90da014788 <line:13:3, col:9> 'long long' '&=' ComputeLHSTy='long long' ComputeResultTy='long long'
+| | | |-DeclRefExpr 0x7f90da014728 <col:3> 'long long' lvalue Var 0x7f90da0143a8 'li' 'long long'
+| | | `-ImplicitCastExpr 0x7f90da014770 <col:9> 'long long' <IntegralCast>
+| | |   `-IntegerLiteral 0x7f90da014750 <col:9> 'unsigned int' 4294967295
+| | `-ReturnStmt 0x7f90da014800 <line:14:3, col:10>
+| |   `-ImplicitCastExpr 0x7f90da0147e8 <col:10> 'long long' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f90da0147c0 <col:10> 'long long' lvalue Var 0x7f90da0143a8 'li' 'long long'
+| `-NoInlineAttr 0x7f90da0145d0 <line:9:17>
+`-FunctionDecl 0x7f90da014908 <line:17:1, line:25:1> line:17:5 main 'int (void)'
+  `-CompoundStmt 0x7f90da014d58 <line:18:1, line:25:1>
+    |-DeclStmt 0x7f90da014a50 <line:19:3, col:29>
+    | `-VarDecl 0x7f90da0149f0 <col:3, col:22> col:22 used rv_test 'volatile long long'
+    |-BinaryOperator 0x7f90da014b90 <line:20:3, col:39> 'long long' '='
+    | |-DeclRefExpr 0x7f90da014a68 <col:3> 'volatile long long' lvalue Var 0x7f90da0149f0 'rv_test' 'volatile long long'
+    | `-CallExpr 0x7f90da014b60 <col:13, col:39> 'long long'
+    |   |-ImplicitCastExpr 0x7f90da014b48 <col:13> 'long long (*)(void *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f90da014a90 <col:13> 'long long (void *)' Function 0x7f90da014528 'testfunc' 'long long (void *)'
+    |   `-CStyleCastExpr 0x7f90da014af0 <col:22, col:29> 'void *' <IntegralToPointer>
+    |     `-IntegerLiteral 0x7f90da014ab8 <col:29> 'unsigned int' 2271547956
+    |-IfStmt 0x7f90da014ce8 <line:21:3, line:22:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f90da014c30 <line:21:7, col:18> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f90da014c18 <col:7> 'unsigned long long' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7f90da014c00 <col:7> 'long long' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f90da014bb8 <col:7> 'volatile long long' lvalue Var 0x7f90da0149f0 'rv_test' 'volatile long long'
+    | | `-IntegerLiteral 0x7f90da014be0 <col:18> 'unsigned long long' 2271547956
+    | |-CallExpr 0x7f90da014cc0 <line:22:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f90da014ca8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f90da014c58 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f90da0142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f90da014d40 <line:24:3, col:10>
+      `-IntegerLiteral 0x7f90da014d20 <col:10> 'int' 0

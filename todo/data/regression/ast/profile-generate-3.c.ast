@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7fd77102bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd771814200 <../Data/C2AST/profile-generate-3.c:5:1, line:9:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7fd771814318 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fd771814300 <line:8:3, col:10>
+      `-IntegerLiteral 0x7fd7718142e0 <col:10> 'int' 0

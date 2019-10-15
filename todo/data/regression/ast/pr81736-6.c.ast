@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f936382bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f936382c960 <../Data/C2AST/pr81736-6.c:4:1, line:7:1> line:4:8 struct foo definition
+| `-FieldDecl 0x7f9364814238 <line:6:3, col:7> col:7 referenced head 'int'
+|-VarDecl 0x7f93648142d0 <line:4:1, line:7:3> col:3 used a 'struct foo':'struct foo'
+`-FunctionDecl 0x7f9364814458 <line:9:1, line:13:1> line:10:1 bar 'int (void)'
+  `-CompoundStmt 0x7f9364814618 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7f9364814600 <line:12:3, col:20>
+      `-BinaryOperator 0x7f9364814590 <col:10, col:20> 'int' '!='
+        |-ImplicitCastExpr 0x7f9364814578 <col:10, col:12> 'int' <LValueToRValue>
+        | `-MemberExpr 0x7f9364814520 <col:10, col:12> 'int' lvalue .head 0x7f9364814238
+        |   `-DeclRefExpr 0x7f93648144f8 <col:10> 'struct foo':'struct foo' lvalue Var 0x7f93648142d0 'a' 'struct foo':'struct foo'
+        `-IntegerLiteral 0x7f9364814558 <col:20> 'int' 0

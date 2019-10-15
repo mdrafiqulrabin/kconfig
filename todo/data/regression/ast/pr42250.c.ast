@@ -1,0 +1,263 @@
+TranslationUnitDecl 0x7fa6a701a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa6a7054c68 <../Data/C2AST/pr42250.c:4:15> col:15 implicit used log10 'double (double)' extern
+| |-ParmVarDecl 0x7fa6a7054d08 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fa6a7054d70 <col:15> Implicit
+| `-NoThrowAttr 0x7fa6a7054db8 <col:15> Implicit
+|-FunctionDecl 0x7fa6a7054dc8 prev 0x7fa6a7054c68 <col:1, col:32> col:15 used log10 'double (double)' extern
+| |-ParmVarDecl 0x7fa6a701b578 <col:22, col:29> col:29 __x 'double'
+| |-ConstAttr 0x7fa6a7054ea8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7fa6a7054eb8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fa6a7054f70 <line:5:15> col:15 implicit used ceil 'double (double)' extern
+| |-ParmVarDecl 0x7fa6a7055010 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fa6a7055078 <col:15> Implicit
+| `-ConstAttr 0x7fa6a70550c0 <col:15> Implicit
+|-FunctionDecl 0x7fa6a70550d0 prev 0x7fa6a7054f70 <col:1, col:31> col:15 used ceil 'double (double)' extern
+| |-ParmVarDecl 0x7fa6a7054ee0 <col:21, col:28> col:28 __x 'double'
+| |-NoThrowAttr 0x7fa6a70551b0 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fa6a70551c0 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fa6a7055278 <line:6:15> col:15 implicit used floor 'double (double)' extern
+| |-ParmVarDecl 0x7fa6a7055318 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fa6a7055380 <col:15> Implicit
+| `-ConstAttr 0x7fa6a70553c8 <col:15> Implicit
+|-FunctionDecl 0x7fa6a70553d8 prev 0x7fa6a7055278 <col:1, col:32> col:15 used floor 'double (double)' extern
+| |-ParmVarDecl 0x7fa6a70551e8 <col:22, col:29> col:29 __x 'double'
+| |-NoThrowAttr 0x7fa6a70554b8 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fa6a70554c8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fa6a70555b0 <line:7:1, col:30> col:13 used free 'void (void *)' extern
+| `-ParmVarDecl 0x7fa6a70554f0 <col:19, col:25> col:25 __ptr 'void *'
+|-FunctionDecl 0x7fa6a7055778 <line:8:1, col:37> col:14 used my_malloc 'void *(unsigned int)' extern
+| `-ParmVarDecl 0x7fa6a70556b0 <col:25, col:34> col:37 'unsigned int'
+|-VarDecl 0x7fa6a7055838 <line:9:1, col:12> col:12 used num_rr_nodes 'int' extern
+|-FunctionDecl 0x7fa6a7055b48 <line:10:1, line:13:31> line:10:14 used get_cblock_trans 'float (int *, int, float, float)' static
+| |-ParmVarDecl 0x7fa6a70558e0 <col:32, col:37> col:37 num_inputs_to_cblock 'int *'
+| |-ParmVarDecl 0x7fa6a7055958 <line:11:11, col:15> col:15 max_inputs_to_cblock 'int'
+| |-ParmVarDecl 0x7fa6a70559d0 <line:12:11, col:17> col:17 trans_cblock_to_lblock_buf 'float'
+| `-ParmVarDecl 0x7fa6a7055a48 <line:13:11, col:17> col:17 trans_sram_bit 'float'
+|-FunctionDecl 0x7fa6a8005b88 <line:14:1, col:65> col:14 used trans_per_mux 'float (int, float)' static
+| |-ParmVarDecl 0x7fa6a8005a38 <col:29, col:33> col:33 num_inputs 'int'
+| `-ParmVarDecl 0x7fa6a8005ab0 <col:45, col:51> col:51 trans_sram_bit 'float'
+|-FunctionDecl 0x7fa6a8005e20 <line:15:1, line:27:1> line:16:1 count_routing_transistors 'void (int, float, float)'
+| |-ParmVarDecl 0x7fa6a8005c50 <col:28, col:32> col:32 num_switch 'int'
+| |-ParmVarDecl 0x7fa6a8005cc8 <col:44, col:50> col:50 R_minW_nmos 'float'
+| |-ParmVarDecl 0x7fa6a8005d40 <line:17:7, col:13> col:13 R_minW_pmos 'float'
+| `-CompoundStmt 0x7fa6a80065f0 <line:18:1, line:27:1>
+|   |-DeclStmt 0x7fa6a8005f50 <line:19:3, col:28>
+|   | `-VarDecl 0x7fa6a8005ef0 <col:3, col:8> col:8 used num_inputs_to_cblock 'int *'
+|   |-DeclStmt 0x7fa6a80061f0 <line:20:3, col:48>
+|   | |-VarDecl 0x7fa6a8005f80 <col:3, col:7> col:7 iswitch 'int'
+|   | |-VarDecl 0x7fa6a8005ff8 <col:3, col:16> col:16 i 'int'
+|   | |-VarDecl 0x7fa6a8006070 <col:3, col:19> col:19 j 'int'
+|   | |-VarDecl 0x7fa6a80060e8 <col:3, col:22> col:22 iseg 'int'
+|   | `-VarDecl 0x7fa6a8006160 <col:3, col:28> col:28 used max_inputs_to_cblock 'int'
+|   |-DeclStmt 0x7fa6a8006280 <line:21:3, col:27>
+|   | `-VarDecl 0x7fa6a8006220 <col:3, col:9> col:9 used input_cblock_trans 'float'
+|   |-DeclStmt 0x7fa6a8006348 <line:22:3, col:34>
+|   | `-VarDecl 0x7fa6a80062b0 <col:3, col:32> col:15 used trans_sram_bit 'const float' cinit
+|   |   `-ImplicitCastExpr 0x7fa6a8006330 <col:32> 'float' <FloatingCast>
+|   |     `-FloatingLiteral 0x7fa6a8006310 <col:32> 'double' 6.000000e+00
+|   |-DeclStmt 0x7fa6a80063d8 <line:23:3, col:35>
+|   | `-VarDecl 0x7fa6a8006378 <col:3, col:9> col:9 used trans_cblock_to_lblock_buf 'float'
+|   `-BinaryOperator 0x7fa6a80065c8 <line:24:3, line:26:51> 'float' '='
+|     |-DeclRefExpr 0x7fa6a80063f0 <line:24:3> 'float' lvalue Var 0x7fa6a8006220 'input_cblock_trans' 'float'
+|     `-CallExpr 0x7fa6a8006520 <line:25:5, line:26:51> 'float'
+|       |-ImplicitCastExpr 0x7fa6a8006508 <line:25:5> 'float (*)(int *, int, float, float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa6a8006418 <col:5> 'float (int *, int, float, float)' Function 0x7fa6a7055b48 'get_cblock_trans' 'float (int *, int, float, float)'
+|       |-ImplicitCastExpr 0x7fa6a8006568 <col:23> 'int *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa6a8006440 <col:23> 'int *' lvalue Var 0x7fa6a8005ef0 'num_inputs_to_cblock' 'int *'
+|       |-ImplicitCastExpr 0x7fa6a8006580 <col:45> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa6a8006468 <col:45> 'int' lvalue Var 0x7fa6a8006160 'max_inputs_to_cblock' 'int'
+|       |-ImplicitCastExpr 0x7fa6a8006598 <line:26:9> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa6a8006490 <col:9> 'float' lvalue Var 0x7fa6a8006378 'trans_cblock_to_lblock_buf' 'float'
+|       `-ImplicitCastExpr 0x7fa6a80065b0 <col:37> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa6a80064b8 <col:37> 'const float' lvalue Var 0x7fa6a80062b0 'trans_sram_bit' 'const float'
+|-FunctionDecl 0x7fa6a8006858 prev 0x7fa6a7055b48 <line:29:1, line:49:1> line:30:1 used get_cblock_trans 'float (int *, int, float, float)' static
+| |-ParmVarDecl 0x7fa6a8006648 <col:19, col:24> col:24 used num_inputs_to_cblock 'int *'
+| |-ParmVarDecl 0x7fa6a80066c0 <col:46, col:50> col:50 used max_inputs_to_cblock 'int'
+| |-ParmVarDecl 0x7fa6a8006738 <line:31:5, col:11> col:11 used trans_cblock_to_lblock_buf 'float'
+| |-ParmVarDecl 0x7fa6a80067b0 <col:39, col:45> col:45 used trans_sram_bit 'float'
+| `-CompoundStmt 0x7fa6a8007b48 <line:32:1, line:49:1>
+|   |-DeclStmt 0x7fa6a80069c0 <line:33:3, col:26>
+|   | `-VarDecl 0x7fa6a8006960 <col:3, col:10> col:10 used trans_per_cblock 'float *'
+|   |-DeclStmt 0x7fa6a8006e60 <line:34:3, col:20>
+|   | `-VarDecl 0x7fa6a8006e00 <col:3, col:9> col:9 used trans_count 'float'
+|   |-DeclStmt 0x7fa6a8006f80 <line:35:3, col:20>
+|   | |-VarDecl 0x7fa6a8006e90 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7fa6a8006f08 <col:3, col:10> col:10 used num_inputs 'int'
+|   |-BinaryOperator 0x7fa6a80071d8 <line:37:3, line:38:69> 'float *' '='
+|   | |-DeclRefExpr 0x7fa6a8006f98 <line:37:3> 'float *' lvalue Var 0x7fa6a8006960 'trans_per_cblock' 'float *'
+|   | `-CStyleCastExpr 0x7fa6a80071b0 <line:38:5, col:69> 'float *' <BitCast>
+|   |   `-CallExpr 0x7fa6a8007150 <col:15, col:69> 'void *'
+|   |     |-ImplicitCastExpr 0x7fa6a8007138 <col:15> 'void *(*)(unsigned int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fa6a8006fc0 <col:15> 'void *(unsigned int)' Function 0x7fa6a7055778 'my_malloc' 'void *(unsigned int)'
+|   |     `-ImplicitCastExpr 0x7fa6a8007180 <col:26, col:68> 'unsigned int' <IntegralCast>
+|   |       `-BinaryOperator 0x7fa6a80070e0 <col:26, col:68> 'unsigned long' '*'
+|   |         |-ImplicitCastExpr 0x7fa6a80070c8 <col:26, col:51> 'unsigned long' <IntegralCast>
+|   |         | `-ParenExpr 0x7fa6a8007070 <col:26, col:51> 'int'
+|   |         |   `-BinaryOperator 0x7fa6a8007048 <col:27, col:50> 'int' '+'
+|   |         |     |-ImplicitCastExpr 0x7fa6a8007030 <col:27> 'int' <LValueToRValue>
+|   |         |     | `-DeclRefExpr 0x7fa6a8006fe8 <col:27> 'int' lvalue ParmVar 0x7fa6a80066c0 'max_inputs_to_cblock' 'int'
+|   |         |     `-IntegerLiteral 0x7fa6a8007010 <col:50> 'int' 1
+|   |         `-UnaryExprOrTypeTraitExpr 0x7fa6a80070a8 <col:55, col:68> 'unsigned long' sizeof 'float'
+|   |-ForStmt 0x7fa6a80075b8 <line:39:3, line:41:43>
+|   | |-BinaryOperator 0x7fa6a8007248 <line:39:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fa6a8007200 <col:8> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   | | `-IntegerLiteral 0x7fa6a8007228 <col:12> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa6a80072f0 <col:15, col:20> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7fa6a80072c0 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa6a8007270 <col:15> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fa6a80072d8 <col:20> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa6a8007298 <col:20> 'int' lvalue ParmVar 0x7fa6a80066c0 'max_inputs_to_cblock' 'int'
+|   | |-UnaryOperator 0x7fa6a8007340 <col:42, col:43> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fa6a8007318 <col:42> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   | `-BinaryOperator 0x7fa6a8007590 <line:40:5, line:41:43> 'float' '='
+|   |   |-ArraySubscriptExpr 0x7fa6a80073e0 <line:40:5, col:23> 'float' lvalue
+|   |   | |-ImplicitCastExpr 0x7fa6a80073b0 <col:5> 'float *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fa6a8007360 <col:5> 'float *' lvalue Var 0x7fa6a8006960 'trans_per_cblock' 'float *'
+|   |   | `-ImplicitCastExpr 0x7fa6a80073c8 <col:22> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa6a8007388 <col:22> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   |   `-BinaryOperator 0x7fa6a8007568 <line:41:7, col:43> 'float' '+'
+|   |     |-CallExpr 0x7fa6a80074c0 <col:7, col:39> 'float'
+|   |     | |-ImplicitCastExpr 0x7fa6a80074a8 <col:7> 'float (*)(int, float)' <FunctionToPointerDecay>
+|   |     | | `-DeclRefExpr 0x7fa6a8007408 <col:7> 'float (int, float)' Function 0x7fa6a8005b88 'trans_per_mux' 'float (int, float)'
+|   |     | |-ImplicitCastExpr 0x7fa6a80074f8 <col:22> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fa6a8007430 <col:22> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   |     | `-ImplicitCastExpr 0x7fa6a8007510 <col:25> 'float' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fa6a8007458 <col:25> 'float' lvalue ParmVar 0x7fa6a80067b0 'trans_sram_bit' 'float'
+|   |     `-ImplicitCastExpr 0x7fa6a8007550 <col:43> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa6a8007528 <col:43> 'float' lvalue ParmVar 0x7fa6a8006738 'trans_cblock_to_lblock_buf' 'float'
+|   |-ForStmt 0x7fa6a80079a0 <line:42:3, line:46:5>
+|   | |-BinaryOperator 0x7fa6a8007638 <line:42:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fa6a80075f0 <col:8> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   | | `-IntegerLiteral 0x7fa6a8007618 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa6a80076e0 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fa6a80076b0 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa6a8007660 <col:15> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fa6a80076c8 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa6a8007688 <col:19> 'int' lvalue Var 0x7fa6a7055838 'num_rr_nodes' 'int'
+|   | |-UnaryOperator 0x7fa6a8007730 <col:33, col:34> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fa6a8007708 <col:33> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   | `-CompoundStmt 0x7fa6a8007980 <line:43:5, line:46:5>
+|   |   |-BinaryOperator 0x7fa6a8007838 <line:44:7, col:42> 'int' '='
+|   |   | |-DeclRefExpr 0x7fa6a8007750 <col:7> 'int' lvalue Var 0x7fa6a8006f08 'num_inputs' 'int'
+|   |   | `-ImplicitCastExpr 0x7fa6a8007820 <col:20, col:42> 'int' <LValueToRValue>
+|   |   |   `-ArraySubscriptExpr 0x7fa6a80077f8 <col:20, col:42> 'int' lvalue
+|   |   |     |-ImplicitCastExpr 0x7fa6a80077c8 <col:20> 'int *' <LValueToRValue>
+|   |   |     | `-DeclRefExpr 0x7fa6a8007778 <col:20> 'int *' lvalue ParmVar 0x7fa6a8006648 'num_inputs_to_cblock' 'int *'
+|   |   |     `-ImplicitCastExpr 0x7fa6a80077e0 <col:41> 'int' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fa6a80077a0 <col:41> 'int' lvalue Var 0x7fa6a8006e90 'i' 'int'
+|   |   `-CompoundAssignOperator 0x7fa6a8007948 <line:45:7, col:49> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+|   |     |-DeclRefExpr 0x7fa6a8007860 <col:7> 'float' lvalue Var 0x7fa6a8006e00 'trans_count' 'float'
+|   |     `-ImplicitCastExpr 0x7fa6a8007930 <col:22, col:49> 'float' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fa6a8007908 <col:22, col:49> 'float' lvalue
+|   |         |-ImplicitCastExpr 0x7fa6a80078d8 <col:22> 'float *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fa6a8007888 <col:22> 'float *' lvalue Var 0x7fa6a8006960 'trans_per_cblock' 'float *'
+|   |         `-ImplicitCastExpr 0x7fa6a80078f0 <col:39> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fa6a80078b0 <col:39> 'int' lvalue Var 0x7fa6a8006f08 'num_inputs' 'int'
+|   |-CallExpr 0x7fa6a8007a70 <line:47:3, col:25> 'void'
+|   | |-ImplicitCastExpr 0x7fa6a8007a58 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fa6a80079d8 <col:3> 'void (void *)' Function 0x7fa6a70555b0 'free' 'void (void *)'
+|   | `-ImplicitCastExpr 0x7fa6a8007ab8 <col:9> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fa6a8007aa0 <col:9> 'float *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fa6a8007a00 <col:9> 'float *' lvalue Var 0x7fa6a8006960 'trans_per_cblock' 'float *'
+|   `-ReturnStmt 0x7fa6a8007b30 <line:48:3, col:22>
+|     `-ImplicitCastExpr 0x7fa6a8007b18 <col:10, col:22> 'float' <LValueToRValue>
+|       `-ParenExpr 0x7fa6a8007af8 <col:10, col:22> 'float' lvalue
+|         `-DeclRefExpr 0x7fa6a8007ad0 <col:11> 'float' lvalue Var 0x7fa6a8006e00 'trans_count' 'float'
+`-FunctionDecl 0x7fa6a8007cc0 prev 0x7fa6a8005b88 <line:51:1, line:68:1> line:52:1 used trans_per_mux 'float (int, float)' static
+  |-ParmVarDecl 0x7fa6a8007bb0 <col:16, col:20> col:20 used num_inputs 'int'
+  |-ParmVarDecl 0x7fa6a8007c28 <col:32, col:38> col:38 used trans_sram_bit 'float'
+  `-CompoundStmt 0x7fa6a8009b00 <line:53:1, line:68:1>
+    |-DeclStmt 0x7fa6a8008ef8 <line:54:3, col:36>
+    | |-VarDecl 0x7fa6a8007d88 <col:3, col:7> col:7 used nlevels 'int'
+    | |-VarDecl 0x7fa6a8008e00 <col:3, col:16> col:16 used ilevel 'int'
+    | `-VarDecl 0x7fa6a8008e78 <col:3, col:24> col:24 used current_inps 'int'
+    |-DeclStmt 0x7fa6a8008fc0 <line:55:3, col:19>
+    | `-VarDecl 0x7fa6a8008f28 <col:3, col:18> col:9 used ntrans 'float' cinit
+    |   `-ImplicitCastExpr 0x7fa6a8008fa8 <col:18> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fa6a8008f88 <col:18> 'int' 0
+    |-IfStmt 0x7fa6a80090d0 <line:57:3, line:58:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa6a8009038 <line:57:7, col:21> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fa6a8009020 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa6a8008fd8 <col:7> 'int' lvalue ParmVar 0x7fa6a8007bb0 'num_inputs' 'int'
+    | | `-IntegerLiteral 0x7fa6a8009000 <col:21> 'int' 1
+    | |-ReturnStmt 0x7fa6a80090b8 <line:58:5, col:14>
+    | | `-ImplicitCastExpr 0x7fa6a80090a0 <col:12, col:14> 'float' <IntegralToFloating>
+    | |   `-ParenExpr 0x7fa6a8009080 <col:12, col:14> 'int'
+    | |     `-IntegerLiteral 0x7fa6a8009060 <col:13> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fa6a80093b0 <line:59:3, col:60> 'int' '='
+    | |-DeclRefExpr 0x7fa6a8009108 <col:3> 'int' lvalue Var 0x7fa6a8007d88 'nlevels' 'int'
+    | `-ImplicitCastExpr 0x7fa6a8009398 <col:13, col:60> 'int' <FloatingToIntegral>
+    |   `-CallExpr 0x7fa6a8009368 <col:13, col:60> 'double'
+    |     |-ImplicitCastExpr 0x7fa6a8009350 <col:13> 'double (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa6a8009130 <col:13> 'double (double)' Function 0x7fa6a70550d0 'ceil' 'double (double)'
+    |     `-BinaryOperator 0x7fa6a8009328 <col:19, col:53> 'double' '-'
+    |       |-BinaryOperator 0x7fa6a80092e0 <col:19, col:49> 'double' '/'
+    |       | |-CallExpr 0x7fa6a80091f0 <col:19, col:36> 'double'
+    |       | | |-ImplicitCastExpr 0x7fa6a80091d8 <col:19> 'double (*)(double)' <FunctionToPointerDecay>
+    |       | | | `-DeclRefExpr 0x7fa6a8009158 <col:19> 'double (double)' Function 0x7fa6a7054dc8 'log10' 'double (double)'
+    |       | | `-ImplicitCastExpr 0x7fa6a8009238 <col:26> 'double' <IntegralToFloating>
+    |       | |   `-ImplicitCastExpr 0x7fa6a8009220 <col:26> 'int' <LValueToRValue>
+    |       | |     `-DeclRefExpr 0x7fa6a8009180 <col:26> 'int' lvalue ParmVar 0x7fa6a8007bb0 'num_inputs' 'int'
+    |       | `-CallExpr 0x7fa6a80092b0 <col:40, col:49> 'double'
+    |       |   |-ImplicitCastExpr 0x7fa6a8009298 <col:40> 'double (*)(double)' <FunctionToPointerDecay>
+    |       |   | `-DeclRefExpr 0x7fa6a8009250 <col:40> 'double (double)' Function 0x7fa6a7054dc8 'log10' 'double (double)'
+    |       |   `-FloatingLiteral 0x7fa6a8009278 <col:47> 'double' 2.000000e+00
+    |       `-FloatingLiteral 0x7fa6a8009308 <col:53> 'double' 1.000000e-05
+    |-BinaryOperator 0x7fa6a8009440 <line:60:3, col:18> 'int' '='
+    | |-DeclRefExpr 0x7fa6a80093d8 <col:3> 'int' lvalue Var 0x7fa6a8008e78 'current_inps' 'int'
+    | `-ImplicitCastExpr 0x7fa6a8009428 <col:18> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa6a8009400 <col:18> 'int' lvalue ParmVar 0x7fa6a8007bb0 'num_inputs' 'int'
+    |-ForStmt 0x7fa6a8009930 <line:61:3, line:65:5>
+    | |-BinaryOperator 0x7fa6a80094b0 <line:61:8, col:17> 'int' '='
+    | | |-DeclRefExpr 0x7fa6a8009468 <col:8> 'int' lvalue Var 0x7fa6a8008e00 'ilevel' 'int'
+    | | `-IntegerLiteral 0x7fa6a8009490 <col:17> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa6a8009558 <col:20, col:30> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fa6a8009528 <col:20> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa6a80094d8 <col:20> 'int' lvalue Var 0x7fa6a8008e00 'ilevel' 'int'
+    | | `-ImplicitCastExpr 0x7fa6a8009540 <col:30> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa6a8009500 <col:30> 'int' lvalue Var 0x7fa6a8007d88 'nlevels' 'int'
+    | |-UnaryOperator 0x7fa6a80095a8 <col:39, col:45> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa6a8009580 <col:39> 'int' lvalue Var 0x7fa6a8008e00 'ilevel' 'int'
+    | `-CompoundStmt 0x7fa6a8009910 <line:62:5, line:65:5>
+    |   |-CompoundAssignOperator 0x7fa6a8009760 <line:63:7, col:45> 'float' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7fa6a80095c8 <col:7> 'float' lvalue Var 0x7fa6a8008f28 'ntrans' 'float'
+    |   | `-BinaryOperator 0x7fa6a8009738 <col:17, col:45> 'double' '*'
+    |   |   |-ImplicitCastExpr 0x7fa6a8009720 <col:17> 'double' <IntegralToFloating>
+    |   |   | `-IntegerLiteral 0x7fa6a80095f0 <col:17> 'int' 2
+    |   |   `-CallExpr 0x7fa6a80096f0 <col:21, col:45> 'double'
+    |   |     |-ImplicitCastExpr 0x7fa6a80096d8 <col:21> 'double (*)(double)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fa6a8009610 <col:21> 'double (double)' Function 0x7fa6a70553d8 'floor' 'double (double)'
+    |   |     `-BinaryOperator 0x7fa6a80096b0 <col:28, col:43> 'double' '/'
+    |   |       |-ImplicitCastExpr 0x7fa6a8009698 <col:28> 'double' <IntegralToFloating>
+    |   |       | `-ImplicitCastExpr 0x7fa6a8009680 <col:28> 'int' <LValueToRValue>
+    |   |       |   `-DeclRefExpr 0x7fa6a8009638 <col:28> 'int' lvalue Var 0x7fa6a8008e78 'current_inps' 'int'
+    |   |       `-FloatingLiteral 0x7fa6a8009660 <col:43> 'double' 2.000000e+00
+    |   `-BinaryOperator 0x7fa6a80098e8 <line:64:7, col:45> 'int' '='
+    |     |-DeclRefExpr 0x7fa6a8009798 <col:7> 'int' lvalue Var 0x7fa6a8008e78 'current_inps' 'int'
+    |     `-ImplicitCastExpr 0x7fa6a80098d0 <col:22, col:45> 'int' <FloatingToIntegral>
+    |       `-CallExpr 0x7fa6a80098a0 <col:22, col:45> 'double'
+    |         |-ImplicitCastExpr 0x7fa6a8009888 <col:22> 'double (*)(double)' <FunctionToPointerDecay>
+    |         | `-DeclRefExpr 0x7fa6a80097c0 <col:22> 'double (double)' Function 0x7fa6a70550d0 'ceil' 'double (double)'
+    |         `-BinaryOperator 0x7fa6a8009860 <col:28, col:43> 'double' '/'
+    |           |-ImplicitCastExpr 0x7fa6a8009848 <col:28> 'double' <IntegralToFloating>
+    |           | `-ImplicitCastExpr 0x7fa6a8009830 <col:28> 'int' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x7fa6a80097e8 <col:28> 'int' lvalue Var 0x7fa6a8008e78 'current_inps' 'int'
+    |           `-FloatingLiteral 0x7fa6a8009810 <col:43> 'double' 2.000000e+00
+    |-CompoundAssignOperator 0x7fa6a8009a50 <line:66:3, col:30> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    | |-DeclRefExpr 0x7fa6a8009968 <col:3> 'float' lvalue Var 0x7fa6a8008f28 'ntrans' 'float'
+    | `-BinaryOperator 0x7fa6a8009a28 <col:13, col:30> 'float' '*'
+    |   |-ImplicitCastExpr 0x7fa6a80099e0 <col:13> 'float' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fa6a8009990 <col:13> 'float' lvalue ParmVar 0x7fa6a8007c28 'trans_sram_bit' 'float'
+    |   `-ImplicitCastExpr 0x7fa6a8009a10 <col:30> 'float' <IntegralToFloating>
+    |     `-ImplicitCastExpr 0x7fa6a80099f8 <col:30> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa6a80099b8 <col:30> 'int' lvalue Var 0x7fa6a8007d88 'nlevels' 'int'
+    `-ReturnStmt 0x7fa6a8009ae8 <line:67:3, col:17>
+      `-ImplicitCastExpr 0x7fa6a8009ad0 <col:10, col:17> 'float' <LValueToRValue>
+        `-ParenExpr 0x7fa6a8009ab0 <col:10, col:17> 'float' lvalue
+          `-DeclRefExpr 0x7fa6a8009a88 <col:11> 'float' lvalue Var 0x7fa6a8008f28 'ntrans' 'float'

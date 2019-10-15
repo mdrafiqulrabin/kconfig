@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fa45900f8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa459010578 <../Data/C2AST/pr69171-4.c:4:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7fa45900faa0 'unsigned long'
+|-VarDecl 0x7fa45903c800 <line:6:1, col:12> col:12 used glob1 'int' extern
+`-FunctionDecl 0x7fa45903c968 <line:8:1, line:12:1> line:9:1 foo 'float (void)'
+  `-CompoundStmt 0x7fa45903cb78 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fa45903cb60 <line:11:3, col:37>
+      `-CStyleCastExpr 0x7fa45903cb38 <col:10, col:37> 'float' <IntegralToFloating>
+        `-CStyleCastExpr 0x7fa45903caf8 <col:18, col:37> 'int' <IntegralCast>
+          `-CStyleCastExpr 0x7fa45903cab8 <col:24, col:37> 'uintptr_t':'unsigned long' <PointerToIntegral>
+            `-UnaryOperator 0x7fa45903ca88 <col:36, col:37> 'int *' prefix '&'
+              `-DeclRefExpr 0x7fa45903ca30 <col:37> 'int' lvalue Var 0x7fa45903c800 'glob1' 'int'

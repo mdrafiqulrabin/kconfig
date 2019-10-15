@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fa7f90258e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa7f8849a68 <<built-in>:81:23, ../Data/C2AST/pr33694.c:9:1> line:6:15 cnfs_mapcntl 'unsigned long (long)'
+  |-ParmVarDecl 0x7fa7f9026578 <col:28, col:33> col:33 used pagesize 'long'
+  `-CompoundStmt 0x7fa7f8849cb8 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fa7f8849ca0 <line:8:6, col:42>
+      `-UnaryOperator 0x7fa7f8849c80 <col:13, col:42> 'unsigned long' prefix '~'
+        `-CStyleCastExpr 0x7fa7f8849c58 <col:14, col:42> 'unsigned long' <IntegralCast>
+          `-ParenExpr 0x7fa7f8849c38 <col:29, col:42> 'long'
+            `-BinaryOperator 0x7fa7f8849bc8 <col:30, col:41> 'long' '-'
+              |-ImplicitCastExpr 0x7fa7f8849b98 <col:30> 'long' <LValueToRValue>
+              | `-DeclRefExpr 0x7fa7f8849b50 <col:30> 'long' lvalue ParmVar 0x7fa7f9026578 'pagesize' 'long'
+              `-ImplicitCastExpr 0x7fa7f8849bb0 <col:41> 'long' <IntegralCast>
+                `-IntegerLiteral 0x7fa7f8849b78 <col:41> 'int' 1

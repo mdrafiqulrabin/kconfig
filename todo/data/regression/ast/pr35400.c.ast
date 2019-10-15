@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fb22b02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb22b02c960 <../Data/C2AST/pr35400.c:4:1, line:7:1> line:4:8 struct A definition
+| `-FieldDecl 0x7fb22b8010d0 <line:6:3, col:13> col:13 referenced p 'struct A *'
+|-FunctionDecl 0x7fb22b8012a8 <line:9:1, line:12:1> line:9:5 used foo 'int (const struct A *)'
+| |-ParmVarDecl 0x7fb22b8011a0 <col:9, col:25> col:25 used q 'const struct A *'
+| `-CompoundStmt 0x7fb22b8014b8 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fb22b8014a0 <line:11:3, col:18>
+|     `-BinaryOperator 0x7fb22b801478 <col:10, col:18> 'int' '=='
+|       |-ImplicitCastExpr 0x7fb22b801430 <col:10, col:13> 'struct A *' <LValueToRValue>
+|       | `-MemberExpr 0x7fb22b8013d0 <col:10, col:13> 'struct A *const' lvalue ->p 0x7fb22b8010d0
+|       |   `-ImplicitCastExpr 0x7fb22b8013b8 <col:10> 'const struct A *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fb22b801390 <col:10> 'const struct A *' lvalue ParmVar 0x7fb22b8011a0 'q' 'const struct A *'
+|       `-ImplicitCastExpr 0x7fb22b801460 <col:18> 'struct A *' <BitCast>
+|         `-ImplicitCastExpr 0x7fb22b801448 <col:18> 'const struct A *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb22b801408 <col:18> 'const struct A *' lvalue ParmVar 0x7fb22b8011a0 'q' 'const struct A *'
+|-FunctionDecl 0x7fb22b8015b0 <line:14:1, col:13> col:6 used bar 'void (int)'
+| `-ParmVarDecl 0x7fb22b8014e8 <col:10> col:13 'int'
+`-FunctionDecl 0x7fb22b8016a8 <line:16:1, line:22:1> line:16:6 baz 'void ()'
+  `-CompoundStmt 0x7fb22b801a90 <line:17:1, line:22:1>
+    |-DeclStmt 0x7fb22b8017c8 <line:18:3, col:13>
+    | `-VarDecl 0x7fb22b801768 <col:3, col:12> col:12 used a 'struct A':'struct A'
+    `-WhileStmt 0x7fb22b801a70 <line:20:3, line:21:16>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fb22b8018c0 <line:20:10, col:16> 'int'
+      | |-ImplicitCastExpr 0x7fb22b8018a8 <col:10> 'int (*)(const struct A *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fb22b8017e0 <col:10> 'int (const struct A *)' Function 0x7fb22b8012a8 'foo' 'int (const struct A *)'
+      | `-ImplicitCastExpr 0x7fb22b8018f0 <col:14, col:15> 'const struct A *' <BitCast>
+      |   `-UnaryOperator 0x7fb22b801830 <col:14, col:15> 'struct A *' prefix '&'
+      |     `-DeclRefExpr 0x7fb22b801808 <col:15> 'struct A':'struct A' lvalue Var 0x7fb22b801768 'a' 'struct A':'struct A'
+      `-CallExpr 0x7fb22b801a40 <line:21:5, col:16> 'void'
+        |-ImplicitCastExpr 0x7fb22b801a28 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb22b801908 <col:5> 'void (int)' Function 0x7fb22b8015b0 'bar' 'void (int)'
+        `-CallExpr 0x7fb22b8019b8 <col:9, col:15> 'int'
+          |-ImplicitCastExpr 0x7fb22b8019a0 <col:9> 'int (*)(const struct A *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fb22b801930 <col:9> 'int (const struct A *)' Function 0x7fb22b8012a8 'foo' 'int (const struct A *)'
+          `-ImplicitCastExpr 0x7fb22b8019e8 <col:13, col:14> 'const struct A *' <BitCast>
+            `-UnaryOperator 0x7fb22b801980 <col:13, col:14> 'struct A *' prefix '&'
+              `-DeclRefExpr 0x7fb22b801958 <col:14> 'struct A':'struct A' lvalue Var 0x7fb22b801768 'a' 'struct A':'struct A'

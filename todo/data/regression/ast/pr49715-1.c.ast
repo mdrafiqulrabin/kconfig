@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fc8580294e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc85806b068 <../Data/C2AST/pr49715-1.c:4:1, line:7:1> line:4:7 func 'float (unsigned int)'
+  |-ParmVarDecl 0x7fc85802a178 <col:12, col:21> col:21 used x 'unsigned int'
+  `-CompoundStmt 0x7fc85806b288 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fc85806b270 <line:6:3, col:26>
+      `-BinaryOperator 0x7fc85806b248 <col:10, col:26> 'float' '*'
+        |-ImplicitCastExpr 0x7fc85806b230 <col:10, col:22> 'float' <IntegralToFloating>
+        | `-ParenExpr 0x7fc85806b1f0 <col:10, col:22> 'unsigned int'
+        |   `-BinaryOperator 0x7fc85806b1c8 <col:11, col:15> 'unsigned int' '&'
+        |     |-ImplicitCastExpr 0x7fc85806b198 <col:11> 'unsigned int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fc85806b150 <col:11> 'unsigned int' lvalue ParmVar 0x7fc85802a178 'x' 'unsigned int'
+        |     `-ImplicitCastExpr 0x7fc85806b1b0 <col:15> 'unsigned int' <IntegralCast>
+        |       `-IntegerLiteral 0x7fc85806b178 <col:15> 'int' 1048575
+        `-FloatingLiteral 0x7fc85806b210 <col:26> 'float' 1.000000e-02

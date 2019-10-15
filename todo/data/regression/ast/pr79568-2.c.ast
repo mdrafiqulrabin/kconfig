@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fd89982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd89986d8d0 <../Data/C2AST/pr79568-2.c:7:1, line:11:1> line:8:1 foo 'void (unsigned long, unsigned int)'
+| |-ParmVarDecl 0x7fd89982c978 <col:6, col:20> col:20 used x 'unsigned long'
+| |-ParmVarDecl 0x7fd89986d800 <col:23, col:36> col:36 used y 'unsigned int'
+| `-CompoundStmt 0x7fd89986dd60 <line:9:1, line:11:1>
+|   `-CallExpr 0x7fd89986dcc0 <line:10:3, col:35> 'void'
+|     |-ImplicitCastExpr 0x7fd89986dca8 <col:3> 'void (*)(unsigned long long, unsigned int, unsigned int)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fd89986dbe0 <col:3> '<builtin fn type>' Function 0x7fd89986da08 '__builtin_ia32_lwpval64' 'void (unsigned long long, unsigned int, unsigned int)'
+|     |-ImplicitCastExpr 0x7fd89986dd18 <col:28> 'unsigned long long' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7fd89986dd00 <col:28> 'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd89986dc08 <col:28> 'unsigned long' lvalue ParmVar 0x7fd89982c978 'x' 'unsigned long'
+|     |-ImplicitCastExpr 0x7fd89986dd30 <col:31> 'unsigned int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd89986dc30 <col:31> 'unsigned int' lvalue ParmVar 0x7fd89986d800 'y' 'unsigned int'
+|     `-ImplicitCastExpr 0x7fd89986dd48 <col:34> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7fd89986dc58 <col:34> 'int' 1
+|-FunctionDecl 0x7fd89986da08 <col:3> col:3 implicit used __builtin_ia32_lwpval64 'void (unsigned long long, unsigned int, unsigned int)' extern
+| |-ParmVarDecl 0x7fd89986daa8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-ParmVarDecl 0x7fd89986db08 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| `-ParmVarDecl 0x7fd89986db68 <<invalid sloc>> <invalid sloc> 'unsigned int'
+`-FunctionDecl 0x7fd89986de98 <line:14:1, line:18:1> line:15:1 bar 'void (unsigned long, unsigned int)'
+  |-ParmVarDecl 0x7fd89986dd90 <col:6, col:20> col:20 used x 'unsigned long'
+  |-ParmVarDecl 0x7fd89986de08 <col:23, col:36> col:36 used y 'unsigned int'
+  `-CompoundStmt 0x7fd89986e098 <line:16:1, line:18:1>
+    `-CallExpr 0x7fd89986dff8 <line:17:3, col:35> 'void'
+      |-ImplicitCastExpr 0x7fd89986dfe0 <col:3> 'void (*)(unsigned long long, unsigned int, unsigned int)' <BuiltinFnToFnPtr>
+      | `-DeclRefExpr 0x7fd89986df48 <col:3> '<builtin fn type>' Function 0x7fd89986da08 '__builtin_ia32_lwpval64' 'void (unsigned long long, unsigned int, unsigned int)'
+      |-ImplicitCastExpr 0x7fd89986e050 <col:28> 'unsigned long long' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fd89986e038 <col:28> 'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd89986df70 <col:28> 'unsigned long' lvalue ParmVar 0x7fd89986dd90 'x' 'unsigned long'
+      |-ImplicitCastExpr 0x7fd89986e068 <col:31> 'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd89986df98 <col:31> 'unsigned int' lvalue ParmVar 0x7fd89986de08 'y' 'unsigned int'
+      `-ImplicitCastExpr 0x7fd89986e080 <col:34> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7fd89986dfc0 <col:34> 'int' 1

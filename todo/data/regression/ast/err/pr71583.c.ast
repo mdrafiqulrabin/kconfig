@@ -1,0 +1,34 @@
+../Data/C2AST/pr71583.c:7:20: error: expected expression
+  (int (*)[++i]) { int };  
+                   ^
+../Data/C2AST/pr71583.c:8:18: error: scalar initializer cannot be empty
+  (int (*)[++i]) { };  
+                 ^~~
+../Data/C2AST/pr71583.c:9:20: error: expected expression
+  (int (*)[++i]) { , };  
+                   ^
+../Data/C2AST/pr71583.c:10:23: error: too few arguments to function call, single argument 'i' was not specified
+  (int (*)[++i]) { f () };  
+                   ~  ^
+../Data/C2AST/pr71583.c:4:1: note: 'f' declared here
+void
+^
+4 errors generated.
+TranslationUnitDecl 0x7f834902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f834902c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f834902bf80 '__int128'
+|-TypedefDecl 0x7f834902c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f834902bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f834902c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f834902c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f834902c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f834902c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f834902c600 'char *'
+|   `-BuiltinType 0x7f834902bd80 'char'
+|-TypedefDecl 0x7f834902c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f834902c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f834902c720 'struct __va_list_tag'
+|     `-Record 0x7f834902c698 '__va_list_tag'
+`-FunctionDecl 0x7f8349814260 <../Data/C2AST/pr71583.c:4:1, line:11:1> line:5:1 referenced f 'void (int)'
+  |-ParmVarDecl 0x7f834902c978 <col:4, col:8> col:8 used i 'int'
+  `-CompoundStmt 0x7f83498149b0 <line:6:1, line:11:1>

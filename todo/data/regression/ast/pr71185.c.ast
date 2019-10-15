@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc2228058e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc222806560 <../Data/C2AST/pr71185.c:5:1, col:54> col:7 union U definition
+| |-RecordDecl 0x7fc222007020 parent 0x7fc2228058e8 <col:11, col:36> col:18 struct S definition
+| | |-FieldDecl 0x7fc2220070f8 <col:22, col:26> col:26 referenced l 'int'
+| | `-FieldDecl 0x7fc222007158 <col:29, col:33> col:33 referenced m 'int'
+| |-FieldDecl 0x7fc2220071f0 <col:11, col:38> col:38 referenced p 'struct S':'struct S'
+| `-FieldDecl 0x7fc222007250 <col:41, col:51> col:51 referenced a 'long long'
+|-VarDecl 0x7fc222007340 <col:1, col:56> col:56 used b 'union U':'union U'
+|-VarDecl 0x7fc222007410 <line:6:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fc222007488 <col:1, col:8> col:8 used c 'int'
+`-FunctionDecl 0x7fc222007548 <line:8:1, line:13:1> line:9:1 foo 'void ()'
+  `-CompoundStmt 0x7fc2220079d0 <line:10:1, line:13:1>
+    `-ForStmt 0x7fc222007998 <line:11:3, line:12:27>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc222007680 <line:11:10, col:14> 'int' <LValueToRValue>
+      | `-MemberExpr 0x7fc222007648 <col:10, col:14> 'int' lvalue .m 0x7fc222007158
+      |   `-MemberExpr 0x7fc222007610 <col:10, col:12> 'struct S':'struct S' lvalue .p 0x7fc2220071f0
+      |     `-DeclRefExpr 0x7fc2220075e8 <col:10> 'union U':'union U' lvalue Var 0x7fc222007340 'b' 'union U':'union U'
+      |-CompoundAssignOperator 0x7fc222007750 <col:17, col:24> 'long long' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+      | |-MemberExpr 0x7fc2220076c0 <col:17, col:19> 'long long' lvalue .a 0x7fc222007250
+      | | `-DeclRefExpr 0x7fc222007698 <col:17> 'union U':'union U' lvalue Var 0x7fc222007340 'b' 'union U':'union U'
+      | `-ImplicitCastExpr 0x7fc222007738 <col:24> 'long long' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fc222007720 <col:24> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fc2220076f8 <col:24> 'int' lvalue Var 0x7fc222007488 'c' 'int'
+      `-BinaryOperator 0x7fc222007970 <line:12:5, col:27> 'int' '='
+        |-DeclRefExpr 0x7fc2220077d8 <col:5> 'int' lvalue Var 0x7fc222007410 'a' 'int'
+        `-ImplicitCastExpr 0x7fc222007958 <col:9, col:27> 'int' <FloatingToIntegral>
+          `-BinaryOperator 0x7fc222007930 <col:9, col:27> 'double' '*'
+            |-BinaryOperator 0x7fc2220078e8 <col:9, col:17> 'double' '/'
+            | |-ImplicitCastExpr 0x7fc2220078d0 <col:9, col:13> 'double' <IntegralToFloating>
+            | | `-ImplicitCastExpr 0x7fc2220078b8 <col:9, col:13> 'int' <LValueToRValue>
+            | |   `-MemberExpr 0x7fc222007860 <col:9, col:13> 'int' lvalue .l 0x7fc2220070f8
+            | |     `-MemberExpr 0x7fc222007828 <col:9, col:11> 'struct S':'struct S' lvalue .p 0x7fc2220071f0
+            | |       `-DeclRefExpr 0x7fc222007800 <col:9> 'union U':'union U' lvalue Var 0x7fc222007340 'b' 'union U':'union U'
+            | `-FloatingLiteral 0x7fc222007898 <col:17> 'double' 6.553600e+04
+            `-FloatingLiteral 0x7fc222007910 <col:27> 'double' 6.553600e+04

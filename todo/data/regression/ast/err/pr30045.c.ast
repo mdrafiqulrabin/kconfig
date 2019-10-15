@@ -1,0 +1,36 @@
+../Data/C2AST/pr30045.c:6:3: error: function definition is not allowed here
+  {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7ff8a18174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff8a1817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff8a1817780 '__int128'
+|-TypedefDecl 0x7ff8a1817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff8a18177a0 'unsigned __int128'
+|-TypedefDecl 0x7ff8a1817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff8a1817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff8a1817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff8a1817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff8a1817e00 'char *'
+|   `-BuiltinType 0x7ff8a1817580 'char'
+|-TypedefDecl 0x7ff8a1818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff8a18180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff8a1817f20 'struct __va_list_tag'
+|     `-Record 0x7ff8a1817e98 '__va_list_tag'
+`-FunctionDecl 0x7ff8a1859068 <../Data/C2AST/pr30045.c:3:1, line:15:1> line:3:5 f 'int (int *)'
+  |-ParmVarDecl 0x7ff8a18181a0 <col:7, col:12> col:12 used a 'int *'
+  `-CompoundStmt 0x7ff8a1859490 <line:4:1, line:15:1>
+    |-IfStmt 0x7ff8a1859420 <line:12:3, line:13:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff8a1859210 <line:12:7> 'int *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff8a18591e8 <col:7> 'int *' lvalue ParmVar 0x7ff8a18181a0 'a' 'int *'
+    | |-ReturnStmt 0x7ff8a1859408 <line:13:5, col:15>
+    | | `-CallExpr 0x7ff8a18593c0 <col:12, col:15> 'int'
+    | |   |-ImplicitCastExpr 0x7ff8a18593a8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7ff8a1859330 <col:12> 'int ()' Function 0x7ff8a1859280 'g' 'int ()'
+    | |   `-ImplicitCastExpr 0x7ff8a18593f0 <col:14> 'int *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ff8a1859358 <col:14> 'int *' lvalue ParmVar 0x7ff8a18181a0 'a' 'int *'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff8a1859478 <line:14:3, col:10>
+      `-IntegerLiteral 0x7ff8a1859458 <col:10> 'int' 1

@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f885582bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8855842800 <../Data/C2AST/pr84417.c:4:1, line:9:1> line:4:6 fn1 'void ()'
+  `-CompoundStmt 0x7f8855842cc0 <line:5:1, line:9:1>
+    |-DeclStmt 0x7f88558429b8 <line:6:3, col:60>
+    | `-VarDecl 0x7f8855842958 <col:3, col:59> col:59 used x '__attribute__((__vector_size__(1 * sizeof(double)))) double'
+    |-DeclStmt 0x7f8855842b28 <line:7:3, col:27>
+    | `-VarDecl 0x7f8855842a10 <col:3, col:26> col:11 used a 'double *' cinit
+    |   `-CStyleCastExpr 0x7f8855842b00 <col:15, col:26> 'double *' <BitCast>
+    |     `-UnaryOperator 0x7f8855842ac8 <col:25, col:26> '__attribute__((__vector_size__(1 * sizeof(double)))) double *' prefix '&'
+    |       `-DeclRefExpr 0x7f8855842a70 <col:26> '__attribute__((__vector_size__(1 * sizeof(double)))) double' lvalue Var 0x7f8855842958 'x' '__attribute__((__vector_size__(1 * sizeof(double)))) double'
+    `-BinaryOperator 0x7f8855842c98 <line:8:3, col:35> 'double' '+'
+      |-ImplicitCastExpr 0x7f8855842c68 <col:3, col:4> 'double' <LValueToRValue>
+      | `-UnaryOperator 0x7f8855842b80 <col:3, col:4> 'double' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7f8855842b68 <col:4> 'double *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f8855842b40 <col:4> 'double *' lvalue Var 0x7f8855842a10 'a' 'double *'
+      `-ImplicitCastExpr 0x7f8855842c80 <col:8, col:35> 'double' <LValueToRValue>
+        `-UnaryOperator 0x7f8855842c48 <col:8, col:35> 'double' lvalue prefix '*'
+          `-ParenExpr 0x7f8855842c28 <col:9, col:35> 'double *'
+            `-BinaryOperator 0x7f8855842c00 <col:10, col:14> 'double *' '+'
+              |-ImplicitCastExpr 0x7f8855842be8 <col:10> 'double *' <LValueToRValue>
+              | `-DeclRefExpr 0x7f8855842ba0 <col:10> 'double *' lvalue Var 0x7f8855842a10 'a' 'double *'
+              `-IntegerLiteral 0x7f8855842bc8 <col:14> 'long long' 8446744073709551615

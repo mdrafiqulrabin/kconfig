@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fc4810272e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc4828108b8 <../Data/C2AST/pr66232-5.c:5:1, col:25> col:15 used bar 'void (*)(void)' extern
+`-FunctionDecl 0x7fc482810a30 <line:6:1, line:16:1> line:7:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fc482810970 <col:6, col:10> col:10 used n 'int'
+  `-CompoundStmt 0x7fc482810e80 <line:8:1, line:16:1>
+    |-DeclStmt 0x7fc482810b50 <line:9:3, col:8>
+    | `-VarDecl 0x7fc482810af0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fc482810e48 <line:10:3, line:15:5>
+      |-BinaryOperator 0x7fc482810bb0 <line:10:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc482810b68 <col:8> 'int' lvalue Var 0x7fc482810af0 'i' 'int'
+      | `-IntegerLiteral 0x7fc482810b90 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc482810c58 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc482810c28 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc482810bd8 <col:15> 'int' lvalue Var 0x7fc482810af0 'i' 'int'
+      | `-ImplicitCastExpr 0x7fc482810c40 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc482810c00 <col:19> 'int' lvalue ParmVar 0x7fc482810970 'n' 'int'
+      |-UnaryOperator 0x7fc482810ca8 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fc482810c80 <col:22> 'int' lvalue Var 0x7fc482810af0 'i' 'int'
+      `-CompoundStmt 0x7fc482810e28 <line:11:5, line:15:5>
+        |-IfStmt 0x7fc482810d30 <line:12:7, line:13:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-UnaryOperator 0x7fc482810d08 <line:12:11, col:12> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7fc482810cf0 <col:12> 'void (*)(void)' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fc482810cc8 <col:12> 'void (*)(void)' lvalue Var 0x7fc4828108b8 'bar' 'void (*)(void)'
+        | |-ContinueStmt 0x7fc482810d28 <line:13:2>
+        | `-<<<NULL>>>
+        `-CallExpr 0x7fc482810e00 <line:14:7, col:15> 'void'
+          `-ImplicitCastExpr 0x7fc482810de8 <col:7, col:12> 'void (*)(void)' <FunctionToPointerDecay>
+            `-ParenExpr 0x7fc482810dc8 <col:7, col:12> 'void (void)':'void (void)'
+              `-UnaryOperator 0x7fc482810da8 <col:8, col:9> 'void (void)':'void (void)' prefix '*'
+                `-ImplicitCastExpr 0x7fc482810d90 <col:9> 'void (*)(void)' <LValueToRValue>
+                  `-DeclRefExpr 0x7fc482810d68 <col:9> 'void (*)(void)' lvalue Var 0x7fc4828108b8 'bar' 'void (*)(void)'

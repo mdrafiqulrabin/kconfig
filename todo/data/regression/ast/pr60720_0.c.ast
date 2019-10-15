@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fa5bf82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa5c0014200 <../Data/C2AST/pr60720_0.c:6:1, col:14> col:12 used x 'int []' extern
+|-VarDecl 0x7fa5c0014320 <line:7:1, col:22> col:6 used foo 'int *[1]' cinit
+| `-InitListExpr 0x7fa5c0014470 <col:14, col:22> 'int *[1]'
+|   `-UnaryOperator 0x7fa5c0014408 <col:16, col:20> 'int *' prefix '&'
+|     `-ArraySubscriptExpr 0x7fa5c00143e0 <col:17, col:20> 'int' lvalue
+|       |-ImplicitCastExpr 0x7fa5c00143c8 <col:17> 'int *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7fa5c0014380 <col:17> 'int []' lvalue Var 0x7fa5c0014200 'x' 'int []'
+|       `-IntegerLiteral 0x7fa5c00143a8 <col:19> 'int' 0
+`-FunctionDecl 0x7fa5c0014550 <line:9:1, col:30> col:5 main 'int ()'
+  `-CompoundStmt 0x7fa5c0014710 <col:12, col:30>
+    `-ReturnStmt 0x7fa5c00146f8 <col:14, col:27>
+      `-ImplicitCastExpr 0x7fa5c00146e0 <col:21, col:27> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7fa5c00146c0 <col:21, col:27> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fa5c00146a8 <col:22, col:27> 'int *' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fa5c0014680 <col:22, col:27> 'int *' lvalue
+              |-ImplicitCastExpr 0x7fa5c0014668 <col:22> 'int **' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7fa5c00145f0 <col:22> 'int *[1]' lvalue Var 0x7fa5c0014320 'foo' 'int *[1]'
+              `-IntegerLiteral 0x7fa5c0014618 <col:26> 'int' 0

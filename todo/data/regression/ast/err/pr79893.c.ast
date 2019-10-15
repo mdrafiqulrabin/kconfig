@@ -1,0 +1,31 @@
+In file included from ../Data/C2AST/pr79893.c:4:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/vecintrin.h:10468:2: error: "Use -fzvector to enable vector extensions"
+#error "Use -fzvector to enable vector extensions"
+ ^
+1 error generated.
+TranslationUnitDecl 0x7fcf1202b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcf1202b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcf1202b580 '__int128'
+|-TypedefDecl 0x7fcf1202b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcf1202b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fcf1202bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcf1202b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcf1202b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcf1202bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcf1202bc00 'char *'
+|   `-BuiltinType 0x7fcf1202b380 'char'
+|-TypedefDecl 0x7fcf1202bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcf1202beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcf1202bd20 'struct __va_list_tag'
+|     `-Record 0x7fcf1202bc98 '__va_list_tag'
+`-FunctionDecl 0x7fcf128152f0 <../Data/C2AST/pr79893.c:6:1, line:9:1> line:7:1 foo 'void (signed char *, int)'
+  |-ParmVarDecl 0x7fcf1202bfa0 <col:5, col:18> col:18 used p 'signed char *'
+  |-ParmVarDecl 0x7fcf12815218 <col:21, col:25> col:25 used i 'int'
+  `-CompoundStmt 0x7fcf12815608 <col:28, line:9:1>
+    `-CallExpr 0x7fcf128155a0 <line:8:3, col:22> 'int'
+      |-ImplicitCastExpr 0x7fcf12815588 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcf128154e0 <col:3> 'int ()' Function 0x7fcf12815430 'vec_load_bndry' 'int ()'
+      |-ImplicitCastExpr 0x7fcf128155d8 <col:18> 'signed char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fcf12815508 <col:18> 'signed char *' lvalue ParmVar 0x7fcf1202bfa0 'p' 'signed char *'
+      `-ImplicitCastExpr 0x7fcf128155f0 <col:21> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fcf12815530 <col:21> 'int' lvalue ParmVar 0x7fcf12815218 'i' 'int'

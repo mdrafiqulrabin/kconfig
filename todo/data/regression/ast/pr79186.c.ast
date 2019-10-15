@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fbed182bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbed182c978 <../Data/C2AST/pr79186.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fbed186d858 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fbed186d8e8 <line:4:1, col:15> col:15 used c 'unsigned char'
+|-VarDecl 0x7fbed186d960 <col:1, col:18> col:18 used d 'unsigned char'
+|-VarDecl 0x7fbed186d9d8 <col:1, col:21> col:21 used e 'unsigned char'
+`-FunctionDecl 0x7fbed186dab0 <line:6:1, line:16:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7fbed186dfc8 <line:7:1, line:16:1>
+    |-IfStmt 0x7fbed186df58 <line:8:3, line:14:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbed186dbf0 <line:8:7, col:13> 'int' '||'
+    | | |-ImplicitCastExpr 0x7fbed186dbd8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fbed186db50 <col:7> 'int' lvalue Var 0x7fbed186d858 'b' 'int'
+    | | `-UnaryOperator 0x7fbed186dbb8 <col:12, col:13> 'int' prefix '!'
+    | |   `-ImplicitCastExpr 0x7fbed186dba0 <col:13> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fbed186db78 <col:13> 'int' lvalue Var 0x7fbed182c978 'a' 'int'
+    | |-CompoundStmt 0x7fbed186df30 <line:9:5, line:14:5>
+    | | |-BinaryOperator 0x7fbed186dc98 <line:10:7, col:11> 'unsigned char' '='
+    | | | |-DeclRefExpr 0x7fbed186dc18 <col:7> 'unsigned char' lvalue Var 0x7fbed186d8e8 'c' 'unsigned char'
+    | | | `-ImplicitCastExpr 0x7fbed186dc80 <col:11> 'unsigned char' <IntegralCast>
+    | | |   `-ImplicitCastExpr 0x7fbed186dc68 <col:11> 'int' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fbed186dc40 <col:11> 'int' lvalue Var 0x7fbed182c978 'a' 'int'
+    | | |-IfStmt 0x7fbed186de30 <line:11:7, line:12:6>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-BinaryOperator 0x7fbed186dd80 <line:11:11, col:18> 'int' '&&'
+    | | | | |-UnaryOperator 0x7fbed186dd00 <col:11, col:12> 'int' prefix '!'
+    | | | | | `-ImplicitCastExpr 0x7fbed186dce8 <col:12> 'unsigned char' <LValueToRValue>
+    | | | | |   `-DeclRefExpr 0x7fbed186dcc0 <col:12> 'unsigned char' lvalue Var 0x7fbed186d8e8 'c' 'unsigned char'
+    | | | | `-UnaryOperator 0x7fbed186dd60 <col:17, col:18> 'int' prefix '!'
+    | | | |   `-ImplicitCastExpr 0x7fbed186dd48 <col:18> 'int' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7fbed186dd20 <col:18> 'int' lvalue Var 0x7fbed182c978 'a' 'int'
+    | | | |-BinaryOperator 0x7fbed186de08 <line:12:2, col:6> 'unsigned char' '='
+    | | | | |-DeclRefExpr 0x7fbed186dda8 <col:2> 'unsigned char' lvalue Var 0x7fbed186d960 'd' 'unsigned char'
+    | | | | `-ImplicitCastExpr 0x7fbed186ddf0 <col:6> 'unsigned char' <IntegralCast>
+    | | | |   `-IntegerLiteral 0x7fbed186ddd0 <col:6> 'int' 0
+    | | | `-<<<NULL>>>
+    | | `-BinaryOperator 0x7fbed186df08 <line:13:7, col:12> 'unsigned char' '='
+    | |   |-DeclRefExpr 0x7fbed186de68 <col:7> 'unsigned char' lvalue Var 0x7fbed186d9d8 'e' 'unsigned char'
+    | |   `-ImplicitCastExpr 0x7fbed186def0 <col:11, col:12> 'unsigned char' <IntegralCast>
+    | |     `-UnaryOperator 0x7fbed186ded0 <col:11, col:12> 'int' prefix '-'
+    | |       `-ImplicitCastExpr 0x7fbed186deb8 <col:12> 'int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fbed186de90 <col:12> 'int' lvalue Var 0x7fbed182c978 'a' 'int'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbed186dfb0 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fbed186df90 <col:10> 'int' 0

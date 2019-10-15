@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd15282bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd15282c960 <../Data/C2AST/pr27409.c:3:9, line:5:1> line:3:9 struct definition
+| |-RecordDecl 0x7fd15286d820 <line:4:9, col:18> col:9 struct definition
+| `-FieldDecl 0x7fd15286d920 <col:9, col:20> col:20 z 'struct (anonymous struct at ../Data/C2AST/pr27409.c:4:9)':'struct thang_t::(anonymous at ../Data/C2AST/pr27409.c:4:9)'
+|-TypedefDecl 0x7fd15286da00 <line:3:1, line:5:3> col:3 referenced thang_t 'struct thang_t':'thang_t'
+| `-ElaboratedType 0x7fd15286d9b0 'struct thang_t' sugar
+|   `-RecordType 0x7fd15286d800 'thang_t'
+|     `-Record 0x7fd15282c960 ''
+|-RecordDecl 0x7fd15286da70 <line:7:1, line:11:1> line:7:1 struct definition
+| |-FieldDecl 0x7fd15286db38 <line:8:9, col:25> col:25 e 'short'
+| |-FieldDecl 0x7fd15286dbb0 <line:9:9, col:25> col:25 referenced f 'thang_t':'thang_t'
+| `-FieldDecl 0x7fd15286dc10 <line:10:9, col:13> col:13 g 'int'
+|-VarDecl 0x7fd15286dcb0 <line:7:1, line:11:3> col:3 used my_struct 'struct (anonymous struct at ../Data/C2AST/pr27409.c:7:1)':'struct (anonymous at ../Data/C2AST/pr27409.c:7:1)'
+|-FunctionDecl 0x7fd15286dee0 <line:13:1, col:20> col:6 used foo 'void (thang_t *)'
+| `-ParmVarDecl 0x7fd15286ddd8 <col:11, col:19> col:20 'thang_t *'
+`-FunctionDecl 0x7fd15286e060 <line:14:1, line:18:1> line:14:6 function 'void (int)'
+  |-ParmVarDecl 0x7fd15286dfa0 <col:15, col:19> col:19 blaz 'int'
+  `-CompoundStmt 0x7fd15286e318 <line:15:1, line:18:1>
+    |-DeclStmt 0x7fd15286e1f8 <line:16:3, col:29>
+    | `-VarDecl 0x7fd15286e118 <col:3, col:28> col:12 used fp 'thang_t *' cinit
+    |   `-UnaryOperator 0x7fd15286e1d8 <col:17, col:28> 'thang_t *' prefix '&'
+    |     `-MemberExpr 0x7fd15286e1a0 <col:18, col:28> 'thang_t':'thang_t' lvalue .f 0x7fd15286dbb0
+    |       `-DeclRefExpr 0x7fd15286e178 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr27409.c:7:1)':'struct (anonymous at ../Data/C2AST/pr27409.c:7:1)' lvalue Var 0x7fd15286dcb0 'my_struct' 'struct (anonymous struct at ../Data/C2AST/pr27409.c:7:1)':'struct (anonymous at ../Data/C2AST/pr27409.c:7:1)'
+    `-CallExpr 0x7fd15286e2d0 <line:17:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd15286e2b8 <col:3> 'void (*)(thang_t *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd15286e210 <col:3> 'void (thang_t *)' Function 0x7fd15286dee0 'foo' 'void (thang_t *)'
+      `-ImplicitCastExpr 0x7fd15286e300 <col:7> 'thang_t *' <LValueToRValue>
+        `-DeclRefExpr 0x7fd15286e238 <col:7> 'thang_t *' lvalue Var 0x7fd15286e118 'fp' 'thang_t *'

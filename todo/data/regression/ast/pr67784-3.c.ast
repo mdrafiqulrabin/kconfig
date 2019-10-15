@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7f99b982aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99b982b778 <../Data/C2AST/pr67784-3.c:5:1, col:13> col:13 referenced T 'int'
+| `-BuiltinType 0x7f99b982abe0 'int'
+|-FunctionDecl 0x7f99b9866cb0 <line:7:1, line:13:1> line:8:1 fn1 'void (void)'
+| `-CompoundStmt 0x7f99b9867068 <line:9:1, line:13:1>
+|   |-IfStmt 0x7f99b9866f80 <line:10:3, line:11:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99b9866f48 <line:10:7, col:30> 'int' '=='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7f99b9866ef0 <col:7, col:25> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-3.c:10:15)':'enum (anonymous at ../Data/C2AST/pr67784-3.c:10:15)'
+|   | | `-ImplicitCastExpr 0x7f99b9866f30 <col:30> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f99b9866f10 <col:30> 'int' 0
+|   | |-NullStmt 0x7f99b9866f70 <line:11:5>
+|   | `-<<<NULL>>>
+|   `-DeclStmt 0x7f99b9867050 <line:12:3, col:6>
+|     `-VarDecl 0x7f99b9866ff0 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7f99b9867118 <line:15:1, line:22:1> line:16:1 fn2 'void (void)'
+| `-CompoundStmt 0x7f99b9867548 <line:17:1, line:22:1>
+|   |-DeclStmt 0x7f99b9867250 <line:18:3, col:12>
+|   | `-VarDecl 0x7f99b98671d0 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7f99b9867230 <col:11> 'int' 0
+|   |-IfStmt 0x7f99b9867488 <line:19:3, line:20:6>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99b9867418 <line:19:7, col:30> 'int' '=='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7f99b98673c0 <col:7, col:25> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-3.c:19:15)':'enum (anonymous at ../Data/C2AST/pr67784-3.c:19:15)'
+|   | | `-ImplicitCastExpr 0x7f99b9867400 <col:30> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f99b98673e0 <col:30> 'int' 0
+|   | |-UnaryOperator 0x7f99b9867468 <line:20:5, col:6> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f99b9867440 <col:5> 'int' lvalue Var 0x7f99b98671d0 'i' 'int'
+|   | `-<<<NULL>>>
+|   `-DeclStmt 0x7f99b9867530 <line:21:3, col:6>
+|     `-VarDecl 0x7f99b98674d0 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7f99b9867600 <line:24:1, line:31:1> line:25:1 fn3 'void (void)'
+| `-CompoundStmt 0x7f99b9867950 <line:26:1, line:31:1>
+|   |-IfStmt 0x7f99b9867890 <line:27:3, line:29:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99b9867858 <line:27:7, col:30> 'int' '=='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7f99b9867800 <col:7, col:25> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-3.c:27:15)':'enum (anonymous at ../Data/C2AST/pr67784-3.c:27:15)'
+|   | | `-ImplicitCastExpr 0x7f99b9867840 <col:30> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f99b9867820 <col:30> 'int' 0
+|   | |-CompoundStmt 0x7f99b9867880 <line:28:5, line:29:5>
+|   | `-<<<NULL>>>
+|   `-DeclStmt 0x7f99b9867938 <line:30:3, col:6>
+|     `-VarDecl 0x7f99b98678d8 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7f99b9867a00 <line:33:1, line:40:1> line:34:1 fn4 'void (void)'
+| `-CompoundStmt 0x7f99b98839b0 <line:35:1, line:40:1>
+|   |-IfStmt 0x7f99b98838f0 <line:36:3, line:38:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99b9883858 <line:36:7, col:30> 'int' '=='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7f99b9883800 <col:7, col:25> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-3.c:36:15)':'enum (anonymous at ../Data/C2AST/pr67784-3.c:36:15)'
+|   | | `-ImplicitCastExpr 0x7f99b9883840 <col:30> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f99b9883820 <col:30> 'int' 0
+|   | |-LabelStmt 0x7f99b98838d8 <line:37:1, line:38:5> 'L'
+|   | | `-NullStmt 0x7f99b9883880 <col:5>
+|   | `-<<<NULL>>>
+|   `-DeclStmt 0x7f99b9883998 <line:39:3, col:6>
+|     `-VarDecl 0x7f99b9883938 <col:3, col:5> col:5 x 'T':'int'
+`-FunctionDecl 0x7f99b9883a60 <line:42:1, line:50:1> line:43:1 fn5 'void (void)'
+  `-CompoundStmt 0x7f99b9883dc0 <line:44:1, line:50:1>
+    |-IfStmt 0x7f99b9883d00 <line:45:3, line:48:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f99b9883cb8 <line:45:7, col:30> 'int' '=='
+    | | |-UnaryExprOrTypeTraitExpr 0x7f99b9883c60 <col:7, col:25> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-3.c:45:15)':'enum (anonymous at ../Data/C2AST/pr67784-3.c:45:15)'
+    | | `-ImplicitCastExpr 0x7f99b9883ca0 <col:30> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f99b9883c80 <col:30> 'int' 0
+    | |-NullStmt 0x7f99b9883ce0 <line:46:5>
+    | `-NullStmt 0x7f99b9883cf0 <line:48:5>
+    `-DeclStmt 0x7f99b9883da8 <line:49:3, col:6>
+      `-VarDecl 0x7f99b9883d48 <col:3, col:5> col:5 x 'T':'int'

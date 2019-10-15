@@ -1,0 +1,57 @@
+../Data/C2AST/pr51767.c:8:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : "r" (x), "r" (y) : "memory" : lab);
+      ^
+1 error generated.
+TranslationUnitDecl 0x7fb0068128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb006812e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb006812b80 '__int128'
+|-TypedefDecl 0x7fb006812ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb006812ba0 'unsigned __int128'
+|-TypedefDecl 0x7fb0068131a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb006812fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb006812f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb006813240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb006813200 'char *'
+|   `-BuiltinType 0x7fb006812980 'char'
+|-TypedefDecl 0x7fb006813508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb0068134b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb006813320 'struct __va_list_tag'
+|     `-Record 0x7fb006813298 '__va_list_tag'
+|-FunctionDecl 0x7fb00602d620 <../Data/C2AST/pr51767.c:3:1, col:22> col:13 used fn1 'void (void)' extern
+|-FunctionDecl 0x7fb00602d790 <col:1, col:34> col:25 used fn2 'void (void)' extern
+|-FunctionDecl 0x7fb00602d9e8 <line:5:1, line:12:1> line:6:1 used foo 'int (int *, long)' static inline
+| |-ParmVarDecl 0x7fb00602d890 <col:6, col:11> col:11 x 'int *'
+| |-ParmVarDecl 0x7fb00602d908 <col:14, col:19> col:19 y 'long'
+| |-CompoundStmt 0x7fb00602dbb0 <line:7:1, line:12:1>
+| | |-ReturnStmt 0x7fb00602db00 <line:9:3, col:10>
+| | | `-IntegerLiteral 0x7fb00602dae0 <col:10> 'int' 0
+| | `-LabelStmt 0x7fb00602db98 <line:10:1, line:11:10> 'lab'
+| |   `-ReturnStmt 0x7fb00602db38 <col:3, col:10>
+| |     `-IntegerLiteral 0x7fb00602db18 <col:10> 'int' 1
+| `-AlwaysInlineAttr 0x7fb00602da98 <line:5:30> always_inline
+`-FunctionDecl 0x7fb00602dcb0 <line:14:1, line:23:1> line:15:1 bar 'void (int *)'
+  |-ParmVarDecl 0x7fb00602dbe8 <col:6, col:11> col:11 used x 'int *'
+  `-CompoundStmt 0x7fb00602e098 <line:16:1, line:23:1>
+    |-IfStmt 0x7fb00602df70 <line:17:3, line:20:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fb00602de10 <line:17:7, col:17> 'int'
+    | | |-ImplicitCastExpr 0x7fb00602ddf8 <col:7> 'int (*)(int *, long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fb00602dd58 <col:7> 'int (int *, long)' Function 0x7fb00602d9e8 'foo' 'int (int *, long)'
+    | | |-ImplicitCastExpr 0x7fb00602de48 <col:12> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb00602dd80 <col:12> 'int *' lvalue ParmVar 0x7fb00602dbe8 'x' 'int *'
+    | | `-ImplicitCastExpr 0x7fb00602de60 <col:15> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fb00602dda8 <col:15> 'int' 23
+    | |-CallExpr 0x7fb00602dee0 <line:18:5, col:10> 'void'
+    | | `-ImplicitCastExpr 0x7fb00602dec8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb00602de78 <col:5> 'void (void)' Function 0x7fb00602d620 'fn1' 'void (void)'
+    | `-CallExpr 0x7fb00602df48 <line:20:5, col:10> 'void'
+    |   `-ImplicitCastExpr 0x7fb00602df30 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fb00602df08 <col:5> 'void (void)' Function 0x7fb00602d790 'fn2' 'void (void)'
+    `-CallExpr 0x7fb00602e030 <line:22:3, col:12> 'int'
+      |-ImplicitCastExpr 0x7fb00602e018 <col:3> 'int (*)(int *, long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb00602dfa8 <col:3> 'int (int *, long)' Function 0x7fb00602d9e8 'foo' 'int (int *, long)'
+      |-ImplicitCastExpr 0x7fb00602e068 <col:8> 'int *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb00602dfd0 <col:8> 'int *' lvalue ParmVar 0x7fb00602dbe8 'x' 'int *'
+      `-ImplicitCastExpr 0x7fb00602e080 <col:11> 'long' <IntegralCast>
+        `-IntegerLiteral 0x7fb00602dff8 <col:11> 'int' 2

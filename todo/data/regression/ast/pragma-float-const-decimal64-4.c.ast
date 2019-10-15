@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7feb58013ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7feb58014778 <../Data/C2AST/pragma-float-const-decimal64-4.c:5:1, col:8> col:8 used a 'double'
+|-FunctionDecl 0x7feb59015100 <line:7:1, line:11:1> line:7:6 f1 'void (void)'
+| `-CompoundStmt 0x7feb59015210 <line:8:1, line:11:1>
+|   `-BinaryOperator 0x7feb590151e8 <line:10:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7feb590151a0 <col:3> 'double' lvalue Var 0x7feb58014778 'a' 'double'
+|     `-FloatingLiteral 0x7feb590151c8 <col:7> 'double' 1.000000e+00
+|-FunctionDecl 0x7feb590152b8 <line:13:1, line:17:1> line:13:6 f2 'void (void)'
+| `-CompoundStmt 0x7feb590153c8 <line:14:1, line:17:1>
+|   `-BinaryOperator 0x7feb590153a0 <line:16:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7feb59015358 <col:3> 'double' lvalue Var 0x7feb58014778 'a' 'double'
+|     `-FloatingLiteral 0x7feb59015380 <col:7> 'double' 2.000000e+00
+|-FunctionDecl 0x7feb59015470 <line:19:1, line:23:1> line:19:6 f3 'void (void)'
+| `-CompoundStmt 0x7feb59015580 <line:20:1, line:23:1>
+|   `-BinaryOperator 0x7feb59015558 <line:22:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7feb59015510 <col:3> 'double' lvalue Var 0x7feb58014778 'a' 'double'
+|     `-FloatingLiteral 0x7feb59015538 <col:7> 'double' 3.000000e+00
+|-FunctionDecl 0x7feb59015628 <line:25:1, line:29:1> line:25:6 f4 'void (void)'
+| `-CompoundStmt 0x7feb59015738 <line:26:1, line:29:1>
+|   `-BinaryOperator 0x7feb59015710 <line:28:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7feb590156c8 <col:3> 'double' lvalue Var 0x7feb58014778 'a' 'double'
+|     `-FloatingLiteral 0x7feb590156f0 <col:7> 'double' 1.000000e+00
+|-FunctionDecl 0x7feb590157e0 <line:31:1, line:35:1> line:31:6 f5 'void (void)'
+| `-CompoundStmt 0x7feb590158f0 <line:32:1, line:35:1>
+|   `-BinaryOperator 0x7feb590158c8 <line:34:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7feb59015880 <col:3> 'double' lvalue Var 0x7feb58014778 'a' 'double'
+|     `-FloatingLiteral 0x7feb590158a8 <col:7> 'double' 2.000000e+00
+`-FunctionDecl 0x7feb59015998 <line:37:1, line:41:1> line:37:6 f6 'void (void)'
+  `-CompoundStmt 0x7feb59015aa8 <line:38:1, line:41:1>
+    `-BinaryOperator 0x7feb59015a80 <line:40:3, col:7> 'double' '='
+      |-DeclRefExpr 0x7feb59015a38 <col:3> 'double' lvalue Var 0x7feb58014778 'a' 'double'
+      `-FloatingLiteral 0x7feb59015a60 <col:7> 'double' 3.000000e+00

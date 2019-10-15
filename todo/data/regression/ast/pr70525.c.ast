@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f99e902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99e906e800 <../Data/C2AST/pr70525.c:5:1, col:14> col:14 referenced v64qi '__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| `-VectorType 0x7f99e902c980 '__attribute__((__vector_size__(64 * sizeof(char)))) char' 64
+|   `-BuiltinType 0x7f99e902bd80 'char'
+|-TypedefDecl 0x7f99e906e8b8 <line:6:1, col:15> col:15 referenced v32hi '__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| `-VectorType 0x7f99e906e880 '__attribute__((__vector_size__(32 * sizeof(short)))) short' 32
+|   `-BuiltinType 0x7f99e902bdc0 'short'
+|-TypedefDecl 0x7f99e906e968 <line:7:1, col:13> col:13 referenced v16si '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7f99e906e930 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7f99e902bde0 'int'
+|-TypedefDecl 0x7f99e906ea18 <line:8:1, col:19> col:19 referenced v8di '__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| `-VectorType 0x7f99e906e9e0 '__attribute__((__vector_size__(8 * sizeof(long long)))) long long' 8
+|   `-BuiltinType 0x7f99e902be20 'long long'
+|-FunctionDecl 0x7f99e906ec20 <line:10:1, line:14:1> line:11:1 f1 'v64qi (v64qi, v64qi)'
+| |-ParmVarDecl 0x7f99e906eaa0 <col:5, col:11> col:11 used x 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| |-ParmVarDecl 0x7f99e906eb10 <col:14, col:20> col:20 used y 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| `-CompoundStmt 0x7f99e906edf0 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7f99e906edd8 <line:13:3, col:15>
+|     `-BinaryOperator 0x7f99e906edb0 <col:10, col:15> 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '&'
+|       |-ImplicitCastExpr 0x7f99e906ed98 <col:10> 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f99e906ed10 <col:10> 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7f99e906eaa0 'x' 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+|       `-UnaryOperator 0x7f99e906ed78 <col:14, col:15> 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char' prefix '~'
+|         `-ImplicitCastExpr 0x7f99e906ed60 <col:15> 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+|           `-DeclRefExpr 0x7f99e906ed38 <col:15> 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7f99e906eb10 'y' 'v64qi':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+|-FunctionDecl 0x7f99e906efc0 <line:16:1, line:20:1> line:17:1 f2 'v32hi (v32hi, v32hi)'
+| |-ParmVarDecl 0x7f99e906ee40 <col:5, col:11> col:11 used x 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| |-ParmVarDecl 0x7f99e906eeb0 <col:14, col:20> col:20 used y 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| `-CompoundStmt 0x7f99e906f150 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7f99e906f138 <line:19:3, col:15>
+|     `-BinaryOperator 0x7f99e906f110 <col:10, col:15> 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short' '&'
+|       |-ImplicitCastExpr 0x7f99e906f0f8 <col:10> 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f99e906f070 <col:10> 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short' lvalue ParmVar 0x7f99e906ee40 'x' 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|       `-UnaryOperator 0x7f99e906f0d8 <col:14, col:15> 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short' prefix '~'
+|         `-ImplicitCastExpr 0x7f99e906f0c0 <col:15> 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <LValueToRValue>
+|           `-DeclRefExpr 0x7f99e906f098 <col:15> 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short' lvalue ParmVar 0x7f99e906eeb0 'y' 'v32hi':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|-FunctionDecl 0x7f99e906f320 <line:22:1, line:26:1> line:23:1 f3 'v16si (v16si, v16si)'
+| |-ParmVarDecl 0x7f99e906f1a0 <col:5, col:11> col:11 used x 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7f99e906f210 <col:14, col:20> col:20 used y 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-CompoundStmt 0x7f99e906f4b0 <line:24:1, line:26:1>
+|   `-ReturnStmt 0x7f99e906f498 <line:25:3, col:15>
+|     `-BinaryOperator 0x7f99e906f470 <col:10, col:15> 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' '&'
+|       |-ImplicitCastExpr 0x7f99e906f458 <col:10> 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f99e906f3d0 <col:10> 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7f99e906f1a0 'x' 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|       `-UnaryOperator 0x7f99e906f438 <col:14, col:15> 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' prefix '~'
+|         `-ImplicitCastExpr 0x7f99e906f420 <col:15> 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|           `-DeclRefExpr 0x7f99e906f3f8 <col:15> 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7f99e906f210 'y' 'v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+`-FunctionDecl 0x7f99e906f680 <line:28:1, line:32:1> line:29:1 f4 'v8di (v8di, v8di)'
+  |-ParmVarDecl 0x7f99e906f500 <col:5, col:10> col:10 used x 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+  |-ParmVarDecl 0x7f99e906f570 <col:13, col:18> col:18 used y 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7f99e9085218 <line:30:1, line:32:1>
+    `-ReturnStmt 0x7f99e9085200 <line:31:3, col:15>
+      `-BinaryOperator 0x7f99e906f7d0 <col:10, col:15> 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '&'
+        |-ImplicitCastExpr 0x7f99e906f7b8 <col:10> 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f99e906f730 <col:10> 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f99e906f500 'x' 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        `-UnaryOperator 0x7f99e906f798 <col:14, col:15> 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' prefix '~'
+          `-ImplicitCastExpr 0x7f99e906f780 <col:15> 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+            `-DeclRefExpr 0x7f99e906f758 <col:15> 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue ParmVar 0x7f99e906f570 'y' 'v8di':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'

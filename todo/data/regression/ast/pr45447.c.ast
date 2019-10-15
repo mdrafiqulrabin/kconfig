@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fd0e00174e8 <<invalid sloc>> <invalid sloc>
+`-TypedefDecl 0x7fd0e0018190 <../Data/C2AST/pr45447.c:3:1, col:27> col:27 x '__builtin_va_list':'struct __va_list_tag [1]'
+  `-TypedefType 0x7fd0e0018160 '__builtin_va_list' sugar
+    |-Typedef 0x7fd0e0018108 '__builtin_va_list'
+    `-ConstantArrayType 0x7fd0e00180b0 'struct __va_list_tag [1]' 1 
+      `-RecordType 0x7fd0e0017f20 'struct __va_list_tag'
+        `-Record 0x7fd0e0017e98 '__va_list_tag'

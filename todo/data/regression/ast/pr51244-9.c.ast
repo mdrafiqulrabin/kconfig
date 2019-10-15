@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fb8178066e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb81801b468 <../Data/C2AST/pr51244-9.c:5:1, line:11:1> line:6:1 used test_03_00 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x7fb817807378 <col:13, col:26> col:26 x 'unsigned int'
+| `-CompoundStmt 0x7fb81801b638 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7fb81801b5c8 <line:9:3, col:19>
+|   | `-VarDecl 0x7fb81801b568 <col:3, col:16> col:16 used res 'unsigned int'
+|   `-ReturnStmt 0x7fb81801b620 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7fb81801b608 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb81801b5e0 <col:10> 'unsigned int' lvalue Var 0x7fb81801b568 'res' 'unsigned int'
+|-RecordDecl 0x7fb81801b658 <line:13:1, line:17:1> line:13:8 struct S definition
+| |-FieldDecl 0x7fb81801b718 <line:15:3, col:16> col:16 referenced a 'unsigned int'
+| `-FieldDecl 0x7fb81801b778 <line:16:3, col:16> col:16 referenced b 'unsigned int'
+`-FunctionDecl 0x7fb81801b978 <line:19:1, line:25:1> line:19:5 test_03 'int (struct S *)'
+  |-ParmVarDecl 0x7fb81801b870 <col:14, col:24> col:24 used i 'struct S *'
+  `-CompoundStmt 0x7fb81801bf38 <line:20:1, line:25:1>
+    |-IfStmt 0x7fb81801bea8 <line:21:2, line:22:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb81801be28 <line:21:6, col:57> 'int' '||'
+    | | |-ParenExpr 0x7fb81801bc28 <col:6, col:29> 'int'
+    | | | `-BinaryOperator 0x7fb81801bc00 <col:7, col:28> 'int' '&&'
+    | | |   |-BinaryOperator 0x7fb81801bae8 <col:7, col:15> 'int' '!='
+    | | |   | |-ImplicitCastExpr 0x7fb81801bab8 <col:7, col:10> 'unsigned int' <LValueToRValue>
+    | | |   | | `-MemberExpr 0x7fb81801ba60 <col:7, col:10> 'unsigned int' lvalue ->a 0x7fb81801b718
+    | | |   | |   `-ImplicitCastExpr 0x7fb81801ba48 <col:7> 'struct S *' <LValueToRValue>
+    | | |   | |     `-DeclRefExpr 0x7fb81801ba20 <col:7> 'struct S *' lvalue ParmVar 0x7fb81801b870 'i' 'struct S *'
+    | | |   | `-ImplicitCastExpr 0x7fb81801bad0 <col:15> 'unsigned int' <IntegralCast>
+    | | |   |   `-IntegerLiteral 0x7fb81801ba98 <col:15> 'int' 2
+    | | |   `-BinaryOperator 0x7fb81801bbd8 <col:20, col:28> 'int' '!='
+    | | |     |-ImplicitCastExpr 0x7fb81801bba8 <col:20, col:23> 'unsigned int' <LValueToRValue>
+    | | |     | `-MemberExpr 0x7fb81801bb50 <col:20, col:23> 'unsigned int' lvalue ->a 0x7fb81801b718
+    | | |     |   `-ImplicitCastExpr 0x7fb81801bb38 <col:20> 'struct S *' <LValueToRValue>
+    | | |     |     `-DeclRefExpr 0x7fb81801bb10 <col:20> 'struct S *' lvalue ParmVar 0x7fb81801b870 'i' 'struct S *'
+    | | |     `-ImplicitCastExpr 0x7fb81801bbc0 <col:28> 'unsigned int' <IntegralCast>
+    | | |       `-IntegerLiteral 0x7fb81801bb88 <col:28> 'int' 3
+    | | `-BinaryOperator 0x7fb81801be00 <col:34, col:57> 'int' '>'
+    | |   |-ImplicitCastExpr 0x7fb81801bde8 <col:34, col:37> 'unsigned int' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fb81801bc88 <col:34, col:37> 'unsigned int' lvalue ->a 0x7fb81801b718
+    | |   |   `-ImplicitCastExpr 0x7fb81801bc70 <col:34> 'struct S *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fb81801bc48 <col:34> 'struct S *' lvalue ParmVar 0x7fb81801b870 'i' 'struct S *'
+    | |   `-CallExpr 0x7fb81801bda0 <col:41, col:57> 'unsigned int'
+    | |     |-ImplicitCastExpr 0x7fb81801bd88 <col:41> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fb81801bcc0 <col:41> 'unsigned int (unsigned int)' Function 0x7fb81801b468 'test_03_00' 'unsigned int (unsigned int)'
+    | |     `-ImplicitCastExpr 0x7fb81801bdd0 <col:53, col:56> 'unsigned int' <LValueToRValue>
+    | |       `-MemberExpr 0x7fb81801bd28 <col:53, col:56> 'unsigned int' lvalue ->b 0x7fb81801b778
+    | |         `-ImplicitCastExpr 0x7fb81801bd10 <col:53> 'struct S *' <LValueToRValue>
+    | |           `-DeclRefExpr 0x7fb81801bce8 <col:53> 'struct S *' lvalue ParmVar 0x7fb81801b870 'i' 'struct S *'
+    | |-ReturnStmt 0x7fb81801be90 <line:22:4, col:12>
+    | | `-UnaryOperator 0x7fb81801be70 <col:11, col:12> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7fb81801be50 <col:12> 'int' 5
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb81801bf20 <line:24:2, col:10>
+      `-UnaryOperator 0x7fb81801bf00 <col:9, col:10> 'int' prefix '-'
+        `-IntegerLiteral 0x7fb81801bee0 <col:10> 'int' 55

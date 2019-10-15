@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7feb8482bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7feb85014220 <../Data/C2AST/pr54103-6.c:1:1, line:5:1> line:2:1 f 'void (void)'
+  `-CompoundStmt 0x7feb85014430 <line:3:1, line:5:1>
+    `-BinaryConditionalOperator 0x7feb850143f0 <line:4:3, col:24> 'int'
+      |-BinaryOperator 0x7feb85014388 <col:3, col:14> 'int' '||'
+      | |-IntegerLiteral 0x7feb85014300 <col:3> 'int' 0
+      | `-BinaryOperator 0x7feb85014360 <col:8, col:14> 'int' '*'
+      |   |-IntegerLiteral 0x7feb85014320 <col:8> 'int' 65536
+      |   `-IntegerLiteral 0x7feb85014340 <col:14> 'int' 65536
+      |-OpaqueValueExpr 0x7feb850143d0 <col:3, col:14> 'int'
+      | `-BinaryOperator 0x7feb85014388 <col:3, col:14> 'int' '||'
+      |   |-IntegerLiteral 0x7feb85014300 <col:3> 'int' 0
+      |   `-BinaryOperator 0x7feb85014360 <col:8, col:14> 'int' '*'
+      |     |-IntegerLiteral 0x7feb85014320 <col:8> 'int' 65536
+      |     `-IntegerLiteral 0x7feb85014340 <col:14> 'int' 65536
+      |-OpaqueValueExpr 0x7feb850143d0 <col:3, col:14> 'int'
+      | `-BinaryOperator 0x7feb85014388 <col:3, col:14> 'int' '||'
+      |   |-IntegerLiteral 0x7feb85014300 <col:3> 'int' 0
+      |   `-BinaryOperator 0x7feb85014360 <col:8, col:14> 'int' '*'
+      |     |-IntegerLiteral 0x7feb85014320 <col:8> 'int' 65536
+      |     `-IntegerLiteral 0x7feb85014340 <col:14> 'int' 65536
+      `-IntegerLiteral 0x7feb850143b0 <col:24> 'int' 0

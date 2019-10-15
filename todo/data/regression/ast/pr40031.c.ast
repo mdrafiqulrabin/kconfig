@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7faaa682bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7faaa682c978 <../Data/C2AST/pr40031.c:3:1, col:8> col:8 used c 'double'
+|-VarDecl 0x7faaa701be58 <line:4:1, col:8> col:8 used d 'double'
+`-FunctionDecl 0x7faaa701bfc8 <line:5:1, line:9:1> line:5:9 f 'double *(int)'
+  |-ParmVarDecl 0x7faaa701bed0 <col:11, col:15> col:15 used a 'int'
+  `-CompoundStmt 0x7faaa701c1a8 <line:6:1, line:9:1>
+    |-IfStmt 0x7faaa701c110 <line:7:3, col:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7faaa701c098 <col:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7faaa701c070 <col:6> 'int' lvalue ParmVar 0x7faaa701bed0 'a' 'int'
+    | |-ReturnStmt 0x7faaa701c0f8 <col:9, col:17>
+    | | `-UnaryOperator 0x7faaa701c0d8 <col:16, col:17> 'double *' prefix '&'
+    | |   `-DeclRefExpr 0x7faaa701c0b0 <col:17> 'double' lvalue Var 0x7faaa682c978 'c' 'double'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7faaa701c190 <line:8:3, col:11>
+      `-UnaryOperator 0x7faaa701c170 <col:10, col:11> 'double *' prefix '&'
+        `-DeclRefExpr 0x7faaa701c148 <col:11> 'double' lvalue Var 0x7faaa701be58 'd' 'double'

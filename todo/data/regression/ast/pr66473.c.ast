@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fa75b0174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa759827200 <../Data/C2AST/pr66473.c:4:1, col:16> col:16 referenced __m512d '__attribute__((__vector_size__(8 * sizeof(double)))) double'
+| `-VectorType 0x7fa75b018180 '__attribute__((__vector_size__(8 * sizeof(double)))) double' 8
+|   `-BuiltinType 0x7fa75b017700 'double'
+|-FunctionDecl 0x7fa759827390 <line:6:1, col:38> col:16 used _ZGVeN8v_func '__m512d (__m512d)' extern
+| `-ParmVarDecl 0x7fa759827290 <col:31> col:38 '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+`-FunctionDecl 0x7fa759827558 <line:8:1, line:17:1> line:9:1 func_vlen8 'double (double)'
+  |-ParmVarDecl 0x7fa759827490 <col:13, col:20> col:20 used x 'double'
+  `-CompoundStmt 0x7fa759827e50 <line:10:1, line:17:1>
+    |-DeclStmt 0x7fa7598276f8 <line:11:3, col:17>
+    | |-VarDecl 0x7fa759827610 <col:3, col:11> col:11 used mx '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    | `-VarDecl 0x7fa759827680 <col:3, col:15> col:15 used mr '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |-BinaryOperator 0x7fa759827be8 <line:13:3, col:67> 'double' '='
+    | |-ArraySubscriptExpr 0x7fa759827758 <col:3, col:7> 'double' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fa759827710 <col:3> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    | | `-IntegerLiteral 0x7fa759827738 <col:6> 'int' 0
+    | `-BinaryOperator 0x7fa759827bc0 <col:11, col:67> 'double' '='
+    |   |-ArraySubscriptExpr 0x7fa7598277c8 <col:11, col:15> 'double' lvalue vectorcomponent
+    |   | |-DeclRefExpr 0x7fa759827780 <col:11> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |   | `-IntegerLiteral 0x7fa7598277a8 <col:14> 'int' 1
+    |   `-BinaryOperator 0x7fa759827b98 <col:19, col:67> 'double' '='
+    |     |-ArraySubscriptExpr 0x7fa759827838 <col:19, col:23> 'double' lvalue vectorcomponent
+    |     | |-DeclRefExpr 0x7fa7598277f0 <col:19> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |     | `-IntegerLiteral 0x7fa759827818 <col:22> 'int' 2
+    |     `-BinaryOperator 0x7fa759827b70 <col:27, col:67> 'double' '='
+    |       |-ArraySubscriptExpr 0x7fa7598278a8 <col:27, col:31> 'double' lvalue vectorcomponent
+    |       | |-DeclRefExpr 0x7fa759827860 <col:27> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |       | `-IntegerLiteral 0x7fa759827888 <col:30> 'int' 3
+    |       `-BinaryOperator 0x7fa759827b48 <col:35, col:67> 'double' '='
+    |         |-ArraySubscriptExpr 0x7fa759827918 <col:35, col:39> 'double' lvalue vectorcomponent
+    |         | |-DeclRefExpr 0x7fa7598278d0 <col:35> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |         | `-IntegerLiteral 0x7fa7598278f8 <col:38> 'int' 4
+    |         `-BinaryOperator 0x7fa759827b20 <col:43, col:67> 'double' '='
+    |           |-ArraySubscriptExpr 0x7fa759827988 <col:43, col:47> 'double' lvalue vectorcomponent
+    |           | |-DeclRefExpr 0x7fa759827940 <col:43> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |           | `-IntegerLiteral 0x7fa759827968 <col:46> 'int' 5
+    |           `-BinaryOperator 0x7fa759827af8 <col:51, col:67> 'double' '='
+    |             |-ArraySubscriptExpr 0x7fa7598279f8 <col:51, col:55> 'double' lvalue vectorcomponent
+    |             | |-DeclRefExpr 0x7fa7598279b0 <col:51> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |             | `-IntegerLiteral 0x7fa7598279d8 <col:54> 'int' 6
+    |             `-BinaryOperator 0x7fa759827ad0 <col:59, col:67> 'double' '='
+    |               |-ArraySubscriptExpr 0x7fa759827a68 <col:59, col:63> 'double' lvalue vectorcomponent
+    |               | |-DeclRefExpr 0x7fa759827a20 <col:59> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |               | `-IntegerLiteral 0x7fa759827a48 <col:62> 'int' 7
+    |               `-ImplicitCastExpr 0x7fa759827ab8 <col:67> 'double' <LValueToRValue>
+    |                 `-DeclRefExpr 0x7fa759827a90 <col:67> 'double' lvalue ParmVar 0x7fa759827490 'x' 'double'
+    |-BinaryOperator 0x7fa759827d48 <line:14:3, col:25> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' '='
+    | |-DeclRefExpr 0x7fa759827c10 <col:3> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827680 'mr' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    | `-CallExpr 0x7fa759827d00 <col:8, col:25> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    |   |-ImplicitCastExpr 0x7fa759827ce8 <col:8> '__m512d (*)(__m512d)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa759827c38 <col:8> '__m512d (__m512d)' Function 0x7fa759827390 '_ZGVeN8v_func' '__m512d (__m512d)'
+    |   `-ImplicitCastExpr 0x7fa759827d30 <col:23> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa759827c60 <col:23> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827610 'mx' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+    `-ReturnStmt 0x7fa759827e38 <line:16:3, col:23>
+      `-CStyleCastExpr 0x7fa759827e10 <col:10, col:23> 'double' <NoOp>
+        `-ImplicitCastExpr 0x7fa759827df8 <col:19, col:23> 'double' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fa759827db8 <col:19, col:23> 'double' lvalue vectorcomponent
+            |-DeclRefExpr 0x7fa759827d70 <col:19> '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7fa759827680 'mr' '__m512d':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+            `-IntegerLiteral 0x7fa759827d98 <col:22> 'int' 0

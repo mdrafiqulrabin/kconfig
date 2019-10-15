@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fb16281aee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb16280f820 <../Data/C2AST/pr40328.c:4:1, line:10:1> line:4:16 foo '_Complex float (void)'
+  `-CompoundStmt 0x7fb16280fc80 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fb16280fa68 <line:6:3, col:28>
+    | `-VarDecl 0x7fb16280f978 <col:3, col:27> col:18 used a '_Complex float [64]' cinit
+    |   `-InitListExpr 0x7fb16280fa18 <col:26, col:27> '_Complex float [64]'
+    |     `-array filler
+    |       `-ImplicitValueInitExpr 0x7fb16280fa58 <<invalid sloc>> '_Complex float'
+    |-DeclStmt 0x7fb16280faf0 <line:7:3, col:19>
+    | `-VarDecl 0x7fb16280fa90 <col:3, col:18> col:18 used x '_Complex float'
+    |-BinaryOperator 0x7fb16280fc00 <line:8:3, col:11> '_Complex float' '='
+    | |-DeclRefExpr 0x7fb16280fb08 <col:3> '_Complex float' lvalue Var 0x7fb16280fa90 'x' '_Complex float'
+    | `-ImplicitCastExpr 0x7fb16280fbe8 <col:8, col:11> '_Complex float' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fb16280fbc0 <col:8, col:11> '_Complex float' lvalue
+    |     |-ImplicitCastExpr 0x7fb16280fba8 <col:8> '_Complex float *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fb16280fb30 <col:8> '_Complex float [64]' lvalue Var 0x7fb16280f978 'a' '_Complex float [64]'
+    |     `-IntegerLiteral 0x7fb16280fb58 <col:10> 'int' 1
+    `-ReturnStmt 0x7fb16280fc68 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7fb16280fc50 <col:10> '_Complex float' <LValueToRValue>
+        `-DeclRefExpr 0x7fb16280fc28 <col:10> '_Complex float' lvalue Var 0x7fb16280fa90 'x' '_Complex float'

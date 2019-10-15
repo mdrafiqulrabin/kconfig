@@ -1,0 +1,41 @@
+../Data/C2AST/pr80315-1.c:14:9: error: use of unknown builtin '__builtin_crypto_vshasigmaw' [-Wimplicit-function-declaration]
+  res = __builtin_crypto_vshasigmaw (test, 1, 0xff);  
+        ^
+1 error generated.
+TranslationUnitDecl 0x7f872f02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f872f02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f872f02bf80 '__int128'
+|-TypedefDecl 0x7f872f02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f872f02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f872f02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f872f02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f872f02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f872f02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f872f02c600 'char *'
+|   `-BuiltinType 0x7f872f02bd80 'char'
+|-TypedefDecl 0x7f872f02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f872f02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f872f02c720 'struct __va_list_tag'
+|     `-Record 0x7f872f02c698 '__va_list_tag'
+`-FunctionDecl 0x7f872f06d800 <../Data/C2AST/pr80315-1.c:6:1, line:16:1> line:7:1 main 'int ()'
+  `-CompoundStmt 0x7f872f06de10 <line:8:1, line:16:1>
+    |-DeclStmt 0x7f872f06d9f8 <line:9:3, col:60>
+    | |-VarDecl 0x7f872f06d908 <col:3, col:51> col:51 used test 'unsigned int'
+    | `-VarDecl 0x7f872f06d980 <col:3, col:57> col:57 used res 'unsigned int'
+    |-DeclStmt 0x7f872f06daa8 <line:10:3, col:19>
+    | `-VarDecl 0x7f872f06da28 <col:3, col:18> col:13 s0 'const int' cinit
+    |   `-IntegerLiteral 0x7f872f06da88 <col:18> 'int' 0
+    |-DeclStmt 0x7f872f06db38 <line:11:3, col:11>
+    | `-VarDecl 0x7f872f06dad8 <col:3, col:7> col:7 mask 'int'
+    |-BinaryOperator 0x7f872f06ddb0 <line:14:3, col:51> 'unsigned int' '='
+    | |-DeclRefExpr 0x7f872f06db50 <col:3> 'unsigned int' lvalue Var 0x7f872f06d980 'res' 'unsigned int'
+    | `-ImplicitCastExpr 0x7f872f06dd98 <col:9, col:51> 'unsigned int' <IntegralCast>
+    |   `-CallExpr 0x7f872f06dd40 <col:9, col:51> 'int'
+    |     |-ImplicitCastExpr 0x7f872f06dd28 <col:9> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f872f06dc68 <col:9> 'int ()' Function 0x7f872f06dbb8 '__builtin_crypto_vshasigmaw' 'int ()'
+    |     |-ImplicitCastExpr 0x7f872f06dd80 <col:38> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f872f06dc90 <col:38> 'unsigned int' lvalue Var 0x7f872f06d908 'test' 'unsigned int'
+    |     |-IntegerLiteral 0x7f872f06dcb8 <col:44> 'int' 1
+    |     `-IntegerLiteral 0x7f872f06dcd8 <col:47> 'int' 255
+    `-ReturnStmt 0x7f872f06ddf8 <line:15:3, col:10>
+      `-IntegerLiteral 0x7f872f06ddd8 <col:10> 'int' 0

@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7ff92f8040e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff92f804d78 <../Data/C2AST/pr82549.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ff92f01c8c0 <col:1, col:11> col:8 used b 'int [1]'
+`-FunctionDecl 0x7ff92f01c990 <line:5:1, line:9:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7ff92f01cca8 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ff92f01cc90 <line:8:3, col:29>
+      `-BinaryOperator 0x7ff92f01cc68 <col:10, col:29> 'int' '||'
+        |-BinaryOperator 0x7ff92f01cb80 <col:10, col:20> 'int' '||'
+        | |-UnaryOperator 0x7ff92f01ca70 <col:10, col:11> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7ff92f01ca58 <col:11> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7ff92f01ca30 <col:11> 'int' lvalue Var 0x7ff92f804d78 'a' 'int'
+        | `-ImplicitCastExpr 0x7ff92f01cb68 <col:16, col:20> 'int' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7ff92f01cb40 <col:16, col:20> 'int' lvalue
+        |     |-ImplicitCastExpr 0x7ff92f01cb28 <col:16> 'int *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7ff92f01ca90 <col:16> 'int [1]' lvalue Var 0x7ff92f01c8c0 'b' 'int [1]'
+        |     `-UnaryOperator 0x7ff92f01cad8 <col:18, col:19> 'int' prefix '-'
+        |       `-IntegerLiteral 0x7ff92f01cab8 <col:19> 'int' 2
+        `-ImplicitCastExpr 0x7ff92f01cc50 <col:25, col:29> 'int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ff92f01cc28 <col:25, col:29> 'int' lvalue
+            |-ImplicitCastExpr 0x7ff92f01cc10 <col:25> 'int *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7ff92f01cba8 <col:25> 'int [1]' lvalue Var 0x7ff92f01c8c0 'b' 'int [1]'
+            `-UnaryOperator 0x7ff92f01cbf0 <col:27, col:28> 'int' prefix '-'
+              `-IntegerLiteral 0x7ff92f01cbd0 <col:28> 'int' 2

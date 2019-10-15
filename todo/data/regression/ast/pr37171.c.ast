@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fde498252e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fde49867e28 <../Data/C2AST/pr37171.c:5:1, col:45> col:14 used f1 'unsigned int (void)'
+| `-ConstAttr 0x7fde49867ec8 <col:39>
+|-FunctionDecl 0x7fde49867fe8 <line:6:1, col:47> col:14 used f2 'unsigned int (void)'
+| `-ConstAttr 0x7fde49868088 <col:39>
+|-FunctionDecl 0x7fde49868168 <line:7:1, col:49> col:14 used f3 'unsigned int (void)'
+| `-ConstAttr 0x7fde49868208 <col:39>
+`-FunctionDecl 0x7fde498682e8 <line:9:1, line:14:1> line:9:14 f4 'unsigned int (void)'
+  `-CompoundStmt 0x7fde49868a60 <line:10:1, line:14:1>
+    `-ReturnStmt 0x7fde49868a48 <line:11:3, line:13:33>
+      `-BinaryOperator 0x7fde49868a20 <line:11:10, line:13:33> 'unsigned int' '+'
+        |-BinaryOperator 0x7fde49868990 <line:11:10, line:13:25> 'unsigned int' '+'
+        | |-BinaryOperator 0x7fde49868900 <line:11:10, line:13:17> 'unsigned int' '+'
+        | | |-BinaryOperator 0x7fde49868870 <line:11:10, line:13:9> 'unsigned int' '+'
+        | | | |-BinaryOperator 0x7fde498687e0 <line:11:10, line:12:33> 'unsigned int' '+'
+        | | | | |-BinaryOperator 0x7fde49868750 <line:11:10, line:12:25> 'unsigned int' '+'
+        | | | | | |-BinaryOperator 0x7fde498686c0 <line:11:10, line:12:17> 'unsigned int' '+'
+        | | | | | | |-BinaryOperator 0x7fde49868630 <line:11:10, line:12:9> 'unsigned int' '+'
+        | | | | | | | |-BinaryOperator 0x7fde498685a0 <line:11:10, col:38> 'unsigned int' '+'
+        | | | | | | | | |-BinaryOperator 0x7fde49868510 <col:10, col:30> 'unsigned int' '+'
+        | | | | | | | | | |-BinaryOperator 0x7fde49868480 <col:10, col:22> 'unsigned int' '+'
+        | | | | | | | | | | |-CallExpr 0x7fde498683f0 <col:10, col:14> 'unsigned int'
+        | | | | | | | | | | | `-ImplicitCastExpr 0x7fde498683d8 <col:10> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | | | | | | | |   `-DeclRefExpr 0x7fde49868388 <col:10> 'unsigned int (void)' Function 0x7fde49867e28 'f1' 'unsigned int (void)'
+        | | | | | | | | | | `-CallExpr 0x7fde49868458 <col:18, col:22> 'unsigned int'
+        | | | | | | | | | |   `-ImplicitCastExpr 0x7fde49868440 <col:18> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | | | | | | |     `-DeclRefExpr 0x7fde49868418 <col:18> 'unsigned int (void)' Function 0x7fde49867e28 'f1' 'unsigned int (void)'
+        | | | | | | | | | `-CallExpr 0x7fde498684e8 <col:26, col:30> 'unsigned int'
+        | | | | | | | | |   `-ImplicitCastExpr 0x7fde498684d0 <col:26> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | | | | | |     `-DeclRefExpr 0x7fde498684a8 <col:26> 'unsigned int (void)' Function 0x7fde49867e28 'f1' 'unsigned int (void)'
+        | | | | | | | | `-CallExpr 0x7fde49868578 <col:34, col:38> 'unsigned int'
+        | | | | | | | |   `-ImplicitCastExpr 0x7fde49868560 <col:34> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | | | | |     `-DeclRefExpr 0x7fde49868538 <col:34> 'unsigned int (void)' Function 0x7fde49867e28 'f1' 'unsigned int (void)'
+        | | | | | | | `-CallExpr 0x7fde49868608 <line:12:5, col:9> 'unsigned int'
+        | | | | | | |   `-ImplicitCastExpr 0x7fde498685f0 <col:5> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | | | |     `-DeclRefExpr 0x7fde498685c8 <col:5> 'unsigned int (void)' Function 0x7fde49867fe8 'f2' 'unsigned int (void)'
+        | | | | | | `-CallExpr 0x7fde49868698 <col:13, col:17> 'unsigned int'
+        | | | | | |   `-ImplicitCastExpr 0x7fde49868680 <col:13> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | | |     `-DeclRefExpr 0x7fde49868658 <col:13> 'unsigned int (void)' Function 0x7fde49867fe8 'f2' 'unsigned int (void)'
+        | | | | | `-CallExpr 0x7fde49868728 <col:21, col:25> 'unsigned int'
+        | | | | |   `-ImplicitCastExpr 0x7fde49868710 <col:21> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | | |     `-DeclRefExpr 0x7fde498686e8 <col:21> 'unsigned int (void)' Function 0x7fde49867fe8 'f2' 'unsigned int (void)'
+        | | | | `-CallExpr 0x7fde498687b8 <col:29, col:33> 'unsigned int'
+        | | | |   `-ImplicitCastExpr 0x7fde498687a0 <col:29> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | | |     `-DeclRefExpr 0x7fde49868778 <col:29> 'unsigned int (void)' Function 0x7fde49867fe8 'f2' 'unsigned int (void)'
+        | | | `-CallExpr 0x7fde49868848 <line:13:5, col:9> 'unsigned int'
+        | | |   `-ImplicitCastExpr 0x7fde49868830 <col:5> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | | |     `-DeclRefExpr 0x7fde49868808 <col:5> 'unsigned int (void)' Function 0x7fde49868168 'f3' 'unsigned int (void)'
+        | | `-CallExpr 0x7fde498688d8 <col:13, col:17> 'unsigned int'
+        | |   `-ImplicitCastExpr 0x7fde498688c0 <col:13> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        | |     `-DeclRefExpr 0x7fde49868898 <col:13> 'unsigned int (void)' Function 0x7fde49868168 'f3' 'unsigned int (void)'
+        | `-CallExpr 0x7fde49868968 <col:21, col:25> 'unsigned int'
+        |   `-ImplicitCastExpr 0x7fde49868950 <col:21> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7fde49868928 <col:21> 'unsigned int (void)' Function 0x7fde49868168 'f3' 'unsigned int (void)'
+        `-CallExpr 0x7fde498689f8 <col:29, col:33> 'unsigned int'
+          `-ImplicitCastExpr 0x7fde498689e0 <col:29> 'unsigned int (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fde498689b8 <col:29> 'unsigned int (void)' Function 0x7fde49868168 'f3' 'unsigned int (void)'

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f8cab028ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8cac83a460 <../Data/C2AST/pr69015.c:5:1, line:10:1> line:6:1 foo 'void (int)'
+| |-ParmVarDecl 0x7f8cab029778 <col:6, col:10> col:10 used c 'int'
+| `-CompoundStmt 0x7f8cac83a770 <line:7:1, line:10:1>
+|   `-IfStmt 0x7f8cac83a738 <line:8:3, line:9:21>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f8cac83a570 <line:8:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f8cac83a548 <col:7> 'int' lvalue ParmVar 0x7f8cab029778 'c' 'int'
+|     |-CallExpr 0x7f8cac83a710 <line:9:5, col:21> 'void'
+|     | `-ImplicitCastExpr 0x7f8cac83a6f8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f8cac83a6a8 <col:5> '<builtin fn type>' Function 0x7f8cac83a5c0 '__builtin_trap' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f8cac83a5c0 <col:5> col:5 implicit used __builtin_trap 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f8cac83a660 <col:5> Implicit

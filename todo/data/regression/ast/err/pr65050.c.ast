@@ -1,0 +1,75 @@
+../Data/C2AST/pr65050.c:5:22: error: array has incomplete element type 'A' (aka 'int []')
+struct S { int i; A a[5]; } s;  
+                     ^
+../Data/C2AST/pr65050.c:6:23: error: array has incomplete element type 'int []'
+extern void foo (int p[2][]);  
+                      ^
+../Data/C2AST/pr65050.c:7:21: error: array has incomplete element type 'A' (aka 'int []')
+extern void bar (A p[2]);  
+                    ^
+../Data/C2AST/pr65050.c:10:11: error: array has incomplete element type 'int []'
+foo (int p[2][])  
+          ^
+../Data/C2AST/pr65050.c:15:9: error: array has incomplete element type 'A' (aka 'int []')
+bar (A p[2])  
+        ^
+../Data/C2AST/pr65050.c:20:11: error: array has incomplete element type 'struct T'
+struct T t[5];  
+          ^
+../Data/C2AST/pr65050.c:19:8: note: forward declaration of 'struct T'
+struct T;
+       ^
+../Data/C2AST/pr65050.c:21:11: error: array has incomplete element type 'struct U'
+struct U u[] = { { "abc" } };  
+          ^
+../Data/C2AST/pr65050.c:21:8: note: forward declaration of 'struct U'
+struct U u[] = { { "abc" } };  
+       ^
+../Data/C2AST/pr65050.c:23:6: error: array has incomplete element type 'TT' (aka 'struct T')
+TT tt[5];  
+     ^
+../Data/C2AST/pr65050.c:19:8: note: forward declaration of 'struct T'
+struct T;
+       ^
+8 errors generated.
+TranslationUnitDecl 0x7f944602bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f944602c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f944602bf80 '__int128'
+|-TypedefDecl 0x7f944602c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f944602bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f944602c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f944602c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f944602c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f944602c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f944602c600 'char *'
+|   `-BuiltinType 0x7f944602bd80 'char'
+|-TypedefDecl 0x7f944602c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f944602c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f944602c720 'struct __va_list_tag'
+|     `-Record 0x7f944602c698 '__va_list_tag'
+|-TypedefDecl 0x7f9446814200 <../Data/C2AST/pr65050.c:4:1, col:15> col:13 referenced A 'int []'
+| `-IncompleteArrayType 0x7f944602c960 'int []' 
+|   `-BuiltinType 0x7f944602bde0 'int'
+|-RecordDecl 0x7f9446814258 <line:5:1, col:27> col:8 invalid struct S definition
+| |-FieldDecl 0x7f9446814318 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7f9446814768 <col:19, col:21> col:21 invalid a 'int'
+|-VarDecl 0x7f9446814800 <col:1, col:29> col:29 s 'struct S':'struct S'
+|-FunctionDecl 0x7f94468149b0 <line:6:1, col:28> col:13 invalid foo 'void (int)' extern
+| `-ParmVarDecl 0x7f94468148f0 <col:18, col:22> col:22 invalid p 'int'
+|-FunctionDecl 0x7f9446814b18 <line:7:1, col:24> col:13 invalid bar 'void (int)' extern
+| `-ParmVarDecl 0x7f9446814a90 <col:18, col:20> col:20 invalid p 'int'
+|-FunctionDecl 0x7f9446814c80 <line:9:1, line:12:1> line:10:1 invalid foo 'void (int)'
+| |-ParmVarDecl 0x7f9446814bf8 <col:6, col:10> col:10 invalid p 'int'
+| `-CompoundStmt 0x7f9446814d28 <line:11:1, line:12:1>
+|-FunctionDecl 0x7f9446814df8 <line:14:1, line:17:1> line:15:1 invalid bar 'void (int)'
+| |-ParmVarDecl 0x7f9446814d70 <col:6, col:8> col:8 invalid p 'int'
+| `-CompoundStmt 0x7f9446814ea0 <line:16:1, line:17:1>
+|-RecordDecl 0x7f9446814eb0 <line:19:1, col:8> col:8 struct T
+|-VarDecl 0x7f9446814fc8 <line:20:1, col:10> col:10 invalid t 'int'
+|-RecordDecl 0x7f9446815028 <line:21:1, col:8> col:8 struct U
+|-VarDecl 0x7f9446815118 <col:1, col:10> col:10 invalid u 'int'
+|-TypedefDecl 0x7f94468152c8 <line:22:1, col:18> col:18 referenced TT 'struct T':'struct T'
+| `-ElaboratedType 0x7f9446814f80 'struct T' sugar
+|   `-RecordType 0x7f9446814f40 'struct T'
+|     `-Record 0x7f9446814eb0 'T'
+`-VarDecl 0x7f9446815378 <line:23:1, col:4> col:4 invalid tt 'int'

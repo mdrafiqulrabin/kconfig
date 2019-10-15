@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f9a878174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9a87859060 <../Data/C2AST/pr36133.c:7:1, line:13:1> line:8:1 f 'void (unsigned int)'
+  |-ParmVarDecl 0x7f9a87818178 <col:4, col:17> col:17 used a 'unsigned int'
+  `-CompoundStmt 0x7f9a87859330 <line:9:1, line:13:1>
+    |-IfStmt 0x7f9a87859280 <line:10:3, line:11:24>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9a878591a8 <line:10:7, col:12> 'unsigned int' '>>'
+    | | |-ImplicitCastExpr 0x7f9a87859190 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9a87859148 <col:7> 'unsigned int' lvalue ParmVar 0x7f9a87818178 'a' 'unsigned int'
+    | | `-IntegerLiteral 0x7f9a87859170 <col:12> 'int' 4
+    | |-GCCAsmStmt 0x7f9a87859238 <line:11:5, col:24>
+    | `-<<<NULL>>>
+    `-GCCAsmStmt 0x7f9a878592e8 <line:12:3, col:22>

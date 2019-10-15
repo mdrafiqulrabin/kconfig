@@ -1,0 +1,174 @@
+TranslationUnitDecl 0x7fbcda82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbcda82c960 <../Data/C2AST/pr79352.c:3:1, col:31> col:8 struct A definition
+| |-FieldDecl 0x7fbcdb014238 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7fbcdb0142f8 <col:19, col:28> col:24 referenced a1 'char [1]'
+|-RecordDecl 0x7fbcdb014340 <line:4:1, col:31> col:8 struct B definition
+| |-FieldDecl 0x7fbcdb014408 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7fbcdb0144c8 <col:19, col:28> col:24 referenced a3 'char [3]'
+|-RecordDecl 0x7fbcdb014510 <line:5:1, col:30> col:8 struct C definition
+| |-FieldDecl 0x7fbcdb0145d8 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7fbcdb014668 <col:19, col:27> col:24 referenced ax 'char []'
+|-FunctionDecl 0x7fbcdb0148f8 <line:7:1, line:10:1> line:7:5 test_array_1 'int (int, struct A *)'
+| |-ParmVarDecl 0x7fbcdb0146c8 <col:19, col:23> col:23 i 'int'
+| |-ParmVarDecl 0x7fbcdb0147e0 <col:26, col:36> col:36 used a 'struct A *'
+| `-CompoundStmt 0x7fbcdb014ed8 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fbcdb014ec0 <line:9:3, col:48>
+|     `-CallExpr 0x7fbcdb014e00 <col:10, col:48> 'int'
+|       |-ImplicitCastExpr 0x7fbcdb014de8 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fbcdb014c78 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7fbcdb014e48 <col:30> 'char *' <NullToPointer>
+|       | `-IntegerLiteral 0x7fbcdb014ca0 <col:30> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb014e60 <col:33> 'unsigned long' <IntegralCast>
+|       | `-IntegerLiteral 0x7fbcdb014cc0 <col:33> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb014e90 <col:36> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fbcdb014e78 <col:36> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fbcdb014d18 <col:36> 'char [4]' lvalue "%-s"
+|       `-ImplicitCastExpr 0x7fbcdb014ea8 <col:43, col:46> 'char *' <ArrayToPointerDecay>
+|         `-MemberExpr 0x7fbcdb014d88 <col:43, col:46> 'char [1]' lvalue ->a1 0x7fbcdb0142f8
+|           `-ImplicitCastExpr 0x7fbcdb014d70 <col:43> 'struct A *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fbcdb014d48 <col:43> 'struct A *' lvalue ParmVar 0x7fbcdb0147e0 'a' 'struct A *'
+|-FunctionDecl 0x7fbcdb014a38 <col:10> col:10 implicit used __builtin_snprintf 'int (char *, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7fbcdb014ad8 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fbcdb014b38 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fbcdb014b98 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-FormatAttr 0x7fbcdb014c10 <col:10> Implicit printf 3 4
+| `-NoThrowAttr 0x7fbcdb014c68 <col:10> Implicit
+|-FunctionDecl 0x7fbcdb015138 <line:12:1, line:15:1> line:12:5 test_array_3 'int (int, struct B *)'
+| |-ParmVarDecl 0x7fbcdb014f08 <col:19, col:23> col:23 i 'int'
+| |-ParmVarDecl 0x7fbcdb015020 <col:26, col:36> col:36 used b 'struct B *'
+| `-CompoundStmt 0x7fbcdb015400 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fbcdb0153e8 <line:14:3, col:48>
+|     `-CallExpr 0x7fbcdb015328 <col:10, col:48> 'int'
+|       |-ImplicitCastExpr 0x7fbcdb015310 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fbcdb015200 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7fbcdb015370 <col:30> 'char *' <NullToPointer>
+|       | `-IntegerLiteral 0x7fbcdb015228 <col:30> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb015388 <col:33> 'unsigned long' <IntegralCast>
+|       | `-IntegerLiteral 0x7fbcdb015248 <col:33> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb0153b8 <col:36> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fbcdb0153a0 <col:36> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fbcdb015268 <col:36> 'char [4]' lvalue "%-s"
+|       `-ImplicitCastExpr 0x7fbcdb0153d0 <col:43, col:46> 'char *' <ArrayToPointerDecay>
+|         `-MemberExpr 0x7fbcdb0152d8 <col:43, col:46> 'char [3]' lvalue ->a3 0x7fbcdb0144c8
+|           `-ImplicitCastExpr 0x7fbcdb0152c0 <col:43> 'struct B *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fbcdb015298 <col:43> 'struct B *' lvalue ParmVar 0x7fbcdb015020 'b' 'struct B *'
+|-FunctionDecl 0x7fbcdb015678 <line:17:1, line:20:1> line:17:5 test_array_1_3 'int (int, struct A *, struct B *)'
+| |-ParmVarDecl 0x7fbcdb015430 <col:21, col:25> col:25 used i 'int'
+| |-ParmVarDecl 0x7fbcdb0154b8 <col:28, col:38> col:38 used a 'struct A *'
+| |-ParmVarDecl 0x7fbcdb015540 <col:41, col:51> col:51 used b 'struct B *'
+| `-CompoundStmt 0x7fbcdb015af8 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7fbcdb015ae0 <line:19:3, col:60>
+|     `-CallExpr 0x7fbcdb015a38 <col:10, col:60> 'int'
+|       |-ImplicitCastExpr 0x7fbcdb015a20 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fbcdb015730 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7fbcdb015a80 <col:30> 'char *' <NullToPointer>
+|       | `-IntegerLiteral 0x7fbcdb015758 <col:30> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb015a98 <col:33> 'unsigned long' <IntegralCast>
+|       | `-IntegerLiteral 0x7fbcdb015778 <col:33> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb015ac8 <col:36> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fbcdb015ab0 <col:36> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fbcdb015798 <col:36> 'char [4]' lvalue "%-s"
+|       `-ConditionalOperator 0x7fbcdb0159f0 <col:43, col:58> 'char *'
+|         |-ImplicitCastExpr 0x7fbcdb0158e0 <col:43> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fbcdb0157c8 <col:43> 'int' lvalue ParmVar 0x7fbcdb015430 'i' 'int'
+|         |-ImplicitCastExpr 0x7fbcdb0158f8 <col:47, col:50> 'char *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7fbcdb015830 <col:47, col:50> 'char [1]' lvalue ->a1 0x7fbcdb0142f8
+|         |   `-ImplicitCastExpr 0x7fbcdb015818 <col:47> 'struct A *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fbcdb0157f0 <col:47> 'struct A *' lvalue ParmVar 0x7fbcdb0154b8 'a' 'struct A *'
+|         `-ImplicitCastExpr 0x7fbcdb015910 <col:55, col:58> 'char *' <ArrayToPointerDecay>
+|           `-MemberExpr 0x7fbcdb0158a8 <col:55, col:58> 'char [3]' lvalue ->a3 0x7fbcdb0144c8
+|             `-ImplicitCastExpr 0x7fbcdb015890 <col:55> 'struct B *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fbcdb015868 <col:55> 'struct B *' lvalue ParmVar 0x7fbcdb015540 'b' 'struct B *'
+|-FunctionDecl 0x7fbcdb015c48 <line:22:1, line:25:1> line:22:5 test_string_and_array_3 'int (int, struct B *)'
+| |-ParmVarDecl 0x7fbcdb015b28 <col:30, col:34> col:34 used i 'int'
+| |-ParmVarDecl 0x7fbcdb015bb0 <col:37, col:47> col:47 used b 'struct B *'
+| `-CompoundStmt 0x7fbcdb015fb0 <line:23:1, line:25:1>
+|   `-ReturnStmt 0x7fbcdb015f98 <line:24:3, col:60>
+|     `-CallExpr 0x7fbcdb015ef0 <col:10, col:60> 'int'
+|       |-ImplicitCastExpr 0x7fbcdb015ed8 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fbcdb015cf8 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7fbcdb015f38 <col:30> 'char *' <NullToPointer>
+|       | `-IntegerLiteral 0x7fbcdb015d20 <col:30> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb015f50 <col:33> 'unsigned long' <IntegralCast>
+|       | `-IntegerLiteral 0x7fbcdb015d40 <col:33> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb015f80 <col:36> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fbcdb015f68 <col:36> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fbcdb015d60 <col:36> 'char [4]' lvalue "%-s"
+|       `-ConditionalOperator 0x7fbcdb015ea8 <col:43, col:58> 'char *'
+|         |-ImplicitCastExpr 0x7fbcdb015e60 <col:43> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fbcdb015d90 <col:43> 'int' lvalue ParmVar 0x7fbcdb015b28 'i' 'int'
+|         |-ImplicitCastExpr 0x7fbcdb015e78 <col:47> 'char *' <ArrayToPointerDecay>
+|         | `-StringLiteral 0x7fbcdb015db8 <col:47> 'char [4]' lvalue "123"
+|         `-ImplicitCastExpr 0x7fbcdb015e90 <col:55, col:58> 'char *' <ArrayToPointerDecay>
+|           `-MemberExpr 0x7fbcdb015e28 <col:55, col:58> 'char [3]' lvalue ->a3 0x7fbcdb0144c8
+|             `-ImplicitCastExpr 0x7fbcdb015e10 <col:55> 'struct B *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fbcdb015de8 <col:55> 'struct B *' lvalue ParmVar 0x7fbcdb015bb0 'b' 'struct B *'
+|-FunctionDecl 0x7fbcdb02bc00 <line:27:1, line:30:1> line:27:5 test_flexarray 'int (struct C *)'
+| |-ParmVarDecl 0x7fbcdb016080 <col:21, col:31> col:31 used c 'struct C *'
+| `-CompoundStmt 0x7fbcdb02bea8 <line:28:1, line:30:1>
+|   `-ReturnStmt 0x7fbcdb02be90 <line:29:3, col:48>
+|     `-CallExpr 0x7fbcdb02bdd0 <col:10, col:48> 'int'
+|       |-ImplicitCastExpr 0x7fbcdb02bdb8 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fbcdb02bca8 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7fbcdb02be18 <col:30> 'char *' <NullToPointer>
+|       | `-IntegerLiteral 0x7fbcdb02bcd0 <col:30> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb02be30 <col:33> 'unsigned long' <IntegralCast>
+|       | `-IntegerLiteral 0x7fbcdb02bcf0 <col:33> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb02be60 <col:36> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fbcdb02be48 <col:36> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fbcdb02bd10 <col:36> 'char [4]' lvalue "%-s"
+|       `-ImplicitCastExpr 0x7fbcdb02be78 <col:43, col:46> 'char *' <ArrayToPointerDecay>
+|         `-MemberExpr 0x7fbcdb02bd80 <col:43, col:46> 'char []' lvalue ->ax 0x7fbcdb014668
+|           `-ImplicitCastExpr 0x7fbcdb02bd68 <col:43> 'struct C *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fbcdb02bd40 <col:43> 'struct C *' lvalue ParmVar 0x7fbcdb016080 'c' 'struct C *'
+|-FunctionDecl 0x7fbcdb02c128 <line:32:1, line:35:1> line:32:5 test_array_and_flexarray 'int (int, struct B *, struct C *)'
+| |-ParmVarDecl 0x7fbcdb02bed8 <col:31, col:35> col:35 used i 'int'
+| |-ParmVarDecl 0x7fbcdb02bf60 <col:38, col:48> col:48 used b 'struct B *'
+| |-ParmVarDecl 0x7fbcdb02bfe8 <col:51, col:61> col:61 used c 'struct C *'
+| `-CompoundStmt 0x7fbcdb02c4e0 <line:33:1, line:35:1>
+|   `-ReturnStmt 0x7fbcdb02c4c8 <line:34:3, col:60>
+|     `-CallExpr 0x7fbcdb02c420 <col:10, col:60> 'int'
+|       |-ImplicitCastExpr 0x7fbcdb02c408 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fbcdb02c1e0 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+|       |-ImplicitCastExpr 0x7fbcdb02c468 <col:30> 'char *' <NullToPointer>
+|       | `-IntegerLiteral 0x7fbcdb02c208 <col:30> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb02c480 <col:33> 'unsigned long' <IntegralCast>
+|       | `-IntegerLiteral 0x7fbcdb02c228 <col:33> 'int' 0
+|       |-ImplicitCastExpr 0x7fbcdb02c4b0 <col:36> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fbcdb02c498 <col:36> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fbcdb02c248 <col:36> 'char [4]' lvalue "%-s"
+|       `-ConditionalOperator 0x7fbcdb02c3d8 <col:43, col:58> 'char *'
+|         |-ImplicitCastExpr 0x7fbcdb02c390 <col:43> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fbcdb02c278 <col:43> 'int' lvalue ParmVar 0x7fbcdb02bed8 'i' 'int'
+|         |-ImplicitCastExpr 0x7fbcdb02c3a8 <col:47, col:50> 'char *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7fbcdb02c2e0 <col:47, col:50> 'char [3]' lvalue ->a3 0x7fbcdb0144c8
+|         |   `-ImplicitCastExpr 0x7fbcdb02c2c8 <col:47> 'struct B *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fbcdb02c2a0 <col:47> 'struct B *' lvalue ParmVar 0x7fbcdb02bf60 'b' 'struct B *'
+|         `-ImplicitCastExpr 0x7fbcdb02c3c0 <col:55, col:58> 'char *' <ArrayToPointerDecay>
+|           `-MemberExpr 0x7fbcdb02c358 <col:55, col:58> 'char []' lvalue ->ax 0x7fbcdb014668
+|             `-ImplicitCastExpr 0x7fbcdb02c340 <col:55> 'struct C *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fbcdb02c318 <col:55> 'struct C *' lvalue ParmVar 0x7fbcdb02bfe8 'c' 'struct C *'
+`-FunctionDecl 0x7fbcdb02c6b8 <line:37:1, line:40:1> line:37:5 test_string_and_flexarray 'int (int, struct C *)'
+  |-ParmVarDecl 0x7fbcdb02c510 <col:32, col:36> col:36 used i 'int'
+  |-ParmVarDecl 0x7fbcdb02c598 <col:39, col:49> col:49 used c 'struct C *'
+  `-CompoundStmt 0x7fbcdb02ca20 <line:38:1, line:40:1>
+    `-ReturnStmt 0x7fbcdb02ca08 <line:39:3, col:60>
+      `-CallExpr 0x7fbcdb02c960 <col:10, col:60> 'int'
+        |-ImplicitCastExpr 0x7fbcdb02c948 <col:10> 'int (*)(char *, unsigned long, const char *, ...)' <BuiltinFnToFnPtr>
+        | `-DeclRefExpr 0x7fbcdb02c768 <col:10> '<builtin fn type>' Function 0x7fbcdb014a38 '__builtin_snprintf' 'int (char *, unsigned long, const char *, ...)'
+        |-ImplicitCastExpr 0x7fbcdb02c9a8 <col:30> 'char *' <NullToPointer>
+        | `-IntegerLiteral 0x7fbcdb02c790 <col:30> 'int' 0
+        |-ImplicitCastExpr 0x7fbcdb02c9c0 <col:33> 'unsigned long' <IntegralCast>
+        | `-IntegerLiteral 0x7fbcdb02c7b0 <col:33> 'int' 0
+        |-ImplicitCastExpr 0x7fbcdb02c9f0 <col:36> 'const char *' <BitCast>
+        | `-ImplicitCastExpr 0x7fbcdb02c9d8 <col:36> 'char *' <ArrayToPointerDecay>
+        |   `-StringLiteral 0x7fbcdb02c7d0 <col:36> 'char [4]' lvalue "%-s"
+        `-ConditionalOperator 0x7fbcdb02c918 <col:43, col:58> 'char *'
+          |-ImplicitCastExpr 0x7fbcdb02c8d0 <col:43> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fbcdb02c800 <col:43> 'int' lvalue ParmVar 0x7fbcdb02c510 'i' 'int'
+          |-ImplicitCastExpr 0x7fbcdb02c8e8 <col:47> 'char *' <ArrayToPointerDecay>
+          | `-StringLiteral 0x7fbcdb02c828 <col:47> 'char [4]' lvalue "123"
+          `-ImplicitCastExpr 0x7fbcdb02c900 <col:55, col:58> 'char *' <ArrayToPointerDecay>
+            `-MemberExpr 0x7fbcdb02c898 <col:55, col:58> 'char []' lvalue ->ax 0x7fbcdb014668
+              `-ImplicitCastExpr 0x7fbcdb02c880 <col:55> 'struct C *' <LValueToRValue>
+                `-DeclRefExpr 0x7fbcdb02c858 <col:55> 'struct C *' lvalue ParmVar 0x7fbcdb02c598 'c' 'struct C *'

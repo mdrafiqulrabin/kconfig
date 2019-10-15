@@ -1,0 +1,181 @@
+TranslationUnitDecl 0x7ff2e582b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff2e688ef68 <../Data/C2AST/pr61441.c:10:1, line:18:1> line:10:6 used conversion 'void ()'
+| `-CompoundStmt 0x7ff2e689b858 <line:11:1, line:18:1>
+|   |-DeclStmt 0x7ff2e689b350 <line:12:3, col:36>
+|   | `-VarDecl 0x7ff2e688f020 <col:3, col:35> col:9 used sNaN 'float' cinit
+|   |   `-CallExpr 0x7ff2e689b2f0 <col:16, col:35> 'float'
+|   |     |-ImplicitCastExpr 0x7ff2e689b2d8 <col:16> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7ff2e689b200 <col:16> '<builtin fn type>' Function 0x7ff2e688f080 '__builtin_nansf' 'float (const char *)'
+|   |     `-ImplicitCastExpr 0x7ff2e689b338 <col:33> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7ff2e689b320 <col:33> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7ff2e689b268 <col:33> 'char [1]' lvalue ""
+|   |-DeclStmt 0x7ff2e689b460 <line:13:3, col:27>
+|   | `-VarDecl 0x7ff2e689b380 <col:3, col:23> col:10 used x 'double' cinit
+|   |   `-CStyleCastExpr 0x7ff2e689b438 <col:14, col:23> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7ff2e689b420 <col:23> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff2e689b3e0 <col:23> 'float' lvalue Var 0x7ff2e688f020 'sNaN' 'float'
+|   `-IfStmt 0x7ff2e689b820 <line:14:3, line:17:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7ff2e689b610 <line:14:7, col:20> 'int'
+|     | |-ImplicitCastExpr 0x7ff2e689b5f8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7ff2e689b580 <col:7> 'int ()' Function 0x7ff2e689b4d0 'issignaling' 'int ()'
+|     | `-ImplicitCastExpr 0x7ff2e689b640 <col:19> 'double' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ff2e689b5a8 <col:19> 'double' lvalue Var 0x7ff2e689b380 'x' 'double'
+|     |-CompoundStmt 0x7ff2e689b808 <line:15:3, line:17:3>
+|     | `-CallExpr 0x7ff2e689b7e0 <line:16:5, col:21> 'void'
+|     |   `-ImplicitCastExpr 0x7ff2e689b7c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |     `-DeclRefExpr 0x7ff2e689b778 <col:5> '<builtin fn type>' Function 0x7ff2e689b690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ff2e688f080 <line:12:16> col:16 implicit used __builtin_nansf 'float (const char *)' extern
+| |-ParmVarDecl 0x7ff2e688f120 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7ff2e688f188 <col:16> Implicit
+| `-ConstAttr 0x7ff2e688f1d0 <col:16> Implicit
+|-FunctionDecl 0x7ff2e689b690 <line:16:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ff2e689b730 <col:5> Implicit
+|-EnumDecl 0x7ff2e689b880 <line:20:1, col:29> col:6 op
+| |-EnumConstantDecl 0x7ff2e689b940 <col:10> col:10 referenced Add 'int'
+| |-EnumConstantDecl 0x7ff2e689b988 <col:15> col:15 referenced Mult 'int'
+| |-EnumConstantDecl 0x7ff2e689b9d0 <col:21> col:21 referenced Div 'int'
+| `-EnumConstantDecl 0x7ff2e689ba18 <col:26> col:26 referenced Abs 'int'
+|-FunctionDecl 0x7ff2e689bbb0 <line:22:1, line:53:1> line:22:6 used operation 'void (enum op)'
+| |-ParmVarDecl 0x7ff2e689bab0 <col:16, col:24> col:24 used t 'enum op':'enum op'
+| `-CompoundStmt 0x7ff2e689ca68 <line:23:1, line:53:1>
+|   |-DeclStmt 0x7ff2e689bd60 <line:24:3, col:13>
+|   | |-VarDecl 0x7ff2e689bc70 <col:3, col:9> col:9 used x 'float'
+|   | `-VarDecl 0x7ff2e689bce8 <col:3, col:12> col:12 y 'float'
+|   |-DeclStmt 0x7ff2e689bed0 <line:25:3, col:36>
+|   | `-VarDecl 0x7ff2e689bd90 <col:3, col:35> col:9 used sNaN 'float' cinit
+|   |   `-CallExpr 0x7ff2e689be70 <col:16, col:35> 'float'
+|   |     |-ImplicitCastExpr 0x7ff2e689be58 <col:16> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7ff2e689bdf0 <col:16> '<builtin fn type>' Function 0x7ff2e688f080 '__builtin_nansf' 'float (const char *)'
+|   |     `-ImplicitCastExpr 0x7ff2e689beb8 <col:33> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7ff2e689bea0 <col:33> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7ff2e689be18 <col:33> 'char [1]' lvalue ""
+|   |-SwitchStmt 0x7ff2e689bf40 <line:26:3, line:41:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7ff2e689bf28 <line:26:11> 'unsigned int' <IntegralCast>
+|   | | `-ImplicitCastExpr 0x7ff2e689bf10 <col:11> 'enum op':'enum op' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff2e689bee8 <col:11> 'enum op':'enum op' lvalue ParmVar 0x7ff2e689bab0 't' 'enum op':'enum op'
+|   | `-CompoundStmt 0x7ff2e689c588 <line:27:3, line:41:3>
+|   |   |-CaseStmt 0x7ff2e689bf98 <line:28:5, line:29:20>
+|   |   | |-ImplicitCastExpr 0x7ff2e689c620 <line:28:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7ff2e689bf70 <col:10> 'int' EnumConstant 0x7ff2e689ba18 'Abs' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7ff2e689c0d8 <line:29:7, col:20> 'float' '='
+|   |   |   |-DeclRefExpr 0x7ff2e689bfd0 <col:7> 'float' lvalue Var 0x7ff2e689bc70 'x' 'float'
+|   |   |   `-ImplicitCastExpr 0x7ff2e689c0c0 <col:11, col:20> 'float' <FloatingCast>
+|   |   |     `-CallExpr 0x7ff2e689c060 <col:11, col:20> 'double'
+|   |   |       |-ImplicitCastExpr 0x7ff2e689c048 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+|   |   |       | `-DeclRefExpr 0x7ff2e689bff8 <col:11> 'double (double)' Function 0x7ff2e686de18 'fabs' 'double (double)'
+|   |   |       `-ImplicitCastExpr 0x7ff2e689c0a8 <col:16> 'double' <FloatingCast>
+|   |   |         `-ImplicitCastExpr 0x7ff2e689c090 <col:16> 'float' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x7ff2e689c020 <col:16> 'float' lvalue Var 0x7ff2e689bd90 'sNaN' 'float'
+|   |   |-BreakStmt 0x7ff2e689c100 <line:30:7>
+|   |   |-CaseStmt 0x7ff2e689c130 <line:31:5, line:32:18>
+|   |   | |-ImplicitCastExpr 0x7ff2e689c608 <line:31:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7ff2e689c108 <col:10> 'int' EnumConstant 0x7ff2e689b940 'Add' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7ff2e689c258 <line:32:7, col:18> 'float' '='
+|   |   |   |-DeclRefExpr 0x7ff2e689c168 <col:7> 'float' lvalue Var 0x7ff2e689bc70 'x' 'float'
+|   |   |   `-ImplicitCastExpr 0x7ff2e689c240 <col:11, col:18> 'float' <FloatingCast>
+|   |   |     `-BinaryOperator 0x7ff2e689c218 <col:11, col:18> 'double' '+'
+|   |   |       |-ImplicitCastExpr 0x7ff2e689c200 <col:11> 'double' <FloatingCast>
+|   |   |       | `-ImplicitCastExpr 0x7ff2e689c1d8 <col:11> 'float' <LValueToRValue>
+|   |   |       |   `-DeclRefExpr 0x7ff2e689c190 <col:11> 'float' lvalue Var 0x7ff2e689bd90 'sNaN' 'float'
+|   |   |       `-FloatingLiteral 0x7ff2e689c1b8 <col:18> 'double' 2.000000e+00
+|   |   |-BreakStmt 0x7ff2e689c280 <line:33:7>
+|   |   |-CaseStmt 0x7ff2e689c2b0 <line:34:5, line:35:18>
+|   |   | |-ImplicitCastExpr 0x7ff2e689c5f0 <line:34:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7ff2e689c288 <col:10> 'int' EnumConstant 0x7ff2e689b988 'Mult' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7ff2e689c3c8 <line:35:7, col:18> 'float' '='
+|   |   |   |-DeclRefExpr 0x7ff2e689c2e8 <col:7> 'float' lvalue Var 0x7ff2e689bc70 'x' 'float'
+|   |   |   `-ImplicitCastExpr 0x7ff2e689c3b0 <col:11, col:18> 'float' <FloatingCast>
+|   |   |     `-BinaryOperator 0x7ff2e689c388 <col:11, col:18> 'double' '*'
+|   |   |       |-ImplicitCastExpr 0x7ff2e689c370 <col:11> 'double' <FloatingCast>
+|   |   |       | `-ImplicitCastExpr 0x7ff2e689c358 <col:11> 'float' <LValueToRValue>
+|   |   |       |   `-DeclRefExpr 0x7ff2e689c310 <col:11> 'float' lvalue Var 0x7ff2e689bd90 'sNaN' 'float'
+|   |   |       `-FloatingLiteral 0x7ff2e689c338 <col:18> 'double' 2.000000e+00
+|   |   |-BreakStmt 0x7ff2e689c3f0 <line:36:7>
+|   |   |-CaseStmt 0x7ff2e689c420 <line:37:5, line:39:18>
+|   |   | |-ImplicitCastExpr 0x7ff2e689c5d8 <line:37:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7ff2e689c3f8 <col:10> 'int' EnumConstant 0x7ff2e689b9d0 'Div' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-DefaultStmt 0x7ff2e689c560 <line:38:5, line:39:18>
+|   |   |   `-BinaryOperator 0x7ff2e689c538 <col:7, col:18> 'float' '='
+|   |   |     |-DeclRefExpr 0x7ff2e689c458 <col:7> 'float' lvalue Var 0x7ff2e689bc70 'x' 'float'
+|   |   |     `-ImplicitCastExpr 0x7ff2e689c520 <col:11, col:18> 'float' <FloatingCast>
+|   |   |       `-BinaryOperator 0x7ff2e689c4f8 <col:11, col:18> 'double' '/'
+|   |   |         |-ImplicitCastExpr 0x7ff2e689c4e0 <col:11> 'double' <FloatingCast>
+|   |   |         | `-ImplicitCastExpr 0x7ff2e689c4c8 <col:11> 'float' <LValueToRValue>
+|   |   |         |   `-DeclRefExpr 0x7ff2e689c480 <col:11> 'float' lvalue Var 0x7ff2e689bd90 'sNaN' 'float'
+|   |   |         `-FloatingLiteral 0x7ff2e689c4a8 <col:18> 'double' 2.000000e+00
+|   |   `-BreakStmt 0x7ff2e689c580 <line:40:7>
+|   `-IfStmt 0x7ff2e689ca30 <line:42:3, line:52:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff2e689c6d0 <line:42:7, col:12> 'int' '=='
+|     | |-ImplicitCastExpr 0x7ff2e689c6a0 <col:7> 'unsigned int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7ff2e689c688 <col:7> 'enum op':'enum op' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7ff2e689c638 <col:7> 'enum op':'enum op' lvalue ParmVar 0x7ff2e689bab0 't' 'enum op':'enum op'
+|     | `-ImplicitCastExpr 0x7ff2e689c6b8 <col:12> 'unsigned int' <IntegralCast>
+|     |   `-DeclRefExpr 0x7ff2e689c660 <col:12> 'int' EnumConstant 0x7ff2e689ba18 'Abs' 'int'
+|     |-CompoundStmt 0x7ff2e689c898 <line:43:3, line:48:3>
+|     | `-IfStmt 0x7ff2e689c860 <line:44:5, line:47:5>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-UnaryOperator 0x7ff2e689c7c0 <line:44:9, col:23> 'int' prefix '!'
+|     |   | `-CallExpr 0x7ff2e689c760 <col:10, col:23> 'int'
+|     |   |   |-ImplicitCastExpr 0x7ff2e689c748 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|     |   |   | `-DeclRefExpr 0x7ff2e689c6f8 <col:10> 'int ()' Function 0x7ff2e689b4d0 'issignaling' 'int ()'
+|     |   |   `-ImplicitCastExpr 0x7ff2e689c7a8 <col:22> 'double' <FloatingCast>
+|     |   |     `-ImplicitCastExpr 0x7ff2e689c790 <col:22> 'float' <LValueToRValue>
+|     |   |       `-DeclRefExpr 0x7ff2e689c720 <col:22> 'float' lvalue Var 0x7ff2e689bc70 'x' 'float'
+|     |   |-CompoundStmt 0x7ff2e689c848 <line:45:5, line:47:5>
+|     |   | `-CallExpr 0x7ff2e689c820 <line:46:7, col:23> 'void'
+|     |   |   `-ImplicitCastExpr 0x7ff2e689c808 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   |     `-DeclRefExpr 0x7ff2e689c7e0 <col:7> '<builtin fn type>' Function 0x7ff2e689b690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     |   `-<<<NULL>>>
+|     `-IfStmt 0x7ff2e689c9f8 <line:49:8, line:52:3>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-CallExpr 0x7ff2e689c918 <line:49:12, col:25> 'int'
+|       | |-ImplicitCastExpr 0x7ff2e689c900 <col:12> 'int (*)()' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7ff2e689c8b0 <col:12> 'int ()' Function 0x7ff2e689b4d0 'issignaling' 'int ()'
+|       | `-ImplicitCastExpr 0x7ff2e689c960 <col:24> 'double' <FloatingCast>
+|       |   `-ImplicitCastExpr 0x7ff2e689c948 <col:24> 'float' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7ff2e689c8d8 <col:24> 'float' lvalue Var 0x7ff2e689bc70 'x' 'float'
+|       |-CompoundStmt 0x7ff2e689c9e0 <line:50:3, line:52:3>
+|       | `-CallExpr 0x7ff2e689c9b8 <line:51:5, col:21> 'void'
+|       |   `-ImplicitCastExpr 0x7ff2e689c9a0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|       |     `-DeclRefExpr 0x7ff2e689c978 <col:5> '<builtin fn type>' Function 0x7ff2e689b690 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7ff2e689cb30 <line:55:1, line:65:1> line:55:5 main 'int (void)'
+  `-CompoundStmt 0x7ff2e689cfc0 <line:56:1, line:65:1>
+    |-CallExpr 0x7ff2e689cc40 <line:57:3, col:14> 'void'
+    | `-ImplicitCastExpr 0x7ff2e689cc28 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff2e689cbd0 <col:3> 'void ()' Function 0x7ff2e688ef68 'conversion' 'void ()'
+    |-CallExpr 0x7ff2e689cd30 <line:58:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7ff2e689cd18 <col:3> 'void (*)(enum op)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff2e689cc68 <col:3> 'void (enum op)' Function 0x7ff2e689bbb0 'operation' 'void (enum op)'
+    | `-ImplicitCastExpr 0x7ff2e689cd60 <col:13> 'enum op':'enum op' <IntegralCast>
+    |   `-DeclRefExpr 0x7ff2e689cc90 <col:13> 'int' EnumConstant 0x7ff2e689b940 'Add' 'int'
+    |-CallExpr 0x7ff2e689cde0 <line:59:3, col:17> 'void'
+    | |-ImplicitCastExpr 0x7ff2e689cdc8 <col:3> 'void (*)(enum op)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff2e689cd78 <col:3> 'void (enum op)' Function 0x7ff2e689bbb0 'operation' 'void (enum op)'
+    | `-ImplicitCastExpr 0x7ff2e689ce10 <col:13> 'enum op':'enum op' <IntegralCast>
+    |   `-DeclRefExpr 0x7ff2e689cda0 <col:13> 'int' EnumConstant 0x7ff2e689b988 'Mult' 'int'
+    |-CallExpr 0x7ff2e689ce90 <line:60:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7ff2e689ce78 <col:3> 'void (*)(enum op)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff2e689ce28 <col:3> 'void (enum op)' Function 0x7ff2e689bbb0 'operation' 'void (enum op)'
+    | `-ImplicitCastExpr 0x7ff2e689cec0 <col:13> 'enum op':'enum op' <IntegralCast>
+    |   `-DeclRefExpr 0x7ff2e689ce50 <col:13> 'int' EnumConstant 0x7ff2e689b9d0 'Div' 'int'
+    |-CallExpr 0x7ff2e689cf40 <line:62:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7ff2e689cf28 <col:3> 'void (*)(enum op)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff2e689ced8 <col:3> 'void (enum op)' Function 0x7ff2e689bbb0 'operation' 'void (enum op)'
+    | `-ImplicitCastExpr 0x7ff2e689cf70 <col:13> 'enum op':'enum op' <IntegralCast>
+    |   `-DeclRefExpr 0x7ff2e689cf00 <col:13> 'int' EnumConstant 0x7ff2e689ba18 'Abs' 'int'
+    `-ReturnStmt 0x7ff2e689cfa8 <line:64:3, col:10>
+      `-IntegerLiteral 0x7ff2e689cf88 <col:10> 'int' 0

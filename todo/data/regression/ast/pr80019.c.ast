@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7feb3d02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb3d815200 <../Data/C2AST/pr80019.c:5:1, col:14> col:14 referenced v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7feb3d02c980 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7feb3d02bd80 'char'
+|-VarDecl 0x7feb3d815290 <line:7:1, col:14> col:14 used b 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' extern
+|-VarDecl 0x7feb3d815340 <col:1, col:17> col:17 used c 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' extern
+`-FunctionDecl 0x7feb3d815490 <line:9:1, line:13:1> line:10:1 foo 'void (int)'
+  |-ParmVarDecl 0x7feb3d8153d0 <col:6, col:10> col:10 used e 'int'
+  `-CompoundStmt 0x7feb3d815670 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7feb3d815648 <line:12:3, col:12> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' '='
+      |-DeclRefExpr 0x7feb3d815538 <col:3> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7feb3d815290 'b' 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+      `-BinaryOperator 0x7feb3d815620 <col:7, col:12> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' '<<'
+        |-ImplicitCastExpr 0x7feb3d8155b0 <col:7> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+        | `-DeclRefExpr 0x7feb3d815560 <col:7> 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7feb3d815340 'c' 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+        `-ImplicitCastExpr 0x7feb3d815608 <col:12> 'int __attribute__((ext_vector_type(16)))' <VectorSplat>
+          `-ImplicitCastExpr 0x7feb3d8155c8 <col:12> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7feb3d815588 <col:12> 'int' lvalue ParmVar 0x7feb3d8153d0 'e' 'int'

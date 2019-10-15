@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f882d82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f882d82c978 <../Data/C2AST/pr69932.c:3:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7f882e014288 <line:4:1, line:10:1> line:4:6 fn1 'void ()'
+  `-CompoundStmt 0x7f882e014780 <col:12, line:10:1>
+    |-DeclStmt 0x7f882e0143c0 <line:5:3, col:12>
+    | `-VarDecl 0x7f882e014340 <col:3, col:11> col:7 used b 'int' cinit
+    |   `-IntegerLiteral 0x7f882e0143a0 <col:11> 'int' 4
+    |-DeclStmt 0x7f882e0144c0 <line:6:3, col:13>
+    | `-VarDecl 0x7f882e014460 <col:3, col:12> col:9 used c 'short [4]'
+    |-BinaryOperator 0x7f882e014670 <line:7:3, col:13> 'short' '='
+    | |-ArraySubscriptExpr 0x7f882e014588 <col:3, col:6> 'short' lvalue
+    | | |-ImplicitCastExpr 0x7f882e014558 <col:3> 'short *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7f882e0144d8 <col:3> 'short [4]' lvalue Var 0x7f882e014460 'c' 'short [4]'
+    | | `-ImplicitCastExpr 0x7f882e014570 <col:5> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f882e014500 <col:5> 'int' lvalue Var 0x7f882e014340 'b' 'int'
+    | `-ImplicitCastExpr 0x7f882e014658 <col:10, col:13> 'short' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7f882e014630 <col:10, col:13> 'short' lvalue
+    |     |-ImplicitCastExpr 0x7f882e014600 <col:10> 'short *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f882e0145b0 <col:10> 'short [4]' lvalue Var 0x7f882e014460 'c' 'short [4]'
+    |     `-ImplicitCastExpr 0x7f882e014618 <col:12> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f882e0145d8 <col:12> 'int' lvalue Var 0x7f882d82c978 'a' 'int'
+    `-IfStmt 0x7f882e014748 <line:8:3, col:14>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f882e014720 <col:7, col:10> 'short' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7f882e0146f8 <col:7, col:10> 'short' lvalue
+      |   |-ImplicitCastExpr 0x7f882e0146e0 <col:7> 'short *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7f882e014698 <col:7> 'short [4]' lvalue Var 0x7f882e014460 'c' 'short [4]'
+      |   `-IntegerLiteral 0x7f882e0146c0 <col:9> 'int' 2
+      |-CompoundStmt 0x7f882e014738 <col:13, col:14>
+      `-<<<NULL>>>

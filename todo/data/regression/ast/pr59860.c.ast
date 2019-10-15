@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7fc15982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc15a015318 <../Data/C2AST/pr59860.c:5:1> col:1 implicit used strcat 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7fc15a0153b8 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7fc15a015418 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fc15a015488 prev 0x7fc15a015318 <line:4:1, line:8:1> line:5:1 used strcat 'char *(char *, const char *)' extern inline
+| |-ParmVarDecl 0x7fc15982c978 <col:9, col:26> col:26 used __dest 'char *restrict'
+| |-ParmVarDecl 0x7fc15a015200 <col:34, col:57> col:57 used __src 'const char *restrict'
+| |-CompoundStmt 0x7fc15a015d28 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7fc15a015d10 <line:7:3, col:86>
+| |   `-CallExpr 0x7fc15a015ca0 <col:10, col:86> 'char *'
+| |     |-ImplicitCastExpr 0x7fc15a015c88 <col:10> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7fc15a015808 <col:10> '<builtin fn type>' Function 0x7fc15a0155e8 '__builtin___strcat_chk' 'char *(char *, const char *, unsigned long)'
+| |     |-ImplicitCastExpr 0x7fc15a015ce0 <col:34> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc15a015830 <col:34> 'char *restrict' lvalue ParmVar 0x7fc15982c978 '__dest' 'char *restrict'
+| |     |-ImplicitCastExpr 0x7fc15a015cf8 <col:42> 'const char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc15a015858 <col:42> 'const char *restrict' lvalue ParmVar 0x7fc15a015200 '__src' 'const char *restrict'
+| |     `-CallExpr 0x7fc15a015bc0 <col:49, col:85> 'unsigned long'
+| |       |-ImplicitCastExpr 0x7fc15a015ba8 <col:49> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7fc15a015aa8 <col:49> '<builtin fn type>' Function 0x7fc15a0158f0 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |       |-ImplicitCastExpr 0x7fc15a015c10 <col:72> 'const void *' <BitCast>
+| |       | `-ImplicitCastExpr 0x7fc15a015bf8 <col:72> 'char *' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7fc15a015ad0 <col:72> 'char *restrict' lvalue ParmVar 0x7fc15982c978 '__dest' 'char *restrict'
+| |       `-BinaryOperator 0x7fc15a015b38 <col:80, col:84> 'int' '>'
+| |         |-IntegerLiteral 0x7fc15a015af8 <col:80> 'int' 2
+| |         `-IntegerLiteral 0x7fc15a015b18 <col:84> 'int' 1
+| |-GNUInlineAttr 0x7fc15a015538 <line:4:69>
+| |-AlwaysInlineAttr 0x7fc15a015580 <col:33> always_inline
+| `-NoThrowAttr 0x7fc15a015590 <col:142>
+|-FunctionDecl 0x7fc15a0155e8 <line:7:10> col:10 implicit used __builtin___strcat_chk 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc15a015688 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fc15a0156e8 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7fc15a015748 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fc15a0157c0 <col:10> Implicit
+|-FunctionDecl 0x7fc15a0158f0 <col:49> col:49 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7fc15a015990 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fc15a0159f0 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fc15a015a60 <col:49> Implicit
+|-VarDecl 0x7fc15a015d50 <line:9:1, col:13> col:13 used raw_decode 'char' static
+`-FunctionDecl 0x7fc15a015f80 <line:10:1, line:15:1> line:10:6 foo 'void (char **, char *)'
+  |-ParmVarDecl 0x7fc15a015e30 <col:11, col:18> col:18 used argv 'char **'
+  |-ParmVarDecl 0x7fc15a015ea8 <col:24, col:30> col:30 used outfilename 'char *'
+  `-CompoundStmt 0x7fc15a02bf38 <line:11:1, line:15:1>
+    |-IfStmt 0x7fc15a0161c0 <line:12:3, line:13:18>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc15a016110 <line:12:7, col:17> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fc15a0160f8 <col:7, col:9> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fc15a0160e0 <col:7, col:9> 'char' <LValueToRValue>
+    | | |   `-UnaryOperator 0x7fc15a0160a8 <col:7, col:9> 'char' lvalue prefix '*'
+    | | |     `-ImplicitCastExpr 0x7fc15a016090 <col:8, col:9> 'char *' <LValueToRValue>
+    | | |       `-UnaryOperator 0x7fc15a016070 <col:8, col:9> 'char *' lvalue prefix '*'
+    | | |         `-ImplicitCastExpr 0x7fc15a016058 <col:9> 'char **' <LValueToRValue>
+    | | |           `-DeclRefExpr 0x7fc15a016030 <col:9> 'char **' lvalue ParmVar 0x7fc15a015e30 'argv' 'char **'
+    | | `-CharacterLiteral 0x7fc15a0160c8 <col:17> 'int' 114
+    | |-BinaryOperator 0x7fc15a016198 <line:13:5, col:18> 'char' '='
+    | | |-DeclRefExpr 0x7fc15a016138 <col:5> 'char' lvalue Var 0x7fc15a015d50 'raw_decode' 'char'
+    | | `-ImplicitCastExpr 0x7fc15a016180 <col:18> 'char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc15a016160 <col:18> 'int' 1
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fc15a02bed0 <line:14:3, col:52> 'char *'
+      |-ImplicitCastExpr 0x7fc15a02beb8 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc15a02bc00 <col:3> 'char *(char *, const char *)' Function 0x7fc15a015488 'strcat' 'char *(char *, const char *)'
+      |-ImplicitCastExpr 0x7fc15a02bf08 <col:11> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc15a02bc28 <col:11> 'char *' lvalue ParmVar 0x7fc15a015ea8 'outfilename' 'char *'
+      `-ImplicitCastExpr 0x7fc15a02bf20 <col:24, col:46> 'const char *' <BitCast>
+        `-ConditionalOperator 0x7fc15a02be40 <col:24, col:46> 'char *'
+          |-ImplicitCastExpr 0x7fc15a02bd30 <col:24> 'int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fc15a02bd18 <col:24> 'char' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc15a02bc50 <col:24> 'char' lvalue Var 0x7fc15a015d50 'raw_decode' 'char'
+          |-ImplicitCastExpr 0x7fc15a02bd48 <col:37> 'char *' <ArrayToPointerDecay>
+          | `-StringLiteral 0x7fc15a02bcb8 <col:37> 'char [5]' lvalue ".raw"
+          `-ImplicitCastExpr 0x7fc15a02bd60 <col:46> 'char *' <ArrayToPointerDecay>
+            `-StringLiteral 0x7fc15a02bce8 <col:46> 'char [5]' lvalue ".wav"

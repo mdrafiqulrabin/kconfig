@@ -1,0 +1,44 @@
+../Data/C2AST/pr37561.c:10:4: error: assignment to cast is illegal, lvalue casts are not supported
+  ((char *) p)++;        
+  ~^~~~~~~~~~~~~
+../Data/C2AST/pr37561.c:12:4: error: assignment to cast is illegal, lvalue casts are not supported
+  ((char *) q)++;        
+  ~^~~~~~~~~~~~~
+../Data/C2AST/pr37561.c:15:4: error: assignment to cast is illegal, lvalue casts are not supported
+  ((char *) p)--;        
+  ~^~~~~~~~~~~~~
+../Data/C2AST/pr37561.c:17:4: error: assignment to cast is illegal, lvalue casts are not supported
+  ((char *) q)--;        
+  ~^~~~~~~~~~~~~
+../Data/C2AST/pr37561.c:20:14: error: expected '{' in compound literal
+  ++(char *) p;          
+             ^
+../Data/C2AST/pr37561.c:22:14: error: expected '{' in compound literal
+  ++(char *) q;          
+             ^
+../Data/C2AST/pr37561.c:25:14: error: expected '{' in compound literal
+  --(char *) p;          
+             ^
+../Data/C2AST/pr37561.c:27:14: error: expected '{' in compound literal
+  --(char *) q;          
+             ^
+8 errors generated.
+TranslationUnitDecl 0x7fa8898022e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa889802860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa889802580 '__int128'
+|-TypedefDecl 0x7fa8898028d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8898025a0 'unsigned __int128'
+|-TypedefDecl 0x7fa889802ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8898029b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa889802928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa889802c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa889802c00 'char *'
+|   `-BuiltinType 0x7fa889802380 'char'
+|-TypedefDecl 0x7fa889802f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa889802eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa889802d20 'struct __va_list_tag'
+|     `-Record 0x7fa889802c98 '__va_list_tag'
+|-VarDecl 0x7fa889802f78 <<built-in>:77:25, ../Data/C2AST/pr37561.c:4:31> col:31 used p 'long'
+|-VarDecl 0x7fa88b027650 <line:5:1, col:6> col:6 used q 'char'
+`-FunctionDecl 0x7fa88b0276f8 <line:7:1, line:29:1> line:8:1 foo 'void ()'
+  `-CompoundStmt 0x7fa88b027a18 <line:9:1, line:29:1>

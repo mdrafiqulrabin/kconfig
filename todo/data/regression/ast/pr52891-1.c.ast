@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fd9c60272e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd9c6027f60 <../Data/C2AST/pr52891-1.c:3:1, line:7:1> line:3:8 struct S definition
+| |-FieldDecl 0x7fd9c581c438 <line:5:3, col:7> col:7 referenced a 'int'
+| |-RecordDecl 0x7fd9c581c480 parent 0x7fd9c60272e8 <line:6:3, col:31> col:10 struct T definition
+| | `-FieldDecl 0x7fd9c581c578 <col:14, col:27> col:23 referenced c 'unsigned int'
+| |   `-IntegerLiteral 0x7fd9c581c540 <col:27> 'int' 10
+| `-FieldDecl 0x7fd9c581c610 <col:3, col:33> col:33 referenced b 'struct T':'struct T'
+|-VarDecl 0x7fd9c581c6b0 <line:3:1, line:7:3> col:3 used s 'struct S':'struct S'
+|-FunctionDecl 0x7fd9c581c9c0 <line:9:1, line:14:1> line:10:1 used bar 'void (short, short, int **)'
+| |-ParmVarDecl 0x7fd9c581c780 <col:6, col:12> col:12 used x 'short'
+| |-ParmVarDecl 0x7fd9c581c7f8 <col:15, col:21> col:21 used y 'short'
+| |-ParmVarDecl 0x7fd9c581c8d8 <col:24, col:30> col:30 used p 'int **'
+| `-CompoundStmt 0x7fd9c581ccd0 <line:11:1, line:14:1>
+|   `-IfStmt 0x7fd9c581cc98 <line:12:3, line:13:14>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd9c581cc20 <line:12:7, col:20> 'int' '+'
+|     | |-ParenExpr 0x7fd9c581cb50 <col:7, col:14> 'int'
+|     | | `-BinaryOperator 0x7fd9c581cb28 <col:8, col:13> 'int' '&&'
+|     | |   |-ImplicitCastExpr 0x7fd9c581cae0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7fd9c581cac8 <col:8> 'short' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7fd9c581ca78 <col:8> 'short' lvalue ParmVar 0x7fd9c581c780 'x' 'short'
+|     | |   `-ImplicitCastExpr 0x7fd9c581cb10 <col:13> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7fd9c581caf8 <col:13> 'short' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7fd9c581caa0 <col:13> 'short' lvalue ParmVar 0x7fd9c581c7f8 'y' 'short'
+|     | `-ImplicitCastExpr 0x7fd9c581cc08 <col:18, col:20> 'int' <LValueToRValue>
+|     |   `-UnaryOperator 0x7fd9c581cbe8 <col:18, col:20> 'int' lvalue prefix '*'
+|     |     `-ImplicitCastExpr 0x7fd9c581cbd0 <col:19, col:20> 'int *' <LValueToRValue>
+|     |       `-UnaryOperator 0x7fd9c581cbb0 <col:19, col:20> 'int *' lvalue prefix '*'
+|     |         `-ImplicitCastExpr 0x7fd9c581cb98 <col:20> 'int **' <LValueToRValue>
+|     |           `-DeclRefExpr 0x7fd9c581cb70 <col:20> 'int **' lvalue ParmVar 0x7fd9c581c8d8 'p' 'int **'
+|     |-WhileStmt 0x7fd9c581cc78 <line:13:5, col:14>
+|     | |-<<<NULL>>>
+|     | |-IntegerLiteral 0x7fd9c581cc48 <col:12> 'int' 1
+|     | `-NullStmt 0x7fd9c581cc68 <col:14>
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd9c581cdd0 <line:16:1, line:20:1> line:17:1 foo 'void (int **)'
+  |-ParmVarDecl 0x7fd9c581cd08 <col:6, col:12> col:12 used p 'int **'
+  `-CompoundStmt 0x7fd9c581d150 <line:18:1, line:20:1>
+    `-CallExpr 0x7fd9c581d000 <line:19:3, col:21> 'void'
+      |-ImplicitCastExpr 0x7fd9c581cfe8 <col:3> 'void (*)(short, short, int **)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd9c581ce78 <col:3> 'void (short, short, int **)' Function 0x7fd9c581c9c0 'bar' 'void (short, short, int **)'
+      |-ImplicitCastExpr 0x7fd9c581d058 <col:8, col:10> 'short' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fd9c581d040 <col:8, col:10> 'int' <LValueToRValue>
+      |   `-MemberExpr 0x7fd9c581cec8 <col:8, col:10> 'int' lvalue .a 0x7fd9c581c438
+      |     `-DeclRefExpr 0x7fd9c581cea0 <col:8> 'struct S':'struct S' lvalue Var 0x7fd9c581c6b0 's' 'struct S':'struct S'
+      |-ImplicitCastExpr 0x7fd9c581d088 <col:13, col:17> 'short' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fd9c581d070 <col:13, col:17> 'unsigned int' <LValueToRValue>
+      |   `-MemberExpr 0x7fd9c581cf60 <col:13, col:17> 'unsigned int' lvalue bitfield .c 0x7fd9c581c578
+      |     `-MemberExpr 0x7fd9c581cf28 <col:13, col:15> 'struct T':'struct T' lvalue .b 0x7fd9c581c610
+      |       `-DeclRefExpr 0x7fd9c581cf00 <col:13> 'struct S':'struct S' lvalue Var 0x7fd9c581c6b0 's' 'struct S':'struct S'
+      `-ImplicitCastExpr 0x7fd9c581d0a0 <col:20> 'int **' <LValueToRValue>
+        `-DeclRefExpr 0x7fd9c581cf98 <col:20> 'int **' lvalue ParmVar 0x7fd9c581cd08 'p' 'int **'

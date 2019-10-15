@@ -1,0 +1,21 @@
+../Data/C2AST/pr77323.c:6:1: error: unknown type name '_Float128x'
+_Float128x b;  
+^
+1 error generated.
+TranslationUnitDecl 0x7ffc0782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc0782c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc0782bf80 '__int128'
+|-TypedefDecl 0x7ffc0782c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc0782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffc0782c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc0782c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc0782c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc0782c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc0782c600 'char *'
+|   `-BuiltinType 0x7ffc0782bd80 'char'
+|-TypedefDecl 0x7ffc0782c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc0782c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc0782c720 'struct __va_list_tag'
+|     `-Record 0x7ffc0782c698 '__va_list_tag'
+|-VarDecl 0x7ffc0782c978 <../Data/C2AST/pr77323.c:5:1, col:10> col:10 a '__int128'
+`-VarDecl 0x7ffc08810e70 <line:6:1, col:12> col:12 invalid b 'int'

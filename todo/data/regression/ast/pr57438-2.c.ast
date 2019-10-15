@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fcbf58174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcbf583d068 <../Data/C2AST/pr57438-2.c:5:1, line:18:1> line:5:5 foo 'int (int)'
+| |-ParmVarDecl 0x7fcbf5818178 <col:10, col:14> col:14 used x 'int'
+| `-CompoundStmt 0x7fcbf583d588 <line:6:1, line:18:1>
+|   `-SwitchStmt 0x7fcbf583d190 <line:7:3, line:17:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fcbf583d178 <line:7:11> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fcbf583d150 <col:11> 'int' lvalue ParmVar 0x7fcbf5818178 'x' 'int'
+|     `-CompoundStmt 0x7fcbf583d558 <line:8:5, line:17:5>
+|       |-CaseStmt 0x7fcbf583d1e0 <line:9:7, line:10:16>
+|       | |-IntegerLiteral 0x7fcbf583d1c0 <line:9:12> 'int' 0
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fcbf583d238 <line:10:9, col:16>
+|       |   `-IntegerLiteral 0x7fcbf583d218 <col:16> 'int' 10
+|       |-CaseStmt 0x7fcbf583d270 <line:11:7, line:12:17>
+|       | |-IntegerLiteral 0x7fcbf583d250 <line:11:12> 'int' 3
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fcbf583d2e8 <line:12:9, col:17>
+|       |   `-UnaryOperator 0x7fcbf583d2c8 <col:16, col:17> 'int' prefix '-'
+|       |     `-IntegerLiteral 0x7fcbf583d2a8 <col:17> 'int' 1
+|       |-CaseStmt 0x7fcbf583d320 <line:13:7, line:14:16>
+|       | |-IntegerLiteral 0x7fcbf583d300 <line:13:12> 'int' 5
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fcbf583d378 <line:14:9, col:16>
+|       |   `-IntegerLiteral 0x7fcbf583d358 <col:16> 'int' 29
+|       `-DefaultStmt 0x7fcbf583d538 <line:15:7, line:16:31>
+|         `-CallExpr 0x7fcbf583d510 <col:9, col:31> 'void'
+|           `-ImplicitCastExpr 0x7fcbf583d4f8 <col:9> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|             `-DeclRefExpr 0x7fcbf583d4a8 <col:9> '<builtin fn type>' Function 0x7fcbf583d3c0 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fcbf583d3c0 <col:9> col:9 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fcbf583d460 <col:9> Implicit

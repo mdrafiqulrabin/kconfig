@@ -1,0 +1,265 @@
+TranslationUnitDecl 0x7fab98022ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fab98023b60 <../Data/C2AST/pr52306.c:3:1, line:5:1> line:3:8 struct xmlNs definition
+| `-FieldDecl 0x7fab97014c60 <line:4:5, col:26> col:26 referenced prefix 'const unsigned char *'
+|-RecordDecl 0x7fab97014ca8 <line:7:1, line:11:1> line:7:8 struct xmlNode definition
+| |-FieldDecl 0x7fab97014d68 <line:8:5, col:26> col:26 referenced name 'const unsigned char *'
+| |-FieldDecl 0x7fab97014e60 <line:9:5, col:19> col:19 ns 'struct xmlNs *'
+| `-FieldDecl 0x7fab97014ed0 <line:10:5, col:19> col:19 referenced nsDef 'struct xmlNs *'
+|-RecordDecl 0x7fab97014f18 <line:13:1, line:17:1> line:13:8 struct xsltTemplate definition
+| |-FieldDecl 0x7fab97014fd8 <line:14:5, col:26> col:26 referenced name 'const unsigned char *'
+| |-FieldDecl 0x7fab97015038 <line:15:5, col:9> col:9 referenced inheritedNsNr 'int'
+| `-FieldDecl 0x7fab97015098 <line:16:5, col:11> col:11 referenced inheritedNs 'void *'
+|-FunctionDecl 0x7fab97015278 <line:19:1, col:42> col:22 used xsltNewTemplate 'struct xsltTemplate *(void)'
+|-FunctionDecl 0x7fab970154a0 <line:20:1, col:37> col:6 used xsltGetQNameURI 'void (unsigned char **)'
+| `-ParmVarDecl 0x7fab970153d8 <col:22, col:36> col:37 'unsigned char **'
+|-FunctionDecl 0x7fab97015628 <line:21:1, col:29> col:6 used xmlMalloc 'long (unsigned long)'
+| `-ParmVarDecl 0x7fab97015560 <col:16, col:25> col:29 'unsigned long'
+|-FunctionDecl 0x7fab97015790 <line:22:1, col:27> col:6 used xsltGenericDebug 'void (void)'
+|-FunctionDecl 0x7fab97015998 <line:23:1, col:59> col:5 used xmlStrEqual 'int (const unsigned char *, const unsigned char *)'
+| |-ParmVarDecl 0x7fab97015848 <col:17, col:36> col:37 'const unsigned char *'
+| `-ParmVarDecl 0x7fab970158c0 <col:39, col:58> col:59 'const unsigned char *'
+|-FunctionDecl 0x7fab97015cb0 <line:25:1, line:54:1> line:25:13 used xsltGetInheritedNsList 'void (struct xsltTemplate *, struct xmlNode *)' static
+| |-ParmVarDecl 0x7fab97015a70 <line:26:5, col:26> col:26 used template 'struct xsltTemplate *'
+| |-ParmVarDecl 0x7fab97015b80 <line:27:5, col:21> col:21 used node 'struct xmlNode *'
+| `-CompoundStmt 0x7fab9702de68 <line:28:1, line:54:1>
+|   |-DeclStmt 0x7fab97015de8 <line:29:5, col:22>
+|   | `-VarDecl 0x7fab97015d88 <col:5, col:19> col:19 used cur 'struct xmlNs *'
+|   |-DeclStmt 0x7fab97015ee0 <line:30:5, col:23>
+|   | `-VarDecl 0x7fab97015e80 <col:5, col:20> col:20 used ret 'struct xmlNs **'
+|   |-DeclStmt 0x7fab97015f90 <line:31:5, col:17>
+|   | `-VarDecl 0x7fab97015f10 <col:5, col:16> col:9 used nbns 'int' cinit
+|   |   `-IntegerLiteral 0x7fab97015f70 <col:16> 'int' 0
+|   |-DeclStmt 0x7fab97016040 <line:32:5, col:19>
+|   | `-VarDecl 0x7fab97015fc0 <col:5, col:17> col:9 used maxns 'int' cinit
+|   |   `-IntegerLiteral 0x7fab97016020 <col:17> 'int' 10
+|   |-DeclStmt 0x7fab970160d0 <line:33:5, col:10>
+|   | `-VarDecl 0x7fab97016070 <col:5, col:9> col:9 used i 'int'
+|   |-IfStmt 0x7fab970163b8 <line:35:5, line:38:2>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fab97016378 <line:35:9, line:37:30> 'int' '||'
+|   | | |-BinaryOperator 0x7fab97016260 <line:35:9, line:36:32> 'int' '||'
+|   | | | |-BinaryOperator 0x7fab97016160 <line:35:9, col:21> 'int' '=='
+|   | | | | |-ImplicitCastExpr 0x7fab97016130 <col:9> 'struct xsltTemplate *' <LValueToRValue>
+|   | | | | | `-DeclRefExpr 0x7fab970160e8 <col:9> 'struct xsltTemplate *' lvalue ParmVar 0x7fab97015a70 'template' 'struct xsltTemplate *'
+|   | | | | `-ImplicitCastExpr 0x7fab97016148 <col:21> 'struct xsltTemplate *' <NullToPointer>
+|   | | | |   `-IntegerLiteral 0x7fab97016110 <col:21> 'int' 0
+|   | | | `-BinaryOperator 0x7fab97016238 <line:36:5, col:32> 'int' '!='
+|   | | |   |-ImplicitCastExpr 0x7fab97016220 <col:5, col:15> 'int' <LValueToRValue>
+|   | | |   | `-MemberExpr 0x7fab970161c8 <col:5, col:15> 'int' lvalue ->inheritedNsNr 0x7fab97015038
+|   | | |   |   `-ImplicitCastExpr 0x7fab970161b0 <col:5> 'struct xsltTemplate *' <LValueToRValue>
+|   | | |   |     `-DeclRefExpr 0x7fab97016188 <col:5> 'struct xsltTemplate *' lvalue ParmVar 0x7fab97015a70 'template' 'struct xsltTemplate *'
+|   | | |   `-IntegerLiteral 0x7fab97016200 <col:32> 'int' 0
+|   | | `-BinaryOperator 0x7fab97016350 <line:37:5, col:30> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fab97016320 <col:5, col:15> 'void *' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7fab970162c8 <col:5, col:15> 'void *' lvalue ->inheritedNs 0x7fab97015098
+|   | |   |   `-ImplicitCastExpr 0x7fab970162b0 <col:5> 'struct xsltTemplate *' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7fab97016288 <col:5> 'struct xsltTemplate *' lvalue ParmVar 0x7fab97015a70 'template' 'struct xsltTemplate *'
+|   | |   `-ImplicitCastExpr 0x7fab97016338 <col:30> 'void *' <NullToPointer>
+|   | |     `-IntegerLiteral 0x7fab97016300 <col:30> 'int' 0
+|   | |-ReturnStmt 0x7fab970163a0 <line:38:2>
+|   | `-<<<NULL>>>
+|   `-WhileStmt 0x7fab9702de48 <line:40:5, line:53:5>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fab97016468 <line:40:12, col:20> 'int' '!='
+|     | |-ImplicitCastExpr 0x7fab97016438 <col:12> 'struct xmlNode *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fab970163f0 <col:12> 'struct xmlNode *' lvalue ParmVar 0x7fab97015b80 'node' 'struct xmlNode *'
+|     | `-ImplicitCastExpr 0x7fab97016450 <col:20> 'struct xmlNode *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7fab97016418 <col:20> 'int' 0
+|     `-CompoundStmt 0x7fab9702de18 <col:23, line:53:5>
+|       |-BinaryOperator 0x7fab97016548 <line:41:2, col:14> 'struct xmlNs *' '='
+|       | |-DeclRefExpr 0x7fab97016490 <col:2> 'struct xmlNs *' lvalue Var 0x7fab97015d88 'cur' 'struct xmlNs *'
+|       | `-ImplicitCastExpr 0x7fab97016530 <col:8, col:14> 'struct xmlNs *' <LValueToRValue>
+|       |   `-MemberExpr 0x7fab970164f8 <col:8, col:14> 'struct xmlNs *' lvalue ->nsDef 0x7fab97014ed0
+|       |     `-ImplicitCastExpr 0x7fab970164e0 <col:8> 'struct xmlNode *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fab970164b8 <col:8> 'struct xmlNode *' lvalue ParmVar 0x7fab97015b80 'node' 'struct xmlNode *'
+|       |-BinaryOperator 0x7fab970167b0 <line:42:2, col:70> 'struct xmlNs **' '='
+|       | |-DeclRefExpr 0x7fab97016570 <col:2> 'struct xmlNs **' lvalue Var 0x7fab97015e80 'ret' 'struct xmlNs **'
+|       | `-CStyleCastExpr 0x7fab97016788 <col:8, col:70> 'struct xmlNs **' <IntegralToPointer>
+|       |   `-CallExpr 0x7fab97016730 <col:25, col:70> 'long'
+|       |     |-ImplicitCastExpr 0x7fab97016718 <col:25> 'long (*)(unsigned long)' <FunctionToPointerDecay>
+|       |     | `-DeclRefExpr 0x7fab97016598 <col:25> 'long (unsigned long)' Function 0x7fab97015628 'xmlMalloc' 'long (unsigned long)'
+|       |     `-BinaryOperator 0x7fab970166c8 <col:35, col:69> 'unsigned long' '*'
+|       |       |-ImplicitCastExpr 0x7fab970166b0 <col:35, col:45> 'unsigned long' <IntegralCast>
+|       |       | `-ParenExpr 0x7fab97016648 <col:35, col:45> 'int'
+|       |       |   `-BinaryOperator 0x7fab97016620 <col:36, col:44> 'int' '+'
+|       |       |     |-ImplicitCastExpr 0x7fab97016608 <col:36> 'int' <LValueToRValue>
+|       |       |     | `-DeclRefExpr 0x7fab970165c0 <col:36> 'int' lvalue Var 0x7fab97015fc0 'maxns' 'int'
+|       |       |     `-IntegerLiteral 0x7fab970165e8 <col:44> 'int' 1
+|       |       `-UnaryExprOrTypeTraitExpr 0x7fab97016690 <col:49, col:69> 'unsigned long' sizeof 'struct xmlNs *'
+|       |-ForStmt 0x7fab9702dad0 <line:43:2, line:46:3>
+|       | |-BinaryOperator 0x7fab97016820 <line:43:7, col:11> 'int' '='
+|       | | |-DeclRefExpr 0x7fab970167d8 <col:7> 'int' lvalue Var 0x7fab97016070 'i' 'int'
+|       | | `-IntegerLiteral 0x7fab97016800 <col:11> 'int' 0
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fab970168c8 <col:14, col:18> 'int' '<'
+|       | | |-ImplicitCastExpr 0x7fab97016898 <col:14> 'int' <LValueToRValue>
+|       | | | `-DeclRefExpr 0x7fab97016848 <col:14> 'int' lvalue Var 0x7fab97016070 'i' 'int'
+|       | | `-ImplicitCastExpr 0x7fab970168b0 <col:18> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fab97016870 <col:18> 'int' lvalue Var 0x7fab97015f10 'nbns' 'int'
+|       | |-UnaryOperator 0x7fab97016918 <col:24, col:25> 'int' postfix '++'
+|       | | `-DeclRefExpr 0x7fab970168f0 <col:24> 'int' lvalue Var 0x7fab97016070 'i' 'int'
+|       | `-IfStmt 0x7fab9702da98 <line:44:6, line:46:3>
+|       |   |-<<<NULL>>>
+|       |   |-<<<NULL>>>
+|       |   |-BinaryOperator 0x7fab9702da68 <line:44:10, line:45:32> 'int' '||'
+|       |   | |-BinaryOperator 0x7fab97016ad8 <line:44:10, col:33> 'int' '=='
+|       |   | | |-ImplicitCastExpr 0x7fab97016aa8 <col:10, col:15> 'const unsigned char *' <LValueToRValue>
+|       |   | | | `-MemberExpr 0x7fab97016978 <col:10, col:15> 'const unsigned char *' lvalue ->prefix 0x7fab97014c60
+|       |   | | |   `-ImplicitCastExpr 0x7fab97016960 <col:10> 'struct xmlNs *' <LValueToRValue>
+|       |   | | |     `-DeclRefExpr 0x7fab97016938 <col:10> 'struct xmlNs *' lvalue Var 0x7fab97015d88 'cur' 'struct xmlNs *'
+|       |   | | `-ImplicitCastExpr 0x7fab97016ac0 <col:25, col:33> 'const unsigned char *' <LValueToRValue>
+|       |   | |   `-MemberExpr 0x7fab97016a70 <col:25, col:33> 'const unsigned char *' lvalue ->prefix 0x7fab97014c60
+|       |   | |     `-ImplicitCastExpr 0x7fab97016a58 <col:25, col:30> 'struct xmlNs *' <LValueToRValue>
+|       |   | |       `-ArraySubscriptExpr 0x7fab97016a30 <col:25, col:30> 'struct xmlNs *' lvalue
+|       |   | |         |-ImplicitCastExpr 0x7fab97016a00 <col:25> 'struct xmlNs **' <LValueToRValue>
+|       |   | |         | `-DeclRefExpr 0x7fab970169b0 <col:25> 'struct xmlNs **' lvalue Var 0x7fab97015e80 'ret' 'struct xmlNs **'
+|       |   | |         `-ImplicitCastExpr 0x7fab97016a18 <col:29> 'int' <LValueToRValue>
+|       |   | |           `-DeclRefExpr 0x7fab970169d8 <col:29> 'int' lvalue Var 0x7fab97016070 'i' 'int'
+|       |   | `-CallExpr 0x7fab9702da00 <line:45:6, col:32> 'int'
+|       |   |   |-ImplicitCastExpr 0x7fab97016be8 <col:6> 'int (*)(const unsigned char *, const unsigned char *)' <FunctionToPointerDecay>
+|       |   |   | `-DeclRefExpr 0x7fab97016b00 <col:6> 'int (const unsigned char *, const unsigned char *)' Function 0x7fab97015998 'xmlStrEqual' 'int (const unsigned char *, const unsigned char *)'
+|       |   |   |-ImplicitCastExpr 0x7fab9702da38 <col:18, col:23> 'const unsigned char *' <LValueToRValue>
+|       |   |   | `-MemberExpr 0x7fab97016b68 <col:18, col:23> 'const unsigned char *' lvalue ->prefix 0x7fab97014c60
+|       |   |   |   `-ImplicitCastExpr 0x7fab97016b50 <col:18> 'struct xmlNs *' <LValueToRValue>
+|       |   |   |     `-DeclRefExpr 0x7fab97016b28 <col:18> 'struct xmlNs *' lvalue Var 0x7fab97015d88 'cur' 'struct xmlNs *'
+|       |   |   `-ImplicitCastExpr 0x7fab9702da50 <col:31> 'const unsigned char *' <NullToPointer>
+|       |   |     `-IntegerLiteral 0x7fab97016ba0 <col:31> 'int' 0
+|       |   |-BreakStmt 0x7fab9702da90 <line:46:3>
+|       |   `-<<<NULL>>>
+|       `-IfStmt 0x7fab9702dde0 <line:48:2, line:52:2>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7fab9702db88 <line:48:6, col:11> 'int' '>='
+|         | |-ImplicitCastExpr 0x7fab9702db58 <col:6> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fab9702db08 <col:6> 'int' lvalue Var 0x7fab97016070 'i' 'int'
+|         | `-ImplicitCastExpr 0x7fab9702db70 <col:11> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fab9702db30 <col:11> 'int' lvalue Var 0x7fab97015f10 'nbns' 'int'
+|         |-CompoundStmt 0x7fab9702ddc0 <col:17, line:52:2>
+|         | |-IfStmt 0x7fab9702dc70 <line:49:6, line:50:3>
+|         | | |-<<<NULL>>>
+|         | | |-<<<NULL>>>
+|         | | |-BinaryOperator 0x7fab9702dc30 <line:49:10, col:18> 'int' '>='
+|         | | | |-ImplicitCastExpr 0x7fab9702dc00 <col:10> 'int' <LValueToRValue>
+|         | | | | `-DeclRefExpr 0x7fab9702dbb0 <col:10> 'int' lvalue Var 0x7fab97015f10 'nbns' 'int'
+|         | | | `-ImplicitCastExpr 0x7fab9702dc18 <col:18> 'int' <LValueToRValue>
+|         | | |   `-DeclRefExpr 0x7fab9702dbd8 <col:18> 'int' lvalue Var 0x7fab97015fc0 'maxns' 'int'
+|         | | |-ReturnStmt 0x7fab9702dc58 <line:50:3>
+|         | | `-<<<NULL>>>
+|         | `-BinaryOperator 0x7fab9702dd98 <line:51:6, col:20> 'struct xmlNs *' '='
+|         |   |-ArraySubscriptExpr 0x7fab9702dd30 <col:6, col:16> 'struct xmlNs *' lvalue
+|         |   | |-ImplicitCastExpr 0x7fab9702dd18 <col:6> 'struct xmlNs **' <LValueToRValue>
+|         |   | | `-DeclRefExpr 0x7fab9702dca8 <col:6> 'struct xmlNs **' lvalue Var 0x7fab97015e80 'ret' 'struct xmlNs **'
+|         |   | `-UnaryOperator 0x7fab9702dcf8 <col:10, col:14> 'int' postfix '++'
+|         |   |   `-DeclRefExpr 0x7fab9702dcd0 <col:10> 'int' lvalue Var 0x7fab97015f10 'nbns' 'int'
+|         |   `-ImplicitCastExpr 0x7fab9702dd80 <col:20> 'struct xmlNs *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fab9702dd58 <col:20> 'struct xmlNs *' lvalue Var 0x7fab97015d88 'cur' 'struct xmlNs *'
+|         `-<<<NULL>>>
+|-FunctionDecl 0x7fab9702dfe0 <line:56:1, line:69:1> line:57:1 used xsltParseStylesheetTemplate 'void (struct xmlNode *)' static
+| |-ParmVarDecl 0x7fab9702ded8 <col:29, col:45> col:45 used template 'struct xmlNode *'
+| `-CompoundStmt 0x7fab9702e7d0 <line:58:1, line:69:1>
+|   |-DeclStmt 0x7fab9702e110 <line:59:5, col:29>
+|   | `-VarDecl 0x7fab9702e0b0 <col:5, col:26> col:26 used ret 'struct xsltTemplate *'
+|   |-DeclStmt 0x7fab9702e1a0 <line:60:5, col:24>
+|   | `-VarDecl 0x7fab9702e140 <col:5, col:20> col:20 used prop 'unsigned char *'
+|   |-BinaryOperator 0x7fab9702e2a8 <line:62:5, col:27> 'struct xsltTemplate *' '='
+|   | |-DeclRefExpr 0x7fab9702e1b8 <col:5> 'struct xsltTemplate *' lvalue Var 0x7fab9702e0b0 'ret' 'struct xsltTemplate *'
+|   | `-CallExpr 0x7fab9702e280 <col:11, col:27> 'struct xsltTemplate *'
+|   |   `-ImplicitCastExpr 0x7fab9702e268 <col:11> 'struct xsltTemplate *(*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7fab9702e1e0 <col:11> 'struct xsltTemplate *(void)' Function 0x7fab97015278 'xsltNewTemplate' 'struct xsltTemplate *(void)'
+|   |-IfStmt 0x7fab9702e388 <line:63:5, line:64:2>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fab9702e348 <line:63:9, col:16> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fab9702e318 <col:9> 'struct xsltTemplate *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fab9702e2d0 <col:9> 'struct xsltTemplate *' lvalue Var 0x7fab9702e0b0 'ret' 'struct xsltTemplate *'
+|   | | `-ImplicitCastExpr 0x7fab9702e330 <col:16> 'struct xsltTemplate *' <NullToPointer>
+|   | |   `-IntegerLiteral 0x7fab9702e2f8 <col:16> 'int' 0
+|   | |-ReturnStmt 0x7fab9702e370 <line:64:2>
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fab9702e4b0 <line:65:5, col:41> 'void'
+|   | |-ImplicitCastExpr 0x7fab9702e498 <col:5> 'void (*)(struct xsltTemplate *, struct xmlNode *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fab9702e3c0 <col:5> 'void (struct xsltTemplate *, struct xmlNode *)' Function 0x7fab97015cb0 'xsltGetInheritedNsList' 'void (struct xsltTemplate *, struct xmlNode *)'
+|   | |-ImplicitCastExpr 0x7fab9702e4e8 <col:28> 'struct xsltTemplate *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fab9702e3e8 <col:28> 'struct xsltTemplate *' lvalue Var 0x7fab9702e0b0 'ret' 'struct xsltTemplate *'
+|   | `-ImplicitCastExpr 0x7fab9702e500 <col:33> 'struct xmlNode *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fab9702e410 <col:33> 'struct xmlNode *' lvalue ParmVar 0x7fab9702ded8 'template' 'struct xmlNode *'
+|   |-CallExpr 0x7fab9702e580 <line:66:5, col:22> 'void'
+|   | `-ImplicitCastExpr 0x7fab9702e568 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fab9702e518 <col:5> 'void (void)' Function 0x7fab97015790 'xsltGenericDebug' 'void (void)'
+|   |-CallExpr 0x7fab9702e660 <line:67:5, col:26> 'void'
+|   | |-ImplicitCastExpr 0x7fab9702e648 <col:5> 'void (*)(unsigned char **)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fab9702e5a8 <col:5> 'void (unsigned char **)' Function 0x7fab970154a0 'xsltGetQNameURI' 'void (unsigned char **)'
+|   | `-UnaryOperator 0x7fab9702e5f8 <col:21, col:22> 'unsigned char **' prefix '&'
+|   |   `-DeclRefExpr 0x7fab9702e5d0 <col:22> 'unsigned char *' lvalue Var 0x7fab9702e140 'prop' 'unsigned char *'
+|   `-CallExpr 0x7fab9702e768 <line:68:5, col:29> 'int'
+|     |-ImplicitCastExpr 0x7fab9702e750 <col:5> 'int (*)(const unsigned char *, const unsigned char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fab9702e690 <col:5> 'int (const unsigned char *, const unsigned char *)' Function 0x7fab97015998 'xmlStrEqual' 'int (const unsigned char *, const unsigned char *)'
+|     |-ImplicitCastExpr 0x7fab9702e7a0 <col:17> 'const unsigned char *' <NullToPointer>
+|     | `-IntegerLiteral 0x7fab9702e6b8 <col:17> 'int' 0
+|     `-ImplicitCastExpr 0x7fab9702e7b8 <col:20, col:25> 'const unsigned char *' <LValueToRValue>
+|       `-MemberExpr 0x7fab9702e718 <col:20, col:25> 'const unsigned char *' lvalue ->name 0x7fab97014fd8
+|         `-ImplicitCastExpr 0x7fab9702e700 <col:20> 'struct xsltTemplate *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fab9702e6d8 <col:20> 'struct xsltTemplate *' lvalue Var 0x7fab9702e0b0 'ret' 'struct xsltTemplate *'
+`-FunctionDecl 0x7fab9702e8d0 <line:71:1, line:83:1> line:71:6 xsltParseStylesheetTop 'void (struct xmlNode *)'
+  |-ParmVarDecl 0x7fab9702e848 <col:29, col:45> col:45 used cur 'struct xmlNode *'
+  `-CompoundStmt 0x7fab9702f0d8 <line:72:1, line:83:1>
+    |-CallExpr 0x7fab9702ea00 <line:73:5, col:21> 'int'
+    | |-ImplicitCastExpr 0x7fab9702e9e0 <col:5> 'int (*)(const unsigned char *, const unsigned char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fab9702e978 <col:5> 'int (const unsigned char *, const unsigned char *)' Function 0x7fab97015998 'xmlStrEqual' 'int (const unsigned char *, const unsigned char *)'
+    | |-ImplicitCastExpr 0x7fab9702ea38 <col:17> 'const unsigned char *' <NullToPointer>
+    | | `-IntegerLiteral 0x7fab9702e9a0 <col:17> 'int' 0
+    | `-ImplicitCastExpr 0x7fab9702ea50 <col:20> 'const unsigned char *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fab9702e9c0 <col:20> 'int' 0
+    `-WhileStmt 0x7fab9702f0b8 <line:75:5, line:82:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fab9702eae0 <line:75:12, col:19> 'int' '!='
+      | |-ImplicitCastExpr 0x7fab9702eab0 <col:12> 'struct xmlNode *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fab9702ea68 <col:12> 'struct xmlNode *' lvalue ParmVar 0x7fab9702e848 'cur' 'struct xmlNode *'
+      | `-ImplicitCastExpr 0x7fab9702eac8 <col:19> 'struct xmlNode *' <NullToPointer>
+      |   `-IntegerLiteral 0x7fab9702ea90 <col:19> 'int' 0
+      `-CompoundStmt 0x7fab9702f0a0 <col:22, line:82:5>
+        `-IfStmt 0x7fab9702f068 <line:76:2, line:81:37>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-CallExpr 0x7fab9702ebe0 <line:76:6, col:30> 'int'
+          | |-ImplicitCastExpr 0x7fab9702ebc8 <col:6> 'int (*)(const unsigned char *, const unsigned char *)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7fab9702eb08 <col:6> 'int (const unsigned char *, const unsigned char *)' Function 0x7fab97015998 'xmlStrEqual' 'int (const unsigned char *, const unsigned char *)'
+          | |-ImplicitCastExpr 0x7fab9702ec18 <col:18, col:23> 'const unsigned char *' <LValueToRValue>
+          | | `-MemberExpr 0x7fab9702eb70 <col:18, col:23> 'const unsigned char *' lvalue ->name 0x7fab97014d68
+          | |   `-ImplicitCastExpr 0x7fab9702eb58 <col:18> 'struct xmlNode *' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7fab9702eb30 <col:18> 'struct xmlNode *' lvalue ParmVar 0x7fab9702e848 'cur' 'struct xmlNode *'
+          | `-ImplicitCastExpr 0x7fab9702ec30 <col:29> 'const unsigned char *' <NullToPointer>
+          |   `-IntegerLiteral 0x7fab9702eba8 <col:29> 'int' 0
+          |-NullStmt 0x7fab9702ec48 <line:77:6>
+          `-IfStmt 0x7fab9702f030 <line:78:7, line:81:37>
+            |-<<<NULL>>>
+            |-<<<NULL>>>
+            |-CallExpr 0x7fab9702ed30 <line:78:11, col:35> 'int'
+            | |-ImplicitCastExpr 0x7fab9702ed18 <col:11> 'int (*)(const unsigned char *, const unsigned char *)' <FunctionToPointerDecay>
+            | | `-DeclRefExpr 0x7fab9702ec58 <col:11> 'int (const unsigned char *, const unsigned char *)' Function 0x7fab97015998 'xmlStrEqual' 'int (const unsigned char *, const unsigned char *)'
+            | |-ImplicitCastExpr 0x7fab9702ed68 <col:23, col:28> 'const unsigned char *' <LValueToRValue>
+            | | `-MemberExpr 0x7fab9702ecc0 <col:23, col:28> 'const unsigned char *' lvalue ->name 0x7fab97014d68
+            | |   `-ImplicitCastExpr 0x7fab9702eca8 <col:23> 'struct xmlNode *' <LValueToRValue>
+            | |     `-DeclRefExpr 0x7fab9702ec80 <col:23> 'struct xmlNode *' lvalue ParmVar 0x7fab9702e848 'cur' 'struct xmlNode *'
+            | `-ImplicitCastExpr 0x7fab9702ed80 <col:34> 'const unsigned char *' <NullToPointer>
+            |   `-IntegerLiteral 0x7fab9702ecf8 <col:34> 'int' 0
+            |-NullStmt 0x7fab9702ed98 <line:79:6>
+            `-IfStmt 0x7fab9702eff8 <line:80:7, line:81:37>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-CallExpr 0x7fab9702ee80 <line:80:11, col:35> 'int'
+              | |-ImplicitCastExpr 0x7fab9702ee68 <col:11> 'int (*)(const unsigned char *, const unsigned char *)' <FunctionToPointerDecay>
+              | | `-DeclRefExpr 0x7fab9702eda8 <col:11> 'int (const unsigned char *, const unsigned char *)' Function 0x7fab97015998 'xmlStrEqual' 'int (const unsigned char *, const unsigned char *)'
+              | |-ImplicitCastExpr 0x7fab9702eeb8 <col:23, col:28> 'const unsigned char *' <LValueToRValue>
+              | | `-MemberExpr 0x7fab9702ee10 <col:23, col:28> 'const unsigned char *' lvalue ->name 0x7fab97014d68
+              | |   `-ImplicitCastExpr 0x7fab9702edf8 <col:23> 'struct xmlNode *' <LValueToRValue>
+              | |     `-DeclRefExpr 0x7fab9702edd0 <col:23> 'struct xmlNode *' lvalue ParmVar 0x7fab9702e848 'cur' 'struct xmlNode *'
+              | `-ImplicitCastExpr 0x7fab9702eed0 <col:34> 'const unsigned char *' <NullToPointer>
+              |   `-IntegerLiteral 0x7fab9702ee48 <col:34> 'int' 0
+              |-CallExpr 0x7fab9702efb0 <line:81:6, col:37> 'void'
+              | |-ImplicitCastExpr 0x7fab9702ef98 <col:6> 'void (*)(struct xmlNode *)' <FunctionToPointerDecay>
+              | | `-DeclRefExpr 0x7fab9702eee8 <col:6> 'void (struct xmlNode *)' Function 0x7fab9702dfe0 'xsltParseStylesheetTemplate' 'void (struct xmlNode *)'
+              | `-ImplicitCastExpr 0x7fab9702efe0 <col:34> 'struct xmlNode *' <LValueToRValue>
+              |   `-DeclRefExpr 0x7fab9702ef10 <col:34> 'struct xmlNode *' lvalue ParmVar 0x7fab9702e848 'cur' 'struct xmlNode *'
+              `-<<<NULL>>>

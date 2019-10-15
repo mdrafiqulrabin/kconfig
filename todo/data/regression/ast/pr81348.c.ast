@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fbf8e81a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbf8e81b578 <../Data/C2AST/pr81348.c:8:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fbf8d810458 <line:9:1, col:7> col:7 used b 'short'
+|-VarDecl 0x7fbf8d810568 <line:10:1, col:10> col:10 used c 'float ***'
+`-FunctionDecl 0x7fbf8d810690 <line:12:1, line:20:1> line:12:6 d 'void (void)'
+  `-CompoundStmt 0x7fbf8d810a50 <line:13:1, line:20:1>
+    |-DeclStmt 0x7fbf8d8107c8 <line:14:9, col:18>
+    | `-VarDecl 0x7fbf8d810748 <col:9, col:17> col:13 used e 'int' cinit
+    |   `-IntegerLiteral 0x7fbf8d8107a8 <col:17> 'int' 3
+    |-IfStmt 0x7fbf8d8108c8 <line:16:9, line:17:21>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fbf8d810808 <line:16:13> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fbf8d8107e0 <col:13> 'int' lvalue Var 0x7fbf8e81b578 'a' 'int'
+    | |-BinaryOperator 0x7fbf8d8108a0 <line:17:17, col:21> 'int' '='
+    | | |-DeclRefExpr 0x7fbf8d810820 <col:17> 'int' lvalue Var 0x7fbf8d810748 'e' 'int'
+    | | `-ImplicitCastExpr 0x7fbf8d810888 <col:21> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fbf8d810870 <col:21> 'short' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fbf8d810848 <col:21> 'short' lvalue Var 0x7fbf8d810458 'b' 'short'
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7fbf8d810a28 <line:19:9, col:16> 'float' '='
+      |-UnaryOperator 0x7fbf8d8109b0 <col:9, col:12> 'float' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fbf8d810998 <col:10, col:12> 'float *' <LValueToRValue>
+      |   `-UnaryOperator 0x7fbf8d810978 <col:10, col:12> 'float *' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7fbf8d810960 <col:11, col:12> 'float **' <LValueToRValue>
+      |       `-UnaryOperator 0x7fbf8d810940 <col:11, col:12> 'float **' lvalue prefix '*'
+      |         `-ImplicitCastExpr 0x7fbf8d810928 <col:12> 'float ***' <LValueToRValue>
+      |           `-DeclRefExpr 0x7fbf8d810900 <col:12> 'float ***' lvalue Var 0x7fbf8d810568 'c' 'float ***'
+      `-ImplicitCastExpr 0x7fbf8d810a10 <col:16> 'float' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7fbf8d8109f8 <col:16> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fbf8d8109d0 <col:16> 'int' lvalue Var 0x7fbf8d810748 'e' 'int'

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f8b9402bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8b9406d8d8 <../Data/C2AST/pr42113.c:4:1, line:12:1> line:4:5 foo 'int (int, int)'
+  |-ParmVarDecl 0x7f8b9402c978 <col:10, col:14> col:14 used a 'int'
+  |-ParmVarDecl 0x7f8b9406d800 <col:17, col:21> col:21 used b 'int'
+  `-CompoundStmt 0x7f8b9406dc90 <line:5:1, line:12:1>
+    |-DeclStmt 0x7f8b9406db10 <line:6:3, col:29>
+    | `-VarDecl 0x7f8b9406d9e0 <col:3, col:28> col:7 used bar 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8b9406daf8 <col:13, col:28> 'int' <IntegralCast>
+    |     `-BinaryOperator 0x7f8b9406dad0 <col:13, col:28> 'unsigned long' '*'
+    |       |-ImplicitCastExpr 0x7f8b9406dab8 <col:13> 'unsigned long' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7f8b9406daa0 <col:13> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f8b9406da40 <col:13> 'int' lvalue ParmVar 0x7f8b9402c978 'a' 'int'
+    |       `-UnaryExprOrTypeTraitExpr 0x7f8b9406da80 <col:17, col:28> 'unsigned long' sizeof 'int'
+    |-IfStmt 0x7f8b9406dc00 <line:8:3, line:9:23>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8b9406db50 <line:8:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8b9406db28 <col:7> 'int' lvalue ParmVar 0x7f8b9406d800 'b' 'int'
+    | |-CompoundAssignOperator 0x7f8b9406dbc8 <line:9:5, col:23> 'int' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | | |-DeclRefExpr 0x7f8b9406db68 <col:5> 'int' lvalue Var 0x7f8b9406d9e0 'bar' 'int'
+    | | `-UnaryExprOrTypeTraitExpr 0x7f8b9406dba8 <col:12, col:23> 'unsigned long' sizeof 'int'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8b9406dc78 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f8b9406dc60 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8b9406dc38 <col:10> 'int' lvalue Var 0x7f8b9406d9e0 'bar' 'int'

@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fba91027ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fba90018468 <../Data/C2AST/pr83979.c:3:1, line:7:1> line:4:1 foo 'int (char *)'
+  |-ParmVarDecl 0x7fba91028778 <col:6, col:12> col:12 used p 'char *'
+  `-CompoundStmt 0x7fba90018658 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fba90018640 <line:6:3, col:21>
+      `-BinaryOperator 0x7fba90018618 <col:10, col:21> 'int' '<'
+        |-BinaryOperator 0x7fba900185b0 <col:10, col:14> 'char *' '+'
+        | |-ImplicitCastExpr 0x7fba90018598 <col:10> 'char *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fba90018550 <col:10> 'char *' lvalue ParmVar 0x7fba91028778 'p' 'char *'
+        | `-IntegerLiteral 0x7fba90018578 <col:14> 'int' 1000
+        `-ImplicitCastExpr 0x7fba90018600 <col:21> 'char *' <LValueToRValue>
+          `-DeclRefExpr 0x7fba900185d8 <col:21> 'char *' lvalue ParmVar 0x7fba91028778 'p' 'char *'

@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7f9b120260e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9b12067cd0 <../Data/C2AST/pr39431.c:6:1, col:29> col:13 used bar 'void (char *, int)' extern
+| |-ParmVarDecl 0x7f9b12026d78 <col:18, col:23> col:24 'char *'
+| `-ParmVarDecl 0x7f9b12067c00 <col:26> col:29 'int'
+|-FunctionDecl 0x7f9b12068068 <line:8:1, line:15:1> line:9:1 foo 'int (long long *, long long, long long *, int)'
+| |-ParmVarDecl 0x7f9b12067e00 <col:6, col:17> col:17 used p 'long long *'
+| |-ParmVarDecl 0x7f9b12067e78 <col:20, col:30> col:30 used oldv 'long long'
+| |-ParmVarDecl 0x7f9b12067ef0 <col:36, col:47> col:47 used q 'long long *'
+| |-ParmVarDecl 0x7f9b12067f68 <col:50, col:54> col:54 used n 'int'
+| `-CompoundStmt 0x7f9b12069040 <line:10:1, line:15:1>
+|   |-DeclStmt 0x7f9b12068228 <line:11:3, col:14>
+|   | `-VarDecl 0x7f9b120681c8 <col:3, col:13> col:8 used buf 'char [n]'
+|   |-CallExpr 0x7f9b12068300 <line:12:3, col:14> 'void'
+|   | |-ImplicitCastExpr 0x7f9b120682e8 <col:3> 'void (*)(char *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9b12068240 <col:3> 'void (char *, int)' Function 0x7f9b12067cd0 'bar' 'void (char *, int)'
+|   | |-ImplicitCastExpr 0x7f9b12068338 <col:8> 'char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9b12068268 <col:8> 'char [n]' lvalue Var 0x7f9b120681c8 'buf' 'char [n]'
+|   | `-ImplicitCastExpr 0x7f9b12068350 <col:13> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f9b12068290 <col:13> 'int' lvalue ParmVar 0x7f9b12067f68 'n' 'int'
+|   |-BinaryOperator 0x7f9b12068a60 <line:13:3, col:66> 'long long' '='
+|   | |-ArraySubscriptExpr 0x7f9b12068430 <col:3, col:12> 'long long' lvalue
+|   | | |-ImplicitCastExpr 0x7f9b12068418 <col:3> 'long long *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9b12068368 <col:3> 'long long *' lvalue ParmVar 0x7f9b12067e00 'p' 'long long *'
+|   | | `-BinaryOperator 0x7f9b120683f0 <col:5, col:11> 'int' '+'
+|   | |   |-IntegerLiteral 0x7f9b12068390 <col:5> 'int' 256
+|   | |   `-ImplicitCastExpr 0x7f9b120683d8 <col:11> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9b120683b0 <col:11> 'int' lvalue ParmVar 0x7f9b12067f68 'n' 'int'
+|   | `-CallExpr 0x7f9b12068700 <col:16, col:66> 'long long'
+|   |   |-ImplicitCastExpr 0x7f9b12068a48 <col:16> 'long long (*)(volatile long long *, long long, long long, ...)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7f9b120689f0 <col:16> '<builtin fn type>' Function 0x7f9b120687b8 '__sync_val_compare_and_swap_8' 'long long (volatile long long *, long long, long long, ...)'
+|   |   |-BinaryOperator 0x7f9b120685d0 <col:45, col:49> 'long long *' '+'
+|   |   | |-ImplicitCastExpr 0x7f9b120685a0 <col:45> 'long long *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f9b12068550 <col:45> 'long long *' lvalue ParmVar 0x7f9b12067e00 'p' 'long long *'
+|   |   | `-ImplicitCastExpr 0x7f9b120685b8 <col:49> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f9b12068578 <col:49> 'int' lvalue ParmVar 0x7f9b12067f68 'n' 'int'
+|   |   |-ImplicitCastExpr 0x7f9b120689d8 <col:52> 'long long' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9b120685f8 <col:52> 'long long' lvalue ParmVar 0x7f9b12067e78 'oldv' 'long long'
+|   |   `-BinaryOperator 0x7f9b12068698 <col:58, col:65> 'long long' '+'
+|   |     |-ImplicitCastExpr 0x7f9b12068668 <col:58> 'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9b12068620 <col:58> 'long long' lvalue ParmVar 0x7f9b12067e78 'oldv' 'long long'
+|   |     `-ImplicitCastExpr 0x7f9b12068680 <col:65> 'long long' <IntegralCast>
+|   |       `-IntegerLiteral 0x7f9b12068648 <col:65> 'int' 6
+|   `-ReturnStmt 0x7f9b12069028 <line:14:3, col:61>
+|     `-ImplicitCastExpr 0x7f9b12069010 <col:10, col:61> 'int' <IntegralCast>
+|       `-CallExpr 0x7f9b12068ce0 <col:10, col:61> '_Bool'
+|         |-ImplicitCastExpr 0x7f9b12068ff8 <col:10> '_Bool (*)(volatile long long *, long long, long long, ...)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f9b12068fa0 <col:10> '<builtin fn type>' Function 0x7f9b12068d68 '__sync_bool_compare_and_swap_8' '_Bool (volatile long long *, long long, long long, ...)'
+|         |-BinaryOperator 0x7f9b12068bd0 <col:40, col:44> 'long long *' '+'
+|         | |-ImplicitCastExpr 0x7f9b12068ba0 <col:40> 'long long *' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7f9b12068b50 <col:40> 'long long *' lvalue ParmVar 0x7f9b12067ef0 'q' 'long long *'
+|         | `-ImplicitCastExpr 0x7f9b12068bb8 <col:44> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f9b12068b78 <col:44> 'int' lvalue ParmVar 0x7f9b12067f68 'n' 'int'
+|         |-ImplicitCastExpr 0x7f9b12068f88 <col:47> 'long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f9b12068c00 <col:47> 'long long' lvalue ParmVar 0x7f9b12067e78 'oldv' 'long long'
+|         `-BinaryOperator 0x7f9b12068ca0 <col:53, col:60> 'long long' '+'
+|           |-ImplicitCastExpr 0x7f9b12068c70 <col:53> 'long long' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f9b12068c28 <col:53> 'long long' lvalue ParmVar 0x7f9b12067e78 'oldv' 'long long'
+|           `-ImplicitCastExpr 0x7f9b12068c88 <col:60> 'long long' <IntegralCast>
+|             `-IntegerLiteral 0x7f9b12068c50 <col:60> 'int' 8
+|-FunctionDecl 0x7f9b12068488 <line:13:16> col:16 implicit used __sync_val_compare_and_swap 'void ()' extern
+|-FunctionDecl 0x7f9b120687b8 <col:16> col:16 implicit __sync_val_compare_and_swap_8 'long long (volatile long long *, long long, long long, ...)' extern
+| |-ParmVarDecl 0x7f9b12068858 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+| |-ParmVarDecl 0x7f9b120688b8 <<invalid sloc>> <invalid sloc> 'long long'
+| |-ParmVarDecl 0x7f9b12068918 <<invalid sloc>> <invalid sloc> 'long long'
+| `-NoThrowAttr 0x7f9b12068990 <col:16> Implicit
+|-FunctionDecl 0x7f9b12068a88 <line:14:10> col:10 implicit used __sync_bool_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7f9b12068d68 <col:10> col:10 implicit __sync_bool_compare_and_swap_8 '_Bool (volatile long long *, long long, long long, ...)' extern
+  |-ParmVarDecl 0x7f9b12068e08 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+  |-ParmVarDecl 0x7f9b12068e68 <<invalid sloc>> <invalid sloc> 'long long'
+  |-ParmVarDecl 0x7f9b12068ec8 <<invalid sloc>> <invalid sloc> 'long long'
+  `-NoThrowAttr 0x7f9b12068f40 <col:10> Implicit

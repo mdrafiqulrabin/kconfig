@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe99c0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe99c018160 <../Data/C2AST/pr26421.c:4:9, line:8:1> line:4:9 struct definition
+| |-FieldDecl 0x7fe99c059038 <line:5:3, col:7> col:7 referenced i 'int'
+| |-FieldDecl 0x7fe99c059098 <line:6:3, col:7> col:7 j 'int'
+| `-FieldDecl 0x7fe99c0590f8 <line:7:3, col:7> col:7 k 'int'
+|-TypedefDecl 0x7fe99c059190 <line:4:1, line:8:3> col:3 referenced Foo 'struct Foo':'Foo'
+| `-ElaboratedType 0x7fe99c059140 'struct Foo' sugar
+|   `-RecordType 0x7fe99c059000 'Foo'
+|     `-Record 0x7fe99c018160 ''
+|-FunctionDecl 0x7fe99c059390 <line:10:1, col:14> col:6 used bar 'void (Foo *)'
+| `-ParmVarDecl 0x7fe99c059288 <col:10, col:13> col:14 'Foo *'
+`-FunctionDecl 0x7fe99c059548 <line:11:1, line:17:1> line:11:5 foo 'int (void)'
+  `-CompoundStmt 0x7fe99c059910 <line:12:1, line:17:1>
+    |-DeclStmt 0x7fe99c059658 <line:13:3, col:8>
+    | `-VarDecl 0x7fe99c0595f8 <col:3, col:7> col:7 used a 'Foo':'Foo'
+    |-BinaryOperator 0x7fe99c0596f0 <line:14:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fe99c059698 <col:3, col:5> 'int' lvalue .i 0x7fe99c059038
+    | | `-DeclRefExpr 0x7fe99c059670 <col:3> 'Foo':'Foo' lvalue Var 0x7fe99c0595f8 'a' 'Foo':'Foo'
+    | `-IntegerLiteral 0x7fe99c0596d0 <col:9> 'int' 1
+    |-CallExpr 0x7fe99c059850 <line:15:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fe99c059838 <col:3> 'void (*)(Foo *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe99c059770 <col:3> 'void (Foo *)' Function 0x7fe99c059390 'bar' 'void (Foo *)'
+    | `-UnaryOperator 0x7fe99c0597c0 <col:7, col:8> 'Foo *' prefix '&'
+    |   `-DeclRefExpr 0x7fe99c059798 <col:8> 'Foo':'Foo' lvalue Var 0x7fe99c0595f8 'a' 'Foo':'Foo'
+    `-ReturnStmt 0x7fe99c0598f8 <line:16:3, col:12>
+      `-ImplicitCastExpr 0x7fe99c0598e0 <col:10, col:12> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fe99c0598a8 <col:10, col:12> 'int' lvalue .i 0x7fe99c059038
+          `-DeclRefExpr 0x7fe99c059880 <col:10> 'Foo':'Foo' lvalue Var 0x7fe99c0595f8 'a' 'Foo':'Foo'

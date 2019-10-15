@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fb0bf01a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb0bf01b578 <../Data/C2AST/pr79354.c:8:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7fb0be022458 <col:1, col:8> col:8 used f 'int'
+|-VarDecl 0x7fb0be0224d0 <col:1, col:11> col:11 used g 'int'
+|-VarDecl 0x7fb0be022568 <line:9:1, col:7> col:7 used e 'float'
+|-VarDecl 0x7fb0be0225e0 <line:10:1, col:15> col:15 used d 'unsigned long'
+|-FunctionDecl 0x7fb0be022740 <line:12:1, line:22:1> line:13:1 foo 'void (int *)'
+| |-ParmVarDecl 0x7fb0be022680 <col:6, col:11> col:11 used a 'int *'
+| `-CompoundStmt 0x7fb0be022fd0 <line:14:1, line:22:1>
+|   `-ForStmt 0x7fb0be022f98 <line:15:3, line:21:7>
+|     |-BinaryOperator 0x7fb0be022830 <line:15:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fb0be0227e8 <col:8> 'int' lvalue Var 0x7fb0be0224d0 'g' 'int'
+|     | `-IntegerLiteral 0x7fb0be022810 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb0be0228b8 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fb0be0228a0 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fb0be022858 <col:15> 'int' lvalue Var 0x7fb0be0224d0 'g' 'int'
+|     | `-IntegerLiteral 0x7fb0be022880 <col:19> 'int' 32
+|     |-UnaryOperator 0x7fb0be022908 <col:23, col:24> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fb0be0228e0 <col:23> 'int' lvalue Var 0x7fb0be0224d0 'g' 'int'
+|     `-IfStmt 0x7fb0be022f60 <line:16:5, line:21:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-ImplicitCastExpr 0x7fb0be022950 <line:16:9> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb0be022928 <col:9> 'int' lvalue Var 0x7fb0be022458 'f' 'int'
+|       |-CompoundStmt 0x7fb0be022f38 <line:17:7, line:21:7>
+|       | |-BinaryOperator 0x7fb0be0229e8 <line:18:9, col:13> 'float' '='
+|       | | |-DeclRefExpr 0x7fb0be022968 <col:9> 'float' lvalue Var 0x7fb0be022568 'e' 'float'
+|       | | `-ImplicitCastExpr 0x7fb0be0229d0 <col:13> 'float' <IntegralToFloating>
+|       | |   `-ImplicitCastExpr 0x7fb0be0229b8 <col:13> 'unsigned long' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7fb0be022990 <col:13> 'unsigned long' lvalue Var 0x7fb0be0225e0 'd' 'unsigned long'
+|       | |-CallExpr 0x7fb0be022e00 <line:19:9, col:49> 'void *'
+|       | | |-ImplicitCastExpr 0x7fb0be022de8 <col:9> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|       | | | `-DeclRefExpr 0x7fb0be022ca8 <col:9> '<builtin fn type>' Function 0x7fb0be022a88 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|       | | |-ImplicitCastExpr 0x7fb0be022e40 <col:27, col:28> 'void *' <BitCast>
+|       | | | `-UnaryOperator 0x7fb0be022cf8 <col:27, col:28> 'int *' prefix '&'
+|       | | |   `-DeclRefExpr 0x7fb0be022cd0 <col:28> 'int' lvalue Var 0x7fb0bf01b578 'b' 'int'
+|       | | |-ImplicitCastExpr 0x7fb0be022e58 <col:31, col:32> 'const void *' <BitCast>
+|       | | | `-UnaryOperator 0x7fb0be022d68 <col:31, col:32> 'float *' prefix '&'
+|       | | |   `-DeclRefExpr 0x7fb0be022d18 <col:32> 'float' lvalue Var 0x7fb0be022568 'e' 'float'
+|       | | `-UnaryExprOrTypeTraitExpr 0x7fb0be022da0 <col:35, col:48> 'unsigned long' sizeof 'float'
+|       | `-BinaryOperator 0x7fb0be022f10 <line:20:9, col:14> 'int' '='
+|       |   |-DeclRefExpr 0x7fb0be022e70 <col:9> 'int' lvalue Var 0x7fb0bf01b578 'b' 'int'
+|       |   `-ImplicitCastExpr 0x7fb0be022ef8 <col:13, col:14> 'int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fb0be022ed8 <col:13, col:14> 'int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fb0be022ec0 <col:14> 'int *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fb0be022e98 <col:14> 'int *' lvalue ParmVar 0x7fb0be022680 'a' 'int *'
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7fb0be022a88 <line:19:9> col:9 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fb0be022b28 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fb0be022b88 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fb0be022be8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fb0be022c60 <col:9> Implicit

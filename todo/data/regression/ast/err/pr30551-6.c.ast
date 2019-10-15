@@ -1,0 +1,22 @@
+../Data/C2AST/pr30551-6.c:5:6: error: first parameter of 'main' (argument count) must be of type 'int'
+void main(char a) {}  
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fe5c882b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5c882b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe5c882b580 '__int128'
+|-TypedefDecl 0x7fe5c882b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5c882b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fe5c882bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5c882b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe5c882b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe5c882bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe5c882bc00 'char *'
+|   `-BuiltinType 0x7fe5c882b380 'char'
+|-TypedefDecl 0x7fe5c882bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe5c882beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe5c882bd20 'struct __va_list_tag'
+|     `-Record 0x7fe5c882bc98 '__va_list_tag'
+`-FunctionDecl 0x7fe5c886ce60 <../Data/C2AST/pr30551-6.c:5:1, col:20> col:6 invalid main 'void (char)'
+  |-ParmVarDecl 0x7fe5c882bf70 <col:11, col:16> col:16 a 'char'
+  `-CompoundStmt 0x7fe5c886d2f0 <col:19, col:20>

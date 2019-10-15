@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f97da0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f97d9829228 <../Data/C2AST/pr38957.c:4:1, line:9:1> line:5:1 foo 'char *(void)'
+| `-CompoundStmt 0x7f97d98294a0 <line:6:1, line:9:1>
+|   |-DeclStmt 0x7f97d98293e8 <line:7:3, col:12>
+|   | `-VarDecl 0x7f97d9829388 <col:3, col:11> col:8 used a 'char [2]'
+|   `-ReturnStmt 0x7f97d9829488 <line:8:3, col:12>
+|     `-BinaryOperator 0x7f97d9829460 <col:10, col:12> 'char *' '+'
+|       |-ImplicitCastExpr 0x7f97d9829448 <col:10> 'char *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7f97d9829400 <col:10> 'char [2]' lvalue Var 0x7f97d9829388 'a' 'char [2]'
+|       `-IntegerLiteral 0x7f97d9829428 <col:12> 'int' 1
+`-FunctionDecl 0x7f97d9829558 <line:11:1, line:16:1> line:12:1 bar 'char *(void)'
+  `-CompoundStmt 0x7f97d9829708 <line:13:1, line:16:1>
+    |-DeclStmt 0x7f97d9829698 <line:14:3, col:12>
+    | `-VarDecl 0x7f97d9829638 <col:3, col:11> col:8 used a 'char [2]'
+    `-ReturnStmt 0x7f97d98296f0 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7f97d98296d8 <col:10> 'char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f97d98296b0 <col:10> 'char [2]' lvalue Var 0x7f97d9829638 'a' 'char [2]'

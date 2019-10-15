@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fa29d02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa29d02c978 <../Data/C2AST/pr31628.c:6:1, col:13> col:13 referenced tt 'int'
+| `-BuiltinType 0x7fa29d02bde0 'int'
+|-TypedefDecl 0x7fa29e800018 <col:1, col:18> col:18 referenced lptt 'int *'
+| `-PointerType 0x7fa29d02c9d0 'int *'
+|   `-BuiltinType 0x7fa29d02bde0 'int'
+|-FunctionDecl 0x7fa29e800218 <line:8:1, col:42> col:34 used bar 'int (lptt) __attribute__((stdcall))':'int (lptt)'
+| `-ParmVarDecl 0x7fa29e8000c0 <col:38> col:42 'lptt':'int *'
+|-FunctionDecl 0x7fa29e800478 prev 0x7fa29e800218 <line:10:1, line:13:1> line:10:34 used bar 'int (lptt) __attribute__((stdcall))':'int (lptt)'
+| |-ParmVarDecl 0x7fa29e800358 <col:38, col:42> col:42 x 'tt *'
+| `-CompoundStmt 0x7fa29e800558 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7fa29e800540 <line:12:3, col:10>
+|     `-IntegerLiteral 0x7fa29e800520 <col:10> 'int' 0
+|-FunctionDecl 0x7fa29e800638 <line:15:1, line:19:1> line:16:1 used foo 'int (void)'
+| `-CompoundStmt 0x7fa29e8007f0 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7fa29e8007d8 <line:18:3, col:16>
+|     `-CallExpr 0x7fa29e800790 <col:10, col:16> 'int'
+|       |-ImplicitCastExpr 0x7fa29e800778 <col:10> 'int (*)(lptt) __attribute__((stdcall))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa29e8006d8 <col:10> 'int (lptt) __attribute__((stdcall))':'int (lptt)' Function 0x7fa29e800478 'bar' 'int (lptt) __attribute__((stdcall))':'int (lptt)'
+|       `-ImplicitCastExpr 0x7fa29e8007c0 <col:15> 'lptt':'int *' <NullToPointer>
+|         `-IntegerLiteral 0x7fa29e800700 <col:15> 'int' 0
+`-FunctionDecl 0x7fa29e800860 <line:21:1, line:25:1> line:22:1 main 'int ()'
+  `-CompoundStmt 0x7fa29e8009b0 <line:23:1, line:25:1>
+    `-ReturnStmt 0x7fa29e800998 <line:24:3, col:15>
+      `-CallExpr 0x7fa29e800970 <col:10, col:15> 'int'
+        `-ImplicitCastExpr 0x7fa29e800958 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fa29e800900 <col:10> 'int (void)' Function 0x7fa29e800638 'foo' 'int (void)'

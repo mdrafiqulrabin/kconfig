@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7f926c82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f926c862050 <../Data/C2AST/pr53663-3.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f926c8620f0 prev 0x7f926c862050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f926c862190 <line:5:1, line:9:1> line:5:7 union u definition
+| |-FieldDecl 0x7f926c862258 <line:7:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7f926c8622b8 <line:8:3, col:9> col:9 referenced f 'float'
+|-VarDecl 0x7f926c862350 <line:5:1, line:9:3> col:3 used v 'union u':'union u'
+|-FunctionDecl 0x7f926c862518 <line:11:1, line:17:1> line:11:7 used foo 'float (float *)'
+| |-ParmVarDecl 0x7f926c862450 <col:12, col:19> col:19 used f 'float *'
+| `-CompoundStmt 0x7f926c8628c8 <line:12:1, line:17:1>
+|   |-BinaryOperator 0x7f926c862658 <line:13:3, col:8> 'float' '='
+|   | |-UnaryOperator 0x7f926c862600 <col:3, col:4> 'float' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f926c8625e8 <col:4> 'float *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f926c8625c0 <col:4> 'float *' lvalue ParmVar 0x7f926c862450 'f' 'float *'
+|   | `-ImplicitCastExpr 0x7f926c862640 <col:8> 'float' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7f926c862620 <col:8> 'int' 1
+|   |-BinaryOperator 0x7f926c862700 <line:14:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7f926c8626a8 <col:3, col:5> 'int' lvalue .i 0x7f926c862258
+|   | | `-DeclRefExpr 0x7f926c862680 <col:3> 'union u':'union u' lvalue Var 0x7f926c862350 'v' 'union u':'union u'
+|   | `-IntegerLiteral 0x7f926c8626e0 <col:9> 'int' 0
+|   |-BinaryOperator 0x7f926c862810 <line:15:3, col:9> 'float' '='
+|   | |-MemberExpr 0x7f926c8627a0 <col:3, col:5> 'float' lvalue .f 0x7f926c8622b8
+|   | | `-DeclRefExpr 0x7f926c862778 <col:3> 'union u':'union u' lvalue Var 0x7f926c862350 'v' 'union u':'union u'
+|   | `-ImplicitCastExpr 0x7f926c8627f8 <col:9> 'float' <FloatingCast>
+|   |   `-FloatingLiteral 0x7f926c8627d8 <col:9> 'double' 0.000000e+00
+|   `-ReturnStmt 0x7f926c8628b0 <line:16:3, col:11>
+|     `-ImplicitCastExpr 0x7f926c862898 <col:10, col:11> 'float' <LValueToRValue>
+|       `-UnaryOperator 0x7f926c862878 <col:10, col:11> 'float' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7f926c862860 <col:11> 'float *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f926c862838 <col:11> 'float *' lvalue ParmVar 0x7f926c862450 'f' 'float *'
+`-FunctionDecl 0x7f926c862950 <line:19:1, line:24:1> line:19:5 main 'int ()'
+  `-CompoundStmt 0x7f926c862c78 <line:20:1, line:24:1>
+    |-IfStmt 0x7f926c862c08 <line:21:3, line:22:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f926c862b48 <line:21:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f926c862b30 <col:7, col:16> 'double' <FloatingCast>
+    | | | `-CallExpr 0x7f926c862ae0 <col:7, col:16> 'float'
+    | | |   |-ImplicitCastExpr 0x7f926c862ac8 <col:7> 'float (*)(float *)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7f926c8629f0 <col:7> 'float (float *)' Function 0x7f926c862518 'foo' 'float (float *)'
+    | | |   `-UnaryOperator 0x7f926c862a78 <col:12, col:15> 'float *' prefix '&'
+    | | |     `-MemberExpr 0x7f926c862a40 <col:13, col:15> 'float' lvalue .f 0x7f926c8622b8
+    | | |       `-DeclRefExpr 0x7f926c862a18 <col:13> 'union u':'union u' lvalue Var 0x7f926c862350 'v' 'union u':'union u'
+    | | `-FloatingLiteral 0x7f926c862b10 <col:21> 'double' 0.000000e+00
+    | |-CallExpr 0x7f926c862be0 <line:22:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f926c862bc8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f926c862b70 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f926c8620f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f926c862c60 <line:23:3, col:10>
+      `-IntegerLiteral 0x7f926c862c40 <col:10> 'int' 0

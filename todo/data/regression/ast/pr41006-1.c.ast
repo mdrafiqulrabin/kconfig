@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fe0b40184e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe0b5801a60 <../Data/C2AST/pr41006-1.c:1:1, col:24> col:15 referenced FARPROC 'int (*)()'
+| `-PointerType 0x7fe0b5801a00 'int (*)()'
+|   `-ParenType 0x7fe0b4019190 'int ()' sugar
+|     `-FunctionNoProtoType 0x7fe0b4019160 'int ()' cdecl
+|       `-BuiltinType 0x7fe0b40185e0 'int'
+|-TypedefDecl 0x7fe0b5801c38 <line:3:1, col:35> col:15 referenced LPFN_ACCEPTEX 'int (*)(void *)'
+| `-PointerType 0x7fe0b5801bd0 'int (*)(void *)'
+|   `-ParenType 0x7fe0b5801b70 'int (void *)' sugar
+|     `-FunctionProtoType 0x7fe0b5801b30 'int (void *)' cdecl
+|       |-BuiltinType 0x7fe0b40185e0 'int'
+|       `-PointerType 0x7fe0b40189e0 'void *'
+|         `-BuiltinType 0x7fe0b4018540 'void'
+|-VarDecl 0x7fe0b5801cc0 <line:4:1, col:22> col:22 used acceptex_fn 'LPFN_ACCEPTEX':'int (*)(void *)' static
+|-FunctionDecl 0x7fe0b5801e08 <line:6:1, col:20> col:5 used xWSAIoctl 'int (void *)'
+| `-ParmVarDecl 0x7fe0b5801d78 <col:15, col:19> col:20 'void *'
+|-FunctionDecl 0x7fe0b5802040 <line:7:1, line:12:1> line:7:13 used get_fn 'void (FARPROC *)' static
+| |-ParmVarDecl 0x7fe0b5801f38 <col:20, col:29> col:29 used fn 'FARPROC *'
+| `-CompoundStmt 0x7fe0b5802360 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7fe0b5802158 <line:9:5, col:17>
+|   | `-VarDecl 0x7fe0b58020f8 <col:5, col:13> col:13 used func 'FARPROC':'int (*)()'
+|   `-IfStmt 0x7fe0b5802328 <line:10:5, line:11:15>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fe0b5802240 <line:10:9, col:26> 'int' prefix '!'
+|     | `-CallExpr 0x7fe0b58021f8 <col:10, col:26> 'int'
+|     |   |-ImplicitCastExpr 0x7fe0b58021e0 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7fe0b5802170 <col:10> 'int (void *)' Function 0x7fe0b5801e08 'xWSAIoctl' 'int (void *)'
+|     |   `-ImplicitCastExpr 0x7fe0b5802228 <col:21, col:22> 'void *' <BitCast>
+|     |     `-UnaryOperator 0x7fe0b58021c0 <col:21, col:22> 'FARPROC *' prefix '&'
+|     |       `-DeclRefExpr 0x7fe0b5802198 <col:22> 'FARPROC':'int (*)()' lvalue Var 0x7fe0b58020f8 'func' 'FARPROC':'int (*)()'
+|     |-BinaryOperator 0x7fe0b5802300 <line:11:9, col:15> 'FARPROC':'int (*)()' '='
+|     | |-UnaryOperator 0x7fe0b58022a0 <col:9, col:10> 'FARPROC':'int (*)()' lvalue prefix '*'
+|     | | `-ImplicitCastExpr 0x7fe0b5802288 <col:10> 'FARPROC *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fe0b5802260 <col:10> 'FARPROC *' lvalue ParmVar 0x7fe0b5801f38 'fn' 'FARPROC *'
+|     | `-ImplicitCastExpr 0x7fe0b58022e8 <col:15> 'FARPROC':'int (*)()' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe0b58022c0 <col:15> 'FARPROC':'int (*)()' lvalue Var 0x7fe0b58020f8 'func' 'FARPROC':'int (*)()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fe0b58023c8 <line:14:1, line:17:1> line:14:6 get_fn_pointers 'void ()'
+  `-CompoundStmt 0x7fe0b5802640 <line:15:1, line:17:1>
+    `-CallExpr 0x7fe0b5802610 <line:16:5, col:34> 'void'
+      |-ImplicitCastExpr 0x7fe0b58025f8 <col:5> 'void (*)(FARPROC *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe0b5802468 <col:5> 'void (FARPROC *)' Function 0x7fe0b5802040 'get_fn' 'void (FARPROC *)'
+      `-CStyleCastExpr 0x7fe0b5802578 <col:12, col:23> 'FARPROC *' <BitCast>
+        `-UnaryOperator 0x7fe0b5802518 <col:22, col:23> 'LPFN_ACCEPTEX *' prefix '&'
+          `-DeclRefExpr 0x7fe0b5802490 <col:23> 'LPFN_ACCEPTEX':'int (*)(void *)' lvalue Var 0x7fe0b5801cc0 'acceptex_fn' 'LPFN_ACCEPTEX':'int (*)(void *)'

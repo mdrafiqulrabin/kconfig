@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fc107828ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc1080132d8 <../Data/C2AST/pr84873.c:4:1, line:8:1> line:5:1 i1 'int (int, int)'
+  |-ParmVarDecl 0x7fc107829778 <col:5, col:9> col:9 used w3 'int'
+  |-ParmVarDecl 0x7fc108013200 <col:13, col:17> col:17 used n9 'int'
+  `-CompoundStmt 0x7fc108013638 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fc108013620 <line:7:3, col:43>
+      `-BinaryOperator 0x7fc1080135f8 <col:10, col:43> 'int' '>>'
+        |-ImplicitCastExpr 0x7fc1080135e0 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc1080133c8 <col:10> 'int' lvalue ParmVar 0x7fc107829778 'w3' 'int'
+        `-ParenExpr 0x7fc1080135c0 <col:16, col:43> 'long'
+          `-BinaryOperator 0x7fc108013598 <col:17, col:41> 'long' '+'
+            |-CStyleCastExpr 0x7fc1080134d8 <col:17, col:35> 'long' <FloatingToIntegral>
+            | `-ParenExpr 0x7fc1080134b8 <col:27, col:35> 'double'
+            |   `-BinaryOperator 0x7fc108013448 <col:28, col:32> 'double' '+'
+            |     |-ImplicitCastExpr 0x7fc108013430 <col:28> 'double' <IntegralToFloating>
+            |     | `-IntegerLiteral 0x7fc1080133f0 <col:28> 'int' 1
+            |     `-FloatingLiteral 0x7fc108013410 <col:32> 'double' 1.000000e-01
+            `-ImplicitCastExpr 0x7fc108013580 <col:39, col:41> 'long' <IntegralCast>
+              `-UnaryOperator 0x7fc108013560 <col:39, col:41> 'int' prefix '-'
+                `-UnaryOperator 0x7fc108013540 <col:40, col:41> 'int' prefix '!'
+                  `-ImplicitCastExpr 0x7fc108013528 <col:41> 'int' <LValueToRValue>
+                    `-DeclRefExpr 0x7fc108013500 <col:41> 'int' lvalue ParmVar 0x7fc108013200 'n9' 'int'

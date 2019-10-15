@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7feb1101aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7feb1101bb60 <../Data/C2AST/pr13146.c:4:1, line:7:1> line:4:8 struct A definition
+| `-FieldDecl 0x7feb1105ca38 <line:6:3, col:7> col:7 referenced i 'int'
+|-RecordDecl 0x7feb1105ca80 <line:8:1, line:12:1> line:8:8 struct B definition
+| |-FieldDecl 0x7feb1105cb80 <line:10:3, col:12> col:12 a 'struct A':'struct A'
+| `-FieldDecl 0x7feb1105cbe0 <line:11:3, col:7> col:7 referenced j 'int'
+`-FunctionDecl 0x7feb1105cf18 <line:14:1, line:19:1> line:14:5 foo 'int (struct A *, struct B *)'
+  |-ParmVarDecl 0x7feb1105ccf0 <col:10, col:20> col:20 used p 'struct A *'
+  |-ParmVarDecl 0x7feb1105ce00 <col:23, col:33> col:33 used q 'struct B *'
+  `-CompoundStmt 0x7feb1105d230 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7feb1105d0a0 <line:16:3, col:10> 'int' '='
+    | |-MemberExpr 0x7feb1105d048 <col:3, col:6> 'int' lvalue ->i 0x7feb1105ca38
+    | | `-ImplicitCastExpr 0x7feb1105d030 <col:3> 'struct A *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7feb1105d008 <col:3> 'struct A *' lvalue ParmVar 0x7feb1105ccf0 'p' 'struct A *'
+    | `-IntegerLiteral 0x7feb1105d080 <col:10> 'int' 0
+    |-BinaryOperator 0x7feb1105d160 <line:17:3, col:10> 'int' '='
+    | |-MemberExpr 0x7feb1105d108 <col:3, col:6> 'int' lvalue ->j 0x7feb1105cbe0
+    | | `-ImplicitCastExpr 0x7feb1105d0f0 <col:3> 'struct B *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7feb1105d0c8 <col:3> 'struct B *' lvalue ParmVar 0x7feb1105ce00 'q' 'struct B *'
+    | `-IntegerLiteral 0x7feb1105d140 <col:10> 'int' 1
+    `-ReturnStmt 0x7feb1105d218 <line:18:3, col:13>
+      `-ImplicitCastExpr 0x7feb1105d200 <col:10, col:13> 'int' <LValueToRValue>
+        `-MemberExpr 0x7feb1105d1c8 <col:10, col:13> 'int' lvalue ->i 0x7feb1105ca38
+          `-ImplicitCastExpr 0x7feb1105d1b0 <col:10> 'struct A *' <LValueToRValue>
+            `-DeclRefExpr 0x7feb1105d188 <col:10> 'struct A *' lvalue ParmVar 0x7feb1105ccf0 'p' 'struct A *'

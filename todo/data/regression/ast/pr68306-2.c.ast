@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fa10e0272e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa10e027f60 <../Data/C2AST/pr68306-2.c:5:1, line:8:1> line:5:1 struct definition
+| |-FieldDecl 0x7fa10e06b638 <line:6:5, col:9> col:9 referenced tz_minuteswest 'int'
+| `-FieldDecl 0x7fa10e06b698 <line:7:5, col:9> col:9 referenced tz_dsttime 'int'
+|-VarDecl 0x7fa10e06b730 <line:5:1, line:8:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)'
+|-VarDecl 0x7fa10e06b7f0 <line:5:1, line:8:6> col:6 used b 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)'
+`-FunctionDecl 0x7fa10e06b8b8 <line:9:1, line:12:1> line:9:6 fn1 'void ()'
+  `-CompoundStmt 0x7fa10e06bba8 <col:12, line:12:1>
+    |-BinaryOperator 0x7fa10e06ba30 <line:10:5, col:26> 'int' '='
+    | |-MemberExpr 0x7fa10e06b980 <col:5, col:7> 'int' lvalue .tz_minuteswest 0x7fa10e06b638
+    | | `-DeclRefExpr 0x7fa10e06b958 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)' lvalue Var 0x7fa10e06b7f0 'b' 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)'
+    | `-ImplicitCastExpr 0x7fa10e06ba18 <col:24, col:26> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fa10e06b9e0 <col:24, col:26> 'int' lvalue .tz_minuteswest 0x7fa10e06b638
+    |     `-DeclRefExpr 0x7fa10e06b9b8 <col:24> 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)' lvalue Var 0x7fa10e06b730 'a' 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)'
+    `-BinaryOperator 0x7fa10e06bb80 <line:11:5, col:22> 'int' '='
+      |-MemberExpr 0x7fa10e06bad0 <col:5, col:7> 'int' lvalue .tz_dsttime 0x7fa10e06b698
+      | `-DeclRefExpr 0x7fa10e06baa8 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)' lvalue Var 0x7fa10e06b7f0 'b' 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)'
+      `-ImplicitCastExpr 0x7fa10e06bb68 <col:20, col:22> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fa10e06bb30 <col:20, col:22> 'int' lvalue .tz_dsttime 0x7fa10e06b698
+          `-DeclRefExpr 0x7fa10e06bb08 <col:20> 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)' lvalue Var 0x7fa10e06b730 'a' 'struct (anonymous struct at ../Data/C2AST/pr68306-2.c:5:1)':'struct (anonymous at ../Data/C2AST/pr68306-2.c:5:1)'

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fb7fb82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb7fb849a00 <../Data/C2AST/pr53425-2.c:6:1, col:15> col:15 referenced __v2sf '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7fb7fb82c980 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7fb7fb82bee0 'float'
+|-VarDecl 0x7fb7fb849a90 <line:8:1, col:15> col:15 used x '__v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' extern
+|-FunctionDecl 0x7fb7fb849c40 <line:10:1, col:24> col:13 used bar 'void (__v2sf)' extern
+| `-ParmVarDecl 0x7fb7fb849b40 <col:18> col:24 '__v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+`-FunctionDecl 0x7fb7fb849db0 <line:11:1, line:15:1> line:12:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb7fb849f58 <line:13:1, line:15:1>
+    `-CallExpr 0x7fb7fb849f10 <line:14:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fb7fb849ef8 <col:3> 'void (*)(__v2sf)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb7fb849e50 <col:3> 'void (__v2sf)' Function 0x7fb7fb849c40 'bar' 'void (__v2sf)'
+      `-ImplicitCastExpr 0x7fb7fb849f40 <col:8> '__v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+        `-DeclRefExpr 0x7fb7fb849e78 <col:8> '__v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fb7fb849a90 'x' '__v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'

@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fb2a20288e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb2a2804450 <../Data/C2AST/pr23960.c:3:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb2a28044f0 prev 0x7fb2a2804450 <col:1, col:44> col:6 used abort 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fb2a28046f0 <line:5:1, line:10:1> line:6:1 foo 'void (char *, unsigned long)'
+  |-ParmVarDecl 0x7fb2a28045a8 <col:6, col:12> col:12 used d 'char *'
+  |-ParmVarDecl 0x7fb2a2804620 <col:15, col:33> col:33 used n 'unsigned long'
+  `-CompoundStmt 0x7fb2a28049c0 <line:7:1, line:10:1>
+    `-IfStmt 0x7fb2a2804988 <line:8:3, line:9:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb2a28048c8 <line:8:7, col:15> 'int' '>'
+      | |-BinaryOperator 0x7fb2a2804860 <col:7, col:11> 'char *' '+'
+      | | |-ImplicitCastExpr 0x7fb2a2804830 <col:7> 'char *' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fb2a28047e0 <col:7> 'char *' lvalue ParmVar 0x7fb2a28045a8 'd' 'char *'
+      | | `-ImplicitCastExpr 0x7fb2a2804848 <col:11> 'unsigned long' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fb2a2804808 <col:11> 'unsigned long' lvalue ParmVar 0x7fb2a2804620 'n' 'unsigned long'
+      | `-ImplicitCastExpr 0x7fb2a28048b0 <col:15> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb2a2804888 <col:15> 'char *' lvalue ParmVar 0x7fb2a28045a8 'd' 'char *'
+      |-CallExpr 0x7fb2a2804960 <line:9:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7fb2a2804948 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fb2a28048f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb2a28044f0 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fb80182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb802014260 <../Data/C2AST/pr48517.c:5:1, col:33> col:6 used bar 'void (const unsigned short *)'
+| `-ParmVarDecl 0x7fb80182c9a0 <col:11, col:32> col:33 'const unsigned short *'
+`-FunctionDecl 0x7fb802014410 <line:7:1, line:13:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb8020148e8 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fb802014720 <line:10:3, col:77>
+    | `-VarDecl 0x7fb802014530 <col:3, col:76> col:31 used array 'const unsigned short [1]' static cinit
+    |   `-CompoundLiteralExpr 0x7fb8020146f8 <col:41, col:76> 'const unsigned short [1]' lvalue
+    |     `-InitListExpr 0x7fb802014620 <col:67, col:76> 'const unsigned short [1]'
+    |       `-ImplicitCastExpr 0x7fb802014660 <col:69> 'unsigned short' <IntegralCast>
+    |         `-IntegerLiteral 0x7fb8020145b8 <col:69> 'int' 3371
+    |-DeclStmt 0x7fb8020147f0 <line:11:3, col:36>
+    | `-VarDecl 0x7fb802014750 <col:3, col:31> col:25 used ptr 'const unsigned short *' cinit
+    |   `-ImplicitCastExpr 0x7fb8020147d8 <col:31> 'const unsigned short *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fb8020147b0 <col:31> 'const unsigned short [1]' lvalue Var 0x7fb802014530 'array' 'const unsigned short [1]'
+    `-CallExpr 0x7fb8020148a0 <line:12:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7fb802014888 <col:3> 'void (*)(const unsigned short *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb802014808 <col:3> 'void (const unsigned short *)' Function 0x7fb802014260 'bar' 'void (const unsigned short *)'
+      `-ImplicitCastExpr 0x7fb8020148d0 <col:8> 'const unsigned short *' <LValueToRValue>
+        `-DeclRefExpr 0x7fb802014830 <col:8> 'const unsigned short *' lvalue Var 0x7fb802014750 'ptr' 'const unsigned short *'

@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f863682bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f863686d8d8 <../Data/C2AST/pr84953.c:4:7> col:7 implicit used strpbrk 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x7f863686d978 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f863686d9d8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f863686da48 prev 0x7f863686d8d8 <col:1, col:42> col:7 used strpbrk 'char *(const char *, const char *)'
+| |-ParmVarDecl 0x7f863682c978 <col:16, col:27> col:28 'const char *'
+| `-ParmVarDecl 0x7f863686d800 <col:30, col:41> col:42 'const char *'
+`-FunctionDecl 0x7f863686dbd8 <line:6:1, line:11:1> line:7:1 test 'char *(char *)'
+  |-ParmVarDecl 0x7f863686db10 <col:7, col:13> col:13 used p 'char *'
+  `-CompoundStmt 0x7f863686df28 <line:8:1, line:11:1>
+    |-BinaryOperator 0x7f863686dea8 <line:9:3, col:21> 'char *' '='
+    | |-DeclRefExpr 0x7f863686dcc0 <col:3> 'char *' lvalue ParmVar 0x7f863686db10 'p' 'char *'
+    | `-CallExpr 0x7f863686de10 <col:7, col:21> 'char *'
+    |   |-ImplicitCastExpr 0x7f863686ddf8 <col:7> 'char *(*)(const char *, const char *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f863686dce8 <col:7> 'char *(const char *, const char *)' Function 0x7f863686da48 'strpbrk' 'char *(const char *, const char *)'
+    |   |-ImplicitCastExpr 0x7f863686de60 <col:16> 'const char *' <BitCast>
+    |   | `-ImplicitCastExpr 0x7f863686de48 <col:16> 'char *' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f863686dd10 <col:16> 'char *' lvalue ParmVar 0x7f863686db10 'p' 'char *'
+    |   `-ImplicitCastExpr 0x7f863686de90 <col:19> 'const char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f863686de78 <col:19> 'char *' <ArrayToPointerDecay>
+    |       `-StringLiteral 0x7f863686dd78 <col:19> 'char [1]' lvalue ""
+    `-ReturnStmt 0x7f863686df10 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7f863686def8 <col:10> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7f863686ded0 <col:10> 'char *' lvalue ParmVar 0x7f863686db10 'p' 'char *'

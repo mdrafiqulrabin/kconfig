@@ -1,0 +1,19 @@
+../Data/C2AST/pr69225-7.c:7:3: error: FLT_EVAL_METHOD != -1
+# error FLT_EVAL_METHOD != -1
+  ^
+1 error generated.
+TranslationUnitDecl 0x7ffdb30138e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffdb3013e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffdb3013b80 '__int128'
+|-TypedefDecl 0x7ffdb3013ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffdb3013ba0 'unsigned __int128'
+|-TypedefDecl 0x7ffdb30141a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffdb3013fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffdb3013f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffdb3014240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffdb3014200 'char *'
+|   `-BuiltinType 0x7ffdb3013980 'char'
+`-TypedefDecl 0x7ffdb3014508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7ffdb30144b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7ffdb3014320 'struct __va_list_tag'
+      `-Record 0x7ffdb3014298 '__va_list_tag'

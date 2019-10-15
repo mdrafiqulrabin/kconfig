@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fa6b802bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa6b8814200 <../Data/C2AST/pr64453.c:5:1, line:7:1> line:5:6 save_regs 'void ()'
+  `-CompoundStmt 0x7fa6b88143f8 <col:19, line:7:1>
+    `-GCCAsmStmt 0x7fa6b88143a8 <line:6:3, col:30>

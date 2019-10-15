@@ -1,0 +1,1976 @@
+TranslationUnitDecl 0x7facd182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7facd182c978 <../Data/C2AST/pr63594-1.c:34:1, col:19> col:19 referenced llong 'long long'
+| `-BuiltinType 0x7facd182be20 'long long'
+|-TypedefDecl 0x7facd202de98 <line:17:16, <scratch space>:3:1> col:1 referenced vchar64 '__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| `-VectorType 0x7facd202de60 '__attribute__((__vector_size__(64 * sizeof(char)))) char' 64
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd202e020 <line:5:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:7:1 test1char64 'vchar64 (char)'
+| |-ParmVarDecl 0x7facd202df20 <../Data/C2AST/pr63594-1.c:36:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd2033670 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2033600 <<scratch space>:9:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd202e118 <<scratch space>:9:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd202edb8 <col:15, col:22> 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2033000 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e178 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033018 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e1a0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033030 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e1c8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033048 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e1f0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033060 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e218 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033078 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e240 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033090 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e268 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20330a8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e290 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20330c0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e2b8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20330d8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e2e0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20330f0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e308 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033108 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e330 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033120 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e358 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033138 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e380 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033150 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e3a8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033168 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e3d0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033180 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e3f8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033198 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e420 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20331b0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e448 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20331c8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e470 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20331e0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e498 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20331f8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e4c0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033210 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e4e8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033228 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e510 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033240 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e538 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033258 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e560 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033270 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e588 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033288 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e5b0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20332a0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e5d8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20332b8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e600 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20332d0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e628 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20332e8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e650 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033300 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e678 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033318 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e6a0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033330 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e6c8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033348 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e6f0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033360 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e718 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033378 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e740 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033390 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e768 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20333a8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e790 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20333c0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e7b8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20333d8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e7e0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20333f0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e808 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033408 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e830 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033420 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e858 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033438 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e880 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033450 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e8a8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033468 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e8d0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033480 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e8f8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033498 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e920 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20334b0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e948 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20334c8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e970 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20334e0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e998 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20334f8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e9c0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033510 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202e9e8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033528 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ea10 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033540 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ea38 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033558 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ea60 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033570 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ea88 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2033588 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202eab0 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20335a0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ead8 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20335b8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202eb00 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20335d0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202eb28 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd20335e8 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd202eb50 <col:12> 'char' lvalue ParmVar 0x7facd202df20 'c' 'char'
+|   `-ReturnStmt 0x7facd2033658 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2033640 <col:10> 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2033618 <col:10> 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue Var 0x7facd202e118 'v' 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd20337b0 <<scratch space>:12:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:14:1 test2char64 'vchar64 (char *)'
+| |-ParmVarDecl 0x7facd20336a8 <../Data/C2AST/pr63594-1.c:36:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd2030eb8 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2033940 <line:36:3, line:29:11>
+|   | `-VarDecl 0x7facd2033868 <line:36:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd2033928 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2033908 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd20338f0 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20338c8 <col:10> 'char *' lvalue ParmVar 0x7facd20336a8 'p' 'char *'
+|   |-DeclStmt 0x7facd2030e48 <<scratch space>:16:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2033968 <<scratch space>:16:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2030608 <col:15, col:22> 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2030848 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20339c8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030860 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20339f0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030878 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033a18 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030890 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033a40 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20308a8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033a68 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20308c0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033a90 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20308d8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033ab8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20308f0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033ae0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030908 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033b08 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030920 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033b30 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030938 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033b58 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030950 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033b80 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030968 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033ba8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030980 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033bd0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030998 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033bf8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20309b0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033c20 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20309c8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033c48 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20309e0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033c70 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20309f8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033c98 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030a10 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033cc0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030a28 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033ce8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030a40 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033d10 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030a58 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033d38 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030a70 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033d60 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030a88 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033d88 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030aa0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033db0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030ab8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2033dd8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030ad0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fe00 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030ae8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fe28 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b00 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fe50 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b18 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fe78 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b30 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fea0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b48 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fec8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b60 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202fef0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b78 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ff18 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030b90 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ff40 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030ba8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ff68 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030bc0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ff90 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030bd8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ffb8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030bf0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd202ffe0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c08 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030008 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c20 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030030 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c38 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030058 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c50 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030080 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c68 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20300a8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c80 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20300d0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030c98 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20300f8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030cb0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030120 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030cc8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030148 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030ce0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030170 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030cf8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030198 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030d10 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20301c0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030d28 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20301e8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030d40 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030210 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030d58 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030238 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030d70 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030260 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030d88 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030288 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030da0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20302b0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030db8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20302d8 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030dd0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030300 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030de8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030328 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030e00 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030350 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2030e18 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2030378 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2030e30 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20303a0 <col:12> 'char' lvalue Var 0x7facd2033868 'c' 'char'
+|   `-ReturnStmt 0x7facd2030ea0 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2030e88 <col:10> 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2030e60 <col:10> 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue Var 0x7facd2033968 'v' 'vchar64':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd2030fa8 <line:17:16, <scratch space>:19:1> col:1 referenced vchar32 '__attribute__((__vector_size__(32 * sizeof(char)))) char'
+| `-VectorType 0x7facd2030f70 '__attribute__((__vector_size__(32 * sizeof(char)))) char' 32
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd2031130 <line:21:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:23:1 test1char32 'vchar32 (char)'
+| |-ParmVarDecl 0x7facd2031030 <../Data/C2AST/pr63594-1.c:37:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd2031d38 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2031cc8 <<scratch space>:25:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd20311e8 <<scratch space>:25:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2031888 <col:15, col:22> 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd20319c8 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031248 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20319e0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031270 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20319f8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031298 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031a10 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20312c0 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031a28 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20312e8 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031a40 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031310 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031a58 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031338 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031a70 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031360 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031a88 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031388 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031aa0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20313b0 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031ab8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20313d8 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031ad0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031400 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031ae8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031428 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b00 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031450 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b18 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031478 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b30 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20314a0 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b48 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20314c8 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b60 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20314f0 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b78 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031518 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031b90 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031540 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031ba8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031568 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031bc0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031590 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031bd8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20315b8 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031bf0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20315e0 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c08 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031608 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c20 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031630 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c38 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031658 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c50 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2031680 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c68 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20316a8 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c80 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20316d0 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2031c98 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20316f8 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2031cb0 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2031720 <col:12> 'char' lvalue ParmVar 0x7facd2031030 'c' 'char'
+|   `-ReturnStmt 0x7facd2031d20 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2031d08 <col:10> 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2031ce0 <col:10> 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char' lvalue Var 0x7facd20311e8 'v' 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd20342a0 <<scratch space>:28:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:30:1 test2char32 'vchar32 (char *)'
+| |-ParmVarDecl 0x7facd2031d70 <../Data/C2AST/pr63594-1.c:37:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd2034fa8 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2034430 <line:37:3, line:29:11>
+|   | `-VarDecl 0x7facd2034358 <line:37:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd2034418 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd20343f8 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd20343e0 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20343b8 <col:10> 'char *' lvalue ParmVar 0x7facd2031d70 'p' 'char *'
+|   |-DeclStmt 0x7facd2034f38 <<scratch space>:32:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2034458 <<scratch space>:32:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2034af8 <col:15, col:22> 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2034c38 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20344b8 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034c50 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20344e0 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034c68 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034508 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034c80 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034530 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034c98 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034558 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034cb0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034580 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034cc8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20345a8 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034ce0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20345d0 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034cf8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20345f8 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034d10 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034620 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034d28 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034648 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034d40 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034670 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034d58 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034698 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034d70 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20346c0 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034d88 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20346e8 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034da0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034710 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034db8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034738 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034dd0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034760 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034de8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034788 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e00 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20347b0 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e18 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20347d8 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e30 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034800 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e48 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034828 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e60 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034850 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e78 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034878 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034e90 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20348a0 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034ea8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20348c8 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034ec0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20348f0 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034ed8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034918 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034ef0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034940 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2034f08 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2034968 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2034f20 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2034990 <col:12> 'char' lvalue Var 0x7facd2034358 'c' 'char'
+|   `-ReturnStmt 0x7facd2034f90 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2034f78 <col:10> 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2034f50 <col:10> 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char' lvalue Var 0x7facd2034458 'v' 'vchar32':'__attribute__((__vector_size__(32 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd2035098 <line:17:16, <scratch space>:35:1> col:1 referenced vchar16 '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7facd2035060 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd2035228 <line:37:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:39:1 test1char16 'vchar16 (char)'
+| |-ParmVarDecl 0x7facd2035120 <../Data/C2AST/pr63594-1.c:38:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd2035930 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20358c0 <<scratch space>:41:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd20352e0 <<scratch space>:41:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2035680 <col:15, col:22> 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2035740 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035340 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035758 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035368 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035770 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035390 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035788 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20353b8 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20357a0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20353e0 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20357b8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035408 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20357d0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035430 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20357e8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035458 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035800 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035480 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035818 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20354a8 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035830 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20354d0 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035848 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20354f8 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035860 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035520 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035878 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035548 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2035890 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035570 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd20358a8 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2035598 <col:12> 'char' lvalue ParmVar 0x7facd2035120 'c' 'char'
+|   `-ReturnStmt 0x7facd2035918 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2035900 <col:10> 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20358d8 <col:10> 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7facd20352e0 'v' 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd2035a70 <<scratch space>:44:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:46:1 test2char16 'vchar16 (char *)'
+| |-ParmVarDecl 0x7facd2035968 <../Data/C2AST/pr63594-1.c:38:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd2036288 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2035c00 <line:38:3, line:29:11>
+|   | `-VarDecl 0x7facd2035b28 <line:38:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd2035be8 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2035bc8 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2035bb0 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2035b88 <col:10> 'char *' lvalue ParmVar 0x7facd2035968 'p' 'char *'
+|   |-DeclStmt 0x7facd2036218 <<scratch space>:48:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2035c28 <<scratch space>:48:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2035fc8 <col:15, col:22> 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2036088 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035c88 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20360a0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035cb0 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20360b8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035cd8 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20360d0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035d00 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20360e8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035d28 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036100 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035d50 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036118 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035d78 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036130 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035da0 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036148 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035dc8 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036160 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035df0 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036178 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035e18 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036190 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035e40 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20361a8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035e68 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20361c0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035e90 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20361d8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2035eb8 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2036200 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2035ee0 <col:12> 'char' lvalue Var 0x7facd2035b28 'c' 'char'
+|   `-ReturnStmt 0x7facd2036270 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2036258 <col:10> 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2036230 <col:10> 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char' lvalue Var 0x7facd2035c28 'v' 'vchar16':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd2036378 <line:17:16, <scratch space>:51:1> col:1 referenced vchar8 '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+| `-VectorType 0x7facd2036340 '__attribute__((__vector_size__(8 * sizeof(char)))) char' 8
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd2036500 <line:53:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:55:1 test1char8 'vchar8 (char)'
+| |-ParmVarDecl 0x7facd2036400 <../Data/C2AST/pr63594-1.c:39:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd2036988 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2036918 <<scratch space>:57:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd20365b8 <<scratch space>:57:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd20367d8 <col:15, col:22> 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2036858 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036618 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036870 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036640 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036888 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036668 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20368a0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036690 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20368b8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20366b8 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20368d0 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20366e0 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd20368e8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036708 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2036900 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2036730 <col:12> 'char' lvalue ParmVar 0x7facd2036400 'c' 'char'
+|   `-ReturnStmt 0x7facd2036970 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2036958 <col:10> 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2036930 <col:10> 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char' lvalue Var 0x7facd20365b8 'v' 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd2036ac0 <<scratch space>:60:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:62:1 test2char8 'vchar8 (char *)'
+| |-ParmVarDecl 0x7facd20369c0 <../Data/C2AST/pr63594-1.c:39:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd2037048 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2036c50 <line:39:3, line:29:11>
+|   | `-VarDecl 0x7facd2036b78 <line:39:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd2036c38 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2036c18 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2036c00 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2036bd8 <col:10> 'char *' lvalue ParmVar 0x7facd20369c0 'p' 'char *'
+|   |-DeclStmt 0x7facd2036fd8 <<scratch space>:64:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2036c78 <<scratch space>:64:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2036e98 <col:15, col:22> 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2036f18 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036cd8 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036f30 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036d00 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036f48 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036d28 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036f60 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036d50 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036f78 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036d78 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036f90 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036da0 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2036fa8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2036dc8 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2036fc0 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2036df0 <col:12> 'char' lvalue Var 0x7facd2036b78 'c' 'char'
+|   `-ReturnStmt 0x7facd2037030 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2037018 <col:10> 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2036ff0 <col:10> 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char' lvalue Var 0x7facd2036c78 'v' 'vchar8':'__attribute__((__vector_size__(8 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd2037138 <line:17:16, <scratch space>:67:1> col:1 referenced vchar4 '__attribute__((__vector_size__(4 * sizeof(char)))) char'
+| `-VectorType 0x7facd2037100 '__attribute__((__vector_size__(4 * sizeof(char)))) char' 4
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd2039b00 <line:69:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:71:1 test1char4 'vchar4 (char)'
+| |-ParmVarDecl 0x7facd2039a00 <../Data/C2AST/pr63594-1.c:40:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd2039e48 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2039dd8 <<scratch space>:73:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2039bb8 <<scratch space>:73:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd2039d18 <col:15, col:22> 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd2039d78 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2039c18 <col:12> 'char' lvalue ParmVar 0x7facd2039a00 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2039d90 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2039c40 <col:12> 'char' lvalue ParmVar 0x7facd2039a00 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd2039da8 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2039c68 <col:12> 'char' lvalue ParmVar 0x7facd2039a00 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd2039dc0 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2039c90 <col:12> 'char' lvalue ParmVar 0x7facd2039a00 'c' 'char'
+|   `-ReturnStmt 0x7facd2039e30 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2039e18 <col:10> 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2039df0 <col:10> 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char' lvalue Var 0x7facd2039bb8 'v' 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd2039f80 <<scratch space>:76:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:78:1 test2char4 'vchar4 (char *)'
+| |-ParmVarDecl 0x7facd2039e80 <../Data/C2AST/pr63594-1.c:40:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd203a3c8 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd203a110 <line:40:3, line:29:11>
+|   | `-VarDecl 0x7facd203a038 <line:40:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd203a0f8 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd203a0d8 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd203a0c0 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd203a098 <col:10> 'char *' lvalue ParmVar 0x7facd2039e80 'p' 'char *'
+|   |-DeclStmt 0x7facd203a358 <<scratch space>:80:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd203a138 <<scratch space>:80:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd203a298 <col:15, col:22> 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd203a2f8 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203a198 <col:12> 'char' lvalue Var 0x7facd203a038 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd203a310 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203a1c0 <col:12> 'char' lvalue Var 0x7facd203a038 'c' 'char'
+|   |     |-ImplicitCastExpr 0x7facd203a328 <col:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203a1e8 <col:12> 'char' lvalue Var 0x7facd203a038 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd203a340 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203a210 <col:12> 'char' lvalue Var 0x7facd203a038 'c' 'char'
+|   `-ReturnStmt 0x7facd203a3b0 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203a398 <col:10> 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203a370 <col:10> 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char' lvalue Var 0x7facd203a138 'v' 'vchar4':'__attribute__((__vector_size__(4 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd203a4b8 <line:17:16, <scratch space>:83:1> col:1 referenced vchar2 '__attribute__((__vector_size__(2 * sizeof(char)))) char'
+| `-VectorType 0x7facd203a480 '__attribute__((__vector_size__(2 * sizeof(char)))) char' 2
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd203a640 <line:85:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:87:1 test1char2 'vchar2 (char)'
+| |-ParmVarDecl 0x7facd203a540 <../Data/C2AST/pr63594-1.c:41:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd203a8e8 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd203a878 <<scratch space>:89:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd203a6f8 <<scratch space>:89:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd203a7f8 <col:15, col:22> 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd203a848 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203a758 <col:12> 'char' lvalue ParmVar 0x7facd203a540 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd203a860 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203a780 <col:12> 'char' lvalue ParmVar 0x7facd203a540 'c' 'char'
+|   `-ReturnStmt 0x7facd203a8d0 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203a8b8 <col:10> 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203a890 <col:10> 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char' lvalue Var 0x7facd203a6f8 'v' 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd203aa28 <<scratch space>:92:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:94:1 test2char2 'vchar2 (char *)'
+| |-ParmVarDecl 0x7facd203a920 <../Data/C2AST/pr63594-1.c:41:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd203add0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd203abb8 <line:41:3, line:29:11>
+|   | `-VarDecl 0x7facd203aae0 <line:41:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd203aba0 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd203ab80 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd203ab68 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd203ab40 <col:10> 'char *' lvalue ParmVar 0x7facd203a920 'p' 'char *'
+|   |-DeclStmt 0x7facd203ad60 <<scratch space>:96:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd203abe0 <<scratch space>:96:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd203ace0 <col:15, col:22> 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|   |     |-ImplicitCastExpr 0x7facd203ad30 <line:7:12> 'char' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ac40 <col:12> 'char' lvalue Var 0x7facd203aae0 'c' 'char'
+|   |     `-ImplicitCastExpr 0x7facd203ad48 <col:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203ac68 <col:12> 'char' lvalue Var 0x7facd203aae0 'c' 'char'
+|   `-ReturnStmt 0x7facd203adb8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203ada0 <col:10> 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203ad78 <col:10> 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char' lvalue Var 0x7facd203abe0 'v' 'vchar2':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd203aec8 <line:17:16, <scratch space>:99:1> col:1 referenced vchar1 '__attribute__((__vector_size__(1 * sizeof(char)))) char'
+| `-VectorType 0x7facd203ae90 '__attribute__((__vector_size__(1 * sizeof(char)))) char' 1
+|   `-BuiltinType 0x7facd182bd80 'char'
+|-FunctionDecl 0x7facd203b050 <line:101:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:103:1 test1char1 'vchar1 (char)'
+| |-ParmVarDecl 0x7facd203af50 <../Data/C2AST/pr63594-1.c:42:3, line:20:16> col:16 used c 'char'
+| `-CompoundStmt 0x7facd203b2a8 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd203b238 <<scratch space>:105:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd203b108 <<scratch space>:105:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd203b1d8 <col:15, col:22> 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char'
+|   |     `-ImplicitCastExpr 0x7facd203b220 <line:7:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203b168 <col:12> 'char' lvalue ParmVar 0x7facd203af50 'c' 'char'
+|   `-ReturnStmt 0x7facd203b290 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203b278 <col:10> 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203b250 <col:10> 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char' lvalue Var 0x7facd203b108 'v' 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char'
+|-FunctionDecl 0x7facd203b3e0 <<scratch space>:108:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:110:1 test2char1 'vchar1 (char *)'
+| |-ParmVarDecl 0x7facd203b2e0 <../Data/C2AST/pr63594-1.c:42:3, line:27:17> col:17 used p 'char *'
+| `-CompoundStmt 0x7facd203b738 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd203b570 <line:42:3, line:29:11>
+|   | `-VarDecl 0x7facd203b498 <line:42:3, line:29:10> col:5 used c 'char' cinit
+|   |   `-ImplicitCastExpr 0x7facd203b558 <col:9, col:10> 'char' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd203b538 <col:9, col:10> 'char' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd203b520 <col:10> 'char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd203b4f8 <col:10> 'char *' lvalue ParmVar 0x7facd203b2e0 'p' 'char *'
+|   |-DeclStmt 0x7facd203b6c8 <<scratch space>:112:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd203b598 <<scratch space>:112:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char' cinit
+|   |   `-InitListExpr 0x7facd203b668 <col:15, col:22> 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char'
+|   |     `-ImplicitCastExpr 0x7facd203b6b0 <line:7:12> 'char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203b5f8 <col:12> 'char' lvalue Var 0x7facd203b498 'c' 'char'
+|   `-ReturnStmt 0x7facd203b720 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203b708 <col:10> 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203b6e0 <col:10> 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char' lvalue Var 0x7facd203b598 'v' 'vchar1':'__attribute__((__vector_size__(1 * sizeof(char)))) char'
+|-TypedefDecl 0x7facd203b838 <line:17:16, <scratch space>:115:1> col:1 referenced vshort32 '__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| `-VectorType 0x7facd203b800 '__attribute__((__vector_size__(32 * sizeof(short)))) short' 32
+|   `-BuiltinType 0x7facd182bdc0 'short'
+|-FunctionDecl 0x7facd203ba00 <line:117:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:119:1 test1short32 'vshort32 (short)'
+| |-ParmVarDecl 0x7facd203b8c8 <../Data/C2AST/pr63594-1.c:43:3, line:20:16> col:16 used c 'short'
+| `-CompoundStmt 0x7facd203c608 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd203c598 <<scratch space>:121:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd203bab8 <<scratch space>:121:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd203c158 <col:15, col:22> 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd203c298 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bb18 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c2b0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bb40 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c2c8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bb68 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c2e0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bb90 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c2f8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bbb8 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c310 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bbe0 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c328 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bc08 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c340 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bc30 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c358 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bc58 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c370 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bc80 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c388 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bca8 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c3a0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bcd0 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c3b8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bcf8 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c3d0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bd20 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c3e8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bd48 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c400 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bd70 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c418 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bd98 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c430 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bdc0 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c448 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bde8 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c460 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203be10 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c478 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203be38 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c490 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203be60 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c4a8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203be88 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c4c0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203beb0 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c4d8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bed8 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c4f0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bf00 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c508 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bf28 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c520 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bf50 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c538 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bf78 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c550 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bfa0 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203c568 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203bfc8 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd203c580 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203bff0 <col:12> 'short' lvalue ParmVar 0x7facd203b8c8 'c' 'short'
+|   `-ReturnStmt 0x7facd203c5f0 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203c5d8 <col:10> 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203c5b0 <col:10> 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short' lvalue Var 0x7facd203bab8 'v' 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|-FunctionDecl 0x7facd203c770 <<scratch space>:124:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:126:1 test2short32 'vshort32 (short *)'
+| |-ParmVarDecl 0x7facd203c670 <../Data/C2AST/pr63594-1.c:43:3, line:27:17> col:17 used p 'short *'
+| `-CompoundStmt 0x7facd203d4a0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd203c908 <line:43:3, line:29:11>
+|   | `-VarDecl 0x7facd203c830 <line:43:3, line:29:10> col:5 used c 'short' cinit
+|   |   `-ImplicitCastExpr 0x7facd203c8f0 <col:9, col:10> 'short' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd203c8d0 <col:9, col:10> 'short' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd203c8b8 <col:10> 'short *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd203c890 <col:10> 'short *' lvalue ParmVar 0x7facd203c670 'p' 'short *'
+|   |-DeclStmt 0x7facd203d430 <<scratch space>:128:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd203c930 <<scratch space>:128:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd203cff0 <col:15, col:22> 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd203d130 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203c990 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d148 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203c9b8 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d160 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ca00 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d178 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ca28 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d190 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ca50 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d1a8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ca78 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d1c0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203caa0 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d1d8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cac8 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d1f0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203caf0 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d208 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cb18 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d220 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cb40 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d238 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cb68 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d250 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cb90 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d268 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cbb8 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d280 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cbe0 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d298 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cc08 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d2b0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cc30 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d2c8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cc58 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d2e0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cc80 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d2f8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cca8 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d310 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ccd0 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d328 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ccf8 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d340 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cd20 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d358 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cd48 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d370 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cd70 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d388 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cd98 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d3a0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cdc0 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d3b8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203cde8 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d3d0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ce10 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d3e8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ce38 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203d400 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ce60 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd203d418 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203ce88 <col:12> 'short' lvalue Var 0x7facd203c830 'c' 'short'
+|   `-ReturnStmt 0x7facd203d488 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203d470 <col:10> 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203d448 <col:10> 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short' lvalue Var 0x7facd203c930 'v' 'vshort32':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|-TypedefDecl 0x7facd203d598 <line:17:16, <scratch space>:131:1> col:1 referenced vshort16 '__attribute__((__vector_size__(16 * sizeof(short)))) short'
+| `-VectorType 0x7facd203d560 '__attribute__((__vector_size__(16 * sizeof(short)))) short' 16
+|   `-BuiltinType 0x7facd182bdc0 'short'
+|-FunctionDecl 0x7facd203d730 <line:133:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:135:1 test1short16 'vshort16 (short)'
+| |-ParmVarDecl 0x7facd203d628 <../Data/C2AST/pr63594-1.c:44:3, line:20:16> col:16 used c 'short'
+| `-CompoundStmt 0x7facd203de38 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd203ddc8 <<scratch space>:137:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd203d7e8 <<scratch space>:137:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd203db88 <col:15, col:22> 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd203dc48 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d848 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dc60 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d870 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dc78 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d898 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dc90 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d8c0 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dca8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d8e8 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dcc0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d910 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dcd8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d938 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dcf0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d960 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd08 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d988 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd20 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d9b0 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd38 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203d9d8 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd50 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203da00 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd68 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203da28 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd80 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203da50 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203dd98 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203da78 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd203ddb0 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203daa0 <col:12> 'short' lvalue ParmVar 0x7facd203d628 'c' 'short'
+|   `-ReturnStmt 0x7facd203de20 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203de08 <col:10> 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203dde0 <col:10> 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7facd203d7e8 'v' 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+|-FunctionDecl 0x7facd203df70 <<scratch space>:140:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:142:1 test2short16 'vshort16 (short *)'
+| |-ParmVarDecl 0x7facd203de70 <../Data/C2AST/pr63594-1.c:44:3, line:27:17> col:17 used p 'short *'
+| `-CompoundStmt 0x7facd203e780 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd203e108 <line:44:3, line:29:11>
+|   | `-VarDecl 0x7facd203e030 <line:44:3, line:29:10> col:5 used c 'short' cinit
+|   |   `-ImplicitCastExpr 0x7facd203e0f0 <col:9, col:10> 'short' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd203e0d0 <col:9, col:10> 'short' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd203e0b8 <col:10> 'short *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd203e090 <col:10> 'short *' lvalue ParmVar 0x7facd203de70 'p' 'short *'
+|   |-DeclStmt 0x7facd203e710 <<scratch space>:144:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd203e130 <<scratch space>:144:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd203e4d0 <col:15, col:22> 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd203e590 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e190 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e5a8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e1b8 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e5c0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e1e0 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e5d8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e208 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e5f0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e230 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e608 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e258 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e620 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e280 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e638 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e2a8 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e650 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e2d0 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e668 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e2f8 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e680 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e320 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e698 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e348 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e6b0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e370 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e6c8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e398 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203e6e0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203e3c0 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd203e6f8 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203e3e8 <col:12> 'short' lvalue Var 0x7facd203e030 'c' 'short'
+|   `-ReturnStmt 0x7facd203e768 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203e750 <col:10> 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203e728 <col:10> 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue Var 0x7facd203e130 'v' 'vshort16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+|-TypedefDecl 0x7facd203e878 <line:17:16, <scratch space>:147:1> col:1 referenced vshort8 '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+| `-VectorType 0x7facd203e840 '__attribute__((__vector_size__(8 * sizeof(short)))) short' 8
+|   `-BuiltinType 0x7facd182bdc0 'short'
+|-FunctionDecl 0x7facd203ea28 <line:149:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:151:1 test1short8 'vshort8 (short)'
+| |-ParmVarDecl 0x7facd203e908 <../Data/C2AST/pr63594-1.c:45:3, line:20:16> col:16 used c 'short'
+| `-CompoundStmt 0x7facd203eeb0 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd203ee40 <<scratch space>:153:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd203eae0 <<scratch space>:153:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd203ed00 <col:15, col:22> 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd203ed80 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203eb40 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203ed98 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203eb68 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203edb0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203eb90 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203edc8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ebb8 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203ede0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ebe0 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203edf8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ec08 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203ee10 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203ec30 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd203ee28 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203ec58 <col:12> 'short' lvalue ParmVar 0x7facd203e908 'c' 'short'
+|   `-ReturnStmt 0x7facd203ee98 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203ee80 <col:10> 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203ee58 <col:10> 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7facd203eae0 'v' 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+|-FunctionDecl 0x7facd203eff0 <<scratch space>:156:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:158:1 test2short8 'vshort8 (short *)'
+| |-ParmVarDecl 0x7facd203eee8 <../Data/C2AST/pr63594-1.c:45:3, line:27:17> col:17 used p 'short *'
+| `-CompoundStmt 0x7facd203f580 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd203f188 <line:45:3, line:29:11>
+|   | `-VarDecl 0x7facd203f0b0 <line:45:3, line:29:10> col:5 used c 'short' cinit
+|   |   `-ImplicitCastExpr 0x7facd203f170 <col:9, col:10> 'short' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd203f150 <col:9, col:10> 'short' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd203f138 <col:10> 'short *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd203f110 <col:10> 'short *' lvalue ParmVar 0x7facd203eee8 'p' 'short *'
+|   |-DeclStmt 0x7facd203f510 <<scratch space>:160:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd203f1b0 <<scratch space>:160:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd203f3d0 <col:15, col:22> 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd203f450 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f210 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203f468 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f238 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203f480 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f260 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203f498 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f288 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203f4b0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f2b0 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203f4c8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f2d8 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd203f4e0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f300 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd203f4f8 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203f328 <col:12> 'short' lvalue Var 0x7facd203f0b0 'c' 'short'
+|   `-ReturnStmt 0x7facd203f568 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd203f550 <col:10> 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd203f528 <col:10> 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7facd203f1b0 'v' 'vshort8':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+|-TypedefDecl 0x7facd203f678 <line:17:16, <scratch space>:163:1> col:1 referenced vshort4 '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-VectorType 0x7facd203f640 '__attribute__((__vector_size__(4 * sizeof(short)))) short' 4
+|   `-BuiltinType 0x7facd182bdc0 'short'
+|-FunctionDecl 0x7facd203f810 <line:165:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:167:1 test1short4 'vshort4 (short)'
+| |-ParmVarDecl 0x7facd203f708 <../Data/C2AST/pr63594-1.c:46:3, line:20:16> col:16 used c 'short'
+| `-CompoundStmt 0x7facd204bb90 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd204bb20 <<scratch space>:169:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd203f8c8 <<scratch space>:169:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd204ba60 <col:15, col:22> 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd204bac0 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f928 <col:12> 'short' lvalue ParmVar 0x7facd203f708 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd204bad8 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f950 <col:12> 'short' lvalue ParmVar 0x7facd203f708 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd204baf0 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd203f978 <col:12> 'short' lvalue ParmVar 0x7facd203f708 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd204bb08 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd203f9a0 <col:12> 'short' lvalue ParmVar 0x7facd203f708 'c' 'short'
+|   `-ReturnStmt 0x7facd204bb78 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204bb60 <col:10> 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204bb38 <col:10> 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7facd203f8c8 'v' 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|-FunctionDecl 0x7facd204bcd0 <<scratch space>:172:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:174:1 test2short4 'vshort4 (short *)'
+| |-ParmVarDecl 0x7facd204bbc8 <../Data/C2AST/pr63594-1.c:46:3, line:27:17> col:17 used p 'short *'
+| `-CompoundStmt 0x7facd204c120 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd204be68 <line:46:3, line:29:11>
+|   | `-VarDecl 0x7facd204bd90 <line:46:3, line:29:10> col:5 used c 'short' cinit
+|   |   `-ImplicitCastExpr 0x7facd204be50 <col:9, col:10> 'short' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd204be30 <col:9, col:10> 'short' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd204be18 <col:10> 'short *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd204bdf0 <col:10> 'short *' lvalue ParmVar 0x7facd204bbc8 'p' 'short *'
+|   |-DeclStmt 0x7facd204c0b0 <<scratch space>:176:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd204be90 <<scratch space>:176:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd204bff0 <col:15, col:22> 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd204c050 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204bef0 <col:12> 'short' lvalue Var 0x7facd204bd90 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd204c068 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204bf18 <col:12> 'short' lvalue Var 0x7facd204bd90 'c' 'short'
+|   |     |-ImplicitCastExpr 0x7facd204c080 <col:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204bf40 <col:12> 'short' lvalue Var 0x7facd204bd90 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd204c098 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204bf68 <col:12> 'short' lvalue Var 0x7facd204bd90 'c' 'short'
+|   `-ReturnStmt 0x7facd204c108 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204c0f0 <col:10> 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204c0c8 <col:10> 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7facd204be90 'v' 'vshort4':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+|-TypedefDecl 0x7facd204c218 <line:17:16, <scratch space>:179:1> col:1 referenced vshort2 '__attribute__((__vector_size__(2 * sizeof(short)))) short'
+| `-VectorType 0x7facd204c1e0 '__attribute__((__vector_size__(2 * sizeof(short)))) short' 2
+|   `-BuiltinType 0x7facd182bdc0 'short'
+|-FunctionDecl 0x7facd204c3b0 <line:181:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:183:1 test1short2 'vshort2 (short)'
+| |-ParmVarDecl 0x7facd204c2a8 <../Data/C2AST/pr63594-1.c:47:3, line:20:16> col:16 used c 'short'
+| `-CompoundStmt 0x7facd204c658 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd204c5e8 <<scratch space>:185:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd204c468 <<scratch space>:185:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd204c568 <col:15, col:22> 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd204c5b8 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204c4c8 <col:12> 'short' lvalue ParmVar 0x7facd204c2a8 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd204c5d0 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204c4f0 <col:12> 'short' lvalue ParmVar 0x7facd204c2a8 'c' 'short'
+|   `-ReturnStmt 0x7facd204c640 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204c628 <col:10> 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204c600 <col:10> 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short' lvalue Var 0x7facd204c468 'v' 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short'
+|-FunctionDecl 0x7facd204c790 <<scratch space>:188:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:190:1 test2short2 'vshort2 (short *)'
+| |-ParmVarDecl 0x7facd204c690 <../Data/C2AST/pr63594-1.c:47:3, line:27:17> col:17 used p 'short *'
+| `-CompoundStmt 0x7facd204cb40 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd204c928 <line:47:3, line:29:11>
+|   | `-VarDecl 0x7facd204c850 <line:47:3, line:29:10> col:5 used c 'short' cinit
+|   |   `-ImplicitCastExpr 0x7facd204c910 <col:9, col:10> 'short' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd204c8f0 <col:9, col:10> 'short' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd204c8d8 <col:10> 'short *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd204c8b0 <col:10> 'short *' lvalue ParmVar 0x7facd204c690 'p' 'short *'
+|   |-DeclStmt 0x7facd204cad0 <<scratch space>:192:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd204c950 <<scratch space>:192:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd204ca50 <col:15, col:22> 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short'
+|   |     |-ImplicitCastExpr 0x7facd204caa0 <line:7:12> 'short' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204c9b0 <col:12> 'short' lvalue Var 0x7facd204c850 'c' 'short'
+|   |     `-ImplicitCastExpr 0x7facd204cab8 <col:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204c9d8 <col:12> 'short' lvalue Var 0x7facd204c850 'c' 'short'
+|   `-ReturnStmt 0x7facd204cb28 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204cb10 <col:10> 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204cae8 <col:10> 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short' lvalue Var 0x7facd204c950 'v' 'vshort2':'__attribute__((__vector_size__(2 * sizeof(short)))) short'
+|-TypedefDecl 0x7facd204cc38 <line:17:16, <scratch space>:195:1> col:1 referenced vshort1 '__attribute__((__vector_size__(1 * sizeof(short)))) short'
+| `-VectorType 0x7facd204cc00 '__attribute__((__vector_size__(1 * sizeof(short)))) short' 1
+|   `-BuiltinType 0x7facd182bdc0 'short'
+|-FunctionDecl 0x7facd204cdd0 <line:197:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:199:1 test1short1 'vshort1 (short)'
+| |-ParmVarDecl 0x7facd204ccc8 <../Data/C2AST/pr63594-1.c:48:3, line:20:16> col:16 used c 'short'
+| `-CompoundStmt 0x7facd204d028 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd204cfb8 <<scratch space>:201:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd204ce88 <<scratch space>:201:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd204cf58 <col:15, col:22> 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short'
+|   |     `-ImplicitCastExpr 0x7facd204cfa0 <line:7:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204cee8 <col:12> 'short' lvalue ParmVar 0x7facd204ccc8 'c' 'short'
+|   `-ReturnStmt 0x7facd204d010 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204cff8 <col:10> 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204cfd0 <col:10> 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short' lvalue Var 0x7facd204ce88 'v' 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short'
+|-FunctionDecl 0x7facd204d160 <<scratch space>:204:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:206:1 test2short1 'vshort1 (short *)'
+| |-ParmVarDecl 0x7facd204d060 <../Data/C2AST/pr63594-1.c:48:3, line:27:17> col:17 used p 'short *'
+| `-CompoundStmt 0x7facd204d4c0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd204d2f8 <line:48:3, line:29:11>
+|   | `-VarDecl 0x7facd204d220 <line:48:3, line:29:10> col:5 used c 'short' cinit
+|   |   `-ImplicitCastExpr 0x7facd204d2e0 <col:9, col:10> 'short' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd204d2c0 <col:9, col:10> 'short' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd204d2a8 <col:10> 'short *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd204d280 <col:10> 'short *' lvalue ParmVar 0x7facd204d060 'p' 'short *'
+|   |-DeclStmt 0x7facd204d450 <<scratch space>:208:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd204d320 <<scratch space>:208:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short' cinit
+|   |   `-InitListExpr 0x7facd204d3f0 <col:15, col:22> 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short'
+|   |     `-ImplicitCastExpr 0x7facd204d438 <line:7:12> 'short' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204d380 <col:12> 'short' lvalue Var 0x7facd204d220 'c' 'short'
+|   `-ReturnStmt 0x7facd204d4a8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204d490 <col:10> 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204d468 <col:10> 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short' lvalue Var 0x7facd204d320 'v' 'vshort1':'__attribute__((__vector_size__(1 * sizeof(short)))) short'
+|-TypedefDecl 0x7facd204d5b8 <line:17:16, <scratch space>:211:1> col:1 referenced vint16 '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7facd204d580 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7facd182bde0 'int'
+|-FunctionDecl 0x7facd204d750 <line:213:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:215:1 test1int16 'vint16 (int)'
+| |-ParmVarDecl 0x7facd204d648 <../Data/C2AST/pr63594-1.c:49:3, line:20:16> col:16 used c 'int'
+| `-CompoundStmt 0x7facd2065e60 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2065df0 <<scratch space>:217:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd204d808 <<scratch space>:217:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2065bb0 <col:15, col:22> 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd2065c70 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d868 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065c88 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d890 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065ca0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d8b8 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065cb8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d8e0 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065cd0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d908 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065ce8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d930 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d00 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d958 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d18 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d980 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d30 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d9a8 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d48 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204d9d0 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d60 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2065a00 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d78 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2065a28 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065d90 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2065a50 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065da8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2065a78 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2065dc0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2065aa0 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2065dd8 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2065ac8 <col:12> 'int' lvalue ParmVar 0x7facd204d648 'c' 'int'
+|   `-ReturnStmt 0x7facd2065e48 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2065e30 <col:10> 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2065e08 <col:10> 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue Var 0x7facd204d808 'v' 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|-FunctionDecl 0x7facd2065fc0 <<scratch space>:220:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:222:1 test2int16 'vint16 (int *)'
+| |-ParmVarDecl 0x7facd2065ec0 <../Data/C2AST/pr63594-1.c:49:3, line:27:17> col:17 used p 'int *'
+| `-CompoundStmt 0x7facd20667d0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2066158 <line:49:3, line:29:11>
+|   | `-VarDecl 0x7facd2066080 <line:49:3, line:29:10> col:5 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7facd2066140 <col:9, col:10> 'int' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2066120 <col:9, col:10> 'int' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2066108 <col:10> 'int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20660e0 <col:10> 'int *' lvalue ParmVar 0x7facd2065ec0 'p' 'int *'
+|   |-DeclStmt 0x7facd2066760 <<scratch space>:224:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2066180 <<scratch space>:224:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2066520 <col:15, col:22> 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd20665e0 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20661e0 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20665f8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066208 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066610 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066230 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066628 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066258 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066640 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066280 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066658 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20662a8 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066670 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20662d0 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066688 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20662f8 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20666a0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066320 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20666b8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066348 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20666d0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066370 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20666e8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066398 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066700 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20663c0 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066718 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20663e8 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2066730 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066410 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2066748 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2066438 <col:12> 'int' lvalue Var 0x7facd2066080 'c' 'int'
+|   `-ReturnStmt 0x7facd20667b8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20667a0 <col:10> 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2066778 <col:10> 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue Var 0x7facd2066180 'v' 'vint16':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+|-TypedefDecl 0x7facd20668c8 <line:17:16, <scratch space>:227:1> col:1 referenced vint8 '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7facd2066890 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7facd182bde0 'int'
+|-FunctionDecl 0x7facd2040260 <line:229:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:231:1 test1int8 'vint8 (int)'
+| |-ParmVarDecl 0x7facd2066958 <../Data/C2AST/pr63594-1.c:50:3, line:20:16> col:16 used c 'int'
+| `-CompoundStmt 0x7facd20406e8 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2040678 <<scratch space>:233:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2040318 <<scratch space>:233:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2040538 <col:15, col:22> 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd20405b8 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040378 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20405d0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20403a0 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20405e8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20403c8 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040600 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20403f0 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040618 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040418 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040630 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040440 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040648 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040468 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2040660 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2040490 <col:12> 'int' lvalue ParmVar 0x7facd2066958 'c' 'int'
+|   `-ReturnStmt 0x7facd20406d0 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20406b8 <col:10> 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2040690 <col:10> 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7facd2040318 'v' 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-FunctionDecl 0x7facd2040820 <<scratch space>:236:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:238:1 test2int8 'vint8 (int *)'
+| |-ParmVarDecl 0x7facd2040720 <../Data/C2AST/pr63594-1.c:50:3, line:27:17> col:17 used p 'int *'
+| `-CompoundStmt 0x7facd2040db0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd20409b8 <line:50:3, line:29:11>
+|   | `-VarDecl 0x7facd20408e0 <line:50:3, line:29:10> col:5 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7facd20409a0 <col:9, col:10> 'int' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2040980 <col:9, col:10> 'int' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2040968 <col:10> 'int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2040940 <col:10> 'int *' lvalue ParmVar 0x7facd2040720 'p' 'int *'
+|   |-DeclStmt 0x7facd2040d40 <<scratch space>:240:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd20409e0 <<scratch space>:240:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2040c00 <col:15, col:22> 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd2040c80 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040a40 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040c98 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040a68 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040cb0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040a90 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040cc8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040ab8 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040ce0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040ae0 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040cf8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040b08 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2040d10 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2040b30 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2040d28 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2040b58 <col:12> 'int' lvalue Var 0x7facd20408e0 'c' 'int'
+|   `-ReturnStmt 0x7facd2040d98 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2040d80 <col:10> 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2040d58 <col:10> 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7facd20409e0 'v' 'vint8':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|-TypedefDecl 0x7facd2040ea8 <line:17:16, <scratch space>:243:1> col:1 referenced vint4 '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7facd2040e70 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7facd182bde0 'int'
+|-FunctionDecl 0x7facd2041040 <line:245:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:247:1 test1int4 'vint4 (int)'
+| |-ParmVarDecl 0x7facd2040f38 <../Data/C2AST/pr63594-1.c:51:3, line:20:16> col:16 used c 'int'
+| `-CompoundStmt 0x7facd2041390 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2041320 <<scratch space>:249:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd20410f8 <<scratch space>:249:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2041260 <col:15, col:22> 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd20412c0 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2041158 <col:12> 'int' lvalue ParmVar 0x7facd2040f38 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20412d8 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2041180 <col:12> 'int' lvalue ParmVar 0x7facd2040f38 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd20412f0 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20411a8 <col:12> 'int' lvalue ParmVar 0x7facd2040f38 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2041308 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20411d0 <col:12> 'int' lvalue ParmVar 0x7facd2040f38 'c' 'int'
+|   `-ReturnStmt 0x7facd2041378 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2041360 <col:10> 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2041338 <col:10> 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7facd20410f8 'v' 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-FunctionDecl 0x7facd20414d0 <<scratch space>:252:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:254:1 test2int4 'vint4 (int *)'
+| |-ParmVarDecl 0x7facd20413c8 <../Data/C2AST/pr63594-1.c:51:3, line:27:17> col:17 used p 'int *'
+| `-CompoundStmt 0x7facd2041920 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2041668 <line:51:3, line:29:11>
+|   | `-VarDecl 0x7facd2041590 <line:51:3, line:29:10> col:5 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7facd2041650 <col:9, col:10> 'int' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2041630 <col:9, col:10> 'int' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2041618 <col:10> 'int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20415f0 <col:10> 'int *' lvalue ParmVar 0x7facd20413c8 'p' 'int *'
+|   |-DeclStmt 0x7facd20418b0 <<scratch space>:256:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2041690 <<scratch space>:256:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd20417f0 <col:15, col:22> 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd2041850 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20416f0 <col:12> 'int' lvalue Var 0x7facd2041590 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2041868 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2041718 <col:12> 'int' lvalue Var 0x7facd2041590 'c' 'int'
+|   |     |-ImplicitCastExpr 0x7facd2041880 <col:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2041740 <col:12> 'int' lvalue Var 0x7facd2041590 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2041898 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2041768 <col:12> 'int' lvalue Var 0x7facd2041590 'c' 'int'
+|   `-ReturnStmt 0x7facd2041908 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20418f0 <col:10> 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20418c8 <col:10> 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7facd2041690 'v' 'vint4':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-TypedefDecl 0x7facd2041a18 <line:17:16, <scratch space>:259:1> col:1 referenced vint2 '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7facd20419e0 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7facd182bde0 'int'
+|-FunctionDecl 0x7facd2041bb0 <line:261:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:263:1 test1int2 'vint2 (int)'
+| |-ParmVarDecl 0x7facd2041aa8 <../Data/C2AST/pr63594-1.c:52:3, line:20:16> col:16 used c 'int'
+| `-CompoundStmt 0x7facd2041e58 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2041de8 <<scratch space>:265:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2041c68 <<scratch space>:265:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2041d68 <col:15, col:22> 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd2041db8 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2041cc8 <col:12> 'int' lvalue ParmVar 0x7facd2041aa8 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd2041dd0 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2041cf0 <col:12> 'int' lvalue ParmVar 0x7facd2041aa8 'c' 'int'
+|   `-ReturnStmt 0x7facd2041e40 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2041e28 <col:10> 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2041e00 <col:10> 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7facd2041c68 'v' 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-FunctionDecl 0x7facd2041f90 <<scratch space>:268:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:270:1 test2int2 'vint2 (int *)'
+| |-ParmVarDecl 0x7facd2041e90 <../Data/C2AST/pr63594-1.c:52:3, line:27:17> col:17 used p 'int *'
+| `-CompoundStmt 0x7facd2042340 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2042128 <line:52:3, line:29:11>
+|   | `-VarDecl 0x7facd2042050 <line:52:3, line:29:10> col:5 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7facd2042110 <col:9, col:10> 'int' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd20420f0 <col:9, col:10> 'int' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd20420d8 <col:10> 'int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20420b0 <col:10> 'int *' lvalue ParmVar 0x7facd2041e90 'p' 'int *'
+|   |-DeclStmt 0x7facd20422d0 <<scratch space>:272:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2042150 <<scratch space>:272:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2042250 <col:15, col:22> 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|   |     |-ImplicitCastExpr 0x7facd20422a0 <line:7:12> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20421b0 <col:12> 'int' lvalue Var 0x7facd2042050 'c' 'int'
+|   |     `-ImplicitCastExpr 0x7facd20422b8 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20421d8 <col:12> 'int' lvalue Var 0x7facd2042050 'c' 'int'
+|   `-ReturnStmt 0x7facd2042328 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2042310 <col:10> 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20422e8 <col:10> 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7facd2042150 'v' 'vint2':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-TypedefDecl 0x7facd2042438 <line:17:16, <scratch space>:275:1> col:1 referenced vint1 '__attribute__((__vector_size__(1 * sizeof(int)))) int'
+| `-VectorType 0x7facd2042400 '__attribute__((__vector_size__(1 * sizeof(int)))) int' 1
+|   `-BuiltinType 0x7facd182bde0 'int'
+|-FunctionDecl 0x7facd20425d0 <line:277:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:279:1 test1int1 'vint1 (int)'
+| |-ParmVarDecl 0x7facd20424c8 <../Data/C2AST/pr63594-1.c:53:3, line:20:16> col:16 used c 'int'
+| `-CompoundStmt 0x7facd2042828 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20427b8 <<scratch space>:281:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2042688 <<scratch space>:281:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2042758 <col:15, col:22> 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int'
+|   |     `-ImplicitCastExpr 0x7facd20427a0 <line:7:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20426e8 <col:12> 'int' lvalue ParmVar 0x7facd20424c8 'c' 'int'
+|   `-ReturnStmt 0x7facd2042810 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20427f8 <col:10> 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20427d0 <col:10> 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int' lvalue Var 0x7facd2042688 'v' 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int'
+|-FunctionDecl 0x7facd2042960 <<scratch space>:284:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:286:1 test2int1 'vint1 (int *)'
+| |-ParmVarDecl 0x7facd2042860 <../Data/C2AST/pr63594-1.c:53:3, line:27:17> col:17 used p 'int *'
+| `-CompoundStmt 0x7facd2042cc0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2042af8 <line:53:3, line:29:11>
+|   | `-VarDecl 0x7facd2042a20 <line:53:3, line:29:10> col:5 used c 'int' cinit
+|   |   `-ImplicitCastExpr 0x7facd2042ae0 <col:9, col:10> 'int' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2042ac0 <col:9, col:10> 'int' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2042aa8 <col:10> 'int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2042a80 <col:10> 'int *' lvalue ParmVar 0x7facd2042860 'p' 'int *'
+|   |-DeclStmt 0x7facd2042c50 <<scratch space>:288:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2042b20 <<scratch space>:288:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int' cinit
+|   |   `-InitListExpr 0x7facd2042bf0 <col:15, col:22> 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int'
+|   |     `-ImplicitCastExpr 0x7facd2042c38 <line:7:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2042b80 <col:12> 'int' lvalue Var 0x7facd2042a20 'c' 'int'
+|   `-ReturnStmt 0x7facd2042ca8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2042c90 <col:10> 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2042c68 <col:10> 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int' lvalue Var 0x7facd2042b20 'v' 'vint1':'__attribute__((__vector_size__(1 * sizeof(int)))) int'
+|-TypedefDecl 0x7facd2042db8 <line:17:16, <scratch space>:291:1> col:1 referenced vfloat16 '__attribute__((__vector_size__(16 * sizeof(float)))) float'
+| `-VectorType 0x7facd2042d80 '__attribute__((__vector_size__(16 * sizeof(float)))) float' 16
+|   `-BuiltinType 0x7facd182bee0 'float'
+|-FunctionDecl 0x7facd2042f50 <line:293:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:295:1 test1float16 'vfloat16 (float)'
+| |-ParmVarDecl 0x7facd2042e48 <../Data/C2AST/pr63594-1.c:54:3, line:20:16> col:16 used c 'float'
+| `-CompoundStmt 0x7facd2044660 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20445f0 <<scratch space>:297:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2043008 <<scratch space>:297:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd20443b0 <col:15, col:22> 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd2044470 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2043068 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044488 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2043090 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20444a0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20430b8 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20444b8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20430e0 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20444d0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2043108 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20444e8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2043130 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044500 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2043158 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044518 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2043180 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044530 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20431a8 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044548 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20431d0 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044560 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044200 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044578 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044228 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044590 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044250 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20445a8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044278 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20445c0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20442a0 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd20445d8 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20442c8 <col:12> 'float' lvalue ParmVar 0x7facd2042e48 'c' 'float'
+|   `-ReturnStmt 0x7facd2044648 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2044630 <col:10> 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2044608 <col:10> 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue Var 0x7facd2043008 'v' 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|-FunctionDecl 0x7facd20447c0 <<scratch space>:300:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:302:1 test2float16 'vfloat16 (float *)'
+| |-ParmVarDecl 0x7facd20446c0 <../Data/C2AST/pr63594-1.c:54:3, line:27:17> col:17 used p 'float *'
+| `-CompoundStmt 0x7facd2044fd0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2044958 <line:54:3, line:29:11>
+|   | `-VarDecl 0x7facd2044880 <line:54:3, line:29:10> col:5 used c 'float' cinit
+|   |   `-ImplicitCastExpr 0x7facd2044940 <col:9, col:10> 'float' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2044920 <col:9, col:10> 'float' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2044908 <col:10> 'float *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20448e0 <col:10> 'float *' lvalue ParmVar 0x7facd20446c0 'p' 'float *'
+|   |-DeclStmt 0x7facd2044f60 <<scratch space>:304:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2044980 <<scratch space>:304:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2044d20 <col:15, col:22> 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd2044de0 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20449e0 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044df8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044a08 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044e10 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044a30 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044e28 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044a58 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044e40 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044a80 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044e58 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044aa8 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044e70 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044ad0 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044e88 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044af8 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044ea0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044b20 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044eb8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044b48 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044ed0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044b70 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044ee8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044b98 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044f00 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044bc0 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044f18 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044be8 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2044f30 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2044c10 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd2044f48 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2044c38 <col:12> 'float' lvalue Var 0x7facd2044880 'c' 'float'
+|   `-ReturnStmt 0x7facd2044fb8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2044fa0 <col:10> 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2044f78 <col:10> 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float' lvalue Var 0x7facd2044980 'v' 'vfloat16':'__attribute__((__vector_size__(16 * sizeof(float)))) float'
+|-TypedefDecl 0x7facd20450c8 <line:17:16, <scratch space>:307:1> col:1 referenced vfloat8 '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-VectorType 0x7facd2045090 '__attribute__((__vector_size__(8 * sizeof(float)))) float' 8
+|   `-BuiltinType 0x7facd182bee0 'float'
+|-FunctionDecl 0x7facd2045260 <line:309:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:311:1 test1float8 'vfloat8 (float)'
+| |-ParmVarDecl 0x7facd2045158 <../Data/C2AST/pr63594-1.c:55:3, line:20:16> col:16 used c 'float'
+| `-CompoundStmt 0x7facd20456e8 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2045678 <<scratch space>:313:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2045318 <<scratch space>:313:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2045538 <col:15, col:22> 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd20455b8 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045378 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20455d0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20453a0 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20455e8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20453c8 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045600 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20453f0 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045618 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045418 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045630 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045440 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045648 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045468 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd2045660 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2045490 <col:12> 'float' lvalue ParmVar 0x7facd2045158 'c' 'float'
+|   `-ReturnStmt 0x7facd20456d0 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20456b8 <col:10> 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2045690 <col:10> 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7facd2045318 'v' 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|-FunctionDecl 0x7facd2045820 <<scratch space>:316:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:318:1 test2float8 'vfloat8 (float *)'
+| |-ParmVarDecl 0x7facd2045720 <../Data/C2AST/pr63594-1.c:55:3, line:27:17> col:17 used p 'float *'
+| `-CompoundStmt 0x7facd2045db0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd20459b8 <line:55:3, line:29:11>
+|   | `-VarDecl 0x7facd20458e0 <line:55:3, line:29:10> col:5 used c 'float' cinit
+|   |   `-ImplicitCastExpr 0x7facd20459a0 <col:9, col:10> 'float' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2045980 <col:9, col:10> 'float' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2045968 <col:10> 'float *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2045940 <col:10> 'float *' lvalue ParmVar 0x7facd2045720 'p' 'float *'
+|   |-DeclStmt 0x7facd2045d40 <<scratch space>:320:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd20459e0 <<scratch space>:320:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2045c00 <col:15, col:22> 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd2045c80 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045a40 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045c98 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045a68 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045cb0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045a90 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045cc8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045ab8 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045ce0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045ae0 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045cf8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045b08 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2045d10 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2045b30 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd2045d28 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2045b58 <col:12> 'float' lvalue Var 0x7facd20458e0 'c' 'float'
+|   `-ReturnStmt 0x7facd2045d98 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2045d80 <col:10> 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2045d58 <col:10> 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue Var 0x7facd20459e0 'v' 'vfloat8':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|-TypedefDecl 0x7facd2045ea8 <line:17:16, <scratch space>:323:1> col:1 referenced vfloat4 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7facd2045e70 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7facd182bee0 'float'
+|-FunctionDecl 0x7facd2046040 <line:325:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:327:1 test1float4 'vfloat4 (float)'
+| |-ParmVarDecl 0x7facd2045f38 <../Data/C2AST/pr63594-1.c:56:3, line:20:16> col:16 used c 'float'
+| `-CompoundStmt 0x7facd2046390 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2046320 <<scratch space>:329:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd20460f8 <<scratch space>:329:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2046260 <col:15, col:22> 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd20462c0 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2046158 <col:12> 'float' lvalue ParmVar 0x7facd2045f38 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20462d8 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2046180 <col:12> 'float' lvalue ParmVar 0x7facd2045f38 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd20462f0 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20461a8 <col:12> 'float' lvalue ParmVar 0x7facd2045f38 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd2046308 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20461d0 <col:12> 'float' lvalue ParmVar 0x7facd2045f38 'c' 'float'
+|   `-ReturnStmt 0x7facd2046378 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2046360 <col:10> 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2046338 <col:10> 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7facd20460f8 'v' 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7facd20464d0 <<scratch space>:332:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:334:1 test2float4 'vfloat4 (float *)'
+| |-ParmVarDecl 0x7facd20463c8 <../Data/C2AST/pr63594-1.c:56:3, line:27:17> col:17 used p 'float *'
+| `-CompoundStmt 0x7facd2046920 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2046668 <line:56:3, line:29:11>
+|   | `-VarDecl 0x7facd2046590 <line:56:3, line:29:10> col:5 used c 'float' cinit
+|   |   `-ImplicitCastExpr 0x7facd2046650 <col:9, col:10> 'float' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2046630 <col:9, col:10> 'float' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2046618 <col:10> 'float *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20465f0 <col:10> 'float *' lvalue ParmVar 0x7facd20463c8 'p' 'float *'
+|   |-DeclStmt 0x7facd20468b0 <<scratch space>:336:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2046690 <<scratch space>:336:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd20467f0 <col:15, col:22> 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd2046850 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20466f0 <col:12> 'float' lvalue Var 0x7facd2046590 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2046868 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2046718 <col:12> 'float' lvalue Var 0x7facd2046590 'c' 'float'
+|   |     |-ImplicitCastExpr 0x7facd2046880 <col:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2046740 <col:12> 'float' lvalue Var 0x7facd2046590 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd2046898 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2046768 <col:12> 'float' lvalue Var 0x7facd2046590 'c' 'float'
+|   `-ReturnStmt 0x7facd2046908 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20468f0 <col:10> 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20468c8 <col:10> 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7facd2046690 'v' 'vfloat4':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-TypedefDecl 0x7facd2046a18 <line:17:16, <scratch space>:339:1> col:1 referenced vfloat2 '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7facd20469e0 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7facd182bee0 'float'
+|-FunctionDecl 0x7facd2046bb0 <line:341:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:343:1 test1float2 'vfloat2 (float)'
+| |-ParmVarDecl 0x7facd2046aa8 <../Data/C2AST/pr63594-1.c:57:3, line:20:16> col:16 used c 'float'
+| `-CompoundStmt 0x7facd2046e58 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2046de8 <<scratch space>:345:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2046c68 <<scratch space>:345:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2046d68 <col:15, col:22> 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd2046db8 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2046cc8 <col:12> 'float' lvalue ParmVar 0x7facd2046aa8 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd2046dd0 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2046cf0 <col:12> 'float' lvalue ParmVar 0x7facd2046aa8 'c' 'float'
+|   `-ReturnStmt 0x7facd2046e40 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2046e28 <col:10> 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2046e00 <col:10> 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7facd2046c68 'v' 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|-FunctionDecl 0x7facd2046f90 <<scratch space>:348:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:350:1 test2float2 'vfloat2 (float *)'
+| |-ParmVarDecl 0x7facd2046e90 <../Data/C2AST/pr63594-1.c:57:3, line:27:17> col:17 used p 'float *'
+| `-CompoundStmt 0x7facd2047340 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2047128 <line:57:3, line:29:11>
+|   | `-VarDecl 0x7facd2047050 <line:57:3, line:29:10> col:5 used c 'float' cinit
+|   |   `-ImplicitCastExpr 0x7facd2047110 <col:9, col:10> 'float' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd20470f0 <col:9, col:10> 'float' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd20470d8 <col:10> 'float *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20470b0 <col:10> 'float *' lvalue ParmVar 0x7facd2046e90 'p' 'float *'
+|   |-DeclStmt 0x7facd20472d0 <<scratch space>:352:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2047150 <<scratch space>:352:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2047250 <col:15, col:22> 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7facd20472a0 <line:7:12> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20471b0 <col:12> 'float' lvalue Var 0x7facd2047050 'c' 'float'
+|   |     `-ImplicitCastExpr 0x7facd20472b8 <col:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20471d8 <col:12> 'float' lvalue Var 0x7facd2047050 'c' 'float'
+|   `-ReturnStmt 0x7facd2047328 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2047310 <col:10> 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20472e8 <col:10> 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7facd2047150 'v' 'vfloat2':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|-TypedefDecl 0x7facd2047438 <line:17:16, <scratch space>:355:1> col:1 referenced vfloat1 '__attribute__((__vector_size__(1 * sizeof(float)))) float'
+| `-VectorType 0x7facd2047400 '__attribute__((__vector_size__(1 * sizeof(float)))) float' 1
+|   `-BuiltinType 0x7facd182bee0 'float'
+|-FunctionDecl 0x7facd20475d0 <line:357:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:359:1 test1float1 'vfloat1 (float)'
+| |-ParmVarDecl 0x7facd20474c8 <../Data/C2AST/pr63594-1.c:58:3, line:20:16> col:16 used c 'float'
+| `-CompoundStmt 0x7facd2047828 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20477b8 <<scratch space>:361:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2047688 <<scratch space>:361:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2047758 <col:15, col:22> 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float'
+|   |     `-ImplicitCastExpr 0x7facd20477a0 <line:7:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20476e8 <col:12> 'float' lvalue ParmVar 0x7facd20474c8 'c' 'float'
+|   `-ReturnStmt 0x7facd2047810 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20477f8 <col:10> 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20477d0 <col:10> 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float' lvalue Var 0x7facd2047688 'v' 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float'
+|-FunctionDecl 0x7facd2047960 <<scratch space>:364:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:366:1 test2float1 'vfloat1 (float *)'
+| |-ParmVarDecl 0x7facd2047860 <../Data/C2AST/pr63594-1.c:58:3, line:27:17> col:17 used p 'float *'
+| `-CompoundStmt 0x7facd2047cc0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2047af8 <line:58:3, line:29:11>
+|   | `-VarDecl 0x7facd2047a20 <line:58:3, line:29:10> col:5 used c 'float' cinit
+|   |   `-ImplicitCastExpr 0x7facd2047ae0 <col:9, col:10> 'float' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2047ac0 <col:9, col:10> 'float' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2047aa8 <col:10> 'float *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2047a80 <col:10> 'float *' lvalue ParmVar 0x7facd2047860 'p' 'float *'
+|   |-DeclStmt 0x7facd2047c50 <<scratch space>:368:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2047b20 <<scratch space>:368:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7facd2047bf0 <col:15, col:22> 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float'
+|   |     `-ImplicitCastExpr 0x7facd2047c38 <line:7:12> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2047b80 <col:12> 'float' lvalue Var 0x7facd2047a20 'c' 'float'
+|   `-ReturnStmt 0x7facd2047ca8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2047c90 <col:10> 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2047c68 <col:10> 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float' lvalue Var 0x7facd2047b20 'v' 'vfloat1':'__attribute__((__vector_size__(1 * sizeof(float)))) float'
+|-TypedefDecl 0x7facd2047e08 <line:17:16, <scratch space>:371:1> col:1 referenced vllong8 '__attribute__((__vector_size__(8 * sizeof(llong)))) llong'
+| `-VectorType 0x7facd2047dd0 '__attribute__((__vector_size__(8 * sizeof(llong)))) llong' 8
+|   `-TypedefType 0x7facd2047cf0 'llong' sugar
+|     |-Typedef 0x7facd182c978 'llong'
+|     `-BuiltinType 0x7facd182be20 'long long'
+|-FunctionDecl 0x7facd2047f90 <line:373:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:375:1 test1llong8 'vllong8 (llong)'
+| |-ParmVarDecl 0x7facd2047e90 <../Data/C2AST/pr63594-1.c:59:3, line:20:16> col:16 used c 'llong':'long long'
+| `-CompoundStmt 0x7facd2048430 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20483c0 <<scratch space>:377:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2048048 <<scratch space>:377:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd2048280 <col:15, col:22> 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong'
+|   |     |-ImplicitCastExpr 0x7facd2048300 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20480a8 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048318 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20480d0 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048330 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20480f8 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048348 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048120 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048360 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048148 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048378 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048170 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048390 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048198 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   |     `-ImplicitCastExpr 0x7facd20483a8 <col:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20481c0 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2047e90 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd2048418 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2048400 <col:10> 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20483d8 <col:10> 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong' lvalue Var 0x7facd2048048 'v' 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong'
+|-FunctionDecl 0x7facd20485c0 <<scratch space>:380:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:382:1 test2llong8 'vllong8 (llong *)'
+| |-ParmVarDecl 0x7facd20484b8 <../Data/C2AST/pr63594-1.c:59:3, line:27:17> col:17 used p 'llong *'
+| `-CompoundStmt 0x7facd2048b48 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2048750 <line:59:3, line:29:11>
+|   | `-VarDecl 0x7facd2048678 <line:59:3, line:29:10> col:5 used c 'llong':'long long' cinit
+|   |   `-ImplicitCastExpr 0x7facd2048738 <col:9, col:10> 'llong':'long long' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2048718 <col:9, col:10> 'llong':'long long' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2048700 <col:10> 'llong *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20486d8 <col:10> 'llong *' lvalue ParmVar 0x7facd20484b8 'p' 'llong *'
+|   |-DeclStmt 0x7facd2048ad8 <<scratch space>:384:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2048778 <<scratch space>:384:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd2048998 <col:15, col:22> 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong'
+|   |     |-ImplicitCastExpr 0x7facd2048a18 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20487d8 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048a30 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048800 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048a48 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048828 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048a60 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048850 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048a78 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048878 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048a90 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20488a0 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2048aa8 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20488c8 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   |     `-ImplicitCastExpr 0x7facd2048ac0 <col:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20488f0 <col:12> 'llong':'long long' lvalue Var 0x7facd2048678 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd2048b30 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2048b18 <col:10> 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2048af0 <col:10> 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong' lvalue Var 0x7facd2048778 'v' 'vllong8':'__attribute__((__vector_size__(8 * sizeof(llong)))) llong'
+|-TypedefDecl 0x7facd2048c68 <line:17:16, <scratch space>:387:1> col:1 referenced vllong4 '__attribute__((__vector_size__(4 * sizeof(llong)))) llong'
+| `-VectorType 0x7facd2048c30 '__attribute__((__vector_size__(4 * sizeof(llong)))) llong' 4
+|   `-TypedefType 0x7facd2047cf0 'llong' sugar
+|     |-Typedef 0x7facd182c978 'llong'
+|     `-BuiltinType 0x7facd182be20 'long long'
+|-FunctionDecl 0x7facd2048df0 <line:389:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:391:1 test1llong4 'vllong4 (llong)'
+| |-ParmVarDecl 0x7facd2048cf0 <../Data/C2AST/pr63594-1.c:60:3, line:20:16> col:16 used c 'llong':'long long'
+| `-CompoundStmt 0x7facd2049138 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20490c8 <<scratch space>:393:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2048ea8 <<scratch space>:393:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd2049008 <col:15, col:22> 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong'
+|   |     |-ImplicitCastExpr 0x7facd2049068 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048f08 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2048cf0 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2049080 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048f30 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2048cf0 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2049098 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2048f58 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2048cf0 'c' 'llong':'long long'
+|   |     `-ImplicitCastExpr 0x7facd20490b0 <col:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2048f80 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2048cf0 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd2049120 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2049108 <col:10> 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20490e0 <col:10> 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong' lvalue Var 0x7facd2048ea8 'v' 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong'
+|-FunctionDecl 0x7facd20492a0 <<scratch space>:396:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:398:1 test2llong4 'vllong4 (llong *)'
+| |-ParmVarDecl 0x7facd2049168 <../Data/C2AST/pr63594-1.c:60:3, line:27:17> col:17 used p 'llong *'
+| `-CompoundStmt 0x7facd20496e8 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2049430 <line:60:3, line:29:11>
+|   | `-VarDecl 0x7facd2049358 <line:60:3, line:29:10> col:5 used c 'llong':'long long' cinit
+|   |   `-ImplicitCastExpr 0x7facd2049418 <col:9, col:10> 'llong':'long long' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd20493f8 <col:9, col:10> 'llong':'long long' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd20493e0 <col:10> 'llong *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20493b8 <col:10> 'llong *' lvalue ParmVar 0x7facd2049168 'p' 'llong *'
+|   |-DeclStmt 0x7facd2049678 <<scratch space>:400:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2049458 <<scratch space>:400:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd20495b8 <col:15, col:22> 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong'
+|   |     |-ImplicitCastExpr 0x7facd2049618 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20494b8 <col:12> 'llong':'long long' lvalue Var 0x7facd2049358 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2049630 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20494e0 <col:12> 'llong':'long long' lvalue Var 0x7facd2049358 'c' 'llong':'long long'
+|   |     |-ImplicitCastExpr 0x7facd2049648 <col:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2049508 <col:12> 'llong':'long long' lvalue Var 0x7facd2049358 'c' 'llong':'long long'
+|   |     `-ImplicitCastExpr 0x7facd2049660 <col:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2049530 <col:12> 'llong':'long long' lvalue Var 0x7facd2049358 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd20496d0 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20496b8 <col:10> 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2049690 <col:10> 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong' lvalue Var 0x7facd2049458 'v' 'vllong4':'__attribute__((__vector_size__(4 * sizeof(llong)))) llong'
+|-TypedefDecl 0x7facd2049808 <line:17:16, <scratch space>:403:1> col:1 referenced vllong2 '__attribute__((__vector_size__(2 * sizeof(llong)))) llong'
+| `-VectorType 0x7facd20497d0 '__attribute__((__vector_size__(2 * sizeof(llong)))) llong' 2
+|   `-TypedefType 0x7facd2047cf0 'llong' sugar
+|     |-Typedef 0x7facd182c978 'llong'
+|     `-BuiltinType 0x7facd182be20 'long long'
+|-FunctionDecl 0x7facd2049990 <line:405:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:407:1 test1llong2 'vllong2 (llong)'
+| |-ParmVarDecl 0x7facd2049890 <../Data/C2AST/pr63594-1.c:61:3, line:20:16> col:16 used c 'llong':'long long'
+| `-CompoundStmt 0x7facd2049c38 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2049bc8 <<scratch space>:409:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2049a48 <<scratch space>:409:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd2049b48 <col:15, col:22> 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong'
+|   |     |-ImplicitCastExpr 0x7facd2049b98 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2049aa8 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2049890 'c' 'llong':'long long'
+|   |     `-ImplicitCastExpr 0x7facd2049bb0 <col:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2049ad0 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd2049890 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd2049c20 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2049c08 <col:10> 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2049be0 <col:10> 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong' lvalue Var 0x7facd2049a48 'v' 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong'
+|-FunctionDecl 0x7facd2049d70 <<scratch space>:412:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:414:1 test2llong2 'vllong2 (llong *)'
+| |-ParmVarDecl 0x7facd2049c68 <../Data/C2AST/pr63594-1.c:61:3, line:27:17> col:17 used p 'llong *'
+| `-CompoundStmt 0x7facd204a118 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2049f00 <line:61:3, line:29:11>
+|   | `-VarDecl 0x7facd2049e28 <line:61:3, line:29:10> col:5 used c 'llong':'long long' cinit
+|   |   `-ImplicitCastExpr 0x7facd2049ee8 <col:9, col:10> 'llong':'long long' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2049ec8 <col:9, col:10> 'llong':'long long' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2049eb0 <col:10> 'llong *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2049e88 <col:10> 'llong *' lvalue ParmVar 0x7facd2049c68 'p' 'llong *'
+|   |-DeclStmt 0x7facd204a0a8 <<scratch space>:416:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2049f28 <<scratch space>:416:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd204a028 <col:15, col:22> 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong'
+|   |     |-ImplicitCastExpr 0x7facd204a078 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2049f88 <col:12> 'llong':'long long' lvalue Var 0x7facd2049e28 'c' 'llong':'long long'
+|   |     `-ImplicitCastExpr 0x7facd204a090 <col:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2049fb0 <col:12> 'llong':'long long' lvalue Var 0x7facd2049e28 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd204a100 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204a0e8 <col:10> 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204a0c0 <col:10> 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong' lvalue Var 0x7facd2049f28 'v' 'vllong2':'__attribute__((__vector_size__(2 * sizeof(llong)))) llong'
+|-TypedefDecl 0x7facd204a238 <line:17:16, <scratch space>:419:1> col:1 referenced vllong1 '__attribute__((__vector_size__(1 * sizeof(llong)))) llong'
+| `-VectorType 0x7facd204a200 '__attribute__((__vector_size__(1 * sizeof(llong)))) llong' 1
+|   `-TypedefType 0x7facd2047cf0 'llong' sugar
+|     |-Typedef 0x7facd182c978 'llong'
+|     `-BuiltinType 0x7facd182be20 'long long'
+|-FunctionDecl 0x7facd204a3c0 <line:421:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:423:1 test1llong1 'vllong1 (llong)'
+| |-ParmVarDecl 0x7facd204a2c0 <../Data/C2AST/pr63594-1.c:62:3, line:20:16> col:16 used c 'llong':'long long'
+| `-CompoundStmt 0x7facd204a618 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd204a5a8 <<scratch space>:425:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd204a478 <<scratch space>:425:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd204a548 <col:15, col:22> 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong'
+|   |     `-ImplicitCastExpr 0x7facd204a590 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204a4d8 <col:12> 'llong':'long long' lvalue ParmVar 0x7facd204a2c0 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd204a600 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204a5e8 <col:10> 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204a5c0 <col:10> 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong' lvalue Var 0x7facd204a478 'v' 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong'
+|-FunctionDecl 0x7facd204a750 <<scratch space>:428:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:430:1 test2llong1 'vllong1 (llong *)'
+| |-ParmVarDecl 0x7facd204a648 <../Data/C2AST/pr63594-1.c:62:3, line:27:17> col:17 used p 'llong *'
+| `-CompoundStmt 0x7facd204aaa8 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd204a8e0 <line:62:3, line:29:11>
+|   | `-VarDecl 0x7facd204a808 <line:62:3, line:29:10> col:5 used c 'llong':'long long' cinit
+|   |   `-ImplicitCastExpr 0x7facd204a8c8 <col:9, col:10> 'llong':'long long' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd204a8a8 <col:9, col:10> 'llong':'long long' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd204a890 <col:10> 'llong *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd204a868 <col:10> 'llong *' lvalue ParmVar 0x7facd204a648 'p' 'llong *'
+|   |-DeclStmt 0x7facd204aa38 <<scratch space>:432:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd204a908 <<scratch space>:432:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong' cinit
+|   |   `-InitListExpr 0x7facd204a9d8 <col:15, col:22> 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong'
+|   |     `-ImplicitCastExpr 0x7facd204aa20 <line:7:12> 'llong':'long long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204a968 <col:12> 'llong':'long long' lvalue Var 0x7facd204a808 'c' 'llong':'long long'
+|   `-ReturnStmt 0x7facd204aa90 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204aa78 <col:10> 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204aa50 <col:10> 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong' lvalue Var 0x7facd204a908 'v' 'vllong1':'__attribute__((__vector_size__(1 * sizeof(llong)))) llong'
+|-TypedefDecl 0x7facd204aba8 <line:17:16, <scratch space>:435:1> col:1 referenced vdouble8 '__attribute__((__vector_size__(8 * sizeof(double)))) double'
+| `-VectorType 0x7facd204ab70 '__attribute__((__vector_size__(8 * sizeof(double)))) double' 8
+|   `-BuiltinType 0x7facd182bf00 'double'
+|-FunctionDecl 0x7facd204ad40 <line:437:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:439:1 test1double8 'vdouble8 (double)'
+| |-ParmVarDecl 0x7facd204ac38 <../Data/C2AST/pr63594-1.c:63:3, line:20:16> col:16 used c 'double'
+| `-CompoundStmt 0x7facd204b1c8 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd204b158 <<scratch space>:441:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd204adf8 <<scratch space>:441:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd204b018 <col:15, col:22> 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|   |     |-ImplicitCastExpr 0x7facd204b098 <line:7:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204ae58 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd204b0b0 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204ae80 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd204b0c8 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204aea8 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd204b0e0 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204aed0 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd204b0f8 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204aef8 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd204b110 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204af20 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd204b128 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd204af48 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   |     `-ImplicitCastExpr 0x7facd204b140 <col:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd204af70 <col:12> 'double' lvalue ParmVar 0x7facd204ac38 'c' 'double'
+|   `-ReturnStmt 0x7facd204b1b0 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd204b198 <col:10> 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd204b170 <col:10> 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7facd204adf8 'v' 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|-FunctionDecl 0x7facd2066b40 <<scratch space>:444:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:446:1 test2double8 'vdouble8 (double *)'
+| |-ParmVarDecl 0x7facd2066a40 <../Data/C2AST/pr63594-1.c:63:3, line:27:17> col:17 used p 'double *'
+| `-CompoundStmt 0x7facd20670d0 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2066cd8 <line:63:3, line:29:11>
+|   | `-VarDecl 0x7facd2066c00 <line:63:3, line:29:10> col:5 used c 'double' cinit
+|   |   `-ImplicitCastExpr 0x7facd2066cc0 <col:9, col:10> 'double' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2066ca0 <col:9, col:10> 'double' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2066c88 <col:10> 'double *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2066c60 <col:10> 'double *' lvalue ParmVar 0x7facd2066a40 'p' 'double *'
+|   |-DeclStmt 0x7facd2067060 <<scratch space>:448:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2066d00 <<scratch space>:448:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd2066f20 <col:15, col:22> 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|   |     |-ImplicitCastExpr 0x7facd2066fa0 <line:7:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066d60 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2066fb8 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066d88 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2066fd0 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066db0 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2066fe8 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066dd8 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2067000 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066e00 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2067018 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066e28 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2067030 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2066e50 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   |     `-ImplicitCastExpr 0x7facd2067048 <col:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2066e78 <col:12> 'double' lvalue Var 0x7facd2066c00 'c' 'double'
+|   `-ReturnStmt 0x7facd20670b8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd20670a0 <col:10> 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2067078 <col:10> 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double' lvalue Var 0x7facd2066d00 'v' 'vdouble8':'__attribute__((__vector_size__(8 * sizeof(double)))) double'
+|-TypedefDecl 0x7facd20671c8 <line:17:16, <scratch space>:451:1> col:1 referenced vdouble4 '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7facd2067190 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7facd182bf00 'double'
+|-FunctionDecl 0x7facd2067360 <line:453:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:455:1 test1double4 'vdouble4 (double)'
+| |-ParmVarDecl 0x7facd2067258 <../Data/C2AST/pr63594-1.c:64:3, line:20:16> col:16 used c 'double'
+| `-CompoundStmt 0x7facd20676a8 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2067638 <<scratch space>:457:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2067418 <<scratch space>:457:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd2067578 <col:15, col:22> 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|   |     |-ImplicitCastExpr 0x7facd20675d8 <line:7:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2067478 <col:12> 'double' lvalue ParmVar 0x7facd2067258 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd20675f0 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20674a0 <col:12> 'double' lvalue ParmVar 0x7facd2067258 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2067608 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20674c8 <col:12> 'double' lvalue ParmVar 0x7facd2067258 'c' 'double'
+|   |     `-ImplicitCastExpr 0x7facd2067620 <col:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20674f0 <col:12> 'double' lvalue ParmVar 0x7facd2067258 'c' 'double'
+|   `-ReturnStmt 0x7facd2067690 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2067678 <col:10> 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2067650 <col:10> 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7facd2067418 'v' 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|-FunctionDecl 0x7facd20677e0 <<scratch space>:460:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:462:1 test2double4 'vdouble4 (double *)'
+| |-ParmVarDecl 0x7facd20676e0 <../Data/C2AST/pr63594-1.c:64:3, line:27:17> col:17 used p 'double *'
+| `-CompoundStmt 0x7facd2067c30 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2067978 <line:64:3, line:29:11>
+|   | `-VarDecl 0x7facd20678a0 <line:64:3, line:29:10> col:5 used c 'double' cinit
+|   |   `-ImplicitCastExpr 0x7facd2067960 <col:9, col:10> 'double' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2067940 <col:9, col:10> 'double' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd2067928 <col:10> 'double *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd2067900 <col:10> 'double *' lvalue ParmVar 0x7facd20676e0 'p' 'double *'
+|   |-DeclStmt 0x7facd2067bc0 <<scratch space>:464:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd20679a0 <<scratch space>:464:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd2067b00 <col:15, col:22> 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|   |     |-ImplicitCastExpr 0x7facd2067b60 <line:7:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2067a00 <col:12> 'double' lvalue Var 0x7facd20678a0 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2067b78 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2067a28 <col:12> 'double' lvalue Var 0x7facd20678a0 'c' 'double'
+|   |     |-ImplicitCastExpr 0x7facd2067b90 <col:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2067a50 <col:12> 'double' lvalue Var 0x7facd20678a0 'c' 'double'
+|   |     `-ImplicitCastExpr 0x7facd2067ba8 <col:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2067a78 <col:12> 'double' lvalue Var 0x7facd20678a0 'c' 'double'
+|   `-ReturnStmt 0x7facd2067c18 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2067c00 <col:10> 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2067bd8 <col:10> 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7facd20679a0 'v' 'vdouble4':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|-TypedefDecl 0x7facd2067d28 <line:17:16, <scratch space>:467:1> col:1 referenced vdouble2 '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7facd2067cf0 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7facd182bf00 'double'
+|-FunctionDecl 0x7facd2067ec0 <line:469:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:2:1 test1double2 'vdouble2 (double)'
+| |-ParmVarDecl 0x7facd2067db8 <../Data/C2AST/pr63594-1.c:65:3, line:20:16> col:16 used c 'double'
+| `-CompoundStmt 0x7facd2068168 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd20680f8 <<scratch space>:4:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2067f78 <<scratch space>:4:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd2068078 <col:15, col:22> 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-ImplicitCastExpr 0x7facd20680c8 <line:7:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd2067fd8 <col:12> 'double' lvalue ParmVar 0x7facd2067db8 'c' 'double'
+|   |     `-ImplicitCastExpr 0x7facd20680e0 <col:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2068000 <col:12> 'double' lvalue ParmVar 0x7facd2067db8 'c' 'double'
+|   `-ReturnStmt 0x7facd2068150 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2068138 <col:10> 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2068110 <col:10> 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7facd2067f78 'v' 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7facd20682a0 <<scratch space>:7:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:9:1 test2double2 'vdouble2 (double *)'
+| |-ParmVarDecl 0x7facd20681a0 <../Data/C2AST/pr63594-1.c:65:3, line:27:17> col:17 used p 'double *'
+| `-CompoundStmt 0x7facd2068650 <col:26, line:31:20>
+|   |-DeclStmt 0x7facd2068438 <line:65:3, line:29:11>
+|   | `-VarDecl 0x7facd2068360 <line:65:3, line:29:10> col:5 used c 'double' cinit
+|   |   `-ImplicitCastExpr 0x7facd2068420 <col:9, col:10> 'double' <LValueToRValue>
+|   |     `-UnaryOperator 0x7facd2068400 <col:9, col:10> 'double' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7facd20683e8 <col:10> 'double *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7facd20683c0 <col:10> 'double *' lvalue ParmVar 0x7facd20681a0 'p' 'double *'
+|   |-DeclStmt 0x7facd20685e0 <<scratch space>:11:1, ../Data/C2AST/pr63594-1.c:30:23>
+|   | `-VarDecl 0x7facd2068460 <<scratch space>:11:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd2068560 <col:15, col:22> 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-ImplicitCastExpr 0x7facd20685b0 <line:7:12> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7facd20684c0 <col:12> 'double' lvalue Var 0x7facd2068360 'c' 'double'
+|   |     `-ImplicitCastExpr 0x7facd20685c8 <col:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd20684e8 <col:12> 'double' lvalue Var 0x7facd2068360 'c' 'double'
+|   `-ReturnStmt 0x7facd2068638 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2068620 <col:10> 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd20685f8 <col:10> 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7facd2068460 'v' 'vdouble2':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-TypedefDecl 0x7facd2068748 <line:17:16, <scratch space>:14:1> col:1 referenced vdouble1 '__attribute__((__vector_size__(1 * sizeof(double)))) double'
+| `-VectorType 0x7facd2068710 '__attribute__((__vector_size__(1 * sizeof(double)))) double' 1
+|   `-BuiltinType 0x7facd182bf00 'double'
+|-FunctionDecl 0x7facd20688e0 <line:16:1, ../Data/C2AST/pr63594-1.c:23:20> <scratch space>:18:1 test1double1 'vdouble1 (double)'
+| |-ParmVarDecl 0x7facd20687d8 <../Data/C2AST/pr63594-1.c:66:3, line:20:16> col:16 used c 'double'
+| `-CompoundStmt 0x7facd2069d40 <col:25, line:23:20>
+|   |-DeclStmt 0x7facd2069cd0 <<scratch space>:20:1, ../Data/C2AST/pr63594-1.c:22:23>
+|   | `-VarDecl 0x7facd2068998 <<scratch space>:20:1, ../Data/C2AST/pr63594-1.c:22:22> col:11 used v 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7facd2069c70 <col:15, col:22> 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double'
+|   |     `-ImplicitCastExpr 0x7facd2069cb8 <line:7:12> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7facd2069c00 <col:12> 'double' lvalue ParmVar 0x7facd20687d8 'c' 'double'
+|   `-ReturnStmt 0x7facd2069d28 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7facd2069d10 <col:10> 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double' <LValueToRValue>
+|       `-DeclRefExpr 0x7facd2069ce8 <col:10> 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double' lvalue Var 0x7facd2068998 'v' 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double'
+`-FunctionDecl 0x7facd2069e80 <<scratch space>:23:1, ../Data/C2AST/pr63594-1.c:31:20> <scratch space>:25:1 test2double1 'vdouble1 (double *)'
+  |-ParmVarDecl 0x7facd2069d78 <../Data/C2AST/pr63594-1.c:66:3, line:27:17> col:17 used p 'double *'
+  `-CompoundStmt 0x7facd206a1e0 <col:26, line:31:20>
+    |-DeclStmt 0x7facd206a018 <line:66:3, line:29:11>
+    | `-VarDecl 0x7facd2069f40 <line:66:3, line:29:10> col:5 used c 'double' cinit
+    |   `-ImplicitCastExpr 0x7facd206a000 <col:9, col:10> 'double' <LValueToRValue>
+    |     `-UnaryOperator 0x7facd2069fe0 <col:9, col:10> 'double' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7facd2069fc8 <col:10> 'double *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7facd2069fa0 <col:10> 'double *' lvalue ParmVar 0x7facd2069d78 'p' 'double *'
+    |-DeclStmt 0x7facd206a170 <<scratch space>:27:1, ../Data/C2AST/pr63594-1.c:30:23>
+    | `-VarDecl 0x7facd206a040 <<scratch space>:27:1, ../Data/C2AST/pr63594-1.c:30:22> col:11 used v 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double' cinit
+    |   `-InitListExpr 0x7facd206a110 <col:15, col:22> 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double'
+    |     `-ImplicitCastExpr 0x7facd206a158 <line:7:12> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7facd206a0a0 <col:12> 'double' lvalue Var 0x7facd2069f40 'c' 'double'
+    `-ReturnStmt 0x7facd206a1c8 <line:31:3, col:10>
+      `-ImplicitCastExpr 0x7facd206a1b0 <col:10> 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7facd206a188 <col:10> 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double' lvalue Var 0x7facd206a040 'v' 'vdouble1':'__attribute__((__vector_size__(1 * sizeof(double)))) double'

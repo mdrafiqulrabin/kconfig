@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fef58018ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fef58019978 <../Data/C2AST/pr29945.c:2:1, col:20> col:20 used __ctype_ptr 'const char *' extern
+`-FunctionDecl 0x7fef5805a928 <line:4:1, line:8:1> line:4:1 parse_real 'int (unsigned char)'
+  |-ParmVarDecl 0x7fef5805a858 <col:13, col:27> col:27 used c 'unsigned char'
+  `-CompoundStmt 0x7fef5805adf8 <line:5:1, line:8:1>
+    `-IfStmt 0x7fef5805adc0 <line:6:3, line:7:18>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fef5805aba8 <line:6:7, col:35> 'int' '&&'
+      | |-ParenExpr 0x7fef5805aaf0 <col:7, col:25> 'int'
+      | | `-BinaryOperator 0x7fef5805aac8 <col:8, col:23> 'int' '&'
+      | |   |-ImplicitCastExpr 0x7fef5805aab0 <col:8, col:21> 'int' <IntegralCast>
+      | |   | `-ImplicitCastExpr 0x7fef5805aa98 <col:8, col:21> 'char' <LValueToRValue>
+      | |   |   `-ArraySubscriptExpr 0x7fef5805aa50 <col:8, col:21> 'const char' lvalue
+      | |   |     |-ImplicitCastExpr 0x7fef5805aa20 <col:8> 'const char *' <LValueToRValue>
+      | |   |     | `-DeclRefExpr 0x7fef5805a9d0 <col:8> 'const char *' lvalue Var 0x7fef58019978 '__ctype_ptr' 'const char *'
+      | |   |     `-ImplicitCastExpr 0x7fef5805aa38 <col:20> 'unsigned char' <LValueToRValue>
+      | |   |       `-DeclRefExpr 0x7fef5805a9f8 <col:20> 'unsigned char' lvalue ParmVar 0x7fef5805a858 'c' 'unsigned char'
+      | |   `-IntegerLiteral 0x7fef5805aa78 <col:23> 'int' 4
+      | `-BinaryOperator 0x7fef5805ab80 <col:30, col:35> 'int' '!='
+      |   |-ImplicitCastExpr 0x7fef5805ab68 <col:30> 'int' <IntegralCast>
+      |   | `-ImplicitCastExpr 0x7fef5805ab50 <col:30> 'unsigned char' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fef5805ab10 <col:30> 'unsigned char' lvalue ParmVar 0x7fef5805a858 'c' 'unsigned char'
+      |   `-CharacterLiteral 0x7fef5805ab38 <col:35> 'int' 46
+      |-CallExpr 0x7fef5805ad60 <line:7:4, col:18> 'int'
+      | |-ImplicitCastExpr 0x7fef5805ad48 <col:4> 'int (*)()' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fef5805acd0 <col:4> 'int ()' Function 0x7fef5805ac20 'unget_char' 'int ()'
+      | `-ImplicitCastExpr 0x7fef5805ada8 <col:17> 'int' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fef5805ad90 <col:17> 'unsigned char' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fef5805acf8 <col:17> 'unsigned char' lvalue ParmVar 0x7fef5805a858 'c' 'unsigned char'
+      `-<<<NULL>>>

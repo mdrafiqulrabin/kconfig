@@ -1,0 +1,19 @@
+../Data/C2AST/printf-lib.c:1:10: fatal error: 'lib/printf.c' file not found
+#include "lib/printf.c"
+         ^~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fd6f481ece8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd6f481f260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd6f481ef80 '__int128'
+|-TypedefDecl 0x7fd6f481f2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd6f481efa0 'unsigned __int128'
+|-TypedefDecl 0x7fd6f481f5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd6f481f3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd6f481f328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd6f481f640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd6f481f600 'char *'
+|   `-BuiltinType 0x7fd6f481ed80 'char'
+`-TypedefDecl 0x7fd6f481f908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fd6f481f8b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fd6f481f720 'struct __va_list_tag'
+      `-Record 0x7fd6f481f698 '__va_list_tag'

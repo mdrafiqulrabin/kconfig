@@ -1,0 +1,685 @@
+TranslationUnitDecl 0x7fc48481aee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc485050668 <../Data/C2AST/pr57371-1.c:8:1, line:11:1> line:8:5 foo1 'int (short)'
+| |-ParmVarDecl 0x7fc48481bb78 <col:11, col:17> col:17 used x 'short'
+| `-CompoundStmt 0x7fc485050848 <col:20, line:11:1>
+|   `-ReturnStmt 0x7fc485050830 <line:9:3, col:24>
+|     `-BinaryOperator 0x7fc485050808 <col:10, col:24> 'int' '!='
+|       |-CStyleCastExpr 0x7fc4850507a8 <col:10, col:19> 'double' <IntegralToFloating>
+|       | `-ImplicitCastExpr 0x7fc485050790 <col:19> 'short' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fc485050750 <col:19> 'short' lvalue ParmVar 0x7fc48481bb78 'x' 'short'
+|       `-ImplicitCastExpr 0x7fc4850507f0 <col:24> 'double' <IntegralToFloating>
+|         `-IntegerLiteral 0x7fc4850507d0 <col:24> 'int' 0
+|-FunctionDecl 0x7fc485050908 <line:13:1, line:16:1> line:13:5 foo2 'int (short)'
+| |-ParmVarDecl 0x7fc485050878 <col:11, col:17> col:17 used x 'short'
+| `-CompoundStmt 0x7fc485050aa8 <col:20, line:16:1>
+|   `-ReturnStmt 0x7fc485050a90 <line:14:3, col:23>
+|     `-BinaryOperator 0x7fc485050a68 <col:10, col:23> 'int' '!='
+|       |-CStyleCastExpr 0x7fc485050a08 <col:10, col:18> 'float' <IntegralToFloating>
+|       | `-ImplicitCastExpr 0x7fc4850509f0 <col:18> 'short' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fc4850509b0 <col:18> 'short' lvalue ParmVar 0x7fc485050878 'x' 'short'
+|       `-ImplicitCastExpr 0x7fc485050a50 <col:23> 'float' <IntegralToFloating>
+|         `-IntegerLiteral 0x7fc485050a30 <col:23> 'int' 0
+|-FunctionDecl 0x7fc485050ba8 <line:18:1, line:21:1> line:18:5 foo3 'int (int)'
+| |-ParmVarDecl 0x7fc485050ad8 <col:11, col:15> col:15 used x 'int'
+| `-CompoundStmt 0x7fc485050d48 <col:18, line:21:1>
+|   `-ReturnStmt 0x7fc485050d30 <line:19:3, col:24>
+|     `-BinaryOperator 0x7fc485050d08 <col:10, col:24> 'int' '!='
+|       |-CStyleCastExpr 0x7fc485050ca8 <col:10, col:19> 'double' <IntegralToFloating>
+|       | `-ImplicitCastExpr 0x7fc485050c90 <col:19> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fc485050c50 <col:19> 'int' lvalue ParmVar 0x7fc485050ad8 'x' 'int'
+|       `-ImplicitCastExpr 0x7fc485050cf0 <col:24> 'double' <IntegralToFloating>
+|         `-IntegerLiteral 0x7fc485050cd0 <col:24> 'int' 0
+|-FunctionDecl 0x7fc485050e40 <line:25:1, line:74:1> line:25:6 in_range 'void (unsigned short)'
+| |-ParmVarDecl 0x7fc485050d78 <col:16, col:31> col:31 used x 'unsigned short'
+| `-CompoundStmt 0x7fc485052d40 <line:26:1, line:74:1>
+|   |-CompoundStmt 0x7fc485051090 <line:27:3, line:31:3>
+|   | |-DeclStmt 0x7fc485050f60 <line:28:5, col:28>
+|   | | `-VarDecl 0x7fc485050f00 <col:5, col:18> col:18 used in_range_1 'volatile int'
+|   | `-BinaryOperator 0x7fc485051068 <line:29:5, col:30> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485050f78 <col:5> 'volatile int' lvalue Var 0x7fc485050f00 'in_range_1' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485051040 <col:18, col:30> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc485050ff8 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485050fe0 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485050fa0 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc485051020 <col:30> 'float' 1.000000e+02
+|   |-CompoundStmt 0x7fc485051258 <line:33:3, line:37:3>
+|   | |-DeclStmt 0x7fc485051128 <line:34:5, col:28>
+|   | | `-VarDecl 0x7fc4850510c8 <col:5, col:18> col:18 used in_range_2 'volatile int'
+|   | `-BinaryOperator 0x7fc485051230 <line:35:5, col:30> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485051140 <col:5> 'volatile int' lvalue Var 0x7fc4850510c8 'in_range_2' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485051208 <col:18, col:30> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc4850511c0 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850511a8 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485051168 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc4850511e8 <col:30> 'float' 1.000000e+02
+|   |-CompoundStmt 0x7fc485051420 <line:39:3, line:43:3>
+|   | |-DeclStmt 0x7fc4850512f0 <line:40:5, col:28>
+|   | | `-VarDecl 0x7fc485051290 <col:5, col:18> col:18 used in_range_3 'volatile int'
+|   | `-BinaryOperator 0x7fc4850513f8 <line:41:5, col:30> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485051308 <col:5> 'volatile int' lvalue Var 0x7fc485051290 'in_range_3' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4850513d0 <col:18, col:30> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc485051388 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485051370 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485051330 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc4850513b0 <col:30> 'float' 1.005000e+02
+|   |-CompoundStmt 0x7fc485052600 <line:45:3, line:49:3>
+|   | |-DeclStmt 0x7fc4850514b8 <line:46:5, col:28>
+|   | | `-VarDecl 0x7fc485051458 <col:5, col:18> col:18 used in_range_4 'volatile int'
+|   | `-BinaryOperator 0x7fc4850515c0 <line:47:5, col:30> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4850514d0 <col:5> 'volatile int' lvalue Var 0x7fc485051458 'in_range_4' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485051598 <col:18, col:30> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc485051550 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485051538 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4850514f8 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc485051578 <col:30> 'float' 1.005000e+02
+|   |-CompoundStmt 0x7fc4850527c8 <line:51:3, line:55:3>
+|   | |-DeclStmt 0x7fc485052698 <line:52:5, col:28>
+|   | | `-VarDecl 0x7fc485052638 <col:5, col:18> col:18 used in_range_5 'volatile int'
+|   | `-BinaryOperator 0x7fc4850527a0 <line:53:5, col:31> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4850526b0 <col:5> 'volatile int' lvalue Var 0x7fc485052638 'in_range_5' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485052778 <col:18, col:31> 'int' '=='
+|   |     |-CStyleCastExpr 0x7fc485052730 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485052718 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4850526d8 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc485052758 <col:31> 'float' 1.000000e+02
+|   |-CompoundStmt 0x7fc485052990 <line:57:3, line:61:3>
+|   | |-DeclStmt 0x7fc485052860 <line:58:5, col:28>
+|   | | `-VarDecl 0x7fc485052800 <col:5, col:18> col:18 used in_range_6 'volatile int'
+|   | `-BinaryOperator 0x7fc485052968 <line:59:5, col:31> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485052878 <col:5> 'volatile int' lvalue Var 0x7fc485052800 'in_range_6' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485052940 <col:18, col:31> 'int' '!='
+|   |     |-CStyleCastExpr 0x7fc4850528f8 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850528e0 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4850528a0 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc485052920 <col:31> 'float' 1.000000e+02
+|   |-CompoundStmt 0x7fc485052b58 <line:63:3, line:67:3>
+|   | |-DeclStmt 0x7fc485052a28 <line:64:5, col:28>
+|   | | `-VarDecl 0x7fc4850529c8 <col:5, col:18> col:18 used in_range_7 'volatile int'
+|   | `-BinaryOperator 0x7fc485052b30 <line:65:5, col:31> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485052a40 <col:5> 'volatile int' lvalue Var 0x7fc4850529c8 'in_range_7' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485052b08 <col:18, col:31> 'int' '=='
+|   |     |-CStyleCastExpr 0x7fc485052ac0 <col:18, col:26> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485052aa8 <col:26> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485052a68 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|   |     `-FloatingLiteral 0x7fc485052ae8 <col:31> 'float' 1.005000e+02
+|   `-CompoundStmt 0x7fc485052d20 <line:69:3, line:73:3>
+|     |-DeclStmt 0x7fc485052bf0 <line:70:5, col:28>
+|     | `-VarDecl 0x7fc485052b90 <col:5, col:18> col:18 used in_range_8 'volatile int'
+|     `-BinaryOperator 0x7fc485052cf8 <line:71:5, col:31> 'int' '='
+|       |-DeclRefExpr 0x7fc485052c08 <col:5> 'volatile int' lvalue Var 0x7fc485052b90 'in_range_8' 'volatile int'
+|       `-BinaryOperator 0x7fc485052cd0 <col:18, col:31> 'int' '!='
+|         |-CStyleCastExpr 0x7fc485052c88 <col:18, col:26> 'float' <IntegralToFloating>
+|         | `-ImplicitCastExpr 0x7fc485052c70 <col:26> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc485052c30 <col:26> 'unsigned short' lvalue ParmVar 0x7fc485050d78 'x' 'unsigned short'
+|         `-FloatingLiteral 0x7fc485052cb0 <col:31> 'float' 1.005000e+02
+|-FunctionDecl 0x7fc485052e30 <line:78:1, line:115:1> line:78:6 out_range 'void (unsigned short)'
+| |-ParmVarDecl 0x7fc485052da8 <col:17, col:32> col:32 used x 'unsigned short'
+| `-CompoundStmt 0x7fc485053a60 <line:79:1, line:115:1>
+|   |-CompoundStmt 0x7fc4850530a0 <line:80:3, line:84:3>
+|   | |-DeclStmt 0x7fc485052f50 <line:81:5, col:29>
+|   | | `-VarDecl 0x7fc485052ef0 <col:5, col:18> col:18 used out_range_1 'volatile int'
+|   | `-BinaryOperator 0x7fc485053078 <line:82:5, col:32> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485052f68 <col:5> 'volatile int' lvalue Var 0x7fc485052ef0 'out_range_1' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053050 <col:19, col:32> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc485052fe8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485052fd0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485052f90 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485052da8 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc485053030 <col:31, col:32> 'float' prefix '-'
+|   |       `-FloatingLiteral 0x7fc485053010 <col:32> 'float' 1.005000e+02
+|   |-CompoundStmt 0x7fc485053288 <line:86:3, line:90:3>
+|   | |-DeclStmt 0x7fc485053138 <line:87:5, col:29>
+|   | | `-VarDecl 0x7fc4850530d8 <col:5, col:18> col:18 used out_range_2 'volatile int'
+|   | `-BinaryOperator 0x7fc485053260 <line:88:5, col:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485053150 <col:5> 'volatile int' lvalue Var 0x7fc4850530d8 'out_range_2' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053238 <col:19, col:33> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc4850531d0 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850531b8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485053178 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485052da8 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc485053218 <col:32, col:33> 'float' prefix '-'
+|   |       `-FloatingLiteral 0x7fc4850531f8 <col:33> 'float' 1.005000e+02
+|   |-CompoundStmt 0x7fc485053470 <line:92:3, line:96:3>
+|   | |-DeclStmt 0x7fc485053320 <line:93:5, col:29>
+|   | | `-VarDecl 0x7fc4850532c0 <col:5, col:18> col:18 used out_range_3 'volatile int'
+|   | `-BinaryOperator 0x7fc485053448 <line:94:5, col:32> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485053338 <col:5> 'volatile int' lvalue Var 0x7fc4850532c0 'out_range_3' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053420 <col:19, col:32> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc4850533b8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850533a0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485053360 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485052da8 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc485053400 <col:31, col:32> 'float' prefix '-'
+|   |       `-FloatingLiteral 0x7fc4850533e0 <col:32> 'float' 1.005000e+02
+|   |-CompoundStmt 0x7fc485053670 <line:98:3, line:102:3>
+|   | |-DeclStmt 0x7fc485053508 <line:99:5, col:29>
+|   | | `-VarDecl 0x7fc4850534a8 <col:5, col:18> col:18 used out_range_4 'volatile int'
+|   | `-BinaryOperator 0x7fc485053648 <line:100:5, col:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485053520 <col:5> 'volatile int' lvalue Var 0x7fc4850534a8 'out_range_4' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053620 <col:19, col:33> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc4850535a0 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485053588 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485053548 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485052da8 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc485053600 <col:32, col:33> 'float' prefix '-'
+|   |       `-FloatingLiteral 0x7fc4850535c8 <col:33> 'float' 1.005000e+02
+|   |-CompoundStmt 0x7fc485053858 <line:104:3, line:108:3>
+|   | |-DeclStmt 0x7fc485053708 <line:105:5, col:29>
+|   | | `-VarDecl 0x7fc4850536a8 <col:5, col:18> col:18 used out_range_5 'volatile int'
+|   | `-BinaryOperator 0x7fc485053830 <line:106:5, col:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485053720 <col:5> 'volatile int' lvalue Var 0x7fc4850536a8 'out_range_5' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053808 <col:19, col:33> 'int' '=='
+|   |     |-CStyleCastExpr 0x7fc4850537a0 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485053788 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485053748 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485052da8 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc4850537e8 <col:32, col:33> 'float' prefix '-'
+|   |       `-FloatingLiteral 0x7fc4850537c8 <col:33> 'float' 1.005000e+02
+|   `-CompoundStmt 0x7fc485053a40 <line:110:3, line:114:3>
+|     |-DeclStmt 0x7fc4850538f0 <line:111:5, col:29>
+|     | `-VarDecl 0x7fc485053890 <col:5, col:18> col:18 used out_range_6 'volatile int'
+|     `-BinaryOperator 0x7fc485053a18 <line:112:5, col:33> 'int' '='
+|       |-DeclRefExpr 0x7fc485053908 <col:5> 'volatile int' lvalue Var 0x7fc485053890 'out_range_6' 'volatile int'
+|       `-BinaryOperator 0x7fc4850539f0 <col:19, col:33> 'int' '!='
+|         |-CStyleCastExpr 0x7fc485053988 <col:19, col:27> 'float' <IntegralToFloating>
+|         | `-ImplicitCastExpr 0x7fc485053970 <col:27> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc485053930 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485052da8 'x' 'unsigned short'
+|         `-UnaryOperator 0x7fc4850539d0 <col:32, col:33> 'float' prefix '-'
+|           `-FloatingLiteral 0x7fc4850539b0 <col:33> 'float' 1.005000e+02
+|-FunctionDecl 0x7fc485053b40 <line:119:1, line:192:1> line:119:6 lo_bounds 'void (unsigned short)'
+| |-ParmVarDecl 0x7fc485053ab8 <col:17, col:32> col:32 used x 'unsigned short'
+| `-CompoundStmt 0x7fc485055500 <line:120:1, line:192:1>
+|   |-CompoundStmt 0x7fc485053da8 <line:121:3, line:125:3>
+|   | |-DeclStmt 0x7fc485053c60 <line:122:5, col:29>
+|   | | `-VarDecl 0x7fc485053c00 <col:5, col:18> col:18 used lo_bounds_1 'volatile int'
+|   | `-BinaryOperator 0x7fc485053d80 <line:123:5, col:31> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485053c78 <col:5> 'volatile int' lvalue Var 0x7fc485053c00 'lo_bounds_1' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053d58 <col:19, col:31> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc485053cf8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485053ce0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485053ca0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc485053d40 <col:31> 'float' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fc485053d20 <col:31> 'int' 0
+|   |-CompoundStmt 0x7fc485053f88 <line:127:3, line:131:3>
+|   | |-DeclStmt 0x7fc485053e40 <line:128:5, col:29>
+|   | | `-VarDecl 0x7fc485053de0 <col:5, col:18> col:18 used lo_bounds_2 'volatile int'
+|   | `-BinaryOperator 0x7fc485053f60 <line:129:5, col:32> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485053e58 <col:5> 'volatile int' lvalue Var 0x7fc485053de0 'lo_bounds_2' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485053f38 <col:19, col:32> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc485053ed8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485053ec0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485053e80 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc485053f20 <col:32> 'float' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fc485053f00 <col:32> 'int' 0
+|   |-CompoundStmt 0x7fc485054168 <line:133:3, line:137:3>
+|   | |-DeclStmt 0x7fc485054020 <line:134:5, col:29>
+|   | | `-VarDecl 0x7fc485053fc0 <col:5, col:18> col:18 used lo_bounds_3 'volatile int'
+|   | `-BinaryOperator 0x7fc485054140 <line:135:5, col:31> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485054038 <col:5> 'volatile int' lvalue Var 0x7fc485053fc0 'lo_bounds_3' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485054118 <col:19, col:31> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc4850540b8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850540a0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485054060 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc485054100 <col:31> 'float' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fc4850540e0 <col:31> 'int' 0
+|   |-CompoundStmt 0x7fc485054348 <line:139:3, line:143:3>
+|   | |-DeclStmt 0x7fc485054200 <line:140:5, col:29>
+|   | | `-VarDecl 0x7fc4850541a0 <col:5, col:18> col:18 used lo_bounds_4 'volatile int'
+|   | `-BinaryOperator 0x7fc485054320 <line:141:5, col:32> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485054218 <col:5> 'volatile int' lvalue Var 0x7fc4850541a0 'lo_bounds_4' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4850542f8 <col:19, col:32> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc485054298 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485054280 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485054240 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc4850542e0 <col:32> 'float' <IntegralToFloating>
+|   |       `-IntegerLiteral 0x7fc4850542c0 <col:32> 'int' 0
+|   |-CompoundStmt 0x7fc485054570 <line:145:3, line:149:3>
+|   | |-DeclStmt 0x7fc4850543e0 <line:146:5, col:29>
+|   | | `-VarDecl 0x7fc485054380 <col:5, col:18> col:18 used lo_bounds_5 'volatile int'
+|   | `-BinaryOperator 0x7fc485054548 <line:147:5, col:37> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4850543f8 <col:5> 'volatile int' lvalue Var 0x7fc485054380 'lo_bounds_5' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485054520 <col:19, col:37> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc485054478 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485054460 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485054420 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc4850544f8 <col:31, col:37> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc4850544e0 <col:31> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc4850544a0 <col:31> 'int' 0
+|   |       `-FloatingLiteral 0x7fc4850544c0 <col:37> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc4850547f0 <line:151:3, line:155:3>
+|   | |-DeclStmt 0x7fc485054660 <line:152:5, col:29>
+|   | | `-VarDecl 0x7fc485054600 <col:5, col:18> col:18 used lo_bounds_6 'volatile int'
+|   | `-BinaryOperator 0x7fc4850547c8 <line:153:5, col:38> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485054678 <col:5> 'volatile int' lvalue Var 0x7fc485054600 'lo_bounds_6' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4850547a0 <col:19, col:38> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc4850546f8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850546e0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4850546a0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc485054778 <col:32, col:38> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc485054760 <col:32> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc485054720 <col:32> 'int' 0
+|   |       `-FloatingLiteral 0x7fc485054740 <col:38> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc485054a18 <line:157:3, line:161:3>
+|   | |-DeclStmt 0x7fc485054888 <line:158:5, col:29>
+|   | | `-VarDecl 0x7fc485054828 <col:5, col:18> col:18 used lo_bounds_7 'volatile int'
+|   | `-BinaryOperator 0x7fc4850549f0 <line:159:5, col:37> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4850548a0 <col:5> 'volatile int' lvalue Var 0x7fc485054828 'lo_bounds_7' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4850549c8 <col:19, col:37> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc485054920 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485054908 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4850548c8 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc4850549a0 <col:31, col:37> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc485054988 <col:31> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc485054948 <col:31> 'int' 0
+|   |       `-FloatingLiteral 0x7fc485054968 <col:37> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc485054c40 <line:163:3, line:167:3>
+|   | |-DeclStmt 0x7fc485054ab0 <line:164:5, col:29>
+|   | | `-VarDecl 0x7fc485054a50 <col:5, col:18> col:18 used lo_bounds_8 'volatile int'
+|   | `-BinaryOperator 0x7fc485054c18 <line:165:5, col:38> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485054ac8 <col:5> 'volatile int' lvalue Var 0x7fc485054a50 'lo_bounds_8' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485054bf0 <col:19, col:38> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc485054b48 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485054b30 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485054af0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc485054bc8 <col:32, col:38> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc485054bb0 <col:32> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc485054b70 <col:32> 'int' 0
+|   |       `-FloatingLiteral 0x7fc485054b90 <col:38> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc485054e68 <line:169:3, line:173:3>
+|   | |-DeclStmt 0x7fc485054cd8 <line:170:5, col:29>
+|   | | `-VarDecl 0x7fc485054c78 <col:5, col:18> col:18 used lo_bounds_9 'volatile int'
+|   | `-BinaryOperator 0x7fc485054e40 <line:171:5, col:37> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485054cf0 <col:5> 'volatile int' lvalue Var 0x7fc485054c78 'lo_bounds_9' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485054e18 <col:19, col:37> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc485054d70 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485054d58 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485054d18 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc485054df0 <col:31, col:37> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fc485054dd8 <col:31> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc485054d98 <col:31> 'int' 0
+|   |       `-FloatingLiteral 0x7fc485054db8 <col:37> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc485055090 <line:175:3, line:179:3>
+|   | |-DeclStmt 0x7fc485054f00 <line:176:5, col:30>
+|   | | `-VarDecl 0x7fc485054ea0 <col:5, col:18> col:18 used lo_bounds_10 'volatile int'
+|   | `-BinaryOperator 0x7fc485055068 <line:177:5, col:39> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485054f18 <col:5> 'volatile int' lvalue Var 0x7fc485054ea0 'lo_bounds_10' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485055040 <col:20, col:39> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc485054f98 <col:20, col:28> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc485054f80 <col:28> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485054f40 <col:28> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc485055018 <col:33, col:39> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fc485055000 <col:33> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc485054fc0 <col:33> 'int' 0
+|   |       `-FloatingLiteral 0x7fc485054fe0 <col:39> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc4850552b8 <line:181:3, line:185:3>
+|   | |-DeclStmt 0x7fc485055128 <line:182:5, col:30>
+|   | | `-VarDecl 0x7fc4850550c8 <col:5, col:18> col:18 used lo_bounds_11 'volatile int'
+|   | `-BinaryOperator 0x7fc485055290 <line:183:5, col:38> 'int' '='
+|   |   |-DeclRefExpr 0x7fc485055140 <col:5> 'volatile int' lvalue Var 0x7fc4850550c8 'lo_bounds_11' 'volatile int'
+|   |   `-BinaryOperator 0x7fc485055268 <col:20, col:38> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc4850551c0 <col:20, col:28> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4850551a8 <col:28> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc485055168 <col:28> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc485055240 <col:32, col:38> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fc485055228 <col:32> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fc4850551e8 <col:32> 'int' 0
+|   |       `-FloatingLiteral 0x7fc485055208 <col:38> 'float' 5.000000e-01
+|   `-CompoundStmt 0x7fc4850554e0 <line:187:3, line:191:3>
+|     |-DeclStmt 0x7fc485055350 <line:188:5, col:30>
+|     | `-VarDecl 0x7fc4850552f0 <col:5, col:18> col:18 used lo_bounds_12 'volatile int'
+|     `-BinaryOperator 0x7fc4850554b8 <line:189:5, col:39> 'int' '='
+|       |-DeclRefExpr 0x7fc485055368 <col:5> 'volatile int' lvalue Var 0x7fc4850552f0 'lo_bounds_12' 'volatile int'
+|       `-BinaryOperator 0x7fc485055490 <col:20, col:39> 'int' '<='
+|         |-CStyleCastExpr 0x7fc4850553e8 <col:20, col:28> 'float' <IntegralToFloating>
+|         | `-ImplicitCastExpr 0x7fc4850553d0 <col:28> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc485055390 <col:28> 'unsigned short' lvalue ParmVar 0x7fc485053ab8 'x' 'unsigned short'
+|         `-BinaryOperator 0x7fc485055468 <col:33, col:39> 'float' '+'
+|           |-ImplicitCastExpr 0x7fc485055450 <col:33> 'float' <IntegralToFloating>
+|           | `-IntegerLiteral 0x7fc485055410 <col:33> 'int' 0
+|           `-FloatingLiteral 0x7fc485055430 <col:39> 'float' 5.000000e-01
+|-FunctionDecl 0x7fc484004828 <line:194:1, line:267:1> line:194:6 hi_bounds 'void (unsigned short)'
+| |-ParmVarDecl 0x7fc485055588 <col:17, col:32> col:32 used x 'unsigned short'
+| `-CompoundStmt 0x7fc484015be0 <line:195:1, line:267:1>
+|   |-CompoundStmt 0x7fc484004b40 <line:196:3, line:200:3>
+|   | |-DeclStmt 0x7fc484004948 <line:197:5, col:29>
+|   | | `-VarDecl 0x7fc4840048e8 <col:5, col:18> col:18 used hi_bounds_1 'volatile int'
+|   | `-BinaryOperator 0x7fc484004b18 <line:198:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484004960 <../Data/C2AST/pr57371-1.c:198:5> 'volatile int' lvalue Var 0x7fc4840048e8 'hi_bounds_1' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484004af0 <col:19, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc4840049e0 <../Data/C2AST/pr57371-1.c:198:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4840049c8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484004988 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc484004ad8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       `-ParenExpr 0x7fc484004ab8 <col:19, col:39> 'int'
+|   |         `-BinaryOperator 0x7fc484004a90 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |           |-BinaryOperator 0x7fc484004a48 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |           | |-IntegerLiteral 0x7fc484004a08 <<built-in>:37:22> 'int' 32767
+|   |           | `-IntegerLiteral 0x7fc484004a28 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |           `-IntegerLiteral 0x7fc484004a70 <col:38> 'int' 1
+|   |-CompoundStmt 0x7fc484004dd0 <../Data/C2AST/pr57371-1.c:202:3, line:206:3>
+|   | |-DeclStmt 0x7fc484004bd8 <line:203:5, col:29>
+|   | | `-VarDecl 0x7fc484004b78 <col:5, col:18> col:18 used hi_bounds_2 'volatile int'
+|   | `-BinaryOperator 0x7fc484004da8 <line:204:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484004bf0 <../Data/C2AST/pr57371-1.c:204:5> 'volatile int' lvalue Var 0x7fc484004b78 'hi_bounds_2' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484004d80 <col:19, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc484004c70 <../Data/C2AST/pr57371-1.c:204:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484004c58 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484004c18 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc484004d68 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       `-ParenExpr 0x7fc484004d48 <col:19, col:39> 'int'
+|   |         `-BinaryOperator 0x7fc484004d20 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |           |-BinaryOperator 0x7fc484004cd8 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |           | |-IntegerLiteral 0x7fc484004c98 <<built-in>:37:22> 'int' 32767
+|   |           | `-IntegerLiteral 0x7fc484004cb8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |           `-IntegerLiteral 0x7fc484004d00 <col:38> 'int' 1
+|   |-CompoundStmt 0x7fc484005060 <../Data/C2AST/pr57371-1.c:208:3, line:212:3>
+|   | |-DeclStmt 0x7fc484004e68 <line:209:5, col:29>
+|   | | `-VarDecl 0x7fc484004e08 <col:5, col:18> col:18 used hi_bounds_3 'volatile int'
+|   | `-BinaryOperator 0x7fc484005038 <line:210:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484004e80 <../Data/C2AST/pr57371-1.c:210:5> 'volatile int' lvalue Var 0x7fc484004e08 'hi_bounds_3' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484005010 <col:19, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc484004f00 <../Data/C2AST/pr57371-1.c:210:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484004ee8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484004ea8 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc484004ff8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       `-ParenExpr 0x7fc484004fd8 <col:19, col:39> 'int'
+|   |         `-BinaryOperator 0x7fc484004fb0 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |           |-BinaryOperator 0x7fc484004f68 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |           | |-IntegerLiteral 0x7fc484004f28 <<built-in>:37:22> 'int' 32767
+|   |           | `-IntegerLiteral 0x7fc484004f48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |           `-IntegerLiteral 0x7fc484004f90 <col:38> 'int' 1
+|   |-CompoundStmt 0x7fc4840052f0 <../Data/C2AST/pr57371-1.c:214:3, line:218:3>
+|   | |-DeclStmt 0x7fc4840050f8 <line:215:5, col:29>
+|   | | `-VarDecl 0x7fc484005098 <col:5, col:18> col:18 used hi_bounds_4 'volatile int'
+|   | `-BinaryOperator 0x7fc4840052c8 <line:216:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484005110 <../Data/C2AST/pr57371-1.c:216:5> 'volatile int' lvalue Var 0x7fc484005098 'hi_bounds_4' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4840052a0 <col:19, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:39> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc484005190 <../Data/C2AST/pr57371-1.c:216:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484005178 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484005138 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-ImplicitCastExpr 0x7fc484005288 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       `-ParenExpr 0x7fc484005268 <col:19, col:39> 'int'
+|   |         `-BinaryOperator 0x7fc484005240 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |           |-BinaryOperator 0x7fc4840051f8 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |           | |-IntegerLiteral 0x7fc4840051b8 <<built-in>:37:22> 'int' 32767
+|   |           | `-IntegerLiteral 0x7fc4840051d8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |           `-IntegerLiteral 0x7fc484005220 <col:38> 'int' 1
+|   |-CompoundStmt 0x7fc4840055c8 <../Data/C2AST/pr57371-1.c:220:3, line:224:3>
+|   | |-DeclStmt 0x7fc484005388 <line:221:5, col:29>
+|   | | `-VarDecl 0x7fc484005328 <col:5, col:18> col:18 used hi_bounds_5 'volatile int'
+|   | `-BinaryOperator 0x7fc4840055a0 <line:222:5, col:43> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4840053a0 <col:5> 'volatile int' lvalue Var 0x7fc484005328 'hi_bounds_5' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484005578 <col:19, col:43> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc484005420 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484005408 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840053c8 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc484005550 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:222:43> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc484005538 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc4840054f8 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc4840054d0 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc484005488 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc484005448 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc484005468 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc4840054b0 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484005518 <../Data/C2AST/pr57371-1.c:222:43> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc484014ab0 <line:226:3, line:230:3>
+|   | |-DeclStmt 0x7fc484005660 <line:227:5, col:29>
+|   | | `-VarDecl 0x7fc484005600 <col:5, col:18> col:18 used hi_bounds_6 'volatile int'
+|   | `-BinaryOperator 0x7fc484014a88 <line:228:5, col:44> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484005678 <col:5> 'volatile int' lvalue Var 0x7fc484005600 'hi_bounds_6' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484014a60 <col:19, col:44> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc4840056f8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4840056e0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840056a0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc484014a38 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:228:44> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc484014a20 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc4840057d0 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc4840057a8 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc484005760 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc484005720 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc484005740 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc484005788 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484014a00 <../Data/C2AST/pr57371-1.c:228:44> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc484014d88 <line:232:3, line:236:3>
+|   | |-DeclStmt 0x7fc484014b48 <line:233:5, col:29>
+|   | | `-VarDecl 0x7fc484014ae8 <col:5, col:18> col:18 used hi_bounds_7 'volatile int'
+|   | `-BinaryOperator 0x7fc484014d60 <line:234:5, col:43> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484014b60 <col:5> 'volatile int' lvalue Var 0x7fc484014ae8 'hi_bounds_7' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484014d38 <col:19, col:43> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc484014be0 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484014bc8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484014b88 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc484014d10 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:234:43> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc484014cf8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc484014cb8 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc484014c90 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc484014c48 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc484014c08 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc484014c28 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc484014c70 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484014cd8 <../Data/C2AST/pr57371-1.c:234:43> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc484015060 <line:238:3, line:242:3>
+|   | |-DeclStmt 0x7fc484014e20 <line:239:5, col:29>
+|   | | `-VarDecl 0x7fc484014dc0 <col:5, col:18> col:18 used hi_bounds_8 'volatile int'
+|   | `-BinaryOperator 0x7fc484015038 <line:240:5, col:44> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484014e38 <col:5> 'volatile int' lvalue Var 0x7fc484014dc0 'hi_bounds_8' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484015010 <col:19, col:44> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc484014eb8 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484014ea0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484014e60 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc484014fe8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:240:44> 'float' '-'
+|   |       |-ImplicitCastExpr 0x7fc484014fd0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc484014f90 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc484014f68 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc484014f20 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc484014ee0 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc484014f00 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc484014f48 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484014fb0 <../Data/C2AST/pr57371-1.c:240:44> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc484015338 <line:244:3, line:248:3>
+|   | |-DeclStmt 0x7fc4840150f8 <line:245:5, col:29>
+|   | | `-VarDecl 0x7fc484015098 <col:5, col:18> col:18 used hi_bounds_9 'volatile int'
+|   | `-BinaryOperator 0x7fc484015310 <line:246:5, col:43> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484015110 <col:5> 'volatile int' lvalue Var 0x7fc484015098 'hi_bounds_9' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4840152e8 <col:19, col:43> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc484015190 <col:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484015178 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484015138 <col:27> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc4840152c0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:246:43> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fc4840152a8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc484015268 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc484015240 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc4840151f8 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc4840151b8 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc4840151d8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc484015220 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484015288 <../Data/C2AST/pr57371-1.c:246:43> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc484015610 <line:250:3, line:254:3>
+|   | |-DeclStmt 0x7fc4840153d0 <line:251:5, col:30>
+|   | | `-VarDecl 0x7fc484015370 <col:5, col:18> col:18 used hi_bounds_10 'volatile int'
+|   | `-BinaryOperator 0x7fc4840155e8 <line:252:5, col:45> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4840153e8 <col:5> 'volatile int' lvalue Var 0x7fc484015370 'hi_bounds_10' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4840155c0 <col:20, col:45> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc484015468 <col:20, col:28> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484015450 <col:28> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484015410 <col:28> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc484015598 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:252:45> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fc484015580 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc484015540 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc484015518 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc4840154d0 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc484015490 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc4840154b0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc4840154f8 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484015560 <../Data/C2AST/pr57371-1.c:252:45> 'float' 5.000000e-01
+|   |-CompoundStmt 0x7fc4840158e8 <line:256:3, line:260:3>
+|   | |-DeclStmt 0x7fc4840156a8 <line:257:5, col:30>
+|   | | `-VarDecl 0x7fc484015648 <col:5, col:18> col:18 used hi_bounds_11 'volatile int'
+|   | `-BinaryOperator 0x7fc4840158c0 <line:258:5, col:44> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4840156c0 <col:5> 'volatile int' lvalue Var 0x7fc484015648 'hi_bounds_11' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484015898 <col:20, col:44> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc484015740 <col:20, col:28> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484015728 <col:28> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840156e8 <col:28> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|   |     `-BinaryOperator 0x7fc484015870 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:258:44> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fc484015858 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|   |       | `-ParenExpr 0x7fc484015818 <col:19, col:39> 'int'
+|   |       |   `-BinaryOperator 0x7fc4840157f0 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|   |       |     |-BinaryOperator 0x7fc4840157a8 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|   |       |     | |-IntegerLiteral 0x7fc484015768 <<built-in>:37:22> 'int' 32767
+|   |       |     | `-IntegerLiteral 0x7fc484015788 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|   |       |     `-IntegerLiteral 0x7fc4840157d0 <col:38> 'int' 1
+|   |       `-FloatingLiteral 0x7fc484015838 <../Data/C2AST/pr57371-1.c:258:44> 'float' 5.000000e-01
+|   `-CompoundStmt 0x7fc484015bc0 <line:262:3, line:266:3>
+|     |-DeclStmt 0x7fc484015980 <line:263:5, col:30>
+|     | `-VarDecl 0x7fc484015920 <col:5, col:18> col:18 used hi_bounds_12 'volatile int'
+|     `-BinaryOperator 0x7fc484015b98 <line:264:5, col:45> 'int' '='
+|       |-DeclRefExpr 0x7fc484015998 <col:5> 'volatile int' lvalue Var 0x7fc484015920 'hi_bounds_12' 'volatile int'
+|       `-BinaryOperator 0x7fc484015b70 <col:20, col:45> 'int' '<='
+|         |-CStyleCastExpr 0x7fc484015a18 <col:20, col:28> 'float' <IntegralToFloating>
+|         | `-ImplicitCastExpr 0x7fc484015a00 <col:28> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc4840159c0 <col:28> 'unsigned short' lvalue ParmVar 0x7fc485055588 'x' 'unsigned short'
+|         `-BinaryOperator 0x7fc484015b48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, ../Data/C2AST/pr57371-1.c:264:45> 'float' '+'
+|           |-ImplicitCastExpr 0x7fc484015b30 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:19, col:39> 'float' <IntegralToFloating>
+|           | `-ParenExpr 0x7fc484015af0 <col:19, col:39> 'int'
+|           |   `-BinaryOperator 0x7fc484015ac8 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:38> 'int' '+'
+|           |     |-BinaryOperator 0x7fc484015a80 <<built-in>:37:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' '*'
+|           |     | |-IntegerLiteral 0x7fc484015a40 <<built-in>:37:22> 'int' 32767
+|           |     | `-IntegerLiteral 0x7fc484015a60 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:71:34> 'int' 2
+|           |     `-IntegerLiteral 0x7fc484015aa8 <col:38> 'int' 1
+|           `-FloatingLiteral 0x7fc484015b10 <../Data/C2AST/pr57371-1.c:264:45> 'float' 5.000000e-01
+|-FunctionDecl 0x7fc484015cf0 <line:271:1, line:338:1> line:271:6 nonfinite 'void (unsigned short)'
+| |-ParmVarDecl 0x7fc484015c68 <col:17, col:32> col:32 used x 'unsigned short'
+| `-CompoundStmt 0x7fc484018720 <line:272:1, line:338:1>
+|   |-CompoundStmt 0x7fc4840160d8 <line:275:3, line:279:3>
+|   | |-DeclStmt 0x7fc484015e10 <line:276:5, col:29>
+|   | | `-VarDecl 0x7fc484015db0 <col:5, col:18> col:18 used nonfinite_1 'volatile int'
+|   | `-BinaryOperator 0x7fc4840160b0 <line:277:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484015e28 <line:277:5> 'volatile int' lvalue Var 0x7fc484015db0 'nonfinite_1' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484016088 <col:19, line:273:34> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc484015ea8 <line:277:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484015e90 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484015e50 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fc484016060 <line:273:18, col:34> 'float'
+|   |       `-ImplicitCastExpr 0x7fc484016048 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7fc484015ff8 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc4840162e8 <line:281:3, line:285:3>
+|   | |-DeclStmt 0x7fc484016170 <line:282:5, col:29>
+|   | | `-VarDecl 0x7fc484016110 <col:5, col:18> col:18 used nonfinite_2 'volatile int'
+|   | `-BinaryOperator 0x7fc4840162c0 <line:283:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484016188 <line:283:5> 'volatile int' lvalue Var 0x7fc484016110 'nonfinite_2' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484016298 <col:19, line:273:34> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc484016208 <line:283:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4840161f0 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840161b0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fc484016270 <line:273:18, col:34> 'float'
+|   |       `-ImplicitCastExpr 0x7fc484016258 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7fc484016230 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc4840164f8 <line:287:3, line:291:3>
+|   | |-DeclStmt 0x7fc484016380 <line:288:5, col:29>
+|   | | `-VarDecl 0x7fc484016320 <col:5, col:18> col:18 used nonfinite_3 'volatile int'
+|   | `-BinaryOperator 0x7fc4840164d0 <line:289:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484016398 <line:289:5> 'volatile int' lvalue Var 0x7fc484016320 'nonfinite_3' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4840164a8 <col:19, line:273:34> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc484016418 <line:289:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484016400 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840163c0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fc484016480 <line:273:18, col:34> 'float'
+|   |       `-ImplicitCastExpr 0x7fc484016468 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7fc484016440 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc484016708 <line:293:3, line:297:3>
+|   | |-DeclStmt 0x7fc484016590 <line:294:5, col:29>
+|   | | `-VarDecl 0x7fc484016530 <col:5, col:18> col:18 used nonfinite_4 'volatile int'
+|   | `-BinaryOperator 0x7fc4840166e0 <line:295:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4840165a8 <line:295:5> 'volatile int' lvalue Var 0x7fc484016530 'nonfinite_4' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4840166b8 <col:19, line:273:34> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc484016628 <line:295:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484016610 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840165d0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fc484016690 <line:273:18, col:34> 'float'
+|   |       `-ImplicitCastExpr 0x7fc484016678 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7fc484016650 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc484016938 <line:299:3, line:303:3>
+|   | |-DeclStmt 0x7fc4840167a0 <line:300:5, col:29>
+|   | | `-VarDecl 0x7fc484016740 <col:5, col:18> col:18 used nonfinite_5 'volatile int'
+|   | `-BinaryOperator 0x7fc484016910 <line:301:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc4840167b8 <line:301:5> 'volatile int' lvalue Var 0x7fc484016740 'nonfinite_5' 'volatile int'
+|   |   `-BinaryOperator 0x7fc4840168e8 <col:19, line:273:34> 'int' '>'
+|   |     |-CStyleCastExpr 0x7fc484016838 <line:301:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484016820 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840167e0 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc4840168c8 <col:31, line:273:34> 'float' prefix '-'
+|   |       `-CallExpr 0x7fc4840168a0 <col:18, col:34> 'float'
+|   |         `-ImplicitCastExpr 0x7fc484016888 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |           `-DeclRefExpr 0x7fc484016860 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc484017b80 <line:305:3, line:309:3>
+|   | |-DeclStmt 0x7fc4840169d0 <line:306:5, col:29>
+|   | | `-VarDecl 0x7fc484016970 <col:5, col:18> col:18 used nonfinite_6 'volatile int'
+|   | `-BinaryOperator 0x7fc484017b58 <line:307:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484017a00 <line:307:5> 'volatile int' lvalue Var 0x7fc484016970 'nonfinite_6' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484017b30 <col:19, line:273:34> 'int' '>='
+|   |     |-CStyleCastExpr 0x7fc484017a80 <line:307:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484017a68 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484017a28 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc484017b10 <col:32, line:273:34> 'float' prefix '-'
+|   |       `-CallExpr 0x7fc484017ae8 <col:18, col:34> 'float'
+|   |         `-ImplicitCastExpr 0x7fc484017ad0 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |           `-DeclRefExpr 0x7fc484017aa8 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc484017db0 <line:311:3, line:315:3>
+|   | |-DeclStmt 0x7fc484017c18 <line:312:5, col:29>
+|   | | `-VarDecl 0x7fc484017bb8 <col:5, col:18> col:18 used nonfinite_7 'volatile int'
+|   | `-BinaryOperator 0x7fc484017d88 <line:313:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484017c30 <line:313:5> 'volatile int' lvalue Var 0x7fc484017bb8 'nonfinite_7' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484017d60 <col:19, line:273:34> 'int' '<'
+|   |     |-CStyleCastExpr 0x7fc484017cb0 <line:313:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484017c98 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484017c58 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc484017d40 <col:31, line:273:34> 'float' prefix '-'
+|   |       `-CallExpr 0x7fc484017d18 <col:18, col:34> 'float'
+|   |         `-ImplicitCastExpr 0x7fc484017d00 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |           `-DeclRefExpr 0x7fc484017cd8 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc484017fe0 <line:317:3, line:321:3>
+|   | |-DeclStmt 0x7fc484017e48 <line:318:5, col:29>
+|   | | `-VarDecl 0x7fc484017de8 <col:5, col:18> col:18 used nonfinite_8 'volatile int'
+|   | `-BinaryOperator 0x7fc484017fb8 <line:319:5, line:273:34> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484017e60 <line:319:5> 'volatile int' lvalue Var 0x7fc484017de8 'nonfinite_8' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484017f90 <col:19, line:273:34> 'int' '<='
+|   |     |-CStyleCastExpr 0x7fc484017ee0 <line:319:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc484017ec8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc484017e88 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-UnaryOperator 0x7fc484017f70 <col:32, line:273:34> 'float' prefix '-'
+|   |       `-CallExpr 0x7fc484017f48 <col:18, col:34> 'float'
+|   |         `-ImplicitCastExpr 0x7fc484017f30 <col:18> 'float (*)(void)' <BuiltinFnToFnPtr>
+|   |           `-DeclRefExpr 0x7fc484017f08 <col:18> '<builtin fn type>' Function 0x7fc484015f00 '__builtin_inff' 'float (void)'
+|   |-CompoundStmt 0x7fc484018470 <line:327:3, line:331:3>
+|   | |-DeclStmt 0x7fc484018078 <line:328:5, col:29>
+|   | | `-VarDecl 0x7fc484018018 <col:5, col:18> col:18 used nonfinite_9 'volatile int'
+|   | `-BinaryOperator 0x7fc484018448 <line:329:5, line:323:33> 'int' '='
+|   |   |-DeclRefExpr 0x7fc484018090 <line:329:5> 'volatile int' lvalue Var 0x7fc484018018 'nonfinite_9' 'volatile int'
+|   |   `-BinaryOperator 0x7fc484018420 <col:19, line:323:33> 'int' '=='
+|   |     |-CStyleCastExpr 0x7fc484018110 <line:329:19, col:27> 'float' <IntegralToFloating>
+|   |     | `-ImplicitCastExpr 0x7fc4840180f8 <col:27> 'unsigned short' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc4840180b8 <col:27> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|   |     `-CallExpr 0x7fc4840183c0 <line:323:14, col:33> 'float'
+|   |       |-ImplicitCastExpr 0x7fc4840183a8 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fc4840182d8 <col:14> '<builtin fn type>' Function 0x7fc484018178 '__builtin_nanf' 'float (const char *)'
+|   |       `-ImplicitCastExpr 0x7fc484018408 <col:30> 'const char *' <BitCast>
+|   |         `-ImplicitCastExpr 0x7fc4840183f0 <col:30> 'char *' <ArrayToPointerDecay>
+|   |           `-StringLiteral 0x7fc484018338 <col:30> 'char [2]' lvalue "0"
+|   `-CompoundStmt 0x7fc484018700 <line:333:3, line:337:3>
+|     |-DeclStmt 0x7fc484018508 <line:334:5, col:30>
+|     | `-VarDecl 0x7fc4840184a8 <col:5, col:18> col:18 used nonfinite_10 'volatile int'
+|     `-BinaryOperator 0x7fc4840186d8 <line:335:5, line:323:33> 'int' '='
+|       |-DeclRefExpr 0x7fc484018520 <line:335:5> 'volatile int' lvalue Var 0x7fc4840184a8 'nonfinite_10' 'volatile int'
+|       `-BinaryOperator 0x7fc4840186b0 <col:20, line:323:33> 'int' '!='
+|         |-CStyleCastExpr 0x7fc4840185a0 <line:335:20, col:28> 'float' <IntegralToFloating>
+|         | `-ImplicitCastExpr 0x7fc484018588 <col:28> 'unsigned short' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fc484018548 <col:28> 'unsigned short' lvalue ParmVar 0x7fc484015c68 'x' 'unsigned short'
+|         `-CallExpr 0x7fc484018650 <line:323:14, col:33> 'float'
+|           |-ImplicitCastExpr 0x7fc484018638 <col:14> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7fc4840185c8 <col:14> '<builtin fn type>' Function 0x7fc484018178 '__builtin_nanf' 'float (const char *)'
+|           `-ImplicitCastExpr 0x7fc484018698 <col:30> 'const char *' <BitCast>
+|             `-ImplicitCastExpr 0x7fc484018680 <col:30> 'char *' <ArrayToPointerDecay>
+|               `-StringLiteral 0x7fc4840185f0 <col:30> 'char [2]' lvalue "0"
+|-FunctionDecl 0x7fc484015f00 <line:273:18> col:18 implicit used __builtin_inff 'float (void)' extern
+| |-NoThrowAttr 0x7fc484015fa0 <col:18> Implicit
+| `-ConstAttr 0x7fc484015fe8 <col:18> Implicit
+`-FunctionDecl 0x7fc484018178 <line:323:14> col:14 implicit used __builtin_nanf 'float (const char *)' extern
+  |-ParmVarDecl 0x7fc484018218 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-NoThrowAttr 0x7fc484018280 <col:14> Implicit
+  `-ConstAttr 0x7fc4840182c8 <col:14> Implicit

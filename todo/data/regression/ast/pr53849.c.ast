@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fa6830234e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa6830241a0 <../Data/C2AST/pr53849.c:5:1, col:13> col:13 b 'int *' extern
+|-VarDecl 0x7fa6840142c0 <col:1, col:20> col:17 used e 'int *[8]' extern
+|-VarDecl 0x7fa684014338 <col:1, col:23> col:23 used d 'int' extern
+`-FunctionDecl 0x7fa684014480 <line:7:1, line:14:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa6840148c8 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fa684014598 <line:10:3, col:8>
+    | `-VarDecl 0x7fa684014538 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fa684014890 <line:11:3, line:13:14>
+      |-BinaryOperator 0x7fa6840145f8 <line:11:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fa6840145b0 <col:8> 'int' lvalue Var 0x7fa684014538 'i' 'int'
+      | `-IntegerLiteral 0x7fa6840145d8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa684014680 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa684014668 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa684014620 <col:15> 'int' lvalue Var 0x7fa684014538 'i' 'int'
+      | `-IntegerLiteral 0x7fa684014648 <col:19> 'int' 8
+      |-UnaryOperator 0x7fa6840146d0 <col:22, col:24> 'int' prefix '++'
+      | `-DeclRefExpr 0x7fa6840146a8 <col:24> 'int' lvalue Var 0x7fa684014538 'i' 'int'
+      `-WhileStmt 0x7fa684014870 <line:12:5, line:13:14>
+        |-<<<NULL>>>
+        |-UnaryOperator 0x7fa684014718 <line:12:12, col:14> 'int' prefix '--'
+        | `-DeclRefExpr 0x7fa6840146f0 <col:14> 'int' lvalue Var 0x7fa684014338 'd' 'int'
+        `-BinaryOperator 0x7fa684014848 <line:13:7, col:14> 'int *' '='
+          |-ArraySubscriptExpr 0x7fa6840147e8 <col:7, col:10> 'int *' lvalue
+          | |-ImplicitCastExpr 0x7fa6840147b8 <col:7> 'int **' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7fa684014738 <col:7> 'int *[8]' lvalue Var 0x7fa6840142c0 'e' 'int *[8]'
+          | `-ImplicitCastExpr 0x7fa6840147d0 <col:9> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fa684014760 <col:9> 'int' lvalue Var 0x7fa684014538 'i' 'int'
+          `-ImplicitCastExpr 0x7fa684014830 <col:14> 'int *' <NullToPointer>
+            `-IntegerLiteral 0x7fa684014810 <col:14> 'int' 0

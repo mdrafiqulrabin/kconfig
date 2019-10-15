@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fde298068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde2882f400 <../Data/C2AST/pr68657.c:4:1, col:13> col:13 referenced V '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fde29807580 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fde298069e0 'int'
+|-FunctionDecl 0x7fde2882f670 <line:6:1, line:9:1> line:6:6 foo 'void (V, V *)'
+| |-ParmVarDecl 0x7fde2882f490 <col:11, col:13> col:13 used x 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7fde2882f558 <col:16, col:19> col:19 used y 'V *'
+| `-CompoundStmt 0x7fde2882f828 <col:22, line:9:1>
+|   `-BinaryOperator 0x7fde2882f800 <line:8:3, col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fde2882f7a0 <col:3, col:4> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fde2882f788 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fde2882f760 <col:4> 'V *' lvalue ParmVar 0x7fde2882f558 'y' 'V *'
+|     `-ImplicitCastExpr 0x7fde2882f7e8 <col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fde2882f7c0 <col:8> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fde2882f490 'x' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+`-FunctionDecl 0x7fde2882f950 <line:11:1, line:13:1> line:11:3 bar 'V (V *)'
+  |-ParmVarDecl 0x7fde2882f850 <col:8, col:11> col:11 used x 'V *'
+  `-CompoundStmt 0x7fde2882fa88 <col:14, line:13:1>
+    `-ReturnStmt 0x7fde2882fa70 <line:12:3, col:11>
+      `-ImplicitCastExpr 0x7fde2882fa58 <col:10, col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+        `-UnaryOperator 0x7fde2882fa38 <col:10, col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fde2882fa20 <col:11> 'V *' <LValueToRValue>
+            `-DeclRefExpr 0x7fde2882f9f8 <col:11> 'V *' lvalue ParmVar 0x7fde2882f850 'x' 'V *'

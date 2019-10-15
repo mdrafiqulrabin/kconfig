@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fbc8c02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc8d014e60 <../Data/C2AST/pr36125.c:3:1, col:31> col:13 used bar 'void (long double *)' extern
+| `-ParmVarDecl 0x7fbc8c02c9a0 <col:18, col:30> col:31 'long double *'
+`-FunctionDecl 0x7fbc8d015028 <line:5:1, line:10:1> line:6:1 foo 'int (long double)'
+  |-ParmVarDecl 0x7fbc8d014f60 <col:6, col:18> col:18 used x 'long double'
+  `-CompoundStmt 0x7fbc8d0151e8 <line:7:1, line:10:1>
+    |-CallExpr 0x7fbc8d015180 <line:8:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fbc8d015168 <col:3> 'void (*)(long double *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbc8d0150d0 <col:3> 'void (long double *)' Function 0x7fbc8d014e60 'bar' 'void (long double *)'
+    | `-UnaryOperator 0x7fbc8d015120 <col:8, col:9> 'long double *' prefix '&'
+    |   `-DeclRefExpr 0x7fbc8d0150f8 <col:9> 'long double' lvalue ParmVar 0x7fbc8d014f60 'x' 'long double'
+    `-ReturnStmt 0x7fbc8d0151d0 <line:9:3, col:10>
+      `-IntegerLiteral 0x7fbc8d0151b0 <col:10> 'int' 0

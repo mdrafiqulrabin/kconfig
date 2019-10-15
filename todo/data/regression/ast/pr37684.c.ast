@@ -1,0 +1,141 @@
+TranslationUnitDecl 0x7fa51582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa51582c960 <../Data/C2AST/pr37684.c:3:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7fa516014270 <col:1, col:25> col:25 FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7fa516014220 'struct _IO_FILE' sugar
+|   `-RecordType 0x7fa516014200 'struct _IO_FILE'
+|     `-Record 0x7fa516014498 '_IO_FILE'
+|-RecordDecl 0x7fa5160142e0 <line:4:1, line:5:1> line:4:8 struct _IO_marker definition
+|-EnumDecl 0x7fa516014390 <line:6:1, line:9:1> line:6:6 __codecvt_result
+| `-EnumConstantDecl 0x7fa516014450 <line:8:3> col:3 __codecvt_noconv 'int'
+|-RecordDecl 0x7fa516014498 prev 0x7fa51582c960 <line:10:1, line:11:1> line:10:8 struct _IO_FILE definition
+|-VarDecl 0x7fa5160145a0 <line:12:1, col:25> col:25 stderr 'struct _IO_FILE *' extern
+|-RecordDecl 0x7fa516014640 <line:15:4, line:21:4> line:15:4 struct definition
+| |-FieldDecl 0x7fa516014708 <line:16:7, col:20> col:20 avail_in 'unsigned int'
+| |-FieldDecl 0x7fa516014768 <line:17:7, col:20> col:20 avail_out 'unsigned int'
+| |-FieldDecl 0x7fa5160147c8 <line:18:7, col:13> col:13 state 'void *'
+| |-FieldDecl 0x7fa516014aa8 <line:19:7, col:38> col:15 referenced bzalloc 'void *(*)(void *, int, int)'
+| `-FieldDecl 0x7fa516014b08 <line:20:7, col:13> col:13 referenced opaque 'void *'
+|-TypedefDecl 0x7fa516014ba0 <line:14:1, line:22:4> col:4 referenced bz_stream 'struct bz_stream':'bz_stream'
+| `-ElaboratedType 0x7fa516014b50 'struct bz_stream' sugar
+|   `-RecordType 0x7fa5160146d0 'bz_stream'
+|     `-Record 0x7fa516014640 ''
+|-FunctionDecl 0x7fa516014f48 <line:23:1, line:28:4> line:23:12 BZ2_bzCompressInit 'int (bz_stream *, int, int, int)' extern
+| |-ParmVarDecl 0x7fa516014c98 <line:24:7, col:18> col:18 strm 'bz_stream *'
+| |-ParmVarDecl 0x7fa516014d10 <line:25:7, col:11> col:11 blockSize100k 'int'
+| |-ParmVarDecl 0x7fa516014d88 <line:26:7, col:11> col:11 verbosity 'int'
+| `-ParmVarDecl 0x7fa516014e00 <line:27:7, col:11> col:11 workFactor 'int'
+|-TypedefDecl 0x7fa516015020 <line:29:1, col:23> col:23 referenced Bool 'unsigned char'
+| `-BuiltinType 0x7fa51582be40 'unsigned char'
+|-TypedefDecl 0x7fa516015090 <line:30:1, col:13> col:13 referenced Int32 'int'
+| `-BuiltinType 0x7fa51582bde0 'int'
+|-TypedefDecl 0x7fa516015100 <line:31:1, col:22> col:22 referenced UInt32 'unsigned int'
+| `-BuiltinType 0x7fa51582be80 'unsigned int'
+|-RecordDecl 0x7fa516015158 <line:34:4, line:44:4> line:34:4 struct definition
+| |-FieldDecl 0x7fa516015230 <line:35:7, col:13> col:13 mode 'Int32':'int'
+| |-FieldDecl 0x7fa516015288 <line:36:7, col:13> col:13 state 'Int32':'int'
+| |-FieldDecl 0x7fa516015358 <line:37:7, col:15> col:15 referenced arr1 'UInt32 *'
+| |-FieldDecl 0x7fa5160153b0 <line:38:7, col:15> col:15 referenced arr2 'UInt32 *'
+| |-FieldDecl 0x7fa516015408 <line:39:7, col:15> col:15 referenced ftab 'UInt32 *'
+| |-FieldDecl 0x7fa516015460 <line:40:7, col:13> col:13 nblock 'Int32':'int'
+| |-FieldDecl 0x7fa5160154b8 <line:41:7, col:13> col:13 nblockMAX 'Int32':'int'
+| |-FieldDecl 0x7fa5160155d8 <line:42:7, col:21> col:12 referenced inUse 'Bool [256]'
+| `-FieldDecl 0x7fa516015630 <line:43:7, col:13> col:13 referenced blockNo 'Int32':'int'
+|-TypedefDecl 0x7fa5160156d0 <line:33:1, line:45:4> col:4 referenced EState 'struct EState':'EState'
+| `-ElaboratedType 0x7fa516015680 'struct EState' sugar
+|   `-RecordType 0x7fa5160151e0 'EState'
+|     `-Record 0x7fa516015158 ''
+|-FunctionDecl 0x7fa5160158d0 <line:47:1, line:52:1> line:47:6 used prepare_new_block 'void (EState *)'
+| |-ParmVarDecl 0x7fa5160157c8 <col:26, col:34> col:34 used s 'EState *'
+| `-CompoundStmt 0x7fa516015e00 <line:48:1, line:52:1>
+|   |-DeclStmt 0x7fa5160159e8 <line:49:4, col:11>
+|   | `-VarDecl 0x7fa516015988 <col:4, col:10> col:10 used i 'Int32':'int'
+|   |-ForStmt 0x7fa516015d30 <line:50:4, col:52>
+|   | |-BinaryOperator 0x7fa516015a48 <col:9, col:13> 'Int32':'int' '='
+|   | | |-DeclRefExpr 0x7fa516015a00 <col:9> 'Int32':'int' lvalue Var 0x7fa516015988 'i' 'Int32':'int'
+|   | | `-IntegerLiteral 0x7fa516015a28 <col:13> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa516015ad0 <col:16, col:20> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fa516015ab8 <col:16> 'Int32':'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa516015a70 <col:16> 'Int32':'int' lvalue Var 0x7fa516015988 'i' 'Int32':'int'
+|   | | `-IntegerLiteral 0x7fa516015a98 <col:20> 'int' 256
+|   | |-UnaryOperator 0x7fa516015b20 <col:25, col:26> 'Int32':'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fa516015af8 <col:25> 'Int32':'int' lvalue Var 0x7fa516015988 'i' 'Int32':'int'
+|   | `-BinaryOperator 0x7fa516015d08 <col:30, col:52> 'Bool':'unsigned char' '='
+|   |   |-ArraySubscriptExpr 0x7fa516015c68 <col:30, col:40> 'Bool':'unsigned char' lvalue
+|   |   | |-ImplicitCastExpr 0x7fa516015c38 <col:30, col:33> 'Bool *' <ArrayToPointerDecay>
+|   |   | | `-MemberExpr 0x7fa516015b80 <col:30, col:33> 'Bool [256]' lvalue ->inUse 0x7fa5160155d8
+|   |   | |   `-ImplicitCastExpr 0x7fa516015b68 <col:30> 'EState *' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fa516015b40 <col:30> 'EState *' lvalue ParmVar 0x7fa5160157c8 's' 'EState *'
+|   |   | `-ImplicitCastExpr 0x7fa516015c50 <col:39> 'Int32':'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fa516015bb8 <col:39> 'Int32':'int' lvalue Var 0x7fa516015988 'i' 'Int32':'int'
+|   |   `-ParenExpr 0x7fa516015ce8 <col:44, col:52> 'Bool':'unsigned char'
+|   |     `-CStyleCastExpr 0x7fa516015cc0 <col:45, col:51> 'Bool':'unsigned char' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fa516015c90 <col:51> 'int' 0
+|   `-UnaryOperator 0x7fa516015de0 <line:51:4, col:14> 'Int32':'int' postfix '++'
+|     `-MemberExpr 0x7fa516015da8 <col:4, col:7> 'Int32':'int' lvalue ->blockNo 0x7fa516015630
+|       `-ImplicitCastExpr 0x7fa516015d90 <col:4> 'EState *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa516015d68 <col:4> 'EState *' lvalue ParmVar 0x7fa5160157c8 's' 'EState *'
+`-FunctionDecl 0x7fa516016048 prev 0x7fa516014f48 <line:54:1, line:65:1> line:54:5 BZ2_bzCompressInit 'int (bz_stream *, int, int, int)'
+  |-ParmVarDecl 0x7fa516015e38 <line:55:23, col:34> col:34 used strm 'bz_stream *'
+  |-ParmVarDecl 0x7fa516015eb0 <line:56:22, col:26> col:26 blockSize100k 'int'
+  |-ParmVarDecl 0x7fa516015f28 <line:57:22, col:26> col:26 verbosity 'int'
+  |-ParmVarDecl 0x7fa516015fa0 <line:58:22, col:26> col:26 workFactor 'int'
+  `-CompoundStmt 0x7fa51602d828 <line:59:1, line:65:1>
+    |-DeclStmt 0x7fa516016178 <line:60:4, col:13>
+    | `-VarDecl 0x7fa516016118 <col:4, col:12> col:12 used s 'EState *'
+    |-BinaryOperator 0x7fa51602d1e0 <line:61:4, col:55> 'EState *' '='
+    | |-DeclRefExpr 0x7fa516016190 <col:4> 'EState *' lvalue Var 0x7fa516016118 's' 'EState *'
+    | `-ImplicitCastExpr 0x7fa51602d1c8 <col:8, col:55> 'EState *' <BitCast>
+    |   `-CallExpr 0x7fa51602d158 <col:8, col:55> 'void *'
+    |     |-ImplicitCastExpr 0x7fa51602d140 <col:8, col:22> 'void *(*)(void *, int, int)' <LValueToRValue>
+    |     | `-ParenExpr 0x7fa51602d038 <col:8, col:22> 'void *(*)(void *, int, int)' lvalue
+    |     |   `-MemberExpr 0x7fa51602d000 <col:9, col:15> 'void *(*)(void *, int, int)' lvalue ->bzalloc 0x7fa516014aa8
+    |     |     `-ImplicitCastExpr 0x7fa5160161e0 <col:9> 'bz_stream *' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7fa5160161b8 <col:9> 'bz_stream *' lvalue ParmVar 0x7fa516015e38 'strm' 'bz_stream *'
+    |     |-ImplicitCastExpr 0x7fa51602d198 <col:24, col:30> 'void *' <LValueToRValue>
+    |     | `-MemberExpr 0x7fa51602d098 <col:24, col:30> 'void *' lvalue ->opaque 0x7fa516014b08
+    |     |   `-ImplicitCastExpr 0x7fa51602d080 <col:24> 'bz_stream *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fa51602d058 <col:24> 'bz_stream *' lvalue ParmVar 0x7fa516015e38 'strm' 'bz_stream *'
+    |     |-ImplicitCastExpr 0x7fa51602d1b0 <col:37, col:52> 'int' <IntegralCast>
+    |     | `-ParenExpr 0x7fa51602d100 <col:37, col:52> 'unsigned long'
+    |     |   `-UnaryExprOrTypeTraitExpr 0x7fa51602d0e0 <col:38, col:51> 'unsigned long' sizeof 'EState':'EState'
+    |     `-IntegerLiteral 0x7fa51602d120 <col:54> 'int' 1
+    |-IfStmt 0x7fa51602d6e0 <line:62:4, line:63:4>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa51602d6a8 <line:62:8, col:81> 'int' '||'
+    | | |-BinaryOperator 0x7fa51602d530 <col:8, col:55> 'int' '||'
+    | | | |-BinaryOperator 0x7fa51602d3b8 <col:8, col:29> 'int' '=='
+    | | | | |-ImplicitCastExpr 0x7fa51602d388 <col:8, col:11> 'UInt32 *' <LValueToRValue>
+    | | | | | `-MemberExpr 0x7fa51602d2d0 <col:8, col:11> 'UInt32 *' lvalue ->arr1 0x7fa516015358
+    | | | | |   `-ImplicitCastExpr 0x7fa51602d2b8 <col:8> 'EState *' <LValueToRValue>
+    | | | | |     `-DeclRefExpr 0x7fa51602d290 <col:8> 'EState *' lvalue Var 0x7fa516016118 's' 'EState *'
+    | | | | `-ImplicitCastExpr 0x7fa51602d3a0 <col:19, col:29> 'UInt32 *' <BitCast>
+    | | | |   `-ParenExpr 0x7fa51602d368 <col:19, col:29> 'void *'
+    | | | |     `-CStyleCastExpr 0x7fa51602d340 <col:20, col:28> 'void *' <NullToPointer>
+    | | | |       `-IntegerLiteral 0x7fa51602d308 <col:28> 'int' 0
+    | | | `-BinaryOperator 0x7fa51602d508 <col:34, col:55> 'int' '=='
+    | | |   |-ImplicitCastExpr 0x7fa51602d4d8 <col:34, col:37> 'UInt32 *' <LValueToRValue>
+    | | |   | `-MemberExpr 0x7fa51602d420 <col:34, col:37> 'UInt32 *' lvalue ->arr2 0x7fa5160153b0
+    | | |   |   `-ImplicitCastExpr 0x7fa51602d408 <col:34> 'EState *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fa51602d3e0 <col:34> 'EState *' lvalue Var 0x7fa516016118 's' 'EState *'
+    | | |   `-ImplicitCastExpr 0x7fa51602d4f0 <col:45, col:55> 'UInt32 *' <BitCast>
+    | | |     `-ParenExpr 0x7fa51602d4b8 <col:45, col:55> 'void *'
+    | | |       `-CStyleCastExpr 0x7fa51602d490 <col:46, col:54> 'void *' <NullToPointer>
+    | | |         `-IntegerLiteral 0x7fa51602d458 <col:54> 'int' 0
+    | | `-BinaryOperator 0x7fa51602d680 <col:60, col:81> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7fa51602d650 <col:60, col:63> 'UInt32 *' <LValueToRValue>
+    | |   | `-MemberExpr 0x7fa51602d598 <col:60, col:63> 'UInt32 *' lvalue ->ftab 0x7fa516015408
+    | |   |   `-ImplicitCastExpr 0x7fa51602d580 <col:60> 'EState *' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fa51602d558 <col:60> 'EState *' lvalue Var 0x7fa516016118 's' 'EState *'
+    | |   `-ImplicitCastExpr 0x7fa51602d668 <col:71, col:81> 'UInt32 *' <BitCast>
+    | |     `-ParenExpr 0x7fa51602d630 <col:71, col:81> 'void *'
+    | |       `-CStyleCastExpr 0x7fa51602d608 <col:72, col:80> 'void *' <NullToPointer>
+    | |         `-IntegerLiteral 0x7fa51602d5d0 <col:80> 'int' 0
+    | |-CompoundStmt 0x7fa51602d6d0 <col:84, line:63:4>
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fa51602d7e0 <line:64:4, col:26> 'void'
+      |-ImplicitCastExpr 0x7fa51602d7c8 <col:4> 'void (*)(EState *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa51602d718 <col:4> 'void (EState *)' Function 0x7fa5160158d0 'prepare_new_block' 'void (EState *)'
+      `-ImplicitCastExpr 0x7fa51602d810 <col:24> 'EState *' <LValueToRValue>
+        `-DeclRefExpr 0x7fa51602d740 <col:24> 'EState *' lvalue Var 0x7fa516016118 's' 'EState *'

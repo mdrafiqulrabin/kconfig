@@ -1,0 +1,40 @@
+../Data/C2AST/pr30984.c:8:2: error: indirect goto in function with no address-of-label expressions
+ goto *src;
+ ^
+1 error generated.
+TranslationUnitDecl 0x7f8c8702b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c8702b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c8702b580 '__int128'
+|-TypedefDecl 0x7f8c8702b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c8702b5a0 'unsigned __int128'
+|-TypedefDecl 0x7f8c8702bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c8702b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c8702b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c8702bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c8702bc00 'char *'
+|   `-BuiltinType 0x7f8c8702b380 'char'
+|-TypedefDecl 0x7f8c8702bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c8702beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c8702bd20 'struct __va_list_tag'
+|     `-Record 0x7f8c8702bc98 '__va_list_tag'
+`-FunctionDecl 0x7f8c8706ce68 <../Data/C2AST/pr30984.c:3:1, line:9:1> line:3:5 fs_exec 'int (int)'
+  |-ParmVarDecl 0x7f8c8702bf78 <col:13, col:17> col:17 used ino 'int'
+  `-CompoundStmt 0x7f8c8706d1e0 <line:4:1, line:9:1>
+    |-DeclStmt 0x7f8c8706d000 <line:5:2, col:15>
+    | `-VarDecl 0x7f8c8706cf68 <col:2, col:14> col:8 used src 'void *' cinit
+    |   `-ImplicitCastExpr 0x7f8c8706cfe8 <col:14> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7f8c8706cfc8 <col:14> 'int' 0
+    |-IfStmt 0x7f8c8706d108 <line:6:2, line:7:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8c8706d040 <line:6:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8c8706d018 <col:6> 'int' lvalue ParmVar 0x7f8c8702bf78 'ino' 'int'
+    | |-BinaryOperator 0x7f8c8706d0e0 <line:7:4, col:17> 'void *' '='
+    | | |-DeclRefExpr 0x7f8c8706d058 <col:4> 'void *' lvalue Var 0x7f8c8706cf68 'src' 'void *'
+    | | `-CStyleCastExpr 0x7f8c8706d0b8 <col:10, col:17> 'void *' <IntegralToPointer>
+    | |   `-IntegerLiteral 0x7f8c8706d080 <col:17> 'int' 57344
+    | `-<<<NULL>>>
+    `-IndirectGotoStmt 0x7f8c8706d1c8 <line:8:2, col:8>
+      `-ImplicitCastExpr 0x7f8c8706d1b0 <col:8> 'const void *' <BitCast>
+        `-ImplicitCastExpr 0x7f8c8706d198 <col:8> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7f8c8706d140 <col:8> 'void *' lvalue Var 0x7f8c8706cf68 'src' 'void *'

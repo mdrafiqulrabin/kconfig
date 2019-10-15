@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fa38302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa3830b0178 <../Data/C2AST/propalign-2.c:7:1, col:32> col:12 used fail_the_test 'int (void *)' extern
+| `-ParmVarDecl 0x7fa3830b00b0 <col:26, col:31> col:32 'void *'
+|-FunctionDecl 0x7fa3830b0308 <line:8:1, col:32> col:12 used pass_the_test 'int (void *)' extern
+| `-ParmVarDecl 0x7fa3830b0278 <col:26, col:31> col:32 'void *'
+|-FunctionDecl 0x7fa3830b0458 <line:9:1, col:29> col:12 used diversion 'int (void *)' extern
+| `-ParmVarDecl 0x7fa3830b03c8 <col:23, col:28> col:29 'void *'
+|-RecordDecl 0x7fa3830b0500 <line:11:1, line:15:1> line:11:8 struct somestruct definition
+| |-FieldDecl 0x7fa3830b05c8 <line:13:3, col:9> col:9 whee 'void *'
+| `-FieldDecl 0x7fa3830b0628 <line:14:3, col:9> col:9 oops 'void *'
+|-RecordDecl 0x7fa3830b0670 <line:17:1, line:21:1> line:17:8 struct container definition
+| |-FieldDecl 0x7fa3830b0770 <line:19:3, col:21> col:21 first 'struct somestruct':'struct somestruct'
+| `-FieldDecl 0x7fa3830b08d8 <line:20:3, col:27> col:21 referenced buf 'struct somestruct [32]'
+|-FunctionDecl 0x7fa3830b09c8 <line:23:1, line:32:1> line:24:1 used foo 'int (void *)' static
+| |-ParmVarDecl 0x7fa3830b0938 <col:6, col:12> col:12 used p 'void *'
+| |-CompoundStmt 0x7fa3830b9690 <line:25:1, line:32:1>
+| | |-DeclStmt 0x7fa3830b0bc8 <line:26:3, col:30>
+| | | `-VarDecl 0x7fa3830b0af0 <col:3, col:29> col:13 used a 'uintptr_t':'unsigned long' cinit
+| | |   `-CStyleCastExpr 0x7fa3830b0ba0 <col:17, col:29> 'uintptr_t':'unsigned long' <PointerToIntegral>
+| | |     `-ImplicitCastExpr 0x7fa3830b0b88 <col:29> 'void *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fa3830b0b50 <col:29> 'void *' lvalue ParmVar 0x7fa3830b0938 'p' 'void *'
+| | `-IfStmt 0x7fa3830b9658 <line:28:3, line:31:28>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fa3830b9478 <line:28:7, col:11> 'unsigned long' '%'
+| |   | |-ImplicitCastExpr 0x7fa3830b9448 <col:7> 'uintptr_t':'unsigned long' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fa3830b9400 <col:7> 'uintptr_t':'unsigned long' lvalue Var 0x7fa3830b0af0 'a' 'uintptr_t':'unsigned long'
+| |   | `-ImplicitCastExpr 0x7fa3830b9460 <col:11> 'unsigned long' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fa3830b9428 <col:11> 'int' 4
+| |   |-ReturnStmt 0x7fa3830b9578 <line:29:5, col:28>
+| |   | `-CallExpr 0x7fa3830b9530 <col:12, col:28> 'int'
+| |   |   |-ImplicitCastExpr 0x7fa3830b9518 <col:12> 'int (*)(void *)' <FunctionToPointerDecay>
+| |   |   | `-DeclRefExpr 0x7fa3830b94a0 <col:12> 'int (void *)' Function 0x7fa3830b0178 'fail_the_test' 'int (void *)'
+| |   |   `-ImplicitCastExpr 0x7fa3830b9560 <col:27> 'void *' <LValueToRValue>
+| |   |     `-DeclRefExpr 0x7fa3830b94c8 <col:27> 'void *' lvalue ParmVar 0x7fa3830b0938 'p' 'void *'
+| |   `-ReturnStmt 0x7fa3830b9640 <line:31:5, col:28>
+| |     `-CallExpr 0x7fa3830b95f8 <col:12, col:28> 'int'
+| |       |-ImplicitCastExpr 0x7fa3830b95e0 <col:12> 'int (*)(void *)' <FunctionToPointerDecay>
+| |       | `-DeclRefExpr 0x7fa3830b9590 <col:12> 'int (void *)' Function 0x7fa3830b0308 'pass_the_test' 'int (void *)'
+| |       `-ImplicitCastExpr 0x7fa3830b9628 <col:27> 'void *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fa3830b95b8 <col:27> 'void *' lvalue ParmVar 0x7fa3830b0938 'p' 'void *'
+| `-NoInlineAttr 0x7fa3830b0a70 <line:23:27>
+|-FunctionDecl 0x7fa3830b9778 <line:34:1, line:39:1> line:35:1 bar 'int (void)'
+| `-CompoundStmt 0x7fa3830b9a60 <line:36:1, line:39:1>
+|   |-DeclStmt 0x7fa3830b98d0 <line:37:3, col:21>
+|   | `-VarDecl 0x7fa3830b9870 <col:3, col:20> col:20 used c 'struct container':'struct container'
+|   `-ReturnStmt 0x7fa3830b9a48 <line:38:3, col:20>
+|     `-CallExpr 0x7fa3830b9988 <col:10, col:20> 'int'
+|       |-ImplicitCastExpr 0x7fa3830b9970 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa3830b98e8 <col:10> 'int (void *)' Function 0x7fa3830b09c8 'foo' 'int (void *)'
+|       `-ImplicitCastExpr 0x7fa3830b9a30 <col:15, col:17> 'void *' <BitCast>
+|         `-ImplicitCastExpr 0x7fa3830b9a18 <col:15, col:17> 'struct somestruct *' <ArrayToPointerDecay>
+|           `-MemberExpr 0x7fa3830b9938 <col:15, col:17> 'struct somestruct [32]' lvalue .buf 0x7fa3830b08d8
+|             `-DeclRefExpr 0x7fa3830b9910 <col:15> 'struct container':'struct container' lvalue Var 0x7fa3830b9870 'c' 'struct container':'struct container'
+|-FunctionDecl 0x7fa3830b9bb8 <line:42:1, line:47:1> line:43:1 used through 'int (struct somestruct *)' static
+| |-ParmVarDecl 0x7fa3830b9aa8 <col:10, col:29> col:29 used p 'struct somestruct *'
+| `-CompoundStmt 0x7fa3830b9e70 <line:44:1, line:47:1>
+|   |-CallExpr 0x7fa3830b9cc8 <line:45:3, col:15> 'int'
+|   | |-ImplicitCastExpr 0x7fa3830b9cb0 <col:3> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fa3830b9c60 <col:3> 'int (void *)' Function 0x7fa3830b0458 'diversion' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fa3830b9d10 <col:14> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fa3830b9cf8 <col:14> 'struct somestruct *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fa3830b9c88 <col:14> 'struct somestruct *' lvalue ParmVar 0x7fa3830b9aa8 'p' 'struct somestruct *'
+|   `-ReturnStmt 0x7fa3830b9e58 <line:46:3, col:21>
+|     `-CallExpr 0x7fa3830b9e10 <col:10, col:21> 'int'
+|       |-ImplicitCastExpr 0x7fa3830b9df8 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa3830b9d28 <col:10> 'int (void *)' Function 0x7fa3830b09c8 'foo' 'int (void *)'
+|       `-ImplicitCastExpr 0x7fa3830b9e40 <col:15, col:20> 'void *' <BitCast>
+|         `-UnaryOperator 0x7fa3830b9dd8 <col:15, col:20> 'struct somestruct *' prefix '&'
+|           `-ArraySubscriptExpr 0x7fa3830b9db0 <col:16, col:20> 'struct somestruct':'struct somestruct' lvalue
+|             |-ImplicitCastExpr 0x7fa3830b9d98 <col:16> 'struct somestruct *' <LValueToRValue>
+|             | `-DeclRefExpr 0x7fa3830b9d50 <col:16> 'struct somestruct *' lvalue ParmVar 0x7fa3830b9aa8 'p' 'struct somestruct *'
+|             `-IntegerLiteral 0x7fa3830b9d78 <col:18> 'int' 16
+`-FunctionDecl 0x7fa3830b9f28 <line:49:1, line:54:1> line:50:1 bar2 'int (void)'
+  `-CompoundStmt 0x7fa3830ba1a8 <line:51:1, line:54:1>
+    |-DeclStmt 0x7fa3830ba048 <line:52:3, col:21>
+    | `-VarDecl 0x7fa3830b9fe8 <col:3, col:20> col:20 used c 'struct container':'struct container'
+    `-CallExpr 0x7fa3830ba160 <line:53:3, col:17> 'int'
+      |-ImplicitCastExpr 0x7fa3830ba148 <col:3> 'int (*)(struct somestruct *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa3830ba060 <col:3> 'int (struct somestruct *)' Function 0x7fa3830b9bb8 'through' 'int (struct somestruct *)'
+      `-ImplicitCastExpr 0x7fa3830ba190 <col:12, col:14> 'struct somestruct *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7fa3830ba0b0 <col:12, col:14> 'struct somestruct [32]' lvalue .buf 0x7fa3830b08d8
+          `-DeclRefExpr 0x7fa3830ba088 <col:12> 'struct container':'struct container' lvalue Var 0x7fa3830b9fe8 'c' 'struct container':'struct container'

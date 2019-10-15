@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7feb6680aae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7feb6605cd48 <../Data/C2AST/pr34256.c:6:1, col:7> col:7 used x '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|-VarDecl 0x7feb6605cdb8 <line:7:1, col:7> col:7 used y '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+`-FunctionDecl 0x7feb6605cf38 <line:9:1, line:11:1> line:9:21 foo 'unsigned long long (__m64)'
+  |-ParmVarDecl 0x7feb6605ce28 <col:25, col:31> col:31 m '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7feb6605d200 <col:34, line:11:1>
+    `-ReturnStmt 0x7feb6605d1e8 <line:10:3, col:44>
+      `-ImplicitCastExpr 0x7feb6605d1d0 <col:10, col:44> 'unsigned long long' <IntegralCast>
+        `-CallExpr 0x7feb6605d1a0 <col:10, col:44> 'long long'
+          |-ImplicitCastExpr 0x7feb6605d188 <col:10> 'long long (*)(__m64)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7feb6605cfe0 <col:10> 'long long (__m64)' Function 0x7feb660428c8 '_mm_cvtm64_si64' 'long long (__m64)'
+          `-CallExpr 0x7feb6605d0c0 <col:26, col:43> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+            |-ImplicitCastExpr 0x7feb6605d0a8 <col:26> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7feb6605d008 <col:26> '__m64 (__m64, __m64)' Function 0x7feb66046d80 '_mm_add_pi32' '__m64 (__m64, __m64)'
+            |-ImplicitCastExpr 0x7feb6605d0f8 <col:39> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+            | `-DeclRefExpr 0x7feb6605d030 <col:39> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7feb6605cd48 'x' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+            `-ImplicitCastExpr 0x7feb6605d110 <col:42> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+              `-DeclRefExpr 0x7feb6605d058 <col:42> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7feb6605cdb8 'y' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'

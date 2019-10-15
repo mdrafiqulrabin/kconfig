@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f9ed402aae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9ed402b778 <../Data/C2AST/pr70322-1.c:6:1, col:18> col:18 used z 'long long' extern
+`-FunctionDecl 0x7f9ed40693a0 <line:8:1, line:12:1> line:9:1 foo 'void (long long, long long)'
+  |-ParmVarDecl 0x7f9ed4069258 <col:6, col:16> col:16 used x 'long long'
+  |-ParmVarDecl 0x7f9ed40692d0 <col:19, col:29> col:29 used y 'long long'
+  `-CompoundStmt 0x7f9ed4069568 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7f9ed4069540 <line:11:3, col:12> 'long long' '='
+      |-DeclRefExpr 0x7f9ed4069450 <col:3> 'long long' lvalue Var 0x7f9ed402b778 'z' 'long long'
+      `-BinaryOperator 0x7f9ed4069518 <col:7, col:12> 'long long' '&'
+        |-UnaryOperator 0x7f9ed40694b8 <col:7, col:8> 'long long' prefix '~'
+        | `-ImplicitCastExpr 0x7f9ed40694a0 <col:8> 'long long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f9ed4069478 <col:8> 'long long' lvalue ParmVar 0x7f9ed4069258 'x' 'long long'
+        `-ImplicitCastExpr 0x7f9ed4069500 <col:12> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f9ed40694d8 <col:12> 'long long' lvalue ParmVar 0x7f9ed40692d0 'y' 'long long'

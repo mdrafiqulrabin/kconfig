@@ -1,0 +1,24 @@
+../Data/C2AST/pr66810.c:9:14: error: variable length array declaration cannot have 'static' storage duration
+  static int a[vv];  
+             ^ ~~
+1 error generated.
+TranslationUnitDecl 0x7fdb0682ace8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb0682b260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb0682af80 '__int128'
+|-TypedefDecl 0x7fdb0682b2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb0682afa0 'unsigned __int128'
+|-TypedefDecl 0x7fdb0682b5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb0682b3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb0682b328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb0682b640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb0682b600 'char *'
+|   `-BuiltinType 0x7fdb0682ad80 'char'
+|-TypedefDecl 0x7fdb0682b908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb0682b8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb0682b720 'struct __va_list_tag'
+|     `-Record 0x7fdb0682b698 '__va_list_tag'
+|-VarDecl 0x7fdb0682b978 <../Data/C2AST/pr66810.c:4:1, col:5> col:5 used vv 'int'
+`-FunctionDecl 0x7fdb0602db00 <line:6:1, line:10:1> line:7:1 i 'void (void)'
+  `-CompoundStmt 0x7fdb0602dcb8 <line:8:1, line:10:1>
+    `-DeclStmt 0x7fdb0602dca0 <line:9:3, col:19>
+      `-VarDecl 0x7fdb0602dc40 <col:3, col:18> col:14 invalid a 'int [vv]' static

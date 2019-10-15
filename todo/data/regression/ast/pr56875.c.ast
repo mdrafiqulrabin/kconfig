@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7ff5fb8168e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff5fb859420 <../Data/C2AST/pr56875.c:6:1, line:13:1> line:7:1 a 'void (void)'
+  `-CompoundStmt 0x7ff5fb859790 <line:8:1, line:13:1>
+    |-DeclStmt 0x7ff5fb8595b0 <line:9:2, col:21>
+    | `-VarDecl 0x7ff5fb859518 <col:2, col:20> col:16 used i 'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7ff5fb859598 <col:20> 'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff5fb859578 <col:20> 'int' 1
+    |-DeclStmt 0x7ff5fb859640 <line:10:2, col:22>
+    | `-VarDecl 0x7ff5fb8595e0 <col:2, col:21> col:21 used v 'unsigned long long'
+    `-BinaryOperator 0x7ff5fb859768 <line:12:2, col:34> 'unsigned long long' '='
+      |-DeclRefExpr 0x7ff5fb859658 <col:2> 'unsigned long long' lvalue Var 0x7ff5fb8595e0 'v' 'unsigned long long'
+      `-BinaryOperator 0x7ff5fb859740 <col:6, col:34> 'unsigned long long' '<<'
+        |-UnaryOperator 0x7ff5fb8596e0 <col:6, col:29> 'unsigned long long' prefix '~'
+        | `-CStyleCastExpr 0x7ff5fb8596b8 <col:8, col:29> 'unsigned long long' <IntegralCast>
+        |   `-IntegerLiteral 0x7ff5fb859680 <col:29> 'int' 0
+        `-ImplicitCastExpr 0x7ff5fb859728 <col:34> 'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7ff5fb859700 <col:34> 'unsigned long' lvalue Var 0x7ff5fb859518 'i' 'unsigned long'

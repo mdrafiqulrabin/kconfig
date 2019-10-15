@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fdaff82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdaff885238 <../Data/C2AST/pr70633.c:3:1, col:14> col:14 referenced V '__attribute__((__vector_size__(4 * sizeof(long)))) long'
+| `-VectorType 0x7fdaff885200 '__attribute__((__vector_size__(4 * sizeof(long)))) long' 4
+|   `-BuiltinType 0x7fdaff82be00 'long'
+|-FunctionDecl 0x7fdaff885420 <line:5:1, col:14> col:6 used foo 'void (V *)'
+| `-ParmVarDecl 0x7fdaff885318 <col:11, col:13> col:14 'V *'
+`-FunctionDecl 0x7fdaff8855d0 <line:7:1, line:12:1> line:8:1 referenced bar 'void (void)'
+  `-CompoundStmt 0x7fdaff885a20 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fdaff8858f0 <line:10:3, col:32>
+    | `-VarDecl 0x7fdaff885680 <col:3, col:31> col:5 used b 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' cinit
+    |   `-InitListExpr 0x7fdaff885848 <col:9, col:31> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    |     |-CStyleCastExpr 0x7fdaff885760 <col:11, col:18> 'long' <PointerToIntegral>
+    |     | `-ImplicitCastExpr 0x7fdaff885748 <col:18> 'void (*)(void)' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7fdaff8856e0 <col:18> 'void (void)' Function 0x7fdaff8855d0 'bar' 'void (void)'
+    |     |-ImplicitCastExpr 0x7fdaff8858a8 <col:23> 'long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fdaff885788 <col:23> 'int' 0
+    |     |-ImplicitCastExpr 0x7fdaff8858c0 <col:26> 'long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fdaff8857a8 <col:26> 'int' 0
+    |     `-ImplicitCastExpr 0x7fdaff8858d8 <col:29> 'long' <IntegralCast>
+    |       `-IntegerLiteral 0x7fdaff8857c8 <col:29> 'int' 0
+    `-CallExpr 0x7fdaff8859f0 <line:11:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fdaff8859d8 <col:3> 'void (*)(V *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdaff885908 <col:3> 'void (V *)' Function 0x7fdaff885420 'foo' 'void (V *)'
+      `-UnaryOperator 0x7fdaff885958 <col:8, col:9> 'V *' prefix '&'
+        `-DeclRefExpr 0x7fdaff885930 <col:9> 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue Var 0x7fdaff885680 'b' 'V':'__attribute__((__vector_size__(4 * sizeof(long)))) long'

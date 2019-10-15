@@ -1,0 +1,111 @@
+TranslationUnitDecl 0x7ffb3d01b0e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb3d01bd78 <../Data/C2AST/pr70550-1.c:6:1, col:18> col:18 referenced T '__int128'
+| `-BuiltinType 0x7ffb3d01b380 '__int128'
+|-FunctionDecl 0x7ffb3d05cf00 <line:11:1, col:12> col:6 used bar 'void (T)'
+| `-ParmVarDecl 0x7ffb3d05ce00 <col:11> col:12 'T':'__int128'
+`-FunctionDecl 0x7ffb3d05d0b0 <line:14:1, line:81:1> line:15:1 foo 'void (void)'
+  `-CompoundStmt 0x7ffb3d05e1f0 <line:16:1, line:81:1>
+    |-CompoundStmt 0x7ffb3d05d390 <line:17:3, line:24:3>
+    | |-DeclStmt 0x7ffb3d05d1c8 <line:18:5, col:10>
+    | | `-VarDecl 0x7ffb3d05d168 <col:5, col:9> col:9 used i 'int'
+    | `-CompoundStmt 0x7ffb3d05d370 <line:20:5, line:23:5>
+    |   |-BinaryOperator 0x7ffb3d05d228 <line:21:7, col:11> 'int' '='
+    |   | |-DeclRefExpr 0x7ffb3d05d1e0 <col:7> 'int' lvalue Var 0x7ffb3d05d168 'i' 'int'
+    |   | `-IntegerLiteral 0x7ffb3d05d208 <col:11> 'int' 26
+    |   `-CallExpr 0x7ffb3d05d310 <line:22:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05d2f8 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05d250 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05d358 <col:12> 'T':'__int128' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7ffb3d05d340 <col:12> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffb3d05d278 <col:12> 'int' lvalue Var 0x7ffb3d05d168 'i' 'int'
+    |-CompoundStmt 0x7ffb3d05d590 <line:25:3, line:32:3>
+    | |-DeclStmt 0x7ffb3d05d420 <line:26:5, col:8>
+    | | `-VarDecl 0x7ffb3d05d3c0 <col:5, col:7> col:7 used j 'T':'__int128'
+    | `-CompoundStmt 0x7ffb3d05d570 <line:28:5, line:31:5>
+    |   |-BinaryOperator 0x7ffb3d05d498 <line:29:7, col:11> 'T':'__int128' '='
+    |   | |-DeclRefExpr 0x7ffb3d05d438 <col:7> 'T':'__int128' lvalue Var 0x7ffb3d05d3c0 'j' 'T':'__int128'
+    |   | `-ImplicitCastExpr 0x7ffb3d05d480 <col:11> 'T':'__int128' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7ffb3d05d460 <col:11> 'int' 37
+    |   `-CallExpr 0x7ffb3d05d528 <line:30:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05d510 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05d4c0 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05d558 <col:12> 'T':'__int128' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffb3d05d4e8 <col:12> 'T':'__int128' lvalue Var 0x7ffb3d05d3c0 'j' 'T':'__int128'
+    |-CompoundStmt 0x7ffb3d05d798 <line:33:3, line:40:3>
+    | |-DeclStmt 0x7ffb3d05d628 <line:34:5, col:10>
+    | | `-VarDecl 0x7ffb3d05d5c8 <col:5, col:9> col:9 used i 'int'
+    | `-CompoundStmt 0x7ffb3d05d778 <line:36:5, line:39:5>
+    |   |-BinaryOperator 0x7ffb3d05d688 <line:37:7, col:11> 'int' '='
+    |   | |-DeclRefExpr 0x7ffb3d05d640 <col:7> 'int' lvalue Var 0x7ffb3d05d5c8 'i' 'int'
+    |   | `-IntegerLiteral 0x7ffb3d05d668 <col:11> 'int' 26
+    |   `-CallExpr 0x7ffb3d05d718 <line:38:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05d700 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05d6b0 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05d760 <col:12> 'T':'__int128' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7ffb3d05d748 <col:12> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffb3d05d6d8 <col:12> 'int' lvalue Var 0x7ffb3d05d5c8 'i' 'int'
+    |-CompoundStmt 0x7ffb3d05d998 <line:41:3, line:48:3>
+    | |-DeclStmt 0x7ffb3d05d828 <line:42:5, col:8>
+    | | `-VarDecl 0x7ffb3d05d7c8 <col:5, col:7> col:7 used j 'T':'__int128'
+    | `-CompoundStmt 0x7ffb3d05d978 <line:44:5, line:47:5>
+    |   |-BinaryOperator 0x7ffb3d05d8a0 <line:45:7, col:11> 'T':'__int128' '='
+    |   | |-DeclRefExpr 0x7ffb3d05d840 <col:7> 'T':'__int128' lvalue Var 0x7ffb3d05d7c8 'j' 'T':'__int128'
+    |   | `-ImplicitCastExpr 0x7ffb3d05d888 <col:11> 'T':'__int128' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7ffb3d05d868 <col:11> 'int' 37
+    |   `-CallExpr 0x7ffb3d05d930 <line:46:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05d918 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05d8c8 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05d960 <col:12> 'T':'__int128' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffb3d05d8f0 <col:12> 'T':'__int128' lvalue Var 0x7ffb3d05d7c8 'j' 'T':'__int128'
+    |-CompoundStmt 0x7ffb3d05dba0 <line:49:3, line:56:3>
+    | |-DeclStmt 0x7ffb3d05da30 <line:50:5, col:10>
+    | | `-VarDecl 0x7ffb3d05d9d0 <col:5, col:9> col:9 used i 'int'
+    | `-CompoundStmt 0x7ffb3d05db80 <line:52:5, line:55:5>
+    |   |-BinaryOperator 0x7ffb3d05da90 <line:53:7, col:11> 'int' '='
+    |   | |-DeclRefExpr 0x7ffb3d05da48 <col:7> 'int' lvalue Var 0x7ffb3d05d9d0 'i' 'int'
+    |   | `-IntegerLiteral 0x7ffb3d05da70 <col:11> 'int' 26
+    |   `-CallExpr 0x7ffb3d05db20 <line:54:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05db08 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05dab8 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05db68 <col:12> 'T':'__int128' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7ffb3d05db50 <col:12> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffb3d05dae0 <col:12> 'int' lvalue Var 0x7ffb3d05d9d0 'i' 'int'
+    |-CompoundStmt 0x7ffb3d05dda0 <line:57:3, line:64:3>
+    | |-DeclStmt 0x7ffb3d05dc30 <line:58:5, col:8>
+    | | `-VarDecl 0x7ffb3d05dbd0 <col:5, col:7> col:7 used j 'T':'__int128'
+    | `-CompoundStmt 0x7ffb3d05dd80 <line:60:5, line:63:5>
+    |   |-BinaryOperator 0x7ffb3d05dca8 <line:61:7, col:11> 'T':'__int128' '='
+    |   | |-DeclRefExpr 0x7ffb3d05dc48 <col:7> 'T':'__int128' lvalue Var 0x7ffb3d05dbd0 'j' 'T':'__int128'
+    |   | `-ImplicitCastExpr 0x7ffb3d05dc90 <col:11> 'T':'__int128' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7ffb3d05dc70 <col:11> 'int' 37
+    |   `-CallExpr 0x7ffb3d05dd38 <line:62:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05dd20 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05dcd0 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05dd68 <col:12> 'T':'__int128' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffb3d05dcf8 <col:12> 'T':'__int128' lvalue Var 0x7ffb3d05dbd0 'j' 'T':'__int128'
+    |-CompoundStmt 0x7ffb3d05dfd0 <line:65:3, line:72:3>
+    | |-DeclStmt 0x7ffb3d05de60 <line:66:5, col:10>
+    | | `-VarDecl 0x7ffb3d05de00 <col:5, col:9> col:9 used i 'int'
+    | `-CompoundStmt 0x7ffb3d05dfb0 <line:68:5, line:71:5>
+    |   |-BinaryOperator 0x7ffb3d05dec0 <line:69:7, col:11> 'int' '='
+    |   | |-DeclRefExpr 0x7ffb3d05de78 <col:7> 'int' lvalue Var 0x7ffb3d05de00 'i' 'int'
+    |   | `-IntegerLiteral 0x7ffb3d05dea0 <col:11> 'int' 26
+    |   `-CallExpr 0x7ffb3d05df50 <line:70:7, col:13> 'void'
+    |     |-ImplicitCastExpr 0x7ffb3d05df38 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffb3d05dee8 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+    |     `-ImplicitCastExpr 0x7ffb3d05df98 <col:12> 'T':'__int128' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7ffb3d05df80 <col:12> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffb3d05df10 <col:12> 'int' lvalue Var 0x7ffb3d05de00 'i' 'int'
+    `-CompoundStmt 0x7ffb3d05e1d0 <line:73:3, line:80:3>
+      |-DeclStmt 0x7ffb3d05e060 <line:74:5, col:8>
+      | `-VarDecl 0x7ffb3d05e000 <col:5, col:7> col:7 used j 'T':'__int128'
+      `-CompoundStmt 0x7ffb3d05e1b0 <line:76:5, line:79:5>
+        |-BinaryOperator 0x7ffb3d05e0d8 <line:77:7, col:11> 'T':'__int128' '='
+        | |-DeclRefExpr 0x7ffb3d05e078 <col:7> 'T':'__int128' lvalue Var 0x7ffb3d05e000 'j' 'T':'__int128'
+        | `-ImplicitCastExpr 0x7ffb3d05e0c0 <col:11> 'T':'__int128' <IntegralCast>
+        |   `-IntegerLiteral 0x7ffb3d05e0a0 <col:11> 'int' 37
+        `-CallExpr 0x7ffb3d05e168 <line:78:7, col:13> 'void'
+          |-ImplicitCastExpr 0x7ffb3d05e150 <col:7> 'void (*)(T)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ffb3d05e100 <col:7> 'void (T)' Function 0x7ffb3d05cf00 'bar' 'void (T)'
+          `-ImplicitCastExpr 0x7ffb3d05e198 <col:12> 'T':'__int128' <LValueToRValue>
+            `-DeclRefExpr 0x7ffb3d05e128 <col:12> 'T':'__int128' lvalue Var 0x7ffb3d05e000 'j' 'T':'__int128'

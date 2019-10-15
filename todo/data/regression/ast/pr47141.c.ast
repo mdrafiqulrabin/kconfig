@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7ff42681e4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff428014268 <../Data/C2AST/pr47141.c:1:1, line:10:1> line:2:1 used foo 'int (unsigned long)'
+| |-ParmVarDecl 0x7ff42681f178 <<built-in>:96:26, ../Data/C2AST/pr47141.c:2:23> col:23 used x 'unsigned long'
+| `-CompoundStmt 0x7ff428014710 <line:3:1, line:10:1>
+|   |-DeclStmt 0x7ff4280143e8 <line:4:3, col:12>
+|   | `-VarDecl 0x7ff428014368 <col:3, col:11> col:7 used a 'int' cinit
+|   |   `-IntegerLiteral 0x7ff4280143c8 <col:11> 'int' 6
+|   |-DeclStmt 0x7ff4280144e8 <line:5:3, col:14>
+|   | `-VarDecl 0x7ff428014440 <col:3, col:13> col:8 b 'int *' cinit
+|   |   `-UnaryOperator 0x7ff4280144c8 <col:12, col:13> 'int *' prefix '&'
+|   |     `-DeclRefExpr 0x7ff4280144a0 <col:13> 'int' lvalue Var 0x7ff428014368 'a' 'int'
+|   |-IfStmt 0x7ff428014680 <line:6:3, line:8:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7ff428014528 <line:6:7> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff428014500 <col:7> 'unsigned long' lvalue ParmVar 0x7ff42681f178 'x' 'unsigned long'
+|   | |-ForStmt 0x7ff428014648 <line:7:5, line:8:7>
+|   | | |-BinaryOperator 0x7ff428014588 <line:7:10, col:14> 'int' '='
+|   | | | |-DeclRefExpr 0x7ff428014540 <col:10> 'int' lvalue Var 0x7ff428014368 'a' 'int'
+|   | | | `-IntegerLiteral 0x7ff428014568 <col:14> 'int' 0
+|   | | |-<<<NULL>>>
+|   | | |-ImplicitCastExpr 0x7ff4280145d8 <col:17> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff4280145b0 <col:17> 'int' lvalue Var 0x7ff428014368 'a' 'int'
+|   | | |-UnaryOperator 0x7ff428014618 <col:20, col:21> 'int' postfix '++'
+|   | | | `-DeclRefExpr 0x7ff4280145f0 <col:20> 'int' lvalue Var 0x7ff428014368 'a' 'int'
+|   | | `-NullStmt 0x7ff428014638 <line:8:7>
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff4280146f8 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7ff4280146e0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff4280146b8 <col:10> 'int' lvalue Var 0x7ff428014368 'a' 'int'
+`-FunctionDecl 0x7ff428014800 <line:12:1, line:16:1> line:13:1 bar 'void (void)'
+  `-CompoundStmt 0x7ff4280149c0 <line:14:1, line:16:1>
+    `-CallExpr 0x7ff428014990 <line:15:3, col:30> 'int'
+      |-ImplicitCastExpr 0x7ff428014978 <col:3> 'int (*)(unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff4280148a0 <col:3> 'int (unsigned long)' Function 0x7ff428014268 'foo' 'int (unsigned long)'
+      `-CStyleCastExpr 0x7ff428014950 <col:8, col:27> 'unsigned long' <PointerToIntegral>
+        `-ImplicitCastExpr 0x7ff428014938 <col:27> 'int (*)(unsigned long)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ff4280148c8 <col:27> 'int (unsigned long)' Function 0x7ff428014268 'foo' 'int (unsigned long)'

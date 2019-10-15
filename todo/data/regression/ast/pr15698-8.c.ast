@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fb6f302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb6f3800168 <../Data/C2AST/pr15698-8.c:6:1, col:16> col:5 f 'int (int (*)[])'
+| `-ParmVarDecl 0x7fb6f3800060 <col:7, col:15> col:13 'int (*)[]'
+|-FunctionDecl 0x7fb6f38002a0 <line:7:1, col:30> col:5 g 'int ()'
+| `-CompoundStmt 0x7fb6f3800638 <col:9, col:30>
+|   `-DeclStmt 0x7fb6f3800620 <col:11, col:28>
+|     `-FunctionDecl 0x7fb6f3800568 parent 0x7fb6f302bce8 prev 0x7fb6f3800168 <col:11, col:27> col:15 f 'int (int (*)[2])'
+|       `-ParmVarDecl 0x7fb6f3800460 <col:17, col:26> col:23 'int (*)[2]'
+`-FunctionDecl 0x7fb6f3800878 prev 0x7fb6f3800568 <line:8:1, col:35> col:5 f 'int (int (*)[3])'
+  |-ParmVarDecl 0x7fb6f3800770 <col:10, col:20> col:16 a 'int (*)[3]'
+  `-CompoundStmt 0x7fb6f3800958 <col:23, col:35>
+    `-ReturnStmt 0x7fb6f3800940 <col:25, col:32>
+      `-IntegerLiteral 0x7fb6f3800920 <col:32> 'int' 0

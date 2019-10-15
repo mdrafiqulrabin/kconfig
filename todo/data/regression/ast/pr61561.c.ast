@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fce0d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fce0d814268 <../Data/C2AST/pr61561.c:6:1, col:17> col:5 used dummy 'int (int)'
+| `-ParmVarDecl 0x7fce0d02c978 <col:12, col:16> col:16 a 'int'
+|-VarDecl 0x7fce0d814360 <line:8:1, col:6> col:6 used a 'char'
+|-VarDecl 0x7fce0d8143d8 <line:9:1, col:7> col:7 used b 'short'
+`-FunctionDecl 0x7fce0d814500 <line:11:1, line:16:1> line:11:6 mmm 'void (void)'
+  `-CompoundStmt 0x7fce0d814998 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fce0d814718 <line:13:3, col:22>
+    | `-VarDecl 0x7fce0d8146b8 <col:3, col:21> col:8 used dyn 'char [dummy(3)]'
+    |-BinaryOperator 0x7fce0d814838 <line:14:3, col:19> 'char' '='
+    | |-DeclRefExpr 0x7fce0d814730 <col:3> 'char' lvalue Var 0x7fce0d814360 'a' 'char'
+    | `-CStyleCastExpr 0x7fce0d814810 <col:7, col:19> 'char' <PointerToIntegral>
+    |   `-UnaryOperator 0x7fce0d8147e0 <col:13, col:19> 'char *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7fce0d8147b8 <col:14, col:19> 'char' lvalue
+    |       |-ImplicitCastExpr 0x7fce0d8147a0 <col:14> 'char *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fce0d814758 <col:14> 'char [dummy(3)]' lvalue Var 0x7fce0d8146b8 'dyn' 'char [dummy(3)]'
+    |       `-IntegerLiteral 0x7fce0d814780 <col:18> 'int' 0
+    `-BinaryOperator 0x7fce0d814970 <line:15:3, col:20> 'short' '='
+      |-DeclRefExpr 0x7fce0d814860 <col:3> 'short' lvalue Var 0x7fce0d8143d8 'b' 'short'
+      `-CStyleCastExpr 0x7fce0d814948 <col:7, col:20> 'short' <PointerToIntegral>
+        `-UnaryOperator 0x7fce0d814910 <col:14, col:20> 'char *' prefix '&'
+          `-ArraySubscriptExpr 0x7fce0d8148e8 <col:15, col:20> 'char' lvalue
+            |-ImplicitCastExpr 0x7fce0d8148d0 <col:15> 'char *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7fce0d814888 <col:15> 'char [dummy(3)]' lvalue Var 0x7fce0d8146b8 'dyn' 'char [dummy(3)]'
+            `-IntegerLiteral 0x7fce0d8148b0 <col:19> 'int' 0

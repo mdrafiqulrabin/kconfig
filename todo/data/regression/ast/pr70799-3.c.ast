@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ffbfc82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffbfc82c978 <../Data/C2AST/pr70799-3.c:7:1, col:20> col:20 used a 'unsigned long long'
+|-VarDecl 0x7ffbfd814258 <col:1, col:23> col:23 used b 'unsigned long long'
+|-VarDecl 0x7ffbfd8142d0 <col:1, col:26> col:26 used c 'unsigned long long'
+|-FunctionDecl 0x7ffbfd814410 <line:9:1, line:12:1> line:9:6 test1 'void (void)'
+| `-CompoundStmt 0x7ffbfd814610 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7ffbfd8145e8 <line:11:3, col:19> 'unsigned long long' '='
+|     |-DeclRefExpr 0x7ffbfd8144b0 <col:3> 'unsigned long long' lvalue Var 0x7ffbfc82c978 'a' 'unsigned long long'
+|     `-BinaryOperator 0x7ffbfd8145c0 <col:7, col:19> 'unsigned long long' '|'
+|       |-ParenExpr 0x7ffbfd814560 <col:7, col:15> 'unsigned long long'
+|       | `-BinaryOperator 0x7ffbfd814538 <col:8, col:13> 'unsigned long long' '<<'
+|       |   |-ImplicitCastExpr 0x7ffbfd814520 <col:8> 'unsigned long long' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7ffbfd8144d8 <col:8> 'unsigned long long' lvalue Var 0x7ffbfd814258 'b' 'unsigned long long'
+|       |   `-IntegerLiteral 0x7ffbfd814500 <col:13> 'int' 55
+|       `-ImplicitCastExpr 0x7ffbfd8145a8 <col:19> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffbfd814580 <col:19> 'unsigned long long' lvalue Var 0x7ffbfd8142d0 'c' 'unsigned long long'
+`-FunctionDecl 0x7ffbfd8146b8 <line:14:1, line:17:1> line:14:6 test2 'void (void)'
+  `-CompoundStmt 0x7ffbfd8148b8 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7ffbfd814890 <line:16:3, col:19> 'unsigned long long' '='
+      |-DeclRefExpr 0x7ffbfd814758 <col:3> 'unsigned long long' lvalue Var 0x7ffbfc82c978 'a' 'unsigned long long'
+      `-BinaryOperator 0x7ffbfd814868 <col:7, col:19> 'unsigned long long' '|'
+        |-ParenExpr 0x7ffbfd814808 <col:7, col:15> 'unsigned long long'
+        | `-BinaryOperator 0x7ffbfd8147e0 <col:8, col:13> 'unsigned long long' '>>'
+        |   |-ImplicitCastExpr 0x7ffbfd8147c8 <col:8> 'unsigned long long' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7ffbfd814780 <col:8> 'unsigned long long' lvalue Var 0x7ffbfd814258 'b' 'unsigned long long'
+        |   `-IntegerLiteral 0x7ffbfd8147a8 <col:13> 'int' 55
+        `-ImplicitCastExpr 0x7ffbfd814850 <col:19> 'unsigned long long' <LValueToRValue>
+          `-DeclRefExpr 0x7ffbfd814828 <col:19> 'unsigned long long' lvalue Var 0x7ffbfd8142d0 'c' 'unsigned long long'

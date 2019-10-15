@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fbed08138e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbed10142d8 <../Data/C2AST/pr70465.c:7:1> col:1 implicit atan2 'double (double, double)' extern
+| |-ParmVarDecl 0x7fbed1014378 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fbed10143d8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fbed1014448 <col:1> Implicit
+| `-NoThrowAttr 0x7fbed1014490 <col:1> Implicit
+`-FunctionDecl 0x7fbed10144a0 prev 0x7fbed10142d8 <line:6:1, line:12:1> line:7:1 atan2 'double (double, double)'
+  |-ParmVarDecl 0x7fbed0814578 <col:8, col:15> col:15 used y 'double'
+  |-ParmVarDecl 0x7fbed1014200 <col:18, col:25> col:25 used x 'double'
+  |-CompoundStmt 0x7fbed10149d8 <line:8:1, line:12:1>
+  | |-DeclStmt 0x7fbed1014640 <line:9:3, col:19>
+  | | `-VarDecl 0x7fbed10145c0 <col:3, col:16> col:10 used res 'double' cinit
+  | |   `-FloatingLiteral 0x7fbed1014620 <col:16> 'double' 0.000000e+00
+  | |-GCCAsmStmt 0x7fbed10148e8 <line:10:3, col:58>
+  | | |-DeclRefExpr 0x7fbed1014738 <col:25> 'double' lvalue Var 0x7fbed10145c0 'res' 'double'
+  | | |-ImplicitCastExpr 0x7fbed10148b8 <col:37> 'double' <LValueToRValue>
+  | | | `-DeclRefExpr 0x7fbed10147c8 <col:37> 'double' lvalue ParmVar 0x7fbed0814578 'y' 'double'
+  | | `-ImplicitCastExpr 0x7fbed10148d0 <col:46> 'double' <LValueToRValue>
+  | |   `-DeclRefExpr 0x7fbed1014820 <col:46> 'double' lvalue ParmVar 0x7fbed1014200 'x' 'double'
+  | `-ReturnStmt 0x7fbed10149c0 <line:11:3, col:10>
+  |   `-ImplicitCastExpr 0x7fbed10149a8 <col:10> 'double' <LValueToRValue>
+  |     `-DeclRefExpr 0x7fbed1014980 <col:10> 'double' lvalue Var 0x7fbed10145c0 'res' 'double'
+  |-ConstAttr 0x7fbed1014588 <line:7:1> Inherited Implicit
+  `-NoThrowAttr 0x7fbed1014598 <col:1> Inherited Implicit

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fd9b98216e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd9b9000c00 <../Data/C2AST/pr18501.c:6:1, col:24> col:10 used bmp_iter_set 'unsigned int ()'
+|-FunctionDecl 0x7fd9b9000da8 <line:7:1, col:20> col:5 used something 'int (void)'
+`-FunctionDecl 0x7fd9b9000f10 <line:9:1, line:20:1> line:10:1 bitmap_print_value_set 'void (void)'
+  `-CompoundStmt 0x7fd9b90012e0 <line:11:1, line:20:1>
+    |-DeclStmt 0x7fd9b9001028 <line:12:3, col:17>
+    | `-VarDecl 0x7fd9b9000fc8 <col:3, col:12> col:12 used first 'unsigned int'
+    `-ForStmt 0x7fd9b90012a8 <line:14:3, line:19:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fd9b90010b0 <line:14:10, col:24> 'unsigned int'
+      | `-ImplicitCastExpr 0x7fd9b9001098 <col:10> 'unsigned int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd9b9001040 <col:10> 'unsigned int ()' Function 0x7fd9b9000c00 'bmp_iter_set' 'unsigned int ()'
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fd9b9001288 <line:15:5, line:19:5>
+        |-IfStmt 0x7fd9b90011c8 <line:16:7, line:17:13>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-UnaryOperator 0x7fd9b9001118 <line:16:11, col:12> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7fd9b9001100 <col:12> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fd9b90010d8 <col:12> 'unsigned int' lvalue Var 0x7fd9b9000fc8 'first' 'unsigned int'
+        | |-CallExpr 0x7fd9b90011a0 <line:17:2, col:13> 'int'
+        | | `-ImplicitCastExpr 0x7fd9b9001188 <col:2> 'int (*)(void)' <FunctionToPointerDecay>
+        | |   `-DeclRefExpr 0x7fd9b9001138 <col:2> 'int (void)' Function 0x7fd9b9000da8 'something' 'int (void)'
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7fd9b9001260 <line:18:7, col:15> 'unsigned int' '='
+          |-DeclRefExpr 0x7fd9b9001200 <col:7> 'unsigned int' lvalue Var 0x7fd9b9000fc8 'first' 'unsigned int'
+          `-ImplicitCastExpr 0x7fd9b9001248 <col:15> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7fd9b9001228 <col:15> 'int' 0

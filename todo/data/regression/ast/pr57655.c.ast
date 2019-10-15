@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fb564818ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb563824e68 <../Data/C2AST/pr57655.c:4:1, line:8:1> line:5:1 foo 'long double (long double)'
+| |-ParmVarDecl 0x7fb564819978 <col:6, col:18> col:18 used x 'long double'
+| `-CompoundStmt 0x7fb5638251f8 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fb5638251e0 <line:7:3, col:29>
+|     `-ImplicitCastExpr 0x7fb5638251c8 <col:10, col:29> 'long double' <IntegralToFloating>
+|       `-CallExpr 0x7fb563825180 <col:10, col:29> 'int'
+|         |-ImplicitCastExpr 0x7fb563825168 <col:10> 'int (*)(long double)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fb5638250e8 <col:10> '<builtin fn type>' Function 0x7fb563824f88 '__builtin_ilogbl' 'int (long double)'
+|         `-ImplicitCastExpr 0x7fb5638251b0 <col:28> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb563825110 <col:28> 'long double' lvalue ParmVar 0x7fb564819978 'x' 'long double'
+`-FunctionDecl 0x7fb563824f88 <col:10> col:10 implicit used __builtin_ilogbl 'int (long double)' extern
+  |-ParmVarDecl 0x7fb563825028 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ConstAttr 0x7fb563825090 <col:10> Implicit
+  `-NoThrowAttr 0x7fb5638250d8 <col:10> Implicit

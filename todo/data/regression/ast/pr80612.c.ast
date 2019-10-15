@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f9cc082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9cc082c960 <../Data/C2AST/pr80612.c:4:1, col:8> col:8 struct obstack
+|-VarDecl 0x7f9cc18142d0 <col:1, col:17> col:17 used a 'struct obstack *'
+|-RecordDecl 0x7f9cc1814388 prev 0x7f9cc082c960 <line:5:1, line:10:1> line:5:8 struct obstack definition
+| |-RecordDecl 0x7f9cc1814410 <line:6:3, line:9:3> line:6:3 union definition
+| | |-FieldDecl 0x7f9cc18144d8 <line:7:5, col:11> col:11 referenced plain 'void *'
+| | `-FieldDecl 0x7f9cc1814608 <line:8:5, col:19> col:12 referenced extra 'void (*)()'
+| `-FieldDecl 0x7f9cc18146a0 <line:6:3, line:9:5> col:5 referenced chunkfun 'union (anonymous union at ../Data/C2AST/pr80612.c:6:3)':'union obstack::(anonymous at ../Data/C2AST/pr80612.c:6:3)'
+|-FunctionDecl 0x7f9cc18148a0 <line:5:1, line:13:1> line:10:3 used fn1 'struct obstack (void (*)())'
+| |-ParmVarDecl 0x7f9cc1814790 <col:7, col:15> col:12 used p4 'void (*)()':'void (*)()'
+| `-CompoundStmt 0x7f9cc1814bb0 <col:18, line:13:1>
+|   |-BinaryOperator 0x7f9cc1814a50 <line:11:3, col:23> 'void *' '='
+|   | |-MemberExpr 0x7f9cc18149c0 <col:3, col:15> 'void *' lvalue .plain 0x7f9cc18144d8
+|   | | `-MemberExpr 0x7f9cc1814988 <col:3, col:6> 'union (anonymous union at ../Data/C2AST/pr80612.c:6:3)':'union obstack::(anonymous at ../Data/C2AST/pr80612.c:6:3)' lvalue ->chunkfun 0x7f9cc18146a0
+|   | |   `-ImplicitCastExpr 0x7f9cc1814970 <col:3> 'struct obstack *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9cc1814948 <col:3> 'struct obstack *' lvalue Var 0x7f9cc18142d0 'a' 'struct obstack *'
+|   | `-ImplicitCastExpr 0x7f9cc1814a38 <col:23> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f9cc1814a20 <col:23> 'void (*)()':'void (*)()' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f9cc18149f8 <col:23> 'void (*)()':'void (*)()' lvalue ParmVar 0x7f9cc1814790 'p4' 'void (*)()':'void (*)()'
+|   `-CallExpr 0x7f9cc1814b68 <line:12:3, col:22> 'void'
+|     |-ImplicitCastExpr 0x7f9cc1814b50 <col:3, col:15> 'void (*)()' <LValueToRValue>
+|     | `-MemberExpr 0x7f9cc1814af0 <col:3, col:15> 'void (*)()' lvalue .extra 0x7f9cc1814608
+|     |   `-MemberExpr 0x7f9cc1814ab8 <col:3, col:6> 'union (anonymous union at ../Data/C2AST/pr80612.c:6:3)':'union obstack::(anonymous at ../Data/C2AST/pr80612.c:6:3)' lvalue ->chunkfun 0x7f9cc18146a0
+|     |     `-ImplicitCastExpr 0x7f9cc1814aa0 <col:3> 'struct obstack *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f9cc1814a78 <col:3> 'struct obstack *' lvalue Var 0x7f9cc18142d0 'a' 'struct obstack *'
+|     `-ImplicitCastExpr 0x7f9cc1814b98 <col:21> 'struct obstack *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9cc1814b28 <col:21> 'struct obstack *' lvalue Var 0x7f9cc18142d0 'a' 'struct obstack *'
+|-FunctionDecl 0x7f9cc1814cd0 <line:14:1, col:48> col:6 used fn2 'void (int)'
+| `-ParmVarDecl 0x7f9cc1814be8 <col:10> col:13 'int'
+`-FunctionDecl 0x7f9cc1814d98 <line:15:1, col:24> col:6 fn3 'void ()'
+  `-CompoundStmt 0x7f9cc1814f88 <col:12, col:24>
+    `-CallExpr 0x7f9cc1814f00 <col:14, col:21> 'struct obstack':'struct obstack'
+      |-ImplicitCastExpr 0x7f9cc1814ee8 <col:14> 'struct obstack (*)(void (*)())' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9cc1814e38 <col:14> 'struct obstack (void (*)())' Function 0x7f9cc18148a0 'fn1' 'struct obstack (void (*)())'
+      `-ImplicitCastExpr 0x7f9cc1814f70 <col:18> 'void (*)()':'void (*)()' <BitCast>
+        `-ImplicitCastExpr 0x7f9cc1814f58 <col:18> 'void (*)(int)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9cc1814e60 <col:18> 'void (int)' Function 0x7f9cc1814cd0 'fn2' 'void (int)'

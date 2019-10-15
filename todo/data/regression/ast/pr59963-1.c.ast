@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fdd0202bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdd0206d800 <../Data/C2AST/pr59963-1.c:5:1, col:18> col:13 used baz 'void ()' extern
+|-FunctionDecl 0x7fdd0206d9c0 <line:6:1, col:26> col:13 used qux 'void (int, ...)' extern
+| `-ParmVarDecl 0x7fdd0206d8f8 <col:18> col:21 'int'
+`-FunctionDecl 0x7fdd0206db40 <line:8:1, line:14:1> line:9:1 foo 'void (float)'
+  |-ParmVarDecl 0x7fdd0206da80 <col:6, col:12> col:12 used f 'float'
+  `-CompoundStmt 0x7fdd0206dfe8 <line:10:1, line:14:1>
+    |-CallExpr 0x7fdd0206dd80 <line:11:3, col:9> 'int'
+    | |-ImplicitCastExpr 0x7fdd0206dd68 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdd0206dcf0 <col:3> 'int ()' Function 0x7fdd0206dc40 'bar' 'int ()'
+    | `-ImplicitCastExpr 0x7fdd0206ddc8 <col:8> 'double' <FloatingCast>
+    |   `-ImplicitCastExpr 0x7fdd0206ddb0 <col:8> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fdd0206dd18 <col:8> 'float' lvalue ParmVar 0x7fdd0206da80 'f' 'float'
+    |-CallExpr 0x7fdd0206de70 <line:12:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fdd0206de58 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdd0206dde0 <col:3> 'void ()' Function 0x7fdd0206d800 'baz' 'void ()'
+    | `-ImplicitCastExpr 0x7fdd0206deb8 <col:8> 'double' <FloatingCast>
+    |   `-ImplicitCastExpr 0x7fdd0206dea0 <col:8> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fdd0206de08 <col:8> 'float' lvalue ParmVar 0x7fdd0206da80 'f' 'float'
+    `-CallExpr 0x7fdd0206df80 <line:13:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7fdd0206df68 <col:3> 'void (*)(int, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdd0206ded0 <col:3> 'void (int, ...)' Function 0x7fdd0206d9c0 'qux' 'void (int, ...)'
+      |-IntegerLiteral 0x7fdd0206def8 <col:8> 'int' 42
+      `-ImplicitCastExpr 0x7fdd0206dfd0 <col:12> 'double' <FloatingCast>
+        `-ImplicitCastExpr 0x7fdd0206dfb8 <col:12> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7fdd0206df18 <col:12> 'float' lvalue ParmVar 0x7fdd0206da80 'f' 'float'

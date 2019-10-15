@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fb7f702bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb7f702c978 <../Data/C2AST/pr78818-auto-warn.c:3:1, col:50> col:33 persistent_1_g 'int' cinit
+| `-IntegerLiteral 0x7fb7f7815240 <col:50> 'int' 1
+|-VarDecl 0x7fb7f7815278 <line:4:1, col:50> col:33 persistent_2_g 'int' cinit
+| `-IntegerLiteral 0x7fb7f78152d8 <col:50> 'int' 0
+|-VarDecl 0x7fb7f7815310 <line:5:1, col:57> col:40 persistent_3_g 'int' static cinit
+| `-IntegerLiteral 0x7fb7f7815370 <col:57> 'int' 1
+|-VarDecl 0x7fb7f78153a8 <line:6:1, col:57> col:40 persistent_4_g 'int' static cinit
+| `-IntegerLiteral 0x7fb7f7815408 <col:57> 'int' 0
+`-FunctionDecl 0x7fb7f78154f8 <line:8:1, line:16:1> line:9:1 main 'int (void)'
+  `-CompoundStmt 0x7fb7f78158c0 <line:10:1, line:16:1>
+    |-DeclStmt 0x7fb7f7815660 <line:11:3, col:51>
+    | `-VarDecl 0x7fb7f78155e0 <col:3, col:50> col:35 persistent_1 'int' cinit
+    |   `-IntegerLiteral 0x7fb7f7815640 <col:50> 'int' 1
+    |-DeclStmt 0x7fb7f7815710 <line:12:3, col:51>
+    | `-VarDecl 0x7fb7f7815690 <col:3, col:50> col:35 persistent_2 'int' cinit
+    |   `-IntegerLiteral 0x7fb7f78156f0 <col:50> 'int' 0
+    |-DeclStmt 0x7fb7f78157c0 <line:13:3, col:58>
+    | `-VarDecl 0x7fb7f7815740 <col:3, col:57> col:42 persistent_3 'int' static cinit
+    |   `-IntegerLiteral 0x7fb7f78157a0 <col:57> 'int' 1
+    |-DeclStmt 0x7fb7f7815870 <line:14:3, col:58>
+    | `-VarDecl 0x7fb7f78157f0 <col:3, col:57> col:42 persistent_4 'int' static cinit
+    |   `-IntegerLiteral 0x7fb7f7815850 <col:57> 'int' 0
+    `-ReturnStmt 0x7fb7f78158a8 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fb7f7815888 <col:10> 'int' 0

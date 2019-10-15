@@ -1,0 +1,109 @@
+TranslationUnitDecl 0x7f828e012ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f828f014250 <../Data/C2AST/pr56997-1.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f828f0142f0 prev 0x7f828f014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f828f014390 <line:10:9, line:13:1> line:10:16 struct s definition
+| |-PackedAttr 0x7f828f014500 <line:13:15>
+| |-FieldDecl 0x7f828f014458 <line:11:2, col:16> col:16 Prefix 'unsigned char'
+| `-FieldDecl 0x7f828f0144b8 <line:7:19, line:12:12> col:12 referenced Type 'unsigned short'
+|-TypedefDecl 0x7f828f0145a0 <line:10:1, line:13:28> col:28 referenced ss 'struct s':'struct s'
+| `-ElaboratedType 0x7f828f014550 'struct s' sugar
+|   `-RecordType 0x7f828f014420 'struct s'
+|     `-Record 0x7f828f014390 's'
+|-VarDecl 0x7f828f014640 <line:15:1, col:13> col:13 used v 'volatile ss':'volatile struct s'
+|-VarDecl 0x7f828f0146f0 <line:16:1, col:4> col:4 used g 'ss':'struct s'
+|-FunctionDecl 0x7f828f014830 <line:18:1, line:22:1> line:19:1 used foo 'void (unsigned short)'
+| |-ParmVarDecl 0x7f828f014768 <line:7:19, line:19:16> col:16 used u 'unsigned short'
+| |-CompoundStmt 0x7f828f014a38 <line:20:1, line:22:1>
+| | `-BinaryOperator 0x7f828f0149c0 <line:21:3, col:12> 'unsigned short' '='
+| |   |-MemberExpr 0x7f828f014948 <col:3, col:5> 'volatile unsigned short' lvalue .Type 0x7f828f0144b8
+| |   | `-DeclRefExpr 0x7f828f014920 <col:3> 'volatile ss':'volatile struct s' lvalue Var 0x7f828f014640 'v' 'volatile ss':'volatile struct s'
+| |   `-ImplicitCastExpr 0x7f828f0149a8 <col:12> 'unsigned short' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f828f014980 <col:12> 'unsigned short' lvalue ParmVar 0x7f828f014768 'u' 'unsigned short'
+| `-NoInlineAttr 0x7f828f0148d8 <line:18:21>
+|-FunctionDecl 0x7f828f014b18 <line:7:19, line:28:1> line:25:1 used bar 'unsigned short (void)'
+| |-CompoundStmt 0x7f828f014c90 <line:26:1, line:28:1>
+| | `-ReturnStmt 0x7f828f014c78 <line:27:3, col:12>
+| |   `-ImplicitCastExpr 0x7f828f014c60 <col:10, col:12> 'unsigned short' <LValueToRValue>
+| |     `-MemberExpr 0x7f828f014c28 <col:10, col:12> 'volatile unsigned short' lvalue .Type 0x7f828f0144b8
+| |       `-DeclRefExpr 0x7f828f014c00 <col:10> 'volatile ss':'volatile struct s' lvalue Var 0x7f828f014640 'v' 'volatile ss':'volatile struct s'
+| `-NoInlineAttr 0x7f828f014bb8 <line:24:26>
+|-FunctionDecl 0x7f828f014d00 <line:30:1, line:44:1> line:30:5 main 'int ()'
+| `-CompoundStmt 0x7f828f02d640 <line:31:1, line:44:1>
+|   |-DeclStmt 0x7f828f014e18 <line:7:19, line:32:17>
+|   | `-VarDecl 0x7f828f014db8 <line:7:19, line:32:13> col:13 used temp 'unsigned short'
+|   |-CallExpr 0x7f828f014f00 <line:33:3, col:12> 'void'
+|   | |-ImplicitCastExpr 0x7f828f014ee8 <col:3> 'void (*)(unsigned short)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f828f014e30 <col:3> 'void (unsigned short)' Function 0x7f828f014830 'foo' 'void (unsigned short)'
+|   | `-CStyleCastExpr 0x7f828f014e90 <line:8:15, col:31> 'unsigned short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f828f014e58 <col:31> 'unsigned int' 258
+|   |-CallExpr 0x7f828f02ce60 <line:34:3, col:45> 'void *'
+|   | |-ImplicitCastExpr 0x7f828f02ce48 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f828f0151c8 <col:3> '<builtin fn type>' Function 0x7f828f014fa8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f828f02cea0 <col:20, col:21> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f828f02cc88 <col:20, col:21> 'ss *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f828f02cc00 <col:21> 'ss':'struct s' lvalue Var 0x7f828f0146f0 'g' 'ss':'struct s'
+|   | |-ImplicitCastExpr 0x7f828f02ceb8 <col:24, col:33> 'const void *' <BitCast>
+|   | | `-CStyleCastExpr 0x7f828f02cd88 <col:24, col:33> 'void *' <BitCast>
+|   | |   `-UnaryOperator 0x7f828f02cd28 <col:32, col:33> 'volatile ss *' prefix '&'
+|   | |     `-DeclRefExpr 0x7f828f02cca8 <col:33> 'volatile ss':'volatile struct s' lvalue Var 0x7f828f014640 'v' 'volatile ss':'volatile struct s'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f828f02cdf8 <col:36, col:44> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f828f02cdd8 <col:42, col:44> 'ss':'struct s' lvalue
+|   |     `-DeclRefExpr 0x7f828f02cdb0 <col:43> 'ss':'struct s' lvalue Var 0x7f828f0146f0 'g' 'ss':'struct s'
+|   |-IfStmt 0x7f828f02d098 <line:35:3, line:36:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f828f02cfd8 <line:35:7, line:8:31> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f828f02cfa8 <line:35:7, col:9> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f828f02cf90 <col:7, col:9> 'unsigned short' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7f828f02cef8 <col:7, col:9> 'unsigned short' lvalue .Type 0x7f828f0144b8
+|   | | |     `-DeclRefExpr 0x7f828f02ced0 <col:7> 'ss':'struct s' lvalue Var 0x7f828f0146f0 'g' 'ss':'struct s'
+|   | | `-ImplicitCastExpr 0x7f828f02cfc0 <line:8:15, col:31> 'int' <IntegralCast>
+|   | |   `-CStyleCastExpr 0x7f828f02cf68 <col:15, col:31> 'unsigned short' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7f828f02cf30 <col:31> 'unsigned int' 258
+|   | |-CallExpr 0x7f828f02d070 <line:36:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f828f02d058 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f828f02d000 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f828f0142f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f828f02d190 <line:38:3, line:8:31> 'unsigned short' '='
+|   | |-MemberExpr 0x7f828f02d0f8 <line:38:3, col:5> 'unsigned short' lvalue .Type 0x7f828f0144b8
+|   | | `-DeclRefExpr 0x7f828f02d0d0 <col:3> 'ss':'struct s' lvalue Var 0x7f828f0146f0 'g' 'ss':'struct s'
+|   | `-CStyleCastExpr 0x7f828f02d168 <line:8:15, col:31> 'unsigned short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f828f02d130 <col:31> 'unsigned int' 258
+|   |-CallExpr 0x7f828f02d330 <line:39:3, col:45> 'void *'
+|   | |-ImplicitCastExpr 0x7f828f02d318 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f828f02d1b8 <col:3> '<builtin fn type>' Function 0x7f828f014fa8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-CStyleCastExpr 0x7f828f02d240 <col:20, col:29> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f828f02d208 <col:28, col:29> 'volatile ss *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f828f02d1e0 <col:29> 'volatile ss':'volatile struct s' lvalue Var 0x7f828f014640 'v' 'volatile ss':'volatile struct s'
+|   | |-ImplicitCastExpr 0x7f828f02d370 <col:32, col:33> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7f828f02d290 <col:32, col:33> 'ss *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f828f02d268 <col:33> 'ss':'struct s' lvalue Var 0x7f828f0146f0 'g' 'ss':'struct s'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f828f02d2f8 <col:36, col:44> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f828f02d2d8 <col:42, col:44> 'volatile ss':'volatile struct s' lvalue
+|   |     `-DeclRefExpr 0x7f828f02d2b0 <col:43> 'volatile ss':'volatile struct s' lvalue Var 0x7f828f014640 'v' 'volatile ss':'volatile struct s'
+|   |-BinaryOperator 0x7f828f02d448 <line:40:3, col:14> 'unsigned short' '='
+|   | |-DeclRefExpr 0x7f828f02d388 <col:3> 'unsigned short' lvalue Var 0x7f828f014db8 'temp' 'unsigned short'
+|   | `-CallExpr 0x7f828f02d420 <col:10, col:14> 'unsigned short'
+|   |   `-ImplicitCastExpr 0x7f828f02d408 <col:10> 'unsigned short (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7f828f02d3b0 <col:10> 'unsigned short (void)' Function 0x7f828f014b18 'bar' 'unsigned short (void)'
+|   |-IfStmt 0x7f828f02d5d0 <line:41:3, line:42:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f828f02d540 <line:41:7, line:8:31> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f828f02d510 <line:41:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f828f02d4f8 <col:7> 'unsigned short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f828f02d470 <col:7> 'unsigned short' lvalue Var 0x7f828f014db8 'temp' 'unsigned short'
+|   | | `-ImplicitCastExpr 0x7f828f02d528 <line:8:15, col:31> 'int' <IntegralCast>
+|   | |   `-CStyleCastExpr 0x7f828f02d4d0 <col:15, col:31> 'unsigned short' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7f828f02d498 <col:31> 'unsigned int' 258
+|   | |-CallExpr 0x7f828f02d5a8 <line:42:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f828f02d590 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f828f02d568 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f828f0142f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f828f02d628 <line:43:3, col:10>
+|     `-IntegerLiteral 0x7f828f02d608 <col:10> 'int' 0
+`-FunctionDecl 0x7f828f014fa8 <line:34:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f828f015048 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f828f0150a8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f828f015108 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f828f015180 <col:3> Implicit

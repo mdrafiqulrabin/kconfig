@@ -1,0 +1,85 @@
+../Data/C2AST/pr83198.c:9:8: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  r += __builtin_sprintf (d[0], "%f", x);
+       ^
+TranslationUnitDecl 0x7fe13b02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe13b02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe13b02bf80 '__int128'
+|-TypedefDecl 0x7fe13b02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe13b02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe13b02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe13b02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe13b02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe13b02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe13b02c600 'char *'
+|   `-BuiltinType 0x7fe13b02bd80 'char'
+|-TypedefDecl 0x7fe13b02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe13b02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe13b02c720 'struct __va_list_tag'
+|     `-Record 0x7fe13b02c698 '__va_list_tag'
+`-FunctionDecl 0x7fe13b8143f8 <../Data/C2AST/pr83198.c:5:1, line:18:1> line:6:1 foo 'int (char **, int)'
+  |-ParmVarDecl 0x7fe13b814260 <col:6, col:15> col:12 used d 'char **':'char **'
+  |-ParmVarDecl 0x7fe13b8142d8 <col:18, col:22> col:22 used x 'int'
+  `-CompoundStmt 0x7fe13b814fd8 <line:7:1, line:18:1>
+    |-DeclStmt 0x7fe13b814580 <line:8:3, col:12>
+    | `-VarDecl 0x7fe13b814500 <col:3, col:11> col:7 used r 'int' cinit
+    |   `-IntegerLiteral 0x7fe13b814560 <col:11> 'int' 0
+    |-CompoundAssignOperator 0x7fe13b8148e8 <line:9:3, col:40> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fe13b814598 <col:3> 'int' lvalue Var 0x7fe13b814500 'r' 'int'
+    | `-CallExpr 0x7fe13b814860 <col:8, col:40> 'int'
+    |   |-ImplicitCastExpr 0x7fe13b814848 <col:8> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe13b8146e0 <col:8> 'int ()' Function 0x7fe13b814630 '__builtin_sprintf' 'int ()'
+    |   |-ImplicitCastExpr 0x7fe13b8148a0 <col:27, col:30> 'char *' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fe13b814768 <col:27, col:30> 'char *' lvalue
+    |   |   |-ImplicitCastExpr 0x7fe13b814750 <col:27> 'char **':'char **' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fe13b814708 <col:27> 'char **':'char **' lvalue ParmVar 0x7fe13b814260 'd' 'char **':'char **'
+    |   |   `-IntegerLiteral 0x7fe13b814730 <col:29> 'int' 0
+    |   |-ImplicitCastExpr 0x7fe13b8148b8 <col:33> 'char *' <ArrayToPointerDecay>
+    |   | `-StringLiteral 0x7fe13b8147c8 <col:33> 'char [3]' lvalue "%f"
+    |   `-ImplicitCastExpr 0x7fe13b8148d0 <col:39> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe13b8147f8 <col:39> 'int' lvalue ParmVar 0x7fe13b8142d8 'x' 'int'
+    |-CompoundAssignOperator 0x7fe13b814af0 <line:10:3, col:40> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fe13b814920 <col:3> 'int' lvalue Var 0x7fe13b814500 'r' 'int'
+    | `-CallExpr 0x7fe13b814a68 <col:8, col:40> 'int'
+    |   |-ImplicitCastExpr 0x7fe13b814a50 <col:8> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe13b814948 <col:8> 'int ()' Function 0x7fe13b814630 '__builtin_sprintf' 'int ()'
+    |   |-ImplicitCastExpr 0x7fe13b814aa8 <col:27, col:30> 'char *' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fe13b8149d0 <col:27, col:30> 'char *' lvalue
+    |   |   |-ImplicitCastExpr 0x7fe13b8149b8 <col:27> 'char **':'char **' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fe13b814970 <col:27> 'char **':'char **' lvalue ParmVar 0x7fe13b814260 'd' 'char **':'char **'
+    |   |   `-IntegerLiteral 0x7fe13b814998 <col:29> 'int' 1
+    |   |-ImplicitCastExpr 0x7fe13b814ac0 <col:33> 'char *' <ArrayToPointerDecay>
+    |   | `-StringLiteral 0x7fe13b8149f8 <col:33> 'char [3]' lvalue "%a"
+    |   `-ImplicitCastExpr 0x7fe13b814ad8 <col:39> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe13b814a28 <col:39> 'int' lvalue ParmVar 0x7fe13b8142d8 'x' 'int'
+    |-CompoundAssignOperator 0x7fe13b814d38 <line:11:3, col:44> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-1 error generated.
+DeclRefExpr 0x7fe13b814b28 <col:3> 'int' lvalue Var 0x7fe13b814500 'r' 'int'
+    | `-CallExpr 0x7fe13b814cb0 <col:8, col:44> 'int'
+    |   |-ImplicitCastExpr 0x7fe13b814c98 <col:8> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe13b814b50 <col:8> 'int ()' Function 0x7fe13b814630 '__builtin_sprintf' 'int ()'
+    |   |-ImplicitCastExpr 0x7fe13b814cf0 <col:27, col:30> 'char *' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fe13b814bd8 <col:27, col:30> 'char *' lvalue
+    |   |   |-ImplicitCastExpr 0x7fe13b814bc0 <col:27> 'char **':'char **' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fe13b814b78 <col:27> 'char **':'char **' lvalue ParmVar 0x7fe13b814260 'd' 'char **':'char **'
+    |   |   `-IntegerLiteral 0x7fe13b814ba0 <col:29> 'int' 2
+    |   |-ImplicitCastExpr 0x7fe13b814d08 <col:33> 'char *' <ArrayToPointerDecay>
+    |   | `-StringLiteral 0x7fe13b814c00 <col:33> 'char [3]' lvalue "%f"
+    |   `-ImplicitCastExpr 0x7fe13b814d20 <col:39> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fe13b814c68 <col:39> 'char [4]' lvalue "foo"
+    |-CompoundAssignOperator 0x7fe13b814f48 <line:12:3, col:44> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fe13b814d70 <col:3> 'int' lvalue Var 0x7fe13b814500 'r' 'int'
+    | `-CallExpr 0x7fe13b814ec0 <col:8, col:44> 'int'
+    |   |-ImplicitCastExpr 0x7fe13b814ea8 <col:8> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe13b814d98 <col:8> 'int ()' Function 0x7fe13b814630 '__builtin_sprintf' 'int ()'
+    |   |-ImplicitCastExpr 0x7fe13b814f00 <col:27, col:30> 'char *' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fe13b814e20 <col:27, col:30> 'char *' lvalue
+    |   |   |-ImplicitCastExpr 0x7fe13b814e08 <col:27> 'char **':'char **' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fe13b814dc0 <col:27> 'char **':'char **' lvalue ParmVar 0x7fe13b814260 'd' 'char **':'char **'
+    |   |   `-IntegerLiteral 0x7fe13b814de8 <col:29> 'int' 3
+    |   |-ImplicitCastExpr 0x7fe13b814f18 <col:33> 'char *' <ArrayToPointerDecay>
+    |   | `-StringLiteral 0x7fe13b814e48 <col:33> 'char [3]' lvalue "%a"
+    |   `-ImplicitCastExpr 0x7fe13b814f30 <col:39> 'char *' <ArrayToPointerDecay>
+    |     `-StringLiteral 0x7fe13b814e78 <col:39> 'char [4]' lvalue "bar"
+    `-ReturnStmt 0x7fe13b814fc0 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fe13b814fa8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe13b814f80 <col:10> 'int' lvalue Var 0x7fe13b814500 'r' 'int'

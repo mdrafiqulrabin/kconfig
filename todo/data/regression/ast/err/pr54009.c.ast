@@ -1,0 +1,52 @@
+../Data/C2AST/pr54009.c:21:12: error: unknown register name 'fr0' in asm
+       : : "fr0", "fr1", "fr2", "fr3", "fr4", "fr5", "fr6", "fr7",
+           ^
+../Data/C2AST/pr54009.c:34:12: error: unknown register name 'fr0' in asm
+       : : "fr0", "fr1", "fr2", "fr3", "fr4", "fr5", "fr6", "fr7",
+           ^
+2 errors generated.
+TranslationUnitDecl 0x7fa26302b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa26302b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa26302b580 '__int128'
+|-TypedefDecl 0x7fa26302b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa26302b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fa26302bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa26302b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa26302b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa26302bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa26302bc00 'char *'
+|   `-BuiltinType 0x7fa26302b380 'char'
+|-TypedefDecl 0x7fa26302bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa26302beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa26302bd20 'struct __va_list_tag'
+|     `-Record 0x7fa26302bc98 '__va_list_tag'
+|-RecordDecl 0x7fa26302bf60 <../Data/C2AST/pr54009.c:8:1, line:11:1> line:8:8 struct big definition
+| |-PackedAttr 0x7fa263809bb0 <line:11:19>
+| |-FieldDecl 0x7fa263809a98 <line:9:3, col:15> col:8 a 'char [32764]'
+| `-FieldDecl 0x7fa263809b18 <line:10:3, col:10> col:10 referenced d 'double'
+|   `-AlignedAttr 0x7fa263809b60 <col:28, col:38> aligned
+|     `-IntegerLiteral 0x7fa263809ae0 <col:37> 'int' 4
+|-VarDecl 0x7fa263809c50 <line:13:1, col:19> col:19 used x 'struct big':'struct big' extern
+|-VarDecl 0x7fa263809d08 <line:14:1, col:8> col:8 used y 'double'
+|-FunctionDecl 0x7fa263809e30 <line:16:1, line:27:1> line:16:6 r 'void (void)'
+| `-CompoundStmt 0x7fa26380a7e8 <line:17:1, line:27:1>
+|   |-DeclStmt 0x7fa263809fc0 <line:18:3, col:19>
+|   | `-VarDecl 0x7fa263809ee8 <col:3, col:18> col:10 used tmp 'double' cinit
+|   |   `-ImplicitCastExpr 0x7fa263809fa8 <col:16, col:18> 'double' <LValueToRValue>
+|   |     `-MemberExpr 0x7fa263809f70 <col:16, col:18> 'double' lvalue .d 0x7fa263809b18
+|   |       `-DeclRefExpr 0x7fa263809f48 <col:16> 'struct big':'struct big' lvalue Var 0x7fa263809c50 'x' 'struct big':'struct big'
+|   `-BinaryOperator 0x7fa26380a7c0 <line:26:3, col:7> 'double' '='
+|     |-DeclRefExpr 0x7fa26380a758 <col:3> 'double' lvalue Var 0x7fa263809d08 'y' 'double'
+|     `-ImplicitCastExpr 0x7fa26380a7a8 <col:7> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa26380a780 <col:7> 'double' lvalue Var 0x7fa263809ee8 'tmp' 'double'
+`-FunctionDecl 0x7fa26380a898 <line:29:1, line:40:1> line:29:6 w 'void (void)'
+  `-CompoundStmt 0x7fa26380c168 <line:30:1, line:40:1>
+    |-DeclStmt 0x7fa26380ba00 <line:31:3, col:17>
+    | `-VarDecl 0x7fa26380a950 <col:3, col:16> col:10 used tmp 'double' cinit
+    |   `-ImplicitCastExpr 0x7fa26380a9d8 <col:16> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa26380a9b0 <col:16> 'double' lvalue Var 0x7fa263809d08 'y' 'double'
+    `-BinaryOperator 0x7fa26380c140 <line:39:3, col:9> 'double' '='
+      |-MemberExpr 0x7fa26380c0c8 <col:3, col:5> 'double' lvalue .d 0x7fa263809b18
+      | `-DeclRefExpr 0x7fa26380c0a0 <col:3> 'struct big':'struct big' lvalue Var 0x7fa263809c50 'x' 'struct big':'struct big'
+      `-ImplicitCastExpr 0x7fa26380c128 <col:9> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa26380c100 <col:9> 'double' lvalue Var 0x7fa26380a950 'tmp' 'double'

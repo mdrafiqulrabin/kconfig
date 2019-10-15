@@ -1,0 +1,50 @@
+../Data/C2AST/pr78038.c:18:36: error: unknown register name 'x28' in asm
+register struct test2_s *g __asm__("x28");
+                                   ^
+1 error generated.
+TranslationUnitDecl 0x7fe26302bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe26302c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe26302bf80 '__int128'
+|-TypedefDecl 0x7fe26302c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe26302bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe26302c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe26302c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe26302c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe26302c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe26302c600 'char *'
+|   `-BuiltinType 0x7fe26302bd80 'char'
+|-TypedefDecl 0x7fe26302c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe26302c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe26302c720 'struct __va_list_tag'
+|     `-Record 0x7fe26302c698 '__va_list_tag'
+|-TypedefDecl 0x7fe26306d8b8 <../Data/C2AST/pr78038.c:6:1, col:34> col:16 referenced test_fptr_t 'void (*)(void)'
+| `-PointerType 0x7fe26306d860 'void (*)(void)'
+|   `-ParenType 0x7fe26306d800 'void (void)' sugar
+|     `-FunctionProtoType 0x7fe26302c9d0 'void (void)' cdecl
+|       `-BuiltinType 0x7fe26302bd40 'void'
+|-FunctionDecl 0x7fe26306d9a0 <line:7:1, line:10:1> line:8:1 used test_f 'void (void)'
+| `-CompoundStmt 0x7fe26306da80 <line:9:1, line:10:1>
+|-VarDecl 0x7fe26306dac0 <line:11:1, col:25> col:13 used test_fptr 'test_fptr_t':'void (*)(void)' cinit
+| `-ImplicitCastExpr 0x7fe26306db48 <col:25> 'void (*)(void)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fe26306db20 <col:25> 'void (void)' Function 0x7fe26306d9a0 'test_f' 'void (void)'
+|-RecordDecl 0x7fe26306db60 <line:13:1, line:16:1> line:13:8 struct test2_s definition
+| `-FieldDecl 0x7fe26306dc28 <line:15:3, col:7> col:7 f 'int'
+|-VarDecl 0x7fe26306dd90 <line:18:1, col:26> col:26 used g 'struct test2_s *' register
+| `-AsmLabelAttr 0x7fe26306ddf0 <col:36> "x28"
+`-FunctionDecl 0x7fe26306de98 <line:20:1, line:26:1> line:21:1 do_something 'void ()'
+  `-CompoundStmt 0x7fe26306e178 <line:22:1, line:26:1>
+    |-CallExpr 0x7fe26306df78 <line:23:3, col:14> 'void'
+    | `-ImplicitCastExpr 0x7fe26306df60 <col:3> 'test_fptr_t':'void (*)(void)' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe26306df38 <col:3> 'test_fptr_t':'void (*)(void)' lvalue Var 0x7fe26306dac0 'test_fptr' 'test_fptr_t':'void (*)(void)'
+    |-DeclStmt 0x7fe26306e060 <line:24:3, col:25>
+    | `-VarDecl 0x7fe26306dfc8 <col:3, col:24> col:19 used p1 'struct test2_s *' cinit
+    |   `-ImplicitCastExpr 0x7fe26306e048 <col:24> 'struct test2_s *' <NullToPointer>
+    |     `-IntegerLiteral 0x7fe26306e028 <col:24> 'int' 0
+    `-BinaryOperator 0x7fe26306e150 <line:25:3, col:10> 'struct test2_s':'struct test2_s' '='
+      |-UnaryOperator 0x7fe26306e0b8 <col:3, col:4> 'struct test2_s':'struct test2_s' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe26306e0a0 <col:4> 'struct test2_s *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe26306e078 <col:4> 'struct test2_s *' lvalue Var 0x7fe26306dfc8 'p1' 'struct test2_s *'
+      `-ImplicitCastExpr 0x7fe26306e138 <col:9, col:10> 'struct test2_s':'struct test2_s' <LValueToRValue>
+        `-UnaryOperator 0x7fe26306e118 <col:9, col:10> 'struct test2_s':'struct test2_s' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fe26306e100 <col:10> 'struct test2_s *' <LValueToRValue>
+            `-DeclRefExpr 0x7fe26306e0d8 <col:10> 'struct test2_s *' lvalue Var 0x7fe26306dd90 'g' 'struct test2_s *'

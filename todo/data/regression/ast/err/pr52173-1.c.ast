@@ -1,0 +1,40 @@
+../Data/C2AST/pr52173-1.c:8:3: error: use of undeclared identifier '__transaction_relaxed'
+  __transaction_relaxed
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f8b2082bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b2082c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b2082bf80 '__int128'
+|-TypedefDecl 0x7f8b2082c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b2082bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f8b2082c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b2082c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b2082c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b2082c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b2082c600 'char *'
+|   `-BuiltinType 0x7f8b2082bd80 'char'
+|-TypedefDecl 0x7f8b2082c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b2082c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b2082c720 'struct __va_list_tag'
+|     `-Record 0x7f8b2082c698 '__va_list_tag'
+|-VarDecl 0x7f8b21014200 <../Data/C2AST/pr52173-1.c:4:1, col:12> col:5 vec 'int [500]'
+|-FunctionDecl 0x7f8b210142e8 <line:6:1, line:12:1> line:6:6 used func 'void ()'
+| `-CompoundStmt 0x7f8b210143a0 <line:7:1, line:12:1>
+`-FunctionDecl 0x7f8b21014400 <line:14:1, line:20:1> line:15:1 main 'int ()'
+  `-CompoundStmt 0x7f8b21014740 <line:16:1, line:20:1>
+    |-DeclStmt 0x7f8b21014518 <line:17:3, col:8>
+    | `-VarDecl 0x7f8b210144b8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f8b21014708 <line:18:3, line:19:10>
+      |-BinaryOperator 0x7f8b21014578 <line:18:7, col:11> 'int' '='
+      | |-DeclRefExpr 0x7f8b21014530 <col:7> 'int' lvalue Var 0x7f8b210144b8 'i' 'int'
+      | `-IntegerLiteral 0x7f8b21014558 <col:11> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8b21014600 <col:14, col:18> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8b210145e8 <col:14> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8b210145a0 <col:14> 'int' lvalue Var 0x7f8b210144b8 'i' 'int'
+      | `-IntegerLiteral 0x7f8b210145c8 <col:18> 'int' 10
+      |-UnaryOperator 0x7f8b21014650 <col:22, col:24> 'int' prefix '++'
+      | `-DeclRefExpr 0x7f8b21014628 <col:24> 'int' lvalue Var 0x7f8b210144b8 'i' 'int'
+      `-CallExpr 0x7f8b210146e0 <line:19:5, col:10> 'void'
+        `-ImplicitCastExpr 0x7f8b210146c8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f8b21014670 <col:5> 'void ()' Function 0x7f8b210142e8 'func' 'void ()'

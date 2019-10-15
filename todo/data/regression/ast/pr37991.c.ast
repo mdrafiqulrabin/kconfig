@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fc76402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc76402c978 <../Data/C2AST/pr37991.c:1:1, col:13> col:13 referenced Int32 'int'
+| `-BuiltinType 0x7fc76402bde0 'int'
+|-FunctionDecl 0x7fc76500eac0 <line:2:1, col:16> col:6 used use_it 'void (int)'
+| `-ParmVarDecl 0x7fc76500ea00 <col:13> col:16 'int'
+`-FunctionDecl 0x7fc76500ec48 <line:3:1, line:13:1> line:3:6 FindAndReadSignature 'void (int)'
+  |-ParmVarDecl 0x7fc76500ebc0 <col:27, col:31> col:31 used processedSize 'int'
+  `-CompoundStmt 0x7fc76500f248 <line:4:1, line:13:1>
+    |-DeclStmt 0x7fc76500ed88 <line:5:3, col:23>
+    | `-VarDecl 0x7fc76500ed08 <col:3, col:22> col:7 used numPrevBytes 'int' cinit
+    |   `-IntegerLiteral 0x7fc76500ed68 <col:22> 'int' 1
+    `-ForStmt 0x7fc76500f210 <line:6:3, line:12:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fc76500f1e0 <line:7:5, line:12:5>
+        |-DeclStmt 0x7fc76500eec0 <line:8:7, col:58>
+        | `-VarDecl 0x7fc76500edb8 <col:7, col:45> col:11 used numBytesInBuffer 'int' cinit
+        |   `-BinaryOperator 0x7fc76500ee98 <col:30, col:45> 'int' '+'
+        |     |-ImplicitCastExpr 0x7fc76500ee68 <col:30> 'int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fc76500ee18 <col:30> 'int' lvalue Var 0x7fc76500ed08 'numPrevBytes' 'int'
+        |     `-ImplicitCastExpr 0x7fc76500ee80 <col:45> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fc76500ee40 <col:45> 'int' lvalue ParmVar 0x7fc76500ebc0 'processedSize' 'int'
+        |-DeclStmt 0x7fc76500eff8 <line:9:7, col:44>
+        | `-VarDecl 0x7fc76500ef10 <col:7, col:43> col:13 used numTests 'Int32':'int' cinit
+        |   `-BinaryOperator 0x7fc76500efd0 <col:24, col:43> 'int' '-'
+        |     |-ImplicitCastExpr 0x7fc76500efb8 <col:24> 'int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fc76500ef70 <col:24> 'int' lvalue Var 0x7fc76500edb8 'numBytesInBuffer' 'int'
+        |     `-IntegerLiteral 0x7fc76500ef98 <col:43> 'int' 1
+        |-CallExpr 0x7fc76500f0a0 <line:10:7, col:23> 'void'
+        | |-ImplicitCastExpr 0x7fc76500f088 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fc76500f010 <col:7> 'void (int)' Function 0x7fc76500eac0 'use_it' 'void (int)'
+        | `-ImplicitCastExpr 0x7fc76500f0d0 <col:15> 'Int32':'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fc76500f038 <col:15> 'Int32':'int' lvalue Var 0x7fc76500ef10 'numTests' 'Int32':'int'
+        `-BinaryOperator 0x7fc76500f1b8 <line:11:7, col:41> 'int' '='
+          |-DeclRefExpr 0x7fc76500f0e8 <col:7> 'int' lvalue Var 0x7fc76500ed08 'numPrevBytes' 'int'
+          `-BinaryOperator 0x7fc76500f190 <col:22, col:41> 'int' '-'
+            |-ImplicitCastExpr 0x7fc76500f160 <col:22> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fc76500f110 <col:22> 'int' lvalue Var 0x7fc76500edb8 'numBytesInBuffer' 'int'
+            `-ImplicitCastExpr 0x7fc76500f178 <col:41> 'Int32':'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fc76500f138 <col:41> 'Int32':'int' lvalue Var 0x7fc76500ef10 'numTests' 'Int32':'int'

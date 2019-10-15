@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f9e688104e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9e68811178 <../Data/C2AST/pr70155-17.c:4:1, col:17> col:17 used a '__int128' extern
+|-VarDecl 0x7f9e6901e058 <col:1, col:20> col:20 used b '__int128' extern
+|-VarDecl 0x7f9e6901e0d0 <col:1, col:23> col:23 used c '__int128' extern
+|-VarDecl 0x7f9e6901e148 <col:1, col:26> col:26 used d '__int128' extern
+|-VarDecl 0x7f9e6901e1c0 <col:1, col:29> col:29 used e '__int128' extern
+|-VarDecl 0x7f9e6901e238 <col:1, col:32> col:32 used f '__int128' extern
+`-FunctionDecl 0x7f9e6901e390 <line:6:1, line:15:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9e6901e7c0 <line:8:1, line:15:1>
+    |-BinaryOperator 0x7f9e6901e490 <line:9:3, col:7> '__int128' '='
+    | |-DeclRefExpr 0x7f9e6901e430 <col:3> '__int128' lvalue Var 0x7f9e68811178 'a' '__int128'
+    | `-ImplicitCastExpr 0x7f9e6901e478 <col:7> '__int128' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9e6901e458 <col:7> 'int' 0
+    |-BinaryOperator 0x7f9e6901e538 <line:10:3, col:8> '__int128' '='
+    | |-DeclRefExpr 0x7f9e6901e4b8 <col:3> '__int128' lvalue Var 0x7f9e6901e058 'b' '__int128'
+    | `-ImplicitCastExpr 0x7f9e6901e520 <col:7, col:8> '__int128' <IntegralCast>
+    |   `-UnaryOperator 0x7f9e6901e500 <col:7, col:8> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7f9e6901e4e0 <col:8> 'int' 1
+    |-BinaryOperator 0x7f9e6901e5c0 <line:11:3, col:7> '__int128' '='
+    | |-DeclRefExpr 0x7f9e6901e560 <col:3> '__int128' lvalue Var 0x7f9e6901e0d0 'c' '__int128'
+    | `-ImplicitCastExpr 0x7f9e6901e5a8 <col:7> '__int128' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9e6901e588 <col:7> 'int' 0
+    |-BinaryOperator 0x7f9e6901e668 <line:12:3, col:8> '__int128' '='
+    | |-DeclRefExpr 0x7f9e6901e5e8 <col:3> '__int128' lvalue Var 0x7f9e6901e148 'd' '__int128'
+    | `-ImplicitCastExpr 0x7f9e6901e650 <col:7, col:8> '__int128' <IntegralCast>
+    |   `-UnaryOperator 0x7f9e6901e630 <col:7, col:8> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7f9e6901e610 <col:8> 'int' 1
+    |-BinaryOperator 0x7f9e6901e6f0 <line:13:3, col:7> '__int128' '='
+    | |-DeclRefExpr 0x7f9e6901e690 <col:3> '__int128' lvalue Var 0x7f9e6901e1c0 'e' '__int128'
+    | `-ImplicitCastExpr 0x7f9e6901e6d8 <col:7> '__int128' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9e6901e6b8 <col:7> 'int' 0
+    `-BinaryOperator 0x7f9e6901e798 <line:14:3, col:8> '__int128' '='
+      |-DeclRefExpr 0x7f9e6901e718 <col:3> '__int128' lvalue Var 0x7f9e6901e238 'f' '__int128'
+      `-ImplicitCastExpr 0x7f9e6901e780 <col:7, col:8> '__int128' <IntegralCast>
+        `-UnaryOperator 0x7f9e6901e760 <col:7, col:8> 'int' prefix '-'
+          `-IntegerLiteral 0x7f9e6901e740 <col:8> 'int' 1

@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fc78a02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc78a02c960 <../Data/C2AST/pr38271.c:4:1, line:8:1> line:4:8 struct xxx definition
+| |-FieldDecl 0x7fc78a06d838 <line:5:5, col:11> col:11 referenced a 'short'
+| |-FieldDecl 0x7fc78a06d898 <line:6:5, col:11> col:11 b 'short'
+| `-FieldDecl 0x7fc78a06d8f8 <line:7:5, col:11> col:11 c 'void *'
+|-FunctionDecl 0x7fc78a06da90 <line:10:1, col:20> col:6 used bar 'void (struct xxx)'
+| `-ParmVarDecl 0x7fc78a06d990 <col:10, col:17> col:20 'struct xxx':'struct xxx'
+`-FunctionDecl 0x7fc78a06dd90 <line:12:1, line:18:1> line:12:6 foo 'void (struct xxx *, int)'
+  |-ParmVarDecl 0x7fc78a06dc00 <col:10, col:22> col:22 used p 'struct xxx *'
+  |-ParmVarDecl 0x7fc78a06dc78 <col:25, col:29> col:29 used i 'int'
+  `-CompoundStmt 0x7fc78a06e228 <line:13:1, line:18:1>
+    |-DeclStmt 0x7fc78a06df38 <line:14:3, col:21>
+    | `-VarDecl 0x7fc78a06de60 <col:3, col:20> col:14 used s0 'struct xxx':'struct xxx' cinit
+    |   `-ImplicitCastExpr 0x7fc78a06df20 <col:19, col:20> 'struct xxx':'struct xxx' <LValueToRValue>
+    |     `-UnaryOperator 0x7fc78a06df00 <col:19, col:20> 'struct xxx':'struct xxx' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fc78a06dee8 <col:20> 'struct xxx *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fc78a06dec0 <col:20> 'struct xxx *' lvalue ParmVar 0x7fc78a06dc00 'p' 'struct xxx *'
+    |-DeclStmt 0x7fc78a06e010 <line:15:3, col:20>
+    | `-VarDecl 0x7fc78a06df70 <col:3, col:18> col:14 used s 'struct xxx':'struct xxx' cinit
+    |   `-ImplicitCastExpr 0x7fc78a06dff8 <col:18> 'struct xxx':'struct xxx' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc78a06dfd0 <col:18> 'struct xxx':'struct xxx' lvalue Var 0x7fc78a06de60 's0' 'struct xxx':'struct xxx'
+    |-IfStmt 0x7fc78a06e0e8 <line:16:3, col:13>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc78a06e088 <col:7, col:9> 'short' <LValueToRValue>
+    | | `-MemberExpr 0x7fc78a06e050 <col:7, col:9> 'short' lvalue .a 0x7fc78a06d838
+    | |   `-DeclRefExpr 0x7fc78a06e028 <col:7> 'struct xxx':'struct xxx' lvalue Var 0x7fc78a06df70 's' 'struct xxx':'struct xxx'
+    | |-UnaryOperator 0x7fc78a06e0c8 <col:12, col:13> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fc78a06e0a0 <col:12> 'int' lvalue ParmVar 0x7fc78a06dc78 'i' 'int'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fc78a06e1e0 <line:17:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7fc78a06e1c8 <col:3> 'void (*)(struct xxx)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc78a06e120 <col:3> 'void (struct xxx)' Function 0x7fc78a06da90 'bar' 'void (struct xxx)'
+      `-ImplicitCastExpr 0x7fc78a06e210 <col:7> 'struct xxx':'struct xxx' <LValueToRValue>
+        `-DeclRefExpr 0x7fc78a06e148 <col:7> 'struct xxx':'struct xxx' lvalue Var 0x7fc78a06df70 's' 'struct xxx':'struct xxx'

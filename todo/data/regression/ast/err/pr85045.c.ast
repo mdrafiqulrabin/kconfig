@@ -1,0 +1,23 @@
+../Data/C2AST/pr85045.c:8:11: error: called object type 'double' is not a function or function pointer
+  (a / b) ();  
+  ~~~~~~~ ^
+1 error generated.
+TranslationUnitDecl 0x7fabc102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fabc102c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fabc102bf80 '__int128'
+|-TypedefDecl 0x7fabc102c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fabc102bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fabc102c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fabc102c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fabc102c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fabc102c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fabc102c600 'char *'
+|   `-BuiltinType 0x7fabc102bd80 'char'
+|-TypedefDecl 0x7fabc102c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fabc102c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fabc102c720 'struct __va_list_tag'
+|     `-Record 0x7fabc102c698 '__va_list_tag'
+`-FunctionDecl 0x7fabc18142d0 <../Data/C2AST/pr85045.c:5:1, line:9:1> line:6:1 f 'void (double, double)'
+  |-ParmVarDecl 0x7fabc102c978 <col:4, col:11> col:11 used a 'double'
+  |-ParmVarDecl 0x7fabc1814200 <col:14, col:21> col:21 used b 'double'
+  `-CompoundStmt 0x7fabc1814860 <line:7:1, line:9:1>

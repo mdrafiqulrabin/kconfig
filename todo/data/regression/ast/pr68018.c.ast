@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fdf7502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf75815200 <../Data/C2AST/pr68018.c:4:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fdf7502c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fdf7502bee0 'float'
+`-FunctionDecl 0x7fdf758153f8 <line:6:1, line:10:1> line:6:5 fn1 'int (V *)'
+  |-ParmVarDecl 0x7fdf758152e8 <col:10, col:14> col:14 used x 'V *'
+  `-CompoundStmt 0x7fdf75815698 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fdf758155c8 <line:8:3, col:11>
+    | `-VarDecl 0x7fdf758154f0 <col:3, col:10> col:5 used a 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-ImplicitCastExpr 0x7fdf758155b0 <col:9, col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |     `-UnaryOperator 0x7fdf75815590 <col:9, col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fdf75815578 <col:10> 'V *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fdf75815550 <col:10> 'V *' lvalue ParmVar 0x7fdf758152e8 'x' 'V *'
+    `-ReturnStmt 0x7fdf75815680 <line:9:3, col:13>
+      `-ImplicitCastExpr 0x7fdf75815668 <col:10, col:13> 'int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fdf75815650 <col:10, col:13> 'float' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fdf75815628 <col:10, col:13> 'float' lvalue vectorcomponent
+            |-DeclRefExpr 0x7fdf758155e0 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fdf758154f0 'a' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+            `-IntegerLiteral 0x7fdf75815608 <col:12> 'int' 0

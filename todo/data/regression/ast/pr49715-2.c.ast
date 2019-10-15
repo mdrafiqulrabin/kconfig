@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f8d890074e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8d88827868 <../Data/C2AST/pr49715-2.c:4:1, line:9:1> line:4:8 func 'double (unsigned long long)'
+  |-ParmVarDecl 0x7f8d89008178 <col:13, col:32> col:32 used x 'unsigned long long'
+  `-CompoundStmt 0x7f8d88827b80 <line:5:1, line:9:1>
+    |-IfStmt 0x7f8d88827b10 <line:6:3, line:7:22>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8d888279b0 <line:6:7, col:12> 'int' '<='
+    | | |-ImplicitCastExpr 0x7f8d88827998 <col:7> 'unsigned long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8d88827950 <col:7> 'unsigned long long' lvalue ParmVar 0x7f8d89008178 'x' 'unsigned long long'
+    | | `-IntegerLiteral 0x7f8d88827978 <col:12> 'unsigned long long' 9223372036854775806
+    | |-ReturnStmt 0x7f8d88827af8 <line:7:5, col:22>
+    | | `-BinaryOperator 0x7f8d88827ad0 <col:12, col:22> 'double' '*'
+    | |   |-ImplicitCastExpr 0x7f8d88827ab8 <col:12, col:18> 'double' <IntegralToFloating>
+    | |   | `-ParenExpr 0x7f8d88827a78 <col:12, col:18> 'unsigned long long'
+    | |   |   `-BinaryOperator 0x7f8d88827a50 <col:13, col:17> 'unsigned long long' '+'
+    | |   |     |-ImplicitCastExpr 0x7f8d88827a20 <col:13> 'unsigned long long' <LValueToRValue>
+    | |   |     | `-DeclRefExpr 0x7f8d888279d8 <col:13> 'unsigned long long' lvalue ParmVar 0x7f8d89008178 'x' 'unsigned long long'
+    | |   |     `-ImplicitCastExpr 0x7f8d88827a38 <col:17> 'unsigned long long' <IntegralCast>
+    | |   |       `-IntegerLiteral 0x7f8d88827a00 <col:17> 'int' 1
+    | |   `-FloatingLiteral 0x7f8d88827a98 <col:22> 'double' 1.000000e-02
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8d88827b68 <line:8:3, col:10>
+      `-FloatingLiteral 0x7f8d88827b48 <col:10> 'double' 0.000000e+00

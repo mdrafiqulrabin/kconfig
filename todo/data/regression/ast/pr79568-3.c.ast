@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fe95800e8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe956811c20 <../Data/C2AST/pr79568-3.c:8:1, line:12:1> line:9:1 foo 'void (void)'
+| `-CompoundStmt 0x7fe956811e38 <line:10:1, line:12:1>
+|   `-CallExpr 0x7fe956811e10 <line:11:3, col:25> 'void'
+|     `-ImplicitCastExpr 0x7fe956811df8 <col:3> 'void (*)(void)' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7fe956811da0 <col:3> '<builtin fn type>' Function 0x7fe956811d00 '__builtin_ia32_pause' 'void (void)'
+|-FunctionDecl 0x7fe956811d00 <col:3> col:3 implicit used __builtin_ia32_pause 'void (void)' extern
+`-FunctionDecl 0x7fe956811ee0 <line:15:1, line:19:1> line:16:1 bar 'void (void)'
+  `-CompoundStmt 0x7fe956811fe8 <line:17:1, line:19:1>
+    `-CallExpr 0x7fe956811fc0 <line:18:3, col:25> 'void'
+      `-ImplicitCastExpr 0x7fe956811fa8 <col:3> 'void (*)(void)' <BuiltinFnToFnPtr>
+        `-DeclRefExpr 0x7fe956811f80 <col:3> '<builtin fn type>' Function 0x7fe956811d00 '__builtin_ia32_pause' 'void (void)'

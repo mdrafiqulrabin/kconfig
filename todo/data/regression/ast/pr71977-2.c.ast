@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7ffeba82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffebb856e98 <../Data/C2AST/pr71977-2.c:9:9, line:13:1> line:9:9 union definition
+| |-FieldDecl 0x7ffebb856f58 <line:11:3, col:9> col:9 referenced value 'float'
+| `-FieldDecl 0x7ffebb856fb0 <line:12:3, col:12> col:12 referenced word 'uint32_t':'unsigned int'
+|-TypedefDecl 0x7ffebb857050 <line:9:1, line:13:3> col:3 referenced ieee_float_shape_type 'union ieee_float_shape_type':'ieee_float_shape_type'
+| `-ElaboratedType 0x7ffebb857000 'union ieee_float_shape_type' sugar
+|   `-RecordType 0x7ffebb856f20 'ieee_float_shape_type'
+|     `-Record 0x7ffebb856e98 ''
+`-FunctionDecl 0x7ffebb8571a8 <line:15:1, line:24:1> line:16:1 mask_and_float_sign 'float (float)'
+  |-ParmVarDecl 0x7ffebb8570d8 <col:22, col:28> col:28 used f 'float'
+  `-CompoundStmt 0x7ffebb857598 <line:17:1, line:24:1>
+    |-DeclStmt 0x7ffebb857320 <line:18:3, col:26>
+    | `-VarDecl 0x7ffebb8572c0 <col:3, col:25> col:25 used u 'ieee_float_shape_type':'ieee_float_shape_type'
+    |-BinaryOperator 0x7ffebb8573d8 <line:20:3, col:13> 'float' '='
+    | |-MemberExpr 0x7ffebb857360 <col:3, col:5> 'float' lvalue .value 0x7ffebb856f58
+    | | `-DeclRefExpr 0x7ffebb857338 <col:3> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffebb8572c0 'u' 'ieee_float_shape_type':'ieee_float_shape_type'
+    | `-ImplicitCastExpr 0x7ffebb8573c0 <col:13> 'float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ffebb857398 <col:13> 'float' lvalue ParmVar 0x7ffebb8570d8 'f' 'float'
+    |-CompoundAssignOperator 0x7ffebb857480 <line:21:3, col:13> 'uint32_t':'unsigned int' '&=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-MemberExpr 0x7ffebb857428 <col:3, col:5> 'uint32_t':'unsigned int' lvalue .word 0x7ffebb856fb0
+    | | `-DeclRefExpr 0x7ffebb857400 <col:3> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffebb8572c0 'u' 'ieee_float_shape_type':'ieee_float_shape_type'
+    | `-IntegerLiteral 0x7ffebb857460 <col:13> 'unsigned int' 2147483648
+    `-ReturnStmt 0x7ffebb857580 <line:23:3, col:12>
+      `-ImplicitCastExpr 0x7ffebb857568 <col:10, col:12> 'float' <LValueToRValue>
+        `-MemberExpr 0x7ffebb857530 <col:10, col:12> 'float' lvalue .value 0x7ffebb856f58
+          `-DeclRefExpr 0x7ffebb857508 <col:10> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7ffebb8572c0 'u' 'ieee_float_shape_type':'ieee_float_shape_type'

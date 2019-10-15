@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7f900b8058e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f900b806560 <../Data/C2AST/pr42767.c:5:1, line:8:1> line:5:8 struct lineno_cache_entry definition
+| `-FieldDecl 0x7f900a830e38 <line:7:3, col:17> col:17 referenced size 'unsigned long'
+`-FunctionDecl 0x7f900a831038 <line:9:1, line:19:1> line:10:1 _bfd_link_section_stabs 'int (struct lineno_cache_entry *)'
+  |-ParmVarDecl 0x7f900a830f30 <col:26, col:54> col:54 used stabsec 'struct lineno_cache_entry *'
+  `-CompoundStmt 0x7f900a831800 <line:11:1, line:19:1>
+    |-DeclStmt 0x7f900a831198 <line:12:3, col:22>
+    | `-VarDecl 0x7f900a831138 <col:3, col:17> col:17 used count 'unsigned long'
+    |-DeclStmt 0x7f900a831250 <line:13:3, col:21>
+    | `-VarDecl 0x7f900a8311f0 <col:3, col:18> col:18 used sym 'unsigned char *'
+    |-DeclStmt 0x7f900a8312e0 <line:14:3, col:24>
+    | `-VarDecl 0x7f900a831280 <col:3, col:18> col:18 used symend 'unsigned char *'
+    |-DeclStmt 0x7f900a831370 <line:15:3, col:21>
+    | `-VarDecl 0x7f900a831310 <col:3, col:17> col:17 used skip 'unsigned long'
+    |-BinaryOperator 0x7f900a8314a0 <line:16:3, col:27> 'unsigned long' '='
+    | |-DeclRefExpr 0x7f900a831388 <col:3> 'unsigned long' lvalue Var 0x7f900a831138 'count' 'unsigned long'
+    | `-BinaryOperator 0x7f900a831478 <col:11, col:27> 'unsigned long' '/'
+    |   |-ImplicitCastExpr 0x7f900a831448 <col:11, col:20> 'unsigned long' <LValueToRValue>
+    |   | `-MemberExpr 0x7f900a8313f0 <col:11, col:20> 'unsigned long' lvalue ->size 0x7f900a830e38
+    |   |   `-ImplicitCastExpr 0x7f900a8313d8 <col:11> 'struct lineno_cache_entry *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f900a8313b0 <col:11> 'struct lineno_cache_entry *' lvalue ParmVar 0x7f900a830f30 'stabsec' 'struct lineno_cache_entry *'
+    |   `-ImplicitCastExpr 0x7f900a831460 <col:27> 'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f900a831428 <col:27> 'int' 12
+    |-ForStmt 0x7f900a831600 <line:17:3, col:33>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f900a831548 <col:10, col:16> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f900a831518 <col:10> 'unsigned char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f900a8314c8 <col:10> 'unsigned char *' lvalue Var 0x7f900a8311f0 'sym' 'unsigned char *'
+    | | `-ImplicitCastExpr 0x7f900a831530 <col:16> 'unsigned char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f900a8314f0 <col:16> 'unsigned char *' lvalue Var 0x7f900a831280 'symend' 'unsigned char *'
+    | |-CompoundAssignOperator 0x7f900a8315b8 <col:24, col:31> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+    | | |-DeclRefExpr 0x7f900a831570 <col:24> 'unsigned char *' lvalue Var 0x7f900a8311f0 'sym' 'unsigned char *'
+    | | `-IntegerLiteral 0x7f900a831598 <col:31> 'int' 1
+    | `-NullStmt 0x7f900a8315f0 <col:33>
+    `-BinaryOperator 0x7f900a8317d8 <line:18:3, col:36> 'unsigned long' '='
+      |-MemberExpr 0x7f900a831678 <col:3, col:12> 'unsigned long' lvalue ->size 0x7f900a830e38
+      | `-ImplicitCastExpr 0x7f900a831660 <col:3> 'struct lineno_cache_entry *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f900a831638 <col:3> 'struct lineno_cache_entry *' lvalue ParmVar 0x7f900a830f30 'stabsec' 'struct lineno_cache_entry *'
+      `-BinaryOperator 0x7f900a8317b0 <col:19, col:36> 'unsigned long' '*'
+        |-ParenExpr 0x7f900a831758 <col:19, col:32> 'unsigned long'
+        | `-BinaryOperator 0x7f900a831730 <col:20, col:28> 'unsigned long' '-'
+        |   |-ImplicitCastExpr 0x7f900a831700 <col:20> 'unsigned long' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f900a8316b0 <col:20> 'unsigned long' lvalue Var 0x7f900a831138 'count' 'unsigned long'
+        |   `-ImplicitCastExpr 0x7f900a831718 <col:28> 'unsigned long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f900a8316d8 <col:28> 'unsigned long' lvalue Var 0x7f900a831310 'skip' 'unsigned long'
+        `-ImplicitCastExpr 0x7f900a831798 <col:36> 'unsigned long' <IntegralCast>
+          `-IntegerLiteral 0x7f900a831778 <col:36> 'int' 12

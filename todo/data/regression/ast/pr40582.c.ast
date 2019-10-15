@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fa1480078e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa148008560 <../Data/C2AST/pr40582.c:1:1, line:5:1> line:1:8 struct A definition
+| |-FieldDecl 0x7fa14782d638 <line:3:3, col:9> col:9 q 'void *'
+| `-FieldDecl 0x7fa14782d698 <line:4:3, col:9> col:9 i 'short'
+|-RecordDecl 0x7fa14782d6e0 <line:7:1, line:11:1> line:7:7 union U definition
+| |-FieldDecl 0x7fa14782d7a8 <line:9:3, col:9> col:9 p 'char *'
+| `-FieldDecl 0x7fa14782d840 <line:10:3, col:12> col:12 referenced a 'struct A':'struct A'
+`-FunctionDecl 0x7fa14782d9f0 <line:13:1, line:18:1> line:13:10 foo 'struct A (union U)'
+  |-ParmVarDecl 0x7fa14782d8e0 <col:14, col:22> col:22 used u 'union U':'union U'
+  `-CompoundStmt 0x7fa14782dda0 <line:14:1, line:18:1>
+    |-DeclStmt 0x7fa14782dc68 <line:15:3, col:24>
+    | `-VarDecl 0x7fa14782daf8 <col:3, col:23> col:12 used a 'struct A':'struct A' nrvo cinit
+    |   `-InitListExpr 0x7fa14782dbe8 <col:16, col:23> 'struct A':'struct A'
+    |     |-ImplicitCastExpr 0x7fa14782dc38 <col:18> 'void *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7fa14782db58 <col:18> 'int' 0
+    |     `-ImplicitCastExpr 0x7fa14782dc50 <col:21> 'short' <IntegralCast>
+    |       `-IntegerLiteral 0x7fa14782db78 <col:21> 'int' 0
+    |-BinaryOperator 0x7fa14782dd20 <line:16:3, col:9> 'struct A':'struct A' '='
+    | |-DeclRefExpr 0x7fa14782dc80 <col:3> 'struct A':'struct A' lvalue Var 0x7fa14782daf8 'a' 'struct A':'struct A'
+    | `-ImplicitCastExpr 0x7fa14782dd08 <col:7, col:9> 'struct A':'struct A' <LValueToRValue>
+    |   `-MemberExpr 0x7fa14782dcd0 <col:7, col:9> 'struct A':'struct A' lvalue .a 0x7fa14782d840
+    |     `-DeclRefExpr 0x7fa14782dca8 <col:7> 'union U':'union U' lvalue ParmVar 0x7fa14782d8e0 'u' 'union U':'union U'
+    `-ReturnStmt 0x7fa14782dd88 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fa14782dd70 <col:10> 'struct A':'struct A' <LValueToRValue>
+        `-DeclRefExpr 0x7fa14782dd48 <col:10> 'struct A':'struct A' lvalue Var 0x7fa14782daf8 'a' 'struct A':'struct A'

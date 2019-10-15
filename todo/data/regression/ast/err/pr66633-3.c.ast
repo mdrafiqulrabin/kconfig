@@ -1,0 +1,31 @@
+../Data/C2AST/pr66633-3.c:11:23: error: function definition is not allowed here
+  auto int bar (void) { return i; }
+                      ^
+../Data/C2AST/pr66633-3.c:13:3: error: function definition is not allowed here
+  {
+  ^
+2 errors generated.
+TranslationUnitDecl 0x7fb716829ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb71682a260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb716829f80 '__int128'
+|-TypedefDecl 0x7fb71682a2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb716829fa0 'unsigned __int128'
+|-TypedefDecl 0x7fb71682a5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb71682a3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb71682a328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb71682a640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb71682a600 'char *'
+|   `-BuiltinType 0x7fb716829d80 'char'
+|-TypedefDecl 0x7fb71682a908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb71682a8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb71682a720 'struct __va_list_tag'
+|     `-Record 0x7fb71682a698 '__va_list_tag'
+|-FunctionDecl 0x7fb716017360 <../Data/C2AST/pr66633-3.c:5:1, col:21> col:6 baz 'void (int (*)())'
+| `-ParmVarDecl 0x7fb716017260 <col:11, col:20> col:17 'int (*)()'
+`-FunctionDecl 0x7fb716017510 <line:7:1, line:18:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb716017860 <line:9:1, line:18:1>
+    |-DeclStmt 0x7fb716017628 <line:10:3, col:8>
+    | `-VarDecl 0x7fb7160175c8 <col:3, col:7> col:7 i 'int'
+    `-CallExpr 0x7fb716017838 <line:17:3, col:9> 'int'
+      `-ImplicitCastExpr 0x7fb716017820 <col:3> 'int (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fb7160177f8 <col:3> 'int ()' Function 0x7fb716017748 'bar2' 'int ()'

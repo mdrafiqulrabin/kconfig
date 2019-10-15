@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fea1002bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea1002c988 <../Data/C2AST/pr70263-2.c:6:1, col:15> col:15 referenced XFtype 'long double'
+| |-BuiltinType 0x7fea1002bf20 'long double'
+| `-ModeAttr 0x7fea1006e800 <col:38, col:46> XF
+|-FunctionDecl 0x7fea1006e980 <line:8:1, col:17> col:6 used bar 'void (XFtype)'
+| `-ParmVarDecl 0x7fea1006e880 <col:11> col:17 'XFtype':'long double'
+`-FunctionDecl 0x7fea1006ec00 <line:10:1, line:16:1> line:11:1 foo 'void (XFtype, XFtype)'
+  |-ParmVarDecl 0x7fea1006ea78 <col:6, col:13> col:13 used a 'XFtype':'long double'
+  |-ParmVarDecl 0x7fea1006eae8 <col:16, col:23> col:23 used c 'XFtype':'long double'
+  `-CompoundStmt 0x7fea1006eee8 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fea1006edc8 <line:13:3, col:20>
+    | `-VarDecl 0x7fea1006ecc0 <col:3, col:19> col:10 used ac 'XFtype':'long double' cinit
+    |   `-BinaryOperator 0x7fea1006eda0 <col:15, col:19> 'long double' '*'
+    |     |-ImplicitCastExpr 0x7fea1006ed70 <col:15> 'XFtype':'long double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fea1006ed20 <col:15> 'XFtype':'long double' lvalue ParmVar 0x7fea1006ea78 'a' 'XFtype':'long double'
+    |     `-ImplicitCastExpr 0x7fea1006ed88 <col:19> 'XFtype':'long double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fea1006ed48 <col:19> 'XFtype':'long double' lvalue ParmVar 0x7fea1006eae8 'c' 'XFtype':'long double'
+    `-CallExpr 0x7fea1006eea0 <line:15:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fea1006ee88 <col:3> 'void (*)(XFtype)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fea1006ede0 <col:3> 'void (XFtype)' Function 0x7fea1006e980 'bar' 'void (XFtype)'
+      `-ImplicitCastExpr 0x7fea1006eed0 <col:8> 'XFtype':'long double' <LValueToRValue>
+        `-DeclRefExpr 0x7fea1006ee08 <col:8> 'XFtype':'long double' lvalue Var 0x7fea1006ecc0 'ac' 'XFtype':'long double'

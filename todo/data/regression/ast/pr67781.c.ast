@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7feacf02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feacf02c978 <../Data/C2AST/pr67781.c:3:1, col:25> col:25 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7feacf02be80 'unsigned int'
+|-TypedefDecl 0x7feacf814200 <line:9:1, col:24> col:24 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7feacf02be40 'unsigned char'
+|-RecordDecl 0x7feacf814258 <line:14:1, line:18:1> line:14:1 struct definition
+| |-FieldDecl 0x7feacf814330 <line:16:3, col:12> col:12 referenced a 'uint32_t':'unsigned int'
+| `-FieldDecl 0x7feacf8143b0 <line:17:3, col:11> col:11 referenced b 'uint8_t':'unsigned char'
+|-VarDecl 0x7feacf814450 <line:14:1, line:18:24> col:3 used s 'struct (anonymous struct at ../Data/C2AST/pr67781.c:14:1)':'struct (anonymous at ../Data/C2AST/pr67781.c:14:1)' cinit
+| `-InitListExpr 0x7feacf814580 <col:7, col:24> 'struct (anonymous struct at ../Data/C2AST/pr67781.c:14:1)':'struct (anonymous at ../Data/C2AST/pr67781.c:14:1)'
+|   |-ImplicitCastExpr 0x7feacf8145d0 <col:9> 'uint32_t':'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7feacf8144f0 <col:9> 'int' 1193046
+|   `-ImplicitCastExpr 0x7feacf8145e8 <col:19> 'uint8_t':'unsigned char' <IntegralCast>
+|     `-IntegerLiteral 0x7feacf814510 <col:19> 'int' 120
+|-FunctionDecl 0x7feacf814670 <line:20:1, line:24:1> line:20:5 used pr67781 'int ()'
+| `-CompoundStmt 0x7feacf8149f0 <line:21:1, line:24:1>
+|   |-DeclStmt 0x7feacf814968 <line:22:3, col:32>
+|   | `-VarDecl 0x7feacf814720 <col:3, col:31> col:12 used c 'uint32_t':'unsigned int' cinit
+|   |   `-BinaryOperator 0x7feacf8148f0 <col:16, col:31> 'unsigned int' '|'
+|   |     |-ParenExpr 0x7feacf814840 <col:16, col:25> 'uint32_t':'unsigned int'
+|   |     | `-BinaryOperator 0x7feacf814818 <col:17, col:24> 'uint32_t':'unsigned int' '<<'
+|   |     |   |-ImplicitCastExpr 0x7feacf814800 <col:17, col:19> 'uint32_t':'unsigned int' <LValueToRValue>
+|   |     |   | `-MemberExpr 0x7feacf8147a8 <col:17, col:19> 'uint32_t':'unsigned int' lvalue .a 0x7feacf814330
+|   |     |   |   `-DeclRefExpr 0x7feacf814780 <col:17> 'struct (anonymous struct at ../Data/C2AST/pr67781.c:14:1)':'struct (anonymous at ../Data/C2AST/pr67781.c:14:1)' lvalue Var 0x7feacf814450 's' 'struct (anonymous struct at ../Data/C2AST/pr67781.c:14:1)':'struct (anonymous at ../Data/C2AST/pr67781.c:14:1)'
+|   |     |   `-IntegerLiteral 0x7feacf8147e0 <col:24> 'int' 8
+|   |     `-ImplicitCastExpr 0x7feacf8148d8 <col:29, col:31> 'unsigned int' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7feacf8148c0 <col:29, col:31> 'uint8_t':'unsigned char' <LValueToRValue>
+|   |         `-MemberExpr 0x7feacf814888 <col:29, col:31> 'uint8_t':'unsigned char' lvalue .b 0x7feacf8143b0
+|   |           `-DeclRefExpr 0x7feacf814860 <col:29> 'struct (anonymous struct at ../Data/C2AST/pr67781.c:14:1)':'struct (anonymous at ../Data/C2AST/pr67781.c:14:1)' lvalue Var 0x7feacf814450 's' 'struct (anonymous struct at ../Data/C2AST/pr67781.c:14:1)':'struct (anonymous at ../Data/C2AST/pr67781.c:14:1)'
+|   `-ReturnStmt 0x7feacf8149d8 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7feacf8149c0 <col:10> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7feacf8149a8 <col:10> 'uint32_t':'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7feacf814980 <col:10> 'uint32_t':'unsigned int' lvalue Var 0x7feacf814720 'c' 'uint32_t':'unsigned int'
+|-FunctionDecl 0x7feacf814a38 <line:26:1, line:35:1> line:27:1 main 'int ()'
+| `-CompoundStmt 0x7feacf814f28 <line:28:1, line:35:1>
+|   |-IfStmt 0x7feacf814c00 <line:29:3, line:30:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7feacf814ba0 <line:29:7, col:43> 'int' '!='
+|   | | |-BinaryOperator 0x7feacf814b40 <col:7, <built-in>:35:22> 'unsigned long' '*'
+|   | | | |-UnaryExprOrTypeTraitExpr 0x7feacf814ae8 <../Data/C2AST/pr67781.c:29:7, col:23> 'unsigned long' sizeof 'uint32_t':'unsigned int'
+|   | | | `-ImplicitCastExpr 0x7feacf814b28 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7feacf814b08 <col:22> 'int' 8
+|   | | `-ImplicitCastExpr 0x7feacf814b88 <../Data/C2AST/pr67781.c:29:43> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7feacf814b68 <col:43> 'int' 32
+|   | |-ReturnStmt 0x7feacf814be8 <line:30:5, col:12>
+|   | | `-IntegerLiteral 0x7feacf814bc8 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7feacf814eb8 <line:32:3, line:33:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7feacf814ce8 <line:32:7, col:21> 'int' '!='
+|   | | |-CallExpr 0x7feacf814ca0 <col:7, col:16> 'int'
+|   | | | `-ImplicitCastExpr 0x7feacf814c88 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7feacf814c38 <col:7> 'int ()' Function 0x7feacf814670 'pr67781' 'int ()'
+|   | | `-IntegerLiteral 0x7feacf814cc8 <col:21> 'int' 305419896
+|   | |-CallExpr 0x7feacf814e90 <line:33:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7feacf814e78 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7feacf814e28 <col:5> '<builtin fn type>' Function 0x7feacf814d40 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7feacf814f10 <line:34:3, col:10>
+|     `-IntegerLiteral 0x7feacf814ef0 <col:10> 'int' 0
+`-FunctionDecl 0x7feacf814d40 <line:33:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7feacf814de0 <col:5> Implicit

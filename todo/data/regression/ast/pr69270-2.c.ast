@@ -1,0 +1,144 @@
+TranslationUnitDecl 0x7fe20982bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe20982c960 <../Data/C2AST/pr69270-2.c:7:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fe20a0142d0 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fe20a014280 'union tree_node *'
+|   `-ElaboratedType 0x7fe20a014220 'union tree_node' sugar
+|     `-RecordType 0x7fe20a014200 'union tree_node'
+|       `-Record 0x7fe20a014630 'tree_node'
+|-RecordDecl 0x7fe20a014340 <line:8:9, col:15> col:15 union gimple_statement_d
+|-TypedefDecl 0x7fe20a0144a0 <col:1, col:35> col:35 referenced gimple 'union gimple_statement_d *'
+| `-PointerType 0x7fe20a014450 'union gimple_statement_d *'
+|   `-ElaboratedType 0x7fe20a0143f0 'union gimple_statement_d' sugar
+|     `-RecordType 0x7fe20a0143d0 'union gimple_statement_d'
+|       `-Record 0x7fe20a014340 'gimple_statement_d'
+|-VarDecl 0x7fe20a014590 <line:9:1, col:33> col:18 used tree_code_type 'const int []' extern
+|-RecordDecl 0x7fe20a014630 prev 0x7fe20982c960 <line:10:1, line:13:1> line:10:7 union tree_node definition
+| `-FieldDecl 0x7fe20a0146f0 <line:12:3, col:12> col:7 referenced code 'int'
+|   `-IntegerLiteral 0x7fe20a0146b8 <col:12> 'int' 16
+|-RecordDecl 0x7fe20a014738 <line:14:9, line:16:1> line:14:16 struct immediate_use_iterator_d definition
+|-TypedefDecl 0x7fe20a014830 <col:1, line:17:1> col:1 imm_use_iterator 'struct immediate_use_iterator_d':'struct immediate_use_iterator_d'
+| `-ElaboratedType 0x7fe20a0147e0 'struct immediate_use_iterator_d' sugar
+|   `-RecordType 0x7fe20a0147c0 'struct immediate_use_iterator_d'
+|     `-Record 0x7fe20a014738 'immediate_use_iterator_d'
+`-FunctionDecl 0x7fe20a0149d0 <line:18:1, line:42:1> line:19:1 insert_debug_temp_for_var_def 'void (gimple)'
+  |-ParmVarDecl 0x7fe20a0148d0 <col:32, col:39> col:39 used stmt 'gimple':'union gimple_statement_d *'
+  `-CompoundStmt 0x7fe20a02c968 <line:20:1, line:42:1>
+    |-DeclStmt 0x7fe20a014b80 <line:21:3, col:33>
+    | `-VarDecl 0x7fe20a014a88 <col:3, col:32> col:10 used def_stmt 'gimple':'union gimple_statement_d *' cinit
+    |   `-ImplicitCastExpr 0x7fe20a014b68 <col:21, col:32> 'gimple':'union gimple_statement_d *' <NullToPointer>
+    |     `-ParenExpr 0x7fe20a014b48 <col:21, col:32> 'void *'
+    |       `-CStyleCastExpr 0x7fe20a014b20 <col:22, col:31> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fe20a014ae8 <col:31> 'int' 0
+    |-DeclStmt 0x7fe20a014c30 <line:22:3, col:19>
+    | `-VarDecl 0x7fe20a014bb0 <col:3, col:18> col:7 used usecount 'int' cinit
+    |   `-IntegerLiteral 0x7fe20a014c10 <col:18> 'int' 0
+    |-DeclStmt 0x7fe20a014d78 <line:23:3, col:28>
+    | `-VarDecl 0x7fe20a014c80 <col:3, col:27> col:8 used value 'tree':'union tree_node *' cinit
+    |   `-ImplicitCastExpr 0x7fe20a014d60 <col:16, col:27> 'tree':'union tree_node *' <NullToPointer>
+    |     `-ParenExpr 0x7fe20a014d40 <col:16, col:27> 'void *'
+    |       `-CStyleCastExpr 0x7fe20a014d18 <col:17, col:26> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fe20a014ce0 <col:26> 'int' 0
+    |-ForStmt 0x7fe20a02c190 <line:24:3, line:35:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fe20a014f00 <line:24:10, col:15> 'int'
+    | | `-ImplicitCastExpr 0x7fe20a014ee8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe20a014e90 <col:10> 'int ()' Function 0x7fe20a014de0 'arf' 'int ()'
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7fe20a02c158 <line:25:5, line:35:5>
+    |   |-IfStmt 0x7fe20a0150d8 <line:26:7, line:27:9>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7fe20a0150b0 <line:26:11, col:37> 'int' prefix '!'
+    |   | | `-CallExpr 0x7fe20a015068 <col:12, col:37> 'int'
+    |   | |   |-ImplicitCastExpr 0x7fe20a015050 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7fe20a015000 <col:12> 'int ()' Function 0x7fe20a014f50 'gimple_debug_bind_p' 'int ()'
+    |   | |   `-ImplicitCastExpr 0x7fe20a015098 <col:33> 'gimple':'union gimple_statement_d *' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fe20a015028 <col:33> 'gimple':'union gimple_statement_d *' lvalue ParmVar 0x7fe20a0148d0 'stmt' 'gimple':'union gimple_statement_d *'
+    |   | |-ContinueStmt 0x7fe20a0150d0 <line:27:9>
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fe20a015160 <line:28:7, line:29:9>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7fe20a015138 <line:28:11, col:19> 'int' postfix '++'
+    |   | | `-DeclRefExpr 0x7fe20a015110 <col:11> 'int' lvalue Var 0x7fe20a014bb0 'usecount' 'int'
+    |   | |-BreakStmt 0x7fe20a015158 <line:29:9>
+    |   | `-<<<NULL>>>
+    |   |-DeclStmt 0x7fe20a02bc98 <line:30:7, col:33>
+    |   | `-VarDecl 0x7fe20a02bc00 <col:7, col:32> col:21 used no_value 'unsigned char' cinit
+    |   |   `-ImplicitCastExpr 0x7fe20a02bc80 <col:32> 'unsigned char' <IntegralCast>
+    |   |     `-IntegerLiteral 0x7fe20a02bc60 <col:32> 'int' 0
+    |   |-IfStmt 0x7fe20a02bee0 <line:31:7, line:32:20>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7fe20a02be38 <line:31:11, col:31> 'int' prefix '!'
+    |   | | `-CallExpr 0x7fe20a02bdf0 <col:12, col:31> 'int'
+    |   | |   |-ImplicitCastExpr 0x7fe20a02bdd8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7fe20a02bd88 <col:12> 'int ()' Function 0x7fe20a02bcd8 'gimple_bb' 'int ()'
+    |   | |   `-ImplicitCastExpr 0x7fe20a02be20 <col:23> 'gimple':'union gimple_statement_d *' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fe20a02bdb0 <col:23> 'gimple':'union gimple_statement_d *' lvalue Var 0x7fe20a014a88 'def_stmt' 'gimple':'union gimple_statement_d *'
+    |   | |-BinaryOperator 0x7fe20a02beb8 <line:32:9, col:20> 'unsigned char' '='
+    |   | | |-DeclRefExpr 0x7fe20a02be58 <col:9> 'unsigned char' lvalue Var 0x7fe20a02bc00 'no_value' 'unsigned char'
+    |   | | `-ImplicitCastExpr 0x7fe20a02bea0 <col:20> 'unsigned char' <IntegralCast>
+    |   | |   `-IntegerLiteral 0x7fe20a02be80 <col:20> 'int' 1
+    |   | `-<<<NULL>>>
+    |   `-IfStmt 0x7fe20a02c120 <line:33:7, line:34:44>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-UnaryOperator 0x7fe20a02bf58 <line:33:11, col:12> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fe20a02bf40 <col:12> 'unsigned char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fe20a02bf18 <col:12> 'unsigned char' lvalue Var 0x7fe20a02bc00 'no_value' 'unsigned char'
+    |     |-BinaryOperator 0x7fe20a02c0f8 <line:34:9, col:44> 'tree':'union tree_node *' '='
+    |     | |-DeclRefExpr 0x7fe20a02bf78 <col:9> 'tree':'union tree_node *' lvalue Var 0x7fe20a014c80 'value' 'tree':'union tree_node *'
+    |     | `-ImplicitCastExpr 0x7fe20a02c0e0 <col:17, col:44> 'tree':'union tree_node *' <IntegralToPointer>
+    |     |   `-CallExpr 0x7fe20a02c0b8 <col:17, col:44> 'int'
+    |     |     `-ImplicitCastExpr 0x7fe20a02c0a0 <col:17> 'int (*)()' <FunctionToPointerDecay>
+    |     |       `-DeclRefExpr 0x7fe20a02c078 <col:17> 'int ()' Function 0x7fe20a02bfc8 'gimple_assign_rhs_to_tree' 'int ()'
+    |     `-<<<NULL>>>
+    `-IfStmt 0x7fe20a02c930 <line:36:3, line:41:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe20a02c1f0 <line:36:7> 'tree':'union tree_node *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe20a02c1c8 <col:7> 'tree':'union tree_node *' lvalue Var 0x7fe20a014c80 'value' 'tree':'union tree_node *'
+      |-CompoundStmt 0x7fe20a02c918 <line:37:5, line:41:5>
+      | `-IfStmt 0x7fe20a02c8e0 <line:38:7, line:40:36>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7fe20a02c6c8 <line:38:11, line:39:65> 'int' '||'
+      |   | |-ParenExpr 0x7fe20a02c430 <line:38:11, col:57> 'int'
+      |   | | `-BinaryOperator 0x7fe20a02c408 <col:12, col:55> 'int' '=='
+      |   | |   |-ImplicitCastExpr 0x7fe20a02c3f0 <col:12, col:50> 'int' <LValueToRValue>
+      |   | |   | `-ArraySubscriptExpr 0x7fe20a02c3a8 <col:12, col:50> 'const int' lvalue
+      |   | |   |   |-ImplicitCastExpr 0x7fe20a02c390 <col:12> 'const int *' <ArrayToPointerDecay>
+      |   | |   |   | `-DeclRefExpr 0x7fe20a02c208 <col:12> 'const int []' lvalue Var 0x7fe20a014590 'tree_code_type' 'const int []'
+      |   | |   |   `-CStyleCastExpr 0x7fe20a02c368 <col:27, col:49> 'int' <NoOp>
+      |   | |   |     `-ImplicitCastExpr 0x7fe20a02c350 <col:33, col:49> 'int' <LValueToRValue>
+      |   | |   |       `-ParenExpr 0x7fe20a02c330 <col:33, col:49> 'int' lvalue bitfield
+      |   | |   |         `-ParenExpr 0x7fe20a02c2c8 <col:34, col:48> 'int' lvalue bitfield
+      |   | |   |           `-MemberExpr 0x7fe20a02c290 <col:35, col:44> 'int' lvalue bitfield ->code 0x7fe20a0146f0
+      |   | |   |             `-ImplicitCastExpr 0x7fe20a02c278 <col:35, col:41> 'tree':'union tree_node *' <LValueToRValue>
+      |   | |   |               `-ParenExpr 0x7fe20a02c258 <col:35, col:41> 'tree':'union tree_node *' lvalue
+      |   | |   |                 `-DeclRefExpr 0x7fe20a02c230 <col:36> 'tree':'union tree_node *' lvalue Var 0x7fe20a014c80 'value' 'tree':'union tree_node *'
+      |   | |   `-IntegerLiteral 0x7fe20a02c3d0 <col:55> 'int' 42
+      |   | `-ParenExpr 0x7fe20a02c6a8 <line:39:14, col:65> 'int'
+      |   |   `-BinaryOperator 0x7fe20a02c680 <col:15, col:64> 'int' '&&'
+      |   |     |-BinaryOperator 0x7fe20a02c4b0 <col:15, col:27> 'int' '=='
+      |   |     | |-ImplicitCastExpr 0x7fe20a02c498 <col:15> 'int' <LValueToRValue>
+      |   |     | | `-DeclRefExpr 0x7fe20a02c450 <col:15> 'int' lvalue Var 0x7fe20a014bb0 'usecount' 'int'
+      |   |     | `-IntegerLiteral 0x7fe20a02c478 <col:27> 'int' 1
+      |   |     `-ParenExpr 0x7fe20a02c660 <col:32, col:64> 'int'
+      |   |       `-CallExpr 0x7fe20a02c618 <col:33, col:63> 'int'
+      |   |         |-ImplicitCastExpr 0x7fe20a02c600 <col:33> 'int (*)()' <FunctionToPointerDecay>
+      |   |         | `-DeclRefExpr 0x7fe20a02c5b0 <col:33> 'int ()' Function 0x7fe20a02c500 'is_gimple_min_invariant' 'int ()'
+      |   |         `-ImplicitCastExpr 0x7fe20a02c648 <col:58> 'tree':'union tree_node *' <LValueToRValue>
+      |   |           `-DeclRefExpr 0x7fe20a02c5d8 <col:58> 'tree':'union tree_node *' lvalue Var 0x7fe20a014c80 'value' 'tree':'union tree_node *'
+      |   |-BinaryOperator 0x7fe20a02c8b8 <line:40:9, col:36> 'tree':'union tree_node *' '='
+      |   | |-DeclRefExpr 0x7fe20a02c6f0 <col:9> 'tree':'union tree_node *' lvalue Var 0x7fe20a014c80 'value' 'tree':'union tree_node *'
+      |   | `-ImplicitCastExpr 0x7fe20a02c8a0 <col:17, col:36> 'tree':'union tree_node *' <IntegralToPointer>
+      |   |   `-CallExpr 0x7fe20a02c858 <col:17, col:36> 'int'
+      |   |     |-ImplicitCastExpr 0x7fe20a02c840 <col:17> 'int (*)()' <FunctionToPointerDecay>
+      |   |     | `-DeclRefExpr 0x7fe20a02c7f0 <col:17> 'int ()' Function 0x7fe20a02c740 'unshare_expr' 'int ()'
+      |   |     `-ImplicitCastExpr 0x7fe20a02c888 <col:31> 'tree':'union tree_node *' <LValueToRValue>
+      |   |       `-DeclRefExpr 0x7fe20a02c818 <col:31> 'tree':'union tree_node *' lvalue Var 0x7fe20a014c80 'value' 'tree':'union tree_node *'
+      |   `-<<<NULL>>>
+      `-<<<NULL>>>

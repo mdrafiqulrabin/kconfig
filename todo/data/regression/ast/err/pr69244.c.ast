@@ -1,0 +1,68 @@
+../Data/C2AST/pr69244.c:5:10: fatal error: '../nop.h' file not found
+#include "../nop.h"
+         ^~~~~~~~~~
+TranslationUnitDecl 0x7fc8de0222e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc8de022860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc8de022580 '__int128'
+|-TypedefDecl 0x7fc8de0228d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc8de0225a0 'unsigned __int128'
+|-TypedefDecl 0x7fc8de022ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8de0229b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc8de022928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc8de022c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc8de022c00 'char *'
+|   `-BuiltinType 0x7fc8de022380 'char'
+|-TypedefDecl 0x7fc8de022f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8de022eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc8de022d20 'struct __va_list_tag'
+|     `-Record 0x7fc8de022c98 '__va_list_tag'
+|-RecordDecl 0x7fc8de022f60 <../Data/C2AST/pr69244.c:7:1, col:27> col:7 union U definition
+| |-FieldDecl 0x7fc8de82bc38 <col:11, col:17> col:17 referenced f 'float'
+| `-FieldDecl 0x7fc8de82bc98 <col:20, col:24> col:24 referenced i 'int'
+|-VarDecl 0x7fc8de82bcf8 <line:8:1, col:7> col:7 used a 'float'
+|-VarDecl 0x7fc8de82bdb0 <col:1, col:10> col:10 used b 'float'
+|-FunctionDecl 0x7fc8de82bef0 <line:10:1, line:14:1> line:11:1 used foo 'void (void)'
+| |-CompoundStmt 0x7fc8de82c278 <line:12:1, line:14:1>
+| | `-GCCAsmStmt 0x7fc8de82c1f8 <line:13:3, col:53>
+| |   |-UnaryOperator 0x7fc8de82c0f8 <col:29, col:30> 'float *' prefix '&'
+| |   | `-DeclRefExpr 0x7fc8de82c0a8 <col:30> 'float' lvalue Var 0x7fc8de82bcf8 'a' 'float'
+| |   `-UnaryOperator 0x7fc8de82c170 <col:39, col:40> 'float *' prefix '&'
+| |     `-DeclRefExpr 0x7fc8de82c148 <col:40> 'float' lvalue Var 0x7fc8de82bdb0 'b' 'float'
+| `-NoInlineAttr 0x7fc8de82bf90 <line:10:16>
+`-FunctionDecl 0x7fc8de82c2e0 <line:16:1, line:28:1> line:17:1 main 'int ()'
+  `-CompoundStmt 0x7fc8de82ca28 <line:18:1, line:28:1>
+    |-DeclStmt 0x7fc8de82c438 <line:19:3, col:14>
+    | `-VarDecl 0x7fc8de82c398 <col:3, col:13> col:9 used e 'float' cinit
+    |   `-ImplicitCastExpr 0x7fc8de82c420 <col:13> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc8de82c3f8 <col:13> 'float' lvalue Var 0x7fc8de82bcf8 'a' 'float'
+    |-CallExpr 0x7fc8de82c4c0 <line:20:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fc8de82c4a8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc8de82c450 <col:3> 'void (void)' Function 0x7fc8de82bef0 'foo' 'void (void)'
+    |-DeclStmt 0x7fc8de82c5a0 <line:21:3, col:14>
+    | `-VarDecl 0x7fc8de82c500 <col:3, col:13> col:9 used d 'float' cinit
+    |   `-ImplicitCastExpr 0x7fc8de82c588 <col:13> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc8de82c560 <col:13> 'float' lvalue Var 0x7fc8de82c398 'e' 'float'
+    |-DeclStmt 0x7fc8de82c670 <line:22:3, col:12>
+    | `-VarDecl 0x7fc8de82c610 <col:3, col:11> col:11 used p 'union U':'union U'
+    |-BinaryOperator 0x7fc8de82c780 <line:23:3, col:14> 'float' '='
+    | |-MemberExpr 0x7fc8de82c6b0 <col:3, col:5> 'float' lvalue .f 0x7fc8de82bc38
+    | | `-DeclRefExpr 0x7fc8de82c688 <col:3> 'union U':'union U' lvalue Var 0x7fc8de82c610 'p' 'union U':'union U'
+    | `-CompoundAssignOperator 0x7fc8de82c748 <col:9, col:14> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    |   |-DeclRefExpr 0x7fc8de82c6e8 <col:9> 'float' lvalue Var 0x7fc8de82c500 'd' 'float'
+    |   `-ImplicitCastExpr 0x7fc8de82c730 <col:14> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fc8de82c710 <col:14> 'int' 2
+    |-DeclStmt 0x7fc8de82c930 <line:24:3, col:18>
+    | `-VarDecl 0x7fc8de82c7c0 <col:3, col:17> col:7 used c 'int' cinit
+    |   `-BinaryOperator 0x7fc8de82c8b8 <col:11, col:17> 'int' '-'
+    |     |-ImplicitCastExpr 0x7fc8de82c8a0 <col:11, col:13> 'int' <LValueToRValue>
+    |     | `-MemberExpr 0x7fc8de82c848 <col:11, col:13> 'int' lvalue .i 0x7fc8de82bc98
+    |     |   `-DeclRefExpr 0x71 error generated.
+fc8de82c820 <col:11> 'union U':'union U' lvalue Var 0x7fc8de82c610 'p' 'union U':'union U'
+    |     `-IntegerLiteral 0x7fc8de82c880 <col:17> 'int' 4
+    |-BinaryOperator 0x7fc8de82c9c8 <line:26:3, col:7> 'float' '='
+    | |-DeclRefExpr 0x7fc8de82c948 <col:3> 'float' lvalue Var 0x7fc8de82bdb0 'b' 'float'
+    | `-ImplicitCastExpr 0x7fc8de82c9b0 <col:7> 'float' <IntegralToFloating>
+    |   `-ImplicitCastExpr 0x7fc8de82c998 <col:7> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc8de82c970 <col:7> 'int' lvalue Var 0x7fc8de82c7c0 'c' 'int'
+    `-ReturnStmt 0x7fc8de82ca10 <line:27:3, col:10>
+      `-IntegerLiteral 0x7fc8de82c9f0 <col:10> 'int' 0

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fb8d402bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb8d402c960 <../Data/C2AST/pr77544.c:3:1, line:5:1> line:3:1 struct definition
+| `-FieldDecl 0x7fb8d406d858 <line:4:3, col:12> col:8 referenced a 'long'
+|   `-IntegerLiteral 0x7fb8d406d820 <col:12> 'int' 17
+|-VarDecl 0x7fb8d406d8f0 <line:3:1, line:5:3> col:3 used b 'struct (anonymous struct at ../Data/C2AST/pr77544.c:3:1)':'struct (anonymous at ../Data/C2AST/pr77544.c:3:1)'
+|-VarDecl 0x7fb8d406d9c0 <line:6:1, col:5> col:5 used c 'int'
+|-VarDecl 0x7fb8d406da38 <col:1, col:8> col:8 used d 'int'
+`-FunctionDecl 0x7fb8d406daf8 <line:7:1, col:49> col:6 e 'void ()'
+  `-CompoundStmt 0x7fb8d406de68 <col:10, col:49>
+    `-BinaryOperator 0x7fb8d406ddf8 <col:12, col:46> 'long' '='
+      |-MemberExpr 0x7fb8d406dbc0 <col:12, col:14> 'long' lvalue bitfield .a 0x7fb8d406d858
+      | `-DeclRefExpr 0x7fb8d406db98 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr77544.c:3:1)':'struct (anonymous at ../Data/C2AST/pr77544.c:3:1)' lvalue Var 0x7fb8d406d8f0 'b' 'struct (anonymous struct at ../Data/C2AST/pr77544.c:3:1)':'struct (anonymous at ../Data/C2AST/pr77544.c:3:1)'
+      `-BinaryOperator 0x7fb8d406ddd0 <col:18, col:46> 'long' '+'
+        |-ImplicitCastExpr 0x7fb8d406ddb8 <col:18, col:22> 'long' <IntegralCast>
+        | `-BinaryOperator 0x7fb8d406dc78 <col:18, col:22> 'int' '+'
+        |   |-ImplicitCastExpr 0x7fb8d406dc48 <col:18> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fb8d406dbf8 <col:18> 'int' lvalue Var 0x7fb8d406da38 'd' 'int'
+        |   `-ImplicitCastExpr 0x7fb8d406dc60 <col:22> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fb8d406dc20 <col:22> 'int' lvalue Var 0x7fb8d406d9c0 'c' 'int'
+        `-UnaryOperator 0x7fb8d406dd98 <col:26, col:46> 'long' prefix '~'
+          `-CStyleCastExpr 0x7fb8d406dd70 <col:27, col:46> 'long' <IntegralCast>
+            `-ParenExpr 0x7fb8d406dd50 <col:33, col:46> 'unsigned int'
+              `-BinaryOperator 0x7fb8d406dce0 <col:34, col:45> 'unsigned int' '>>'
+                |-IntegerLiteral 0x7fb8d406dca0 <col:34> 'unsigned int' 302806
+                `-IntegerLiteral 0x7fb8d406dcc0 <col:45> 'int' 0

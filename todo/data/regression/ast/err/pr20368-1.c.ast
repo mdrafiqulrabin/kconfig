@@ -1,0 +1,23 @@
+../Data/C2AST/pr20368-1.c:5:18: error: use of undeclared identifier 'f'
+extern __typeof (f) g;  
+                 ^
+1 error generated.
+TranslationUnitDecl 0x7ff91a82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff91a82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff91a82bf80 '__int128'
+|-TypedefDecl 0x7ff91a82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff91a82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff91a82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff91a82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff91a82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff91a82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff91a82c600 'char *'
+|   `-BuiltinType 0x7ff91a82bd80 'char'
+|-TypedefDecl 0x7ff91a82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff91a82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff91a82c720 'struct __va_list_tag'
+|     `-Record 0x7ff91a82c698 '__va_list_tag'
+|-VarDecl 0x7ff91a82c9a0 <../Data/C2AST/pr20368-1.c:5:1, col:21> col:21 invalid g 'int' extern
+`-FunctionDecl 0x7ff91a86dce8 <line:7:1, line:11:1> line:8:1 f 'int (double)'
+  |-ParmVarDecl 0x7ff91a86dc18 <line:9:6, col:12> col:12 x 'float'
+  `-CompoundStmt 0x7ff91a86ddd0 <line:10:1, line:11:1>

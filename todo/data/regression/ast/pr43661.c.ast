@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fe0d002bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe0d1008268 <../Data/C2AST/pr43661.c:1:1, line:5:1> line:2:1 func 'int (int)'
+  |-ParmVarDecl 0x7fe0d002c978 <col:7, col:11> col:11 used x 'int'
+  `-CompoundStmt 0x7fe0d10086e0 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7fe0d10086c8 <line:4:3, col:72>
+      `-ConditionalOperator 0x7fe0d1008698 <col:10, col:72> 'int'
+        |-IntegerLiteral 0x7fe0d1008350 <col:10> 'int' 0
+        |-ImplicitCastExpr 0x7fe0d1008680 <col:14, col:68> 'int' <IntegralCast>
+        | `-CStyleCastExpr 0x7fe0d1008638 <col:14, col:68> 'unsigned short' <IntegralCast>
+        |   `-ParenExpr 0x7fe0d1008618 <col:31, col:68> 'int'
+        |     `-BinaryConditionalOperator 0x7fe0d1008590 <col:32, col:67> 'int'
+        |       |-IntegerLiteral 0x7fe0d1008370 <col:32> 'int' 0
+        |       |-OpaqueValueExpr 0x7fe0d1008570 <col:32> 'int'
+        |       | `-IntegerLiteral 0x7fe0d1008370 <col:32> 'int' 0
+        |       |-OpaqueValueExpr 0x7fe0d1008570 <col:32> 'int'
+        |       | `-IntegerLiteral 0x7fe0d1008370 <col:32> 'int' 0
+        |       `-BinaryOperator 0x7fe0d1008548 <col:38, col:67> 'int' '>='
+        |         |-BinaryOperator 0x7fe0d1008500 <col:38, col:62> 'int' '*'
+        |         | |-IntegerLiteral 0x7fe0d1008390 <col:38> 'int' 1
+        |         | `-ImplicitCastExpr 0x7fe0d10084e8 <col:42, col:62> 'int' <IntegralCast>
+        |         |   `-CStyleCastExpr 0x7fe0d10084c0 <col:42, col:62> 'signed char' <IntegralCast>
+        |         |     `-ParenExpr 0x7fe0d10084a0 <col:56, col:62> 'int'
+        |         |       `-BinaryOperator 0x7fe0d1008430 <col:57, col:61> 'int' '^'
+        |         |         |-ImplicitCastExpr 0x7fe0d1008400 <col:57> 'int' <LValueToRValue>
+        |         |         | `-DeclRefExpr 0x7fe0d10083b0 <col:57> 'int' lvalue ParmVar 0x7fe0d002c978 'x' 'int'
+        |         |         `-ImplicitCastExpr 0x7fe0d1008418 <col:61> 'int' <LValueToRValue>
+        |         |           `-DeclRefExpr 0x7fe0d10083d8 <col:61> 'int' lvalue ParmVar 0x7fe0d002c978 'x' 'int'
+        |         `-IntegerLiteral 0x7fe0d1008528 <col:67> 'int' 0
+        `-IntegerLiteral 0x7fe0d1008660 <col:72> 'int' 1

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f915982bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f915a014200 <../Data/C2AST/pr66726.c:4:1, col:33> col:23 used mode_size 'unsigned short []' extern
+`-FunctionDecl 0x7f915a014388 <line:6:1, line:10:1> line:7:1 oof 'int (int)'
+  |-ParmVarDecl 0x7f915a0142b8 <col:6, col:10> col:10 used mode 'int'
+  `-CompoundStmt 0x7f915a0146d8 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f915a0146c0 <line:9:3, col:54>
+      `-ParenExpr 0x7f915a0146a0 <col:10, col:54> 'int'
+        `-ConditionalOperator 0x7f915a014670 <col:11, col:53> 'int'
+          |-BinaryOperator 0x7f915a014550 <col:11, col:30> 'int' '<'
+          | |-IntegerLiteral 0x7f915a014430 <col:11> 'int' 64
+          | `-ImplicitCastExpr 0x7f915a014538 <col:16, col:30> 'int' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7f915a014520 <col:16, col:30> 'unsigned short' <LValueToRValue>
+          |     `-ArraySubscriptExpr 0x7f915a0144f8 <col:16, col:30> 'unsigned short' lvalue
+          |       |-ImplicitCastExpr 0x7f915a0144c8 <col:16> 'unsigned short *' <ArrayToPointerDecay>
+          |       | `-DeclRefExpr 0x7f915a014450 <col:16> 'unsigned short []' lvalue Var 0x7f915a014200 'mode_size' 'unsigned short []'
+          |       `-ImplicitCastExpr 0x7f915a0144e0 <col:26> 'int' <LValueToRValue>
+          |         `-DeclRefExpr 0x7f915a014478 <col:26> 'int' lvalue ParmVar 0x7f915a0142b8 'mode' 'int'
+          |-IntegerLiteral 0x7f915a014578 <col:34> 'int' 64
+          `-ImplicitCastExpr 0x7f915a014658 <col:39, col:53> 'int' <IntegralCast>
+            `-ImplicitCastExpr 0x7f915a014640 <col:39, col:53> 'unsigned short' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7f915a014618 <col:39, col:53> 'unsigned short' lvalue
+                |-ImplicitCastExpr 0x7f915a0145e8 <col:39> 'unsigned short *' <ArrayToPointerDecay>
+                | `-DeclRefExpr 0x7f915a014598 <col:39> 'unsigned short []' lvalue Var 0x7f915a014200 'mode_size' 'unsigned short []'
+                `-ImplicitCastExpr 0x7f915a014600 <col:49> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7f915a0145c0 <col:49> 'int' lvalue ParmVar 0x7f915a0142b8 'mode' 'int'

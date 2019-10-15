@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fb3ec01cee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb3eb8150d8 <../Data/C2AST/pr68835-1.c:5:1, line:12:1> line:6:1 foo 'unsigned __int128 (unsigned long, unsigned long)'
+  |-ParmVarDecl 0x7fb3ec01db78 <col:6, col:20> col:20 used a 'unsigned long'
+  |-ParmVarDecl 0x7fb3eb815000 <col:23, col:37> col:37 used b 'unsigned long'
+  `-CompoundStmt 0x7fb3eb815700 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fb3eb815340 <line:8:3, col:50>
+    | `-VarDecl 0x7fb3eb8151e0 <col:3, col:49> col:21 used x 'unsigned __int128' cinit
+    |   `-BinaryOperator 0x7fb3eb815318 <col:25, col:49> 'unsigned __int128' '*'
+    |     |-CStyleCastExpr 0x7fb3eb815298 <col:25, col:45> 'unsigned __int128' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fb3eb815280 <col:45> 'unsigned long' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb3eb815240 <col:45> 'unsigned long' lvalue ParmVar 0x7fb3ec01db78 'a' 'unsigned long'
+    |     `-ImplicitCastExpr 0x7fb3eb815300 <col:49> 'unsigned __int128' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fb3eb8152e8 <col:49> 'unsigned long' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb3eb8152c0 <col:49> 'unsigned long' lvalue ParmVar 0x7fb3eb815000 'b' 'unsigned long'
+    |-DeclStmt 0x7fb3eb815548 <line:9:3, col:41>
+    | |-RecordDecl 0x7fb3eb815358 <col:3, col:38> col:3 struct definition
+    | | `-FieldDecl 0x7fb3eb815438 <col:12, col:34> col:30 referenced a 'unsigned __int128'
+    | |   `-IntegerLiteral 0x7fb3eb815400 <col:34> 'int' 96
+    | `-VarDecl 0x7fb3eb8154d0 <col:3, col:40> col:40 used w 'struct (anonymous struct at ../Data/C2AST/pr68835-1.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-1.c:9:3)'
+    |-BinaryOperator 0x7fb3eb815600 <line:10:3, col:9> 'unsigned __int128' '='
+    | |-MemberExpr 0x7fb3eb815588 <col:3, col:5> 'unsigned __int128' lvalue bitfield .a 0x7fb3eb815438
+    | | `-DeclRefExpr 0x7fb3eb815560 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr68835-1.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-1.c:9:3)' lvalue Var 0x7fb3eb8154d0 'w' 'struct (anonymous struct at ../Data/C2AST/pr68835-1.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-1.c:9:3)'
+    | `-ImplicitCastExpr 0x7fb3eb8155e8 <col:9> 'unsigned __int128' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb3eb8155c0 <col:9> 'unsigned __int128' lvalue Var 0x7fb3eb8151e0 'x' 'unsigned __int128'
+    `-ReturnStmt 0x7fb3eb8156e8 <line:11:3, col:12>
+      `-ImplicitCastExpr 0x7fb3eb8156d0 <col:10, col:12> 'unsigned __int128' <LValueToRValue>
+        `-MemberExpr 0x7fb3eb815698 <col:10, col:12> 'unsigned __int128' lvalue bitfield .a 0x7fb3eb815438
+          `-DeclRefExpr 0x7fb3eb815670 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr68835-1.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-1.c:9:3)' lvalue Var 0x7fb3eb8154d0 'w' 'struct (anonymous struct at ../Data/C2AST/pr68835-1.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-1.c:9:3)'

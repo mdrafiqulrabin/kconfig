@@ -1,0 +1,34 @@
+../Data/C2AST/pr61948.c:11:20: error: unknown register name 'r0' in asm
+  asm ("nop" : : : "r0", "r3", "r4", "r5",
+                   ^
+1 error generated.
+TranslationUnitDecl 0x7fb76302aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb76302b060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb76302ad80 '__int128'
+|-TypedefDecl 0x7fb76302b0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb76302ada0 'unsigned __int128'
+|-TypedefDecl 0x7fb76302b3a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb76302b1b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb76302b128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb76302b440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb76302b400 'char *'
+|   `-BuiltinType 0x7fb76302ab80 'char'
+|-TypedefDecl 0x7fb76302b708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb76302b6b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb76302b520 'struct __va_list_tag'
+|     `-Record 0x7fb76302b498 '__va_list_tag'
+`-FunctionDecl 0x7fb762815268 <../Data/C2AST/pr61948.c:8:1, line:15:1> line:8:11 f 'long long (long long *)'
+  |-ParmVarDecl 0x7fb76302b7a0 <col:14, col:25> col:25 used c 'long long *'
+  `-CompoundStmt 0x7fb762815848 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fb762815468 <line:10:3, col:21>
+    | `-VarDecl 0x7fb762815368 <col:3, col:20> col:13 used t 'long long' cinit
+    |   `-ImplicitCastExpr 0x7fb762815450 <col:17, col:20> 'long long' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fb762815428 <col:17, col:20> 'long long' lvalue
+    |       |-ImplicitCastExpr 0x7fb762815410 <col:17> 'long long *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fb7628153c8 <col:17> 'long long *' lvalue ParmVar 0x7fb76302b7a0 'c' 'long long *'
+    |       `-IntegerLiteral 0x7fb7628153f0 <col:19> 'int' 0
+    `-ReturnStmt 0x7fb762815830 <line:14:3, col:15>
+      `-BinaryOperator 0x7fb762815808 <col:10, col:15> 'long long' '>>'
+        |-ImplicitCastExpr 0x7fb7628157f0 <col:10> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb7628157a8 <col:10> 'long long' lvalue Var 0x7fb762815368 't' 'long long'
+        `-IntegerLiteral 0x7fb7628157d0 <col:15> 'int' 1

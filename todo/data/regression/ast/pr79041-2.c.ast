@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fe99501e4e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe995842428 <../Data/C2AST/pr79041-2.c:6:1, line:10:1> line:7:1 t '__int128 (void)'
+  `-CompoundStmt 0x7fe995842648 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fe995842630 <line:9:3, col:48>
+      `-BinaryOperator 0x7fe995842608 <col:10, col:48> '__int128' '|'
+        |-ParenExpr 0x7fe9958425b0 <col:10, col:44> '__int128'
+        | `-BinaryOperator 0x7fe995842588 <col:11, col:42> '__int128' '<<'
+        |   |-CStyleCastExpr 0x7fe995842540 <col:11, col:21> '__int128' <IntegralCast>
+        |   | `-IntegerLiteral 0x7fe995842508 <col:21> 'long' 81985529216486895
+        |   `-IntegerLiteral 0x7fe995842568 <col:42> 'int' 64
+        `-ImplicitCastExpr 0x7fe9958425f0 <col:48> '__int128' <IntegralCast>
+          `-IntegerLiteral 0x7fe9958425d0 <col:48> 'long' 1147797409030816545

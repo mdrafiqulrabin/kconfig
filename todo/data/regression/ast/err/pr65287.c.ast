@@ -1,0 +1,30 @@
+../Data/C2AST/pr65287.c:8:20: error: aliases are not supported on darwin
+    __attribute__((alias("__new_sys_siglist")));
+                   ^
+../Data/C2AST/pr65287.c:10:20: error: aliases are not supported on darwin
+    __attribute__((alias("__new_sys_siglist")));
+                   ^
+2 errors generated.
+TranslationUnitDecl 0x7fae3601c4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fae3601ca60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fae3601c780 '__int128'
+|-TypedefDecl 0x7fae3601cad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fae3601c7a0 'unsigned __int128'
+|-TypedefDecl 0x7fae3601cda8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fae3601cbb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fae3601cb28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fae3601ce40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fae3601ce00 'char *'
+|   `-BuiltinType 0x7fae3601c580 'char'
+|-TypedefDecl 0x7fae3601d108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fae3601d0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fae3601cf20 'struct __va_list_tag'
+|     `-Record 0x7fae3601ce98 '__va_list_tag'
+|-VarDecl 0x7fae3680b000 <../Data/C2AST/pr65287.c:5:1, col:34> col:11 referenced __new_sys_siglist 'const int [0]' cinit
+| `-InitListExpr 0x7fae3680b0e0 <col:33, col:34> 'const int [0]'
+|-VarDecl 0x7fae3680b298 <line:7:1, col:36> col:36 _new_sys_siglist 'typeof (__new_sys_siglist)':'const int [0]' extern
+|-VarDecl 0x7fae3680b3b8 <line:9:1, col:36> col:36 _sys_siglist 'typeof (__new_sys_siglist)':'const int [0]' extern
+`-FunctionDecl 0x7fae3680b470 <line:12:1, line:15:1> line:12:5 main 'int ()'
+  `-CompoundStmt 0x7fae3680b548 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fae3680b530 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fae3680b510 <col:10> 'int' 0

@@ -1,0 +1,170 @@
+TranslationUnitDecl 0x7f911400eae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f911400f760 <../Data/C2AST/pr66140.c:4:1, line:6:1> line:4:8 struct scsi_cmnd definition
+| `-FieldDecl 0x7f9115014638 <line:5:2, col:6> col:6 referenced sc_data_direction 'int'
+|-RecordDecl 0x7f9115014680 <line:7:1, line:9:1> line:7:8 struct lpfc_hba definition
+| `-FieldDecl 0x7f9115014748 <line:8:2, col:11> col:11 referenced cfg_total_seg_cnt 'unsigned int'
+|-RecordDecl 0x7f9115014790 <line:10:1, line:14:1> line:10:8 struct lpfc_scsi_buf definition
+| |-FieldDecl 0x7f91150148f0 <line:11:2, col:20> col:20 referenced pCmd 'struct scsi_cmnd *'
+| |-FieldDecl 0x7f9115014950 <line:12:2, col:11> col:11 referenced seg_cnt 'unsigned int'
+| `-FieldDecl 0x7f91150149e0 <line:13:2, col:12> col:12 referenced fcp_bpl 'unsigned int *'
+|-FunctionDecl 0x7f9115014b08 <line:16:1, col:30> col:14 used sg_next 'void *(void *)' extern
+| `-ParmVarDecl 0x7f9115014a40 <col:22, col:28> col:28 sg 'void *'
+|-FunctionDecl 0x7f9115014d28 <line:17:1, col:47> col:14 used scsi_sglist 'void *(struct scsi_cmnd *)' extern
+| `-ParmVarDecl 0x7f9115014c18 <col:26, col:44> col:44 cmd 'struct scsi_cmnd *'
+|-FunctionDecl 0x7f9115014f08 <line:18:1, col:52> col:17 used scsi_sg_count 'unsigned int (struct scsi_cmnd *)' extern
+| `-ParmVarDecl 0x7f9115014df8 <col:31, col:49> col:49 cmd 'struct scsi_cmnd *'
+|-FunctionDecl 0x7f91150151a0 <line:20:1, line:29:1> line:20:20 used dma_map_sg_attrs 'void (void *, int, int)' static inline
+| |-ParmVarDecl 0x7f9115014fc8 <col:37, col:43> col:43 used sg 'void *'
+| |-ParmVarDecl 0x7f9115015040 <col:47, col:51> col:51 used nents 'int'
+| |-ParmVarDecl 0x7f91150150b8 <col:58, col:62> col:62 used dir 'int'
+| `-CompoundStmt 0x7f91140389f0 <line:21:1, line:29:1>
+|   |-DeclStmt 0x7f91150152d0 <line:22:2, col:7>
+|   | `-VarDecl 0x7f9115015270 <col:2, col:6> col:6 used i 'int'
+|   |-ForStmt 0x7f91150155a8 <line:24:2, line:25:3>
+|   | |-BinaryOperator 0x7f9115015330 <line:24:7, col:11> 'int' '='
+|   | | |-DeclRefExpr 0x7f91150152e8 <col:7> 'int' lvalue Var 0x7f9115015270 'i' 'int'
+|   | | `-IntegerLiteral 0x7f9115015310 <col:11> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f91150153d8 <col:14, col:18> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f91150153a8 <col:14> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9115015358 <col:14> 'int' lvalue Var 0x7f9115015270 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f91150153c0 <col:18> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9115015380 <col:18> 'int' lvalue ParmVar 0x7f9115015040 'nents' 'int'
+|   | |-BinaryOperator 0x7f9115015570 <col:25, col:45> 'void *' ','
+|   | | |-UnaryOperator 0x7f9115015428 <col:25, col:26> 'int' postfix '++'
+|   | | | `-DeclRefExpr 0x7f9115015400 <col:25> 'int' lvalue Var 0x7f9115015270 'i' 'int'
+|   | | `-BinaryOperator 0x7f9115015548 <col:30, col:45> 'void *' '='
+|   | |   |-DeclRefExpr 0x7f9115015448 <col:30> 'void *' lvalue ParmVar 0x7f9115014fc8 'sg' 'void *'
+|   | |   `-CallExpr 0x7f9115015500 <col:35, col:45> 'void *'
+|   | |     |-ImplicitCastExpr 0x7f91150154e8 <col:35> 'void *(*)(void *)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7f9115015470 <col:35> 'void *(void *)' Function 0x7f9115014b08 'sg_next' 'void *(void *)'
+|   | |     `-ImplicitCastExpr 0x7f9115015530 <col:43> 'void *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f9115015498 <col:43> 'void *' lvalue ParmVar 0x7f9115014fc8 'sg' 'void *'
+|   | `-NullStmt 0x7f9115015598 <line:25:3>
+|   `-IfStmt 0x7f91140389b8 <line:27:2, line:28:43>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f9114038840 <line:27:6, col:7> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7f9114038828 <col:7> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9114038800 <col:7> 'int' lvalue ParmVar 0x7f91150150b8 'dir' 'int'
+|     |-GCCAsmStmt 0x7f9114038958 <line:28:3, col:43>
+|     | `-IntegerLiteral 0x7f9114038938 <col:39> 'int' 129
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9114038d00 <line:31:1, line:40:1> line:31:20 used lpfc_bg_setup_bpl 'void (struct lpfc_hba *, struct scsi_cmnd *, unsigned int *)' static inline
+| |-ParmVarDecl 0x7f9114038ad0 <col:38, col:55> col:55 phba 'struct lpfc_hba *'
+| |-ParmVarDecl 0x7f9114038b58 <col:61, col:79> col:79 used sc 'struct scsi_cmnd *'
+| |-ParmVarDecl 0x7f9114038bd0 <line:32:10, col:20> col:20 used pde5 'unsigned int *'
+| `-CompoundStmt 0x7f9114039648 <line:33:1, line:40:1>
+|   |-DeclStmt 0x7f9114038e30 <line:34:2, col:12>
+|   | `-VarDecl 0x7f9114038dd0 <col:2, col:8> col:8 used sgde 'void *'
+|   |-DeclStmt 0x7f9114038ec0 <line:35:2, col:7>
+|   | `-VarDecl 0x7f9114038e60 <col:2, col:6> col:6 used i 'int'
+|   |-BinaryOperator 0x7f91140391f0 <line:37:2, col:72> 'unsigned int' '='
+|   | |-UnaryOperator 0x7f9114038f18 <col:2, col:3> 'unsigned int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f9114038f00 <col:3> 'unsigned int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9114038ed8 <col:3> 'unsigned int *' lvalue ParmVar 0x7f9114038bd0 'pde5' 'unsigned int *'
+|   | `-ParenExpr 0x7f91140391d0 <col:10, col:72> 'unsigned int'
+|   |   `-BinaryOperator 0x7f91140391a8 <col:11, col:71> 'unsigned int' '|'
+|   |     |-ParenExpr 0x7f9114039020 <col:11, col:38> 'unsigned int'
+|   |     | `-BinaryOperator 0x7f9114038ff8 <col:12, col:36> 'unsigned int' '<<'
+|   |     |   |-ParenExpr 0x7f9114038fb8 <col:12, col:31> 'unsigned int'
+|   |     |   | `-BinaryOperator 0x7f9114038f90 <col:13, col:20> 'unsigned int' '&'
+|   |     |   |   |-ImplicitCastExpr 0x7f9114038f78 <col:13> 'unsigned int' <IntegralCast>
+|   |     |   |   | `-IntegerLiteral 0x7f9114038f38 <col:13> 'int' 133
+|   |     |   |   `-IntegerLiteral 0x7f9114038f58 <col:20> 'unsigned int' 255
+|   |     |   `-IntegerLiteral 0x7f9114038fd8 <col:36> 'int' 24
+|   |     `-ParenExpr 0x7f9114039188 <col:42, col:71> 'unsigned int'
+|   |       `-BinaryOperator 0x7f9114039160 <col:43, col:70> 'unsigned int' '&'
+|   |         |-ImplicitCastExpr 0x7f9114039148 <col:43, col:44> 'unsigned int' <LValueToRValue>
+|   |         | `-UnaryOperator 0x7f9114039080 <col:43, col:44> 'unsigned int' lvalue prefix '*'
+|   |         |   `-ImplicitCastExpr 0x7f9114039068 <col:44> 'unsigned int *' <LValueToRValue>
+|   |         |     `-DeclRefExpr 0x7f9114039040 <col:44> 'unsigned int *' lvalue ParmVar 0x7f9114038bd0 'pde5' 'unsigned int *'
+|   |         `-UnaryOperator 0x7f9114039128 <col:51, col:70> 'unsigned int' prefix '~'
+|   |           `-ParenExpr 0x7f9114039108 <col:52, col:70> 'unsigned int'
+|   |             `-BinaryOperator 0x7f91140390e0 <col:53, col:68> 'unsigned int' '<<'
+|   |               |-IntegerLiteral 0x7f91140390a0 <col:53> 'unsigned int' 255
+|   |               `-IntegerLiteral 0x7f91140390c0 <col:68> 'int' 24
+|   `-ForStmt 0x7f9114039610 <line:38:2, line:39:3>
+|     |-BinaryOperator 0x7f91140393e0 <line:38:7, col:35> 'void *' ','
+|     | |-BinaryOperator 0x7f9114039260 <col:7, col:11> 'int' '='
+|     | | |-DeclRefExpr 0x7f9114039218 <col:7> 'int' lvalue Var 0x7f9114038e60 'i' 'int'
+|     | | `-IntegerLiteral 0x7f9114039240 <col:11> 'int' 0
+|     | `-BinaryOperator 0x7f91140393b8 <col:14, col:35> 'void *' '='
+|     |   |-DeclRefExpr 0x7f9114039288 <col:14> 'void *' lvalue Var 0x7f9114038dd0 'sgde' 'void *'
+|     |   `-CallExpr 0x7f9114039370 <col:21, col:35> 'void *'
+|     |     |-ImplicitCastExpr 0x7f9114039358 <col:21> 'void *(*)(struct scsi_cmnd *)' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7f91140392b0 <col:21> 'void *(struct scsi_cmnd *)' Function 0x7f9115014d28 'scsi_sglist' 'void *(struct scsi_cmnd *)'
+|     |     `-ImplicitCastExpr 0x7f91140393a0 <col:33> 'struct scsi_cmnd *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f91140392d8 <col:33> 'struct scsi_cmnd *' lvalue ParmVar 0x7f9114038b58 'sc' 'struct scsi_cmnd *'
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9114039468 <col:38, col:42> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9114039450 <col:38> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9114039408 <col:38> 'int' lvalue Var 0x7f9114038e60 'i' 'int'
+|     | `-IntegerLiteral 0x7f9114039430 <col:42> 'int' 2
+|     |-BinaryOperator 0x7f91140395d8 <col:45, col:69> 'void *' ','
+|     | |-UnaryOperator 0x7f91140394b8 <col:45, col:46> 'int' postfix '++'
+|     | | `-DeclRefExpr 0x7f9114039490 <col:45> 'int' lvalue Var 0x7f9114038e60 'i' 'int'
+|     | `-BinaryOperator 0x7f91140395b0 <col:50, col:69> 'void *' '='
+|     |   |-DeclRefExpr 0x7f91140394d8 <col:50> 'void *' lvalue Var 0x7f9114038dd0 'sgde' 'void *'
+|     |   `-CallExpr 0x7f9114039568 <col:57, col:69> 'void *'
+|     |     |-ImplicitCastExpr 0x7f9114039550 <col:57> 'void *(*)(void *)' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7f9114039500 <col:57> 'void *(void *)' Function 0x7f9115014b08 'sg_next' 'void *(void *)'
+|     |     `-ImplicitCastExpr 0x7f9114039598 <col:65> 'void *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f9114039528 <col:65> 'void *' lvalue Var 0x7f9114038dd0 'sgde' 'void *'
+|     `-NullStmt 0x7f9114039600 <line:39:3>
+`-FunctionDecl 0x7f9114825910 <line:42:1, line:53:1> line:42:6 lpfc_bg_scsi_prep_dma_buf_s3 'void (struct lpfc_hba *, struct lpfc_scsi_buf *)'
+  |-ParmVarDecl 0x7f91140396a0 <col:35, col:52> col:52 used phba 'struct lpfc_hba *'
+  |-ParmVarDecl 0x7f9114825800 <line:43:7, col:29> col:29 used lpfc_cmd 'struct lpfc_scsi_buf *'
+  `-CompoundStmt 0x7f9114826240 <line:44:1, line:53:1>
+    |-DeclStmt 0x7f9114825ad8 <line:45:2, col:46>
+    | `-VarDecl 0x7f91148259e8 <col:2, col:42> col:20 used scsi_cmnd 'struct scsi_cmnd *' cinit
+    |   `-ImplicitCastExpr 0x7f9114825ac0 <col:32, col:42> 'struct scsi_cmnd *' <LValueToRValue>
+    |     `-MemberExpr 0x7f9114825a88 <col:32, col:42> 'struct scsi_cmnd *' lvalue ->pCmd 0x7f91150148f0
+    |       `-ImplicitCastExpr 0x7f9114825a70 <col:32> 'struct lpfc_scsi_buf *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9114825a48 <col:32> 'struct lpfc_scsi_buf *' lvalue ParmVar 0x7f9114825800 'lpfc_cmd' 'struct lpfc_scsi_buf *'
+    |-DeclStmt 0x7f9114825bf8 <line:46:2, col:35>
+    | `-VarDecl 0x7f9114825b08 <col:2, col:28> col:12 used bpl 'unsigned int *' cinit
+    |   `-ImplicitCastExpr 0x7f9114825be0 <col:18, col:28> 'unsigned int *' <LValueToRValue>
+    |     `-MemberExpr 0x7f9114825ba8 <col:18, col:28> 'unsigned int *' lvalue ->fcp_bpl 0x7f91150149e0
+    |       `-ImplicitCastExpr 0x7f9114825b90 <col:18> 'struct lpfc_scsi_buf *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9114825b68 <col:18> 'struct lpfc_scsi_buf *' lvalue ParmVar 0x7f9114825800 'lpfc_cmd' 'struct lpfc_scsi_buf *'
+    |-CallExpr 0x7f9114825eb0 <line:48:2, line:50:33> 'void'
+    | |-ImplicitCastExpr 0x7f9114825e98 <line:48:2> 'void (*)(void *, int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9114825c10 <col:2> 'void (void *, int, int)' Function 0x7f91150151a0 'dma_map_sg_attrs' 'void (void *, int, int)'
+    | |-CallExpr 0x7f9114825ca0 <col:19, col:40> 'void *'
+    | | |-ImplicitCastExpr 0x7f9114825c88 <col:19> 'void *(*)(struct scsi_cmnd *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f9114825c38 <col:19> 'void *(struct scsi_cmnd *)' Function 0x7f9115014d28 'scsi_sglist' 'void *(struct scsi_cmnd *)'
+    | | `-ImplicitCastExpr 0x7f9114825cd0 <col:31> 'struct scsi_cmnd *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9114825c60 <col:31> 'struct scsi_cmnd *' lvalue Var 0x7f91148259e8 'scsi_cmnd' 'struct scsi_cmnd *'
+    | |-ImplicitCastExpr 0x7f9114825ef0 <line:49:5, col:28> 'int' <IntegralCast>
+    | | `-CallExpr 0x7f9114825db0 <col:5, col:28> 'unsigned int'
+    | |   |-ImplicitCastExpr 0x7f9114825d98 <col:5> 'unsigned int (*)(struct scsi_cmnd *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f9114825ce8 <col:5> 'unsigned int (struct scsi_cmnd *)' Function 0x7f9115014f08 'scsi_sg_count' 'unsigned int (struct scsi_cmnd *)'
+    | |   `-ImplicitCastExpr 0x7f9114825de0 <col:19> 'struct scsi_cmnd *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f9114825d10 <col:19> 'struct scsi_cmnd *' lvalue Var 0x7f91148259e8 'scsi_cmnd' 'struct scsi_cmnd *'
+    | `-ImplicitCastExpr 0x7f9114825f08 <line:50:5, col:16> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7f9114825e38 <col:5, col:16> 'int' lvalue ->sc_data_direction 0x7f9115014638
+    |     `-ImplicitCastExpr 0x7f9114825e20 <col:5> 'struct scsi_cmnd *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9114825df8 <col:5> 'struct scsi_cmnd *' lvalue Var 0x7f91148259e8 'scsi_cmnd' 'struct scsi_cmnd *'
+    `-IfStmt 0x7f9114826208 <line:51:2, line:52:41>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9114826040 <line:51:6, col:32> 'int' '>'
+      | |-ImplicitCastExpr 0x7f9114826010 <col:6, col:16> 'unsigned int' <LValueToRValue>
+      | | `-MemberExpr 0x7f9114825f60 <col:6, col:16> 'unsigned int' lvalue ->seg_cnt 0x7f9115014950
+      | |   `-ImplicitCastExpr 0x7f9114825f48 <col:6> 'struct lpfc_scsi_buf *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f9114825f20 <col:6> 'struct lpfc_scsi_buf *' lvalue ParmVar 0x7f9114825800 'lpfc_cmd' 'struct lpfc_scsi_buf *'
+      | `-ImplicitCastExpr 0x7f9114826028 <col:26, col:32> 'unsigned int' <LValueToRValue>
+      |   `-MemberExpr 0x7f9114825fd8 <col:26, col:32> 'unsigned int' lvalue ->cfg_total_seg_cnt 0x7f9115014748
+      |     `-ImplicitCastExpr 0x7f9114825fc0 <col:26> 'struct lpfc_hba *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f9114825f98 <col:26> 'struct lpfc_hba *' lvalue ParmVar 0x7f91140396a0 'phba' 'struct lpfc_hba *'
+      |-CallExpr 0x7f9114826180 <line:52:3, col:41> 'void'
+      | |-ImplicitCastExpr 0x7f9114826168 <col:3> 'void (*)(struct lpfc_hba *, struct scsi_cmnd *, unsigned int *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f9114826068 <col:3> 'void (struct lpfc_hba *, struct scsi_cmnd *, unsigned int *)' Function 0x7f9114038d00 'lpfc_bg_setup_bpl' 'void (struct lpfc_hba *, struct scsi_cmnd *, unsigned int *)'
+      | |-ImplicitCastExpr 0x7f91148261c0 <col:21> 'struct lpfc_hba *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9114826090 <col:21> 'struct lpfc_hba *' lvalue ParmVar 0x7f91140396a0 'phba' 'struct lpfc_hba *'
+      | |-ImplicitCastExpr 0x7f91148261d8 <col:27> 'struct scsi_cmnd *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f91148260b8 <col:27> 'struct scsi_cmnd *' lvalue Var 0x7f91148259e8 'scsi_cmnd' 'struct scsi_cmnd *'
+      | `-ImplicitCastExpr 0x7f91148261f0 <col:38> 'unsigned int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f91148260e0 <col:38> 'unsigned int *' lvalue Var 0x7f9114825b08 'bpl' 'unsigned int *'
+      `-<<<NULL>>>

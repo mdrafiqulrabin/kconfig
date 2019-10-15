@@ -1,0 +1,26 @@
+../Data/C2AST/pr47639.c:8:3: error: use of undeclared identifier 'try'
+  try
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fd69c82b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd69c82b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd69c82b580 '__int128'
+|-TypedefDecl 0x7fd69c82b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd69c82b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fd69c82bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd69c82b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd69c82b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd69c82bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd69c82bc00 'char *'
+|   `-BuiltinType 0x7fd69c82b380 'char'
+|-TypedefDecl 0x7fd69c82bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd69c82beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd69c82bd20 'struct __va_list_tag'
+|     `-Record 0x7fd69c82bc98 '__va_list_tag'
+|-TypedefDecl 0x7fd69c86de00 <../Data/C2AST/pr47639.c:4:1, col:47> col:47 referenced vec '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fd69c82bf80 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fd69c82b3e0 'int'
+`-FunctionDecl 0x7fd69c86e010 <line:6:1, line:16:1> line:6:5 foo 'vec (vec, vec)'
+  |-ParmVarDecl 0x7fd69c86de90 <col:10, col:14> col:14 v1 'vec':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fd69c86df00 <col:18, col:22> col:22 v2 'vec':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fd69c86e118 <line:7:1, line:16:1>

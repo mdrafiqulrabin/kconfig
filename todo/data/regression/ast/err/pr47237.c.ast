@@ -1,0 +1,68 @@
+../Data/C2AST/pr47237.c:16:3: error: use of unknown builtin '__builtin_apply' [-Wimplicit-function-declaration]
+  __builtin_apply(foo, __builtin_apply_args(), 16);
+  ^
+../Data/C2AST/pr47237.c:16:24: error: use of unknown builtin '__builtin_apply_args' [-Wimplicit-function-declaration]
+  __builtin_apply(foo, __builtin_apply_args(), 16);
+                       ^
+../Data/C2AST/pr47237.c:16:24: note: did you mean '__builtin_apply'?
+../Data/C2AST/pr47237.c:16:3: note: '__builtin_apply' declared here
+  __builtin_apply(foo, __builtin_apply_args(), 16);
+  ^                    ~~~~~~~~~~~~~~~~~~~~
+                       __builtin_apply
+TranslationUnitDecl 0x7f814d01a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f814d01ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f814d01ab80 '__int128'
+|-TypedefDecl 0x7f814d01aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f814d01aba0 'unsigned __int128'
+|-TypedefDecl 0x7f814d01b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f814d01afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f814d01af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f814d01b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f814d01b200 'char *'
+|   `-BuiltinType 0x7f814d01a980 'char'
+|-TypedefDecl 0x7f814d01b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f814d01b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f814d01b320 'struct __va_list_tag'
+|     `-Record 0x7f814d01b298 '__va_list_tag'
+|-FunctionDecl 0x7f814d814250 <../Data/C2AST/pr47237.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f814d8142f0 prev 0x7f814d814250 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f814d814470 <line:7:1, line:11:1> line:7:13 used foo 'void (int)' static
+| |-ParmVarDecl 0x7f814d8143a8 <col:17, col:21> col:21 used arg 'int'
+| `-CompoundStmt 0x7f814d8146b0 <line:8:1, line:11:1>
+|   `-IfStmt 0x7f814d814678 <line:9:3, line:10:11>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f814d8145b8 <line:9:7, line:3:22> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f814d8145a0 <line:9:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f814d814558 <col:7> 'int' lvalue ParmVar 0x7f814d8143a8 'arg' 'int'
+|     | `-IntegerLiteral 0x7f814d814580 <line:3:22> 'int' 5
+|     |-CallExpr 0x7f814d814650 <line:10:5, col:11> 'void'
+|     | `-ImplicitCastExpr 0x7f814d814638 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f814d8145e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f814d8142f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f814d814768 <line:13:1, line:17:1> line:13:13 used bar 'void (int)' static
+| |-ParmVarDecl 0x7f814d8146e0 <col:17, col:21> col:21 used arg 'int'
+| `-CompoundStmt 0x7f814d814c48 <line:14:1, line:17:1>
+|   |-CallExpr 0x7f814d8148a0 <line:15:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7f814d814888 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f814d814810 <col:3> 'void (int)' Function 0x7f814d814470 'foo' 'void (int)'
+|   | `-ImplicitCastExpr 0x7f814d8148d0 <col:7> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f814d814838 <col:7> 'int' lvalue ParmVar 0x7f814d8146e0 'arg' 'int'
+|   `-CallExpr 0x7f814d814bf0 <line:16:3, col:50> 'int'
+|     |-ImplicitCastExpr 0x7f814d814bd8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f814d814a00 <col:3> 'int ()' Function 0x7f814d814950 '__builtin_apply' 'int ()'
+|     |-ImplicitCastExpr 0x7f814d814c30 <col:19> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f814d814a28 <col:19> 'void (int)' Function 0x7f814d814470 'foo' 'void (int)'
+|     |-CallExpr 0x7f814d814b90 <col:24, col:45> 'int'
+|     | `-ImplicitCastExpr 0x7f814d814b78 <col:24> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f814d814b28 <col:24> 'int ()' Function 0x7f814d814a78 '__builtin_apply_args' 'int ()'
+|     `-IntegerLiteral 0x7f814d814bb8 <col:48> 'int' 16
+`-FunctionDecl 0x7f814d814d38 <line:19:1, line:24:1> line:19:5 main 'int (void)'
+  `-CompoundStmt 0x7f814d814ed0 <line:20:1, line:24:1>
+    |-CallExpr 0x7f814d814e68 <line:21:3, col:18> 'void'
+    | |-ImplicitCastExpr 0x7f814d814e50 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f814d814e08 <col:3> 'void (int)' Function 0x7f814d814768 'bar' 'void (int)'
+    | `-IntegerLiteral 0x7f814d814e30 <line:3:22> 'int2 errors generated.
+' 5
+    `-ReturnStmt 0x7f814d814eb8 <line:23:3, col:10>
+      `-IntegerLiteral 0x7f814d814e98 <col:10> 'int' 0

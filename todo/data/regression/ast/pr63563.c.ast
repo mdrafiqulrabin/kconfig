@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7fe0a182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe0a182c960 <../Data/C2AST/pr63563.c:5:1, col:38> col:8 struct A definition
+| |-FieldDecl 0x7fe0a2014238 <col:12, col:26> col:26 referenced a 'unsigned long'
+| |-FieldDecl 0x7fe0a2014298 <col:12, col:29> col:29 referenced b 'unsigned long'
+| |-FieldDecl 0x7fe0a20142f8 <col:12, col:32> col:32 referenced c 'unsigned long'
+| `-FieldDecl 0x7fe0a2014358 <col:12, col:35> col:35 referenced d 'unsigned long'
+|-VarDecl 0x7fe0a20144f8 <col:1, col:67> col:40 used a 'struct A [1024]' cinit
+| `-InitListExpr 0x7fe0a20146c0 <col:50, col:67> 'struct A [1024]'
+|   |-array filler
+|   | `-ImplicitValueInitExpr 0x7fe0a20147c8 <<invalid sloc>> 'struct A':'struct A'
+|   `-InitListExpr 0x7fe0a2014700 <col:52, col:65> 'struct A':'struct A'
+|     |-ImplicitCastExpr 0x7fe0a2014768 <col:54> 'unsigned long' <IntegralCast>
+|     | `-IntegerLiteral 0x7fe0a2014598 <col:54> 'int' 0
+|     |-ImplicitCastExpr 0x7fe0a2014780 <col:57> 'unsigned long' <IntegralCast>
+|     | `-IntegerLiteral 0x7fe0a20145b8 <col:57> 'int' 1
+|     |-ImplicitCastExpr 0x7fe0a2014798 <col:60> 'unsigned long' <IntegralCast>
+|     | `-IntegerLiteral 0x7fe0a20145d8 <col:60> 'int' 2
+|     `-ImplicitCastExpr 0x7fe0a20147b0 <col:63> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7fe0a20145f8 <col:63> 'int' 3
+|-VarDecl 0x7fe0a20147f8 <col:1, col:70> col:70 used b 'struct A':'struct A'
+`-FunctionDecl 0x7fe0a2014940 <line:7:1, line:17:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe0a20152b8 <line:9:1, line:17:1>
+    |-DeclStmt 0x7fe0a2014a58 <line:10:3, col:8>
+    | `-VarDecl 0x7fe0a20149f8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fe0a2015280 <line:11:3, line:16:5>
+      |-BinaryOperator 0x7fe0a2014ab8 <line:11:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fe0a2014a70 <col:8> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+      | `-IntegerLiteral 0x7fe0a2014a98 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe0a2014b40 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe0a2014b28 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe0a2014ae0 <col:15> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+      | `-IntegerLiteral 0x7fe0a2014b08 <col:19> 'int' 1024
+      |-UnaryOperator 0x7fe0a2014b90 <col:25, col:26> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe0a2014b68 <col:25> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+      `-CompoundStmt 0x7fe0a2015260 <line:12:5, line:16:5>
+        |-BinaryOperator 0x7fe0a2014f70 <line:13:7, col:36> 'unsigned long' '='
+        | |-MemberExpr 0x7fe0a2014cb0 <col:7, col:12> 'unsigned long' lvalue .a 0x7fe0a2014238
+        | | `-ArraySubscriptExpr 0x7fe0a2014c88 <col:7, col:10> 'struct A':'struct A' lvalue
+        | |   |-ImplicitCastExpr 0x7fe0a2014c58 <col:7> 'struct A *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fe0a2014bb0 <col:7> 'struct A [1024]' lvalue Var 0x7fe0a20144f8 'a' 'struct A [1024]'
+        | |   `-ImplicitCastExpr 0x7fe0a2014c70 <col:9> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fe0a2014bd8 <col:9> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+        | `-BinaryOperator 0x7fe0a2014f48 <col:16, col:36> 'unsigned long' '='
+        |   |-MemberExpr 0x7fe0a2014d90 <col:16, col:21> 'unsigned long' lvalue .b 0x7fe0a2014298
+        |   | `-ArraySubscriptExpr 0x7fe0a2014d68 <col:16, col:19> 'struct A':'struct A' lvalue
+        |   |   |-ImplicitCastExpr 0x7fe0a2014d38 <col:16> 'struct A *' <ArrayToPointerDecay>
+        |   |   | `-DeclRefExpr 0x7fe0a2014ce8 <col:16> 'struct A [1024]' lvalue Var 0x7fe0a20144f8 'a' 'struct A [1024]'
+        |   |   `-ImplicitCastExpr 0x7fe0a2014d50 <col:18> 'int' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fe0a2014d10 <col:18> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+        |   `-BinaryOperator 0x7fe0a2014f20 <col:25, col:36> 'unsigned long' '='
+        |     |-MemberExpr 0x7fe0a2014e70 <col:25, col:30> 'unsigned long' lvalue .c 0x7fe0a20142f8
+        |     | `-ArraySubscriptExpr 0x7fe0a2014e48 <col:25, col:28> 'struct A':'struct A' lvalue
+        |     |   |-ImplicitCastExpr 0x7fe0a2014e18 <col:25> 'struct A *' <ArrayToPointerDecay>
+        |     |   | `-DeclRefExpr 0x7fe0a2014dc8 <col:25> 'struct A [1024]' lvalue Var 0x7fe0a20144f8 'a' 'struct A [1024]'
+        |     |   `-ImplicitCastExpr 0x7fe0a2014e30 <col:27> 'int' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7fe0a2014df0 <col:27> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+        |     `-ImplicitCastExpr 0x7fe0a2014f08 <col:34, col:36> 'unsigned long' <LValueToRValue>
+        |       `-MemberExpr 0x7fe0a2014ed0 <col:34, col:36> 'unsigned long' lvalue .c 0x7fe0a20142f8
+        |         `-DeclRefExpr 0x7fe0a2014ea8 <col:34> 'struct A':'struct A' lvalue Var 0x7fe0a20147f8 'b' 'struct A':'struct A'
+        `-IfStmt 0x7fe0a2015228 <line:14:7, line:15:13>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fe0a2015078 <line:14:11, col:16> 'unsigned long' <LValueToRValue>
+          | `-MemberExpr 0x7fe0a2015040 <col:11, col:16> 'unsigned long' lvalue .d 0x7fe0a2014358
+          |   `-ArraySubscriptExpr 0x7fe0a2015018 <col:11, col:14> 'struct A':'struct A' lvalue
+          |     |-ImplicitCastExpr 0x7fe0a2014fe8 <col:11> 'struct A *' <ArrayToPointerDecay>
+          |     | `-DeclRefExpr 0x7fe0a2014f98 <col:11> 'struct A [1024]' lvalue Var 0x7fe0a20144f8 'a' 'struct A [1024]'
+          |     `-ImplicitCastExpr 0x7fe0a2015000 <col:13> 'int' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fe0a2014fc0 <col:13> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+          |-BinaryOperator 0x7fe0a2015200 <line:15:2, col:13> 'unsigned long' '='
+          | |-MemberExpr 0x7fe0a2015138 <col:2, col:7> 'unsigned long' lvalue .d 0x7fe0a2014358
+          | | `-ArraySubscriptExpr 0x7fe0a2015110 <col:2, col:5> 'struct A':'struct A' lvalue
+          | |   |-ImplicitCastExpr 0x7fe0a20150e0 <col:2> 'struct A *' <ArrayToPointerDecay>
+          | |   | `-DeclRefExpr 0x7fe0a2015090 <col:2> 'struct A [1024]' lvalue Var 0x7fe0a20144f8 'a' 'struct A [1024]'
+          | |   `-ImplicitCastExpr 0x7fe0a20150f8 <col:4> 'int' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7fe0a20150b8 <col:4> 'int' lvalue Var 0x7fe0a20149f8 'i' 'int'
+          | `-ImplicitCastExpr 0x7fe0a20151d0 <col:11, col:13> 'unsigned long' <LValueToRValue>
+          |   `-MemberExpr 0x7fe0a2015198 <col:11, col:13> 'unsigned long' lvalue .d 0x7fe0a2014358
+          |     `-DeclRefExpr 0x7fe0a2015170 <col:11> 'struct A':'struct A' lvalue Var 0x7fe0a20147f8 'b' 'struct A':'struct A'
+          `-<<<NULL>>>

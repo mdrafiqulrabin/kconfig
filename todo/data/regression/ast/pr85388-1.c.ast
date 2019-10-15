@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7ff1500268e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff150973e28 <../Data/C2AST/pr85388-1.c:12:1, col:61> col:13 used use_buffer 'void (char *)' static
+| |-ParmVarDecl 0x7ff150963960 <col:25, col:31> col:31 buf 'char *'
+| `-NoInlineAttr 0x7ff150973ed0 <col:52>
+|-FunctionDecl 0x7ff150973fb8 prev 0x7ff150973e28 <line:13:1, line:17:1> line:14:1 used use_buffer 'void (char *)' static
+| |-ParmVarDecl 0x7ff150973f30 <col:13, col:19> col:19 used buf 'char *'
+| |-CompoundStmt 0x7ff150974188 <line:15:1, line:17:1>
+| | `-BinaryOperator 0x7ff150974160 <line:16:3, col:12> 'char' '='
+| |   |-ArraySubscriptExpr 0x7ff150974108 <col:3, col:8> 'char' lvalue
+| |   | |-ImplicitCastExpr 0x7ff1509740f0 <col:3> 'char *' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7ff1509740a8 <col:3> 'char *' lvalue ParmVar 0x7ff150973f30 'buf' 'char *'
+| |   | `-IntegerLiteral 0x7ff1509740d0 <col:7> 'int' 0
+| |   `-ImplicitCastExpr 0x7ff150974148 <col:12> 'char' <IntegralCast>
+| |     `-CharacterLiteral 0x7ff150974130 <col:12> 'int' 0
+| `-NoInlineAttr 0x7ff150974098 <line:12:52> Inherited
+|-FunctionDecl 0x7ff150974240 <line:21:1, line:31:1> line:22:1 used down 'void (int)' static
+| |-ParmVarDecl 0x7ff1509741b8 <col:7, col:11> col:11 used i 'int'
+| `-CompoundStmt 0x7ff150974698 <line:23:1, line:31:1>
+|   |-DeclStmt 0x7ff1509743c8 <line:24:3, col:18>
+|   | `-VarDecl 0x7ff150974368 <col:3, col:17> col:8 used buf 'char [10000]'
+|   `-IfStmt 0x7ff150974660 <line:26:3, line:30:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff150974440 <line:26:7, col:11> 'int' '>'
+|     | |-ImplicitCastExpr 0x7ff150974428 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff1509743e0 <col:7> 'int' lvalue ParmVar 0x7ff1509741b8 'i' 'int'
+|     | `-IntegerLiteral 0x7ff150974408 <col:11> 'int' 0
+|     |-CompoundStmt 0x7ff150974640 <line:27:5, line:30:5>
+|     | |-CallExpr 0x7ff150974500 <line:28:7, col:22> 'void'
+|     | | |-ImplicitCastExpr 0x7ff1509744e8 <col:7> 'void (*)(char *)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7ff150974468 <col:7> 'void (char *)' Function 0x7ff150973fb8 'use_buffer' 'void (char *)'
+|     | | `-ImplicitCastExpr 0x7ff150974530 <col:19> 'char *' <ArrayToPointerDecay>
+|     | |   `-DeclRefExpr 0x7ff150974490 <col:19> 'char [10000]' lvalue Var 0x7ff150974368 'buf' 'char [10000]'
+|     | `-CallExpr 0x7ff150974610 <line:29:7, col:18> 'void'
+|     |   |-ImplicitCastExpr 0x7ff1509745f8 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7ff150974548 <col:7> 'void (int)' Function 0x7ff150974240 'down' 'void (int)'
+|     |   `-BinaryOperator 0x7ff1509745d0 <col:13, col:17> 'int' '-'
+|     |     |-ImplicitCastExpr 0x7ff1509745b8 <col:13> 'int' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7ff150974570 <col:13> 'int' lvalue ParmVar 0x7ff1509741b8 'i' 'int'
+|     |     `-IntegerLiteral 0x7ff150974598 <col:17> 'int' 1
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff150974750 <line:33:1, line:45:1> line:34:1 main 'int (void)'
+  `-CompoundStmt 0x7ff150974e18 <line:35:1, line:45:1>
+    |-DeclStmt 0x7ff150974870 <line:36:3, col:18>
+    | `-VarDecl 0x7ff150974810 <col:3, col:17> col:17 used r 'struct rlimit':'struct rlimit'
+    |-BinaryOperator 0x7ff150974968 <line:39:3, col:23> 'rlim_t':'unsigned long long' '='
+    | |-MemberExpr 0x7ff1509748b0 <col:3, col:5> 'rlim_t':'unsigned long long' lvalue .rlim_cur 0x7ff150914450
+    | | `-DeclRefExpr 0x7ff150974888 <col:3> 'struct rlimit':'struct rlimit' lvalue Var 0x7ff150974810 'r' 'struct rlimit':'struct rlimit'
+    | `-ImplicitCastExpr 0x7ff150974950 <col:16, col:23> 'rlim_t':'unsigned long long' <IntegralCast>
+    |   `-BinaryOperator 0x7ff150974928 <col:16, col:23> 'int' '*'
+    |     |-IntegerLiteral 0x7ff1509748e8 <col:16> 'int' 8192
+    |     `-IntegerLiteral 0x7ff150974908 <col:23> 'int' 1024
+    |-BinaryOperator 0x7ff150974ac0 <line:40:3, col:23> 'rlim_t':'unsigned long long' '='
+    | |-MemberExpr 0x7ff150974a08 <col:3, col:5> 'rlim_t':'unsigned long long' lvalue .rlim_max 0x7ff1509144a8
+    | | `-DeclRefExpr 0x7ff1509749e0 <col:3> 'struct rlimit':'struct rlimit' lvalue Var 0x7ff150974810 'r' 'struct rlimit':'struct rlimit'
+    | `-ImplicitCastExpr 0x7ff150974aa8 <col:16, col:23> 'rlim_t':'unsigned long long' <IntegralCast>
+    |   `-BinaryOperator 0x7ff150974a80 <col:16, col:23> 'int' '*'
+    |     |-IntegerLiteral 0x7ff150974a40 <col:16> 'int' 8192
+    |     `-IntegerLiteral 0x7ff150974a60 <col:23> 'int' 1024
+    |-IfStmt 0x7ff150974d18 <line:41:3, line:42:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff150974c60 <line:41:7, col:39> 'int' '!='
+    | | |-CallExpr 0x7ff150974bf0 <col:7, col:34> 'int'
+    | | | |-ImplicitCastExpr 0x7ff150974bd8 <col:7> 'int (*)(int, const struct rlimit *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ff150974ae8 <col:7> 'int (int, const struct rlimit *)' Function 0x7ff150919b58 'setrlimit' 'int (int, const struct rlimit *)'
+    | | | |-IntegerLiteral 0x7ff150974b10 </usr/include/sys/resource.h:347:22> 'int' 3
+    | | | `-ImplicitCastExpr 0x7ff150974c28 <../Data/C2AST/pr85388-1.c:41:32, col:33> 'const struct rlimit *' <BitCast>
+    | | |   `-UnaryOperator 0x7ff150974b58 <col:32, col:33> 'struct rlimit *' prefix '&'
+    | | |     `-DeclRefExpr 0x7ff150974b30 <col:33> 'struct rlimit':'struct rlimit' lvalue Var 0x7ff150974810 'r' 'struct rlimit':'struct rlimit'
+    | | `-IntegerLiteral 0x7ff150974c40 <col:39> 'int' 0
+    | |-CallExpr 0x7ff150974cf0 <line:42:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff150974cd8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff150974c88 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff15092e420 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7ff150974db0 <line:43:3, col:13> 'void'
+    | |-ImplicitCastExpr 0x7ff150974d98 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff150974d50 <col:3> 'void (int)' Function 0x7ff150974240 'down' 'void (int)'
+    | `-IntegerLiteral 0x7ff150974d78 <col:9> 'int' 1000
+    `-ReturnStmt 0x7ff150974e00 <line:44:3, col:10>
+      `-IntegerLiteral 0x7ff150974de0 <col:10> 'int' 0

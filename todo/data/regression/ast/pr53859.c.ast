@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f9658029ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f96578161e0 <../Data/C2AST/pr53859.c:6:1, col:29> col:6 used bar 'void (int, int, char *, int)'
+| |-ParmVarDecl 0x7f965802a978 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7f9657816000 <col:15> col:18 'int'
+| |-ParmVarDecl 0x7f9657816078 <col:19, col:23> col:25 'char *'
+| `-ParmVarDecl 0x7f96578160f0 <col:26> col:29 'int'
+`-FunctionDecl 0x7f96578163b0 <line:8:1, line:11:1> line:8:6 foo 'void (char)'
+  |-ParmVarDecl 0x7f96578162f0 <col:11, col:16> col:16 used c 'char'
+  `-CompoundStmt 0x7f96578165b8 <line:9:1, line:11:1>
+    `-CallExpr 0x7f9657816570 <line:10:5, col:18> 'void'
+      |-ImplicitCastExpr 0x7f9657816558 <col:5> 'void (*)(int, int, char *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9657816458 <col:5> 'void (int, int, char *, int)' Function 0x7f96578161e0 'bar' 'void (int, int, char *, int)'
+      |-IntegerLiteral 0x7f9657816480 <col:10> 'int' 1
+      |-IntegerLiteral 0x7f96578164a0 <col:12> 'int' 2
+      |-UnaryOperator 0x7f96578164e8 <col:14, col:15> 'char *' prefix '&'
+      | `-DeclRefExpr 0x7f96578164c0 <col:15> 'char' lvalue ParmVar 0x7f96578162f0 'c' 'char'
+      `-IntegerLiteral 0x7f9657816508 <col:17> 'int' 3

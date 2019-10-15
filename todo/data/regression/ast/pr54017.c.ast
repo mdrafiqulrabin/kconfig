@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7f889082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f889086d820 <../Data/C2AST/pr54017.c:5:1, line:16:1> line:6:1 f1 'void (void)'
+| `-CompoundStmt 0x7f889086d978 <line:7:1, line:16:1>
+|   `-CompoundStmt 0x7f889086d960 <line:9:3, line:15:3>
+|     `-CompoundStmt 0x7f889086d948 <line:11:5, line:14:5>
+|       `-ForStmt 0x7f889086d910 <line:12:7, line:13:2>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         `-NullStmt 0x7f889086d900 <col:2>
+|-FunctionDecl 0x7f889086da58 <line:18:1, line:32:1> line:19:1 f2 'int (void)'
+| `-CompoundStmt 0x7f889086dc78 <line:20:1, line:32:1>
+|   |-DeclStmt 0x7f889086db90 <line:21:3, col:12>
+|   | `-VarDecl 0x7f889086db10 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7f889086db70 <col:11> 'int' 0
+|   |-CompoundStmt 0x7f889086dc08 <line:24:3, line:30:3>
+|   | `-CompoundStmt 0x7f889086dbf0 <line:26:5, line:29:5>
+|   |   `-ForStmt 0x7f889086dbb8 <line:27:7, line:28:2>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     `-NullStmt 0x7f889086dba8 <col:2>
+|   `-ReturnStmt 0x7f889086dc60 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f889086dc48 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f889086dc20 <col:10> 'int' lvalue Var 0x7f889086db10 'i' 'int'
+|-FunctionDecl 0x7f889086dd30 <line:34:1, line:47:1> line:35:1 f3 'void (void)'
+| `-CompoundStmt 0x7f889086de60 <line:36:1, line:47:1>
+|   `-CompoundStmt 0x7f889086de40 <line:38:3, line:46:3>
+|     |-CompoundStmt 0x7f889086de18 <line:40:5, line:43:5>
+|     | `-ForStmt 0x7f889086dde0 <line:41:7, line:42:2>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   `-NullStmt 0x7f889086ddd0 <col:2>
+|     `-NullStmt 0x7f889086de30 <line:45:5>
+`-FunctionDecl 0x7f889086df10 <line:49:1, line:65:1> line:50:1 f4 'int (void)'
+  `-CompoundStmt 0x7f889086e148 <line:51:1, line:65:1>
+    |-DeclStmt 0x7f889086e048 <line:52:3, col:12>
+    | `-VarDecl 0x7f889086dfc8 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7f889086e028 <col:11> 'int' 0
+    |-CompoundStmt 0x7f889086e0d0 <line:55:3, line:63:3>
+    | |-CompoundStmt 0x7f889086e0a8 <line:57:5, line:60:5>
+    | | `-ForStmt 0x7f889086e070 <line:58:7, line:59:2>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   `-NullStmt 0x7f889086e060 <col:2>
+    | `-NullStmt 0x7f889086e0c0 <line:62:5>
+    `-ReturnStmt 0x7f889086e130 <line:64:3, col:10>
+      `-ImplicitCastExpr 0x7f889086e118 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f889086e0f0 <col:10> 'int' lvalue Var 0x7f889086dfc8 'i' 'int'

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fa7b48274e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa7b4869028 <../Data/C2AST/pragma-re-4.c:10:1, col:20> line:8:17 _foo 'int (void)' extern
+|-FunctionDecl 0x7fa7b48691a0 <line:11:1, col:22> line:9:17 used _foo64 'int (void)' extern
+| `-AsmLabelAttr 0x7fa7b4869240 <line:8:17> Implicit "_foo"
+`-FunctionDecl 0x7fa7b48692f0 <line:13:1, line:17:1> line:14:1 bar 'int ()'
+  `-CompoundStmt 0x7fa7b4869460 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7fa7b4869448 <line:16:9, col:24>
+      `-ParenExpr 0x7fa7b4869428 <col:16, col:24> 'int'
+        `-CallExpr 0x7fa7b4869400 <line:9:17, line:16:23> 'int'
+          `-ImplicitCastExpr 0x7fa7b48693e8 <line:9:17> 'int (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fa7b4869390 <col:17> 'int (void)' Function 0x7fa7b48691a0 '_foo64' 'int (void)'

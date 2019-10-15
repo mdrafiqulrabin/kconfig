@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7ff62c82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff62c86b0f0 <../Data/C2AST/pr44545.c:3:1, line:12:1> line:4:1 DrawChunk 'void (int *, int)'
+  |-ParmVarDecl 0x7ff62c82c9a0 <col:11, col:16> col:16 used tabSize 'int *'
+  |-ParmVarDecl 0x7ff62c86b018 <col:25, col:29> col:29 used x 'int'
+  `-CompoundStmt 0x7ff62c86b7d0 <line:5:1, line:12:1>
+    |-DeclStmt 0x7ff62c86b278 <line:6:3, col:25>
+    | `-VarDecl 0x7ff62c86b1f8 <col:3, col:23> col:13 used numEnds 'const int' cinit
+    |   `-IntegerLiteral 0x7ff62c86b258 <col:23> 'int' 10
+    |-DeclStmt 0x7ff62c86b430 <line:7:3, col:24>
+    | `-VarDecl 0x7ff62c86b3d0 <col:3, col:23> col:7 ends 'int [12]'
+    `-IfStmt 0x7ff62c86b798 <line:8:3, line:11:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff62c86b4e0 <line:8:7, col:18> 'int' '>'
+      | |-ImplicitCastExpr 0x7ff62c86b4c8 <col:7, col:8> 'int' <LValueToRValue>
+      | | `-UnaryOperator 0x7ff62c86b488 <col:7, col:8> 'int' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7ff62c86b470 <col:8> 'int *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7ff62c86b448 <col:8> 'int *' lvalue ParmVar 0x7ff62c82c9a0 'tabSize' 'int *'
+      | `-IntegerLiteral 0x7ff62c86b4a8 <col:18> 'int' 0
+      |-CompoundStmt 0x7ff62c86b778 <col:21, line:11:3>
+      | |-CompoundAssignOperator 0x7ff62c86b550 <line:9:7, col:12> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+      | | |-DeclRefExpr 0x7ff62c86b508 <col:7> 'int' lvalue ParmVar 0x7ff62c86b018 'x' 'int'
+      | | `-IntegerLiteral 0x7ff62c86b530 <col:12> 'int' 5
+      | `-BinaryOperator 0x7ff62c86b750 <line:10:7, col:29> 'int' '='
+      |   |-DeclRefExpr 0x7ff62c86b588 <col:7> 'int' lvalue ParmVar 0x7ff62c86b018 'x' 'int'
+      |   `-BinaryOperator 0x7ff62c86b728 <col:11, col:29> 'int' '/'
+      |     |-ParenExpr 0x7ff62c86b690 <col:11, col:24> 'int'
+      |     | `-BinaryOperator 0x7ff62c86b668 <col:12, col:17> 'int' '+'
+      |     |   |-ImplicitCastExpr 0x7ff62c86b638 <col:12> 'int' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7ff62c86b5b0 <col:12> 'int' lvalue ParmVar 0x7ff62c86b018 'x' 'int'
+      |     |   `-ImplicitCastExpr 0x7ff62c86b650 <col:16, col:17> 'int' <LValueToRValue>
+      |     |     `-UnaryOperator 0x7ff62c86b618 <col:16, col:17> 'int' lvalue prefix '*'
+      |     |       `-ImplicitCastExpr 0x7ff62c86b600 <col:17> 'int *' <LValueToRValue>
+      |     |         `-DeclRefExpr 0x7ff62c86b5d8 <col:17> 'int *' lvalue ParmVar 0x7ff62c82c9a0 'tabSize' 'int *'
+      |     `-ImplicitCastExpr 0x7ff62c86b710 <col:28, col:29> 'int' <LValueToRValue>
+      |       `-UnaryOperator 0x7ff62c86b6f0 <col:28, col:29> 'int' lvalue prefix '*'
+      |         `-ImplicitCastExpr 0x7ff62c86b6d8 <col:29> 'int *' <LValueToRValue>
+      |           `-DeclRefExpr 0x7ff62c86b6b0 <col:29> 'int *' lvalue ParmVar 0x7ff62c82c9a0 'tabSize' 'int *'
+      `-<<<NULL>>>

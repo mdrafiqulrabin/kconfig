@@ -1,0 +1,102 @@
+../Data/C2AST/pr53272-2.c:38:3: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  __builtin_exit (0);
+  ^
+../Data/C2AST/pr53272-2.c:38:3: note: did you mean '__builtin_abort'?
+../Data/C2AST/pr53272-2.c:13:5: note: '__builtin_abort' declared here
+    __builtin_abort();
+    ^
+TranslationUnitDecl 0x7ff7cd8232e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff7cd823860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff7cd823580 '__int128'
+|-TypedefDecl 0x7ff7cd8238d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff7cd8235a0 'unsigned __int128'
+|-TypedefDecl 0x7ff7cd823ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff7cd8239b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff7cd823928 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff7cd823c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff7cd823c00 'char *'
+|   `-BuiltinType 0x7ff7cd823380 'char'
+|-TypedefDecl 0x7ff7cd823f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff7cd823eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff7cd823d20 'struct __va_list_tag'
+|     `-Record 0x7ff7cd823c98 '__va_list_tag'
+|-FunctionDecl 0x7ff7ce009468 <../Data/C2AST/pr53272-2.c:1:1, line:6:1> line:2:5 used foo 'int (void *)'
+| |-ParmVarDecl 0x7ff7cd823f78 <col:9, col:15> col:15 used x 'void *'
+| |-CompoundStmt 0x7ff7ce009788 <line:3:1, line:6:1>
+| | |-GCCAsmStmt 0x7ff7ce009600 <line:4:3, col:10>
+| | `-ReturnStmt 0x7ff7ce009770 <line:5:3, col:24>
+| |   `-BinaryOperator 0x7ff7ce009748 <col:10, col:24> 'int' '!='
+| |     |-ImplicitCastExpr 0x7ff7ce009730 <col:10, col:19> 'int' <LValueToRValue>
+| |     | `-UnaryOperator 0x7ff7ce0096f0 <col:10, col:19> 'int' lvalue prefix '*'
+| |     |   `-CStyleCastExpr 0x7ff7ce0096c8 <col:11, col:19> 'int *' <BitCast>
+| |     |     `-ImplicitCastExpr 0x7ff7ce0096b0 <col:19> 'void *' <LValueToRValue>
+| |     |       `-DeclRefExpr 0x7ff7ce009648 <col:19> 'void *' lvalue ParmVar 0x7ff7cd823f78 'x' 'void *'
+| |     `-IntegerLiteral 0x7ff7ce009710 <col:24> 'int' 42
+| `-NoInlineAttr 0x7ff7ce009510 <line:1:17>
+|-FunctionDecl 0x7ff7ce009880 <line:8:1, line:14:1> line:9:6 foobar 'void (void *)'
+| |-ParmVarDecl 0x7ff7ce0097c0 <col:13, col:19> col:19 used x 'void *'
+| |-CompoundStmt 0x7ff7ce009ca0 <line:10:1, line:14:1>
+| | |-GCCAsmStmt 0x7ff7ce009998 <line:11:3, col:10>
+| | `-IfStmt 0x7ff7ce009c68 <line:12:3, line:13:21>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-CallExpr 0x7ff7ce009a70 <line:12:7, col:12> 'int'
+| |   | |-ImplicitCastExpr 0x7ff7ce009a58 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+| |   | | `-DeclRefExpr 0x7ff7ce0099e0 <col:7> 'int (void *)' Function 0x7ff7ce009468 'foo' 'int (void *)'
+| |   | `-ImplicitCastExpr 0x7ff7ce009aa0 <col:11> 'void *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7ff7ce009a08 <col:11> 'void *' lvalue ParmVar 0x7ff7ce0097c0 'x' 'void *'
+| |   |-CallExpr 0x7ff7ce009c40 <line:13:5, col:21> 'void'
+| |   | `-ImplicitCastExpr 0x7ff7ce009c28 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7ff7ce009bd8 <col:5> '<builtin fn type>' Function 0x7ff7ce009af0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff7ce009928 <line:8:17>
+|-FunctionDecl 0x7ff7ce009af0 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ff7ce009b90 <col:5> Implicit
+|-RecordDecl 0x7ff7ce009cc0 <line:16:1, line:18:1> line:16:8 struct rtc_class_ops definition
+| `-FieldDecl 0x7ff7ce009f70 <line:17:2, col:39> col:8 f 'int (*)(void *, unsigned int)'
+|-RecordDecl 0x7ff7ce009fb8 <line:20:1, line:25:1> line:20:8 struct rtc_device definition
+| |-FieldDecl 0x7ff7ce00a078 <line:22:2, col:8> col:8 owner 'void *'
+| |-FieldDecl 0x7ff7ce00a170 <line:23:2, col:24> col:24 ops 'struct rtc_class_ops *'
+| `-FieldDecl 0x7ff7ce00a1d0 <line:24:2, col:6> col:6 ops_lock 'int'
+|-FunctionDecl 0x7ff7ce00b478 <line:27:1, line:28:63> col:5 used rtc_update_irq_enable 'int (struct rtc_device *, unsigned int)' extern
+| |-ParmVarDecl 0x7ff7ce00a2d0 <col:27, col:46> col:46 rtc 'struct rtc_device *'
+| |-ParmVarDecl 0x7ff7ce00a348 <col:51, col:60> col:63 'un1 error generated.
+signed int'
+| `-NoInlineAttr 0x7ff7ce00b528 <line:27:24>
+`-FunctionDecl 0x7ff7ce00b638 <line:30:1, line:39:1> line:30:5 main 'int (void)'
+  `-CompoundStmt 0x7ff7ce00bec0 <line:31:1, line:39:1>
+    |-DeclStmt 0x7ff7ce00b890 <line:32:2, col:41>
+    | `-VarDecl 0x7ff7ce00b728 <col:2, col:40> col:23 used ops 'struct rtc_class_ops':'struct rtc_class_ops' cinit
+    |   `-InitListExpr 0x7ff7ce00b830 <col:29, col:40> 'struct rtc_class_ops':'struct rtc_class_ops'
+    |     `-ImplicitCastExpr 0x7ff7ce00b878 <col:30, col:39> 'int (*)(void *, unsigned int)' <NullToPointer>
+    |       `-CStyleCastExpr 0x7ff7ce00b7c0 <col:30, col:39> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7ff7ce00b788 <col:39> 'int' 0
+    |-DeclStmt 0x7ff7ce00ba78 <line:33:3, col:41>
+    | `-VarDecl 0x7ff7ce00b8c8 <col:3, col:40> col:21 used dev1 'struct rtc_device':'struct rtc_device' cinit
+    |   `-InitListExpr 0x7ff7ce00ba08 <col:28, col:40> 'struct rtc_device':'struct rtc_device'
+    |     |-ImplicitCastExpr 0x7ff7ce00ba60 <col:29> 'void *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7ff7ce00b928 <col:29> 'int' 0
+    |     |-UnaryOperator 0x7ff7ce00b970 <col:32, col:33> 'struct rtc_class_ops *' prefix '&'
+    |     | `-DeclRefExpr 0x7ff7ce00b948 <col:33> 'struct rtc_class_ops':'struct rtc_class_ops' lvalue Var 0x7ff7ce00b728 'ops' 'struct rtc_class_ops':'struct rtc_class_ops'
+    |     `-IntegerLiteral 0x7ff7ce00b990 <col:38> 'int' 42
+    |-IfStmt 0x7ff7ce00bcb0 <line:35:3, line:36:22>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff7ce00bc20 <line:35:7, col:44> 'int' '!='
+    | | |-CallExpr 0x7ff7ce00bb90 <col:7, col:38> 'int'
+    | | | |-ImplicitCastExpr 0x7ff7ce00bb78 <col:7> 'int (*)(struct rtc_device *, unsigned int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ff7ce00ba90 <col:7> 'int (struct rtc_device *, unsigned int)' Function 0x7ff7ce00b478 'rtc_update_irq_enable' 'int (struct rtc_device *, unsigned int)'
+    | | | |-UnaryOperator 0x7ff7ce00bae0 <col:30, col:31> 'struct rtc_device *' prefix '&'
+    | | | | `-DeclRefExpr 0x7ff7ce00bab8 <col:31> 'struct rtc_device':'struct rtc_device' lvalue Var 0x7ff7ce00b8c8 'dev1' 'struct rtc_device':'struct rtc_device'
+    | | | `-ImplicitCastExpr 0x7ff7ce00bbc8 <col:37> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7ff7ce00bb00 <col:37> 'int' 1
+    | | `-UnaryOperator 0x7ff7ce00bc00 <col:43, col:44> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7ff7ce00bbe0 <col:44> 'int' 22
+    | |-CallExpr 0x7ff7ce00bc88 <line:36:5, col:22> 'void'
+    | | `-ImplicitCastExpr 0x7ff7ce00bc70 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7ff7ce00bc48 <col:5> '<builtin fn type>' Function 0x7ff7ce009af0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7ff7ce00be90 <line:38:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7ff7ce00be78 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff7ce00be00 <col:3> 'int ()' Function 0x7ff7ce00bd50 '__builtin_exit' 'int ()'
+      `-IntegerLiteral 0x7ff7ce00be28 <col:19> 'int' 0

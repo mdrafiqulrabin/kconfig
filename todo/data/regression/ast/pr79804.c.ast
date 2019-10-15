@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fb4bc02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb4bc814220 <../Data/C2AST/pr79804.c:5:1, line:10:1> line:5:6 foo 'void (void)'
+  `-CompoundStmt 0x7fb4bc814570 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fb4bc814438 <line:7:3, col:30>
+    | `-VarDecl 0x7fb4bc814380 <col:3, col:16> col:16 used r20 'int' register
+    |   `-AsmLabelAttr 0x7fb4bc8143e0 <col:25> "20"
+    `-GCCAsmStmt 0x7fb4bc814510 <line:9:3, col:35>
+      `-DeclRefExpr 0x7fb4bc8144e8 <col:31> 'int' lvalue Var 0x7fb4bc814380 'r20' 'int'

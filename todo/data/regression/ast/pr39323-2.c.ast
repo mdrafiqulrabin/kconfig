@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fb9d20174e8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fb9d205a000 <../Data/C2AST/pr39323-2.c:4:1, col:47> col:5 bar 'int' cinit
+  |-IntegerLiteral 0x7fb9d205a0f0 <col:47> 'int' 20
+  `-AlignedAttr 0x7fb9d205a060 <col:25, col:40> aligned
+    `-BinaryOperator 0x7fb9d20181a0 <col:33, col:38> 'int' '<<'
+      |-IntegerLiteral 0x7fb9d2018160 <col:33> 'int' 1
+      `-IntegerLiteral 0x7fb9d2018180 <col:38> 'int' 28

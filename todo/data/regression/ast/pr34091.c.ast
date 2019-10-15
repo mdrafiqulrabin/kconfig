@@ -1,0 +1,1109 @@
+TranslationUnitDecl 0x7fd2bf0200e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2bf020d78 <../Data/C2AST/pr34091.c:1:1, col:22> col:22 referenced GLenum 'unsigned int'
+| `-BuiltinType 0x7fd2bf020280 'unsigned int'
+|-TypedefDecl 0x7fd2be815a00 <line:2:1, col:23> col:23 referenced GLboolean 'unsigned char'
+| `-BuiltinType 0x7fd2bf020240 'unsigned char'
+|-TypedefDecl 0x7fd2be815a70 <line:3:1, col:13> col:13 referenced GLint 'int'
+| `-BuiltinType 0x7fd2bf0201e0 'int'
+|-TypedefDecl 0x7fd2be815ae0 <line:4:1, col:24> col:24 referenced GLushort 'unsigned short'
+| `-BuiltinType 0x7fd2bf020260 'unsigned short'
+|-TypedefDecl 0x7fd2be815b50 <line:5:1, col:22> col:22 referenced GLuint 'unsigned int'
+| `-BuiltinType 0x7fd2bf020280 'unsigned int'
+|-TypedefDecl 0x7fd2be815bc0 <line:6:1, col:15> col:15 referenced GLfloat 'float'
+| `-BuiltinType 0x7fd2bf0202e0 'float'
+|-TypedefDecl 0x7fd2be815c50 <line:7:1, col:18> col:18 referenced GLchan 'GLushort':'unsigned short'
+| `-TypedefType 0x7fd2be815c20 'GLushort' sugar
+|   |-Typedef 0x7fd2be815ae0 'GLushort'
+|   `-BuiltinType 0x7fd2bf020260 'unsigned short'
+|-RecordDecl 0x7fd2be815ca8 <line:8:1, col:8> col:8 struct gl_texture_image
+|-RecordDecl 0x7fd2be815d50 <line:9:9, col:16> col:16 struct __GLcontextRec
+|-TypedefDecl 0x7fd2be815e50 <col:1, col:31> col:31 referenced GLcontext 'struct __GLcontextRec':'struct __GLcontextRec'
+| `-ElaboratedType 0x7fd2be815e00 'struct __GLcontextRec' sugar
+|   `-RecordType 0x7fd2be815de0 'struct __GLcontextRec'
+|     `-Record 0x7fd2be815d50 '__GLcontextRec'
+|-TypedefDecl 0x7fd2be8163d0 <line:10:1, line:12:23> line:10:16 referenced FetchTexelFuncC 'void (*)(const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)'
+| `-PointerType 0x7fd2be816350 'void (*)(const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)'
+|   `-ParenType 0x7fd2be8162f0 'void (const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)' sugar
+|     `-FunctionProtoType 0x7fd2be816290 'void (const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)' cdecl
+|       |-BuiltinType 0x7fd2bf020140 'void'
+|       |-PointerType 0x7fd2be815f20 'const struct gl_texture_image *'
+|       | `-QualType 0x7fd2be815ec1 'const struct gl_texture_image' const
+|       |   `-ElaboratedType 0x7fd2be815ec0 'struct gl_texture_image' sugar
+|       |     `-RecordType 0x7fd2be815d30 'struct gl_texture_image'
+|       |       `-Record 0x7fd2be8164d0 'gl_texture_image'
+|       |-TypedefType 0x7fd2be815fd0 'GLint' sugar
+|       | |-Typedef 0x7fd2be815a70 'GLint'
+|       | `-BuiltinType 0x7fd2bf0201e0 'int'
+|       |-TypedefType 0x7fd2be815fd0 'GLint' sugar
+|       | |-Typedef 0x7fd2be815a70 'GLint'
+|       | `-BuiltinType 0x7fd2bf0201e0 'int'
+|       |-TypedefType 0x7fd2be815fd0 'GLint' sugar
+|       | |-Typedef 0x7fd2be815a70 'GLint'
+|       | `-BuiltinType 0x7fd2bf0201e0 'int'
+|       `-PointerType 0x7fd2be816190 'GLchan *'
+|         `-TypedefType 0x7fd2be816140 'GLchan' sugar
+|           |-Typedef 0x7fd2be815c50 'GLchan'
+|           `-TypedefType 0x7fd2be815c20 'GLushort' sugar
+|             |-Typedef 0x7fd2be815ae0 'GLushort'
+|             `-BuiltinType 0x7fd2bf020260 'unsigned short'
+|-RecordDecl 0x7fd2be816428 <line:13:1, line:15:1> line:13:8 struct gl_texture_format definition
+|-RecordDecl 0x7fd2be8164d0 prev 0x7fd2be815ca8 <line:16:1, line:21:1> line:16:8 struct gl_texture_image definition
+| |-FieldDecl 0x7fd2be816590 <line:18:3, col:10> col:10 referenced _BaseFormat 'GLenum':'unsigned int'
+| |-FieldDecl 0x7fd2be816610 <line:19:3, col:13> col:13 referenced _IsPowerOfTwo 'GLboolean':'unsigned char'
+| `-FieldDecl 0x7fd2be816690 <line:20:3, col:19> col:19 referenced FetchTexelc 'FetchTexelFuncC':'void (*)(const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)'
+|-RecordDecl 0x7fd2be8166d8 <line:22:1, line:31:1> line:22:8 struct gl_texture_object definition
+| |-FieldDecl 0x7fd2be816790 <line:24:3, col:10> col:10 referenced Target 'GLenum':'unsigned int'
+| |-FieldDecl 0x7fd2be8167e8 <line:25:3, col:10> col:10 referenced WrapS 'GLenum':'unsigned int'
+| |-FieldDecl 0x7fd2be816840 <line:26:3, col:10> col:10 referenced MinFilter 'GLenum':'unsigned int'
+| |-FieldDecl 0x7fd2be816898 <line:27:3, col:10> col:10 referenced MagFilter 'GLenum':'unsigned int'
+| |-FieldDecl 0x7fd2be8168f0 <line:28:3, col:9> col:9 referenced BaseLevel 'GLint':'int'
+| |-FieldDecl 0x7fd2be816948 <line:29:3, col:9> col:9 referenced _MaxLevel 'GLint':'int'
+| `-FieldDecl 0x7fd2bf821d70 <line:30:3, col:39> col:28 referenced Image 'struct gl_texture_image *[6][12]'
+|-EnumDecl 0x7fd2bf821db8 <line:32:1, line:36:1> line:32:6 _format
+| |-EnumConstantDecl 0x7fd2bf821e70 <line:34:5> col:5 MESA_FORMAT_RGBA_DXT3 'int'
+| |-EnumConstantDecl 0x7fd2bf821eb8 <col:28> col:28 MESA_FORMAT_RGBA_DXT5 'int'
+| |-EnumConstantDecl 0x7fd2bf821f00 <col:51> col:51 referenced MESA_FORMAT_RGBA 'int'
+| |-EnumConstantDecl 0x7fd2bf821f48 <line:35:5> col:5 referenced MESA_FORMAT_RGB 'int'
+| |-EnumConstantDecl 0x7fd2bf821f90 <col:22> col:22 MESA_FORMAT_ALPHA 'int'
+| `-EnumConstantDecl 0x7fd2bf821fd8 <col:41> col:41 MESA_FORMAT_LUMINANCE 'int'
+|-TypedefDecl 0x7fd2bf822a28 <line:37:1, line:41:26> line:37:16 referenced texture_sample_func 'void (*)(GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])'
+| `-PointerType 0x7fd2bf8229a0 'void (*)(GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])'
+|   `-ParenType 0x7fd2bf822940 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' sugar
+|     `-FunctionProtoType 0x7fd2bf8228e0 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' cdecl
+|       |-BuiltinType 0x7fd2bf020140 'void'
+|       |-PointerType 0x7fd2bf822070 'GLcontext *'
+|       | `-TypedefType 0x7fd2bf822020 'GLcontext' sugar
+|       |   |-Typedef 0x7fd2be815e50 'GLcontext'
+|       |   `-ElaboratedType 0x7fd2be815e00 'struct __GLcontextRec' sugar
+|       |     `-RecordType 0x7fd2be815de0 'struct __GLcontextRec'
+|       |       `-Record 0x7fd2be815d50 '__GLcontextRec'
+|       |-PointerType 0x7fd2bf822170 'const struct gl_texture_object *'
+|       | `-QualType 0x7fd2bf822111 'const struct gl_texture_object' const
+|       |   `-ElaboratedType 0x7fd2bf822110 'struct gl_texture_object' sugar
+|       |     `-RecordType 0x7fd2be816760 'struct gl_texture_object'
+|       |       `-Record 0x7fd2be8166d8 'gl_texture_object'
+|       |-TypedefType 0x7fd2bf822220 'GLuint' sugar
+|       | |-Typedef 0x7fd2be815b50 'GLuint'
+|       | `-BuiltinType 0x7fd2bf020280 'unsigned int'
+|       |-DecayedType 0x7fd2bf822460 'const GLfloat (*)[4]' sugar
+|       | |-IncompleteArrayType 0x7fd2bf8223a0 'const GLfloat [][4]' 
+|       | | `-ConstantArrayType 0x7fd2bf822330 'const GLfloat [4]' 4 
+|       | |   `-QualType 0x7fd2bf8222b1 'const GLfloat' const
+|       | |     `-TypedefType 0x7fd2bf8222b0 'GLfloat' sugar
+|       | |       |-Typedef 0x7fd2be815bc0 'GLfloat'
+|       | |       `-BuiltinType 0x7fd2bf0202e0 'float'
+|       | `-PointerType 0x7fd2bf822430 'const GLfloat (*)[4]'
+|       |   `-ConstantArrayType 0x7fd2bf822330 'const GLfloat [4]' 4 
+|       |     `-QualType 0x7fd2bf8222b1 'const GLfloat' const
+|       |       `-TypedefType 0x7fd2bf8222b0 'GLfloat' sugar
+|       |         |-Typedef 0x7fd2be815bc0 'GLfloat'
+|       |         `-BuiltinType 0x7fd2bf0202e0 'float'
+|       |-DecayedType 0x7fd2bf8225d0 'const GLfloat *' sugar
+|       | |-IncompleteArrayType 0x7fd2bf822520 'const GLfloat []' 
+|       | | `-QualType 0x7fd2bf8222b1 'const GLfloat' const
+|       | |   `-TypedefType 0x7fd2bf8222b0 'GLfloat' sugar
+|       | |     |-Typedef 0x7fd2be815bc0 'GLfloat'
+|       | |     `-BuiltinType 0x7fd2bf0202e0 'float'
+|       | `-PointerType 0x7fd2bf8225a0 'const GLfloat *'
+|       |   `-QualType 0x7fd2bf8222b1 'const GLfloat' const
+|       |     `-TypedefType 0x7fd2bf8222b0 'GLfloat' sugar
+|       |       |-Typedef 0x7fd2be815bc0 'GLfloat'
+|       |       `-BuiltinType 0x7fd2bf0202e0 'float'
+|       `-DecayedType 0x7fd2bf8227f0 'GLchan (*)[4]' sugar
+|         |-IncompleteArrayType 0x7fd2bf822730 'GLchan [][4]' 
+|         | `-ConstantArrayType 0x7fd2bf8226c0 'GLchan [4]' 4 
+|         |   `-TypedefType 0x7fd2be816140 'GLchan' sugar
+|         |     |-Typedef 0x7fd2be815c50 'GLchan'
+|         |     `-TypedefType 0x7fd2be815c20 'GLushort' sugar
+|         |       |-Typedef 0x7fd2be815ae0 'GLushort'
+|         |       `-BuiltinType 0x7fd2bf020260 'unsigned short'
+|         `-PointerType 0x7fd2bf8227c0 'GLchan (*)[4]'
+|           `-ConstantArrayType 0x7fd2bf8226c0 'GLchan [4]' 4 
+|             `-TypedefType 0x7fd2be816140 'GLchan' sugar
+|               |-Typedef 0x7fd2be815c50 'GLchan'
+|               `-TypedefType 0x7fd2be815c20 'GLushort' sugar
+|                 |-Typedef 0x7fd2be815ae0 'GLushort'
+|                 `-BuiltinType 0x7fd2bf020260 'unsigned short'
+|-FunctionDecl 0x7fd2bf822e58 <line:42:1, line:48:1> line:42:1 used lerp_2d 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)'
+| |-ParmVarDecl 0x7fd2bf822a90 <col:10, col:18> col:18 used a 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf822b00 <col:21, col:29> col:29 used b 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf822b70 <col:32, col:40> col:40 used v00 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf822c00 <col:45, col:53> col:53 used v10 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf822c70 <col:58, col:66> col:66 used v01 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf822ce0 <line:43:3, col:11> col:11 used v11 'GLfloat':'float'
+| `-CompoundStmt 0x7fd2bf823800 <line:44:1, line:48:1>
+|   |-DeclStmt 0x7fd2bf823210 <line:45:3, col:56>
+|   | `-VarDecl 0x7fd2bf822f78 <col:3, col:55> col:17 used temp0 'const GLfloat':'const float' cinit
+|   |   `-ParenExpr 0x7fd2bf8231f0 <col:25, col:55> 'float'
+|   |     `-BinaryOperator 0x7fd2bf8231c8 <col:26, col:54> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fd2bf8231b0 <col:26, col:30> 'GLfloat':'float' <LValueToRValue>
+|   |       | `-ParenExpr 0x7fd2bf823000 <col:26, col:30> 'GLfloat':'float' lvalue
+|   |       |   `-DeclRefExpr 0x7fd2bf822fd8 <col:27> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822b70 'v00' 'GLfloat':'float'
+|   |       `-BinaryOperator 0x7fd2bf823188 <col:34, col:54> 'float' '*'
+|   |         |-ImplicitCastExpr 0x7fd2bf823170 <col:34, col:36> 'GLfloat':'float' <LValueToRValue>
+|   |         | `-ParenExpr 0x7fd2bf823048 <col:34, col:36> 'GLfloat':'float' lvalue
+|   |         |   `-DeclRefExpr 0x7fd2bf823020 <col:35> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822a90 'a' 'GLfloat':'float'
+|   |         `-ParenExpr 0x7fd2bf823150 <col:40, col:54> 'float'
+|   |           `-BinaryOperator 0x7fd2bf823128 <col:41, col:53> 'float' '-'
+|   |             |-ImplicitCastExpr 0x7fd2bf8230f8 <col:41, col:45> 'GLfloat':'float' <LValueToRValue>
+|   |             | `-ParenExpr 0x7fd2bf823090 <col:41, col:45> 'GLfloat':'float' lvalue
+|   |             |   `-DeclRefExpr 0x7fd2bf823068 <col:42> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822c00 'v10' 'GLfloat':'float'
+|   |             `-ImplicitCastExpr 0x7fd2bf823110 <col:49, col:53> 'GLfloat':'float' <LValueToRValue>
+|   |               `-ParenExpr 0x7fd2bf8230d8 <col:49, col:53> 'GLfloat':'float' lvalue
+|   |                 `-DeclRefExpr 0x7fd2bf8230b0 <col:50> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822b70 'v00' 'GLfloat':'float'
+|   |-DeclStmt 0x7fd2bf8234d0 <line:46:3, col:56>
+|   | `-VarDecl 0x7fd2bf823238 <col:3, col:55> col:17 used temp1 'const GLfloat':'const float' cinit
+|   |   `-ParenExpr 0x7fd2bf8234b0 <col:25, col:55> 'float'
+|   |     `-BinaryOperator 0x7fd2bf823488 <col:26, col:54> 'float' '+'
+|   |       |-ImplicitCastExpr 0x7fd2bf823470 <col:26, col:30> 'GLfloat':'float' <LValueToRValue>
+|   |       | `-ParenExpr 0x7fd2bf8232c0 <col:26, col:30> 'GLfloat':'float' lvalue
+|   |       |   `-DeclRefExpr 0x7fd2bf823298 <col:27> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822c70 'v01' 'GLfloat':'float'
+|   |       `-BinaryOperator 0x7fd2bf823448 <col:34, col:54> 'float' '*'
+|   |         |-ImplicitCastExpr 0x7fd2bf823430 <col:34, col:36> 'GLfloat':'float' <LValueToRValue>
+|   |         | `-ParenExpr 0x7fd2bf823308 <col:34, col:36> 'GLfloat':'float' lvalue
+|   |         |   `-DeclRefExpr 0x7fd2bf8232e0 <col:35> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822a90 'a' 'GLfloat':'float'
+|   |         `-ParenExpr 0x7fd2bf823410 <col:40, col:54> 'float'
+|   |           `-BinaryOperator 0x7fd2bf8233e8 <col:41, col:53> 'float' '-'
+|   |             |-ImplicitCastExpr 0x7fd2bf8233b8 <col:41, col:45> 'GLfloat':'float' <LValueToRValue>
+|   |             | `-ParenExpr 0x7fd2bf823350 <col:41, col:45> 'GLfloat':'float' lvalue
+|   |             |   `-DeclRefExpr 0x7fd2bf823328 <col:42> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822ce0 'v11' 'GLfloat':'float'
+|   |             `-ImplicitCastExpr 0x7fd2bf8233d0 <col:49, col:53> 'GLfloat':'float' <LValueToRValue>
+|   |               `-ParenExpr 0x7fd2bf823398 <col:49, col:53> 'GLfloat':'float' lvalue
+|   |                 `-DeclRefExpr 0x7fd2bf823370 <col:50> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822c70 'v01' 'GLfloat':'float'
+|   `-ReturnStmt 0x7fd2bf8237e8 <line:47:3, col:46>
+|     `-ImplicitCastExpr 0x7fd2bf823720 <col:10, col:46> 'int' <FloatingToIntegral>
+|       `-ParenExpr 0x7fd2bf823700 <col:10, col:46> 'float'
+|         `-BinaryOperator 0x7fd2bf8236d8 <col:11, col:45> 'float' '+'
+|           |-ImplicitCastExpr 0x7fd2bf8236c0 <col:11, col:17> 'GLfloat':'float' <LValueToRValue>
+|           | `-ParenExpr 0x7fd2bf823510 <col:11, col:17> 'const GLfloat':'const float' lvalue
+|           |   `-DeclRefExpr 0x7fd2bf8234e8 <col:12> 'const GLfloat':'const float' lvalue Var 0x7fd2bf822f78 'temp0' 'const GLfloat':'const float'
+|           `-BinaryOperator 0x7fd2bf823698 <col:21, col:45> 'float' '*'
+|             |-ImplicitCastExpr 0x7fd2bf823680 <col:21, col:23> 'GLfloat':'float' <LValueToRValue>
+|             | `-ParenExpr 0x7fd2bf823558 <col:21, col:23> 'GLfloat':'float' lvalue
+|             |   `-DeclRefExpr 0x7fd2bf823530 <col:22> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf822b00 'b' 'GLfloat':'float'
+|             `-ParenExpr 0x7fd2bf823660 <col:27, col:45> 'float'
+|               `-BinaryOperator 0x7fd2bf823638 <col:28, col:44> 'float' '-'
+|                 |-ImplicitCastExpr 0x7fd2bf823608 <col:28, col:34> 'GLfloat':'float' <LValueToRValue>
+|                 | `-ParenExpr 0x7fd2bf8235a0 <col:28, col:34> 'const GLfloat':'const float' lvalue
+|                 |   `-DeclRefExpr 0x7fd2bf823578 <col:29> 'const GLfloat':'const float' lvalue Var 0x7fd2bf823238 'temp1' 'const GLfloat':'const float'
+|                 `-ImplicitCastExpr 0x7fd2bf823620 <col:38, col:44> 'GLfloat':'float' <LValueToRValue>
+|                   `-ParenExpr 0x7fd2bf8235e8 <col:38, col:44> 'const GLfloat':'const float' lvalue
+|                     `-DeclRefExpr 0x7fd2bf8235c0 <col:39> 'const GLfloat':'const float' lvalue Var 0x7fd2bf822f78 'temp0' 'const GLfloat':'const float'
+|-FunctionDecl 0x7fd2be00d690 <line:49:1, line:55:1> line:50:1 used lerp_rgba 'void (GLchan *, GLfloat, const GLchan *, const GLchan *)' static inline
+| |-ParmVarDecl 0x7fd2bf8238a0 <col:12, col:27> col:19 used result 'GLchan *':'GLchan *'
+| |-ParmVarDecl 0x7fd2bf823910 <col:30, col:38> col:38 used t 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf823a80 <col:41, col:57> col:54 used a 'const GLchan *':'const GLchan *'
+| |-ParmVarDecl 0x7fd2bf823b20 <col:60, col:76> col:73 used b 'const GLchan *':'const GLchan *'
+| `-CompoundStmt 0x7fd2bf031f88 <line:51:1, line:55:1>
+|   |-BinaryOperator 0x7fd2be00dc90 <line:52:3, col:65> 'GLchan':'unsigned short' '='
+|   | |-ArraySubscriptExpr 0x7fd2be00d7b0 <col:3, col:11> 'GLchan':'unsigned short' lvalue
+|   | | |-ImplicitCastExpr 0x7fd2be00d798 <col:3> 'GLchan *':'GLchan *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd2be00d750 <col:3> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf8238a0 'result' 'GLchan *':'GLchan *'
+|   | | `-IntegerLiteral 0x7fd2be00d778 <col:10> 'int' 0
+|   | `-CStyleCastExpr 0x7fd2be00dc68 <col:15, col:65> 'GLchan':'unsigned short' <FloatingToIntegral>
+|   |   `-ParenExpr 0x7fd2be00dc48 <col:24, col:65> 'double'
+|   |     `-BinaryOperator 0x7fd2be00dbe0 <col:25, col:62> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7fd2be00dbc8 <col:25, col:58> 'double' <FloatingCast>
+|   |       | `-ParenExpr 0x7fd2be00db88 <col:25, col:58> 'float'
+|   |       |   `-BinaryOperator 0x7fd2be00db60 <col:26, col:57> 'float' '+'
+|   |       |     |-ImplicitCastExpr 0x7fd2be00db48 <col:26, col:31> 'float' <IntegralToFloating>
+|   |       |     | `-ImplicitCastExpr 0x7fd2be00db30 <col:26, col:31> 'int' <IntegralCast>
+|   |       |     |   `-ImplicitCastExpr 0x7fd2be00db18 <col:26, col:31> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |     |     `-ParenExpr 0x7fd2be00d860 <col:26, col:31> 'const GLchan':'const unsigned short' lvalue
+|   |       |     |       `-ArraySubscriptExpr 0x7fd2be00d838 <col:27, col:30> 'const GLchan':'const unsigned short' lvalue
+|   |       |     |         |-ImplicitCastExpr 0x7fd2be00d820 <col:27> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |     |         | `-DeclRefExpr 0x7fd2be00d7d8 <col:27> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823a80 'a' 'const GLchan *':'const GLchan *'
+|   |       |     |         `-IntegerLiteral 0x7fd2be00d800 <col:29> 'int' 0
+|   |       |     `-BinaryOperator 0x7fd2be00daf0 <col:35, col:57> 'float' '*'
+|   |       |       |-ImplicitCastExpr 0x7fd2be00dac0 <col:35, col:37> 'GLfloat':'float' <LValueToRValue>
+|   |       |       | `-ParenExpr 0x7fd2be00d8a8 <col:35, col:37> 'GLfloat':'float' lvalue
+|   |       |       |   `-DeclRefExpr 0x7fd2be00d880 <col:36> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf823910 't' 'GLfloat':'float'
+|   |       |       `-ImplicitCastExpr 0x7fd2be00dad8 <col:41, col:57> 'float' <IntegralToFloating>
+|   |       |         `-ParenExpr 0x7fd2be00daa0 <col:41, col:57> 'int'
+|   |       |           `-BinaryOperator 0x7fd2be00da78 <col:42, col:56> 'int' '-'
+|   |       |             |-ImplicitCastExpr 0x7fd2be00da30 <col:42, col:47> 'int' <IntegralCast>
+|   |       |             | `-ImplicitCastExpr 0x7fd2be00da18 <col:42, col:47> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |             |   `-ParenExpr 0x7fd2be00d950 <col:42, col:47> 'const GLchan':'const unsigned short' lvalue
+|   |       |             |     `-ArraySubscriptExpr 0x7fd2be00d928 <col:43, col:46> 'const GLchan':'const unsigned short' lvalue
+|   |       |             |       |-ImplicitCastExpr 0x7fd2be00d910 <col:43> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |             |       | `-DeclRefExpr 0x7fd2be00d8c8 <col:43> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823b20 'b' 'const GLchan *':'const GLchan *'
+|   |       |             |       `-IntegerLiteral 0x7fd2be00d8f0 <col:45> 'int' 0
+|   |       |             `-ImplicitCastExpr 0x7fd2be00da60 <col:51, col:56> 'int' <IntegralCast>
+|   |       |               `-ImplicitCastExpr 0x7fd2be00da48 <col:51, col:56> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |                 `-ParenExpr 0x7fd2be00d9f8 <col:51, col:56> 'const GLchan':'const unsigned short' lvalue
+|   |       |                   `-ArraySubscriptExpr 0x7fd2be00d9d0 <col:52, col:55> 'const GLchan':'const unsigned short' lvalue
+|   |       |                     |-ImplicitCastExpr 0x7fd2be00d9b8 <col:52> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |                     | `-DeclRefExpr 0x7fd2be00d970 <col:52> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823a80 'a' 'const GLchan *':'const GLchan *'
+|   |       |                     `-IntegerLiteral 0x7fd2be00d998 <col:54> 'int' 0
+|   |       `-FloatingLiteral 0x7fd2be00dba8 <col:62> 'double' 5.000000e-01
+|   |-BinaryOperator 0x7fd2be00e1f8 <line:53:3, col:65> 'GLchan':'unsigned short' '='
+|   | |-ArraySubscriptExpr 0x7fd2be00dd18 <col:3, col:11> 'GLchan':'unsigned short' lvalue
+|   | | |-ImplicitCastExpr 0x7fd2be00dd00 <col:3> 'GLchan *':'GLchan *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd2be00dcb8 <col:3> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf8238a0 'result' 'GLchan *':'GLchan *'
+|   | | `-IntegerLiteral 0x7fd2be00dce0 <col:10> 'int' 1
+|   | `-CStyleCastExpr 0x7fd2be00e1d0 <col:15, col:65> 'GLchan':'unsigned short' <FloatingToIntegral>
+|   |   `-ParenExpr 0x7fd2be00e1b0 <col:24, col:65> 'double'
+|   |     `-BinaryOperator 0x7fd2be00e148 <col:25, col:62> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7fd2be00e130 <col:25, col:58> 'double' <FloatingCast>
+|   |       | `-ParenExpr 0x7fd2be00e0f0 <col:25, col:58> 'float'
+|   |       |   `-BinaryOperator 0x7fd2be00e0c8 <col:26, col:57> 'float' '+'
+|   |       |     |-ImplicitCastExpr 0x7fd2be00e0b0 <col:26, col:31> 'float' <IntegralToFloating>
+|   |       |     | `-ImplicitCastExpr 0x7fd2be00e098 <col:26, col:31> 'int' <IntegralCast>
+|   |       |     |   `-ImplicitCastExpr 0x7fd2be00e080 <col:26, col:31> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |     |     `-ParenExpr 0x7fd2be00ddc8 <col:26, col:31> 'const GLchan':'const unsigned short' lvalue
+|   |       |     |       `-ArraySubscriptExpr 0x7fd2be00dda0 <col:27, col:30> 'const GLchan':'const unsigned short' lvalue
+|   |       |     |         |-ImplicitCastExpr 0x7fd2be00dd88 <col:27> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |     |         | `-DeclRefExpr 0x7fd2be00dd40 <col:27> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823a80 'a' 'const GLchan *':'const GLchan *'
+|   |       |     |         `-IntegerLiteral 0x7fd2be00dd68 <col:29> 'int' 1
+|   |       |     `-BinaryOperator 0x7fd2be00e058 <col:35, col:57> 'float' '*'
+|   |       |       |-ImplicitCastExpr 0x7fd2be00e028 <col:35, col:37> 'GLfloat':'float' <LValueToRValue>
+|   |       |       | `-ParenExpr 0x7fd2be00de10 <col:35, col:37> 'GLfloat':'float' lvalue
+|   |       |       |   `-DeclRefExpr 0x7fd2be00dde8 <col:36> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf823910 't' 'GLfloat':'float'
+|   |       |       `-ImplicitCastExpr 0x7fd2be00e040 <col:41, col:57> 'float' <IntegralToFloating>
+|   |       |         `-ParenExpr 0x7fd2be00e008 <col:41, col:57> 'int'
+|   |       |           `-BinaryOperator 0x7fd2be00dfe0 <col:42, col:56> 'int' '-'
+|   |       |             |-ImplicitCastExpr 0x7fd2be00df98 <col:42, col:47> 'int' <IntegralCast>
+|   |       |             | `-ImplicitCastExpr 0x7fd2be00df80 <col:42, col:47> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |             |   `-ParenExpr 0x7fd2be00deb8 <col:42, col:47> 'const GLchan':'const unsigned short' lvalue
+|   |       |             |     `-ArraySubscriptExpr 0x7fd2be00de90 <col:43, col:46> 'const GLchan':'const unsigned short' lvalue
+|   |       |             |       |-ImplicitCastExpr 0x7fd2be00de78 <col:43> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |             |       | `-DeclRefExpr 0x7fd2be00de30 <col:43> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823b20 'b' 'const GLchan *':'const GLchan *'
+|   |       |             |       `-IntegerLiteral 0x7fd2be00de58 <col:45> 'int' 1
+|   |       |             `-ImplicitCastExpr 0x7fd2be00dfc8 <col:51, col:56> 'int' <IntegralCast>
+|   |       |               `-ImplicitCastExpr 0x7fd2be00dfb0 <col:51, col:56> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |                 `-ParenExpr 0x7fd2be00df60 <col:51, col:56> 'const GLchan':'const unsigned short' lvalue
+|   |       |                   `-ArraySubscriptExpr 0x7fd2be00df38 <col:52, col:55> 'const GLchan':'const unsigned short' lvalue
+|   |       |                     |-ImplicitCastExpr 0x7fd2be00df20 <col:52> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |                     | `-DeclRefExpr 0x7fd2be00ded8 <col:52> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823a80 'a' 'const GLchan *':'const GLchan *'
+|   |       |                     `-IntegerLiteral 0x7fd2be00df00 <col:54> 'int' 1
+|   |       `-FloatingLiteral 0x7fd2be00e110 <col:62> 'double' 5.000000e-01
+|   `-BinaryOperator 0x7fd2bf031f60 <line:54:3, col:65> 'GLchan':'unsigned short' '='
+|     |-ArraySubscriptExpr 0x7fd2be00e280 <col:3, col:11> 'GLchan':'unsigned short' lvalue
+|     | |-ImplicitCastExpr 0x7fd2be00e268 <col:3> 'GLchan *':'GLchan *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd2be00e220 <col:3> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf8238a0 'result' 'GLchan *':'GLchan *'
+|     | `-IntegerLiteral 0x7fd2be00e248 <col:10> 'int' 2
+|     `-CStyleCastExpr 0x7fd2bf031f38 <col:15, col:65> 'GLchan':'unsigned short' <FloatingToIntegral>
+|       `-ParenExpr 0x7fd2bf031f18 <col:24, col:65> 'double'
+|         `-BinaryOperator 0x7fd2bf031eb0 <col:25, col:62> 'double' '+'
+|           |-ImplicitCastExpr 0x7fd2bf031e98 <col:25, col:58> 'double' <FloatingCast>
+|           | `-ParenExpr 0x7fd2bf031e58 <col:25, col:58> 'float'
+|           |   `-BinaryOperator 0x7fd2bf031e30 <col:26, col:57> 'float' '+'
+|           |     |-ImplicitCastExpr 0x7fd2bf031e18 <col:26, col:31> 'float' <IntegralToFloating>
+|           |     | `-ImplicitCastExpr 0x7fd2bf031e00 <col:26, col:31> 'int' <IntegralCast>
+|           |     |   `-ImplicitCastExpr 0x7fd2be00e5e8 <col:26, col:31> 'GLchan':'unsigned short' <LValueToRValue>
+|           |     |     `-ParenExpr 0x7fd2be00e330 <col:26, col:31> 'const GLchan':'const unsigned short' lvalue
+|           |     |       `-ArraySubscriptExpr 0x7fd2be00e308 <col:27, col:30> 'const GLchan':'const unsigned short' lvalue
+|           |     |         |-ImplicitCastExpr 0x7fd2be00e2f0 <col:27> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |     |         | `-DeclRefExpr 0x7fd2be00e2a8 <col:27> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823a80 'a' 'const GLchan *':'const GLchan *'
+|           |     |         `-IntegerLiteral 0x7fd2be00e2d0 <col:29> 'int' 2
+|           |     `-BinaryOperator 0x7fd2be00e5c0 <col:35, col:57> 'float' '*'
+|           |       |-ImplicitCastExpr 0x7fd2be00e590 <col:35, col:37> 'GLfloat':'float' <LValueToRValue>
+|           |       | `-ParenExpr 0x7fd2be00e378 <col:35, col:37> 'GLfloat':'float' lvalue
+|           |       |   `-DeclRefExpr 0x7fd2be00e350 <col:36> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf823910 't' 'GLfloat':'float'
+|           |       `-ImplicitCastExpr 0x7fd2be00e5a8 <col:41, col:57> 'float' <IntegralToFloating>
+|           |         `-ParenExpr 0x7fd2be00e570 <col:41, col:57> 'int'
+|           |           `-BinaryOperator 0x7fd2be00e548 <col:42, col:56> 'int' '-'
+|           |             |-ImplicitCastExpr 0x7fd2be00e500 <col:42, col:47> 'int' <IntegralCast>
+|           |             | `-ImplicitCastExpr 0x7fd2be00e4e8 <col:42, col:47> 'GLchan':'unsigned short' <LValueToRValue>
+|           |             |   `-ParenExpr 0x7fd2be00e420 <col:42, col:47> 'const GLchan':'const unsigned short' lvalue
+|           |             |     `-ArraySubscriptExpr 0x7fd2be00e3f8 <col:43, col:46> 'const GLchan':'const unsigned short' lvalue
+|           |             |       |-ImplicitCastExpr 0x7fd2be00e3e0 <col:43> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |             |       | `-DeclRefExpr 0x7fd2be00e398 <col:43> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823b20 'b' 'const GLchan *':'const GLchan *'
+|           |             |       `-IntegerLiteral 0x7fd2be00e3c0 <col:45> 'int' 2
+|           |             `-ImplicitCastExpr 0x7fd2be00e530 <col:51, col:56> 'int' <IntegralCast>
+|           |               `-ImplicitCastExpr 0x7fd2be00e518 <col:51, col:56> 'GLchan':'unsigned short' <LValueToRValue>
+|           |                 `-ParenExpr 0x7fd2be00e4c8 <col:51, col:56> 'const GLchan':'const unsigned short' lvalue
+|           |                   `-ArraySubscriptExpr 0x7fd2be00e4a0 <col:52, col:55> 'const GLchan':'const unsigned short' lvalue
+|           |                     |-ImplicitCastExpr 0x7fd2be00e488 <col:52> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |                     | `-DeclRefExpr 0x7fd2be00e440 <col:52> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf823a80 'a' 'const GLchan *':'const GLchan *'
+|           |                     `-IntegerLiteral 0x7fd2be00e468 <col:54> 'int' 2
+|           `-FloatingLiteral 0x7fd2bf031e78 <col:62> 'double' 5.000000e-01
+|-FunctionDecl 0x7fd2bf0324e0 <line:56:1, line:63:1> line:57:1 used lerp_rgba_2d 'void (GLchan *, GLfloat, GLfloat, const GLchan *, const GLchan *, const GLchan *, const GLchan *)' static inline
+| |-ParmVarDecl 0x7fd2bf031ff0 <col:15, col:30> col:22 used result 'GLchan *':'GLchan *'
+| |-ParmVarDecl 0x7fd2bf032060 <col:33, col:41> col:41 used a 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf0320d0 <col:44, col:52> col:52 used b 'GLfloat':'float'
+| |-ParmVarDecl 0x7fd2bf032170 <col:55, col:73> col:68 used t00 'const GLchan *':'const GLchan *'
+| |-ParmVarDecl 0x7fd2bf032210 <line:58:8, col:26> col:21 used t10 'const GLchan *':'const GLchan *'
+| |-ParmVarDecl 0x7fd2bf0322b0 <col:29, col:47> col:42 used t01 'const GLchan *':'const GLchan *'
+| |-ParmVarDecl 0x7fd2bf032350 <col:50, col:68> col:63 used t11 'const GLchan *':'const GLchan *'
+| `-CompoundStmt 0x7fd2bf0336c8 <line:59:1, line:63:1>
+|   |-BinaryOperator 0x7fd2bf032b80 <line:60:3, col:77> 'GLchan':'unsigned short' '='
+|   | |-ArraySubscriptExpr 0x7fd2bf032618 <col:3, col:11> 'GLchan':'unsigned short' lvalue
+|   | | |-ImplicitCastExpr 0x7fd2bf032600 <col:3> 'GLchan *':'GLchan *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd2bf0325b8 <col:3> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf031ff0 'result' 'GLchan *':'GLchan *'
+|   | | `-IntegerLiteral 0x7fd2bf0325e0 <col:10> 'int' 0
+|   | `-CStyleCastExpr 0x7fd2bf032b58 <col:15, col:77> 'GLchan':'unsigned short' <FloatingToIntegral>
+|   |   `-ParenExpr 0x7fd2bf032b38 <col:24, col:77> 'double'
+|   |     `-BinaryOperator 0x7fd2bf032ad0 <col:25, col:74> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7fd2bf032ab8 <col:25, col:70> 'double' <IntegralToFloating>
+|   |       | `-CallExpr 0x7fd2bf032950 <col:25, col:70> 'int'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032938 <col:25> 'int (*)(GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)' <FunctionToPointerDecay>
+|   |       |   | `-DeclRefExpr 0x7fd2bf032640 <col:25> 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)' Function 0x7fd2bf822e58 'lerp_2d' 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf0329a8 <col:34> 'GLfloat':'float' <LValueToRValue>
+|   |       |   | `-DeclRefExpr 0x7fd2bf032668 <col:34> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf032060 'a' 'GLfloat':'float'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf0329c0 <col:37> 'GLfloat':'float' <LValueToRValue>
+|   |       |   | `-DeclRefExpr 0x7fd2bf032690 <col:37> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf0320d0 'b' 'GLfloat':'float'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf0329f0 <col:40, col:45> 'GLfloat':'float' <IntegralToFloating>
+|   |       |   | `-ImplicitCastExpr 0x7fd2bf0329d8 <col:40, col:45> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |   |   `-ArraySubscriptExpr 0x7fd2bf032718 <col:40, col:45> 'const GLchan':'const unsigned short' lvalue
+|   |       |   |     |-ImplicitCastExpr 0x7fd2bf032700 <col:40> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |   |     | `-DeclRefExpr 0x7fd2bf0326b8 <col:40> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032170 't00' 'const GLchan *':'const GLchan *'
+|   |       |   |     `-IntegerLiteral 0x7fd2bf0326e0 <col:44> 'int' 0
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032a20 <col:48, col:53> 'GLfloat':'float' <IntegralToFloating>
+|   |       |   | `-ImplicitCastExpr 0x7fd2bf032a08 <col:48, col:53> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |   |   `-ArraySubscriptExpr 0x7fd2bf0327a0 <col:48, col:53> 'const GLchan':'const unsigned short' lvalue
+|   |       |   |     |-ImplicitCastExpr 0x7fd2bf032788 <col:48> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |   |     | `-DeclRefExpr 0x7fd2bf032740 <col:48> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032210 't10' 'const GLchan *':'const GLchan *'
+|   |       |   |     `-IntegerLiteral 0x7fd2bf032768 <col:52> 'int' 0
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032a50 <col:56, col:61> 'GLfloat':'float' <IntegralToFloating>
+|   |       |   | `-ImplicitCastExpr 0x7fd2bf032a38 <col:56, col:61> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |   |   `-ArraySubscriptExpr 0x7fd2bf032828 <col:56, col:61> 'const GLchan':'const unsigned short' lvalue
+|   |       |   |     |-ImplicitCastExpr 0x7fd2bf032810 <col:56> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |   |     | `-DeclRefExpr 0x7fd2bf0327c8 <col:56> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf0322b0 't01' 'const GLchan *':'const GLchan *'
+|   |       |   |     `-IntegerLiteral 0x7fd2bf0327f0 <col:60> 'int' 0
+|   |       |   `-ImplicitCastExpr 0x7fd2bf032a80 <col:64, col:69> 'GLfloat':'float' <IntegralToFloating>
+|   |       |     `-ImplicitCastExpr 0x7fd2bf032a68 <col:64, col:69> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |       `-ArraySubscriptExpr 0x7fd2bf0328b0 <col:64, col:69> 'const GLchan':'const unsigned short' lvalue
+|   |       |         |-ImplicitCastExpr 0x7fd2bf032898 <col:64> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |         | `-DeclRefExpr 0x7fd2bf032850 <col:64> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032350 't11' 'const GLchan *':'const GLchan *'
+|   |       |         `-IntegerLiteral 0x7fd2bf032878 <col:68> 'int' 0
+|   |       `-FloatingLiteral 0x7fd2bf032a98 <col:74> 'double' 5.000000e-01
+|   |-BinaryOperator 0x7fd2bf033110 <line:61:3, col:77> 'GLchan':'unsigned short' '='
+|   | |-ArraySubscriptExpr 0x7fd2bf032c08 <col:3, col:11> 'GLchan':'unsigned short' lvalue
+|   | | |-ImplicitCastExpr 0x7fd2bf032bf0 <col:3> 'GLchan *':'GLchan *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd2bf032ba8 <col:3> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf031ff0 'result' 'GLchan *':'GLchan *'
+|   | | `-IntegerLiteral 0x7fd2bf032bd0 <col:10> 'int' 1
+|   | `-CStyleCastExpr 0x7fd2bf0330e8 <col:15, col:77> 'GLchan':'unsigned short' <FloatingToIntegral>
+|   |   `-ParenExpr 0x7fd2bf0330c8 <col:24, col:77> 'double'
+|   |     `-BinaryOperator 0x7fd2bf033060 <col:25, col:74> 'double' '+'
+|   |       |-ImplicitCastExpr 0x7fd2bf033048 <col:25, col:70> 'double' <IntegralToFloating>
+|   |       | `-CallExpr 0x7fd2bf032ee0 <col:25, col:70> 'int'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032ec8 <col:25> 'int (*)(GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)' <FunctionToPointerDecay>
+|   |       |   | `-DeclRefExpr 0x7fd2bf032c30 <col:25> 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)' Function 0x7fd2bf822e58 'lerp_2d' 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032f38 <col:34> 'GLfloat':'float' <LValueToRValue>
+|   |       |   | `-DeclRefExpr 0x7fd2bf032c58 <col:34> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf032060 'a' 'GLfloat':'float'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032f50 <col:37> 'GLfloat':'float' <LValueToRValue>
+|   |       |   | `-DeclRefExpr 0x7fd2bf032c80 <col:37> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf0320d0 'b' 'GLfloat':'float'
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032f80 <col:40, col:45> 'GLfloat':'float' <IntegralToFloating>
+|   |       |   | `-ImplicitCastExpr 0x7fd2bf032f68 <col:40, col:45> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |   |   `-ArraySubscriptExpr 0x7fd2bf032d08 <col:40, col:45> 'const GLchan':'const unsigned short' lvalue
+|   |       |   |     |-ImplicitCastExpr 0x7fd2bf032cf0 <col:40> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |   |     | `-DeclRefExpr 0x7fd2bf032ca8 <col:40> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032170 't00' 'const GLchan *':'const GLchan *'
+|   |       |   |     `-IntegerLiteral 0x7fd2bf032cd0 <col:44> 'int' 1
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032fb0 <col:48, col:53> 'GLfloat':'float' <IntegralToFloating>
+|   |       |   | `-ImplicitCastExpr 0x7fd2bf032f98 <col:48, col:53> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |   |   `-ArraySubscriptExpr 0x7fd2bf032d90 <col:48, col:53> 'const GLchan':'const unsigned short' lvalue
+|   |       |   |     |-ImplicitCastExpr 0x7fd2bf032d78 <col:48> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |   |     | `-DeclRefExpr 0x7fd2bf032d30 <col:48> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032210 't10' 'const GLchan *':'const GLchan *'
+|   |       |   |     `-IntegerLiteral 0x7fd2bf032d58 <col:52> 'int' 1
+|   |       |   |-ImplicitCastExpr 0x7fd2bf032fe0 <col:56, col:61> 'GLfloat':'float' <IntegralToFloating>
+|   |       |   | `-ImplicitCastExpr 0x7fd2bf032fc8 <col:56, col:61> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |   |   `-ArraySubscriptExpr 0x7fd2bf032e18 <col:56, col:61> 'const GLchan':'const unsigned short' lvalue
+|   |       |   |     |-ImplicitCastExpr 0x7fd2bf032e00 <col:56> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |   |     | `-DeclRefExpr 0x7fd2bf032db8 <col:56> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf0322b0 't01' 'const GLchan *':'const GLchan *'
+|   |       |   |     `-IntegerLiteral 0x7fd2bf032de0 <col:60> 'int' 1
+|   |       |   `-ImplicitCastExpr 0x7fd2bf033010 <col:64, col:69> 'GLfloat':'float' <IntegralToFloating>
+|   |       |     `-ImplicitCastExpr 0x7fd2bf032ff8 <col:64, col:69> 'GLchan':'unsigned short' <LValueToRValue>
+|   |       |       `-ArraySubscriptExpr 0x7fd2bf032ea0 <col:64, col:69> 'const GLchan':'const unsigned short' lvalue
+|   |       |         |-ImplicitCastExpr 0x7fd2bf032e88 <col:64> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|   |       |         | `-DeclRefExpr 0x7fd2bf032e40 <col:64> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032350 't11' 'const GLchan *':'const GLchan *'
+|   |       |         `-IntegerLiteral 0x7fd2bf032e68 <col:68> 'int' 1
+|   |       `-FloatingLiteral 0x7fd2bf033028 <col:74> 'double' 5.000000e-01
+|   `-BinaryOperator 0x7fd2bf0336a0 <line:62:3, col:77> 'GLchan':'unsigned short' '='
+|     |-ArraySubscriptExpr 0x7fd2bf033198 <col:3, col:11> 'GLchan':'unsigned short' lvalue
+|     | |-ImplicitCastExpr 0x7fd2bf033180 <col:3> 'GLchan *':'GLchan *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd2bf033138 <col:3> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf031ff0 'result' 'GLchan *':'GLchan *'
+|     | `-IntegerLiteral 0x7fd2bf033160 <col:10> 'int' 2
+|     `-CStyleCastExpr 0x7fd2bf033678 <col:15, col:77> 'GLchan':'unsigned short' <FloatingToIntegral>
+|       `-ParenExpr 0x7fd2bf033658 <col:24, col:77> 'double'
+|         `-BinaryOperator 0x7fd2bf0335f0 <col:25, col:74> 'double' '+'
+|           |-ImplicitCastExpr 0x7fd2bf0335d8 <col:25, col:70> 'double' <IntegralToFloating>
+|           | `-CallExpr 0x7fd2bf033470 <col:25, col:70> 'int'
+|           |   |-ImplicitCastExpr 0x7fd2bf033458 <col:25> 'int (*)(GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)' <FunctionToPointerDecay>
+|           |   | `-DeclRefExpr 0x7fd2bf0331c0 <col:25> 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)' Function 0x7fd2bf822e58 'lerp_2d' 'int (GLfloat, GLfloat, GLfloat, GLfloat, GLfloat, GLfloat)'
+|           |   |-ImplicitCastExpr 0x7fd2bf0334c8 <col:34> 'GLfloat':'float' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7fd2bf0331e8 <col:34> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf032060 'a' 'GLfloat':'float'
+|           |   |-ImplicitCastExpr 0x7fd2bf0334e0 <col:37> 'GLfloat':'float' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7fd2bf033210 <col:37> 'GLfloat':'float' lvalue ParmVar 0x7fd2bf0320d0 'b' 'GLfloat':'float'
+|           |   |-ImplicitCastExpr 0x7fd2bf033510 <col:40, col:45> 'GLfloat':'float' <IntegralToFloating>
+|           |   | `-ImplicitCastExpr 0x7fd2bf0334f8 <col:40, col:45> 'GLchan':'unsigned short' <LValueToRValue>
+|           |   |   `-ArraySubscriptExpr 0x7fd2bf033298 <col:40, col:45> 'const GLchan':'const unsigned short' lvalue
+|           |   |     |-ImplicitCastExpr 0x7fd2bf033280 <col:40> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |   |     | `-DeclRefExpr 0x7fd2bf033238 <col:40> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032170 't00' 'const GLchan *':'const GLchan *'
+|           |   |     `-IntegerLiteral 0x7fd2bf033260 <col:44> 'int' 2
+|           |   |-ImplicitCastExpr 0x7fd2bf033540 <col:48, col:53> 'GLfloat':'float' <IntegralToFloating>
+|           |   | `-ImplicitCastExpr 0x7fd2bf033528 <col:48, col:53> 'GLchan':'unsigned short' <LValueToRValue>
+|           |   |   `-ArraySubscriptExpr 0x7fd2bf033320 <col:48, col:53> 'const GLchan':'const unsigned short' lvalue
+|           |   |     |-ImplicitCastExpr 0x7fd2bf033308 <col:48> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |   |     | `-DeclRefExpr 0x7fd2bf0332c0 <col:48> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032210 't10' 'const GLchan *':'const GLchan *'
+|           |   |     `-IntegerLiteral 0x7fd2bf0332e8 <col:52> 'int' 2
+|           |   |-ImplicitCastExpr 0x7fd2bf033570 <col:56, col:61> 'GLfloat':'float' <IntegralToFloating>
+|           |   | `-ImplicitCastExpr 0x7fd2bf033558 <col:56, col:61> 'GLchan':'unsigned short' <LValueToRValue>
+|           |   |   `-ArraySubscriptExpr 0x7fd2bf0333a8 <col:56, col:61> 'const GLchan':'const unsigned short' lvalue
+|           |   |     |-ImplicitCastExpr 0x7fd2bf033390 <col:56> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |   |     | `-DeclRefExpr 0x7fd2bf033348 <col:56> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf0322b0 't01' 'const GLchan *':'const GLchan *'
+|           |   |     `-IntegerLiteral 0x7fd2bf033370 <col:60> 'int' 2
+|           |   `-ImplicitCastExpr 0x7fd2bf0335a0 <col:64, col:69> 'GLfloat':'float' <IntegralToFloating>
+|           |     `-ImplicitCastExpr 0x7fd2bf033588 <col:64, col:69> 'GLchan':'unsigned short' <LValueToRValue>
+|           |       `-ArraySubscriptExpr 0x7fd2bf033430 <col:64, col:69> 'const GLchan':'const unsigned short' lvalue
+|           |         |-ImplicitCastExpr 0x7fd2bf033418 <col:64> 'const GLchan *':'const GLchan *' <LValueToRValue>
+|           |         | `-DeclRefExpr 0x7fd2bf0333d0 <col:64> 'const GLchan *':'const GLchan *' lvalue ParmVar 0x7fd2bf032350 't11' 'const GLchan *':'const GLchan *'
+|           |         `-IntegerLiteral 0x7fd2bf0333f8 <col:68> 'int' 2
+|           `-FloatingLiteral 0x7fd2bf0335b8 <col:74> 'double' 5.000000e-01
+|-FunctionDecl 0x7fd2bf033b50 <line:64:1, line:77:1> line:65:1 used sample_2d_linear_repeat 'void (GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)' static inline
+| |-ParmVarDecl 0x7fd2bf033700 <col:26, col:38> col:38 ctx 'GLcontext *'
+| |-ParmVarDecl 0x7fd2bf033788 <line:66:5, col:37> col:37 tObj 'const struct gl_texture_object *'
+| |-ParmVarDecl 0x7fd2bf033810 <line:67:5, col:36> col:36 used img 'const struct gl_texture_image *'
+| |-ParmVarDecl 0x7fd2bf0338e0 <line:68:5, col:29> col:19 texcoord 'const GLfloat *':'const GLfloat *'
+| |-ParmVarDecl 0x7fd2bf0339f0 <col:32, col:44> col:39 used rgba 'GLchan *':'GLchan *'
+| `-CompoundStmt 0x7fd2bf034728 <line:69:1, line:77:1>
+|   |-DeclStmt 0x7fd2bf033e00 <line:70:3, col:23>
+|   | |-VarDecl 0x7fd2bf033c28 <col:3, col:9> col:9 i0 'GLint':'int'
+|   | |-VarDecl 0x7fd2bf033c98 <col:3, col:13> col:13 j0 'GLint':'int'
+|   | |-VarDecl 0x7fd2bf033d08 <col:3, col:17> col:17 used i1 'GLint':'int'
+|   | `-VarDecl 0x7fd2bf033d78 <col:3, col:21> col:21 used j1 'GLint':'int'
+|   |-DeclStmt 0x7fd2bf033f10 <line:71:3, col:15>
+|   | |-VarDecl 0x7fd2bf033e28 <col:3, col:11> col:11 used a 'GLfloat':'float'
+|   | `-VarDecl 0x7fd2bf033e98 <col:3, col:14> col:14 used b 'GLfloat':'float'
+|   |-DeclStmt 0x7fd2bf0341d0 <line:72:3, col:40>
+|   | |-VarDecl 0x7fd2bf033f68 <col:3, col:15> col:10 used t00 'GLchan [4]'
+|   | |-VarDecl 0x7fd2bf034008 <col:3, col:23> col:18 used t10 'GLchan [4]'
+|   | |-VarDecl 0x7fd2bf0340a8 <col:3, col:31> col:26 used t01 'GLchan [4]'
+|   | `-VarDecl 0x7fd2bf034148 <col:3, col:39> col:34 used t11 'GLchan [4]'
+|   |-CompoundStmt 0x7fd2bf0341e8 <line:73:3, line:74:3>
+|   |-NullStmt 0x7fd2bf0341f8 <col:4>
+|   |-CallExpr 0x7fd2bf034358 <line:75:3, col:40> 'void'
+|   | |-ImplicitCastExpr 0x7fd2bf034340 <col:3, col:8> 'FetchTexelFuncC':'void (*)(const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)' <LValueToRValue>
+|   | | `-MemberExpr 0x7fd2bf034248 <col:3, col:8> 'const FetchTexelFuncC':'void (*const)(const struct gl_texture_image *, GLint, GLint, GLint, GLchan *)' lvalue ->FetchTexelc 0x7fd2be816690
+|   | |   `-ImplicitCastExpr 0x7fd2bf034230 <col:3> 'const struct gl_texture_image *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd2bf034208 <col:3> 'const struct gl_texture_image *' lvalue ParmVar 0x7fd2bf033810 'img' 'const struct gl_texture_image *'
+|   | |-ImplicitCastExpr 0x7fd2bf0343a8 <col:21> 'const struct gl_texture_image *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf034280 <col:21> 'const struct gl_texture_image *' lvalue ParmVar 0x7fd2bf033810 'img' 'const struct gl_texture_image *'
+|   | |-ImplicitCastExpr 0x7fd2bf0343c0 <col:26> 'GLint':'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf0342a8 <col:26> 'GLint':'int' lvalue Var 0x7fd2bf033d08 'i1' 'GLint':'int'
+|   | |-ImplicitCastExpr 0x7fd2bf0343d8 <col:30> 'GLint':'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf0342d0 <col:30> 'GLint':'int' lvalue Var 0x7fd2bf033d78 'j1' 'GLint':'int'
+|   | |-IntegerLiteral 0x7fd2bf0342f8 <col:34> 'int' 0
+|   | `-ImplicitCastExpr 0x7fd2bf0343f0 <col:37> 'GLchan *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd2bf034318 <col:37> 'GLchan [4]' lvalue Var 0x7fd2bf034148 't11' 'GLchan [4]'
+|   `-CallExpr 0x7fd2bf0345c0 <line:76:3, col:47> 'void'
+|     |-ImplicitCastExpr 0x7fd2bf0345a8 <col:3> 'void (*)(GLchan *, GLfloat, GLfloat, const GLchan *, const GLchan *, const GLchan *, const GLchan *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd2bf034408 <col:3> 'void (GLchan *, GLfloat, GLfloat, const GLchan *, const GLchan *, const GLchan *, const GLchan *)' Function 0x7fd2bf0324e0 'lerp_rgba_2d' 'void (GLchan *, GLfloat, GLfloat, const GLchan *, const GLchan *, const GLchan *, const GLchan *)'
+|     |-ImplicitCastExpr 0x7fd2bf034620 <col:17> 'GLchan *':'GLchan *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd2bf034430 <col:17> 'GLchan *':'GLchan *' lvalue ParmVar 0x7fd2bf0339f0 'rgba' 'GLchan *':'GLchan *'
+|     |-ImplicitCastExpr 0x7fd2bf034638 <col:23> 'GLfloat':'float' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd2bf034458 <col:23> 'GLfloat':'float' lvalue Var 0x7fd2bf033e28 'a' 'GLfloat':'float'
+|     |-ImplicitCastExpr 0x7fd2bf034650 <col:26> 'GLfloat':'float' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd2bf034480 <col:26> 'GLfloat':'float' lvalue Var 0x7fd2bf033e98 'b' 'GLfloat':'float'
+|     |-ImplicitCastExpr 0x7fd2bf034680 <col:29> 'const GLchan *':'const GLchan *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fd2bf034668 <col:29> 'GLchan *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd2bf0344a8 <col:29> 'GLchan [4]' lvalue Var 0x7fd2bf033f68 't00' 'GLchan [4]'
+|     |-ImplicitCastExpr 0x7fd2bf0346b0 <col:34> 'const GLchan *':'const GLchan *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fd2bf034698 <col:34> 'GLchan *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd2bf0344d0 <col:34> 'GLchan [4]' lvalue Var 0x7fd2bf034008 't10' 'GLchan [4]'
+|     |-ImplicitCastExpr 0x7fd2bf0346e0 <col:39> 'const GLchan *':'const GLchan *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fd2bf0346c8 <col:39> 'GLchan *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd2bf0344f8 <col:39> 'GLchan [4]' lvalue Var 0x7fd2bf0340a8 't01' 'GLchan [4]'
+|     `-ImplicitCastExpr 0x7fd2bf034710 <col:44> 'const GLchan *':'const GLchan *' <BitCast>
+|       `-ImplicitCastExpr 0x7fd2bf0346f8 <col:44> 'GLchan *' <ArrayToPointerDecay>
+|         `-DeclRefExpr 0x7fd2bf034520 <col:44> 'GLchan [4]' lvalue Var 0x7fd2bf034148 't11' 'GLchan [4]'
+|-FunctionDecl 0x7fd2bf034bd8 <line:78:1, line:89:1> line:78:1 used sample_2d_nearest_mipmap_linear 'int (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])'
+| |-ParmVarDecl 0x7fd2bf034780 <col:34, col:46> col:46 used ctx 'GLcontext *'
+| |-ParmVarDecl 0x7fd2bf034808 <line:79:6, col:38> col:38 used tObj 'const struct gl_texture_object *'
+| |-ParmVarDecl 0x7fd2bf034878 <line:80:6, col:13> col:13 n 'GLuint':'unsigned int'
+| |-ParmVarDecl 0x7fd2bf034928 <col:16, col:42> col:30 used texcoord 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+| |-ParmVarDecl 0x7fd2bf0349a8 <line:81:6, col:27> col:20 used lambda 'const GLfloat *':'const GLfloat *'
+| |-ParmVarDecl 0x7fd2bf034a58 <col:30, col:45> col:37 used rgba 'GLchan (*)[4]':'GLchan (*)[4]'
+| `-CompoundStmt 0x7fd2bf036fb0 <line:82:1, line:89:1>
+|   |-DeclStmt 0x7fd2bf034d18 <line:83:3, col:11>
+|   | `-VarDecl 0x7fd2bf034cb8 <col:3, col:10> col:10 used i 'GLuint':'unsigned int'
+|   |-DeclStmt 0x7fd2bf035c70 <line:84:3, col:54>
+|   | `-VarDecl 0x7fd2bf034d40 <col:3, col:53> col:9 used level 'GLint':'int' cinit
+|   |   `-CallExpr 0x7fd2bf035bf0 <col:17, col:53> 'int'
+|   |     |-ImplicitCastExpr 0x7fd2bf035bd8 <col:17> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fd2bf035ab0 <col:17> 'int ()' Function 0x7fd2bf035a00 'linear_mipmap_level' 'int ()'
+|   |     |-ImplicitCastExpr 0x7fd2bf035c28 <col:38> 'const struct gl_texture_object *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd2bf035ad8 <col:38> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|   |     `-ImplicitCastExpr 0x7fd2bf035c58 <col:44, col:52> 'double' <FloatingCast>
+|   |       `-ImplicitCastExpr 0x7fd2bf035c40 <col:44, col:52> 'GLfloat':'float' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7fd2bf035b80 <col:44, col:52> 'const GLfloat':'const float' lvalue
+|   |           |-ImplicitCastExpr 0x7fd2bf035b50 <col:44> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x7fd2bf035b00 <col:44> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf0349a8 'lambda' 'const GLfloat *':'const GLfloat *'
+|   |           `-ImplicitCastExpr 0x7fd2bf035b68 <col:51> 'GLuint':'unsigned int' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fd2bf035b28 <col:51> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf034cb8 'i' 'GLuint':'unsigned int'
+|   |-CallExpr 0x7fd2bf036218 <line:85:3, col:86> 'int'
+|   | |-ImplicitCastExpr 0x7fd2bf036200 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd2bf035d60 <col:3> 'int ()' Function 0x7fd2bf035cb0 'sample_2d_nearest' 'int ()'
+|   | |-ImplicitCastExpr 0x7fd2bf036268 <col:22> 'GLcontext *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf035d88 <col:22> 'GLcontext *' lvalue ParmVar 0x7fd2bf034780 'ctx' 'GLcontext *'
+|   | |-ImplicitCastExpr 0x7fd2bf036280 <col:27> 'const struct gl_texture_object *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf035db0 <col:27> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|   | |-ImplicitCastExpr 0x7fd2bf036298 <col:33, col:63> 'struct gl_texture_image *' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7fd2bf036088 <col:33, col:63> 'struct gl_texture_image *const' lvalue
+|   | |   |-ImplicitCastExpr 0x7fd2bf036058 <col:33, col:46> 'struct gl_texture_image *const *' <ArrayToPointerDecay>
+|   | |   | `-ArraySubscriptExpr 0x7fd2bf035f20 <col:33, col:46> 'struct gl_texture_image *const[12]' lvalue
+|   | |   |   |-ImplicitCastExpr 0x7fd2bf035f08 <col:33, col:39> 'struct gl_texture_image *const (*)[12]' <ArrayToPointerDecay>
+|   | |   |   | `-MemberExpr 0x7fd2bf035e18 <col:33, col:39> 'struct gl_texture_image *const[6][12]' lvalue ->Image 0x7fd2bf821d70
+|   | |   |   |   `-ImplicitCastExpr 0x7fd2bf035e00 <col:33> 'const struct gl_texture_object *' <LValueToRValue>
+|   | |   |   |     `-DeclRefExpr 0x7fd2bf035dd8 <col:33> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|   | |   |   `-IntegerLiteral 0x7fd2bf035e50 <col:45> 'int' 0
+|   | |   `-ImplicitCastExpr 0x7fd2bf036070 <col:48, col:54> 'GLint':'int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fd2bf035f88 <col:48, col:54> 'const GLint':'const int' lvalue ->_MaxLevel 0x7fd2be816948
+|   | |       `-ImplicitCastExpr 0x7fd2bf035f70 <col:48> 'const struct gl_texture_object *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fd2bf035f48 <col:48> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|   | |-ImplicitCastExpr 0x7fd2bf0362b0 <col:66, col:76> 'const GLfloat *' <ArrayToPointerDecay>
+|   | | `-ArraySubscriptExpr 0x7fd2bf036130 <col:66, col:76> 'const GLfloat [4]' lvalue
+|   | |   |-ImplicitCastExpr 0x7fd2bf036100 <col:66> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fd2bf0360b0 <col:66> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf034928 'texcoord' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|   | |   `-ImplicitCastExpr 0x7fd2bf036118 <col:75> 'GLuint':'unsigned int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd2bf0360d8 <col:75> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf034cb8 'i' 'GLuint':'unsigned int'
+|   | `-ImplicitCastExpr 0x7fd2bf0362c8 <col:79, col:85> 'GLchan *' <ArrayToPointerDecay>
+|   |   `-ArraySubscriptExpr 0x7fd2bf0361d8 <col:79, col:85> 'GLchan [4]' lvalue
+|   |     |-ImplicitCastExpr 0x7fd2bf0361a8 <col:79> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd2bf036158 <col:79> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf034a58 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|   |     `-ImplicitCastExpr 0x7fd2bf0361c0 <col:84> 'GLuint':'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd2bf036180 <col:84> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf034cb8 'i' 'GLuint':'unsigned int'
+|   |-DeclStmt 0x7fd2bf036438 <line:86:3, col:22>
+|   | |-VarDecl 0x7fd2bf036320 <col:3, col:14> col:10 used t0 'GLchan [4]'
+|   | `-VarDecl 0x7fd2bf0363c0 <col:3, col:21> col:17 used t1 'GLchan [4]'
+|   |-CallExpr 0x7fd2bf036708 <line:87:3, col:71> 'int'
+|   | |-ImplicitCastExpr 0x7fd2bf0366f0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd2bf036450 <col:3> 'int ()' Function 0x7fd2bf035cb0 'sample_2d_nearest' 'int ()'
+|   | |-ImplicitCastExpr 0x7fd2bf036758 <col:22> 'GLcontext *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf036478 <col:22> 'GLcontext *' lvalue ParmVar 0x7fd2bf034780 'ctx' 'GLcontext *'
+|   | |-ImplicitCastExpr 0x7fd2bf036770 <col:27> 'const struct gl_texture_object *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf0364a0 <col:27> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|   | |-ImplicitCastExpr 0x7fd2bf036788 <col:33, col:53> 'struct gl_texture_image *' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7fd2bf0365f8 <col:33, col:53> 'struct gl_texture_image *const' lvalue
+|   | |   |-ImplicitCastExpr 0x7fd2bf0365c8 <col:33, col:46> 'struct gl_texture_image *const *' <ArrayToPointerDecay>
+|   | |   | `-ArraySubscriptExpr 0x7fd2bf036578 <col:33, col:46> 'struct gl_texture_image *const[12]' lvalue
+|   | |   |   |-ImplicitCastExpr 0x7fd2bf036560 <col:33, col:39> 'struct gl_texture_image *const (*)[12]' <ArrayToPointerDecay>
+|   | |   |   | `-MemberExpr 0x7fd2bf036508 <col:33, col:39> 'struct gl_texture_image *const[6][12]' lvalue ->Image 0x7fd2bf821d70
+|   | |   |   |   `-ImplicitCastExpr 0x7fd2bf0364f0 <col:33> 'const struct gl_texture_object *' <LValueToRValue>
+|   | |   |   |     `-DeclRefExpr 0x7fd2bf0364c8 <col:33> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|   | |   |   `-IntegerLiteral 0x7fd2bf036540 <col:45> 'int' 0
+|   | |   `-ImplicitCastExpr 0x7fd2bf0365e0 <col:48> 'GLint':'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd2bf0365a0 <col:48> 'GLint':'int' lvalue Var 0x7fd2bf034d40 'level' 'GLint':'int'
+|   | |-ImplicitCastExpr 0x7fd2bf0367a0 <col:56, col:66> 'const GLfloat *' <ArrayToPointerDecay>
+|   | | `-ArraySubscriptExpr 0x7fd2bf0366a0 <col:56, col:66> 'const GLfloat [4]' lvalue
+|   | |   |-ImplicitCastExpr 0x7fd2bf036670 <col:56> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fd2bf036620 <col:56> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf034928 'texcoord' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|   | |   `-ImplicitCastExpr 0x7fd2bf036688 <col:65> 'GLuint':'unsigned int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd2bf036648 <col:65> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf034cb8 'i' 'GLuint':'unsigned int'
+|   | `-ImplicitCastExpr 0x7fd2bf0367b8 <col:69> 'GLchan *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd2bf0366c8 <col:69> 'GLchan [4]' lvalue Var 0x7fd2bf036320 't0' 'GLchan [4]'
+|   `-CallExpr 0x7fd2bf036ee8 <line:88:3, col:75> 'int'
+|     |-ImplicitCastExpr 0x7fd2bf036ed0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd2bf0367d0 <col:3> 'int ()' Function 0x7fd2bf035cb0 'sample_2d_nearest' 'int ()'
+|     |-ImplicitCastExpr 0x7fd2bf036f38 <col:22> 'GLcontext *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd2bf0367f8 <col:22> 'GLcontext *' lvalue ParmVar 0x7fd2bf034780 'ctx' 'GLcontext *'
+|     |-ImplicitCastExpr 0x7fd2bf036f50 <col:27> 'const struct gl_texture_object *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd2bf036820 <col:27> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|     |-ImplicitCastExpr 0x7fd2bf036f68 <col:33, col:57> 'struct gl_texture_image *' <LValueToRValue>
+|     | `-ArraySubscriptExpr 0x7fd2bf0369c0 <col:33, col:57> 'struct gl_texture_image *const' lvalue
+|     |   |-ImplicitCastExpr 0x7fd2bf0369a8 <col:33, col:46> 'struct gl_texture_image *const *' <ArrayToPointerDecay>
+|     |   | `-ArraySubscriptExpr 0x7fd2bf0368f8 <col:33, col:46> 'struct gl_texture_image *const[12]' lvalue
+|     |   |   |-ImplicitCastExpr 0x7fd2bf0368e0 <col:33, col:39> 'struct gl_texture_image *const (*)[12]' <ArrayToPointerDecay>
+|     |   |   | `-MemberExpr 0x7fd2bf036888 <col:33, col:39> 'struct gl_texture_image *const[6][12]' lvalue ->Image 0x7fd2bf821d70
+|     |   |   |   `-ImplicitCastExpr 0x7fd2bf036870 <col:33> 'const struct gl_texture_object *' <LValueToRValue>
+|     |   |   |     `-DeclRefExpr 0x7fd2bf036848 <col:33> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf034808 'tObj' 'const struct gl_texture_object *'
+|     |   |   `-IntegerLiteral 0x7fd2bf0368c0 <col:45> 'int' 0
+|     |   `-BinaryOperator 0x7fd2bf036980 <col:48, col:56> 'int' '+'
+|     |     |-ImplicitCastExpr 0x7fd2bf036968 <col:48> 'GLint':'int' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7fd2bf036920 <col:48> 'GLint':'int' lvalue Var 0x7fd2bf034d40 'level' 'GLint':'int'
+|     |     `-IntegerLiteral 0x7fd2bf036948 <col:56> 'int' 1
+|     |-ImplicitCastExpr 0x7fd2bf036f80 <col:60, col:70> 'const GLfloat *' <ArrayToPointerDecay>
+|     | `-ArraySubscriptExpr 0x7fd2bf036e80 <col:60, col:70> 'const GLfloat [4]' lvalue
+|     |   |-ImplicitCastExpr 0x7fd2bf036e50 <col:60> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7fd2bf036e00 <col:60> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf034928 'texcoord' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     |   `-ImplicitCastExpr 0x7fd2bf036e68 <col:69> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fd2bf036e28 <col:69> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf034cb8 'i' 'GLuint':'unsigned int'
+|     `-ImplicitCastExpr 0x7fd2bf036f98 <col:73> 'GLchan *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7fd2bf036ea8 <col:73> 'GLchan [4]' lvalue Var 0x7fd2bf0363c0 't1' 'GLchan [4]'
+|-FunctionDecl 0x7fd2bf037388 <line:90:1, line:112:1> line:91:1 used sample_2d_linear_mipmap_linear_repeat 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' static
+| |-ParmVarDecl 0x7fd2bf037000 <col:40, col:52> col:52 used ctx 'GLcontext *'
+| |-ParmVarDecl 0x7fd2bf037088 <line:92:12, col:44> col:44 used tObj 'const struct gl_texture_object *'
+| |-ParmVarDecl 0x7fd2bf0370f8 <line:93:12, col:19> col:19 used n 'GLuint':'unsigned int'
+| |-ParmVarDecl 0x7fd2bf0371a8 <col:22, col:48> col:36 used texcoord 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+| |-ParmVarDecl 0x7fd2bf037228 <line:94:12, col:33> col:26 used lambda 'const GLfloat *':'const GLfloat *'
+| |-ParmVarDecl 0x7fd2bf0372d8 <line:95:12, col:27> col:19 used rgba 'GLchan (*)[4]':'GLchan (*)[4]'
+| `-CompoundStmt 0x7fd2bf039df0 <line:96:1, line:112:1>
+|   |-DeclStmt 0x7fd2bf0374c8 <line:97:3, col:11>
+|   | `-VarDecl 0x7fd2bf037468 <col:3, col:10> col:10 used i 'GLuint':'unsigned int'
+|   `-ForStmt 0x7fd2bf039db8 <line:98:3, line:111:5>
+|     |-BinaryOperator 0x7fd2bf037540 <line:98:8, col:12> 'GLuint':'unsigned int' '='
+|     | |-DeclRefExpr 0x7fd2bf0374e0 <col:8> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|     | `-ImplicitCastExpr 0x7fd2bf037528 <col:12> 'GLuint':'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fd2bf037508 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd2bf0375e8 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fd2bf0375b8 <col:15> 'GLuint':'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd2bf037568 <col:15> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|     | `-ImplicitCastExpr 0x7fd2bf0375d0 <col:19> 'GLuint':'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd2bf037590 <col:19> 'GLuint':'unsigned int' lvalue ParmVar 0x7fd2bf0370f8 'n' 'GLuint':'unsigned int'
+|     |-UnaryOperator 0x7fd2bf037638 <col:22, col:23> 'GLuint':'unsigned int' postfix '++'
+|     | `-DeclRefExpr 0x7fd2bf037610 <col:22> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|     `-CompoundStmt 0x7fd2bf039d98 <line:99:5, line:111:5>
+|       |-DeclStmt 0x7fd2bf037858 <line:100:7, col:58>
+|       | `-VarDecl 0x7fd2bf037668 <col:7, col:57> col:13 used level 'GLint':'int' cinit
+|       |   `-CallExpr 0x7fd2bf0377d8 <col:21, col:57> 'int'
+|       |     |-ImplicitCastExpr 0x7fd2bf0377c0 <col:21> 'int (*)()' <FunctionToPointerDecay>
+|       |     | `-DeclRefExpr 0x7fd2bf0376c8 <col:21> 'int ()' Function 0x7fd2bf035a00 'linear_mipmap_level' 'int ()'
+|       |     |-ImplicitCastExpr 0x7fd2bf037810 <col:42> 'const struct gl_texture_object *' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7fd2bf0376f0 <col:42> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf037088 'tObj' 'const struct gl_texture_object *'
+|       |     `-ImplicitCastExpr 0x7fd2bf037840 <col:48, col:56> 'double' <FloatingCast>
+|       |       `-ImplicitCastExpr 0x7fd2bf037828 <col:48, col:56> 'GLfloat':'float' <LValueToRValue>
+|       |         `-ArraySubscriptExpr 0x7fd2bf037798 <col:48, col:56> 'const GLfloat':'const float' lvalue
+|       |           |-ImplicitCastExpr 0x7fd2bf037768 <col:48> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|       |           | `-DeclRefExpr 0x7fd2bf037718 <col:48> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf037228 'lambda' 'const GLfloat *':'const GLfloat *'
+|       |           `-ImplicitCastExpr 0x7fd2bf037780 <col:55> 'GLuint':'unsigned int' <LValueToRValue>
+|       |             `-DeclRefExpr 0x7fd2bf037740 <col:55> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|       `-IfStmt 0x7fd2bf039d60 <line:101:7, line:110:2>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7fd2bf037940 <line:101:11, col:26> 'int' '>='
+|         | |-ImplicitCastExpr 0x7fd2bf037910 <col:11> 'GLint':'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fd2bf037870 <col:11> 'GLint':'int' lvalue Var 0x7fd2bf037668 'level' 'GLint':'int'
+|         | `-ImplicitCastExpr 0x7fd2bf037928 <col:20, col:26> 'GLint':'int' <LValueToRValue>
+|         |   `-MemberExpr 0x7fd2bf0378d8 <col:20, col:26> 'const GLint':'const int' lvalue ->_MaxLevel 0x7fd2be816948
+|         |     `-ImplicitCastExpr 0x7fd2bf0378c0 <col:20> 'const struct gl_texture_object *' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7fd2bf037898 <col:20> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf037088 'tObj' 'const struct gl_texture_object *'
+|         |-CompoundStmt 0x7fd2bf039d28 <line:102:2, line:110:2>
+|         | |-DeclStmt 0x7fd2bf037ac0 <line:103:4, col:23>
+|         | | |-VarDecl 0x7fd2bf0379a8 <col:4, col:15> col:11 used t0 'GLchan [4]'
+|         | | `-VarDecl 0x7fd2bf037a48 <col:4, col:22> col:18 used t1 'GLchan [4]'
+|         | |-DeclStmt 0x7fd2bf0392a8 <line:104:4, col:56>
+|         | | `-VarDecl 0x7fd2bf037ae8 <col:4, col:55> col:18 used f 'const GLfloat':'const float' cinit
+|         | |   `-ParenExpr 0x7fd2bf039288 <col:22, col:55> 'float'
+|         | |     `-BinaryOperator 0x7fd2bf039260 <col:23, col:54> 'float' '-'
+|         | |       |-ImplicitCastExpr 0x7fd2bf039230 <col:23, col:33> 'GLfloat':'float' <LValueToRValue>
+|         | |       | `-ParenExpr 0x7fd2bf037bf0 <col:23, col:33> 'const GLfloat':'const float' lvalue
+|         | |       |   `-ArraySubscriptExpr 0x7fd2bf037bc8 <col:24, col:32> 'const GLfloat':'const float' lvalue
+|         | |       |     |-ImplicitCastExpr 0x7fd2bf037b98 <col:24> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|         | |       |     | `-DeclRefExpr 0x7fd2bf037b48 <col:24> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf037228 'lambda' 'const GLfloat *':'const GLfloat *'
+|         | |       |     `-ImplicitCastExpr 0x7fd2bf037bb0 <col:31> 'GLuint':'unsigned int' <LValueToRValue>
+|         | |       |       `-DeclRefExpr 0x7fd2bf037b70 <col:31> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|         | |       `-ImplicitCastExpr 0x7fd2bf039248 <col:37, col:54> 'float' <IntegralToFloating>
+|         | |         `-CallExpr 0x7fd2bf037dd0 <col:37, col:54> 'int'
+|         | |           |-ImplicitCastExpr 0x7fd2bf037db8 <col:37> 'int (*)()' <FunctionToPointerDecay>
+|         | |           | `-DeclRefExpr 0x7fd2bf037ce8 <col:37> 'int ()' Function 0x7fd2bf037c38 'ifloor' 'int ()'
+|         | |           `-ImplicitCastExpr 0x7fd2bf039218 <col:45, col:53> 'double' <FloatingCast>
+|         | |             `-ImplicitCastExpr 0x7fd2bf039200 <col:45, col:53> 'GLfloat':'float' <LValueToRValue>
+|         | |               `-ArraySubscriptExpr 0x7fd2bf037d90 <col:45, col:53> 'const GLfloat':'const float' lvalue
+|         | |                 |-ImplicitCastExpr 0x7fd2bf037d60 <col:45> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|         | |                 | `-DeclRefExpr 0x7fd2bf037d10 <col:45> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf037228 'lambda' 'const GLfloat *':'const GLfloat *'
+|         | |                 `-ImplicitCastExpr 0x7fd2bf037d78 <col:52> 'GLuint':'unsigned int' <LValueToRValue>
+|         | |                   `-DeclRefExpr 0x7fd2bf037d38 <col:52> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|         | |-CallExpr 0x7fd2bf0395d0 <line:105:4, line:106:23> 'void'
+|         | | |-ImplicitCastExpr 0x7fd2bf0395b8 <line:105:4> 'void (*)(GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)' <FunctionToPointerDecay>
+|         | | | `-DeclRefExpr 0x7fd2bf0392c0 <col:4> 'void (GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)' Function 0x7fd2bf033b50 'sample_2d_linear_repeat' 'void (GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)'
+|         | | |-ImplicitCastExpr 0x7fd2bf039620 <col:29> 'GLcontext *' <LValueToRValue>
+|         | | | `-DeclRefExpr 0x7fd2bf0392e8 <col:29> 'GLcontext *' lvalue ParmVar 0x7fd2bf037000 'ctx' 'GLcontext *'
+|         | | |-ImplicitCastExpr 0x7fd2bf039638 <col:34> 'const struct gl_texture_object *' <LValueToRValue>
+|         | | | `-DeclRefExpr 0x7fd2bf039310 <col:34> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf037088 'tObj' 'const struct gl_texture_object *'
+|         | | |-ImplicitCastExpr 0x7fd2bf039668 <col:40, col:60> 'const struct gl_texture_image *' <BitCast>
+|         | | | `-ImplicitCastExpr 0x7fd2bf039650 <col:40, col:60> 'struct gl_texture_image *' <LValueToRValue>
+|         | | |   `-ArraySubscriptExpr 0x7fd2bf039468 <col:40, col:60> 'struct gl_texture_image *const' lvalue
+|         | | |     |-ImplicitCastExpr 0x7fd2bf039438 <col:40, col:53> 'struct gl_texture_image *const *' <ArrayToPointerDecay>
+|         | | |     | `-ArraySubscriptExpr 0x7fd2bf0393e8 <col:40, col:53> 'struct gl_texture_image *const[12]' lvalue
+|         | | |     |   |-ImplicitCastExpr 0x7fd2bf0393d0 <col:40, col:46> 'struct gl_texture_image *const (*)[12]' <ArrayToPointerDecay>
+|         | | |     |   | `-MemberExpr 0x7fd2bf039378 <col:40, col:46> 'struct gl_texture_image *const[6][12]' lvalue ->Image 0x7fd2bf821d70
+|         | | |     |   |   `-ImplicitCastExpr 0x7fd2bf039360 <col:40> 'const struct gl_texture_object *' <LValueToRValue>
+|         | | |     |   |     `-DeclRefExpr 0x7fd2bf039338 <col:40> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf037088 'tObj' 'const struct gl_texture_object *'
+|         | | |     |   `-IntegerLiteral 0x7fd2bf0393b0 <col:52> 'int' 0
+|         | | |     `-ImplicitCastExpr 0x7fd2bf039450 <col:55> 'GLint':'int' <LValueToRValue>
+|         | | |       `-DeclRefExpr 0x7fd2bf039410 <col:55> 'GLint':'int' lvalue Var 0x7fd2bf037668 'level' 'GLint':'int'
+|         | | |-ImplicitCastExpr 0x7fd2bf039680 <line:106:8, col:18> 'const GLfloat *' <ArrayToPointerDecay>
+|         | | | `-ArraySubscriptExpr 0x7fd2bf039510 <col:8, col:18> 'const GLfloat [4]' lvalue
+|         | | |   |-ImplicitCastExpr 0x7fd2bf0394e0 <col:8> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|         | | |   | `-DeclRefExpr 0x7fd2bf039490 <col:8> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf0371a8 'texcoord' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|         | | |   `-ImplicitCastExpr 0x7fd2bf0394f8 <col:17> 'GLuint':'unsigned int' <LValueToRValue>
+|         | | |     `-DeclRefExpr 0x7fd2bf0394b8 <col:17> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|         | | `-ImplicitCastExpr 0x7fd2bf039698 <col:21> 'GLchan *' <ArrayToPointerDecay>
+|         | |   `-DeclRefExpr 0x7fd2bf039538 <col:21> 'GLchan [4]' lvalue Var 0x7fd2bf0379a8 't0' 'GLchan [4]'
+|         | |-CallExpr 0x7fd2bf0399b0 <line:107:4, line:108:23> 'void'
+|         | | |-ImplicitCastExpr 0x7fd2bf039998 <line:107:4> 'void (*)(GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)' <FunctionToPointerDecay>
+|         | | | `-DeclRefExpr 0x7fd2bf0396b0 <col:4> 'void (GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)' Function 0x7fd2bf033b50 'sample_2d_linear_repeat' 'void (GLcontext *, const struct gl_texture_object *, const struct gl_texture_image *, const GLfloat *, GLchan *)'
+|         | | |-ImplicitCastExpr 0x7fd2bf039a00 <col:29> 'GLcontext *' <LValueToRValue>
+|         | | | `-DeclRefExpr 0x7fd2bf0396d8 <col:29> 'GLcontext *' lvalue ParmVar 0x7fd2bf037000 'ctx' 'GLcontext *'
+|         | | |-ImplicitCastExpr 0x7fd2bf039a18 <col:34> 'const struct gl_texture_object *' <LValueToRValue>
+|         | | | `-DeclRefExpr 0x7fd2bf039700 <col:34> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf037088 'tObj' 'const struct gl_texture_object *'
+|         | | |-ImplicitCastExpr 0x7fd2bf039a48 <col:40, col:64> 'const struct gl_texture_image *' <BitCast>
+|         | | | `-ImplicitCastExpr 0x7fd2bf039a30 <col:40, col:64> 'struct gl_texture_image *' <LValueToRValue>
+|         | | |   `-ArraySubscriptExpr 0x7fd2bf0398a0 <col:40, col:64> 'struct gl_texture_image *const' lvalue
+|         | | |     |-ImplicitCastExpr 0x7fd2bf039888 <col:40, col:53> 'struct gl_texture_image *const *' <ArrayToPointerDecay>
+|         | | |     | `-ArraySubscriptExpr 0x7fd2bf0397d8 <col:40, col:53> 'struct gl_texture_image *const[12]' lvalue
+|         | | |     |   |-ImplicitCastExpr 0x7fd2bf0397c0 <col:40, col:46> 'struct gl_texture_image *const (*)[12]' <ArrayToPointerDecay>
+|         | | |     |   | `-MemberExpr 0x7fd2bf039768 <col:40, col:46> 'struct gl_texture_image *const[6][12]' lvalue ->Image 0x7fd2bf821d70
+|         | | |     |   |   `-ImplicitCastExpr 0x7fd2bf039750 <col:40> 'const struct gl_texture_object *' <LValueToRValue>
+|         | | |     |   |     `-DeclRefExpr 0x7fd2bf039728 <col:40> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf037088 'tObj' 'const struct gl_texture_object *'
+|         | | |     |   `-IntegerLiteral 0x7fd2bf0397a0 <col:52> 'int' 0
+|         | | |     `-BinaryOperator 0x7fd2bf039860 <col:55, col:63> 'int' '+'
+|         | | |       |-ImplicitCastExpr 0x7fd2bf039848 <col:55> 'GLint':'int' <LValueToRValue>
+|         | | |       | `-DeclRefExpr 0x7fd2bf039800 <col:55> 'GLint':'int' lvalue Var 0x7fd2bf037668 'level' 'GLint':'int'
+|         | | |       `-IntegerLiteral 0x7fd2bf039828 <col:63> 'int' 1
+|         | | |-ImplicitCastExpr 0x7fd2bf039a60 <line:108:8, col:18> 'const GLfloat *' <ArrayToPointerDecay>
+|         | | | `-ArraySubscriptExpr 0x7fd2bf039948 <col:8, col:18> 'const GLfloat [4]' lvalue
+|         | | |   |-ImplicitCastExpr 0x7fd2bf039918 <col:8> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|         | | |   | `-DeclRefExpr 0x7fd2bf0398c8 <col:8> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf0371a8 'texcoord' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|         | | |   `-ImplicitCastExpr 0x7fd2bf039930 <col:17> 'GLuint':'unsigned int' <LValueToRValue>
+|         | | |     `-DeclRefExpr 0x7fd2bf0398f0 <col:17> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|         | | `-ImplicitCastExpr 0x7fd2bf039a78 <col:21> 'GLchan *' <ArrayToPointerDecay>
+|         | |   `-DeclRefExpr 0x7fd2bf039970 <col:21> 'GLchan [4]' lvalue Var 0x7fd2bf037a48 't1' 'GLchan [4]'
+|         | `-CallExpr 0x7fd2bf039c50 <line:109:4, col:33> 'void'
+|         |   |-ImplicitCastExpr 0x7fd2bf039c38 <col:4> 'void (*)(GLchan *, GLfloat, const GLchan *, const GLchan *)' <FunctionToPointerDecay>
+|         |   | `-DeclRefExpr 0x7fd2bf039a90 <col:4> 'void (GLchan *, GLfloat, const GLchan *, const GLchan *)' Function 0x7fd2be00d690 'lerp_rgba' 'void (GLchan *, GLfloat, const GLchan *, const GLchan *)'
+|         |   |-ImplicitCastExpr 0x7fd2bf039c98 <col:15, col:21> 'GLchan *' <ArrayToPointerDecay>
+|         |   | `-ArraySubscriptExpr 0x7fd2bf039b38 <col:15, col:21> 'GLchan [4]' lvalue
+|         |   |   |-ImplicitCastExpr 0x7fd2bf039b08 <col:15> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|         |   |   | `-DeclRefExpr 0x7fd2bf039ab8 <col:15> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf0372d8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|         |   |   `-ImplicitCastExpr 0x7fd2bf039b20 <col:20> 'GLuint':'unsigned int' <LValueToRValue>
+|         |   |     `-DeclRefExpr 0x7fd2bf039ae0 <col:20> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf037468 'i' 'GLuint':'unsigned int'
+|         |   |-ImplicitCastExpr 0x7fd2bf039cb0 <col:24> 'GLfloat':'float' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7fd2bf039b60 <col:24> 'const GLfloat':'const float' lvalue Var 0x7fd2bf037ae8 'f' 'const GLfloat':'const float'
+|         |   |-ImplicitCastExpr 0x7fd2bf039ce0 <col:27> 'const GLchan *':'const GLchan *' <BitCast>
+|         |   | `-ImplicitCastExpr 0x7fd2bf039cc8 <col:27> 'GLchan *' <ArrayToPointerDecay>
+|         |   |   `-DeclRefExpr 0x7fd2bf039b88 <col:27> 'GLchan [4]' lvalue Var 0x7fd2bf0379a8 't0' 'GLchan [4]'
+|         |   `-ImplicitCastExpr 0x7fd2bf039d10 <col:31> 'const GLchan *':'const GLchan *' <BitCast>
+|         |     `-ImplicitCastExpr 0x7fd2bf039cf8 <col:31> 'GLchan *' <ArrayToPointerDecay>
+|         |       `-DeclRefExpr 0x7fd2bf039bb0 <col:31> 'GLchan [4]' lvalue Var 0x7fd2bf037a48 't1' 'GLchan [4]'
+|         `-<<<NULL>>>
+|-FunctionDecl 0x7fd2bf03a200 <line:113:1, line:166:1> line:114:1 used sample_lambda_2d 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' static
+| |-ParmVarDecl 0x7fd2bf039e20 <col:19, col:31> col:31 used ctx 'GLcontext *'
+| |-ParmVarDecl 0x7fd2bf039ea8 <col:36, col:68> col:68 used tObj 'const struct gl_texture_object *'
+| |-ParmVarDecl 0x7fd2bf039f18 <line:115:5, col:12> col:12 used n 'GLuint':'unsigned int'
+| |-ParmVarDecl 0x7fd2bf039fc8 <col:15, col:42> col:29 used texcoords 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+| |-ParmVarDecl 0x7fd2bf03a048 <line:116:5, col:26> col:19 used lambda 'const GLfloat *':'const GLfloat *'
+| |-ParmVarDecl 0x7fd2bf03a0f8 <col:29, col:44> col:36 used rgba 'GLchan (*)[4]':'GLchan (*)[4]'
+| `-CompoundStmt 0x7fd2bf03d720 <line:117:1, line:166:1>
+|   |-DeclStmt 0x7fd2bf03a530 <line:118:3, col:72>
+|   | `-VarDecl 0x7fd2bf03a2f8 <col:3, col:71> col:34 used tImg 'const struct gl_texture_image *' cinit
+|   |   `-ImplicitCastExpr 0x7fd2bf03a518 <col:41, col:71> 'const struct gl_texture_image *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fd2bf03a500 <col:41, col:71> 'struct gl_texture_image *' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fd2bf03a4d8 <col:41, col:71> 'struct gl_texture_image *const' lvalue
+|   |         |-ImplicitCastExpr 0x7fd2bf03a4a8 <col:41, col:54> 'struct gl_texture_image *const *' <ArrayToPointerDecay>
+|   |         | `-ArraySubscriptExpr 0x7fd2bf03a408 <col:41, col:54> 'struct gl_texture_image *const[12]' lvalue
+|   |         |   |-ImplicitCastExpr 0x7fd2bf03a3f0 <col:41, col:47> 'struct gl_texture_image *const (*)[12]' <ArrayToPointerDecay>
+|   |         |   | `-MemberExpr 0x7fd2bf03a398 <col:41, col:47> 'struct gl_texture_image *const[6][12]' lvalue ->Image 0x7fd2bf821d70
+|   |         |   |   `-ImplicitCastExpr 0x7fd2bf03a380 <col:41> 'const struct gl_texture_object *' <LValueToRValue>
+|   |         |   |     `-DeclRefExpr 0x7fd2bf03a358 <col:41> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|   |         |   `-IntegerLiteral 0x7fd2bf03a3d0 <col:53> 'int' 0
+|   |         `-ImplicitCastExpr 0x7fd2bf03a4c0 <col:56, col:62> 'GLint':'int' <LValueToRValue>
+|   |           `-MemberExpr 0x7fd2bf03a470 <col:56, col:62> 'const GLint':'const int' lvalue ->BaseLevel 0x7fd2be8168f0
+|   |             `-ImplicitCastExpr 0x7fd2bf03a458 <col:56> 'const struct gl_texture_object *' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7fd2bf03a430 <col:56> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|   |-DeclStmt 0x7fd2bf03a640 <line:119:3, col:26>
+|   | |-VarDecl 0x7fd2bf03a558 <col:3, col:10> col:10 used minStart 'GLuint':'unsigned int'
+|   | `-VarDecl 0x7fd2bf03a5c8 <col:3, col:20> col:20 used minEnd 'GLuint':'unsigned int'
+|   |-DeclStmt 0x7fd2bf03a750 <line:120:3, col:26>
+|   | |-VarDecl 0x7fd2bf03a668 <col:3, col:10> col:10 used magStart 'GLuint':'unsigned int'
+|   | `-VarDecl 0x7fd2bf03a6d8 <col:3, col:20> col:20 used magEnd 'GLuint':'unsigned int'
+|   |-DeclStmt 0x7fd2bf03ab08 <line:121:3, line:122:60>
+|   | `-VarDecl 0x7fd2bf03a778 <line:121:3, line:122:47> line:121:19 used repeatNoBorderPOT 'const GLboolean':'const unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7fd2bf03aaf0 <col:39, line:122:47> 'GLboolean':'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7fd2bf03aac8 <line:121:39, line:122:47> 'int' '&&'
+|   |       |-BinaryOperator 0x7fd2bf03a9f8 <line:121:39, line:122:36> 'int' '&&'
+|   |       | |-ParenExpr 0x7fd2bf03a8c8 <line:121:39, col:61> 'int'
+|   |       | | `-BinaryOperator 0x7fd2bf03a8a0 <col:40, col:55> 'int' '=='
+|   |       | |   |-ImplicitCastExpr 0x7fd2bf03a870 <col:40, col:46> 'GLenum':'unsigned int' <LValueToRValue>
+|   |       | |   | `-MemberExpr 0x7fd2bf03a818 <col:40, col:46> 'const GLenum':'const unsigned int' lvalue ->WrapS 0x7fd2be8167e8
+|   |       | |   |   `-ImplicitCastExpr 0x7fd2bf03a800 <col:40> 'const struct gl_texture_object *' <LValueToRValue>
+|   |       | |   |     `-DeclRefExpr 0x7fd2bf03a7d8 <col:40> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|   |       | |   `-ImplicitCastExpr 0x7fd2bf03a888 <col:55> 'unsigned int' <IntegralCast>
+|   |       | |     `-IntegerLiteral 0x7fd2bf03a850 <col:55> 'int' 10497
+|   |       | `-ParenExpr 0x7fd2bf03a9d8 <line:122:8, col:36> 'int'
+|   |       |   `-BinaryOperator 0x7fd2bf03a9b0 <col:9, col:30> 'int' '!='
+|   |       |     |-ImplicitCastExpr 0x7fd2bf03a980 <col:9, col:15> 'GLenum':'unsigned int' <LValueToRValue>
+|   |       |     | `-MemberExpr 0x7fd2bf03a928 <col:9, col:15> 'const GLenum':'const unsigned int' lvalue ->_BaseFormat 0x7fd2be816590
+|   |       |     |   `-ImplicitCastExpr 0x7fd2bf03a910 <col:9> 'const struct gl_texture_image *' <LValueToRValue>
+|   |       |     |     `-DeclRefExpr 0x7fd2bf03a8e8 <col:9> 'const struct gl_texture_image *' lvalue Var 0x7fd2bf03a2f8 'tImg' 'const struct gl_texture_image *'
+|   |       |     `-ImplicitCastExpr 0x7fd2bf03a998 <col:30> 'unsigned int' <IntegralCast>
+|   |       |       `-IntegerLiteral 0x7fd2bf03a960 <col:30> 'int' 6400
+|   |       `-ImplicitCastExpr 0x7fd2bf03aab0 <col:41, col:47> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7fd2bf03aa98 <col:41, col:47> 'GLboolean':'unsigned char' <LValueToRValue>
+|   |           `-MemberExpr 0x7fd2bf03aa60 <col:41, col:47> 'const GLboolean':'const unsigned char' lvalue ->_IsPowerOfTwo 0x7fd2be816610
+|   |             `-ImplicitCastExpr 0x7fd2bf03aa48 <col:41> 'const struct gl_texture_image *' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7fd2bf03aa20 <col:41> 'const struct gl_texture_image *' lvalue Var 0x7fd2bf03a2f8 'tImg' 'const struct gl_texture_image *'
+|   |-CallExpr 0x7fd2bf03ae28 <line:123:3, line:124:13> 'int'
+|   | |-ImplicitCastExpr 0x7fd2bf03ae10 <line:123:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd2bf03abf8 <col:3> 'int ()' Function 0x7fd2bf03ab48 'compute_min_mag_ranges' 'int ()'
+|   | |-ImplicitCastExpr 0x7fd2bf03ae88 <col:27> 'const struct gl_texture_object *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf03ac20 <col:27> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|   | |-ImplicitCastExpr 0x7fd2bf03aea0 <col:33> 'GLuint':'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf03ac48 <col:33> 'GLuint':'unsigned int' lvalue ParmVar 0x7fd2bf039f18 'n' 'GLuint':'unsigned int'
+|   | |-ImplicitCastExpr 0x7fd2bf03aeb8 <col:36> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2bf03ac70 <col:36> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf03a048 'lambda' 'const GLfloat *':'const GLfloat *'
+|   | |-UnaryOperator 0x7fd2bf03ad18 <col:44, col:45> 'GLuint *' prefix '&'
+|   | | `-DeclRefExpr 0x7fd2bf03ac98 <col:45> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|   | |-UnaryOperator 0x7fd2bf03ad60 <col:55, col:56> 'GLuint *' prefix '&'
+|   | | `-DeclRefExpr 0x7fd2bf03ad38 <col:56> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a5c8 'minEnd' 'GLuint':'unsigned int'
+|   | |-UnaryOperator 0x7fd2bf03ada8 <col:64, col:65> 'GLuint *' prefix '&'
+|   | | `-DeclRefExpr 0x7fd2bf03ad80 <col:65> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|   | `-UnaryOperator 0x7fd2bf03adf0 <line:124:6, col:7> 'GLuint *' prefix '&'
+|   |   `-DeclRefExpr 0x7fd2bf03adc8 <col:7> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a6d8 'magEnd' 'GLuint':'unsigned int'
+|   `-IfStmt 0x7fd2bf03d6e8 <line:125:3, line:165:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd2bf03af50 <line:125:7, col:18> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fd2bf03af20 <col:7> 'GLuint':'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd2bf03aed0 <col:7> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | `-ImplicitCastExpr 0x7fd2bf03af38 <col:18> 'GLuint':'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd2bf03aef8 <col:18> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a5c8 'minEnd' 'GLuint':'unsigned int'
+|     |-CompoundStmt 0x7fd2bf03d6c0 <line:126:5, line:165:5>
+|     | |-DeclStmt 0x7fd2bf03b090 <line:127:7, col:41>
+|     | | `-VarDecl 0x7fd2bf03af88 <col:7, col:33> col:20 used m 'const GLuint':'const unsigned int' cinit
+|     | |   `-BinaryOperator 0x7fd2bf03b068 <col:24, col:33> 'unsigned int' '-'
+|     | |     |-ImplicitCastExpr 0x7fd2bf03b038 <col:24> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |     | `-DeclRefExpr 0x7fd2bf03afe8 <col:24> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a5c8 'minEnd' 'GLuint':'unsigned int'
+|     | |     `-ImplicitCastExpr 0x7fd2bf03b050 <col:33> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7fd2bf03b010 <col:33> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |-SwitchStmt 0x7fd2bf03b138 <line:128:7, line:154:2>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-ImplicitCastExpr 0x7fd2bf03b120 <line:128:15, col:21> 'GLenum':'unsigned int' <LValueToRValue>
+|     | | | `-MemberExpr 0x7fd2bf03b0e8 <col:15, col:21> 'const GLenum':'const unsigned int' lvalue ->MinFilter 0x7fd2be816840
+|     | | |   `-ImplicitCastExpr 0x7fd2bf03b0d0 <col:15> 'const struct gl_texture_object *' <LValueToRValue>
+|     | | |     `-DeclRefExpr 0x7fd2bf03b0a8 <col:15> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     | | `-CompoundStmt 0x7fd2bf03cb28 <line:129:2, line:154:2>
+|     | |   |-CaseStmt 0x7fd2bf03b188 <line:130:2, line:139:6>
+|     | |   | |-ImplicitCastExpr 0x7fd2bf03cba8 <line:130:7> 'GLenum':'unsigned int' <IntegralCast>
+|     | |   | | `-IntegerLiteral 0x7fd2bf03b168 <col:7> 'int' 9728
+|     | |   | |-<<<NULL>>>
+|     | |   | `-IfStmt 0x7fd2bf03bee0 <line:131:4, line:139:6>
+|     | |   |   |-<<<NULL>>>
+|     | |   |   |-<<<NULL>>>
+|     | |   |   |-ImplicitCastExpr 0x7fd2bf03b1e8 <line:131:8> 'GLboolean':'unsigned char' <LValueToRValue>
+|     | |   |   | `-DeclRefExpr 0x7fd2bf03b1c0 <col:8> 'const GLboolean':'const unsigned char' lvalue Var 0x7fd2bf03a778 'repeatNoBorderPOT' 'const GLboolean':'const unsigned char'
+|     | |   |   |-CompoundStmt 0x7fd2bf03bec0 <line:132:6, line:139:6>
+|     | |   |   | |-CaseStmt 0x7fd2bf03b628 <line:133:3, line:135:39>
+|     | |   |   | | |-ImplicitCastExpr 0x7fd2bf03cb90 <line:133:8> 'GLenum':'unsigned int' <IntegralCast>
+|     | |   |   | | | `-DeclRefExpr 0x7fd2bf03b600 <col:8> 'int' EnumConstant 0x7fd2bf821f48 'MESA_FORMAT_RGB' 'int'
+|     | |   |   | | |-<<<NULL>>>
+|     | |   |   | | `-CallExpr 0x7fd2bf03b9c0 <line:134:5, line:135:39> 'int'
+|     | |   |   | |   |-ImplicitCastExpr 0x7fd2bf03b9a8 <line:134:5> 'int (*)()' <FunctionToPointerDecay>
+|     | |   |   | |   | `-DeclRefExpr 0x7fd2bf03b738 <col:5> 'int ()' Function 0x7fd2bf03b688 'opt_sample_rgb_2d' 'int ()'
+|     | |   |   | |   |-ImplicitCastExpr 0x7fd2bf03ba18 <col:24> 'GLcontext *' <LValueToRValue>
+|     | |   |   | |   | `-DeclRefExpr 0x7fd2bf03b760 <col:24> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     | |   |   | |   |-ImplicitCastExpr 0x7fd2bf03ba30 <col:29> 'const struct gl_texture_object *' <LValueToRValue>
+|     | |   |   | |   | `-DeclRefExpr 0x7fd2bf03b788 <col:29> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     | |   |   | |   |-ImplicitCastExpr 0x7fd2bf03ba48 <col:35> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   | |   | `-DeclRefExpr 0x7fd2bf03b7b0 <col:35> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     | |   |   | |   |-BinaryOperator 0x7fd2bf03b858 <col:38, col:50> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     | |   |   | |   | |-ImplicitCastExpr 0x7fd2bf03b828 <col:38> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     | |   |   | |   | | `-DeclRefExpr 0x7fd2bf03b7d8 <col:38> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     | |   |   | |   | `-ImplicitCastExpr 0x7fd2bf03b840 <col:50> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   | |   |   `-DeclRefExpr 0x7fd2bf03b800 <col:50> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   |   | |   |-ParenExpr 0x7fd2bf03b8e0 <line:135:10, col:21> 'void *'
+|     | |   |   | |   | `-CStyleCastExpr 0x7fd2bf03b8b8 <col:11, col:20> 'void *' <NullToPointer>
+|     | |   |   | |   |   `-IntegerLiteral 0x7fd2bf03b880 <col:20> 'int' 0
+|     | |   |   | |   `-BinaryOperator 0x7fd2bf03b980 <col:24, col:31> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     | |   |   | |     |-ImplicitCastExpr 0x7fd2bf03b950 <col:24> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     | |   |   | |     | `-DeclRefExpr 0x7fd2bf03b900 <col:24> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     | |   |   | |     `-ImplicitCastExpr 0x7fd2bf03b968 <col:31> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   | |       `-DeclRefExpr 0x7fd2bf03b928 <col:31> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   |   | `-CaseStmt 0x7fd2bf03ba88 <line:136:3, line:138:40>
+|     | |   |   |   |-ImplicitCastExpr 0x7fd2bf03cb78 <line:136:8> 'GLenum':'unsigned int' <IntegralCast>
+|     | |   |   |   | `-DeclRefExpr 0x7fd2bf03ba60 <col:8> 'int' EnumConstant 0x7fd2bf821f00 'MESA_FORMAT_RGBA' 'int'
+|     | |   |   |   |-<<<NULL>>>
+|     | |   |   |   `-CallExpr 0x7fd2bf03be20 <line:137:5, line:138:40> 'int'
+|     | |   |   |     |-ImplicitCastExpr 0x7fd2bf03be08 <line:137:5> 'int (*)()' <FunctionToPointerDecay>
+|     | |   |   |     | `-DeclRefExpr 0x7fd2bf03bb98 <col:5> 'int ()' Function 0x7fd2bf03bae8 'opt_sample_rgba_2d' 'int ()'
+|     | |   |   |     |-ImplicitCastExpr 0x7fd2bf03be78 <col:25> 'GLcontext *' <LValueToRValue>
+|     | |   |   |     | `-DeclRefExpr 0x7fd2bf03bbc0 <col:25> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     | |   |   |     |-ImplicitCastExpr 0x7fd2bf03be90 <col:30> 'const struct gl_texture_object *' <LValueToRValue>
+|     | |   |   |     | `-DeclRefExpr 0x7fd2bf03bbe8 <col:30> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     | |   |   |     |-ImplicitCastExpr 0x7fd2bf03bea8 <col:36> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   |     | `-DeclRefExpr 0x7fd2bf03bc10 <col:36> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     | |   |   |     |-BinaryOperator 0x7fd2bf03bcb8 <col:39, col:51> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     | |   |   |     | |-ImplicitCastExpr 0x7fd2bf03bc88 <col:39> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     | |   |   |     | | `-DeclRefExpr 0x7fd2bf03bc38 <col:39> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     | |   |   |     | `-ImplicitCastExpr 0x7fd2bf03bca0 <col:51> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   |     |   `-DeclRefExpr 0x7fd2bf03bc60 <col:51> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   |   |     |-ParenExpr 0x7fd2bf03bd40 <line:138:11, col:22> 'void *'
+|     | |   |   |     | `-CStyleCastExpr 0x7fd2bf03bd18 <col:12, col:21> 'void *' <NullToPointer>
+|     | |   |   |     |   `-IntegerLiteral 0x7fd2bf03bce0 <col:21> 'int' 0
+|     | |   |   |     `-BinaryOperator 0x7fd2bf03bde0 <col:25, col:32> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     | |   |   |       |-ImplicitCastExpr 0x7fd2bf03bdb0 <col:25> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     | |   |   |       | `-DeclRefExpr 0x7fd2bf03bd60 <col:25> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     | |   |   |       `-ImplicitCastExpr 0x7fd2bf03bdc8 <col:32> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   |         `-DeclRefExpr 0x7fd2bf03bd88 <col:32> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   |   `-<<<NULL>>>
+|     | |   |-CompoundStmt 0x7fd2bf03c318 <line:140:6, line:143:6>
+|     | |   | `-CallExpr 0x7fd2bf03c278 <line:141:8, line:142:35> 'int'
+|     | |   |   |-ImplicitCastExpr 0x7fd2bf03c260 <line:141:8> 'int (*)()' <FunctionToPointerDecay>
+|     | |   |   | `-DeclRefExpr 0x7fd2bf03bff0 <col:8> 'int ()' Function 0x7fd2bf03bf40 'sample_nearest_2d' 'int ()'
+|     | |   |   |-ImplicitCastExpr 0x7fd2bf03c2d0 <col:27> 'GLcontext *' <LValueToRValue>
+|     | |   |   | `-DeclRefExpr 0x7fd2bf03c018 <col:27> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     | |   |   |-ImplicitCastExpr 0x7fd2bf03c2e8 <col:32> 'const struct gl_texture_object *' <LValueToRValue>
+|     | |   |   | `-DeclRefExpr 0x7fd2bf03c040 <col:32> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     | |   |   |-ImplicitCastExpr 0x7fd2bf03c300 <col:38> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   | `-DeclRefExpr 0x7fd2bf03c068 <col:38> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     | |   |   |-BinaryOperator 0x7fd2bf03c110 <col:41, col:53> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     | |   |   | |-ImplicitCastExpr 0x7fd2bf03c0e0 <col:41> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     | |   |   | | `-DeclRefExpr 0x7fd2bf03c090 <col:41> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     | |   |   | `-ImplicitCastExpr 0x7fd2bf03c0f8 <col:53> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |   |   `-DeclRefExpr 0x7fd2bf03c0b8 <col:53> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   |   |-ParenExpr 0x7fd2bf03c198 <line:142:6, col:17> 'void *'
+|     | |   |   | `-CStyleCastExpr 0x7fd2bf03c170 <col:7, col:16> 'void *' <NullToPointer>
+|     | |   |   |   `-IntegerLiteral 0x7fd2bf03c138 <col:16> 'int' 0
+|     | |   |   `-BinaryOperator 0x7fd2bf03c238 <col:20, col:27> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     | |   |     |-ImplicitCastExpr 0x7fd2bf03c208 <col:20> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     | |   |     | `-DeclRefExpr 0x7fd2bf03c1b8 <col:20> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     | |   |     `-ImplicitCastExpr 0x7fd2bf03c220 <col:27> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |       `-DeclRefExpr 0x7fd2bf03c1e0 <col:27> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   |-BreakStmt 0x7fd2bf03c330 <line:144:4>
+|     | |   |-CallExpr 0x7fd2bf03c640 <line:145:4, line:147:24> 'int'
+|     | |   | |-ImplicitCastExpr 0x7fd2bf03c628 <line:145:4> 'int (*)(GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' <FunctionToPointerDecay>
+|     | |   | | `-DeclRefExpr 0x7fd2bf03c338 <col:4> 'int (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' Function 0x7fd2bf034bd8 'sample_2d_nearest_mipmap_linear' 'int (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])'
+|     | |   | |-ImplicitCastExpr 0x7fd2bf03c698 <col:37> 'GLcontext *' <LValueToRValue>
+|     | |   | | `-DeclRefExpr 0x7fd2bf03c360 <col:37> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     | |   | |-ImplicitCastExpr 0x7fd2bf03c6b0 <col:42> 'const struct gl_texture_object *' <LValueToRValue>
+|     | |   | | `-DeclRefExpr 0x7fd2bf03c388 <col:42> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     | |   | |-ImplicitCastExpr 0x7fd2bf03c6c8 <col:48> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   | | `-DeclRefExpr 0x7fd2bf03c3b0 <col:48> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     | |   | |-BinaryOperator 0x7fd2bf03c458 <col:51, col:63> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     | |   | | |-ImplicitCastExpr 0x7fd2bf03c428 <col:51> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     | |   | | | `-DeclRefExpr 0x7fd2bf03c3d8 <col:51> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     | |   | | `-ImplicitCastExpr 0x7fd2bf03c440 <col:63> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   | |   `-DeclRefExpr 0x7fd2bf03c400 <col:63> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   | |-BinaryOperator 0x7fd2bf03c500 <line:146:9, col:18> 'const GLfloat *':'const GLfloat *' '+'
+|     | |   | | |-ImplicitCastExpr 0x7fd2bf03c4d0 <col:9> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|     | |   | | | `-DeclRefExpr 0x7fd2bf03c480 <col:9> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf03a048 'lambda' 'const GLfloat *':'const GLfloat *'
+|     | |   | | `-ImplicitCastExpr 0x7fd2bf03c4e8 <col:18> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   | |   `-DeclRefExpr 0x7fd2bf03c4a8 <col:18> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   | `-BinaryOperator 0x7fd2bf03c5a8 <line:147:9, col:16> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     | |   |   |-ImplicitCastExpr 0x7fd2bf03c578 <col:9> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     | |   |   | `-DeclRefExpr 0x7fd2bf03c528 <col:9> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     | |   |   `-ImplicitCastExpr 0x7fd2bf03c590 <col:16> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |   |     `-DeclRefExpr 0x7fd2bf03c550 <col:16> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |   `-CaseStmt 0x7fd2bf03c700 <line:148:2, line:153:25>
+|     | |     |-ImplicitCastExpr 0x7fd2bf03cb60 <line:148:7> 'GLenum':'unsigned int' <IntegralCast>
+|     | |     | `-IntegerLiteral 0x7fd2bf03c6e0 <col:7> 'int' 9987
+|     | |     |-<<<NULL>>>
+|     | |     `-IfStmt 0x7fd2bf03caf0 <line:149:4, line:153:25>
+|     | |       |-<<<NULL>>>
+|     | |       |-<<<NULL>>>
+|     | |       |-ImplicitCastExpr 0x7fd2bf03c760 <line:149:8> 'GLboolean':'unsigned char' <LValueToRValue>
+|     | |       | `-DeclRefExpr 0x7fd2bf03c738 <col:8> 'const GLboolean':'const unsigned char' lvalue Var 0x7fd2bf03a778 'repeatNoBorderPOT' 'const GLboolean':'const unsigned char'
+|     | |       |-CallExpr 0x7fd2bf03ca50 <line:150:6, line:153:25> 'void'
+|     | |       | |-ImplicitCastExpr 0x7fd2bf03ca38 <line:150:6> 'void (*)(GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' <FunctionToPointerDecay>
+|     | |       | | `-DeclRefExpr 0x7fd2bf03c778 <col:6> 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' Function 0x7fd2bf037388 'sample_2d_linear_mipmap_linear_repeat' 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])'
+|     | |       | |-ImplicitCastExpr 0x7fd2bf03caa8 <col:45> 'GLcontext *' <LValueToRValue>
+|     | |       | | `-DeclRefExpr 0x7fd2bf03c7a0 <col:45> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     | |       | |-ImplicitCastExpr 0x7fd2bf03cac0 <col:50> 'const struct gl_texture_object *' <LValueToRValue>
+|     | |       | | `-DeclRefExpr 0x7fd2bf03c7c8 <col:50> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     | |       | |-ImplicitCastExpr 0x7fd2bf03cad8 <col:56> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |       | | `-DeclRefExpr 0x7fd2bf03c7f0 <col:56> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     | |       | |-BinaryOperator 0x7fd2bf03c898 <line:151:10, col:22> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     | |       | | |-ImplicitCastExpr 0x7fd2bf03c868 <col:10> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     | |       | | | `-DeclRefExpr 0x7fd2bf03c818 <col:10> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     | |       | | `-ImplicitCastExpr 0x7fd2bf03c880 <col:22> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |       | |   `-DeclRefExpr 0x7fd2bf03c840 <col:22> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |       | |-BinaryOperator 0x7fd2bf03c940 <line:152:10, col:19> 'const GLfloat *':'const GLfloat *' '+'
+|     | |       | | |-ImplicitCastExpr 0x7fd2bf03c910 <col:10> 'const GLfloat *':'const GLfloat *' <LValueToRValue>
+|     | |       | | | `-DeclRefExpr 0x7fd2bf03c8c0 <col:10> 'const GLfloat *':'const GLfloat *' lvalue ParmVar 0x7fd2bf03a048 'lambda' 'const GLfloat *':'const GLfloat *'
+|     | |       | | `-ImplicitCastExpr 0x7fd2bf03c928 <col:19> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |       | |   `-DeclRefExpr 0x7fd2bf03c8e8 <col:19> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |       | `-BinaryOperator 0x7fd2bf03c9e8 <line:153:10, col:17> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     | |       |   |-ImplicitCastExpr 0x7fd2bf03c9b8 <col:10> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     | |       |   | `-DeclRefExpr 0x7fd2bf03c968 <col:10> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     | |       |   `-ImplicitCastExpr 0x7fd2bf03c9d0 <col:17> 'GLuint':'unsigned int' <LValueToRValue>
+|     | |       |     `-DeclRefExpr 0x7fd2bf03c990 <col:17> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a558 'minStart' 'GLuint':'unsigned int'
+|     | |       `-<<<NULL>>>
+|     | `-SwitchStmt 0x7fd2bf03cc50 <line:155:7, line:164:2>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-ImplicitCastExpr 0x7fd2bf03cc38 <line:155:15, col:21> 'GLenum':'unsigned int' <LValueToRValue>
+|     |   | `-MemberExpr 0x7fd2bf03cc00 <col:15, col:21> 'const GLenum':'const unsigned int' lvalue ->MagFilter 0x7fd2be816898
+|     |   |   `-ImplicitCastExpr 0x7fd2bf03cbe8 <col:15> 'const struct gl_texture_object *' <LValueToRValue>
+|     |   |     `-DeclRefExpr 0x7fd2bf03cbc0 <col:15> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     |   `-CompoundStmt 0x7fd2bf03d680 <line:156:2, line:164:2>
+|     |     |-CaseStmt 0x7fd2bf03cca8 <line:157:3, line:159:39>
+|     |     | |-ImplicitCastExpr 0x7fd2bf03d6a8 <line:157:8> 'GLenum':'unsigned int' <IntegralCast>
+|     |     | | `-DeclRefExpr 0x7fd2bf03cc80 <col:8> 'int' EnumConstant 0x7fd2bf821f48 'MESA_FORMAT_RGB' 'int'
+|     |     | |-<<<NULL>>>
+|     |     | `-CallExpr 0x7fd2bf03cf68 <line:158:5, line:159:39> 'int'
+|     |     |   |-ImplicitCastExpr 0x7fd2bf03cf50 <line:158:5> 'int (*)()' <FunctionToPointerDecay>
+|     |     |   | `-DeclRefExpr 0x7fd2bf03cce0 <col:5> 'int ()' Function 0x7fd2bf03b688 'opt_sample_rgb_2d' 'int ()'
+|     |     |   |-ImplicitCastExpr 0x7fd2bf03cfc0 <col:24> 'GLcontext *' <LValueToRValue>
+|     |     |   | `-DeclRefExpr 0x7fd2bf03cd08 <col:24> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     |     |   |-ImplicitCastExpr 0x7fd2bf03cfd8 <col:29> 'const struct gl_texture_object *' <LValueToRValue>
+|     |     |   | `-DeclRefExpr 0x7fd2bf03cd30 <col:29> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     |     |   |-ImplicitCastExpr 0x7fd2bf03cff0 <col:35> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     |   | `-DeclRefExpr 0x7fd2bf03cd58 <col:35> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     |     |   |-BinaryOperator 0x7fd2bf03ce00 <col:38, col:50> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     |     |   | |-ImplicitCastExpr 0x7fd2bf03cdd0 <col:38> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     |     |   | | `-DeclRefExpr 0x7fd2bf03cd80 <col:38> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     |     |   | `-ImplicitCastExpr 0x7fd2bf03cde8 <col:50> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     |   |   `-DeclRefExpr 0x7fd2bf03cda8 <col:50> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|     |     |   |-ParenExpr 0x7fd2bf03ce88 <line:159:10, col:21> 'void *'
+|     |     |   | `-CStyleCastExpr 0x7fd2bf03ce60 <col:11, col:20> 'void *' <NullToPointer>
+|     |     |   |   `-IntegerLiteral 0x7fd2bf03ce28 <col:20> 'int' 0
+|     |     |   `-BinaryOperator 0x7fd2bf03cf28 <col:24, col:31> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     |     |     |-ImplicitCastExpr 0x7fd2bf03cef8 <col:24> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     |     |     | `-DeclRefExpr 0x7fd2bf03cea8 <col:24> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     |     |     `-ImplicitCastExpr 0x7fd2bf03cf10 <col:31> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     |       `-DeclRefExpr 0x7fd2bf03ced0 <col:31> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|     |     |-CallExpr 0x7fd2bf03d290 <line:160:5, line:161:40> 'int'
+|     |     | |-ImplicitCastExpr 0x7fd2bf03d278 <line:160:5> 'int (*)()' <FunctionToPointerDecay>
+|     |     | | `-DeclRefExpr 0x7fd2bf03d008 <col:5> 'int ()' Function 0x7fd2bf03bae8 'opt_sample_rgba_2d' 'int ()'
+|     |     | |-ImplicitCastExpr 0x7fd2bf03d2e8 <col:25> 'GLcontext *' <LValueToRValue>
+|     |     | | `-DeclRefExpr 0x7fd2bf03d030 <col:25> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     |     | |-ImplicitCastExpr 0x7fd2bf03d300 <col:30> 'const struct gl_texture_object *' <LValueToRValue>
+|     |     | | `-DeclRefExpr 0x7fd2bf03d058 <col:30> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     |     | |-ImplicitCastExpr 0x7fd2bf03d318 <col:36> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     | | `-DeclRefExpr 0x7fd2bf03d080 <col:36> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     |     | |-BinaryOperator 0x7fd2bf03d128 <col:39, col:51> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     |     | | |-ImplicitCastExpr 0x7fd2bf03d0f8 <col:39> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     |     | | | `-DeclRefExpr 0x7fd2bf03d0a8 <col:39> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     |     | | `-ImplicitCastExpr 0x7fd2bf03d110 <col:51> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     | |   `-DeclRefExpr 0x7fd2bf03d0d0 <col:51> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|     |     | |-ParenExpr 0x7fd2bf03d1b0 <line:161:11, col:22> 'void *'
+|     |     | | `-CStyleCastExpr 0x7fd2bf03d188 <col:12, col:21> 'void *' <NullToPointer>
+|     |     | |   `-IntegerLiteral 0x7fd2bf03d150 <col:21> 'int' 0
+|     |     | `-BinaryOperator 0x7fd2bf03d250 <col:25, col:32> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     |     |   |-ImplicitCastExpr 0x7fd2bf03d220 <col:25> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     |     |   | `-DeclRefExpr 0x7fd2bf03d1d0 <col:25> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     |     |   `-ImplicitCastExpr 0x7fd2bf03d238 <col:32> 'GLuint':'unsigned int' <LValueToRValue>
+|     |     |     `-DeclRefExpr 0x7fd2bf03d1f8 <col:32> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|     |     `-CallExpr 0x7fd2bf03d5b8 <line:162:19, line:163:67> 'int'
+|     |       |-ImplicitCastExpr 0x7fd2bf03d5a0 <line:162:19> 'int (*)()' <FunctionToPointerDecay>
+|     |       | `-DeclRefExpr 0x7fd2bf03d330 <col:19> 'int ()' Function 0x7fd2bf03bf40 'sample_nearest_2d' 'int ()'
+|     |       |-ImplicitCastExpr 0x7fd2bf03d638 <col:38> 'GLcontext *' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7fd2bf03d358 <col:38> 'GLcontext *' lvalue ParmVar 0x7fd2bf039e20 'ctx' 'GLcontext *'
+|     |       |-ImplicitCastExpr 0x7fd2bf03d650 <col:43> 'const struct gl_texture_object *' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7fd2bf03d380 <col:43> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf039ea8 'tObj' 'const struct gl_texture_object *'
+|     |       |-ImplicitCastExpr 0x7fd2bf03d668 <col:49> 'GLuint':'unsigned int' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7fd2bf03d3a8 <col:49> 'const GLuint':'const unsigned int' lvalue Var 0x7fd2bf03af88 'm' 'const GLuint':'const unsigned int'
+|     |       |-BinaryOperator 0x7fd2bf03d450 <col:52, col:64> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' '+'
+|     |       | |-ImplicitCastExpr 0x7fd2bf03d420 <col:52> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' <LValueToRValue>
+|     |       | | `-DeclRefExpr 0x7fd2bf03d3d0 <col:52> 'const GLfloat (*)[4]':'const GLfloat (*)[4]' lvalue ParmVar 0x7fd2bf039fc8 'texcoords' 'const GLfloat (*)[4]':'const GLfloat (*)[4]'
+|     |       | `-ImplicitCastExpr 0x7fd2bf03d438 <col:64> 'GLuint':'unsigned int' <LValueToRValue>
+|     |       |   `-DeclRefExpr 0x7fd2bf03d3f8 <col:64> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|     |       |-ParenExpr 0x7fd2bf03d4d8 <line:163:38, col:49> 'void *'
+|     |       | `-CStyleCastExpr 0x7fd2bf03d4b0 <col:39, col:48> 'void *' <NullToPointer>
+|     |       |   `-IntegerLiteral 0x7fd2bf03d478 <col:48> 'int' 0
+|     |       `-BinaryOperator 0x7fd2bf03d578 <col:52, col:59> 'GLchan (*)[4]':'GLchan (*)[4]' '+'
+|     |         |-ImplicitCastExpr 0x7fd2bf03d548 <col:52> 'GLchan (*)[4]':'GLchan (*)[4]' <LValueToRValue>
+|     |         | `-DeclRefExpr 0x7fd2bf03d4f8 <col:52> 'GLchan (*)[4]':'GLchan (*)[4]' lvalue ParmVar 0x7fd2bf03a0f8 'rgba' 'GLchan (*)[4]':'GLchan (*)[4]'
+|     |         `-ImplicitCastExpr 0x7fd2bf03d560 <col:59> 'GLuint':'unsigned int' <LValueToRValue>
+|     |           `-DeclRefExpr 0x7fd2bf03d520 <col:59> 'GLuint':'unsigned int' lvalue Var 0x7fd2bf03a668 'magStart' 'GLuint':'unsigned int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd2bf03d8b0 <line:167:1, line:175:1> line:168:1 _swrast_choose_texture_sample_func 'texture_sample_func (const struct gl_texture_object *)'
+  |-ParmVarDecl 0x7fd2bf03d7a8 <col:37, col:69> col:69 used t 'const struct gl_texture_object *'
+  `-CompoundStmt 0x7fd2bf03db00 <line:169:1, line:175:1>
+    `-SwitchStmt 0x7fd2bf03d9e8 <line:170:7, line:174:2>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd2bf03d9d0 <line:170:15, col:18> 'GLenum':'unsigned int' <LValueToRValue>
+      | `-MemberExpr 0x7fd2bf03d998 <col:15, col:18> 'const GLenum':'const unsigned int' lvalue ->Target 0x7fd2be816790
+      |   `-ImplicitCastExpr 0x7fd2bf03d980 <col:15> 'const struct gl_texture_object *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fd2bf03d958 <col:15> 'const struct gl_texture_object *' lvalue ParmVar 0x7fd2bf03d7a8 't' 'const struct gl_texture_object *'
+      `-CompoundStmt 0x7fd2bf03dad0 <line:171:2, line:174:2>
+        `-CaseStmt 0x7fd2bf03da38 <line:172:2, line:173:16>
+          |-ImplicitCastExpr 0x7fd2bf03dae8 <line:172:7> 'GLenum':'unsigned int' <IntegralCast>
+          | `-IntegerLiteral 0x7fd2bf03da18 <col:7> 'int' 3552
+          |-<<<NULL>>>
+          `-ReturnStmt 0x7fd2bf03dab8 <line:173:8, col:16>
+            `-UnaryOperator 0x7fd2bf03da98 <col:15, col:16> 'void (*)(GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' prefix '&'
+              `-DeclRefExpr 0x7fd2bf03da70 <col:16> 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])' Function 0x7fd2bf03a200 'sample_lambda_2d' 'void (GLcontext *, const struct gl_texture_object *, GLuint, const GLfloat (*)[4], const GLfloat *, GLchan (*)[4])'

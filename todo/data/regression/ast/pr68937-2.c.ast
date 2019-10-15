@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fef2002aae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fef2006c6d0 <../Data/C2AST/pr68937-2.c:4:1, col:26> col:13 used bar 'void (int, int)' extern
+| |-ParmVarDecl 0x7fef2002b778 <col:18> col:21 'int'
+| `-ParmVarDecl 0x7fef2006c600 <col:23> col:26 'int'
+`-FunctionDecl 0x7fef2006c8e0 <line:6:1, line:11:1> line:7:1 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fef2006c7d8 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7fef2006c850 <col:13, col:17> col:17 used b 'int'
+  `-CompoundStmt 0x7fef2006cbb0 <line:8:1, line:11:1>
+    |-CallExpr 0x7fef2006ca50 <line:9:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fef2006ca38 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fef2006c990 <col:3> 'void (int, int)' Function 0x7fef2006c6d0 'bar' 'void (int, int)'
+    | |-ImplicitCastExpr 0x7fef2006ca88 <col:8> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fef2006c9b8 <col:8> 'int' lvalue ParmVar 0x7fef2006c7d8 'a' 'int'
+    | `-ImplicitCastExpr 0x7fef2006caa0 <col:11> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fef2006c9e0 <col:11> 'int' lvalue ParmVar 0x7fef2006c850 'b' 'int'
+    `-CallExpr 0x7fef2006cb48 <line:10:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7fef2006cb30 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fef2006cab8 <col:3> 'void (int, int)' Function 0x7fef2006c6d0 'bar' 'void (int, int)'
+      |-ImplicitCastExpr 0x7fef2006cb80 <col:8> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fef2006cae0 <col:8> 'int' lvalue ParmVar 0x7fef2006c7d8 'a' 'int'
+      `-ImplicitCastExpr 0x7fef2006cb98 <col:11> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fef2006cb08 <col:11> 'int' lvalue ParmVar 0x7fef2006c850 'b' 'int'

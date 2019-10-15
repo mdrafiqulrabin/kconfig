@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fe5e68174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe5e6029260 <../Data/C2AST/pr60868.c:4:1, col:18> col:6 used bar 'void (float *)'
+| `-ParmVarDecl 0x7fe5e68181a0 <col:11, col:17> col:18 'float *'
+`-FunctionDecl 0x7fe5e6029410 <line:6:1, line:10:1> line:6:6 foo 'void (void)'
+  `-CompoundStmt 0x7fe5e6029758 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fe5e6029668 <line:8:3, col:21>
+    | `-VarDecl 0x7fe5e6029530 <col:3, col:20> col:9 used b 'float [256]' cinit
+    |   `-InitListExpr 0x7fe5e60295f8 <col:18, col:20> 'float [256]'
+    |     |-array filler
+    |     | `-ImplicitValueInitExpr 0x7fe5e6029658 <<invalid sloc>> 'float'
+    |     `-ImplicitCastExpr 0x7fe5e6029638 <col:19> 'float' <IntegralToFloating>
+    |       `-IntegerLiteral 0x7fe5e6029590 <col:19> 'int' 0
+    `-CallExpr 0x7fe5e6029710 <line:9:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7fe5e60296f8 <col:3> 'void (*)(float *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe5e6029680 <col:3> 'void (float *)' Function 0x7fe5e6029260 'bar' 'void (float *)'
+      `-ImplicitCastExpr 0x7fe5e6029740 <col:7> 'float *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fe5e60296a8 <col:7> 'float [256]' lvalue Var 0x7fe5e6029530 'b' 'float [256]'

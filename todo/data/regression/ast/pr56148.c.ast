@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe2a982bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe2a986d820 <../Data/C2AST/pr56148.c:5:1, line:12:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe2a986e228 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fe2a986d9e0 <line:8:3, col:22>
+    | `-VarDecl 0x7fe2a986d980 <col:3, col:21> col:17 used e 'unsigned char [16]'
+    |-DeclStmt 0x7fe2a986dc00 <line:9:3, col:27>
+    | |-VarDecl 0x7fe2a986da10 <col:3, col:17> col:17 used a 'unsigned long'
+    | |-VarDecl 0x7fe2a986da88 <col:3, col:20> col:20 used b 'unsigned long'
+    | |-VarDecl 0x7fe2a986db00 <col:3, col:23> col:23 used c 'unsigned long'
+    | `-VarDecl 0x7fe2a986db78 <col:3, col:26> col:26 used d 'unsigned long'
+    `-GCCAsmStmt 0x7fe2a986e108 <line:10:3, line:11:73>
+      |-DeclRefExpr 0x7fe2a986dce8 <line:10:36> 'unsigned long' lvalue Var 0x7fe2a986da10 'a' 'unsigned long'
+      |-DeclRefExpr 0x7fe2a986dd78 <col:47> 'unsigned long' lvalue Var 0x7fe2a986db00 'c' 'unsigned long'
+      |-DeclRefExpr 0x7fe2a986ddd0 <col:58> 'unsigned long' lvalue Var 0x7fe2a986db78 'd' 'unsigned long'
+      |-DeclRefExpr 0x7fe2a986de28 <col:69> 'unsigned long' lvalue Var 0x7fe2a986da88 'b' 'unsigned long'
+      |-UnaryOperator 0x7fe2a986ded8 <line:11:23, col:24> 'unsigned int' prefix '-'
+      | `-IntegerLiteral 0x7fe2a986deb8 <col:24> 'unsigned int' 1
+      |-ImplicitCastExpr 0x7fe2a986e0d8 <col:35> 'unsigned char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7fe2a986df28 <col:35> 'unsigned char [16]' lvalue Var 0x7fe2a986d980 'e' 'unsigned char [16]'
+      |-BinaryOperator 0x7fe2a986dfc0 <col:44, col:51> 'int' '>>'
+      | |-IntegerLiteral 0x7fe2a986df80 <col:44> 'int' 128
+      | `-IntegerLiteral 0x7fe2a986dfa0 <col:51> 'int' 5
+      |-ImplicitCastExpr 0x7fe2a986e0f0 <col:60> 'unsigned char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7fe2a986e018 <col:60> 'unsigned char [16]' lvalue Var 0x7fe2a986d980 'e' 'unsigned char [16]'
+      `-UnaryOperator 0x7fe2a986e090 <col:69, col:70> 'unsigned int' prefix '-'
+        `-IntegerLiteral 0x7fe2a986e070 <col:70> 'unsigned int' 1

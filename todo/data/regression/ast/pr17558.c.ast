@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb7c58274e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb7c5828160 <../Data/C2AST/pr17558.c:1:1, line:3:1> line:1:8 struct xobject definition
+| `-FieldDecl 0x7fb7c5869030 <line:2:8, col:13> col:13 type 'char'
+|-FunctionDecl 0x7fb7c5869248 <line:4:1, col:54> col:24 t1_Xform 'struct xobject *(struct xobject *)' extern
+| `-ParmVarDecl 0x7fb7c5869130 <col:35, col:51> col:51 obj 'struct xobject *'
+`-FunctionDecl 0x7fb7c58693f8 prev 0x7fb7c5869248 <line:5:1, line:10:1> line:6:1 t1_Xform 'struct xobject *(struct xobject *)'
+  |-ParmVarDecl 0x7fb7c5869358 <col:10, col:26> col:26 used obj 'struct xobject *'
+  `-CompoundStmt 0x7fb7c58697e8 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fb7c5869708 <line:8:3, col:48>
+    | |-RecordDecl 0x7fb7c58694a0 <col:12, col:19> col:19 struct font
+    | `-VarDecl 0x7fb7c5869600 <col:3, col:45> col:25 used F 'struct font *' register cinit
+    |   `-CStyleCastExpr 0x7fb7c58696c8 <col:29, col:45> 'struct font *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fb7c58696b0 <col:45> 'struct xobject *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb7c5869660 <col:45> 'struct xobject *' lvalue ParmVar 0x7fb7c5869358 'obj' 'struct xobject *'
+    `-ReturnStmt 0x7fb7c58697d0 <line:9:3, col:28>
+      `-ParenExpr 0x7fb7c58697b0 <col:9, col:28> 'struct xobject *'
+        `-CStyleCastExpr 0x7fb7c5869788 <col:10, col:27> 'struct xobject *' <BitCast>
+          `-ImplicitCastExpr 0x7fb7c5869770 <col:27> 'struct font *' <LValueToRValue>
+            `-DeclRefExpr 0x7fb7c5869720 <col:27> 'struct font *' lvalue Var 0x7fb7c5869600 'F' 'struct font *'

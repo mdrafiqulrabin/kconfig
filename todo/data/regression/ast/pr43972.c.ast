@@ -1,0 +1,139 @@
+TranslationUnitDecl 0x7fe69e02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe69e02c960 <../Data/C2AST/pr43972.c:6:1, col:19> col:1 struct definition
+| `-FieldDecl 0x7fe69e814260 <col:10, col:15> col:15 referenced b1 'int *'
+|-FunctionDecl 0x7fe69e8143d0 <col:1, col:26> col:22 used f1 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+|-VarDecl 0x7fe69e814550 <line:7:1, col:11> col:7 used v1 'short [1]'
+|-RecordDecl 0x7fe69e8145b0 <line:8:1, col:20> col:8 struct S definition
+| `-FieldDecl 0x7fe69e814678 <col:12, col:16> col:16 referenced b2 'int'
+|-RecordDecl 0x7fe69e8147d0 <line:10:20, col:61> col:20 union definition
+| |-FieldDecl 0x7fe69e814898 <col:28, col:34> col:34 referenced b3 'char *'
+| |-FieldDecl 0x7fe69e814920 <col:38, col:48> col:48 referenced b4 'unsigned int *'
+| `-FieldDecl 0x7fe69e814980 <col:52, col:57> col:57 referenced b5 'int *'
+`-FunctionDecl 0x7fe69e814b90 <line:9:1, line:29:1> line:10:1 referenced foo 'void (struct S *, union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *)'
+  |-ParmVarDecl 0x7fe69e814770 <col:6, col:16> col:16 used a1 'struct S *'
+  |-ParmVarDecl 0x7fe69e814a80 <col:20, col:64> col:64 used a2 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *'
+  `-CompoundStmt 0x7fe69e815fa0 <line:11:1, line:29:1>
+    |-DeclStmt 0x7fe69e814cb8 <line:12:3, col:8>
+    | `-VarDecl 0x7fe69e814c58 <col:3, col:7> col:7 used d 'int'
+    `-SwitchStmt 0x7fe69e814d10 <line:13:3, line:28:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe69e814cf8 <line:13:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe69e814cd0 <col:11> 'int' lvalue Var 0x7fe69e814c58 'd' 'int'
+      `-CompoundStmt 0x7fe69e815f88 <line:14:5, line:28:5>
+        `-CaseStmt 0x7fe69e814d60 <line:15:5, line:27:7>
+          |-IntegerLiteral 0x7fe69e814d40 <line:15:10> 'int' 0
+          |-<<<NULL>>>
+          `-CompoundStmt 0x7fe69e815f58 <line:16:7, line:27:7>
+            |-DeclStmt 0x7fe69e814f30 <line:17:2, col:19>
+            | |-VarDecl 0x7fe69e814db0 <col:2, col:14> col:6 used c 'int' cinit
+            | | `-ImplicitCastExpr 0x7fe69e814e88 <col:10, col:14> 'int' <LValueToRValue>
+            | |   `-MemberExpr 0x7fe69e814e50 <col:10, col:14> 'int' lvalue ->b2 0x7fe69e814678
+            | |     `-ImplicitCastExpr 0x7fe69e814e38 <col:10> 'struct S *' <LValueToRValue>
+            | |       `-DeclRefExpr 0x7fe69e814e10 <col:10> 'struct S *' lvalue ParmVar 0x7fe69e814770 'a1' 'struct S *'
+            | `-VarDecl 0x7fe69e814eb8 <col:2, col:18> col:18 used i 'int'
+            |-IfStmt 0x7fe69e815a90 <line:18:2, line:23:23>
+            | |-<<<NULL>>>
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7fe69e815040 <line:18:6, col:15> 'int' '=='
+            | | |-CallExpr 0x7fe69e814fe0 <col:6, col:10> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *'
+            | | | `-ImplicitCastExpr 0x7fe69e814fc8 <col:6> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            | | |   `-DeclRefExpr 0x7fe69e814f48 <col:6> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            | | `-ImplicitCastExpr 0x7fe69e815028 <col:15> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *' <NullToPointer>
+            | |   `-IntegerLiteral 0x7fe69e815008 <col:15> 'int' 0
+            | |-BinaryOperator 0x7fe69e815158 <line:19:4, col:16> 'char' '='
+            | | |-UnaryOperator 0x7fe69e815100 <col:4, col:11> 'char' lvalue prefix '*'
+            | | | `-UnaryOperator 0x7fe69e8150e0 <col:5, col:11> 'char *' postfix '++'
+            | | |   `-MemberExpr 0x7fe69e8150a8 <col:5, col:9> 'char *' lvalue ->b3 0x7fe69e814898
+            | | |     `-ImplicitCastExpr 0x7fe69e815090 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' <LValueToRValue>
+            | | |       `-DeclRefExpr 0x7fe69e815068 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' lvalue ParmVar 0x7fe69e814a80 'a2' 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *'
+            | | `-ImplicitCastExpr 0x7fe69e815140 <col:16> 'char' <IntegralCast>
+            | |   `-IntegerLiteral 0x7fe69e815120 <col:16> 'int' 2
+            | `-IfStmt 0x7fe69e815a58 <line:20:7, line:23:23>
+            |   |-<<<NULL>>>
+            |   |-<<<NULL>>>
+            |   |-BinaryOperator 0x7fe69e8155f0 <line:20:11, col:76> 'long' '^'
+            |   | |-ParenExpr 0x7fe69e815368 <col:11, col:34> 'long'
+            |   | | `-CStyleCastExpr 0x7fe69e815340 <col:12, col:33> 'long' <NoOp>
+            |   | |   `-ParenExpr 0x7fe69e815320 <col:19, col:33> 'long'
+            |   | |     `-BinaryOperator 0x7fe69e8152b0 <col:20, col:32> 'long' '-'
+            |   | |       |-CallExpr 0x7fe69e8151c0 <col:20, col:24> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *'
+            |   | |       | `-ImplicitCastExpr 0x7fe69e8151a8 <col:20> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |   | |       |   `-DeclRefExpr 0x7fe69e815180 <col:20> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |   | |       `-CallExpr 0x7fe69e815240 <col:28, col:32> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *'
+            |   | |         `-ImplicitCastExpr 0x7fe69e815228 <col:28> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |   | |           `-DeclRefExpr 0x7fe69e815200 <col:28> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |   | `-ParenExpr 0x7fe69e8155d0 <col:38, col:76> 'long'
+            |   |   `-BinaryOperator 0x7fe69e8155a8 <col:39, col:75> 'long' '-'
+            |   |     |-CStyleCastExpr 0x7fe69e815458 <col:39, col:53> 'long' <PointerToIntegral>
+            |   |     | `-ImplicitCastExpr 0x7fe69e815440 <col:46, col:53> 'int *' <LValueToRValue>
+            |   |     |   `-MemberExpr 0x7fe69e8153f0 <col:46, col:53> 'int *' lvalue ->b1 0x7fe69e814260
+            |   |     |     `-CallExpr 0x7fe69e8153c8 <col:46, col:50> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *'
+            |   |     |       `-ImplicitCastExpr 0x7fe69e8153b0 <col:46> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |   |     |         `-DeclRefExpr 0x7fe69e815388 <col:46> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |   |     `-ParenExpr 0x7fe69e815588 <col:58, col:75> 'long'
+            |   |       `-BinaryOperator 0x7fe69e815560 <col:59, col:74> 'long' '&'
+            |   |         |-CStyleCastExpr 0x7fe69e815500 <col:59, col:70> 'long' <PointerToIntegral>
+            |   |         | `-CallExpr 0x7fe69e8154c0 <col:66, col:70> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *'
+            |   |         |   `-ImplicitCastExpr 0x7fe69e8154a8 <col:66> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |   |         |     `-DeclRefExpr 0x7fe69e815480 <col:66> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |   |         `-ImplicitCastExpr 0x7fe69e815548 <col:74> 'long' <IntegralCast>
+            |   |           `-IntegerLiteral 0x7fe69e815528 <col:74> 'int' 8
+            |   |-BinaryOperator 0x7fe69e8158b8 <line:21:4, col:48> 'char' '='
+            |   | |-UnaryOperator 0x7fe69e8156b0 <col:4, col:11> 'char' lvalue prefix '*'
+            |   | | `-UnaryOperator 0x7fe69e815690 <col:5, col:11> 'char *' postfix '++'
+            |   | |   `-MemberExpr 0x7fe69e815658 <col:5, col:9> 'char *' lvalue ->b3 0x7fe69e814898
+            |   | |     `-ImplicitCastExpr 0x7fe69e815640 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' <LValueToRValue>
+            |   | |       `-DeclRefExpr 0x7fe69e815618 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' lvalue ParmVar 0x7fe69e814a80 'a2' 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *'
+            |   | `-ImplicitCastExpr 0x7fe69e8158a0 <col:16, col:48> 'char' <IntegralCast>
+            |   |   `-BinaryOperator 0x7fe69e815878 <col:16, col:48> 'long' '-'
+            |   |     |-CStyleCastExpr 0x7fe69e815728 <col:16, col:23> 'long' <PointerToIntegral>
+            |   |     | `-ImplicitCastExpr 0x7fe69e815710 <col:23> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |   |     |   `-DeclRefExpr 0x7fe69e8156d0 <col:23> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |   |     `-ParenExpr 0x7fe69e815858 <col:28, col:48> 'long'
+            |   |       `-BinaryOperator 0x7fe69e815830 <col:29, col:44> 'long' '&'
+            |   |         |-CStyleCastExpr 0x7fe69e8157d0 <col:29, col:40> 'long' <PointerToIntegral>
+            |   |         | `-CallExpr 0x7fe69e815790 <col:36, col:40> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *'
+            |   |         |   `-ImplicitCastExpr 0x7fe69e815778 <col:36> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |   |         |     `-DeclRefExpr 0x7fe69e815750 <col:36> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |   |         `-ImplicitCastExpr 0x7fe69e815818 <col:44> 'long' <IntegralCast>
+            |   |           `-IntegerLiteral 0x7fe69e8157f8 <col:44> 'int' 255
+            |   `-BinaryOperator 0x7fe69e815a30 <line:23:4, col:23> 'unsigned int' '='
+            |     |-UnaryOperator 0x7fe69e815978 <col:4, col:11> 'unsigned int' lvalue prefix '*'
+            |     | `-UnaryOperator 0x7fe69e815958 <col:5, col:11> 'unsigned int *' postfix '++'
+            |     |   `-MemberExpr 0x7fe69e815920 <col:5, col:9> 'unsigned int *' lvalue ->b4 0x7fe69e814920
+            |     |     `-ImplicitCastExpr 0x7fe69e815908 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' <LValueToRValue>
+            |     |       `-DeclRefExpr 0x7fe69e8158e0 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' lvalue ParmVar 0x7fe69e814a80 'a2' 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *'
+            |     `-ImplicitCastExpr 0x7fe69e815a18 <col:16, col:23> 'unsigned int' <IntegralCast>
+            |       `-CStyleCastExpr 0x7fe69e8159f0 <col:16, col:23> 'long' <PointerToIntegral>
+            |         `-ImplicitCastExpr 0x7fe69e8159d8 <col:23> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *(*)()' <FunctionToPointerDecay>
+            |           `-DeclRefExpr 0x7fe69e815998 <col:23> 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()' Function 0x7fe69e8143d0 'f1' 'struct (anonymous struct at ../Data/C2AST/pr43972.c:6:1) *()'
+            |-ForStmt 0x7fe69e815dc8 <line:24:2, line:25:23>
+            | |-BinaryOperator 0x7fe69e815b10 <line:24:7, col:11> 'int' '='
+            | | |-DeclRefExpr 0x7fe69e815ac8 <col:7> 'int' lvalue Var 0x7fe69e814eb8 'i' 'int'
+            | | `-IntegerLiteral 0x7fe69e815af0 <col:11> 'int' 0
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7fe69e815bb8 <col:14, col:18> 'int' '<'
+            | | |-ImplicitCastExpr 0x7fe69e815b88 <col:14> 'int' <LValueToRValue>
+            | | | `-DeclRefExpr 0x7fe69e815b38 <col:14> 'int' lvalue Var 0x7fe69e814eb8 'i' 'int'
+            | | `-ImplicitCastExpr 0x7fe69e815ba0 <col:18> 'int' <LValueToRValue>
+            | |   `-DeclRefExpr 0x7fe69e815b60 <col:18> 'int' lvalue Var 0x7fe69e814db0 'c' 'int'
+            | |-UnaryOperator 0x7fe69e815c08 <col:21, col:22> 'int' postfix '++'
+            | | `-DeclRefExpr 0x7fe69e815be0 <col:21> 'int' lvalue Var 0x7fe69e814eb8 'i' 'int'
+            | `-BinaryOperator 0x7fe69e815da0 <line:25:4, col:23> 'int' '='
+            |   |-UnaryOperator 0x7fe69e815cc0 <col:4, col:11> 'int' lvalue prefix '*'
+            |   | `-UnaryOperator 0x7fe69e815ca0 <col:5, col:11> 'int *' postfix '++'
+            |   |   `-MemberExpr 0x7fe69e815c68 <col:5, col:9> 'int *' lvalue ->b5 0x7fe69e814980
+            |   |     `-ImplicitCastExpr 0x7fe69e815c50 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' <LValueToRValue>
+            |   |       `-DeclRefExpr 0x7fe69e815c28 <col:5> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' lvalue ParmVar 0x7fe69e814a80 'a2' 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *'
+            |   `-ImplicitCastExpr 0x7fe69e815d88 <col:16, col:23> 'int' <IntegralCast>
+            |     `-CStyleCastExpr 0x7fe69e815d60 <col:16, col:23> 'long' <PointerToIntegral>
+            |       `-ImplicitCastExpr 0x7fe69e815d48 <col:23> 'short *' <ArrayToPointerDecay>
+            |         `-DeclRefExpr 0x7fe69e815ce0 <col:23> 'short [1]' lvalue Var 0x7fe69e814550 'v1' 'short [1]'
+            `-CallExpr 0x7fe69e815ef0 <line:26:2, col:13> 'void'
+              |-ImplicitCastExpr 0x7fe69e815ed8 <col:2> 'void (*)(struct S *, union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *)' <FunctionToPointerDecay>
+              | `-DeclRefExpr 0x7fe69e815e00 <col:2> 'void (struct S *, union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *)' Function 0x7fe69e814b90 'foo' 'void (struct S *, union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *)'
+              |-ImplicitCastExpr 0x7fe69e815f28 <col:7> 'struct S *' <LValueToRValue>
+              | `-DeclRefExpr 0x7fe69e815e28 <col:7> 'struct S *' lvalue ParmVar 0x7fe69e814770 'a1' 'struct S *'
+              `-ImplicitCastExpr 0x7fe69e815f40 <col:11> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' <LValueToRValue>
+                `-DeclRefExpr 0x7fe69e815e50 <col:11> 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *' lvalue ParmVar 0x7fe69e814a80 'a2' 'union (anonymous union at ../Data/C2AST/pr43972.c:10:20) *'

@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f890b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f890b814268 <../Data/C2AST/pr36332.c:3:1, line:7:1> line:4:1 used foo 'int (long double)'
+| |-ParmVarDecl 0x7f890b02c978 <col:6, col:18> col:18 used ld 'long double'
+| `-CompoundStmt 0x7f890b814590 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f890b814578 <line:6:3, col:32>
+|     `-BinaryOperator 0x7f890b814550 <col:10, col:32> 'int' '=='
+|       |-ImplicitCastExpr 0x7f890b814538 <col:10> 'long double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f890b814350 <col:10> 'long double' lvalue ParmVar 0x7f890b02c978 'ld' 'long double'
+|       `-CallExpr 0x7f890b814510 <col:16, col:32> 'long double'
+|         `-ImplicitCastExpr 0x7f890b8144f8 <col:16> 'long double (*)(void)' <BuiltinFnToFnPtr>
+|           `-DeclRefExpr 0x7f890b8144a8 <col:16> '<builtin fn type>' Function 0x7f890b8143b0 '__builtin_infl' 'long double (void)'
+|-FunctionDecl 0x7f890b8143b0 <col:16> col:16 implicit used __builtin_infl 'long double (void)' extern
+| |-NoThrowAttr 0x7f890b814450 <col:16> Implicit
+| `-ConstAttr 0x7f890b814498 <col:16> Implicit
+|-FunctionDecl 0x7f890b814600 <line:9:1, line:15:1> line:10:1 main 'int ()'
+| `-CompoundStmt 0x7f890b814988 <line:11:1, line:15:1>
+|   |-IfStmt 0x7f890b814918 <line:12:3, line:13:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f890b814740 <line:12:7, col:24> 'int'
+|   | | |-ImplicitCastExpr 0x7f890b814728 <col:7> 'int (*)(long double)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7f890b8146a0 <col:7> 'int (long double)' Function 0x7f890b814268 'foo' 'int (long double)'
+|   | | `-FloatingLiteral 0x7f890b8146c8 <<built-in>:154:22> 'long double' INF
+|   | |-CallExpr 0x7f890b8148f0 <../Data/C2AST/pr36332.c:13:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f890b8148d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f890b814888 <col:5> '<builtin fn type>' Function 0x7f890b8147a0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f890b814970 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7f890b814950 <col:10> 'int' 0
+`-FunctionDecl 0x7f890b8147a0 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f890b814840 <col:5> Implicit

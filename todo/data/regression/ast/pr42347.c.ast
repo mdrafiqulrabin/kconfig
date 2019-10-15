@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7f9a9802bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9a988142d8 <../Data/C2AST/pr42347.c:3:1, line:16:1> line:4:1 foo 'long (long, long)'
+| |-ParmVarDecl 0x7f9a9802c978 <col:6, col:11> col:11 used x 'long'
+| |-ParmVarDecl 0x7f9a98814200 <col:14, col:19> col:19 used y 'long'
+| `-CompoundStmt 0x7f9a98814b88 <line:5:1, line:16:1>
+|   |-BinaryOperator 0x7f9a98814498 <line:6:3, col:11> 'long' '='
+|   | |-DeclRefExpr 0x7f9a988143c8 <col:3> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+|   | `-BinaryOperator 0x7f9a98814470 <col:7, col:11> 'long' '&'
+|   |   |-ImplicitCastExpr 0x7f9a98814440 <col:7> 'long' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9a988143f0 <col:7> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+|   |   `-ImplicitCastExpr 0x7f9a98814458 <col:11> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f9a98814418 <col:11> 'long' lvalue ParmVar 0x7f9a98814200 'y' 'long'
+|   |-SwitchStmt 0x7f9a98814500 <line:7:3, line:14:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f9a988144e8 <line:7:11> 'long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f9a988144c0 <col:11> 'long' lvalue ParmVar 0x7f9a98814200 'y' 'long'
+|   | `-CompoundStmt 0x7f9a98814ad8 <line:8:5, line:14:5>
+|   |   |-CaseStmt 0x7f9a98814550 <line:9:5, col:21>
+|   |   | |-IntegerLiteral 0x7f9a98814530 <col:10> 'long' 63
+|   |   | |-<<<NULL>>>
+|   |   | `-CompoundAssignOperator 0x7f9a988145e8 <col:15, col:21> 'long' '>>=' ComputeLHSTy='long' ComputeResultTy='long'
+|   |   |   |-DeclRefExpr 0x7f9a98814588 <col:15> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+|   |   |   `-IntegerLiteral 0x7f9a988145b0 <col:21> 'int' 0
+|   |   |-BreakStmt 0x7f9a98814620 <col:24>
+|   |   |-CaseStmt 0x7f9a98814648 <line:10:5, col:23>
+|   |   | |-IntegerLiteral 0x7f9a98814628 <col:10> 'long' 4032
+|   |   | |-<<<NULL>>>
+|   |   | `-CompoundAssignOperator 0x7f9a988146e0 <col:17, col:23> 'long' '>>=' ComputeLHSTy='long' ComputeResultTy='long'
+|   |   |   |-DeclRefExpr 0x7f9a98814680 <col:17> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+|   |   |   `-IntegerLiteral 0x7f9a988146a8 <col:23> 'int' 6
+|   |   |-BreakStmt 0x7f9a98814718 <col:26>
+|   |   |-CaseStmt 0x7f9a98814740 <line:11:5, col:25>
+|   |   | |-IntegerLiteral 0x7f9a98814720 <col:10> 'long' 258048
+|   |   | |-<<<NULL>>>
+|   |   | `-CompoundAssignOperator 0x7f9a988147d8 <col:19, col:25> 'long' '>>=' ComputeLHSTy='long' ComputeResultTy='long'
+|   |   |   |-DeclRefExpr 0x7f9a98814778 <col:19> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+|   |   |   `-IntegerLiteral 0x7f9a988147a0 <col:25> 'int' 12
+|   |   |-BreakStmt 0x7f9a98814810 <col:29>
+|   |   |-CaseStmt 0x7f9a98814838 <line:12:5, col:27>
+|   |   | |-IntegerLiteral 0x7f9a98814818 <col:10> 'long' 16515072
+|   |   | |-<<<NULL>>>
+|   |   | `-CompoundAssignOperator 0x7f9a988148d0 <col:21, col:27> 'long' '>>=' ComputeLHSTy='long' ComputeResultTy='long'
+|   |   |   |-DeclRefExpr 0x7f9a98814870 <col:21> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+|   |   |   `-IntegerLiteral 0x7f9a98814898 <col:27> 'int' 18
+|   |   |-BreakStmt 0x7f9a98814908 <col:31>
+|   |   `-DefaultStmt 0x7f9a98814ab8 <line:13:5, col:37>
+|   |     `-CallExpr 0x7f9a98814a90 <col:14, col:37> 'void'
+|   |       `-ImplicitCastExpr 0x7f9a98814a78 <col:14> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |         `-DeclRefExpr 0x7f9a98814a28 <col:14> '<builtin fn type>' Function 0x7f9a98814940 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-ReturnStmt 0x7f9a98814b70 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a98814b58 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a98814b30 <col:10> 'long' lvalue ParmVar 0x7f9a9802c978 'x' 'long'
+`-FunctionDecl 0x7f9a98814940 <line:13:14> col:14 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f9a988149e0 <col:14> Implicit

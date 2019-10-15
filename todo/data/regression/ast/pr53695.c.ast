@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fd6c08174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd6c08590c0 <../Data/C2AST/pr53695.c:6:1, line:16:1> line:7:1 foo 'void (const void **)'
+  |-ParmVarDecl 0x7fd6c0859000 <col:6, col:19> col:19 used p 'const void **'
+  `-CompoundStmt 0x7fd6c0859600 <line:8:1, line:16:1>
+    |-DeclStmt 0x7fd6c08594a8 <line:9:3, col:38>
+    | `-VarDecl 0x7fd6c0859200 <col:3, col:37> col:9 labs 'void *[3]' cinit
+    |   `-InitListExpr 0x7fd6c08593f0 <col:18, col:37> 'void *[3]'
+    |     |-AddrLabelExpr 0x7fd6c08592a8 <col:20, col:22> 'void *' l1 0x7fd6c0859260
+    |     |-AddrLabelExpr 0x7fd6c0859310 <col:26, col:28> 'void *' l2 0x7fd6c08592c8
+    |     `-AddrLabelExpr 0x7fd6c0859378 <col:32, col:34> 'void *' l3 0x7fd6c0859330
+    |-LabelStmt 0x7fd6c0859538 <line:10:1, line:11:10> 'l1'
+    | `-IndirectGotoStmt 0x7fd6c0859520 <col:3, col:10>
+    |   `-ImplicitCastExpr 0x7fd6c0859508 <col:9, col:10> 'const void *' <BitCast>
+    |     `-UnaryOperator 0x7fd6c08594e8 <col:9, col:10> 'const void **' postfix '++'
+    |       `-DeclRefExpr 0x7fd6c08594c0 <col:9> 'const void **' lvalue ParmVar 0x7fd6c0859000 'p' 'const void **'
+    |-LabelStmt 0x7fd6c08595c0 <line:12:1, line:13:9> 'l2'
+    | `-IndirectGotoStmt 0x7fd6c08595a8 <col:3, col:9>
+    |   `-ImplicitCastExpr 0x7fd6c0859590 <col:9> 'const void *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd6c0859578 <col:9> 'const void **' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd6c0859550 <col:9> 'const void **' lvalue ParmVar 0x7fd6c0859000 'p' 'const void **'
+    `-LabelStmt 0x7fd6c08595e8 <line:14:1, line:15:3> 'l3'
+      `-NullStmt 0x7fd6c08595d8 <col:3>

@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fe8f60268e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fe8f6027560 <../Data/C2AST/pr82404.c:6:1, col:53> col:6 eShape
+| |-EnumConstantDecl 0x7fe8f6814220 <col:15> col:15 referenced eSquare 'int'
+| |-EnumConstantDecl 0x7fe8f6814268 <col:24> col:24 referenced eCircle 'int'
+| |-EnumConstantDecl 0x7fe8f68142b0 <col:33> col:33 referenced eShpere 'int'
+| `-EnumConstantDecl 0x7fe8f68142f8 <col:42> col:42 referenced eTetraeder 'int'
+`-FunctionDecl 0x7fe8f6814528 <line:8:1, line:15:1> line:8:8 test_switch_native 'double (enum eShape, double)'
+  |-ParmVarDecl 0x7fe8f6814390 <col:27, col:39> col:39 used shape 'enum eShape':'enum eShape'
+  |-ParmVarDecl 0x7fe8f6814408 <col:46, col:53> col:53 r 'double'
+  `-CompoundStmt 0x7fe8f68149f0 <col:56, line:15:1>
+    `-SwitchStmt 0x7fe8f6814670 <line:9:5, line:14:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe8f6814658 <line:9:12> 'unsigned int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fe8f6814640 <col:12> 'enum eShape':'enum eShape' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe8f6814618 <col:12> 'enum eShape':'enum eShape' lvalue ParmVar 0x7fe8f6814390 'shape' 'enum eShape':'enum eShape'
+      `-CompoundStmt 0x7fe8f6814960 <col:19, line:14:5>
+        |-CaseStmt 0x7fe8f68146c8 <line:10:5, col:29>
+        | |-ImplicitCastExpr 0x7fe8f68149d8 <col:10> 'unsigned int' <IntegralCast>
+        | | `-DeclRefExpr 0x7fe8f68146a0 <col:10> 'int' EnumConstant 0x7fe8f6814220 'eSquare' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fe8f6814738 <col:22, col:29>
+        |   `-ImplicitCastExpr 0x7fe8f6814720 <col:29> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fe8f6814700 <col:29> 'int' 2
+        |-CaseStmt 0x7fe8f6814778 <line:11:5, col:29>
+        | |-ImplicitCastExpr 0x7fe8f68149c0 <col:10> 'unsigned int' <IntegralCast>
+        | | `-DeclRefExpr 0x7fe8f6814750 <col:10> 'int' EnumConstant 0x7fe8f6814268 'eCircle' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fe8f68147e8 <col:22, col:29>
+        |   `-ImplicitCastExpr 0x7fe8f68147d0 <col:29> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fe8f68147b0 <col:29> 'int' 3
+        |-CaseStmt 0x7fe8f6814828 <line:12:5, col:29>
+        | |-ImplicitCastExpr 0x7fe8f68149a8 <col:10> 'unsigned int' <IntegralCast>
+        | | `-DeclRefExpr 0x7fe8f6814800 <col:10> 'int' EnumConstant 0x7fe8f68142b0 'eShpere' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fe8f6814898 <col:22, col:29>
+        |   `-ImplicitCastExpr 0x7fe8f6814880 <col:29> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fe8f6814860 <col:29> 'int' 4
+        `-CaseStmt 0x7fe8f68148d8 <line:13:5, col:29>
+          |-ImplicitCastExpr 0x7fe8f6814990 <col:10> 'unsigned int' <IntegralCast>
+          | `-DeclRefExpr 0x7fe8f68148b0 <col:10> 'int' EnumConstant 0x7fe8f68142f8 'eTetraeder' 'int'
+          |-<<<NULL>>>
+          `-ReturnStmt 0x7fe8f6814948 <col:22, col:29>
+            `-ImplicitCastExpr 0x7fe8f6814930 <col:29> 'double' <IntegralToFloating>
+              `-IntegerLiteral 0x7fe8f6814910 <col:29> 'int' 5

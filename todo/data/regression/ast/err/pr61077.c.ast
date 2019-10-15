@@ -1,0 +1,27 @@
+../Data/C2AST/pr61077.c:6:1: error: first parameter of 'main' (argument count) must be of type 'int'
+main (_Atomic int argc, _Atomic char **argv)
+^
+../Data/C2AST/pr61077.c:6:1: error: second parameter of 'main' (argument array) must be of type 'char **'
+2 errors generated.
+TranslationUnitDecl 0x7febfe02ace8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febfe02b260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7febfe02af80 '__int128'
+|-TypedefDecl 0x7febfe02b2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7febfe02afa0 'unsigned __int128'
+|-TypedefDecl 0x7febfe02b5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7febfe02b3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7febfe02b328 '__NSConstantString_tag'
+|-TypedefDecl 0x7febfe02b640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7febfe02b600 'char *'
+|   `-BuiltinType 0x7febfe02ad80 'char'
+|-TypedefDecl 0x7febfe02b908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7febfe02b8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7febfe02b720 'struct __va_list_tag'
+|     `-Record 0x7febfe02b698 '__va_list_tag'
+`-FunctionDecl 0x7febfe06c9f0 <../Data/C2AST/pr61077.c:5:1, line:12:1> line:6:1 invalid main '_Atomic(int) (_Atomic(int), _Atomic(char) **)'
+  |-ParmVarDecl 0x7febfe06c800 <col:7, col:19> col:19 argc '_Atomic(int)'
+  |-ParmVarDecl 0x7febfe06c910 <col:25, col:40> col:40 argv '_Atomic(char) **'
+  `-CompoundStmt 0x7febfe06ced0 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7febfe06ceb8 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7febfe06cea0 <col:10> '_Atomic(int)' <NonAtomicToAtomic>
+        `-IntegerLiteral 0x7febfe06ce80 <col:10> 'int' 0

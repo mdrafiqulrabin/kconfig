@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f9c1202bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c1206e800 <../Data/C2AST/pr14552.c:4:1, col:15> col:15 referenced mmxw '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-VectorType 0x7f9c1202c980 '__attribute__((__vector_size__(4 * sizeof(short)))) short' 4
+|   `-BuiltinType 0x7f9c1202bdc0 'short'
+|-TypedefDecl 0x7f9c1206e8b8 <line:5:1, col:15> col:15 referenced mmxdw '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7f9c1206e880 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7f9c1202bde0 'int'
+|-VarDecl 0x7f9c1206e940 <line:7:1, col:7> col:7 used dw 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-VarDecl 0x7f9c1206ea10 <line:8:1, col:6> col:6 used w 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+`-FunctionDecl 0x7f9c1206eab8 <line:10:1, line:14:1> line:10:6 test 'void ()'
+  `-CompoundStmt 0x7f9c1206ecc0 <line:11:1, line:14:1>
+    |-CompoundAssignOperator 0x7f9c1206ebc0 <line:12:3, col:6> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' '+=' ComputeLHSTy='mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' ComputeResultTy='mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+    | |-DeclRefExpr 0x7f9c1206eb58 <col:3> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7f9c1206ea10 'w' 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+    | `-ImplicitCastExpr 0x7f9c1206eba8 <col:6> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9c1206eb80 <col:6> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7f9c1206ea10 'w' 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+    `-BinaryOperator 0x7f9c1206ec98 <line:13:3, col:14> 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+      |-DeclRefExpr 0x7f9c1206ebf8 <col:3> 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9c1206e940 'dw' 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      `-CStyleCastExpr 0x7f9c1206ec70 <col:7, col:14> 'mmxdw':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+        `-ImplicitCastExpr 0x7f9c1206ec58 <col:14> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <LValueToRValue>
+          `-DeclRefExpr 0x7f9c1206ec20 <col:14> 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short' lvalue Var 0x7f9c1206ea10 'w' 'mmxw':'__attribute__((__vector_size__(4 * sizeof(short)))) short'

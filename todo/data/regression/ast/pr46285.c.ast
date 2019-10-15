@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fa3ca82b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3ca00d200 <../Data/C2AST/pr46285.c:5:1, col:14> col:14 referenced __m256 '__attribute__((__vector_size__(32 * sizeof(char)))) char'
+| `-VectorType 0x7fa3ca82bf80 '__attribute__((__vector_size__(32 * sizeof(char)))) char' 32
+|   `-BuiltinType 0x7fa3ca82b380 'char'
+`-FunctionDecl 0x7fa3ca00d390 <line:6:1, col:22> col:6 foo 'void (__m256)'
+  |-ParmVarDecl 0x7fa3ca00d290 <col:11, col:18> col:18 x '__m256':'__attribute__((__vector_size__(32 * sizeof(char)))) char'
+  `-CompoundStmt 0x7fa3ca00d478 <col:21, col:22>

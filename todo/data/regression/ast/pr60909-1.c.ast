@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f91dd023ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f91dd821660 <../Data/C2AST/pr60909-1.c:4:1, col:21> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7f91dd024b78 <col:18> col:21 'int'
+|-FunctionDecl 0x7f91dd821850 <line:6:1, line:11:1> line:7:1 foo 'void (unsigned int *)'
+| |-ParmVarDecl 0x7f91dd821790 <col:6, col:16> col:16 used u 'unsigned int *'
+| `-CompoundStmt 0x7f91dd821cb8 <line:8:1, line:11:1>
+|   |-DeclStmt 0x7f91dd821bc0 <line:9:3, col:43>
+|   | `-VarDecl 0x7f91dd821910 <col:3, col:42> col:7 used i 'int' cinit
+|   |   `-ImplicitCastExpr 0x7f91dd821ba8 <col:11, col:42> 'int' <IntegralCast>
+|   |     `-CallExpr 0x7f91dd821b60 <col:11, col:42> 'unsigned int'
+|   |       |-ImplicitCastExpr 0x7f91dd821b48 <col:11> 'unsigned int (*)(unsigned int *)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7f91dd821ab0 <col:11> '<builtin fn type>' Function 0x7f91dd8219a8 '__builtin_ia32_rdrand32_step' 'unsigned int (unsigned int *)'
+|   |       `-ImplicitCastExpr 0x7f91dd821b90 <col:41> 'unsigned int *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f91dd821ad8 <col:41> 'unsigned int *' lvalue ParmVar 0x7f91dd821790 'u' 'unsigned int *'
+|   `-CallExpr 0x7f91dd821c70 <line:10:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7f91dd821c58 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f91dd821bd8 <col:3> 'void (int)' Function 0x7f91dd821660 'bar' 'void (int)'
+|     `-ImplicitCastExpr 0x7f91dd821ca0 <col:8> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f91dd821c00 <col:8> 'int' lvalue Var 0x7f91dd821910 'i' 'int'
+`-FunctionDecl 0x7f91dd8219a8 <line:9:11> col:11 implicit used __builtin_ia32_rdrand32_step 'unsigned int (unsigned int *)' extern
+  `-ParmVarDecl 0x7f91dd821a48 <<invalid sloc>> <invalid sloc> 'unsigned int *'

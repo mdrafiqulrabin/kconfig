@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7ff3fb021ce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7ff3fb022960 <../Data/C2AST/pr25183.c:4:1, line:10:1> line:4:6 err
+| |-EnumConstantDecl 0x7ff3fb063840 <line:5:3, col:12> col:3 referenced err_IO 'unsigned int'
+| | `-IntegerLiteral 0x7ff3fb063820 <col:12> 'unsigned int' 2319777792
+| |-EnumConstantDecl 0x7ff3fb063888 <line:6:3> col:3 referenced err_NM 'unsigned int'
+| |-EnumConstantDecl 0x7ff3fb0638d0 <line:7:3> col:3 referenced err_EOF 'unsigned int'
+| |-EnumConstantDecl 0x7ff3fb063918 <line:8:3> col:3 referenced err_SE 'unsigned int'
+| `-EnumConstantDecl 0x7ff3fb063960 <line:9:3> col:3 referenced err_PT 'unsigned int'
+|-VarDecl 0x7ff3fb063a00 <line:11:1, col:17> col:17 used E_ 'enum err':'enum err' static
+`-FunctionDecl 0x7ff3fb063af0 <line:12:1, line:22:1> line:12:5 error 'int ()'
+  `-CompoundStmt 0x7ff3fb063eb8 <line:13:1, line:22:1>
+    `-SwitchStmt 0x7ff3fb063be8 <line:14:3, line:21:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff3fb063bd0 <line:14:11> 'unsigned int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7ff3fb063bb8 <col:11> 'enum err':'enum err' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff3fb063b90 <col:11> 'enum err':'enum err' lvalue Var 0x7ff3fb063a00 'E_' 'enum err':'enum err'
+      `-CompoundStmt 0x7ff3fb063e78 <col:15, line:21:3>
+        |-CaseStmt 0x7ff3fb063c40 <line:15:5, col:19>
+        | |-DeclRefExpr 0x7ff3fb063c18 <col:10> 'unsigned int' EnumConstant 0x7ff3fb063840 'err_IO' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7ff3fb063c78 <col:19>
+        |-CaseStmt 0x7ff3fb063ca8 <line:16:5, col:19>
+        | |-DeclRefExpr 0x7ff3fb063c80 <col:10> 'unsigned int' EnumConstant 0x7ff3fb063888 'err_NM' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7ff3fb063ce0 <col:19>
+        |-CaseStmt 0x7ff3fb063d10 <line:17:5, col:20>
+        | |-DeclRefExpr 0x7ff3fb063ce8 <col:10> 'unsigned int' EnumConstant 0x7ff3fb0638d0 'err_EOF' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7ff3fb063d48 <col:20>
+        |-CaseStmt 0x7ff3fb063d78 <line:18:5, col:19>
+        | |-DeclRefExpr 0x7ff3fb063d50 <col:10> 'unsigned int' EnumConstant 0x7ff3fb063918 'err_SE' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7ff3fb063db0 <col:19>
+        |-CaseStmt 0x7ff3fb063de0 <line:19:5, col:19>
+        | |-DeclRefExpr 0x7ff3fb063db8 <col:10> 'unsigned int' EnumConstant 0x7ff3fb063960 'err_PT' 'unsigned int'
+        | |-<<<NULL>>>
+        | `-BreakStmt 0x7ff3fb063e18 <col:19>
+        `-DefaultStmt 0x7ff3fb063e58 <line:20:5, col:22>
+          `-ReturnStmt 0x7ff3fb063e40 <col:15, col:22>
+            `-IntegerLiteral 0x7ff3fb063e20 <col:22> 'int' 0

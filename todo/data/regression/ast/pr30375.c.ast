@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7ff0858222e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff085822f60 <../Data/C2AST/pr30375.c:4:9, line:9:1> line:4:16 struct _s definition
+| |-FieldDecl 0x7ff086020438 <line:5:5, col:9> col:9 a 'int'
+| |-FieldDecl 0x7ff086020498 <line:6:5, col:9> col:9 referenced b 'int'
+| |-FieldDecl 0x7ff0860204f8 <line:7:5, col:9> col:9 referenced c 'int'
+| `-FieldDecl 0x7ff086020558 <line:8:5, col:9> col:9 referenced d 'int'
+|-TypedefDecl 0x7ff0860205f0 <line:4:1, line:9:3> col:3 referenced s 'struct _s':'struct _s'
+| `-ElaboratedType 0x7ff0860205a0 'struct _s' sugar
+|   `-RecordType 0x7ff086020400 'struct _s'
+|     `-Record 0x7ff085822f60 '_s'
+|-FunctionDecl 0x7ff0860207f0 <line:11:1, col:17> col:13 used g 'void (s *)' extern
+| `-ParmVarDecl 0x7ff0860206e8 <col:15, col:16> col:17 's *'
+|-FunctionDecl 0x7ff0860209a0 <line:12:1, col:19> col:13 used f 'void (void)' extern
+`-FunctionDecl 0x7ff086020ad0 <line:14:1, line:23:1> line:14:6 test_signed_msg_encoding 'void (void)'
+  `-CompoundStmt 0x7ff086021168 <line:15:1, line:23:1>
+    |-DeclStmt 0x7ff086020db0 <line:16:5, col:41>
+    | `-VarDecl 0x7ff086020b80 <col:5, col:40> col:7 used signInfo 's':'struct _s' cinit
+    |   `-InitListExpr 0x7ff086020cb8 <col:18, col:40> 's':'struct _s'
+    |     |-ImplicitCastExpr 0x7ff086020d18 <col:20, col:35> 'int' <IntegralCast>
+    |     | `-UnaryExprOrTypeTraitExpr 0x7ff086020c28 <col:20, col:35> 'unsigned long' sizeof
+    |     |   `-ParenExpr 0x7ff086020c08 <col:26, col:35> 's':'struct _s' lvalue
+    |     |     `-DeclRefExpr 0x7ff086020be0 <col:27> 's':'struct _s' lvalue Var 0x7ff086020b80 'signInfo' 's':'struct _s'
+    |     |-IntegerLiteral 0x7ff086020c48 <col:38> 'int' 0
+    |     |-ImplicitValueInitExpr 0x7ff086020d30 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7ff086020d40 <<invalid sloc>> 'int'
+    |-BinaryOperator 0x7ff086020e48 <line:18:5, col:18> 'int' '='
+    | |-MemberExpr 0x7ff086020df0 <col:5, col:14> 'int' lvalue .b 0x7ff086020498
+    | | `-DeclRefExpr 0x7ff086020dc8 <col:5> 's':'struct _s' lvalue Var 0x7ff086020b80 'signInfo' 's':'struct _s'
+    | `-IntegerLiteral 0x7ff086020e28 <col:18> 'int' 1
+    |-BinaryOperator 0x7ff086020ef0 <line:19:5, col:18> 'int' '='
+    | |-MemberExpr 0x7ff086020e98 <col:5, col:14> 'int' lvalue .c 0x7ff0860204f8
+    | | `-DeclRefExpr 0x7ff086020e70 <col:5> 's':'struct _s' lvalue Var 0x7ff086020b80 'signInfo' 's':'struct _s'
+    | `-IntegerLiteral 0x7ff086020ed0 <col:18> 'int' 0
+    |-CallExpr 0x7ff086021000 <line:20:5, col:16> 'void'
+    | |-ImplicitCastExpr 0x7ff086020fe8 <col:5> 'void (*)(s *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff086020f18 <col:5> 'void (s *)' Function 0x7ff0860207f0 'g' 'void (s *)'
+    | `-UnaryOperator 0x7ff086020f68 <col:7, col:8> 's *' prefix '&'
+    |   `-DeclRefExpr 0x7ff086020f40 <col:8> 's':'struct _s' lvalue Var 0x7ff086020b80 'signInfo' 's':'struct _s'
+    |-BinaryOperator 0x7ff0860210b0 <line:21:5, col:18> 'int' '='
+    | |-MemberExpr 0x7ff086021058 <col:5, col:14> 'int' lvalue .d 0x7ff086020558
+    | | `-DeclRefExpr 0x7ff086021030 <col:5> 's':'struct _s' lvalue Var 0x7ff086020b80 'signInfo' 's':'struct _s'
+    | `-IntegerLiteral 0x7ff086021090 <col:18> 'int' 0
+    `-CallExpr 0x7ff086021140 <line:22:5, col:7> 'void'
+      `-ImplicitCastExpr 0x7ff086021128 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7ff0860210d8 <col:5> 'void (void)' Function 0x7ff0860209a0 'f' 'void (void)'

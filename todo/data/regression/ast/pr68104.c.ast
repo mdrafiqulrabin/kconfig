@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7fb47682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb47682c960 <../Data/C2AST/pr68104.c:3:9, line:7:1> line:3:9 struct definition
+| |-FieldDecl 0x7fb477014230 <line:5:3, col:8> col:8 referenced vl 'char'
+| `-FieldDecl 0x7fb477014288 <line:6:3, col:8> col:8 weight 'char'
+|-TypedefDecl 0x7fb477014320 <line:3:1, line:7:3> col:3 referenced ib_vl_arb_element_t 'struct ib_vl_arb_element_t':'ib_vl_arb_element_t'
+| `-ElaboratedType 0x7fb4770142d0 'struct ib_vl_arb_element_t' sugar
+|   `-RecordType 0x7fb477014200 'ib_vl_arb_element_t'
+|     `-Record 0x7fb47682c960 ''
+|-RecordDecl 0x7fb477014390 <line:8:9, col:52> col:9 struct definition
+| `-FieldDecl 0x7fb477014568 <col:18, col:49> col:38 referenced vl_entry 'ib_vl_arb_element_t [32]'
+|-TypedefDecl 0x7fb477014600 <col:1, col:54> col:54 referenced ib_vl_arb_table_t 'struct ib_vl_arb_table_t':'ib_vl_arb_table_t'
+| `-ElaboratedType 0x7fb4770145b0 'struct ib_vl_arb_table_t' sugar
+|   `-RecordType 0x7fb477014420 'ib_vl_arb_table_t'
+|     `-Record 0x7fb477014390 ''
+|-EnumDecl 0x7fb477014670 <line:9:9, col:27> col:9
+| `-EnumConstantDecl 0x7fb477014730 <col:16> col:16 referenced IB_SUCCESS 'int'
+|-TypedefDecl 0x7fb4770147d0 <col:1, col:29> col:29 referenced ib_api_status_t 'enum ib_api_status_t':'ib_api_status_t'
+| `-ElaboratedType 0x7fb477014780 'enum ib_api_status_t' sugar
+|   `-EnumType 0x7fb477014710 'ib_api_status_t'
+|     `-Enum 0x7fb477014670 ''
+|-VarDecl 0x7fb477014858 <line:10:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fb477014910 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fb477014988 <col:1, col:11> col:11 used d 'int'
+|-VarDecl 0x7fb477014a18 <line:11:1, col:6> col:6 used c 'char'
+|-FunctionDecl 0x7fb477014ac8 <line:12:1, col:10> col:6 used fn1 'void ()'
+`-FunctionDecl 0x7fb477014c08 <line:13:1, line:22:1> line:13:17 fn2 'ib_api_status_t ()'
+  `-CompoundStmt 0x7fb4770153f0 <line:14:1, line:22:1>
+    |-DeclStmt 0x7fb477014d60 <line:15:3, col:12>
+    | `-VarDecl 0x7fb477014cc0 <col:3, col:11> col:7 used e 'int' cinit
+    |   `-ImplicitCastExpr 0x7fb477014d48 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb477014d20 <col:11> 'int' lvalue Var 0x7fb477014910 'b' 'int'
+    |-DeclStmt 0x7fb477014e10 <line:16:3, col:22>
+    | `-VarDecl 0x7fb477014db0 <col:3, col:21> col:21 used f 'ib_vl_arb_table_t':'ib_vl_arb_table_t'
+    |-IfStmt 0x7fb477015280 <line:17:3, line:19:27>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb477014e50 <line:17:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb477014e28 <col:7> 'int' lvalue Var 0x7fb477014cc0 'e' 'int'
+    | |-ForStmt 0x7fb477015248 <line:18:5, line:19:27>
+    | | |-BinaryOperator 0x7fb477014eb0 <line:18:10, col:14> 'int' '='
+    | | | |-DeclRefExpr 0x7fb477014e68 <col:10> 'int' lvalue Var 0x7fb477014858 'a' 'int'
+    | | | `-IntegerLiteral 0x7fb477014e90 <col:14> 'int' 0
+    | | |-<<<NULL>>>
+    | | |-BinaryOperator 0x7fb477014f58 <col:17, col:21> 'int' '<'
+    | | | |-ImplicitCastExpr 0x7fb477014f28 <col:17> 'int' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fb477014ed8 <col:17> 'int' lvalue Var 0x7fb477014858 'a' 'int'
+    | | | `-ImplicitCastExpr 0x7fb477014f40 <col:21> 'int' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fb477014f00 <col:21> 'int' lvalue Var 0x7fb477014988 'd' 'int'
+    | | |-UnaryOperator 0x7fb477014fa8 <col:24, col:25> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7fb477014f80 <col:24> 'int' lvalue Var 0x7fb477014858 'a' 'int'
+    | | `-CompoundAssignOperator 0x7fb477015190 <line:19:7, col:27> 'char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |   |-MemberExpr 0x7fb477015100 <col:7, col:21> 'char' lvalue .vl 0x7fb477014230
+    | |   | `-ArraySubscriptExpr 0x7fb4770150d8 <col:7, col:19> 'ib_vl_arb_element_t':'ib_vl_arb_element_t' lvalue
+    | |   |   |-ImplicitCastExpr 0x7fb4770150a8 <col:7, col:9> 'ib_vl_arb_element_t *' <ArrayToPointerDecay>
+    | |   |   | `-MemberExpr 0x7fb477014ff0 <col:7, col:9> 'ib_vl_arb_element_t [32]' lvalue .vl_entry 0x7fb477014568
+    | |   |   |   `-DeclRefExpr 0x7fb477014fc8 <col:7> 'ib_vl_arb_table_t':'ib_vl_arb_table_t' lvalue Var 0x7fb477014db0 'f' 'ib_vl_arb_table_t':'ib_vl_arb_table_t'
+    | |   |   `-ImplicitCastExpr 0x7fb4770150c0 <col:18> 'int' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fb477015028 <col:18> 'int' lvalue Var 0x7fb477014858 'a' 'int'
+    | |   `-ImplicitCastExpr 0x7fb477015178 <col:27> 'int' <IntegralCast>
+    | |     `-ImplicitCastExpr 0x7fb477015160 <col:27> 'char' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fb477015138 <col:27> 'char' lvalue Var 0x7fb477014a18 'c' 'char'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fb477015350 <line:20:3, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fb477015338 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb4770152b8 <col:3> 'void ()' Function 0x7fb477014ac8 'fn1' 'void ()'
+    | `-ImplicitCastExpr 0x7fb477015380 <col:7> 'ib_vl_arb_table_t':'ib_vl_arb_table_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb4770152e0 <col:7> 'ib_vl_arb_table_t':'ib_vl_arb_table_t' lvalue Var 0x7fb477014db0 'f' 'ib_vl_arb_table_t':'ib_vl_arb_table_t'
+    `-ReturnStmt 0x7fb4770153d8 <line:21:3, col:10>
+      `-ImplicitCastExpr 0x7fb4770153c0 <col:10> 'ib_api_status_t':'ib_api_status_t' <IntegralCast>
+        `-DeclRefExpr 0x7fb477015398 <col:10> 'int' EnumConstant 0x7fb477014730 'IB_SUCCESS' 'int'

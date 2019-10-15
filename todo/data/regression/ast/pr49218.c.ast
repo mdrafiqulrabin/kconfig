@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fe6ab02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6ab02c978 <../Data/C2AST/pr49218.c:2:1, col:18> col:18 referenced L '__int128'
+| `-BuiltinType 0x7fe6ab02bf80 '__int128'
+|-VarDecl 0x7fe6ab810800 <line:6:1, col:7> col:7 used f 'float'
+`-FunctionDecl 0x7fe6ab8108f0 <line:8:1, line:20:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7fe6ab810d78 <line:10:1, line:20:1>
+    |-DeclStmt 0x7fe6ab810a78 <line:11:3, col:10>
+    | `-VarDecl 0x7fe6ab8109c0 <col:3, col:9> col:5 used i 'L':'__int128' cinit
+    |   `-ImplicitCastExpr 0x7fe6ab810a60 <col:9> 'L':'__int128' <FloatingToIntegral>
+    |     `-ImplicitCastExpr 0x7fe6ab810a48 <col:9> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe6ab810a20 <col:9> 'float' lvalue Var 0x7fe6ab810800 'f' 'float'
+    |-IfStmt 0x7fe6ab810d08 <line:12:3, line:18:19>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe6ab810b08 <line:12:7, col:12> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fe6ab810ad8 <col:7> 'L':'__int128' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe6ab810a90 <col:7> 'L':'__int128' lvalue Var 0x7fe6ab8109c0 'i' 'L':'__int128'
+    | | `-ImplicitCastExpr 0x7fe6ab810af0 <col:12> '__int128' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe6ab810ab8 <col:12> 'int' 10
+    | |-DoStmt 0x7fe6ab810ce8 <line:13:5, line:18:19>
+    | | |-CompoundStmt 0x7fe6ab810c28 <line:14:7, line:17:7>
+    | | | |-UnaryOperator 0x7fe6ab810b58 <line:15:2, col:4> 'L':'__int128' prefix '++'
+    | | | | `-DeclRefExpr 0x7fe6ab810b30 <col:4> 'L':'__int128' lvalue Var 0x7fe6ab8109c0 'i' 'L':'__int128'
+    | | | `-GCCAsmStmt 0x7fe6ab810be0 <line:16:2, col:9>
+    | | `-BinaryOperator 0x7fe6ab810cc0 <line:18:12, col:17> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fe6ab810c90 <col:12> 'L':'__int128' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fe6ab810c48 <col:12> 'L':'__int128' lvalue Var 0x7fe6ab8109c0 'i' 'L':'__int128'
+    | |   `-ImplicitCastExpr 0x7fe6ab810ca8 <col:17> '__int128' <IntegralCast>
+    | |     `-IntegerLiteral 0x7fe6ab810c70 <col:17> 'int' 11
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe6ab810d60 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fe6ab810d40 <col:10> 'int' 0

@@ -1,0 +1,98 @@
+TranslationUnitDecl 0x7f819702bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7f819702c960 <../Data/C2AST/pr71785.c:7:9, line:12:1> line:7:14 opcode
+| |-EnumConstantDecl 0x7f819706d820 <line:9:2> col:2 OP_A 'int'
+| |-EnumConstantDecl 0x7f819706d868 <line:10:2> col:2 OP_B 'int'
+| `-EnumConstantDecl 0x7f819706d8b0 <line:11:2> col:2 OP_END 'int'
+|-TypedefDecl 0x7f819706d950 <line:7:1, line:12:3> col:3 referenced opcode 'enum opcode':'enum opcode'
+| `-ElaboratedType 0x7f819706d900 'enum opcode' sugar
+|   `-EnumType 0x7f819706d800 'enum opcode'
+|     `-Enum 0x7f819702c960 'opcode'
+|-RecordDecl 0x7f819706d9c0 <line:14:9, line:18:1> line:14:16 struct op definition
+| |-FieldDecl 0x7f819706daa0 <line:16:2, col:9> col:9 referenced opcode 'opcode':'enum opcode'
+| `-FieldDecl 0x7f819706db00 <line:17:2, col:6> col:6 referenced arg 'int'
+|-TypedefDecl 0x7f819706dba0 <line:14:1, line:18:3> col:3 referenced op 'struct op':'struct op'
+| `-ElaboratedType 0x7f819706db50 'struct op' sugar
+|   `-RecordType 0x7f819706da50 'struct op'
+|     `-Record 0x7f819706d9c0 'op'
+|-FunctionDecl 0x7f819706dcf0 <line:20:1, col:31> col:13 used do_stuff_b 'void (int)' extern
+| `-ParmVarDecl 0x7f819706dc28 <col:24, col:28> col:28 arg 'int'
+|-FunctionDecl 0x7f819706de78 <line:21:1, col:31> col:13 used do_stuff_c 'void (int)' extern
+| `-ParmVarDecl 0x7f819706ddf0 <col:24, col:28> col:28 arg 'int'
+|-VarDecl 0x7f819706df38 <line:23:1, col:12> col:12 used someglobal 'int' extern
+`-FunctionDecl 0x7f819706e130 <line:25:1, line:50:1> line:26:1 eval 'void (op *)'
+  |-ParmVarDecl 0x7f819706e028 <col:6, col:10> col:10 used op 'op *'
+  `-CompoundStmt 0x7f819706ee98 <line:27:1, line:50:1>
+    |-DeclStmt 0x7f819706e5d8 <line:28:2, line:33:3>
+    | `-VarDecl 0x7f819706e260 <line:28:2, line:33:2> line:28:21 used dispatch_table 'const void *[4]' static cinit
+    |   `-InitListExpr 0x7f819706e4c0 <col:40, line:33:2> 'const void *[4]'
+    |     |-ImplicitCastExpr 0x7f819706e500 <line:29:3, col:5> 'const void *' <BitCast>
+    |     | `-AddrLabelExpr 0x7f819706e308 <col:3, col:5> 'void *' CASE_OP_A 0x7f819706e2c0
+    |     |-ImplicitCastExpr 0x7f819706e520 <line:30:3, col:5> 'const void *' <BitCast>
+    |     | `-AddrLabelExpr 0x7f819706e370 <col:3, col:5> 'void *' CASE_OP_B 0x7f819706e328
+    |     |-ImplicitCastExpr 0x7f819706e548 <line:31:3, col:5> 'const void *' <BitCast>
+    |     | `-AddrLabelExpr 0x7f819706e3d8 <col:3, col:5> 'void *' CASE_OP_C 0x7f819706e390
+    |     `-ImplicitCastExpr 0x7f819706e580 <line:32:3, col:5> 'const void *' <BitCast>
+    |       `-AddrLabelExpr 0x7f819706e440 <col:3, col:5> 'void *' CASE_OP_END 0x7f819706e3f8
+    |-IndirectGotoStmt 0x7f819706e728 <line:35:2, col:33>
+    | `-ImplicitCastExpr 0x7f819706e710 <col:8, col:33> 'const void *' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7f819706e6e8 <col:8, col:33> 'const void *' lvalue
+    |     |-ImplicitCastExpr 0x7f819706e6b8 <col:8> 'const void **' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f819706e5f0 <col:8> 'const void *[4]' lvalue Var 0x7f819706e260 'dispatch_table' 'const void *[4]'
+    |     `-ImplicitCastExpr 0x7f819706e6d0 <col:23, col:27> 'opcode':'enum opcode' <LValueToRValue>
+    |       `-MemberExpr 0x7f819706e658 <col:23, col:27> 'opcode':'enum opcode' lvalue ->opcode 0x7f819706daa0
+    |         `-ImplicitCastExpr 0x7f819706e640 <col:23> 'op *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f819706e618 <col:23> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-LabelStmt 0x7f819706e788 <line:36:1, line:37:12> 'CASE_OP_A'
+    | `-UnaryOperator 0x7f819706e768 <col:2, col:12> 'int' postfix '++'
+    |   `-DeclRefExpr 0x7f819706e740 <col:2> 'int' lvalue Var 0x7f819706df38 'someglobal' 'int'
+    |-UnaryOperator 0x7f819706e7c8 <line:38:2, col:4> 'op *' postfix '++'
+    | `-DeclRefExpr 0x7f819706e7a0 <col:2> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-IndirectGotoStmt 0x7f819706e910 <line:39:2, col:33>
+    | `-ImplicitCastExpr 0x7f819706e8f8 <col:8, col:33> 'const void *' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7f819706e8d0 <col:8, col:33> 'const void *' lvalue
+    |     |-ImplicitCastExpr 0x7f819706e8a0 <col:8> 'const void **' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f819706e800 <col:8> 'const void *[4]' lvalue Var 0x7f819706e260 'dispatch_table' 'const void *[4]'
+    |     `-ImplicitCastExpr 0x7f819706e8b8 <col:23, col:27> 'opcode':'enum opcode' <LValueToRValue>
+    |       `-MemberExpr 0x7f819706e868 <col:23, col:27> 'opcode':'enum opcode' lvalue ->opcode 0x7f819706daa0
+    |         `-ImplicitCastExpr 0x7f819706e850 <col:23> 'op *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f819706e828 <col:23> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-LabelStmt 0x7f819706ea58 <line:40:1, line:41:20> 'CASE_OP_B'
+    | `-CallExpr 0x7f819706ea10 <col:2, col:20> 'void'
+    |   |-ImplicitCastExpr 0x7f819706e9f8 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f819706e928 <col:2> 'void (int)' Function 0x7f819706dcf0 'do_stuff_b' 'void (int)'
+    |   `-ImplicitCastExpr 0x7f819706ea40 <col:13, col:17> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f819706e990 <col:13, col:17> 'int' lvalue ->arg 0x7f819706db00
+    |       `-ImplicitCastExpr 0x7f819706e978 <col:13> 'op *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f819706e950 <col:13> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-UnaryOperator 0x7f819706ea98 <line:42:2, col:4> 'op *' postfix '++'
+    | `-DeclRefExpr 0x7f819706ea70 <col:2> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-IndirectGotoStmt 0x7f819706ebc8 <line:43:2, col:33>
+    | `-ImplicitCastExpr 0x7f819706ebb0 <col:8, col:33> 'const void *' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7f819706eb88 <col:8, col:33> 'const void *' lvalue
+    |     |-ImplicitCastExpr 0x7f819706eb58 <col:8> 'const void **' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f819706eab8 <col:8> 'const void *[4]' lvalue Var 0x7f819706e260 'dispatch_table' 'const void *[4]'
+    |     `-ImplicitCastExpr 0x7f819706eb70 <col:23, col:27> 'opcode':'enum opcode' <LValueToRValue>
+    |       `-MemberExpr 0x7f819706eb20 <col:23, col:27> 'opcode':'enum opcode' lvalue ->opcode 0x7f819706daa0
+    |         `-ImplicitCastExpr 0x7f819706eb08 <col:23> 'op *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f819706eae0 <col:23> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-LabelStmt 0x7f819706ece0 <line:44:1, line:45:20> 'CASE_OP_C'
+    | `-CallExpr 0x7f819706ec98 <col:2, col:20> 'void'
+    |   |-ImplicitCastExpr 0x7f819706ec80 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f819706ebe0 <col:2> 'void (int)' Function 0x7f819706de78 'do_stuff_c' 'void (int)'
+    |   `-ImplicitCastExpr 0x7f819706ecc8 <col:13, col:17> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7f819706ec48 <col:13, col:17> 'int' lvalue ->arg 0x7f819706db00
+    |       `-ImplicitCastExpr 0x7f819706ec30 <col:13> 'op *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f819706ec08 <col:13> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-UnaryOperator 0x7f819706ed20 <line:46:2, col:4> 'op *' postfix '++'
+    | `-DeclRefExpr 0x7f819706ecf8 <col:2> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    |-IndirectGotoStmt 0x7f819706ee50 <line:47:2, col:33>
+    | `-ImplicitCastExpr 0x7f819706ee38 <col:8, col:33> 'const void *' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7f819706ee10 <col:8, col:33> 'const void *' lvalue
+    |     |-ImplicitCastExpr 0x7f819706ede0 <col:8> 'const void **' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f819706ed40 <col:8> 'const void *[4]' lvalue Var 0x7f819706e260 'dispatch_table' 'const void *[4]'
+    |     `-ImplicitCastExpr 0x7f819706edf8 <col:23, col:27> 'opcode':'enum opcode' <LValueToRValue>
+    |       `-MemberExpr 0x7f819706eda8 <col:23, col:27> 'opcode':'enum opcode' lvalue ->opcode 0x7f819706daa0
+    |         `-ImplicitCastExpr 0x7f819706ed90 <col:23> 'op *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f819706ed68 <col:23> 'op *' lvalue ParmVar 0x7f819706e028 'op' 'op *'
+    `-LabelStmt 0x7f819706ee80 <line:48:1, line:49:2> 'CASE_OP_END'
+      `-ReturnStmt 0x7f819706ee68 <col:2>

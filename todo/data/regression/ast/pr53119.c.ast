@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f8d7f02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8d7f02c960 <../Data/C2AST/pr53119.c:4:1, line:6:1> line:4:8 struct a definition
+| |-FieldDecl 0x7f8d7f06d838 <line:5:3, col:7> col:7 x 'int'
+| |-FieldDecl 0x7f8d7f06d898 <col:3, col:10> col:10 y 'int'
+| `-FieldDecl 0x7f8d7f06d8f8 <col:3, col:13> col:13 z 'int'
+|-RecordDecl 0x7f8d7f06d940 <line:8:1, line:10:1> line:8:8 struct b definition
+| |-FieldDecl 0x7f8d7f06da40 <line:9:3, col:12> col:12 w 'struct a':'struct a'
+| `-FieldDecl 0x7f8d7f06daa8 <col:3, col:15> col:15 z 'struct a':'struct a'
+`-FunctionDecl 0x7f8d7f06dc18 <line:12:1, line:22:1> line:12:5 main 'int (void)'
+  `-CompoundStmt 0x7f8d7f06e6b8 <line:13:1, line:22:1>
+    |-DeclStmt 0x7f8d7f06de88 <line:14:3, col:22>
+    | `-VarDecl 0x7f8d7f06dd48 <col:3, col:21> col:12 az 'struct a':'struct a' cinit
+    |   `-InitListExpr 0x7f8d7f06de10 <col:17, col:21> 'struct a':'struct a'
+    |     |-IntegerLiteral 0x7f8d7f06dda8 <col:19> 'int' 0
+    |     |-ImplicitValueInitExpr 0x7f8d7f06de68 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7f8d7f06de78 <<invalid sloc>> 'int'
+    |-DeclStmt 0x7f8d7f06e000 <line:15:3, col:23>
+    | `-VarDecl 0x7f8d7f06dec0 <col:3, col:22> col:12 anz 'struct a':'struct a' cinit
+    |   `-InitListExpr 0x7f8d7f06df88 <col:18, col:22> 'struct a':'struct a'
+    |     |-IntegerLiteral 0x7f8d7f06df20 <col:20> 'int' 1
+    |     |-ImplicitValueInitExpr 0x7f8d7f06dfe0 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7f8d7f06dff0 <<invalid sloc>> 'int'
+    |-DeclStmt 0x7f8d7f06e190 <line:16:3, col:26>
+    | `-VarDecl 0x7f8d7f06e038 <col:3, col:25> col:12 aez 'struct a':'struct a' cinit
+    |   `-InitListExpr 0x7f8d7f06e128 <col:18, col:25> 'struct a':'struct a'
+    |     |-IntegerLiteral 0x7f8d7f06e098 <col:20> 'int' 0
+    |     |-IntegerLiteral 0x7f8d7f06e0b8 <col:23> 'int' 0
+    |     `-ImplicitValueInitExpr 0x7f8d7f06e180 <<invalid sloc>> 'int'
+    |-DeclStmt 0x7f8d7f06e3a0 <line:18:3, col:22>
+    | `-VarDecl 0x7f8d7f06e200 <col:3, col:21> col:12 bz 'struct b':'struct b' cinit
+    |   `-InitListExpr 0x7f8d7f06e2c8 <col:17, col:21> 'struct b':'struct b'
+    |     |-InitListExpr 0x7f8d7f06e318 <col:19> 'struct a':'struct a'
+    |     | |-IntegerLiteral 0x7f8d7f06e260 <col:19> 'int' 0
+    |     | |-ImplicitValueInitExpr 0x7f8d7f06e370 <<invalid sloc>> 'int'
+    |     | `-ImplicitValueInitExpr 0x7f8d7f06e380 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7f8d7f06e390 <<invalid sloc>> 'struct a':'struct a'
+    |-DeclStmt 0x7f8d7f06e668 <line:19:3, col:38>
+    | `-VarDecl 0x7f8d7f06e3d8 <col:3, col:37> col:12 bnz 'struct b':'struct b' cinit
+    |   `-InitListExpr 0x7f8d7f06e568 <col:18, col:37> 'struct b':'struct b'
+    |     |-InitListExpr 0x7f8d7f06e5b8 <col:20, col:26> 'struct a':'struct a'
+    |     | |-IntegerLiteral 0x7f8d7f06e438 <col:20> 'int' 0
+    |     | |-IntegerLiteral 0x7f8d7f06e458 <col:23> 'int' 0
+    |     | `-IntegerLiteral 0x7f8d7f06e478 <col:26> 'int' 0
+    |     `-InitListExpr 0x7f8d7f06e610 <col:29, col:35> 'struct a':'struct a'
+    |       |-IntegerLiteral 0x7f8d7f06e498 <col:29> 'int' 0
+    |       |-IntegerLiteral 0x7f8d7f06e4b8 <col:32> 'int' 0
+    |       `-IntegerLiteral 0x7f8d7f06e4d8 <col:35> 'int' 0
+    `-ReturnStmt 0x7f8d7f06e6a0 <line:21:3, col:10>
+      `-IntegerLiteral 0x7f8d7f06e680 <col:10> 'int' 0

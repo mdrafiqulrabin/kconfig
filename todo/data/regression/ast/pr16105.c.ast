@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fb91282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb91286d8a0 <../Data/C2AST/pr16105.c:6:1, col:47> col:13 used check 'void (const float *restrict)' extern
+| `-ParmVarDecl 0x7fb91282c9a0 <col:19, col:46> col:46 v 'const float *restrict'
+`-FunctionDecl 0x7fb91286db50 <line:8:1, line:18:1> line:8:6 square 'void (const float *restrict, float *restrict)'
+  |-ParmVarDecl 0x7fb91286d9a0 <col:13, col:40> col:40 used a 'const float *restrict'
+  |-ParmVarDecl 0x7fb91286da40 <line:9:6, col:27> col:27 used out 'float *restrict'
+  `-CompoundStmt 0x7fb91286e320 <line:10:1, line:18:1>
+    |-DeclStmt 0x7fb91286dc78 <line:11:5, col:19>
+    | `-VarDecl 0x7fb91286dc18 <col:5, col:18> col:18 used i 'unsigned int'
+    |-ForStmt 0x7fb91286e1c0 <line:12:5, line:16:5>
+    | |-BinaryOperator 0x7fb91286dcf0 <line:12:10, col:14> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7fb91286dc90 <col:10> 'unsigned int' lvalue Var 0x7fb91286dc18 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fb91286dcd8 <col:14> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fb91286dcb8 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb91286dd90 <col:17, line:4:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb91286dd60 <line:12:17> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb91286dd18 <col:17> 'unsigned int' lvalue Var 0x7fb91286dc18 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fb91286dd78 <line:4:21> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fb91286dd40 <col:21> 'int' 512
+    | |-UnaryOperator 0x7fb91286dde0 <line:12:34, col:35> 'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7fb91286ddb8 <col:34> 'unsigned int' lvalue Var 0x7fb91286dc18 'i' 'unsigned int'
+    | `-CompoundStmt 0x7fb91286e198 <col:39, line:16:5>
+    |   |-DeclStmt 0x7fb91286df38 <line:13:2, col:17>
+    |   | `-VarDecl 0x7fb91286de18 <col:2, col:16> col:8 used ai 'float' cinit
+    |   |   `-ImplicitCastExpr 0x7fb91286df20 <col:13, col:16> 'float' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x7fb91286def8 <col:13, col:16> 'const float' lvalue
+    |   |       |-ImplicitCastExpr 0x7fb91286dec8 <col:13> 'const float *' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7fb91286de78 <col:13> 'const float *restrict' lvalue ParmVar 0x7fb91286d9a0 'a' 'const float *restrict'
+    |   |       `-ImplicitCastExpr 0x7fb91286dee0 <col:15> 'unsigned int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fb91286dea0 <col:15> 'unsigned int' lvalue Var 0x7fb91286dc18 'i' 'unsigned int'
+    |   |-DeclStmt 0x7fb91286e070 <line:14:2, col:20>
+    |   | `-VarDecl 0x7fb91286df68 <col:2, col:18> col:8 used a2 'float' cinit
+    |   |   `-BinaryOperator 0x7fb91286e048 <col:13, col:18> 'float' '*'
+    |   |     |-ImplicitCastExpr 0x7fb91286e018 <col:13> 'float' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fb91286dfc8 <col:13> 'float' lvalue Var 0x7fb91286de18 'ai' 'float'
+    |   |     `-ImplicitCastExpr 0x7fb91286e030 <col:18> 'float' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fb91286dff0 <col:18> 'float' lvalue Var 0x7fb91286de18 'ai' 'float'
+    |   `-BinaryOperator 0x7fb91286e170 <line:15:2, col:11> 'float' '='
+    |     |-ArraySubscriptExpr 0x7fb91286e108 <col:2, col:7> 'float' lvalue
+    |     | |-ImplicitCastExpr 0x7fb91286e0d8 <col:2> 'float *' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fb91286e088 <col:2> 'float *restrict' lvalue ParmVar 0x7fb91286da40 'out' 'float *restrict'
+    |     | `-ImplicitCastExpr 0x7fb91286e0f0 <col:6> 'unsigned int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fb91286e0b0 <col:6> 'unsigned int' lvalue Var 0x7fb91286dc18 'i' 'unsigned int'
+    |     `-ImplicitCastExpr 0x7fb91286e158 <col:11> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb91286e130 <col:11> 'float' lvalue Var 0x7fb91286df68 'a2' 'float'
+    `-CallExpr 0x7fb91286e2c0 <line:17:5, col:14> 'void'
+      |-ImplicitCastExpr 0x7fb91286e2a8 <col:5> 'void (*)(const float *restrict)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb91286e1f8 <col:5> 'void (const float *restrict)' Function 0x7fb91286d8a0 'check' 'void (const float *restrict)'
+      `-ImplicitCastExpr 0x7fb91286e308 <col:11> 'const float *' <BitCast>
+        `-ImplicitCastExpr 0x7fb91286e2f0 <col:11> 'float *' <LValueToRValue>
+          `-DeclRefExpr 0x7fb91286e220 <col:11> 'float *restrict' lvalue ParmVar 0x7fb91286da40 'out' 'float *restrict'

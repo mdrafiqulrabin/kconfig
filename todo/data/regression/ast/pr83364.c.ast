@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fb57182bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb57182c978 <../Data/C2AST/pr83364.c:5:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fb57186d928 <line:7:1, line:13:1> line:8:1 used foo 'int (unsigned char)' static
+| |-ParmVarDecl 0x7fb57186d858 <col:6, col:20> col:20 used c 'unsigned char'
+| |-CompoundStmt 0x7fb57186dde8 <line:9:1, line:13:1>
+| | |-CompoundAssignOperator 0x7fb57186db70 <line:10:3, col:26> 'unsigned char' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | |-DeclRefExpr 0x7fb57186da18 <col:3> 'unsigned char' lvalue ParmVar 0x7fb57186d858 'c' 'unsigned char'
+| | | `-BinaryOperator 0x7fb57186db18 <col:9, col:26> 'int' '!='
+| | |   |-CStyleCastExpr 0x7fb57186da98 <col:9, col:21> 'long long' <IntegralCast>
+| | |   | `-ImplicitCastExpr 0x7fb57186da80 <col:21> 'unsigned char' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fb57186da40 <col:21> 'unsigned char' lvalue ParmVar 0x7fb57186d858 'c' 'unsigned char'
+| | |   `-ImplicitCastExpr 0x7fb57186db00 <col:26> 'long long' <IntegralCast>
+| | |     `-ImplicitCastExpr 0x7fb57186dae8 <col:26> 'int' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fb57186dac0 <col:26> 'int' lvalue Var 0x7fb57182c978 'a' 'int'
+| | |-BinaryOperator 0x7fb57186dd50 <line:11:3, col:21> 'unsigned char' '='
+| | | |-DeclRefExpr 0x7fb57186dba8 <col:3> 'unsigned char' lvalue ParmVar 0x7fb57186d858 'c' 'unsigned char'
+| | | `-ImplicitCastExpr 0x7fb57186dd38 <col:7, col:21> 'unsigned char' <IntegralCast>
+| | |   `-BinaryOperator 0x7fb57186dd10 <col:7, col:21> 'int' '|'
+| | |     |-BinaryOperator 0x7fb57186dc48 <col:7, col:12> 'int' '<<'
+| | |     | |-ImplicitCastExpr 0x7fb57186dc30 <col:7> 'int' <IntegralCast>
+| | |     | | `-ImplicitCastExpr 0x7fb57186dc18 <col:7> 'unsigned char' <LValueToRValue>
+| | |     | |   `-DeclRefExpr 0x7fb57186dbd0 <col:7> 'unsigned char' lvalue ParmVar 0x7fb57186d858 'c' 'unsigned char'
+| | |     | `-IntegerLiteral 0x7fb57186dbf8 <col:12> 'int' 7
+| | |     `-BinaryOperator 0x7fb57186dce8 <col:16, col:21> 'int' '>>'
+| | |       |-ImplicitCastExpr 0x7fb57186dcd0 <col:16> 'int' <IntegralCast>
+| | |       | `-ImplicitCastExpr 0x7fb57186dcb8 <col:16> 'unsigned char' <LValueToRValue>
+| | |       |   `-DeclRefExpr 0x7fb57186dc70 <col:16> 'unsigned char' lvalue ParmVar 0x7fb57186d858 'c' 'unsigned char'
+| | |       `-IntegerLiteral 0x7fb57186dc98 <col:21> 'int' 1
+| | `-ReturnStmt 0x7fb57186ddd0 <line:12:3, col:10>
+| |   `-ImplicitCastExpr 0x7fb57186ddb8 <col:10> 'int' <IntegralCast>
+| |     `-ImplicitCastExpr 0x7fb57186dda0 <col:10> 'unsigned char' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fb57186dd78 <col:10> 'unsigned char' lvalue ParmVar 0x7fb57186d858 'c' 'unsigned char'
+| `-NoInlineAttr 0x7fb57186d9d0 <line:7:28>
+|-FunctionDecl 0x7fb57186de60 <line:15:1, line:22:1> line:16:1 main 'int ()'
+| `-CompoundStmt 0x7fb57186e348 <line:17:1, line:22:1>
+|   |-GCCAsmStmt 0x7fb57186dfc8 <line:18:3, col:34>
+|   |-IfStmt 0x7fb57186e2d8 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb57186e108 <line:19:7, col:18> 'int' '!='
+|   | | |-CallExpr 0x7fb57186e0a0 <col:7, col:13> 'int'
+|   | | | |-ImplicitCastExpr 0x7fb57186e088 <col:7> 'int (*)(unsigned char)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fb57186e018 <col:7> 'int (unsigned char)' Function 0x7fb57186d928 'foo' 'int (unsigned char)'
+|   | | | `-ImplicitCastExpr 0x7fb57186e0d0 <col:12> 'unsigned char' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fb57186e040 <col:12> 'int' 0
+|   | | `-IntegerLiteral 0x7fb57186e0e8 <col:18> 'int' 0
+|   | |-CallExpr 0x7fb57186e2b0 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb57186e298 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb57186e248 <col:5> '<builtin fn type>' Function 0x7fb57186e160 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb57186e330 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7fb57186e310 <col:10> 'int' 0
+`-FunctionDecl 0x7fb57186e160 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb57186e200 <col:5> Implicit

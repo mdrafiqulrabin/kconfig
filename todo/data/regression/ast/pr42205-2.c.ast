@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fddb402ace8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fddb3014c68 <../Data/C2AST/pr42205-2.c:3:1, line:11:1> line:3:8 f 'double (double)'
+  |-ParmVarDecl 0x7fddb402b978 <col:10, col:17> col:17 used x 'double'
+  `-CompoundStmt 0x7fddb3015198 <line:4:1, line:11:1>
+    |-DeclStmt 0x7fddb3014de8 <line:5:3, col:17>
+    | `-VarDecl 0x7fddb3014d68 <col:3, col:14> col:10 used y 'double' cinit
+    |   `-FloatingLiteral 0x7fddb3014dc8 <col:14> 'double' 0.000000e+00
+    |-DeclStmt 0x7fddb3014e78 <line:6:3, col:8>
+    | `-VarDecl 0x7fddb3014e18 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fddb3015108 <line:7:3, line:9:3>
+    | |-BinaryOperator 0x7fddb3014ed8 <line:7:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fddb3014e90 <col:8> 'int' lvalue Var 0x7fddb3014e18 'i' 'int'
+    | | `-IntegerLiteral 0x7fddb3014eb8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fddb3014f60 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fddb3014f48 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fddb3014f00 <col:15> 'int' lvalue Var 0x7fddb3014e18 'i' 'int'
+    | | `-IntegerLiteral 0x7fddb3014f28 <col:19> 'int' 8
+    | |-UnaryOperator 0x7fddb3014fb0 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fddb3014f88 <col:22> 'int' lvalue Var 0x7fddb3014e18 'i' 'int'
+    | `-CompoundStmt 0x7fddb30150f0 <col:27, line:9:3>
+    |   `-CompoundAssignOperator 0x7fddb30150b8 <line:8:5, col:14> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |     |-DeclRefExpr 0x7fddb3014fd0 <col:5> 'double' lvalue Var 0x7fddb3014d68 'y' 'double'
+    |     `-BinaryOperator 0x7fddb3015090 <col:10, col:14> 'double' '*'
+    |       |-ImplicitCastExpr 0x7fddb3015048 <col:10> 'double' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fddb3014ff8 <col:10> 'double' lvalue ParmVar 0x7fddb402b978 'x' 'double'
+    |       `-ImplicitCastExpr 0x7fddb3015078 <col:14> 'double' <IntegralToFloating>
+    |         `-ImplicitCastExpr 0x7fddb3015060 <col:14> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fddb3015020 <col:14> 'int' lvalue Var 0x7fddb3014e18 'i' 'int'
+    `-ReturnStmt 0x7fddb3015180 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fddb3015168 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fddb3015140 <col:10> 'double' lvalue Var 0x7fddb3014d68 'y' 'double'

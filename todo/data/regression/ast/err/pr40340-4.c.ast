@@ -1,0 +1,30 @@
+../Data/C2AST/pr40340-4.c:6:10: fatal error: 'pr40340.h' file not found
+#include "pr40340.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fdae702bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdae702c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdae702bf80 '__int128'
+|-TypedefDecl 0x7fdae702c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdae702bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fdae702c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdae702c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdae702c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdae702c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdae702c600 'char *'
+|   `-BuiltinType 0x7fdae702bd80 'char'
+|-TypedefDecl 0x7fdae702c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdae702c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdae702c720 'struct __va_list_tag'
+|     `-Record 0x7fdae702c698 '__va_list_tag'
+`-FunctionDecl 0x7fdae780aa28 <../Data/C2AST/pr40340-4.c:8:1, line:14:1> line:9:1 main 'int (void)'
+  `-CompoundStmt 0x7fdae780ae40 <line:10:1, line:14:1>
+    |-DeclStmt 0x7fdae780ac18 <line:11:3, col:14>
+    | `-VarDecl 0x7fdae780abb8 <col:3, col:13> col:8 used buf 'char [4]'
+    |-CallExpr 0x7fdae780adc0 <line:12:3, col:13> 'int'
+    | |-ImplicitCastExpr 0x7fdae780ada8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdae780ad30 <col:3> 'int ()' Function 0x7fdae780ac80 'test3' 'int ()'
+    | `-ImplicitCastExpr 0x7fdae780adf0 <col:10> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fdae780ad58 <col:10> 'char [4]' lvalue Var 0x7fdae780abb8 'buf' 'char [4]'
+    `-ReturnStmt 0x7fdae780ae28 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fdae780ae08 <col:10> 'int' 0

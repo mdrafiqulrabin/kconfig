@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fceb582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fceb682bdf0 <../Data/C2AST/pr46130-1.c:7:1, line:11:1> line:8:1 used foo 'void (struct __va_list_tag *)' static
+| |-ParmVarDecl 0x7fceb682bcf0 <col:6, col:14> col:14 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-CompoundStmt 0x7fceb682bfe0 <line:9:1, line:11:1>
+|   `-ImplicitCastExpr 0x7fceb682bfc8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:35:29, ../Data/C2AST/pr46130-1.c:10:24> 'char' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x7fceb682bfa0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:35:29, ../Data/C2AST/pr46130-1.c:10:24> 'char' lvalue
+|       |-VAArgExpr 0x7fceb682bf58 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:35:29, col:54> 'char *'
+|       | `-ImplicitCastExpr 0x7fceb682bf40 <../Data/C2AST/pr46130-1.c:10:11> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fceb682bed8 <col:11> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fceb682bcf0 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+|       `-IntegerLiteral 0x7fceb682bf80 <col:23> 'int' 0
+|-FunctionDecl 0x7fceb682c090 <line:13:1, line:17:1> line:14:1 bar 'void (struct __va_list_tag *)'
+| |-ParmVarDecl 0x7fceb682c008 <col:6, col:14> col:14 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+| `-CompoundStmt 0x7fceb682c248 <line:15:1, line:17:1>
+|   `-CallExpr 0x7fceb682c200 <line:16:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fceb682c1e8 <col:3> 'void (*)(struct __va_list_tag *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fceb682c138 <col:3> 'void (struct __va_list_tag *)' Function 0x7fceb682bdf0 'foo' 'void (struct __va_list_tag *)'
+|     `-ImplicitCastExpr 0x7fceb682c230 <col:8> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fceb682c160 <col:8> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fceb682c008 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'
+`-FunctionDecl 0x7fceb682c2f8 <line:19:1, line:23:1> line:20:1 baz 'void (struct __va_list_tag *)'
+  |-ParmVarDecl 0x7fceb682c270 <col:6, col:14> col:14 used ap 'struct __va_list_tag *':'struct __va_list_tag *'
+  `-CompoundStmt 0x7fceb682c450 <line:21:1, line:23:1>
+    `-CallExpr 0x7fceb682c408 <line:22:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fceb682c3f0 <col:3> 'void (*)(struct __va_list_tag *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fceb682c3a0 <col:3> 'void (struct __va_list_tag *)' Function 0x7fceb682bdf0 'foo' 'void (struct __va_list_tag *)'
+      `-ImplicitCastExpr 0x7fceb682c438 <col:8> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+        `-DeclRefExpr 0x7fceb682c3c8 <col:8> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fceb682c270 'ap' 'struct __va_list_tag *':'struct __va_list_tag *'

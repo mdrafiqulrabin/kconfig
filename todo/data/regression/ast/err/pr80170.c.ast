@@ -1,0 +1,36 @@
+../Data/C2AST/pr80170.c:21:26: error: expected parameter declarator
+void __GIMPLE (startwith("slp"))
+                         ^
+../Data/C2AST/pr80170.c:21:26: error: expected ')'
+../Data/C2AST/pr80170.c:21:25: note: to match this '('
+void __GIMPLE (startwith("slp"))
+                        ^
+../Data/C2AST/pr80170.c:22:1: error: expected function body after function declarator
+NullB (void * misalignedPtr)
+^
+3 errors generated.
+TranslationUnitDecl 0x7fe14682bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe14682c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe14682bf80 '__int128'
+|-TypedefDecl 0x7fe14682c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe14682bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe14682c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe14682c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe14682c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe14682c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe14682c600 'char *'
+|   `-BuiltinType 0x7fe14682bd80 'char'
+|-TypedefDecl 0x7fe14682c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe14682c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe14682c720 'struct __va_list_tag'
+|     `-Record 0x7fe14682c698 '__va_list_tag'
+|-RecordDecl 0x7fe14682c960 <../Data/C2AST/pr80170.c:5:1, line:9:1> line:5:9 struct A definition
+| |-FieldDecl 0x7fe147014238 <line:7:3, col:10> col:10 a 'void *'
+| `-FieldDecl 0x7fe147014298 <line:8:3, col:10> col:10 b 'void *'
+`-RecordDecl 0x7fe147014300 <line:11:1, line:18:1> line:11:37 struct B definition
+  |-AlignedAttr 0x7fe1470143b0 <col:23, col:33> aligned
+  | `-IntegerLiteral 0x7fe1470142e0 <col:31> 'int' 16
+  |-FieldDecl 0x7fe147014418 <line:13:3, col:10> col:10 pad 'void *'
+  |-FieldDecl 0x7fe147014478 <line:14:3, col:10> col:10 misaligned 'void *'
+  |-FieldDecl 0x7fe1470144d8 <line:15:3, col:10> col:10 pad2 'void *'
+  `-FieldDecl 0x7fe147014570 <line:17:3, col:12> col:12 a 'struct A':'struct A'

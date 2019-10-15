@@ -1,0 +1,110 @@
+TranslationUnitDecl 0x7fbb3d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbb3d06d8d0 <../Data/C2AST/pr82665.c:4:1, line:11:1> line:4:6 f1 'void (char *, unsigned long)'
+| |-ParmVarDecl 0x7fbb3d02c978 <col:10, col:16> col:16 used p 'char *'
+| |-ParmVarDecl 0x7fbb3d06d800 <<built-in>:81:23, ../Data/C2AST/pr82665.c:4:33> col:33 used sz 'unsigned long'
+| `-CompoundStmt 0x7fbb3d06e240 <line:5:1, line:11:1>
+|   |-DeclStmt 0x7fbb3d06de80 <line:6:3, col:40>
+|   | `-VarDecl 0x7fbb3d06d9d8 <col:3, col:39> col:9 used q 'char *' cinit
+|   |   `-ImplicitCastExpr 0x7fbb3d06de68 <col:13, col:39> 'char *' <BitCast>
+|   |     `-CallExpr 0x7fbb3d06dde0 <col:13, col:39> 'void *'
+|   |       |-ImplicitCastExpr 0x7fbb3d06ddc8 <col:13> 'void *(*)(const void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fbb3d06dcd8 <col:13> '<builtin fn type>' Function 0x7fbb3d06dab8 '__builtin_memchr' 'void *(const void *, int, unsigned long)'
+|   |       |-ImplicitCastExpr 0x7fbb3d06de38 <col:31> 'const void *' <BitCast>
+|   |       | `-ImplicitCastExpr 0x7fbb3d06de20 <col:31> 'char *' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7fbb3d06dd00 <col:31> 'char *' lvalue ParmVar 0x7fbb3d02c978 'p' 'char *'
+|   |       |-IntegerLiteral 0x7fbb3d06dd28 <col:34> 'int' 0
+|   |       `-ImplicitCastExpr 0x7fbb3d06de50 <col:37> 'unsigned long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fbb3d06dd48 <col:37> 'unsigned long' lvalue ParmVar 0x7fbb3d06d800 'sz' 'unsigned long'
+|   |-DeclStmt 0x7fbb3d06dfb8 <<built-in>:73:26, ../Data/C2AST/pr82665.c:7:29>
+|   | `-VarDecl 0x7fbb3d06deb0 <<built-in>:73:26, ../Data/C2AST/pr82665.c:7:28> col:20 used n 'long' cinit
+|   |   `-BinaryOperator 0x7fbb3d06df90 <col:24, col:28> 'long' '-'
+|   |     |-ImplicitCastExpr 0x7fbb3d06df60 <col:24> 'char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fbb3d06df10 <col:24> 'char *' lvalue Var 0x7fbb3d06d9d8 'q' 'char *'
+|   |     `-ImplicitCastExpr 0x7fbb3d06df78 <col:28> 'char *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fbb3d06df38 <col:28> 'char *' lvalue ParmVar 0x7fbb3d02c978 'p' 'char *'
+|   `-IfStmt 0x7fbb3d06e208 <line:9:3, line:10:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fbb3d06e030 <line:9:7, <built-in>:46:25> 'int' '>='
+|     | |-ImplicitCastExpr 0x7fbb3d06e018 <../Data/C2AST/pr82665.c:9:7> 'long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fbb3d06dfd0 <col:7> 'long' lvalue Var 0x7fbb3d06deb0 'n' 'long'
+|     | `-IntegerLiteral 0x7fbb3d06dff8 <<built-in>:46:25> 'long' 9223372036854775807
+|     |-CallExpr 0x7fbb3d06e1e0 <../Data/C2AST/pr82665.c:10:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fbb3d06e1c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fbb3d06e178 <col:5> '<builtin fn type>' Function 0x7fbb3d06e090 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fbb3d06dab8 <line:6:13> col:13 implicit used __builtin_memchr 'void *(const void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fbb3d06db58 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fbb3d06dbb8 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fbb3d06dc18 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fbb3d06dc90 <col:13> Implicit
+|-FunctionDecl 0x7fbb3d06e090 <line:10:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fbb3d06e130 <col:5> Implicit
+|-FunctionDecl 0x7fbb3d06e400 <line:13:1, line:20:1> line:13:6 f2 'void (unsigned char *, unsigned long)'
+| |-ParmVarDecl 0x7fbb3d06e2b0 <col:10, col:25> col:25 used p 'unsigned char *'
+| |-ParmVarDecl 0x7fbb3d06e328 <<built-in>:81:23, ../Data/C2AST/pr82665.c:13:42> col:42 used sz 'unsigned long'
+| `-CompoundStmt 0x7fbb3d06e928 <line:14:1, line:20:1>
+|   |-DeclStmt 0x7fbb3d06e6a8 <line:15:3, col:49>
+|   | `-VarDecl 0x7fbb3d06e4c8 <col:3, col:48> col:18 used q 'unsigned char *' cinit
+|   |   `-ImplicitCastExpr 0x7fbb3d06e690 <col:22, col:48> 'unsigned char *' <BitCast>
+|   |     `-CallExpr 0x7fbb3d06e608 <col:22, col:48> 'void *'
+|   |       |-ImplicitCastExpr 0x7fbb3d06e5f0 <col:22> 'void *(*)(const void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7fbb3d06e528 <col:22> '<builtin fn type>' Function 0x7fbb3d06dab8 '__builtin_memchr' 'void *(const void *, int, unsigned long)'
+|   |       |-ImplicitCastExpr 0x7fbb3d06e660 <col:40> 'const void *' <BitCast>
+|   |       | `-ImplicitCastExpr 0x7fbb3d06e648 <col:40> 'unsigned char *' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7fbb3d06e550 <col:40> 'unsigned char *' lvalue ParmVar 0x7fbb3d06e2b0 'p' 'unsigned char *'
+|   |       |-IntegerLiteral 0x7fbb3d06e578 <col:43> 'int' 0
+|   |       `-ImplicitCastExpr 0x7fbb3d06e678 <col:46> 'unsigned long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fbb3d06e598 <col:46> 'unsigned long' lvalue ParmVar 0x7fbb3d06e328 'sz' 'unsigned long'
+|   |-DeclStmt 0x7fbb3d06e7e0 <<built-in>:73:26, ../Data/C2AST/pr82665.c:16:29>
+|   | `-VarDecl 0x7fbb3d06e6d8 <<built-in>:73:26, ../Data/C2AST/pr82665.c:16:28> col:20 used n 'long' cinit
+|   |   `-BinaryOperator 0x7fbb3d06e7b8 <col:24, col:28> 'long' '-'
+|   |     |-ImplicitCastExpr 0x7fbb3d06e788 <col:24> 'unsigned char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fbb3d06e738 <col:24> 'unsigned char *' lvalue Var 0x7fbb3d06e4c8 'q' 'unsigned char *'
+|   |     `-ImplicitCastExpr 0x7fbb3d06e7a0 <col:28> 'unsigned char *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fbb3d06e760 <col:28> 'unsigned char *' lvalue ParmVar 0x7fbb3d06e2b0 'p' 'unsigned char *'
+|   `-IfStmt 0x7fbb3d06e8f0 <line:18:3, line:19:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fbb3d06e860 <line:18:7, <built-in>:46:25> 'int' '>='
+|     | |-ImplicitCastExpr 0x7fbb3d06e848 <../Data/C2AST/pr82665.c:18:7> 'long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fbb3d06e800 <col:7> 'long' lvalue Var 0x7fbb3d06e6d8 'n' 'long'
+|     | `-IntegerLiteral 0x7fbb3d06e828 <<built-in>:46:25> 'long' 9223372036854775807
+|     |-CallExpr 0x7fbb3d06e8c8 <../Data/C2AST/pr82665.c:19:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fbb3d06e8b0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fbb3d06e888 <col:5> '<builtin fn type>' Function 0x7fbb3d06e090 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fbb3d06eae0 <line:22:1, line:29:1> line:22:6 f3 'void (signed char *, unsigned long)'
+  |-ParmVarDecl 0x7fbb3d06e990 <col:10, col:23> col:23 used p 'signed char *'
+  |-ParmVarDecl 0x7fbb3d06ea08 <<built-in>:81:23, ../Data/C2AST/pr82665.c:22:40> col:40 used sz 'unsigned long'
+  `-CompoundStmt 0x7fbb3d06f000 <line:23:1, line:29:1>
+    |-DeclStmt 0x7fbb3d06ed88 <line:24:3, col:47>
+    | `-VarDecl 0x7fbb3d06eba8 <col:3, col:46> col:16 used q 'signed char *' cinit
+    |   `-ImplicitCastExpr 0x7fbb3d06ed70 <col:20, col:46> 'signed char *' <BitCast>
+    |     `-CallExpr 0x7fbb3d06ece8 <col:20, col:46> 'void *'
+    |       |-ImplicitCastExpr 0x7fbb3d06ecd0 <col:20> 'void *(*)(const void *, int, unsigned long)' <BuiltinFnToFnPtr>
+    |       | `-DeclRefExpr 0x7fbb3d06ec08 <col:20> '<builtin fn type>' Function 0x7fbb3d06dab8 '__builtin_memchr' 'void *(const void *, int, unsigned long)'
+    |       |-ImplicitCastExpr 0x7fbb3d06ed40 <col:38> 'const void *' <BitCast>
+    |       | `-ImplicitCastExpr 0x7fbb3d06ed28 <col:38> 'signed char *' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7fbb3d06ec30 <col:38> 'signed char *' lvalue ParmVar 0x7fbb3d06e990 'p' 'signed char *'
+    |       |-IntegerLiteral 0x7fbb3d06ec58 <col:41> 'int' 0
+    |       `-ImplicitCastExpr 0x7fbb3d06ed58 <col:44> 'unsigned long' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fbb3d06ec78 <col:44> 'unsigned long' lvalue ParmVar 0x7fbb3d06ea08 'sz' 'unsigned long'
+    |-DeclStmt 0x7fbb3d06eec0 <<built-in>:73:26, ../Data/C2AST/pr82665.c:25:29>
+    | `-VarDecl 0x7fbb3d06edb8 <<built-in>:73:26, ../Data/C2AST/pr82665.c:25:28> col:20 used n 'long' cinit
+    |   `-BinaryOperator 0x7fbb3d06ee98 <col:24, col:28> 'long' '-'
+    |     |-ImplicitCastExpr 0x7fbb3d06ee68 <col:24> 'signed char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fbb3d06ee18 <col:24> 'signed char *' lvalue Var 0x7fbb3d06eba8 'q' 'signed char *'
+    |     `-ImplicitCastExpr 0x7fbb3d06ee80 <col:28> 'signed char *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fbb3d06ee40 <col:28> 'signed char *' lvalue ParmVar 0x7fbb3d06e990 'p' 'signed char *'
+    `-IfStmt 0x7fbb3d06efc8 <line:27:3, line:28:22>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbb3d06ef38 <line:27:7, <built-in>:46:25> 'int' '>='
+      | |-ImplicitCastExpr 0x7fbb3d06ef20 <../Data/C2AST/pr82665.c:27:7> 'long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbb3d06eed8 <col:7> 'long' lvalue Var 0x7fbb3d06edb8 'n' 'long'
+      | `-IntegerLiteral 0x7fbb3d06ef00 <<built-in>:46:25> 'long' 9223372036854775807
+      |-CallExpr 0x7fbb3d06efa0 <../Data/C2AST/pr82665.c:28:5, col:22> 'void'
+      | `-ImplicitCastExpr 0x7fbb3d06ef88 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+      |   `-DeclRefExpr 0x7fbb3d06ef60 <col:5> '<builtin fn type>' Function 0x7fbb3d06e090 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

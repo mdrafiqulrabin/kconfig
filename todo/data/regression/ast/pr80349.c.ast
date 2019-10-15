@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7ffaca02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffaca02c978 <../Data/C2AST/pr80349.c:5:1, col:5> col:5 var 'int'
+|-VarDecl 0x7ffaca06d858 <line:6:1, col:6> col:6 used a 'long'
+|-FunctionDecl 0x7ffaca06d910 <line:8:1, line:12:1> line:9:1 fn1 'long ()'
+| `-CompoundStmt 0x7ffaca06dbe8 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7ffaca06dbd0 <line:11:3, col:35>
+|     `-ImplicitCastExpr 0x7ffaca06dbb8 <col:10, col:35> 'long' <IntegralCast>
+|       `-BinaryOperator 0x7ffaca06db90 <col:10, col:35> 'int' '%'
+|         |-IntegerLiteral 0x7ffaca06d9b0 <col:10> 'int' 0
+|         `-ParenExpr 0x7ffaca06db70 <col:14, col:35> 'int'
+|           `-BinaryOperator 0x7ffaca06db48 <col:15, col:34> 'int' '=='
+|             |-ImplicitCastExpr 0x7ffaca06db30 <col:15, col:21> 'unsigned long' <IntegralCast>
+|             | `-ParenExpr 0x7ffaca06da70 <col:15, col:21> 'long'
+|             |   `-BinaryOperator 0x7ffaca06da48 <col:16, col:20> 'long' '&'
+|             |     |-ImplicitCastExpr 0x7ffaca06da18 <col:16> 'long' <LValueToRValue>
+|             |     | `-DeclRefExpr 0x7ffaca06d9d0 <col:16> 'long' lvalue Var 0x7ffaca06d858 'a' 'long'
+|             |     `-ImplicitCastExpr 0x7ffaca06da30 <col:20> 'long' <IntegralCast>
+|             |       `-IntegerLiteral 0x7ffaca06d9f8 <col:20> 'int' 1
+|             `-ParenExpr 0x7ffaca06db10 <col:26, col:34> 'unsigned long'
+|               `-BinaryOperator 0x7ffaca06dae8 <col:27, col:33> 'unsigned long' '&'
+|                 |-IntegerLiteral 0x7ffaca06da90 <col:27> 'unsigned long' 7
+|                 `-ImplicitCastExpr 0x7ffaca06dad0 <col:33> 'unsigned long' <IntegralCast>
+|                   `-IntegerLiteral 0x7ffaca06dab0 <col:33> 'int' 1
+|-FunctionDecl 0x7ffaca06dc28 <line:14:1, line:18:1> line:15:1 fn2 'long ()'
+| `-CompoundStmt 0x7ffaca06df00 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7ffaca06dee8 <line:17:3, col:35>
+|     `-ImplicitCastExpr 0x7ffaca06ded0 <col:10, col:35> 'long' <IntegralCast>
+|       `-BinaryOperator 0x7ffaca06dea8 <col:10, col:35> 'int' '%'
+|         |-IntegerLiteral 0x7ffaca06dcc8 <col:10> 'int' 0
+|         `-ParenExpr 0x7ffaca06de88 <col:14, col:35> 'int'
+|           `-BinaryOperator 0x7ffaca06de60 <col:15, col:34> 'int' '=='
+|             |-ImplicitCastExpr 0x7ffaca06de48 <col:15, col:21> 'unsigned long' <IntegralCast>
+|             | `-ParenExpr 0x7ffaca06dd88 <col:15, col:21> 'long'
+|             |   `-BinaryOperator 0x7ffaca06dd60 <col:16, col:20> 'long' '&'
+|             |     |-ImplicitCastExpr 0x7ffaca06dd30 <col:16> 'long' <LValueToRValue>
+|             |     | `-DeclRefExpr 0x7ffaca06dce8 <col:16> 'long' lvalue Var 0x7ffaca06d858 'a' 'long'
+|             |     `-ImplicitCastExpr 0x7ffaca06dd48 <col:20> 'long' <IntegralCast>
+|             |       `-IntegerLiteral 0x7ffaca06dd10 <col:20> 'int' 1
+|             `-ParenExpr 0x7ffaca06de28 <col:26, col:34> 'unsigned long'
+|               `-BinaryOperator 0x7ffaca06de00 <col:27, col:31> 'unsigned long' '&'
+|                 |-ImplicitCastExpr 0x7ffaca06dde8 <col:27> 'unsigned long' <IntegralCast>
+|                 | `-IntegerLiteral 0x7ffaca06dda8 <col:27> 'int' 1
+|                 `-IntegerLiteral 0x7ffaca06ddc8 <col:31> 'unsigned long' 7
+|-FunctionDecl 0x7ffaca06df40 <line:20:1, line:24:1> line:21:1 fn3 'long ()'
+| `-CompoundStmt 0x7ffaca06e218 <line:22:1, line:24:1>
+|   `-ReturnStmt 0x7ffaca06e200 <line:23:3, col:35>
+|     `-ImplicitCastExpr 0x7ffaca06e1e8 <col:10, col:35> 'long' <IntegralCast>
+|       `-BinaryOperator 0x7ffaca06e1c0 <col:10, col:35> 'int' '%'
+|         |-IntegerLiteral 0x7ffaca06dfe0 <col:10> 'int' 0
+|         `-ParenExpr 0x7ffaca06e1a0 <col:14, col:35> 'int'
+|           `-BinaryOperator 0x7ffaca06e178 <col:15, col:34> 'int' '=='
+|             |-ImplicitCastExpr 0x7ffaca06e160 <col:15, col:21> 'unsigned long' <IntegralCast>
+|             | `-ParenExpr 0x7ffaca06e0a0 <col:15, col:21> 'long'
+|             |   `-BinaryOperator 0x7ffaca06e078 <col:16, col:20> 'long' '&'
+|             |     |-ImplicitCastExpr 0x7ffaca06e060 <col:16> 'long' <IntegralCast>
+|             |     | `-IntegerLiteral 0x7ffaca06e000 <col:16> 'int' 1
+|             |     `-ImplicitCastExpr 0x7ffaca06e048 <col:20> 'long' <LValueToRValue>
+|             |       `-DeclRefExpr 0x7ffaca06e020 <col:20> 'long' lvalue Var 0x7ffaca06d858 'a' 'long'
+|             `-ParenExpr 0x7ffaca06e140 <col:26, col:34> 'unsigned long'
+|               `-BinaryOperator 0x7ffaca06e118 <col:27, col:33> 'unsigned long' '&'
+|                 |-IntegerLiteral 0x7ffaca06e0c0 <col:27> 'unsigned long' 7
+|                 `-ImplicitCastExpr 0x7ffaca06e100 <col:33> 'unsigned long' <IntegralCast>
+|                   `-IntegerLiteral 0x7ffaca06e0e0 <col:33> 'int' 1
+`-FunctionDecl 0x7ffaca06e258 <line:26:1, line:30:1> line:27:1 fn4 'long ()'
+  `-CompoundStmt 0x7ffaca06e530 <line:28:1, line:30:1>
+    `-ReturnStmt 0x7ffaca06e518 <line:29:3, col:35>
+      `-ImplicitCastExpr 0x7ffaca06e500 <col:10, col:35> 'long' <IntegralCast>
+        `-BinaryOperator 0x7ffaca06e4d8 <col:10, col:35> 'int' '%'
+          |-IntegerLiteral 0x7ffaca06e2f8 <col:10> 'int' 0
+          `-ParenExpr 0x7ffaca06e4b8 <col:14, col:35> 'int'
+            `-BinaryOperator 0x7ffaca06e490 <col:15, col:34> 'int' '=='
+              |-ImplicitCastExpr 0x7ffaca06e478 <col:15, col:21> 'unsigned long' <IntegralCast>
+              | `-ParenExpr 0x7ffaca06e3b8 <col:15, col:21> 'long'
+              |   `-BinaryOperator 0x7ffaca06e390 <col:16, col:20> 'long' '&'
+              |     |-ImplicitCastExpr 0x7ffaca06e378 <col:16> 'long' <IntegralCast>
+              |     | `-IntegerLiteral 0x7ffaca06e318 <col:16> 'int' 1
+              |     `-ImplicitCastExpr 0x7ffaca06e360 <col:20> 'long' <LValueToRValue>
+              |       `-DeclRefExpr 0x7ffaca06e338 <col:20> 'long' lvalue Var 0x7ffaca06d858 'a' 'long'
+              `-ParenExpr 0x7ffaca06e458 <col:26, col:34> 'unsigned long'
+                `-BinaryOperator 0x7ffaca06e430 <col:27, col:31> 'unsigned long' '&'
+                  |-ImplicitCastExpr 0x7ffaca06e418 <col:27> 'unsigned long' <IntegralCast>
+                  | `-IntegerLiteral 0x7ffaca06e3d8 <col:27> 'int' 1
+                  `-IntegerLiteral 0x7ffaca06e3f8 <col:31> 'unsigned long' 7

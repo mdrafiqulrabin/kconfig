@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fa62082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa62082c960 <../Data/C2AST/pr83550.c:5:1, col:8> col:8 struct my_struct
+|-VarDecl 0x7fa621014270 <line:6:1, col:25> col:25 s 'struct my_struct':'struct my_struct' extern
+|-RecordDecl 0x7fa621014310 prev 0x7fa62082c960 <line:7:1, col:30> col:8 struct my_struct definition
+| |-FieldDecl 0x7fa6210143b0 <col:20, col:24> col:24 a 'int'
+| `-FieldDecl 0x7fa621014410 <col:20, col:27> col:27 b 'int'
+`-VarDecl 0x7fa621014478 <line:8:1, col:18> col:18 q 'struct my_struct':'struct my_struct'

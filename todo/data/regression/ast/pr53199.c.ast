@@ -1,0 +1,170 @@
+TranslationUnitDecl 0x7ff03b0274e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff03b818268 <../Data/C2AST/pr53199.c:10:1, line:14:1> line:11:1 load64_reverse_1 'long long (long long *)'
+| |-ParmVarDecl 0x7ff03b0281a0 <col:19, col:30> col:30 used p 'long long *'
+| `-CompoundStmt 0x7ff03b818640 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7ff03b818628 <line:13:3, col:31>
+|     `-ImplicitCastExpr 0x7ff03b818610 <col:10, col:31> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b8185b0 <col:10, col:31> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b818598 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b8184e8 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b8185f8 <col:29, col:30> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b8185e0 <col:29, col:30> 'long long' <LValueToRValue>
+|             `-UnaryOperator 0x7ff03b818550 <col:29, col:30> 'long long' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7ff03b818538 <col:30> 'long long *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7ff03b818510 <col:30> 'long long *' lvalue ParmVar 0x7ff03b0281a0 'p' 'long long *'
+|-FunctionDecl 0x7ff03b818388 <col:10> col:10 implicit used __builtin_bswap64 'unsigned long long (unsigned long long)' extern
+| |-ParmVarDecl 0x7ff03b818428 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7ff03b818490 <col:10> Implicit
+| `-ConstAttr 0x7ff03b8184d8 <col:10> Implicit
+|-FunctionDecl 0x7ff03b818700 <line:16:1, line:20:1> line:17:1 load64_reverse_2 'long long (long long *)'
+| |-ParmVarDecl 0x7ff03b818670 <col:19, col:30> col:30 used p 'long long *'
+| `-CompoundStmt 0x7ff03b818900 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7ff03b8188e8 <line:19:3, col:33>
+|     `-ImplicitCastExpr 0x7ff03b8188d0 <col:10, col:33> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b818870 <col:10, col:33> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b818858 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b8187a8 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b8188b8 <col:29, col:32> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b8188a0 <col:29, col:32> 'long long' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7ff03b818830 <col:29, col:32> 'long long' lvalue
+|               |-ImplicitCastExpr 0x7ff03b818818 <col:29> 'long long *' <LValueToRValue>
+|               | `-DeclRefExpr 0x7ff03b8187d0 <col:29> 'long long *' lvalue ParmVar 0x7ff03b818670 'p' 'long long *'
+|               `-IntegerLiteral 0x7ff03b8187f8 <col:31> 'int' 1
+|-FunctionDecl 0x7ff03b818a88 <line:22:1, line:26:1> line:23:1 load64_reverse_3 'long long (long long *, int)'
+| |-ParmVarDecl 0x7ff03b818930 <col:19, col:30> col:30 used p 'long long *'
+| |-ParmVarDecl 0x7ff03b8189a8 <col:33, col:37> col:37 used i 'int'
+| `-CompoundStmt 0x7ff03b818cb0 <line:24:1, line:26:1>
+|   `-ReturnStmt 0x7ff03b818c98 <line:25:3, col:33>
+|     `-ImplicitCastExpr 0x7ff03b818c80 <col:10, col:33> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b818c20 <col:10, col:33> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b818c08 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b818b38 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b818c68 <col:29, col:32> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b818c50 <col:29, col:32> 'long long' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7ff03b818be0 <col:29, col:32> 'long long' lvalue
+|               |-ImplicitCastExpr 0x7ff03b818bb0 <col:29> 'long long *' <LValueToRValue>
+|               | `-DeclRefExpr 0x7ff03b818b60 <col:29> 'long long *' lvalue ParmVar 0x7ff03b818930 'p' 'long long *'
+|               `-ImplicitCastExpr 0x7ff03b818bc8 <col:31> 'int' <LValueToRValue>
+|                 `-DeclRefExpr 0x7ff03b818b88 <col:31> 'int' lvalue ParmVar 0x7ff03b8189a8 'i' 'int'
+|-FunctionDecl 0x7ff03b818e78 <line:28:1, line:32:1> line:29:1 load64_reverse_4 'long long (long long, long long *)'
+| |-ParmVarDecl 0x7ff03b818ce0 <col:19, col:29> col:29 dummy 'long long'
+| | `-UnusedAttr 0x7ff03b818d40 <col:51> unused
+| |-ParmVarDecl 0x7ff03b818da0 <col:61, col:72> col:72 used p 'long long *'
+| `-CompoundStmt 0x7ff03b819058 <line:30:1, line:32:1>
+|   `-ReturnStmt 0x7ff03b819040 <line:31:3, col:31>
+|     `-ImplicitCastExpr 0x7ff03b819028 <col:10, col:31> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b818fc8 <col:10, col:31> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b818fb0 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b818f28 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b819010 <col:29, col:30> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b818ff8 <col:29, col:30> 'long long' <LValueToRValue>
+|             `-UnaryOperator 0x7ff03b818f90 <col:29, col:30> 'long long' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7ff03b818f78 <col:30> 'long long *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7ff03b818f50 <col:30> 'long long *' lvalue ParmVar 0x7ff03b818da0 'p' 'long long *'
+|-FunctionDecl 0x7ff03b81a200 <line:34:1, line:38:1> line:35:1 load64_reverse_5 'long long (long long, long long *)'
+| |-ParmVarDecl 0x7ff03b819088 <col:19, col:29> col:29 dummy 'long long'
+| | `-UnusedAttr 0x7ff03b8190e8 <col:51> unused
+| |-ParmVarDecl 0x7ff03b819148 <col:61, col:72> col:72 used p 'long long *'
+| `-CompoundStmt 0x7ff03b81a408 <line:36:1, line:38:1>
+|   `-ReturnStmt 0x7ff03b81a3f0 <line:37:3, col:33>
+|     `-ImplicitCastExpr 0x7ff03b81a3d8 <col:10, col:33> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b81a378 <col:10, col:33> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b81a360 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b81a2b0 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b81a3c0 <col:29, col:32> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b81a3a8 <col:29, col:32> 'long long' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7ff03b81a338 <col:29, col:32> 'long long' lvalue
+|               |-ImplicitCastExpr 0x7ff03b81a320 <col:29> 'long long *' <LValueToRValue>
+|               | `-DeclRefExpr 0x7ff03b81a2d8 <col:29> 'long long *' lvalue ParmVar 0x7ff03b819148 'p' 'long long *'
+|               `-IntegerLiteral 0x7ff03b81a300 <col:31> 'int' 1
+|-FunctionDecl 0x7ff03b81a658 <line:40:1, line:44:1> line:41:1 load64_reverse_6 'long long (long long, long long *, int)'
+| |-ParmVarDecl 0x7ff03b81a438 <col:19, col:29> col:29 dummy 'long long'
+| | `-UnusedAttr 0x7ff03b81a498 <col:51> unused
+| |-ParmVarDecl 0x7ff03b81a4f8 <col:61, col:72> col:72 used p 'long long *'
+| |-ParmVarDecl 0x7ff03b81a570 <col:75, col:79> col:79 used i 'int'
+| `-CompoundStmt 0x7ff03b81a888 <line:42:1, line:44:1>
+|   `-ReturnStmt 0x7ff03b81a870 <line:43:3, col:33>
+|     `-ImplicitCastExpr 0x7ff03b81a858 <col:10, col:33> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b81a7f8 <col:10, col:33> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b81a7e0 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b81a710 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b81a840 <col:29, col:32> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b81a828 <col:29, col:32> 'long long' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7ff03b81a7b8 <col:29, col:32> 'long long' lvalue
+|               |-ImplicitCastExpr 0x7ff03b81a788 <col:29> 'long long *' <LValueToRValue>
+|               | `-DeclRefExpr 0x7ff03b81a738 <col:29> 'long long *' lvalue ParmVar 0x7ff03b81a4f8 'p' 'long long *'
+|               `-ImplicitCastExpr 0x7ff03b81a7a0 <col:31> 'int' <LValueToRValue>
+|                 `-DeclRefExpr 0x7ff03b81a760 <col:31> 'int' lvalue ParmVar 0x7ff03b81a570 'i' 'int'
+|-FunctionDecl 0x7ff03b81aa00 <line:46:1, line:50:1> line:47:1 store64_reverse_1 'void (long long *, long long)'
+| |-ParmVarDecl 0x7ff03b81a8b8 <col:20, col:31> col:31 used p 'long long *'
+| |-ParmVarDecl 0x7ff03b81a930 <col:34, col:44> col:44 used x 'long long'
+| `-CompoundStmt 0x7ff03b81ac18 <line:48:1, line:50:1>
+|   `-BinaryOperator 0x7ff03b81abf0 <line:49:3, col:28> 'long long' '='
+|     |-UnaryOperator 0x7ff03b81aaf0 <col:3, col:4> 'long long' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7ff03b81aad8 <col:4> 'long long *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ff03b81aab0 <col:4> 'long long *' lvalue ParmVar 0x7ff03b81a8b8 'p' 'long long *'
+|     `-ImplicitCastExpr 0x7ff03b81abd8 <col:8, col:28> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b81ab78 <col:8, col:28> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b81ab60 <col:8> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b81ab10 <col:8> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b81abc0 <col:27> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b81aba8 <col:27> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff03b81ab38 <col:27> 'long long' lvalue ParmVar 0x7ff03b81a930 'x' 'long long'
+|-FunctionDecl 0x7ff03b81ad50 <line:52:1, line:56:1> line:53:1 store64_reverse_2 'void (long long *, long long)'
+| |-ParmVarDecl 0x7ff03b81ac48 <col:20, col:31> col:31 used p 'long long *'
+| |-ParmVarDecl 0x7ff03b81acc0 <col:34, col:44> col:44 used x 'long long'
+| `-CompoundStmt 0x7ff03b81af90 <line:54:1, line:56:1>
+|   `-BinaryOperator 0x7ff03b81af68 <line:55:3, col:30> 'long long' '='
+|     |-ArraySubscriptExpr 0x7ff03b81ae60 <col:3, col:6> 'long long' lvalue
+|     | |-ImplicitCastExpr 0x7ff03b81ae48 <col:3> 'long long *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff03b81ae00 <col:3> 'long long *' lvalue ParmVar 0x7ff03b81ac48 'p' 'long long *'
+|     | `-IntegerLiteral 0x7ff03b81ae28 <col:5> 'int' 1
+|     `-ImplicitCastExpr 0x7ff03b81af50 <col:10, col:30> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b81aef0 <col:10, col:30> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b81aed8 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b81ae88 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b81af38 <col:29> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b81af20 <col:29> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff03b81aeb0 <col:29> 'long long' lvalue ParmVar 0x7ff03b81acc0 'x' 'long long'
+|-FunctionDecl 0x7ff03b81b200 <line:58:1, line:62:1> line:59:1 store64_reverse_3 'void (long long *, long long, int)'
+| |-ParmVarDecl 0x7ff03b81afc0 <col:20, col:31> col:31 used p 'long long *'
+| |-ParmVarDecl 0x7ff03b81b038 <col:34, col:44> col:44 used x 'long long'
+| |-ParmVarDecl 0x7ff03b81b0b0 <col:47, col:51> col:51 used i 'int'
+| `-CompoundStmt 0x7ff03b81b468 <line:60:1, line:62:1>
+|   `-BinaryOperator 0x7ff03b81b440 <line:61:3, col:30> 'long long' '='
+|     |-ArraySubscriptExpr 0x7ff03b81b338 <col:3, col:6> 'long long' lvalue
+|     | |-ImplicitCastExpr 0x7ff03b81b308 <col:3> 'long long *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff03b81b2b8 <col:3> 'long long *' lvalue ParmVar 0x7ff03b81afc0 'p' 'long long *'
+|     | `-ImplicitCastExpr 0x7ff03b81b320 <col:5> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ff03b81b2e0 <col:5> 'int' lvalue ParmVar 0x7ff03b81b0b0 'i' 'int'
+|     `-ImplicitCastExpr 0x7ff03b81b428 <col:10, col:30> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b81b3c8 <col:10, col:30> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b81b3b0 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b81b360 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b81b410 <col:29> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b81b3f8 <col:29> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff03b81b388 <col:29> 'long long' lvalue ParmVar 0x7ff03b81b038 'x' 'long long'
+|-FunctionDecl 0x7ff03b81b568 <line:64:1, line:68:1> line:65:1 reg_reverse_1 'long long (long long)'
+| |-ParmVarDecl 0x7ff03b81b498 <col:16, col:26> col:26 used x 'long long'
+| `-CompoundStmt 0x7ff03b81b708 <line:66:1, line:68:1>
+|   `-ReturnStmt 0x7ff03b81b6f0 <line:67:3, col:30>
+|     `-ImplicitCastExpr 0x7ff03b81b6d8 <col:10, col:30> 'long long' <IntegralCast>
+|       `-CallExpr 0x7ff03b81b678 <col:10, col:30> 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff03b81b660 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff03b81b610 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|         `-ImplicitCastExpr 0x7ff03b81b6c0 <col:29> 'unsigned long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ff03b81b6a8 <col:29> 'long long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ff03b81b638 <col:29> 'long long' lvalue ParmVar 0x7ff03b81b498 'x' 'long long'
+`-FunctionDecl 0x7ff03b81b8d8 <line:70:1, line:74:1> line:71:1 reg_reverse_2 'long long (long long, long long)'
+  |-ParmVarDecl 0x7ff03b81b738 <col:16, col:26> col:26 dummy 'long long'
+  | `-UnusedAttr 0x7ff03b81b798 <col:48> unused
+  |-ParmVarDecl 0x7ff03b81b7f8 <col:58, col:68> col:68 used x 'long long'
+  `-CompoundStmt 0x7ff03b81ba80 <line:72:1, line:74:1>
+    `-ReturnStmt 0x7ff03b81ba68 <line:73:3, col:30>
+      `-ImplicitCastExpr 0x7ff03b81ba50 <col:10, col:30> 'long long' <IntegralCast>
+        `-CallExpr 0x7ff03b81b9f0 <col:10, col:30> 'unsigned long long'
+          |-ImplicitCastExpr 0x7ff03b81b9d8 <col:10> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+          | `-DeclRefExpr 0x7ff03b81b988 <col:10> '<builtin fn type>' Function 0x7ff03b818388 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+          `-ImplicitCastExpr 0x7ff03b81ba38 <col:29> 'unsigned long long' <IntegralCast>
+            `-ImplicitCastExpr 0x7ff03b81ba20 <col:29> 'long long' <LValueToRValue>
+              `-DeclRefExpr 0x7ff03b81b9b0 <col:29> 'long long' lvalue ParmVar 0x7ff03b81b7f8 'x' 'long long'

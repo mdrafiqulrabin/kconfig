@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fc63282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc633014200 <../Data/C2AST/pr81083.c:3:1, col:13> col:6 used setjmp 'void ()'
+| `-ReturnsTwiceAttr 0x7fc6330142e0 <col:6> Implicit
+|-FunctionDecl 0x7fc633014348 <line:4:1, col:11> col:6 used func 'void ()'
+`-FunctionDecl 0x7fc6330144c0 <line:5:1, line:15:1> line:5:6 a 'void (int)'
+  |-ParmVarDecl 0x7fc633014400 <col:8, col:12> col:12 used arg 'int'
+  `-CompoundStmt 0x7fc633014bc8 <line:6:1, line:15:1>
+    |-DeclStmt 0x7fc633014748 <line:7:3, col:31>
+    | |-RecordDecl 0x7fc633014568 <col:10, col:26> col:10 struct definition
+    | | `-FieldDecl 0x7fc633014628 <col:19, col:23> col:23 referenced x 'int'
+    | `-VarDecl 0x7fc6330146c0 parent 0x7fc63282bce8 <col:3, col:28> col:28 used obj 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)' extern
+    |-CallExpr 0x7fc6330147d0 <line:8:3, col:10> 'void'
+    | `-ImplicitCastExpr 0x7fc6330147b8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc633014760 <col:3> 'void ()' Function 0x7fc633014200 'setjmp' 'void ()'
+    |-BinaryOperator 0x7fc633014898 <line:9:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fc633014820 <col:3, col:7> 'int' lvalue .x 0x7fc633014628
+    | | `-DeclRefExpr 0x7fc6330147f8 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)' lvalue Var 0x7fc6330146c0 'obj' 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)'
+    | `-ImplicitCastExpr 0x7fc633014880 <col:11> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc633014858 <col:11> 'int' lvalue ParmVar 0x7fc633014400 'arg' 'int'
+    |-BinaryOperator 0x7fc633014970 <line:10:3, col:9> 'int' '='
+    | |-DeclRefExpr 0x7fc633014908 <col:3> 'int' lvalue ParmVar 0x7fc633014400 'arg' 'int'
+    | `-ImplicitCastExpr 0x7fc633014958 <col:9> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc633014930 <col:9> 'int' lvalue ParmVar 0x7fc633014400 'arg' 'int'
+    |-IfStmt 0x7fc633014a78 <line:11:3, line:12:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc6330149f8 <line:11:7, col:11> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7fc6330149c0 <col:7, col:11> 'int' lvalue .x 0x7fc633014628
+    | |   `-DeclRefExpr 0x7fc633014998 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)' lvalue Var 0x7fc6330146c0 'obj' 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)'
+    | |-CallExpr 0x7fc633014a50 <line:12:5, col:10> 'void'
+    | | `-ImplicitCastExpr 0x7fc633014a38 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc633014a10 <col:5> 'void ()' Function 0x7fc633014348 'func' 'void ()'
+    | `-<<<NULL>>>
+    `-IfStmt 0x7fc633014b90 <line:13:3, line:14:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc633014b10 <line:13:7, col:11> 'int' <LValueToRValue>
+      | `-MemberExpr 0x7fc633014ad8 <col:7, col:11> 'int' lvalue .x 0x7fc633014628
+      |   `-DeclRefExpr 0x7fc633014ab0 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)' lvalue Var 0x7fc6330146c0 'obj' 'struct (anonymous struct at ../Data/C2AST/pr81083.c:7:10)':'struct (anonymous at ../Data/C2AST/pr81083.c:7:10)'
+      |-CallExpr 0x7fc633014b68 <line:14:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7fc633014b50 <col:5> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fc633014b28 <col:5> 'void ()' Function 0x7fc633014348 'func' 'void ()'
+      `-<<<NULL>>>

@@ -1,0 +1,98 @@
+TranslationUnitDecl 0x7ff79602bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff79602c960 <../Data/C2AST/pr50305.c:5:1, line:8:1> line:5:8 struct event definition
+| |-FieldDecl 0x7ff79606de38 <line:6:2, col:21> col:21 referenced id 'unsigned long long'
+| `-FieldDecl 0x7ff79606de98 <line:7:2, col:15> col:15 referenced flag 'unsigned int'
+|-FunctionDecl 0x7ff79606dfa0 <line:10:1, line:15:1> line:10:6 dummy 'void (void)'
+| `-CompoundStmt 0x7ff79606e270 <line:11:1, line:15:1>
+|   |-DeclStmt 0x7ff79606e160 <line:13:3, col:27>
+|   | `-VarDecl 0x7ff79606e100 <col:3, col:26> col:14 used __warned 'int [300]' static
+|   `-BinaryOperator 0x7ff79606e248 <line:14:2, col:16> 'int' '='
+|     |-ArraySubscriptExpr 0x7ff79606e200 <col:2, col:12> 'int' lvalue
+|     | |-ImplicitCastExpr 0x7ff79606e1e8 <col:2> 'int *' <ArrayToPointerDecay>
+|     | | `-DeclRefExpr 0x7ff79606e178 <col:2> 'int [300]' lvalue Var 0x7ff79606e100 '__warned' 'int [300]'
+|     | `-IntegerLiteral 0x7ff79606e1a0 <col:11> 'int' 0
+|     `-IntegerLiteral 0x7ff79606e228 <col:16> 'int' 1
+|-FunctionDecl 0x7ff79606e378 <line:17:1, col:50> col:14 used kmem_cache_alloc_trace 'void *(void *)' extern
+| `-ParmVarDecl 0x7ff79606e2a8 <col:38, col:44> col:44 cachep 'void *'
+|-VarDecl 0x7ff79606e438 <line:18:1, col:14> col:14 used cs_cachep 'void *' extern
+|-VarDecl 0x7ff79606e4b0 <line:19:1, col:12> col:12 used nr_cpu_ids 'int' extern
+`-FunctionDecl 0x7ff79606e6d8 <line:21:1, line:58:1> line:22:1 event_alloc 'struct event *(int)'
+  |-ParmVarDecl 0x7ff79606e528 <col:14, col:18> col:18 used cpu 'int'
+  `-CompoundStmt 0x7ff79608b3e0 <line:23:1, line:58:1>
+    |-DeclStmt 0x7ff79606e868 <line:24:2, col:69>
+    | `-VarDecl 0x7ff79606e7b8 <col:2, col:56> col:56 used perf_event_id 'unsigned long long' static
+    |   `-AlignedAttr 0x7ff79606e818 <col:43, col:52> aligned
+    |     `-IntegerLiteral 0x7ff79606e780 <col:51> 'int' 8
+    |-DeclStmt 0x7ff79606e908 <line:25:2, col:21>
+    | `-VarDecl 0x7ff79606e8a8 <col:2, col:16> col:16 used event 'struct event *'
+    |-DeclStmt 0x7ff79606e998 <line:26:2, col:27>
+    | `-VarDecl 0x7ff79606e938 <col:2, col:21> col:21 used result 'unsigned long long'
+    |-DeclStmt 0x7ff79606ea28 <line:27:2, col:19>
+    | `-VarDecl 0x7ff79606e9c8 <col:2, col:16> col:16 used tmp 'unsigned long'
+    |-IfStmt 0x7ff79606eb38 <line:29:2, line:30:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff79606eac0 <line:29:6, col:13> 'int' '>='
+    | | |-ImplicitCastExpr 0x7ff79606ea90 <col:6> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff79606ea40 <col:6> 'int' lvalue ParmVar 0x7ff79606e528 'cpu' 'int'
+    | | `-ImplicitCastExpr 0x7ff79606eaa8 <col:13> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff79606ea68 <col:13> 'int' lvalue Var 0x7ff79606e4b0 'nr_cpu_ids' 'int'
+    | |-ReturnStmt 0x7ff79606eb20 <line:30:3, col:10>
+    | | `-ImplicitCastExpr 0x7ff79606eb08 <col:10> 'struct event *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7ff79606eae8 <col:10> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7ff79606ec90 <line:32:2, col:43> 'struct event *' '='
+    | |-DeclRefExpr 0x7ff79606eb70 <col:2> 'struct event *' lvalue Var 0x7ff79606e8a8 'event' 'struct event *'
+    | `-ImplicitCastExpr 0x7ff79606ec78 <col:10, col:43> 'struct event *' <BitCast>
+    |   `-CallExpr 0x7ff79606ec30 <col:10, col:43> 'void *'
+    |     |-ImplicitCastExpr 0x7ff79606ec18 <col:10> 'void *(*)(void *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ff79606eb98 <col:10> 'void *(void *)' Function 0x7ff79606e378 'kmem_cache_alloc_trace' 'void *(void *)'
+    |     `-ImplicitCastExpr 0x7ff79606ec60 <col:34> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff79606ebc0 <col:34> 'void *' lvalue Var 0x7ff79606e438 'cs_cachep' 'void *'
+    |-GCCAsmStmt 0x7ff79606ed98 <line:34:2, col:44>
+    |-GCCAsmStmt 0x7ff79608ad98 <line:36:2, line:45:8>
+    | |-DeclRefExpr 0x7ff79608ab28 <line:43:11> 'unsigned long long' lvalue Var 0x7ff79606e938 'result' 'unsigned long long'
+    | |-DeclRefExpr 0x7ff79608ab80 <col:27> 'unsigned long' lvalue Var 0x7ff79606e9c8 'tmp' 'unsigned long'
+    | |-DeclRefExpr 0x7ff79608abd8 <col:40> 'unsigned long long' lvalue Var 0x7ff79606e7b8 'perf_event_id' 'unsigned long long'
+    | |-UnaryOperator 0x7ff79608acb8 <line:44:9, col:10> 'unsigned long long *' prefix '&'
+    | | `-DeclRefExpr 0x7ff79608ac68 <col:10> 'unsigned long long' lvalue Var 0x7ff79606e7b8 'perf_event_id' 'unsigned long long'
+    | `-IntegerLiteral 0x7ff79608ad08 <col:31> 'long long' 1
+    |-GCCAsmStmt 0x7ff79608aec0 <line:47:2, col:44>
+    |-BinaryOperator 0x7ff79608afc8 <line:49:2, col:14> 'unsigned long long' '='
+    | |-MemberExpr 0x7ff79608af50 <col:2, col:9> 'unsigned long long' lvalue ->id 0x7ff79606de38
+    | | `-ImplicitCastExpr 0x7ff79608af38 <col:2> 'struct event *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff79608af10 <col:2> 'struct event *' lvalue Var 0x7ff79606e8a8 'event' 'struct event *'
+    | `-ImplicitCastExpr 0x7ff79608afb0 <col:14> 'unsigned long long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff79608af88 <col:14> 'unsigned long long' lvalue Var 0x7ff79606e938 'result' 'unsigned long long'
+    |-IfStmt 0x7ff79608b108 <line:51:2, line:52:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff79608b018 <line:51:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff79608aff0 <col:6> 'int' lvalue ParmVar 0x7ff79606e528 'cpu' 'int'
+    | |-BinaryOperator 0x7ff79608b0e0 <line:52:3, col:17> 'unsigned int' '='
+    | | |-MemberExpr 0x7ff79608b070 <col:3, col:10> 'unsigned int' lvalue ->flag 0x7ff79606de98
+    | | | `-ImplicitCastExpr 0x7ff79608b058 <col:3> 'struct event *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff79608b030 <col:3> 'struct event *' lvalue Var 0x7ff79606e8a8 'event' 'struct event *'
+    | | `-ImplicitCastExpr 0x7ff79608b0c8 <col:17> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ff79608b0a8 <col:17> 'int' 1
+    | `-<<<NULL>>>
+    |-ForStmt 0x7ff79608b350 <line:54:2, line:55:37>
+    | |-BinaryOperator 0x7ff79608b188 <line:54:7, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7ff79608b140 <col:7> 'int' lvalue ParmVar 0x7ff79606e528 'cpu' 'int'
+    | | `-IntegerLiteral 0x7ff79608b168 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff79608b230 <col:16, col:22> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff79608b200 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff79608b1b0 <col:16> 'int' lvalue ParmVar 0x7ff79606e528 'cpu' 'int'
+    | | `-ImplicitCastExpr 0x7ff79608b218 <col:22> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff79608b1d8 <col:22> 'int' lvalue Var 0x7ff79606e4b0 'nr_cpu_ids' 'int'
+    | |-UnaryOperator 0x7ff79608b280 <col:34, col:37> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff79608b258 <col:34> 'int' lvalue ParmVar 0x7ff79606e528 'cpu' 'int'
+    | `-CallExpr 0x7ff79608b308 <line:55:4, col:37> 'void *'
+    |   |-ImplicitCastExpr 0x7ff79608b2f0 <col:4> 'void *(*)(void *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7ff79608b2a0 <col:4> 'void *(void *)' Function 0x7ff79606e378 'kmem_cache_alloc_trace' 'void *(void *)'
+    |   `-ImplicitCastExpr 0x7ff79608b338 <col:28> 'void *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7ff79608b2c8 <col:28> 'void *' lvalue Var 0x7ff79606e438 'cs_cachep' 'void *'
+    `-ReturnStmt 0x7ff79608b3c8 <line:57:2, col:9>
+      `-ImplicitCastExpr 0x7ff79608b3b0 <col:9> 'struct event *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff79608b388 <col:9> 'struct event *' lvalue Var 0x7ff79606e8a8 'event' 'struct event *'

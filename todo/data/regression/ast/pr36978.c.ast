@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7ff24c02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff24c02c978 <../Data/C2AST/pr36978.c:4:1, col:16> col:16 used status 'unsigned short'
+`-FunctionDecl 0x7ff24c06d950 <line:5:1, line:13:1> line:5:6 foo 'void (const _Bool)'
+  |-ParmVarDecl 0x7ff24c06d850 <col:11, col:23> col:23 used flag 'const _Bool'
+  `-CompoundStmt 0x7ff24c06ddf0 <line:6:1, line:13:1>
+    `-IfStmt 0x7ff24c06ddb8 <line:7:3, line:12:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff24c06db38 <line:7:7, col:32> 'int' '||'
+      | |-BinaryOperator 0x7ff24c06da70 <col:7, col:17> 'int' '=='
+      | | |-ImplicitCastExpr 0x7ff24c06da58 <col:7> 'int' <IntegralCast>
+      | | | `-ImplicitCastExpr 0x7ff24c06da40 <col:7> 'unsigned short' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7ff24c06d9f8 <col:7> 'unsigned short' lvalue Var 0x7ff24c02c978 'status' 'unsigned short'
+      | | `-IntegerLiteral 0x7ff24c06da20 <col:17> 'int' 2
+      | `-BinaryOperator 0x7ff24c06db10 <col:22, col:32> 'int' '=='
+      |   |-ImplicitCastExpr 0x7ff24c06daf8 <col:22> 'int' <IntegralCast>
+      |   | `-ImplicitCastExpr 0x7ff24c06dae0 <col:22> 'unsigned short' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7ff24c06da98 <col:22> 'unsigned short' lvalue Var 0x7ff24c02c978 'status' 'unsigned short'
+      |   `-IntegerLiteral 0x7ff24c06dac0 <col:32> 'int' 7
+      |-CompoundStmt 0x7ff24c06dda0 <line:8:5, line:12:5>
+      | `-WhileStmt 0x7ff24c06dd80 <line:9:7, line:11:2>
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7ff24c06dd48 <line:9:14, col:50> 'int' '&&'
+      |   | |-BinaryOperator 0x7ff24c06dbd8 <col:14, col:24> 'int' '!='
+      |   | | |-ImplicitCastExpr 0x7ff24c06dbc0 <col:14> 'int' <IntegralCast>
+      |   | | | `-ImplicitCastExpr 0x7ff24c06dba8 <col:14> 'unsigned short' <LValueToRValue>
+      |   | | |   `-DeclRefExpr 0x7ff24c06db60 <col:14> 'unsigned short' lvalue Var 0x7ff24c02c978 'status' 'unsigned short'
+      |   | | `-IntegerLiteral 0x7ff24c06db88 <col:24> 'int' 2
+      |   | `-ParenExpr 0x7ff24c06dd28 <col:29, col:50> 'int'
+      |   |   `-BinaryOperator 0x7ff24c06dd00 <col:30, col:46> 'int' '||'
+      |   |     |-BinaryOperator 0x7ff24c06dc78 <col:30, col:40> 'int' '!='
+      |   |     | |-ImplicitCastExpr 0x7ff24c06dc60 <col:30> 'int' <IntegralCast>
+      |   |     | | `-ImplicitCastExpr 0x7ff24c06dc48 <col:30> 'unsigned short' <LValueToRValue>
+      |   |     | |   `-DeclRefExpr 0x7ff24c06dc00 <col:30> 'unsigned short' lvalue Var 0x7ff24c02c978 'status' 'unsigned short'
+      |   |     | `-IntegerLiteral 0x7ff24c06dc28 <col:40> 'int' 7
+      |   |     `-UnaryOperator 0x7ff24c06dce0 <col:45, col:46> 'int' prefix '!'
+      |   |       `-ImplicitCastExpr 0x7ff24c06dcc8 <col:46> '_Bool' <LValueToRValue>
+      |   |         `-DeclRefExpr 0x7ff24c06dca0 <col:46> 'const _Bool' lvalue ParmVar 0x7ff24c06d850 'flag' 'const _Bool'
+      |   `-CompoundStmt 0x7ff24c06dd70 <line:10:2, line:11:2>
+      `-<<<NULL>>>

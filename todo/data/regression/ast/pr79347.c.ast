@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f98dc02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f98dc02c9a0 <../Data/C2AST/pr79347.c:5:1, col:8> col:8 used a 'short *'
+|-VarDecl 0x7f98dc06d858 <line:6:1, col:5> col:5 used c 'int'
+`-FunctionDecl 0x7f98dc06d980 <line:7:1, line:11:1> line:7:6 n 'void (void)'
+  `-CompoundStmt 0x7f98dc06dcc0 <line:8:1, line:11:1>
+    `-ForStmt 0x7f98dc06dc88 <line:9:3, line:10:9>
+      |-DeclStmt 0x7f98dc06dab8 <line:9:8, col:17>
+      | `-VarDecl 0x7f98dc06da38 <col:8, col:16> col:12 used i 'int' cinit
+      |   `-IntegerLiteral 0x7f98dc06da98 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f98dc06db50 <col:19, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7f98dc06db20 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f98dc06dad0 <col:19> 'int' lvalue Var 0x7f98dc06da38 'i' 'int'
+      | `-ImplicitCastExpr 0x7f98dc06db38 <col:21> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f98dc06daf8 <col:21> 'int' lvalue Var 0x7f98dc06d858 'c' 'int'
+      |-UnaryOperator 0x7f98dc06dba0 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f98dc06db78 <col:23> 'int' lvalue Var 0x7f98dc06da38 'i' 'int'
+      `-UnaryOperator 0x7f98dc06dc68 <line:10:5, col:9> 'short' postfix '++'
+        `-ArraySubscriptExpr 0x7f98dc06dc40 <col:5, col:8> 'short' lvalue
+          |-ImplicitCastExpr 0x7f98dc06dc10 <col:5> 'short *' <LValueToRValue>
+          | `-DeclRefExpr 0x7f98dc06dbc0 <col:5> 'short *' lvalue Var 0x7f98dc02c9a0 'a' 'short *'
+          `-ImplicitCastExpr 0x7f98dc06dc28 <col:7> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7f98dc06dbe8 <col:7> 'int' lvalue Var 0x7f98dc06da38 'i' 'int'

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7ffbf302bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffbf38444d8 <../Data/C2AST/pr18589-7.c:4:1, line:7:1> line:4:7 baz 'float (float, float)'
+  |-ParmVarDecl 0x7ffbf302c978 <col:12, col:18> col:18 used x 'float'
+  |-ParmVarDecl 0x7ffbf3844400 <col:21, col:27> col:27 used y 'float'
+  `-CompoundStmt 0x7ffbf38448f8 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7ffbf38448e0 <line:6:3, col:38>
+      `-BinaryOperator 0x7ffbf38448b8 <col:10, col:38> 'float' '*'
+        |-BinaryOperator 0x7ffbf3844850 <col:10, col:34> 'float' '*'
+        | |-BinaryOperator 0x7ffbf38447e8 <col:10, col:30> 'float' '*'
+        | | |-BinaryOperator 0x7ffbf3844780 <col:10, col:26> 'float' '*'
+        | | | |-BinaryOperator 0x7ffbf3844718 <col:10, col:22> 'float' '*'
+        | | | | |-BinaryOperator 0x7ffbf38446b0 <col:10, col:18> 'float' '*'
+        | | | | | |-BinaryOperator 0x7ffbf3844648 <col:10, col:14> 'float' '*'
+        | | | | | | |-ImplicitCastExpr 0x7ffbf3844618 <col:10> 'float' <LValueToRValue>
+        | | | | | | | `-DeclRefExpr 0x7ffbf38445c8 <col:10> 'float' lvalue ParmVar 0x7ffbf302c978 'x' 'float'
+        | | | | | | `-ImplicitCastExpr 0x7ffbf3844630 <col:14> 'float' <LValueToRValue>
+        | | | | | |   `-DeclRefExpr 0x7ffbf38445f0 <col:14> 'float' lvalue ParmVar 0x7ffbf302c978 'x' 'float'
+        | | | | | `-ImplicitCastExpr 0x7ffbf3844698 <col:18> 'float' <LValueToRValue>
+        | | | | |   `-DeclRefExpr 0x7ffbf3844670 <col:18> 'float' lvalue ParmVar 0x7ffbf302c978 'x' 'float'
+        | | | | `-ImplicitCastExpr 0x7ffbf3844700 <col:22> 'float' <LValueToRValue>
+        | | | |   `-DeclRefExpr 0x7ffbf38446d8 <col:22> 'float' lvalue ParmVar 0x7ffbf302c978 'x' 'float'
+        | | | `-ImplicitCastExpr 0x7ffbf3844768 <col:26> 'float' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7ffbf3844740 <col:26> 'float' lvalue ParmVar 0x7ffbf3844400 'y' 'float'
+        | | `-ImplicitCastExpr 0x7ffbf38447d0 <col:30> 'float' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7ffbf38447a8 <col:30> 'float' lvalue ParmVar 0x7ffbf3844400 'y' 'float'
+        | `-ImplicitCastExpr 0x7ffbf3844838 <col:34> 'float' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffbf3844810 <col:34> 'float' lvalue ParmVar 0x7ffbf3844400 'y' 'float'
+        `-ImplicitCastExpr 0x7ffbf38448a0 <col:38> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7ffbf3844878 <col:38> 'float' lvalue ParmVar 0x7ffbf3844400 'y' 'float'

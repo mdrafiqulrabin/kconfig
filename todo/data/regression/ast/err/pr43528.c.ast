@@ -1,0 +1,21 @@
+../Data/C2AST/pr43528.c:5:18: error: array is too large (1152921504606846975 elements)
+struct S { int i[(1LL << 60) - 1]; };
+                 ^~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fbcb3817ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbcb3818460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbcb3818180 '__int128'
+|-TypedefDecl 0x7fbcb38184d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbcb38181a0 'unsigned __int128'
+|-TypedefDecl 0x7fbcb38187a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbcb38185b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbcb3818528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbcb3818840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbcb3818800 'char *'
+|   `-BuiltinType 0x7fbcb3817f80 'char'
+|-TypedefDecl 0x7fbcb3818b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbcb3818ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbcb3818920 'struct __va_list_tag'
+|     `-Record 0x7fbcb3818898 '__va_list_tag'
+`-RecordDecl 0x7fbcb3818b60 <../Data/C2AST/pr43528.c:5:1, col:36> col:8 invalid struct S definition
+  `-FieldDecl 0x7fbcb5014920 <col:12, col:16> col:16 invalid i 'int'

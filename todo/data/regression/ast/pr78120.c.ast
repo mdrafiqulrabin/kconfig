@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7fc22a0128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc22a013578 <../Data/C2AST/pr78120.c:6:1, col:23> col:23 referenced u64 'unsigned long'
+| `-BuiltinType 0x7fc22a012aa0 'unsigned long'
+|-RecordDecl 0x7fc229829a00 <line:8:9, line:10:1> line:8:9 struct definition
+| |-FieldDecl 0x7fc229829ae0 <line:9:3, col:7> col:7 referenced hi 'u64':'unsigned long'
+| `-FieldDecl 0x7fc229829b38 <col:3, col:11> col:11 referenced lo 'u64':'unsigned long'
+|-TypedefDecl 0x7fc229829bd0 <line:8:1, line:10:3> col:3 referenced u128 'struct u128':'u128'
+| `-ElaboratedType 0x7fc229829b80 'struct u128' sugar
+|   `-RecordType 0x7fc229829a90 'u128'
+|     `-Record 0x7fc229829a00 ''
+|-FunctionDecl 0x7fc229829df0 <line:12:1, line:20:1> line:12:20 used add_u128 'u128 (u128, u128)' static inline
+| |-ParmVarDecl 0x7fc229829c70 <col:30, col:35> col:35 used a 'u128':'u128'
+| |-ParmVarDecl 0x7fc229829ce0 <col:38, col:43> col:43 used b 'u128':'u128'
+| `-CompoundStmt 0x7fc22982a378 <line:13:1, line:20:1>
+|   |-CompoundAssignOperator 0x7fc229829fb8 <line:14:3, col:13> 'u64':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+|   | |-MemberExpr 0x7fc229829f08 <col:3, col:5> 'u64':'unsigned long' lvalue .hi 0x7fc229829ae0
+|   | | `-DeclRefExpr 0x7fc229829ee0 <col:3> 'u128':'u128' lvalue ParmVar 0x7fc229829c70 'a' 'u128':'u128'
+|   | `-ImplicitCastExpr 0x7fc229829fa0 <col:11, col:13> 'u64':'unsigned long' <LValueToRValue>
+|   |   `-MemberExpr 0x7fc229829f68 <col:11, col:13> 'u64':'unsigned long' lvalue .hi 0x7fc229829ae0
+|   |     `-DeclRefExpr 0x7fc229829f40 <col:11> 'u128':'u128' lvalue ParmVar 0x7fc229829ce0 'b' 'u128':'u128'
+|   |-CompoundAssignOperator 0x7fc22982a118 <line:15:3, col:13> 'u64':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+|   | |-MemberExpr 0x7fc22982a068 <col:3, col:5> 'u64':'unsigned long' lvalue .lo 0x7fc229829b38
+|   | | `-DeclRefExpr 0x7fc22982a040 <col:3> 'u128':'u128' lvalue ParmVar 0x7fc229829c70 'a' 'u128':'u128'
+|   | `-ImplicitCastExpr 0x7fc22982a100 <col:11, col:13> 'u64':'unsigned long' <LValueToRValue>
+|   |   `-MemberExpr 0x7fc22982a0c8 <col:11, col:13> 'u64':'unsigned long' lvalue .lo 0x7fc229829b38
+|   |     `-DeclRefExpr 0x7fc22982a0a0 <col:11> 'u128':'u128' lvalue ParmVar 0x7fc229829ce0 'b' 'u128':'u128'
+|   |-IfStmt 0x7fc22982a2e8 <line:16:3, line:17:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc22982a240 <line:16:7, col:16> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc22982a210 <col:7, col:9> 'u64':'unsigned long' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fc22982a178 <col:7, col:9> 'u64':'unsigned long' lvalue .lo 0x7fc229829b38
+|   | | |   `-DeclRefExpr 0x7fc22982a150 <col:7> 'u128':'u128' lvalue ParmVar 0x7fc229829c70 'a' 'u128':'u128'
+|   | | `-ImplicitCastExpr 0x7fc22982a228 <col:14, col:16> 'u64':'unsigned long' <LValueToRValue>
+|   | |   `-MemberExpr 0x7fc22982a1d8 <col:14, col:16> 'u64':'unsigned long' lvalue .lo 0x7fc229829b38
+|   | |     `-DeclRefExpr 0x7fc22982a1b0 <col:14> 'u128':'u128' lvalue ParmVar 0x7fc229829ce0 'b' 'u128':'u128'
+|   | |-UnaryOperator 0x7fc22982a2c8 <line:17:5, col:9> 'u64':'unsigned long' postfix '++'
+|   | | `-MemberExpr 0x7fc22982a290 <col:5, col:7> 'u64':'unsigned long' lvalue .hi 0x7fc229829ae0
+|   | |   `-DeclRefExpr 0x7fc22982a268 <col:5> 'u128':'u128' lvalue ParmVar 0x7fc229829c70 'a' 'u128':'u128'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc22982a360 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7fc22982a348 <col:10> 'u128':'u128' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc22982a320 <col:10> 'u128':'u128' lvalue ParmVar 0x7fc229829c70 'a' 'u128':'u128'
+|-VarDecl 0x7fc22982a3b8 <line:22:1, col:13> col:13 used t1 'u128':'u128' extern
+|-VarDecl 0x7fc22982a428 <col:1, col:17> col:17 used t2 'u128':'u128' extern
+|-VarDecl 0x7fc22982a498 <col:1, col:21> col:21 used t3 'u128':'u128' extern
+`-FunctionDecl 0x7fc22982a5e0 <line:24:1, line:28:1> line:24:6 foo 'void (void)'
+  `-CompoundStmt 0x7fc22982a968 <line:25:1, line:28:1>
+    |-BinaryOperator 0x7fc22982a7f8 <line:26:3, col:24> 'u128':'u128' '='
+    | |-DeclRefExpr 0x7fc22982a680 <col:3> 'u128':'u128' lvalue Var 0x7fc22982a3b8 't1' 'u128':'u128'
+    | `-CallExpr 0x7fc22982a790 <col:8, col:24> 'u128':'u128'
+    |   |-ImplicitCastExpr 0x7fc22982a778 <col:8> 'u128 (*)(u128, u128)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fc22982a6a8 <col:8> 'u128 (u128, u128)' Function 0x7fc229829df0 'add_u128' 'u128 (u128, u128)'
+    |   |-ImplicitCastExpr 0x7fc22982a7c8 <col:18> 'u128':'u128' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fc22982a6d0 <col:18> 'u128':'u128' lvalue Var 0x7fc22982a3b8 't1' 'u128':'u128'
+    |   `-ImplicitCastExpr 0x7fc22982a7e0 <col:22> 'u128':'u128' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc22982a6f8 <col:22> 'u128':'u128' lvalue Var 0x7fc22982a428 't2' 'u128':'u128'
+    `-BinaryOperator 0x7fc22982a940 <line:27:3, col:24> 'u128':'u128' '='
+      |-DeclRefExpr 0x7fc22982a820 <col:3> 'u128':'u128' lvalue Var 0x7fc22982a3b8 't1' 'u128':'u128'
+      `-CallExpr 0x7fc22982a8d8 <col:8, col:24> 'u128':'u128'
+        |-ImplicitCastExpr 0x7fc22982a8c0 <col:8> 'u128 (*)(u128, u128)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc22982a848 <col:8> 'u128 (u128, u128)' Function 0x7fc229829df0 'add_u128' 'u128 (u128, u128)'
+        |-ImplicitCastExpr 0x7fc22982a910 <col:18> 'u128':'u128' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc22982a870 <col:18> 'u128':'u128' lvalue Var 0x7fc22982a3b8 't1' 'u128':'u128'
+        `-ImplicitCastExpr 0x7fc22982a928 <col:22> 'u128':'u128' <LValueToRValue>
+          `-DeclRefExpr 0x7fc22982a898 <col:22> 'u128':'u128' lvalue Var 0x7fc22982a498 't3' 'u128':'u128'

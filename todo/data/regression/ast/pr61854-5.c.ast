@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7ff54c8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff54c014828 <../Data/C2AST/pr61854-5.c:9:1, line:15:1> line:10:1 main 'int (void)'
+| `-CompoundStmt 0x7ff54c015078 <line:11:1, line:15:1>
+|   |-IfStmt 0x7ff54c015008 <line:12:3, line:13:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff54c014e38 <line:12:7, col:45> 'int' '!='
+|   | | |-CallExpr 0x7ff54c014d60 <col:7, col:40> 'int'
+|   | | | |-ImplicitCastExpr 0x7ff54c014d48 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7ff54c014bd8 <col:7> '<builtin fn type>' Function 0x7ff54c0149b8 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | | |-ImplicitCastExpr 0x7ff54c014db8 <<scratch space>:2:1> 'const void *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7ff54c014da0 <col:1> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7ff54c014c38 <col:1> 'char [1]' lvalue ""
+|   | | | |-ImplicitCastExpr 0x7ff54c014de8 <../Data/C2AST/pr61854-5.c:12:33> 'const void *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7ff54c014dd0 <col:33> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7ff54c014c98 <col:33> 'char [3]' lvalue "//"
+|   | | | `-ImplicitCastExpr 0x7ff54c014e00 <col:39> 'unsigned long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7ff54c014cc8 <col:39> 'int' 3
+|   | | `-IntegerLiteral 0x7ff54c014e18 <col:45> 'int' 0
+|   | |-CallExpr 0x7ff54c014fe0 <line:13:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ff54c014fc8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff54c014f78 <col:5> '<builtin fn type>' Function 0x7ff54c014e90 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff54c015060 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7ff54c015040 <col:10> 'int' 0
+|-FunctionDecl 0x7ff54c0149b8 <line:12:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7ff54c014a58 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ff54c014ab8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ff54c014b18 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7ff54c014b90 <col:7> Implicit
+`-FunctionDecl 0x7ff54c014e90 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff54c014f30 <col:5> Implicit

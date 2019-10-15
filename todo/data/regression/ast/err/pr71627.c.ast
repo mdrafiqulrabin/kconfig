@@ -1,0 +1,63 @@
+../Data/C2AST/pr71627.c:5:17: error: unknown type name '__memx'
+extern volatile __memx const long  a, b, c, d, e, f;
+                ^
+../Data/C2AST/pr71627.c:5:24: error: expected identifier or '('
+extern volatile __memx const long  a, b, c, d, e, f;
+                       ^
+../Data/C2AST/pr71627.c:12:11: error: use of undeclared identifier 'a'
+        result = a + b + c + d + e + f;
+                 ^
+../Data/C2AST/pr71627.c:12:15: error: use of undeclared identifier 'b'
+        result = a + b + c + d + e + f;
+                     ^
+../Data/C2AST/pr71627.c:12:19: error: use of undeclared identifier 'c'
+        result = a + b + c + d + e + f;
+                         ^
+../Data/C2AST/pr71627.c:12:23: error: use of undeclared identifier 'd'
+        result = a + b + c + d + e + f;
+                             ^
+../Data/C2AST/pr71627.c:12:27: error: use of undeclared identifier 'e'
+        result = a + b + c + d + e + f;
+                                 ^
+../Data/C2AST/pr71627.c:12:31: error: use of undeclared identifier 'f'
+        result = a + b + c + d + e + f;
+                                     ^
+../Data/C2AST/pr71627.c:13:17: error: use of undeclared identifier 'a'
+        vfunc ("text", a, b, c, d, e, f, result);
+                       ^
+../Data/C2AST/pr71627.c:13:20: error: use of undeclared identifier 'b'
+        vfunc ("text", a, b, c, d, e, f, result);
+                          ^
+../Data/C2AST/pr71627.c:13:23: error: use of undeclared identifier 'c'
+        vfunc ("text", a, b, c, d, e, f, result);
+                             ^
+../Data/C2AST/pr71627.c:13:26: error: use of undeclared identifier 'd'
+        vfunc ("text", a, b, c, d, e, f, result);
+                                ^
+../Data/C2AST/pr71627.c:13:29: error: use of undeclared identifier 'e'
+        vfunc ("text", a, b, c, d, e, f, result);
+                                   ^
+../Data/C2AST/pr71627.c:13:32: error: use of undeclared identifier 'f'
+        vfunc ("text", a, b, c, d, e, f, result);
+                                      ^
+14 errors generated.
+TranslationUnitDecl 0x7fc00082bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc00082c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc00082bf80 '__int128'
+|-TypedefDecl 0x7fc00082c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc00082bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc00082c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc00082c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc00082c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc00082c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc00082c600 'char *'
+|   `-BuiltinType 0x7fc00082bd80 'char'
+|-TypedefDecl 0x7fc00082c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc00082c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc00082c720 'struct __va_list_tag'
+|     `-Record 0x7fc00082c698 '__va_list_tag'
+|-VarDecl 0x7fc00082c990 <../Data/C2AST/pr71627.c:6:1, col:22> col:22 used result 'volatile long' extern
+|-FunctionDecl 0x7fc001015320 <line:8:1, col:36> col:13 used vfunc 'void (const char *, ...)' extern
+| `-ParmVarDecl 0x7fc001015258 <col:20, col:30> col:31 'const char *'
+`-FunctionDecl 0x7fc001015490 <line:10:1, line:14:1> line:10:6 foo 'void (void)'
+  `-CompoundStmt 0x7fc001015778 <line:11:1, line:14:1>

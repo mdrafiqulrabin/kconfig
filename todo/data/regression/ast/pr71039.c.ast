@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fb26102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb26102c960 <../Data/C2AST/pr71039.c:3:1, line:6:1> line:3:8 struct wv definition
+| `-FieldDecl 0x7fb261814238 <line:5:3, col:7> col:7 qi 'int'
+|-VarDecl 0x7fb2618142d0 <line:3:1, line:6:3> col:3 used qp 'struct wv':'struct wv'
+|-VarDecl 0x7fb2618143f0 <line:3:1, line:6:8> col:8 used ft 'struct wv *'
+|-VarDecl 0x7fb261814488 <line:7:1, col:7> col:7 used pb 'void *'
+`-FunctionDecl 0x7fb2618145b0 <line:9:1, line:14:1> line:10:1 wz 'void (void)'
+  `-CompoundStmt 0x7fb261814a38 <line:11:1, line:14:1>
+    |-DeclStmt 0x7fb261814920 <line:12:3, col:46>
+    | `-VarDecl 0x7fb261814678 <col:3, col:44> col:14 used vf 'struct wv *' cinit
+    |   `-ConditionalOperator 0x7fb2618148f0 <col:19, col:44> 'struct wv *'
+    |     |-ImplicitCastExpr 0x7fb261814810 <col:19> 'void *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb2618146d8 <col:19> 'void *' lvalue Var 0x7fb261814488 'pb' 'void *'
+    |     |-CStyleCastExpr 0x7fb2618147a0 <col:24, col:38> 'struct wv *' <BitCast>
+    |     | `-UnaryOperator 0x7fb261814758 <col:37, col:38> 'void **' prefix '&'
+    |     |   `-DeclRefExpr 0x7fb261814700 <col:38> 'void *' lvalue Var 0x7fb261814488 'pb' 'void *'
+    |     `-UnaryOperator 0x7fb2618147f0 <col:43, col:44> 'struct wv *' prefix '&'
+    |       `-DeclRefExpr 0x7fb2618147c8 <col:44> 'struct wv':'struct wv' lvalue Var 0x7fb2618142d0 'qp' 'struct wv':'struct wv'
+    `-BinaryOperator 0x7fb261814a10 <line:13:3, col:10> 'struct wv':'struct wv' '='
+      |-UnaryOperator 0x7fb261814978 <col:3, col:4> 'struct wv':'struct wv' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb261814960 <col:4> 'struct wv *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb261814938 <col:4> 'struct wv *' lvalue Var 0x7fb2618143f0 'ft' 'struct wv *'
+      `-ImplicitCastExpr 0x7fb2618149f8 <col:9, col:10> 'struct wv':'struct wv' <LValueToRValue>
+        `-UnaryOperator 0x7fb2618149d8 <col:9, col:10> 'struct wv':'struct wv' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fb2618149c0 <col:10> 'struct wv *' <LValueToRValue>
+            `-DeclRefExpr 0x7fb261814998 <col:10> 'struct wv *' lvalue Var 0x7fb261814678 'vf' 'struct wv *'

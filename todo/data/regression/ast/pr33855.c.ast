@@ -1,0 +1,114 @@
+TranslationUnitDecl 0x7f9739816ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9739817960 <../Data/C2AST/pr33855.c:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7f973881bc38 <line:5:3, col:7> col:7 referenced nsant 'int'
+| |-FieldDecl 0x7f973881bc98 <col:3, col:14> col:14 referenced nvqd 'int'
+| `-FieldDecl 0x7f973881bd18 <line:6:3, col:25> col:25 referenced vqd '_Complex long double *'
+|-TypedefDecl 0x7f973881bdb0 <line:4:1, line:7:3> col:3 referenced vsorc_t 'struct vsorc_t':'vsorc_t'
+| `-ElaboratedType 0x7f973881bd60 'struct vsorc_t' sugar
+|   `-RecordType 0x7f973881bc00 'vsorc_t'
+|     `-Record 0x7f9739817960 ''
+|-VarDecl 0x7f973881be50 <line:8:1, col:9> col:9 used vsorc 'vsorc_t':'vsorc_t'
+|-FunctionDecl 0x7f973881c160 <line:10:1, line:26:1> line:10:6 foo 'void (int, int, int, long)'
+| |-ParmVarDecl 0x7f973881bf08 <col:10, col:14> col:14 used next_job 'int'
+| |-ParmVarDecl 0x7f973881bf80 <col:24, col:28> col:28 used ain_num 'int'
+| |-ParmVarDecl 0x7f973881bff8 <col:37, col:41> col:41 used iped 'int'
+| |-ParmVarDecl 0x7f973881c070 <col:47, col:52> col:52 used t 'long'
+| `-CompoundStmt 0x7f973881d048 <col:55, line:26:1>
+|   |-DeclStmt 0x7f973881c298 <line:11:3, col:21>
+|   | `-VarDecl 0x7f973881c238 <col:3, col:15> col:15 used zpnorm 'long double'
+|   `-WhileStmt 0x7f973881d028 <line:13:3, line:25:5>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f973881c2f0 <line:13:10, col:11> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7f973881c2d8 <col:11> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f973881c2b0 <col:11> 'int' lvalue ParmVar 0x7f973881bf08 'next_job' 'int'
+|     `-IfStmt 0x7f973881cff0 <line:14:5, line:25:5>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-ImplicitCastExpr 0x7f973881c338 <line:14:9> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f973881c310 <col:9> 'int' lvalue ParmVar 0x7f973881bf80 'ain_num' 'int'
+|       |-CompoundStmt 0x7f973881cfb0 <line:15:5, line:25:5>
+|       | |-IfStmt 0x7f973881c460 <line:16:7, line:17:18>
+|       | | |-<<<NULL>>>
+|       | | |-<<<NULL>>>
+|       | | |-BinaryOperator 0x7f973881c3b0 <line:16:11, col:19> 'int' '=='
+|       | | | |-ImplicitCastExpr 0x7f973881c398 <col:11> 'int' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7f973881c350 <col:11> 'int' lvalue ParmVar 0x7f973881bff8 'iped' 'int'
+|       | | | `-IntegerLiteral 0x7f973881c378 <col:19> 'int' 1
+|       | | |-BinaryOperator 0x7f973881c438 <line:17:9, col:18> 'long double' '='
+|       | | | |-DeclRefExpr 0x7f973881c3d8 <col:9> 'long double' lvalue Var 0x7f973881c238 'zpnorm' 'long double'
+|       | | | `-ImplicitCastExpr 0x7f973881c420 <col:18> 'long double' <FloatingCast>
+|       | | |   `-FloatingLiteral 0x7f973881c400 <col:18> 'double' 0.000000e+00
+|       | | `-<<<NULL>>>
+|       | |-DeclStmt 0x7f973881c628 <line:18:7, col:30>
+|       | | `-VarDecl 0x7f973881c4b0 <col:7, col:29> col:11 used indx 'int' cinit
+|       | |   `-BinaryOperator 0x7f973881c5a8 <col:18, col:29> 'int' '-'
+|       | |     |-ImplicitCastExpr 0x7f973881c590 <col:18, col:24> 'int' <LValueToRValue>
+|       | |     | `-MemberExpr 0x7f973881c538 <col:18, col:24> 'int' lvalue .nvqd 0x7f973881bc98
+|       | |     |   `-DeclRefExpr 0x7f973881c510 <col:18> 'vsorc_t':'vsorc_t' lvalue Var 0x7f973881be50 'vsorc' 'vsorc_t':'vsorc_t'
+|       | |     `-IntegerLiteral 0x7f973881c570 <col:29> 'int' 1
+|       | |-BinaryOperator 0x7f973881c808 <line:19:7, col:27> '_Complex long double' '='
+|       | | |-ArraySubscriptExpr 0x7f973881c6f8 <col:7, col:21> '_Complex long double' lvalue
+|       | | | |-ImplicitCastExpr 0x7f973881c6c8 <col:7, col:13> '_Complex long double *' <LValueToRValue>
+|       | | | | `-MemberExpr 0x7f973881c668 <col:7, col:13> '_Complex long double *' lvalue .vqd 0x7f973881bd18
+|       | | | |   `-DeclRefExpr 0x7f973881c640 <col:7> 'vsorc_t':'vsorc_t' lvalue Var 0x7f973881be50 'vsorc' 'vsorc_t':'vsorc_t'
+|       | | | `-ImplicitCastExpr 0x7f973881c6e0 <col:17> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7f973881c6a0 <col:17> 'int' lvalue Var 0x7f973881c4b0 'indx' 'int'
+|       | | `-ImplicitCastExpr 0x7f973881c7f0 <col:25, col:27> '_Complex long double' <FloatingComplexCast>
+|       | |   `-BinaryOperator 0x7f973881c7c8 <col:25, col:27> '_Complex float' '*'
+|       | |     |-ImplicitCastExpr 0x7f973881c7b0 <col:25> '_Complex float' <FloatingRealToComplex>
+|       | |     | `-ImplicitCastExpr 0x7f973881c798 <col:25> 'float' <IntegralToFloating>
+|       | |     |   `-ImplicitCastExpr 0x7f973881c780 <col:25> 'long' <LValueToRValue>
+|       | |     |     `-DeclRefExpr 0x7f973881c720 <col:25> 'long' lvalue ParmVar 0x7f973881c070 't' 'long'
+|       | |     `-ImaginaryLiteral 0x7f973881c768 <col:27> '_Complex float'
+|       | |       `-FloatingLiteral 0x7f973881c748 <col:27> 'float' 1.000000e+00
+|       | |-IfStmt 0x7f973881cd30 <line:20:7, line:21:27>
+|       | | |-<<<NULL>>>
+|       | | |-<<<NULL>>>
+|       | | |-BinaryOperator 0x7f973881cb90 <line:20:11, col:36> 'int' '<'
+|       | | | |-CallExpr 0x7f973881cb10 <col:11, col:32> 'long double'
+|       | | | | |-ImplicitCastExpr 0x7f973881caf8 <col:11> 'long double (*)(_Complex long double)' <FunctionToPointerDecay>
+|       | | | | | `-DeclRefExpr 0x7f973881c9c8 <col:11> 'long double (_Complex long double)' Function 0x7f973881c868 'cabsl' 'long double (_Complex long double)'
+|       | | | | `-ImplicitCastExpr 0x7f973881cb40 <col:17, col:31> '_Complex long double' <LValueToRValue>
+|       | | | |   `-ArraySubscriptExpr 0x7f973881caa8 <col:17, col:31> '_Complex long double' lvalue
+|       | | | |     |-ImplicitCastExpr 0x7f973881ca78 <col:17, col:23> '_Complex long double *' <LValueToRValue>
+|       | | | |     | `-MemberExpr 0x7f973881ca18 <col:17, col:23> '_Complex long double *' lvalue .vqd 0x7f973881bd18
+|       | | | |     |   `-DeclRefExpr 0x7f973881c9f0 <col:17> 'vsorc_t':'vsorc_t' lvalue Var 0x7f973881be50 'vsorc' 'vsorc_t':'vsorc_t'
+|       | | | |     `-ImplicitCastExpr 0x7f973881ca90 <col:27> 'int' <LValueToRValue>
+|       | | | |       `-DeclRefExpr 0x7f973881ca50 <col:27> 'int' lvalue Var 0x7f973881c4b0 'indx' 'int'
+|       | | | `-ImplicitCastExpr 0x7f973881cb78 <col:36> 'long double' <FloatingCast>
+|       | | |   `-FloatingLiteral 0x7f973881cb58 <col:36> 'double' 1.000000e-20
+|       | | |-BinaryOperator 0x7f973881cd08 <line:21:9, col:27> '_Complex long double' '='
+|       | | | |-ArraySubscriptExpr 0x7f973881cc90 <col:9, col:23> '_Complex long double' lvalue
+|       | | | | |-ImplicitCastExpr 0x7f973881cc60 <col:9, col:15> '_Complex long double *' <LValueToRValue>
+|       | | | | | `-MemberExpr 0x7f973881cc00 <col:9, col:15> '_Complex long double *' lvalue .vqd 0x7f973881bd18
+|       | | | | |   `-DeclRefExpr 0x7f973881cbb8 <col:9> 'vsorc_t':'vsorc_t' lvalue Var 0x7f973881be50 'vsorc' 'vsorc_t':'vsorc_t'
+|       | | | | `-ImplicitCastExpr 0x7f973881cc78 <col:19> 'int' <LValueToRValue>
+|       | | | |   `-DeclRefExpr 0x7f973881cc38 <col:19> 'int' lvalue Var 0x7f973881c4b0 'indx' 'int'
+|       | | | `-ImplicitCastExpr 0x7f973881ccf0 <col:27> '_Complex long double' <FloatingComplexCast>
+|       | | |   `-ImaginaryLiteral 0x7f973881ccd8 <col:27> '_Complex float'
+|       | | |     `-FloatingLiteral 0x7f973881ccb8 <col:27> 'float' 0.000000e+00
+|       | | `-<<<NULL>>>
+|       | |-BinaryOperator 0x7f973881cde8 <line:22:7, col:16> 'long double' '='
+|       | | |-DeclRefExpr 0x7f973881cd68 <col:7> 'long double' lvalue Var 0x7f973881c238 'zpnorm' 'long double'
+|       | | `-ImplicitCastExpr 0x7f973881cdd0 <col:16> 'long double' <IntegralToFloating>
+|       | |   `-ImplicitCastExpr 0x7f973881cdb8 <col:16> 'long' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7f973881cd90 <col:16> 'long' lvalue ParmVar 0x7f973881c070 't' 'long'
+|       | `-IfStmt 0x7f973881cf78 <line:23:7, line:24:22>
+|       |   |-<<<NULL>>>
+|       |   |-<<<NULL>>>
+|       |   |-BinaryOperator 0x7f973881ce88 <line:23:11, col:20> 'int' '>'
+|       |   | |-ImplicitCastExpr 0x7f973881ce58 <col:11> 'long double' <LValueToRValue>
+|       |   | | `-DeclRefExpr 0x7f973881ce10 <col:11> 'long double' lvalue Var 0x7f973881c238 'zpnorm' 'long double'
+|       |   | `-ImplicitCastExpr 0x7f973881ce70 <col:20> 'long double' <FloatingCast>
+|       |   |   `-FloatingLiteral 0x7f973881ce38 <col:20> 'double' 0.000000e+00
+|       |   |-BinaryOperator 0x7f973881cf50 <line:24:9, col:22> 'int' '='
+|       |   | |-DeclRefExpr 0x7f973881ceb0 <col:9> 'int' lvalue ParmVar 0x7f973881bff8 'iped' 'int'
+|       |   | `-ImplicitCastExpr 0x7f973881cf38 <col:16, col:22> 'int' <LValueToRValue>
+|       |   |   `-MemberExpr 0x7f973881cf00 <col:16, col:22> 'int' lvalue .nsant 0x7f973881bc38
+|       |   |     `-DeclRefExpr 0x7f973881ced8 <col:16> 'vsorc_t':'vsorc_t' lvalue Var 0x7f973881be50 'vsorc' 'vsorc_t':'vsorc_t'
+|       |   `-<<<NULL>>>
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7f973881c868 <line:20:11> col:11 implicit used cabsl 'long double (_Complex long double)' extern
+  |-ParmVarDecl 0x7f973881c908 <<invalid sloc>> <invalid sloc> '_Complex long double'
+  |-ConstAttr 0x7f973881c970 <col:11> Implicit
+  `-NoThrowAttr 0x7f973881c9b8 <col:11> Implicit

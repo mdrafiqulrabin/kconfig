@@ -1,0 +1,41 @@
+../Data/C2AST/pr69796.c:9:4: error: expected ';' after expression
+  s a;   
+   ^
+   ;
+../Data/C2AST/pr69796.c:9:3: error: incomplete type 'struct S' where a complete type is required
+  s a;   
+  ^
+../Data/C2AST/pr69796.c:4:8: note: forward declaration of 'struct S'
+struct S s;      
+       ^
+../Data/C2AST/pr69796.c:9:5: error: use of undeclared identifier 'a'
+  s a;   
+    ^
+../Data/C2AST/pr69796.c:4:10: error: tentative definition has type 'struct S' that is never completed
+struct S s;      
+         ^
+../Data/C2AST/pr69796.c:4:8: note: forward declaration of 'struct S'
+struct S s;      
+       ^
+4 errors generated.
+TranslationUnitDecl 0x7fa19e0282e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa19e028860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa19e028580 '__int128'
+|-TypedefDecl 0x7fa19e0288d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa19e0285a0 'unsigned __int128'
+|-TypedefDecl 0x7fa19e028ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa19e0289b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa19e028928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa19e028c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa19e028c00 'char *'
+|   `-BuiltinType 0x7fa19e028380 'char'
+|-TypedefDecl 0x7fa19e028f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa19e028eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa19e028d20 'struct __va_list_tag'
+|     `-Record 0x7fa19e028c98 '__va_list_tag'
+|-RecordDecl 0x7fa19e028f60 <../Data/C2AST/pr69796.c:4:1, col:8> col:8 struct S
+|-VarDecl 0x7fa19e069e70 <col:1, col:10> col:10 used invalid s 'struct S':'struct S'
+`-FunctionDecl 0x7fa19e069f78 <line:6:1, line:10:1> line:7:1 foo 'void ()'
+  `-CompoundStmt 0x7fa19e06a428 <line:8:1, line:10:1>
+    `-ImplicitCastExpr 0x7fa19e06a040 <line:9:3> 'struct S':'struct S' <LValueToRValue>
+      `-DeclRefExpr 0x7fa19e06a018 <col:3> 'struct S':'struct S' lvalue Var 0x7fa19e069e70 's' 'struct S':'struct S'

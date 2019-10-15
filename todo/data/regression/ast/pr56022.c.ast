@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7ff678023ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff67681ca00 <../Data/C2AST/pr56022.c:4:1, col:15> col:15 referenced __m256 '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-VectorType 0x7ff678024780 '__attribute__((__vector_size__(8 * sizeof(float)))) float' 8
+| | `-BuiltinType 0x7ff678023ce0 'float'
+| `-MayAliasAttr 0x7ff67681ca58 <col:60>
+|-FunctionDecl 0x7ff67681cb60 <line:5:1, line:6:2> line:5:46 currentImplementationSupported 'int ()' static
+| |-CompoundStmt 0x7ff67681cc98 <line:6:1, col:2>
+| `-TargetAttr 0x7ff67681cc00 <line:5:16, col:31> "no-avx"
+`-FunctionDecl 0x7ff67681cde0 <line:7:1, col:24> col:8 foo0 '__m256 (__m256)'
+  |-ParmVarDecl 0x7ff67681cce0 <col:13, col:20> col:20 a '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+  `-CompoundStmt 0x7ff67681ce88 <col:23, col:24>

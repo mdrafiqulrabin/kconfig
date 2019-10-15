@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f8a5f8028e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8a5f856860 <../Data/C2AST/pr48374.c:4:1, line:16:1> line:4:6 foo 'void (int)'
+| |-ParmVarDecl 0x7f8a5f803578 <col:11, col:15> col:15 used y 'int'
+| `-CompoundStmt 0x7f8a5f856d08 <line:5:1, line:16:1>
+|   `-SwitchStmt 0x7f8a5f856988 <line:6:3, line:15:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f8a5f856970 <line:6:11> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f8a5f856948 <col:11> 'int' lvalue ParmVar 0x7f8a5f803578 'y' 'int'
+|     `-CompoundStmt 0x7f8a5f856ce8 <line:7:5, line:15:5>
+|       |-CaseStmt 0x7f8a5f8569d8 <line:8:5, line:12:7>
+|       | |-IntegerLiteral 0x7f8a5f8569b8 <line:8:10> 'int' 3
+|       | |-<<<NULL>>>
+|       | `-CaseStmt 0x7f8a5f856a30 <line:9:5, line:12:7>
+|       |   |-IntegerLiteral 0x7f8a5f856a10 <line:9:10> 'int' 5
+|       |   |-<<<NULL>>>
+|       |   `-CaseStmt 0x7f8a5f856a88 <line:10:5, line:12:7>
+|       |     |-IntegerLiteral 0x7f8a5f856a68 <line:10:10> 'int' 7
+|       |     |-<<<NULL>>>
+|       |     `-CaseStmt 0x7f8a5f856ae0 <line:11:5, line:12:7>
+|       |       |-IntegerLiteral 0x7f8a5f856ac0 <line:11:10> 'int' 11
+|       |       |-<<<NULL>>>
+|       |       `-BreakStmt 0x7f8a5f856b18 <line:12:7>
+|       `-DefaultStmt 0x7f8a5f856cc8 <line:13:5, line:14:30>
+|         `-CallExpr 0x7f8a5f856ca0 <col:7, col:30> 'void'
+|           `-ImplicitCastExpr 0x7f8a5f856c88 <col:7> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|             `-DeclRefExpr 0x7f8a5f856c38 <col:7> '<builtin fn type>' Function 0x7f8a5f856b50 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7f8a5f856b50 <col:7> col:7 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f8a5f856bf0 <col:7> Implicit

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fcb2d8246e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcb2d825378 <../Data/C2AST/pr70155-4.c:4:1, col:17> col:17 used a '__int128' extern
+|-RecordDecl 0x7fcb2d866240 <line:6:1, line:9:1> line:6:8 struct foo definition
+| |-PackedAttr 0x7fcb2d866350 <line:9:18>
+| `-FieldDecl 0x7fcb2d866308 <line:8:3, col:12> col:12 referenced i '__int128'
+|-VarDecl 0x7fcb2d8663f0 <line:11:1, col:19> col:19 used x 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7fcb2d866510 <line:13:1, line:17:1> line:14:1 foo 'void (void)'
+  `-CompoundStmt 0x7fcb2d8666c0 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7fcb2d866650 <line:16:3, col:9> '__int128' '='
+      |-MemberExpr 0x7fcb2d8665d8 <col:3, col:5> '__int128' lvalue .i 0x7fcb2d866308
+      | `-DeclRefExpr 0x7fcb2d8665b0 <col:3> 'struct foo':'struct foo' lvalue Var 0x7fcb2d8663f0 'x' 'struct foo':'struct foo'
+      `-ImplicitCastExpr 0x7fcb2d866638 <col:9> '__int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fcb2d866610 <col:9> '__int128' lvalue Var 0x7fcb2d825378 'a' '__int128'

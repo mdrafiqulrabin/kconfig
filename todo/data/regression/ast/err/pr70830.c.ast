@@ -1,0 +1,28 @@
+../Data/C2AST/pr70830.c:10:1: error: x86-64 'interrupt' attribute only applies to functions that have only a pointer parameter optionally followed by an integer parameter
+void __attribute__ ((interrupt ("IRQ"))) dm3730_IRQHandler(void)
+^
+1 error generated.
+TranslationUnitDecl 0x7fbed402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbed402c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbed402bf80 '__int128'
+|-TypedefDecl 0x7fbed402c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbed402bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fbed402c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbed402c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbed402c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbed402c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbed402c600 'char *'
+|   `-BuiltinType 0x7fbed402bd80 'char'
+|-TypedefDecl 0x7fbed402c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbed402c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbed402c720 'struct __va_list_tag'
+|     `-Record 0x7fbed402c698 '__va_list_tag'
+|-FunctionDecl 0x7fbed5004060 <../Data/C2AST/pr70830.c:8:1, col:27> col:13 used prints 'void (char *)' extern
+| `-ParmVarDecl 0x7fbed402c978 <col:21, col:26> col:27 'char *'
+`-FunctionDecl 0x7fbed5004280 <line:10:1, line:13:1> line:10:42 dm3730_IRQHandler 'void (void)'
+  `-CompoundStmt 0x7fbed5004408 <line:11:1, line:13:1>
+    `-CallExpr 0x7fbed50043c0 <line:12:5, col:18> 'void'
+      |-ImplicitCastExpr 0x7fbed50043a8 <col:5> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbed5004320 <col:5> 'void (char *)' Function 0x7fbed5004060 'prints' 'void (char *)'
+      `-ImplicitCastExpr 0x7fbed50043f0 <col:12> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7fbed5004348 <col:12> 'char [4]' lvalue "IRQ"

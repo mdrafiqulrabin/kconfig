@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd1c882bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd1c886d820 <../Data/C2AST/pr67279.c:7:1, line:14:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd1c886dd88 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fd1c886d9e0 <line:10:3, col:26>
+    | `-VarDecl 0x7fd1c886d918 <col:3, col:24> col:14 a1 'int' static cinit
+    |   `-BinaryOperator 0x7fd1c886d9b8 <col:19, col:24> 'int' '<<'
+    |     |-IntegerLiteral 0x7fd1c886d978 <col:19> 'int' 1
+    |     `-IntegerLiteral 0x7fd1c886d998 <col:24> 'int' 31
+    |-DeclStmt 0x7fd1c886dad8 <line:11:3, col:27>
+    | `-VarDecl 0x7fd1c886da10 <col:3, col:25> col:14 a2 'int' static cinit
+    |   `-BinaryOperator 0x7fd1c886dab0 <col:19, col:25> 'int' '<<'
+    |     |-IntegerLiteral 0x7fd1c886da70 <col:19> 'int' 10
+    |     `-IntegerLiteral 0x7fd1c886da90 <col:25> 'int' 30
+    |-DeclStmt 0x7fd1c886dbd0 <line:12:3, col:28>
+    | `-VarDecl 0x7fd1c886db08 <col:3, col:26> col:14 a3 'int' static cinit
+    |   `-BinaryOperator 0x7fd1c886dba8 <col:19, col:26> 'int' '<<'
+    |     |-IntegerLiteral 0x7fd1c886db68 <col:19> 'int' 100
+    |     `-IntegerLiteral 0x7fd1c886db88 <col:26> 'int' 28
+    `-DeclStmt 0x7fd1c886dd70 <line:13:3, col:31>
+      `-VarDecl 0x7fd1c886dc00 <col:3, col:30> col:14 a4 'int' static cinit
+        `-BinaryOperator 0x7fd1c886dd48 <line:5:17, line:13:30> 'int' '/'
+          |-ParenExpr 0x7fd1c886dce8 <line:5:17, col:34> 'int'
+          | `-BinaryOperator 0x7fd1c886dcc0 <col:18, col:33> 'int' '-'
+          |   |-UnaryOperator 0x7fd1c886dc80 <col:18, <built-in>:38:21> 'int' prefix '-'
+          |   | `-IntegerLiteral 0x7fd1c886dc60 <col:21> 'int' 2147483647
+          |   `-IntegerLiteral 0x7fd1c886dca0 <../Data/C2AST/pr67279.c:5:33> 'int' 1
+          `-UnaryOperator 0x7fd1c886dd28 <line:13:29, col:30> 'int' prefix '-'
+            `-IntegerLiteral 0x7fd1c886dd08 <col:30> 'int' 1

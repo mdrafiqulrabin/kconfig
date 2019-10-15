@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7f98d902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f98d9814318 <../Data/C2AST/pr80776-2.c:4:12> col:12 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f98d98143b8 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f98d9814418 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f98d9814488 <col:12> Implicit printf 2 3
+|-FunctionDecl 0x7f98d98144e0 prev 0x7f98d9814318 <col:1, line:5:34> line:4:12 used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f98d902c978 <col:21, col:26> col:35 'char *restrict'
+| |-ParmVarDecl 0x7f98d9814200 <col:37, col:48> col:57 'const char *restrict'
+| |-NoThrowAttr 0x7f98d9814590 <line:5:22>
+| `-FormatAttr 0x7f98d98145d8 <line:4:12> Inherited printf 2 3
+|-FunctionDecl 0x7f98d98146c8 <line:6:6, col:26> col:17 used foo 'int (void)' extern
+|-FunctionDecl 0x7f98d9814840 <line:8:1, line:18:1> line:9:1 Fgenerate_new_buffer_name 'int (void)'
+| `-CompoundStmt 0x7f98d9815068 <line:10:1, line:18:1>
+|   |-DeclStmt 0x7f98d98149b8 <line:11:3, col:17>
+|   | `-VarDecl 0x7f98d9814958 <col:3, col:16> col:8 used number 'char [2]'
+|   |-DeclStmt 0x7f98d9814ad8 <line:12:3, col:17>
+|   | `-VarDecl 0x7f98d98149e8 <col:3, col:16> col:7 used i 'int' cinit
+|   |   `-CallExpr 0x7f98d9814ab0 <col:11, col:16> 'int'
+|   |     `-ImplicitCastExpr 0x7f98d9814a98 <col:11> 'int (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7f98d9814a48 <col:11> 'int (void)' Function 0x7f98d98146c8 'foo' 'int (void)'
+|   |-IfStmt 0x7f98d9814d28 <line:13:3, line:14:28>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f98d9814b50 <line:13:7, col:11> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f98d9814b38 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f98d9814af0 <col:7> 'int' lvalue Var 0x7f98d98149e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7f98d9814b18 <col:11> 'int' 0
+|   | |-CallExpr 0x7f98d9814d00 <line:14:5, col:28> 'void'
+|   | | `-ImplicitCastExpr 0x7f98d9814ce8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f98d9814c98 <col:5> '<builtin fn type>' Function 0x7f98d9814bb0 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f98d9814e50 <line:15:3, line:16:28>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f98d9814dc0 <line:15:7, col:12> 'int' '>='
+|   | | |-ImplicitCastExpr 0x7f98d9814da8 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f98d9814d60 <col:7> 'int' lvalue Var 0x7f98d98149e8 'i' 'int'
+|   | | `-IntegerLiteral 0x7f98d9814d88 <col:12> 'int' 2
+|   | |-CallExpr 0x7f98d9814e28 <line:16:5, col:28> 'void'
+|   | | `-ImplicitCastExpr 0x7f98d9814e10 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f98d9814de8 <col:5> '<builtin fn type>' Function 0x7f98d9814bb0 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f98d9815050 <line:17:3, col:34>
+|     `-CallExpr 0x7f98d9814fb0 <col:10, col:34> 'int'
+|       |-ImplicitCastExpr 0x7f98d9814f98 <col:10> 'int (*)(char *, const char *, ...)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f98d9814e88 <col:10> 'int (char *, const char *, ...)' Function 0x7f98d98144e0 'sprintf' 'int (char *, const char *, ...)'
+|       |-ImplicitCastExpr 0x7f98d9814ff0 <col:19> 'char *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7f98d9814eb0 <col:19> 'char [2]' lvalue Var 0x7f98d9814958 'number' 'char [2]'
+|       |-ImplicitCastExpr 0x7f98d9815020 <col:27> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7f98d9815008 <col:27> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7f98d9814f18 <col:27> 'char [3]' lvalue "%d"
+|       `-ImplicitCastExpr 0x7f98d9815038 <col:33> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f98d9814f48 <col:33> 'int' lvalue Var 0x7f98d98149e8 'i' 'int'
+`-FunctionDecl 0x7f98d9814bb0 <line:14:5> col:5 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f98d9814c50 <col:5> Implicit

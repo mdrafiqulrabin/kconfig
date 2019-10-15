@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7ff3ae82b0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff3af814260 <../Data/C2AST/pr67222.c:4:1, line:19:1> line:5:1 foo 'void (void **)'
+  |-ParmVarDecl 0x7ff3ae82bda0 <col:6, col:13> col:13 used p 'void **'
+  `-CompoundStmt 0x7ff3af814f18 <line:6:1, line:19:1>
+    |-CallExpr 0x7ff3af8144c0 <line:7:3, col:19> 'int'
+    | `-ImplicitCastExpr 0x7ff3af8144a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff3af814450 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    |-CallExpr 0x7ff3af814550 <line:8:3, col:20> 'int'
+    | |-ImplicitCastExpr 0x7ff3af814538 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af8144e8 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | `-ImplicitCastExpr 0x7ff3af814580 <col:19> 'void **' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff3af814510 <col:19> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    |-CallExpr 0x7ff3af8145f8 <line:9:3, col:20> 'int'
+    | |-ImplicitCastExpr 0x7ff3af8145e0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814598 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | `-IntegerLiteral 0x7ff3af8145c0 <col:19> 'int' 0
+    |-CallExpr 0x7ff3af8146b0 <line:10:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7ff3af814698 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814628 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-ImplicitCastExpr 0x7ff3af8146e8 <col:19> 'void **' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff3af814650 <col:19> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    | `-IntegerLiteral 0x7ff3af814678 <col:22> 'int' 1
+    |-CallExpr 0x7ff3af8147d0 <line:11:3, col:27> 'int'
+    | |-ImplicitCastExpr 0x7ff3af8147b8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814700 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-ImplicitCastExpr 0x7ff3af814808 <col:19> 'void **' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff3af814728 <col:19> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    | `-ImplicitCastExpr 0x7ff3af814820 <col:22> 'char *' <ArrayToPointerDecay>
+    |   `-StringLiteral 0x7ff3af814788 <col:22> 'char [4]' lvalue "foo"
+    |-CallExpr 0x7ff3af8148d8 <line:12:3, col:31> 'int'
+    | |-ImplicitCastExpr 0x7ff3af8148c0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814838 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-ImplicitCastExpr 0x7ff3af814910 <col:19> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7ff3af814860 <col:19> 'char [4]' lvalue "gnu"
+    | `-ImplicitCastExpr 0x7ff3af814928 <col:26> 'char *' <ArrayToPointerDecay>
+    |   `-StringLiteral 0x7ff3af814890 <col:26> 'char [4]' lvalue "gcc"
+    |-CallExpr 0x7ff3af8149c8 <line:13:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7ff3af8149b0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814940 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-IntegerLiteral 0x7ff3af814968 <col:19> 'int' 1
+    | `-ImplicitCastExpr 0x7ff3af814a00 <col:22> 'void **' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff3af814988 <col:22> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    |-CallExpr 0x7ff3af814a98 <line:14:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7ff3af814a80 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814a18 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-IntegerLiteral 0x7ff3af814a40 <col:19> 'int' 1
+    | `-IntegerLiteral 0x7ff3af814a60 <col:22> 'int' 2
+    |-CallExpr 0x7ff3af814b70 <line:15:3, col:26> 'int'
+    | |-ImplicitCastExpr 0x7ff3af814b58 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814ad0 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-IntegerLiteral 0x7ff3af814af8 <col:19> 'int' 1
+    | |-IntegerLiteral 0x7ff3af814b18 <col:22> 'int' 2
+    | `-IntegerLiteral 0x7ff3af814b38 <col:25> 'int' 3
+    |-CallExpr 0x7ff3af814c68 <line:16:3, col:26> 'int'
+    | |-ImplicitCastExpr 0x7ff3af814c50 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814bb0 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-ImplicitCastExpr 0x7ff3af814ca8 <col:19> 'void **' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff3af814bd8 <col:19> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    | |-ImplicitCastExpr 0x7ff3af814cc0 <col:22> 'void **' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff3af814c00 <col:22> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    | `-ImplicitCastExpr 0x7ff3af814cd8 <col:25> 'void **' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff3af814c28 <col:25> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    |-CallExpr 0x7ff3af814da8 <line:17:3, col:30> 'int'
+    | |-ImplicitCastExpr 0x7ff3af814d90 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3af814cf0 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+    | |-ImplicitCastExpr 0x7ff3af814de8 <col:19> 'void **' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff3af814d18 <col:19> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+    | |-ImplicitCastExpr 0x7ff3af814e00 <col:22> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7ff3af814d40 <col:22> 'char [4]' lvalue "qui"
+    | `-IntegerLiteral 0x7ff3af814d70 <col:29> 'int' 3
+    `-CallExpr 0x7ff3af814ec0 <line:18:3, col:26> 'int'
+      |-ImplicitCastExpr 0x7ff3af814ea8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff3af814e18 <col:3> 'int ()' Function 0x7ff3af8143a0 'posix_memalign' 'int ()'
+      |-ImplicitCastExpr 0x7ff3af814f00 <col:19> 'void **' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff3af814e40 <col:19> 'void **' lvalue ParmVar 0x7ff3ae82bda0 'p' 'void **'
+      |-IntegerLiteral 0x7ff3af814e68 <col:22> 'int' 1
+      `-IntegerLiteral 0x7ff3af814e88 <col:25> 'int' 2

@@ -1,0 +1,74 @@
+../Data/C2AST/pr64417.c:11:26: error: initialization of flexible array member is not allowed
+struct foo b1[] = { { 1, "abc" } };  
+                         ^~~~~
+../Data/C2AST/pr64417.c:5:26: note: initialized flexible array member 'y' is here
+struct foo { int x; char y[]; };
+                         ^
+../Data/C2AST/pr64417.c:12:26: error: initialization of flexible array member is not allowed
+struct foo b2[] = { { 1, { "abc" } } };  
+                         ^
+../Data/C2AST/pr64417.c:5:26: note: initialized flexible array member 'y' is here
+struct foo { int x; char y[]; };
+                         ^
+../Data/C2AST/pr64417.c:13:28: error: initialization of flexible array member is not allowed
+struct bar c1[] = { { { 1, "abc" } } };  
+                           ^~~~~
+../Data/C2AST/pr64417.c:5:26: note: initialized flexible array member 'y' is here
+struct foo { int x; char y[]; };
+                         ^
+../Data/C2AST/pr64417.c:14:28: error: initialization of flexible array member is not allowed
+struct bar c2[] = { { { 1, { "abc" } } } };  
+                           ^
+../Data/C2AST/pr64417.c:5:26: note: initialized flexible array member 'y' is here
+struct foo { int x; char y[]; };
+                         ^
+../Data/C2AST/pr64417.c:15:30: error: initialization of flexible array member is not allowed
+struct baz d1[] = { { { { 1, "abc" } } } };  
+                             ^~~~~
+../Data/C2AST/pr64417.c:5:26: note: initialized flexible array member 'y' is here
+struct foo { int x; char y[]; };
+                         ^
+../Data/C2AST/pr64417.c:16:30: error: initialization of flexible array member is not allowed
+struct baz d2[] = { { { { 1, { "abc" } } } } };  
+                             ^
+../Data/C2AST/pr64417.c:5:26: note: initialized flexible array member 'y' is here
+struct foo { int x; char y[]; };
+                         ^
+6 errors generated.
+TranslationUnitDecl 0x7fea2e81a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea2e81ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fea2e81ab80 '__int128'
+|-TypedefDecl 0x7fea2e81aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fea2e81aba0 'unsigned __int128'
+|-TypedefDecl 0x7fea2e81b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fea2e81afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fea2e81af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fea2e81b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fea2e81b200 'char *'
+|   `-BuiltinType 0x7fea2e81a980 'char'
+|-TypedefDecl 0x7fea2e81b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fea2e81b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fea2e81b320 'struct __va_list_tag'
+|     `-Record 0x7fea2e81b298 '__va_list_tag'
+|-RecordDecl 0x7fea2e81b560 <../Data/C2AST/pr64417.c:5:1, col:31> col:8 struct foo definition
+| |-FieldDecl 0x7fea2f014238 <col:14, col:18> col:18 x 'int'
+| `-FieldDecl 0x7fea2f0142c8 <col:21, col:28> col:26 y 'char []'
+|-RecordDecl 0x7fea2f014310 <line:6:1, col:28> col:8 struct bar definition
+| `-FieldDecl 0x7fea2f014410 <col:14, col:25> col:25 f 'struct foo':'struct foo'
+|-RecordDecl 0x7fea2f0144a8 <line:7:1, col:28> col:8 struct baz definition
+| `-FieldDecl 0x7fea2f0145a0 <col:14, col:25> col:25 b 'struct bar':'struct bar'
+|-VarDecl 0x7fea2f014650 <line:9:1, col:28> col:12 a1 'struct foo':'struct foo' cinit
+| `-InitListExpr 0x7fea2f0147c8 <col:17, col:28> 'struct foo':'struct foo'
+|   |-IntegerLiteral 0x7fea2f0146f0 <col:19> 'int' 1
+|   `-InitListExpr 0x7fea2f014818 <col:22> 'char [4]'
+|     `-StringLiteral 0x7fea2f014748 <col:22> 'char [4]' lvalue "abc"
+|-VarDecl 0x7fea2f014880 <line:10:1, col:32> col:12 a2 'struct foo':'struct foo' cinit
+| `-InitListExpr 0x7fea2f0149c8 <col:17, col:32> 'struct foo':'struct foo'
+|   |-IntegerLiteral 0x7fea2f0148e0 <col:19> 'int' 1
+|   `-StringLiteral 0x7fea2f014900 <col:24> 'char [4]' lvalue "abc"
+|-VarDecl 0x7fea2f014aa8 <line:11:1, col:15> col:12 invalid b1 'struct foo []'
+|-VarDecl 0x7fea2f014cb8 <line:12:1, col:15> col:12 invalid b2 'struct foo []'
+|-VarDecl 0x7fea2f014f68 <line:13:1, col:15> col:12 invalid c1 'struct bar []'
+|-VarDecl 0x7fea2f015230 <line:14:1, col:15> col:12 invalid c2 'struct bar []'
+|-VarDecl 0x7fea2f0155a8 <line:15:1, col:15> col:12 invalid d1 'struct baz []'
+`-VarDecl 0x7fea2f0158d8 <line:16:1, col:15> col:12 invalid d2 'struct baz []'

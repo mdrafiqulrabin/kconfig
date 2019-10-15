@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7ff2620228e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff262813e68 <../Data/C2AST/pr51867.c:4:14> col:14 implicit used sqrtf 'float (float)' extern
+| |-ParmVarDecl 0x7ff262813f08 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7ff262813f70 <col:14> Implicit
+| `-NoThrowAttr 0x7ff262813fb8 <col:14> Implicit
+|-FunctionDecl 0x7ff262813fc8 prev 0x7ff262813e68 <col:1, col:25> col:14 used sqrtf 'float (float)' extern
+| |-ParmVarDecl 0x7ff262023578 <col:20> col:25 'float'
+| |-ConstAttr 0x7ff2628140a8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7ff2628140b8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7ff262814170 <line:6:1, line:9:1> line:6:7 a 'float (float)'
+| |-ParmVarDecl 0x7ff2628140e0 <col:9, col:15> col:15 used x 'float'
+| `-CompoundStmt 0x7ff262814350 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ff262814338 <line:8:5, col:19>
+|     `-CallExpr 0x7ff2628142f0 <col:12, col:19> 'float'
+|       |-ImplicitCastExpr 0x7ff2628142d8 <col:12> 'float (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7ff262814258 <col:12> 'float (float)' Function 0x7ff262813fc8 'sqrtf' 'float (float)'
+|       `-ImplicitCastExpr 0x7ff262814320 <col:18> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff262814280 <col:18> 'float' lvalue ParmVar 0x7ff2628140e0 'x' 'float'
+`-FunctionDecl 0x7ff262814410 <line:10:1, line:13:1> line:10:7 b 'float (float)'
+  |-ParmVarDecl 0x7ff262814380 <col:9, col:15> col:15 used x 'float'
+  `-CompoundStmt 0x7ff262814580 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7ff262814568 <line:12:5, col:19>
+      `-CallExpr 0x7ff262814520 <col:12, col:19> 'float'
+        |-ImplicitCastExpr 0x7ff262814508 <col:12> 'float (*)(float)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff2628144b8 <col:12> 'float (float)' Function 0x7ff262813fc8 'sqrtf' 'float (float)'
+        `-ImplicitCastExpr 0x7ff262814550 <col:18> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7ff2628144e0 <col:18> 'float' lvalue ParmVar 0x7ff262814380 'x' 'float'

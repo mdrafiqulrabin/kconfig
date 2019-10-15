@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f850802ace8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f850802b978 <../Data/C2AST/pr63835.c:4:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7f8508814328 <line:6:1, line:10:1> line:7:1 used fn1 'int (int)'
+| |-ParmVarDecl 0x7f8508814258 <col:6, col:10> col:10 used p 'int'
+| `-CompoundStmt 0x7f8508814448 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7f8508814430 <line:9:3, col:11>
+|     `-UnaryOperator 0x7f8508814410 <col:10, col:11> 'int' prefix '-'
+|       `-ImplicitCastExpr 0x7f85088143f8 <col:11> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f85088143d0 <col:11> 'int' lvalue ParmVar 0x7f8508814258 'p' 'int'
+`-FunctionDecl 0x7f85088144a8 <line:12:1, line:16:1> line:13:1 fn2 'void ()'
+  `-CompoundStmt 0x7f8508814698 <line:14:1, line:16:1>
+    `-CallExpr 0x7f8508814650 <line:15:3, col:25> 'int'
+      |-ImplicitCastExpr 0x7f8508814638 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8508814548 <col:3> 'int (int)' Function 0x7f8508814328 'fn1' 'int (int)'
+      `-ImplicitCastExpr 0x7f8508814680 <col:8, col:24> 'int' <IntegralCast>
+        `-UnaryOperator 0x7f85088145f0 <col:8, col:24> 'unsigned int' prefix '-'
+          `-CStyleCastExpr 0x7f85088145c8 <col:9, col:24> 'unsigned int' <IntegralCast>
+            `-ImplicitCastExpr 0x7f85088145b0 <col:24> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7f8508814570 <col:24> 'int' lvalue Var 0x7f850802b978 'a' 'int'

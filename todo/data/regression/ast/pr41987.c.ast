@@ -1,0 +1,196 @@
+TranslationUnitDecl 0x7fa2aa0134e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa2ab013620 <../Data/C2AST/pr41987.c:11:1, line:22:1> line:11:6 qparm_colvar 'void (void)'
+  `-CompoundStmt 0x7fa2ab015640 <line:12:1, line:22:1>
+    |-DoStmt 0x7fa2ab013a90 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab013a38 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab013770 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab013710 <col:3, col:17> col:17 used ylm '_Complex float'
+    | | |-DeclStmt 0x7fa2ab013800 <line:13:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab0137a0 <line:13:11, line:5:8> col:8 used nbond 'float'
+    | | |-BinaryOperator 0x7fa2ab013890 <line:6:3, col:9> '_Complex float' '='
+    | | | |-DeclRefExpr 0x7fa2ab013818 <col:3> '_Complex float' lvalue Var 0x7fa2ab013710 'ylm' '_Complex float'
+    | | | `-ImplicitCastExpr 0x7fa2ab013878 <col:9> '_Complex float' <FloatingRealToComplex>
+    | | |   `-ImplicitCastExpr 0x7fa2ab013860 <col:9> 'float' <IntegralToFloating>
+    | | |     `-IntegerLiteral 0x7fa2ab013840 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab013918 <line:7:3, col:11> 'float' '='
+    | | | |-DeclRefExpr 0x7fa2ab0138b8 <col:3> 'float' lvalue Var 0x7fa2ab0137a0 'nbond' 'float'
+    | | | `-ImplicitCastExpr 0x7fa2ab013900 <col:11> 'float' <IntegralToFloating>
+    | | |   `-IntegerLiteral 0x7fa2ab0138e0 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab013a10 <line:8:3, col:15> '_Complex float' '='
+    | |   |-DeclRefExpr 0x7fa2ab013940 <col:3> '_Complex float' lvalue Var 0x7fa2ab013710 'ylm' '_Complex float'
+    | |   `-BinaryOperator 0x7fa2ab0139e8 <col:9, col:15> '_Complex float' '/'
+    | |     |-ImplicitCastExpr 0x7fa2ab0139b8 <col:9> '_Complex float' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fa2ab013968 <col:9> '_Complex float' lvalue Var 0x7fa2ab013710 'ylm' '_Complex float'
+    | |     `-ImplicitCastExpr 0x7fa2ab0139d0 <col:15> 'float' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa2ab013990 <col:15> 'float' lvalue Var 0x7fa2ab0137a0 'nbond' 'float'
+    | `-IntegerLiteral 0x7fa2ab013a70 <line:9:10> 'int' 0
+    |-DoStmt 0x7fa2ab013e40 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab013de8 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab013b20 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab013ac0 <col:3, col:17> col:17 used ylm '_Complex double'
+    | | |-DeclStmt 0x7fa2ab013bb0 <line:14:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab013b50 <line:14:11, line:5:8> col:8 used nbond 'double'
+    | | |-BinaryOperator 0x7fa2ab013c40 <line:6:3, col:9> '_Complex double' '='
+    | | | |-DeclRefExpr 0x7fa2ab013bc8 <col:3> '_Complex double' lvalue Var 0x7fa2ab013ac0 'ylm' '_Complex double'
+    | | | `-ImplicitCastExpr 0x7fa2ab013c28 <col:9> '_Complex double' <FloatingRealToComplex>
+    | | |   `-ImplicitCastExpr 0x7fa2ab013c10 <col:9> 'double' <IntegralToFloating>
+    | | |     `-IntegerLiteral 0x7fa2ab013bf0 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab013cc8 <line:7:3, col:11> 'double' '='
+    | | | |-DeclRefExpr 0x7fa2ab013c68 <col:3> 'double' lvalue Var 0x7fa2ab013b50 'nbond' 'double'
+    | | | `-ImplicitCastExpr 0x7fa2ab013cb0 <col:11> 'double' <IntegralToFloating>
+    | | |   `-IntegerLiteral 0x7fa2ab013c90 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab013dc0 <line:8:3, col:15> '_Complex double' '='
+    | |   |-DeclRefExpr 0x7fa2ab013cf0 <col:3> '_Complex double' lvalue Var 0x7fa2ab013ac0 'ylm' '_Complex double'
+    | |   `-BinaryOperator 0x7fa2ab013d98 <col:9, col:15> '_Complex double' '/'
+    | |     |-ImplicitCastExpr 0x7fa2ab013d68 <col:9> '_Complex double' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fa2ab013d18 <col:9> '_Complex double' lvalue Var 0x7fa2ab013ac0 'ylm' '_Complex double'
+    | |     `-ImplicitCastExpr 0x7fa2ab013d80 <col:15> 'double' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa2ab013d40 <col:15> 'double' lvalue Var 0x7fa2ab013b50 'nbond' 'double'
+    | `-IntegerLiteral 0x7fa2ab013e20 <line:9:10> 'int' 0
+    |-DoStmt 0x7fa2ab0141f0 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab014198 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab013ed0 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab013e70 <col:3, col:17> col:17 used ylm '_Complex long double'
+    | | |-DeclStmt 0x7fa2ab013f60 <line:15:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab013f00 <line:15:11, line:5:8> col:8 used nbond 'long double'
+    | | |-BinaryOperator 0x7fa2ab013ff0 <line:6:3, col:9> '_Complex long double' '='
+    | | | |-DeclRefExpr 0x7fa2ab013f78 <col:3> '_Complex long double' lvalue Var 0x7fa2ab013e70 'ylm' '_Complex long double'
+    | | | `-ImplicitCastExpr 0x7fa2ab013fd8 <col:9> '_Complex long double' <FloatingRealToComplex>
+    | | |   `-ImplicitCastExpr 0x7fa2ab013fc0 <col:9> 'long double' <IntegralToFloating>
+    | | |     `-IntegerLiteral 0x7fa2ab013fa0 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab014078 <line:7:3, col:11> 'long double' '='
+    | | | |-DeclRefExpr 0x7fa2ab014018 <col:3> 'long double' lvalue Var 0x7fa2ab013f00 'nbond' 'long double'
+    | | | `-ImplicitCastExpr 0x7fa2ab014060 <col:11> 'long double' <IntegralToFloating>
+    | | |   `-IntegerLiteral 0x7fa2ab014040 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab014170 <line:8:3, col:15> '_Complex long double' '='
+    | |   |-DeclRefExpr 0x7fa2ab0140a0 <col:3> '_Complex long double' lvalue Var 0x7fa2ab013e70 'ylm' '_Complex long double'
+    | |   `-BinaryOperator 0x7fa2ab014148 <col:9, col:15> '_Complex long double' '/'
+    | |     |-ImplicitCastExpr 0x7fa2ab014118 <col:9> '_Complex long double' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fa2ab0140c8 <col:9> '_Complex long double' lvalue Var 0x7fa2ab013e70 'ylm' '_Complex long double'
+    | |     `-ImplicitCastExpr 0x7fa2ab014130 <col:15> 'long double' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fa2ab0140f0 <col:15> 'long double' lvalue Var 0x7fa2ab013f00 'nbond' 'long double'
+    | `-IntegerLiteral 0x7fa2ab0141d0 <line:9:10> 'int' 0
+    |-DoStmt 0x7fa2ab014658 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab014600 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab0142a8 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab014248 <col:3, col:17> col:17 used ylm '_Complex char'
+    | | |-DeclStmt 0x7fa2ab014330 <line:17:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab0142d0 <line:17:11, line:5:8> col:8 used nbond 'char'
+    | | |-BinaryOperator 0x7fa2ab0143c0 <line:6:3, col:9> '_Complex char' '='
+    | | | |-DeclRefExpr 0x7fa2ab014348 <col:3> '_Complex char' lvalue Var 0x7fa2ab014248 'ylm' '_Complex char'
+    | | | `-ImplicitCastExpr 0x7fa2ab0143a8 <col:9> '_Complex char' <IntegralRealToComplex>
+    | | |   `-ImplicitCastExpr 0x7fa2ab014390 <col:9> 'char' <IntegralCast>
+    | | |     `-IntegerLiteral 0x7fa2ab014370 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab014448 <line:7:3, col:11> 'char' '='
+    | | | |-DeclRefExpr 0x7fa2ab0143e8 <col:3> 'char' lvalue Var 0x7fa2ab0142d0 'nbond' 'char'
+    | | | `-ImplicitCastExpr 0x7fa2ab014430 <col:11> 'char' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fa2ab014410 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab0145c8 <line:8:3, col:15> '_Complex char' '='
+    | |   |-DeclRefExpr 0x7fa2ab014470 <col:3> '_Complex char' lvalue Var 0x7fa2ab014248 'ylm' '_Complex char'
+    | |   `-ImplicitCastExpr 0x7fa2ab0145b0 <col:9, col:15> '_Complex char' <IntegralComplexCast>
+    | |     `-BinaryOperator 0x7fa2ab014588 <col:9, col:15> '_Complex int' '/'
+    | |       |-ImplicitCastExpr 0x7fa2ab014558 <col:9> '_Complex int' <IntegralComplexCast>
+    | |       | `-ImplicitCastExpr 0x7fa2ab0144e8 <col:9> '_Complex char' <LValueToRValue>
+    | |       |   `-DeclRefExpr 0x7fa2ab014498 <col:9> '_Complex char' lvalue Var 0x7fa2ab014248 'ylm' '_Complex char'
+    | |       `-ImplicitCastExpr 0x7fa2ab014570 <col:15> '_Complex int' <IntegralRealToComplex>
+    | |         `-ImplicitCastExpr 0x7fa2ab014518 <col:15> 'int' <IntegralCast>
+    | |           `-ImplicitCastExpr 0x7fa2ab014500 <col:15> 'char' <LValueToRValue>
+    | |             `-DeclRefExpr 0x7fa2ab0144c0 <col:15> 'char' lvalue Var 0x7fa2ab0142d0 'nbond' 'char'
+    | `-IntegerLiteral 0x7fa2ab014638 <line:9:10> 'int' 0
+    |-DoStmt 0x7fa2ab014a98 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab014a40 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab014718 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab0146b8 <col:3, col:17> col:17 used ylm '_Complex short'
+    | | |-DeclStmt 0x7fa2ab0147a8 <line:18:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab014748 <line:18:11, line:5:8> col:8 used nbond 'short'
+    | | |-BinaryOperator 0x7fa2ab014838 <line:6:3, col:9> '_Complex short' '='
+    | | | |-DeclRefExpr 0x7fa2ab0147c0 <col:3> '_Complex short' lvalue Var 0x7fa2ab0146b8 'ylm' '_Complex short'
+    | | | `-ImplicitCastExpr 0x7fa2ab014820 <col:9> '_Complex short' <IntegralRealToComplex>
+    | | |   `-ImplicitCastExpr 0x7fa2ab014808 <col:9> 'short' <IntegralCast>
+    | | |     `-IntegerLiteral 0x7fa2ab0147e8 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab0148c0 <line:7:3, col:11> 'short' '='
+    | | | |-DeclRefExpr 0x7fa2ab014860 <col:3> 'short' lvalue Var 0x7fa2ab014748 'nbond' 'short'
+    | | | `-ImplicitCastExpr 0x7fa2ab0148a8 <col:11> 'short' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fa2ab014888 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab014a18 <line:8:3, col:15> '_Complex short' '='
+    | |   |-DeclRefExpr 0x7fa2ab0148e8 <col:3> '_Complex short' lvalue Var 0x7fa2ab0146b8 'ylm' '_Complex short'
+    | |   `-ImplicitCastExpr 0x7fa2ab014a00 <col:9, col:15> '_Complex short' <IntegralComplexCast>
+    | |     `-BinaryOperator 0x7fa2ab0149d8 <col:9, col:15> '_Complex int' '/'
+    | |       |-ImplicitCastExpr 0x7fa2ab0149a8 <col:9> '_Complex int' <IntegralComplexCast>
+    | |       | `-ImplicitCastExpr 0x7fa2ab014960 <col:9> '_Complex short' <LValueToRValue>
+    | |       |   `-DeclRefExpr 0x7fa2ab014910 <col:9> '_Complex short' lvalue Var 0x7fa2ab0146b8 'ylm' '_Complex short'
+    | |       `-ImplicitCastExpr 0x7fa2ab0149c0 <col:15> '_Complex int' <IntegralRealToComplex>
+    | |         `-ImplicitCastExpr 0x7fa2ab014990 <col:15> 'int' <IntegralCast>
+    | |           `-ImplicitCastExpr 0x7fa2ab014978 <col:15> 'short' <LValueToRValue>
+    | |             `-DeclRefExpr 0x7fa2ab014938 <col:15> 'short' lvalue Var 0x7fa2ab014748 'nbond' 'short'
+    | `-IntegerLiteral 0x7fa2ab014a78 <line:9:10> 'int' 0
+    |-DoStmt 0x7fa2ab014e30 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab014dd8 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab014b28 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab014ac8 <col:3, col:17> col:17 used ylm '_Complex int'
+    | | |-DeclStmt 0x7fa2ab014bb8 <line:19:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab014b58 <line:19:11, line:5:8> col:8 used nbond 'int'
+    | | |-BinaryOperator 0x7fa2ab014c30 <line:6:3, col:9> '_Complex int' '='
+    | | | |-DeclRefExpr 0x7fa2ab014bd0 <col:3> '_Complex int' lvalue Var 0x7fa2ab014ac8 'ylm' '_Complex int'
+    | | | `-ImplicitCastExpr 0x7fa2ab014c18 <col:9> '_Complex int' <IntegralRealToComplex>
+    | | |   `-IntegerLiteral 0x7fa2ab014bf8 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab014ca0 <line:7:3, col:11> 'int' '='
+    | | | |-DeclRefExpr 0x7fa2ab014c58 <col:3> 'int' lvalue Var 0x7fa2ab014b58 'nbond' 'int'
+    | | | `-IntegerLiteral 0x7fa2ab014c80 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab014db0 <line:8:3, col:15> '_Complex int' '='
+    | |   |-DeclRefExpr 0x7fa2ab014cc8 <col:3> '_Complex int' lvalue Var 0x7fa2ab014ac8 'ylm' '_Complex int'
+    | |   `-BinaryOperator 0x7fa2ab014d88 <col:9, col:15> '_Complex int' '/'
+    | |     |-ImplicitCastExpr 0x7fa2ab014d40 <col:9> '_Complex int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fa2ab014cf0 <col:9> '_Complex int' lvalue Var 0x7fa2ab014ac8 'ylm' '_Complex int'
+    | |     `-ImplicitCastExpr 0x7fa2ab014d70 <col:15> '_Complex int' <IntegralRealToComplex>
+    | |       `-ImplicitCastExpr 0x7fa2ab014d58 <col:15> 'int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fa2ab014d18 <col:15> 'int' lvalue Var 0x7fa2ab014b58 'nbond' 'int'
+    | `-IntegerLiteral 0x7fa2ab014e10 <line:9:10> 'int' 0
+    |-DoStmt 0x7fa2ab015220 <line:3:22, line:9:11>
+    | |-CompoundStmt 0x7fa2ab0151c8 <line:3:25, line:8:22>
+    | | |-DeclStmt 0x7fa2ab014ee8 <line:4:3, col:20>
+    | | | `-VarDecl 0x7fa2ab014e88 <col:3, col:17> col:17 used ylm '_Complex long'
+    | | |-DeclStmt 0x7fa2ab014f78 <line:20:11, line:5:13>
+    | | | `-VarDecl 0x7fa2ab014f18 <line:20:11, line:5:8> col:8 used nbond 'long'
+    | | |-BinaryOperator 0x7fa2ab015008 <line:6:3, col:9> '_Complex long' '='
+    | | | |-DeclRefExpr 0x7fa2ab014f90 <col:3> '_Complex long' lvalue Var 0x7fa2ab014e88 'ylm' '_Complex long'
+    | | | `-ImplicitCastExpr 0x7fa2ab014ff0 <col:9> '_Complex long' <IntegralRealToComplex>
+    | | |   `-ImplicitCastExpr 0x7fa2ab014fd8 <col:9> 'long' <IntegralCast>
+    | | |     `-IntegerLiteral 0x7fa2ab014fb8 <col:9> 'int' 0
+    | | |-BinaryOperator 0x7fa2ab015090 <line:7:3, col:11> 'long' '='
+    | | | |-DeclRefExpr 0x7fa2ab015030 <col:3> 'long' lvalue Var 0x7fa2ab014f18 'nbond' 'long'
+    | | | `-ImplicitCastExpr 0x7fa2ab015078 <col:11> 'long' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fa2ab015058 <col:11> 'int' 0
+    | | `-BinaryOperator 0x7fa2ab0151a0 <line:8:3, col:15> '_Complex long' '='
+    | |   |-DeclRefExpr 0x7fa2ab0150b8 <col:3> '_Complex long' lvalue Var 0x7fa2ab014e88 'ylm' '_Complex long'
+    | |   `-BinaryOperator 0x7fa2ab015178 <col:9, col:15> '_Complex long' '/'
+    | |     |-ImplicitCastExpr 0x7fa2ab015130 <col:9> '_Complex long' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fa2ab0150e0 <col:9> '_Complex long' lvalue Var 0x7fa2ab014e88 'ylm' '_Complex long'
+    | |     `-ImplicitCastExpr 0x7fa2ab015160 <col:15> '_Complex long' <IntegralRealToComplex>
+    | |       `-ImplicitCastExpr 0x7fa2ab015148 <col:15> 'long' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fa2ab015108 <col:15> 'long' lvalue Var 0x7fa2ab014f18 'nbond' 'long'
+    | `-IntegerLiteral 0x7fa2ab015200 <line:9:10> 'int' 0
+    `-DoStmt 0x7fa2ab015620 <line:3:22, line:9:11>
+      |-CompoundStmt 0x7fa2ab0155b8 <line:3:25, line:8:22>
+      | |-DeclStmt 0x7fa2ab0152d8 <line:4:3, col:20>
+      | | `-VarDecl 0x7fa2ab015278 <col:3, col:17> col:17 used ylm '_Complex long long'
+      | |-DeclStmt 0x7fa2ab015368 <line:21:11, line:5:13>
+      | | `-VarDecl 0x7fa2ab015308 <line:21:11, line:5:8> col:8 used nbond 'long long'
+      | |-BinaryOperator 0x7fa2ab0153f8 <line:6:3, col:9> '_Complex long long' '='
+      | | |-DeclRefExpr 0x7fa2ab015380 <col:3> '_Complex long long' lvalue Var 0x7fa2ab015278 'ylm' '_Complex long long'
+      | | `-ImplicitCastExpr 0x7fa2ab0153e0 <col:9> '_Complex long long' <IntegralRealToComplex>
+      | |   `-ImplicitCastExpr 0x7fa2ab0153c8 <col:9> 'long long' <IntegralCast>
+      | |     `-IntegerLiteral 0x7fa2ab0153a8 <col:9> 'int' 0
+      | |-BinaryOperator 0x7fa2ab015480 <line:7:3, col:11> 'long long' '='
+      | | |-DeclRefExpr 0x7fa2ab015420 <col:3> 'long long' lvalue Var 0x7fa2ab015308 'nbond' 'long long'
+      | | `-ImplicitCastExpr 0x7fa2ab015468 <col:11> 'long long' <IntegralCast>
+      | |   `-IntegerLiteral 0x7fa2ab015448 <col:11> 'int' 0
+      | `-BinaryOperator 0x7fa2ab015590 <line:8:3, col:15> '_Complex long long' '='
+      |   |-DeclRefExpr 0x7fa2ab0154a8 <col:3> '_Complex long long' lvalue Var 0x7fa2ab015278 'ylm' '_Complex long long'
+      |   `-BinaryOperator 0x7fa2ab015568 <col:9, col:15> '_Complex long long' '/'
+      |     |-ImplicitCastExpr 0x7fa2ab015520 <col:9> '_Complex long long' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fa2ab0154d0 <col:9> '_Complex long long' lvalue Var 0x7fa2ab015278 'ylm' '_Complex long long'
+      |     `-ImplicitCastExpr 0x7fa2ab015550 <col:15> '_Complex long long' <IntegralRealToComplex>
+      |       `-ImplicitCastExpr 0x7fa2ab015538 <col:15> 'long long' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fa2ab0154f8 <col:15> 'long long' lvalue Var 0x7fa2ab015308 'nbond' 'long long'
+      `-IntegerLiteral 0x7fa2ab015600 <line:9:10> 'int' 0

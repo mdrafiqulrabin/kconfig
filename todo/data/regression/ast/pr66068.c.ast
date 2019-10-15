@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fb8a182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb8a182c960 <../Data/C2AST/pr66068.c:3:1, col:8> col:8 struct S
+|-VarDecl 0x7fb8a1860870 <col:1, col:10> col:10 a 'struct S':'struct S'
+|-VarDecl 0x7fb8a1860948 <line:4:1, col:16> col:16 b 'const struct S':'const struct S'
+|-RecordDecl 0x7fb8a18609a8 prev 0x7fb8a182c960 <line:5:1, line:7:1> line:5:8 struct S definition
+|-RecordDecl 0x7fb8a1860a30 <line:9:1, col:7> col:7 union U
+|-VarDecl 0x7fb8a1860b30 <col:1, col:9> col:9 c 'union U':'union U'
+|-VarDecl 0x7fb8a1860bc8 <line:10:1, col:15> col:15 d 'const union U':'const union U'
+`-RecordDecl 0x7fb8a1860c28 prev 0x7fb8a1860a30 <line:11:1, line:13:1> line:11:7 union U definition

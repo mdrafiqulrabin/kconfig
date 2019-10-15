@@ -1,0 +1,24 @@
+../Data/C2AST/pr14475.c:5:18: error: field has incomplete type 'enum tree_code'
+  enum tree_code code : 8;  
+                 ^
+../Data/C2AST/pr14475.c:5:8: note: forward declaration of 'enum tree_code'
+  enum tree_code code : 8;  
+       ^
+1 error generated.
+TranslationUnitDecl 0x7ffb5402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffb5402c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffb5402bf80 '__int128'
+|-TypedefDecl 0x7ffb5402c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffb5402bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffb5402c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffb5402c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffb5402c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffb5402c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffb5402c600 'char *'
+|   `-BuiltinType 0x7ffb5402bd80 'char'
+|-TypedefDecl 0x7ffb5402c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffb5402c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffb5402c720 'struct __va_list_tag'
+|     `-Record 0x7ffb5402c698 '__va_list_tag'
+`-RecordDecl 0x7ffb5402c960 <../Data/C2AST/pr14475.c:3:1, line:9:1> line:3:8 invalid struct tree_common definition
+  `-FieldDecl 0x7ffb5406dd10 <line:5:3, col:18> col:18 invalid code 'enum tree_code':'enum tree_code'

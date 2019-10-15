@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fb23f0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb23f814268 <../Data/C2AST/pr57331.c:3:1, line:11:1> line:4:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fb23f018178 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fb23f814708 <line:5:1, line:11:1>
+    |-DeclStmt 0x7fb23f8144f8 <line:6:3, col:40>
+    | `-VarDecl 0x7fb23f814368 <col:3, col:39> col:9 used p 'void *' cinit
+    |   `-ConditionalOperator 0x7fb23f8144c8 <col:13, col:39> 'void *'
+    |     |-ImplicitCastExpr 0x7fb23f8144b0 <col:13> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb23f8143c8 <col:13> 'int' lvalue ParmVar 0x7fb23f018178 'x' 'int'
+    |     |-CStyleCastExpr 0x7fb23f814428 <col:17, col:26> 'void *' <IntegralToPointer>
+    |     | `-IntegerLiteral 0x7fb23f8143f0 <col:26> 'int' 1
+    |     `-CStyleCastExpr 0x7fb23f814488 <col:30, col:39> 'void *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fb23f814450 <col:39> 'int' 0
+    |-DeclStmt 0x7fb23f814608 <<built-in>:77:25, ../Data/C2AST/pr57331.c:7:42>
+    | `-VarDecl 0x7fb23f814528 <<built-in>:77:25, ../Data/C2AST/pr57331.c:7:41> col:19 used b 'long' cinit
+    |   `-CStyleCastExpr 0x7fb23f8145e0 <col:23, col:41> 'long' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7fb23f8145c8 <col:41> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb23f814588 <col:41> 'void *' lvalue Var 0x7fb23f814368 'p' 'void *'
+    |-IfStmt 0x7fb23f814698 <line:8:3, line:9:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb23f814648 <line:8:7> 'long' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb23f814620 <col:7> 'long' lvalue Var 0x7fb23f814528 'b' 'long'
+    | |-ReturnStmt 0x7fb23f814680 <line:9:5, col:12>
+    | | `-IntegerLiteral 0x7fb23f814660 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb23f8146f0 <line:10:3, col:10>
+      `-IntegerLiteral 0x7fb23f8146d0 <col:10> 'int' 1

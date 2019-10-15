@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7ff2b782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff2b786d828 <../Data/C2AST/pr84334.c:5:1, line:12:1> line:6:1 foo 'float (void)'
+  `-CompoundStmt 0x7ff2b786dc40 <line:7:1, line:12:1>
+    |-DeclStmt 0x7ff2b786d9a0 <line:8:3, col:55>
+    | `-VarDecl 0x7ff2b786d920 <col:3, col:13> col:9 used a 'float' cinit
+    |   `-FloatingLiteral 0x7ff2b786d980 <col:13> 'float' 1.000000e-06
+    |-DeclStmt 0x7ff2b786da50 <line:9:3, col:55>
+    | `-VarDecl 0x7ff2b786d9d0 <col:3, col:13> col:9 used b 'float' cinit
+    |   `-FloatingLiteral 0x7ff2b786da30 <col:13> 'float' 2.000000e-06
+    |-DeclStmt 0x7ff2b786db00 <line:10:3, col:52>
+    | `-VarDecl 0x7ff2b786da80 <col:3, col:13> col:9 used c 'float' cinit
+    |   `-FloatingLiteral 0x7ff2b786dae0 <col:13> 'float' 5.000000e-06
+    `-ReturnStmt 0x7ff2b786dc28 <line:11:3, col:18>
+      `-BinaryOperator 0x7ff2b786dc00 <col:10, col:18> 'float' '+'
+        |-BinaryOperator 0x7ff2b786db98 <col:10, col:14> 'float' '+'
+        | |-ImplicitCastExpr 0x7ff2b786db68 <col:10> 'float' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff2b786db18 <col:10> 'float' lvalue Var 0x7ff2b786d920 'a' 'float'
+        | `-ImplicitCastExpr 0x7ff2b786db80 <col:14> 'float' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ff2b786db40 <col:14> 'float' lvalue Var 0x7ff2b786d9d0 'b' 'float'
+        `-ImplicitCastExpr 0x7ff2b786dbe8 <col:18> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7ff2b786dbc0 <col:18> 'float' lvalue Var 0x7ff2b786da80 'c' 'float'

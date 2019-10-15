@@ -1,0 +1,47 @@
+../Data/C2AST/pr40340-1.c:5:10: fatal error: 'pr40340.h' file not found
+#include "pr40340.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f9bde8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9bde817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9bde817780 '__int128'
+|-TypedefDecl 0x7f9bde817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9bde8177a0 'unsigned __int128'
+|-TypedefDecl 0x7f9bde817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9bde817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9bde817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9bde817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9bde817e00 'char *'
+|   `-BuiltinType 0x7f9bde817580 'char'
+|-TypedefDecl 0x7f9bde818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9bde8180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9bde817f20 'struct __va_list_tag'
+|     `-Record 0x7f9bde817e98 '__va_list_tag'
+|-FunctionDecl 0x7f9bde040c60 <../Data/C2AST/pr40340-1.c:7:1, line:13:1> line:10:1 used test 'void (char *)' static inline
+| |-ParmVarDecl 0x7f9bde818178 <col:7, col:13> col:13 used p 'char *'
+| |-CompoundStmt 0x7f9bde041128 <line:11:1, line:13:1>
+| | `-CallExpr 0x7f9bde0410a0 <line:12:3, col:18> 'void *'
+| |   |-ImplicitCastExpr 0x7f9bde041088 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7f9bde040fb0 <col:3> 'void *(void *, int, unsigned long)' Function 0x7f9bde040dd8 'memset' 'void *(void *, int, unsigned long)'
+| |   |-ImplicitCastExpr 0x7f9bde0410f8 <col:11> 'void *' <BitCast>
+| |   | `-ImplicitCastExpr 0x7f9bde0410e0 <col:11> 'char *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7f9bde040fd8 <col:11> 'char *' lvalue ParmVar 0x7f9bde818178 'p' 'char *'
+| |   |-IntegerLiteral 0x7f9bde041000 <col:14> 'int' 0
+| |   `-ImplicitCastExpr 0x7f9bde041110 <col:17> 'unsigned long' <IntegralCast>
+| |     `-IntegerLiteral 0x7f9bde041020 <col:17> 'int' 6
+| `-AlwaysInlineAttr 0x7f9bde040d08 <line:8:17> always_inline
+|-FunctionDecl 0x7f9bde040dd8 <line:12:3> col:3 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f9bde040e78 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f9bde040ed8 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f9bde040f38 <<invalid sloc>> <invalid sloc> 'unsigned long'
+`-FunctionDecl 0x7f9bde041208 <line:15:1, line:21:1> line:16:1 main 'int (void)'
+  `-CompoundStmt 0x7f9bde0414e0 <line:17:1, line:21:1>
+    |-DeclStmt 0x7f9bde0413b8 <line:18:3, col:14>
+    | `-VarDecl 0x7f9bde041358 <col:3, col:13> col:8 used buf 'char [4]'
+    |-CallExpr 0x7f9bde041460 <line:19:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7f9bde041448 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9bde0413d0 <col:3> 'void (char *)' Function 0x7f9bde040c60 'test' 'void (char *)'
+    | `-ImplicitCastExpr 0x7f9bde041490 <col:9> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f9bde0413f8 <col:9> 'char [4]' lvalue Var 0x7f9bde041358 'buf' 'char [4]'
+    `-ReturnStmt 0x7f9bde0414c8 <line:20:3, col:10>
+      `-IntegerLiteral 0x7f9bde0414a8 <col:10> 'int' 0

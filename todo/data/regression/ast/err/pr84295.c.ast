@@ -1,0 +1,27 @@
+../Data/C2AST/pr84295.c:6:6: error: redefinition of a 'extern inline' function 'foo' is not supported in C99 mode
+void foo (void) {}
+     ^
+../Data/C2AST/pr84295.c:5:23: note: previous definition is here
+extern __inline  void foo (void) {}
+                      ^
+1 error generated.
+TranslationUnitDecl 0x7f9a42823ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a42824460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a42824180 '__int128'
+|-TypedefDecl 0x7f9a428244d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a428241a0 'unsigned __int128'
+|-TypedefDecl 0x7f9a428247a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a428245b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a42824528 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a42824840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a42824800 'char *'
+|   `-BuiltinType 0x7f9a42823f80 'char'
+|-TypedefDecl 0x7f9a42824b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a42824ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a42824920 'struct __va_list_tag'
+|     `-Record 0x7f9a42824898 '__va_list_tag'
+|-FunctionDecl 0x7f9a4201ac20 <../Data/C2AST/pr84295.c:4:1, col:22> col:13 foo 'void (void)' extern
+|-FunctionDecl 0x7f9a4201ad90 prev 0x7f9a4201ac20 <line:5:1, col:35> col:23 foo 'void (void)' extern inline
+| `-CompoundStmt 0x7f9a4201ae30 <col:34, col:35>
+`-FunctionDecl 0x7f9a4201aed0 prev 0x7f9a4201ad90 <line:6:1, col:18> col:6 invalid foo 'void (void)'
+  `-CompoundStmt 0x7f9a4201af70 <col:17, col:18>

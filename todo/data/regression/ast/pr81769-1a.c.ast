@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fe5a20174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe5a2801000 <../Data/C2AST/pr81769-1a.c:4:1, col:13> col:13 referenced v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fe5a2018180 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fe5a20175e0 'int'
+|-TypedefDecl 0x7fe5a2801090 <line:5:1, col:32> col:32 referenced u64 'unsigned long long'
+| |-BuiltinType 0x7fe5a20176c0 'unsigned long long'
+| `-AlignedAttr 0x7fe5a28010e8 <col:52, col:62> aligned
+|   `-IntegerLiteral 0x7fe5a2801058 <col:60> 'int' 64
+`-FunctionDecl 0x7fe5a2801460 <line:8:1, line:18:1> line:12:1 foo 'void (u64 *, v8si *, v8si *)'
+  |-ParmVarDecl 0x7fe5a28011c8 <col:6, col:11> col:11 used idx 'u64 *'
+  |-ParmVarDecl 0x7fe5a28012b8 <col:16, col:22> col:22 used out_start 'v8si *'
+  |-ParmVarDecl 0x7fe5a2801328 <col:33, col:39> col:39 used regions 'v8si *'
+  `-CompoundStmt 0x7fe5a28018d0 <line:13:1, line:18:1>
+    `-IfStmt 0x7fe5a2801898 <line:14:3, line:17:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe5a2801608 <line:14:7, col:14> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe5a28015d8 <col:7, col:8> 'u64':'unsigned long long' <LValueToRValue>
+      | | `-UnaryOperator 0x7fe5a2801598 <col:7, col:8> 'u64':'unsigned long long' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7fe5a2801580 <col:8> 'u64 *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fe5a2801558 <col:8> 'u64 *' lvalue ParmVar 0x7fe5a28011c8 'idx' 'u64 *'
+      | `-ImplicitCastExpr 0x7fe5a28015f0 <col:14> 'unsigned long long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fe5a28015b8 <col:14> 'int' 20
+      |-CompoundStmt 0x7fe5a2801878 <col:19, line:17:3>
+      | |-DeclStmt 0x7fe5a2801798 <line:15:5, col:30>
+      | | `-VarDecl 0x7fe5a2801640 <col:5, col:29> col:10 used base 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' cinit
+      | |   `-ImplicitCastExpr 0x7fe5a2801780 <col:17, col:29> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+      | |     `-ArraySubscriptExpr 0x7fe5a2801758 <col:17, col:29> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+      | |       |-ImplicitCastExpr 0x7fe5a2801728 <col:17> 'v8si *' <LValueToRValue>
+      | |       | `-DeclRefExpr 0x7fe5a28016a0 <col:17> 'v8si *' lvalue ParmVar 0x7fe5a2801328 'regions' 'v8si *'
+      | |       `-ImplicitCastExpr 0x7fe5a2801740 <col:25, col:26> 'u64':'unsigned long long' <LValueToRValue>
+      | |         `-UnaryOperator 0x7fe5a2801708 <col:25, col:26> 'u64':'unsigned long long' lvalue prefix '*'
+      | |           `-ImplicitCastExpr 0x7fe5a28016f0 <col:26> 'u64 *' <LValueToRValue>
+      | |             `-DeclRefExpr 0x7fe5a28016c8 <col:26> 'u64 *' lvalue ParmVar 0x7fe5a28011c8 'idx' 'u64 *'
+      | `-BinaryOperator 0x7fe5a2801850 <line:16:5, col:18> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+      |   |-UnaryOperator 0x7fe5a28017f0 <col:5, col:6> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+      |   | `-ImplicitCastExpr 0x7fe5a28017d8 <col:6> 'v8si *' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fe5a28017b0 <col:6> 'v8si *' lvalue ParmVar 0x7fe5a28012b8 'out_start' 'v8si *'
+      |   `-ImplicitCastExpr 0x7fe5a2801838 <col:18> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fe5a2801810 <col:18> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fe5a2801640 'base' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+      `-<<<NULL>>>

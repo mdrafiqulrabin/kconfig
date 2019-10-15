@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fd2d782ace8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2d782b978 <../Data/C2AST/pr33696.c:5:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fd2d782ae40 'unsigned char'
+|-TypedefDecl 0x7fd2d8014200 <line:6:1, col:22> col:22 referenced uint_least32_t 'unsigned int'
+| `-BuiltinType 0x7fd2d782ae80 'unsigned int'
+|-FunctionDecl 0x7fd2d8014338 <line:7:1, col:31> col:12 used foo 'int (long)' extern
+| `-ParmVarDecl 0x7fd2d8014270 <col:17, col:26> col:26 __off 'long'
+`-FunctionDecl 0x7fd2d8014550 <line:8:1, line:12:1> line:8:6 write 'void (uint_least32_t)'
+  |-ParmVarDecl 0x7fd2d8014450 <col:13, col:28> col:28 used chunk_len 'uint_least32_t':'unsigned int'
+  `-CompoundStmt 0x7fd2d8014948 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fd2d8014738 <line:10:6, col:20>
+    | `-VarDecl 0x7fd2d80146d8 <col:6, col:19> col:14 referenced tmp 'uint8_t [4]'
+    `-CallExpr 0x7fd2d8014900 <line:11:6, col:41> 'int'
+      |-ImplicitCastExpr 0x7fd2d80148e8 <col:6> 'int (*)(long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd2d8014750 <col:6> 'int (long)' Function 0x7fd2d8014338 'foo' 'int (long)'
+      `-ImplicitCastExpr 0x7fd2d8014930 <col:11, col:40> 'long' <IntegralCast>
+        `-BinaryOperator 0x7fd2d8014898 <col:11, col:40> 'unsigned long' '-'
+          |-ImplicitCastExpr 0x7fd2d8014880 <col:11, col:18> 'unsigned long' <IntegralCast>
+          | `-UnaryOperator 0x7fd2d80147f8 <col:11, col:18> 'long' prefix '-'
+          |   `-CStyleCastExpr 0x7fd2d80147d0 <col:12, col:18> 'long' <IntegralCast>
+          |     `-ImplicitCastExpr 0x7fd2d80147b8 <col:18> 'uint_least32_t':'unsigned int' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fd2d8014778 <col:18> 'uint_least32_t':'unsigned int' lvalue ParmVar 0x7fd2d8014450 'chunk_len' 'uint_least32_t':'unsigned int'
+          `-UnaryExprOrTypeTraitExpr 0x7fd2d8014860 <col:30, col:40> 'unsigned long' sizeof
+            `-ParenExpr 0x7fd2d8014840 <col:36, col:40> 'uint8_t [4]' lvalue
+              `-DeclRefExpr 0x7fd2d8014818 <col:37> 'uint8_t [4]' lvalue Var 0x7fd2d80146d8 'tmp' 'uint8_t [4]'

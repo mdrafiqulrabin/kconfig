@@ -1,0 +1,181 @@
+../Data/C2AST/pr78057.c:10:7: error: use of unknown builtin '__builtin_ia32_tzcnt_u16' [-Wimplicit-function-declaration]
+  if (__builtin_ia32_tzcnt_u16 (16) != 4
+      ^
+../Data/C2AST/pr78057.c:12:10: error: use of unknown builtin '__builtin_ia32_lzcnt_u16' [-Wimplicit-function-declaration]
+      || __builtin_ia32_lzcnt_u16 (0x1ff) != 7
+         ^
+../Data/C2AST/pr78057.c:12:10: note: did you mean '__builtin_ia32_tzcnt_u16'?
+../Data/C2AST/pr78057.c:10:7: note: '__builtin_ia32_tzcnt_u16' declared here
+  if (__builtin_ia32_tzcnt_u16 (16) != 4
+      ^
+../Data/C2AST/pr78057.c:14:10: error: use of unknown builtin '__builtin_ia32_tzcnt_u32' [-Wimplicit-function-declaration]
+      || __builtin_ia32_tzcnt_u32 (8) != 3
+         ^
+../Data/C2AST/pr78057.c:14:10: note: did you mean '__builtin_ia32_tzcnt_u16'?
+../Data/C2AST/pr78057.c:10:7: note: '__builtin_ia32_tzcnt_u16' declared here
+  if (__builtin_ia32_tzcnt_u16 (16) != 4
+      ^
+../Data/C2AST/pr78057.c:16:10: error: use of unknown builtin '__builtin_ia32_lzcnt_u32' [-Wimplicit-function-declaration]
+      || __builtin_ia32_lzcnt_u32 (0x3fffffff) != 2
+         ^
+../Data/C2AST/pr78057.c:16:10: note: did you mean '__builtin_ia32_tzcnt_u32'?
+../Data/C2AST/pr78057.c:14:10: note: '__builtin_ia32_tzcnt_u32' declared here
+      || __builtin_ia32_tzcnt_u32 (8) != 3
+         ^
+../Data/C2AST/pr78057.c:19:10: error: use of unknown builtin '__builtin_ia32_tzcnt_u64' [-Wimplicit-function-declaration]
+      || __builtin_ia32_tzcnt_u64 (4) != 2
+         ^
+../Data/C2AST/pr78057.c:21:10: error: use of unknown builtin '__builtin_ia32_lzcnt_u64' [-Wimplicit-function-declaration]
+      || __builtin_ia32_lzcnt_u64 (0x1fffffff) != 35
+         ^
+../Data/C2AST/pr78057.c:21:10: note: did you mean '__builtin_ia32_tzcnt_u64'?
+../Data/C2AST/pr78057.c:19:10: note: '__builtin_ia32_tzcnt_u64' declared here
+      || __builtin_ia32_tzcnt_u64 (4) != 2
+         ^
+TranslationUnitDecl 0x7fc767017ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc767018260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc767017f80 '__int128'
+|-TypedefDecl 0x7fc7670182d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc767017fa0 'unsigned __int128'
+|-TypedefDecl 0x7fc7670185a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc7670183b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc767018328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc767018640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc767018600 'char *'
+|   `-BuiltinType 0x7fc767017d80 'char'
+|-TypedefDecl 0x7fc767018908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc7670188b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc767018720 'struct __va_list_tag'
+|     `-Record 0x7fc767018698 '__va_list_tag'
+|-FunctionDecl 0x7fc767059820 <../Data/C2AST/pr78057.c:5:1, col:29> col:13 used link_error 'void (void)' extern
+`-FunctionDecl 0x7fc7670599e8 <line:7:1, line:36:1> line:8:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fc767059918 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fc767071198 <line:9:1, line:36:1>
+    |-IfStmt 0x7fc767070c98 <line:10:3, line:25:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc767070bd8 <line:10:7, line:22:42> 'int' '||'
+    | | |-BinaryOperator 0x7fc767070ad8 <line:10:7, line:21:51> 'int' '||'
+    | | | |-BinaryOperator 0x7fc767070900 <line:10:7, line:20:42> 'int' '||'
+    | | | | |-BinaryOperator 0x7fc767070800 <line:10:7, line:19:42> 'int' '||'
+    | | | | | |-BinaryOperator 0x7fc76705a618 <line:10:7, line:17:42> 'int' '||'
+    | | | | | | |-BinaryOperator 0x7fc76705a518 <line:10:7, line:16:51> 'int' '||'
+    | | | | | | | |-BinaryOperator 0x7fc76705a340 <line:10:7, line:15:42> 'int' '||'
+    | | | | | | | | |-BinaryOperator 0x7fc76705a240 <line:10:7, line:14:42> 'int' '||'
+    | | | | | | | | | |-BinaryOperator 0x7fc76705a068 <line:10:7, line:13:42> 'int' '||'
+    | | | | | | | | | | |-BinaryOperator 0x7fc767059f68 <line:10:7, line:12:46> 'int' '||'
+    | | | | | | | | | | | |-BinaryOperator 0x7fc767059d90 <line:10:7, line:11:42> 'int' '||'
+    | | | | | | | | | | | | |-BinaryOperator 0x7fc767059c90 <line:10:7, col:40> 'int' '!='
+    | | | | | | | | | | | | | |-CallExpr 0x7fc767059c40 <col:7, col:35> 'int'
+    | | | | | | | | | | | | | | |-ImplicitCastExpr 0x7fc767059c28 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | | | | | | | | | | `-DeclRefExpr 0x7fc767059bb0 <col:7> 'int ()' Function 0x7fc767059b00 '__builtin_ia32_tzcnt_u16' 'int ()'
+    | | | | | | | | | | | | | | `-IntegerLiteral 0x7fc767059bd8 <col:33> 'int' 16
+    | | | | | | | | | | | | | `-IntegerLiteral 0x7fc767059c70 <col:40> 'int' 4
+    | | | | | | | | | | | | `-BinaryOperator 0x7fc767059d68 <line:11:10, col:42> 'int' '!='
+    | | | | | | | | | | | |   |-CallExpr 0x7fc767059d18 <col:10, col:37> 'int'
+    | | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fc767059d00 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | | | | | | |   | | `-DeclRefExpr 0x7fc767059cb8 <col:10> 'int ()' Function 0x7fc767059b00 '__builtin_ia32_tzcnt_u16' 'int ()'
+    | | | | | | | | | | | |   | `-IntegerLiteral 0x7fc767059ce0 <col:36> 'int' 0
+    | | | | | | | | | | | |   `-IntegerLiteral 0x7fc767059d48 <col:42> 'int' 16
+    | | | | | | | | | | | `-BinaryOperator 0x7fc767059f40 <line:12:10, col:46> 'int' '!='
+    | | | | | | | | | | |   |-CallExpr 0x7fc767059ef0 <col:10, col:41> 'int'
+    | | | | | | | | | | |   | |-ImplicitCastExpr 0x7fc767059ed8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | | | | | |   | | `-DeclRefExpr 0x7fc767059e90 <col:10> 'int ()' Function 0x7fc767059de0 '__builtin_ia32_lzcnt_u16' 'int ()'
+    | | | | | | | | | | |   | `-IntegerLiteral 0x7fc767059eb8 <col:36> 'int' 511
+    | | | | | | | | | | |   `-IntegerLiteral 0x7fc767059f20 <col:46> 'int' 7
+    | | | | | | | | | | `-BinaryOperator 0x7fc76705a040 <line:13:10, col:42> 'int' '!='
+    | | | | | | | | | |   |-CallExpr 0x7fc767059ff0 <col:10, col:37> 'int'
+    | | | | | | | | | |   | |-ImplicitCastExpr 0x7fc767059fd8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | | | | |   | | `-DeclRefExpr 0x7fc767059f90 <col:10> 'int ()' Function 0x7fc767059de0 '__builtin_ia32_lzcnt_u16' 'int ()'
+    | | | | | | | | | |   | `-IntegerLiteral 0x7fc767059fb8 <col:36> 'int' 0
+    | | | | | | | | | |   `-IntegerLiteral 0x7fc76705a020 <col:42> 'int' 16
+    | | | | | | | | | `-BinaryOperator 0x7fc76705a218 <line:14:10, col:42> 'int' '!='
+    | | | | | | | | |   |-CallExpr 0x7fc76705a1c8 <col:10, col:37> 'int'
+    | | | | | | | | |   | |-ImplicitCastExpr 0x7fc76705a1b0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | | | |   | | `-DeclRefExpr 0x7fc76705a168 <col:10> 'int ()' Function 0x7fc76705a0b8 '__builtin_ia32_tzcnt_u32' 'int ()'
+    | | | | | | | | |   | `-IntegerLiteral 0x7fc76705a190 <col:36> 'int' 8
+    | | | | | | | | |   `-IntegerLiteral 0x7fc76705a1f8 <col:42> 'int' 3
+    | | | | | | | | `-BinaryOperator 0x7fc76705a318 <line:15:10, col:42> 'int' '!='
+    | | | | | | | |   |-CallExpr 0x7fc76705a2c8 <col:10, col:37> 'int'
+    | | | | | | | |   | |-ImplicitCastExpr 0x7fc76705a2b0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | | |   | | `-DeclRefExpr 0x7fc76705a268 <col:10> 'int ()' Function 0x7fc76705a0b8 '__builtin_ia32_tzcnt_u32' 'int ()'
+    | | | | | | | |   | `-IntegerLiteral 0x7fc76705a290 <col:36> 'int' 0
+    | | | | | | | |   `-IntegerLiteral 0x7fc76705a2f8 <col:42> 'int' 32
+    | | | | | | | `-BinaryOperator 0x7fc76705a4f0 <line:16:10, col:51> 'int' '!='
+    | | | | | | |   |-CallExpr 0x7fc76705a4a0 <col:10, col:46> 'int'
+    | | | | | | |   | |-ImplicitCastExpr 0x7fc76705a488 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | | |   | | `-DeclRefExpr 0x7fc76705a440 <col:10> 'int ()' Function 0x7fc76705a390 '__builtin_ia32_lzcnt_u32' 'int ()'
+    | | | | | | |   | `-IntegerLiteral 0x7fc76705a468 <col:36> 'int' 1073741823
+    | | | | | | |   `-IntegerLiteral 0x7fc76705a4d0 <col:51> 'int' 2
+    | | | | | | `-BinaryOperator 0x7fc76705a5f0 <line:17:10, col:42> 'int' '!='
+    | | | | | |   |-CallExpr 0x7fc76705a5a0 <col:10, col:37> 'int'
+    | | | | | |   | |-ImplicitCastExpr 0x7fc76705a588 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | | |   | | `-DeclRefExpr 0x7fc76705a540 <col:10> 'int ()' Function 0x7fc76705a390 '__builtin_ia32_lzcnt_u32' 'int ()'
+    | | | | | |   | `-IntegerLiteral 0x7fc76705a568 <col:36> 'int' 0
+    | | | | | |   `-IntegerLiteral 0x7fc76705a5d0 <col:42> 'int' 32
+    | | | | | `-BinaryOperator 0x7fc76705a7c8 <line:19:10, col:42> 'int' '!='
+    | | | | |   |-CallExpr 0x7fc76705a778 <col:10, col:37> 'int'
+    | | | | |   | |-ImplicitCastExpr 0x7fc76705a760 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | | |   | | `-DeclRefExpr 0x7fc76705a718 <col:10> 'int ()' Function 0x7fc76705a668 '__builtin_ia32_tzcnt_u64' 'int ()'
+    | | | | |   | `-IntegerLiteral 0x7fc76705a740 <col:36> 'int' 4
+    | | | | |   `-IntegerLiteral 0x7fc76705a7a8 <col:42> 'int' 2
+    | | | | `-BinaryOperator 0x7fc7670708d8 <line:20:10, col:42> 'int' '!='
+    | | | |   |-CallExpr 0x7fc767070888 <col:10, col:37> 'int'
+    | | | |   | |-ImplicitCastExpr 0x7fc767070870 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | | |   | | `-DeclRefExpr 0x7fc767070828 <col:10> 'int ()' Function 0x7fc76705a668 '__builtin_ia32_tzcnt_u64' 'int ()'
+    | | | |   | `-IntegerLiteral 0x7fc767070850 <col:36> 'int' 0
+    | | | |   `-IntegerLiteral 0x7fc7670708b8 <col:42> 'int' 64
+    | | | `-BinaryOperator 0x7fc767070ab0 <line:21:10, col:51> 'int' '!='
+    | | |   |-CallExpr 0x7fc767070a60 <col:10, col:46> 'int'
+    | | |   | |-ImplicitCastExpr 0x7fc767070a48 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | | |   | | `-DeclRefExpr 0x7fc767070a00 <col:10> 'int ()' Function 0x7fc767070950 '__builtin_ia32_lzcnt_u64' 'int ()'
+    | | |   | `-IntegerLiteral 0x7fc767070a28 <col:366 errors generated.
+> 'int' 536870911
+    | | |   `-IntegerLiteral 0x7fc767070a90 <col:51> 'int' 35
+    | | `-BinaryOperator 0x7fc767070bb0 <line:22:10, col:42> 'int' '!='
+    | |   |-CallExpr 0x7fc767070b60 <col:10, col:37> 'int'
+    | |   | |-ImplicitCastExpr 0x7fc767070b48 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    | |   | | `-DeclRefExpr 0x7fc767070b00 <col:10> 'int ()' Function 0x7fc767070950 '__builtin_ia32_lzcnt_u64' 'int ()'
+    | |   | `-IntegerLiteral 0x7fc767070b28 <col:36> 'int' 0
+    | |   `-IntegerLiteral 0x7fc767070b90 <col:42> 'int' 64
+    | |-CallExpr 0x7fc767070c70 <line:25:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc767070c58 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc767070c00 <col:5> 'void (void)' Function 0x7fc767059820 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    |-CompoundAssignOperator 0x7fc767070d18 <line:26:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fc767070cd0 <col:3> 'int' lvalue ParmVar 0x7fc767059918 'x' 'int'
+    | `-IntegerLiteral 0x7fc767070cf8 <col:8> 'int' 2
+    |-IfStmt 0x7fc767070e10 <line:27:3, line:28:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc767070db0 <line:27:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fc767070d98 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc767070d50 <col:7> 'int' lvalue ParmVar 0x7fc767059918 'x' 'int'
+    | | `-IntegerLiteral 0x7fc767070d78 <col:12> 'int' 0
+    | |-ReturnStmt 0x7fc767070df8 <line:28:5, col:12>
+    | | `-IntegerLiteral 0x7fc767070dd8 <col:12> 'int' 5
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc767071180 <line:29:3, line:33:32>
+      `-BinaryOperator 0x7fc767071158 <line:29:10, line:33:32> 'int' '+'
+        |-BinaryOperator 0x7fc767071080 <line:29:10, line:32:32> 'int' '+'
+        | |-BinaryOperator 0x7fc767070fa8 <line:29:10, line:30:39> 'int' '+'
+        | | |-CallExpr 0x7fc767070eb0 <line:29:10, col:37> 'int'
+        | | | |-ImplicitCastExpr 0x7fc767070e98 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | | | | `-DeclRefExpr 0x7fc767070e48 <col:10> 'int ()' Function 0x7fc76705a0b8 '__builtin_ia32_tzcnt_u32' 'int ()'
+        | | | `-ImplicitCastExpr 0x7fc767070ee0 <col:36> 'int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fc767070e70 <col:36> 'int' lvalue ParmVar 0x7fc767059918 'x' 'int'
+        | | `-CallExpr 0x7fc767070f60 <line:30:12, col:39> 'int'
+        | |   |-ImplicitCastExpr 0x7fc767070f48 <col:12> 'int (*)()' <FunctionToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fc767070ef8 <col:12> 'int ()' Function 0x7fc76705a390 '__builtin_ia32_lzcnt_u32' 'int ()'
+        | |   `-ImplicitCastExpr 0x7fc767070f90 <col:38> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fc767070f20 <col:38> 'int' lvalue ParmVar 0x7fc767059918 'x' 'int'
+        | `-CallExpr 0x7fc767071038 <line:32:5, col:32> 'int'
+        |   |-ImplicitCastExpr 0x7fc767071020 <col:5> 'int (*)()' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fc767070fd0 <col:5> 'int ()' Function 0x7fc76705a668 '__builtin_ia32_tzcnt_u64' 'int ()'
+        |   `-ImplicitCastExpr 0x7fc767071068 <col:31> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fc767070ff8 <col:31> 'int' lvalue ParmVar 0x7fc767059918 'x' 'int'
+        `-CallExpr 0x7fc767071110 <line:33:5, col:32> 'int'
+          |-ImplicitCastExpr 0x7fc7670710f8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fc7670710a8 <col:5> 'int ()' Function 0x7fc767070950 '__builtin_ia32_lzcnt_u64' 'int ()'
+          `-ImplicitCastExpr 0x7fc767071140 <col:31> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fc7670710d0 <col:31> 'int' lvalue ParmVar 0x7fc767059918 'x' 'int'

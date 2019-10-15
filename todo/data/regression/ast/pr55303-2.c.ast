@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f807082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f807086d868 <../Data/C2AST/pr55303-2.c:6:1, line:11:1> line:7:1 test_00 'int (int)'
+| |-ParmVarDecl 0x7f807082c978 <col:10, col:14> col:14 used a 'int'
+| `-CompoundStmt 0x7f807086da80 <line:8:1, line:11:1>
+|   `-ReturnStmt 0x7f807086da68 <line:10:3, col:23>
+|     `-ConditionalOperator 0x7f807086da38 <col:10, col:23> 'int'
+|       |-BinaryOperator 0x7f807086d9b0 <col:10, col:15> 'int' '>='
+|       | |-ImplicitCastExpr 0x7f807086d998 <col:10> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f807086d950 <col:10> 'int' lvalue ParmVar 0x7f807082c978 'a' 'int'
+|       | `-IntegerLiteral 0x7f807086d978 <col:15> 'int' 0
+|       |-ImplicitCastExpr 0x7f807086da20 <col:19> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f807086d9d8 <col:19> 'int' lvalue ParmVar 0x7f807082c978 'a' 'int'
+|       `-IntegerLiteral 0x7f807086da00 <col:23> 'int' 0
+|-FunctionDecl 0x7f807086db40 <line:13:1, line:18:1> line:14:1 test_01 'int (int)'
+| |-ParmVarDecl 0x7f807086dab0 <col:10, col:14> col:14 used a 'int'
+| `-CompoundStmt 0x7f807086dd18 <line:15:1, line:18:1>
+|   `-ReturnStmt 0x7f807086dd00 <line:17:3, col:23>
+|     `-ConditionalOperator 0x7f807086dcd0 <col:10, col:23> 'int'
+|       |-BinaryOperator 0x7f807086dc48 <col:10, col:15> 'int' '<='
+|       | |-ImplicitCastExpr 0x7f807086dc30 <col:10> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f807086dbe8 <col:10> 'int' lvalue ParmVar 0x7f807086dab0 'a' 'int'
+|       | `-IntegerLiteral 0x7f807086dc10 <col:15> 'int' 0
+|       |-ImplicitCastExpr 0x7f807086dcb8 <col:19> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f807086dc70 <col:19> 'int' lvalue ParmVar 0x7f807086dab0 'a' 'int'
+|       `-IntegerLiteral 0x7f807086dc98 <col:23> 'int' 0
+|-FunctionDecl 0x7f807086ddd8 <line:20:1, line:25:1> line:21:1 test_02 'int (int)'
+| |-ParmVarDecl 0x7f807086dd48 <col:10, col:14> col:14 used a 'int'
+| `-CompoundStmt 0x7f807086dfb0 <line:22:1, line:25:1>
+|   `-ReturnStmt 0x7f807086df98 <line:24:3, col:22>
+|     `-ConditionalOperator 0x7f807086df68 <col:10, col:22> 'int'
+|       |-BinaryOperator 0x7f807086dee0 <col:10, col:14> 'int' '<'
+|       | |-ImplicitCastExpr 0x7f807086dec8 <col:10> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f807086de80 <col:10> 'int' lvalue ParmVar 0x7f807086dd48 'a' 'int'
+|       | `-IntegerLiteral 0x7f807086dea8 <col:14> 'int' 1
+|       |-IntegerLiteral 0x7f807086df08 <col:18> 'int' 1
+|       `-ImplicitCastExpr 0x7f807086df50 <col:22> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f807086df28 <col:22> 'int' lvalue ParmVar 0x7f807086dd48 'a' 'int'
+`-FunctionDecl 0x7f807086e070 <line:27:1, line:32:1> line:28:1 test_03 'int (int)'
+  |-ParmVarDecl 0x7f807086dfe0 <col:10, col:14> col:14 used a 'int'
+  `-CompoundStmt 0x7f807086e248 <line:29:1, line:32:1>
+    `-ReturnStmt 0x7f807086e230 <line:31:3, col:22>
+      `-ConditionalOperator 0x7f807086e200 <col:10, col:22> 'int'
+        |-BinaryOperator 0x7f807086e178 <col:10, col:14> 'int' '<'
+        | |-ImplicitCastExpr 0x7f807086e160 <col:10> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f807086e118 <col:10> 'int' lvalue ParmVar 0x7f807086dfe0 'a' 'int'
+        | `-IntegerLiteral 0x7f807086e140 <col:14> 'int' 1
+        |-ImplicitCastExpr 0x7f807086e1e8 <col:18> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f807086e1a0 <col:18> 'int' lvalue ParmVar 0x7f807086dfe0 'a' 'int'
+        `-IntegerLiteral 0x7f807086e1c8 <col:22> 'int' 1

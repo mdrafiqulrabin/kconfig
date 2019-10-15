@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fb2dc82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb2dc86d800 <../Data/C2AST/pr15698-1.c:5:1, col:13> col:5 foobar 'int ()'
+|-FunctionDecl 0x7fb2dc86d9c8 <line:7:1, line:10:1> line:7:5 func 'int (int)'
+| |-ParmVarDecl 0x7fb2dc86d8f8 <col:11, col:15> col:15 blah 'int'
+| `-CompoundStmt 0x7fb2dc86de08 <line:8:1, line:10:1>
+|   `-DeclStmt 0x7fb2dc86ddf0 <line:9:3, col:17>
+|     `-FunctionDecl 0x7fb2dc86dc70 parent 0x7fb2dc82bce8 prev 0x7fb2dc86db00 <col:3, col:16> col:9 rindex 'char *(const char *, int)'
+|       |-ParmVarDecl 0x7fb2dc86dd20 <<invalid sloc>> <invalid sloc> implicit 'const char *'
+|       `-ParmVarDecl 0x7fb2dc86dd80 <<invalid sloc>> <invalid sloc> implicit 'int'
+|-FunctionDecl 0x7fb2dc86db00 <col:9> col:9 implicit rindex 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7fb2dc86dba0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7fb2dc86dc00 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fb2dc86de48 prev 0x7fb2dc86d800 <line:12:1, line:15:1> line:12:5 foobar 'int ()'
+| `-CompoundStmt 0x7fb2dc86df20 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fb2dc86df08 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7fb2dc86dee8 <col:10> 'int' 0
+`-FunctionDecl 0x7fb2dc86e098 prev 0x7fb2dc86dc70 <line:17:1, line:21:1> line:17:7 rindex 'char *(char *, char)'
+  |-ParmVarDecl 0x7fb2dc86df50 <line:18:6, col:21> col:21 a 'char *' register
+  |-ParmVarDecl 0x7fb2dc86dfc0 <col:6, col:24> col:24 b 'char' register
+  `-CompoundStmt 0x7fb2dc86e1e0 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7fb2dc86e1c8 <line:20:3, col:10>
+      `-ImplicitCastExpr 0x7fb2dc86e1b0 <col:10> 'char *' <NullToPointer>
+        `-IntegerLiteral 0x7fb2dc86e190 <col:10> 'int' 0

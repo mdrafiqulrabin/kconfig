@@ -1,0 +1,94 @@
+../Data/C2AST/pr63633-ice-mult.c:11:12: error: unknown type name '__int24'
+  register __int24 reg __asm ("20");
+           ^
+../Data/C2AST/pr63633-ice-mult.c:15:16: error: unknown type name '__int24'
+void ice_sh24 (__int24 x)
+               ^
+../Data/C2AST/pr63633-ice-mult.c:17:12: error: unknown type name '__int24'
+  register __int24 reg __asm ("20");
+           ^
+../Data/C2AST/pr63633-ice-mult.c:21:17: error: unknown type name '__int24'
+void ice_sh24b (__int24 x)
+                ^
+../Data/C2AST/pr63633-ice-mult.c:23:12: error: unknown type name '__int24'
+  register __int24 reg __asm ("20");
+           ^
+TranslationUnitDecl 0x7f9e0782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e0782c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e0782bf80 '__int128'
+|-TypedefDecl 0x7f9e0782c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e0782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f9e0782c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e0782c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e0782c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e0782c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e0782c600 'char *'
+|   `-BuiltinType 0x7f9e0782bd80 'char'
+|-TypedefDecl 0x7f9e0782c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e0782c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e0782c720 'struct __va_list_tag'
+|     `-Record 0x7f9e0782c698 '__va_list_tag'
+|-FunctionDecl 0x7f9e08014260 <../Data/C2AST/pr63633-ice-mult.c:3:1, line:7:1> line:3:6 ice_mult32 'void (int)'
+| |-ParmVarDecl 0x7f9e0782c978 <col:18, col:22> col:22 used x 'int'
+| `-CompoundStmt 0x7f9e08014688 <line:4:1, line:7:1>
+|   |-DeclStmt 0x7f9e08014488 <line:5:3, col:33>
+|   | `-VarDecl 0x7f9e080143d0 <col:3, col:17> col:17 used reg 'long' register
+|   |   `-AsmLabelAttr 0x7f9e08014430 <col:28> "22"
+|   `-GCCAsmStmt 0x7f9e08014628 <line:6:3, col:49>
+|     `-BinaryOperator 0x7f9e08014600 <col:31, col:47> 'long' '='
+|       |-DeclRefExpr 0x7f9e08014538 <col:31> 'long' lvalue Var 0x7f9e080143d0 'reg' 'long'
+|       `-ImplicitCastExpr 0x7f9e080145e8 <col:37, col:47> 'long' <IntegralCast>
+|         `-BinaryOperator 0x7f9e080145c0 <col:37, col:47> 'int' '*'
+|           |-IntegerLiteral 0x7f9e08014560 <col:37> 'int' 74565
+|           `-ImplicitCastExpr 0x7f9e080145a8 <col:47> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9e08014580 <col:47> 'int' lvalue ParmVar 0x7f9e0782c978 'x' 'int'
+|-FunctionDecl 0x7f9e08014748 <line:9:1, line:13:1> line:9:6 ice_mult24 'void (int)'
+| |-ParmVarDecl 0x7f9e080146c0 <col:18, col:22> col:22 used x 'int'
+| `-CompoundStmt 0x7f9e08014a08 <line:10:1, line:13:1>
+|   `-DeclStmt 0x7f9e08014908 <line:11:3, col:36>
+|     `-VarDecl 0x7f9e08014850 <col:3, col:20> col:20 invalid reg 'int' register
+|       `-AsmLabelAttr 0x7f9e080148b0 <col:31> "20"
+|-FunctionDecl 0x7f9e08014ac0 <line:15:1, line:19:1> line:15:6 invalid ice_sh24 'void (int)'
+| |-ParmVarDecl 0x7f9e08014a38 <col:16, col:24> col:24 invalid x 'int'
+| `-CompoundStmt 0x7f9e08014d00 <line:16:1, line:19:1>
+|   `-DeclStmt 0x7f9e08014c68 <line:17:3, col:36>
+|     `-VarDecl 0x7f9e08014bb0 <col:3, col:20> col:20 invalid reg 'int' register
+|       `-AsmLabelAttr 0x7f9e08014c10 <col:31> "20"
+|-FunctionDecl 0x7f9e08014db8 <line:21:1, line:25:1> line:21:6 invalid ice_sh24b 'void (int)'
+| |-ParmVarDecl 0x7f9e08014d30 <col:17, col:25> col:25 invalid x 'int'
+| `-CompoundStmt 0x7f9e08014ff8 <line:22:1, line:25:1>
+|   `-DeclStmt 0x7f9e08014f60 <line:23:3, col:36>
+|     `-VarDecl 0x7f9e08014ea8 <col:3, col:20> col:20 invalid reg 'int' register
+|       `-AsmLabelAttr 0x7f9e08014f08 <col:31> "20"
+|-FunctionDecl 0x7f9e080150b0 <line:27:1, line:31:1> line:27:6 ice_s16s16 'void (int)'
+| |-ParmVarDecl 0x7f9e08015028 <col:18, col:22> col:22 used x 'int'
+| `-CompoundStmt 0x7f9e0802be80 <line:28:1, line:31:1>
+|   |-DeclStmt 0x7f9e0802bc58 <line:29:3, col:33>
+|   | `-VarDecl 0x7f9e080151a0 <col:3, col:17> col:17 used reg 'long' register
+|   |   `-AsmLabelAttr 0x7f9e0802bc00 <col:28> "20"
+|   `-GCCAsmStmt 0x7f9e0802be20 <line:30:3, col:48>
+|     `-BinaryOperator 0x7f9e0802bdf8 <col:31, col:46> 'long' '='
+|       |-DeclRefExpr 0x7f9e0802bcd0 <col:31> 'long' lvalue Var 0x7f9e080151a0 'reg' 'long'
+|       `-BinaryOperator 0x7f9e0802bdd0 <col:37, col:46> 'long' '*'
+|         |-CStyleCastExpr 0x7f9e0802bd50 <col:37, col:44> 'long' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7f9e0802bd38 <col:44> 'int' <LValueToRValue>
+|     5 errors generated.
+    |   `-DeclRefExpr 0x7f9e0802bcf8 <col:44> 'int' lvalue ParmVar 0x7f9e08015028 'x' 'int'
+|         `-ImplicitCastExpr 0x7f9e0802bdb8 <col:46> 'long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7f9e0802bda0 <col:46> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9e0802bd78 <col:46> 'int' lvalue ParmVar 0x7f9e08015028 'x' 'int'
+`-FunctionDecl 0x7f9e0802bf40 <line:33:1, line:37:1> line:33:6 ice_u16s16 'void (int)'
+  |-ParmVarDecl 0x7f9e0802beb8 <col:18, col:22> col:22 used x 'int'
+  `-CompoundStmt 0x7f9e0802c2f0 <line:34:1, line:37:1>
+    |-DeclStmt 0x7f9e0802c0e8 <line:35:3, col:33>
+    | `-VarDecl 0x7f9e0802c030 <col:3, col:17> col:17 used reg 'long' register
+    |   `-AsmLabelAttr 0x7f9e0802c090 <col:28> "20"
+    `-GCCAsmStmt 0x7f9e0802c290 <line:36:3, col:54>
+      `-BinaryOperator 0x7f9e0802c268 <col:31, col:46> 'long' '='
+        |-DeclRefExpr 0x7f9e0802c160 <col:31> 'long' lvalue Var 0x7f9e0802c030 'reg' 'long'
+        `-BinaryOperator 0x7f9e0802c240 <col:37, col:46> 'long' '*'
+          |-CStyleCastExpr 0x7f9e0802c1e0 <col:37, col:44> 'long' <IntegralCast>
+          | `-ImplicitCastExpr 0x7f9e0802c1c8 <col:44> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f9e0802c188 <col:44> 'int' lvalue ParmVar 0x7f9e0802beb8 'x' 'int'
+          `-ImplicitCastExpr 0x7f9e0802c228 <col:46> 'long' <IntegralCast>
+            `-IntegerLiteral 0x7f9e0802c208 <col:46> 'unsigned int' 4660

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fdbeb8158e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdbec81ccf8 <../Data/C2AST/pr68872.c:7:1, line:14:1> line:8:1 bar 'long (unsigned char *, unsigned char)'
+  |-ParmVarDecl 0x7fdbeb8165a0 <col:6, col:21> col:21 used ptr 'unsigned char *'
+  |-ParmVarDecl 0x7fdbec81cc18 <col:26, col:40> col:40 used val 'unsigned char'
+  `-CompoundStmt 0x7fdbec81d238 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fdbec81ce60 <line:10:3, col:11>
+    | `-VarDecl 0x7fdbec81ce00 <col:3, col:8> col:8 used ret 'long'
+    |-GCCAsmStmt 0x7fdbec81d008 <line:11:3, col:57>
+    | |-ImplicitCastExpr 0x7fdbec81cfd8 <col:42> 'unsigned char' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fdbec81cf58 <col:42> 'unsigned char' lvalue ParmVar 0x7fdbec81cc18 'val' 'unsigned char'
+    | `-ImplicitCastExpr 0x7fdbec81cff0 <col:53> 'unsigned char *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdbec81cfb0 <col:53> 'unsigned char *' lvalue ParmVar 0x7fdbeb8165a0 'ptr' 'unsigned char *'
+    |-GCCAsmStmt 0x7fdbec81d180 <line:12:3, col:44>
+    | `-DeclRefExpr 0x7fdbec81d158 <col:37> 'long' lvalue Var 0x7fdbec81ce00 'ret' 'long'
+    `-ReturnStmt 0x7fdbec81d220 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fdbec81d208 <col:10> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7fdbec81d1e0 <col:10> 'long' lvalue Var 0x7fdbec81ce00 'ret' 'long'

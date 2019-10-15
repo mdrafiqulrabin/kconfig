@@ -1,0 +1,130 @@
+TranslationUnitDecl 0x7fcd1802bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcd1802c960 <../Data/C2AST/pr37380.c:1:9, col:16> col:16 struct basic_block_def
+|-TypedefDecl 0x7fcd190112d0 <col:1, col:33> col:33 referenced basic_block 'struct basic_block_def *'
+| `-PointerType 0x7fcd19011280 'struct basic_block_def *'
+|   `-ElaboratedType 0x7fcd19011220 'struct basic_block_def' sugar
+|     `-RecordType 0x7fcd19011200 'struct basic_block_def'
+|       `-Record 0x7fcd1802c960 'basic_block_def'
+|-RecordDecl 0x7fcd19011340 <line:2:9, col:16> col:16 struct gimple_seq_node_d
+|-TypedefDecl 0x7fcd190114a0 <col:1, col:35> col:35 referenced gimple_seq_node 'struct gimple_seq_node_d *'
+| `-PointerType 0x7fcd19011450 'struct gimple_seq_node_d *'
+|   `-ElaboratedType 0x7fcd190113f0 'struct gimple_seq_node_d' sugar
+|     `-RecordType 0x7fcd190113d0 'struct gimple_seq_node_d'
+|       `-Record 0x7fcd19011d08 'gimple_seq_node_d'
+|-RecordDecl 0x7fcd19011510 <line:3:9, col:16> col:16 struct gimple_seq_d
+|-TypedefDecl 0x7fcd19011670 <col:1, col:30> col:30 referenced gimple_seq 'struct gimple_seq_d *'
+| `-PointerType 0x7fcd19011620 'struct gimple_seq_d *'
+|   `-ElaboratedType 0x7fcd190115c0 'struct gimple_seq_d' sugar
+|     `-RecordType 0x7fcd190115a0 'struct gimple_seq_d'
+|       `-Record 0x7fcd19011e78 'gimple_seq_d'
+|-RecordDecl 0x7fcd190116e0 <line:4:9, line:9:1> line:4:9 struct definition
+| |-FieldDecl 0x7fcd190117c0 <line:6:3, col:19> col:19 referenced ptr 'gimple_seq_node':'struct gimple_seq_node_d *'
+| |-FieldDecl 0x7fcd19011840 <line:7:3, col:14> col:14 referenced seq 'gimple_seq':'struct gimple_seq_d *'
+| `-FieldDecl 0x7fcd190118c0 <line:8:3, col:15> col:15 bb 'basic_block':'struct basic_block_def *'
+|-TypedefDecl 0x7fcd19011960 <line:4:1, line:9:3> col:3 referenced gimple_stmt_iterator 'struct gimple_stmt_iterator':'gimple_stmt_iterator'
+| `-ElaboratedType 0x7fcd19011910 'struct gimple_stmt_iterator' sugar
+|   `-RecordType 0x7fcd19011770 'gimple_stmt_iterator'
+|     `-Record 0x7fcd190116e0 ''
+|-TypedefDecl 0x7fcd190119e8 <line:10:1, col:15> col:15 referenced gimple 'void *'
+| `-PointerType 0x7fcd1802c1e0 'void *'
+|   `-BuiltinType 0x7fcd1802bd40 'void'
+|-FunctionDecl 0x7fcd19011b58 <line:11:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fcd19011bf8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fcd19011c60 prev 0x7fcd19011b58 <col:1, col:21> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fcd19011a58 <col:18> col:21 'int'
+|-RecordDecl 0x7fcd19011d08 prev 0x7fcd19011340 <line:12:1, line:16:1> line:12:8 struct gimple_seq_node_d definition
+| |-FieldDecl 0x7fcd19011dc0 <line:14:3, col:10> col:10 referenced stmt 'gimple':'void *'
+| `-FieldDecl 0x7fcd19011e30 <line:15:3, col:29> col:29 referenced next 'struct gimple_seq_node_d *'
+|-RecordDecl 0x7fcd19011e78 prev 0x7fcd19011510 <line:17:1, line:19:1> line:17:8 struct gimple_seq_d definition
+|-FunctionDecl 0x7fcd19012030 <line:20:1, line:26:1> line:21:1 used gsi_start 'gimple_stmt_iterator (gimple_seq)' static inline
+| |-ParmVarDecl 0x7fcd19011f30 <col:12, col:23> col:23 used seq 'gimple_seq':'struct gimple_seq_d *'
+| `-CompoundStmt 0x7fcd180206c0 <line:22:1, line:26:1>
+|   |-DeclStmt 0x7fcd19012188 <line:23:3, col:25>
+|   | `-VarDecl 0x7fcd19012128 <col:3, col:24> col:24 used i 'gimple_stmt_iterator':'gimple_stmt_iterator' nrvo
+|   |-BinaryOperator 0x7fcd18020640 <line:24:3, col:11> 'gimple_seq':'struct gimple_seq_d *' '='
+|   | |-MemberExpr 0x7fcd190121c8 <col:3, col:5> 'gimple_seq':'struct gimple_seq_d *' lvalue .seq 0x7fcd19011840
+|   | | `-DeclRefExpr 0x7fcd190121a0 <col:3> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue Var 0x7fcd19012128 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+|   | `-ImplicitCastExpr 0x7fcd18020628 <col:11> 'gimple_seq':'struct gimple_seq_d *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fcd18020600 <col:11> 'gimple_seq':'struct gimple_seq_d *' lvalue ParmVar 0x7fcd19011f30 'seq' 'gimple_seq':'struct gimple_seq_d *'
+|   `-ReturnStmt 0x7fcd180206a8 <line:25:3, col:10>
+|     `-ImplicitCastExpr 0x7fcd18020690 <col:10> 'gimple_stmt_iterator':'gimple_stmt_iterator' <LValueToRValue>
+|       `-DeclRefExpr 0x7fcd18020668 <col:10> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue Var 0x7fcd19012128 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+|-FunctionDecl 0x7fcd18020808 <line:27:1, line:31:1> line:28:1 used gsi_end_p 'unsigned char (gimple_stmt_iterator)' static inline
+| |-ParmVarDecl 0x7fcd180206f8 <col:12, col:33> col:33 used i 'gimple_stmt_iterator':'gimple_stmt_iterator'
+| `-CompoundStmt 0x7fcd18020a70 <line:29:1, line:31:1>
+|   `-ReturnStmt 0x7fcd18020a58 <line:30:3, col:29>
+|     `-ImplicitCastExpr 0x7fcd180209e8 <col:10, col:29> 'unsigned char' <IntegralCast>
+|       `-BinaryOperator 0x7fcd180209c0 <col:10, col:29> 'int' '=='
+|         |-ImplicitCastExpr 0x7fcd18020990 <col:10, col:12> 'gimple_seq_node':'struct gimple_seq_node_d *' <LValueToRValue>
+|         | `-MemberExpr 0x7fcd180208d8 <col:10, col:12> 'gimple_seq_node':'struct gimple_seq_node_d *' lvalue .ptr 0x7fcd190117c0
+|         |   `-DeclRefExpr 0x7fcd180208b0 <col:10> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue ParmVar 0x7fcd180206f8 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+|         `-ImplicitCastExpr 0x7fcd180209a8 <col:19, col:29> 'gimple_seq_node':'struct gimple_seq_node_d *' <BitCast>
+|           `-ParenExpr 0x7fcd18020970 <col:19, col:29> 'void *'
+|             `-CStyleCastExpr 0x7fcd18020948 <col:20, col:28> 'void *' <NullToPointer>
+|               `-IntegerLiteral 0x7fcd18020910 <col:28> 'int' 0
+|-FunctionDecl 0x7fcd18020c00 <line:32:1, line:36:1> line:33:1 used gsi_next 'void (gimple_stmt_iterator *)' static inline
+| |-ParmVarDecl 0x7fcd18020af8 <col:11, col:33> col:33 used i 'gimple_stmt_iterator *'
+| `-CompoundStmt 0x7fcd18020e28 <line:34:1, line:36:1>
+|   `-BinaryOperator 0x7fcd18020e00 <line:35:3, col:20> 'gimple_seq_node':'struct gimple_seq_node_d *' '='
+|     |-MemberExpr 0x7fcd18020ce8 <col:3, col:6> 'gimple_seq_node':'struct gimple_seq_node_d *' lvalue ->ptr 0x7fcd190117c0
+|     | `-ImplicitCastExpr 0x7fcd18020cd0 <col:3> 'gimple_stmt_iterator *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fcd18020ca8 <col:3> 'gimple_stmt_iterator *' lvalue ParmVar 0x7fcd18020af8 'i' 'gimple_stmt_iterator *'
+|     `-ImplicitCastExpr 0x7fcd18020de8 <col:12, col:20> 'struct gimple_seq_node_d *' <LValueToRValue>
+|       `-MemberExpr 0x7fcd18020db0 <col:12, col:20> 'struct gimple_seq_node_d *' lvalue ->next 0x7fcd19011e30
+|         `-ImplicitCastExpr 0x7fcd18020d98 <col:12, col:15> 'gimple_seq_node':'struct gimple_seq_node_d *' <LValueToRValue>
+|           `-MemberExpr 0x7fcd18020d60 <col:12, col:15> 'gimple_seq_node':'struct gimple_seq_node_d *' lvalue ->ptr 0x7fcd190117c0
+|             `-ImplicitCastExpr 0x7fcd18020d48 <col:12> 'gimple_stmt_iterator *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fcd18020d20 <col:12> 'gimple_stmt_iterator *' lvalue ParmVar 0x7fcd18020af8 'i' 'gimple_stmt_iterator *'
+|-FunctionDecl 0x7fcd18020f50 <line:37:1, line:41:1> line:38:1 used gsi_stmt 'gimple (gimple_stmt_iterator)' static inline
+| |-ParmVarDecl 0x7fcd18020e50 <col:11, col:32> col:32 used i 'gimple_stmt_iterator':'gimple_stmt_iterator'
+| `-CompoundStmt 0x7fcd180210d8 <line:39:1, line:41:1>
+|   `-ReturnStmt 0x7fcd180210c0 <line:40:3, col:17>
+|     `-ImplicitCastExpr 0x7fcd180210a8 <col:10, col:17> 'gimple':'void *' <LValueToRValue>
+|       `-MemberExpr 0x7fcd18021070 <col:10, col:17> 'gimple':'void *' lvalue ->stmt 0x7fcd19011dc0
+|         `-ImplicitCastExpr 0x7fcd18021058 <col:10, col:12> 'gimple_seq_node':'struct gimple_seq_node_d *' <LValueToRValue>
+|           `-MemberExpr 0x7fcd18021020 <col:10, col:12> 'gimple_seq_node':'struct gimple_seq_node_d *' lvalue .ptr 0x7fcd190117c0
+|             `-DeclRefExpr 0x7fcd18020ff8 <col:10> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue ParmVar 0x7fcd18020e50 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+`-FunctionDecl 0x7fcd18021200 <line:42:1, line:51:1> line:43:1 c_warn_unused_result 'void (gimple_seq)'
+  |-ParmVarDecl 0x7fcd18021100 <col:23, col:34> col:34 used seq 'gimple_seq':'struct gimple_seq_d *'
+  `-CompoundStmt 0x7fcd19012630 <line:44:1, line:51:1>
+    |-DeclStmt 0x7fcd18021318 <line:45:3, col:25>
+    | `-VarDecl 0x7fcd180212b8 <col:3, col:24> col:24 used i 'gimple_stmt_iterator':'gimple_stmt_iterator'
+    `-ForStmt 0x7fcd190125f8 <line:46:3, line:50:5>
+      |-BinaryOperator 0x7fcd18021468 <line:46:8, col:26> 'gimple_stmt_iterator':'gimple_stmt_iterator' '='
+      | |-DeclRefExpr 0x7fcd18021330 <col:8> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue Var 0x7fcd180212b8 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+      | `-CallExpr 0x7fcd18021420 <col:12, col:26> 'gimple_stmt_iterator':'gimple_stmt_iterator'
+      |   |-ImplicitCastExpr 0x7fcd18021408 <col:12> 'gimple_stmt_iterator (*)(gimple_seq)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7fcd18021358 <col:12> 'gimple_stmt_iterator (gimple_seq)' Function 0x7fcd19012030 'gsi_start' 'gimple_stmt_iterator (gimple_seq)'
+      |   `-ImplicitCastExpr 0x7fcd18021450 <col:23> 'gimple_seq':'struct gimple_seq_d *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fcd18021380 <col:23> 'gimple_seq':'struct gimple_seq_d *' lvalue ParmVar 0x7fcd18021100 'seq' 'gimple_seq':'struct gimple_seq_d *'
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fcd18021598 <col:29, col:42> 'int' prefix '!'
+      | `-CallExpr 0x7fcd18021550 <col:30, col:42> 'unsigned char'
+      |   |-ImplicitCastExpr 0x7fcd18021538 <col:30> 'unsigned char (*)(gimple_stmt_iterator)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7fcd18021490 <col:30> 'unsigned char (gimple_stmt_iterator)' Function 0x7fcd18020808 'gsi_end_p' 'unsigned char (gimple_stmt_iterator)'
+      |   `-ImplicitCastExpr 0x7fcd18021580 <col:41> 'gimple_stmt_iterator':'gimple_stmt_iterator' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fcd180214b8 <col:41> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue Var 0x7fcd180212b8 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+      |-CallExpr 0x7fcd190122c0 <col:45, col:57> 'void'
+      | |-ImplicitCastExpr 0x7fcd190122a8 <col:45> 'void (*)(gimple_stmt_iterator *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fcd180215b8 <col:45> 'void (gimple_stmt_iterator *)' Function 0x7fcd18020c00 'gsi_next' 'void (gimple_stmt_iterator *)'
+      | `-UnaryOperator 0x7fcd19012228 <col:55, col:56> 'gimple_stmt_iterator *' prefix '&'
+      |   `-DeclRefExpr 0x7fcd19012200 <col:56> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue Var 0x7fcd180212b8 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+      `-CompoundStmt 0x7fcd190125d8 <line:47:5, line:50:5>
+        |-DeclStmt 0x7fcd19012468 <line:48:7, col:30>
+        | `-VarDecl 0x7fcd19012300 <col:7, col:29> col:14 used g 'gimple':'void *' cinit
+        |   `-CallExpr 0x7fcd19012420 <col:18, col:29> 'gimple':'void *'
+        |     |-ImplicitCastExpr 0x7fcd19012408 <col:18> 'gimple (*)(gimple_stmt_iterator)' <FunctionToPointerDecay>
+        |     | `-DeclRefExpr 0x7fcd19012360 <col:18> 'gimple (gimple_stmt_iterator)' Function 0x7fcd18020f50 'gsi_stmt' 'gimple (gimple_stmt_iterator)'
+        |     `-ImplicitCastExpr 0x7fcd19012450 <col:28> 'gimple_stmt_iterator':'gimple_stmt_iterator' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fcd19012388 <col:28> 'gimple_stmt_iterator':'gimple_stmt_iterator' lvalue Var 0x7fcd180212b8 'i' 'gimple_stmt_iterator':'gimple_stmt_iterator'
+        `-IfStmt 0x7fcd190125a0 <line:49:7, col:21>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-UnaryOperator 0x7fcd190124c0 <col:11, col:12> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7fcd190124a8 <col:12> 'gimple':'void *' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fcd19012480 <col:12> 'gimple':'void *' lvalue Var 0x7fcd19012300 'g' 'gimple':'void *'
+          |-CallExpr 0x7fcd19012570 <col:15, col:21> 'void'
+          | |-ImplicitCastExpr 0x7fcd19012558 <col:15> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7fcd190124e0 <col:15> 'void (int) __attribute__((noreturn))' Function 0x7fcd19011c60 'exit' 'void (int) __attribute__((noreturn))'
+          | `-IntegerLiteral 0x7fcd19012508 <col:20> 'int' 0
+          `-<<<NULL>>>

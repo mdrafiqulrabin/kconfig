@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fab0182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fab0182c960 <../Data/C2AST/pr33172.c:4:1, line:6:1> line:4:8 struct abc definition
+| `-FieldDecl 0x7fab0280a178 <line:5:5, col:26> col:12 abc_call 'void (*)(void)'
+|-FunctionDecl 0x7fab0280a378 <line:14:1, line:17:1> line:14:19 used do_register 'int (struct abc *)' static inline
+| |-ParmVarDecl 0x7fab0280a270 <col:31, col:43> col:43 xyz 'struct abc *'
+| `-CompoundStmt 0x7fab0280a498 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fab0280a480 <line:16:5, col:12>
+|     `-IntegerLiteral 0x7fab0280a460 <col:12> 'int' 0
+|-FunctionDecl 0x7fab0280a540 <line:22:1, line:24:1> line:22:13 used call_func 'void (void)' static
+| `-CompoundStmt 0x7fab0280a5e0 <line:23:1, line:24:1>
+|-VarDecl 0x7fab0280a610 <line:26:1, line:28:1> line:26:19 used xyz 'struct abc':'struct abc' static cinit
+| `-InitListExpr 0x7fab0280a720 <col:25, line:28:1> 'struct abc':'struct abc'
+|   `-ImplicitCastExpr 0x7fab0280a768 <line:27:17> 'void (*)(void)' <FunctionToPointerDecay>
+|     `-DeclRefExpr 0x7fab0280a670 <col:17> 'void (void)' Function 0x7fab0280a540 'call_func' 'void (void)'
+`-FunctionDecl 0x7fab0280a810 <line:30:1, line:33:1> line:30:6 func 'void (void)'
+  `-CompoundStmt 0x7fab0280a9c0 <line:31:1, line:33:1>
+    `-CallExpr 0x7fab0280a990 <line:32:5, col:21> 'int'
+      |-ImplicitCastExpr 0x7fab0280a978 <col:5> 'int (*)(struct abc *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fab0280a8b0 <col:5> 'int (struct abc *)' Function 0x7fab0280a378 'do_register' 'int (struct abc *)'
+      `-UnaryOperator 0x7fab0280a900 <col:17, col:18> 'struct abc *' prefix '&'
+        `-DeclRefExpr 0x7fab0280a8d8 <col:18> 'struct abc':'struct abc' lvalue Var 0x7fab0280a610 'xyz' 'struct abc':'struct abc'

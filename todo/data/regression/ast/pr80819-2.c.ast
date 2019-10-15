@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fb5e302bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb5e3815200 <../Data/C2AST/pr80819-2.c:5:1, col:28> col:28 referenced V '__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+| `-VectorType 0x7fb5e302c980 '__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' 2
+|   `-BuiltinType 0x7fb5e302bec0 'unsigned long long'
+`-FunctionDecl 0x7fb5e3815420 <line:7:1, line:11:1> line:8:1 foo 'V (unsigned long long, unsigned long long)'
+  |-ParmVarDecl 0x7fb5e3815298 <col:6, col:25> col:25 used x 'unsigned long long'
+  |-ParmVarDecl 0x7fb5e3815310 <col:28, col:47> col:47 used y 'unsigned long long'
+  `-CompoundStmt 0x7fb5e3815698 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fb5e3815680 <line:10:3, col:21>
+      `-ImplicitCastExpr 0x7fb5e3815668 <col:10, col:21> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fb5e3815640 <col:10, col:21> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long' lvalue
+          `-InitListExpr 0x7fb5e38155c0 <col:14, col:21> 'V':'__attribute__((__vector_size__(2 * sizeof(unsigned long long)))) unsigned long long'
+            |-ImplicitCastExpr 0x7fb5e3815610 <col:16> 'unsigned long long' <LValueToRValue>
+            | `-DeclRefExpr 0x7fb5e3815520 <col:16> 'unsigned long long' lvalue ParmVar 0x7fb5e3815298 'x' 'unsigned long long'
+            `-ImplicitCastExpr 0x7fb5e3815628 <col:19> 'unsigned long long' <LValueToRValue>
+              `-DeclRefExpr 0x7fb5e3815548 <col:19> 'unsigned long long' lvalue ParmVar 0x7fb5e3815310 'y' 'unsigned long long'

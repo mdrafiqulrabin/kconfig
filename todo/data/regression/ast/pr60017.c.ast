@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fb14482a4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb144014c50 <../Data/C2AST/pr60017.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb144014cf0 prev 0x7fb144014c50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fb144014d90 <line:5:1, line:9:1> line:5:8 struct S0 definition
+| |-FieldDecl 0x7fb144014e58 <line:7:3, col:9> col:9 m0 'short'
+| `-FieldDecl 0x7fb144014eb8 <line:8:3, col:9> col:9 referenced m1 'short'
+|-RecordDecl 0x7fb144014f00 <line:11:1, line:16:1> line:11:8 struct S1 definition
+| |-FieldDecl 0x7fb144014fe8 <line:13:3, col:15> col:12 m0 'unsigned int'
+| | `-IntegerLiteral 0x7fb144014fb0 <col:15> 'int' 1
+| |-FieldDecl 0x7fb144015118 <line:14:3, col:15> col:8 m1 'char [2][2]'
+| `-FieldDecl 0x7fb1440152a8 <line:15:3, col:17> col:13 referenced m2 'struct S0 [2]'
+|-VarDecl 0x7fb144015340 <line:18:1, col:55> col:11 used x 'struct S1':'struct S1' cinit
+| `-InitListExpr 0x7fb144015738 <col:15, col:55> 'struct S1':'struct S1'
+|   |-ImplicitCastExpr 0x7fb144015790 <col:17> 'unsigned int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fb1440153e0 <col:17> 'int' 1
+|   |-InitListExpr 0x7fb1440157a8 <col:20, col:35> 'char [2][2]'
+|   | |-InitListExpr 0x7fb1440157f8 <col:21, col:26> 'char [2]'
+|   | | |-ImplicitCastExpr 0x7fb144015848 <col:22> 'char' <IntegralCast>
+|   | | | `-IntegerLiteral 0x7fb144015400 <col:22> 'int' 2
+|   | | `-ImplicitCastExpr 0x7fb144015860 <col:25> 'char' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb144015420 <col:25> 'int' 3
+|   | `-InitListExpr 0x7fb144015878 <col:29, col:34> 'char [2]'
+|   |   |-ImplicitCastExpr 0x7fb1440158c8 <col:30> 'char' <IntegralCast>
+|   |   | `-IntegerLiteral 0x7fb144015490 <col:30> 'int' 4
+|   |   `-ImplicitCastExpr 0x7fb1440158e0 <col:33> 'char' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb1440154b0 <col:33> 'int' 5
+|   `-InitListExpr 0x7fb1440158f8 <col:38, col:53> 'struct S0 [2]'
+|     |-InitListExpr 0x7fb144015948 <col:39, col:44> 'struct S0':'struct S0'
+|     | |-ImplicitCastExpr 0x7fb144015998 <col:40> 'short' <IntegralCast>
+|     | | `-IntegerLiteral 0x7fb144015570 <col:40> 'int' 6
+|     | `-ImplicitCastExpr 0x7fb1440159b0 <col:43> 'short' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fb144015590 <col:43> 'int' 7
+|     `-InitListExpr 0x7fb1440159c8 <col:47, col:52> 'struct S0':'struct S0'
+|       |-ImplicitCastExpr 0x7fb144015a18 <col:48> 'short' <IntegralCast>
+|       | `-IntegerLiteral 0x7fb144015600 <col:48> 'int' 8
+|       `-ImplicitCastExpr 0x7fb144015a30 <col:51> 'short' <IntegralCast>
+|         `-IntegerLiteral 0x7fb144015620 <col:51> 'int' 9
+|-FunctionDecl 0x7fb144015b50 <line:20:1, line:23:1> line:20:11 used func 'struct S1 (void)'
+| `-CompoundStmt 0x7fb144015c58 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7fb144015c40 <line:22:3, col:10>
+|     `-ImplicitCastExpr 0x7fb144015c28 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb144015c00 <col:10> 'struct S1':'struct S1' lvalue Var 0x7fb144015340 'x' 'struct S1':'struct S1'
+`-FunctionDecl 0x7fb144015d38 <line:25:1, line:33:1> line:25:5 main 'int (void)'
+  `-CompoundStmt 0x7fb144016288 <line:26:1, line:33:1>
+    |-DeclStmt 0x7fb144015f48 <line:27:3, col:26>
+    | `-VarDecl 0x7fb144015e28 <col:3, col:25> col:13 used ret 'struct S1':'struct S1' cinit
+    |   `-CallExpr 0x7fb144015f20 <col:19, col:25> 'struct S1':'struct S1'
+    |     `-ImplicitCastExpr 0x7fb144015f08 <col:19> 'struct S1 (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fb144015e88 <col:19> 'struct S1 (void)' Function 0x7fb144015b50 'func' 'struct S1 (void)'
+    |-IfStmt 0x7fb144016218 <line:29:3, line:30:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb144016100 <line:29:7, col:23> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb1440160e8 <col:7, col:17> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fb1440160d0 <col:7, col:17> 'short' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fb144016078 <col:7, col:17> 'short' lvalue .m1 0x7fb144014eb8
+    | | |     `-ArraySubscriptExpr 0x7fb144016050 <col:7, col:15> 'struct S0':'struct S0' lvalue
+    | | |       |-ImplicitCastExpr 0x7fb144016038 <col:7, col:11> 'struct S0 *' <ArrayToPointerDecay>
+    | | |       | `-MemberExpr 0x7fb144015f88 <col:7, col:11> 'struct S0 [2]' lvalue .m2 0x7fb1440152a8
+    | | |       |   `-DeclRefExpr 0x7fb144015f60 <col:7> 'struct S1':'struct S1' lvalue Var 0x7fb144015e28 'ret' 'struct S1':'struct S1'
+    | | |       `-IntegerLiteral 0x7fb144015fc0 <col:14> 'int' 1
+    | | `-IntegerLiteral 0x7fb1440160b0 <col:23> 'int' 9
+    | |-CallExpr 0x7fb1440161f0 <line:30:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb1440161d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb144016180 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb144014cf0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb144016270 <line:32:3, col:10>
+      `-IntegerLiteral 0x7fb144016250 <col:10> 'int' 0

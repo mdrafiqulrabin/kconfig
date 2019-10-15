@@ -1,0 +1,70 @@
+../Data/C2AST/pragma_cpp_predefs_1.c:19:2: error: "__ARM_FP is not defined but should be!"
+#error "__ARM_FP is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:30:2: error: "__ARM_NEON is not defined but should be!"
+#error "__ARM_NEON is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:41:2: error: "__ARM_FEATURE_CRYPTO is not defined but should be!"
+#error "__ARM_FEATURE_CRYPTO is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:47:2: error: "__ARM_NEON is not defined but should be!"
+#error "__ARM_NEON is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:58:2: error: "__ARM_FP is not defined but should be!"
+#error "__ARM_FP is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:90:2: error: "__ARM_FP is not defined but should be!"
+#error "__ARM_FP is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:101:2: error: "__ARM_NEON is not defined but should be!"
+#error "__ARM_NEON is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:112:2: error: "__ARM_FEATURE_CRYPTO is not defined but should be!"
+#error "__ARM_FEATURE_CRYPTO is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:119:2: error: "__ARM_NEON is not defined but should be!"
+#error "__ARM_NEON is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:130:2: error: "__ARM_FP is not defined but should be!"
+#error "__ARM_FP is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:162:2: error: "__ARM_FP is not defined but should be!"
+#error "__ARM_FP is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:173:2: error: "__ARM_NEON is not defined but should be!"
+#error "__ARM_NEON is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:184:2: error: "__ARM_FEATURE_CRYPTO is not defined but should be!"
+#error "__ARM_FEATURE_CRYPTO is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:190:2: error: "__ARM_NEON is not defined but should be!"
+#error "__ARM_NEON is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:201:2: error: "__ARM_FP is not defined but should be!"
+#error "__ARM_FP is not defined but should be!"
+ ^
+../Data/C2AST/pragma_cpp_predefs_1.c:247:2: error: "__ARM_FEATURE_CRC32 is not defined but should be!"
+#error "__ARM_FEATURE_CRC32 is not defined but should be!"
+ ^
+16 errors generated.
+TranslationUnitDecl 0x7fbc820174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc82017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc82017780 '__int128'
+|-TypedefDecl 0x7fbc82017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc820177a0 'unsigned __int128'
+|-TypedefDecl 0x7fbc82017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc82017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc82017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc82017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc82017e00 'char *'
+|   `-BuiltinType 0x7fbc82017580 'char'
+|-TypedefDecl 0x7fbc82018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc820180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc82017f20 'struct __va_list_tag'
+|     `-Record 0x7fbc82017e98 '__va_list_tag'
+`-FunctionDecl 0x7fbc8205a468 <../Data/C2AST/pragma_cpp_predefs_1.c:250:1, line:254:1> line:251:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fbc82018178 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fbc8205a5a8 <line:252:1, line:254:1>
+    `-ReturnStmt 0x7fbc8205a590 <line:253:3, col:10>
+      `-ImplicitCastExpr 0x7fbc8205a578 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fbc8205a550 <col:10> 'int' lvalue ParmVar 0x7fbc82018178 'a' 'int'

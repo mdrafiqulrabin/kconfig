@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7f9bbf02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9bbf06d820 <../Data/C2AST/pr82659-4.c:5:1, line:8:1> line:6:1 used test 'void (void)' static
+| `-CompoundStmt 0x7f9bbf06d900 <line:7:1, line:8:1>
+`-FunctionDecl 0x7f9bbf06d9d8 <line:10:1, line:14:1> line:11:1 bar 'void *(void)'
+  `-CompoundStmt 0x7f9bbf06db10 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f9bbf06daf8 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7f9bbf06dae0 <col:10> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7f9bbf06dac8 <col:10> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9bbf06da78 <col:10> 'void (void)' Function 0x7f9bbf06d820 'test' 'void (void)'

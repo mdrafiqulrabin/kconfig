@@ -1,0 +1,60 @@
+../Data/C2AST/pr81118.c:11:2: error: non-void function 'c' should return a value [-Wreturn-type]
+        return;
+        ^
+1 error generated.
+TranslationUnitDecl 0x7ff97b02b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff97b02b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff97b02b580 '__int128'
+|-TypedefDecl 0x7ff97b02b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff97b02b5a0 'unsigned __int128'
+|-TypedefDecl 0x7ff97b02bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff97b02b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff97b02b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff97b02bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff97b02bc00 'char *'
+|   `-BuiltinType 0x7ff97b02b380 'char'
+|-TypedefDecl 0x7ff97b02bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff97b02beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff97b02bd20 'struct __va_list_tag'
+|     `-Record 0x7ff97b02bc98 '__va_list_tag'
+|-VarDecl 0x7ff97b06ce00 <../Data/C2AST/pr81118.c:4:1, col:8> col:5 used a 'int [7]'
+|-VarDecl 0x7ff97b06ceb8 <col:1, col:11> col:11 used b 'int'
+`-FunctionDecl 0x7ff97b06cf80 <line:5:1, line:14:1> line:5:5 c 'int ()'
+  `-CompoundStmt 0x7ff97b06d4d0 <line:6:1, line:14:1>
+    |-DeclStmt 0x7ff97b06d128 <line:7:3, col:11>
+    | |-VarDecl 0x7ff97b06d038 <col:3, col:7> col:7 used d 'int'
+    | `-VarDecl 0x7ff97b06d0b0 <col:3, col:10> col:10 used e 'int'
+    `-ForStmt 0x7ff97b06d498 <line:8:3, line:13:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff97b06d168 <line:8:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff97b06d140 <col:10> 'int' lvalue Var 0x7ff97b06d038 'd' 'int'
+      |-UnaryOperator 0x7ff97b06d1a8 <col:13, col:14> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff97b06d180 <col:13> 'int' lvalue Var 0x7ff97b06d038 'd' 'int'
+      `-IfStmt 0x7ff97b06d460 <line:9:5, line:13:9>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7ff97b06d2a0 <line:9:9, col:12> 'int' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7ff97b06d278 <col:9, col:12> 'int' lvalue
+        |   |-ImplicitCastExpr 0x7ff97b06d248 <col:9> 'int *' <ArrayToPointerDecay>
+        |   | `-DeclRefExpr 0x7ff97b06d1c8 <col:9> 'int [7]' lvalue Var 0x7ff97b06ce00 'a' 'int [7]'
+        |   `-ImplicitCastExpr 0x7ff97b06d260 <col:11> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7ff97b06d1f0 <col:11> 'int' lvalue Var 0x7ff97b06d038 'd' 'int'
+        |-IfStmt 0x7ff97b06d428 <line:10:7, line:13:9>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7ff97b06d2e0 <line:10:11> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff97b06d2b8 <col:11> 'int' lvalue Var 0x7ff97b06ceb8 'b' 'int'
+        | |-ReturnStmt 0x7ff97b06d2f8 <line:11:2>
+        | `-IfStmt 0x7ff97b06d3f0 <line:12:12, line:13:9>
+        |   |-<<<NULL>>>
+        |   |-<<<NULL>>>
+        |   |-BinaryOperator 0x7ff97b06d390 <line:12:16, col:21> 'int' '>='
+        |   | |-ImplicitCastExpr 0x7ff97b06d360 <col:16> 'int' <LValueToRValue>
+        |   | | `-DeclRefExpr 0x7ff97b06d310 <col:16> 'int' lvalue Var 0x7ff97b06d038 'd' 'int'
+        |   | `-ImplicitCastExpr 0x7ff97b06d378 <col:21> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7ff97b06d338 <col:21> 'int' lvalue Var 0x7ff97b06d0b0 'e' 'int'
+        |   |-ReturnStmt 0x7ff97b06d3d8 <line:13:2, col:9>
+        |   | `-IntegerLiteral 0x7ff97b06d3b8 <col:9> 'int' 0
+        |   `-<<<NULL>>>
+        `-<<<NULL>>>

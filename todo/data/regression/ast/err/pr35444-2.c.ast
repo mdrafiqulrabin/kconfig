@@ -1,0 +1,27 @@
+../Data/C2AST/pr35444-2.c:2:31: error: expected ')'
+void foo(int n, int a[n], ... 0);  
+                              ^
+../Data/C2AST/pr35444-2.c:2:9: note: to match this '('
+void foo(int n, int a[n], ... 0);  
+        ^
+1 error generated.
+TranslationUnitDecl 0x7fb96b82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb96b82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb96b82bf80 '__int128'
+|-TypedefDecl 0x7fb96b82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb96b82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb96b82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb96b82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb96b82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb96b82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb96b82c600 'char *'
+|   `-BuiltinType 0x7fb96b82bd80 'char'
+|-TypedefDecl 0x7fb96b82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb96b82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb96b82c720 'struct __va_list_tag'
+|     `-Record 0x7fb96b82c698 '__va_list_tag'
+|-FunctionDecl 0x7fb96c0143f0 <../Data/C2AST/pr35444-2.c:2:1, col:32> col:6 foo 'void (int, int *, ...)'
+| |-ParmVarDecl 0x7fb96b82c978 <col:10, col:14> col:14 used n 'int'
+| `-ParmVarDecl 0x7fb96c0142e0 <col:17, col:24> col:21 a 'int *':'int *'
+`-FunctionDecl 0x7fb96c014528 <line:3:1, col:13> col:6 bar 'void ()'
+  `-CompoundStmt 0x7fb96c0145c8 <col:12, col:13>

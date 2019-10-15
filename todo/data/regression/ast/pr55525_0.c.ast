@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fe95d827ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe95d017e00 <../Data/C2AST/pr55525_0.c:4:1, col:23> col:6 used s 'char [8]'
+|-FunctionDecl 0x7fe95d017f68 <line:5:1, line:8:1> line:5:5 main 'int (void)'
+| `-CompoundStmt 0x7fe95d018418 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fe95d018400 <line:7:3, col:29>
+|     `-CallExpr 0x7fe95d018380 <col:10, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fe95d018368 <col:10> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fe95d0181f0 <col:10> 'int (const char *, const char *)' Function 0x7fe95d018080 'strcmp' 'int (const char *, const char *)'
+|       |-ImplicitCastExpr 0x7fe95d0183b8 <col:17, col:21> 'const char *' <BitCast>
+|       | `-UnaryOperator 0x7fe95d0182a0 <col:17, col:21> 'char *' prefix '&'
+|       |   `-ArraySubscriptExpr 0x7fe95d018278 <col:18, col:21> 'char' lvalue
+|       |     |-ImplicitCastExpr 0x7fe95d018260 <col:18> 'char *' <ArrayToPointerDecay>
+|       |     | `-DeclRefExpr 0x7fe95d018218 <col:18> 'char [8]' lvalue Var 0x7fe95d017e00 's' 'char [8]'
+|       |     `-IntegerLiteral 0x7fe95d018240 <col:20> 'int' 1
+|       `-ImplicitCastExpr 0x7fe95d0183e8 <col:24> 'const char *' <BitCast>
+|         `-ImplicitCastExpr 0x7fe95d0183d0 <col:24> 'char *' <ArrayToPointerDecay>
+|           `-StringLiteral 0x7fe95d0182f8 <col:24> 'char [4]' lvalue "foo"
+`-FunctionDecl 0x7fe95d018080 <col:10> col:10 implicit used strcmp 'int (const char *, const char *)' extern
+  |-ParmVarDecl 0x7fe95d018120 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-ParmVarDecl 0x7fe95d018180 <<invalid sloc>> <invalid sloc> 'const char *'

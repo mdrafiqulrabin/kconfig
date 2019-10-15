@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fe8db82b6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe8db86d2d0 <../Data/C2AST/pr71762-3.c:3:1, line:8:1> line:4:1 used foo '_Bool (_Bool, _Bool)' static
+| |-ParmVarDecl 0x7fe8db82c370 <col:6, col:12> col:12 used a '_Bool'
+| |-ParmVarDecl 0x7fe8db86d200 <col:15, col:21> col:21 used b '_Bool'
+| `-CompoundStmt 0x7fe8db86d5e8 <line:5:1, line:8:1>
+|   |-DeclStmt 0x7fe8db86d518 <line:6:3, col:19>
+|   | `-VarDecl 0x7fe8db86d3d8 <col:3, col:18> col:7 used x 'int' cinit
+|   |   `-BinaryOperator 0x7fe8db86d4f0 <col:11, col:18> 'int' '&&'
+|   |     |-ImplicitCastExpr 0x7fe8db86d4d8 <col:11> 'int' <IntegralCast>
+|   |     | `-ImplicitCastExpr 0x7fe8db86d4c0 <col:11> '_Bool' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fe8db86d438 <col:11> '_Bool' lvalue ParmVar 0x7fe8db82c370 'a' '_Bool'
+|   |     `-UnaryOperator 0x7fe8db86d4a0 <col:16, col:18> 'int' prefix '!'
+|   |       `-ImplicitCastExpr 0x7fe8db86d488 <col:18> '_Bool' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fe8db86d460 <col:18> '_Bool' lvalue ParmVar 0x7fe8db86d200 'b' '_Bool'
+|   `-ReturnStmt 0x7fe8db86d5d0 <line:7:3, col:15>
+|     `-ImplicitCastExpr 0x7fe8db86d5b8 <col:10, col:15> '_Bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fe8db86d590 <col:10, col:15> 'int' '!='
+|         |-ImplicitCastExpr 0x7fe8db86d578 <col:10> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fe8db86d530 <col:10> 'int' lvalue Var 0x7fe8db86d3d8 'x' 'int'
+|         `-IntegerLiteral 0x7fe8db86d558 <col:15> 'int' 0
+|-VarDecl 0x7fe8db86d620 <line:10:1, col:9> col:5 used y 'int' cinit
+| `-IntegerLiteral 0x7fe8db86d680 <col:9> 'int' 1
+|-FunctionDecl 0x7fe8db86d6f0 <line:11:1, line:22:1> line:11:5 main 'int ()'
+| `-CompoundStmt 0x7fe8db86dc28 <line:12:1, line:22:1>
+|   |-DeclStmt 0x7fe8db86d8c0 <line:13:3, line:18:5>
+|   | `-VarDecl 0x7fe8db86d808 <line:13:3, col:18> col:18 used x '_Bool' register
+|   |   `-AsmLabelAttr 0x7fe8db86d868 <line:16:15> "%esi"
+|   |-IfStmt 0x7fe8db86dbb8 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fe8db86d990 <line:19:7, col:16> '_Bool'
+|   | | |-ImplicitCastExpr 0x7fe8db86d978 <col:7> '_Bool (*)(_Bool, _Bool)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fe8db86d8d8 <col:7> '_Bool (_Bool, _Bool)' Function 0x7fe8db86d2d0 'foo' '_Bool (_Bool, _Bool)'
+|   | | |-ImplicitCastExpr 0x7fe8db86d9c8 <col:12> '_Bool' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fe8db86d900 <col:12> '_Bool' lvalue Var 0x7fe8db86d808 'x' '_Bool'
+|   | | `-ImplicitCastExpr 0x7fe8db86d9f8 <col:15> '_Bool' <IntegralToBoolean>
+|   | |   `-ImplicitCastExpr 0x7fe8db86d9e0 <col:15> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fe8db86d928 <col:15> 'int' lvalue Var 0x7fe8db86d620 'y' 'int'
+|   | |-CallExpr 0x7fe8db86db90 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fe8db86db78 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fe8db86db28 <col:5> '<builtin fn type>' Function 0x7fe8db86da40 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe8db86dc10 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7fe8db86dbf0 <col:10> 'int' 0
+`-FunctionDecl 0x7fe8db86da40 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fe8db86dae0 <col:5> Implicit

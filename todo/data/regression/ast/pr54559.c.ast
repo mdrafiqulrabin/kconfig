@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f97590138e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9759014570 <../Data/C2AST/pr54559.c:3:1, col:25> col:25 referenced T '_Complex double'
+| `-ComplexType 0x7f9759013cf0 '_Complex double'
+|   `-BuiltinType 0x7f9759013b00 'double'
+`-FunctionDecl 0x7f9759007da0 <line:5:1, line:9:1> line:6:1 foo 'T (double, double)'
+  |-ParmVarDecl 0x7f9759007c18 <col:6, col:13> col:13 used x 'double'
+  |-ParmVarDecl 0x7f9759007c90 <col:16, col:23> col:23 used y 'double'
+  `-CompoundStmt 0x7f9759008058 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7f9759008040 <line:8:3, col:42>
+      `-BinaryOperator 0x7f9759008018 <col:10, col:42> '_Complex double' '+'
+        |-ImplicitCastExpr 0x7f9759008000 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9759007e90 <col:10> 'double' lvalue ParmVar 0x7f9759007c18 'x' 'double'
+        `-BinaryOperator 0x7f9759007fd8 <col:14, col:42> '_Complex double' '*'
+          |-ImplicitCastExpr 0x7f9759007fc0 <col:14> 'double' <LValueToRValue>
+          | `-DeclRefExpr 0x7f9759007eb8 <col:14> 'double' lvalue ParmVar 0x7f9759007c90 'y' 'double'
+          `-CStyleCastExpr 0x7f9759007f98 <col:18, col:42> 'T':'_Complex double' <FloatingComplexCast>
+            `-ParenExpr 0x7f9759007f78 <col:22, col:42> '_Complex float'
+              `-UnaryOperator 0x7f9759007f18 <col:23, col:37> '_Complex float' prefix '__extension__'
+                `-ImaginaryLiteral 0x7f9759007f00 <col:37> '_Complex float'
+                  `-FloatingLiteral 0x7f9759007ee0 <col:37> 'float' 1.000000e+00

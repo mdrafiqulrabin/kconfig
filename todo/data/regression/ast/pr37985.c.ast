@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7feadc02b0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7feadd800068 <../Data/C2AST/pr37985.c:4:1, line:8:1> line:4:15 foo 'unsigned char (unsigned char)'
+  |-ParmVarDecl 0x7feadc02bd78 <col:19, col:33> col:33 used a 'unsigned char'
+  `-CompoundStmt 0x7feadd800248 <line:5:1, line:8:1>
+    |-BinaryOperator 0x7feadd8001c8 <line:6:3, col:8> 'int' '>>'
+    | |-ImplicitCastExpr 0x7feadd8001b0 <col:3> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7feadd800198 <col:3> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7feadd800150 <col:3> 'unsigned char' lvalue ParmVar 0x7feadc02bd78 'a' 'unsigned char'
+    | `-IntegerLiteral 0x7feadd800178 <col:8> 'int' 2
+    `-ReturnStmt 0x7feadd800230 <line:7:3, col:10>
+      `-ImplicitCastExpr 0x7feadd800218 <col:10> 'unsigned char' <LValueToRValue>
+        `-DeclRefExpr 0x7feadd8001f0 <col:10> 'unsigned char' lvalue ParmVar 0x7feadc02bd78 'a' 'unsigned char'

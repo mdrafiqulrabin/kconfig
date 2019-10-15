@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fc0f302b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc0f302bf78 <../Data/C2AST/pr65780-2.c:6:1, col:5> col:5 used optopt 'int'
+`-FunctionDecl 0x7fc0f306ce90 <line:8:1, line:13:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7fc0f306cfd8 <line:10:1, line:13:1>
+    |-BinaryOperator 0x7fc0f306cf78 <line:11:3, col:12> 'int' '='
+    | |-DeclRefExpr 0x7fc0f306cf30 <col:3> 'int' lvalue Var 0x7fc0f302bf78 'optopt' 'int'
+    | `-IntegerLiteral 0x7fc0f306cf58 <col:12> 'int' 4
+    `-ReturnStmt 0x7fc0f306cfc0 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fc0f306cfa0 <col:10> 'int' 0

@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7f973a81a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f973a85c420 <../Data/C2AST/pr26781-1.c:1:1, line:11:1> line:1:6 zconfdump 'void (void)'
+  `-CompoundStmt 0x7f973a85cb78 <line:2:1, line:11:1>
+    |-DeclStmt 0x7f973a85c608 <line:3:3, col:15>
+    | |-VarDecl 0x7f973a85c518 <col:3, col:9> col:9 used p 'char *'
+    | `-VarDecl 0x7f973a85c590 <col:3, col:13> col:13 used p2 'char *'
+    `-ForStmt 0x7f973a85cb40 <line:4:3, line:10:5>
+      |-BinaryOperator 0x7f973a85c688 <line:4:8, col:13> 'char *' '='
+      | |-DeclRefExpr 0x7f973a85c620 <col:8> 'char *' lvalue Var 0x7f973a85c590 'p2' 'char *'
+      | `-ImplicitCastExpr 0x7f973a85c670 <col:13> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f973a85c648 <col:13> 'char *' lvalue Var 0x7f973a85c518 'p' 'char *'
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f973a85c6d8 <col:16> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f973a85c6b0 <col:16> 'char *' lvalue Var 0x7f973a85c590 'p2' 'char *'
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f973a85cb18 <line:5:5, line:10:5>
+        |-DeclStmt 0x7f973a85c860 <line:6:7, col:28>
+        | |-VarDecl 0x7f973a85c700 <col:7, col:12> col:12 used __a0 'char'
+        | |-VarDecl 0x7f973a85c770 <col:7, col:18> col:18 __a1 'char'
+        | `-VarDecl 0x7f973a85c7e0 <col:7, col:24> col:24 __a2 'char'
+        |-BinaryOperator 0x7f973a85ca60 <line:7:7, col:43> 'char' '='
+        | |-DeclRefExpr 0x7f973a85c878 <col:7> 'char' lvalue Var 0x7f973a85c700 '__a0' 'char'
+        | `-ImplicitCastExpr 0x7f973a85ca48 <col:14, col:43> 'char' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7f973a85ca20 <col:14, col:43> 'const char' lvalue
+        |     |-ParenExpr 0x7f973a85c9e0 <col:14, col:40> 'const char *'
+        |     | `-CStyleCastExpr 0x7f973a85c9b8 <col:15, col:39> 'const char *' <BitCast>
+        |     |   `-ImplicitCastExpr 0x7f973a85c970 <col:32, col:39> 'char *' <ArrayToPointerDecay>
+        |     |     `-ParenExpr 0x7f973a85c950 <col:32, col:39> 'char [3]' lvalue
+        |     |       `-StringLiteral 0x7f973a85c8d8 <col:33> 'char [3]' lvalue "\"\\"
+        |     `-IntegerLiteral 0x7f973a85ca00 <col:42> 'int' 0
+        `-IfStmt 0x7f973a85cae0 <line:8:7, line:9:9>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7f973a85cab0 <line:8:11> 'char' <LValueToRValue>
+          | `-DeclRefExpr 0x7f973a85ca88 <col:11> 'char' lvalue Var 0x7f973a85c700 '__a0' 'char'
+          |-ReturnStmt 0x7f973a85cac8 <line:9:9>
+          `-<<<NULL>>>

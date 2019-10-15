@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fdbdb818ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdbdb819960 <../Data/C2AST/pr39614-1.c:1:9, line:3:1> line:1:16 struct page definition
+| `-FieldDecl 0x7fdbdb018238 <line:2:2, col:16> col:16 referenced flags 'unsigned long'
+|-TypedefDecl 0x7fdbdb0182d0 <line:1:1, line:3:3> col:3 mem_map_t 'struct page':'struct page'
+| `-ElaboratedType 0x7fdbdb018280 'struct page' sugar
+|   `-RecordType 0x7fdbdb018200 'struct page'
+|     `-Record 0x7fdbdb819960 'page'
+`-FunctionDecl 0x7fdbdb018550 <line:4:1, line:7:1> line:4:20 set_page_zone 'void (struct page *, unsigned long)' static inline
+  |-ParmVarDecl 0x7fdbdb0183c0 <col:34, col:47> col:47 used page 'struct page *'
+  |-ParmVarDecl 0x7fdbdb018438 <col:53, col:67> col:67 zone_num 'unsigned long'
+  `-CompoundStmt 0x7fdbdb018820 <line:5:1, line:7:1>
+    `-CompoundAssignOperator 0x7fdbdb0187e8 <line:6:2, col:35> 'unsigned long' '&=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+      |-MemberExpr 0x7fdbdb018680 <col:2, col:8> 'unsigned long' lvalue ->flags 0x7fdbdb018238
+      | `-ImplicitCastExpr 0x7fdbdb018668 <col:2> 'struct page *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdbdb018640 <col:2> 'struct page *' lvalue ParmVar 0x7fdbdb0183c0 'page' 'struct page *'
+      `-UnaryOperator 0x7fdbdb0187c8 <col:17, col:35> 'unsigned long' prefix '~'
+        `-ParenExpr 0x7fdbdb0187a8 <col:18, col:35> 'unsigned long'
+          `-BinaryOperator 0x7fdbdb018780 <col:19, col:34> 'unsigned long' '<<'
+            |-UnaryOperator 0x7fdbdb0186d8 <col:19, col:20> 'unsigned long' prefix '~'
+            | `-IntegerLiteral 0x7fdbdb0186b8 <col:20> 'unsigned long' 0
+            `-ParenExpr 0x7fdbdb018760 <col:27, col:34> 'int'
+              `-BinaryOperator 0x7fdbdb018738 <col:28, col:33> 'int' '-'
+                |-IntegerLiteral 0x7fdbdb0186f8 <col:28> 'int' 64
+                `-IntegerLiteral 0x7fdbdb018718 <col:33> 'int' 8

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fafc402bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fafc402c978 <../Data/C2AST/pr32219-1.c:6:1, col:11> col:5 used xxx 'int' cinit
+| `-IntegerLiteral 0x7fafc4814240 <col:11> 'int' 5
+|-VarDecl 0x7fafc4814278 prev 0x7fafc402c978 <line:7:1, col:5> col:5 used xxx 'int'
+`-FunctionDecl 0x7fafc4814330 <line:9:1, line:13:1> line:10:1 foo 'int ()'
+  `-CompoundStmt 0x7fafc4814428 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7fafc4814410 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fafc48143f8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fafc48143d0 <col:10> 'int' lvalue Var 0x7fafc4814278 'xxx' 'int'

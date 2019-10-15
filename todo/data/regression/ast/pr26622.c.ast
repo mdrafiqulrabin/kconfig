@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fc9bc02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc9bc02c978 <../Data/C2AST/pr26622.c:3:1, col:15> col:15 used g 'unsigned char'
+`-FunctionDecl 0x7fc9bc06d908 <line:5:1, line:9:1> line:6:1 foo 'unsigned long long (void)'
+  `-CompoundStmt 0x7fc9bc06dbd8 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fc9bc06dbc0 <line:8:3, col:45>
+      `-ImplicitCastExpr 0x7fc9bc06dba8 <col:10, col:45> 'unsigned long long' <IntegralCast>
+        `-BinaryOperator 0x7fc9bc06db80 <col:10, col:45> 'long long' '<<'
+          |-ParenExpr 0x7fc9bc06db40 <col:10, col:40> 'long long'
+          | `-CStyleCastExpr 0x7fc9bc06db18 <col:11, col:39> 'long long' <IntegralCast>
+          |   `-ParenExpr 0x7fc9bc06daf8 <col:23, col:39> 'int'
+          |     `-BinaryOperator 0x7fc9bc06da88 <col:24, col:38> 'int' '!='
+          |       |-ParenExpr 0x7fc9bc06da48 <col:24, col:33> 'int'
+          |       | `-BinaryOperator 0x7fc9bc06da20 <col:25, col:29> 'int' '&'
+          |       |   |-ImplicitCastExpr 0x7fc9bc06da08 <col:25> 'int' <IntegralCast>
+          |       |   | `-ImplicitCastExpr 0x7fc9bc06d9f0 <col:25> 'unsigned char' <LValueToRValue>
+          |       |   |   `-DeclRefExpr 0x7fc9bc06d9a8 <col:25> 'unsigned char' lvalue Var 0x7fc9bc02c978 'g' 'unsigned char'
+          |       |   `-IntegerLiteral 0x7fc9bc06d9d0 <col:29> 'int' 128
+          |       `-IntegerLiteral 0x7fc9bc06da68 <col:38> 'int' 0
+          `-IntegerLiteral 0x7fc9bc06db60 <col:45> 'int' 7

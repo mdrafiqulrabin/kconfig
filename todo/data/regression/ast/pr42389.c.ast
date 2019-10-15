@@ -1,0 +1,201 @@
+TranslationUnitDecl 0x7f9ae48058e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9ae4806560 <../Data/C2AST/pr42389.c:4:1, line:8:1> line:4:8 struct s_linked_f_pointer definition
+| |-FieldDecl 0x7f9ae4849ed0 <line:6:3, col:30> col:30 referenced next 'struct s_linked_f_pointer *'
+| `-FieldDecl 0x7f9ae4849f60 <line:7:3, col:10> col:10 referenced fptr 'float *'
+|-RecordDecl 0x7f9ae4849fa8 <line:9:1, line:12:1> line:9:8 struct s_trace definition
+| `-FieldDecl 0x7f9ae484a068 <line:11:3, col:7> col:7 referenced index 'int'
+|-RecordDecl 0x7f9ae484a0b0 <line:13:1, line:17:1> line:13:8 struct s_rr_cost definition
+| |-FieldDecl 0x7f9ae484a178 <line:15:3, col:9> col:9 referenced base_cost 'float'
+| `-FieldDecl 0x7f9ae484a1d8 <line:16:3, col:9> col:9 referenced acc_cost 'float'
+|-VarDecl 0x7f9ae484a238 <line:18:1, col:12> col:12 used num_nets 'int' extern
+|-VarDecl 0x7f9ae484a3f0 <line:19:1, col:25> col:25 used trace_head 'struct s_trace **' extern
+|-VarDecl 0x7f9ae484a500 <line:20:1, col:26> col:26 used rr_cost 'struct s_rr_cost *' extern
+|-RecordDecl 0x7f9ae484a560 <line:21:1, line:24:1> line:21:8 struct s_rr_route definition
+| `-FieldDecl 0x7f9ae484a628 <line:23:3, col:9> col:9 referenced cost 'float'
+|-VarDecl 0x7f9ae484a688 <line:25:1, col:12> col:12 used heap_tail 'int' static
+|-VarDecl 0x7f9ae484a710 <line:26:1, col:35> col:35 used rr_modified_head 'struct s_linked_f_pointer *' extern
+|-VarDecl 0x7f9ae484a820 <line:27:1, col:27> col:27 used rr_route 'struct s_rr_route *' extern
+|-FunctionDecl 0x7f9ae484a940 <line:29:1, line:33:1> line:30:1 used empty_heap 'void (void)'
+| `-CompoundStmt 0x7f9ae484aa50 <line:31:1, line:33:1>
+|   `-BinaryOperator 0x7f9ae484aa28 <line:32:3, col:15> 'int' '='
+|     |-DeclRefExpr 0x7f9ae484a9e0 <col:3> 'int' lvalue Var 0x7f9ae484a688 'heap_tail' 'int'
+|     `-IntegerLiteral 0x7f9ae484aa08 <col:15> 'int' 1
+|-FunctionDecl 0x7f9ae484aaf8 <line:35:1, line:49:1> line:36:1 used reset_path_costs 'void (void)'
+| `-CompoundStmt 0x7f9ae4861cc0 <line:37:1, line:49:1>
+|   |-DeclStmt 0x7f9ae484ac20 <line:38:3, col:37>
+|   | `-VarDecl 0x7f9ae484abc0 <col:3, col:30> col:30 used mod_ptr 'struct s_linked_f_pointer *'
+|   `-IfStmt 0x7f9ae4861c88 <line:39:3, line:48:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9ae484ad10 <line:39:7, col:38> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f9ae484ace0 <col:7> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9ae484ac38 <col:7> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484a710 'rr_modified_head' 'struct s_linked_f_pointer *'
+|     | `-ImplicitCastExpr 0x7f9ae484acf8 <col:27, col:38> 'struct s_linked_f_pointer *' <BitCast>
+|     |   `-ParenExpr 0x7f9ae484acc0 <col:27, col:38> 'void *'
+|     |     `-CStyleCastExpr 0x7f9ae484ac98 <col:28, col:37> 'void *' <NullToPointer>
+|     |       `-IntegerLiteral 0x7f9ae484ac60 <col:37> 'int' 0
+|     |-CompoundStmt 0x7f9ae4861c60 <line:40:5, line:48:5>
+|     | |-BinaryOperator 0x7f9ae484ada0 <line:41:7, col:17> 'struct s_linked_f_pointer *' '='
+|     | | |-DeclRefExpr 0x7f9ae484ad38 <col:7> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484abc0 'mod_ptr' 'struct s_linked_f_pointer *'
+|     | | `-ImplicitCastExpr 0x7f9ae484ad88 <col:17> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f9ae484ad60 <col:17> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484a710 'rr_modified_head' 'struct s_linked_f_pointer *'
+|     | |-WhileStmt 0x7f9ae4861b58 <line:42:7, line:46:2>
+|     | | |-<<<NULL>>>
+|     | | |-BinaryOperator 0x7f9ae4861900 <line:42:14, col:42> 'int' '!='
+|     | | | |-ImplicitCastExpr 0x7f9ae48618d0 <col:14, col:23> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | | | | `-MemberExpr 0x7f9ae4861818 <col:14, col:23> 'struct s_linked_f_pointer *' lvalue ->next 0x7f9ae4849ed0
+|     | | | |   `-ImplicitCastExpr 0x7f9ae4861800 <col:14> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | | | |     `-DeclRefExpr 0x7f9ae484adc8 <col:14> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484abc0 'mod_ptr' 'struct s_linked_f_pointer *'
+|     | | | `-ImplicitCastExpr 0x7f9ae48618e8 <col:31, col:42> 'struct s_linked_f_pointer *' <BitCast>
+|     | | |   `-ParenExpr 0x7f9ae48618b0 <col:31, col:42> 'void *'
+|     | | |     `-CStyleCastExpr 0x7f9ae4861888 <col:32, col:41> 'void *' <NullToPointer>
+|     | | |       `-IntegerLiteral 0x7f9ae4861850 <col:41> 'int' 0
+|     | | `-CompoundStmt 0x7f9ae4861b38 <line:43:2, line:46:2>
+|     | |   |-BinaryOperator 0x7f9ae4861a30 <line:44:4, col:23> 'float' '='
+|     | |   | |-UnaryOperator 0x7f9ae48619d8 <col:4, col:19> 'float' lvalue prefix '*'
+|     | |   | | `-ImplicitCastExpr 0x7f9ae48619c0 <col:5, col:19> 'float *' <LValueToRValue>
+|     | |   | |   `-ParenExpr 0x7f9ae48619a0 <col:5, col:19> 'float *' lvalue
+|     | |   | |     `-MemberExpr 0x7f9ae4861968 <col:6, col:15> 'float *' lvalue ->fptr 0x7f9ae4849f60
+|     | |   | |       `-ImplicitCastExpr 0x7f9ae4861950 <col:6> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | |   | |         `-DeclRefExpr 0x7f9ae4861928 <col:6> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484abc0 'mod_ptr' 'struct s_linked_f_pointer *'
+|     | |   | `-ImplicitCastExpr 0x7f9ae4861a18 <col:23> 'float' <FloatingCast>
+|     | |   |   `-FloatingLiteral 0x7f9ae48619f8 <col:23> 'double' 1.000000e+30
+|     | |   `-BinaryOperator 0x7f9ae4861b10 <line:45:4, col:23> 'struct s_linked_f_pointer *' '='
+|     | |     |-DeclRefExpr 0x7f9ae4861a58 <col:4> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484abc0 'mod_ptr' 'struct s_linked_f_pointer *'
+|     | |     `-ImplicitCastExpr 0x7f9ae4861af8 <col:14, col:23> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | |       `-MemberExpr 0x7f9ae4861ac0 <col:14, col:23> 'struct s_linked_f_pointer *' lvalue ->next 0x7f9ae4849ed0
+|     | |         `-ImplicitCastExpr 0x7f9ae4861aa8 <col:14> 'struct s_linked_f_pointer *' <LValueToRValue>
+|     | |           `-DeclRefExpr 0x7f9ae4861a80 <col:14> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484abc0 'mod_ptr' 'struct s_linked_f_pointer *'
+|     | `-BinaryOperator 0x7f9ae4861c38 <line:47:7, col:37> 'struct s_linked_f_pointer *' '='
+|     |   |-DeclRefExpr 0x7f9ae4861b78 <col:7> 'struct s_linked_f_pointer *' lvalue Var 0x7f9ae484a710 'rr_modified_head' 'struct s_linked_f_pointer *'
+|     |   `-ImplicitCastExpr 0x7f9ae4861c20 <col:26, col:37> 'struct s_linked_f_pointer *' <NullToPointer>
+|     |     `-ParenExpr 0x7f9ae4861c00 <col:26, col:37> 'void *'
+|     |       `-CStyleCastExpr 0x7f9ae4861bd8 <col:27, col:36> 'void *' <NullToPointer>
+|     |         `-IntegerLiteral 0x7f9ae4861ba0 <col:36> 'int' 0
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9ae4861dc0 <line:51:1, line:59:1> line:52:1 used route_net 'void (int)' static
+| |-ParmVarDecl 0x7f9ae4861cf8 <col:12, col:16> col:16 used inet 'int'
+| `-CompoundStmt 0x7f9ae48621f0 <line:53:1, line:59:1>
+|   |-DeclStmt 0x7f9ae4861ee0 <line:54:3, col:8>
+|   | `-VarDecl 0x7f9ae4861e80 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7f9ae48620e8 <line:55:3, line:56:23>
+|   | |-BinaryOperator 0x7f9ae4861f40 <line:55:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f9ae4861ef8 <col:8> 'int' lvalue Var 0x7f9ae4861e80 'i' 'int'
+|   | | `-IntegerLiteral 0x7f9ae4861f20 <col:12> 'int' 1
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9ae4861fe8 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9ae4861fb8 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9ae4861f68 <col:15> 'int' lvalue Var 0x7f9ae4861e80 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f9ae4861fd0 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9ae4861f90 <col:19> 'int' lvalue ParmVar 0x7f9ae4861cf8 'inet' 'int'
+|   | |-UnaryOperator 0x7f9ae4862038 <col:25, col:26> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9ae4862010 <col:25> 'int' lvalue Var 0x7f9ae4861e80 'i' 'int'
+|   | `-CallExpr 0x7f9ae48620c0 <line:56:5, col:23> 'void'
+|   |   `-ImplicitCastExpr 0x7f9ae48620a8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7f9ae4862058 <col:5> 'void (void)' Function 0x7f9ae484aaf8 'reset_path_costs' 'void (void)'
+|   |-CallExpr 0x7f9ae4862160 <line:57:3, col:15> 'void'
+|   | `-ImplicitCastExpr 0x7f9ae4862148 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f9ae4862120 <col:3> 'void (void)' Function 0x7f9ae484a940 'empty_heap' 'void (void)'
+|   `-CallExpr 0x7f9ae48621c8 <line:58:3, col:21> 'void'
+|     `-ImplicitCastExpr 0x7f9ae48621b0 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f9ae4862188 <col:3> 'void (void)' Function 0x7f9ae484aaf8 'reset_path_costs' 'void (void)'
+|-FunctionDecl 0x7f9ae4862410 <line:61:1, line:70:1> line:62:1 used pathfinder_update_one_cost 'void (int, float, float)'
+| |-ParmVarDecl 0x7f9ae4862238 <col:29, col:33> col:33 used inet 'int'
+| |-ParmVarDecl 0x7f9ae48622b0 <col:39, col:45> col:45 pres_fac 'float'
+| |-ParmVarDecl 0x7f9ae4862328 <col:55, col:61> col:61 acc_fac 'float'
+| `-CompoundStmt 0x7f9ae4862b48 <line:63:1, line:70:1>
+|   |-DeclStmt 0x7f9ae4862550 <line:64:3, col:23>
+|   | `-VarDecl 0x7f9ae48624f0 <col:3, col:19> col:19 used tptr 'struct s_trace *'
+|   |-DeclStmt 0x7f9ae4862600 <line:65:3, col:16>
+|   | `-VarDecl 0x7f9ae4862580 <col:3, col:15> col:7 used inode 'int' cinit
+|   |   `-IntegerLiteral 0x7f9ae48625e0 <col:15> 'int' 0
+|   |-BinaryOperator 0x7f9ae4862700 <line:67:3, col:25> 'struct s_trace *' '='
+|   | |-DeclRefExpr 0x7f9ae4862618 <col:3> 'struct s_trace *' lvalue Var 0x7f9ae48624f0 'tptr' 'struct s_trace *'
+|   | `-ImplicitCastExpr 0x7f9ae48626e8 <col:10, col:25> 'struct s_trace *' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7f9ae48626c0 <col:10, col:25> 'struct s_trace *' lvalue
+|   |     |-ImplicitCastExpr 0x7f9ae4862690 <col:10> 'struct s_trace **' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9ae4862640 <col:10> 'struct s_trace **' lvalue Var 0x7f9ae484a3f0 'trace_head' 'struct s_trace **'
+|   |     `-ImplicitCastExpr 0x7f9ae48626a8 <col:21> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9ae4862668 <col:21> 'int' lvalue ParmVar 0x7f9ae4862238 'inet' 'int'
+|   |-BinaryOperator 0x7f9ae4862800 <line:68:3, col:17> 'int' '='
+|   | |-DeclRefExpr 0x7f9ae4862728 <col:3> 'int' lvalue Var 0x7f9ae4862580 'inode' 'int'
+|   | `-ImplicitCastExpr 0x7f9ae48627c8 <col:11, col:17> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7f9ae4862790 <col:11, col:17> 'int' lvalue ->index 0x7f9ae484a068
+|   |     `-ImplicitCastExpr 0x7f9ae4862778 <col:11> 'struct s_trace *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9ae4862750 <col:11> 'struct s_trace *' lvalue Var 0x7f9ae48624f0 'tptr' 'struct s_trace *'
+|   `-BinaryOperator 0x7f9ae4862b20 <line:69:3, col:68> 'float' '='
+|     |-MemberExpr 0x7f9ae48628d0 <col:3, col:19> 'float' lvalue .cost 0x7f9ae484a628
+|     | `-ArraySubscriptExpr 0x7f9ae48628a8 <col:3, col:17> 'struct s_rr_route':'struct s_rr_route' lvalue
+|     |   |-ImplicitCastExpr 0x7f9ae4862878 <col:3> 'struct s_rr_route *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f9ae4862828 <col:3> 'struct s_rr_route *' lvalue Var 0x7f9ae484a820 'rr_route' 'struct s_rr_route *'
+|     |   `-ImplicitCastExpr 0x7f9ae4862890 <col:12> 'int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9ae4862850 <col:12> 'int' lvalue Var 0x7f9ae4862580 'inode' 'int'
+|     `-BinaryOperator 0x7f9ae4862af8 <col:26, col:68> 'float' '+'
+|       |-ImplicitCastExpr 0x7f9ae4862ac8 <col:26, col:41> 'float' <LValueToRValue>
+|       | `-MemberExpr 0x7f9ae48629b0 <col:26, col:41> 'float' lvalue .base_cost 0x7f9ae484a178
+|       |   `-ArraySubscriptExpr 0x7f9ae4862988 <col:26, col:39> 'struct s_rr_cost':'struct s_rr_cost' lvalue
+|       |     |-ImplicitCastExpr 0x7f9ae4862958 <col:26> 'struct s_rr_cost *' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7f9ae4862908 <col:26> 'struct s_rr_cost *' lvalue Var 0x7f9ae484a500 'rr_cost' 'struct s_rr_cost *'
+|       |     `-ImplicitCastExpr 0x7f9ae4862970 <col:34> 'int' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7f9ae4862930 <col:34> 'int' lvalue Var 0x7f9ae4862580 'inode' 'int'
+|       `-ImplicitCastExpr 0x7f9ae4862ae0 <col:53, col:68> 'float' <LValueToRValue>
+|         `-MemberExpr 0x7f9ae4862a90 <col:53, col:68> 'float' lvalue .acc_cost 0x7f9ae484a1d8
+|           `-ArraySubscriptExpr 0x7f9ae4862a68 <col:53, col:66> 'struct s_rr_cost':'struct s_rr_cost' lvalue
+|             |-ImplicitCastExpr 0x7f9ae4862a38 <col:53> 'struct s_rr_cost *' <LValueToRValue>
+|             | `-DeclRefExpr 0x7f9ae48629e8 <col:53> 'struct s_rr_cost *' lvalue Var 0x7f9ae484a500 'rr_cost' 'struct s_rr_cost *'
+|             `-ImplicitCastExpr 0x7f9ae4862a50 <col:61> 'int' <LValueToRValue>
+|               `-DeclRefExpr 0x7f9ae4862a10 <col:61> 'int' lvalue Var 0x7f9ae4862580 'inode' 'int'
+`-FunctionDecl 0x7f9ae4862d78 <line:72:1, line:86:1> line:73:1 try_route 'int (int, float, float)'
+  |-ParmVarDecl 0x7f9ae4862b98 <col:12, col:16> col:16 used n 'int'
+  |-ParmVarDecl 0x7f9ae4862c10 <col:19, col:25> col:25 used x 'float'
+  |-ParmVarDecl 0x7f9ae4862c88 <col:28, col:34> col:34 used y 'float'
+  `-CompoundStmt 0x7f9ae4863638 <line:74:1, line:86:1>
+    |-DeclStmt 0x7f9ae4862f38 <line:75:3, col:17>
+    | |-VarDecl 0x7f9ae4862e48 <col:3, col:7> col:7 used inet 'int'
+    | `-VarDecl 0x7f9ae4862ec0 <col:3, col:13> col:13 used itry 'int'
+    |-DeclStmt 0x7f9ae4862fc8 <line:76:3, col:17>
+    | `-VarDecl 0x7f9ae4862f68 <col:3, col:9> col:9 used pres_fac 'float'
+    `-ForStmt 0x7f9ae4863600 <line:77:3, line:85:5>
+      |-BinaryOperator 0x7f9ae4863028 <line:77:8, col:15> 'int' '='
+      | |-DeclRefExpr 0x7f9ae4862fe0 <col:8> 'int' lvalue Var 0x7f9ae4862ec0 'itry' 'int'
+      | `-IntegerLiteral 0x7f9ae4863008 <col:15> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9ae48630d0 <col:18, col:26> 'int' '<='
+      | |-ImplicitCastExpr 0x7f9ae48630a0 <col:18> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9ae4863050 <col:18> 'int' lvalue Var 0x7f9ae4862ec0 'itry' 'int'
+      | `-ImplicitCastExpr 0x7f9ae48630b8 <col:26> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9ae4863078 <col:26> 'int' lvalue ParmVar 0x7f9ae4862b98 'n' 'int'
+      |-UnaryOperator 0x7f9ae4863120 <col:29, col:33> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f9ae48630f8 <col:29> 'int' lvalue Var 0x7f9ae4862ec0 'itry' 'int'
+      `-CompoundStmt 0x7f9ae48635e0 <line:78:5, line:85:5>
+        |-ForStmt 0x7f9ae4863508 <line:79:7, line:83:2>
+        | |-BinaryOperator 0x7f9ae4863188 <line:79:12, col:19> 'int' '='
+        | | |-DeclRefExpr 0x7f9ae4863140 <col:12> 'int' lvalue Var 0x7f9ae4862e48 'inet' 'int'
+        | | `-IntegerLiteral 0x7f9ae4863168 <col:19> 'int' 0
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f9ae4863230 <col:22, col:29> 'int' '<'
+        | | |-ImplicitCastExpr 0x7f9ae4863200 <col:22> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f9ae48631b0 <col:22> 'int' lvalue Var 0x7f9ae4862e48 'inet' 'int'
+        | | `-ImplicitCastExpr 0x7f9ae4863218 <col:29> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f9ae48631d8 <col:29> 'int' lvalue Var 0x7f9ae484a238 'num_nets' 'int'
+        | |-UnaryOperator 0x7f9ae4863280 <col:39, col:43> 'int' postfix '++'
+        | | `-DeclRefExpr 0x7f9ae4863258 <col:39> 'int' lvalue Var 0x7f9ae4862e48 'inet' 'int'
+        | `-CompoundStmt 0x7f9ae48634e8 <line:80:2, line:83:2>
+        |   |-CallExpr 0x7f9ae4863330 <line:81:4, col:19> 'void'
+        |   | |-ImplicitCastExpr 0x7f9ae4863318 <col:4> 'void (*)(int)' <FunctionToPointerDecay>
+        |   | | `-DeclRefExpr 0x7f9ae48632a0 <col:4> 'void (int)' Function 0x7f9ae4861dc0 'route_net' 'void (int)'
+        |   | `-ImplicitCastExpr 0x7f9ae4863360 <col:15> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7f9ae48632c8 <col:15> 'int' lvalue Var 0x7f9ae4862e48 'inet' 'int'
+        |   `-CallExpr 0x7f9ae4863460 <line:82:4, col:49> 'void'
+        |     |-ImplicitCastExpr 0x7f9ae4863448 <col:4> 'void (*)(int, float, float)' <FunctionToPointerDecay>
+        |     | `-DeclRefExpr 0x7f9ae4863378 <col:4> 'void (int, float, float)' Function 0x7f9ae4862410 'pathfinder_update_one_cost' 'void (int, float, float)'
+        |     |-ImplicitCastExpr 0x7f9ae48634a0 <col:32> 'int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f9ae48633a0 <col:32> 'int' lvalue Var 0x7f9ae4862e48 'inet' 'int'
+        |     |-ImplicitCastExpr 0x7f9ae48634b8 <col:38> 'float' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f9ae48633c8 <col:38> 'float' lvalue Var 0x7f9ae4862f68 'pres_fac' 'float'
+        |     `-ImplicitCastExpr 0x7f9ae48634d0 <col:48> 'float' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f9ae48633f0 <col:48> 'float' lvalue ParmVar 0x7f9ae4862c10 'x' 'float'
+        `-CompoundAssignOperator 0x7f9ae48635a8 <line:84:7, col:19> 'float' '*=' ComputeLHSTy='float' ComputeResultTy='float'
+          |-DeclRefExpr 0x7f9ae4863540 <col:7> 'float' lvalue Var 0x7f9ae4862f68 'pres_fac' 'float'
+          `-ImplicitCastExpr 0x7f9ae4863590 <col:19> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7f9ae4863568 <col:19> 'float' lvalue ParmVar 0x7f9ae4862c88 'y' 'float'

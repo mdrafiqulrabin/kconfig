@@ -1,0 +1,127 @@
+../Data/C2AST/pr71676.c:4:10: fatal error: 'exit-abort.h' file not found
+#include "exit-abort.h"
+         ^~~~~~~~~~~~~~
+TranslationUnitDecl 0x7fbb2502b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb2502b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb2502b580 '__int128'
+|-TypedefDecl 0x7fbb2502b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb2502b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fbb2502bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb2502b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb2502b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb2502bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb2502bc00 'char *'
+|   `-BuiltinType 0x7fbb2502b380 'char'
+|-TypedefDecl 0x7fbb2502bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb2502beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb2502bd20 'struct __va_list_tag'
+|     `-Record 0x7fbb2502bc98 '__va_list_tag'
+|-VarDecl 0x7fbb2502bf78 <../Data/C2AST/pr71676.c:6:1, col:24> col:24 used y 'volatile unsigned char'
+|-FunctionDecl 0x7fbb25021728 <line:8:1, line:23:1> line:9:15 used foo 'unsigned char (unsigned long)'
+| |-ParmVarDecl 0x7fbb25021658 <col:20, col:34> col:34 used x 'unsigned long'
+| |-CompoundStmt 0x7fbb25022170 <line:10:1, line:23:1>
+| | |-SwitchStmt 0x7fbb25021858 <line:11:3, line:21:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fbb25021840 <line:11:11> 'unsigned long' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fbb25021818 <col:11> 'unsigned long' lvalue ParmVar 0x7fbb25021658 'x' 'unsigned long'
+| | | `-CompoundStmt 0x7fbb25021fc8 <line:12:5, line:21:5>
+| | |   |-CaseStmt 0x7fbb250218a8 <line:13:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb25022100 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021888 <col:10> 'int' 0
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021940 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb250218e0 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021928 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021908 <col:17> 'int' 67
+| | |   |-BreakStmt 0x7fbb25021968 <col:21>
+| | |   |-CaseStmt 0x7fbb25021990 <line:14:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb250220e8 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021970 <col:10> 'int' 1
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021a28 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb250219c8 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021a10 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb250219f0 <col:17> 'int' 20
+| | |   |-BreakStmt 0x7fbb25021a50 <col:21>
+| | |   |-CaseStmt 0x7fbb25021a78 <line:15:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb250220d0 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021a58 <col:10> 'int' 2
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021b10 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb25021ab0 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021af8 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021ad8 <col:17> 'int' 109
+| | |   |-BreakStmt 0x7fbb25021b38 <col:22>
+| | |   |-CaseStmt 0x7fbb25021b60 <line:16:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb250220b8 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021b40 <col:10> 'int' 3
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021bf8 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb25021b98 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021be0 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021bc0 <col:17> 'int' 33
+| | |   |-BreakStmt 0x7fbb25021c20 <col:21>
+| | |   |-CaseStmt 0x7fbb25021c48 <line:17:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb250220a0 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021c28 <col:10> 'int' 4
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021ce0 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb25021c80 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021cc8 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021ca8 <col:17> 'int' 44
+| | |   |-BreakStmt 0x7fbb25021d08 <col:21>
+| | |   |-CaseStmt 0x7fbb25021d30 <line:18:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb25022088 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021d10 <col:10> 'int' 5
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021dc8 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb25021d68 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021db0 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021d90 <col:17> 'int' 37
+| | |   |-BreakStmt 0x7fbb25021df0 <col:21>
+| | |   |-CaseStmt 0x7fbb25021e18 <line:19:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb25022070 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021df8 <col:10> 'int' 6
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021eb0 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb25021e50 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021e98 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021e78 <col:17> 'int' 10
+| | |   |-BreakStmt 0x7fbb25021ed8 <col:21>
+| | |   |-CaseStmt 0x7fbb25021f00 <line:20:5, col:17>
+| | |   | |-ImplicitCastExpr 0x7fbb25022058 <col:10> 'unsigned long' <IntegralCast>
+| | |   | | `-IntegerLiteral 0x7fbb25021ee0 <col:10> 'int' 7
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fbb25021f98 <col:13, col:17> 'unsigned char' '='
+| | |   |   |-DeclRefExpr 0x7fbb25021f38 <col:13> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| | |   |   `-ImplicitCastExpr 0x7fbb25021f80 <col:17> 'unsigned char' <IntegralCast>
+| | |   |     `-IntegerLiteral 0x7fbb25021f60 <col:17> 'int' 98
+| | |   `-BreakStmt 0x7fbb25021fc0 <col:21>
+| | `-ReturnStmt 0x7fbb25022158 <line:22:3, col:10>
+| |   `-ImplicitCastExpr 0x7fbb25022140 <col:10> 'unsigned char' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbb25022118 <col:10> 'volatile unsigned char' lvalue Var 0x7fbb2502bf78 'y' 'volatile unsigned char'
+| `-NoInlineAttr 0x7fbb250217d0 <line:8:16>
+|-FunctionDecl 0x7fbb25022258 <line:25:1, line:30:1> line:25:5 main 'int (void)'
+| `-CompoundStmt 0x7fbb2505cc98 <line:26:1, line:30:1>
+|   |-IfStmt 0x7fbb2505cc28 <line:27:3, line:28:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbb25022480 <line:27:7, col:30> 'int' '!='
+|   | | |-IntegerLiteral 0x7fbb25022328 <col:7> 'int' 0
+|   | | `-ImplicitCastExpr 0x7fbb25022468 <col:12, col:30> 'int' <IntegralCast>
+|   | |   `-CallExpr 0x7fbb25022420 <col:12, col:30> 'unsigned char'
+|   | |     |-ImplicitCastExpr 0x7fbb25022408 <col:12> 'unsigned char (*)(unsigned long)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fbb25022348 <col:12> 'unsigned char (unsigned long)' Function 0x7fbb25021728 'foo' 'unsigned char (unsigned long)'
+|   | |     `-ImplicitCastExpr 0x7fbb25022450 <col:17, col:22> 'unsigned long' <IntegralCast>
+|   | |       `-BinaryOperator 0x7fbb250223b0 <col:17, col:22> 'long' '+'
+|   | |         |-IntegerLiteral 0x7fbb25022370 <col:17> 'long' 7
+|   | |         `-IntegerLiteral 0x7fbb25022390 <col:22> 'long' 65536
+|   | |-CallExpr 0x7fbb2505cc00 <line:28:5, col:11> 'void'
+|   | | `-ImplicitCast1 error generated.
+Expr 0x7fbb250225d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbb25022580 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbb250224e0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fbb2505cc80 <line:29:3, col:10>
+|     `-IntegerLiteral 0x7fbb2505cc60 <col:10> 'int' 0
+`-FunctionDecl 0x7fbb250224e0 <line:28:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

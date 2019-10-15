@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fb77082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb77082c960 <../Data/C2AST/pr26626.c:1:9, line:3:1> line:1:9 union definition
+| `-FieldDecl 0x7fb77086d838 <line:2:5, col:9> col:9 referenced d 'int'
+|-TypedefDecl 0x7fb77086d8d0 <line:1:1, line:3:3> col:3 referenced U 'union U':'U'
+| `-ElaboratedType 0x7fb77086d880 'union U' sugar
+|   `-RecordType 0x7fb77086d800 'U'
+|     `-Record 0x7fb77082c960 ''
+|-VarDecl 0x7fb77086d958 <line:5:1, col:5> col:5 used rv 'int'
+`-FunctionDecl 0x7fb77086da48 <line:6:1, line:12:1> line:6:6 breakme 'void ()'
+  `-CompoundStmt 0x7fb77086de78 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fb77086dbd8 <line:8:5, col:11>
+    | `-VarDecl 0x7fb77086db78 <col:5, col:8> col:8 used rv0 'U *'
+    |-DeclStmt 0x7fb77086dd10 <line:9:5, col:24>
+    | `-VarDecl 0x7fb77086dc00 <col:5, col:22> col:8 used pretmp 'U *' cinit
+    |   `-CStyleCastExpr 0x7fb77086dce8 <col:17, col:22> 'U *' <BitCast>
+    |     `-UnaryOperator 0x7fb77086dcb8 <col:21, col:22> 'int *' prefix '&'
+    |       `-DeclRefExpr 0x7fb77086dc60 <col:22> 'int' lvalue Var 0x7fb77086d958 'rv' 'int'
+    |-BinaryOperator 0x7fb77086dd90 <line:10:5, col:11> 'U *' '='
+    | |-DeclRefExpr 0x7fb77086dd28 <col:5> 'U *' lvalue Var 0x7fb77086db78 'rv0' 'U *'
+    | `-ImplicitCastExpr 0x7fb77086dd78 <col:11> 'U *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb77086dd50 <col:11> 'U *' lvalue Var 0x7fb77086dc00 'pretmp' 'U *'
+    `-BinaryOperator 0x7fb77086de50 <line:11:5, col:14> 'int' '='
+      |-MemberExpr 0x7fb77086ddf8 <col:5, col:10> 'int' lvalue ->d 0x7fb77086d838
+      | `-ImplicitCastExpr 0x7fb77086dde0 <col:5> 'U *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb77086ddb8 <col:5> 'U *' lvalue Var 0x7fb77086db78 'rv0' 'U *'
+      `-IntegerLiteral 0x7fb77086de30 <col:14> 'int' 42

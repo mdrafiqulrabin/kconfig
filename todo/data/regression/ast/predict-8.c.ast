@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f97d181a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f97d20142d8 <../Data/C2AST/predict-8.c:4:1, line:9:1> line:4:5 foo 'int (float, float)'
+  |-ParmVarDecl 0x7f97d181b578 <col:9, col:15> col:15 used a 'float'
+  |-ParmVarDecl 0x7f97d2014200 <col:18, col:24> col:24 used b 'float'
+  `-CompoundStmt 0x7f97d2014518 <col:27, line:9:1>
+    `-IfStmt 0x7f97d20144e0 <line:5:3, line:8:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f97d2014448 <line:5:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7f97d2014418 <col:7> 'float' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f97d20143c8 <col:7> 'float' lvalue ParmVar 0x7f97d181b578 'a' 'float'
+      | `-ImplicitCastExpr 0x7f97d2014430 <col:12> 'float' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f97d20143f0 <col:12> 'float' lvalue ParmVar 0x7f97d2014200 'b' 'float'
+      |-ReturnStmt 0x7f97d2014490 <line:6:5, col:12>
+      | `-IntegerLiteral 0x7f97d2014470 <col:12> 'int' 1
+      `-ReturnStmt 0x7f97d20144c8 <line:8:5, col:12>
+        `-IntegerLiteral 0x7f97d20144a8 <col:12> 'int' 2

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f821f0068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f821f04ca68 <../Data/C2AST/pr59874-1.c:6:1, line:10:1> line:7:1 foo 'unsigned int (unsigned short)'
+| |-ParmVarDecl 0x7f821f007578 <col:6, col:21> col:21 used x 'unsigned short'
+| `-CompoundStmt 0x7f821f04cea8 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7f821f04ce90 <line:9:3, col:35>
+|     `-ConditionalOperator 0x7f821f04ce60 <col:10, col:35> 'unsigned int'
+|       |-ImplicitCastExpr 0x7f821f04ce30 <col:10> 'int' <IntegralCast>
+|       | `-ImplicitCastExpr 0x7f821f04ce18 <col:10> 'unsigned short' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f821f04cb50 <col:10> 'unsigned short' lvalue ParmVar 0x7f821f007578 'x' 'unsigned short'
+|       |-ImplicitCastExpr 0x7f821f04ce48 <col:14, col:31> 'unsigned int' <IntegralCast>
+|       | `-CallExpr 0x7f821f04cdb0 <col:14, col:31> 'int'
+|       |   |-ImplicitCastExpr 0x7f821f04cd98 <col:14> 'int (*)(unsigned short)' <BuiltinFnToFnPtr>
+|       |   | `-DeclRefExpr 0x7f821f04cd18 <col:14> '<builtin fn type>' Function 0x7f821f04cbb8 '__builtin_ctzs' 'int (unsigned short)'
+|       |   `-ImplicitCastExpr 0x7f821f04cde0 <col:30> 'unsigned short' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f821f04cd40 <col:30> 'unsigned short' lvalue ParmVar 0x7f821f007578 'x' 'unsigned short'
+|       `-IntegerLiteral 0x7f821f04cdf8 <col:35> 'unsigned int' 16
+`-FunctionDecl 0x7f821f04cbb8 <col:14> col:14 implicit used __builtin_ctzs 'int (unsigned short)' extern
+  |-ParmVarDecl 0x7f821f04cc58 <<invalid sloc>> <invalid sloc> 'unsigned short'
+  |-NoThrowAttr 0x7f821f04ccc0 <col:14> Implicit
+  `-ConstAttr 0x7f821f04cd08 <col:14> Implicit

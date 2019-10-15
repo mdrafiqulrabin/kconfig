@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fea5901a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fea5803fa60 <../Data/C2AST/pr60404_0.c:5:1, col:21> col:13 used fn2 'void (int)' extern
+| `-ParmVarDecl 0x7fea5901b578 <col:18> col:21 'int'
+|-VarDecl 0x7fea5803fbd0 <line:6:1, col:8> col:5 used a 'int [1]'
+|-VarDecl 0x7fea5803fc48 <col:1, col:11> col:11 used b 'int'
+|-FunctionDecl 0x7fea5803fd10 <line:8:1, line:15:1> line:9:1 main 'int ()'
+| `-CompoundStmt 0x7fea58040278 <line:10:1, line:15:1>
+|   |-CallExpr 0x7fea5803fe40 <line:11:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7fea5803fe28 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fea5803fdb0 <col:3> 'void (int)' Function 0x7fea5803fa60 'fn2' 'void (int)'
+|   | `-IntegerLiteral 0x7fea5803fdd8 <col:8> 'int' 0
+|   |-IfStmt 0x7fea58040208 <line:12:3, line:13:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fea58040030 <line:12:7, col:25> 'int' '||'
+|   | | |-BinaryOperator 0x7fea5803fed0 <col:7, col:12> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fea5803feb8 <col:7> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fea5803fe70 <col:7> 'int' lvalue Var 0x7fea5803fc48 'b' 'int'
+|   | | | `-IntegerLiteral 0x7fea5803fe98 <col:12> 'int' 0
+|   | | `-BinaryOperator 0x7fea58040008 <col:17, col:25> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fea5803fff0 <col:17, col:20> 'int' <LValueToRValue>
+|   | |   | `-ArraySubscriptExpr 0x7fea5803ffa8 <col:17, col:20> 'int' lvalue
+|   | |   |   |-ImplicitCastExpr 0x7fea5803ff78 <col:17> 'int *' <ArrayToPointerDecay>
+|   | |   |   | `-DeclRefExpr 0x7fea5803fef8 <col:17> 'int [1]' lvalue Var 0x7fea5803fbd0 'a' 'int [1]'
+|   | |   |   `-ImplicitCastExpr 0x7fea5803ff90 <col:19> 'int' <LValueToRValue>
+|   | |   |     `-DeclRefExpr 0x7fea5803ff20 <col:19> 'int' lvalue Var 0x7fea5803fc48 'b' 'int'
+|   | |   `-IntegerLiteral 0x7fea5803ffd0 <col:25> 'int' 0
+|   | |-CallExpr 0x7fea580401e0 <line:13:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fea580401c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fea58040178 <col:5> '<builtin fn type>' Function 0x7fea58040090 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fea58040260 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7fea58040240 <col:10> 'int' 0
+`-FunctionDecl 0x7fea58040090 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fea58040130 <col:5> Implicit

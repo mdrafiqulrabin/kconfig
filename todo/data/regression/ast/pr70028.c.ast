@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7fbe098174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe09818178 <../Data/C2AST/pr70028.c:7:1, col:24> col:24 referenced A 'unsigned short'
+| `-BuiltinType 0x7fbe09817660 'unsigned short'
+|-TypedefDecl 0x7fbe08006038 <line:8:1, col:13> col:13 referenced B '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fbe08006000 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fbe098175e0 'int'
+|-TypedefDecl 0x7fbe080060a8 <line:9:1, col:27> col:27 referenced C 'unsigned __int128'
+| `-BuiltinType 0x7fbe098177a0 'unsigned __int128'
+|-TypedefDecl 0x7fbe08006158 <line:10:1, col:18> col:18 referenced D '__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+| `-VectorType 0x7fbe08006120 '__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' 2
+|   `-BuiltinType 0x7fbe09817780 '__int128'
+`-FunctionDecl 0x7fbe08006710 <line:12:1, line:19:1> line:13:1 foo 'C (A, int, unsigned int, C, A, unsigned int, B, D)'
+  |-ParmVarDecl 0x7fbe08006200 <col:6, col:8> col:8 used a 'A':'unsigned short'
+  |-ParmVarDecl 0x7fbe08006278 <col:11, col:15> col:15 used b 'int'
+  |-ParmVarDecl 0x7fbe080062f0 <col:18, col:27> col:27 used c 'unsigned int'
+  |-ParmVarDecl 0x7fbe08006360 <col:30, col:32> col:32 used d 'C':'unsigned __int128'
+  |-ParmVarDecl 0x7fbe080063d0 <col:35, col:37> col:37 used e 'A':'unsigned short'
+  |-ParmVarDecl 0x7fbe08006448 <col:40, col:49> col:49 f 'unsigned int'
+  |-ParmVarDecl 0x7fbe080064e0 <col:52, col:54> col:54 used g 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fbe08006570 <col:57, col:59> col:59 used h 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+  `-CompoundStmt 0x7fbe080080e0 <line:14:1, line:19:1>
+    |-CompoundAssignOperator 0x7fbe08006968 <line:15:3, col:17> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ArraySubscriptExpr 0x7fbe08006878 <col:3, col:6> 'int' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fbe08006830 <col:3> 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7fbe080064e0 'g' 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    | | `-IntegerLiteral 0x7fbe08006858 <col:5> 'int' 1
+    | `-ImplicitCastExpr 0x7fbe08006950 <col:11, col:17> 'int' <IntegralCast>
+    |   `-CStyleCastExpr 0x7fbe08006928 <col:11, col:17> 'A':'unsigned short' <IntegralCast>
+    |     `-UnaryOperator 0x7fbe080068f8 <col:15, col:17> 'int' prefix '~'
+    |       `-ImplicitCastExpr 0x7fbe080068e0 <col:17> 'int' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7fbe080068c8 <col:17> 'A':'unsigned short' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fbe080068a0 <col:17> 'A':'unsigned short' lvalue ParmVar 0x7fbe08006200 'a' 'A':'unsigned short'
+    |-CompoundAssignOperator 0x7fbe08006a90 <line:16:3, col:22> 'A':'unsigned short' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fbe080069a0 <col:3> 'A':'unsigned short' lvalue ParmVar 0x7fbe08006200 'a' 'A':'unsigned short'
+    | `-CStyleCastExpr 0x7fbe08006a68 <col:8, col:22> 'unsigned int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fbe08006a50 <col:19, col:22> 'int' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fbe08006a10 <col:19, col:22> 'int' lvalue vectorcomponent
+    |       |-DeclRefExpr 0x7fbe080069c8 <col:19> 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7fbe080064e0 'g' 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    |       `-IntegerLiteral 0x7fbe080069f0 <col:21> 'int' 0
+    |-CompoundAssignOperator 0x7fbe08006be0 <line:17:3, col:16> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' '%=' ComputeLHSTy='D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' ComputeResultTy='D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+    | |-DeclRefExpr 0x7fbe08006ac8 <col:3> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fbe08006570 'h' 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+    | `-BinaryOperator 0x7fbe08006bb8 <col:8, col:16> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' '|'
+    |   |-CStyleCastExpr 0x7fbe08006b40 <col:8, col:12> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' <BitCast>
+    |   | `-ImplicitCastExpr 0x7fbe08006b28 <col:12> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fbe08006af0 <col:12> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fbe08006570 'h' 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+    |   `-ImplicitCastExpr 0x7fbe08006ba0 <col:16> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' <VectorSplat>
+    |     `-ImplicitCastExpr 0x7fbe08006b88 <col:16> '__int128' <IntegralCast>
+    |       `-IntegerLiteral 0x7fbe08006b68 <col:16> 'int' 1
+    `-ReturnStmt 0x7fbe080080c8 <line:18:3, col:47>
+      `-BinaryOperator 0x7fbe080080a0 <col:10, col:47> 'unsigned __int128' '+'
+        |-BinaryOperator 0x7fbe08006fc0 <col:10, col:40> 'unsigned __int128' '+'
+        | |-BinaryOperator 0x7fbe08006ef8 <col:10, col:33> 'unsigned __int128' '+'
+        | | |-BinaryOperator 0x7fbe08006e30 <col:10, col:26> 'unsigned __int128' '+'
+        | | | |-BinaryOperator 0x7fbe08006db0 <col:10, col:22> 'unsigned __int128' '+'
+        | | | | |-ImplicitCastExpr 0x7fbe08006d98 <col:10, col:18> 'unsigned __int128' <IntegralCast>
+        | | | | | `-BinaryOperator 0x7fbe08006d30 <col:10, col:18> 'unsigned int' '+'
+        | | | | |   |-ImplicitCastExpr 0x7fbe08006d18 <col:10, col:14> 'unsigned int' <IntegralCast>
+        | | | | |   | `-BinaryOperator 0x7fbe08006cb0 <col:10, col:14> 'int' '+'
+        | | | | |   |   |-ImplicitCastExpr 0x7fbe08006c80 <col:10> 'int' <IntegralCast>
+        | | | | |   |   | `-ImplicitCastExpr 0x7fbe08006c68 <col:10> 'A':'unsigned short' <LValueToRValue>
+        | | | | |   |   |   `-DeclRefExpr 0x7fbe08006c18 <col:10> 'A':'unsigned short' lvalue ParmVar 0x7fbe08006200 'a' 'A':'unsigned short'
+        | | | | |   |   `-ImplicitCastExpr 0x7fbe08006c98 <col:14> 'int' <LValueToRValue>
+        | | | | |   |     `-DeclRefExpr 0x7fbe08006c40 <col:14> 'int' lvalue ParmVar 0x7fbe08006278 'b' 'int'
+        | | | | |   `-ImplicitCastExpr 0x7fbe08006d00 <col:18> 'unsigned int' <LValueToRValue>
+        | | | | |     `-DeclRefExpr 0x7fbe08006cd8 <col:18> 'unsigned int' lvalue ParmVar 0x7fbe080062f0 'c' 'unsigned int'
+        | | | | `-ImplicitCastExpr 0x7fbe08006d80 <col:22> 'C':'unsigned __int128' <LValueToRValue>
+        | | | |   `-DeclRefExpr 0x7fbe08006d58 <col:22> 'C':'unsigned __int128' lvalue ParmVar 0x7fbe08006360 'd' 'C':'unsigned __int128'
+        | | | `-ImplicitCastExpr 0x7fbe08006e18 <col:26> 'unsigned __int128' <IntegralCast>
+        | | |   `-ImplicitCastExpr 0x7fbe08006e00 <col:26> 'A':'unsigned short' <LValueToRValue>
+        | | |     `-DeclRefExpr 0x7fbe08006dd8 <col:26> 'A':'unsigned short' lvalue ParmVar 0x7fbe080063d0 'e' 'A':'unsigned short'
+        | | `-ImplicitCastExpr 0x7fbe08006ee0 <col:30, col:33> 'unsigned __int128' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7fbe08006ec8 <col:30, col:33> 'int' <LValueToRValue>
+        | |     `-ArraySubscriptExpr 0x7fbe08006ea0 <col:30, col:33> 'int' lvalue vectorcomponent
+        | |       |-DeclRefExpr 0x7fbe08006e58 <col:30> 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7fbe080064e0 'g' 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+        | |       `-IntegerLiteral 0x7fbe08006e80 <col:32> 'int' 0
+        | `-ImplicitCastExpr 0x7fbe08006fa8 <col:37, col:40> 'unsigned __int128' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7fbe08006f90 <col:37, col:40> 'int' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fbe08006f68 <col:37, col:40> 'int' lvalue vectorcomponent
+        |       |-DeclRefExpr 0x7fbe08006f20 <col:37> 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7fbe080064e0 'g' 'B':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+        |       `-IntegerLiteral 0x7fbe08006f48 <col:39> 'int' 1
+        `-ImplicitCastExpr 0x7fbe08008088 <col:44, col:47> 'unsigned __int128' <IntegralCast>
+          `-ImplicitCastExpr 0x7fbe08008070 <col:44, col:47> '__int128' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fbe08008048 <col:44, col:47> '__int128' lvalue vectorcomponent
+              |-DeclRefExpr 0x7fbe08008000 <col:44> 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7fbe08006570 'h' 'D':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+              `-IntegerLiteral 0x7fbe08008028 <col:46> 'int' 1

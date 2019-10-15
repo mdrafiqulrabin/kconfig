@@ -1,0 +1,30 @@
+../Data/C2AST/pr15698-3.c:9:6: error: conflicting types for 'f'
+void f(a) long a; {}  
+     ^
+../Data/C2AST/pr15698-3.c:8:6: note: previous declaration is here
+void f();
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fca360262e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca36026860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fca36026580 '__int128'
+|-TypedefDecl 0x7fca360268d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fca360265a0 'unsigned __int128'
+|-TypedefDecl 0x7fca36026ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fca360269b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fca36026928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fca36026c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fca36026c00 'char *'
+|   `-BuiltinType 0x7fca36026380 'char'
+|-TypedefDecl 0x7fca36026f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fca36026eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fca36026d20 'struct __va_list_tag'
+|     `-Record 0x7fca36026c98 '__va_list_tag'
+|-FunctionDecl 0x7fca37030400 <../Data/C2AST/pr15698-3.c:6:1, col:8> col:6 f 'void ()'
+|-FunctionDecl 0x7fca370305c0 prev 0x7fca37030400 <line:7:1, col:11> col:6 f 'void (int)'
+| `-ParmVarDecl 0x7fca370304f8 <col:8> col:11 'int'
+|-FunctionDecl 0x7fca37030688 prev 0x7fca370305c0 <line:8:1, col:8> col:6 f 'void (int)'
+| `-ParmVarDecl 0x7fca37030728 <<invalid sloc>> <invalid sloc> implicit 'int'
+`-FunctionDecl 0x7fca37030870 <line:9:1, col:20> col:6 invalid f 'void (long)'
+  |-ParmVarDecl 0x7fca370307a8 <col:11, col:16> col:16 a 'long'
+  `-CompoundStmt 0x7fca37030918 <col:19, col:20>

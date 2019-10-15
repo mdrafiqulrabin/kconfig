@@ -1,0 +1,25 @@
+../Data/C2AST/pr71573.c:13:5: error: called object type 'int' is not a function or function pointer
+  t (0);  
+  ~ ^
+1 error generated.
+TranslationUnitDecl 0x7fe1cf02b4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe1cf02ba60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe1cf02b780 '__int128'
+|-TypedefDecl 0x7fe1cf02bad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe1cf02b7a0 'unsigned __int128'
+|-TypedefDecl 0x7fe1cf02bda8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe1cf02bbb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe1cf02bb28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe1cf02be40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe1cf02be00 'char *'
+|   `-BuiltinType 0x7fe1cf02b580 'char'
+|-TypedefDecl 0x7fe1cf02c108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe1cf02c0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe1cf02bf20 'struct __va_list_tag'
+|     `-Record 0x7fe1cf02be98 '__va_list_tag'
+|-FunctionDecl 0x7fe1d0014220 <../Data/C2AST/pr71573.c:4:1, line:8:1> line:5:1 f1 'void (void)'
+| `-CompoundStmt 0x7fe1d00143a0 <line:6:1, line:8:1>
+|   `-DeclStmt 0x7fe1d0014388 <line:7:3, col:15>
+|     `-VarDecl 0x7fe1d0014318 parent 0x7fe1cf02b4e8 <col:3, col:14> col:14 used t 'int' extern
+`-FunctionDecl 0x7fe1d0014448 <line:10:1, line:14:1> line:11:1 f2 'void (void)'
+  `-CompoundStmt 0x7fe1d0014930 <line:12:1, line:14:1>

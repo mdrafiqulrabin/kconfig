@@ -1,0 +1,96 @@
+TranslationUnitDecl 0x7f928a02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f928a02c978 <../Data/C2AST/pr79223.c:3:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f928a02bea0 'unsigned long'
+|-FunctionDecl 0x7f928a06da68 <line:5:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f928a06db08 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f928a06db68 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f928a06dbc8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f928a06dc40 prev 0x7f928a06da68 <col:1, col:48> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f928a06d800 <col:22, col:26> col:27 'void *'
+| |-ParmVarDecl 0x7f928a06d8a0 <col:29, col:39> col:40 'const void *'
+| `-ParmVarDecl 0x7f928a06d930 <col:42> col:48 'size_t':'unsigned long'
+|-FunctionDecl 0x7f928a06de98 <line:6:1, col:49> col:14 used mempcpy 'void *(void *, const void *, size_t)' extern
+| |-ParmVarDecl 0x7f928a06dd10 <col:23, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7f928a06dd88 <col:30, col:40> col:41 'const void *'
+| `-ParmVarDecl 0x7f928a06ddf8 <col:43> col:49 'size_t':'unsigned long'
+|-FunctionDecl 0x7f928a06e130 <line:7:14> col:14 implicit used memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f928a06e1d0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f928a06e230 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f928a06e290 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f928a06e308 prev 0x7f928a06e130 <col:1, col:49> col:14 used memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f928a06dfa8 <col:23, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7f928a06e020 <col:30, col:40> col:41 'const void *'
+| `-ParmVarDecl 0x7f928a06e090 <col:43> col:49 'size_t':'unsigned long'
+|-VarDecl 0x7f928a06e438 <line:9:1, col:9> col:6 used d 'char [3]'
+|-VarDecl 0x7f928a06e518 <line:10:1, col:9> col:6 used s 'char [4]'
+|-FunctionDecl 0x7f928a06e670 <line:12:1, line:20:1> line:12:8 used range 'size_t (void)'
+| `-CompoundStmt 0x7f928a06ec10 <line:13:1, line:20:1>
+|   |-DeclStmt 0x7f928a06e8b0 <line:14:3, col:24>
+|   | `-FunctionDecl 0x7f928a06e800 parent 0x7f928a02bce8 <col:3, col:23> col:17 used size 'size_t ()' extern
+|   |-DeclStmt 0x7f928a06e9f8 <line:15:3, col:21>
+|   | `-VarDecl 0x7f928a06e8d8 <col:3, col:20> col:10 used n 'size_t':'unsigned long' cinit
+|   |   `-CallExpr 0x7f928a06e9d0 <col:14, col:20> 'size_t':'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f928a06e9b8 <col:14> 'size_t (*)()' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7f928a06e938 <col:14> 'size_t ()' Function 0x7f928a06e800 'size' 'size_t ()'
+|   |-IfStmt 0x7f928a06eb80 <line:16:3, line:17:23>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f928a06ea98 <line:16:7, col:19> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7f928a06ea80 <col:7> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f928a06ea10 <col:7> 'size_t':'unsigned long' lvalue Var 0x7f928a06e8d8 'n' 'size_t':'unsigned long'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f928a06ea60 <col:12, col:19> 'unsigned long' sizeof
+|   | |   `-DeclRefExpr 0x7f928a06ea38 <col:19> 'char [3]' lvalue Var 0x7f928a06e438 'd' 'char [3]'
+|   | |-ReturnStmt 0x7f928a06eb68 <line:17:5, col:23>
+|   | | `-BinaryOperator 0x7f928a06eb40 <col:12, col:23> 'unsigned long' '+'
+|   | |   |-UnaryExprOrTypeTraitExpr 0x7f928a06eae8 <col:12, col:19> 'unsigned long' sizeof
+|   | |   | `-DeclRefExpr 0x7f928a06eac0 <col:19> 'char [3]' lvalue Var 0x7f928a06e438 'd' 'char [3]'
+|   | |   `-ImplicitCastExpr 0x7f928a06eb28 <col:23> 'unsigned long' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7f928a06eb08 <col:23> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f928a06ebf8 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7f928a06ebe0 <col:10> 'size_t':'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f928a06ebb8 <col:10> 'size_t':'unsigned long' lvalue Var 0x7f928a06e8d8 'n' 'size_t':'unsigned long'
+|-FunctionDecl 0x7f928a06ed00 <line:22:1, line:25:1> line:22:6 test_memcpy 'void (void)'
+| `-CompoundStmt 0x7f928a06eff0 <line:23:1, line:25:1>
+|   `-CallExpr 0x7f928a06ef50 <line:24:3, col:25> 'void *'
+|     |-ImplicitCastExpr 0x7f928a06ef38 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f928a06eda0 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f928a06dc40 'memcpy' 'void *(void *, const void *, unsigned long)'
+|     |-ImplicitCastExpr 0x7f928a06efa8 <col:11> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f928a06ef90 <col:11> 'char *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7f928a06edc8 <col:11> 'char [3]' lvalue Var 0x7f928a06e438 'd' 'char [3]'
+|     |-ImplicitCastExpr 0x7f928a06efd8 <col:14> 'const void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f928a06efc0 <col:14> 'char *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7f928a06edf0 <col:14> 'char [4]' lvalue Var 0x7f928a06e518 's' 'char [4]'
+|     `-CallExpr 0x7f928a06eeb0 <col:17, col:24> 'size_t':'unsigned long'
+|       `-ImplicitCastExpr 0x7f928a06ee98 <col:17> 'size_t (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f928a06ee18 <col:17> 'size_t (void)' Function 0x7f928a06e670 'range' 'size_t (void)'
+|-FunctionDecl 0x7f928a06f098 <line:27:1, line:30:1> line:27:6 test_mempcpy 'void (void)'
+| `-CompoundStmt 0x7f928a06f300 <line:28:1, line:30:1>
+|   `-CallExpr 0x7f928a06f260 <line:29:3, col:26> 'void *'
+|     |-ImplicitCastExpr 0x7f928a06f248 <col:3> 'void *(*)(void *, const void *, size_t)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f928a06f138 <col:3> 'void *(void *, const void *, size_t)' Function 0x7f928a06de98 'mempcpy' 'void *(void *, const void *, size_t)'
+|     |-ImplicitCastExpr 0x7f928a06f2b8 <col:12> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f928a06f2a0 <col:12> 'char *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7f928a06f160 <col:12> 'char [3]' lvalue Var 0x7f928a06e438 'd' 'char [3]'
+|     |-ImplicitCastExpr 0x7f928a06f2e8 <col:15> 'const void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f928a06f2d0 <col:15> 'char *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7f928a06f188 <col:15> 'char [4]' lvalue Var 0x7f928a06e518 's' 'char [4]'
+|     `-CallExpr 0x7f928a06f1f0 <col:18, col:25> 'size_t':'unsigned long'
+|       `-ImplicitCastExpr 0x7f928a06f1d8 <col:18> 'size_t (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f928a06f1b0 <col:18> 'size_t (void)' Function 0x7f928a06e670 'range' 'size_t (void)'
+`-FunctionDecl 0x7f928a06f3a8 <line:32:1, line:35:1> line:32:6 test_memmove 'void (void)'
+  `-CompoundStmt 0x7f928a06f640 <line:33:1, line:35:1>
+    `-CallExpr 0x7f928a06f5b8 <line:34:3, col:30> 'void *'
+      |-ImplicitCastExpr 0x7f928a06f5a0 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f928a06f448 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f928a06e308 'memmove' 'void *(void *, const void *, unsigned long)'
+      |-ImplicitCastExpr 0x7f928a06f5f8 <col:12, col:16> 'void *' <BitCast>
+      | `-BinaryOperator 0x7f928a06f4d0 <col:12, col:16> 'char *' '+'
+      |   |-ImplicitCastExpr 0x7f928a06f4b8 <col:12> 'char *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7f928a06f470 <col:12> 'char [3]' lvalue Var 0x7f928a06e438 'd' 'char [3]'
+      |   `-IntegerLiteral 0x7f928a06f498 <col:16> 'int' 1
+      |-ImplicitCastExpr 0x7f928a06f628 <col:19> 'const void *' <BitCast>
+      | `-ImplicitCastExpr 0x7f928a06f610 <col:19> 'char *' <ArrayToPointerDecay>
+      |   `-DeclRefExpr 0x7f928a06f4f8 <col:19> 'char [3]' lvalue Var 0x7f928a06e438 'd' 'char [3]'
+      `-CallExpr 0x7f928a06f560 <col:22, col:29> 'size_t':'unsigned long'
+        `-ImplicitCastExpr 0x7f928a06f548 <col:22> 'size_t (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f928a06f520 <col:22> 'size_t (void)' Function 0x7f928a06e670 'range' 'size_t (void)'

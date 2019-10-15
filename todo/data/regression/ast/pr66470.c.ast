@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7ffeb20008e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffeb2016800 <../Data/C2AST/pr66470.c:6:1, col:39> col:35 used c 'unsigned __int128 [10]' extern tls
+|-VarDecl 0x7ffeb20168b8 <line:7:1, col:5> col:5 used d 'int'
+`-FunctionDecl 0x7ffeb20169e8 <line:9:1, line:13:1> line:10:1 foo 'unsigned __int128 (void)'
+  `-CompoundStmt 0x7ffeb2016b90 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7ffeb2016b78 <line:12:3, col:13>
+      `-ImplicitCastExpr 0x7ffeb2016b60 <col:10, col:13> 'unsigned __int128' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7ffeb2016b38 <col:10, col:13> 'unsigned __int128' lvalue
+          |-ImplicitCastExpr 0x7ffeb2016b08 <col:10> 'unsigned __int128 *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7ffeb2016a88 <col:10> 'unsigned __int128 [10]' lvalue Var 0x7ffeb2016800 'c' 'unsigned __int128 [10]'
+          `-ImplicitCastExpr 0x7ffeb2016b20 <col:12> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7ffeb2016ab0 <col:12> 'int' lvalue Var 0x7ffeb20168b8 'd' 'int'

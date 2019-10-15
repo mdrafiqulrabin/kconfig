@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7f903882bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f903882c960 <../Data/C2AST/pr50763-2.c:4:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7f903886d8d0 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7f903886d880 'union tree_node *'
+|   `-ElaboratedType 0x7f903886d820 'union tree_node' sugar
+|     `-RecordType 0x7f903886d800 'union tree_node'
+|       `-Record 0x7f903886def8 'tree_node'
+|-RecordDecl 0x7f903886d940 <line:6:1, line:9:1> line:6:8 struct tree_base definition
+| `-FieldDecl 0x7f903886da08 <line:8:3, col:7> col:7 referenced code 'int'
+|-RecordDecl 0x7f903886da50 <line:11:1, line:15:1> line:11:8 struct tree_typed definition
+| |-FieldDecl 0x7f903886db50 <line:13:3, col:20> col:20 base 'struct tree_base':'struct tree_base'
+| `-FieldDecl 0x7f903886dbd0 <line:14:3, col:8> col:8 referenced type 'tree':'union tree_node *'
+|-RecordDecl 0x7f903886dc60 <line:17:1, line:20:1> line:17:8 struct tree_common definition
+| `-FieldDecl 0x7f903886dd60 <line:19:3, col:21> col:21 typed 'struct tree_typed':'struct tree_typed'
+|-RecordDecl 0x7f903886ddf8 <line:22:1, line:25:1> line:22:8 struct tree_type_common definition
+| `-FieldDecl 0x7f903886deb0 <line:24:3, col:8> col:8 referenced main_variant 'tree':'union tree_node *'
+|-RecordDecl 0x7f903886def8 prev 0x7f903882c960 <line:27:1, line:32:1> line:27:7 union tree_node definition
+| |-FieldDecl 0x7f903886dfa0 <line:29:3, col:20> col:20 referenced base 'struct tree_base':'struct tree_base'
+| |-FieldDecl 0x7f903886e008 <line:30:3, col:21> col:21 referenced typed 'struct tree_typed':'struct tree_typed'
+| `-FieldDecl 0x7f903886e0a0 <line:31:3, col:27> col:27 referenced type_common 'struct tree_type_common':'struct tree_type_common'
+`-FunctionDecl 0x7f903886e208 <line:34:1, line:46:1> line:34:5 std_canonical_va_list_type 'int (tree)'
+  |-ParmVarDecl 0x7f903886e0f8 <col:33, col:38> col:38 used type 'tree':'union tree_node *'
+  `-CompoundStmt 0x7f903886e930 <line:35:1, line:46:1>
+    |-IfStmt 0x7f903886e770 <line:36:3, line:40:26>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f903886e3a0 <line:36:7, col:18> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7f903886e368 <col:7, col:18> 'int' lvalue .code 0x7f903886da08
+    | |   `-MemberExpr 0x7f903886e330 <col:7, col:13> 'struct tree_base':'struct tree_base' lvalue ->base 0x7f903886dfa0
+    | |     `-ImplicitCastExpr 0x7f903886e318 <col:7> 'tree':'union tree_node *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f903886e2f0 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    | |-BinaryOperator 0x7f903886e4a8 <line:37:5, col:24> 'tree':'union tree_node *' '='
+    | | |-DeclRefExpr 0x7f903886e3b8 <col:5> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    | | `-ImplicitCastExpr 0x7f903886e490 <col:12, col:24> 'tree':'union tree_node *' <LValueToRValue>
+    | |   `-MemberExpr 0x7f903886e458 <col:12, col:24> 'tree':'union tree_node *' lvalue .type 0x7f903886dbd0
+    | |     `-MemberExpr 0x7f903886e420 <col:12, col:18> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7f903886e008
+    | |       `-ImplicitCastExpr 0x7f903886e408 <col:12> 'tree':'union tree_node *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7f903886e3e0 <col:12> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    | `-IfStmt 0x7f903886e738 <line:39:5, line:40:26>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7f903886e608 <line:39:9, col:32> 'int' <LValueToRValue>
+    |   | `-MemberExpr 0x7f903886e5d0 <col:9, col:32> 'int' lvalue .code 0x7f903886da08
+    |   |   `-MemberExpr 0x7f903886e598 <col:9, col:27> 'struct tree_base':'struct tree_base' lvalue ->base 0x7f903886dfa0
+    |   |     `-ImplicitCastExpr 0x7f903886e580 <col:9, col:21> 'tree':'union tree_node *' <LValueToRValue>
+    |   |       `-MemberExpr 0x7f903886e548 <col:9, col:21> 'tree':'union tree_node *' lvalue .type 0x7f903886dbd0
+    |   |         `-MemberExpr 0x7f903886e510 <col:9, col:15> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7f903886e008
+    |   |           `-ImplicitCastExpr 0x7f903886e4f8 <col:9> 'tree':'union tree_node *' <LValueToRValue>
+    |   |             `-DeclRefExpr 0x7f903886e4d0 <col:9> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    |   |-BinaryOperator 0x7f903886e710 <line:40:7, col:26> 'tree':'union tree_node *' '='
+    |   | |-DeclRefExpr 0x7f903886e620 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    |   | `-ImplicitCastExpr 0x7f903886e6f8 <col:14, col:26> 'tree':'union tree_node *' <LValueToRValue>
+    |   |   `-MemberExpr 0x7f903886e6c0 <col:14, col:26> 'tree':'union tree_node *' lvalue .type 0x7f903886dbd0
+    |   |     `-MemberExpr 0x7f903886e688 <col:14, col:20> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7f903886e008
+    |   |       `-ImplicitCastExpr 0x7f903886e670 <col:14> 'tree':'union tree_node *' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7f903886e648 <col:14> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    |   `-<<<NULL>>>
+    |-IfStmt 0x7f903886e8c0 <line:42:3, line:43:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f903886e870 <line:42:7, col:25> 'tree':'union tree_node *' <LValueToRValue>
+    | | `-MemberExpr 0x7f903886e838 <col:7, col:25> 'tree':'union tree_node *' lvalue .main_variant 0x7f903886deb0
+    | |   `-MemberExpr 0x7f903886e800 <col:7, col:13> 'struct tree_type_common':'struct tree_type_common' lvalue ->type_common 0x7f903886e0a0
+    | |     `-ImplicitCastExpr 0x7f903886e7d0 <col:7> 'tree':'union tree_node *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f903886e7a8 <col:7> 'tree':'union tree_node *' lvalue ParmVar 0x7f903886e0f8 'type' 'tree':'union tree_node *'
+    | |-ReturnStmt 0x7f903886e8a8 <line:43:5, col:12>
+    | | `-IntegerLiteral 0x7f903886e888 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f903886e918 <line:45:3, col:10>
+      `-IntegerLiteral 0x7f903886e8f8 <col:10> 'int' 0

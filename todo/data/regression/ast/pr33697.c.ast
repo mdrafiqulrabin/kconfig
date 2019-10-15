@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ffa4181a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa4181b578 <../Data/C2AST/pr33697.c:5:1, col:22> col:22 referenced gint16 'short'
+| `-BuiltinType 0x7ffa4181a9c0 'short'
+|-TypedefDecl 0x7ffa41025c00 <line:6:1, col:24> col:24 referenced guint16 'unsigned short'
+| `-BuiltinType 0x7ffa4181aa60 'unsigned short'
+`-FunctionDecl 0x7ffa41025d90 <line:7:1, line:10:1> line:7:8 dissect_old_pflog 'gint16 (gint16)'
+  |-ParmVarDecl 0x7ffa41025c90 <col:26, col:33> col:33 used rnr 'gint16':'short'
+  `-CompoundStmt 0x7ffa41026270 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7ffa41026258 <line:9:3, col:82>
+      `-ImplicitCastExpr 0x7ffa41026240 <col:10, col:82> 'gint16':'short' <IntegralCast>
+        `-CStyleCastExpr 0x7ffa41026218 <col:10, col:82> 'guint16':'unsigned short' <IntegralCast>
+          `-ParenExpr 0x7ffa410261f8 <col:20, col:82> 'int'
+            `-BinaryOperator 0x7ffa41026190 <col:21, col:81> 'int' '|'
+              |-ImplicitCastExpr 0x7ffa41026160 <col:21, col:49> 'int' <IntegralCast>
+              | `-CStyleCastExpr 0x7ffa41025fd8 <col:21, col:49> 'guint16':'unsigned short' <IntegralCast>
+              |   `-ParenExpr 0x7ffa41025fb8 <col:31, col:49> 'int'
+              |     `-BinaryOperator 0x7ffa41025f50 <col:32, col:48> 'int' '>>'
+              |       |-ImplicitCastExpr 0x7ffa41025f38 <col:32, col:41> 'int' <IntegralCast>
+              |       | `-CStyleCastExpr 0x7ffa41025ef0 <col:32, col:41> 'guint16':'unsigned short' <IntegralCast>
+              |       |   `-ImplicitCastExpr 0x7ffa41025ed8 <col:41> 'gint16':'short' <LValueToRValue>
+              |       |     `-DeclRefExpr 0x7ffa41025ea0 <col:41> 'gint16':'short' lvalue ParmVar 0x7ffa41025c90 'rnr' 'gint16':'short'
+              |       `-IntegerLiteral 0x7ffa41025f18 <col:48> 'int' 8
+              `-ImplicitCastExpr 0x7ffa41026178 <col:53, col:81> 'int' <IntegralCast>
+                `-CStyleCastExpr 0x7ffa41026138 <col:53, col:81> 'guint16':'unsigned short' <IntegralCast>
+                  `-ParenExpr 0x7ffa41026118 <col:63, col:81> 'int'
+                    `-BinaryOperator 0x7ffa410260b0 <col:64, col:80> 'int' '<<'
+                      |-ImplicitCastExpr 0x7ffa41026098 <col:64, col:73> 'int' <IntegralCast>
+                      | `-CStyleCastExpr 0x7ffa41026050 <col:64, col:73> 'guint16':'unsigned short' <IntegralCast>
+                      |   `-ImplicitCastExpr 0x7ffa41026038 <col:73> 'gint16':'short' <LValueToRValue>
+                      |     `-DeclRefExpr 0x7ffa41026000 <col:73> 'gint16':'short' lvalue ParmVar 0x7ffa41025c90 'rnr' 'gint16':'short'
+                      `-IntegerLiteral 0x7ffa41026078 <col:80> 'int' 8

@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fab8882bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fab8886d8c0 <../Data/C2AST/pr27758.c:5:1, col:24> col:15 referenced fn 'int (*)(void)'
+| `-PointerType 0x7fab8886d860 'int (*)(void)'
+|   `-ParenType 0x7fab8886d800 'int (void)' sugar
+|     `-FunctionProtoType 0x7fab8882c9d0 'int (void)' cdecl
+|       `-BuiltinType 0x7fab8882bde0 'int'
+|-FunctionDecl 0x7fab8886d9b0 <line:7:1, line:11:1> line:8:1 used foo 'int (void)' static inline
+| `-CompoundStmt 0x7fab8886dac8 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fab8886dab0 <line:10:3, col:10>
+|     `-IntegerLiteral 0x7fab8886da90 <col:10> 'int' 1
+|-FunctionDecl 0x7fab8886dbf0 <line:13:1, line:17:1> line:14:1 used test 'fn (void)'
+| `-CompoundStmt 0x7fab8886dce8 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fab8886dcd0 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7fab8886dcb8 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fab8886dc90 <col:10> 'int (void)' Function 0x7fab8886d9b0 'foo' 'int (void)'
+`-FunctionDecl 0x7fab8886dd98 <line:19:1, line:24:1> line:20:1 main 'int (void)'
+  `-CompoundStmt 0x7fab8886e078 <line:21:1, line:24:1>
+    |-DeclStmt 0x7fab8886df98 <line:22:3, col:17>
+    | `-VarDecl 0x7fab8886de78 <col:3, col:16> col:6 used f 'fn':'int (*)(void)' cinit
+    |   `-CallExpr 0x7fab8886df70 <col:10, col:16> 'fn':'int (*)(void)'
+    |     `-ImplicitCastExpr 0x7fab8886df58 <col:10> 'fn (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fab8886ded8 <col:10> 'fn (void)' Function 0x7fab8886dbf0 'test' 'fn (void)'
+    `-ReturnStmt 0x7fab8886e060 <line:23:3, col:18>
+      `-BinaryOperator 0x7fab8886e038 <col:10, col:18> 'int' '!='
+        |-CallExpr 0x7fab8886dff0 <col:10, col:13> 'int'
+        | `-ImplicitCastExpr 0x7fab8886dfd8 <col:10> 'fn':'int (*)(void)' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fab8886dfb0 <col:10> 'fn':'int (*)(void)' lvalue Var 0x7fab8886de78 'f' 'fn':'int (*)(void)'
+        `-IntegerLiteral 0x7fab8886e018 <col:18> 'int' 1

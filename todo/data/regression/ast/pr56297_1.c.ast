@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7fcdf2824ce8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fcdf3014200 <../Data/C2AST/pr56297_1.c:2:1, col:14> col:14 i 'int' register
+  `-AsmLabelAttr 0x7fcdf3014260 <col:20> "esp"

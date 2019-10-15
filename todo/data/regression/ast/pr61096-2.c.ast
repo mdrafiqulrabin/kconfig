@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ffb5d0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffb5d018160 <../Data/C2AST/pr61096-2.c:4:1, col:23> col:8 struct s definition
+| `-FieldDecl 0x7ffb5d801a98 <col:12, col:20> col:17 referenced c 'char [1]'
+|-FunctionDecl 0x7ffb5d801c10 <line:5:1, col:26> col:17 used foo 'struct s (void)' extern
+`-FunctionDecl 0x7ffb5d801db0 <line:6:1, line:10:1> line:7:1 bar 'void (void)'
+  `-CompoundStmt 0x7ffb5d802010 <line:8:1, line:10:1>
+    `-DeclStmt 0x7ffb5d801ff8 <line:9:3, col:23>
+      `-VarDecl 0x7ffb5d801e68 <col:3, col:22> col:9 t 'char *' cinit
+        `-ImplicitCastExpr 0x7ffb5d801fe0 <col:13, col:22> 'char *' <ArrayToPointerDecay>
+          `-MemberExpr 0x7ffb5d801fa8 <col:13, col:22> 'char [1]' .c 0x7ffb5d801a98
+            `-ParenExpr 0x7ffb5d801f88 <col:13, col:20> 'struct s':'struct s'
+              `-CallExpr 0x7ffb5d801f60 <col:14, col:19> 'struct s':'struct s'
+                `-ImplicitCastExpr 0x7ffb5d801f48 <col:14> 'struct s (*)(void)' <FunctionToPointerDecay>
+                  `-DeclRefExpr 0x7ffb5d801ec8 <col:14> 'struct s (void)' Function 0x7ffb5d801c10 'foo' 'struct s (void)'

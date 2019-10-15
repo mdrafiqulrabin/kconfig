@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fae6a82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fae6a82c960 <../Data/C2AST/pr36666.c:1:1, line:6:1> line:1:8 struct Foo definition
+| |-FieldDecl 0x7fae6b014260 <line:2:5, col:10> col:10 p 'int *'
+| |-RecordDecl 0x7fae6b0142a8 parent 0x7fae6a82bce8 <line:3:5, line:5:5> line:3:12 struct X definition
+| | |-FieldDecl 0x7fae6b014378 <line:4:2, col:6> col:6 a 'int'
+| | |-FieldDecl 0x7fae6b0143d8 <col:2, col:8> col:8 b 'int'
+| | |-FieldDecl 0x7fae6b014438 <col:2, col:10> col:10 c 'int'
+| | |-FieldDecl 0x7fae6b014498 <col:2, col:12> col:12 d 'int'
+| | |-FieldDecl 0x7fae6b0144f8 <col:2, col:14> col:14 e 'int'
+| | `-FieldDecl 0x7fae6b014558 <col:2, col:17> col:17 f 'int *'
+| `-FieldDecl 0x7fae6b0145f0 <line:3:5, line:5:7> col:7 referenced x 'struct X':'struct X'
+|-VarDecl 0x7fae6b0146f0 <line:1:1, line:6:4> col:4 used init 'struct Foo *'
+|-VarDecl 0x7fae6b0147b8 <line:1:1, line:6:11> col:11 used init2 'struct Foo *'
+|-FunctionDecl 0x7fae6b014970 <line:8:1, col:45> col:33 used foo 'struct X (struct X)'
+| |-ParmVarDecl 0x7fae6b014858 <col:37, col:44> col:45 'struct X':'struct X'
+| `-ConstAttr 0x7fae6b014a18 <col:25>
+|-FunctionDecl 0x7fae6b014b90 <line:9:1, col:50> col:35 used foo2 'struct Foo (struct Foo)'
+| |-ParmVarDecl 0x7fae6b014a80 <col:40, col:47> col:50 'struct Foo':'struct Foo'
+| `-ConstAttr 0x7fae6b014c38 <col:27>
+|-FunctionDecl 0x7fae6b014d40 <line:11:1, line:14:1> line:11:6 bar1 'void (void)'
+| `-CompoundStmt 0x7fae6b014fe0 <line:12:1, line:14:1>
+|   `-BinaryOperator 0x7fae6b014fb8 <line:13:3, col:26> 'struct X':'struct X' '='
+|     |-MemberExpr 0x7fae6b014e20 <col:3, col:9> 'struct X':'struct X' lvalue ->x 0x7fae6b0145f0
+|     | `-ImplicitCastExpr 0x7fae6b014e08 <col:3> 'struct Foo *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fae6b014de0 <col:3> 'struct Foo *' lvalue Var 0x7fae6b0146f0 'init' 'struct Foo *'
+|     `-CallExpr 0x7fae6b014f70 <col:13, col:26> 'struct X':'struct X'
+|       |-ImplicitCastExpr 0x7fae6b014f58 <col:13> 'struct X (*)(struct X)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fae6b014e58 <col:13> 'struct X (struct X)' Function 0x7fae6b014970 'foo' 'struct X (struct X)'
+|       `-ImplicitCastExpr 0x7fae6b014fa0 <col:18, col:25> 'struct X':'struct X' <LValueToRValue>
+|         `-MemberExpr 0x7fae6b014ec0 <col:18, col:25> 'struct X':'struct X' lvalue ->x 0x7fae6b0145f0
+|           `-ImplicitCastExpr 0x7fae6b014ea8 <col:18> 'struct Foo *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fae6b014e80 <col:18> 'struct Foo *' lvalue Var 0x7fae6b0147b8 'init2' 'struct Foo *'
+|-FunctionDecl 0x7fae6b015088 <line:15:1, line:18:1> line:15:6 bar2 'void (void)'
+| `-CompoundStmt 0x7fae6b02bcd8 <line:16:1, line:18:1>
+|   `-BinaryOperator 0x7fae6b02bcb0 <line:17:3, col:25> 'struct X':'struct X' '='
+|     |-MemberExpr 0x7fae6b015168 <col:3, col:9> 'struct X':'struct X' lvalue ->x 0x7fae6b0145f0
+|     | `-ImplicitCastExpr 0x7fae6b015150 <col:3> 'struct Foo *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fae6b015128 <col:3> 'struct Foo *' lvalue Var 0x7fae6b0146f0 'init' 'struct Foo *'
+|     `-CallExpr 0x7fae6b02bc68 <col:13, col:25> 'struct X':'struct X'
+|       |-ImplicitCastExpr 0x7fae6b02bc50 <col:13> 'struct X (*)(struct X)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fae6b0151a0 <col:13> 'struct X (struct X)' Function 0x7fae6b014970 'foo' 'struct X (struct X)'
+|       `-ImplicitCastExpr 0x7fae6b02bc98 <col:18, col:24> 'struct X':'struct X' <LValueToRValue>
+|         `-MemberExpr 0x7fae6b02bc18 <col:18, col:24> 'struct X':'struct X' lvalue ->x 0x7fae6b0145f0
+|           `-ImplicitCastExpr 0x7fae6b02bc00 <col:18> 'struct Foo *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fae6b0151c8 <col:18> 'struct Foo *' lvalue Var 0x7fae6b0146f0 'init' 'struct Foo *'
+`-FunctionDecl 0x7fae6b02bd80 <line:19:1, line:22:1> line:19:6 bar3 'void (void)'
+  `-CompoundStmt 0x7fae6b02bff0 <line:20:1, line:22:1>
+    `-BinaryOperator 0x7fae6b02bfc8 <line:21:3, col:23> 'struct Foo':'struct Foo' '='
+      |-UnaryOperator 0x7fae6b02be60 <col:3, col:4> 'struct Foo':'struct Foo' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fae6b02be48 <col:4> 'struct Foo *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fae6b02be20 <col:4> 'struct Foo *' lvalue Var 0x7fae6b0146f0 'init' 'struct Foo *'
+      `-CallExpr 0x7fae6b02bf80 <col:11, col:23> 'struct Foo':'struct Foo'
+        |-ImplicitCastExpr 0x7fae6b02bf68 <col:11> 'struct Foo (*)(struct Foo)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fae6b02be80 <col:11> 'struct Foo (struct Foo)' Function 0x7fae6b014b90 'foo2' 'struct Foo (struct Foo)'
+        `-ImplicitCastExpr 0x7fae6b02bfb0 <col:17, col:18> 'struct Foo':'struct Foo' <LValueToRValue>
+          `-UnaryOperator 0x7fae6b02bee8 <col:17, col:18> 'struct Foo':'struct Foo' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fae6b02bed0 <col:18> 'struct Foo *' <LValueToRValue>
+              `-DeclRefExpr 0x7fae6b02bea8 <col:18> 'struct Foo *' lvalue Var 0x7fae6b0147b8 'init2' 'struct Foo *'

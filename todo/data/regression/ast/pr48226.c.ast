@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fa70d02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa70d02c960 <../Data/C2AST/pr48226.c:9:1, line:11:1> line:9:8 struct vector definition
+| `-FieldDecl 0x7fa70d06d8a0 <line:10:3, col:12> col:9 v 'float [4]'
+`-VarDecl 0x7fa70d06d940 <line:13:1, col:45> col:15 vector 'struct vector':'struct vector' cinit
+  `-InitListExpr 0x7fa70d06dac0 <col:24, col:45> 'struct vector':'struct vector'
+    `-InitListExpr 0x7fa70d06db08 <col:26, col:41> 'float [4]'
+      |-ImplicitCastExpr 0x7fa70d06db68 <col:26> 'float' <FloatingCast>
+      | `-FloatingLiteral 0x7fa70d06d9e0 <col:26> 'double' 1.000000e+00
+      |-ImplicitCastExpr 0x7fa70d06db80 <col:31> 'float' <FloatingCast>
+      | `-FloatingLiteral 0x7fa70d06da00 <col:31> 'double' 2.000000e+00
+      |-ImplicitCastExpr 0x7fa70d06db98 <col:36> 'float' <FloatingCast>
+      | `-FloatingLiteral 0x7fa70d06da20 <col:36> 'double' 3.000000e+00
+      `-ImplicitCastExpr 0x7fa70d06dbb0 <col:41> 'float' <FloatingCast>
+        `-FloatingLiteral 0x7fa70d06da40 <col:41> 'double' 4.000000e+00

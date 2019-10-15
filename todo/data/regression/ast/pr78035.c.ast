@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f89e002b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f89e002bf78 <../Data/C2AST/pr78035.c:4:1, col:12> col:12 used a 'int' extern
+|-VarDecl 0x7f89e006ce58 <line:5:1, col:12> col:12 used b 'int' extern
+|-VarDecl 0x7f89e006ced0 <line:6:1, col:12> col:12 used c 'int' extern
+|-FunctionDecl 0x7f89e006d018 <line:8:1, line:16:1> line:8:5 foo 'int (int)'
+| |-ParmVarDecl 0x7f89e006cf48 <col:9, col:13> col:13 used choose_a 'int'
+| `-CompoundStmt 0x7f89e006d3e8 <line:9:1, line:16:1>
+|   |-DeclStmt 0x7f89e006d160 <line:10:3, col:9>
+|   | `-VarDecl 0x7f89e006d100 <col:3, col:8> col:8 used p 'int *'
+|   |-IfStmt 0x7f89e006d2e8 <line:11:3, line:14:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f89e006d1a0 <line:11:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f89e006d178 <col:7> 'int' lvalue ParmVar 0x7f89e006cf48 'choose_a' 'int'
+|   | |-BinaryOperator 0x7f89e006d228 <line:12:5, col:10> 'int *' '='
+|   | | |-DeclRefExpr 0x7f89e006d1b8 <col:5> 'int *' lvalue Var 0x7f89e006d100 'p' 'int *'
+|   | | `-UnaryOperator 0x7f89e006d208 <col:9, col:10> 'int *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f89e006d1e0 <col:10> 'int' lvalue Var 0x7f89e002bf78 'a' 'int'
+|   | `-BinaryOperator 0x7f89e006d2c0 <line:14:5, col:10> 'int *' '='
+|   |   |-DeclRefExpr 0x7f89e006d250 <col:5> 'int *' lvalue Var 0x7f89e006d100 'p' 'int *'
+|   |   `-UnaryOperator 0x7f89e006d2a0 <col:9, col:10> 'int *' prefix '&'
+|   |     `-DeclRefExpr 0x7f89e006d278 <col:10> 'int' lvalue Var 0x7f89e006ce58 'b' 'int'
+|   `-ReturnStmt 0x7f89e006d3d0 <line:15:3, col:16>
+|     `-BinaryOperator 0x7f89e006d3a8 <col:10, col:16> 'int' '!='
+|       |-ImplicitCastExpr 0x7f89e006d390 <col:10> 'int *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f89e006d320 <col:10> 'int *' lvalue Var 0x7f89e006d100 'p' 'int *'
+|       `-UnaryOperator 0x7f89e006d370 <col:15, col:16> 'int *' prefix '&'
+|         `-DeclRefExpr 0x7f89e006d348 <col:16> 'int' lvalue Var 0x7f89e006ced0 'c' 'int'
+`-FunctionDecl 0x7f89e006d460 <line:18:1, line:21:1> line:18:5 bar 'int ()'
+  `-CompoundStmt 0x7f89e006d5d0 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7f89e006d5b8 <line:20:3, col:17>
+      `-BinaryOperator 0x7f89e006d590 <col:10, col:17> 'int' '!='
+        |-UnaryOperator 0x7f89e006d528 <col:10, col:11> 'int *' prefix '&'
+        | `-DeclRefExpr 0x7f89e006d500 <col:11> 'int' lvalue Var 0x7f89e002bf78 'a' 'int'
+        `-UnaryOperator 0x7f89e006d570 <col:16, col:17> 'int *' prefix '&'
+          `-DeclRefExpr 0x7f89e006d548 <col:17> 'int' lvalue Var 0x7f89e006ced0 'c' 'int'

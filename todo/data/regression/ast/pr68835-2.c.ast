@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fb05a80a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb05a021828 <../Data/C2AST/pr68835-2.c:5:1, line:13:1> line:6:1 used foo 'unsigned __int128 (void)'
+| |-CompoundStmt 0x7fb05a021ec8 <line:7:1, line:13:1>
+| | |-DeclStmt 0x7fb05a021a28 <line:8:3, col:66>
+| | | `-VarDecl 0x7fb05a021968 <col:3, col:45> col:21 used x 'unsigned __int128' cinit
+| | |   `-CStyleCastExpr 0x7fb05a021a00 <col:25, col:45> 'unsigned __int128' <IntegralCast>
+| | |     `-IntegerLiteral 0x7fb05a0219c8 <col:45> 'unsigned long long' 18446744073709551615
+| | |-DeclStmt 0x7fb05a021c38 <line:9:3, col:41>
+| | | |-RecordDecl 0x7fb05a021a40 <col:3, col:38> col:3 struct definition
+| | | | `-FieldDecl 0x7fb05a021b28 <col:12, col:34> col:30 referenced a 'unsigned __int128'
+| | | |   `-IntegerLiteral 0x7fb05a021af0 <col:34> 'int' 65
+| | | `-VarDecl 0x7fb05a021bc0 <col:3, col:40> col:40 used w 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)'
+| | |-BinaryOperator 0x7fb05a021cf0 <line:10:3, col:9> 'unsigned __int128' '='
+| | | |-MemberExpr 0x7fb05a021c78 <col:3, col:5> 'unsigned __int128' lvalue bitfield .a 0x7fb05a021b28
+| | | | `-DeclRefExpr 0x7fb05a021c50 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)' lvalue Var 0x7fb05a021bc0 'w' 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)'
+| | | `-ImplicitCastExpr 0x7fb05a021cd8 <col:9> 'unsigned __int128' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fb05a021cb0 <col:9> 'unsigned __int128' lvalue Var 0x7fb05a021968 'x' 'unsigned __int128'
+| | |-CompoundAssignOperator 0x7fb05a021e00 <line:11:3, col:10> 'unsigned __int128' '+=' ComputeLHSTy='unsigned __int128' ComputeResultTy='unsigned __int128'
+| | | |-MemberExpr 0x7fb05a021d88 <col:3, col:5> 'unsigned __int128' lvalue bitfield .a 0x7fb05a021b28
+| | | | `-DeclRefExpr 0x7fb05a021d60 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)' lvalue Var 0x7fb05a021bc0 'w' 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)'
+| | | `-ImplicitCastExpr 0x7fb05a021de8 <col:10> 'unsigned __int128' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fb05a021dc0 <col:10> 'unsigned __int128' lvalue Var 0x7fb05a021968 'x' 'unsigned __int128'
+| | `-ReturnStmt 0x7fb05a021eb0 <line:12:3, col:12>
+| |   `-ImplicitCastExpr 0x7fb05a021e98 <col:10, col:12> 'unsigned __int128' <LValueToRValue>
+| |     `-MemberExpr 0x7fb05a021e60 <col:10, col:12> 'unsigned __int128' lvalue bitfield .a 0x7fb05a021b28
+| |       `-DeclRefExpr 0x7fb05a021e38 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)' lvalue Var 0x7fb05a021bc0 'w' 'struct (anonymous struct at ../Data/C2AST/pr68835-2.c:9:3)':'struct (anonymous at ../Data/C2AST/pr68835-2.c:9:3)'
+| `-NoInlineAttr 0x7fb05a0218c8 <line:5:16>
+|-FunctionDecl 0x7fb05a021f50 <line:15:1, line:23:1> line:16:1 main 'int ()'
+| `-CompoundStmt 0x7fb05a022598 <line:17:1, line:23:1>
+|   |-DeclStmt 0x7fb05a0220f8 <line:18:3, col:31>
+|   | `-VarDecl 0x7fb05a022008 <col:3, col:30> col:21 used x 'unsigned __int128' cinit
+|   |   `-CallExpr 0x7fb05a0220d0 <col:25, col:30> 'unsigned __int128'
+|   |     `-ImplicitCastExpr 0x7fb05a0220b8 <col:25> 'unsigned __int128 (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fb05a022068 <col:25> 'unsigned __int128 (void)' Function 0x7fb05a021828 'foo' 'unsigned __int128 (void)'
+|   |-IfStmt 0x7fb05a022528 <line:19:3, line:21:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb05a022350 <line:19:7, line:20:44> 'int' '||'
+|   | | |-BinaryOperator 0x7fb05a0221b0 <line:19:7, col:33> 'int' '!='
+|   | | | |-CStyleCastExpr 0x7fb05a022168 <col:7, col:28> 'unsigned long long' <IntegralCast>
+|   | | | | `-ImplicitCastExpr 0x7fb05a022150 <col:28> 'unsigned __int128' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7fb05a022110 <col:28> 'unsigned __int128' lvalue Var 0x7fb05a022008 'x' 'unsigned __int128'
+|   | | | `-IntegerLiteral 0x7fb05a022190 <col:33> 'unsigned long long' 18446744073709551614
+|   | | `-BinaryOperator 0x7fb05a022328 <line:20:10, col:44> 'int' '!='
+|   | |   |-CStyleCastExpr 0x7fb05a0222c8 <col:10, col:39> 'unsigned long long' <IntegralCast>
+|   | |   | `-ParenExpr 0x7fb05a0222a8 <col:31, col:39> 'unsigned __int128'
+|   | |   |   `-BinaryOperator 0x7fb05a022238 <col:32, col:37> 'unsigned __int128' '>>'
+|   | |   |     |-ImplicitCastExpr 0x7fb05a022220 <col:32> 'unsigned __int128' <LValueToRValue>
+|   | |   |     | `-DeclRefExpr 0x7fb05a0221d8 <col:32> 'unsigned __int128' lvalue Var 0x7fb05a022008 'x' 'unsigned __int128'
+|   | |   |     `-IntegerLiteral 0x7fb05a022200 <col:37> 'int' 64
+|   | |   `-ImplicitCastExpr 0x7fb05a022310 <col:44> 'unsigned long long' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7fb05a0222f0 <col:44> 'int' 1
+|   | |-CallExpr 0x7fb05a022500 <line:21:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb05a0224e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb05a022498 <col:5> '<builtin fn type>' Function 0x7fb05a0223b0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb05a022580 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7fb05a022560 <col:10> 'int' 0
+`-FunctionDecl 0x7fb05a0223b0 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb05a022450 <col:5> Implicit

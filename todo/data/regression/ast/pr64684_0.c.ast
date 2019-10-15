@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fef8b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fef8b814220 <../Data/C2AST/pr64684_0.c:4:1, col:22> col:13 used fn2 'void (void)' extern
+|-VarDecl 0x7fef8b814318 <line:5:1, col:12> col:12 used a 'int' extern
+`-FunctionDecl 0x7fef8b8143c8 <line:7:1, line:13:1> line:8:1 fn1 'void ()'
+  `-CompoundStmt 0x7fef8b814608 <line:9:1, line:13:1>
+    |-BinaryOperator 0x7fef8b8144d0 <line:10:3, col:8> 'int' '='
+    | |-DeclRefExpr 0x7fef8b814468 <col:3> 'int' lvalue Var 0x7fef8b814318 'a' 'int'
+    | `-UnaryOperator 0x7fef8b8144b0 <col:7, col:8> 'int' prefix '-'
+    |   `-IntegerLiteral 0x7fef8b814490 <col:8> 'int' 1
+    |-CallExpr 0x7fef8b814560 <line:11:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fef8b814548 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fef8b8144f8 <col:3> 'void (void)' Function 0x7fef8b814220 'fn2' 'void (void)'
+    `-CompoundAssignOperator 0x7fef8b8145d0 <line:12:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-DeclRefExpr 0x7fef8b814588 <col:3> 'int' lvalue Var 0x7fef8b814318 'a' 'int'
+      `-IntegerLiteral 0x7fef8b8145b0 <col:8> 'int' 1

@@ -1,0 +1,222 @@
+TranslationUnitDecl 0x7fee78816ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fee7900e850 <../Data/C2AST/pr40493.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fee7900e8f0 prev 0x7fee7900e850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fee7900e990 <line:3:9, line:53:1> line:3:15 union i386_operand_type definition
+| |-RecordDecl 0x7fee7900ea40 <line:5:3, line:51:5> line:5:3 struct definition
+| | |-FieldDecl 0x7fee7900eb28 <line:7:7, col:25> col:20 reg8 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900eaf0 <col:25> 'int' 1
+| | |-FieldDecl 0x7fee7900eba8 <line:8:7, col:26> col:20 referenced reg16 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900eb70 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900ec28 <line:9:7, col:26> col:20 reg32 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ebf0 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900eca8 <line:10:7, col:26> col:20 reg64 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ec70 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900ed28 <line:11:7, col:29> col:20 floatreg 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ecf0 <col:29> 'int' 1
+| | |-FieldDecl 0x7fee7900eda8 <line:12:7, col:27> col:20 regmmx 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ed70 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900ee28 <line:13:7, col:27> col:20 regxmm 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900edf0 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900eea8 <line:14:7, col:27> col:20 regymm 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ee70 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900ef28 <line:15:7, col:28> col:20 control 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900eef0 <col:28> 'int' 1
+| | |-FieldDecl 0x7fee7900efa8 <line:16:7, col:26> col:20 debug 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ef70 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f028 <line:17:7, col:25> col:20 test 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900eff0 <col:25> 'int' 1
+| | |-FieldDecl 0x7fee7900f0a8 <line:18:7, col:26> col:20 sreg2 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f070 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f128 <line:19:7, col:26> col:20 sreg3 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f0f0 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f1a8 <line:20:7, col:25> col:20 imm1 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f170 <col:25> 'int' 1
+| | |-FieldDecl 0x7fee7900f228 <line:21:7, col:25> col:20 imm8 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f1f0 <col:25> 'int' 1
+| | |-FieldDecl 0x7fee7900f2a8 <line:22:7, col:26> col:20 imm8s 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f270 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f328 <line:23:7, col:26> col:20 referenced imm16 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f2f0 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f3a8 <line:24:7, col:26> col:20 imm32 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f370 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f428 <line:25:7, col:27> col:20 imm32s 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f3f0 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900f4a8 <line:26:7, col:26> col:20 imm64 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f470 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f528 <line:27:7, col:26> col:20 disp8 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f4f0 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900f5a8 <line:28:7, col:27> col:20 disp16 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f570 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900f628 <line:29:7, col:27> col:20 disp32 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f5f0 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900f6a8 <line:30:7, col:28> col:20 disp32s 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f670 <col:28> 'int' 1
+| | |-FieldDecl 0x7fee7900f728 <line:31:7, col:27> col:20 disp64 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f6f0 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900f7a8 <line:32:7, col:24> col:20 acc 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f770 <col:24> 'int' 1
+| | |-FieldDecl 0x7fee7900f838 <line:33:7, col:29> col:20 floatacc 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f800 <col:29> 'int' 1
+| | |-FieldDecl 0x7fee7900f8b8 <line:34:7, col:30> col:20 baseindex 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f880 <col:30> 'int' 1
+| | |-FieldDecl 0x7fee7900f938 <line:35:7, col:33> col:20 inoutportreg 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f900 <col:33> 'int' 1
+| | |-FieldDecl 0x7fee7900f9b8 <line:36:7, col:31> col:20 shiftcount 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900f980 <col:31> 'int' 1
+| | |-FieldDecl 0x7fee7900fa38 <line:37:7, col:33> col:20 jumpabsolute 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fa00 <col:33> 'int' 1
+| | |-FieldDecl 0x7fee7900fab8 <line:38:7, col:26> col:20 esseg 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fa80 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900fb38 <line:39:7, col:27> col:20 regmem 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fb00 <col:27> 'int' 1
+| | |-FieldDecl 0x7fee7900fbb8 <line:40:7, col:24> col:20 mem 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fb80 <col:24> 'int' 1
+| | |-FieldDecl 0x7fee7900fc38 <line:41:7, col:25> col:20 byte 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fc00 <col:25> 'int' 1
+| | |-FieldDecl 0x7fee7900fcb8 <line:42:7, col:25> col:20 word 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fc80 <col:25> 'int' 1
+| | |-FieldDecl 0x7fee7900fd38 <line:43:7, col:26> col:20 dword 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fd00 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900fdb8 <line:44:7, col:26> col:20 fword 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fd80 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900fe38 <line:45:7, col:26> col:20 qword 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fe00 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900feb8 <line:46:7, col:26> col:20 tbyte 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900fe80 <col:26> 'int' 1
+| | |-FieldDecl 0x7fee7900ff38 <line:47:7, col:28> col:20 xmmword 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ff00 <col:28> 'int' 1
+| | |-FieldDecl 0x7fee7900ffb8 <line:48:7, col:28> col:20 ymmword 'unsigned int'
+| | | `-IntegerLiteral 0x7fee7900ff80 <col:28> 'int' 1
+| | |-FieldDecl 0x7fee79010038 <line:49:7, col:32> col:20 unspecified 'unsigned int'
+| | | `-IntegerLiteral 0x7fee79010000 <col:32> 'int' 1
+| | `-FieldDecl 0x7fee790100b8 <line:50:7, col:28> col:20 anysize 'unsigned int'
+| |   `-IntegerLiteral 0x7fee79010080 <col:28> 'int' 1
+| |-FieldDecl 0x7fee79010150 <line:5:3, line:51:7> col:7 referenced bitfield 'struct (anonymous struct at ../Data/C2AST/pr40493.c:5:3)':'struct i386_operand_type::(anonymous at ../Data/C2AST/pr40493.c:5:3)'
+| `-FieldDecl 0x7fee79010220 <line:52:3, col:23> col:16 referenced array 'unsigned int [2]'
+|-TypedefDecl 0x7fee79010460 <line:3:1, line:53:3> col:3 referenced i386_operand_type 'union i386_operand_type':'union i386_operand_type'
+| `-ElaboratedType 0x7fee79010410 'union i386_operand_type' sugar
+|   `-RecordType 0x7fee7900ea20 'union i386_operand_type'
+|     `-Record 0x7fee7900e990 'i386_operand_type'
+|-VarDecl 0x7fee790104e8 <line:55:1, col:14> col:14 used x00 'unsigned int'
+|-VarDecl 0x7fee790105a0 <col:1, col:19> col:19 used x01 'unsigned int'
+|-VarDecl 0x7fee79010618 <col:1, col:24> col:24 used y00 'unsigned int'
+|-VarDecl 0x7fee79010690 <col:1, col:29> col:29 used y01 'unsigned int'
+`-FunctionDecl 0x7fee7902b578 <line:57:1, line:82:1> line:57:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fee79010730 <col:11, col:15> col:15 argc 'int'
+  |-ParmVarDecl 0x7fee7902b460 <col:21, col:32> col:27 argv 'char **':'char **'
+  `-CompoundStmt 0x7fee7880b9c0 <line:58:1, line:82:1>
+    |-DeclStmt 0x7fee7902b838 <line:59:3, col:28>
+    | |-VarDecl 0x7fee7902b660 <col:3, col:21> col:21 used a 'i386_operand_type':'union i386_operand_type'
+    | |-VarDecl 0x7fee7902b6d0 <col:3, col:23> col:23 used b 'i386_operand_type':'union i386_operand_type'
+    | |-VarDecl 0x7fee7902b740 <col:3, col:25> col:25 used c 'i386_operand_type':'union i386_operand_type'
+    | `-VarDecl 0x7fee7902b7b0 <col:3, col:27> col:27 used d 'i386_operand_type':'union i386_operand_type'
+    |-BinaryOperator 0x7fee7902b920 <line:61:3, col:22> 'unsigned int' '='
+    | |-MemberExpr 0x7fee7902b8b0 <col:3, col:14> 'unsigned int' lvalue bitfield .reg16 0x7fee7900eba8
+    | | `-MemberExpr 0x7fee7902b878 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr40493.c:5:3)':'struct i386_operand_type::(anonymous at ../Data/C2AST/pr40493.c:5:3)' lvalue .bitfield 0x7fee79010150
+    | |   `-DeclRefExpr 0x7fee7902b850 <col:3> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b660 'a' 'i386_operand_type':'union i386_operand_type'
+    | `-ImplicitCastExpr 0x7fee7902b908 <col:22> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fee7902b8e8 <col:22> 'int' 1
+    |-BinaryOperator 0x7fee7902ba68 <line:62:3, col:22> 'unsigned int' '='
+    | |-MemberExpr 0x7fee7902b9f8 <col:3, col:14> 'unsigned int' lvalue bitfield .imm16 0x7fee7900f328
+    | | `-MemberExpr 0x7fee7902b9c0 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr40493.c:5:3)':'struct i386_operand_type::(anonymous at ../Data/C2AST/pr40493.c:5:3)' lvalue .bitfield 0x7fee79010150
+    | |   `-DeclRefExpr 0x7fee7902b998 <col:3> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b660 'a' 'i386_operand_type':'union i386_operand_type'
+    | `-ImplicitCastExpr 0x7fee7902ba50 <col:22> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fee7902ba30 <col:22> 'int' 0
+    |-BinaryOperator 0x7fee7902bbb0 <line:63:3, col:16> 'unsigned int' '='
+    | |-ArraySubscriptExpr 0x7fee7902bb50 <col:3, col:12> 'unsigned int' lvalue
+    | | |-ImplicitCastExpr 0x7fee7902bb38 <col:3, col:5> 'unsigned int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fee7902bab8 <col:3, col:5> 'unsigned int [2]' lvalue .array 0x7fee79010220
+    | | |   `-DeclRefExpr 0x7fee7902ba90 <col:3> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b660 'a' 'i386_operand_type':'union i386_operand_type'
+    | | `-IntegerLiteral 0x7fee7902baf0 <col:11> 'int' 1
+    | `-ImplicitCastExpr 0x7fee7902bb98 <col:16> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fee7902bb78 <col:16> 'int' 22
+    |-BinaryOperator 0x7fee7902bc40 <line:65:3, col:7> 'i386_operand_type':'union i386_operand_type' '='
+    | |-DeclRefExpr 0x7fee7902bbd8 <col:3> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b6d0 'b' 'i386_operand_type':'union i386_operand_type'
+    | `-ImplicitCastExpr 0x7fee7902bc28 <col:7> 'i386_operand_type':'union i386_operand_type' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fee7902bc00 <col:7> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b660 'a' 'i386_operand_type':'union i386_operand_type'
+    |-BinaryOperator 0x7fee7902bd68 <line:66:3, col:18> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fee7902bc68 <col:3> 'unsigned int' lvalue Var 0x7fee790104e8 'x00' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fee7902bd50 <col:9, col:18> 'unsigned int' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fee7902bd28 <col:9, col:18> 'unsigned int' lvalue
+    |     |-ImplicitCastExpr 0x7fee7902bd10 <col:9, col:11> 'unsigned int *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fee7902bcb8 <col:9, col:11> 'unsigned int [2]' lvalue .array 0x7fee79010220
+    |     |   `-DeclRefExpr 0x7fee7902bc90 <col:9> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b6d0 'b' 'i386_operand_type':'union i386_operand_type'
+    |     `-IntegerLiteral 0x7fee7902bcf0 <col:17> 'int' 0
+    |-BinaryOperator 0x7fee7902be90 <line:67:3, col:18> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fee7902bd90 <col:3> 'unsigned int' lvalue Var 0x7fee790105a0 'x01' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fee7902be78 <col:9, col:18> 'unsigned int' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fee7902be50 <col:9, col:18> 'unsigned int' lvalue
+    |     |-ImplicitCastExpr 0x7fee7902be38 <col:9, col:11> 'unsigned int *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fee7902bde0 <col:9, col:11> 'unsigned int [2]' lvalue .array 0x7fee79010220
+    |     |   `-DeclRefExpr 0x7fee7902bdb8 <col:9> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b6d0 'b' 'i386_operand_type':'union i386_operand_type'
+    |     `-IntegerLiteral 0x7fee7902be18 <col:17> 'int' 1
+    |-BinaryOperator 0x7fee7902bf20 <line:69:3, col:7> 'i386_operand_type':'union i386_operand_type' '='
+    | |-DeclRefExpr 0x7fee7902beb8 <col:3> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b740 'c' 'i386_operand_type':'union i386_operand_type'
+    | `-ImplicitCastExpr 0x7fee7902bf08 <col:7> 'i386_operand_type':'union i386_operand_type' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fee7902bee0 <col:7> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b6d0 'b' 'i386_operand_type':'union i386_operand_type'
+    |-BinaryOperator 0x7fee7902c048 <line:70:3, col:18> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fee7902bf48 <col:3> 'unsigned int' lvalue Var 0x7fee79010618 'y00' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fee7902c030 <col:9, col:18> 'unsigned int' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fee7902c008 <col:9, col:18> 'unsigned int' lvalue
+    |     |-ImplicitCastExpr 0x7fee7902bff0 <col:9, col:11> 'unsigned int *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fee7902bf98 <col:9, col:11> 'unsigned int [2]' lvalue .array 0x7fee79010220
+    |     |   `-DeclRefExpr 0x7fee7902bf70 <col:9> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b740 'c' 'i386_operand_type':'union i386_operand_type'
+    |     `-IntegerLiteral 0x7fee7902bfd0 <col:17> 'int' 0
+    |-BinaryOperator 0x7fee7902c170 <line:71:3, col:18> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fee7902c070 <col:3> 'unsigned int' lvalue Var 0x7fee79010690 'y01' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fee7902c158 <col:9, col:18> 'unsigned int' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fee7902c130 <col:9, col:18> 'unsigned int' lvalue
+    |     |-ImplicitCastExpr 0x7fee7902c118 <col:9, col:11> 'unsigned int *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fee7902c0c0 <col:9, col:11> 'unsigned int [2]' lvalue .array 0x7fee79010220
+    |     |   `-DeclRefExpr 0x7fee7902c098 <col:9> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b740 'c' 'i386_operand_type':'union i386_operand_type'
+    |     `-IntegerLiteral 0x7fee7902c0f8 <col:17> 'int' 1
+    |-BinaryOperator 0x7fee7902c200 <line:73:3, col:7> 'i386_operand_type':'union i386_operand_type' '='
+    | |-DeclRefExpr 0x7fee7902c198 <col:3> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b7b0 'd' 'i386_operand_type':'union i386_operand_type'
+    | `-ImplicitCastExpr 0x7fee7902c1e8 <col:7> 'i386_operand_type':'union i386_operand_type' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fee7902c1c0 <col:7> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b740 'c' 'i386_operand_type':'union i386_operand_type'
+    |-IfStmt 0x7fee7902c3c8 <line:74:3, line:75:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fee7902c310 <line:74:7, col:27> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fee7902c2f8 <col:7, col:18> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fee7902c2e0 <col:7, col:18> 'unsigned int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fee7902c288 <col:7, col:18> 'unsigned int' lvalue bitfield .reg16 0x7fee7900eba8
+    | | |     `-MemberExpr 0x7fee7902c250 <col:7, col:9> 'struct (anonymous struct at ../Data/C2AST/pr40493.c:5:3)':'struct i386_operand_type::(anonymous at ../Data/C2AST/pr40493.c:5:3)' lvalue .bitfield 0x7fee79010150
+    | | |       `-DeclRefExpr 0x7fee7902c228 <col:7> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b7b0 'd' 'i386_operand_type':'union i386_operand_type'
+    | | `-IntegerLiteral 0x7fee7902c2c0 <col:27> 'int' 1
+    | |-CallExpr 0x7fee7902c3a0 <line:75:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fee7902c388 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fee7902c338 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fee7900e8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fee7880b778 <line:76:3, line:77:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fee7880b6e8 <line:76:7, col:27> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fee7880b6d0 <col:7, col:18> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fee7880b6b8 <col:7, col:18> 'unsigned int' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fee7880b660 <col:7, col:18> 'unsigned int' lvalue bitfield .imm16 0x7fee7900f328
+    | | |     `-MemberExpr 0x7fee7880b628 <col:7, col:9> 'struct (anonymous struct at ../Data/C2AST/pr40493.c:5:3)':'struct i386_operand_type::(anonymous at ../Data/C2AST/pr40493.c:5:3)' lvalue .bitfield 0x7fee79010150
+    | | |       `-DeclRefExpr 0x7fee7880b600 <col:7> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b7b0 'd' 'i386_operand_type':'union i386_operand_type'
+    | | `-IntegerLiteral 0x7fee7880b698 <col:27> 'int' 0
+    | |-CallExpr 0x7fee7880b750 <line:77:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fee7880b738 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fee7880b710 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fee7900e8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fee7880b950 <line:78:3, line:79:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fee7880b8c0 <line:78:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fee7880b890 <col:7, col:16> 'unsigned int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fee7880b848 <col:7, col:16> 'unsigned int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fee7880b830 <col:7, col:9> 'unsigned int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fee7880b7d8 <col:7, col:9> 'unsigned int [2]' lvalue .array 0x7fee79010220
+    | | |   |   `-DeclRefExpr 0x7fee7880b7b0 <col:7> 'i386_operand_type':'union i386_operand_type' lvalue Var 0x7fee7902b7b0 'd' 'i386_operand_type':'union i386_operand_type'
+    | | |   `-IntegerLiteral 0x7fee7880b810 <col:15> 'int' 1
+    | | `-ImplicitCastExpr 0x7fee7880b8a8 <col:21> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fee7880b870 <col:21> 'int' 22
+    | |-CallExpr 0x7fee7880b928 <line:79:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fee7880b910 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fee7880b8e8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fee7900e8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fee7880b9a8 <line:81:3, col:10>
+      `-IntegerLiteral 0x7fee7880b988 <col:10> 'int' 0

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fc42802a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc42806d400 <../Data/C2AST/pr60205-2.c:6:1, col:13> col:13 referenced __v16si '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fc42802b580 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fc42802a9e0 'int'
+|-VarDecl 0x7fc42806d490 <line:8:1, col:16> col:16 used x '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' extern
+`-FunctionDecl 0x7fc42806d620 <line:10:1, line:14:1> line:11:1 foo '__v16si (void)'
+  `-CompoundStmt 0x7fc42806d718 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fc42806d700 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fc42806d6e8 <col:10> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc42806d6c0 <col:10> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue Var 0x7fc42806d490 'x' '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'

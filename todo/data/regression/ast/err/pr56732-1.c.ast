@@ -1,0 +1,50 @@
+../Data/C2AST/pr56732-1.c:9:3: error: non-ASM statement in naked function is not supported
+  bar ();
+  ^
+../Data/C2AST/pr56732-1.c:6:21: note: attribute is here
+void __attribute__((__naked__))
+                    ^
+../Data/C2AST/pr56732-1.c:15:3: error: non-ASM statement in naked function is not supported
+  bar ();
+  ^
+../Data/C2AST/pr56732-1.c:12:20: note: attribute is here
+int __attribute__((naked))
+                   ^
+2 errors generated.
+TranslationUnitDecl 0x7f9aa48186e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9aa4818c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9aa4818980 '__int128'
+|-TypedefDecl 0x7f9aa4818cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9aa48189a0 'unsigned __int128'
+|-TypedefDecl 0x7f9aa4818fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9aa4818db0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9aa4818d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9aa4819040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9aa4819000 'char *'
+|   `-BuiltinType 0x7f9aa4818780 'char'
+|-TypedefDecl 0x7f9aa4819308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9aa48192b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9aa4819120 'struct __va_list_tag'
+|     `-Record 0x7f9aa4819098 '__va_list_tag'
+|-FunctionDecl 0x7f9aa581d400 <../Data/C2AST/pr56732-1.c:4:1, col:17> col:13 used bar 'void ()' extern
+|-FunctionDecl 0x7f9aa581d5a0 <line:6:1, line:10:1> line:7:1 invalid foo 'void (void)'
+| |-CompoundStmt 0x7f9aa581d718 <line:8:1, line:10:1>
+| | `-CallExpr 0x7f9aa581d6f0 <line:9:3, col:8> 'void'
+| |   `-ImplicitCastExpr 0x7f9aa581d6d8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7f9aa581d688 <col:3> 'void ()' Function 0x7f9aa581d400 'bar' 'void ()'
+| `-NakedAttr 0x7f9aa581d640 <line:6:21>
+`-FunctionDecl 0x7f9aa581dab8 <line:12:1, line:17:1> line:13:1 invalid zoo 'int (int, int, int, int, int, int)'
+  |-ParmVarDecl 0x7f9aa581d748 <col:6, col:10> col:10 a 'int'
+  |-ParmVarDecl 0x7f9aa581d7c0 <col:13, col:17> col:17 b 'int'
+  |-ParmVarDecl 0x7f9aa581d838 <col:20, col:24> col:24 c 'int'
+  |-ParmVarDecl 0x7f9aa581d8b0 <col:27, col:31> col:31 d 'int'
+  |-ParmVarDecl 0x7f9aa581d928 <col:34, col:38> col:38 used e 'int'
+  |-ParmVarDecl 0x7f9aa581d9a0 <col:41, col:45> col:45 f 'int'
+  |-CompoundStmt 0x7f9aa581dc90 <line:14:1, line:17:1>
+  | |-CallExpr 0x7f9aa581dc10 <line:15:3, col:8> 'void'
+  | | `-ImplicitCastExpr 0x7f9aa581dbf8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+  | |   `-DeclRefExpr 0x7f9aa581dbd0 <col:3> 'void ()' Function 0x7f9aa581d400 'bar' 'void ()'
+  | `-ReturnStmt 0x7f9aa581dc78 <line:16:3, col:10>
+  |   `-ImplicitCastExpr 0x7f9aa581dc60 <col:10> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7f9aa581dc38 <col:10> 'int' lvalue ParmVar 0x7f9aa581d928 'e' 'int'
+  `-NakedAttr 0x7f9aa581db88 <line:12:20>

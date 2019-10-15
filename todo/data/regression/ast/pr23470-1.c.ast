@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fde1d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fde1d06d820 <../Data/C2AST/pr23470-1.c:5:1, col:22> col:6 used link_error 'void (void)'
+`-FunctionDecl 0x7fde1d06da68 <line:7:1, line:11:1> line:7:5 f 'int (double, double)'
+  |-ParmVarDecl 0x7fde1d06d918 <col:7, col:14> col:14 used a 'double'
+  |-ParmVarDecl 0x7fde1d06d990 <col:17, col:24> col:24 used b 'double'
+  `-CompoundStmt 0x7fde1d06de20 <line:8:1, line:11:1>
+    `-IfStmt 0x7fde1d06dde8 <line:9:3, line:10:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fde1d06dd28 <line:9:7, col:23> 'int' '<'
+      | |-ParenExpr 0x7fde1d06dcd0 <col:7, col:21> 'double'
+      | | `-BinaryOperator 0x7fde1d06dca8 <col:8, col:20> 'double' '+'
+      | |   |-ParenExpr 0x7fde1d06dbc0 <col:8, col:12> 'double'
+      | |   | `-BinaryOperator 0x7fde1d06db98 <col:9, col:11> 'double' '*'
+      | |   |   |-ImplicitCastExpr 0x7fde1d06db68 <col:9> 'double' <LValueToRValue>
+      | |   |   | `-DeclRefExpr 0x7fde1d06db18 <col:9> 'double' lvalue ParmVar 0x7fde1d06d918 'a' 'double'
+      | |   |   `-ImplicitCastExpr 0x7fde1d06db80 <col:11> 'double' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7fde1d06db40 <col:11> 'double' lvalue ParmVar 0x7fde1d06d918 'a' 'double'
+      | |   `-ParenExpr 0x7fde1d06dc88 <col:16, col:20> 'double'
+      | |     `-BinaryOperator 0x7fde1d06dc60 <col:17, col:19> 'double' '*'
+      | |       |-ImplicitCastExpr 0x7fde1d06dc30 <col:17> 'double' <LValueToRValue>
+      | |       | `-DeclRefExpr 0x7fde1d06dbe0 <col:17> 'double' lvalue ParmVar 0x7fde1d06d990 'b' 'double'
+      | |       `-ImplicitCastExpr 0x7fde1d06dc48 <col:19> 'double' <LValueToRValue>
+      | |         `-DeclRefExpr 0x7fde1d06dc08 <col:19> 'double' lvalue ParmVar 0x7fde1d06d990 'b' 'double'
+      | `-ImplicitCastExpr 0x7fde1d06dd10 <col:23> 'double' <IntegralToFloating>
+      |   `-IntegerLiteral 0x7fde1d06dcf0 <col:23> 'int' 0
+      |-CallExpr 0x7fde1d06ddc0 <line:10:5, col:16> 'void'
+      | `-ImplicitCastExpr 0x7fde1d06dda8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fde1d06dd50 <col:5> 'void (void)' Function 0x7fde1d06d820 'link_error' 'void (void)'
+      `-<<<NULL>>>

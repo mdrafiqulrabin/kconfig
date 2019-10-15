@@ -1,0 +1,29 @@
+../Data/C2AST/pr79633.c:10:11: error: too few arguments to function call, expected 3, have 0
+  memcpy ();
+  ~~~~~~  ^
+1 error generated.
+TranslationUnitDecl 0x7fc35582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc35582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc35582bf80 '__int128'
+|-TypedefDecl 0x7fc35582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc35582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc35582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc35582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc35582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc35582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc35582c600 'char *'
+|   `-BuiltinType 0x7fc35582bd80 'char'
+|-TypedefDecl 0x7fc35582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc35582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc35582c720 'struct __va_list_tag'
+|     `-Record 0x7fc35582c698 '__va_list_tag'
+|-FunctionDecl 0x7fc35586d848 <../Data/C2AST/pr79633.c:5:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc35586d8e8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fc35586d948 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fc35586d9a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fc35586da20 prev 0x7fc35586d848 <col:1, col:22> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fc35586dac0 <<invalid sloc>> <invalid sloc> implicit 'void *'
+| |-ParmVarDecl 0x7fc35586db20 <<invalid sloc>> <invalid sloc> implicit 'const void *'
+| `-ParmVarDecl 0x7fc35586db80 <<invalid sloc>> <invalid sloc> implicit 'unsigned long'
+`-FunctionDecl 0x7fc35586dc48 <line:7:1, line:11:1> line:8:1 foo 'void ()'
+  `-CompoundStmt 0x7fc35586ddd0 <line:9:1, line:11:1>

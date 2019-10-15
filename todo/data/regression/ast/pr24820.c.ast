@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fe86282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe86286d868 <../Data/C2AST/pr24820.c:4:8> col:8 implicit used floor 'double (double)' extern
+| |-ParmVarDecl 0x7fe86286d908 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fe86286d970 <col:8> Implicit
+| `-ConstAttr 0x7fe86286d9b8 <col:8> Implicit
+|-FunctionDecl 0x7fe86286d9c8 prev 0x7fe86286d868 <col:1, col:21> col:8 used floor 'double (double)'
+| |-ParmVarDecl 0x7fe86282c978 <col:15> col:21 'double'
+| |-NoThrowAttr 0x7fe86286daa8 <col:8> Inherited Implicit
+| `-ConstAttr 0x7fe86286dab8 <col:8> Inherited Implicit
+`-FunctionDecl 0x7fe86286db70 <line:5:1, line:11:1> line:5:8 bar 'double (double)'
+  |-ParmVarDecl 0x7fe86286dae0 <col:13, col:20> col:20 used sum 'double'
+  `-CompoundStmt 0x7fe86286e0b8 <line:6:1, line:11:1>
+    |-DeclStmt 0x7fe86286dcd0 <line:7:3, col:8>
+    | `-VarDecl 0x7fe86286dc70 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fe86286e028 <line:8:3, line:9:33>
+    | |-BinaryOperator 0x7fe86286dd30 <line:8:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fe86286dce8 <col:8> 'int' lvalue Var 0x7fe86286dc70 'i' 'int'
+    | | `-IntegerLiteral 0x7fe86286dd10 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe86286ddb8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fe86286dda0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe86286dd58 <col:15> 'int' lvalue Var 0x7fe86286dc70 'i' 'int'
+    | | `-IntegerLiteral 0x7fe86286dd80 <col:19> 'int' 256
+    | |-UnaryOperator 0x7fe86286de08 <col:24, col:25> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fe86286dde0 <col:24> 'int' lvalue Var 0x7fe86286dc70 'i' 'int'
+    | `-CompoundAssignOperator 0x7fe86286dff0 <line:9:4, col:33> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   |-DeclRefExpr 0x7fe86286de28 <col:4> 'double' lvalue ParmVar 0x7fe86286dae0 'sum' 'double'
+    |   `-CallExpr 0x7fe86286dfc0 <col:11, col:33> 'double'
+    |     |-ImplicitCastExpr 0x7fe86286dfa8 <col:11> 'double (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe86286de50 <col:11> 'double (double)' Function 0x7fe86286d9c8 'floor' 'double (double)'
+    |     `-BinaryOperator 0x7fe86286df58 <col:18, col:32> 'double' '+'
+    |       |-FloatingLiteral 0x7fe86286de78 <col:18> 'double' 5.000000e-01
+    |       `-ImplicitCastExpr 0x7fe86286df40 <col:24, col:32> 'double' <IntegralToFloating>
+    |         `-ParenExpr 0x7fe86286df20 <col:24, col:32> 'int'
+    |           `-BinaryOperator 0x7fe86286def8 <col:25, col:29> 'int' '-'
+    |             |-ImplicitCastExpr 0x7fe86286dee0 <col:25> 'int' <LValueToRValue>
+    |             | `-DeclRefExpr 0x7fe86286de98 <col:25> 'int' lvalue Var 0x7fe86286dc70 'i' 'int'
+    |             `-IntegerLiteral 0x7fe86286dec0 <col:29> 'int' 128
+    `-ReturnStmt 0x7fe86286e0a0 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fe86286e088 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fe86286e060 <col:10> 'double' lvalue ParmVar 0x7fe86286dae0 'sum' 'double'

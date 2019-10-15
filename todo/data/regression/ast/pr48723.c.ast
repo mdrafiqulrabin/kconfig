@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fc311818ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc311819960 <../Data/C2AST/pr48723.c:5:1, line:8:1> line:5:8 struct S0 definition
+| |-FieldDecl 0x7fc311019038 <line:7:3, col:7> col:7 f0 'int'
+| |-FieldDecl 0x7fc311019098 <col:3, col:11> col:11 f1 'int'
+| |-FieldDecl 0x7fc3110190f8 <col:3, col:15> col:15 f2 'int'
+| `-FieldDecl 0x7fc311019158 <col:3, col:19> col:19 f3 'int'
+|-VarDecl 0x7fc3110191f0 <line:5:1, line:8:3> col:3 used g_106 'struct S0':'struct S0'
+`-FunctionDecl 0x7fc311019338 <line:10:1, line:14:1> line:11:1 func_99 'struct S0 ()'
+  `-CompoundStmt 0x7fc311019450 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fc311019438 <line:13:3, col:16>
+      `-ImplicitCastExpr 0x7fc311019420 <col:10, col:16> 'struct S0':'struct S0' <LValueToRValue>
+        `-ParenExpr 0x7fc311019400 <col:10, col:16> 'struct S0':'struct S0' lvalue
+          `-DeclRefExpr 0x7fc3110193d8 <col:11> 'struct S0':'struct S0' lvalue Var 0x7fc3110191f0 'g_106' 'struct S0':'struct S0'

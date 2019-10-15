@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fb08002bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb08006d8f0 <../Data/C2AST/pr80359.c:3:1, line:12:1> line:3:6 FFT 'void (_Complex double *, int)'
+  |-ParmVarDecl 0x7fb08002c998 <col:10, col:20> col:20 used X '_Complex double *'
+  |-ParmVarDecl 0x7fb08006d818 <col:23, col:27> col:27 used length 'int'
+  `-CompoundStmt 0x7fb08006e170 <line:4:1, line:12:1>
+    |-DeclStmt 0x7fb08006dae8 <line:5:3, col:16>
+    | |-VarDecl 0x7fb08006d9f8 <col:3, col:12> col:12 used i 'unsigned int'
+    | `-VarDecl 0x7fb08006da70 <col:3, col:15> col:15 used j 'unsigned int'
+    `-ForStmt 0x7fb08006e138 <line:6:3, line:11:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb08006db98 <line:6:10, col:14> 'int' '<'
+      | |-ImplicitCastExpr 0x7fb08006db50 <col:10> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb08006db00 <col:10> 'unsigned int' lvalue Var 0x7fb08006d9f8 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fb08006db80 <col:14> 'unsigned int' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fb08006db68 <col:14> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fb08006db28 <col:14> 'int' lvalue ParmVar 0x7fb08006d818 'length' 'int'
+      |-UnaryOperator 0x7fb08006dbe8 <col:22, col:23> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7fb08006dbc0 <col:22> 'unsigned int' lvalue Var 0x7fb08006d9f8 'i' 'unsigned int'
+      `-CompoundStmt 0x7fb08006e118 <line:7:5, line:11:5>
+        |-BinaryOperator 0x7fb08006dd00 <line:8:7, col:14> '_Complex double' '='
+        | |-ArraySubscriptExpr 0x7fb08006dc88 <col:7, col:10> '_Complex double' lvalue
+        | | |-ImplicitCastExpr 0x7fb08006dc58 <col:7> '_Complex double *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb08006dc08 <col:7> '_Complex double *' lvalue ParmVar 0x7fb08002c998 'X' '_Complex double *'
+        | | `-ImplicitCastExpr 0x7fb08006dc70 <col:9> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fb08006dc30 <col:9> 'unsigned int' lvalue Var 0x7fb08006d9f8 'i' 'unsigned int'
+        | `-ImplicitCastExpr 0x7fb08006dce8 <col:14> '_Complex double' <FloatingRealToComplex>
+        |   `-ImplicitCastExpr 0x7fb08006dcd0 <col:14> 'double' <IntegralToFloating>
+        |     `-IntegerLiteral 0x7fb08006dcb0 <col:14> 'int' 0
+        `-ForStmt 0x7fb08006e0e0 <line:9:7, line:10:16>
+          |-BinaryOperator 0x7fb08006dd88 <line:9:12, col:16> 'unsigned int' '='
+          | |-DeclRefExpr 0x7fb08006dd28 <col:12> 'unsigned int' lvalue Var 0x7fb08006da70 'j' 'unsigned int'
+          | `-ImplicitCastExpr 0x7fb08006dd70 <col:16> 'unsigned int' <IntegralCast>
+          |   `-IntegerLiteral 0x7fb08006dd50 <col:16> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fb08006de48 <col:19, col:23> 'int' '<'
+          | |-ImplicitCastExpr 0x7fb08006de00 <col:19> 'unsigned int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fb08006ddb0 <col:19> 'unsigned int' lvalue Var 0x7fb08006da70 'j' 'unsigned int'
+          | `-ImplicitCastExpr 0x7fb08006de30 <col:23> 'unsigned int' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7fb08006de18 <col:23> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fb08006ddd8 <col:23> 'int' lvalue ParmVar 0x7fb08006d818 'length' 'int'
+          |-UnaryOperator 0x7fb08006de98 <col:31, col:32> 'unsigned int' postfix '++'
+          | `-DeclRefExpr 0x7fb08006de70 <col:31> 'unsigned int' lvalue Var 0x7fb08006da70 'j' 'unsigned int'
+          `-BinaryOperator 0x7fb08006e0b8 <line:10:2, col:16> '_Complex double' '='
+            |-ArraySubscriptExpr 0x7fb08006df38 <col:2, col:5> '_Complex double' lvalue
+            | |-ImplicitCastExpr 0x7fb08006df08 <col:2> '_Complex double *' <LValueToRValue>
+            | | `-DeclRefExpr 0x7fb08006deb8 <col:2> '_Complex double *' lvalue ParmVar 0x7fb08002c998 'X' '_Complex double *'
+            | `-ImplicitCastExpr 0x7fb08006df20 <col:4> 'unsigned int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7fb08006dee0 <col:4> 'unsigned int' lvalue Var 0x7fb08006d9f8 'i' 'unsigned int'
+            `-BinaryOperator 0x7fb08006e090 <col:9, col:16> '_Complex double' '/'
+              |-ImplicitCastExpr 0x7fb08006e030 <col:9, col:12> '_Complex double' <LValueToRValue>
+              | `-ArraySubscriptExpr 0x7fb08006dfe0 <col:9, col:12> '_Complex double' lvalue
+              |   |-ImplicitCastExpr 0x7fb08006dfb0 <col:9> '_Complex double *' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7fb08006df60 <col:9> '_Complex double *' lvalue ParmVar 0x7fb08002c998 'X' '_Complex double *'
+              |   `-ImplicitCastExpr 0x7fb08006dfc8 <col:11> 'unsigned int' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fb08006df88 <col:11> 'unsigned int' lvalue Var 0x7fb08006d9f8 'i' 'unsigned int'
+              `-ImplicitCastExpr 0x7fb08006e078 <col:16> '_Complex double' <FloatingRealToComplex>
+                `-ImplicitCastExpr 0x7fb08006e060 <col:16> 'double' <IntegralToFloating>
+                  `-ImplicitCastExpr 0x7fb08006e048 <col:16> 'int' <LValueToRValue>
+                    `-DeclRefExpr 0x7fb08006e008 <col:16> 'int' lvalue ParmVar 0x7fb08006d818 'length' 'int'

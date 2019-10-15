@@ -1,0 +1,64 @@
+../Data/C2AST/pr79275.c:10:3: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  __builtin_sprintf (dst, "%.*s %.*s", (int)n, s, (int)n, s);    
+  ^
+TranslationUnitDecl 0x7ffe6c02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe6c02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe6c02bf80 '__int128'
+|-TypedefDecl 0x7ffe6c02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe6c02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffe6c02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe6c02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe6c02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe6c02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe6c02c600 'char *'
+|   `-BuiltinType 0x7ffe6c02bd80 'char'
+|-TypedefDecl 0x7ffe6c02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe6c02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe6c02c720 'struct __va_list_tag'
+|     `-Record 0x7ffe6c02c698 '__va_list_tag'
+|-TypedefDecl 0x7ffe6c02c978 <../Data/C2AST/pr79275.c:3:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ffe6c02bea0 'unsigned long'
+`-FunctionDecl 0x7ffe6c814440 <line:5:1, line:11:1> line:5:6 f 'void (char *, size_t, const char *)'
+  |-ParmVarDecl 0x7ffe6c814200 <col:9, col:15> col:15 used dst 'char *'
+  |-ParmVarDecl 0x7ffe6c814290 <col:20, col:27> col:27 used n 'size_t':'unsigned long'
+  |-ParmVarDecl 0x7ffe6c814308 <col:30, col:42> col:42 used s 'const char *'
+  `-CompoundStmt 0x7ffe6c814bc8 <line:6:1, line:11:1>
+    |-IfStmt 0x7ffe6c814770 <line:7:3, line:8:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffe6c8146c0 <line:7:7, col:34> 'int' '||'
+    | | |-BinaryOperator 0x7ffe6c8145b0 <col:7, col:11> 'int' '<'
+    | | | |-ImplicitCastExpr 0x7ffe6c814580 <col:7> 'size_t':'unsigned long' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7ffe6c814538 <col:7> 'size_t':'unsigned long' lvalue ParmVar 0x7ffe6c814290 'n' 'size_t':'unsigned long'
+    | | | `-ImplicitCastExpr 0x7ffe6c814598 <col:11> 'unsigned long' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7ffe6c814560 <col:11> 'int' 2
+    | | `-BinaryOperator 0x7ffe6c814698 <<built-in>:38:21, ../Data/C2AST/pr79275.c:7:34> 'int' '<'
+    | |   |-ImplicitCastExpr 0x7ffe6c814680 <<built-in>:38:21, ../Data/C2AST/pr79275.c:7:30> 'unsigned long' <IntegralCast>
+    | |   | `-BinaryOperator 0x7ffe6c814618 <<built-in>:38:21, ../Data/C2AST/pr79275.c:7:30> 'int' '-'
+    | |   |   |-IntegerLiteral 0x7ffe6c8145d8 <<built-in>:38:21> 'int' 2147483647
+    | |   |   `-IntegerLiteral 0x7ffe6c8145f8 <../Data/C2AST/pr79275.c:7:30> 'int' 2
+    | |   `-ImplicitCastExpr 0x7ffe6c814668 <col:34> 'size_t':'unsigned long' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ffe6c814640 <col:34> 'size_t':'unsigned long' lvalue ParmVar 0x7ffe6c814290 'n' 'size_t':'unsigned long'
+    | |-BinaryOperator 0x7ffe6c814748 <line:8:5, col:9> 'size_t':'unsigned long' '='
+    | | |-DeclRefExpr 0x7ffe6c8146e8 <col:5> 'size_t':'unsigned long' lvalue ParmVar 0x7ffe6c814290 'n' 'size_t':'unsigned long'
+    | | `-ImplicitCastExpr 0x7ffe6c814730 <col:9> 'size_t':'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ffe6c814710 <col:9> 'int' 2
+    | `-<<<NULL>>>
+    `-CallExpr 0x7ffe6c814b10 <line:10:3, col:60> 'int'
+      |-ImplicitCastExpr 0x7ffe6c814af8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffe6c8148c0 <col:3> 'int ()' Function 0x7ffe6c814810 '__builtin_sprintf' 'int ()'
+      |-ImplicitCastExpr 0x7ffe6c814b68 <col:22> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffe6c8148e8 <col:22> 'char *' lvalue ParmVar 0x7ffe6c814200 'dst' 'char *'
+      |-ImplicitCastExpr 0x7ffe6c814b80 <col:27> 'char *' <ArrayToPointerDecay>
+      | `-StringLiteral 0x7ffe6c814948 <col:27> 'char [10]' lvalue "%.*s %.*s"
+      |-CStyleCastExpr 0x7ffe6c8149d8 <col:40, col:45> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7ffe6c8149c0 <col:45> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffe6c814980 <col:45> 's1 error generated.
+ize_t':'unsigned long' lvalue ParmVar 0x7ffe6c814290 'n' 'size_t':'unsigned long'
+      |-ImplicitCastExpr 0x7ffe6c814b98 <col:48> 'const char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffe6c814a00 <col:48> 'const char *' lvalue ParmVar 0x7ffe6c814308 's' 'const char *'
+      |-CStyleCastExpr 0x7ffe6c814a80 <col:51, col:56> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7ffe6c814a68 <col:56> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffe6c814a28 <col:56> 'size_t':'unsigned long' lvalue ParmVar 0x7ffe6c814290 'n' 'size_t':'unsigned long'
+      `-ImplicitCastExpr 0x7ffe6c814bb0 <col:59> 'const char *' <LValueToRValue>
+        `-DeclRefExpr 0x7ffe6c814aa8 <col:59> 'const char *' lvalue ParmVar 0x7ffe6c814308 's' 'const char *'

@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fbc7e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc7e86e868 <../Data/C2AST/pr43662.c:4:1, line:6:1> line:4:31 foo 'void (void) __attribute__((ms_abi))':'void (void) __attribute__((ms_abi))'
+| `-CompoundStmt 0x7fbc7e86e948 <line:5:1, line:6:1>
+|-RecordDecl 0x7fbc7e86e958 <line:8:9, line:12:1> line:8:16 struct _IAVIStreamImpl definition
+| |-FieldDecl 0x7fbc7e86ea18 <line:10:3, col:7> col:7 referenced sInfo 'int'
+| `-FieldDecl 0x7fbc7e86ea78 <line:11:3, col:7> col:7 referenced has 'int'
+|-TypedefDecl 0x7fbc7e86eb10 <line:8:1, line:12:3> col:3 referenced IAVIStreamImpl 'struct _IAVIStreamImpl':'struct _IAVIStreamImpl'
+| `-ElaboratedType 0x7fbc7e86eac0 'struct _IAVIStreamImpl' sugar
+|   `-RecordType 0x7fbc7e86e9e0 'struct _IAVIStreamImpl'
+|     `-Record 0x7fbc7e86e958 '_IAVIStreamImpl'
+|-FunctionDecl 0x7fbc7e86ecb8 <line:14:1, col:48> col:37 used aso 'int (void *) __attribute__((ms_abi))':'int (void *) __attribute__((ms_abi))' extern
+| `-ParmVarDecl 0x7fbc7e86eb98 <col:42, col:47> col:48 'void *'
+|-FunctionDecl 0x7fbc7e86ee48 <line:15:1, col:23> col:12 used sre 'int (void *)' extern
+| `-ParmVarDecl 0x7fbc7e86ed78 <col:17, col:22> col:23 'void *'
+`-FunctionDecl 0x7fbc7e86f088 <line:17:1, line:23:1> line:17:5 AVIFILE_OpenCompressor 'int (IAVIStreamImpl *)'
+  |-ParmVarDecl 0x7fbc7e86ef78 <col:29, col:45> col:45 used This 'IAVIStreamImpl *'
+  `-CompoundStmt 0x7fbc7e86f570 <line:18:1, line:23:1>
+    |-IfStmt 0x7fbc7e86f3b8 <line:19:3, line:20:20>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbc7e86f1e0 <line:19:7, col:20> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fbc7e86f1c8 <col:7, col:13> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fbc7e86f170 <col:7, col:13> 'int' lvalue ->has 0x7fbc7e86ea78
+    | | |   `-ImplicitCastExpr 0x7fbc7e86f158 <col:7> 'IAVIStreamImpl *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fbc7e86f130 <col:7> 'IAVIStreamImpl *' lvalue ParmVar 0x7fbc7e86ef78 'This' 'IAVIStreamImpl *'
+    | | `-IntegerLiteral 0x7fbc7e86f1a8 <col:20> 'int' 0
+    | |-CallExpr 0x7fbc7e86f370 <line:20:5, col:20> 'int'
+    | | |-ImplicitCastExpr 0x7fbc7e86f358 <col:5> 'int (*)(void *) __attribute__((ms_abi))' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbc7e86f208 <col:5> 'int (void *) __attribute__((ms_abi))':'int (void *) __attribute__((ms_abi))' Function 0x7fbc7e86ecb8 'aso' 'int (void *) __attribute__((ms_abi))':'int (void *) __attribute__((ms_abi))'
+    | | `-ImplicitCastExpr 0x7fbc7e86f3a0 <col:10, col:17> 'void *' <BitCast>
+    | |   `-UnaryOperator 0x7fbc7e86f2d8 <col:10, col:17> 'int *' prefix '&'
+    | |     `-MemberExpr 0x7fbc7e86f270 <col:11, col:17> 'int' lvalue ->has 0x7fbc7e86ea78
+    | |       `-ImplicitCastExpr 0x7fbc7e86f258 <col:11> 'IAVIStreamImpl *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fbc7e86f230 <col:11> 'IAVIStreamImpl *' lvalue ParmVar 0x7fbc7e86ef78 'This' 'IAVIStreamImpl *'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fbc7e86f4f0 <line:21:3, col:20> 'int'
+    | |-ImplicitCastExpr 0x7fbc7e86f4d8 <col:3> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbc7e86f3f0 <col:3> 'int (void *)' Function 0x7fbc7e86ee48 'sre' 'int (void *)'
+    | `-ImplicitCastExpr 0x7fbc7e86f520 <col:8, col:15> 'void *' <BitCast>
+    |   `-UnaryOperator 0x7fbc7e86f490 <col:8, col:15> 'int *' prefix '&'
+    |     `-MemberExpr 0x7fbc7e86f458 <col:9, col:15> 'int' lvalue ->sInfo 0x7fbc7e86ea18
+    |       `-ImplicitCastExpr 0x7fbc7e86f440 <col:9> 'IAVIStreamImpl *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fbc7e86f418 <col:9> 'IAVIStreamImpl *' lvalue ParmVar 0x7fbc7e86ef78 'This' 'IAVIStreamImpl *'
+    `-ReturnStmt 0x7fbc7e86f558 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fbc7e86f538 <col:10> 'int' 0

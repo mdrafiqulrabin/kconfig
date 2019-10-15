@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fc4e600e8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc4e600f560 <../Data/C2AST/pr61090.c:4:1, line:6:1> line:4:8 struct i definition
+| `-FieldDecl 0x7fc4e6814238 <line:5:4, col:8> col:8 referenced c 'int'
+|-FunctionDecl 0x7fc4e68143d8 <line:8:1, line:12:1> line:9:1 used p 'int (struct i)' static
+| |-ParmVarDecl 0x7fc4e68142d0 <col:3, col:12> col:12 a 'struct i':'struct i'
+| `-CompoundStmt 0x7fc4e68144f8 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fc4e68144e0 <line:11:3, col:10>
+|     `-IntegerLiteral 0x7fc4e68144c0 <col:10> 'int' 0
+`-FunctionDecl 0x7fc4e68145d0 <line:14:1, line:21:1> line:15:1 h 'void (void)'
+  `-CompoundStmt 0x7fc4e6814f20 <line:16:1, line:21:1>
+    |-DeclStmt 0x7fc4e6814918 <line:17:3, col:25>
+    | `-VarDecl 0x7fc4e68146f8 <col:3, col:24> col:12 used z 'struct i [1]' cinit
+    |   `-InitListExpr 0x7fc4e6814808 <col:18, col:24> 'struct i [1]'
+    |     `-InitListExpr 0x7fc4e6814848 <col:19, col:23> 'struct i':'struct i'
+    |       `-IntegerLiteral 0x7fc4e6814758 <col:21> 'int' 0
+    |-DeclStmt 0x7fc4e6814a98 <line:18:3, col:15>
+    | `-VarDecl 0x7fc4e6814980 <col:3, col:14> col:7 used e 'int [0]' cinit
+    |   `-InitListExpr 0x7fc4e6814a20 <col:13, col:14> 'int [0]'
+    |-DeclStmt 0x7fc4e6814b28 <line:19:3, col:8>
+    | `-VarDecl 0x7fc4e6814ac8 <col:3, col:7> col:7 used x 'int'
+    `-BinaryOperator 0x7fc4e6814ef8 <line:20:3, col:25> 'int' '='
+      |-ArraySubscriptExpr 0x7fc4e6814bd0 <col:3, col:6> 'int' lvalue
+      | |-ImplicitCastExpr 0x7fc4e6814bb8 <col:3> 'int *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7fc4e6814b40 <col:3> 'int [0]' lvalue Var 0x7fc4e6814980 'e' 'int [0]'
+      | `-IntegerLiteral 0x7fc4e6814b68 <col:5> 'int' 0
+      `-BinaryOperator 0x7fc4e6814ed0 <col:10, col:25> 'int' '+'
+        |-CallExpr 0x7fc4e6814d90 <col:10, col:16> 'int'
+        | |-ImplicitCastExpr 0x7fc4e6814d78 <col:10> 'int (*)(struct i)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fc4e6814bf8 <col:10> 'int (struct i)' Function 0x7fc4e68143d8 'p' 'int (struct i)'
+        | `-ImplicitCastExpr 0x7fc4e6814dc0 <col:12, col:15> 'struct i':'struct i' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7fc4e6814cf8 <col:12, col:15> 'struct i':'struct i' lvalue
+        |     |-ImplicitCastExpr 0x7fc4e6814cc8 <col:12> 'struct i *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7fc4e6814c20 <col:12> 'struct i [1]' lvalue Var 0x7fc4e68146f8 'z' 'struct i [1]'
+        |     `-ImplicitCastExpr 0x7fc4e6814ce0 <col:14> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fc4e6814c48 <col:14> 'int' lvalue Var 0x7fc4e6814ac8 'x' 'int'
+        `-ImplicitCastExpr 0x7fc4e6814eb8 <col:20, col:25> 'int' <LValueToRValue>
+          `-MemberExpr 0x7fc4e6814e80 <col:20, col:25> 'int' lvalue .c 0x7fc4e6814238
+            `-ArraySubscriptExpr 0x7fc4e6814e58 <col:20, col:23> 'struct i':'struct i' lvalue
+              |-ImplicitCastExpr 0x7fc4e6814e28 <col:20> 'struct i *' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7fc4e6814dd8 <col:20> 'struct i [1]' lvalue Var 0x7fc4e68146f8 'z' 'struct i [1]'
+              `-ImplicitCastExpr 0x7fc4e6814e40 <col:22> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fc4e6814e00 <col:22> 'int' lvalue Var 0x7fc4e6814ac8 'x' 'int'

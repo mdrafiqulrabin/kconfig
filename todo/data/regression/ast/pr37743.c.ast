@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fd71981aee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd7188010a8 <../Data/C2AST/pr37743.c:6:1, col:67> col:5 used foo 'int (const char *, ...)'
+| |-ParmVarDecl 0x7fd71981bb78 <col:10, col:21> col:22 'const char *'
+| `-FormatAttr 0x7fd718801150 <col:45, col:65> printf 1 2
+|-FunctionDecl 0x7fd7188012c0 <line:8:1, line:12:1> line:9:1 bar 'void (unsigned int)'
+| |-ParmVarDecl 0x7fd718801200 <col:6, col:19> col:19 used x 'unsigned int'
+| `-CompoundStmt 0x7fd718801728 <line:10:1, line:12:1>
+|   `-CallExpr 0x7fd7188016c0 <line:11:3, col:35> 'int'
+|     |-ImplicitCastExpr 0x7fd7188016a8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd718801368 <col:3> 'int (const char *, ...)' Function 0x7fd7188010a8 'foo' 'int (const char *, ...)'
+|     |-ImplicitCastExpr 0x7fd718801710 <col:8> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fd7188016f8 <col:8> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fd7188013c8 <col:8> 'char [3]' lvalue "%x"
+|     `-CallExpr 0x7fd718801630 <col:14, col:34> 'unsigned int'
+|       |-ImplicitCastExpr 0x7fd718801618 <col:14> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fd718801598 <col:14> '<builtin fn type>' Function 0x7fd718801438 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|       `-ImplicitCastExpr 0x7fd718801660 <col:33> 'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd7188015c0 <col:33> 'unsigned int' lvalue ParmVar 0x7fd718801200 'x' 'unsigned int'
+`-FunctionDecl 0x7fd718801438 <col:14> col:14 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+  |-ParmVarDecl 0x7fd7188014d8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  |-NoThrowAttr 0x7fd718801540 <col:14> Implicit
+  `-ConstAttr 0x7fd718801588 <col:14> Implicit

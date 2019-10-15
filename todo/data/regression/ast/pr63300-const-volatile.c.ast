@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fe9dc02b0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe9dc813718 <../Data/C2AST/pr63300-const-volatile.c:5:1, line:10:1> line:6:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fe9dc02bd78 <col:7, col:11> col:11 used argc 'int'
+  |-ParmVarDecl 0x7fe9dc813640 <col:17, col:24> col:24 argv 'char **'
+  `-CompoundStmt 0x7fe9dc813998 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fe9dc8138c0 <line:8:3, col:30>
+    | `-VarDecl 0x7fe9dc813820 <col:3, col:26> col:22 used v 'const volatile int' cinit
+    |   `-ImplicitCastExpr 0x7fe9dc8138a8 <col:26> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe9dc813880 <col:26> 'int' lvalue ParmVar 0x7fe9dc02bd78 'argc' 'int'
+    `-ReturnStmt 0x7fe9dc813980 <line:9:3, col:14>
+      `-BinaryOperator 0x7fe9dc813958 <col:10, col:14> 'int' '-'
+        |-ImplicitCastExpr 0x7fe9dc813928 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe9dc8138d8 <col:10> 'const volatile int' lvalue Var 0x7fe9dc813820 'v' 'const volatile int'
+        `-ImplicitCastExpr 0x7fe9dc813940 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe9dc813900 <col:14> 'int' lvalue ParmVar 0x7fe9dc02bd78 'argc' 'int'

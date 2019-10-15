@@ -1,0 +1,111 @@
+TranslationUnitDecl 0x7ff1a2821ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff1a2004cd0 <../Data/C2AST/pr70858.c:5:1, line:9:1> line:6:1 f1 'void (unsigned long long, unsigned int)'
+| |-ParmVarDecl 0x7ff1a2822978 <col:5, col:24> col:24 used x 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a2004c00 <col:27, col:40> col:40 used y 'unsigned int'
+| `-CompoundStmt 0x7ff1a2005148 <line:7:1, line:9:1>
+|   `-CallExpr 0x7ff1a20050c0 <line:8:3, col:35> 'void'
+|     |-ImplicitCastExpr 0x7ff1a20050a8 <col:3> 'void (*)(unsigned long long, unsigned int, unsigned int)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ff1a2004fe0 <col:3> '<builtin fn type>' Function 0x7ff1a2004e08 '__builtin_ia32_lwpval64' 'void (unsigned long long, unsigned int, unsigned int)'
+|     |-ImplicitCastExpr 0x7ff1a2005100 <col:28> 'unsigned long long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff1a2005008 <col:28> 'unsigned long long' lvalue ParmVar 0x7ff1a2822978 'x' 'unsigned long long'
+|     |-ImplicitCastExpr 0x7ff1a2005118 <col:31> 'unsigned int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff1a2005030 <col:31> 'unsigned int' lvalue ParmVar 0x7ff1a2004c00 'y' 'unsigned int'
+|     `-ImplicitCastExpr 0x7ff1a2005130 <col:34> 'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7ff1a2005058 <col:34> 'int' 1
+|-FunctionDecl 0x7ff1a2004e08 <col:3> col:3 implicit used __builtin_ia32_lwpval64 'void (unsigned long long, unsigned int, unsigned int)' extern
+| |-ParmVarDecl 0x7ff1a2004ea8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a2004f08 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| `-ParmVarDecl 0x7ff1a2004f68 <<invalid sloc>> <invalid sloc> 'unsigned int'
+|-FunctionDecl 0x7ff1a20052c0 <line:11:1, line:15:1> line:12:1 f2 'char (unsigned long long, unsigned int)'
+| |-ParmVarDecl 0x7ff1a2005178 <col:5, col:24> col:24 used x 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a20051f0 <col:27, col:40> col:40 used y 'unsigned int'
+| `-CompoundStmt 0x7ff1a2005728 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ff1a2005710 <line:14:3, col:42>
+|     `-ImplicitCastExpr 0x7ff1a20056f8 <col:10, col:42> 'char' <IntegralCast>
+|       `-CallExpr 0x7ff1a2005670 <col:10, col:42> 'unsigned char'
+|         |-ImplicitCastExpr 0x7ff1a2005658 <col:10> 'unsigned char (*)(unsigned long long, unsigned int, unsigned int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff1a2005590 <col:10> '<builtin fn type>' Function 0x7ff1a20053b8 '__builtin_ia32_lwpins64' 'unsigned char (unsigned long long, unsigned int, unsigned int)'
+|         |-ImplicitCastExpr 0x7ff1a20056b0 <col:35> 'unsigned long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ff1a20055b8 <col:35> 'unsigned long long' lvalue ParmVar 0x7ff1a2005178 'x' 'unsigned long long'
+|         |-ImplicitCastExpr 0x7ff1a20056c8 <col:38> 'unsigned int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ff1a20055e0 <col:38> 'unsigned int' lvalue ParmVar 0x7ff1a20051f0 'y' 'unsigned int'
+|         `-ImplicitCastExpr 0x7ff1a20056e0 <col:41> 'unsigned int' <IntegralCast>
+|           `-IntegerLiteral 0x7ff1a2005608 <col:41> 'int' 1
+|-FunctionDecl 0x7ff1a20053b8 <col:10> col:10 implicit used __builtin_ia32_lwpins64 'unsigned char (unsigned long long, unsigned int, unsigned int)' extern
+| |-ParmVarDecl 0x7ff1a2005458 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a20054b8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| `-ParmVarDecl 0x7ff1a2005518 <<invalid sloc>> <invalid sloc> 'unsigned int'
+|-FunctionDecl 0x7ff1a20058a8 <line:17:1, line:21:1> line:18:1 f3 'unsigned long long (unsigned long long, unsigned long long)'
+| |-ParmVarDecl 0x7ff1a2005758 <col:5, col:24> col:24 used x 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a20057d0 <col:27, col:46> col:46 used y 'unsigned long long'
+| `-CompoundStmt 0x7ff1a200ec00 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7ff1a2005be8 <line:20:3, col:40>
+|     `-CallExpr 0x7ff1a2005b80 <col:10, col:40> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7ff1a2005b68 <col:10> 'unsigned long long (*)(unsigned long long, unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ff1a2005ac8 <col:10> '<builtin fn type>' Function 0x7ff1a2005958 '__builtin_ia32_bextr_u64' 'unsigned long long (unsigned long long, unsigned long long)'
+|       |-ImplicitCastExpr 0x7ff1a2005bb8 <col:36> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff1a2005af0 <col:36> 'unsigned long long' lvalue ParmVar 0x7ff1a2005758 'x' 'unsigned long long'
+|       `-ImplicitCastExpr 0x7ff1a2005bd0 <col:39> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff1a2005b18 <col:39> 'unsigned long long' lvalue ParmVar 0x7ff1a20057d0 'y' 'unsigned long long'
+|-FunctionDecl 0x7ff1a2005958 <col:10> col:10 implicit used __builtin_ia32_bextr_u64 'unsigned long long (unsigned long long, unsigned long long)' extern
+| |-ParmVarDecl 0x7ff1a20059f8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| `-ParmVarDecl 0x7ff1a2005a58 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x7ff1a200ecf8 <line:23:1, line:27:1> line:24:1 f4 'unsigned long long (unsigned long long)'
+| |-ParmVarDecl 0x7ff1a200ec30 <col:5, col:24> col:24 used x 'unsigned long long'
+| `-CompoundStmt 0x7ff1a200f018 <line:25:1, line:27:1>
+|   `-ReturnStmt 0x7ff1a200f000 <line:26:3, col:41>
+|     `-CallExpr 0x7ff1a200ef98 <col:10, col:41> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7ff1a200ef80 <col:10> 'unsigned long long (*)(unsigned long long, unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ff1a200ef10 <col:10> '<builtin fn type>' Function 0x7ff1a200eda0 '__builtin_ia32_bextri_u64' 'unsigned long long (unsigned long long, unsigned long long)'
+|       |-ImplicitCastExpr 0x7ff1a200efd0 <col:37> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff1a200ef38 <col:37> 'unsigned long long' lvalue ParmVar 0x7ff1a200ec30 'x' 'unsigned long long'
+|       `-ImplicitCastExpr 0x7ff1a200efe8 <col:40> 'unsigned long long' <IntegralCast>
+|         `-IntegerLiteral 0x7ff1a200ef60 <col:40> 'int' 1
+|-FunctionDecl 0x7ff1a200eda0 <col:10> col:10 implicit used __builtin_ia32_bextri_u64 'unsigned long long (unsigned long long, unsigned long long)' extern
+| |-ParmVarDecl 0x7ff1a200ee40 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| `-ParmVarDecl 0x7ff1a200eea0 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x7ff1a200f158 <line:29:1, line:33:1> line:30:1 f5 'unsigned long long (unsigned long long, unsigned long long)'
+| |-ParmVarDecl 0x7ff1a200f048 <col:5, col:24> col:24 used x 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a200f0c0 <col:27, col:46> col:46 used y 'unsigned long long'
+| `-CompoundStmt 0x7ff1a200f488 <line:31:1, line:33:1>
+|   `-ReturnStmt 0x7ff1a200f470 <line:32:3, col:38>
+|     `-CallExpr 0x7ff1a200f408 <col:10, col:38> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7ff1a200f3f0 <col:10> 'unsigned long long (*)(unsigned long long, unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ff1a200f378 <col:10> '<builtin fn type>' Function 0x7ff1a200f208 '__builtin_ia32_bzhi_di' 'unsigned long long (unsigned long long, unsigned long long)'
+|       |-ImplicitCastExpr 0x7ff1a200f440 <col:34> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff1a200f3a0 <col:34> 'unsigned long long' lvalue ParmVar 0x7ff1a200f048 'x' 'unsigned long long'
+|       `-ImplicitCastExpr 0x7ff1a200f458 <col:37> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff1a200f3c8 <col:37> 'unsigned long long' lvalue ParmVar 0x7ff1a200f0c0 'y' 'unsigned long long'
+|-FunctionDecl 0x7ff1a200f208 <col:10> col:10 implicit used __builtin_ia32_bzhi_di 'unsigned long long (unsigned long long, unsigned long long)' extern
+| |-ParmVarDecl 0x7ff1a200f2a8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| `-ParmVarDecl 0x7ff1a200f308 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x7ff1a200f5c8 <line:35:1, line:39:1> line:36:1 f6 'unsigned long long (unsigned long long, unsigned long long)'
+| |-ParmVarDecl 0x7ff1a200f4b8 <col:5, col:24> col:24 used x 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a200f530 <col:27, col:46> col:46 used y 'unsigned long long'
+| `-CompoundStmt 0x7ff1a200f8f8 <line:37:1, line:39:1>
+|   `-ReturnStmt 0x7ff1a200f8e0 <line:38:3, col:38>
+|     `-CallExpr 0x7ff1a200f878 <col:10, col:38> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7ff1a200f860 <col:10> 'unsigned long long (*)(unsigned long long, unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ff1a200f7e8 <col:10> '<builtin fn type>' Function 0x7ff1a200f678 '__builtin_ia32_pdep_di' 'unsigned long long (unsigned long long, unsigned long long)'
+|       |-ImplicitCastExpr 0x7ff1a200f8b0 <col:34> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff1a200f810 <col:34> 'unsigned long long' lvalue ParmVar 0x7ff1a200f4b8 'x' 'unsigned long long'
+|       `-ImplicitCastExpr 0x7ff1a200f8c8 <col:37> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff1a200f838 <col:37> 'unsigned long long' lvalue ParmVar 0x7ff1a200f530 'y' 'unsigned long long'
+|-FunctionDecl 0x7ff1a200f678 <col:10> col:10 implicit used __builtin_ia32_pdep_di 'unsigned long long (unsigned long long, unsigned long long)' extern
+| |-ParmVarDecl 0x7ff1a200f718 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| `-ParmVarDecl 0x7ff1a200f778 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x7ff1a200fa38 <line:41:1, line:45:1> line:42:1 f7 'unsigned long long (unsigned long long, unsigned long long)'
+| |-ParmVarDecl 0x7ff1a200f928 <col:5, col:24> col:24 used x 'unsigned long long'
+| |-ParmVarDecl 0x7ff1a200f9a0 <col:27, col:46> col:46 used y 'unsigned long long'
+| `-CompoundStmt 0x7ff1a200fd80 <line:43:1, line:45:1>
+|   `-ReturnStmt 0x7ff1a200fd68 <line:44:3, col:38>
+|     `-CallExpr 0x7ff1a200fd00 <col:10, col:38> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7ff1a200fce8 <col:10> 'unsigned long long (*)(unsigned long long, unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7ff1a200fc70 <col:10> '<builtin fn type>' Function 0x7ff1a200fae8 '__builtin_ia32_pext_di' 'unsigned long long (unsigned long long, unsigned long long)'
+|       |-ImplicitCastExpr 0x7ff1a200fd38 <col:34> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff1a200fc98 <col:34> 'unsigned long long' lvalue ParmVar 0x7ff1a200f928 'x' 'unsigned long long'
+|       `-ImplicitCastExpr 0x7ff1a200fd50 <col:37> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff1a200fcc0 <col:37> 'unsigned long long' lvalue ParmVar 0x7ff1a200f9a0 'y' 'unsigned long long'
+`-FunctionDecl 0x7ff1a200fae8 <col:10> col:10 implicit used __builtin_ia32_pext_di 'unsigned long long (unsigned long long, unsigned long long)' extern
+  |-ParmVarDecl 0x7ff1a200fb88 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+  `-ParmVarDecl 0x7ff1a200fc00 <<invalid sloc>> <invalid sloc> 'unsigned long long'

@@ -1,0 +1,96 @@
+TranslationUnitDecl 0x7f7fb000b4e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f7fb000c160 <../Data/C2AST/pr33866.c:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7f7fb1814260 <line:7:3, col:9> col:9 referenced coords 'long *'
+|-TypedefDecl 0x7f7fb1814300 <line:5:1, line:9:1> col:1 referenced fill_iter_info 'struct fill_iter_info':'fill_iter_info'
+| `-ElaboratedType 0x7f7fb18142b0 'struct fill_iter_info' sugar
+|   `-RecordType 0x7f7fb1814200 'fill_iter_info'
+|     `-Record 0x7f7fb000c160 ''
+|-FunctionDecl 0x7f7fb1814508 <line:11:1, col:40> col:12 used H5Diterate 'int (fill_iter_info *)' extern
+| `-ParmVarDecl 0x7f7fb18143f8 <col:24, col:39> col:40 'fill_iter_info *'
+`-FunctionDecl 0x7f7fb18146d0 <line:13:1, line:27:1> line:13:6 test_select_fill_hyper_simple 'void (long *)'
+  |-ParmVarDecl 0x7f7fb1814608 <col:37, col:43> col:43 offset 'long *'
+  `-CompoundStmt 0x7f7fb182c080 <line:14:1, line:27:1>
+    |-DeclStmt 0x7f7fb1814860 <line:15:3, col:16>
+    | `-VarDecl 0x7f7fb1814800 <col:3, col:15> col:8 used start 'long [2]'
+    |-DeclStmt 0x7f7fb18148f0 <line:16:3, col:17>
+    | `-VarDecl 0x7f7fb1814890 <col:3, col:7> col:7 used num_points 'int'
+    |-DeclStmt 0x7f7fb1814a20 <line:17:3, col:21>
+    | `-VarDecl 0x7f7fb18149c0 <col:3, col:20> col:8 used points 'long [16][2]'
+    |-DeclStmt 0x7f7fb1814aa8 <line:18:3, col:27>
+    | `-VarDecl 0x7f7fb1814a48 <col:3, col:18> col:18 used iter_info 'fill_iter_info':'fill_iter_info'
+    |-DeclStmt 0x7f7fb1814bc8 <line:19:3, col:11>
+    | |-VarDecl 0x7f7fb1814ad8 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7f7fb1814b50 <col:3, col:10> col:10 used j 'int'
+    |-BinaryOperator 0x7f7fb1814ce8 <line:20:3, col:31> 'long *' '='
+    | |-MemberExpr 0x7f7fb1814c08 <col:3, col:13> 'long *' lvalue .coords 0x7f7fb1814260
+    | | `-DeclRefExpr 0x7f7fb1814be0 <col:3> 'fill_iter_info':'fill_iter_info' lvalue Var 0x7f7fb1814a48 'iter_info' 'fill_iter_info':'fill_iter_info'
+    | `-CStyleCastExpr 0x7f7fb1814cc0 <col:22, col:31> 'long *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f7fb1814ca8 <col:31> 'long (*)[2]' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7f7fb1814c40 <col:31> 'long [16][2]' lvalue Var 0x7f7fb18149c0 'points' 'long [16][2]'
+    |-ForStmt 0x7f7fb182bf30 <line:21:3, line:25:3>
+    | |-BinaryOperator 0x7f7fb1814e40 <line:21:8, col:32> 'int' ','
+    | | |-BinaryOperator 0x7f7fb1814da8 <col:8, col:16> 'int' '='
+    | | | |-DeclRefExpr 0x7f7fb1814d10 <col:8> 'int' lvalue Var 0x7f7fb1814b50 'j' 'int'
+    | | | `-BinaryOperator 0x7f7fb1814d80 <col:12, col:16> 'int' '='
+    | | |   |-DeclRefExpr 0x7f7fb1814d38 <col:12> 'int' lvalue Var 0x7f7fb1814ad8 'i' 'int'
+    | | |   `-IntegerLiteral 0x7f7fb1814d60 <col:16> 'int' 0
+    | | `-BinaryOperator 0x7f7fb1814e18 <col:19, col:32> 'int' '='
+    | |   |-DeclRefExpr 0x7f7fb1814dd0 <col:19> 'int' lvalue Var 0x7f7fb1814890 'num_points' 'int'
+    | |   `-IntegerLiteral 0x7f7fb1814df8 <col:32> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f7fb1814f88 <col:35, col:52> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f7fb1814f70 <col:35> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f7fb1814e68 <col:35> 'int' lvalue Var 0x7f7fb1814b50 'j' 'int'
+    | | `-CStyleCastExpr 0x7f7fb1814f48 <col:39, col:52> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7f7fb1814f30 <col:45, col:52> 'long' <LValueToRValue>
+    | |     `-ArraySubscriptExpr 0x7f7fb1814ef0 <col:45, col:52> 'long' lvalue
+    | |       |-ImplicitCastExpr 0x7f7fb1814ed8 <col:45> 'long *' <ArrayToPointerDecay>
+    | |       | `-DeclRefExpr 0x7f7fb1814e90 <col:45> 'long [2]' lvalue Var 0x7f7fb1814800 'start' 'long [2]'
+    | |       `-IntegerLiteral 0x7f7fb1814eb8 <col:51> 'int' 1
+    | |-BinaryOperator 0x7f7fb1815040 <col:55, col:70> 'int' ','
+    | | |-UnaryOperator 0x7f7fb1814fd8 <col:55, col:56> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7f7fb1814fb0 <col:55> 'int' lvalue Var 0x7f7fb1814b50 'j' 'int'
+    | | `-UnaryOperator 0x7f7fb1815020 <col:60, col:70> 'int' postfix '++'
+    | |   `-DeclRefExpr 0x7f7fb1814ff8 <col:60> 'int' lvalue Var 0x7f7fb1814890 'num_points' 'int'
+    | `-CompoundStmt 0x7f7fb182bf10 <line:22:3, line:25:3>
+    |   |-BinaryOperator 0x7f7fb182bc98 <line:23:5, col:40> 'long' '='
+    |   | |-ArraySubscriptExpr 0x7f7fb1815148 <col:5, col:25> 'long' lvalue
+    |   | | |-ImplicitCastExpr 0x7f7fb1815130 <col:5, col:22> 'long *' <ArrayToPointerDecay>
+    |   | | | `-ArraySubscriptExpr 0x7f7fb18150e8 <col:5, col:22> 'long [2]' lvalue
+    |   | | |   |-ImplicitCastExpr 0x7f7fb18150b8 <col:5> 'long (*)[2]' <ArrayToPointerDecay>
+    |   | | |   | `-DeclRefExpr 0x7f7fb1815068 <col:5> 'long [16][2]' lvalue Var 0x7f7fb18149c0 'points' 'long [16][2]'
+    |   | | |   `-ImplicitCastExpr 0x7f7fb18150d0 <col:12> 'int' <LValueToRValue>
+    |   | | |     `-DeclRefExpr 0x7f7fb1815090 <col:12> 'int' lvalue Var 0x7f7fb1814890 'num_points' 'int'
+    |   | | `-IntegerLiteral 0x7f7fb1815110 <col:24> 'int' 0
+    |   | `-BinaryOperator 0x7f7fb182bc70 <col:29, col:40> 'long' '+'
+    |   |   |-ImplicitCastExpr 0x7f7fb182bc58 <col:29> 'long' <IntegralCast>
+    |   |   | `-ImplicitCastExpr 0x7f7fb182bc28 <col:29> 'int' <LValueToRValue>
+    |   |   |   `-DeclRefExpr 0x7f7fb1815170 <col:29> 'int' lvalue Var 0x7f7fb1814ad8 'i' 'int'
+    |   |   `-ImplicitCastExpr 0x7f7fb182bc40 <col:33, col:40> 'long' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x7f7fb182bc00 <col:33, col:40> 'long' lvalue
+    |   |       |-ImplicitCastExpr 0x7f7fb18151e0 <col:33> 'long *' <ArrayToPointerDecay>
+    |   |       | `-DeclRefExpr 0x7f7fb1815198 <col:33> 'long [2]' lvalue Var 0x7f7fb1814800 'start' 'long [2]'
+    |   |       `-IntegerLiteral 0x7f7fb18151c0 <col:39> 'int' 0
+    |   `-BinaryOperator 0x7f7fb182bee8 <line:24:5, col:40> 'long' '='
+    |     |-ArraySubscriptExpr 0x7f7fb182bda0 <col:5, col:25> 'long' lvalue
+    |     | |-ImplicitCastExpr 0x7f7fb182bd88 <col:5, col:22> 'long *' <ArrayToPointerDecay>
+    |     | | `-ArraySubscriptExpr 0x7f7fb182bd40 <col:5, col:22> 'long [2]' lvalue
+    |     | |   |-ImplicitCastExpr 0x7f7fb182bd10 <col:5> 'long (*)[2]' <ArrayToPointerDecay>
+    |     | |   | `-DeclRefExpr 0x7f7fb182bcc0 <col:5> 'long [16][2]' lvalue Var 0x7f7fb18149c0 'points' 'long [16][2]'
+    |     | |   `-ImplicitCastExpr 0x7f7fb182bd28 <col:12> 'int' <LValueToRValue>
+    |     | |     `-DeclRefExpr 0x7f7fb182bce8 <col:12> 'int' lvalue Var 0x7f7fb1814890 'num_points' 'int'
+    |     | `-IntegerLiteral 0x7f7fb182bd68 <col:24> 'int' 1
+    |     `-BinaryOperator 0x7f7fb182bec0 <col:29, col:40> 'long' '+'
+    |       |-ImplicitCastExpr 0x7f7fb182bea8 <col:29> 'long' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7f7fb182be78 <col:29> 'int' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f7fb182bdc8 <col:29> 'int' lvalue Var 0x7f7fb1814b50 'j' 'int'
+    |       `-ImplicitCastExpr 0x7f7fb182be90 <col:33, col:40> 'long' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7f7fb182be50 <col:33, col:40> 'long' lvalue
+    |           |-ImplicitCastExpr 0x7f7fb182be38 <col:33> 'long *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7f7fb182bdf0 <col:33> 'long [2]' lvalue Var 0x7f7fb1814800 'start' 'long [2]'
+    |           `-IntegerLiteral 0x7f7fb182be18 <col:39> 'int' 1
+    `-CallExpr 0x7f7fb182c050 <line:26:3, col:25> 'int'
+      |-ImplicitCastExpr 0x7f7fb182c038 <col:3> 'int (*)(fill_iter_info *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f7fb182bf68 <col:3> 'int (fill_iter_info *)' Function 0x7f7fb1814508 'H5Diterate' 'int (fill_iter_info *)'
+      `-UnaryOperator 0x7f7fb182bfb8 <col:15, col:16> 'fill_iter_info *' prefix '&'
+        `-DeclRefExpr 0x7f7fb182bf90 <col:16> 'fill_iter_info':'fill_iter_info' lvalue Var 0x7f7fb1814a48 'iter_info' 'fill_iter_info':'fill_iter_info'

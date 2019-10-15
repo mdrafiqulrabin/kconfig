@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fd39281aee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd393014200 <../Data/C2AST/pr57518.c:6:1, col:11> col:6 used ip 'char [10]'
+|-VarDecl 0x7fd3930142b8 <line:7:1, col:5> col:5 used total 'int'
+`-FunctionDecl 0x7fd393014368 <line:9:1, line:14:1> line:9:6 foo 'void ()'
+  `-CompoundStmt 0x7fd393014678 <col:12, line:14:1>
+    |-DeclStmt 0x7fd393014480 <line:10:3, col:8>
+    | `-VarDecl 0x7fd393014420 <col:3, col:7> col:7 used t 'int'
+    |-BinaryOperator 0x7fd393014578 <line:12:3, col:11> 'int' '='
+    | |-DeclRefExpr 0x7fd393014498 <col:3> 'int' lvalue Var 0x7fd393014420 't' 'int'
+    | `-ImplicitCastExpr 0x7fd393014560 <col:7, col:11> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fd393014548 <col:7, col:11> 'char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fd393014520 <col:7, col:11> 'char' lvalue
+    |       |-ImplicitCastExpr 0x7fd393014508 <col:7> 'char *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fd3930144c0 <col:7> 'char [10]' lvalue Var 0x7fd393014200 'ip' 'char [10]'
+    |       `-IntegerLiteral 0x7fd3930144e8 <col:10> 'int' 2
+    `-BinaryOperator 0x7fd393014650 <line:13:3, col:15> 'int' '='
+      |-DeclRefExpr 0x7fd3930145a0 <col:3> 'int' lvalue Var 0x7fd3930142b8 'total' 'int'
+      `-BinaryOperator 0x7fd393014628 <col:11, col:15> 'int' '&'
+        |-ImplicitCastExpr 0x7fd393014610 <col:11> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd3930145c8 <col:11> 'int' lvalue Var 0x7fd393014420 't' 'int'
+        `-IntegerLiteral 0x7fd3930145f0 <col:15> 'int' 3

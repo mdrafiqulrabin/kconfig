@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7ff9168228e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff917056ef8 <../Data/C2AST/pr68134.c:6:1, col:16> col:16 referenced float64x1_t '__attribute__((__vector_size__(1 * sizeof(double)))) double'
+| `-VectorType 0x7ff917056ec0 '__attribute__((__vector_size__(1 * sizeof(double)))) double' 1
+|   `-BuiltinType 0x7ff916822b00 'double'
+|-TypedefDecl 0x7ff917056f60 <line:7:1, col:18> col:18 referenced uint64x1_t 'uint64_t':'unsigned long long'
+| `-TypedefType 0x7ff91702eaf0 'uint64_t' sugar
+|   |-Typedef 0x7ff91702e6a0 'uint64_t'
+|   `-BuiltinType 0x7ff916822ac0 'unsigned long long'
+|-FunctionDecl 0x7ff917057080 <line:9:1, line:19:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7ff917057950 <line:11:1, line:19:1>
+|   |-DeclStmt 0x7ff917057248 <line:12:3, col:54>
+|   | `-VarDecl 0x7ff917057190 <col:3, col:36> col:15 used arg1 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' cinit
+|   |   `-CStyleCastExpr 0x7ff917057220 <col:22, col:36> 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' <BitCast>
+|   |     `-IntegerLiteral 0x7ff9170571f0 <col:36> 'long' 4606612683674647680
+|   |-DeclStmt 0x7ff917057328 <line:13:3, col:54>
+|   | `-VarDecl 0x7ff917057270 <col:3, col:36> col:15 used arg2 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' cinit
+|   |   `-CStyleCastExpr 0x7ff917057300 <col:22, col:36> 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' <BitCast>
+|   |     `-IntegerLiteral 0x7ff9170572d0 <col:36> 'long' 4597547635751689280
+|   |-DeclStmt 0x7ff917057528 <line:14:3, col:50>
+|   | `-VarDecl 0x7ff917057370 <col:3, col:49> col:14 used result 'uint64x1_t':'unsigned long long' cinit
+|   |   `-CStyleCastExpr 0x7ff917057500 <col:23, col:49> 'uint64x1_t':'unsigned long long' <BitCast>
+|   |     `-ParenExpr 0x7ff9170574e0 <col:36, col:49> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|   |       `-BinaryOperator 0x7ff917057478 <col:37, col:45> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '=='
+|   |         |-ImplicitCastExpr 0x7ff917057420 <col:37> 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7ff9170573d0 <col:37> 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' lvalue Var 0x7ff917057190 'arg1' 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double'
+|   |         `-ImplicitCastExpr 0x7ff917057438 <col:45> 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7ff9170573f8 <col:45> 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double' lvalue Var 0x7ff917057270 'arg2' 'float64x1_t':'__attribute__((__vector_size__(1 * sizeof(double)))) double'
+|   |-DeclStmt 0x7ff9170575f0 <line:15:3, col:24>
+|   | `-VarDecl 0x7ff917057550 <col:3, col:18> col:12 used got 'uint64_t':'unsigned long long' cinit
+|   |   `-ImplicitCastExpr 0x7ff9170575d8 <col:18> 'uint64x1_t':'unsigned long long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ff9170575b0 <col:18> 'uint64x1_t':'unsigned long long' lvalue Var 0x7ff917057370 'result' 'uint64x1_t':'unsigned long long'
+|   |-DeclStmt 0x7ff9170576b0 <line:16:3, col:19>
+|   | `-VarDecl 0x7ff917057618 <col:3, col:18> col:12 exp 'uint64_t':'unsigned long long' cinit
+|   |   `-ImplicitCastExpr 0x7ff917057698 <col:18> 'uint64_t':'unsigned long long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7ff917057678 <col:18> 'int' 0
+|   `-IfStmt 0x7ff917057918 <line:17:3, line:18:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff917057740 <line:17:7, col:14> 'int' '!='
+|     | |-ImplicitCastExpr 0x7ff917057710 <col:7> 'uint64_t':'unsigned long long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff9170576c8 <col:7> 'uint64_t':'unsigned long long' lvalue Var 0x7ff917057550 'got' 'uint64_t':'unsigned long long'
+|     | `-ImplicitCastExpr 0x7ff917057728 <col:14> 'unsigned long long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7ff9170576f0 <col:14> 'int' 0
+|     |-CallExpr 0x7ff9170578f0 <line:18:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7ff9170578d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7ff917057888 <col:5> '<builtin fn type>' Function 0x7ff9170577a0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff9170577a0 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff917057840 <col:5> Implicit

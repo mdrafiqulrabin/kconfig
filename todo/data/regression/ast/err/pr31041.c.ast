@@ -1,0 +1,67 @@
+../Data/C2AST/pr31041.c:5:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7f804582b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f804582b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f804582b580 '__int128'
+|-TypedefDecl 0x7f804582b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f804582b5a0 'unsigned __int128'
+|-TypedefDecl 0x7f804582bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f804582b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f804582b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f804582bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f804582bc00 'char *'
+|   `-BuiltinType 0x7f804582b380 'char'
+|-TypedefDecl 0x7f804582bf08 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f804582beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f804582bd20 'struct __va_list_tag'
+|     `-Record 0x7f804582bc98 '__va_list_tag'
+|-TypedefDecl 0x7f804582bf90 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:30:1, col:27> col:27 va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f804582bf60 '__builtin_va_list' sugar
+|   |-Typedef 0x7f804582bf08 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f804582beb0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f804582bd20 'struct __va_list_tag'
+|       `-Record 0x7f804582bc98 '__va_list_tag'
+|-TypedefDecl 0x7f8046007600 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f804582bf60 '__builtin_va_list' sugar
+|   |-Typedef 0x7f804582bf08 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f804582beb0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f804582bd20 'struct __va_list_tag'
+|       `-Record 0x7f804582bc98 '__va_list_tag'
+|-RecordDecl 0x7f8046007658 <../Data/C2AST/pr31041.c:7:1, line:10:1> line:7:8 struct UNewTrie definition
+| `-FieldDecl 0x7f80460077f0 <line:9:3, col:28> col:7 referenced index 'int [557056]'
+|-TypedefDecl 0x7f8046007890 <line:11:1, col:25> col:25 referenced UNewTrie 'struct UNewTrie':'struct UNewTrie'
+| `-ElaboratedType 0x7f8046007840 'struct UNewTrie' sugar
+|   `-RecordType 0x7f80460076e0 'struct UNewTrie'
+|     `-Record 0x7f8046007658 'UNewTrie'
+`-FunctionDecl 0x7f8046007938 <line:12:1, line:26:1> line:13:1 utrie_open_3_4 'void ()'
+  `-CompoundStmt 0x7f8046007fa8 <line:14:1, line:26:1>
+    |-DeclStmt 0x7f8046007b08 <line:15:3, col:17>
+    | `-VarDecl 0x7f8046007aa8 <col:3, col:13> col:13 used trie 'UNewTrie *'
+    |-DeclStmt 0x7f8046007c28 <line:16:3, col:11>
+    | |-VarDecl 0x7f8046007b38 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7f8046007bb0 <col:3, col:10> col:10 used j 'int'
+    `-CompoundStmt 0x7f8046007f88 <line:17:5, line:25:5>
+      |-BinaryOperator 0x7f8046007c88 <line:18:7, col:11> 'int' '='
+      | |-DeclRefExpr 0x7f8046007c40 <col:7> 'int' lvalue Var 0x7f8046007b38 'i' 'int'
+      | `-IntegerLiteral 0x7f8046007c68 <col:11> 'int' 0
+      `-DoStmt 0x7f8046007f68 <line:19:7, line:24:19>
+        |-CompoundStmt 0x7f8046007ec0 <line:20:9, line:23:9>
+        | |-BinaryOperator 0x7f8046007e18 <line:21:11, col:30> 'int' '='
+        | | |-ArraySubscriptExpr 0x7f8046007db0 <col:11, col:26> 'int' lvalue
+        | | | |-ImplicitCastExpr 0x7f8046007d98 <col:11, col:17> 'int *' <ArrayToPointerDecay>
+        | | | | `-MemberExpr 0x7f8046007cf0 <col:11, col:17> 'int [557056]' lvalue ->index 0x7f80460077f0
+        | | | |   `-ImplicitCastExpr 0x7f8046007cd8 <col:11> 'UNewTrie *' <LValueToRValue>
+        | | | |     `-DeclRefExpr 0x7f8046007cb0 <col:11> 'UNewTrie *' lvalue Var 0x7f8046007aa8 'trie' 'UNewTrie *'
+        | | | `-UnaryOperator 0x7f8046007d50 <col:23, col:24> 'int' postfix '++'
+        | | |   `-DeclRefExpr 0x7f8046007d28 <col:23> 'int' lvalue Var 0x7f8046007b38 'i' 'int'
+        | | `-ImplicitCastExpr 0x7f8046007e00 <col:30> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 1 error generated.
+0x7f8046007dd8 <col:30> 'int' lvalue Var 0x7f8046007bb0 'j' 'int'
+        | `-CompoundAssignOperator 0x7f8046007e88 <line:22:11, col:16> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        |   |-DeclRefExpr 0x7f8046007e40 <col:11> 'int' lvalue Var 0x7f8046007bb0 'j' 'int'
+        |   `-IntegerLiteral 0x7f8046007e68 <col:16> 'int' 1
+        `-BinaryOperator 0x7f8046007f40 <line:24:14, col:18> 'int' '<'
+          |-ImplicitCastExpr 0x7f8046007f28 <col:14> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7f8046007ee0 <col:14> 'int' lvalue Var 0x7f8046007b38 'i' 'int'
+          `-IntegerLiteral 0x7f8046007f08 <col:18> 'int' 5

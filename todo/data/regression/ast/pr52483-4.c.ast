@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fb7b282b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb7b2014cf8 <../Data/C2AST/pr52483-4.c:6:1, line:10:1> line:7:1 test_00 'float (volatile float *, unsigned int)'
+| |-ParmVarDecl 0x7fb7b282bfa0 <col:10, col:26> col:26 used x 'volatile float *'
+| |-ParmVarDecl 0x7fb7b2014c18 <col:29, col:42> col:42 used y 'unsigned int'
+| `-CompoundStmt 0x7fb7b2014ec0 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fb7b2014ea8 <line:9:3, col:13>
+|     `-ImplicitCastExpr 0x7fb7b2014e90 <col:10, col:13> 'float' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fb7b2014e68 <col:10, col:13> 'volatile float' lvalue
+|         |-ImplicitCastExpr 0x7fb7b2014e38 <col:10> 'volatile float *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fb7b2014de8 <col:10> 'volatile float *' lvalue ParmVar 0x7fb7b282bfa0 'x' 'volatile float *'
+|         `-ImplicitCastExpr 0x7fb7b2014e50 <col:12> 'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb7b2014e10 <col:12> 'unsigned int' lvalue ParmVar 0x7fb7b2014c18 'y' 'unsigned int'
+`-FunctionDecl 0x7fb7b20150c0 <line:12:1, line:16:1> line:13:1 test_100 'void (volatile float *, unsigned int, float)'
+  |-ParmVarDecl 0x7fb7b2014ef0 <col:11, col:27> col:27 used x 'volatile float *'
+  |-ParmVarDecl 0x7fb7b2014f68 <col:30, col:43> col:43 used y 'unsigned int'
+  |-ParmVarDecl 0x7fb7b2014fe0 <col:46, col:52> col:52 used z 'float'
+  `-CompoundStmt 0x7fb7b2015288 <line:14:1, line:16:1>
+    `-BinaryOperator 0x7fb7b2015260 <line:15:3, col:10> 'float' '='
+      |-ArraySubscriptExpr 0x7fb7b20151f8 <col:3, col:6> 'volatile float' lvalue
+      | |-ImplicitCastExpr 0x7fb7b20151c8 <col:3> 'volatile float *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb7b2015178 <col:3> 'volatile float *' lvalue ParmVar 0x7fb7b2014ef0 'x' 'volatile float *'
+      | `-ImplicitCastExpr 0x7fb7b20151e0 <col:5> 'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb7b20151a0 <col:5> 'unsigned int' lvalue ParmVar 0x7fb7b2014f68 'y' 'unsigned int'
+      `-ImplicitCastExpr 0x7fb7b2015248 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7fb7b2015220 <col:10> 'float' lvalue ParmVar 0x7fb7b2014fe0 'z' 'float'

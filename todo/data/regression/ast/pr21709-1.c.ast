@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fc45102bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc45106d820 <../Data/C2AST/pr21709-1.c:5:1, col:47> col:17 f '_Complex double (void)'
+  `-CompoundStmt 0x7fc45106d9b0 <col:25, col:47>
+    `-ReturnStmt 0x7fc45106d998 <col:27, col:42>
+      `-BinaryOperator 0x7fc45106d970 <col:34, col:42> '_Complex double' '/'
+        |-ImplicitCastExpr 0x7fc45106d958 <col:34> '_Complex double' <FloatingComplexCast>
+        | `-ImaginaryLiteral 0x7fc45106d920 <col:34> '_Complex float'
+        |   `-FloatingLiteral 0x7fc45106d900 <col:34> 'float' 1.000000e+00
+        `-FloatingLiteral 0x7fc45106d938 <col:42> 'double' 0.000000e+00

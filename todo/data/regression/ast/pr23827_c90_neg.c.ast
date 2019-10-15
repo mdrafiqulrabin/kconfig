@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7fc1dc02bce8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fc1dc02c978 <../Data/C2AST/pr23827_c90_neg.c:4:1, col:12> col:8 x 'double' cinit
+  `-FloatingLiteral 0x7fc1dd03f440 <col:12> 'double' 3.078457e+00

@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fb3a502bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb3a5833460 <../Data/C2AST/pr60404_1.c:1:1, line:4:1> line:2:1 fn1 'void (int)'
+  |-ParmVarDecl 0x7fb3a502c978 <col:6, col:10> col:10 p 'int'
+  `-CompoundStmt 0x7fb3a5833548 <line:3:1, line:4:1>

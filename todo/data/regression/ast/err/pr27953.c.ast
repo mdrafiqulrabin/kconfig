@@ -1,0 +1,38 @@
+../Data/C2AST/pr27953.c:3:19: error: variable has incomplete type 'struct A'
+void foo(struct A a) {}  
+                  ^
+../Data/C2AST/pr27953.c:3:17: note: forward declaration of 'struct A'
+void foo(struct A a) {}  
+                ^
+../Data/C2AST/pr27953.c:7:6: error: redefinition of 'foo'
+void foo() {}
+     ^
+../Data/C2AST/pr27953.c:3:6: note: previous definition is here
+void foo(struct A a) {}  
+     ^
+error: variable has incomplete type 'struct A'
+../Data/C2AST/pr27953.c:3:17: note: forward declaration of 'struct A'
+void foo(struct A a) {}  
+                ^
+3 errors generated.
+TranslationUnitDecl 0x7fb74981bae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb74981c060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb74981bd80 '__int128'
+|-TypedefDecl 0x7fb74981c0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb74981bda0 'unsigned __int128'
+|-TypedefDecl 0x7fb74981c3a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb74981c1b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb74981c128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb74981c440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb74981c400 'char *'
+|   `-BuiltinType 0x7fb74981bb80 'char'
+|-TypedefDecl 0x7fb74981c708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb74981c6b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb74981c520 'struct __va_list_tag'
+|     `-Record 0x7fb74981c498 '__va_list_tag'
+|-FunctionDecl 0x7fb74985d770 <../Data/C2AST/pr27953.c:3:1, col:23> col:6 foo 'void (struct A)'
+| |-ParmVarDecl 0x7fb74985d670 <col:10, col:19> col:19 invalid a 'struct A':'struct A'
+| `-CompoundStmt 0x7fb74985dc10 <col:22, col:23>
+`-FunctionDecl 0x7fb74985dc68 prev 0x7fb74985d770 <line:7:1, col:13> col:6 invalid foo 'void (struct A)'
+  |-ParmVarDecl 0x7fb74985dd08 <<invalid sloc>> <invalid sloc> implicit invalid 'struct A'
+  `-CompoundStmt 0x7fb74985dd70 <col:12, col:13>

@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7f841b8124e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f841d012250 <../Data/C2AST/pr56341-1.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f841d0122f0 prev 0x7f841d012250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f841d012390 <line:6:1, line:9:1> line:6:8 struct test0 definition
+| |-AlignedAttr 0x7f841d012528 <line:9:26, col:35> aligned
+| | `-IntegerLiteral 0x7f841d012508 <col:34> 'int' 2
+| |-PackedAttr 0x7f841d012578 <col:18>
+| `-FieldDecl 0x7f841d0124c0 <line:8:3, col:21> col:17 b1 'unsigned char [2]'
+|-RecordDecl 0x7f841d012588 <line:11:1, line:15:1> line:11:8 struct test1 definition
+| |-AlignedAttr 0x7f841d012778 <line:15:26, col:35> aligned
+| | `-IntegerLiteral 0x7f841d012758 <col:34> 'int' 2
+| |-PackedAttr 0x7f841d0127c8 <col:18>
+| |-FieldDecl 0x7f841d012648 <line:13:3, col:26> col:26 referenced a1 'volatile unsigned long'
+| `-FieldDecl 0x7f841d012710 <line:14:3, col:21> col:17 b1 'unsigned char [4]'
+|-RecordDecl 0x7f841d0127d8 <line:17:1, line:22:1> line:17:8 struct test2 definition
+| |-AlignedAttr 0x7f841d012a88 <line:22:26, col:35> aligned
+| | `-IntegerLiteral 0x7f841d012a20 <col:34> 'int' 2
+| |-PackedAttr 0x7f841d012ad8 <col:18>
+| |-FieldDecl 0x7f841d0128d0 <line:19:3, col:16> col:16 t0 'struct test0':'struct test0'
+| |-FieldDecl 0x7f841d012970 <line:20:3, col:16> col:16 referenced t1 'struct test1':'struct test1'
+| `-FieldDecl 0x7f841d0129d8 <line:21:3, col:16> col:16 t2 'struct test0':'struct test0'
+|-VarDecl 0x7f841d012b40 <line:24:1, col:14> col:14 used xx 'struct test2':'struct test2'
+|-VarDecl 0x7f841d012c60 <line:25:1, col:21> col:15 used x1 'struct test2 *' cinit
+| `-UnaryOperator 0x7f841d012ce8 <col:20, col:21> 'struct test2 *' prefix '&'
+|   `-DeclRefExpr 0x7f841d012cc0 <col:21> 'struct test2':'struct test2' lvalue Var 0x7f841d012b40 'xx' 'struct test2':'struct test2'
+|-FunctionDecl 0x7f841d012e30 <line:29:1, line:32:1> line:29:6 used test0 'void (struct test2 *)'
+| |-ParmVarDecl 0x7f841d012d30 <col:13, col:27> col:27 used x1 'struct test2 *'
+| `-CompoundStmt 0x7f841d012fe8 <line:30:1, line:32:1>
+|   `-BinaryOperator 0x7f841d012fc0 <line:31:3, line:27:15> 'unsigned long' '='
+|     |-MemberExpr 0x7f841d012f50 <line:31:3, col:10> 'volatile unsigned long' lvalue .a1 0x7f841d012648
+|     | `-MemberExpr 0x7f841d012f18 <col:3, col:7> 'struct test1':'struct test1' lvalue ->t1 0x7f841d012970
+|     |   `-ImplicitCastExpr 0x7f841d012f00 <col:3> 'struct test2 *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f841d012ed8 <col:3> 'struct test2 *' lvalue ParmVar 0x7f841d012d30 'x1' 'struct test2 *'
+|     `-ImplicitCastExpr 0x7f841d012fa8 <line:27:15> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7f841d012f88 <col:15> 'int' 305419896
+`-FunctionDecl 0x7f841d013050 <line:34:1, line:40:1> line:34:5 main 'int ()'
+  `-CompoundStmt 0x7f841d02f0b8 <line:35:1, line:40:1>
+    |-CallExpr 0x7f841d0131b0 <line:36:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7f841d013198 <col:3> 'void (*)(struct test2 *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f841d0130f0 <col:3> 'void (struct test2 *)' Function 0x7f841d012e30 'test0' 'void (struct test2 *)'
+    | `-ImplicitCastExpr 0x7f841d0131e0 <col:10> 'struct test2 *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f841d013118 <col:10> 'struct test2 *' lvalue Var 0x7f841d012c60 'x1' 'struct test2 *'
+    |-IfStmt 0x7f841d02f048 <line:37:3, line:38:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f841d02eee8 <line:37:7, line:27:15> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f841d02eeb8 <line:37:7, col:13> 'unsigned long' <LValueToRValue>
+    | | | `-MemberExpr 0x7f841d02ee60 <col:7, col:13> 'volatile unsigned long' lvalue .a1 0x7f841d012648
+    | | |   `-MemberExpr 0x7f841d02ee28 <col:7, col:10> 'struct test1':'struct test1' lvalue .t1 0x7f841d012970
+    | | |     `-DeclRefExpr 0x7f841d02ee00 <col:7> 'struct test2':'struct test2' lvalue Var 0x7f841d012b40 'xx' 'struct test2':'struct test2'
+    | | `-ImplicitCastExpr 0x7f841d02eed0 <line:27:15> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f841d02ee98 <col:15> 'int' 305419896
+    | |-CallExpr 0x7f841d02f020 <line:38:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f841d02f008 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f841d02efb8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f841d0122f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f841d02f0a0 <line:39:3, col:10>
+      `-IntegerLiteral 0x7f841d02f080 <col:10> 'int' 0

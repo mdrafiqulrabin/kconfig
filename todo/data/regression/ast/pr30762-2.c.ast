@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f9bf78128e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9bf7813560 <../Data/C2AST/pr30762-2.c:4:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7f9bf7854438 <col:18, col:22> col:22 i 'int'
+|-TypedefDecl 0x7f9bf78544d0 <col:1, col:27> col:27 referenced D 'struct D':'D'
+| `-ElaboratedType 0x7f9bf7854480 'struct D' sugar
+|   `-RecordType 0x7f9bf7854400 'D'
+|     `-Record 0x7f9bf7813560 ''
+`-FunctionDecl 0x7f9bf7854670 <line:6:1, line:9:1> line:7:1 foo 'void (D)'
+  |-ParmVarDecl 0x7f9bf7854570 <col:6, col:8> col:8 x 'D':'D'
+  `-CompoundStmt 0x7f9bf7854758 <line:8:1, line:9:1>

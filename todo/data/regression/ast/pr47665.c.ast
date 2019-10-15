@@ -1,0 +1,274 @@
+TranslationUnitDecl 0x7fb3b582bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb3b597a570 <../Data/C2AST/pr47665.c:7:1, line:11:1> line:8:1 foo '__m128d (double *, __m128i)'
+  |-ParmVarDecl 0x7fb3b597a3e8 <col:6, col:14> col:14 used x 'double *'
+  |-ParmVarDecl 0x7fb3b597a458 <col:17, col:25> col:25 used y '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fb3b597b590 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fb3b597b578 <line:10:3, col:88>
+      `-CallExpr 0x7fb3b597b530 <col:10, col:88> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+        |-ImplicitCastExpr 0x7fb3b597b518 <col:10> '__m128d (*)(const double *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb3b597a620 <col:10> '__m128d (const double *)' Function 0x7fb3b5934040 '_mm_load_pd' '__m128d (const double *)'
+        `-ImplicitCastExpr 0x7fb3b597b560 <col:23, col:87> 'const double *' <BitCast>
+          `-BinaryOperator 0x7fb3b597b498 <col:23, col:87> 'double *' '+'
+            |-ImplicitCastExpr 0x7fb3b597b480 <col:23> 'double *' <LValueToRValue>
+            | `-DeclRefExpr 0x7fb3b597a648 <col:23> 'double *' lvalue ParmVar 0x7fb3b597a3e8 'x' 'double *'
+            `-CallExpr 0x7fb3b597b450 <col:27, col:87> 'int'
+              |-ImplicitCastExpr 0x7fb3b597b438 <col:27> 'int (*)(__m128i)' <FunctionToPointerDecay>
+              | `-DeclRefExpr 0x7fb3b597a670 <col:27> 'int (__m128i)' Function 0x7fb3b5961ad8 '_mm_cvtsi128_si32' 'int (__m128i)'
+              `-UnaryOperator 0x7fb3b597b3c0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3032:32, line:3051:80> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' prefix '__extension__'
+                `-StmtExpr 0x7fb3b597b3a0 <line:3032:46, line:3051:80> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                  `-CompoundStmt 0x7fb3b597b388 <line:3032:47, line:3051:79>
+                    `-CStyleCastExpr 0x7fb3b597b360 <line:3033:3, line:3051:76> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+                      `-ShuffleVectorExpr 0x7fb3b597b298 <line:3033:12, line:3051:76> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+                        |-CStyleCastExpr 0x7fb3b597a858 <line:3034:34, col:54> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <BitCast>
+                        | `-CStyleCastExpr 0x7fb3b597a820 <col:43, col:54> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+                        |   `-ParenExpr 0x7fb3b597a800 <col:52, col:54> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                        |     `-CallExpr 0x7fb3b597a770 <../Data/C2AST/pr47665.c:10:62, col:82> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                        |       |-ImplicitCastExpr 0x7fb3b597a758 <col:62> '__m128i (*)(__m128i, int)' <FunctionToPointerDecay>
+                        |       | `-DeclRefExpr 0x7fb3b597a6c0 <col:62> '__m128i (__m128i, int)' Function 0x7fb3b58fbdb8 '_mm_slli_epi32' '__m128i (__m128i, int)'
+                        |       |-ImplicitCastExpr 0x7fb3b597a7a8 <col:78> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+                        |       | `-DeclRefExpr 0x7fb3b597a6e8 <col:78> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fb3b597a458 'y' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                        |       `-IntegerLiteral 0x7fb3b597a710 <col:81> 'int' 2
+                        |-CStyleCastExpr 0x7fb3b597a958 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3035:34, col:61> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <BitCast>
+                        | `-CallExpr 0x7fb3b597a920 <col:43, col:61> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                        |   `-ImplicitCastExpr 0x7fb3b597a908 <col:43> '__m128i (*)(void)' <FunctionToPointerDecay>
+                        |     `-DeclRefExpr 0x7fb3b597a880 <col:43> '__m128i (void)' Function 0x7fb3b5968e88 '_mm_setzero_si128' '__m128i (void)'
+                        |-ConditionalOperator 0x7fb3b597abd0 <line:3036:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b597aa88 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b597aa60 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b597aa48 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b597aa00 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b597a9e0 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b597a980 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b597aa28 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3036:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b597aaa8 <col:55> 'int' 16
+                        | `-BinaryOperator 0x7fb3b597aba8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b597ab90 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b597ab48 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b597ab28 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b597aac8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b597ab70 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3036:74> 'int' 0
+                        |-ConditionalOperator 0x7fb3b597ae50 <line:3037:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b597ad08 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b597ace0 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b597acc8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b597ac80 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b597ac60 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b597ac00 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b597aca8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3037:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b597ad28 <col:55> 'int' 17
+                        | `-BinaryOperator 0x7fb3b597ae28 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b597ae10 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b597adc8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b597ada8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b597ad48 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b597adf0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3037:74> 'int' 1
+                        |-ConditionalOperator 0x7fb3b597b0d0 <line:3038:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b597af88 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b597af60 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b597af48 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b597af00 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b597aee0 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b597ae80 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b597af28 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3038:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b597afa8 <col:55> 'int' 18
+                        | `-BinaryOperator 0x7fb3b597b0a8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b597b090 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b597b048 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b597b028 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b597afc8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b597b070 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3038:74> 'int' 2
+                        |-ConditionalOperator 0x7fb3b5982570 <line:3039:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5982428 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5982400 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b597b1c8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b597b180 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b597b160 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b597b100 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b597b1a8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3039:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5982448 <col:55> 'int' 19
+                        | `-BinaryOperator 0x7fb3b5982548 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5982530 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b59824e8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b59824c8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5982468 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5982510 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3039:74> 'int' 3
+                        |-ConditionalOperator 0x7fb3b59827f0 <line:3040:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b59826a8 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5982680 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5982668 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5982620 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5982600 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b59825a0 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5982648 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3040:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b59826c8 <col:55> 'int' 20
+                        | `-BinaryOperator 0x7fb3b59827c8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b59827b0 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5982768 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5982748 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b59826e8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5982790 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3040:74> 'int' 4
+                        |-ConditionalOperator 0x7fb3b5982a70 <line:3041:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5982928 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5982900 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b59828e8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b59828a0 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5982880 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5982820 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b59828c8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3041:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5982948 <col:55> 'int' 21
+                        | `-BinaryOperator 0x7fb3b5982a48 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5982a30 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b59829e8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b59829c8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5982968 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5982a10 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3041:74> 'int' 5
+                        |-ConditionalOperator 0x7fb3b5982cf0 <line:3042:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5982ba8 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5982b80 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5982b68 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5982b20 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5982b00 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5982aa0 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5982b48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3042:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5982bc8 <col:55> 'int' 22
+                        | `-BinaryOperator 0x7fb3b5982cc8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5982cb0 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5982c68 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5982c48 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5982be8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5982c90 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3042:74> 'int' 6
+                        |-ConditionalOperator 0x7fb3b5982f70 <line:3043:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5982e28 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5982e00 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5982de8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5982da0 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5982d80 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5982d20 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5982dc8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3043:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5982e48 <col:55> 'int' 23
+                        | `-BinaryOperator 0x7fb3b5982f48 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5982f30 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5982ee8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5982ec8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5982e68 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5982f10 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3043:74> 'int' 7
+                        |-ConditionalOperator 0x7fb3b59831f0 <line:3044:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b59830a8 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983080 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5983068 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5983020 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983000 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5982fa0 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5983048 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3044:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b59830c8 <col:55> 'int' 24
+                        | `-BinaryOperator 0x7fb3b59831c8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b59831b0 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5983168 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5983148 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b59830e8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5983190 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3044:74> 'int' 8
+                        |-ConditionalOperator 0x7fb3b5983470 <line:3045:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5983328 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983300 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b59832e8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b59832a0 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983280 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5983220 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b59832c8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3045:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5983348 <col:55> 'int' 25
+                        | `-BinaryOperator 0x7fb3b5983448 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5983430 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b59833e8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b59833c8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5983368 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5983410 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3045:74> 'int' 9
+                        |-ConditionalOperator 0x7fb3b59836f0 <line:3046:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b59835a8 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983580 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5983568 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5983520 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983500 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b59834a0 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5983548 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3046:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b59835c8 <col:55> 'int' 26
+                        | `-BinaryOperator 0x7fb3b59836c8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b59836b0 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5983668 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5983648 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b59835e8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5983690 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3046:74> 'int' 10
+                        |-ConditionalOperator 0x7fb3b5983970 <line:3047:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5983828 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983800 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b59837e8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b59837a0 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983780 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5983720 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b59837c8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3047:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5983848 <col:55> 'int' 27
+                        | `-BinaryOperator 0x7fb3b5983948 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5983930 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b59838e8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b59838c8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5983868 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5983910 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3047:74> 'int' 11
+                        |-ConditionalOperator 0x7fb3b5983bf0 <line:3048:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5983aa8 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983a80 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5983a68 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5983a20 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983a00 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b59839a0 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5983a48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3048:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5983ac8 <col:55> 'int' 28
+                        | `-BinaryOperator 0x7fb3b5983bc8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5983bb0 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5983b68 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5983b48 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5983ae8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5983b90 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3048:74> 'int' 12
+                        |-ConditionalOperator 0x7fb3b5983e70 <line:3049:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5983d28 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983d00 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5983ce8 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5983ca0 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983c80 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5983c20 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5983cc8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3049:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5983d48 <col:55> 'int' 29
+                        | `-BinaryOperator 0x7fb3b5983e48 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b5983e30 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5983de8 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5983dc8 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5983d68 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5983e10 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3049:74> 'int' 13
+                        |-ConditionalOperator 0x7fb3b59840f0 <line:3050:34, col:74> 'int'
+                        | |-ParenExpr 0x7fb3b5983fa8 <col:34, col:51> 'int'
+                        | | `-BinaryOperator 0x7fb3b5983f80 <col:35, col:47> 'int' '&'
+                        | |   |-ImplicitCastExpr 0x7fb3b5983f68 <col:35, col:45> 'int' <IntegralCast>
+                        | |   | `-CStyleCastExpr 0x7fb3b5983f20 <col:35, col:45> 'char' <IntegralCast>
+                        | |   |   `-ParenExpr 0x7fb3b5983f00 <col:41, col:45> 'int'
+                        | |   |     `-IntegerLiteral 0x7fb3b5983ea0 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        | |   `-IntegerLiteral 0x7fb3b5983f48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3050:47> 'int' 240
+                        | |-IntegerLiteral 0x7fb3b5983fc8 <col:55> 'int' 30
+                        | `-BinaryOperator 0x7fb3b59840c8 <col:60, col:74> 'int' '+'
+                        |   |-ImplicitCastExpr 0x7fb3b59840b0 <col:60, col:70> 'int' <IntegralCast>
+                        |   | `-CStyleCastExpr 0x7fb3b5984068 <col:60, col:70> 'char' <IntegralCast>
+                        |   |   `-ParenExpr 0x7fb3b5984048 <col:66, col:70> 'int'
+                        |   |     `-IntegerLiteral 0x7fb3b5983fe8 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                        |   `-IntegerLiteral 0x7fb3b5984090 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3050:74> 'int' 14
+                        `-ConditionalOperator 0x7fb3b5984370 <line:3051:34, col:74> 'int'
+                          |-ParenExpr 0x7fb3b5984228 <col:34, col:51> 'int'
+                          | `-BinaryOperator 0x7fb3b5984200 <col:35, col:47> 'int' '&'
+                          |   |-ImplicitCastExpr 0x7fb3b59841e8 <col:35, col:45> 'int' <IntegralCast>
+                          |   | `-CStyleCastExpr 0x7fb3b59841a0 <col:35, col:45> 'char' <IntegralCast>
+                          |   |   `-ParenExpr 0x7fb3b5984180 <col:41, col:45> 'int'
+                          |   |     `-IntegerLiteral 0x7fb3b5984120 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                          |   `-IntegerLiteral 0x7fb3b59841c8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3051:47> 'int' 240
+                          |-IntegerLiteral 0x7fb3b5984248 <col:55> 'int' 31
+                          `-BinaryOperator 0x7fb3b5984348 <col:60, col:74> 'int' '+'
+                            |-ImplicitCastExpr 0x7fb3b5984330 <col:60, col:70> 'int' <IntegralCast>
+                            | `-CStyleCastExpr 0x7fb3b59842e8 <col:60, col:70> 'char' <IntegralCast>
+                            |   `-ParenExpr 0x7fb3b59842c8 <col:66, col:70> 'int'
+                            |     `-IntegerLiteral 0x7fb3b5984268 <../Data/C2AST/pr47665.c:10:85> 'int' 0
+                            `-IntegerLiteral 0x7fb3b5984310 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/emmintrin.h:3051:74> 'int' 15

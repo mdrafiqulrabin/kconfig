@@ -1,0 +1,33 @@
+../Data/C2AST/pr68474.c:6:16: error: use of unknown builtin '__builtin_significandl' [-Wimplicit-function-declaration]
+  return d1 || __builtin_significandl (d2);
+               ^
+1 error generated.
+TranslationUnitDecl 0x7fa9af02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa9af02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa9af02bf80 '__int128'
+|-TypedefDecl 0x7fa9af02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa9af02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa9af02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa9af02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa9af02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa9af02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa9af02c600 'char *'
+|   `-BuiltinType 0x7fa9af02bd80 'char'
+|-TypedefDecl 0x7fa9af02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa9af02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa9af02c720 'struct __va_list_tag'
+|     `-Record 0x7fa9af02c698 '__va_list_tag'
+`-FunctionDecl 0x7fa9af8142d8 <../Data/C2AST/pr68474.c:3:1, line:7:1> line:4:1 foo 'long double (long double, long double)'
+  |-ParmVarDecl 0x7fa9af02c978 <col:6, col:18> col:18 used d1 'long double'
+  |-ParmVarDecl 0x7fa9af814200 <col:22, col:34> col:34 used d2 'long double'
+  `-CompoundStmt 0x7fa9af814658 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fa9af814640 <line:6:3, col:42>
+      `-ImplicitCastExpr 0x7fa9af814628 <col:10, col:42> 'long double' <IntegralToFloating>
+        `-BinaryOperator 0x7fa9af814600 <col:10, col:42> 'int' '||'
+          |-ImplicitCastExpr 0x7fa9af8145e8 <col:10> 'long double' <LValueToRValue>
+          | `-DeclRefExpr 0x7fa9af8143c8 <col:10> 'long double' lvalue ParmVar 0x7fa9af02c978 'd1' 'long double'
+          `-CallExpr 0x7fa9af8145a0 <col:16, col:42> 'int'
+            |-ImplicitCastExpr 0x7fa9af814588 <col:16> 'int (*)()' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7fa9af814510 <col:16> 'int ()' Function 0x7fa9af814460 '__builtin_significandl' 'int ()'
+            `-ImplicitCastExpr 0x7fa9af8145d0 <col:40> 'long double' <LValueToRValue>
+              `-DeclRefExpr 0x7fa9af814538 <col:40> 'long double' lvalue ParmVar 0x7fa9af814200 'd2' 'long double'

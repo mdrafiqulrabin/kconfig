@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fe92002bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe9200cb8c0 <../Data/C2AST/pr61756.c:8:1, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:165:30> ../Data/C2AST/pr61756.c:8:29 used guard 'volatile atomic_flag':'volatile struct atomic_flag' static cinit
+| `-InitListExpr 0x7fe9200cb988 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:165:26, col:30> 'atomic_flag':'struct atomic_flag'
+|   `-ImplicitCastExpr 0x7fe9200cb9e8 <col:28> 'atomic_bool':'_Atomic(_Bool)' <NonAtomicToAtomic>
+|     `-ImplicitCastExpr 0x7fe9200cb9d0 <col:28> '_Bool' <IntegralToBoolean>
+|       `-IntegerLiteral 0x7fe9200cb920 <col:28> 'int' 0
+|-FunctionDecl 0x7fe9200cbac0 <../Data/C2AST/pr61756.c:10:1, line:14:1> line:11:1 try_atomic_flag_test_and_set 'void (void)'
+| `-CompoundStmt 0x7fe9200cbea0 <line:12:1, line:14:1>
+|   `-AtomicExpr 0x7fe9200cbe48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:178:42, col:102> '_Bool'
+|     |-UnaryOperator 0x7fe9200cbd48 <col:64, col:75> 'volatile atomic_bool *' prefix '&'
+|     | `-MemberExpr 0x7fe9200cbcb8 <col:65, col:75> 'volatile atomic_bool':'volatile _Atomic(_Bool)' lvalue ->_Value 0x7fe9200c7ef0
+|     |   `-ParenExpr 0x7fe9200cbc98 <col:65, col:72> 'volatile atomic_flag *'
+|     |     `-UnaryOperator 0x7fe9200cbc78 <../Data/C2AST/pr61756.c:13:29, col:30> 'volatile atomic_flag *' prefix '&'
+|     |       `-DeclRefExpr 0x7fe9200cbc50 <col:30> 'volatile atomic_flag':'volatile struct atomic_flag' lvalue Var 0x7fe9200cb8c0 'guard' 'volatile atomic_flag':'volatile struct atomic_flag'
+|     |-IntegerLiteral 0x7fe9200cbd88 <<built-in>:16:26> 'int' 5
+|     `-ImplicitCastExpr 0x7fe9200cbe30 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:178:83> '_Bool' <IntegralToBoolean>
+|       `-IntegerLiteral 0x7fe9200cbd68 <col:83> 'int' 1
+`-FunctionDecl 0x7fe9200cbb88 <col:42> col:42 implicit used __c11_atomic_exchange 'void ()' extern

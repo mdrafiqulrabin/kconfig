@@ -1,0 +1,189 @@
+TranslationUnitDecl 0x7fae9f028ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fae9f085138 <../Data/C2AST/pr44468.c:3:1, line:6:1> line:3:8 struct S definition
+| |-FieldDecl 0x7fae9f0851f8 <line:4:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7fae9f085258 <line:5:3, col:7> col:7 referenced j 'int'
+|-RecordDecl 0x7fae9f0852a0 <line:7:1, line:10:1> line:7:8 struct R definition
+| |-FieldDecl 0x7fae9f085368 <line:8:3, col:7> col:7 k 'int'
+| `-FieldDecl 0x7fae9f085400 <line:9:3, col:12> col:12 referenced a 'struct S':'struct S'
+|-RecordDecl 0x7fae9f085448 <line:11:1, line:14:1> line:11:8 struct Q definition
+| |-FieldDecl 0x7fae9f085508 <line:12:3, col:9> col:9 k 'float'
+| `-FieldDecl 0x7fae9f085570 <line:13:3, col:12> col:12 referenced a 'struct S':'struct S'
+|-VarDecl 0x7fae9f085610 <line:15:1, col:10> col:10 used s 'struct Q':'struct Q'
+|-FunctionDecl 0x7fae9f085798 <line:16:1, line:23:1> line:17:1 used test1 'int (void *)'
+| |-ParmVarDecl 0x7fae9f0856c8 <col:8, col:14> col:14 used q 'void *'
+| |-CompoundStmt 0x7fae9f085e10 <line:18:1, line:23:1>
+| | |-DeclStmt 0x7fae9f085af0 <line:19:3, col:55>
+| | | `-VarDecl 0x7fae9f085910 <col:3, col:54> col:13 used b 'struct S *' cinit
+| | |   `-CStyleCastExpr 0x7fae9f085ac8 <col:17, col:54> 'struct S *' <BitCast>
+| | |     `-ParenExpr 0x7fae9f085aa8 <col:29, col:54> 'char *'
+| | |       `-BinaryOperator 0x7fae9f085a28 <col:30, col:53> 'char *' '+'
+| | |         |-CStyleCastExpr 0x7fae9f0859c8 <col:30, col:38> 'char *' <BitCast>
+| | |         | `-ImplicitCastExpr 0x7fae9f0859b0 <col:38> 'void *' <LValueToRValue>
+| | |         |   `-DeclRefExpr 0x7fae9f085970 <col:38> 'void *' lvalue ParmVar 0x7fae9f0856c8 'q' 'void *'
+| | |         `-UnaryExprOrTypeTraitExpr 0x7fae9f085a08 <col:42, col:53> 'unsigned long' sizeof 'int'
+| | |-BinaryOperator 0x7fae9f085bc0 <line:20:3, col:11> 'int' '='
+| | | |-MemberExpr 0x7fae9f085b68 <col:3, col:7> 'int' lvalue .i 0x7fae9f0851f8
+| | | | `-MemberExpr 0x7fae9f085b30 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+| | | |   `-DeclRefExpr 0x7fae9f085b08 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+| | | `-IntegerLiteral 0x7fae9f085ba0 <col:11> 'int' 0
+| | |-BinaryOperator 0x7fae9f085d20 <line:21:3, col:10> 'int' '='
+| | | |-MemberExpr 0x7fae9f085cc8 <col:3, col:6> 'int' lvalue ->i 0x7fae9f0851f8
+| | | | `-ImplicitCastExpr 0x7fae9f085cb0 <col:3> 'struct S *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fae9f085c88 <col:3> 'struct S *' lvalue Var 0x7fae9f085910 'b' 'struct S *'
+| | | `-IntegerLiteral 0x7fae9f085d00 <col:10> 'int' 3
+| | `-ReturnStmt 0x7fae9f085df8 <line:22:3, col:14>
+| |   `-ImplicitCastExpr 0x7fae9f085de0 <col:10, col:14> 'int' <LValueToRValue>
+| |     `-MemberExpr 0x7fae9f085da8 <col:10, col:14> 'int' lvalue .i 0x7fae9f0851f8
+| |       `-MemberExpr 0x7fae9f085d70 <col:10, col:12> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+| |         `-DeclRefExpr 0x7fae9f085d48 <col:10> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+| `-NoInlineAttr 0x7fae9f085840 <line:16:20>
+|-FunctionDecl 0x7fae9f085ee8 <line:24:1, line:31:1> line:25:1 used test2 'int (void *)'
+| |-ParmVarDecl 0x7fae9f085e58 <col:8, col:14> col:14 used q 'void *'
+| |-CompoundStmt 0x7fae9f088478 <line:26:1, line:31:1>
+| | |-DeclStmt 0x7fae9f0881f8 <line:27:3, col:36>
+| | | `-VarDecl 0x7fae9f088000 <col:3, col:35> col:13 used b 'struct S *' cinit
+| | |   `-UnaryOperator 0x7fae9f0881d8 <col:17, col:35> 'struct S *' prefix '&'
+| | |     `-MemberExpr 0x7fae9f0881a0 <col:18, col:35> 'struct S':'struct S' lvalue ->a 0x7fae9f085400
+| | |       `-ParenExpr 0x7fae9f088180 <col:18, col:32> 'struct R *'
+| | |         `-CStyleCastExpr 0x7fae9f088158 <col:19, col:31> 'struct R *' <BitCast>
+| | |           `-ImplicitCastExpr 0x7fae9f088140 <col:31> 'void *' <LValueToRValue>
+| | |             `-DeclRefExpr 0x7fae9f088060 <col:31> 'void *' lvalue ParmVar 0x7fae9f085e58 'q' 'void *'
+| | |-BinaryOperator 0x7fae9f0882c8 <line:28:3, col:11> 'int' '='
+| | | |-MemberExpr 0x7fae9f088270 <col:3, col:7> 'int' lvalue .i 0x7fae9f0851f8
+| | | | `-MemberExpr 0x7fae9f088238 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+| | | |   `-DeclRefExpr 0x7fae9f088210 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+| | | `-IntegerLiteral 0x7fae9f0882a8 <col:11> 'int' 0
+| | |-BinaryOperator 0x7fae9f088388 <line:29:3, col:10> 'int' '='
+| | | |-MemberExpr 0x7fae9f088330 <col:3, col:6> 'int' lvalue ->i 0x7fae9f0851f8
+| | | | `-ImplicitCastExpr 0x7fae9f088318 <col:3> 'struct S *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fae9f0882f0 <col:3> 'struct S *' lvalue Var 0x7fae9f088000 'b' 'struct S *'
+| | | `-IntegerLiteral 0x7fae9f088368 <col:10> 'int' 3
+| | `-ReturnStmt 0x7fae9f088460 <line:30:3, col:14>
+| |   `-ImplicitCastExpr 0x7fae9f088448 <col:10, col:14> 'int' <LValueToRValue>
+| |     `-MemberExpr 0x7fae9f088410 <col:10, col:14> 'int' lvalue .i 0x7fae9f0851f8
+| |       `-MemberExpr 0x7fae9f0883d8 <col:10, col:12> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+| |         `-DeclRefExpr 0x7fae9f0883b0 <col:10> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+| `-NoInlineAttr 0x7fae9f085f90 <line:24:20>
+|-FunctionDecl 0x7fae9f088550 <line:32:1, line:38:1> line:33:1 used test3 'int (void *)'
+| |-ParmVarDecl 0x7fae9f0884c0 <col:8, col:14> col:14 used q 'void *'
+| |-CompoundStmt 0x7fae9f088a08 <line:34:1, line:38:1>
+| | |-BinaryOperator 0x7fae9f0886f8 <line:35:3, col:11> 'int' '='
+| | | |-MemberExpr 0x7fae9f0886a0 <col:3, col:7> 'int' lvalue .i 0x7fae9f0851f8
+| | | | `-MemberExpr 0x7fae9f088668 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+| | | |   `-DeclRefExpr 0x7fae9f088640 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+| | | `-IntegerLiteral 0x7fae9f0886d8 <col:11> 'int' 0
+| | |-BinaryOperator 0x7fae9f088918 <line:36:3, col:49> 'int' '='
+| | | |-MemberExpr 0x7fae9f0888c0 <col:3, col:45> 'int' lvalue ->i 0x7fae9f0851f8
+| | | | `-ParenExpr 0x7fae9f0888a0 <col:3, col:42> 'struct S *'
+| | | |   `-CStyleCastExpr 0x7fae9f088878 <col:4, col:41> 'struct S *' <BitCast>
+| | | |     `-ParenExpr 0x7fae9f088858 <col:16, col:41> 'char *'
+| | | |       `-BinaryOperator 0x7fae9f0887d8 <col:17, col:40> 'char *' '+'
+| | | |         |-CStyleCastExpr 0x7fae9f088778 <col:17, col:25> 'char *' <BitCast>
+| | | |         | `-ImplicitCastExpr 0x7fae9f088760 <col:25> 'void *' <LValueToRValue>
+| | | |         |   `-DeclRefExpr 0x7fae9f088720 <col:25> 'void *' lvalue ParmVar 0x7fae9f0884c0 'q' 'void *'
+| | | |         `-UnaryExprOrTypeTraitExpr 0x7fae9f0887b8 <col:29, col:40> 'unsigned long' sizeof 'int'
+| | | `-IntegerLiteral 0x7fae9f0888f8 <col:49> 'int' 3
+| | `-ReturnStmt 0x7fae9f0889f0 <line:37:3, col:14>
+| |   `-ImplicitCastExpr 0x7fae9f0889d8 <col:10, col:14> 'int' <LValueToRValue>
+| |     `-MemberExpr 0x7fae9f0889a0 <col:10, col:14> 'int' lvalue .i 0x7fae9f0851f8
+| |       `-MemberExpr 0x7fae9f088968 <col:10, col:12> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+| |         `-DeclRefExpr 0x7fae9f088940 <col:10> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+| `-NoInlineAttr 0x7fae9f0885f8 <line:32:20>
+|-FunctionDecl 0x7fae9f088b20 <line:39:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fae9f088bc0 prev 0x7fae9f088b20 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fae9f088cb0 <line:40:1, line:60:1> line:41:1 main 'int ()'
+  `-CompoundStmt 0x7fae9f089c38 <line:42:1, line:60:1>
+    |-IfStmt 0x7fae9f089038 <line:43:3, line:46:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fae9f088fd0 <line:43:7, line:45:47> 'int' '||'
+    | | |-BinaryOperator 0x7fae9f088ef0 <line:43:7, line:44:47> 'int' '||'
+    | | | |-BinaryOperator 0x7fae9f088dc0 <line:43:7, col:36> 'int' '!='
+    | | | | |-UnaryExprOrTypeTraitExpr 0x7fae9f088d68 <col:7, col:20> 'unsigned long' sizeof 'float'
+    | | | | `-UnaryExprOrTypeTraitExpr 0x7fae9f088da0 <col:25, col:36> 'unsigned long' sizeof 'int'
+    | | | `-BinaryOperator 0x7fae9f088e78 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stddef.h:120:24, ../Data/C2AST/pr44468.c:44:47> 'int' '!='
+    | | |   |-OffsetOfExpr 0x7fae9f088e08 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stddef.h:120:24, col:47> 'unsigned long'
+    | | |   `-UnaryExprOrTypeTraitExpr 0x7fae9f088e58 <../Data/C2AST/pr44468.c:44:36, col:47> 'unsigned long' sizeof 'int'
+    | | `-BinaryOperator 0x7fae9f088fa8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stddef.h:120:24, ../Data/C2AST/pr44468.c:45:47> 'int' '!='
+    | |   |-OffsetOfExpr 0x7fae9f088f38 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stddef.h:120:24, col:47> 'unsigned long'
+    | |   `-UnaryExprOrTypeTraitExpr 0x7fae9f088f88 <../Data/C2AST/pr44468.c:45:36, col:47> 'unsigned long' sizeof 'int'
+    | |-ReturnStmt 0x7fae9f089020 <line:46:5, col:12>
+    | | `-IntegerLiteral 0x7fae9f089000 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fae9f089128 <line:47:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fae9f0890d0 <col:3, col:7> 'int' lvalue .i 0x7fae9f0851f8
+    | | `-MemberExpr 0x7fae9f089098 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+    | |   `-DeclRefExpr 0x7fae9f089070 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7fae9f089108 <col:11> 'int' 1
+    |-BinaryOperator 0x7fae9f089208 <line:48:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fae9f0891b0 <col:3, col:7> 'int' lvalue .j 0x7fae9f085258
+    | | `-MemberExpr 0x7fae9f089178 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+    | |   `-DeclRefExpr 0x7fae9f089150 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7fae9f0891e8 <col:11> 'int' 2
+    |-IfStmt 0x7fae9f089488 <line:49:3, line:50:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fae9f0893d0 <line:49:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7fae9f089380 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7fae9f089368 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fae9f089230 <col:7> 'int (void *)' Function 0x7fae9f085798 'test1' 'int (void *)'
+    | | | `-CStyleCastExpr 0x7fae9f089310 <col:14, col:23> 'void *' <BitCast>
+    | | |   `-UnaryOperator 0x7fae9f0892d8 <col:22, col:23> 'struct Q *' prefix '&'
+    | | |     `-DeclRefExpr 0x7fae9f089258 <col:23> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | | `-IntegerLiteral 0x7fae9f0893b0 <col:29> 'int' 3
+    | |-CallExpr 0x7fae9f089460 <line:50:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fae9f089448 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fae9f0893f8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fae9f088bc0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fae9f089578 <line:51:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fae9f089520 <col:3, col:7> 'int' lvalue .i 0x7fae9f0851f8
+    | | `-MemberExpr 0x7fae9f0894e8 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+    | |   `-DeclRefExpr 0x7fae9f0894c0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7fae9f089558 <col:11> 'int' 1
+    |-BinaryOperator 0x7fae9f089658 <line:52:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fae9f089600 <col:3, col:7> 'int' lvalue .j 0x7fae9f085258
+    | | `-MemberExpr 0x7fae9f0895c8 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+    | |   `-DeclRefExpr 0x7fae9f0895a0 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7fae9f089638 <col:11> 'int' 2
+    |-IfStmt 0x7fae9f089828 <line:53:3, line:54:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fae9f089798 <line:53:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7fae9f089748 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7fae9f089730 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fae9f089680 <col:7> 'int (void *)' Function 0x7fae9f085ee8 'test2' 'int (void *)'
+    | | | `-CStyleCastExpr 0x7fae9f089708 <col:14, col:23> 'void *' <BitCast>
+    | | |   `-UnaryOperator 0x7fae9f0896d0 <col:22, col:23> 'struct Q *' prefix '&'
+    | | |     `-DeclRefExpr 0x7fae9f0896a8 <col:23> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | | `-IntegerLiteral 0x7fae9f089778 <col:29> 'int' 3
+    | |-CallExpr 0x7fae9f089800 <line:54:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fae9f0897e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fae9f0897c0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fae9f088bc0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fae9f089918 <line:55:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fae9f0898c0 <col:3, col:7> 'int' lvalue .i 0x7fae9f0851f8
+    | | `-MemberExpr 0x7fae9f089888 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+    | |   `-DeclRefExpr 0x7fae9f089860 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7fae9f0898f8 <col:11> 'int' 1
+    |-BinaryOperator 0x7fae9f0899f8 <line:56:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fae9f0899a0 <col:3, col:7> 'int' lvalue .j 0x7fae9f085258
+    | | `-MemberExpr 0x7fae9f089968 <col:3, col:5> 'struct S':'struct S' lvalue .a 0x7fae9f085570
+    | |   `-DeclRefExpr 0x7fae9f089940 <col:3> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | `-IntegerLiteral 0x7fae9f0899d8 <col:11> 'int' 2
+    |-IfStmt 0x7fae9f089bc8 <line:57:3, line:58:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fae9f089b38 <line:57:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7fae9f089ae8 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7fae9f089ad0 <col:7> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fae9f089a20 <col:7> 'int (void *)' Function 0x7fae9f088550 'test3' 'int (void *)'
+    | | | `-CStyleCastExpr 0x7fae9f089aa8 <col:14, col:23> 'void *' <BitCast>
+    | | |   `-UnaryOperator 0x7fae9f089a70 <col:22, col:23> 'struct Q *' prefix '&'
+    | | |     `-DeclRefExpr 0x7fae9f089a48 <col:23> 'struct Q':'struct Q' lvalue Var 0x7fae9f085610 's' 'struct Q':'struct Q'
+    | | `-IntegerLiteral 0x7fae9f089b18 <col:29> 'int' 3
+    | |-CallExpr 0x7fae9f089ba0 <line:58:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fae9f089b88 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fae9f089b60 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fae9f088bc0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fae9f089c20 <line:59:3, col:10>
+      `-IntegerLiteral 0x7fae9f089c00 <col:10> 'int' 0

@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7faf710178e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7faf71042568 <../Data/C2AST/pr50451.c:4:1, line:15:1> line:5:1 foo 'int (int, int, int)'
+  |-ParmVarDecl 0x7faf71018578 <col:6, col:10> col:10 used integral 'int'
+  |-ParmVarDecl 0x7faf71042400 <col:20, col:24> col:24 used decimal 'int'
+  |-ParmVarDecl 0x7faf71042478 <col:33, col:37> col:37 used power_ten 'int'
+  `-CompoundStmt 0x7faf71042938 <line:6:1, line:15:1>
+    |-WhileStmt 0x7faf71042858 <line:7:3, line:12:5>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7faf710426c0 <line:7:10, col:22> 'int' '>'
+    | | |-ImplicitCastExpr 0x7faf710426a8 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7faf71042660 <col:10> 'int' lvalue ParmVar 0x7faf71042478 'power_ten' 'int'
+    | | `-IntegerLiteral 0x7faf71042688 <col:22> 'int' 0
+    | `-CompoundStmt 0x7faf71042830 <line:8:5, line:12:5>
+    |   |-CompoundAssignOperator 0x7faf71042730 <line:9:7, col:19> 'int' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7faf710426e8 <col:7> 'int' lvalue ParmVar 0x7faf71018578 'integral' 'int'
+    |   | `-IntegerLiteral 0x7faf71042710 <col:19> 'int' 10
+    |   |-CompoundAssignOperator 0x7faf710427b0 <line:10:7, col:18> 'int' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7faf71042768 <col:7> 'int' lvalue ParmVar 0x7faf71042400 'decimal' 'int'
+    |   | `-IntegerLiteral 0x7faf71042790 <col:18> 'int' 10
+    |   `-UnaryOperator 0x7faf71042810 <line:11:7, col:16> 'int' postfix '--'
+    |     `-DeclRefExpr 0x7faf710427e8 <col:7> 'int' lvalue ParmVar 0x7faf71042478 'power_ten' 'int'
+    `-ReturnStmt 0x7faf71042920 <line:14:3, col:19>
+      `-BinaryOperator 0x7faf710428f8 <col:10, col:19> 'int' '+'
+        |-ImplicitCastExpr 0x7faf710428c8 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7faf71042878 <col:10> 'int' lvalue ParmVar 0x7faf71018578 'integral' 'int'
+        `-ImplicitCastExpr 0x7faf710428e0 <col:19> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7faf710428a0 <col:19> 'int' lvalue ParmVar 0x7faf71042400 'decimal' 'int'

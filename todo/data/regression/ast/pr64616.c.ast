@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fbf250174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbf24028668 <../Data/C2AST/pr64616.c:4:1, col:11> col:5 used f 'int (int)'
+| `-ParmVarDecl 0x7fbf25018178 <col:8> col:11 'int'
+|-VarDecl 0x7fbf24028768 <line:5:1, col:14> col:14 used glob 'unsigned int'
+`-FunctionDecl 0x7fbf24028818 <line:7:1, line:12:1> line:8:1 g 'void ()'
+  `-CompoundStmt 0x7fbf24028a68 <line:9:1, line:12:1>
+    |-WhileStmt 0x7fbf240289c0 <line:10:3, col:19>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fbf24028950 <col:10, col:17> 'int'
+    | | |-ImplicitCastExpr 0x7fbf24028938 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbf240288b8 <col:10> 'int (int)' Function 0x7fbf24028668 'f' 'int (int)'
+    | | `-ImplicitCastExpr 0x7fbf24028998 <col:13> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fbf24028980 <col:13> 'unsigned int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fbf240288e0 <col:13> 'unsigned int' lvalue Var 0x7fbf24028768 'glob' 'unsigned int'
+    | `-NullStmt 0x7fbf240289b0 <col:19>
+    `-BinaryOperator 0x7fbf24028a40 <line:11:3, col:10> 'unsigned int' '='
+      |-DeclRefExpr 0x7fbf240289e0 <col:3> 'unsigned int' lvalue Var 0x7fbf24028768 'glob' 'unsigned int'
+      `-ImplicitCastExpr 0x7fbf24028a28 <col:10> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7fbf24028a08 <col:10> 'int' 5

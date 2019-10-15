@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fad720280e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fad72069d68 <../Data/C2AST/pr18589-10.c:4:1, line:8:1> line:4:8 baz 'double (double, double, double)'
+| |-ParmVarDecl 0x7fad72028d78 <col:13, col:20> col:20 used x 'double'
+| |-ParmVarDecl 0x7fad72069c00 <col:23, col:30> col:30 used y 'double'
+| |-ParmVarDecl 0x7fad72069c78 <col:33, col:40> col:40 used z 'double'
+| `-CompoundStmt 0x7fad7206a3a8 <line:5:1, line:8:1>
+|   `-ReturnStmt 0x7fad7206a390 <line:6:3, line:7:28>
+|     `-ParenExpr 0x7fad7206a370 <line:6:10, line:7:28> 'double'
+|       `-BinaryOperator 0x7fad7206a348 <line:6:11, line:7:27> 'double' '*'
+|         |-BinaryOperator 0x7fad7206a248 <line:6:11, col:57> 'double' '*'
+|         | |-CallExpr 0x7fad7206a120 <col:11, col:32> 'double'
+|         | | |-ImplicitCastExpr 0x7fad7206a108 <col:11> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|         | | | `-DeclRefExpr 0x7fad7206a068 <col:11> '<builtin fn type>' Function 0x7fad72069ea0 '__builtin_pow' 'double (double, double)'
+|         | | |-ImplicitCastExpr 0x7fad7206a158 <col:26> 'double' <LValueToRValue>
+|         | | | `-DeclRefExpr 0x7fad7206a090 <col:26> 'double' lvalue ParmVar 0x7fad72028d78 'x' 'double'
+|         | | `-FloatingLiteral 0x7fad7206a0b8 <col:29> 'double' 4.000000e+00
+|         | `-CallExpr 0x7fad7206a1f8 <col:36, col:57> 'double'
+|         |   |-ImplicitCastExpr 0x7fad7206a1e0 <col:36> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|         |   | `-DeclRefExpr 0x7fad7206a170 <col:36> '<builtin fn type>' Function 0x7fad72069ea0 '__builtin_pow' 'double (double, double)'
+|         |   |-ImplicitCastExpr 0x7fad7206a230 <col:51> 'double' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7fad7206a198 <col:51> 'double' lvalue ParmVar 0x7fad72069c00 'y' 'double'
+|         |   `-FloatingLiteral 0x7fad7206a1c0 <col:54> 'double' 2.000000e+00
+|         `-CallExpr 0x7fad7206a2f8 <line:7:6, col:27> 'double'
+|           |-ImplicitCastExpr 0x7fad7206a2e0 <col:6> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7fad7206a270 <col:6> '<builtin fn type>' Function 0x7fad72069ea0 '__builtin_pow' 'double (double, double)'
+|           |-ImplicitCastExpr 0x7fad7206a330 <col:21> 'double' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fad7206a298 <col:21> 'double' lvalue ParmVar 0x7fad72069c78 'z' 'double'
+|           `-FloatingLiteral 0x7fad7206a2c0 <col:24> 'double' 4.000000e+00
+`-FunctionDecl 0x7fad72069ea0 <line:6:11> col:11 implicit used __builtin_pow 'double (double, double)' extern
+  |-ParmVarDecl 0x7fad72069f40 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fad72069fa0 <<invalid sloc>> <invalid sloc> 'double'
+  |-ConstAttr 0x7fad7206a010 <col:11> Implicit
+  `-NoThrowAttr 0x7fad7206a058 <col:11> Implicit

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fe0df8174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe0df859060 <../Data/C2AST/pr18908.c:4:1, col:31> col:7 f3 '_Bool (_Bool *)'
+  |-ParmVarDecl 0x7fe0df8181a0 <col:10, col:17> col:17 used p '_Bool *'
+  `-CompoundStmt 0x7fe0df859200 <col:20, col:31>
+    `-CompoundAssignOperator 0x7fe0df8591c8 <col:22, col:28> '_Bool' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+      |-UnaryOperator 0x7fe0df859188 <col:22, col:23> '_Bool' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe0df859170 <col:23> '_Bool *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe0df859148 <col:23> '_Bool *' lvalue ParmVar 0x7fe0df8181a0 'p' '_Bool *'
+      `-IntegerLiteral 0x7fe0df8591a8 <col:28> 'int' 1

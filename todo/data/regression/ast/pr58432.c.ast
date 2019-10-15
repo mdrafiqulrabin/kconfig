@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fb4ae8258e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb4ae826560 <../Data/C2AST/pr58432.c:5:1, line:8:1> line:5:1 struct definition
+| |-FieldDecl 0x7fb4af014238 <line:6:5, col:9> col:9 prefix 'int'
+| `-FieldDecl 0x7fb4af014298 <line:7:5, col:9> col:9 referenced dir_idx 'int'
+|-VarDecl 0x7fb4af014390 <line:5:1, line:8:4> col:4 used a 'struct (anonymous struct at ../Data/C2AST/pr58432.c:5:1) *'
+|-VarDecl 0x7fb4af014460 <line:9:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7fb4af014508 <line:10:1, line:17:1> line:10:6 fn1 'void ()'
+  `-CompoundStmt 0x7fb4af014b68 <col:12, line:17:1>
+    |-DeclStmt 0x7fb4af0146e0 <line:11:5, col:15>
+    | |-VarDecl 0x7fb4af0145f0 <col:5, col:10> col:10 used c 'int *'
+    | `-VarDecl 0x7fb4af014668 <col:5, col:14> col:14 used d 'int *'
+    `-ForStmt 0x7fb4af014b30 <line:12:5, line:16:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb4af014720 <line:12:12> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb4af0146f8 <col:12> 'int' lvalue Var 0x7fb4af014460 'b' 'int'
+      |-UnaryOperator 0x7fb4af014760 <col:15, col:16> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fb4af014738 <col:15> 'int' lvalue Var 0x7fb4af014460 'b' 'int'
+      `-IfStmt 0x7fb4af014af8 <line:13:7, line:16:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7fb4af014828 <line:13:11, col:14> 'int' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7fb4af014800 <col:11, col:14> 'int' lvalue
+        |   |-ImplicitCastExpr 0x7fb4af0147d0 <col:11> 'int *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fb4af014780 <col:11> 'int *' lvalue Var 0x7fb4af014668 'd' 'int *'
+        |   `-ImplicitCastExpr 0x7fb4af0147e8 <col:13> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fb4af0147a8 <col:13> 'int' lvalue Var 0x7fb4af014460 'b' 'int'
+        |-CompoundStmt 0x7fb4af014ad8 <col:17, line:16:7>
+        | |-BinaryOperator 0x7fb4af0149a8 <line:14:4, col:14> 'int' '='
+        | | |-ArraySubscriptExpr 0x7fb4af0148c0 <col:4, col:7> 'int' lvalue
+        | | | |-ImplicitCastExpr 0x7fb4af014890 <col:4> 'int *' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7fb4af014840 <col:4> 'int *' lvalue Var 0x7fb4af0145f0 'c' 'int *'
+        | | | `-ImplicitCastExpr 0x7fb4af0148a8 <col:6> 'int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fb4af014868 <col:6> 'int' lvalue Var 0x7fb4af014460 'b' 'int'
+        | | `-ImplicitCastExpr 0x7fb4af014990 <col:11, col:14> 'int' <LValueToRValue>
+        | |   `-ArraySubscriptExpr 0x7fb4af014968 <col:11, col:14> 'int' lvalue
+        | |     |-ImplicitCastExpr 0x7fb4af014938 <col:11> 'int *' <LValueToRValue>
+        | |     | `-DeclRefExpr 0x7fb4af0148e8 <col:11> 'int *' lvalue Var 0x7fb4af014668 'd' 'int *'
+        | |     `-ImplicitCastExpr 0x7fb4af014950 <col:13> 'int' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fb4af014910 <col:13> 'int' lvalue Var 0x7fb4af014460 'b' 'int'
+        | `-BinaryOperator 0x7fb4af014ab0 <line:15:4, col:19> 'int' '='
+        |   |-MemberExpr 0x7fb4af014a58 <col:4, col:9> 'int' lvalue .dir_idx 0x7fb4af014298
+        |   | `-ArraySubscriptExpr 0x7fb4af014a30 <col:4, col:7> 'struct (anonymous struct at ../Data/C2AST/pr58432.c:5:1)':'struct (anonymous at ../Data/C2AST/pr58432.c:5:1)' lvalue
+        |   |   |-ImplicitCastExpr 0x7fb4af014a18 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr58432.c:5:1) *' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7fb4af0149d0 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr58432.c:5:1) *' lvalue Var 0x7fb4af014390 'a' 'struct (anonymous struct at ../Data/C2AST/pr58432.c:5:1) *'
+        |   |   `-IntegerLiteral 0x7fb4af0149f8 <col:6> 'int' 0
+        |   `-IntegerLiteral 0x7fb4af014a90 <col:19> 'int' 0
+        `-<<<NULL>>>

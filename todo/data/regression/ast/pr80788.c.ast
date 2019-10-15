@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7ffcfa82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffcfa86d860 <../Data/C2AST/pr80788.c:5:1, line:13:1> line:6:1 foo 'void (signed char)'
+  |-ParmVarDecl 0x7ffcfa82c978 <col:6, col:18> col:18 used x 'signed char'
+  `-CompoundStmt 0x7ffcfa86dcf8 <line:7:1, line:13:1>
+    |-DeclStmt 0x7ffcfa86dae0 <line:8:3, col:32>
+    | `-VarDecl 0x7ffcfa86d960 <col:3, col:29> col:15 used a 'signed char' cinit
+    |   `-ImplicitCastExpr 0x7ffcfa86dac8 <col:19, col:29> 'signed char' <IntegralCast>
+    |     `-BinaryOperator 0x7ffcfa86daa0 <col:19, col:29> 'int' '^'
+    |       |-ParenExpr 0x7ffcfa86da60 <col:19, col:25> 'int'
+    |       | `-BinaryOperator 0x7ffcfa86da38 <col:20, col:24> 'int' '+'
+    |       |   |-ImplicitCastExpr 0x7ffcfa86da20 <col:20> 'int' <IntegralCast>
+    |       |   | `-ImplicitCastExpr 0x7ffcfa86da08 <col:20> 'signed char' <LValueToRValue>
+    |       |   |   `-DeclRefExpr 0x7ffcfa86d9c0 <col:20> 'signed char' lvalue ParmVar 0x7ffcfa82c978 'x' 'signed char'
+    |       |   `-IntegerLiteral 0x7ffcfa86d9e8 <col:24> 'int' 1
+    |       `-IntegerLiteral 0x7ffcfa86da80 <col:29> 'int' 128
+    |-CompoundAssignOperator 0x7ffcfa86dba0 <line:9:3, col:10> 'signed char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7ffcfa86daf8 <col:3> 'signed char' lvalue ParmVar 0x7ffcfa82c978 'x' 'signed char'
+    | `-UnaryOperator 0x7ffcfa86db80 <col:8, col:10> 'int' prefix '!'
+    |   `-UnaryOperator 0x7ffcfa86db60 <col:9, col:10> 'int' prefix '!'
+    |     `-ImplicitCastExpr 0x7ffcfa86db48 <col:10> 'signed char' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffcfa86db20 <col:10> 'signed char' lvalue Var 0x7ffcfa86d960 'a' 'signed char'
+    `-IfStmt 0x7ffcfa86dcc0 <line:10:3, line:12:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffcfa86dc50 <line:10:7, col:12> 'int' '!='
+      | |-ImplicitCastExpr 0x7ffcfa86dc38 <col:7> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7ffcfa86dc20 <col:7> 'signed char' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7ffcfa86dbd8 <col:7> 'signed char' lvalue ParmVar 0x7ffcfa82c978 'x' 'signed char'
+      | `-IntegerLiteral 0x7ffcfa86dc00 <col:12> 'int' 0
+      |-ForStmt 0x7ffcfa86dc88 <line:11:5, line:12:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | `-NullStmt 0x7ffcfa86dc78 <col:7>
+      `-<<<NULL>>>

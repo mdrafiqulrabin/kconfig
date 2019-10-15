@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fdfd782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdfd786d978 <../Data/C2AST/pr50749-sf-predec-3.c:6:1, line:14:1> line:7:1 test_func_00 'float *(float *, int, float)'
+  |-ParmVarDecl 0x7fdfd782c9a0 <col:15, col:22> col:22 used p 'float *'
+  |-ParmVarDecl 0x7fdfd786d818 <col:25, col:29> col:29 used c 'int'
+  |-ParmVarDecl 0x7fdfd786d890 <col:32, col:38> col:38 used x 'float'
+  `-CompoundStmt 0x7fdfd786dc18 <line:8:1, line:14:1>
+    |-DoStmt 0x7fdfd786dba0 <line:9:3, line:12:15>
+    | |-CompoundStmt 0x7fdfd786db40 <line:10:3, line:12:3>
+    | | `-BinaryOperator 0x7fdfd786db18 <line:11:5, col:12> 'float' '='
+    | |   |-UnaryOperator 0x7fdfd786dab8 <col:5, col:8> 'float' lvalue prefix '*'
+    | |   | `-UnaryOperator 0x7fdfd786da98 <col:6, col:8> 'float *' prefix '--'
+    | |   |   `-DeclRefExpr 0x7fdfd786da70 <col:8> 'float *' lvalue ParmVar 0x7fdfd782c9a0 'p' 'float *'
+    | |   `-ImplicitCastExpr 0x7fdfd786db00 <col:12> 'float' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fdfd786dad8 <col:12> 'float' lvalue ParmVar 0x7fdfd786d890 'x' 'float'
+    | `-UnaryOperator 0x7fdfd786db80 <line:12:12, col:14> 'int' prefix '--'
+    |   `-DeclRefExpr 0x7fdfd786db58 <col:14> 'int' lvalue ParmVar 0x7fdfd786d818 'c' 'int'
+    `-ReturnStmt 0x7fdfd786dc00 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fdfd786dbe8 <col:10> 'float *' <LValueToRValue>
+        `-DeclRefExpr 0x7fdfd786dbc0 <col:10> 'float *' lvalue ParmVar 0x7fdfd782c9a0 'p' 'float *'

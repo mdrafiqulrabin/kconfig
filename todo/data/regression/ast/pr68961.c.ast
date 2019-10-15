@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff5bd02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff5bd02c960 <../Data/C2AST/pr68961.c:4:1, col:25> col:8 struct x definition
+| `-FieldDecl 0x7ff5bd8142a0 <col:12, col:22> col:19 referenced d 'double [2]'
+`-FunctionDecl 0x7ff5bd8144d0 <line:6:1, line:13:1> line:7:1 pack 'struct x (double, double)'
+  |-ParmVarDecl 0x7ff5bd814300 <col:7, col:14> col:14 used a 'double'
+  |-ParmVarDecl 0x7ff5bd814378 <col:17, col:24> col:24 used aa 'double'
+  `-CompoundStmt 0x7ff5bd814930 <line:8:1, line:13:1>
+    |-DeclStmt 0x7ff5bd814640 <line:9:3, col:13>
+    | `-VarDecl 0x7ff5bd8145e0 <col:3, col:12> col:12 used u 'struct x':'struct x' nrvo
+    |-BinaryOperator 0x7ff5bd814788 <line:10:3, col:12> 'double' '='
+    | |-ArraySubscriptExpr 0x7ff5bd814720 <col:3, col:8> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7ff5bd814708 <col:3, col:5> 'double *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7ff5bd814680 <col:3, col:5> 'double [2]' lvalue .d 0x7ff5bd8142a0
+    | | |   `-DeclRefExpr 0x7ff5bd814658 <col:3> 'struct x':'struct x' lvalue Var 0x7ff5bd8145e0 'u' 'struct x':'struct x'
+    | | `-IntegerLiteral 0x7ff5bd8146b8 <col:7> 'int' 0
+    | `-ImplicitCastExpr 0x7ff5bd814770 <col:12> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff5bd814748 <col:12> 'double' lvalue ParmVar 0x7ff5bd814300 'a' 'double'
+    |-BinaryOperator 0x7ff5bd8148b0 <line:11:3, col:12> 'double' '='
+    | |-ArraySubscriptExpr 0x7ff5bd814848 <col:3, col:8> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7ff5bd814830 <col:3, col:5> 'double *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7ff5bd8147d8 <col:3, col:5> 'double [2]' lvalue .d 0x7ff5bd8142a0
+    | | |   `-DeclRefExpr 0x7ff5bd8147b0 <col:3> 'struct x':'struct x' lvalue Var 0x7ff5bd8145e0 'u' 'struct x':'struct x'
+    | | `-IntegerLiteral 0x7ff5bd814810 <col:7> 'int' 1
+    | `-ImplicitCastExpr 0x7ff5bd814898 <col:12> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff5bd814870 <col:12> 'double' lvalue ParmVar 0x7ff5bd814378 'aa' 'double'
+    `-ReturnStmt 0x7ff5bd814918 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7ff5bd814900 <col:10> 'struct x':'struct x' <LValueToRValue>
+        `-DeclRefExpr 0x7ff5bd8148d8 <col:10> 'struct x':'struct x' lvalue Var 0x7ff5bd8145e0 'u' 'struct x':'struct x'

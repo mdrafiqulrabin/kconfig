@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fe6f000aae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe6f08282d0 <../Data/C2AST/pr42559.c:3:1, line:10:1> line:3:6 jumpfunc 'void (int, void *)'
+| |-ParmVarDecl 0x7fe6f000b778 <col:15, col:19> col:19 used copy 'int'
+| |-ParmVarDecl 0x7fe6f0828200 <col:25, col:31> col:31 used p 'void *'
+| `-CompoundStmt 0x7fe6f0828d50 <line:4:1, line:10:1>
+|   |-DeclStmt 0x7fe6f08284a0 <line:5:3, col:24>
+|   | `-VarDecl 0x7fe6f08283d8 <col:3, col:15> col:9 used l 'void *' cinit
+|   |   `-AddrLabelExpr 0x7fe6f0828480 <col:13, col:15> 'void *' jumplabel 0x7fe6f0828438
+|   |-IfStmt 0x7fe6f0828ce8 <line:6:3, line:7:68>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fe6f08284e0 <line:6:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fe6f08284b8 <col:7> 'int' lvalue ParmVar 0x7fe6f000b778 'copy' 'int'
+|   | |-CallExpr 0x7fe6f0828c40 <line:7:5, col:68> 'void *'
+|   | | |-ImplicitCastExpr 0x7fe6f0828c28 <col:5> 'void *(*)(void *, const void *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fe6f0828808 <col:5> '<builtin fn type>' Function 0x7fe6f0828580 '__builtin___memcpy_chk' 'void *(void *, const void *, unsigned long, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7fe6f0828c88 <col:29> 'void *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fe6f0828830 <col:29> 'void *' lvalue ParmVar 0x7fe6f0828200 'p' 'void *'
+|   | | |-ImplicitCastExpr 0x7fe6f0828cb8 <col:32> 'const void *' <BitCast>
+|   | | | `-ImplicitCastExpr 0x7fe6f0828ca0 <col:32> 'void *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fe6f0828858 <col:32> 'void *' lvalue Var 0x7fe6f08283d8 'l' 'void *'
+|   | | |-ImplicitCastExpr 0x7fe6f0828cd0 <col:35> 'unsigned long' <IntegralCast>
+|   | | | `-IntegerLiteral 0x7fe6f0828880 <col:35> 'int' 128
+|   | | `-CallExpr 0x7fe6f0828b60 <col:40, col:67> 'unsigned long'
+|   | |   |-ImplicitCastExpr 0x7fe6f0828b48 <col:40> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fe6f0828a98 <col:40> '<builtin fn type>' Function 0x7fe6f08288e0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   | |   |-ImplicitCastExpr 0x7fe6f0828bb0 <col:63> 'const void *' <BitCast>
+|   | |   | `-ImplicitCastExpr 0x7fe6f0828b98 <col:63> 'void *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fe6f0828ac0 <col:63> 'void *' lvalue ParmVar 0x7fe6f0828200 'p' 'void *'
+|   | |   `-IntegerLiteral 0x7fe6f0828ae8 <col:66> 'int' 0
+|   | `-<<<NULL>>>
+|   `-LabelStmt 0x7fe6f0828d38 <line:8:1, line:9:3> 'jumplabel'
+|     `-ReturnStmt 0x7fe6f0828d20 <col:3>
+|-FunctionDecl 0x7fe6f0828580 <line:7:5> col:5 implicit used __builtin___memcpy_chk 'void *(void *, const void *, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fe6f0828620 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fe6f0828680 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fe6f08286e0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fe6f0828740 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fe6f08287c0 <col:5> Implicit
+`-FunctionDecl 0x7fe6f08288e0 <col:40> col:40 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+  |-ParmVarDecl 0x7fe6f0828980 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fe6f08289e0 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7fe6f0828a50 <col:40> Implicit

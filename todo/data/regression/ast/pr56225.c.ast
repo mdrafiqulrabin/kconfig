@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fb42401a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb423025c60 <../Data/C2AST/pr56225.c:5:1, col:14> col:6 used bar 'void (int)'
+| `-ParmVarDecl 0x7fb42401b578 <col:11> col:14 'int'
+`-FunctionDecl 0x7fb423025eb0 <line:7:1, line:12:1> line:8:1 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fb423025d60 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7fb423025dd8 <col:13, col:17> col:17 used y 'int'
+  `-CompoundStmt 0x7fb423026450 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fb423026228 <line:10:3, col:70>
+    | `-VarDecl 0x7fb423026038 <col:3, col:69> col:60 used s0 '__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+    |   `-InitListExpr 0x7fb423026108 <col:65, col:69> '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+    |     `-ImplicitCastExpr 0x7fb4230261a0 <col:67> 'short' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fb423026188 <col:67> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb423026098 <col:67> 'int' lvalue ParmVar 0x7fb423025d60 'x' 'int'
+    `-CallExpr 0x7fb423026420 <line:11:3, col:30> 'void'
+      |-ImplicitCastExpr 0x7fb423026408 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb423026240 <col:3> 'void (int)' Function 0x7fb423025c60 'bar' 'void (int)'
+      `-BinaryOperator 0x7fb4230263b0 <col:8, col:29> 'int' '+'
+        |-ImplicitCastExpr 0x7fb423026380 <col:8, col:24> 'int' <IntegralCast>
+        | `-CStyleCastExpr 0x7fb423026330 <col:8, col:24> 'short' <IntegralCast>
+        |   `-CStyleCastExpr 0x7fb4230262f0 <col:16, col:24> 'long' <PointerToIntegral>
+        |     `-UnaryOperator 0x7fb4230262b8 <col:23, col:24> '__attribute__((__vector_size__(8 * sizeof(short)))) short *' prefix '&'
+        |       `-DeclRefExpr 0x7fb423026268 <col:24> '__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7fb423026038 's0' '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+        `-ImplicitCastExpr 0x7fb423026398 <col:29> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb423026358 <col:29> 'int' lvalue ParmVar 0x7fb423025dd8 'y' 'int'

@@ -1,0 +1,37 @@
+../Data/C2AST/pr32280.c:8:18: error: use of unknown builtin '__builtin_ia32_pslldqi128' [-Wimplicit-function-declaration]
+ return (__m128i)__builtin_ia32_pslldqi128 (__a, 8);
+                 ^
+../Data/C2AST/pr32280.c:8:9: error: invalid conversion between vector type '__m128i' (vector of 2 'long long' values) and integer type 'int' of different size
+ return (__m128i)__builtin_ia32_pslldqi128 (__a, 8);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr32280.c:13:18: error: use of unknown builtin '__builtin_ia32_psrldqi128' [-Wimplicit-function-declaration]
+ return (__m128i)__builtin_ia32_psrldqi128 (__a, 8);
+                 ^
+../Data/C2AST/pr32280.c:13:9: error: invalid conversion between vector type '__m128i' (vector of 2 'long long' values) and integer type 'int' of different size
+ return (__m128i)__builtin_ia32_psrldqi128 (__a, 8);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 errors generated.
+TranslationUnitDecl 0x7fc7d701a4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc7d701aa60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc7d701a780 '__int128'
+|-TypedefDecl 0x7fc7d701aad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc7d701a7a0 'unsigned __int128'
+|-TypedefDecl 0x7fc7d701ada8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc7d701abb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc7d701ab28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc7d701ae40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc7d701ae00 'char *'
+|   `-BuiltinType 0x7fc7d701a580 'char'
+|-TypedefDecl 0x7fc7d701b108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc7d701b0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc7d701af20 'struct __va_list_tag'
+|     `-Record 0x7fc7d701ae98 '__va_list_tag'
+|-TypedefDecl 0x7fc7d6813a00 <../Data/C2AST/pr32280.c:4:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fc7d701b180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fc7d701a620 'long long'
+|-FunctionDecl 0x7fc7d6813b90 <line:6:1, line:9:1> line:6:9 foo1 '__m128i (__m128i)'
+| |-ParmVarDecl 0x7fc7d6813a90 <col:14, col:22> col:22 used __a '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fc7d6814250 <line:7:1, line:9:1>
+`-FunctionDecl 0x7fc7d68142f8 <line:11:1, line:14:1> line:11:9 foo2 '__m128i (__m128i)'
+  |-ParmVarDecl 0x7fc7d6814270 <col:14, col:22> col:22 used __a '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fc7d6814560 <line:12:1, line:14:1>

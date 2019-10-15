@@ -1,0 +1,34 @@
+../Data/C2AST/pr67071-2.c:6:1: error: unknown type name 'vector'
+vector unsigned char
+^
+../Data/C2AST/pr67071-2.c:6:8: error: expected identifier or '('
+vector unsigned char
+       ^
+../Data/C2AST/pr67071-2.c:20:1: error: unknown type name 'vector'
+vector unsigned short
+^
+../Data/C2AST/pr67071-2.c:20:8: error: expected identifier or '('
+vector unsigned short
+       ^
+../Data/C2AST/pr67071-2.c:32:1: error: unknown type name 'vector'
+vector unsigned int
+^
+../Data/C2AST/pr67071-2.c:32:8: error: expected identifier or '('
+vector unsigned int
+       ^
+6 errors generated.
+TranslationUnitDecl 0x7fb9838166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb983816c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb983816980 '__int128'
+|-TypedefDecl 0x7fb983816cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb9838169a0 'unsigned __int128'
+|-TypedefDecl 0x7fb983816fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb983816db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb983816d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb983817040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb983817000 'char *'
+|   `-BuiltinType 0x7fb983816780 'char'
+`-TypedefDecl 0x7fb983817308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fb9838172b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fb983817120 'struct __va_list_tag'
+      `-Record 0x7fb983817098 '__va_list_tag'

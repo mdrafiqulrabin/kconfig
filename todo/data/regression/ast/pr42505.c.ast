@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb02902b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb02902bf60 <../Data/C2AST/pr42505.c:4:1, line:7:1> line:4:8 struct A definition
+| |-FieldDecl 0x7fb029814c38 <line:5:2, col:6> col:6 f1 'int'
+| `-FieldDecl 0x7fb029814c98 <line:6:2, col:6> col:6 referenced f2 'int'
+|-FunctionDecl 0x7fb029814dc8 <line:9:1, col:15> col:5 used func 'int (int)'
+| `-ParmVarDecl 0x7fb029814cf8 <col:10, col:14> col:14 c 'int'
+`-FunctionDecl 0x7fb029815198 <line:12:1, line:22:1> line:12:5 test 'int (struct A *, struct A *, int)'
+  |-ParmVarDecl 0x7fb029814f60 <col:10, col:20> col:20 used src 'struct A *'
+  |-ParmVarDecl 0x7fb029814fe8 <col:25, col:35> col:35 used dst 'struct A *'
+  |-ParmVarDecl 0x7fb029815060 <col:40, col:44> col:44 used count 'int'
+  `-CompoundStmt 0x7fb0298155f8 <line:13:1, line:22:1>
+    |-WhileStmt 0x7fb0298155a0 <line:14:3, line:19:3>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fb029815278 <line:14:10, col:15> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7fb029815250 <col:10> 'int' lvalue ParmVar 0x7fb029815060 'count' 'int'
+    | `-CompoundStmt 0x7fb029815580 <col:19, line:19:3>
+    |   |-IfStmt 0x7fb029815438 <line:15:5, line:17:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7fb0298153c8 <line:15:9, col:22> 'int' prefix '!'
+    |   | | `-CallExpr 0x7fb029815380 <col:10, col:22> 'int'
+    |   | |   |-ImplicitCastExpr 0x7fb029815368 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7fb029815298 <col:10> 'int (int)' Function 0x7fb029814dc8 'func' 'int (int)'
+    |   | |   `-ImplicitCastExpr 0x7fb0298153b0 <col:15, col:20> 'int' <LValueToRValue>
+    |   | |     `-MemberExpr 0x7fb029815300 <col:15, col:20> 'int' lvalue ->f2 0x7fb029814c98
+    |   | |       `-ImplicitCastExpr 0x7fb0298152e8 <col:15> 'struct A *' <LValueToRValue>
+    |   | |         `-DeclRefExpr 0x7fb0298152c0 <col:15> 'struct A *' lvalue ParmVar 0x7fb029814f60 'src' 'struct A *'
+    |   | |-CompoundStmt 0x7fb029815420 <col:25, line:17:7>
+    |   | | `-ReturnStmt 0x7fb029815408 <line:16:9, col:16>
+    |   | |   `-IntegerLiteral 0x7fb0298153e8 <col:16> 'int' 0
+    |   | `-<<<NULL>>>
+    |   `-BinaryOperator 0x7fb029815558 <line:18:7, col:20> 'struct A':'struct A' '='
+    |     |-UnaryOperator 0x7fb0298154b8 <col:7, col:11> 'struct A':'struct A' lvalue prefix '*'
+    |     | `-UnaryOperator 0x7fb029815498 <col:8, col:11> 'struct A *' postfix '++'
+    |     |   `-DeclRefExpr 0x7fb029815470 <col:8> 'struct A *' lvalue ParmVar 0x7fb029814fe8 'dst' 'struct A *'
+    |     `-ImplicitCastExpr 0x7fb029815540 <col:16, col:20> 'struct A':'struct A' <LValueToRValue>
+    |       `-UnaryOperator 0x7fb029815520 <col:16, col:20> 'struct A':'struct A' lvalue prefix '*'
+    |         `-UnaryOperator 0x7fb029815500 <col:17, col:20> 'struct A *' postfix '++'
+    |           `-DeclRefExpr 0x7fb0298154d8 <col:17> 'struct A *' lvalue ParmVar 0x7fb029814f60 'src' 'struct A *'
+    `-ReturnStmt 0x7fb0298155e0 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fb0298155c0 <col:10> 'int' 1

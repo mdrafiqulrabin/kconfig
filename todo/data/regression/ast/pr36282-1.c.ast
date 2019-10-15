@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f890b8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f890c000fa8 <../Data/C2AST/pr36282-1.c:6:1, col:63> col:14 referenced baz 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f890b818178 <col:19, col:25> col:25 dest 'void *'
+| |-ParmVarDecl 0x7f890c000e40 <col:31, col:43> col:43 src 'const void *'
+| `-ParmVarDecl 0x7f890c000eb8 <<built-in>:81:23, ../Data/C2AST/pr36282-1.c:6:62> col:62 n 'unsigned long'
+|-FunctionDecl 0x7f890c001198 prev 0x7f890c000fa8 <line:7:1, col:40> col:23 baz 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f890c0012a8 <col:23> col:23 implicit 'void *'
+| |-ParmVarDecl 0x7f890c001320 <col:23> col:23 implicit 'const void *'
+| |-ParmVarDecl 0x7f890c001398 <col:23> col:23 implicit 'unsigned long'
+| `-AsmLabelAttr 0x7f890c001238 <col:33> "bazfn"
+`-FunctionDecl 0x7f890c0014d0 <line:9:1, line:12:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7f890c001570 <line:11:1, line:12:1>

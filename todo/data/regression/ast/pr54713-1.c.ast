@@ -1,0 +1,307 @@
+TranslationUnitDecl 0x7fd5118280e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd512040438 <../Data/C2AST/pr54713-1.c:9:1, col:13> col:13 referenced V '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fd512040400 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fd5118281e0 'int'
+|-TypedefDecl 0x7fd512040568 <line:10:1, col:22> col:22 referenced W '__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fd512040530 '__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' 8
+|   `-BuiltinType 0x7fd511828280 'unsigned int'
+|-FunctionDecl 0x7fd512040750 <line:12:1, line:16:1> line:13:1 f1 'void (V *)'
+| |-ParmVarDecl 0x7fd512040648 <col:5, col:8> col:8 used p 'V *'
+| `-CompoundStmt 0x7fd512040e88 <line:14:1, line:16:1>
+|   `-BinaryOperator 0x7fd512040e60 <line:15:3, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512040878 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512040860 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512040838 <col:4> 'V *' lvalue ParmVar 0x7fd512040648 'p' 'V *'
+|     `-BinaryOperator 0x7fd512040e38 <col:8, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^'
+|       |-ParenExpr 0x7fd512040ba8 <col:8, col:27> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512040b80 <col:9, col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |   |-ImplicitCastExpr 0x7fd512040b50 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd5120408d8 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd5120408c0 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd512040898 <col:10> 'V *' lvalue ParmVar 0x7fd512040648 'p' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512040b68 <col:14, col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-ParenExpr 0x7fd512040b30 <col:14, col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|       |       `-CompoundLiteralExpr 0x7fd512040b08 <col:15, col:25> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|       |         `-InitListExpr 0x7fd512040a88 <col:19, col:25> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       |           |-IntegerLiteral 0x7fd512040908 <line:5:13> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512040928 <col:16> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512040948 <col:19> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512040968 <col:22> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512040988 <col:25> 'int' 1
+|       |           |-IntegerLiteral 0x7fd5120409a8 <col:28> 'int' 1
+|       |           |-IntegerLiteral 0x7fd5120409c8 <col:31> 'int' 1
+|       |           `-IntegerLiteral 0x7fd5120409e8 <col:34> 'int' 1
+|       `-ImplicitCastExpr 0x7fd512040e20 <line:15:31, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|         `-ParenExpr 0x7fd512040e00 <col:31, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|           `-CompoundLiteralExpr 0x7fd512040dd8 <col:32, col:41> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|             `-InitListExpr 0x7fd512040d58 <col:36, col:41> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|               |-IntegerLiteral 0x7fd512040bd8 <line:5:13> 'int' 1
+|               |-IntegerLiteral 0x7fd512040bf8 <col:16> 'int' 1
+|               |-IntegerLiteral 0x7fd512040c18 <col:19> 'int' 1
+|               |-IntegerLiteral 0x7fd512040c38 <col:22> 'int' 1
+|               |-IntegerLiteral 0x7fd512040c58 <col:25> 'int' 1
+|               |-IntegerLiteral 0x7fd512040c78 <col:28> 'int' 1
+|               |-IntegerLiteral 0x7fd512040c98 <col:31> 'int' 1
+|               `-IntegerLiteral 0x7fd512040cb8 <col:34> 'int' 1
+|-FunctionDecl 0x7fd512040f38 <line:18:1, line:22:1> line:19:1 f2 'void (V *)'
+| |-ParmVarDecl 0x7fd512040eb0 <col:5, col:8> col:8 used p 'V *'
+| `-CompoundStmt 0x7fd512041630 <line:20:1, line:22:1>
+|   `-BinaryOperator 0x7fd512041608 <line:21:3, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512041020 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512041008 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512040fe0 <col:4> 'V *' lvalue ParmVar 0x7fd512040eb0 'p' 'V *'
+|     `-BinaryOperator 0x7fd5120415e0 <col:8, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |-ParenExpr 0x7fd512041350 <col:8, col:27> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512041328 <col:9, col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^'
+|       |   |-ImplicitCastExpr 0x7fd5120412f8 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd512041080 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd512041068 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd512041040 <col:10> 'V *' lvalue ParmVar 0x7fd512040eb0 'p' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512041310 <col:14, col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-ParenExpr 0x7fd5120412d8 <col:14, col:26> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|       |       `-CompoundLiteralExpr 0x7fd5120412b0 <col:15, col:25> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|       |         `-InitListExpr 0x7fd512041230 <col:19, col:25> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       |           |-IntegerLiteral 0x7fd5120410b0 <line:5:13> 'int' 1
+|       |           |-IntegerLiteral 0x7fd5120410d0 <col:16> 'int' 1
+|       |           |-IntegerLiteral 0x7fd5120410f0 <col:19> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512041110 <col:22> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512041130 <col:25> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512041150 <col:28> 'int' 1
+|       |           |-IntegerLiteral 0x7fd512041170 <col:31> 'int' 1
+|       |           `-IntegerLiteral 0x7fd512041190 <col:34> 'int' 1
+|       `-ImplicitCastExpr 0x7fd5120415c8 <line:21:31, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|         `-ParenExpr 0x7fd5120415a8 <col:31, col:42> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|           `-CompoundLiteralExpr 0x7fd512041580 <col:32, col:41> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|             `-InitListExpr 0x7fd512041500 <col:36, col:41> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|               |-IntegerLiteral 0x7fd512041380 <line:5:13> 'int' 1
+|               |-IntegerLiteral 0x7fd5120413a0 <col:16> 'int' 1
+|               |-IntegerLiteral 0x7fd5120413c0 <col:19> 'int' 1
+|               |-IntegerLiteral 0x7fd5120413e0 <col:22> 'int' 1
+|               |-IntegerLiteral 0x7fd512041400 <col:25> 'int' 1
+|               |-IntegerLiteral 0x7fd512041420 <col:28> 'int' 1
+|               |-IntegerLiteral 0x7fd512041440 <col:31> 'int' 1
+|               `-IntegerLiteral 0x7fd512041460 <col:34> 'int' 1
+|-FunctionDecl 0x7fd5120416e0 <line:24:1, line:28:1> line:25:1 f3 'void (V *)'
+| |-ParmVarDecl 0x7fd512041658 <col:5, col:8> col:8 used p 'V *'
+| `-CompoundStmt 0x7fd512041b60 <line:26:1, line:28:1>
+|   `-BinaryOperator 0x7fd512041b38 <line:27:3, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd5120417c8 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd5120417b0 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512041788 <col:4> 'V *' lvalue ParmVar 0x7fd512041658 'p' 'V *'
+|     `-BinaryOperator 0x7fd512041b10 <col:8, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |-ParenExpr 0x7fd512041880 <col:8, col:12> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-UnaryOperator 0x7fd512041860 <col:9, col:11> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' prefix '~'
+|       |   `-ImplicitCastExpr 0x7fd512041848 <col:10, col:11> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd512041828 <col:10, col:11> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd512041810 <col:11> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd5120417e8 <col:11> 'V *' lvalue ParmVar 0x7fd512041658 'p' 'V *'
+|       `-ImplicitCastExpr 0x7fd512041af8 <col:16, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|         `-ParenExpr 0x7fd512041ad8 <col:16, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|           `-CompoundLiteralExpr 0x7fd512041ab0 <col:17, col:27> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+|             `-InitListExpr 0x7fd512041a30 <col:21, col:27> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|               |-IntegerLiteral 0x7fd5120418b0 <line:5:13> 'int' 1
+|               |-IntegerLiteral 0x7fd5120418d0 <col:16> 'int' 1
+|               |-IntegerLiteral 0x7fd5120418f0 <col:19> 'int' 1
+|               |-IntegerLiteral 0x7fd512041910 <col:22> 'int' 1
+|               |-IntegerLiteral 0x7fd512041930 <col:25> 'int' 1
+|               |-IntegerLiteral 0x7fd512041950 <col:28> 'int' 1
+|               |-IntegerLiteral 0x7fd512041970 <col:31> 'int' 1
+|               `-IntegerLiteral 0x7fd512041990 <col:34> 'int' 1
+|-FunctionDecl 0x7fd512041d10 <line:30:1, line:34:1> line:31:1 f4 'void (V *, V *)'
+| |-ParmVarDecl 0x7fd512041b88 <col:5, col:8> col:8 used p 'V *'
+| |-ParmVarDecl 0x7fd512041bf8 <col:11, col:14> col:14 used q 'V *'
+| `-CompoundStmt 0x7fd512042020 <line:32:1, line:34:1>
+|   `-BinaryOperator 0x7fd512041ff8 <line:33:3, col:22> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512041e00 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512041de8 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512041dc0 <col:4> 'V *' lvalue ParmVar 0x7fd512041b88 'p' 'V *'
+|     `-BinaryOperator 0x7fd512041fd0 <col:8, col:22> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '=='
+|       |-ParenExpr 0x7fd512041f38 <col:8, col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512041f10 <col:9, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^'
+|       |   |-ImplicitCastExpr 0x7fd512041ee0 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd512041e60 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd512041e48 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd512041e20 <col:10> 'V *' lvalue ParmVar 0x7fd512041b88 'p' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512041ef8 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd512041ec0 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd512041ea8 <col:15> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd512041e80 <col:15> 'V *' lvalue ParmVar 0x7fd512041bf8 'q' 'V *'
+|       `-ImplicitCastExpr 0x7fd512041fb8 <col:21, col:22> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|         `-UnaryOperator 0x7fd512041f98 <col:21, col:22> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fd512041f80 <col:22> 'V *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd512041f58 <col:22> 'V *' lvalue ParmVar 0x7fd512041bf8 'q' 'V *'
+|-FunctionDecl 0x7fd512042148 <line:36:1, line:40:1> line:37:1 f5 'void (V *, V *)'
+| |-ParmVarDecl 0x7fd512042048 <col:5, col:8> col:8 used p 'V *'
+| |-ParmVarDecl 0x7fd5120420b8 <col:11, col:14> col:14 used q 'V *'
+| `-CompoundStmt 0x7fd512042468 <line:38:1, line:40:1>
+|   `-BinaryOperator 0x7fd512042440 <line:39:3, col:22> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512042238 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512042220 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd5120421f8 <col:4> 'V *' lvalue ParmVar 0x7fd512042048 'p' 'V *'
+|     `-BinaryOperator 0x7fd512042418 <col:8, col:22> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '=='
+|       |-ParenExpr 0x7fd512042370 <col:8, col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512042348 <col:9, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^'
+|       |   |-ImplicitCastExpr 0x7fd512042318 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd512042298 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd512042280 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd512042258 <col:10> 'V *' lvalue ParmVar 0x7fd512042048 'p' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512042330 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd5120422f8 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd5120422e0 <col:15> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd5120422b8 <col:15> 'V *' lvalue ParmVar 0x7fd5120420b8 'q' 'V *'
+|       `-ImplicitCastExpr 0x7fd512042400 <col:21, col:22> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|         `-UnaryOperator 0x7fd5120423d0 <col:21, col:22> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7fd5120423b8 <col:22> 'V *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd512042390 <col:22> 'V *' lvalue ParmVar 0x7fd512042048 'p' 'V *'
+|-FunctionDecl 0x7fd5120426a0 <line:42:1, line:46:1> line:43:1 f6 'void (V *, V *, V *)'
+| |-ParmVarDecl 0x7fd512042490 <col:5, col:8> col:8 used p 'V *'
+| |-ParmVarDecl 0x7fd512042500 <col:11, col:14> col:14 used q 'V *'
+| |-ParmVarDecl 0x7fd512042570 <col:17, col:20> col:20 used r 'V *'
+| `-CompoundStmt 0x7fd512042a78 <line:44:1, line:46:1>
+|   `-BinaryOperator 0x7fd512042a50 <line:45:3, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512042798 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512042780 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512042758 <col:4> 'V *' lvalue ParmVar 0x7fd512042490 'p' 'V *'
+|     `-BinaryOperator 0x7fd512042a28 <col:8, col:29> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '=='
+|       |-ParenExpr 0x7fd5120428d0 <col:8, col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd5120428a8 <col:9, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |   |-ImplicitCastExpr 0x7fd512042878 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd5120427f8 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd5120427e0 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd5120427b8 <col:10> 'V *' lvalue ParmVar 0x7fd512042490 'p' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512042890 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd512042858 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd512042840 <col:15> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd512042818 <col:15> 'V *' lvalue ParmVar 0x7fd512042570 'r' 'V *'
+|       `-ParenExpr 0x7fd512042a08 <col:21, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|         `-BinaryOperator 0x7fd5120429e0 <col:22, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|           |-ImplicitCastExpr 0x7fd5120429b0 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|           | `-UnaryOperator 0x7fd512042930 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|           |   `-ImplicitCastExpr 0x7fd512042918 <col:23> 'V *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fd5120428f0 <col:23> 'V *' lvalue ParmVar 0x7fd512042500 'q' 'V *'
+|           `-ImplicitCastExpr 0x7fd5120429c8 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|             `-UnaryOperator 0x7fd512042990 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7fd512042978 <col:28> 'V *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fd512042950 <col:28> 'V *' lvalue ParmVar 0x7fd512042570 'r' 'V *'
+|-FunctionDecl 0x7fd512042c18 <line:48:1, line:52:1> line:49:1 f7 'void (V *, V *, V *)'
+| |-ParmVarDecl 0x7fd512042aa0 <col:5, col:8> col:8 used p 'V *'
+| |-ParmVarDecl 0x7fd512042b10 <col:11, col:14> col:14 used q 'V *'
+| |-ParmVarDecl 0x7fd512042b80 <col:17, col:20> col:20 used r 'V *'
+| `-CompoundStmt 0x7fd512042ff0 <line:50:1, line:52:1>
+|   `-BinaryOperator 0x7fd512042fc8 <line:51:3, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512042d10 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512042cf8 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512042cd0 <col:4> 'V *' lvalue ParmVar 0x7fd512042aa0 'p' 'V *'
+|     `-BinaryOperator 0x7fd512042fa0 <col:8, col:29> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '=='
+|       |-ParenExpr 0x7fd512042e48 <col:8, col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512042e20 <col:9, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |   |-ImplicitCastExpr 0x7fd512042df0 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd512042d70 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd512042d58 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd512042d30 <col:10> 'V *' lvalue ParmVar 0x7fd512042aa0 'p' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512042e08 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd512042dd0 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd512042db8 <col:15> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd512042d90 <col:15> 'V *' lvalue ParmVar 0x7fd512042b80 'r' 'V *'
+|       `-ParenExpr 0x7fd512042f80 <col:21, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|         `-BinaryOperator 0x7fd512042f58 <col:22, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|           |-ImplicitCastExpr 0x7fd512042f28 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|           | `-UnaryOperator 0x7fd512042ea8 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|           |   `-ImplicitCastExpr 0x7fd512042e90 <col:23> 'V *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fd512042e68 <col:23> 'V *' lvalue ParmVar 0x7fd512042b80 'r' 'V *'
+|           `-ImplicitCastExpr 0x7fd512042f40 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|             `-UnaryOperator 0x7fd512042f08 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7fd512042ef0 <col:28> 'V *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fd512042ec8 <col:28> 'V *' lvalue ParmVar 0x7fd512042b10 'q' 'V *'
+|-FunctionDecl 0x7fd512043190 <line:54:1, line:58:1> line:55:1 f8 'void (V *, V *, V *)'
+| |-ParmVarDecl 0x7fd512043018 <col:5, col:8> col:8 used p 'V *'
+| |-ParmVarDecl 0x7fd512043088 <col:11, col:14> col:14 used q 'V *'
+| |-ParmVarDecl 0x7fd5120430f8 <col:17, col:20> col:20 used r 'V *'
+| `-CompoundStmt 0x7fd512043588 <line:56:1, line:58:1>
+|   `-BinaryOperator 0x7fd512043560 <line:57:3, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512043288 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512043270 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd512043248 <col:4> 'V *' lvalue ParmVar 0x7fd512043018 'p' 'V *'
+|     `-BinaryOperator 0x7fd512043538 <col:8, col:29> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '=='
+|       |-ParenExpr 0x7fd5120433c0 <col:8, col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512043398 <col:9, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |   |-ImplicitCastExpr 0x7fd512043368 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd5120432e8 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd5120432d0 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd5120432a8 <col:10> 'V *' lvalue ParmVar 0x7fd5120430f8 'r' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512043380 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd512043348 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd512043330 <col:15> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd512043308 <col:15> 'V *' lvalue ParmVar 0x7fd512043018 'p' 'V *'
+|       `-ParenExpr 0x7fd512043518 <col:21, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|         `-BinaryOperator 0x7fd5120434f0 <col:22, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|           |-ImplicitCastExpr 0x7fd5120434c0 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|           | `-UnaryOperator 0x7fd512043440 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|           |   `-ImplicitCastExpr 0x7fd512043428 <col:23> 'V *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fd512043400 <col:23> 'V *' lvalue ParmVar 0x7fd512043088 'q' 'V *'
+|           `-ImplicitCastExpr 0x7fd5120434d8 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|             `-UnaryOperator 0x7fd5120434a0 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7fd512043488 <col:28> 'V *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fd512043460 <col:28> 'V *' lvalue ParmVar 0x7fd5120430f8 'r' 'V *'
+|-FunctionDecl 0x7fd512043728 <line:60:1, line:64:1> line:61:1 f9 'void (V *, V *, V *)'
+| |-ParmVarDecl 0x7fd5120435b0 <col:5, col:8> col:8 used p 'V *'
+| |-ParmVarDecl 0x7fd512043620 <col:11, col:14> col:14 used q 'V *'
+| |-ParmVarDecl 0x7fd512043690 <col:17, col:20> col:20 used r 'V *'
+| `-CompoundStmt 0x7fd512043b00 <line:62:1, line:64:1>
+|   `-BinaryOperator 0x7fd512043ad8 <line:63:3, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '='
+|     |-UnaryOperator 0x7fd512043820 <col:3, col:4> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fd512043808 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd5120437e0 <col:4> 'V *' lvalue ParmVar 0x7fd5120435b0 'p' 'V *'
+|     `-BinaryOperator 0x7fd512043ab0 <col:8, col:29> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '=='
+|       |-ParenExpr 0x7fd512043958 <col:8, col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|       | `-BinaryOperator 0x7fd512043930 <col:9, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|       |   |-ImplicitCastExpr 0x7fd512043900 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |   | `-UnaryOperator 0x7fd512043880 <col:9, col:10> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |   |   `-ImplicitCastExpr 0x7fd512043868 <col:10> 'V *' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7fd512043840 <col:10> 'V *' lvalue ParmVar 0x7fd512043690 'r' 'V *'
+|       |   `-ImplicitCastExpr 0x7fd512043918 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|       |     `-UnaryOperator 0x7fd5120438e0 <col:14, col:15> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|       |       `-ImplicitCastExpr 0x7fd5120438c8 <col:15> 'V *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fd5120438a0 <col:15> 'V *' lvalue ParmVar 0x7fd5120435b0 'p' 'V *'
+|       `-ParenExpr 0x7fd512043a90 <col:21, col:29> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|         `-BinaryOperator 0x7fd512043a68 <col:22, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '&'
+|           |-ImplicitCastExpr 0x7fd512043a38 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|           | `-UnaryOperator 0x7fd5120439b8 <col:22, col:23> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|           |   `-ImplicitCastExpr 0x7fd5120439a0 <col:23> 'V *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fd512043978 <col:23> 'V *' lvalue ParmVar 0x7fd512043690 'r' 'V *'
+|           `-ImplicitCastExpr 0x7fd512043a50 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|             `-UnaryOperator 0x7fd512043a18 <col:27, col:28> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7fd512043a00 <col:28> 'V *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fd5120439d8 <col:28> 'V *' lvalue ParmVar 0x7fd512043620 'q' 'V *'
+`-FunctionDecl 0x7fd512043d30 <line:66:1, line:70:1> line:67:1 f10 'void (W *, W *)'
+  |-ParmVarDecl 0x7fd512043ba8 <col:6, col:9> col:9 used p 'W *'
+  |-ParmVarDecl 0x7fd512043c18 <col:12, col:15> col:15 used q 'W *'
+  `-CompoundStmt 0x7fd512044250 <line:68:1, line:70:1>
+    `-BinaryOperator 0x7fd512044228 <line:69:3, col:40> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' '='
+      |-UnaryOperator 0x7fd512043e20 <col:3, col:4> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd512043e08 <col:4> 'W *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd512043de0 <col:4> 'W *' lvalue ParmVar 0x7fd512043ba8 'p' 'W *'
+      `-ImplicitCastExpr 0x7fd512044210 <col:8, col:40> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <BitCast>
+        `-BinaryOperator 0x7fd5120441e8 <col:8, col:40> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '<'
+          |-ImplicitCastExpr 0x7fd5120441d0 <col:8, col:9> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+          | `-UnaryOperator 0x7fd512043e80 <col:8, col:9> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue prefix '*'
+          |   `-ImplicitCastExpr 0x7fd512043e68 <col:9> 'W *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fd512043e40 <col:9> 'W *' lvalue ParmVar 0x7fd512043ba8 'p' 'W *'
+          `-ParenExpr 0x7fd5120441b0 <col:13, col:40> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+            `-BinaryOperator 0x7fd512044188 <col:14, col:39> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' '<<'
+              |-ImplicitCastExpr 0x7fd512044158 <col:14, col:33> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+              | `-ParenExpr 0x7fd5120440d8 <col:14, col:33> 'const W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int const' lvalue
+              |   `-CompoundLiteralExpr 0x7fd5120440b0 <col:15, col:32> 'const W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int const' lvalue
+              |     `-InitListExpr 0x7fd512044030 <col:25, col:32> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int'
+              |       |-IntegerLiteral 0x7fd512043eb0 <line:6:14> 'unsigned int' 1
+              |       |-IntegerLiteral 0x7fd512043ed0 <col:18> 'unsigned int' 1
+              |       |-IntegerLiteral 0x7fd512043ef0 <col:22> 'unsigned int' 1
+              |       |-IntegerLiteral 0x7fd512043f10 <col:26> 'unsigned int' 1
+              |       |-IntegerLiteral 0x7fd512043f30 <col:30> 'unsigned int' 1
+              |       |-IntegerLiteral 0x7fd512043f50 <col:34> 'unsigned int' 1
+              |       |-IntegerLiteral 0x7fd512043f70 <col:38> 'unsigned int' 1
+              |       `-IntegerLiteral 0x7fd512043f90 <col:42> 'unsigned int' 1
+              `-ImplicitCastExpr 0x7fd512044170 <line:69:38, col:39> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+                `-UnaryOperator 0x7fd512044138 <col:38, col:39> 'W':'__attribute__((__vector_size__(8 * sizeof(unsigned int)))) unsigned int' lvalue prefix '*'
+                  `-ImplicitCastExpr 0x7fd512044120 <col:39> 'W *' <LValueToRValue>
+                    `-DeclRefExpr 0x7fd5120440f8 <col:39> 'W *' lvalue ParmVar 0x7fd512043c18 'q' 'W *'

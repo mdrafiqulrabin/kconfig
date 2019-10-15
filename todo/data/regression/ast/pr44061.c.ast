@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fe9568134e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe957819600 <../Data/C2AST/pr44061.c:4:1, col:8> col:5 used a 'int [2]'
+|-FunctionDecl 0x7fe957819788 <line:5:1, line:16:1> line:5:5 foo 'int (int)'
+| |-ParmVarDecl 0x7fe9578196b8 <col:10, col:14> col:14 used q 'int'
+| `-CompoundStmt 0x7fe957819d90 <line:6:1, line:16:1>
+|   `-IfStmt 0x7fe957819d58 <line:7:3, line:15:15>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fe9578199e0 <line:7:7, col:30> 'int'
+|     | |-ImplicitCastExpr 0x7fe9578199c8 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7fe957819950 <col:7> '<builtin fn type>' Function 0x7fe957819858 '__builtin_constant_p' 'int ()'
+|     | `-DeclRefExpr 0x7fe957819978 <col:29> 'int' lvalue ParmVar 0x7fe9578196b8 'q' 'int'
+|     |-CompoundStmt 0x7fe957819c68 <line:8:5, line:13:5>
+|     | `-IfStmt 0x7fe957819c30 <line:9:7, line:12:12>
+|     |   |-<<<NULL>>>
+|     |   |-<<<NULL>>>
+|     |   |-BinaryOperator 0x7fe957819a70 <line:9:11, col:16> 'int' '=='
+|     |   | |-ImplicitCastExpr 0x7fe957819a58 <col:11> 'int' <LValueToRValue>
+|     |   | | `-DeclRefExpr 0x7fe957819a10 <col:11> 'int' lvalue ParmVar 0x7fe9578196b8 'q' 'int'
+|     |   | `-IntegerLiteral 0x7fe957819a38 <col:16> 'int' 4
+|     |   |-ReturnStmt 0x7fe957819b60 <line:10:2, col:12>
+|     |   | `-ImplicitCastExpr 0x7fe957819b48 <col:9, col:12> 'int' <LValueToRValue>
+|     |   |   `-ArraySubscriptExpr 0x7fe957819b20 <col:9, col:12> 'int' lvalue
+|     |   |     |-ImplicitCastExpr 0x7fe957819b08 <col:9> 'int *' <ArrayToPointerDecay>
+|     |   |     | `-DeclRefExpr 0x7fe957819a98 <col:9> 'int [2]' lvalue Var 0x7fe957819600 'a' 'int [2]'
+|     |   |     `-IntegerLiteral 0x7fe957819ac0 <col:11> 'int' 4
+|     |   `-ReturnStmt 0x7fe957819c18 <line:12:2, col:12>
+|     |     `-ImplicitCastExpr 0x7fe957819c00 <col:9, col:12> 'int' <LValueToRValue>
+|     |       `-ArraySubscriptExpr 0x7fe957819bd8 <col:9, col:12> 'int' lvalue
+|     |         |-ImplicitCastExpr 0x7fe957819bc0 <col:9> 'int *' <ArrayToPointerDecay>
+|     |         | `-DeclRefExpr 0x7fe957819b78 <col:9> 'int [2]' lvalue Var 0x7fe957819600 'a' 'int [2]'
+|     |         `-IntegerLiteral 0x7fe957819ba0 <col:11> 'int' 0
+|     `-ReturnStmt 0x7fe957819d40 <line:15:5, col:15>
+|       `-ImplicitCastExpr 0x7fe957819d28 <col:12, col:15> 'int' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7fe957819d00 <col:12, col:15> 'int' lvalue
+|           |-ImplicitCastExpr 0x7fe957819cd0 <col:12> 'int *' <ArrayToPointerDecay>
+|           | `-DeclRefExpr 0x7fe957819c80 <col:12> 'int [2]' lvalue Var 0x7fe957819600 'a' 'int [2]'
+|           `-ImplicitCastExpr 0x7fe957819ce8 <col:14> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fe957819ca8 <col:14> 'int' lvalue ParmVar 0x7fe9578196b8 'q' 'int'
+`-FunctionDecl 0x7fe957819858 <line:7:7> col:7 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7fe9578198f8 <col:7> Implicit
+  `-ConstAttr 0x7fe957819940 <col:7> Implicit

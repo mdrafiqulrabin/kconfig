@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fe40e01a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe40d825c20 <../Data/C2AST/preprocess-1.c:3:1, line:14:1> line:3:6 foo 'void (void)'
+  `-CompoundStmt 0x7fe40d825eb0 <line:4:1, line:14:1>
+    |-DeclStmt 0x7fe40d825e88 <line:5:3, col:17>
+    | |-VarDecl 0x7fe40d825d18 <col:3, col:7> col:7 i1 'int'
+    | |-VarDecl 0x7fe40d825d90 <col:3, col:11> col:11 j1 'int'
+    | `-VarDecl 0x7fe40d825e08 <col:3, col:15> col:15 k1 'int'
+    `-NullStmt 0x7fe40d825ea0 <line:13:3>

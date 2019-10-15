@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fbe5181cce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbe52014ea0 <../Data/C2AST/pr64373_0.c:3:1, col:38> col:13 used b 'void (int, float (*)[L])' extern
+| |-ParmVarDecl 0x7fbe5181d978 <col:15, col:19> col:19 used L 'int'
+| `-ParmVarDecl 0x7fbe52014d20 <col:22, col:37> col:30 data 'float (*)[L]'
+`-FunctionDecl 0x7fbe52015050 <line:5:1, line:10:1> line:5:6 a 'void (void)'
+  `-CompoundStmt 0x7fbe52015650 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fbe520151c8 <line:7:3, col:15>
+    | `-VarDecl 0x7fbe52015130 <col:3, col:14> col:10 used p 'float *' cinit
+    |   `-ImplicitCastExpr 0x7fbe520151b0 <col:14> 'float *' <NullToPointer>
+    |     `-IntegerLiteral 0x7fbe52015190 <col:14> 'int' 0
+    |-DeclStmt 0x7fbe52015278 <line:8:3, col:12>
+    | `-VarDecl 0x7fbe520151f8 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fbe52015258 <col:11> 'int' 0
+    `-CallExpr 0x7fbe52015590 <line:9:3, col:31> 'void'
+      |-ImplicitCastExpr 0x7fbe52015578 <col:3> 'void (*)(int, float (*)[L])' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbe52015290 <col:3> 'void (int, float (*)[L])' Function 0x7fbe52014ea0 'b' 'void (int, float (*)[L])'
+      |-IntegerLiteral 0x7fbe520152b8 <col:5> 'int' 10
+      `-ImplicitCastExpr 0x7fbe52015638 <col:9, col:30> 'float (*)[*]' <BitCast>
+        `-CStyleCastExpr 0x7fbe520154f0 <col:9, col:30> 'float (*)[10]' <BitCast>
+          `-ParenExpr 0x7fbe520154d0 <col:24, col:30> 'float *'
+            `-BinaryOperator 0x7fbe52015378 <col:25, col:29> 'float *' '+'
+              |-ImplicitCastExpr 0x7fbe52015348 <col:25> 'float *' <LValueToRValue>
+              | `-DeclRefExpr 0x7fbe520152f8 <col:25> 'float *' lvalue Var 0x7fbe52015130 'p' 'float *'
+              `-ImplicitCastExpr 0x7fbe52015360 <col:29> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fbe52015320 <col:29> 'int' lvalue Var 0x7fbe520151f8 'i' 'int'

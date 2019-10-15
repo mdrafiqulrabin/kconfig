@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fb60201a4e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb60201b160 <../Data/C2AST/pr44948-2b.c:4:1, line:7:1> line:4:8 struct A definition
+| `-FieldDecl 0x7fb60180b478 <line:6:3, col:9> col:9 V4SF '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fb60180b740 <line:9:1, line:19:1> line:10:1 foo 'void (long double, struct A, long double)'
+| |-ParmVarDecl 0x7fb60180b4d8 <col:6, col:18> col:18 used x 'long double'
+| |-ParmVarDecl 0x7fb60180b590 <col:21, col:30> col:30 used y 'struct A':'struct A'
+| |-ParmVarDecl 0x7fb60180b608 <col:33, col:45> col:45 used z 'long double'
+| `-CompoundStmt 0x7fb601824040 <line:11:1, line:19:1>
+|   |-DeclStmt 0x7fb60180b8b0 <line:12:3, col:8>
+|   | `-VarDecl 0x7fb60180b850 <col:3, col:7> col:7 i 'int'
+|   |-DeclStmt 0x7fb60180bb78 <line:13:3, col:34>
+|   | `-VarDecl 0x7fb60180b8e8 <col:3, col:33> col:12 used a 'struct A':'struct A' cinit
+|   |   `-InitListExpr 0x7fb60180ba70 <col:16, col:33> 'struct A':'struct A'
+|   |     `-InitListExpr 0x7fb60180bab8 <col:18, col:31> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |       |-ImplicitCastExpr 0x7fb60180bb18 <col:20> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fb60180b948 <col:20> 'int' 0
+|   |       |-ImplicitCastExpr 0x7fb60180bb30 <col:23> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fb60180b968 <col:23> 'int' 1
+|   |       |-ImplicitCastExpr 0x7fb60180bb48 <col:26> 'float' <IntegralToFloating>
+|   |       | `-IntegerLiteral 0x7fb60180b988 <col:26> 'int' 2
+|   |       `-ImplicitCastExpr 0x7fb60180bb60 <col:29> 'float' <IntegralToFloating>
+|   |         `-IntegerLiteral 0x7fb60180b9a8 <col:29> 'int' 3
+|   |-IfStmt 0x7fb60180be98 <line:15:3, line:16:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb60180bcc0 <line:15:7, col:25> 'int' '||'
+|   | | |-BinaryOperator 0x7fb60180bc00 <col:7, col:12> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fb60180bbe8 <col:7> 'long double' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fb60180bb90 <col:7> 'long double' lvalue ParmVar 0x7fb60180b4d8 'x' 'long double'
+|   | | | `-FloatingLiteral 0x7fb60180bbb8 <col:12> 'long double' 8.000000e+00
+|   | | `-BinaryOperator 0x7fb60180bc98 <col:20, col:25> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fb60180bc80 <col:20> 'long double' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fb60180bc28 <col:20> 'long double' lvalue ParmVar 0x7fb60180b608 'z' 'long double'
+|   | |   `-FloatingLiteral 0x7fb60180bc50 <col:25> 'long double' 8.000000e+00
+|   | |-CallExpr 0x7fb60180be70 <line:16:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb60180be58 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb60180be08 <col:5> '<builtin fn type>' Function 0x7fb60180bd20 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7fb601824008 <line:17:3, line:18:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fb60180c330 <line:17:7, col:43> 'int'
+|     | |-ImplicitCastExpr 0x7fb60180c318 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7fb60180c168 <col:7> '<builtin fn type>' Function 0x7fb60180bf48 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|     | |-ImplicitCastExpr 0x7fb60180c370 <col:25, col:26> 'const void *' <BitCast>
+|     | | `-UnaryOperator 0x7fb60180c218 <col:25, col:26> 'struct A *' prefix '&'
+|     | |   `-DeclRefExpr 0x7fb60180c190 <col:26> 'struct A':'struct A' lvalue Var 0x7fb60180b8e8 'a' 'struct A':'struct A'
+|     | |-ImplicitCastExpr 0x7fb60180c388 <col:29, col:30> 'const void *' <BitCast>
+|     | | `-UnaryOperator 0x7fb60180c260 <col:29, col:30> 'struct A *' prefix '&'
+|     | |   `-DeclRefExpr 0x7fb60180c238 <col:30> 'struct A':'struct A' lvalue ParmVar 0x7fb60180b590 'y' 'struct A':'struct A'
+|     | `-UnaryExprOrTypeTraitExpr 0x7fb60180c2c8 <col:33, col:42> 'unsigned long' sizeof
+|     |   `-ParenExpr 0x7fb60180c2a8 <col:40, col:42> 'struct A':'struct A' lvalue
+|     |     `-DeclRefExpr 0x7fb60180c280 <col:41> 'struct A':'struct A' lvalue Var 0x7fb60180b8e8 'a' 'struct A':'struct A'
+|     |-CallExpr 0x7fb60180c3e0 <line:18:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7fb60180c3c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7fb60180c3a0 <col:5> '<builtin fn type>' Function 0x7fb60180bd20 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fb60180bd20 <line:16:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fb60180bdc0 <col:5> Implicit
+`-FunctionDecl 0x7fb60180bf48 <line:17:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fb60180bfe8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fb60180c048 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fb60180c0a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fb60180c120 <col:7> Implicit

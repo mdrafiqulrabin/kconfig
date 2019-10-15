@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fcbb180a4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcbb182d4d8 <../Data/C2AST/pr83628-3.c:5:1, line:9:1> line:6:1 s4l 'int (int, int)'
+| |-ParmVarDecl 0x7fcbb180b178 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7fcbb182d400 <col:13, col:17> col:17 used b 'int'
+| `-CompoundStmt 0x7fcbb182d6d0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fcbb182d6b8 <line:8:3, col:18>
+|     `-BinaryOperator 0x7fcbb182d690 <col:10, col:18> 'int' '-'
+|       |-BinaryOperator 0x7fcbb182d628 <col:10, col:14> 'int' '*'
+|       | |-ImplicitCastExpr 0x7fcbb182d610 <col:10> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fcbb182d5c8 <col:10> 'int' lvalue ParmVar 0x7fcbb180b178 'a' 'int'
+|       | `-IntegerLiteral 0x7fcbb182d5f0 <col:14> 'int' 4
+|       `-ImplicitCastExpr 0x7fcbb182d678 <col:18> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fcbb182d650 <col:18> 'int' lvalue ParmVar 0x7fcbb182d400 'b' 'int'
+|-FunctionDecl 0x7fcbb182d810 <line:11:1, line:15:1> line:12:1 s8l 'int (int, int)'
+| |-ParmVarDecl 0x7fcbb182d700 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7fcbb182d778 <col:13, col:17> col:17 used b 'int'
+| `-CompoundStmt 0x7fcbb182d9c8 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7fcbb182d9b0 <line:14:3, col:18>
+|     `-BinaryOperator 0x7fcbb182d988 <col:10, col:18> 'int' '-'
+|       |-BinaryOperator 0x7fcbb182d920 <col:10, col:14> 'int' '*'
+|       | |-ImplicitCastExpr 0x7fcbb182d908 <col:10> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fcbb182d8c0 <col:10> 'int' lvalue ParmVar 0x7fcbb182d700 'a' 'int'
+|       | `-IntegerLiteral 0x7fcbb182d8e8 <col:14> 'int' 8
+|       `-ImplicitCastExpr 0x7fcbb182d970 <col:18> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fcbb182d948 <col:18> 'int' lvalue ParmVar 0x7fcbb182d778 'b' 'int'
+|-FunctionDecl 0x7fcbb182db48 <line:17:1, line:21:1> line:18:1 s4q 'long (long, long)'
+| |-ParmVarDecl 0x7fcbb182d9f8 <col:6, col:11> col:11 used a 'long'
+| |-ParmVarDecl 0x7fcbb182da70 <col:14, col:19> col:19 used b 'long'
+| `-CompoundStmt 0x7fcbb182dd18 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7fcbb182dd00 <line:20:3, col:18>
+|     `-BinaryOperator 0x7fcbb182dcd8 <col:10, col:18> 'long' '-'
+|       |-BinaryOperator 0x7fcbb182dc70 <col:10, col:14> 'long' '*'
+|       | |-ImplicitCastExpr 0x7fcbb182dc40 <col:10> 'long' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fcbb182dbf8 <col:10> 'long' lvalue ParmVar 0x7fcbb182d9f8 'a' 'long'
+|       | `-ImplicitCastExpr 0x7fcbb182dc58 <col:14> 'long' <IntegralCast>
+|       |   `-IntegerLiteral 0x7fcbb182dc20 <col:14> 'int' 4
+|       `-ImplicitCastExpr 0x7fcbb182dcc0 <col:18> 'long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fcbb182dc98 <col:18> 'long' lvalue ParmVar 0x7fcbb182da70 'b' 'long'
+`-FunctionDecl 0x7fcbb182de58 <line:23:1, line:27:1> line:24:1 s8q 'long (long, long)'
+  |-ParmVarDecl 0x7fcbb182dd48 <col:6, col:11> col:11 used a 'long'
+  |-ParmVarDecl 0x7fcbb182ddc0 <col:14, col:19> col:19 used b 'long'
+  `-CompoundStmt 0x7fcbb182e028 <line:25:1, line:27:1>
+    `-ReturnStmt 0x7fcbb182e010 <line:26:3, col:18>
+      `-BinaryOperator 0x7fcbb182dfe8 <col:10, col:18> 'long' '-'
+        |-BinaryOperator 0x7fcbb182df80 <col:10, col:14> 'long' '*'
+        | |-ImplicitCastExpr 0x7fcbb182df50 <col:10> 'long' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fcbb182df08 <col:10> 'long' lvalue ParmVar 0x7fcbb182dd48 'a' 'long'
+        | `-ImplicitCastExpr 0x7fcbb182df68 <col:14> 'long' <IntegralCast>
+        |   `-IntegerLiteral 0x7fcbb182df30 <col:14> 'int' 8
+        `-ImplicitCastExpr 0x7fcbb182dfd0 <col:18> 'long' <LValueToRValue>
+          `-DeclRefExpr 0x7fcbb182dfa8 <col:18> 'long' lvalue ParmVar 0x7fcbb182ddc0 'b' 'long'

@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7f9e5482bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9e55014220 <../Data/C2AST/pr63690.c:5:1, line:9:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9e550143e0 <line:7:1, line:9:1>
+    `-UnaryOperator 0x7f9e550143c0 <line:8:3, col:9> 'char' postfix '++'
+      `-ParenExpr 0x7f9e550143a0 <col:3, col:8> 'char' lvalue
+        `-UnaryOperator 0x7f9e55014380 <col:4, col:5> 'char' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7f9e55014368 <col:5> 'char *' <ArrayToPointerDecay>
+            `-StringLiteral 0x7f9e55014338 <col:5> 'char [2]' lvalue "c"

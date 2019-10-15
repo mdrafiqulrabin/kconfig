@@ -1,0 +1,61 @@
+../Data/C2AST/pr78973-2.c:8:9: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+    p = __builtin_malloc (n);
+        ^
+1 error generated.
+TranslationUnitDecl 0x7f9b4b0034e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b4b003a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9b4b003780 '__int128'
+|-TypedefDecl 0x7f9b4b003ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9b4b0037a0 'unsigned __int128'
+|-TypedefDecl 0x7f9b4b003da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9b4b003bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9b4b003b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9b4b003e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9b4b003e00 'char *'
+|   `-BuiltinType 0x7f9b4b003580 'char'
+|-TypedefDecl 0x7f9b4b004108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9b4b0040b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9b4b003f20 'struct __va_list_tag'
+|     `-Record 0x7f9b4b003e98 '__va_list_tag'
+|-VarDecl 0x7f9b4b004178 <../Data/C2AST/pr78973-2.c:3:1, col:7> col:7 used p 'void *'
+|-FunctionDecl 0x7f9b4b05f520 <line:5:1, line:10:1> line:5:6 used f 'void (int)'
+| |-ParmVarDecl 0x7f9b4b05f458 <col:9, col:13> col:13 used n 'int'
+| `-CompoundStmt 0x7f9b4b05f8e0 <line:6:1, line:10:1>
+|   `-IfStmt 0x7f9b4b05f8a8 <line:7:3, line:8:28>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9b4b05f628 <line:7:7, col:12> 'int' '<='
+|     | |-ImplicitCastExpr 0x7f9b4b05f610 <col:7> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9b4b05f5c8 <col:7> 'int' lvalue ParmVar 0x7f9b4b05f458 'n' 'int'
+|     | `-IntegerLiteral 0x7f9b4b05f5f0 <col:12> 'int' 4
+|     |-BinaryOperator 0x7f9b4b05f880 <line:8:5, col:28> 'void *' '='
+|     | |-DeclRefExpr 0x7f9b4b05f650 <col:5> 'void *' lvalue Var 0x7f9b4b004178 'p' 'void *'
+|     | `-ImplicitCastExpr 0x7f9b4b05f868 <col:9, col:28> 'void *' <IntegralToPointer>
+|     |   `-CallExpr 0x7f9b4b05f820 <col:9, col:28> 'int'
+|     |     |-ImplicitCastExpr 0x7f9b4b05f808 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|     |     | `-DeclRefExpr 0x7f9b4b05f790 <col:9> 'int ()' Function 0x7f9b4b05f6e0 '__builtin_malloc' 'int ()'
+|     |     `-ImplicitCastExpr 0x7f9b4b05f850 <col:27> 'int' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7f9b4b05f7b8 <col:27> 'int' lvalue ParmVar 0x7f9b4b05f458 'n' 'int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9b4b05f9d0 <line:12:1, line:17:1> line:12:6 g 'void (unsigned int)'
+  |-ParmVarDecl 0x7f9b4b05f910 <col:9, col:18> col:18 used n 'unsigned int'
+  `-CompoundStmt 0x7f9b4b05fcd0 <line:13:1, line:17:1>
+    |-IfStmt 0x7f9b4b05fba0 <line:14:3, line:15:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9b4b05faf0 <line:14:7, col:11> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9b4b05fac0 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9b4b05fa78 <col:7> 'unsigned int' lvalue ParmVar 0x7f9b4b05f910 'n' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f9b4b05fad8 <col:11> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f9b4b05faa0 <col:11> 'int' 5
+    | |-BinaryOperator 0x7f9b4b05fb78 <line:15:5, col:9> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7f9b4b05fb18 <col:5> 'unsigned int' lvalue ParmVar 0x7f9b4b05f910 'n' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f9b4b05fb60 <col:9> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f9b4b05fb40 <col:9> 'int' 5
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f9b4b05fc70 <line:16:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7f9b4b05fc58 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9b4b05fbd8 <col:3> 'void (int)' Function 0x7f9b4b05f520 'f' 'void (int)'
+      `-ImplicitCastExpr 0x7f9b4b05fcb8 <col:6> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f9b4b05fca0 <col:6> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9b4b05fc00 <col:6> 'unsigned int' lvalue ParmVar 0x7f9b4b05f910 'n' 'unsigned int'

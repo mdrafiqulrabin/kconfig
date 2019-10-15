@@ -1,0 +1,64 @@
+../Data/C2AST/pr83926.c:10:10: error: use of unknown builtin '__builtin_vsx_div_2di' [-Wimplicit-function-declaration]
+  return __builtin_vsx_div_2di (a, b);
+         ^
+../Data/C2AST/pr83926.c:16:10: error: use of unknown builtin '__builtin_vsx_udiv_2di' [-Wimplicit-function-declaration]
+  return __builtin_vsx_udiv_2di (a, b);
+         ^
+../Data/C2AST/pr83926.c:22:10: error: use of unknown builtin '__builtin_vsx_mul_2di' [-Wimplicit-function-declaration]
+  return __builtin_vsx_mul_2di (a, b);
+         ^
+TranslationUnitDecl 0x7f81df02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f81df02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f81df02bf80 '__int128'
+|-TypedefDecl 0x7f81df02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f81df02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f81df02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f81df02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f81df02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f81df02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f81df02c600 'char *'
+|   `-BuiltinType 0x7f81df02bd80 'char'
+|-TypedefDecl 0x7f81df02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f81df02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f81df02c720 'struct __va_list_tag'
+|     `-Record 0x7f81df02c698 '__va_list_tag'
+|-FunctionDecl 0x7f81df815308 <../Data/C2AST/pr83926.c:6:1, line:11:1> line:7:1 sdiv 'long long (long long, long long)'
+| |-ParmVarDecl 0x7f81df02c998 <col:7, col:53> col:53 used a 'long long'
+| |-ParmVarDecl 0x7f81df815228 <line:8:7, col:53> col:53 used b 'long long'
+| `-CompoundStmt 0x7f81df815668 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f81df815650 <line:10:3, col:37>
+|     `-ImplicitCastExpr 0x7f81df815638 <col:10, col:37> 'long long' <IntegralCast>
+|       `-CallExpr 0x7f81df8155d0 <col:10, col:37> 'int'
+|         |-ImplicitCastExpr 0x7f81df8155b8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f81df815510 <col:10> 'int ()' Function 0x7f81df815460 '__builtin_vsx_div_2di' 'int ()'
+|         |-ImplicitCastExpr 0x7f81df815608 <col:33> 'long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f81df815538 <col:33> 'long long' lvalue ParmVar 0x7f81df02c998 'a' 'long long'
+|         `-ImplicitCastExpr 0x7f81df815620 <col:36> 'long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7f81df815560 <col:36> 'long long' lvalue ParmVar 0x7f81df815228 'b' 'long long'
+|-FunctionDecl 0x7f81df815818 <line:12:1, line:17:1> line:13:1 udiv 'unsigned long long (unsigned long long, unsigned long long)'
+| |-ParmVarDecl 0x7f81df8156b8 <col:7, col:62> col:62 used a 'unsigned long long'
+| |-ParmVarDecl 0x7f81df815740 <line:14:7, col:62> col:62 used b 'unsigned long long'
+| `-CompoundStmt 0x7f81df815ac8 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7f81df815ab0 <line:16:3, col:38>
+|     `-ImplicitCastExpr 0x7f81df815a98 <col:10, col:38> 'unsigned long long' <IntegralCast>
+|       `-CallExpr 0x7f81df815a30 <col:10, col:38> 'int'
+|         |-ImplicitCastExpr 0x7f81df815a18 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f81df8159a0 <col:10> 'int ()' Function 0x7f81df8158f0 '__builtin_vsx_udiv_2di' 'int ()'
+|         |-ImplicitCastExpr 0x7f81df815a68 <col:34> 'unsigned long long' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f81df8159c8 <col:34> 'unsigned long long' lvalue ParmVar 0x7f81df8156b8 'a' 'unsigned long long'
+|         `-ImplicitCastExpr 0x7f81df815a80 <col:37> 'unsigned long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7f81df8159f0 <col:37> 'unsigned long long' lvalue ParmVar 0x7f81df815740 'b' 'unsigned long long'
+`-FunctionDecl 0x7f81df815c38 <line:18:1, line:23:1> line:19:1 smul 'long long (long long, long long)'
+  |-ParmVarDecl 0x7f81df815b18 <col:7, col:53> col:53 used a 'long long'
+  |-ParmVarDecl 0x7f81df815ba0 <line:20:7, col:53> col:53 used b 'long long'
+  `-CompoundStmt 0x7f81df815ee8 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7f81df815ed0 <line:22:3, col:37>
+      `-ImplicitCastExpr 0x7f81df815eb8 <col:10, col:37> 'long long' <IntegralCast>
+        `-CallExpr 0x7f81df815e50 <col:10, col:37> 'int'
+          |-ImplicitCastExpr 0x7f81df815e38 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f81df815dc0 <col:10> 'int ()' Function 0x7f81df815d10 '__builtin_vsx_mul_2di' 'int ()'
+          |-ImplicitCastExpr 0x7f81df83 errors generated.
+15e88 <col:33> 'long long' <LValueToRValue>
+          | `-DeclRefExpr 0x7f81df815de8 <col:33> 'long long' lvalue ParmVar 0x7f81df815b18 'a' 'long long'
+          `-ImplicitCastExpr 0x7f81df815ea0 <col:36> 'long long' <LValueToRValue>
+            `-DeclRefExpr 0x7f81df815e10 <col:36> 'long long' lvalue ParmVar 0x7f81df815ba0 'b' 'long long'

@@ -1,0 +1,105 @@
+TranslationUnitDecl 0x7f9a6a8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9a6a029250 <../Data/C2AST/pr68198.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9a6a0292f0 prev 0x7f9a6a029250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f9a6a029390 <line:6:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7f9a6a0294f0 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7f9a6a0294a0 'union tree_node *'
+|   `-ElaboratedType 0x7f9a6a029440 'union tree_node' sugar
+|     `-RecordType 0x7f9a6a029420 'union tree_node'
+|       `-Record 0x7f9a6a029560 'tree_node'
+|-RecordDecl 0x7f9a6a029560 prev 0x7f9a6a029390 <line:7:1, line:12:1> line:7:7 union tree_node definition
+| |-FieldDecl 0x7f9a6a029600 <line:9:3, col:7> col:7 referenced code 'int'
+| |-FieldDecl 0x7f9a6a029680 <line:10:3, col:8> col:8 referenced chain 'tree':'union tree_node *'
+| `-FieldDecl 0x7f9a6a0296e0 <line:11:3, col:7> col:7 referenced omp_code 'int'
+|-VarDecl 0x7f9a6a029748 <line:7:1, line:13:1> col:1 bitmap_head 'union tree_node':'union tree_node'
+|-FunctionDecl 0x7f9a6a029918 <line:15:1, col:45> col:12 used c_omp_predetermined_sharing 'int (tree)' extern
+| `-ParmVarDecl 0x7f9a6a029810 <col:41> col:45 'tree':'union tree_node *'
+`-FunctionDecl 0x7f9a6a029ad0 <line:17:1, line:38:1> line:18:1 c_finish_omp_clauses 'tree (tree)'
+  |-ParmVarDecl 0x7f9a6a0299d0 <col:23, col:28> col:28 used clauses 'tree':'union tree_node *'
+  `-CompoundStmt 0x7f9a6a02a820 <line:19:1, line:38:1>
+    |-DeclStmt 0x7f9a6a029d90 <line:20:3, col:28>
+    | |-VarDecl 0x7f9a6a029b88 <col:3, col:8> col:8 used c 'tree':'union tree_node *'
+    | |-VarDecl 0x7f9a6a029bf8 <col:3, col:11> col:11 used t 'tree':'union tree_node *'
+    | `-VarDecl 0x7f9a6a029cc8 <col:3, col:21> col:15 used pc 'tree *' cinit
+    |   `-UnaryOperator 0x7f9a6a029d50 <col:20, col:21> 'tree *' prefix '&'
+    |     `-DeclRefExpr 0x7f9a6a029d28 <col:21> 'tree':'union tree_node *' lvalue ParmVar 0x7f9a6a0299d0 'clauses' 'tree':'union tree_node *'
+    `-ForStmt 0x7f9a6a02a7e8 <line:21:3, line:37:5>
+      |-BinaryOperator 0x7f9a6a029ed0 <line:21:8, col:27> 'tree':'union tree_node *' ','
+      | |-BinaryOperator 0x7f9a6a029e18 <col:8, col:14> 'tree *' '='
+      | | |-DeclRefExpr 0x7f9a6a029da8 <col:8> 'tree *' lvalue Var 0x7f9a6a029cc8 'pc' 'tree *'
+      | | `-UnaryOperator 0x7f9a6a029df8 <col:13, col:14> 'tree *' prefix '&'
+      | |   `-DeclRefExpr 0x7f9a6a029dd0 <col:14> 'tree':'union tree_node *' lvalue ParmVar 0x7f9a6a0299d0 'clauses' 'tree':'union tree_node *'
+      | `-BinaryOperator 0x7f9a6a029ea8 <col:23, col:27> 'tree':'union tree_node *' '='
+      |   |-DeclRefExpr 0x7f9a6a029e40 <col:23> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029b88 'c' 'tree':'union tree_node *'
+      |   `-ImplicitCastExpr 0x7f9a6a029e90 <col:27> 'tree':'union tree_node *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f9a6a029e68 <col:27> 'tree':'union tree_node *' lvalue ParmVar 0x7f9a6a0299d0 'clauses' 'tree':'union tree_node *'
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f9a6a029f20 <col:36> 'tree':'union tree_node *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9a6a029ef8 <col:36> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029b88 'c' 'tree':'union tree_node *'
+      |-BinaryOperator 0x7f9a6a029fd8 <col:39, col:44> 'tree':'union tree_node *' '='
+      | |-DeclRefExpr 0x7f9a6a029f38 <col:39> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029b88 'c' 'tree':'union tree_node *'
+      | `-ImplicitCastExpr 0x7f9a6a029fc0 <col:43, col:44> 'tree':'union tree_node *' <LValueToRValue>
+      |   `-UnaryOperator 0x7f9a6a029fa0 <col:43, col:44> 'tree':'union tree_node *' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7f9a6a029f88 <col:44> 'tree *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7f9a6a029f60 <col:44> 'tree *' lvalue Var 0x7f9a6a029cc8 'pc' 'tree *'
+      `-CompoundStmt 0x7f9a6a02a7c0 <line:22:5, line:37:5>
+        |-DeclStmt 0x7f9a6a02a0b0 <line:23:7, col:31>
+        | `-VarDecl 0x7f9a6a02a018 <col:7, col:30> col:21 used remove 'unsigned char' cinit
+        |   `-ImplicitCastExpr 0x7f9a6a02a098 <col:30> 'unsigned char' <IntegralCast>
+        |     `-IntegerLiteral 0x7f9a6a02a078 <col:30> 'int' 0
+        |-SwitchStmt 0x7f9a6a02a198 <line:24:7, line:34:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7f9a6a02a180 <line:24:15, col:29> 'int' <LValueToRValue>
+        | | `-ParenExpr 0x7f9a6a02a160 <col:15, col:29> 'int' lvalue
+        | |   `-ParenExpr 0x7f9a6a02a140 <col:16, col:28> 'int' lvalue
+        | |     `-MemberExpr 0x7f9a6a02a108 <col:17, col:20> 'int' lvalue ->omp_code 0x7f9a6a0296e0
+        | |       `-ImplicitCastExpr 0x7f9a6a02a0f0 <col:17> 'tree':'union tree_node *' <LValueToRValue>
+        | |         `-DeclRefExpr 0x7f9a6a02a0c8 <col:17> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029b88 'c' 'tree':'union tree_node *'
+        | `-CompoundStmt 0x7f9a6a02a610 <line:25:2, line:34:2>
+        |   |-CaseStmt 0x7f9a6a02a200 <line:26:2, line:28:15>
+        |   | |-IntegerLiteral 0x7f9a6a02a1c8 <line:26:7> 'int' 1
+        |   | |-<<<NULL>>>
+        |   | `-IfStmt 0x7f9a6a02a398 <line:27:4, line:28:15>
+        |   |   |-<<<NULL>>>
+        |   |   |-<<<NULL>>>
+        |   |   |-BinaryOperator 0x7f9a6a02a2e8 <line:27:8, col:19> 'int' '!='
+        |   |   | |-ImplicitCastExpr 0x7f9a6a02a2d0 <col:8, col:11> 'int' <LValueToRValue>
+        |   |   | | `-MemberExpr 0x7f9a6a02a278 <col:8, col:11> 'int' lvalue ->code 0x7f9a6a029600
+        |   |   | |   `-ImplicitCastExpr 0x7f9a6a02a260 <col:8> 'tree':'union tree_node *' <LValueToRValue>
+        |   |   | |     `-DeclRefExpr 0x7f9a6a02a238 <col:8> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029bf8 't' 'tree':'union tree_node *'
+        |   |   | `-IntegerLiteral 0x7f9a6a02a2b0 <col:19> 'int' 42
+        |   |   |-BinaryOperator 0x7f9a6a02a370 <line:28:6, col:15> 'unsigned char' '='
+        |   |   | |-DeclRefExpr 0x7f9a6a02a310 <col:6> 'unsigned char' lvalue Var 0x7f9a6a02a018 'remove' 'unsigned char'
+        |   |   | `-ImplicitCastExpr 0x7f9a6a02a358 <col:15> 'unsigned char' <IntegralCast>
+        |   |   |   `-IntegerLiteral 0x7f9a6a02a338 <col:15> 'int' 1
+        |   |   `-<<<NULL>>>
+        |   `-SwitchStmt 0x7f9a6a02a4d8 <line:29:4, line:33:6>
+        |     |-<<<NULL>>>
+        |     |-<<<NULL>>>
+        |     |-CallExpr 0x7f9a6a02a490 <line:29:12, col:42> 'int'
+        |     | |-ImplicitCastExpr 0x7f9a6a02a478 <col:12> 'int (*)(tree)' <FunctionToPointerDecay>
+        |     | | `-DeclRefExpr 0x7f9a6a02a3d0 <col:12> 'int (tree)' Function 0x7f9a6a029918 'c_omp_predetermined_sharing' 'int (tree)'
+        |     | `-ImplicitCastExpr 0x7f9a6a02a4c0 <col:41> 'tree':'union tree_node *' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7f9a6a02a3f8 <col:41> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029bf8 't' 'tree':'union tree_node *'
+        |     `-CompoundStmt 0x7f9a6a02a5f8 <line:30:6, line:33:6>
+        |       `-CaseStmt 0x7f9a6a02a528 <line:31:6, line:32:15>
+        |         |-IntegerLiteral 0x7f9a6a02a508 <line:31:11> 'int' 2
+        |         |-<<<NULL>>>
+        |         `-CallExpr 0x7f9a6a02a5d0 <line:32:8, col:15> 'void'
+        |           `-ImplicitCastExpr 0x7f9a6a02a5b8 <col:8> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+        |             `-DeclRefExpr 0x7f9a6a02a560 <col:8> 'void (void) __attribute__((noreturn))' Function 0x7f9a6a0292f0 'abort' 'void (void) __attribute__((noreturn))'
+        `-IfStmt 0x7f9a6a02a788 <line:35:7, line:36:11>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7f9a6a02a658 <line:35:11> 'unsigned char' <LValueToRValue>
+          | `-DeclRefExpr 0x7f9a6a02a630 <col:11> 'unsigned char' lvalue Var 0x7f9a6a02a018 'remove' 'unsigned char'
+          |-BinaryOperator 0x7f9a6a02a760 <line:36:2, col:11> 'tree':'union tree_node *' '='
+          | |-UnaryOperator 0x7f9a6a02a6b0 <col:2, col:3> 'tree':'union tree_node *' lvalue prefix '*'
+          | | `-ImplicitCastExpr 0x7f9a6a02a698 <col:3> 'tree *' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7f9a6a02a670 <col:3> 'tree *' lvalue Var 0x7f9a6a029cc8 'pc' 'tree *'
+          | `-ImplicitCastExpr 0x7f9a6a02a748 <col:8, col:11> 'tree':'union tree_node *' <LValueToRValue>
+          |   `-MemberExpr 0x7f9a6a02a710 <col:8, col:11> 'tree':'union tree_node *' lvalue ->chain 0x7f9a6a029680
+          |     `-ImplicitCastExpr 0x7f9a6a02a6f8 <col:8> 'tree':'union tree_node *' <LValueToRValue>
+          |       `-DeclRefExpr 0x7f9a6a02a6d0 <col:8> 'tree':'union tree_node *' lvalue Var 0x7f9a6a029b88 'c' 'tree':'union tree_node *'
+          `-<<<NULL>>>

@@ -1,0 +1,32 @@
+../Data/C2AST/pr54355.c:9:11: error: use of undeclared identifier 'T'
+  case 0: T x >  
+          ^
+1 error generated.
+TranslationUnitDecl 0x7f989a8134e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f989a813a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f989a813780 '__int128'
+|-TypedefDecl 0x7f989a813ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f989a8137a0 'unsigned __int128'
+|-TypedefDecl 0x7f989a813da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f989a813bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f989a813b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f989a813e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f989a813e00 'char *'
+|   `-BuiltinType 0x7f989a813580 'char'
+|-TypedefDecl 0x7f989a814108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f989a8140b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f989a813f20 'struct __va_list_tag'
+|     `-Record 0x7f989a813e98 '__va_list_tag'
+`-FunctionDecl 0x7f989a84c860 <../Data/C2AST/pr54355.c:4:1, line:11:1> line:5:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f989a814178 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7f989a84ca50 <line:6:1, line:11:1>
+    `-SwitchStmt 0x7f989a84c988 <line:7:3, line:10:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f989a84c970 <line:7:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f989a84c948 <col:11> 'int' lvalue ParmVar 0x7f989a814178 'i' 'int'
+      `-CompoundStmt 0x7f989a84ca38 <line:8:3, line:10:3>
+        `-CaseStmt 0x7f989a84c9d8 <line:9:3, <invalid sloc>>
+          |-IntegerLiteral 0x7f989a84c9b8 <col:8> 'int' 0
+          |-<<<NULL>>>
+          `-NullStmt 0x7f989a84ca28 <<invalid sloc>>

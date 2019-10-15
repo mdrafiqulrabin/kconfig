@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fe1bc00aee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe1bc826468 <../Data/C2AST/pr68432-2.c:4:1, line:8:1> line:5:1 f1 'float (float)'
+| |-ParmVarDecl 0x7fe1bc00bb78 <col:5, col:11> col:11 used f 'float'
+| `-CompoundStmt 0x7fe1bc8267a0 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fe1bc826788 <line:7:3, col:28>
+|     `-CallExpr 0x7fe1bc826740 <col:10, col:28> 'float'
+|       |-ImplicitCastExpr 0x7fe1bc826728 <col:10> 'float (*)(float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fe1bc8266b0 <col:10> '<builtin fn type>' Function 0x7fe1bc826550 '__builtin_rintf' 'float (float)'
+|       `-ImplicitCastExpr 0x7fe1bc826770 <col:27> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe1bc8266d8 <col:27> 'float' lvalue ParmVar 0x7fe1bc00bb78 'f' 'float'
+|-FunctionDecl 0x7fe1bc826550 <col:10> col:10 implicit used __builtin_rintf 'float (float)' extern
+| |-ParmVarDecl 0x7fe1bc8265f0 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7fe1bc826658 <col:10> Implicit
+| `-ConstAttr 0x7fe1bc8266a0 <col:10> Implicit
+|-FunctionDecl 0x7fe1bc826898 <line:10:1, line:14:1> line:11:1 f2 'double (double)'
+| |-ParmVarDecl 0x7fe1bc8267d0 <col:5, col:12> col:12 used f 'double'
+| `-CompoundStmt 0x7fe1bc826b90 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fe1bc826b78 <line:13:3, col:27>
+|     `-CallExpr 0x7fe1bc826b30 <col:10, col:27> 'double'
+|       |-ImplicitCastExpr 0x7fe1bc826b18 <col:10> 'double (*)(double)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fe1bc826aa0 <col:10> '<builtin fn type>' Function 0x7fe1bc826940 '__builtin_rint' 'double (double)'
+|       `-ImplicitCastExpr 0x7fe1bc826b60 <col:26> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe1bc826ac8 <col:26> 'double' lvalue ParmVar 0x7fe1bc8267d0 'f' 'double'
+`-FunctionDecl 0x7fe1bc826940 <col:10> col:10 implicit used __builtin_rint 'double (double)' extern
+  |-ParmVarDecl 0x7fe1bc8269e0 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fe1bc826a48 <col:10> Implicit
+  `-ConstAttr 0x7fe1bc826a90 <col:10> Implicit

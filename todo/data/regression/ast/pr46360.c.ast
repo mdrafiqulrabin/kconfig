@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fe04b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe04b815368 <../Data/C2AST/pr46360.c:4:1> col:1 implicit used strncpy 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7fe04b815408 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fe04b815468 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7fe04b8154c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fe04b815540 prev 0x7fe04b815368 <line:3:1, line:7:1> line:4:1 used strncpy 'char *(char *, const char *, unsigned long)' extern inline
+| |-ParmVarDecl 0x7fe04b02c978 <col:10, col:16> col:16 used dest 'char *'
+| |-ParmVarDecl 0x7fe04b815200 <col:22, col:34> col:34 used src 'const char *'
+| |-ParmVarDecl 0x7fe04b815278 <<built-in>:81:23, ../Data/C2AST/pr46360.c:4:53> col:53 used len 'unsigned long'
+| |-CompoundStmt 0x7fe04b815a40 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7fe04b815a28 <line:6:3, col:43>
+| |   `-CallExpr 0x7fe04b8159a0 <col:10, col:43> 'char *'
+| |     |-ImplicitCastExpr 0x7fe04b815988 <col:10> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7fe04b815870 <col:10> '<builtin fn type>' Function 0x7fe04b815650 '__builtin_strncpy' 'char *(char *, const char *, unsigned long)'
+| |     |-ImplicitCastExpr 0x7fe04b8159e0 <col:29> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fe04b815898 <col:29> 'char *' lvalue ParmVar 0x7fe04b02c978 'dest' 'char *'
+| |     |-ImplicitCastExpr 0x7fe04b8159f8 <col:35> 'const char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fe04b8158c0 <col:35> 'const char *' lvalue ParmVar 0x7fe04b815200 'src' 'const char *'
+| |     `-ImplicitCastExpr 0x7fe04b815a10 <col:40> 'unsigned long' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fe04b8158e8 <col:40> 'unsigned long' lvalue ParmVar 0x7fe04b815278 'len' 'unsigned long'
+| |-AlwaysInlineAttr 0x7fe04b8155f8 <line:3:28> always_inline
+| `-GNUInlineAttr 0x7fe04b815640 <col:16>
+|-FunctionDecl 0x7fe04b815650 <line:6:10> col:10 implicit used __builtin_strncpy 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7fe04b8156f0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fe04b815750 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7fe04b8157b0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fe04b815828 <col:10> Implicit
+`-FunctionDecl 0x7fe04b815b30 <line:9:1, line:13:1> line:10:1 foo 'void (char *)'
+  |-ParmVarDecl 0x7fe04b815a70 <col:6, col:12> col:12 used s 'char *'
+  `-CompoundStmt 0x7fe04b815dd8 <line:11:1, line:13:1>
+    `-CallExpr 0x7fe04b815d38 <line:12:3, col:20> 'char *'
+      |-ImplicitCastExpr 0x7fe04b815d20 <col:3> 'char *(*)(char *, const char *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe04b815c18 <col:3> 'char *(char *, const char *, unsigned long)' Function 0x7fe04b815540 'strncpy' 'char *(char *, const char *, unsigned long)'
+      |-ImplicitCastExpr 0x7fe04b815d78 <col:12> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe04b815c40 <col:12> 'char *' lvalue ParmVar 0x7fe04b815a70 's' 'char *'
+      |-ImplicitCastExpr 0x7fe04b815da8 <col:15> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fe04b815d90 <col:15> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fe04b815ca8 <col:15> 'char [1]' lvalue ""
+      `-ImplicitCastExpr 0x7fe04b815dc0 <col:19> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fe04b815cd0 <col:19> 'int' 0

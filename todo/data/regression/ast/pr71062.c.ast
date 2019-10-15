@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fcfbe82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcfbe86be50 <../Data/C2AST/pr71062.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcfbe86bef0 prev 0x7fcfbe86be50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fcfbe86bfa0 <line:5:1, col:6> col:6 used bar 'char'
+|-FunctionDecl 0x7fcfbe86c168 <line:7:1, line:13:1> line:8:1 used foo 'int (char *restrict)'
+| |-ParmVarDecl 0x7fcfbe86c058 <col:6, col:23> col:23 used p 'char *restrict'
+| |-CompoundStmt 0x7fcfbe86c3b0 <line:9:1, line:13:1>
+| | |-IfStmt 0x7fcfbe86c340 <line:10:3, line:11:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcfbe86c2e0 <line:10:7, col:13> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7fcfbe86c2c8 <col:7> 'char *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcfbe86c258 <col:7> 'char *restrict' lvalue ParmVar 0x7fcfbe86c058 'p' 'char *restrict'
+| | | | `-UnaryOperator 0x7fcfbe86c2a8 <col:12, col:13> 'char *' prefix '&'
+| | | |   `-DeclRefExpr 0x7fcfbe86c280 <col:13> 'char' lvalue Var 0x7fcfbe86bfa0 'bar' 'char'
+| | | |-ReturnStmt 0x7fcfbe86c328 <line:11:5, col:12>
+| | | | `-IntegerLiteral 0x7fcfbe86c308 <col:12> 'int' 1
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fcfbe86c398 <line:12:3, col:10>
+| |   `-IntegerLiteral 0x7fcfbe86c378 <col:10> 'int' 0
+| `-NoInlineAttr 0x7fcfbe86c210 <line:7:20>
+`-FunctionDecl 0x7fcfbe86c420 <line:15:1, line:20:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7fcfbe86c718 <line:16:1, line:20:1>
+    |-IfStmt 0x7fcfbe86c6a8 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcfbe86c5f0 <line:17:7, col:21> 'int' '!='
+    | | |-CallExpr 0x7fcfbe86c5a0 <col:7, col:16> 'int'
+    | | | |-ImplicitCastExpr 0x7fcfbe86c588 <col:7> 'int (*)(char *restrict)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fcfbe86c4c0 <col:7> 'int (char *restrict)' Function 0x7fcfbe86c168 'foo' 'int (char *restrict)'
+    | | | `-UnaryOperator 0x7fcfbe86c510 <col:12, col:13> 'char *' prefix '&'
+    | | |   `-DeclRefExpr 0x7fcfbe86c4e8 <col:13> 'char' lvalue Var 0x7fcfbe86bfa0 'bar' 'char'
+    | | `-IntegerLiteral 0x7fcfbe86c5d0 <col:21> 'int' 1
+    | |-CallExpr 0x7fcfbe86c680 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcfbe86c668 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcfbe86c618 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcfbe86bef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcfbe86c700 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fcfbe86c6e0 <col:10> 'int' 0

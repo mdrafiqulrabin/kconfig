@@ -1,0 +1,571 @@
+TranslationUnitDecl 0x7fecd58174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fecd5872ad8 <../Data/C2AST/pr77644.c:5:37, line:11:23> <scratch space>:3:1 f_f1 'int (float, float)'
+| |-ParmVarDecl 0x7fecd5818178 <../Data/C2AST/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7fecd5872a00 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7fecd58732d0 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5872cd0 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5872c20 parent 0x7fecd58174e8 <line:22:9, line:8:17> <scratch space>:4:1 used gen_f1 'float ()'
+|   |-DeclStmt 0x7fecd5873050 <../Data/C2AST/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7fecd5872d00 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7fecd5873020 <<scratch space>:5:1, ../Data/C2AST/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5873008 <<scratch space>:5:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5872ef8 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5872fb8 <../Data/C2AST/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5872f90 <<scratch space>:6:1, ../Data/C2AST/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5872f78 <<scratch space>:6:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5872f20 <col:1> 'float ()' Function 0x7fecd5872c20 'gen_f1' 'float ()'
+|   |-DeclStmt 0x7fecd58731d8 <../Data/C2AST/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7fecd5873080 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7fecd58731a8 <<scratch space>:7:1, ../Data/C2AST/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5873190 <<scratch space>:7:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd58730e0 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5873170 <../Data/C2AST/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5873148 <<scratch space>:8:1, ../Data/C2AST/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5873130 <<scratch space>:8:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5873108 <col:1> 'float ()' Function 0x7fecd5872c20 'gen_f1' 'float ()'
+|   `-ReturnStmt 0x7fecd58732b8 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5873298 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5873270 <col:11, col:18> 'int' '<'
+|         |-ImplicitCastExpr 0x7fecd5873240 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd58731f0 <col:11> 'float' lvalue Var 0x7fecd5872d00 'xs' 'float'
+|         `-ImplicitCastExpr 0x7fecd5873258 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5873218 <col:18> 'float' lvalue Var 0x7fecd5873080 'xy' 'float'
+|-FunctionDecl 0x7fecd5872d98 <<scratch space>:5:1> col:1 implicit used __builtin_sqrtf 'float (float)' extern
+| |-ParmVarDecl 0x7fecd5872e38 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7fecd5872ea0 <col:1> Implicit
+| `-NoThrowAttr 0x7fecd5872ee8 <col:1> Implicit
+|-FunctionDecl 0x7fecd5873428 <../Data/C2AST/pr77644.c:5:37, line:11:23> <scratch space>:10:1 f_f2 'int (float, float)'
+| |-ParmVarDecl 0x7fecd5873318 <../Data/C2AST/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7fecd5873390 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7fecd58739b8 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd58735b0 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5873500 parent 0x7fecd58174e8 <line:22:9, line:8:17> <scratch space>:11:1 used gen_f2 'float ()'
+|   |-DeclStmt 0x7fecd5873738 <../Data/C2AST/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7fecd58735e0 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7fecd5873708 <<scratch space>:12:1, ../Data/C2AST/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd58736f0 <<scratch space>:12:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5873640 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd58736d0 <../Data/C2AST/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd58736a8 <<scratch space>:13:1, ../Data/C2AST/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5873690 <<scratch space>:13:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5873668 <col:1> 'float ()' Function 0x7fecd5873500 'gen_f2' 'float ()'
+|   |-DeclStmt 0x7fecd58738c0 <../Data/C2AST/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7fecd5873768 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7fecd5873890 <<scratch space>:14:1, ../Data/C2AST/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5873878 <<scratch space>:14:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd58737c8 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5873858 <../Data/C2AST/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5873830 <<scratch space>:15:1, ../Data/C2AST/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5873818 <<scratch space>:15:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd58737f0 <col:1> 'float ()' Function 0x7fecd5873500 'gen_f2' 'float ()'
+|   `-ReturnStmt 0x7fecd58739a0 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5873980 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5873958 <col:11, col:18> 'int' '<='
+|         |-ImplicitCastExpr 0x7fecd5873928 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd58738d8 <col:11> 'float' lvalue Var 0x7fecd58735e0 'xs' 'float'
+|         `-ImplicitCastExpr 0x7fecd5873940 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5873900 <col:18> 'float' lvalue Var 0x7fecd5873768 'xy' 'float'
+|-FunctionDecl 0x7fecd5874710 <line:5:37, line:11:23> <scratch space>:17:1 f_f3 'int (float, float)'
+| |-ParmVarDecl 0x7fecd5874600 <../Data/C2AST/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7fecd5874678 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7fecd5874ca0 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5874898 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd58747e8 parent 0x7fecd58174e8 <line:22:9, line:8:17> <scratch space>:18:1 used gen_f3 'float ()'
+|   |-DeclStmt 0x7fecd5874a20 <../Data/C2AST/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7fecd58748c8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7fecd58749f0 <<scratch space>:19:1, ../Data/C2AST/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd58749d8 <<scratch space>:19:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5874928 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd58749b8 <../Data/C2AST/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5874990 <<scratch space>:20:1, ../Data/C2AST/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5874978 <<scratch space>:20:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5874950 <col:1> 'float ()' Function 0x7fecd58747e8 'gen_f3' 'float ()'
+|   |-DeclStmt 0x7fecd5874ba8 <../Data/C2AST/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7fecd5874a50 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7fecd5874b78 <<scratch space>:21:1, ../Data/C2AST/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5874b60 <<scratch space>:21:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5874ab0 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5874b40 <../Data/C2AST/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5874b18 <<scratch space>:22:1, ../Data/C2AST/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5874b00 <<scratch space>:22:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5874ad8 <col:1> 'float ()' Function 0x7fecd58747e8 'gen_f3' 'float ()'
+|   `-ReturnStmt 0x7fecd5874c88 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5874c68 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5874c40 <col:11, col:18> 'int' '>'
+|         |-ImplicitCastExpr 0x7fecd5874c10 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd5874bc0 <col:11> 'float' lvalue Var 0x7fecd58748c8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7fecd5874c28 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5874be8 <col:18> 'float' lvalue Var 0x7fecd5874a50 'xy' 'float'
+|-FunctionDecl 0x7fecd5874df8 <line:5:37, line:11:23> <scratch space>:24:1 f_f4 'int (float, float)'
+| |-ParmVarDecl 0x7fecd5874ce8 <../Data/C2AST/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7fecd5874d60 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7fecd5875388 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5874f80 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5874ed0 parent 0x7fecd58174e8 <line:22:9, line:8:17> <scratch space>:25:1 used gen_f4 'float ()'
+|   |-DeclStmt 0x7fecd5875108 <../Data/C2AST/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7fecd5874fb0 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7fecd58750d8 <<scratch space>:26:1, ../Data/C2AST/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd58750c0 <<scratch space>:26:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5875010 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd58750a0 <../Data/C2AST/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5875078 <<scratch space>:27:1, ../Data/C2AST/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5875060 <<scratch space>:27:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5875038 <col:1> 'float ()' Function 0x7fecd5874ed0 'gen_f4' 'float ()'
+|   |-DeclStmt 0x7fecd5875290 <../Data/C2AST/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7fecd5875138 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7fecd5875260 <<scratch space>:28:1, ../Data/C2AST/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5875248 <<scratch space>:28:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5875198 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5875228 <../Data/C2AST/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5875200 <<scratch space>:29:1, ../Data/C2AST/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd58751e8 <<scratch space>:29:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd58751c0 <col:1> 'float ()' Function 0x7fecd5874ed0 'gen_f4' 'float ()'
+|   `-ReturnStmt 0x7fecd5875370 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5875350 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5875328 <col:11, col:18> 'int' '>='
+|         |-ImplicitCastExpr 0x7fecd58752f8 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd58752a8 <col:11> 'float' lvalue Var 0x7fecd5874fb0 'xs' 'float'
+|         `-ImplicitCastExpr 0x7fecd5875310 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd58752d0 <col:18> 'float' lvalue Var 0x7fecd5875138 'xy' 'float'
+|-FunctionDecl 0x7fecd58754e0 <line:5:37, line:11:23> <scratch space>:31:1 f_f5 'int (float, float)'
+| |-ParmVarDecl 0x7fecd58753d0 <../Data/C2AST/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7fecd5875448 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7fecd5875ab8 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd58756b0 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5875600 parent 0x7fecd58174e8 <line:22:9, line:8:17> <scratch space>:32:1 used gen_f5 'float ()'
+|   |-DeclStmt 0x7fecd5875838 <../Data/C2AST/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7fecd58756e0 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7fecd5875808 <<scratch space>:33:1, ../Data/C2AST/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd58757f0 <<scratch space>:33:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5875740 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd58757d0 <../Data/C2AST/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd58757a8 <<scratch space>:34:1, ../Data/C2AST/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5875790 <<scratch space>:34:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5875768 <col:1> 'float ()' Function 0x7fecd5875600 'gen_f5' 'float ()'
+|   |-DeclStmt 0x7fecd58759c0 <../Data/C2AST/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7fecd5875868 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7fecd5875990 <<scratch space>:35:1, ../Data/C2AST/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5875978 <<scratch space>:35:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd58758c8 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5875958 <../Data/C2AST/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5875930 <<scratch space>:36:1, ../Data/C2AST/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5875918 <<scratch space>:36:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd58758f0 <col:1> 'float ()' Function 0x7fecd5875600 'gen_f5' 'float ()'
+|   `-ReturnStmt 0x7fecd5875aa0 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5875a80 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5875a58 <col:11, col:18> 'int' '=='
+|         |-ImplicitCastExpr 0x7fecd5875a28 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd58759d8 <col:11> 'float' lvalue Var 0x7fecd58756e0 'xs' 'float'
+|         `-ImplicitCastExpr 0x7fecd5875a40 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5875a00 <col:18> 'float' lvalue Var 0x7fecd5875868 'xy' 'float'
+|-FunctionDecl 0x7fecd5875c10 <line:5:37, line:11:23> <scratch space>:38:1 f_f6 'int (float, float)'
+| |-ParmVarDecl 0x7fecd5875b00 <../Data/C2AST/pr77644.c:22:9, line:6:17> col:17 x 'float'
+| |-ParmVarDecl 0x7fecd5875b78 <line:22:9, line:6:25> col:25 y 'float'
+| `-CompoundStmt 0x7fecd58761a0 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5875d98 <line:22:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5875ce8 parent 0x7fecd58174e8 <line:22:9, line:8:17> <scratch space>:39:1 used gen_f6 'float ()'
+|   |-DeclStmt 0x7fecd5875f20 <../Data/C2AST/pr77644.c:22:9, line:9:49>
+|   | `-VarDecl 0x7fecd5875dc8 <line:22:9, line:9:48> col:8 used xs 'float' cinit
+|   |   `-CallExpr 0x7fecd5875ef0 <<scratch space>:40:1, ../Data/C2AST/pr77644.c:9:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5875ed8 <<scratch space>:40:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5875e28 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5875eb8 <../Data/C2AST/pr77644.c:9:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5875e90 <<scratch space>:41:1, ../Data/C2AST/pr77644.c:9:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5875e78 <<scratch space>:41:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5875e50 <col:1> 'float ()' Function 0x7fecd5875ce8 'gen_f6' 'float ()'
+|   |-DeclStmt 0x7fecd58760a8 <../Data/C2AST/pr77644.c:22:9, line:10:49>
+|   | `-VarDecl 0x7fecd5875f50 <line:22:9, line:10:48> col:8 used xy 'float' cinit
+|   |   `-CallExpr 0x7fecd5876078 <<scratch space>:42:1, ../Data/C2AST/pr77644.c:10:48> 'float'
+|   |     |-ImplicitCastExpr 0x7fecd5876060 <<scratch space>:42:1> 'float (*)(float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5875fb0 <col:1> '<builtin fn type>' Function 0x7fecd5872d98 '__builtin_sqrtf' 'float (float)'
+|   |     `-ParenExpr 0x7fecd5876040 <../Data/C2AST/pr77644.c:10:36, col:47> 'float'
+|   |       `-CallExpr 0x7fecd5876018 <<scratch space>:43:1, ../Data/C2AST/pr77644.c:10:46> 'float'
+|   |         `-ImplicitCastExpr 0x7fecd5876000 <<scratch space>:43:1> 'float (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5875fd8 <col:1> 'float ()' Function 0x7fecd5875ce8 'gen_f6' 'float ()'
+|   `-ReturnStmt 0x7fecd5876188 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5876168 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5876140 <col:11, col:18> 'int' '!='
+|         |-ImplicitCastExpr 0x7fecd5876110 <col:11> 'float' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd58760c0 <col:11> 'float' lvalue Var 0x7fecd5875dc8 'xs' 'float'
+|         `-ImplicitCastExpr 0x7fecd5876128 <col:18> 'float' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd58760e8 <col:18> 'float' lvalue Var 0x7fecd5875f50 'xy' 'float'
+|-FunctionDecl 0x7fecd5876338 <line:5:37, line:11:23> <scratch space>:44:1 f_1 'int (double, double)'
+| |-ParmVarDecl 0x7fecd58761e8 <../Data/C2AST/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7fecd5876260 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7fecd5878330 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd58764f0 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5876440 parent 0x7fecd58174e8 <line:23:9, line:8:17> <scratch space>:45:1 used gen_1 'double ()'
+|   |-DeclStmt 0x7fecd58780b0 <../Data/C2AST/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7fecd5876520 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7fecd5878080 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5878068 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5877f60 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5878018 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5877ff0 <<scratch space>:46:1, ../Data/C2AST/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5877fd8 <<scratch space>:46:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5877f88 <col:1> 'double ()' Function 0x7fecd5876440 'gen_1' 'double ()'
+|   |-DeclStmt 0x7fecd5878238 <../Data/C2AST/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7fecd58780e0 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7fecd5878208 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd58781f0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5878140 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd58781d0 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd58781a8 <<scratch space>:47:1, ../Data/C2AST/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5878190 <<scratch space>:47:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5878168 <col:1> 'double ()' Function 0x7fecd5876440 'gen_1' 'double ()'
+|   `-ReturnStmt 0x7fecd5878318 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd58782f8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd58782d0 <col:11, col:18> 'int' '<'
+|         |-ImplicitCastExpr 0x7fecd58782a0 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd5878250 <col:11> 'double' lvalue Var 0x7fecd5876520 'xs' 'double'
+|         `-ImplicitCastExpr 0x7fecd58782b8 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5878278 <col:18> 'double' lvalue Var 0x7fecd58780e0 'xy' 'double'
+|-FunctionDecl 0x7fecd5877e00 <line:9:13> col:13 implicit used __builtin_sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7fecd5877ea0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fecd5877f08 <col:13> Implicit
+| `-NoThrowAttr 0x7fecd5877f50 <col:13> Implicit
+|-FunctionDecl 0x7fecd5878488 <line:5:37, line:11:23> <scratch space>:48:1 f_2 'int (double, double)'
+| |-ParmVarDecl 0x7fecd5878378 <../Data/C2AST/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7fecd58783f0 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7fecd5878a18 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5878610 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5878560 parent 0x7fecd58174e8 <line:23:9, line:8:17> <scratch space>:49:1 used gen_2 'double ()'
+|   |-DeclStmt 0x7fecd5878798 <../Data/C2AST/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7fecd5878640 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7fecd5878768 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5878750 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd58786a0 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5878730 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5878708 <<scratch space>:50:1, ../Data/C2AST/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd58786f0 <<scratch space>:50:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd58786c8 <col:1> 'double ()' Function 0x7fecd5878560 'gen_2' 'double ()'
+|   |-DeclStmt 0x7fecd5878920 <../Data/C2AST/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7fecd58787c8 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7fecd58788f0 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd58788d8 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5878828 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd58788b8 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5878890 <<scratch space>:51:1, ../Data/C2AST/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5878878 <<scratch space>:51:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5878850 <col:1> 'double ()' Function 0x7fecd5878560 'gen_2' 'double ()'
+|   `-ReturnStmt 0x7fecd5878a00 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd58789e0 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd58789b8 <col:11, col:18> 'int' '<='
+|         |-ImplicitCastExpr 0x7fecd5878988 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd5878938 <col:11> 'double' lvalue Var 0x7fecd5878640 'xs' 'double'
+|         `-ImplicitCastExpr 0x7fecd58789a0 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5878960 <col:18> 'double' lvalue Var 0x7fecd58787c8 'xy' 'double'
+|-FunctionDecl 0x7fecd5878b70 <line:5:37, line:11:23> <scratch space>:52:1 f_3 'int (double, double)'
+| |-ParmVarDecl 0x7fecd5878a60 <../Data/C2AST/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7fecd5878ad8 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7fecd5879110 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5878cf8 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5878c48 parent 0x7fecd58174e8 <line:23:9, line:8:17> <scratch space>:53:1 used gen_3 'double ()'
+|   |-DeclStmt 0x7fecd5878e90 <../Data/C2AST/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7fecd5878d28 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7fecd5878e60 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5878e48 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5878d88 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5878e28 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5878e00 <<scratch space>:54:1, ../Data/C2AST/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5878dd8 <<scratch space>:54:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5878db0 <col:1> 'double ()' Function 0x7fecd5878c48 'gen_3' 'double ()'
+|   |-DeclStmt 0x7fecd5879018 <../Data/C2AST/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7fecd5878ec0 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7fecd5878fe8 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5878fd0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5878f20 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5878fb0 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5878f88 <<scratch space>:55:1, ../Data/C2AST/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5878f70 <<scratch space>:55:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5878f48 <col:1> 'double ()' Function 0x7fecd5878c48 'gen_3' 'double ()'
+|   `-ReturnStmt 0x7fecd58790f8 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd58790d8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd58790b0 <col:11, col:18> 'int' '>'
+|         |-ImplicitCastExpr 0x7fecd5879080 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd5879030 <col:11> 'double' lvalue Var 0x7fecd5878d28 'xs' 'double'
+|         `-ImplicitCastExpr 0x7fecd5879098 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5879058 <col:18> 'double' lvalue Var 0x7fecd5878ec0 'xy' 'double'
+|-FunctionDecl 0x7fecd5879268 <line:5:37, line:11:23> <scratch space>:56:1 f_4 'int (double, double)'
+| |-ParmVarDecl 0x7fecd5879158 <../Data/C2AST/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7fecd58791d0 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7fecd58797f8 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd58793f0 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5879340 parent 0x7fecd58174e8 <line:23:9, line:8:17> <scratch space>:57:1 used gen_4 'double ()'
+|   |-DeclStmt 0x7fecd5879578 <../Data/C2AST/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7fecd5879420 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7fecd5879548 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5879530 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5879480 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5879510 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd58794e8 <<scratch space>:58:1, ../Data/C2AST/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd58794d0 <<scratch space>:58:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd58794a8 <col:1> 'double ()' Function 0x7fecd5879340 'gen_4' 'double ()'
+|   |-DeclStmt 0x7fecd5879700 <../Data/C2AST/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7fecd58795a8 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7fecd58796d0 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd58796b8 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5879608 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5879698 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5879670 <<scratch space>:59:1, ../Data/C2AST/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5879658 <<scratch space>:59:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5879630 <col:1> 'double ()' Function 0x7fecd5879340 'gen_4' 'double ()'
+|   `-ReturnStmt 0x7fecd58797e0 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd58797c0 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5879798 <col:11, col:18> 'int' '>='
+|         |-ImplicitCastExpr 0x7fecd5879768 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd5879718 <col:11> 'double' lvalue Var 0x7fecd5879420 'xs' 'double'
+|         `-ImplicitCastExpr 0x7fecd5879780 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5879740 <col:18> 'double' lvalue Var 0x7fecd58795a8 'xy' 'double'
+|-FunctionDecl 0x7fecd5879950 <line:5:37, line:11:23> <scratch space>:60:1 f_5 'int (double, double)'
+| |-ParmVarDecl 0x7fecd5879840 <../Data/C2AST/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7fecd58798b8 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7fecd5879ee0 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd5879ad8 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd5879a28 parent 0x7fecd58174e8 <line:23:9, line:8:17> <scratch space>:61:1 used gen_5 'double ()'
+|   |-DeclStmt 0x7fecd5879c60 <../Data/C2AST/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7fecd5879b08 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7fecd5879c30 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5879c18 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5879b68 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5879bf8 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5879bd0 <<scratch space>:62:1, ../Data/C2AST/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5879bb8 <<scratch space>:62:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5879b90 <col:1> 'double ()' Function 0x7fecd5879a28 'gen_5' 'double ()'
+|   |-DeclStmt 0x7fecd5879de8 <../Data/C2AST/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7fecd5879c90 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7fecd5879db8 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd5879da0 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd5879cf0 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd5879d80 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd5879d58 <<scratch space>:63:1, ../Data/C2AST/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd5879d40 <<scratch space>:63:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd5879d18 <col:1> 'double ()' Function 0x7fecd5879a28 'gen_5' 'double ()'
+|   `-ReturnStmt 0x7fecd5879ec8 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd5879ea8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd5879e80 <col:11, col:18> 'int' '=='
+|         |-ImplicitCastExpr 0x7fecd5879e50 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd5879e00 <col:11> 'double' lvalue Var 0x7fecd5879b08 'xs' 'double'
+|         `-ImplicitCastExpr 0x7fecd5879e68 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd5879e28 <col:18> 'double' lvalue Var 0x7fecd5879c90 'xy' 'double'
+|-FunctionDecl 0x7fecd587a038 <line:5:37, line:11:23> <scratch space>:64:1 f_6 'int (double, double)'
+| |-ParmVarDecl 0x7fecd5879f28 <../Data/C2AST/pr77644.c:23:9, line:6:17> col:17 x 'double'
+| |-ParmVarDecl 0x7fecd5879fa0 <line:23:9, line:6:25> col:25 y 'double'
+| `-CompoundStmt 0x7fecd587a5c8 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd587a1c0 <line:23:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd587a110 parent 0x7fecd58174e8 <line:23:9, line:8:17> <scratch space>:65:1 used gen_6 'double ()'
+|   |-DeclStmt 0x7fecd587a348 <../Data/C2AST/pr77644.c:23:9, line:9:49>
+|   | `-VarDecl 0x7fecd587a1f0 <line:23:9, line:9:48> col:8 used xs 'double' cinit
+|   |   `-CallExpr 0x7fecd587a318 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd587a300 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587a250 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd587a2e0 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd587a2b8 <<scratch space>:66:1, ../Data/C2AST/pr77644.c:9:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd587a2a0 <<scratch space>:66:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587a278 <col:1> 'double ()' Function 0x7fecd587a110 'gen_6' 'double ()'
+|   |-DeclStmt 0x7fecd587a4d0 <../Data/C2AST/pr77644.c:23:9, line:10:49>
+|   | `-VarDecl 0x7fecd587a378 <line:23:9, line:10:48> col:8 used xy 'double' cinit
+|   |   `-CallExpr 0x7fecd587a4a0 <col:13, col:48> 'double'
+|   |     |-ImplicitCastExpr 0x7fecd587a488 <col:13> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587a3d8 <col:13> '<builtin fn type>' Function 0x7fecd5877e00 '__builtin_sqrt' 'double (double)'
+|   |     `-ParenExpr 0x7fecd587a468 <col:36, col:47> 'double'
+|   |       `-CallExpr 0x7fecd587a440 <<scratch space>:67:1, ../Data/C2AST/pr77644.c:10:46> 'double'
+|   |         `-ImplicitCastExpr 0x7fecd587a428 <<scratch space>:67:1> 'double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587a400 <col:1> 'double ()' Function 0x7fecd587a110 'gen_6' 'double ()'
+|   `-ReturnStmt 0x7fecd587a5b0 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd587a590 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd587a568 <col:11, col:18> 'int' '!='
+|         |-ImplicitCastExpr 0x7fecd587a538 <col:11> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd587a4e8 <col:11> 'double' lvalue Var 0x7fecd587a1f0 'xs' 'double'
+|         `-ImplicitCastExpr 0x7fecd587a550 <col:18> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd587a510 <col:18> 'double' lvalue Var 0x7fecd587a378 'xy' 'double'
+|-FunctionDecl 0x7fecd587a768 <line:5:37, line:11:23> <scratch space>:69:1 f_l1 'int (long double, long double)'
+| |-ParmVarDecl 0x7fecd587a610 <../Data/C2AST/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7fecd587a688 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7fecd587df28 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd587a920 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd587a870 parent 0x7fecd58174e8 <line:24:9, line:8:17> <scratch space>:70:1 used gen_l1 'long double ()'
+|   |-DeclStmt 0x7fecd587aca0 <../Data/C2AST/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7fecd587a950 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7fecd587ac70 <<scratch space>:71:1, ../Data/C2AST/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587ac58 <<scratch space>:71:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587ab48 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587ac08 <../Data/C2AST/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587abe0 <<scratch space>:72:1, ../Data/C2AST/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587abc8 <<scratch space>:72:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587ab70 <col:1> 'long double ()' Function 0x7fecd587a870 'gen_l1' 'long double ()'
+|   |-DeclStmt 0x7fecd587de30 <../Data/C2AST/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7fecd587acd0 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7fecd587de00 <<scratch space>:73:1, ../Data/C2AST/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587ade0 <<scratch space>:73:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587ad30 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587adc0 <../Data/C2AST/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587ad98 <<scratch space>:74:1, ../Data/C2AST/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587ad80 <<scratch space>:74:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587ad58 <col:1> 'long double ()' Function 0x7fecd587a870 'gen_l1' 'long double ()'
+|   `-ReturnStmt 0x7fecd587df10 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd587def0 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd587dec8 <col:11, col:18> 'int' '<'
+|         |-ImplicitCastExpr 0x7fecd587de98 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd587de48 <col:11> 'long double' lvalue Var 0x7fecd587a950 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7fecd587deb0 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd587de70 <col:18> 'long double' lvalue Var 0x7fecd587acd0 'xy' 'long double'
+|-FunctionDecl 0x7fecd587a9e8 <<scratch space>:71:1> col:1 implicit used __builtin_sqrtl 'long double (long double)' extern
+| |-ParmVarDecl 0x7fecd587aa88 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7fecd587aaf0 <col:1> Implicit
+| `-NoThrowAttr 0x7fecd587ab38 <col:1> Implicit
+|-FunctionDecl 0x7fecd587e080 <../Data/C2AST/pr77644.c:5:37, line:11:23> <scratch space>:76:1 f_l2 'int (long double, long double)'
+| |-ParmVarDecl 0x7fecd587df70 <../Data/C2AST/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7fecd587dfe8 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7fecd587e610 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd587e208 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd587e158 parent 0x7fecd58174e8 <line:24:9, line:8:17> <scratch space>:77:1 used gen_l2 'long double ()'
+|   |-DeclStmt 0x7fecd587e390 <../Data/C2AST/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7fecd587e238 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7fecd587e360 <<scratch space>:78:1, ../Data/C2AST/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587e348 <<scratch space>:78:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587e298 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587e328 <../Data/C2AST/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587e300 <<scratch space>:79:1, ../Data/C2AST/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587e2e8 <<scratch space>:79:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587e2c0 <col:1> 'long double ()' Function 0x7fecd587e158 'gen_l2' 'long double ()'
+|   |-DeclStmt 0x7fecd587e518 <../Data/C2AST/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7fecd587e3c0 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7fecd587e4e8 <<scratch space>:80:1, ../Data/C2AST/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587e4d0 <<scratch space>:80:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587e420 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587e4b0 <../Data/C2AST/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587e488 <<scratch space>:81:1, ../Data/C2AST/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587e470 <<scratch space>:81:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587e448 <col:1> 'long double ()' Function 0x7fecd587e158 'gen_l2' 'long double ()'
+|   `-ReturnStmt 0x7fecd587e5f8 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd587e5d8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd587e5b0 <col:11, col:18> 'int' '<='
+|         |-ImplicitCastExpr 0x7fecd587e580 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd587e530 <col:11> 'long double' lvalue Var 0x7fecd587e238 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7fecd587e598 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd587e558 <col:18> 'long double' lvalue Var 0x7fecd587e3c0 'xy' 'long double'
+|-FunctionDecl 0x7fecd587e768 <line:5:37, line:11:23> <scratch space>:83:1 f_l3 'int (long double, long double)'
+| |-ParmVarDecl 0x7fecd587e658 <../Data/C2AST/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7fecd587e6d0 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7fecd587ecf8 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd587e8f0 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd587e840 parent 0x7fecd58174e8 <line:24:9, line:8:17> <scratch space>:84:1 used gen_l3 'long double ()'
+|   |-DeclStmt 0x7fecd587ea78 <../Data/C2AST/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7fecd587e920 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7fecd587ea48 <<scratch space>:85:1, ../Data/C2AST/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587ea30 <<scratch space>:85:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587e980 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587ea10 <../Data/C2AST/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587e9e8 <<scratch space>:86:1, ../Data/C2AST/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587e9d0 <<scratch space>:86:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587e9a8 <col:1> 'long double ()' Function 0x7fecd587e840 'gen_l3' 'long double ()'
+|   |-DeclStmt 0x7fecd587ec00 <../Data/C2AST/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7fecd587eaa8 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7fecd587ebd0 <<scratch space>:87:1, ../Data/C2AST/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587ebb8 <<scratch space>:87:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587eb08 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587eb98 <../Data/C2AST/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587eb70 <<scratch space>:88:1, ../Data/C2AST/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587eb58 <<scratch space>:88:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587eb30 <col:1> 'long double ()' Function 0x7fecd587e840 'gen_l3' 'long double ()'
+|   `-ReturnStmt 0x7fecd587ece0 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd587ecc0 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd587ec98 <col:11, col:18> 'int' '>'
+|         |-ImplicitCastExpr 0x7fecd587ec68 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd587ec18 <col:11> 'long double' lvalue Var 0x7fecd587e920 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7fecd587ec80 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd587ec40 <col:18> 'long double' lvalue Var 0x7fecd587eaa8 'xy' 'long double'
+|-FunctionDecl 0x7fecd587ee98 <line:5:37, line:11:23> <scratch space>:90:1 f_l4 'int (long double, long double)'
+| |-ParmVarDecl 0x7fecd587ed40 <../Data/C2AST/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7fecd587ee00 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7fecd587f428 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd587f020 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd587ef70 parent 0x7fecd58174e8 <line:24:9, line:8:17> <scratch space>:91:1 used gen_l4 'long double ()'
+|   |-DeclStmt 0x7fecd587f1a8 <../Data/C2AST/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7fecd587f050 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7fecd587f178 <<scratch space>:92:1, ../Data/C2AST/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587f160 <<scratch space>:92:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587f0b0 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587f140 <../Data/C2AST/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587f118 <<scratch space>:93:1, ../Data/C2AST/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587f100 <<scratch space>:93:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587f0d8 <col:1> 'long double ()' Function 0x7fecd587ef70 'gen_l4' 'long double ()'
+|   |-DeclStmt 0x7fecd587f330 <../Data/C2AST/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7fecd587f1d8 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7fecd587f300 <<scratch space>:94:1, ../Data/C2AST/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587f2e8 <<scratch space>:94:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587f238 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587f2c8 <../Data/C2AST/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587f2a0 <<scratch space>:95:1, ../Data/C2AST/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587f288 <<scratch space>:95:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587f260 <col:1> 'long double ()' Function 0x7fecd587ef70 'gen_l4' 'long double ()'
+|   `-ReturnStmt 0x7fecd587f410 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd587f3f0 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd587f3c8 <col:11, col:18> 'int' '>='
+|         |-ImplicitCastExpr 0x7fecd587f398 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd587f348 <col:11> 'long double' lvalue Var 0x7fecd587f050 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7fecd587f3b0 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd587f370 <col:18> 'long double' lvalue Var 0x7fecd587f1d8 'xy' 'long double'
+|-FunctionDecl 0x7fecd587f580 <line:5:37, line:11:23> <scratch space>:97:1 f_l5 'int (long double, long double)'
+| |-ParmVarDecl 0x7fecd587f470 <../Data/C2AST/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+| |-ParmVarDecl 0x7fecd587f4e8 <line:24:9, line:6:25> col:25 y 'long double'
+| `-CompoundStmt 0x7fecd587fb10 <col:28, line:11:23>
+|   |-DeclStmt 0x7fecd587f708 <line:24:9, line:8:18>
+|   | `-FunctionDecl 0x7fecd587f658 parent 0x7fecd58174e8 <line:24:9, line:8:17> <scratch space>:98:1 used gen_l5 'long double ()'
+|   |-DeclStmt 0x7fecd587f890 <../Data/C2AST/pr77644.c:24:9, line:9:49>
+|   | `-VarDecl 0x7fecd587f738 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+|   |   `-CallExpr 0x7fecd587f860 <<scratch space>:99:1, ../Data/C2AST/pr77644.c:9:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587f848 <<scratch space>:99:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587f798 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587f828 <../Data/C2AST/pr77644.c:9:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587f800 <<scratch space>:100:1, ../Data/C2AST/pr77644.c:9:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587f7e8 <<scratch space>:100:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587f7c0 <col:1> 'long double ()' Function 0x7fecd587f658 'gen_l5' 'long double ()'
+|   |-DeclStmt 0x7fecd587fa18 <../Data/C2AST/pr77644.c:24:9, line:10:49>
+|   | `-VarDecl 0x7fecd587f8c0 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+|   |   `-CallExpr 0x7fecd587f9e8 <<scratch space>:101:1, ../Data/C2AST/pr77644.c:10:48> 'long double'
+|   |     |-ImplicitCastExpr 0x7fecd587f9d0 <<scratch space>:101:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fecd587f920 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+|   |     `-ParenExpr 0x7fecd587f9b0 <../Data/C2AST/pr77644.c:10:36, col:47> 'long double'
+|   |       `-CallExpr 0x7fecd587f988 <<scratch space>:102:1, ../Data/C2AST/pr77644.c:10:46> 'long double'
+|   |         `-ImplicitCastExpr 0x7fecd587f970 <<scratch space>:102:1> 'long double (*)()' <FunctionToPointerDecay>
+|   |           `-DeclRefExpr 0x7fecd587f948 <col:1> 'long double ()' Function 0x7fecd587f658 'gen_l5' 'long double ()'
+|   `-ReturnStmt 0x7fecd587faf8 <../Data/C2AST/pr77644.c:11:3, col:20>
+|     `-ParenExpr 0x7fecd587fad8 <col:10, col:20> 'int'
+|       `-BinaryOperator 0x7fecd587fab0 <col:11, col:18> 'int' '=='
+|         |-ImplicitCastExpr 0x7fecd587fa80 <col:11> 'long double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fecd587fa30 <col:11> 'long double' lvalue Var 0x7fecd587f738 'xs' 'long double'
+|         `-ImplicitCastExpr 0x7fecd587fa98 <col:18> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fecd587fa58 <col:18> 'long double' lvalue Var 0x7fecd587f8c0 'xy' 'long double'
+`-FunctionDecl 0x7fecd587fc68 <line:5:37, line:11:23> <scratch space>:104:1 f_l6 'int (long double, long double)'
+  |-ParmVarDecl 0x7fecd587fb58 <../Data/C2AST/pr77644.c:24:9, line:6:17> col:17 x 'long double'
+  |-ParmVarDecl 0x7fecd587fbd0 <line:24:9, line:6:25> col:25 y 'long double'
+  `-CompoundStmt 0x7fecd5880208 <col:28, line:11:23>
+    |-DeclStmt 0x7fecd587fe00 <line:24:9, line:8:18>
+    | `-FunctionDecl 0x7fecd587fd40 parent 0x7fecd58174e8 <line:24:9, line:8:17> <scratch space>:105:1 used gen_l6 'long double ()'
+    |-DeclStmt 0x7fecd587ff88 <../Data/C2AST/pr77644.c:24:9, line:9:49>
+    | `-VarDecl 0x7fecd587fe30 <line:24:9, line:9:48> col:8 used xs 'long double' cinit
+    |   `-CallExpr 0x7fecd587ff58 <<scratch space>:106:1, ../Data/C2AST/pr77644.c:9:48> 'long double'
+    |     |-ImplicitCastExpr 0x7fecd587ff40 <<scratch space>:106:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+    |     | `-DeclRefExpr 0x7fecd587fe90 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+    |     `-ParenExpr 0x7fecd587ff20 <../Data/C2AST/pr77644.c:9:36, col:47> 'long double'
+    |       `-CallExpr 0x7fecd587fef8 <<scratch space>:107:1, ../Data/C2AST/pr77644.c:9:46> 'long double'
+    |         `-ImplicitCastExpr 0x7fecd587fee0 <<scratch space>:107:1> 'long double (*)()' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7fecd587feb8 <col:1> 'long double ()' Function 0x7fecd587fd40 'gen_l6' 'long double ()'
+    |-DeclStmt 0x7fecd5880110 <../Data/C2AST/pr77644.c:24:9, line:10:49>
+    | `-VarDecl 0x7fecd587ffb8 <line:24:9, line:10:48> col:8 used xy 'long double' cinit
+    |   `-CallExpr 0x7fecd58800e0 <<scratch space>:108:1, ../Data/C2AST/pr77644.c:10:48> 'long double'
+    |     |-ImplicitCastExpr 0x7fecd58800c8 <<scratch space>:108:1> 'long double (*)(long double)' <BuiltinFnToFnPtr>
+    |     | `-DeclRefExpr 0x7fecd5880018 <col:1> '<builtin fn type>' Function 0x7fecd587a9e8 '__builtin_sqrtl' 'long double (long double)'
+    |     `-ParenExpr 0x7fecd58800a8 <../Data/C2AST/pr77644.c:10:36, col:47> 'long double'
+    |       `-CallExpr 0x7fecd5880080 <<scratch space>:109:1, ../Data/C2AST/pr77644.c:10:46> 'long double'
+    |         `-ImplicitCastExpr 0x7fecd5880068 <<scratch space>:109:1> 'long double (*)()' <FunctionToPointerDecay>
+    |           `-DeclRefExpr 0x7fecd5880040 <col:1> 'long double ()' Function 0x7fecd587fd40 'gen_l6' 'long double ()'
+    `-ReturnStmt 0x7fecd58801f0 <../Data/C2AST/pr77644.c:11:3, col:20>
+      `-ParenExpr 0x7fecd58801d0 <col:10, col:20> 'int'
+        `-BinaryOperator 0x7fecd58801a8 <col:11, col:18> 'int' '!='
+          |-ImplicitCastExpr 0x7fecd5880178 <col:11> 'long double' <LValueToRValue>
+          | `-DeclRefExpr 0x7fecd5880128 <col:11> 'long double' lvalue Var 0x7fecd587fe30 'xs' 'long double'
+          `-ImplicitCastExpr 0x7fecd5880190 <col:18> 'long double' <LValueToRValue>
+            `-DeclRefExpr 0x7fecd5880150 <col:18> 'long double' lvalue Var 0x7fecd587ffb8 'xy' 'long double'

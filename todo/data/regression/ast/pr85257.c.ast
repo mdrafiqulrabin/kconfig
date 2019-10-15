@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fb93102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb93182bc38 <../Data/C2AST/pr85257.c:5:1, col:18> col:18 referenced V '__attribute__((__vector_size__(16 * sizeof(__int128)))) __int128'
+| `-VectorType 0x7fb93182bc00 '__attribute__((__vector_size__(16 * sizeof(__int128)))) __int128' 16
+|   `-BuiltinType 0x7fb93102bf80 '__int128'
+|-FunctionDecl 0x7fb93182bd58 <line:7:1, line:12:1> line:8:1 used foo '__int128 (void)'
+| `-CompoundStmt 0x7fb93182c488 <line:9:1, line:12:1>
+|   |-DeclStmt 0x7fb93182c3d0 <line:10:3, col:66>
+|   | `-VarDecl 0x7fb93182be70 <col:3, col:65> col:5 used v 'V':'__attribute__((__vector_size__(16 * sizeof(__int128)))) __int128' cinit
+|   |   `-InitListExpr 0x7fb93182c190 <col:9, col:65> 'V':'__attribute__((__vector_size__(16 * sizeof(__int128)))) __int128'
+|   |     |-ImplicitCastExpr 0x7fb93182c250 <col:11> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bed0 <col:11> 'int' 1
+|   |     |-ImplicitCastExpr 0x7fb93182c268 <col:14> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bef0 <col:14> 'int' 2
+|   |     |-ImplicitCastExpr 0x7fb93182c280 <col:17> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bf10 <col:17> 'int' 3
+|   |     |-ImplicitCastExpr 0x7fb93182c298 <col:20> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bf30 <col:20> 'int' 4
+|   |     |-ImplicitCastExpr 0x7fb93182c2b0 <col:23> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bf50 <col:23> 'int' 5
+|   |     |-ImplicitCastExpr 0x7fb93182c2c8 <col:26> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bf70 <col:26> 'int' 6
+|   |     |-ImplicitCastExpr 0x7fb93182c2e0 <col:29> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bf90 <col:29> 'int' 7
+|   |     |-ImplicitCastExpr 0x7fb93182c2f8 <col:32> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bfb0 <col:32> 'int' 8
+|   |     |-ImplicitCastExpr 0x7fb93182c310 <col:35> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bfd0 <col:35> 'int' 9
+|   |     |-ImplicitCastExpr 0x7fb93182c328 <col:38> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182bff0 <col:38> 'int' 10
+|   |     |-ImplicitCastExpr 0x7fb93182c340 <col:42> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182c010 <col:42> 'int' 11
+|   |     |-ImplicitCastExpr 0x7fb93182c358 <col:46> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182c030 <col:46> 'int' 12
+|   |     |-ImplicitCastExpr 0x7fb93182c370 <col:50> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182c050 <col:50> 'int' 13
+|   |     |-ImplicitCastExpr 0x7fb93182c388 <col:54> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182c070 <col:54> 'int' 14
+|   |     |-ImplicitCastExpr 0x7fb93182c3a0 <col:58> '__int128' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fb93182c090 <col:58> 'int' 15
+|   |     `-ImplicitCastExpr 0x7fb93182c3b8 <col:62> '__int128' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fb93182c0b0 <col:62> 'int' 16
+|   `-ReturnStmt 0x7fb93182c470 <line:11:3, col:13>
+|     `-ImplicitCastExpr 0x7fb93182c458 <col:10, col:13> '__int128' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fb93182c430 <col:10, col:13> '__int128' lvalue vectorcomponent
+|         |-DeclRefExpr 0x7fb93182c3e8 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(__int128)))) __int128' lvalue Var 0x7fb93182be70 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(__int128)))) __int128'
+|         `-IntegerLiteral 0x7fb93182c410 <col:12> 'int' 5
+|-FunctionDecl 0x7fb93182c500 <line:14:1, line:20:1> line:15:1 main 'int ()'
+| `-CompoundStmt 0x7fb93182c8b8 <line:16:1, line:20:1>
+|   |-IfStmt 0x7fb93182c848 <line:17:3, line:18:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb93182c670 <line:17:7, col:17> 'int' '!='
+|   | | |-CallExpr 0x7fb93182c610 <col:7, col:12> '__int128'
+|   | | | `-ImplicitCastExpr 0x7fb93182c5f8 <col:7> '__int128 (*)(void)' <FunctionToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7fb93182c5a0 <col:7> '__int128 (void)' Function 0x7fb93182bd58 'foo' '__int128 (void)'
+|   | | `-ImplicitCastExpr 0x7fb93182c658 <col:17> '__int128' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fb93182c638 <col:17> 'int' 6
+|   | |-CallExpr 0x7fb93182c820 <line:18:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb93182c808 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb93182c7b8 <col:5> '<builtin fn type>' Function 0x7fb93182c6d0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb93182c8a0 <line:19:3, col:10>
+|     `-IntegerLiteral 0x7fb93182c880 <col:10> 'int' 0
+`-FunctionDecl 0x7fb93182c6d0 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb93182c770 <col:5> Implicit

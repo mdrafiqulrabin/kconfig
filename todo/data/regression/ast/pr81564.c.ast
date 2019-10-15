@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fe61602bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe61602c960 <../Data/C2AST/pr81564.c:5:1, line:8:1> line:5:8 struct a definition
+| |-FieldDecl 0x7fe617011238 <line:6:5, col:9> col:9 b 'int'
+| `-FieldDecl 0x7fe617011298 <line:7:5, col:9> col:9 referenced c 'int'
+|-FunctionDecl 0x7fe6170113a0 <line:10:1, line:21:1> line:11:1 foo 'void (void)'
+| `-CompoundStmt 0x7fe617011c58 <line:12:1, line:21:1>
+|   |-DeclStmt 0x7fe617011590 <line:13:3, col:14>
+|   | `-VarDecl 0x7fe617011530 <col:3, col:13> col:13 used e 'struct a *'
+|   `-SwitchStmt 0x7fe617011638 <line:14:3, line:20:3>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fe617011620 <line:14:11, col:14> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7fe6170115e8 <col:11, col:14> 'int' lvalue ->c 0x7fe617011298
+|     |   `-ImplicitCastExpr 0x7fe6170115d0 <col:11> 'struct a *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fe6170115a8 <col:11> 'struct a *' lvalue Var 0x7fe617011530 'e' 'struct a *'
+|     `-CompoundStmt 0x7fe617011c40 <line:15:3, line:20:3>
+|       `-CaseStmt 0x7fe617011688 <line:16:5, line:19:24>
+|         |-IntegerLiteral 0x7fe617011668 <line:16:10> 'int' 7
+|         |-<<<NULL>>>
+|         `-CaseStmt 0x7fe6170116e0 <line:17:5, line:19:24>
+|           |-IntegerLiteral 0x7fe6170116c0 <line:17:10> 'int' 3
+|           |-<<<NULL>>>
+|           `-IfStmt 0x7fe617011c08 <line:18:7, line:19:24>
+|             |-<<<NULL>>>
+|             |-<<<NULL>>>
+|             |-CallExpr 0x7fe6170119f0 <line:18:11, col:33> 'long'
+|             | |-ImplicitCastExpr 0x7fe6170119d8 <col:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|             | | `-DeclRefExpr 0x7fe617011928 <col:11> '<builtin fn type>' Function 0x7fe617011760 '__builtin_expect' 'long (long, long)'
+|             | |-ImplicitCastExpr 0x7fe617011a28 <col:28, col:29> 'long' <IntegralCast>
+|             | | `-UnaryOperator 0x7fe617011970 <col:28, col:29> 'int' prefix '!'
+|             | |   `-IntegerLiteral 0x7fe617011950 <col:29> 'int' 0
+|             | `-ImplicitCastExpr 0x7fe617011a40 <col:32> 'long' <IntegralCast>
+|             |   `-IntegerLiteral 0x7fe617011990 <col:32> 'int' 0
+|             |-CallExpr 0x7fe617011be0 <line:19:2, col:24> 'void'
+|             | `-ImplicitCastExpr 0x7fe617011bc8 <col:2> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|             |   `-DeclRefExpr 0x7fe617011b78 <col:2> '<builtin fn type>' Function 0x7fe617011a90 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|             `-<<<NULL>>>
+|-FunctionDecl 0x7fe617011760 <line:18:11> col:11 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7fe617011800 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7fe617011860 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7fe6170118d0 <col:11> Implicit
+| `-ConstAttr 0x7fe617011918 <col:11> Implicit
+`-FunctionDecl 0x7fe617011a90 <line:19:2> col:2 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fe617011b30 <col:2> Implicit

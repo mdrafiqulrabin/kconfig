@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fcb8f019ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcb8e801060 <../Data/C2AST/pr66482.c:4:1, col:16> col:6 f 'void (int)'
+| |-ParmVarDecl 0x7fcb8f01a778 <col:8, col:12> col:12 p 'int'
+| `-CompoundStmt 0x7fcb8e801148 <col:15, col:16>
+`-FunctionDecl 0x7fcb8e8011b0 <line:5:1, line:9:1> line:5:5 referenced g 'int ()'
+  `-CompoundStmt 0x7fcb8e801490 <col:9, line:9:1>
+    |-DeclStmt 0x7fcb8e8013b0 <line:6:3, col:11>
+    | `-FunctionDecl 0x7fcb8e801298 parent 0x7fcb8f019ae8 prev 0x7fcb8e801060 <col:3, col:10> col:8 f 'void (int)'
+    |   `-ParmVarDecl 0x7fcb8e801348 <<invalid sloc>> <invalid sloc> implicit 'int'
+    |-CallExpr 0x7fcb8e801430 <line:7:3, col:5> 'int'
+    | `-ImplicitCastExpr 0x7fcb8e801418 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fcb8e8013c8 <col:3> 'int ()' Function 0x7fcb8e8011b0 'g' 'int ()'
+    `-ReturnStmt 0x7fcb8e801478 <line:8:3, col:10>
+      `-IntegerLiteral 0x7fcb8e801458 <col:10> 'int' 0

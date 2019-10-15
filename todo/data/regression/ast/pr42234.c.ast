@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fdc9182bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdc92014260 <../Data/C2AST/pr42234.c:3:1, line:14:1> line:4:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fdc9182c978 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fdc92014ab0 <line:5:1, line:14:1>
+    |-DeclStmt 0x7fdc920145c8 <line:6:3, col:32>
+    | |-RecordDecl 0x7fdc92014348 <col:3, col:21> col:10 struct S definition
+    | | `-FieldDecl 0x7fdc92014408 <col:14, col:18> col:18 referenced s 'int'
+    | `-VarDecl 0x7fdc920144a0 <col:3, col:31> col:23 used d 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fdc92014568 <col:27, col:31> 'struct S':'struct S'
+    |     `-IntegerLiteral 0x7fdc92014500 <col:29> 'int' 1
+    |-DeclStmt 0x7fdc92014690 <line:7:3, col:21>
+    | `-VarDecl 0x7fdc920145f8 <col:3, col:20> col:16 used e 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fdc92014678 <col:20> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fdc92014658 <col:20> 'int' 1
+    |-IfStmt 0x7fdc92014a30 <line:8:3, line:12:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fdc920146d0 <line:8:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fdc920146a8 <col:7> 'int' lvalue ParmVar 0x7fdc9182c978 'x' 'int'
+    | |-BinaryOperator 0x7fdc92014850 <line:9:5, col:16> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7fdc920146e8 <col:5> 'unsigned int' lvalue Var 0x7fdc920145f8 'e' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fdc92014838 <col:9, col:16> 'unsigned int' <IntegralCast>
+    | |   `-BinaryOperator 0x7fdc92014810 <col:9, col:16> 'int' '&&'
+    | |     |-ImplicitCastExpr 0x7fdc920147e0 <col:9> 'int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fdc92014710 <col:9> 'int' lvalue ParmVar 0x7fdc9182c978 'x' 'int'
+    | |     `-ImplicitCastExpr 0x7fdc920147f8 <col:14, col:16> 'int' <LValueToRValue>
+    | |       `-MemberExpr 0x7fdc92014760 <col:14, col:16> 'int' lvalue .s 0x7fdc92014408
+    | |         `-DeclRefExpr 0x7fdc92014738 <col:14> 'struct S':'struct S' lvalue Var 0x7fdc920144a0 'd' 'struct S':'struct S'
+    | `-ForStmt 0x7fdc920149f8 <line:11:5, line:12:7>
+    |   |-BinaryOperator 0x7fdc920148d8 <line:11:10, col:14> 'unsigned int' '='
+    |   | |-DeclRefExpr 0x7fdc92014878 <col:10> 'unsigned int' lvalue Var 0x7fdc920145f8 'e' 'unsigned int'
+    |   | `-ImplicitCastExpr 0x7fdc920148c0 <col:14> 'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fdc920148a0 <col:14> 'int' 0
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fdc92014978 <col:17, col:22> 'int' '<='
+    |   | |-ImplicitCastExpr 0x7fdc92014948 <col:17> 'unsigned int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fdc92014900 <col:17> 'unsigned int' lvalue Var 0x7fdc920145f8 'e' 'unsigned int'
+    |   | `-ImplicitCastExpr 0x7fdc92014960 <col:22> 'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fdc92014928 <col:22> 'int' 3
+    |   |-UnaryOperator 0x7fdc920149c8 <col:25, col:26> 'unsigned int' postfix '--'
+    |   | `-DeclRefExpr 0x7fdc920149a0 <col:25> 'unsigned int' lvalue Var 0x7fdc920145f8 'e' 'unsigned int'
+    |   `-NullStmt 0x7fdc920149e8 <line:12:7>
+    `-UnaryOperator 0x7fdc92014a90 <line:13:3, col:4> 'unsigned int' postfix '++'
+      `-DeclRefExpr 0x7fdc92014a68 <col:3> 'unsigned int' lvalue Var 0x7fdc920145f8 'e' 'unsigned int'

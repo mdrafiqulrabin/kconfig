@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fd5810174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd581018160 <../Data/C2AST/pr14814.c:4:1, line:5:17> line:4:8 struct YY definition
+| `-FieldDecl 0x7fd5818364a0 <line:5:3, col:13> col:10 referenced e 'double [3]'
+|-FunctionDecl 0x7fd5818366d8 <line:7:1, col:68> col:23 used y 'double *(struct YY *)' static inline
+| |-ParmVarDecl 0x7fd5818365a0 <col:25, col:36> col:36 used this_1 'struct YY *'
+| `-CompoundStmt 0x7fd5818368d0 <col:44, col:68>
+|   `-ReturnStmt 0x7fd5818368b8 <col:46, col:65>
+|     `-UnaryOperator 0x7fd581836898 <col:53, col:65> 'double *' prefix '&'
+|       `-ArraySubscriptExpr 0x7fd581836870 <col:54, col:65> 'double' lvalue
+|         |-ImplicitCastExpr 0x7fd581836858 <col:54, col:62> 'double *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7fd581836800 <col:54, col:62> 'double [3]' lvalue ->e 0x7fd5818364a0
+|         |   `-ImplicitCastExpr 0x7fd5818367e8 <col:54> 'struct YY *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fd5818367c0 <col:54> 'struct YY *' lvalue ParmVar 0x7fd5818365a0 'this_1' 'struct YY *'
+|         `-IntegerLiteral 0x7fd581836838 <col:64> 'int' 1
+|-RecordDecl 0x7fd5818368e8 <line:9:1, line:11:2> line:9:8 struct XX definition
+| `-FieldDecl 0x7fd5818369b0 <line:10:3, col:13> col:13 referenced v 'struct YY':'struct YY'
+|-FunctionDecl 0x7fd581836c00 <line:13:1, col:81> col:25 used direction 'struct YY (const struct XX *)' static inline
+| |-ParmVarDecl 0x7fd581836af0 <col:36, col:54> col:54 used this_1 'const struct XX *'
+| `-CompoundStmt 0x7fd581836d50 <col:62, col:81>
+|   `-ReturnStmt 0x7fd581836d38 <col:64, col:79>
+|     `-ImplicitCastExpr 0x7fd581836d20 <col:71, col:79> 'struct YY':'struct YY' <LValueToRValue>
+|       `-MemberExpr 0x7fd581836ce8 <col:71, col:79> 'const struct YY':'const struct YY' lvalue ->v 0x7fd5818369b0
+|         `-ImplicitCastExpr 0x7fd581836cd0 <col:71> 'const struct XX *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd581836ca8 <col:71> 'const struct XX *' lvalue ParmVar 0x7fd581836af0 'this_1' 'const struct XX *'
+`-FunctionDecl 0x7fd581836e98 <line:15:1, line:19:1> line:15:5 foo 'int (const struct XX *)'
+  |-ParmVarDecl 0x7fd581836d90 <col:9, col:26> col:26 used r 'const struct XX *'
+  `-CompoundStmt 0x7fd581837318 <col:29, line:19:1>
+    |-DeclStmt 0x7fd5818370c8 <line:16:3, col:29>
+    | `-VarDecl 0x7fd581836f60 <col:3, col:28> col:13 used t 'struct YY':'struct YY' cinit
+    |   `-CallExpr 0x7fd581837080 <col:17, col:28> 'struct YY':'struct YY'
+    |     |-ImplicitCastExpr 0x7fd581837068 <col:17> 'struct YY (*)(const struct XX *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fd581836fc0 <col:17> 'struct YY (const struct XX *)' Function 0x7fd581836c00 'direction' 'struct YY (const struct XX *)'
+    |     `-ImplicitCastExpr 0x7fd5818370b0 <col:27> 'const struct XX *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd581836fe8 <col:27> 'const struct XX *' lvalue ParmVar 0x7fd581836d90 'r' 'const struct XX *'
+    |-IfStmt 0x7fd5818372a8 <line:17:3, col:33>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd581837248 <col:7, col:16> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd581837230 <col:7, col:12> 'double' <LValueToRValue>
+    | | | `-UnaryOperator 0x7fd5818371f0 <col:7, col:12> 'double' lvalue prefix '*'
+    | | |   `-CallExpr 0x7fd5818371c0 <col:8, col:12> 'double *'
+    | | |     |-ImplicitCastExpr 0x7fd5818371a8 <col:8> 'double *(*)(struct YY *)' <FunctionToPointerDecay>
+    | | |     | `-DeclRefExpr 0x7fd5818370e0 <col:8> 'double *(struct YY *)' Function 0x7fd5818366d8 'y' 'double *(struct YY *)'
+    | | |     `-UnaryOperator 0x7fd581837130 <col:10, col:11> 'struct YY *' prefix '&'
+    | | |       `-DeclRefExpr 0x7fd581837108 <col:11> 'struct YY':'struct YY' lvalue Var 0x7fd581836f60 't' 'struct YY':'struct YY'
+    | | `-FloatingLiteral 0x7fd581837210 <col:16> 'double' 1.000000e-06
+    | |-ReturnStmt 0x7fd581837290 <col:26, col:33>
+    | | `-IntegerLiteral 0x7fd581837270 <col:33> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd581837300 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fd5818372e0 <col:10> 'int' 1

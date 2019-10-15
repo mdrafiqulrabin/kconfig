@@ -1,0 +1,47 @@
+../Data/C2AST/pr70876.c:8:17: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct { char a[z]; } x;
+                ^
+1 error generated.
+TranslationUnitDecl 0x7fa20b02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa20b02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa20b02bf80 '__int128'
+|-TypedefDecl 0x7fa20b02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa20b02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa20b02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa20b02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa20b02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa20b02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa20b02c600 'char *'
+|   `-BuiltinType 0x7fa20b02bd80 'char'
+|-TypedefDecl 0x7fa20b02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa20b02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa20b02c720 'struct __va_list_tag'
+|     `-Record 0x7fa20b02c698 '__va_list_tag'
+`-FunctionDecl 0x7fa20b8142d0 <../Data/C2AST/pr70876.c:4:1, line:13:1> line:4:6 f 'void (char *, char *)'
+  |-ParmVarDecl 0x7fa20b02c978 <col:9, col:15> col:15 used s1 'char *'
+  |-ParmVarDecl 0x7fa20b814200 <col:19, col:25> col:25 used s2 'char *'
+  `-CompoundStmt 0x7fa20b814a58 <line:5:1, line:13:1>
+    |-DeclStmt 0x7fa20b814458 <line:6:3, col:12>
+    | `-VarDecl 0x7fa20b8143d8 <col:3, col:11> col:7 used z 'int' cinit
+    |   `-IntegerLiteral 0x7fa20b814438 <col:11> 'int' 5
+    |-DeclStmt 0x7fa20b8146c8 <line:8:3, col:26>
+    | |-RecordDecl 0x7fa20b814470 <col:3, col:23> col:3 invalid struct definition
+    | | `-FieldDecl 0x7fa20b8145b8 <col:12, col:20> col:17 invalid a 'char [z]'
+    | `-VarDecl 0x7fa20b814650 <col:3, col:25> col:25 used x 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)'
+    |-BinaryOperator 0x7fa20b814808 <line:10:3, col:15> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa20b814740 <col:3, col:7> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa20b814728 <col:3> 'char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa20b8146e0 <col:3> 'char *' lvalue ParmVar 0x7fa20b02c978 's1' 'char *'
+    | | `-IntegerLiteral 0x7fa20b814708 <col:6> 'int' 0
+    | `-ImplicitCastExpr 0x7fa20b8147f0 <col:11, col:15> 'char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fa20b8147c8 <col:11, col:15> 'char' lvalue
+    |     |-ImplicitCastExpr 0x7fa20b8147b0 <col:11> 'char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa20b814768 <col:11> 'char *' lvalue ParmVar 0x7fa20b814200 's2' 'char *'
+    |     `-IntegerLiteral 0x7fa20b814790 <col:14> 'int' 0
+    `-CallExpr 0x7fa20b8149f0 <line:12:3, col:12> 'int'
+      |-ImplicitCastExpr 0x7fa20b8149d8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa20b814930 <col:3> 'int ()' Function 0x7fa20b814880 'foo' 'int ()'
+      |-ImplicitCastExpr 0x7fa20b814a28 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa20b814958 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)' lvalue Var 0x7fa20b814650 'x' 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)'
+      `-ImplicitCastExpr 0x7fa20b814a40 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)' <LValueToRValue>
+        `-DeclRefExpr 0x7fa20b814980 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)' lvalue Var 0x7fa20b814650 'x' 'struct (anonymous struct at ../Data/C2AST/pr70876.c:8:3)':'struct (anonymous at ../Data/C2AST/pr70876.c:8:3)'

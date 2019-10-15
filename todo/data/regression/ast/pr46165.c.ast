@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f810a0134e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f810a049050 <../Data/C2AST/pr46165.c:5:1, col:48> col:13 used foo 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f810a0491c0 <line:6:1, line:11:1> line:7:1 g 'void (void)'
+  `-CompoundStmt 0x7f810a0494e8 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f810a049468 <line:9:3, col:25>
+    | `-VarDecl 0x7f810a049388 <col:3, col:22> col:10 used f 'void (*)(void)' cinit
+    |   `-ImplicitCastExpr 0x7f810a049450 <col:22> 'void (*)(void)' <BitCast>
+    |     `-ImplicitCastExpr 0x7f810a049438 <col:22> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f810a0493e8 <col:22> 'void (void) __attribute__((noreturn))' Function 0x7f810a049050 'foo' 'void (void) __attribute__((noreturn))'
+    `-CallExpr 0x7f810a0494c0 <line:10:3, col:6> 'void'
+      `-ImplicitCastExpr 0x7f810a0494a8 <col:3> 'void (*)(void)' <LValueToRValue>
+        `-DeclRefExpr 0x7f810a049480 <col:3> 'void (*)(void)' lvalue Var 0x7f810a049388 'f' 'void (*)(void)'

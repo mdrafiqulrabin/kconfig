@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fc2c8802ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc2c7816028 <../Data/C2AST/pr34407.c:3:1, col:30> col:12 used ReadBlobByte 'int (void)' extern
+`-FunctionDecl 0x7fc2c7816210 <line:5:1, line:14:1> line:5:6 ReadRLEImage 'void (unsigned char *)'
+  |-ParmVarDecl 0x7fc2c7816150 <col:20, col:35> col:35 used p 'unsigned char *'
+  `-CompoundStmt 0x7fc2c7816a68 <line:6:1, line:14:1>
+    |-DeclStmt 0x7fc2c7816540 <line:7:3, col:53>
+    | `-VarDecl 0x7fc2c7816340 <col:3, col:52> col:17 used background_color 'unsigned char [4]' cinit
+    |   `-InitListExpr 0x7fc2c7816480 <col:39, col:52> 'unsigned char [4]'
+    |     |-ImplicitCastExpr 0x7fc2c78164e0 <col:41> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fc2c78163a0 <col:41> 'int' 0
+    |     |-ImplicitCastExpr 0x7fc2c78164f8 <col:44> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fc2c78163c0 <col:44> 'int' 1
+    |     |-ImplicitCastExpr 0x7fc2c7816510 <col:47> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fc2c78163e0 <col:47> 'int' 2
+    |     `-ImplicitCastExpr 0x7fc2c7816528 <col:50> 'unsigned char' <IntegralCast>
+    |       `-IntegerLiteral 0x7fc2c7816400 <col:50> 'int' 3
+    |-DeclStmt 0x7fc2c78165d0 <line:8:3, col:9>
+    | `-VarDecl 0x7fc2c7816570 <col:3, col:8> col:8 used j 'long'
+    |-DeclStmt 0x7fc2c7816710 <line:10:3, col:47>
+    | `-VarDecl 0x7fc2c7816600 <col:3, col:46> col:17 used number_planes 'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7fc2c78166f8 <col:33, col:46> 'unsigned long' <IntegralCast>
+    |     `-CallExpr 0x7fc2c78166d0 <col:33, col:46> 'int'
+    |       `-ImplicitCastExpr 0x7fc2c78166b8 <col:33> 'int (*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fc2c7816660 <col:33> 'int (void)' Function 0x7fc2c7816028 'ReadBlobByte' 'int (void)'
+    `-ForStmt 0x7fc2c7816a30 <line:12:3, line:13:30>
+      |-BinaryOperator 0x7fc2c7816788 <line:12:8, col:12> 'long' '='
+      | |-DeclRefExpr 0x7fc2c7816728 <col:8> 'long' lvalue Var 0x7fc2c7816570 'j' 'long'
+      | `-ImplicitCastExpr 0x7fc2c7816770 <col:12> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7fc2c7816750 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc2c7816870 <col:15, col:26> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc2c7816858 <col:15> 'long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc2c78167b0 <col:15> 'long' lvalue Var 0x7fc2c7816570 'j' 'long'
+      | `-CStyleCastExpr 0x7fc2c7816830 <col:19, col:26> 'long' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fc2c7816818 <col:26> 'unsigned long' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fc2c78167d8 <col:26> 'unsigned long' lvalue Var 0x7fc2c7816600 'number_planes' 'unsigned long'
+      |-UnaryOperator 0x7fc2c78168c0 <col:41, col:42> 'long' postfix '++'
+      | `-DeclRefExpr 0x7fc2c7816898 <col:41> 'long' lvalue Var 0x7fc2c7816570 'j' 'long'
+      `-BinaryOperator 0x7fc2c7816a08 <line:13:5, col:30> 'unsigned char' '='
+        |-UnaryOperator 0x7fc2c7816928 <col:5, col:7> 'unsigned char' lvalue prefix '*'
+        | `-UnaryOperator 0x7fc2c7816908 <col:6, col:7> 'unsigned char *' postfix '++'
+        |   `-DeclRefExpr 0x7fc2c78168e0 <col:6> 'unsigned char *' lvalue ParmVar 0x7fc2c7816150 'p' 'unsigned char *'
+        `-ImplicitCastExpr 0x7fc2c78169f0 <col:12, col:30> 'unsigned char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fc2c78169c8 <col:12, col:30> 'unsigned char' lvalue
+            |-ImplicitCastExpr 0x7fc2c7816998 <col:12> 'unsigned char *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7fc2c7816948 <col:12> 'unsigned char [4]' lvalue Var 0x7fc2c7816340 'background_color' 'unsigned char [4]'
+            `-ImplicitCastExpr 0x7fc2c78169b0 <col:29> 'long' <LValueToRValue>
+              `-DeclRefExpr 0x7fc2c7816970 <col:29> 'long' lvalue Var 0x7fc2c7816570 'j' 'long'

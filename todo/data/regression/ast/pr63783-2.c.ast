@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7ff21d02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff21d098f90 <../Data/C2AST/pr63783-2.c:6:1, col:11> col:11 used decision_result 'long long'
+|-VarDecl 0x7ff21d099008 <line:7:1, col:11> col:11 used val 'long long'
+|-VarDecl 0x7ff21d099080 <line:8:1, col:17> col:5 used truecount 'int' cinit
+| `-IntegerLiteral 0x7ff21d0990e0 <col:17> 'int' 0
+|-FunctionDecl 0x7ff21d0991e0 <line:10:1, line:20:1> line:11:1 used buggy 'void (int)' static
+| |-ParmVarDecl 0x7ff21d099118 <col:8, col:12> col:12 used flag 'int'
+| |-CompoundStmt 0x7ff21d099680 <line:12:1, line:20:1>
+| | |-DeclStmt 0x7ff21d099348 <line:13:3, col:16>
+| | | `-VarDecl 0x7ff21d0992e8 <col:3, col:7> col:7 used condition 'int'
+| | |-IfStmt 0x7ff21d099588 <line:14:3, line:17:18>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ff21d0993c0 <line:14:6, col:14> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7ff21d0993a8 <col:6> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7ff21d099360 <col:6> 'int' lvalue ParmVar 0x7ff21d099118 'flag' 'int'
+| | | | `-IntegerLiteral 0x7ff21d099388 <col:14> 'int' 0
+| | | |-BinaryOperator 0x7ff21d0994b0 <line:15:5, col:24> 'int' '='
+| | | | |-DeclRefExpr 0x7ff21d0993e8 <col:5> 'int' lvalue Var 0x7ff21d0992e8 'condition' 'int'
+| | | | `-BinaryOperator 0x7ff21d099488 <col:17, col:24> 'int' '!='
+| | | |   |-ImplicitCastExpr 0x7ff21d099458 <col:17> 'long long' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7ff21d099410 <col:17> 'long long' lvalue Var 0x7ff21d099008 'val' 'long long'
+| | | |   `-ImplicitCastExpr 0x7ff21d099470 <col:24> 'long long' <IntegralCast>
+| | | |     `-IntegerLiteral 0x7ff21d099438 <col:24> 'int' 0
+| | | `-BinaryOperator 0x7ff21d099560 <line:17:5, col:18> 'int' '='
+| | |   |-DeclRefExpr 0x7ff21d0994d8 <col:5> 'int' lvalue Var 0x7ff21d0992e8 'condition' 'int'
+| | |   `-UnaryOperator 0x7ff21d099540 <col:17, col:18> 'int' prefix '!'
+| | |     `-ImplicitCastExpr 0x7ff21d099528 <col:18> 'long long' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ff21d099500 <col:18> 'long long' lvalue Var 0x7ff21d098f90 'decision_result' 'long long'
+| | `-IfStmt 0x7ff21d099648 <line:18:3, line:19:15>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-ImplicitCastExpr 0x7ff21d0995e8 <line:18:7> 'int' <LValueToRValue>
+| |   | `-DeclRefExpr 0x7ff21d0995c0 <col:7> 'int' lvalue Var 0x7ff21d0992e8 'condition' 'int'
+| |   |-UnaryOperator 0x7ff21d099628 <line:19:6, col:15> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7ff21d099600 <col:6> 'int' lvalue Var 0x7ff21d099080 'truecount' 'int'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff21d099288 <line:10:28>
+|-FunctionDecl 0x7ff21d099778 <line:22:1, line:29:1> line:23:1 main 'int (void)'
+| `-CompoundStmt 0x7ff21d09b150 <line:24:1, line:29:1>
+|   |-BinaryOperator 0x7ff21d0998a8 <line:25:3, col:21> 'long long' '='
+|   | |-DeclRefExpr 0x7ff21d099848 <col:3> 'long long' lvalue Var 0x7ff21d098f90 'decision_result' 'long long'
+|   | `-ImplicitCastExpr 0x7ff21d099890 <col:21> 'long long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7ff21d099870 <col:21> 'int' 1
+|   |-CallExpr 0x7ff21d099960 <line:26:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7ff21d099948 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff21d0998d0 <col:3> 'void (int)' Function 0x7ff21d0991e0 'buggy' 'void (int)'
+|   | `-IntegerLiteral 0x7ff21d0998f8 <col:9> 'int' 1
+|   |-ParenExpr 0x7ff21d09b0f8 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7ff21d09b0c8 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7ff21d09ad00 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7ff21d09ace8 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7ff21d099b98 <col:6> '<builtin fn type>' Function 0x7ff21d0999d0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7ff21d09ad38 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7ff21d09ac80 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7ff21d09ac60 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7ff21d09ac38 <../Data/C2AST/pr63783-2.c:27:11, col:24> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7ff21d09ac20 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7ff21d099bc0 <col:11> 'int' lvalue Var 0x7ff21d099080 'truecount' 'int'
+|   |   | |       `-IntegerLiteral 0x7ff21d09ac00 <col:24> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7ff21d09ad50 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7ff21d09aca0 <col:29> 'int' 0
+|   |   |-CallExpr 0x7ff21d09afb0 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7ff21d09af98 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7ff21d09ad68 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7ff21d098e30 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7ff21d09aff8 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7ff21d09ae38 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7ff21d09ae08 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7ff21d09b028 <<scratch space>:10:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7ff21d09b010 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7ff21d09ae98 <col:1> 'char [26]' lvalue "../Data/C2AST/pr63783-2.c"
+|   |   | |-IntegerLiteral 0x7ff21d09aee0 <line:11:1> 'int' 27
+|   |   | `-ImplicitCastExpr 0x7ff21d09b058 <line:9:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7ff21d09b040 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7ff21d09af38 <col:1> 'char [15]' lvalue "truecount == 0"
+|   |   `-CStyleCastExpr 0x7ff21d09b0a0 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7ff21d09b070 <col:89> 'int' 0
+|   `-ReturnStmt 0x7ff21d09b138 <../Data/C2AST/pr63783-2.c:28:3, col:10>
+|     `-IntegerLiteral 0x7ff21d09b118 <col:10> 'int' 0
+`-FunctionDecl 0x7ff21d0999d0 </usr/include/assert.h:93:6> col:6 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7ff21d099a70 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7ff21d099ad0 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7ff21d099b40 <col:6> Implicit
+  `-ConstAttr 0x7ff21d099b88 <col:6> Implicit

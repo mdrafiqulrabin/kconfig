@@ -1,0 +1,115 @@
+TranslationUnitDecl 0x7f928d81b8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f928d81c578 <../Data/C2AST/pr47991.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f928d81baa0 'unsigned long'
+|-FunctionDecl 0x7f928e822248 <line:8:1> col:1 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f928e8222e8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f928e822348 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f928e8223a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f928e822420 prev 0x7f928e822248 <line:6:1, line:11:1> line:8:1 used memset 'void *(void *, int, unsigned long)' extern inline
+| |-ParmVarDecl 0x7f928e822000 <col:9, col:15> col:15 used x 'void *'
+| |-ParmVarDecl 0x7f928e822078 <col:18, col:22> col:22 used y 'int'
+| |-ParmVarDecl 0x7f928e822110 <col:25, col:32> col:32 used z 'size_t':'unsigned long'
+| |-CompoundStmt 0x7f928e822d28 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7f928e822d10 <line:10:3, col:71>
+| |   `-CallExpr 0x7f928e822c80 <col:10, col:71> 'void *'
+| |     |-ImplicitCastExpr 0x7f928e822c68 <col:10> 'void *(*)(void *, int, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7f928e8227f8 <col:10> '<builtin fn type>' Function 0x7f928e822570 '__builtin___memset_chk' 'void *(void *, int, unsigned long, unsigned long)'
+| |     |-ImplicitCastExpr 0x7f928e822cc8 <col:34> 'void *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f928e822820 <col:34> 'void *' lvalue ParmVar 0x7f928e822000 'x' 'void *'
+| |     |-ImplicitCastExpr 0x7f928e822ce0 <col:37> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f928e822848 <col:37> 'int' lvalue ParmVar 0x7f928e822078 'y' 'int'
+| |     |-ImplicitCastExpr 0x7f928e822cf8 <col:40> 'size_t':'unsigned long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f928e822870 <col:40> 'size_t':'unsigned long' lvalue ParmVar 0x7f928e822110 'z' 'size_t':'unsigned long'
+| |     `-CallExpr 0x7f928e822b90 <col:43, col:70> 'unsigned long'
+| |       |-ImplicitCastExpr 0x7f928e822b78 <col:43> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7f928e822ac8 <col:43> '<builtin fn type>' Function 0x7f928e822910 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |       |-ImplicitCastExpr 0x7f928e822be0 <col:66> 'const void *' <BitCast>
+| |       | `-ImplicitCastExpr 0x7f928e822bc8 <col:66> 'void *' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7f928e822af0 <col:66> 'void *' lvalue ParmVar 0x7f928e822000 'x' 'void *'
+| |       `-IntegerLiteral 0x7f928e822b18 <col:69> 'int' 0
+| `-AlwaysInlineAttr 0x7f928e8224d8 <line:6:31> always_inline
+|-FunctionDecl 0x7f928e822570 <line:10:10> col:10 implicit used __builtin___memset_chk 'void *(void *, int, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7f928e822610 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f928e822670 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7f928e8226d0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f928e822730 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7f928e8227b0 <col:10> Implicit
+|-FunctionDecl 0x7f928e822910 <col:43> col:43 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7f928e8229b0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f928e822a10 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7f928e822a80 <col:43> Implicit
+|-FunctionDecl 0x7f928e838ba0 <line:13:1, line:25:1> line:14:1 foo 'void (unsigned char *, unsigned char *, unsigned char *, unsigned char *, unsigned int, int, int)'
+| |-ParmVarDecl 0x7f928e822d80 <col:6, col:21> col:21 used x 'unsigned char *'
+| |-ParmVarDecl 0x7f928e822df8 <col:24, col:39> col:39 used y 'unsigned char *'
+| |-ParmVarDecl 0x7f928e822e70 <col:42, col:57> col:57 used z 'unsigned char *'
+| |-ParmVarDecl 0x7f928e822ee8 <line:15:6, col:21> col:21 used w 'unsigned char *'
+| |-ParmVarDecl 0x7f928e822f60 <col:24, col:37> col:37 used v 'unsigned int'
+| |-ParmVarDecl 0x7f928e838a00 <col:40, col:44> col:44 used u 'int'
+| |-ParmVarDecl 0x7f928e838a78 <col:47, col:51> col:51 used t 'int'
+| `-CompoundStmt 0x7f928e839890 <line:16:1, line:25:1>
+|   |-DeclStmt 0x7f928e838d30 <line:17:3, col:8>
+|   | `-VarDecl 0x7f928e838cd0 <col:3, col:7> col:7 used i 'int'
+|   |-ForStmt 0x7f928e8393f8 <line:18:3, line:23:5>
+|   | |-BinaryOperator 0x7f928e838d90 <line:18:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f928e838d48 <col:8> 'int' lvalue Var 0x7f928e838cd0 'i' 'int'
+|   | | `-IntegerLiteral 0x7f928e838d70 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f928e838e38 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f928e838e08 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f928e838db8 <col:15> 'int' lvalue Var 0x7f928e838cd0 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f928e838e20 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f928e838de0 <col:19> 'int' lvalue ParmVar 0x7f928e838a78 't' 'int'
+|   | |-UnaryOperator 0x7f928e838e88 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f928e838e60 <col:22> 'int' lvalue Var 0x7f928e838cd0 'i' 'int'
+|   | `-CompoundStmt 0x7f928e8393d0 <line:19:5, line:23:5>
+|   |   |-CallExpr 0x7f928e839030 <line:20:7, col:25> 'void *'
+|   |   | |-ImplicitCastExpr 0x7f928e839018 <col:7> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f928e838ea8 <col:7> 'void *(void *, int, unsigned long)' Function 0x7f928e822420 'memset' 'void *(void *, int, unsigned long)'
+|   |   | |-ImplicitCastExpr 0x7f928e839088 <col:15> 'void *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7f928e839070 <col:15> 'unsigned char *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7f928e838ed0 <col:15> 'unsigned char *' lvalue ParmVar 0x7f928e822e70 'z' 'unsigned char *'
+|   |   | |-ImplicitCastExpr 0x7f928e8390b8 <col:18, col:21> 'int' <IntegralCast>
+|   |   | | `-ImplicitCastExpr 0x7f928e8390a0 <col:18, col:21> 'unsigned char' <LValueToRValue>
+|   |   | |   `-ArraySubscriptExpr 0x7f928e838f58 <col:18, col:21> 'unsigned char' lvalue
+|   |   | |     |-ImplicitCastExpr 0x7f928e838f40 <col:18> 'unsigned char *' <LValueToRValue>
+|   |   | |     | `-DeclRefExpr 0x7f928e838ef8 <col:18> 'unsigned char *' lvalue ParmVar 0x7f928e822d80 'x' 'unsigned char *'
+|   |   | |     `-IntegerLiteral 0x7f928e838f20 <col:20> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7f928e8390e8 <col:24> 'unsigned long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7f928e8390d0 <col:24> 'unsigned int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f928e838f80 <col:24> 'unsigned int' lvalue ParmVar 0x7f928e822f60 'v' 'unsigned int'
+|   |   |-CallExpr 0x7f928e839260 <line:21:7, col:25> 'void *'
+|   |   | |-ImplicitCastExpr 0x7f928e839248 <col:7> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f928e839100 <col:7> 'void *(void *, int, unsigned long)' Function 0x7f928e822420 'memset' 'void *(void *, int, unsigned long)'
+|   |   | |-ImplicitCastExpr 0x7f928e8392b8 <col:15> 'void *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7f928e8392a0 <col:15> 'unsigned char *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7f928e839128 <col:15> 'unsigned char *' lvalue ParmVar 0x7f928e822ee8 'w' 'unsigned char *'
+|   |   | |-ImplicitCastExpr 0x7f928e8392e8 <col:18, col:21> 'int' <IntegralCast>
+|   |   | | `-ImplicitCastExpr 0x7f928e8392d0 <col:18, col:21> 'unsigned char' <LValueToRValue>
+|   |   | |   `-ArraySubscriptExpr 0x7f928e8391b0 <col:18, col:21> 'unsigned char' lvalue
+|   |   | |     |-ImplicitCastExpr 0x7f928e839198 <col:18> 'unsigned char *' <LValueToRValue>
+|   |   | |     | `-DeclRefExpr 0x7f928e839150 <col:18> 'unsigned char *' lvalue ParmVar 0x7f928e822df8 'y' 'unsigned char *'
+|   |   | |     `-IntegerLiteral 0x7f928e839178 <col:20> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7f928e839318 <col:24> 'unsigned long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7f928e839300 <col:24> 'unsigned int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7f928e8391d8 <col:24> 'unsigned int' lvalue ParmVar 0x7f928e822f60 'v' 'unsigned int'
+|   |   `-CompoundAssignOperator 0x7f928e839398 <line:22:7, col:12> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+|   |     |-DeclRefExpr 0x7f928e839330 <col:7> 'unsigned char *' lvalue ParmVar 0x7f928e822d80 'x' 'unsigned char *'
+|   |     `-ImplicitCastExpr 0x7f928e839380 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f928e839358 <col:12> 'int' lvalue ParmVar 0x7f928e838a00 'u' 'int'
+|   `-CallExpr 0x7f928e8397c0 <line:24:3, col:28> 'void *'
+|     |-ImplicitCastExpr 0x7f928e8397a8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f928e839698 <col:3> '<builtin fn type>' Function 0x7f928e839478 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|     |-ImplicitCastExpr 0x7f928e839818 <col:21> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f928e839800 <col:21> 'unsigned char *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f928e8396c0 <col:21> 'unsigned char *' lvalue ParmVar 0x7f928e822e70 'z' 'unsigned char *'
+|     |-ImplicitCastExpr 0x7f928e839848 <col:24> 'const void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f928e839830 <col:24> 'unsigned char *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f928e8396e8 <col:24> 'unsigned char *' lvalue ParmVar 0x7f928e822d80 'x' 'unsigned char *'
+|     `-ImplicitCastExpr 0x7f928e839878 <col:27> 'unsigned long' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f928e839860 <col:27> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f928e839710 <col:27> 'int' lvalue ParmVar 0x7f928e838a00 'u' 'int'
+`-FunctionDecl 0x7f928e839478 <col:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f928e839518 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f928e839578 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f928e8395d8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f928e839650 <col:3> Implicit

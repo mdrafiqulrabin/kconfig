@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fd93982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd93982c978 <../Data/C2AST/pr17319.c:4:1, col:28> col:28 referenced HARD_REG_ELT_TYPE 'unsigned long long'
+| `-BuiltinType 0x7fd93982bec0 'unsigned long long'
+|-TypedefDecl 0x7fd93986d8b8 <line:5:1, col:41> col:27 referenced HARD_REG_SET 'HARD_REG_ELT_TYPE [2]'
+| `-ConstantArrayType 0x7fd93986d860 'HARD_REG_ELT_TYPE [2]' 2 
+|   `-TypedefType 0x7fd93982c9d0 'HARD_REG_ELT_TYPE' sugar
+|     |-Typedef 0x7fd93982c978 'HARD_REG_ELT_TYPE'
+|     `-BuiltinType 0x7fd93982bec0 'unsigned long long'
+|-VarDecl 0x7fd93986d940 <line:6:1, col:21> col:21 used newpat_used_regs 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' static
+`-FunctionDecl 0x7fd93986daa8 <line:7:1, line:12:1> line:7:5 try_combine 'int (void)'
+  `-CompoundStmt 0x7fd93986de40 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fd93986dc58 <line:9:2, col:48>
+    | `-VarDecl 0x7fd93986dbb8 <col:2, col:32> col:21 used scan_tp_ 'HARD_REG_ELT_TYPE *' cinit
+    |   `-ImplicitCastExpr 0x7fd93986dc40 <col:32> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fd93986dc18 <col:32> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]' lvalue Var 0x7fd93986d940 'newpat_used_regs' 'HARD_REG_SET':'HARD_REG_ELT_TYPE [2]'
+    |-BinaryOperator 0x7fd93986dd30 <line:10:2, col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' '='
+    | |-ArraySubscriptExpr 0x7fd93986dcd0 <col:2, col:12> 'HARD_REG_ELT_TYPE':'unsigned long long' lvalue
+    | | |-ImplicitCastExpr 0x7fd93986dcb8 <col:2> 'HARD_REG_ELT_TYPE *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd93986dc70 <col:2> 'HARD_REG_ELT_TYPE *' lvalue Var 0x7fd93986dbb8 'scan_tp_' 'HARD_REG_ELT_TYPE *'
+    | | `-IntegerLiteral 0x7fd93986dc98 <col:11> 'int' 0
+    | `-ImplicitCastExpr 0x7fd93986dd18 <col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fd93986dcf8 <col:16> 'int' 0
+    `-BinaryOperator 0x7fd93986de18 <line:11:2, col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' '='
+      |-ArraySubscriptExpr 0x7fd93986ddb8 <col:2, col:12> 'HARD_REG_ELT_TYPE':'unsigned long long' lvalue
+      | |-ImplicitCastExpr 0x7fd93986dda0 <col:2> 'HARD_REG_ELT_TYPE *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd93986dd58 <col:2> 'HARD_REG_ELT_TYPE *' lvalue Var 0x7fd93986dbb8 'scan_tp_' 'HARD_REG_ELT_TYPE *'
+      | `-IntegerLiteral 0x7fd93986dd80 <col:11> 'int' 1
+      `-ImplicitCastExpr 0x7fd93986de00 <col:16> 'HARD_REG_ELT_TYPE':'unsigned long long' <IntegralCast>
+        `-IntegerLiteral 0x7fd93986dde0 <col:16> 'int' 0

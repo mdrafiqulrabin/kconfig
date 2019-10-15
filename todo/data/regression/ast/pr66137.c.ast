@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fc507027ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc506818fe0 <../Data/C2AST/pr66137.c:5:1, line:11:1> line:6:1 foo 'void (char *, char *, char *, int)'
+  |-ParmVarDecl 0x7fc507028778 <col:6, col:12> col:12 used x 'char *'
+  |-ParmVarDecl 0x7fc506818e00 <col:15, col:21> col:21 used y 'char *'
+  |-ParmVarDecl 0x7fc506818e78 <col:24, col:30> col:30 used z 'char *'
+  |-ParmVarDecl 0x7fc506818ef0 <col:33, col:37> col:37 used a 'int'
+  `-CompoundStmt 0x7fc5068194a8 <line:7:1, line:11:1>
+    |-DeclStmt 0x7fc506819158 <line:8:3, col:8>
+    | `-VarDecl 0x7fc5068190f8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fc506819470 <line:9:3, line:10:21>
+      |-BinaryOperator 0x7fc5068191d8 <line:9:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc506819170 <col:8> 'int' lvalue Var 0x7fc5068190f8 'i' 'int'
+      | `-ImplicitCastExpr 0x7fc5068191c0 <col:12> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc506819198 <col:12> 'int' lvalue ParmVar 0x7fc506818ef0 'a' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc506819260 <col:15, col:19> 'int' '>'
+      | |-ImplicitCastExpr 0x7fc506819248 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc506819200 <col:15> 'int' lvalue Var 0x7fc5068190f8 'i' 'int'
+      | `-IntegerLiteral 0x7fc506819228 <col:19> 'int' 0
+      |-UnaryOperator 0x7fc5068192b0 <col:22, col:23> 'int' postfix '--'
+      | `-DeclRefExpr 0x7fc506819288 <col:22> 'int' lvalue Var 0x7fc5068190f8 'i' 'int'
+      `-BinaryOperator 0x7fc506819448 <line:10:5, col:21> 'char' '='
+        |-UnaryOperator 0x7fc506819318 <col:5, col:7> 'char' lvalue prefix '*'
+        | `-UnaryOperator 0x7fc5068192f8 <col:6, col:7> 'char *' postfix '++'
+        |   `-DeclRefExpr 0x7fc5068192d0 <col:6> 'char *' lvalue ParmVar 0x7fc507028778 'x' 'char *'
+        `-BinaryOperator 0x7fc506819420 <col:12, col:21> 'char' '='
+          |-UnaryOperator 0x7fc506819380 <col:12, col:14> 'char' lvalue prefix '*'
+          | `-UnaryOperator 0x7fc506819360 <col:13, col:14> 'char *' postfix '++'
+          |   `-DeclRefExpr 0x7fc506819338 <col:13> 'char *' lvalue ParmVar 0x7fc506818e00 'y' 'char *'
+          `-ImplicitCastExpr 0x7fc506819408 <col:19, col:21> 'char' <LValueToRValue>
+            `-UnaryOperator 0x7fc5068193e8 <col:19, col:21> 'char' lvalue prefix '*'
+              `-UnaryOperator 0x7fc5068193c8 <col:20, col:21> 'char *' postfix '++'
+                `-DeclRefExpr 0x7fc5068193a0 <col:20> 'char *' lvalue ParmVar 0x7fc506818e78 'z' 'char *'

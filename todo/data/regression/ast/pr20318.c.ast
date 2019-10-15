@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7f8dce02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8dce06e898 <../Data/C2AST/pr20318.c:4:1, col:51> col:13 used f 'int *(int)' extern
+| |-ParmVarDecl 0x7f8dce02c978 <col:15> col:18 'int'
+| `-ReturnsNonNullAttr 0x7f8dce06e940 <col:35>
+|-FunctionDecl 0x7f8dce06ea18 <line:5:1, col:24> col:13 used eliminate 'void ()' extern
+|-FunctionDecl 0x7f8dce06ead8 <line:6:1, line:9:1> line:6:6 g 'void ()'
+| `-CompoundStmt 0x7f8dce06ed60 <col:11, line:9:1>
+|   `-IfStmt 0x7f8dce06ed28 <line:7:3, line:8:16>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8dce06ec68 <line:7:7, col:16> 'int' '=='
+|     | |-CallExpr 0x7f8dce06ec00 <col:7, col:11> 'int *'
+|     | | |-ImplicitCastExpr 0x7f8dce06ebe8 <col:7> 'int *(*)(int)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7f8dce06eb78 <col:7> 'int *(int)' Function 0x7f8dce06e898 'f' 'int *(int)'
+|     | | `-IntegerLiteral 0x7f8dce06eba0 <col:10> 'int' 2
+|     | `-ImplicitCastExpr 0x7f8dce06ec50 <col:16> 'int *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7f8dce06ec30 <col:16> 'int' 0
+|     |-CallExpr 0x7f8dce06ed00 <line:8:5, col:16> 'void'
+|     | `-ImplicitCastExpr 0x7f8dce06ece8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8dce06ec90 <col:5> 'void ()' Function 0x7f8dce06ea18 'eliminate' 'void ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f8dce06ed98 <line:10:1, line:14:1> line:10:6 h 'void ()'
+  `-CompoundStmt 0x7f8dce06f098 <col:11, line:14:1>
+    |-DeclStmt 0x7f8dce06ef40 <line:11:3, col:17>
+    | `-VarDecl 0x7f8dce06ee50 <col:3, col:16> col:8 used p 'int *' cinit
+    |   `-CallExpr 0x7f8dce06ef10 <col:12, col:16> 'int *'
+    |     |-ImplicitCastExpr 0x7f8dce06eef8 <col:12> 'int *(*)(int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f8dce06eeb0 <col:12> 'int *(int)' Function 0x7f8dce06e898 'f' 'int *(int)'
+    |     `-IntegerLiteral 0x7f8dce06eed8 <col:15> 'int' 2
+    `-IfStmt 0x7f8dce06f060 <line:12:3, line:13:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8dce06efd0 <line:12:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7f8dce06efa0 <col:7> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8dce06ef58 <col:7> 'int *' lvalue Var 0x7f8dce06ee50 'p' 'int *'
+      | `-ImplicitCastExpr 0x7f8dce06efb8 <col:12> 'int *' <NullToPointer>
+      |   `-IntegerLiteral 0x7f8dce06ef80 <col:12> 'int' 0
+      |-CallExpr 0x7f8dce06f038 <line:13:5, col:16> 'void'
+      | `-ImplicitCastExpr 0x7f8dce06f020 <col:5> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f8dce06eff8 <col:5> 'void ()' Function 0x7f8dce06ea18 'eliminate' 'void ()'
+      `-<<<NULL>>>

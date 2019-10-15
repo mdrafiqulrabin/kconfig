@@ -1,0 +1,80 @@
+TranslationUnitDecl 0x7fc2d1809ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2d180a978 <../Data/C2AST/pr78904-3.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fc2d1809ea0 'unsigned long'
+|-RecordDecl 0x7fc2d2028000 <line:7:1, line:12:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7fc2d20280c8 <line:9:3, col:17> col:17 pad1 'unsigned char'
+| |-FieldDecl 0x7fc2d2028128 <line:10:3, col:17> col:17 referenced val 'unsigned char'
+| `-FieldDecl 0x7fc2d2028188 <line:11:3, col:18> col:18 pad2 'unsigned short'
+|-VarDecl 0x7fc2d2028328 <line:14:1, col:23> col:18 used t 'struct S1 [256]' extern
+|-FunctionDecl 0x7fc2d20285a0 <line:16:1, line:21:1> line:16:11 test_and 'struct S1 (struct S1, size_t)'
+| |-ParmVarDecl 0x7fc2d20283e8 <col:21, col:31> col:31 used a 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7fc2d2028480 <col:34, col:41> col:41 used i 'size_t':'unsigned long'
+| `-CompoundStmt 0x7fc2d20288a8 <line:17:1, line:21:1>
+|   |-CompoundAssignOperator 0x7fc2d2028818 <line:18:3, col:17> 'unsigned char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fc2d2028678 <col:3, col:5> 'unsigned char' lvalue .val 0x7fc2d2028128
+|   | | `-DeclRefExpr 0x7fc2d2028650 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d20283e8 'a' 'struct S1':'struct S1'
+|   | `-ImplicitCastExpr 0x7fc2d2028800 <col:12, col:17> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fc2d20287e8 <col:12, col:17> 'unsigned char' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc2d20287b0 <col:12, col:17> 'unsigned char' lvalue .val 0x7fc2d2028128
+|   |       `-ArraySubscriptExpr 0x7fc2d2028788 <col:12, col:15> 'struct S1':'struct S1' lvalue
+|   |         |-ImplicitCastExpr 0x7fc2d2028758 <col:12> 'struct S1 *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fc2d20286b0 <col:12> 'struct S1 [256]' lvalue Var 0x7fc2d2028328 't' 'struct S1 [256]'
+|   |         `-ImplicitCastExpr 0x7fc2d2028770 <col:14> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fc2d20286d8 <col:14> 'size_t':'unsigned long' lvalue ParmVar 0x7fc2d2028480 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fc2d2028890 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fc2d2028878 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc2d2028850 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d20283e8 'a' 'struct S1':'struct S1'
+|-FunctionDecl 0x7fc2d20289f8 <line:23:1, line:28:1> line:23:11 test_or 'struct S1 (struct S1, size_t)'
+| |-ParmVarDecl 0x7fc2d20288e8 <col:20, col:30> col:30 used a 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7fc2d2028958 <col:33, col:40> col:40 used i 'size_t':'unsigned long'
+| `-CompoundStmt 0x7fc2d2028ca8 <line:24:1, line:28:1>
+|   |-CompoundAssignOperator 0x7fc2d2028c18 <line:25:3, col:17> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fc2d2028ad0 <col:3, col:5> 'unsigned char' lvalue .val 0x7fc2d2028128
+|   | | `-DeclRefExpr 0x7fc2d2028aa8 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d20288e8 'a' 'struct S1':'struct S1'
+|   | `-ImplicitCastExpr 0x7fc2d2028c00 <col:12, col:17> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fc2d2028be8 <col:12, col:17> 'unsigned char' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc2d2028bb0 <col:12, col:17> 'unsigned char' lvalue .val 0x7fc2d2028128
+|   |       `-ArraySubscriptExpr 0x7fc2d2028b88 <col:12, col:15> 'struct S1':'struct S1' lvalue
+|   |         |-ImplicitCastExpr 0x7fc2d2028b58 <col:12> 'struct S1 *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fc2d2028b08 <col:12> 'struct S1 [256]' lvalue Var 0x7fc2d2028328 't' 'struct S1 [256]'
+|   |         `-ImplicitCastExpr 0x7fc2d2028b70 <col:14> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fc2d2028b30 <col:14> 'size_t':'unsigned long' lvalue ParmVar 0x7fc2d2028958 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fc2d2028c90 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fc2d2028c78 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc2d2028c50 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d20288e8 'a' 'struct S1':'struct S1'
+|-FunctionDecl 0x7fc2d2028df8 <line:30:1, line:35:1> line:30:11 test_xor 'struct S1 (struct S1, size_t)'
+| |-ParmVarDecl 0x7fc2d2028ce8 <col:21, col:31> col:31 used a 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7fc2d2028d58 <col:34, col:41> col:41 used i 'size_t':'unsigned long'
+| `-CompoundStmt 0x7fc2d20290a8 <line:31:1, line:35:1>
+|   |-CompoundAssignOperator 0x7fc2d2029018 <line:32:3, col:17> 'unsigned char' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fc2d2028ed0 <col:3, col:5> 'unsigned char' lvalue .val 0x7fc2d2028128
+|   | | `-DeclRefExpr 0x7fc2d2028ea8 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d2028ce8 'a' 'struct S1':'struct S1'
+|   | `-ImplicitCastExpr 0x7fc2d2029000 <col:12, col:17> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fc2d2028fe8 <col:12, col:17> 'unsigned char' <LValueToRValue>
+|   |     `-MemberExpr 0x7fc2d2028fb0 <col:12, col:17> 'unsigned char' lvalue .val 0x7fc2d2028128
+|   |       `-ArraySubscriptExpr 0x7fc2d2028f88 <col:12, col:15> 'struct S1':'struct S1' lvalue
+|   |         |-ImplicitCastExpr 0x7fc2d2028f58 <col:12> 'struct S1 *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7fc2d2028f08 <col:12> 'struct S1 [256]' lvalue Var 0x7fc2d2028328 't' 'struct S1 [256]'
+|   |         `-ImplicitCastExpr 0x7fc2d2028f70 <col:14> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fc2d2028f30 <col:14> 'size_t':'unsigned long' lvalue ParmVar 0x7fc2d2028d58 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7fc2d2029090 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7fc2d2029078 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc2d2029050 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d2028ce8 'a' 'struct S1':'struct S1'
+`-FunctionDecl 0x7fc2d20291f8 <line:37:1, line:42:1> line:37:11 test_add 'struct S1 (struct S1, size_t)'
+  |-ParmVarDecl 0x7fc2d20290e8 <col:21, col:31> col:31 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fc2d2029158 <col:34, col:41> col:41 used i 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fc2d20294a8 <line:38:1, line:42:1>
+    |-CompoundAssignOperator 0x7fc2d2029418 <line:39:3, col:17> 'unsigned char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-MemberExpr 0x7fc2d20292d0 <col:3, col:5> 'unsigned char' lvalue .val 0x7fc2d2028128
+    | | `-DeclRefExpr 0x7fc2d20292a8 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d20290e8 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7fc2d2029400 <col:12, col:17> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fc2d20293e8 <col:12, col:17> 'unsigned char' <LValueToRValue>
+    |     `-MemberExpr 0x7fc2d20293b0 <col:12, col:17> 'unsigned char' lvalue .val 0x7fc2d2028128
+    |       `-ArraySubscriptExpr 0x7fc2d2029388 <col:12, col:15> 'struct S1':'struct S1' lvalue
+    |         |-ImplicitCastExpr 0x7fc2d2029358 <col:12> 'struct S1 *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fc2d2029308 <col:12> 'struct S1 [256]' lvalue Var 0x7fc2d2028328 't' 'struct S1 [256]'
+    |         `-ImplicitCastExpr 0x7fc2d2029370 <col:14> 'size_t':'unsigned long' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fc2d2029330 <col:14> 'size_t':'unsigned long' lvalue ParmVar 0x7fc2d2029158 'i' 'size_t':'unsigned long'
+    `-ReturnStmt 0x7fc2d2029490 <line:41:3, col:10>
+      `-ImplicitCastExpr 0x7fc2d2029478 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fc2d2029450 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fc2d20290e8 'a' 'struct S1':'struct S1'

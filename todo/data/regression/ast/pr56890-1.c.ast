@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f7f5f8228e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f7f5e01b6d8 <../Data/C2AST/pr56890-1.c:7:1, line:15:1> line:7:14 buggy 'unsigned int (unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7f7f5f823578 <col:20, col:33> col:33 used min 'unsigned int'
+  |-ParmVarDecl 0x7f7f5e01b600 <col:38, col:51> col:51 used max 'unsigned int'
+  `-CompoundStmt 0x7f7f5e01bee0 <line:8:1, line:15:1>
+    |-IfStmt 0x7f7f5e01be58 <line:9:5, line:13:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f7f5e01b840 <line:9:9, col:15> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f7f5e01b810 <col:9> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f7f5e01b7c8 <col:9> 'unsigned int' lvalue ParmVar 0x7f7f5e01b600 'max' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f7f5e01b828 <col:15> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f7f5e01b7f0 <col:15> 'int' 16384
+    | |-CompoundStmt 0x7f7f5e01be30 <col:22, line:13:5>
+    | | |-DeclStmt 0x7f7f5e01b918 <line:10:9, col:33>
+    | | | `-VarDecl 0x7f7f5e01b880 <col:9, col:32> col:24 used num16 'unsigned short' cinit
+    | | |   `-ImplicitCastExpr 0x7f7f5e01b900 <col:32> 'unsigned short' <IntegralCast>
+    | | |     `-IntegerLiteral 0x7f7f5e01b8e0 <col:32> 'int' 0
+    | | |-BinaryOperator 0x7f7f5e01bd98 <line:11:9, col:83> 'unsigned short' '='
+    | | | |-DeclRefExpr 0x7f7f5e01b930 <col:9> 'unsigned short' lvalue Var 0x7f7f5e01b880 'num16' 'unsigned short'
+    | | | `-ImplicitCastExpr 0x7f7f5e01bd80 <col:17, col:83> 'unsigned short' <IntegralCast>
+    | | |   `-BinaryOperator 0x7f7f5e01bd58 <col:17, col:83> 'long' '+'
+    | | |     |-ImplicitCastExpr 0x7f7f5e01bd40 <col:17> 'long' <IntegralCast>
+    | | |     | `-ImplicitCastExpr 0x7f7f5e01bd28 <col:17> 'unsigned int' <LValueToRValue>
+    | | |     |   `-DeclRefExpr 0x7f7f5e01b958 <col:17> 'unsigned int' lvalue ParmVar 0x7f7f5f823578 'min' 'unsigned int'
+    | | |     `-CStyleCastExpr 0x7f7f5e01bd00 <col:23, col:83> 'long' <FloatingToIntegral>
+    | | |       `-ParenExpr 0x7f7f5e01bce0 <col:30, col:83> 'double'
+    | | |         `-BinaryOperator 0x7f7f5e01bc70 <col:31, col:82> 'double' '*'
+    | | |           |-CStyleCastExpr 0x7f7f5e01baf0 <col:31, col:56> 'double' <NoOp>
+    | | |           | `-ParenExpr 0x7f7f5e01bad0 <col:40, col:56> 'double'
+    | | |           |   `-BinaryOperator 0x7f7f5e01ba60 <col:41, col:53> 'double' '+'
+    | | |           |     |-ImplicitCastExpr 0x7f7f5e01ba48 <col:41, col:47> 'double' <IntegralToFloating>
+    | | |           |     | `-BinaryOperator 0x7f7f5e01ba00 <col:41, col:47> 'unsigned int' '-'
+    | | |           |     |   |-ImplicitCastExpr 0x7f7f5e01b9d0 <col:41> 'unsigned int' <LValueToRValue>
+    | | |           |     |   | `-DeclRefExpr 0x7f7f5e01b980 <col:41> 'unsigned int' lvalue ParmVar 0x7f7f5e01b600 'max' 'unsigned int'
+    | | |           |     |   `-ImplicitCastExpr 0x7f7f5e01b9e8 <col:47> 'unsigned int' <LValueToRValue>
+    | | |           |     |     `-DeclRefExpr 0x7f7f5e01b9a8 <col:47> 'unsigned int' lvalue ParmVar 0x7f7f5f823578 'min' 'unsigned int'
+    | | |           |     `-FloatingLiteral 0x7f7f5e01ba28 <col:53> 'double' 1.000000e+00
+    | | |           `-ParenExpr 0x7f7f5e01bc50 <col:60, col:82> 'double'
+    | | |             `-BinaryOperator 0x7f7f5e01bc28 <col:61, col:81> 'double' '/'
+    | | |               |-ImplicitCastExpr 0x7f7f5e01bc10 <col:61> 'double' <IntegralToFloating>
+    | | |               | `-ImplicitCastExpr 0x7f7f5e01bbf8 <col:61> 'int' <IntegralCast>
+    | | |               |   `-ImplicitCastExpr 0x7f7f5e01bbe0 <col:61> 'unsigned short' <LValueToRValue>
+    | | |               |     `-DeclRefExpr 0x7f7f5e01bb18 <col:61> 'unsigned short' lvalue Var 0x7f7f5e01b880 'num16' 'unsigned short'
+    | | |               `-ParenExpr 0x7f7f5e01bbc0 <col:69, col:81> 'double'
+    | | |                 `-BinaryOperator 0x7f7f5e01bb98 <col:70, col:78> 'double' '+'
+    | | |                   |-ImplicitCastExpr 0x7f7f5e01bb80 <col:70> 'double' <IntegralToFloating>
+    | | |                   | `-IntegerLiteral 0x7f7f5e01bb40 <col:70> 'int' 65535
+    | | |                   `-FloatingLiteral 0x7f7f5e01bb60 <col:78> 'double' 1.000000e+00
+    | | `-ReturnStmt 0x7f7f5e01be18 <line:12:9, col:16>
+    | |   `-ImplicitCastExpr 0x7f7f5e01be00 <col:16> 'unsigned int' <IntegralCast>
+    | |     `-ImplicitCastExpr 0x7f7f5e01bde8 <col:16> 'unsigned short' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f7f5e01bdc0 <col:16> 'unsigned short' lvalue Var 0x7f7f5e01b880 'num16' 'unsigned short'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f7f5e01bec8 <line:14:5, col:12>
+      `-ImplicitCastExpr 0x7f7f5e01beb0 <col:12> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7f7f5e01be90 <col:12> 'int' 0

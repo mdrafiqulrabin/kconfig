@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fea1a00a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea1a00b578 <../Data/C2AST/pr44695.c:3:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fea1a00aa40 'unsigned char'
+|-FunctionDecl 0x7fea1a814380 <line:5:1, line:9:1> line:6:1 used safe_div_func_uint8_t_u_u 'uint8_t (uint8_t, uint8_t)' static
+| |-ParmVarDecl 0x7fea1a814200 <col:28, col:36> col:36 used ui1 'uint8_t':'unsigned char'
+| |-ParmVarDecl 0x7fea1a814270 <col:41, col:49> col:49 used ui2 'uint8_t':'unsigned char'
+| `-CompoundStmt 0x7fea1a814678 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fea1a814660 <line:8:3, col:32>
+|     `-ImplicitCastExpr 0x7fea1a814648 <col:10, col:32> 'uint8_t':'unsigned char' <IntegralCast>
+|       `-ConditionalOperator 0x7fea1a814618 <col:10, col:32> 'int'
+|         |-ImplicitCastExpr 0x7fea1a8145d0 <col:10> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fea1a8145b8 <col:10> 'uint8_t':'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fea1a814470 <col:10> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fea1a814270 'ui2' 'uint8_t':'unsigned char'
+|         |-ImplicitCastExpr 0x7fea1a814600 <col:16> 'int' <IntegralCast>
+|         | `-ImplicitCastExpr 0x7fea1a8145e8 <col:16> 'uint8_t':'unsigned char' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fea1a814498 <col:16> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fea1a814270 'ui2' 'uint8_t':'unsigned char'
+|         `-ParenExpr 0x7fea1a814598 <col:22, col:32> 'int'
+|           `-BinaryOperator 0x7fea1a814570 <col:23, col:29> 'int' '/'
+|             |-ImplicitCastExpr 0x7fea1a814528 <col:23> 'int' <IntegralCast>
+|             | `-ImplicitCastExpr 0x7fea1a814510 <col:23> 'uint8_t':'unsigned char' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7fea1a8144c0 <col:23> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fea1a814200 'ui1' 'uint8_t':'unsigned char'
+|             `-ImplicitCastExpr 0x7fea1a814558 <col:29> 'int' <IntegralCast>
+|               `-ImplicitCastExpr 0x7fea1a814540 <col:29> 'uint8_t':'unsigned char' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fea1a8144e8 <col:29> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fea1a814270 'ui2' 'uint8_t':'unsigned char'
+`-FunctionDecl 0x7fea1a814778 <line:11:1, line:15:1> line:12:1 int81 'int (int)'
+  |-ParmVarDecl 0x7fea1a8146a8 <col:8, col:12> col:12 used x 'int'
+  `-CompoundStmt 0x7fea1a8149f8 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fea1a8149e0 <line:14:3, col:45>
+      `-ImplicitCastExpr 0x7fea1a8149c8 <col:10, col:45> 'int' <IntegralCast>
+        `-CallExpr 0x7fea1a814960 <col:10, col:45> 'uint8_t':'unsigned char'
+          |-ImplicitCastExpr 0x7fea1a814948 <col:10> 'uint8_t (*)(uint8_t, uint8_t)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fea1a814820 <col:10> 'uint8_t (uint8_t, uint8_t)' Function 0x7fea1a814380 'safe_div_func_uint8_t_u_u' 'uint8_t (uint8_t, uint8_t)'
+          |-ImplicitCastExpr 0x7fea1a814998 <col:37> 'uint8_t':'unsigned char' <IntegralCast>
+          | `-IntegerLiteral 0x7fea1a814848 <col:37> 'int' 1
+          `-ImplicitCastExpr 0x7fea1a8149b0 <col:40, col:44> 'uint8_t':'unsigned char' <IntegralCast>
+            `-BinaryOperator 0x7fea1a8148c8 <col:40, col:44> 'int' '&'
+              |-IntegerLiteral 0x7fea1a814868 <col:40> 'int' 8
+              `-ImplicitCastExpr 0x7fea1a8148b0 <col:44> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fea1a814888 <col:44> 'int' lvalue ParmVar 0x7fea1a8146a8 'x' 'int'

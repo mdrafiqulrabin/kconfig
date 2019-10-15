@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f87610166e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8761017378 <../Data/C2AST/pr57385.c:5:1, col:5> col:5 used c 'int'
+`-FunctionDecl 0x7f8760019520 <line:7:1, line:11:1> line:7:6 foo 'void (int)'
+  |-ParmVarDecl 0x7f8760019458 <col:10, col:14> col:14 used f 'int'
+  `-CompoundStmt 0x7f87600199c0 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f8760019680 <line:9:3, col:21>
+    | `-VarDecl 0x7f87600195e0 <col:3, col:12> col:7 used wbi 'int' cinit
+    |   `-UnaryOperator 0x7f8760019660 <col:11, col:12> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7f8760019640 <col:12> 'int' 100000000
+    `-BinaryOperator 0x7f8760019998 <line:10:3, col:58> 'int' '='
+      |-DeclRefExpr 0x7f8760019698 <col:3> 'int' lvalue Var 0x7f8761017378 'c' 'int'
+      `-ImplicitCastExpr 0x7f8760019980 <col:7, col:58> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f8760019968 <col:7, col:58> 'char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7f8760019940 <col:7, col:58> 'char' lvalue
+            |-ParenExpr 0x7f87600198e0 <col:7, col:53> 'char *'
+            | `-ConditionalOperator 0x7f87600198b0 <col:8, col:33> 'char *'
+            |   |-ImplicitCastExpr 0x7f87600197a8 <col:8> 'int' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7f87600196c0 <col:8> 'int' lvalue ParmVar 0x7f8760019458 'f' 'int'
+            |   |-ImplicitCastExpr 0x7f87600197c0 <col:12> 'char *' <ArrayToPointerDecay>
+            |   | `-StringLiteral 0x7f8760019728 <col:12> 'char [19]' lvalue "012346000000000000"
+            |   `-ImplicitCastExpr 0x7f87600197d8 <col:33> 'char *' <ArrayToPointerDecay>
+            |     `-StringLiteral 0x7f8760019768 <col:33> 'char [19]' lvalue "01345:000000006008"
+            `-ImplicitCastExpr 0x7f8760019928 <col:55> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7f8760019900 <col:55> 'int' lvalue Var 0x7f87600195e0 'wbi' 'int'

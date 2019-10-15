@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f915002bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f915006d860 <../Data/C2AST/pr81356.c:4:1, line:7:1> line:4:6 f 'void (char *)'
+| |-ParmVarDecl 0x7f915002c978 <col:8, col:14> col:14 used a 'char *'
+| `-CompoundStmt 0x7f915006dcf0 <line:5:1, line:7:1>
+|   `-CallExpr 0x7f915006dc70 <line:6:3, col:26> 'char *'
+|     |-ImplicitCastExpr 0x7f915006dc58 <col:3> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f915006db48 <col:3> '<builtin fn type>' Function 0x7f915006d990 '__builtin_strcpy' 'char *(char *, const char *)'
+|     |-ImplicitCastExpr 0x7f915006dca8 <col:21> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f915006db70 <col:21> 'char *' lvalue ParmVar 0x7f915002c978 'a' 'char *'
+|     `-ImplicitCastExpr 0x7f915006dcd8 <col:24> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f915006dcc0 <col:24> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7f915006dbd8 <col:24> 'char [1]' lvalue ""
+`-FunctionDecl 0x7f915006d990 <col:3> col:3 implicit used __builtin_strcpy 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7f915006da30 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7f915006da90 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f915006db00 <col:3> Implicit

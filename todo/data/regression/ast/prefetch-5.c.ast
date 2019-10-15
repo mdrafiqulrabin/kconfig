@@ -1,0 +1,109 @@
+TranslationUnitDecl 0x7fcad882bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcad882c960 <../Data/C2AST/prefetch-5.c:6:1, line:10:1> line:6:8 struct tail0 definition
+| |-FieldDecl 0x7fcad9014238 <line:8:3, col:7> col:7 xxx 'int'
+| `-FieldDecl 0x7fcad9014300 <line:9:3, col:12> col:7 referenced yyy 'int [0]'
+|-FunctionDecl 0x7fcad9014588 <line:12:1, line:20:1> line:12:5 loop0 'int (int, struct tail0 *)'
+| |-ParmVarDecl 0x7fcad9014360 <col:12, col:16> col:16 used n 'int'
+| |-ParmVarDecl 0x7fcad9014470 <col:19, col:33> col:33 used x 'struct tail0 *'
+| `-CompoundStmt 0x7fcad9014b40 <line:13:1, line:20:1>
+|   |-DeclStmt 0x7fcad90147a0 <line:14:3, col:15>
+|   | |-VarDecl 0x7fcad9014690 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7fcad9014708 <col:3, col:14> col:10 used s 'int' cinit
+|   |   `-IntegerLiteral 0x7fcad9014768 <col:14> 'int' 0
+|   |-ForStmt 0x7fcad9014ab0 <line:16:3, line:17:18>
+|   | |-BinaryOperator 0x7fcad9014800 <line:16:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fcad90147b8 <col:8> 'int' lvalue Var 0x7fcad9014690 'i' 'int'
+|   | | `-IntegerLiteral 0x7fcad90147e0 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcad90148a8 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fcad9014878 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fcad9014828 <col:15> 'int' lvalue Var 0x7fcad9014690 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fcad9014890 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fcad9014850 <col:19> 'int' lvalue ParmVar 0x7fcad9014360 'n' 'int'
+|   | |-UnaryOperator 0x7fcad90148f8 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fcad90148d0 <col:22> 'int' lvalue Var 0x7fcad9014690 'i' 'int'
+|   | `-CompoundAssignOperator 0x7fcad9014a78 <line:17:5, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-DeclRefExpr 0x7fcad9014918 <col:5> 'int' lvalue Var 0x7fcad9014708 's' 'int'
+|   |   `-ImplicitCastExpr 0x7fcad9014a60 <col:10, col:18> 'int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fcad9014a38 <col:10, col:18> 'int' lvalue
+|   |       |-ImplicitCastExpr 0x7fcad9014a08 <col:10, col:13> 'int *' <ArrayToPointerDecay>
+|   |       | `-MemberExpr 0x7fcad9014980 <col:10, col:13> 'int [0]' lvalue ->yyy 0x7fcad9014300
+|   |       |   `-ImplicitCastExpr 0x7fcad9014968 <col:10> 'struct tail0 *' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7fcad9014940 <col:10> 'struct tail0 *' lvalue ParmVar 0x7fcad9014470 'x' 'struct tail0 *'
+|   |       `-ImplicitCastExpr 0x7fcad9014a20 <col:17> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fcad90149b8 <col:17> 'int' lvalue Var 0x7fcad9014690 'i' 'int'
+|   `-ReturnStmt 0x7fcad9014b28 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7fcad9014b10 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fcad9014ae8 <col:10> 'int' lvalue Var 0x7fcad9014708 's' 'int'
+|-RecordDecl 0x7fcad9014b68 <line:22:1, line:26:1> line:22:8 struct tail1 definition
+| |-FieldDecl 0x7fcad9014c28 <line:24:3, col:7> col:7 xxx 'int'
+| `-FieldDecl 0x7fcad9014cf0 <line:25:3, col:12> col:7 referenced yyy 'int [1]'
+|-FunctionDecl 0x7fcad9014f78 <line:27:1, line:35:1> line:27:5 loop1 'int (int, struct tail1 *)'
+| |-ParmVarDecl 0x7fcad9014d50 <col:12, col:16> col:16 used n 'int'
+| |-ParmVarDecl 0x7fcad9014e60 <col:19, col:33> col:33 used x 'struct tail1 *'
+| `-CompoundStmt 0x7fcad90154c8 <line:28:1, line:35:1>
+|   |-DeclStmt 0x7fcad9015150 <line:29:3, col:15>
+|   | |-VarDecl 0x7fcad9015040 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7fcad90150b8 <col:3, col:14> col:10 used s 'int' cinit
+|   |   `-IntegerLiteral 0x7fcad9015118 <col:14> 'int' 0
+|   |-ForStmt 0x7fcad9015438 <line:31:3, line:32:18>
+|   | |-BinaryOperator 0x7fcad90151b0 <line:31:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fcad9015168 <col:8> 'int' lvalue Var 0x7fcad9015040 'i' 'int'
+|   | | `-IntegerLiteral 0x7fcad9015190 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcad9015258 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fcad9015228 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fcad90151d8 <col:15> 'int' lvalue Var 0x7fcad9015040 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7fcad9015240 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fcad9015200 <col:19> 'int' lvalue ParmVar 0x7fcad9014d50 'n' 'int'
+|   | |-UnaryOperator 0x7fcad90152a8 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fcad9015280 <col:22> 'int' lvalue Var 0x7fcad9015040 'i' 'int'
+|   | `-CompoundAssignOperator 0x7fcad9015400 <line:32:5, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-DeclRefExpr 0x7fcad90152c8 <col:5> 'int' lvalue Var 0x7fcad90150b8 's' 'int'
+|   |   `-ImplicitCastExpr 0x7fcad90153e8 <col:10, col:18> 'int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7fcad90153c0 <col:10, col:18> 'int' lvalue
+|   |       |-ImplicitCastExpr 0x7fcad9015390 <col:10, col:13> 'int *' <ArrayToPointerDecay>
+|   |       | `-MemberExpr 0x7fcad9015330 <col:10, col:13> 'int [1]' lvalue ->yyy 0x7fcad9014cf0
+|   |       |   `-ImplicitCastExpr 0x7fcad9015318 <col:10> 'struct tail1 *' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7fcad90152f0 <col:10> 'struct tail1 *' lvalue ParmVar 0x7fcad9014e60 'x' 'struct tail1 *'
+|   |       `-ImplicitCastExpr 0x7fcad90153a8 <col:17> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fcad9015368 <col:17> 'int' lvalue Var 0x7fcad9015040 'i' 'int'
+|   `-ReturnStmt 0x7fcad90154b0 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7fcad9015498 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fcad9015470 <col:10> 'int' lvalue Var 0x7fcad90150b8 's' 'int'
+|-RecordDecl 0x7fcad90154f0 <line:39:1, line:43:1> line:39:8 struct tail5 definition
+| |-FieldDecl 0x7fcad90155b8 <line:41:3, col:7> col:7 xxx 'int'
+| `-FieldDecl 0x7fcad9015680 <line:42:3, col:12> col:7 referenced yyy 'int [5]'
+`-FunctionDecl 0x7fcad9015908 <line:44:1, line:52:1> line:44:5 loop5 'int (int, struct tail5 *)'
+  |-ParmVarDecl 0x7fcad90156e0 <col:12, col:16> col:16 used n 'int'
+  |-ParmVarDecl 0x7fcad90157f0 <col:19, col:33> col:33 used x 'struct tail5 *'
+  `-CompoundStmt 0x7fcad9015e58 <line:45:1, line:52:1>
+    |-DeclStmt 0x7fcad9015ae0 <line:46:3, col:15>
+    | |-VarDecl 0x7fcad90159d0 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7fcad9015a48 <col:3, col:14> col:10 used s 'int' cinit
+    |   `-IntegerLiteral 0x7fcad9015aa8 <col:14> 'int' 0
+    |-ForStmt 0x7fcad9015dc8 <line:48:3, line:49:18>
+    | |-BinaryOperator 0x7fcad9015b40 <line:48:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fcad9015af8 <col:8> 'int' lvalue Var 0x7fcad90159d0 'i' 'int'
+    | | `-IntegerLiteral 0x7fcad9015b20 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcad9015be8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fcad9015bb8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcad9015b68 <col:15> 'int' lvalue Var 0x7fcad90159d0 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fcad9015bd0 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fcad9015b90 <col:19> 'int' lvalue ParmVar 0x7fcad90156e0 'n' 'int'
+    | |-UnaryOperator 0x7fcad9015c38 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fcad9015c10 <col:22> 'int' lvalue Var 0x7fcad90159d0 'i' 'int'
+    | `-CompoundAssignOperator 0x7fcad9015d90 <line:49:5, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fcad9015c58 <col:5> 'int' lvalue Var 0x7fcad9015a48 's' 'int'
+    |   `-ImplicitCastExpr 0x7fcad9015d78 <col:10, col:18> 'int' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fcad9015d50 <col:10, col:18> 'int' lvalue
+    |       |-ImplicitCastExpr 0x7fcad9015d20 <col:10, col:13> 'int *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7fcad9015cc0 <col:10, col:13> 'int [5]' lvalue ->yyy 0x7fcad9015680
+    |       |   `-ImplicitCastExpr 0x7fcad9015ca8 <col:10> 'struct tail5 *' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7fcad9015c80 <col:10> 'struct tail5 *' lvalue ParmVar 0x7fcad90157f0 'x' 'struct tail5 *'
+    |       `-ImplicitCastExpr 0x7fcad9015d38 <col:17> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fcad9015cf8 <col:17> 'int' lvalue Var 0x7fcad90159d0 'i' 'int'
+    `-ReturnStmt 0x7fcad9015e40 <line:51:3, col:10>
+      `-ImplicitCastExpr 0x7fcad9015e28 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fcad9015e00 <col:10> 'int' lvalue Var 0x7fcad9015a48 's' 'int'

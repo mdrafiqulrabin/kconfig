@@ -1,0 +1,98 @@
+TranslationUnitDecl 0x7fac360118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fac348612e0 <../Data/C2AST/pr56982.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fac34861380 prev 0x7fac348612e0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fac34861538 <line:5:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fac34861600 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fac34861668 prev 0x7fac34861538 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fac34861438 <col:19> col:22 'int'
+|-VarDecl 0x7fac34861720 <line:7:1, col:16> col:16 used env 'jmp_buf':'int [37]' static
+|-FunctionDecl 0x7fac34861810 <line:9:1, line:12:1> line:9:6 used baz 'void (void)'
+| `-CompoundStmt 0x7fac348619c8 <line:10:1, line:12:1>
+|   `-GCCAsmStmt 0x7fac34861978 <line:11:3, col:38>
+|-FunctionDecl 0x7fac34861ac8 <line:14:1, line:26:1> line:14:19 used g 'int (int)' static inline
+| |-ParmVarDecl 0x7fac348619f8 <col:21, col:25> col:25 used x 'int'
+| `-CompoundStmt 0x7fac34861d98 <line:15:1, line:26:1>
+|   `-IfStmt 0x7fac34861d60 <line:16:5, line:25:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fac34861b98 <line:16:9> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fac34861b70 <col:9> 'int' lvalue ParmVar 0x7fac348619f8 'x' 'int'
+|     |-CompoundStmt 0x7fac34861c80 <line:17:5, line:20:5>
+|     | |-CallExpr 0x7fac34861c20 <line:18:9, col:13> 'void'
+|     | | `-ImplicitCastExpr 0x7fac34861c08 <col:9> 'void (*)(void)' <FunctionToPointerDecay>
+|     | |   `-DeclRefExpr 0x7fac34861bb0 <col:9> 'void (void)' Function 0x7fac34861810 'baz' 'void (void)'
+|     | `-ReturnStmt 0x7fac34861c68 <line:19:9, col:16>
+|     |   `-IntegerLiteral 0x7fac34861c48 <col:16> 'int' 0
+|     `-CompoundStmt 0x7fac34861d40 <line:22:5, line:25:5>
+|       |-CallExpr 0x7fac34861ce0 <line:23:9, col:13> 'void'
+|       | `-ImplicitCastExpr 0x7fac34861cc8 <col:9> 'void (*)(void)' <FunctionToPointerDecay>
+|       |   `-DeclRefExpr 0x7fac34861ca0 <col:9> 'void (void)' Function 0x7fac34861810 'baz' 'void (void)'
+|       `-ReturnStmt 0x7fac34861d28 <line:24:9, col:16>
+|         `-IntegerLiteral 0x7fac34861d08 <col:16> 'int' 1
+|-FunctionDecl 0x7fac34861e58 <line:28:1, line:40:1> line:28:5 used f 'int (int *)'
+| |-ParmVarDecl 0x7fac34861dc8 <col:7, col:12> col:12 used e 'int *'
+| `-CompoundStmt 0x7fac34862650 <line:29:1, line:40:1>
+|   |-IfStmt 0x7fac34861fb0 <line:30:5, line:31:14>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fac34861f60 <line:30:9, col:10> 'int' <LValueToRValue>
+|   | | `-UnaryOperator 0x7fac34861f40 <col:9, col:10> 'int' lvalue prefix '*'
+|   | |   `-ImplicitCastExpr 0x7fac34861f28 <col:10> 'int *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fac34861f00 <col:10> 'int *' lvalue ParmVar 0x7fac34861dc8 'e' 'int *'
+|   | |-ReturnStmt 0x7fac34861f98 <line:31:7, col:14>
+|   | | `-IntegerLiteral 0x7fac34861f78 <col:14> 'int' 1
+|   | `-<<<NULL>>>
+|   |-DeclStmt 0x7fac34862138 <line:33:5, col:24>
+|   | `-VarDecl 0x7fac34862000 <col:5, col:23> col:9 used x 'int' cinit
+|   |   `-CallExpr 0x7fac348620f0 <col:13, col:23> 'int'
+|   |     |-ImplicitCastExpr 0x7fac348620d8 <col:13> 'int (*)(int *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fac34862060 <col:13> 'int (int *)' Function 0x7fac3485ec98 'setjmp' 'int (int *)'
+|   |     `-ImplicitCastExpr 0x7fac34862120 <col:20> 'int *' <ArrayToPointerDecay>
+|   |       `-DeclRefExpr 0x7fac34862088 <col:20> 'jmp_buf':'int [37]' lvalue Var 0x7fac34861720 'env' 'jmp_buf':'int [37]'
+|   |-DeclStmt 0x7fac348622a8 <line:34:5, col:17>
+|   | `-VarDecl 0x7fac34862168 <col:5, col:16> col:9 used n 'int' cinit
+|   |   `-CallExpr 0x7fac34862260 <col:13, col:16> 'int'
+|   |     |-ImplicitCastExpr 0x7fac34862248 <col:13> 'int (*)(int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fac348621c8 <col:13> 'int (int)' Function 0x7fac34861ac8 'g' 'int (int)'
+|   |     `-ImplicitCastExpr 0x7fac34862290 <col:15> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fac348621f0 <col:15> 'int' lvalue Var 0x7fac34862000 'x' 'int'
+|   |-IfStmt 0x7fac34862400 <line:35:5, line:36:13>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fac34862320 <line:35:9, col:14> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fac34862308 <col:9> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fac348622c0 <col:9> 'int' lvalue Var 0x7fac34862168 'n' 'int'
+|   | | `-IntegerLiteral 0x7fac348622e8 <col:14> 'int' 0
+|   | |-CallExpr 0x7fac348623d0 <line:36:7, col:13> 'void'
+|   | | |-ImplicitCastExpr 0x7fac348623b8 <col:7> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fac34862348 <col:7> 'void (int) __attribute__((noreturn))' Function 0x7fac34861668 'exit' 'void (int) __attribute__((noreturn))'
+|   | | `-IntegerLiteral 0x7fac34862370 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fac34862508 <line:37:5, line:38:13>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fac34862460 <line:37:9> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fac34862438 <col:9> 'int' lvalue Var 0x7fac34862000 'x' 'int'
+|   | |-CallExpr 0x7fac348624e0 <line:38:7, col:13> 'void'
+|   | | `-ImplicitCastExpr 0x7fac348624c8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fac34862478 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fac34861380 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fac34862600 <line:39:5, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fac348625d8 <col:5> 'void (*)(int *, int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fac34862540 <col:5> 'void (int *, int) __attribute__((noreturn))' Function 0x7fac3485f110 'longjmp' 'void (int *, int) __attribute__((noreturn))'
+|     |-ImplicitCastExpr 0x7fac34862638 <col:13> 'int *' <ArrayToPointerDecay>
+|     | `-DeclRefExpr 0x7fac34862568 <col:13> 'jmp_buf':'int [37]' lvalue Var 0x7fac34861720 'env' 'jmp_buf':'int [37]'
+|     `-IntegerLiteral 0x7fac34862590 <col:18> 'int' 42
+`-FunctionDecl 0x7fac34862828 <line:42:1, line:46:1> line:42:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fac348626a8 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7fac34862750 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7fac34862a58 <line:43:1, line:46:1>
+    |-DeclStmt 0x7fac34862970 <line:44:5, col:14>
+    | `-VarDecl 0x7fac348628f0 <col:5, col:13> col:9 used v 'int' cinit
+    |   `-IntegerLiteral 0x7fac34862950 <col:13> 'int' 0
+    `-ReturnStmt 0x7fac34862a40 <line:45:5, col:16>
+      `-CallExpr 0x7fac34862a10 <col:12, col:16> 'int'
+        |-ImplicitCastExpr 0x7fac348629f8 <col:12> 'int (*)(int *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fac34862988 <col:12> 'int (int *)' Function 0x7fac34861e58 'f' 'int (int *)'
+        `-UnaryOperator 0x7fac348629d8 <col:14, col:15> 'int *' prefix '&'
+          `-DeclRefExpr 0x7fac348629b0 <col:15> 'int' lvalue Var 0x7fac348628f0 'v' 'int'

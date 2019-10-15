@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fa8370002e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa836843a00 <../Data/C2AST/pr38360.c:4:1, line:10:1> line:5:1 main 'int ()'
+  `-CompoundStmt 0x7fa836843e88 <line:6:1, line:10:1>
+    |-CallExpr 0x7fa836843c80 <line:7:3, col:12> 'int'
+    | |-ImplicitCastExpr 0x7fa836843c68 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa836843bb8 <col:3> 'int ()' Function 0x7fa836843b08 'fputs' 'int ()'
+    | `-ImplicitCastExpr 0x7fa836843cb0 <col:10> 'char *' <ArrayToPointerDecay>
+    |   `-StringLiteral 0x7fa836843c18 <col:10> 'char [1]' lvalue ""
+    |-CallExpr 0x7fa836843e08 <line:8:3, col:21> 'int'
+    | |-ImplicitCastExpr 0x7fa836843df0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa836843da0 <col:3> 'int ()' Function 0x7fa836843cf0 'fputs_unlocked' 'int ()'
+    | `-ImplicitCastExpr 0x7fa836843e38 <col:19> 'char *' <ArrayToPointerDecay>
+    |   `-StringLiteral 0x7fa836843dc8 <col:19> 'char [1]' lvalue ""
+    `-ReturnStmt 0x7fa836843e70 <line:9:3, col:10>
+      `-IntegerLiteral 0x7fa836843e50 <col:10> 'int' 0

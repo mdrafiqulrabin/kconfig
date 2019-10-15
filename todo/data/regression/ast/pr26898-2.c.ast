@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fb82802a4e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb82802b178 <../Data/C2AST/pr26898-2.c:5:1, col:9> col:5 used a 'int' cinit
+| `-IntegerLiteral 0x7fb8280a8440 <col:9> 'int' 0
+|-VarDecl 0x7fb8280a8478 <col:1, col:26> col:12 used b 'int' cinit
+| `-BinaryOperator 0x7fb8280a8518 <<built-in>:38:21, ../Data/C2AST/pr26898-2.c:5:26> 'int' '-'
+|   |-IntegerLiteral 0x7fb8280a84d8 <<built-in>:38:21> 'int' 2147483647
+|   `-IntegerLiteral 0x7fb8280a84f8 <../Data/C2AST/pr26898-2.c:5:26> 'int' 1
+|-FunctionDecl 0x7fb8280a8650 <line:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb8280a86f0 prev 0x7fb8280a8650 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fb8280a87e0 <line:7:1, line:12:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7fb8280a8ab8 <line:8:1, line:12:1>
+    |-IfStmt 0x7fb8280a8a48 <line:9:3, line:10:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb8280a8990 <line:9:7, col:19> 'int' '>'
+    | | |-BinaryOperator 0x7fb8280a88e0 <col:7, col:11> 'int' '-'
+    | | | |-ImplicitCastExpr 0x7fb8280a88c8 <col:7> 'int' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fb8280a8880 <col:7> 'int' lvalue Var 0x7fb82802b178 'a' 'int'
+    | | | `-IntegerLiteral 0x7fb8280a88a8 <col:11> 'int' 1
+    | | `-BinaryOperator 0x7fb8280a8968 <col:15, col:19> 'int' '+'
+    | |   |-ImplicitCastExpr 0x7fb8280a8950 <col:15> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fb8280a8908 <col:15> 'int' lvalue Var 0x7fb8280a8478 'b' 'int'
+    | |   `-IntegerLiteral 0x7fb8280a8930 <col:19> 'int' 1
+    | |-CallExpr 0x7fb8280a8a20 <line:10:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fb8280a8a08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb8280a89b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb8280a86f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb8280a8aa0 <line:11:3, col:10>
+      `-IntegerLiteral 0x7fb8280a8a80 <col:10> 'int' 0

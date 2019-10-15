@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7fa45702b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa45702bf78 <../Data/C2AST/pr35356-3.c:4:1, col:5> col:5 used winner 'int'
+|-VarDecl 0x7fa456814c58 <col:1, col:13> col:13 used numf2s 'int'
+|-VarDecl 0x7fa456814d48 <line:5:1, col:10> col:10 used tds 'double **'
+|-VarDecl 0x7fa456814dc0 <line:6:1, col:8> col:8 used d 'double'
+|-VarDecl 0x7fa456814e38 <col:1, col:11> col:11 used tsum 'double'
+|-RecordDecl 0x7fa456814eb0 <line:8:9, line:10:1> line:8:9 struct definition
+| `-FieldDecl 0x7fa456814f78 <line:9:3, col:10> col:10 referenced y 'double'
+|-TypedefDecl 0x7fa456815010 <line:8:1, line:10:3> col:3 referenced xyz 'struct xyz':'xyz'
+| `-ElaboratedType 0x7fa456814fc0 'struct xyz' sugar
+|   `-RecordType 0x7fa456814f40 'xyz'
+|     `-Record 0x7fa456814eb0 ''
+|-VarDecl 0x7fa456815108 <line:12:1, col:6> col:6 used Y 'xyz *'
+|-VarDecl 0x7fa456815180 <line:13:1, col:5> col:5 used ti 'int'
+`-FunctionDecl 0x7fa4568152a8 <line:15:1, line:26:1> line:16:1 match 'double (void)'
+  `-CompoundStmt 0x7fa456815ac0 <line:17:1, line:26:1>
+    |-DeclStmt 0x7fa456815450 <line:18:3, col:18>
+    | |-VarDecl 0x7fa456815360 <col:3, col:7> col:7 used tj 'int'
+    | `-VarDecl 0x7fa4568153d8 <col:3, col:11> col:11 tresult 'int'
+    |-ForStmt 0x7fa456815a30 <line:20:3, line:23:29>
+    | |-BinaryOperator 0x7fa4568154b0 <line:20:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fa456815468 <col:8> 'int' lvalue Var 0x7fa456815360 'tj' 'int'
+    | | `-IntegerLiteral 0x7fa456815490 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa456815558 <col:16, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa456815528 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa4568154d8 <col:16> 'int' lvalue Var 0x7fa456815360 'tj' 'int'
+    | | `-ImplicitCastExpr 0x7fa456815540 <col:21> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa456815500 <col:21> 'int' lvalue Var 0x7fa456814c58 'numf2s' 'int'
+    | |-UnaryOperator 0x7fa4568155a8 <col:29, col:31> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa456815580 <col:29> 'int' lvalue Var 0x7fa456815360 'tj' 'int'
+    | `-IfStmt 0x7fa4568159f8 <line:21:5, line:23:29>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fa4568157c8 <line:21:9, line:22:15> 'int' '&&'
+    |   | |-BinaryOperator 0x7fa456815648 <line:21:9, col:15> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fa456815618 <col:9> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fa4568155c8 <col:9> 'int' lvalue Var 0x7fa456815360 'tj' 'int'
+    |   | | `-ImplicitCastExpr 0x7fa456815630 <col:15> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fa4568155f0 <col:15> 'int' lvalue Var 0x7fa45702bf78 'winner' 'int'
+    |   | `-BinaryOperator 0x7fa4568157a0 <line:22:5, col:15> 'int' '>'
+    |   |   |-ImplicitCastExpr 0x7fa456815770 <col:5, col:11> 'double' <LValueToRValue>
+    |   |   | `-MemberExpr 0x7fa456815718 <col:5, col:11> 'double' lvalue .y 0x7fa456814f78
+    |   |   |   `-ArraySubscriptExpr 0x7fa4568156f0 <col:5, col:9> 'xyz':'xyz' lvalue
+    |   |   |     |-ImplicitCastExpr 0x7fa4568156c0 <col:5> 'xyz *' <LValueToRValue>
+    |   |   |     | `-DeclRefExpr 0x7fa456815670 <col:5> 'xyz *' lvalue Var 0x7fa456815108 'Y' 'xyz *'
+    |   |   |     `-ImplicitCastExpr 0x7fa4568156d8 <col:7> 'int' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7fa456815698 <col:7> 'int' lvalue Var 0x7fa456815360 'tj' 'int'
+    |   |   `-ImplicitCastExpr 0x7fa456815788 <col:15> 'double' <IntegralToFloating>
+    |   |     `-IntegerLiteral 0x7fa456815750 <col:15> 'int' 0
+    |   |-CompoundAssignOperator 0x7fa4568159c0 <line:23:7, col:29> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7fa4568157f0 <col:7> 'double' lvalue Var 0x7fa456814e38 'tsum' 'double'
+    |   | `-BinaryOperator 0x7fa456815998 <col:15, col:29> 'double' '*'
+    |   |   |-ImplicitCastExpr 0x7fa456815968 <col:15, col:25> 'double' <LValueToRValue>
+    |   |   | `-ArraySubscriptExpr 0x7fa456815918 <col:15, col:25> 'double' lvalue
+    |   |   |   |-ImplicitCastExpr 0x7fa4568158e8 <col:15, col:21> 'double *' <LValueToRValue>
+    |   |   |   | `-ArraySubscriptExpr 0x7fa456815898 <col:15, col:21> 'double *' lvalue
+    |   |   |   |   |-ImplicitCastExpr 0x7fa456815868 <col:15> 'double **' <LValueToRValue>
+    |   |   |   |   | `-DeclRefExpr 0x7fa456815818 <col:15> 'double **' lvalue Var 0x7fa456814d48 'tds' 'double **'
+    |   |   |   |   `-ImplicitCastExpr 0x7fa456815880 <col:19> 'int' <LValueToRValue>
+    |   |   |   |     `-DeclRefExpr 0x7fa456815840 <col:19> 'int' lvalue Var 0x7fa456815180 'ti' 'int'
+    |   |   |   `-ImplicitCastExpr 0x7fa456815900 <col:23> 'int' <LValueToRValue>
+    |   |   |     `-DeclRefExpr 0x7fa4568158c0 <col:23> 'int' lvalue Var 0x7fa456815360 'tj' 'int'
+    |   |   `-ImplicitCastExpr 0x7fa456815980 <col:29> 'double' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fa456815940 <col:29> 'double' lvalue Var 0x7fa456814dc0 'd' 'double'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7fa456815aa8 <line:25:3, col:10>
+      `-ImplicitCastExpr 0x7fa456815a90 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa456815a68 <col:10> 'double' lvalue Var 0x7fa456814e38 'tsum' 'double'

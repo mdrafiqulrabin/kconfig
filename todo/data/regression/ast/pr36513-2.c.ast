@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f82130174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f821380be28 <../Data/C2AST/pr36513-2.c:9:1, line:14:1> line:9:5 main2 'int ()'
+  `-CompoundStmt 0x7f821380c1a0 <line:10:1, line:14:1>
+    |-DeclStmt 0x7f821380bfc8 <line:11:3, col:13>
+    | |-VarDecl 0x7f821380bee0 <col:3, col:9> col:9 used s 'char *'
+    | `-VarDecl 0x7f821380bf50 <col:3, col:12> col:12 used t 'char'
+    |-CallExpr 0x7f821380c0d0 <line:12:3, col:15> 'char *'
+    | |-ImplicitCastExpr 0x7f821380c0b8 <col:3> 'char *(*)(const char *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f821380bfe0 <col:3> 'char *(const char *, int)' Function 0x7f8212899648 'strchr' 'char *(const char *, int)'
+    | |-ImplicitCastExpr 0x7f821380c120 <col:11> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7f821380c108 <col:11> 'char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f821380c008 <col:11> 'char *' lvalue Var 0x7f821380bee0 's' 'char *'
+    | `-ImplicitCastExpr 0x7f821380c150 <col:14> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7f821380c138 <col:14> 'char' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f821380c030 <col:14> 'char' lvalue Var 0x7f821380bf50 't' 'char'
+    `-ReturnStmt 0x7f821380c188 <line:13:3, col:10>
+      `-IntegerLiteral 0x7f821380c168 <col:10> 'int' 0

@@ -1,0 +1,538 @@
+TranslationUnitDecl 0x7fbef48174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fbef50137a0 <../Data/C2AST/pr71632.c:4:1, line:53:1> line:5:1 foo 'void (double, double *, double *)'
+  |-ParmVarDecl 0x7fbef4818178 <col:6, col:13> col:13 used d 'double'
+  |-ParmVarDecl 0x7fbef5013640 <col:16, col:24> col:24 used p 'double *'
+  |-ParmVarDecl 0x7fbef50136b8 <col:27, col:35> col:35 used q 'double *'
+  `-CompoundStmt 0x7fbef484af80 <line:6:1, line:53:1>
+    |-DeclStmt 0x7fbef5013910 <line:7:3, col:8>
+    | `-VarDecl 0x7fbef50138b0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fbef484af48 <line:8:3, line:52:5>
+      |-BinaryOperator 0x7fbef5013970 <line:8:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fbef5013928 <col:8> 'int' lvalue Var 0x7fbef50138b0 'i' 'int'
+      | `-IntegerLiteral 0x7fbef5013950 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbef50139f8 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fbef50139e0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fbef5013998 <col:15> 'int' lvalue Var 0x7fbef50138b0 'i' 'int'
+      | `-IntegerLiteral 0x7fbef50139c0 <col:19> 'int' 64
+      |-UnaryOperator 0x7fbef5013a48 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fbef5013a20 <col:23> 'int' lvalue Var 0x7fbef50138b0 'i' 'int'
+      `-CompoundStmt 0x7fbef484ade8 <line:9:5, line:52:5>
+        |-DeclStmt 0x7fbef5013c58 <line:10:7, col:39>
+        | `-VarDecl 0x7fbef5013a80 <col:7, col:36> col:14 used t1 'double' cinit
+        |   `-ConditionalOperator 0x7fbef5013c28 <col:19, col:36> 'double'
+        |     |-BinaryOperator 0x7fbef5013bc0 <col:19, col:26> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef5013b90 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef5013ae0 <col:19> 'double' lvalue ParmVar 0x7fbef4818178 'd' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef5013ba8 <col:23, col:26> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef5013b68 <col:23, col:26> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef5013b50 <col:23> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef5013b08 <col:23> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef5013b30 <col:25> 'int' 0
+        |     |-FloatingLiteral 0x7fbef5013be8 <col:30> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef5013c08 <col:36> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef5013e60 <line:11:7, col:40>
+        | `-VarDecl 0x7fbef5013c88 <col:7, col:37> col:14 used t2 'double' cinit
+        |   `-ConditionalOperator 0x7fbef5013e30 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef5013dc8 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef5013d98 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef5013ce8 <col:19> 'double' lvalue Var 0x7fbef5013a80 't1' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef5013db0 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef5013d70 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef5013d58 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef5013d10 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef5013d38 <col:26> 'int' 1
+        |     |-FloatingLiteral 0x7fbef5013df0 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef5013e10 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef5014068 <line:12:7, col:40>
+        | `-VarDecl 0x7fbef5013e90 <col:7, col:37> col:14 used t3 'double' cinit
+        |   `-ConditionalOperator 0x7fbef5014038 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef5013fd0 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef5013fa0 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef5013ef0 <col:19> 'double' lvalue Var 0x7fbef5013c88 't2' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef5013fb8 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef5013f78 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef5013f60 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef5013f18 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef5013f40 <col:26> 'int' 2
+        |     |-FloatingLiteral 0x7fbef5013ff8 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef5014018 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef5014270 <line:13:7, col:40>
+        | `-VarDecl 0x7fbef5014098 <col:7, col:37> col:14 used t4 'double' cinit
+        |   `-ConditionalOperator 0x7fbef5014240 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef50141d8 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef50141a8 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef50140f8 <col:19> 'double' lvalue Var 0x7fbef5013e90 't3' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef50141c0 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef5014180 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef5014168 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef5014120 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef5014148 <col:26> 'int' 3
+        |     |-FloatingLiteral 0x7fbef5014200 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef5014220 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef5014478 <line:14:7, col:40>
+        | `-VarDecl 0x7fbef50142a0 <col:7, col:37> col:14 used t5 'double' cinit
+        |   `-ConditionalOperator 0x7fbef5014448 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef50143e0 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef50143b0 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef5014300 <col:19> 'double' lvalue Var 0x7fbef5014098 't4' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef50143c8 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef5014388 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef5014370 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef5014328 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef5014350 <col:26> 'int' 4
+        |     |-FloatingLiteral 0x7fbef5014408 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef5014428 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480b898 <line:15:7, col:40>
+        | `-VarDecl 0x7fbef50144a8 <col:7, col:37> col:14 used t6 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480b868 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef480b800 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef50145b8 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef5014508 <col:19> 'double' lvalue Var 0x7fbef50142a0 't5' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef50145d0 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef5014590 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef5014578 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef5014530 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef5014558 <col:26> 'int' 5
+        |     |-FloatingLiteral 0x7fbef480b828 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480b848 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480baa0 <line:16:7, col:40>
+        | `-VarDecl 0x7fbef480b8c8 <col:7, col:37> col:14 used t7 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480ba70 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef480ba08 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480b9d8 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480b928 <col:19> 'double' lvalue Var 0x7fbef50144a8 't6' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480b9f0 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480b9b0 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480b998 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480b950 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480b978 <col:26> 'int' 6
+        |     |-FloatingLiteral 0x7fbef480ba30 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480ba50 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480bca8 <line:17:7, col:40>
+        | `-VarDecl 0x7fbef480bad0 <col:7, col:37> col:14 used t8 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480bc78 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef480bc10 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480bbe0 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480bb30 <col:19> 'double' lvalue Var 0x7fbef480b8c8 't7' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480bbf8 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480bbb8 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480bba0 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480bb58 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480bb80 <col:26> 'int' 7
+        |     |-FloatingLiteral 0x7fbef480bc38 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480bc58 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480beb0 <line:18:7, col:40>
+        | `-VarDecl 0x7fbef480bcd8 <col:7, col:37> col:14 used t9 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480be80 <col:19, col:37> 'double'
+        |     |-BinaryOperator 0x7fbef480be18 <col:19, col:27> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480bde8 <col:19> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480bd38 <col:19> 'double' lvalue Var 0x7fbef480bad0 't8' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480be00 <col:24, col:27> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480bdc0 <col:24, col:27> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480bda8 <col:24> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480bd60 <col:24> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480bd88 <col:26> 'int' 8
+        |     |-FloatingLiteral 0x7fbef480be40 <col:31> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480be60 <col:37> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480c0b8 <line:19:7, col:41>
+        | `-VarDecl 0x7fbef480bee0 <col:7, col:38> col:14 used t10 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480c088 <col:20, col:38> 'double'
+        |     |-BinaryOperator 0x7fbef480c020 <col:20, col:28> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480bff0 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480bf40 <col:20> 'double' lvalue Var 0x7fbef480bcd8 't9' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480c008 <col:25, col:28> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480bfc8 <col:25, col:28> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480bfb0 <col:25> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480bf68 <col:25> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480bf90 <col:27> 'int' 9
+        |     |-FloatingLiteral 0x7fbef480c048 <col:32> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480c068 <col:38> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480c2c0 <line:20:7, col:43>
+        | `-VarDecl 0x7fbef480c0e8 <col:7, col:40> col:14 used t11 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480c290 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480c228 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480c1f8 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480c148 <col:20> 'double' lvalue Var 0x7fbef480bee0 't10' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480c210 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480c1d0 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480c1b8 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480c170 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480c198 <col:28> 'int' 10
+        |     |-FloatingLiteral 0x7fbef480c250 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480c270 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480c4c8 <line:21:7, col:43>
+        | `-VarDecl 0x7fbef480c2f0 <col:7, col:40> col:14 used t12 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480c498 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480c430 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480c400 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480c350 <col:20> 'double' lvalue Var 0x7fbef480c0e8 't11' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480c418 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480c3d8 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480c3c0 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480c378 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480c3a0 <col:28> 'int' 11
+        |     |-FloatingLiteral 0x7fbef480c458 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480c478 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480c6d0 <line:22:7, col:43>
+        | `-VarDecl 0x7fbef480c4f8 <col:7, col:40> col:14 used t13 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480c6a0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480c638 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480c608 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480c558 <col:20> 'double' lvalue Var 0x7fbef480c2f0 't12' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480c620 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480c5e0 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480c5c8 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480c580 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480c5a8 <col:28> 'int' 12
+        |     |-FloatingLiteral 0x7fbef480c660 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480c680 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480c8f0 <line:23:7, col:43>
+        | `-VarDecl 0x7fbef480c700 <col:7, col:40> col:14 used t14 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480c8c0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480c858 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480c828 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480c760 <col:20> 'double' lvalue Var 0x7fbef480c4f8 't13' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480c840 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480c800 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480c7d0 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480c788 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480c7b0 <col:28> 'int' 13
+        |     |-FloatingLiteral 0x7fbef480c880 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480c8a0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480caf8 <line:24:7, col:43>
+        | `-VarDecl 0x7fbef480c920 <col:7, col:40> col:14 used t15 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480cac8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480ca60 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480ca30 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480c980 <col:20> 'double' lvalue Var 0x7fbef480c700 't14' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480ca48 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480ca08 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480c9f0 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480c9a8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480c9d0 <col:28> 'int' 14
+        |     |-FloatingLiteral 0x7fbef480ca88 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480caa8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480cd00 <line:25:7, col:43>
+        | `-VarDecl 0x7fbef480cb28 <col:7, col:40> col:14 used t16 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480ccd0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480cc68 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480cc38 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480cb88 <col:20> 'double' lvalue Var 0x7fbef480c920 't15' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480cc50 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480cc10 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480cbf8 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480cbb0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480cbd8 <col:28> 'int' 15
+        |     |-FloatingLiteral 0x7fbef480cc90 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480ccb0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480cf08 <line:26:7, col:43>
+        | `-VarDecl 0x7fbef480cd30 <col:7, col:40> col:14 used t17 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480ced8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480ce70 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480ce40 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480cd90 <col:20> 'double' lvalue Var 0x7fbef480cb28 't16' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480ce58 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480ce18 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480ce00 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480cdb8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480cde0 <col:28> 'int' 16
+        |     |-FloatingLiteral 0x7fbef480ce98 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480ceb8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480d110 <line:27:7, col:43>
+        | `-VarDecl 0x7fbef480cf38 <col:7, col:40> col:14 used t18 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480d0e0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480d078 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480d048 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480cf98 <col:20> 'double' lvalue Var 0x7fbef480cd30 't17' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480d060 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480d020 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480d008 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480cfc0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480cfe8 <col:28> 'int' 17
+        |     |-FloatingLiteral 0x7fbef480d0a0 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480d0c0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480d318 <line:28:7, col:43>
+        | `-VarDecl 0x7fbef480d140 <col:7, col:40> col:14 used t19 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480d2e8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480d280 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480d250 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480d1a0 <col:20> 'double' lvalue Var 0x7fbef480cf38 't18' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480d268 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480d228 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480d210 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480d1c8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480d1f0 <col:28> 'int' 18
+        |     |-FloatingLiteral 0x7fbef480d2a8 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480d2c8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480d520 <line:29:7, col:43>
+        | `-VarDecl 0x7fbef480d348 <col:7, col:40> col:14 used t20 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480d4f0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480d488 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480d458 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480d3a8 <col:20> 'double' lvalue Var 0x7fbef480d140 't19' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480d470 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480d430 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480d418 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480d3d0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480d3f8 <col:28> 'int' 19
+        |     |-FloatingLiteral 0x7fbef480d4b0 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480d4d0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480d728 <line:30:7, col:43>
+        | `-VarDecl 0x7fbef480d550 <col:7, col:40> col:14 used t21 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480d6f8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480d690 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480d660 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480d5b0 <col:20> 'double' lvalue Var 0x7fbef480d348 't20' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480d678 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480d638 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480d620 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480d5d8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480d600 <col:28> 'int' 20
+        |     |-FloatingLiteral 0x7fbef480d6b8 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480d6d8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480d950 <line:31:7, col:43>
+        | `-VarDecl 0x7fbef480d758 <col:7, col:40> col:14 used t22 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480d920 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480d8b8 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480d888 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480d7b8 <col:20> 'double' lvalue Var 0x7fbef480d550 't21' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480d8a0 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480d860 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480d848 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480d800 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480d828 <col:28> 'int' 21
+        |     |-FloatingLiteral 0x7fbef480d8e0 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480d900 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480db58 <line:32:7, col:43>
+        | `-VarDecl 0x7fbef480d980 <col:7, col:40> col:14 used t23 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480db28 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480dac0 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480da90 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480d9e0 <col:20> 'double' lvalue Var 0x7fbef480d758 't22' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480daa8 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480da68 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480da50 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480da08 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480da30 <col:28> 'int' 22
+        |     |-FloatingLiteral 0x7fbef480dae8 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480db08 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480dd60 <line:33:7, col:43>
+        | `-VarDecl 0x7fbef480db88 <col:7, col:40> col:14 used t24 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480dd30 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480dcc8 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480dc98 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480dbe8 <col:20> 'double' lvalue Var 0x7fbef480d980 't23' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480dcb0 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480dc70 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480dc58 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480dc10 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480dc38 <col:28> 'int' 23
+        |     |-FloatingLiteral 0x7fbef480dcf0 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480dd10 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480df68 <line:34:7, col:43>
+        | `-VarDecl 0x7fbef480dd90 <col:7, col:40> col:14 used t25 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480df38 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480ded0 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480dea0 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480ddf0 <col:20> 'double' lvalue Var 0x7fbef480db88 't24' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480deb8 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480de78 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480de60 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480de18 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480de40 <col:28> 'int' 24
+        |     |-FloatingLiteral 0x7fbef480def8 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480df18 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480e170 <line:35:7, col:43>
+        | `-VarDecl 0x7fbef480df98 <col:7, col:40> col:14 used t26 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480e140 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480e0d8 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480e0a8 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480dff8 <col:20> 'double' lvalue Var 0x7fbef480dd90 't25' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480e0c0 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480e080 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480e068 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480e020 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480e048 <col:28> 'int' 25
+        |     |-FloatingLiteral 0x7fbef480e100 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480e120 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480e378 <line:36:7, col:43>
+        | `-VarDecl 0x7fbef480e1a0 <col:7, col:40> col:14 used t27 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480e348 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480e2e0 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480e2b0 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480e200 <col:20> 'double' lvalue Var 0x7fbef480df98 't26' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480e2c8 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480e288 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480e270 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480e228 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480e250 <col:28> 'int' 26
+        |     |-FloatingLiteral 0x7fbef480e308 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480e328 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480e580 <line:37:7, col:43>
+        | `-VarDecl 0x7fbef480e3a8 <col:7, col:40> col:14 used t28 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480e550 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480e4e8 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480e4b8 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480e408 <col:20> 'double' lvalue Var 0x7fbef480e1a0 't27' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480e4d0 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480e490 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480e478 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480e430 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480e458 <col:28> 'int' 27
+        |     |-FloatingLiteral 0x7fbef480e510 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480e530 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480e788 <line:38:7, col:43>
+        | `-VarDecl 0x7fbef480e5b0 <col:7, col:40> col:14 used t29 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480e758 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480e6f0 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480e6c0 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480e610 <col:20> 'double' lvalue Var 0x7fbef480e3a8 't28' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480e6d8 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480e698 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480e680 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480e638 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480e660 <col:28> 'int' 28
+        |     |-FloatingLiteral 0x7fbef480e718 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480e738 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480e9d8 <line:39:7, col:43>
+        | `-VarDecl 0x7fbef480e800 <col:7, col:40> col:14 used t30 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480e9a8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480e940 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480e910 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480e860 <col:20> 'double' lvalue Var 0x7fbef480e5b0 't29' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480e928 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480e8e8 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480e8d0 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480e888 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480e8b0 <col:28> 'int' 29
+        |     |-FloatingLiteral 0x7fbef480e968 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480e988 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480ebe0 <line:40:7, col:43>
+        | `-VarDecl 0x7fbef480ea08 <col:7, col:40> col:14 used t31 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480ebb0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480eb48 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480eb18 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480ea68 <col:20> 'double' lvalue Var 0x7fbef480e800 't30' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480eb30 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480eaf0 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480ead8 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480ea90 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480eab8 <col:28> 'int' 30
+        |     |-FloatingLiteral 0x7fbef480eb70 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480eb90 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480ede8 <line:41:7, col:43>
+        | `-VarDecl 0x7fbef480ec10 <col:7, col:40> col:14 used t32 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480edb8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480ed50 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480ed20 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480ec70 <col:20> 'double' lvalue Var 0x7fbef480ea08 't31' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480ed38 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480ecf8 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480ece0 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480ec98 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480ecc0 <col:28> 'int' 31
+        |     |-FloatingLiteral 0x7fbef480ed78 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480ed98 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480eff0 <line:42:7, col:43>
+        | `-VarDecl 0x7fbef480ee18 <col:7, col:40> col:14 used t33 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480efc0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480ef58 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480ef28 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480ee78 <col:20> 'double' lvalue Var 0x7fbef480ec10 't32' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480ef40 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480ef00 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480eee8 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480eea0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480eec8 <col:28> 'int' 32
+        |     |-FloatingLiteral 0x7fbef480ef80 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480efa0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480f1f8 <line:43:7, col:43>
+        | `-VarDecl 0x7fbef480f020 <col:7, col:40> col:14 used t34 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480f1c8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480f160 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480f130 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480f080 <col:20> 'double' lvalue Var 0x7fbef480ee18 't33' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480f148 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480f108 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480f0f0 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480f0a8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480f0d0 <col:28> 'int' 33
+        |     |-FloatingLiteral 0x7fbef480f188 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480f1a8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480f400 <line:44:7, col:43>
+        | `-VarDecl 0x7fbef480f228 <col:7, col:40> col:14 used t35 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480f3d0 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480f368 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480f338 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480f288 <col:20> 'double' lvalue Var 0x7fbef480f020 't34' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480f350 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480f310 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480f2f8 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480f2b0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480f2d8 <col:28> 'int' 34
+        |     |-FloatingLiteral 0x7fbef480f390 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480f3b0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef480f608 <line:45:7, col:43>
+        | `-VarDecl 0x7fbef480f430 <col:7, col:40> col:14 used t36 'double' cinit
+        |   `-ConditionalOperator 0x7fbef480f5d8 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480f570 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480f540 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480f490 <col:20> 'double' lvalue Var 0x7fbef480f228 't35' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480f558 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480f518 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480f500 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480f4b8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480f4e0 <col:28> 'int' 35
+        |     |-FloatingLiteral 0x7fbef480f598 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480f5b8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef484a830 <line:46:7, col:43>
+        | `-VarDecl 0x7fbef480f638 <col:7, col:40> col:14 used t37 'double' cinit
+        |   `-ConditionalOperator 0x7fbef484a800 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef480f778 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef480f748 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef480f698 <col:20> 'double' lvalue Var 0x7fbef480f430 't36' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef480f760 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef480f720 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef480f708 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef480f6c0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef480f6e8 <col:28> 'int' 36
+        |     |-FloatingLiteral 0x7fbef480f7a0 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef480f7c0 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef484aa38 <line:47:7, col:43>
+        | `-VarDecl 0x7fbef484a860 <col:7, col:40> col:14 used t38 'double' cinit
+        |   `-ConditionalOperator 0x7fbef484aa08 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef484a9a0 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef484a970 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef484a8c0 <col:20> 'double' lvalue Var 0x7fbef480f638 't37' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef484a988 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef484a948 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef484a930 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef484a8e8 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef484a910 <col:28> 'int' 37
+        |     |-FloatingLiteral 0x7fbef484a9c8 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef484a9e8 <col:40> 'double' 0.000000e+00
+        |-DeclStmt 0x7fbef484ac40 <line:48:7, col:43>
+        | `-VarDecl 0x7fbef484aa68 <col:7, col:40> col:14 used t39 'double' cinit
+        |   `-ConditionalOperator 0x7fbef484ac10 <col:20, col:40> 'double'
+        |     |-BinaryOperator 0x7fbef484aba8 <col:20, col:30> 'int' '>'
+        |     | |-ImplicitCastExpr 0x7fbef484ab78 <col:20> 'double' <LValueToRValue>
+        |     | | `-DeclRefExpr 0x7fbef484aac8 <col:20> 'double' lvalue Var 0x7fbef484a860 't38' 'double'
+        |     | `-ImplicitCastExpr 0x7fbef484ab90 <col:26, col:30> 'double' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fbef484ab50 <col:26, col:30> 'double' lvalue
+        |     |     |-ImplicitCastExpr 0x7fbef484ab38 <col:26> 'double *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7fbef484aaf0 <col:26> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        |     |     `-IntegerLiteral 0x7fbef484ab18 <col:28> 'int' 38
+        |     |-FloatingLiteral 0x7fbef484abd0 <col:34> 'double' 1.000000e+00
+        |     `-FloatingLiteral 0x7fbef484abf0 <col:40> 'double' 0.000000e+00
+        |-BinaryOperator 0x7fbef484acf8 <line:49:7, col:12> 'double' '='
+        | |-UnaryOperator 0x7fbef484ac98 <col:7, col:8> 'double' lvalue prefix '*'
+        | | `-ImplicitCastExpr 0x7fbef484ac80 <col:8> 'double *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fbef484ac58 <col:8> 'double *' lvalue ParmVar 0x7fbef50136b8 'q' 'double *'
+        | `-ImplicitCastExpr 0x7fbef484ace0 <col:12> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fbef484acb8 <col:12> 'double' lvalue Var 0x7fbef484aa68 't39' 'double'
+        |-CompoundAssignOperator 0x7fbef484ad68 <line:50:7, col:12> 'double *' '+=' ComputeLHSTy='double *' ComputeResultTy='double *'
+        | |-DeclRefExpr 0x7fbef484ad20 <col:7> 'double *' lvalue ParmVar 0x7fbef5013640 'p' 'double *'
+        | `-IntegerLiteral 0x7fbef484ad48 <col:12> 'int' 39
+        `-UnaryOperator 0x7fbef484adc8 <line:51:7, col:8> 'double *' postfix '++'
+          `-DeclRefExpr 0x7fbef484ada0 <col:7> 'double *' lvalue ParmVar 0x7fbef50136b8 'q' 'double *'

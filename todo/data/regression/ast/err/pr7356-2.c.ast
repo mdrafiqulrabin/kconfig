@@ -1,0 +1,42 @@
+../Data/C2AST/pr7356-2.c:3:6: error: expected ';' after top level declarator
+int i  
+     ^
+     ;
+../Data/C2AST/pr7356-2.c:10:8: error: expected ';' at end of declaration
+  int i  
+       ^
+       ;
+2 errors generated.
+TranslationUnitDecl 0x7fe6ae82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6ae82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe6ae82bf80 '__int128'
+|-TypedefDecl 0x7fe6ae82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe6ae82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe6ae82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe6ae82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6ae82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe6ae82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6ae82c600 'char *'
+|   `-BuiltinType 0x7fe6ae82bd80 'char'
+|-TypedefDecl 0x7fe6ae82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe6ae82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6ae82c720 'struct __va_list_tag'
+|     `-Record 0x7fe6ae82c698 '__va_list_tag'
+|-VarDecl 0x7fe6ae82c978 <../Data/C2AST/pr7356-2.c:3:1, col:5> col:5 i 'int'
+|-VarDecl 0x7fe6ae86d858 <line:4:1, col:5> col:5 j 'int'
+|-FunctionDecl 0x7fe6ae86d980 <line:8:1, line:14:1> line:8:6 test 'void (void)'
+| `-CompoundStmt 0x7fe6ae86db40 <line:9:1, line:14:1>
+|   |-DeclStmt 0x7fe6ae86da98 <line:10:3, line:11:3>
+|   | `-VarDecl 0x7fe6ae86da38 <line:10:3, col:7> col:7 i 'int'
+|   `-DeclStmt 0x7fe6ae86db28 <line:11:3, col:8>
+|     `-VarDecl 0x7fe6ae86dac8 <col:3, col:7> col:7 j 'int'
+`-FunctionDecl 0x7fe6ae86dcc8 <line:16:1, line:21:1> line:16:5 old_style_params 'int (int, int)'
+  |-ParmVarDecl 0x7fe6ae86db78 <line:17:6, col:10> col:10 used first 'int'
+  |-ParmVarDecl 0x7fe6ae86dbf0 <line:18:6, col:10> col:10 used second 'int'
+  `-CompoundStmt 0x7fe6ae86de38 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7fe6ae86de20 <line:20:3, col:18>
+      `-BinaryOperator 0x7fe6ae86ddf8 <col:10, col:18> 'int' '+'
+        |-ImplicitCastExpr 0x7fe6ae86ddc8 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe6ae86dd78 <col:10> 'int' lvalue ParmVar 0x7fe6ae86db78 'first' 'int'
+        `-ImplicitCastExpr 0x7fe6ae86dde0 <col:18> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe6ae86dda0 <col:18> 'int' lvalue ParmVar 0x7fe6ae86dbf0 'second' 'int'

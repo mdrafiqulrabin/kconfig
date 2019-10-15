@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f9f5e0078e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9f5d8341c0 <../Data/C2AST/pr39007.c:4:1, line:13:1> line:5:1 foo 'void (int *restrict, int *restrict, int)'
+  |-ParmVarDecl 0x7f9f5e0085a0 <col:6, col:24> col:24 used p 'int *restrict'
+  |-ParmVarDecl 0x7f9f5d834018 <col:27, col:45> col:45 used q 'int *restrict'
+  |-ParmVarDecl 0x7f9f5d834090 <col:48, col:52> col:52 used count 'int'
+  `-CompoundStmt 0x7f9f5d834660 <line:6:1, line:13:1>
+    |-DeclStmt 0x7f9f5d834330 <line:7:3, col:8>
+    | `-VarDecl 0x7f9f5d8342d0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f9f5d834628 <line:8:3, line:12:5>
+      |-BinaryOperator 0x7f9f5d834390 <line:8:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f9f5d834348 <col:8> 'int' lvalue Var 0x7f9f5d8342d0 'i' 'int'
+      | `-IntegerLiteral 0x7f9f5d834370 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9f5d834438 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9f5d834408 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9f5d8343b8 <col:15> 'int' lvalue Var 0x7f9f5d8342d0 'i' 'int'
+      | `-ImplicitCastExpr 0x7f9f5d834420 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9f5d8343e0 <col:19> 'int' lvalue ParmVar 0x7f9f5d834090 'count' 'int'
+      |-UnaryOperator 0x7f9f5d834488 <col:26, col:27> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f9f5d834460 <col:26> 'int' lvalue Var 0x7f9f5d8342d0 'i' 'int'
+      `-CompoundStmt 0x7f9f5d834608 <line:9:5, line:12:5>
+        |-BinaryOperator 0x7f9f5d834530 <line:10:7, col:14> 'int' '='
+        | |-UnaryOperator 0x7f9f5d8344f0 <col:7, col:9> 'int' lvalue prefix '*'
+        | | `-UnaryOperator 0x7f9f5d8344d0 <col:8, col:9> 'int *' postfix '++'
+        | |   `-DeclRefExpr 0x7f9f5d8344a8 <col:8> 'int *restrict' lvalue ParmVar 0x7f9f5e0085a0 'p' 'int *restrict'
+        | `-IntegerLiteral 0x7f9f5d834510 <col:14> 'int' 0
+        `-BinaryOperator 0x7f9f5d8345e0 <line:11:7, col:14> 'int' '='
+          |-UnaryOperator 0x7f9f5d8345a0 <col:7, col:9> 'int' lvalue prefix '*'
+          | `-UnaryOperator 0x7f9f5d834580 <col:8, col:9> 'int *' postfix '++'
+          |   `-DeclRefExpr 0x7f9f5d834558 <col:8> 'int *restrict' lvalue ParmVar 0x7f9f5d834018 'q' 'int *restrict'
+          `-IntegerLiteral 0x7f9f5d8345c0 <col:14> 'int' 0

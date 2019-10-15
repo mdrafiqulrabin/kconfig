@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fdf838002e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdf8282f450 <../Data/C2AST/pr38151-1.c:4:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdf8282f4f0 prev 0x7fdf8282f450 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7fdf8282f590 <line:6:1, line:10:1> line:6:8 struct S2848 definition
+| |-FieldDecl 0x7fdf8282f658 <line:8:3, col:16> col:16 referenced a 'unsigned int'
+| `-FieldDecl 0x7fdf8282f6d8 <line:9:3, col:16> col:16 referenced b '_Complex int'
+|-VarDecl 0x7fdf8282f770 <line:12:1, col:14> col:14 used s2848 'struct S2848':'struct S2848'
+|-FunctionDecl 0x7fdf8282f930 <line:14:1, line:19:1> line:15:1 used check2848 'void (struct S2848)'
+| |-ParmVarDecl 0x7fdf8282f830 <col:12, col:25> col:25 used arg0 'struct S2848':'struct S2848'
+| |-CompoundStmt 0x7fdf8282fc50 <line:16:1, line:19:1>
+| | `-IfStmt 0x7fdf8282fc18 <line:17:3, line:18:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fdf8282fb10 <line:17:7, col:23> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fdf8282fae0 <col:7, col:12> '_Complex int' <LValueToRValue>
+| |   | | `-MemberExpr 0x7fdf8282fa48 <col:7, col:12> '_Complex int' lvalue .b 0x7fdf8282f6d8
+| |   | |   `-DeclRefExpr 0x7fdf8282fa20 <col:7> 'struct S2848':'struct S2848' lvalue ParmVar 0x7fdf8282f830 'arg0' 'struct S2848':'struct S2848'
+| |   | `-ImplicitCastExpr 0x7fdf8282faf8 <col:17, col:23> '_Complex int' <LValueToRValue>
+| |   |   `-MemberExpr 0x7fdf8282faa8 <col:17, col:23> '_Complex int' lvalue .b 0x7fdf8282f6d8
+| |   |     `-DeclRefExpr 0x7fdf8282fa80 <col:17> 'struct S2848':'struct S2848' lvalue Var 0x7fdf8282f770 's2848' 'struct S2848':'struct S2848'
+| |   |-CallExpr 0x7fdf8282fbf0 <line:18:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fdf8282fbd8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fdf8282fb88 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdf8282f4f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fdf8282f9d8 <line:14:21>
+`-FunctionDecl 0x7fdf8282fcc0 <line:21:1, line:29:1> line:21:5 main 'int ()'
+  `-CompoundStmt 0x7fdf82830130 <line:22:1, line:29:1>
+    |-BinaryOperator 0x7fdf8282fde0 <line:23:3, col:13> 'unsigned int' '='
+    | |-MemberExpr 0x7fdf8282fd88 <col:3, col:9> 'unsigned int' lvalue .a 0x7fdf8282f658
+    | | `-DeclRefExpr 0x7fdf8282fd60 <col:3> 'struct S2848':'struct S2848' lvalue Var 0x7fdf8282f770 's2848' 'struct S2848':'struct S2848'
+    | `-IntegerLiteral 0x7fdf8282fdc0 <col:13> 'unsigned int' 4027477739
+    |-BinaryOperator 0x7fdf8282ffc0 <line:24:3, col:55> '_Complex int' '='
+    | |-MemberExpr 0x7fdf8282fe30 <col:3, col:9> '_Complex int' lvalue .b 0x7fdf8282f6d8
+    | | `-DeclRefExpr 0x7fdf8282fe08 <col:3> 'struct S2848':'struct S2848' lvalue Var 0x7fdf8282f770 's2848' 'struct S2848':'struct S2848'
+    | `-ParenExpr 0x7fdf8282ffa0 <col:13, col:55> '_Complex int'
+    |   `-BinaryOperator 0x7fdf8282ff78 <col:14, col:53> '_Complex int' '+'
+    |     |-ImplicitCastExpr 0x7fdf8282ff60 <col:14> '_Complex int' <IntegralRealToComplex>
+    |     | `-IntegerLiteral 0x7fdf8282fe68 <col:14> 'int' 723419448
+    |     `-BinaryOperator 0x7fdf8282ff38 <col:26, col:53> '_Complex int' '*'
+    |       |-ImplicitCastExpr 0x7fdf8282ff20 <col:26, col:27> '_Complex int' <IntegralRealToComplex>
+    |       | `-UnaryOperator 0x7fdf8282fea8 <col:26, col:27> 'int' prefix '-'
+    |       |   `-IntegerLiteral 0x7fdf8282fe88 <col:27> 'int' 218144346
+    |       `-UnaryOperator 0x7fdf8282ff00 <col:39, col:53> '_Complex int' prefix '__extension__'
+    |         `-ImaginaryLiteral 0x7fdf8282fee8 <col:53> '_Complex int'
+    |           `-IntegerLiteral 0x7fdf8282fec8 <col:53> 'int' 1
+    |-CallExpr 0x7fdf828300b0 <line:26:3, col:19> 'void'
+    | |-ImplicitCastExpr 0x7fdf82830098 <col:3> 'void (*)(struct S2848)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdf8282ffe8 <col:3> 'void (struct S2848)' Function 0x7fdf8282f930 'check2848' 'void (struct S2848)'
+    | `-ImplicitCastExpr 0x7fdf828300e0 <col:14> 'struct S2848':'struct S2848' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdf82830010 <col:14> 'struct S2848':'struct S2848' lvalue Var 0x7fdf8282f770 's2848' 'struct S2848':'struct S2848'
+    `-ReturnStmt 0x7fdf82830118 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fdf828300f8 <col:10> 'int' 0

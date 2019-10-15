@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fcea781a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcea781b578 <../Data/C2AST/pr63520.c:5:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fcea7855d00 <line:7:1, line:16:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fcea7855f48 <line:9:1, line:16:1>
+    `-WhileStmt 0x7fcea7855f28 <line:10:3, line:15:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fcea7855da0 <line:10:10> 'int' 1
+      `-CompoundStmt 0x7fcea7855f08 <line:11:5, line:15:5>
+        |-IfStmt 0x7fcea7855e50 <line:12:7, line:13:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fcea7855e20 <line:12:11, col:16> 'int' '=='
+        | | |-ImplicitCastExpr 0x7fcea7855e08 <col:11> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fcea7855dc0 <col:11> 'int' lvalue Var 0x7fcea781b578 'a' 'int'
+        | | `-IntegerLiteral 0x7fcea7855de8 <col:16> 'int' 1
+        | |-BreakStmt 0x7fcea7855e48 <line:13:2>
+        | `-<<<NULL>>>
+        `-CompoundAssignOperator 0x7fcea7855ed0 <line:14:7, col:12> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+          |-DeclRefExpr 0x7fcea7855e88 <col:7> 'int' lvalue Var 0x7fcea781b578 'a' 'int'
+          `-IntegerLiteral 0x7fcea7855eb0 <col:12> 'int' 1

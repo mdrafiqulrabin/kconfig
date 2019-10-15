@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f887b02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f887b06e800 <../Data/C2AST/pr63856.c:4:1, col:13> col:13 referenced v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7f887b02c980 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7f887b02bde0 'int'
+|-TypedefDecl 0x7f887b06e8b8 <line:5:1, col:15> col:15 referenced v4hi '__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| `-VectorType 0x7f887b06e880 '__attribute__((__vector_size__(4 * sizeof(short)))) short' 4
+|   `-BuiltinType 0x7f887b02bdc0 'short'
+|-FunctionDecl 0x7f887b06ead8 <line:7:1, line:10:1> line:7:41 f 'int (v2si, int)'
+| |-ParmVarDecl 0x7f887b06e940 <col:44, col:49> col:49 used A 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7f887b06e9b8 <col:52, col:56> col:56 used N 'int'
+| |-CompoundStmt 0x7f887b06ed60 <line:8:1, line:10:1>
+| | `-ReturnStmt 0x7f887b06ed48 <line:9:3, col:22>
+| |   `-ImplicitCastExpr 0x7f887b06ed30 <col:10, col:22> 'int' <IntegralCast>
+| |     `-ArraySubscriptExpr 0x7f887b06ed08 <col:10, col:22> 'short'
+| |       |-ParenExpr 0x7f887b06eca8 <col:10, col:19> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+| |       | `-CStyleCastExpr 0x7f887b06ec80 <col:11, col:18> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+| |       |   `-ImplicitCastExpr 0x7f887b06ec68 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+| |       |     `-DeclRefExpr 0x7f887b06ec30 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f887b06e940 'A' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |       `-ImplicitCastExpr 0x7f887b06ecf0 <col:21> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f887b06ecc8 <col:21> 'int' lvalue ParmVar 0x7f887b06e9b8 'N' 'int'
+| `-NoInlineAttr 0x7f887b06eb88 <line:7:21>
+`-FunctionDecl 0x7f887b06ee98 <line:12:1, line:15:1> line:12:41 g 'int (v2si, int)'
+  |-ParmVarDecl 0x7f887b06ed88 <col:44, col:49> col:49 used A 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7f887b06ee00 <col:52, col:56> col:56 used N 'int'
+  |-CompoundStmt 0x7f887b06f0c0 <line:13:1, line:15:1>
+  | `-ReturnStmt 0x7f887b06f0a8 <line:14:3, col:22>
+  |   `-ImplicitCastExpr 0x7f887b06f090 <col:10, col:22> 'int' <IntegralCast>
+  |     `-ArraySubscriptExpr 0x7f887b06f068 <col:10, col:22> 'short'
+  |       |-ParenExpr 0x7f887b06f008 <col:10, col:19> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short'
+  |       | `-CStyleCastExpr 0x7f887b06efe0 <col:11, col:18> 'v4hi':'__attribute__((__vector_size__(4 * sizeof(short)))) short' <BitCast>
+  |       |   `-ImplicitCastExpr 0x7f887b06efc8 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+  |       |     `-DeclRefExpr 0x7f887b06ef90 <col:18> 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f887b06ed88 'A' 'v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |       `-ImplicitCastExpr 0x7f887b06f050 <col:21> 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x7f887b06f028 <col:21> 'int' lvalue ParmVar 0x7f887b06ee00 'N' 'int'
+  `-NoInlineAttr 0x7f887b06ef48 <line:12:21>

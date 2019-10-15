@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fea3102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fea3106d860 <../Data/C2AST/pr28911.c:7:1, line:11:1> line:8:1 foo '_Complex float (float)'
+| |-ParmVarDecl 0x7fea3102c978 <col:6, col:12> col:12 used a 'float'
+| `-CompoundStmt 0x7fea3106dd58 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fea3106dd40 <line:10:3, col:39>
+|     `-ImplicitCastExpr 0x7fea3106dd28 <col:10, col:39> '_Complex float' <FloatingRealToComplex>
+|       `-ImplicitCastExpr 0x7fea3106dd10 <col:10, col:39> 'float' <FloatingCast>
+|         `-CallExpr 0x7fea3106dc90 <col:10, col:39> 'double'
+|           |-ImplicitCastExpr 0x7fea3106dc78 <col:10> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7fea3106db58 <col:10> '<builtin fn type>' Function 0x7fea3106d990 '__builtin_copysign' 'double (double, double)'
+|           |-ImplicitCastExpr 0x7fea3106dcc8 <col:30, col:35> 'double' <IntegralToFloating>
+|           | `-BinaryOperator 0x7fea3106dc00 <col:30, col:35> 'int' '!='
+|           |   |-ImplicitCastExpr 0x7fea3106dbd0 <col:30> 'float' <LValueToRValue>
+|           |   | `-DeclRefExpr 0x7fea3106db80 <col:30> 'float' lvalue ParmVar 0x7fea3102c978 'a' 'float'
+|           |   `-ImplicitCastExpr 0x7fea3106dbe8 <col:35> 'float' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fea3106dba8 <col:35> 'float' lvalue ParmVar 0x7fea3102c978 'a' 'float'
+|           `-ImplicitCastExpr 0x7fea3106dcf8 <col:38> 'double' <FloatingCast>
+|             `-ImplicitCastExpr 0x7fea3106dce0 <col:38> 'float' <LValueToRValue>
+|               `-DeclRefExpr 0x7fea3106dc28 <col:38> 'float' lvalue ParmVar 0x7fea3102c978 'a' 'float'
+`-FunctionDecl 0x7fea3106d990 <col:10> col:10 implicit used __builtin_copysign 'double (double, double)' extern
+  |-ParmVarDecl 0x7fea3106da30 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fea3106da90 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fea3106db00 <col:10> Implicit
+  `-ConstAttr 0x7fea3106db48 <col:10> Implicit

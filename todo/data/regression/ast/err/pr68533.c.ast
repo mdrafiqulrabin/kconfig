@@ -1,0 +1,65 @@
+../Data/C2AST/pr68533.c:30:4: error: 'void' as parameter must not have type qualifiers
+f3 (
+   ^
+../Data/C2AST/pr68533.c:37:4: error: 'void' must be the first and only parameter if specified
+f4 (
+   ^
+../Data/C2AST/pr68533.c:38:8: error: parameter name omitted
+   void,         
+       ^
+../Data/C2AST/pr68533.c:47:5: error: expected ')'
+   x;            
+    ^
+../Data/C2AST/pr68533.c:45:4: note: to match this '('
+f5 (
+   ^
+../Data/C2AST/pr68533.c:48:9: error: expected ';' after top level declarator
+   int y
+        ^
+        ;
+5 errors generated.
+TranslationUnitDecl 0x7fd7ad026ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd7ad027460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd7ad027180 '__int128'
+|-TypedefDecl 0x7fd7ad0274d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd7ad0271a0 'unsigned __int128'
+|-TypedefDecl 0x7fd7ad0277a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd7ad0275b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd7ad027528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd7ad027840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd7ad027800 'char *'
+|   `-BuiltinType 0x7fd7ad026f80 'char'
+|-TypedefDecl 0x7fd7ad027b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd7ad027ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd7ad027920 'struct __va_list_tag'
+|     `-Record 0x7fd7ad027898 '__va_list_tag'
+|-RecordDecl 0x7fd7ad027b60 <../Data/C2AST/pr68533.c:5:1, col:19> col:8 struct T definition
+| `-FieldDecl 0x7fd7ac814838 <col:12, col:16> col:16 referenced t 'int'
+|-FunctionDecl 0x7fd7ac814c00 <line:7:1, line:16:1> line:8:1 f1 'void (struct S *, struct T *)'
+| |-ParmVarDecl 0x7fd7ac8149e0 <line:9:3, line:10:3> col:3 x 'struct S *'
+| |-ParmVarDecl 0x7fd7ac814af0 <line:11:3, line:12:3> col:3 used y 'struct T *'
+| `-CompoundStmt 0x7fd7ac814db0 <line:14:1, line:16:1>
+|   `-BinaryOperator 0x7fd7ac814d88 <line:15:3, col:10> 'int' '='
+|     |-MemberExpr 0x7fd7ac814d30 <col:3, col:6> 'int' lvalue ->t 0x7fd7ac814838
+|     | `-ImplicitCastExpr 0x7fd7ac814d18 <col:3> 'struct T *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd7ac814cf0 <col:3> 'struct T *' lvalue ParmVar 0x7fd7ac814af0 'y' 'struct T *'
+|     `-IntegerLiteral 0x7fd7ac814d68 <col:10> 'int' 4
+|-RecordDecl 0x7fd7ac814dc8 <line:20:3, col:17> col:3 struct definition
+| `-FieldDecl 0x7fd7ac814e88 <col:11, col:15> col:15 s 'int'
+|-FunctionDecl 0x7fd7ac815120 <line:18:1, line:27:1> line:19:1 f2 'void (struct (anonymous struct at ../Data/C2AST/pr68533.c:20:3) *, struct T *)'
+| |-ParmVarDecl 0x7fd7ac814f80 <line:20:3, line:21:3> col:3 x 'struct (anonymous struct at ../Data/C2AST/pr68533.c:20:3) *'
+| |-ParmVarDecl 0x7fd7ac815008 <line:22:3, line:23:3> col:3 used y 'struct T *'
+| `-CompoundStmt 0x7fd7ac815290 <line:25:1, line:27:1>
+|   `-BinaryOperator 0x7fd7ac815268 <line:26:3, col:10> 'int' '='
+|     |-MemberExpr 0x7fd7ac815210 <col:3, col:6> 'int' lvalue ->t 0x7fd7ac814838
+|     | `-ImplicitCastExpr 0x7fd7ac8151f8 <col:3> 'struct T *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd7ac8151d0 <col:3> 'struct T *' lvalue ParmVar 0x7fd7ac815008 'y' 'struct T *'
+|     `-IntegerLiteral 0x7fd7ac815248 <col:10> 'int' 5
+|-FunctionDecl 0x7fd7ac815370 <line:29:1, line:34:1> line:30:1 f3 'void (void)'
+| `-CompoundStmt 0x7fd7ac815410 <line:33:1, line:34:1>
+|-FunctionDecl 0x7fd7ac8154f0 <line:36:1, line:42:1> line:37:1 f4 'void (int, ...)'
+| |-ParmVarDecl 0x7fd7ac815430 <line:38:4> col:8 'int'
+| `-CompoundStmt 0x7fd7ac815598 <line:41:1, line:42:1>
+|-FunctionDecl 0x7fd7ac815680 <line:44:1, line:45:1> col:1 f5 'void (int)'
+| `-ParmVarDecl 0x7fd7ac8155c0 <line:46:4, line:47:4> col:4 x 'int'
+`-VarDecl 0x7fd7ac815740 <line:48:4, col:8> col:8 y 'int'

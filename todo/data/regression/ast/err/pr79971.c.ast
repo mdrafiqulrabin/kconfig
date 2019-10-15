@@ -1,0 +1,48 @@
+../Data/C2AST/pr79971.c:7:18: error: expected ';' at end of declaration
+  unsigned _Accum b;
+                 ^
+                 ;
+../Data/C2AST/pr79971.c:8:8: error: use of undeclared identifier 'b'
+  for (b = 0.1; b; b += 0.1uk)
+       ^
+../Data/C2AST/pr79971.c:8:17: error: use of undeclared identifier 'b'
+  for (b = 0.1; b; b += 0.1uk)
+                ^
+../Data/C2AST/pr79971.c:8:28: error: invalid suffix 'uk' on floating constant
+  for (b = 0.1; b; b += 0.1uk)
+                           ^
+../Data/C2AST/pr79971.c:8:20: error: use of undeclared identifier 'b'
+  for (b = 0.1; b; b += 0.1uk)
+                   ^
+../Data/C2AST/pr79971.c:10:7: error: use of undeclared identifier '_Sat'
+      _Sat unsigned _Accum b;
+      ^
+../Data/C2AST/pr79971.c:11:12: error: use of undeclared identifier 'b'
+      for (b = 0; b <= 0.8; b = 0.1)
+           ^
+../Data/C2AST/pr79971.c:11:19: error: use of undeclared identifier 'b'
+      for (b = 0; b <= 0.8; b = 0.1)
+                  ^
+../Data/C2AST/pr79971.c:11:29: error: use of undeclared identifier 'b'
+      for (b = 0; b <= 0.8; b = 0.1)
+                            ^
+9 errors generated.
+TranslationUnitDecl 0x7f8b6f814ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8b6f815260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8b6f814f80 '__int128'
+|-TypedefDecl 0x7f8b6f8152d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8b6f814fa0 'unsigned __int128'
+|-TypedefDecl 0x7f8b6f8155a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8b6f8153b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8b6f815328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8b6f815640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8b6f815600 'char *'
+|   `-BuiltinType 0x7f8b6f814d80 'char'
+|-TypedefDecl 0x7f8b6f815908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8b6f8158b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8b6f815720 'struct __va_list_tag'
+|     `-Record 0x7f8b6f815698 '__va_list_tag'
+`-FunctionDecl 0x7f8b70830400 <../Data/C2AST/pr79971.c:4:1, line:14:1> line:5:1 a 'void ()'
+  `-CompoundStmt 0x7f8b70830688 <line:6:1, line:14:1>
+    `-DeclStmt 0x7f8b70830558 <line:7:3, col:19>
+      `-VarDecl 0x7f8b708304f8 <col:3, col:12> col:12 _Accum 'unsigned int'

@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f86db02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f86db02c960 <../Data/C2AST/pr64067.c:3:1, col:19> col:8 struct S definition
+| `-FieldDecl 0x7f86dc008838 <col:12, col:16> col:16 referenced s 'int'
+|-VarDecl 0x7f86dc008970 <line:4:1, col:49> col:12 used v 'int *const [1]' cinit
+| `-InitListExpr 0x7f86dc008c38 <col:19, col:49> 'int *const [1]'
+|   `-UnaryOperator 0x7f86dc008bd0 <col:21, col:47> 'int *' prefix '&'
+|     `-MemberExpr 0x7f86dc008b98 <col:22, col:47> 'int' lvalue .s 0x7f86dc008838
+|       `-ParenExpr 0x7f86dc008b78 <col:22, col:45> 'struct S':'struct S' lvalue
+|         `-CompoundLiteralExpr 0x7f86dc008b50 <col:23, col:44> 'struct S':'struct S' lvalue
+|           `-InitListExpr 0x7f86dc008b08 <col:34, col:44> 'struct S':'struct S'
+|             `-IntegerLiteral 0x7f86dc008a60 <col:41> 'int' 42
+`-FunctionDecl 0x7f86dc008d98 <line:6:1, line:10:1> line:7:1 foo 'int *(void)'
+  `-CompoundStmt 0x7f86dc008f18 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f86dc008f00 <line:9:3, col:13>
+      `-ImplicitCastExpr 0x7f86dc008ee8 <col:10, col:13> 'int *' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f86dc008ec0 <col:10, col:13> 'int *const' lvalue
+          |-ImplicitCastExpr 0x7f86dc008ea8 <col:10> 'int *const *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7f86dc008e38 <col:10> 'int *const [1]' lvalue Var 0x7f86dc008970 'v' 'int *const [1]'
+          `-IntegerLiteral 0x7f86dc008e60 <col:12> 'int' 0

@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fbc758058e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc76011260 <../Data/C2AST/pr40209.c:4:1, col:27> col:6 used process 'void (const char *)'
+| `-ParmVarDecl 0x7fbc75806578 <col:14, col:26> col:26 s 'const char *'
+|-RecordDecl 0x7fbc76011348 <line:6:1, line:8:1> line:6:8 struct BaseHolder definition
+| `-FieldDecl 0x7fbc76011408 <line:7:3, col:16> col:16 referenced base_ 'unsigned int'
+`-FunctionDecl 0x7fbc76011690 <line:10:1, line:19:1> line:10:6 UInt2Str 'void (struct BaseHolder *, unsigned int)'
+  |-ParmVarDecl 0x7fbc76011500 <col:15, col:34> col:34 used b 'struct BaseHolder *'
+  |-ParmVarDecl 0x7fbc76011578 <col:37, col:50> col:50 used x 'unsigned int'
+  `-CompoundStmt 0x7fbc76011fb0 <col:53, line:19:1>
+    |-DeclStmt 0x7fbc760118e8 <line:11:3, col:69>
+    | `-VarDecl 0x7fbc760117b8 <col:3, col:31> col:21 used digit 'const char [37]' static cinit
+    |   `-StringLiteral 0x7fbc76011858 <col:31> 'const char [37]' lvalue "0123456789abcdefghijklmnopqrstuvwxyz"
+    |-DeclStmt 0x7fbc760119d8 <line:12:3, col:16>
+    | `-VarDecl 0x7fbc76011978 <col:3, col:15> col:8 used buf 'char [100]'
+    |-DeclStmt 0x7fbc76011a88 <line:13:3, col:14>
+    | `-VarDecl 0x7fbc76011a08 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fbc76011a68 <col:11> 'int' 100
+    |-DoStmt 0x7fbc76011ea0 <line:14:3, line:17:17>
+    | |-CompoundStmt 0x7fbc76011de0 <line:14:6, line:17:3>
+    | | |-BinaryOperator 0x7fbc76011cc8 <line:15:5, col:34> 'char' '='
+    | | | |-ArraySubscriptExpr 0x7fbc76011b28 <col:5, col:12> 'char' lvalue
+    | | | | |-ImplicitCastExpr 0x7fbc76011b10 <col:5> 'char *' <ArrayToPointerDecay>
+    | | | | | `-DeclRefExpr 0x7fbc76011aa0 <col:5> 'char [100]' lvalue Var 0x7fbc76011978 'buf' 'char [100]'
+    | | | | `-UnaryOperator 0x7fbc76011af0 <col:9, col:11> 'int' prefix '--'
+    | | | |   `-DeclRefExpr 0x7fbc76011ac8 <col:11> 'int' lvalue Var 0x7fbc76011a08 'i' 'int'
+    | | | `-ImplicitCastExpr 0x7fbc76011cb0 <col:16, col:34> 'char' <LValueToRValue>
+    | | |   `-ArraySubscriptExpr 0x7fbc76011c88 <col:16, col:34> 'const char' lvalue
+    | | |     |-ImplicitCastExpr 0x7fbc76011c70 <col:16> 'const char *' <ArrayToPointerDecay>
+    | | |     | `-DeclRefExpr 0x7fbc76011b50 <col:16> 'const char [37]' lvalue Var 0x7fbc760117b8 'digit' 'const char [37]'
+    | | |     `-BinaryOperator 0x7fbc76011c48 <col:22, col:29> 'unsigned int' '%'
+    | | |       |-ImplicitCastExpr 0x7fbc76011c18 <col:22> 'unsigned int' <LValueToRValue>
+    | | |       | `-DeclRefExpr 0x7fbc76011b78 <col:22> 'unsigned int' lvalue ParmVar 0x7fbc76011578 'x' 'unsigned int'
+    | | |       `-ImplicitCastExpr 0x7fbc76011c30 <col:26, col:29> 'unsigned int' <LValueToRValue>
+    | | |         `-MemberExpr 0x7fbc76011be0 <col:26, col:29> 'unsigned int' lvalue ->base_ 0x7fbc76011408
+    | | |           `-ImplicitCastExpr 0x7fbc76011bc8 <col:26> 'struct BaseHolder *' <LValueToRValue>
+    | | |             `-DeclRefExpr 0x7fbc76011ba0 <col:26> 'struct BaseHolder *' lvalue ParmVar 0x7fbc76011500 'b' 'struct BaseHolder *'
+    | | `-CompoundAssignOperator 0x7fbc76011da8 <line:16:5, col:13> 'unsigned int' '/=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |   |-DeclRefExpr 0x7fbc76011cf0 <col:5> 'unsigned int' lvalue ParmVar 0x7fbc76011578 'x' 'unsigned int'
+    | |   `-ImplicitCastExpr 0x7fbc76011d90 <col:10, col:13> 'unsigned int' <LValueToRValue>
+    | |     `-MemberExpr 0x7fbc76011d58 <col:10, col:13> 'unsigned int' lvalue ->base_ 0x7fbc76011408
+    | |       `-ImplicitCastExpr 0x7fbc76011d40 <col:10> 'struct BaseHolder *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fbc76011d18 <col:10> 'struct BaseHolder *' lvalue ParmVar 0x7fbc76011500 'b' 'struct BaseHolder *'
+    | `-BinaryOperator 0x7fbc76011e78 <line:17:12, col:16> 'int' '>'
+    |   |-ImplicitCastExpr 0x7fbc76011e48 <col:12> 'unsigned int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fbc76011e00 <col:12> 'unsigned int' lvalue ParmVar 0x7fbc76011578 'x' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fbc76011e60 <col:16> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fbc76011e28 <col:16> 'int' 0
+    `-CallExpr 0x7fbc76011f50 <line:18:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7fbc76011f38 <col:3> 'void (*)(const char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbc76011ec0 <col:3> 'void (const char *)' Function 0x7fbc76011260 'process' 'void (const char *)'
+      `-ImplicitCastExpr 0x7fbc76011f98 <col:11> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7fbc76011f80 <col:11> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fbc76011ee8 <col:11> 'char [100]' lvalue Var 0x7fbc76011978 'buf' 'char [100]'

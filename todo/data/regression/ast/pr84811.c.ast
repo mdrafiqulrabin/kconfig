@@ -1,0 +1,85 @@
+TranslationUnitDecl 0x7fc6db02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc6db02c978 <../Data/C2AST/pr84811.c:3:1, col:5> col:5 a 'int'
+|-VarDecl 0x7fc6db814330 <line:4:1, col:12> col:6 used b 'long [1][9]'
+|-TypedefDecl 0x7fc6db8143e8 <line:5:1, col:14> col:14 referenced V '__attribute__((__vector_size__(2 * sizeof(long)))) long'
+| |-VectorType 0x7fc6db8143b0 '__attribute__((__vector_size__(2 * sizeof(long)))) long' 2
+| | `-BuiltinType 0x7fc6db02be00 'long'
+| `-MayAliasAttr 0x7fc6db814440 <col:49>
+`-FunctionDecl 0x7fc6db8144d8 <line:7:1, line:20:1> line:8:1 foo 'void ()'
+  `-CompoundStmt 0x7fc6db82cdd8 <line:9:1, line:20:1>
+    |-DeclStmt 0x7fc6db814808 <line:10:3, col:51>
+    | `-VarDecl 0x7fc6db814608 <col:3, col:50> col:6 used c 'V *' cinit
+    |   `-CStyleCastExpr 0x7fc6db8147e0 <col:10, col:50> 'V *' <BitCast>
+    |     `-ParenExpr 0x7fc6db8147c0 <col:16, col:50> 'char *'
+    |       `-BinaryOperator 0x7fc6db814758 <col:17, col:31> 'char *' '+'
+    |         |-CStyleCastExpr 0x7fc6db8146f0 <col:17, col:26> 'char *' <BitCast>
+    |         | `-ImplicitCastExpr 0x7fc6db8146d8 <col:26> 'long (*)[9]' <ArrayToPointerDecay>
+    |         |   `-DeclRefExpr 0x7fc6db814668 <col:26> 'long [1][9]' lvalue Var 0x7fc6db814330 'b' 'long [1][9]'
+    |         `-UnaryOperator 0x7fc6db814738 <col:30, col:31> 'long' prefix '-'
+    |           `-IntegerLiteral 0x7fc6db814718 <col:31> 'long' 9060696663385964544
+    |-BinaryOperator 0x7fc6db8149e0 <line:11:3, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' '='
+    | |-UnaryOperator 0x7fc6db814860 <col:3, col:4> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fc6db814848 <col:4> 'V *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc6db814820 <col:4> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    | `-ImplicitCastExpr 0x7fc6db8149c8 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fc6db8149a0 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue
+    |     `-InitListExpr 0x7fc6db814920 <col:12, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long'
+    |       |-ImplicitCastExpr 0x7fc6db814970 <col:14> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fc6db814890 <col:14> 'int' 1
+    |       `-ImplicitCastExpr 0x7fc6db814988 <col:17> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fc6db8148b0 <col:17> 'int' 1
+    |-UnaryOperator 0x7fc6db814a30 <line:12:3, col:4> 'V *' postfix '++'
+    | `-DeclRefExpr 0x7fc6db814a08 <col:3> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    |-BinaryOperator 0x7fc6db814c10 <line:13:3, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' '='
+    | |-UnaryOperator 0x7fc6db814a90 <col:3, col:4> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fc6db814a78 <col:4> 'V *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc6db814a50 <col:4> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    | `-ImplicitCastExpr 0x7fc6db814bf8 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fc6db814bd0 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue
+    |     `-InitListExpr 0x7fc6db814b50 <col:12, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long'
+    |       |-ImplicitCastExpr 0x7fc6db814ba0 <col:14> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fc6db814ac0 <col:14> 'int' 1
+    |       `-ImplicitCastExpr 0x7fc6db814bb8 <col:17> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fc6db814ae0 <col:17> 'int' 1
+    |-UnaryOperator 0x7fc6db814c60 <line:14:3, col:4> 'V *' postfix '++'
+    | `-DeclRefExpr 0x7fc6db814c38 <col:3> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    |-BinaryOperator 0x7fc6db814e40 <line:15:3, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' '='
+    | |-UnaryOperator 0x7fc6db814cc0 <col:3, col:4> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fc6db814ca8 <col:4> 'V *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc6db814c80 <col:4> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    | `-ImplicitCastExpr 0x7fc6db814e28 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fc6db814e00 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue
+    |     `-InitListExpr 0x7fc6db814d80 <col:12, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long'
+    |       |-ImplicitCastExpr 0x7fc6db814dd0 <col:14> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fc6db814cf0 <col:14> 'int' 1
+    |       `-ImplicitCastExpr 0x7fc6db814de8 <col:17> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fc6db814d10 <col:17> 'int' 1
+    |-UnaryOperator 0x7fc6db814e90 <line:16:3, col:4> 'V *' postfix '++'
+    | `-DeclRefExpr 0x7fc6db814e68 <col:3> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    |-BinaryOperator 0x7fc6db815070 <line:17:3, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' '='
+    | |-UnaryOperator 0x7fc6db814ef0 <col:3, col:4> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fc6db814ed8 <col:4> 'V *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc6db814eb0 <col:4> 'V *' lvalue Var 0x7fc6db814608 'c' 'V *'
+    | `-ImplicitCastExpr 0x7fc6db815058 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fc6db815030 <col:8, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long' lvalue
+    |     `-InitListExpr 0x7fc6db814fb0 <col:12, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(long)))) long'
+    |       |-ImplicitCastExpr 0x7fc6db815000 <col:14> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fc6db814f20 <col:14> 'int' 1
+    |       `-ImplicitCastExpr 0x7fc6db815018 <col:17> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7fc6db814f40 <col:17> 'int' 1
+    |-DeclStmt 0x7fc6db82cd00 <line:18:3, col:82>
+    | `-VarDecl 0x7fc6db8150e0 <col:3, col:81> col:36 used d 'long *' cinit
+    |   |-CStyleCastExpr 0x7fc6db82ccd8 <col:40, col:81> 'long *' <BitCast>
+    |   | `-ParenExpr 0x7fc6db82ccb8 <col:49, col:81> 'char *'
+    |   |   `-BinaryOperator 0x7fc6db82cc48 <col:50, col:63> 'char *' '+'
+    |   |     |-CStyleCastExpr 0x7fc6db82cc00 <col:50, col:59> 'char *' <BitCast>
+    |   |     | `-ImplicitCastExpr 0x7fc6db8151c8 <col:59> 'long (*)[9]' <ArrayToPointerDecay>
+    |   |     |   `-DeclRefExpr 0x7fc6db815188 <col:59> 'long [1][9]' lvalue Var 0x7fc6db814330 'b' 'long [1][9]'
+    |   |     `-IntegerLiteral 0x7fc6db82cc28 <col:63> 'long' 162675373468811328
+    |   `-MayAliasAttr 0x7fc6db815140 <col:23>
+    `-BinaryOperator 0x7fc6db82cdb0 <line:19:3, col:8> 'long' '='
+      |-UnaryOperator 0x7fc6db82cd58 <col:3, col:4> 'long' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fc6db82cd40 <col:4> 'long *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc6db82cd18 <col:4> 'long *' lvalue Var 0x7fc6db8150e0 'd' 'long *'
+      `-ImplicitCastExpr 0x7fc6db82cd98 <col:8> 'long' <IntegralCast>
+        `-IntegerLiteral 0x7fc6db82cd78 <col:8> 'int' 1

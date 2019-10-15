@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fe58882bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe589015200 <../Data/C2AST/pr83623.c:7:1, col:55> col:55 used x '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+`-FunctionDecl 0x7fe589015360 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe5890155e8 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7fe5890155c0 <line:12:3, col:21> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '='
+      |-DeclRefExpr 0x7fe589015400 <col:3> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fe589015200 'x' '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+      `-BinaryOperator 0x7fe589015598 <col:7, col:21> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '|'
+        |-BinaryOperator 0x7fe5890154d0 <col:7, col:12> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '<<'
+        | |-ImplicitCastExpr 0x7fe589015470 <col:7> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fe589015428 <col:7> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fe589015200 'x' '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+        | `-ImplicitCastExpr 0x7fe5890154b8 <col:12> 'int __attribute__((ext_vector_type(8)))' <VectorSplat>
+        |   `-IntegerLiteral 0x7fe589015450 <col:12> 'int' 8
+        `-BinaryOperator 0x7fe589015570 <col:16, col:21> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' '>>'
+          |-ImplicitCastExpr 0x7fe589015540 <col:16> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+          | `-DeclRefExpr 0x7fe5890154f8 <col:16> '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue Var 0x7fe589015200 'x' '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+          `-ImplicitCastExpr 0x7fe589015558 <col:21> 'int __attribute__((ext_vector_type(8)))' <VectorSplat>
+            `-IntegerLiteral 0x7fe589015520 <col:21> 'int' 8

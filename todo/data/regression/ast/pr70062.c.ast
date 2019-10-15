@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fb3b382bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb3b5015200 <../Data/C2AST/pr70062.c:5:1, col:13> col:13 referenced V '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fb3b382c980 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fb3b382bde0 'int'
+`-FunctionDecl 0x7fb3b5015390 <line:7:1, line:11:1> line:8:1 foo 'V (V)'
+  |-ParmVarDecl 0x7fb3b5015290 <col:6, col:8> col:8 used x 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fb3b50156a0 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fb3b5015688 <line:10:3, col:21>
+      `-ImplicitCastExpr 0x7fb3b5015670 <col:10, col:21> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fb3b5015648 <col:10, col:21> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue
+          `-InitListExpr 0x7fb3b5015540 <col:14, col:21> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+            `-ImplicitCastExpr 0x7fb3b50155c0 <col:16, col:19> 'int' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7fb3b50154d0 <col:16, col:19> 'int' lvalue vectorcomponent
+                |-DeclRefExpr 0x7fb3b5015488 <col:16> 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7fb3b5015290 'x' 'V':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+                `-IntegerLiteral 0x7fb3b50154b0 <col:18> 'int' 0

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fb26781b0e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb26785cc60 <../Data/C2AST/pr50132.c:4:1, col:24> col:6 used bar 'void (long double)'
+| `-ParmVarDecl 0x7fb26781bd78 <col:11, col:23> col:23 n 'long double'
+`-FunctionDecl 0x7fb26785ce20 <line:6:1, line:10:1> line:6:6 foo 'void (int)'
+  |-ParmVarDecl 0x7fb26785cd60 <col:11, col:15> col:15 used c 'int'
+  `-CompoundStmt 0x7fb26785d010 <line:7:1, line:10:1>
+    `-IfStmt 0x7fb26785cfd8 <line:8:3, line:9:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb26785cef0 <line:8:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb26785cec8 <col:7> 'int' lvalue ParmVar 0x7fb26785cd60 'c' 'int'
+      |-CallExpr 0x7fb26785cf90 <line:9:5, col:11> 'void'
+      | |-ImplicitCastExpr 0x7fb26785cf78 <col:5> 'void (*)(long double)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fb26785cf08 <col:5> 'void (long double)' Function 0x7fb26785cc60 'bar' 'void (long double)'
+      | `-ImplicitCastExpr 0x7fb26785cfc0 <col:10> 'long double' <IntegralToFloating>
+      |   `-IntegerLiteral 0x7fb26785cf30 <col:10> 'int' 0
+      `-<<<NULL>>>

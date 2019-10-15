@@ -1,0 +1,152 @@
+TranslationUnitDecl 0x7f95f102b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f95f102bf60 <../Data/C2AST/pr55684.c:3:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7f95f0814c70 <col:1, col:25> col:25 referenced FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7f95f0814c20 'struct _IO_FILE' sugar
+|   `-RecordType 0x7f95f0814c00 'struct _IO_FILE'
+|     `-Record 0x7f95f102bf60 '_IO_FILE'
+|-FunctionDecl 0x7f95f0814f08 <line:4:1, col:53> col:19 used strtoul 'unsigned long (const char *, char **, int)'
+| |-ParmVarDecl 0x7f95f0814cf8 <col:27, col:38> col:39 'const char *'
+| |-ParmVarDecl 0x7f95f0814da0 <col:41, col:47> col:48 'char **'
+| `-ParmVarDecl 0x7f95f0814e18 <col:50> col:53 'int'
+|-FunctionDecl 0x7f95f08152b8 <line:5:1, col:32> col:7 used fgets 'char *(char *, int, FILE *)'
+| |-ParmVarDecl 0x7f95f0815018 <col:13, col:18> col:19 'char *'
+| |-ParmVarDecl 0x7f95f0815090 <col:21> col:24 'int'
+| `-ParmVarDecl 0x7f95f0815178 <col:26, col:31> col:32 'FILE *'
+|-RecordDecl 0x7f95f0815370 <line:6:1, line:9:1> line:6:8 struct ihexrec definition
+| |-FieldDecl 0x7f95f0815438 <line:7:5, col:19> col:19 referenced reclen 'unsigned char'
+| `-FieldDecl 0x7f95f0815500 <line:8:5, col:27> col:19 referenced data 'unsigned char [256]'
+|-FunctionDecl 0x7f95f0815790 <line:10:1, line:26:1> line:10:13 used srec_readrec 'void (struct ihexrec *, char *)' static
+| |-ParmVarDecl 0x7f95f0815600 <col:26, col:43> col:43 used srec 'struct ihexrec *'
+| |-ParmVarDecl 0x7f95f0815678 <col:49, col:56> col:56 used rec 'char *'
+| `-CompoundStmt 0x7f95f08168d0 <line:11:1, line:26:1>
+|   |-DeclStmt 0x7f95f0815948 <line:12:3, col:11>
+|   | |-VarDecl 0x7f95f0815858 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7f95f08158d0 <col:3, col:10> col:10 used j 'int'
+|   |-DeclStmt 0x7f95f0815a38 <line:13:3, col:14>
+|   | `-VarDecl 0x7f95f08159d8 <col:3, col:13> col:8 used buf 'char [8]'
+|   |-DeclStmt 0x7f95f0815b78 <line:14:3, col:22>
+|   | |-VarDecl 0x7f95f0815a68 <col:3, col:16> col:7 used offset 'int' cinit
+|   | | `-IntegerLiteral 0x7f95f0815ac8 <col:16> 'int' 0
+|   | `-VarDecl 0x7f95f0815b00 <col:3, col:19> col:19 used len 'int'
+|   |-DeclStmt 0x7f95f0815c60 <line:15:3, col:11>
+|   | `-VarDecl 0x7f95f0815c00 <col:3, col:10> col:10 used e 'char *'
+|   |-ForStmt 0x7f95f0816588 <line:16:3, line:23:5>
+|   | |-BinaryOperator 0x7f95f0815cc0 <line:16:8, col:10> 'int' '='
+|   | | |-DeclRefExpr 0x7f95f0815c78 <col:8> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|   | | `-IntegerLiteral 0x7f95f0815ca0 <col:10> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f95f0815dd0 <col:13, col:21> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f95f0815d88 <col:13> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f95f0815ce8 <col:13> 'int' lvalue Var 0x7f95f08158d0 'j' 'int'
+|   | | `-ImplicitCastExpr 0x7f95f0815db8 <col:15, col:21> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f95f0815da0 <col:15, col:21> 'unsigned char' <LValueToRValue>
+|   | |     `-MemberExpr 0x7f95f0815d50 <col:15, col:21> 'unsigned char' lvalue ->reclen 0x7f95f0815438
+|   | |       `-ImplicitCastExpr 0x7f95f0815d38 <col:15> 'struct ihexrec *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7f95f0815d10 <col:15> 'struct ihexrec *' lvalue ParmVar 0x7f95f0815600 'srec' 'struct ihexrec *'
+|   | |-UnaryOperator 0x7f95f0815e20 <col:29, col:30> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f95f0815df8 <col:29> 'int' lvalue Var 0x7f95f08158d0 'j' 'int'
+|   | `-CompoundStmt 0x7f95f0816560 <line:17:5, line:23:5>
+|   |   |-IfStmt 0x7f95f0815f48 <line:18:7, line:19:9>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7f95f0815f08 <line:18:11, col:22> 'int' '>'
+|   |   | | |-BinaryOperator 0x7f95f0815ea0 <col:11, col:18> 'int' '+'
+|   |   | | | |-ImplicitCastExpr 0x7f95f0815e88 <col:11> 'int' <LValueToRValue>
+|   |   | | | | `-DeclRefExpr 0x7f95f0815e40 <col:11> 'int' lvalue Var 0x7f95f0815a68 'offset' 'int'
+|   |   | | | `-IntegerLiteral 0x7f95f0815e68 <col:18> 'int' 2
+|   |   | | `-ImplicitCastExpr 0x7f95f0815ef0 <col:22> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7f95f0815ec8 <col:22> 'int' lvalue Var 0x7f95f0815b00 'len' 'int'
+|   |   | |-ReturnStmt 0x7f95f0815f30 <line:19:9>
+|   |   | `-<<<NULL>>>
+|   |   |-ForStmt 0x7f95f0816258 <line:20:7, line:21:30>
+|   |   | |-BinaryOperator 0x7f95f0815fc8 <line:20:12, col:14> 'int' '='
+|   |   | | |-DeclRefExpr 0x7f95f0815f80 <col:12> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7f95f0815fa8 <col:14> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7f95f0816050 <col:17, col:19> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7f95f0816038 <col:17> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7f95f0815ff0 <col:17> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7f95f0816018 <col:19> 'int' 2
+|   |   | |-UnaryOperator 0x7f95f08160a0 <col:22, col:23> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7f95f0816078 <col:22> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|   |   | `-BinaryOperator 0x7f95f0816230 <line:21:9, col:30> 'char' '='
+|   |   |   |-ArraySubscriptExpr 0x7f95f0816140 <col:9, col:14> 'char' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7f95f0816110 <col:9> 'char *' <ArrayToPointerDecay>
+|   |   |   | | `-DeclRefExpr 0x7f95f08160c0 <col:9> 'char [8]' lvalue Var 0x7f95f08159d8 'buf' 'char [8]'
+|   |   |   | `-ImplicitCastExpr 0x7f95f0816128 <col:13> 'int' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7f95f08160e8 <col:13> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|   |   |   `-ImplicitCastExpr 0x7f95f0816218 <col:18, col:30> 'char' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7f95f08161f0 <col:18, col:30> 'char' lvalue
+|   |   |       |-ImplicitCastExpr 0x7f95f08161d8 <col:18> 'char *' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7f95f0816168 <col:18> 'char *' lvalue ParmVar 0x7f95f0815678 'rec' 'char *'
+|   |   |       `-UnaryOperator 0x7f95f08161b8 <col:22, col:28> 'int' postfix '++'
+|   |   |         `-DeclRefExpr 0x7f95f0816190 <col:22> 'int' lvalue Var 0x7f95f0815a68 'offset' 'int'
+|   |   `-BinaryOperator 0x7f95f0816538 <line:22:7, col:42> 'unsigned char' '='
+|   |     |-ArraySubscriptExpr 0x7f95f0816388 <col:7, col:19> 'unsigned char' lvalue
+|   |     | |-ImplicitCastExpr 0x7f95f0816358 <col:7, col:13> 'unsigned char *' <ArrayToPointerDecay>
+|   |     | | `-MemberExpr 0x7f95f08162d0 <col:7, col:13> 'unsigned char [256]' lvalue ->data 0x7f95f0815500
+|   |     | |   `-ImplicitCastExpr 0x7f95f08162b8 <col:7> 'struct ihexrec *' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x7f95f0816290 <col:7> 'struct ihexrec *' lvalue ParmVar 0x7f95f0815600 'srec' 'struct ihexrec *'
+|   |     | `-ImplicitCastExpr 0x7f95f0816370 <col:18> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7f95f0816308 <col:18> 'int' lvalue Var 0x7f95f08158d0 'j' 'int'
+|   |     `-ImplicitCastExpr 0x7f95f0816520 <col:23, col:42> 'unsigned char' <IntegralCast>
+|   |       `-CallExpr 0x7f95f08164b0 <col:23, col:42> 'unsigned long'
+|   |         |-ImplicitCastExpr 0x7f95f0816498 <col:23> 'unsigned long (*)(const char *, char **, int)' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x7f95f08163b0 <col:23> 'unsigned long (const char *, char **, int)' Function 0x7f95f0814f08 'strtoul' 'unsigned long (const char *, char **, int)'
+|   |         |-ImplicitCastExpr 0x7f95f0816508 <col:31> 'const char *' <BitCast>
+|   |         | `-ImplicitCastExpr 0x7f95f08164f0 <col:31> 'char *' <ArrayToPointerDecay>
+|   |         |   `-DeclRefExpr 0x7f95f08163d8 <col:31> 'char [8]' lvalue Var 0x7f95f08159d8 'buf' 'char [8]'
+|   |         |-UnaryOperator 0x7f95f0816428 <col:36, col:37> 'char **' prefix '&'
+|   |         | `-DeclRefExpr 0x7f95f0816400 <col:37> 'char *' lvalue Var 0x7f95f0815c00 'e' 'char *'
+|   |         `-IntegerLiteral 0x7f95f0816448 <col:40> 'int' 16
+|   `-ForStmt 0x7f95f0816898 <line:24:3, line:25:26>
+|     |-BinaryOperator 0x7f95f0816608 <line:24:8, col:10> 'int' '='
+|     | |-DeclRefExpr 0x7f95f08165c0 <col:8> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|     | `-IntegerLiteral 0x7f95f08165e8 <col:10> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f95f0816690 <col:13, col:15> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f95f0816678 <col:13> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f95f0816630 <col:13> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|     | `-IntegerLiteral 0x7f95f0816658 <col:15> 'int' 2
+|     |-UnaryOperator 0x7f95f08166e0 <col:18, col:19> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f95f08166b8 <col:18> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|     `-BinaryOperator 0x7f95f0816870 <line:25:5, col:26> 'char' '='
+|       |-ArraySubscriptExpr 0x7f95f0816780 <col:5, col:10> 'char' lvalue
+|       | |-ImplicitCastExpr 0x7f95f0816750 <col:5> 'char *' <ArrayToPointerDecay>
+|       | | `-DeclRefExpr 0x7f95f0816700 <col:5> 'char [8]' lvalue Var 0x7f95f08159d8 'buf' 'char [8]'
+|       | `-ImplicitCastExpr 0x7f95f0816768 <col:9> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f95f0816728 <col:9> 'int' lvalue Var 0x7f95f0815858 'i' 'int'
+|       `-ImplicitCastExpr 0x7f95f0816858 <col:14, col:26> 'char' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f95f0816830 <col:14, col:26> 'char' lvalue
+|           |-ImplicitCastExpr 0x7f95f0816818 <col:14> 'char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f95f08167a8 <col:14> 'char *' lvalue ParmVar 0x7f95f0815678 'rec' 'char *'
+|           `-UnaryOperator 0x7f95f08167f8 <col:18, col:24> 'int' postfix '++'
+|             `-DeclRefExpr 0x7f95f08167d0 <col:18> 'int' lvalue Var 0x7f95f0815a68 'offset' 'int'
+`-FunctionDecl 0x7f95f0816a20 <line:27:1, line:33:1> line:27:6 srec2b 'void (FILE *)'
+  |-ParmVarDecl 0x7f95f0816920 <col:13, col:19> col:19 used inf 'FILE *'
+  `-CompoundStmt 0x7f95f082ca10 <line:28:1, line:33:1>
+    |-DeclStmt 0x7f95f0816ba8 <line:29:3, col:19>
+    | `-VarDecl 0x7f95f0816b48 <col:3, col:18> col:8 used buffer 'char [256]'
+    |-DeclStmt 0x7f95f082c660 <line:30:3, col:22>
+    | `-VarDecl 0x7f95f082c600 <col:3, col:18> col:18 used srec 'struct ihexrec':'struct ihexrec'
+    `-WhileStmt 0x7f95f082c9f0 <line:31:3, line:32:31>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f95f082c868 <line:31:10, col:41> 'int' '!='
+      | |-CallExpr 0x7f95f082c780 <col:10, col:30> 'char *'
+      | | |-ImplicitCastExpr 0x7f95f082c768 <col:10> 'char *(*)(char *, int, FILE *)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7f95f082c678 <col:10> 'char *(char *, int, FILE *)' Function 0x7f95f08152b8 'fgets' 'char *(char *, int, FILE *)'
+      | | |-ImplicitCastExpr 0x7f95f082c7c0 <col:16> 'char *' <ArrayToPointerDecay>
+      | | | `-DeclRefExpr 0x7f95f082c6a0 <col:16> 'char [256]' lvalue Var 0x7f95f0816b48 'buffer' 'char [256]'
+      | | |-IntegerLiteral 0x7f95f082c6c8 <col:23> 'int' 256
+      | | `-ImplicitCastExpr 0x7f95f082c7d8 <col:27> 'FILE *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f95f082c6e8 <col:27> 'FILE *' lvalue ParmVar 0x7f95f0816920 'inf' 'FILE *'
+      | `-ImplicitCastExpr 0x7f95f082c850 <col:33, col:41> 'char *' <BitCast>
+      |   `-CStyleCastExpr 0x7f95f082c828 <col:33, col:41> 'void *' <NullToPointer>
+      |     `-IntegerLiteral 0x7f95f082c7f0 <col:41> 'int' 0
+      `-CallExpr 0x7f95f082c9a0 <line:32:5, col:31> 'void'
+        |-ImplicitCastExpr 0x7f95f082c988 <col:5> 'void (*)(struct ihexrec *, char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f95f082c890 <col:5> 'void (struct ihexrec *, char *)' Function 0x7f95f0815790 'srec_readrec' 'void (struct ihexrec *, char *)'
+        |-UnaryOperator 0x7f95f082c8e0 <col:18, col:19> 'struct ihexrec *' prefix '&'
+        | `-DeclRefExpr 0x7f95f082c8b8 <col:19> 'struct ihexrec':'struct ihexrec' lvalue Var 0x7f95f082c600 'srec' 'struct ihexrec':'struct ihexrec'
+        `-ImplicitCastExpr 0x7f95f082c9d8 <col:25> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7f95f082c900 <col:25> 'char [256]' lvalue Var 0x7f95f0816b48 'buffer' 'char [256]'

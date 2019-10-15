@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff65682aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff657800600 <../Data/C2AST/pr59471.c:4:1, col:23> col:23 referenced uint8x4_t '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7ff65682b780 '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' 4
+|   `-BuiltinType 0x7ff65682ac40 'unsigned char'
+|-TypedefDecl 0x7ff6578006b8 <line:7:1, col:24> col:24 referenced uint16x8_t '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short'
+| `-VectorType 0x7ff657800680 '__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' 8
+|   `-BuiltinType 0x7ff65682ac60 'unsigned short'
+|-TypedefDecl 0x7ff657800768 <line:10:1, col:22> col:22 referenced uint32x4_t '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7ff657800730 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7ff65682ac80 'unsigned int'
+`-FunctionDecl 0x7ff657800a50 <line:13:1, line:17:1> line:14:1 foo 'void (uint16x8_t *, uint8x4_t *)'
+  |-ParmVarDecl 0x7ff657800848 <col:6, col:18> col:18 used x 'uint16x8_t *'
+  |-ParmVarDecl 0x7ff657800938 <col:21, col:32> col:32 used y 'uint8x4_t *'
+  `-CompoundStmt 0x7ff657800db8 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7ff657800d90 <line:16:3, col:41> 'uint8x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '='
+      |-UnaryOperator 0x7ff657800b80 <col:3, col:4> 'uint8x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7ff657800b68 <col:4> 'uint8x4_t *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff657800b40 <col:4> 'uint8x4_t *' lvalue ParmVar 0x7ff657800938 'y' 'uint8x4_t *'
+      `-CStyleCastExpr 0x7ff657800d68 <col:8, col:41> 'uint8x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <BitCast>
+        `-ArraySubscriptExpr 0x7ff657800d30 <col:20, col:41> 'unsigned int'
+          |-ParenExpr 0x7ff657800d10 <col:20, col:38> 'uint32x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+          | `-CStyleCastExpr 0x7ff657800c98 <col:21, col:37> 'uint32x4_t':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <BitCast>
+          |   `-ImplicitCastExpr 0x7ff657800c80 <col:34, col:37> 'uint16x8_t':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' <LValueToRValue>
+          |     `-ParenExpr 0x7ff657800c60 <col:34, col:37> 'uint16x8_t':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue
+          |       `-UnaryOperator 0x7ff657800c00 <col:35, col:36> 'uint16x8_t':'__attribute__((__vector_size__(8 * sizeof(unsigned short)))) unsigned short' lvalue prefix '*'
+          |         `-ImplicitCastExpr 0x7ff657800be8 <col:36> 'uint16x8_t *' <LValueToRValue>
+          |           `-DeclRefExpr 0x7ff657800bc0 <col:36> 'uint16x8_t *' lvalue ParmVar 0x7ff657800848 'x' 'uint16x8_t *'
+          `-IntegerLiteral 0x7ff657800cf0 <col:40> 'int' 0

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f876602bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8767010e68 <../Data/C2AST/pr60556.c:3:1, col:11> col:5 used g 'int (int)'
+| `-ParmVarDecl 0x7f876602c978 <col:8> col:11 'int'
+`-FunctionDecl 0x7f8767011018 <line:5:1, line:8:1> line:5:20 f 'unsigned long long (void)'
+  `-CompoundStmt 0x7f87670111c0 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f87670111a8 <line:7:2, col:36>
+      `-CStyleCastExpr 0x7f8767011180 <col:9, col:36> 'unsigned long long' <IntegralCast>
+        `-CStyleCastExpr 0x7f8767011140 <col:29, col:36> 'long' <PointerToIntegral>
+          `-UnaryOperator 0x7f8767011108 <col:35, col:36> 'int (*)(int)' prefix '&'
+            `-DeclRefExpr 0x7f87670110b8 <col:36> 'int (int)' Function 0x7f8767010e68 'g' 'int (int)'

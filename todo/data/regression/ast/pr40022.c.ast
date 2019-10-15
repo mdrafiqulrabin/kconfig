@@ -1,0 +1,159 @@
+TranslationUnitDecl 0x7f80090288e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8008016050 <../Data/C2AST/pr40022.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f80080160f0 prev 0x7f8008016050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f8008016190 <line:3:1, line:6:1> line:3:8 struct A definition
+| `-FieldDecl 0x7f80080162f0 <line:5:3, col:13> col:13 referenced a 'struct A *'
+|-RecordDecl 0x7f8008016338 <line:8:1, line:11:1> line:8:8 struct B definition
+| `-FieldDecl 0x7f8008016408 <line:10:3, col:13> col:13 referenced b 'struct A *'
+|-FunctionDecl 0x7f8008016598 <line:13:1, line:19:1> line:15:1 used foo 'struct A *(struct A *)'
+| |-ParmVarDecl 0x7f8008016478 <col:6, col:16> col:16 used x 'struct A *'
+| |-CompoundStmt 0x7f8008016900 <line:16:1, line:19:1>
+| | |-GCCAsmStmt 0x7f8008016840 <line:17:3, col:42>
+| | | `-ImplicitCastExpr 0x7f8008016828 <col:29> 'struct A *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f8008016798 <col:29> 'struct A *' lvalue ParmVar 0x7f8008016478 'x' 'struct A *'
+| | `-ReturnStmt 0x7f80080168e8 <line:18:3, col:10>
+| |   `-ImplicitCastExpr 0x7f80080168d0 <col:10> 'struct A *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f80080168a8 <col:10> 'struct A *' lvalue ParmVar 0x7f8008016478 'x' 'struct A *'
+| `-NoInlineAttr 0x7f8008016640 <line:13:16>
+|-FunctionDecl 0x7f8008016cb0 <line:21:1, line:34:1> line:23:1 used bar 'void (struct B *, struct A *, struct A *, struct A *)'
+| |-ParmVarDecl 0x7f80080169d0 <col:6, col:16> col:16 used w 'struct B *'
+| |-ParmVarDecl 0x7f8008016a58 <col:19, col:29> col:29 used x 'struct A *'
+| |-ParmVarDecl 0x7f8008016ae0 <col:32, col:42> col:42 used y 'struct A *'
+| |-ParmVarDecl 0x7f8008016b68 <col:45, col:55> col:55 used z 'struct A *'
+| |-CompoundStmt 0x7f800802e150 <line:24:1, line:34:1>
+| | |-DeclStmt 0x7f8008016ea0 <line:25:3, col:15>
+| | | `-VarDecl 0x7f8008016e40 <col:3, col:14> col:14 used c 'struct A **'
+| | |-BinaryOperator 0x7f8008016f78 <line:26:3, col:11> 'struct A **' '='
+| | | |-DeclRefExpr 0x7f8008016eb8 <col:3> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | | `-UnaryOperator 0x7f8008016f58 <col:7, col:11> 'struct A **' prefix '&'
+| | |   `-MemberExpr 0x7f8008016f20 <col:8, col:11> 'struct A *' lvalue ->b 0x7f8008016408
+| | |     `-ImplicitCastExpr 0x7f8008016f08 <col:8> 'struct B *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f8008016ee0 <col:8> 'struct B *' lvalue ParmVar 0x7f80080169d0 'w' 'struct B *'
+| | |-BinaryOperator 0x7f800802db08 <line:27:3, col:14> 'struct A *' '='
+| | | |-UnaryOperator 0x7f8008016fe0 <col:3, col:4> 'struct A *' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7f8008016fc8 <col:4> 'struct A **' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f8008016fa0 <col:4> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | | `-CallExpr 0x7f800802dac0 <col:8, col:14> 'struct A *'
+| | |   |-ImplicitCastExpr 0x7f800802daa8 <col:8> 'struct A *(*)(struct A *)' <FunctionToPointerDecay>
+| | |   | `-DeclRefExpr 0x7f800802da00 <col:8> 'struct A *(struct A *)' Function 0x7f8008016598 'foo' 'struct A *(struct A *)'
+| | |   `-ImplicitCastExpr 0x7f800802daf0 <col:13> 'struct A *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7f800802da28 <col:13> 'struct A *' lvalue ParmVar 0x7f8008016a58 'x' 'struct A *'
+| | |-WhileStmt 0x7f800802dce8 <line:28:3, line:29:16>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7f800802db90 <line:28:10, col:11> 'struct A *' <LValueToRValue>
+| | | | `-UnaryOperator 0x7f800802db70 <col:10, col:11> 'struct A *' lvalue prefix '*'
+| | | |   `-ImplicitCastExpr 0x7f800802db58 <col:11> 'struct A **' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7f800802db30 <col:11> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | | `-BinaryOperator 0x7f800802dcc0 <line:29:5, col:16> 'struct A **' '='
+| | |   |-DeclRefExpr 0x7f800802dba8 <col:5> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | |   `-UnaryOperator 0x7f800802dca0 <col:9, col:16> 'struct A **' prefix '&'
+| | |     `-MemberExpr 0x7f800802dc68 <col:10, col:16> 'struct A *' lvalue ->a 0x7f80080162f0
+| | |       `-ImplicitCastExpr 0x7f800802dc50 <col:10, col:13> 'struct A *' <LValueToRValue>
+| | |         `-ParenExpr 0x7f800802dc30 <col:10, col:13> 'struct A *' lvalue
+| | |           `-UnaryOperator 0x7f800802dc10 <col:11, col:12> 'struct A *' lvalue prefix '*'
+| | |             `-ImplicitCastExpr 0x7f800802dbf8 <col:12> 'struct A **' <LValueToRValue>
+| | |               `-DeclRefExpr 0x7f800802dbd0 <col:12> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | |-BinaryOperator 0x7f800802de18 <line:30:3, col:14> 'struct A *' '='
+| | | |-UnaryOperator 0x7f800802dd48 <col:3, col:4> 'struct A *' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7f800802dd30 <col:4> 'struct A **' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7f800802dd08 <col:4> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | | `-CallExpr 0x7f800802ddd0 <col:8, col:14> 'struct A *'
+| | |   |-ImplicitCastExpr 0x7f800802ddb8 <col:8> 'struct A *(*)(struct A *)' <FunctionToPointerDecay>
+| | |   | `-DeclRefExpr 0x7f800802dd68 <col:8> 'struct A *(struct A *)' Function 0x7f8008016598 'foo' 'struct A *(struct A *)'
+| | |   `-ImplicitCastExpr 0x7f800802de00 <col:13> 'struct A *' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7f800802dd90 <col:13> 'struct A *' lvalue ParmVar 0x7f8008016ae0 'y' 'struct A *'
+| | |-WhileStmt 0x7f800802dff8 <line:31:3, line:32:16>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7f800802dea0 <line:31:10, col:11> 'struct A *' <LValueToRValue>
+| | | | `-UnaryOperator 0x7f800802de80 <col:10, col:11> 'struct A *' lvalue prefix '*'
+| | | |   `-ImplicitCastExpr 0x7f800802de68 <col:11> 'struct A **' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7f800802de40 <col:11> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | | `-BinaryOperator 0x7f800802dfd0 <line:32:5, col:16> 'struct A **' '='
+| | |   |-DeclRefExpr 0x7f800802deb8 <col:5> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | |   `-UnaryOperator 0x7f800802dfb0 <col:9, col:16> 'struct A **' prefix '&'
+| | |     `-MemberExpr 0x7f800802df78 <col:10, col:16> 'struct A *' lvalue ->a 0x7f80080162f0
+| | |       `-ImplicitCastExpr 0x7f800802df60 <col:10, col:13> 'struct A *' <LValueToRValue>
+| | |         `-ParenExpr 0x7f800802df40 <col:10, col:13> 'struct A *' lvalue
+| | |           `-UnaryOperator 0x7f800802df20 <col:11, col:12> 'struct A *' lvalue prefix '*'
+| | |             `-ImplicitCastExpr 0x7f800802df08 <col:12> 'struct A **' <LValueToRValue>
+| | |               `-DeclRefExpr 0x7f800802dee0 <col:12> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| | `-BinaryOperator 0x7f800802e128 <line:33:3, col:14> 'struct A *' '='
+| |   |-UnaryOperator 0x7f800802e058 <col:3, col:4> 'struct A *' lvalue prefix '*'
+| |   | `-ImplicitCastExpr 0x7f800802e040 <col:4> 'struct A **' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7f800802e018 <col:4> 'struct A **' lvalue Var 0x7f8008016e40 'c' 'struct A **'
+| |   `-CallExpr 0x7f800802e0e0 <col:8, col:14> 'struct A *'
+| |     |-ImplicitCastExpr 0x7f800802e0c8 <col:8> 'struct A *(*)(struct A *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7f800802e078 <col:8> 'struct A *(struct A *)' Function 0x7f8008016598 'foo' 'struct A *(struct A *)'
+| |     `-ImplicitCastExpr 0x7f800802e110 <col:13> 'struct A *' <LValueToRValue>
+| |       `-DeclRefExpr 0x7f800802e0a0 <col:13> 'struct A *' lvalue ParmVar 0x7f8008016b68 'z' 'struct A *'
+| `-NoInlineAttr 0x7f8008016d70 <line:21:16>
+|-VarDecl 0x7f800802e1b8 <line:36:1, col:10> col:10 used d 'struct B':'struct B'
+|-VarDecl 0x7f800802e238 <line:37:1, col:10> col:10 used e 'struct A':'struct A'
+|-VarDecl 0x7f800802e2b8 <col:1, col:13> col:13 used f 'struct A':'struct A'
+|-VarDecl 0x7f800802e338 <col:1, col:16> col:16 used g 'struct A':'struct A'
+`-FunctionDecl 0x7f800802e488 <line:39:1, line:50:1> line:40:1 main 'int (void)'
+  `-CompoundStmt 0x7f800802ef28 <line:41:1, line:50:1>
+    |-BinaryOperator 0x7f800802e600 <line:42:3, col:10> 'struct A *' '='
+    | |-MemberExpr 0x7f800802e580 <col:3, col:5> 'struct A *' lvalue .a 0x7f80080162f0
+    | | `-DeclRefExpr 0x7f800802e558 <col:3> 'struct A':'struct A' lvalue Var 0x7f800802e2b8 'f' 'struct A':'struct A'
+    | `-UnaryOperator 0x7f800802e5e0 <col:9, col:10> 'struct A *' prefix '&'
+    |   `-DeclRefExpr 0x7f800802e5b8 <col:10> 'struct A':'struct A' lvalue Var 0x7f800802e338 'g' 'struct A':'struct A'
+    |-CallExpr 0x7f800802e7c0 <line:43:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7f800802e7a8 <col:3> 'void (*)(struct B *, struct A *, struct A *, struct A *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f800802e628 <col:3> 'void (struct B *, struct A *, struct A *, struct A *)' Function 0x7f8008016cb0 'bar' 'void (struct B *, struct A *, struct A *, struct A *)'
+    | |-UnaryOperator 0x7f800802e678 <col:8, col:9> 'struct B *' prefix '&'
+    | | `-DeclRefExpr 0x7f800802e650 <col:9> 'struct B':'struct B' lvalue Var 0x7f800802e1b8 'd' 'struct B':'struct B'
+    | |-UnaryOperator 0x7f800802e6c0 <col:12, col:13> 'struct A *' prefix '&'
+    | | `-DeclRefExpr 0x7f800802e698 <col:13> 'struct A':'struct A' lvalue Var 0x7f800802e238 'e' 'struct A':'struct A'
+    | |-UnaryOperator 0x7f800802e708 <col:16, col:17> 'struct A *' prefix '&'
+    | | `-DeclRefExpr 0x7f800802e6e0 <col:17> 'struct A':'struct A' lvalue Var 0x7f800802e2b8 'f' 'struct A':'struct A'
+    | `-ImplicitCastExpr 0x7f800802e808 <col:20> 'struct A *' <NullToPointer>
+    |   `-IntegerLiteral 0x7f800802e728 <col:20> 'int' 0
+    |-IfStmt 0x7f800802eeb8 <line:44:3, line:48:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f800802ee00 <line:44:7, line:47:26> 'int' '||'
+    | | |-BinaryOperator 0x7f800802ec10 <line:44:7, line:46:23> 'int' '||'
+    | | | |-BinaryOperator 0x7f800802ea70 <line:44:7, line:45:20> 'int' '||'
+    | | | | |-BinaryOperator 0x7f800802e8d0 <line:44:7, col:14> 'int' '=='
+    | | | | | |-ImplicitCastExpr 0x7f800802e8a0 <col:7, col:9> 'struct A *' <LValueToRValue>
+    | | | | | | `-MemberExpr 0x7f800802e848 <col:7, col:9> 'struct A *' lvalue .b 0x7f8008016408
+    | | | | | |   `-DeclRefExpr 0x7f800802e820 <col:7> 'struct B':'struct B' lvalue Var 0x7f800802e1b8 'd' 'struct B':'struct B'
+    | | | | | `-ImplicitCastExpr 0x7f800802e8b8 <col:14> 'struct A *' <NullToPointer>
+    | | | | |   `-IntegerLiteral 0x7f800802e880 <col:14> 'int' 0
+    | | | | `-BinaryOperator 0x7f800802ea00 <line:45:10, col:20> 'int' '=='
+    | | | |   |-ImplicitCastExpr 0x7f800802e9c8 <col:10, col:15> 'struct A *' <LValueToRValue>
+    | | | |   | `-MemberExpr 0x7f800802e970 <col:10, col:15> 'struct A *' lvalue ->a 0x7f80080162f0
+    | | | |   |   `-ImplicitCastExpr 0x7f800802e958 <col:10, col:12> 'struct A *' <LValueToRValue>
+    | | | |   |     `-MemberExpr 0x7f800802e920 <col:10, col:12> 'struct A *' lvalue .b 0x7f8008016408
+    | | | |   |       `-DeclRefExpr 0x7f800802e8f8 <col:10> 'struct B':'struct B' lvalue Var 0x7f800802e1b8 'd' 'struct B':'struct B'
+    | | | |   `-ImplicitCastExpr 0x7f800802e9e0 <col:20> 'struct A *' <NullToPointer>
+    | | | |     `-IntegerLiteral 0x7f800802e9a8 <col:20> 'int' 0
+    | | | `-BinaryOperator 0x7f800802ebe8 <line:46:10, col:23> 'int' '=='
+    | | |   |-ImplicitCastExpr 0x7f800802ebb8 <col:10, col:18> 'struct A *' <LValueToRValue>
+    | | |   | `-MemberExpr 0x7f800802eb60 <col:10, col:18> 'struct A *' lvalue ->a 0x7f80080162f0
+    | | |   |   `-ImplicitCastExpr 0x7f800802eb48 <col:10, col:15> 'struct A *' <LValueToRValue>
+    | | |   |     `-MemberExpr 0x7f800802eb10 <col:10, col:15> 'struct A *' lvalue ->a 0x7f80080162f0
+    | | |   |       `-ImplicitCastExpr 0x7f800802eaf8 <col:10, col:12> 'struct A *' <LValueToRValue>
+    | | |   |         `-MemberExpr 0x7f800802eac0 <col:10, col:12> 'struct A *' lvalue .b 0x7f8008016408
+    | | |   |           `-DeclRefExpr 0x7f800802ea98 <col:10> 'struct B':'struct B' lvalue Var 0x7f800802e1b8 'd' 'struct B':'struct B'
+    | | |   `-ImplicitCastExpr 0x7f800802ebd0 <col:23> 'struct A *' <NullToPointer>
+    | | |     `-IntegerLiteral 0x7f800802eb98 <col:23> 'int' 0
+    | | `-BinaryOperator 0x7f800802edd8 <line:47:10, col:26> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7f800802eda8 <col:10, col:21> 'struct A *' <LValueToRValue>
+    | |   | `-MemberExpr 0x7f800802ed50 <col:10, col:21> 'struct A *' lvalue ->a 0x7f80080162f0
+    | |   |   `-ImplicitCastExpr 0x7f800802ed38 <col:10, col:18> 'struct A *' <LValueToRValue>
+    | |   |     `-MemberExpr 0x7f800802ed00 <col:10, col:18> 'struct A *' lvalue ->a 0x7f80080162f0
+    | |   |       `-ImplicitCastExpr 0x7f800802ece8 <col:10, col:15> 'struct A *' <LValueToRValue>
+    | |   |         `-MemberExpr 0x7f800802ecb0 <col:10, col:15> 'struct A *' lvalue ->a 0x7f80080162f0
+    | |   |           `-ImplicitCastExpr 0x7f800802ec98 <col:10, col:12> 'struct A *' <LValueToRValue>
+    | |   |             `-MemberExpr 0x7f800802ec60 <col:10, col:12> 'struct A *' lvalue .b 0x7f8008016408
+    | |   |               `-DeclRefExpr 0x7f800802ec38 <col:10> 'struct B':'struct B' lvalue Var 0x7f800802e1b8 'd' 'struct B':'struct B'
+    | |   `-ImplicitCastExpr 0x7f800802edc0 <col:26> 'struct A *' <NullToPointer>
+    | |     `-IntegerLiteral 0x7f800802ed88 <col:26> 'int' 0
+    | |-CallExpr 0x7f800802ee90 <line:48:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f800802ee78 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f800802ee28 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f80080160f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f800802ef10 <line:49:3, col:10>
+      `-IntegerLiteral 0x7f800802eef0 <col:10> 'int' 0

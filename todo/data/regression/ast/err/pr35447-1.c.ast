@@ -1,0 +1,26 @@
+../Data/C2AST/pr35447-1.c:5:13: error: expected ';' at end of declaration
+  ({ int i().; });  
+            ^
+            ;
+1 error generated.
+TranslationUnitDecl 0x7fb1f002bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb1f002c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb1f002bf80 '__int128'
+|-TypedefDecl 0x7fb1f002c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb1f002bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb1f002c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb1f002c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb1f002c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb1f002c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb1f002c600 'char *'
+|   `-BuiltinType 0x7fb1f002bd80 'char'
+|-TypedefDecl 0x7fb1f002c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb1f002c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb1f002c720 'struct __va_list_tag'
+|     `-Record 0x7fb1f002c698 '__va_list_tag'
+`-FunctionDecl 0x7fb1f0814200 <../Data/C2AST/pr35447-1.c:3:1, line:6:1> line:3:6 foo 'void ()'
+  `-CompoundStmt 0x7fb1f0814430 <line:4:1, line:6:1>
+    `-StmtExpr 0x7fb1f0814410 <line:5:3, col:17> 'void'
+      `-CompoundStmt 0x7fb1f08143f8 <col:4, col:16>
+        `-DeclStmt 0x7fb1f08143e0 <col:6, col:13>
+          `-FunctionDecl 0x7fb1f0814330 parent 0x7fb1f002bce8 <col:6, col:12> col:10 i 'int ()'

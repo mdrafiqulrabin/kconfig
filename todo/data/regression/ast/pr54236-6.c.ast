@@ -1,0 +1,121 @@
+TranslationUnitDecl 0x7fa7ba82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa7ba82c960 <../Data/C2AST/pr54236-6.c:12:1, line:15:1> line:12:8 struct inode definition
+| `-FieldDecl 0x7fa7ba86d838 <line:14:3, col:16> col:16 referenced i_gid 'unsigned int'
+|-RecordDecl 0x7fa7ba86d880 <line:17:1, line:21:1> line:17:8 struct iattr definition
+| |-FieldDecl 0x7fa7ba86d948 <line:19:3, col:16> col:16 referenced ia_valid 'unsigned int'
+| `-FieldDecl 0x7fa7ba86d9a8 <line:20:3, col:16> col:16 referenced ia_gid 'unsigned int'
+|-RecordDecl 0x7fa7ba86d9f0 <line:23:1, line:27:1> line:23:8 struct task_struct definition
+| |-FieldDecl 0x7fa7ba86dab8 <line:25:3, col:17> col:17 referenced flags 'unsigned long'
+| `-FieldDecl 0x7fa7ba86db18 <line:26:3, col:16> col:16 referenced cap_effective 'unsigned int'
+|-FunctionDecl 0x7fa7ba86dc48 <line:29:1, col:36> col:12 used in_group_p 'int (unsigned int)' extern
+| `-ParmVarDecl 0x7fa7ba86db78 <col:24, col:33> col:36 'unsigned int'
+|-FunctionDecl 0x7fa7ba86dec8 <line:31:1, line:36:1> line:32:1 used get_current 'struct task_struct *(void)' static inline
+| `-CompoundStmt 0x7fa7ba86e060 <line:33:1, line:36:1>
+|   |-DeclStmt 0x7fa7ba86dff0 <line:34:3, col:30>
+|   | `-VarDecl 0x7fa7ba86df90 <col:3, col:23> col:23 used current 'struct task_struct *'
+|   `-ReturnStmt 0x7fa7ba86e048 <line:35:3, col:10>
+|     `-ImplicitCastExpr 0x7fa7ba86e030 <col:10> 'struct task_struct *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa7ba86e008 <col:10> 'struct task_struct *' lvalue Var 0x7fa7ba86df90 'current' 'struct task_struct *'
+|-FunctionDecl 0x7fa7ba86e168 <line:38:1, line:47:1> line:39:1 used capable 'int (int)' static inline
+| |-ParmVarDecl 0x7fa7ba86e098 <col:10, col:14> col:14 used cap 'int'
+| `-CompoundStmt 0x7fa7ba86e648 <line:40:1, line:47:1>
+|   |-IfStmt 0x7fa7ba86e5d8 <line:41:3, line:45:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7fa7ba86e450 <line:41:7, col:53> 'unsigned int'
+|   | | `-BinaryOperator 0x7fa7ba86e428 <col:8, col:52> 'unsigned int' '&'
+|   | |   |-ImplicitCastExpr 0x7fa7ba86e3f8 <col:8, col:37> 'unsigned int' <LValueToRValue>
+|   | |   | `-ParenExpr 0x7fa7ba86e310 <col:8, col:37> 'unsigned int' lvalue
+|   | |   |   `-MemberExpr 0x7fa7ba86e2d8 <col:9, col:24> 'unsigned int' lvalue ->cap_effective 0x7fa7ba86db18
+|   | |   |     `-CallExpr 0x7fa7ba86e2b0 <col:9, col:21> 'struct task_struct *'
+|   | |   |       `-ImplicitCastExpr 0x7fa7ba86e298 <col:9> 'struct task_struct *(*)(void)' <FunctionToPointerDecay>
+|   | |   |         `-DeclRefExpr 0x7fa7ba86e210 <col:9> 'struct task_struct *(void)' Function 0x7fa7ba86dec8 'get_current' 'struct task_struct *(void)'
+|   | |   `-ImplicitCastExpr 0x7fa7ba86e410 <col:41, col:52> 'unsigned int' <IntegralCast>
+|   | |     `-ParenExpr 0x7fa7ba86e3d8 <col:41, col:52> 'int'
+|   | |       `-BinaryOperator 0x7fa7ba86e3b0 <col:42, col:51> 'int' '<<'
+|   | |         |-IntegerLiteral 0x7fa7ba86e330 <col:42> 'int' 1
+|   | |         `-ImplicitCastExpr 0x7fa7ba86e398 <col:47, col:51> 'int' <LValueToRValue>
+|   | |           `-ParenExpr 0x7fa7ba86e378 <col:47, col:51> 'int' lvalue
+|   | |             `-DeclRefExpr 0x7fa7ba86e350 <col:48> 'int' lvalue ParmVar 0x7fa7ba86e098 'cap' 'int'
+|   | |-CompoundStmt 0x7fa7ba86e5b8 <line:42:5, line:45:5>
+|   | | |-CompoundAssignOperator 0x7fa7ba86e548 <line:43:7, col:31> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+|   | | | |-MemberExpr 0x7fa7ba86e4d8 <col:7, col:22> 'unsigned long' lvalue ->flags 0x7fa7ba86dab8
+|   | | | | `-CallExpr 0x7fa7ba86e4b0 <col:7, col:19> 'struct task_struct *'
+|   | | | |   `-ImplicitCastExpr 0x7fa7ba86e498 <col:7> 'struct task_struct *(*)(void)' <FunctionToPointerDecay>
+|   | | | |     `-DeclRefExpr 0x7fa7ba86e470 <col:7> 'struct task_struct *(void)' Function 0x7fa7ba86dec8 'get_current' 'struct task_struct *(void)'
+|   | | | `-ImplicitCastExpr 0x7fa7ba86e530 <col:31> 'unsigned long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fa7ba86e510 <col:31> 'int' 256
+|   | | `-ReturnStmt 0x7fa7ba86e5a0 <line:44:7, col:14>
+|   | |   `-IntegerLiteral 0x7fa7ba86e580 <col:14> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa7ba86e630 <line:46:3, col:10>
+|     `-IntegerLiteral 0x7fa7ba86e610 <col:10> 'int' 0
+`-FunctionDecl 0x7fa7ba86e968 <line:49:1, line:67:1> line:50:1 inode_change_ok 'int (struct inode *, struct iattr *)'
+  |-ParmVarDecl 0x7fa7ba86e720 <col:18, col:32> col:32 used inode 'struct inode *'
+  |-ParmVarDecl 0x7fa7ba86e850 <col:39, col:53> col:53 used attr 'struct iattr *'
+  `-CompoundStmt 0x7fa7ba86f398 <line:51:1, line:67:1>
+    |-DeclStmt 0x7fa7ba86ead0 <line:52:3, col:18>
+    | `-VarDecl 0x7fa7ba86ea30 <col:3, col:17> col:7 used retval 'int' cinit
+    |   `-UnaryOperator 0x7fa7ba86eab0 <col:16, col:17> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fa7ba86ea90 <col:17> 'int' 1
+    |-DeclStmt 0x7fa7ba86ebf0 <line:53:3, col:41>
+    | `-VarDecl 0x7fa7ba86eb00 <col:3, col:33> col:16 used ia_valid 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fa7ba86ebd8 <col:27, col:33> 'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7fa7ba86eba0 <col:27, col:33> 'unsigned int' lvalue ->ia_valid 0x7fa7ba86d948
+    |       `-ImplicitCastExpr 0x7fa7ba86eb88 <col:27> 'struct iattr *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fa7ba86eb60 <col:27> 'struct iattr *' lvalue ParmVar 0x7fa7ba86e850 'attr' 'struct iattr *'
+    |-IfStmt 0x7fa7ba86ed08 <line:55:3, line:56:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa7ba86ec80 <line:55:7, col:18> 'unsigned int' '&'
+    | | |-ImplicitCastExpr 0x7fa7ba86ec50 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa7ba86ec08 <col:7> 'unsigned int' lvalue Var 0x7fa7ba86eb00 'ia_valid' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fa7ba86ec68 <col:18> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fa7ba86ec30 <col:18> 'int' 512
+    | |-GotoStmt 0x7fa7ba86ecf0 <line:56:5, col:10> 'fine' 0x7fa7ba86eca8
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fa7ba86f268 <line:58:3, line:61:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa7ba86f1e0 <line:58:7, line:60:20> 'int' '&&'
+    | | |-BinaryOperator 0x7fa7ba86f0d8 <line:58:7, line:59:68> 'int' '&&'
+    | | | |-ParenExpr 0x7fa7ba86ede0 <line:58:7, col:20> 'unsigned int'
+    | | | | `-BinaryOperator 0x7fa7ba86edb8 <col:8, col:19> 'unsigned int' '&'
+    | | | |   |-ImplicitCastExpr 0x7fa7ba86ed88 <col:8> 'unsigned int' <LValueToRValue>
+    | | | |   | `-DeclRefExpr 0x7fa7ba86ed40 <col:8> 'unsigned int' lvalue Var 0x7fa7ba86eb00 'ia_valid' 'unsigned int'
+    | | | |   `-ImplicitCastExpr 0x7fa7ba86eda0 <col:19> 'unsigned int' <IntegralCast>
+    | | | |     `-IntegerLiteral 0x7fa7ba86ed68 <col:19> 'int' 4
+    | | | `-ParenExpr 0x7fa7ba86f0b8 <line:59:10, col:68> 'int'
+    | | |   `-BinaryOperator 0x7fa7ba86f090 <col:11, col:63> 'int' '&&'
+    | | |     |-UnaryOperator 0x7fa7ba86ef28 <col:11, col:35> 'int' prefix '!'
+    | | |     | `-CallExpr 0x7fa7ba86eee0 <col:12, col:35> 'int'
+    | | |     |   |-ImplicitCastExpr 0x7fa7ba86eec8 <col:12> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+    | | |     |   | `-DeclRefExpr 0x7fa7ba86ee00 <col:12> 'int (unsigned int)' Function 0x7fa7ba86dc48 'in_group_p' 'int (unsigned int)'
+    | | |     |   `-ImplicitCastExpr 0x7fa7ba86ef10 <col:23, col:29> 'unsigned int' <LValueToRValue>
+    | | |     |     `-MemberExpr 0x7fa7ba86ee68 <col:23, col:29> 'unsigned int' lvalue ->ia_gid 0x7fa7ba86d9a8
+    | | |     |       `-ImplicitCastExpr 0x7fa7ba86ee50 <col:23> 'struct iattr *' <LValueToRValue>
+    | | |     |         `-DeclRefExpr 0x7fa7ba86ee28 <col:23> 'struct iattr *' lvalue ParmVar 0x7fa7ba86e850 'attr' 'struct iattr *'
+    | | |     `-BinaryOperator 0x7fa7ba86f068 <col:40, col:63> 'int' '!='
+    | | |       |-ImplicitCastExpr 0x7fa7ba86f038 <col:40, col:46> 'unsigned int' <LValueToRValue>
+    | | |       | `-MemberExpr 0x7fa7ba86ef88 <col:40, col:46> 'unsigned int' lvalue ->ia_gid 0x7fa7ba86d9a8
+    | | |       |   `-ImplicitCastExpr 0x7fa7ba86ef70 <col:40> 'struct iattr *' <LValueToRValue>
+    | | |       |     `-DeclRefExpr 0x7fa7ba86ef48 <col:40> 'struct iattr *' lvalue ParmVar 0x7fa7ba86e850 'attr' 'struct iattr *'
+    | | |       `-ImplicitCastExpr 0x7fa7ba86f050 <col:56, col:63> 'unsigned int' <LValueToRValue>
+    | | |         `-MemberExpr 0x7fa7ba86f000 <col:56, col:63> 'unsigned int' lvalue ->i_gid 0x7fa7ba86d838
+    | | |           `-ImplicitCastExpr 0x7fa7ba86efe8 <col:56> 'struct inode *' <LValueToRValue>
+    | | |             `-DeclRefExpr 0x7fa7ba86efc0 <col:56> 'struct inode *' lvalue ParmVar 0x7fa7ba86e720 'inode' 'struct inode *'
+    | | `-UnaryOperator 0x7fa7ba86f1c0 <line:60:10, col:20> 'int' prefix '!'
+    | |   `-CallExpr 0x7fa7ba86f190 <col:11, col:20> 'int'
+    | |     |-ImplicitCastExpr 0x7fa7ba86f178 <col:11> 'int (*)(int)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fa7ba86f100 <col:11> 'int (int)' Function 0x7fa7ba86e168 'capable' 'int (int)'
+    | |     `-IntegerLiteral 0x7fa7ba86f128 <col:19> 'int' 0
+    | |-GotoStmt 0x7fa7ba86f250 <line:61:5, col:10> 'error' 0x7fa7ba86f208
+    | `-<<<NULL>>>
+    |-LabelStmt 0x7fa7ba86f310 <line:63:1, line:64:11> 'fine'
+    | `-BinaryOperator 0x7fa7ba86f2e8 <col:2, col:11> 'int' '='
+    |   |-DeclRefExpr 0x7fa7ba86f2a0 <col:2> 'int' lvalue Var 0x7fa7ba86ea30 'retval' 'int'
+    |   `-IntegerLiteral 0x7fa7ba86f2c8 <col:11> 'int' 0
+    `-LabelStmt 0x7fa7ba86f380 <line:65:1, line:66:9> 'error'
+      `-ReturnStmt 0x7fa7ba86f368 <col:2, col:9>
+        `-ImplicitCastExpr 0x7fa7ba86f350 <col:9> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fa7ba86f328 <col:9> 'int' lvalue Var 0x7fa7ba86ea30 'retval' 'int'

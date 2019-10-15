@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7fe00602b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe00606e850 <../Data/C2AST/pr37868.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe00606e8f0 prev 0x7fe00606e850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fe00606e990 <line:14:1, line:19:1> line:14:8 struct X definition
+| |-PackedAttr 0x7fe00606ec40 <line:19:18>
+| |-FieldDecl 0x7fe00606ea78 <line:15:3, col:23> col:17 referenced pad 'unsigned char'
+| | `-IntegerLiteral 0x7fe00606ea40 <col:23> 'int' 4
+| |-FieldDecl 0x7fe00606eaf8 <line:16:3, col:20> col:16 referenced a 'unsigned int'
+| | `-IntegerLiteral 0x7fe00606eac0 <col:20> 'int' 32
+| |-FieldDecl 0x7fe00606eb78 <line:17:3, col:20> col:16 referenced b 'unsigned int'
+| | `-IntegerLiteral 0x7fe00606eb40 <col:20> 'int' 24
+| `-FieldDecl 0x7fe00606ebf8 <line:18:3, col:20> col:16 referenced c 'unsigned int'
+|   `-IntegerLiteral 0x7fe00606ebc0 <col:20> 'int' 6
+`-FunctionDecl 0x7fe00606ed58 <line:24:1, line:38:1> line:24:5 main 'int (void)'
+  `-CompoundStmt 0x7fe006071818 <line:25:1, line:38:1>
+    |-DeclStmt 0x7fe00606ef20 <line:26:3, col:13>
+    | `-VarDecl 0x7fe00606eec0 <col:3, col:12> col:12 used x 'struct X':'struct X'
+    |-DeclStmt 0x7fe00606efb0 <line:27:3, col:24>
+    | `-VarDecl 0x7fe00606ef50 <col:3, col:16> col:16 used bad_bits 'unsigned int'
+    |-BinaryOperator 0x7fe00606f080 <line:29:3, col:12> 'unsigned char' '='
+    | |-MemberExpr 0x7fe00606eff0 <col:3, col:5> 'unsigned char' lvalue bitfield .pad 0x7fe00606ea78
+    | | `-DeclRefExpr 0x7fe00606efc8 <col:3> 'struct X':'struct X' lvalue Var 0x7fe00606eec0 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe00606f068 <col:11, col:12> 'unsigned char' <IntegralCast>
+    |   `-UnaryOperator 0x7fe00606f048 <col:11, col:12> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe00606f028 <col:12> 'int' 1
+    |-BinaryOperator 0x7fe00606f1c0 <line:30:3, col:10> 'unsigned int' '='
+    | |-MemberExpr 0x7fe00606f130 <col:3, col:5> 'unsigned int' lvalue bitfield .a 0x7fe00606eaf8
+    | | `-DeclRefExpr 0x7fe00606f108 <col:3> 'struct X':'struct X' lvalue Var 0x7fe00606eec0 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe00606f1a8 <col:9, col:10> 'unsigned int' <IntegralCast>
+    |   `-UnaryOperator 0x7fe00606f188 <col:9, col:10> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe00606f168 <col:10> 'int' 1
+    |-BinaryOperator 0x7fe00606f2a0 <line:31:3, col:10> 'unsigned int' '='
+    | |-MemberExpr 0x7fe00606f210 <col:3, col:5> 'unsigned int' lvalue bitfield .b 0x7fe00606eb78
+    | | `-DeclRefExpr 0x7fe00606f1e8 <col:3> 'struct X':'struct X' lvalue Var 0x7fe00606eec0 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe00606f288 <col:9, col:10> 'unsigned int' <IntegralCast>
+    |   `-UnaryOperator 0x7fe00606f268 <col:9, col:10> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe00606f248 <col:10> 'int' 1
+    |-BinaryOperator 0x7fe00606f380 <line:32:3, col:10> 'unsigned int' '='
+    | |-MemberExpr 0x7fe00606f2f0 <col:3, col:5> 'unsigned int' lvalue bitfield .c 0x7fe00606ebf8
+    | | `-DeclRefExpr 0x7fe00606f2c8 <col:3> 'struct X':'struct X' lvalue Var 0x7fe00606eec0 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe00606f368 <col:9, col:10> 'unsigned int' <IntegralCast>
+    |   `-UnaryOperator 0x7fe00606f348 <col:9, col:10> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe00606f328 <col:10> 'int' 1
+    |-BinaryOperator 0x7fe00606f650 <line:34:3, col:58> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fe00606f3a8 <col:3> 'unsigned int' lvalue Var 0x7fe00606ef50 'bad_bits' 'unsigned int'
+    | `-BinaryOperator 0x7fe00606f628 <col:14, col:58> 'unsigned int' '^'
+    |   |-ParenExpr 0x7fe00606f450 <col:14, col:31> 'unsigned int'
+    |   | `-CStyleCastExpr 0x7fe00606f428 <col:15, col:30> 'unsigned int' <IntegralCast>
+    |   |   `-UnaryOperator 0x7fe00606f3f0 <col:29, col:30> 'int' prefix '-'
+    |   |     `-IntegerLiteral 0x7fe00606f3d0 <col:30> 'int' 1
+    |   `-ImplicitCastExpr 0x7fe00606f610 <col:35, col:58> 'unsigned int' <LValueToRValue>
+    |     `-UnaryOperator 0x7fe00606f5f0 <col:35, col:58> 'unsigned int' lvalue prefix '*'
+    |       `-ParenExpr 0x7fe00606f5d0 <col:36, col:58> 'unsigned int *'
+    |         `-BinaryOperator 0x7fe00606f5a8 <col:37, col:57> 'unsigned int *' '+'
+    |           |-IntegerLiteral 0x7fe00606f470 <col:37> 'int' 1
+    |           `-CStyleCastExpr 0x7fe00606f580 <col:39, col:57> 'unsigned int *' <BitCast>
+    |             `-UnaryOperator 0x7fe00606f518 <col:56, col:57> 'struct X *' prefix '&'
+    |               `-DeclRefExpr 0x7fe00606f490 <col:57> 'struct X':'struct X' lvalue Var 0x7fe00606eec0 'x' 'struct X':'struct X'
+    |-IfStmt 0x7fe00606f7a8 <line:35:3, line:36:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe00606f6f0 <line:35:7, col:19> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe00606f6c0 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe00606f678 <col:7> 'unsigned int' lvalue Var 0x7fe00606ef50 'bad_bits' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fe00606f6d8 <col:19> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe00606f6a0 <col:19> 'int' 0
+    | |-CallExpr 0x7fe00606f780 <line:36:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe00606f768 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe00606f718 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe00606e8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe006071800 <line:37:3, col:10>
+      `-IntegerLiteral 0x7fe00606f7e0 <col:10> 'int' 0

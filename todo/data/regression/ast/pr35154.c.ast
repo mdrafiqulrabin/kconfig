@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f8c0882bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8c0882c970 <../Data/C2AST/pr35154.c:3:1, line:4:13> col:13 used i_outer 'char' static
+| `-UsedAttr 0x7f8c0882c9d0 <line:3:17>
+|-RecordDecl 0x7f8c09015278 <line:5:1, line:8:1> line:5:1 struct definition
+| |-FieldDecl 0x7f8c09015330 <line:6:4, col:9> col:9 referenced f1 'char'
+| `-FieldDecl 0x7f8c09015388 <line:7:4, col:9> col:9 referenced f2 'char'
+|-VarDecl 0x7f8c09015420 <line:5:1, line:8:3> col:3 used opta 'struct (anonymous struct at ../Data/C2AST/pr35154.c:5:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:5:1)'
+|-RecordDecl 0x7f8c09015498 <line:9:1, line:12:1> line:9:1 struct definition
+| |-FieldDecl 0x7f8c09015550 <line:10:4, col:9> col:9 referenced f1 'char'
+| `-FieldDecl 0x7f8c090155a8 <line:11:4, col:9> col:9 referenced f2 'char'
+|-VarDecl 0x7f8c09015640 <line:9:1, line:12:3> col:3 used optb 'struct (anonymous struct at ../Data/C2AST/pr35154.c:9:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:9:1)'
+`-FunctionDecl 0x7f8c09015710 <line:14:1, line:28:1> line:15:1 main 'int ()'
+  `-CompoundStmt 0x7f8c09015ee0 <line:16:1, line:28:1>
+    |-DeclStmt 0x7f8c090158d0 <line:17:4, col:49>
+    | `-VarDecl 0x7f8c09015828 <col:4, col:25> col:16 used i_inner 'char [2]' static
+    |   `-UsedAttr 0x7f8c09015888 <col:43>
+    |-BinaryOperator 0x7f8c090159a0 <line:18:4, col:17> 'char' '='
+    | |-ArraySubscriptExpr 0x7f8c09015948 <col:4, col:13> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7f8c09015930 <col:4> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7f8c090158e8 <col:4> 'char [2]' lvalue Var 0x7f8c09015828 'i_inner' 'char [2]'
+    | | `-IntegerLiteral 0x7f8c09015910 <col:12> 'int' 0
+    | `-ImplicitCastExpr 0x7f8c09015988 <col:17> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015970 <col:17> 'int' 97
+    |-BinaryOperator 0x7f8c09015a80 <col:22, col:35> 'char' '='
+    | |-ArraySubscriptExpr 0x7f8c09015a28 <col:22, col:31> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7f8c09015a10 <col:22> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7f8c090159c8 <col:22> 'char [2]' lvalue Var 0x7f8c09015828 'i_inner' 'char [2]'
+    | | `-IntegerLiteral 0x7f8c090159f0 <col:30> 'int' 1
+    | `-ImplicitCastExpr 0x7f8c09015a68 <col:35> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015a50 <col:35> 'int' 98
+    |-BinaryOperator 0x7f8c09015b38 <line:19:4, col:14> 'char' '='
+    | |-MemberExpr 0x7f8c09015ad0 <col:4, col:9> 'char' lvalue .f1 0x7f8c09015330
+    | | `-DeclRefExpr 0x7f8c09015aa8 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr35154.c:5:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:5:1)' lvalue Var 0x7f8c09015420 'opta' 'struct (anonymous struct at ../Data/C2AST/pr35154.c:5:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:5:1)'
+    | `-ImplicitCastExpr 0x7f8c09015b20 <col:14> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015b08 <col:14> 'int' 99
+    |-BinaryOperator 0x7f8c09015c40 <line:20:4, col:14> 'char' '='
+    | |-MemberExpr 0x7f8c09015bd8 <col:4, col:9> 'char' lvalue .f2 0x7f8c09015388
+    | | `-DeclRefExpr 0x7f8c09015bb0 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr35154.c:5:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:5:1)' lvalue Var 0x7f8c09015420 'opta' 'struct (anonymous struct at ../Data/C2AST/pr35154.c:5:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:5:1)'
+    | `-ImplicitCastExpr 0x7f8c09015c28 <col:14> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015c10 <col:14> 'int' 100
+    |-BinaryOperator 0x7f8c09015cf8 <line:21:4, col:14> 'char' '='
+    | |-MemberExpr 0x7f8c09015c90 <col:4, col:9> 'char' lvalue .f1 0x7f8c09015550
+    | | `-DeclRefExpr 0x7f8c09015c68 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr35154.c:9:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:9:1)' lvalue Var 0x7f8c09015640 'optb' 'struct (anonymous struct at ../Data/C2AST/pr35154.c:9:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:9:1)'
+    | `-ImplicitCastExpr 0x7f8c09015ce0 <col:14> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015cc8 <col:14> 'int' 67
+    |-BinaryOperator 0x7f8c09015e00 <line:22:4, col:14> 'char' '='
+    | |-MemberExpr 0x7f8c09015d98 <col:4, col:9> 'char' lvalue .f2 0x7f8c090155a8
+    | | `-DeclRefExpr 0x7f8c09015d70 <col:4> 'struct (anonymous struct at ../Data/C2AST/pr35154.c:9:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:9:1)' lvalue Var 0x7f8c09015640 'optb' 'struct (anonymous struct at ../Data/C2AST/pr35154.c:9:1)':'struct (anonymous at ../Data/C2AST/pr35154.c:9:1)'
+    | `-ImplicitCastExpr 0x7f8c09015de8 <col:14> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015dd0 <col:14> 'int' 68
+    |-BinaryOperator 0x7f8c09015e80 <line:23:4, col:14> 'char' '='
+    | |-DeclRefExpr 0x7f8c09015e28 <col:4> 'char' lvalue Var 0x7f8c0882c970 'i_outer' 'char'
+    | `-ImplicitCastExpr 0x7f8c09015e68 <col:14> 'char' <IntegralCast>
+    |   `-CharacterLiteral 0x7f8c09015e50 <col:14> 'int' 101
+    `-ReturnStmt 0x7f8c09015ec8 <line:27:4, col:11>
+      `-IntegerLiteral 0x7f8c09015ea8 <col:11> 'int' 0

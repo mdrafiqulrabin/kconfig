@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fb4e682b8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb4e7800ad8 <../Data/C2AST/pr53979-2.c:4:1, line:9:1> line:4:10 f 'unsigned int (unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7fb4e682c578 <col:12, col:21> col:21 used a 'unsigned int'
+  |-ParmVarDecl 0x7fb4e7800a00 <col:24, col:33> col:33 used b 'unsigned int'
+  `-CompoundStmt 0x7fb4e7800e90 <line:5:1, line:9:1>
+    |-DeclStmt 0x7fb4e7800ce8 <line:6:3, col:22>
+    | `-VarDecl 0x7fb4e7800be0 <col:3, col:21> col:12 used t1 'unsigned int' cinit
+    |   `-BinaryOperator 0x7fb4e7800cc0 <col:17, col:21> 'unsigned int' '^'
+    |     |-ImplicitCastExpr 0x7fb4e7800c90 <col:17> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb4e7800c40 <col:17> 'unsigned int' lvalue ParmVar 0x7fb4e682c578 'a' 'unsigned int'
+    |     `-ImplicitCastExpr 0x7fb4e7800ca8 <col:21> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb4e7800c68 <col:21> 'unsigned int' lvalue ParmVar 0x7fb4e7800a00 'b' 'unsigned int'
+    |-DeclStmt 0x7fb4e7800e20 <line:7:3, col:23>
+    | `-VarDecl 0x7fb4e7800d18 <col:3, col:22> col:12 used t2 'unsigned int' cinit
+    |   `-BinaryOperator 0x7fb4e7800df8 <col:17, col:22> 'unsigned int' '|'
+    |     |-ImplicitCastExpr 0x7fb4e7800dc8 <col:17> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fb4e7800d78 <col:17> 'unsigned int' lvalue Var 0x7fb4e7800be0 't1' 'unsigned int'
+    |     `-ImplicitCastExpr 0x7fb4e7800de0 <col:22> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb4e7800da0 <col:22> 'unsigned int' lvalue ParmVar 0x7fb4e682c578 'a' 'unsigned int'
+    `-ReturnStmt 0x7fb4e7800e78 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7fb4e7800e60 <col:10> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb4e7800e38 <col:10> 'unsigned int' lvalue Var 0x7fb4e7800d18 't2' 'unsigned int'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fd05781ace8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd05686f6f8 <../Data/C2AST/pragma-init-fini-2.c:10:1, line:12:1> line:10:6 f 'void ()'
+| `-CompoundStmt 0x7fd05686f950 <col:10, line:12:1>
+|   `-CallExpr 0x7fd05686f8d0 <line:11:3, col:25> 'int'
+|     |-ImplicitCastExpr 0x7fd05686f8b8 <col:3> 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd05686f798 <col:3> 'int (FILE *, const char *, ...)' Function 0x7fd05685b4f8 'fprintf' 'int (FILE *, const char *, ...)'
+|     |-ImplicitCastExpr 0x7fd05686f908 </usr/include/stdio.h:129:16> 'FILE *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd05686f7c0 <col:16> 'FILE *' lvalue Var 0x7fd056856f38 '__stderrp' 'FILE *'
+|     `-ImplicitCastExpr 0x7fd05686f938 <../Data/C2AST/pragma-init-fini-2.c:11:20> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fd05686f920 <col:20> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fd05686f828 <col:20> 'char [3]' lvalue "f\n"
+`-FunctionDecl 0x7fd05686f9c0 <line:14:1, line:15:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7fd05686fa60 <col:13, line:15:1>

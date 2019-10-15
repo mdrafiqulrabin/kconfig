@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f85ef8166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f85ef859268 <../Data/C2AST/pr53214_0.c:3:1, col:52> col:8 used a 'double (double)'
+| |-ParmVarDecl 0x7f85ef817378 <col:10> col:16 'double'
+| `-UsedAttr 0x7f85ef859310 <col:47>
+|-FunctionDecl 0x7f85ef859440 prev 0x7f85ef859268 <line:4:1, line:7:1> line:4:8 used a 'double (double)'
+| |-ParmVarDecl 0x7f85ef8593b0 <col:10, col:17> col:17 used r 'double'
+| |-CompoundStmt 0x7f85ef859588 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7f85ef859570 <line:6:3, col:10>
+| |   `-ImplicitCastExpr 0x7f85ef859558 <col:10> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f85ef859530 <col:10> 'double' lvalue ParmVar 0x7f85ef8593b0 'r' 'double'
+| `-UsedAttr 0x7f85ef8594e8 <line:3:47> Inherited
+`-FunctionDecl 0x7f85ef8595f0 <line:8:1, col:25> col:5 main 'int ()'
+  `-CompoundStmt 0x7f85ef8596c8 <col:13, col:25>
+    `-ReturnStmt 0x7f85ef8596b0 <col:15, col:22>
+      `-IntegerLiteral 0x7f85ef859690 <col:22> 'int' 0

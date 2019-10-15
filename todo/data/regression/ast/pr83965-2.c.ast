@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fbef98246e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbef9825378 <../Data/C2AST/pr83965-2.c:4:1, col:5> col:5 used c 'int'
+|-VarDecl 0x7fbef901b058 <line:5:1, col:15> col:15 used d 'unsigned char'
+|-FunctionDecl 0x7fbef901b1c8 <line:6:1, line:16:1> line:6:5 e 'int (unsigned char *)'
+| |-ParmVarDecl 0x7fbef901b100 <col:8, col:23> col:23 used f 'unsigned char *'
+| `-CompoundStmt 0x7fbef901bb10 <line:7:1, line:16:1>
+|   |-DeclStmt 0x7fbef901b2e8 <line:8:3, col:8>
+|   | `-VarDecl 0x7fbef901b288 <col:3, col:7> col:7 used g 'int'
+|   |-ForStmt 0x7fbef901ba80 <line:9:3, line:14:5>
+|   | |-DeclStmt 0x7fbef901b378 <line:9:8, col:13>
+|   | | `-VarDecl 0x7fbef901b318 <col:8, col:12> col:12 used a 'int'
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbef901b3b8 <col:15> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbef901b390 <col:15> 'int' lvalue Var 0x7fbef901b318 'a' 'int'
+|   | |-UnaryOperator 0x7fbef901b3f8 <col:18, col:19> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fbef901b3d0 <col:18> 'int' lvalue Var 0x7fbef901b318 'a' 'int'
+|   | `-CompoundStmt 0x7fbef901ba60 <line:10:5, line:14:5>
+|   |   |-ForStmt 0x7fbef901b988 <line:11:7, line:12:30>
+|   |   | |-DeclStmt 0x7fbef901b4b0 <line:11:12, col:21>
+|   |   | | `-VarDecl 0x7fbef901b430 <col:12, col:20> col:16 used b 'int' cinit
+|   |   | |   `-IntegerLiteral 0x7fbef901b490 <col:20> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fbef901b528 <col:23, col:27> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fbef901b510 <col:23> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fbef901b4c8 <col:23> 'int' lvalue Var 0x7fbef901b430 'b' 'int'
+|   |   | | `-IntegerLiteral 0x7fbef901b4f0 <col:27> 'int' 6
+|   |   | |-UnaryOperator 0x7fbef901b578 <col:30, col:31> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7fbef901b550 <col:30> 'int' lvalue Var 0x7fbef901b430 'b' 'int'
+|   |   | `-CompoundAssignOperator 0x7fbef901b950 <line:12:2, col:30> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |   |-DeclRefExpr 0x7fbef901b598 <col:2> 'int' lvalue Var 0x7fbef901b288 'g' 'int'
+|   |   |   `-CallExpr 0x7fbef901b920 <col:7, col:30> 'int'
+|   |   |     |-ImplicitCastExpr 0x7fbef901b908 <col:7> 'int (*)(int)' <BuiltinFnToFnPtr>
+|   |   |     | `-DeclRefExpr 0x7fbef901b758 <col:7> '<builtin fn type>' Function 0x7fbef901b5f8 '__builtin_abs' 'int (int)'
+|   |   |     `-BinaryOperator 0x7fbef901b8b0 <col:22, col:29> 'int' '-'
+|   |   |       |-ImplicitCastExpr 0x7fbef901b868 <col:22, col:25> 'int' <IntegralCast>
+|   |   |       | `-ImplicitCastExpr 0x7fbef901b850 <col:22, col:25> 'unsigned char' <LValueToRValue>
+|   |   |       |   `-ArraySubscriptExpr 0x7fbef901b800 <col:22, col:25> 'unsigned char' lvalue
+|   |   |       |     |-ImplicitCastExpr 0x7fbef901b7d0 <col:22> 'unsigned char *' <LValueToRValue>
+|   |   |       |     | `-DeclRefExpr 0x7fbef901b780 <col:22> 'unsigned char *' lvalue ParmVar 0x7fbef901b100 'f' 'unsigned char *'
+|   |   |       |     `-ImplicitCastExpr 0x7fbef901b7e8 <col:24> 'int' <LValueToRValue>
+|   |   |       |       `-DeclRefExpr 0x7fbef901b7a8 <col:24> 'int' lvalue Var 0x7fbef901b430 'b' 'int'
+|   |   |       `-ImplicitCastExpr 0x7fbef901b898 <col:29> 'int' <IntegralCast>
+|   |   |         `-ImplicitCastExpr 0x7fbef901b880 <col:29> 'unsigned char' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x7fbef901b828 <col:29> 'unsigned char' lvalue Var 0x7fbef901b058 'd' 'unsigned char'
+|   |   `-CompoundAssignOperator 0x7fbef901ba28 <line:13:7, col:12> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+|   |     |-DeclRefExpr 0x7fbef901b9c0 <col:7> 'unsigned char *' lvalue ParmVar 0x7fbef901b100 'f' 'unsigned char *'
+|   |     `-ImplicitCastExpr 0x7fbef901ba10 <col:12> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fbef901b9e8 <col:12> 'int' lvalue Var 0x7fbef9825378 'c' 'int'
+|   `-ReturnStmt 0x7fbef901baf8 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7fbef901bae0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbef901bab8 <col:10> 'int' lvalue Var 0x7fbef901b288 'g' 'int'
+`-FunctionDecl 0x7fbef901b5f8 <line:12:7> col:7 implicit used __builtin_abs 'int (int)' extern
+  |-ParmVarDecl 0x7fbef901b698 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fbef901b700 <col:7> Implicit
+  `-ConstAttr 0x7fbef901b748 <col:7> Implicit

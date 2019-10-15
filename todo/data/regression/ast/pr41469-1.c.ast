@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7facc98166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7facc8818a60 <../Data/C2AST/pr41469-1.c:4:1, col:17> col:6 used af 'void (void *)'
+| `-ParmVarDecl 0x7facc9817378 <col:10, col:16> col:16 a 'void *'
+`-FunctionDecl 0x7facc8818c10 <line:6:1, line:12:1> line:7:1 bf 'void (void)'
+  `-CompoundStmt 0x7facc8818f60 <line:8:1, line:12:1>
+    |-DeclStmt 0x7facc8818d48 <line:9:3, col:12>
+    | `-VarDecl 0x7facc8818cc8 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7facc8818d28 <col:11> 'int' 1
+    |-DeclStmt 0x7facc8818e58 <line:10:3, col:12>
+    | `-VarDecl 0x7facc8818df8 <col:3, col:11> col:8 used v 'char [i]'
+    `-CallExpr 0x7facc8818f00 <line:11:3, col:8> 'void'
+      |-ImplicitCastExpr 0x7facc8818ee8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7facc8818e70 <col:3> 'void (void *)' Function 0x7facc8818a60 'af' 'void (void *)'
+      `-ImplicitCastExpr 0x7facc8818f48 <col:7> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7facc8818f30 <col:7> 'char *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7facc8818e98 <col:7> 'char [i]' lvalue Var 0x7facc8818df8 'v' 'char [i]'

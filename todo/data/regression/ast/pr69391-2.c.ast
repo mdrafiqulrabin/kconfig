@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fc811819ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc81000c000 <../Data/C2AST/pr69391-2.c:6:1, line:12:1> line:6:5 main 'int ()'
+| `-CompoundStmt 0x7fc81000c648 <line:7:1, line:12:1>
+|   |-DeclStmt 0x7fc81000c200 <line:8:3, col:23>
+|   | `-VarDecl 0x7fc81000c0f8 <col:3, <scratch space>:5:1> ../Data/C2AST/pr69391-2.c:8:15 used s 'const char *' cinit
+|   |   `-ImplicitCastExpr 0x7fc81000c1e8 <<scratch space>:3:1, line:5:1> 'const char *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fc81000c1d0 <line:3:1, line:5:1> 'char *' <ArrayToPointerDecay>
+|   |       `-StringLiteral 0x7fc81000c198 <line:3:1, line:5:1> 'char [3]' lvalue "88"
+|   |-IfStmt 0x7fc81000c5d8 <../Data/C2AST/pr69391-2.c:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc81000c408 <line:9:7, col:30> 'int' '||'
+|   | | |-BinaryOperator 0x7fc81000c2e8 <col:7, col:15> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fc81000c2d0 <col:7, col:10> 'int' <IntegralCast>
+|   | | | | `-ImplicitCastExpr 0x7fc81000c2b8 <col:7, col:10> 'char' <LValueToRValue>
+|   | | | |   `-ArraySubscriptExpr 0x7fc81000c278 <col:7, col:10> 'const char' lvalue
+|   | | | |     |-ImplicitCastExpr 0x7fc81000c260 <col:7> 'const char *' <LValueToRValue>
+|   | | | |     | `-DeclRefExpr 0x7fc81000c218 <col:7> 'const char *' lvalue Var 0x7fc81000c0f8 's' 'const char *'
+|   | | | |     `-IntegerLiteral 0x7fc81000c240 <col:9> 'int' 0
+|   | | | `-CharacterLiteral 0x7fc81000c2a0 <col:15> 'int' 56
+|   | | `-BinaryOperator 0x7fc81000c3e0 <col:22, col:30> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fc81000c3c8 <col:22, col:25> 'int' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fc81000c3b0 <col:22, col:25> 'char' <LValueToRValue>
+|   | |   |   `-ArraySubscriptExpr 0x7fc81000c370 <col:22, col:25> 'const char' lvalue
+|   | |   |     |-ImplicitCastExpr 0x7fc81000c358 <col:22> 'const char *' <LValueToRValue>
+|   | |   |     | `-DeclRefExpr 0x7fc81000c310 <col:22> 'const char *' lvalue Var 0x7fc81000c0f8 's' 'const char *'
+|   | |   |     `-IntegerLiteral 0x7fc81000c338 <col:24> 'int' 1
+|   | |   `-CharacterLiteral 0x7fc81000c398 <col:30> 'int' 56
+|   | |-CallExpr 0x7fc81000c5b0 <line:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fc81000c598 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc81000c548 <col:5> '<builtin fn type>' Function 0x7fc81000c460 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc81000c630 <line:11:3, col:10>
+|     `-IntegerLiteral 0x7fc81000c610 <col:10> 'int' 0
+`-FunctionDecl 0x7fc81000c460 <line:10:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc81000c500 <col:5> Implicit

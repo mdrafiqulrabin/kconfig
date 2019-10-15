@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7feb6402bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7feb6402c978 <../Data/C2AST/pr65014.c:4:1, col:12> col:12 used x 'int' extern
+`-FunctionDecl 0x7feb64814328 <line:6:1, line:10:1> line:7:1 foo 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7feb64814258 <col:6, col:19> col:19 used y 'unsigned int'
+  `-CompoundStmt 0x7feb64814718 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7feb64814700 <line:9:3, col:77>
+      `-BinaryOperator 0x7feb648146d8 <col:10, col:77> 'unsigned int' '|'
+        |-ParenExpr 0x7feb64814508 <col:10, col:38> 'unsigned int'
+        | `-BinaryOperator 0x7feb648144e0 <col:11, col:37> 'unsigned int' '<<'
+        |   |-ImplicitCastExpr 0x7feb648144c8 <col:11> 'unsigned int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7feb648143d0 <col:11> 'unsigned int' lvalue ParmVar 0x7feb64814258 'y' 'unsigned int'
+        |   `-ParenExpr 0x7feb648144a8 <col:16, col:37> 'long'
+        |     `-CStyleCastExpr 0x7feb64814480 <col:17, col:36> 'long' <PointerToIntegral>
+        |       `-UnaryOperator 0x7feb64814448 <col:35, col:36> 'int *' prefix '&'
+        |         `-DeclRefExpr 0x7feb648143f8 <col:36> 'int' lvalue Var 0x7feb6402c978 'x' 'int'
+        `-ParenExpr 0x7feb648146b8 <col:42, col:77> 'unsigned int'
+          `-BinaryOperator 0x7feb64814690 <col:43, col:76> 'unsigned int' '>>'
+            |-ImplicitCastExpr 0x7feb64814678 <col:43> 'unsigned int' <LValueToRValue>
+            | `-DeclRefExpr 0x7feb64814528 <col:43> 'unsigned int' lvalue ParmVar 0x7feb64814258 'y' 'unsigned int'
+            `-ParenExpr 0x7feb64814658 <col:48, col:76> 'long'
+              `-BinaryOperator 0x7feb64814630 <col:49, col:75> 'long' '-'
+                |-ImplicitCastExpr 0x7feb64814618 <col:49> 'long' <IntegralCast>
+                | `-IntegerLiteral 0x7feb64814550 <col:49> 'int' 32
+                `-ParenExpr 0x7feb648145f8 <col:54, col:75> 'long'
+                  `-CStyleCastExpr 0x7feb648145d0 <col:55, col:74> 'long' <PointerToIntegral>
+                    `-UnaryOperator 0x7feb64814598 <col:73, col:74> 'int *' prefix '&'
+                      `-DeclRefExpr 0x7feb64814570 <col:74> 'int' lvalue Var 0x7feb6402c978 'x' 'int'

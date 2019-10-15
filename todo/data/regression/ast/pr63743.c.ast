@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f8f90023ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8f8f014cd8 <../Data/C2AST/pr63743.c:4:1, line:9:1> line:5:1 libcall_dep 'double (double, double)'
+  |-ParmVarDecl 0x7f8f90024778 <col:14, col:21> col:21 used x 'double'
+  |-ParmVarDecl 0x7f8f8f014c00 <col:24, col:31> col:31 used y 'double'
+  `-CompoundStmt 0x7f8f8f014fc0 <line:6:1, line:9:1>
+    |-DeclStmt 0x7f8f8f014ee8 <line:7:3, col:21>
+    | `-VarDecl 0x7f8f8f014de0 <col:3, col:20> col:10 used tem 'double' cinit
+    |   `-BinaryOperator 0x7f8f8f014ec0 <col:16, col:20> 'double' '+'
+    |     |-ImplicitCastExpr 0x7f8f8f014e90 <col:16> 'double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8f8f014e40 <col:16> 'double' lvalue ParmVar 0x7f8f90024778 'x' 'double'
+    |     `-ImplicitCastExpr 0x7f8f8f014ea8 <col:20> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8f8f014e68 <col:20> 'double' lvalue ParmVar 0x7f8f8f014c00 'y' 'double'
+    `-ReturnStmt 0x7f8f8f014fa8 <line:8:3, col:14>
+      `-BinaryOperator 0x7f8f8f014f80 <col:10, col:14> 'double' '*'
+        |-ImplicitCastExpr 0x7f8f8f014f50 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7f8f8f014f00 <col:10> 'double' lvalue ParmVar 0x7f8f90024778 'x' 'double'
+        `-ImplicitCastExpr 0x7f8f8f014f68 <col:14> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7f8f8f014f28 <col:14> 'double' lvalue Var 0x7f8f8f014de0 'tem' 'double'

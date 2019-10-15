@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f85a88128e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f85a8813578 <../Data/C2AST/pr32219-2.c:6:1, col:5> col:5 used xxx 'int'
+`-FunctionDecl 0x7f85a802d690 <line:8:1, line:12:1> line:9:1 foo 'int ()'
+  `-CompoundStmt 0x7f85a802d788 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7f85a802d770 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f85a802d758 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f85a802d730 <col:10> 'int' lvalue Var 0x7f85a8813578 'xxx' 'int'

@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7ff35880f0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff35880fd60 <../Data/C2AST/pr43557-2.c:4:8, col:15> col:15 struct S
+|-VarDecl 0x7ff35900de70 <col:1, col:17> col:17 used g 'struct S':'struct S' extern
+`-FunctionDecl 0x7ff35900dff0 <line:6:1, line:10:1> line:7:1 f2 'void (void)'
+  `-CompoundStmt 0x7ff35900e138 <line:8:1, line:10:1>
+    `-UnaryOperator 0x7ff35900e118 <line:9:3, col:4> 'struct S *' prefix '&'
+      `-DeclRefExpr 0x7ff35900e090 <col:4> 'struct S':'struct S' lvalue Var 0x7ff35900de70 'g' 'struct S':'struct S'

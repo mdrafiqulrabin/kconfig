@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fb4d782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb4d786be28 <../Data/C2AST/pr60663.c:5:1, line:11:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fb4d786c270 <line:7:1, line:11:1>
+    |-DeclStmt 0x7fb4d786c010 <line:8:3, col:16>
+    | |-VarDecl 0x7fb4d786bf20 <col:3, col:12> col:12 used i 'unsigned int'
+    | `-VarDecl 0x7fb4d786bf98 <col:3, col:15> col:15 used j 'unsigned int'
+    |-GCCAsmStmt 0x7fb4d786c188 <line:9:3, col:36>
+    | |-DeclRefExpr 0x7fb4d786c108 <col:24> 'unsigned int' lvalue Var 0x7fb4d786bf20 'i' 'unsigned int'
+    | `-DeclRefExpr 0x7fb4d786c160 <col:34> 'unsigned int' lvalue Var 0x7fb4d786bf98 'j' 'unsigned int'
+    `-ReturnStmt 0x7fb4d786c258 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fb4d786c240 <col:10> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb4d786c228 <col:10> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb4d786c200 <col:10> 'unsigned int' lvalue Var 0x7fb4d786bf20 'i' 'unsigned int'

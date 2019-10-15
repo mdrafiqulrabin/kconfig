@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7fce298174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fce29857628 <../Data/C2AST/pr49899.c:1:1, col:35> col:12 foo 'int (void)' static
+| `-CompoundStmt 0x7fce29857740 <col:23, col:35>
+|   `-ReturnStmt 0x7fce29857728 <col:25, col:32>
+|     `-IntegerLiteral 0x7fce29857708 <col:32> 'int' 0
+`-FunctionDecl 0x7fce298577f0 prev 0x7fce29857628 <line:2:1, col:37> col:5 foo 'int (void)'

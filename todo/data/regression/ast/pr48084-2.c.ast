@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f935282bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9353015200 <../Data/C2AST/pr48084-2.c:4:1, col:13> col:13 referenced __m64 '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-VectorType 0x7f935282c980 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+| | `-BuiltinType 0x7f935282bde0 'int'
+| `-MayAliasAttr 0x7f9353015258 <col:56>
+|-TypedefDecl 0x7f93530152f8 <line:5:1, col:14> col:14 referenced __v8qi '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+| `-VectorType 0x7f93530152c0 '__attribute__((__vector_size__(8 * sizeof(char)))) char' 8
+|   `-BuiltinType 0x7f935282bd80 'char'
+|-FunctionDecl 0x7f93530155a0 <line:6:1, line:10:1> line:7:1 _mm_maskmove_si64 'void (__m64, __m64, char *)'
+| |-ParmVarDecl 0x7f9353015380 <col:20, col:26> col:26 used __A '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7f93530153f0 <col:31, col:37> col:37 used __N '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7f9353015468 <col:42, col:48> col:48 used __P 'char *'
+| `-CompoundStmt 0x7f9353015ad8 <line:8:1, line:10:1>
+|   `-CallExpr 0x7f9353015a80 <line:9:5, col:59> 'void'
+|     |-ImplicitCastExpr 0x7f9353015a68 <col:5> 'void (*)(__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char, char *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f93530158c0 <col:5> '<builtin fn type>' Function 0x7f93530156e8 '__builtin_ia32_maskmovq' 'void (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char, char *)'
+|     |-CStyleCastExpr 0x7f9353015960 <col:30, col:38> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|     | `-ImplicitCastExpr 0x7f9353015948 <col:38> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9353015910 <col:38> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f9353015380 '__A' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|     |-CStyleCastExpr 0x7f93530159d8 <col:43, col:51> '__v8qi':'__attribute__((__vector_size__(8 * sizeof(char)))) char' <BitCast>
+|     | `-ImplicitCastExpr 0x7f93530159c0 <col:51> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9353015988 <col:51> '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7f93530153f0 '__N' '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|     `-ImplicitCastExpr 0x7f9353015ac0 <col:56> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9353015a00 <col:56> 'char *' lvalue ParmVar 0x7f9353015468 '__P' 'char *'
+`-FunctionDecl 0x7f93530156e8 <col:5> col:5 implicit used __builtin_ia32_maskmovq 'void (__attribute__((__vector_size__(8 * sizeof(char)))) char, __attribute__((__vector_size__(8 * sizeof(char)))) char, char *)' extern
+  |-ParmVarDecl 0x7f9353015788 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+  |-ParmVarDecl 0x7f93530157e8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7f9353015848 <<invalid sloc>> <invalid sloc> 'char *'

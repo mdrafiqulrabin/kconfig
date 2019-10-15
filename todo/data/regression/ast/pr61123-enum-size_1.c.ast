@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fd28b0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd28b070068 <../Data/C2AST/pr61123-enum-size_1.c:1:1, line:5:1> line:2:1 foo2 'int (int)'
+  |-ParmVarDecl 0x7fd28b018178 <col:7, col:11> col:11 used y 'int'
+  `-CompoundStmt 0x7fd28b0701f0 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7fd28b0701d8 <line:4:3, col:12>
+      `-BinaryOperator 0x7fd28b0701b0 <col:10, col:12> 'int' '*'
+        |-ImplicitCastExpr 0x7fd28b070198 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd28b070150 <col:10> 'int' lvalue ParmVar 0x7fd28b018178 'y' 'int'
+        `-IntegerLiteral 0x7fd28b070178 <col:12> 'int' 10

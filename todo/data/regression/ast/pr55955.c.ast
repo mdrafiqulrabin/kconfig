@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f931282b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f931282bf78 <../Data/C2AST/pr55955.c:4:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7f9312014d20 <line:6:1, line:13:1> line:7:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f9312014c58 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7f9312015270 <line:8:1, line:13:1>
+    |-DeclStmt 0x7f9312014e40 <line:9:3, col:8>
+    | `-VarDecl 0x7f9312014de0 <col:3, col:7> col:7 used a 'int'
+    `-ForStmt 0x7f9312015238 <line:10:3, line:12:41>
+      |-BinaryOperator 0x7f9312014ec0 <line:10:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f9312014e58 <col:8> 'int' lvalue Var 0x7f9312014de0 'a' 'int'
+      | `-ImplicitCastExpr 0x7f9312014ea8 <col:12> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9312014e80 <col:12> 'int' lvalue ParmVar 0x7f9312014c58 'x' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9312014f48 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f9312014f30 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9312014ee8 <col:15> 'int' lvalue Var 0x7f9312014de0 'a' 'int'
+      | `-IntegerLiteral 0x7f9312014f10 <col:19> 'int' 2
+      |-UnaryOperator 0x7f9312014f98 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f9312014f70 <col:22> 'int' lvalue Var 0x7f9312014de0 'a' 'int'
+      `-ForStmt 0x7f9312015200 <line:11:5, line:12:41>
+        |-BinaryOperator 0x7f9312015000 <line:11:10, col:14> 'int' '='
+        | |-DeclRefExpr 0x7f9312014fb8 <col:10> 'int' lvalue Var 0x7f931282bf78 'b' 'int'
+        | `-IntegerLiteral 0x7f9312014fe0 <col:14> 'int' 0
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7f9312015088 <col:17, col:21> 'int' '<'
+        | |-ImplicitCastExpr 0x7f9312015070 <col:17> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f9312015028 <col:17> 'int' lvalue Var 0x7f931282bf78 'b' 'int'
+        | `-IntegerLiteral 0x7f9312015050 <col:21> 'int' 2
+        |-UnaryOperator 0x7f93120150d8 <col:24, col:25> 'int' postfix '++'
+        | `-DeclRefExpr 0x7f93120150b0 <col:24> 'int' lvalue Var 0x7f931282bf78 'b' 'int'
+        `-CompoundAssignOperator 0x7f93120151c8 <line:12:7, col:41> 'unsigned short' '%=' ComputeLHSTy='int' ComputeResultTy='int'
+          |-UnaryOperator 0x7f9312015188 <col:7, col:27> 'unsigned short' lvalue prefix '*'
+          | `-CStyleCastExpr 0x7f9312015160 <col:8, col:27> 'unsigned short *' <IntegralToPointer>
+          |   `-IntegerLiteral 0x7f93120150f8 <col:27> 'unsigned long' 1048576
+          `-IntegerLiteral 0x7f93120151a8 <col:41> 'int' 46

@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f839c82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f839c82c978 <../Data/C2AST/pr61222-2.c:1:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f839d014258 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7f839d0142d0 <col:1, col:11> col:11 used d 'int'
+`-FunctionDecl 0x7f839d014418 <line:2:1, line:7:1> line:2:5 main 'int (void)'
+  `-CompoundStmt 0x7f839d0148d0 <line:3:1, line:7:1>
+    |-DeclStmt 0x7f839d0145e8 <line:4:3, col:17>
+    | `-VarDecl 0x7f839d014500 <col:3, col:16> col:7 used c 'int' cinit
+    |   `-BinaryOperator 0x7f839d0145c0 <col:11, col:16> 'int' '&&'
+    |     |-ImplicitCastExpr 0x7f839d0145a8 <col:11> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f839d014560 <col:11> 'int' lvalue Var 0x7f839c82c978 'a' 'int'
+    |     `-IntegerLiteral 0x7f839d014588 <col:16> 'int' 1
+    |-BinaryOperator 0x7f839d014870 <line:5:3, col:39> 'int' '='
+    | |-DeclRefExpr 0x7f839d014600 <col:3> 'int' lvalue Var 0x7f839d0142d0 'd' 'int'
+    | `-BinaryOperator 0x7f839d014848 <col:7, col:39> 'int' '<<'
+    |   |-IntegerLiteral 0x7f839d014628 <col:7> 'int' 1
+    |   `-ParenExpr 0x7f839d014828 <col:12, col:39> 'int'
+    |     `-BinaryOperator 0x7f839d014800 <col:13, col:38> 'int' '+'
+    |       |-ParenExpr 0x7f839d0147c0 <col:13, col:34> 'int'
+    |       | `-BinaryOperator 0x7f839d014798 <col:14, col:33> 'int' '<<'
+    |       |   |-ParenExpr 0x7f839d014758 <col:14, col:28> 'int'
+    |       |   | `-BinaryOperator 0x7f839d014730 <col:15, col:27> 'int' '|'
+    |       |   |   |-ImplicitCastExpr 0x7f839d014718 <col:15> 'int' <LValueToRValue>
+    |       |   |   | `-DeclRefExpr 0x7f839d014648 <col:15> 'int' lvalue Var 0x7f839d014500 'c' 'int'
+    |       |   |   `-ParenExpr 0x7f839d0146f8 <col:19, col:27> 'int'
+    |       |   |     `-BinaryOperator 0x7f839d0146d0 <col:20, col:24> 'int' '-'
+    |       |   |       |-ImplicitCastExpr 0x7f839d0146b8 <col:20> 'int' <LValueToRValue>
+    |       |   |       | `-DeclRefExpr 0x7f839d014670 <col:20> 'int' lvalue Var 0x7f839d014258 'b' 'int'
+    |       |   |       `-IntegerLiteral 0x7f839d014698 <col:24> 'int' 842
+    |       |   `-IntegerLiteral 0x7f839d014778 <col:33> 'int' 1
+    |       `-IntegerLiteral 0x7f839d0147e0 <col:38> 'int' 1
+    `-ReturnStmt 0x7f839d0148b8 <line:6:3, col:10>
+      `-IntegerLiteral 0x7f839d014898 <col:10> 'int' 0

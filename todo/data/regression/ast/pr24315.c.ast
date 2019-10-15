@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fd9c782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd9c786d860 <../Data/C2AST/pr24315.c:5:1, line:9:1> line:5:6 s48_double_to_bignum 'void (int)'
+  |-ParmVarDecl 0x7fd9c782c978 <col:28, col:32> col:32 used exponent 'int'
+  `-CompoundStmt 0x7fd9c786de48 <line:6:1, line:9:1>
+    `-DeclStmt 0x7fd9c786de30 <line:7:3, line:8:34>
+      `-VarDecl 0x7fd9c786d960 <line:7:3, line:8:33> line:7:8 length 'long' cinit
+        `-ImplicitCastExpr 0x7fd9c786de18 <col:17, line:8:33> 'long' <IntegralCast>
+          `-ParenExpr 0x7fd9c786ddf8 <line:7:17, line:8:33> 'unsigned long'
+            `-ParenExpr 0x7fd9c786ddd8 <line:7:18, line:8:32> 'unsigned long'
+              `-BinaryOperator 0x7fd9c786ddb0 <line:7:19, line:8:31> 'unsigned long' '/'
+                |-ParenExpr 0x7fd9c786dc38 <line:7:19, col:66> 'unsigned long'
+                | `-BinaryOperator 0x7fd9c786dc10 <col:20, col:65> 'unsigned long' '+'
+                |   |-ImplicitCastExpr 0x7fd9c786dbf8 <col:20, col:29> 'unsigned long' <IntegralCast>
+                |   | `-ImplicitCastExpr 0x7fd9c786dbe0 <col:20, col:29> 'int' <LValueToRValue>
+                |   |   `-ParenExpr 0x7fd9c786d9e8 <col:20, col:29> 'int' lvalue
+                |   |     `-DeclRefExpr 0x7fd9c786d9c0 <col:21> 'int' lvalue ParmVar 0x7fd9c782c978 'exponent' 'int'
+                |   `-ParenExpr 0x7fd9c786dbc0 <col:33, col:65> 'unsigned long'
+                |     `-BinaryOperator 0x7fd9c786db98 <col:34, col:64> 'unsigned long' '-'
+                |       |-ParenExpr 0x7fd9c786db40 <col:34, col:60> 'unsigned long'
+                |       | `-BinaryOperator 0x7fd9c786db18 <col:35, col:59> 'unsigned long' '-'
+                |       |   |-ParenExpr 0x7fd9c786dac0 <col:35, col:55> 'unsigned long'
+                |       |   | `-BinaryOperator 0x7fd9c786da98 <col:36, col:54> 'unsigned long' '*'
+                |       |   |   |-ParenExpr 0x7fd9c786da40 <col:36, col:50> 'unsigned long'
+                |       |   |   | `-UnaryExprOrTypeTraitExpr 0x7fd9c786da20 <col:37, col:49> 'unsigned long' sizeof 'long'
+                |       |   |   `-ImplicitCastExpr 0x7fd9c786da80 <col:54> 'unsigned long' <IntegralCast>
+                |       |   |     `-IntegerLiteral 0x7fd9c786da60 <col:54> 'int' 8
+                |       |   `-ImplicitCastExpr 0x7fd9c786db00 <col:59> 'unsigned long' <IntegralCast>
+                |       |     `-IntegerLiteral 0x7fd9c786dae0 <col:59> 'int' 2
+                |       `-ImplicitCastExpr 0x7fd9c786db80 <col:64> 'unsigned long' <IntegralCast>
+                |         `-IntegerLiteral 0x7fd9c786db60 <col:64> 'int' 1
+                `-ParenExpr 0x7fd9c786dd90 <line:8:5, col:31> 'unsigned long'
+                  `-BinaryOperator 0x7fd9c786dd68 <col:6, col:30> 'unsigned long' '-'
+                    |-ParenExpr 0x7fd9c786dd10 <col:6, col:26> 'unsigned long'
+                    | `-BinaryOperator 0x7fd9c786dce8 <col:7, col:25> 'unsigned long' '*'
+                    |   |-ParenExpr 0x7fd9c786dc90 <col:7, col:21> 'unsigned long'
+                    |   | `-UnaryExprOrTypeTraitExpr 0x7fd9c786dc70 <col:8, col:20> 'unsigned long' sizeof 'long'
+                    |   `-ImplicitCastExpr 0x7fd9c786dcd0 <col:25> 'unsigned long' <IntegralCast>
+                    |     `-IntegerLiteral 0x7fd9c786dcb0 <col:25> 'int' 8
+                    `-ImplicitCastExpr 0x7fd9c786dd50 <col:30> 'unsigned long' <IntegralCast>
+                      `-IntegerLiteral 0x7fd9c786dd30 <col:30> 'int' 2

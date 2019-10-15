@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7f8b198262e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8b19826f60 <../Data/C2AST/pr42878-1.c:4:1, line:6:1> line:4:8 struct S definition
+| `-FieldDecl 0x7f8b19867e38 <line:5:3, col:7> col:7 referenced i 'int'
+|-FunctionDecl 0x7f8b19868018 <line:8:1, col:25> col:18 used e1 'struct S *(void)' extern
+|-FunctionDecl 0x7f8b198681d8 <line:9:1, col:20> col:12 used e2 'int (int)' extern
+| `-ParmVarDecl 0x7f8b19868110 <col:15, col:19> col:19 i 'int'
+|-FunctionDecl 0x7f8b198682c8 <line:11:1, line:18:1> line:11:20 used f1 'void ()' static inline
+| `-CompoundStmt 0x7f8b19868858 <line:12:1, line:18:1>
+|   |-DeclStmt 0x7f8b198683e0 <line:13:3, col:8>
+|   | `-VarDecl 0x7f8b19868380 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7f8b19868480 <line:14:3, col:14>
+|   | `-VarDecl 0x7f8b19868420 <col:3, col:13> col:13 used s 'struct S *'
+|   |-ForStmt 0x7f8b198686f0 <line:15:3, line:16:12>
+|   | |-BinaryOperator 0x7f8b198684e0 <line:15:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f8b19868498 <col:8> 'int' lvalue Var 0x7f8b19868380 'i' 'int'
+|   | | `-IntegerLiteral 0x7f8b198684c0 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8b19868568 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f8b19868550 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f8b19868508 <col:15> 'int' lvalue Var 0x7f8b19868380 'i' 'int'
+|   | | `-IntegerLiteral 0x7f8b19868530 <col:19> 'int' 10
+|   | |-UnaryOperator 0x7f8b198685b8 <col:23, col:24> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f8b19868590 <col:23> 'int' lvalue Var 0x7f8b19868380 'i' 'int'
+|   | `-BinaryOperator 0x7f8b198686c8 <line:16:5, col:12> 'struct S *' '='
+|   |   |-DeclRefExpr 0x7f8b198685d8 <col:5> 'struct S *' lvalue Var 0x7f8b19868420 's' 'struct S *'
+|   |   `-CallExpr 0x7f8b198686a0 <col:9, col:12> 'struct S *'
+|   |     `-ImplicitCastExpr 0x7f8b19868688 <col:9> 'struct S *(*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7f8b19868600 <col:9> 'struct S *(void)' Function 0x7f8b19868018 'e1' 'struct S *(void)'
+|   `-CallExpr 0x7f8b19868810 <line:17:3, col:10> 'int'
+|     |-ImplicitCastExpr 0x7f8b198687f8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8b19868728 <col:3> 'int (int)' Function 0x7f8b198681d8 'e2' 'int (int)'
+|     `-ImplicitCastExpr 0x7f8b19868840 <col:6, col:9> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7f8b19868790 <col:6, col:9> 'int' lvalue ->i 0x7f8b19867e38
+|         `-ImplicitCastExpr 0x7f8b19868778 <col:6> 'struct S *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f8b19868750 <col:6> 'struct S *' lvalue Var 0x7f8b19868420 's' 'struct S *'
+|-FunctionDecl 0x7f8b19868960 <line:20:1, line:24:1> line:20:20 used f2 'void (int)' static inline
+| |-ParmVarDecl 0x7f8b198688a0 <col:23, col:27> col:27 used i 'int'
+| `-CompoundStmt 0x7f8b19868bd8 <line:21:1, line:24:1>
+|   |-DeclStmt 0x7f8b19868ac0 <line:22:3, col:12>
+|   | `-VarDecl 0x7f8b19868a20 <col:3, col:11> col:7 used j 'int' cinit
+|   |   `-ImplicitCastExpr 0x7f8b19868aa8 <col:11> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8b19868a80 <col:11> 'int' lvalue Var 0x7f8b19868a20 'j' 'int'
+|   `-BinaryOperator 0x7f8b19868bb0 <line:23:3, col:11> 'int' '='
+|     |-DeclRefExpr 0x7f8b19868ad8 <col:3> 'int' lvalue Var 0x7f8b19868a20 'j' 'int'
+|     `-CallExpr 0x7f8b19868b68 <col:7, col:11> 'int'
+|       |-ImplicitCastExpr 0x7f8b19868b50 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8b19868b00 <col:7> 'int (int)' Function 0x7f8b198681d8 'e2' 'int (int)'
+|       `-ImplicitCastExpr 0x7f8b19868b98 <col:10> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8b19868b28 <col:10> 'int' lvalue ParmVar 0x7f8b198688a0 'i' 'int'
+`-FunctionDecl 0x7f8b19868c98 <line:26:1, line:30:1> line:26:6 foo 'void (int)'
+  |-ParmVarDecl 0x7f8b19868c10 <col:10, col:14> col:14 used i 'int'
+  `-CompoundStmt 0x7f8b19868eb8 <line:27:1, line:30:1>
+    |-CallExpr 0x7f8b19868db0 <line:28:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7f8b19868d98 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f8b19868d40 <col:3> 'void ()' Function 0x7f8b198682c8 'f1' 'void ()'
+    `-CallExpr 0x7f8b19868e70 <line:29:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7f8b19868e58 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8b19868dd8 <col:3> 'void (int)' Function 0x7f8b19868960 'f2' 'void (int)'
+      `-ImplicitCastExpr 0x7f8b19868ea0 <col:6> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8b19868e00 <col:6> 'int' lvalue ParmVar 0x7f8b19868c10 'i' 'int'

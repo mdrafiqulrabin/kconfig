@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f9a5182b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9a5186ce50 <../Data/C2AST/pr19689.c:2:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9a5186cef0 prev 0x7f9a5186ce50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f9a5186cf90 <line:4:1, line:7:1> line:4:1 struct definition
+| `-FieldDecl 0x7f9a5186d078 <line:6:3, col:11> col:7 referenced b 'int'
+|   `-IntegerLiteral 0x7f9a5186d040 <col:11> 'int' 29
+|-VarDecl 0x7f9a5186d110 <line:4:1, line:7:3> col:3 used f 'struct (anonymous struct at ../Data/C2AST/pr19689.c:4:1)':'struct (anonymous at ../Data/C2AST/pr19689.c:4:1)'
+|-FunctionDecl 0x7f9a5186d2a0 <line:9:1, line:12:1> line:9:6 used foo 'void (short)'
+| |-ParmVarDecl 0x7f9a5186d1e0 <col:11, col:17> col:17 used j 'short'
+| `-CompoundStmt 0x7f9a5186d470 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7f9a5186d400 <line:11:3, col:9> 'int' '='
+|     |-MemberExpr 0x7f9a5186d370 <col:3, col:5> 'int' lvalue bitfield .b 0x7f9a5186d078
+|     | `-DeclRefExpr 0x7f9a5186d348 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr19689.c:4:1)':'struct (anonymous at ../Data/C2AST/pr19689.c:4:1)' lvalue Var 0x7f9a5186d110 'f' 'struct (anonymous struct at ../Data/C2AST/pr19689.c:4:1)':'struct (anonymous at ../Data/C2AST/pr19689.c:4:1)'
+|     `-ImplicitCastExpr 0x7f9a5186d3e8 <col:9> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f9a5186d3d0 <col:9> 'short' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9a5186d3a8 <col:9> 'short' lvalue ParmVar 0x7f9a5186d1e0 'j' 'short'
+`-FunctionDecl 0x7f9a5186d4e0 <line:14:1, line:20:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7f9a5186d858 <line:15:1, line:20:1>
+    |-CallExpr 0x7f9a5186d630 <line:16:3, col:11> 'void'
+    | |-ImplicitCastExpr 0x7f9a5186d618 <col:3> 'void (*)(short)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9a5186d580 <col:3> 'void (short)' Function 0x7f9a5186d2a0 'foo' 'void (short)'
+    | `-ImplicitCastExpr 0x7f9a5186d660 <col:8, col:9> 'short' <IntegralCast>
+    |   `-UnaryOperator 0x7f9a5186d5c8 <col:8, col:9> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7f9a5186d5a8 <col:9> 'int' 55
+    |-IfStmt 0x7f9a5186d7e8 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9a5186d730 <line:17:7, col:15> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f9a5186d718 <col:7, col:9> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7f9a5186d6a0 <col:7, col:9> 'int' lvalue bitfield .b 0x7f9a5186d078
+    | | |   `-DeclRefExpr 0x7f9a5186d678 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr19689.c:4:1)':'struct (anonymous at ../Data/C2AST/pr19689.c:4:1)' lvalue Var 0x7f9a5186d110 'f' 'struct (anonymous struct at ../Data/C2AST/pr19689.c:4:1)':'struct (anonymous at ../Data/C2AST/pr19689.c:4:1)'
+    | | `-UnaryOperator 0x7f9a5186d6f8 <col:14, col:15> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7f9a5186d6d8 <col:15> 'int' 55
+    | |-CallExpr 0x7f9a5186d7c0 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9a5186d7a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9a5186d758 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a5186cef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9a5186d840 <line:19:3, col:10>
+      `-IntegerLiteral 0x7f9a5186d820 <col:10> 'int' 0

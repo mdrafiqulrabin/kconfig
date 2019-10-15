@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fa45c82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa45d014268 <../Data/C2AST/pr39779.c:1:1, line:5:1> line:1:5 test 'int (char)'
+  |-ParmVarDecl 0x7fa45c82c970 <col:11, col:16> col:16 used v1 'char'
+  `-CompoundStmt 0x7fa45d014470 <line:2:1, line:5:1>
+    |-CompoundAssignOperator 0x7fa45d0143c8 <line:3:3, col:10> 'char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fa45d014350 <col:3> 'char' lvalue ParmVar 0x7fa45c82c970 'v1' 'char'
+    | `-IntegerLiteral 0x7fa45d014378 <col:10> 'unsigned int' 3737046253
+    `-ReturnStmt 0x7fa45d014458 <line:4:3, col:10>
+      `-ImplicitCastExpr 0x7fa45d014440 <col:10> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fa45d014428 <col:10> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7fa45d014400 <col:10> 'char' lvalue ParmVar 0x7fa45c82c970 'v1' 'char'

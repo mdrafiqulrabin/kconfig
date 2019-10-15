@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fde7e02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fde7e06d868 <../Data/C2AST/pr65367.c:5:1, line:9:1> line:6:1 foo 'int (char *)'
+  |-ParmVarDecl 0x7fde7e02c978 <col:6, col:12> col:12 used p 'char *'
+  `-CompoundStmt 0x7fde7e06db70 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fde7e06db58 <line:8:3, col:34>
+      `-BinaryOperator 0x7fde7e06db30 <col:10, col:34> 'int' '-'
+        |-ImplicitCastExpr 0x7fde7e06dae8 <col:10, col:29> 'int' <IntegralCast>
+        | `-ImplicitCastExpr 0x7fde7e06dad0 <col:10, col:29> 'char' <LValueToRValue>
+        |   `-UnaryOperator 0x7fde7e06da50 <col:10, col:29> 'const char' lvalue prefix '*'
+        |     `-ParenExpr 0x7fde7e06da30 <col:11, col:29> 'const char *'
+        |       `-CStyleCastExpr 0x7fde7e06da08 <col:12, col:27> 'const char *' <BitCast>
+        |         `-ImplicitCastExpr 0x7fde7e06d9c8 <col:27> 'char *' <ArrayToPointerDecay>
+        |           `-StringLiteral 0x7fde7e06d988 <col:27> 'char [1]' lvalue ""
+        `-ImplicitCastExpr 0x7fde7e06db18 <col:33, col:34> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fde7e06db00 <col:33, col:34> 'char' <LValueToRValue>
+            `-UnaryOperator 0x7fde7e06dab0 <col:33, col:34> 'char' lvalue prefix '*'
+              `-ImplicitCastExpr 0x7fde7e06da98 <col:34> 'char *' <LValueToRValue>
+                `-DeclRefExpr 0x7fde7e06da70 <col:34> 'char *' lvalue ParmVar 0x7fde7e02c978 'p' 'char *'

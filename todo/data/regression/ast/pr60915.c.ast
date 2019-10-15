@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fd5f48262e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd5f401a6c0 <../Data/C2AST/pr60915.c:4:1, line:7:1> line:5:1 foo 'void (void)'
+  |-CompoundStmt 0x7fd5f401a7e8 <line:6:1, line:7:1>
+  `-VisibilityAttr 0x7fd5f401a760 <line:5:27, col:51> Default

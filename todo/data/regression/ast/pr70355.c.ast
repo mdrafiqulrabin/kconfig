@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f9dee02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9dee068000 <../Data/C2AST/pr70355.c:4:1, col:27> col:27 referenced v2ti '__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+| `-VectorType 0x7f9dee02c980 '__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' 2
+|   `-BuiltinType 0x7f9dee02bfa0 'unsigned __int128'
+`-FunctionDecl 0x7f9dee068218 <line:6:1, line:14:1> line:7:1 foo 'unsigned int (unsigned int, v2ti)'
+  |-ParmVarDecl 0x7f9dee068070 <col:6, col:15> col:15 used i 'unsigned int'
+  |-ParmVarDecl 0x7f9dee068100 <col:18, col:23> col:23 used v 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+  `-CompoundStmt 0x7f9dee0685f8 <line:8:1, line:14:1>
+    |-DoStmt 0x7f9dee068470 <line:9:3, line:12:13>
+    | |-CompoundStmt 0x7f9dee068410 <line:9:6, line:12:3>
+    | | |-UnaryOperator 0x7f9dee068330 <line:10:5, col:6> 'unsigned int' postfix '--'
+    | | | `-DeclRefExpr 0x7f9dee068308 <col:5> 'unsigned int' lvalue ParmVar 0x7f9dee068070 'i' 'unsigned int'
+    | | `-CompoundAssignOperator 0x7f9dee0683d8 <line:11:5, col:11> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' '%=' ComputeLHSTy='v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' ComputeResultTy='v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+    | |   |-DeclRefExpr 0x7f9dee068350 <col:5> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7f9dee068100 'v' 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+    | |   `-UnaryOperator 0x7f9dee0683b8 <col:10, col:11> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' prefix '~'
+    | |     `-ImplicitCastExpr 0x7f9dee0683a0 <col:11> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f9dee068378 <col:11> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7f9dee068100 'v' 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+    | `-ImplicitCastExpr 0x7f9dee068458 <line:12:12> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9dee068430 <col:12> 'unsigned int' lvalue ParmVar 0x7f9dee068070 'i' 'unsigned int'
+    `-ReturnStmt 0x7f9dee0685e0 <line:13:3, col:20>
+      `-ImplicitCastExpr 0x7f9dee0685c8 <col:10, col:20> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7f9dee0685a0 <col:10, col:20> 'unsigned __int128' '+'
+          |-ImplicitCastExpr 0x7f9dee068570 <col:10, col:13> 'unsigned __int128' <LValueToRValue>
+          | `-ArraySubscriptExpr 0x7f9dee0684d8 <col:10, col:13> 'unsigned __int128' lvalue vectorcomponent
+          |   |-DeclRefExpr 0x7f9dee068490 <col:10> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7f9dee068100 'v' 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+          |   `-IntegerLiteral 0x7f9dee0684b8 <col:12> 'int' 0
+          `-ImplicitCastExpr 0x7f9dee068588 <col:17, col:20> 'unsigned __int128' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7f9dee068548 <col:17, col:20> 'unsigned __int128' lvalue vectorcomponent
+              |-DeclRefExpr 0x7f9dee068500 <col:17> 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7f9dee068100 'v' 'v2ti':'__attribute__((__vector_size__(2 * sizeof(unsigned __int128)))) unsigned __int128'
+              `-IntegerLiteral 0x7f9dee068528 <col:19> 'int' 1

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f981602bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f981602c978 <../Data/C2AST/pr83628-1.c:5:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f981602bea0 'unsigned long'
+|-FunctionDecl 0x7f98168283c8 <line:7:1, line:11:1> line:8:1 get_int 'int (int *, size_t)'
+| |-ParmVarDecl 0x7f9816828218 <col:10, col:15> col:15 used p 'int *'
+| |-ParmVarDecl 0x7f98168282b0 <col:18, col:25> col:25 used idx 'size_t':'unsigned long'
+| `-CompoundStmt 0x7f9816828590 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f9816828578 <line:10:3, col:15>
+|     `-ImplicitCastExpr 0x7f9816828560 <col:10, col:15> 'int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7f9816828538 <col:10, col:15> 'int' lvalue
+|         |-ImplicitCastExpr 0x7f9816828508 <col:10> 'int *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f98168284b8 <col:10> 'int *' lvalue ParmVar 0x7f9816828218 'p' 'int *'
+|         `-ImplicitCastExpr 0x7f9816828520 <col:12> 'size_t':'unsigned long' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98168284e0 <col:12> 'size_t':'unsigned long' lvalue ParmVar 0x7f98168282b0 'idx' 'size_t':'unsigned long'
+`-FunctionDecl 0x7f9816828778 <line:13:1, line:17:1> line:14:1 get_long 'long (long *, size_t)'
+  |-ParmVarDecl 0x7f98168285f0 <col:11, col:17> col:17 used p 'long *'
+  |-ParmVarDecl 0x7f9816828660 <col:20, col:27> col:27 used idx 'size_t':'unsigned long'
+  `-CompoundStmt 0x7f9816828900 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7f98168288e8 <line:16:3, col:15>
+      `-ImplicitCastExpr 0x7f98168288d0 <col:10, col:15> 'long' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7f98168288a8 <col:10, col:15> 'long' lvalue
+          |-ImplicitCastExpr 0x7f9816828878 <col:10> 'long *' <LValueToRValue>
+          | `-DeclRefExpr 0x7f9816828828 <col:10> 'long *' lvalue ParmVar 0x7f98168285f0 'p' 'long *'
+          `-ImplicitCastExpr 0x7f9816828890 <col:12> 'size_t':'unsigned long' <LValueToRValue>
+            `-DeclRefExpr 0x7f9816828850 <col:12> 'size_t':'unsigned long' lvalue ParmVar 0x7f9816828660 'idx' 'size_t':'unsigned long'

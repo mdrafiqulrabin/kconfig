@@ -1,0 +1,49 @@
+../Data/C2AST/pr56724-3.c:13:15: error: passing 'struct T' to parameter of incompatible type 'unsigned char *'
+  xfer (x, y, t);  
+              ^
+../Data/C2AST/pr56724-3.c:5:44: note: passing argument to parameter here
+extern void xfer (int, int, unsigned char *);
+                                           ^
+1 error generated.
+TranslationUnitDecl 0x7fa0c081d6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa0c081dc60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa0c081d980 '__int128'
+|-TypedefDecl 0x7fa0c081dcd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa0c081d9a0 'unsigned __int128'
+|-TypedefDecl 0x7fa0c081dfa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa0c081ddb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa0c081dd28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa0c081e040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa0c081e000 'char *'
+|   `-BuiltinType 0x7fa0c081d780 'char'
+|-TypedefDecl 0x7fa0c081e308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa0c081e2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa0c081e120 'struct __va_list_tag'
+|     `-Record 0x7fa0c081e098 '__va_list_tag'
+|-FunctionDecl 0x7fa0bf81d180 <../Data/C2AST/pr56724-3.c:5:1, col:44> col:13 used xfer 'void (int, int, unsigned char *)' extern
+| |-ParmVarDecl 0x7fa0c081e378 <col:19> col:22 'int'
+| |-ParmVarDecl 0x7fa0bf81d000 <col:24> col:27 'int'
+| `-ParmVarDecl 0x7fa0bf81d0a0 <col:29, col:43> col:44 'unsigned char *'
+|-RecordDecl 0x7fa0bf81d278 <line:6:1, col:19> col:8 struct T definition
+| `-FieldDecl 0x7fa0bf81d338 <col:12, col:16> col:16 a 'int'
+|-VarDecl 0x7fa0bf81d3d0 <col:1, col:21> col:21 used t 'struct T':'struct T'
+`-FunctionDecl 0x7fa0bf81d630 <line:8:1, line:14:1> line:9:1 call 'void (int, int, void *)'
+  |-ParmVarDecl 0x7fa0bf81d460 <col:7, col:11> col:11 used x 'int'
+  |-ParmVarDecl 0x7fa0bf81d4d8 <col:14, col:18> col:18 used y 'int'
+  |-ParmVarDecl 0x7fa0bf81d550 <col:21, col:27> col:27 used arg 'void *'
+  `-CompoundStmt 0x7fa0bf81de70 <line:10:1, line:14:1>
+    |-DeclStmt 0x7fa0bf81d7b8 <line:11:3, col:26>
+    | `-VarDecl 0x7fa0bf81d700 <col:3, col:23> col:18 uc 'unsigned char *' cinit
+    |   `-ImplicitCastExpr 0x7fa0bf81d7a0 <col:23> 'unsigned char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fa0bf81d788 <col:23> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa0bf81d760 <col:23> 'void *' lvalue ParmVar 0x7fa0bf81d550 'arg' 'void *'
+    `-CallExpr 0x7fa0bf81d8b0 <line:12:3, col:18> 'void'
+      |-ImplicitCastExpr 0x7fa0bf81d898 <col:3> 'void (*)(int, int, unsigned char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa0bf81d7d0 <col:3> 'void (int, int, unsigned char *)' Function 0x7fa0bf81d180 'xfer' 'void (int, int, unsigned char *)'
+      |-ImplicitCastExpr 0x7fa0bf81d8f0 <col:9> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa0bf81d7f8 <col:9> 'int' lvalue ParmVar 0x7fa0bf81d460 'x' 'int'
+      |-ImplicitCastExpr 0x7fa0bf81d908 <col:12> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa0bf81d820 <col:12> 'int' lvalue ParmVar 0x7fa0bf81d4d8 'y' 'int'
+      `-ImplicitCastExpr 0x7fa0bf81d938 <col:15> 'unsigned char *' <BitCast>
+        `-ImplicitCastExpr 0x7fa0bf81d920 <col:15> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7fa0bf81d848 <col:15> 'void *' lvalue ParmVar 0x7fa0bf81d550 'arg' 'void *'

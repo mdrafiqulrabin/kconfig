@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7ffc2d0078e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffc2d008560 <../Data/C2AST/pr63551.c:5:1, line:9:1> line:5:7 union U definition
+| |-FieldDecl 0x7ffc2c031838 <line:7:3, col:16> col:16 f0 'unsigned int'
+| `-FieldDecl 0x7ffc2c031898 <line:8:3, col:7> col:7 referenced f1 'int'
+|-VarDecl 0x7ffc2c0318f8 <line:11:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ffc2c0319b0 <col:1, col:8> col:8 used d 'int'
+|-FunctionDecl 0x7ffc2c031b80 <line:13:1, line:19:1> line:14:1 used fn1 'void (union U)'
+| |-ParmVarDecl 0x7ffc2c031a80 <col:6, col:14> col:14 used p 'union U':'union U'
+| `-CompoundStmt 0x7ffc2c031e58 <line:15:1, line:19:1>
+|   `-IfStmt 0x7ffc2c031e20 <line:16:3, line:18:11>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ffc2c031cc0 <line:16:7, col:15> 'int' '<='
+|     | |-ImplicitCastExpr 0x7ffc2c031ca8 <col:7, col:9> 'int' <LValueToRValue>
+|     | | `-MemberExpr 0x7ffc2c031c50 <col:7, col:9> 'int' lvalue .f1 0x7ffc2c031898
+|     | |   `-DeclRefExpr 0x7ffc2c031c28 <col:7> 'union U':'union U' lvalue ParmVar 0x7ffc2c031a80 'p' 'union U':'union U'
+|     | `-IntegerLiteral 0x7ffc2c031c88 <col:15> 'int' 0
+|     |-IfStmt 0x7ffc2c031de8 <line:17:5, line:18:11>
+|     | |-<<<NULL>>>
+|     | |-<<<NULL>>>
+|     | |-ImplicitCastExpr 0x7ffc2c031d60 <line:17:9> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ffc2c031d38 <col:9> 'int' lvalue Var 0x7ffc2c0318f8 'a' 'int'
+|     | |-BinaryOperator 0x7ffc2c031dc0 <line:18:7, col:11> 'int' '='
+|     | | |-DeclRefExpr 0x7ffc2c031d78 <col:7> 'int' lvalue Var 0x7ffc2c0319b0 'd' 'int'
+|     | | `-IntegerLiteral 0x7ffc2c031da0 <col:11> 'int' 0
+|     | `-<<<NULL>>>
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ffc2c031eb8 <line:21:1, line:27:1> line:22:1 used fn2 'void ()'
+| `-CompoundStmt 0x7ffc2c032218 <line:23:1, line:27:1>
+|   |-BinaryOperator 0x7ffc2c031fa0 <line:24:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7ffc2c031f58 <col:3> 'int' lvalue Var 0x7ffc2c0319b0 'd' 'int'
+|   | `-IntegerLiteral 0x7ffc2c031f80 <col:7> 'int' 0
+|   |-DeclStmt 0x7ffc2c0320f8 <line:25:3, col:30>
+|   | `-VarDecl 0x7ffc2c031fe8 <col:3, col:29> col:11 used b 'union U':'union U' cinit
+|   |   `-InitListExpr 0x7ffc2c0320b0 <col:15, col:29> 'union U':'union U' field Field 0x7ffc2c031838 'f0' 'unsigned int'
+|   |     `-IntegerLiteral 0x7ffc2c032048 <col:17> 'unsigned int' 4294967286
+|   `-CallExpr 0x7ffc2c0321d0 <line:26:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7ffc2c0321b8 <col:3> 'void (*)(union U)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffc2c032110 <col:3> 'void (union U)' Function 0x7ffc2c031b80 'fn1' 'void (union U)'
+|     `-ImplicitCastExpr 0x7ffc2c032200 <col:8> 'union U':'union U' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffc2c032138 <col:8> 'union U':'union U' lvalue Var 0x7ffc2c031fe8 'b' 'union U':'union U'
+`-FunctionDecl 0x7ffc2c032290 <line:29:1, line:34:1> line:30:1 main 'int ()'
+  `-CompoundStmt 0x7ffc2c032400 <line:31:1, line:34:1>
+    |-CallExpr 0x7ffc2c0323a0 <line:32:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7ffc2c032388 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ffc2c032330 <col:3> 'void ()' Function 0x7ffc2c031eb8 'fn2' 'void ()'
+    `-ReturnStmt 0x7ffc2c0323e8 <line:33:3, col:10>
+      `-IntegerLiteral 0x7ffc2c0323c8 <col:10> 'int' 0

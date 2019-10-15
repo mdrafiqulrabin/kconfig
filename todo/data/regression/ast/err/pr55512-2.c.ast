@@ -1,0 +1,25 @@
+../Data/C2AST/pr55512-2.c:7:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : "r" (x), "r" (x + 1), "r" (x + 2), "r" (x + 3),  
+      ^
+1 error generated.
+TranslationUnitDecl 0x7f802a82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f802a82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f802a82bf80 '__int128'
+|-TypedefDecl 0x7f802a82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f802a82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f802a82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f802a82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f802a82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f802a82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f802a82c600 'char *'
+|   `-BuiltinType 0x7f802a82bd80 'char'
+|-TypedefDecl 0x7f802a82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f802a82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f802a82c720 'struct __va_list_tag'
+|     `-Record 0x7f802a82c698 '__va_list_tag'
+`-FunctionDecl 0x7f802b014268 <../Data/C2AST/pr55512-2.c:4:1, line:13:1> line:5:1 foo 'int (int)'
+  |-ParmVarDecl 0x7f802a82c978 <col:6, col:10> col:10 x 'int'
+  `-CompoundStmt 0x7f802b0143e8 <line:6:1, line:13:1>
+    `-LabelStmt 0x7f802b0143d0 <line:11:2, line:12:10> 'lab'
+      `-ReturnStmt 0x7f802b014370 <col:3, col:10>
+        `-IntegerLiteral 0x7f802b014350 <col:10> 'int' 0

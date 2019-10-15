@@ -1,0 +1,157 @@
+../Data/C2AST/pragma-align-2.c:19:35: error: expected ';' after top level declarator
+#pragma align MACRO2(MACRO) (z128)
+                                  ^
+                                  ;
+../Data/C2AST/pragma-align-2.c:36:20: error: use of undeclared identifier 'x4'
+  if (__alignof__ (x4) < 4)
+                   ^
+../Data/C2AST/pragma-align-2.c:39:20: error: use of undeclared identifier 'x8'
+  if (__alignof__ (x8) < 8)
+                   ^
+../Data/C2AST/pragma-align-2.c:42:20: error: use of undeclared identifier 'y8'
+  if (__alignof__ (y8) < 8)
+                   ^
+../Data/C2AST/pragma-align-2.c:45:20: error: use of undeclared identifier 'z8'
+  if (__alignof__ (z8) < 8)
+                   ^
+../Data/C2AST/pragma-align-2.c:48:20: error: use of undeclared identifier 'x16'
+  if (__alignof__ (x16) < 16)
+                   ^
+../Data/C2AST/pragma-align-2.c:51:20: error: use of undeclared identifier 'x32'
+  if (__alignof__ (x32) < 32)
+                   ^
+../Data/C2AST/pragma-align-2.c:54:20: error: use of undeclared identifier 'x64'
+  if (__alignof__ (x64) < 64)
+                   ^
+../Data/C2AST/pragma-align-2.c:57:20: error: use of undeclared identifier 'x128'; did you mean 'z128'?
+  if (__alignof__ (x128) < 128)
+                   ^~~~
+                   z128
+../Data/C2AST/pragma-align-2.c:19:30: note: 'z128' declared here
+#pragma align MACRO2(MACRO) (z128)
+                             ^
+../Data/C2AST/pragma-align-2.c:60:20: error: use of undeclared identifier 'y128'; did you mean 'z128'?
+  if (__alignof__ (y128) < 128)
+                   ^~~~
+                   z128
+../Data/C2AST/pragma-align-2.c:19:30: note: 'z128' declared here
+#pragma align MACRO2(MACRO) (z128)
+                             ^
+TranslationUnitDecl 0x7fc83282bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc83282c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc83282bf80 '__int128'
+|-TypedefDecl 0x7fc83282c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc83282bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc83282c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc83282c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc83282c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc83282c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc83282c600 'char *'
+|   `-BuiltinType 0x7fc83282bd80 'char'
+|-TypedefDecl 0x7fc83282c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc83282c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc83282c720 'struct __va_list_tag'
+|     `-Record 0x7fc83282c698 '__va_list_tag'
+|-FunctionDecl 0x7fc833000050 <../Data/C2AST/pragma-align-2.c:4:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc8330000f0 prev 0x7fc833000050 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-VarDecl 0x7fc8330001d8 <line:19:29, col:34> col:30 referenced z128 'int':'int'
+`-FunctionDecl 0x7fc8330002d0 <line:33:1, line:67:1> line:34:1 main 'int ()'
+  `-CompoundStmt 0x7fc833000ed0 <line:35:1, line:67:1>
+    |-IfStmt 0x7fc833000468 <line:36:3, line:37:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc833000448 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc833000420 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc833000408 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc8330003b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000558 <line:39:3, line:40:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc833000538 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc833000510 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8330004f8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc8330004d0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000648 <line:42:3, line:43:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc833000628 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc833000600 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8330005e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc8330005c0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000738 <line:45:3, line:46:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc833000718 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc8330006f0 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8330006d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc8330006b0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000828 <line:48:3, line:49:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc833000808 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc8330007e0 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8330007c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc8330007a0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000918 <line:51:3, li10 errors generated.
+ne:52:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc8330008f8 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc8330008d0 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8330008b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc833000890 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000a08 <line:54:3, line:55:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc8330009e8 <<invalid sloc>> '_Bool'
+    | |-CallExpr 0x7fc8330009c0 <col:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc8330009a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc833000980 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000b80 <line:57:3, line:58:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc833000af0 <line:57:7, col:28> 'int' '<'
+    | | |-UnaryExprOrTypeTraitExpr 0x7fc833000a98 <col:7, col:24> 'unsigned long' alignof
+    | | | `-ParenExpr 0x7fc833000a78 <col:19, col:24> 'int':'int' lvalue
+    | | |   `-DeclRefExpr 0x7fc833000a50 <col:20> 'int':'int' lvalue Var 0x7fc8330001d8 'z128' 'int':'int'
+    | | `-ImplicitCastExpr 0x7fc833000ad8 <col:28> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc833000ab8 <col:28> 'int' 128
+    | |-CallExpr 0x7fc833000b58 <line:58:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc833000b40 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc833000b18 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000cf8 <line:60:3, line:61:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc833000c68 <line:60:7, col:28> 'int' '<'
+    | | |-UnaryExprOrTypeTraitExpr 0x7fc833000c10 <col:7, col:24> 'unsigned long' alignof
+    | | | `-ParenExpr 0x7fc833000bf0 <col:19, col:24> 'int':'int' lvalue
+    | | |   `-DeclRefExpr 0x7fc833000bc8 <col:20> 'int':'int' lvalue Var 0x7fc8330001d8 'z128' 'int':'int'
+    | | `-ImplicitCastExpr 0x7fc833000c50 <col:28> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc833000c30 <col:28> 'int' 128
+    | |-CallExpr 0x7fc833000cd0 <line:61:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc833000cb8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc833000c90 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc833000e60 <line:63:3, line:64:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc833000dd0 <line:63:7, col:28> 'int' '<'
+    | | |-UnaryExprOrTypeTraitExpr 0x7fc833000d78 <col:7, col:24> 'unsigned long' alignof
+    | | | `-ParenExpr 0x7fc833000d58 <col:19, col:24> 'int':'int' lvalue
+    | | |   `-DeclRefExpr 0x7fc833000d30 <col:20> 'int':'int' lvalue Var 0x7fc8330001d8 'z128' 'int':'int'
+    | | `-ImplicitCastExpr 0x7fc833000db8 <col:28> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc833000d98 <col:28> 'int' 128
+    | |-CallExpr 0x7fc833000e38 <line:64:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fc833000e20 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc833000df8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc8330000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc833000eb8 <line:66:3, col:10>
+      `-IntegerLiteral 0x7fc833000e98 <col:10> 'int' 0

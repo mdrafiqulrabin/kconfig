@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7ff9d102bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff9d102c978 <../Data/C2AST/pr79286.c:1:1, col:9> col:5 used a 'int' cinit
+| `-IntegerLiteral 0x7ff9d1814240 <col:9> 'int' 0
+|-VarDecl 0x7ff9d1814278 <col:1, col:16> col:12 used c 'int' cinit
+| `-IntegerLiteral 0x7ff9d18142d8 <col:16> 'int' 0
+|-VarDecl 0x7ff9d18143d0 <line:2:1, col:22> col:12 used d 'int [0][8]' static cinit
+| `-InitListExpr 0x7ff9d1814470 <col:21, col:22> 'int [0][8]'
+|-FunctionDecl 0x7ff9d1814540 <line:4:1, line:15:1> line:4:5 main 'int ()'
+| `-CompoundStmt 0x7ff9d1814e58 <line:5:1, line:15:1>
+|   |-DeclStmt 0x7ff9d1814658 <line:6:3, col:8>
+|   | `-VarDecl 0x7ff9d18145f8 <col:3, col:7> col:7 used e 'int'
+|   |-ForStmt 0x7ff9d1814de8 <line:7:3, line:12:5>
+|   | |-DeclStmt 0x7ff9d1814708 <line:7:8, col:17>
+|   | | `-VarDecl 0x7ff9d1814688 <col:8, col:16> col:12 used b 'int' cinit
+|   | |   `-IntegerLiteral 0x7ff9d18146e8 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff9d1814780 <col:19, col:23> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ff9d1814768 <col:19> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff9d1814720 <col:19> 'int' lvalue Var 0x7ff9d1814688 'b' 'int'
+|   | | `-IntegerLiteral 0x7ff9d1814748 <col:23> 'int' 4
+|   | |-UnaryOperator 0x7ff9d18147d0 <col:26, col:27> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7ff9d18147a8 <col:26> 'int' lvalue Var 0x7ff9d1814688 'b' 'int'
+|   | `-CompoundStmt 0x7ff9d1814dc8 <line:8:5, line:12:5>
+|   |   |-CallExpr 0x7ff9d1814ab0 <line:9:7, col:37> 'int'
+|   |   | |-ImplicitCastExpr 0x7ff9d1814a98 <col:7> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7ff9d1814988 <col:7> '<builtin fn type>' Function 0x7ff9d1814828 '__builtin_printf' 'int (const char *, ...)'
+|   |   | |-ImplicitCastExpr 0x7ff9d1814b08 <col:25> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7ff9d1814af0 <col:25> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7ff9d18149e8 <col:25> 'char [4]' lvalue "%d\n"
+|   |   | |-ImplicitCastExpr 0x7ff9d1814b20 <col:33> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7ff9d1814a18 <col:33> 'int' lvalue Var 0x7ff9d1814688 'b' 'int'
+|   |   | `-ImplicitCastExpr 0x7ff9d1814b38 <col:36> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7ff9d1814a40 <col:36> 'int' lvalue Var 0x7ff9d18145f8 'e' 'int'
+|   |   `-WhileStmt 0x7ff9d1814da8 <line:10:7, line:11:29>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7ff9d1814bd8 <line:10:14, col:20> 'int' '&&'
+|   |     | |-ImplicitCastExpr 0x7ff9d1814bc0 <col:14> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7ff9d1814b50 <col:14> 'int' lvalue Var 0x7ff9d102c978 'a' 'int'
+|   |     | `-UnaryOperator 0x7ff9d1814ba0 <col:19, col:20> 'int' postfix '++'
+|   |     |   `-DeclRefExpr 0x7ff9d1814b78 <col:19> 'int' lvalue Var 0x7ff9d1814278 'c' 'int'
+|   |     `-BinaryOperator 0x7ff9d1814d80 <line:11:2, col:29> 'int' '='
+|   |       |-DeclRefExpr 0x7ff9d1814c00 <col:2> 'int' lvalue Var 0x7ff9d18145f8 'e' 'int'
+|   |       `-ImplicitCastExpr 0x7ff9d1814d68 <col:6, col:29> 'int' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7ff9d1814d40 <col:6, col:29> 'int' lvalue
+|   |           |-ImplicitCastExpr 0x7ff9d1814d28 <col:6, col:26> 'int *' <ArrayToPointerDecay>
+|   |           | `-ArraySubscriptExpr 0x7ff9d1814cb0 <col:6, col:26> 'int [8]' lvalue
+|   |           |   |-ImplicitCastExpr 0x7ff9d1814c98 <col:6> 'int (*)[8]' <ArrayToPointerDecay>
+|   |           |   | `-DeclRefExpr 0x7ff9d1814c28 <col:6> 'int [0][8]' lvalue Var 0x7ff9d18143d0 'd' 'int [0][8]'
+|   |           |   `-IntegerLiteral 0x7ff9d1814c50 <col:8> 'long' 300000000000000000
+|   |           `-IntegerLiteral 0x7ff9d1814cd8 <col:28> 'int' 0
+|   `-ReturnStmt 0x7ff9d1814e40 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7ff9d1814e20 <col:10> 'int' 0
+`-FunctionDecl 0x7ff9d1814828 <line:9:7> col:7 implicit used __builtin_printf 'int (const char *, ...)' extern
+  |-ParmVarDecl 0x7ff9d18148c8 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-FormatAttr 0x7ff9d1814930 <col:7> Implicit printf 1 2

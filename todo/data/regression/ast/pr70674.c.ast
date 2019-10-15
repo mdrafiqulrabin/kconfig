@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fd5bd81cae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd5be01fe20 <../Data/C2AST/pr70674.c:6:1, line:11:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd5be020028 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fd5be01ff98 <line:9:3, col:21>
+    | `-VarDecl 0x7fd5be01ff18 <col:3, col:20> col:16 used a 'volatile int' cinit
+    |   `-IntegerLiteral 0x7fd5be01ff78 <col:20> 'int' 5
+    `-CStyleCastExpr 0x7fd5be020000 <line:10:3, col:10> 'void' <ToVoid>
+      `-ImplicitCastExpr 0x7fd5be01ffe8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd5be01ffb0 <col:10> 'volatile int' lvalue Var 0x7fd5be01ff18 'a' 'volatile int'

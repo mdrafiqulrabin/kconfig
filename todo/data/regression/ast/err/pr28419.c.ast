@@ -1,0 +1,25 @@
+../Data/C2AST/pr28419.c:2:11: error: expected ';' after top level declarator
+void foo() 
+          ^
+          ;
+1 error generated.
+TranslationUnitDecl 0x7fe6b180a6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6b180ac60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe6b180a980 '__int128'
+|-TypedefDecl 0x7fe6b180acd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe6b180a9a0 'unsigned __int128'
+|-TypedefDecl 0x7fe6b180afa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe6b180adb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe6b180ad28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe6b180b040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe6b180b000 'char *'
+|   `-BuiltinType 0x7fe6b180a780 'char'
+|-TypedefDecl 0x7fe6b180b308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe6b180b2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe6b180b120 'struct __va_list_tag'
+|     `-Record 0x7fe6b180b098 '__va_list_tag'
+|-FunctionDecl 0x7fe6b185d600 <../Data/C2AST/pr28419.c:2:1, col:10> col:6 foo 'void ()'
+`-VarDecl 0x7fe6b185d6f8 <line:3:1, col:17> col:13 p 'const char *' cinit
+  `-ImplicitCastExpr 0x7fe6b185d820 <col:17> 'const char *' <ArrayToPointerDecay>
+    `-PredefinedExpr 0x7fe6b185d800 <col:17> 'const char [1]' lvalue __FUNCTION__
+      `-StringLiteral 0x7fe6b185d7d8 <col:17> 'const char [1]' lvalue ""

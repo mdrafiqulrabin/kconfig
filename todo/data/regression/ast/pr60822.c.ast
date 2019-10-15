@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7f875582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f875582c960 <../Data/C2AST/pr60822.c:2:1, line:7:1> line:2:8 struct X definition
+| |-FieldDecl 0x7f8756014298 <line:3:5, col:22> col:10 fill0 'char [800000]'
+| |-FieldDecl 0x7f87560142f8 <line:4:5, col:9> col:9 referenced a 'int'
+| |-FieldDecl 0x7f87560143b8 <line:5:5, col:22> col:10 fill1 'char [900000]'
+| `-FieldDecl 0x7f8756014418 <line:6:5, col:9> col:9 referenced b 'int'
+|-FunctionDecl 0x7f87560146a8 <line:9:1, line:13:1> line:10:1 used Avg 'int (struct X *, int)'
+| |-ParmVarDecl 0x7f8756014510 <col:5, col:15> col:15 used p 'struct X *'
+| |-ParmVarDecl 0x7f8756014588 <col:18, col:22> col:22 used s 'int'
+| |-CompoundStmt 0x7f8756014ad0 <line:11:1, line:13:1>
+| | `-ReturnStmt 0x7f8756014ab8 <line:12:5, col:46>
+| |   `-ImplicitCastExpr 0x7f8756014aa0 <col:12, col:46> 'int' <IntegralCast>
+| |     `-BinaryOperator 0x7f8756014a78 <col:12, col:46> 'long long' '>>'
+| |       |-ParenExpr 0x7f8756014a38 <col:12, col:41> 'long long'
+| |       | `-BinaryOperator 0x7f8756014a10 <col:13, col:40> 'long long' '*'
+| |       |   |-ImplicitCastExpr 0x7f87560149f8 <col:13> 'long long' <IntegralCast>
+| |       |   | `-ImplicitCastExpr 0x7f87560149e0 <col:13> 'int' <LValueToRValue>
+| |       |   |   `-DeclRefExpr 0x7f87560147e0 <col:13> 'int' lvalue ParmVar 0x7f8756014588 's' 'int'
+| |       |   `-CStyleCastExpr 0x7f87560149b8 <col:17, col:40> 'long long' <IntegralCast>
+| |       |     `-ParenExpr 0x7f8756014998 <col:28, col:40> 'int'
+| |       |       `-BinaryOperator 0x7f8756014928 <col:29, col:39> 'int' '+'
+| |       |         |-ImplicitCastExpr 0x7f87560148f8 <col:29, col:32> 'int' <LValueToRValue>
+| |       |         | `-MemberExpr 0x7f8756014848 <col:29, col:32> 'int' lvalue ->a 0x7f87560142f8
+| |       |         |   `-ImplicitCastExpr 0x7f8756014830 <col:29> 'struct X *' <LValueToRValue>
+| |       |         |     `-DeclRefExpr 0x7f8756014808 <col:29> 'struct X *' lvalue ParmVar 0x7f8756014510 'p' 'struct X *'
+| |       |         `-ImplicitCastExpr 0x7f8756014910 <col:36, col:39> 'int' <LValueToRValue>
+| |       |           `-MemberExpr 0x7f87560148c0 <col:36, col:39> 'int' lvalue ->b 0x7f8756014418
+| |       |             `-ImplicitCastExpr 0x7f87560148a8 <col:36> 'struct X *' <LValueToRValue>
+| |       |               `-DeclRefExpr 0x7f8756014880 <col:36> 'struct X *' lvalue ParmVar 0x7f8756014510 'p' 'struct X *'
+| |       `-IntegerLiteral 0x7f8756014a58 <col:46> 'int' 17
+| `-NoInlineAttr 0x7f8756014758 <line:9:20>
+|-VarDecl 0x7f8756014b08 <line:15:1, col:10> col:10 used x 'struct X':'struct X'
+|-FunctionDecl 0x7f8756014bc0 <line:17:1, line:24:1> line:17:5 main 'int ()'
+| `-CompoundStmt 0x7f875602cc38 <line:18:1, line:24:1>
+|   |-BinaryOperator 0x7f8756014d28 <line:19:5, col:16> 'int' '='
+|   | |-MemberExpr 0x7f8756014c88 <col:5, col:7> 'int' lvalue .a 0x7f87560142f8
+|   | | `-DeclRefExpr 0x7f8756014c60 <col:5> 'struct X':'struct X' lvalue Var 0x7f8756014b08 'x' 'struct X':'struct X'
+|   | `-BinaryOperator 0x7f8756014d00 <col:11, col:16> 'int' '<<'
+|   |   |-IntegerLiteral 0x7f8756014cc0 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7f8756014ce0 <col:16> 'int' 17
+|   |-BinaryOperator 0x7f8756014e78 <line:20:5, col:16> 'int' '='
+|   | |-MemberExpr 0x7f8756014dd8 <col:5, col:7> 'int' lvalue .b 0x7f8756014418
+|   | | `-DeclRefExpr 0x7f8756014db0 <col:5> 'struct X':'struct X' lvalue Var 0x7f8756014b08 'x' 'struct X':'struct X'
+|   | `-BinaryOperator 0x7f8756014e50 <col:11, col:16> 'int' '<<'
+|   |   |-IntegerLiteral 0x7f8756014e10 <col:11> 'int' 2
+|   |   `-IntegerLiteral 0x7f8756014e30 <col:16> 'int' 17
+|   |-IfStmt 0x7f87560151c8 <line:21:5, line:22:18>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8756014ff8 <line:21:9, col:23> 'int' '!='
+|   | | |-CallExpr 0x7f8756014fa0 <col:9, col:18> 'int'
+|   | | | |-ImplicitCastExpr 0x7f8756014f88 <col:9> 'int (*)(struct X *, int)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7f8756014ea0 <col:9> 'int (struct X *, int)' Function 0x7f87560146a8 'Avg' 'int (struct X *, int)'
+|   | | | |-UnaryOperator 0x7f8756014ef0 <col:13, col:14> 'struct X *' prefix '&'
+|   | | | | `-DeclRefExpr 0x7f8756014ec8 <col:14> 'struct X':'struct X' lvalue Var 0x7f8756014b08 'x' 'struct X':'struct X'
+|   | | | `-IntegerLiteral 0x7f8756014f10 <col:17> 'int' 1
+|   | | `-IntegerLiteral 0x7f8756014fd8 <col:23> 'int' 3
+|   | |-CallExpr 0x7f87560151a0 <line:22:2, col:18> 'void'
+|   | | `-ImplicitCastExpr 0x7f8756015188 <col:2> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8756015138 <col:2> '<builtin fn type>' Function 0x7f8756015050 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f875602cc20 <line:23:5, col:12>
+|     `-IntegerLiteral 0x7f875602cc00 <col:12> 'int' 0
+`-FunctionDecl 0x7f8756015050 <line:22:2> col:2 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f87560150f0 <col:2> Implicit

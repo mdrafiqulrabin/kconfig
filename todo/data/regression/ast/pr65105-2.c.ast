@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fd8bb02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd8bb02c978 <../Data/C2AST/pr65105-2.c:6:1, col:11> col:11 used i1 'long long'
+|-VarDecl 0x7fd8bb814258 <col:1, col:15> col:15 used i2 'long long'
+|-VarDecl 0x7fd8bb8142d0 <col:1, col:19> col:19 used res 'long long'
+`-FunctionDecl 0x7fd8bb814398 <line:8:1, line:12:1> line:9:1 test 'void ()'
+  `-CompoundStmt 0x7fd8bb814530 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7fd8bb814508 <line:11:3, col:14> 'long long' '='
+      |-DeclRefExpr 0x7fd8bb814438 <col:3> 'long long' lvalue Var 0x7fd8bb8142d0 'res' 'long long'
+      `-BinaryOperator 0x7fd8bb8144e0 <col:9, col:14> 'long long' '|'
+        |-ImplicitCastExpr 0x7fd8bb8144b0 <col:9> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd8bb814460 <col:9> 'long long' lvalue Var 0x7fd8bb02c978 'i1' 'long long'
+        `-ImplicitCastExpr 0x7fd8bb8144c8 <col:14> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fd8bb814488 <col:14> 'long long' lvalue Var 0x7fd8bb814258 'i2' 'long long'

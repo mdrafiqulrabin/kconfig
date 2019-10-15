@@ -1,0 +1,22 @@
+../Data/C2AST/pragma-1.c:8:5: error: use of undeclared identifier 'error'
+    error;
+    ^
+1 error generated.
+TranslationUnitDecl 0x7f82fd81d2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82fd81d860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f82fd81d580 '__int128'
+|-TypedefDecl 0x7f82fd81d8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f82fd81d5a0 'unsigned __int128'
+|-TypedefDecl 0x7f82fd81dba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f82fd81d9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f82fd81d928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f82fd81dc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f82fd81dc00 'char *'
+|   `-BuiltinType 0x7f82fd81d380 'char'
+|-TypedefDecl 0x7f82fd81df08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f82fd81deb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f82fd81dd20 'struct __va_list_tag'
+|     `-Record 0x7f82fd81dc98 '__va_list_tag'
+`-FunctionDecl 0x7f82ff008a00 <../Data/C2AST/pragma-1.c:3:1, line:12:1> line:4:1 main 'int ()'
+  `-CompoundStmt 0x7f82ff008b08 <line:5:1, line:12:1>
+    `-CompoundStmt 0x7f82ff008af8 <line:7:3, line:11:3>

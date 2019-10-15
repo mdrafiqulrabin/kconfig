@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fd79200e8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd79200f560 <../Data/C2AST/pr22422.c:2:1, line:6:1> line:2:8 struct D definition
+| |-FieldDecl 0x7fd791831838 <line:4:3, col:7> col:7 referenced n 'int'
+| `-FieldDecl 0x7fd791831900 <line:5:3, col:11> col:7 referenced c 'int [8]'
+|-RecordDecl 0x7fd791831948 <line:8:1, line:12:1> line:8:8 struct A definition
+| |-FieldDecl 0x7fd791831a08 <line:10:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7fd791831a68 <line:11:3, col:9> col:9 p 'char *'
+|-RecordDecl 0x7fd791831ab0 <line:14:1, line:18:1> line:14:8 struct B definition
+| |-FieldDecl 0x7fd791831c10 <line:16:3, col:13> col:13 referenced a 'struct A *'
+| `-FieldDecl 0x7fd791831d10 <line:17:3, col:13> col:13 referenced d 'struct D *'
+`-FunctionDecl 0x7fd791831f18 <line:20:1, line:28:1> line:20:5 dtInsert1 'int (struct B *)'
+  |-ParmVarDecl 0x7fd791831e10 <col:16, col:26> col:26 used b 'struct B *'
+  `-CompoundStmt 0x7fd7918325c8 <line:21:1, line:28:1>
+    |-DeclStmt 0x7fd791832178 <line:22:3, col:24>
+    | `-VarDecl 0x7fd791832020 <col:3, col:23> col:12 used a 'struct A':'struct A' cinit
+    |   `-InitListExpr 0x7fd791832110 <col:16, col:23> 'struct A':'struct A'
+    |     |-IntegerLiteral 0x7fd791832080 <col:18> 'int' 0
+    |     `-ImplicitCastExpr 0x7fd791832160 <col:21> 'char *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fd7918320a0 <col:21> 'int' 0
+    |-DeclStmt 0x7fd791832218 <line:23:3, col:14>
+    | `-VarDecl 0x7fd7918321b8 <col:3, col:13> col:13 used d 'struct D *'
+    |-BinaryOperator 0x7fd7918322f0 <line:24:3, col:11> 'struct A *' '='
+    | |-MemberExpr 0x7fd791832270 <col:3, col:6> 'struct A *' lvalue ->a 0x7fd791831c10
+    | | `-ImplicitCastExpr 0x7fd791832258 <col:3> 'struct B *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd791832230 <col:3> 'struct B *' lvalue ParmVar 0x7fd791831e10 'b' 'struct B *'
+    | `-UnaryOperator 0x7fd7918322d0 <col:10, col:11> 'struct A *' prefix '&'
+    |   `-DeclRefExpr 0x7fd7918322a8 <col:11> 'struct A':'struct A' lvalue Var 0x7fd791832020 'a' 'struct A':'struct A'
+    |-BinaryOperator 0x7fd7918323d0 <line:25:3, col:10> 'struct D *' '='
+    | |-DeclRefExpr 0x7fd791832318 <col:3> 'struct D *' lvalue Var 0x7fd7918321b8 'd' 'struct D *'
+    | `-ImplicitCastExpr 0x7fd7918323b8 <col:7, col:10> 'struct D *' <LValueToRValue>
+    |   `-MemberExpr 0x7fd791832380 <col:7, col:10> 'struct D *' lvalue ->d 0x7fd791831d10
+    |     `-ImplicitCastExpr 0x7fd791832368 <col:7> 'struct B *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd791832340 <col:7> 'struct B *' lvalue ParmVar 0x7fd791831e10 'b' 'struct B *'
+    |-UnaryOperator 0x7fd791832570 <line:26:3, col:14> 'int *' prefix '&'
+    | `-ArraySubscriptExpr 0x7fd791832548 <col:4, col:14> 'int' lvalue
+    |   |-ImplicitCastExpr 0x7fd791832518 <col:4, col:7> 'int *' <ArrayToPointerDecay>
+    |   | `-MemberExpr 0x7fd791832438 <col:4, col:7> 'int [8]' lvalue ->c 0x7fd791831900
+    |   |   `-ImplicitCastExpr 0x7fd791832420 <col:4> 'struct D *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fd7918323f8 <col:4> 'struct D *' lvalue Var 0x7fd7918321b8 'd' 'struct D *'
+    |   `-ImplicitCastExpr 0x7fd791832530 <col:10, col:13> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fd7918324b0 <col:10, col:13> 'int' lvalue ->n 0x7fd791831838
+    |       `-ImplicitCastExpr 0x7fd791832498 <col:10> 'struct D *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fd791832470 <col:10> 'struct D *' lvalue Var 0x7fd7918321b8 'd' 'struct D *'
+    `-ReturnStmt 0x7fd7918325b0 <line:27:3, col:10>
+      `-IntegerLiteral 0x7fd791832590 <col:10> 'int' 0

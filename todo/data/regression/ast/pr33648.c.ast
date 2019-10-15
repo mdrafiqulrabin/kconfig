@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f8de702b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8de702bf78 <../Data/C2AST/pr33648.c:6:1, col:10> col:10 used res 'unsigned int'
+`-FunctionDecl 0x7f8de78143a0 <line:8:1, line:14:1> line:9:1 foo 'void (unsigned int, int)'
+  |-ParmVarDecl 0x7f8de7814258 <col:6, col:15> col:15 used code 'unsigned int'
+  |-ParmVarDecl 0x7f8de78142d0 <col:21, col:25> col:25 used len 'int'
+  `-CompoundStmt 0x7f8de7814778 <line:10:1, line:14:1>
+    |-DeclStmt 0x7f8de78144c8 <line:11:3, col:8>
+    | `-VarDecl 0x7f8de7814468 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f8de7814740 <line:12:3, line:13:19>
+      |-BinaryOperator 0x7f8de7814528 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f8de78144e0 <col:8> 'int' lvalue Var 0x7f8de7814468 'i' 'int'
+      | `-IntegerLiteral 0x7f8de7814508 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8de78145d0 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8de78145a0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8de7814550 <col:15> 'int' lvalue Var 0x7f8de7814468 'i' 'int'
+      | `-ImplicitCastExpr 0x7f8de78145b8 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8de7814578 <col:19> 'int' lvalue ParmVar 0x7f8de78142d0 'len' 'int'
+      |-UnaryOperator 0x7f8de7814620 <col:24, col:25> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f8de78145f8 <col:24> 'int' lvalue Var 0x7f8de7814468 'i' 'int'
+      `-CompoundAssignOperator 0x7f8de7814708 <line:13:5, col:19> 'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+        |-DeclRefExpr 0x7f8de7814640 <col:5> 'unsigned int' lvalue Var 0x7f8de702bf78 'res' 'unsigned int'
+        `-BinaryOperator 0x7f8de78146e0 <col:12, col:19> 'unsigned int' '&'
+          |-ImplicitCastExpr 0x7f8de78146b0 <col:12> 'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7f8de7814668 <col:12> 'unsigned int' lvalue ParmVar 0x7f8de7814258 'code' 'unsigned int'
+          `-ImplicitCastExpr 0x7f8de78146c8 <col:19> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7f8de7814690 <col:19> 'int' 1

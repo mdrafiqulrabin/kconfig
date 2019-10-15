@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7f82c0027ae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f82c0028760 <../Data/C2AST/pr24059.c:4:1, line:7:1> line:4:8 struct pred_data definition
+| `-FieldDecl 0x7f82c080a100 <line:6:3, col:34> col:17 referenced codes 'unsigned char [100]'
+`-FunctionDecl 0x7f82c080a380 <line:9:1, line:14:1> line:9:6 compute_predicate_codes 'void (char *, struct pred_data *)'
+  |-ParmVarDecl 0x7f82c080a160 <col:31, col:37> col:37 used codes 'char *'
+  |-ParmVarDecl 0x7f82c080a270 <col:44, col:62> col:62 used p 'struct pred_data *'
+  `-CompoundStmt 0x7f82c080a988 <line:10:1, line:14:1>
+    |-DeclStmt 0x7f82c080a4e8 <line:11:3, col:8>
+    | `-VarDecl 0x7f82c080a488 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f82c080a950 <line:12:3, line:13:34>
+      |-BinaryOperator 0x7f82c080a548 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f82c080a500 <col:8> 'int' lvalue Var 0x7f82c080a488 'i' 'int'
+      | `-IntegerLiteral 0x7f82c080a528 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f82c080a630 <col:15, col:29> 'int' '<'
+      | |-ImplicitCastExpr 0x7f82c080a618 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f82c080a570 <col:15> 'int' lvalue Var 0x7f82c080a488 'i' 'int'
+      | `-ParenExpr 0x7f82c080a5f8 <col:19, col:29> 'int'
+      |   `-CStyleCastExpr 0x7f82c080a5d0 <col:20, col:26> 'int' <NoOp>
+      |     `-IntegerLiteral 0x7f82c080a598 <col:26> 'int' 100
+      |-UnaryOperator 0x7f82c080a680 <col:32, col:33> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f82c080a658 <col:32> 'int' lvalue Var 0x7f82c080a488 'i' 'int'
+      `-BinaryOperator 0x7f82c080a928 <line:13:5, col:34> 'char' '='
+        |-ArraySubscriptExpr 0x7f82c080a720 <col:5, col:12> 'char' lvalue
+        | |-ImplicitCastExpr 0x7f82c080a6f0 <col:5> 'char *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f82c080a6a0 <col:5> 'char *' lvalue ParmVar 0x7f82c080a160 'codes' 'char *'
+        | `-ImplicitCastExpr 0x7f82c080a708 <col:11> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f82c080a6c8 <col:11> 'int' lvalue Var 0x7f82c080a488 'i' 'int'
+        `-ImplicitCastExpr 0x7f82c080a910 <col:16, col:34> 'char' <IntegralCast>
+          `-ConditionalOperator 0x7f82c080a8e0 <col:16, col:34> 'int'
+            |-ImplicitCastExpr 0x7f82c080a8c8 <col:16, col:26> 'int' <IntegralCast>
+            | `-ImplicitCastExpr 0x7f82c080a8b0 <col:16, col:26> 'unsigned char' <LValueToRValue>
+            |   `-ArraySubscriptExpr 0x7f82c080a848 <col:16, col:26> 'unsigned char' lvalue
+            |     |-ImplicitCastExpr 0x7f82c080a818 <col:16, col:19> 'unsigned char *' <ArrayToPointerDecay>
+            |     | `-MemberExpr 0x7f82c080a788 <col:16, col:19> 'unsigned char [100]' lvalue ->codes 0x7f82c080a100
+            |     |   `-ImplicitCastExpr 0x7f82c080a770 <col:16> 'struct pred_data *' <LValueToRValue>
+            |     |     `-DeclRefExpr 0x7f82c080a748 <col:16> 'struct pred_data *' lvalue ParmVar 0x7f82c080a270 'p' 'struct pred_data *'
+            |     `-ImplicitCastExpr 0x7f82c080a830 <col:25> 'int' <LValueToRValue>
+            |       `-DeclRefExpr 0x7f82c080a7c0 <col:25> 'int' lvalue Var 0x7f82c080a488 'i' 'int'
+            |-IntegerLiteral 0x7f82c080a870 <col:30> 'int' 2
+            `-IntegerLiteral 0x7f82c080a890 <col:34> 'int' 0

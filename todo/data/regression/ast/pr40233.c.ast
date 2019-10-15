@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7ff9110288e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff911029598 <../Data/C2AST/pr40233.c:1:1, col:13> col:13 referenced aligned 'int'
+| |-BuiltinType 0x7ff9110289e0 'int'
+| `-AlignedAttr 0x7ff910819400 <col:36, col:46> aligned
+|   `-IntegerLiteral 0x7ff911029560 <col:44> 'int' 64
+|-RecordDecl 0x7ff910819450 <line:2:1, line:4:1> line:2:8 struct Frame definition
+| `-FieldDecl 0x7ff910819530 <line:3:3, col:11> col:11 referenced i 'aligned':'int'
+`-FunctionDecl 0x7ff910819730 <line:6:1, line:10:1> line:6:6 foo 'void (struct Frame *)'
+  |-ParmVarDecl 0x7ff910819630 <col:10, col:24> col:24 used p 'struct Frame *'
+  `-CompoundStmt 0x7ff910819a40 <line:7:1, line:10:1>
+    |-DeclStmt 0x7ff910819980 <line:8:3, col:21>
+    | `-VarDecl 0x7ff910819888 <col:3, col:20> col:12 used q 'aligned *' cinit
+    |   `-UnaryOperator 0x7ff910819960 <col:16, col:20> 'aligned *' prefix '&'
+    |     `-MemberExpr 0x7ff910819928 <col:17, col:20> 'aligned':'int' lvalue ->i 0x7ff910819530
+    |       `-ImplicitCastExpr 0x7ff910819910 <col:17> 'struct Frame *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ff9108198e8 <col:17> 'struct Frame *' lvalue ParmVar 0x7ff910819630 'p' 'struct Frame *'
+    `-BinaryOperator 0x7ff910819a18 <line:9:3, col:8> 'aligned':'int' '='
+      |-UnaryOperator 0x7ff9108199d8 <col:3, col:4> 'aligned':'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7ff9108199c0 <col:4> 'aligned *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff910819998 <col:4> 'aligned *' lvalue Var 0x7ff910819888 'q' 'aligned *'
+      `-IntegerLiteral 0x7ff9108199f8 <col:8> 'int' 0

@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f81e002bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f81e002c978 <../Data/C2AST/pr50908-3.c:4:1, col:12> col:12 used v1 'int' extern
+|-VarDecl 0x7f81e1014258 <line:5:1, col:12> col:12 used v2 'int' extern
+|-FunctionDecl 0x7f81e1014380 <line:6:1, col:13> col:6 used g 'void (void)'
+`-FunctionDecl 0x7f81e1014468 <line:8:1, line:13:1> line:9:1 f 'void ()'
+  `-CompoundStmt 0x7f81e10147d8 <line:10:1, line:13:1>
+    `-IfStmt 0x7f81e10147a0 <line:11:3, line:12:36>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f81e1014588 <line:11:7, col:13> 'int' '||'
+      | |-ImplicitCastExpr 0x7f81e1014558 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f81e1014508 <col:7> 'int' lvalue Var 0x7f81e1014258 'v2' 'int'
+      | `-ImplicitCastExpr 0x7f81e1014570 <col:13> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f81e1014530 <col:13> 'int' lvalue Var 0x7f81e002c978 'v1' 'int'
+      |-ConditionalOperator 0x7f81e1014770 <line:12:5, col:36> 'void'
+      | |-ParenExpr 0x7f81e1014630 <col:5, col:11> 'int'
+      | | `-UnaryOperator 0x7f81e1014610 <col:6, col:10> 'int' prefix '!'
+      | |   `-ImplicitCastExpr 0x7f81e10145f8 <col:7, col:10> 'int' <LValueToRValue>
+      | |     `-ParenExpr 0x7f81e10145d8 <col:7, col:10> 'int' lvalue
+      | |       `-DeclRefExpr 0x7f81e10145b0 <col:8> 'int' lvalue Var 0x7f81e002c978 'v1' 'int'
+      | |-CStyleCastExpr 0x7f81e1014680 <col:15, col:22> 'void' <ToVoid>
+      | | `-IntegerLiteral 0x7f81e1014650 <col:22> 'int' 0
+      | `-CStyleCastExpr 0x7f81e1014748 <col:26, col:36> 'void' <ToVoid>
+      |   `-CallExpr 0x7f81e1014710 <col:33, col:36> 'void'
+      |     `-ImplicitCastExpr 0x7f81e10146f8 <col:33> 'void (*)(void)' <FunctionToPointerDecay>
+      |       `-DeclRefExpr 0x7f81e10146a8 <col:33> 'void (void)' Function 0x7f81e1014380 'g' 'void (void)'
+      `-<<<NULL>>>

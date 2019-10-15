@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fb71f8118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb71f845228 <../Data/C2AST/pr63453.c:5:1, col:21> col:12 fn1 'int (void)' inline
+|-FunctionDecl 0x7fb71f8453a0 <line:6:1, col:28> col:19 fn2 'int (void)' extern inline
+|-FunctionDecl 0x7fb71f8454d8 <line:7:1, col:50> col:41 fn3 'int (void)' inline
+| `-GNUInlineAttr 0x7fb71f845578 <col:28>
+`-FunctionDecl 0x7fb71f845658 <line:8:1, col:57> col:48 fn4 'int (void)' extern inline
+  `-GNUInlineAttr 0x7fb71f8456f8 <col:35>

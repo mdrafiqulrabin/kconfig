@@ -1,0 +1,79 @@
+TranslationUnitDecl 0x7fb9f102bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb9f1461010 <../Data/C2AST/pr79932-1.c:7:1, col:9> col:9 used a '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f1461080 <col:1, col:12> col:12 used b '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f14610f0 <col:1, col:15> col:15 used c '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f1461160 <col:1, col:18> col:18 used d '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f14611d0 <col:1, col:21> col:21 used e '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f1461240 <col:1, col:24> col:24 used f '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f14612b0 <col:1, col:27> col:27 used g '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f1461320 <col:1, col:30> col:30 used h '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f1461390 <col:1, col:33> col:33 used i '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb9f1461450 <line:8:1, col:11> col:11 used m '__mmask32':'unsigned int'
+`-FunctionDecl 0x7fb9f1461540 <line:10:1, line:19:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb9f1461ff0 <line:12:1, line:19:1>
+    |-BinaryOperator 0x7fb9f1461700 <line:13:3, col:31> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7fb9f14615e0 <col:3> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461160 'd' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    | `-CallExpr 0x7fb9f1461698 <col:7, col:31> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7fb9f1461680 <col:7> '__m512i (*)(__m512i, __m512i)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb9f1461608 <col:7> '__m512i (__m512i, __m512i)' Function 0x7fb9f13d58f0 '_mm512_packs_epi32' '__m512i (__m512i, __m512i)'
+    |   |-ImplicitCastExpr 0x7fb9f14616d0 <col:27> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461630 <col:27> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461010 'a' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   `-ImplicitCastExpr 0x7fb9f14616e8 <col:30> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb9f1461658 <col:30> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461080 'b' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |-BinaryOperator 0x7fb9f14618e8 <line:14:3, col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7fb9f1461728 <col:3> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f14611d0 'e' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    | `-CallExpr 0x7fb9f1461860 <col:7, col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7fb9f1461848 <col:7> '__m512i (*)(__mmask32, __m512i, __m512i)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb9f1461750 <col:7> '__m512i (__mmask32, __m512i, __m512i)' Function 0x7fb9f13d5f88 '_mm512_maskz_packs_epi32' '__m512i (__mmask32, __m512i, __m512i)'
+    |   |-ImplicitCastExpr 0x7fb9f14618a0 <col:33> '__mmask32':'unsigned int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461778 <col:33> '__mmask32':'unsigned int' lvalue Var 0x7fb9f1461450 'm' '__mmask32':'unsigned int'
+    |   |-ImplicitCastExpr 0x7fb9f14618b8 <col:36> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f14617a0 <col:36> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461010 'a' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   `-ImplicitCastExpr 0x7fb9f14618d0 <col:39> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb9f14617c8 <col:39> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461080 'b' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |-BinaryOperator 0x7fb9f1461b18 <line:15:3, col:42> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7fb9f1461910 <col:3> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461240 'f' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    | `-CallExpr 0x7fb9f1461a70 <col:7, col:42> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7fb9f1461a58 <col:7> '__m512i (*)(__m512i, __mmask32, __m512i, __m512i)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb9f1461938 <col:7> '__m512i (__m512i, __mmask32, __m512i, __m512i)' Function 0x7fb9f13d9640 '_mm512_mask_packs_epi32' '__m512i (__m512i, __mmask32, __m512i, __m512i)'
+    |   |-ImplicitCastExpr 0x7fb9f1461ab8 <col:32> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461960 <col:32> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f14610f0 'c' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7fb9f1461ad0 <col:35> '__mmask32':'unsigned int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461988 <col:35> '__mmask32':'unsigned int' lvalue Var 0x7fb9f1461450 'm' '__mmask32':'unsigned int'
+    |   |-ImplicitCastExpr 0x7fb9f1461ae8 <col:38> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f14619b0 <col:38> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461010 'a' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   `-ImplicitCastExpr 0x7fb9f1461b00 <col:41> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb9f14619d8 <col:41> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461080 'b' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |-BinaryOperator 0x7fb9f1461c60 <line:16:3, col:32> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7fb9f1461b40 <col:3> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f14612b0 'g' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    | `-CallExpr 0x7fb9f1461bf8 <col:7, col:32> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7fb9f1461be0 <col:7> '__m512i (*)(__m512i, __m512i)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb9f1461b68 <col:7> '__m512i (__m512i, __m512i)' Function 0x7fb9f13dae68 '_mm512_packus_epi32' '__m512i (__m512i, __m512i)'
+    |   |-ImplicitCastExpr 0x7fb9f1461c30 <col:28> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461b90 <col:28> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461010 'a' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   `-ImplicitCastExpr 0x7fb9f1461c48 <col:31> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb9f1461bb8 <col:31> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461080 'b' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |-BinaryOperator 0x7fb9f1461df0 <line:17:3, col:41> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7fb9f1461c88 <col:3> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461320 'h' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    | `-CallExpr 0x7fb9f1461d68 <col:7, col:41> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7fb9f1461d50 <col:7> '__m512i (*)(__mmask32, __m512i, __m512i)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb9f1461cb0 <col:7> '__m512i (__mmask32, __m512i, __m512i)' Function 0x7fb9f13db488 '_mm512_maskz_packus_epi32' '__m512i (__mmask32, __m512i, __m512i)'
+    |   |-ImplicitCastExpr 0x7fb9f1461da8 <col:34> '__mmask32':'unsigned int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461cd8 <col:34> '__mmask32':'unsigned int' lvalue Var 0x7fb9f1461450 'm' '__mmask32':'unsigned int'
+    |   |-ImplicitCastExpr 0x7fb9f1461dc0 <col:37> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb9f1461d00 <col:37> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461010 'a' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    |   `-ImplicitCastExpr 0x7fb9f1461dd8 <col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb9f1461d28 <col:40> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461080 'b' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+    `-BinaryOperator 0x7fb9f1461fc8 <line:18:3, col:43> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' '='
+      |-DeclRefExpr 0x7fb9f1461e18 <col:3> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461390 'i' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+      `-CallExpr 0x7fb9f1461f20 <col:7, col:43> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fb9f1461f08 <col:7> '__m512i (*)(__m512i, __mmask32, __m512i, __m512i)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb9f1461e40 <col:7> '__m512i (__m512i, __mmask32, __m512i, __m512i)' Function 0x7fb9f13dbb18 '_mm512_mask_packus_epi32' '__m512i (__m512i, __mmask32, __m512i, __m512i)'
+        |-ImplicitCastExpr 0x7fb9f1461f68 <col:33> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb9f1461e68 <col:33> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f14610f0 'c' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fb9f1461f80 <col:36> '__mmask32':'unsigned int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb9f1461e90 <col:36> '__mmask32':'unsigned int' lvalue Var 0x7fb9f1461450 'm' '__mmask32':'unsigned int'
+        |-ImplicitCastExpr 0x7fb9f1461f98 <col:39> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb9f1461eb8 <col:39> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461010 'a' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fb9f1461fb0 <col:42> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fb9f1461ee0 <col:42> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb9f1461080 'b' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'

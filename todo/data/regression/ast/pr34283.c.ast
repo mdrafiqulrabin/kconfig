@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fcaf78174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcaf702a200 <../Data/C2AST/pr34283.c:4:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |-VectorType 0x7fcaf7818180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+| | `-BuiltinType 0x7fcaf7817620 'long long'
+| `-MayAliasAttr 0x7fcaf702a258 <col:65>
+|-TypedefDecl 0x7fcaf702a2d0 <line:5:1, col:19> col:19 referenced __v2di '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fcaf7818180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fcaf7817620 'long long'
+`-FunctionDecl 0x7fcaf702a4f0 <line:7:1, line:10:1> line:7:9 _mm_set_epi64x '__m128i (long long, long long)'
+  |-ParmVarDecl 0x7fcaf702a368 <col:25, col:35> col:35 used __q1 'long long'
+  |-ParmVarDecl 0x7fcaf702a3e0 <col:41, col:51> col:51 used __q0 'long long'
+  `-CompoundStmt 0x7fcaf702a7e0 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fcaf702a7c8 <line:9:3, col:54>
+      `-UnaryOperator 0x7fcaf702a7a8 <col:10, col:54> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' prefix '__extension__'
+        `-CStyleCastExpr 0x7fcaf702a780 <col:24, col:54> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+          `-ImplicitCastExpr 0x7fcaf702a768 <col:33, col:54> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+            `-CompoundLiteralExpr 0x7fcaf702a730 <col:33, col:54> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+              `-InitListExpr 0x7fcaf702a6b0 <col:41, col:54> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+                |-ImplicitCastExpr 0x7fcaf702a700 <col:43> 'long long' <LValueToRValue>
+                | `-DeclRefExpr 0x7fcaf702a610 <col:43> 'long long' lvalue ParmVar 0x7fcaf702a3e0 '__q0' 'long long'
+                `-ImplicitCastExpr 0x7fcaf702a718 <col:49> 'long long' <LValueToRValue>
+                  `-DeclRefExpr 0x7fcaf702a638 <col:49> 'long long' lvalue ParmVar 0x7fcaf702a368 '__q1' 'long long'

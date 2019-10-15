@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7ff41982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff41a015280 <../Data/C2AST/pr36891.c:7:18, line:8:22> col:16 used f '__attribute__((__vector_size__(4 * sizeof(float)))) float (void)'
+|-FunctionDecl 0x7ff41a015450 <line:9:1, col:22> col:6 used g 'void (__attribute__((__vector_size__(4 * sizeof(float)))) float)'
+| `-ParmVarDecl 0x7ff41a015390 <line:7:18, line:9:17> col:22 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+`-FunctionDecl 0x7ff41a015690 <line:10:1, line:20:1> line:10:6 RRB 'void (__attribute__((__vector_size__(4 * sizeof(float)))) float, __attribute__((__vector_size__(4 * sizeof(float)))) float)'
+  |-ParmVarDecl 0x7ff41a015528 <line:7:18, line:10:26> col:26 used vdist '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  |-ParmVarDecl 0x7ff41a0155b8 <line:7:18, line:10:48> col:48 used vx '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  `-CompoundStmt 0x7ff41a015e30 <line:11:1, line:20:1>
+    |-DeclStmt 0x7ff41a0157b8 <line:12:3, col:13>
+    | `-VarDecl 0x7ff41a015758 <col:3, col:7> col:7 used detail 'int'
+    `-ForStmt 0x7ff41a015df8 <line:13:3, line:19:3>
+      |-BinaryOperator 0x7ff41a015818 <line:13:7, col:16> 'int' '='
+      | |-DeclRefExpr 0x7ff41a0157d0 <col:7> 'int' lvalue Var 0x7ff41a015758 'detail' 'int'
+      | `-IntegerLiteral 0x7ff41a0157f8 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff41a0158a0 <col:19, col:28> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff41a015888 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff41a015840 <col:19> 'int' lvalue Var 0x7ff41a015758 'detail' 'int'
+      | `-IntegerLiteral 0x7ff41a015868 <col:28> 'int' 5
+      |-UnaryOperator 0x7ff41a0158f0 <col:30, col:32> 'int' prefix '++'
+      | `-DeclRefExpr 0x7ff41a0158c8 <col:32> 'int' lvalue Var 0x7ff41a015758 'detail' 'int'
+      `-CompoundStmt 0x7ff41a015dc8 <line:14:3, line:19:3>
+        |-DeclStmt 0x7ff41a015a38 <line:7:18, line:15:30>
+        | `-VarDecl 0x7ff41a015940 <line:7:18, line:15:29> col:19 used frand '__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+        |   `-CallExpr 0x7ff41a015a10 <col:27, col:29> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |     `-ImplicitCastExpr 0x7ff41a0159f8 <col:27> '__attribute__((__vector_size__(4 * sizeof(float)))) float (*)(void)' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7ff41a0159a0 <col:27> '__attribute__((__vector_size__(4 * sizeof(float)))) float (void)' Function 0x7ff41a015280 'f' '__attribute__((__vector_size__(4 * sizeof(float)))) float (void)'
+        |-DeclStmt 0x7ff41a015b88 <line:7:18, line:16:43>
+        | `-VarDecl 0x7ff41a015a80 <line:7:18, line:16:38> col:19 used pullperc '__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+        |   `-BinaryOperator 0x7ff41a015b60 <col:31, col:38> '__attribute__((__vector_size__(4 * sizeof(float)))) float' '/'
+        |     |-ImplicitCastExpr 0x7ff41a015b30 <col:31> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7ff41a015ae0 <col:31> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff41a015940 'frand' '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |     `-ImplicitCastExpr 0x7ff41a015b48 <col:38> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        |       `-DeclRefExpr 0x7ff41a015b08 <col:38> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7ff41a015528 'vdist' '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |-DeclStmt 0x7ff41a015cd8 <line:7:18, line:17:41>
+        | `-VarDecl 0x7ff41a015bd0 <line:7:18, line:17:33> col:19 used pullx '__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+        |   `-BinaryOperator 0x7ff41a015cb0 <col:28, col:33> '__attribute__((__vector_size__(4 * sizeof(float)))) float' '*'
+        |     |-ImplicitCastExpr 0x7ff41a015c80 <col:28> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7ff41a015c30 <col:28> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7ff41a0155b8 'vx' '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |     `-ImplicitCastExpr 0x7ff41a015c98 <col:33> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        |       `-DeclRefExpr 0x7ff41a015c58 <col:33> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff41a015a80 'pullperc' '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        `-CallExpr 0x7ff41a015d80 <line:18:4, col:11> 'void'
+          |-ImplicitCastExpr 0x7ff41a015d68 <col:4> 'void (*)(__attribute__((__vector_size__(4 * sizeof(float)))) float)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff41a015cf0 <col:4> 'void (__attribute__((__vector_size__(4 * sizeof(float)))) float)' Function 0x7ff41a015450 'g' 'void (__attribute__((__vector_size__(4 * sizeof(float)))) float)'
+          `-ImplicitCastExpr 0x7ff41a015db0 <col:6> '__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+            `-DeclRefExpr 0x7ff41a015d18 <col:6> '__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff41a015bd0 'pullx' '__attribute__((__vector_size__(4 * sizeof(float)))) float'

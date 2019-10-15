@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7ff34502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff34506e800 <../Data/C2AST/pr39146.c:4:1, col:19> col:19 referenced __m256i '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+| |-VectorType 0x7ff34502c980 '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' 4
+| | `-BuiltinType 0x7ff34502be20 'long long'
+| `-MayAliasAttr 0x7ff34506e858 <col:65>
+`-FunctionDecl 0x7ff34506e9d0 <line:7:1, line:11:1> line:8:1 bar '__m256i (__m256i)'
+  |-ParmVarDecl 0x7ff34506e8d0 <col:6, col:14> col:14 used x '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7ff34506eb10 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7ff34506eaf8 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7ff34506eae0 <col:10> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+        `-DeclRefExpr 0x7ff34506eab8 <col:10> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue ParmVar 0x7ff34506e8d0 'x' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'

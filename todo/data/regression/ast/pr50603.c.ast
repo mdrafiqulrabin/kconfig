@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fae9d82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fae9d82c9a0 <../Data/C2AST/pr50603.c:4:1, col:13> col:13 used foo 'int *' extern
+`-FunctionDecl 0x7fae9d86d928 <line:6:1, line:10:1> line:7:1 bar 'int (int)'
+  |-ParmVarDecl 0x7fae9d86d858 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fae9d86daa8 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fae9d86da90 <line:9:3, col:15>
+      `-ImplicitCastExpr 0x7fae9d86da78 <col:10, col:15> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fae9d86da50 <col:10, col:15> 'int' lvalue
+          |-ImplicitCastExpr 0x7fae9d86da20 <col:10> 'int *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fae9d86d9d0 <col:10> 'int *' lvalue Var 0x7fae9d82c9a0 'foo' 'int *'
+          `-ImplicitCastExpr 0x7fae9d86da38 <col:14> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fae9d86d9f8 <col:14> 'int' lvalue ParmVar 0x7fae9d86d858 'x' 'int'

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7faf850262e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7faf85814260 <../Data/C2AST/pr53447-1.c:5:1, line:8:1> line:5:6 t0p 'void (long long *)'
+  |-ParmVarDecl 0x7faf85026fa0 <col:10, col:22> col:22 used p 'long long *'
+  `-CompoundStmt 0x7faf85814418 <line:6:1, line:8:1>
+    `-CompoundAssignOperator 0x7faf858143e0 <line:7:3, col:9> 'long long' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+      |-UnaryOperator 0x7faf85814388 <col:3, col:4> 'long long' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7faf85814370 <col:4> 'long long *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faf85814348 <col:4> 'long long *' lvalue ParmVar 0x7faf85026fa0 'p' 'long long *'
+      `-ImplicitCastExpr 0x7faf858143c8 <col:9> 'long long' <IntegralCast>
+        `-IntegerLiteral 0x7faf858143a8 <col:9> 'long' 4294967297

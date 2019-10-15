@@ -1,0 +1,32 @@
+../Data/C2AST/pr46674.c:11:69: error: aliases are not supported on darwin
+extern void jelly (void) __asm__ (LABEL ("jelly2")) __attribute__ ((alias ("dessert"), weak));
+                                                                    ^
+../Data/C2AST/pr46674.c:12:43: error: aliases are not supported on darwin
+extern void wobbly (void) __attribute__ ((alias ("jelly2"), weak));
+                                          ^
+2 errors generated.
+TranslationUnitDecl 0x7f82cb0174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82cb017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f82cb017780 '__int128'
+|-TypedefDecl 0x7f82cb017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f82cb0177a0 'unsigned __int128'
+|-TypedefDecl 0x7f82cb017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f82cb017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f82cb017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f82cb017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f82cb017e00 'char *'
+|   `-BuiltinType 0x7f82cb017580 'char'
+|-TypedefDecl 0x7f82cb018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f82cb0180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f82cb017f20 'struct __va_list_tag'
+|     `-Record 0x7f82cb017e98 '__va_list_tag'
+|-VarDecl 0x7f82cb018178 <../Data/C2AST/pr46674.c:9:1, col:5> col:5 used yum 'int'
+|-FunctionDecl 0x7f82cb822b00 <line:10:1, col:30> col:6 dessert 'void (void)'
+| `-CompoundStmt 0x7f82cb822be8 <col:21, col:30>
+|   `-UnaryOperator 0x7f82cb822bc8 <col:23, col:25> 'int' prefix '++'
+|     `-DeclRefExpr 0x7f82cb822ba0 <col:25> 'int' lvalue Var 0x7f82cb018178 'yum' 'int'
+|-FunctionDecl 0x7f82cb822d30 <line:11:1, col:93> col:13 jelly 'void (void)' extern
+| |-AsmLabelAttr 0x7f82cb822dd0 <<scratch space>:2:1> "_jelly2"
+| `-WeakAttr 0x7f82cb822e28 <../Data/C2AST/pr46674.c:11:88>
+`-FunctionDecl 0x7f82cb822f38 <line:12:1, col:66> col:13 wobbly 'void (void)' extern
+  `-WeakAttr 0x7f82cb822fd8 <col:61>

@@ -1,0 +1,474 @@
+TranslationUnitDecl 0x7f93438258e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9343858de8 <../Data/C2AST/pr68991.c:4:1, line:32:1> line:5:1 foo 'float (float, float, float, float)'
+| |-ParmVarDecl 0x7f9343826578 <col:6, col:12> col:12 used a 'float'
+| |-ParmVarDecl 0x7f9343858c00 <col:15, col:21> col:21 used b 'float'
+| |-ParmVarDecl 0x7f9343858c78 <col:24, col:30> col:30 used c 'float'
+| |-ParmVarDecl 0x7f9343858cf0 <col:33, col:39> col:39 used d 'float'
+| `-CompoundStmt 0x7f9344817510 <line:6:1, line:32:1>
+|   |-DeclStmt 0x7f9343859170 <line:7:3, col:26>
+|   | |-VarDecl 0x7f9343858f00 <col:3, col:9> col:9 used ac 'float'
+|   | |-VarDecl 0x7f9343858f78 <col:3, col:13> col:13 used bd 'float'
+|   | |-VarDecl 0x7f9343858ff0 <col:3, col:17> col:17 used ad 'float'
+|   | |-VarDecl 0x7f9343859068 <col:3, col:21> col:21 used bc 'float'
+|   | `-VarDecl 0x7f93438590e0 <col:3, col:25> col:25 used y 'float'
+|   |-BinaryOperator 0x7f9343859258 <line:9:3, col:12> 'float' '='
+|   | |-DeclRefExpr 0x7f9343859188 <col:3> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | `-BinaryOperator 0x7f9343859230 <col:8, col:12> 'float' '*'
+|   |   |-ImplicitCastExpr 0x7f9343859200 <col:8> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f93438591b0 <col:8> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   |   `-ImplicitCastExpr 0x7f9343859218 <col:12> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f93438591d8 <col:12> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |-BinaryOperator 0x7f9343859350 <line:10:3, col:12> 'float' '='
+|   | |-DeclRefExpr 0x7f9343859280 <col:3> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | `-BinaryOperator 0x7f9343859328 <col:8, col:12> 'float' '*'
+|   |   |-ImplicitCastExpr 0x7f93438592f8 <col:8> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f93438592a8 <col:8> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   |   `-ImplicitCastExpr 0x7f9343859310 <col:12> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f93438592d0 <col:12> 'float' lvalue ParmVar 0x7f9343858cf0 'd' 'float'
+|   |-BinaryOperator 0x7f9343859448 <line:11:3, col:12> 'float' '='
+|   | |-DeclRefExpr 0x7f9343859378 <col:3> 'float' lvalue Var 0x7f9343858ff0 'ad' 'float'
+|   | `-BinaryOperator 0x7f9343859420 <col:8, col:12> 'float' '*'
+|   |   |-ImplicitCastExpr 0x7f93438593f0 <col:8> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f93438593a0 <col:8> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   |   `-ImplicitCastExpr 0x7f9343859408 <col:12> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f93438593c8 <col:12> 'float' lvalue ParmVar 0x7f9343858cf0 'd' 'float'
+|   |-BinaryOperator 0x7f9343859540 <line:12:3, col:12> 'float' '='
+|   | |-DeclRefExpr 0x7f9343859470 <col:3> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | `-BinaryOperator 0x7f9343859518 <col:8, col:12> 'float' '*'
+|   |   |-ImplicitCastExpr 0x7f93438594e8 <col:8> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f9343859498 <col:8> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   |   `-ImplicitCastExpr 0x7f9343859500 <col:12> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f93438594c0 <col:12> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |-IfStmt 0x7f9344815400 <line:14:3, line:19:102>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9344814938 <line:14:7, line:17:84> 'int' '||'
+|   | | |-CallExpr 0x7f9344814208 <line:14:7, line:15:81> 'long'
+|   | | | |-ImplicitCastExpr 0x7f93448141f0 <line:14:7> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7f9343859778 <col:7> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | | | |-ImplicitCastExpr 0x7f9344814240 <col:25, line:15:77> 'long' <IntegralCast>
+|   | | | | `-BinaryOperator 0x7f93448141a8 <line:14:25, line:15:77> 'int' '&'
+|   | | | |   |-UnaryOperator 0x7f9343859978 <line:14:25, col:57> 'int' prefix '!'
+|   | | | |   | `-CallExpr 0x7f9343859910 <col:26, col:57> 'long'
+|   | | | |   |   |-ImplicitCastExpr 0x7f93438598f8 <col:26> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | |   |   | `-DeclRefExpr 0x7f93438597a0 <col:26> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | | | |   |   |-ImplicitCastExpr 0x7f9343859948 <col:44, col:53> 'long' <IntegralCast>
+|   | | | |   |   | `-BinaryOperator 0x7f9343859888 <col:44, col:53> 'int' '!='
+|   | | | |   |   |   |-ImplicitCastExpr 0x7f9343859858 <col:44, col:46> 'float' <LValueToRValue>
+|   | | | |   |   |   | `-ParenExpr 0x7f93438597f0 <col:44, col:46> 'float' lvalue
+|   | | | |   |   |   |   `-DeclRefExpr 0x7f93438597c8 <col:45> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | | |   |   |   `-ImplicitCastExpr 0x7f9343859870 <col:51, col:53> 'float' <LValueToRValue>
+|   | | | |   |   |     `-ParenExpr 0x7f9343859838 <col:51, col:53> 'float' lvalue
+|   | | | |   |   |       `-DeclRefExpr 0x7f9343859810 <col:52> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | | |   |   `-ImplicitCastExpr 0x7f9343859960 <col:56> 'long' <IntegralCast>
+|   | | | |   |     `-IntegerLiteral 0x7f93438598b0 <col:56> 'int' 0
+|   | | | |   `-UnaryOperator 0x7f9344814188 <line:15:6, col:77> 'int' prefix '!'
+|   | | | |     `-CallExpr 0x7f9344814120 <col:7, col:77> 'long'
+|   | | | |       |-ImplicitCastExpr 0x7f9344814108 <col:7> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | |       | `-DeclRefExpr 0x7f9343859998 <col:7> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | | | |       |-ImplicitCastExpr 0x7f9344814158 <col:25, col:73> 'long' <IntegralCast>
+|   | | | |       | `-UnaryOperator 0x7f93448140c8 <col:25, col:73> 'int' prefix '!'
+|   | | | |       |   `-CallExpr 0x7f9344814060 <col:26, col:73> 'long'
+|   | | | |       |     |-ImplicitCastExpr 0x7f9344814048 <col:26> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | |       |     | `-DeclRefExpr 0x7f93438599c0 <col:26> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | | | |       |     |-ImplicitCastExpr 0x7f9344814098 <col:44, col:69> 'long' <IntegralCast>
+|   | | | |       |     | `-BinaryOperator 0x7f9344814000 <col:44, col:69> 'int' '!='
+|   | | | |       |     |   |-ParenExpr 0x7f9343859ad0 <col:44, col:54> 'float'
+|   | | | |       |     |   | `-BinaryOperator 0x7f9343859aa8 <col:45, col:53> 'float' '-'
+|   | | | |       |     |   |   |-ImplicitCastExpr 0x7f9343859a78 <col:45, col:47> 'float' <LValueToRValue>
+|   | | | |       |     |   |   | `-ParenExpr 0x7f9343859a10 <col:45, col:47> 'float' lvalue
+|   | | | |       |     |   |   |   `-DeclRefExpr 0x7f93438599e8 <col:46> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | | |       |     |   |   `-ImplicitCastExpr 0x7f9343859a90 <col:51, col:53> 'float' <LValueToRValue>
+|   | | | |       |     |   |     `-ParenExpr 0x7f9343859a58 <col:51, col:53> 'float' lvalue
+|   | | | |       |     |   |       `-DeclRefExpr 0x7f9343859a30 <col:52> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | | |       |     |   `-ParenExpr 0x7f9343859bd8 <col:59, col:69> 'float'
+|   | | | |       |     |     `-BinaryOperator 0x7f9343859bb0 <col:60, col:68> 'float' '-'
+|   | | | |       |     |       |-ImplicitCastExpr 0x7f9343859b80 <col:60, col:62> 'float' <LValueToRValue>
+|   | | | |       |     |       | `-ParenExpr 0x7f9343859b18 <col:60, col:62> 'float' lvalue
+|   | | | |       |     |       |   `-DeclRefExpr 0x7f9343859af0 <col:61> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | | |       |     |       `-ImplicitCastExpr 0x7f9343859b98 <col:66, col:68> 'float' <LValueToRValue>
+|   | | | |       |     |         `-ParenExpr 0x7f9343859b60 <col:66, col:68> 'float' lvalue
+|   | | | |       |     |           `-DeclRefExpr 0x7f9343859b38 <col:67> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | | |       |     `-ImplicitCastExpr 0x7f93448140b0 <col:72> 'long' <IntegralCast>
+|   | | | |       |       `-IntegerLiteral 0x7f9344814028 <col:72> 'int' 0
+|   | | | |       `-ImplicitCastExpr 0x7f9344814170 <col:76> 'long' <IntegralCast>
+|   | | | |         `-IntegerLiteral 0x7f93448140e8 <col:76> 'int' 1
+|   | | | `-ImplicitCastExpr 0x7f9344814258 <col:80> 'long' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7f93448141d0 <col:80> 'int' 0
+|   | | `-CallExpr 0x7f93448148d0 <line:16:10, line:17:84> 'long'
+|   | |   |-ImplicitCastExpr 0x7f93448148b8 <line:16:10> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f9344814270 <col:10> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |-ImplicitCastExpr 0x7f9344814908 <col:28, line:17:80> 'long' <IntegralCast>
+|   | |   | `-BinaryOperator 0x7f9344814870 <line:16:28, line:17:80> 'int' '&'
+|   | |   |   |-UnaryOperator 0x7f9344814448 <line:16:28, col:60> 'int' prefix '!'
+|   | |   |   | `-CallExpr 0x7f93448143e0 <col:29, col:60> 'long'
+|   | |   |   |   |-ImplicitCastExpr 0x7f93448143c8 <col:29> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   |   | `-DeclRefExpr 0x7f9344814298 <col:29> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   |   |-ImplicitCastExpr 0x7f9344814418 <col:47, col:56> 'long' <IntegralCast>
+|   | |   |   |   | `-BinaryOperator 0x7f9344814380 <col:47, col:56> 'int' '!='
+|   | |   |   |   |   |-ImplicitCastExpr 0x7f9344814350 <col:47, col:49> 'float' <LValueToRValue>
+|   | |   |   |   |   | `-ParenExpr 0x7f93448142e8 <col:47, col:49> 'float' lvalue
+|   | |   |   |   |   |   `-DeclRefExpr 0x7f93448142c0 <col:48> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   | |   |   |   |   `-ImplicitCastExpr 0x7f9344814368 <col:54, col:56> 'float' <LValueToRValue>
+|   | |   |   |   |     `-ParenExpr 0x7f9344814330 <col:54, col:56> 'float' lvalue
+|   | |   |   |   |       `-DeclRefExpr 0x7f9344814308 <col:55> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   | |   |   |   `-ImplicitCastExpr 0x7f9344814430 <col:59> 'long' <IntegralCast>
+|   | |   |   |     `-IntegerLiteral 0x7f93448143a8 <col:59> 'int' 0
+|   | |   |   `-UnaryOperator 0x7f9344814850 <line:17:9, col:80> 'int' prefix '!'
+|   | |   |     `-CallExpr 0x7f93448147e8 <col:10, col:80> 'long'
+|   | |   |       |-ImplicitCastExpr 0x7f93448147d0 <col:10> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |       | `-DeclRefExpr 0x7f9344814468 <col:10> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |       |-ImplicitCastExpr 0x7f9344814820 <col:28, col:76> 'long' <IntegralCast>
+|   | |   |       | `-UnaryOperator 0x7f9344814790 <col:28, col:76> 'int' prefix '!'
+|   | |   |       |   `-CallExpr 0x7f9344814728 <col:29, col:76> 'long'
+|   | |   |       |     |-ImplicitCastExpr 0x7f9344814710 <col:29> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |       |     | `-DeclRefExpr 0x7f9344814490 <col:29> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |       |     |-ImplicitCastExpr 0x7f9344814760 <col:47, col:72> 'long' <IntegralCast>
+|   | |   |       |     | `-BinaryOperator 0x7f93448146c8 <col:47, col:72> 'int' '!='
+|   | |   |       |     |   |-ParenExpr 0x7f93448145a0 <col:47, col:57> 'float'
+|   | |   |       |     |   | `-BinaryOperator 0x7f9344814578 <col:48, col:56> 'float' '-'
+|   | |   |       |     |   |   |-ImplicitCastExpr 0x7f9344814548 <col:48, col:50> 'float' <LValueToRValue>
+|   | |   |       |     |   |   | `-ParenExpr 0x7f93448144e0 <col:48, col:50> 'float' lvalue
+|   | |   |       |     |   |   |   `-DeclRefExpr 0x7f93448144b8 <col:49> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   | |   |       |     |   |   `-ImplicitCastExpr 0x7f9344814560 <col:54, col:56> 'float' <LValueToRValue>
+|   | |   |       |     |   |     `-ParenExpr 0x7f9344814528 <col:54, col:56> 'float' lvalue
+|   | |   |       |     |   |       `-DeclRefExpr 0x7f9344814500 <col:55> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   | |   |       |     |   `-ParenExpr 0x7f93448146a8 <col:62, col:72> 'float'
+|   | |   |       |     |     `-BinaryOperator 0x7f9344814680 <col:63, col:71> 'float' '-'
+|   | |   |       |     |       |-ImplicitCastExpr 0x7f9344814650 <col:63, col:65> 'float' <LValueToRValue>
+|   | |   |       |     |       | `-ParenExpr 0x7f93448145e8 <col:63, col:65> 'float' lvalue
+|   | |   |       |     |       |   `-DeclRefExpr 0x7f93448145c0 <col:64> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   | |   |       |     |       `-ImplicitCastExpr 0x7f9344814668 <col:69, col:71> 'float' <LValueToRValue>
+|   | |   |       |     |         `-ParenExpr 0x7f9344814630 <col:69, col:71> 'float' lvalue
+|   | |   |       |     |           `-DeclRefExpr 0x7f9344814608 <col:70> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   | |   |       |     `-ImplicitCastExpr 0x7f9344814778 <col:75> 'long' <IntegralCast>
+|   | |   |       |       `-IntegerLiteral 0x7f93448146f0 <col:75> 'int' 0
+|   | |   |       `-ImplicitCastExpr 0x7f9344814838 <col:79> 'long' <IntegralCast>
+|   | |   |         `-IntegerLiteral 0x7f93448147b0 <col:79> 'int' 1
+|   | |   `-ImplicitCastExpr 0x7f9344814920 <col:83> 'long' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7f9344814898 <col:83> 'int' 0
+|   | |-BinaryOperator 0x7f93448153d8 <line:18:5, line:19:102> 'float' '='
+|   | | |-DeclRefExpr 0x7f9344814960 <line:18:5> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | | `-CallExpr 0x7f9344815370 <col:9, line:19:102> 'float'
+|   | |   |-ImplicitCastExpr 0x7f9344815358 <line:18:9> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f9344814b98 <col:9> '<builtin fn type>' Function 0x7f93448149d0 '__builtin_copysignf' 'float (float, float)'
+|   | |   |-ImplicitCastExpr 0x7f93448153a8 <col:30, line:19:98> 'float' <IntegralToFloating>
+|   | |   | `-ConditionalOperator 0x7f93448152d0 <line:18:30, line:19:98> 'int'
+|   | |   |   |-CallExpr 0x7f9344815228 <line:18:30, line:19:90> 'long'
+|   | |   |   | |-ImplicitCastExpr 0x7f9344815210 <line:18:30> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   | | `-DeclRefExpr 0x7f9344814bc0 <col:30> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   | |-ImplicitCastExpr 0x7f9344815260 <col:48, line:19:86> 'long' <IntegralCast>
+|   | |   |   | | `-BinaryOperator 0x7f93448151c8 <line:18:48, line:19:86> 'int' '&'
+|   | |   |   | |   |-UnaryOperator 0x7f9344814d98 <line:18:48, col:80> 'int' prefix '!'
+|   | |   |   | |   | `-CallExpr 0x7f9344814d30 <col:49, col:80> 'long'
+|   | |   |   | |   |   |-ImplicitCastExpr 0x7f9344814d18 <col:49> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   | |   |   | `-DeclRefExpr 0x7f9344814be8 <col:49> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   | |   |   |-ImplicitCastExpr 0x7f9344814d68 <col:67, col:76> 'long' <IntegralCast>
+|   | |   |   | |   |   | `-BinaryOperator 0x7f9344814cd0 <col:67, col:76> 'int' '!='
+|   | |   |   | |   |   |   |-ImplicitCastExpr 0x7f9344814ca0 <col:67, col:69> 'float' <LValueToRValue>
+|   | |   |   | |   |   |   | `-ParenExpr 0x7f9344814c38 <col:67, col:69> 'float' lvalue
+|   | |   |   | |   |   |   |   `-DeclRefExpr 0x7f9344814c10 <col:68> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | |   |   | |   |   |   `-ImplicitCastExpr 0x7f9344814cb8 <col:74, col:76> 'float' <LValueToRValue>
+|   | |   |   | |   |   |     `-ParenExpr 0x7f9344814c80 <col:74, col:76> 'float' lvalue
+|   | |   |   | |   |   |       `-DeclRefExpr 0x7f9344814c58 <col:75> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | |   |   | |   |   `-ImplicitCastExpr 0x7f9344814d80 <col:79> 'long' <IntegralCast>
+|   | |   |   | |   |     `-IntegerLiteral 0x7f9344814cf8 <col:79> 'int' 0
+|   | |   |   | |   `-UnaryOperator 0x7f93448151a8 <line:19:15, col:86> 'int' prefix '!'
+|   | |   |   | |     `-CallExpr 0x7f9344815140 <col:16, col:86> 'long'
+|   | |   |   | |       |-ImplicitCastExpr 0x7f9344815128 <col:16> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   | |       | `-DeclRefExpr 0x7f9344814db8 <col:16> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   | |       |-ImplicitCastExpr 0x7f9344815178 <col:34, col:82> 'long' <IntegralCast>
+|   | |   |   | |       | `-UnaryOperator 0x7f93448150e8 <col:34, col:82> 'int' prefix '!'
+|   | |   |   | |       |   `-CallExpr 0x7f9344815080 <col:35, col:82> 'long'
+|   | |   |   | |       |     |-ImplicitCastExpr 0x7f9344815068 <col:35> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   | |       |     | `-DeclRefExpr 0x7f9344814de0 <col:35> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   | |       |     |-ImplicitCastExpr 0x7f93448150b8 <col:53, col:78> 'long' <IntegralCast>
+|   | |   |   | |       |     | `-BinaryOperator 0x7f9344815020 <col:53, col:78> 'int' '!='
+|   | |   |   | |       |     |   |-ParenExpr 0x7f9344814ef0 <col:53, col:63> 'float'
+|   | |   |   | |       |     |   | `-BinaryOperator 0x7f9344814ec8 <col:54, col:62> 'float' '-'
+|   | |   |   | |       |     |   |   |-ImplicitCastExpr 0x7f9344814e98 <col:54, col:56> 'float' <LValueToRValue>
+|   | |   |   | |       |     |   |   | `-ParenExpr 0x7f9344814e30 <col:54, col:56> 'float' lvalue
+|   | |   |   | |       |     |   |   |   `-DeclRefExpr 0x7f9344814e08 <col:55> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | |   |   | |       |     |   |   `-ImplicitCastExpr 0x7f9344814eb0 <col:60, col:62> 'float' <LValueToRValue>
+|   | |   |   | |       |     |   |     `-ParenExpr 0x7f9344814e78 <col:60, col:62> 'float' lvalue
+|   | |   |   | |       |     |   |       `-DeclRefExpr 0x7f9344814e50 <col:61> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | |   |   | |       |     |   `-ParenExpr 0x7f9344815000 <col:68, col:78> 'float'
+|   | |   |   | |       |     |     `-BinaryOperator 0x7f9344814fd0 <col:69, col:77> 'float' '-'
+|   | |   |   | |       |     |       |-ImplicitCastExpr 0x7f9344814fa0 <col:69, col:71> 'float' <LValueToRValue>
+|   | |   |   | |       |     |       | `-ParenExpr 0x7f9344814f38 <col:69, col:71> 'float' lvalue
+|   | |   |   | |       |     |       |   `-DeclRefExpr 0x7f9344814f10 <col:70> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | |   |   | |       |     |       `-ImplicitCastExpr 0x7f9344814fb8 <col:75, col:77> 'float' <LValueToRValue>
+|   | |   |   | |       |     |         `-ParenExpr 0x7f9344814f80 <col:75, col:77> 'float' lvalue
+|   | |   |   | |       |     |           `-DeclRefExpr 0x7f9344814f58 <col:76> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | |   |   | |       |     `-ImplicitCastExpr 0x7f93448150d0 <col:81> 'long' <IntegralCast>
+|   | |   |   | |       |       `-IntegerLiteral 0x7f9344815048 <col:81> 'int' 0
+|   | |   |   | |       `-ImplicitCastExpr 0x7f9344815190 <col:85> 'long' <IntegralCast>
+|   | |   |   | |         `-IntegerLiteral 0x7f9344815108 <col:85> 'int' 1
+|   | |   |   | `-ImplicitCastExpr 0x7f9344815278 <col:89> 'long' <IntegralCast>
+|   | |   |   |   `-IntegerLiteral 0x7f93448151f0 <col:89> 'int' 0
+|   | |   |   |-IntegerLiteral 0x7f9344815290 <col:94> 'int' 1
+|   | |   |   `-IntegerLiteral 0x7f93448152b0 <col:98> 'int' 0
+|   | |   `-ImplicitCastExpr 0x7f93448153c0 <col:101> 'float' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9344815300 <col:101> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f9344815c68 <line:21:3, col:169> 'float' '='
+|   | |-DeclRefExpr 0x7f9344815438 <col:3> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   | `-CallExpr 0x7f9344815c00 <col:7, col:169> 'float'
+|   |   |-ImplicitCastExpr 0x7f9344815be8 <col:7> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7f9344815460 <col:7> '<builtin fn type>' Function 0x7f93448149d0 '__builtin_copysignf' 'float (float, float)'
+|   |   |-ImplicitCastExpr 0x7f9344815c38 <col:28, col:165> 'float' <IntegralToFloating>
+|   |   | `-ConditionalOperator 0x7f9344815b90 <col:28, col:165> 'int'
+|   |   |   |-CallExpr 0x7f9344815ae8 <col:28, col:157> 'long'
+|   |   |   | |-ImplicitCastExpr 0x7f9344815ad0 <col:28> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   |   | | `-DeclRefExpr 0x7f9344815488 <col:28> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   |   |   | |-ImplicitCastExpr 0x7f9344815b20 <col:46, col:153> 'long' <IntegralCast>
+|   |   |   | | `-BinaryOperator 0x7f9344815a88 <col:46, col:153> 'int' '&'
+|   |   |   | |   |-UnaryOperator 0x7f9344815660 <col:46, col:78> 'int' prefix '!'
+|   |   |   | |   | `-CallExpr 0x7f93448155f8 <col:47, col:78> 'long'
+|   |   |   | |   |   |-ImplicitCastExpr 0x7f93448155e0 <col:47> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   |   | |   |   | `-DeclRefExpr 0x7f93448154b0 <col:47> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   |   |   | |   |   |-ImplicitCastExpr 0x7f9344815630 <col:65, col:74> 'long' <IntegralCast>
+|   |   |   | |   |   | `-BinaryOperator 0x7f9344815598 <col:65, col:74> 'int' '!='
+|   |   |   | |   |   |   |-ImplicitCastExpr 0x7f9344815568 <col:65, col:67> 'float' <LValueToRValue>
+|   |   |   | |   |   |   | `-ParenExpr 0x7f9344815500 <col:65, col:67> 'float' lvalue
+|   |   |   | |   |   |   |   `-DeclRefExpr 0x7f93448154d8 <col:66> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |   |   | |   |   |   `-ImplicitCastExpr 0x7f9344815580 <col:72, col:74> 'float' <LValueToRValue>
+|   |   |   | |   |   |     `-ParenExpr 0x7f9344815548 <col:72, col:74> 'float' lvalue
+|   |   |   | |   |   |       `-DeclRefExpr 0x7f9344815520 <col:73> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |   |   | |   |   `-ImplicitCastExpr 0x7f9344815648 <col:77> 'long' <IntegralCast>
+|   |   |   | |   |     `-IntegerLiteral 0x7f93448155c0 <col:77> 'int' 0
+|   |   |   | |   `-UnaryOperator 0x7f9344815a68 <col:82, col:153> 'int' prefix '!'
+|   |   |   | |     `-CallExpr 0x7f9344815a00 <col:83, col:153> 'long'
+|   |   |   | |       |-ImplicitCastExpr 0x7f93448159e8 <col:83> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   |   | |       | `-DeclRefExpr 0x7f9344815680 <col:83> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   |   |   | |       |-ImplicitCastExpr 0x7f9344815a38 <col:101, col:149> 'long' <IntegralCast>
+|   |   |   | |       | `-UnaryOperator 0x7f93448159a8 <col:101, col:149> 'int' prefix '!'
+|   |   |   | |       |   `-CallExpr 0x7f9344815940 <col:102, col:149> 'long'
+|   |   |   | |       |     |-ImplicitCastExpr 0x7f9344815928 <col:102> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   |   | |       |     | `-DeclRefExpr 0x7f93448156a8 <col:102> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   |   |   | |       |     |-ImplicitCastExpr 0x7f9344815978 <col:120, col:145> 'long' <IntegralCast>
+|   |   |   | |       |     | `-BinaryOperator 0x7f93448158e0 <col:120, col:145> 'int' '!='
+|   |   |   | |       |     |   |-ParenExpr 0x7f93448157b8 <col:120, col:130> 'float'
+|   |   |   | |       |     |   | `-BinaryOperator 0x7f9344815790 <col:121, col:129> 'float' '-'
+|   |   |   | |       |     |   |   |-ImplicitCastExpr 0x7f9344815760 <col:121, col:123> 'float' <LValueToRValue>
+|   |   |   | |       |     |   |   | `-ParenExpr 0x7f93448156f8 <col:121, col:123> 'float' lvalue
+|   |   |   | |       |     |   |   |   `-DeclRefExpr 0x7f93448156d0 <col:122> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |   |   | |       |     |   |   `-ImplicitCastExpr 0x7f9344815778 <col:127, col:129> 'float' <LValueToRValue>
+|   |   |   | |       |     |   |     `-ParenExpr 0x7f9344815740 <col:127, col:129> 'float' lvalue
+|   |   |   | |       |     |   |       `-DeclRefExpr 0x7f9344815718 <col:128> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |   |   | |       |     |   `-ParenExpr 0x7f93448158c0 <col:135, col:145> 'float'
+|   |   |   | |       |     |     `-BinaryOperator 0x7f9344815898 <col:136, col:144> 'float' '-'
+|   |   |   | |       |     |       |-ImplicitCastExpr 0x7f9344815868 <col:136, col:138> 'float' <LValueToRValue>
+|   |   |   | |       |     |       | `-ParenExpr 0x7f9344815800 <col:136, col:138> 'float' lvalue
+|   |   |   | |       |     |       |   `-DeclRefExpr 0x7f93448157d8 <col:137> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |   |   | |       |     |       `-ImplicitCastExpr 0x7f9344815880 <col:142, col:144> 'float' <LValueToRValue>
+|   |   |   | |       |     |         `-ParenExpr 0x7f9344815848 <col:142, col:144> 'float' lvalue
+|   |   |   | |       |     |           `-DeclRefExpr 0x7f9344815820 <col:143> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |   |   | |       |     `-ImplicitCastExpr 0x7f9344815990 <col:148> 'long' <IntegralCast>
+|   |   |   | |       |       `-IntegerLiteral 0x7f9344815908 <col:148> 'int' 0
+|   |   |   | |       `-ImplicitCastExpr 0x7f9344815a50 <col:152> 'long' <IntegralCast>
+|   |   |   | |         `-IntegerLiteral 0x7f93448159c8 <col:152> 'int' 1
+|   |   |   | `-ImplicitCastExpr 0x7f9344815b38 <col:156> 'long' <IntegralCast>
+|   |   |   |   `-IntegerLiteral 0x7f9344815ab0 <col:156> 'int' 0
+|   |   |   |-IntegerLiteral 0x7f9344815b50 <col:161> 'int' 1
+|   |   |   `-IntegerLiteral 0x7f9344815b70 <col:165> 'int' 0
+|   |   `-ImplicitCastExpr 0x7f9344815c50 <col:168> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f9344815bc0 <col:168> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   |-IfStmt 0x7f93448172b8 <line:22:3, line:27:34>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7f9344817158 <line:22:7, line:26:147> 'int'
+|   | | `-BinaryOperator 0x7f9344817130 <line:22:8, line:26:146> 'int' '||'
+|   | |   |-BinaryOperator 0x7f9344816a40 <line:22:8, line:25:89> 'int' '||'
+|   | |   | |-CallExpr 0x7f9344816310 <line:22:8, line:23:86> 'long'
+|   | |   | | |-ImplicitCastExpr 0x7f93448162f8 <line:22:8> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | | `-DeclRefExpr 0x7f9344815c90 <col:8> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   | | |-ImplicitCastExpr 0x7f9344816348 <col:26, line:23:82> 'long' <IntegralCast>
+|   | |   | | | `-BinaryOperator 0x7f93448162b0 <line:22:26, line:23:82> 'int' '&'
+|   | |   | | |   |-UnaryOperator 0x7f9344815e68 <line:22:26, col:60> 'int' prefix '!'
+|   | |   | | |   | `-CallExpr 0x7f9344815e00 <col:27, col:60> 'long'
+|   | |   | | |   |   |-ImplicitCastExpr 0x7f9344815de8 <col:27> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | |   |   | `-DeclRefExpr 0x7f9344815cb8 <col:27> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   | | |   |   |-ImplicitCastExpr 0x7f9344815e38 <col:45, col:56> 'long' <IntegralCast>
+|   | |   | | |   |   | `-BinaryOperator 0x7f9344815da0 <col:45, col:56> 'int' '!='
+|   | |   | | |   |   |   |-ImplicitCastExpr 0x7f9344815d70 <col:45, col:48> 'float' <LValueToRValue>
+|   | |   | | |   |   |   | `-ParenExpr 0x7f9344815d08 <col:45, col:48> 'float' lvalue
+|   | |   | | |   |   |   |   `-DeclRefExpr 0x7f9344815ce0 <col:46> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | |   | | |   |   |   `-ImplicitCastExpr 0x7f9344815d88 <col:53, col:56> 'float' <LValueToRValue>
+|   | |   | | |   |   |     `-ParenExpr 0x7f9344815d50 <col:53, col:56> 'float' lvalue
+|   | |   | | |   |   |       `-DeclRefExpr 0x7f9344815d28 <col:54> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | |   | | |   |   `-ImplicitCastExpr 0x7f9344815e50 <col:59> 'long' <IntegralCast>
+|   | |   | | |   |     `-IntegerLiteral 0x7f9344815dc8 <col:59> 'int' 0
+|   | |   | | |   `-UnaryOperator 0x7f9344816290 <line:23:7, col:82> 'int' prefix '!'
+|   | |   | | |     `-CallExpr 0x7f9344816228 <col:8, col:82> 'long'
+|   | |   | | |       |-ImplicitCastExpr 0x7f9344816210 <col:8> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | |       | `-DeclRefExpr 0x7f9344815e88 <col:8> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   | | |       |-ImplicitCastExpr 0x7f9344816260 <col:26, col:78> 'long' <IntegralCast>
+|   | |   | | |       | `-UnaryOperator 0x7f93448161d0 <col:26, col:78> 'int' prefix '!'
+|   | |   | | |       |   `-CallExpr 0x7f9344816168 <col:27, col:78> 'long'
+|   | |   | | |       |     |-ImplicitCastExpr 0x7f9344816150 <col:27> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   | | |       |     | `-DeclRefExpr 0x7f9344815eb0 <col:27> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   | | |       |     |-ImplicitCastExpr 0x7f93448161a0 <col:45, col:74> 'long' <IntegralCast>
+|   | |   | | |       |     | `-BinaryOperator 0x7f9344816108 <col:45, col:74> 'int' '!='
+|   | |   | | |       |     |   |-ParenExpr 0x7f9344815fc0 <col:45, col:57> 'float'
+|   | |   | | |       |     |   | `-BinaryOperator 0x7f9344815f98 <col:46, col:56> 'float' '-'
+|   | |   | | |       |     |   |   |-ImplicitCastExpr 0x7f9344815f68 <col:46, col:49> 'float' <LValueToRValue>
+|   | |   | | |       |     |   |   | `-ParenExpr 0x7f9344815f00 <col:46, col:49> 'float' lvalue
+|   | |   | | |       |     |   |   |   `-DeclRefExpr 0x7f9344815ed8 <col:47> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | |   | | |       |     |   |   `-ImplicitCastExpr 0x7f9344815f80 <col:53, col:56> 'float' <LValueToRValue>
+|   | |   | | |       |     |   |     `-ParenExpr 0x7f9344815f48 <col:53, col:56> 'float' lvalue
+|   | |   | | |       |     |   |       `-DeclRefExpr 0x7f9344815f20 <col:54> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | |   | | |       |     |   `-ParenExpr 0x7f93448160e8 <col:62, col:74> 'float'
+|   | |   | | |       |     |     `-BinaryOperator 0x7f93448160c0 <col:63, col:73> 'float' '-'
+|   | |   | | |       |     |       |-ImplicitCastExpr 0x7f9344816090 <col:63, col:66> 'float' <LValueToRValue>
+|   | |   | | |       |     |       | `-ParenExpr 0x7f9344816028 <col:63, col:66> 'float' lvalue
+|   | |   | | |       |     |       |   `-DeclRefExpr 0x7f9344816000 <col:64> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | |   | | |       |     |       `-ImplicitCastExpr 0x7f93448160a8 <col:70, col:73> 'float' <LValueToRValue>
+|   | |   | | |       |     |         `-ParenExpr 0x7f9344816070 <col:70, col:73> 'float' lvalue
+|   | |   | | |       |     |           `-DeclRefExpr 0x7f9344816048 <col:71> 'float' lvalue Var 0x7f9343858f00 'ac' 'float'
+|   | |   | | |       |     `-ImplicitCastExpr 0x7f93448161b8 <col:77> 'long' <IntegralCast>
+|   | |   | | |       |       `-IntegerLiteral 0x7f9344816130 <col:77> 'int' 0
+|   | |   | | |       `-ImplicitCastExpr 0x7f9344816278 <col:81> 'long' <IntegralCast>
+|   | |   | | |         `-IntegerLiteral 0x7f93448161f0 <col:81> 'int' 1
+|   | |   | | `-ImplicitCastExpr 0x7f9344816360 <col:85> 'long' <IntegralCast>
+|   | |   | |   `-IntegerLiteral 0x7f93448162d8 <col:85> 'int' 0
+|   | |   | `-CallExpr 0x7f93448169d8 <line:24:11, line:25:89> 'long'
+|   | |   |   |-ImplicitCastExpr 0x7f93448169c0 <line:24:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   | `-DeclRefExpr 0x7f9344816378 <col:11> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   |-ImplicitCastExpr 0x7f9344816a10 <col:29, line:25:85> 'long' <IntegralCast>
+|   | |   |   | `-BinaryOperator 0x7f9344816978 <line:24:29, line:25:85> 'int' '&'
+|   | |   |   |   |-UnaryOperator 0x7f9344816550 <line:24:29, col:63> 'int' prefix '!'
+|   | |   |   |   | `-CallExpr 0x7f93448164e8 <col:30, col:63> 'long'
+|   | |   |   |   |   |-ImplicitCastExpr 0x7f93448164d0 <col:30> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   |   |   | `-DeclRefExpr 0x7f93448163a0 <col:30> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   |   |   |-ImplicitCastExpr 0x7f9344816520 <col:48, col:59> 'long' <IntegralCast>
+|   | |   |   |   |   | `-BinaryOperator 0x7f9344816488 <col:48, col:59> 'int' '!='
+|   | |   |   |   |   |   |-ImplicitCastExpr 0x7f9344816458 <col:48, col:51> 'float' <LValueToRValue>
+|   | |   |   |   |   |   | `-ParenExpr 0x7f93448163f0 <col:48, col:51> 'float' lvalue
+|   | |   |   |   |   |   |   `-DeclRefExpr 0x7f93448163c8 <col:49> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | |   |   |   |   |   `-ImplicitCastExpr 0x7f9344816470 <col:56, col:59> 'float' <LValueToRValue>
+|   | |   |   |   |   |     `-ParenExpr 0x7f9344816438 <col:56, col:59> 'float' lvalue
+|   | |   |   |   |   |       `-DeclRefExpr 0x7f9344816410 <col:57> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | |   |   |   |   `-ImplicitCastExpr 0x7f9344816538 <col:62> 'long' <IntegralCast>
+|   | |   |   |   |     `-IntegerLiteral 0x7f93448164b0 <col:62> 'int' 0
+|   | |   |   |   `-UnaryOperator 0x7f9344816958 <line:25:10, col:85> 'int' prefix '!'
+|   | |   |   |     `-CallExpr 0x7f93448168f0 <col:11, col:85> 'long'
+|   | |   |   |       |-ImplicitCastExpr 0x7f93448168d8 <col:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   |       | `-DeclRefExpr 0x7f9344816570 <col:11> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   |       |-ImplicitCastExpr 0x7f9344816928 <col:29, col:81> 'long' <IntegralCast>
+|   | |   |   |       | `-UnaryOperator 0x7f9344816898 <col:29, col:81> 'int' prefix '!'
+|   | |   |   |       |   `-CallExpr 0x7f9344816830 <col:30, col:81> 'long'
+|   | |   |   |       |     |-ImplicitCastExpr 0x7f9344816818 <col:30> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |   |   |       |     | `-DeclRefExpr 0x7f9344816598 <col:30> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |   |   |       |     |-ImplicitCastExpr 0x7f9344816868 <col:48, col:77> 'long' <IntegralCast>
+|   | |   |   |       |     | `-BinaryOperator 0x7f93448167d0 <col:48, col:77> 'int' '!='
+|   | |   |   |       |     |   |-ParenExpr 0x7f93448166a8 <col:48, col:60> 'float'
+|   | |   |   |       |     |   | `-BinaryOperator 0x7f9344816680 <col:49, col:59> 'float' '-'
+|   | |   |   |       |     |   |   |-ImplicitCastExpr 0x7f9344816650 <col:49, col:52> 'float' <LValueToRValue>
+|   | |   |   |       |     |   |   | `-ParenExpr 0x7f93448165e8 <col:49, col:52> 'float' lvalue
+|   | |   |   |       |     |   |   |   `-DeclRefExpr 0x7f93448165c0 <col:50> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | |   |   |       |     |   |   `-ImplicitCastExpr 0x7f9344816668 <col:56, col:59> 'float' <LValueToRValue>
+|   | |   |   |       |     |   |     `-ParenExpr 0x7f9344816630 <col:56, col:59> 'float' lvalue
+|   | |   |   |       |     |   |       `-DeclRefExpr 0x7f9344816608 <col:57> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | |   |   |       |     |   `-ParenExpr 0x7f93448167b0 <col:65, col:77> 'float'
+|   | |   |   |       |     |     `-BinaryOperator 0x7f9344816788 <col:66, col:76> 'float' '-'
+|   | |   |   |       |     |       |-ImplicitCastExpr 0x7f9344816758 <col:66, col:69> 'float' <LValueToRValue>
+|   | |   |   |       |     |       | `-ParenExpr 0x7f93448166f0 <col:66, col:69> 'float' lvalue
+|   | |   |   |       |     |       |   `-DeclRefExpr 0x7f93448166c8 <col:67> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | |   |   |       |     |       `-ImplicitCastExpr 0x7f9344816770 <col:73, col:76> 'float' <LValueToRValue>
+|   | |   |   |       |     |         `-ParenExpr 0x7f9344816738 <col:73, col:76> 'float' lvalue
+|   | |   |   |       |     |           `-DeclRefExpr 0x7f9344816710 <col:74> 'float' lvalue Var 0x7f9343858f78 'bd' 'float'
+|   | |   |   |       |     `-ImplicitCastExpr 0x7f9344816880 <col:80> 'long' <IntegralCast>
+|   | |   |   |       |       `-IntegerLiteral 0x7f93448167f8 <col:80> 'int' 0
+|   | |   |   |       `-ImplicitCastExpr 0x7f9344816940 <col:84> 'long' <IntegralCast>
+|   | |   |   |         `-IntegerLiteral 0x7f93448168b8 <col:84> 'int' 1
+|   | |   |   `-ImplicitCastExpr 0x7f9344816a28 <col:88> 'long' <IntegralCast>
+|   | |   |     `-IntegerLiteral 0x7f93448169a0 <col:88> 'int' 0
+|   | |   `-CallExpr 0x7f93448170c8 <line:26:11, col:146> 'long'
+|   | |     |-ImplicitCastExpr 0x7f93448170b0 <col:11> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |     | `-DeclRefExpr 0x7f9344816a68 <col:11> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |     |-ImplicitCastExpr 0x7f9344817100 <col:29, col:142> 'long' <IntegralCast>
+|   | |     | `-BinaryOperator 0x7f9344817068 <col:29, col:142> 'int' '&'
+|   | |     |   |-UnaryOperator 0x7f9344816c40 <col:29, col:63> 'int' prefix '!'
+|   | |     |   | `-CallExpr 0x7f9344816bd8 <col:30, col:63> 'long'
+|   | |     |   |   |-ImplicitCastExpr 0x7f9344816bc0 <col:30> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |     |   |   | `-DeclRefExpr 0x7f9344816a90 <col:30> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |     |   |   |-ImplicitCastExpr 0x7f9344816c10 <col:48, col:59> 'long' <IntegralCast>
+|   | |     |   |   | `-BinaryOperator 0x7f9344816b78 <col:48, col:59> 'int' '!='
+|   | |     |   |   |   |-ImplicitCastExpr 0x7f9344816b48 <col:48, col:51> 'float' <LValueToRValue>
+|   | |     |   |   |   | `-ParenExpr 0x7f9344816ae0 <col:48, col:51> 'float' lvalue
+|   | |     |   |   |   |   `-DeclRefExpr 0x7f9344816ab8 <col:49> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | |     |   |   |   `-ImplicitCastExpr 0x7f9344816b60 <col:56, col:59> 'float' <LValueToRValue>
+|   | |     |   |   |     `-ParenExpr 0x7f9344816b28 <col:56, col:59> 'float' lvalue
+|   | |     |   |   |       `-DeclRefExpr 0x7f9344816b00 <col:57> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | |     |   |   `-ImplicitCastExpr 0x7f9344816c28 <col:62> 'long' <IntegralCast>
+|   | |     |   |     `-IntegerLiteral 0x7f9344816ba0 <col:62> 'int' 0
+|   | |     |   `-UnaryOperator 0x7f9344817048 <col:67, col:142> 'int' prefix '!'
+|   | |     |     `-CallExpr 0x7f9344816fe0 <col:68, col:142> 'long'
+|   | |     |       |-ImplicitCastExpr 0x7f9344816fc8 <col:68> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |     |       | `-DeclRefExpr 0x7f9344816c60 <col:68> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |     |       |-ImplicitCastExpr 0x7f9344817018 <col:86, col:138> 'long' <IntegralCast>
+|   | |     |       | `-UnaryOperator 0x7f9344816f88 <col:86, col:138> 'int' prefix '!'
+|   | |     |       |   `-CallExpr 0x7f9344816f20 <col:87, col:138> 'long'
+|   | |     |       |     |-ImplicitCastExpr 0x7f9344816f08 <col:87> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | |     |       |     | `-DeclRefExpr 0x7f9344816c88 <col:87> '<builtin fn type>' Function 0x7f93438595b0 '__builtin_expect' 'long (long, long)'
+|   | |     |       |     |-ImplicitCastExpr 0x7f9344816f58 <col:105, col:134> 'long' <IntegralCast>
+|   | |     |       |     | `-BinaryOperator 0x7f9344816ec0 <col:105, col:134> 'int' '!='
+|   | |     |       |     |   |-ParenExpr 0x7f9344816d98 <col:105, col:117> 'float'
+|   | |     |       |     |   | `-BinaryOperator 0x7f9344816d70 <col:106, col:116> 'float' '-'
+|   | |     |       |     |   |   |-ImplicitCastExpr 0x7f9344816d40 <col:106, col:109> 'float' <LValueToRValue>
+|   | |     |       |     |   |   | `-ParenExpr 0x7f9344816cd8 <col:106, col:109> 'float' lvalue
+|   | |     |       |     |   |   |   `-DeclRefExpr 0x7f9344816cb0 <col:107> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | |     |       |     |   |   `-ImplicitCastExpr 0x7f9344816d58 <col:113, col:116> 'float' <LValueToRValue>
+|   | |     |       |     |   |     `-ParenExpr 0x7f9344816d20 <col:113, col:116> 'float' lvalue
+|   | |     |       |     |   |       `-DeclRefExpr 0x7f9344816cf8 <col:114> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | |     |       |     |   `-ParenExpr 0x7f9344816ea0 <col:122, col:134> 'float'
+|   | |     |       |     |     `-BinaryOperator 0x7f9344816e78 <col:123, col:133> 'float' '-'
+|   | |     |       |     |       |-ImplicitCastExpr 0x7f9344816e48 <col:123, col:126> 'float' <LValueToRValue>
+|   | |     |       |     |       | `-ParenExpr 0x7f9344816de0 <col:123, col:126> 'float' lvalue
+|   | |     |       |     |       |   `-DeclRefExpr 0x7f9344816db8 <col:124> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | |     |       |     |       `-ImplicitCastExpr 0x7f9344816e60 <col:130, col:133> 'float' <LValueToRValue>
+|   | |     |       |     |         `-ParenExpr 0x7f9344816e28 <col:130, col:133> 'float' lvalue
+|   | |     |       |     |           `-DeclRefExpr 0x7f9344816e00 <col:131> 'float' lvalue Var 0x7f9343859068 'bc' 'float'
+|   | |     |       |     `-ImplicitCastExpr 0x7f9344816f70 <col:137> 'long' <IntegralCast>
+|   | |     |       |       `-IntegerLiteral 0x7f9344816ee8 <col:137> 'int' 0
+|   | |     |       `-ImplicitCastExpr 0x7f9344817030 <col:141> 'long' <IntegralCast>
+|   | |     |         `-IntegerLiteral 0x7f9344816fa8 <col:141> 'int' 1
+|   | |     `-ImplicitCastExpr 0x7f9344817118 <col:145> 'long' <IntegralCast>
+|   | |       `-IntegerLiteral 0x7f9344817090 <col:145> 'int' 0
+|   | |-BinaryOperator 0x7f9344817290 <line:27:5, col:34> 'float' '='
+|   | | |-DeclRefExpr 0x7f9344817178 <col:5> 'float' lvalue ParmVar 0x7f9343858cf0 'd' 'float'
+|   | | `-CallExpr 0x7f9344817228 <col:9, col:34> 'float'
+|   | |   |-ImplicitCastExpr 0x7f9344817210 <col:9> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7f93448171a0 <col:9> '<builtin fn type>' Function 0x7f93448149d0 '__builtin_copysignf' 'float (float, float)'
+|   | |   |-ImplicitCastExpr 0x7f9344817260 <col:30> 'float' <IntegralToFloating>
+|   | |   | `-IntegerLiteral 0x7f93448171c8 <col:30> 'int' 0
+|   | |   `-ImplicitCastExpr 0x7f9344817278 <col:33> 'float' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f93448171e8 <col:33> 'float' lvalue ParmVar 0x7f9343858cf0 'd' 'float'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f9344817490 <line:29:3, col:19> 'float' '='
+|   | |-DeclRefExpr 0x7f93448172f0 <col:3> 'float' lvalue Var 0x7f93438590e0 'y' 'float'
+|   | `-BinaryOperator 0x7f9344817468 <col:7, col:19> 'float' '+'
+|   |   |-BinaryOperator 0x7f9344817398 <col:7, col:11> 'float' '*'
+|   |   | |-ImplicitCastExpr 0x7f9344817368 <col:7> 'float' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f9344817318 <col:7> 'float' lvalue ParmVar 0x7f9343826578 'a' 'float'
+|   |   | `-ImplicitCastExpr 0x7f9344817380 <col:11> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f9344817340 <col:11> 'float' lvalue ParmVar 0x7f9343858cf0 'd' 'float'
+|   |   `-BinaryOperator 0x7f9344817440 <col:15, col:19> 'float' '*'
+|   |     |-ImplicitCastExpr 0x7f9344817410 <col:15> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f93448173c0 <col:15> 'float' lvalue ParmVar 0x7f9343858c00 'b' 'float'
+|   |     `-ImplicitCastExpr 0x7f9344817428 <col:19> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f93448173e8 <col:19> 'float' lvalue ParmVar 0x7f9343858c78 'c' 'float'
+|   `-ReturnStmt 0x7f93448174f8 <line:31:3, col:10>
+|     `-ImplicitCastExpr 0x7f93448174e0 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7f93448174b8 <col:10> 'float' lvalue Var 0x7f93438590e0 'y' 'float'
+|-FunctionDecl 0x7f93438595b0 <line:14:7> col:7 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7f9343859650 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7f93438596b0 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7f9343859720 <col:7> Implicit
+| `-ConstAttr 0x7f9343859768 <col:7> Implicit
+`-FunctionDecl 0x7f93448149d0 <line:18:9> col:9 implicit used __builtin_copysignf 'float (float, float)' extern
+  |-ParmVarDecl 0x7f9344814a70 <<invalid sloc>> <invalid sloc> 'float'
+  |-ParmVarDecl 0x7f9344814ad0 <<invalid sloc>> <invalid sloc> 'float'
+  |-NoThrowAttr 0x7f9344814b40 <col:9> Implicit
+  `-ConstAttr 0x7f9344814b88 <col:9> Implicit

@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f88528174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8852818160 <../Data/C2AST/pr46388.c:3:1, col:8> col:8 struct S
+|-RecordDecl 0x7f885283c020 <line:4:1, line:7:1> line:4:8 struct T definition
+| `-FieldDecl 0x7f885283c180 <line:6:3, col:13> col:13 referenced t 'struct S *'
+|-VarDecl 0x7f885283c1e8 <line:8:1, col:17> col:17 used s 'struct S':'struct S' extern
+|-VarDecl 0x7f885283c2a8 <col:1, col:20> col:20 used u 'struct S':'struct S' extern
+`-FunctionDecl 0x7f885283c3e0 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7f885283c670 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7f885283c648 <line:13:3, col:27> 'struct S *' '='
+      |-MemberExpr 0x7f885283c5c8 <col:3, col:22> 'struct S *' lvalue ->t 0x7f885283c180
+      | `-ParenExpr 0x7f885283c5a8 <col:3, col:19> 'struct T *'
+      |   `-CStyleCastExpr 0x7f885283c580 <col:4, col:18> 'struct T *' <BitCast>
+      |     `-UnaryOperator 0x7f885283c4a8 <col:17, col:18> 'struct S *' prefix '&'
+      |       `-DeclRefExpr 0x7f885283c480 <col:18> 'struct S':'struct S' lvalue Var 0x7f885283c2a8 'u' 'struct S':'struct S'
+      `-UnaryOperator 0x7f885283c628 <col:26, col:27> 'struct S *' prefix '&'
+        `-DeclRefExpr 0x7f885283c600 <col:27> 'struct S':'struct S' lvalue Var 0x7f885283c1e8 's' 'struct S':'struct S'

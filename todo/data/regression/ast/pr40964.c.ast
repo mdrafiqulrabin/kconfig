@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fe33f80e8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe33f80f560 <../Data/C2AST/pr40964.c:1:1, line:5:1> line:1:8 struct alloc2 definition
+| |-FieldDecl 0x7fe33f810638 <line:2:5, col:9> col:9 bla 'int'
+| |-FieldDecl 0x7fe33f810698 <line:3:5, col:23> col:23 referenced data 'char *restrict'
+| `-FieldDecl 0x7fe33f8106f8 <line:4:5, col:23> col:23 data2 'char *restrict'
+|-VarDecl 0x7fe33f810790 <line:6:1, col:15> col:15 used b 'struct alloc2':'struct alloc2'
+`-FunctionDecl 0x7fe33f8108f8 <line:7:1, line:10:1> line:7:8 f 'void *(void)'
+  `-CompoundStmt 0x7fe33f810a40 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fe33f810a28 <line:9:3, col:12>
+      `-ImplicitCastExpr 0x7fe33f810a10 <col:10, col:12> 'void *' <BitCast>
+        `-ImplicitCastExpr 0x7fe33f8109f8 <col:10, col:12> 'char *' <LValueToRValue>
+          `-MemberExpr 0x7fe33f8109c0 <col:10, col:12> 'char *restrict' lvalue .data 0x7fe33f810698
+            `-DeclRefExpr 0x7fe33f810998 <col:10> 'struct alloc2':'struct alloc2' lvalue Var 0x7fe33f810790 'b' 'struct alloc2':'struct alloc2'

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd93c01a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd93b034600 <../Data/C2AST/pr83621.c:6:1, col:52> col:52 referenced V '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fd93c01b580 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fd93c01a9e0 'int'
+|-VarDecl 0x7fd93b034690 <line:7:1, col:3> col:3 used v 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+`-FunctionDecl 0x7fd93b034778 <line:9:1, line:13:1> line:10:1 foo 'void ()'
+  `-CompoundStmt 0x7fd93b034970 <line:11:1, line:13:1>
+    `-DeclStmt 0x7fd93b034958 <line:12:3, col:15>
+      `-VarDecl 0x7fd93b034828 <col:3, col:14> col:5 u 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' cinit
+        `-BinaryOperator 0x7fd93b034930 <col:9, col:14> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' '>>'
+          |-ImplicitCastExpr 0x7fd93b0348d0 <col:9> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd93b034888 <col:9> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue Var 0x7fd93b034690 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7fd93b034918 <col:14> 'int __attribute__((ext_vector_type(16)))' <VectorSplat>
+            `-IntegerLiteral 0x7fd93b0348b0 <col:14> 'int' 1

@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f839b01aee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f839b01bb78 <../Data/C2AST/pr45733.c:4:1, col:25> col:25 referenced intptr_t 'long'
+| `-BuiltinType 0x7f839b01b000 'long'
+`-FunctionDecl 0x7f839b8257d0 <line:6:1, line:13:1> line:7:1 foo 'intptr_t (void **, int)'
+  |-ParmVarDecl 0x7f839b825640 <col:6, col:13> col:13 used p 'void **'
+  |-ParmVarDecl 0x7f839b8256b8 <col:16, col:20> col:20 used i 'int'
+  `-CompoundStmt 0x7f839b825b98 <line:8:1, line:13:1>
+    |-DeclStmt 0x7f839b825968 <line:9:3, col:17>
+    | `-VarDecl 0x7f839b8258d0 <col:3, col:16> col:12 used x 'intptr_t':'long' cinit
+    |   `-ImplicitCastExpr 0x7f839b825950 <col:16> 'intptr_t':'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f839b825930 <col:16> 'int' 0
+    |-WhileStmt 0x7f839b825b20 <line:10:3, line:11:24>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f839b8259a8 <line:10:10, col:11> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7f839b825980 <col:10> 'int' lvalue ParmVar 0x7f839b8256b8 'i' 'int'
+    | `-CompoundAssignOperator 0x7f839b825ae8 <line:11:5, col:24> 'intptr_t':'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+    |   |-DeclRefExpr 0x7f839b8259c8 <col:5> 'intptr_t':'long' lvalue Var 0x7f839b8258d0 'x' 'intptr_t':'long'
+    |   `-CStyleCastExpr 0x7f839b825ac0 <col:10, col:24> 'intptr_t':'long' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7f839b825aa8 <col:21, col:24> 'void *' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7f839b825a70 <col:21, col:24> 'void *' lvalue
+    |         |-ImplicitCastExpr 0x7f839b825a40 <col:21> 'void **' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f839b8259f0 <col:21> 'void **' lvalue ParmVar 0x7f839b825640 'p' 'void **'
+    |         `-ImplicitCastExpr 0x7f839b825a58 <col:23> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f839b825a18 <col:23> 'int' lvalue ParmVar 0x7f839b8256b8 'i' 'int'
+    `-ReturnStmt 0x7f839b825b80 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7f839b825b68 <col:10> 'intptr_t':'long' <LValueToRValue>
+        `-DeclRefExpr 0x7f839b825b40 <col:10> 'intptr_t':'long' lvalue Var 0x7f839b8258d0 'x' 'intptr_t':'long'

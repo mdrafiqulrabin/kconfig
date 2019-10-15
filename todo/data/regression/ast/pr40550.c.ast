@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fda4302bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fda4402bc38 <../Data/C2AST/pr40550.c:6:1, col:15> col:15 referenced v2sf '__attribute__((__vector_size__(2 * sizeof(float)))) float'
+| `-VectorType 0x7fda4402bc00 '__attribute__((__vector_size__(2 * sizeof(float)))) float' 2
+|   `-BuiltinType 0x7fda4302bee0 'float'
+|-FunctionDecl 0x7fda4402bd50 <line:8:1, line:14:1> line:8:13 used test 'void (void)' static
+| `-CompoundStmt 0x7fda4402c300 <line:9:1, line:14:1>
+|   |-DeclStmt 0x7fda4402bfd0 <line:10:3, col:22>
+|   | `-VarDecl 0x7fda4402be60 <col:3, col:21> col:8 used a 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7fda4402bf50 <col:12, col:21> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7fda4402bfa0 <col:13> 'float' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7fda4402bec0 <col:13> 'double' 1.000000e+00
+|   |     `-ImplicitCastExpr 0x7fda4402bfb8 <col:18> 'float' <FloatingCast>
+|   |       `-FloatingLiteral 0x7fda4402bee0 <col:18> 'double' 0.000000e+00
+|   |-DeclStmt 0x7fda4402c168 <line:11:3, col:22>
+|   | `-VarDecl 0x7fda4402bff8 <col:3, col:21> col:8 used b 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' cinit
+|   |   `-InitListExpr 0x7fda4402c0e8 <col:12, col:21> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7fda4402c138 <col:13> 'float' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7fda4402c058 <col:13> 'double' 0.000000e+00
+|   |     `-ImplicitCastExpr 0x7fda4402c150 <col:18> 'float' <FloatingCast>
+|   |       `-FloatingLiteral 0x7fda4402c078 <col:18> 'double' 1.000000e+00
+|   |-DeclStmt 0x7fda4402c1f0 <line:12:3, col:9>
+|   | `-VarDecl 0x7fda4402c190 <col:3, col:8> col:8 used d 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|   `-BinaryOperator 0x7fda4402c2d8 <line:13:3, col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '='
+|     |-DeclRefExpr 0x7fda4402c208 <col:3> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fda4402c190 'd' 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|     `-BinaryOperator 0x7fda4402c2b0 <col:7, col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' '+'
+|       |-ImplicitCastExpr 0x7fda4402c280 <col:7> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fda4402c230 <col:7> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fda4402be60 'a' 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+|       `-ImplicitCastExpr 0x7fda4402c298 <col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fda4402c258 <col:11> 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float' lvalue Var 0x7fda4402bff8 'b' 'v2sf':'__attribute__((__vector_size__(2 * sizeof(float)))) float'
+`-FunctionDecl 0x7fda4402c380 <line:16:1, line:20:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fda4402c4f0 <line:17:1, line:20:1>
+    |-CallExpr 0x7fda4402c490 <line:18:3, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fda4402c478 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fda4402c420 <col:3> 'void (void)' Function 0x7fda4402bd50 'test' 'void (void)'
+    `-ReturnStmt 0x7fda4402c4d8 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fda4402c4b8 <col:10> 'int' 0

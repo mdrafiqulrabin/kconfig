@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7f82be81b4e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f82bf018c60 <../Data/C2AST/pr30848.c:3:1, line:6:1> line:3:6 foo 'void (double)'
+  |-ParmVarDecl 0x7f82be81c178 <col:10, col:17> col:17 used d 'double'
+  `-CompoundStmt 0x7f82bf018ea0 <line:4:1, line:6:1>
+    `-GCCAsmStmt 0x7f82bf018e40 <line:5:3, col:25>
+      `-DeclRefExpr 0x7f82bf018e18 <col:23> 'double' lvalue ParmVar 0x7f82be81c178 'd' 'double'

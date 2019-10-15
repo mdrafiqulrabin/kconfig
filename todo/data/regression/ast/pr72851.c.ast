@@ -1,0 +1,526 @@
+TranslationUnitDecl 0x7f99ff02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f99ff02c978 <../Data/C2AST/pr72851.c:3:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7f99ff02be40 'unsigned char'
+|-TypedefDecl 0x7f99ff814200 <line:4:1, col:27> col:27 referenced uint64_t 'unsigned long'
+| `-BuiltinType 0x7f99ff02bea0 'unsigned long'
+|-RecordDecl 0x7f99ff814258 <line:5:1, line:7:1> line:5:7 union unaligned_64 definition
+| |-MayAliasAttr 0x7f99ff814378 <line:8:40>
+| |-PackedAttr 0x7f99ff8143c0 <col:16>
+| `-FieldDecl 0x7f99ff814330 <line:6:5, col:14> col:14 l 'uint64_t':'unsigned long'
+|-RecordDecl 0x7f99ff8143d0 <line:9:9, line:11:1> line:9:16 struct AVDES definition
+| `-FieldDecl 0x7f99ff8145e8 <line:10:5, col:30> col:14 round_keys 'uint64_t [3][16]'
+|-TypedefDecl 0x7f99ff814680 <line:9:1, line:11:3> col:3 AVDES 'struct AVDES':'struct AVDES'
+| `-ElaboratedType 0x7f99ff814630 'struct AVDES' sugar
+|   `-RecordType 0x7f99ff814460 'struct AVDES'
+|     `-Record 0x7f99ff8143d0 'AVDES'
+|-VarDecl 0x7f99ff814788 <line:12:1, line:13:368> line:12:22 used PC1_shuffle 'const uint8_t [56]' static cinit
+| `-InitListExpr 0x7f99ff831d00 <col:38, line:13:368> 'const uint8_t [56]'
+|   |-ImplicitCastExpr 0x7f99ff831d40 <col:5, col:8> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814868 <col:5, col:8> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814828 <col:5> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814848 <col:8> 'int' 57
+|   |-ImplicitCastExpr 0x7f99ff831d60 <col:11, col:14> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8148d0 <col:11, col:14> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814890 <col:11> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8148b0 <col:14> 'int' 49
+|   |-ImplicitCastExpr 0x7f99ff831d88 <col:17, col:20> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814938 <col:17, col:20> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8148f8 <col:17> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814918 <col:20> 'int' 41
+|   |-ImplicitCastExpr 0x7f99ff831dc0 <col:23, col:26> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8149a0 <col:23, col:26> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814960 <col:23> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814980 <col:26> 'int' 33
+|   |-ImplicitCastExpr 0x7f99ff831dd8 <col:29, col:32> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814a08 <col:29, col:32> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8149c8 <col:29> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8149e8 <col:32> 'int' 25
+|   |-ImplicitCastExpr 0x7f99ff831e40 <col:35, col:38> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814a70 <col:35, col:38> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814a30 <col:35> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814a50 <col:38> 'int' 17
+|   |-ImplicitCastExpr 0x7f99ff831e58 <col:41, col:44> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814ad8 <col:41, col:44> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814a98 <col:41> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814ab8 <col:44> 'int' 9
+|   |-ImplicitCastExpr 0x7f99ff831e70 <col:51, col:54> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814b40 <col:51, col:54> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814b00 <col:51> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814b20 <col:54> 'int' 1
+|   |-ImplicitCastExpr 0x7f99ff831e88 <col:56, col:59> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814ba8 <col:56, col:59> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814b68 <col:56> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814b88 <col:59> 'int' 58
+|   |-ImplicitCastExpr 0x7f99ff831f20 <col:62, col:65> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814c10 <col:62, col:65> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814bd0 <col:62> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814bf0 <col:65> 'int' 50
+|   |-ImplicitCastExpr 0x7f99ff831f38 <col:68, col:71> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814c78 <col:68, col:71> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814c38 <col:68> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814c58 <col:71> 'int' 42
+|   |-ImplicitCastExpr 0x7f99ff831f50 <col:74, col:77> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814ce0 <col:74, col:77> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814ca0 <col:74> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814cc0 <col:77> 'int' 34
+|   |-ImplicitCastExpr 0x7f99ff831f68 <col:80, col:83> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814d48 <col:80, col:83> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814d08 <col:80> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814d28 <col:83> 'int' 26
+|   |-ImplicitCastExpr 0x7f99ff831f80 <col:86, col:89> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814db0 <col:86, col:89> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814d70 <col:86> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814d90 <col:89> 'int' 18
+|   |-ImplicitCastExpr 0x7f99ff831f98 <col:97, col:100> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814e18 <col:97, col:100> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814dd8 <col:97> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814df8 <col:100> 'int' 10
+|   |-ImplicitCastExpr 0x7f99ff831fb0 <col:103, col:106> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814e80 <col:103, col:106> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814e40 <col:103> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814e60 <col:106> 'int' 2
+|   |-ImplicitCastExpr 0x7f99ff831fc8 <col:108, col:111> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814ee8 <col:108, col:111> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814ea8 <col:108> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814ec8 <col:111> 'int' 59
+|   |-ImplicitCastExpr 0x7f99ff8320e0 <col:114, col:117> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814f50 <col:114, col:117> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814f10 <col:114> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814f30 <col:117> 'int' 51
+|   |-ImplicitCastExpr 0x7f99ff8320f8 <col:120, col:123> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff814fb8 <col:120, col:123> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814f78 <col:120> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff814f98 <col:123> 'int' 43
+|   |-ImplicitCastExpr 0x7f99ff832110 <col:126, col:129> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff815020 <col:126, col:129> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff814fe0 <col:126> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff815000 <col:129> 'int' 35
+|   |-ImplicitCastExpr 0x7f99ff832128 <col:132, col:135> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff815088 <col:132, col:135> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff815048 <col:132> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff815068 <col:135> 'int' 27
+|   |-ImplicitCastExpr 0x7f99ff832140 <col:143, col:146> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8150f0 <col:143, col:146> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8150b0 <col:143> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8150d0 <col:146> 'int' 19
+|   |-ImplicitCastExpr 0x7f99ff832158 <col:149, col:152> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff815158 <col:149, col:152> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff815118 <col:149> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff815138 <col:152> 'int' 11
+|   |-ImplicitCastExpr 0x7f99ff832170 <col:155, col:158> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8151c0 <col:155, col:158> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff815180 <col:155> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8151a0 <col:158> 'int' 3
+|   |-ImplicitCastExpr 0x7f99ff832188 <col:160, col:163> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff830e40 <col:160, col:163> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff830e00 <col:160> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff830e20 <col:163> 'int' 60
+|   |-ImplicitCastExpr 0x7f99ff8321a0 <col:166, col:169> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff830ea8 <col:166, col:169> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff830e68 <col:166> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff830e88 <col:169> 'int' 52
+|   |-ImplicitCastExpr 0x7f99ff8321b8 <col:172, col:175> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff830f10 <col:172, col:175> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff830ed0 <col:172> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff830ef0 <col:175> 'int' 44
+|   |-ImplicitCastExpr 0x7f99ff8321d0 <col:178, col:181> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff830f78 <col:178, col:181> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff830f38 <col:178> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff830f58 <col:181> 'int' 36
+|   |-ImplicitCastExpr 0x7f99ff8321e8 <col:189, col:192> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff830fe0 <col:189, col:192> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff830fa0 <col:189> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff830fc0 <col:192> 'int' 63
+|   |-ImplicitCastExpr 0x7f99ff832200 <col:195, col:198> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831048 <col:195, col:198> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831008 <col:195> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831028 <col:198> 'int' 55
+|   |-ImplicitCastExpr 0x7f99ff832218 <col:201, col:204> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8310b0 <col:201, col:204> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831070 <col:201> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831090 <col:204> 'int' 47
+|   |-ImplicitCastExpr 0x7f99ff832230 <col:207, col:210> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831118 <col:207, col:210> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8310d8 <col:207> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8310f8 <col:210> 'int' 39
+|   |-ImplicitCastExpr 0x7f99ff832248 <col:213, col:216> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831180 <col:213, col:216> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831140 <col:213> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831160 <col:216> 'int' 31
+|   |-ImplicitCastExpr 0x7f99ff832460 <col:219, col:222> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8311e8 <col:219, col:222> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8311a8 <col:219> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8311c8 <col:222> 'int' 23
+|   |-ImplicitCastExpr 0x7f99ff832478 <col:225, col:228> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831250 <col:225, col:228> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831210 <col:225> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831230 <col:228> 'int' 15
+|   |-ImplicitCastExpr 0x7f99ff832490 <col:236, col:239> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8312b8 <col:236, col:239> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831278 <col:236> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831298 <col:239> 'int' 7
+|   |-ImplicitCastExpr 0x7f99ff8324a8 <col:241, col:244> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831320 <col:241, col:244> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8312e0 <col:241> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831300 <col:244> 'int' 62
+|   |-ImplicitCastExpr 0x7f99ff8324c0 <col:247, col:250> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831388 <col:247, col:250> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831348 <col:247> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831368 <col:250> 'int' 54
+|   |-ImplicitCastExpr 0x7f99ff8324d8 <col:253, col:256> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8313f0 <col:253, col:256> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8313b0 <col:253> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8313d0 <col:256> 'int' 46
+|   |-ImplicitCastExpr 0x7f99ff8324f0 <col:259, col:262> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831458 <col:259, col:262> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831418 <col:259> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831438 <col:262> 'int' 38
+|   |-ImplicitCastExpr 0x7f99ff832508 <col:265, col:268> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8314c0 <col:265, col:268> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831480 <col:265> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8314a0 <col:268> 'int' 30
+|   |-ImplicitCastExpr 0x7f99ff832520 <col:271, col:274> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831528 <col:271, col:274> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8314e8 <col:271> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831508 <col:274> 'int' 22
+|   |-ImplicitCastExpr 0x7f99ff832538 <col:282, col:285> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831590 <col:282, col:285> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831550 <col:282> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831570 <col:285> 'int' 14
+|   |-ImplicitCastExpr 0x7f99ff832550 <col:288, col:291> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8315f8 <col:288, col:291> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8315b8 <col:288> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8315d8 <col:291> 'int' 6
+|   |-ImplicitCastExpr 0x7f99ff832568 <col:293, col:296> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831660 <col:293, col:296> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831620 <col:293> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831640 <col:296> 'int' 61
+|   |-ImplicitCastExpr 0x7f99ff832580 <col:299, col:302> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8316c8 <col:299, col:302> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831688 <col:299> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8316a8 <col:302> 'int' 53
+|   |-ImplicitCastExpr 0x7f99ff832598 <col:305, col:308> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831730 <col:305, col:308> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8316f0 <col:305> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831710 <col:308> 'int' 45
+|   |-ImplicitCastExpr 0x7f99ff8325b0 <col:311, col:314> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831798 <col:311, col:314> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831758 <col:311> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831778 <col:314> 'int' 37
+|   |-ImplicitCastExpr 0x7f99ff8325c8 <col:317, col:320> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831800 <col:317, col:320> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8317c0 <col:317> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8317e0 <col:320> 'int' 29
+|   |-ImplicitCastExpr 0x7f99ff8325e0 <col:328, col:331> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831868 <col:328, col:331> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831828 <col:328> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831848 <col:331> 'int' 21
+|   |-ImplicitCastExpr 0x7f99ff8325f8 <col:334, col:337> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8318d0 <col:334, col:337> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831890 <col:334> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8318b0 <col:337> 'int' 13
+|   |-ImplicitCastExpr 0x7f99ff832610 <col:340, col:343> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831938 <col:340, col:343> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8318f8 <col:340> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831918 <col:343> 'int' 5
+|   |-ImplicitCastExpr 0x7f99ff832628 <col:345, col:348> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8319a0 <col:345, col:348> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831960 <col:345> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831980 <col:348> 'int' 28
+|   |-ImplicitCastExpr 0x7f99ff832640 <col:351, col:354> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831a08 <col:351, col:354> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8319c8 <col:351> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff8319e8 <col:354> 'int' 20
+|   |-ImplicitCastExpr 0x7f99ff832658 <col:357, col:360> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff831a70 <col:357, col:360> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff831a30 <col:357> 'int' 64
+|   |   `-IntegerLiteral 0x7f99ff831a50 <col:360> 'int' 12
+|   `-ImplicitCastExpr 0x7f99ff832670 <col:363, col:366> 'uint8_t':'unsigned char' <IntegralCast>
+|     `-BinaryOperator 0x7f99ff831ad8 <col:363, col:366> 'int' '-'
+|       |-IntegerLiteral 0x7f99ff831a98 <col:363> 'int' 64
+|       `-IntegerLiteral 0x7f99ff831ab8 <col:366> 'int' 4
+|-VarDecl 0x7f99ff832728 <line:14:1, line:15:320> line:14:22 used PC2_shuffle 'const uint8_t [48]' static cinit
+| `-InitListExpr 0x7f99ff0214e8 <col:38, line:15:320> 'const uint8_t [48]'
+|   |-ImplicitCastExpr 0x7f99ff021528 <col:5, col:8> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8327c8 <col:5, col:8> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832788 <col:5> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff8327a8 <col:8> 'int' 14
+|   |-ImplicitCastExpr 0x7f99ff021548 <col:11, col:14> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832830 <col:11, col:14> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8327f0 <col:11> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832810 <col:14> 'int' 17
+|   |-ImplicitCastExpr 0x7f99ff021570 <col:17, col:20> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832898 <col:17, col:20> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832858 <col:17> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832878 <col:20> 'int' 11
+|   |-ImplicitCastExpr 0x7f99ff0215a8 <col:23, col:26> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832900 <col:23, col:26> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8328c0 <col:23> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff8328e0 <col:26> 'int' 24
+|   |-ImplicitCastExpr 0x7f99ff0215c0 <col:29, col:32> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832968 <col:29, col:32> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832928 <col:29> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832948 <col:32> 'int' 1
+|   |-ImplicitCastExpr 0x7f99ff021640 <col:34, col:37> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff8329d0 <col:34, col:37> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832990 <col:34> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff8329b0 <col:37> 'int' 5
+|   |-ImplicitCastExpr 0x7f99ff021658 <col:44, col:47> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832a38 <col:44, col:47> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff8329f8 <col:44> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832a18 <col:47> 'int' 3
+|   |-ImplicitCastExpr 0x7f99ff021670 <col:49, col:52> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832aa0 <col:49, col:52> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832a60 <col:49> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832a80 <col:52> 'int' 28
+|   |-ImplicitCastExpr 0x7f99ff021688 <col:55, col:58> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832b08 <col:55, col:58> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832ac8 <col:55> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832ae8 <col:58> 'int' 15
+|   |-ImplicitCastExpr 0x7f99ff021720 <col:61, col:64> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832b70 <col:61, col:64> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832b30 <col:61> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832b50 <col:64> 'int' 6
+|   |-ImplicitCastExpr 0x7f99ff021738 <col:66, col:69> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832bd8 <col:66, col:69> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832b98 <col:66> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832bb8 <col:69> 'int' 21
+|   |-ImplicitCastExpr 0x7f99ff021750 <col:72, col:75> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832c40 <col:72, col:75> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832c00 <col:72> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832c20 <col:75> 'int' 10
+|   |-ImplicitCastExpr 0x7f99ff021768 <col:83, col:86> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832ca8 <col:83, col:86> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832c68 <col:83> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832c88 <col:86> 'int' 23
+|   |-ImplicitCastExpr 0x7f99ff021780 <col:89, col:92> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832d10 <col:89, col:92> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832cd0 <col:89> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832cf0 <col:92> 'int' 19
+|   |-ImplicitCastExpr 0x7f99ff021798 <col:95, col:98> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff832d78 <col:95, col:98> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832d38 <col:95> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832d58 <col:98> 'int' 12
+|   |-ImplicitCastExpr 0x7f99ff0217b0 <col:101, col:104> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020600 <col:101, col:104> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff832da0 <col:101> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff832dc0 <col:104> 'int' 4
+|   |-ImplicitCastExpr 0x7f99ff0217c8 <col:106, col:109> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020668 <col:106, col:109> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020628 <col:106> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020648 <col:109> 'int' 26
+|   |-ImplicitCastExpr 0x7f99ff0218e0 <col:112, col:115> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff0206d0 <col:112, col:115> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020690 <col:112> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff0206b0 <col:115> 'int' 8
+|   |-ImplicitCastExpr 0x7f99ff0218f8 <col:122, col:125> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020738 <col:122, col:125> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff0206f8 <col:122> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020718 <col:125> 'int' 16
+|   |-ImplicitCastExpr 0x7f99ff021910 <col:128, col:131> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff0207a0 <col:128, col:131> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020760 <col:128> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020780 <col:131> 'int' 7
+|   |-ImplicitCastExpr 0x7f99ff021928 <col:133, col:136> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020808 <col:133, col:136> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff0207c8 <col:133> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff0207e8 <col:136> 'int' 27
+|   |-ImplicitCastExpr 0x7f99ff021940 <col:139, col:142> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020870 <col:139, col:142> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020830 <col:139> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020850 <col:142> 'int' 20
+|   |-ImplicitCastExpr 0x7f99ff021958 <col:145, col:148> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff0208d8 <col:145, col:148> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020898 <col:145> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff0208b8 <col:148> 'int' 13
+|   |-ImplicitCastExpr 0x7f99ff021970 <col:151, col:154> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020940 <col:151, col:154> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020900 <col:151> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020920 <col:154> 'int' 2
+|   |-ImplicitCastExpr 0x7f99ff021988 <col:161, col:164> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff0209a8 <col:161, col:164> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020968 <col:161> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020988 <col:164> 'int' 41
+|   |-ImplicitCastExpr 0x7f99ff0219a0 <col:167, col:170> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020a10 <col:167, col:170> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff0209d0 <col:167> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff0209f0 <col:170> 'int' 52
+|   |-ImplicitCastExpr 0x7f99ff0219b8 <col:173, col:176> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020a78 <col:173, col:176> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020a38 <col:173> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020a58 <col:176> 'int' 31
+|   |-ImplicitCastExpr 0x7f99ff0219d0 <col:179, col:182> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020ae0 <col:179, col:182> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020aa0 <col:179> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020ac0 <col:182> 'int' 37
+|   |-ImplicitCastExpr 0x7f99ff0219e8 <col:185, col:188> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020b48 <col:185, col:188> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020b08 <col:185> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020b28 <col:188> 'int' 47
+|   |-ImplicitCastExpr 0x7f99ff021a00 <col:191, col:194> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020bb0 <col:191, col:194> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020b70 <col:191> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020b90 <col:194> 'int' 55
+|   |-ImplicitCastExpr 0x7f99ff021a18 <col:202, col:205> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020c18 <col:202, col:205> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020bd8 <col:202> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020bf8 <col:205> 'int' 30
+|   |-ImplicitCastExpr 0x7f99ff021a30 <col:208, col:211> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020c80 <col:208, col:211> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020c40 <col:208> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020c60 <col:211> 'int' 40
+|   |-ImplicitCastExpr 0x7f99ff021a48 <col:214, col:217> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020ce8 <col:214, col:217> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020ca8 <col:214> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020cc8 <col:217> 'int' 51
+|   |-ImplicitCastExpr 0x7f99ff021c60 <col:220, col:223> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020d50 <col:220, col:223> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020d10 <col:220> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020d30 <col:223> 'int' 45
+|   |-ImplicitCastExpr 0x7f99ff021c78 <col:226, col:229> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020db8 <col:226, col:229> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020d78 <col:226> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020d98 <col:229> 'int' 33
+|   |-ImplicitCastExpr 0x7f99ff021c90 <col:232, col:235> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020e20 <col:232, col:235> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020de0 <col:232> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020e00 <col:235> 'int' 48
+|   |-ImplicitCastExpr 0x7f99ff021ca8 <col:243, col:246> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020e88 <col:243, col:246> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020e48 <col:243> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020e68 <col:246> 'int' 44
+|   |-ImplicitCastExpr 0x7f99ff021cc0 <col:249, col:252> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020ef0 <col:249, col:252> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020eb0 <col:249> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020ed0 <col:252> 'int' 49
+|   |-ImplicitCastExpr 0x7f99ff021cd8 <col:255, col:258> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020f58 <col:255, col:258> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020f18 <col:255> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020f38 <col:258> 'int' 39
+|   |-ImplicitCastExpr 0x7f99ff021cf0 <col:261, col:264> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff020fc0 <col:261, col:264> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020f80 <col:261> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff020fa0 <col:264> 'int' 56
+|   |-ImplicitCastExpr 0x7f99ff021d08 <col:267, col:270> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff021028 <col:267, col:270> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff020fe8 <col:267> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff021008 <col:270> 'int' 34
+|   |-ImplicitCastExpr 0x7f99ff021d20 <col:273, col:276> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff021090 <col:273, col:276> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff021050 <col:273> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff021070 <col:276> 'int' 53
+|   |-ImplicitCastExpr 0x7f99ff021d38 <col:284, col:287> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff0210f8 <col:284, col:287> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff0210b8 <col:284> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff0210d8 <col:287> 'int' 46
+|   |-ImplicitCastExpr 0x7f99ff021d50 <col:290, col:293> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff021160 <col:290, col:293> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff021120 <col:290> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff021140 <col:293> 'int' 42
+|   |-ImplicitCastExpr 0x7f99ff021d68 <col:296, col:299> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff0211c8 <col:296, col:299> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff021188 <col:296> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff0211a8 <col:299> 'int' 50
+|   |-ImplicitCastExpr 0x7f99ff021d80 <col:302, col:305> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff021230 <col:302, col:305> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff0211f0 <col:302> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff021210 <col:305> 'int' 36
+|   |-ImplicitCastExpr 0x7f99ff021d98 <col:308, col:311> 'uint8_t':'unsigned char' <IntegralCast>
+|   | `-BinaryOperator 0x7f99ff021298 <col:308, col:311> 'int' '-'
+|   |   |-IntegerLiteral 0x7f99ff021258 <col:308> 'int' 56
+|   |   `-IntegerLiteral 0x7f99ff021278 <col:311> 'int' 29
+|   `-ImplicitCastExpr 0x7f99ff021db0 <col:314, col:317> 'uint8_t':'unsigned char' <IntegralCast>
+|     `-BinaryOperator 0x7f99ff021300 <col:314, col:317> 'int' '-'
+|       |-IntegerLiteral 0x7f99ff0212c0 <col:314> 'int' 56
+|       `-IntegerLiteral 0x7f99ff0212e0 <col:317> 'int' 32
+|-FunctionDecl 0x7f99ff0220d0 <line:16:1, line:23:1> line:16:17 used shuffle 'uint64_t (uint64_t, const uint8_t *, int)' static
+| |-ParmVarDecl 0x7f99ff021e58 <col:25, col:34> col:34 used in 'uint64_t':'unsigned long'
+| |-ParmVarDecl 0x7f99ff021f28 <col:38, col:53> col:53 used shuffle 'const uint8_t *'
+| |-ParmVarDecl 0x7f99ff021fa0 <col:62, col:66> col:66 used shuffle_len 'int'
+| `-CompoundStmt 0x7f99ff022750 <line:17:1, line:23:1>
+|   |-DeclStmt 0x7f99ff022200 <line:18:3, col:8>
+|   | `-VarDecl 0x7f99ff0221a0 <col:3, col:7> col:7 used i 'int'
+|   |-DeclStmt 0x7f99ff0222c0 <line:19:3, col:19>
+|   | `-VarDecl 0x7f99ff022228 <col:3, col:18> col:12 used res 'uint64_t':'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7f99ff0222a8 <col:18> 'uint64_t':'unsigned long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f99ff022288 <col:18> 'int' 0
+|   |-ForStmt 0x7f99ff0226c0 <line:20:3, line:21:41>
+|   | |-BinaryOperator 0x7f99ff022320 <line:20:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7f99ff0222d8 <col:8> 'int' lvalue Var 0x7f99ff0221a0 'i' 'int'
+|   | | `-IntegerLiteral 0x7f99ff022300 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f99ff0223c8 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f99ff022398 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f99ff022348 <col:15> 'int' lvalue Var 0x7f99ff0221a0 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f99ff0223b0 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99ff022370 <col:19> 'int' lvalue ParmVar 0x7f99ff021fa0 'shuffle_len' 'int'
+|   | |-UnaryOperator 0x7f99ff022418 <col:32, col:33> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f99ff0223f0 <col:32> 'int' lvalue Var 0x7f99ff0221a0 'i' 'int'
+|   | `-CompoundAssignOperator 0x7f99ff022688 <line:21:5, col:41> 'uint64_t':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+|   |   |-DeclRefExpr 0x7f99ff022438 <col:5> 'uint64_t':'unsigned long' lvalue Var 0x7f99ff022228 'res' 'uint64_t':'unsigned long'
+|   |   `-BinaryOperator 0x7f99ff022660 <col:12, col:41> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f99ff022648 <col:12> 'uint64_t':'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f99ff022460 <col:12> 'uint64_t':'unsigned long' lvalue Var 0x7f99ff022228 'res' 'uint64_t':'unsigned long'
+|   |     `-ParenExpr 0x7f99ff022628 <col:18, col:41> 'unsigned long'
+|   |       `-BinaryOperator 0x7f99ff022600 <col:19, col:40> 'unsigned long' '&'
+|   |         |-ParenExpr 0x7f99ff022588 <col:19, col:36> 'uint64_t':'unsigned long'
+|   |         | `-BinaryOperator 0x7f99ff022560 <col:20, col:34> 'uint64_t':'unsigned long' '>>'
+|   |         |   |-ImplicitCastExpr 0x7f99ff022518 <col:20> 'uint64_t':'unsigned long' <LValueToRValue>
+|   |         |   | `-DeclRefExpr 0x7f99ff022488 <col:20> 'uint64_t':'unsigned long' lvalue ParmVar 0x7f99ff021e58 'in' 'uint64_t':'unsigned long'
+|   |         |   `-ImplicitCastExpr 0x7f99ff022548 <col:26, col:34> 'int' <IntegralCast>
+|   |         |     `-ImplicitCastExpr 0x7f99ff022530 <col:26, col:34> 'uint8_t':'unsigned char' <LValueToRValue>
+|   |         |       `-UnaryOperator 0x7f99ff0224f8 <col:26, col:34> 'const uint8_t':'const unsigned char' lvalue prefix '*'
+|   |         |         `-UnaryOperator 0x7f99ff0224d8 <col:27, col:34> 'const uint8_t *' postfix '++'
+|   |         |           `-DeclRefExpr 0x7f99ff0224b0 <col:27> 'const uint8_t *' lvalue ParmVar 0x7f99ff021f28 'shuffle' 'const uint8_t *'
+|   |         `-ImplicitCastExpr 0x7f99ff0225c8 <col:40> 'unsigned long' <IntegralCast>
+|   |           `-IntegerLiteral 0x7f99ff0225a8 <col:40> 'int' 1
+|   `-ReturnStmt 0x7f99ff022738 <line:22:3, col:10>
+|     `-ImplicitCastExpr 0x7f99ff022720 <col:10> 'uint64_t':'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f99ff0226f8 <col:10> 'uint64_t':'unsigned long' lvalue Var 0x7f99ff022228 'res' 'uint64_t':'unsigned long'
+`-FunctionDecl 0x7f99ff0229d0 <line:24:1, line:30:1> line:24:6 gen_roundkeys 'void (uint64_t *, uint64_t)'
+  |-ParmVarDecl 0x7f99ff022850 <col:20, col:33> col:29 used K 'uint64_t *':'uint64_t *'
+  |-ParmVarDecl 0x7f99ff0228c0 <col:36, col:45> col:45 used key 'uint64_t':'unsigned long'
+  `-CompoundStmt 0x7f99ff023138 <line:25:1, line:30:1>
+    |-DeclStmt 0x7f99ff022af8 <line:26:3, col:8>
+    | `-VarDecl 0x7f99ff022a98 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7f99ff022d58 <line:27:3, col:64>
+    | `-VarDecl 0x7f99ff022b20 <col:3, col:63> col:12 used CDn 'uint64_t':'unsigned long' cinit
+    |   `-CallExpr 0x7f99ff022cd0 <col:18, col:63> 'uint64_t':'unsigned long'
+    |     |-ImplicitCastExpr 0x7f99ff022cb8 <col:18> 'uint64_t (*)(uint64_t, const uint8_t *, int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f99ff022b80 <col:18> 'uint64_t (uint64_t, const uint8_t *, int)' Function 0x7f99ff0220d0 'shuffle' 'uint64_t (uint64_t, const uint8_t *, int)'
+    |     |-ImplicitCastExpr 0x7f99ff022d10 <col:26> 'uint64_t':'unsigned long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f99ff022ba8 <col:26> 'uint64_t':'unsigned long' lvalue ParmVar 0x7f99ff0228c0 'key' 'uint64_t':'unsigned long'
+    |     |-ImplicitCastExpr 0x7f99ff022d28 <col:31> 'const uint8_t *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f99ff022bd0 <col:31> 'const uint8_t [56]' lvalue Var 0x7f99ff814788 'PC1_shuffle' 'const uint8_t [56]'
+    |     `-ImplicitCastExpr 0x7f99ff022d40 <col:44, col:62> 'int' <IntegralCast>
+    |       `-UnaryExprOrTypeTraitExpr 0x7f99ff022c40 <col:44, col:62> 'unsigned long' sizeof
+    |         `-ParenExpr 0x7f99ff022c20 <col:50, col:62> 'const uint8_t [56]' lvalue
+    |           `-DeclRefExpr 0x7f99ff022bf8 <col:51> 'const uint8_t [56]' lvalue Var 0x7f99ff814788 'PC1_shuffle' 'const uint8_t [56]'
+    `-ForStmt 0x7f99ff023100 <line:28:3, line:29:57>
+      |-BinaryOperator 0x7f99ff022db8 <line:28:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f99ff022d70 <col:8> 'int' lvalue Var 0x7f99ff022a98 'i' 'int'
+      | `-IntegerLiteral 0x7f99ff022d98 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f99ff022e40 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f99ff022e28 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f99ff022de0 <col:15> 'int' lvalue Var 0x7f99ff022a98 'i' 'int'
+      | `-IntegerLiteral 0x7f99ff022e08 <col:19> 'int' 16
+      |-UnaryOperator 0x7f99ff022e90 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f99ff022e68 <col:23> 'int' lvalue Var 0x7f99ff022a98 'i' 'int'
+      `-BinaryOperator 0x7f99ff0230d8 <line:29:5, col:57> 'uint64_t':'unsigned long' '='
+        |-ArraySubscriptExpr 0x7f99ff022f30 <col:5, col:8> 'uint64_t':'unsigned long' lvalue
+        | |-ImplicitCastExpr 0x7f99ff022f00 <col:5> 'uint64_t *':'uint64_t *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f99ff022eb0 <col:5> 'uint64_t *':'uint64_t *' lvalue ParmVar 0x7f99ff022850 'K' 'uint64_t *':'uint64_t *'
+        | `-ImplicitCastExpr 0x7f99ff022f18 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f99ff022ed8 <col:7> 'int' lvalue Var 0x7f99ff022a98 'i' 'int'
+        `-CallExpr 0x7f99ff023050 <col:12, col:57> 'uint64_t':'unsigned long'
+          |-ImplicitCastExpr 0x7f99ff023038 <col:12> 'uint64_t (*)(uint64_t, const uint8_t *, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f99ff022f58 <col:12> 'uint64_t (uint64_t, const uint8_t *, int)' Function 0x7f99ff0220d0 'shuffle' 'uint64_t (uint64_t, const uint8_t *, int)'
+          |-ImplicitCastExpr 0x7f99ff023090 <col:20> 'uint64_t':'unsigned long' <LValueToRValue>
+          | `-DeclRefExpr 0x7f99ff022f80 <col:20> 'uint64_t':'unsigned long' lvalue Var 0x7f99ff022b20 'CDn' 'uint64_t':'unsigned long'
+          |-ImplicitCastExpr 0x7f99ff0230a8 <col:25> 'const uint8_t *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7f99ff022fa8 <col:25> 'const uint8_t [48]' lvalue Var 0x7f99ff832728 'PC2_shuffle' 'const uint8_t [48]'
+          `-ImplicitCastExpr 0x7f99ff0230c0 <col:38, col:56> 'int' <IntegralCast>
+            `-UnaryExprOrTypeTraitExpr 0x7f99ff023018 <col:38, col:56> 'unsigned long' sizeof
+              `-ParenExpr 0x7f99ff022ff8 <col:44, col:56> 'const uint8_t [48]' lvalue
+                `-DeclRefExpr 0x7f99ff022fd0 <col:45> 'const uint8_t [48]' lvalue Var 0x7f99ff832728 'PC2_shuffle' 'const uint8_t [48]'

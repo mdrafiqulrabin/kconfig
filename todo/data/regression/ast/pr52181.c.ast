@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc4d582bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc4d6014200 <../Data/C2AST/pr52181.c:4:1, col:21> col:18 v1 'const int []' extern
+|-VarDecl 0x7fc4d60142e8 prev 0x7fc4d6014200 <line:5:1, col:51> col:40 referenced v1 'const int [1]' cinit
+| |-InitListExpr 0x7fc4d6014400 <col:47, col:51> 'const int [1]'
+| | `-IntegerLiteral 0x7fc4d6014398 <col:49> 'int' 1
+| `-AlignedAttr 0x7fc4d6014348 <col:26, col:36> aligned
+|   `-IntegerLiteral 0x7fc4d60142a0 <col:34> 'int' 16
+|-VarDecl 0x7fc4d6014510 <line:6:1, col:50> col:47 v2 'const int []' extern
+| `-AlignedAttr 0x7fc4d6014570 <col:33, col:43> aligned
+|   `-IntegerLiteral 0x7fc4d60144c8 <col:41> 'int' 16
+|-VarDecl 0x7fc4d60145e8 prev 0x7fc4d6014510 <line:7:1, col:22> col:11 referenced v2 'const int [1]' cinit
+| |-InitListExpr 0x7fc4d6014700 <col:18, col:22> 'const int [1]'
+| | `-IntegerLiteral 0x7fc4d6014698 <col:20> 'int' 1
+| `-AlignedAttr 0x7fc4d6014680 <line:6:33> Inherited aligned
+|   `-IntegerLiteral 0x7fc4d60144c8 <col:41> 'int' 16
+|-VarDecl 0x7fc4d6014790 <line:8:1, col:50> col:47 v3 'const int []' extern
+| `-AlignedAttr 0x7fc4d60147f0 <col:33, col:43> aligned
+|   `-IntegerLiteral 0x7fc4d6014748 <col:41> 'int' 16
+|-VarDecl 0x7fc4d6014888 prev 0x7fc4d6014790 <line:9:1, col:51> col:40 referenced v3 'const int [1]' cinit
+| |-InitListExpr 0x7fc4d60149a0 <col:47, col:51> 'const int [1]'
+| | `-IntegerLiteral 0x7fc4d6014938 <col:49> 'int' 1
+| `-AlignedAttr 0x7fc4d60148e8 <col:26, col:36> aligned
+|   `-IntegerLiteral 0x7fc4d6014840 <col:34> 'int' 16
+|-VarDecl 0x7fc4d6014a30 <line:10:1, col:51> col:40 referenced v4 'const int [1]' cinit
+| |-InitListExpr 0x7fc4d6014b48 <col:47, col:51> 'const int [1]'
+| | `-IntegerLiteral 0x7fc4d6014ae0 <col:49> 'int' 1
+| `-AlignedAttr 0x7fc4d6014a90 <col:26, col:36> aligned
+|   `-IntegerLiteral 0x7fc4d60149e8 <col:34> 'int' 16
+`-VarDecl 0x7fc4d6014fe0 <line:11:1, line:13:52> line:11:5 test 'int [0]'

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7febe082bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7febe082c978 <../Data/C2AST/pr70297.c:5:1, col:13> col:13 T 'int'
+| `-BuiltinType 0x7febe082bde0 'int'
+|-TypedefDecl 0x7febe086e818 prev 0x7febe082c978 <line:6:1, col:13> col:13 referenced T 'int'
+| |-BuiltinType 0x7febe082bde0 'int'
+| `-AlignedAttr 0x7febe086e870 <col:30, col:40> aligned
+|   `-IntegerLiteral 0x7febe082c9d0 <col:39> 'int' 4
+`-RecordDecl 0x7febe086e8c0 <line:7:1, line:9:1> line:7:8 struct S definition
+  `-FieldDecl 0x7febe086e9f8 <line:8:3, col:6> col:6 t 'T *'

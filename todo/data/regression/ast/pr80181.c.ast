@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fda8d027ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fda8d818028 <../Data/C2AST/pr80181.c:3:1, line:6:1> line:4:1 used nr 'int (void)'
+| `-CompoundStmt 0x7fda8d818108 <line:5:1, line:6:1>
+`-FunctionDecl 0x7fda8d8181f0 <line:8:1, line:19:1> line:9:1 it 'void (int)'
+  |-ParmVarDecl 0x7fda8d818130 <col:5, col:9> col:9 used dl 'int'
+  `-CompoundStmt 0x7fda8d818600 <line:10:1, line:19:1>
+    |-DeclStmt 0x7fda8d818330 <line:11:3, col:13>
+    | `-VarDecl 0x7fda8d8182b0 <col:3, col:12> col:7 used vp 'int' cinit
+    |   `-IntegerLiteral 0x7fda8d818310 <col:12> 'int' 0
+    `-ForStmt 0x7fda8d8185c8 <line:13:3, line:18:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fda8d8185a0 <line:14:5, line:18:5>
+        |-BinaryOperator 0x7fda8d818468 <line:15:7, col:21> 'int' '='
+        | |-DeclRefExpr 0x7fda8d818348 <col:7> 'int' lvalue ParmVar 0x7fda8d818130 'dl' 'int'
+        | `-BinaryOperator 0x7fda8d818440 <col:12, col:21> 'int' '^'
+        |   |-ImplicitCastExpr 0x7fda8d818428 <col:12> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fda8d818370 <col:12> 'int' lvalue Var 0x7fda8d8182b0 'vp' 'int'
+        |   `-CallExpr 0x7fda8d818400 <col:17, col:21> 'int'
+        |     `-ImplicitCastExpr 0x7fda8d8183e8 <col:17> 'int (*)(void)' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7fda8d818398 <col:17> 'int (void)' Function 0x7fda8d818028 'nr' 'int (void)'
+        |-CompoundAssignOperator 0x7fda8d8184f8 <line:16:7, col:13> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+        | |-DeclRefExpr 0x7fda8d818490 <col:7> 'int' lvalue ParmVar 0x7fda8d818130 'dl' 'int'
+        | `-ImplicitCastExpr 0x7fda8d8184e0 <col:13> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fda8d8184b8 <col:13> 'int' lvalue Var 0x7fda8d8182b0 'vp' 'int'
+        `-BinaryOperator 0x7fda8d818578 <line:17:7, col:12> 'int' '='
+          |-DeclRefExpr 0x7fda8d818530 <col:7> 'int' lvalue Var 0x7fda8d8182b0 'vp' 'int'
+          `-IntegerLiteral 0x7fda8d818558 <col:12> 'int' 1

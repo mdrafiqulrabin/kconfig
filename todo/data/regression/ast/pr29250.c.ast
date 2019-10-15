@@ -1,0 +1,89 @@
+TranslationUnitDecl 0x7f838702bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f838702c960 <../Data/C2AST/pr29250.c:2:1, line:6:1> line:2:8 struct TSparseEntry definition
+| |-FieldDecl 0x7f838706d838 <line:4:3, col:7> col:7 referenced feat_index 'int'
+| `-FieldDecl 0x7f838706d898 <line:5:3, col:10> col:10 referenced entry 'double'
+|-RecordDecl 0x7f838706d8e0 <line:8:1, line:13:1> line:8:8 struct TSparse definition
+| |-FieldDecl 0x7f838706d9a8 <line:10:3, col:7> col:7 referenced vec_index 'int'
+| |-FieldDecl 0x7f838706da08 <line:11:3, col:7> col:7 referenced num_feat_entries 'int'
+| `-FieldDecl 0x7f838706db00 <line:12:3, col:24> col:24 referenced features 'struct TSparseEntry *'
+`-FunctionDecl 0x7f838706dd90 <line:15:1, line:30:1> line:16:1 get_full_feature_matrix 'void (struct TSparse *, int)'
+  |-ParmVarDecl 0x7f838706dc00 <col:26, col:42> col:42 used sparse_feature_matrix 'struct TSparse *'
+  |-ParmVarDecl 0x7f838706dc78 <col:65, col:69> col:69 used num_vec 'int'
+  `-CompoundStmt 0x7f838706ea80 <line:17:1, line:30:1>
+    |-DeclStmt 0x7f838706df20 <line:18:3, col:13>
+    | `-VarDecl 0x7f838706dec0 <col:3, col:11> col:11 used fm 'double *'
+    |-DeclStmt 0x7f838706e040 <line:19:3, col:11>
+    | |-VarDecl 0x7f838706df50 <col:3, col:7> col:7 used v 'int'
+    | `-VarDecl 0x7f838706dfc8 <col:3, col:10> col:10 used f 'int'
+    `-ForStmt 0x7f838706ea48 <line:21:3, line:29:3>
+      |-BinaryOperator 0x7f838706e0a0 <line:21:8, col:10> 'int' '='
+      | |-DeclRefExpr 0x7f838706e058 <col:8> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+      | `-IntegerLiteral 0x7f838706e080 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f838706e148 <col:13, col:17> 'int' '<'
+      | |-ImplicitCastExpr 0x7f838706e118 <col:13> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f838706e0c8 <col:13> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+      | `-ImplicitCastExpr 0x7f838706e130 <col:17> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f838706e0f0 <col:17> 'int' lvalue ParmVar 0x7f838706dc78 'num_vec' 'int'
+      |-UnaryOperator 0x7f838706e198 <col:26, col:27> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f838706e170 <col:26> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+      `-CompoundStmt 0x7f838706ea30 <line:22:3, line:29:3>
+        `-ForStmt 0x7f838706e9f8 <line:23:5, line:28:5>
+          |-BinaryOperator 0x7f838706e200 <line:23:10, col:12> 'int' '='
+          | |-DeclRefExpr 0x7f838706e1b8 <col:10> 'int' lvalue Var 0x7f838706dfc8 'f' 'int'
+          | `-IntegerLiteral 0x7f838706e1e0 <col:12> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7f838706e360 <col:15, col:44> 'int' '<'
+          | |-ImplicitCastExpr 0x7f838706e330 <col:15> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f838706e228 <col:15> 'int' lvalue Var 0x7f838706dfc8 'f' 'int'
+          | `-ImplicitCastExpr 0x7f838706e348 <col:19, col:44> 'int' <LValueToRValue>
+          |   `-MemberExpr 0x7f838706e2f8 <col:19, col:44> 'int' lvalue .num_feat_entries 0x7f838706da08
+          |     `-ArraySubscriptExpr 0x7f838706e2d0 <col:19, col:42> 'struct TSparse':'struct TSparse' lvalue
+          |       |-ImplicitCastExpr 0x7f838706e2a0 <col:19> 'struct TSparse *' <LValueToRValue>
+          |       | `-DeclRefExpr 0x7f838706e250 <col:19> 'struct TSparse *' lvalue ParmVar 0x7f838706dc00 'sparse_feature_matrix' 'struct TSparse *'
+          |       `-ImplicitCastExpr 0x7f838706e2b8 <col:41> 'int' <LValueToRValue>
+          |         `-DeclRefExpr 0x7f838706e278 <col:41> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+          |-UnaryOperator 0x7f838706e3b0 <col:62, col:63> 'int' postfix '++'
+          | `-DeclRefExpr 0x7f838706e388 <col:62> 'int' lvalue Var 0x7f838706dfc8 'f' 'int'
+          `-CompoundStmt 0x7f838706e9d8 <line:24:5, line:28:5>
+            |-DeclStmt 0x7f838706e730 <line:25:7, line:26:51>
+            | `-VarDecl 0x7f838706e3e8 <line:25:7, line:26:41> line:25:17 used offs 'long long' cinit
+            |   `-ImplicitCastExpr 0x7f838706e718 <col:24, line:26:41> 'long long' <IntegralCast>
+            |     `-BinaryOperator 0x7f838706e6f0 <line:25:24, line:26:41> 'int' '+'
+            |       |-ImplicitCastExpr 0x7f838706e6c0 <line:25:24, col:49> 'int' <LValueToRValue>
+            |       | `-MemberExpr 0x7f838706e4f0 <col:24, col:49> 'int' lvalue .vec_index 0x7f838706d9a8
+            |       |   `-ArraySubscriptExpr 0x7f838706e4c8 <col:24, col:47> 'struct TSparse':'struct TSparse' lvalue
+            |       |     |-ImplicitCastExpr 0x7f838706e498 <col:24> 'struct TSparse *' <LValueToRValue>
+            |       |     | `-DeclRefExpr 0x7f838706e448 <col:24> 'struct TSparse *' lvalue ParmVar 0x7f838706dc00 'sparse_feature_matrix' 'struct TSparse *'
+            |       |     `-ImplicitCastExpr 0x7f838706e4b0 <col:46> 'int' <LValueToRValue>
+            |       |       `-DeclRefExpr 0x7f838706e470 <col:46> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+            |       `-ImplicitCastExpr 0x7f838706e6d8 <line:26:4, col:41> 'int' <LValueToRValue>
+            |         `-MemberExpr 0x7f838706e688 <col:4, col:41> 'int' lvalue .feat_index 0x7f838706d838
+            |           `-ArraySubscriptExpr 0x7f838706e660 <col:4, col:39> 'struct TSparseEntry':'struct TSparseEntry' lvalue
+            |             |-ImplicitCastExpr 0x7f838706e630 <col:4, col:29> 'struct TSparseEntry *' <LValueToRValue>
+            |             | `-MemberExpr 0x7f838706e5d0 <col:4, col:29> 'struct TSparseEntry *' lvalue .features 0x7f838706db00
+            |             |   `-ArraySubscriptExpr 0x7f838706e5a8 <col:4, col:27> 'struct TSparse':'struct TSparse' lvalue
+            |             |     |-ImplicitCastExpr 0x7f838706e578 <col:4> 'struct TSparse *' <LValueToRValue>
+            |             |     | `-DeclRefExpr 0x7f838706e528 <col:4> 'struct TSparse *' lvalue ParmVar 0x7f838706dc00 'sparse_feature_matrix' 'struct TSparse *'
+            |             |     `-ImplicitCastExpr 0x7f838706e590 <col:26> 'int' <LValueToRValue>
+            |             |       `-DeclRefExpr 0x7f838706e550 <col:26> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+            |             `-ImplicitCastExpr 0x7f838706e648 <col:38> 'int' <LValueToRValue>
+            |               `-DeclRefExpr 0x7f838706e608 <col:38> 'int' lvalue Var 0x7f838706dfc8 'f' 'int'
+            `-BinaryOperator 0x7f838706e9b0 <line:27:7, col:55> 'double' '='
+              |-ArraySubscriptExpr 0x7f838706e7c8 <col:7, col:14> 'double' lvalue
+              | |-ImplicitCastExpr 0x7f838706e798 <col:7> 'double *' <LValueToRValue>
+              | | `-DeclRefExpr 0x7f838706e748 <col:7> 'double *' lvalue Var 0x7f838706dec0 'fm' 'double *'
+              | `-ImplicitCastExpr 0x7f838706e7b0 <col:10> 'long long' <LValueToRValue>
+              |   `-DeclRefExpr 0x7f838706e770 <col:10> 'long long' lvalue Var 0x7f838706e3e8 'offs' 'long long'
+              `-ImplicitCastExpr 0x7f838706e998 <col:18, col:55> 'double' <LValueToRValue>
+                `-MemberExpr 0x7f838706e960 <col:18, col:55> 'double' lvalue .entry 0x7f838706d898
+                  `-ArraySubscriptExpr 0x7f838706e938 <col:18, col:53> 'struct TSparseEntry':'struct TSparseEntry' lvalue
+                    |-ImplicitCastExpr 0x7f838706e908 <col:18, col:43> 'struct TSparseEntry *' <LValueToRValue>
+                    | `-MemberExpr 0x7f838706e8a8 <col:18, col:43> 'struct TSparseEntry *' lvalue .features 0x7f838706db00
+                    |   `-ArraySubscriptExpr 0x7f838706e880 <col:18, col:41> 'struct TSparse':'struct TSparse' lvalue
+                    |     |-ImplicitCastExpr 0x7f838706e850 <col:18> 'struct TSparse *' <LValueToRValue>
+                    |     | `-DeclRefExpr 0x7f838706e800 <col:18> 'struct TSparse *' lvalue ParmVar 0x7f838706dc00 'sparse_feature_matrix' 'struct TSparse *'
+                    |     `-ImplicitCastExpr 0x7f838706e868 <col:40> 'int' <LValueToRValue>
+                    |       `-DeclRefExpr 0x7f838706e828 <col:40> 'int' lvalue Var 0x7f838706df50 'v' 'int'
+                    `-ImplicitCastExpr 0x7f838706e920 <col:52> 'int' <LValueToRValue>
+                      `-DeclRefExpr 0x7f838706e8e0 <col:52> 'int' lvalue Var 0x7f838706dfc8 'f' 'int'

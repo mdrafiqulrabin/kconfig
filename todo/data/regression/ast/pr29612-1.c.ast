@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fc2a182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc2a186d828 <pr29612-1.c:7:1, col:31> col:5 foo 'int (void)'
+| `-CompoundStmt 0x7fc2a186d938 <col:16, col:31>
+|   `-ReturnStmt 0x7fc2a186d920 <col:18, col:25>
+|     `-CharacterLiteral 0x7fc2a186d908 <col:25> 'int' 24930
+|-FunctionDecl 0x7fc2a186d9e8 <foo.h:2:1, col:31> col:5 bar 'int (void)'
+| `-CompoundStmt 0x7fc2a186dab8 <col:16, col:31>
+|   `-ReturnStmt 0x7fc2a186daa0 <col:18, col:25>
+|     `-CharacterLiteral 0x7fc2a186da88 <col:25> 'int' 24930
+`-FunctionDecl 0x7fc2a186db68 <pr29612-1.c:15:1, col:31> col:5 baz 'int (void)'
+  `-CompoundStmt 0x7fc2a186dc38 <col:16, col:31>
+    `-ReturnStmt 0x7fc2a186dc20 <col:18, col:25>
+      `-CharacterLiteral 0x7fc2a186dc08 <col:25> 'int' 24930

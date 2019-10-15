@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fc0e282bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc0e282c978 <../Data/C2AST/pr61325.c:3:1, col:22> col:22 referenced wchar_t 'unsigned int'
+| `-BuiltinType 0x7fc0e282be80 'unsigned int'
+|-TypedefDecl 0x7fc0e286d800 <line:4:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fc0e282bea0 'unsigned long'
+`-FunctionDecl 0x7fc0e286db30 <line:6:1, line:19:1> line:7:1 wcstombs 'size_t (char *, const wchar_t *, size_t)'
+  |-ParmVarDecl 0x7fc0e286d898 <col:10, col:16> col:16 used s 'char *'
+  |-ParmVarDecl 0x7fc0e286d988 <col:20, col:35> col:35 used pwcs 'const wchar_t *'
+  |-ParmVarDecl 0x7fc0e286d9f8 <col:42, col:49> col:49 used n 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fc0e286e170 <line:8:1, line:19:1>
+    |-DeclStmt 0x7fc0e286dcc0 <line:9:3, col:16>
+    | `-VarDecl 0x7fc0e286dc40 <col:3, col:15> col:7 used count 'int' cinit
+    |   `-IntegerLiteral 0x7fc0e286dca0 <col:15> 'int' 0
+    |-IfStmt 0x7fc0e286e0c8 <line:11:3, line:17:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc0e286dd50 <line:11:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc0e286dd20 <col:7> 'size_t':'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc0e286dcd8 <col:7> 'size_t':'unsigned long' lvalue ParmVar 0x7fc0e286d9f8 'n' 'size_t':'unsigned long'
+    | | `-ImplicitCastExpr 0x7fc0e286dd38 <col:12> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc0e286dd00 <col:12> 'int' 0
+    | |-CompoundStmt 0x7fc0e286e0b0 <col:15, line:17:3>
+    | | `-DoStmt 0x7fc0e286e090 <line:12:5, line:16:22>
+    | |   |-CompoundStmt 0x7fc0e286dfc8 <line:12:8, line:16:5>
+    | |   | |-IfStmt 0x7fc0e286df48 <line:13:7, line:14:9>
+    | |   | | |-<<<NULL>>>
+    | |   | | |-<<<NULL>>>
+    | |   | | |-BinaryOperator 0x7fc0e286df18 <line:13:11, col:38> 'int' '=='
+    | |   | | | |-ImplicitCastExpr 0x7fc0e286df00 <col:11, col:33> 'int' <IntegralCast>
+    | |   | | | | `-ParenExpr 0x7fc0e286dec0 <col:11, col:33> 'char'
+    | |   | | | |   `-BinaryOperator 0x7fc0e286de98 <col:12, col:31> 'char' '='
+    | |   | | | |     |-UnaryOperator 0x7fc0e286ddc0 <col:12, col:14> 'char' lvalue prefix '*'
+    | |   | | | |     | `-UnaryOperator 0x7fc0e286dda0 <col:13, col:14> 'char *' postfix '++'
+    | |   | | | |     |   `-DeclRefExpr 0x7fc0e286dd78 <col:13> 'char *' lvalue ParmVar 0x7fc0e286d898 's' 'char *'
+    | |   | | | |     `-CStyleCastExpr 0x7fc0e286de70 <col:19, col:31> 'char' <IntegralCast>
+    | |   | | | |       `-ImplicitCastExpr 0x7fc0e286de58 <col:26, col:31> 'wchar_t':'unsigned int' <LValueToRValue>
+    | |   | | | |         `-UnaryOperator 0x7fc0e286de28 <col:26, col:31> 'const wchar_t':'const unsigned int' lvalue prefix '*'
+    | |   | | | |           `-UnaryOperator 0x7fc0e286de08 <col:27, col:31> 'const wchar_t *' postfix '++'
+    | |   | | | |             `-DeclRefExpr 0x7fc0e286dde0 <col:27> 'const wchar_t *' lvalue ParmVar 0x7fc0e286d988 'pwcs' 'const wchar_t *'
+    | |   | | | `-IntegerLiteral 0x7fc0e286dee0 <col:38> 'int' 0
+    | |   | | |-BreakStmt 0x7fc0e286df40 <line:14:9>
+    | |   | | `-<<<NULL>>>
+    | |   | `-UnaryOperator 0x7fc0e286dfa8 <line:15:7, col:12> 'int' postfix '++'
+    | |   |   `-DeclRefExpr 0x7fc0e286df80 <col:7> 'int' lvalue Var 0x7fc0e286dc40 'count' 'int'
+    | |   `-BinaryOperator 0x7fc0e286e068 <line:16:14, col:21> 'int' '!='
+    | |     |-UnaryOperator 0x7fc0e286e010 <col:14, col:16> 'size_t':'unsigned long' prefix '--'
+    | |     | `-DeclRefExpr 0x7fc0e286dfe8 <col:16> 'size_t':'unsigned long' lvalue ParmVar 0x7fc0e286d9f8 'n' 'size_t':'unsigned long'
+    | |     `-ImplicitCastExpr 0x7fc0e286e050 <col:21> 'unsigned long' <IntegralCast>
+    | |       `-IntegerLiteral 0x7fc0e286e030 <col:21> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc0e286e158 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7fc0e286e140 <col:10> 'size_t':'unsigned long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fc0e286e128 <col:10> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fc0e286e100 <col:10> 'int' lvalue Var 0x7fc0e286dc40 'count' 'int'

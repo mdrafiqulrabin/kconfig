@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fd6c702b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd6c702bf60 <../Data/C2AST/pr43557-1.c:7:1, line:10:1> line:7:8 struct S definition
+| `-FieldDecl 0x7fd6c6814c38 <line:9:3, col:7> col:7 referenced v 'int'
+|-VarDecl 0x7fd6c6814cd0 <line:7:1, line:10:3> col:3 used g 'struct S':'struct S'
+|-FunctionDecl 0x7fd6c6814e50 <line:12:1, line:17:1> line:13:1 f1 'void (void)'
+| `-CompoundStmt 0x7fd6c68150f0 <line:14:1, line:17:1>
+|   |-DeclStmt 0x7fd6c6815018 <line:15:3, col:19>
+|   | `-VarDecl 0x7fd6c6814f70 <col:3, col:18> col:13 used s 'struct S *' cinit
+|   |   `-UnaryOperator 0x7fd6c6814ff8 <col:17, col:18> 'struct S *' prefix '&'
+|   |     `-DeclRefExpr 0x7fd6c6814fd0 <col:18> 'struct S':'struct S' lvalue Var 0x7fd6c6814cd0 'g' 'struct S':'struct S'
+|   `-BinaryOperator 0x7fd6c68150c8 <line:16:3, col:10> 'int' '='
+|     |-MemberExpr 0x7fd6c6815070 <col:3, col:6> 'int' lvalue ->v 0x7fd6c6814c38
+|     | `-ImplicitCastExpr 0x7fd6c6815058 <col:3> 'struct S *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd6c6815030 <col:3> 'struct S *' lvalue Var 0x7fd6c6814f70 's' 'struct S *'
+|     `-IntegerLiteral 0x7fd6c68150a8 <col:10> 'int' 0
+`-FunctionDecl 0x7fd6c6815160 <line:19:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fd6c6815238 <col:12, col:24>
+    `-ReturnStmt 0x7fd6c6815220 <col:14, col:21>
+      `-IntegerLiteral 0x7fd6c6815200 <col:21> 'int' 0

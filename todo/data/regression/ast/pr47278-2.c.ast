@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fe0c60078e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe0c5028250 <../Data/C2AST/pr47278-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe0c50282f0 prev 0x7fe0c5028250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe0c50284c8 <line:5:1, line:8:1> line:5:48 used foo 'int (void)'
+| |-CompoundStmt 0x7fe0c5028638 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7fe0c5028620 <line:7:3, col:10>
+| |   `-IntegerLiteral 0x7fe0c5028600 <col:10> 'int' 0
+| |-VisibilityAttr 0x7fe0c5028568 <line:5:25, col:44> Hidden
+| `-WeakAttr 0x7fe0c50285b0 <col:20>
+`-FunctionDecl 0x7fe0c50286a0 <line:10:1, line:15:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7fe0c5028928 <line:11:1, line:15:1>
+    |-IfStmt 0x7fe0c50288b8 <line:12:3, line:13:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe0c50287f8 <line:12:7, col:16> 'int' '!='
+    | | |-CallExpr 0x7fe0c50287b0 <col:7, col:11> 'int'
+    | | | `-ImplicitCastExpr 0x7fe0c5028798 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fe0c5028740 <col:7> 'int (void)' Function 0x7fe0c50284c8 'foo' 'int (void)'
+    | | `-IntegerLiteral 0x7fe0c50287d8 <col:16> 'int' 1
+    | |-CallExpr 0x7fe0c5028890 <line:13:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe0c5028878 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe0c5028820 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe0c50282f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe0c5028910 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fe0c50288f0 <col:10> 'int' 0

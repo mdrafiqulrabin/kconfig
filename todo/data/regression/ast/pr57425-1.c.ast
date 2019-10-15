@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fe61382bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe613868e50 <../Data/C2AST/pr57425-1.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe613868ef0 prev 0x7fe613868e50 <col:1, col:50> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fe613868f90 <line:5:1, line:9:1> line:5:7 union setconflict definition
+| |-FieldDecl 0x7fe6138690c0 <line:7:3, col:11> col:7 referenced a 'int [20]'
+| `-FieldDecl 0x7fe613869190 <line:8:3, col:12> col:8 referenced b 'long [10]'
+`-FunctionDecl 0x7fe613869230 <line:11:1, line:37:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7fe61387fdb8 <line:13:1, line:37:1>
+    |-DeclStmt 0x7fe6138693a8 <line:14:3, col:14>
+    | `-VarDecl 0x7fe613869328 <col:3, col:13> col:7 used sum 'int' cinit
+    |   `-IntegerLiteral 0x7fe613869388 <col:13> 'int' 0
+    |-CompoundStmt 0x7fe613869b08 <line:15:3, line:23:3>
+    | |-DeclStmt 0x7fe613869470 <line:16:5, col:24>
+    | | `-VarDecl 0x7fe613869410 <col:5, col:23> col:23 used a 'union setconflict':'union setconflict'
+    | |-DeclStmt 0x7fe613869530 <line:17:5, col:11>
+    | | `-VarDecl 0x7fe6138694d0 <col:5, col:10> col:10 used c 'int *'
+    | |-BinaryOperator 0x7fe6138695e8 <line:18:5, col:11> 'int *' '='
+    | | |-DeclRefExpr 0x7fe613869548 <col:5> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7fe6138695d0 <col:9, col:11> 'int *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7fe613869598 <col:9, col:11> 'int [20]' lvalue .a 0x7fe6138690c0
+    | |     `-DeclRefExpr 0x7fe613869570 <col:9> 'union setconflict':'union setconflict' lvalue Var 0x7fe613869410 'a' 'union setconflict':'union setconflict'
+    | |-GCCAsmStmt 0x7fe6138697a8 <line:19:5, col:30>
+    | | |-DeclRefExpr 0x7fe6138696d8 <col:20> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7fe613869790 <col:28> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe613869768 <col:28> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    | |-BinaryOperator 0x7fe6138698a0 <line:20:5, col:10> 'int' '='
+    | | |-UnaryOperator 0x7fe613869860 <col:5, col:6> 'int' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7fe613869848 <col:6> 'int *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fe613869820 <col:6> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    | | `-IntegerLiteral 0x7fe613869880 <col:10> 'int' 0
+    | |-GCCAsmStmt 0x7fe6138699b8 <line:21:5, col:30>
+    | | |-DeclRefExpr 0x7fe613869920 <col:20> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7fe6138699a0 <col:28> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe613869978 <col:28> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    | `-CompoundAssignOperator 0x7fe613869ad0 <line:22:5, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fe613869a30 <col:5> 'int' lvalue Var 0x7fe613869328 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7fe613869ab8 <col:12, col:13> 'int' <LValueToRValue>
+    |     `-UnaryOperator 0x7fe613869a98 <col:12, col:13> 'int' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fe613869a80 <col:13> 'int *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe613869a58 <col:13> 'int *' lvalue Var 0x7fe6138694d0 'c' 'int *'
+    |-CompoundStmt 0x7fe61387fbe8 <line:24:3, line:32:3>
+    | |-DeclStmt 0x7fe613869bd0 <line:25:5, col:24>
+    | | `-VarDecl 0x7fe613869b70 <col:5, col:23> col:23 used a 'union setconflict':'union setconflict'
+    | |-DeclStmt 0x7fe613869c90 <line:26:5, col:12>
+    | | `-VarDecl 0x7fe613869c30 <col:5, col:11> col:11 used c 'long *'
+    | |-BinaryOperator 0x7fe613869d48 <line:27:5, col:11> 'long *' '='
+    | | |-DeclRefExpr 0x7fe613869ca8 <col:5> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    | | `-ImplicitCastExpr 0x7fe613869d30 <col:9, col:11> 'long *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7fe613869cf8 <col:9, col:11> 'long [10]' lvalue .b 0x7fe613869190
+    | |     `-DeclRefExpr 0x7fe613869cd0 <col:9> 'union setconflict':'union setconflict' lvalue Var 0x7fe613869b70 'a' 'union setconflict':'union setconflict'
+    | |-GCCAsmStmt 0x7fe61387f870 <line:28:5, col:30>
+    | | |-DeclRefExpr 0x7fe613869dc8 <col:20> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    | | `-ImplicitCastExpr 0x7fe61387f858 <col:28> 'long *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe61387f830 <col:28> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    | |-BinaryOperator 0x7fe61387f980 <line:29:5, col:10> 'long' '='
+    | | |-UnaryOperator 0x7fe61387f928 <col:5, col:6> 'long' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7fe61387f910 <col:6> 'long *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fe61387f8e8 <col:6> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    | | `-ImplicitCastExpr 0x7fe61387f968 <col:10> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe61387f948 <col:10> 'int' 1
+    | |-GCCAsmStmt 0x7fe61387fa98 <line:30:5, col:30>
+    | | |-DeclRefExpr 0x7fe61387fa00 <col:20> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    | | `-ImplicitCastExpr 0x7fe61387fa80 <col:28> 'long *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe61387fa58 <col:28> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    | `-CompoundAssignOperator 0x7fe61387fbb0 <line:31:5, col:13> 'int' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+    |   |-DeclRefExpr 0x7fe61387fb10 <col:5> 'int' lvalue Var 0x7fe613869328 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7fe61387fb98 <col:12, col:13> 'long' <LValueToRValue>
+    |     `-UnaryOperator 0x7fe61387fb78 <col:12, col:13> 'long' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fe61387fb60 <col:13> 'long *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe61387fb38 <col:13> 'long *' lvalue Var 0x7fe613869c30 'c' 'long *'
+    |-IfStmt 0x7fe61387fd48 <line:34:3, line:35:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe61387fc90 <line:34:7, col:14> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe61387fc78 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe61387fc30 <col:7> 'int' lvalue Var 0x7fe613869328 'sum' 'int'
+    | | `-IntegerLiteral 0x7fe61387fc58 <col:14> 'int' 1
+    | |-CallExpr 0x7fe61387fd20 <line:35:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fe61387fd08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe61387fcb8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe613868ef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe61387fda0 <line:36:3, col:10>
+      `-IntegerLiteral 0x7fe61387fd80 <col:10> 'int' 0

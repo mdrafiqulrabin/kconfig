@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7f993b8174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f993b818178 <../Data/C2AST/pr33755.c:3:1, col:14> col:14 used gv 'volatile int'
+|-VarDecl 0x7f993b0292c0 <line:4:1, col:19> col:13 used ptrs 'const char *[2]'
+|-FunctionDecl 0x7f993b0294d0 <line:6:1, line:22:1> line:7:1 used foo 'void (volatile int *, const char **)'
+| |-ParmVarDecl 0x7f993b029360 <col:6, col:20> col:20 used v 'volatile int *'
+| |-ParmVarDecl 0x7f993b029400 <col:23, col:36> col:36 used ptrs 'const char **'
+| `-CompoundStmt 0x7f993b029b60 <line:8:1, line:22:1>
+|   |-SwitchStmt 0x7f993b029640 <line:9:3, line:19:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f993b029618 <line:9:11, col:16> 'int' '&'
+|   | | |-ImplicitCastExpr 0x7f993b029600 <col:11, col:12> 'int' <LValueToRValue>
+|   | | | `-UnaryOperator 0x7f993b0295c0 <col:11, col:12> 'volatile int' lvalue prefix '*'
+|   | | |   `-ImplicitCastExpr 0x7f993b0295a8 <col:12> 'volatile int *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7f993b029580 <col:12> 'volatile int *' lvalue ParmVar 0x7f993b029360 'v' 'volatile int *'
+|   | | `-IntegerLiteral 0x7f993b0295e0 <col:16> 'int' 1
+|   | `-CompoundStmt 0x7f993b029990 <line:10:5, line:19:5>
+|   |   |-CaseStmt 0x7f993b029690 <line:11:5, line:12:17>
+|   |   | |-IntegerLiteral 0x7f993b029670 <line:11:10> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f993b029788 <line:12:7, col:17> 'const char *' '='
+|   |   |   |-ArraySubscriptExpr 0x7f993b029728 <col:7, col:13> 'const char *' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7f993b029710 <col:7> 'const char **' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x7f993b0296c8 <col:7> 'const char **' lvalue ParmVar 0x7f993b029400 'ptrs' 'const char **'
+|   |   |   | `-IntegerLiteral 0x7f993b0296f0 <col:12> 'int' 0
+|   |   |   `-ImplicitCastExpr 0x7f993b029770 <col:17> 'const char *' <NullToPointer>
+|   |   |     `-IntegerLiteral 0x7f993b029750 <col:17> 'int' 0
+|   |   |-BreakStmt 0x7f993b0297b0 <line:13:7>
+|   |   |-CaseStmt 0x7f993b0297d8 <line:14:5, line:15:7>
+|   |   | |-IntegerLiteral 0x7f993b0297b8 <line:14:10> 'int' 1
+|   |   | |-<<<NULL>>>
+|   |   | `-BreakStmt 0x7f993b029810 <line:15:7>
+|   |   |-DefaultStmt 0x7f993b029968 <line:16:5, line:17:17>
+|   |   | `-BinaryOperator 0x7f993b029940 <col:7, col:17> 'const char *' '='
+|   |   |   |-ArraySubscriptExpr 0x7f993b029878 <col:7, col:13> 'const char *' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7f993b029860 <col:7> 'const char **' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x7f993b029818 <col:7> 'const char **' lvalue ParmVar 0x7f993b029400 'ptrs' 'const char **'
+|   |   |   | `-IntegerLiteral 0x7f993b029840 <col:12> 'int' 1
+|   |   |   `-ImplicitCastExpr 0x7f993b029928 <col:17> 'const char *' <BitCast>
+|   |   |     `-ImplicitCastExpr 0x7f993b029910 <col:17> 'char *' <ArrayToPointerDecay>
+|   |   |       `-StringLiteral 0x7f993b0298d8 <col:17> 'char [10]' lvalue "Some text"
+|   |   `-BreakStmt 0x7f993b029988 <line:18:7>
+|   `-WhileStmt 0x7f993b029b40 <line:20:3, line:21:11>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f993b029a60 <line:20:10, col:15> 'int' '>'
+|     | |-ImplicitCastExpr 0x7f993b029a48 <col:10, col:11> 'int' <LValueToRValue>
+|     | | `-UnaryOperator 0x7f993b029a08 <col:10, col:11> 'volatile int' lvalue prefix '*'
+|     | |   `-ImplicitCastExpr 0x7f993b0299f0 <col:11> 'volatile int *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7f993b0299c8 <col:11> 'volatile int *' lvalue ParmVar 0x7f993b029360 'v' 'volatile int *'
+|     | `-IntegerLiteral 0x7f993b029a28 <col:15> 'int' 0
+|     `-CompoundAssignOperator 0x7f993b029b08 <line:21:5, col:11> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+|       |-UnaryOperator 0x7f993b029ac8 <col:5, col:6> 'volatile int' lvalue prefix '*'
+|       | `-ImplicitCastExpr 0x7f993b029ab0 <col:6> 'volatile int *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f993b029a88 <col:6> 'volatile int *' lvalue ParmVar 0x7f993b029360 'v' 'volatile int *'
+|       `-IntegerLiteral 0x7f993b029ae8 <col:11> 'int' 1
+`-FunctionDecl 0x7f993b029c48 <line:24:1, line:29:1> line:25:1 main 'int (void)'
+  `-CompoundStmt 0x7f993b029e78 <line:26:1, line:29:1>
+    |-CallExpr 0x7f993b029df0 <line:27:3, col:17> 'void'
+    | |-ImplicitCastExpr 0x7f993b029dd8 <col:3> 'void (*)(volatile int *, const char **)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f993b029d18 <col:3> 'void (volatile int *, const char **)' Function 0x7f993b0294d0 'foo' 'void (volatile int *, const char **)'
+    | |-UnaryOperator 0x7f993b029d68 <col:8, col:9> 'volatile int *' prefix '&'
+    | | `-DeclRefExpr 0x7f993b029d40 <col:9> 'volatile int' lvalue Var 0x7f993b818178 'gv' 'volatile int'
+    | `-ImplicitCastExpr 0x7f993b029e28 <col:13> 'const char **' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f993b029d88 <col:13> 'const char *[2]' lvalue Var 0x7f993b0292c0 'ptrs' 'const char *[2]'
+    `-ReturnStmt 0x7f993b029e60 <line:28:3, col:10>
+      `-IntegerLiteral 0x7f993b029e40 <col:10> 'int' 0

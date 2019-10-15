@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7ff5448174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff5440294e8 <../Data/C2AST/pr70920-1.c:6:1, col:9> col:6 used f1 'void ()'
+|-FunctionDecl 0x7ff5440295e8 <line:7:1, col:9> col:6 used f2 'void ()'
+`-FunctionDecl 0x7ff544029790 <line:9:1, line:18:1> line:10:1 foo 'void (int *)'
+  |-ParmVarDecl 0x7ff5440296d0 <col:6, col:11> col:11 used a 'int *'
+  `-CompoundStmt 0x7ff544029b00 <line:11:1, line:18:1>
+    `-IfStmt 0x7ff544029ac8 <line:12:3, line:17:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff544029910 <line:12:7, col:23> 'int' '=='
+      | |-CStyleCastExpr 0x7ff5440298b0 <col:7, col:18> 'intptr_t':'long' <PointerToIntegral>
+      | | `-ImplicitCastExpr 0x7ff544029898 <col:18> 'int *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7ff544029860 <col:18> 'int *' lvalue ParmVar 0x7ff5440296d0 'a' 'int *'
+      | `-ImplicitCastExpr 0x7ff5440298f8 <col:23> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7ff5440298d8 <col:23> 'int' 0
+      |-CompoundStmt 0x7ff544029aa8 <line:13:5, line:17:5>
+      | |-CallExpr 0x7ff5440299a0 <line:14:7, col:11> 'void'
+      | | `-ImplicitCastExpr 0x7ff544029988 <col:7> 'void (*)()' <FunctionToPointerDecay>
+      | |   `-DeclRefExpr 0x7ff544029938 <col:7> 'void ()' Function 0x7ff5440294e8 'f1' 'void ()'
+      | `-IfStmt 0x7ff544029a70 <line:15:7, line:16:6>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7ff5440299f0 <line:15:11> 'int *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7ff5440299c8 <col:11> 'int *' lvalue ParmVar 0x7ff5440296d0 'a' 'int *'
+      |   |-CallExpr 0x7ff544029a48 <line:16:2, col:6> 'void'
+      |   | `-ImplicitCastExpr 0x7ff544029a30 <col:2> 'void (*)()' <FunctionToPointerDecay>
+      |   |   `-DeclRefExpr 0x7ff544029a08 <col:2> 'void ()' Function 0x7ff5440295e8 'f2' 'void ()'
+      |   `-<<<NULL>>>
+      `-<<<NULL>>>

@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe8ae8178e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe8ae02e2d8 <../Data/C2AST/pr56547-2.c:6:1, line:10:1> line:7:1 test_00 'float (float, float)'
+| |-ParmVarDecl 0x7fe8ae818578 <col:10, col:16> col:16 used a 'float'
+| |-ParmVarDecl 0x7fe8ae02e200 <col:19, col:25> col:25 used b 'float'
+| `-CompoundStmt 0x7fe8ae02e4f0 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fe8ae02e4d8 <line:9:3, col:18>
+|     `-BinaryOperator 0x7fe8ae02e4b0 <col:10, col:18> 'float' '+'
+|       |-BinaryOperator 0x7fe8ae02e448 <col:10, col:14> 'float' '*'
+|       | |-ImplicitCastExpr 0x7fe8ae02e418 <col:10> 'float' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fe8ae02e3c8 <col:10> 'float' lvalue ParmVar 0x7fe8ae818578 'a' 'float'
+|       | `-ImplicitCastExpr 0x7fe8ae02e430 <col:14> 'float' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe8ae02e3f0 <col:14> 'float' lvalue ParmVar 0x7fe8ae02e200 'b' 'float'
+|       `-ImplicitCastExpr 0x7fe8ae02e498 <col:18> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe8ae02e470 <col:18> 'float' lvalue ParmVar 0x7fe8ae818578 'a' 'float'
+`-FunctionDecl 0x7fe8ae02e5e8 <line:12:1, line:16:1> line:13:1 test_01 'float (float)'
+  |-ParmVarDecl 0x7fe8ae02e520 <col:10, col:16> col:16 used a 'float'
+  `-CompoundStmt 0x7fe8ae02e7b8 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7fe8ae02e7a0 <line:15:3, col:18>
+      `-BinaryOperator 0x7fe8ae02e778 <col:10, col:18> 'float' '+'
+        |-BinaryOperator 0x7fe8ae02e710 <col:10, col:14> 'float' '*'
+        | |-ImplicitCastExpr 0x7fe8ae02e6e0 <col:10> 'float' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fe8ae02e690 <col:10> 'float' lvalue ParmVar 0x7fe8ae02e520 'a' 'float'
+        | `-ImplicitCastExpr 0x7fe8ae02e6f8 <col:14> 'float' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe8ae02e6b8 <col:14> 'float' lvalue ParmVar 0x7fe8ae02e520 'a' 'float'
+        `-ImplicitCastExpr 0x7fe8ae02e760 <col:18> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7fe8ae02e738 <col:18> 'float' lvalue ParmVar 0x7fe8ae02e520 'a' 'float'

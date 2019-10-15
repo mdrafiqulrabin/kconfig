@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fbf318018e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbf31802560 <../Data/C2AST/pr63480.c:7:1, col:25> col:8 struct S definition
+| |-FieldDecl 0x7fbf3281c638 <col:12, col:16> col:16 a 'int'
+| |-FieldDecl 0x7fbf3281c698 <col:12, col:19> col:19 b 'int'
+| `-FieldDecl 0x7fbf3281c6f8 <col:12, col:22> col:22 c 'int'
+|-VarDecl 0x7fbf3281c790 <col:1, col:33> col:27 s 'struct S':'struct S' cinit
+| `-InitListExpr 0x7fbf3281c870 <col:31, col:33> 'struct S':'struct S'
+|   |-ImplicitValueInitExpr 0x7fbf3281c8c8 <<invalid sloc>> 'int'
+|   |-ImplicitValueInitExpr 0x7fbf3281c8d8 <<invalid sloc>> 'int'
+|   `-ImplicitValueInitExpr 0x7fbf3281c8e8 <<invalid sloc>> 'int'
+`-FunctionDecl 0x7fbf3281c9d0 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7fbf3281cd90 <line:11:1, line:14:1>
+    |-DeclStmt 0x7fbf3281cbb8 <line:12:3, col:19>
+    | `-VarDecl 0x7fbf3281ca90 <col:3, col:18> col:12 s 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fbf3281cb30 <col:16, col:18> 'struct S':'struct S'
+    |     |-ImplicitValueInitExpr 0x7fbf3281cb88 <<invalid sloc>> 'int'
+    |     |-ImplicitValueInitExpr 0x7fbf3281cb98 <<invalid sloc>> 'int'
+    |     `-ImplicitValueInitExpr 0x7fbf3281cba8 <<invalid sloc>> 'int'
+    `-DeclStmt 0x7fbf3281cd78 <line:13:3, col:30>
+      `-VarDecl 0x7fbf3281cbf0 <col:3, col:29> col:12 s2 'struct S':'struct S' cinit
+        `-ImplicitCastExpr 0x7fbf3281cd60 <col:17, col:29> 'struct S':'struct S' <LValueToRValue>
+          `-CompoundLiteralExpr 0x7fbf3281cd38 <col:17, col:29> 'struct S':'struct S' lvalue
+            `-InitListExpr 0x7fbf3281ccb0 <col:27, col:29> 'struct S':'struct S'
+              |-ImplicitValueInitExpr 0x7fbf3281cd08 <<invalid sloc>> 'int'
+              |-ImplicitValueInitExpr 0x7fbf3281cd18 <<invalid sloc>> 'int'
+              `-ImplicitValueInitExpr 0x7fbf3281cd28 <<invalid sloc>> 'int'

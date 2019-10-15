@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fac5002bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fac5002c978 <../Data/C2AST/pr81148.c:4:1, col:10> col:5 used x 'int' cinit
+| `-UnaryOperator 0x7fac50812260 <col:9, col:10> 'int' prefix '-'
+|   `-IntegerLiteral 0x7fac50812240 <col:10> 'int' 106
+`-FunctionDecl 0x7fac508122d0 <line:5:1, line:9:1> line:5:5 main 'int ()'
+  `-CompoundStmt 0x7fac50812670 <line:6:1, line:9:1>
+    `-ReturnStmt 0x7fac50812658 <line:8:3, col:65>
+      `-BinaryOperator 0x7fac50812630 <col:10, col:65> 'int' '=='
+        |-ParenExpr 0x7fac508125d8 <col:10, col:60> 'long long'
+        | `-BinaryOperator 0x7fac508125b0 <col:11, col:59> 'long long' '-'
+        |   |-ImplicitCastExpr 0x7fac50812598 <col:11, col:12> 'long long' <IntegralCast>
+        |   | `-UnaryOperator 0x7fac50812390 <col:11, col:12> 'int' prefix '-'
+        |   |   `-IntegerLiteral 0x7fac50812370 <col:12> 'int' 123
+        |   `-ParenExpr 0x7fac50812578 <col:18, col:59> 'long long'
+        |     `-BinaryOperator 0x7fac50812550 <col:19, col:58> 'long long' '-'
+        |       |-ParenExpr 0x7fac508124d8 <col:19, col:53> 'long long'
+        |       | `-BinaryOperator 0x7fac508124b0 <col:20, col:52> 'long long' '^'
+        |       |   |-IntegerLiteral 0x7fac508123b0 <col:20> 'long long' 9223372036854775806
+        |       |   `-ImplicitCastExpr 0x7fac50812498 <col:44, col:52> 'long long' <IntegralCast>
+        |       |     `-UnaryOperator 0x7fac50812478 <col:44, col:52> 'int' prefix '~'
+        |       |       `-ParenExpr 0x7fac50812458 <col:45, col:52> 'int'
+        |       |         `-BinaryOperator 0x7fac50812430 <col:46, col:51> 'int' '&&'
+        |       |           |-ImplicitCastExpr 0x7fac50812418 <col:46> 'int' <LValueToRValue>
+        |       |           | `-DeclRefExpr 0x7fac508123d0 <col:46> 'int' lvalue Var 0x7fac5002c978 'x' 'int'
+        |       |           `-IntegerLiteral 0x7fac508123f8 <col:51> 'int' 1
+        |       `-ImplicitCastExpr 0x7fac50812538 <col:57, col:58> 'long long' <IntegralCast>
+        |         `-UnaryOperator 0x7fac50812518 <col:57, col:58> 'int' prefix '-'
+        |           `-IntegerLiteral 0x7fac508124f8 <col:58> 'int' 1
+        `-ImplicitCastExpr 0x7fac50812618 <col:65> 'long long' <IntegralCast>
+          `-IntegerLiteral 0x7fac508125f8 <col:65> 'int' 0

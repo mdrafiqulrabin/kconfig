@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7f90e482bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f90e5808028 <../Data/C2AST/pr59054.c:7:1, col:29> col:6 foo 'long (void)'
+  `-CompoundStmt 0x7f90e5808158 <col:17, col:29>
+    `-ReturnStmt 0x7f90e5808140 <col:19, col:26>
+      `-ImplicitCastExpr 0x7f90e5808128 <col:26> 'long' <IntegralCast>
+        `-IntegerLiteral 0x7f90e5808108 <col:26> 'int' 0

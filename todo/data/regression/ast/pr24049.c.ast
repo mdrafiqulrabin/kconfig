@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fc6df028ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc6e0027110 <../Data/C2AST/pr24049.c:4:1, col:39> col:6 used unscrunch 'void (unsigned char *, int *)'
+| |-ParmVarDecl 0x7fc6df0297a0 <col:17, col:31> col:32 'unsigned char *'
+| `-ParmVarDecl 0x7fc6e0027040 <col:34, col:38> col:39 'int *'
+`-FunctionDecl 0x7fc6e0027368 <line:6:1, line:12:1> line:6:5 DES_CBCUpdate 'int (unsigned char *, int)'
+  |-ParmVarDecl 0x7fc6e0027218 <col:19, col:35> col:35 used output 'unsigned char *'
+  |-ParmVarDecl 0x7fc6e0027290 <col:43, col:47> col:47 used len 'int'
+  `-CompoundStmt 0x7fc6e00279c8 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fc6e0027500 <line:8:3, col:14>
+    | `-VarDecl 0x7fc6e00274a0 <col:3, col:13> col:7 used work 'int [2]'
+    |-DeclStmt 0x7fc6e0027590 <line:9:3, col:17>
+    | `-VarDecl 0x7fc6e0027530 <col:3, col:16> col:16 used i 'unsigned int'
+    `-ForStmt 0x7fc6e0027990 <line:10:3, line:11:34>
+      |-BinaryOperator 0x7fc6e0027608 <line:10:7, col:11> 'unsigned int' '='
+      | |-DeclRefExpr 0x7fc6e00275a8 <col:7> 'unsigned int' lvalue Var 0x7fc6e0027530 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fc6e00275f0 <col:11> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fc6e00275d0 <col:11> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc6e0027710 <col:13, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc6e00276e0 <col:13> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc6e0027630 <col:13> 'unsigned int' lvalue Var 0x7fc6e0027530 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fc6e00276f8 <col:17, col:21> 'unsigned int' <IntegralCast>
+      |   `-BinaryOperator 0x7fc6e00276b8 <col:17, col:21> 'int' '/'
+      |     |-ImplicitCastExpr 0x7fc6e00276a0 <col:17> 'int' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7fc6e0027658 <col:17> 'int' lvalue ParmVar 0x7fc6e0027290 'len' 'int'
+      |     `-IntegerLiteral 0x7fc6e0027680 <col:21> 'int' 8
+      |-UnaryOperator 0x7fc6e0027760 <col:23, col:24> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7fc6e0027738 <col:23> 'unsigned int' lvalue Var 0x7fc6e0027530 'i' 'unsigned int'
+      `-CallExpr 0x7fc6e0027940 <line:11:5, col:34> 'void'
+        |-ImplicitCastExpr 0x7fc6e0027928 <col:5> 'void (*)(unsigned char *, int *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc6e0027780 <col:5> 'void (unsigned char *, int *)' Function 0x7fc6e0027110 'unscrunch' 'void (unsigned char *, int *)'
+        |-UnaryOperator 0x7fc6e00278b0 <col:16, col:27> 'unsigned char *' prefix '&'
+        | `-ArraySubscriptExpr 0x7fc6e0027888 <col:17, col:27> 'unsigned char' lvalue
+        |   |-ImplicitCastExpr 0x7fc6e0027870 <col:17> 'unsigned char *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fc6e00277a8 <col:17> 'unsigned char *' lvalue ParmVar 0x7fc6e0027218 'output' 'unsigned char *'
+        |   `-BinaryOperator 0x7fc6e0027848 <col:24, col:26> 'unsigned int' '*'
+        |     |-ImplicitCastExpr 0x7fc6e0027830 <col:24> 'unsigned int' <IntegralCast>
+        |     | `-IntegerLiteral 0x7fc6e00277d0 <col:24> 'int' 8
+        |     `-ImplicitCastExpr 0x7fc6e0027818 <col:26> 'unsigned int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fc6e00277f0 <col:26> 'unsigned int' lvalue Var 0x7fc6e0027530 'i' 'unsigned int'
+        `-ImplicitCastExpr 0x7fc6e0027978 <col:30> 'int *' <ArrayToPointerDecay>
+          `-DeclRefExpr 0x7fc6e00278d0 <col:30> 'int [2]' lvalue Var 0x7fc6e00274a0 'work' 'int [2]'

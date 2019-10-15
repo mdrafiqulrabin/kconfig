@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fa6e502bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa6e502c978 <../Data/C2AST/pr60930.c:3:1, col:9> col:5 used x 'int' cinit
+| `-IntegerLiteral 0x7fa6e5814240 <col:9> 'int' 1
+|-FunctionDecl 0x7fa6e5814340 <line:5:1, line:11:1> line:6:1 used foo 'void (unsigned long long)'
+| |-ParmVarDecl 0x7fa6e5814278 <col:6, col:25> col:25 used t 'unsigned long long'
+| |-CompoundStmt 0x7fa6e5814850 <line:7:1, line:11:1>
+| | |-GCCAsmStmt 0x7fa6e5814568 <line:8:3, col:32>
+| | | `-UnaryOperator 0x7fa6e5814548 <col:29, col:30> 'unsigned long long *' prefix '&'
+| | |   `-DeclRefExpr 0x7fa6e58144f8 <col:30> 'unsigned long long' lvalue ParmVar 0x7fa6e5814278 't' 'unsigned long long'
+| | `-IfStmt 0x7fa6e5814818 <line:9:3, line:10:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fa6e5814640 <line:9:7, col:12> 'int' '=='
+| |   | |-ImplicitCastExpr 0x7fa6e5814610 <col:7> 'unsigned long long' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fa6e58145c8 <col:7> 'unsigned long long' lvalue ParmVar 0x7fa6e5814278 't' 'unsigned long long'
+| |   | `-ImplicitCastExpr 0x7fa6e5814628 <col:12> 'unsigned long long' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fa6e58145f0 <col:12> 'int' 1
+| |   |-CallExpr 0x7fa6e58147f0 <line:10:5, col:22> 'void'
+| |   | `-ImplicitCastExpr 0x7fa6e58147d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7fa6e5814788 <col:5> '<builtin fn type>' Function 0x7fa6e58146a0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fa6e58143e8 <line:5:16>
+|-FunctionDecl 0x7fa6e58146a0 <line:10:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fa6e5814740 <col:5> Implicit
+`-FunctionDecl 0x7fa6e58148c0 <line:13:1, line:22:1> line:14:1 main 'int ()'
+  `-CompoundStmt 0x7fa6e5814cf8 <line:15:1, line:22:1>
+    |-DeclStmt 0x7fa6e5814af8 <line:17:3, col:68>
+    | `-VarDecl 0x7fa6e5814978 <col:3, col:67> col:22 used t 'unsigned long long' cinit
+    |   `-BinaryOperator 0x7fa6e5814ad0 <col:26, col:67> 'unsigned long long' '*'
+    |     |-IntegerLiteral 0x7fa6e58149d8 <col:26> 'unsigned long long' 18446744073709551615
+    |     `-ImplicitCastExpr 0x7fa6e5814ab8 <col:50, col:67> 'unsigned long long' <IntegralCast>
+    |       `-ParenExpr 0x7fa6e5814a98 <col:50, col:67> 'unsigned long'
+    |         `-BinaryOperator 0x7fa6e5814a70 <col:51, col:66> 'unsigned long' '*'
+    |           |-IntegerLiteral 0x7fa6e58149f8 <col:51> 'unsigned long' 4294967295
+    |           `-ImplicitCastExpr 0x7fa6e5814a58 <col:66> 'unsigned long' <IntegralCast>
+    |             `-ImplicitCastExpr 0x7fa6e5814a40 <col:66> 'int' <LValueToRValue>
+    |               `-DeclRefExpr 0x7fa6e5814a18 <col:66> 'int' lvalue Var 0x7fa6e502c978 'x' 'int'
+    |-IfStmt 0x7fa6e5814c78 <line:18:3, line:19:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa6e5814b70 <line:18:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa6e5814b58 <col:7> 'unsigned long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa6e5814b10 <col:7> 'unsigned long long' lvalue Var 0x7fa6e5814978 't' 'unsigned long long'
+    | | `-IntegerLiteral 0x7fa6e5814b38 <col:12> 'unsigned long long' 18446744069414584321
+    | |-CallExpr 0x7fa6e5814c30 <line:19:5, col:11> 'void'
+    | | |-ImplicitCastExpr 0x7fa6e5814c18 <col:5> 'void (*)(unsigned long long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa6e5814b98 <col:5> 'void (unsigned long long)' Function 0x7fa6e5814340 'foo' 'void (unsigned long long)'
+    | | `-ImplicitCastExpr 0x7fa6e5814c60 <col:10> 'unsigned long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fa6e5814bc0 <col:10> 'unsigned long long' lvalue Var 0x7fa6e5814978 't' 'unsigned long long'
+    | `-<<<NULL>>>
+    |-NullStmt 0x7fa6e5814cb0 <col:13>
+    `-ReturnStmt 0x7fa6e5814ce0 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fa6e5814cc0 <col:10> 'int' 0

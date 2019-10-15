@@ -1,0 +1,55 @@
+../Data/C2AST/pr40001.c:11:9: error: use of unknown builtin '__builtin_spu_extract' [-Wimplicit-function-declaration]
+  sps = __builtin_spu_extract (sp_r1, 0);
+        ^
+1 error generated.
+TranslationUnitDecl 0x7f8c4c00f4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c4c00fa60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c4c00f780 '__int128'
+|-TypedefDecl 0x7f8c4c00fad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c4c00f7a0 'unsigned __int128'
+|-TypedefDecl 0x7f8c4c00fda8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c4c00fbb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c4c00fb28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c4c00fe40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c4c00fe00 'char *'
+|   `-BuiltinType 0x7f8c4c00f580 'char'
+|-TypedefDecl 0x7f8c4c010108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c4c0100b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c4c00ff20 'struct __va_list_tag'
+|     `-Record 0x7f8c4c00fe98 '__va_list_tag'
+`-FunctionDecl 0x7f8c4d814268 <../Data/C2AST/pr40001.c:4:1, line:16:1> line:5:1 sbrk 'void *(unsigned int)'
+  |-ParmVarDecl 0x7f8c4c010178 <col:7, col:20> col:20 used increment 'unsigned int'
+  `-CompoundStmt 0x7f8c4d8149f8 <line:6:1, line:16:1>
+    |-DeclStmt 0x7f8c4d814488 <line:7:3, line:8:72>
+    | `-VarDecl 0x7f8c4d8143d0 <line:7:3, line:8:53> col:53 used sp_r1 'volatile unsigned int' register
+    |   `-AsmLabelAttr 0x7f8c4d814430 <col:68> "1"
+    |-DeclStmt 0x7f8c4d814518 <line:9:3, col:19>
+    | `-VarDecl 0x7f8c4d8144b8 <col:3, col:16> col:16 used sps 'unsigned int'
+    |-BinaryOperator 0x7f8c4d814788 <line:11:3, col:40> 'unsigned int' '='
+    | |-DeclRefExpr 0x7f8c4d814530 <col:3> 'unsigned int' lvalue Var 0x7f8c4d8144b8 'sps' 'unsigned int'
+    | `-ImplicitCastExpr 0x7f8c4d814770 <col:9, col:40> 'unsigned int' <IntegralCast>
+    |   `-CallExpr 0x7f8c4d814720 <col:9, col:40> 'int'
+    |     |-ImplicitCastExpr 0x7f8c4d814708 <col:9> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f8c4d814670 <col:9> 'int ()' Function 0x7f8c4d8145c0 '__builtin_spu_extract' 'int ()'
+    |     |-ImplicitCastExpr 0x7f8c4d814758 <col:32> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8c4d814698 <col:32> 'volatile unsigned int' lvalue Var 0x7f8c4d8143d0 'sp_r1' 'volatile unsigned int'
+    |     `-IntegerLiteral 0x7f8c4d8146c0 <col:39> 'int' 0
+    `-IfStmt 0x7f8c4d8149c0 <line:12:3, line:15:24>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8c4d814890 <line:12:7, col:21> 'int' '>='
+      | |-BinaryOperator 0x7f8c4d814828 <col:7, col:13> 'unsigned int' '-'
+      | | |-ImplicitCastExpr 0x7f8c4d8147f8 <col:7> 'unsigned int' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7f8c4d8147b0 <col:7> 'unsigned int' lvalue Var 0x7f8c4d8144b8 'sps' 'unsigned int'
+      | | `-ImplicitCastExpr 0x7f8c4d814810 <col:13> 'unsigned int' <IntegralCast>
+      | |   `-IntegerLiteral 0x7f8c4d8147d8 <col:13> 'int' 4096
+      | `-ImplicitCastExpr 0x7f8c4d814878 <col:21> 'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8c4d814850 <col:21> 'unsigned int' lvalue ParmVar 0x7f8c4c010178 'increment' 'unsigned int'
+      |-ReturnStmt 0x7f8c4d8148f0 <line:13:5, col:12>
+      | `-ImplicitCastExpr 0x7f8c4d8148d8 <col:12> 'void *' <NullToPointer>
+      |   `-IntegerLiteral 0x7f8c4d8148b8 <col:12> 'int' 0
+      `-ReturnStmt 0x7f8c4d8149a8 <line:15:5, col:24>
+        `-ParenExpr 0x7f8c4d814988 <col:12, col:24> 'void *'
+          `-CStyleCastExpr 0x7f8c4d814960 <col:13, col:23> 'void *' <IntegralToPointer>
+            `-UnaryOperator 0x7f8c4d814928 <col:22, col:23> 'int' prefix '-'
+              `-IntegerLiteral 0x7f8c4d814908 <col:23> 'int' 1

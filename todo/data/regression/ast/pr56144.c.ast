@@ -1,0 +1,108 @@
+TranslationUnitDecl 0x7fb7fe82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb7fe82c978 <../Data/C2AST/pr56144.c:5:1, col:5> col:5 used a 'int'
+|-RecordDecl 0x7fb7ff014240 <line:6:1, col:38> col:7 union U0 definition
+| |-FieldDecl 0x7fb7ff014308 <col:12, col:30> col:30 referenced f2 'volatile unsigned int'
+| `-FieldDecl 0x7fb7ff014368 <col:12, col:34> col:34 referenced f4 'volatile unsigned int'
+|-VarDecl 0x7fb7ff0143c8 <line:7:1, col:14> col:14 used b 'volatile int'
+|-VarDecl 0x7fb7ff014480 <line:8:1, col:17> col:17 used c 'union U0':'union U0' static
+|-VarDecl 0x7fb7ff0144f8 <line:9:1, col:19> col:19 used d 'volatile unsigned int'
+|-VarDecl 0x7fb7ff014570 <col:1, col:22> col:22 used f 'volatile unsigned int'
+|-VarDecl 0x7fb7ff014600 <line:10:1, col:14> col:14 used e 'volatile int'
+|-VarDecl 0x7fb7ff014678 <col:1, col:17> col:17 used g 'volatile int'
+|-VarDecl 0x7fb7ff0146f0 <col:1, col:20> col:20 used h 'volatile int'
+|-VarDecl 0x7fb7ff014768 <col:1, col:23> col:23 used i 'volatile int'
+|-VarDecl 0x7fb7ff0147e0 <col:1, col:26> col:26 used j 'volatile int'
+|-VarDecl 0x7fb7ff014858 <col:1, col:29> col:29 used k 'volatile int'
+|-VarDecl 0x7fb7ff0148d0 <col:1, col:32> col:32 used l 'volatile int'
+|-VarDecl 0x7fb7ff014948 <col:1, col:35> col:35 used m 'volatile int'
+|-VarDecl 0x7fb7ff0149c0 <col:1, col:38> col:38 used n 'volatile int'
+|-VarDecl 0x7fb7ff014a38 <col:1, col:41> col:41 used o 'volatile int'
+|-VarDecl 0x7fb7ff014ab0 <col:1, col:44> col:44 used p 'volatile int'
+`-FunctionDecl 0x7fb7ff014bc0 <line:11:1, line:35:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7fb7ff015a18 <line:13:1, line:35:1>
+    |-BinaryOperator 0x7fb7ff014cc8 <line:14:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fb7ff014c60 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff014cb0 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff014c88 <col:7> 'volatile int' lvalue Var 0x7fb7ff0143c8 'b' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff014d90 <line:15:3, col:10> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff014cf0 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff014d78 <col:8, col:10> 'unsigned int' <LValueToRValue>
+    |   `-MemberExpr 0x7fb7ff014d40 <col:8, col:10> 'volatile unsigned int' lvalue .f2 0x7fb7ff014308
+    |     `-DeclRefExpr 0x7fb7ff014d18 <col:8> 'union U0':'union U0' lvalue Var 0x7fb7ff014480 'c' 'union U0':'union U0'
+    |-CompoundAssignOperator 0x7fb7ff014eb8 <line:16:3, col:10> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff014e18 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff014ea0 <col:8, col:10> 'unsigned int' <LValueToRValue>
+    |   `-MemberExpr 0x7fb7ff014e68 <col:8, col:10> 'volatile unsigned int' lvalue .f4 0x7fb7ff014368
+    |     `-DeclRefExpr 0x7fb7ff014e40 <col:8> 'union U0':'union U0' lvalue Var 0x7fb7ff014480 'c' 'union U0':'union U0'
+    |-DeclStmt 0x7fb7ff014fc0 <line:17:3, col:17>
+    | `-VarDecl 0x7fb7ff014f08 <col:3, col:16> col:12 used q 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fb7ff014fa8 <col:16> 'unsigned int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fb7ff014f90 <col:16> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb7ff014f68 <col:16> 'volatile int' lvalue Var 0x7fb7ff0146f0 'h' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015040 <line:18:3, col:8> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff014fd8 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015028 <col:8> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015000 <col:8> 'unsigned int' lvalue Var 0x7fb7ff014f08 'q' 'unsigned int'
+    |-BinaryOperator 0x7fb7ff0150f8 <line:19:3, col:7> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fb7ff015078 <col:3> 'unsigned int' lvalue Var 0x7fb7ff014f08 'q' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fb7ff0150e0 <col:7> 'unsigned int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fb7ff0150c8 <col:7> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb7ff0150a0 <col:7> 'volatile int' lvalue Var 0x7fb7ff014678 'g' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015188 <line:20:3, col:8> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff015120 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015170 <col:8> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015148 <col:8> 'unsigned int' lvalue Var 0x7fb7ff014f08 'q' 'unsigned int'
+    |-CompoundAssignOperator 0x7fb7ff015240 <line:21:3, col:8> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff0151c0 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015228 <col:8> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015200 <col:8> 'volatile unsigned int' lvalue Var 0x7fb7ff014570 'f' 'volatile unsigned int'
+    |-BinaryOperator 0x7fb7ff0152f8 <line:22:3, col:7> 'unsigned int' '='
+    | |-DeclRefExpr 0x7fb7ff015278 <col:3> 'unsigned int' lvalue Var 0x7fb7ff014f08 'q' 'unsigned int'
+    | `-ImplicitCastExpr 0x7fb7ff0152e0 <col:7> 'unsigned int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fb7ff0152c8 <col:7> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb7ff0152a0 <col:7> 'volatile int' lvalue Var 0x7fb7ff014600 'e' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015388 <line:23:3, col:8> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff015320 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015370 <col:8> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015348 <col:8> 'unsigned int' lvalue Var 0x7fb7ff014f08 'q' 'unsigned int'
+    |-CompoundAssignOperator 0x7fb7ff015428 <line:24:3, col:8> 'int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7fb7ff0153c0 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015410 <col:8> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff0153e8 <col:8> 'volatile unsigned int' lvalue Var 0x7fb7ff0144f8 'd' 'volatile unsigned int'
+    |-CompoundAssignOperator 0x7fb7ff0154a8 <line:25:3, col:8> 'int' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+    | |-DeclRefExpr 0x7fb7ff015460 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-IntegerLiteral 0x7fb7ff015488 <col:8> 'long' 2
+    |-CompoundAssignOperator 0x7fb7ff015548 <line:26:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff0154e0 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015530 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015508 <col:8> 'volatile int' lvalue Var 0x7fb7ff0147e0 'j' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff0155e8 <line:27:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff015580 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff0155d0 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff0155a8 <col:8> 'volatile int' lvalue Var 0x7fb7ff014768 'i' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015688 <line:28:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff015620 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015670 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015648 <col:8> 'volatile int' lvalue Var 0x7fb7ff014858 'k' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015728 <line:29:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff0156c0 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015710 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff0156e8 <col:8> 'volatile int' lvalue Var 0x7fb7ff014ab0 'p' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff0157c8 <line:30:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff015760 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff0157b0 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015788 <col:8> 'volatile int' lvalue Var 0x7fb7ff014a38 'o' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015868 <line:31:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff015800 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015850 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015828 <col:8> 'volatile int' lvalue Var 0x7fb7ff0149c0 'n' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff015908 <line:32:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff0158a0 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff0158f0 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff0158c8 <col:8> 'volatile int' lvalue Var 0x7fb7ff014948 'm' 'volatile int'
+    |-CompoundAssignOperator 0x7fb7ff0159a8 <line:33:3, col:8> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fb7ff015940 <col:3> 'int' lvalue Var 0x7fb7fe82c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fb7ff015990 <col:8> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb7ff015968 <col:8> 'volatile int' lvalue Var 0x7fb7ff0148d0 'l' 'volatile int'
+    `-ReturnStmt 0x7fb7ff015a00 <line:34:3, col:10>
+      `-IntegerLiteral 0x7fb7ff0159e0 <col:10> 'int' 0

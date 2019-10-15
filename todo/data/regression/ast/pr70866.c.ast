@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7ff05e0258e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff05e814220 <../Data/C2AST/pr70866.c:6:1, line:11:1> line:6:6 foo 'void (void)'
+  `-CompoundStmt 0x7ff05e814db0 <line:7:1, line:11:1>
+    |-GCCAsmStmt 0x7ff05e814680 <line:4:21, col:105>
+    | |-BinaryOperator 0x7ff05e814480 <col:66, col:73> 'int' '<<'
+    | | |-IntegerLiteral 0x7ff05e8143d8 <col:66> 'int' 1
+    | | `-ParenExpr 0x7ff05e814460 <col:69, col:73> 'int'
+    | |   `-BinaryOperator 0x7ff05e814438 <col:70, line:8:11> 'int' '-'
+    | |     |-IntegerLiteral 0x7ff05e8143f8 <line:4:70> 'int' 7
+    | |     `-IntegerLiteral 0x7ff05e814418 <line:8:11> 'int' 2
+    | `-BinaryOperator 0x7ff05e8145e8 <col:14, line:4:93> 'int' '<<'
+    |   |-IntegerLiteral 0x7ff05e8144d8 <line:8:14> 'int' 7
+    |   `-ParenExpr 0x7ff05e8145c8 <line:4:85, col:93> 'int'
+    |     `-BinaryOperator 0x7ff05e8145a0 <col:86, col:92> 'int' '*'
+    |       |-IntegerLiteral 0x7ff05e8144f8 <col:86> 'int' 4
+    |       `-ParenExpr 0x7ff05e814580 <col:88, col:92> 'int'
+    |         `-BinaryOperator 0x7ff05e814558 <col:89, line:8:11> 'int' '-'
+    |           |-IntegerLiteral 0x7ff05e814518 <line:4:89> 'int' 7
+    |           `-IntegerLiteral 0x7ff05e814538 <line:8:11> 'int' 2
+    |-GCCAsmStmt 0x7ff05e8149d8 <line:4:21, col:105>
+    | |-BinaryOperator 0x7ff05e814810 <col:66, col:73> 'int' '<<'
+    | | |-IntegerLiteral 0x7ff05e814768 <col:66> 'int' 1
+    | | `-ParenExpr 0x7ff05e8147f0 <col:69, col:73> 'int'
+    | |   `-BinaryOperator 0x7ff05e8147c8 <col:70, line:9:11> 'int' '-'
+    | |     |-IntegerLiteral 0x7ff05e814788 <line:4:70> 'int' 7
+    | |     `-IntegerLiteral 0x7ff05e8147a8 <line:9:11> 'int' 3
+    | `-BinaryOperator 0x7ff05e814978 <col:14, line:4:93> 'int' '<<'
+    |   |-IntegerLiteral 0x7ff05e814868 <line:9:14> 'int' 8
+    |   `-ParenExpr 0x7ff05e814958 <line:4:85, col:93> 'int'
+    |     `-BinaryOperator 0x7ff05e814930 <col:86, col:92> 'int' '*'
+    |       |-IntegerLiteral 0x7ff05e814888 <col:86> 'int' 4
+    |       `-ParenExpr 0x7ff05e814910 <col:88, col:92> 'int'
+    |         `-BinaryOperator 0x7ff05e8148e8 <col:89, line:9:11> 'int' '-'
+    |           |-IntegerLiteral 0x7ff05e8148a8 <line:4:89> 'int' 7
+    |           `-IntegerLiteral 0x7ff05e8148c8 <line:9:11> 'int' 3
+    `-GCCAsmStmt 0x7ff05e814d30 <line:4:21, col:105>
+      |-BinaryOperator 0x7ff05e814b68 <col:66, col:73> 'int' '<<'
+      | |-IntegerLiteral 0x7ff05e814ac0 <col:66> 'int' 1
+      | `-ParenExpr 0x7ff05e814b48 <col:69, col:73> 'int'
+      |   `-BinaryOperator 0x7ff05e814b20 <col:70, line:10:11> 'int' '-'
+      |     |-IntegerLiteral 0x7ff05e814ae0 <line:4:70> 'int' 7
+      |     `-IntegerLiteral 0x7ff05e814b00 <line:10:11> 'int' 4
+      `-BinaryOperator 0x7ff05e814cd0 <col:14, line:4:93> 'int' '<<'
+        |-IntegerLiteral 0x7ff05e814bc0 <line:10:14> 'int' 9
+        `-ParenExpr 0x7ff05e814cb0 <line:4:85, col:93> 'int'
+          `-BinaryOperator 0x7ff05e814c88 <col:86, col:92> 'int' '*'
+            |-IntegerLiteral 0x7ff05e814be0 <col:86> 'int' 4
+            `-ParenExpr 0x7ff05e814c68 <col:88, col:92> 'int'
+              `-BinaryOperator 0x7ff05e814c40 <col:89, line:10:11> 'int' '-'
+                |-IntegerLiteral 0x7ff05e814c00 <line:4:89> 'int' 7
+                `-IntegerLiteral 0x7ff05e814c20 <line:10:11> 'int' 4

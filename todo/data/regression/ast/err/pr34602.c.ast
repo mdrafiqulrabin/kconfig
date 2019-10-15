@@ -1,0 +1,19 @@
+../Data/C2AST/pr34602.c:5:6: error: #line directive requires a positive integer argument
+#line
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fc2040128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc204012e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc204012b80 '__int128'
+|-TypedefDecl 0x7fc204012ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc204012ba0 'unsigned __int128'
+|-TypedefDecl 0x7fc2040131a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc204012fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc204012f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc204013240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc204013200 'char *'
+|   `-BuiltinType 0x7fc204012980 'char'
+`-TypedefDecl 0x7fc204013508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fc2040134b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fc204013320 'struct __va_list_tag'
+      `-Record 0x7fc204013298 '__va_list_tag'

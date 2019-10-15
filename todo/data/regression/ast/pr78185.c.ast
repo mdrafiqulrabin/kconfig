@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7fbc0b02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbc0b8e4538 <../Data/C2AST/pr78185.c:8:1, col:20> col:13 used var1 'char' static cinit
+| `-ImplicitCastExpr 0x7fbc0b8e45b8 <col:20> 'char' <IntegralCast>
+|   `-IntegerLiteral 0x7fbc0b8e4598 <col:20> 'long' 0
+|-VarDecl 0x7fbc0b8e4600 <line:9:1, col:22> col:14 used var2 'char *' static cinit
+| `-UnaryOperator 0x7fbc0b8e4688 <col:21, col:22> 'char *' prefix '&'
+|   `-DeclRefExpr 0x7fbc0b8e4660 <col:22> 'char' lvalue Var 0x7fbc0b8e4538 'var1' 'char'
+|-FunctionDecl 0x7fbc0b8e4748 <line:11:1, line:14:1> line:11:6 used do_exit 'void (int)'
+| |-ParmVarDecl 0x7fbc0b8e46c0 <col:15, col:19> col:19 i 'int'
+| `-CompoundStmt 0x7fbc0b8e48b0 <line:12:1, line:14:1>
+|   `-CallExpr 0x7fbc0b8e4880 <line:13:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fbc0b8e4868 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fbc0b8e47f0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fbc0b8cf350 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fbc0b8e4818 <col:9> 'int' 0
+`-FunctionDecl 0x7fbc0b8e4960 <line:16:1, line:27:1> line:16:5 main 'int (void)'
+  `-CompoundStmt 0x7fbc0b8e53c0 <line:17:1, line:27:1>
+    |-DeclStmt 0x7fbc0b8e4a80 <line:18:3, col:21>
+    | `-VarDecl 0x7fbc0b8e4a20 <col:3, col:20> col:20 used s 'struct sigaction':'struct sigaction'
+    |-ParenExpr 0x7fbc0b8e4c00 </usr/include/signal.h:125:26, col:40> 'int'
+    | `-BinaryOperator 0x7fbc0b8e4bd8 <col:27, col:39> 'int' ','
+    |   |-BinaryOperator 0x7fbc0b8e4b90 <col:27, col:36> 'sigset_t':'unsigned int' '='
+    |   | |-UnaryOperator 0x7fbc0b8e4b38 <col:27, col:32> 'sigset_t':'unsigned int' lvalue prefix '*'
+    |   | | `-ParenExpr 0x7fbc0b8e4b18 <col:28, col:32> 'sigset_t *'
+    |   | |   `-UnaryOperator 0x7fbc0b8e4af8 <../Data/C2AST/pr78185.c:19:16, col:19> 'sigset_t *' prefix '&'
+    |   | |     `-MemberExpr 0x7fbc0b8e4ac0 <col:17, col:19> 'sigset_t':'unsigned int' lvalue .sa_mask 0x7fbc0b88eb48
+    |   | |       `-DeclRefExpr 0x7fbc0b8e4a98 <col:17> 'struct sigaction':'struct sigaction' lvalue Var 0x7fbc0b8e4a20 's' 'struct sigaction':'struct sigaction'
+    |   | `-ImplicitCastExpr 0x7fbc0b8e4b78 </usr/include/signal.h:125:36> 'sigset_t':'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fbc0b8e4b58 <col:36> 'int' 0
+    |   `-IntegerLiteral 0x7fbc0b8e4bb8 <col:39> 'int' 0
+    |-BinaryOperator 0x7fbc0b8e4d50 <../Data/C2AST/pr78185.c:20:3, col:18> 'void (*)(int)' '='
+    | |-MemberExpr 0x7fbc0b8e4cd8 <col:3, /usr/include/sys/signal.h:295:34> 'void (*)(int)' lvalue .__sa_handler 0x7fbc0b888f70
+    | | `-MemberExpr 0x7fbc0b8e4ca0 <../Data/C2AST/pr78185.c:20:3, /usr/include/sys/signal.h:295:20> 'union __sigaction_u':'union __sigaction_u' lvalue .__sigaction_u 0x7fbc0b88eaf0
+    | |   `-DeclRefExpr 0x7fbc0b8e4c78 <../Data/C2AST/pr78185.c:20:3> 'struct sigaction':'struct sigaction' lvalue Var 0x7fbc0b8e4a20 's' 'struct sigaction':'struct sigaction'
+    | `-ImplicitCastExpr 0x7fbc0b8e4d38 <col:18> 'void (*)(int)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fbc0b8e4d10 <col:18> 'void (int)' Function 0x7fbc0b8e4748 'do_exit' 'void (int)'
+    |-BinaryOperator 0x7fbc0b8e4df8 <line:21:3, col:16> 'int' '='
+    | |-MemberExpr 0x7fbc0b8e4da0 <col:3, col:5> 'int' lvalue .sa_flags 0x7fbc0b88eba8
+    | | `-DeclRefExpr 0x7fbc0b8e4d78 <col:3> 'struct sigaction':'struct sigaction' lvalue Var 0x7fbc0b8e4a20 's' 'struct sigaction':'struct sigaction'
+    | `-IntegerLiteral 0x7fbc0b8e4dd8 <col:16> 'int' 0
+    |-CallExpr 0x7fbc0b8e4fa0 <line:22:3, col:31> 'int'
+    | |-ImplicitCastExpr 0x7fbc0b8e4f88 <col:3> 'int (*)(int, const struct sigaction *restrict, struct sigaction *restrict)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbc0b8e4e20 <col:3> 'int (int, const struct sigaction *restrict, struct sigaction *restrict)' Function 0x7fbc0b8932c8 'sigaction' 'int (int, const struct sigaction *restrict, struct sigaction *restrict)'
+    | |-IntegerLiteral 0x7fbc0b8e4e48 </usr/include/sys/signal.h:102:17> 'int' 14
+    | |-ImplicitCastExpr 0x7fbc0b8e4fe0 <../Data/C2AST/pr78185.c:22:23, col:24> 'const struct sigaction *' <BitCast>
+    | | `-UnaryOperator 0x7fbc0b8e4e90 <col:23, col:24> 'struct sigaction *' prefix '&'
+    | |   `-DeclRefExpr 0x7fbc0b8e4e68 <col:24> 'struct sigaction':'struct sigaction' lvalue Var 0x7fbc0b8e4a20 's' 'struct sigaction':'struct sigaction'
+    | `-ImplicitCastExpr 0x7fbc0b8e4ff8 </usr/include/sys/_types.h:52:23, col:33> 'struct sigaction *' <NullToPointer>
+    |   `-ParenExpr 0x7fbc0b8e4f10 <col:23, col:33> 'void *'
+    |     `-CStyleCastExpr 0x7fbc0b8e4ee8 <col:24, col:32> 'void *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fbc0b8e4eb0 <col:32> 'int' 0
+    |-CallExpr 0x7fbc0b8e5070 <../Data/C2AST/pr78185.c:23:3, col:11> 'unsigned int'
+    | |-ImplicitCastExpr 0x7fbc0b8e5058 <col:3> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbc0b8e5010 <col:3> 'unsigned int (unsigned int)' Function 0x7fbc0b0ddc88 'alarm' 'unsigned int (unsigned int)'
+    | `-ImplicitCastExpr 0x7fbc0b8e50a0 <col:10> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fbc0b8e5038 <col:10> 'int' 1
+    |-ForStmt 0x7fbc0b8e5350 <line:25:3, col:52>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbc0b8e5318 <col:10, col:45> 'int' '=='
+    | | |-ParenExpr 0x7fbc0b8e5268 <col:10, col:39> 'int'
+    | | | `-ConditionalOperator 0x7fbc0b8e5238 <col:11, col:38> 'int'
+    | | |   |-BinaryOperator 0x7fbc0b8e5130 <col:11, col:19> 'int' '=='
+    | | |   | |-ImplicitCastExpr 0x7fbc0b8e5118 <col:11> 'int' <IntegralCast>
+    | | |   | | `-ImplicitCastExpr 0x7fbc0b8e5100 <col:11> 'char' <LValueToRValue>
+    | | |   | |   `-DeclRefExpr 0x7fbc0b8e50b8 <col:11> 'char' lvalue Var 0x7fbc0b8e4538 'var1' 'char'
+    | | |   | `-IntegerLiteral 0x7fbc0b8e50e0 <col:19> 'int' 0
+    | | |   |-IntegerLiteral 0x7fbc0b8e5158 <col:23> 'int' 0
+    | | |   `-ParenExpr 0x7fbc0b8e5218 <col:27, col:38> 'int'
+    | | |     `-BinaryOperator 0x7fbc0b8e51f0 <col:28, col:34> 'int' '/'
+    | | |       |-IntegerLiteral 0x7fbc0b8e5178 <col:28> 'int' 100
+    | | |       `-ImplicitCastExpr 0x7fbc0b8e51d8 <col:34> 'int' <IntegralCast>
+    | | |         `-ImplicitCastExpr 0x7fbc0b8e51c0 <col:34> 'char' <LValueToRValue>
+    | | |           `-DeclRefExpr 0x7fbc0b8e5198 <col:34> 'char' lvalue Var 0x7fbc0b8e4538 'var1' 'char'
+    | | `-ImplicitCastExpr 0x7fbc0b8e5300 <col:44, col:45> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fbc0b8e52e8 <col:44, col:45> 'char' <LValueToRValue>
+    | |     `-UnaryOperator 0x7fbc0b8e52c8 <col:44, col:45> 'char' lvalue prefix '*'
+    | |       `-ImplicitCastExpr 0x7fbc0b8e52b0 <col:45> 'char *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fbc0b8e5288 <col:45> 'char *' lvalue Var 0x7fbc0b8e4600 'var2' 'char *'
+    | |-<<<NULL>>>
+    | `-NullStmt 0x7fbc0b8e5340 <col:52>
+    `-ReturnStmt 0x7fbc0b8e53a8 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fbc0b8e5388 <col:10> 'int' 0

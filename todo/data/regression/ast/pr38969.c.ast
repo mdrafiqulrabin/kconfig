@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fcb6502bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcb65815260 <../Data/C2AST/pr38969.c:1:1, line:5:1> line:2:28 used foo '_Complex float (_Complex float)'
+| |-ParmVarDecl 0x7fcb6502c970 <col:33, col:51> col:51 used x '_Complex float'
+| |-CompoundStmt 0x7fcb658153e8 <line:3:1, line:5:1>
+| | `-ReturnStmt 0x7fcb658153d0 <line:4:3, col:10>
+| |   `-ImplicitCastExpr 0x7fcb658153b8 <col:10> '_Complex float' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fcb65815390 <col:10> '_Complex float' lvalue ParmVar 0x7fcb6502c970 'x' '_Complex float'
+| `-NoInlineAttr 0x7fcb65815308 <line:2:17>
+|-FunctionDecl 0x7fcb65815498 <line:7:1, line:11:1> line:8:28 used bar '_Complex float (_Complex float)'
+| |-ParmVarDecl 0x7fcb65815410 <col:33, col:51> col:51 used x '_Complex float'
+| |-CompoundStmt 0x7fcb65815680 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fcb65815668 <line:10:3, col:16>
+| |   `-CallExpr 0x7fcb65815620 <col:10, col:16> '_Complex float'
+| |     |-ImplicitCastExpr 0x7fcb65815608 <col:10> '_Complex float (*)(_Complex float)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fcb65815588 <col:10> '_Complex float (_Complex float)' Function 0x7fcb65815260 'foo' '_Complex float (_Complex float)'
+| |     `-ImplicitCastExpr 0x7fcb65815650 <col:15> '_Complex float' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fcb658155b0 <col:15> '_Complex float' lvalue ParmVar 0x7fcb65815410 'x' '_Complex float'
+| `-NoInlineAttr 0x7fcb65815540 <line:8:17>
+|-FunctionDecl 0x7fcb658156f0 <line:13:1, line:25:1> line:13:5 main 'int ()'
+| `-CompoundStmt 0x7fcb65815d78 <line:14:1, line:25:1>
+|   |-DeclStmt 0x7fcb65815888 <line:15:3, col:25>
+|   | |-VarDecl 0x7fcb658157a0 <col:3, col:21> col:21 used a '_Complex float'
+|   | `-VarDecl 0x7fcb65815810 <col:3, col:24> col:24 used b '_Complex float'
+|   |-BinaryOperator 0x7fcb65815920 <line:16:3, col:16> 'float' '='
+|   | |-UnaryOperator 0x7fcb658158c8 <col:3, col:12> 'float' lvalue prefix '__real'
+|   | | `-DeclRefExpr 0x7fcb658158a0 <col:12> '_Complex float' lvalue Var 0x7fcb658157a0 'a' '_Complex float'
+|   | `-ImplicitCastExpr 0x7fcb65815908 <col:16> 'float' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fcb658158e8 <col:16> 'int' 9
+|   |-BinaryOperator 0x7fcb658159c8 <line:17:3, col:16> 'float' '='
+|   | |-UnaryOperator 0x7fcb65815970 <col:3, col:12> 'float' lvalue prefix '__imag'
+|   | | `-DeclRefExpr 0x7fcb65815948 <col:12> '_Complex float' lvalue Var 0x7fcb658157a0 'a' '_Complex float'
+|   | `-ImplicitCastExpr 0x7fcb658159b0 <col:16> 'float' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fcb65815990 <col:16> 'int' 42
+|   |-BinaryOperator 0x7fcb65815ac8 <line:19:3, col:13> '_Complex float' '='
+|   | |-DeclRefExpr 0x7fcb658159f0 <col:3> '_Complex float' lvalue Var 0x7fcb65815810 'b' '_Complex float'
+|   | `-CallExpr 0x7fcb65815a80 <col:7, col:13> '_Complex float'
+|   |   |-ImplicitCastExpr 0x7fcb65815a68 <col:7> '_Complex float (*)(_Complex float)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fcb65815a18 <col:7> '_Complex float (_Complex float)' Function 0x7fcb65815498 'bar' '_Complex float (_Complex float)'
+|   |   `-ImplicitCastExpr 0x7fcb65815ab0 <col:12> '_Complex float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fcb65815a40 <col:12> '_Complex float' lvalue Var 0x7fcb658157a0 'a' '_Complex float'
+|   |-IfStmt 0x7fcb65815d08 <line:21:3, line:22:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcb65815b70 <line:21:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fcb65815b40 <col:7> '_Complex float' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fcb65815af0 <col:7> '_Complex float' lvalue Var 0x7fcb658157a0 'a' '_Complex float'
+|   | | `-ImplicitCastExpr 0x7fcb65815b58 <col:12> '_Complex float' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fcb65815b18 <col:12> '_Complex float' lvalue Var 0x7fcb65815810 'b' '_Complex float'
+|   | |-CallExpr 0x7fcb65815ce0 <line:22:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fcb65815cc8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fcb65815c70 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcb65815bd0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcb65815d60 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7fcb65815d40 <col:10> 'int' 0
+`-FunctionDecl 0x7fcb65815bd0 <line:22:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

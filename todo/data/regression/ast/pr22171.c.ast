@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7faff882b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7faff8014000 <../Data/C2AST/pr22171.c:3:1, col:43> col:21 used old_serial_port_irq 'unsigned int [10]' static
+|-RecordDecl 0x7faff80140a0 <line:5:8, line:8:1> line:5:15 struct uart_8250_port definition
+| |-FieldDecl 0x7faff8014168 <line:6:3, col:25> col:25 slock 'volatile unsigned int'
+| `-FieldDecl 0x7faff80141c8 <line:7:3, col:16> col:16 referenced irq 'unsigned int'
+|-VarDecl 0x7faff8014358 <line:5:1, line:8:22> col:3 used serial8250_ports 'struct uart_8250_port [10]' static
+|-FunctionDecl 0x7faff80144b8 <line:10:1, line:13:1> line:10:54 used irq_canonicalize 'int (int)' static inline
+| |-ParmVarDecl 0x7faff80143e8 <col:71, col:75> col:75 used irq 'int'
+| |-CompoundStmt 0x7faff8014718 <line:11:1, line:13:1>
+| | `-ReturnStmt 0x7faff8014700 <line:12:3, col:31>
+| |   `-ParenExpr 0x7faff80146e0 <col:10, col:31> 'int'
+| |     `-ConditionalOperator 0x7faff80146b0 <col:11, col:28> 'int'
+| |       |-ParenExpr 0x7faff8014630 <col:11, col:20> 'int'
+| |       | `-BinaryOperator 0x7faff8014608 <col:12, col:19> 'int' '=='
+| |       |   |-ImplicitCastExpr 0x7faff80145f0 <col:12> 'int' <LValueToRValue>
+| |       |   | `-DeclRefExpr 0x7faff80145a8 <col:12> 'int' lvalue ParmVar 0x7faff80143e8 'irq' 'int'
+| |       |   `-IntegerLiteral 0x7faff80145d0 <col:19> 'int' 2
+| |       |-IntegerLiteral 0x7faff8014650 <col:24> 'int' 9
+| |       `-ImplicitCastExpr 0x7faff8014698 <col:28> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7faff8014670 <col:28> 'int' lvalue ParmVar 0x7faff80143e8 'irq' 'int'
+| `-AlwaysInlineAttr 0x7faff8014560 <line:10:34> always_inline
+|-FunctionDecl 0x7faff80147f0 <line:15:1, line:22:1> line:15:6 used serial8250_isa_init_ports 'void (void)'
+| `-CompoundStmt 0x7faff8014f08 <line:16:1, line:22:1>
+|   |-DeclStmt 0x7faff8014970 <line:17:3, col:28>
+|   | `-VarDecl 0x7faff8014910 <col:3, col:26> col:26 used up 'struct uart_8250_port *'
+|   |-DeclStmt 0x7faff8014a00 <line:18:3, col:8>
+|   | `-VarDecl 0x7faff80149a0 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7faff8014ed0 <line:20:3, line:21:54>
+|     |-BinaryOperator 0x7faff8014b18 <line:20:8, col:20> 'struct uart_8250_port *' ','
+|     | |-BinaryOperator 0x7faff8014a60 <col:8, col:12> 'int' '='
+|     | | |-DeclRefExpr 0x7faff8014a18 <col:8> 'int' lvalue Var 0x7faff80149a0 'i' 'int'
+|     | | `-IntegerLiteral 0x7faff8014a40 <col:12> 'int' 0
+|     | `-BinaryOperator 0x7faff8014af0 <col:15, col:20> 'struct uart_8250_port *' '='
+|     |   |-DeclRefExpr 0x7faff8014a88 <col:15> 'struct uart_8250_port *' lvalue Var 0x7faff8014910 'up' 'struct uart_8250_port *'
+|     |   `-ImplicitCastExpr 0x7faff8014ad8 <col:20> 'struct uart_8250_port *' <ArrayToPointerDecay>
+|     |     `-DeclRefExpr 0x7faff8014ab0 <col:20> 'struct uart_8250_port [10]' lvalue Var 0x7faff8014358 'serial8250_ports' 'struct uart_8250_port [10]'
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7faff8014ba0 <col:38, col:42> 'int' '<'
+|     | |-ImplicitCastExpr 0x7faff8014b88 <col:38> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7faff8014b40 <col:38> 'int' lvalue Var 0x7faff80149a0 'i' 'int'
+|     | `-IntegerLiteral 0x7faff8014b68 <col:42> 'int' 10
+|     |-BinaryOperator 0x7faff8014c58 <col:46, col:53> 'struct uart_8250_port *' ','
+|     | |-UnaryOperator 0x7faff8014bf0 <col:46, col:47> 'int' postfix '++'
+|     | | `-DeclRefExpr 0x7faff8014bc8 <col:46> 'int' lvalue Var 0x7faff80149a0 'i' 'int'
+|     | `-UnaryOperator 0x7faff8014c38 <col:51, col:53> 'struct uart_8250_port *' postfix '++'
+|     |   `-DeclRefExpr 0x7faff8014c10 <col:51> 'struct uart_8250_port *' lvalue Var 0x7faff8014910 'up' 'struct uart_8250_port *'
+|     `-BinaryOperator 0x7faff8014ea8 <line:21:5, col:54> 'unsigned int' '='
+|       |-MemberExpr 0x7faff8014cc0 <col:5, col:9> 'unsigned int' lvalue ->irq 0x7faff80141c8
+|       | `-ImplicitCastExpr 0x7faff8014ca8 <col:5> 'struct uart_8250_port *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7faff8014c80 <col:5> 'struct uart_8250_port *' lvalue Var 0x7faff8014910 'up' 'struct uart_8250_port *'
+|       `-ImplicitCastExpr 0x7faff8014e90 <col:15, col:54> 'unsigned int' <IntegralCast>
+|         `-CallExpr 0x7faff8014e30 <col:15, col:54> 'int'
+|           |-ImplicitCastExpr 0x7faff8014e18 <col:15> 'int (*)(int)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7faff8014cf8 <col:15> 'int (int)' Function 0x7faff80144b8 'irq_canonicalize' 'int (int)'
+|           `-ImplicitCastExpr 0x7faff8014e78 <col:32, col:53> 'int' <IntegralCast>
+|             `-ImplicitCastExpr 0x7faff8014e60 <col:32, col:53> 'unsigned int' <LValueToRValue>
+|               `-ArraySubscriptExpr 0x7faff8014dc8 <col:32, col:53> 'unsigned int' lvalue
+|                 |-ImplicitCastExpr 0x7faff8014d98 <col:32> 'unsigned int *' <ArrayToPointerDecay>
+|                 | `-DeclRefExpr 0x7faff8014d20 <col:32> 'unsigned int [10]' lvalue Var 0x7faff8014000 'old_serial_port_irq' 'unsigned int [10]'
+|                 `-ImplicitCastExpr 0x7faff8014db0 <col:52> 'int' <LValueToRValue>
+|                   `-DeclRefExpr 0x7faff8014d48 <col:52> 'int' lvalue Var 0x7faff80149a0 'i' 'int'
+`-FunctionDecl 0x7faff8016400 <line:24:1, line:28:1> line:24:5 main 'int (void)'
+  `-CompoundStmt 0x7faff8016590 <line:25:1, line:28:1>
+    |-CallExpr 0x7faff8016530 <line:26:3, col:29> 'void'
+    | `-ImplicitCastExpr 0x7faff8016518 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7faff80164c8 <col:3> 'void (void)' Function 0x7faff80147f0 'serial8250_isa_init_ports' 'void (void)'
+    `-ReturnStmt 0x7faff8016578 <line:27:3, col:10>
+      `-IntegerLiteral 0x7faff8016558 <col:10> 'int' 0

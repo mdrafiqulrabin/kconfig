@@ -1,0 +1,238 @@
+TranslationUnitDecl 0x7fae6102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fae61814268 <../Data/C2AST/pr32468-1.c:5:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fae61814308 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fae61814370 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fae618143c8 prev 0x7fae61814268 <col:1, col:37> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fae6102c978 <col:20, col:31> col:32 'const char *'
+| `-FormatAttr 0x7fae618144a8 <col:12> Inherited printf 1 2
+|-FunctionDecl 0x7fae61814598 <line:6:1, col:36> col:12 used omp_get_thread_num 'int (void)' extern
+|-FunctionDecl 0x7fae61814710 <col:1, col:64> col:39 used omp_get_num_threads 'int (void)' extern
+|-FunctionDecl 0x7fae61814860 <line:7:1, col:21> col:12 used bar 'int (void)' extern
+|-FunctionDecl 0x7fae618149a8 <line:8:1, col:34> col:12 used baz 'int (const char *, ...)' extern
+| `-ParmVarDecl 0x7fae61814918 <col:17, col:28> col:29 'const char *'
+|-FunctionDecl 0x7fae61814b10 <line:10:1, line:24:1> line:11:1 f1 'void (void)'
+| `-CompoundStmt 0x7fae618151e0 <line:12:1, line:24:1>
+|   `-CompoundStmt 0x7fae618151c0 <line:14:3, line:23:3>
+|     |-CallExpr 0x7fae61814d80 <line:15:5, col:66> 'int'
+|     | |-ImplicitCastExpr 0x7fae61814d68 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fae61814bb0 <col:5> 'int (const char *, ...)' Function 0x7fae618149a8 'baz' 'int (const char *, ...)'
+|     | |-ImplicitCastExpr 0x7fae61814dd8 <col:10> 'const char *' <BitCast>
+|     | | `-ImplicitCastExpr 0x7fae61814dc0 <col:10> 'char *' <ArrayToPointerDecay>
+|     | |   `-StringLiteral 0x7fae61814c18 <col:10> 'char [7]' lvalue "%d/%d\n"
+|     | |-CallExpr 0x7fae61814cb0 <col:21, col:41> 'int'
+|     | | `-ImplicitCastExpr 0x7fae61814c98 <col:21> 'int (*)(void)' <FunctionToPointerDecay>
+|     | |   `-DeclRefExpr 0x7fae61814c48 <col:21> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|     | `-CallExpr 0x7fae61814d18 <col:44, col:65> 'int'
+|     |   `-ImplicitCastExpr 0x7fae61814d00 <col:44> 'int (*)(void)' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7fae61814cd8 <col:44> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|     `-CompoundStmt 0x7fae618151a0 <line:17:7, line:22:7>
+|       |-CallExpr 0x7fae61814f78 <line:19:2, col:75> 'int'
+|       | |-ImplicitCastExpr 0x7fae61814f60 <col:2> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fae61814df0 <col:2> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|       | |-ImplicitCastExpr 0x7fae61814fd0 <col:10> 'const char *' <BitCast>
+|       | | `-ImplicitCastExpr 0x7fae61814fb8 <col:10> 'char *' <ArrayToPointerDecay>
+|       | |   `-StringLiteral 0x7fae61814e58 <col:10> 'char [16]' lvalue "section1 %d/%d\n"
+|       | |-CallExpr 0x7fae61814ed0 <col:30, col:50> 'int'
+|       | | `-ImplicitCastExpr 0x7fae61814eb8 <col:30> 'int (*)(void)' <FunctionToPointerDecay>
+|       | |   `-DeclRefExpr 0x7fae61814e90 <col:30> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|       | `-CallExpr 0x7fae61814f38 <col:53, col:74> 'int'
+|       |   `-ImplicitCastExpr 0x7fae61814f20 <col:53> 'int (*)(void)' <FunctionToPointerDecay>
+|       |     `-DeclRefExpr 0x7fae61814ef8 <col:53> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|       `-CallExpr 0x7fae61815130 <line:21:2, col:75> 'int'
+|         |-ImplicitCastExpr 0x7fae61815118 <col:2> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fae61814fe8 <col:2> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|         |-ImplicitCastExpr 0x7fae61815188 <col:10> 'const char *' <BitCast>
+|         | `-ImplicitCastExpr 0x7fae61815170 <col:10> 'char *' <ArrayToPointerDecay>
+|         |   `-StringLiteral 0x7fae61815010 <col:10> 'char [16]' lvalue "section2 %d/%d\n"
+|         |-CallExpr 0x7fae61815088 <col:30, col:50> 'int'
+|         | `-ImplicitCastExpr 0x7fae61815070 <col:30> 'int (*)(void)' <FunctionToPointerDecay>
+|         |   `-DeclRefExpr 0x7fae61815048 <col:30> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|         `-CallExpr 0x7fae618150f0 <col:53, col:74> 'int'
+|           `-ImplicitCastExpr 0x7fae618150d8 <col:53> 'int (*)(void)' <FunctionToPointerDecay>
+|             `-DeclRefExpr 0x7fae618150b0 <col:53> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|-FunctionDecl 0x7fae61815290 <line:26:1, line:40:1> line:27:1 f2 'void (void)'
+| `-CompoundStmt 0x7fae61815890 <line:28:1, line:40:1>
+|   `-CompoundStmt 0x7fae61815870 <line:30:3, line:39:3>
+|     |-CompoundStmt 0x7fae618156a0 <line:32:7, line:37:7>
+|     | |-CallExpr 0x7fae61815478 <line:34:2, col:75> 'int'
+|     | | |-ImplicitCastExpr 0x7fae61815460 <col:2> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7fae61815330 <col:2> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|     | | |-ImplicitCastExpr 0x7fae618154d0 <col:10> 'const char *' <BitCast>
+|     | | | `-ImplicitCastExpr 0x7fae618154b8 <col:10> 'char *' <ArrayToPointerDecay>
+|     | | |   `-StringLiteral 0x7fae61815358 <col:10> 'char [16]' lvalue "section1 %d/%d\n"
+|     | | |-CallExpr 0x7fae618153d0 <col:30, col:50> 'int'
+|     | | | `-ImplicitCastExpr 0x7fae618153b8 <col:30> 'int (*)(void)' <FunctionToPointerDecay>
+|     | | |   `-DeclRefExpr 0x7fae61815390 <col:30> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|     | | `-CallExpr 0x7fae61815438 <col:53, col:74> 'int'
+|     | |   `-ImplicitCastExpr 0x7fae61815420 <col:53> 'int (*)(void)' <FunctionToPointerDecay>
+|     | |     `-DeclRefExpr 0x7fae618153f8 <col:53> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|     | `-CallExpr 0x7fae61815630 <line:36:2, col:75> 'int'
+|     |   |-ImplicitCastExpr 0x7fae61815618 <col:2> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7fae618154e8 <col:2> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|     |   |-ImplicitCastExpr 0x7fae61815688 <col:10> 'const char *' <BitCast>
+|     |   | `-ImplicitCastExpr 0x7fae61815670 <col:10> 'char *' <ArrayToPointerDecay>
+|     |   |   `-StringLiteral 0x7fae61815510 <col:10> 'char [16]' lvalue "section2 %d/%d\n"
+|     |   |-CallExpr 0x7fae61815588 <col:30, col:50> 'int'
+|     |   | `-ImplicitCastExpr 0x7fae61815570 <col:30> 'int (*)(void)' <FunctionToPointerDecay>
+|     |   |   `-DeclRefExpr 0x7fae61815548 <col:30> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|     |   `-CallExpr 0x7fae618155f0 <col:53, col:74> 'int'
+|     |     `-ImplicitCastExpr 0x7fae618155d8 <col:53> 'int (*)(void)' <FunctionToPointerDecay>
+|     |       `-DeclRefExpr 0x7fae618155b0 <col:53> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|     `-CallExpr 0x7fae61815800 <line:38:5, col:66> 'int'
+|       |-ImplicitCastExpr 0x7fae618157e8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fae618156c0 <col:5> 'int (const char *, ...)' Function 0x7fae618149a8 'baz' 'int (const char *, ...)'
+|       |-ImplicitCastExpr 0x7fae61815858 <col:10> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fae61815840 <col:10> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fae618156e8 <col:10> 'char [7]' lvalue "%d/%d\n"
+|       |-CallExpr 0x7fae61815758 <col:21, col:41> 'int'
+|       | `-ImplicitCastExpr 0x7fae61815740 <col:21> 'int (*)(void)' <FunctionToPointerDecay>
+|       |   `-DeclRefExpr 0x7fae61815718 <col:21> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|       `-CallExpr 0x7fae618157c0 <col:44, col:65> 'int'
+|         `-ImplicitCastExpr 0x7fae618157a8 <col:44> 'int (*)(void)' <FunctionToPointerDecay>
+|           `-DeclRefExpr 0x7fae61815780 <col:44> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|-FunctionDecl 0x7fae61815938 <line:42:1, line:56:1> line:43:1 f3 'void (void)'
+| `-CompoundStmt 0x7fae61815e80 <line:44:1, line:56:1>
+|   `-CompoundStmt 0x7fae61815e60 <line:46:3, line:55:3>
+|     |-DeclStmt 0x7fae61815ab8 <line:47:5, col:20>
+|     | `-VarDecl 0x7fae618159f0 <col:5, col:19> col:9 bb 'int' cinit
+|     |   `-CallExpr 0x7fae61815a90 <col:14, col:19> 'int'
+|     |     `-ImplicitCastExpr 0x7fae61815a78 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+|     |       `-DeclRefExpr 0x7fae61815a50 <col:14> 'int (void)' Function 0x7fae61814860 'bar' 'int (void)'
+|     `-CompoundStmt 0x7fae61815e40 <line:49:7, line:54:7>
+|       |-CallExpr 0x7fae61815c18 <line:51:2, col:75> 'int'
+|       | |-ImplicitCastExpr 0x7fae61815c00 <col:2> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fae61815ad0 <col:2> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|       | |-ImplicitCastExpr 0x7fae61815c70 <col:10> 'const char *' <BitCast>
+|       | | `-ImplicitCastExpr 0x7fae61815c58 <col:10> 'char *' <ArrayToPointerDecay>
+|       | |   `-StringLiteral 0x7fae61815af8 <col:10> 'char [16]' lvalue "section1 %d/%d\n"
+|       | |-CallExpr 0x7fae61815b70 <col:30, col:50> 'int'
+|       | | `-ImplicitCastExpr 0x7fae61815b58 <col:30> 'int (*)(void)' <FunctionToPointerDecay>
+|       | |   `-DeclRefExpr 0x7fae61815b30 <col:30> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|       | `-CallExpr 0x7fae61815bd8 <col:53, col:74> 'int'
+|       |   `-ImplicitCastExpr 0x7fae61815bc0 <col:53> 'int (*)(void)' <FunctionToPointerDecay>
+|       |     `-DeclRefExpr 0x7fae61815b98 <col:53> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|       `-CallExpr 0x7fae61815dd0 <line:53:2, col:75> 'int'
+|         |-ImplicitCastExpr 0x7fae61815db8 <col:2> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fae61815c88 <col:2> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|         |-ImplicitCastExpr 0x7fae61815e28 <col:10> 'const char *' <BitCast>
+|         | `-ImplicitCastExpr 0x7fae61815e10 <col:10> 'char *' <ArrayToPointerDecay>
+|         |   `-StringLiteral 0x7fae61815cb0 <col:10> 'char [16]' lvalue "section2 %d/%d\n"
+|         |-CallExpr 0x7fae61815d28 <col:30, col:50> 'int'
+|         | `-ImplicitCastExpr 0x7fae61815d10 <col:30> 'int (*)(void)' <FunctionToPointerDecay>
+|         |   `-DeclRefExpr 0x7fae61815ce8 <col:30> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|         `-CallExpr 0x7fae61815d90 <col:53, col:74> 'int'
+|           `-ImplicitCastExpr 0x7fae61815d78 <col:53> 'int (*)(void)' <FunctionToPointerDecay>
+|             `-DeclRefExpr 0x7fae61815d50 <col:53> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|-FunctionDecl 0x7fae61815f28 <line:58:1, line:69:1> line:59:1 f4 'void (void)'
+| `-CompoundStmt 0x7fae6182bf68 <line:60:1, line:69:1>
+|   |-DeclStmt 0x7fae61816040 <line:61:3, col:8>
+|   | `-VarDecl 0x7fae61815fe0 <col:3, col:7> col:7 used i 'int'
+|   `-CompoundStmt 0x7fae6182bf48 <line:63:3, line:68:3>
+|     |-CallExpr 0x7fae61816198 <line:64:5, col:66> 'int'
+|     | |-ImplicitCastExpr 0x7fae61816180 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fae61816058 <col:5> 'int (const char *, ...)' Function 0x7fae618149a8 'baz' 'int (const char *, ...)'
+|     | |-ImplicitCastExpr 0x7fae6182bc00 <col:10> 'const char *' <BitCast>
+|     | | `-ImplicitCastExpr 0x7fae618161d8 <col:10> 'char *' <ArrayToPointerDecay>
+|     | |   `-StringLiteral 0x7fae61816080 <col:10> 'char [7]' lvalue "%d/%d\n"
+|     | |-CallExpr 0x7fae618160f0 <col:21, col:41> 'int'
+|     | | `-ImplicitCastExpr 0x7fae618160d8 <col:21> 'int (*)(void)' <FunctionToPointerDecay>
+|     | |   `-DeclRefExpr 0x7fae618160b0 <col:21> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|     | `-CallExpr 0x7fae61816158 <col:44, col:65> 'int'
+|     |   `-ImplicitCastExpr 0x7fae61816140 <col:44> 'int (*)(void)' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7fae61816118 <col:44> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|     `-ForStmt 0x7fae6182bf10 <line:66:5, line:67:80>
+|       |-BinaryOperator 0x7fae6182bc60 <line:66:10, col:14> 'int' '='
+|       | |-DeclRefExpr 0x7fae6182bc18 <col:10> 'int' lvalue Var 0x7fae61815fe0 'i' 'int'
+|       | `-IntegerLiteral 0x7fae6182bc40 <col:14> 'int' 0
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7fae6182bce8 <col:17, col:21> 'int' '<'
+|       | |-ImplicitCastExpr 0x7fae6182bcd0 <col:17> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fae6182bc88 <col:17> 'int' lvalue Var 0x7fae61815fe0 'i' 'int'
+|       | `-IntegerLiteral 0x7fae6182bcb0 <col:21> 'int' 10000
+|       |-UnaryOperator 0x7fae6182bd38 <col:28, col:29> 'int' postfix '++'
+|       | `-DeclRefExpr 0x7fae6182bd10 <col:28> 'int' lvalue Var 0x7fae61815fe0 'i' 'int'
+|       `-CallExpr 0x7fae6182bea0 <line:67:7, col:80> 'int'
+|         |-ImplicitCastExpr 0x7fae6182be88 <col:7> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fae6182bd58 <col:7> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|         |-ImplicitCastExpr 0x7fae6182bef8 <col:15> 'const char *' <BitCast>
+|         | `-ImplicitCastExpr 0x7fae6182bee0 <col:15> 'char *' <ArrayToPointerDecay>
+|         |   `-StringLiteral 0x7fae6182bd80 <col:15> 'char [16]' lvalue "section1 %d/%d\n"
+|         |-CallExpr 0x7fae6182bdf8 <col:35, col:55> 'int'
+|         | `-ImplicitCastExpr 0x7fae6182bde0 <col:35> 'int (*)(void)' <FunctionToPointerDecay>
+|         |   `-DeclRefExpr 0x7fae6182bdb8 <col:35> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|         `-CallExpr 0x7fae6182be60 <col:58, col:79> 'int'
+|           `-ImplicitCastExpr 0x7fae6182be48 <col:58> 'int (*)(void)' <FunctionToPointerDecay>
+|             `-DeclRefExpr 0x7fae6182be20 <col:58> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|-FunctionDecl 0x7fae6182c018 <line:71:1, line:82:1> line:72:1 f5 'void (void)'
+| `-CompoundStmt 0x7fae6182c648 <line:73:1, line:82:1>
+|   |-DeclStmt 0x7fae6182c130 <line:74:3, col:8>
+|   | `-VarDecl 0x7fae6182c0d0 <col:3, col:7> col:7 used i 'int'
+|   `-CompoundStmt 0x7fae6182c628 <line:76:3, line:81:3>
+|     |-ForStmt 0x7fae6182c440 <line:78:5, line:79:80>
+|     | |-BinaryOperator 0x7fae6182c190 <line:78:10, col:14> 'int' '='
+|     | | |-DeclRefExpr 0x7fae6182c148 <col:10> 'int' lvalue Var 0x7fae6182c0d0 'i' 'int'
+|     | | `-IntegerLiteral 0x7fae6182c170 <col:14> 'int' 0
+|     | |-<<<NULL>>>
+|     | |-BinaryOperator 0x7fae6182c218 <col:17, col:21> 'int' '<'
+|     | | |-ImplicitCastExpr 0x7fae6182c200 <col:17> 'int' <LValueToRValue>
+|     | | | `-DeclRefExpr 0x7fae6182c1b8 <col:17> 'int' lvalue Var 0x7fae6182c0d0 'i' 'int'
+|     | | `-IntegerLiteral 0x7fae6182c1e0 <col:21> 'int' 10000
+|     | |-UnaryOperator 0x7fae6182c268 <col:28, col:29> 'int' postfix '++'
+|     | | `-DeclRefExpr 0x7fae6182c240 <col:28> 'int' lvalue Var 0x7fae6182c0d0 'i' 'int'
+|     | `-CallExpr 0x7fae6182c3d0 <line:79:7, col:80> 'int'
+|     |   |-ImplicitCastExpr 0x7fae6182c3b8 <col:7> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     |   | `-DeclRefExpr 0x7fae6182c288 <col:7> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+|     |   |-ImplicitCastExpr 0x7fae6182c428 <col:15> 'const char *' <BitCast>
+|     |   | `-ImplicitCastExpr 0x7fae6182c410 <col:15> 'char *' <ArrayToPointerDecay>
+|     |   |   `-StringLiteral 0x7fae6182c2b0 <col:15> 'char [16]' lvalue "section1 %d/%d\n"
+|     |   |-CallExpr 0x7fae6182c328 <col:35, col:55> 'int'
+|     |   | `-ImplicitCastExpr 0x7fae6182c310 <col:35> 'int (*)(void)' <FunctionToPointerDecay>
+|     |   |   `-DeclRefExpr 0x7fae6182c2e8 <col:35> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|     |   `-CallExpr 0x7fae6182c390 <col:58, col:79> 'int'
+|     |     `-ImplicitCastExpr 0x7fae6182c378 <col:58> 'int (*)(void)' <FunctionToPointerDecay>
+|     |       `-DeclRefExpr 0x7fae6182c350 <col:58> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+|     `-CallExpr 0x7fae6182c5b8 <line:80:5, col:66> 'int'
+|       |-ImplicitCastExpr 0x7fae6182c5a0 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fae6182c478 <col:5> 'int (const char *, ...)' Function 0x7fae618149a8 'baz' 'int (const char *, ...)'
+|       |-ImplicitCastExpr 0x7fae6182c610 <col:10> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fae6182c5f8 <col:10> 'char *' <ArrayToPointerDecay>
+|       |   `-StringLiteral 0x7fae6182c4a0 <col:10> 'char [7]' lvalue "%d/%d\n"
+|       |-CallExpr 0x7fae6182c510 <col:21, col:41> 'int'
+|       | `-ImplicitCastExpr 0x7fae6182c4f8 <col:21> 'int (*)(void)' <FunctionToPointerDecay>
+|       |   `-DeclRefExpr 0x7fae6182c4d0 <col:21> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+|       `-CallExpr 0x7fae6182c578 <col:44, col:65> 'int'
+|         `-ImplicitCastExpr 0x7fae6182c560 <col:44> 'int (*)(void)' <FunctionToPointerDecay>
+|           `-DeclRefExpr 0x7fae6182c538 <col:44> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'
+`-FunctionDecl 0x7fae6182c6f8 <line:84:1, line:95:1> line:85:1 f6 'void (void)'
+  `-CompoundStmt 0x7fae6182cc70 <line:86:1, line:95:1>
+    |-DeclStmt 0x7fae6182c810 <line:87:3, col:8>
+    | `-VarDecl 0x7fae6182c7b0 <col:3, col:7> col:7 used i 'int'
+    `-CompoundStmt 0x7fae6182cc50 <line:89:3, line:94:3>
+      |-DeclStmt 0x7fae6182c908 <line:90:5, col:20>
+      | `-VarDecl 0x7fae6182c840 <col:5, col:19> col:9 bb 'int' cinit
+      |   `-CallExpr 0x7fae6182c8e0 <col:14, col:19> 'int'
+      |     `-ImplicitCastExpr 0x7fae6182c8c8 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+      |       `-DeclRefExpr 0x7fae6182c8a0 <col:14> 'int (void)' Function 0x7fae61814860 'bar' 'int (void)'
+      `-ForStmt 0x7fae6182cc18 <line:92:5, line:93:80>
+        |-BinaryOperator 0x7fae6182c968 <line:92:10, col:14> 'int' '='
+        | |-DeclRefExpr 0x7fae6182c920 <col:10> 'int' lvalue Var 0x7fae6182c7b0 'i' 'int'
+        | `-IntegerLiteral 0x7fae6182c948 <col:14> 'int' 0
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fae6182c9f0 <col:17, col:21> 'int' '<'
+        | |-ImplicitCastExpr 0x7fae6182c9d8 <col:17> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fae6182c990 <col:17> 'int' lvalue Var 0x7fae6182c7b0 'i' 'int'
+        | `-IntegerLiteral 0x7fae6182c9b8 <col:21> 'int' 10000
+        |-UnaryOperator 0x7fae6182ca40 <col:28, col:29> 'int' postfix '++'
+        | `-DeclRefExpr 0x7fae6182ca18 <col:28> 'int' lvalue Var 0x7fae6182c7b0 'i' 'int'
+        `-CallExpr 0x7fae6182cba8 <line:93:7, col:80> 'int'
+          |-ImplicitCastExpr 0x7fae6182cb90 <col:7> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fae6182ca60 <col:7> 'int (const char *, ...)' Function 0x7fae618143c8 'printf' 'int (const char *, ...)'
+          |-ImplicitCastExpr 0x7fae6182cc00 <col:15> 'const char *' <BitCast>
+          | `-ImplicitCastExpr 0x7fae6182cbe8 <col:15> 'char *' <ArrayToPointerDecay>
+          |   `-StringLiteral 0x7fae6182ca88 <col:15> 'char [16]' lvalue "section1 %d/%d\n"
+          |-CallExpr 0x7fae6182cb00 <col:35, col:55> 'int'
+          | `-ImplicitCastExpr 0x7fae6182cae8 <col:35> 'int (*)(void)' <FunctionToPointerDecay>
+          |   `-DeclRefExpr 0x7fae6182cac0 <col:35> 'int (void)' Function 0x7fae61814598 'omp_get_thread_num' 'int (void)'
+          `-CallExpr 0x7fae6182cb68 <col:58, col:79> 'int'
+            `-ImplicitCastExpr 0x7fae6182cb50 <col:58> 'int (*)(void)' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7fae6182cb28 <col:58> 'int (void)' Function 0x7fae61814710 'omp_get_num_threads' 'int (void)'

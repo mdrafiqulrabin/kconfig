@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fcf4e02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcf4e815228 <../Data/C2AST/pr53633.c:5:1, line:9:1> line:6:1 foo 'int (void)'
+| |-CompoundStmt 0x7fcf4e8153f8 <line:7:1, line:9:1>
+| | `-GCCAsmStmt 0x7fcf4e8153b0 <line:8:3, col:14>
+| `-NakedAttr 0x7fcf4e8152c8 <line:5:20>
+`-FunctionDecl 0x7fcf4e8154d8 <line:11:1, line:15:1> line:12:1 bar 'int (void) __attribute__((noreturn))'
+  |-CompoundStmt 0x7fcf4e815640 <line:13:1, line:15:1>
+  | `-GCCAsmStmt 0x7fcf4e8155f8 <line:14:3, col:14>
+  |-NakedAttr 0x7fcf4e815578 <line:11:20>
+  `-NakedAttr 0x7fcf4e8155c0 <col:20>

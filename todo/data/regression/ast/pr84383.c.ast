@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fc3c102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc3c102c960 <../Data/C2AST/pr84383.c:3:1, col:21> col:8 struct S definition
+| `-FieldDecl 0x7fc3c1814238 <col:12, col:18> col:18 referenced s 'char *'
+|-FunctionDecl 0x7fc3c1814430 <line:4:1, col:21> col:6 used bar 'void (struct S *)'
+| `-ParmVarDecl 0x7fc3c1814330 <col:11, col:20> col:21 'struct S *'
+|-FunctionDecl 0x7fc3c1814680 <line:6:1, line:14:1> line:7:1 foo 'void (int, char *)'
+| |-ParmVarDecl 0x7fc3c1814530 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7fc3c18145a8 <col:13, col:19> col:19 used b 'char *'
+| `-CompoundStmt 0x7fc3c18150e8 <line:8:1, line:14:1>
+|   |-DeclStmt 0x7fc3c18148a8 <line:9:3, col:16>
+|   | `-VarDecl 0x7fc3c1814848 <col:3, col:15> col:12 used c 'struct S [4]'
+|   |-CallExpr 0x7fc3c1814980 <line:10:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7fc3c1814968 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc3c18148c0 <col:3> 'void (struct S *)' Function 0x7fc3c1814430 'bar' 'void (struct S *)'
+|   | `-ImplicitCastExpr 0x7fc3c18149b0 <col:8> 'struct S *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7fc3c18148e8 <col:8> 'struct S [4]' lvalue Var 0x7fc3c1814848 'c' 'struct S [4]'
+|   |-CallExpr 0x7fc3c1814e00 <line:11:3, col:35> 'char *'
+|   | |-ImplicitCastExpr 0x7fc3c1814de8 <col:3> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fc3c1814c38 <col:3> '<builtin fn type>' Function 0x7fc3c1814a18 '__builtin_strncpy' 'char *(char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fc3c1814e40 <col:22, col:27> 'char *' <LValueToRValue>
+|   | | `-MemberExpr 0x7fc3c1814d08 <col:22, col:27> 'char *' lvalue .s 0x7fc3c1814238
+|   | |   `-ArraySubscriptExpr 0x7fc3c1814ce0 <col:22, col:25> 'struct S':'struct S' lvalue
+|   | |     |-ImplicitCastExpr 0x7fc3c1814cb0 <col:22> 'struct S *' <ArrayToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fc3c1814c60 <col:22> 'struct S [4]' lvalue Var 0x7fc3c1814848 'c' 'struct S [4]'
+|   | |     `-ImplicitCastExpr 0x7fc3c1814cc8 <col:24> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fc3c1814c88 <col:24> 'int' lvalue ParmVar 0x7fc3c1814530 'a' 'int'
+|   | |-ImplicitCastExpr 0x7fc3c1814e70 <col:30> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fc3c1814e58 <col:30> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc3c1814d40 <col:30> 'char *' lvalue ParmVar 0x7fc3c18145a8 'b' 'char *'
+|   | `-ImplicitCastExpr 0x7fc3c1814e88 <col:33> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fc3c1814d68 <col:33> 'int' 32
+|   |-BinaryOperator 0x7fc3c1815010 <line:12:3, col:16> 'char' '='
+|   | |-ArraySubscriptExpr 0x7fc3c1814fb8 <col:3, col:12> 'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fc3c1814fa0 <col:3, col:8> 'char *' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fc3c1814f48 <col:3, col:8> 'char *' lvalue .s 0x7fc3c1814238
+|   | | |   `-ArraySubscriptExpr 0x7fc3c1814f20 <col:3, col:6> 'struct S':'struct S' lvalue
+|   | | |     |-ImplicitCastExpr 0x7fc3c1814ef0 <col:3> 'struct S *' <ArrayToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7fc3c1814ea0 <col:3> 'struct S [4]' lvalue Var 0x7fc3c1814848 'c' 'struct S [4]'
+|   | | |     `-ImplicitCastExpr 0x7fc3c1814f08 <col:5> 'int' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fc3c1814ec8 <col:5> 'int' lvalue ParmVar 0x7fc3c1814530 'a' 'int'
+|   | | `-IntegerLiteral 0x7fc3c1814f80 <col:10> 'int' 31
+|   | `-ImplicitCastExpr 0x7fc3c1814ff8 <col:16> 'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7fc3c1814fe0 <col:16> 'int' 0
+|   `-CallExpr 0x7fc3c18150a0 <line:13:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fc3c1815088 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc3c1815038 <col:3> 'void (struct S *)' Function 0x7fc3c1814430 'bar' 'void (struct S *)'
+|     `-ImplicitCastExpr 0x7fc3c18150d0 <col:8> 'struct S *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7fc3c1815060 <col:8> 'struct S [4]' lvalue Var 0x7fc3c1814848 'c' 'struct S [4]'
+`-FunctionDecl 0x7fc3c1814a18 <line:11:3> col:3 implicit used __builtin_strncpy 'char *(char *, const char *, unsigned long)' extern
+  |-ParmVarDecl 0x7fc3c1814ab8 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7fc3c1814b18 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-ParmVarDecl 0x7fc3c1814b78 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fc3c1814bf0 <col:3> Implicit

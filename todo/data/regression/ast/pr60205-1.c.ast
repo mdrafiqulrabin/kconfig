@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f844781b4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8447010e00 <../Data/C2AST/pr60205-1.c:7:1, col:13> col:13 referenced __v16si '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7f844781c180 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7f844781b5e0 'int'
+|-VarDecl 0x7f8447010e90 <line:9:1, col:16> col:16 used x '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' extern
+|-FunctionDecl 0x7f8447011040 <line:11:1, col:25> col:13 used bar 'void (__v16si)' extern
+| `-ParmVarDecl 0x7f8447010f40 <col:18> col:25 '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+`-FunctionDecl 0x7f84470111b0 <line:12:1, line:16:1> line:13:1 foo 'void (void)'
+  `-CompoundStmt 0x7f8447011358 <line:14:1, line:16:1>
+    `-CallExpr 0x7f8447011310 <line:15:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7f84470112f8 <col:3> 'void (*)(__v16si)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8447011250 <col:3> 'void (__v16si)' Function 0x7f8447011040 'bar' 'void (__v16si)'
+      `-ImplicitCastExpr 0x7f8447011340 <col:8> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8447011278 <col:8> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue Var 0x7f8447010e90 'x' '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int'

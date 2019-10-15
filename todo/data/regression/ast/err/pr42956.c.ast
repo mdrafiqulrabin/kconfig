@@ -1,0 +1,166 @@
+../Data/C2AST/pr42956.c:15:14: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+      double xmin[ndim_], xmax[ndim_];
+             ^
+../Data/C2AST/pr42956.c:15:27: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+      double xmin[ndim_], xmax[ndim_];
+                          ^
+TranslationUnitDecl 0x7fd94a8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd94a817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd94a817780 '__int128'
+|-TypedefDecl 0x7fd94a817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd94a8177a0 'unsigned __int128'
+|-TypedefDecl 0x7fd94a817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd94a817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd94a817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd94a817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd94a817e00 'char *'
+|   `-BuiltinType 0x7fd94a817580 'char'
+|-TypedefDecl 0x7fd94a818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd94a8180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd94a817f20 'struct __va_list_tag'
+|     `-Record 0x7fd94a817e98 '__va_list_tag'
+|-TypedefDecl 0x7fd94a818178 <../Data/C2AST/pr42956.c:2:1, col:19> col:19 cint 'const int'
+| `-QualType 0x7fd94a8175e1 'const int' const
+|   `-BuiltinType 0x7fd94a8175e0 'int'
+|-RecordDecl 0x7fd949015200 <line:3:9, line:4:1> line:3:9 struct definition
+|-TypedefDecl 0x7fd949015300 <col:1, line:4:3> col:3 Bounds 'struct Bounds':'Bounds'
+| `-ElaboratedType 0x7fd9490152b0 'struct Bounds' sugar
+|   `-RecordType 0x7fd949015290 'Bounds'
+|     `-Record 0x7fd949015200 ''
+|-VarDecl 0x7fd949015388 <line:5:1, col:5> col:5 used ndim_ 'int'
+|-VarDecl 0x7fd949015440 <col:1, col:12> col:12 used ncomp_ 'int'
+|-VarDecl 0x7fd9490154b8 <col:1, col:20> col:20 selectedcomp_ 'int'
+|-VarDecl 0x7fd949015530 <col:1, col:35> col:35 used nregions_ 'int'
+|-VarDecl 0x7fd9490155d0 <line:6:1, col:7> col:7 used voidregion_ 'void *'
+|-RecordDecl 0x7fd949015630 <line:7:9, line:9:1> line:7:9 struct definition
+| |-FieldDecl 0x7fd9490156f8 <line:8:5, col:12> col:12 referenced diff 'double'
+| |-FieldDecl 0x7fd949015758 <col:5, col:18> col:18 referenced err 'double'
+| `-FieldDecl 0x7fd9490157b8 <col:5, col:23> col:23 spread 'double'
+|-TypedefDecl 0x7fd949015850 <line:7:1, line:9:3> col:3 referenced Errors 'struct Errors':'Errors'
+| `-ElaboratedType 0x7fd949015800 'struct Errors' sugar
+|   `-RecordType 0x7fd9490156c0 'Errors'
+|     `-Record 0x7fd949015630 ''
+|-TypedefDecl 0x7fd9490158f0 <line:10:1, col:22> col:22 referenced cErrors 'const Errors':'const Errors'
+| `-QualType 0x7fd9490158c1 'const Errors' const
+|   `-TypedefType 0x7fd9490158c0 'Errors' sugar
+|     |-Typedef 0x7fd949015850 'Errors'
+|     `-ElaboratedType 0x7fd949015800 'struct Errors' sugar
+|       `-RecordType 0x7fd9490156c0 'Errors'
+|         `-Record 0x7fd949015630 ''
+`-FunctionDecl 0x7fd949015b30 <line:11:1, line:33:1> line:11:6 Split 'void (int, int, int)'
+  |-ParmVarDecl 0x7fd949015960 <col:12, col:16> col:16 used iregion 'int'
+  |-ParmVarDecl 0x7fd9490159d8 <col:25, col:29> col:29 depth 'int'
+  |-ParmVarDecl 0x7fd949015a50 <col:36, col:40> col:40 used xregion 'int'
+  `-CompoundStmt 0x7fd94902e3f8 <line:12:1, line:33:1>
+    |-DeclStmt 0x7fd9490160b0 <line:13:3, line:16:11>
+    | |-RecordDecl 0x7fd949015be8 <line:13:11, line:16:3> line:13:11 invalid struct definition
+    | | |-FieldDecl 0x7fd949015ca8 <line:14:7, col:14> col:14 avg 'double'
+    | | |-FieldDecl 0x7fd949015d08 <col:7, col:19> col:19 referenced err 'double'
+    | | |-FieldDecl 0x7fd949015d68 <col:7, col:24> col:24 spread 'double'
+    | | |-FieldDecl 0x7fd949015dc8 <col:7, col:32> col:32 chisq 'double'
+    | | |-FieldDecl 0x7fd949015eb0 <line:15:7, col:24> col:14 invalid xmin 'double [ndim_]'
+    | | `-FieldDecl 0x7fd949015fa0 <col:7, col:37> col:27 invalid xmax 'double [ndim_]'
+    | `-TypedefDecl 0x7fd949016040 <line:13:3, line:16:5> col:5 referenced Result 'struct (anonymous struct at ../Data/C2AST/pr42956.c:13:11)':'struct (anonymous at ../Data/C2AST/pr42956.c:13:11)'
+    |   `-ElaboratedType 0x7fd949015ff0 'struct (anonymous struct at ../Data/C2AST/pr42956.c:13:11)' sugar
+    |     `-RecordType 0x7fd949015c70 'struct (anonymous at ../Data/C2AST/pr42956.c:13:11)'
+    |       `-Record 0x7fd949015be8 ''
+    |-DeclStmt 0x7fd9490163a0 <line:17:3, line:19:11>
+    | |-RecordDecl 0x7fd9490160c8 <line:17:11, line:19:3> line:17:18 invalid struct region definition
+    | | `-FieldDecl 0x7fd949016298 <line:18:7, col:27> col:14 invalid result 'Result [ncomp_]'
+    | `-TypedefDecl 0x7fd949016330 <line:17:3, line:19:5> col:5 referenced Region 'struct region':'struct region'
+    |   `-ElaboratedType 0x7fd9490162e0 'struct region' sugar
+    |     `-RecordType 0x7fd949016150 'struct region'
+    |       `-Record 0x7fd9490160c8 'region'
+    |-DeclStmt 0x7fd9490164f8 <line:20:3, col:24>
+    | `-VarDecl 0x7fd949016498 <col:3, col:23> col:10 used errors 'Errors [ncomp_]'
+    |-DeclStmt 0x7fd949016698 <line:21:3, col:23>
+    | |-VarDecl 0x7fd949016528 <col:3, col:7> col:7 used comp 'int'
+    | |-VarDecl 0x7fd9490165a0 <col:3, col:13> col:13 used ireg 'int'
+    | `-VarDecl 0x7fd949016618 <col:3, col:19> col:19 used xreg 'int'
+    `-ForStmt 0x7fd94902e3c0 <line:22:3, line:32:5>
+      |-BinaryOperator 0x7fd9490167d0 <line:22:8, col:31> 'int' ','
+      | |-BinaryOperator 0x7fd949016718 <col:8, col:15> 'int' '='
+      | | |-DeclRefExpr 0x7fd9490166b0 <col:8> 'int' lvalue Var 0x7fd9490165a0 'ireg' 'int'
+      | | `-ImplicitCastExpr 0x7fd949016700 <col:15> 'int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fd9490166d8 <col:15> 'int' lvalue ParmVar 0x7fd949015960 'iregion' 'int'
+      | `-BinaryOperator 0x7fd9490167a8 <col:24, col:31> 'int' '='
+      |   |-DeclRefExpr 0x7fd949016740 <col:24> 'int' lvalue Var 0x7fd949016618 'xreg' 'int'
+      |   `-ImplicitCastExpr 0x7fd949016790 <col:31> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fd949016768 <col:31> 'int' lvalue ParmVar 0x7fd949015a50 'xregion' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd949016878 <col:40, col:47> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd949016848 <col:40> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd9490167f8 <col:40> 'int' lvalue Var 0x7fd9490165a0 'ireg' 'int'
+      | `-ImplicitCastExpr 0x7fd949016860 <col:47> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd949016820 <col:47> 'int' lvalue Var 0x7fd949015530 'nregions_' 'int'
+      |-BinaryOperator 0x7fd949016910 <col:58, col:69> 'int' '='
+      | |-DeclRefExpr 0x7fd9490168a0 <col:58> 'int' lvalue Var 0x7fd9490165a0 'ireg' 'int'
+      | `-UnaryOperator 0x7fd9490168f0 <col:65, col:69> 'int' postfix '++'
+      |   `-DeclRefExpr 0x7fd9490168c8 <col:65> 'int' lvalue Var 0x7fd949016618 'xreg' 'int'
+      `-CompoundStmt 0x7fd94902e3a0 <line:23:5, line:32:5>
+        |-DeclStmt 0x7fd949016b90 <line:24:7, col:60>
+        | `-VarDecl 0x7fd9490169a8 <col:7, col:15> col:15 used result 'Result *'
+        `-ForStmt 0x7fd94902e368 <line:25:7, line:31:2>
+          |-BinaryOperator 0x7fd949016bf0 <line:25:12, col:19> 'int' '='
+          | |-DeclRefExpr 0x7fd949016ba8 <col:12> 'int' lvalue Var 0x7fd949016528 'comp' 'int'
+          | `-IntegerLiteral 0x7fd949016bd0 <col:19> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fd949016c98 <col:22, col:29> 'int' '<'
+          | |-ImplicitCastExpr 0x7fd949016c68 <col:22> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fd949016c18 <col:22> 'int' lvalue Var 0x7fd949016528 'comp' 'int'
+          | `-ImplicitCastExpr 0x7fd949016c80 <col:29> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd949016c40 <col:29> 'int' lvalue Var 0x7fd949015440 'ncomp_' 'int'
+          |-UnaryOperator 0x7fd949016ce8 <col:37, col:39> 'int' prefix '++'
+          | `-DeclRefExpr 0x7fd949016cc0 <col:39> 'int' lvalue Var 0x7fd949016528 'comp' 'int'
+          `-CompoundStmt 0x7fd94902e338 <line:26:2, line:31:2>
+            |-DeclStmt 0x7fd949016e40 <line:27:4, col:29>
+            | `-VarDecl 0x7fd949016d18 <col:4, col:28> col:12 used r 'Result *' cinit
+            |   `-UnaryOperator 0x7fd949016e20 <col:16, col:28> 'Result *' prefix '&'
+            |     `-ArraySubscriptExpr 0x7fd949016df8 <col:17, col:28> 'Result':'struct (anonymous at ../Data/C2AST/pr42956.c:13:11)' lvalue
+            |       |-ImplicitCastExpr 0x7fd949016dc8 <col:17> 'Result *' <LValueToRValue>
+            |       | `-DeclRefExpr 0x7fd949016d78 <col:17> 'Result *' lvalue Var 0x7fd9490169a8 'result' 'Result *'
+            |       `-ImplicitCastExpr 0x7fd949016de0 <col:24> 'int' <LValueToRValue>
+            |         `-DeclRefExpr 0x7fd949016da0 <col:24> 'int' lvalue Var 0x7fd949016528 'comp' 'int'
+            |-DeclStmt 0x7fd949017088 <line:28:4, col:30>
+            | `-VarDecl 0x7fd949016ee8 <col:4, col:29> col:13 used e 'cErrors *' cinit
+            |   `-ImplicitCastExpr 0x7fd949017070 <col:17, col:29> 'cErrors *' <BitCast>
+            |     `-UnaryOperator 0x7fd949017050 <col:17, col:29> 'Errors *' prefix '&'
+            |       `-ArraySubscriptExpr 0x7fd949017028 <col:18, col:29> 'Errors':'Errors' lvalue
+            |         |-ImplicitCastExpr 0x7fd949016ff8 <col:18> 'Errors *' <ArrayToPointerDecay>
+            |         | `-DeclRefExpr 0x7fd949016f48 <col:18> 'Errors [ncomp_]' lvalue Var 0x7fd949016498 'errors' 'Errors [ncomp_]'
+            |         `-ImplicitCastExpr 0x7fd949017010 <col:25> 'int' <LValueToRValue>
+            |           `-DeclRefExpr 0x7fd949016f70 <col:25> 'int' lvalue Var 0x7fd949016528 'comp' 'int'
+            |-DeclStmt 0x7fd9490171a8 <line:29:4, col:22>
+            | `-VarDecl 0x7fd9490170b8 <col:4, col:18> col:11 used c 'double' cinit
+            |   `-ImplicitCastExpr 0x7fd949017190 <col:15, col:18> 'double' <LValueToRValue>
+            |     `-MemberExpr 0x7fd949017158 <col:15, col:18> 'const double' lvalue ->diff 0x7fd9490156f8
+            |       `-ImplicitCastExpr 0x7fd949017140 <col:15> 'cErrors *' <LValueToRValue>
+            |         `-DeclRefExpr 0x7fd949017118 <col:15> 'cErrors *' lvalue Var 0x7fd949016ee8 'e' 'cErrors *'
+            `-IfStmt 0x7fd94902e300 <line:30:4, col:46>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-BinaryOperator 0x7fd94902e088 <col:8, col:17> 'int' '>'
+              | |-ImplicitCastExpr 0x7fd94902e058 <col:8, col:11> 'double' <LValueToRValue>
+              | | `-MemberExpr 0x7fd94902e000 <col:8, col:11> 'double' lvalue ->err 0x7fd949015d08
+              | |   `-ImplicitCastExpr 0x7fd9490171e8 <col:8> 'Result *' <LValueToRValue>
+              | |     `-DeclRefExpr 0x7fd9490171c0 <col:8> 'Result *' lvalue Var 0x7fd949016d18 'r' 'Result *'
+              | `-ImplicitCastExpr 0x7fd94902e070 <col:17> 'double' <IntegralToFloating>
+              |   `-IntegerLiteral 0x7fd94902e038 <col:17> 'int' 0
+              |-BinaryOperator 0x7fd94902e2d8 <col:21, col:46> 'double' '='
+              | |-MemberExpr 0x7fd94902e0f0 <col:21, col:24> 'double' lvalue ->err 0x7fd949015d08
+              | | `-ImplicitCastExpr 0x7fd94902e0d8 <col:21> 'Result *' <LValueToRValue>
+              | |   `-DeclRefExpr 0x7fd94902e0b0 <col:21> 'Result *' lvalue Var 0x7fd949016d18 'r' 'Result *'
+              | `-BinaryOperator 0x7fd94902e2b0 <col:30, col:46> 'double' '+'
+              |   |-BinaryOperator 0x7fd94902e248 <col:30, col:40> 'double' '*'
+              |   | |-ImplicitCastExpr 0x7fd94902e218 <col:30, col:33> 'double' <LValueToRValue>
+              |   | | `-MemberExpr 0x7fd94902e168 <col:30, col:33> 'double' lvalue ->err 0x7fd949015d08
+              |   | |   `-ImplicitCastExpr 0x7fd94902e150 <col:30> 'Result *' <LValueToRValue>
+              |   | |     `-DeclRefExpr 0x7fd94902e128 <col:30> 'Result *' lvalue Var 0x7fd949016d18 'r' 'Result *'
+              |   | `-ImplicitCastExpr 0x7fd94902e230 <col:37, col:40> 'double' <LValueToRValue>
+              |   |   `-MemberExpr 0x7fd94902e1e0 <col:37, col:40> 'const double' lvalue ->err 0x7fd949015758
+              |   |     `-ImplicitCastExpr 0x7fd94902e1c8 <col:37> 'cErrors *' <LValueToRValue>
+              |   |       `-DeclRefExpr 0x7fd94902e1a0 <col:37> 'cErrors *' lvalue Var 0x7fd949016ee8 'e' 'cErrors *'
+              |   `-ImplicitCastExpr 0x7fd94902e298 <col:46> 'double' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fd94902e270 <col:46> 'double' lvalue Var 0x7fd9490170b8 'c' 'double'
+              2 errors generated.
+`-<<<NULL>>>

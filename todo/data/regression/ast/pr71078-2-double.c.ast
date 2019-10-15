@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fce6602bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fce678228e8 <../Data/C2AST/pr71078-2-double.c:8:1, line:13:1> line:8:8 f2 'double (double)'
+  |-ParmVarDecl 0x7fce67822858 <col:11, col:18> col:18 used x 'double'
+  `-CompoundStmt 0x7fce67822c60 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fce67822ab8 <line:10:3, col:23>
+    | `-VarDecl 0x7fce678229a8 <col:3, col:22> col:10 used t1 'double' cinit
+    |   `-CallExpr 0x7fce67822a70 <col:15, col:22> 'double'
+    |     |-ImplicitCastExpr 0x7fce67822a58 <col:15> 'double (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fce67822a08 <col:15> 'double (double)' Function 0x7fce6707d140 'fabs' 'double (double)'
+    |     `-ImplicitCastExpr 0x7fce67822aa0 <col:21> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fce67822a30 <col:21> 'double' lvalue ParmVar 0x7fce67822858 'x' 'double'
+    |-DeclStmt 0x7fce67822bf0 <line:11:3, col:21>
+    | `-VarDecl 0x7fce67822ae8 <col:3, col:20> col:10 used t2 'double' cinit
+    |   `-BinaryOperator 0x7fce67822bc8 <col:15, col:20> 'double' '/'
+    |     |-ImplicitCastExpr 0x7fce67822b98 <col:15> 'double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fce67822b48 <col:15> 'double' lvalue Var 0x7fce678229a8 't1' 'double'
+    |     `-ImplicitCastExpr 0x7fce67822bb0 <col:20> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fce67822b70 <col:20> 'double' lvalue ParmVar 0x7fce67822858 'x' 'double'
+    `-ReturnStmt 0x7fce67822c48 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fce67822c30 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fce67822c08 <col:10> 'double' lvalue Var 0x7fce67822ae8 't2' 'double'

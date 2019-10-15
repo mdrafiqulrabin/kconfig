@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fb07582bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb075afd210 <../Data/C2AST/pr61794.c:6:1, col:9> col:9 used zmm '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+|-VarDecl 0x7fb075afd280 <line:7:1, col:9> col:9 used xmm '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+`-FunctionDecl 0x7fb075afd370 <line:9:1, line:12:1> line:9:6 test 'void (void)'
+  `-CompoundStmt 0x7fb075afdc60 <line:10:1, line:12:1>
+    `-BinaryOperator 0x7fb075afdc38 <line:11:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7742:61> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+      |-DeclRefExpr 0x7fb075afd410 <../Data/C2AST/pr61794.c:11:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fb075afd280 'xmm' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+      `-UnaryOperator 0x7fb075afdc18 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7736:43, line:7742:61> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' prefix '__extension__'
+        `-StmtExpr 0x7fb075afdbf8 <line:7736:57, line:7742:61> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+          `-CompoundStmt 0x7fb075afdbe0 <line:7736:58, line:7742:60>
+            `-CStyleCastExpr 0x7fb075afdbb8 <line:7737:3, line:7742:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+              `-ShuffleVectorExpr 0x7fb075afdb50 <line:7737:12, line:7742:57> '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+                |-CStyleCastExpr 0x7fb075afd538 <line:7737:36, col:56> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <BitCast>
+                | `-CStyleCastExpr 0x7fb075afd500 <col:45, col:56> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <BitCast>
+                |   `-ImplicitCastExpr 0x7fb075afd4e8 <col:54, col:56> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' <LValueToRValue>
+                |     `-ParenExpr 0x7fb075afd4c8 <col:54, col:56> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue
+                |       `-DeclRefExpr 0x7fb075afd460 <../Data/C2AST/pr61794.c:11:36> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long' lvalue Var 0x7fb075afd210 'zmm' '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+                |-CStyleCastExpr 0x7fb075afd5d8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7738:36, col:68> '__v16si':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <BitCast>
+                | `-CallExpr 0x7fb075afd5a0 <col:45, col:68> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+                |   `-ImplicitCastExpr 0x7fb075afd588 <col:45> '__m512i (*)(void)' <FunctionToPointerDecay>
+                |     `-DeclRefExpr 0x7fb075afd560 <col:45> '__m512i (void)' Function 0x7fb0762073b0 '_mm512_undefined_epi32' '__m512i (void)'
+                |-BinaryOperator 0x7fb075afd710 <line:7739:36, col:56> 'int' '+'
+                | |-IntegerLiteral 0x7fb075afd600 <col:36> 'int' 0
+                | `-BinaryOperator 0x7fb075afd6e8 <col:40, col:56> 'int' '*'
+                |   |-ParenExpr 0x7fb075afd6a8 <col:40, col:52> 'int'
+                |   | `-BinaryOperator 0x7fb075afd680 <col:41, col:49> 'int' '&'
+                |   |   |-ParenExpr 0x7fb075afd640 <col:41, col:45> 'int'
+                |   |   | `-IntegerLiteral 0x7fb075afd620 <../Data/C2AST/pr61794.c:11:41> 'int' 0
+                |   |   `-IntegerLiteral 0x7fb075afd660 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7739:49> 'int' 3
+                |   `-IntegerLiteral 0x7fb075afd6c8 <col:56> 'int' 4
+                |-BinaryOperator 0x7fb075afd848 <line:7740:36, col:56> 'int' '+'
+                | |-IntegerLiteral 0x7fb075afd738 <col:36> 'int' 1
+                | `-BinaryOperator 0x7fb075afd820 <col:40, col:56> 'int' '*'
+                |   |-ParenExpr 0x7fb075afd7e0 <col:40, col:52> 'int'
+                |   | `-BinaryOperator 0x7fb075afd7b8 <col:41, col:49> 'int' '&'
+                |   |   |-ParenExpr 0x7fb075afd778 <col:41, col:45> 'int'
+                |   |   | `-IntegerLiteral 0x7fb075afd758 <../Data/C2AST/pr61794.c:11:41> 'int' 0
+                |   |   `-IntegerLiteral 0x7fb075afd798 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7740:49> 'int' 3
+                |   `-IntegerLiteral 0x7fb075afd800 <col:56> 'int' 4
+                |-BinaryOperator 0x7fb075afd980 <line:7741:36, col:56> 'int' '+'
+                | |-IntegerLiteral 0x7fb075afd870 <col:36> 'int' 2
+                | `-BinaryOperator 0x7fb075afd958 <col:40, col:56> 'int' '*'
+                |   |-ParenExpr 0x7fb075afd918 <col:40, col:52> 'int'
+                |   | `-BinaryOperator 0x7fb075afd8f0 <col:41, col:49> 'int' '&'
+                |   |   |-ParenExpr 0x7fb075afd8b0 <col:41, col:45> 'int'
+                |   |   | `-IntegerLiteral 0x7fb075afd890 <../Data/C2AST/pr61794.c:11:41> 'int' 0
+                |   |   `-IntegerLiteral 0x7fb075afd8d0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7741:49> 'int' 3
+                |   `-IntegerLiteral 0x7fb075afd938 <col:56> 'int' 4
+                `-BinaryOperator 0x7fb075afdab8 <line:7742:36, col:56> 'int' '+'
+                  |-IntegerLiteral 0x7fb075afd9a8 <col:36> 'int' 3
+                  `-BinaryOperator 0x7fb075afda90 <col:40, col:56> 'int' '*'
+                    |-ParenExpr 0x7fb075afda50 <col:40, col:52> 'int'
+                    | `-BinaryOperator 0x7fb075afda28 <col:41, col:49> 'int' '&'
+                    |   |-ParenExpr 0x7fb075afd9e8 <col:41, col:45> 'int'
+                    |   | `-IntegerLiteral 0x7fb075afd9c8 <../Data/C2AST/pr61794.c:11:41> 'int' 0
+                    |   `-IntegerLiteral 0x7fb075afda08 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx512fintrin.h:7742:49> 'int' 3
+                    `-IntegerLiteral 0x7fb075afda70 <col:56> 'int' 4

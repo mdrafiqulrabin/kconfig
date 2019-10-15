@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f8f9d0208e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8f9e017a20 <../Data/C2AST/pragma-darwin-2.c:7:1, line:19:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7f8f9e017c80 <line:8:1, line:19:1>
+    `-IfStmt 0x7f8f9e017c48 <line:9:3, line:18:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7f8f9e017b00 <line:9:7> 'int' 1
+      |-CompoundStmt 0x7f8f9e017b30 <col:10, line:11:3>
+      | `-NullStmt 0x7f8f9e017b20 <line:10:5>
+      `-IfStmt 0x7f8f9e017c10 <line:12:8, line:18:3>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-IntegerLiteral 0x7f8f9e017b48 <line:12:12> 'int' 1
+        |-CompoundStmt 0x7f8f9e017b78 <col:15, line:14:3>
+        | `-NullStmt 0x7f8f9e017b68 <line:13:5>
+        `-IfStmt 0x7f8f9e017bd8 <line:16:8, line:18:3>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-IntegerLiteral 0x7f8f9e017b90 <line:16:12> 'int' 1
+          |-CompoundStmt 0x7f8f9e017bc0 <col:15, line:18:3>
+          | `-NullStmt 0x7f8f9e017bb0 <line:17:5>
+          `-<<<NULL>>>

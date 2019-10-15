@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe1fd82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe1fd82c960 <../Data/C2AST/pr20020-1.c:6:1, line:15:1> line:6:8 struct shared_ptr_struct definition
+| |-FieldDecl 0x7fe1fd86d858 <line:8:3, col:28> col:22 phase 'unsigned long long'
+| | `-IntegerLiteral 0x7fe1fd86d820 <col:28> 'int' 48
+| |-FieldDecl 0x7fe1fd86d8d8 <line:9:3, col:25> col:18 thread 'unsigned short'
+| | `-IntegerLiteral 0x7fe1fd86d8a0 <col:25> 'int' 16
+| |-RecordDecl 0x7fe1fd86d920 <line:10:3, line:14:5> line:10:3 union definition
+| | |-FieldDecl 0x7fe1fd86d9e8 <line:12:7, col:13> col:13 addr 'void *'
+| | `-FieldDecl 0x7fe1fd86da48 <line:13:7, col:26> col:26 pad 'unsigned long long'
+| |-FieldDecl 0x7fe1fd86dae0 <line:10:3> col:3 implicit 'union shared_ptr_struct::(anonymous at ../Data/C2AST/pr20020-1.c:10:3)'
+| |-IndirectFieldDecl 0x7fe1fd86db38 <line:12:13> col:13 implicit addr 'void *'
+| | |-Field 0x7fe1fd86dae0 '' 'union shared_ptr_struct::(anonymous at ../Data/C2AST/pr20020-1.c:10:3)'
+| | `-Field 0x7fe1fd86d9e8 'addr' 'void *'
+| `-IndirectFieldDecl 0x7fe1fd86db88 <line:13:26> col:26 implicit pad 'unsigned long long'
+|   |-Field 0x7fe1fd86dae0 '' 'union shared_ptr_struct::(anonymous at ../Data/C2AST/pr20020-1.c:10:3)'
+|   `-Field 0x7fe1fd86da48 'pad' 'unsigned long long'
+|-TypedefDecl 0x7fe1fd86dc20 <line:16:1, col:34> col:34 referenced sptr_t 'struct shared_ptr_struct':'struct shared_ptr_struct'
+| `-ElaboratedType 0x7fe1fd86dbd0 'struct shared_ptr_struct' sugar
+|   `-RecordType 0x7fe1fd86d800 'struct shared_ptr_struct'
+|     `-Record 0x7fe1fd82c960 'shared_ptr_struct'
+|-VarDecl 0x7fe1fd86dcb0 <line:18:1, col:8> col:8 used S 'sptr_t':'struct shared_ptr_struct'
+`-FunctionDecl 0x7fe1fd86de40 <line:20:1, line:24:1> line:21:1 sptr_result 'sptr_t (void)'
+  `-CompoundStmt 0x7fe1fd86df38 <line:22:1, line:24:1>
+    `-ReturnStmt 0x7fe1fd86df20 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7fe1fd86df08 <col:10> 'sptr_t':'struct shared_ptr_struct' <LValueToRValue>
+        `-DeclRefExpr 0x7fe1fd86dee0 <col:10> 'sptr_t':'struct shared_ptr_struct' lvalue Var 0x7fe1fd86dcb0 'S' 'sptr_t':'struct shared_ptr_struct'

@@ -1,0 +1,56 @@
+../Data/C2AST/pr51957-1.c:7:10: fatal error: 'pr51957-1.h' file not found
+#include "pr51957-1.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f895c824ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f895c825460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f895c825180 '__int128'
+|-TypedefDecl 0x7f895c8254d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f895c8251a0 'unsigned __int128'
+|-TypedefDecl 0x7f895c8257a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f895c8255b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f895c825528 '__NSConstantString_tag'
+|-TypedefDecl 0x7f895c825840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f895c825800 'char *'
+|   `-BuiltinType 0x7f895c824f80 'char'
+|-TypedefDecl 0x7f895c825b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f895c825ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f895c825920 'struct __va_list_tag'
+|     `-Record 0x7f895c825898 '__va_list_tag'
+|-VarDecl 0x7f895c001000 <../Data/C2AST/pr51957-1.c:6:1, col:10> col:5 used v 'int [128]'
+`-FunctionDecl 0x7f895c0011c0 <line:9:1, line:29:1> line:10:1 invalid foo 'void (int *)'
+  |-ParmVarDecl 0x7f895c001100 <col:6, col:9> col:9 invalid x 'int *'
+  `-CompoundStmt 0x7f895c001f20 <line:11:1, line:29:1>
+    `-WhileStmt 0x7f895c001f00 <line:13:3, line:28:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7f895c001268 <line:13:10> 'int' 1
+      `-CompoundStmt 0x7f895c001ec8 <line:14:5, line:28:5>
+        |-DeclStmt 0x7f895c001458 <line:15:7, col:17>
+        | |-RecordDecl 0x7f895c001288 <col:7, col:13> col:13 union R
+        | `-VarDecl 0x7f895c0013e0 <col:7, col:16> col:16 used b 'union R *'
+        |-BinaryOperator 0x7f895c001650 <line:16:7, col:16> 'union R *' '='
+        | |-DeclRefExpr 0x7f895c001470 <col:7> 'union R *' lvalue Var 0x7f895c0013e0 'b' 'union R *'
+        | `-ImplicitCastExpr 0x7f895c001638 <col:11, col:16> 'union R *' <IntegralToPointer>
+        |   `-CallExpr 0x7f895c001610 <col:11, col:16> 'int'
+        |     `-ImplicitCastExpr 0x7f895c0015f8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7f895c0015a0 <col:11> 'int ()' Function 0x7f895c0014f0 'fn1' 'int ()'
+        |-IfStmt 0x7f895c001970 <line:17:7, line:21:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-OpaqueValueExpr 0x7f895c001950 <<invalid sloc>> '_Bool'
+        | |-CompoundStmt 0x7f895c001940 <line:18:2, line:21:2>
+        | `-<<<NULL>>>
+        |-IfStmt 0x7f895c001b50 <line:22:7, line:23:7>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-OpaqueValueExpr 0x7f895c001b30 <<invalid sloc>> '_Bool'
+        | |-CallExpr 0x7f895c001b08 <col:2, col:7> 'int'
+        | | `-ImplicitCastExpr 0x7f895c001af0 <col:2> 'int (*)()' <FunctionToPointerDecay>
+        | |   `-DeclRefExpr 0x7f895c001ac8 <col:2> 'int ()' Function 0x7f895c001a18 'fn3' 'int ()'
+        | `-<<<NULL>>>
+        `-IfStmt 0x7f895c001e90 <line:26:7, line:27:2>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-OpaqueValueExpr 0x7f895c001e70 <<invalid sloc>> '_Bool'
+          |-BreakStmt 0x7f895c001e68 <col:2>
+          `-<<<NULL>>>

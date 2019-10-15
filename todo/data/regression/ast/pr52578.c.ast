@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fcde482bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcde6011a68 <../Data/C2AST/pr52578.c:4:1, line:7:1> line:4:6 bar 'long (long)'
+| |-ParmVarDecl 0x7fcde482c978 <col:11, col:16> col:16 used i 'long'
+| `-CompoundStmt 0x7fcde6011d80 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fcde6011d68 <line:6:3, col:47>
+|     `-BinaryOperator 0x7fcde6011d40 <col:10, col:47> 'long' '-'
+|       |-CStyleCastExpr 0x7fcde6011c98 <col:10, col:37> 'long' <IntegralCast>
+|       | `-ParenExpr 0x7fcde6011c78 <col:16, col:37> 'unsigned long'
+|       |   `-BinaryOperator 0x7fcde6011c08 <col:17, col:36> 'unsigned long' '+'
+|       |     |-CStyleCastExpr 0x7fcde6011ba8 <col:17, col:32> 'unsigned long' <IntegralCast>
+|       |     | `-ImplicitCastExpr 0x7fcde6011b90 <col:32> 'long' <LValueToRValue>
+|       |     |   `-DeclRefExpr 0x7fcde6011b50 <col:32> 'long' lvalue ParmVar 0x7fcde482c978 'i' 'long'
+|       |     `-ImplicitCastExpr 0x7fcde6011bf0 <col:36> 'unsigned long' <IntegralCast>
+|       |       `-IntegerLiteral 0x7fcde6011bd0 <col:36> 'int' 2
+|       `-CStyleCastExpr 0x7fcde6011d18 <col:41, col:47> 'long' <NoOp>
+|         `-ImplicitCastExpr 0x7fcde6011d00 <col:47> 'long' <LValueToRValue>
+|           `-DeclRefExpr 0x7fcde6011cc0 <col:47> 'long' lvalue ParmVar 0x7fcde482c978 'i' 'long'
+`-FunctionDecl 0x7fcde6011e78 <line:8:1, line:11:1> line:8:6 foo 'long (int)'
+  |-ParmVarDecl 0x7fcde6011db0 <col:11, col:15> col:15 used i 'int'
+  `-CompoundStmt 0x7fcde6012150 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fcde6012138 <line:10:3, col:47>
+      `-BinaryOperator 0x7fcde6012110 <col:10, col:47> 'long' '-'
+        |-CStyleCastExpr 0x7fcde6012068 <col:10, col:37> 'long' <IntegralCast>
+        | `-ParenExpr 0x7fcde6012048 <col:16, col:37> 'unsigned long'
+        |   `-BinaryOperator 0x7fcde6011fd8 <col:17, col:36> 'unsigned long' '+'
+        |     |-CStyleCastExpr 0x7fcde6011f78 <col:17, col:32> 'unsigned long' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7fcde6011f60 <col:32> 'int' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7fcde6011f20 <col:32> 'int' lvalue ParmVar 0x7fcde6011db0 'i' 'int'
+        |     `-ImplicitCastExpr 0x7fcde6011fc0 <col:36> 'unsigned long' <IntegralCast>
+        |       `-IntegerLiteral 0x7fcde6011fa0 <col:36> 'int' 2
+        `-CStyleCastExpr 0x7fcde60120e8 <col:41, col:47> 'long' <IntegralCast>
+          `-ImplicitCastExpr 0x7fcde60120d0 <col:47> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fcde6012090 <col:47> 'int' lvalue ParmVar 0x7fcde6011db0 'i' 'int'

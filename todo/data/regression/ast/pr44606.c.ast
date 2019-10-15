@@ -1,0 +1,832 @@
+TranslationUnitDecl 0x7f9115818ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f91148569a0 <../Data/C2AST/pr44606.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9114856a40 prev 0x7f91148569a0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f9114856ae0 <line:10:10, col:56> col:17 struct _PixelPacket definition
+| |-FieldDecl 0x7f9114856ba8 <col:33, col:47> col:47 referenced r 'unsigned char'
+| |-FieldDecl 0x7f9114856c08 <col:33, col:50> col:50 referenced g 'unsigned char'
+| `-FieldDecl 0x7f9114856c68 <col:33, col:53> col:53 referenced b 'unsigned char'
+|-TypedefDecl 0x7f9114856d00 <col:2, line:11:2> col:2 referenced PixelPacket 'struct _PixelPacket':'struct _PixelPacket'
+| `-ElaboratedType 0x7f9114856cb0 'struct _PixelPacket' sugar
+|   `-RecordType 0x7f9114856b70 'struct _PixelPacket'
+|     `-Record 0x7f9114856ae0 '_PixelPacket'
+|-VarDecl 0x7f9114856ea8 <line:13:1, col:16> col:13 used q 'PixelPacket [6]'
+|-VarDecl 0x7f91148572b8 <line:15:1, col:26> col:13 used p 'PixelPacket [32]'
+|-VarDecl 0x7f9114857330 <line:21:1, line:14:30> line:21:15 used columns 'unsigned long' cinit
+| `-ParenExpr 0x7f9114857570 <line:14:14, col:30> 'unsigned long'
+|   `-BinaryOperator 0x7f9114857548 <line:12:21, line:14:29> 'unsigned long' '-'
+|     |-ParenExpr 0x7f91148574f0 <line:12:21, col:44> 'unsigned long'
+|     | `-BinaryOperator 0x7f91148574c8 <col:22, col:43> 'unsigned long' '/'
+|     |   |-UnaryExprOrTypeTraitExpr 0x7f91148573d8 <col:22, col:30> 'unsigned long' sizeof
+|     |   | `-ParenExpr 0x7f91148573b8 <col:28, col:30> 'PixelPacket [6]' lvalue
+|     |   |   `-DeclRefExpr 0x7f9114857390 <line:14:24> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+|     |   `-UnaryExprOrTypeTraitExpr 0x7f91148574a8 <line:12:32, col:43> 'unsigned long' sizeof
+|     |     `-ParenExpr 0x7f9114857488 <col:38, col:43> 'PixelPacket':'struct _PixelPacket' lvalue
+|     |       `-ArraySubscriptExpr 0x7f9114857460 <line:14:24, line:12:42> 'PixelPacket':'struct _PixelPacket' lvalue
+|     |         |-ImplicitCastExpr 0x7f9114857448 <line:14:24> 'PixelPacket *' <ArrayToPointerDecay>
+|     |         | `-DeclRefExpr 0x7f9114857400 <col:24> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+|     |         `-IntegerLiteral 0x7f9114857428 <line:12:41> 'int' 0
+|     `-ImplicitCastExpr 0x7f9114857530 <line:14:29> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7f9114857510 <col:29> 'int' 1
+`-FunctionDecl 0x7f9114857628 <line:22:1, line:53:1> line:22:5 main 'int (void)'
+  `-CompoundStmt 0x7f911485a9c8 <line:23:1, line:53:1>
+    |-DeclStmt 0x7f9114857ba8 <line:24:2, col:67>
+    | `-VarDecl 0x7f9114857960 <col:2, col:66> col:29 used answers 'const unsigned char [5]' static cinit
+    |   `-InitListExpr 0x7f9114857ac8 <col:45, col:66> 'const unsigned char [5]'
+    |     |-ImplicitCastExpr 0x7f9114857b30 <col:47> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f91148579c0 <col:47> 'int' 31
+    |     |-ImplicitCastExpr 0x7f9114857b48 <col:51> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f91148579e0 <col:51> 'int' 32
+    |     |-ImplicitCastExpr 0x7f9114857b60 <col:55> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f9114857a00 <col:55> 'int' 34
+    |     |-ImplicitCastExpr 0x7f9114857b78 <col:59> 'unsigned char' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f9114857a20 <col:59> 'int' 35
+    |     `-ImplicitCastExpr 0x7f9114857b90 <col:63> 'unsigned char' <IntegralCast>
+    |       `-IntegerLiteral 0x7f9114857a40 <col:63> 'int' 36
+    |-DeclStmt 0x7f9114857c38 <line:25:2, col:17>
+    | `-VarDecl 0x7f9114857bd8 <col:2, col:16> col:16 used x 'unsigned long'
+    |-ForStmt 0x7f9114858138 <line:26:2, line:28:2>
+    | |-BinaryOperator 0x7f9114857cb0 <line:26:7, col:11> 'unsigned long' '='
+    | | |-DeclRefExpr 0x7f9114857c50 <col:7> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f9114857c98 <col:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f9114857c78 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9114857e70 <col:14, col:39> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9114857e58 <col:14> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9114857cd8 <col:14> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | | `-BinaryOperator 0x7f9114857e30 <col:18, col:39> 'unsigned long' '/'
+    | |   |-UnaryExprOrTypeTraitExpr 0x7f9114857d48 <col:18, col:26> 'unsigned long' sizeof
+    | |   | `-ParenExpr 0x7f9114857d28 <col:24, col:26> 'PixelPacket [32]' lvalue
+    | |   |   `-DeclRefExpr 0x7f9114857d00 <col:25> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    | |   `-UnaryExprOrTypeTraitExpr 0x7f9114857e10 <col:28, col:39> 'unsigned long' sizeof
+    | |     `-ParenExpr 0x7f9114857df0 <col:34, col:39> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |       `-ArraySubscriptExpr 0x7f9114857dc8 <col:35, col:38> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |         |-ImplicitCastExpr 0x7f9114857db0 <col:35> 'PixelPacket *' <ArrayToPointerDecay>
+    | |         | `-DeclRefExpr 0x7f9114857d68 <col:35> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    | |         `-IntegerLiteral 0x7f9114857d90 <col:37> 'int' 0
+    | |-UnaryOperator 0x7f9114857ec0 <col:42, col:43> 'unsigned long' postfix '++'
+    | | `-DeclRefExpr 0x7f9114857e98 <col:42> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | `-CompoundStmt 0x7f9114858120 <col:47, line:28:2>
+    |   `-BinaryOperator 0x7f91148580f8 <line:27:3, col:23> 'unsigned char' '='
+    |     |-MemberExpr 0x7f9114857f88 <col:3, col:8> 'unsigned char' lvalue .b 0x7f9114856c68
+    |     | `-ArraySubscriptExpr 0x7f9114857f60 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |     |   |-ImplicitCastExpr 0x7f9114857f30 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |     |   | `-DeclRefExpr 0x7f9114857ee0 <col:3> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |     |   `-ImplicitCastExpr 0x7f9114857f48 <col:5> 'unsigned long' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7f9114857f08 <col:5> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |     `-ImplicitCastExpr 0x7f91148580e0 <col:12, col:23> 'unsigned char' <IntegralCast>
+    |       `-BinaryOperator 0x7f91148580b8 <col:12, col:23> 'unsigned long' '|'
+    |         |-ParenExpr 0x7f9114858060 <col:12, col:19> 'unsigned long'
+    |         | `-BinaryOperator 0x7f9114858038 <col:13, col:17> 'unsigned long' '+'
+    |         |   |-ImplicitCastExpr 0x7f9114858008 <col:13> 'unsigned long' <LValueToRValue>
+    |         |   | `-DeclRefExpr 0x7f9114857fc0 <col:13> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |         |   `-ImplicitCastExpr 0x7f9114858020 <col:17> 'unsigned long' <IntegralCast>
+    |         |     `-IntegerLiteral 0x7f9114857fe8 <col:17> 'int' 34
+    |         `-ImplicitCastExpr 0x7f91148580a0 <col:23> 'unsigned long' <IntegralCast>
+    |           `-IntegerLiteral 0x7f9114858080 <col:23> 'int' 1
+    |-ForStmt 0x7f911485a2c8 <line:29:2, line:47:2>
+    | |-BinaryOperator 0x7f91148581d0 <line:29:7, col:11> 'unsigned long' '='
+    | | |-DeclRefExpr 0x7f9114858170 <col:7> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f91148581b8 <col:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f9114858198 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9114858278 <col:14, col:18> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9114858248 <col:14> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f91148581f8 <col:14> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f9114858260 <col:18> 'unsigned long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9114858220 <col:18> 'unsigned long' lvalue Var 0x7f9114857330 'columns' 'unsigned long'
+    | |-UnaryOperator 0x7f91148582c8 <col:27, col:28> 'unsigned long' postfix '++'
+    | | `-DeclRefExpr 0x7f91148582a0 <col:27> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | `-CompoundStmt 0x7f911485a230 <col:32, line:47:2>
+    |   |-DeclStmt 0x7f911500c768 <line:30:3, col:47>
+    |   | |-VarDecl 0x7f9114858300 <col:3, col:20> col:10 used total_r 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f9114858380 <col:20> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f9114858360 <col:20> 'int' 0
+    |   | |-VarDecl 0x7f911500c600 <col:3, col:33> col:23 used total_g 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f911500c680 <col:33> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f911500c660 <col:33> 'int' 0
+    |   | `-VarDecl 0x7f911500c6b0 <col:3, col:46> col:36 used total_b 'double' cinit
+    |   |   `-ImplicitCastExpr 0x7f911500c730 <col:46> 'double' <IntegralToFloating>
+    |   |     `-IntegerLiteral 0x7f911500c710 <col:46> 'int' 0
+    |   |-DeclStmt 0x7f911500c9b0 <line:31:3, col:47>
+    |   | |-VarDecl 0x7f911500c798 <col:3, col:20> col:10 used saved_r 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f911500c818 <col:20> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f911500c7f8 <col:20> 'int' 0
+    |   | |-VarDecl 0x7f911500c848 <col:3, col:33> col:23 used saved_g 'double' cinit
+    |   | | `-ImplicitCastExpr 0x7f911500c8c8 <col:33> 'double' <IntegralToFloating>
+    |   | |   `-IntegerLiteral 0x7f911500c8a8 <col:33> 'int' 0
+    |   | `-VarDecl 0x7f911500c8f8 <col:3, col:46> col:36 used saved_b 'double' cinit
+    |   |   `-ImplicitCastExpr 0x7f911500c978 <col:46> 'double' <IntegralToFloating>
+    |   |     `-IntegerLiteral 0x7f911500c958 <col:46> 'int' 0
+    |   |-DoStmt 0x7f911500d280 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f911500d238 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911500cc60 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911500c9c8 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911500cc38 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911500ca10 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911500c9f0 <line:32:21> 'double' 3.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911500cc20 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911500cc08 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911500cbf0 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911500cbd0 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911500cb98 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911500cb70 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911500cb58 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911500ca30 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911500cb30 <line:32:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911500cad0 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911500cab8 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911500ca58 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911500caa0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911500ca78 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911500cb18 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911500caf8 <col:17> 'int' 0
+    |   | | |-CompoundAssignOperator 0x7f911500cf30 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911500cc98 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911500cf08 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911500cce0 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911500ccc0 <line:32:21> 'double' 3.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911500cef0 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911500ced8 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911500cec0 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911500cea0 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911500ce68 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911500ce40 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911500ce28 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911500cd00 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911500ce00 <line:32:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911500cda0 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911500cd88 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911500cd28 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911500cd70 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911500cd48 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911500cde8 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911500cdc8 <col:17> 'int' 0
+    |   | | `-CompoundAssignOperator 0x7f911500d200 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911500cf68 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f911500d1d8 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f911500cfb0 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911500cf90 <line:32:21> 'double' 3.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f911500d1c0 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f911500d1a8 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f911500d190 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f911500d170 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f911500d138 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f911500d110 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f911500d0f8 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f911500cfd0 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f911500d0d0 <line:32:10, col:17> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f911500d070 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f911500d058 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f911500cff8 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f911500d040 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f911500d018 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f911500d0b8 <col:17> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f911500d098 <col:17> 'int' 0
+    |   | `-IntegerLiteral 0x7f911500d260 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f911505c958 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f911505c910 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911500d538 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911500d2a0 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911500d510 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911500d2e8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911500d2c8 <line:33:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911500d4f8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911500d4e0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911500d4c8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911500d4a8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911500d470 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911500d448 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911500d430 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911500d308 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911500d408 <line:33:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911500d3a8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911500d390 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911500d330 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911500d378 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911500d350 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911500d3f0 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911500d3d0 <col:17> 'int' 1
+    |   | | |-CompoundAssignOperator 0x7f911505c608 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911500d570 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911505c5e0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911500d5b8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911500d598 <line:33:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505c5c8 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505c5b0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505c598 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505c578 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505c540 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911505c518 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505c500 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911500d5d8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505c4d8 <line:33:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505c478 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505c460 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505c400 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505c448 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505c420 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505c4c0 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505c4a0 <col:17> 'int' 1
+    |   | | `-CompoundAssignOperator 0x7f911505c8d8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911505c640 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f911505c8b0 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f911505c688 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911505c668 <line:33:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f911505c898 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f911505c880 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f911505c868 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f911505c848 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f911505c810 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f911505c7e8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f911505c7d0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f911505c6a8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f911505c7a8 <line:33:10, col:17> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f911505c748 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f911505c730 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f911505c6d0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f911505c718 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f911505c6f0 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f911505c790 <col:17> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f911505c770 <col:17> 'int' 1
+    |   | `-IntegerLiteral 0x7f911505c938 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f911505d230 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f911505d1e8 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911505cc10 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505c978 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911505cbe8 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505c9c0 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505c9a0 <line:34:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505cbd0 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505cbb8 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505cba0 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505cb80 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505cb48 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911505cb20 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505cb08 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505c9e0 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505cae0 <line:34:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505ca80 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505ca68 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505ca08 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505ca50 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505ca28 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505cac8 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505caa8 <col:17> 'int' 2
+    |   | | |-CompoundAssignOperator 0x7f911505cee0 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505cc48 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911505ceb8 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505cc90 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505cc70 <line:34:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505cea0 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505ce88 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505ce70 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505ce50 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505ce18 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911505cdf0 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505cdd8 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505ccb0 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505cdb0 <line:34:10, col:17> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505cd50 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505cd38 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505ccd8 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505cd20 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505ccf8 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505cd98 <col:17> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505cd78 <col:17> 'int' 2
+    |   | | `-CompoundAssignOperator 0x7f911505d1b0 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911505cf18 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f911505d188 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f911505cf60 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911505cf40 <line:34:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f911505d170 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f911505d158 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f911505d140 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f911505d120 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f911505d0e8 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f911505d0c0 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f911505d0a8 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f911505cf80 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f911505d080 <line:34:10, col:17> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f911505d020 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f911505d008 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f911505cfa8 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f911505cff0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f911505cfc8 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f911505d068 <col:17> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f911505d048 <col:17> 'int' 2
+    |   | `-IntegerLiteral 0x7f911505d210 <line:20:10> 'int' 0
+    |   |-BinaryOperator 0x7f911505d2b8 <line:35:3, col:13> 'double' '='
+    |   | |-DeclRefExpr 0x7f911505d250 <col:3> 'double' lvalue Var 0x7f911500c798 'saved_r' 'double'
+    |   | `-ImplicitCastExpr 0x7f911505d2a0 <col:13> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f911505d278 <col:13> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   |-BinaryOperator 0x7f911505d348 <line:36:3, col:13> 'double' '='
+    |   | |-DeclRefExpr 0x7f911505d2e0 <col:3> 'double' lvalue Var 0x7f911500c848 'saved_g' 'double'
+    |   | `-ImplicitCastExpr 0x7f911505d330 <col:13> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f911505d308 <col:13> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   |-DoStmt 0x7f911505dc28 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f911505dbe0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911505d608 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505d370 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911505d5e0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505d3b8 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505d398 <line:37:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f911505d5c8 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505d5b0 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505d598 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505d578 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505d540 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911505d518 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505d500 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505d3d8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505d4d8 <line:37:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505d478 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505d460 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505d400 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505d448 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505d420 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505d4c0 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505d4a0 <col:16> 'int' 11
+    |   | | |-CompoundAssignOperator 0x7f911505d8d8 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505d640 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911505d8b0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505d688 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505d668 <line:37:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f911505d898 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505d880 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505d868 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505d848 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505d810 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911505d7e8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505d7d0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505d6a8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505d7a8 <line:37:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505d748 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505d730 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505d6d0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505d718 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505d6f0 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505d790 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505d770 <col:16> 'int' 11
+    |   | | `-CompoundAssignOperator 0x7f911505dba8 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911505d910 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f911505db80 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f911505d958 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911505d938 <line:37:20> 'double' 1.500000e+01
+    |   | |     `-ImplicitCastExpr 0x7f911505db68 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f911505db50 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f911505db38 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f911505db18 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f911505dae0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f911505dab8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f911505daa0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f911505d978 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f911505da78 <line:37:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f911505da18 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f911505da00 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f911505d9a0 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f911505d9e8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f911505d9c0 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f911505da60 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f911505da40 <col:16> 'int' 11
+    |   | `-IntegerLiteral 0x7f911505dc08 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f911505e510 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f911505e4c8 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911505dee0 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505dc48 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911505deb8 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505dc90 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505dc70 <line:38:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505dea0 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505de88 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505de70 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505de50 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505de18 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911505ddf0 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505ddd8 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505dcb0 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505ddb0 <line:38:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505dd50 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505dd38 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505dcd8 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505dd20 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505dcf8 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505dd98 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505dd78 <col:16> 'int' 12
+    |   | | |-CompoundAssignOperator 0x7f911505e1b0 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505df18 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911505e188 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505df60 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505df40 <line:38:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505e170 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505e158 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505e140 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505e120 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505e0e8 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911505e0c0 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505e0a8 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505df80 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505e080 <line:38:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505e020 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505e008 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505dfa8 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505dff0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505dfc8 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505e068 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505e048 <col:16> 'int' 12
+    |   | | `-CompoundAssignOperator 0x7f911505e490 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911505e1e8 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f911505e468 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f911505e230 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911505e210 <line:38:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f911505e450 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f911505e438 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f911505e420 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f911505e400 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f911505e3b8 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f911505e390 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f911505e378 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f911505e250 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f911505e350 <line:38:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f911505e2f0 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f911505e2d8 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f911505e278 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f911505e2c0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f911505e298 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f911505e338 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f911505e318 <col:16> 'int' 12
+    |   | `-IntegerLiteral 0x7f911505e4f0 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f911505ede8 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f911505eda0 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911505e7c8 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505e530 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911505e7a0 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505e578 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505e558 <line:39:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505e788 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505e770 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505e758 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505e738 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505e700 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911505e6d8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505e6c0 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505e598 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505e698 <line:39:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505e638 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505e620 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505e5c0 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505e608 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505e5e0 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505e680 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505e660 <col:16> 'int' 18
+    |   | | |-CompoundAssignOperator 0x7f911505ea98 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505e800 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911505ea70 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505e848 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505e828 <line:39:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f911505ea58 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505ea40 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505ea28 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505ea08 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505e9d0 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911505e9a8 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505e990 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505e868 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505e968 <line:39:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505e908 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505e8f0 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505e890 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505e8d8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505e8b0 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505e950 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505e930 <col:16> 'int' 18
+    |   | | `-CompoundAssignOperator 0x7f911505ed68 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911505ead0 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f911505ed40 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f911505eb18 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911505eaf8 <line:39:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f911505ed28 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f911505ed10 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f911505ecf8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f911505ecd8 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f911505eca0 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f911505ec78 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f911505ec60 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f911505eb38 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f911505ec38 <line:39:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f911505ebd8 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f911505ebc0 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f911505eb60 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f911505eba8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f911505eb80 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f911505ec20 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f911505ec00 <col:16> 'int' 18
+    |   | `-IntegerLiteral 0x7f911505edc8 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f91148586d0 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f9114858688 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f911505f0a0 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505ee08 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f911505f078 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505ee50 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505ee30 <line:40:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f911505f060 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505f048 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505f030 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505f010 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505efd8 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f911505efb0 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505ef98 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505ee70 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505ef70 <line:40:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505ef10 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505eef8 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505ee98 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505eee0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505eeb8 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505ef58 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505ef38 <col:16> 'int' 19
+    |   | | |-CompoundAssignOperator 0x7f911505f370 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f911505f0d8 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f911505f348 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f911505f120 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f911505f100 <line:40:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f911505f330 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f911505f318 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f911505f300 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f911505f2e0 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f911505f2a8 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f911505f280 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f911505f268 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f911505f140 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f911505f240 <line:40:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f911505f1e0 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f911505f1c8 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f911505f168 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f911505f1b0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f911505f188 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f911505f228 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f911505f208 <col:16> 'int' 19
+    |   | | `-CompoundAssignOperator 0x7f9114858650 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f911505f3a8 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f9114858628 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f9114858400 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f911505f3d0 <line:40:20> 'double' 1.500000e+01
+    |   | |     `-ImplicitCastExpr 0x7f9114858610 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f91148585f8 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f91148585e0 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f91148585c0 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f9114858588 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f9114858560 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f9114858548 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f9114858420 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f9114858520 <line:40:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f91148584c0 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f91148584a8 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f9114858448 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f9114858490 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f9114858468 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f9114858508 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f91148584e8 <col:16> 'int' 19
+    |   | `-IntegerLiteral 0x7f91148586b0 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f9114858fa8 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f9114858f60 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f9114858988 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f91148586f0 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f9114858960 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f9114858738 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f9114858718 <line:41:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f9114858948 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f9114858930 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f9114858918 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f91148588f8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f91148588c0 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f9114858898 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f9114858880 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f9114858758 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f9114858858 <line:41:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f91148587f8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f91148587e0 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f9114858780 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f91148587c8 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f91148587a0 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f9114858840 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f9114858820 <col:16> 'int' 20
+    |   | | |-CompoundAssignOperator 0x7f9114858c58 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f91148589c0 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f9114858c30 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f9114858a08 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f91148589e8 <line:41:20> 'double' 1.500000e+01
+    |   | | |   `-ImplicitCastExpr 0x7f9114858c18 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f9114858c00 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f9114858be8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f9114858bc8 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f9114858b90 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f9114858b68 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f9114858b50 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f9114858a28 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f9114858b28 <line:41:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f9114858ac8 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f9114858ab0 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f9114858a50 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f9114858a98 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f9114858a70 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f9114858b10 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f9114858af0 <col:16> 'int' 20
+    |   | | `-CompoundAssignOperator 0x7f9114858f28 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f9114858c90 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f9114858f00 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f9114858cd8 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f9114858cb8 <line:41:20> 'double' 1.500000e+01
+    |   | |     `-ImplicitCastExpr 0x7f9114858ee8 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f9114858ed0 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f9114858eb8 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f9114858e98 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f9114858e60 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f9114858e38 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f9114858e20 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f9114858cf8 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f9114858df8 <line:41:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f9114858d98 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f9114858d80 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f9114858d20 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f9114858d68 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f9114858d40 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f9114858de0 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f9114858dc0 <col:16> 'int' 20
+    |   | `-IntegerLiteral 0x7f9114858f88 <line:20:10> 'int' 0
+    |   |-DoStmt 0x7f9114859880 <line:16:29, line:20:11>
+    |   | |-CompoundStmt 0x7f9114859838 <line:16:32, line:19:34>
+    |   | | |-CompoundAssignOperator 0x7f9114859260 <line:17:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f9114858fc8 <col:2> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   | | | `-BinaryOperator 0x7f9114859238 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f9114859010 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f9114858ff0 <line:42:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f9114859220 <line:17:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f9114859208 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f91148591f0 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f91148591d0 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f9114859198 <col:23, col:30> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | |             `-ArraySubscriptExpr 0x7f9114859170 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f9114859158 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f9114859030 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f9114859130 <line:42:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f91148590d0 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f91148590b8 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f9114859058 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f91148590a0 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f9114859078 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f9114859118 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f91148590f8 <col:16> 'int' 21
+    |   | | |-CompoundAssignOperator 0x7f9114859530 <line:18:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | | | |-DeclRefExpr 0x7f9114859298 <col:2> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   | | | `-BinaryOperator 0x7f9114859508 <col:13, col:31> 'double' '*'
+    |   | | |   |-ParenExpr 0x7f91148592e0 <col:13, col:20> 'double'
+    |   | | |   | `-FloatingLiteral 0x7f91148592c0 <line:42:21> 'double' 7.000000e+00
+    |   | | |   `-ImplicitCastExpr 0x7f91148594f0 <line:18:22, col:31> 'double' <IntegralToFloating>
+    |   | | |     `-ImplicitCastExpr 0x7f91148594d8 <col:22, col:31> 'int' <IntegralCast>
+    |   | | |       `-ImplicitCastExpr 0x7f91148594c0 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | | |         `-ParenExpr 0x7f91148594a0 <col:22, col:31> 'unsigned char' lvalue
+    |   | | |           `-MemberExpr 0x7f9114859468 <col:23, col:30> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | |             `-ArraySubscriptExpr 0x7f9114859440 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | | |               |-ImplicitCastExpr 0x7f9114859428 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | | |               | `-DeclRefExpr 0x7f9114859300 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | | |               `-BinaryOperator 0x7f9114859400 <line:42:10, col:16> 'unsigned long' '+'
+    |   | | |                 |-BinaryOperator 0x7f91148593a0 <col:10, col:12> 'unsigned long' '*'
+    |   | | |                 | |-ImplicitCastExpr 0x7f9114859388 <col:10> 'unsigned long' <IntegralCast>
+    |   | | |                 | | `-IntegerLiteral 0x7f9114859328 <col:10> 'int' 2
+    |   | | |                 | `-ImplicitCastExpr 0x7f9114859370 <col:12> 'unsigned long' <LValueToRValue>
+    |   | | |                 |   `-DeclRefExpr 0x7f9114859348 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | | |                 `-ImplicitCastExpr 0x7f91148593e8 <col:16> 'unsigned long' <IntegralCast>
+    |   | | |                   `-IntegerLiteral 0x7f91148593c8 <col:16> 'int' 21
+    |   | | `-CompoundAssignOperator 0x7f9114859800 <line:19:2, col:31> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |   |-DeclRefExpr 0x7f9114859568 <col:2> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   | |   `-BinaryOperator 0x7f91148597d8 <col:13, col:31> 'double' '*'
+    |   | |     |-ParenExpr 0x7f91148595b0 <col:13, col:20> 'double'
+    |   | |     | `-FloatingLiteral 0x7f9114859590 <line:42:21> 'double' 7.000000e+00
+    |   | |     `-ImplicitCastExpr 0x7f91148597c0 <line:19:22, col:31> 'double' <IntegralToFloating>
+    |   | |       `-ImplicitCastExpr 0x7f91148597a8 <col:22, col:31> 'int' <IntegralCast>
+    |   | |         `-ImplicitCastExpr 0x7f9114859790 <col:22, col:31> 'unsigned char' <LValueToRValue>
+    |   | |           `-ParenExpr 0x7f9114859770 <col:22, col:31> 'unsigned char' lvalue
+    |   | |             `-MemberExpr 0x7f9114859738 <col:23, col:30> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | |               `-ArraySubscriptExpr 0x7f9114859710 <col:23, col:28> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |                 |-ImplicitCastExpr 0x7f91148596f8 <col:23> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |                 | `-DeclRefExpr 0x7f91148595d0 <col:23> 'PixelPacket [32]' lvalue Var 0x7f91148572b8 'p' 'PixelPacket [32]'
+    |   | |                 `-BinaryOperator 0x7f91148596d0 <line:42:10, col:16> 'unsigned long' '+'
+    |   | |                   |-BinaryOperator 0x7f9114859670 <col:10, col:12> 'unsigned long' '*'
+    |   | |                   | |-ImplicitCastExpr 0x7f9114859658 <col:10> 'unsigned long' <IntegralCast>
+    |   | |                   | | `-IntegerLiteral 0x7f91148595f8 <col:10> 'int' 2
+    |   | |                   | `-ImplicitCastExpr 0x7f9114859640 <col:12> 'unsigned long' <LValueToRValue>
+    |   | |                   |   `-DeclRefExpr 0x7f9114859618 <col:12> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | |                   `-ImplicitCastExpr 0x7f91148596b8 <col:16> 'unsigned long' <IntegralCast>
+    |   | |                     `-IntegerLiteral 0x7f9114859698 <col:16> 'int' 21
+    |   | `-IntegerLiteral 0x7f9114859860 <line:20:10> 'int' 0
+    |   |-BinaryOperator 0x7f9114859ae0 <line:43:3, col:47> 'unsigned char' '='
+    |   | |-MemberExpr 0x7f9114859948 <col:3, col:8> 'unsigned char' lvalue .r 0x7f9114856ba8
+    |   | | `-ArraySubscriptExpr 0x7f9114859920 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f91148598f0 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f91148598a0 <col:3> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+    |   | |   `-ImplicitCastExpr 0x7f9114859908 <col:5> 'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f91148598c8 <col:5> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | `-CStyleCastExpr 0x7f9114859ab8 <col:12, col:47> 'unsigned char' <FloatingToIntegral>
+    |   |   `-ParenExpr 0x7f9114859a98 <col:27, col:47> 'double'
+    |   |     `-BinaryOperator 0x7f9114859a28 <col:28, col:44> 'double' '+'
+    |   |       |-BinaryOperator 0x7f91148599e0 <col:28, col:36> 'double' '/'
+    |   |       | |-ImplicitCastExpr 0x7f91148599c8 <col:28> 'double' <LValueToRValue>
+    |   |       | | `-DeclRefExpr 0x7f9114859980 <col:28> 'double' lvalue Var 0x7f9114858300 'total_r' 'double'
+    |   |       | `-FloatingLiteral 0x7f91148599a8 <col:36> 'double' 1.280000e+02
+    |   |       `-FloatingLiteral 0x7f9114859a08 <col:44> 'double' 5.000000e-01
+    |   |-BinaryOperator 0x7f9114859d48 <line:44:3, col:47> 'unsigned char' '='
+    |   | |-MemberExpr 0x7f9114859bb0 <col:3, col:8> 'unsigned char' lvalue .g 0x7f9114856c08
+    |   | | `-ArraySubscriptExpr 0x7f9114859b88 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f9114859b58 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f9114859b08 <col:3> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+    |   | |   `-ImplicitCastExpr 0x7f9114859b70 <col:5> 'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f9114859b30 <col:5> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | `-CStyleCastExpr 0x7f9114859d20 <col:12, col:47> 'unsigned char' <FloatingToIntegral>
+    |   |   `-ParenExpr 0x7f9114859d00 <col:27, col:47> 'double'
+    |   |     `-BinaryOperator 0x7f9114859c90 <col:28, col:44> 'double' '+'
+    |   |       |-BinaryOperator 0x7f9114859c48 <col:28, col:36> 'double' '/'
+    |   |       | |-ImplicitCastExpr 0x7f9114859c30 <col:28> 'double' <LValueToRValue>
+    |   |       | | `-DeclRefExpr 0x7f9114859be8 <col:28> 'double' lvalue Var 0x7f911500c600 'total_g' 'double'
+    |   |       | `-FloatingLiteral 0x7f9114859c10 <col:36> 'double' 1.280000e+02
+    |   |       `-FloatingLiteral 0x7f9114859c70 <col:44> 'double' 5.000000e-01
+    |   |-BinaryOperator 0x7f9114859fb0 <line:45:3, col:47> 'unsigned char' '='
+    |   | |-MemberExpr 0x7f9114859e18 <col:3, col:8> 'unsigned char' lvalue .b 0x7f9114856c68
+    |   | | `-ArraySubscriptExpr 0x7f9114859df0 <col:3, col:6> 'PixelPacket':'struct _PixelPacket' lvalue
+    |   | |   |-ImplicitCastExpr 0x7f9114859dc0 <col:3> 'PixelPacket *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7f9114859d70 <col:3> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+    |   | |   `-ImplicitCastExpr 0x7f9114859dd8 <col:5> 'unsigned long' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f9114859d98 <col:5> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |   | `-CStyleCastExpr 0x7f9114859f88 <col:12, col:47> 'unsigned char' <FloatingToIntegral>
+    |   |   `-ParenExpr 0x7f9114859f68 <col:27, col:47> 'double'
+    |   |     `-BinaryOperator 0x7f9114859ef8 <col:28, col:44> 'double' '+'
+    |   |       |-BinaryOperator 0x7f9114859eb0 <col:28, col:36> 'double' '/'
+    |   |       | |-ImplicitCastExpr 0x7f9114859e98 <col:28> 'double' <LValueToRValue>
+    |   |       | | `-DeclRefExpr 0x7f9114859e50 <col:28> 'double' lvalue Var 0x7f911500c6b0 'total_b' 'double'
+    |   |       | `-FloatingLiteral 0x7f9114859e78 <col:36> 'double' 1.280000e+02
+    |   |       `-FloatingLiteral 0x7f9114859ed8 <col:44> 'double' 5.000000e-01
+    |   `-CallExpr 0x7f911485a150 <line:46:3, col:64> 'int'
+    |     |-ImplicitCastExpr 0x7f911485a138 <col:3> 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9114859fd8 <col:3> 'int (FILE *, const char *, ...)' Function 0x7f9115860ef8 'fprintf' 'int (FILE *, const char *, ...)'
+    |     |-ImplicitCastExpr 0x7f911485a1a0 </usr/include/stdio.h:129:16> 'FILE *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f911485a000 <col:16> 'FILE *' lvalue Var 0x7f911585c938 '__stderrp' 'FILE *'
+    |     |-ImplicitCastExpr 0x7f911485a1d0 <../Data/C2AST/pr44606.c:46:19> 'const char *' <BitCast>
+    |     | `-ImplicitCastExpr 0x7f911485a1b8 <col:19> 'char *' <ArrayToPointerDecay>
+    |     |   `-StringLiteral 0x7f911485a028 <col:19> 'char [16]' lvalue "r:%f g:%f b:%f\n"
+    |     |-ImplicitCastExpr 0x7f911485a1e8 <col:39> 'double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f911485a060 <col:39> 'double' lvalue Var 0x7f911500c798 'saved_r' 'double'
+    |     |-ImplicitCastExpr 0x7f911485a200 <col:48> 'double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f911485a088 <col:48> 'double' lvalue Var 0x7f911500c848 'saved_g' 'double'
+    |     `-ImplicitCastExpr 0x7f911485a218 <col:57> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f911485a0b0 <col:57> 'double' lvalue Var 0x7f911500c8f8 'saved_b' 'double'
+    |-ForStmt 0x7f911485a958 <line:48:2, line:51:2>
+    | |-BinaryOperator 0x7f911485a360 <line:48:7, col:11> 'unsigned long' '='
+    | | |-DeclRefExpr 0x7f911485a300 <col:7> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f911485a348 <col:11> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f911485a328 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f911485a5c8 <col:14, line:14:30> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f911485a5b0 <line:48:14> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f911485a388 <col:14> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | | `-ParenExpr 0x7f911485a590 <line:14:14, col:30> 'unsigned long'
+    | |   `-BinaryOperator 0x7f911485a568 <line:12:21, line:14:29> 'unsigned long' '-'
+    | |     |-ParenExpr 0x7f911485a510 <line:12:21, col:44> 'unsigned long'
+    | |     | `-BinaryOperator 0x7f911485a4e8 <col:22, col:43> 'unsigned long' '/'
+    | |     |   |-UnaryExprOrTypeTraitExpr 0x7f911485a400 <col:22, col:30> 'unsigned long' sizeof
+    | |     |   | `-ParenExpr 0x7f911485a3d8 <col:28, col:30> 'PixelPacket [6]' lvalue
+    | |     |   |   `-DeclRefExpr 0x7f911485a3b0 <line:14:24> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+    | |     |   `-UnaryExprOrTypeTraitExpr 0x7f911485a4c8 <line:12:32, col:43> 'unsigned long' sizeof
+    | |     |     `-ParenExpr 0x7f911485a4a8 <col:38, col:43> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |     |       `-ArraySubscriptExpr 0x7f911485a480 <line:14:24, line:12:42> 'PixelPacket':'struct _PixelPacket' lvalue
+    | |     |         |-ImplicitCastExpr 0x7f911485a468 <line:14:24> 'PixelPacket *' <ArrayToPointerDecay>
+    | |     |         | `-DeclRefExpr 0x7f911485a420 <col:24> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+    | |     |         `-IntegerLiteral 0x7f911485a448 <line:12:41> 'int' 0
+    | |     `-ImplicitCastExpr 0x7f911485a550 <line:14:29> 'unsigned long' <IntegralCast>
+    | |       `-IntegerLiteral 0x7f911485a530 <col:29> 'int' 1
+    | |-UnaryOperator 0x7f911485a618 <line:48:24, col:25> 'unsigned long' postfix '++'
+    | | `-DeclRefExpr 0x7f911485a5f0 <col:24> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    | `-CompoundStmt 0x7f911485a940 <col:29, line:51:2>
+    |   `-IfStmt 0x7f911485a908 <line:49:3, line:50:10>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f911485a850 <line:49:7, col:26> 'int' '!='
+    |     | |-ImplicitCastExpr 0x7f911485a808 <col:7, col:16> 'int' <IntegralCast>
+    |     | | `-ImplicitCastExpr 0x7f911485a7f0 <col:7, col:16> 'unsigned char' <LValueToRValue>
+    |     | |   `-ArraySubscriptExpr 0x7f911485a6e8 <col:7, col:16> 'const unsigned char' lvalue
+    |     | |     |-ImplicitCastExpr 0x7f911485a6b8 <col:7> 'const unsigned char *' <ArrayToPointerDecay>
+    |     | |     | `-DeclRefExpr 0x7f911485a638 <col:7> 'const unsigned char [5]' lvalue Var 0x7f9114857960 'answers' 'const unsigned char [5]'
+    |     | |     `-ImplicitCastExpr 0x7f911485a6d0 <col:15> 'unsigned long' <LValueToRValue>
+    |     | |       `-DeclRefExpr 0x7f911485a660 <col:15> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |     | `-ImplicitCastExpr 0x7f911485a838 <col:21, col:26> 'int' <IntegralCast>
+    |     |   `-ImplicitCastExpr 0x7f911485a820 <col:21, col:26> 'unsigned char' <LValueToRValue>
+    |     |     `-MemberExpr 0x7f911485a7b8 <col:21, col:26> 'unsigned char' lvalue .b 0x7f9114856c68
+    |     |       `-ArraySubscriptExpr 0x7f911485a790 <col:21, col:24> 'PixelPacket':'struct _PixelPacket' lvalue
+    |     |         |-ImplicitCastExpr 0x7f911485a760 <col:21> 'PixelPacket *' <ArrayToPointerDecay>
+    |     |         | `-DeclRefExpr 0x7f911485a710 <col:21> 'PixelPacket [6]' lvalue Var 0x7f9114856ea8 'q' 'PixelPacket [6]'
+    |     |         `-ImplicitCastExpr 0x7f911485a778 <col:23> 'unsigned long' <LValueToRValue>
+    |     |           `-DeclRefExpr 0x7f911485a738 <col:23> 'unsigned long' lvalue Var 0x7f9114857bd8 'x' 'unsigned long'
+    |     |-CallExpr 0x7f911485a8e0 <line:50:4, col:10> 'void'
+    |     | `-ImplicitCastExpr 0x7f911485a8c8 <col:4> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7f911485a878 <col:4> 'void (void) __attribute__((noreturn))' Function 0x7f9114856a40 'abort' 'void (void) __attribute__((noreturn))'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7f911485a9b0 <line:52:2, col:9>
+      `-IntegerLiteral 0x7f911485a990 <col:9> 'int' 0

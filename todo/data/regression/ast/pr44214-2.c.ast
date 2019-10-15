@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fd0500174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd0510142e0 <../Data/C2AST/pr44214-2.c:4:1, line:7:1> line:4:6 do_div 'void (_Complex double *, _Complex double *)'
+  |-ParmVarDecl 0x7fd050018198 <col:14, col:31> col:31 used a '_Complex double *'
+  |-ParmVarDecl 0x7fd051014210 <col:34, col:51> col:51 used b '_Complex double *'
+  `-CompoundStmt 0x7fd0510145b0 <line:5:1, line:7:1>
+    `-BinaryOperator 0x7fd051014588 <line:6:3, col:25> '_Complex double' '='
+      |-UnaryOperator 0x7fd051014410 <col:3, col:4> '_Complex double' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd0510143f8 <col:4> '_Complex double *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd0510143d0 <col:4> '_Complex double *' lvalue ParmVar 0x7fd050018198 'a' '_Complex double *'
+      `-BinaryOperator 0x7fd051014560 <col:8, col:25> '_Complex double' '/'
+        |-ImplicitCastExpr 0x7fd051014548 <col:8, col:9> '_Complex double' <LValueToRValue>
+        | `-UnaryOperator 0x7fd051014470 <col:8, col:9> '_Complex double' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fd051014458 <col:9> '_Complex double *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd051014430 <col:9> '_Complex double *' lvalue ParmVar 0x7fd051014210 'b' '_Complex double *'
+        `-ParenExpr 0x7fd051014528 <col:13, col:25> '_Complex double'
+          `-BinaryOperator 0x7fd051014500 <col:14, col:20> '_Complex double' '-'
+            |-FloatingLiteral 0x7fd051014490 <col:14> 'double' 4.000000e+00
+            `-ImplicitCastExpr 0x7fd0510144e8 <col:20> '_Complex double' <FloatingComplexCast>
+              `-ImaginaryLiteral 0x7fd0510144d0 <col:20> '_Complex float'
+                `-FloatingLiteral 0x7fd0510144b0 <col:20> 'float' 5.000000e+00

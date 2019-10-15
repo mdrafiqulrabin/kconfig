@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fc0470168e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc047017560 <../Data/C2AST/pr24257.c:4:9, line:6:1> line:4:16 struct A definition
+| |-FieldDecl 0x7fc04801f438 <line:5:5, col:9> col:9 referenced buf 'int'
+| `-FieldDecl 0x7fc04801f498 <col:5, col:14> col:14 referenced left 'int'
+|-TypedefDecl 0x7fc04801f530 <line:4:1, line:6:3> col:3 referenced A 'struct A':'struct A'
+| `-ElaboratedType 0x7fc04801f4e0 'struct A' sugar
+|   `-RecordType 0x7fc04801f400 'struct A'
+|     `-Record 0x7fc047017560 'A'
+|-FunctionDecl 0x7fc04801f7b0 <line:8:1, line:18:1> line:8:13 used flush 'void (A *, int)' static
+| |-ParmVarDecl 0x7fc04801f628 <col:19, col:22> col:22 used s 'A *'
+| |-ParmVarDecl 0x7fc04801f6a0 <col:25, col:29> col:29 used n 'int'
+| `-CompoundStmt 0x7fc04801fd38 <line:9:1, line:18:1>
+|   |-CompoundAssignOperator 0x7fc04801f970 <line:10:5, col:16> 'int' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fc04801f8e0 <col:5, col:8> 'int' lvalue ->buf 0x7fc04801f438
+|   | | `-ImplicitCastExpr 0x7fc04801f8c8 <col:5> 'A *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc04801f8a0 <col:5> 'A *' lvalue ParmVar 0x7fc04801f628 's' 'A *'
+|   | `-ImplicitCastExpr 0x7fc04801f958 <col:16> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc04801f918 <col:16> 'int' lvalue ParmVar 0x7fc04801f6a0 'n' 'int'
+|   |-WhileStmt 0x7fc04801fc58 <line:12:5, line:15:5>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc04801fa58 <line:12:12, col:22> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc04801fa40 <col:12, col:15> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fc04801f9e8 <col:12, col:15> 'int' lvalue ->left 0x7fc04801f498
+|   | | |   `-ImplicitCastExpr 0x7fc04801f9d0 <col:12> 'A *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fc04801f9a8 <col:12> 'A *' lvalue ParmVar 0x7fc04801f628 's' 'A *'
+|   | | `-IntegerLiteral 0x7fc04801fa20 <col:22> 'int' 32
+|   | `-CompoundStmt 0x7fc04801fc38 <col:26, line:15:5>
+|   |   |-CompoundAssignOperator 0x7fc04801fb30 <line:13:9, col:20> 'int' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   | |-MemberExpr 0x7fc04801fac0 <col:9, col:12> 'int' lvalue ->buf 0x7fc04801f438
+|   |   | | `-ImplicitCastExpr 0x7fc04801faa8 <col:9> 'A *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fc04801fa80 <col:9> 'A *' lvalue ParmVar 0x7fc04801f628 's' 'A *'
+|   |   | `-IntegerLiteral 0x7fc04801faf8 <col:20> 'int' 8
+|   |   `-CompoundAssignOperator 0x7fc04801fc00 <line:14:9, col:20> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |     |-MemberExpr 0x7fc04801fba8 <col:9, col:12> 'int' lvalue ->left 0x7fc04801f498
+|   |     | `-ImplicitCastExpr 0x7fc04801fb90 <col:9> 'A *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc04801fb68 <col:9> 'A *' lvalue ParmVar 0x7fc04801f628 's' 'A *'
+|   |     `-IntegerLiteral 0x7fc04801fbe0 <col:20> 'int' 8
+|   `-BinaryOperator 0x7fc04801fd10 <line:17:5, col:12> 'int' '='
+|     |-MemberExpr 0x7fc04801fcb8 <col:5, col:8> 'int' lvalue ->buf 0x7fc04801f438
+|     | `-ImplicitCastExpr 0x7fc04801fca0 <col:5> 'A *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fc04801fc78 <col:5> 'A *' lvalue ParmVar 0x7fc04801f628 's' 'A *'
+|     `-IntegerLiteral 0x7fc04801fcf0 <col:12> 'int' 0
+`-FunctionDecl 0x7fc04801fe78 <line:20:1, line:26:1> line:20:6 oof 'void (A *, int)'
+  |-ParmVarDecl 0x7fc04801fd70 <col:10, col:13> col:13 used s 'A *'
+  |-ParmVarDecl 0x7fc04801fde8 <col:16, col:20> col:20 used n 'int'
+  `-CompoundStmt 0x7fc048020238 <line:21:1, line:26:1>
+    |-BinaryOperator 0x7fc04801ffe0 <line:22:5, col:14> 'int' '='
+    | |-MemberExpr 0x7fc04801ff68 <col:5, col:8> 'int' lvalue ->buf 0x7fc04801f438
+    | | `-ImplicitCastExpr 0x7fc04801ff50 <col:5> 'A *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc04801ff28 <col:5> 'A *' lvalue ParmVar 0x7fc04801fd70 's' 'A *'
+    | `-ImplicitCastExpr 0x7fc04801ffc8 <col:14> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc04801ffa0 <col:14> 'int' lvalue ParmVar 0x7fc04801fde8 'n' 'int'
+    |-BinaryOperator 0x7fc0480200c0 <line:23:5, col:15> 'int' '='
+    | |-MemberExpr 0x7fc048020048 <col:5, col:8> 'int' lvalue ->left 0x7fc04801f498
+    | | `-ImplicitCastExpr 0x7fc048020030 <col:5> 'A *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc048020008 <col:5> 'A *' lvalue ParmVar 0x7fc04801fd70 's' 'A *'
+    | `-ImplicitCastExpr 0x7fc0480200a8 <col:15> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc048020080 <col:15> 'int' lvalue ParmVar 0x7fc04801fde8 'n' 'int'
+    `-CallExpr 0x7fc0480201d0 <line:25:5, col:15> 'void'
+      |-ImplicitCastExpr 0x7fc0480201b8 <col:5> 'void (*)(A *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc0480200e8 <col:5> 'void (A *, int)' Function 0x7fc04801f7b0 'flush' 'void (A *, int)'
+      |-ImplicitCastExpr 0x7fc048020208 <col:11> 'A *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc048020110 <col:11> 'A *' lvalue ParmVar 0x7fc04801fd70 's' 'A *'
+      `-ImplicitCastExpr 0x7fc048020220 <col:14> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc048020138 <col:14> 'int' lvalue ParmVar 0x7fc04801fde8 'n' 'int'

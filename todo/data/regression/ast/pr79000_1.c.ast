@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fde2d02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fde2d02c960 <../Data/C2AST/pr79000_1.c:1:9, col:16> col:16 struct a
+|-TypedefDecl 0x7fde2d814270 <col:1, col:18> col:18 b 'struct a':'struct a'
+| `-ElaboratedType 0x7fde2d814220 'struct a' sugar
+|   `-RecordType 0x7fde2d814200 'struct a'
+|     `-Record 0x7fde2d8142e0 'a'
+|-RecordDecl 0x7fde2d8142e0 prev 0x7fde2d02c960 <line:2:9, col:20> col:16 struct a definition
+|-TypedefDecl 0x7fde2d814388 prev 0x7fde2d814270 <col:1, col:22> col:22 referenced b 'struct a':'struct a'
+| `-ElaboratedType 0x7fde2d814220 'struct a' sugar
+|   `-RecordType 0x7fde2d814200 'struct a'
+|     `-Record 0x7fde2d8142e0 'a'
+|-RecordDecl 0x7fde2d8143f8 <line:3:1, line:5:1> line:3:1 struct definition
+| `-FieldDecl 0x7fde2d8144d0 <line:4:3, col:5> col:5 c 'b':'struct a'
+`-VarDecl 0x7fde2d8145b0 <line:3:1, line:5:3> col:3 d 'struct (anonymous struct at ../Data/C2AST/pr79000_1.c:3:1)':'struct (anonymous at ../Data/C2AST/pr79000_1.c:3:1)'

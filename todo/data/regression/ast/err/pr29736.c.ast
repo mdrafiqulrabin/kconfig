@@ -1,0 +1,38 @@
+../Data/C2AST/pr29736.c:3:21: error: invalid vector element type '__attribute__((__vector_size__(2 * sizeof(int)))) int' (vector of 2 'int' values)
+int __attribute__ ((vector_size (8), vector_size (8))) v;  
+                    ^
+1 error generated.
+TranslationUnitDecl 0x7f9e0600e8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9e0600ee60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9e0600eb80 '__int128'
+|-TypedefDecl 0x7f9e0600eed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9e0600eba0 'unsigned __int128'
+|-TypedefDecl 0x7f9e0600f1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9e0600efb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9e0600ef28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9e0600f240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9e0600f200 'char *'
+|   `-BuiltinType 0x7f9e0600e980 'char'
+|-TypedefDecl 0x7f9e0600f508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9e0600f4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9e0600f320 'struct __va_list_tag'
+|     `-Record 0x7f9e0600f298 '__va_list_tag'
+|-VarDecl 0x7f9e06051d90 <../Data/C2AST/pr29736.c:3:1, col:56> col:56 used v '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-VarDecl 0x7f9e06051e60 <line:5:1, col:46> col:46 used w '__attribute__((__vector_size__(2 * sizeof(int)))) int' extern
+|-VarDecl 0x7f9e06051ef0 prev 0x7f9e06051e60 <line:6:1, col:39> col:39 used w '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+`-FunctionDecl 0x7f9e06051f98 <line:8:1, line:13:1> line:9:1 foo 'void ()'
+  `-CompoundStmt 0x7f9e06052228 <line:10:1, line:13:1>
+    |-BinaryOperator 0x7f9e06052108 <line:11:3, col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+    | |-DeclRefExpr 0x7f9e06052038 <col:3> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9e06051d90 'v' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f9e060520e0 <col:7, col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+    |   |-ImplicitCastExpr 0x7f9e060520b0 <col:7> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f9e06052060 <col:7> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9e06051d90 'v' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    |   `-ImplicitCastExpr 0x7f9e060520c8 <col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f9e06052088 <col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9e06051d90 'v' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    `-BinaryOperator 0x7f9e06052200 <line:12:3, col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+      |-DeclRefExpr 0x7f9e06052130 <col:3> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9e06051ef0 'w' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+      `-BinaryOperator 0x7f9e060521d8 <col:7, col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7f9e060521a8 <col:7> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9e06052158 <col:7> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9e06051ef0 'w' '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7f9e060521c0 <col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9e06052180 <col:11> '__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9e06051ef0 'w' '__attribute__((__vector_size__(2 * sizeof(int)))) int'

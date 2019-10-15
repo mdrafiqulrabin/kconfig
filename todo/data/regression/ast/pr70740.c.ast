@@ -1,0 +1,87 @@
+TranslationUnitDecl 0x7fac5102b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fac50814c28 <../Data/C2AST/pr70740.c:3:1, col:21> col:12 used foo 'int (void)' extern
+|-FunctionDecl 0x7fac50814f28 <line:4:14> col:14 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fac50814fc8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fac50815028 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fac50815088 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fac50815100 prev 0x7fac50814f28 <col:1, col:57> col:14 used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fac50814d20 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fac50814dc0 <col:30, col:41> col:42 'const void *'
+| `-ParmVarDecl 0x7fac50814e38 <<built-in>:81:23, col:37> ../Data/C2AST/pr70740.c:4:57 'unsigned long'
+|-RecordDecl 0x7fac508151b8 <line:6:1, line:9:1> line:6:1 struct definition
+| `-FieldDecl 0x7fac508152d8 <line:8:3, col:11> col:8 referenced a 'char [6]'
+|-VarDecl 0x7fac50815370 <line:6:1, line:9:3> col:3 used d 'struct (anonymous struct at ../Data/C2AST/pr70740.c:6:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:6:1)'
+|-RecordDecl 0x7fac508153e8 <line:10:1, line:16:1> line:10:1 struct definition
+| |-FieldDecl 0x7fac50815510 <line:12:3, col:11> col:7 referenced a1 'int [0]'
+| |-FieldDecl 0x7fac508155a0 <line:13:3, col:11> col:7 referenced a2 'int [0]'
+| |-FieldDecl 0x7fac50815630 <line:14:3, col:11> col:7 referenced a3 'int [0]'
+| `-FieldDecl 0x7fac508156d0 <line:15:3, col:10> col:7 referenced a4 'int []'
+|-VarDecl 0x7fac50815770 <line:10:1, line:16:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)'
+|-VarDecl 0x7fac508157f0 <line:10:1, line:16:6> col:6 used c 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)'
+|-VarDecl 0x7fac50815888 <line:17:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fac50815970 <line:19:1, line:25:1> line:20:1 used bar 'int *()'
+| `-CompoundStmt 0x7fac50815ba8 <line:21:1, line:25:1>
+|   |-IfStmt 0x7fac50815ae0 <line:22:3, line:23:14>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fac50815a38 <line:22:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fac50815a10 <col:7> 'int' lvalue Var 0x7fac50815888 'b' 'int'
+|   | |-ReturnStmt 0x7fac50815ac8 <line:23:5, col:14>
+|   | | `-ImplicitCastExpr 0x7fac50815ab0 <col:12, col:14> 'int *' <ArrayToPointerDecay>
+|   | |   `-MemberExpr 0x7fac50815a78 <col:12, col:14> 'int []' lvalue .a4 0x7fac508156d0
+|   | |     `-DeclRefExpr 0x7fac50815a50 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)' lvalue Var 0x7fac50815770 'a' 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fac50815b90 <line:24:3, col:12>
+|     `-ImplicitCastExpr 0x7fac50815b78 <col:10, col:12> 'int *' <ArrayToPointerDecay>
+|       `-MemberExpr 0x7fac50815b40 <col:10, col:12> 'int [0]' lvalue .a2 0x7fac508155a0
+|         `-DeclRefExpr 0x7fac50815b18 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)' lvalue Var 0x7fac50815770 'a' 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)'
+`-FunctionDecl 0x7fac50815c20 <line:27:1, line:38:1> line:28:1 baz 'void ()'
+  `-CompoundStmt 0x7fac508164f0 <line:29:1, line:38:1>
+    |-DeclStmt 0x7fac50815dc8 <line:30:3, col:13>
+    | |-VarDecl 0x7fac50815cd8 <col:3, col:8> col:8 used e 'int *'
+    | `-VarDecl 0x7fac50815d50 <col:3, col:12> col:12 used f 'int *'
+    |-IfStmt 0x7fac50816008 <line:31:3, line:34:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fac50815e50 <line:31:7, col:12> 'int'
+    | | `-ImplicitCastExpr 0x7fac50815e38 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fac50815de0 <col:7> 'int (void)' Function 0x7fac50814c28 'foo' 'int (void)'
+    | |-BinaryOperator 0x7fac50815f18 <line:32:5, col:11> 'int *' '='
+    | | |-DeclRefExpr 0x7fac50815e78 <col:5> 'int *' lvalue Var 0x7fac50815cd8 'e' 'int *'
+    | | `-ImplicitCastExpr 0x7fac50815f00 <col:9, col:11> 'int *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7fac50815ec8 <col:9, col:11> 'int [0]' lvalue .a3 0x7fac50815630
+    | |     `-DeclRefExpr 0x7fac50815ea0 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)' lvalue Var 0x7fac508157f0 'c' 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)'
+    | `-BinaryOperator 0x7fac50815fe0 <line:34:5, col:11> 'int *' '='
+    |   |-DeclRefExpr 0x7fac50815f40 <col:5> 'int *' lvalue Var 0x7fac50815cd8 'e' 'int *'
+    |   `-ImplicitCastExpr 0x7fac50815fc8 <col:9, col:11> 'int *' <ArrayToPointerDecay>
+    |     `-MemberExpr 0x7fac50815f90 <col:9, col:11> 'int [0]' lvalue .a1 0x7fac50815510
+    |       `-DeclRefExpr 0x7fac50815f68 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)' lvalue Var 0x7fac508157f0 'c' 'struct (anonymous struct at ../Data/C2AST/pr70740.c:10:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:10:1)'
+    |-CallExpr 0x7fac50816180 <line:35:3, col:20> 'void *'
+    | |-ImplicitCastExpr 0x7fac50816168 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fac50816040 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7fac50815100 'memcpy' 'void *(void *, const void *, unsigned long)'
+    | |-ImplicitCastExpr 0x7fac508161d8 <col:11, col:13> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fac508161c0 <col:11, col:13> 'char *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7fac50816090 <col:11, col:13> 'char [6]' lvalue .a 0x7fac508152d8
+    | |     `-DeclRefExpr 0x7fac50816068 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr70740.c:6:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:6:1)' lvalue Var 0x7fac50815370 'd' 'struct (anonymous struct at ../Data/C2AST/pr70740.c:6:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:6:1)'
+    | |-ImplicitCastExpr 0x7fac50816208 <col:16> 'const void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fac508161f0 <col:16> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fac508160c8 <col:16> 'int *' lvalue Var 0x7fac50815cd8 'e' 'int *'
+    | `-ImplicitCastExpr 0x7fac50816220 <col:19> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fac508160f0 <col:19> 'int' 6
+    |-BinaryOperator 0x7fac508162f8 <line:36:3, col:12> 'int *' '='
+    | |-DeclRefExpr 0x7fac50816238 <col:3> 'int *' lvalue Var 0x7fac50815d50 'f' 'int *'
+    | `-CallExpr 0x7fac508162d0 <col:7, col:12> 'int *'
+    |   `-ImplicitCastExpr 0x7fac508162b8 <col:7> 'int *(*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fac50816260 <col:7> 'int *()' Function 0x7fac50815970 'bar' 'int *()'
+    `-CallExpr 0x7fac50816438 <line:37:3, col:20> 'void *'
+      |-ImplicitCastExpr 0x7fac50816420 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fac50816320 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7fac50815100 'memcpy' 'void *(void *, const void *, unsigned long)'
+      |-ImplicitCastExpr 0x7fac50816490 <col:11, col:13> 'void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fac50816478 <col:11, col:13> 'char *' <ArrayToPointerDecay>
+      |   `-MemberExpr 0x7fac50816370 <col:11, col:13> 'char [6]' lvalue .a 0x7fac508152d8
+      |     `-DeclRefExpr 0x7fac50816348 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr70740.c:6:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:6:1)' lvalue Var 0x7fac50815370 'd' 'struct (anonymous struct at ../Data/C2AST/pr70740.c:6:1)':'struct (anonymous at ../Data/C2AST/pr70740.c:6:1)'
+      |-ImplicitCastExpr 0x7fac508164c0 <col:16> 'const void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fac508164a8 <col:16> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fac508163a8 <col:16> 'int *' lvalue Var 0x7fac50815d50 'f' 'int *'
+      `-ImplicitCastExpr 0x7fac508164d8 <col:19> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7fac508163d0 <col:19> 'int' 1

@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fd5128258e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd513006a20 <../Data/C2AST/pragma-isr-nosave_low_regs.c:9:1, col:22> col:13 used foo 'void (void)' extern
+`-FunctionDecl 0x7fd513006b90 <line:13:1, line:17:1> line:14:1 isr 'void (void)'
+  `-CompoundStmt 0x7fd513006cc8 <line:15:1, line:17:1>
+    `-CallExpr 0x7fd513006ca0 <line:16:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7fd513006c88 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fd513006c30 <col:3> 'void (void)' Function 0x7fd513006a20 'foo' 'void (void)'

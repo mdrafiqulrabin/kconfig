@@ -1,0 +1,93 @@
+TranslationUnitDecl 0x7fa87402aae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa87402b778 <../Data/C2AST/pr52139.c:7:1, col:7> col:7 used p 'void *'
+`-FunctionDecl 0x7fa874814320 <line:9:1, line:50:1> line:10:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fa874814258 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fa874815218 <line:11:1, line:50:1>
+    |-SwitchStmt 0x7fa874814408 <line:12:3, line:48:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa8748143f0 <line:12:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa8748143c8 <col:11> 'int' lvalue ParmVar 0x7fa874814258 'a' 'int'
+    | `-CompoundStmt 0x7fa874815110 <line:13:5, line:48:5>
+    |   |-CaseStmt 0x7fa874814458 <line:14:5, line:18:13>
+    |   | |-IntegerLiteral 0x7fa874814438 <line:14:10> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814600 <line:15:5, line:18:13> 'a0'
+    |   |   `-CaseStmt 0x7fa8748144b0 <line:16:5, line:18:13>
+    |   |     |-IntegerLiteral 0x7fa874814490 <line:16:10> 'int' 1
+    |   |     |-<<<NULL>>>
+    |   |     `-LabelStmt 0x7fa8748145a0 <line:17:5, line:18:13> 'a1'
+    |   |       `-BinaryOperator 0x7fa874814578 <col:7, col:13> 'void *' '='
+    |   |         |-DeclRefExpr 0x7fa8748144e8 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |         `-AddrLabelExpr 0x7fa874814558 <col:11, col:13> 'void *' a1 0x7fa874814510
+    |   |-CaseStmt 0x7fa874814638 <line:19:5, line:21:13>
+    |   | |-IntegerLiteral 0x7fa874814618 <line:19:10> 'int' 2
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814728 <line:20:5, line:21:13> 'a2'
+    |   |   `-BinaryOperator 0x7fa874814700 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814670 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa8748146e0 <col:11, col:13> 'void *' a2 0x7fa874814698
+    |   |-CaseStmt 0x7fa874814760 <line:22:5, line:24:13>
+    |   | |-IntegerLiteral 0x7fa874814740 <line:22:10> 'int' 3
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814850 <line:23:5, line:24:13> 'a3'
+    |   |   `-BinaryOperator 0x7fa874814828 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814798 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814808 <col:11, col:13> 'void *' a3 0x7fa8748147c0
+    |   |-CaseStmt 0x7fa874814888 <line:25:5, line:27:13>
+    |   | |-IntegerLiteral 0x7fa874814868 <line:25:10> 'int' 4
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814978 <line:26:5, line:27:13> 'a4'
+    |   |   `-BinaryOperator 0x7fa874814950 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa8748148c0 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814930 <col:11, col:13> 'void *' a4 0x7fa8748148e8
+    |   |-CaseStmt 0x7fa8748149b0 <line:28:5, line:30:13>
+    |   | |-IntegerLiteral 0x7fa874814990 <line:28:10> 'int' 5
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814aa0 <line:29:5, line:30:13> 'a5'
+    |   |   `-BinaryOperator 0x7fa874814a78 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa8748149e8 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814a58 <col:11, col:13> 'void *' a5 0x7fa874814a10
+    |   |-CaseStmt 0x7fa874814ad8 <line:31:5, line:33:13>
+    |   | |-IntegerLiteral 0x7fa874814ab8 <line:31:10> 'int' 6
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814bc8 <line:32:5, line:33:13> 'a6'
+    |   |   `-BinaryOperator 0x7fa874814ba0 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814b10 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814b80 <col:11, col:13> 'void *' a6 0x7fa874814b38
+    |   |-CaseStmt 0x7fa874814c00 <line:34:5, line:36:13>
+    |   | |-IntegerLiteral 0x7fa874814be0 <line:34:10> 'int' 7
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814cf0 <line:35:5, line:36:13> 'a7'
+    |   |   `-BinaryOperator 0x7fa874814cc8 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814c38 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814ca8 <col:11, col:13> 'void *' a7 0x7fa874814c60
+    |   |-CaseStmt 0x7fa874814d28 <line:37:5, line:39:13>
+    |   | |-IntegerLiteral 0x7fa874814d08 <line:37:10> 'int' 8
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814e18 <line:38:5, line:39:13> 'a8'
+    |   |   `-BinaryOperator 0x7fa874814df0 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814d60 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814dd0 <col:11, col:13> 'void *' a8 0x7fa874814d88
+    |   |-CaseStmt 0x7fa874814e50 <line:40:5, line:42:13>
+    |   | |-IntegerLiteral 0x7fa874814e30 <line:40:10> 'int' 9
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874814f40 <line:41:5, line:42:13> 'a9'
+    |   |   `-BinaryOperator 0x7fa874814f18 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814e88 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874814ef8 <col:11, col:13> 'void *' a9 0x7fa874814eb0
+    |   |-CaseStmt 0x7fa874814f78 <line:43:5, line:45:13>
+    |   | |-IntegerLiteral 0x7fa874814f58 <line:43:10> 'int' 10
+    |   | |-<<<NULL>>>
+    |   | `-LabelStmt 0x7fa874815068 <line:44:5, line:45:13> 'a10'
+    |   |   `-BinaryOperator 0x7fa874815040 <col:7, col:13> 'void *' '='
+    |   |     |-DeclRefExpr 0x7fa874814fb0 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |   |     `-AddrLabelExpr 0x7fa874815020 <col:11, col:13> 'void *' a10 0x7fa874814fd8
+    |   `-DefaultStmt 0x7fa8748150f0 <line:46:5, line:47:13>
+    |     `-BinaryOperator 0x7fa8748150c8 <col:7, col:13> 'void *' '='
+    |       |-DeclRefExpr 0x7fa874815080 <col:7> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'
+    |       `-AddrLabelExpr 0x7fa8748150a8 <col:11, col:13> 'void *' a0 0x7fa8748145b8
+    `-IndirectGotoStmt 0x7fa874815200 <line:49:3, col:9>
+      `-ImplicitCastExpr 0x7fa8748151e0 <col:9> 'const void *' <BitCast>
+        `-ImplicitCastExpr 0x7fa8748151c8 <col:9> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7fa874815178 <col:9> 'void *' lvalue Var 0x7fa87402b778 'p' 'void *'

@@ -1,0 +1,118 @@
+../Data/C2AST/pr66560-2.c:11:10: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  return __builtin_shuffle (tem0, tem1, (v2di) { 0, 3 });
+         ^
+../Data/C2AST/pr66560-2.c:11:10: error: returning 'int' from a function with incompatible result type 'v2df' (vector of 2 'double' values)
+  return __builtin_shuffle (tem0, tem1, (v2di) { 0, 3 });
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr66560-2.c:18:10: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  return __builtin_shuffle (tem0, tem1, (v2di) { 0, 3 });
+         ^
+../Data/C2AST/pr66560-2.c:18:10: error: returning 'int' from a function with incompatible result type 'v2df' (vector of 2 'double' values)
+  return __builtin_shuffle (tem0, tem1, (v2di) { 0, 3 });
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr66560-2.c:25:10: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  return __builtin_shuffle (tem0, tem1, (v2di) { 2, 1 });
+         ^
+../Data/C2AST/pr66560-2.c:25:10: error: returning 'int' from a function with incompatible result type 'v2df' (vector of 2 'double' values)
+  return __builtin_shuffle (tem0, tem1, (v2di) { 2, 1 });
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr66560-2.c:32:10: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  return __builtin_shuffle (tem0, tem1, (v2di) { 2, 1 });
+         ^
+../Data/C2AST/pr66560-2.c:32:10: error: returning 'int' from a function with incompatible result type 'v2df' (vector of 2 'double' values)
+  return __builtin_shuffle (tem0, tem1, (v2di) { 2, 1 });
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TranslationUnitDecl 0x7ffe5102b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe5102b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe5102b580 '__int128'
+|-TypedefDecl 0x7ffe5102b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe5102b5a0 'unsigned __int128'
+|-TypedefDecl 0x7ffe5102bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe5102b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe5102b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe5102bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe5102bc00 'char *'
+|   `-BuiltinType 0x7ffe5102b380 'char'
+|-TypedefDecl 0x7ffe5102bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe5102beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe5102bd20 'struct __va_list_tag'
+|     `-Record 0x7ffe5102bc98 '__va_list_tag'
+|-TypedefDecl 0x7ffe5181ca00 <../Data/C2AST/pr66560-2.c:5:1, col:16> col:16 referenced v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7ffe5102bf80 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7ffe5102b500 'double'
+|-TypedefDecl 0x7ffe5181cab8 <line:6:1, col:19> col:19 referenced v2di '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7ffe5181ca80 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7ffe5102b420 'long long'
+|-FunctionDecl 0x7ffe5181ccc0 <line:7:1, line:12:1> line:7:6 foo1 'v2df (v2df, v2df)'
+| |-ParmVarDecl 0x7ffe5181cb40 <col:12, col:17> col:17 used x 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffe5181cbb0 <col:20, col:25> col:25 used y 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffe5181d7a0 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7ffe5181cec8 <line:9:3, col:20>
+|   | `-VarDecl 0x7ffe5181cdc0 <col:3, col:19> col:8 used tem0 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-BinaryOperator 0x7ffe5181cea0 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '-'
+|   |     |-ImplicitCastExpr 0x7ffe5181ce70 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffe5181ce20 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181cb40 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     `-ImplicitCastExpr 0x7ffe5181ce88 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffe5181ce48 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181cbb0 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   `-DeclStmt 0x7ffe5181cff8 <line:10:3, col:20>
+|     `-VarDecl 0x7ffe5181cef0 <col:3, col:19> col:8 used tem1 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|       `-BinaryOperator 0x7ffe5181cfd0 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '+'
+|         |-ImplicitCastExpr 0x7ffe5181cfa0 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ffe5181cf50 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181cb40 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|         `-ImplicitCastExpr 0x7ffe5181cfb8 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffe5181cf78 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181cbb0 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7ffe5181d8d0 <line:14:1, line:19:1> line:14:6 foo2 'v2df (v2df, v2df)'
+| |-ParmVarDecl 0x7ffe5181d7d0 <col:12, col:17> col:17 used x 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffe5181d840 <col:20, col:25> col:25 used y 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffe52000450 <line:15:1, line:19:1>
+|   |-DeclStmt 0x7ffe520000a8 <line:16:3, col:20>
+|   | `-VarDecl 0x7ffe5181d990 <col:3, col:19> col:8 used tem0 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-BinaryOperator 0x7ffe52000080 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '-'
+|   |     |-ImplicitCastExpr 0x7ffe52000050 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffe52000000 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181d7d0 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     `-ImplicitCastExpr 0x7ffe52000068 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffe52000028 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181d840 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   `-DeclStmt 0x7ffe520001d8 <line:17:3, col:20>
+|     `-VarDecl 0x7ffe520000d0 <col:3, col:19> col:8 used tem1 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|       `-BinaryOperator 0x7ffe520001b0 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '+'
+|         |-ImplicitCastExpr 0x7ffe52000180 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ffe52000130 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181d840 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|         `-ImplicitCastExpr 0x7ffe52000198 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffe52000158 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe5181d7d0 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7ffe52000580 <line:21:1, line:26:1> line:21:6 foo3 'v2df (v2df, v2df)'
+| |-ParmVarDecl 0x7ffe52000480 <col:12, col:17> col:17 used x 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7ffe520004f0 <col:20, col:25> col:25 used y 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7ffe52000af0 <line:22:1, line:26:1>
+|   |-DeclStmt 0x7ffe52000748 <line:23:3, col:20>
+|   | `-VarDecl 0x7ffe52000640 <col:3, col:19> col:8 used tem0 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-BinaryOperator 0x7ffe52000720 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '+'
+|   |     |-ImplicitCastExpr 0x7ffe520006f0 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffe520006a0 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe52000480 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     `-ImplicitCastExpr 0x7ffe52000708 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffe520006c8 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe520004f0 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   `-DeclStmt 0x7ffe52000878 <line:24:3, col:20>
+|     `-VarDecl 0x7ffe52000770 <col:3, col:19> col:8 used tem1 'v2df':'__attribute__((__vector_size__(2 8 errors generated.
+* sizeof(double)))) double' cinit
+|       `-BinaryOperator 0x7ffe52000850 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '-'
+|         |-ImplicitCastExpr 0x7ffe52000820 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7ffe520007d0 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe52000480 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|         `-ImplicitCastExpr 0x7ffe52000838 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffe520007f8 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe520004f0 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7ffe52000c20 <line:28:1, line:33:1> line:28:6 foo4 'v2df (v2df, v2df)'
+  |-ParmVarDecl 0x7ffe52000b20 <col:12, col:17> col:17 used x 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  |-ParmVarDecl 0x7ffe52000b90 <col:20, col:25> col:25 used y 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  `-CompoundStmt 0x7ffe52001598 <line:29:1, line:33:1>
+    |-DeclStmt 0x7ffe52000de8 <line:30:3, col:20>
+    | `-VarDecl 0x7ffe52000ce0 <col:3, col:19> col:8 used tem0 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-BinaryOperator 0x7ffe52000dc0 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '+'
+    |     |-ImplicitCastExpr 0x7ffe52000d90 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7ffe52000d40 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe52000b90 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     `-ImplicitCastExpr 0x7ffe52000da8 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ffe52000d68 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe52000b20 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    `-DeclStmt 0x7ffe52000f18 <line:31:3, col:20>
+      `-VarDecl 0x7ffe52000e10 <col:3, col:19> col:8 used tem1 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+        `-BinaryOperator 0x7ffe52000ef0 <col:15, col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '-'
+          |-ImplicitCastExpr 0x7ffe52000ec0 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+          | `-DeclRefExpr 0x7ffe52000e70 <col:15> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe52000b20 'x' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+          `-ImplicitCastExpr 0x7ffe52000ed8 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+            `-DeclRefExpr 0x7ffe52000e98 <col:19> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7ffe52000b90 'y' 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

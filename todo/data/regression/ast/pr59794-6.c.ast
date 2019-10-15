@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f8a0b8058e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a0a821c00 <../Data/C2AST/pr59794-6.c:6:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f8a0b806580 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f8a0b8059e0 'int'
+|-VarDecl 0x7f8a0a821c90 <line:8:1, col:15> col:15 used x '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' extern
+`-FunctionDecl 0x7f8a0a821e20 <line:10:1, line:14:1> line:11:1 foo '__v4si (void)'
+  `-CompoundStmt 0x7f8a0a821f18 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f8a0a821f00 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7f8a0a821ee8 <col:10> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8a0a821ec0 <col:10> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f8a0a821c90 'x' '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

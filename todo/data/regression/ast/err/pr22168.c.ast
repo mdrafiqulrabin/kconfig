@@ -1,0 +1,26 @@
+../Data/C2AST/pr22168.c:5:5: error: invalid token at start of a preprocessor expression
+#if #foo(bar)     
+    ^
+../Data/C2AST/pr22168.c:10:2: error: invalid preprocessing directive
+#assert zzz(a)    
+ ^
+../Data/C2AST/pr22168.c:11:2: error: invalid preprocessing directive
+#unassert yyy     
+ ^
+3 errors generated.
+TranslationUnitDecl 0x7ffacd8166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffacd816c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffacd816980 '__int128'
+|-TypedefDecl 0x7ffacd816cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffacd8169a0 'unsigned __int128'
+|-TypedefDecl 0x7ffacd816fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffacd816db0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffacd816d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffacd817040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffacd817000 'char *'
+|   `-BuiltinType 0x7ffacd816780 'char'
+|-TypedefDecl 0x7ffacd817308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffacd8172b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffacd817120 'struct __va_list_tag'
+|     `-Record 0x7ffacd817098 '__va_list_tag'
+`-VarDecl 0x7ffacd817378 <../Data/C2AST/pr22168.c:8:1, col:5> col:5 y 'int'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fec678068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fec6801ec00 <../Data/C2AST/pr63839.c:6:1, line:9:1> line:7:1 used bar 'void () __attribute__((noreturn))' static
+| `-CompoundStmt 0x7fec6801ece0 <line:8:1, line:9:1>
+|-FunctionDecl 0x7fec6801ed10 <line:11:1, line:15:1> line:12:1 used foo 'void ()'
+| `-CompoundStmt 0x7fec6801ee48 <line:13:1, line:15:1>
+|   `-CallExpr 0x7fec6801ee20 <line:14:3, col:8> 'void'
+|     `-ImplicitCastExpr 0x7fec6801ee08 <col:3> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fec6801edb0 <col:3> 'void () __attribute__((noreturn))' Function 0x7fec6801ec00 'bar' 'void () __attribute__((noreturn))'
+`-FunctionDecl 0x7fec6801ef28 <line:17:1, line:21:1> line:18:1 main 'int (void)'
+  `-CompoundStmt 0x7fec6801f088 <line:19:1, line:21:1>
+    `-CallExpr 0x7fec6801f060 <line:20:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7fec6801f048 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fec6801eff8 <col:3> 'void ()' Function 0x7fec6801ed10 'foo' 'void ()'

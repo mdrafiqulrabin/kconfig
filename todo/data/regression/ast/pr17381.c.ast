@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fd98a8174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd98a818178 <../Data/C2AST/pr17381.c:5:1, col:8> col:8 used d 'double'
+`-FunctionDecl 0x7fd98a859128 <line:6:1, line:10:1> line:6:7 test1 'float (float)'
+  |-ParmVarDecl 0x7fd98a859058 <col:13, col:19> col:19 used fParm 'float'
+  `-CompoundStmt 0x7fd98a859360 <line:7:1, line:10:1>
+    |-BinaryOperator 0x7fd98a859298 <line:8:3, col:15> 'double' '='
+    | |-DeclRefExpr 0x7fd98a8591d0 <col:3> 'double' lvalue Var 0x7fd98a818178 'd' 'double'
+    | `-BinaryOperator 0x7fd98a859270 <col:7, col:15> 'double' '+'
+    |   |-ImplicitCastExpr 0x7fd98a859258 <col:7> 'double' <FloatingCast>
+    |   | `-ImplicitCastExpr 0x7fd98a859240 <col:7> 'float' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fd98a8591f8 <col:7> 'float' lvalue ParmVar 0x7fd98a859058 'fParm' 'float'
+    |   `-FloatingLiteral 0x7fd98a859220 <col:15> 'double' 1.000000e+00
+    `-ReturnStmt 0x7fd98a859348 <line:9:3, col:18>
+      `-BinaryOperator 0x7fd98a859320 <col:10, col:18> 'float' '+'
+        |-ImplicitCastExpr 0x7fd98a859308 <col:10> 'float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fd98a8592c0 <col:10> 'float' lvalue ParmVar 0x7fd98a859058 'fParm' 'float'
+        `-FloatingLiteral 0x7fd98a8592e8 <col:18> 'float' 1.000000e+00

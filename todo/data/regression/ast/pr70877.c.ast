@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fc0f502bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc0f5818c68 <../Data/C2AST/pr70877.c:4:1, col:12> col:5 used foo 'int (int)'
+| `-ParmVarDecl 0x7fc0f502c978 <col:9> col:12 'int'
+|-RecordDecl 0x7fc0f5818d50 <line:6:9, line:9:1> line:6:9 struct definition
+| |-FieldDecl 0x7fc0f5818e18 <line:7:3, col:10> col:10 d 'double'
+| `-FieldDecl 0x7fc0f5818e78 <line:8:3, col:7> col:7 a 'int'
+|-TypedefDecl 0x7fc0f5818f10 <line:6:1, line:9:3> col:3 referenced str_t 'struct str_t':'str_t'
+| `-ElaboratedType 0x7fc0f5818ec0 'struct str_t' sugar
+|   `-RecordType 0x7fc0f5818de0 'str_t'
+|     `-Record 0x7fc0f5818d50 ''
+`-FunctionDecl 0x7fc0f58191d0 <line:11:1, line:14:1> line:11:6 bar 'void (double, int, str_t)'
+  |-ParmVarDecl 0x7fc0f5818f98 <col:10, col:17> col:17 used d 'double'
+  |-ParmVarDecl 0x7fc0f5819010 <col:20, col:24> col:24 used i 'int'
+  |-ParmVarDecl 0x7fc0f58190a0 <col:27, col:33> col:33 s 'str_t':'str_t'
+  `-CompoundStmt 0x7fc0f5819580 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7fc0f5819558 <line:13:3, col:34> 'double' '='
+      |-DeclRefExpr 0x7fc0f5819288 <col:3> 'double' lvalue ParmVar 0x7fc0f5818f98 'd' 'double'
+      `-CallExpr 0x7fc0f5819510 <col:7, col:34> 'double'
+        |-ParenExpr 0x7fc0f58194c8 <col:7, col:30> 'double (*)(int)'
+        | `-CStyleCastExpr 0x7fc0f58194a0 <col:8, col:27> 'double (*)(int)' <BitCast>
+        |   `-ImplicitCastExpr 0x7fc0f5819488 <col:27> 'int (*)(int)' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7fc0f5819328 <col:27> 'int (int)' Function 0x7fc0f5818c68 'foo' 'int (int)'
+        `-ImplicitCastExpr 0x7fc0f5819540 <col:33> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fc0f58194e8 <col:33> 'int' lvalue ParmVar 0x7fc0f5819010 'i' 'int'

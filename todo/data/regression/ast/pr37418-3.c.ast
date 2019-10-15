@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7ff30882ace8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff30886c860 <../Data/C2AST/pr37418-3.c:1:1, col:20> col:14 referenced ft 'void (int)'
+| `-FunctionProtoType 0x7ff30886c800 'void (int)' cdecl
+|   |-BuiltinType 0x7ff30882ad40 'void'
+|   `-BuiltinType 0x7ff30882ade0 'int'
+|-FunctionDecl 0x7ff30886c958 <line:2:1, col:38> col:6 used f 'void (int)'
+| |-ParmVarDecl 0x7ff30886c8d0 <col:8, col:12> col:12 args 'int'
+| `-ConstAttr 0x7ff30886ca00 <col:32>
+`-FunctionDecl 0x7ff30886cc60 <line:3:1, line:6:1> line:3:6 f2 'void (ft *)'
+  |-ParmVarDecl 0x7ff30886cb18 <col:9, col:13> col:13 used p 'ft *'
+  | `-ConstAttr 0x7ff30886cb78 <col:30>
+  `-CompoundStmt 0x7ff30886cd98 <line:4:1, line:6:1>
+    `-BinaryOperator 0x7ff30886cd70 <line:5:3, col:7> 'ft *' '='
+      |-DeclRefExpr 0x7ff30886cd08 <col:3> 'ft *' lvalue ParmVar 0x7ff30886cb18 'p' 'ft *'
+      `-ImplicitCastExpr 0x7ff30886cd58 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7ff30886cd30 <col:7> 'void (int)' Function 0x7ff30886c958 'f' 'void (int)'

@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f86f502bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f86f502c960 <../Data/C2AST/pr13889.c:2:1, col:23> col:1 struct definition
+| `-FieldDecl 0x7f86f503b438 <col:10, col:20> col:20 referenced a 'long long'
+|-VarDecl 0x7f86f503b530 <col:1, col:26> col:26 used p 'struct (anonymous struct at ../Data/C2AST/pr13889.c:2:1) *'
+`-FunctionDecl 0x7f86f503b6b0 <line:3:1, line:6:1> line:3:6 initNetFlowFunct 'void (void)'
+  `-CompoundStmt 0x7f86f503b958 <col:29, line:6:1>
+    |-DeclStmt 0x7f86f503b848 <line:4:3, col:36>
+    | `-VarDecl 0x7f86f503b768 <col:3, col:35> col:16 used b 'unsigned int' cinit
+    |   `-CStyleCastExpr 0x7f86f503b820 <col:20, col:35> 'unsigned int' <IntegralCast>
+    |     `-UnaryOperator 0x7f86f503b7e8 <col:34, col:35> 'int' prefix '-'
+    |       `-IntegerLiteral 0x7f86f503b7c8 <col:35> 'int' 1
+    `-BinaryOperator 0x7f86f503b930 <line:5:3, col:10> 'long long' '='
+      |-MemberExpr 0x7f86f503b8a0 <col:3, col:6> 'long long' lvalue ->a 0x7f86f503b438
+      | `-ImplicitCastExpr 0x7f86f503b888 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr13889.c:2:1) *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f86f503b860 <col:3> 'struct (anonymous struct at ../Data/C2AST/pr13889.c:2:1) *' lvalue Var 0x7f86f503b530 'p' 'struct (anonymous struct at ../Data/C2AST/pr13889.c:2:1) *'
+      `-ImplicitCastExpr 0x7f86f503b918 <col:10> 'long long' <IntegralCast>
+        `-ImplicitCastExpr 0x7f86f503b900 <col:10> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7f86f503b8d8 <col:10> 'unsigned int' lvalue Var 0x7f86f503b768 'b' 'unsigned int'

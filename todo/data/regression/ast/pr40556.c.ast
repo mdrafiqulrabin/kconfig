@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fa1c2024ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa1c2025960 <../Data/C2AST/pr40556.c:1:1, col:11> col:8 struct A definition
+|-FunctionDecl 0x7fa1c30020d8 <line:3:1, line:6:1> line:3:10 used foo 'struct A ()'
+| `-CompoundStmt 0x7fa1c3002290 <line:4:1, line:6:1>
+|   `-ReturnStmt 0x7fa1c3002278 <line:5:3, col:14>
+|     `-CallExpr 0x7fa1c3002250 <col:10, col:14> 'struct A':'struct A'
+|       `-ImplicitCastExpr 0x7fa1c3002238 <col:10> 'struct A (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fa1c30021b8 <col:10> 'struct A ()' Function 0x7fa1c30020d8 'foo' 'struct A ()'
+`-FunctionDecl 0x7fa1c30022f8 <line:8:1, line:11:1> line:8:6 bar 'void ()'
+  `-CompoundStmt 0x7fa1c3002400 <line:9:1, line:11:1>
+    `-CallExpr 0x7fa1c30023d8 <line:10:3, col:7> 'struct A':'struct A'
+      `-ImplicitCastExpr 0x7fa1c30023c0 <col:3> 'struct A (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fa1c3002398 <col:3> 'struct A ()' Function 0x7fa1c30020d8 'foo' 'struct A ()'

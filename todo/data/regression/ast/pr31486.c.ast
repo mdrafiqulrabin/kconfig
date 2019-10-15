@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7ff85301cee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff853036c00 <../Data/C2AST/pr31486.c:4:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7ff85301db80 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7ff85301d100 'double'
+|-VarDecl 0x7ff853036c90 <line:6:1, col:23> col:8 used b '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+| `-InitListExpr 0x7ff853036dc0 <col:12, col:23> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-FloatingLiteral 0x7ff853036d30 <col:14> 'double' 1.100000e+00
+|   `-FloatingLiteral 0x7ff853036d50 <col:19> 'double' 1.200000e+00
+|-FunctionDecl 0x7ff853036fa0 <line:8:1, col:37> col:15 used a2 '__v2df (__v2df, __v2df)' extern
+| |-ParmVarDecl 0x7ff853036e20 <col:19, col:26> col:26 a '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-ParmVarDecl 0x7ff853036e90 <col:29, col:36> col:36 b '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7ff853037098 <line:10:1, line:13:1> line:10:6 test2 'void ()'
+  `-CompoundStmt 0x7ff8530372e0 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7ff8530372b8 <line:12:3, col:15> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+      |-DeclRefExpr 0x7ff853037138 <col:3> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ff853036c90 'b' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+      `-CallExpr 0x7ff853037250 <col:7, col:15> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+        |-ImplicitCastExpr 0x7ff853037238 <col:7> '__v2df (*)(__v2df, __v2df)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff853037160 <col:7> '__v2df (__v2df, __v2df)' Function 0x7ff853036fa0 'a2' '__v2df (__v2df, __v2df)'
+        |-ImplicitCastExpr 0x7ff853037288 <col:11> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        | `-DeclRefExpr 0x7ff853037188 <col:11> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ff853036c90 'b' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+        `-ImplicitCastExpr 0x7ff8530372a0 <col:14> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+          `-DeclRefExpr 0x7ff8530371b0 <col:14> '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ff853036c90 'b' '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7f8ff20068e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8ff2814268 <../Data/C2AST/pr40482.c:5:1, line:8:1> line:5:14 foo 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7f8ff2007578 <col:19, col:32> col:32 used i 'unsigned int'
+  `-CompoundStmt 0x7f8ff28143f0 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f8ff28143d8 <line:7:3, col:14>
+      `-BinaryOperator 0x7f8ff28143b0 <col:10, col:14> 'unsigned int' '|'
+        |-ImplicitCastExpr 0x7f8ff2814398 <col:10> 'unsigned int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f8ff2814350 <col:10> 'unsigned int' lvalue ParmVar 0x7f8ff2007578 'i' 'unsigned int'
+        `-IntegerLiteral 0x7f8ff2814378 <col:14> 'unsigned int' 4278190080

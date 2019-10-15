@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fc26202bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc262815358 <../Data/C2AST/pr67985-3.c:4:1, line:9:1> line:6:1 foo 'float (float, float)'
+  |-ParmVarDecl 0x7fc262815200 <col:6, col:12> col:12 used x 'float'
+  |-ParmVarDecl 0x7fc262815278 <col:15, col:21> col:21 used y 'float'
+  |-CompoundStmt 0x7fc262815568 <line:7:1, line:9:1>
+  | `-ReturnStmt 0x7fc262815550 <line:8:3, col:14>
+  |   `-BinaryOperator 0x7fc262815528 <col:10, col:14> 'float' '*'
+  |     |-ImplicitCastExpr 0x7fc2628154f8 <col:10> 'float' <LValueToRValue>
+  |     | `-DeclRefExpr 0x7fc2628154a8 <col:10> 'float' lvalue ParmVar 0x7fc262815200 'x' 'float'
+  |     `-ImplicitCastExpr 0x7fc262815510 <col:14> 'float' <LValueToRValue>
+  |       `-DeclRefExpr 0x7fc2628154d0 <col:14> 'float' lvalue ParmVar 0x7fc262815278 'y' 'float'
+  `-TargetAttr 0x7fc262815408 <line:5:16, col:37> "arch=haswell"

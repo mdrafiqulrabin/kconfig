@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fd95d82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd95e014268 <../Data/C2AST/pr77975.c:7:1, line:17:1> line:8:1 foo 'unsigned int (unsigned int *)'
+| |-ParmVarDecl 0x7fd95d82c9a0 <col:6, col:20> col:20 used b 'unsigned int *'
+| `-CompoundStmt 0x7fd95e014660 <line:9:1, line:17:1>
+|   |-DeclStmt 0x7fd95e014400 <line:10:3, col:21>
+|   | `-VarDecl 0x7fd95e014368 <col:3, col:20> col:16 used a 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fd95e0143e8 <col:20> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fd95e0143c8 <col:20> 'int' 3
+|   |-WhileStmt 0x7fd95e0145e8 <line:11:3, line:15:5>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fd95e014440 <line:11:10> 'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd95e014418 <col:10> 'unsigned int' lvalue Var 0x7fd95e014368 'a' 'unsigned int'
+|   | `-CompoundStmt 0x7fd95e0145c8 <line:12:5, line:15:5>
+|   |   |-CompoundAssignOperator 0x7fd95e0144b8 <line:13:7, col:13> 'unsigned int' '>>=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   |   | |-DeclRefExpr 0x7fd95e014458 <col:7> 'unsigned int' lvalue Var 0x7fd95e014368 'a' 'unsigned int'
+|   |   | `-IntegerLiteral 0x7fd95e014480 <col:13> 'int' 1
+|   |   `-CompoundAssignOperator 0x7fd95e014590 <line:14:7, col:13> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   |     |-UnaryOperator 0x7fd95e014530 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+|   |     | `-ImplicitCastExpr 0x7fd95e014518 <col:8> 'unsigned int *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fd95e0144f0 <col:8> 'unsigned int *' lvalue ParmVar 0x7fd95d82c9a0 'b' 'unsigned int *'
+|   |     `-ImplicitCastExpr 0x7fd95e014578 <col:13> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd95e014550 <col:13> 'unsigned int' lvalue Var 0x7fd95e014368 'a' 'unsigned int'
+|   `-ReturnStmt 0x7fd95e014648 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7fd95e014630 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd95e014608 <col:10> 'unsigned int' lvalue Var 0x7fd95e014368 'a' 'unsigned int'
+`-FunctionDecl 0x7fd95e014730 <line:21:1, line:31:1> line:22:1 bar 'unsigned int (unsigned int *)'
+  |-ParmVarDecl 0x7fd95e0146a0 <col:6, col:20> col:20 used b 'unsigned int *'
+  `-CompoundStmt 0x7fd95e014ae8 <line:23:1, line:31:1>
+    |-DeclStmt 0x7fd95e014888 <line:24:3, col:21>
+    | `-VarDecl 0x7fd95e0147f0 <col:3, col:20> col:16 used a 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fd95e014870 <col:20> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fd95e014850 <col:20> 'int' 7
+    |-WhileStmt 0x7fd95e014a70 <line:25:3, line:29:5>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd95e0148c8 <line:25:10> 'unsigned int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd95e0148a0 <col:10> 'unsigned int' lvalue Var 0x7fd95e0147f0 'a' 'unsigned int'
+    | `-CompoundStmt 0x7fd95e014a50 <line:26:5, line:29:5>
+    |   |-CompoundAssignOperator 0x7fd95e014940 <line:27:7, col:13> 'unsigned int' '>>=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   | |-DeclRefExpr 0x7fd95e0148e0 <col:7> 'unsigned int' lvalue Var 0x7fd95e0147f0 'a' 'unsigned int'
+    |   | `-IntegerLiteral 0x7fd95e014908 <col:13> 'int' 1
+    |   `-CompoundAssignOperator 0x7fd95e014a18 <line:28:7, col:13> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |     |-UnaryOperator 0x7fd95e0149b8 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7fd95e0149a0 <col:8> 'unsigned int *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fd95e014978 <col:8> 'unsigned int *' lvalue ParmVar 0x7fd95e0146a0 'b' 'unsigned int *'
+    |     `-ImplicitCastExpr 0x7fd95e014a00 <col:13> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd95e0149d8 <col:13> 'unsigned int' lvalue Var 0x7fd95e0147f0 'a' 'unsigned int'
+    `-ReturnStmt 0x7fd95e014ad0 <line:30:3, col:10>
+      `-ImplicitCastExpr 0x7fd95e014ab8 <col:10> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd95e014a90 <col:10> 'unsigned int' lvalue Var 0x7fd95e0147f0 'a' 'unsigned int'

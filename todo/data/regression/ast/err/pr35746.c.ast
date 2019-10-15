@@ -1,0 +1,34 @@
+../Data/C2AST/pr35746.c:9:3: error: use of undeclared identifier 'X'
+  X j;                   
+  ^
+../Data/C2AST/pr35746.c:10:15: error: use of undeclared identifier 'j'
+  if (i = foo(j))
+              ^
+2 errors generated.
+TranslationUnitDecl 0x7f9af181dce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9af181e260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9af181df80 '__int128'
+|-TypedefDecl 0x7f9af181e2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9af181dfa0 'unsigned __int128'
+|-TypedefDecl 0x7f9af181e5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9af181e3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9af181e328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9af181e640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9af181e600 'char *'
+|   `-BuiltinType 0x7f9af181dd80 'char'
+|-TypedefDecl 0x7f9af181e908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9af181e8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9af181e720 'struct __va_list_tag'
+|     `-Record 0x7f9af181e698 '__va_list_tag'
+|-FunctionDecl 0x7f9af2017668 <../Data/C2AST/pr35746.c:4:1, col:14> col:5 used foo 'int (int)'
+| `-ParmVarDecl 0x7f9af181e978 <col:9, col:13> col:13 i 'int'
+`-FunctionDecl 0x7f9af2017798 <line:6:1, line:12:1> line:6:6 bar 'void ()'
+  `-CompoundStmt 0x7f9af2017a48 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f9af20178d8 <line:8:3, col:20>
+    | `-VarDecl 0x7f9af2017878 <col:3, col:19> col:19 used i '_Complex int'
+    `-IfStmt 0x7f9af2017a10 <line:10:3, line:11:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-OpaqueValueExpr 0x7f9af20179f0 <<invalid sloc>> '_Bool'
+      |-NullStmt 0x7f9af20179e0 <col:5>
+      `-<<<NULL>>>

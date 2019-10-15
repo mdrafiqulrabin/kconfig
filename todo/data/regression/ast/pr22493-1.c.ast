@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fbad48174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbad3041200 <../Data/C2AST/pr22493-1.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbad30412a0 prev 0x7fbad3041200 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbad3041478 <line:5:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fbad3041518 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fbad3041580 prev 0x7fbad3041478 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fbad3041380 <col:19> col:22 'int'
+|-FunctionDecl 0x7fbad30416c8 <line:6:1, line:14:1> line:6:6 used f 'void (int)'
+| |-ParmVarDecl 0x7fbad3041640 <col:8, col:12> col:12 used i 'int'
+| `-CompoundStmt 0x7fbad3041af0 <line:7:1, line:14:1>
+|   |-IfStmt 0x7fbad30418c8 <line:8:3, line:9:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbad3041810 <line:8:7, col:9> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fbad30417f8 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fbad30417b0 <col:7> 'int' lvalue ParmVar 0x7fbad3041640 'i' 'int'
+|   | | `-IntegerLiteral 0x7fbad30417d8 <col:9> 'int' 0
+|   | |-CallExpr 0x7fbad30418a0 <line:9:5, col:11> 'void'
+|   | | `-ImplicitCastExpr 0x7fbad3041888 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbad3041838 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbad30412a0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fbad3041988 <line:10:3, col:8> 'int' '='
+|   | |-DeclRefExpr 0x7fbad3041900 <col:3> 'int' lvalue ParmVar 0x7fbad3041640 'i' 'int'
+|   | `-UnaryOperator 0x7fbad3041968 <col:7, col:8> 'int' prefix '-'
+|   |   `-ImplicitCastExpr 0x7fbad3041950 <col:8> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbad3041928 <col:8> 'int' lvalue ParmVar 0x7fbad3041640 'i' 'int'
+|   |-IfStmt 0x7fbad3041a50 <line:11:3, line:12:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbad3041a10 <line:11:7, col:9> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fbad30419f8 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fbad30419b0 <col:7> 'int' lvalue ParmVar 0x7fbad3041640 'i' 'int'
+|   | | `-IntegerLiteral 0x7fbad30419d8 <col:9> 'int' 0
+|   | |-ReturnStmt 0x7fbad3041a38 <line:12:5>
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fbad3041ac8 <line:13:3, col:10> 'void'
+|     `-ImplicitCastExpr 0x7fbad3041ab0 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fbad3041a88 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fbad30412a0 'abort' 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fbad3041d68 <line:16:1, line:20:1> line:16:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fbad3041b38 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7fbad3041c50 <col:20, col:31> col:26 argv 'char **':'char **'
+  `-CompoundStmt 0x7fbad3042020 <line:17:1, line:20:1>
+    |-CallExpr 0x7fbad3041f30 <line:18:3, col:12> 'void'
+    | |-ImplicitCastExpr 0x7fbad3041f18 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbad3041e18 <col:3> 'void (int)' Function 0x7fbad30416c8 'f' 'void (int)'
+    | `-ParenExpr 0x7fbad3041ec8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:19, col:36> 'int'
+    |   `-BinaryOperator 0x7fbad3041ea0 <col:20, col:35> 'int' '-'
+    |     |-UnaryOperator 0x7fbad3041e60 <col:20, <built-in>:38:21> 'int' prefix '-'
+    |     | `-IntegerLiteral 0x7fbad3041e40 <col:21> 'int' 2147483647
+    |     `-IntegerLiteral 0x7fbad3041e80 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:35> 'int' 1
+    `-CallExpr 0x7fbad3041ff0 <../Data/C2AST/pr22493-1.c:19:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fbad3041fd8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbad3041f60 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fbad3041580 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fbad3041f88 <col:9> 'int' 0

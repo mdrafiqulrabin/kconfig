@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f890582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f890582c978 <../Data/C2AST/pr64600_1.c:4:1, col:22> col:22 referenced speed_t 'unsigned int'
+| `-BuiltinType 0x7f890582be80 'unsigned int'
+|-TypedefDecl 0x7f8906014200 <line:5:1, col:22> col:22 referenced tcflag_t 'unsigned int'
+| `-BuiltinType 0x7f890582be80 'unsigned int'
+|-RecordDecl 0x7f8906014258 <line:7:1, line:9:1> line:7:8 struct termios definition
+| `-FieldDecl 0x7f8906014330 <line:8:2, col:11> col:11 referenced c_cflag 'tcflag_t':'unsigned int'
+`-FunctionDecl 0x7f8906014550 <line:11:1, line:15:1> line:12:1 cfgetospeed 'speed_t (const struct termios *)'
+  |-ParmVarDecl 0x7f8906014450 <col:14, col:36> col:36 used tp 'const struct termios *'
+  `-CompoundStmt 0x7f8906014740 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f8906014728 <line:14:3, col:24>
+      `-BinaryOperator 0x7f8906014700 <col:10, col:24> 'unsigned int' '&'
+        |-ImplicitCastExpr 0x7f89060146d0 <col:10, col:14> 'tcflag_t':'unsigned int' <LValueToRValue>
+        | `-MemberExpr 0x7f8906014678 <col:10, col:14> 'const tcflag_t':'const unsigned int' lvalue ->c_cflag 0x7f8906014330
+        |   `-ImplicitCastExpr 0x7f8906014660 <col:10> 'const struct termios *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f8906014638 <col:10> 'const struct termios *' lvalue ParmVar 0x7f8906014450 'tp' 'const struct termios *'
+        `-ImplicitCastExpr 0x7f89060146e8 <col:24> 'unsigned int' <IntegralCast>
+          `-IntegerLiteral 0x7f89060146b0 <col:24> 'int' 4111

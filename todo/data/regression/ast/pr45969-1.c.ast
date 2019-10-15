@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fad8882bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fad89014200 <../Data/C2AST/pr45969-1.c:2:1, line:6:1> line:2:6 crash 'void ()'
+  `-CompoundStmt 0x7fad89014780 <col:14, line:6:1>
+    |-DeclStmt 0x7fad890143c0 <line:3:5, col:16>
+    | `-VarDecl 0x7fad89014360 <col:5, col:15> col:12 used l 'double [4]'
+    `-IfStmt 0x7fad89014748 <line:4:5, line:5:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fad89014710 <line:4:8, col:33> 'int' '&&'
+      | |-ParenExpr 0x7fad89014568 <col:8, col:18> 'double'
+      | | `-BinaryOperator 0x7fad89014540 <col:9, col:17> 'double' '+'
+      | |   |-ImplicitCastExpr 0x7fad89014510 <col:9, col:12> 'double' <LValueToRValue>
+      | |   | `-ArraySubscriptExpr 0x7fad89014460 <col:9, col:12> 'double' lvalue
+      | |   |   |-ImplicitCastExpr 0x7fad89014448 <col:9> 'double *' <ArrayToPointerDecay>
+      | |   |   | `-DeclRefExpr 0x7fad890143d8 <col:9> 'double [4]' lvalue Var 0x7fad89014360 'l' 'double [4]'
+      | |   |   `-IntegerLiteral 0x7fad89014400 <col:11> 'int' 0
+      | |   `-ImplicitCastExpr 0x7fad89014528 <col:14, col:17> 'double' <LValueToRValue>
+      | |     `-ArraySubscriptExpr 0x7fad890144e8 <col:14, col:17> 'double' lvalue
+      | |       |-ImplicitCastExpr 0x7fad890144d0 <col:14> 'double *' <ArrayToPointerDecay>
+      | |       | `-DeclRefExpr 0x7fad89014488 <col:14> 'double [4]' lvalue Var 0x7fad89014360 'l' 'double [4]'
+      | |       `-IntegerLiteral 0x7fad890144b0 <col:16> 'int' 2
+      | `-ParenExpr 0x7fad890146f0 <col:23, col:33> 'double'
+      |   `-BinaryOperator 0x7fad890146c8 <col:24, col:32> 'double' '+'
+      |     |-ImplicitCastExpr 0x7fad89014698 <col:24, col:27> 'double' <LValueToRValue>
+      |     | `-ArraySubscriptExpr 0x7fad890145e8 <col:24, col:27> 'double' lvalue
+      |     |   |-ImplicitCastExpr 0x7fad890145d0 <col:24> 'double *' <ArrayToPointerDecay>
+      |     |   | `-DeclRefExpr 0x7fad89014588 <col:24> 'double [4]' lvalue Var 0x7fad89014360 'l' 'double [4]'
+      |     |   `-IntegerLiteral 0x7fad890145b0 <col:26> 'int' 1
+      |     `-ImplicitCastExpr 0x7fad890146b0 <col:29, col:32> 'double' <LValueToRValue>
+      |       `-ArraySubscriptExpr 0x7fad89014670 <col:29, col:32> 'double' lvalue
+      |         |-ImplicitCastExpr 0x7fad89014658 <col:29> 'double *' <ArrayToPointerDecay>
+      |         | `-DeclRefExpr 0x7fad89014610 <col:29> 'double [4]' lvalue Var 0x7fad89014360 'l' 'double [4]'
+      |         `-IntegerLiteral 0x7fad89014638 <col:31> 'int' 3
+      |-CompoundStmt 0x7fad89014738 <col:35, line:5:5>
+      `-<<<NULL>>>

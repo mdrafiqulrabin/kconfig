@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fee960274e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fee96801ad8 <<built-in>:81:23, ../Data/C2AST/pr58742-2.c:10:1> line:5:1 fx 'unsigned long (char *, unsigned long)'
+  |-ParmVarDecl 0x7fee96028178 <col:5, col:11> col:11 used a 'char *'
+  |-ParmVarDecl 0x7fee96801a00 <<built-in>:81:23, ../Data/C2AST/pr58742-2.c:5:28> col:28 used sz 'unsigned long'
+  `-CompoundStmt 0x7fee96801dd8 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fee96801ce8 <line:7:3, col:19>
+    | `-VarDecl 0x7fee96801be0 <col:3, col:17> col:9 used b 'char *' cinit
+    |   `-BinaryOperator 0x7fee96801cc0 <col:13, col:17> 'char *' '+'
+    |     |-ImplicitCastExpr 0x7fee96801c90 <col:13> 'char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fee96801c40 <col:13> 'char *' lvalue ParmVar 0x7fee96028178 'a' 'char *'
+    |     `-ImplicitCastExpr 0x7fee96801ca8 <col:17> 'unsigned long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fee96801c68 <col:17> 'unsigned long' lvalue ParmVar 0x7fee96801a00 'sz' 'unsigned long'
+    `-ReturnStmt 0x7fee96801dc0 <line:9:3, col:14>
+      `-ImplicitCastExpr 0x7fee96801da8 <col:10, col:14> 'unsigned long' <IntegralCast>
+        `-BinaryOperator 0x7fee96801d80 <col:10, col:14> 'long' '-'
+          |-ImplicitCastExpr 0x7fee96801d50 <col:10> 'char *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fee96801d00 <col:10> 'char *' lvalue Var 0x7fee96801be0 'b' 'char *'
+          `-ImplicitCastExpr 0x7fee96801d68 <col:14> 'char *' <LValueToRValue>
+            `-DeclRefExpr 0x7fee96801d28 <col:14> 'char *' lvalue ParmVar 0x7fee96028178 'a' 'char *'

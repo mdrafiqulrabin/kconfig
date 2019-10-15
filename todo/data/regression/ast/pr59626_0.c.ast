@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fcfbe823ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcfc00334d8 <../Data/C2AST/pr59626_0.c:7:1, col:52> col:5 used __atoi 'int (const char *)'
+| |-ParmVarDecl 0x7fcfbe824b78 <col:14, col:25> col:26 'const char *'
+| `-AsmLabelAttr 0x7fcfc0033578 <<scratch space>:2:1> "_atoi"
+|-FunctionDecl 0x7fcfc00336c0 <../Data/C2AST/pr59626_0.c:8:1, line:12:1> line:9:5 used atoi 'int (const char *)' extern inline
+| |-ParmVarDecl 0x7fcfc0033630 <col:11, col:23> col:23 used x 'const char *'
+| |-CompoundStmt 0x7fcfc00338b0 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7fcfc0033898 <line:11:3, col:19>
+| |   `-CallExpr 0x7fcfc0033850 <col:10, col:19> 'int'
+| |     |-ImplicitCastExpr 0x7fcfc0033838 <col:10> 'int (*)(const char *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fcfc00337c0 <col:10> 'int (const char *)' Function 0x7fcfc00334d8 '__atoi' 'int (const char *)'
+| |     `-ImplicitCastExpr 0x7fcfc0033880 <col:18> 'const char *' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fcfc00337e8 <col:18> 'const char *' lvalue ParmVar 0x7fcfc0033630 'x' 'const char *'
+| |-GNUInlineAttr 0x7fcfc0033768 <line:8:44>
+| `-AlwaysInlineAttr 0x7fcfc00337b0 <col:30> always_inline
+|-FunctionDecl 0x7fcfc0033ae8 <line:14:1, col:31> col:5 used bar 'int (int (*)(const char *))'
+| `-ParmVarDecl 0x7fcfc00339d8 <col:10, col:30> col:16 'int (*)(const char *)'
+`-FunctionDecl 0x7fcfc0033be0 <line:16:1, line:19:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fcfc0033da0 <line:17:1, line:19:1>
+    `-ReturnStmt 0x7fcfc0033d88 <line:18:3, col:19>
+      `-CallExpr 0x7fcfc0033d40 <col:10, col:19> 'int'
+        |-ImplicitCastExpr 0x7fcfc0033d28 <col:10> 'int (*)(int (*)(const char *))' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcfc0033c80 <col:10> 'int (int (*)(const char *))' Function 0x7fcfc0033ae8 'bar' 'int (int (*)(const char *))'
+        `-ImplicitCastExpr 0x7fcfc0033d70 <col:15> 'int (*)(const char *)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fcfc0033ca8 <col:15> 'int (const char *)' Function 0x7fcfc00336c0 'atoi' 'int (const char *)'

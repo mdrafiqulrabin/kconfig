@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fec3d8166e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fec3d858200 <../Data/C2AST/pr27136.c:4:1, line:10:1> line:4:6 foo 'void ()'
+  `-CompoundStmt 0x7fec3d858580 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fec3d858358 <line:6:3, col:11>
+    | `-VarDecl 0x7fec3d8582f8 <col:3, col:10> col:10 used x 'double'
+    `-ForStmt 0x7fec3d858548 <line:8:3, line:9:5>
+      |-BinaryOperator 0x7fec3d8583d0 <line:8:8, col:12> 'double' '='
+      | |-DeclRefExpr 0x7fec3d858370 <col:8> 'double' lvalue Var 0x7fec3d8582f8 'x' 'double'
+      | `-ImplicitCastExpr 0x7fec3d8583b8 <col:12> 'double' <IntegralToFloating>
+      |   `-IntegerLiteral 0x7fec3d858398 <col:12> 'int' 2
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fec3d858470 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fec3d858440 <col:15> 'double' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fec3d8583f8 <col:15> 'double' lvalue Var 0x7fec3d8582f8 'x' 'double'
+      | `-ImplicitCastExpr 0x7fec3d858458 <col:19> 'double' <IntegralToFloating>
+      |   `-IntegerLiteral 0x7fec3d858420 <col:19> 'int' 10
+      |-CompoundAssignOperator 0x7fec3d858500 <col:23, col:28> 'double' '*=' ComputeLHSTy='double' ComputeResultTy='double'
+      | |-DeclRefExpr 0x7fec3d858498 <col:23> 'double' lvalue Var 0x7fec3d8582f8 'x' 'double'
+      | `-ImplicitCastExpr 0x7fec3d8584e8 <col:28> 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fec3d8584c0 <col:28> 'double' lvalue Var 0x7fec3d8582f8 'x' 'double'
+      `-NullStmt 0x7fec3d858538 <line:9:5>

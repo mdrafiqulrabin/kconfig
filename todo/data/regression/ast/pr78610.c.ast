@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd98d02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd98d02c978 <../Data/C2AST/pr78610.c:3:1, col:14> col:14 used ao 'unsigned int'
+|-VarDecl 0x7fd98d814258 <col:1, col:18> col:18 used gl 'unsigned int'
+`-FunctionDecl 0x7fd98d814390 <line:5:1, line:14:1> line:6:1 ri 'void (void)'
+  `-CompoundStmt 0x7fd98d814680 <line:7:1, line:14:1>
+    `-ForStmt 0x7fd98d814648 <line:8:3, line:13:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fd98d814628 <line:9:5, line:13:5>
+        |-IfStmt 0x7fd98d814568 <line:10:7, line:11:15>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fd98d8144a8 <line:10:11, col:17> 'int' '!='
+        | | |-ImplicitCastExpr 0x7fd98d814478 <col:11> 'unsigned int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fd98d814430 <col:11> 'unsigned int' lvalue Var 0x7fd98d02c978 'ao' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fd98d814490 <col:17> 'unsigned int' <IntegralCast>
+        | |   `-IntegerLiteral 0x7fd98d814458 <col:17> 'int' 1
+        | |-CompoundAssignOperator 0x7fd98d814530 <line:11:9, col:15> 'unsigned int' '/=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+        | | |-DeclRefExpr 0x7fd98d8144d0 <col:9> 'unsigned int' lvalue Var 0x7fd98d02c978 'ao' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fd98d814518 <col:15> 'unsigned int' <IntegralCast>
+        | |   `-IntegerLiteral 0x7fd98d8144f8 <col:15> 'int' 0
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7fd98d814600 <line:12:7, col:12> 'unsigned int' '='
+          |-DeclRefExpr 0x7fd98d8145a0 <col:7> 'unsigned int' lvalue Var 0x7fd98d814258 'gl' 'unsigned int'
+          `-ImplicitCastExpr 0x7fd98d8145e8 <col:12> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7fd98d8145c8 <col:12> 'int' 0

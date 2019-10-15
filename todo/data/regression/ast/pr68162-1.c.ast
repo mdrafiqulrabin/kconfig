@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fe4970174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe497018178 <../Data/C2AST/pr68162-1.c:3:1, col:22> col:22 referenced cd 'const double'
+| `-QualType 0x7fe497017701 'const double' const
+|   `-BuiltinType 0x7fe497017700 'double'
+|-FunctionDecl 0x7fe4968293f0 <line:4:1, col:27> col:6 used f 'void (const double (*)[])'
+| `-ParmVarDecl 0x7fe4968292f0 <col:9, col:26> col:24 'const double (*)[]'
+`-FunctionDecl 0x7fe4968295a0 <line:5:1, col:35> col:6 g 'void (void)'
+  `-CompoundStmt 0x7fe496829830 <col:15, col:35>
+    `-CallExpr 0x7fe496829800 <col:17, col:32> 'void'
+      |-ImplicitCastExpr 0x7fe4968297e8 <col:17> 'void (*)(const double (*)[])' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe496829640 <col:17> 'void (const double (*)[])' Function 0x7fe4968293f0 'f' 'void (const double (*)[])'
+      `-CStyleCastExpr 0x7fe496829768 <col:20, col:31> 'cd (*)[]' <NullToPointer>
+        `-IntegerLiteral 0x7fe496829690 <col:31> 'int' 0

@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fe0e88174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe0e8818160 <../Data/C2AST/pr44555.c:1:1, line:3:1> line:1:8 struct a definition
+| `-FieldDecl 0x7fe0e8859098 <line:2:5, col:15> col:10 referenced b 'char [100]'
+|-FunctionDecl 0x7fe0e8859298 <line:4:1, line:9:1> line:4:5 used foo 'int (struct a *)'
+| |-ParmVarDecl 0x7fe0e8859190 <col:9, col:19> col:19 used a 'struct a *'
+| `-CompoundStmt 0x7fe0e88594f0 <line:5:1, line:9:1>
+|   |-IfStmt 0x7fe0e8859480 <line:6:3, line:7:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fe0e8859428 <line:6:7, col:11> 'char (*)[100]' prefix '&'
+|   | | `-MemberExpr 0x7fe0e88593c0 <col:8, col:11> 'char [100]' lvalue ->b 0x7fe0e8859098
+|   | |   `-ImplicitCastExpr 0x7fe0e88593a8 <col:8> 'struct a *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fe0e8859380 <col:8> 'struct a *' lvalue ParmVar 0x7fe0e8859190 'a' 'struct a *'
+|   | |-ReturnStmt 0x7fe0e8859468 <line:7:5, col:12>
+|   | | `-IntegerLiteral 0x7fe0e8859448 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe0e88594d8 <line:8:3, col:10>
+|     `-IntegerLiteral 0x7fe0e88594b8 <col:10> 'int' 0
+|-FunctionDecl 0x7fe0e8859600 <line:10:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe0e88596a0 prev 0x7fe0e8859600 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fe0e8859790 <line:11:1, line:16:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7fe0e8859ab8 <line:12:1, line:16:1>
+    |-IfStmt 0x7fe0e8859a48 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe0e8859990 <line:13:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7fe0e8859940 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7fe0e8859928 <col:7> 'int (*)(struct a *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fe0e8859830 <col:7> 'int (struct a *)' Function 0x7fe0e8859298 'foo' 'int (struct a *)'
+    | | | `-CStyleCastExpr 0x7fe0e88598a0 <col:11, col:23> 'struct a *' <NullToPointer>
+    | | |   `-IntegerLiteral 0x7fe0e8859858 <col:23> 'int' 0
+    | | `-IntegerLiteral 0x7fe0e8859970 <col:29> 'int' 0
+    | |-CallExpr 0x7fe0e8859a20 <line:14:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe0e8859a08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe0e88599b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe0e88596a0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe0e8859aa0 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fe0e8859a80 <col:10> 'int' 0

@@ -1,0 +1,21 @@
+../Data/C2AST/pr29119.c:5:23: error: invalid lvalue in asm input for constraint 'm'
+   __asm__ ("" :: "m"(({unsigned __v; __v;})));  
+                      ^~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ff21982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff21982c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff21982bf80 '__int128'
+|-TypedefDecl 0x7ff21982c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff21982bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff21982c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff21982c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff21982c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff21982c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff21982c600 'char *'
+|   `-BuiltinType 0x7ff21982bd80 'char'
+|-TypedefDecl 0x7ff21982c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff21982c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff21982c720 'struct __va_list_tag'
+|     `-Record 0x7ff21982c698 '__va_list_tag'
+`-FunctionDecl 0x7ff21a014220 <../Data/C2AST/pr29119.c:3:1, line:6:1> line:3:6 ldt_add_entry 'void (void)'
+  `-CompoundStmt 0x7ff21a0144d8 <line:4:1, line:6:1>

@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7facf00188e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7facf10562d8 <../Data/C2AST/pr48136.c:3:1, line:7:1> line:4:1 foo 'int (int, int)'
+  |-ParmVarDecl 0x7facf0019578 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7facf1056200 <col:13, col:17> col:17 used y 'int'
+  `-CompoundStmt 0x7facf1056588 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7facf1056570 <line:6:3, col:28>
+      `-BinaryOperator 0x7facf1056548 <col:10, col:28> 'int' '=='
+        |-ParenExpr 0x7facf1056468 <col:10, col:17> 'unsigned int'
+        | `-BinaryOperator 0x7facf1056440 <col:11, col:15> 'unsigned int' '^'
+        |   |-ImplicitCastExpr 0x7facf1056428 <col:11> 'unsigned int' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7facf1056410 <col:11> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7facf10563c8 <col:11> 'int' lvalue ParmVar 0x7facf0019578 'x' 'int'
+        |   `-IntegerLiteral 0x7facf10563f0 <col:15> 'unsigned int' 5
+        `-ImplicitCastExpr 0x7facf1056530 <col:22, col:28> 'unsigned int' <IntegralCast>
+          `-ParenExpr 0x7facf1056510 <col:22, col:28> 'int'
+            `-BinaryOperator 0x7facf10564e8 <col:23, col:27> 'int' '^'
+              |-ImplicitCastExpr 0x7facf10564d0 <col:23> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7facf1056488 <col:23> 'int' lvalue ParmVar 0x7facf1056200 'y' 'int'
+              `-IntegerLiteral 0x7facf10564b0 <col:27> 'int' 1

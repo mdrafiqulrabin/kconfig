@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fb0c782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb0c8014260 <../Data/C2AST/pr33653.c:4:1, line:7:1> line:4:6 f 'void (volatile char *)'
+  |-ParmVarDecl 0x7fb0c782c9a0 <col:9, col:24> col:24 used p 'volatile char *'
+  `-CompoundStmt 0x7fb0c8014470 <line:5:1, line:7:1>
+    `-DeclStmt 0x7fb0c8014458 <line:6:3, col:16>
+      `-VarDecl 0x7fb0c8014358 <col:3, col:15> col:8 c 'char' cinit
+        `-ImplicitCastExpr 0x7fb0c8014440 <col:12, col:15> 'char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fb0c8014418 <col:12, col:15> 'volatile char' lvalue
+            |-ImplicitCastExpr 0x7fb0c8014400 <col:12> 'volatile char *' <LValueToRValue>
+            | `-DeclRefExpr 0x7fb0c80143b8 <col:12> 'volatile char *' lvalue ParmVar 0x7fb0c782c9a0 'p' 'volatile char *'
+            `-IntegerLiteral 0x7fb0c80143e0 <col:14> 'int' 0

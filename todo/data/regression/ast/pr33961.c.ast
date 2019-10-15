@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fcf3f829ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcf3f86b8d0 <../Data/C2AST/pr33961.c:5:1, col:29> col:6 used decode 'void (char *, int)'
+| |-ParmVarDecl 0x7fcf3f82a978 <col:13, col:19> col:19 d 'char *'
+| `-ParmVarDecl 0x7fcf3f86b800 <col:22, col:26> col:26 len 'int'
+|-FunctionDecl 0x7fcf3f86bae0 prev 0x7fcf3f86b8d0 <line:7:1, line:17:1> line:7:6 used decode 'void (char *, int)'
+| |-ParmVarDecl 0x7fcf3f86b9d8 <col:13, col:19> col:19 used d 'char *'
+| |-ParmVarDecl 0x7fcf3f86ba50 <col:22, col:26> col:26 used len 'int'
+| `-CompoundStmt 0x7fcf3f86c338 <col:31, line:17:1>
+|   |-DeclStmt 0x7fcf3f86bc90 <line:8:9, col:24>
+|   | `-VarDecl 0x7fcf3f86bba8 <col:9, col:23> col:13 used i 'int' cinit
+|   |   `-BinaryOperator 0x7fcf3f86bc68 <col:17, col:23> 'int' '-'
+|   |     |-ImplicitCastExpr 0x7fcf3f86bc50 <col:17> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fcf3f86bc08 <col:17> 'int' lvalue ParmVar 0x7fcf3f86ba50 'len' 'int'
+|   |     `-IntegerLiteral 0x7fcf3f86bc30 <col:23> 'int' 1
+|   `-WhileStmt 0x7fcf3f86c318 <line:9:9, line:16:9>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fcf3f86bd08 <line:9:15, col:20> 'int' '>='
+|     | |-ImplicitCastExpr 0x7fcf3f86bcf0 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fcf3f86bca8 <col:15> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+|     | `-IntegerLiteral 0x7fcf3f86bcd0 <col:20> 'int' 0
+|     `-CompoundStmt 0x7fcf3f86c2e8 <col:23, line:16:9>
+|       |-ImplicitCastExpr 0x7fcf3f86bdd8 <line:10:17, col:20> 'char' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7fcf3f86bdb0 <col:17, col:20> 'char' lvalue
+|       |   |-ImplicitCastExpr 0x7fcf3f86bd80 <col:17> 'char *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fcf3f86bd30 <col:17> 'char *' lvalue ParmVar 0x7fcf3f86b9d8 'd' 'char *'
+|       |   `-ImplicitCastExpr 0x7fcf3f86bd98 <col:19> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fcf3f86bd58 <col:19> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+|       |-IfStmt 0x7fcf3f86c010 <line:11:17, line:12:30>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fcf3f86bee8 <line:11:20, col:28> 'int' '=='
+|       | | |-ImplicitCastExpr 0x7fcf3f86bed0 <col:20, col:23> 'int' <IntegralCast>
+|       | | | `-ImplicitCastExpr 0x7fcf3f86beb8 <col:20, col:23> 'char' <LValueToRValue>
+|       | | |   `-ArraySubscriptExpr 0x7fcf3f86be70 <col:20, col:23> 'char' lvalue
+|       | | |     |-ImplicitCastExpr 0x7fcf3f86be40 <col:20> 'char *' <LValueToRValue>
+|       | | |     | `-DeclRefExpr 0x7fcf3f86bdf0 <col:20> 'char *' lvalue ParmVar 0x7fcf3f86b9d8 'd' 'char *'
+|       | | |     `-ImplicitCastExpr 0x7fcf3f86be58 <col:22> 'int' <LValueToRValue>
+|       | | |       `-DeclRefExpr 0x7fcf3f86be18 <col:22> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+|       | | `-IntegerLiteral 0x7fcf3f86be98 <col:28> 'int' 0
+|       | |-BinaryOperator 0x7fcf3f86bfe8 <line:12:25, col:30> 'char' '='
+|       | | |-ArraySubscriptExpr 0x7fcf3f86bf90 <col:25, col:28> 'char' lvalue
+|       | | | |-ImplicitCastExpr 0x7fcf3f86bf60 <col:25> 'char *' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fcf3f86bf10 <col:25> 'char *' lvalue ParmVar 0x7fcf3f86b9d8 'd' 'char *'
+|       | | | `-ImplicitCastExpr 0x7fcf3f86bf78 <col:27> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fcf3f86bf38 <col:27> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+|       | | `-ImplicitCastExpr 0x7fcf3f86bfd0 <col:30> 'char' <IntegralCast>
+|       | |   `-CharacterLiteral 0x7fcf3f86bfb8 <col:30> 'int' 32
+|       | `-<<<NULL>>>
+|       |-IfStmt 0x7fcf3f86c268 <line:13:3, line:14:9>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-BinaryOperator 0x7fcf3f86c140 <line:13:6, col:14> 'int' '=='
+|       | | |-ImplicitCastExpr 0x7fcf3f86c128 <col:6, col:9> 'int' <IntegralCast>
+|       | | | `-ImplicitCastExpr 0x7fcf3f86c110 <col:6, col:9> 'char' <LValueToRValue>
+|       | | |   `-ArraySubscriptExpr 0x7fcf3f86c0c8 <col:6, col:9> 'char' lvalue
+|       | | |     |-ImplicitCastExpr 0x7fcf3f86c098 <col:6> 'char *' <LValueToRValue>
+|       | | |     | `-DeclRefExpr 0x7fcf3f86c048 <col:6> 'char *' lvalue ParmVar 0x7fcf3f86b9d8 'd' 'char *'
+|       | | |     `-ImplicitCastExpr 0x7fcf3f86c0b0 <col:8> 'int' <LValueToRValue>
+|       | | |       `-DeclRefExpr 0x7fcf3f86c070 <col:8> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+|       | | `-IntegerLiteral 0x7fcf3f86c0f0 <col:14> 'int' 1
+|       | |-BinaryOperator 0x7fcf3f86c240 <line:14:4, col:9> 'char' '='
+|       | | |-ArraySubscriptExpr 0x7fcf3f86c1e8 <col:4, col:7> 'char' lvalue
+|       | | | |-ImplicitCastExpr 0x7fcf3f86c1b8 <col:4> 'char *' <LValueToRValue>
+|       | | | | `-DeclRefExpr 0x7fcf3f86c168 <col:4> 'char *' lvalue ParmVar 0x7fcf3f86b9d8 'd' 'char *'
+|       | | | `-ImplicitCastExpr 0x7fcf3f86c1d0 <col:6> 'int' <LValueToRValue>
+|       | | |   `-DeclRefExpr 0x7fcf3f86c190 <col:6> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+|       | | `-ImplicitCastExpr 0x7fcf3f86c228 <col:9> 'char' <IntegralCast>
+|       | |   `-CharacterLiteral 0x7fcf3f86c210 <col:9> 'int' 120
+|       | `-<<<NULL>>>
+|       `-UnaryOperator 0x7fcf3f86c2c8 <line:15:17, col:18> 'int' postfix '--'
+|         `-DeclRefExpr 0x7fcf3f86c2a0 <col:17> 'int' lvalue Var 0x7fcf3f86bba8 'i' 'int'
+`-FunctionDecl 0x7fcf3f86c4e8 <line:19:1, line:23:1> line:19:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fcf3f86c370 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7fcf3f86c410 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7fcf3f86c728 <line:20:1, line:23:1>
+    |-CallExpr 0x7fcf3f86c6a0 <line:21:9, col:46> 'void'
+    | |-ImplicitCastExpr 0x7fcf3f86c688 <col:9> 'void (*)(char *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fcf3f86c598 <col:9> 'void (char *, int)' Function 0x7fcf3f86bae0 'decode' 'void (char *, int)'
+    | |-ImplicitCastExpr 0x7fcf3f86c6d8 <col:16> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7fcf3f86c5f8 <col:16> 'char [25]' lvalue "this bug is really weird"
+    | `-IntegerLiteral 0x7fcf3f86c638 <col:44> 'int' 24
+    `-ReturnStmt 0x7fcf3f86c710 <line:22:2, col:9>
+      `-IntegerLiteral 0x7fcf3f86c6f0 <col:9> 'int' 0

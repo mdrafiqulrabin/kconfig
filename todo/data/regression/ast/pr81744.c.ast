@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7f947902bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f947902c960 <../Data/C2AST/pr81744.c:4:9, line:6:1> line:4:9 struct definition
+| |-FieldDecl 0x7f9479814238 <line:5:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7f9479814298 <col:3, col:10> col:10 referenced b 'int'
+|-TypedefDecl 0x7f9479814330 <line:4:1, line:6:3> col:3 referenced CompandSegment 'struct CompandSegment':'CompandSegment'
+| `-ElaboratedType 0x7f94798142e0 'struct CompandSegment' sugar
+|   `-RecordType 0x7f9479814200 'CompandSegment'
+|     `-Record 0x7f947902c960 ''
+|-VarDecl 0x7f94798143b8 <line:7:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7f94798144e8 <line:8:1, col:17> col:17 used b 'CompandSegment *'
+`-FunctionDecl 0x7f9479814598 <line:9:1, line:12:1> line:9:6 fn1 'void ()'
+  `-CompoundStmt 0x7f9479814bc8 <col:12, line:12:1>
+    `-ForStmt 0x7f9479814b90 <line:10:3, line:11:49>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f9479814660 <line:10:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f9479814638 <col:10> 'int' lvalue Var 0x7f94798143b8 'a' 'int'
+      |-UnaryOperator 0x7f94798146a0 <col:13, col:14> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f9479814678 <col:13> 'int' lvalue Var 0x7f94798143b8 'a' 'int'
+      `-BinaryOperator 0x7f9479814b68 <line:11:5, col:49> 'int' '='
+        |-MemberExpr 0x7f9479814768 <col:5, col:10> 'int' lvalue .a 0x7f9479814238
+        | `-ArraySubscriptExpr 0x7f9479814740 <col:5, col:8> 'CompandSegment':'CompandSegment' lvalue
+        |   |-ImplicitCastExpr 0x7f9479814710 <col:5> 'CompandSegment *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f94798146c0 <col:5> 'CompandSegment *' lvalue Var 0x7f94798144e8 'b' 'CompandSegment *'
+        |   `-ImplicitCastExpr 0x7f9479814728 <col:7> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f94798146e8 <col:7> 'int' lvalue Var 0x7f94798143b8 'a' 'int'
+        `-BinaryOperator 0x7f9479814b40 <col:14, col:49> 'int' '='
+          |-MemberExpr 0x7f9479814848 <col:14, col:19> 'int' lvalue .b 0x7f9479814298
+          | `-ArraySubscriptExpr 0x7f9479814820 <col:14, col:17> 'CompandSegment':'CompandSegment' lvalue
+          |   |-ImplicitCastExpr 0x7f94798147f0 <col:14> 'CompandSegment *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7f94798147a0 <col:14> 'CompandSegment *' lvalue Var 0x7f94798144e8 'b' 'CompandSegment *'
+          |   `-ImplicitCastExpr 0x7f9479814808 <col:16> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f94798147c8 <col:16> 'int' lvalue Var 0x7f94798143b8 'a' 'int'
+          `-BinaryOperator 0x7f9479814b18 <col:23, col:49> 'int' '='
+            |-MemberExpr 0x7f9479814970 <col:23, col:32> 'int' lvalue .a 0x7f9479814238
+            | `-ArraySubscriptExpr 0x7f9479814948 <col:23, col:30> 'CompandSegment':'CompandSegment' lvalue
+            |   |-ImplicitCastExpr 0x7f9479814930 <col:23> 'CompandSegment *' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7f9479814880 <col:23> 'CompandSegment *' lvalue Var 0x7f94798144e8 'b' 'CompandSegment *'
+            |   `-BinaryOperator 0x7f9479814908 <col:25, col:29> 'int' '-'
+            |     |-ImplicitCastExpr 0x7f94798148f0 <col:25> 'int' <LValueToRValue>
+            |     | `-DeclRefExpr 0x7f94798148a8 <col:25> 'int' lvalue Var 0x7f94798143b8 'a' 'int'
+            |     `-IntegerLiteral 0x7f94798148d0 <col:29> 'int' 1
+            `-BinaryOperator 0x7f9479814af0 <col:36, col:49> 'int' '='
+              |-MemberExpr 0x7f9479814a98 <col:36, col:45> 'int' lvalue .b 0x7f9479814298
+              | `-ArraySubscriptExpr 0x7f9479814a70 <col:36, col:43> 'CompandSegment':'CompandSegment' lvalue
+              |   |-ImplicitCastExpr 0x7f9479814a58 <col:36> 'CompandSegment *' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7f94798149a8 <col:36> 'CompandSegment *' lvalue Var 0x7f94798144e8 'b' 'CompandSegment *'
+              |   `-BinaryOperator 0x7f9479814a30 <col:38, col:42> 'int' '-'
+              |     |-ImplicitCastExpr 0x7f9479814a18 <col:38> 'int' <LValueToRValue>
+              |     | `-DeclRefExpr 0x7f94798149d0 <col:38> 'int' lvalue Var 0x7f94798143b8 'a' 'int'
+              |     `-IntegerLiteral 0x7f94798149f8 <col:42> 'int' 1
+              `-IntegerLiteral 0x7f9479814ad0 <col:49> 'int' 0

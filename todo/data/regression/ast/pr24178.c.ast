@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fd3170174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd317018160 <../Data/C2AST/pr24178.c:4:1, line:7:1> line:4:8 struct S definition
+| |-FieldDecl 0x7fd317800038 <line:5:5, col:9> col:9 l 'int'
+| `-FieldDecl 0x7fd317800098 <line:6:5, col:19> col:19 referenced c 'unsigned char'
+`-FunctionDecl 0x7fd3178001e8 <line:8:1, line:11:1> line:8:15 f 'unsigned long (unsigned char *)'
+  |-ParmVarDecl 0x7fd317800120 <col:17, col:32> col:32 used p10 'unsigned char *'
+  `-CompoundStmt 0x7fd3178005e0 <col:37, line:11:1>
+    |-DeclStmt 0x7fd317800508 <line:9:5, col:42>
+    | `-VarDecl 0x7fd317800380 <col:5, col:41> col:15 used p 'struct S *' cinit
+    |   `-CStyleCastExpr 0x7fd3178004e0 <col:19, col:41> 'struct S *' <BitCast>
+    |     `-ParenExpr 0x7fd3178004c0 <col:32, col:41> 'unsigned char *'
+    |       `-BinaryOperator 0x7fd317800440 <col:33, col:39> 'unsigned char *' '+'
+    |         |-ImplicitCastExpr 0x7fd317800428 <col:33> 'unsigned char *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7fd3178003e0 <col:33> 'unsigned char *' lvalue ParmVar 0x7fd317800120 'p10' 'unsigned char *'
+    |         `-IntegerLiteral 0x7fd317800408 <col:39> 'int' 10
+    `-ReturnStmt 0x7fd3178005c8 <line:10:5, col:15>
+      `-ImplicitCastExpr 0x7fd3178005b0 <col:12, col:15> 'unsigned long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fd317800598 <col:12, col:15> 'unsigned char' <LValueToRValue>
+          `-MemberExpr 0x7fd317800560 <col:12, col:15> 'unsigned char' lvalue ->c 0x7fd317800098
+            `-ImplicitCastExpr 0x7fd317800548 <col:12> 'struct S *' <LValueToRValue>
+              `-DeclRefExpr 0x7fd317800520 <col:12> 'struct S *' lvalue Var 0x7fd317800380 'p' 'struct S *'

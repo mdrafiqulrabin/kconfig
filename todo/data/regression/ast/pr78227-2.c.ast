@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fcd4582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd4586e800 <../Data/C2AST/pr78227-2.c:5:1, col:21> col:21 referenced V '__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7fcd4582c980 '__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' 64
+|   `-BuiltinType 0x7fcd4582bda0 'signed char'
+|-TypedefDecl 0x7fcd4586e8b8 <line:6:1, col:19> col:19 referenced W '__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| `-VectorType 0x7fcd4586e880 '__attribute__((__vector_size__(32 * sizeof(short)))) short' 32
+|   `-BuiltinType 0x7fcd4582bdc0 'short'
+|-FunctionDecl 0x7fcd4586ea40 <line:8:1, line:12:1> line:9:1 foo1 'V (V)'
+| |-ParmVarDecl 0x7fcd4586e940 <col:7, col:9> col:9 used v 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char'
+| `-CompoundStmt 0x7fcd4586ec40 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fcd4586ec28 <line:11:3, col:14>
+|     `-ImplicitCastExpr 0x7fcd4586ec10 <col:10, col:14> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' <BitCast>
+|       `-BinaryOperator 0x7fcd4586ebe8 <col:10, col:14> '__attribute__((__vector_size__(64 * sizeof(char)))) char' '>'
+|         |-ImplicitCastExpr 0x7fcd4586eb70 <col:10> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fcd4586eb28 <col:10> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' lvalue ParmVar 0x7fcd4586e940 'v' 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char'
+|         `-ImplicitCastExpr 0x7fcd4586eba0 <col:14> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' <VectorSplat>
+|           `-ImplicitCastExpr 0x7fcd4586eb88 <col:14> 'signed char' <IntegralCast>
+|             `-IntegerLiteral 0x7fcd4586eb50 <col:14> 'int' 0
+|-FunctionDecl 0x7fcd4586ecf0 <line:14:1, line:18:1> line:15:1 bar1 'V (V)'
+| |-ParmVarDecl 0x7fcd4586ec68 <col:7, col:9> col:9 used v 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char'
+| `-CompoundStmt 0x7fcd4586ee80 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7fcd4586ee68 <line:17:3, col:15>
+|     `-ImplicitCastExpr 0x7fcd4586ee50 <col:10, col:15> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' <BitCast>
+|       `-BinaryOperator 0x7fcd4586ee28 <col:10, col:15> '__attribute__((__vector_size__(64 * sizeof(char)))) char' '!='
+|         |-ImplicitCastExpr 0x7fcd4586ede0 <col:10> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fcd4586ed98 <col:10> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' lvalue ParmVar 0x7fcd4586ec68 'v' 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char'
+|         `-ImplicitCastExpr 0x7fcd4586ee10 <col:15> 'V':'__attribute__((__vector_size__(64 * sizeof(signed char)))) signed char' <VectorSplat>
+|           `-ImplicitCastExpr 0x7fcd4586edf8 <col:15> 'signed char' <IntegralCast>
+|             `-IntegerLiteral 0x7fcd4586edc0 <col:15> 'int' 0
+|-FunctionDecl 0x7fcd4586efd0 <line:20:1, line:24:1> line:21:1 foo2 'W (W)'
+| |-ParmVarDecl 0x7fcd4586eed0 <col:7, col:9> col:9 used w 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| `-CompoundStmt 0x7fcd4586f148 <line:22:1, line:24:1>
+|   `-ReturnStmt 0x7fcd4586f130 <line:23:3, col:14>
+|     `-BinaryOperator 0x7fcd4586f108 <col:10, col:14> '__attribute__((__vector_size__(32 * sizeof(short)))) short' '>'
+|       |-ImplicitCastExpr 0x7fcd4586f0c0 <col:10> 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fcd4586f078 <col:10> 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short' lvalue ParmVar 0x7fcd4586eed0 'w' 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+|       `-ImplicitCastExpr 0x7fcd4586f0f0 <col:14> 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <VectorSplat>
+|         `-ImplicitCastExpr 0x7fcd4586f0d8 <col:14> 'short' <IntegralCast>
+|           `-IntegerLiteral 0x7fcd4586f0a0 <col:14> 'int' 0
+`-FunctionDecl 0x7fcd4586f1f8 <line:26:1, line:30:1> line:27:1 bar2 'W (W)'
+  |-ParmVarDecl 0x7fcd4586f170 <col:7, col:9> col:9 used w 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+  `-CompoundStmt 0x7fcd4586f370 <line:28:1, line:30:1>
+    `-ReturnStmt 0x7fcd4586f358 <line:29:3, col:15>
+      `-BinaryOperator 0x7fcd4586f330 <col:10, col:15> '__attribute__((__vector_size__(32 * sizeof(short)))) short' '!='
+        |-ImplicitCastExpr 0x7fcd4586f2e8 <col:10> 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <LValueToRValue>
+        | `-DeclRefExpr 0x7fcd4586f2a0 <col:10> 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short' lvalue ParmVar 0x7fcd4586f170 'w' 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+        `-ImplicitCastExpr 0x7fcd4586f318 <col:15> 'W':'__attribute__((__vector_size__(32 * sizeof(short)))) short' <VectorSplat>
+          `-ImplicitCastExpr 0x7fcd4586f300 <col:15> 'short' <IntegralCast>
+            `-IntegerLiteral 0x7fcd4586f2c8 <col:15> 'int' 0

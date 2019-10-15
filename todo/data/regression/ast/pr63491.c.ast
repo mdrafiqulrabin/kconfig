@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f88a180a6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f88a2820c10 <../Data/C2AST/pr63491.c:4:1, col:57> col:57 referenced vector_128_t '__attribute__((__vector_size__(1 * sizeof(__int128_t)))) __int128_t'
+| `-VectorType 0x7f88a180b3d0 '__attribute__((__vector_size__(1 * sizeof(__int128_t)))) __int128_t' 1
+|   `-TypedefType 0x7f88a180b360 '__int128_t' sugar
+|     |-Typedef 0x7f88a180ac60 '__int128_t'
+|     `-BuiltinType 0x7f88a180a980 '__int128'
+|-TypedefDecl 0x7f88a2820c80 <line:5:1, col:28> col:28 referenced scalar_64_t 'unsigned long long'
+| `-BuiltinType 0x7f88a180a8c0 'unsigned long long'
+`-FunctionDecl 0x7f88a2820df0 <line:7:1, line:17:1> line:8:1 foo 'vector_128_t (void)'
+  `-CompoundStmt 0x7f88a2821558 <line:9:1, line:17:1>
+    |-DeclStmt 0x7f88a28211c8 <line:10:3, line:13:6>
+    | |-RecordDecl 0x7f88a2820ed0 <line:10:3, line:13:3> line:10:3 union definition
+    | | |-FieldDecl 0x7f88a2821058 <line:11:5, col:22> col:17 referenced i64 'scalar_64_t [2]'
+    | | `-FieldDecl 0x7f88a28210b0 <line:12:5, col:18> col:18 referenced v128 'vector_128_t':'__attribute__((__vector_size__(1 * sizeof(__int128_t)))) __int128_t'
+    | `-VarDecl 0x7f88a2821150 <line:10:3, line:13:5> col:5 used u 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)'
+    |-BinaryOperator 0x7f88a2821330 <line:14:3, col:14> 'scalar_64_t':'unsigned long long' '='
+    | |-ArraySubscriptExpr 0x7f88a28212d0 <col:3, col:10> 'scalar_64_t':'unsigned long long' lvalue
+    | | |-ImplicitCastExpr 0x7f88a28212b8 <col:3, col:5> 'scalar_64_t *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f88a2821208 <col:3, col:5> 'scalar_64_t [2]' lvalue .i64 0x7f88a2821058
+    | | |   `-DeclRefExpr 0x7f88a28211e0 <col:3> 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)' lvalue Var 0x7f88a2821150 'u' 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)'
+    | | `-IntegerLiteral 0x7f88a2821240 <col:9> 'int' 0
+    | `-ImplicitCastExpr 0x7f88a2821318 <col:14> 'scalar_64_t':'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f88a28212f8 <col:14> 'int' 1
+    |-BinaryOperator 0x7f88a28214a0 <line:15:3, col:14> 'scalar_64_t':'unsigned long long' '='
+    | |-ArraySubscriptExpr 0x7f88a2821440 <col:3, col:10> 'scalar_64_t':'unsigned long long' lvalue
+    | | |-ImplicitCastExpr 0x7f88a2821428 <col:3, col:5> 'scalar_64_t *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f88a28213d0 <col:3, col:5> 'scalar_64_t [2]' lvalue .i64 0x7f88a2821058
+    | | |   `-DeclRefExpr 0x7f88a28213a8 <col:3> 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)' lvalue Var 0x7f88a2821150 'u' 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)'
+    | | `-IntegerLiteral 0x7f88a2821408 <col:9> 'int' 1
+    | `-ImplicitCastExpr 0x7f88a2821488 <col:14> 'scalar_64_t':'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f88a2821468 <col:14> 'int' 2
+    `-ReturnStmt 0x7f88a2821540 <line:16:3, col:12>
+      `-ImplicitCastExpr 0x7f88a2821528 <col:10, col:12> 'vector_128_t':'__attribute__((__vector_size__(1 * sizeof(__int128_t)))) __int128_t' <LValueToRValue>
+        `-MemberExpr 0x7f88a28214f0 <col:10, col:12> 'vector_128_t':'__attribute__((__vector_size__(1 * sizeof(__int128_t)))) __int128_t' lvalue .v128 0x7f88a28210b0
+          `-DeclRefExpr 0x7f88a28214c8 <col:10> 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)' lvalue Var 0x7f88a2821150 'u' 'union (anonymous union at ../Data/C2AST/pr63491.c:10:3)':'union (anonymous at ../Data/C2AST/pr63491.c:10:3)'

@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff7b582bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff7b6014200 <../Data/C2AST/pr49120.c:6:1, line:12:1> line:7:1 main 'int ()'
+  `-CompoundStmt 0x7ff7b60147b8 <line:8:1, line:12:1>
+    |-DeclStmt 0x7ff7b6014378 <line:9:3, col:12>
+    | `-VarDecl 0x7ff7b60142f8 <col:3, col:11> col:7 used a 'int' cinit
+    |   `-IntegerLiteral 0x7ff7b6014358 <col:11> 'int' 1
+    |-DeclStmt 0x7ff7b6014748 <line:10:3, col:47>
+    | `-VarDecl 0x7ff7b60143a8 <col:3, col:46> col:7 used c 'int' cinit
+    |   `-ImplicitCastExpr 0x7ff7b6014730 <col:11, col:46> 'int' <IntegralCast>
+    |     `-StmtExpr 0x7ff7b6014710 <col:11, col:46> 'char'
+    |       `-CompoundStmt 0x7ff7b60146e8 <col:12, col:45>
+    |         |-DeclStmt 0x7ff7b6014548 <col:14, col:27>
+    |         | `-VarDecl 0x7ff7b60144e8 <col:14, col:26> col:19 used b 'char [a + 1]'
+    |         |-BinaryOperator 0x7ff7b6014620 <col:29, col:36> 'char' '='
+    |         | |-ArraySubscriptExpr 0x7ff7b60145c0 <col:29, col:32> 'char' lvalue
+    |         | | |-ImplicitCastExpr 0x7ff7b60145a8 <col:29> 'char *' <ArrayToPointerDecay>
+    |         | | | `-DeclRefExpr 0x7ff7b6014560 <col:29> 'char [a + 1]' lvalue Var 0x7ff7b60144e8 'b' 'char [a + 1]'
+    |         | | `-IntegerLiteral 0x7ff7b6014588 <col:31> 'int' 0
+    |         | `-ImplicitCastExpr 0x7ff7b6014608 <col:36> 'char' <IntegralCast>
+    |         |   `-IntegerLiteral 0x7ff7b60145e8 <col:36> 'int' 0
+    |         `-ImplicitCastExpr 0x7ff7b60146d0 <col:39, col:42> 'char' <LValueToRValue>
+    |           `-ArraySubscriptExpr 0x7ff7b60146a8 <col:39, col:42> 'char' lvalue
+    |             |-ImplicitCastExpr 0x7ff7b6014690 <col:39> 'char *' <ArrayToPointerDecay>
+    |             | `-DeclRefExpr 0x7ff7b6014648 <col:39> 'char [a + 1]' lvalue Var 0x7ff7b60144e8 'b' 'char [a + 1]'
+    |             `-IntegerLiteral 0x7ff7b6014670 <col:41> 'int' 0
+    `-ReturnStmt 0x7ff7b60147a0 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7ff7b6014788 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7ff7b6014760 <col:10> 'int' lvalue Var 0x7ff7b60143a8 'c' 'int'

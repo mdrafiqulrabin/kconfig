@@ -1,0 +1,93 @@
+TranslationUnitDecl 0x7fd2a202bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd2a206d8d8 <../Data/C2AST/pr59362.c:3:1, line:10:1> line:4:1 foo 'char *(char *, int)'
+| |-ParmVarDecl 0x7fd2a202c978 <col:6, col:12> col:12 used r 'char *'
+| |-ParmVarDecl 0x7fd2a206d800 <col:15, col:19> col:19 used s 'int'
+| `-CompoundStmt 0x7fd2a206e558 <line:5:1, line:10:1>
+|   |-BinaryOperator 0x7fd2a206e178 <line:6:3, col:69> 'char *' '='
+|   | |-DeclRefExpr 0x7fd2a206d9c8 <col:3> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|   | `-CallExpr 0x7fd2a206e0f0 <col:7, col:69> 'char *'
+|   |   |-ImplicitCastExpr 0x7fd2a206e0d8 <col:7> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd2a206dc58 <col:7> '<builtin fn type>' Function 0x7fd2a206da38 '__builtin___stpcpy_chk' 'char *(char *, const char *, unsigned long)'
+|   |   |-ImplicitCastExpr 0x7fd2a206e130 <col:31> 'char *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd2a206dc80 <col:31> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|   |   |-ImplicitCastExpr 0x7fd2a206e160 <col:34> 'const char *' <BitCast>
+|   |   | `-ImplicitCastExpr 0x7fd2a206e148 <col:34> 'char *' <ArrayToPointerDecay>
+|   |   |   `-StringLiteral 0x7fd2a206dce8 <col:34> 'char [4]' lvalue "abc"
+|   |   `-CallExpr 0x7fd2a206e010 <col:41, col:68> 'unsigned long'
+|   |     |-ImplicitCastExpr 0x7fd2a206dff8 <col:41> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fd2a206df48 <col:41> '<builtin fn type>' Function 0x7fd2a206dd90 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   |     |-ImplicitCastExpr 0x7fd2a206e060 <col:64> 'const void *' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7fd2a206e048 <col:64> 'char *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fd2a206df70 <col:64> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|   |     `-IntegerLiteral 0x7fd2a206df98 <col:67> 'int' 1
+|   |-IfStmt 0x7fd2a206e4c8 <line:7:3, line:8:69>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fd2a206e1c8 <line:7:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd2a206e1a0 <col:7> 'int' lvalue ParmVar 0x7fd2a206d800 's' 'int'
+|   | |-BinaryOperator 0x7fd2a206e4a0 <line:8:5, col:69> 'char *' '='
+|   | | |-DeclRefExpr 0x7fd2a206e1e0 <col:5> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|   | | `-CallExpr 0x7fd2a206e418 <col:9, col:69> 'char *'
+|   | |   |-ImplicitCastExpr 0x7fd2a206e400 <col:9> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+|   | |   | `-DeclRefExpr 0x7fd2a206e208 <col:9> '<builtin fn type>' Function 0x7fd2a206da38 '__builtin___stpcpy_chk' 'char *(char *, const char *, unsigned long)'
+|   | |   |-ImplicitCastExpr 0x7fd2a206e458 <col:33> 'char *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fd2a206e230 <col:33> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|   | |   |-ImplicitCastExpr 0x7fd2a206e488 <col:36> 'const char *' <BitCast>
+|   | |   | `-ImplicitCastExpr 0x7fd2a206e470 <col:36> 'char *' <ArrayToPointerDecay>
+|   | |   |   `-StringLiteral 0x7fd2a206e298 <col:36> 'char [2]' lvalue "d"
+|   | |   `-CallExpr 0x7fd2a206e368 <col:41, col:68> 'unsigned long'
+|   | |     |-ImplicitCastExpr 0x7fd2a206e350 <col:41> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|   | |     | `-DeclRefExpr 0x7fd2a206e2c8 <col:41> '<builtin fn type>' Function 0x7fd2a206dd90 '__builtin_object_size' 'unsigned long (const void *, int)'
+|   | |     |-ImplicitCastExpr 0x7fd2a206e3b8 <col:64> 'const void *' <BitCast>
+|   | |     | `-ImplicitCastExpr 0x7fd2a206e3a0 <col:64> 'char *' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x7fd2a206e2f0 <col:64> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|   | |     `-IntegerLiteral 0x7fd2a206e318 <col:67> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd2a206e540 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7fd2a206e528 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd2a206e500 <col:10> 'char *' lvalue ParmVar 0x7fd2a202c978 'r' 'char *'
+|-FunctionDecl 0x7fd2a206da38 <line:6:7> col:7 implicit used __builtin___stpcpy_chk 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd2a206dad8 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fd2a206db38 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7fd2a206db98 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fd2a206dc10 <col:7> Implicit
+|-FunctionDecl 0x7fd2a206dd90 <col:41> col:41 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7fd2a206de30 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fd2a206de90 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fd2a206df00 <col:41> Implicit
+|-VarDecl 0x7fd2a206e598 <line:12:1, col:7> col:7 used a 'char *'
+|-VarDecl 0x7fd2a206e610 <line:13:1, col:10> col:10 used b 'long'
+`-FunctionDecl 0x7fd2a206e730 <line:15:1, line:21:1> line:16:1 bar 'void (void)'
+  `-CompoundStmt 0x7fd2a28004a0 <line:17:1, line:21:1>
+    |-BinaryOperator 0x7fd2a28000e8 <line:18:3, col:34> 'long' '='
+    | |-DeclRefExpr 0x7fd2a206e7d0 <col:3> 'long' lvalue Var 0x7fd2a206e610 'b' 'long'
+    | `-ImplicitCastExpr 0x7fd2a28000d0 <col:7, col:34> 'long' <IntegralCast>
+    |   `-CallExpr 0x7fd2a2800080 <col:7, col:34> 'unsigned long'
+    |     |-ImplicitCastExpr 0x7fd2a2800068 <col:7> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+    |     | `-DeclRefExpr 0x7fd2a2800000 <col:7> '<builtin fn type>' Function 0x7fd2a206dd90 '__builtin_object_size' 'unsigned long (const void *, int)'
+    |     |-ImplicitCastExpr 0x7fd2a28000b8 <col:30> 'const void *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7fd2a2800028 <col:30> 'int' 0
+    |     `-IntegerLiteral 0x7fd2a2800048 <col:33> 'int' 0
+    |-BinaryOperator 0x7fd2a2800308 <line:19:3, col:39> 'char *' '='
+    | |-DeclRefExpr 0x7fd2a2800110 <col:3> 'char *' lvalue Var 0x7fd2a206e598 'a' 'char *'
+    | `-CallExpr 0x7fd2a2800250 <col:7, col:39> 'char *'
+    |   |-ImplicitCastExpr 0x7fd2a2800238 <col:7> 'char *(*)(char *, const char *, unsigned long)' <BuiltinFnToFnPtr>
+    |   | `-DeclRefExpr 0x7fd2a2800138 <col:7> '<builtin fn type>' Function 0x7fd2a206da38 '__builtin___stpcpy_chk' 'char *(char *, const char *, unsigned long)'
+    |   |-ImplicitCastExpr 0x7fd2a2800290 <col:31> 'char *' <NullToPointer>
+    |   | `-IntegerLiteral 0x7fd2a2800160 <col:31> 'int' 0
+    |   |-ImplicitCastExpr 0x7fd2a28002c0 <col:34> 'const char *' <BitCast>
+    |   | `-ImplicitCastExpr 0x7fd2a28002a8 <col:34> 'char *' <ArrayToPointerDecay>
+    |   |   `-StringLiteral 0x7fd2a28001b8 <col:34> 'char [1]' lvalue ""
+    |   `-ImplicitCastExpr 0x7fd2a28002f0 <col:38> 'unsigned long' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fd2a28002d8 <col:38> 'long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd2a28001e0 <col:38> 'long' lvalue Var 0x7fd2a206e610 'b' 'long'
+    `-BinaryOperator 0x7fd2a2800478 <line:20:3, col:34> 'long' '='
+      |-DeclRefExpr 0x7fd2a2800330 <col:3> 'long' lvalue Var 0x7fd2a206e610 'b' 'long'
+      `-ImplicitCastExpr 0x7fd2a2800460 <col:7, col:34> 'long' <IntegralCast>
+        `-CallExpr 0x7fd2a28003f8 <col:7, col:34> 'unsigned long'
+          |-ImplicitCastExpr 0x7fd2a28003e0 <col:7> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+          | `-DeclRefExpr 0x7fd2a2800358 <col:7> '<builtin fn type>' Function 0x7fd2a206dd90 '__builtin_object_size' 'unsigned long (const void *, int)'
+          |-ImplicitCastExpr 0x7fd2a2800448 <col:30> 'const void *' <BitCast>
+          | `-ImplicitCastExpr 0x7fd2a2800430 <col:30> 'char *' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd2a2800380 <col:30> 'char *' lvalue Var 0x7fd2a206e598 'a' 'char *'
+          `-IntegerLiteral 0x7fd2a28003a8 <col:33> 'int' 0

@@ -1,0 +1,123 @@
+TranslationUnitDecl 0x7f96df02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f96df06d850 <../Data/C2AST/pr26587.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f96df06d8f0 prev 0x7f96df06d850 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7f96df06d9a8 <line:5:1, col:22> col:22 referenced BF_word 'unsigned int'
+| `-BuiltinType 0x7f96df02be80 'unsigned int'
+|-TypedefDecl 0x7f96df06db28 <line:6:1, col:30> col:17 referenced BF_key 'BF_word [18]'
+| `-ConstantArrayType 0x7f96df06dad0 'BF_word [18]' 18 
+|   `-TypedefType 0x7f96df06da00 'BF_word' sugar
+|     |-Typedef 0x7f96df06d9a8 'BF_word'
+|     `-BuiltinType 0x7f96df02be80 'unsigned int'
+|-RecordDecl 0x7f96df06db80 <line:7:8, line:9:1> line:7:8 struct definition
+| `-FieldDecl 0x7f96df06dc60 <line:8:5, col:12> col:12 referenced P 'BF_key':'BF_word [18]'
+|-VarDecl 0x7f96df06dd00 <line:7:1, line:9:3> col:3 used BF_current 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)' static
+`-FunctionDecl 0x7f96df06de88 <line:10:1, line:29:1> line:10:5 main 'int (void)'
+  `-CompoundStmt 0x7f96df800c18 <line:11:1, line:29:1>
+    |-DeclStmt 0x7f96df06dfc8 <line:12:5, col:14>
+    | `-VarDecl 0x7f96df06df68 <col:5, col:13> col:13 used L 'BF_word':'unsigned int'
+    |-DeclStmt 0x7f96df06e130 <line:13:5, col:23>
+    | |-VarDecl 0x7f96df06dff0 <col:5, col:13> col:13 used tmp4 'BF_word':'unsigned int'
+    | `-VarDecl 0x7f96df06e0b8 <col:5, col:20> col:20 used ptr 'BF_word *'
+    |-DeclStmt 0x7f96df06e1b8 <line:14:5, col:14>
+    | `-VarDecl 0x7f96df06e158 <col:5, col:13> col:13 used i 'BF_word':'unsigned int'
+    |-ForStmt 0x7f96df06e560 <line:15:5, line:16:31>
+    | |-BinaryOperator 0x7f96df06e230 <line:15:10, col:14> 'BF_word':'unsigned int' '='
+    | | |-DeclRefExpr 0x7f96df06e1d0 <col:10> 'BF_word':'unsigned int' lvalue Var 0x7f96df06e158 'i' 'BF_word':'unsigned int'
+    | | `-ImplicitCastExpr 0x7f96df06e218 <col:14> 'BF_word':'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f96df06e1f8 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f96df06e318 <col:17, col:26> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f96df06e2e8 <col:17> 'BF_word':'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f96df06e258 <col:17> 'BF_word':'unsigned int' lvalue Var 0x7f96df06e158 'i' 'BF_word':'unsigned int'
+    | | `-ImplicitCastExpr 0x7f96df06e300 <col:21, col:26> 'unsigned int' <IntegralCast>
+    | |   `-BinaryOperator 0x7f96df06e2c0 <col:21, col:26> 'int' '+'
+    | |     |-IntegerLiteral 0x7f96df06e280 <col:21> 'int' 16
+    | |     `-IntegerLiteral 0x7f96df06e2a0 <col:26> 'int' 2
+    | |-UnaryOperator 0x7f96df06e368 <col:29, col:30> 'BF_word':'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7f96df06e340 <col:29> 'BF_word':'unsigned int' lvalue Var 0x7f96df06e158 'i' 'BF_word':'unsigned int'
+    | `-BinaryOperator 0x7f96df06e4f0 <line:16:9, col:31> 'BF_word':'unsigned int' '='
+    |   |-ArraySubscriptExpr 0x7f96df06e440 <col:9, col:23> 'BF_word':'unsigned int' lvalue
+    |   | |-ImplicitCastExpr 0x7f96df06e410 <col:9, col:20> 'BF_word *' <ArrayToPointerDecay>
+    |   | | `-MemberExpr 0x7f96df06e3b0 <col:9, col:20> 'BF_key':'BF_word [18]' lvalue .P 0x7f96df06dc60
+    |   | |   `-DeclRefExpr 0x7f96df06e388 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)' lvalue Var 0x7f96df06dd00 'BF_current' 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)'
+    |   | `-ImplicitCastExpr 0x7f96df06e428 <col:22> 'BF_word':'unsigned int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f96df06e3e8 <col:22> 'BF_word':'unsigned int' lvalue Var 0x7f96df06e158 'i' 'BF_word':'unsigned int'
+    |   `-BinaryOperator 0x7f96df06e4c8 <col:27, col:31> 'unsigned int' '*'
+    |     |-ImplicitCastExpr 0x7f96df06e4b0 <col:27> 'BF_word':'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f96df06e468 <col:27> 'BF_word':'unsigned int' lvalue Var 0x7f96df06e158 'i' 'BF_word':'unsigned int'
+    |     `-IntegerLiteral 0x7f96df06e490 <col:31> 'unsigned int' 2557891634
+    |-BinaryOperator 0x7f96df06e5f8 <line:17:5, col:9> 'BF_word':'unsigned int' '='
+    | |-DeclRefExpr 0x7f96df06e598 <col:5> 'BF_word':'unsigned int' lvalue Var 0x7f96df06df68 'L' 'BF_word':'unsigned int'
+    | `-ImplicitCastExpr 0x7f96df06e5e0 <col:9> 'BF_word':'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f96df06e5c0 <col:9> 'int' 0
+    |-BinaryOperator 0x7f96df06e6c0 <line:18:5, col:22> 'BF_word *' '='
+    | |-DeclRefExpr 0x7f96df06e620 <col:5> 'BF_word *' lvalue Var 0x7f96df06e0b8 'ptr' 'BF_word *'
+    | `-ImplicitCastExpr 0x7f96df06e6a8 <col:11, col:22> 'BF_word *' <ArrayToPointerDecay>
+    |   `-MemberExpr 0x7f96df06e670 <col:11, col:22> 'BF_key':'BF_word [18]' lvalue .P 0x7f96df06dc60
+    |     `-DeclRefExpr 0x7f96df06e648 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)' lvalue Var 0x7f96df06dd00 'BF_current' 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)'
+    |-DoStmt 0x7f96df800a58 <line:19:5, line:25:41>
+    | |-CompoundStmt 0x7f96df800890 <line:19:8, line:25:5>
+    | | |-CompoundAssignOperator 0x7f96df06e730 <line:20:9, col:16> 'BF_word *' '+=' ComputeLHSTy='BF_word *' ComputeResultTy='BF_word *'
+    | | | |-DeclRefExpr 0x7f96df06e6e8 <col:9> 'BF_word *' lvalue Var 0x7f96df06e0b8 'ptr' 'BF_word *'
+    | | | `-IntegerLiteral 0x7f96df06e710 <col:16> 'int' 2
+    | | |-CompoundAssignOperator 0x7f96df800478 <line:21:9, col:28> 'BF_word':'unsigned int' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | | | |-DeclRefExpr 0x7f96df06e768 <col:9> 'BF_word':'unsigned int' lvalue Var 0x7f96df06df68 'L' 'BF_word':'unsigned int'
+    | | | `-ImplicitCastExpr 0x7f96df800460 <col:14, col:28> 'BF_word':'unsigned int' <LValueToRValue>
+    | | |   `-ArraySubscriptExpr 0x7f96df800438 <col:14, col:28> 'BF_word':'unsigned int' lvalue
+    | | |     |-ImplicitCastExpr 0x7f96df800420 <col:14, col:25> 'BF_word *' <ArrayToPointerDecay>
+    | | |     | `-MemberExpr 0x7f96df06e7b8 <col:14, col:25> 'BF_key':'BF_word [18]' lvalue .P 0x7f96df06dc60
+    | | |     |   `-DeclRefExpr 0x7f96df06e790 <col:14> 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)' lvalue Var 0x7f96df06dd00 'BF_current' 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)'
+    | | |     `-IntegerLiteral 0x7f96df800400 <col:27> 'int' 0
+    | | |-BinaryOperator 0x7f96df800560 <line:22:9, col:21> 'BF_word':'unsigned int' '='
+    | | | |-DeclRefExpr 0x7f96df8004b0 <col:9> 'BF_word':'unsigned int' lvalue Var 0x7f96df06dff0 'tmp4' 'BF_word':'unsigned int'
+    | | | `-BinaryOperator 0x7f96df800538 <col:16, col:21> 'BF_word':'unsigned int' '>>'
+    | | |   |-ImplicitCastExpr 0x7f96df800520 <col:16> 'BF_word':'unsigned int' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7f96df8004d8 <col:16> 'BF_word':'unsigned int' lvalue Var 0x7f96df06df68 'L' 'BF_word':'unsigned int'
+    | | |   `-IntegerLiteral 0x7f96df800500 <col:21> 'int' 24
+    | | |-BinaryOperator 0x7f96df800738 <line:23:9, col:39> 'BF_word':'unsigned int' '='
+    | | | |-DeclRefExpr 0x7f96df800588 <col:9> 'BF_word':'unsigned int' lvalue Var 0x7f96df06df68 'L' 'BF_word':'unsigned int'
+    | | | `-BinaryOperator 0x7f96df800710 <col:13, col:39> 'unsigned int' '^'
+    | | |   |-ImplicitCastExpr 0x7f96df8006e0 <col:13> 'BF_word':'unsigned int' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7f96df8005b0 <col:13> 'BF_word':'unsigned int' lvalue Var 0x7f96df06dff0 'tmp4' 'BF_word':'unsigned int'
+    | | |   `-ImplicitCastExpr 0x7f96df8006f8 <col:20, col:39> 'BF_word':'unsigned int' <LValueToRValue>
+    | | |     `-ArraySubscriptExpr 0x7f96df8006b8 <col:20, col:39> 'BF_word':'unsigned int' lvalue
+    | | |       |-ImplicitCastExpr 0x7f96df8006a0 <col:20, col:31> 'BF_word *' <ArrayToPointerDecay>
+    | | |       | `-MemberExpr 0x7f96df800600 <col:20, col:31> 'BF_key':'BF_word [18]' lvalue .P 0x7f96df06dc60
+    | | |       |   `-DeclRefExpr 0x7f96df8005d8 <col:20> 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)' lvalue Var 0x7f96df06dd00 'BF_current' 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)'
+    | | |       `-BinaryOperator 0x7f96df800678 <col:33, col:38> 'int' '+'
+    | | |         |-IntegerLiteral 0x7f96df800638 <col:33> 'int' 16
+    | | |         `-IntegerLiteral 0x7f96df800658 <col:38> 'int' 1
+    | | `-BinaryOperator 0x7f96df800868 <line:24:9, col:22> 'BF_word':'unsigned int' '='
+    | |   |-UnaryOperator 0x7f96df800808 <col:9, col:18> 'BF_word':'unsigned int' lvalue prefix '*'
+    | |   | `-ParenExpr 0x7f96df8007e8 <col:10, col:18> 'BF_word *'
+    | |   |   `-BinaryOperator 0x7f96df8007c0 <col:11, col:17> 'BF_word *' '-'
+    | |   |     |-ImplicitCastExpr 0x7f96df8007a8 <col:11> 'BF_word *' <LValueToRValue>
+    | |   |     | `-DeclRefExpr 0x7f96df800760 <col:11> 'BF_word *' lvalue Var 0x7f96df06e0b8 'ptr' 'BF_word *'
+    | |   |     `-IntegerLiteral 0x7f96df800788 <col:17> 'int' 2
+    | |   `-ImplicitCastExpr 0x7f96df800850 <col:22> 'BF_word':'unsigned int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f96df800828 <col:22> 'BF_word':'unsigned int' lvalue Var 0x7f96df06df68 'L' 'BF_word':'unsigned int'
+    | `-BinaryOperator 0x7f96df800a30 <line:25:14, col:40> 'int' '<'
+    |   |-ImplicitCastExpr 0x7f96df800a18 <col:14> 'BF_word *' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f96df8008c8 <col:14> 'BF_word *' lvalue Var 0x7f96df06e0b8 'ptr' 'BF_word *'
+    |   `-UnaryOperator 0x7f96df8009f8 <col:20, col:40> 'BF_word *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f96df8009d0 <col:21, col:40> 'BF_word':'unsigned int' lvalue
+    |       |-ImplicitCastExpr 0x7f96df8009b8 <col:21, col:32> 'BF_word *' <ArrayToPointerDecay>
+    |       | `-MemberExpr 0x7f96df800918 <col:21, col:32> 'BF_key':'BF_word [18]' lvalue .P 0x7f96df06dc60
+    |       |   `-DeclRefExpr 0x7f96df8008f0 <col:21> 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)' lvalue Var 0x7f96df06dd00 'BF_current' 'struct (anonymous struct at ../Data/C2AST/pr26587.c:7:8)':'struct (anonymous at ../Data/C2AST/pr26587.c:7:8)'
+    |       `-BinaryOperator 0x7f96df800990 <col:34, col:39> 'int' '+'
+    |         |-IntegerLiteral 0x7f96df800950 <col:34> 'int' 16
+    |         `-IntegerLiteral 0x7f96df800970 <col:39> 'int' 2
+    |-IfStmt 0x7f96df800ba8 <line:26:5, line:27:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f96df800af0 <line:26:9, col:14> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f96df800ac0 <col:9> 'BF_word':'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f96df800a78 <col:9> 'BF_word':'unsigned int' lvalue Var 0x7f96df06df68 'L' 'BF_word':'unsigned int'
+    | | `-ImplicitCastExpr 0x7f96df800ad8 <col:14> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f96df800aa0 <col:14> 'int' 534484818
+    | |-CallExpr 0x7f96df800b80 <line:27:9, col:15> 'void'
+    | | `-ImplicitCastExpr 0x7f96df800b68 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f96df800b18 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7f96df06d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f96df800c00 <line:28:5, col:12>
+      `-IntegerLiteral 0x7f96df800be0 <col:12> 'int' 0

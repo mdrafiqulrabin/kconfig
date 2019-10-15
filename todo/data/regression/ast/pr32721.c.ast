@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb0720174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb072814200 <../Data/C2AST/pr32721.c:4:1, col:15> col:5 used spinlock 'int [2]'
+`-FunctionDecl 0x7fb0728142f0 <line:5:1, line:15:1> line:5:5 main 'int ()'
+  `-CompoundStmt 0x7fb072814920 <line:6:1, line:15:1>
+    |-DeclStmt 0x7fb072814430 <line:7:1, col:25>
+    | `-VarDecl 0x7fb0728143d0 <col:1, col:16> col:16 used spinlock0 'volatile int *'
+    |-DeclStmt 0x7fb0728144c0 <line:8:1, col:25>
+    | `-VarDecl 0x7fb072814460 <col:1, col:16> col:16 used spinlock1 'volatile int *'
+    |-BinaryOperator 0x7fb0728145f0 <line:9:1, col:24> 'volatile int *' '='
+    | |-DeclRefExpr 0x7fb0728144d8 <col:1> 'volatile int *' lvalue Var 0x7fb0728143d0 'spinlock0' 'volatile int *'
+    | `-ImplicitCastExpr 0x7fb0728145d8 <col:13, col:24> 'volatile int *' <BitCast>
+    |   `-UnaryOperator 0x7fb0728145b8 <col:13, col:24> 'int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7fb072814590 <col:14, col:24> 'int' lvalue
+    |       |-ImplicitCastExpr 0x7fb072814578 <col:14> 'int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fb072814500 <col:14> 'int [2]' lvalue Var 0x7fb072814200 'spinlock' 'int [2]'
+    |       `-IntegerLiteral 0x7fb072814528 <col:23> 'int' 0
+    |-BinaryOperator 0x7fb072814700 <line:10:1, col:24> 'volatile int *' '='
+    | |-DeclRefExpr 0x7fb072814618 <col:1> 'volatile int *' lvalue Var 0x7fb072814460 'spinlock1' 'volatile int *'
+    | `-ImplicitCastExpr 0x7fb0728146e8 <col:13, col:24> 'volatile int *' <BitCast>
+    |   `-UnaryOperator 0x7fb0728146c8 <col:13, col:24> 'int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7fb0728146a0 <col:14, col:24> 'int' lvalue
+    |       |-ImplicitCastExpr 0x7fb072814688 <col:14> 'int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fb072814640 <col:14> 'int [2]' lvalue Var 0x7fb072814200 'spinlock' 'int [2]'
+    |       `-IntegerLiteral 0x7fb072814668 <col:23> 'int' 1
+    |-BinaryOperator 0x7fb0728147a8 <line:12:1, col:14> 'int' '='
+    | |-UnaryOperator 0x7fb072814768 <col:1, col:2> 'volatile int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb072814750 <col:2> 'volatile int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb072814728 <col:2> 'volatile int *' lvalue Var 0x7fb0728143d0 'spinlock0' 'volatile int *'
+    | `-IntegerLiteral 0x7fb072814788 <col:14> 'int' 0
+    |-BinaryOperator 0x7fb072814850 <line:13:1, col:14> 'int' '='
+    | |-UnaryOperator 0x7fb072814810 <col:1, col:2> 'volatile int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fb0728147f8 <col:2> 'volatile int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb0728147d0 <col:2> 'volatile int *' lvalue Var 0x7fb072814460 'spinlock1' 'volatile int *'
+    | `-IntegerLiteral 0x7fb072814830 <col:14> 'int' 0
+    `-WhileStmt 0x7fb072814900 <line:14:2, col:20>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb0728148d8 <col:9, col:10> 'int' <LValueToRValue>
+      | `-UnaryOperator 0x7fb0728148b8 <col:9, col:10> 'volatile int' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7fb0728148a0 <col:10> 'volatile int *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fb072814878 <col:10> 'volatile int *' lvalue Var 0x7fb0728143d0 'spinlock0' 'volatile int *'
+      `-NullStmt 0x7fb0728148f0 <col:20>

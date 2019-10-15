@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f85f4003ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f85f4838a20 <../Data/C2AST/pr55934.c:4:1, line:10:1> line:5:1 foo '_Complex float (void)'
+  `-CompoundStmt 0x7f85f4838d38 <line:6:1, line:10:1>
+    |-DeclStmt 0x7f85f4838b70 <line:7:3, col:19>
+    | `-VarDecl 0x7f85f4838b10 <col:3, col:18> col:18 used x '_Complex float'
+    |-GCCAsmStmt 0x7f85f4838c80 <line:8:3, col:23>
+    | `-DeclRefExpr 0x7f85f4838c58 <col:21> '_Complex float' lvalue Var 0x7f85f4838b10 'x' '_Complex float'
+    `-ReturnStmt 0x7f85f4838d20 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7f85f4838d08 <col:10> '_Complex float' <LValueToRValue>
+        `-DeclRefExpr 0x7f85f4838ce0 <col:10> '_Complex float' lvalue Var 0x7f85f4838b10 'x' '_Complex float'

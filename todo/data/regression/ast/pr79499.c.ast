@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fc6cf02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc6cf02c960 <../Data/C2AST/pr79499.c:5:1, col:29> col:8 struct S definition
+| |-FieldDecl 0x7fc6cf8142d0 <col:12, col:22> col:22 referenced a 'struct S *'
+| `-FieldDecl 0x7fc6cf814340 <col:12, col:26> col:26 referenced b 'struct S *'
+`-FunctionDecl 0x7fc6cf8144b0 <line:7:1, line:13:1> line:8:1 foo 'void (struct S *)'
+  |-ParmVarDecl 0x7fc6cf8143b0 <col:6, col:16> col:16 used x 'struct S *'
+  `-CompoundStmt 0x7fc6cf8147c8 <line:9:1, line:13:1>
+    `-DoStmt 0x7fc6cf8147a8 <line:10:3, line:12:18>
+      |-BinaryOperator 0x7fc6cf8146a0 <line:11:5, col:15> 'struct S *' '='
+      | |-MemberExpr 0x7fc6cf8145d8 <col:5, col:8> 'struct S *' lvalue ->b 0x7fc6cf814340
+      | | `-ImplicitCastExpr 0x7fc6cf8145c0 <col:5> 'struct S *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fc6cf814598 <col:5> 'struct S *' lvalue ParmVar 0x7fc6cf8143b0 'x' 'struct S *'
+      | `-ImplicitCastExpr 0x7fc6cf814688 <col:12, col:15> 'struct S *' <LValueToRValue>
+      |   `-MemberExpr 0x7fc6cf814650 <col:12, col:15> 'struct S *' lvalue ->a 0x7fc6cf8142d0
+      |     `-ImplicitCastExpr 0x7fc6cf814638 <col:12> 'struct S *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fc6cf814610 <col:12> 'struct S *' lvalue ParmVar 0x7fc6cf8143b0 'x' 'struct S *'
+      `-BinaryOperator 0x7fc6cf814780 <line:12:10, col:17> 'struct S *' '='
+        |-DeclRefExpr 0x7fc6cf8146c8 <col:10> 'struct S *' lvalue ParmVar 0x7fc6cf8143b0 'x' 'struct S *'
+        `-ImplicitCastExpr 0x7fc6cf814768 <col:14, col:17> 'struct S *' <LValueToRValue>
+          `-MemberExpr 0x7fc6cf814730 <col:14, col:17> 'struct S *' lvalue ->a 0x7fc6cf8142d0
+            `-ImplicitCastExpr 0x7fc6cf814718 <col:14> 'struct S *' <LValueToRValue>
+              `-DeclRefExpr 0x7fc6cf8146f0 <col:14> 'struct S *' lvalue ParmVar 0x7fc6cf8143b0 'x' 'struct S *'

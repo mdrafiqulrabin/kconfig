@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fddbb8098e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fddbc814258 <../Data/C2AST/pr66567.c:4:1, col:13> col:9 used b 'void (*)()'
+|-FunctionDecl 0x7fddbc8143d0 <line:6:1, line:11:1> line:6:6 used fn1 'void (const int *)'
+| |-ParmVarDecl 0x7fddbc814310 <col:11, col:22> col:22 p1 'const int *'
+| `-CompoundStmt 0x7fddbc814598 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7fddbc814558 <line:8:3, col:36>
+|   | `-VarDecl 0x7fddbc814490 <col:3, col:22> col:16 a 'void *' static cinit
+|   |   `-AddrLabelExpr 0x7fddbc814538 <col:20, col:22> 'void *' conv_1234_123C 0x7fddbc8144f0
+|   `-LabelStmt 0x7fddbc814580 <line:9:2, line:10:3> 'conv_1234_123C'
+|     `-NullStmt 0x7fddbc814570 <col:3>
+`-FunctionDecl 0x7fddbc8145d8 <line:13:1, line:16:1> line:13:6 fn2 'void ()'
+  `-CompoundStmt 0x7fddbc814750 <line:14:1, line:16:1>
+    `-BinaryOperator 0x7fddbc814728 <line:15:3, col:7> 'void (*)()' '='
+      |-DeclRefExpr 0x7fddbc814678 <col:3> 'void (*)()' lvalue Var 0x7fddbc814258 'b' 'void (*)()'
+      `-ImplicitCastExpr 0x7fddbc814710 <col:7> 'void (*)()' <BitCast>
+        `-ImplicitCastExpr 0x7fddbc8146f8 <col:7> 'void (*)(const int *)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fddbc8146a0 <col:7> 'void (const int *)' Function 0x7fddbc8143d0 'fn1' 'void (const int *)'

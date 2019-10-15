@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc04a02bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fc04a02c960 <../Data/C2AST/pr65984.c:9:1, col:21> col:6 E
+| |-EnumConstantDecl 0x7fc04a814220 <col:10> col:10 E0 'int'
+| |-EnumConstantDecl 0x7fc04a814268 <col:14> col:14 E1 'int'
+| `-EnumConstantDecl 0x7fc04a8142b0 <col:18> col:18 E2 'int'
+|-VarDecl 0x7fc04a8143f8 <line:10:1, col:11> col:8 used e 'enum E [2]'
+|-VarDecl 0x7fc04a8144e0 <line:6:14, line:11:7> col:7 used b 'bool *'
+|-FunctionDecl 0x7fc04a814628 <line:13:1, line:17:1> line:14:1 foo 'int (int)'
+| |-ParmVarDecl 0x7fc04a814558 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fc04a814818 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fc04a814800 <line:16:3, col:13>
+|     `-ImplicitCastExpr 0x7fc04a8147e8 <col:10, col:13> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fc04a8147d0 <col:10, col:13> 'enum E':'enum E' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7fc04a8147a8 <col:10, col:13> 'enum E':'enum E' lvalue
+|           |-ImplicitCastExpr 0x7fc04a814778 <col:10> 'enum E *' <ArrayToPointerDecay>
+|           | `-DeclRefExpr 0x7fc04a8146d0 <col:10> 'enum E [2]' lvalue Var 0x7fc04a8143f8 'e' 'enum E [2]'
+|           `-ImplicitCastExpr 0x7fc04a814790 <col:12> 'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fc04a8146f8 <col:12> 'int' lvalue ParmVar 0x7fc04a814558 'i' 'int'
+`-FunctionDecl 0x7fc04a8148d8 <line:19:1, line:23:1> line:20:1 bar 'int (int)'
+  |-ParmVarDecl 0x7fc04a814848 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fc04a814a70 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7fc04a814a58 <line:22:3, col:13>
+      `-ImplicitCastExpr 0x7fc04a814a40 <col:10, col:13> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fc04a814a28 <col:10, col:13> 'bool' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fc04a814a00 <col:10, col:13> 'bool' lvalue
+            |-ImplicitCastExpr 0x7fc04a8149d0 <col:10> 'bool *' <LValueToRValue>
+            | `-DeclRefExpr 0x7fc04a814980 <col:10> 'bool *' lvalue Var 0x7fc04a8144e0 'b' 'bool *'
+            `-ImplicitCastExpr 0x7fc04a8149e8 <col:12> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fc04a8149a8 <col:12> 'int' lvalue ParmVar 0x7fc04a814848 'i' 'int'

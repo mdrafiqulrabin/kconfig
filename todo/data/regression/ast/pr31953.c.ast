@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fd4af02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd4af02c960 <../Data/C2AST/pr31953.c:1:1, line:4:1> line:1:8 struct WView definition
+| `-FieldDecl 0x7fd4af814258 <line:3:3, col:20> col:7 referenced hexedit_mode 'int'
+|   `-IntegerLiteral 0x7fd4af814220 <col:20> 'int' 1
+`-FunctionDecl 0x7fd4af814458 <line:5:1, line:14:1> line:5:1 toggle_hexedit_mode 'int (struct WView *)'
+  |-ParmVarDecl 0x7fd4af814350 <col:22, col:36> col:36 used view 'struct WView *'
+  `-CompoundStmt 0x7fd4af814780 <line:6:1, line:14:1>
+    `-IfStmt 0x7fd4af814748 <line:7:3, line:13:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd4af8145b8 <line:7:7, col:13> 'int' <LValueToRValue>
+      | `-MemberExpr 0x7fd4af814580 <col:7, col:13> 'int' lvalue bitfield ->hexedit_mode 0x7fd4af814258
+      |   `-ImplicitCastExpr 0x7fd4af814568 <col:7> 'struct WView *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fd4af814540 <col:7> 'struct WView *' lvalue ParmVar 0x7fd4af814350 'view' 'struct WView *'
+      |-CompoundStmt 0x7fd4af8145d0 <line:8:5, line:9:5>
+      `-CompoundStmt 0x7fd4af814730 <line:11:5, line:13:5>
+        `-BinaryOperator 0x7fd4af814708 <line:12:7, col:35> 'int' '='
+          |-MemberExpr 0x7fd4af814620 <col:7, col:13> 'int' lvalue bitfield ->hexedit_mode 0x7fd4af814258
+          | `-ImplicitCastExpr 0x7fd4af814608 <col:7> 'struct WView *' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd4af8145e0 <col:7> 'struct WView *' lvalue ParmVar 0x7fd4af814350 'view' 'struct WView *'
+          `-UnaryOperator 0x7fd4af8146e8 <col:28, col:35> 'int' prefix '!'
+            `-ImplicitCastExpr 0x7fd4af8146d0 <col:29, col:35> 'int' <LValueToRValue>
+              `-MemberExpr 0x7fd4af814698 <col:29, col:35> 'int' lvalue bitfield ->hexedit_mode 0x7fd4af814258
+                `-ImplicitCastExpr 0x7fd4af814680 <col:29> 'struct WView *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fd4af814658 <col:29> 'struct WView *' lvalue ParmVar 0x7fd4af814350 'view' 'struct WView *'

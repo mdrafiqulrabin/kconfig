@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fc5f1828ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc5f2014200 <../Data/C2AST/pr70190.c:5:1, line:13:1> line:6:1 fn1 'int ()'
+  `-CompoundStmt 0x7fc5f2014938 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fc5f20143f8 <line:8:3, col:26>
+    | `-VarDecl 0x7fc5f2014328 <col:3, col:21> col:15 used a 'char [4]' static cinit
+    |   `-StringLiteral 0x7fc5f20143c8 <col:21> 'char [4]' lvalue "foo"
+    |-DeclStmt 0x7fc5f2014678 <line:9:3, col:36>
+    | `-VarDecl 0x7fc5f2014460 <col:3, col:35> col:16 used b 'void *[2]' static cinit
+    |   `-InitListExpr 0x7fc5f20145e0 <col:22, col:35> 'void *[2]'
+    |     |-AddrLabelExpr 0x7fc5f2014508 <col:24, col:26> 'void *' l1 0x7fc5f20144c0
+    |     `-AddrLabelExpr 0x7fc5f2014570 <col:30, col:32> 'void *' l2 0x7fc5f2014528
+    |-IndirectGotoStmt 0x7fc5f20147c8 <line:10:3, col:14>
+    | `-ImplicitCastExpr 0x7fc5f20147b0 <col:9, col:14> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fc5f2014798 <col:9, col:14> 'void *' <LValueToRValue>
+    |     `-ParenExpr 0x7fc5f2014748 <col:9, col:14> 'void *' lvalue
+    |       `-ArraySubscriptExpr 0x7fc5f2014720 <col:10, col:13> 'void *' lvalue
+    |         |-ImplicitCastExpr 0x7fc5f2014708 <col:10> 'void **' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fc5f2014690 <col:10> 'void *[2]' lvalue Var 0x7fc5f2014460 'b' 'void *[2]'
+    |         `-IntegerLiteral 0x7fc5f20146b8 <col:12> 'int' 1
+    |-LabelStmt 0x7fc5f20148d0 <line:11:2, col:17> 'l1'
+    | `-IndirectGotoStmt 0x7fc5f20148b8 <col:6, col:17>
+    |   `-ImplicitCastExpr 0x7fc5f20148a0 <col:12, col:17> 'const void *' <IntegralToPointer>
+    |     `-ImplicitCastExpr 0x7fc5f2014888 <col:12, col:17> 'char' <LValueToRValue>
+    |       `-ParenExpr 0x7fc5f2014868 <col:12, col:17> 'char' lvalue
+    |         `-ArraySubscriptExpr 0x7fc5f2014840 <col:13, col:16> 'char' lvalue
+    |           |-ImplicitCastExpr 0x7fc5f2014828 <col:13> 'char *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7fc5f20147e0 <col:13> 'char [4]' lvalue Var 0x7fc5f2014328 'a' 'char [4]'
+    |           `-IntegerLiteral 0x7fc5f2014808 <col:15> 'int' 0
+    `-LabelStmt 0x7fc5f2014920 <line:12:2, col:13> 'l2'
+      `-ReturnStmt 0x7fc5f2014908 <col:6, col:13>
+        `-IntegerLiteral 0x7fc5f20148e8 <col:13> 'int' 0

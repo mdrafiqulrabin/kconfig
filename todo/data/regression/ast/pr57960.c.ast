@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7ff6408174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff640818160 <../Data/C2AST/pr57960.c:6:9, line:14:1> line:6:9 union definition
+| |-FieldDecl 0x7ff640859038 <line:8:3, col:15> col:15 referenced value 'long double'
+| |-RecordDecl 0x7ff640859080 <line:9:3, line:12:3> line:9:3 struct definition
+| | |-FieldDecl 0x7ff640859148 <line:11:5, col:18> col:18 w0 'unsigned int'
+| | |-FieldDecl 0x7ff6408591a8 <col:5, col:22> col:22 w1 'unsigned int'
+| | |-FieldDecl 0x7ff640859208 <col:5, col:26> col:26 referenced w2 'unsigned int'
+| | `-FieldDecl 0x7ff640859268 <col:5, col:30> col:30 referenced w3 'unsigned int'
+| `-FieldDecl 0x7ff640859300 <line:9:3, line:13:5> col:5 referenced parts32 'struct (anonymous struct at ../Data/C2AST/pr57960.c:9:3)':'struct ieee854_long_double_shape_type::(anonymous at ../Data/C2AST/pr57960.c:9:3)'
+|-TypedefDecl 0x7ff6408593a0 <line:6:1, line:15:3> col:3 referenced ieee854_long_double_shape_type 'union ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+| `-ElaboratedType 0x7ff640859350 'union ieee854_long_double_shape_type' sugar
+|   `-RecordType 0x7ff640859000 'ieee854_long_double_shape_type'
+|     `-Record 0x7ff640818160 ''
+|-VarDecl 0x7ff640859428 <line:16:1, col:32> col:26 used one 'const long double' static cinit
+| `-FloatingLiteral 0x7ff6408594c8 <col:32> 'long double' 1.000000e+00
+`-FunctionDecl 0x7ff6408595d8 <line:17:1, line:30:1> line:18:1 __ieee754_acosl 'long double (long double)'
+  |-ParmVarDecl 0x7ff640859510 <col:18, col:30> col:30 x 'long double'
+  `-CompoundStmt 0x7ff640859fb0 <line:19:1, line:30:1>
+    |-DeclStmt 0x7ff640859788 <line:20:3, col:19>
+    | |-VarDecl 0x7ff640859698 <col:3, col:15> col:15 used z 'long double'
+    | `-VarDecl 0x7ff640859710 <col:3, col:18> col:18 used w 'long double'
+    |-DeclStmt 0x7ff640859818 <line:21:3, col:9>
+    | `-VarDecl 0x7ff6408597b8 <col:3, col:7> col:7 ix 'int'
+    |-DeclStmt 0x7ff6408598c0 <line:22:3, col:35>
+    | `-VarDecl 0x7ff640859860 <col:3, col:34> col:34 used u 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+    |-BinaryOperator 0x7ff640859a60 <line:24:3, col:25> 'long double' '='
+    | |-DeclRefExpr 0x7ff6408598d8 <col:3> 'long double' lvalue Var 0x7ff640859698 'z' 'long double'
+    | `-BinaryOperator 0x7ff640859a38 <col:7, col:25> 'long double' '*'
+    |   |-ParenExpr 0x7ff6408599e0 <col:7, col:21> 'long double'
+    |   | `-BinaryOperator 0x7ff6408599b8 <col:8, col:16> 'long double' '-'
+    |   |   |-ImplicitCastExpr 0x7ff640859988 <col:8> 'long double' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7ff640859900 <col:8> 'const long double' lvalue Var 0x7ff640859428 'one' 'const long double'
+    |   |   `-ImplicitCastExpr 0x7ff6408599a0 <col:14, col:16> 'long double' <LValueToRValue>
+    |   |     `-MemberExpr 0x7ff640859950 <col:14, col:16> 'long double' lvalue .value 0x7ff640859038
+    |   |       `-DeclRefExpr 0x7ff640859928 <col:14> 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type' lvalue Var 0x7ff640859860 'u' 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+    |   `-ImplicitCastExpr 0x7ff640859a20 <col:25> 'long double' <FloatingCast>
+    |     `-FloatingLiteral 0x7ff640859a00 <col:25> 'double' 5.000000e-01
+    |-BinaryOperator 0x7ff640859b58 <line:25:3, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7ff640859ae8 <col:3, col:13> 'unsigned int' lvalue .w2 0x7ff640859208
+    | | `-MemberExpr 0x7ff640859ab0 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr57960.c:9:3)':'struct ieee854_long_double_shape_type::(anonymous at ../Data/C2AST/pr57960.c:9:3)' lvalue .parts32 0x7ff640859300
+    | |   `-DeclRefExpr 0x7ff640859a88 <col:3> 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type' lvalue Var 0x7ff640859860 'u' 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+    | `-ImplicitCastExpr 0x7ff640859b40 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7ff640859b20 <col:18> 'int' 0
+    |-BinaryOperator 0x7ff640859d00 <line:26:3, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7ff640859c90 <col:3, col:13> 'unsigned int' lvalue .w3 0x7ff640859268
+    | | `-MemberExpr 0x7ff640859c58 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr57960.c:9:3)':'struct ieee854_long_double_shape_type::(anonymous at ../Data/C2AST/pr57960.c:9:3)' lvalue .parts32 0x7ff640859300
+    | |   `-DeclRefExpr 0x7ff640859c30 <col:3> 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type' lvalue Var 0x7ff640859860 'u' 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+    | `-ImplicitCastExpr 0x7ff640859ce8 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7ff640859cc8 <col:18> 'int' 0
+    |-BinaryOperator 0x7ff640859ed0 <line:27:3, col:23> 'long double' '='
+    | |-DeclRefExpr 0x7ff640859d28 <col:3> 'long double' lvalue Var 0x7ff640859710 'w' 'long double'
+    | `-BinaryOperator 0x7ff640859ea8 <col:7, col:23> 'long double' '-'
+    |   |-ImplicitCastExpr 0x7ff640859e90 <col:7> 'long double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7ff640859d50 <col:7> 'long double' lvalue Var 0x7ff640859698 'z' 'long double'
+    |   `-BinaryOperator 0x7ff640859e68 <col:11, col:23> 'long double' '*'
+    |     |-ImplicitCastExpr 0x7ff640859e38 <col:11, col:13> 'long double' <LValueToRValue>
+    |     | `-MemberExpr 0x7ff640859da0 <col:11, col:13> 'long double' lvalue .value 0x7ff640859038
+    |     |   `-DeclRefExpr 0x7ff640859d78 <col:11> 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type' lvalue Var 0x7ff640859860 'u' 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+    |     `-ImplicitCastExpr 0x7ff640859e50 <col:21, col:23> 'long double' <LValueToRValue>
+    |       `-MemberExpr 0x7ff640859e00 <col:21, col:23> 'long double' lvalue .value 0x7ff640859038
+    |         `-DeclRefExpr 0x7ff640859dd8 <col:21> 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type' lvalue Var 0x7ff640859860 'u' 'ieee854_long_double_shape_type':'ieee854_long_double_shape_type'
+    `-ReturnStmt 0x7ff640859f98 <line:28:3, col:16>
+      `-BinaryOperator 0x7ff640859f70 <col:10, col:16> 'long double' '*'
+        |-ImplicitCastExpr 0x7ff640859f58 <col:10> 'long double' <FloatingCast>
+        | `-FloatingLiteral 0x7ff640859ef8 <col:10> 'double' 2.000000e+00
+        `-ImplicitCastExpr 0x7ff640859f40 <col:16> 'long double' <LValueToRValue>
+          `-DeclRefExpr 0x7ff640859f18 <col:16> 'long double' lvalue Var 0x7ff640859710 'w' 'long double'

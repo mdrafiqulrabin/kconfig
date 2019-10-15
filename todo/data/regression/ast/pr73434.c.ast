@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7f84b282bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f84b282c960 <../Data/C2AST/pr73434.c:3:9, col:35> col:9 struct definition
+| `-FieldDecl 0x7f84b286d838 <col:18, col:32> col:32 x 'unsigned char'
+|-TypedefDecl 0x7f84b286d8d0 <col:1, col:37> col:37 referenced A 'struct A':'A'
+| `-ElaboratedType 0x7f84b286d880 'struct A' sugar
+|   `-RecordType 0x7f84b286d800 'A'
+|     `-Record 0x7f84b282c960 ''
+|-RecordDecl 0x7f84b286d940 <line:4:9, col:35> col:9 struct definition
+| `-FieldDecl 0x7f84b286da08 <col:18, col:32> col:32 referenced x 'unsigned char'
+|-TypedefDecl 0x7f84b286daa0 <col:1, col:37> col:37 referenced B 'struct B':'B'
+| `-ElaboratedType 0x7f84b286da50 'struct B' sugar
+|   `-RecordType 0x7f84b286d9d0 'B'
+|     `-Record 0x7f84b286d940 ''
+|-VarDecl 0x7f84b286db28 <line:6:1, col:11> col:5 used idx 'int' cinit
+| `-IntegerLiteral 0x7f84b286dbc8 <col:11> 'int' 0
+|-VarDecl 0x7f84b286dd18 <line:8:1, col:17> col:3 used objs 'A [1]' cinit
+| `-InitListExpr 0x7f84b286de28 <col:13, col:17> 'A [1]'
+|   `-InitListExpr 0x7f84b286de70 <col:14, col:16> 'A':'A'
+|     `-ImplicitCastExpr 0x7f84b286deb8 <col:15> 'unsigned char' <IntegralCast>
+|       `-IntegerLiteral 0x7f84b286dd78 <col:15> 'int' 0
+|-FunctionDecl 0x7f84b286df20 <line:10:1, line:19:1> line:10:5 main 'int ()'
+| `-CompoundStmt 0x7f84b286e708 <line:11:1, line:19:1>
+|   |-DeclStmt 0x7f84b286e208 <line:12:3, col:24>
+|   | `-VarDecl 0x7f84b286e048 <col:3, col:23> col:6 used b 'B *' cinit
+|   |   `-CStyleCastExpr 0x7f84b286e1e0 <col:10, col:23> 'B *' <BitCast>
+|   |     `-UnaryOperator 0x7f84b286e1b0 <col:14, col:23> 'A *' prefix '&'
+|   |       `-ArraySubscriptExpr 0x7f84b286e188 <col:15, col:23> 'A':'A' lvalue
+|   |         |-ImplicitCastExpr 0x7f84b286e158 <col:15> 'A *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7f84b286e0a8 <col:15> 'A [1]' lvalue Var 0x7f84b286dd18 'objs' 'A [1]'
+|   |         `-ImplicitCastExpr 0x7f84b286e170 <col:20> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f84b286e0d0 <col:20> 'int' lvalue Var 0x7f84b286db28 'idx' 'int'
+|   |-UnaryOperator 0x7f84b286e298 <line:13:3, col:7> 'unsigned char' postfix '++'
+|   | `-MemberExpr 0x7f84b286e260 <col:3, col:6> 'unsigned char' lvalue ->x 0x7f84b286da08
+|   |   `-ImplicitCastExpr 0x7f84b286e248 <col:3> 'B *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f84b286e220 <col:3> 'B *' lvalue Var 0x7f84b286e048 'b' 'B *'
+|   |-IfStmt 0x7f84b286e420 <line:14:3, line:15:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f84b286e330 <line:14:7, col:10> 'unsigned char' <LValueToRValue>
+|   | | `-MemberExpr 0x7f84b286e2f8 <col:7, col:10> 'unsigned char' lvalue ->x 0x7f84b286da08
+|   | |   `-ImplicitCastExpr 0x7f84b286e2e0 <col:7> 'B *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f84b286e2b8 <col:7> 'B *' lvalue Var 0x7f84b286e048 'b' 'B *'
+|   | |-BinaryOperator 0x7f84b286e3f8 <line:15:5, col:12> 'unsigned char' '='
+|   | | |-MemberExpr 0x7f84b286e388 <col:5, col:8> 'unsigned char' lvalue ->x 0x7f84b286da08
+|   | | | `-ImplicitCastExpr 0x7f84b286e370 <col:5> 'B *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f84b286e348 <col:5> 'B *' lvalue Var 0x7f84b286e048 'b' 'B *'
+|   | | `-ImplicitCastExpr 0x7f84b286e3e0 <col:12> 'unsigned char' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f84b286e3c0 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f84b286e698 <line:16:3, line:17:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f84b286e4d0 <line:16:7, col:10> 'unsigned char' <LValueToRValue>
+|   | | `-MemberExpr 0x7f84b286e498 <col:7, col:10> 'unsigned char' lvalue ->x 0x7f84b286da08
+|   | |   `-ImplicitCastExpr 0x7f84b286e480 <col:7> 'B *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f84b286e458 <col:7> 'B *' lvalue Var 0x7f84b286e048 'b' 'B *'
+|   | |-CallExpr 0x7f84b286e670 <line:17:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f84b286e658 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f84b286e608 <col:5> '<builtin fn type>' Function 0x7f84b286e520 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f84b286e6f0 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7f84b286e6d0 <col:10> 'int' 0
+`-FunctionDecl 0x7f84b286e520 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f84b286e5c0 <col:5> Implicit

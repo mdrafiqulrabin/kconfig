@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f84c802bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7f84c802c960 <../Data/C2AST/pr22311-1.c:5:9, col:22> col:9
+| `-EnumConstantDecl 0x7f84c806d840 <col:16, col:20> col:16 A 'int'
+|   `-IntegerLiteral 0x7f84c806d820 <col:20> 'int' 1
+|-TypedefDecl 0x7f84c806d8e0 <col:1, col:24> col:24 referenced E 'enum E':'E'
+| `-ElaboratedType 0x7f84c806d890 'enum E' sugar
+|   `-EnumType 0x7f84c806d800 'E'
+|     `-Enum 0x7f84c802c960 ''
+`-FunctionDecl 0x7f84c806db10 <line:6:1, col:40> col:6 f 'void (E, unsigned char)'
+  |-ParmVarDecl 0x7f84c806d980 <col:8, col:10> col:10 used e 'E':'E'
+  |-ParmVarDecl 0x7f84c806d9f8 <col:13, col:27> col:27 used c 'unsigned char'
+  `-CompoundStmt 0x7f84c806dcb8 <col:30, col:40>
+    `-CompoundAssignOperator 0x7f84c806dc80 <col:32, col:37> 'unsigned char' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+      |-DeclRefExpr 0x7f84c806dc00 <col:32> 'unsigned char' lvalue ParmVar 0x7f84c806d9f8 'c' 'unsigned char'
+      `-ImplicitCastExpr 0x7f84c806dc68 <col:37> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f84c806dc50 <col:37> 'E':'E' <LValueToRValue>
+          `-DeclRefExpr 0x7f84c806dc28 <col:37> 'E':'E' lvalue ParmVar 0x7f84c806d980 'e' 'E':'E'

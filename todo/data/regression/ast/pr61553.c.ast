@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f97270118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9726826860 <../Data/C2AST/pr61553.c:4:1, line:8:1> line:5:1 foo 'void (char *)'
+| |-ParmVarDecl 0x7f9727012578 <col:6, col:12> col:12 used s 'char *'
+| `-CompoundStmt 0x7f9726826bf8 <line:6:1, line:8:1>
+|   `-AtomicExpr 0x7f9726826ba0 <line:7:3, col:50> 'void'
+|     |-ImplicitCastExpr 0x7f9726826b70 <col:19> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f9726826a40 <col:19> 'char *' lvalue ParmVar 0x7f9727012578 's' 'char *'
+|     |-IntegerLiteral 0x7f9726826ac8 <<built-in>:16:26> 'int' 5
+|     `-ImplicitCastExpr 0x7f9726826b88 <../Data/C2AST/pr61553.c:7:22, col:31> 'char *' <NullToPointer>
+|       `-CStyleCastExpr 0x7f9726826aa0 <col:22, col:31> 'void *' <NullToPointer>
+|         `-IntegerLiteral 0x7f9726826a68 <col:31> 'int' 0
+`-FunctionDecl 0x7f9726826978 <col:3> col:3 implicit used __atomic_store 'void ()' extern

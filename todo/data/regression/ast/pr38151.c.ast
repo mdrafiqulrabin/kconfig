@@ -1,0 +1,105 @@
+TranslationUnitDecl 0x7f89df82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f89e0014250 <../Data/C2AST/pr38151.c:3:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f89e00142f0 prev 0x7f89e0014250 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-RecordDecl 0x7f89e0014390 <line:5:1, line:12:1> line:5:8 struct S2848 definition
+| |-FieldDecl 0x7f89e0014458 <line:7:3, col:16> col:16 referenced a 'unsigned int'
+| |-FieldDecl 0x7f89e00144d8 <line:8:3, col:16> col:16 referenced b '_Complex int'
+| |-RecordDecl 0x7f89e0014520 <line:9:3, line:11:3> line:9:3 struct definition
+| | `-AlignedAttr 0x7f89e00145d0 <line:11:21> aligned
+| |   `-<<<NULL>>>
+| `-FieldDecl 0x7f89e0014670 <line:9:3, line:11:31> col:31 c 'struct (anonymous struct at ../Data/C2AST/pr38151.c:9:3)':'struct S2848::(anonymous at ../Data/C2AST/pr38151.c:9:3)'
+|-VarDecl 0x7f89e0014710 <line:14:1, col:14> col:14 used s2848 'struct S2848':'struct S2848'
+|-VarDecl 0x7f89e00147c8 <line:16:1, col:5> col:5 used fails 'int'
+|-FunctionDecl 0x7f89e0014900 <line:18:1, line:34:1> line:19:1 used check2848va 'void (int, ...)'
+| |-ParmVarDecl 0x7f89e0014840 <col:14, col:18> col:18 used z 'int'
+| |-CompoundStmt 0x7f89e002cf28 <line:20:1, line:34:1>
+| | |-DeclStmt 0x7f89e0014a70 <line:21:3, col:19>
+| | | `-VarDecl 0x7f89e0014a10 <col:3, col:16> col:16 used arg 'struct S2848':'struct S2848'
+| | |-DeclStmt 0x7f89e0014b20 <line:22:3, col:23>
+| | | `-VarDecl 0x7f89e0014ac0 <col:3, col:21> col:21 used ap '__builtin_va_list':'struct __va_list_tag [1]'
+| | |-CallExpr 0x7f89e0014db0 <line:24:3, col:28> 'void'
+| | | |-ImplicitCastExpr 0x7f89e0014d98 <col:3> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+| | | | `-DeclRefExpr 0x7f89e0014cf8 <col:3> '<builtin fn type>' Function 0x7f89e0014ba8 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+| | | |-ImplicitCastExpr 0x7f89e0014de8 <col:23> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | | | `-DeclRefExpr 0x7f89e0014d20 <col:23> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7f89e0014ac0 'ap' '__builtin_va_list':'struct __va_list_tag [1]'
+| | | `-DeclRefExpr 0x7f89e0014d48 <col:27> 'int' lvalue ParmVar 0x7f89e0014840 'z' 'int'
+| | |-BinaryOperator 0x7f89e0014ed0 <line:26:3, col:43> 'struct S2848':'struct S2848' '='
+| | | |-DeclRefExpr 0x7f89e0014e00 <col:3> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014a10 'arg' 'struct S2848':'struct S2848'
+| | | `-VAArgExpr 0x7f89e0014ea8 <col:9, col:43> 'struct S2848':'struct S2848'
+| | |   `-ImplicitCastExpr 0x7f89e0014e90 <col:27> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| | |     `-DeclRefExpr 0x7f89e0014e28 <col:27> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7f89e0014ac0 'ap' '__builtin_va_list':'struct __va_list_tag [1]'
+| | |-IfStmt 0x7f89e00150f0 <line:28:3, line:29:7>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f89e0014fe8 <line:28:7, col:22> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7f89e0014fb8 <col:7, col:13> 'unsigned int' <LValueToRValue>
+| | | | | `-MemberExpr 0x7f89e0014f20 <col:7, col:13> 'unsigned int' lvalue .a 0x7f89e0014458
+| | | | |   `-DeclRefExpr 0x7f89e0014ef8 <col:7> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014710 's2848' 'struct S2848':'struct S2848'
+| | | | `-ImplicitCastExpr 0x7f89e0014fd0 <col:18, col:22> 'unsigned int' <LValueToRValue>
+| | | |   `-MemberExpr 0x7f89e0014f80 <col:18, col:22> 'unsigned int' lvalue .a 0x7f89e0014458
+| | | |     `-DeclRefExpr 0x7f89e0014f58 <col:18> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014a10 'arg' 'struct S2848':'struct S2848'
+| | | |-UnaryOperator 0x7f89e00150d0 <line:29:5, col:7> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7f89e00150a8 <col:7> 'int' lvalue Var 0x7f89e00147c8 'fails' 'int'
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7f89e002cc88 <line:30:3, line:31:7>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7f89e002cc18 <line:30:7, col:22> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7f89e00151e8 <col:7, col:13> '_Complex int' <LValueToRValue>
+| | | | | `-MemberExpr 0x7f89e0015150 <col:7, col:13> '_Complex int' lvalue .b 0x7f89e00144d8
+| | | | |   `-DeclRefExpr 0x7f89e0015128 <col:7> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014710 's2848' 'struct S2848':'struct S2848'
+| | | | `-ImplicitCastExpr 0x7f89e002cc00 <col:18, col:22> '_Complex int' <LValueToRValue>
+| | | |   `-MemberExpr 0x7f89e00151b0 <col:18, col:22> '_Complex int' lvalue .b 0x7f89e00144d8
+| | | |     `-DeclRefExpr 0x7f89e0015188 <col:18> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014a10 'arg' 'struct S2848':'struct S2848'
+| | | |-UnaryOperator 0x7f89e002cc68 <line:31:5, col:7> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7f89e002cc40 <col:7> 'int' lvalue Var 0x7f89e00147c8 'fails' 'int'
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7f89e002cee0 <line:33:3, col:23> 'void'
+| |   |-ImplicitCastExpr 0x7f89e002cec8 <col:3> 'void (*)(struct __va_list_tag *)' <BuiltinFnToFnPtr>
+| |   | `-DeclRefExpr 0x7f89e002ce48 <col:3> '<builtin fn type>' Function 0x7f89e002ccf8 '__builtin_va_end' 'void (struct __va_list_tag *)'
+| |   `-ImplicitCastExpr 0x7f89e002cf10 <col:21> 'struct __va_list_tag *' <ArrayToPointerDecay>
+| |     `-DeclRefExpr 0x7f89e002ce70 <col:21> '__builtin_va_list':'struct __va_list_tag [1]' lvalue Var 0x7f89e0014ac0 'ap' '__builtin_va_list':'struct __va_list_tag [1]'
+| `-NoInlineAttr 0x7f89e00149a8 <line:18:22>
+|-FunctionDecl 0x7f89e0014ba8 <line:24:3> col:3 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+| |-ParmVarDecl 0x7f89e0014c48 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7f89e0014cb0 <col:3> Implicit
+|-FunctionDecl 0x7f89e002ccf8 <line:33:3> col:3 implicit used __builtin_va_end 'void (struct __va_list_tag *)' extern
+| |-ParmVarDecl 0x7f89e002cd98 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7f89e002ce00 <col:3> Implicit
+`-FunctionDecl 0x7f89e002d038 <line:36:1, line:47:1> line:36:5 main 'int (void)'
+  `-CompoundStmt 0x7f89e002d5d8 <line:37:1, line:47:1>
+    |-BinaryOperator 0x7f89e002d188 <line:38:3, col:13> 'unsigned int' '='
+    | |-MemberExpr 0x7f89e002d130 <col:3, col:9> 'unsigned int' lvalue .a 0x7f89e0014458
+    | | `-DeclRefExpr 0x7f89e002d108 <col:3> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014710 's2848' 'struct S2848':'struct S2848'
+    | `-IntegerLiteral 0x7f89e002d168 <col:13> 'unsigned int' 4027477739
+    |-BinaryOperator 0x7f89e002d368 <line:39:3, col:55> '_Complex int' '='
+    | |-MemberExpr 0x7f89e002d1d8 <col:3, col:9> '_Complex int' lvalue .b 0x7f89e00144d8
+    | | `-DeclRefExpr 0x7f89e002d1b0 <col:3> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014710 's2848' 'struct S2848':'struct S2848'
+    | `-ParenExpr 0x7f89e002d348 <col:13, col:55> '_Complex int'
+    |   `-BinaryOperator 0x7f89e002d320 <col:14, col:53> '_Complex int' '+'
+    |     |-ImplicitCastExpr 0x7f89e002d308 <col:14> '_Complex int' <IntegralRealToComplex>
+    |     | `-IntegerLiteral 0x7f89e002d210 <col:14> 'int' 723419448
+    |     `-BinaryOperator 0x7f89e002d2e0 <col:26, col:53> '_Complex int' '*'
+    |       |-ImplicitCastExpr 0x7f89e002d2c8 <col:26, col:27> '_Complex int' <IntegralRealToComplex>
+    |       | `-UnaryOperator 0x7f89e002d250 <col:26, col:27> 'int' prefix '-'
+    |       |   `-IntegerLiteral 0x7f89e002d230 <col:27> 'int' 218144346
+    |       `-UnaryOperator 0x7f89e002d2a8 <col:39, col:53> '_Complex int' prefix '__extension__'
+    |         `-ImaginaryLiteral 0x7f89e002d290 <col:53> '_Complex int'
+    |           `-IntegerLiteral 0x7f89e002d270 <col:53> 'int' 1
+    |-CallExpr 0x7f89e002d440 <line:41:3, col:24> 'void'
+    | |-ImplicitCastExpr 0x7f89e002d428 <col:3> 'void (*)(int, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f89e002d390 <col:3> 'void (int, ...)' Function 0x7f89e0014900 'check2848va' 'void (int, ...)'
+    | |-IntegerLiteral 0x7f89e002d3b8 <col:16> 'int' 1
+    | `-ImplicitCastExpr 0x7f89e002d478 <col:19> 'struct S2848':'struct S2848' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f89e002d3d8 <col:19> 'struct S2848':'struct S2848' lvalue Var 0x7f89e0014710 's2848' 'struct S2848':'struct S2848'
+    |-IfStmt 0x7f89e002d568 <line:43:3, line:44:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f89e002d4b8 <line:43:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f89e002d490 <col:7> 'int' lvalue Var 0x7f89e00147c8 'fails' 'int'
+    | |-CallExpr 0x7f89e002d540 <line:44:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f89e002d528 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f89e002d4d0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f89e00142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f89e002d5c0 <line:46:3, col:10>
+      `-IntegerLiteral 0x7f89e002d5a0 <col:10> 'int' 0

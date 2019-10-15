@@ -1,0 +1,100 @@
+TranslationUnitDecl 0x7fef850118e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fef85012560 <../Data/C2AST/pr41837.c:5:9, col:28> col:9 struct definition
+| |-FieldDecl 0x7fef85800038 <col:18, col:22> col:22 a 'int'
+| `-FieldDecl 0x7fef85800098 <col:18, col:25> col:25 b 'int'
+|-TypedefDecl 0x7fef85800130 <col:1, col:30> col:30 referenced T1 'struct T1':'T1'
+| `-ElaboratedType 0x7fef858000e0 'struct T1' sugar
+|   `-RecordType 0x7fef85800000 'T1'
+|     `-Record 0x7fef85012560 ''
+|-RecordDecl 0x7fef858001a0 <line:6:9, col:16> col:16 struct S1
+|-TypedefDecl 0x7fef85800300 <col:1, col:20> col:20 referenced T2 'struct S1 *'
+| `-PointerType 0x7fef858002b0 'struct S1 *'
+|   `-ElaboratedType 0x7fef85800250 'struct S1' sugar
+|     `-RecordType 0x7fef85800230 'struct S1'
+|       `-Record 0x7fef858001a0 'S1'
+|-RecordDecl 0x7fef85800370 <line:7:9, col:16> col:16 struct S2
+|-TypedefDecl 0x7fef858004d0 <col:1, col:20> col:20 referenced T3 'struct S2 *'
+| `-PointerType 0x7fef85800480 'struct S2 *'
+|   `-ElaboratedType 0x7fef85800420 'struct S2' sugar
+|     `-RecordType 0x7fef85800400 'struct S2'
+|       `-Record 0x7fef85800b50 'S2'
+|-RecordDecl 0x7fef85800540 <line:8:9, col:16> col:16 struct S3
+|-TypedefDecl 0x7fef858006a0 <col:1, col:20> col:20 referenced T4 'struct S3 *'
+| `-PointerType 0x7fef85800650 'struct S3 *'
+|   `-ElaboratedType 0x7fef858005f0 'struct S3' sugar
+|     `-RecordType 0x7fef858005d0 'struct S3'
+|       `-Record 0x7fef85801970 'S3'
+|-RecordDecl 0x7fef85800710 <line:9:9, col:16> col:16 struct S4
+|-TypedefDecl 0x7fef85800870 <col:1, col:20> col:20 referenced T5 'struct S4 *'
+| `-PointerType 0x7fef85800820 'struct S4 *'
+|   `-ElaboratedType 0x7fef858007c0 'struct S4' sugar
+|     `-RecordType 0x7fef858007a0 'struct S4'
+|       `-Record 0x7fef858008e0 'S4'
+|-RecordDecl 0x7fef858008e0 prev 0x7fef85800710 <line:10:1, col:33> col:8 struct S4 definition
+| |-RecordDecl 0x7fef85800968 <col:13, col:28> col:13 union definition
+| | `-FieldDecl 0x7fef85800a28 <col:21, col:25> col:25 c 'int'
+| `-FieldDecl 0x7fef85800ac0 <col:13, col:30> col:30 d 'union (anonymous union at ../Data/C2AST/pr41837.c:10:13)':'union S4::(anonymous at ../Data/C2AST/pr41837.c:10:13)'
+|-RecordDecl 0x7fef85800b50 prev 0x7fef85800370 <line:11:1, col:33> col:8 struct S2 definition
+| |-FieldDecl 0x7fef85800bf0 <col:13, col:17> col:17 referenced e 'int'
+| |-FieldDecl 0x7fef85800c70 <col:20, col:23> col:23 f 'T2':'struct S1 *'
+| `-FieldDecl 0x7fef85800cd0 <col:26, col:30> col:30 g 'int'
+|-RecordDecl 0x7fef85800d18 <line:12:9, col:24> col:9 struct definition
+| `-FieldDecl 0x7fef85800df0 <col:18, col:21> col:21 referenced h 'T3':'struct S2 *'
+|-TypedefDecl 0x7fef85800e90 <col:1, col:26> col:26 referenced T6 'struct T6':'T6'
+| `-ElaboratedType 0x7fef85800e40 'struct T6' sugar
+|   `-RecordType 0x7fef85800da0 'T6'
+|     `-Record 0x7fef85800d18 ''
+|-RecordDecl 0x7fef85800f00 <line:13:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7fef85801800 <col:18, col:22> col:22 i 'int'
+|-TypedefDecl 0x7fef85801900 <col:1, col:28> col:28 referenced T7 'struct (anonymous struct at ../Data/C2AST/pr41837.c:13:9) *'
+| `-PointerType 0x7fef858018b0 'struct (anonymous struct at ../Data/C2AST/pr41837.c:13:9) *'
+|   `-ElaboratedType 0x7fef85801850 'struct (anonymous struct at ../Data/C2AST/pr41837.c:13:9)' sugar
+|     `-RecordType 0x7fef85800f90 'struct (anonymous at ../Data/C2AST/pr41837.c:13:9)'
+|       `-Record 0x7fef85800f00 ''
+|-RecordDecl 0x7fef85801970 prev 0x7fef85800540 <line:14:1, col:25> col:8 struct S3 definition
+| |-FieldDecl 0x7fef85801a30 <col:13, col:16> col:16 referenced j 'T6':'T6'
+| `-FieldDecl 0x7fef85801ab0 <col:19, col:22> col:22 k 'T7':'struct (anonymous struct at ../Data/C2AST/pr41837.c:13:9) *'
+|-FunctionDecl 0x7fef85801c70 <line:16:1, col:12> col:6 used f5 'void (T4)'
+| `-ParmVarDecl 0x7fef85801b70 <col:10> col:12 'T4':'struct S3 *'
+|-FunctionDecl 0x7fef85801f90 <line:17:1, col:22> col:6 used f6 'void (void (*)(T4))'
+| `-ParmVarDecl 0x7fef85801e90 <col:10, col:21> col:17 'void (*)(T4)'
+|-FunctionDecl 0x7fef85802410 <line:18:1, col:28> col:6 used f7 'void (void (*)(T5, T1 *))'
+| `-ParmVarDecl 0x7fef85802308 <col:10, col:27> col:17 'void (*)(T5, T1 *)'
+|-FunctionDecl 0x7fef85802550 <line:20:1, line:25:1> line:21:1 used f1 'void (T4)'
+| |-ParmVarDecl 0x7fef858024c8 <col:5, col:8> col:8 used x 'T4':'struct S3 *'
+| `-CompoundStmt 0x7fef85802c50 <line:22:1, line:25:1>
+|   `-IfStmt 0x7fef85802c18 <line:23:3, line:24:10>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fef85802710 <line:23:7, col:16> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7fef858026f8 <col:8, col:16> 'int' <LValueToRValue>
+|     |   `-MemberExpr 0x7fef858026c0 <col:8, col:16> 'int' lvalue ->e 0x7fef85800bf0
+|     |     `-ImplicitCastExpr 0x7fef858026a8 <col:8, col:13> 'T3':'struct S2 *' <LValueToRValue>
+|     |       `-MemberExpr 0x7fef85802670 <col:8, col:13> 'T3':'struct S2 *' lvalue .h 0x7fef85800df0
+|     |         `-MemberExpr 0x7fef85802638 <col:8, col:11> 'T6':'T6' lvalue ->j 0x7fef85801a30
+|     |           `-ImplicitCastExpr 0x7fef85802620 <col:8> 'T4':'struct S3 *' <LValueToRValue>
+|     |             `-DeclRefExpr 0x7fef858025f8 <col:8> 'T4':'struct S3 *' lvalue ParmVar 0x7fef858024c8 'x' 'T4':'struct S3 *'
+|     |-CallExpr 0x7fef858027c0 <line:24:5, col:10> 'void'
+|     | |-ImplicitCastExpr 0x7fef858027a8 <col:5> 'void (*)(T4)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7fef85802730 <col:5> 'void (T4)' Function 0x7fef85801c70 'f5' 'void (T4)'
+|     | `-ImplicitCastExpr 0x7fef85802c00 <col:9> 'T4':'struct S3 *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fef85802758 <col:9> 'T4':'struct S3 *' lvalue ParmVar 0x7fef858024c8 'x' 'T4':'struct S3 *'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7fef85802d30 <line:27:1, line:31:1> line:28:1 f2 'void (void)'
+| `-CompoundStmt 0x7fef85802ed8 <line:29:1, line:31:1>
+|   `-CallExpr 0x7fef85802e90 <line:30:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fef85802e78 <col:3> 'void (*)(void (*)(T4))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fef85802dd0 <col:3> 'void (void (*)(T4))' Function 0x7fef85801f90 'f6' 'void (void (*)(T4))'
+|     `-ImplicitCastExpr 0x7fef85802ec0 <col:7> 'void (*)(T4)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fef85802df8 <col:7> 'void (T4)' Function 0x7fef85802550 'f1' 'void (T4)'
+|-FunctionDecl 0x7fef85803000 <line:33:1, line:36:1> line:34:1 used f3 'void (T5, T1 *)'
+| |-ParmVarDecl 0x7fef85802f00 <col:5, col:8> col:8 x 'T5':'struct S4 *'
+| |-ParmVarDecl 0x7fef85802f70 <col:11, col:15> col:15 y 'T1 *'
+| `-CompoundStmt 0x7fef858030b0 <line:35:1, line:36:1>
+`-FunctionDecl 0x7fef85803150 <line:38:1, line:42:1> line:39:1 f4 'void (void)'
+  `-CompoundStmt 0x7fef85803320 <line:40:1, line:42:1>
+    `-CallExpr 0x7fef858032b0 <line:41:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fef85803298 <col:3> 'void (*)(void (*)(T5, T1 *))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fef858031f0 <col:3> 'void (void (*)(T5, T1 *))' Function 0x7fef85802410 'f7' 'void (void (*)(T5, T1 *))'
+      `-ImplicitCastExpr 0x7fef85803308 <col:7> 'void (*)(T5, T1 *)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fef85803218 <col:7> 'void (T5, T1 *)' Function 0x7fef85803000 'f3' 'void (T5, T1 *)'

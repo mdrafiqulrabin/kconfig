@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7fec9982bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fec9982c960 <../Data/C2AST/pr19121.c:1:9, line:3:1> line:1:16 struct interpreter definition
+| `-FieldDecl 0x7fec9986d898 <line:2:3, col:21> col:8 referenced Itokenbuf 'char [256]'
+|-TypedefDecl 0x7fec9986d930 <line:1:1, line:3:3> col:3 referenced PerlInterpreter 'struct interpreter':'struct interpreter'
+| `-ElaboratedType 0x7fec9986d8e0 'struct interpreter' sugar
+|   `-RecordType 0x7fec9986d800 'struct interpreter'
+|     `-Record 0x7fec9982c960 'interpreter'
+|-FunctionDecl 0x7fec9986da80 <line:4:1, line:11:1> line:4:20 used S_missingterm 'void (char *)' static inline
+| |-ParmVarDecl 0x7fec9986d9b8 <col:34, col:40> col:40 used s 'char *'
+| `-CompoundStmt 0x7fec9986e218 <line:5:1, line:11:1>
+|   |-DeclStmt 0x7fec9986dcb0 <line:6:3, col:22>
+|   | `-VarDecl 0x7fec9986dbe8 <col:3, col:20> col:8 used tmpbuf 'char [3]' cinit
+|   |   `-StringLiteral 0x7fec9986dc88 <col:20> 'char [3]' lvalue ""
+|   |-DeclStmt 0x7fec9986dd38 <line:7:3, col:9>
+|   | `-VarDecl 0x7fec9986dcd8 <col:3, col:8> col:8 used q 'char'
+|   |-IfStmt 0x7fec9986de40 <line:8:3, line:9:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fec9986dd90 <line:8:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7fec9986dd78 <col:8> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fec9986dd50 <col:8> 'char *' lvalue ParmVar 0x7fec9986d9b8 's' 'char *'
+|   | |-BinaryOperator 0x7fec9986de18 <line:9:5, col:9> 'char *' '='
+|   | | |-DeclRefExpr 0x7fec9986ddb0 <col:5> 'char *' lvalue ParmVar 0x7fec9986d9b8 's' 'char *'
+|   | | `-ImplicitCastExpr 0x7fec9986de00 <col:9> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fec9986ddd8 <col:9> 'char [3]' lvalue Var 0x7fec9986dbe8 'tmpbuf' 'char [3]'
+|   | `-<<<NULL>>>
+|   `-BinaryOperator 0x7fec9986e1f0 <line:10:3, col:30> 'char' '='
+|     |-DeclRefExpr 0x7fec9986de78 <col:3> 'char' lvalue Var 0x7fec9986dcd8 'q' 'char'
+|     `-ImplicitCastExpr 0x7fec9986e1d8 <col:7, col:30> 'char' <IntegralCast>
+|       `-ConditionalOperator 0x7fec9986e1a8 <col:7, col:30> 'int'
+|         |-CallExpr 0x7fec9986e110 <col:7, col:19> 'char *'
+|         | |-ImplicitCastExpr 0x7fec9986e0f8 <col:7> 'char *(*)(const char *, int)' <FunctionToPointerDecay>
+|         | | `-DeclRefExpr 0x7fec9986e050 <col:7> 'char *(const char *, int)' Function 0x7fec9986dee0 'strchr' 'char *(const char *, int)'
+|         | |-ImplicitCastExpr 0x7fec9986e160 <col:14> 'const char *' <BitCast>
+|         | | `-ImplicitCastExpr 0x7fec9986e148 <col:14> 'char *' <LValueToRValue>
+|         | |   `-DeclRefExpr 0x7fec9986e078 <col:14> 'char *' lvalue ParmVar 0x7fec9986d9b8 's' 'char *'
+|         | `-CharacterLiteral 0x7fec9986e0a0 <col:16> 'int' 34
+|         |-CharacterLiteral 0x7fec9986e178 <col:23> 'int' 39
+|         `-CharacterLiteral 0x7fec9986e190 <col:30> 'int' 34
+|-FunctionDecl 0x7fec9986dee0 <col:7> col:7 implicit used strchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7fec9986df80 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7fec9986dfe0 <<invalid sloc>> <invalid sloc> 'int'
+`-FunctionDecl 0x7fec9986e500 <line:12:1, line:23:1> line:12:6 S_scan_heredoc 'void (PerlInterpreter *, char *, int)'
+  |-ParmVarDecl 0x7fec9986e2d8 <col:21, col:38> col:38 used my_perl 'PerlInterpreter *'
+  |-ParmVarDecl 0x7fec9986e350 <col:47, col:53> col:53 used s 'char *'
+  |-ParmVarDecl 0x7fec9986e3c8 <col:56, col:60> col:60 used i 'int'
+  `-CompoundStmt 0x7fec9986eaf0 <line:13:1, line:23:1>
+    |-DeclStmt 0x7fec9986e628 <line:14:3, col:12>
+    | `-VarDecl 0x7fec9986e5c8 <col:3, col:8> col:8 used term 'char'
+    |-BinaryOperator 0x7fec9986e730 <line:15:3, col:20> 'char' '='
+    | |-DeclRefExpr 0x7fec9986e640 <col:3> 'char' lvalue Var 0x7fec9986e5c8 'term' 'char'
+    | `-ImplicitCastExpr 0x7fec9986e718 <col:10, col:20> 'char' <LValueToRValue>
+    |   `-UnaryOperator 0x7fec9986e6f8 <col:10, col:20> 'char' lvalue prefix '*'
+    |     `-ImplicitCastExpr 0x7fec9986e6e0 <col:11, col:20> 'char *' <ArrayToPointerDecay>
+    |       `-MemberExpr 0x7fec9986e6a8 <col:11, col:20> 'char [256]' lvalue ->Itokenbuf 0x7fec9986d898
+    |         `-ImplicitCastExpr 0x7fec9986e690 <col:11> 'PerlInterpreter *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fec9986e668 <col:11> 'PerlInterpreter *' lvalue ParmVar 0x7fec9986e2d8 'my_perl' 'PerlInterpreter *'
+    `-IfStmt 0x7fec9986eab8 <line:16:3, line:22:37>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fec9986e780 <line:16:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fec9986e758 <col:7> 'int' lvalue ParmVar 0x7fec9986e3c8 'i' 'int'
+      |-CompoundStmt 0x7fec9986e998 <line:17:3, line:20:3>
+      | |-BinaryOperator 0x7fec9986e840 <line:18:5, col:10> 'char' '='
+      | | |-UnaryOperator 0x7fec9986e7d8 <col:5, col:6> 'char' lvalue prefix '*'
+      | | | `-ImplicitCastExpr 0x7fec9986e7c0 <col:6> 'char *' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7fec9986e798 <col:6> 'char *' lvalue ParmVar 0x7fec9986e350 's' 'char *'
+      | | `-ImplicitCastExpr 0x7fec9986e828 <col:10> 'char' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fec9986e800 <col:10> 'char' lvalue Var 0x7fec9986e5c8 'term' 'char'
+      | `-CallExpr 0x7fec9986e950 <line:19:5, col:37> 'void'
+      |   |-ImplicitCastExpr 0x7fec9986e938 <col:5> 'void (*)(char *)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7fec9986e868 <col:5> 'void (char *)' Function 0x7fec9986da80 'S_missingterm' 'void (char *)'
+      |   `-ImplicitCastExpr 0x7fec9986e980 <col:19, col:28> 'char *' <ArrayToPointerDecay>
+      |     `-MemberExpr 0x7fec9986e8d0 <col:19, col:28> 'char [256]' lvalue ->Itokenbuf 0x7fec9986d898
+      |       `-ImplicitCastExpr 0x7fec9986e8b8 <col:19> 'PerlInterpreter *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fec9986e890 <col:19> 'PerlInterpreter *' lvalue ParmVar 0x7fec9986e2d8 'my_perl' 'PerlInterpreter *'
+      `-CallExpr 0x7fec9986ea70 <line:22:5, col:37> 'void'
+        |-ImplicitCastExpr 0x7fec9986ea58 <col:5> 'void (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fec9986e9b8 <col:5> 'void (char *)' Function 0x7fec9986da80 'S_missingterm' 'void (char *)'
+        `-ImplicitCastExpr 0x7fec9986eaa0 <col:19, col:28> 'char *' <ArrayToPointerDecay>
+          `-MemberExpr 0x7fec9986ea20 <col:19, col:28> 'char [256]' lvalue ->Itokenbuf 0x7fec9986d898
+            `-ImplicitCastExpr 0x7fec9986ea08 <col:19> 'PerlInterpreter *' <LValueToRValue>
+              `-DeclRefExpr 0x7fec9986e9e0 <col:19> 'PerlInterpreter *' lvalue ParmVar 0x7fec9986e2d8 'my_perl' 'PerlInterpreter *'

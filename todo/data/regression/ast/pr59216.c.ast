@@ -1,0 +1,106 @@
+TranslationUnitDecl 0x7fbd558068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbd55033050 <../Data/C2AST/pr59216.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbd550330f0 prev 0x7fbd55033050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbd550332a8 <line:6:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fbd55033348 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fbd550333b0 prev 0x7fbd550332a8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fbd550331a8 <col:19> col:22 'int'
+|-FunctionDecl 0x7fbd55033538 <line:8:1, line:11:1> line:8:37 used f 'long long (int)'
+| |-ParmVarDecl 0x7fbd55033470 <col:39, col:43> col:43 used a 'int'
+| |-CompoundStmt 0x7fbd55033720 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fbd55033708 <line:10:3, col:23>
+| |   `-UnaryOperator 0x7fbd550336e8 <col:10, col:23> 'long long' prefix '-'
+| |     `-CStyleCastExpr 0x7fbd550336c0 <col:11, col:23> 'long long' <IntegralCast>
+| |       `-ImplicitCastExpr 0x7fbd550336a8 <col:23> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fbd55033668 <col:23> 'int' lvalue ParmVar 0x7fbd55033470 'a' 'int'
+| `-NoInlineAttr 0x7fbd550335e0 <line:8:26>
+`-FunctionDecl 0x7fbd55033790 <line:13:1, line:32:1> line:14:1 main 'int ()'
+  `-CompoundStmt 0x7fbd5503b3c0 <line:15:1, line:32:1>
+    |-IfStmt 0x7fbd550339e8 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbd55033928 <line:16:7, col:15> 'int' '!='
+    | | |-CallExpr 0x7fbd550338c0 <col:7, col:10> 'long long'
+    | | | |-ImplicitCastExpr 0x7fbd550338a8 <col:7> 'long long (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbd55033830 <col:7> 'long long (int)' Function 0x7fbd55033538 'f' 'long long (int)'
+    | | | `-IntegerLiteral 0x7fbd55033858 <col:9> 'int' 0
+    | | `-ImplicitCastExpr 0x7fbd55033910 <col:15> 'long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fbd550338f0 <col:15> 'int' 0
+    | |-CallExpr 0x7fbd550339c0 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbd550339a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbd55033950 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbd550330f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbd55033bc0 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbd55033b30 <line:19:7, col:27> 'int' '!='
+    | | |-CallExpr 0x7fbd55033a80 <col:7, col:10> 'long long'
+    | | | |-ImplicitCastExpr 0x7fbd55033a68 <col:7> 'long long (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbd55033a20 <col:7> 'long long (int)' Function 0x7fbd55033538 'f' 'long long (int)'
+    | | | `-IntegerLiteral 0x7fbd55033a48 <col:9> 'int' 1
+    | | `-UnaryOperator 0x7fbd55033b10 <col:15, col:27> 'long long' prefix '-'
+    | |   `-CStyleCastExpr 0x7fbd55033ae8 <col:16, col:27> 'long long' <IntegralCast>
+    | |     `-IntegerLiteral 0x7fbd55033ab0 <col:27> 'int' 1
+    | |-CallExpr 0x7fbd55033b98 <line:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbd55033b80 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbd55033b58 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbd550330f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbd55033dd8 <line:22:3, line:23:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbd55033d48 <line:22:7, col:29> 'int' '!='
+    | | |-CallExpr 0x7fbd55033c78 <col:7, col:11> 'long long'
+    | | | |-ImplicitCastExpr 0x7fbd55033c60 <col:7> 'long long (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbd55033bf8 <col:7> 'long long (int)' Function 0x7fbd55033538 'f' 'long long (int)'
+    | | | `-UnaryOperator 0x7fbd55033c40 <col:9, col:10> 'int' prefix '-'
+    | | |   `-IntegerLiteral 0x7fbd55033c20 <col:10> 'int' 1
+    | | `-UnaryOperator 0x7fbd55033d28 <col:16, col:29> 'long long' prefix '-'
+    | |   `-CStyleCastExpr 0x7fbd55033d00 <col:17, col:29> 'long long' <IntegralCast>
+    | |     `-UnaryOperator 0x7fbd55033cc8 <col:28, col:29> 'int' prefix '-'
+    | |       `-IntegerLiteral 0x7fbd55033ca8 <col:29> 'int' 1
+    | |-CallExpr 0x7fbd55033db0 <line:23:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbd55033d98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbd55033d70 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbd550330f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbd5503b0f8 <line:25:3, line:26:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbd5503b068 <line:25:7, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:36> 'int' '!='
+    | | |-CallExpr 0x7fbd55033ef8 <../Data/C2AST/pr59216.c:25:7, col:16> 'long long'
+    | | | |-ImplicitCastExpr 0x7fbd55033ee0 <col:7> 'long long (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbd55033e10 <col:7> 'long long (int)' Function 0x7fbd55033538 'f' 'long long (int)'
+    | | | `-ParenExpr 0x7fbd55033ec0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:19, col:36> 'int'
+    | | |   `-BinaryOperator 0x7fbd55033e98 <col:20, col:35> 'int' '-'
+    | | |     |-UnaryOperator 0x7fbd55033e58 <col:20, <built-in>:38:21> 'int' prefix '-'
+    | | |     | `-IntegerLiteral 0x7fbd55033e38 <col:21> 'int' 2147483647
+    | | |     `-IntegerLiteral 0x7fbd55033e78 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:35> 'int' 1
+    | | `-UnaryOperator 0x7fbd5503b048 <../Data/C2AST/pr59216.c:25:21, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:36> 'long long' prefix '-'
+    | |   `-CStyleCastExpr 0x7fbd5503b020 <../Data/C2AST/pr59216.c:25:22, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:36> 'long long' <IntegralCast>
+    | |     `-ParenExpr 0x7fbd5503b000 <col:19, col:36> 'int'
+    | |       `-BinaryOperator 0x7fbd55033f88 <col:20, col:35> 'int' '-'
+    | |         |-UnaryOperator 0x7fbd55033f48 <col:20, <built-in>:38:21> 'int' prefix '-'
+    | |         | `-IntegerLiteral 0x7fbd55033f28 <col:21> 'int' 2147483647
+    | |         `-IntegerLiteral 0x7fbd55033f68 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/limits.h:67:35> 'int' 1
+    | |-CallExpr 0x7fbd5503b0d0 <../Data/C2AST/pr59216.c:26:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbd5503b0b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbd5503b090 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbd550330f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fbd5503b2d0 <line:28:3, line:29:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbd5503b240 <line:28:7, <built-in>:38:21> 'int' '!='
+    | | |-CallExpr 0x7fbd5503b190 <../Data/C2AST/pr59216.c:28:7, col:16> 'long long'
+    | | | |-ImplicitCastExpr 0x7fbd5503b178 <col:7> 'long long (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fbd5503b130 <col:7> 'long long (int)' Function 0x7fbd55033538 'f' 'long long (int)'
+    | | | `-IntegerLiteral 0x7fbd5503b158 <<built-in>:38:21> 'int' 2147483647
+    | | `-UnaryOperator 0x7fbd5503b220 <../Data/C2AST/pr59216.c:28:21, <built-in>:38:21> 'long long' prefix '-'
+    | |   `-CStyleCastExpr 0x7fbd5503b1f8 <../Data/C2AST/pr59216.c:28:22, <built-in>:38:21> 'long long' <IntegralCast>
+    | |     `-IntegerLiteral 0x7fbd5503b1c0 <col:21> 'int' 2147483647
+    | |-CallExpr 0x7fbd5503b2a8 <../Data/C2AST/pr59216.c:29:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbd5503b290 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbd5503b268 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbd550330f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fbd5503b390 <line:31:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fbd5503b378 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbd5503b308 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fbd550333b0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fbd5503b330 <col:9> 'int' 0

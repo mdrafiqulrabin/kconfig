@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ff5da82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff5da86d850 <../Data/C2AST/pr27116-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff5da86d8f0 prev 0x7ff5da86d850 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7ff5da86da58 <line:5:1, line:13:1> line:5:5 main 'int (void)'
+  `-CompoundStmt 0x7ff5da86df58 <line:6:1, line:13:1>
+    |-DeclStmt 0x7ff5da86dbe0 <line:7:5, col:24>
+    | `-VarDecl 0x7ff5da86db80 <col:5, col:23> col:23 used n 'volatile long'
+    |-BinaryOperator 0x7ff5da86dc78 <line:8:5, col:10> 'long' '='
+    | |-DeclRefExpr 0x7ff5da86dbf8 <col:5> 'volatile long' lvalue Var 0x7ff5da86db80 'n' 'volatile long'
+    | `-ImplicitCastExpr 0x7ff5da86dc60 <col:9, col:10> 'long' <IntegralCast>
+    |   `-UnaryOperator 0x7ff5da86dc40 <col:9, col:10> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7ff5da86dc20 <col:10> 'int' 2
+    |-IfStmt 0x7ff5da86dee8 <line:10:5, line:11:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff5da86de30 <line:10:9, col:40> 'int' '!='
+    | | |-BinaryOperator 0x7ff5da86ddc8 <col:9, col:34> 'long' '/'
+    | | | |-ParenExpr 0x7ff5da86dd28 <col:9, col:27> 'long'
+    | | | | `-BinaryOperator 0x7ff5da86dd00 <col:10, col:25> 'long' '-'
+    | | | |   |-UnaryOperator 0x7ff5da86dcc0 <col:10, col:11> 'long' prefix '-'
+    | | | |   | `-IntegerLiteral 0x7ff5da86dca0 <col:11> 'long' 2147483647
+    | | | |   `-IntegerLiteral 0x7ff5da86dce0 <col:25> 'long' 1
+    | | | `-ParenExpr 0x7ff5da86dda8 <col:31, col:34> 'long'
+    | | |   `-UnaryOperator 0x7ff5da86dd88 <col:32, col:33> 'long' prefix '-'
+    | | |     `-ImplicitCastExpr 0x7ff5da86dd70 <col:33> 'long' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7ff5da86dd48 <col:33> 'volatile long' lvalue Var 0x7ff5da86db80 'n' 'volatile long'
+    | | `-UnaryOperator 0x7ff5da86de10 <col:39, col:40> 'long' prefix '-'
+    | |   `-IntegerLiteral 0x7ff5da86ddf0 <col:40> 'long' 1073741824
+    | |-CallExpr 0x7ff5da86dec0 <line:11:2, col:9> 'void'
+    | | `-ImplicitCastExpr 0x7ff5da86dea8 <col:2> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff5da86de58 <col:2> 'void (void) __attribute__((noreturn))' Function 0x7ff5da86d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff5da86df40 <line:12:5, col:12>
+      `-IntegerLiteral 0x7ff5da86df20 <col:12> 'int' 0

@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7fac5082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fac5082c960 <../Data/C2AST/pr64452.c:4:1, line:8:1> line:4:8 struct A definition
+| |-FieldDecl 0x7fac51014298 <line:6:5, col:15> col:10 referenced str 'char [8]'
+| `-FieldDecl 0x7fac510142f8 <line:7:5, col:11> col:11 v 'void *'
+|-FunctionDecl 0x7fac51014428 <line:10:1, col:25> col:5 used varf 'int (char *, ...)'
+| `-ParmVarDecl 0x7fac51014358 <col:11, col:17> col:17 fmt 'char *'
+|-FunctionDecl 0x7fac510146f0 <line:12:1, line:15:1> line:12:6 foo 'void (struct A, struct A)'
+| |-ParmVarDecl 0x7fac51014560 <col:11, col:20> col:20 a 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac510145e0 <col:23, col:32> col:32 used b 'struct A':'struct A'
+| `-CompoundStmt 0x7fac510149c8 <line:13:1, line:15:1>
+|   `-CallExpr 0x7fac51014940 <line:14:5, col:31> 'int'
+|     |-ImplicitCastExpr 0x7fac51014928 <col:5> 'int (*)(char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fac510147a0 <col:5> 'int (char *, ...)' Function 0x7fac51014428 'varf' 'int (char *, ...)'
+|     |-ImplicitCastExpr 0x7fac51014980 <col:11> 'char *' <ArrayToPointerDecay>
+|     | `-StringLiteral 0x7fac51014808 <col:11> 'char [5]' lvalue "%s%s"
+|     |-ImplicitCastExpr 0x7fac51014998 <col:19, col:21> 'char *' <ArrayToPointerDecay>
+|     | `-MemberExpr 0x7fac51014860 <col:19, col:21> 'char [8]' lvalue .str 0x7fac51014298
+|     |   `-DeclRefExpr 0x7fac51014838 <col:19> 'struct A':'struct A' lvalue ParmVar 0x7fac510145e0 'b' 'struct A':'struct A'
+|     `-ImplicitCastExpr 0x7fac510149b0 <col:26, col:28> 'char *' <ArrayToPointerDecay>
+|       `-MemberExpr 0x7fac510148c0 <col:26, col:28> 'char [8]' lvalue .str 0x7fac51014298
+|         `-DeclRefExpr 0x7fac51014898 <col:26> 'struct A':'struct A' lvalue ParmVar 0x7fac510145e0 'b' 'struct A':'struct A'
+|-VarDecl 0x7fac510149f8 <line:17:1, col:11> col:11 used x64 'long long'
+|-FunctionDecl 0x7fac51015160 <line:19:1, line:25:1> line:19:6 foo2 'void (long long, struct A, struct A, struct A, struct A, struct A, struct A, struct A, struct A, struct A, long long)'
+| |-ParmVarDecl 0x7fac51014a70 <col:12, col:22> col:22 used j0 'long long'
+| |-ParmVarDecl 0x7fac51014af0 <line:20:12, col:21> col:21 a 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014b70 <col:24, col:33> col:33 b 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014bf0 <col:36, col:45> col:45 c 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014c70 <col:48, col:57> col:57 d 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014cf0 <line:21:12, col:21> col:21 e 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014d70 <col:24, col:33> col:33 f 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014df0 <col:36, col:45> col:45 g 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014e70 <col:48, col:57> col:57 h 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014ef0 <col:60, col:69> col:69 used i 'struct A':'struct A'
+| |-ParmVarDecl 0x7fac51014f68 <line:22:12, col:22> col:22 used j1 'long long'
+| `-CompoundStmt 0x7fac51800308 <line:23:1, line:25:1>
+|   `-CallExpr 0x7fac51800258 <line:24:5, col:43> 'int'
+|     |-ImplicitCastExpr 0x7fac51800240 <col:5> 'int (*)(char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fac51800058 <col:5> 'int (char *, ...)' Function 0x7fac51014428 'varf' 'int (char *, ...)'
+|     |-ImplicitCastExpr 0x7fac518002a8 <col:11> 'char *' <ArrayToPointerDecay>
+|     | `-StringLiteral 0x7fac51800080 <col:11> 'char [5]' lvalue "%s%s"
+|     |-ImplicitCastExpr 0x7fac518002c0 <col:19, col:21> 'char *' <ArrayToPointerDecay>
+|     | `-MemberExpr 0x7fac518000d8 <col:19, col:21> 'char [8]' lvalue .str 0x7fac51014298
+|     |   `-DeclRefExpr 0x7fac518000b0 <col:19> 'struct A':'struct A' lvalue ParmVar 0x7fac51014ef0 'i' 'struct A':'struct A'
+|     |-ImplicitCastExpr 0x7fac518002d8 <col:26, col:28> 'char *' <ArrayToPointerDecay>
+|     | `-MemberExpr 0x7fac51800138 <col:26, col:28> 'char [8]' lvalue .str 0x7fac51014298
+|     |   `-DeclRefExpr 0x7fac51800110 <col:26> 'struct A':'struct A' lvalue ParmVar 0x7fac51014ef0 'i' 'struct A':'struct A'
+|     |-ImplicitCastExpr 0x7fac518002f0 <col:33> 'long long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fac51800170 <col:33> 'long long' lvalue Var 0x7fac510149f8 'x64' 'long long'
+|     `-BinaryOperator 0x7fac51800218 <col:38, col:41> 'long long' '+'
+|       |-ImplicitCastExpr 0x7fac518001e8 <col:38> 'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fac51800198 <col:38> 'long long' lvalue ParmVar 0x7fac51014f68 'j1' 'long long'
+|       `-ImplicitCastExpr 0x7fac51800200 <col:41> 'long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fac518001c0 <col:41> 'long long' lvalue ParmVar 0x7fac51014a70 'j0' 'long long'
+`-FunctionDecl 0x7fac51800908 <line:28:1, line:34:1> line:28:6 foo3 'void (long long, struct A, struct A, struct A, struct A, struct A, struct A, struct A, struct A, struct A, long long)'
+  |-ParmVarDecl 0x7fac51800338 <col:12, col:22> col:22 used j0 'long long'
+  |-ParmVarDecl 0x7fac518003b8 <line:29:12, col:21> col:21 a 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac51800438 <col:24, col:33> col:33 used b 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac518004b8 <col:36, col:45> col:45 c 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac51800538 <col:48, col:57> col:57 d 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac518005b8 <line:30:12, col:21> col:21 e 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac51800638 <col:24, col:33> col:33 f 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac518006b8 <col:36, col:45> col:45 g 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac51800738 <col:48, col:57> col:57 h 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac518007b8 <col:60, col:69> col:69 used i 'struct A':'struct A'
+  |-ParmVarDecl 0x7fac51800830 <line:31:12, col:22> col:22 used j1 'long long'
+  `-CompoundStmt 0x7fac51800cf0 <line:32:1, line:34:1>
+    `-CallExpr 0x7fac51800c70 <line:33:5, col:45> 'int'
+      |-ImplicitCastExpr 0x7fac51800c58 <col:5> 'int (*)(char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fac51800a00 <col:5> 'int (char *, ...)' Function 0x7fac51014428 'varf' 'int (char *, ...)'
+      |-ImplicitCastExpr 0x7fac51800cc0 <col:11> 'char *' <ArrayToPointerDecay>
+      | `-StringLiteral 0x7fac51800a28 <col:11> 'char [5]' lvalue "%s%s"
+      |-UnaryOperator 0x7fac51800ae8 <col:19, col:22> 'char (*)[8]' prefix '&'
+      | `-MemberExpr 0x7fac51800a80 <col:20, col:22> 'char [8]' lvalue .str 0x7fac51014298
+      |   `-DeclRefExpr 0x7fac51800a58 <col:20> 'struct A':'struct A' lvalue ParmVar 0x7fac518007b8 'i' 'struct A':'struct A'
+      |-UnaryOperator 0x7fac51800b68 <col:27, col:30> 'char (*)[8]' prefix '&'
+      | `-MemberExpr 0x7fac51800b30 <col:28, col:30> 'char [8]' lvalue .str 0x7fac51014298
+      |   `-DeclRefExpr 0x7fac51800b08 <col:28> 'struct A':'struct A' lvalue ParmVar 0x7fac51800438 'b' 'struct A':'struct A'
+      |-ImplicitCastExpr 0x7fac51800cd8 <col:35> 'long long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fac51800b88 <col:35> 'long long' lvalue Var 0x7fac510149f8 'x64' 'long long'
+      `-BinaryOperator 0x7fac51800c30 <col:40, col:43> 'long long' '+'
+        |-ImplicitCastExpr 0x7fac51800c00 <col:40> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fac51800bb0 <col:40> 'long long' lvalue ParmVar 0x7fac51800830 'j1' 'long long'
+        `-ImplicitCastExpr 0x7fac51800c18 <col:43> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fac51800bd8 <col:43> 'long long' lvalue ParmVar 0x7fac51800338 'j0' 'long long'

@@ -1,0 +1,170 @@
+TranslationUnitDecl 0x7f8878801ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8878802778 <../Data/C2AST/pr48203.c:5:1, col:14> col:14 used v 'volatile int'
+|-FunctionDecl 0x7f887802e510 <line:7:1, line:28:1> line:8:1 foo 'void (long, long, long, long, long, long, long, long, long, long, long, long, long, long, long, long)'
+| |-ParmVarDecl 0x7f887802dc58 <col:6, col:11> col:11 used a 'long'
+| |-ParmVarDecl 0x7f887802dcd0 <col:14, col:19> col:19 used b 'long'
+| |-ParmVarDecl 0x7f887802dd48 <col:22, col:27> col:27 used c 'long'
+| |-ParmVarDecl 0x7f887802ddc0 <col:30, col:35> col:35 used d 'long'
+| |-ParmVarDecl 0x7f887802de38 <col:38, col:43> col:43 used e 'long'
+| |-ParmVarDecl 0x7f887802deb0 <col:46, col:51> col:51 used f 'long'
+| |-ParmVarDecl 0x7f887802df28 <col:54, col:59> col:59 used g 'long'
+| |-ParmVarDecl 0x7f887802dfa0 <col:62, col:67> col:67 used h 'long'
+| |-ParmVarDecl 0x7f887802e018 <line:9:6, col:11> col:11 used i 'long'
+| |-ParmVarDecl 0x7f887802e090 <col:14, col:19> col:19 used j 'long'
+| |-ParmVarDecl 0x7f887802e108 <col:22, col:27> col:27 used k 'long'
+| |-ParmVarDecl 0x7f887802e180 <col:30, col:35> col:35 used l 'long'
+| |-ParmVarDecl 0x7f887802e1f8 <col:38, col:43> col:43 used m 'long'
+| |-ParmVarDecl 0x7f887802e270 <col:46, col:51> col:51 used n 'long'
+| |-ParmVarDecl 0x7f887802e2e8 <col:54, col:59> col:59 used o 'long'
+| |-ParmVarDecl 0x7f887802e360 <col:62, col:67> col:67 used p 'long'
+| `-CompoundStmt 0x7f887802f380 <line:10:1, line:28:1>
+|   |-DeclStmt 0x7f887802e6e8 <line:11:3, col:14>
+|   | `-VarDecl 0x7f887802e648 <col:3, col:13> col:8 a2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802e6d0 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802e6a8 <col:13> 'long' lvalue ParmVar 0x7f887802dc58 'a' 'long'
+|   |-DeclStmt 0x7f887802e7b8 <line:12:3, col:14>
+|   | `-VarDecl 0x7f887802e718 <col:3, col:13> col:8 b2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802e7a0 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802e778 <col:13> 'long' lvalue ParmVar 0x7f887802dcd0 'b' 'long'
+|   |-DeclStmt 0x7f887802e888 <line:13:3, col:14>
+|   | `-VarDecl 0x7f887802e7e8 <col:3, col:13> col:8 c2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802e870 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802e848 <col:13> 'long' lvalue ParmVar 0x7f887802dd48 'c' 'long'
+|   |-DeclStmt 0x7f887802e958 <line:14:3, col:14>
+|   | `-VarDecl 0x7f887802e8b8 <col:3, col:13> col:8 d2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802e940 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802e918 <col:13> 'long' lvalue ParmVar 0x7f887802ddc0 'd' 'long'
+|   |-DeclStmt 0x7f887802ea28 <line:15:3, col:14>
+|   | `-VarDecl 0x7f887802e988 <col:3, col:13> col:8 e2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802ea10 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802e9e8 <col:13> 'long' lvalue ParmVar 0x7f887802de38 'e' 'long'
+|   |-DeclStmt 0x7f887802eaf8 <line:16:3, col:14>
+|   | `-VarDecl 0x7f887802ea58 <col:3, col:13> col:8 f2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802eae0 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802eab8 <col:13> 'long' lvalue ParmVar 0x7f887802deb0 'f' 'long'
+|   |-DeclStmt 0x7f887802ebc8 <line:17:3, col:14>
+|   | `-VarDecl 0x7f887802eb28 <col:3, col:13> col:8 g2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802ebb0 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802eb88 <col:13> 'long' lvalue ParmVar 0x7f887802df28 'g' 'long'
+|   |-DeclStmt 0x7f887802eca0 <line:18:3, col:14>
+|   | `-VarDecl 0x7f887802ec00 <col:3, col:13> col:8 h2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802ec88 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802ec60 <col:13> 'long' lvalue ParmVar 0x7f887802dfa0 'h' 'long'
+|   |-DeclStmt 0x7f887802ed70 <line:19:3, col:14>
+|   | `-VarDecl 0x7f887802ecd0 <col:3, col:13> col:8 i2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802ed58 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802ed30 <col:13> 'long' lvalue ParmVar 0x7f887802e018 'i' 'long'
+|   |-DeclStmt 0x7f887802ee40 <line:20:3, col:14>
+|   | `-VarDecl 0x7f887802eda0 <col:3, col:13> col:8 j2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802ee28 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802ee00 <col:13> 'long' lvalue ParmVar 0x7f887802e090 'j' 'long'
+|   |-DeclStmt 0x7f887802ef10 <line:21:3, col:14>
+|   | `-VarDecl 0x7f887802ee70 <col:3, col:13> col:8 k2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802eef8 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802eed0 <col:13> 'long' lvalue ParmVar 0x7f887802e108 'k' 'long'
+|   |-DeclStmt 0x7f887802efe0 <line:22:3, col:14>
+|   | `-VarDecl 0x7f887802ef40 <col:3, col:13> col:8 l2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802efc8 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802efa0 <col:13> 'long' lvalue ParmVar 0x7f887802e180 'l' 'long'
+|   |-DeclStmt 0x7f887802f0b0 <line:23:3, col:14>
+|   | `-VarDecl 0x7f887802f010 <col:3, col:13> col:8 m2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802f098 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802f070 <col:13> 'long' lvalue ParmVar 0x7f887802e1f8 'm' 'long'
+|   |-DeclStmt 0x7f887802f180 <line:24:3, col:14>
+|   | `-VarDecl 0x7f887802f0e0 <col:3, col:13> col:8 n2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802f168 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802f140 <col:13> 'long' lvalue ParmVar 0x7f887802e270 'n' 'long'
+|   |-DeclStmt 0x7f887802f250 <line:25:3, col:14>
+|   | `-VarDecl 0x7f887802f1b0 <col:3, col:13> col:8 o2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802f238 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802f210 <col:13> 'long' lvalue ParmVar 0x7f887802e2e8 'o' 'long'
+|   |-DeclStmt 0x7f887802f320 <line:26:3, col:14>
+|   | `-VarDecl 0x7f887802f280 <col:3, col:13> col:8 p2 'long' cinit
+|   |   `-ImplicitCastExpr 0x7f887802f308 <col:13> 'long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f887802f2e0 <col:13> 'long' lvalue ParmVar 0x7f887802e360 'p' 'long'
+|   `-UnaryOperator 0x7f887802f360 <line:27:3, col:4> 'int' postfix '++'
+|     `-DeclRefExpr 0x7f887802f338 <col:3> 'volatile int' lvalue Var 0x7f8878802778 'v' 'volatile int'
+`-FunctionDecl 0x7f8878045750 <line:30:1, line:51:1> line:31:1 bar 'void (int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int)'
+  |-ParmVarDecl 0x7f887802f430 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7f887802f4a8 <col:13, col:17> col:17 used b 'int'
+  |-ParmVarDecl 0x7f887802f520 <col:20, col:24> col:24 used c 'int'
+  |-ParmVarDecl 0x7f887802f598 <col:27, col:31> col:31 used d 'int'
+  |-ParmVarDecl 0x7f887802f610 <col:34, col:38> col:38 used e 'int'
+  |-ParmVarDecl 0x7f887802f688 <col:41, col:45> col:45 used f 'int'
+  |-ParmVarDecl 0x7f887802f700 <col:48, col:52> col:52 used g 'int'
+  |-ParmVarDecl 0x7f887802f778 <col:55, col:59> col:59 used h 'int'
+  |-ParmVarDecl 0x7f887802f7f0 <line:32:6, col:10> col:10 used i 'int'
+  |-ParmVarDecl 0x7f887802f868 <col:13, col:17> col:17 used j 'int'
+  |-ParmVarDecl 0x7f887802f8e0 <col:20, col:24> col:24 used k 'int'
+  |-ParmVarDecl 0x7f887802f958 <col:27, col:31> col:31 used l 'int'
+  |-ParmVarDecl 0x7f887802f9d0 <col:34, col:38> col:38 used m 'int'
+  |-ParmVarDecl 0x7f887802fa48 <col:41, col:45> col:45 used n 'int'
+  |-ParmVarDecl 0x7f887802fac0 <col:48, col:52> col:52 used o 'int'
+  |-ParmVarDecl 0x7f887802fb38 <col:55, col:59> col:59 used p 'int'
+  `-CompoundStmt 0x7f8878046600 <line:33:1, line:51:1>
+    |-DeclStmt 0x7f8878045928 <line:34:3, col:13>
+    | `-VarDecl 0x7f8878045888 <col:3, col:12> col:7 a2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045910 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f88780458e8 <col:12> 'int' lvalue ParmVar 0x7f887802f430 'a' 'int'
+    |-DeclStmt 0x7f88780459f8 <line:35:3, col:13>
+    | `-VarDecl 0x7f8878045958 <col:3, col:12> col:7 b2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f88780459e0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f88780459b8 <col:12> 'int' lvalue ParmVar 0x7f887802f4a8 'b' 'int'
+    |-DeclStmt 0x7f8878045ac8 <line:36:3, col:13>
+    | `-VarDecl 0x7f8878045a28 <col:3, col:12> col:7 c2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045ab0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045a88 <col:12> 'int' lvalue ParmVar 0x7f887802f520 'c' 'int'
+    |-DeclStmt 0x7f8878045b98 <line:37:3, col:13>
+    | `-VarDecl 0x7f8878045af8 <col:3, col:12> col:7 d2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045b80 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045b58 <col:12> 'int' lvalue ParmVar 0x7f887802f598 'd' 'int'
+    |-DeclStmt 0x7f8878045c68 <line:38:3, col:13>
+    | `-VarDecl 0x7f8878045bc8 <col:3, col:12> col:7 e2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045c50 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045c28 <col:12> 'int' lvalue ParmVar 0x7f887802f610 'e' 'int'
+    |-DeclStmt 0x7f8878045d38 <line:39:3, col:13>
+    | `-VarDecl 0x7f8878045c98 <col:3, col:12> col:7 f2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045d20 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045cf8 <col:12> 'int' lvalue ParmVar 0x7f887802f688 'f' 'int'
+    |-DeclStmt 0x7f8878045e08 <line:40:3, col:13>
+    | `-VarDecl 0x7f8878045d68 <col:3, col:12> col:7 g2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045df0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045dc8 <col:12> 'int' lvalue ParmVar 0x7f887802f700 'g' 'int'
+    |-DeclStmt 0x7f8878045ed8 <line:41:3, col:13>
+    | `-VarDecl 0x7f8878045e38 <col:3, col:12> col:7 h2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045ec0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045e98 <col:12> 'int' lvalue ParmVar 0x7f887802f778 'h' 'int'
+    |-DeclStmt 0x7f8878045fa8 <line:42:3, col:13>
+    | `-VarDecl 0x7f8878045f08 <col:3, col:12> col:7 i2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878045f90 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878045f68 <col:12> 'int' lvalue ParmVar 0x7f887802f7f0 'i' 'int'
+    |-DeclStmt 0x7f8878046078 <line:43:3, col:13>
+    | `-VarDecl 0x7f8878045fd8 <col:3, col:12> col:7 j2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878046060 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878046038 <col:12> 'int' lvalue ParmVar 0x7f887802f868 'j' 'int'
+    |-DeclStmt 0x7f8878046148 <line:44:3, col:13>
+    | `-VarDecl 0x7f88780460a8 <col:3, col:12> col:7 k2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878046130 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878046108 <col:12> 'int' lvalue ParmVar 0x7f887802f8e0 'k' 'int'
+    |-DeclStmt 0x7f8878046218 <line:45:3, col:13>
+    | `-VarDecl 0x7f8878046178 <col:3, col:12> col:7 l2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878046200 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f88780461d8 <col:12> 'int' lvalue ParmVar 0x7f887802f958 'l' 'int'
+    |-DeclStmt 0x7f88780462e8 <line:46:3, col:13>
+    | `-VarDecl 0x7f8878046248 <col:3, col:12> col:7 m2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f88780462d0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f88780462a8 <col:12> 'int' lvalue ParmVar 0x7f887802f9d0 'm' 'int'
+    |-DeclStmt 0x7f88780463b8 <line:47:3, col:13>
+    | `-VarDecl 0x7f8878046318 <col:3, col:12> col:7 n2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f88780463a0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878046378 <col:12> 'int' lvalue ParmVar 0x7f887802fa48 'n' 'int'
+    |-DeclStmt 0x7f8878046488 <line:48:3, col:13>
+    | `-VarDecl 0x7f88780463e8 <col:3, col:12> col:7 o2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878046470 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878046448 <col:12> 'int' lvalue ParmVar 0x7f887802fac0 'o' 'int'
+    |-DeclStmt 0x7f8878046558 <line:49:3, col:13>
+    | `-VarDecl 0x7f88780464b8 <col:3, col:12> col:7 p2 'int' cinit
+    |   `-ImplicitCastExpr 0x7f8878046540 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8878046518 <col:12> 'int' lvalue ParmVar 0x7f887802fb38 'p' 'int'
+    `-UnaryOperator 0x7f8878046598 <line:50:3, col:4> 'int' postfix '++'
+      `-DeclRefExpr 0x7f8878046570 <col:3> 'volatile int' lvalue Var 0x7f8878802778 'v' 'volatile int'

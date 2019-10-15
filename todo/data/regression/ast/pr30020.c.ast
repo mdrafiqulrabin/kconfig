@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7ffa41828ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffa42004068 <../Data/C2AST/pr30020.c:4:1, line:12:1> line:5:1 foo 'int (unsigned char)'
+  |-ParmVarDecl 0x7ffa41829b78 <col:6, col:20> col:20 used c 'unsigned char'
+  `-CompoundStmt 0x7ffa420048e8 <line:6:1, line:12:1>
+    |-SwitchStmt 0x7ffa420041a8 <line:7:3, col:45>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffa42004190 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ffa42004178 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa42004150 <col:11> 'unsigned char' lvalue ParmVar 0x7ffa41829b78 'c' 'unsigned char'
+    | `-CompoundStmt 0x7ffa42004300 <col:14, col:45>
+    |   `-CaseStmt 0x7ffa420041f8 <col:16, col:42>
+    |     |-IntegerLiteral 0x7ffa420041d8 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7ffa42004270 <col:25, col:42>
+    |       |-UnaryOperator 0x7ffa42004250 <col:30, col:31> 'int' prefix '-'
+    |       | `-IntegerLiteral 0x7ffa42004230 <col:31> 'int' 1
+    |       |-<<<NULL>>>
+    |       `-ReturnStmt 0x7ffa420042e8 <col:34, col:42>
+    |         `-UnaryOperator 0x7ffa420042c8 <col:41, col:42> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7ffa420042a8 <col:42> 'int' 1
+    |-NullStmt 0x7ffa42004318 <col:46>
+    |-SwitchStmt 0x7ffa42004380 <line:8:3, col:46>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffa42004368 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ffa42004350 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa42004328 <col:11> 'unsigned char' lvalue ParmVar 0x7ffa41829b78 'c' 'unsigned char'
+    | `-CompoundStmt 0x7ffa420044b8 <col:14, col:46>
+    |   `-CaseStmt 0x7ffa420043d0 <col:16, col:43>
+    |     |-IntegerLiteral 0x7ffa420043b0 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7ffa42004428 <col:25, col:43>
+    |       |-IntegerLiteral 0x7ffa42004408 <col:30> 'int' 300
+    |       |-<<<NULL>>>
+    |       `-ReturnStmt 0x7ffa420044a0 <col:35, col:43>
+    |         `-UnaryOperator 0x7ffa42004480 <col:42, col:43> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7ffa42004460 <col:43> 'int' 1
+    |-NullStmt 0x7ffa420044d0 <col:47>
+    |-SwitchStmt 0x7ffa42004538 <line:9:3, col:51>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffa42004520 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ffa42004508 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa420044e0 <col:11> 'unsigned char' lvalue ParmVar 0x7ffa41829b78 'c' 'unsigned char'
+    | `-CompoundStmt 0x7ffa420046b0 <col:14, col:51>
+    |   `-CaseStmt 0x7ffa42004588 <col:16, col:48>
+    |     |-IntegerLiteral 0x7ffa42004568 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7ffa42004620 <col:25, col:48>
+    |       |-UnaryOperator 0x7ffa420045e0 <col:30, col:31> 'int' prefix '-'
+    |       | `-IntegerLiteral 0x7ffa420045c0 <col:31> 'int' 1
+    |       |-IntegerLiteral 0x7ffa42004600 <col:37> 'int' 2
+    |       `-ReturnStmt 0x7ffa42004698 <col:40, col:48>
+    |         `-UnaryOperator 0x7ffa42004678 <col:47, col:48> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7ffa42004658 <col:48> 'int' 1
+    |-NullStmt 0x7ffa420046c8 <col:52>
+    |-SwitchStmt 0x7ffa42004730 <line:10:3, col:54>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffa42004718 <col:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7ffa42004700 <col:11> 'unsigned char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa420046d8 <col:11> 'unsigned char' lvalue ParmVar 0x7ffa41829b78 'c' 'unsigned char'
+    | `-CompoundStmt 0x7ffa42004888 <col:14, col:54>
+    |   `-CaseStmt 0x7ffa42004780 <col:16, col:51>
+    |     |-IntegerLiteral 0x7ffa42004760 <col:21> 'int' 42
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7ffa420047f8 <col:25, col:51>
+    |       |-IntegerLiteral 0x7ffa420047b8 <col:30> 'int' 250
+    |       |-IntegerLiteral 0x7ffa420047d8 <col:38> 'int' 300
+    |       `-ReturnStmt 0x7ffa42004870 <col:43, col:51>
+    |         `-UnaryOperator 0x7ffa42004850 <col:50, col:51> 'int' prefix '-'
+    |           `-IntegerLiteral 0x7ffa42004830 <col:51> 'int' 1
+    |-NullStmt 0x7ffa420048a0 <col:55>
+    `-ReturnStmt 0x7ffa420048d0 <line:11:3, col:10>
+      `-IntegerLiteral 0x7ffa420048b0 <col:10> 'int' 0

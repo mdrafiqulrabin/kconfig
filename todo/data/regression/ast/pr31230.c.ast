@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fbc230174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbc23059020 <../Data/C2AST/pr31230.c:6:1, line:9:1> line:6:6 f1 'void (void)'
+| `-CompoundStmt 0x7fbc230591f0 <line:7:1, line:9:1>
+|   `-DeclStmt 0x7fbc230591d8 <line:8:3, col:20>
+|     `-VarDecl 0x7fbc23059178 <col:3, col:19> col:8 buffer1 'char [100]'
+|-FunctionDecl 0x7fbc230592d8 <line:11:1, line:14:1> line:11:5 f2 'int (void)'
+| `-CompoundStmt 0x7fbc230593b0 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fbc23059398 <line:13:3, col:10>
+|     `-IntegerLiteral 0x7fbc23059378 <col:10> 'int' 0
+`-FunctionDecl 0x7fbc23059458 <line:16:1, line:19:1> line:16:6 f3 'void (void)'
+  `-CompoundStmt 0x7fbc230595b0 <line:17:1, line:19:1>
+    `-DeclStmt 0x7fbc23059598 <line:18:3, col:20>
+      `-VarDecl 0x7fbc23059538 <col:3, col:19> col:8 buffer2 'char [100]'

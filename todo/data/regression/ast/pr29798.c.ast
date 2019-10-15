@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7fc2600240e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc260065c00 <../Data/C2AST/pr29798.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc260065ca0 prev 0x7fc260065c00 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fc260065dc0 <line:3:1, line:23:1> line:4:1 main 'int ()'
+  `-CompoundStmt 0x7fc260066858 <line:5:1, line:23:1>
+    |-DeclStmt 0x7fc260065f18 <line:6:3, col:8>
+    | `-VarDecl 0x7fc260065eb8 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fc260065fa8 <line:7:3, col:16>
+    | `-VarDecl 0x7fc260065f48 <col:3, col:10> col:10 used oldrho 'double'
+    |-DeclStmt 0x7fc260066058 <line:8:3, col:20>
+    | `-VarDecl 0x7fc260065fd8 <col:3, col:17> col:10 used beta 'double' cinit
+    |   `-FloatingLiteral 0x7fc260066038 <col:17> 'double' 0.000000e+00
+    |-DeclStmt 0x7fc260066108 <line:9:3, col:20>
+    | `-VarDecl 0x7fc260066088 <col:3, col:17> col:10 used work 'double' cinit
+    |   `-FloatingLiteral 0x7fc2600660e8 <col:17> 'double' 1.000000e+00
+    |-ForStmt 0x7fc2600667e8 <line:10:3, line:21:5>
+    | |-BinaryOperator 0x7fc260066168 <line:10:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fc260066120 <col:8> 'int' lvalue Var 0x7fc260065eb8 'i' 'int'
+    | | `-IntegerLiteral 0x7fc260066148 <col:12> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc2600661f0 <col:15, col:20> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fc2600661d8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc260066190 <col:15> 'int' lvalue Var 0x7fc260065eb8 'i' 'int'
+    | | `-IntegerLiteral 0x7fc2600661b8 <col:20> 'int' 2
+    | |-UnaryOperator 0x7fc260066240 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fc260066218 <col:23> 'int' lvalue Var 0x7fc260065eb8 'i' 'int'
+    | `-CompoundStmt 0x7fc2600667b0 <line:11:5, line:21:5>
+    |   |-DeclStmt 0x7fc260066380 <line:12:7, col:31>
+    |   | `-VarDecl 0x7fc260066278 <col:7, col:27> col:14 used rho 'double' cinit
+    |   |   `-BinaryOperator 0x7fc260066358 <col:20, col:27> 'double' '*'
+    |   |     |-ImplicitCastExpr 0x7fc260066328 <col:20> 'double' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fc2600662d8 <col:20> 'double' lvalue Var 0x7fc260066088 'work' 'double'
+    |   |     `-ImplicitCastExpr 0x7fc260066340 <col:27> 'double' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fc260066300 <col:27> 'double' lvalue Var 0x7fc260066088 'work' 'double'
+    |   |-IfStmt 0x7fc260066518 <line:13:7, line:14:22>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fc2600663f8 <line:13:11, col:16> 'int' '!='
+    |   | | |-ImplicitCastExpr 0x7fc2600663e0 <col:11> 'int' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fc260066398 <col:11> 'int' lvalue Var 0x7fc260065eb8 'i' 'int'
+    |   | | `-IntegerLiteral 0x7fc2600663c0 <col:16> 'int' 1
+    |   | |-BinaryOperator 0x7fc2600664f0 <line:14:9, col:22> 'double' '='
+    |   | | |-DeclRefExpr 0x7fc260066420 <col:9> 'double' lvalue Var 0x7fc260065fd8 'beta' 'double'
+    |   | | `-BinaryOperator 0x7fc2600664c8 <col:16, col:22> 'double' '/'
+    |   | |   |-ImplicitCastExpr 0x7fc260066498 <col:16> 'double' <LValueToRValue>
+    |   | |   | `-DeclRefExpr 0x7fc260066448 <col:16> 'double' lvalue Var 0x7fc260066278 'rho' 'double'
+    |   | |   `-ImplicitCastExpr 0x7fc2600664b0 <col:22> 'double' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fc260066470 <col:22> 'double' lvalue Var 0x7fc260065f48 'oldrho' 'double'
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fc260066668 <line:15:7, line:16:16>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fc2600665b0 <line:15:11, col:19> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fc260066598 <col:11> 'double' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fc260066550 <col:11> 'double' lvalue Var 0x7fc260065fd8 'beta' 'double'
+    |   | | `-FloatingLiteral 0x7fc260066578 <col:19> 'double' 1.000000e+00
+    |   | |-CallExpr 0x7fc260066640 <line:16:9, col:16> 'void'
+    |   | | `-ImplicitCastExpr 0x7fc260066628 <col:9> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   | |   `-DeclRefExpr 0x7fc2600665d8 <col:9> 'void (void) __attribute__((noreturn))' Function 0x7fc260065ca0 'abort' 'void (void) __attribute__((noreturn))'
+    |   | `-<<<NULL>>>
+    |   |-CompoundAssignOperator 0x7fc2600666e8 <line:19:7, col:15> 'double' '/=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7fc2600666a0 <col:7> 'double' lvalue Var 0x7fc260066088 'work' 'double'
+    |   | `-FloatingLiteral 0x7fc2600666c8 <col:15> 'double' 2.000000e+00
+    |   `-BinaryOperator 0x7fc260066788 <line:20:7, col:16> 'double' '='
+    |     |-DeclRefExpr 0x7fc260066720 <col:7> 'double' lvalue Var 0x7fc260065f48 'oldrho' 'double'
+    |     `-ImplicitCastExpr 0x7fc260066770 <col:16> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fc260066748 <col:16> 'double' lvalue Var 0x7fc260066278 'rho' 'double'
+    `-ReturnStmt 0x7fc260066840 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fc260066820 <col:10> 'int' 0

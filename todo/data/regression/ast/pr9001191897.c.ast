@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fa01e0174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa01e018178 <../Data/C2AST/pr9001191897.c:4:1> col:1 used a 'int'
+`-FunctionDecl 0x7fa01d01ac90 <line:5:1, line:10:1> line:5:1 c 'int ()'
+  `-CompoundStmt 0x7fa01d01b120 <col:5, line:10:1>
+    |-DeclStmt 0x7fa01d01ae08 <line:6:3, col:20>
+    | `-VarDecl 0x7fa01d01ada8 <col:3, col:19> col:15 used b 'char [25]' static
+    `-ForStmt 0x7fa01d01b0e8 <line:7:3, line:9:14>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa01d01ae80 <line:7:10, col:15> 'int' '>='
+      | |-ImplicitCastExpr 0x7fa01d01ae68 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa01d01ae20 <col:10> 'int' lvalue Var 0x7fa01e018178 'a' 'int'
+      | `-IntegerLiteral 0x7fa01d01ae48 <col:15> 'int' 0
+      |-UnaryOperator 0x7fa01d01aed0 <col:18, col:19> 'int' postfix '--'
+      | `-DeclRefExpr 0x7fa01d01aea8 <col:18> 'int' lvalue Var 0x7fa01e018178 'a' 'int'
+      `-IfStmt 0x7fa01d01b0b0 <line:8:5, line:9:14>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7fa01d01af98 <line:8:9, col:12> 'char' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7fa01d01af70 <col:9, col:12> 'char' lvalue
+        |   |-ImplicitCastExpr 0x7fa01d01af40 <col:9> 'char *' <ArrayToPointerDecay>
+        |   | `-DeclRefExpr 0x7fa01d01aef0 <col:9> 'char [25]' lvalue Var 0x7fa01d01ada8 'b' 'char [25]'
+        |   `-ImplicitCastExpr 0x7fa01d01af58 <col:11> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fa01d01af18 <col:11> 'int' lvalue Var 0x7fa01e018178 'a' 'int'
+        |-BinaryOperator 0x7fa01d01b088 <line:9:7, col:14> 'char' '='
+        | |-ArraySubscriptExpr 0x7fa01d01b030 <col:7, col:10> 'char' lvalue
+        | | |-ImplicitCastExpr 0x7fa01d01b000 <col:7> 'char *' <ArrayToPointerDecay>
+        | | | `-DeclRefExpr 0x7fa01d01afb0 <col:7> 'char [25]' lvalue Var 0x7fa01d01ada8 'b' 'char [25]'
+        | | `-ImplicitCastExpr 0x7fa01d01b018 <col:9> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fa01d01afd8 <col:9> 'int' lvalue Var 0x7fa01e018178 'a' 'int'
+        | `-ImplicitCastExpr 0x7fa01d01b070 <col:14> 'char' <IntegralCast>
+        |   `-CharacterLiteral 0x7fa01d01b058 <col:14> 'int' 0
+        `-<<<NULL>>>

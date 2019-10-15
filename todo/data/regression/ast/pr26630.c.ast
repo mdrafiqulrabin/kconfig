@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fcc9582bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcc9586d850 <../Data/C2AST/pr26630.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcc9586d8f0 prev 0x7fcc9586d850 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fcc9586d9e0 <line:5:1, line:12:1> line:5:5 main 'int ()'
+  `-CompoundStmt 0x7fcc9586dfb8 <line:6:1, line:12:1>
+    |-DeclStmt 0x7fcc9586db58 <line:7:3, col:17>
+    | `-VarDecl 0x7fcc9586dad8 <col:3, col:12> col:7 used a1 'int' cinit
+    |   `-IntegerLiteral 0x7fcc9586db38 <col:12> 'int' 40000
+    |-DeclStmt 0x7fcc9586de10 <line:8:3, col:49>
+    | `-VarDecl 0x7fcc9586db88 <col:3, col:48> col:7 used c1 'int' cinit
+    |   `-BinaryOperator 0x7fcc9586dde8 <col:12, col:48> 'int' '*'
+    |     |-ParenExpr 0x7fcc9586dda8 <col:12, col:46> 'int'
+    |     | `-BinaryOperator 0x7fcc9586dd80 <col:14, col:41> 'int' '+'
+    |     |   |-ParenExpr 0x7fcc9586dd40 <col:14, col:37> 'int'
+    |     |   | `-CStyleCastExpr 0x7fcc9586dd18 <col:15, col:36> 'int' <IntegralCast>
+    |     |   |   `-CStyleCastExpr 0x7fcc9586dcd8 <col:20, col:36> 'short' <IntegralCast>
+    |     |   |     `-ParenExpr 0x7fcc9586dcb8 <col:27, col:36> 'int'
+    |     |   |       `-BinaryOperator 0x7fcc9586dc48 <col:28, col:31> 'int' '-'
+    |     |   |         |-ImplicitCastExpr 0x7fcc9586dc30 <col:28> 'int' <LValueToRValue>
+    |     |   |         | `-DeclRefExpr 0x7fcc9586dbe8 <col:28> 'int' lvalue Var 0x7fcc9586dad8 'a1' 'int'
+    |     |   |         `-IntegerLiteral 0x7fcc9586dc10 <col:31> 'int' 10000
+    |     |   `-IntegerLiteral 0x7fcc9586dd60 <col:41> 'int' 10000
+    |     `-IntegerLiteral 0x7fcc9586ddc8 <col:48> 'int' 2
+    |-IfStmt 0x7fcc9586df48 <line:9:3, line:10:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcc9586de88 <line:9:7, col:13> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcc9586de70 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcc9586de28 <col:7> 'int' lvalue Var 0x7fcc9586db88 'c1' 'int'
+    | | `-IntegerLiteral 0x7fcc9586de50 <col:13> 'int' 80000
+    | |-CallExpr 0x7fcc9586df20 <line:10:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fcc9586df08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcc9586deb0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcc9586d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcc9586dfa0 <line:11:3, col:10>
+      `-IntegerLiteral 0x7fcc9586df80 <col:10> 'int' 0

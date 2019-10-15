@@ -1,0 +1,102 @@
+TranslationUnitDecl 0x7fe59a02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe59a02c960 <../Data/C2AST/pr60114.c:6:1, col:25> col:8 struct S definition
+| |-FieldDecl 0x7fe59a814238 <col:12, col:16> col:16 n 'int'
+| `-FieldDecl 0x7fe59a814300 <col:12, col:22> col:19 u 'int [2]'
+|-VarDecl 0x7fe59a8143d0 <line:7:1, line:10:1> line:7:19 z 'const signed char [3]' cinit
+| `-InitListExpr 0x7fe59a8145d0 <col:25, line:10:1> 'const signed char [3]'
+|   |-array filler
+|   | `-ImplicitValueInitExpr 0x7fe59a8146d8 <<invalid sloc>> 'const signed char'
+|   |-ImplicitCastExpr 0x7fe59a814618 <line:8:9> 'signed char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe59a814490 <col:9> 'int' 256
+|   |-ImplicitValueInitExpr 0x7fe59a8146d8 <<invalid sloc>> 'const signed char'
+|   `-ImplicitCastExpr 0x7fe59a814648 <line:9:9> 'signed char' <IntegralCast>
+|     `-IntegerLiteral 0x7fe59a814518 <col:9> 'int' 257
+|-VarDecl 0x7fe59a814740 <line:11:1, line:15:11> line:11:5 A 'int [7]' cinit
+| `-InitListExpr 0x7fe59a8148f8 <col:11, line:15:11> 'int [7]'
+|   |-IntegerLiteral 0x7fe59a8147a0 <line:12:13> 'int' 0
+|   |-ImplicitCastExpr 0x7fe59a814940 <col:16> 'int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe59a8147c0 <col:16> 'unsigned int' 2147483648
+|   |-IntegerLiteral 0x7fe59a8147e0 <line:13:13> 'int' 10
+|   |-ImplicitCastExpr 0x7fe59a814988 <col:18> 'int' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe59a814800 <col:18> 'unsigned int' 2147483648
+|   |-IntegerLiteral 0x7fe59a814820 <line:14:13> 'int' 10
+|   |-IntegerLiteral 0x7fe59a814840 <col:18> 'int' 10
+|   `-ImplicitCastExpr 0x7fe59a8149e0 <col:23> 'int' <IntegralCast>
+|     `-IntegerLiteral 0x7fe59a814860 <col:23> 'unsigned int' 2147483648
+|-VarDecl 0x7fe59a814a80 <line:16:1, col:32> col:6 p 'int *' cinit
+| `-ImplicitCastExpr 0x7fe59a814c30 <col:10, col:32> 'int *' <ArrayToPointerDecay>
+|   `-CompoundLiteralExpr 0x7fe59a814c08 <col:10, col:32> 'int [1]' lvalue
+|     `-InitListExpr 0x7fe59a814b70 <col:19, col:32> 'int [1]'
+|       `-ImplicitCastExpr 0x7fe59a814bb0 <col:21> 'int' <IntegralCast>
+|         `-IntegerLiteral 0x7fe59a814b08 <col:21> 'unsigned int' 2147483648
+|-RecordDecl 0x7fe59a814c48 <line:17:1, col:16> col:1 union definition
+| `-FieldDecl 0x7fe59a814d08 <col:9, col:13> col:13 k 'int'
+|-VarDecl 0x7fe59a814da0 <col:1, col:40> col:18 u 'union (anonymous union at ../Data/C2AST/pr60114.c:17:1)':'union (anonymous at ../Data/C2AST/pr60114.c:17:1)' cinit
+| `-InitListExpr 0x7fe59a814ea8 <col:22, col:40> 'union (anonymous union at ../Data/C2AST/pr60114.c:17:1)':'union (anonymous at ../Data/C2AST/pr60114.c:17:1)' field Field 0x7fe59a814d08 'k' 'int'
+|   `-ImplicitCastExpr 0x7fe59a814ef0 <col:29> 'int' <IntegralCast>
+|     `-IntegerLiteral 0x7fe59a814e00 <col:29> 'unsigned int' 2147483648
+|-TypedefDecl 0x7fe59a814f48 <line:18:1, col:15> col:13 referenced H 'int []'
+| `-IncompleteArrayType 0x7fe59a8146f0 'int []' 
+|   `-BuiltinType 0x7fe59a02bde0 'int'
+`-FunctionDecl 0x7fe59a815060 <line:19:1, line:32:1> line:20:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe59a82cc50 <line:21:1, line:32:1>
+    |-DeclStmt 0x7fe59a82bf68 <line:22:3, line:25:18>
+    | `-VarDecl 0x7fe59a815180 <line:22:3, line:25:17> line:22:15 a 'signed char [2][3]' cinit
+    |   `-InitListExpr 0x7fe59a82bd90 <col:24, line:25:17> 'signed char [2][3]'
+    |     |-InitListExpr 0x7fe59a82bdd0 <line:22:26, line:23:30> 'signed char [3]'
+    |     | |-ImplicitCastExpr 0x7fe59a82be30 <line:22:28> 'signed char' <IntegralCast>
+    |     | | `-IntegerLiteral 0x7fe59a8151e0 <col:28> 'int' 256
+    |     | |-ImplicitCastExpr 0x7fe59a82be48 <line:23:21> 'signed char' <IntegralCast>
+    |     | | `-IntegerLiteral 0x7fe59a82bc00 <col:21> 'int' 1
+    |     | `-ImplicitCastExpr 0x7fe59a82be60 <col:24> 'signed char' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fe59a82bc20 <col:24> 'int' 256
+    |     `-InitListExpr 0x7fe59a82be78 <line:24:19, col:39> 'signed char [3]'
+    |       |-ImplicitCastExpr 0x7fe59a82bee0 <col:21> 'signed char' <IntegralCast>
+    |       | `-CharacterLiteral 0x7fe59a82bc98 <col:21> 'int' 0
+    |       |-ImplicitCastExpr 0x7fe59a82bef8 <col:27> 'signed char' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fe59a82bcb0 <col:27> 'int' 256
+    |       `-ImplicitCastExpr 0x7fe59a82bf10 <col:34> 'signed char' <IntegralCast>
+    |         `-CharacterLiteral 0x7fe59a82bcd0 <col:34> 'int' 0
+    |-ImplicitCastExpr 0x7fe59a82c138 <line:26:3, col:34> 'const signed char *' <ArrayToPointerDecay>
+    | `-CompoundLiteralExpr 0x7fe59a82c0e8 <col:3, col:34> 'const signed char [1]' lvalue
+    |   `-InitListExpr 0x7fe59a82c010 <col:26, col:34> 'const signed char [1]'
+    |     `-ImplicitCastExpr 0x7fe59a82c050 <col:28> 'signed char' <IntegralCast>
+    |       `-IntegerLiteral 0x7fe59a82bfa8 <col:28> 'int' 256
+    |-ImplicitCastExpr 0x7fe59a82c418 <line:27:3, col:38> 'const float *' <ArrayToPointerDecay>
+    | `-CompoundLiteralExpr 0x7fe59a82c3c8 <col:3, col:38> 'const float [3]' lvalue
+    |   `-InitListExpr 0x7fe59a82c288 <col:20, col:38> 'const float [3]'
+    |     |-ImplicitCastExpr 0x7fe59a82c2c8 <col:22> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe59a82c1d0 <col:22> 'double' 1.000000e+00
+    |     |-ImplicitCastExpr 0x7fe59a82c2e8 <col:27> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7fe59a82c1f0 <col:27> 'double' 1.000000e+01
+    |     `-ImplicitCastExpr 0x7fe59a82c310 <col:32> 'float' <FloatingCast>
+    |       `-FloatingLiteral 0x7fe59a82c210 <col:32> 'double' 1.000000e+100
+    |-DeclStmt 0x7fe59a82c5c0 <line:28:3, col:31>
+    | `-VarDecl 0x7fe59a82c480 <col:3, col:30> col:12 s1 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fe59a82c548 <col:17, col:30> 'struct S':'struct S'
+    |     |-ImplicitCastExpr 0x7fe59a82c598 <col:19> 'int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fe59a82c4e0 <col:19> 'unsigned int' 2147483648
+    |     `-ImplicitValueInitExpr 0x7fe59a82c5b0 <<invalid sloc>> 'int [2]'
+    |-DeclStmt 0x7fe59a82c778 <line:29:3, col:36>
+    | `-VarDecl 0x7fe59a82c5f8 <col:3, col:35> col:12 s2 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fe59a82c700 <col:17, col:35> 'struct S':'struct S'
+    |     |-ImplicitCastExpr 0x7fe59a82c750 <col:24> 'int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fe59a82c658 <col:24> 'unsigned int' 2147483648
+    |     `-ImplicitValueInitExpr 0x7fe59a82c768 <<invalid sloc>> 'int [2]'
+    |-DeclStmt 0x7fe59a82c9d0 <line:30:3, col:39>
+    | `-VarDecl 0x7fe59a82c7b0 <col:3, col:38> col:12 s3 'struct S':'struct S' cinit
+    |   `-InitListExpr 0x7fe59a82c8f8 <col:17, col:38> 'struct S':'struct S'
+    |     |-ImplicitValueInitExpr 0x7fe59a82c9b0 <<invalid sloc>> 'int'
+    |     `-InitListExpr 0x7fe59a82c948 <col:21, col:27> 'int [2]'
+    |       |-array filler
+    |       | `-ImplicitValueInitExpr 0x7fe59a82c9c0 <<invalid sloc>> 'int'
+    |       |-ImplicitValueInitExpr 0x7fe59a82c9c0 <<invalid sloc>> 'int'
+    |       `-ImplicitCastExpr 0x7fe59a82c998 <col:27> 'int' <IntegralCast>
+    |         `-IntegerLiteral 0x7fe59a82c830 <col:27> 'unsigned int' 2147483648
+    `-DeclStmt 0x7fe59a82cc38 <line:31:3, col:29>
+      `-VarDecl 0x7fe59a82ca20 <col:3, col:28> col:5 h 'int [3]' cinit
+        `-InitListExpr 0x7fe59a82cb38 <col:9, col:28> 'int [3]'
+          |-IntegerLiteral 0x7fe59a82ca80 <col:11> 'int' 1
+          |-IntegerLiteral 0x7fe59a82caa0 <col:14> 'int' 2
+          `-ImplicitCastExpr 0x7fe59a82cb90 <col:17> 'int' <IntegralCast>
+            `-IntegerLiteral 0x7fe59a82cac0 <col:17> 'unsigned int' 2147483648

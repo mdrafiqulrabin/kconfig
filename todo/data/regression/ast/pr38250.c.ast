@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7f8ec78058e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ec7806578 <../Data/C2AST/pr38250.c:4:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f8ec7805aa0 'unsigned long'
+|-RecordDecl 0x7f8ec7848000 <line:5:9, line:7:1> line:5:9 struct definition
+| `-FieldDecl 0x7f8ec7848130 <line:6:11, col:21> col:16 dat 'long [2]'
+|-TypedefDecl 0x7f8ec78481d0 <line:5:1, line:7:3> col:3 referenced gsl_complex_long_double 'struct gsl_complex_long_double':'gsl_complex_long_double'
+| `-ElaboratedType 0x7f8ec7848180 'struct gsl_complex_long_double' sugar
+|   `-RecordType 0x7f8ec7848090 'gsl_complex_long_double'
+|     `-Record 0x7f8ec7848000 ''
+|-RecordDecl 0x7f8ec7848240 <line:8:9, line:12:1> line:8:9 struct definition
+| |-FieldDecl 0x7f8ec7848320 <line:9:2, col:9> col:9 referenced size 'size_t':'unsigned long'
+| |-FieldDecl 0x7f8ec7848378 <line:10:2, col:9> col:9 referenced stride 'size_t':'unsigned long'
+| `-FieldDecl 0x7f8ec7848400 <line:11:2, col:8> col:8 referenced data 'long *'
+|-TypedefDecl 0x7f8ec78484a0 <line:8:1, line:12:3> col:3 referenced gsl_vector_complex_long_double 'struct gsl_vector_complex_long_double':'gsl_vector_complex_long_double'
+| `-ElaboratedType 0x7f8ec7848450 'struct gsl_vector_complex_long_double' sugar
+|   `-RecordType 0x7f8ec78482d0 'gsl_vector_complex_long_double'
+|     `-Record 0x7f8ec7848240 ''
+`-FunctionDecl 0x7f8ec78486a0 <line:14:1, line:23:1> line:14:6 gsl_vector_complex_long_double_set_zero 'void (gsl_vector_complex_long_double *)'
+  |-ParmVarDecl 0x7f8ec7848598 <col:47, col:80> col:80 used v 'gsl_vector_complex_long_double *'
+  `-CompoundStmt 0x7f8ec78492a0 <line:15:1, line:23:1>
+    |-DeclStmt 0x7f8ec7848890 <line:16:2, col:29>
+    | `-VarDecl 0x7f8ec78487a0 <col:2, col:25> col:15 used data 'long *const' cinit
+    |   `-ImplicitCastExpr 0x7f8ec7848878 <col:22, col:25> 'long *' <LValueToRValue>
+    |     `-MemberExpr 0x7f8ec7848840 <col:22, col:25> 'long *' lvalue ->data 0x7f8ec7848400
+    |       `-ImplicitCastExpr 0x7f8ec7848828 <col:22> 'gsl_vector_complex_long_double *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8ec7848800 <col:22> 'gsl_vector_complex_long_double *' lvalue ParmVar 0x7f8ec7848598 'v' 'gsl_vector_complex_long_double *'
+    |-DeclStmt 0x7f8ec78489a8 <line:17:2, col:26>
+    | `-VarDecl 0x7f8ec78488b8 <col:2, col:22> col:15 used n 'const size_t':'const unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7f8ec7848990 <col:19, col:22> 'size_t':'unsigned long' <LValueToRValue>
+    |     `-MemberExpr 0x7f8ec7848958 <col:19, col:22> 'size_t':'unsigned long' lvalue ->size 0x7f8ec7848320
+    |       `-ImplicitCastExpr 0x7f8ec7848940 <col:19> 'gsl_vector_complex_long_double *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8ec7848918 <col:19> 'gsl_vector_complex_long_double *' lvalue ParmVar 0x7f8ec7848598 'v' 'gsl_vector_complex_long_double *'
+    |-DeclStmt 0x7f8ec7848ac0 <line:18:2, col:33>
+    | `-VarDecl 0x7f8ec78489d0 <col:2, col:27> col:15 used stride 'const size_t':'const unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7f8ec7848aa8 <col:24, col:27> 'size_t':'unsigned long' <LValueToRValue>
+    |     `-MemberExpr 0x7f8ec7848a70 <col:24, col:27> 'size_t':'unsigned long' lvalue ->stride 0x7f8ec7848378
+    |       `-ImplicitCastExpr 0x7f8ec7848a58 <col:24> 'gsl_vector_complex_long_double *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8ec7848a30 <col:24> 'gsl_vector_complex_long_double *' lvalue ParmVar 0x7f8ec7848598 'v' 'gsl_vector_complex_long_double *'
+    |-DeclStmt 0x7f8ec7848d10 <line:19:2, col:50>
+    | `-VarDecl 0x7f8ec7848b10 <col:2, col:48> col:32 used zero 'const gsl_complex_long_double':'const gsl_complex_long_double' cinit
+    |   `-InitListExpr 0x7f8ec7848c48 <col:39, col:48> 'gsl_complex_long_double':'gsl_complex_long_double'
+    |     `-InitListExpr 0x7f8ec7848c90 <col:41, col:46> 'long [2]'
+    |       |-ImplicitCastExpr 0x7f8ec7848ce0 <col:43> 'long' <IntegralCast>
+    |       | `-IntegerLiteral 0x7f8ec7848b70 <col:43> 'int' 0
+    |       `-ImplicitCastExpr 0x7f8ec7848cf8 <col:45> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7f8ec7848b90 <col:45> 'int' 0
+    |-DeclStmt 0x7f8ec7848d98 <line:20:2, col:10>
+    | `-VarDecl 0x7f8ec7848d38 <col:2, col:9> col:9 used i 'size_t':'unsigned long'
+    `-ForStmt 0x7f8ec7849268 <line:21:2, line:22:58>
+      |-BinaryOperator 0x7f8ec7848e10 <line:21:7, col:11> 'size_t':'unsigned long' '='
+      | |-DeclRefExpr 0x7f8ec7848db0 <col:7> 'size_t':'unsigned long' lvalue Var 0x7f8ec7848d38 'i' 'size_t':'unsigned long'
+      | `-ImplicitCastExpr 0x7f8ec7848df8 <col:11> 'size_t':'unsigned long' <IntegralCast>
+      |   `-IntegerLiteral 0x7f8ec7848dd8 <col:11> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8ec7848eb8 <col:14, col:18> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8ec7848e88 <col:14> 'size_t':'unsigned long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8ec7848e38 <col:14> 'size_t':'unsigned long' lvalue Var 0x7f8ec7848d38 'i' 'size_t':'unsigned long'
+      | `-ImplicitCastExpr 0x7f8ec7848ea0 <col:18> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8ec7848e60 <col:18> 'const size_t':'const unsigned long' lvalue Var 0x7f8ec78488b8 'n' 'const size_t':'const unsigned long'
+      |-UnaryOperator 0x7f8ec7848f60 <col:21, col:22> 'size_t':'unsigned long' postfix '++'
+      | `-DeclRefExpr 0x7f8ec7848f38 <col:21> 'size_t':'unsigned long' lvalue Var 0x7f8ec7848d38 'i' 'size_t':'unsigned long'
+      `-BinaryOperator 0x7f8ec7849240 <line:22:3, col:58> 'gsl_complex_long_double':'gsl_complex_long_double' '='
+        |-UnaryOperator 0x7f8ec78491e0 <col:3, col:54> 'gsl_complex_long_double':'gsl_complex_long_double' lvalue prefix '*'
+        | `-CStyleCastExpr 0x7f8ec78491b8 <col:4, col:54> 'gsl_complex_long_double *' <BitCast>
+        |   `-ParenExpr 0x7f8ec7849198 <col:32, col:54> 'long *'
+        |     `-BinaryOperator 0x7f8ec78490d8 <col:33, col:48> 'long *' '+'
+        |       |-ImplicitCastExpr 0x7f8ec78490c0 <col:33> 'long *' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7f8ec7848f80 <col:33> 'long *const' lvalue Var 0x7f8ec78487a0 'data' 'long *const'
+        |       `-BinaryOperator 0x7f8ec7849098 <col:40, col:48> 'unsigned long' '*'
+        |         |-BinaryOperator 0x7f8ec7849030 <col:40, col:44> 'unsigned long' '*'
+        |         | |-ImplicitCastExpr 0x7f8ec7849018 <col:40> 'unsigned long' <IntegralCast>
+        |         | | `-IntegerLiteral 0x7f8ec7848fa8 <col:40> 'int' 2
+        |         | `-ImplicitCastExpr 0x7f8ec7849000 <col:44> 'size_t':'unsigned long' <LValueToRValue>
+        |         |   `-DeclRefExpr 0x7f8ec7848fc8 <col:44> 'size_t':'unsigned long' lvalue Var 0x7f8ec7848d38 'i' 'size_t':'unsigned long'
+        |         `-ImplicitCastExpr 0x7f8ec7849080 <col:48> 'size_t':'unsigned long' <LValueToRValue>
+        |           `-DeclRefExpr 0x7f8ec7849058 <col:48> 'const size_t':'const unsigned long' lvalue Var 0x7f8ec78489d0 'stride' 'const size_t':'const unsigned long'
+        `-ImplicitCastExpr 0x7f8ec7849228 <col:58> 'gsl_complex_long_double':'gsl_complex_long_double' <LValueToRValue>
+          `-DeclRefExpr 0x7f8ec7849200 <col:58> 'const gsl_complex_long_double':'const gsl_complex_long_double' lvalue Var 0x7f8ec7848b10 'zero' 'const gsl_complex_long_double':'const gsl_complex_long_double'

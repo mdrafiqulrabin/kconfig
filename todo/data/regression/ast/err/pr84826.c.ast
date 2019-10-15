@@ -1,0 +1,28 @@
+../Data/C2AST/pr84826.c:11:3: error: function definition is not allowed here
+  {
+  ^
+../Data/C2AST/pr84826.c:15:6: error: use of undeclared identifier 'bar'
+  d (bar);
+     ^
+2 errors generated.
+TranslationUnitDecl 0x7fa47a023ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa47a024260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa47a023f80 '__int128'
+|-TypedefDecl 0x7fa47a0242d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa47a023fa0 'unsigned __int128'
+|-TypedefDecl 0x7fa47a0245a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa47a0243b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa47a024328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa47a024640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa47a024600 'char *'
+|   `-BuiltinType 0x7fa47a023d80 'char'
+|-TypedefDecl 0x7fa47a024908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa47a0248b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa47a024720 'struct __va_list_tag'
+|     `-Record 0x7fa47a024698 '__va_list_tag'
+|-FunctionDecl 0x7fa47b812260 <../Data/C2AST/pr84826.c:5:1, col:15> col:6 used d 'void (void *)'
+| `-ParmVarDecl 0x7fa47a024978 <col:9, col:14> col:15 'void *'
+`-FunctionDecl 0x7fa47b812398 <line:7:1, line:16:1> line:7:6 a 'void ()'
+  `-CompoundStmt 0x7fa47b812600 <line:8:1, line:16:1>
+    `-DeclStmt 0x7fa47b8124b0 <line:9:3, col:8>
+      `-VarDecl 0x7fa47b812450 <col:3, col:7> col:7 b 'int'

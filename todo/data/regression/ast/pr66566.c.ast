@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fedf502bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fedf502c960 <../Data/C2AST/pr66566.c:4:1, line:7:1> line:4:7 union jsval_layout definition
+| `-FieldDecl 0x7fedf5814238 <line:6:3, col:9> col:9 asPtr 'void *'
+|-VarDecl 0x7fedf58142d0 <line:8:1, col:20> col:20 used a 'union jsval_layout':'union jsval_layout'
+|-VarDecl 0x7fedf5814390 <line:9:1, col:20> col:20 used b 'union jsval_layout':'union jsval_layout'
+|-FunctionDecl 0x7fedf5814478 <line:10:1, col:49> col:31 used fn1 'union jsval_layout ()' inline
+| `-CompoundStmt 0x7fedf5814570 <col:37, col:49>
+|   `-ReturnStmt 0x7fedf5814558 <col:39, col:46>
+|     `-ImplicitCastExpr 0x7fedf5814540 <col:46> 'union jsval_layout':'union jsval_layout' <LValueToRValue>
+|       `-DeclRefExpr 0x7fedf5814518 <col:46> 'union jsval_layout':'union jsval_layout' lvalue Var 0x7fedf5814390 'b' 'union jsval_layout':'union jsval_layout'
+`-FunctionDecl 0x7fedf58145d8 <line:12:1, col:25> col:6 fn2 'void ()'
+  `-CompoundStmt 0x7fedf5814790 <col:12, col:25>
+    `-BinaryOperator 0x7fedf5814768 <col:14, col:22> 'union jsval_layout':'union jsval_layout' '='
+      |-DeclRefExpr 0x7fedf5814678 <col:14> 'union jsval_layout':'union jsval_layout' lvalue Var 0x7fedf58142d0 'a' 'union jsval_layout':'union jsval_layout'
+      `-CallExpr 0x7fedf5814740 <col:18, col:22> 'union jsval_layout':'union jsval_layout'
+        `-ImplicitCastExpr 0x7fedf5814728 <col:18> 'union jsval_layout (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fedf58146a0 <col:18> 'union jsval_layout ()' Function 0x7fedf5814478 'fn1' 'union jsval_layout ()'

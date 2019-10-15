@@ -1,0 +1,40 @@
+../Data/C2AST/pr69947.c:5:10: fatal error: '../nop.h' file not found
+#include "../nop.h"
+         ^~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ff2ab8234e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff2ab823a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff2ab823780 '__int128'
+|-TypedefDecl 0x7ff2ab823ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff2ab8237a0 'unsigned __int128'
+|-TypedefDecl 0x7ff2ab823da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff2ab823bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff2ab823b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff2ab823e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff2ab823e00 'char *'
+|   `-BuiltinType 0x7ff2ab823580 'char'
+|-TypedefDecl 0x7ff2ab824108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff2ab8240b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff2ab823f20 'struct __va_list_tag'
+|     `-Record 0x7ff2ab823e98 '__va_list_tag'
+|-VarDecl 0x7ff2ab824178 <../Data/C2AST/pr69947.c:7:1, col:24> col:20 c 'const char *' static cinit
+| `-ImplicitCastExpr 0x7ff2ab004cc0 <col:24> 'const char *' <BitCast>
+|   `-ImplicitCastExpr 0x7ff2ab004ca8 <col:24> 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x7ff2ab004c78 <col:24> 'char [7]' lvalue "foobar"
+|-FunctionDecl 0x7ff2ab004da0 <line:9:1, line:15:1> line:10:1 used foo 'void (void)'
+| |-CompoundStmt 0x7ff2ab005100 <line:11:1, line:15:1>
+| | |-DeclStmt 0x7ff2ab005018 <line:12:3, col:36>
+| | | `-VarDecl 0x7ff2ab004f08 <col:3, col:27> col:21 used a 'const char [8]' static cinit
+| | |   `-StringLiteral 0x7ff2ab004fa8 <col:27> 'const char [8]' lvalue "abcdefg"
+| | `-DeclStmt 0x7ff2ab0050e8 <line:13:3, col:20>
+| |   `-VarDecl 0x7ff2ab005048 <col:3, col:19> col:15 b 'const char *' cinit
+| |     `-ImplicitCastExpr 0x7ff2ab0050d0 <col:19> 'const char *' <ArrayToPointerDecay>
+| |       `-DeclRefExpr 0x7ff2ab0050a8 <col:19> 'const char [8]' lvalue Var 0x7ff2ab004f08 'a' 'const char [8]'
+| `-NoInlineAttr 0x7ff2ab004e40 <line:9:16>
+`-FunctionDecl 0x7ff2ab005170 <line:17:1, line:22:1> line:18:1 main 'int ()'
+  `-CompoundStmt 0x7ff2ab0052e0 <line:19:1, line:22:1>
+    |-CallExpr 0x7ff2ab005280 <line:20:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7ff2ab005268 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff2ab005210 <col:3> 'void (void)' Function 0x7ff2ab004da0 'foo' 'void (void)'
+    `-ReturnStmt 0x7ff2ab0052c8 <line:21:3, col:10>
+      `-IntegerLiteral 0x7ff2ab0052a8 <col:10> 'int' 0

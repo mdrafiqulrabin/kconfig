@@ -1,0 +1,164 @@
+TranslationUnitDecl 0x7fcea182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcea2015200 <../Data/C2AST/pr60960.c:3:1, col:23> col:23 referenced v4qi '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fcea182c980 '__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' 4
+|   `-BuiltinType 0x7fcea182be40 'unsigned char'
+|-FunctionDecl 0x7fcea2015390 <line:5:1, line:9:1> line:6:1 used f1 'v4qi (v4qi)'
+| |-ParmVarDecl 0x7fcea2015290 <col:5, col:10> col:10 used v 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |-CompoundStmt 0x7fcea2015590 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7fcea2015578 <line:8:3, col:14>
+| |   `-BinaryOperator 0x7fcea2015550 <col:10, col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '/'
+| |     |-ImplicitCastExpr 0x7fcea2015508 <col:10> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fcea20154c0 <col:10> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fcea2015290 'v' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |     `-ImplicitCastExpr 0x7fcea2015538 <col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <VectorSplat>
+| |       `-ImplicitCastExpr 0x7fcea2015520 <col:14> 'unsigned char' <IntegralCast>
+| |         `-IntegerLiteral 0x7fcea20154e8 <col:14> 'int' 2
+| `-NoInlineAttr 0x7fcea2015438 <line:5:16>
+|-FunctionDecl 0x7fcea2015640 <line:11:1, line:15:1> line:12:1 used f2 'v4qi (v4qi)'
+| |-ParmVarDecl 0x7fcea20155b8 <col:5, col:10> col:10 used v 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |-CompoundStmt 0x7fcea20159a0 <line:13:1, line:15:1>
+| | `-ReturnStmt 0x7fcea2015988 <line:14:3, col:34>
+| |   `-BinaryOperator 0x7fcea2015960 <col:10, col:34> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '/'
+| |     |-ImplicitCastExpr 0x7fcea2015930 <col:10> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fcea2015730 <col:10> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fcea20155b8 'v' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |     `-ImplicitCastExpr 0x7fcea2015948 <col:14, col:34> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+| |       `-CompoundLiteralExpr 0x7fcea2015908 <col:14, col:34> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue
+| |         `-InitListExpr 0x7fcea2015848 <col:21, col:34> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |           |-ImplicitCastExpr 0x7fcea20158a8 <col:23> 'unsigned char' <IntegralCast>
+| |           | `-IntegerLiteral 0x7fcea2015768 <col:23> 'int' 2
+| |           |-ImplicitCastExpr 0x7fcea20158c0 <col:26> 'unsigned char' <IntegralCast>
+| |           | `-IntegerLiteral 0x7fcea2015788 <col:26> 'int' 2
+| |           |-ImplicitCastExpr 0x7fcea20158d8 <col:29> 'unsigned char' <IntegralCast>
+| |           | `-IntegerLiteral 0x7fcea20157a8 <col:29> 'int' 2
+| |           `-ImplicitCastExpr 0x7fcea20158f0 <col:32> 'unsigned char' <IntegralCast>
+| |             `-IntegerLiteral 0x7fcea20157c8 <col:32> 'int' 2
+| `-NoInlineAttr 0x7fcea20156e8 <line:11:16>
+|-FunctionDecl 0x7fcea2015b50 <line:17:1, line:21:1> line:18:1 used f3 'v4qi (v4qi, v4qi)'
+| |-ParmVarDecl 0x7fcea20159c8 <col:5, col:10> col:10 used x 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |-ParmVarDecl 0x7fcea2015a38 <col:13, col:18> col:18 used y 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |-CompoundStmt 0x7fcea2015d08 <line:19:1, line:21:1>
+| | `-ReturnStmt 0x7fcea2015cf0 <line:20:3, col:14>
+| |   `-BinaryOperator 0x7fcea2015cc8 <col:10, col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '/'
+| |     |-ImplicitCastExpr 0x7fcea2015c98 <col:10> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fcea2015c48 <col:10> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fcea20159c8 'x' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| |     `-ImplicitCastExpr 0x7fcea2015cb0 <col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fcea2015c70 <col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue ParmVar 0x7fcea2015a38 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+| `-NoInlineAttr 0x7fcea2015c00 <line:17:16>
+|-FunctionDecl 0x7fcea2015d70 <line:23:1, line:38:1> line:24:1 main 'int ()'
+| `-CompoundStmt 0x7fcea202dd00 <line:25:1, line:38:1>
+|   |-DeclStmt 0x7fcea2016020 <line:26:3, col:26>
+|   | `-VarDecl 0x7fcea2015e20 <col:3, col:25> col:8 used x 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' cinit
+|   |   `-InitListExpr 0x7fcea2015f60 <col:12, col:25> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |     |-ImplicitCastExpr 0x7fcea2015fc0 <col:14> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fcea2015e80 <col:14> 'int' 5
+|   |     |-ImplicitCastExpr 0x7fcea2015fd8 <col:17> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fcea2015ea0 <col:17> 'int' 5
+|   |     |-ImplicitCastExpr 0x7fcea2015ff0 <col:20> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fcea2015ec0 <col:20> 'int' 5
+|   |     `-ImplicitCastExpr 0x7fcea2016008 <col:23> 'unsigned char' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fcea2015ee0 <col:23> 'int' 5
+|   |-DeclStmt 0x7fcea202cc48 <line:27:3, col:26>
+|   | `-VarDecl 0x7fcea2016048 <col:3, col:25> col:8 used y 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' cinit
+|   |   `-InitListExpr 0x7fcea2016188 <col:12, col:25> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |     |-ImplicitCastExpr 0x7fcea20161e8 <col:14> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fcea20160a8 <col:14> 'int' 2
+|   |     |-ImplicitCastExpr 0x7fcea202cc00 <col:17> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fcea20160c8 <col:17> 'int' 2
+|   |     |-ImplicitCastExpr 0x7fcea202cc18 <col:20> 'unsigned char' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fcea20160e8 <col:20> 'int' 2
+|   |     `-ImplicitCastExpr 0x7fcea202cc30 <col:23> 'unsigned char' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fcea2016108 <col:23> 'int' 2
+|   |-DeclStmt 0x7fcea202cdd8 <line:28:3, col:18>
+|   | `-VarDecl 0x7fcea202cc70 <col:3, col:17> col:8 used z 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' cinit
+|   |   `-CallExpr 0x7fcea202cd90 <col:12, col:17> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |     |-ImplicitCastExpr 0x7fcea202cd78 <col:12> 'v4qi (*)(v4qi)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fcea202ccd0 <col:12> 'v4qi (v4qi)' Function 0x7fcea2015390 'f1' 'v4qi (v4qi)'
+|   |     `-ImplicitCastExpr 0x7fcea202cdc0 <col:16> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fcea202ccf8 <col:16> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2015e20 'x' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |-IfStmt 0x7fcea202d4b8 <line:29:3, line:30:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcea202d2e0 <line:29:7, col:48> 'int' '!='
+|   | | |-CallExpr 0x7fcea202d250 <col:7, col:43> 'int'
+|   | | | |-ImplicitCastExpr 0x7fcea202d238 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fcea202d088 <col:7> '<builtin fn type>' Function 0x7fcea202ce68 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | | |-ImplicitCastExpr 0x7fcea202d290 <col:25, col:26> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fcea202d138 <col:25, col:26> 'v4qi *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fcea202d0b0 <col:26> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | | |-ImplicitCastExpr 0x7fcea202d2a8 <col:29, col:30> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fcea202d180 <col:29, col:30> 'v4qi *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fcea202d158 <col:30> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea202cc70 'z' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | | `-UnaryExprOrTypeTraitExpr 0x7fcea202d1e8 <col:33, col:42> 'unsigned long' sizeof
+|   | | |   `-ParenExpr 0x7fcea202d1c8 <col:40, col:42> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue
+|   | | |     `-DeclRefExpr 0x7fcea202d1a0 <col:41> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | `-IntegerLiteral 0x7fcea202d2c0 <col:48> 'int' 0
+|   | |-CallExpr 0x7fcea202d490 <line:30:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fcea202d478 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fcea202d428 <col:5> '<builtin fn type>' Function 0x7fcea202d340 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fcea202d5c8 <line:31:3, col:12> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '='
+|   | |-DeclRefExpr 0x7fcea202d4f0 <col:3> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea202cc70 'z' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | `-CallExpr 0x7fcea202d580 <col:7, col:12> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |   |-ImplicitCastExpr 0x7fcea202d568 <col:7> 'v4qi (*)(v4qi)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fcea202d518 <col:7> 'v4qi (v4qi)' Function 0x7fcea2015640 'f2' 'v4qi (v4qi)'
+|   |   `-ImplicitCastExpr 0x7fcea202d5b0 <col:11> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fcea202d540 <col:11> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2015e20 'x' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |-IfStmt 0x7fcea202d848 <line:32:3, line:33:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcea202d7b8 <line:32:7, col:48> 'int' '!='
+|   | | |-CallExpr 0x7fcea202d728 <col:7, col:43> 'int'
+|   | | | |-ImplicitCastExpr 0x7fcea202d710 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fcea202d5f0 <col:7> '<builtin fn type>' Function 0x7fcea202ce68 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | | |-ImplicitCastExpr 0x7fcea202d768 <col:25, col:26> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fcea202d640 <col:25, col:26> 'v4qi *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fcea202d618 <col:26> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | | |-ImplicitCastExpr 0x7fcea202d780 <col:29, col:30> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fcea202d688 <col:29, col:30> 'v4qi *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fcea202d660 <col:30> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea202cc70 'z' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | | `-UnaryExprOrTypeTraitExpr 0x7fcea202d6f0 <col:33, col:42> 'unsigned long' sizeof
+|   | | |   `-ParenExpr 0x7fcea202d6d0 <col:40, col:42> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue
+|   | | |     `-DeclRefExpr 0x7fcea202d6a8 <col:41> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | `-IntegerLiteral 0x7fcea202d798 <col:48> 'int' 0
+|   | |-CallExpr 0x7fcea202d820 <line:33:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fcea202d808 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fcea202d7e0 <col:5> '<builtin fn type>' Function 0x7fcea202d340 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fcea202d9f8 <line:34:3, col:15> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' '='
+|   | |-DeclRefExpr 0x7fcea202d880 <col:3> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea202cc70 'z' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | `-CallExpr 0x7fcea202d990 <col:7, col:15> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |   |-ImplicitCastExpr 0x7fcea202d978 <col:7> 'v4qi (*)(v4qi, v4qi)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fcea202d8a8 <col:7> 'v4qi (v4qi, v4qi)' Function 0x7fcea2015b50 'f3' 'v4qi (v4qi, v4qi)'
+|   |   |-ImplicitCastExpr 0x7fcea202d9c8 <col:11> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fcea202d8d0 <col:11> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2015e20 'x' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |   `-ImplicitCastExpr 0x7fcea202d9e0 <col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fcea202d8f8 <col:14> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   |-IfStmt 0x7fcea202dc90 <line:35:3, line:36:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcea202dc00 <line:35:7, col:48> 'int' '!='
+|   | | |-CallExpr 0x7fcea202db58 <col:7, col:43> 'int'
+|   | | | |-ImplicitCastExpr 0x7fcea202db40 <col:7> 'int (*)(const void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fcea202da20 <col:7> '<builtin fn type>' Function 0x7fcea202ce68 '__builtin_memcmp' 'int (const void *, const void *, unsigned long)'
+|   | | | |-ImplicitCastExpr 0x7fcea202db98 <col:25, col:26> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fcea202da70 <col:25, col:26> 'v4qi *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fcea202da48 <col:26> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | | |-ImplicitCastExpr 0x7fcea202dbb0 <col:29, col:30> 'const void *' <BitCast>
+|   | | | | `-UnaryOperator 0x7fcea202dab8 <col:29, col:30> 'v4qi *' prefix '&'
+|   | | | |   `-DeclRefExpr 0x7fcea202da90 <col:30> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea202cc70 'z' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | | `-UnaryExprOrTypeTraitExpr 0x7fcea202db20 <col:33, col:42> 'unsigned long' sizeof
+|   | | |   `-ParenExpr 0x7fcea202db00 <col:40, col:42> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue
+|   | | |     `-DeclRefExpr 0x7fcea202dad8 <col:41> 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char' lvalue Var 0x7fcea2016048 'y' 'v4qi':'__attribute__((__vector_size__(4 * sizeof(unsigned char)))) unsigned char'
+|   | | `-IntegerLiteral 0x7fcea202dbc8 <col:48> 'int' 0
+|   | |-CallExpr 0x7fcea202dc68 <line:36:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fcea202dc50 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fcea202dc28 <col:5> '<builtin fn type>' Function 0x7fcea202d340 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fcea202dce8 <line:37:3, col:10>
+|     `-IntegerLiteral 0x7fcea202dcc8 <col:10> 'int' 0
+|-FunctionDecl 0x7fcea202ce68 <line:29:7> col:7 implicit used __builtin_memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fcea202cf08 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fcea202cf68 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fcea202cfc8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fcea202d040 <col:7> Implicit
+`-FunctionDecl 0x7fcea202d340 <line:30:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fcea202d3e0 <col:5> Implicit

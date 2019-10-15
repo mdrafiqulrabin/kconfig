@@ -1,0 +1,277 @@
+../Data/C2AST/pr66066-1.c:18:12: error: initializer element is not a compile-time constant
+int b1 = 1 / 0;          
+         ~~^~~
+../Data/C2AST/pr66066-1.c:19:12: error: initializer element is not a compile-time constant
+int b2 = 1 / (1 / 0);    
+         ~~^~~~~~~~~
+../Data/C2AST/pr66066-1.c:20:10: error: initializer element is not a compile-time constant
+int b3 = 0 ? 2 : 1 / 0;  
+         ^~~~~~~~~~~~~
+../Data/C2AST/pr66066-1.c:21:12: error: initializer element is not a compile-time constant
+int b4 = 0 || 1 / 0;     
+         ~~^~~~~~~~
+../Data/C2AST/pr66066-1.c:22:12: error: initializer element is not a compile-time constant
+int b5 = 0 * (1 / 0);    
+         ~~^~~~~~~~~
+../Data/C2AST/pr66066-1.c:23:12: error: initializer element is not a compile-time constant
+int b6 = 1 * (1 / 0);    
+         ~~^~~~~~~~~
+../Data/C2AST/pr66066-1.c:24:18: error: initializer element is not a compile-time constant
+int b7 = (1 / 0) * 0;    
+         ~~~~~~~~^~~
+../Data/C2AST/pr66066-1.c:25:18: error: initializer element is not a compile-time constant
+int b8 = (1 / 0) * 1;    
+         ~~~~~~~~^~~
+../Data/C2AST/pr66066-1.c:26:12: error: initializer element is not a compile-time constant
+int b9 = 1 && 1 / 0;     
+         ~~^~~~~~~~
+../Data/C2AST/pr66066-1.c:27:11: error: initializer element is not a compile-time constant
+int b10 = !(1 / 0);      
+          ^~~~~~~~
+../Data/C2AST/pr66066-1.c:28:12: error: initializer element is not a compile-time constant
+int c1 = 1 % 0;          
+         ~~^~~
+../Data/C2AST/pr66066-1.c:29:12: error: initializer element is not a compile-time constant
+int c2 = 1 / (1 % 0);    
+         ~~^~~~~~~~~
+../Data/C2AST/pr66066-1.c:30:10: error: initializer element is not a compile-time constant
+int c3 = 0 ? 2 : 1 % 0;  
+         ^~~~~~~~~~~~~
+../Data/C2AST/pr66066-1.c:31:12: error: initializer element is not a compile-time constant
+int c4 = 0 || 1 % 0;     
+         ~~^~~~~~~~
+../Data/C2AST/pr66066-1.c:32:12: error: initializer element is not a compile-time constant
+int c5 = 0 * (1 % 0);    
+         ~~^~~~~~~~~
+../Data/C2AST/pr66066-1.c:33:12: error: initializer element is not a compile-time constant
+int c6 = 1 * (1 % 0);    
+         ~~^~~~~~~~~
+../Data/C2AST/pr66066-1.c:34:18: error: initializer element is not a compile-time constant
+int c7 = (1 % 0) * 0;    
+         ~~~~~~~~^~~
+../Data/C2AST/pr66066-1.c:35:18: error: initializer element is not a compile-time constant
+int c8 = (1 % 0) * 1;    
+         ~~~~~~~~^~~
+../Data/C2AST/pr66066-1.c:36:12: error: initializer element is not a compile-time constant
+int c9 = 1 && 1 % 0;     
+         ~~^~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+TranslationUnitDecl 0x7fbc310146e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc31014c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc31014980 '__int128'
+|-TypedefDecl 0x7fbc31014cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc310149a0 'unsigned __int128'
+|-TypedefDecl 0x7fbc31014fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc31014db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc31014d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc31015040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc31015000 'char *'
+|   `-BuiltinType 0x7fbc31014780 'char'
+|-TypedefDecl 0x7fbc31015308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc310152b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc31015120 'struct __va_list_tag'
+|     `-Record 0x7fbc31015098 '__va_list_tag'
+|-VarDecl 0x7fbc31015378 <../Data/C2AST/pr66066-1.c:6:1, col:16> col:5 a1 'int' cinit
+| `-BinaryOperator 0x7fbc328152a0 <col:10, col:16> 'int' '<<'
+|   |-UnaryOperator 0x7fbc32815260 <col:10, col:11> 'int' prefix '-'
+|   | `-IntegerLiteral 0x7fbc32815240 <col:11> 'int' 1
+|   `-IntegerLiteral 0x7fbc32815280 <col:16> 'int' 0
+|-VarDecl 0x7fbc328152e0 <line:7:1, col:20> col:5 a2 'int' cinit
+| `-BinaryOperator 0x7fbc328153e8 <col:10, col:20> 'int' '|'
+|   |-BinaryOperator 0x7fbc328153a0 <col:10, col:16> 'int' '<<'
+|   | |-UnaryOperator 0x7fbc32815360 <col:10, col:11> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7fbc32815340 <col:11> 'int' 1
+|   | `-IntegerLiteral 0x7fbc32815380 <col:16> 'int' 0
+|   `-IntegerLiteral 0x7fbc328153c8 <col:20> 'int' 0
+|-VarDecl 0x7fbc32815428 <line:8:1, col:20> col:5 a3 'int' cinit
+| `-BinaryOperator 0x7fbc32815530 <col:10, col:20> 'int' '&'
+|   |-BinaryOperator 0x7fbc328154e8 <col:10, col:16> 'int' '<<'
+|   | |-UnaryOperator 0x7fbc328154a8 <col:10, col:11> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7fbc32815488 <col:11> 'int' 1
+|   | `-IntegerLiteral 0x7fbc328154c8 <col:16> 'int' 0
+|   `-IntegerLiteral 0x7fbc32815510 <col:20> 'int' 1
+|-VarDecl 0x7fbc32815570 <line:9:1, col:20> col:5 a4 'int' cinit
+| `-BinaryOperator 0x7fbc32815678 <col:10, col:20> 'int' '^'
+|   |-BinaryOperator 0x7fbc32815630 <col:10, col:16> 'int' '<<'
+|   | |-UnaryOperator 0x7fbc328155f0 <col:10, col:11> 'int' prefix '-'
+|   | | `-IntegerLiteral 0x7fbc328155d0 <col:11> 'int' 1
+|   | `-IntegerLiteral 0x7fbc32815610 <col:16> 'int' 2
+|   `-IntegerLiteral 0x7fbc32815658 <col:20> 'int' 1
+|-VarDecl 0x7fbc328156b8 <line:10:1, col:20> col:5 a5 'int' cinit
+| `-BinaryOperator 0x7fbc328157c0 <col:10, col:20> 'int' '&'
+|   |-IntegerLiteral 0x7fbc32815718 <col:10> 'int' 4
+|   `-BinaryOperator 0x7fbc32815798 <col:14, col:20> 'int' '<<'
+|     |-UnaryOperator 0x7fbc32815758 <col:14, col:15> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7fbc32815738 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7fbc32815778 <col:20> 'int' 2
+|-VarDecl 0x7fbc32815800 <line:11:1, col:29> col:5 a6 'int' cinit
+| `-BinaryOperator 0x7fbc32815990 <col:10, col:29> 'int' '^'
+|   |-ParenExpr 0x7fbc328158e8 <col:10, col:18> 'int'
+|   | `-BinaryOperator 0x7fbc328158c0 <col:11, col:17> 'int' '<<'
+|   |   |-UnaryOperator 0x7fbc32815880 <col:11, col:12> 'int' prefix '-'
+|   |   | `-IntegerLiteral 0x7fbc32815860 <col:12> 'int' 1
+|   |   `-IntegerLiteral 0x7fbc328158a0 <col:17> 'int' 2
+|   `-ParenExpr 0x7fbc32815970 <col:22, col:29> 'int'
+|     `-BinaryOperator 0x7fbc32815948 <col:23, col:28> 'int' '>>'
+|       |-IntegerLiteral 0x7fbc32815908 <col:23> 'int' 1
+|       `-IntegerLiteral 0x7fbc32815928 <col:28> 'int' 1
+|-VarDecl 0x7fbc328159d0 <line:12:1, col:23> col:5 a7 'int' cinit
+| `-BinaryOperator 0x7fbc32815af8 <col:10, col:23> 'int' '||'
+|   |-IntegerLiteral 0x7fbc32815a30 <col:10> 'int' 0
+|   `-ParenExpr 0x7fbc32815ad8 <col:15, col:23> 'int'
+|     `-BinaryOperator 0x7fbc32815ab0 <col:16, col:22> 'int' '<<'
+|       |-UnaryOperator 0x7fbc32815a70 <col:16, col:17> 'int' prefix '-'
+|       | `-IntegerLiteral 0x7fbc32815a50 <col:17> 'int' 1
+|       `-IntegerLiteral 0x7fbc32815a90 <col:22> 'int' 1
+|-VarDecl 0x7fbc32815b38 <line:13:1, col:26> col:5 a8 'int' cinit
+| `-ConditionalOperator 0x7fbc32815c80 <col:10, col:26> 'int'
+|   |-IntegerLiteral 0x7fbc32815b98 <col:10> 'int' 0
+|   |-IntegerLiteral 0x7fbc32815bb8 <col:14> 'int' 2
+|   `-ParenExpr 0x7fbc32815c60 <col:18, col:26> 'int'
+|     `-BinaryOperator 0x7fbc32815c38 <col:19, col:25> 'int' '<<'
+|       |-UnaryOperator 0x7fbc32815bf8 <col:19, col:20> 'int' prefix '-'
+|       | `-IntegerLiteral 0x7fbc32815bd8 <col:20> 'int' 1
+|       `-IntegerLiteral 0x7fbc32815c18 <col:25> 'int' 1
+|-VarDecl 0x7fbc32815cc8 <line:14:1, col:21> col:5 a9 'int' cinit
+| `-BinaryOperator 0x7fbc32815dd0 <col:10, col:21> 'int' '&&'
+|   |-IntegerLiteral 0x7fbc32815d28 <col:10> 'int' 1
+|   `-BinaryOperator 0x7fbc32815da8 <col:15, col:21> 'int' '<<'
+|     |-UnaryOperator 0x7fbc32815d68 <col:15, col:16> 'int' prefix '-'
+|     | `-IntegerLiteral 0x7fbc32815d48 <col:16> 'int' 1
+|     `-IntegerLiteral 0x7fbc32815d88 <col:21> 'int' 0
+|-VarDecl 0x7fbc32815e10 <line:15:1, col:20> col:5 a10 'int' cinit
+| `-UnaryOperator 0x7fbc32815f18 <col:11, col:20> 'int' prefix '!'
+|   `-ParenExpr 0x7fbc32815ef8 <col:12, col:20> 'int'
+|     `-BinaryOperator 0x7fbc32815ed0 <col:13, col:19> 'int' '<<'
+|       |-UnaryOperator 0x7fbc32815e90 <col:13, col:14> 'int' prefix '-'
+|       | `-IntegerLiteral 0x7fbc32815e70 <col:14> 'int' 1
+|       `-IntegerLiteral 0x7fbc32815eb0 <col:19> 'int' 0
+|-VarDecl 0x7fbc32815f50 <line:18:1, col:14> col:5 b1 'int' cinit
+| `-BinaryOperator 0x7fbc32815ff0 <col:10, col:14> 'int' '/'
+|   |-IntegerLiteral 0x7fbc32815fb0 <col:10> 'int' 1
+|   `-IntegerLiteral 0x7fbc32815fd0 <col:14> 'int' 0
+|-VarDecl 0x7fbc32816030 <line:19:1, col:20> col:5 b2 'int' cinit
+| `-BinaryOperator 0x7fbc32816138 <col:10, col:20> 'int' '/'
+|   |-IntegerLiteral 0x7fbc32816090 <col:10> 'int' 1
+|   `-ParenExpr 0x7fbc32816118 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7fbc328160f0 <col:15, col:19> 'int' '/'
+|       |-IntegerLiteral 0x7fbc328160b0 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7fbc328160d0 <col:19> 'int' 0
+|-VarDecl 0x7fbc32816178 <line:20:1, col:22> col:5 b3 'int' cinit
+| `-ConditionalOperator 0x7fbc32816288 <col:10, col:22> 'int'
+|   |-IntegerLiteral 0x7fbc328161d8 <col:10> 'int' 0
+|   |-IntegerLiteral 0x7fbc32816200 <col:14> 'int' 2
+|   `-BinaryOperator 0x7fbc32816260 <col:18, col:22> 'int' '/'
+|     |-IntegerLiteral 0x7fbc32816220 <col:18> 'int' 1
+|     `-IntegerLiteral 0x7fbc32816240 <col:22> 'int' 0
+|-VarDecl 0x7fbc328162d0 <line:21:1, col:19> col:5 b4 'int' cinit
+| `-BinaryOperator 0x7fbc328163b8 <col:10, col:19> 'int' '||'
+|   |-IntegerLiteral 0x7fbc32816330 <col:10> 'int' 0
+|   `-BinaryOperator 0x7fbc32816390 <col:15, col:19> 'int' '/'
+|     |-IntegerLiteral 0x7fbc32816350 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7fbc32816370 <col:19> 'int' 0
+|-VarDecl 0x7fbc328163f8 <line:22:1, col:20> col:5 b5 'int' cinit
+| `-BinaryOperator 0x7fbc32816500 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7fbc32816458 <col:10> 'int' 0
+|   `-ParenExpr 0x7fbc328164e0 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7fbc328164b8 <col:15, col:19> 'int' '/'
+|       |-IntegerLiteral 0x7fbc32816478 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7fbc32816498 <col:19> 'int' 0
+|-VarDecl 0x7fbc32816540 <line:23:1, col:20> col:5 b6 'int' cinit
+| `-BinaryOperator 0x7fbc32816648 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7fbc328165a0 <col:10> 'int' 1
+|   `-ParenExpr 0x7fbc32816628 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7fbc32816600 <col:15, col:19> 'int' '/'
+|       |-IntegerLiteral 0x7fbc328165c0 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7fbc328165e0 <col:19> 'int' 0
+|-VarDecl 0x7fbc32816688 <line:24:1, col:20> col:5 b7 'int' cinit
+| `-BinaryOperator 0x7fbc32816790 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7fbc32816750 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7fbc32816728 <col:11, col:15> 'int' '/'
+|   |   |-IntegerLiteral 0x7fbc328166e8 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7fbc32816708 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7fbc32816770 <col:20> 'int' 0
+|-VarDecl 0x7fbc328167d0 <line:25:1, col:20> col:5 b8 'int' cinit
+| `-BinaryOperator 0x7fbc328168d8 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7fbc32816898 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7fbc32816870 <col:11, col:15> 'int' '/'
+|   |   |-IntegerLiteral 0x7fbc32816830 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7fbc32816850 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7fbc328168b8 <col:20> 'int' 1
+|-VarDecl 0x7fbc32816918 <line:26:1, col:19> col:5 b9 'int' cinit
+| `-BinaryOperator 0x7fbc32816a00 <col:10, col:19> 'int' '&&'
+|   |-IntegerLiteral 0x7fbc32816978 <col:10> 'int' 1
+|   `-BinaryOperator 0x7fbc328169d8 <col:15, col:19> 'int' '/'
+|     |-IntegerLiteral 0x7fbc32816998 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7fbc328169b8 <col:19> 'int' 0
+|-VarDecl 0x7fbc32816a40 <line:27:1, col:18> col:5 b10 'int' cinit
+| `-UnaryOperator 0x7fbc32816b28 <col:11, col:18> 'int' prefix '!'
+|   `-ParenExpr 0x7fbc32816b08 <col:12, col:18> 'int'
+|     `-BinaryOperator 0x7fbc32816ae0 <col:13, col:17> 'int' '/'
+|       |-IntegerLiteral 0x7fbc32816aa0 <col:13> 'int' 1
+|       `-IntegerLiteral 0x7fbc32816ac0 <col:17> 'int' 0
+|-VarDecl 0x7fbc32816b60 <line:28:1, col:14> col:5 c1 'int' cinit
+| `-BinaryOperator 0x7fbc32816c00 <col:10, col:14> 'int' '%'
+|   |-IntegerLiteral 0x7fbc32816bc0 <col:10> 'int' 1
+|   `-IntegerLiteral 0x7fbc32816be0 <col:14> 'int' 0
+|-VarDecl 0x7fbc32816c40 <line:29:1, col:20> col:5 c2 'int' cinit
+| `-BinaryOperator 0x7fbc32816d48 <col:10, col:20> 'int' '/'
+|   |-IntegerLiteral 0x7fbc32816ca0 <col:10> 'int' 1
+|   `-ParenExpr 0x7fbc32816d28 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7fbc32816d00 <col:15, col:19> 'int' '%'
+|       |-IntegerLiteral 0x7fbc32816cc0 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7fbc32816ce0 <col:19> 'int' 0
+|-VarDecl 0x7fbc32816d88 <line:30:1, col:22> col:5 c3 'int' cinit
+| `-ConditionalOperator 0x7fbc32816e90 <col:10, col:22> 'int'
+|   |-IntegerLiteral 0x7fbc32816de8 <col:10> 'int' 0
+|   |-IntegerLiteral 0x7fbc32816e08 <col:14> 'int' 2
+|   `-BinaryOperator 0x7fbc32816e68 <col:18, col:22> 'int' '%'
+|     |-IntegerLiteral 0x7fbc32816e28 <col:18> 'int' 1
+|     `-IntegerLiteral 0x7fbc32816e48 <col:22> 'int' 0
+|-VarDecl 0x7fbc32816ed8 <line:31:1, col:19> col:5 c4 'int' cinit
+| `-BinaryOperator 0x7fbc32816fc0 <col:10, col:19> 'int' '||'
+|   |-IntegerLiteral 0x7fbc32816f38 <col:10> 'int' 0
+|   `-BinaryOperator 0x7fbc32816f98 <col:15, col:19> 'int' '%'
+|     |-IntegerLiteral 0x7fbc32816f58 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7fbc32816f78 <col:19> 'int' 0
+|-VarDecl 0x7fbc32817000 <line:32:1, col:20> col:5 c5 'int' cinit
+| `-BinaryOperator 0x7fbc32817108 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7fbc32817060 <col:10> 'int' 0
+|   `-ParenExpr 0x7fbc328170e8 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7fbc328170c0 <col:15, col:19> 'int' '%'
+|       |-IntegerLiteral 0x7fbc32817080 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7fbc328170a0 <col:19> 'int' 0
+|-VarDecl 0x7fbc32817148 <line:33:1, col:20> col:5 c6 'int' cinit
+| `-BinaryOperator 0x7fbc3282cc68 <col:10, col:20> 'int' '*'
+|   |-IntegerLiteral 0x7fbc328171a8 <col:10> 'int' 1
+|   `-ParenExpr 0x7fbc3282cc48 <col:14, col:20> 'int'
+|     `-BinaryOperator 0x7fbc3282cc20 <col:15, col:19> 'int' '%'
+|       |-IntegerLiteral 0x7fbc328171c8 <col:15> 'int' 1
+|       `-IntegerLiteral 0x7fbc3282cc00 <col:19> 'int' 0
+|-VarDecl 0x7fbc3282cca8 <line:34:1, col:20> col:5 c7 'int' cinit
+| `-BinaryOperator 0x7fbc3282cdb0 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7fbc3282cd70 <col:10, col:16> 'int'
+|   | `-BinaryOperator 0x7fbc3282cd48 <col:11, col:15> 'int' '%'
+|   |   |-IntegerLiteral 0x7fbc3282cd08 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7fbc3282cd28 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7fbc3282cd90 <col:20> 'int' 0
+|-VarDecl 0x7fbc3282cdf0 <line:35:1, col:20> col:5 c8 'int' cinit
+| `-BinaryOperator 0x7fbc3282cef8 <col:10, col:20> 'int' '*'
+|   |-ParenExpr 0x7fbc3282ceb8 <col:10, col:16> 'int'
+|   | `-BinaryOperator 020 errors generated.
+x7fbc3282ce90 <col:11, col:15> 'int' '%'
+|   |   |-IntegerLiteral 0x7fbc3282ce50 <col:11> 'int' 1
+|   |   `-IntegerLiteral 0x7fbc3282ce70 <col:15> 'int' 0
+|   `-IntegerLiteral 0x7fbc3282ced8 <col:20> 'int' 1
+|-VarDecl 0x7fbc3282cf38 <line:36:1, col:19> col:5 c9 'int' cinit
+| `-BinaryOperator 0x7fbc3282d020 <col:10, col:19> 'int' '&&'
+|   |-IntegerLiteral 0x7fbc3282cf98 <col:10> 'int' 1
+|   `-BinaryOperator 0x7fbc3282cff8 <col:15, col:19> 'int' '%'
+|     |-IntegerLiteral 0x7fbc3282cfb8 <col:15> 'int' 1
+|     `-IntegerLiteral 0x7fbc3282cfd8 <col:19> 'int' 0
+`-VarDecl 0x7fbc3282d060 <line:37:1, col:18> col:5 c10 'int' cinit
+  `-UnaryOperator 0x7fbc3282d148 <col:11, col:18> 'int' prefix '!'
+    `-ParenExpr 0x7fbc3282d128 <col:12, col:18> 'int'
+      `-BinaryOperator 0x7fbc3282d100 <col:13, col:17> 'int' '%'
+        |-IntegerLiteral 0x7fbc3282d0c0 <col:13> 'int' 1
+        `-IntegerLiteral 0x7fbc3282d0e0 <col:17> 'int' 0

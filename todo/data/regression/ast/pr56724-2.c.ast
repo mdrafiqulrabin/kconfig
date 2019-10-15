@@ -1,0 +1,97 @@
+TranslationUnitDecl 0x7fed4c82bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fed4c82c960 <../Data/C2AST/pr56724-2.c:5:1, col:13> col:6 E1
+| `-EnumConstantDecl 0x7fed4d014220 <col:11> col:11 A 'int'
+|-EnumDecl 0x7fed4d014268 <line:6:1, col:13> col:6 E2
+| `-EnumConstantDecl 0x7fed4d014320 <col:11> col:11 referenced B 'int'
+|-FunctionDecl 0x7fed4d0144c0 <line:7:1, col:27> col:13 used foo_E 'void (enum E1)' extern
+| `-ParmVarDecl 0x7fed4d0143c0 <col:20, col:25> col:27 'enum E1':'enum E1'
+|-FunctionDecl 0x7fed4d014680 <line:8:1, col:27> col:13 used foo_v 'void (void *)' extern
+| `-ParmVarDecl 0x7fed4d0145c0 <col:20, col:26> col:26 p 'void *'
+|-FunctionDecl 0x7fed4d014940 <line:9:1, col:44> col:13 used foo_sc 'void (int, int, signed char *)' extern
+| |-ParmVarDecl 0x7fed4d014740 <col:21> col:24 'int'
+| |-ParmVarDecl 0x7fed4d0147b8 <col:26> col:29 'int'
+| `-ParmVarDecl 0x7fed4d014860 <col:31, col:43> col:44 'signed char *'
+|-VarDecl 0x7fed4d014a40 <line:10:1, col:23> col:23 used uc 'unsigned char *' extern
+|-VarDecl 0x7fed4d014ab8 <line:11:1, col:20> col:20 used sc 'signed char' extern
+|-VarDecl 0x7fed4d014b60 <line:12:1, col:27> col:27 used csc 'const signed char *' extern
+|-VarDecl 0x7fed4d014c00 <line:13:1, col:15> col:15 used f 'float *' extern
+|-FunctionDecl 0x7fed4d014d20 <line:15:1, line:27:1> line:16:1 foo 'void (void)'
+| `-CompoundStmt 0x7fed4d015938 <line:17:1, line:27:1>
+|   |-DeclStmt 0x7fed4d014f48 <line:18:3, col:19>
+|   | `-VarDecl 0x7fed4d014ee8 <col:3, col:18> col:10 used fp 'void (*)(void)'
+|   |-DeclStmt 0x7fed4d015118 <line:19:3, col:26>
+|   | `-VarDecl 0x7fed4d0150b8 <col:3, col:25> col:16 ffp 'const void (*)(void)'
+|   |-CallExpr 0x7fed4d0151c0 <line:20:3, col:12> 'void'
+|   | |-ImplicitCastExpr 0x7fed4d0151a8 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fed4d015130 <col:3> 'void (void *)' Function 0x7fed4d014680 'foo_v' 'void (void *)'
+|   | `-ImplicitCastExpr 0x7fed4d015218 <col:10> 'void *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fed4d015200 <col:10> 'void (*)(void)' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fed4d015158 <col:10> 'void (*)(void)' lvalue Var 0x7fed4d014ee8 'fp' 'void (*)(void)'
+|   |-CallExpr 0x7fed4d0152f0 <line:21:3, col:11> 'void'
+|   | |-ImplicitCastExpr 0x7fed4d0152d8 <col:3> 'void (*)(enum E1)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fed4d015230 <col:3> 'void (enum E1)' Function 0x7fed4d0144c0 'foo_E' 'void (enum E1)'
+|   | `-ImplicitCastExpr 0x7fed4d015320 <col:10> 'enum E1':'enum E1' <IntegralCast>
+|   |   `-DeclRefExpr 0x7fed4d015258 <col:10> 'int' EnumConstant 0x7fed4d014320 'B' 'int'
+|   |-CallExpr 0x7fed4d015410 <line:22:3, col:19> 'void'
+|   | |-ImplicitCastExpr 0x7fed4d0153f8 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fed4d015338 <col:3> 'void (int, int, signed char *)' Function 0x7fed4d014940 'foo_sc' 'void (int, int, signed char *)'
+|   | |-IntegerLiteral 0x7fed4d015360 <col:11> 'int' 1
+|   | |-IntegerLiteral 0x7fed4d015380 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7fed4d015468 <col:17> 'signed char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fed4d015450 <col:17> 'unsigned char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fed4d0153a0 <col:17> 'unsigned char *' lvalue Var 0x7fed4d014a40 'uc' 'unsigned char *'
+|   |-CallExpr 0x7fed4d015528 <line:23:3, col:18> 'void'
+|   | |-ImplicitCastExpr 0x7fed4d015510 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fed4d015480 <col:3> 'void (int, int, signed char *)' Function 0x7fed4d014940 'foo_sc' 'void (int, int, signed char *)'
+|   | |-IntegerLiteral 0x7fed4d0154a8 <col:11> 'int' 1
+|   | |-IntegerLiteral 0x7fed4d0154c8 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7fed4d015580 <col:17> 'signed char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fed4d015568 <col:17> 'float *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fed4d0154e8 <col:17> 'float *' lvalue Var 0x7fed4d014c00 'f' 'float *'
+|   |-CallExpr 0x7fed4d015670 <line:24:3, col:19> 'void'
+|   | |-ImplicitCastExpr 0x7fed4d015658 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fed4d0155c8 <col:3> 'void (int, int, signed char *)' Function 0x7fed4d014940 'foo_sc' 'void (int, int, signed char *)'
+|   | |-IntegerLiteral 0x7fed4d0155f0 <col:11> 'int' 1
+|   | |-IntegerLiteral 0x7fed4d015610 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7fed4d0156c8 <col:17> 'signed char *' <IntegralToPointer>
+|   |   `-ImplicitCastExpr 0x7fed4d0156b0 <col:17> 'signed char' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fed4d015630 <col:17> 'signed char' lvalue Var 0x7fed4d014ab8 'sc' 'signed char'
+|   |-CallExpr 0x7fed4d0157b0 <line:25:3, col:21> 'void'
+|   | |-ImplicitCastExpr 0x7fed4d015798 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fed4d0156e0 <col:3> 'void (int, int, signed char *)' Function 0x7fed4d014940 'foo_sc' 'void (int, int, signed char *)'
+|   | |-ImplicitCastExpr 0x7fed4d015808 <col:11> 'int' <PointerToIntegral>
+|   | | `-ImplicitCastExpr 0x7fed4d0157f0 <col:11> 'unsigned char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fed4d015708 <col:11> 'unsigned char *' lvalue Var 0x7fed4d014a40 'uc' 'unsigned char *'
+|   | |-IntegerLiteral 0x7fed4d015730 <col:15> 'int' 2
+|   | `-UnaryOperator 0x7fed4d015778 <col:18, col:19> 'signed char *' prefix '&'
+|   |   `-DeclRefExpr 0x7fed4d015750 <col:19> 'signed char' lvalue Var 0x7fed4d014ab8 'sc' 'signed char'
+|   `-CallExpr 0x7fed4d0158c8 <line:26:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fed4d0158b0 <col:3> 'void (*)(int, int, signed char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fed4d015820 <col:3> 'void (int, int, signed char *)' Function 0x7fed4d014940 'foo_sc' 'void (int, int, signed char *)'
+|     |-IntegerLiteral 0x7fed4d015848 <col:11> 'int' 1
+|     |-IntegerLiteral 0x7fed4d015868 <col:14> 'int' 2
+|     `-ImplicitCastExpr 0x7fed4d015920 <col:17> 'signed char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fed4d015908 <col:17> 'const signed char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fed4d015888 <col:17> 'const signed char *' lvalue Var 0x7fed4d014b60 'csc' 'const signed char *'
+|-TypedefDecl 0x7fed4d015a30 <line:29:1, col:24> col:16 referenced fp 'void (*)(void)'
+| `-PointerType 0x7fed4d014e90 'void (*)(void)'
+|   `-ParenType 0x7fed4d014e30 'void (void)' sugar
+|     `-FunctionProtoType 0x7fed4d014cd0 'void (void)' cdecl
+|       `-BuiltinType 0x7fed4c82bd40 'void'
+|-TypedefDecl 0x7fed4d015be8 <line:30:1, col:26> col:16 referenced nrfp 'void (*)(void) __attribute__((noreturn))'
+| `-PointerType 0x7fed4d015b90 'void (*)(void) __attribute__((noreturn))'
+|   `-ParenType 0x7fed4d015b30 'void (void) __attribute__((noreturn))' sugar
+|     `-FunctionProtoType 0x7fed4d015b00 'void (void) __attribute__((noreturn))' noreturn cdecl
+|       `-BuiltinType 0x7fed4c82bd40 'void'
+|-FunctionDecl 0x7fed4d015d70 <line:31:1, col:14> col:6 used f1 'void (nrfp)'
+| `-ParmVarDecl 0x7fed4d015c70 <col:10> col:14 'nrfp':'void (*)(void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fed4d015f50 <col:17, col:42> col:22 f2 'void (fp)'
+| |-ParmVarDecl 0x7fed4d015e50 <col:26, col:29> col:29 used x 'fp':'void (*)(void)'
+| `-CompoundStmt 0x7fed4d016148 <col:32, col:42>
+|   `-CallExpr 0x7fed4d0160c0 <col:34, col:39> 'void'
+|     |-ImplicitCastExpr 0x7fed4d0160a8 <col:34> 'void (*)(nrfp)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fed4d015ff8 <col:34> 'void (nrfp)' Function 0x7fed4d015d70 'f1' 'void (nrfp)'
+|     `-ImplicitCastExpr 0x7fed4d016108 <col:38> 'nrfp':'void (*)(void) __attribute__((noreturn))' <BitCast>
+|       `-ImplicitCastExpr 0x7fed4d0160f0 <col:38> 'fp':'void (*)(void)' <LValueToRValue>
+|         `-DeclRefExpr 0x7fed4d016020 <col:38> 'fp':'void (*)(void)' lvalue ParmVar 0x7fed4d015e50 'x' 'fp':'void (*)(void)'
+`-VarDecl 0x7fed4d016178 <col:44, col:55> col:55 e 'int' extern

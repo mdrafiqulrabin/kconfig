@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fcab500b8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcab59a7fd8 <../Data/C2AST/pr76342.c:7:1, line:11:1> line:8:1 test '__m512i ()'
+  `-CompoundStmt 0x7fcab59a80f8 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fcab59a80e0 <line:10:3, col:34>
+      `-CallExpr 0x7fcab59a80b8 <col:10, col:34> '__m512i':'__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fcab59a80a0 <col:10> '__m512i (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fcab59a8078 <col:10> '__m512i (void)' Function 0x7fcab4934c00 '_mm512_undefined_epi32' '__m512i (void)'

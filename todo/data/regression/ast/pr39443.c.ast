@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fde71018ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde71019778 <../Data/C2AST/pr39443.c:6:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fde71018ca0 'unsigned long'
+|-FunctionDecl 0x7fde71806858 <line:8:12> col:12 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fde718068f8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fde71806958 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fde718069b8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fde71806a30 prev 0x7fde71806858 <col:1, line:9:41> line:8:12 used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fde71806618 <col:20, col:32> col:32 s1 'const void *'
+| |-ParmVarDecl 0x7fde71806690 <col:36, col:48> col:48 s2 'const void *'
+| |-ParmVarDecl 0x7fde71806720 <col:52, col:59> col:59 n 'size_t':'unsigned long'
+| |-PureAttr 0x7fde71806ae8 <line:9:32>
+| `-NoThrowAttr 0x7fde71806b30 <col:19>
+|-FunctionDecl 0x7fde71806c38 prev 0x7fde71806a30 <line:10:1, col:58> col:26 used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fde71806d50 <col:26> col:26 implicit 'const void *'
+| |-ParmVarDecl 0x7fde71806dc8 <col:26> col:26 implicit 'const void *'
+| |-ParmVarDecl 0x7fde71806e40 <col:26> col:26 implicit 'unsigned long'
+| |-AsmLabelAttr 0x7fde71806cd8 <col:42> "memory_compare"
+| |-PureAttr 0x7fde71806eb8 <line:9:32> Inherited
+| `-NoThrowAttr 0x7fde71806ec8 <col:19> Inherited
+|-FunctionDecl 0x7fde718070c8 <line:12:1, line:18:1> line:13:1 test 'int (char *, char *, int)'
+| |-ParmVarDecl 0x7fde71806ef0 <col:7, col:13> col:13 used s 'char *'
+| |-ParmVarDecl 0x7fde71806f68 <col:16, col:22> col:22 used t 'char *'
+| |-ParmVarDecl 0x7fde71806fe0 <col:25, col:29> col:29 used cnt 'int'
+| `-CompoundStmt 0x7fde71827d98 <line:14:1, line:18:1>
+|   |-IfStmt 0x7fde71827d28 <line:15:3, line:16:29>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fde71807480 <line:15:7, col:31> 'long'
+|   | | |-ImplicitCastExpr 0x7fde71807468 <col:7> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fde718073c8 <col:7> '<builtin fn type>' Function 0x7fde71807200 '__builtin_expect' 'long (long, long)'
+|   | | |-ImplicitCastExpr 0x7fde718074d0 <col:25> 'long' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fde718074b8 <col:25> 'int' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fde718073f0 <col:25> 'int' lvalue ParmVar 0x7fde71806fe0 'cnt' 'int'
+|   | | `-ImplicitCastExpr 0x7fde718074e8 <col:30> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fde71807418 <col:30> 'int' 0
+|   | |-ReturnStmt 0x7fde71827d10 <line:16:5, col:29>
+|   | | `-CallExpr 0x7fde71827c40 <col:12, col:29> 'int'
+|   | |   |-ImplicitCastExpr 0x7fde71827c28 <col:12> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fde71807500 <col:12> 'int (const void *, const void *, unsigned long)' Function 0x7fde71806c38 'memcmp' 'int (const void *, const void *, unsigned long)'
+|   | |   |-ImplicitCastExpr 0x7fde71827c98 <col:20> 'const void *' <BitCast>
+|   | |   | `-ImplicitCastExpr 0x7fde71827c80 <col:20> 'char *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fde71807528 <col:20> 'char *' lvalue ParmVar 0x7fde71806ef0 's' 'char *'
+|   | |   |-ImplicitCastExpr 0x7fde71827cc8 <col:23> 'const void *' <BitCast>
+|   | |   | `-ImplicitCastExpr 0x7fde71827cb0 <col:23> 'char *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fde71807550 <col:23> 'char *' lvalue ParmVar 0x7fde71806f68 't' 'char *'
+|   | |   `-ImplicitCastExpr 0x7fde71827cf8 <col:26> 'unsigned long' <IntegralCast>
+|   | |     `-ImplicitCastExpr 0x7fde71827ce0 <col:26> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fde71807578 <col:26> 'int' lvalue ParmVar 0x7fde71806fe0 'cnt' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fde71827d80 <line:17:3, col:10>
+|     `-IntegerLiteral 0x7fde71827d60 <col:10> 'int' 0
+`-FunctionDecl 0x7fde71807200 <line:15:7> col:7 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7fde718072a0 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7fde71807300 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7fde71807370 <col:7> Implicit
+  `-ConstAttr 0x7fde718073b8 <col:7> Implicit

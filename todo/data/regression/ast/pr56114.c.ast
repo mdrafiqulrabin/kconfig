@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fabd002bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fabd006d828 <../Data/C2AST/pr56114.c:6:1, line:10:1> line:7:1 foo2 'long (void)'
+  `-CompoundStmt 0x7fabd006da00 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fabd006d9e8 <line:9:3, col:28>
+      `-ImplicitCastExpr 0x7fabd006d9d0 <col:10, col:28> 'long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fabd006d9b8 <col:10, col:28> 'int' <LValueToRValue>
+          `-UnaryOperator 0x7fabd006d998 <col:10, col:28> 'volatile int' lvalue prefix '*'
+            `-CStyleCastExpr 0x7fabd006d970 <col:11, col:28> 'volatile int *' <IntegralToPointer>
+              `-IntegerLiteral 0x7fabd006d908 <col:28> 'unsigned int' 4276092928

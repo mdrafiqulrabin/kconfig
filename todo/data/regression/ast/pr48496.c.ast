@@ -1,0 +1,70 @@
+TranslationUnitDecl 0x7fd45a802ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd45a803788 <../Data/C2AST/pr48496.c:4:1, col:22> col:22 referenced UINT64 'unsigned long'
+| |-BuiltinType 0x7fd45a802ca0 'unsigned long'
+| `-ModeAttr 0x7fd45b037400 <col:44, col:59> __DI__
+|-RecordDecl 0x7fd45b037450 <line:6:9, line:9:1> line:6:9 struct definition
+| `-FieldDecl 0x7fd45b0375f8 <line:8:3, col:13> col:10 x 'UINT64 [2]'
+|   `-AlignedAttr 0x7fd45b037640 <col:30, col:40> aligned
+|     `-IntegerLiteral 0x7fd45b037540 <col:38> 'int' 16
+|-TypedefDecl 0x7fd45b0376e0 <line:6:1, line:9:3> col:3 referenced fpreg 'struct fpreg':'fpreg'
+| `-ElaboratedType 0x7fd45b037690 'struct fpreg' sugar
+|   `-RecordType 0x7fd45b0374e0 'fpreg'
+|     `-Record 0x7fd45b037450 ''
+|-RecordDecl 0x7fd45b037750 <line:11:1, line:15:1> line:11:8 struct ia64_args definition
+| |-FieldDecl 0x7fd45b037928 <line:13:3, col:18> col:9 referenced fp_regs 'fpreg [8]'
+| `-FieldDecl 0x7fd45b037a28 <line:14:3, col:19> col:10 referenced gp_regs 'UINT64 [8]'
+|-FunctionDecl 0x7fd45b037d10 <line:17:1, line:25:1> line:18:1 ffi_call 'void (long, long, long, void **)'
+| |-ParmVarDecl 0x7fd45b037a88 <col:10, col:15> col:15 used i 'long'
+| |-ParmVarDecl 0x7fd45b037b00 <col:18, col:23> col:23 used gpcount 'long'
+| |-ParmVarDecl 0x7fd45b037b78 <col:32, col:37> col:37 used fpcount 'long'
+| |-ParmVarDecl 0x7fd45b037c20 <col:46, col:53> col:53 used avalue 'void **'
+| `-CompoundStmt 0x7fd45b04e3a0 <line:19:1, line:25:1>
+|   |-DeclStmt 0x7fd45b037f20 <line:20:3, col:26>
+|   | `-VarDecl 0x7fd45b037ec0 <col:3, col:21> col:21 used stack 'struct ia64_args *'
+|   |-BinaryOperator 0x7fd45b0381d0 <line:21:3, col:31> 'struct ia64_args *' '='
+|   | |-DeclRefExpr 0x7fd45b037f38 <col:3> 'struct ia64_args *' lvalue Var 0x7fd45b037ec0 'stack' 'struct ia64_args *'
+|   | `-ImplicitCastExpr 0x7fd45b0381b8 <col:11, col:31> 'struct ia64_args *' <BitCast>
+|   |   `-CallExpr 0x7fd45b038170 <col:11, col:31> 'void *'
+|   |     |-ImplicitCastExpr 0x7fd45b038158 <col:11> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fd45b0380e8 <col:11> '<builtin fn type>' Function 0x7fd45b037f98 '__builtin_alloca' 'void *(unsigned long)'
+|   |     `-ImplicitCastExpr 0x7fd45b0381a0 <col:29> 'unsigned long' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fd45b038110 <col:29> 'int' 64
+|   |-GCCAsmStmt 0x7fd45b04e078 <line:22:3, line:23:58>
+|   | |-UnaryOperator 0x7fd45b04de88 <line:22:39, col:65> 'fpreg':'fpreg' lvalue prefix '*'
+|   | | `-UnaryOperator 0x7fd45b04de68 <col:40, col:65> 'fpreg *' prefix '&'
+|   | |   `-ArraySubscriptExpr 0x7fd45b04de40 <col:41, col:65> 'fpreg':'fpreg' lvalue
+|   | |     |-ImplicitCastExpr 0x7fd45b04de28 <col:41, col:48> 'fpreg *' <ArrayToPointerDecay>
+|   | |     | `-MemberExpr 0x7fd45b038328 <col:41, col:48> 'fpreg [8]' lvalue ->fp_regs 0x7fd45b037928
+|   | |     |   `-ImplicitCastExpr 0x7fd45b038310 <col:41> 'struct ia64_args *' <LValueToRValue>
+|   | |     |     `-DeclRefExpr 0x7fd45b0382e8 <col:41> 'struct ia64_args *' lvalue Var 0x7fd45b037ec0 'stack' 'struct ia64_args *'
+|   | |     `-UnaryOperator 0x7fd45b038388 <col:56, col:63> 'long' postfix '++'
+|   | |       `-DeclRefExpr 0x7fd45b038360 <col:56> 'long' lvalue ParmVar 0x7fd45b037b78 'fpcount' 'long'
+|   | `-ImplicitCastExpr 0x7fd45b04e060 <line:23:37, col:56> 'double' <LValueToRValue>
+|   |   `-UnaryOperator 0x7fd45b04e040 <col:37, col:56> 'double' lvalue prefix '*'
+|   |     `-CStyleCastExpr 0x7fd45b04e018 <col:38, col:56> 'double *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7fd45b04e000 <col:48, col:56> 'void *' <LValueToRValue>
+|   |         `-ArraySubscriptExpr 0x7fd45b04df98 <col:48, col:56> 'void *' lvalue
+|   |           |-ImplicitCastExpr 0x7fd45b04df68 <col:48> 'void **' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x7fd45b04df18 <col:48> 'void **' lvalue ParmVar 0x7fd45b037c20 'avalue' 'void **'
+|   |           `-ImplicitCastExpr 0x7fd45b04df80 <col:55> 'long' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fd45b04df40 <col:55> 'long' lvalue ParmVar 0x7fd45b037a88 'i' 'long'
+|   `-BinaryOperator 0x7fd45b04e378 <line:24:3, col:50> 'UINT64':'unsigned long' '='
+|     |-ArraySubscriptExpr 0x7fd45b04e220 <col:3, col:27> 'UINT64':'unsigned long' lvalue
+|     | |-ImplicitCastExpr 0x7fd45b04e208 <col:3, col:10> 'UINT64 *' <ArrayToPointerDecay>
+|     | | `-MemberExpr 0x7fd45b04e130 <col:3, col:10> 'UINT64 [8]' lvalue ->gp_regs 0x7fd45b037a28
+|     | |   `-ImplicitCastExpr 0x7fd45b04e118 <col:3> 'struct ia64_args *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7fd45b04e0f0 <col:3> 'struct ia64_args *' lvalue Var 0x7fd45b037ec0 'stack' 'struct ia64_args *'
+|     | `-UnaryOperator 0x7fd45b04e190 <col:18, col:25> 'long' postfix '++'
+|     |   `-DeclRefExpr 0x7fd45b04e168 <col:18> 'long' lvalue ParmVar 0x7fd45b037b00 'gpcount' 'long'
+|     `-ImplicitCastExpr 0x7fd45b04e360 <col:31, col:50> 'UINT64':'unsigned long' <LValueToRValue>
+|       `-UnaryOperator 0x7fd45b04e340 <col:31, col:50> 'UINT64':'unsigned long' lvalue prefix '*'
+|         `-CStyleCastExpr 0x7fd45b04e318 <col:32, col:50> 'UINT64 *' <BitCast>
+|           `-ImplicitCastExpr 0x7fd45b04e300 <col:42, col:50> 'void *' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7fd45b04e2c8 <col:42, col:50> 'void *' lvalue
+|               |-ImplicitCastExpr 0x7fd45b04e298 <col:42> 'void **' <LValueToRValue>
+|               | `-DeclRefExpr 0x7fd45b04e248 <col:42> 'void **' lvalue ParmVar 0x7fd45b037c20 'avalue' 'void **'
+|               `-ImplicitCastExpr 0x7fd45b04e2b0 <col:49> 'long' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fd45b04e270 <col:49> 'long' lvalue ParmVar 0x7fd45b037a88 'i' 'long'
+`-FunctionDecl 0x7fd45b037f98 <line:21:11> col:11 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7fd45b038038 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fd45b0380a0 <col:11> Implicit

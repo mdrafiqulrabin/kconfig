@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7ff74b82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff74c0143a0 <../Data/C2AST/pr85567.c:3:1, col:56> col:13 used sincos 'void (double, double *, double *)' extern
+| |-ParmVarDecl 0x7ff74b82c978 <col:20, col:27> col:27 x 'double'
+| |-ParmVarDecl 0x7ff74c014240 <col:30, col:38> col:38 sinx 'double *'
+| `-ParmVarDecl 0x7ff74c0142b8 <col:44, col:52> col:52 cosx 'double *'
+|-FunctionDecl 0x7ff74c014980 <line:5:1, line:10:1> line:5:6 used apply 'void (void (*)(double, double *, double *), double, double *, double *)'
+| |-ParmVarDecl 0x7ff74c0146d0 <col:12, col:48> col:19 used f 'void (*)(double, double *, double *)'
+| |-ParmVarDecl 0x7ff74c014748 <line:6:5, col:12> col:12 used x 'double'
+| |-ParmVarDecl 0x7ff74c0147c0 <col:15, col:23> col:23 used sinx 'double *'
+| |-ParmVarDecl 0x7ff74c014838 <col:29, col:37> col:37 used cosx 'double *'
+| `-CompoundStmt 0x7ff74c014b98 <line:7:1, line:10:1>
+|   |-CallExpr 0x7ff74c014af8 <line:8:3, col:18> 'void'
+|   | |-ImplicitCastExpr 0x7ff74c014ae0 <col:3> 'void (*)(double, double *, double *)' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff74c014a40 <col:3> 'void (*)(double, double *, double *)' lvalue ParmVar 0x7ff74c0146d0 'f' 'void (*)(double, double *, double *)'
+|   | |-ImplicitCastExpr 0x7ff74c014b38 <col:5> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff74c014a68 <col:5> 'double' lvalue ParmVar 0x7ff74c014748 'x' 'double'
+|   | |-ImplicitCastExpr 0x7ff74c014b50 <col:8> 'double *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ff74c014a90 <col:8> 'double *' lvalue ParmVar 0x7ff74c0147c0 'sinx' 'double *'
+|   | `-ImplicitCastExpr 0x7ff74c014b68 <col:14> 'double *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ff74c014ab8 <col:14> 'double *' lvalue ParmVar 0x7ff74c014838 'cosx' 'double *'
+|   `-ReturnStmt 0x7ff74c014b80 <line:9:3>
+`-FunctionDecl 0x7ff74c014d58 <line:12:1, line:16:1> line:12:6 apply_sincos 'void (double, double *, double *)'
+  |-ParmVarDecl 0x7ff74c014bd0 <col:19, col:26> col:26 used x 'double'
+  |-ParmVarDecl 0x7ff74c014c48 <col:29, col:37> col:37 used sinx 'double *'
+  |-ParmVarDecl 0x7ff74c014cc0 <col:43, col:51> col:51 used cosx 'double *'
+  `-CompoundStmt 0x7ff74c015010 <line:13:1, line:16:1>
+    |-CallExpr 0x7ff74c014f50 <line:14:3, col:30> 'void'
+    | |-ImplicitCastExpr 0x7ff74c014f38 <col:3> 'void (*)(void (*)(double, double *, double *), double, double *, double *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff74c014e10 <col:3> 'void (void (*)(double, double *, double *), double, double *, double *)' Function 0x7ff74c014980 'apply' 'void (void (*)(double, double *, double *), double, double *, double *)'
+    | |-ImplicitCastExpr 0x7ff74c014f98 <col:9> 'void (*)(double, double *, double *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff74c014e38 <col:9> 'void (double, double *, double *)' Function 0x7ff74c0143a0 'sincos' 'void (double, double *, double *)'
+    | |-ImplicitCastExpr 0x7ff74c014fb0 <col:17> 'double' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff74c014e60 <col:17> 'double' lvalue ParmVar 0x7ff74c014bd0 'x' 'double'
+    | |-ImplicitCastExpr 0x7ff74c014fc8 <col:20> 'double *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff74c014e88 <col:20> 'double *' lvalue ParmVar 0x7ff74c014c48 'sinx' 'double *'
+    | `-ImplicitCastExpr 0x7ff74c014fe0 <col:26> 'double *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff74c014eb0 <col:26> 'double *' lvalue ParmVar 0x7ff74c014cc0 'cosx' 'double *'
+    `-ReturnStmt 0x7ff74c014ff8 <line:15:3>

@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fc483812ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc4820204d8 <../Data/C2AST/pr46091-4a.c:5:1, line:12:1> line:5:5 test_1 'int (int, int)'
+| |-ParmVarDecl 0x7fc483813b78 <col:13, col:17> col:17 used x 'int'
+| |-ParmVarDecl 0x7fc482020400 <col:20, col:24> col:24 used n 'int'
+| `-CompoundStmt 0x7fc4820207c8 <line:6:1, line:12:1>
+|   |-CompoundAssignOperator 0x7fc482020610 <line:7:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fc4820205c8 <col:3> 'int' lvalue ParmVar 0x7fc482020400 'n' 'int'
+|   | `-IntegerLiteral 0x7fc4820205f0 <col:8> 'int' 31
+|   |-CompoundAssignOperator 0x7fc482020738 <line:9:3, col:19> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fc482020648 <col:3> 'int' lvalue ParmVar 0x7fc483813b78 'x' 'int'
+|   | `-UnaryOperator 0x7fc482020718 <col:8, col:19> 'int' prefix '~'
+|   |   `-ParenExpr 0x7fc4820206f8 <col:9, col:19> 'int'
+|   |     `-BinaryOperator 0x7fc4820206d0 <col:10, col:18> 'int' '<<'
+|   |       |-IntegerLiteral 0x7fc482020670 <col:10> 'int' 1
+|   |       `-ImplicitCastExpr 0x7fc4820206b8 <col:18> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fc482020690 <col:18> 'int' lvalue ParmVar 0x7fc482020400 'n' 'int'
+|   `-ReturnStmt 0x7fc4820207b0 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7fc482020798 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc482020770 <col:10> 'int' lvalue ParmVar 0x7fc483813b78 'x' 'int'
+|-FunctionDecl 0x7fc482020918 <line:14:1, line:21:1> line:14:5 test_2 'int (int, int)'
+| |-ParmVarDecl 0x7fc482020808 <col:13, col:17> col:17 used x 'int'
+| |-ParmVarDecl 0x7fc482020880 <col:20, col:24> col:24 used n 'int'
+| `-CompoundStmt 0x7fc482020ba8 <line:15:1, line:21:1>
+|   |-CompoundAssignOperator 0x7fc482020a10 <line:16:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fc4820209c8 <col:3> 'int' lvalue ParmVar 0x7fc482020880 'n' 'int'
+|   | `-IntegerLiteral 0x7fc4820209f0 <col:8> 'int' 31
+|   |-CompoundAssignOperator 0x7fc482020b18 <line:18:3, col:18> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fc482020a48 <col:3> 'int' lvalue ParmVar 0x7fc482020808 'x' 'int'
+|   | `-ParenExpr 0x7fc482020af8 <col:8, col:18> 'int'
+|   |   `-BinaryOperator 0x7fc482020ad0 <col:9, col:17> 'int' '<<'
+|   |     |-IntegerLiteral 0x7fc482020a70 <col:9> 'int' 1
+|   |     `-ImplicitCastExpr 0x7fc482020ab8 <col:17> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fc482020a90 <col:17> 'int' lvalue ParmVar 0x7fc482020880 'n' 'int'
+|   `-ReturnStmt 0x7fc482020b90 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fc482020b78 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc482020b50 <col:10> 'int' lvalue ParmVar 0x7fc482020808 'x' 'int'
+`-FunctionDecl 0x7fc482020cf8 <line:23:1, line:30:1> line:23:5 test_3 'int (int, int)'
+  |-ParmVarDecl 0x7fc482020be8 <col:13, col:17> col:17 used x 'int'
+  |-ParmVarDecl 0x7fc482020c60 <col:20, col:24> col:24 used n 'int'
+  `-CompoundStmt 0x7fc482020f88 <line:24:1, line:30:1>
+    |-CompoundAssignOperator 0x7fc482020df0 <line:25:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fc482020da8 <col:3> 'int' lvalue ParmVar 0x7fc482020c60 'n' 'int'
+    | `-IntegerLiteral 0x7fc482020dd0 <col:8> 'int' 31
+    |-CompoundAssignOperator 0x7fc482020ef8 <line:27:3, col:18> 'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7fc482020e28 <col:3> 'int' lvalue ParmVar 0x7fc482020be8 'x' 'int'
+    | `-ParenExpr 0x7fc482020ed8 <col:8, col:18> 'int'
+    |   `-BinaryOperator 0x7fc482020eb0 <col:9, col:17> 'int' '<<'
+    |     |-IntegerLiteral 0x7fc482020e50 <col:9> 'int' 1
+    |     `-ImplicitCastExpr 0x7fc482020e98 <col:17> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fc482020e70 <col:17> 'int' lvalue ParmVar 0x7fc482020c60 'n' 'int'
+    `-ReturnStmt 0x7fc482020f70 <line:29:3, col:10>
+      `-ImplicitCastExpr 0x7fc482020f58 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc482020f30 <col:10> 'int' lvalue ParmVar 0x7fc482020be8 'x' 'int'

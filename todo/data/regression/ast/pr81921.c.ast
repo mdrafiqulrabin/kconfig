@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fa32e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa32f0152c8 <../Data/C2AST/pr81921.c:5:1, line:9:1> line:6:1 used _mm_loadu_si128 'int (const int *)' extern inline
+| |-ParmVarDecl 0x7fa32f015200 <col:18, col:29> col:29 used __P 'const int *'
+| |-CompoundStmt 0x7fa32f0154b8 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7fa32f0154a0 <line:8:5, col:13>
+| |   `-ImplicitCastExpr 0x7fa32f015488 <col:12, col:13> 'int' <LValueToRValue>
+| |     `-UnaryOperator 0x7fa32f015468 <col:12, col:13> 'const int' lvalue prefix '*'
+| |       `-ImplicitCastExpr 0x7fa32f015450 <col:13> 'const int *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fa32f015428 <col:13> 'const int *' lvalue ParmVar 0x7fa32f015200 '__P' 'const int *'
+| |-TargetAttr 0x7fa32f015370 <line:5:88, col:101> "sse2"
+| |-AlwaysInlineAttr 0x7fa32f0153c8 <col:53> always_inline
+| `-GNUInlineAttr 0x7fa32f0153d8 <col:37>
+`-FunctionDecl 0x7fa32f015610 <line:11:1, line:14:1> line:11:39 foo 'void (void *)'
+  |-ParmVarDecl 0x7fa32f015550 <col:44, col:50> col:50 used p 'void *'
+  |-CompoundStmt 0x7fa32f015898 <line:12:1, line:14:1>
+  | `-DeclStmt 0x7fa32f015880 <line:13:3, col:39>
+  |   `-VarDecl 0x7fa32f015728 <col:3, col:38> col:16 x 'volatile int' cinit
+  |     `-CallExpr 0x7fa32f015820 <col:20, col:38> 'int'
+  |       |-ImplicitCastExpr 0x7fa32f015808 <col:20> 'int (*)(const int *)' <FunctionToPointerDecay>
+  |       | `-DeclRefExpr 0x7fa32f015788 <col:20> 'int (const int *)' Function 0x7fa32f0152c8 '_mm_loadu_si128' 'int (const int *)'
+  |       `-ImplicitCastExpr 0x7fa32f015868 <col:37> 'const int *' <BitCast>
+  |         `-ImplicitCastExpr 0x7fa32f015850 <col:37> 'void *' <LValueToRValue>
+  |           `-DeclRefExpr 0x7fa32f0157b0 <col:37> 'void *' lvalue ParmVar 0x7fa32f015550 'p' 'void *'
+  `-TargetAttr 0x7fa32f0156b8 <line:11:21, col:35> "ssse3"

@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fc20b81cee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc20b81db78 <../Data/C2AST/pr56501.c:4:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7fc20c0418b8 <line:5:1, col:47> col:6 used try_help 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7fc20c041978 prev 0x7fc20c0418b8 <line:6:1, line:8:1> line:6:6 used try_help 'void () __attribute__((noreturn))'
+| `-CompoundStmt 0x7fc20c041a18 <line:7:1, line:8:1>
+`-FunctionDecl 0x7fc20c041a80 <line:10:1, line:27:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7fc20c041f38 <line:11:1, line:27:1>
+    `-SwitchStmt 0x7fc20c041b60 <line:12:3, line:26:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc20c041b48 <line:12:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc20c041b20 <col:11> 'int' lvalue Var 0x7fc20b81db78 'a' 'int'
+      `-CompoundStmt 0x7fc20c041f18 <line:13:5, line:26:5>
+        |-CaseStmt 0x7fc20c041ba8 <line:14:7, line:23:4>
+        | |-CharacterLiteral 0x7fc20c041b90 <line:14:12> 'int' 49
+        | |-<<<NULL>>>
+        | `-CaseStmt 0x7fc20c041bf8 <line:15:7, line:23:4>
+        |   |-CharacterLiteral 0x7fc20c041be0 <line:15:12> 'int' 50
+        |   |-<<<NULL>>>
+        |   `-CaseStmt 0x7fc20c041c48 <line:16:7, line:23:4>
+        |     |-CharacterLiteral 0x7fc20c041c30 <line:16:12> 'int' 51
+        |     |-<<<NULL>>>
+        |     `-CaseStmt 0x7fc20c041c98 <line:17:7, line:23:4>
+        |       |-CharacterLiteral 0x7fc20c041c80 <line:17:12> 'int' 52
+        |       |-<<<NULL>>>
+        |       `-CaseStmt 0x7fc20c041ce8 <line:18:7, line:23:4>
+        |         |-CharacterLiteral 0x7fc20c041cd0 <line:18:12> 'int' 53
+        |         |-<<<NULL>>>
+        |         `-CaseStmt 0x7fc20c041d38 <line:19:7, line:23:4>
+        |           |-CharacterLiteral 0x7fc20c041d20 <line:19:12> 'int' 54
+        |           |-<<<NULL>>>
+        |           `-CaseStmt 0x7fc20c041d88 <line:20:7, line:23:4>
+        |             |-CharacterLiteral 0x7fc20c041d70 <line:20:12> 'int' 55
+        |             |-<<<NULL>>>
+        |             `-CaseStmt 0x7fc20c041dd8 <line:21:7, line:23:4>
+        |               |-CharacterLiteral 0x7fc20c041dc0 <line:21:12> 'int' 56
+        |               |-<<<NULL>>>
+        |               `-CaseStmt 0x7fc20c041e28 <line:22:7, line:23:4>
+        |                 |-CharacterLiteral 0x7fc20c041e10 <line:22:12> 'int' 57
+        |                 |-<<<NULL>>>
+        |                 `-BreakStmt 0x7fc20c041e60 <line:23:4>
+        `-DefaultStmt 0x7fc20c041ef8 <line:24:7, line:25:14>
+          `-CallExpr 0x7fc20c041ed0 <col:4, col:14> 'void'
+            `-ImplicitCastExpr 0x7fc20c041eb8 <col:4> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7fc20c041e68 <col:4> 'void () __attribute__((noreturn))' Function 0x7fc20c041978 'try_help' 'void () __attribute__((noreturn))'

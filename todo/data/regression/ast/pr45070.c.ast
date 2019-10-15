@@ -1,0 +1,156 @@
+TranslationUnitDecl 0x7fe47400f4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe474051650 <../Data/C2AST/pr45070.c:2:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe4740516f0 prev 0x7fe474051650 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fe474051790 <line:4:1, line:6:1> line:4:8 struct packed_ushort definition
+| |-PackedAttr 0x7fe4740518a0 <line:6:18>
+| `-FieldDecl 0x7fe474051858 <line:5:5, col:20> col:20 referenced ucs 'unsigned short'
+|-RecordDecl 0x7fe4740518e8 <line:8:1, line:11:1> line:8:8 struct source definition
+| |-FieldDecl 0x7fe4740519a8 <line:9:5, col:9> col:9 referenced pos 'int'
+| |-FieldDecl 0x7fe474051a08 <col:5, col:14> col:14 referenced length 'int'
+| `-FieldDecl 0x7fe474051a68 <line:10:5, col:9> col:9 referenced flag 'int'
+|-FunctionDecl 0x7fe474051c60 <line:13:1, line:16:1> line:13:39 used fetch 'void (struct source *)' static
+| |-ParmVarDecl 0x7fe474051b60 <col:45, col:60> col:60 used p 'struct source *'
+| |-CompoundStmt 0x7fe474051e50 <line:14:1, line:16:1>
+| | `-BinaryOperator 0x7fe474051e28 <line:15:5, col:17> 'int' '='
+| |   |-MemberExpr 0x7fe474051dd0 <col:5, col:8> 'int' lvalue ->length 0x7fe474051a08
+| |   | `-ImplicitCastExpr 0x7fe474051db8 <col:5> 'struct source *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fe474051d90 <col:5> 'struct source *' lvalue ParmVar 0x7fe474051b60 'p' 'struct source *'
+| |   `-IntegerLiteral 0x7fe474051e08 <col:17> 'int' 128
+| `-NoInlineAttr 0x7fe474051d08 <line:13:28>
+|-FunctionDecl 0x7fe474051fd0 <line:18:1, line:34:1> line:18:55 used next 'struct packed_ushort (struct source *)' static
+| |-ParmVarDecl 0x7fe474051e90 <col:60, col:75> col:75 used p 'struct source *'
+| |-CompoundStmt 0x7fe474069430 <line:19:1, line:34:1>
+| | |-DeclStmt 0x7fe474052140 <line:20:5, col:28>
+| | | `-VarDecl 0x7fe4740520e0 <col:5, col:26> col:26 used rv 'struct packed_ushort':'struct packed_ushort'
+| | |-IfStmt 0x7fe4740692e0 <line:22:5, line:31:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fe474052278 <line:22:9, col:22> 'int' '>='
+| | | | |-ImplicitCastExpr 0x7fe474052248 <col:9, col:12> 'int' <LValueToRValue>
+| | | | | `-MemberExpr 0x7fe474052198 <col:9, col:12> 'int' lvalue ->pos 0x7fe4740519a8
+| | | | |   `-ImplicitCastExpr 0x7fe474052180 <col:9> 'struct source *' <LValueToRValue>
+| | | | |     `-DeclRefExpr 0x7fe474052158 <col:9> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | | `-ImplicitCastExpr 0x7fe474052260 <col:19, col:22> 'int' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fe474052210 <col:19, col:22> 'int' lvalue ->length 0x7fe474051a08
+| | | |     `-ImplicitCastExpr 0x7fe4740521f8 <col:19> 'struct source *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fe4740521d0 <col:19> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | |-CompoundStmt 0x7fe4740692b0 <col:30, line:31:5>
+| | | | |-IfStmt 0x7fe474069058 <line:23:2, line:27:2>
+| | | | | |-<<<NULL>>>
+| | | | | |-<<<NULL>>>
+| | | | | |-ImplicitCastExpr 0x7fe474052318 <line:23:6, col:9> 'int' <LValueToRValue>
+| | | | | | `-MemberExpr 0x7fe4740522e0 <col:6, col:9> 'int' lvalue ->flag 0x7fe474051a68
+| | | | | |   `-ImplicitCastExpr 0x7fe4740522c8 <col:6> 'struct source *' <LValueToRValue>
+| | | | | |     `-DeclRefExpr 0x7fe4740522a0 <col:6> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | | | |-CompoundStmt 0x7fe474069030 <col:15, line:27:2>
+| | | | | | |-BinaryOperator 0x7fe4740523c8 <line:24:6, col:16> 'int' '='
+| | | | | | | |-MemberExpr 0x7fe474052370 <col:6, col:9> 'int' lvalue ->flag 0x7fe474051a68
+| | | | | | | | `-ImplicitCastExpr 0x7fe474052358 <col:6> 'struct source *' <LValueToRValue>
+| | | | | | | |   `-DeclRefExpr 0x7fe474052330 <col:6> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | | | | | `-IntegerLiteral 0x7fe4740523a8 <col:16> 'int' 0
+| | | | | | |-CallExpr 0x7fe4740524b0 <line:25:6, col:13> 'void'
+| | | | | | | |-ImplicitCastExpr 0x7fe474052498 <col:6> 'void (*)(struct source *)' <FunctionToPointerDecay>
+| | | | | | | | `-DeclRefExpr 0x7fe4740523f0 <col:6> 'void (struct source *)' Function 0x7fe474051c60 'fetch' 'void (struct source *)'
+| | | | | | | `-ImplicitCastExpr 0x7fe4740524e0 <col:12> 'struct source *' <LValueToRValue>
+| | | | | | |   `-DeclRefExpr 0x7fe474052418 <col:12> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | | | | `-ReturnStmt 0x7fe474069018 <line:26:6, col:19>
+| | | | | |   `-CallExpr 0x7fe4740525c0 <col:13, col:19> 'struct packed_ushort':'struct packed_ushort'
+| | | | | |     |-ImplicitCastExpr 0x7fe4740525a8 <col:13> 'struct packed_ushort (*)(struct source *)' <FunctionToPointerDecay>
+| | | | | |     | `-DeclRefExpr 0x7fe4740524f8 <col:13> 'struct packed_ushort (struct source *)' Function 0x7fe474051fd0 'next' 'struct packed_ushort (struct source *)'
+| | | | | |     `-ImplicitCastExpr 0x7fe474069000 <col:18> 'struct source *' <LValueToRValue>
+| | | | | |       `-DeclRefExpr 0x7fe474052520 <col:18> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | | | `-<<<NULL>>>
+| | | | |-BinaryOperator 0x7fe474069128 <line:28:2, col:12> 'int' '='
+| | | | | |-MemberExpr 0x7fe4740690d0 <col:2, col:5> 'int' lvalue ->flag 0x7fe474051a68
+| | | | | | `-ImplicitCastExpr 0x7fe4740690b8 <col:2> 'struct source *' <LValueToRValue>
+| | | | | |   `-DeclRefExpr 0x7fe474069090 <col:2> 'struct source *' lvalue ParmVar 0x7fe474051e90 'p' 'struct source *'
+| | | | | `-IntegerLiteral 0x7fe474069108 <col:12> 'int' 1
+| | | | |-BinaryOperator 0x7fe4740691e8 <line:29:2, col:11> 'unsigned short' '='
+| | | | | |-MemberExpr 0x7fe474069178 <col:2, col:5> 'unsigned short' lvalue .ucs 0x7fe474051858
+| | | | | | `-DeclRefExpr 0x7fe474069150 <col:2> 'struct packed_ushort':'struct packed_ushort' lvalue Var 0x7fe4740520e0 'rv' 'struct packed_ushort':'struct packed_ushort'
+| | | | | `-ImplicitCastExpr 0x7fe4740691d0 <col:11> 'unsigned short' <IntegralCast>
+| | | | |   `-IntegerLiteral 0x7fe4740691b0 <col:11> 'int' 65535
+| | | | `-ReturnStmt 0x7fe474069298 <line:30:2, col:9>
+| | | |   `-ImplicitCastExpr 0x7fe474069280 <col:9> 'struct packed_ushort':'struct packed_ushort' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fe474069258 <col:9> 'struct packed_ushort':'struct packed_ushort' lvalue Var 0x7fe4740520e0 'rv' 'struct packed_ushort':'struct packed_ushort'
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fe4740693b0 <line:32:5, col:14> 'unsigned short' '='
+| | | |-MemberExpr 0x7fe474069340 <col:5, col:8> 'unsigned short' lvalue .ucs 0x7fe474051858
+| | | | `-DeclRefExpr 0x7fe474069318 <col:5> 'struct packed_ushort':'struct packed_ushort' lvalue Var 0x7fe4740520e0 'rv' 'struct packed_ushort':'struct packed_ushort'
+| | | `-ImplicitCastExpr 0x7fe474069398 <col:14> 'unsigned short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fe474069378 <col:14> 'int' 0
+| | `-ReturnStmt 0x7fe474069418 <line:33:5, col:12>
+| |   `-ImplicitCastExpr 0x7fe474069400 <col:12> 'struct packed_ushort':'struct packed_ushort' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe4740693d8 <col:12> 'struct packed_ushort':'struct packed_ushort' lvalue Var 0x7fe4740520e0 'rv' 'struct packed_ushort':'struct packed_ushort'
+| `-NoInlineAttr 0x7fe474052078 <line:18:44>
+`-FunctionDecl 0x7fe474069528 <line:36:1, line:52:1> line:36:5 main 'int (void)'
+  `-CompoundStmt 0x7fe47406a0d0 <line:37:1, line:52:1>
+    |-DeclStmt 0x7fe474069678 <line:38:5, col:20>
+    | `-VarDecl 0x7fe474069618 <col:5, col:19> col:19 used s 'struct source':'struct source'
+    |-DeclStmt 0x7fe474069708 <line:39:5, col:10>
+    | `-VarDecl 0x7fe4740696a8 <col:5, col:9> col:9 used i 'int'
+    |-BinaryOperator 0x7fe4740697a0 <line:41:5, col:13> 'int' '='
+    | |-MemberExpr 0x7fe474069748 <col:5, col:7> 'int' lvalue .pos 0x7fe4740519a8
+    | | `-DeclRefExpr 0x7fe474069720 <col:5> 'struct source':'struct source' lvalue Var 0x7fe474069618 's' 'struct source':'struct source'
+    | `-IntegerLiteral 0x7fe474069780 <col:13> 'int' 0
+    |-BinaryOperator 0x7fe4740698a0 <line:42:5, col:16> 'int' '='
+    | |-MemberExpr 0x7fe474069848 <col:5, col:7> 'int' lvalue .length 0x7fe474051a08
+    | | `-DeclRefExpr 0x7fe474069820 <col:5> 'struct source':'struct source' lvalue Var 0x7fe474069618 's' 'struct source':'struct source'
+    | `-IntegerLiteral 0x7fe474069880 <col:16> 'int' 0
+    |-BinaryOperator 0x7fe474069948 <line:43:5, col:14> 'int' '='
+    | |-MemberExpr 0x7fe4740698f0 <col:5, col:7> 'int' lvalue .flag 0x7fe474051a68
+    | | `-DeclRefExpr 0x7fe4740698c8 <col:5> 'struct source':'struct source' lvalue Var 0x7fe474069618 's' 'struct source':'struct source'
+    | `-IntegerLiteral 0x7fe474069928 <col:14> 'int' 0
+    |-ForStmt 0x7fe47406a060 <line:45:5, line:50:5>
+    | |-BinaryOperator 0x7fe4740699b8 <line:45:10, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fe474069970 <col:10> 'int' lvalue Var 0x7fe4740696a8 'i' 'int'
+    | | `-IntegerLiteral 0x7fe474069998 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe474069a40 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fe474069a28 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe4740699e0 <col:17> 'int' lvalue Var 0x7fe4740696a8 'i' 'int'
+    | | `-IntegerLiteral 0x7fe474069a08 <col:21> 'int' 16
+    | |-UnaryOperator 0x7fe474069a90 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fe474069a68 <col:25> 'int' lvalue Var 0x7fe4740696a8 'i' 'int'
+    | `-CompoundStmt 0x7fe47406a040 <col:30, line:50:5>
+    |   |-DeclStmt 0x7fe474069be8 <line:46:2, col:36>
+    |   | `-VarDecl 0x7fe474069ad0 <col:2, col:35> col:23 used rv 'struct packed_ushort':'struct packed_ushort' cinit
+    |   |   `-CallExpr 0x7fe474069bb8 <col:28, col:35> 'struct packed_ushort':'struct packed_ushort'
+    |   |     |-ImplicitCastExpr 0x7fe474069ba0 <col:28> 'struct packed_ushort (*)(struct source *)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fe474069b30 <col:28> 'struct packed_ushort (struct source *)' Function 0x7fe474051fd0 'next' 'struct packed_ushort (struct source *)'
+    |   |     `-UnaryOperator 0x7fe474069b80 <col:33, col:34> 'struct source *' prefix '&'
+    |   |       `-DeclRefExpr 0x7fe474069b58 <col:34> 'struct source':'struct source' lvalue Var 0x7fe474069618 's' 'struct source':'struct source'
+    |   `-IfStmt 0x7fe47406a008 <line:47:2, line:49:12>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fe474069f50 <line:47:6, line:48:30> 'int' '||'
+    |     | |-ParenExpr 0x7fe474069d88 <line:47:6, col:33> 'int'
+    |     | | `-BinaryOperator 0x7fe474069d60 <col:7, col:27> 'int' '&&'
+    |     | |   |-BinaryOperator 0x7fe474069c60 <col:7, col:12> 'int' '=='
+    |     | |   | |-ImplicitCastExpr 0x7fe474069c48 <col:7> 'int' <LValueToRValue>
+    |     | |   | | `-DeclRefExpr 0x7fe474069c00 <col:7> 'int' lvalue Var 0x7fe4740696a8 'i' 'int'
+    |     | |   | `-IntegerLiteral 0x7fe474069c28 <col:12> 'int' 0
+    |     | |   `-BinaryOperator 0x7fe474069d38 <col:17, col:27> 'int' '!='
+    |     | |     |-ImplicitCastExpr 0x7fe474069d20 <col:17, col:20> 'int' <IntegralCast>
+    |     | |     | `-ImplicitCastExpr 0x7fe474069d08 <col:17, col:20> 'unsigned short' <LValueToRValue>
+    |     | |     |   `-MemberExpr 0x7fe474069cb0 <col:17, col:20> 'unsigned short' lvalue .ucs 0x7fe474051858
+    |     | |     |     `-DeclRefExpr 0x7fe474069c88 <col:17> 'struct packed_ushort':'struct packed_ushort' lvalue Var 0x7fe474069ad0 'rv' 'struct packed_ushort':'struct packed_ushort'
+    |     | |     `-IntegerLiteral 0x7fe474069ce8 <col:27> 'int' 65535
+    |     | `-ParenExpr 0x7fe474069f30 <line:48:9, col:30> 'int'
+    |     |   `-BinaryOperator 0x7fe474069f08 <col:10, col:29> 'int' '&&'
+    |     |     |-BinaryOperator 0x7fe474069e08 <col:10, col:14> 'int' '>'
+    |     |     | |-ImplicitCastExpr 0x7fe474069df0 <col:10> 'int' <LValueToRValue>
+    |     |     | | `-DeclRefExpr 0x7fe474069da8 <col:10> 'int' lvalue Var 0x7fe4740696a8 'i' 'int'
+    |     |     | `-IntegerLiteral 0x7fe474069dd0 <col:14> 'int' 0
+    |     |     `-BinaryOperator 0x7fe474069ee0 <col:19, col:29> 'int' '!='
+    |     |       |-ImplicitCastExpr 0x7fe474069ec8 <col:19, col:22> 'int' <IntegralCast>
+    |     |       | `-ImplicitCastExpr 0x7fe474069eb0 <col:19, col:22> 'unsigned short' <LValueToRValue>
+    |     |       |   `-MemberExpr 0x7fe474069e58 <col:19, col:22> 'unsigned short' lvalue .ucs 0x7fe474051858
+    |     |       |     `-DeclRefExpr 0x7fe474069e30 <col:19> 'struct packed_ushort':'struct packed_ushort' lvalue Var 0x7fe474069ad0 'rv' 'struct packed_ushort':'struct packed_ushort'
+    |     |       `-IntegerLiteral 0x7fe474069e90 <col:29> 'int' 0
+    |     |-CallExpr 0x7fe474069fe0 <line:49:6, col:12> 'void'
+    |     | `-ImplicitCastExpr 0x7fe474069fc8 <col:6> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7fe474069f78 <col:6> 'void (void) __attribute__((noreturn))' Function 0x7fe4740516f0 'abort' 'void (void) __attribute__((noreturn))'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fe47406a0b8 <line:51:5, col:12>
+      `-IntegerLiteral 0x7fe47406a098 <col:12> 'int' 0

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fe45982b6e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe45982c378 <../Data/C2AST/pr71670.c:6:1, col:14> col:14 used a 'volatile int'
+|-VarDecl 0x7fe45986d258 <line:7:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7fe45986d380 <line:8:1, col:36> col:6 fn1 'void (void)'
+  `-CompoundStmt 0x7fe45986d588 <col:16, col:36>
+    `-BinaryOperator 0x7fe45986d560 <col:18, col:33> 'int' '||'
+      |-BinaryOperator 0x7fe45986d4f8 <col:18, col:28> 'long' '+'
+      | |-ImplicitCastExpr 0x7fe45986d4e0 <col:18> 'long' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fe45986d4c8 <col:18> 'int' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fe45986d420 <col:18> 'int' lvalue Var 0x7fe45986d258 'b' 'int'
+      | `-CStyleCastExpr 0x7fe45986d4a0 <col:22, col:28> 'long' <IntegralCast>
+      |   `-ImplicitCastExpr 0x7fe45986d488 <col:28> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fe45986d448 <col:28> 'int' lvalue Var 0x7fe45986d258 'b' 'int'
+      `-ImplicitCastExpr 0x7fe45986d548 <col:33> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe45986d520 <col:33> 'volatile int' lvalue Var 0x7fe45982c378 'a' 'volatile int'

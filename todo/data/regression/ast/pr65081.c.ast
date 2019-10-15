@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7faec182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7faec182c960 <../Data/C2AST/pr65081.c:6:1, line:10:1> line:6:8 struct S definition
+| |-FieldDecl 0x7faec2014238 <line:8:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7faec20142f8 <line:9:3, col:11> col:8 p 'char [1]'
+|-VarDecl 0x7faec2014390 <line:12:1, col:10> col:10 used b 'struct S':'struct S'
+|-FunctionDecl 0x7faec2014520 <line:14:1, line:19:1> line:15:1 used foo 'struct S *()'
+| `-CompoundStmt 0x7faec2014748 <line:16:1, line:19:1>
+|   |-DeclStmt 0x7faec2014690 <line:17:3, col:19>
+|   | `-VarDecl 0x7faec20145e8 <col:3, col:18> col:13 used i 'struct S *' cinit
+|   |   `-UnaryOperator 0x7faec2014670 <col:17, col:18> 'struct S *' prefix '&'
+|   |     `-DeclRefExpr 0x7faec2014648 <col:18> 'struct S':'struct S' lvalue Var 0x7faec2014390 'b' 'struct S':'struct S'
+|   `-ReturnStmt 0x7faec2014730 <line:18:3, col:14>
+|     `-BinaryOperator 0x7faec2014708 <col:10, col:14> 'struct S *' '+'
+|       |-ImplicitCastExpr 0x7faec20146f0 <col:10> 'struct S *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7faec20146a8 <col:10> 'struct S *' lvalue Var 0x7faec20145e8 'i' 'struct S *'
+|       `-IntegerLiteral 0x7faec20146d0 <col:14> 'int' 1
+`-FunctionDecl 0x7faec2014838 <line:21:1, line:26:1> line:22:1 main 'int (void)'
+  `-CompoundStmt 0x7faec2014b78 <line:23:1, line:26:1>
+    |-DeclStmt 0x7faec2014aa0 <line:24:3, col:27>
+    | `-VarDecl 0x7faec2014930 <col:3, col:26> col:13 used i 'struct S *' cinit
+    |   `-BinaryOperator 0x7faec2014a78 <col:17, col:26> 'struct S *' '-'
+    |     |-CallExpr 0x7faec2014a30 <col:17, col:22> 'struct S *'
+    |     | `-ImplicitCastExpr 0x7faec2014a18 <col:17> 'struct S *(*)()' <FunctionToPointerDecay>
+    |     |   `-DeclRefExpr 0x7faec2014990 <col:17> 'struct S *()' Function 0x7faec2014520 'foo' 'struct S *()'
+    |     `-IntegerLiteral 0x7faec2014a58 <col:26> 'int' 1
+    `-BinaryOperator 0x7faec2014b50 <line:25:3, col:10> 'int' '='
+      |-MemberExpr 0x7faec2014af8 <col:3, col:6> 'int' lvalue ->a 0x7faec2014238
+      | `-ImplicitCastExpr 0x7faec2014ae0 <col:3> 'struct S *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faec2014ab8 <col:3> 'struct S *' lvalue Var 0x7faec2014930 'i' 'struct S *'
+      `-IntegerLiteral 0x7faec2014b30 <col:10> 'int' 1

@@ -1,0 +1,33 @@
+../Data/C2AST/pr30552-1.c:10:18: error: expected ';' at end of declaration
+  void fun(int a)  
+                 ^
+                 ;
+../Data/C2AST/pr30552-1.c:11:21: error: function definition is not allowed here
+    int a[({void h(){}2;})];  
+                    ^
+2 errors generated.
+TranslationUnitDecl 0x7fd9d601aee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd9d601b460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd9d601b180 '__int128'
+|-TypedefDecl 0x7fd9d601b4d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd9d601b1a0 'unsigned __int128'
+|-TypedefDecl 0x7fd9d601b7a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd9d601b5b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd9d601b528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd9d601b840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd9d601b800 'char *'
+|   `-BuiltinType 0x7fd9d601af80 'char'
+|-TypedefDecl 0x7fd9d601bb08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd9d601bab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd9d601b920 'struct __va_list_tag'
+|     `-Record 0x7fd9d601b898 '__va_list_tag'
+`-FunctionDecl 0x7fd9d605ca00 <../Data/C2AST/pr30552-1.c:8:1, line:15:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fd9d605ce10 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fd9d605cc78 <line:10:3, line:11:5>
+    | `-FunctionDecl 0x7fd9d605cbc0 parent 0x7fd9d601aee8 <line:10:3, col:17> col:8 fun 'void (int)'
+    |   `-ParmVarDecl 0x7fd9d605caf8 <col:12, col:16> col:16 a 'int'
+    |-DeclStmt 0x7fd9d605cdb0 <line:11:5, col:28>
+    | `-VarDecl 0x7fd9d605cd50 <col:5, col:27> col:9 a 'int [2]'
+    |-CompoundStmt 0x7fd9d605cdc8 <line:12:3, line:13:3>
+    `-ReturnStmt 0x7fd9d605cdf8 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fd9d605cdd8 <col:10> 'int' 0

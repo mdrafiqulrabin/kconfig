@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fbf3582b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbf3582bf60 <../Data/C2AST/pr78952-1.c:7:1, line:12:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7fbf36014230 <line:9:3, col:8> col:8 pad1 'char'
+| |-FieldDecl 0x7fbf36014288 <line:10:3, col:8> col:8 referenced val 'char'
+| `-FieldDecl 0x7fbf360142e8 <line:11:3, col:9> col:9 pad2 'short'
+`-FunctionDecl 0x7fbf36014520 <line:14:1, line:19:1> line:14:11 foo 'struct S1 (struct S1, struct S1)'
+  |-ParmVarDecl 0x7fbf36014380 <col:16, col:26> col:26 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fbf36014400 <col:29, col:39> col:39 used b 'struct S1':'struct S1'
+  `-CompoundStmt 0x7fbf360147c0 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7fbf360146e8 <line:16:3, col:13> 'char' '='
+    | |-MemberExpr 0x7fbf36014638 <col:3, col:5> 'char' lvalue .val 0x7fbf36014288
+    | | `-DeclRefExpr 0x7fbf36014610 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fbf36014380 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7fbf360146d0 <col:11, col:13> 'char' <LValueToRValue>
+    |   `-MemberExpr 0x7fbf36014698 <col:11, col:13> 'char' lvalue .val 0x7fbf36014288
+    |     `-DeclRefExpr 0x7fbf36014670 <col:11> 'struct S1':'struct S1' lvalue ParmVar 0x7fbf36014400 'b' 'struct S1':'struct S1'
+    `-ReturnStmt 0x7fbf360147a8 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7fbf36014790 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fbf36014768 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fbf36014380 'a' 'struct S1':'struct S1'

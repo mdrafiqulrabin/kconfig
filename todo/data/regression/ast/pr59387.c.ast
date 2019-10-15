@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fdc830058e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fdc83006578 <../Data/C2AST/pr59387.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fdc82841080 <col:1, col:9> col:9 used d 'int *'
+|-VarDecl 0x7fdc82841128 <col:1, col:19> col:14 used e 'int **' cinit
+| `-UnaryOperator 0x7fdc828411b0 <col:18, col:19> 'int **' prefix '&'
+|   `-DeclRefExpr 0x7fdc82841188 <col:19> 'int *' lvalue Var 0x7fdc82841080 'd' 'int *'
+|-VarDecl 0x7fdc828411e8 <col:1, col:22> col:22 used f 'int'
+|-VarDecl 0x7fdc82841280 <line:4:1, col:6> col:6 used c 'char'
+|-RecordDecl 0x7fdc828412e0 <line:5:1, col:20> col:8 struct S definition
+| `-FieldDecl 0x7fdc828413a8 <col:12, col:16> col:16 referenced f1 'int'
+|-VarDecl 0x7fdc82841440 <col:1, col:22> col:22 used b 'struct S':'struct S'
+`-FunctionDecl 0x7fdc82841510 <line:7:1, line:19:1> line:8:1 main 'int ()'
+  `-CompoundStmt 0x7fdc82841bb0 <line:9:1, line:19:1>
+    |-ForStmt 0x7fdc82841b40 <line:10:3, line:17:5>
+    | |-BinaryOperator 0x7fdc82841618 <line:10:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fdc828415b0 <col:8> 'int' lvalue Var 0x7fdc83006578 'a' 'int'
+    | | `-UnaryOperator 0x7fdc828415f8 <col:12, col:13> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7fdc828415d8 <col:13> 'int' 19
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fdc82841668 <col:17> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fdc82841640 <col:17> 'int' lvalue Var 0x7fdc83006578 'a' 'int'
+    | |-UnaryOperator 0x7fdc828416a8 <col:20, col:21> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fdc82841680 <col:20> 'int' lvalue Var 0x7fdc83006578 'a' 'int'
+    | `-CompoundStmt 0x7fdc82841b18 <line:11:5, line:17:5>
+    |   |-ForStmt 0x7fdc82841940 <line:12:7, line:13:3>
+    |   | |-BinaryOperator 0x7fdc82841748 <line:12:12, col:19> 'int' '='
+    |   | | |-MemberExpr 0x7fdc828416f0 <col:12, col:14> 'int' lvalue .f1 0x7fdc828413a8
+    |   | | | `-DeclRefExpr 0x7fdc828416c8 <col:12> 'struct S':'struct S' lvalue Var 0x7fdc82841440 'b' 'struct S':'struct S'
+    |   | | `-IntegerLiteral 0x7fdc82841728 <col:19> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fdc82841850 <col:22, col:29> 'int' '<'
+    |   | | |-ImplicitCastExpr 0x7fdc82841838 <col:22, col:24> 'int' <LValueToRValue>
+    |   | | | `-MemberExpr 0x7fdc828417e0 <col:22, col:24> 'int' lvalue .f1 0x7fdc828413a8
+    |   | | |   `-DeclRefExpr 0x7fdc828417b8 <col:22> 'struct S':'struct S' lvalue Var 0x7fdc82841440 'b' 'struct S':'struct S'
+    |   | | `-IntegerLiteral 0x7fdc82841818 <col:29> 'int' 24
+    |   | |-UnaryOperator 0x7fdc828418d8 <col:33, col:37> 'int' postfix '++'
+    |   | | `-MemberExpr 0x7fdc828418a0 <col:33, col:35> 'int' lvalue .f1 0x7fdc828413a8
+    |   | |   `-DeclRefExpr 0x7fdc82841878 <col:33> 'struct S':'struct S' lvalue Var 0x7fdc82841440 'b' 'struct S':'struct S'
+    |   | `-UnaryOperator 0x7fdc82841920 <line:13:2, col:3> 'char' postfix '--'
+    |   |   `-DeclRefExpr 0x7fdc828418f8 <col:2> 'char' lvalue Var 0x7fdc82841280 'c' 'char'
+    |   |-BinaryOperator 0x7fdc82841a20 <line:14:7, col:13> 'int *' '='
+    |   | |-UnaryOperator 0x7fdc828419b8 <col:7, col:8> 'int *' lvalue prefix '*'
+    |   | | `-ImplicitCastExpr 0x7fdc828419a0 <col:8> 'int **' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fdc82841978 <col:8> 'int **' lvalue Var 0x7fdc82841128 'e' 'int **'
+    |   | `-UnaryOperator 0x7fdc82841a00 <col:12, col:13> 'int *' prefix '&'
+    |   |   `-DeclRefExpr 0x7fdc828419d8 <col:13> 'int' lvalue Var 0x7fdc828411e8 'f' 'int'
+    |   `-IfStmt 0x7fdc82841ae0 <line:15:7, line:16:9>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-UnaryOperator 0x7fdc82841a88 <line:15:11, col:12> 'int' prefix '!'
+    |     | `-ImplicitCastExpr 0x7fdc82841a70 <col:12> 'int *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fdc82841a48 <col:12> 'int *' lvalue Var 0x7fdc82841080 'd' 'int *'
+    |     |-ReturnStmt 0x7fdc82841ac8 <line:16:2, col:9>
+    |     | `-IntegerLiteral 0x7fdc82841aa8 <col:9> 'int' 0
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fdc82841b98 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fdc82841b78 <col:10> 'int' 0

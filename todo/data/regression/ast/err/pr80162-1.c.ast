@@ -1,0 +1,33 @@
+../Data/C2AST/pr80162-1.c:7:26: error: register 'xmm7' unsuitable for global register variables on this target
+register struct U u asm ("xmm7");
+                         ^
+../Data/C2AST/pr80162-1.c:7:1: error: bad type for named register variable
+register struct U u asm ("xmm7");
+^
+2 errors generated.
+TranslationUnitDecl 0x7fd4a382bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd4a382c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd4a382bf80 '__int128'
+|-TypedefDecl 0x7fd4a382c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd4a382bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fd4a382c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd4a382c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd4a382c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd4a382c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd4a382c600 'char *'
+|   `-BuiltinType 0x7fd4a382bd80 'char'
+|-TypedefDecl 0x7fd4a382c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd4a382c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd4a382c720 'struct __va_list_tag'
+|     `-Record 0x7fd4a382c698 '__va_list_tag'
+|-TypedefDecl 0x7fd4a386e800 <../Data/C2AST/pr80162-1.c:5:1, col:13> col:13 referenced v8 '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fd4a382c980 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fd4a382bde0 'int'
+|-RecordDecl 0x7fd4a386e858 <line:6:1, col:24> col:8 struct U definition
+| |-FieldDecl 0x7fd4a386e930 <col:12, col:15> col:15 a 'v8':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-FieldDecl 0x7fd4a386e988 <col:18, col:21> col:21 b 'v8':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+|-VarDecl 0x7fd4a386ea90 <line:7:1, col:19> col:19 invalid u 'struct U':'struct U' register
+| `-AsmLabelAttr 0x7fd4a386eb40 <col:26> "xmm7"
+`-FunctionDecl 0x7fd4a386eca8 <line:9:1, line:13:1> line:10:1 foo 'int *(int)'
+  |-ParmVarDecl 0x7fd4a386ebb0 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fd4a386edb8 <line:11:1, line:13:1>

@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fa23a82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa23a86d800 <../Data/C2AST/pr29978.c:5:1, col:9> col:6 used g 'void ()'
+`-FunctionDecl 0x7fa23a86d9c0 <line:7:1, line:13:1> line:8:1 f 'void (long long)'
+  |-ParmVarDecl 0x7fa23a86d8f8 <col:4, col:14> col:14 used v 'long long'
+  `-CompoundStmt 0x7fa23a86dc28 <line:9:1, line:13:1>
+    |-IfStmt 0x7fa23a86db88 <line:10:3, line:11:8>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa23a86dac8 <line:10:7, col:11> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fa23a86dab0 <col:7> 'long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa23a86da68 <col:7> 'long long' lvalue ParmVar 0x7fa23a86d8f8 'v' 'long long'
+    | | `-IntegerLiteral 0x7fa23a86da90 <col:11> 'long long' 68719476735
+    | |-CallExpr 0x7fa23a86db60 <line:11:5, col:8> 'void'
+    | | `-ImplicitCastExpr 0x7fa23a86db48 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa23a86daf0 <col:5> 'void ()' Function 0x7fa23a86d800 'g' 'void ()'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fa23a86dc00 <line:12:3, col:6> 'void'
+      `-ImplicitCastExpr 0x7fa23a86dbe8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fa23a86dbc0 <col:3> 'void ()' Function 0x7fa23a86d800 'g' 'void ()'

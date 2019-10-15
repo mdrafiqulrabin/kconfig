@@ -1,0 +1,110 @@
+../Data/C2AST/pr9771-1.c:9:23: error: size of register 'ebp' does not match variable size
+register long *B asm ("ebp");
+                      ^
+TranslationUnitDecl 0x7fa14a8284e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa14a828a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa14a828780 '__int128'
+|-TypedefDecl 0x7fa14a828ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa14a8287a0 'unsigned __int128'
+|-TypedefDecl 0x7fa14a828da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa14a828bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa14a828b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa14a828e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa14a828e00 'char *'
+|   `-BuiltinType 0x7fa14a828580 'char'
+|-TypedefDecl 0x7fa14a829108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa14a8290b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa14a828f20 'struct __va_list_tag'
+|     `-Record 0x7fa14a828e98 '__va_list_tag'
+|-FunctionDecl 0x7fa14a844050 <../Data/C2AST/pr9771-1.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa14a8440f0 prev 0x7fa14a844050 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa14a8442a8 <line:7:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fa14a844348 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fa14a8443b0 prev 0x7fa14a8442a8 <col:1, col:21> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fa14a8441a8 <col:18> col:21 'int'
+|-VarDecl 0x7fa14a844510 <line:9:1, col:16> col:16 used B 'long *' register
+| `-AsmLabelAttr 0x7fa14a844570 <col:23> "ebp"
+|-VarDecl 0x7fa14a844620 <line:11:1, col:10> col:6 used x 'long' cinit
+| `-ImplicitCastExpr 0x7fa14a8446a0 <col:10> 'long' <IntegralCast>
+|   `-IntegerLiteral 0x7fa14a844680 <col:10> 'int' 10
+|-VarDecl 0x7fa14a8446d0 <line:12:1, col:10> col:6 used y 'long' cinit
+| `-ImplicitCastExpr 0x7fa14a844750 <col:10> 'long' <IntegralCast>
+|   `-IntegerLiteral 0x7fa14a844730 <col:10> 'int' 20
+|-FunctionDecl 0x7fa14a8447f8 <line:14:1, line:17:1> line:14:6 used bar 'void (void)'
+| `-CompoundStmt 0x7fa14a844930 <line:15:1, line:17:1>
+|   `-BinaryOperator 0x7fa14a844908 <line:16:3, col:8> 'long *' '='
+|     |-DeclRefExpr 0x7fa14a844898 <col:3> 'long *' lvalue Var 0x7fa14a844510 'B' 'long *'
+|     `-UnaryOperator 0x7fa14a8448e8 <col:7, col:8> 'long *' prefix '&'
+|       `-DeclRefExpr 0x7fa14a8448c0 <col:8> 'long' lvalue Var 0x7fa14a8446d0 'y' 'long'
+|-FunctionDecl 0x7fa14a844998 <line:19:1, line:29:1> line:19:6 used foo 'void ()'
+| `-CompoundStmt 0x7fa14a844e30 <line:20:1, line:29:1>
+|   |-DeclStmt 0x7fa14a844af0 <line:21:3, col:16>
+|   | `-VarDecl 0x7fa14a844a50 <col:3, col:15> col:9 used adr 'long *' cinit
+|   |   `-ImplicitCastExpr 0x7fa14a844ad8 <col:15> 'long *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fa14a844ab0 <col:15> 'long *' lvalue Var 0x7fa14a844510 'B' 'long *'
+|   |-DeclStmt 0x7fa14a844bf8 <line:22:3, col:19>
+|   | `-VarDecl 0x7fa14a844b20 <col:3, col:16> col:8 used save 'long' cinit
+|   |   `-ImplicitCastExpr 0x7fa14a844be0 <col:15, col:16> 'long' <LValueToRValue>
+|   |     `-UnaryOperator 0x7fa14a844bc0 <col:15, col:16> 'long' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7fa14a844ba8 <col:16> 'long *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fa14a844b80 <col:16> 'long *' lvalue Var 0x7fa14a844a50 'adr' 'long *'
+|   |-BinaryOperator 0x7fa14a844ca8 <line:24:3, col:10> 'long' '='
+|   | |-UnaryOperator 0x7fa14a844c50 <col:3, col:4> 'long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fa14a844c38 <col:4> 'long *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fa14a844c10 <col:4> 'long *' lvalue Var 0x7fa14a844a50 'adr' 'long *'
+|   | `-ImplicitCastExpr 0x7fa14a844c90 <col:10> 'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fa14a844c70 <col:10> 'int' 123
+|   |-CallExpr 0x7fa14a844d40 <line:26:3, col:7> 'void'
+|   | `-ImplicitCastExpr 0x71 error generated.
+fa14a844d28 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fa14a844cd0 <col:3> 'void (void)' Function 0x7fa14a8447f8 'bar' 'void (void)'
+|   `-BinaryOperator 0x7fa14a844e08 <line:28:3, col:10> 'long' '='
+|     |-UnaryOperator 0x7fa14a844da8 <col:3, col:4> 'long' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fa14a844d90 <col:4> 'long *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa14a844d68 <col:4> 'long *' lvalue Var 0x7fa14a844a50 'adr' 'long *'
+|     `-ImplicitCastExpr 0x7fa14a844df0 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa14a844dc8 <col:10> 'long' lvalue Var 0x7fa14a844b20 'save' 'long'
+|-FunctionDecl 0x7fa14a844ef8 <line:32:1, col:41> col:6 used test 'void (void)'
+| `-NoInlineAttr 0x7fa14a844f98 <col:32>
+|-FunctionDecl 0x7fa14b002280 prev 0x7fa14a844ef8 <line:33:1, line:45:1> line:33:6 used test 'void (void)'
+| |-CompoundStmt 0x7fa14b002790 <line:34:1, line:45:1>
+| | |-BinaryOperator 0x7fa14b0023d8 <line:35:3, col:8> 'long *' '='
+| | | |-DeclRefExpr 0x7fa14b002368 <col:3> 'long *' lvalue Var 0x7fa14a844510 'B' 'long *'
+| | | `-UnaryOperator 0x7fa14b0023b8 <col:7, col:8> 'long *' prefix '&'
+| | |   `-DeclRefExpr 0x7fa14b002390 <col:8> 'long' lvalue Var 0x7fa14a844620 'x' 'long'
+| | |-CallExpr 0x7fa14b002470 <line:37:3, col:7> 'void'
+| | | `-ImplicitCastExpr 0x7fa14b002458 <col:3> 'void (*)()' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fa14b002400 <col:3> 'void ()' Function 0x7fa14a844998 'foo' 'void ()'
+| | |-IfStmt 0x7fa14b002698 <line:39:3, line:40:11>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fa14b0025d8 <line:39:7, col:23> 'int' '||'
+| | | | |-BinaryOperator 0x7fa14b002510 <col:7, col:12> 'int' '!='
+| | | | | |-ImplicitCastExpr 0x7fa14b0024e0 <col:7> 'long' <LValueToRValue>
+| | | | | | `-DeclRefExpr 0x7fa14b002498 <col:7> 'long' lvalue Var 0x7fa14a844620 'x' 'long'
+| | | | | `-ImplicitCastExpr 0x7fa14b0024f8 <col:12> 'long' <IntegralCast>
+| | | | |   `-IntegerLiteral 0x7fa14b0024c0 <col:12> 'int' 10
+| | | | `-BinaryOperator 0x7fa14b0025b0 <col:18, col:23> 'int' '!='
+| | | |   |-ImplicitCastExpr 0x7fa14b002580 <col:18> 'long' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7fa14b002538 <col:18> 'long' lvalue Var 0x7fa14a8446d0 'y' 'long'
+| | | |   `-ImplicitCastExpr 0x7fa14b002598 <col:23> 'long' <IntegralCast>
+| | | |     `-IntegerLiteral 0x7fa14b002560 <col:23> 'int' 20
+| | | |-CallExpr 0x7fa14b002670 <line:40:5, col:11> 'void'
+| | | | `-ImplicitCastExpr 0x7fa14b002658 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fa14b002600 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa14a8440f0 'abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7fa14b002760 <line:44:3, col:9> 'void'
+| |   |-ImplicitCastExpr 0x7fa14b002748 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fa14b0026d0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fa14a8443b0 'exit' 'void (int) __attribute__((noreturn))'
+| |   `-IntegerLiteral 0x7fa14b0026f8 <col:8> 'int' 0
+| `-NoInlineAttr 0x7fa14b002358 <line:32:32> Inherited
+|-FunctionDecl 0x7fa14b002880 <line:51:1, col:40> col:5 real_main 'int ()'
+| `-AsmLabelAttr 0x7fa14b002920 <<scratch space>:2:1> "_main"
+`-FunctionDecl 0x7fa14b0029a0 prev 0x7fa14b002880 <../Data/C2AST/pr9771-1.c:53:1, line:58:1> line:53:5 real_main 'int ()'
+  |-CompoundStmt 0x7fa14b002b38 <line:54:1, line:58:1>
+  | |-CallExpr 0x7fa14b002ad8 <line:55:3, col:8> 'void'
+  | | `-ImplicitCastExpr 0x7fa14b002ac0 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+  | |   `-DeclRefExpr 0x7fa14b002a98 <col:3> 'void (void)' Function 0x7fa14b002280 'test' 'void (void)'
+  | `-ReturnStmt 0x7fa14b002b20 <line:56:3, col:10>
+  |   `-IntegerLiteral 0x7fa14b002b00 <col:10> 'int' 0
+  `-AsmLabelAttr 0x7fa14b002a78 <<scratch space>:2:1> Inherited "_main"

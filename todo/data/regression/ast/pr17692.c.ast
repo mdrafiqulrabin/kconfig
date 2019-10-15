@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fee730174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fee73018178 <../Data/C2AST/pr17692.c:6:1, col:8> col:8 used out 'double'
+`-FunctionDecl 0x7fee73059100 <line:8:1, line:15:1> line:8:13 foo 'void (void)' static
+  `-CompoundStmt 0x7fee730597a0 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fee730593a8 <line:10:5, col:26>
+    | |-VarDecl 0x7fee730591b8 <col:5, col:12> col:12 used t1 'double'
+    | |-VarDecl 0x7fee73059230 <col:5, col:16> col:16 used t2 'double'
+    | |-VarDecl 0x7fee730592a8 <col:5, col:20> col:20 used t3 'double'
+    | `-VarDecl 0x7fee73059320 <col:5, col:24> col:24 used t4 'double'
+    |-BinaryOperator 0x7fee73059540 <line:12:5, col:26> 'double' '='
+    | |-DeclRefExpr 0x7fee730593c0 <col:5> 'double' lvalue Var 0x7fee73059320 't4' 'double'
+    | `-ConditionalOperator 0x7fee73059510 <col:10, col:26> 'double'
+    |   |-BinaryOperator 0x7fee73059468 <col:10, col:16> 'int' '>='
+    |   | |-ImplicitCastExpr 0x7fee73059438 <col:10> 'double' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fee730593e8 <col:10> 'double' lvalue Var 0x7fee730591b8 't1' 'double'
+    |   | `-ImplicitCastExpr 0x7fee73059450 <col:16> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fee73059410 <col:16> 'double' lvalue Var 0x7fee73059230 't2' 'double'
+    |   |-ImplicitCastExpr 0x7fee730594e0 <col:21> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fee73059490 <col:21> 'double' lvalue Var 0x7fee730591b8 't1' 'double'
+    |   `-ImplicitCastExpr 0x7fee730594f8 <col:26> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fee730594b8 <col:26> 'double' lvalue Var 0x7fee73059230 't2' 'double'
+    |-BinaryOperator 0x7fee730596e8 <line:13:5, col:26> 'double' '='
+    | |-DeclRefExpr 0x7fee73059568 <col:5> 'double' lvalue Var 0x7fee73059320 't4' 'double'
+    | `-ConditionalOperator 0x7fee730596b8 <col:10, col:26> 'double'
+    |   |-BinaryOperator 0x7fee73059610 <col:10, col:16> 'int' '>='
+    |   | |-ImplicitCastExpr 0x7fee730595e0 <col:10> 'double' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fee73059590 <col:10> 'double' lvalue Var 0x7fee73059320 't4' 'double'
+    |   | `-ImplicitCastExpr 0x7fee730595f8 <col:16> 'double' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fee730595b8 <col:16> 'double' lvalue Var 0x7fee730592a8 't3' 'double'
+    |   |-ImplicitCastExpr 0x7fee73059688 <col:21> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fee73059638 <col:21> 'double' lvalue Var 0x7fee73059320 't4' 'double'
+    |   `-ImplicitCastExpr 0x7fee730596a0 <col:26> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fee73059660 <col:26> 'double' lvalue Var 0x7fee730592a8 't3' 'double'
+    `-BinaryOperator 0x7fee73059778 <line:14:5, col:11> 'double' '='
+      |-DeclRefExpr 0x7fee73059710 <col:5> 'double' lvalue Var 0x7fee73018178 'out' 'double'
+      `-ImplicitCastExpr 0x7fee73059760 <col:11> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fee73059738 <col:11> 'double' lvalue Var 0x7fee73059320 't4' 'double'

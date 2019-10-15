@@ -1,0 +1,109 @@
+TranslationUnitDecl 0x7f8d660184e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8d6605a248 <../Data/C2AST/pr66295.c:6:1, line:7:59> line:6:15 used bar 'double (double *restrict, double *restrict, int)' static
+| |-ParmVarDecl 0x7f8d660191a0 <col:20, col:27> col:38 'double *restrict'
+| |-ParmVarDecl 0x7f8d6605a018 <col:40, col:47> col:58 'double *restrict'
+| `-ParmVarDecl 0x7f8d6605a090 <col:60> col:63 'int'
+|-FunctionDecl 0x7f8d6605a4e8 <line:9:1, line:13:1> line:10:1 used foo 'double (double *restrict, double *restrict, int)'
+| |-ParmVarDecl 0x7f8d6605a358 <col:6, col:25> col:25 used a 'double *restrict'
+| |-ParmVarDecl 0x7f8d6605a3d0 <col:28, col:47> col:47 used b 'double *restrict'
+| |-ParmVarDecl 0x7f8d6605a448 <col:50, col:54> col:54 used n 'int'
+| `-CompoundStmt 0x7f8d6605a750 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7f8d6605a738 <line:12:3, col:20>
+|     `-CallExpr 0x7f8d6605a6b0 <col:10, col:20> 'double'
+|       |-ImplicitCastExpr 0x7f8d6605a698 <col:10> 'double (*)(double *restrict, double *restrict, int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8d6605a5a0 <col:10> 'double (double *restrict, double *restrict, int)' Function 0x7f8d6605a248 'bar' 'double (double *restrict, double *restrict, int)'
+|       |-ImplicitCastExpr 0x7f8d6605a6f0 <col:15> 'double *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8d6605a5c8 <col:15> 'double *restrict' lvalue ParmVar 0x7f8d6605a358 'a' 'double *restrict'
+|       |-ImplicitCastExpr 0x7f8d6605a708 <col:17> 'double *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8d6605a5f0 <col:17> 'double *restrict' lvalue ParmVar 0x7f8d6605a3d0 'b' 'double *restrict'
+|       `-ImplicitCastExpr 0x7f8d6605a720 <col:19> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8d6605a618 <col:19> 'int' lvalue ParmVar 0x7f8d6605a448 'n' 'int'
+|-FunctionDecl 0x7f8d6605a910 prev 0x7f8d6605a248 <line:15:1, line:25:1> line:16:1 used bar 'double (double *restrict, double *restrict, int)'
+| |-ParmVarDecl 0x7f8d6605a780 <col:6, col:25> col:25 used a 'double *restrict'
+| |-ParmVarDecl 0x7f8d6605a7f8 <col:28, col:47> col:47 used b 'double *restrict'
+| |-ParmVarDecl 0x7f8d6605a870 <col:50, col:54> col:54 used n 'int'
+| `-CompoundStmt 0x7f8d6605af50 <line:17:1, line:25:1>
+|   |-DeclStmt 0x7f8d6605aa40 <line:18:3, col:11>
+|   | `-VarDecl 0x7f8d6605a9e0 <col:3, col:10> col:10 used s 'double'
+|   |-DeclStmt 0x7f8d6605aad0 <line:19:3, col:8>
+|   | `-VarDecl 0x7f8d6605aa70 <col:3, col:7> col:7 used i 'int'
+|   |-BinaryOperator 0x7f8d6605ab30 <line:20:3, col:7> 'double' '='
+|   | |-DeclRefExpr 0x7f8d6605aae8 <col:3> 'double' lvalue Var 0x7f8d6605a9e0 's' 'double'
+|   | `-FloatingLiteral 0x7f8d6605ab10 <col:7> 'double' 0.000000e+00
+|   |-ForStmt 0x7f8d6605aec0 <line:21:3, line:22:20>
+|   | |-BinaryOperator 0x7f8d6605aba0 <line:21:8, col:10> 'int' '='
+|   | | |-DeclRefExpr 0x7f8d6605ab58 <col:8> 'int' lvalue Var 0x7f8d6605aa70 'i' 'int'
+|   | | `-IntegerLiteral 0x7f8d6605ab80 <col:10> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8d6605ac48 <col:13, col:15> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f8d6605ac18 <col:13> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f8d6605abc8 <col:13> 'int' lvalue Var 0x7f8d6605aa70 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7f8d6605ac30 <col:15> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8d6605abf0 <col:15> 'int' lvalue ParmVar 0x7f8d6605a870 'n' 'int'
+|   | |-UnaryOperator 0x7f8d6605ac98 <col:18, col:19> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f8d6605ac70 <col:18> 'int' lvalue Var 0x7f8d6605aa70 'i' 'int'
+|   | `-CompoundAssignOperator 0x7f8d6605ae88 <line:22:5, col:20> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   |   |-DeclRefExpr 0x7f8d6605acb8 <col:5> 'double' lvalue Var 0x7f8d6605a9e0 's' 'double'
+|   |   `-BinaryOperator 0x7f8d6605ae60 <col:10, col:20> 'double' '+'
+|   |     |-ImplicitCastExpr 0x7f8d6605ae30 <col:10, col:13> 'double' <LValueToRValue>
+|   |     | `-ArraySubscriptExpr 0x7f8d6605ad60 <col:10, col:13> 'double' lvalue
+|   |     |   |-ImplicitCastExpr 0x7f8d6605ad30 <col:10> 'double *' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7f8d6605ace0 <col:10> 'double *restrict' lvalue ParmVar 0x7f8d6605a780 'a' 'double *restrict'
+|   |     |   `-ImplicitCastExpr 0x7f8d6605ad48 <col:12> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7f8d6605ad08 <col:12> 'int' lvalue Var 0x7f8d6605aa70 'i' 'int'
+|   |     `-ImplicitCastExpr 0x7f8d6605ae48 <col:17, col:20> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7f8d6605ae08 <col:17, col:20> 'double' lvalue
+|   |         |-ImplicitCastExpr 0x7f8d6605add8 <col:17> 'double *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7f8d6605ad88 <col:17> 'double *restrict' lvalue ParmVar 0x7f8d6605a7f8 'b' 'double *restrict'
+|   |         `-ImplicitCastExpr 0x7f8d6605adf0 <col:19> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f8d6605adb0 <col:19> 'int' lvalue Var 0x7f8d6605aa70 'i' 'int'
+|   `-ReturnStmt 0x7f8d6605af38 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f8d6605af20 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8d6605aef8 <col:10> 'double' lvalue Var 0x7f8d6605a9e0 's' 'double'
+|-FunctionDecl 0x7f8d66071a00 <line:29:1, line:36:1> line:29:5 main 'int ()'
+| `-CompoundStmt 0x7f8d66072460 <line:30:1, line:36:1>
+|   |-DeclStmt 0x7f8d66071d68 <line:31:3, col:48>
+|   | `-VarDecl 0x7f8d66071b20 <col:3, col:47> col:10 used a 'double [5]' cinit
+|   |   `-InitListExpr 0x7f8d66071c88 <col:17, col:47> 'double [5]'
+|   |     |-ImplicitCastExpr 0x7f8d66071cf0 <col:18> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071b80 <col:18> 'float' 1.200000e+00
+|   |     |-ImplicitCastExpr 0x7f8d66071d08 <col:24> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071ba0 <col:24> 'float' 1.200000e+00
+|   |     |-ImplicitCastExpr 0x7f8d66071d20 <col:30> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071bc0 <col:30> 'float' 1.200000e+00
+|   |     |-ImplicitCastExpr 0x7f8d66071d38 <col:36> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071be0 <col:36> 'float' 1.200000e+00
+|   |     `-ImplicitCastExpr 0x7f8d66071d50 <col:42> 'double' <FloatingCast>
+|   |       `-FloatingLiteral 0x7f8d66071c00 <col:42> 'float' 1.200000e+00
+|   |-DeclStmt 0x7f8d66072010 <line:32:3, col:48>
+|   | `-VarDecl 0x7f8d66071dc8 <col:3, col:47> col:10 used b 'double [5]' cinit
+|   |   `-InitListExpr 0x7f8d66071f30 <col:17, col:47> 'double [5]'
+|   |     |-ImplicitCastExpr 0x7f8d66071f98 <col:18> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071e28 <col:18> 'float' 1.200000e+00
+|   |     |-ImplicitCastExpr 0x7f8d66071fb0 <col:24> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071e48 <col:24> 'float' 1.200000e+00
+|   |     |-ImplicitCastExpr 0x7f8d66071fc8 <col:30> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071e68 <col:30> 'float' 1.200000e+00
+|   |     |-ImplicitCastExpr 0x7f8d66071fe0 <col:36> 'double' <FloatingCast>
+|   |     | `-FloatingLiteral 0x7f8d66071e88 <col:36> 'float' 1.200000e+00
+|   |     `-ImplicitCastExpr 0x7f8d66071ff8 <col:42> 'double' <FloatingCast>
+|   |       `-FloatingLiteral 0x7f8d66071ea8 <col:42> 'float' 1.200000e+00
+|   |-CallExpr 0x7f8d660723c0 <line:34:3, col:51> 'int'
+|   | |-ImplicitCastExpr 0x7f8d660723a8 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8d660721c8 <col:3> '<builtin fn type>' Function 0x7f8d66072068 '__builtin_printf' 'int (const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f8d66072410 <col:21> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f8d660723f8 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x7f8d66072228 <col:21> 'char [13]' lvalue "value: %.5f\n"
+|   | `-CallExpr 0x7f8d66072310 <col:38, col:50> 'double'
+|   |   |-ImplicitCastExpr 0x7f8d660722f8 <col:38> 'double (*)(double *restrict, double *restrict, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f8d66072260 <col:38> 'double (double *restrict, double *restrict, int)' Function 0x7f8d6605a4e8 'foo' 'double (double *restrict, double *restrict, int)'
+|   |   |-ImplicitCastExpr 0x7f8d66072350 <col:43> 'double *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f8d66072288 <col:43> 'double [5]' lvalue Var 0x7f8d66071b20 'a' 'double [5]'
+|   |   |-ImplicitCastExpr 0x7f8d66072368 <col:46> 'double *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f8d660722b0 <col:46> 'double [5]' lvalue Var 0x7f8d66071dc8 'b' 'double [5]'
+|   |   `-IntegerLiteral 0x7f8d660722d8 <line:27:11> 'int' 5
+|   `-ReturnStmt 0x7f8d66072448 <line:35:3, col:10>
+|     `-IntegerLiteral 0x7f8d66072428 <col:10> 'int' 0
+`-FunctionDecl 0x7f8d66072068 <line:34:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+  |-ParmVarDecl 0x7f8d66072108 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-FormatAttr 0x7f8d66072170 <col:3> Implicit printf 1 2

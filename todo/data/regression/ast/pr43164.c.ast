@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fa12882b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa12882bf60 <../Data/C2AST/pr43164.c:1:1, line:5:1> line:1:8 struct S0 definition
+| |-FieldDecl 0x7fa129009a38 <line:3:3, col:17> col:17 f0 'unsigned char'
+| `-FieldDecl 0x7fa129009ab8 <line:4:3, col:7> col:3 'int'
+|   `-IntegerLiteral 0x7fa129009a80 <col:7> 'int' 0
+|-RecordDecl 0x7fa129009b00 <line:7:1, line:10:1> line:7:8 struct S1 definition
+| `-FieldDecl 0x7fa129009c00 <line:9:3, col:13> col:13 f0 'struct S0':'struct S0'
+`-FunctionDecl 0x7fa129009dd0 <line:12:1, line:16:1> line:12:11 func_34 'struct S1 (void)'
+  `-CompoundStmt 0x7fa12900a100 <line:13:1, line:16:1>
+    |-DeclStmt 0x7fa12900a090 <line:14:3, col:30>
+    | `-VarDecl 0x7fa129009ed0 <col:3, col:29> col:13 used l_221 'struct S1':'struct S1' nrvo cinit
+    |   `-InitListExpr 0x7fa129009fe0 <col:21, col:29> 'struct S1':'struct S1'
+    |     `-InitListExpr 0x7fa12900a028 <col:23, col:27> 'struct S0':'struct S0'
+    |       `-ImplicitCastExpr 0x7fa12900a078 <col:25> 'unsigned char' <IntegralCast>
+    |         `-IntegerLiteral 0x7fa129009f30 <col:25> 'int' 1
+    `-ReturnStmt 0x7fa12900a0e8 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fa12900a0d0 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fa12900a0a8 <col:10> 'struct S1':'struct S1' lvalue Var 0x7fa129009ed0 'l_221' 'struct S1':'struct S1'

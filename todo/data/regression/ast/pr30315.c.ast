@@ -1,0 +1,710 @@
+TranslationUnitDecl 0x7f9a4e81a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9a4f019850 <../Data/C2AST/pr30315.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9a4f0198f0 prev 0x7f9a4f019850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7f9a4f0199a8 <line:6:1, col:5> col:5 used c 'int'
+|-FunctionDecl 0x7f9a4f019bb8 <line:42:7, line:14:16> <scratch space>:3:1 plusccla 'unsigned long (unsigned long, unsigned long)'
+| |-ParmVarDecl 0x7f9a4f019a60 <../Data/C2AST/pr30315.c:42:7, line:9:19> col:19 used a 'unsigned long'
+| |-ParmVarDecl 0x7f9a4f019ad8 <line:42:7, line:9:24> col:24 used b 'unsigned long'
+| `-CompoundStmt 0x7f9a4f019f68 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f019d88 <line:42:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f019c80 <line:42:7, line:11:15> col:5 used sum 'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9a4f019d60 <col:11, col:15> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f019d30 <col:11> 'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f019ce0 <col:11> 'unsigned long' lvalue ParmVar 0x7f9a4f019a60 'a' 'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f9a4f019d48 <col:15> 'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f019d08 <col:15> 'unsigned long' lvalue ParmVar 0x7f9a4f019ad8 'b' 'unsigned long'
+|   |-IfStmt 0x7f9a4f019ed8 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f019e20 <line:12:7, line:16:36> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f019df0 <line:12:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f019da0 <col:7> 'unsigned long' lvalue Var 0x7f9a4f019c80 'sum' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9a4f019e08 <line:16:36> 'unsigned long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f019dc8 <col:36> 'unsigned long' lvalue ParmVar 0x7f9a4f019a60 'a' 'unsigned long'
+|   | |-CallExpr 0x7f9a4f019eb0 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f019e98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f019e48 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f019f50 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f019f38 <col:10> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f019f10 <col:10> 'unsigned long' lvalue Var 0x7f9a4f019c80 'sum' 'unsigned long'
+|-FunctionDecl 0x7f9a4f01a0b8 <line:42:7, line:14:16> <scratch space>:5:1 pluscclb 'unsigned long (unsigned long, unsigned long)'
+| |-ParmVarDecl 0x7f9a4f019fa8 <../Data/C2AST/pr30315.c:42:7, line:9:19> col:19 used a 'unsigned long'
+| |-ParmVarDecl 0x7f9a4f01a020 <line:42:7, line:9:24> col:24 used b 'unsigned long'
+| `-CompoundStmt 0x7f9a4f01a440 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f01a288 <line:42:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f01a180 <line:42:7, line:11:15> col:5 used sum 'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9a4f01a260 <col:11, col:15> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f01a230 <col:11> 'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f01a1e0 <col:11> 'unsigned long' lvalue ParmVar 0x7f9a4f019fa8 'a' 'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f9a4f01a248 <col:15> 'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f01a208 <col:15> 'unsigned long' lvalue ParmVar 0x7f9a4f01a020 'b' 'unsigned long'
+|   |-IfStmt 0x7f9a4f01a3b0 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f01a320 <line:12:7, line:16:53> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f01a2f0 <line:12:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f01a2a0 <col:7> 'unsigned long' lvalue Var 0x7f9a4f01a180 'sum' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9a4f01a308 <line:16:53> 'unsigned long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f01a2c8 <col:53> 'unsigned long' lvalue ParmVar 0x7f9a4f01a020 'b' 'unsigned long'
+|   | |-CallExpr 0x7f9a4f01a388 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f01a370 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f01a348 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f01a428 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f01a410 <col:10> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f01a3e8 <col:10> 'unsigned long' lvalue Var 0x7f9a4f01a180 'sum' 'unsigned long'
+|-FunctionDecl 0x7f9a4f01a5d0 <line:28:30, line:33:16> <scratch space>:7:1 pluscconlyla 'void (unsigned long, unsigned long)'
+| |-ParmVarDecl 0x7f9a4f01a480 <../Data/C2AST/pr30315.c:42:7, line:29:26> col:26 used a 'unsigned long'
+| |-ParmVarDecl 0x7f9a4f01a4f8 <line:42:7, line:29:31> col:31 used b 'unsigned long'
+| `-CompoundStmt 0x7f9a4f033320 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f01a7a0 <line:42:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f01a698 <line:42:7, line:31:15> col:5 used sum 'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9a4f01a778 <col:11, col:15> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f01a748 <col:11> 'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f01a6f8 <col:11> 'unsigned long' lvalue ParmVar 0x7f9a4f01a480 'a' 'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f9a4f01a760 <col:15> 'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f01a720 <col:15> 'unsigned long' lvalue ParmVar 0x7f9a4f01a4f8 'b' 'unsigned long'
+|   `-IfStmt 0x7f9a4f0332e8 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f033258 <line:32:7, line:35:44> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f033228 <line:32:7> 'unsigned long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9a4f01a7b8 <col:7> 'unsigned long' lvalue Var 0x7f9a4f01a698 'sum' 'unsigned long'
+|     | `-ImplicitCastExpr 0x7f9a4f033240 <line:35:44> 'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9a4f033200 <col:44> 'unsigned long' lvalue ParmVar 0x7f9a4f01a480 'a' 'unsigned long'
+|     |-CallExpr 0x7f9a4f0332c0 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f0332a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f033280 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f033460 <line:28:30, line:33:16> <scratch space>:9:1 pluscconlylb 'void (unsigned long, unsigned long)'
+| |-ParmVarDecl 0x7f9a4f033358 <../Data/C2AST/pr30315.c:42:7, line:29:26> col:26 used a 'unsigned long'
+| |-ParmVarDecl 0x7f9a4f0333d0 <line:42:7, line:29:31> col:31 used b 'unsigned long'
+| `-CompoundStmt 0x7f9a4f033790 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f033630 <line:42:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f033528 <line:42:7, line:31:15> col:5 used sum 'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9a4f033608 <col:11, col:15> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f0335d8 <col:11> 'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f033588 <col:11> 'unsigned long' lvalue ParmVar 0x7f9a4f033358 'a' 'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f9a4f0335f0 <col:15> 'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f0335b0 <col:15> 'unsigned long' lvalue ParmVar 0x7f9a4f0333d0 'b' 'unsigned long'
+|   `-IfStmt 0x7f9a4f033758 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f0336c8 <line:32:7, line:35:65> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f033698 <line:32:7> 'unsigned long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9a4f033648 <col:7> 'unsigned long' lvalue Var 0x7f9a4f033528 'sum' 'unsigned long'
+|     | `-ImplicitCastExpr 0x7f9a4f0336b0 <line:35:65> 'unsigned long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9a4f033670 <col:65> 'unsigned long' lvalue ParmVar 0x7f9a4f0333d0 'b' 'unsigned long'
+|     |-CallExpr 0x7f9a4f033730 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f033718 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f0336f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f0338d8 <line:42:7, line:24:16> <scratch space>:11:1 incccla 'unsigned long (unsigned long, unsigned long)'
+| |-ParmVarDecl 0x7f9a4f0337c8 <../Data/C2AST/pr30315.c:42:7, line:19:18> col:18 used a 'unsigned long'
+| |-ParmVarDecl 0x7f9a4f033840 <line:42:7, line:19:23> col:23 used b 'unsigned long'
+| `-CompoundStmt 0x7f9a4f033c40 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f033aa8 <line:42:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f0339a0 <line:42:7, line:21:15> col:5 used sum 'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9a4f033a80 <col:11, col:15> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f033a50 <col:11> 'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f033a00 <col:11> 'unsigned long' lvalue ParmVar 0x7f9a4f0337c8 'a' 'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f9a4f033a68 <col:15> 'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f033a28 <col:15> 'unsigned long' lvalue ParmVar 0x7f9a4f033840 'b' 'unsigned long'
+|   |-IfStmt 0x7f9a4f033bb0 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f033b40 <line:22:7, line:26:34> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f033b10 <line:22:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f033ac0 <col:7> 'unsigned long' lvalue Var 0x7f9a4f0339a0 'sum' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9a4f033b28 <line:26:34> 'unsigned long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f033ae8 <col:34> 'unsigned long' lvalue ParmVar 0x7f9a4f0337c8 'a' 'unsigned long'
+|   | |-UnaryOperator 0x7f9a4f033b90 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f033b68 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f033c28 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f033c10 <col:10> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f033be8 <col:10> 'unsigned long' lvalue Var 0x7f9a4f0339a0 'sum' 'unsigned long'
+|-FunctionDecl 0x7f9a4f033d90 <line:42:7, line:24:16> <scratch space>:13:1 inccclb 'unsigned long (unsigned long, unsigned long)'
+| |-ParmVarDecl 0x7f9a4f033c80 <../Data/C2AST/pr30315.c:42:7, line:19:18> col:18 used a 'unsigned long'
+| |-ParmVarDecl 0x7f9a4f033cf8 <line:42:7, line:19:23> col:23 used b 'unsigned long'
+| `-CompoundStmt 0x7f9a4f0340f8 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f033f60 <line:42:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f033e58 <line:42:7, line:21:15> col:5 used sum 'unsigned long' cinit
+|   |   `-BinaryOperator 0x7f9a4f033f38 <col:11, col:15> 'unsigned long' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f033f08 <col:11> 'unsigned long' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f033eb8 <col:11> 'unsigned long' lvalue ParmVar 0x7f9a4f033c80 'a' 'unsigned long'
+|   |     `-ImplicitCastExpr 0x7f9a4f033f20 <col:15> 'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f033ee0 <col:15> 'unsigned long' lvalue ParmVar 0x7f9a4f033cf8 'b' 'unsigned long'
+|   |-IfStmt 0x7f9a4f034068 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f033ff8 <line:22:7, line:26:50> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f033fc8 <line:22:7> 'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f033f78 <col:7> 'unsigned long' lvalue Var 0x7f9a4f033e58 'sum' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9a4f033fe0 <line:26:50> 'unsigned long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f033fa0 <col:50> 'unsigned long' lvalue ParmVar 0x7f9a4f033cf8 'b' 'unsigned long'
+|   | |-UnaryOperator 0x7f9a4f034048 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f034020 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f0340e0 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f0340c8 <col:10> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f0340a0 <col:10> 'unsigned long' lvalue Var 0x7f9a4f033e58 'sum' 'unsigned long'
+|-FunctionDecl 0x7f9a4f034ed8 <line:43:7, line:14:16> <scratch space>:15:1 plusccia 'unsigned int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f034138 <../Data/C2AST/pr30315.c:43:7, line:9:19> col:19 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f034e00 <line:43:7, line:9:24> col:24 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f035260 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f0350a8 <line:43:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f034fa0 <line:43:7, line:11:15> col:5 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f035080 <col:11, col:15> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f035050 <col:11> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f035000 <col:11> 'unsigned int' lvalue ParmVar 0x7f9a4f034138 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f035068 <col:15> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f035028 <col:15> 'unsigned int' lvalue ParmVar 0x7f9a4f034e00 'b' 'unsigned int'
+|   |-IfStmt 0x7f9a4f0351d0 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f035140 <line:12:7, line:16:36> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f035110 <line:12:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f0350c0 <col:7> 'unsigned int' lvalue Var 0x7f9a4f034fa0 'sum' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9a4f035128 <line:16:36> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f0350e8 <col:36> 'unsigned int' lvalue ParmVar 0x7f9a4f034138 'a' 'unsigned int'
+|   | |-CallExpr 0x7f9a4f0351a8 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f035190 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f035168 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f035248 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f035230 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f035208 <col:10> 'unsigned int' lvalue Var 0x7f9a4f034fa0 'sum' 'unsigned int'
+|-FunctionDecl 0x7f9a4f0353b0 <line:43:7, line:14:16> <scratch space>:17:1 plusccib 'unsigned int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f0352a0 <../Data/C2AST/pr30315.c:43:7, line:9:19> col:19 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f035318 <line:43:7, line:9:24> col:24 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f035738 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f035580 <line:43:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f035478 <line:43:7, line:11:15> col:5 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f035558 <col:11, col:15> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f035528 <col:11> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f0354d8 <col:11> 'unsigned int' lvalue ParmVar 0x7f9a4f0352a0 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f035540 <col:15> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f035500 <col:15> 'unsigned int' lvalue ParmVar 0x7f9a4f035318 'b' 'unsigned int'
+|   |-IfStmt 0x7f9a4f0356a8 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f035618 <line:12:7, line:16:53> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f0355e8 <line:12:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f035598 <col:7> 'unsigned int' lvalue Var 0x7f9a4f035478 'sum' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9a4f035600 <line:16:53> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f0355c0 <col:53> 'unsigned int' lvalue ParmVar 0x7f9a4f035318 'b' 'unsigned int'
+|   | |-CallExpr 0x7f9a4f035680 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f035668 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f035640 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f035720 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f035708 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f0356e0 <col:10> 'unsigned int' lvalue Var 0x7f9a4f035478 'sum' 'unsigned int'
+|-FunctionDecl 0x7f9a4f0358c0 <line:28:30, line:33:16> <scratch space>:19:1 pluscconlyia 'void (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f035778 <../Data/C2AST/pr30315.c:43:7, line:29:26> col:26 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f0357f0 <line:43:7, line:29:31> col:31 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f035bf0 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f035a90 <line:43:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f035988 <line:43:7, line:31:15> col:5 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f035a68 <col:11, col:15> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f035a38 <col:11> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f0359e8 <col:11> 'unsigned int' lvalue ParmVar 0x7f9a4f035778 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f035a50 <col:15> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f035a10 <col:15> 'unsigned int' lvalue ParmVar 0x7f9a4f0357f0 'b' 'unsigned int'
+|   `-IfStmt 0x7f9a4f035bb8 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f035b28 <line:32:7, line:35:44> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f035af8 <line:32:7> 'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9a4f035aa8 <col:7> 'unsigned int' lvalue Var 0x7f9a4f035988 'sum' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7f9a4f035b10 <line:35:44> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9a4f035ad0 <col:44> 'unsigned int' lvalue ParmVar 0x7f9a4f035778 'a' 'unsigned int'
+|     |-CallExpr 0x7f9a4f035b90 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f035b78 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f035b50 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f035d30 <line:28:30, line:33:16> <scratch space>:21:1 pluscconlyib 'void (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f035c28 <../Data/C2AST/pr30315.c:43:7, line:29:26> col:26 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f035ca0 <line:43:7, line:29:31> col:31 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f037868 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f037708 <line:43:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f037600 <line:43:7, line:31:15> col:5 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f0376e0 <col:11, col:15> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f0376b0 <col:11> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f037660 <col:11> 'unsigned int' lvalue ParmVar 0x7f9a4f035c28 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f0376c8 <col:15> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f037688 <col:15> 'unsigned int' lvalue ParmVar 0x7f9a4f035ca0 'b' 'unsigned int'
+|   `-IfStmt 0x7f9a4f037830 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f0377a0 <line:32:7, line:35:65> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f037770 <line:32:7> 'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9a4f037720 <col:7> 'unsigned int' lvalue Var 0x7f9a4f037600 'sum' 'unsigned int'
+|     | `-ImplicitCastExpr 0x7f9a4f037788 <line:35:65> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9a4f037748 <col:65> 'unsigned int' lvalue ParmVar 0x7f9a4f035ca0 'b' 'unsigned int'
+|     |-CallExpr 0x7f9a4f037808 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f0377f0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f0377c8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f0379b0 <line:43:7, line:24:16> <scratch space>:23:1 incccia 'unsigned int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f0378a0 <../Data/C2AST/pr30315.c:43:7, line:19:18> col:18 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f037918 <line:43:7, line:19:23> col:23 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f037d18 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f037b80 <line:43:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f037a78 <line:43:7, line:21:15> col:5 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f037b58 <col:11, col:15> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f037b28 <col:11> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f037ad8 <col:11> 'unsigned int' lvalue ParmVar 0x7f9a4f0378a0 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f037b40 <col:15> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f037b00 <col:15> 'unsigned int' lvalue ParmVar 0x7f9a4f037918 'b' 'unsigned int'
+|   |-IfStmt 0x7f9a4f037c88 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f037c18 <line:22:7, line:26:34> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f037be8 <line:22:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f037b98 <col:7> 'unsigned int' lvalue Var 0x7f9a4f037a78 'sum' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9a4f037c00 <line:26:34> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f037bc0 <col:34> 'unsigned int' lvalue ParmVar 0x7f9a4f0378a0 'a' 'unsigned int'
+|   | |-UnaryOperator 0x7f9a4f037c68 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f037c40 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f037d00 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f037ce8 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f037cc0 <col:10> 'unsigned int' lvalue Var 0x7f9a4f037a78 'sum' 'unsigned int'
+|-FunctionDecl 0x7f9a4f037e68 <line:43:7, line:24:16> <scratch space>:25:1 incccib 'unsigned int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f037d58 <../Data/C2AST/pr30315.c:43:7, line:19:18> col:18 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f037dd0 <line:43:7, line:19:23> col:23 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f0381d0 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f038038 <line:43:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f037f30 <line:43:7, line:21:15> col:5 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f038010 <col:11, col:15> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f037fe0 <col:11> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f037f90 <col:11> 'unsigned int' lvalue ParmVar 0x7f9a4f037d58 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f037ff8 <col:15> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f037fb8 <col:15> 'unsigned int' lvalue ParmVar 0x7f9a4f037dd0 'b' 'unsigned int'
+|   |-IfStmt 0x7f9a4f038140 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f0380d0 <line:22:7, line:26:50> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f0380a0 <line:22:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f038050 <col:7> 'unsigned int' lvalue Var 0x7f9a4f037f30 'sum' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9a4f0380b8 <line:26:50> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f038078 <col:50> 'unsigned int' lvalue ParmVar 0x7f9a4f037dd0 'b' 'unsigned int'
+|   | |-UnaryOperator 0x7f9a4f038120 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f0380f8 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f0381b8 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f0381a0 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f038178 <col:10> 'unsigned int' lvalue Var 0x7f9a4f037f30 'sum' 'unsigned int'
+|-FunctionDecl 0x7f9a4f038368 <line:44:7, line:14:16> <scratch space>:27:1 plusccsa 'unsigned short (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9a4f038210 <../Data/C2AST/pr30315.c:44:7, line:9:19> col:19 used a 'unsigned short'
+| |-ParmVarDecl 0x7f9a4f038288 <line:44:7, line:9:24> col:24 used b 'unsigned short'
+| `-CompoundStmt 0x7f9a4f038768 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f038580 <line:44:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f038430 <line:44:7, line:11:15> col:5 used sum 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f038568 <col:11, col:15> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f038540 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f0384f8 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f0384e0 <col:11> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f038490 <col:11> 'unsigned short' lvalue ParmVar 0x7f9a4f038210 'a' 'unsigned short'
+|   |       `-ImplicitCastExpr 0x7f9a4f038528 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f038510 <col:15> 'unsigned short' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f0384b8 <col:15> 'unsigned short' lvalue ParmVar 0x7f9a4f038288 'b' 'unsigned short'
+|   |-IfStmt 0x7f9a4f0386d8 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f038648 <line:12:7, line:16:36> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f038600 <line:12:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f0385e8 <col:7> 'unsigned short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f038598 <col:7> 'unsigned short' lvalue Var 0x7f9a4f038430 'sum' 'unsigned short'
+|   | | `-ImplicitCastExpr 0x7f9a4f038630 <line:16:36> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f038618 <col:36> 'unsigned short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f0385c0 <col:36> 'unsigned short' lvalue ParmVar 0x7f9a4f038210 'a' 'unsigned short'
+|   | |-CallExpr 0x7f9a4f0386b0 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f038698 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f038670 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f038750 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f038738 <col:10> 'unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f038710 <col:10> 'unsigned short' lvalue Var 0x7f9a4f038430 'sum' 'unsigned short'
+|-FunctionDecl 0x7f9a4f0388b8 <line:44:7, line:14:16> <scratch space>:29:1 plusccsb 'unsigned short (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9a4f0387a8 <../Data/C2AST/pr30315.c:44:7, line:9:19> col:19 used a 'unsigned short'
+| |-ParmVarDecl 0x7f9a4f038820 <line:44:7, line:9:24> col:24 used b 'unsigned short'
+| `-CompoundStmt 0x7f9a4f038cb8 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f038ad0 <line:44:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f038980 <line:44:7, line:11:15> col:5 used sum 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f038ab8 <col:11, col:15> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f038a90 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f038a48 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f038a30 <col:11> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f0389e0 <col:11> 'unsigned short' lvalue ParmVar 0x7f9a4f0387a8 'a' 'unsigned short'
+|   |       `-ImplicitCastExpr 0x7f9a4f038a78 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f038a60 <col:15> 'unsigned short' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f038a08 <col:15> 'unsigned short' lvalue ParmVar 0x7f9a4f038820 'b' 'unsigned short'
+|   |-IfStmt 0x7f9a4f038c28 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f038b98 <line:12:7, line:16:53> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f038b50 <line:12:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f038b38 <col:7> 'unsigned short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f038ae8 <col:7> 'unsigned short' lvalue Var 0x7f9a4f038980 'sum' 'unsigned short'
+|   | | `-ImplicitCastExpr 0x7f9a4f038b80 <line:16:53> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f038b68 <col:53> 'unsigned short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f038b10 <col:53> 'unsigned short' lvalue ParmVar 0x7f9a4f038820 'b' 'unsigned short'
+|   | |-CallExpr 0x7f9a4f038c00 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f038be8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f038bc0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f038ca0 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f038c88 <col:10> 'unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f038c60 <col:10> 'unsigned short' lvalue Var 0x7f9a4f038980 'sum' 'unsigned short'
+|-FunctionDecl 0x7f9a4f038e40 <line:28:30, line:33:16> <scratch space>:31:1 pluscconlysa 'void (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9a4f038cf8 <../Data/C2AST/pr30315.c:44:7, line:29:26> col:26 used a 'unsigned short'
+| |-ParmVarDecl 0x7f9a4f038d70 <line:44:7, line:29:31> col:31 used b 'unsigned short'
+| `-CompoundStmt 0x7f9a4f0391e8 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f039058 <line:44:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f038f08 <line:44:7, line:31:15> col:5 used sum 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f039040 <col:11, col:15> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f039018 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f038fd0 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f038fb8 <col:11> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f038f68 <col:11> 'unsigned short' lvalue ParmVar 0x7f9a4f038cf8 'a' 'unsigned short'
+|   |       `-ImplicitCastExpr 0x7f9a4f039000 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f038fe8 <col:15> 'unsigned short' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f038f90 <col:15> 'unsigned short' lvalue ParmVar 0x7f9a4f038d70 'b' 'unsigned short'
+|   `-IfStmt 0x7f9a4f0391b0 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f039120 <line:32:7, line:35:44> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f0390d8 <line:32:7> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f9a4f0390c0 <col:7> 'unsigned short' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f9a4f039070 <col:7> 'unsigned short' lvalue Var 0x7f9a4f038f08 'sum' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f9a4f039108 <line:35:44> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7f9a4f0390f0 <col:44> 'unsigned short' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9a4f039098 <col:44> 'unsigned short' lvalue ParmVar 0x7f9a4f038cf8 'a' 'unsigned short'
+|     |-CallExpr 0x7f9a4f039188 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f039170 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f039148 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f039328 <line:28:30, line:33:16> <scratch space>:33:1 pluscconlysb 'void (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9a4f039220 <../Data/C2AST/pr30315.c:44:7, line:29:26> col:26 used a 'unsigned short'
+| |-ParmVarDecl 0x7f9a4f039298 <line:44:7, line:29:31> col:31 used b 'unsigned short'
+| `-CompoundStmt 0x7f9a4f0396e0 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f039540 <line:44:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f0393f0 <line:44:7, line:31:15> col:5 used sum 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f039528 <col:11, col:15> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f039500 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f0394b8 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f0394a0 <col:11> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f039450 <col:11> 'unsigned short' lvalue ParmVar 0x7f9a4f039220 'a' 'unsigned short'
+|   |       `-ImplicitCastExpr 0x7f9a4f0394e8 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f0394d0 <col:15> 'unsigned short' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f039478 <col:15> 'unsigned short' lvalue ParmVar 0x7f9a4f039298 'b' 'unsigned short'
+|   `-IfStmt 0x7f9a4f0396a8 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f039618 <line:32:7, line:35:65> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f0395c0 <line:32:7> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f9a4f0395a8 <col:7> 'unsigned short' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f9a4f039558 <col:7> 'unsigned short' lvalue Var 0x7f9a4f0393f0 'sum' 'unsigned short'
+|     | `-ImplicitCastExpr 0x7f9a4f039600 <line:35:65> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7f9a4f0395d8 <col:65> 'unsigned short' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9a4f039580 <col:65> 'unsigned short' lvalue ParmVar 0x7f9a4f039298 'b' 'unsigned short'
+|     |-CallExpr 0x7f9a4f039680 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f039668 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f039640 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f039828 <line:44:7, line:24:16> <scratch space>:35:1 incccsa 'unsigned short (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9a4f039718 <../Data/C2AST/pr30315.c:44:7, line:19:18> col:18 used a 'unsigned short'
+| |-ParmVarDecl 0x7f9a4f039790 <line:44:7, line:19:23> col:23 used b 'unsigned short'
+| `-CompoundStmt 0x7f9a4f039c08 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f039a40 <line:44:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f0398f0 <line:44:7, line:21:15> col:5 used sum 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f039a28 <col:11, col:15> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f039a00 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f0399b8 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f0399a0 <col:11> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f039950 <col:11> 'unsigned short' lvalue ParmVar 0x7f9a4f039718 'a' 'unsigned short'
+|   |       `-ImplicitCastExpr 0x7f9a4f0399e8 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f0399d0 <col:15> 'unsigned short' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f039978 <col:15> 'unsigned short' lvalue ParmVar 0x7f9a4f039790 'b' 'unsigned short'
+|   |-IfStmt 0x7f9a4f039b78 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f039b08 <line:22:7, line:26:34> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f039ac0 <line:22:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f039aa8 <col:7> 'unsigned short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f039a58 <col:7> 'unsigned short' lvalue Var 0x7f9a4f0398f0 'sum' 'unsigned short'
+|   | | `-ImplicitCastExpr 0x7f9a4f039af0 <line:26:34> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f039ad8 <col:34> 'unsigned short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f039a80 <col:34> 'unsigned short' lvalue ParmVar 0x7f9a4f039718 'a' 'unsigned short'
+|   | |-UnaryOperator 0x7f9a4f039b58 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f039b30 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f039bf0 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f039bd8 <col:10> 'unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f039bb0 <col:10> 'unsigned short' lvalue Var 0x7f9a4f0398f0 'sum' 'unsigned short'
+|-FunctionDecl 0x7f9a4f039d58 <line:44:7, line:24:16> <scratch space>:37:1 incccsb 'unsigned short (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9a4f039c48 <../Data/C2AST/pr30315.c:44:7, line:19:18> col:18 used a 'unsigned short'
+| |-ParmVarDecl 0x7f9a4f039cc0 <line:44:7, line:19:23> col:23 used b 'unsigned short'
+| `-CompoundStmt 0x7f9a4f03a138 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f039f70 <line:44:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f039e20 <line:44:7, line:21:15> col:5 used sum 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f039f58 <col:11, col:15> 'unsigned short' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f039f30 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f039ee8 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f039ed0 <col:11> 'unsigned short' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f039e80 <col:11> 'unsigned short' lvalue ParmVar 0x7f9a4f039c48 'a' 'unsigned short'
+|   |       `-ImplicitCastExpr 0x7f9a4f039f18 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f039f00 <col:15> 'unsigned short' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f039ea8 <col:15> 'unsigned short' lvalue ParmVar 0x7f9a4f039cc0 'b' 'unsigned short'
+|   |-IfStmt 0x7f9a4f03a0a8 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f03a038 <line:22:7, line:26:50> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f039ff0 <line:22:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f039fd8 <col:7> 'unsigned short' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f039f88 <col:7> 'unsigned short' lvalue Var 0x7f9a4f039e20 'sum' 'unsigned short'
+|   | | `-ImplicitCastExpr 0x7f9a4f03a020 <line:26:50> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f03a008 <col:50> 'unsigned short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f039fb0 <col:50> 'unsigned short' lvalue ParmVar 0x7f9a4f039cc0 'b' 'unsigned short'
+|   | |-UnaryOperator 0x7f9a4f03a088 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f03a060 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f03a120 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f03a108 <col:10> 'unsigned short' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f03a0e0 <col:10> 'unsigned short' lvalue Var 0x7f9a4f039e20 'sum' 'unsigned short'
+|-FunctionDecl 0x7f9a4f03a2c8 <line:45:7, line:14:16> <scratch space>:39:1 plusccca 'unsigned char (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9a4f03a178 <../Data/C2AST/pr30315.c:45:7, line:9:19> col:19 used a 'unsigned char'
+| |-ParmVarDecl 0x7f9a4f03a1f0 <line:45:7, line:9:24> col:24 used b 'unsigned char'
+| `-CompoundStmt 0x7f9a4f03a6d0 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f03a4e0 <line:45:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f03a390 <line:45:7, line:11:15> col:5 used sum 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f03a4c8 <col:11, col:15> 'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f03a4a0 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f03a458 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f03a440 <col:11> 'unsigned char' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f03a3f0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9a4f03a178 'a' 'unsigned char'
+|   |       `-ImplicitCastExpr 0x7f9a4f03a488 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f03a470 <col:15> 'unsigned char' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f03a418 <col:15> 'unsigned char' lvalue ParmVar 0x7f9a4f03a1f0 'b' 'unsigned char'
+|   |-IfStmt 0x7f9a4f03a640 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f03a5a8 <line:12:7, line:16:36> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f03a560 <line:12:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f03a548 <col:7> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f03a4f8 <col:7> 'unsigned char' lvalue Var 0x7f9a4f03a390 'sum' 'unsigned char'
+|   | | `-ImplicitCastExpr 0x7f9a4f03a590 <line:16:36> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f03a578 <col:36> 'unsigned char' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f03a520 <col:36> 'unsigned char' lvalue ParmVar 0x7f9a4f03a178 'a' 'unsigned char'
+|   | |-CallExpr 0x7f9a4f03a618 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f03a600 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f03a5d0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f03a6b8 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f03a6a0 <col:10> 'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f03a678 <col:10> 'unsigned char' lvalue Var 0x7f9a4f03a390 'sum' 'unsigned char'
+|-FunctionDecl 0x7f9a4f03a820 <line:45:7, line:14:16> <scratch space>:41:1 pluscccb 'unsigned char (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9a4f03a710 <../Data/C2AST/pr30315.c:45:7, line:9:19> col:19 used a 'unsigned char'
+| |-ParmVarDecl 0x7f9a4f03a788 <line:45:7, line:9:24> col:24 used b 'unsigned char'
+| `-CompoundStmt 0x7f9a4f03ac20 <col:27, line:14:16>
+|   |-DeclStmt 0x7f9a4f03aa38 <line:45:7, line:11:16>
+|   | `-VarDecl 0x7f9a4f03a8e8 <line:45:7, line:11:15> col:5 used sum 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f03aa20 <col:11, col:15> 'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f03a9f8 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f03a9b0 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f03a998 <col:11> 'unsigned char' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f03a948 <col:11> 'unsigned char' lvalue ParmVar 0x7f9a4f03a710 'a' 'unsigned char'
+|   |       `-ImplicitCastExpr 0x7f9a4f03a9e0 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f03a9c8 <col:15> 'unsigned char' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f03a970 <col:15> 'unsigned char' lvalue ParmVar 0x7f9a4f03a788 'b' 'unsigned char'
+|   |-IfStmt 0x7f9a4f03ab90 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f03ab00 <line:12:7, line:16:53> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f03aab8 <line:12:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f03aaa0 <col:7> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f03aa50 <col:7> 'unsigned char' lvalue Var 0x7f9a4f03a8e8 'sum' 'unsigned char'
+|   | | `-ImplicitCastExpr 0x7f9a4f03aae8 <line:16:53> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f03aad0 <col:53> 'unsigned char' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f03aa78 <col:53> 'unsigned char' lvalue ParmVar 0x7f9a4f03a788 'b' 'unsigned char'
+|   | |-CallExpr 0x7f9a4f03ab68 <line:13:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f03ab50 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f03ab28 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f03ac08 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f03abf0 <col:10> 'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f03abc8 <col:10> 'unsigned char' lvalue Var 0x7f9a4f03a8e8 'sum' 'unsigned char'
+|-FunctionDecl 0x7f9a4f03adb0 <line:28:30, line:33:16> <scratch space>:43:1 pluscconlyca 'void (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9a4f03ac60 <../Data/C2AST/pr30315.c:45:7, line:29:26> col:26 used a 'unsigned char'
+| |-ParmVarDecl 0x7f9a4f03acd8 <line:45:7, line:29:31> col:31 used b 'unsigned char'
+| `-CompoundStmt 0x7f9a4f03b158 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f03afc8 <line:45:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f03ae78 <line:45:7, line:31:15> col:5 used sum 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f03afb0 <col:11, col:15> 'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f03af88 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f03af40 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f03af28 <col:11> 'unsigned char' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f03aed8 <col:11> 'unsigned char' lvalue ParmVar 0x7f9a4f03ac60 'a' 'unsigned char'
+|   |       `-ImplicitCastExpr 0x7f9a4f03af70 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f03af58 <col:15> 'unsigned char' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f03af00 <col:15> 'unsigned char' lvalue ParmVar 0x7f9a4f03acd8 'b' 'unsigned char'
+|   `-IfStmt 0x7f9a4f03b120 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f03b090 <line:32:7, line:35:44> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f03b048 <line:32:7> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f9a4f03b030 <col:7> 'unsigned char' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f9a4f03afe0 <col:7> 'unsigned char' lvalue Var 0x7f9a4f03ae78 'sum' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9a4f03b078 <line:35:44> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7f9a4f03b060 <col:44> 'unsigned char' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9a4f03b008 <col:44> 'unsigned char' lvalue ParmVar 0x7f9a4f03ac60 'a' 'unsigned char'
+|     |-CallExpr 0x7f9a4f03b0f8 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f03b0e0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f03b0b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f03b298 <line:28:30, line:33:16> <scratch space>:45:1 pluscconlycb 'void (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9a4f03b190 <../Data/C2AST/pr30315.c:45:7, line:29:26> col:26 used a 'unsigned char'
+| |-ParmVarDecl 0x7f9a4f03b208 <line:45:7, line:29:31> col:31 used b 'unsigned char'
+| `-CompoundStmt 0x7f9a4f03e640 <col:34, line:33:16>
+|   |-DeclStmt 0x7f9a4f03b4b0 <line:45:7, line:31:16>
+|   | `-VarDecl 0x7f9a4f03b360 <line:45:7, line:31:15> col:5 used sum 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f03b498 <col:11, col:15> 'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f03b470 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f03b428 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f03b410 <col:11> 'unsigned char' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f03b3c0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9a4f03b190 'a' 'unsigned char'
+|   |       `-ImplicitCastExpr 0x7f9a4f03b458 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f03b440 <col:15> 'unsigned char' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f03b3e8 <col:15> 'unsigned char' lvalue ParmVar 0x7f9a4f03b208 'b' 'unsigned char'
+|   `-IfStmt 0x7f9a4f03e608 <line:32:3, line:33:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9a4f03b578 <line:32:7, line:35:65> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9a4f03b530 <line:32:7> 'int' <IntegralCast>
+|     | | `-ImplicitCastExpr 0x7f9a4f03b518 <col:7> 'unsigned char' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f9a4f03b4c8 <col:7> 'unsigned char' lvalue Var 0x7f9a4f03b360 'sum' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9a4f03b560 <line:35:65> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7f9a4f03b548 <col:65> 'unsigned char' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9a4f03b4f0 <col:65> 'unsigned char' lvalue ParmVar 0x7f9a4f03b208 'b' 'unsigned char'
+|     |-CallExpr 0x7f9a4f03b5e0 <line:33:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f9a4f03b5c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f9a4f03b5a0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9a4f03e788 <line:45:7, line:24:16> <scratch space>:47:1 incccca 'unsigned char (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9a4f03e678 <../Data/C2AST/pr30315.c:45:7, line:19:18> col:18 used a 'unsigned char'
+| |-ParmVarDecl 0x7f9a4f03e6f0 <line:45:7, line:19:23> col:23 used b 'unsigned char'
+| `-CompoundStmt 0x7f9a4f03eb68 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f03e9a0 <line:45:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f03e850 <line:45:7, line:21:15> col:5 used sum 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f03e988 <col:11, col:15> 'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f03e960 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f03e918 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f03e900 <col:11> 'unsigned char' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f03e8b0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9a4f03e678 'a' 'unsigned char'
+|   |       `-ImplicitCastExpr 0x7f9a4f03e948 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f03e930 <col:15> 'unsigned char' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f03e8d8 <col:15> 'unsigned char' lvalue ParmVar 0x7f9a4f03e6f0 'b' 'unsigned char'
+|   |-IfStmt 0x7f9a4f03ead8 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f03ea68 <line:22:7, line:26:34> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f03ea20 <line:22:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f03ea08 <col:7> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f03e9b8 <col:7> 'unsigned char' lvalue Var 0x7f9a4f03e850 'sum' 'unsigned char'
+|   | | `-ImplicitCastExpr 0x7f9a4f03ea50 <line:26:34> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f03ea38 <col:34> 'unsigned char' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f03e9e0 <col:34> 'unsigned char' lvalue ParmVar 0x7f9a4f03e678 'a' 'unsigned char'
+|   | |-UnaryOperator 0x7f9a4f03eab8 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f03ea90 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f03eb50 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f03eb38 <col:10> 'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f03eb10 <col:10> 'unsigned char' lvalue Var 0x7f9a4f03e850 'sum' 'unsigned char'
+|-FunctionDecl 0x7f9a4f03ecb8 <line:45:7, line:24:16> <scratch space>:49:1 inccccb 'unsigned char (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9a4f03eba8 <../Data/C2AST/pr30315.c:45:7, line:19:18> col:18 used a 'unsigned char'
+| |-ParmVarDecl 0x7f9a4f03ec20 <line:45:7, line:19:23> col:23 used b 'unsigned char'
+| `-CompoundStmt 0x7f9a4f03f098 <col:26, line:24:16>
+|   |-DeclStmt 0x7f9a4f03eed0 <line:45:7, line:21:16>
+|   | `-VarDecl 0x7f9a4f03ed80 <line:45:7, line:21:15> col:5 used sum 'unsigned char' cinit
+|   |   `-ImplicitCastExpr 0x7f9a4f03eeb8 <col:11, col:15> 'unsigned char' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9a4f03ee90 <col:11, col:15> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7f9a4f03ee48 <col:11> 'int' <IntegralCast>
+|   |       | `-ImplicitCastExpr 0x7f9a4f03ee30 <col:11> 'unsigned char' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f9a4f03ede0 <col:11> 'unsigned char' lvalue ParmVar 0x7f9a4f03eba8 'a' 'unsigned char'
+|   |       `-ImplicitCastExpr 0x7f9a4f03ee78 <col:15> 'int' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9a4f03ee60 <col:15> 'unsigned char' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9a4f03ee08 <col:15> 'unsigned char' lvalue ParmVar 0x7f9a4f03ec20 'b' 'unsigned char'
+|   |-IfStmt 0x7f9a4f03f008 <line:22:3, line:23:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f03ef98 <line:22:7, line:26:50> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f03ef50 <line:22:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7f9a4f03ef38 <col:7> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7f9a4f03eee8 <col:7> 'unsigned char' lvalue Var 0x7f9a4f03ed80 'sum' 'unsigned char'
+|   | | `-ImplicitCastExpr 0x7f9a4f03ef80 <line:26:50> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9a4f03ef68 <col:50> 'unsigned char' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9a4f03ef10 <col:50> 'unsigned char' lvalue ParmVar 0x7f9a4f03ec20 'b' 'unsigned char'
+|   | |-UnaryOperator 0x7f9a4f03efe8 <line:23:5, col:7> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9a4f03efc0 <col:5> 'int' lvalue Var 0x7f9a4f0199a8 'c' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f03f080 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f03f068 <col:10> 'unsigned char' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9a4f03f040 <col:10> 'unsigned char' lvalue Var 0x7f9a4f03ed80 'sum' 'unsigned char'
+|-FunctionDecl 0x7f9a4f03f228 <line:47:23, line:53:16> <scratch space>:50:1 pluscczexta 'unsigned long (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f9a4f03f0d8 <../Data/C2AST/pr30315.c:48:30, col:43> col:43 used a 'unsigned int'
+| |-ParmVarDecl 0x7f9a4f03f150 <col:46, col:59> col:59 used b 'unsigned int'
+| `-CompoundStmt 0x7f9a4f03f5c8 <col:62, line:53:16>
+|   |-DeclStmt 0x7f9a4f03f3f8 <line:50:3, col:27>
+|   | `-VarDecl 0x7f9a4f03f2f0 <col:3, col:26> col:16 used sum 'unsigned int' cinit
+|   |   `-BinaryOperator 0x7f9a4f03f3d0 <col:22, col:26> 'unsigned int' '+'
+|   |     |-ImplicitCastExpr 0x7f9a4f03f3a0 <col:22> 'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9a4f03f350 <col:22> 'unsigned int' lvalue ParmVar 0x7f9a4f03f0d8 'a' 'unsigned int'
+|   |     `-ImplicitCastExpr 0x7f9a4f03f3b8 <col:26> 'unsigned int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f9a4f03f378 <col:26> 'unsigned int' lvalue ParmVar 0x7f9a4f03f150 'b' 'unsigned int'
+|   |-IfStmt 0x7f9a4f03f520 <line:51:3, line:52:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9a4f03f490 <line:51:7, line:56:12> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9a4f03f460 <line:51:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9a4f03f410 <col:7> 'unsigned int' lvalue Var 0x7f9a4f03f2f0 'sum' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f9a4f03f478 <line:56:12> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9a4f03f438 <col:12> 'unsigned int' lvalue ParmVar 0x7f9a4f03f0d8 'a' 'unsigned int'
+|   | |-CallExpr 0x7f9a4f03f4f8 <line:52:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f9a4f03f4e0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f9a4f03f4b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9a4f03f5b0 <line:53:3, col:10>
+|     `-ImplicitCastExpr 0x7f9a4f03f598 <col:10> 'unsigned long' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f9a4f03f580 <col:10> 'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9a4f03f558 <col:10> 'unsigned int' lvalue Var 0x7f9a4f03f2f0 'sum' 'unsigned int'
+`-FunctionDecl 0x7f9a4f03f728 <line:47:23, line:53:16> <scratch space>:51:1 pluscczextb 'unsigned long (unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7f9a4f03f618 <../Data/C2AST/pr30315.c:48:30, col:43> col:43 used a 'unsigned int'
+  |-ParmVarDecl 0x7f9a4f03f690 <col:46, col:59> col:59 used b 'unsigned int'
+  `-CompoundStmt 0x7f9a4f03fac8 <col:62, line:53:16>
+    |-DeclStmt 0x7f9a4f03f8f8 <line:50:3, col:27>
+    | `-VarDecl 0x7f9a4f03f7f0 <col:3, col:26> col:16 used sum 'unsigned int' cinit
+    |   `-BinaryOperator 0x7f9a4f03f8d0 <col:22, col:26> 'unsigned int' '+'
+    |     |-ImplicitCastExpr 0x7f9a4f03f8a0 <col:22> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9a4f03f850 <col:22> 'unsigned int' lvalue ParmVar 0x7f9a4f03f618 'a' 'unsigned int'
+    |     `-ImplicitCastExpr 0x7f9a4f03f8b8 <col:26> 'unsigned int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9a4f03f878 <col:26> 'unsigned int' lvalue ParmVar 0x7f9a4f03f690 'b' 'unsigned int'
+    |-IfStmt 0x7f9a4f03fa20 <line:51:3, line:52:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9a4f03f990 <line:51:7, line:57:12> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9a4f03f960 <line:51:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9a4f03f910 <col:7> 'unsigned int' lvalue Var 0x7f9a4f03f7f0 'sum' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f9a4f03f978 <line:57:12> 'unsigned int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9a4f03f938 <col:12> 'unsigned int' lvalue ParmVar 0x7f9a4f03f690 'b' 'unsigned int'
+    | |-CallExpr 0x7f9a4f03f9f8 <line:52:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9a4f03f9e0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9a4f03f9b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9a4f0198f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9a4f03fab0 <line:53:3, col:10>
+      `-ImplicitCastExpr 0x7f9a4f03fa98 <col:10> 'unsigned long' <IntegralCast>
+        `-ImplicitCastExpr 0x7f9a4f03fa80 <col:10> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9a4f03fa58 <col:10> 'unsigned int' lvalue Var 0x7f9a4f03f7f0 'sum' 'unsigned int'

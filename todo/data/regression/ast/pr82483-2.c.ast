@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f8b1282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8b143ae750 <../Data/C2AST/pr82483-2.c:8:1, col:70> col:8 f1 '__v1di (__v1di, __v1di)'
+| |-ParmVarDecl 0x7f8b143ae610 <col:12, col:19> col:19 used x '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7f8b143ae680 <col:22, col:29> col:29 used y '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7f8b143ae910 <col:32, col:70>
+|   `-ReturnStmt 0x7f8b143ae8f8 <col:34, col:67>
+|     `-CallExpr 0x7f8b143ae890 <col:41, col:67> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f8b143ae878 <col:41> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long (*)(__attribute__((__vector_size__(1 * sizeof(long long)))) long long, __attribute__((__vector_size__(1 * sizeof(long long)))) long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f8b143ae800 <col:41> '<builtin fn type>' Function 0x7f8b130b85d0 '__builtin_ia32_paddq' '__attribute__((__vector_size__(1 * sizeof(long long)))) long long (__attribute__((__vector_size__(1 * sizeof(long long)))) long long, __attribute__((__vector_size__(1 * sizeof(long long)))) long long)'
+|       |-ImplicitCastExpr 0x7f8b143ae8c8 <col:63> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8b143ae828 <col:63> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7f8b143ae610 'x' '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7f8b143ae8e0 <col:66> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8b143ae850 <col:66> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7f8b143ae680 'y' '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+`-FunctionDecl 0x7f8b143aea38 <line:9:1, col:70> col:8 f2 '__v1di (__v1di, __v1di)'
+  |-ParmVarDecl 0x7f8b143ae938 <col:12, col:19> col:19 used x '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+  |-ParmVarDecl 0x7f8b143ae9a8 <col:22, col:29> col:29 used y '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7f8b143aebf8 <col:32, col:70>
+    `-ReturnStmt 0x7f8b143aebe0 <col:34, col:67>
+      `-CallExpr 0x7f8b143aeb78 <col:41, col:67> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7f8b143aeb60 <col:41> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long (*)(__attribute__((__vector_size__(1 * sizeof(long long)))) long long, __attribute__((__vector_size__(1 * sizeof(long long)))) long long)' <BuiltinFnToFnPtr>
+        | `-DeclRefExpr 0x7f8b143aeae8 <col:41> '<builtin fn type>' Function 0x7f8b130c3fb8 '__builtin_ia32_psubq' '__attribute__((__vector_size__(1 * sizeof(long long)))) long long (__attribute__((__vector_size__(1 * sizeof(long long)))) long long, __attribute__((__vector_size__(1 * sizeof(long long)))) long long)'
+        |-ImplicitCastExpr 0x7f8b143aebb0 <col:63> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f8b143aeb10 <col:63> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7f8b143ae938 'x' '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7f8b143aebc8 <col:66> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f8b143aeb38 <col:66> '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue ParmVar 0x7f8b143ae9a8 'y' '__v1di':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'

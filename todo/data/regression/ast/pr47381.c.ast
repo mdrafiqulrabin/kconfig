@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fd17b82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd17b82c960 <../Data/C2AST/pr47381.c:4:1, line:6:1> line:4:8 struct foo_t definition
+| `-FieldDecl 0x7fd17c014238 <line:5:3, col:7> col:7 limit 'int'
+|-VarDecl 0x7fd17c0143c8 <line:4:1, line:6:8> col:3 used foo 'struct foo_t [3]'
+|-FunctionDecl 0x7fd17c0144c8 <line:7:1, line:13:1> line:8:1 bar 'void ()'
+| `-CompoundStmt 0x7fd17c014c98 <col:8, line:13:1>
+|   |-DeclStmt 0x7fd17c0145e0 <line:9:3, col:8>
+|   | `-VarDecl 0x7fd17c014580 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7fd17c014c60 <line:10:3, line:12:3>
+|     |-BinaryOperator 0x7fd17c014640 <line:10:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fd17c0145f8 <col:8> 'int' lvalue Var 0x7fd17c014580 'i' 'int'
+|     | `-IntegerLiteral 0x7fd17c014620 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd17c0146c8 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fd17c0146b0 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd17c014668 <col:15> 'int' lvalue Var 0x7fd17c014580 'i' 'int'
+|     | `-IntegerLiteral 0x7fd17c014690 <col:19> 'int' 3
+|     |-UnaryOperator 0x7fd17c014718 <col:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fd17c0146f0 <col:22> 'int' lvalue Var 0x7fd17c014580 'i' 'int'
+|     `-CompoundStmt 0x7fd17c014c48 <col:27, line:12:3>
+|       `-CallExpr 0x7fd17c014bf0 <line:11:5, col:47> 'void *'
+|         |-ImplicitCastExpr 0x7fd17c014bd8 <col:5> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fd17c0149a8 <col:5> '<builtin fn type>' Function 0x7fd17c014788 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|         |-ImplicitCastExpr 0x7fd17c014c30 <col:23, col:29> 'void *' <BitCast>
+|         | `-UnaryOperator 0x7fd17c014ad0 <col:23, col:29> 'struct foo_t *' prefix '&'
+|         |   `-ArraySubscriptExpr 0x7fd17c014aa8 <col:24, col:29> 'struct foo_t':'struct foo_t' lvalue
+|         |     |-ImplicitCastExpr 0x7fd17c014a78 <col:24> 'struct foo_t *' <ArrayToPointerDecay>
+|         |     | `-DeclRefExpr 0x7fd17c0149d0 <col:24> 'struct foo_t [3]' lvalue Var 0x7fd17c0143c8 'foo' 'struct foo_t [3]'
+|         |     `-ImplicitCastExpr 0x7fd17c014a90 <col:28> 'int' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7fd17c0149f8 <col:28> 'int' lvalue Var 0x7fd17c014580 'i' 'int'
+|         |-IntegerLiteral 0x7fd17c014af0 <col:32> 'int' 0
+|         `-UnaryExprOrTypeTraitExpr 0x7fd17c014b90 <col:35, col:46> 'unsigned long' sizeof
+|           `-ParenExpr 0x7fd17c014b70 <col:41, col:46> 'struct foo_t':'struct foo_t' lvalue
+|             `-UnaryOperator 0x7fd17c014b50 <col:42, col:43> 'struct foo_t':'struct foo_t' lvalue prefix '*'
+|               `-ImplicitCastExpr 0x7fd17c014b38 <col:43> 'struct foo_t *' <ArrayToPointerDecay>
+|                 `-DeclRefExpr 0x7fd17c014b10 <col:43> 'struct foo_t [3]' lvalue Var 0x7fd17c0143c8 'foo' 'struct foo_t [3]'
+`-FunctionDecl 0x7fd17c014788 <col:5> col:5 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fd17c014828 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fd17c014888 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fd17c0148e8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fd17c014960 <col:5> Implicit

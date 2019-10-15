@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f8b4682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8b4682c960 <../Data/C2AST/pr67106.c:2:9, col:16> col:16 struct S
+|-TypedefDecl 0x7f8b47014270 <col:1, col:18> col:18 referenced S 'struct S':'struct S'
+| `-ElaboratedType 0x7f8b47014220 'struct S' sugar
+|   `-RecordType 0x7f8b47014200 'struct S'
+|     `-Record 0x7f8b470142e0 'S'
+`-RecordDecl 0x7f8b470142e0 prev 0x7f8b4682c960 <line:4:1, line:11:1> line:4:8 struct S definition
+  |-RecordDecl 0x7f8b47014368 <line:6:3, line:9:3> line:6:3 struct definition
+  | `-FieldDecl 0x7f8b47014498 <line:8:5, col:8> col:8 s 'S *'
+  |-FieldDecl 0x7f8b47014530 <line:6:3> col:3 implicit 'struct S::(anonymous at ../Data/C2AST/pr67106.c:6:3)'
+  |-IndirectFieldDecl 0x7f8b47014588 <line:8:8> col:8 implicit s 'S *'
+  | |-Field 0x7f8b47014530 '' 'struct S::(anonymous at ../Data/C2AST/pr67106.c:6:3)'
+  | `-Field 0x7f8b47014498 's' 'S *'
+  `-FieldDecl 0x7f8b470145e0 <line:10:3, col:7> col:7 a 'int'

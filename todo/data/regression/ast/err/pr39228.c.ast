@@ -1,0 +1,123 @@
+../Data/C2AST/pr39228.c:10:10: error: use of unknown builtin '__builtin_isinff' [-Wimplicit-function-declaration]
+  return __builtin_isinff (c);
+         ^
+../Data/C2AST/pr39228.c:24:10: error: use of unknown builtin '__builtin_isinfl' [-Wimplicit-function-declaration]
+  return __builtin_isinfl (c);
+         ^
+../Data/C2AST/pr39228.c:24:10: note: did you mean '__builtin_isinf'?
+../Data/C2AST/pr39228.c:17:10: note: '__builtin_isinf' declared here
+  return __builtin_isinf (c);
+         ^
+TranslationUnitDecl 0x7f87710068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8771006e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8771006b80 '__int128'
+|-TypedefDecl 0x7f8771006ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8771006ba0 'unsigned __int128'
+|-TypedefDecl 0x7f87710071a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8771006fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8771006f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8771007240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8771007200 'char *'
+|   `-BuiltinType 0x7f8771006980 'char'
+|-TypedefDecl 0x7f8771007508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f87710074b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8771007320 'struct __va_list_tag'
+|     `-Record 0x7f8771007298 '__va_list_tag'
+|-FunctionDecl 0x7f877080ce50 <../Data/C2AST/pr39228.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f877080cef0 prev 0x7f877080ce50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f877080d078 <line:6:1, line:11:1> line:6:50 used testf 'int (float)' static inline
+| |-ParmVarDecl 0x7f877080cfa8 <col:57, col:63> col:63 used b 'float'
+| |-CompoundStmt 0x7f877080d4e8 <line:7:1, line:11:1>
+| | |-DeclStmt 0x7f877080d2a8 <line:8:3, col:22>
+| | | `-VarDecl 0x7f877080d1c0 <col:3, col:21> col:9 used c 'float' cinit
+| | |   `-BinaryOperator 0x7f877080d280 <col:13, col:21> 'float' '*'
+| | |     |-FloatingLiteral 0x7f877080d220 <col:13> 'float' 1.010000e+00
+| | |     `-ImplicitCastExpr 0x7f877080d268 <col:21> 'float' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f877080d240 <col:21> 'float' lvalue ParmVar 0x7f877080cfa8 'b' 'float'
+| | `-ReturnStmt 0x7f877080d4d0 <line:10:3, col:29>
+| |   `-CallExpr 0x7f877080d470 <col:10, col:29> 'int'
+| |     |-ImplicitCastExpr 0x7f877080d458 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7f877080d3e0 <col:10> 'int ()' Function 0x7f877080d330 '__builtin_isinff' 'int ()'
+| |     `-ImplicitCastExpr 0x7f877080d4b8 <col:28> 'double' <FloatingCast>
+| |       `-ImplicitCastExpr 0x7f877080d4a0 <col:28> 'float' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f877080d408 <col:28> 'float' lvalue Var 0x7f877080d1c0 'c' 'float'
+| `-AlwaysInlineAttr 0x7f877080d120 <line:6:34> always_inline
+|-FunctionDecl 0x7f877080d5e8 <line:13:1, line:18:1> line:13:50 used test 'int (double)' static inline
+| |-ParmVarDecl 0x7f877080d520 <col:56, col:63> col:63 used b 'double'
+| |-CompoundStmt 0x7f877080d9b0 <line:14:1, line:18:1>
+| | |-DeclStmt 0x7f877080d7d8 <line:15:3, col:22>
+| | | `-VarDecl 0x7f877080d6f0 <col:3, col:21> col:10 used c 'double' cinit
+| | |   `-BinaryOperator 0x7f877080d7b0 <col:14, col:21> 'double' '*'
+| | |     |-FloatingLiteral 0x7f877080d750 <col:14> 'double' 1.010000e+00
+| | |     `-ImplicitCastExpr 0x7f877080d798 <col:21> 'double' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f877080d770 <col:21> 'double' lvalue ParmVar 0x7f877080d520 'b' 'double'
+| | `-ReturnStmt 0x7f877080d998 <line:17:3, col:28>
+| |   `-CallExpr 0x7f877080d950 <col:10, col:28> 'int'
+| |     |-ImplicitCastExpr 0x7f877080d938 <col:10> 'int (*)()' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7f877080d8e8 <col:10> '<builtin fn type>' Function 0x7f877080d7f0 '__builtin_isinf' 'int ()'
+| |     `-ImplicitCastExpr 0x7f877080d980 <col:27> 'double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7f877080d910 <col:27> 'double' lvalue Var 0x7f877080d6f0 'c' 'double'
+| `-AlwaysInlineAttr 0x7f877080d690 <line:13:34> always_inline
+|-FunctionDecl 0x7f877080d7f0 <line:17:10> col:10 implicit used __builtin_isinf 'int ()' extern
+| |-NoThrowAttr 0x7f877080d890 <col:10> Implicit
+| `-ConstAttr 0x7f877080d8d8 <col:10> Implicit
+|-FunctionDecl 0x7f877080dab8 <line:20:1, line:25:1> line:20:50 used testl 'int (long double)' static inline
+| |-ParmVarDecl 0x7f877080d9e8 <col:57, col:69> col:69 used b 'long double'
+| |-CompoundStmt 0x7f877080de78 <line:21:1, line:25:1>
+| | |-DeclStmt 0x7f877080dcb8 <line:22:3, col:28>
+| | | `-VarDecl 0x7f877080dbc0 <col:3, col:27> col:15 used c 'long double' cinit
+| | |   `-BinaryOperator 0x7f877080dc90 <col:19, col:27> 'long double' '*'
+| | |     |-FloatingLiteral 0x7f877080dc20 <col:19> 'long double' 1.010000e+00
+| | |     `-ImplicitCastExpr 0x7f877080dc78 <col:27> 'long double' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7f877080dc50 <col:27> 'long double' lvalue ParmVar 0x7f877080d9e8 'b' 'long double'
+| | `-ReturnStmt 0x7f877080de60 <line:24:3, col:29>
+| |   `-CallExpr 0x7f877080de18 <col:10, col:29> 'int'
+| |     |-ImplicitCastExpr 0x7f877080de00 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7f877080dda8 <col:10> 'int ()' Function 0x7f877080dcf8 '__builtin_isinfl' 'int ()'
+| |     `-ImplicitCastExpr 0x7f877080de48 <col:28> 'long double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7f877080ddd0 <col:28> 'long double' lvalue Var 0x7f877080dbc0 'c' 'long double'
+| `-AlwaysInlineAttr 0x7f877080db60 <line:20:34> always_inline
+`-FunctionDecl 0x7f877080dec0 <line:27:1, line:39:1> line:27:5 main 'int ()'
+  `-CompoundStmt 0x7f877080e4c0 <line:28:1, line:39:1>
+    |-IfStmt 0x7f877080e0f8 <line:29:3, line:30:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f877080e040 <line:29:7, col:29> 'int' '<'
+    | | |-CallExpr 0x7f877080dff0 <col:7, col:25> 'int'
+    | | | |-ImplicitCastExpr 0x7f877080dfd8 <col:7> 'int (*)(float)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f877080df60 <col:7> 'int (float)' Function 0x7f877080d078 'testf' 'int (float)'
+    | | | `-FloatingLiteral 0x7f877080df88 <<built-in>:126:21> 'float' 3.402823e+38
+    | | `-IntegerLiteral 0x7f877080e020 <../Data/C2AST/pr39228.c:29:29> 'int' 1
+    | |-CallExpr 0x7f877080e0d0 <line:30:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f877080e0b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f877080e068 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f877080cef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f877080e2a0 <line:32:3, line:33:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f877080e210 <line:32:7, col:28> 'int' '<'
+    | | |-CallExpr 0x7f877080e1c0 <col:7, col:24> 'int'
+    | | | |-ImplicitCastExpr 0x7f877080e1a8 <col:7> 'int (*)(double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f877080e130 <col:7> 'int (double)' Function 0x7f877080d5e8 'test' 'int (double)'
+    | | | `-FloatingLiteral 0x7f877080e158 <<built-in>:140:21> 'double' 1.797693e+308
+    | | `-IntegerLiteral 0x7f877080e1f0 <../Data/C2AST/pr39228.c:32:28> 'int' 1
+    | |-CallExpr 0x7f877080e278 <line:33:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f877080e260 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f877080e238 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f877080cef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f877080e450 <line:35:3, line:36:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f877080e3c0 <line:35:7, col:30> 'int' '<'
+    | | |-CallExpr 0x7f877080e370 <col:7, col:26> 'int'
+    | | | |-ImplicitCastExpr 0x7f877080e358 <col:7> 'int (*)(long double)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f877080e2d8 <col:7> 'int (long double)' Function 0x7f877080dab8 'testl' 'int (long double)'
+    | | | `-FloatingLiteral 0x7f877080e300 <<built-in>:154:22> 'long double' INF
+    | | `-IntegerLiteral 0x7f877080e3a0 <../Data/C2AST/pr39228.c:35:30> 'int' 1
+    | |-CallExpr 0x7f877080e428 <line:36:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f877080e410 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f877080e3e8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f877080cef0 'abort2 errors generated.
+' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f877080e4a8 <line:38:3, col:10>
+      `-IntegerLiteral 0x7f877080e488 <col:10> 'int' 0

@@ -1,0 +1,89 @@
+TranslationUnitDecl 0x7fd0fc0068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd0fb8350d0 <../Data/C2AST/pr50751-3.c:6:1, line:13:1> line:7:1 testfunc_00 'void (const char *, char *)'
+| |-ParmVarDecl 0x7fd0fc007578 <col:14, col:26> col:26 used ap 'const char *'
+| |-ParmVarDecl 0x7fd0fb835000 <col:30, col:36> col:36 used bp 'char *'
+| `-CompoundStmt 0x7fd0fb835700 <line:8:1, line:13:1>
+|   |-BinaryOperator 0x7fd0fb8352e8 <line:9:3, col:18> 'char' '='
+|   | |-ArraySubscriptExpr 0x7fd0fb835220 <col:3, col:9> 'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fd0fb835208 <col:3> 'char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd0fb8351c0 <col:3> 'char *' lvalue ParmVar 0x7fd0fb835000 'bp' 'char *'
+|   | | `-IntegerLiteral 0x7fd0fb8351e8 <col:6> 'int' 100
+|   | `-ImplicitCastExpr 0x7fd0fb8352d0 <col:13, col:18> 'char' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fd0fb8352a8 <col:13, col:18> 'const char' lvalue
+|   |     |-ImplicitCastExpr 0x7fd0fb835290 <col:13> 'const char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd0fb835248 <col:13> 'const char *' lvalue ParmVar 0x7fd0fc007578 'ap' 'const char *'
+|   |     `-IntegerLiteral 0x7fd0fb835270 <col:16> 'int' 15
+|   |-BinaryOperator 0x7fd0fb835438 <line:10:3, col:18> 'char' '='
+|   | |-ArraySubscriptExpr 0x7fd0fb835370 <col:3, col:9> 'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fd0fb835358 <col:3> 'char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd0fb835310 <col:3> 'char *' lvalue ParmVar 0x7fd0fb835000 'bp' 'char *'
+|   | | `-IntegerLiteral 0x7fd0fb835338 <col:6> 'int' 200
+|   | `-ImplicitCastExpr 0x7fd0fb835420 <col:13, col:18> 'char' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fd0fb8353f8 <col:13, col:18> 'const char' lvalue
+|   |     |-ImplicitCastExpr 0x7fd0fb8353e0 <col:13> 'const char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd0fb835398 <col:13> 'const char *' lvalue ParmVar 0x7fd0fc007578 'ap' 'const char *'
+|   |     `-IntegerLiteral 0x7fd0fb8353c0 <col:16> 'int' 50
+|   |-BinaryOperator 0x7fd0fb835588 <line:11:3, col:18> 'char' '='
+|   | |-ArraySubscriptExpr 0x7fd0fb8354c0 <col:3, col:9> 'char' lvalue
+|   | | |-ImplicitCastExpr 0x7fd0fb8354a8 <col:3> 'char *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd0fb835460 <col:3> 'char *' lvalue ParmVar 0x7fd0fb835000 'bp' 'char *'
+|   | | `-IntegerLiteral 0x7fd0fb835488 <col:6> 'int' 900
+|   | `-ImplicitCastExpr 0x7fd0fb835570 <col:13, col:18> 'char' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fd0fb835548 <col:13, col:18> 'const char' lvalue
+|   |     |-ImplicitCastExpr 0x7fd0fb835530 <col:13> 'const char *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd0fb8354e8 <col:13> 'const char *' lvalue ParmVar 0x7fd0fc007578 'ap' 'const char *'
+|   |     `-IntegerLiteral 0x7fd0fb835510 <col:16> 'int' 71
+|   `-BinaryOperator 0x7fd0fb8356d8 <line:12:3, col:16> 'char' '='
+|     |-ArraySubscriptExpr 0x7fd0fb835610 <col:3, col:7> 'char' lvalue
+|     | |-ImplicitCastExpr 0x7fd0fb8355f8 <col:3> 'char *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd0fb8355b0 <col:3> 'char *' lvalue ParmVar 0x7fd0fb835000 'bp' 'char *'
+|     | `-IntegerLiteral 0x7fd0fb8355d8 <col:6> 'int' 0
+|     `-ImplicitCastExpr 0x7fd0fb8356c0 <col:11, col:16> 'char' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fd0fb835698 <col:11, col:16> 'const char' lvalue
+|         |-ImplicitCastExpr 0x7fd0fb835680 <col:11> 'const char *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fd0fb835638 <col:11> 'const char *' lvalue ParmVar 0x7fd0fc007578 'ap' 'const char *'
+|         `-IntegerLiteral 0x7fd0fb835660 <col:14> 'int' 25
+`-FunctionDecl 0x7fd0fb8358e0 <line:15:1, line:22:1> line:16:1 testfunc_01 'void (const volatile char *, volatile char *)'
+  |-ParmVarDecl 0x7fd0fb835770 <col:14, col:35> col:35 used ap 'const volatile char *'
+  |-ParmVarDecl 0x7fd0fb835810 <col:39, col:54> col:54 used bp 'volatile char *'
+  `-CompoundStmt 0x7fd0fb835ed0 <line:17:1, line:22:1>
+    |-BinaryOperator 0x7fd0fb835ab8 <line:18:3, col:18> 'char' '='
+    | |-ArraySubscriptExpr 0x7fd0fb8359f0 <col:3, col:9> 'volatile char' lvalue
+    | | |-ImplicitCastExpr 0x7fd0fb8359d8 <col:3> 'volatile char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd0fb835990 <col:3> 'volatile char *' lvalue ParmVar 0x7fd0fb835810 'bp' 'volatile char *'
+    | | `-IntegerLiteral 0x7fd0fb8359b8 <col:6> 'int' 100
+    | `-ImplicitCastExpr 0x7fd0fb835aa0 <col:13, col:18> 'char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fd0fb835a78 <col:13, col:18> 'const volatile char' lvalue
+    |     |-ImplicitCastExpr 0x7fd0fb835a60 <col:13> 'const volatile char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd0fb835a18 <col:13> 'const volatile char *' lvalue ParmVar 0x7fd0fb835770 'ap' 'const volatile char *'
+    |     `-IntegerLiteral 0x7fd0fb835a40 <col:16> 'int' 15
+    |-BinaryOperator 0x7fd0fb835c08 <line:19:3, col:18> 'char' '='
+    | |-ArraySubscriptExpr 0x7fd0fb835b40 <col:3, col:9> 'volatile char' lvalue
+    | | |-ImplicitCastExpr 0x7fd0fb835b28 <col:3> 'volatile char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd0fb835ae0 <col:3> 'volatile char *' lvalue ParmVar 0x7fd0fb835810 'bp' 'volatile char *'
+    | | `-IntegerLiteral 0x7fd0fb835b08 <col:6> 'int' 200
+    | `-ImplicitCastExpr 0x7fd0fb835bf0 <col:13, col:18> 'char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fd0fb835bc8 <col:13, col:18> 'const volatile char' lvalue
+    |     |-ImplicitCastExpr 0x7fd0fb835bb0 <col:13> 'const volatile char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd0fb835b68 <col:13> 'const volatile char *' lvalue ParmVar 0x7fd0fb835770 'ap' 'const volatile char *'
+    |     `-IntegerLiteral 0x7fd0fb835b90 <col:16> 'int' 50
+    |-BinaryOperator 0x7fd0fb835d58 <line:20:3, col:18> 'char' '='
+    | |-ArraySubscriptExpr 0x7fd0fb835c90 <col:3, col:9> 'volatile char' lvalue
+    | | |-ImplicitCastExpr 0x7fd0fb835c78 <col:3> 'volatile char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd0fb835c30 <col:3> 'volatile char *' lvalue ParmVar 0x7fd0fb835810 'bp' 'volatile char *'
+    | | `-IntegerLiteral 0x7fd0fb835c58 <col:6> 'int' 900
+    | `-ImplicitCastExpr 0x7fd0fb835d40 <col:13, col:18> 'char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fd0fb835d18 <col:13, col:18> 'const volatile char' lvalue
+    |     |-ImplicitCastExpr 0x7fd0fb835d00 <col:13> 'const volatile char *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd0fb835cb8 <col:13> 'const volatile char *' lvalue ParmVar 0x7fd0fb835770 'ap' 'const volatile char *'
+    |     `-IntegerLiteral 0x7fd0fb835ce0 <col:16> 'int' 71
+    `-BinaryOperator 0x7fd0fb835ea8 <line:21:3, col:16> 'char' '='
+      |-ArraySubscriptExpr 0x7fd0fb835de0 <col:3, col:7> 'volatile char' lvalue
+      | |-ImplicitCastExpr 0x7fd0fb835dc8 <col:3> 'volatile char *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd0fb835d80 <col:3> 'volatile char *' lvalue ParmVar 0x7fd0fb835810 'bp' 'volatile char *'
+      | `-IntegerLiteral 0x7fd0fb835da8 <col:6> 'int' 0
+      `-ImplicitCastExpr 0x7fd0fb835e90 <col:11, col:16> 'char' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fd0fb835e68 <col:11, col:16> 'const volatile char' lvalue
+          |-ImplicitCastExpr 0x7fd0fb835e50 <col:11> 'const volatile char *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fd0fb835e08 <col:11> 'const volatile char *' lvalue ParmVar 0x7fd0fb835770 'ap' 'const volatile char *'
+          `-IntegerLiteral 0x7fd0fb835e30 <col:14> 'int' 25

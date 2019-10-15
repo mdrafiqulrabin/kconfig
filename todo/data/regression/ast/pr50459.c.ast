@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fddd0821ce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fddd0822960 <../Data/C2AST/pr50459.c:6:1, col:23> col:1
+| |-EnumConstantDecl 0x7fddd001e440 <col:8, col:12> col:8 referenced A 'int'
+| | `-IntegerLiteral 0x7fddd001e420 <col:12> 'int' 128
+| `-EnumConstantDecl 0x7fddd001e4a8 <col:17, col:21> col:17 referenced B 'int'
+|   `-IntegerLiteral 0x7fddd001e488 <col:21> 'int' 1
+|-FunctionDecl 0x7fddd001e5e8 <line:7:1, col:52> col:7 fn1 'void *(void)'
+| `-AssumeAlignedAttr 0x7fddd001e688 <col:33, col:50>
+|   |-DeclRefExpr 0x7fddd001e560 <col:49> 'int' EnumConstant 0x7fddd001e440 'A' 'int'
+|   `-<<<NULL>>>
+|-FunctionDecl 0x7fddd001e800 <line:8:1, col:55> col:7 fn2 'void *(void)'
+| `-AssumeAlignedAttr 0x7fddd001e8a0 <col:33, col:53>
+|   |-DeclRefExpr 0x7fddd001e790 <col:49> 'int' EnumConstant 0x7fddd001e440 'A' 'int'
+|   `-IntegerLiteral 0x7fddd001e7b8 <col:52> 'int' 4
+|-FunctionDecl 0x7fddd001ea08 <line:9:1, col:47> col:7 fn5 'void *(int)'
+| |-ParmVarDecl 0x7fddd001e910 <col:12> col:15 'int'
+| `-AllocSizeAttr 0x7fddd001eab0 <col:32, col:45> 1 0
+|-FunctionDecl 0x7fddd001ebd0 <line:10:1, col:48> col:7 fn6 'void *(int)'
+| |-ParmVarDecl 0x7fddd001eb18 <col:12> col:15 'int'
+| `-AllocAlignAttr 0x7fddd001ec78 <col:32, col:46> 1
+|-FunctionDecl 0x7fddd001edc0 <line:11:1, col:59> col:6 fn7 'void (const char *, ...)'
+| |-ParmVarDecl 0x7fddd001ecd8 <col:11, col:22> col:23 'const char *'
+| `-SentinelAttr 0x7fddd001ee68 <col:46, col:57> 1 0
+|-VarDecl 0x7fddd001ef18 <line:12:1, col:38> col:38 a '__attribute__((__vector_size__(32 * sizeof(int)))) int'
+`-VarDecl 0x7fddd001efb8 <line:13:1, col:34> col:34 foo 'int'
+  `-AlignedAttr 0x7fddd001f018 <col:20, col:30> aligned
+    `-DeclRefExpr 0x7fddd001ef78 <col:29> 'int' EnumConstant 0x7fddd001e440 'A' 'int'

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fde4602bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fde4602c960 <../Data/C2AST/pr63567-1.c:7:1, col:19> col:8 struct T definition
+| `-FieldDecl 0x7fde46814238 <col:12, col:16> col:16 i 'int'
+|-RecordDecl 0x7fde46814280 <line:8:1, col:24> col:8 struct S definition
+| `-FieldDecl 0x7fde46814380 <col:12, col:21> col:21 t 'struct T':'struct T'
+`-VarDecl 0x7fde46814460 <line:9:1, col:46> col:17 s 'struct S':'struct S' static cinit
+  `-ImplicitCastExpr 0x7fde468146c8 <col:21, col:46> 'struct S':'struct S' <LValueToRValue>
+    `-CompoundLiteralExpr 0x7fde468146a0 <col:21, col:46> 'struct S':'struct S' lvalue
+      `-InitListExpr 0x7fde46814610 <col:32, col:46> 'struct S':'struct S'
+        `-InitListExpr 0x7fde46814658 <col:39, col:44> 'struct T':'struct T'
+          `-IntegerLiteral 0x7fde46814520 <col:41> 'int' 42

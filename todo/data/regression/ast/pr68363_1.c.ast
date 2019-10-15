@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fd1510174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd150829268 <../Data/C2AST/pr68363_1.c:4:1, line:19:1> line:5:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fd151018178 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fd1508296b8 <line:6:1, line:19:1>
+    |-SwitchStmt 0x7fd150829390 <line:7:3, line:17:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd150829378 <line:7:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd150829350 <col:11> 'int' lvalue ParmVar 0x7fd151018178 'i' 'int'
+    | `-CompoundStmt 0x7fd150829640 <line:8:5, line:17:5>
+    |   |-CaseStmt 0x7fd1508293e0 <line:9:5, line:12:14>
+    |   | |-IntegerLiteral 0x7fd1508293c0 <line:9:10> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | `-CaseStmt 0x7fd150829438 <line:10:5, line:12:14>
+    |   |   |-IntegerLiteral 0x7fd150829418 <line:10:10> 'int' 2
+    |   |   |-<<<NULL>>>
+    |   |   `-CaseStmt 0x7fd150829490 <line:11:5, line:12:14>
+    |   |     |-IntegerLiteral 0x7fd150829470 <line:11:10> 'int' 5
+    |   |     |-<<<NULL>>>
+    |   |     `-ReturnStmt 0x7fd1508294e8 <line:12:7, col:14>
+    |   |       `-IntegerLiteral 0x7fd1508294c8 <col:14> 'int' 0
+    |   `-CaseStmt 0x7fd150829520 <line:13:5, line:16:14>
+    |     |-IntegerLiteral 0x7fd150829500 <line:13:10> 'int' 7
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7fd150829578 <line:14:5, line:16:14>
+    |       |-IntegerLiteral 0x7fd150829558 <line:14:10> 'int' 11
+    |       |-<<<NULL>>>
+    |       `-CaseStmt 0x7fd1508295d0 <line:15:5, line:16:14>
+    |         |-IntegerLiteral 0x7fd1508295b0 <line:15:10> 'int' 13
+    |         |-<<<NULL>>>
+    |         `-ReturnStmt 0x7fd150829628 <line:16:7, col:14>
+    |           `-IntegerLiteral 0x7fd150829608 <col:14> 'int' 1
+    `-ReturnStmt 0x7fd1508296a0 <line:18:3, col:11>
+      `-UnaryOperator 0x7fd150829680 <col:10, col:11> 'int' prefix '-'
+        `-IntegerLiteral 0x7fd150829660 <col:11> 'int' 1

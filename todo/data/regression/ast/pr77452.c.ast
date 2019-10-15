@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fe71b0128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe71a025c00 <../Data/C2AST/pr77452.c:4:1, col:27> col:27 referenced U '__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fe71b013580 '__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' 16
+|   `-BuiltinType 0x7fe71b012a80 'unsigned int'
+|-TypedefDecl 0x7fe71a025cb8 <line:5:1, col:27> col:27 referenced V '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+| `-VectorType 0x7fe71a025c80 '__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' 4
+|   `-BuiltinType 0x7fe71b012ba0 'unsigned __int128'
+`-FunctionDecl 0x7fe71a025e40 <line:7:1, line:13:1> line:8:1 foo 'V (V)'
+  |-ParmVarDecl 0x7fe71a025d40 <col:5, col:7> col:7 used v 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+  `-CompoundStmt 0x7fe71a026a18 <line:9:1, line:13:1>
+    |-BinaryOperator 0x7fe71a026998 <line:10:3, line:11:50> 'unsigned __int128' '='
+    | |-ArraySubscriptExpr 0x7fe71a025f70 <line:10:3, col:6> 'unsigned __int128' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fe71a025f28 <col:3> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fe71a025d40 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+    | | `-IntegerLiteral 0x7fe71a025f50 <col:5> 'int' 0
+    | `-ImplicitCastExpr 0x7fe71a026980 <col:10, line:11:50> 'unsigned __int128' <IntegralCast>
+    |   `-BinaryOperator 0x7fe71a026958 <line:10:10, line:11:50> 'unsigned int' '>>'
+    |     |-BinaryOperator 0x7fe71a026468 <line:10:10, col:50> 'unsigned int' '<<'
+    |     | |-IntegerLiteral 0x7fe71a025f98 <col:10> 'unsigned int' 1
+    |     | `-ParenExpr 0x7fe71a026448 <col:16, col:50> 'unsigned __int128'
+    |     |   `-BinaryOperator 0x7fe71a026420 <col:17, col:47> 'unsigned __int128' '&'
+    |     |     |-ParenExpr 0x7fe71a0263c8 <col:17, col:43> 'unsigned __int128'
+    |     |     | `-ArraySubscriptExpr 0x7fe71a0263a0 <col:20, col:42> 'unsigned __int128'
+    |     |     |   |-ParenExpr 0x7fe71a026360 <col:20, col:39> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+    |     |     |   | `-CStyleCastExpr 0x7fe71a026338 <col:21, col:38> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <BitCast>
+    |     |     |   |   `-ImplicitCastExpr 0x7fe71a026320 <col:24, col:38> 'U':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    |     |     |   |     `-CompoundLiteralExpr 0x7fe71a0262e8 <col:24, col:38> 'U':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' lvalue
+    |     |     |   |       `-InitListExpr 0x7fe71a0260f8 <col:27, col:38> 'U':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+    |     |     |   |         |-ImplicitCastExpr 0x7fe71a0261b8 <col:28> 'unsigned int' <IntegralCast>
+    |     |     |   |         | `-IntegerLiteral 0x7fe71a025ff0 <col:28> 'int' 1
+    |     |     |   |         |-ImplicitCastExpr 0x7fe71a0261d0 <col:31> 'unsigned int' <IntegralCast>
+    |     |     |   |         | `-IntegerLiteral 0x7fe71a026010 <col:31> 'int' 1
+    |     |     |   |         `-ImplicitCastExpr 0x7fe71a026200 <col:34, col:37> 'unsigned int' <IntegralCast>
+    |     |     |   |           `-ImplicitCastExpr 0x7fe71a0261e8 <col:34, col:37> 'unsigned __int128' <LValueToRValue>
+    |     |     |   |             `-ArraySubscriptExpr 0x7fe71a026078 <col:34, col:37> 'unsigned __int128' lvalue vectorcomponent
+    |     |     |   |               |-DeclRefExpr 0x7fe71a026030 <col:34> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fe71a025d40 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+    |     |     |   |               `-IntegerLiteral 0x7fe71a026058 <col:36> 'int' 0
+    |     |     |   `-IntegerLiteral 0x7fe71a026380 <col:41> 'int' 0
+    |     |     `-ImplicitCastExpr 0x7fe71a026408 <col:47> 'unsigned __int128' <IntegralCast>
+    |     |       `-IntegerLiteral 0x7fe71a0263e8 <col:47> 'int' 15
+    |     `-ParenExpr 0x7fe71a026938 <line:11:16, col:50> 'unsigned __int128'
+    |       `-BinaryOperator 0x7fe71a026910 <col:17, col:47> 'unsigned __int128' '&'
+    |         |-ParenExpr 0x7fe71a0268b8 <col:17, col:43> 'unsigned __int128'
+    |         | `-UnaryOperator 0x7fe71a026898 <col:18, col:42> 'unsigned __int128' prefix '-'
+    |         |   `-UnaryOperator 0x7fe71a026878 <col:19, col:42> 'unsigned __int128' prefix '~'
+    |         |     `-ArraySubscriptExpr 0x7fe71a026850 <col:20, col:42> 'unsigned __int128'
+    |         |       |-ParenExpr 0x7fe71a026810 <col:20, col:39> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+    |         |       | `-CStyleCastExpr 0x7fe71a0267e8 <col:21, col:38> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <BitCast>
+    |         |       |   `-ImplicitCastExpr 0x7fe71a0267d0 <col:24, col:38> 'U':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    |         |       |     `-CompoundLiteralExpr 0x7fe71a026798 <col:24, col:38> 'U':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int' lvalue
+    |         |       |       `-InitListExpr 0x7fe71a0265a8 <col:27, col:38> 'U':'__attribute__((__vector_size__(16 * sizeof(unsigned int)))) unsigned int'
+    |         |       |         |-ImplicitCastExpr 0x7fe71a026668 <col:28> 'unsigned int' <IntegralCast>
+    |         |       |         | `-IntegerLiteral 0x7fe71a0264a0 <col:28> 'int' 1
+    |         |       |         |-ImplicitCastExpr 0x7fe71a026680 <col:31> 'unsigned int' <IntegralCast>
+    |         |       |         | `-IntegerLiteral 0x7fe71a0264c0 <col:31> 'int' 1
+    |         |       |         `-ImplicitCastExpr 0x7fe71a0266b0 <col:34, col:37> 'unsigned int' <IntegralCast>
+    |         |       |           `-ImplicitCastExpr 0x7fe71a026698 <col:34, col:37> 'unsigned __int128' <LValueToRValue>
+    |         |       |             `-ArraySubscriptExpr 0x7fe71a026528 <col:34, col:37> 'unsigned __int128' lvalue vectorcomponent
+    |         |       |               |-DeclRefExpr 0x7fe71a0264e0 <col:34> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fe71a025d40 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'
+    |         |       |               `-IntegerLiteral 0x7fe71a026508 <col:36> 'int' 0
+    |         |       `-IntegerLiteral 0x7fe71a026830 <col:41> 'int' 0
+    |         `-ImplicitCastExpr 0x7fe71a0268f8 <col:47> 'unsigned __int128' <IntegralCast>
+    |           `-IntegerLiteral 0x7fe71a0268d8 <col:47> 'int' 15
+    `-ReturnStmt 0x7fe71a026a00 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fe71a0269e8 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fe71a0269c0 <col:10> 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128' lvalue ParmVar 0x7fe71a025d40 'v' 'V':'__attribute__((__vector_size__(4 * sizeof(unsigned __int128)))) unsigned __int128'

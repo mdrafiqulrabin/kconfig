@@ -1,0 +1,120 @@
+TranslationUnitDecl 0x7ff3358174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff335818178 <../Data/C2AST/pr55238.c:3:1, col:16> col:16 gzFile 'void *'
+| `-PointerType 0x7ff3358179e0 'void *'
+|   `-BuiltinType 0x7ff335817540 'void'
+|-RecordDecl 0x7ff336014200 <line:4:9, line:11:1> line:4:9 struct definition
+| |-FieldDecl 0x7ff3360142c8 <line:6:3, col:7> col:7 referenced mode 'int'
+| |-FieldDecl 0x7ff336014328 <line:7:3, col:7> col:7 referenced direct 'int'
+| |-FieldDecl 0x7ff336014388 <line:8:3, col:7> col:7 referenced seek 'int'
+| |-FieldDecl 0x7ff3360143e8 <line:9:3, col:7> col:7 referenced err 'int'
+| `-FieldDecl 0x7ff336014448 <line:10:3, col:9> col:9 referenced msg 'char *'
+|-TypedefDecl 0x7ff3360144e0 <line:4:1, line:12:1> col:1 referenced gz_state 'struct gz_state':'gz_state'
+| `-ElaboratedType 0x7ff336014490 'struct gz_state' sugar
+|   `-RecordType 0x7ff336014290 'gz_state'
+|     `-Record 0x7ff336014200 ''
+|-FunctionDecl 0x7ff336014800 <line:14:1, col:51> col:6 used gz_error 'void (gz_state *, int, char *)'
+| |-ParmVarDecl 0x7ff3360145d8 <col:16, col:26> col:26 state 'gz_state *'
+| |-ParmVarDecl 0x7ff336014650 <col:33, col:37> col:37 err 'int'
+| `-ParmVarDecl 0x7ff3360146c8 <col:42, col:48> col:48 msg 'char *'
+|-FunctionDecl 0x7ff3360149d0 <line:15:1, col:17> col:6 used foo 'void (char *)'
+| `-ParmVarDecl 0x7ff336014910 <col:11, col:16> col:17 'char *'
+|-FunctionDecl 0x7ff336014be0 <line:16:1, col:25> col:6 used bar 'void (char *, char *)'
+| |-ParmVarDecl 0x7ff336014a90 <col:11, col:16> col:17 'char *'
+| `-ParmVarDecl 0x7ff336014b08 <col:19, col:24> col:25 'char *'
+|-FunctionDecl 0x7ff336014da0 <line:18:1, line:27:1> line:19:1 used gz_reset 'void (gz_state *)' static
+| |-ParmVarDecl 0x7ff336014ca0 <col:11, col:21> col:21 used state 'gz_state *'
+| `-CompoundStmt 0x7ff336015270 <line:20:1, line:27:1>
+|   |-IfStmt 0x7ff336014ff8 <line:21:3, line:24:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff336014ef8 <line:21:7, col:22> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7ff336014ee0 <col:7, col:14> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7ff336014e88 <col:7, col:14> 'int' lvalue ->mode 0x7ff3360142c8
+|   | | |   `-ImplicitCastExpr 0x7ff336014e70 <col:7> 'gz_state *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7ff336014e48 <col:7> 'gz_state *' lvalue ParmVar 0x7ff336014ca0 'state' 'gz_state *'
+|   | | `-IntegerLiteral 0x7ff336014ec0 <col:22> 'int' 7247
+|   | |-CompoundStmt 0x7ff336014fe0 <line:22:5, line:24:5>
+|   | | `-BinaryOperator 0x7ff336014fb8 <line:23:7, col:23> 'int' '='
+|   | |   |-MemberExpr 0x7ff336014f60 <col:7, col:14> 'int' lvalue ->direct 0x7ff336014328
+|   | |   | `-ImplicitCastExpr 0x7ff336014f48 <col:7> 'gz_state *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7ff336014f20 <col:7> 'gz_state *' lvalue ParmVar 0x7ff336014ca0 'state' 'gz_state *'
+|   | |   `-IntegerLiteral 0x7ff336014f98 <col:23> 'int' 1
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7ff3360150c8 <line:25:3, col:17> 'int' '='
+|   | |-MemberExpr 0x7ff336015070 <col:3, col:10> 'int' lvalue ->seek 0x7ff336014388
+|   | | `-ImplicitCastExpr 0x7ff336015058 <col:3> 'gz_state *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff336015030 <col:3> 'gz_state *' lvalue ParmVar 0x7ff336014ca0 'state' 'gz_state *'
+|   | `-IntegerLiteral 0x7ff3360150a8 <col:17> 'int' 0
+|   `-CallExpr 0x7ff336015200 <line:26:3, col:24> 'void'
+|     |-ImplicitCastExpr 0x7ff3360151d8 <col:3> 'void (*)(gz_state *, int, char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff3360150f0 <col:3> 'void (gz_state *, int, char *)' Function 0x7ff336014800 'gz_error' 'void (gz_state *, int, char *)'
+|     |-ImplicitCastExpr 0x7ff336015240 <col:13> 'gz_state *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff336015118 <col:13> 'gz_state *' lvalue ParmVar 0x7ff336014ca0 'state' 'gz_state *'
+|     |-IntegerLiteral 0x7ff336015140 <col:20> 'int' 0
+|     `-ImplicitCastExpr 0x7ff336015258 <col:23> 'char *' <NullToPointer>
+|       `-IntegerLiteral 0x7ff336015160 <col:23> 'int' 0
+|-FunctionDecl 0x7ff336015408 <line:29:1, line:34:1> line:30:1 gzbuffer 'int (void *, int)'
+| |-ParmVarDecl 0x7ff3360152b0 <col:11, col:17> col:17 file 'void *'
+| |-ParmVarDecl 0x7ff336015328 <col:23, col:27> col:27 size 'int'
+| `-CompoundStmt 0x7ff336015648 <line:31:1, line:34:1>
+|   |-DeclStmt 0x7ff336015528 <line:32:3, col:18>
+|   | `-VarDecl 0x7ff3360154c8 <col:3, col:13> col:13 used state 'gz_state *'
+|   `-CallExpr 0x7ff336015600 <line:33:3, col:18> 'void'
+|     |-ImplicitCastExpr 0x7ff3360155e8 <col:3> 'void (*)(gz_state *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff336015540 <col:3> 'void (gz_state *)' Function 0x7ff336014da0 'gz_reset' 'void (gz_state *)'
+|     `-ImplicitCastExpr 0x7ff336015630 <col:13> 'gz_state *' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff336015568 <col:13> 'gz_state *' lvalue Var 0x7ff3360154c8 'state' 'gz_state *'
+`-FunctionDecl 0x7ff336015800 prev 0x7ff336014800 <line:36:1, line:46:1> line:36:6 used gz_error 'void (gz_state *, int, char *)'
+  |-ParmVarDecl 0x7ff336015678 <col:16, col:26> col:26 used state 'gz_state *'
+  |-ParmVarDecl 0x7ff3360156f0 <col:33, col:37> col:37 err 'int'
+  |-ParmVarDecl 0x7ff336015768 <col:42, col:48> col:48 used msg 'char *'
+  `-CompoundStmt 0x7ff336015eb8 <line:37:1, line:46:1>
+    |-IfStmt 0x7ff336015c18 <line:38:3, line:42:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff336015980 <line:38:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff336015950 <col:7, col:14> 'char *' <LValueToRValue>
+    | | | `-MemberExpr 0x7ff3360158f8 <col:7, col:14> 'char *' lvalue ->msg 0x7ff336014448
+    | | |   `-ImplicitCastExpr 0x7ff3360158e0 <col:7> 'gz_state *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7ff3360158b8 <col:7> 'gz_state *' lvalue ParmVar 0x7ff336015678 'state' 'gz_state *'
+    | | `-ImplicitCastExpr 0x7ff336015968 <col:21> 'char *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7ff336015930 <col:21> 'int' 0
+    | |-CompoundStmt 0x7ff336015c00 <line:39:5, line:42:5>
+    | | `-IfStmt 0x7ff336015bc8 <line:40:7, line:41:17>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-BinaryOperator 0x7ff336015a78 <line:40:11, col:26> 'int' '!='
+    | |   | |-ImplicitCastExpr 0x7ff336015a60 <col:11, col:18> 'int' <LValueToRValue>
+    | |   | | `-MemberExpr 0x7ff3360159e8 <col:11, col:18> 'int' lvalue ->err 0x7ff3360143e8
+    | |   | |   `-ImplicitCastExpr 0x7ff3360159d0 <col:11> 'gz_state *' <LValueToRValue>
+    | |   | |     `-DeclRefExpr 0x7ff3360159a8 <col:11> 'gz_state *' lvalue ParmVar 0x7ff336015678 'state' 'gz_state *'
+    | |   | `-UnaryOperator 0x7ff336015a40 <col:25, col:26> 'int' prefix '-'
+    | |   |   `-IntegerLiteral 0x7ff336015a20 <col:26> 'int' 4
+    | |   |-CallExpr 0x7ff336015b80 <line:41:2, col:17> 'void'
+    | |   | |-ImplicitCastExpr 0x7ff336015b68 <col:2> 'void (*)(char *)' <FunctionToPointerDecay>
+    | |   | | `-DeclRefExpr 0x7ff336015aa0 <col:2> 'void (char *)' Function 0x7ff3360149d0 'foo' 'void (char *)'
+    | |   | `-ImplicitCastExpr 0x7ff336015bb0 <col:7, col:14> 'char *' <LValueToRValue>
+    | |   |   `-MemberExpr 0x7ff336015b08 <col:7, col:14> 'char *' lvalue ->msg 0x7ff336014448
+    | |   |     `-ImplicitCastExpr 0x7ff336015af0 <col:7> 'gz_state *' <LValueToRValue>
+    | |   |       `-DeclRefExpr 0x7ff336015ac8 <col:7> 'gz_state *' lvalue ParmVar 0x7ff336015678 'state' 'gz_state *'
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff336015d08 <line:43:3, line:44:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff336015cc8 <line:43:7, col:14> 'int' '=='
+    | | |-ImplicitCastExpr 0x7ff336015c98 <col:7> 'char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff336015c50 <col:7> 'char *' lvalue ParmVar 0x7ff336015768 'msg' 'char *'
+    | | `-ImplicitCastExpr 0x7ff336015cb0 <col:14> 'char *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7ff336015c78 <col:14> 'int' 0
+    | |-ReturnStmt 0x7ff336015cf0 <line:44:5>
+    | `-<<<NULL>>>
+    `-CallExpr 0x7ff336015e50 <line:45:3, col:23> 'void'
+      |-ImplicitCastExpr 0x7ff336015e38 <col:3> 'void (*)(char *, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff336015d40 <col:3> 'void (char *, char *)' Function 0x7ff336014be0 'bar' 'void (char *, char *)'
+      |-ImplicitCastExpr 0x7ff336015e88 <col:8, col:15> 'char *' <LValueToRValue>
+      | `-MemberExpr 0x7ff336015da8 <col:8, col:15> 'char *' lvalue ->msg 0x7ff336014448
+      |   `-ImplicitCastExpr 0x7ff336015d90 <col:8> 'gz_state *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ff336015d68 <col:8> 'gz_state *' lvalue ParmVar 0x7ff336015678 'state' 'gz_state *'
+      `-ImplicitCastExpr 0x7ff336015ea0 <col:20> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff336015de0 <col:20> 'char *' lvalue ParmVar 0x7ff336015768 'msg' 'char *'

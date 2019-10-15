@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fd8c582b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd8c6007a68 <../Data/C2AST/pr65540.c:1:1, line:9:1> line:1:13 func1 'long double (long double)'
+| |-ParmVarDecl 0x7fd8c582bf78 <col:20, col:32> col:32 used x 'long double'
+| `-CompoundStmt 0x7fd8c6007e28 <line:2:1, line:9:1>
+|   `-IfStmt 0x7fd8c6007df0 <line:3:3, line:8:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd8c6007bc8 <line:3:7, col:11> 'int' '>'
+|     | |-ImplicitCastExpr 0x7fd8c6007b98 <col:7> 'long double' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd8c6007b50 <col:7> 'long double' lvalue ParmVar 0x7fd8c582bf78 'x' 'long double'
+|     | `-ImplicitCastExpr 0x7fd8c6007bb0 <col:11> 'long double' <FloatingCast>
+|     |   `-FloatingLiteral 0x7fd8c6007b78 <col:11> 'double' 0.000000e+00
+|     |-ReturnStmt 0x7fd8c6007c30 <line:4:5, col:12>
+|     | `-ImplicitCastExpr 0x7fd8c6007c18 <col:12> 'long double' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd8c6007bf0 <col:12> 'long double' lvalue ParmVar 0x7fd8c582bf78 'x' 'long double'
+|     `-IfStmt 0x7fd8c6007db8 <line:5:8, line:8:12>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7fd8c6007cc0 <line:5:12, col:16> 'int' '<'
+|       | |-ImplicitCastExpr 0x7fd8c6007c90 <col:12> 'long double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fd8c6007c48 <col:12> 'long double' lvalue ParmVar 0x7fd8c582bf78 'x' 'long double'
+|       | `-ImplicitCastExpr 0x7fd8c6007ca8 <col:16> 'long double' <FloatingCast>
+|       |   `-FloatingLiteral 0x7fd8c6007c70 <col:16> 'double' 0.000000e+00
+|       |-ReturnStmt 0x7fd8c6007d48 <line:6:5, col:13>
+|       | `-UnaryOperator 0x7fd8c6007d28 <col:12, col:13> 'long double' prefix '-'
+|       |   `-ImplicitCastExpr 0x7fd8c6007d10 <col:13> 'long double' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fd8c6007ce8 <col:13> 'long double' lvalue ParmVar 0x7fd8c582bf78 'x' 'long double'
+|       `-ReturnStmt 0x7fd8c6007da0 <line:8:5, col:12>
+|         `-ImplicitCastExpr 0x7fd8c6007d88 <col:12> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd8c6007d60 <col:12> 'long double' lvalue ParmVar 0x7fd8c582bf78 'x' 'long double'
+`-FunctionDecl 0x7fd8c6007ee8 <line:11:1, line:19:1> line:11:13 func2 'long double (long double)'
+  |-ParmVarDecl 0x7fd8c6007e58 <col:20, col:32> col:32 used x 'long double'
+  `-CompoundStmt 0x7fd8c6008268 <line:12:1, line:19:1>
+    `-IfStmt 0x7fd8c6008230 <line:13:3, line:18:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd8c6008008 <line:13:7, col:11> 'int' '>'
+      | |-ImplicitCastExpr 0x7fd8c6007fd8 <col:7> 'long double' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd8c6007f90 <col:7> 'long double' lvalue ParmVar 0x7fd8c6007e58 'x' 'long double'
+      | `-ImplicitCastExpr 0x7fd8c6007ff0 <col:11> 'long double' <FloatingCast>
+      |   `-FloatingLiteral 0x7fd8c6007fb8 <col:11> 'double' 0.000000e+00
+      |-ReturnStmt 0x7fd8c6008070 <line:14:5, col:12>
+      | `-ImplicitCastExpr 0x7fd8c6008058 <col:12> 'long double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd8c6008030 <col:12> 'long double' lvalue ParmVar 0x7fd8c6007e58 'x' 'long double'
+      `-IfStmt 0x7fd8c60081f8 <line:15:8, line:18:12>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fd8c6008100 <line:15:12, col:16> 'int' '<'
+        | |-ImplicitCastExpr 0x7fd8c60080d0 <col:12> 'long double' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fd8c6008088 <col:12> 'long double' lvalue ParmVar 0x7fd8c6007e58 'x' 'long double'
+        | `-ImplicitCastExpr 0x7fd8c60080e8 <col:16> 'long double' <FloatingCast>
+        |   `-FloatingLiteral 0x7fd8c60080b0 <col:16> 'double' 0.000000e+00
+        |-ReturnStmt 0x7fd8c6008188 <line:16:5, col:13>
+        | `-UnaryOperator 0x7fd8c6008168 <col:12, col:13> 'long double' prefix '-'
+        |   `-ImplicitCastExpr 0x7fd8c6008150 <col:13> 'long double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd8c6008128 <col:13> 'long double' lvalue ParmVar 0x7fd8c6007e58 'x' 'long double'
+        `-ReturnStmt 0x7fd8c60081e0 <line:18:5, col:12>
+          `-ImplicitCastExpr 0x7fd8c60081c8 <col:12> 'long double' <LValueToRValue>
+            `-DeclRefExpr 0x7fd8c60081a0 <col:12> 'long double' lvalue ParmVar 0x7fd8c6007e58 'x' 'long double'

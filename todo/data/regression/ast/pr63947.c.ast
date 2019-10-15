@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fa17c02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa17c8142d8 <../Data/C2AST/pr63947.c:6:1, line:9:1> line:6:13 foo 'long double (unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7fa17c02c978 <col:18, col:27> col:27 used a 'unsigned int'
+  |-ParmVarDecl 0x7fa17c814200 <col:30, col:39> col:39 used b 'unsigned int'
+  `-CompoundStmt 0x7fa17c814508 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fa17c8144f0 <line:8:3, col:18>
+      `-ImplicitCastExpr 0x7fa17c8144d8 <col:10, col:18> 'long double' <IntegralToFloating>
+        `-BinaryOperator 0x7fa17c8144b0 <col:10, col:18> 'int' '<'
+          |-BinaryOperator 0x7fa17c814448 <col:10, col:14> 'unsigned int' '+'
+          | |-ImplicitCastExpr 0x7fa17c814418 <col:10> 'unsigned int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fa17c8143c8 <col:10> 'unsigned int' lvalue ParmVar 0x7fa17c02c978 'a' 'unsigned int'
+          | `-ImplicitCastExpr 0x7fa17c814430 <col:14> 'unsigned int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fa17c8143f0 <col:14> 'unsigned int' lvalue ParmVar 0x7fa17c814200 'b' 'unsigned int'
+          `-ImplicitCastExpr 0x7fa17c814498 <col:18> 'unsigned int' <LValueToRValue>
+            `-DeclRefExpr 0x7fa17c814470 <col:18> 'unsigned int' lvalue ParmVar 0x7fa17c02c978 'a' 'unsigned int'

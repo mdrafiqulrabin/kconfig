@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fc58a02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc58a06d860 <../Data/C2AST/pr46932.c:6:1, col:22> col:13 used foo 'void (char *)' extern
+| `-ParmVarDecl 0x7fc58a02c978 <col:17, col:21> col:22 'char *'
+`-FunctionDecl 0x7fc58a06da20 <line:7:1, line:11:1> line:7:6 t01 'void (char)'
+  |-ParmVarDecl 0x7fc58a06d958 <col:10, col:15> col:15 used t 'char'
+  `-CompoundStmt 0x7fc58a06dc70 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fc58a06db78 <line:9:3, col:13>
+    | `-VarDecl 0x7fc58a06dad8 <col:3, col:12> col:8 used c 'char' cinit
+    |   `-ImplicitCastExpr 0x7fc58a06db60 <col:12> 'char' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc58a06db38 <col:12> 'char' lvalue ParmVar 0x7fc58a06d958 't' 'char'
+    `-CallExpr 0x7fc58a06dc40 <line:10:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fc58a06dc28 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc58a06db90 <col:3> 'void (char *)' Function 0x7fc58a06d860 'foo' 'void (char *)'
+      `-UnaryOperator 0x7fc58a06dbe0 <col:7, col:8> 'char *' prefix '&'
+        `-DeclRefExpr 0x7fc58a06dbb8 <col:8> 'char' lvalue Var 0x7fc58a06dad8 'c' 'char'

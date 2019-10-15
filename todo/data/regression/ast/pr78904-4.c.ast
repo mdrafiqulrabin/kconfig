@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fe32f82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe32f82c978 <../Data/C2AST/pr78904-4.c:6:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fe32f82bea0 'unsigned long'
+|-RecordDecl 0x7fe32f86d800 <line:8:1, line:13:1> line:8:8 struct S1 definition
+| |-FieldDecl 0x7fe32f86d8c8 <line:10:3, col:17> col:17 pad1 'unsigned char'
+| |-FieldDecl 0x7fe32f86d928 <line:11:3, col:17> col:17 referenced val 'unsigned char'
+| `-FieldDecl 0x7fe32f86d988 <line:12:3, col:18> col:18 pad2 'unsigned short'
+|-VarDecl 0x7fe32f86da50 <line:15:1, col:27> col:22 used t 'unsigned char [256]' extern
+`-FunctionDecl 0x7fe32f86dce0 <line:17:1, line:20:1> line:17:6 foo 'void (struct S1, size_t)'
+  |-ParmVarDecl 0x7fe32f86db40 <col:11, col:21> col:21 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fe32f86dbd0 <col:24, col:31> col:31 used i 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fe32f86df58 <line:18:1, line:20:1>
+    `-BinaryOperator 0x7fe32f86ded8 <line:19:3, col:12> 'unsigned char' '='
+      |-ArraySubscriptExpr 0x7fe32f86de38 <col:3, col:6> 'unsigned char' lvalue
+      | |-ImplicitCastExpr 0x7fe32f86de08 <col:3> 'unsigned char *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7fe32f86dd90 <col:3> 'unsigned char [256]' lvalue Var 0x7fe32f86da50 't' 'unsigned char [256]'
+      | `-ImplicitCastExpr 0x7fe32f86de20 <col:5> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe32f86ddb8 <col:5> 'size_t':'unsigned long' lvalue ParmVar 0x7fe32f86dbd0 'i' 'size_t':'unsigned long'
+      `-ImplicitCastExpr 0x7fe32f86dec0 <col:10, col:12> 'unsigned char' <LValueToRValue>
+        `-MemberExpr 0x7fe32f86de88 <col:10, col:12> 'unsigned char' lvalue .val 0x7fe32f86d928
+          `-DeclRefExpr 0x7fe32f86de60 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fe32f86db40 'a' 'struct S1':'struct S1'

@@ -1,0 +1,20 @@
+../Data/C2AST/pr17730-1.c:5:11: error: cannot take the address of an rvalue of type 'int'
+char *p = &'C';  
+          ^~~~
+1 error generated.
+TranslationUnitDecl 0x7fe60782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe60782c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe60782bf80 '__int128'
+|-TypedefDecl 0x7fe60782c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe60782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe60782c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe60782c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe60782c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe60782c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe60782c600 'char *'
+|   `-BuiltinType 0x7fe60782bd80 'char'
+|-TypedefDecl 0x7fe60782c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe60782c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe60782c720 'struct __va_list_tag'
+|     `-Record 0x7fe60782c698 '__va_list_tag'
+`-VarDecl 0x7fe60782c978 <../Data/C2AST/pr17730-1.c:5:1, col:7> col:7 p 'char *'

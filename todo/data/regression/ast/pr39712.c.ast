@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f9b3d82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9b3e014270 <../Data/C2AST/pr39712.c:3:1, col:19> col:5 used is_table 'int [2][16]'
+|-VarDecl 0x7f9b3e0143f0 <line:4:1, col:26> col:5 is_table_lsf 'int [2][2][16]'
+`-FunctionDecl 0x7f9b3e014498 <line:5:1, line:9:1> line:5:6 compute_stereo 'void ()'
+  `-CompoundStmt 0x7f9b3e014728 <line:6:1, line:9:1>
+    |-DeclStmt 0x7f9b3e014680 <line:7:3, col:20>
+    | `-VarDecl 0x7f9b3e014620 <col:3, col:19> col:9 used is_tab 'int (*)[16]'
+    `-BinaryOperator 0x7f9b3e014700 <line:8:3, col:12> 'int (*)[16]' '='
+      |-DeclRefExpr 0x7f9b3e014698 <col:3> 'int (*)[16]' lvalue Var 0x7f9b3e014620 'is_tab' 'int (*)[16]'
+      `-ImplicitCastExpr 0x7f9b3e0146e8 <col:12> 'int (*)[16]' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f9b3e0146c0 <col:12> 'int [2][16]' lvalue Var 0x7f9b3e014270 'is_table' 'int [2][16]'

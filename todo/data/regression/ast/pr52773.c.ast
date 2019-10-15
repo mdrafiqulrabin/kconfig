@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fe1d80128e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe1d8013560 <../Data/C2AST/pr52773.c:3:1, line:6:1> line:3:8 struct s definition
+| |-FieldDecl 0x7fe1d7827838 <line:4:5, col:11> col:11 referenced x 'short'
+| `-FieldDecl 0x7fe1d7827900 <line:5:5, col:17> col:11 _pad 'short [2]'
+|-VarDecl 0x7fe1d7827960 <line:8:1, col:14> col:14 used mat_a_x 'short' static
+`-FunctionDecl 0x7fe1d7827d40 <line:10:1, line:16:1> line:10:6 transform 'void (const struct s *, struct s *, int)'
+  |-ParmVarDecl 0x7fe1d7827ab0 <col:16, col:32> col:32 used src 'const struct s *'
+  |-ParmVarDecl 0x7fe1d7827b90 <col:37, col:47> col:47 used dst 'struct s *'
+  |-ParmVarDecl 0x7fe1d7827c08 <col:52, col:56> col:56 used n 'int'
+  `-CompoundStmt 0x7fe1d7828338 <line:11:1, line:16:1>
+    |-DeclStmt 0x7fe1d7827e70 <line:12:5, col:10>
+    | `-VarDecl 0x7fe1d7827e10 <col:5, col:9> col:9 used i 'int'
+    `-ForStmt 0x7fe1d7828300 <line:14:5, line:15:37>
+      |-BinaryOperator 0x7fe1d7827ed0 <line:14:10, col:14> 'int' '='
+      | |-DeclRefExpr 0x7fe1d7827e88 <col:10> 'int' lvalue Var 0x7fe1d7827e10 'i' 'int'
+      | `-IntegerLiteral 0x7fe1d7827eb0 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe1d7827f78 <col:17, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe1d7827f48 <col:17> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe1d7827ef8 <col:17> 'int' lvalue Var 0x7fe1d7827e10 'i' 'int'
+      | `-ImplicitCastExpr 0x7fe1d7827f60 <col:21> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe1d7827f20 <col:21> 'int' lvalue ParmVar 0x7fe1d7827c08 'n' 'int'
+      |-UnaryOperator 0x7fe1d7827fc8 <col:24, col:26> 'int' prefix '++'
+      | `-DeclRefExpr 0x7fe1d7827fa0 <col:26> 'int' lvalue Var 0x7fe1d7827e10 'i' 'int'
+      `-BinaryOperator 0x7fe1d78282d8 <line:15:2, col:37> 'short' '='
+        |-MemberExpr 0x7fe1d7828090 <col:2, col:9> 'short' lvalue .x 0x7fe1d7827838
+        | `-ArraySubscriptExpr 0x7fe1d7828068 <col:2, col:7> 'struct s':'struct s' lvalue
+        |   |-ImplicitCastExpr 0x7fe1d7828038 <col:2> 'struct s *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fe1d7827fe8 <col:2> 'struct s *' lvalue ParmVar 0x7fe1d7827b90 'dst' 'struct s *'
+        |   `-ImplicitCastExpr 0x7fe1d7828050 <col:6> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fe1d7828010 <col:6> 'int' lvalue Var 0x7fe1d7827e10 'i' 'int'
+        `-ImplicitCastExpr 0x7fe1d78282c0 <col:13, col:37> 'short' <IntegralCast>
+          `-BinaryOperator 0x7fe1d7828298 <col:13, col:37> 'int' '>>'
+            |-ParenExpr 0x7fe1d7828258 <col:13, col:32> 'int'
+            | `-BinaryOperator 0x7fe1d7828230 <col:14, col:25> 'int' '*'
+            |   |-ImplicitCastExpr 0x7fe1d78281e8 <col:14, col:21> 'int' <IntegralCast>
+            |   | `-ImplicitCastExpr 0x7fe1d78281d0 <col:14, col:21> 'short' <LValueToRValue>
+            |   |   `-MemberExpr 0x7fe1d7828170 <col:14, col:21> 'const short' lvalue .x 0x7fe1d7827838
+            |   |     `-ArraySubscriptExpr 0x7fe1d7828148 <col:14, col:19> 'const struct s':'const struct s' lvalue
+            |   |       |-ImplicitCastExpr 0x7fe1d7828118 <col:14> 'const struct s *' <LValueToRValue>
+            |   |       | `-DeclRefExpr 0x7fe1d78280c8 <col:14> 'const struct s *' lvalue ParmVar 0x7fe1d7827ab0 'src' 'const struct s *'
+            |   |       `-ImplicitCastExpr 0x7fe1d7828130 <col:18> 'int' <LValueToRValue>
+            |   |         `-DeclRefExpr 0x7fe1d78280f0 <col:18> 'int' lvalue Var 0x7fe1d7827e10 'i' 'int'
+            |   `-ImplicitCastExpr 0x7fe1d7828218 <col:25> 'int' <IntegralCast>
+            |     `-ImplicitCastExpr 0x7fe1d7828200 <col:25> 'short' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fe1d78281a8 <col:25> 'short' lvalue Var 0x7fe1d7827960 'mat_a_x' 'short'
+            `-IntegerLiteral 0x7fe1d7828278 <col:37> 'int' 6

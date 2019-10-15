@@ -1,0 +1,93 @@
+TranslationUnitDecl 0x7ff99c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff99c86da00 <../Data/C2AST/pr35616.c:3:1, line:6:14> line:3:16 referenced listener_fun 'void (*)(int, int, int)'
+| `-PointerType 0x7ff99c86d990 'void (*)(int, int, int)'
+|   `-ParenType 0x7ff99c86d930 'void (int, int, int)' sugar
+|     `-FunctionProtoType 0x7ff99c86d8e0 'void (int, int, int)' cdecl
+|       |-BuiltinType 0x7ff99c82bd40 'void'
+|       |-BuiltinType 0x7ff99c82bde0 'int'
+|       |-BuiltinType 0x7ff99c82bde0 'int'
+|       `-BuiltinType 0x7ff99c82bde0 'int'
+|-RecordDecl 0x7ff99c86da58 <line:8:1, line:17:1> line:8:8 struct data_t definition
+| |-FieldDecl 0x7ff99c86db18 <line:10:3, col:7> col:7 referenced a 'int'
+| |-FieldDecl 0x7ff99c86db90 <line:12:3, col:16> col:16 referenced listener 'listener_fun':'void (*)(int, int, int)'
+| |-FieldDecl 0x7ff99c86dbf0 <line:14:3, col:7> col:7 referenced b 'int'
+| |-FieldDecl 0x7ff99c86dc50 <line:15:3, col:7> col:7 referenced c 'int'
+| `-FieldDecl 0x7ff99c86dcb0 <line:16:3, col:7> col:7 referenced d 'int'
+|-FunctionDecl 0x7ff99c86ddf0 <line:19:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff99c86de90 prev 0x7ff99c86ddf0 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff99c86e080 <line:20:1, col:51> col:6 used function_calling_listener 'void (struct data_t)'
+| `-ParmVarDecl 0x7ff99c86df80 <col:33, col:47> col:47 data 'struct data_t':'struct data_t'
+|-FunctionDecl 0x7ff99c86e210 prev 0x7ff99c86e080 <line:22:1, line:25:1> line:22:6 used function_calling_listener 'void (struct data_t)'
+| |-ParmVarDecl 0x7ff99c86e188 <col:33, col:47> col:47 used data 'struct data_t':'struct data_t'
+| `-CompoundStmt 0x7ff99c86e4d8 <line:23:1, line:25:1>
+|   `-CallExpr 0x7ff99c86e450 <line:24:3, col:39> 'void'
+|     |-ImplicitCastExpr 0x7ff99c86e438 <col:3, col:8> 'listener_fun':'void (*)(int, int, int)' <LValueToRValue>
+|     | `-MemberExpr 0x7ff99c86e2e0 <col:3, col:8> 'listener_fun':'void (*)(int, int, int)' lvalue .listener 0x7ff99c86db90
+|     |   `-DeclRefExpr 0x7ff99c86e2b8 <col:3> 'struct data_t':'struct data_t' lvalue ParmVar 0x7ff99c86e188 'data' 'struct data_t':'struct data_t'
+|     |-ImplicitCastExpr 0x7ff99c86e490 <col:17, col:22> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7ff99c86e340 <col:17, col:22> 'int' lvalue .a 0x7ff99c86db18
+|     |   `-DeclRefExpr 0x7ff99c86e318 <col:17> 'struct data_t':'struct data_t' lvalue ParmVar 0x7ff99c86e188 'data' 'struct data_t':'struct data_t'
+|     |-ImplicitCastExpr 0x7ff99c86e4a8 <col:25, col:30> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7ff99c86e3a0 <col:25, col:30> 'int' lvalue .c 0x7ff99c86dc50
+|     |   `-DeclRefExpr 0x7ff99c86e378 <col:25> 'struct data_t':'struct data_t' lvalue ParmVar 0x7ff99c86e188 'data' 'struct data_t':'struct data_t'
+|     `-ImplicitCastExpr 0x7ff99c86e4c0 <col:33, col:38> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7ff99c86e400 <col:33, col:38> 'int' lvalue .d 0x7ff99c86dcb0
+|         `-DeclRefExpr 0x7ff99c86e3d8 <col:33> 'struct data_t':'struct data_t' lvalue ParmVar 0x7ff99c86e188 'data' 'struct data_t':'struct data_t'
+|-FunctionDecl 0x7ff99c86e690 <line:27:1, line:31:1> line:27:6 used my_listener 'void (int, int, int)'
+| |-ParmVarDecl 0x7ff99c86e508 <col:18, col:22> col:22 used a 'int'
+| |-ParmVarDecl 0x7ff99c86e580 <col:25, col:29> col:29 used b 'int'
+| |-ParmVarDecl 0x7ff99c86e5f8 <col:32, col:36> col:36 used c 'int'
+| `-CompoundStmt 0x7ff99c86ea00 <line:28:1, line:31:1>
+|   `-IfStmt 0x7ff99c86e9c8 <line:29:3, line:30:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff99c86e910 <line:29:7, col:34> 'int' '||'
+|     | |-BinaryOperator 0x7ff99c86e860 <col:7, col:23> 'int' '||'
+|     | | |-BinaryOperator 0x7ff99c86e7a8 <col:7, col:12> 'int' '!='
+|     | | | |-ImplicitCastExpr 0x7ff99c86e790 <col:7> 'int' <LValueToRValue>
+|     | | | | `-DeclRefExpr 0x7ff99c86e748 <col:7> 'int' lvalue ParmVar 0x7ff99c86e508 'a' 'int'
+|     | | | `-IntegerLiteral 0x7ff99c86e770 <col:12> 'int' 42
+|     | | `-BinaryOperator 0x7ff99c86e838 <col:18, col:23> 'int' '!='
+|     | |   |-ImplicitCastExpr 0x7ff99c86e820 <col:18> 'int' <LValueToRValue>
+|     | |   | `-DeclRefExpr 0x7ff99c86e7d0 <col:18> 'int' lvalue ParmVar 0x7ff99c86e580 'b' 'int'
+|     | |   `-IntegerLiteral 0x7ff99c86e800 <col:23> 'int' 44
+|     | `-BinaryOperator 0x7ff99c86e8e8 <col:29, col:34> 'int' '!='
+|     |   |-ImplicitCastExpr 0x7ff99c86e8d0 <col:29> 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7ff99c86e888 <col:29> 'int' lvalue ParmVar 0x7ff99c86e5f8 'c' 'int'
+|     |   `-IntegerLiteral 0x7ff99c86e8b0 <col:34> 'int' 45
+|     |-CallExpr 0x7ff99c86e9a0 <line:30:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7ff99c86e988 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ff99c86e938 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff99c86de90 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ff99c86ea70 <line:33:1, line:43:1> line:33:5 main 'int ()'
+  `-CompoundStmt 0x7ff99c86f0c0 <line:34:1, line:43:1>
+    |-DeclStmt 0x7ff99c86eb90 <line:35:3, col:18>
+    | `-VarDecl 0x7ff99c86eb30 <col:3, col:17> col:17 used d 'struct data_t':'struct data_t'
+    |-BinaryOperator 0x7ff99c86ec28 <line:36:3, col:9> 'int' '='
+    | |-MemberExpr 0x7ff99c86ebd0 <col:3, col:5> 'int' lvalue .a 0x7ff99c86db18
+    | | `-DeclRefExpr 0x7ff99c86eba8 <col:3> 'struct data_t':'struct data_t' lvalue Var 0x7ff99c86eb30 'd' 'struct data_t':'struct data_t'
+    | `-IntegerLiteral 0x7ff99c86ec08 <col:9> 'int' 42
+    |-BinaryOperator 0x7ff99c86ed38 <line:37:3, col:9> 'int' '='
+    | |-MemberExpr 0x7ff99c86ece0 <col:3, col:5> 'int' lvalue .b 0x7ff99c86dbf0
+    | | `-DeclRefExpr 0x7ff99c86ecb8 <col:3> 'struct data_t':'struct data_t' lvalue Var 0x7ff99c86eb30 'd' 'struct data_t':'struct data_t'
+    | `-IntegerLiteral 0x7ff99c86ed18 <col:9> 'int' 43
+    |-BinaryOperator 0x7ff99c86ede0 <line:38:3, col:9> 'int' '='
+    | |-MemberExpr 0x7ff99c86ed88 <col:3, col:5> 'int' lvalue .c 0x7ff99c86dc50
+    | | `-DeclRefExpr 0x7ff99c86ed60 <col:3> 'struct data_t':'struct data_t' lvalue Var 0x7ff99c86eb30 'd' 'struct data_t':'struct data_t'
+    | `-IntegerLiteral 0x7ff99c86edc0 <col:9> 'int' 44
+    |-BinaryOperator 0x7ff99c86ee88 <line:39:3, col:9> 'int' '='
+    | |-MemberExpr 0x7ff99c86ee30 <col:3, col:5> 'int' lvalue .d 0x7ff99c86dcb0
+    | | `-DeclRefExpr 0x7ff99c86ee08 <col:3> 'struct data_t':'struct data_t' lvalue Var 0x7ff99c86eb30 'd' 'struct data_t':'struct data_t'
+    | `-IntegerLiteral 0x7ff99c86ee68 <col:9> 'int' 45
+    |-BinaryOperator 0x7ff99c86ef50 <line:40:3, col:16> 'listener_fun':'void (*)(int, int, int)' '='
+    | |-MemberExpr 0x7ff99c86eed8 <col:3, col:5> 'listener_fun':'void (*)(int, int, int)' lvalue .listener 0x7ff99c86db90
+    | | `-DeclRefExpr 0x7ff99c86eeb0 <col:3> 'struct data_t':'struct data_t' lvalue Var 0x7ff99c86eb30 'd' 'struct data_t':'struct data_t'
+    | `-ImplicitCastExpr 0x7ff99c86ef38 <col:16> 'void (*)(int, int, int)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7ff99c86ef10 <col:16> 'void (int, int, int)' Function 0x7ff99c86e690 'my_listener' 'void (int, int, int)'
+    |-CallExpr 0x7ff99c86f040 <line:41:3, col:31> 'void'
+    | |-ImplicitCastExpr 0x7ff99c86f028 <col:3> 'void (*)(struct data_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff99c86ef78 <col:3> 'void (struct data_t)' Function 0x7ff99c86e210 'function_calling_listener' 'void (struct data_t)'
+    | `-ImplicitCastExpr 0x7ff99c86f070 <col:30> 'struct data_t':'struct data_t' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff99c86efa0 <col:30> 'struct data_t':'struct data_t' lvalue Var 0x7ff99c86eb30 'd' 'struct data_t':'struct data_t'
+    `-ReturnStmt 0x7ff99c86f0a8 <line:42:3, col:10>
+      `-IntegerLiteral 0x7ff99c86f088 <col:10> 'int' 0

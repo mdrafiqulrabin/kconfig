@@ -1,0 +1,37 @@
+../Data/C2AST/pr77933-2.c:8:42: error: unknown register name 'lr' in asm
+  __asm__ volatile ("" : : : "r8", "r9", "lr");
+                                         ^
+../Data/C2AST/pr77933-2.c:24:11: error: unknown register name 'r0' in asm
+                  : : : "r0", "r4", "r5", "r6", "r7", "r8", "r10");
+                        ^
+2 errors generated.
+TranslationUnitDecl 0x7f963d02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f963d02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f963d02bf80 '__int128'
+|-TypedefDecl 0x7f963d02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f963d02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f963d02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f963d02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f963d02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f963d02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f963d02c600 'char *'
+|   `-BuiltinType 0x7f963d02bd80 'char'
+|-TypedefDecl 0x7f963d02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f963d02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f963d02c720 'struct __va_list_tag'
+|     `-Record 0x7f963d02c698 '__va_list_tag'
+|-FunctionDecl 0x7f963d06e820 <../Data/C2AST/pr77933-2.c:5:1, line:9:1> line:6:1 used clobber_lr_and_highregs 'void (void)'
+| |-CompoundStmt 0x7f963d06ea78 <line:7:1, line:9:1>
+| `-NoInlineAttr 0x7f963d06e8c0 <line:5:17>
+`-FunctionDecl 0x7f963d06eb58 <line:11:1, line:47:1> line:12:1 main 'int (void)'
+  `-CompoundStmt 0x7f963d06f260 <line:13:1, line:47:1>
+    |-DeclStmt 0x7f963d06eca0 <line:14:3, col:10>
+    | `-VarDecl 0x7f963d06ec40 <col:3, col:7> col:7 used ret 'int'
+    |-CallExpr 0x7f963d06efb0 <line:26:3, col:28> 'void'
+    | `-ImplicitCastExpr 0x7f963d06ef98 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f963d06ef48 <col:3> 'void (void)' Function 0x7f963d06e820 'clobber_lr_and_highregs' 'void (void)'
+    |-GCCAsmStmt 0x7f963d06f1a8 <line:28:3, line:45:21>
+    | `-DeclRefExpr 0x7f963d06f180 <col:13> 'int' lvalue Var 0x7f963d06ec40 'ret' 'int'
+    `-ReturnStmt 0x7f963d06f248 <line:46:3, col:10>
+      `-ImplicitCastExpr 0x7f963d06f230 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f963d06f208 <col:10> 'int' lvalue Var 0x7f963d06ec40 'ret' 'int'

@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fe33b82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe33b82c978 <../Data/C2AST/pr50092.c:4:1, col:14> col:14 used v 'volatile int'
+|-FunctionDecl 0x7fe33b862920 <line:6:1, col:22> col:6 used bar 'void (long double)'
+| `-ParmVarDecl 0x7fe33b862858 <col:11, col:16> col:22 'long double'
+|-FunctionDecl 0x7fe33b862ad0 <line:7:1, col:33> col:6 used baz 'void (_Complex long double *)'
+| `-ParmVarDecl 0x7fe33b862a08 <col:11, col:32> col:33 '_Complex long double *'
+`-FunctionDecl 0x7fe33b862c40 <line:9:1, line:15:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe33b863028 <line:11:1, line:15:1>
+    |-DeclStmt 0x7fe33b862db8 <line:12:3, col:36>
+    | `-VarDecl 0x7fe33b862d58 <col:3, col:35> col:24 used w '_Complex long double [100000000]'
+    |-CallExpr 0x7fe33b862f20 <line:13:3, col:38> 'void'
+    | |-ImplicitCastExpr 0x7fe33b862f08 <col:3> 'void (*)(long double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe33b862dd0 <col:3> 'void (long double)' Function 0x7fe33b862920 'bar' 'void (long double)'
+    | `-BinaryOperator 0x7fe33b862eb0 <col:8, col:26> 'long double' '/'
+    |   |-CStyleCastExpr 0x7fe33b862e50 <col:8, col:22> 'long double' <IntegralToFloating>
+    |   | `-ImplicitCastExpr 0x7fe33b862e38 <col:22> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fe33b862df8 <col:22> 'volatile int' lvalue Var 0x7fe33b82c978 'v' 'volatile int'
+    |   `-ImplicitCastExpr 0x7fe33b862e98 <col:26> 'long double' <FloatingCast>
+    |     `-FloatingLiteral 0x7fe33b862e78 <col:26> 'double' 2.147484e+09
+    `-CallExpr 0x7fe33b862fe0 <line:14:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fe33b862fc8 <col:3> 'void (*)(_Complex long double *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe33b862f50 <col:3> 'void (_Complex long double *)' Function 0x7fe33b862ad0 'baz' 'void (_Complex long double *)'
+      `-ImplicitCastExpr 0x7fe33b863010 <col:8> '_Complex long double *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fe33b862f78 <col:8> '_Complex long double [100000000]' lvalue Var 0x7fe33b862d58 'w' '_Complex long double [100000000]'

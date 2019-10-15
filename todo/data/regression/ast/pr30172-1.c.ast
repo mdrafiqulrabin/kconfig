@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fbe788068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbe7884ca60 <../Data/C2AST/pr30172-1.c:4:1, col:52> col:17 test1 '_Complex double (double)'
+| |-ParmVarDecl 0x7fbe78807578 <col:24, col:31> col:31 used x 'double'
+| `-CompoundStmt 0x7fbe7884cc00 <col:34, col:52>
+|   `-ReturnStmt 0x7fbe7884cbe8 <col:36, col:47>
+|     `-BinaryOperator 0x7fbe7884cbc0 <col:43, col:47> '_Complex double' '+'
+|       |-ImplicitCastExpr 0x7fbe7884cba8 <col:43> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fbe7884cb48 <col:43> 'double' lvalue ParmVar 0x7fbe78807578 'x' 'double'
+|       `-ImaginaryLiteral 0x7fbe7884cb90 <col:47> '_Complex double'
+|         `-FloatingLiteral 0x7fbe7884cb70 <col:47> 'double' 1.000000e+00
+|-FunctionDecl 0x7fbe7884ccb8 <line:5:1, col:56> col:17 test2 '_Complex double (double)'
+| |-ParmVarDecl 0x7fbe7884cc30 <col:24, col:31> col:31 used x 'double'
+| `-CompoundStmt 0x7fbe7884ce90 <col:34, col:56>
+|   `-ReturnStmt 0x7fbe7884ce78 <col:36, col:51>
+|     `-BinaryOperator 0x7fbe7884ce50 <col:43, col:51> '_Complex double' '+'
+|       |-ImplicitCastExpr 0x7fbe7884ce38 <col:43> '_Complex double' <FloatingRealToComplex>
+|       | `-ImplicitCastExpr 0x7fbe7884ce20 <col:43> 'double' <IntegralToFloating>
+|       |   `-IntegerLiteral 0x7fbe7884cd60 <col:43> 'int' 1
+|       `-BinaryOperator 0x7fbe7884cdf8 <col:47, col:51> '_Complex double' '*'
+|         |-ImplicitCastExpr 0x7fbe7884cde0 <col:47> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fbe7884cd80 <col:47> 'double' lvalue ParmVar 0x7fbe7884cc30 'x' 'double'
+|         `-ImaginaryLiteral 0x7fbe7884cdc8 <col:51> '_Complex double'
+|           `-FloatingLiteral 0x7fbe7884cda8 <col:51> 'double' 1.000000e+00
+|-FunctionDecl 0x7fbe7884d010 <line:6:1, col:66> col:17 test3 '_Complex double (double, double)'
+| |-ParmVarDecl 0x7fbe7884cec0 <col:24, col:31> col:31 used x 'double'
+| |-ParmVarDecl 0x7fbe7884cf38 <col:34, col:41> col:41 used y 'double'
+| `-CompoundStmt 0x7fbe7884d1e0 <col:44, col:66>
+|   `-ReturnStmt 0x7fbe7884d1c8 <col:46, col:61>
+|     `-BinaryOperator 0x7fbe7884d1a0 <col:53, col:61> '_Complex double' '+'
+|       |-ImplicitCastExpr 0x7fbe7884d188 <col:53> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fbe7884d0c0 <col:53> 'double' lvalue ParmVar 0x7fbe7884cec0 'x' 'double'
+|       `-BinaryOperator 0x7fbe7884d160 <col:57, col:61> '_Complex double' '*'
+|         |-ImplicitCastExpr 0x7fbe7884d148 <col:57> 'double' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fbe7884d0e8 <col:57> 'double' lvalue ParmVar 0x7fbe7884cf38 'y' 'double'
+|         `-ImaginaryLiteral 0x7fbe7884d130 <col:61> '_Complex double'
+|           `-FloatingLiteral 0x7fbe7884d110 <col:61> 'double' 1.000000e+00
+|-FunctionDecl 0x7fbe7884d318 <line:7:1, col:74> col:17 test4 '_Complex double (double, double)'
+| |-ParmVarDecl 0x7fbe7884d210 <col:24, col:31> col:31 used x 'double'
+| |-ParmVarDecl 0x7fbe7884d288 <col:34, col:41> col:41 used y 'double'
+| `-CompoundStmt 0x7fbe7884d568 <col:44, col:74>
+|   `-ReturnStmt 0x7fbe7884d550 <col:46, col:69>
+|     `-BinaryOperator 0x7fbe7884d528 <col:53, col:69> '_Complex double' '*'
+|       |-ParenExpr 0x7fbe7884d4d0 <col:53, col:65> '_Complex double'
+|       | `-BinaryOperator 0x7fbe7884d4a8 <col:54, col:62> '_Complex double' '+'
+|       |   |-ImplicitCastExpr 0x7fbe7884d490 <col:54> 'double' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fbe7884d3c8 <col:54> 'double' lvalue ParmVar 0x7fbe7884d210 'x' 'double'
+|       |   `-BinaryOperator 0x7fbe7884d468 <col:58, col:62> '_Complex double' '*'
+|       |     |-ImplicitCastExpr 0x7fbe7884d450 <col:58> 'double' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7fbe7884d3f0 <col:58> 'double' lvalue ParmVar 0x7fbe7884d288 'y' 'double'
+|       |     `-ImaginaryLiteral 0x7fbe7884d438 <col:62> '_Complex double'
+|       |       `-FloatingLiteral 0x7fbe7884d418 <col:62> 'double' 1.000000e+00
+|       `-ImaginaryLiteral 0x7fbe7884d510 <col:69> '_Complex double'
+|         `-FloatingLiteral 0x7fbe7884d4f0 <col:69> 'double' 1.000000e+00
+`-FunctionDecl 0x7fbe7884d6a0 <line:8:1, col:75> col:17 test5 '_Complex double (double, double)'
+  |-ParmVarDecl 0x7fbe7884d598 <col:24, col:31> col:31 used x 'double'
+  |-ParmVarDecl 0x7fbe7884d610 <col:34, col:41> col:41 used y 'double'
+  `-CompoundStmt 0x7fbe7884d910 <col:44, col:75>
+    `-ReturnStmt 0x7fbe7884d8f8 <col:46, col:70>
+      `-BinaryOperator 0x7fbe7884d8d0 <col:53, col:70> '_Complex double' '*'
+        |-ParenExpr 0x7fbe7884d858 <col:53, col:65> '_Complex double'
+        | `-BinaryOperator 0x7fbe7884d830 <col:54, col:62> '_Complex double' '+'
+        |   |-ImplicitCastExpr 0x7fbe7884d818 <col:54> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fbe7884d750 <col:54> 'double' lvalue ParmVar 0x7fbe7884d598 'x' 'double'
+        |   `-BinaryOperator 0x7fbe7884d7f0 <col:58, col:62> '_Complex double' '*'
+        |     |-ImplicitCastExpr 0x7fbe7884d7d8 <col:58> 'double' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fbe7884d778 <col:58> 'double' lvalue ParmVar 0x7fbe7884d610 'y' 'double'
+        |     `-ImaginaryLiteral 0x7fbe7884d7c0 <col:62> '_Complex double'
+        |       `-FloatingLiteral 0x7fbe7884d7a0 <col:62> 'double' 1.000000e+00
+        `-UnaryOperator 0x7fbe7884d8b0 <col:69, col:70> '_Complex double' prefix '-'
+          `-ImaginaryLiteral 0x7fbe7884d898 <col:70> '_Complex double'
+            `-FloatingLiteral 0x7fbe7884d878 <col:70> 'double' 1.000000e+00

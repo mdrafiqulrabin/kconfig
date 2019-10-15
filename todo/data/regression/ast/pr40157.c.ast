@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7ff35482bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff355014260 <../Data/C2AST/pr40157.c:4:1, col:19> col:5 used buffer 'int [65536]'
+`-FunctionDecl 0x7ff3550143c8 <line:5:1, line:13:1> line:5:5 main 'int (void)'
+  `-CompoundStmt 0x7ff355014a90 <line:6:1, line:13:1>
+    |-DeclStmt 0x7ff355014580 <line:7:5, col:23>
+    | `-VarDecl 0x7ff3550144e0 <col:5, col:17> col:10 used dest 'int *' cinit
+    |   `-ImplicitCastExpr 0x7ff355014568 <col:17> 'int *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7ff355014540 <col:17> 'int [65536]' lvalue Var 0x7ff355014260 'buffer' 'int [65536]'
+    |-DeclStmt 0x7ff3550146a0 <line:8:5, col:13>
+    | |-VarDecl 0x7ff3550145b0 <col:5, col:9> col:9 used x 'int'
+    | `-VarDecl 0x7ff355014628 <col:5, col:12> col:12 used y 'int'
+    |-ForStmt 0x7ff355014a20 <line:9:5, line:11:23>
+    | |-BinaryOperator 0x7ff355014700 <line:9:9, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7ff3550146b8 <col:9> 'int' lvalue Var 0x7ff3550145b0 'x' 'int'
+    | | `-IntegerLiteral 0x7ff3550146e0 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff355014788 <col:16, col:20> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff355014770 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff355014728 <col:16> 'int' lvalue Var 0x7ff3550145b0 'x' 'int'
+    | | `-IntegerLiteral 0x7ff355014750 <col:20> 'int' 256
+    | |-UnaryOperator 0x7ff3550147d8 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff3550147b0 <col:25> 'int' lvalue Var 0x7ff3550145b0 'x' 'int'
+    | `-ForStmt 0x7ff3550149e8 <line:10:9, line:11:23>
+    |   |-BinaryOperator 0x7ff355014840 <line:10:13, col:17> 'int' '='
+    |   | |-DeclRefExpr 0x7ff3550147f8 <col:13> 'int' lvalue Var 0x7ff355014628 'y' 'int'
+    |   | `-IntegerLiteral 0x7ff355014820 <col:17> 'int' 0
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7ff3550148c8 <col:20, col:24> 'int' '<'
+    |   | |-ImplicitCastExpr 0x7ff3550148b0 <col:20> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7ff355014868 <col:20> 'int' lvalue Var 0x7ff355014628 'y' 'int'
+    |   | `-IntegerLiteral 0x7ff355014890 <col:24> 'int' 256
+    |   |-UnaryOperator 0x7ff355014918 <col:29, col:30> 'int' postfix '++'
+    |   | `-DeclRefExpr 0x7ff3550148f0 <col:29> 'int' lvalue Var 0x7ff355014628 'y' 'int'
+    |   `-BinaryOperator 0x7ff3550149c0 <line:11:13, col:23> 'int' '='
+    |     |-UnaryOperator 0x7ff355014980 <col:13, col:18> 'int' lvalue prefix '*'
+    |     | `-UnaryOperator 0x7ff355014960 <col:14, col:18> 'int *' postfix '++'
+    |     |   `-DeclRefExpr 0x7ff355014938 <col:14> 'int *' lvalue Var 0x7ff3550144e0 'dest' 'int *'
+    |     `-IntegerLiteral 0x7ff3550149a0 <col:23> 'int' 0
+    `-ReturnStmt 0x7ff355014a78 <line:12:5, col:12>
+      `-IntegerLiteral 0x7ff355014a58 <col:12> 'int' 0

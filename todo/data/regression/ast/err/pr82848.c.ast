@@ -1,0 +1,42 @@
+../Data/C2AST/pr82848.c:11:20: error: use of unknown builtin '__builtin_vec_madd' [-Wimplicit-function-declaration]
+  vector float b = __builtin_vec_madd (b, a, (vector float) { C, C, C, C });     
+                   ^
+1 error generated.
+TranslationUnitDecl 0x7f81af02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f81af02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f81af02bf80 '__int128'
+|-TypedefDecl 0x7f81af02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f81af02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f81af02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f81af02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f81af02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f81af02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f81af02c600 'char *'
+|   `-BuiltinType 0x7f81af02bd80 'char'
+|-TypedefDecl 0x7f81af02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f81af02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f81af02c720 'struct __va_list_tag'
+|     `-Record 0x7f81af02c698 '__va_list_tag'
+`-FunctionDecl 0x7f81af020668 <../Data/C2AST/pr82848.c:6:16, line:13:1> line:9:1 foo 'float (float)'
+  |-ParmVarDecl 0x7f81af02c998 <line:6:16, line:9:19> col:19 used a 'float'
+  `-CompoundStmt 0x7f81af020c78 <line:10:1, line:13:1>
+    |-DeclStmt 0x7f81af020c08 <line:6:16, line:11:76>
+    | `-VarDecl 0x7f81af020778 <line:6:16, line:11:75> col:16 used b 'float' cinit
+    |   `-ImplicitCastExpr 0x7f81af020bf0 <col:20, col:75> 'float' <IntegralToFloating>
+    |     `-CallExpr 0x7f81af020b20 <col:20, col:75> 'int'
+    |       |-ImplicitCastExpr 0x7f81af020b08 <col:20> 'int (*)()' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7f81af0208f0 <col:20> 'int ()' Function 0x7f81af020840 '__builtin_vec_madd' 'int ()'
+    |       |-ImplicitCastExpr 0x7f81af020b78 <col:40> 'double' <FloatingCast>
+    |       | `-ImplicitCastExpr 0x7f81af020b60 <col:40> 'float' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f81af020918 <col:40> 'float' lvalue Var 0x7f81af020778 'b' 'float'
+    |       |-ImplicitCastExpr 0x7f81af020ba8 <col:43> 'double' <FloatingCast>
+    |       | `-ImplicitCastExpr 0x7f81af020b90 <col:43> 'float' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7f81af020940 <col:43> 'float' lvalue ParmVar 0x7f81af02c998 'a' 'float'
+    |       `-ImplicitCastExpr 0x7f81af020bd8 <col:46, col:74> 'double' <FloatingCast>
+    |         `-ImplicitCastExpr 0x7f81af020bc0 <col:46, col:74> 'float' <LValueToRValue>
+    |           `-CompoundLiteralExpr 0x7f81af020ab8 <col:46, col:74> 'float' lvalue
+    |             `-InitListExpr 0x7f81af020a70 <col:61, col:74> 'float'
+    |               `-FloatingLiteral 0x7f81af020990 <line:5:11> 'float' 3.643376e-44
+    `-ReturnStmt 0x7f81af020c60 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7f81af020c48 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7f81af020c20 <col:10> 'float' lvalue Var 0x7f81af020778 'b' 'float'

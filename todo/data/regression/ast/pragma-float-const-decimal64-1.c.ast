@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7ffd6302b2e8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7ffd6302bf78 <../Data/C2AST/pragma-float-const-decimal64-1.c:5:1, col:12> col:8 d 'double' cinit
+  `-FloatingLiteral 0x7ffd63814240 <col:12> 'double' 1.000000e+00

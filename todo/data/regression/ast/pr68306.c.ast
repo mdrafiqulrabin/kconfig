@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fc89501ece8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fc89501f960 <../Data/C2AST/pr68306.c:5:1, col:37> col:6 powerpc_pmc_type
+| `-EnumConstantDecl 0x7fc896016e20 <col:25> col:25 PPC_PMC_IBM 'int'
+|-RecordDecl 0x7fc896016e68 <line:6:1, line:9:1> line:6:1 struct definition
+| |-FieldDecl 0x7fc896016f28 <line:7:5, col:14> col:14 referenced num_pmcs 'unsigned int'
+| `-FieldDecl 0x7fc896016fc0 <line:8:5, col:27> col:27 referenced pmc_type 'enum powerpc_pmc_type':'enum powerpc_pmc_type'
+|-VarDecl 0x7fc896017060 <line:6:1, line:9:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr68306.c:6:1)':'struct (anonymous at ../Data/C2AST/pr68306.c:6:1)'
+|-VarDecl 0x7fc896017138 <line:10:1, col:23> col:23 used b 'enum powerpc_pmc_type':'enum powerpc_pmc_type'
+`-FunctionDecl 0x7fc8960171e8 <line:11:1, col:43> col:6 fn1 'void ()'
+  `-CompoundStmt 0x7fc896017440 <col:12, col:43>
+    `-BinaryOperator 0x7fc8960173c8 <col:14, col:40> 'unsigned int' '='
+      |-MemberExpr 0x7fc8960172b0 <col:14, col:16> 'unsigned int' lvalue .num_pmcs 0x7fc896016f28
+      | `-DeclRefExpr 0x7fc896017288 <col:14> 'struct (anonymous struct at ../Data/C2AST/pr68306.c:6:1)':'struct (anonymous at ../Data/C2AST/pr68306.c:6:1)' lvalue Var 0x7fc896017060 'a' 'struct (anonymous struct at ../Data/C2AST/pr68306.c:6:1)':'struct (anonymous at ../Data/C2AST/pr68306.c:6:1)'
+      `-ImplicitCastExpr 0x7fc8960173b0 <col:27, col:40> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7fc896017388 <col:27, col:40> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' '='
+          |-MemberExpr 0x7fc896017310 <col:27, col:29> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' lvalue .pmc_type 0x7fc896016fc0
+          | `-DeclRefExpr 0x7fc8960172e8 <col:27> 'struct (anonymous struct at ../Data/C2AST/pr68306.c:6:1)':'struct (anonymous at ../Data/C2AST/pr68306.c:6:1)' lvalue Var 0x7fc896017060 'a' 'struct (anonymous struct at ../Data/C2AST/pr68306.c:6:1)':'struct (anonymous at ../Data/C2AST/pr68306.c:6:1)'
+          `-ImplicitCastExpr 0x7fc896017370 <col:40> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' <LValueToRValue>
+            `-DeclRefExpr 0x7fc896017348 <col:40> 'enum powerpc_pmc_type':'enum powerpc_pmc_type' lvalue Var 0x7fc896017138 'b' 'enum powerpc_pmc_type':'enum powerpc_pmc_type'

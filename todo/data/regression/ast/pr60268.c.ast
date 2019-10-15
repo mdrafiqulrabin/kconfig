@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fac2b02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fac2b841400 <../Data/C2AST/pr60268.c:2:1, line:6:1> line:2:6 f 'void ()'
+  `-CompoundStmt 0x7fac2b841658 <line:3:1, line:6:1>
+    |-DeclStmt 0x7fac2b841578 <line:4:3, col:12>
+    | `-VarDecl 0x7fac2b8414f8 <col:3, col:11> col:7 i 'int' cinit
+    |   `-IntegerLiteral 0x7fac2b841558 <col:11> 'int' 0
+    `-DeclStmt 0x7fac2b841640 <line:5:3, col:14>
+      `-VarDecl 0x7fac2b8415a8 <col:3, col:13> col:9 p 'void *' cinit
+        `-ImplicitCastExpr 0x7fac2b841628 <col:13> 'void *' <NullToPointer>
+          `-IntegerLiteral 0x7fac2b841608 <col:13> 'int' 0

@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fe35e02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe35f032c60 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:31:14, ../Data/C2AST/pr81779.c:15:1> line:8:1 f2 'bool (char *)'
+  |-ParmVarDecl 0x7fe35e02c978 <col:5, col:11> col:11 used p 'char *'
+  `-CompoundStmt 0x7fe35f032f48 <line:9:1, line:15:1>
+    |-IfStmt 0x7fe35f032df8 <line:10:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:33:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fe35f032d88 <../Data/C2AST/pr81779.c:10:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fe35f032d70 <col:8> 'char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe35f032d48 <col:8> 'char *' lvalue ParmVar 0x7fe35e02c978 'p' 'char *'
+    | |-ReturnStmt 0x7fe35f032de0 <line:11:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:33:15>
+    | | `-ImplicitCastExpr 0x7fe35f032dc8 <col:15> 'bool' <IntegralToBoolean>
+    | |   `-IntegerLiteral 0x7fe35f032da8 <col:15> 'int' 0
+    | `-<<<NULL>>>
+    |-DeclStmt 0x7fe35f032ed8 <line:31:14, ../Data/C2AST/pr81779.c:13:18>
+    | `-VarDecl 0x7fe35f032e40 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:31:14, line:32:14> ../Data/C2AST/pr81779.c:13:8 used ret 'bool' cinit
+    |   `-ImplicitCastExpr 0x7fe35f032ec0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:32:14> 'bool' <IntegralToBoolean>
+    |     `-IntegerLiteral 0x7fe35f032ea0 <col:14> 'int' 1
+    `-ReturnStmt 0x7fe35f032f30 <../Data/C2AST/pr81779.c:14:3, col:10>
+      `-ImplicitCastExpr 0x7fe35f032f18 <col:10> 'bool' <LValueToRValue>
+        `-DeclRefExpr 0x7fe35f032ef0 <col:10> 'bool' lvalue Var 0x7fe35f032e40 'ret' 'bool'

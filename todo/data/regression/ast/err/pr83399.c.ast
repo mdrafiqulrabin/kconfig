@@ -1,0 +1,62 @@
+../Data/C2AST/pr83399.c:11:7: error: use of unknown builtin '__builtin_altivec_lvx' [-Wimplicit-function-declaration]
+  u = __builtin_altivec_lvx (32, ((void *) &a) - 32);
+      ^
+../Data/C2AST/pr83399.c:14:11: error: subscripted value is not an array, pointer, or vector
+  return y[0];
+         ~^~
+TranslationUnitDecl 0x7fb03582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb03582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb03582bf80 '__int128'
+|-TypedefDecl 0x7fb03582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb03582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb03582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb03582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb03582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb03582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb03582c600 'char *'
+|   `-BuiltinType 0x7fb03582bd80 'char'
+|-TypedefDecl 0x7fb03582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb03582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb03582c720 'struct __va_list_tag'
+|     `-Record 0x7fb03582c698 '__va_list_tag'
+|-TypedefDecl 0x7fb03582c988 <../Data/C2AST/pr83399.c:6:1, col:48> col:48 referenced v4si_t 'int'
+| `-BuiltinType 0x7fb03582bde0 'int'
+`-FunctionDecl 0x7fb03586e8b8 <line:7:1, line:15:1> line:8:1 foo 'int (void)'
+  `-CompoundStmt 0x7fb03586f260 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fb03586eba8 <line:10:3, col:20>
+    | |-VarDecl 0x7fb03586e9d0 <col:3, col:10> col:10 used a 'v4si_t':'int'
+    | |-VarDecl 0x7fb03586ea40 <col:3, col:13> col:13 used u 'v4si_t':'int'
+    | |-VarDecl 0x7fb03586eab0 <col:3, col:16> col:16 used v 'v4si_t':'int'
+    | `-VarDecl 0x7fb03586eb20 <col:3, col:19> col:19 used y 'v4si_t':'int'
+    |-BinaryOperator 0x7fb03586ef08 <line:11:3, col:52> 'v4si_t':'int' '='
+    | |-DeclRefExpr 0x7fb03586ebc0 <col:3> 'v4si_t':'int' lvalue Var 0x7fb03586ea40 'u' 'v4si_t':'int'
+    | `-CallExpr 0x7fb03586eed0 <col:7, col:52> 'int'
+    |   |-ImplicitCastExpr 0x7fb03586eeb8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb03586ed00 <col:7> 'int ()' Function 0x7fb03586ec50 '__builtin_altivec_lvx' 'int ()'
+    |   |-IntegerLiteral 0x7fb03586ed28 <col:30> 'int' 32
+    |   `-BinaryOperator 0x7fb03586ee68 <col:34, col:50> 'void *' '-'
+    |     |-ParenExpr 0x7fb03586ee28 <col:34, col:46> 'void *'
+    |     | `-CStyleCastExpr 0x7fb03586ee00 <col:35, col:45> 'void *' <BitCast>
+    |     |   `-UnaryOperator 0x7fb03586edc8 <col:44, col:45> 'v4si_t *' prefix '&'
+    |     |     `-DeclRefExpr 0x7fb03586ed48 <col:45> 'v4si_t':'int' lvalue Var 0x7fb03586e9d0 'a' 'v4si_t':'int'
+    |     `-IntegerLiteral 0x7fb03586ee48 <col:50> 'int' 32
+    |-BinaryOperator 0x7fb03586f0e0 <line:12:3, col:52> 'v4si_t':'int' '='
+    | |-DeclRefExpr 0x7fb03586ef30 <col:3> 'v4si_t':'int' lvalue Var 0x7fb03586eab0 'v' 'v4si_t':'int'
+    | `-CallExpr 0x7fb03586f0a8 <col:7, col:52> 'int'
+    |   |-ImplicitCastExpr 0x7fb03586f090 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb03586ef58 <col:7> 'int ()' Function 0x7fb03586ec50 '__builtin_altivec_lvx' 'int ()'
+    |   |-IntegerLiteral 0x7fb03586ef80 <col:30> 'int' 64
+    |   `-BinaryOperator 0x7fb03586f068 <col:34, col:50> 'void *' '-'
+    |     |-ParenExpr 0x7fb03586f028 <col:34, col:46> 'void *'
+    |     | `-CStyleCastExpr 0x7fb03586f000 <col:35, col:45> 'void *' <BitCast>
+    |     |   `-UnaryOperator 0x7fb03586efc8 <col:44, col:45> 'v4si_t *' prefix '&'
+    |     |     `-DeclRefExpr 0x7fb03586efa0 <col:45> 'v4si_t':'int' lvalue Var 0x7fb03586e9d0 'a' 'v4si_t':'int'
+    |     `-IntegerLiteral 0x7fb03586f048 <col:50> 'int' 32
+    `-BinaryOperator 0x7fb03586f1d8 <line:13:3, col:11> 'v4si_t':'int' '='
+      |-DeclRefExpr 0x7fb03586f108 <col:3> 'v4si_t':'int' lvalue Var 0x7fb03586eb20 'y' 'v4si_t':'int'
+      `-BinaryOperator 0x7fb03586f1b0 <col:7, col:11> 'int' '+'
+        |-ImplicitCastExpr 0x7fb03586f180 <col:7> 'v4si_t':'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb03586f130 <col:7> 'v4si_t':'int' lvalue Var 0x7fb03586ea40 'u' 'v4si_t':'int'
+        `-ImplicitCastExpr 0x7fb03586f198 <col:11> 'v4si_t':'int' <LV2 errors generated.
+alueToRValue>
+          `-DeclRefExpr 0x7fb03586f158 <col:11> 'v4si_t':'int' lvalue Var 0x7fb03586eab0 'v' 'v4si_t':'int'

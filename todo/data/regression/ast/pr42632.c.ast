@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fd1a28174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd1a285a028 <../Data/C2AST/pr42632.c:1:1, line:5:1> line:2:1 used __pskb_trim 'int (void)' static inline
+| |-CompoundStmt 0x7fd1a285a300 <line:3:1, line:5:1>
+| | `-ReturnStmt 0x7fd1a285a2e8 <line:4:3, col:23>
+| |   `-CallExpr 0x7fd1a285a2c0 <col:10, col:23> 'int'
+| |     `-ImplicitCastExpr 0x7fd1a285a2a8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |       `-DeclRefExpr 0x7fd1a285a250 <col:10> 'int ()' Function 0x7fd1a285a1a0 '___pskb_trim' 'int ()'
+| `-AlwaysInlineAttr 0x7fd1a285a0c8 <line:1:30> always_inline
+|-FunctionDecl 0x7fd1a285a3b0 <line:6:1, line:10:1> line:7:5 used pskb_trim 'int (void)' static inline
+| |-CompoundStmt 0x7fd1a285a540 <line:8:1, line:10:1>
+| | `-ReturnStmt 0x7fd1a285a528 <line:9:3, col:22>
+| |   `-CallExpr 0x7fd1a285a500 <col:10, col:22> 'int'
+| |     `-ImplicitCastExpr 0x7fd1a285a4e8 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+| |       `-DeclRefExpr 0x7fd1a285a498 <col:10> 'int (void)' Function 0x7fd1a285a028 '__pskb_trim' 'int (void)'
+| `-AlwaysInlineAttr 0x7fd1a285a450 <line:6:30> always_inline
+`-FunctionDecl 0x7fd1a285a5f0 prev 0x7fd1a285a1a0 <line:11:1, line:15:1> line:11:5 used ___pskb_trim 'int (void)'
+  `-CompoundStmt 0x7fd1a285a730 <line:12:1, line:15:1>
+    |-CallExpr 0x7fd1a285a6d0 <line:13:3, col:13> 'int'
+    | `-ImplicitCastExpr 0x7fd1a285a6b8 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd1a285a690 <col:3> 'int (void)' Function 0x7fd1a285a3b0 'pskb_trim' 'int (void)'
+    `-ReturnStmt 0x7fd1a285a718 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fd1a285a6f8 <col:10> 'int' 0

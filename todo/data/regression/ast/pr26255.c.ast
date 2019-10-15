@@ -1,0 +1,433 @@
+TranslationUnitDecl 0x7fd09e8166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd09e817378 <../Data/C2AST/pr26255.c:1:1, col:15> col:15 referenced int16_t 'short'
+| `-BuiltinType 0x7fd09e8167c0 'short'
+|-FunctionDecl 0x7fd09e8582e8 <line:3:1, col:26> col:5 used round_sample 'int (int *)'
+| `-ParmVarDecl 0x7fd09e858218 <col:18, col:23> col:23 sum 'int *'
+`-FunctionDecl 0x7fd09e858530 <line:19:1, line:31:1> line:19:6 foo 'void (int *, int *)'
+  |-ParmVarDecl 0x7fd09e8583e8 <col:10, col:15> col:15 used dither_state 'int *'
+  |-ParmVarDecl 0x7fd09e858460 <col:29, col:34> col:34 used samples 'int *'
+  `-CompoundStmt 0x7fd09e877088 <line:20:1, line:31:1>
+    |-DeclStmt 0x7fd09e8586c8 <line:21:3, col:21>
+    | `-VarDecl 0x7fd09e858668 <col:3, col:12> col:12 used synth_buf 'int16_t *'
+    |-DeclStmt 0x7fd09e858830 <line:22:3, col:23>
+    | |-VarDecl 0x7fd09e858748 <col:3, col:18> col:18 used w 'const int16_t *'
+    | `-VarDecl 0x7fd09e8587b8 <col:3, col:22> col:22 used p 'const int16_t *'
+    |-DeclStmt 0x7fd09e8588c0 <line:23:3, col:10>
+    | `-VarDecl 0x7fd09e858860 <col:3, col:7> col:7 used sum 'int'
+    |-BinaryOperator 0x7fd09e858978 <line:25:3, col:10> 'int' '='
+    | |-DeclRefExpr 0x7fd09e8588d8 <col:3> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | `-ImplicitCastExpr 0x7fd09e858960 <col:9, col:10> 'int' <LValueToRValue>
+    |   `-UnaryOperator 0x7fd09e858940 <col:9, col:10> 'int' lvalue prefix '*'
+    |     `-ImplicitCastExpr 0x7fd09e858928 <col:10> 'int *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd09e858900 <col:10> 'int *' lvalue ParmVar 0x7fd09e8583e8 'dither_state' 'int *'
+    |-BinaryOperator 0x7fd09e858a68 <line:26:3, col:19> 'const int16_t *' '='
+    | |-DeclRefExpr 0x7fd09e8589a0 <col:3> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | `-ImplicitCastExpr 0x7fd09e858a50 <col:7, col:19> 'const int16_t *' <BitCast>
+    |   `-BinaryOperator 0x7fd09e858a28 <col:7, col:19> 'int16_t *' '+'
+    |     |-ImplicitCastExpr 0x7fd09e858a10 <col:7> 'int16_t *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd09e8589c8 <col:7> 'int16_t *' lvalue Var 0x7fd09e858668 'synth_buf' 'int16_t *'
+    |     `-IntegerLiteral 0x7fd09e8589f0 <col:19> 'int' 16
+    |-CompoundStmt 0x7fd09e8718e0 <line:7:29, line:16:40>
+    | |-CompoundAssignOperator 0x7fd09e858d60 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e858a90 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e858d40 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e858d18 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e858cd0 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e858cb8 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e858ba8 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e858b80 <line:9:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e858b68 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e858ae0 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e858ab8 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e858b40 <line:9:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e858b00 <col:19> 'int' 0
+    | |     |         `-IntegerLiteral 0x7fd09e858b20 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e858d00 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e858ce8 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e858c98 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e858c70 <line:27:20, line:9:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e858c58 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e858bc8 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e858c30 <line:9:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e858bf0 <col:30> 'int' 0
+    | |               `-IntegerLiteral 0x7fd09e858c10 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e859068 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e858d98 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e859048 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e859020 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e858fd8 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e858fc0 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e858eb0 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e858e88 <line:10:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e858e70 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e858de8 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e858dc0 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e858e48 <line:10:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e858e08 <col:19> 'int' 1
+    | |     |         `-IntegerLiteral 0x7fd09e858e28 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e859008 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e858ff0 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e858fa0 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e858f78 <line:27:20, line:10:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e858f60 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e858ed0 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e858f38 <line:10:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e858ef8 <col:30> 'int' 1
+    | |               `-IntegerLiteral 0x7fd09e858f18 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e873370 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e8590a0 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e873350 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e873328 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e8732e0 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e8732c8 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e8591b8 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e859190 <line:11:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e859178 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e8590f0 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e8590c8 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e859150 <line:11:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e859110 <col:19> 'int' 2
+    | |     |         `-IntegerLiteral 0x7fd09e859130 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e873310 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e8732f8 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e8732a8 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e873280 <line:27:20, line:11:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e873268 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e8591d8 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e873240 <line:11:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e873200 <col:30> 'int' 2
+    | |               `-IntegerLiteral 0x7fd09e873220 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e873678 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e8733a8 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e873658 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e873630 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e8735e8 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e8735d0 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e8734c0 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e873498 <line:12:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e873480 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e8733f8 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e8733d0 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e873458 <line:12:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e873418 <col:19> 'int' 3
+    | |     |         `-IntegerLiteral 0x7fd09e873438 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e873618 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e873600 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e8735b0 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e873588 <line:27:20, line:12:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e873570 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e8734e0 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e873548 <line:12:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e873508 <col:30> 'int' 3
+    | |               `-IntegerLiteral 0x7fd09e873528 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e873980 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e8736b0 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e873960 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e873938 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e8738f0 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e8738d8 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e8737c8 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e8737a0 <line:13:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e873788 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e873700 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e8736d8 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e873760 <line:13:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e873720 <col:19> 'int' 4
+    | |     |         `-IntegerLiteral 0x7fd09e873740 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e873920 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e873908 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e8738b8 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e873890 <line:27:20, line:13:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e873878 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e8737e8 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e873850 <line:13:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e873810 <col:30> 'int' 4
+    | |               `-IntegerLiteral 0x7fd09e873830 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e873c88 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e8739b8 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e873c68 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e873c40 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e873bf8 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e873be0 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e873ad0 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e873aa8 <line:14:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e873a90 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e873a08 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e8739e0 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e873a68 <line:14:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e873a28 <col:19> 'int' 5
+    | |     |         `-IntegerLiteral 0x7fd09e873a48 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e873c28 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e873c10 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e873bc0 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e873b98 <line:27:20, line:14:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e873b80 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e873af0 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e873b58 <line:14:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e873b18 <col:30> 'int' 5
+    | |               `-IntegerLiteral 0x7fd09e873b38 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e873f90 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e873cc0 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e873f70 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e873f48 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e873f00 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e873ee8 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e873dd8 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e873db0 <line:15:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ImplicitCastExpr 0x7fd09e873d98 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       | `-ParenExpr 0x7fd09e873d10 <col:15, col:17> 'const int16_t *' lvalue
+    | |     |       |   `-DeclRefExpr 0x7fd09e873ce8 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       `-BinaryOperator 0x7fd09e873d70 <line:15:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e873d30 <col:19> 'int' 6
+    | |     |         `-IntegerLiteral 0x7fd09e873d50 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e873f30 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e873f18 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e873ec8 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e873ea0 <line:27:20, line:15:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e873e88 <line:27:20> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e873df8 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e873e60 <line:15:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e873e20 <col:30> 'int' 6
+    | |               `-IntegerLiteral 0x7fd09e873e40 <col:34> 'int' 64
+    | `-CompoundAssignOperator 0x7fd09e8718a8 <line:27:8, line:5:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fd09e873fc8 <line:27:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    |   `-ParenExpr 0x7fd09e871888 <line:5:22, col:34> 'int'
+    |     `-BinaryOperator 0x7fd09e871860 <col:23, col:33> 'int' '*'
+    |       |-ImplicitCastExpr 0x7fd09e871818 <col:23, col:26> 'int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7fd09e871800 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    |       |   `-ParenExpr 0x7fd09e8740e0 <col:23, col:26> 'const int16_t':'const short' lvalue
+    |       |     `-ArraySubscriptExpr 0x7fd09e8740b8 <line:16:15, col:25> 'const int16_t':'const short' lvalue
+    |       |       |-ImplicitCastExpr 0x7fd09e8740a0 <col:15, col:17> 'const int16_t *' <LValueToRValue>
+    |       |       | `-ParenExpr 0x7fd09e874018 <col:15, col:17> 'const int16_t *' lvalue
+    |       |       |   `-DeclRefExpr 0x7fd09e873ff0 <line:27:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    |       |       `-BinaryOperator 0x7fd09e874078 <line:16:19, col:23> 'int' '*'
+    |       |         |-IntegerLiteral 0x7fd09e874038 <col:19> 'int' 7
+    |       |         `-IntegerLiteral 0x7fd09e874058 <col:23> 'int' 64
+    |       `-ImplicitCastExpr 0x7fd09e871848 <line:5:30, col:33> 'int' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7fd09e871830 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    |           `-ParenExpr 0x7fd09e8741d0 <col:30, col:33> 'const int16_t':'const short' lvalue
+    |             `-ArraySubscriptExpr 0x7fd09e8741a8 <line:27:20, line:16:36> 'const int16_t':'const short' lvalue
+    |               |-ImplicitCastExpr 0x7fd09e874190 <line:27:20> 'const int16_t *' <LValueToRValue>
+    |               | `-DeclRefExpr 0x7fd09e874100 <col:20> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    |               `-BinaryOperator 0x7fd09e874168 <line:16:30, col:34> 'int' '*'
+    |                 |-IntegerLiteral 0x7fd09e874128 <col:30> 'int' 7
+    |                 `-IntegerLiteral 0x7fd09e874148 <col:34> 'int' 64
+    |-NullStmt 0x7fd09e871930 <line:27:22>
+    |-BinaryOperator 0x7fd09e871a08 <line:28:3, col:19> 'const int16_t *' '='
+    | |-DeclRefExpr 0x7fd09e871940 <col:3> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | `-ImplicitCastExpr 0x7fd09e8719f0 <col:7, col:19> 'const int16_t *' <BitCast>
+    |   `-BinaryOperator 0x7fd09e8719c8 <col:7, col:19> 'int16_t *' '+'
+    |     |-ImplicitCastExpr 0x7fd09e8719b0 <col:7> 'int16_t *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd09e871968 <col:7> 'int16_t *' lvalue Var 0x7fd09e858668 'synth_buf' 'int16_t *'
+    |     `-IntegerLiteral 0x7fd09e871990 <col:19> 'int' 48
+    |-CompoundStmt 0x7fd09e876eb8 <line:7:29, line:16:40>
+    | |-CompoundAssignOperator 0x7fd09e871d48 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e871a30 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e871d28 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e871d00 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e871cb8 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e871ca0 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e871b90 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e871b68 <line:9:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e871ae0 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e871ab8 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e871aa0 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e871a58 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e871a80 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e871b40 <line:9:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e871b00 <col:19> 'int' 0
+    | |     |         `-IntegerLiteral 0x7fd09e871b20 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e871ce8 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e871cd0 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e871c80 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e871c58 <line:29:25, line:9:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e871c40 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e871bb0 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e871c18 <line:9:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e871bd8 <col:30> 'int' 0
+    | |               `-IntegerLiteral 0x7fd09e871bf8 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e872098 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e871d80 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e872078 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e872050 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e872008 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e871ff0 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e871ee0 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e871eb8 <line:10:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e871e30 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e871e08 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e871df0 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e871da8 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e871dd0 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e871e90 <line:10:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e871e50 <col:19> 'int' 1
+    | |     |         `-IntegerLiteral 0x7fd09e871e70 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e872038 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e872020 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e871fd0 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e871fa8 <line:29:25, line:10:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e871f90 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e871f00 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e871f68 <line:10:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e871f28 <col:30> 'int' 1
+    | |               `-IntegerLiteral 0x7fd09e871f48 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e8723e8 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e8720d0 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e8723c8 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e8723a0 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e872358 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e872340 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e872230 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e872208 <line:11:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e872180 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e872158 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e872140 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e8720f8 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e872120 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e8721e0 <line:11:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e8721a0 <col:19> 'int' 2
+    | |     |         `-IntegerLiteral 0x7fd09e8721c0 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e872388 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e872370 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e872320 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e8722f8 <line:29:25, line:11:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e8722e0 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e872250 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e8722b8 <line:11:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e872278 <col:30> 'int' 2
+    | |               `-IntegerLiteral 0x7fd09e872298 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e872738 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e872420 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e872718 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e8726f0 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e8726a8 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e872690 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e872580 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e872558 <line:12:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e8724d0 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e8724a8 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e872490 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e872448 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e872470 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e872530 <line:12:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e8724f0 <col:19> 'int' 3
+    | |     |         `-IntegerLiteral 0x7fd09e872510 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e8726d8 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e8726c0 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e872670 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e872648 <line:29:25, line:12:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e872630 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e8725a0 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e872608 <line:12:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e8725c8 <col:30> 'int' 3
+    | |               `-IntegerLiteral 0x7fd09e8725e8 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e876490 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e872770 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e876470 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e876448 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e876400 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e8763e8 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e8762d8 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e8762b0 <line:13:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e876228 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e876200 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e8727e0 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e872798 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e8727c0 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e876288 <line:13:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e876248 <col:19> 'int' 4
+    | |     |         `-IntegerLiteral 0x7fd09e876268 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e876430 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e876418 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e8763c8 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e8763a0 <line:29:25, line:13:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e876388 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e8762f8 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e876360 <line:13:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e876320 <col:30> 'int' 4
+    | |               `-IntegerLiteral 0x7fd09e876340 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e8767e0 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e8764c8 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e8767c0 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e876798 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e876750 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e876738 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e876628 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e876600 <line:14:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e876578 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e876550 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e876538 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e8764f0 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e876518 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e8765d8 <line:14:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e876598 <col:19> 'int' 5
+    | |     |         `-IntegerLiteral 0x7fd09e8765b8 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e876780 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e876768 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e876718 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e8766f0 <line:29:25, line:14:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e8766d8 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e876648 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e8766b0 <line:14:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e876670 <col:30> 'int' 5
+    | |               `-IntegerLiteral 0x7fd09e876690 <col:34> 'int' 64
+    | |-CompoundAssignOperator 0x7fd09e876b30 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd09e876818 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    | | `-ParenExpr 0x7fd09e876b10 <line:5:22, col:34> 'int'
+    | |   `-BinaryOperator 0x7fd09e876ae8 <col:23, col:33> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7fd09e876aa0 <col:23, col:26> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7fd09e876a88 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    | |     |   `-ParenExpr 0x7fd09e876978 <col:23, col:26> 'const int16_t':'const short' lvalue
+    | |     |     `-ArraySubscriptExpr 0x7fd09e876950 <line:15:15, col:25> 'const int16_t':'const short' lvalue
+    | |     |       |-ParenExpr 0x7fd09e8768c8 <col:15, col:17> 'const int16_t *'
+    | |     |       | `-BinaryOperator 0x7fd09e8768a0 <line:29:17, col:21> 'const int16_t *' '+'
+    | |     |       |   |-ImplicitCastExpr 0x7fd09e876888 <col:17> 'const int16_t *' <LValueToRValue>
+    | |     |       |   | `-DeclRefExpr 0x7fd09e876840 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    | |     |       |   `-IntegerLiteral 0x7fd09e876868 <col:21> 'int' 32
+    | |     |       `-BinaryOperator 0x7fd09e876928 <line:15:19, col:23> 'int' '*'
+    | |     |         |-IntegerLiteral 0x7fd09e8768e8 <col:19> 'int' 6
+    | |     |         `-IntegerLiteral 0x7fd09e876908 <col:23> 'int' 64
+    | |     `-ImplicitCastExpr 0x7fd09e876ad0 <line:5:30, col:33> 'int' <IntegralCast>
+    | |       `-ImplicitCastExpr 0x7fd09e876ab8 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    | |         `-ParenExpr 0x7fd09e876a68 <col:30, col:33> 'const int16_t':'const short' lvalue
+    | |           `-ArraySubscriptExpr 0x7fd09e876a40 <line:29:25, line:15:36> 'const int16_t':'const short' lvalue
+    | |             |-ImplicitCastExpr 0x7fd09e876a28 <line:29:25> 'const int16_t *' <LValueToRValue>
+    | |             | `-DeclRefExpr 0x7fd09e876998 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    | |             `-BinaryOperator 0x7fd09e876a00 <line:15:30, col:34> 'int' '*'
+    | |               |-IntegerLiteral 0x7fd09e8769c0 <col:30> 'int' 6
+    | |               `-IntegerLiteral 0x7fd09e8769e0 <col:34> 'int' 64
+    | `-CompoundAssignOperator 0x7fd09e876e80 <line:29:8, line:5:34> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fd09e876b68 <line:29:8> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'
+    |   `-ParenExpr 0x7fd09e876e60 <line:5:22, col:34> 'int'
+    |     `-BinaryOperator 0x7fd09e876e38 <col:23, col:33> 'int' '*'
+    |       |-ImplicitCastExpr 0x7fd09e876df0 <col:23, col:26> 'int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7fd09e876dd8 <col:23, col:26> 'int16_t':'short' <LValueToRValue>
+    |       |   `-ParenExpr 0x7fd09e876cc8 <col:23, col:26> 'const int16_t':'const short' lvalue
+    |       |     `-ArraySubscriptExpr 0x7fd09e876ca0 <line:16:15, col:25> 'const int16_t':'const short' lvalue
+    |       |       |-ParenExpr 0x7fd09e876c18 <col:15, col:17> 'const int16_t *'
+    |       |       | `-BinaryOperator 0x7fd09e876bf0 <line:29:17, col:21> 'const int16_t *' '+'
+    |       |       |   |-ImplicitCastExpr 0x7fd09e876bd8 <col:17> 'const int16_t *' <LValueToRValue>
+    |       |       |   | `-DeclRefExpr 0x7fd09e876b90 <col:17> 'const int16_t *' lvalue Var 0x7fd09e858748 'w' 'const int16_t *'
+    |       |       |   `-IntegerLiteral 0x7fd09e876bb8 <col:21> 'int' 32
+    |       |       `-BinaryOperator 0x7fd09e876c78 <line:16:19, col:23> 'int' '*'
+    |       |         |-IntegerLiteral 0x7fd09e876c38 <col:19> 'int' 7
+    |       |         `-IntegerLiteral 0x7fd09e876c58 <col:23> 'int' 64
+    |       `-ImplicitCastExpr 0x7fd09e876e20 <line:5:30, col:33> 'int' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7fd09e876e08 <col:30, col:33> 'int16_t':'short' <LValueToRValue>
+    |           `-ParenExpr 0x7fd09e876db8 <col:30, col:33> 'const int16_t':'const short' lvalue
+    |             `-ArraySubscriptExpr 0x7fd09e876d90 <line:29:25, line:16:36> 'const int16_t':'const short' lvalue
+    |               |-ImplicitCastExpr 0x7fd09e876d78 <line:29:25> 'const int16_t *' <LValueToRValue>
+    |               | `-DeclRefExpr 0x7fd09e876ce8 <col:25> 'const int16_t *' lvalue Var 0x7fd09e8587b8 'p' 'const int16_t *'
+    |               `-BinaryOperator 0x7fd09e876d50 <line:16:30, col:34> 'int' '*'
+    |                 |-IntegerLiteral 0x7fd09e876d10 <col:30> 'int' 7
+    |                 `-IntegerLiteral 0x7fd09e876d30 <col:34> 'int' 64
+    |-NullStmt 0x7fd09e876f08 <line:29:27>
+    `-BinaryOperator 0x7fd09e877060 <line:30:3, col:31> 'int' '='
+      |-UnaryOperator 0x7fd09e876f58 <col:3, col:4> 'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd09e876f40 <col:4> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd09e876f18 <col:4> 'int *' lvalue ParmVar 0x7fd09e858460 'samples' 'int *'
+      `-CallExpr 0x7fd09e877030 <col:14, col:31> 'int'
+        |-ImplicitCastExpr 0x7fd09e877018 <col:14> 'int (*)(int *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fd09e876f78 <col:14> 'int (int *)' Function 0x7fd09e8582e8 'round_sample' 'int (int *)'
+        `-UnaryOperator 0x7fd09e876fc8 <col:27, col:28> 'int *' prefix '&'
+          `-DeclRefExpr 0x7fd09e876fa0 <col:28> 'int' lvalue Var 0x7fd09e858860 'sum' 'int'

@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7ffa1401d0e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffa14813668 <../Data/C2AST/pr59134.c:3:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7ffa14813708 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7ffa14813770 prev 0x7ffa14813668 <col:1, col:58> col:14 used malloc 'void *(unsigned long)' extern
+| |-ParmVarDecl 0x7ffa1401dd78 <<built-in>:81:23, col:37> ../Data/C2AST/pr59134.c:3:34 'unsigned long'
+| `-RestrictAttr 0x7ffa14813818 <col:51> malloc
+|-RecordDecl 0x7ffa14813860 <line:5:9, line:8:1> line:5:9 struct definition
+| |-PackedAttr 0x7ffa14813a38 <line:8:18>
+| |-FieldDecl 0x7ffa14813920 <line:6:3, col:8> col:8 pad 'char'
+| `-FieldDecl 0x7ffa148139f0 <line:7:3, col:12> col:7 referenced arr 'int [0]'
+|-TypedefDecl 0x7ffa14813ad0 <line:5:1, line:8:27> col:27 referenced str 'struct str':'str'
+| `-ElaboratedType 0x7ffa14813a80 'struct str' sugar
+|   `-RecordType 0x7ffa148138f0 'str'
+|     `-Record 0x7ffa14813860 ''
+`-FunctionDecl 0x7ffa14813cb0 <line:10:1, line:16:1> line:11:1 foo 'str *(void)'
+  `-CompoundStmt 0x7ffa14814158 <line:12:1, line:16:1>
+    |-DeclStmt 0x7ffa14813f98 <line:13:3, col:48>
+    | `-VarDecl 0x7ffa14813da0 <col:3, col:47> col:8 used s 'str *' cinit
+    |   `-ImplicitCastExpr 0x7ffa14813f30 <col:12, col:47> 'str *' <BitCast>
+    |     `-CallExpr 0x7ffa14813f00 <col:12, col:47> 'void *'
+    |       |-ImplicitCastExpr 0x7ffa14813ee8 <col:12> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7ffa14813e00 <col:12> 'void *(unsigned long)' Function 0x7ffa14813770 'malloc' 'void *(unsigned long)'
+    |       `-BinaryOperator 0x7ffa14813e90 <col:20, col:46> 'unsigned long' '+'
+    |         |-UnaryExprOrTypeTraitExpr 0x7ffa14813e38 <col:20, col:31> 'unsigned long' sizeof 'str':'str'
+    |         `-UnaryExprOrTypeTraitExpr 0x7ffa14813e70 <col:35, col:46> 'unsigned long' sizeof 'int'
+    |-BinaryOperator 0x7ffa148140d8 <line:14:3, col:15> 'int' '='
+    | |-ArraySubscriptExpr 0x7ffa14814090 <col:3, col:11> 'int' lvalue
+    | | |-ImplicitCastExpr 0x7ffa14814078 <col:3, col:6> 'int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7ffa14813ff0 <col:3, col:6> 'int [0]' lvalue ->arr 0x7ffa148139f0
+    | | |   `-ImplicitCastExpr 0x7ffa14813fd8 <col:3> 'str *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7ffa14813fb0 <col:3> 'str *' lvalue Var 0x7ffa14813da0 's' 'str *'
+    | | `-IntegerLiteral 0x7ffa14814028 <col:10> 'int' 0
+    | `-IntegerLiteral 0x7ffa148140b8 <col:15> 'int' 305419896
+    `-ReturnStmt 0x7ffa14814140 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7ffa14814128 <col:10> 'str *' <LValueToRValue>
+        `-DeclRefExpr 0x7ffa14814100 <col:10> 'str *' lvalue Var 0x7ffa14813da0 's' 'str *'

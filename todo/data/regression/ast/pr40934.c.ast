@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fe640004ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe640005b78 <../Data/C2AST/pr40934.c:5:1, col:15> col:15 used host_frametime 'double' extern
+|-VarDecl 0x7fe63f017258 <line:6:1, col:14> col:14 used pitchvel 'float' extern
+`-FunctionDecl 0x7fe63f017420 <line:7:1, line:15:1> line:7:6 V_DriftPitch 'void (float, float)'
+  |-ParmVarDecl 0x7fe63f0172d0 <col:20, col:26> col:26 used delta 'float'
+  |-ParmVarDecl 0x7fe63f017348 <col:33, col:39> col:39 used move 'float'
+  `-CompoundStmt 0x7fe63f017948 <line:8:1, line:15:1>
+    |-IfStmt 0x7fe63f0175d8 <line:9:3, line:10:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fe63f017510 <line:9:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7fe63f0174f8 <col:8> 'float' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe63f0174d0 <col:8> 'float' lvalue ParmVar 0x7fe63f0172d0 'delta' 'float'
+    | |-BinaryOperator 0x7fe63f0175b0 <line:10:5, col:12> 'float' '='
+    | | |-DeclRefExpr 0x7fe63f017530 <col:5> 'float' lvalue ParmVar 0x7fe63f017348 'move' 'float'
+    | | `-ImplicitCastExpr 0x7fe63f017598 <col:12> 'float' <FloatingCast>
+    | |   `-ImplicitCastExpr 0x7fe63f017580 <col:12> 'double' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe63f017558 <col:12> 'double' lvalue Var 0x7fe640005b78 'host_frametime' 'double'
+    | `-<<<NULL>>>
+    `-IfStmt 0x7fe63f017910 <line:11:3, line:14:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe63f017688 <line:11:7, col:15> 'int' '>'
+      | |-ImplicitCastExpr 0x7fe63f017658 <col:7> 'float' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe63f017610 <col:7> 'float' lvalue ParmVar 0x7fe63f0172d0 'delta' 'float'
+      | `-ImplicitCastExpr 0x7fe63f017670 <col:15> 'float' <IntegralToFloating>
+      |   `-IntegerLiteral 0x7fe63f017638 <col:15> 'int' 0
+      |-NullStmt 0x7fe63f0176b0 <line:12:5>
+      `-IfStmt 0x7fe63f0178d8 <line:13:8, line:14:16>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fe63f017828 <line:13:12, col:33> 'int' '&&'
+        | |-BinaryOperator 0x7fe63f017738 <col:12, col:20> 'int' '<'
+        | | |-ImplicitCastExpr 0x7fe63f017708 <col:12> 'float' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fe63f0176c0 <col:12> 'float' lvalue ParmVar 0x7fe63f0172d0 'delta' 'float'
+        | | `-ImplicitCastExpr 0x7fe63f017720 <col:20> 'float' <IntegralToFloating>
+        | |   `-IntegerLiteral 0x7fe63f0176e8 <col:20> 'int' 0
+        | `-BinaryOperator 0x7fe63f017800 <col:25, col:33> 'int' '>'
+        |   |-ImplicitCastExpr 0x7fe63f0177e8 <col:25> 'float' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fe63f017760 <col:25> 'float' lvalue ParmVar 0x7fe63f017348 'move' 'float'
+        |   `-UnaryOperator 0x7fe63f0177c8 <col:32, col:33> 'float' prefix '-'
+        |     `-ImplicitCastExpr 0x7fe63f0177b0 <col:33> 'float' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fe63f017788 <col:33> 'float' lvalue ParmVar 0x7fe63f0172d0 'delta' 'float'
+        |-BinaryOperator 0x7fe63f0178b0 <line:14:5, col:16> 'float' '='
+        | |-DeclRefExpr 0x7fe63f017850 <col:5> 'float' lvalue Var 0x7fe63f017258 'pitchvel' 'float'
+        | `-ImplicitCastExpr 0x7fe63f017898 <col:16> 'float' <IntegralToFloating>
+        |   `-IntegerLiteral 0x7fe63f017878 <col:16> 'int' 0
+        `-<<<NULL>>>

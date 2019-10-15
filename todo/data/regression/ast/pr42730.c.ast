@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f817000eee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f817000fb60 <../Data/C2AST/pr42730.c:1:1, line:5:1> line:1:7 union bzz definition
+| |-FieldDecl 0x7f8170827660 <line:3:3, col:13> col:13 pa 'unsigned int *'
+| `-FieldDecl 0x7f81708276c0 <line:4:3, col:9> col:9 referenced pv 'void *'
+`-FunctionDecl 0x7f81708277d0 <line:7:1, line:14:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7f8170827c98 <line:8:1, line:14:1>
+    |-DeclStmt 0x7f8170827960 <line:9:3, col:14>
+    | `-VarDecl 0x7f8170827900 <col:3, col:13> col:13 used u 'union bzz':'union bzz'
+    |-DeclStmt 0x7f8170827a20 <line:10:3, col:11>
+    | `-VarDecl 0x7f81708279c0 <col:3, col:10> col:10 used x 'void **'
+    |-DeclStmt 0x7f8170827ae8 <line:11:3, col:14>
+    | `-VarDecl 0x7f8170827a50 <col:3, col:13> col:9 used y 'void *' cinit
+    |   `-ImplicitCastExpr 0x7f8170827ad0 <col:13> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7f8170827ab0 <col:13> 'int' 0
+    |-BinaryOperator 0x7f8170827ba8 <line:12:3, col:10> 'void **' '='
+    | |-DeclRefExpr 0x7f8170827b00 <col:3> 'void **' lvalue Var 0x7f81708279c0 'x' 'void **'
+    | `-UnaryOperator 0x7f8170827b88 <col:7, col:10> 'void **' prefix '&'
+    |   `-MemberExpr 0x7f8170827b50 <col:8, col:10> 'void *' lvalue .pv 0x7f81708276c0
+    |     `-DeclRefExpr 0x7f8170827b28 <col:8> 'union bzz':'union bzz' lvalue Var 0x7f8170827900 'u' 'union bzz':'union bzz'
+    `-BinaryOperator 0x7f8170827c70 <line:13:3, col:8> 'void *' '='
+      |-UnaryOperator 0x7f8170827c10 <col:3, col:4> 'void *' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7f8170827bf8 <col:4> 'void **' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8170827bd0 <col:4> 'void **' lvalue Var 0x7f81708279c0 'x' 'void **'
+      `-ImplicitCastExpr 0x7f8170827c58 <col:8> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7f8170827c30 <col:8> 'void *' lvalue Var 0x7f8170827a50 'y' 'void *'

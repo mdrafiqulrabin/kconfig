@@ -1,0 +1,173 @@
+TranslationUnitDecl 0x7fb44382aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb44382b778 <../Data/C2AST/pr29682.c:3:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fb44382aca0 'unsigned long'
+|-TypedefDecl 0x7fb44386cc00 <line:4:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fb44382ac40 'unsigned char'
+|-TypedefDecl 0x7fb44386cc70 <line:5:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fb44382ac80 'unsigned int'
+|-TypedefDecl 0x7fb44386cd00 <line:6:1, col:17> col:17 referenced byte 'uint8_t':'unsigned char'
+| `-TypedefType 0x7fb44386ccd0 'uint8_t' sugar
+|   |-Typedef 0x7fb44386cc00 'uint8_t'
+|   `-BuiltinType 0x7fb44382ac40 'unsigned char'
+|-EnumDecl 0x7fb44386cd58 <line:7:9, line:13:1> line:7:14 pgpArmor_e
+| |-EnumConstantDecl 0x7fb44386ce50 <line:9:3, col:29> col:3 PGPARMOR_ERR_CRC_CHECK 'int'
+| | `-UnaryOperator 0x7fb44386ce30 <col:28, col:29> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fb44386ce10 <col:29> 'int' 7
+| |-EnumConstantDecl 0x7fb44386ced8 <col:32, line:10:6> line:9:32 PGPARMOR_ERR_BODY_DECODE 'int'
+| | `-UnaryOperator 0x7fb44386ceb8 <line:10:5, col:6> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fb44386ce98 <col:6> 'int' 3
+| |-EnumConstantDecl 0x7fb44386cf60 <col:9, col:44> col:9 PGPARMOR_ERR_UNKNOWN_ARMOR_TYPE 'int'
+| | `-UnaryOperator 0x7fb44386cf40 <col:43, col:44> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fb44386cf20 <col:44> 'int' 2
+| |-EnumConstantDecl 0x7fb44386cfe8 <col:47, line:11:6> line:10:47 referenced PGPARMOR_ERR_NO_BEGIN_PGP 'int'
+| | `-UnaryOperator 0x7fb44386cfc8 <line:11:5, col:6> 'int' prefix '-'
+| |   `-IntegerLiteral 0x7fb44386cfa8 <col:6> 'int' 1
+| |-EnumConstantDecl 0x7fb44386d050 <col:9, col:25> col:9 referenced PGPARMOR_NONE 'int'
+| | `-IntegerLiteral 0x7fb44386d030 <col:25> 'int' 0
+| |-EnumConstantDecl 0x7fb44386d0b8 <col:28, col:47> col:28 PGPARMOR_MESSAGE 'int'
+| | `-IntegerLiteral 0x7fb44386d098 <col:47> 'int' 1
+| |-EnumConstantDecl 0x7fb44386d120 <col:50, line:12:5> line:11:50 PGPARMOR_PUBKEY 'int'
+| | `-IntegerLiteral 0x7fb44386d100 <line:12:5> 'int' 5
+| |-EnumConstantDecl 0x7fb44386d188 <col:8, col:27> col:8 PGPARMOR_PRIVKEY 'int'
+| | `-IntegerLiteral 0x7fb44386d168 <col:27> 'int' 6
+| `-EnumConstantDecl 0x7fb44386d1f0 <col:30, col:48> col:30 PGPARMOR_SECKEY 'int'
+|   `-IntegerLiteral 0x7fb44386d1d0 <col:48> 'int' 7
+|-TypedefDecl 0x7fb44386d290 <line:7:1, line:14:1> col:1 referenced pgpArmor 'enum pgpArmor_e':'enum pgpArmor_e'
+| `-ElaboratedType 0x7fb44386d240 'enum pgpArmor_e' sugar
+|   `-EnumType 0x7fb44386cdf0 'enum pgpArmor_e'
+|     `-Enum 0x7fb44386cd58 'pgpArmor_e'
+|-FunctionDecl 0x7fb44386d5e8 <line:15:1, col:47> col:5 used b64decode 'int (const char *, void **, size_t *)'
+| |-ParmVarDecl 0x7fb44386d318 <col:16, col:27> col:28 'const char *'
+| |-ParmVarDecl 0x7fb44386d3c0 <col:30, col:36> col:37 'void **'
+| `-ParmVarDecl 0x7fb44386d4a8 <col:39, col:46> col:47 'size_t *'
+|-FunctionDecl 0x7fb44386d8f8 <line:16:1, line:29:1> line:16:14 used pgpCRC 'unsigned int (const byte *, size_t)'
+| |-ParmVarDecl 0x7fb44386d768 <col:22, col:35> col:35 octets 'const byte *'
+| |-ParmVarDecl 0x7fb44386d7d8 <col:43, col:50> col:50 used len 'size_t':'unsigned long'
+| `-CompoundStmt 0x7fb44386df20 <line:17:1, line:29:1>
+|   |-DeclStmt 0x7fb44386da58 <line:18:3, col:30>
+|   | `-VarDecl 0x7fb44386d9c0 <col:3, col:22> col:16 used crc 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fb44386da40 <col:22> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb44386da20 <col:22> 'int' 11994318
+|   |-DeclStmt 0x7fb44386dae8 <line:19:3, col:8>
+|   | `-VarDecl 0x7fb44386da88 <col:3, col:7> col:7 used i 'int'
+|   `-WhileStmt 0x7fb44386df00 <line:20:3, line:28:5>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fb44386db28 <line:20:10, col:13> 'size_t':'unsigned long' postfix '--'
+|     | `-DeclRefExpr 0x7fb44386db00 <col:10> 'size_t':'unsigned long' lvalue ParmVar 0x7fb44386d7d8 'len' 'size_t':'unsigned long'
+|     `-CompoundStmt 0x7fb44386dee8 <line:21:5, line:28:5>
+|       `-ForStmt 0x7fb44386deb0 <line:22:7, line:27:2>
+|         |-BinaryOperator 0x7fb44386db90 <line:22:12, col:16> 'int' '='
+|         | |-DeclRefExpr 0x7fb44386db48 <col:12> 'int' lvalue Var 0x7fb44386da88 'i' 'int'
+|         | `-IntegerLiteral 0x7fb44386db70 <col:16> 'int' 0
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x7fb44386dc18 <col:19, col:23> 'int' '<'
+|         | |-ImplicitCastExpr 0x7fb44386dc00 <col:19> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fb44386dbb8 <col:19> 'int' lvalue Var 0x7fb44386da88 'i' 'int'
+|         | `-IntegerLiteral 0x7fb44386dbe0 <col:23> 'int' 8
+|         |-UnaryOperator 0x7fb44386dc68 <col:26, col:27> 'int' postfix '++'
+|         | `-DeclRefExpr 0x7fb44386dc40 <col:26> 'int' lvalue Var 0x7fb44386da88 'i' 'int'
+|         `-CompoundStmt 0x7fb44386de90 <line:23:2, line:27:2>
+|           |-CompoundAssignOperator 0x7fb44386dce8 <line:24:4, col:12> 'unsigned int' '<<=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|           | |-DeclRefExpr 0x7fb44386dc88 <col:4> 'unsigned int' lvalue Var 0x7fb44386d9c0 'crc' 'unsigned int'
+|           | `-IntegerLiteral 0x7fb44386dcb0 <col:12> 'int' 1
+|           `-IfStmt 0x7fb44386de58 <line:25:4, line:26:13>
+|             |-<<<NULL>>>
+|             |-<<<NULL>>>
+|             |-BinaryOperator 0x7fb44386dd98 <line:25:8, col:14> 'unsigned int' '&'
+|             | |-ImplicitCastExpr 0x7fb44386dd68 <col:8> 'unsigned int' <LValueToRValue>
+|             | | `-DeclRefExpr 0x7fb44386dd20 <col:8> 'unsigned int' lvalue Var 0x7fb44386d9c0 'crc' 'unsigned int'
+|             | `-ImplicitCastExpr 0x7fb44386dd80 <col:14> 'unsigned int' <IntegralCast>
+|             |   `-IntegerLiteral 0x7fb44386dd48 <col:14> 'int' 16777216
+|             |-CompoundAssignOperator 0x7fb44386de20 <line:26:6, col:13> 'unsigned int' '^=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|             | |-DeclRefExpr 0x7fb44386ddc0 <col:6> 'unsigned int' lvalue Var 0x7fb44386d9c0 'crc' 'unsigned int'
+|             | `-ImplicitCastExpr 0x7fb44386de08 <col:13> 'unsigned int' <IntegralCast>
+|             |   `-IntegerLiteral 0x7fb44386dde8 <col:13> 'int' 25578747
+|             `-<<<NULL>>>
+`-FunctionDecl 0x7fb44386e200 <line:30:1, line:52:1> line:30:10 pgpReadPkts 'pgpArmor (const char *, const byte **, size_t *)'
+  |-ParmVarDecl 0x7fb44386df88 <col:23, col:35> col:35 fn 'const char *'
+  |-ParmVarDecl 0x7fb44386e060 <col:39, col:53> col:53 used pkt 'const byte **'
+  |-ParmVarDecl 0x7fb44386e0d0 <col:58, col:67> col:67 pktlen 'size_t *'
+  `-CompoundStmt 0x7fb443885b48 <line:31:1, line:52:1>
+    |-DeclStmt 0x7fb44386e3c0 <line:32:3, col:31>
+    | `-VarDecl 0x7fb44386e2c8 <col:3, col:30> col:15 used b 'const byte *' cinit
+    |   `-ImplicitCastExpr 0x7fb44386e3a8 <col:19, col:30> 'const byte *' <NullToPointer>
+    |     `-ParenExpr 0x7fb44386e388 <col:19, col:30> 'void *'
+    |       `-CStyleCastExpr 0x7fb44386e360 <col:20, col:29> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fb44386e328 <col:29> 'int' 0
+    |-DeclStmt 0x7fb44386e4e8 <line:33:3, col:33>
+    | `-VarDecl 0x7fb44386e3f0 <col:3, col:32> col:15 used enc 'const char *' cinit
+    |   `-ImplicitCastExpr 0x7fb44386e4d0 <col:21, col:32> 'const char *' <NullToPointer>
+    |     `-ParenExpr 0x7fb44386e4b0 <col:21, col:32> 'void *'
+    |       `-CStyleCastExpr 0x7fb44386e488 <col:22, col:31> 'void *' <NullToPointer>
+    |         `-IntegerLiteral 0x7fb44386e450 <col:31> 'int' 0
+    |-DeclStmt 0x7fb44386e5c8 <line:34:3, col:12>
+    | `-VarDecl 0x7fb44386e568 <col:3, col:9> col:9 used dec 'byte *'
+    |-DeclStmt 0x7fb44386e650 <line:35:3, col:16>
+    | `-VarDecl 0x7fb44386e5f0 <col:3, col:10> col:10 used declen 'size_t':'unsigned long'
+    |-DeclStmt 0x7fb44386e788 <line:36:3, col:23>
+    | |-VarDecl 0x7fb44386e6a0 <col:3, col:12> col:12 crcpkt 'uint32_t':'unsigned int'
+    | `-VarDecl 0x7fb44386e710 <col:3, col:20> col:20 used crc 'uint32_t':'unsigned int'
+    |-DeclStmt 0x7fb44386e838 <line:37:3, col:17>
+    | `-VarDecl 0x7fb44386e7b8 <col:3, col:16> col:7 used pstate 'int' cinit
+    |   `-IntegerLiteral 0x7fb44386e818 <col:16> 'int' 0
+    |-DeclStmt 0x7fb44386e900 <line:38:3, col:42>
+    | `-VarDecl 0x7fb44386e860 <col:3, col:17> col:12 used ec 'pgpArmor':'enum pgpArmor_e' cinit
+    |   `-ImplicitCastExpr 0x7fb44386e8e8 <col:17> 'pgpArmor':'enum pgpArmor_e' <IntegralCast>
+    |     `-DeclRefExpr 0x7fb44386e8c0 <col:17> 'int' EnumConstant 0x7fb44386cfe8 'PGPARMOR_ERR_NO_BEGIN_PGP' 'int'
+    |-CompoundStmt 0x7fb443885908 <line:39:5, line:49:5>
+    | `-SwitchStmt 0x7fb44386e958 <line:40:7, line:48:2>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7fb44386e940 <line:40:15> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fb44386e918 <col:15> 'int' lvalue Var 0x7fb44386e7b8 'pstate' 'int'
+    |   `-CompoundStmt 0x7fb4438858e8 <line:41:2, line:48:2>
+    |     |-CaseStmt 0x7fb44386e9a8 <line:42:2, line:46:6>
+    |     | |-IntegerLiteral 0x7fb44386e988 <line:42:7> 'int' 0
+    |     | |-<<<NULL>>>
+    |     | `-IfStmt 0x7fb4438856f8 <line:43:4, line:46:6>
+    |     |   |-<<<NULL>>>
+    |     |   |-<<<NULL>>>
+    |     |   |-BinaryOperator 0x7fb443885658 <line:43:8, col:52> 'int' '!='
+    |     |   | |-CallExpr 0x7fb44386ebd0 <col:8, col:47> 'int'
+    |     |   | | |-ImplicitCastExpr 0x7fb44386ebb8 <col:8> 'int (*)(const char *, void **, size_t *)' <FunctionToPointerDecay>
+    |     |   | | | `-DeclRefExpr 0x7fb44386e9e0 <col:8> 'int (const char *, void **, size_t *)' Function 0x7fb44386d5e8 'b64decode' 'int (const char *, void **, size_t *)'
+    |     |   | | |-ImplicitCastExpr 0x7fb443885620 <col:19> 'const char *' <LValueToRValue>
+    |     |   | | | `-DeclRefExpr 0x7fb44386ea08 <col:19> 'const char *' lvalue Var 0x7fb44386e3f0 'enc' 'const char *'
+    |     |   | | |-CStyleCastExpr 0x7fb44386eaf0 <col:24, col:35> 'void **' <BitCast>
+    |     |   | | | `-UnaryOperator 0x7fb44386eab8 <col:34, col:35> 'byte **' prefix '&'
+    |     |   | | |   `-DeclRefExpr 0x7fb44386ea30 <col:35> 'byte *' lvalue Var 0x7fb44386e568 'dec' 'byte *'
+    |     |   | | `-UnaryOperator 0x7fb44386eb40 <col:40, col:41> 'size_t *' prefix '&'
+    |     |   | |   `-DeclRefExpr 0x7fb44386eb18 <col:41> 'size_t':'unsigned long' lvalue Var 0x7fb44386e5f0 'declen' 'size_t':'unsigned long'
+    |     |   | `-IntegerLiteral 0x7fb443885638 <col:52> 'int' 0
+    |     |   |-CompoundStmt 0x7fb4438856e0 <line:44:6, line:46:6>
+    |     |   | `-GotoStmt 0x7fb4438856c8 <line:45:8, col:13> 'exit' 0x7fb443885680
+    |     |   `-<<<NULL>>>
+    |     `-BinaryOperator 0x7fb4438858c0 <line:47:4, col:29> 'uint32_t':'unsigned int' '='
+    |       |-DeclRefExpr 0x7fb443885730 <col:4> 'uint32_t':'unsigned int' lvalue Var 0x7fb44386e710 'crc' 'uint32_t':'unsigned int'
+    |       `-CallExpr 0x7fb443885840 <col:10, col:29> 'unsigned int'
+    |         |-ImplicitCastExpr 0x7fb443885828 <col:10> 'unsigned int (*)(const byte *, size_t)' <FunctionToPointerDecay>
+    |         | `-DeclRefExpr 0x7fb443885758 <col:10> 'unsigned int (const byte *, size_t)' Function 0x7fb44386d8f8 'pgpCRC' 'unsigned int (const byte *, size_t)'
+    |         |-ImplicitCastExpr 0x7fb443885890 <col:18> 'const byte *' <BitCast>
+    |         | `-ImplicitCastExpr 0x7fb443885878 <col:18> 'byte *' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fb443885780 <col:18> 'byte *' lvalue Var 0x7fb44386e568 'dec' 'byte *'
+    |         `-ImplicitCastExpr 0x7fb4438858a8 <col:23> 'size_t':'unsigned long' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fb4438857a8 <col:23> 'size_t':'unsigned long' lvalue Var 0x7fb44386e5f0 'declen' 'size_t':'unsigned long'
+    `-LabelStmt 0x7fb443885b30 <line:50:1, line:51:12> 'exit'
+      `-IfStmt 0x7fb443885af8 <line:50:6, line:51:12>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fb443885a08 <line:50:10, col:32> 'int' '&&'
+        | |-BinaryOperator 0x7fb4438859a0 <col:10, col:15> 'int' '>'
+        | | |-ImplicitCastExpr 0x7fb443885988 <col:10> 'int' <IntegralCast>
+        | | | `-ImplicitCastExpr 0x7fb443885970 <col:10> 'pgpArmor':'enum pgpArmor_e' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fb443885920 <col:10> 'pgpArmor':'enum pgpArmor_e' lvalue Var 0x7fb44386e860 'ec' 'pgpArmor':'enum pgpArmor_e'
+        | | `-DeclRefExpr 0x7fb443885948 <col:15> 'int' EnumConstant 0x7fb44386d050 'PGPARMOR_NONE' 'int'
+        | `-ImplicitCastExpr 0x7fb4438859f0 <col:32> 'const byte **' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fb4438859c8 <col:32> 'const byte **' lvalue ParmVar 0x7fb44386e060 'pkt' 'const byte **'
+        |-BinaryOperator 0x7fb443885ad0 <line:51:5, col:12> 'const byte *' '='
+        | |-UnaryOperator 0x7fb443885a70 <col:5, col:6> 'const byte *' lvalue prefix '*'
+        | | `-ImplicitCastExpr 0x7fb443885a58 <col:6> 'const byte **' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fb443885a30 <col:6> 'const byte **' lvalue ParmVar 0x7fb44386e060 'pkt' 'const byte **'
+        | `-ImplicitCastExpr 0x7fb443885ab8 <col:12> 'const byte *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fb443885a90 <col:12> 'const byte *' lvalue Var 0x7fb44386e2c8 'b' 'const byte *'
+        `-<<<NULL>>>

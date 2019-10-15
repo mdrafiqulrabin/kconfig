@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fe7ef02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe7ef02c960 <../Data/C2AST/pr17933-1.c:3:1, line:4:10> line:3:8 struct d definition
+| `-FieldDecl 0x7fe7ef81c438 <line:4:3, col:7> col:7 a 'int'
+|-FunctionDecl 0x7fe7ef81c570 <line:5:6> col:6 implicit abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe7ef81c610 prev 0x7fe7ef81c570 <col:1, col:16> col:6 abort 'void (void) __attribute__((noreturn))'
+|-TypedefDecl 0x7fe7ef81c8b0 <line:6:1, col:29> col:20 referenced f 'struct d (*)(int)'
+| `-PointerType 0x7fe7ef81c840 'struct d (*)(int)'
+|   `-ParenType 0x7fe7ef81c7e0 'struct d (int)' sugar
+|     `-FunctionProtoType 0x7fe7ef81c7a0 'struct d (int)' cdecl
+|       |-ElaboratedType 0x7fe7ef81c730 'struct d' sugar
+|       | `-RecordType 0x7fe7ef81c400 'struct d'
+|       |   `-Record 0x7fe7ef02c960 'd'
+|       `-BuiltinType 0x7fe7ef02bde0 'int'
+|-FunctionDecl 0x7fe7ef81ca20 <line:7:1, col:10> col:3 used ff 'f (void)'
+`-FunctionDecl 0x7fe7ef81cb48 <line:8:1, line:12:1> line:8:6 test1 'void ()'
+  `-CompoundStmt 0x7fe7ef81cdc0 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fe7ef81cd18 <line:10:3, col:13>
+    | `-VarDecl 0x7fe7ef81cbf8 <col:3, col:12> col:5 used t 'f':'struct d (*)(int)' cinit
+    |   `-CallExpr 0x7fe7ef81ccf0 <col:9, col:12> 'f':'struct d (*)(int)'
+    |     `-ImplicitCastExpr 0x7fe7ef81ccd8 <col:9> 'f (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fe7ef81cc58 <col:9> 'f (void)' Function 0x7fe7ef81ca20 'ff' 'f (void)'
+    `-CallExpr 0x7fe7ef81cd90 <line:11:3, col:6> 'struct d':'struct d'
+      |-ImplicitCastExpr 0x7fe7ef81cd78 <col:3> 'f':'struct d (*)(int)' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe7ef81cd30 <col:3> 'f':'struct d (*)(int)' lvalue Var 0x7fe7ef81cbf8 't' 'f':'struct d (*)(int)'
+      `-IntegerLiteral 0x7fe7ef81cd58 <col:5> 'int' 0

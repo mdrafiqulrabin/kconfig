@@ -1,0 +1,26 @@
+../Data/C2AST/pr49735.c:4:32: error: aliases are not supported on darwin
+void bar (void) __attribute__((alias("foo")));
+                               ^
+1 error generated.
+TranslationUnitDecl 0x7feba280e8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feba280ee60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feba280eb80 '__int128'
+|-TypedefDecl 0x7feba280eed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feba280eba0 'unsigned __int128'
+|-TypedefDecl 0x7feba280f1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feba280efb0 'struct __NSConstantString_tag'
+|   `-Record 0x7feba280ef28 '__NSConstantString_tag'
+|-TypedefDecl 0x7feba280f240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feba280f200 'char *'
+|   `-BuiltinType 0x7feba280e980 'char'
+|-TypedefDecl 0x7feba280f508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feba280f4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feba280f320 'struct __va_list_tag'
+|     `-Record 0x7feba280f298 '__va_list_tag'
+|-FunctionDecl 0x7feba2024020 <../Data/C2AST/pr49735.c:2:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7feba2024190 <line:3:1, col:34> col:13 foo 'void (void)' static
+| `-CompoundStmt 0x7feba20242c8 <col:24, col:34>
+|   `-CallExpr 0x7feba20242a0 <col:26, col:31> 'void'
+|     `-ImplicitCastExpr 0x7feba2024288 <col:26> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7feba2024230 <col:26> 'void (void)' Function 0x7feba2024020 'bar' 'void (void)'
+`-FunctionDecl 0x7feba20243d8 prev 0x7feba2024020 <line:4:1, col:45> col:6 used bar 'void (void)'

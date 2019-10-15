@@ -1,0 +1,38 @@
+../Data/C2AST/pr79757-5.c:11:3: error: function definition is not allowed here
+  {
+  ^
+../Data/C2AST/pr79757-5.c:18:3: error: function definition is not allowed here
+  {
+  ^
+2 errors generated.
+TranslationUnitDecl 0x7fcd6a02b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd6a02b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd6a02b580 '__int128'
+|-TypedefDecl 0x7fcd6a02b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd6a02b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fcd6a02bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd6a02b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd6a02b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd6a02bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd6a02bc00 'char *'
+|   `-BuiltinType 0x7fcd6a02b380 'char'
+|-TypedefDecl 0x7fcd6a02bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd6a02beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd6a02bd20 'struct __va_list_tag'
+|     `-Record 0x7fcd6a02bc98 '__va_list_tag'
+`-FunctionDecl 0x7fcd6a814228 <../Data/C2AST/pr79757-5.c:6:1, line:26:1> line:7:1 main 'int (void)'
+  `-CompoundStmt 0x7fcd6a8148a8 <line:8:1, line:26:1>
+    |-DeclStmt 0x7fcd6a814660 <line:23:3, col:22>
+    | `-VarDecl 0x7fcd6a814440 <col:3, col:21> col:7 j 'int' cinit
+    |   `-CallExpr 0x7fcd6a814630 <col:11, col:21> 'int'
+    |     |-ImplicitCastExpr 0x7fcd6a814618 <col:11> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcd6a8145a0 <col:11> 'int ()' Function 0x7fcd6a8144f0 'shift' 'int ()'
+    |     `-IntegerLiteral 0x7fcd6a8145c8 <col:18> 'int' 100
+    |-DeclStmt 0x7fcd6a814858 <line:24:3, col:18>
+    | `-VarDecl 0x7fcd6a814690 <col:3, col:17> col:7 i 'int' cinit
+    |   `-CallExpr 0x7fcd6a814828 <col:11, col:17> 'int'
+    |     |-ImplicitCastExpr 0x7fcd6a814810 <col:11> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcd6a8147c8 <col:11> 'int ()' Function 0x7fcd6a814718 'div' 'int ()'
+    |     `-IntegerLiteral 0x7fcd6a8147f0 <col:16> 'int' 0
+    `-ReturnStmt 0x7fcd6a814890 <line:25:3, col:10>
+      `-IntegerLiteral 0x7fcd6a814870 <col:10> 'int' 0

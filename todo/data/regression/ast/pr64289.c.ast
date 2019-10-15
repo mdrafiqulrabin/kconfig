@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fcbac8174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcbab826068 <../Data/C2AST/pr64289.c:5:1, line:9:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fcbac818178 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fcbab826368 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fcbab826350 <line:8:3, col:36>
+      `-CStyleCastExpr 0x7fcbab826328 <col:10, col:36> 'int' <FloatingToIntegral>
+        `-ParenExpr 0x7fcbab826308 <col:16, col:36> 'double'
+          `-ConditionalOperator 0x7fcbab826290 <col:17, col:33> 'double'
+            |-IntegerLiteral 0x7fcbab826150 <col:17> 'int' 0
+            |-ImplicitCastExpr 0x7fcbab826278 <col:21> 'double' <IntegralToFloating>
+            | `-IntegerLiteral 0x7fcbab826170 <col:21> 'int' 0
+            `-ConditionalOperator 0x7fcbab826248 <col:25, col:33> 'double'
+              |-ImplicitCastExpr 0x7fcbab826200 <col:25> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fcbab826190 <col:25> 'int' lvalue ParmVar 0x7fcbac818178 'a' 'int'
+              |-ImplicitCastExpr 0x7fcbab826230 <col:29> 'double' <IntegralToFloating>
+              | `-ImplicitCastExpr 0x7fcbab826218 <col:29> 'int' <LValueToRValue>
+              |   `-DeclRefExpr 0x7fcbab8261b8 <col:29> 'int' lvalue ParmVar 0x7fcbac818178 'a' 'int'
+              `-FloatingLiteral 0x7fcbab8261e0 <col:33> 'double' 5.000000e-01

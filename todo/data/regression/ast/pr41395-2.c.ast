@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7fe84b82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe84b82c960 <../Data/C2AST/pr41395-2.c:1:1, line:13:1> line:1:8 struct VEC_char_base definition
+| |-FieldDecl 0x7fe84b868e38 <line:3:3, col:12> col:12 num 'unsigned int'
+| |-FieldDecl 0x7fe84b868e98 <line:4:3, col:12> col:12 alloc 'unsigned int'
+| |-RecordDecl 0x7fe84b868ee0 <line:5:3, line:12:3> line:5:3 union definition
+| | |-FieldDecl 0x7fe84b869010 <line:6:7, col:18> col:13 referenced vec 'short [1]'
+| | |-RecordDecl 0x7fe84b869058 <line:7:7, line:11:7> line:7:7 struct definition
+| | | |-FieldDecl 0x7fe84b869118 <line:8:4, col:8> col:8 i 'int'
+| | | |-FieldDecl 0x7fe84b869178 <line:9:4, col:8> col:8 j 'int'
+| | | `-FieldDecl 0x7fe84b8691d8 <line:10:4, col:8> col:8 k 'int'
+| | `-FieldDecl 0x7fe84b869270 <line:7:7, line:11:9> col:9 a 'struct (anonymous struct at ../Data/C2AST/pr41395-2.c:7:7)':'struct VEC_char_base::(anonymous at ../Data/C2AST/pr41395-2.c:7:7)'
+| `-FieldDecl 0x7fe84b869310 <line:5:3, line:12:5> col:5 referenced u 'union (anonymous union at ../Data/C2AST/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at ../Data/C2AST/pr41395-2.c:5:3)'
+|-FunctionDecl 0x7fe84b8695a8 <line:15:1, line:23:1> line:16:1 used foo 'short (struct VEC_char_base *, int)'
+| |-ParmVarDecl 0x7fe84b869410 <col:6, col:28> col:28 used p 'struct VEC_char_base *'
+| |-ParmVarDecl 0x7fe84b869488 <col:31, col:35> col:35 used i 'int'
+| |-CompoundStmt 0x7fe84b869cc8 <line:17:1, line:23:1>
+| | |-DeclStmt 0x7fe84b869780 <line:18:3, col:11>
+| | | `-VarDecl 0x7fe84b869720 <col:3, col:10> col:10 used q 'short *'
+| | |-BinaryOperator 0x7fe84b869900 <line:19:3, col:17> 'short' '='
+| | | |-ArraySubscriptExpr 0x7fe84b8698a0 <col:3, col:13> 'short' lvalue
+| | | | |-ImplicitCastExpr 0x7fe84b869870 <col:3, col:8> 'short *' <ArrayToPointerDecay>
+| | | | | `-MemberExpr 0x7fe84b869810 <col:3, col:8> 'short [1]' lvalue .vec 0x7fe84b869010
+| | | | |   `-MemberExpr 0x7fe84b8697d8 <col:3, col:6> 'union (anonymous union at ../Data/C2AST/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at ../Data/C2AST/pr41395-2.c:5:3)' lvalue ->u 0x7fe84b869310
+| | | | |     `-ImplicitCastExpr 0x7fe84b8697c0 <col:3> 'struct VEC_char_base *' <LValueToRValue>
+| | | | |       `-DeclRefExpr 0x7fe84b869798 <col:3> 'struct VEC_char_base *' lvalue ParmVar 0x7fe84b869410 'p' 'struct VEC_char_base *'
+| | | | `-ImplicitCastExpr 0x7fe84b869888 <col:12> 'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fe84b869848 <col:12> 'int' lvalue ParmVar 0x7fe84b869488 'i' 'int'
+| | | `-ImplicitCastExpr 0x7fe84b8698e8 <col:17> 'short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fe84b8698c8 <col:17> 'int' 0
+| | |-BinaryOperator 0x7fe84b869a80 <line:20:3, col:19> 'short *' '='
+| | | |-DeclRefExpr 0x7fe84b869928 <col:3> 'short *' lvalue Var 0x7fe84b869720 'q' 'short *'
+| | | `-UnaryOperator 0x7fe84b869a60 <col:7, col:19> 'short *' prefix '&'
+| | |   `-ArraySubscriptExpr 0x7fe84b869a38 <col:8, col:19> 'short' lvalue
+| | |     |-ImplicitCastExpr 0x7fe84b869a20 <col:8, col:13> 'short *' <ArrayToPointerDecay>
+| | |     | `-MemberExpr 0x7fe84b8699c8 <col:8, col:13> 'short [1]' lvalue .vec 0x7fe84b869010
+| | |     |   `-MemberExpr 0x7fe84b869990 <col:8, col:11> 'union (anonymous union at ../Data/C2AST/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at ../Data/C2AST/pr41395-2.c:5:3)' lvalue ->u 0x7fe84b869310
+| | |     |     `-ImplicitCastExpr 0x7fe84b869978 <col:8> 'struct VEC_char_base *' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7fe84b869950 <col:8> 'struct VEC_char_base *' lvalue ParmVar 0x7fe84b869410 'p' 'struct VEC_char_base *'
+| | |     `-IntegerLiteral 0x7fe84b869a00 <col:17> 'int' 16
+| | |-BinaryOperator 0x7fe84b869b40 <line:21:3, col:8> 'short' '='
+| | | |-UnaryOperator 0x7fe84b869ae8 <col:3, col:4> 'short' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fe84b869ad0 <col:4> 'short *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fe84b869aa8 <col:4> 'short *' lvalue Var 0x7fe84b869720 'q' 'short *'
+| | | `-ImplicitCastExpr 0x7fe84b869b28 <col:8> 'short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fe84b869b08 <col:8> 'int' 1
+| | `-ReturnStmt 0x7fe84b869cb0 <line:22:3, col:20>
+| |   `-ImplicitCastExpr 0x7fe84b869c98 <col:10, col:20> 'short' <LValueToRValue>
+| |     `-ArraySubscriptExpr 0x7fe84b869c70 <col:10, col:20> 'short' lvalue
+| |       |-ImplicitCastExpr 0x7fe84b869c40 <col:10, col:15> 'short *' <ArrayToPointerDecay>
+| |       | `-MemberExpr 0x7fe84b869be0 <col:10, col:15> 'short [1]' lvalue .vec 0x7fe84b869010
+| |       |   `-MemberExpr 0x7fe84b869ba8 <col:10, col:13> 'union (anonymous union at ../Data/C2AST/pr41395-2.c:5:3)':'union VEC_char_base::(anonymous at ../Data/C2AST/pr41395-2.c:5:3)' lvalue ->u 0x7fe84b869310
+| |       |     `-ImplicitCastExpr 0x7fe84b869b90 <col:10> 'struct VEC_char_base *' <LValueToRValue>
+| |       |       `-DeclRefExpr 0x7fe84b869b68 <col:10> 'struct VEC_char_base *' lvalue ParmVar 0x7fe84b869410 'p' 'struct VEC_char_base *'
+| |       `-ImplicitCastExpr 0x7fe84b869c58 <col:19> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fe84b869c18 <col:19> 'int' lvalue ParmVar 0x7fe84b869488 'i' 'int'
+| `-NoInlineAttr 0x7fe84b869658 <line:15:22>
+|-FunctionDecl 0x7fe84c807e00 <line:25:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe84c807ea0 prev 0x7fe84c807e00 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe84c808028 <line:26:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7fe84c8080c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fe84c808130 prev 0x7fe84c808028 <col:1, col:35> col:14 used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7fe84c807f58 <<built-in>:81:23, col:37> ../Data/C2AST/pr41395-2.c:26:35 'unsigned long'
+`-FunctionDecl 0x7fe84c808230 <line:28:1, line:35:1> line:29:1 main 'int ()'
+  `-CompoundStmt 0x7fe84c808858 <line:30:1, line:35:1>
+    |-DeclStmt 0x7fe84c8085a8 <line:31:3, col:73>
+    | `-VarDecl 0x7fe84c8082f8 <col:3, col:72> col:25 used p 'struct VEC_char_base *' cinit
+    |   `-ImplicitCastExpr 0x7fe84c808490 <col:29, col:72> 'struct VEC_char_base *' <BitCast>
+    |     `-CallExpr 0x7fe84c808460 <col:29, col:72> 'void *'
+    |       |-ImplicitCastExpr 0x7fe84c808448 <col:29> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fe84c808358 <col:29> 'void *(unsigned long)' Function 0x7fe84c808130 'malloc' 'void *(unsigned long)'
+    |       `-BinaryOperator 0x7fe84c8083f8 <col:37, col:69> 'unsigned long' '+'
+    |         |-UnaryExprOrTypeTraitExpr 0x7fe84c8083a0 <col:37, col:65> 'unsigned long' sizeof 'struct VEC_char_base':'struct VEC_char_base'
+    |         `-ImplicitCastExpr 0x7fe84c8083e0 <col:69> 'unsigned long' <IntegralCast>
+    |           `-IntegerLiteral 0x7fe84c8083c0 <col:69> 'int' 256
+    |-IfStmt 0x7fe84c8087e8 <line:32:3, line:33:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe84c808728 <line:32:7, col:22> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe84c808710 <col:7, col:17> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7fe84c8086a0 <col:7, col:17> 'short'
+    | | |   |-ImplicitCastExpr 0x7fe84c808688 <col:7> 'short (*)(struct VEC_char_base *, int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fe84c8085c0 <col:7> 'short (struct VEC_char_base *, int)' Function 0x7fe84b8695a8 'foo' 'short (struct VEC_char_base *, int)'
+    | | |   |-ImplicitCastExpr 0x7fe84c8086d8 <col:12> 'struct VEC_char_base *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7fe84c8085e8 <col:12> 'struct VEC_char_base *' lvalue Var 0x7fe84c8082f8 'p' 'struct VEC_char_base *'
+    | | |   `-IntegerLiteral 0x7fe84c808610 <col:15> 'int' 16
+    | | `-IntegerLiteral 0x7fe84c8086f0 <col:22> 'int' 1
+    | |-CallExpr 0x7fe84c8087c0 <line:33:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe84c8087a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe84c808750 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe84c807ea0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe84c808840 <line:34:3, col:10>
+      `-IntegerLiteral 0x7fe84c808820 <col:10> 'int' 0

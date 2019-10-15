@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fa37b00a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa37b00b560 <../Data/C2AST/pr47610.c:4:1, col:27> col:8 struct S definition
+| `-FieldDecl 0x7fa37b04da38 <col:12, col:24> col:24 s 'const char *'
+|-VarDecl 0x7fa37b04db38 <line:5:1, col:28> col:16 s 'const struct S [1]' cinit
+| `-InitListExpr 0x7fa37b04dca8 <col:22, col:28> 'const struct S [1]'
+|   `-InitListExpr 0x7fa37b04dd00 <col:24> 'const struct S':'const struct S'
+|     `-ImplicitCastExpr 0x7fa37b04dd68 <col:24> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fa37b04dd50 <col:24> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fa37b04dc18 <col:24> 'char [2]' lvalue "s"
+|-FunctionDecl 0x7fa37b04e060 <line:6:1, col:33> col:13 used foo 'void (void (*)(void))' extern
+| `-ParmVarDecl 0x7fa37b04df58 <col:18, col:32> col:25 'void (*)(void)'
+|-FunctionDecl 0x7fa37b04e198 <line:7:1, col:25> col:13 used bar 'void (void)' static
+| `-CompoundStmt 0x7fa37b04e238 <col:24, col:25>
+`-FunctionDecl 0x7fa37b04e298 <line:8:1, col:26> col:6 baz 'void ()'
+  `-CompoundStmt 0x7fa37b04e448 <col:13, col:26>
+    `-CallExpr 0x7fa37b04e400 <col:15, col:23> 'void'
+      |-ImplicitCastExpr 0x7fa37b04e3e8 <col:15> 'void (*)(void (*)(void))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa37b04e338 <col:15> 'void (void (*)(void))' Function 0x7fa37b04e060 'foo' 'void (void (*)(void))'
+      `-ImplicitCastExpr 0x7fa37b04e430 <col:20> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fa37b04e360 <col:20> 'void (void)' Function 0x7fa37b04e198 'bar' 'void (void)'

@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fa93f02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa93f06d8d0 <../Data/C2AST/pr18903.c:5:1, line:13:1> line:5:6 g 'void (int, int)'
+  |-ParmVarDecl 0x7fa93f02c978 <col:9, col:13> col:13 used s 'int'
+  |-ParmVarDecl 0x7fa93f06d800 <col:16, col:20> col:20 used f 'int'
+  `-CompoundStmt 0x7fa93f06dbe8 <line:6:1, line:13:1>
+    |-AddrLabelExpr 0x7fa93f06da08 <line:7:3, col:5> 'void *' ff 0x7fa93f06d9c0
+    |-BinaryOperator 0x7fa93f06da90 <line:8:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fa93f06da28 <col:3> 'int' lvalue ParmVar 0x7fa93f02c978 's' 'int'
+    | `-ImplicitCastExpr 0x7fa93f06da78 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa93f06da50 <col:7> 'int' lvalue ParmVar 0x7fa93f06d800 'f' 'int'
+    |-LabelStmt 0x7fa93f06db18 <line:9:3, line:10:8> 'ff'
+    | `-GotoStmt 0x7fa93f06db00 <col:3, col:8> 'end' 0x7fa93f06dab8
+    |-BinaryOperator 0x7fa93f06db98 <line:11:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fa93f06db30 <col:3> 'int' lvalue ParmVar 0x7fa93f06d800 'f' 'int'
+    | `-ImplicitCastExpr 0x7fa93f06db80 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa93f06db58 <col:7> 'int' lvalue ParmVar 0x7fa93f02c978 's' 'int'
+    `-LabelStmt 0x7fa93f06dbd0 <line:12:3, col:7> 'end'
+      `-NullStmt 0x7fa93f06dbc0 <col:7>

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fa08d0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa08c828060 <../Data/C2AST/pr65400-2.c:4:1, col:23> col:13 used foo 'void (int *)' extern
+| `-ParmVarDecl 0x7fa08d0181a0 <col:18, col:22> col:23 'int *'
+`-FunctionDecl 0x7fa08c8281e8 <line:6:1, line:10:1> line:7:1 baz4 'void (int *)'
+  |-ParmVarDecl 0x7fa08c828160 <col:7, col:12> col:12 used p 'int *'
+  `-CompoundStmt 0x7fa08c828368 <line:8:1, line:10:1>
+    `-CallExpr 0x7fa08c828320 <line:9:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fa08c828308 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa08c828290 <col:3> 'void (int *)' Function 0x7fa08c828060 'foo' 'void (int *)'
+      `-ImplicitCastExpr 0x7fa08c828350 <col:8> 'int *' <LValueToRValue>
+        `-DeclRefExpr 0x7fa08c8282b8 <col:8> 'int *' lvalue ParmVar 0x7fa08c828160 'p' 'int *'

@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fe78f02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe78f02c978 <../Data/C2AST/pr80025.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe78f07e858 <line:6:1, col:10> col:10 used b 'long'
+|-VarDecl 0x7fe78f07e8d0 <col:1, col:13> col:13 used c 'long'
+|-FunctionDecl 0x7fe78f07ea18 <line:8:1, line:11:1> line:9:1 used foo 'long (void)'
+| `-CompoundStmt 0x7fe78f07eab8 <line:10:1, line:11:1>
+|-FunctionDecl 0x7fe78f07ecb0 <line:13:1, line:16:1> line:14:1 used bar 'void (int, short, unsigned short)'
+| |-ParmVarDecl 0x7fe78f07eae0 <col:6, col:10> col:10 x 'int'
+| |-ParmVarDecl 0x7fe78f07eb58 <col:13, col:23> col:23 y 'short'
+| |-ParmVarDecl 0x7fe78f07ebd0 <col:26, col:45> col:45 z 'unsigned short'
+| `-CompoundStmt 0x7fe78f07ed68 <line:15:1, line:16:1>
+`-FunctionDecl 0x7fe78f07ee48 <line:18:1, line:24:1> line:19:1 baz 'int (void)'
+  `-CompoundStmt 0x7fe78f07f4d8 <line:20:1, line:24:1>
+    |-CompoundAssignOperator 0x7fe78f07ef50 <line:21:3, col:8> 'int' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+    | |-DeclRefExpr 0x7fe78f07eee8 <col:3> 'int' lvalue Var 0x7fe78f02c978 'a' 'int'
+    | `-ImplicitCastExpr 0x7fe78f07ef38 <col:8> 'long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe78f07ef10 <col:8> 'long' lvalue Var 0x7fe78f07e858 'b' 'long'
+    |-BinaryOperator 0x7fe78f07f080 <line:22:3, col:13> 'long' '='
+    | |-DeclRefExpr 0x7fe78f07ef88 <col:3> 'long' lvalue Var 0x7fe78f07e858 'b' 'long'
+    | `-ImplicitCastExpr 0x7fe78f07f068 <col:7, col:13> 'long' <IntegralCast>
+    |   `-UnaryOperator 0x7fe78f07f048 <col:7, col:13> 'int' prefix '!'
+    |     `-CallExpr 0x7fe78f07f020 <col:8, col:13> 'long'
+    |       `-ImplicitCastExpr 0x7fe78f07f008 <col:8> 'long (*)(void)' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fe78f07efb0 <col:8> 'long (void)' Function 0x7fe78f07ea18 'foo' 'long (void)'
+    `-CallExpr 0x7fe78f07f438 <line:23:3, col:66> 'void'
+      |-ImplicitCastExpr 0x7fe78f07f420 <col:3> 'void (*)(int, short, unsigned short)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe78f07f0a8 <col:3> 'void (int, short, unsigned short)' Function 0x7fe78f07ecb0 'bar' 'void (int, short, unsigned short)'
+      |-ImplicitCastExpr 0x7fe78f07f478 <col:8, col:38> 'int' <IntegralCast>
+      | `-CompoundAssignOperator 0x7fe78f07f310 <col:8, col:38> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+      |   |-DeclRefExpr 0x7fe78f07f0d0 <col:8> 'long' lvalue Var 0x7fe78f07e858 'b' 'long'
+      |   `-ConditionalOperator 0x7fe78f07f2e0 <col:13, col:38> 'long'
+      |     |-ParenExpr 0x7fe78f07f198 <col:13, col:19> 'long'
+      |     | `-BinaryOperator 0x7fe78f07f170 <col:14, col:18> 'long' '^'
+      |     |   |-ImplicitCastExpr 0x7fe78f07f140 <col:14> 'long' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7fe78f07f0f8 <col:14> 'long' lvalue Var 0x7fe78f07e8d0 'c' 'long'
+      |     |   `-ImplicitCastExpr 0x7fe78f07f158 <col:18> 'long' <IntegralCast>
+      |     |     `-IntegerLiteral 0x7fe78f07f120 <col:18> 'int' 1
+      |     |-ParenExpr 0x7fe78f07f258 <col:23, col:29> 'long'
+      |     | `-BinaryOperator 0x7fe78f07f230 <col:24, col:28> 'long' '^'
+      |     |   |-ImplicitCastExpr 0x7fe78f07f200 <col:24> 'long' <LValueToRValue>
+      |     |   | `-DeclRefExpr 0x7fe78f07f1b8 <col:24> 'long' lvalue Var 0x7fe78f07e8d0 'c' 'long'
+      |     |   `-ImplicitCastExpr 0x7fe78f07f218 <col:28> 'long' <IntegralCast>
+      |     |     `-IntegerLiteral 0x7fe78f07f1e0 <col:28> 'int' 1
+      |     `-CallExpr 0x7fe78f07f2b8 <col:33, col:38> 'long'
+      |       `-ImplicitCastExpr 0x7fe78f07f2a0 <col:33> 'long (*)(void)' <FunctionToPointerDecay>
+      |         `-DeclRefExpr 0x7fe78f07f278 <col:33> 'long (void)' Function 0x7fe78f07ea18 'foo' 'long (void)'
+      |-ImplicitCastExpr 0x7fe78f07f490 <col:41, col:60> 'short' <IntegralCast>
+      | `-CStyleCastExpr 0x7fe78f07f3d0 <col:41, col:60> 'long' <PointerToIntegral>
+      |   `-UnaryOperator 0x7fe78f07f398 <col:59, col:60> 'void (*)(int, short, unsigned short)' prefix '&'
+      |     `-DeclRefExpr 0x7fe78f07f348 <col:60> 'void (int, short, unsigned short)' Function 0x7fe78f07ecb0 'bar' 'void (int, short, unsigned short)'
+      `-ImplicitCastExpr 0x7fe78f07f4c0 <col:65> 'unsigned short' <IntegralCast>
+        `-ImplicitCastExpr 0x7fe78f07f4a8 <col:65> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fe78f07f3f8 <col:65> 'int' lvalue Var 0x7fe78f02c978 'a' 'int'

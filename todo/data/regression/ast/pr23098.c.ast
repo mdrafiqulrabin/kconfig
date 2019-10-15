@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fddf882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fddf9003068 <../Data/C2AST/pr23098.c:8:1, col:18> col:8 used foo 'double (float)'
+| `-ParmVarDecl 0x7fddf882c978 <col:13> col:18 'float'
+|-FunctionDecl 0x7fddf9003218 <line:10:1, line:14:1> line:11:1 f1 'double (void)'
+| `-CompoundStmt 0x7fddf90033a0 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7fddf9003388 <line:13:3, col:18>
+|     `-CallExpr 0x7fddf9003340 <col:10, col:18> 'double'
+|       |-ImplicitCastExpr 0x7fddf9003328 <col:10> 'double (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fddf90032b8 <col:10> 'double (float)' Function 0x7fddf9003068 'foo' 'double (float)'
+|       `-ImplicitCastExpr 0x7fddf9003370 <col:15> 'float' <FloatingCast>
+|         `-FloatingLiteral 0x7fddf90032e0 <col:15> 'double' 1.000000e+00
+|-FunctionDecl 0x7fddf9003450 <line:16:1, line:20:1> line:17:1 f2 'double (void)'
+| `-CompoundStmt 0x7fddf90035b0 <line:18:1, line:20:1>
+|   `-ReturnStmt 0x7fddf9003598 <line:19:3, col:18>
+|     `-CallExpr 0x7fddf9003550 <col:10, col:18> 'double'
+|       |-ImplicitCastExpr 0x7fddf9003538 <col:10> 'double (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fddf90034f0 <col:10> 'double (float)' Function 0x7fddf9003068 'foo' 'double (float)'
+|       `-ImplicitCastExpr 0x7fddf9003580 <col:15> 'float' <FloatingCast>
+|         `-FloatingLiteral 0x7fddf9003518 <col:15> 'double' 0.000000e+00
+`-FunctionDecl 0x7fddf9003760 <line:22:1, line:26:1> line:23:1 f3 'void (float *, float)'
+  |-ParmVarDecl 0x7fddf9003610 <col:5, col:12> col:12 used x 'float *'
+  |-ParmVarDecl 0x7fddf9003688 <col:15, col:21> col:21 used t 'float'
+  `-CompoundStmt 0x7fddf9003950 <line:24:1, line:26:1>
+    `-BinaryOperator 0x7fddf9003928 <line:25:3, col:14> 'float' '='
+      |-UnaryOperator 0x7fddf9003850 <col:3, col:4> 'float' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fddf9003838 <col:4> 'float *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fddf9003810 <col:4> 'float *' lvalue ParmVar 0x7fddf9003610 'x' 'float *'
+      `-ImplicitCastExpr 0x7fddf9003910 <col:8, col:14> 'float' <FloatingCast>
+        `-BinaryOperator 0x7fddf90038e8 <col:8, col:14> 'double' '+'
+          |-FloatingLiteral 0x7fddf9003870 <col:8> 'double' 0.000000e+00
+          `-ImplicitCastExpr 0x7fddf90038d0 <col:14> 'double' <FloatingCast>
+            `-ImplicitCastExpr 0x7fddf90038b8 <col:14> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fddf9003890 <col:14> 'float' lvalue ParmVar 0x7fddf9003688 't' 'float'

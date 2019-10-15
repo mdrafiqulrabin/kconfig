@@ -1,0 +1,28 @@
+../Data/C2AST/pr47963.c:8:12: error: size of array has non-integer type 'float'
+  int A[n][n];   
+           ^
+../Data/C2AST/pr47963.c:8:9: error: size of array has non-integer type 'float'
+  int A[n][n];   
+        ^
+2 errors generated.
+TranslationUnitDecl 0x7f816902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f816902c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f816902bf80 '__int128'
+|-TypedefDecl 0x7f816902c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f816902bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f816902c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f816902c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f816902c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f816902c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f816902c600 'char *'
+|   `-BuiltinType 0x7f816902bd80 'char'
+|-TypedefDecl 0x7f816902c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f816902c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f816902c720 'struct __va_list_tag'
+|     `-Record 0x7f816902c698 '__va_list_tag'
+`-FunctionDecl 0x7f8169814260 <../Data/C2AST/pr47963.c:5:1, line:11:1> line:6:1 foo 'void (float)'
+  |-ParmVarDecl 0x7f816902c978 <col:6, col:12> col:12 used n 'float'
+  `-CompoundStmt 0x7f8169814818 <line:7:1, line:11:1>
+    |-DeclStmt 0x7f81698147f0 <line:8:3, col:14>
+    | `-VarDecl 0x7f8169814790 <col:3, col:7> col:7 invalid A 'int'
+    `-NullStmt 0x7f8169814808 <line:10:3>

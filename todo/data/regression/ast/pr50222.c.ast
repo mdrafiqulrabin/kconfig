@@ -1,0 +1,112 @@
+TranslationUnitDecl 0x7fd3b900a2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd3b900af60 <../Data/C2AST/pr50222.c:4:9, line:7:1> line:4:16 struct AVProgram definition
+| |-FieldDecl 0x7fd3b981a238 <line:5:5, col:11> col:11 referenced priv_data 'void *'
+| `-FieldDecl 0x7fd3b981a298 <line:6:5, col:18> col:18 referenced nb_streams 'unsigned int'
+|-TypedefDecl 0x7fd3b981a330 <line:4:1, line:7:3> col:3 referenced AVFormatContext 'struct AVProgram':'struct AVProgram'
+| `-ElaboratedType 0x7fd3b981a2e0 'struct AVProgram' sugar
+|   `-RecordType 0x7fd3b981a200 'struct AVProgram'
+|     `-Record 0x7fd3b900af60 'AVProgram'
+|-RecordDecl 0x7fd3b981a3a0 <line:8:9, line:11:1> line:8:9 struct definition
+| |-FieldDecl 0x7fd3b981a468 <line:9:5, col:20> col:20 referenced flags 'unsigned short'
+| `-FieldDecl 0x7fd3b981a4c8 <line:10:5, col:19> col:19 referenced stream_id 'unsigned char'
+|-TypedefDecl 0x7fd3b981a560 <line:8:1, line:11:3> col:3 referenced FrameCode 'struct FrameCode':'FrameCode'
+| `-ElaboratedType 0x7fd3b981a510 'struct FrameCode' sugar
+|   `-RecordType 0x7fd3b981a430 'FrameCode'
+|     `-Record 0x7fd3b981a3a0 ''
+|-RecordDecl 0x7fd3b981a5d0 <line:12:9, line:14:1> line:12:9 struct definition
+| `-FieldDecl 0x7fd3b981a7a8 <line:13:5, col:29> col:15 referenced frame_code 'FrameCode [256]'
+|-TypedefDecl 0x7fd3b981a840 <line:12:1, line:14:3> col:3 referenced NUTContext 'struct NUTContext':'NUTContext'
+| `-ElaboratedType 0x7fd3b981a7f0 'struct NUTContext' sugar
+|   `-RecordType 0x7fd3b981a660 'NUTContext'
+|     `-Record 0x7fd3b981a5d0 ''
+`-FunctionDecl 0x7fd3b981abe0 <line:15:1, line:31:1> line:15:6 build_frame_code 'void (AVFormatContext *, int, int, int)'
+  |-ParmVarDecl 0x7fd3b981a938 <col:23, col:40> col:40 used s 'AVFormatContext *'
+  |-ParmVarDecl 0x7fd3b981a9b0 <col:43, col:47> col:47 used stream_id 'int'
+  |-ParmVarDecl 0x7fd3b981aa28 <line:16:9, col:13> col:13 used is_audio 'int'
+  |-ParmVarDecl 0x7fd3b981aaa0 <col:23, col:27> col:27 pred_count 'int'
+  `-CompoundStmt 0x7fd3b981ba58 <line:17:1, line:31:1>
+    |-DeclStmt 0x7fd3b981ae70 <line:18:3, col:33>
+    | `-VarDecl 0x7fd3b981ad68 <col:3, col:24> col:15 used nut 'NUTContext *' cinit
+    |   `-ImplicitCastExpr 0x7fd3b981ae58 <col:21, col:24> 'NUTContext *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd3b981ae40 <col:21, col:24> 'void *' <LValueToRValue>
+    |       `-MemberExpr 0x7fd3b981ae08 <col:21, col:24> 'void *' lvalue ->priv_data 0x7fd3b981a238
+    |         `-ImplicitCastExpr 0x7fd3b981adf0 <col:21> 'AVFormatContext *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fd3b981adc8 <col:21> 'AVFormatContext *' lvalue ParmVar 0x7fd3b981a938 's' 'AVFormatContext *'
+    |-DeclStmt 0x7fd3b981aff0 <line:19:3, col:41>
+    | `-VarDecl 0x7fd3b981aea0 <col:3, col:40> col:7 used keyframe_0_esc 'int' cinit
+    |   `-BinaryOperator 0x7fd3b981afc8 <col:24, col:40> 'int' '>'
+    |     |-ImplicitCastExpr 0x7fd3b981af98 <col:24, col:27> 'unsigned int' <LValueToRValue>
+    |     | `-MemberExpr 0x7fd3b981af40 <col:24, col:27> 'unsigned int' lvalue ->nb_streams 0x7fd3b981a298
+    |     |   `-ImplicitCastExpr 0x7fd3b981af28 <col:24> 'AVFormatContext *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fd3b981af00 <col:24> 'AVFormatContext *' lvalue ParmVar 0x7fd3b981a938 's' 'AVFormatContext *'
+    |     `-ImplicitCastExpr 0x7fd3b981afb0 <col:40> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x7fd3b981af78 <col:40> 'int' 2
+    |-DeclStmt 0x7fd3b981b258 <line:20:3, col:49>
+    | `-VarDecl 0x7fd3b981b020 <col:3, col:39> col:7 used start2 'int' cinit
+    |   `-ImplicitCastExpr 0x7fd3b981b240 <col:16, col:39> 'int' <IntegralCast>
+    |     `-BinaryOperator 0x7fd3b981b218 <col:16, col:39> 'unsigned int' '+'
+    |       |-ImplicitCastExpr 0x7fd3b981b200 <col:16> 'unsigned int' <IntegralCast>
+    |       | `-IntegerLiteral 0x7fd3b981b080 <col:16> 'int' 1
+    |       `-BinaryOperator 0x7fd3b981b1d0 <col:20, col:39> 'unsigned int' '/'
+    |         |-ImplicitCastExpr 0x7fd3b981b1b8 <col:20, col:24> 'unsigned int' <IntegralCast>
+    |         | `-BinaryOperator 0x7fd3b981b100 <col:20, col:24> 'int' '*'
+    |         |   |-IntegerLiteral 0x7fd3b981b0a0 <col:20> 'int' 253
+    |         |   `-ImplicitCastExpr 0x7fd3b981b0e8 <col:24> 'int' <LValueToRValue>
+    |         |     `-DeclRefExpr 0x7fd3b981b0c0 <col:24> 'int' lvalue ParmVar 0x7fd3b981a9b0 'stream_id' 'int'
+    |         `-ImplicitCastExpr 0x7fd3b981b1a0 <col:36, col:39> 'unsigned int' <LValueToRValue>
+    |           `-MemberExpr 0x7fd3b981b168 <col:36, col:39> 'unsigned int' lvalue ->nb_streams 0x7fd3b981a298
+    |             `-ImplicitCastExpr 0x7fd3b981b150 <col:36> 'AVFormatContext *' <LValueToRValue>
+    |               `-DeclRefExpr 0x7fd3b981b128 <col:36> 'AVFormatContext *' lvalue ParmVar 0x7fd3b981a938 's' 'AVFormatContext *'
+    |-DeclStmt 0x7fd3b981b2e8 <line:21:3, col:16>
+    | `-VarDecl 0x7fd3b981b288 <col:3, col:7> col:7 used key_frame 'int'
+    `-ForStmt 0x7fd3b981ba20 <line:22:3, line:30:5>
+      |-BinaryOperator 0x7fd3b981b348 <line:22:7, col:17> 'int' '='
+      | |-DeclRefExpr 0x7fd3b981b300 <col:7> 'int' lvalue Var 0x7fd3b981b288 'key_frame' 'int'
+      | `-IntegerLiteral 0x7fd3b981b328 <col:17> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd3b981b3d0 <col:20, col:30> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd3b981b3b8 <col:20> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd3b981b370 <col:20> 'int' lvalue Var 0x7fd3b981b288 'key_frame' 'int'
+      | `-IntegerLiteral 0x7fd3b981b398 <col:30> 'int' 2
+      |-UnaryOperator 0x7fd3b981b420 <col:33, col:42> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd3b981b3f8 <col:33> 'int' lvalue Var 0x7fd3b981b288 'key_frame' 'int'
+      `-CompoundStmt 0x7fd3b981b9e8 <line:23:5, line:30:5>
+        |-DeclStmt 0x7fd3b981b508 <line:24:7, col:20>
+        | `-VarDecl 0x7fd3b981b4a8 <col:7, col:18> col:18 used ft 'FrameCode *'
+        |-IfStmt 0x7fd3b981b680 <line:25:7, line:26:2>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fd3b981b650 <line:25:11, col:52> 'int' '&&'
+        | | |-BinaryOperator 0x7fd3b981b5a0 <col:11, col:23> 'int' '&&'
+        | | | |-ImplicitCastExpr 0x7fd3b981b570 <col:11> 'int' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7fd3b981b520 <col:11> 'int' lvalue ParmVar 0x7fd3b981aa28 'is_audio' 'int'
+        | | | `-ImplicitCastExpr 0x7fd3b981b588 <col:23> 'int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fd3b981b548 <col:23> 'int' lvalue Var 0x7fd3b981aea0 'keyframe_0_esc' 'int'
+        | | `-BinaryOperator 0x7fd3b981b628 <col:41, col:52> 'int' '=='
+        | |   |-ImplicitCastExpr 0x7fd3b981b610 <col:41> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fd3b981b5c8 <col:41> 'int' lvalue Var 0x7fd3b981b288 'key_frame' 'int'
+        | |   `-IntegerLiteral 0x7fd3b981b5f0 <col:52> 'int' 0
+        | |-ContinueStmt 0x7fd3b981b678 <line:26:2>
+        | `-<<<NULL>>>
+        |-BinaryOperator 0x7fd3b981b7f8 <line:27:7, col:34> 'FrameCode *' '='
+        | |-DeclRefExpr 0x7fd3b981b6b8 <col:7> 'FrameCode *' lvalue Var 0x7fd3b981b4a8 'ft' 'FrameCode *'
+        | `-UnaryOperator 0x7fd3b981b7d8 <col:11, col:34> 'FrameCode *' prefix '&'
+        |   `-ArraySubscriptExpr 0x7fd3b981b7b0 <col:12, col:34> 'FrameCode':'FrameCode' lvalue
+        |     |-ImplicitCastExpr 0x7fd3b981b780 <col:12, col:17> 'FrameCode *' <ArrayToPointerDecay>
+        |     | `-MemberExpr 0x7fd3b981b720 <col:12, col:17> 'FrameCode [256]' lvalue ->frame_code 0x7fd3b981a7a8
+        |     |   `-ImplicitCastExpr 0x7fd3b981b708 <col:12> 'NUTContext *' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7fd3b981b6e0 <col:12> 'NUTContext *' lvalue Var 0x7fd3b981ad68 'nut' 'NUTContext *'
+        |     `-ImplicitCastExpr 0x7fd3b981b798 <col:28> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fd3b981b758 <col:28> 'int' lvalue Var 0x7fd3b981b020 'start2' 'int'
+        |-CompoundAssignOperator 0x7fd3b981b8b8 <line:28:7, col:19> 'unsigned short' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+        | |-MemberExpr 0x7fd3b981b860 <col:7, col:11> 'unsigned short' lvalue ->flags 0x7fd3b981a468
+        | | `-ImplicitCastExpr 0x7fd3b981b848 <col:7> 'FrameCode *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fd3b981b820 <col:7> 'FrameCode *' lvalue Var 0x7fd3b981b4a8 'ft' 'FrameCode *'
+        | `-IntegerLiteral 0x7fd3b981b898 <col:19> 'int' 3
+        `-BinaryOperator 0x7fd3b981b9c0 <line:29:7, col:22> 'unsigned char' '='
+          |-MemberExpr 0x7fd3b981b930 <col:7, col:11> 'unsigned char' lvalue ->stream_id 0x7fd3b981a4c8
+          | `-ImplicitCastExpr 0x7fd3b981b918 <col:7> 'FrameCode *' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd3b981b8f0 <col:7> 'FrameCode *' lvalue Var 0x7fd3b981b4a8 'ft' 'FrameCode *'
+          `-ImplicitCastExpr 0x7fd3b981b9a8 <col:22> 'unsigned char' <IntegralCast>
+            `-ImplicitCastExpr 0x7fd3b981b990 <col:22> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fd3b981b968 <col:22> 'int' lvalue ParmVar 0x7fd3b981a9b0 'stream_id' 'int'

@@ -1,0 +1,38 @@
+../Data/C2AST/pr16660-1.c:5:10: fatal error: 'check.h' file not found
+#include "check.h"
+         ^~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7faaab02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faaab02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faaab02bf80 '__int128'
+|-TypedefDecl 0x7faaab02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faaab02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7faaab02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faaab02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7faaab02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7faaab02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faaab02c600 'char *'
+|   `-BuiltinType 0x7faaab02bd80 'char'
+|-TypedefDecl 0x7faaab02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faaab02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faaab02c720 'struct __va_list_tag'
+|     `-Record 0x7faaab02c698 '__va_list_tag'
+|-FunctionDecl 0x7faaab800000 <../Data/C2AST/pr16660-1.c:7:1, line:12:1> line:8:1 used f 'void ()'
+| `-CompoundStmt 0x7faaab800488 <line:9:1, line:12:1>
+|   |-DeclStmt 0x7faaab800230 <line:10:3, col:52>
+|   | `-VarDecl 0x7faaab800180 <col:3, col:22> col:17 used tmp 'unsigned long [4]'
+|   |   `-AlignedAttr 0x7faaab8001e0 <col:39, col:49> aligned
+|   |     `-IntegerLiteral 0x7faaab800100 <col:47> 'int' 64
+|   `-CallExpr 0x7faaab800450 <line:11:3, col:18> 'int'
+|     |-ImplicitCastExpr 0x7faaab800438 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7faaab800350 <col:3> 'int ()' Function 0x7faaab8002a0 'check' 'int ()'
+|     |-UnaryOperator 0x7faaab8003c8 <col:10, col:11> 'unsigned long (*)[4]' prefix '&'
+|     | `-DeclRefExpr 0x7faaab800378 <col:11> 'unsigned long [4]' lvalue Var 0x7faaab800180 'tmp' 'unsigned long [4]'
+|     `-IntegerLiteral 0x7faaab8003e8 <col:16> 'int' 64
+`-FunctionDecl 0x7faaab8004d0 <line:14:1, line:19:1> line:15:1 main 'int ()'
+  `-CompoundStmt 0x7faaab800640 <line:16:1, line:19:1>
+    |-CallExpr 0x7faaab8005e0 <line:17:3, col:5> 'void'
+    | `-ImplicitCastExpr 0x7faaab8005c8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7faaab800570 <col:3> 'void ()' Function 0x7faaab800000 'f' 'void ()'
+    `-ReturnStmt 0x7faaab800628 <line:18:3, col:10>
+      `-IntegerLiteral 0x7faaab800608 <col:10> 'int' 0

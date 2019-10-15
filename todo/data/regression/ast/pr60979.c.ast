@@ -1,0 +1,120 @@
+TranslationUnitDecl 0x7fdc5d0294e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdc5c888020 <../Data/C2AST/pr60979.c:6:1, col:8> col:8 struct x
+|-TypedefDecl 0x7fdc5c888398 <line:8:1, col:35> col:22 referenced a 'struct x **(*)(struct x *)'
+| `-PointerType 0x7fdc5c888320 'struct x **(*)(struct x *)'
+|   `-ParenType 0x7fdc5c8882c0 'struct x **(struct x *)' sugar
+|     `-FunctionProtoType 0x7fdc5c888280 'struct x **(struct x *)' cdecl
+|       |-PointerType 0x7fdc5c888210 'struct x **'
+|       | `-PointerType 0x7fdc5c888130 'struct x *'
+|       |   `-ElaboratedType 0x7fdc5c8880d0 'struct x' sugar
+|       |     `-RecordType 0x7fdc5c8880b0 'struct x'
+|       |       `-Record 0x7fdc5c888588 'x'
+|       `-PointerType 0x7fdc5c888130 'struct x *'
+|         `-ElaboratedType 0x7fdc5c8880d0 'struct x' sugar
+|           `-RecordType 0x7fdc5c8880b0 'struct x'
+|             `-Record 0x7fdc5c888588 'x'
+|-FunctionDecl 0x7fdc5c8884e0 <line:9:1, col:21> col:6 used d 'void (const char *)'
+| `-ParmVarDecl 0x7fdc5c888418 <col:9, col:20> col:21 'const char *'
+|-RecordDecl 0x7fdc5c888588 prev 0x7fdc5c888020 <line:11:1, line:20:1> line:11:8 struct x definition
+| |-RecordDecl 0x7fdc5c888610 <line:12:5, line:19:5> line:12:5 union definition
+| | |-RecordDecl 0x7fdc5c8886c0 <line:13:2, line:18:2> line:13:2 struct definition
+| | | |-RecordDecl 0x7fdc5c888770 <line:14:6, line:16:6> line:14:6 union definition
+| | | | `-FieldDecl 0x7fdc5c8888a8 <line:15:3, col:6> col:6 referenced i 'a *'
+| | | |-FieldDecl 0x7fdc5c888940 <line:14:6, line:16:8> col:8 referenced l 'union (anonymous union at ../Data/C2AST/pr60979.c:14:6)':'union x::(anonymous at ../Data/C2AST/pr60979.c:14:6)'
+| | | `-FieldDecl 0x7fdc5c8889a0 <line:17:6, col:10> col:10 referenced s 'int'
+| | `-FieldDecl 0x7fdc5c888a80 <line:13:2, line:18:4> col:4 referenced y 'struct (anonymous struct at ../Data/C2AST/pr60979.c:13:2)':'struct x::(anonymous at ../Data/C2AST/pr60979.c:13:2)'
+| `-FieldDecl 0x7fdc5c888b70 <line:12:5, line:19:7> col:7 referenced e 'union (anonymous union at ../Data/C2AST/pr60979.c:12:5)':'union x::(anonymous at ../Data/C2AST/pr60979.c:12:5)'
+|-VarDecl 0x7fdc5c888c10 <line:22:1, col:9> col:9 used c 'jmp_buf':'int [37]'
+|-FunctionDecl 0x7fdc5c888da0 <line:24:1, line:39:1> line:25:1 b 'void (struct x *)'
+| |-ParmVarDecl 0x7fdc5c888c98 <col:3, col:13> col:13 used r 'struct x *'
+| `-CompoundStmt 0x7fdc5c88bf30 <line:26:1, line:39:1>
+|   |-DeclStmt 0x7fdc5c888ec0 <line:27:3, col:8>
+|   | `-VarDecl 0x7fdc5c888e60 <col:3, col:7> col:7 used f 'int'
+|   |-DeclStmt 0x7fdc5c888f70 <line:28:3, col:19>
+|   | `-VarDecl 0x7fdc5c888ef0 <col:3, col:18> col:14 used w 'int' static cinit
+|   |   `-IntegerLiteral 0x7fdc5c888f50 <col:18> 'int' 0
+|   |-DeclStmt 0x7fdc5c888ff8 <line:29:3, col:21>
+|   | `-VarDecl 0x7fdc5c888f98 <col:3, col:20> col:20 used m 'volatile jmp_buf':'int volatile[37]'
+|   |-BinaryOperator 0x7fdc5c88b450 <line:30:3, col:60> 'int' '='
+|   | |-DeclRefExpr 0x7fdc5c889010 <col:3> 'int' lvalue Var 0x7fdc5c888e60 'f' 'int'
+|   | `-ImplicitCastExpr 0x7fdc5c88b438 <col:7, col:60> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fdc5c88b400 <col:7, col:60> 'int' lvalue .s 0x7fdc5c8889a0
+|   |     `-MemberExpr 0x7fdc5c8893b0 <col:7, col:58> 'struct (anonymous struct at ../Data/C2AST/pr60979.c:13:2)':'struct x::(anonymous at ../Data/C2AST/pr60979.c:13:2)' lvalue .y 0x7fdc5c888a80
+|   |       `-MemberExpr 0x7fdc5c889378 <col:7, col:56> 'union (anonymous union at ../Data/C2AST/pr60979.c:12:5)':'union x::(anonymous at ../Data/C2AST/pr60979.c:12:5)' lvalue ->e 0x7fdc5c888b70
+|   |         `-ImplicitCastExpr 0x7fdc5c889360 <col:7, col:53> 'struct x *' <LValueToRValue>
+|   |           `-ParenExpr 0x7fdc5c889340 <col:7, col:53> 'struct x *' lvalue
+|   |             `-UnaryOperator 0x7fdc5c889320 <col:8, col:52> 'struct x *' lvalue prefix '*'
+|   |               `-ParenExpr 0x7fdc5c889300 <col:9, col:52> 'struct x **'
+|   |                 `-CallExpr 0x7fdc5c8892d0 <col:10, col:51> 'struct x **'
+|   |                   |-ImplicitCastExpr 0x7fdc5c8892b8 <col:10, col:36> 'a':'struct x **(*)(struct x *)' <LValueToRValue>
+|   |                   | `-ArraySubscriptExpr 0x7fdc5c889200 <col:10, col:36> 'a':'struct x **(*)(struct x *)' lvalue
+|   |                   |   |-ImplicitCastExpr 0x7fdc5c8891e8 <col:10, col:33> 'a *' <LValueToRValue>
+|   |                   |   | `-MemberExpr 0x7fdc5c889190 <col:10, col:33> 'a *' lvalue .i 0x7fdc5c8888a8
+|   |                   |   |   `-MemberExpr 0x7fdc5c889158 <col:10, col:31> 'union (anonymous union at ../Data/C2AST/pr60979.c:14:6)':'union x::(anonymous at ../Data/C2AST/pr60979.c:14:6)' lvalue .l 0x7fdc5c888940
+|   |                   |   |     `-MemberExpr 0x7fdc5c889120 <col:10, col:29> 'struct (anonymous struct at ../Data/C2AST/pr60979.c:13:2)':'struct x::(anonymous at ../Data/C2AST/pr60979.c:13:2)' lvalue .y 0x7fdc5c888a80
+|   |                   |   |       `-MemberExpr 0x7fdc5c8890e8 <col:10, col:27> 'union (anonymous union at ../Data/C2AST/pr60979.c:12:5)':'union x::(anonymous at ../Data/C2AST/pr60979.c:12:5)' lvalue ->e 0x7fdc5c888b70
+|   |                   |   |         `-ParenExpr 0x7fdc5c8890c8 <col:10, col:24> 'struct x *'
+|   |                   |   |           `-CStyleCastExpr 0x7fdc5c8890a0 <col:11, col:23> 'struct x *' <NoOp>
+|   |                   |   |             `-ImplicitCastExpr 0x7fdc5c889088 <col:23> 'struct x *' <LValueToRValue>
+|   |                   |   |               `-DeclRefExpr 0x7fdc5c889038 <col:23> 'struct x *' lvalue ParmVar 0x7fdc5c888c98 'r' 'struct x *'
+|   |                   |   `-IntegerLiteral 0x7fdc5c8891c8 <col:35> 'int' 2
+|   |                   `-CStyleCastExpr 0x7fdc5c889290 <col:38, col:50> 'struct x *' <NoOp>
+|   |                     `-ImplicitCastExpr 0x7fdc5c889278 <col:50> 'struct x *' <LValueToRValue>
+|   |                       `-DeclRefExpr 0x7fdc5c889228 <col:50> 'struct x *' lvalue ParmVar 0x7fdc5c888c98 'r' 'struct x *'
+|   |-IfStmt 0x7fdc5c88ba40 <line:31:3, line:32:65>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdc5c88b4e0 <line:31:7, col:14> 'int' '!='
+|   | | |-UnaryOperator 0x7fdc5c88b4a0 <col:7, col:8> 'int' postfix '++'
+|   | | | `-DeclRefExpr 0x7fdc5c88b478 <col:7> 'int' lvalue Var 0x7fdc5c888ef0 'w' 'int'
+|   | | `-IntegerLiteral 0x7fdc5c88b4c0 <col:14> 'int' 0
+|   | |-CallExpr 0x7fdc5c88b9d0 <line:32:5, col:65> 'void *'
+|   | | |-ImplicitCastExpr 0x7fdc5c88b9b8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fdc5c88b7a8 <col:5> '<builtin fn type>' Function 0x7fdc5c88b588 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | |-ImplicitCastExpr 0x7fdc5c88ba10 <col:22, col:30> 'void *' <BitCast>
+|   | | | `-CStyleCastExpr 0x7fdc5c88b8b8 <col:22, col:30> 'char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fdc5c88b878 <col:30> 'volatile int *' <ArrayToPointerDecay>
+|   | | |     `-DeclRefExpr 0x7fdc5c88b7d0 <col:30> 'volatile jmp_buf':'int volatile[37]' lvalue Var 0x7fdc5c888f98 'm' 'volatile jmp_buf':'int volatile[37]'
+|   | | |-ImplicitCastExpr 0x7fdc5c88ba28 <col:33, col:47> 'const void *' <BitCast>
+|   | | | `-CStyleCastExpr 0x7fdc5c88b938 <col:33, col:47> 'const char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fdc5c88b920 <col:47> 'int *' <ArrayToPointerDecay>
+|   | | |     `-DeclRefExpr 0x7fdc5c88b8e0 <col:47> 'jmp_buf':'int [37]' lvalue Var 0x7fdc5c888c10 'c' 'jmp_buf':'int [37]'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7fdc5c88b970 <col:50, col:64> 'unsigned long' sizeof 'jmp_buf':'int [37]'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fdc5c88bdd8 <line:33:3, line:37:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdc5c88bb78 <line:33:7, col:21> 'int' '=='
+|   | | |-CallExpr 0x7fdc5c88bb10 <col:7, col:16> 'int'
+|   | | | |-ImplicitCastExpr 0x7fdc5c88baf8 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fdc5c88ba78 <col:7> 'int (int *)' Function 0x7fdc5c885a98 'setjmp' 'int (int *)'
+|   | | | `-ImplicitCastExpr 0x7fdc5c88bb40 <col:15> 'int *' <ArrayToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7fdc5c88baa0 <col:15> 'jmp_buf':'int [37]' lvalue Var 0x7fdc5c888c10 'c' 'jmp_buf':'int [37]'
+|   | | `-IntegerLiteral 0x7fdc5c88bb58 <col:21> 'int' 0
+|   | |-CompoundStmt 0x7fdc5c88bdb8 <col:24, line:37:3>
+|   | | |-DeclStmt 0x7fdc5c88bc18 <line:34:7, col:12>
+|   | | | `-VarDecl 0x7fdc5c88bbb8 <col:7, col:11> col:11 used z 'int'
+|   | | `-ForStmt 0x7fdc5c88bd80 <line:35:7, line:36:2>
+|   | |   |-BinaryOperator 0x7fdc5c88bc78 <line:35:12, col:16> 'int' '='
+|   | |   | |-DeclRefExpr 0x7fdc5c88bc30 <col:12> 'int' lvalue Var 0x7fdc5c88bbb8 'z' 'int'
+|   | |   | `-IntegerLiteral 0x7fdc5c88bc58 <col:16> 'int' 0
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fdc5c88bd00 <col:19, col:23> 'int' '<'
+|   | |   | |-ImplicitCastExpr 0x7fdc5c88bce8 <col:19> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fdc5c88bca0 <col:19> 'int' lvalue Var 0x7fdc5c88bbb8 'z' 'int'
+|   | |   | `-IntegerLiteral 0x7fdc5c88bcc8 <col:23> 'int' 0
+|   | |   |-UnaryOperator 0x7fdc5c88bd50 <col:26, col:28> 'int' prefix '++'
+|   | |   | `-DeclRefExpr 0x7fdc5c88bd28 <col:28> 'int' lvalue Var 0x7fdc5c88bbb8 'z' 'int'
+|   | |   `-NullStmt 0x7fdc5c88bd70 <line:36:2>
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fdc5c88bf00 <line:38:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fdc5c88bee8 <col:3> 'void (*)(const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fdc5c88be10 <col:3> 'void (const char *)' Function 0x7fdc5c8884e0 'd' 'void (const char *)'
+|     `-CStyleCastExpr 0x7fdc5c88be90 <col:5, col:19> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fdc5c88be78 <col:19> 'volatile int *' <ArrayToPointerDecay>
+|         `-DeclRefExpr 0x7fdc5c88be38 <col:19> 'volatile jmp_buf':'int volatile[37]' lvalue Var 0x7fdc5c888f98 'm' 'volatile jmp_buf':'int volatile[37]'
+`-FunctionDecl 0x7fdc5c88b588 <line:32:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fdc5c88b628 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fdc5c88b688 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fdc5c88b6e8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fdc5c88b760 <col:5> Implicit

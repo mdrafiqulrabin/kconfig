@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7f86fb02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f86fb814200 <../Data/C2AST/pr43491.c:4:18, line:20:15> col:15 used data_0 'long' register
+| `-AsmLabelAttr 0x7f86fb814260 <line:13:19> "rbp"
+|-VarDecl 0x7f86fb814310 <line:21:1, col:6> col:6 used data_3 'long'
+`-FunctionDecl 0x7f86fb8144d8 <line:23:1, line:37:1> line:23:6 foo 'long (long, long)'
+  |-ParmVarDecl 0x7f86fb814388 <col:10, col:15> col:15 used data 'long'
+  |-ParmVarDecl 0x7f86fb814400 <col:21, col:26> col:26 used v 'long'
+  `-CompoundStmt 0x7f86fb814c88 <line:24:1, line:37:1>
+    |-DeclStmt 0x7f86fb814600 <line:25:2, col:8>
+    | `-VarDecl 0x7f86fb8145a0 <col:2, col:7> col:7 used i 'long'
+    |-DeclStmt 0x7f86fb814720 <line:26:2, col:11>
+    | |-VarDecl 0x7f86fb814630 <col:2, col:7> col:7 used t 'long'
+    | `-VarDecl 0x7f86fb8146a8 <col:2, col:10> col:10 used u 'long'
+    |-IfStmt 0x7f86fb8149a0 <line:28:2, line:33:2>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f86fb814760 <line:28:6> 'long' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f86fb814738 <col:6> 'long' lvalue ParmVar 0x7f86fb814388 'data' 'long'
+    | |-BinaryOperator 0x7f86fb814848 <line:29:3, col:16> 'long' '='
+    | | |-DeclRefExpr 0x7f86fb814778 <col:3> 'long' lvalue Var 0x7f86fb8145a0 'i' 'long'
+    | | `-BinaryOperator 0x7f86fb814820 <col:7, col:16> 'long' '+'
+    | |   |-ImplicitCastExpr 0x7f86fb8147f0 <col:7> 'long' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7f86fb8147a0 <col:7> 'long' lvalue Var 0x7f86fb814200 'data_0' 'long'
+    | |   `-ImplicitCastExpr 0x7f86fb814808 <col:16> 'long' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f86fb8147c8 <col:16> 'long' lvalue Var 0x7f86fb814310 'data_3' 'long'
+    | `-CompoundStmt 0x7f86fb814980 <line:30:7, line:33:2>
+    |   |-BinaryOperator 0x7f86fb8148d0 <line:31:3, col:7> 'long' '='
+    |   | |-DeclRefExpr 0x7f86fb814870 <col:3> 'long' lvalue ParmVar 0x7f86fb814400 'v' 'long'
+    |   | `-ImplicitCastExpr 0x7f86fb8148b8 <col:7> 'long' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7f86fb814898 <col:7> 'int' 2
+    |   `-BinaryOperator 0x7f86fb814958 <line:32:3, col:7> 'long' '='
+    |     |-DeclRefExpr 0x7f86fb8148f8 <col:3> 'long' lvalue Var 0x7f86fb8145a0 'i' 'long'
+    |     `-ImplicitCastExpr 0x7f86fb814940 <col:7> 'long' <IntegralCast>
+    |       `-IntegerLiteral 0x7f86fb814920 <col:7> 'int' 5
+    |-BinaryOperator 0x7f86fb814aa8 <line:34:2, col:15> 'long' '='
+    | |-DeclRefExpr 0x7f86fb8149d8 <col:2> 'long' lvalue Var 0x7f86fb814630 't' 'long'
+    | `-BinaryOperator 0x7f86fb814a80 <col:6, col:15> 'long' '+'
+    |   |-ImplicitCastExpr 0x7f86fb814a50 <col:6> 'long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f86fb814a00 <col:6> 'long' lvalue Var 0x7f86fb814200 'data_0' 'long'
+    |   `-ImplicitCastExpr 0x7f86fb814a68 <col:15> 'long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f86fb814a28 <col:15> 'long' lvalue Var 0x7f86fb814310 'data_3' 'long'
+    |-BinaryOperator 0x7f86fb814b38 <line:35:2, col:6> 'long' '='
+    | |-DeclRefExpr 0x7f86fb814ad0 <col:2> 'long' lvalue Var 0x7f86fb8146a8 'u' 'long'
+    | `-ImplicitCastExpr 0x7f86fb814b20 <col:6> 'long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f86fb814af8 <col:6> 'long' lvalue Var 0x7f86fb8145a0 'i' 'long'
+    `-ReturnStmt 0x7f86fb814c70 <line:36:2, col:17>
+      `-BinaryOperator 0x7f86fb814c48 <col:9, col:17> 'long' '*'
+        |-BinaryOperator 0x7f86fb814be0 <col:9, col:13> 'long' '*'
+        | |-ImplicitCastExpr 0x7f86fb814bb0 <col:9> 'long' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f86fb814b60 <col:9> 'long' lvalue ParmVar 0x7f86fb814400 'v' 'long'
+        | `-ImplicitCastExpr 0x7f86fb814bc8 <col:13> 'long' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f86fb814b88 <col:13> 'long' lvalue Var 0x7f86fb814630 't' 'long'
+        `-ImplicitCastExpr 0x7f86fb814c30 <col:17> 'long' <LValueToRValue>
+          `-DeclRefExpr 0x7f86fb814c08 <col:17> 'long' lvalue Var 0x7f86fb8146a8 'u' 'long'

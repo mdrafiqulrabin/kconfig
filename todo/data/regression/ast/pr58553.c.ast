@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7ff5db8246e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff5db825360 <../Data/C2AST/pr58553.c:6:8, line:8:1> line:6:8 struct definition
+| `-FieldDecl 0x7ff5db85a2e8 <line:7:3, col:26> col:8 referenced buf 'char [97]'
+|-VarDecl 0x7ff5db85a380 <line:6:1, line:8:3> col:3 used u1 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)' static
+|-VarDecl 0x7ff5db85a440 <line:6:1, line:8:7> col:7 used u2 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)' static
+|-FunctionDecl 0x7ff5db85a5b0 <line:10:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff5db85a650 prev 0x7ff5db85a5b0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7ff5db85a740 <line:12:1, line:28:1> line:12:5 main 'int ()'
+  `-CompoundStmt 0x7ff5db85b270 <line:13:1, line:28:1>
+    |-DeclStmt 0x7ff5db85a858 <line:14:3, col:8>
+    | `-VarDecl 0x7ff5db85a7f8 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7ff5db85a8e0 <line:15:3, col:9>
+    | `-VarDecl 0x7ff5db85a880 <col:3, col:8> col:8 used c 'char'
+    |-ForStmt 0x7ff5db85afd8 <line:17:3, line:23:5>
+    | |-BinaryOperator 0x7ff5db85a9e8 <line:17:8, col:19> 'char' ','
+    | | |-BinaryOperator 0x7ff5db85a940 <col:8, col:12> 'int' '='
+    | | | |-DeclRefExpr 0x7ff5db85a8f8 <col:8> 'int' lvalue Var 0x7ff5db85a7f8 'i' 'int'
+    | | | `-IntegerLiteral 0x7ff5db85a920 <col:12> 'int' 0
+    | | `-BinaryOperator 0x7ff5db85a9c0 <col:15, col:19> 'char' '='
+    | |   |-DeclRefExpr 0x7ff5db85a968 <col:15> 'char' lvalue Var 0x7ff5db85a880 'c' 'char'
+    | |   `-ImplicitCastExpr 0x7ff5db85a9a8 <col:19> 'char' <IntegralCast>
+    | |     `-CharacterLiteral 0x7ff5db85a990 <col:19> 'int' 65
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff5db85aa70 <col:24, line:3:20> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff5db85aa58 <line:17:24> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff5db85aa10 <col:24> 'int' lvalue Var 0x7ff5db85a7f8 'i' 'int'
+    | | `-IntegerLiteral 0x7ff5db85aa38 <line:3:20> 'int' 96
+    | |-BinaryOperator 0x7ff5db85ab28 <line:17:40, col:46> 'char' ','
+    | | |-UnaryOperator 0x7ff5db85aac0 <col:40, col:41> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7ff5db85aa98 <col:40> 'int' lvalue Var 0x7ff5db85a7f8 'i' 'int'
+    | | `-UnaryOperator 0x7ff5db85ab08 <col:45, col:46> 'char' postfix '++'
+    | |   `-DeclRefExpr 0x7ff5db85aae0 <col:45> 'char' lvalue Var 0x7ff5db85a880 'c' 'char'
+    | `-CompoundStmt 0x7ff5db85afb0 <line:18:5, line:23:5>
+    |   |-BinaryOperator 0x7ff5db85ac60 <line:19:7, col:19> 'char' '='
+    |   | |-ArraySubscriptExpr 0x7ff5db85ac08 <col:7, col:15> 'char' lvalue
+    |   | | |-ImplicitCastExpr 0x7ff5db85abd8 <col:7, col:10> 'char *' <ArrayToPointerDecay>
+    |   | | | `-MemberExpr 0x7ff5db85ab78 <col:7, col:10> 'char [97]' lvalue .buf 0x7ff5db85a2e8
+    |   | | |   `-DeclRefExpr 0x7ff5db85ab50 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)' lvalue Var 0x7ff5db85a380 'u1' 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)'
+    |   | | `-ImplicitCastExpr 0x7ff5db85abf0 <col:14> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7ff5db85abb0 <col:14> 'int' lvalue Var 0x7ff5db85a7f8 'i' 'int'
+    |   | `-ImplicitCastExpr 0x7ff5db85ac48 <col:19> 'char' <IntegralCast>
+    |   |   `-CharacterLiteral 0x7ff5db85ac30 <col:19> 'int' 97
+    |   |-IfStmt 0x7ff5db85ae30 <line:20:7, line:21:6>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7ff5db85ad88 <line:20:11, line:4:25> 'int' '>='
+    |   | | |-ImplicitCastExpr 0x7ff5db85ad70 <line:20:11> 'int' <IntegralCast>
+    |   | | | `-ImplicitCastExpr 0x7ff5db85ad58 <col:11> 'char' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7ff5db85acd0 <col:11> 'char' lvalue Var 0x7ff5db85a880 'c' 'char'
+    |   | | `-BinaryOperator 0x7ff5db85ad30 <col:16, line:4:25> 'int' '+'
+    |   | |   |-CharacterLiteral 0x7ff5db85acf8 <line:20:16> 'int' 65
+    |   | |   `-IntegerLiteral 0x7ff5db85ad10 <line:4:25> 'int' 31
+    |   | |-BinaryOperator 0x7ff5db85ae08 <line:21:2, col:6> 'char' '='
+    |   | | |-DeclRefExpr 0x7ff5db85adb0 <col:2> 'char' lvalue Var 0x7ff5db85a880 'c' 'char'
+    |   | | `-ImplicitCastExpr 0x7ff5db85adf0 <col:6> 'char' <IntegralCast>
+    |   | |   `-CharacterLiteral 0x7ff5db85add8 <col:6> 'int' 65
+    |   | `-<<<NULL>>>
+    |   `-BinaryOperator 0x7ff5db85af88 <line:22:7, col:19> 'char' '='
+    |     |-ArraySubscriptExpr 0x7ff5db85af20 <col:7, col:15> 'char' lvalue
+    |     | |-ImplicitCastExpr 0x7ff5db85aef0 <col:7, col:10> 'char *' <ArrayToPointerDecay>
+    |     | | `-MemberExpr 0x7ff5db85ae90 <col:7, col:10> 'char [97]' lvalue .buf 0x7ff5db85a2e8
+    |     | |   `-DeclRefExpr 0x7ff5db85ae68 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)' lvalue Var 0x7ff5db85a440 'u2' 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)'
+    |     | `-ImplicitCastExpr 0x7ff5db85af08 <col:14> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7ff5db85aec8 <col:14> 'int' lvalue Var 0x7ff5db85a7f8 'i' 'int'
+    |     `-ImplicitCastExpr 0x7ff5db85af70 <col:19> 'char' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff5db85af48 <col:19> 'char' lvalue Var 0x7ff5db85a880 'c' 'char'
+    |-IfStmt 0x7ff5db85b200 <line:24:3, line:25:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff5db85b118 <line:24:7, col:29> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff5db85b100 <col:7, col:24> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7ff5db85b0e8 <col:7, col:24> 'char' <LValueToRValue>
+    | | |   `-ArraySubscriptExpr 0x7ff5db85b0a8 <col:7, col:24> 'char' lvalue
+    | | |     |-ImplicitCastExpr 0x7ff5db85b090 <col:7, col:10> 'char *' <ArrayToPointerDecay>
+    | | |     | `-MemberExpr 0x7ff5db85b038 <col:7, col:10> 'char [97]' lvalue .buf 0x7ff5db85a2e8
+    | | |     |   `-DeclRefExpr 0x7ff5db85b010 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)' lvalue Var 0x7ff5db85a380 'u1' 'struct (anonymous struct at ../Data/C2AST/pr58553.c:6:8)':'struct (anonymous at ../Data/C2AST/pr58553.c:6:8)'
+    | | |     `-IntegerLiteral 0x7ff5db85b070 <line:3:20> 'int' 96
+    | | `-CharacterLiteral 0x7ff5db85b0d0 <line:24:29> 'int' 0
+    | |-CallExpr 0x7ff5db85b1b0 <line:25:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff5db85b198 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff5db85b140 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff5db85a650 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff5db85b258 <line:27:3, col:10>
+      `-IntegerLiteral 0x7ff5db85b238 <col:10> 'int' 0

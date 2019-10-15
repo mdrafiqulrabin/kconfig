@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f867182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f86720142a0 <../Data/C2AST/pr70467-4.c:5:1, line:9:1> line:6:1 foo '__uint128_t (__uint128_t)'
+| |-ParmVarDecl 0x7f867182c990 <col:6, col:18> col:18 used x '__uint128_t':'unsigned __int128'
+| `-CompoundStmt 0x7f8672014528 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f8672014510 <line:8:3, col:45>
+|     `-BinaryOperator 0x7f86720144e8 <col:10, col:45> 'unsigned __int128' '+'
+|       |-BinaryOperator 0x7f8672014488 <col:10, col:41> 'unsigned __int128' '+'
+|       | |-ImplicitCastExpr 0x7f8672014470 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f8672014388 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7f867182c990 'x' '__uint128_t':'unsigned __int128'
+|       | `-ParenExpr 0x7f8672014450 <col:14, col:41> '__uint128_t':'unsigned __int128'
+|       |   `-BinaryOperator 0x7f8672014428 <col:15, col:39> '__uint128_t':'unsigned __int128' '<<'
+|       |     |-CStyleCastExpr 0x7f86720143e0 <col:15, col:29> '__uint128_t':'unsigned __int128' <IntegralCast>
+|       |     | `-IntegerLiteral 0x7f86720143b0 <col:29> 'int' 123456
+|       |     `-IntegerLiteral 0x7f8672014408 <col:39> 'int' 64
+|       `-ImplicitCastExpr 0x7f86720144d0 <col:45> 'unsigned __int128' <IntegralCast>
+|         `-IntegerLiteral 0x7f86720144b0 <col:45> 'int' 19088743
+`-FunctionDecl 0x7f86720145d8 <line:11:1, line:15:1> line:12:1 bar '__uint128_t (__uint128_t)'
+  |-ParmVarDecl 0x7f8672014550 <col:6, col:18> col:18 used x '__uint128_t':'unsigned __int128'
+  `-CompoundStmt 0x7f8672014820 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f8672014808 <line:14:3, col:45>
+      `-BinaryOperator 0x7f86720147e0 <col:10, col:45> 'unsigned __int128' '+'
+        |-BinaryOperator 0x7f8672014780 <col:10, col:41> 'unsigned __int128' '-'
+        | |-ImplicitCastExpr 0x7f8672014768 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f8672014680 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7f8672014550 'x' '__uint128_t':'unsigned __int128'
+        | `-ParenExpr 0x7f8672014748 <col:14, col:41> '__uint128_t':'unsigned __int128'
+        |   `-BinaryOperator 0x7f8672014720 <col:15, col:39> '__uint128_t':'unsigned __int128' '<<'
+        |     |-CStyleCastExpr 0x7f86720146d8 <col:15, col:29> '__uint128_t':'unsigned __int128' <IntegralCast>
+        |     | `-IntegerLiteral 0x7f86720146a8 <col:29> 'int' 123456
+        |     `-IntegerLiteral 0x7f8672014700 <col:39> 'int' 64
+        `-ImplicitCastExpr 0x7f86720147c8 <col:45> 'unsigned __int128' <IntegralCast>
+          `-IntegerLiteral 0x7f86720147a8 <col:45> 'int' 19088743

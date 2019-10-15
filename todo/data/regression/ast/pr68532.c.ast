@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7ff4f5029ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff4f5815200 <../Data/C2AST/pr68532.c:5:1, col:37> col:30 used in 'unsigned short [128]'
+| `-AlignedAttr 0x7ff4f5815260 <col:16> _Alignas
+|   `-IntegerLiteral 0x7ff4f502a960 <col:26> 'int' 16
+|-FunctionDecl 0x7ff4f5815518 <line:7:1, line:13:1> line:8:1 used test 'int (unsigned short, unsigned short *, int)'
+| |-ParmVarDecl 0x7ff4f5815308 <col:7, col:22> col:22 used sum 'unsigned short'
+| |-ParmVarDecl 0x7ff4f58153b0 <col:27, col:43> col:43 used in 'unsigned short *'
+| |-ParmVarDecl 0x7ff4f5815428 <col:47, col:51> col:51 used x 'int'
+| |-CompoundStmt 0x7ff4f5815a18 <line:9:1, line:13:1>
+| | |-ForStmt 0x7ff4f5815970 <line:10:3, line:11:20>
+| | | |-DeclStmt 0x7ff4f58156b0 <line:10:8, col:17>
+| | | | `-VarDecl 0x7ff4f5815630 <col:8, col:16> col:12 used j 'int' cinit
+| | | |   `-IntegerLiteral 0x7ff4f5815690 <col:16> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ff4f5815728 <col:19, line:4:14> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7ff4f5815710 <line:10:19> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7ff4f58156c8 <col:19> 'int' lvalue Var 0x7ff4f5815630 'j' 'int'
+| | | | `-IntegerLiteral 0x7ff4f58156f0 <line:4:14> 'int' 128
+| | | |-CompoundAssignOperator 0x7ff4f5815798 <line:10:29, col:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+| | | | |-DeclRefExpr 0x7ff4f5815750 <col:29> 'int' lvalue Var 0x7ff4f5815630 'j' 'int'
+| | | | `-IntegerLiteral 0x7ff4f5815778 <col:34> 'int' 8
+| | | `-CompoundAssignOperator 0x7ff4f5815938 <line:11:5, col:20> 'unsigned short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+| | |   |-DeclRefExpr 0x7ff4f58157d0 <col:5> 'unsigned short' lvalue ParmVar 0x7ff4f5815308 'sum' 'unsigned short'
+| | |   `-BinaryOperator 0x7ff4f5815910 <col:12, col:20> 'int' '*'
+| | |     |-ImplicitCastExpr 0x7ff4f58158e0 <col:12, col:16> 'int' <IntegralCast>
+| | |     | `-ImplicitCastExpr 0x7ff4f58158c8 <col:12, col:16> 'unsigned short' <LValueToRValue>
+| | |     |   `-ArraySubscriptExpr 0x7ff4f5815878 <col:12, col:16> 'unsigned short' lvalue
+| | |     |     |-ImplicitCastExpr 0x7ff4f5815848 <col:12> 'unsigned short *' <LValueToRValue>
+| | |     |     | `-DeclRefExpr 0x7ff4f58157f8 <col:12> 'unsigned short *' lvalue ParmVar 0x7ff4f58153b0 'in' 'unsigned short *'
+| | |     |     `-ImplicitCastExpr 0x7ff4f5815860 <col:15> 'int' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7ff4f5815820 <col:15> 'int' lvalue Var 0x7ff4f5815630 'j' 'int'
+| | |     `-ImplicitCastExpr 0x7ff4f58158f8 <col:20> 'int' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ff4f58158a0 <col:20> 'int' lvalue ParmVar 0x7ff4f5815428 'x' 'int'
+| | `-ReturnStmt 0x7ff4f5815a00 <line:12:3, col:10>
+| |   `-ImplicitCastExpr 0x7ff4f58159e8 <col:10> 'int' <IntegralCast>
+| |     `-ImplicitCastExpr 0x7ff4f58159d0 <col:10> 'unsigned short' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ff4f58159a8 <col:10> 'unsigned short' lvalue ParmVar 0x7ff4f5815308 'sum' 'unsigned short'
+| `-NoInlineAttr 0x7ff4f58155d0 <line:7:17>
+|-FunctionDecl 0x7ff4f5815a90 <line:15:1, line:23:1> line:16:1 main 'int ()'
+| `-CompoundStmt 0x7ff4f58161b8 <line:17:1, line:23:1>
+|   |-ForStmt 0x7ff4f5815dd8 <line:18:3, line:19:13>
+|   | |-DeclStmt 0x7ff4f5815bc8 <line:18:8, col:17>
+|   | | `-VarDecl 0x7ff4f5815b48 <col:8, col:16> col:12 used i 'int' cinit
+|   | |   `-IntegerLiteral 0x7ff4f5815ba8 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff4f5815c40 <col:19, line:4:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ff4f5815c28 <line:18:19> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff4f5815be0 <col:19> 'int' lvalue Var 0x7ff4f5815b48 'i' 'int'
+|   | | `-IntegerLiteral 0x7ff4f5815c08 <line:4:14> 'int' 128
+|   | |-UnaryOperator 0x7ff4f5815c90 <line:18:29, col:30> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7ff4f5815c68 <col:29> 'int' lvalue Var 0x7ff4f5815b48 'i' 'int'
+|   | `-BinaryOperator 0x7ff4f5815db0 <line:19:5, col:13> 'unsigned short' '='
+|   |   |-ArraySubscriptExpr 0x7ff4f5815d30 <col:5, col:9> 'unsigned short' lvalue
+|   |   | |-ImplicitCastExpr 0x7ff4f5815d00 <col:5> 'unsigned short *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7ff4f5815cb0 <col:5> 'unsigned short [128]' lvalue Var 0x7ff4f5815200 'in' 'unsigned short [128]'
+|   |   | `-ImplicitCastExpr 0x7ff4f5815d18 <col:8> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7ff4f5815cd8 <col:8> 'int' lvalue Var 0x7ff4f5815b48 'i' 'int'
+|   |   `-ImplicitCastExpr 0x7ff4f5815d98 <col:13> 'unsigned short' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7ff4f5815d80 <col:13> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff4f5815d58 <col:13> 'int' lvalue Var 0x7ff4f5815b48 'i' 'int'
+|   |-IfStmt 0x7ff4f5816148 <line:20:3, line:21:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff4f5815f70 <line:20:7, col:26> 'int' '!='
+|   | | |-CallExpr 0x7ff4f5815ee0 <col:7, col:21> 'int'
+|   | | | |-ImplicitCastExpr 0x7ff4f5815ec8 <col:7> 'int (*)(unsigned short, unsigned short *, int)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7ff4f5815e10 <col:7> 'int (unsigned short, unsigned short *, int)' Function 0x7ff4f5815518 'test' 'int (unsigned short, unsigned short *, int)'
+|   | | | |-ImplicitCastExpr 0x7ff4f5815f20 <col:13> 'unsigned short' <IntegralCast>
+|   | | | | `-IntegerLiteral 0x7ff4f5815e38 <col:13> 'int' 0
+|   | | | |-ImplicitCastExpr 0x7ff4f5815f38 <col:16> 'unsigned short *' <ArrayToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7ff4f5815e58 <col:16> 'unsigned short [128]' lvalue Var 0x7ff4f5815200 'in' 'unsigned short [128]'
+|   | | | `-IntegerLiteral 0x7ff4f5815e80 <col:20> 'int' 1
+|   | | `-IntegerLiteral 0x7ff4f5815f50 <col:26> 'int' 960
+|   | |-CallExpr 0x7ff4f5816120 <line:21:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ff4f5816108 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff4f58160b8 <col:5> '<builtin fn type>' Function 0x7ff4f5815fd0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff4f58161a0 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7ff4f5816180 <col:10> 'int' 0
+`-FunctionDecl 0x7ff4f5815fd0 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff4f5816070 <col:5> Implicit

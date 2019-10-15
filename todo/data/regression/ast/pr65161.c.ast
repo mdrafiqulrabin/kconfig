@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fcff482bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcff486d800 <../Data/C2AST/pr65161.c:4:1, col:21> col:13 used data_ch 'char []' extern
+`-FunctionDecl 0x7fcff486d8f0 <line:6:1, line:14:1> line:7:1 foo 'short ()'
+  `-CompoundStmt 0x7fcff486ddf0 <line:8:1, line:14:1>
+    |-DeclStmt 0x7fcff486da08 <line:9:3, col:8>
+    | `-VarDecl 0x7fcff486d9a8 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fcff486dad0 <line:10:3, col:21>
+    | `-VarDecl 0x7fcff486da38 <col:3, col:20> col:9 used shortsum 'short' cinit
+    |   `-ImplicitCastExpr 0x7fcff486dab8 <col:20> 'short' <IntegralCast>
+    |     `-IntegerLiteral 0x7fcff486da98 <col:20> 'int' 0
+    |-ForStmt 0x7fcff486dd60 <line:11:3, line:12:26>
+    | |-BinaryOperator 0x7fcff486db30 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fcff486dae8 <col:8> 'int' lvalue Var 0x7fcff486d9a8 'i' 'int'
+    | | `-IntegerLiteral 0x7fcff486db10 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcff486dbb8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fcff486dba0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcff486db58 <col:15> 'int' lvalue Var 0x7fcff486d9a8 'i' 'int'
+    | | `-IntegerLiteral 0x7fcff486db80 <col:19> 'int' 16
+    | |-UnaryOperator 0x7fcff486dc08 <col:23, col:24> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fcff486dbe0 <col:23> 'int' lvalue Var 0x7fcff486d9a8 'i' 'int'
+    | `-CompoundAssignOperator 0x7fcff486dd28 <line:12:5, col:26> 'short' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7fcff486dc28 <col:5> 'short' lvalue Var 0x7fcff486da38 'shortsum' 'short'
+    |   `-ImplicitCastExpr 0x7fcff486dd10 <col:17, col:26> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fcff486dcf8 <col:17, col:26> 'char' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fcff486dcd0 <col:17, col:26> 'char' lvalue
+    |         |-ImplicitCastExpr 0x7fcff486dca0 <col:17> 'char *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7fcff486dc50 <col:17> 'char []' lvalue Var 0x7fcff486d800 'data_ch' 'char []'
+    |         `-ImplicitCastExpr 0x7fcff486dcb8 <col:25> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fcff486dc78 <col:25> 'int' lvalue Var 0x7fcff486d9a8 'i' 'int'
+    `-ReturnStmt 0x7fcff486ddd8 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fcff486ddc0 <col:10> 'short' <LValueToRValue>
+        `-DeclRefExpr 0x7fcff486dd98 <col:10> 'short' lvalue Var 0x7fcff486da38 'shortsum' 'short'

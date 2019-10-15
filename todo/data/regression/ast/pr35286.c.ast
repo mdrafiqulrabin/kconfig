@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7f831401b4e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f831401c178 <../Data/C2AST/pr35286.c:3:1, col:5> col:5 used g2 'int'
+|-RecordDecl 0x7f8314814240 <line:4:1, line:6:1> line:4:8 struct A definition
+| |-FieldDecl 0x7f8314814308 <line:5:5, col:9> col:9 referenced a 'int'
+| `-FieldDecl 0x7f8314814368 <col:12, col:16> col:16 b 'int'
+|-VarDecl 0x7f8314814400 <line:4:1, line:6:2> col:2 used g1 'struct A':'struct A'
+`-FunctionDecl 0x7f83148145e8 <line:7:1, line:19:1> line:7:5 foo 'int (int, int)'
+  |-ParmVarDecl 0x7f8314814490 <col:9, col:13> col:13 used a 'int'
+  |-ParmVarDecl 0x7f8314814508 <col:16, col:20> col:20 used b 'int'
+  `-CompoundStmt 0x7f8314814b40 <line:8:1, line:19:1>
+    |-IfStmt 0x7f8314814980 <line:9:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f83148146f8 <line:9:7, col:11> 'int' '>'
+    | | |-ImplicitCastExpr 0x7f83148146e0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8314814698 <col:7> 'int' lvalue ParmVar 0x7f8314814490 'a' 'int'
+    | | `-IntegerLiteral 0x7f83148146c0 <col:11> 'int' 0
+    | |-CompoundStmt 0x7f83148148a0 <line:10:5, line:12:5>
+    | | `-BinaryOperator 0x7f8314814828 <line:11:7, col:17> 'int' '='
+    | |   |-MemberExpr 0x7f8314814748 <col:7, col:10> 'int' lvalue .a 0x7f8314814308
+    | |   | `-DeclRefExpr 0x7f8314814720 <col:7> 'struct A':'struct A' lvalue Var 0x7f8314814400 'g1' 'struct A':'struct A'
+    | |   `-BinaryOperator 0x7f8314814800 <col:14, col:17> 'int' '+'
+    | |     |-ImplicitCastExpr 0x7f83148147d0 <col:14> 'int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7f8314814780 <col:14> 'int' lvalue ParmVar 0x7f8314814490 'a' 'int'
+    | |     `-ImplicitCastExpr 0x7f83148147e8 <col:17> 'int' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f83148147a8 <col:17> 'int' lvalue ParmVar 0x7f8314814508 'b' 'int'
+    | `-BinaryOperator 0x7f8314814958 <line:14:5, col:12> 'int' '='
+    |   |-MemberExpr 0x7f83148148e0 <col:5, col:8> 'int' lvalue .a 0x7f8314814308
+    |   | `-DeclRefExpr 0x7f83148148b8 <col:5> 'struct A':'struct A' lvalue Var 0x7f8314814400 'g1' 'struct A':'struct A'
+    |   `-ImplicitCastExpr 0x7f8314814940 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8314814918 <col:12> 'int' lvalue ParmVar 0x7f8314814508 'b' 'int'
+    |-BinaryOperator 0x7f8314814a88 <line:16:3, col:10> 'int' '='
+    | |-DeclRefExpr 0x7f83148149b8 <col:3> 'int' lvalue Var 0x7f831401c178 'g2' 'int'
+    | `-BinaryOperator 0x7f8314814a60 <col:8, col:10> 'int' '+'
+    |   |-ImplicitCastExpr 0x7f8314814a30 <col:8> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f83148149e0 <col:8> 'int' lvalue ParmVar 0x7f8314814490 'a' 'int'
+    |   `-ImplicitCastExpr 0x7f8314814a48 <col:10> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8314814a08 <col:10> 'int' lvalue ParmVar 0x7f8314814508 'b' 'int'
+    `-ReturnStmt 0x7f8314814b28 <line:18:3, col:13>
+      `-ImplicitCastExpr 0x7f8314814b10 <col:10, col:13> 'int' <LValueToRValue>
+        `-MemberExpr 0x7f8314814ad8 <col:10, col:13> 'int' lvalue .a 0x7f8314814308
+          `-DeclRefExpr 0x7f8314814ab0 <col:10> 'struct A':'struct A' lvalue Var 0x7f8314814400 'g1' 'struct A':'struct A'

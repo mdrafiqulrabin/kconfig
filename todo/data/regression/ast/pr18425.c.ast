@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f956c02b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f956c810a00 <../Data/C2AST/pr18425.c:5:1, col:26> col:14 used _M_allocate 'char **()'
+`-FunctionDecl 0x7f956c810bc0 <line:6:1, line:13:1> line:7:1 _M_fill_insert 'void (unsigned int)'
+  |-ParmVarDecl 0x7f956c810af8 <col:16, col:29> col:29 used __n 'unsigned int'
+  `-CompoundStmt 0x7f956c8110b0 <line:8:1, line:13:1>
+    |-DeclStmt 0x7f956c810d78 <line:9:4, col:38>
+    | `-VarDecl 0x7f956c810c80 <col:4, col:37> col:11 used __new_start 'char **' cinit
+    |   `-CallExpr 0x7f956c810d50 <col:25, col:37> 'char **'
+    |     `-ImplicitCastExpr 0x7f956c810d38 <col:25> 'char **(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f956c810ce0 <col:25> 'char **()' Function 0x7f956c810a00 '_M_allocate' 'char **()'
+    |-DeclStmt 0x7f956c810e40 <line:10:4, col:19>
+    | `-VarDecl 0x7f956c810da8 <col:4, col:18> col:10 used __tmp 'char *' cinit
+    |   `-ImplicitCastExpr 0x7f956c810e28 <col:18> 'char *' <NullToPointer>
+    |     `-IntegerLiteral 0x7f956c810e08 <col:18> 'int' 0
+    `-ForStmt 0x7f956c811078 <line:11:4, line:12:21>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f956c810ed0 <line:11:11, col:17> 'int' '>'
+      | |-ImplicitCastExpr 0x7f956c810ea0 <col:11> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f956c810e58 <col:11> 'unsigned int' lvalue ParmVar 0x7f956c810af8 '__n' 'unsigned int'
+      | `-ImplicitCastExpr 0x7f956c810eb8 <col:17> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7f956c810e80 <col:17> 'int' 0
+      |-BinaryOperator 0x7f956c810f88 <col:20, col:29> 'char **' ','
+      | |-UnaryOperator 0x7f956c810f20 <col:20, col:22> 'unsigned int' prefix '--'
+      | | `-DeclRefExpr 0x7f956c810ef8 <col:22> 'unsigned int' lvalue ParmVar 0x7f956c810af8 '__n' 'unsigned int'
+      | `-UnaryOperator 0x7f956c810f68 <col:27, col:29> 'char **' prefix '++'
+      |   `-DeclRefExpr 0x7f956c810f40 <col:29> 'char **' lvalue Var 0x7f956c810c80 '__new_start' 'char **'
+      `-BinaryOperator 0x7f956c811050 <line:12:6, col:21> 'char *' '='
+        |-UnaryOperator 0x7f956c810ff0 <col:6, col:7> 'char *' lvalue prefix '*'
+        | `-ImplicitCastExpr 0x7f956c810fd8 <col:7> 'char **' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f956c810fb0 <col:7> 'char **' lvalue Var 0x7f956c810c80 '__new_start' 'char **'
+        `-ImplicitCastExpr 0x7f956c811038 <col:21> 'char *' <LValueToRValue>
+          `-DeclRefExpr 0x7f956c811010 <col:21> 'char *' lvalue Var 0x7f956c810da8 '__tmp' 'char *'

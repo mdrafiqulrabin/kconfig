@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fad4c82b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fad4c86de68 <../Data/C2AST/pr54988.c:10:1, line:14:1> line:11:1 used foo 'int (int)' static inline
+| |-ParmVarDecl 0x7fad4c82bf78 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7fad4c86dff0 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7fad4c86dfd8 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fad4c86dfc0 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fad4c86df98 <col:10> 'int' lvalue ParmVar 0x7fad4c82bf78 'x' 'int'
+| `-AlwaysInlineAttr 0x7fad4c86df10 <line:10:31> always_inline
+`-FunctionDecl 0x7fad4c86e0b0 <line:16:1, line:20:1> line:17:1 bar 'int (int)'
+  |-ParmVarDecl 0x7fad4c86e020 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fad4c86e250 <line:18:1, line:20:1>
+    `-ReturnStmt 0x7fad4c86e238 <line:19:3, col:16>
+      `-CallExpr 0x7fad4c86e1f0 <col:10, col:16> 'int'
+        |-ImplicitCastExpr 0x7fad4c86e1d8 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fad4c86e158 <col:10> 'int (int)' Function 0x7fad4c86de68 'foo' 'int (int)'
+        `-ImplicitCastExpr 0x7fad4c86e220 <col:15> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fad4c86e180 <col:15> 'int' lvalue ParmVar 0x7fad4c86e020 'x' 'int'

@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f805082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f805082c960 <../Data/C2AST/pr57147-2.c:6:1, col:23> col:8 struct __jmp_buf_tag definition
+|-TypedefDecl 0x7f8051014358 <line:7:1, col:39> col:30 referenced jmp_buf 'struct __jmp_buf_tag [1]'
+| `-ConstantArrayType 0x7f80510142f0 'struct __jmp_buf_tag [1]' 1 
+|   `-ElaboratedType 0x7f8051014240 'struct __jmp_buf_tag' sugar
+|     `-RecordType 0x7f8051014200 'struct __jmp_buf_tag'
+|       `-Record 0x7f805082c960 '__jmp_buf_tag'
+|-FunctionDecl 0x7f80510145f8 <line:8:12> col:12 implicit used _setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7f8051014698 <<invalid sloc>> <invalid sloc> 'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7f8051014700 <col:12> Implicit
+|-FunctionDecl 0x7f8051014748 prev 0x7f80510145f8 <col:1, col:50> col:12 used _setjmp 'int (struct __jmp_buf_tag *)' extern
+| |-ParmVarDecl 0x7f8051014490 <col:21, col:49> col:42 __env 'struct __jmp_buf_tag *':'struct __jmp_buf_tag *'
+| `-ReturnsTwiceAttr 0x7f8051014828 <col:12> Inherited Implicit
+|-VarDecl 0x7f8051014848 <line:10:1, col:9> col:9 used g_return_jmp_buf 'jmp_buf':'struct __jmp_buf_tag [1]'
+|-FunctionDecl 0x7f80510149b0 <line:12:1, line:15:1> line:12:6 used SetNaClSwitchExpectations 'void (void)'
+| `-CompoundStmt 0x7f8051014d98 <line:13:1, line:15:1>
+|   `-CallExpr 0x7f8051014d00 <line:14:3, col:41> 'void'
+|     |-ImplicitCastExpr 0x7f8051014ce8 <col:3> 'void (*)(void **, int) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f8051014c30 <col:3> '<builtin fn type>' Function 0x7f8051014ac0 '__builtin_longjmp' 'void (void **, int) __attribute__((noreturn))'
+|     |-ImplicitCastExpr 0x7f8051014d50 <col:22> 'void **' <BitCast>
+|     | `-ImplicitCastExpr 0x7f8051014d38 <col:22> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8051014c58 <col:22> 'jmp_buf':'struct __jmp_buf_tag [1]' lvalue Var 0x7f8051014848 'g_return_jmp_buf' 'jmp_buf':'struct __jmp_buf_tag [1]'
+|     `-IntegerLiteral 0x7f8051014c80 <col:40> 'int' 1
+|-FunctionDecl 0x7f8051014ac0 <col:3> col:3 implicit used __builtin_longjmp 'void (void **, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f8051014b60 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ParmVarDecl 0x7f8051014bc0 <<invalid sloc>> <invalid sloc> 'int'
+`-FunctionDecl 0x7f8051014e40 <line:16:1, line:20:1> line:16:6 TestSyscall 'void (void)'
+  `-CompoundStmt 0x7f8051015088 <line:17:1, line:20:1>
+    |-CallExpr 0x7f8051014f50 <line:18:3, col:29> 'void'
+    | `-ImplicitCastExpr 0x7f8051014f38 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f8051014ee0 <col:3> 'void (void)' Function 0x7f80510149b0 'SetNaClSwitchExpectations' 'void (void)'
+    `-CallExpr 0x7f8051015040 <line:19:3, col:28> 'int'
+      |-ImplicitCastExpr 0x7f8051015028 <col:3> 'int (*)(struct __jmp_buf_tag *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8051014f78 <col:3> 'int (struct __jmp_buf_tag *)' Function 0x7f8051014748 '_setjmp' 'int (struct __jmp_buf_tag *)'
+      `-ImplicitCastExpr 0x7f8051015070 <col:12> 'struct __jmp_buf_tag *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f8051014fa0 <col:12> 'jmp_buf':'struct __jmp_buf_tag [1]' lvalue Var 0x7f8051014848 'g_return_jmp_buf' 'jmp_buf':'struct __jmp_buf_tag [1]'

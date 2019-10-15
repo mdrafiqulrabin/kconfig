@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fcea58174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcea5859060 <../Data/C2AST/pr18096-1.c:5:1, col:13> col:6 used f 'void (char *)'
+| `-ParmVarDecl 0x7fcea5818178 <col:8, col:12> col:13 'char *'
+`-FunctionDecl 0x7fcea58591e8 <line:7:1, line:11:1> line:7:6 mkcatdefs 'void (char *)'
+  |-ParmVarDecl 0x7fcea5859160 <col:16, col:22> col:22 fname 'char *'
+  `-CompoundStmt 0x7fcea5859458 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fcea5859368 <line:9:3, col:25>
+    | `-VarDecl 0x7fcea5859308 <col:3, col:24> col:8 used line 'char [2147483647]'
+    `-CallExpr 0x7fcea5859410 <line:10:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fcea58593f8 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcea5859380 <col:3> 'void (char *)' Function 0x7fcea5859060 'f' 'void (char *)'
+      `-ImplicitCastExpr 0x7fcea5859440 <col:5> 'char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fcea58593a8 <col:5> 'char [2147483647]' lvalue Var 0x7fcea5859308 'line' 'char [2147483647]'

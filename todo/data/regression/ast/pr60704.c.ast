@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f81bd82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f81bd82c960 <../Data/C2AST/pr60704.c:5:1, line:8:1> line:5:8 struct S definition
+| `-FieldDecl 0x7f81bd86d838 <line:7:3, col:7> col:7 referenced n 'int'
+`-FunctionDecl 0x7f81bd86da68 <line:10:1, line:14:1> line:11:1 foo 'int (struct S, double)'
+  |-ParmVarDecl 0x7f81bd86d8d0 <col:6, col:15> col:15 used s 'struct S':'struct S'
+  |-ParmVarDecl 0x7f81bd86d948 <col:18, col:25> col:25 used a 'double'
+  `-CompoundStmt 0x7f81bd86dcc8 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f81bd86dcb0 <line:13:3, col:16>
+      `-ImplicitCastExpr 0x7f81bd86dc50 <col:10, col:16> 'int' <FloatingToIntegral>
+        `-BinaryOperator 0x7f81bd86dc28 <col:10, col:16> 'double' '*'
+          |-ImplicitCastExpr 0x7f81bd86dc10 <col:10, col:12> 'double' <IntegralToFloating>
+          | `-ImplicitCastExpr 0x7f81bd86dbe0 <col:10, col:12> 'int' <LValueToRValue>
+          |   `-MemberExpr 0x7f81bd86db80 <col:10, col:12> 'int' lvalue .n 0x7f81bd86d838
+          |     `-DeclRefExpr 0x7f81bd86db58 <col:10> 'struct S':'struct S' lvalue ParmVar 0x7f81bd86d8d0 's' 'struct S':'struct S'
+          `-ImplicitCastExpr 0x7f81bd86dbf8 <col:16> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7f81bd86dbb8 <col:16> 'double' lvalue ParmVar 0x7f81bd86d948 'a' 'double'

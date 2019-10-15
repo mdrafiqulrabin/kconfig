@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f99fb0174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f99fb059000 <../Data/C2AST/pr25483.c:3:1, col:22> col:12 used mdct_win 'int [8]' static
+|-VarDecl 0x7f99fb0590b8 <line:4:1, col:5> col:5 x 'int'
+`-FunctionDecl 0x7f99fb0591f8 <line:6:1, line:15:1> line:7:1 decode_init 'int (double)'
+  |-ParmVarDecl 0x7f99fb059130 <col:14, col:21> col:21 used d 'double'
+  `-CompoundStmt 0x7f99fb0596d8 <line:8:1, line:15:1>
+    |-DeclStmt 0x7f99fb059318 <line:9:3, col:8>
+    | `-VarDecl 0x7f99fb0592b8 <col:3, col:7> col:7 used j 'int'
+    `-ForStmt 0x7f99fb0596a0 <line:10:3, line:14:5>
+      |-BinaryOperator 0x7f99fb059378 <line:10:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f99fb059330 <col:8> 'int' lvalue Var 0x7f99fb0592b8 'j' 'int'
+      | `-IntegerLiteral 0x7f99fb059358 <col:12> 'int' 4
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f99fb0593c8 <col:15> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f99fb0593a0 <col:15> 'int' lvalue Var 0x7f99fb0592b8 'j' 'int'
+      |-UnaryOperator 0x7f99fb059408 <col:18, col:19> 'int' postfix '--'
+      | `-DeclRefExpr 0x7f99fb0593e0 <col:18> 'int' lvalue Var 0x7f99fb0592b8 'j' 'int'
+      `-CompoundStmt 0x7f99fb059680 <line:11:5, line:14:5>
+        |-CompoundAssignOperator 0x7f99fb059470 <line:12:7, col:12> 'double' '*=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7f99fb059428 <col:7> 'double' lvalue ParmVar 0x7f99fb059130 'd' 'double'
+        | `-FloatingLiteral 0x7f99fb059450 <col:12> 'double' 5.000000e-01
+        `-BinaryOperator 0x7f99fb059658 <line:13:7, col:27> 'int' '='
+          |-ArraySubscriptExpr 0x7f99fb059558 <col:7, col:17> 'int' lvalue
+          | |-ImplicitCastExpr 0x7f99fb059528 <col:7> 'int *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7f99fb0594a8 <col:7> 'int [8]' lvalue Var 0x7f99fb059000 'mdct_win' 'int [8]'
+          | `-ImplicitCastExpr 0x7f99fb059540 <col:16> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f99fb0594d0 <col:16> 'int' lvalue Var 0x7f99fb0592b8 'j' 'int'
+          `-ImplicitCastExpr 0x7f99fb059640 <col:21, col:27> 'int' <FloatingToIntegral>
+            `-ParenExpr 0x7f99fb059620 <col:21, col:27> 'double'
+              `-BinaryOperator 0x7f99fb0595f8 <col:22, col:26> 'double' '*'
+                |-ImplicitCastExpr 0x7f99fb0595c8 <col:22> 'double' <LValueToRValue>
+                | `-DeclRefExpr 0x7f99fb059580 <col:22> 'double' lvalue ParmVar 0x7f99fb059130 'd' 'double'
+                `-ImplicitCastExpr 0x7f99fb0595e0 <col:26> 'double' <IntegralToFloating>
+                  `-IntegerLiteral 0x7f99fb0595a8 <col:26> 'int' 3

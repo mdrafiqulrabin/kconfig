@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fcc6c02b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcc6c02bf60 <../Data/C2AST/pr51915.c:7:1, col:30> col:8 struct S definition
+| |-FieldDecl 0x7fcc6c04be38 <col:12, col:16> col:16 s1 'int'
+| `-FieldDecl 0x7fcc6c04be98 <col:20, col:26> col:26 s2 'void *'
+|-RecordDecl 0x7fcc6c04bee0 <line:8:1, col:48> col:8 struct T definition
+| |-FieldDecl 0x7fcc6c04bfe0 <col:12, col:21> col:21 t1 'struct S':'struct S'
+| `-FieldDecl 0x7fcc6c04c040 <col:25, col:44> col:44 referenced t2 'unsigned long long'
+|-FunctionDecl 0x7fcc6c04c268 <line:9:1, col:34> col:11 used foo 'struct S *(unsigned long long)'
+| `-ParmVarDecl 0x7fcc6c04c0f0 <col:16, col:30> col:34 'unsigned long long'
+`-FunctionDecl 0x7fcc6c04c498 <line:11:1, line:15:1> line:12:1 bar 'struct S *(struct S *)'
+  |-ParmVarDecl 0x7fcc6c04c378 <col:6, col:16> col:16 used x 'struct S *'
+  `-CompoundStmt 0x7fcc6c04c7b0 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fcc6c04c798 <line:14:3, col:35>
+      `-CallExpr 0x7fcc6c04c750 <col:10, col:35> 'struct S *'
+        |-ImplicitCastExpr 0x7fcc6c04c738 <col:10> 'struct S *(*)(unsigned long long)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcc6c04c540 <col:10> 'struct S *(unsigned long long)' Function 0x7fcc6c04c268 'foo' 'struct S *(unsigned long long)'
+        `-ImplicitCastExpr 0x7fcc6c04c780 <col:15, col:33> 'unsigned long long' <LValueToRValue>
+          `-MemberExpr 0x7fcc6c04c6a0 <col:15, col:33> 'unsigned long long' lvalue ->t2 0x7fcc6c04c040
+            `-ParenExpr 0x7fcc6c04c680 <col:15, col:30> 'struct T *'
+              `-CStyleCastExpr 0x7fcc6c04c658 <col:16, col:29> 'struct T *' <BitCast>
+                `-ImplicitCastExpr 0x7fcc6c04c640 <col:29> 'struct S *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fcc6c04c568 <col:29> 'struct S *' lvalue ParmVar 0x7fcc6c04c378 'x' 'struct S *'

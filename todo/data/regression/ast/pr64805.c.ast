@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f859102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8591858370 <../Data/C2AST/pr64805.c:6:1, line:9:1> line:6:50 used functionA 'void (void)' static inline
+| |-CompoundStmt 0x7f8591858470 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7f8591858458 <line:8:3>
+| `-AlwaysInlineAttr 0x7f8591858410 <line:6:34> always_inline
+|-FunctionDecl 0x7f8591858518 <line:11:1, line:14:1> line:11:50 used functionB 'void (void)' static inline
+| |-CompoundStmt 0x7f8591858698 <line:12:1, line:14:1>
+| | `-CallExpr 0x7f8591858670 <line:13:3, col:13> 'void'
+| |   `-ImplicitCastExpr 0x7f8591858658 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7f8591858600 <col:3> 'void (void)' Function 0x7f8591858370 'functionA' 'void (void)'
+| `-AlwaysInlineAttr 0x7f85918585b8 <line:11:34> always_inline
+`-FunctionDecl 0x7f8591858748 <line:16:1, line:21:1> line:16:5 test 'int (void)'
+  `-CompoundStmt 0x7f8591858888 <line:17:1, line:21:1>
+    |-CallExpr 0x7f8591858828 <line:18:3, col:13> 'void'
+    | `-ImplicitCastExpr 0x7f8591858810 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f85918587e8 <col:3> 'void (void)' Function 0x7f8591858518 'functionB' 'void (void)'
+    `-ReturnStmt 0x7f8591858870 <line:20:3, col:10>
+      `-IntegerLiteral 0x7f8591858850 <col:10> 'int' 0

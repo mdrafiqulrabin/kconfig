@@ -1,0 +1,60 @@
+../Data/C2AST/pr79439-2.c:23:37: error: aliases are not supported on darwin
+int rec_alias (int) __attribute__ ((alias ("rec")));
+                                    ^
+1 error generated.
+TranslationUnitDecl 0x7fcadf82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcadf82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcadf82bf80 '__int128'
+|-TypedefDecl 0x7fcadf82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcadf82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fcadf82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcadf82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcadf82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcadf82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcadf82c600 'char *'
+|   `-BuiltinType 0x7fcadf82bd80 'char'
+|-TypedefDecl 0x7fcadf82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcadf82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcadf82c720 'struct __va_list_tag'
+|     `-Record 0x7fcadf82c698 '__va_list_tag'
+|-FunctionDecl 0x7fcae0014228 <../Data/C2AST/pr79439-2.c:6:1, col:12> col:5 used f 'int (void)'
+|-FunctionDecl 0x7fcae00143d0 <line:8:1, line:11:1> line:9:1 used g 'void (void)'
+| `-CompoundStmt 0x7fcae0014470 <line:10:1, line:11:1>
+|-FunctionDecl 0x7fcae0014568 <line:13:1, line:21:1> line:14:1 referenced rec 'int (int)'
+| |-ParmVarDecl 0x7fcae0014498 <col:6, col:10> col:10 used a 'int'
+| `-CompoundStmt 0x7fcae0014b18 <line:15:1, line:21:1>
+|   |-DeclStmt 0x7fcae00146a8 <line:16:3, col:14>
+|   | `-VarDecl 0x7fcae0014628 <col:3, col:13> col:7 used ret 'int' cinit
+|   |   `-IntegerLiteral 0x7fcae0014688 <col:13> 'int' 0
+|   |-IfStmt 0x7fcae0014988 <line:17:3, line:18:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcae00147d8 <line:17:7, col:20> 'int' '&&'
+|   | | |-BinaryOperator 0x7fcae0014720 <col:7, col:11> 'int' '>'
+|   | | | |-ImplicitCastExpr 0x7fcae0014708 <col:7> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fcae00146c0 <col:7> 'int' lvalue ParmVar 0x7fcae0014498 'a' 'int'
+|   | | | `-IntegerLiteral 0x7fcae00146e8 <col:11> 'int' 10
+|   | | `-CallExpr 0x7fcae00147b0 <col:17, col:20> 'int'
+|   | |   `-ImplicitCastExpr 0x7fcae0014798 <col:17> 'int (*)(void)' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7fcae0014748 <col:17> 'int (void)' Function 0x7fcae0014228 'f' 'int (void)'
+|   | |-CompoundAssignOperator 0x7fcae0014950 <line:18:5, col:22> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | | |-DeclRefExpr 0x7fcae0014800 <col:5> 'int' lvalue Var 0x7fcae0014628 'ret' 'int'
+|   | | `-CallExpr 0x7fcae0014920 <col:12, col:22> 'int'
+|   | |   |-ImplicitCastExpr 0x7fcae0014908 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fcae0014828 <col:12> 'int (int)' Function 0x7fcae0014568 'rec' 'int (int)'
+|   | |   `-BinaryOperator 0x7fcae00148b0 <col:17, col:21> 'int' '-'
+|   | |     |-ImplicitCastExpr 0x7fcae0014898 <col:17> 'int' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7fcae0014850 <col:17> 'int' lvalue ParmVar 0x7fcae0014498 'a' 'int'
+|   | |     `-IntegerLiteral 0x7fcae0014878 <col:21> 'int' 1
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fcae0014a30 <line:19:3, col:6> 'void'
+|   | `-ImplicitCastExpr 0x7fcae0014a18 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fcae00149c0 <col:3> 'void (void)' Function 0x7fcae00143d0 'g' 'void (void)'
+|   `-ReturnStmt 0x7fcae0014b00 <line:20:3, col:14>
+|     `-BinaryOperator 0x7fcae0014ad8 <col:10, col:14> 'int' '+'
+|       |-ImplicitCastExpr 0x7fcae0014aa8 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fcae0014a58 <col:10> 'int' lvalue ParmVar 0x7fcae0014498 'a' 'int'
+|       `-ImplicitCastExpr 0x7fcae0014ac0 <col:14> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fcae0014a80 <col:14> 'int' lvalue Var 0x7fcae0014628 'ret' 'int'
+`-FunctionDecl 0x7fcae0014c58 <line:23:1, col:51> col:5 rec_alias 'int (int)'
+  `-ParmVarDecl 0x7fcae0014b60 <col:16> col:19 'int'

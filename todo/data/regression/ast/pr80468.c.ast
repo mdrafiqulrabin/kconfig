@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fd3ae82b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd3ae86ce20 <../Data/C2AST/pr80468.c:5:1, line:10:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd3ae86d130 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fd3ae86d038 <line:8:3, col:71>
+    | `-VarDecl 0x7fd3ae86cfd8 <col:3, col:70> col:70 used b '__attribute__((__vector_size__(1 * sizeof(__int128)))) __int128'
+    `-BinaryOperator 0x7fd3ae86d108 <line:9:3, col:8> '__attribute__((__vector_size__(1 * sizeof(char)))) char' '!='
+      |-ImplicitCastExpr 0x7fd3ae86d0c8 <col:3> '__attribute__((__vector_size__(1 * sizeof(__int128)))) __int128' <VectorSplat>
+      | `-ImplicitCastExpr 0x7fd3ae86d0b0 <col:3> '__int128' <IntegralCast>
+      |   `-IntegerLiteral 0x7fd3ae86d050 <col:3> 'int' 0
+      `-ImplicitCastExpr 0x7fd3ae86d098 <col:8> '__attribute__((__vector_size__(1 * sizeof(__int128)))) __int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fd3ae86d070 <col:8> '__attribute__((__vector_size__(1 * sizeof(__int128)))) __int128' lvalue Var 0x7fd3ae86cfd8 'b' '__attribute__((__vector_size__(1 * sizeof(__int128)))) __int128'

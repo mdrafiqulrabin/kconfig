@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fde1282b0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fde13814368 <../Data/C2AST/pr52549.c:4:1, line:7:1> line:4:1 _mark 'int (unsigned long, int, char *)'
+  |-ParmVarDecl 0x7fde1282bd78 <<built-in>:81:23, ../Data/C2AST/pr52549.c:4:22> col:22 used obj 'unsigned long'
+  |-ParmVarDecl 0x7fde13814200 <col:27, col:31> col:31 used i 'int'
+  |-ParmVarDecl 0x7fde13814278 <col:34, col:40> col:40 used a 'char *'
+  `-CompoundStmt 0x7fde138146d0 <line:5:1, line:7:1>
+    `-BinaryOperator 0x7fde138146a8 <line:6:3, col:36> 'long' '-'
+      |-CStyleCastExpr 0x7fde13814640 <col:3, col:32> 'char *' <BitCast>
+      | `-UnaryOperator 0x7fde13814608 <col:11, col:32> 'long *' prefix '&'
+      |   `-ParenExpr 0x7fde138145e8 <col:12, col:32> 'long' lvalue
+      |     `-ArraySubscriptExpr 0x7fde138145c0 <col:13, col:31> 'long' lvalue
+      |       |-ParenExpr 0x7fde13814560 <col:13, col:27> 'long *'
+      |       | `-CStyleCastExpr 0x7fde13814538 <col:14, col:26> 'long *' <IntegralToPointer>
+      |       |   `-ImplicitCastExpr 0x7fde13814520 <col:22, col:26> 'unsigned long' <LValueToRValue>
+      |       |     `-ParenExpr 0x7fde13814500 <col:22, col:26> 'unsigned long' lvalue
+      |       |       `-DeclRefExpr 0x7fde13814460 <col:23> 'unsigned long' lvalue ParmVar 0x7fde1282bd78 'obj' 'unsigned long'
+      |       `-ImplicitCastExpr 0x7fde138145a8 <col:30> 'int' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fde13814580 <col:30> 'int' lvalue ParmVar 0x7fde13814200 'i' 'int'
+      `-ImplicitCastExpr 0x7fde13814690 <col:36> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7fde13814668 <col:36> 'char *' lvalue ParmVar 0x7fde13814278 'a' 'char *'

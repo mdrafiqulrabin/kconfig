@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fd7c50174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd7c5018178 <../Data/C2AST/pr67191.c:3:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fd7c5814300 <line:4:1, line:13:1> line:4:6 f 'void (void)'
+  `-CompoundStmt 0x7fd7c5814780 <line:5:1, line:13:1>
+    |-DeclStmt 0x7fd7c5814418 <line:6:3, col:8>
+    | `-VarDecl 0x7fd7c58143b8 <col:3, col:7> col:7 used b 'int'
+    |-ForStmt 0x7fd7c58144f0 <line:7:3, col:15>
+    | |-BinaryOperator 0x7fd7c5814478 <col:7, col:9> 'int' '='
+    | | |-DeclRefExpr 0x7fd7c5814430 <col:7> 'int' lvalue Var 0x7fd7c5018178 'a' 'int'
+    | | `-IntegerLiteral 0x7fd7c5814458 <col:9> 'int' 1
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd7c58144c8 <col:12> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd7c58144a0 <col:12> 'int' lvalue Var 0x7fd7c5018178 'a' 'int'
+    | |-<<<NULL>>>
+    | `-NullStmt 0x7fd7c58144e0 <col:15>
+    |-ForStmt 0x7fd7c58146b8 <line:8:3, line:10:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd7c5814550 <line:8:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd7c5814528 <col:9> 'int' lvalue Var 0x7fd7c58143b8 'b' 'int'
+    | |-UnaryOperator 0x7fd7c5814590 <col:12, col:13> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fd7c5814568 <col:12> 'int' lvalue Var 0x7fd7c58143b8 'b' 'int'
+    | `-LabelStmt 0x7fd7c58146a0 <line:9:5, line:10:7> 'lbl'
+    |   `-BinaryOperator 0x7fd7c5814630 <col:2, col:7> 'int' '||'
+    |     |-ImplicitCastExpr 0x7fd7c5814600 <col:2> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fd7c58145b0 <col:2> 'int' lvalue Var 0x7fd7c58143b8 'b' 'int'
+    |     `-ImplicitCastExpr 0x7fd7c5814618 <col:7> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fd7c58145d8 <col:7> 'int' lvalue Var 0x7fd7c5018178 'a' 'int'
+    `-IfStmt 0x7fd7c5814748 <line:11:3, line:12:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd7c5814718 <line:11:6> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd7c58146f0 <col:6> 'int' lvalue Var 0x7fd7c5018178 'a' 'int'
+      |-GotoStmt 0x7fd7c5814730 <line:12:5, col:10> 'lbl' 0x7fd7c5814658
+      `-<<<NULL>>>

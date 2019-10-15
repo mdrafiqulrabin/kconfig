@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f95c282bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f95c286d860 <../Data/C2AST/pr12899.c:3:1, line:11:1> line:4:1 bb_getopt_ulflags 'void (char *)'
+  |-ParmVarDecl 0x7f95c282c978 <col:20, col:26> col:26 used s 'char *'
+  `-CompoundStmt 0x7f95c286db38 <line:5:1, line:11:1>
+    `-ForStmt 0x7f95c286db00 <line:6:3, line:10:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-IfStmt 0x7f95c286dac8 <line:7:5, line:10:16>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7f95c286d9d0 <line:7:9, col:12> 'char' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7f95c286d9a8 <col:9, col:12> 'char' lvalue
+        |   |-ImplicitCastExpr 0x7f95c286d990 <col:9> 'char *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7f95c286d948 <col:9> 'char *' lvalue ParmVar 0x7f95c282c978 's' 'char *'
+        |   `-IntegerLiteral 0x7f95c286d970 <col:11> 'int' 1
+        |-DoStmt 0x7f95c286daa8 <line:8:7, line:10:16>
+        | |-UnaryOperator 0x7f95c286da10 <line:9:2, col:3> 'char *' postfix '++'
+        | | `-DeclRefExpr 0x7f95c286d9e8 <col:2> 'char *' lvalue ParmVar 0x7f95c282c978 's' 'char *'
+        | `-ImplicitCastExpr 0x7f95c286da90 <line:10:14, col:15> 'char' <LValueToRValue>
+        |   `-UnaryOperator 0x7f95c286da70 <col:14, col:15> 'char' lvalue prefix '*'
+        |     `-ImplicitCastExpr 0x7f95c286da58 <col:15> 'char *' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f95c286da30 <col:15> 'char *' lvalue ParmVar 0x7f95c282c978 's' 'char *'
+        `-<<<NULL>>>

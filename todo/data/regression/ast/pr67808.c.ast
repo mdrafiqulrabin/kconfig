@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7f9da202b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9da2814310 <../Data/C2AST/pr67808.c:9:1, line:13:1> line:10:1 dfoo 'void (long double *, double *)'
+| |-ParmVarDecl 0x7f9da202bfa0 <col:7, col:20> col:20 used ldb1 'long double *'
+| |-ParmVarDecl 0x7f9da2814240 <col:26, col:34> col:34 used db1 'double *'
+| `-CompoundStmt 0x7f9da2814518 <line:11:1, line:13:1>
+|   `-BinaryOperator 0x7f9da28144f0 <line:12:3, col:12> 'long double' '='
+|     |-UnaryOperator 0x7f9da2814440 <col:3, col:4> 'long double' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7f9da2814428 <col:4> 'long double *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9da2814400 <col:4> 'long double *' lvalue ParmVar 0x7f9da202bfa0 'ldb1' 'long double *'
+|     `-ImplicitCastExpr 0x7f9da28144d8 <col:11, col:12> 'long double' <FloatingCast>
+|       `-ImplicitCastExpr 0x7f9da28144c0 <col:11, col:12> 'double' <LValueToRValue>
+|         `-UnaryOperator 0x7f9da28144a0 <col:11, col:12> 'double' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7f9da2814488 <col:12> 'double *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9da2814460 <col:12> 'double *' lvalue ParmVar 0x7f9da2814240 'db1' 'double *'
+|-FunctionDecl 0x7f9da2814618 <line:15:1, line:19:1> line:16:1 dfoo2 'long double (double *)'
+| |-ParmVarDecl 0x7f9da2814548 <col:8, col:16> col:16 used db1 'double *'
+| `-CompoundStmt 0x7f9da2814768 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x7f9da2814750 <line:18:3, col:11>
+|     `-ImplicitCastExpr 0x7f9da2814738 <col:10, col:11> 'long double' <FloatingCast>
+|       `-ImplicitCastExpr 0x7f9da2814720 <col:10, col:11> 'double' <LValueToRValue>
+|         `-UnaryOperator 0x7f9da2814700 <col:10, col:11> 'double' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7f9da28146e8 <col:11> 'double *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9da28146c0 <col:11> 'double *' lvalue ParmVar 0x7f9da2814548 'db1' 'double *'
+|-FunctionDecl 0x7f9da2814868 <line:21:1, line:25:1> line:22:1 dfoo3 'long double (double)'
+| |-ParmVarDecl 0x7f9da2814798 <col:8, col:15> col:15 used x 'double'
+| `-CompoundStmt 0x7f9da2814980 <line:23:1, line:25:1>
+|   `-ReturnStmt 0x7f9da2814968 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f9da2814950 <col:10> 'long double' <FloatingCast>
+|       `-ImplicitCastExpr 0x7f9da2814938 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9da2814910 <col:10> 'double' lvalue ParmVar 0x7f9da2814798 'x' 'double'
+|-FunctionDecl 0x7f9da2814b20 <line:27:1, line:31:1> line:28:1 ffoo 'void (long double *, float *)'
+| |-ParmVarDecl 0x7f9da28149b0 <col:7, col:20> col:20 used ldb1 'long double *'
+| |-ParmVarDecl 0x7f9da2814a50 <col:26, col:33> col:33 used db1 'float *'
+| `-CompoundStmt 0x7f9da2814ce8 <line:29:1, line:31:1>
+|   `-BinaryOperator 0x7f9da2814cc0 <line:30:3, col:12> 'long double' '='
+|     |-UnaryOperator 0x7f9da2814c10 <col:3, col:4> 'long double' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7f9da2814bf8 <col:4> 'long double *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9da2814bd0 <col:4> 'long double *' lvalue ParmVar 0x7f9da28149b0 'ldb1' 'long double *'
+|     `-ImplicitCastExpr 0x7f9da2814ca8 <col:11, col:12> 'long double' <FloatingCast>
+|       `-ImplicitCastExpr 0x7f9da2814c90 <col:11, col:12> 'float' <LValueToRValue>
+|         `-UnaryOperator 0x7f9da2814c70 <col:11, col:12> 'float' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7f9da2814c58 <col:12> 'float *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9da2814c30 <col:12> 'float *' lvalue ParmVar 0x7f9da2814a50 'db1' 'float *'
+|-FunctionDecl 0x7f9da2814de8 <line:33:1, line:37:1> line:34:1 ffoo2 'long double (float *)'
+| |-ParmVarDecl 0x7f9da2814d18 <col:8, col:15> col:15 used db1 'float *'
+| `-CompoundStmt 0x7f9da2814f38 <line:35:1, line:37:1>
+|   `-ReturnStmt 0x7f9da2814f20 <line:36:3, col:11>
+|     `-ImplicitCastExpr 0x7f9da2814f08 <col:10, col:11> 'long double' <FloatingCast>
+|       `-ImplicitCastExpr 0x7f9da2814ef0 <col:10, col:11> 'float' <LValueToRValue>
+|         `-UnaryOperator 0x7f9da2814ed0 <col:10, col:11> 'float' lvalue prefix '*'
+|           `-ImplicitCastExpr 0x7f9da2814eb8 <col:11> 'float *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f9da2814e90 <col:11> 'float *' lvalue ParmVar 0x7f9da2814d18 'db1' 'float *'
+`-FunctionDecl 0x7f9da2815038 <line:39:1, line:43:1> line:40:1 ffoo3 'long double (float)'
+  |-ParmVarDecl 0x7f9da2814f68 <col:8, col:14> col:14 used x 'float'
+  `-CompoundStmt 0x7f9da2815150 <line:41:1, line:43:1>
+    `-ReturnStmt 0x7f9da2815138 <line:42:3, col:10>
+      `-ImplicitCastExpr 0x7f9da2815120 <col:10> 'long double' <FloatingCast>
+        `-ImplicitCastExpr 0x7f9da2815108 <col:10> 'float' <LValueToRValue>
+          `-DeclRefExpr 0x7f9da28150e0 <col:10> 'float' lvalue ParmVar 0x7f9da2814f68 'x' 'float'

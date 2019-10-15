@@ -1,0 +1,218 @@
+TranslationUnitDecl 0x7f993982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f993a028260 <../Data/C2AST/pr49696.c:5:1, line:29:1> line:6:1 foo 'void (short *)'
+| |-ParmVarDecl 0x7f993982c9a0 <col:6, col:13> col:13 used x 'short *'
+| `-CompoundStmt 0x7f993a02c0b0 <line:7:1, line:29:1>
+|   |-CallExpr 0x7f993a0284f0 <line:8:3, col:39> 'short'
+|   | |-ImplicitCastExpr 0x7f993a028868 <col:3> 'short (*)(volatile short *, short, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a028818 <col:3> '<builtin fn type>' Function 0x7f993a0285c8 '__sync_val_compare_and_swap_2' 'short (volatile short *, short, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a028530 <col:32> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a028440 <col:32> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | |-ImplicitCastExpr 0x7f993a0287e8 <col:35> 'short' <IntegralCast>
+|   | | `-IntegerLiteral 0x7f993a028468 <col:35> 'int' 1
+|   | `-ImplicitCastExpr 0x7f993a028800 <col:38> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a028488 <col:38> 'int' 0
+|   |-CallExpr 0x7f993a0289c8 <line:9:3, col:40> '_Bool'
+|   | |-ImplicitCastExpr 0x7f993a028d08 <col:3> '_Bool (*)(volatile short *, short, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a028cb8 <col:3> '<builtin fn type>' Function 0x7f993a028a68 '__sync_bool_compare_and_swap_2' '_Bool (volatile short *, short, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a028a08 <col:33> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a028948 <col:33> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | |-ImplicitCastExpr 0x7f993a028c88 <col:36> 'short' <IntegralCast>
+|   | | `-IntegerLiteral 0x7f993a028970 <col:36> 'int' 1
+|   | `-ImplicitCastExpr 0x7f993a028ca0 <col:39> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a028990 <col:39> 'int' 0
+|   |-CallExpr 0x7f993a028e48 <line:10:3, col:33> 'short'
+|   | |-ImplicitCastExpr 0x7f993a029108 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a0290b0 <col:3> '<builtin fn type>' Function 0x7f993a028ee0 '__sync_lock_test_and_set_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a028e80 <col:29> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a028de8 <col:29> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a029098 <col:32> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a028e10 <col:32> 'int' 0
+|   |-CallExpr 0x7f993a029260 <line:12:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a0294a8 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a029480 <col:3> '<builtin fn type>' Function 0x7f993a0292b0 '__sync_fetch_and_add_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a029298 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a029200 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a029468 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a029228 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a029548 <line:13:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a0295d8 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a0295b0 <col:3> '<builtin fn type>' Function 0x7f993a0292b0 '__sync_fetch_and_add_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a029580 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a0294e8 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a029598 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a029510 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a029678 <line:14:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a029708 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a0296e0 <col:3> '<builtin fn type>' Function 0x7f993a0292b0 '__sync_fetch_and_add_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a0296b0 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a029618 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a0296c8 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a029640 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a029848 <line:15:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a029a90 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a029a68 <col:3> '<builtin fn type>' Function 0x7f993a029898 '__sync_fetch_and_sub_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a029880 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a0297e8 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a029a50 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a029810 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a029bd0 <line:16:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a029e18 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a029df0 <col:3> '<builtin fn type>' Function 0x7f993a029c20 '__sync_fetch_and_and_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a029c08 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a029b70 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a029dd8 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a029b98 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a029f58 <line:17:3, col:28> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02a1a0 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02a178 <col:3> '<builtin fn type>' Function 0x7f993a029fa8 '__sync_fetch_and_or_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a029f90 <col:24> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a029ef8 <col:24> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02a160 <col:27> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a029f20 <col:27> 'int' 0
+|   |-CallExpr 0x7f993a02a328 <line:18:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02a570 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02a548 <col:3> '<builtin fn type>' Function 0x7f993a02a378 '__sync_fetch_and_xor_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02a360 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02a2c8 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02a530 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02a2f0 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a02a6b0 <line:19:3, col:30> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02a8f8 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02a8d0 <col:3> '<builtin fn type>' Function 0x7f993a02a700 '__sync_fetch_and_nand_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02a6e8 <col:26> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02a650 <col:26> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02a8b8 <col:29> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02a678 <col:29> 'int' 0
+|   |-CallExpr 0x7f993a02aa38 <line:21:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02ac80 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02ac58 <col:3> '<builtin fn type>' Function 0x7f993a02aa88 '__sync_add_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02aa70 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02a9d8 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02ac40 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02aa00 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a02ad20 <line:22:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02adb0 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02ad88 <col:3> '<builtin fn type>' Function 0x7f993a02aa88 '__sync_add_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02ad58 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02acc0 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02ad70 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02ace8 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a02ae50 <line:23:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02aee0 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02aeb8 <col:3> '<builtin fn type>' Function 0x7f993a02aa88 '__sync_add_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02ae88 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02adf0 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02aea0 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02ae18 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a02b020 <line:24:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02b278 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02b250 <col:3> '<builtin fn type>' Function 0x7f993a02b070 '__sync_sub_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02b058 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02afc0 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02b238 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02afe8 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a02b3b8 <line:25:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02b600 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02b5d8 <col:3> '<builtin fn type>' Function 0x7f993a02b408 '__sync_and_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02b3f0 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02b358 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02b5c0 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02b380 <col:28> 'int' 0
+|   |-CallExpr 0x7f993a02b740 <line:26:3, col:28> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02b988 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02b960 <col:3> '<builtin fn type>' Function 0x7f993a02b790 '__sync_or_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02b778 <col:24> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02b6e0 <col:24> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02b948 <col:27> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02b708 <col:27> 'int' 0
+|   |-CallExpr 0x7f993a02bac8 <line:27:3, col:29> 'short'
+|   | |-ImplicitCastExpr 0x7f993a02bd10 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f993a02bce8 <col:3> '<builtin fn type>' Function 0x7f993a02bb18 '__sync_xor_and_fetch_2' 'short (volatile short *, short, ...)'
+|   | |-ImplicitCastExpr 0x7f993a02bb00 <col:25> 'short *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f993a02ba68 <col:25> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|   | `-ImplicitCastExpr 0x7f993a02bcd0 <col:28> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f993a02ba90 <col:28> 'int' 0
+|   `-CallExpr 0x7f993a02be50 <line:28:3, col:30> 'short'
+|     |-ImplicitCastExpr 0x7f993a02c098 <col:3> 'short (*)(volatile short *, short, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f993a02c070 <col:3> '<builtin fn type>' Function 0x7f993a02bea0 '__sync_nand_and_fetch_2' 'short (volatile short *, short, ...)'
+|     |-ImplicitCastExpr 0x7f993a02be88 <col:26> 'short *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f993a02bdf0 <col:26> 'short *' lvalue ParmVar 0x7f993982c9a0 'x' 'short *'
+|     `-ImplicitCastExpr 0x7f993a02c058 <col:29> 'short' <IntegralCast>
+|       `-IntegerLiteral 0x7f993a02be18 <col:29> 'int' 0
+|-FunctionDecl 0x7f993a028378 <line:8:3> col:3 implicit used __sync_val_compare_and_swap 'void ()' extern
+|-FunctionDecl 0x7f993a0285c8 <col:3> col:3 implicit __sync_val_compare_and_swap_2 'short (volatile short *, short, short, ...)' extern
+| |-ParmVarDecl 0x7f993a028668 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a0286c8 <<invalid sloc>> <invalid sloc> 'short'
+| |-ParmVarDecl 0x7f993a028728 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a0287a0 <col:3> Implicit
+|-FunctionDecl 0x7f993a028880 <line:9:3> col:3 implicit used __sync_bool_compare_and_swap 'void ()' extern
+|-FunctionDecl 0x7f993a028a68 <col:3> col:3 implicit __sync_bool_compare_and_swap_2 '_Bool (volatile short *, short, short, ...)' extern
+| |-ParmVarDecl 0x7f993a028b08 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a028b68 <<invalid sloc>> <invalid sloc> 'short'
+| |-ParmVarDecl 0x7f993a028bc8 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a028c40 <col:3> Implicit
+|-FunctionDecl 0x7f993a028d20 <line:10:3> col:3 implicit used __sync_lock_test_and_set 'void ()' extern
+|-FunctionDecl 0x7f993a028ee0 <col:3> col:3 implicit __sync_lock_test_and_set_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a028f80 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a028fe0 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a029050 <col:3> Implicit
+|-FunctionDecl 0x7f993a029120 <line:12:3> col:3 implicit used __sync_fetch_and_add 'void ()' extern
+|-FunctionDecl 0x7f993a0292b0 <col:3> col:3 implicit __sync_fetch_and_add_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a029350 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a0293b0 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a029420 <col:3> Implicit
+|-FunctionDecl 0x7f993a029720 <line:15:3> col:3 implicit used __sync_fetch_and_sub 'void ()' extern
+|-FunctionDecl 0x7f993a029898 <col:3> col:3 implicit __sync_fetch_and_sub_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a029938 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a029998 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a029a08 <col:3> Implicit
+|-FunctionDecl 0x7f993a029aa8 <line:16:3> col:3 implicit used __sync_fetch_and_and 'void ()' extern
+|-FunctionDecl 0x7f993a029c20 <col:3> col:3 implicit __sync_fetch_and_and_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a029cc0 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a029d20 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a029d90 <col:3> Implicit
+|-FunctionDecl 0x7f993a029e30 <line:17:3> col:3 implicit used __sync_fetch_and_or 'void ()' extern
+|-FunctionDecl 0x7f993a029fa8 <col:3> col:3 implicit __sync_fetch_and_or_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02a048 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02a0a8 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02a118 <col:3> Implicit
+|-FunctionDecl 0x7f993a02a200 <line:18:3> col:3 implicit used __sync_fetch_and_xor 'void ()' extern
+|-FunctionDecl 0x7f993a02a378 <col:3> col:3 implicit __sync_fetch_and_xor_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02a418 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02a478 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02a4e8 <col:3> Implicit
+|-FunctionDecl 0x7f993a02a588 <line:19:3> col:3 implicit used __sync_fetch_and_nand 'void ()' extern
+|-FunctionDecl 0x7f993a02a700 <col:3> col:3 implicit __sync_fetch_and_nand_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02a7a0 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02a800 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02a870 <col:3> Implicit
+|-FunctionDecl 0x7f993a02a910 <line:21:3> col:3 implicit used __sync_add_and_fetch 'void ()' extern
+|-FunctionDecl 0x7f993a02aa88 <col:3> col:3 implicit __sync_add_and_fetch_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02ab28 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02ab88 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02abf8 <col:3> Implicit
+|-FunctionDecl 0x7f993a02aef8 <line:24:3> col:3 implicit used __sync_sub_and_fetch 'void ()' extern
+|-FunctionDecl 0x7f993a02b070 <col:3> col:3 implicit __sync_sub_and_fetch_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02b110 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02b170 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02b1e0 <col:3> Implicit
+|-FunctionDecl 0x7f993a02b290 <line:25:3> col:3 implicit used __sync_and_and_fetch 'void ()' extern
+|-FunctionDecl 0x7f993a02b408 <col:3> col:3 implicit __sync_and_and_fetch_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02b4a8 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02b508 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02b578 <col:3> Implicit
+|-FunctionDecl 0x7f993a02b618 <line:26:3> col:3 implicit used __sync_or_and_fetch 'void ()' extern
+|-FunctionDecl 0x7f993a02b790 <col:3> col:3 implicit __sync_or_and_fetch_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02b830 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02b890 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02b900 <col:3> Implicit
+|-FunctionDecl 0x7f993a02b9a0 <line:27:3> col:3 implicit used __sync_xor_and_fetch 'void ()' extern
+|-FunctionDecl 0x7f993a02bb18 <col:3> col:3 implicit __sync_xor_and_fetch_2 'short (volatile short *, short, ...)' extern
+| |-ParmVarDecl 0x7f993a02bbb8 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f993a02bc18 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f993a02bc88 <col:3> Implicit
+|-FunctionDecl 0x7f993a02bd28 <line:28:3> col:3 implicit used __sync_nand_and_fetch 'void ()' extern
+`-FunctionDecl 0x7f993a02bea0 <col:3> col:3 implicit __sync_nand_and_fetch_2 'short (volatile short *, short, ...)' extern
+  |-ParmVarDecl 0x7f993a02bf40 <<invalid sloc>> <invalid sloc> 'volatile short *'
+  |-ParmVarDecl 0x7f993a02bfa0 <<invalid sloc>> <invalid sloc> 'short'
+  `-NoThrowAttr 0x7f993a02c010 <col:3> Implicit

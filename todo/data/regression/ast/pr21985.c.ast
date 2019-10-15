@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fa18f81aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa18f81bb60 <../Data/C2AST/pr21985.c:4:1, line:11:1> line:4:1 struct definition
+| |-RecordDecl 0x7fa18f009e20 <line:6:3, line:10:5> line:6:3 struct definition
+| | |-FieldDecl 0x7fa18f009ee8 <line:8:7, col:11> col:11 referenced a 'int'
+| | `-FieldDecl 0x7fa18f009f48 <line:9:7, col:11> col:11 referenced b 'int'
+| `-FieldDecl 0x7fa18f00a0d8 <line:6:3, line:10:12> col:7 referenced a 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) [100]'
+|-VarDecl 0x7fa18f00a170 <line:4:1, line:11:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)'
+|-TypedefDecl 0x7fa18f00a240 <line:13:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fa18f81b0a0 'unsigned long'
+|-FunctionDecl 0x7fa18f00a3d0 <line:14:1, col:16> col:6 used foo 'void (size_t)'
+| `-ParmVarDecl 0x7fa18f00a2d0 <col:10> col:16 'size_t':'unsigned long'
+|-FunctionDecl 0x7fa18f00a5d0 <line:15:1, col:18> col:9 used bar 'size_t *(void)'
+`-FunctionDecl 0x7fa18f00a738 <line:17:1, line:29:1> line:18:1 main 'int (void)'
+  `-CompoundStmt 0x7fa18f020a60 <line:19:1, line:29:1>
+    |-DeclStmt 0x7fa18f00a938 <line:20:3, col:21>
+    | `-VarDecl 0x7fa18f00a818 <col:3, col:20> col:11 used b 'size_t *' cinit
+    |   `-CallExpr 0x7fa18f00a910 <col:15, col:20> 'size_t *'
+    |     `-ImplicitCastExpr 0x7fa18f00a8f8 <col:15> 'size_t *(*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fa18f00a878 <col:15> 'size_t *(void)' Function 0x7fa18f00a5d0 'bar' 'size_t *(void)'
+    |-CallExpr 0x7fa18f00acd0 <line:23:3, col:31> 'void'
+    | |-ImplicitCastExpr 0x7fa18f00acb8 <col:3> 'void (*)(size_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa18f00a950 <col:3> 'void (size_t)' Function 0x7fa18f00a3d0 'foo' 'void (size_t)'
+    | `-ImplicitCastExpr 0x7fa18f00ad00 <col:8, col:30> 'size_t':'unsigned long' <IntegralCast>
+    |   `-BinaryOperator 0x7fa18f00ac30 <col:8, col:30> 'long' '-'
+    |     |-UnaryOperator 0x7fa18f00aaf8 <col:8, col:17> 'int *' prefix '&'
+    |     | `-MemberExpr 0x7fa18f00aa98 <col:9, col:17> 'int' lvalue .a 0x7fa18f009ee8
+    |     |   `-ArraySubscriptExpr 0x7fa18f00aa70 <col:9, col:15> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3)':'struct (anonymous at ../Data/C2AST/pr21985.c:6:3)' lvalue
+    |     |     |-ImplicitCastExpr 0x7fa18f00aa58 <col:9, col:11> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) *' <ArrayToPointerDecay>
+    |     |     | `-MemberExpr 0x7fa18f00a9a0 <col:9, col:11> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) [100]' lvalue .a 0x7fa18f00a0d8
+    |     |     |   `-DeclRefExpr 0x7fa18f00a978 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)' lvalue Var 0x7fa18f00a170 'a' 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)'
+    |     |     `-IntegerLiteral 0x7fa18f00a9d8 <col:13> 'int' 50
+    |     `-UnaryOperator 0x7fa18f00ac10 <col:21, col:30> 'int *' prefix '&'
+    |       `-MemberExpr 0x7fa18f00abd8 <col:22, col:30> 'int' lvalue .b 0x7fa18f009f48
+    |         `-ArraySubscriptExpr 0x7fa18f00abb0 <col:22, col:28> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3)':'struct (anonymous at ../Data/C2AST/pr21985.c:6:3)' lvalue
+    |           |-ImplicitCastExpr 0x7fa18f00ab98 <col:22, col:24> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) *' <ArrayToPointerDecay>
+    |           | `-MemberExpr 0x7fa18f00ab40 <col:22, col:24> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) [100]' lvalue .a 0x7fa18f00a0d8
+    |           |   `-DeclRefExpr 0x7fa18f00ab18 <col:22> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)' lvalue Var 0x7fa18f00a170 'a' 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)'
+    |           `-IntegerLiteral 0x7fa18f00ab78 <col:26> 'int' 33
+    |-CallExpr 0x7fa18f020810 <line:24:3, col:41> 'void'
+    | |-ImplicitCastExpr 0x7fa18f0207f8 <col:3> 'void (*)(size_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa18f00ad60 <col:3> 'void (size_t)' Function 0x7fa18f00a3d0 'foo' 'void (size_t)'
+    | `-BinaryOperator 0x7fa18f0207d0 <col:8, col:40> 'unsigned long' '-'
+    |   |-CStyleCastExpr 0x7fa18f0206c8 <col:8, col:26> 'size_t':'unsigned long' <PointerToIntegral>
+    |   | `-UnaryOperator 0x7fa18f020698 <col:17, col:26> 'int *' prefix '&'
+    |   |   `-MemberExpr 0x7fa18f020660 <col:18, col:26> 'int' lvalue .b 0x7fa18f009f48
+    |   |     `-ArraySubscriptExpr 0x7fa18f020638 <col:18, col:24> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3)':'struct (anonymous at ../Data/C2AST/pr21985.c:6:3)' lvalue
+    |   |       |-ImplicitCastExpr 0x7fa18f020620 <col:18, col:20> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7fa18f00adb0 <col:18, col:20> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:6:3) [100]' lvalue .a 0x7fa18f00a0d8
+    |   |       |   `-DeclRefExpr 0x7fa18f00ad88 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)' lvalue Var 0x7fa18f00a170 'a' 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)'
+    |   |       `-IntegerLiteral 0x7fa18f020600 <col:22> 'int' 50
+    |   `-CStyleCastExpr 0x7fa18f0207a8 <col:30, col:40> 'size_t':'unsigned long' <PointerToIntegral>
+    |     `-UnaryOperator 0x7fa18f020778 <col:39, col:40> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1) *' prefix '&'
+    |       `-DeclRefExpr 0x7fa18f0206f0 <col:40> 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)' lvalue Var 0x7fa18f00a170 'a' 'struct (anonymous struct at ../Data/C2AST/pr21985.c:4:1)':'struct (anonymous at ../Data/C2AST/pr21985.c:4:1)'
+    |-CallExpr 0x7fa18f0209f8 <line:27:3, col:32> 'void'
+    | |-ImplicitCastExpr 0x7fa18f0209e0 <col:3> 'void (*)(size_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa18f020840 <col:3> 'void (size_t)' Function 0x7fa18f00a3d0 'foo' 'void (size_t)'
+    | `-BinaryOperator 0x7fa18f0209b8 <col:8, col:31> 'unsigned long' '-'
+    |   |-CStyleCastExpr 0x7fa18f020918 <col:8, col:18> 'size_t':'unsigned long' <PointerToIntegral>
+    |   | `-UnaryOperator 0x7fa18f0208e8 <col:17, col:18> 'size_t **' prefix '&'
+    |   |   `-DeclRefExpr 0x7fa18f020868 <col:18> 'size_t *' lvalue Var 0x7fa18f00a818 'b' 'size_t *'
+    |   `-CStyleCastExpr 0x7fa18f020990 <col:22, col:31> 'size_t':'unsigned long' <PointerToIntegral>
+    |     `-ImplicitCastExpr 0x7fa18f020978 <col:31> 'size_t *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa18f020940 <col:31> 'size_t *' lvalue Var 0x7fa18f00a818 'b' 'size_t *'
+    `-ReturnStmt 0x7fa18f020a48 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fa18f020a28 <col:10> 'int' 0

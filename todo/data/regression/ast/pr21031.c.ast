@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f8ccf8058e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8ccf84ba68 <../Data/C2AST/pr21031.c:6:1, line:15:1> line:7:1 foo 'int (int)'
+  |-ParmVarDecl 0x7f8ccf806578 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7f8ccf84be38 <line:8:1, line:15:1>
+    |-DeclStmt 0x7f8ccf84bc50 <line:9:3, col:17>
+    | `-VarDecl 0x7f8ccf84bb68 <col:3, col:16> col:7 used b 'int' cinit
+    |   `-BinaryOperator 0x7f8ccf84bc28 <col:11, col:16> 'int' '!='
+    |     |-ImplicitCastExpr 0x7f8ccf84bc10 <col:11> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f8ccf84bbc8 <col:11> 'int' lvalue ParmVar 0x7f8ccf806578 'a' 'int'
+    |     `-IntegerLiteral 0x7f8ccf84bbf0 <col:16> 'int' 0
+    |-DeclStmt 0x7f8ccf84bd38 <line:10:3, col:22>
+    | `-VarDecl 0x7f8ccf84bc80 <col:3, col:21> col:17 used c 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7f8ccf84bd20 <col:21> 'unsigned char' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7f8ccf84bd08 <col:21> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8ccf84bce0 <col:21> 'int' lvalue Var 0x7f8ccf84bb68 'b' 'int'
+    `-IfStmt 0x7f8ccf84be00 <line:11:3, line:14:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8ccf84bd78 <line:11:7> 'unsigned char' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8ccf84bd50 <col:7> 'unsigned char' lvalue Var 0x7f8ccf84bc80 'c' 'unsigned char'
+      |-ReturnStmt 0x7f8ccf84bdb0 <line:12:5, col:12>
+      | `-IntegerLiteral 0x7f8ccf84bd90 <col:12> 'int' 1
+      `-ReturnStmt 0x7f8ccf84bde8 <line:14:5, col:12>
+        `-IntegerLiteral 0x7f8ccf84bdc8 <col:12> 'int' 0

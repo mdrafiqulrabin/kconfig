@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f84dd82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f84de0575d8 <../Data/C2AST/pr70955_0.c:6:1, col:52> col:29 used va_demo 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))'
+| `-ParmVarDecl 0x7f84de0574c0 <col:38, col:42> col:42 count 'int'
+`-FunctionDecl 0x7f84de057718 <line:8:1, line:13:1> line:9:1 main 'int (void)'
+  `-CompoundStmt 0x7f84de057af0 <line:10:1, line:13:1>
+    |-CallExpr 0x7f84de057a50 <line:11:3, col:52> 'int'
+    | |-ImplicitCastExpr 0x7f84de057a38 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f84de0577b8 <col:3> 'int (const char *, ...)' Function 0x7f84de88a560 'printf' 'int (const char *, ...)'
+    | |-ImplicitCastExpr 0x7f84de057aa0 <col:11> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7f84de057a88 <col:11> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7f84de057818 <col:11> 'char [11]' lvalue "sum == %d\n"
+    | `-CallExpr 0x7f84de0579b0 <col:26, col:51> 'int'
+    |   |-ImplicitCastExpr 0x7f84de057998 <col:26> 'int (*)(int, ...) __attribute__((ms_abi))' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f84de057850 <col:26> 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))' Function 0x7f84de0575d8 'va_demo' 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))'
+    |   |-IntegerLiteral 0x7f84de057878 <col:35> 'int' 5
+    |   |-IntegerLiteral 0x7f84de057898 <col:38> 'int' 1
+    |   |-IntegerLiteral 0x7f84de0578b8 <col:41> 'int' 2
+    |   |-IntegerLiteral 0x7f84de0578d8 <col:44> 'int' 3
+    |   |-IntegerLiteral 0x7f84de0578f8 <col:47> 'int' 4
+    |   `-IntegerLiteral 0x7f84de057918 <col:50> 'int' 5
+    `-ReturnStmt 0x7f84de057ad8 <line:12:3, col:10>
+      `-IntegerLiteral 0x7f84de057ab8 <col:10> 'int' 0

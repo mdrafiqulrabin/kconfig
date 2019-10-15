@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fd83202bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd83202c960 <../Data/C2AST/pr21463.c:4:1, line:7:1> line:4:8 struct f definition
+| `-FieldDecl 0x7fd83206d838 <line:6:3, col:7> col:7 referenced i 'int'
+`-FunctionDecl 0x7fd83206dbe8 <line:9:1, line:17:1> line:9:5 g 'int (int, int, struct f *, int)'
+  |-ParmVarDecl 0x7fd83206d898 <col:7, col:11> col:11 used i 'int'
+  |-ParmVarDecl 0x7fd83206d910 <col:14, col:18> col:18 used c 'int'
+  |-ParmVarDecl 0x7fd83206da20 <col:21, col:31> col:31 used ff 'struct f *'
+  |-ParmVarDecl 0x7fd83206da98 <col:35, col:39> col:39 g 'int'
+  `-CompoundStmt 0x7fd83206e030 <line:10:1, line:17:1>
+    |-DeclStmt 0x7fd83206dd90 <line:11:3, col:9>
+    | `-VarDecl 0x7fd83206dd30 <col:3, col:8> col:8 used t 'int *'
+    |-IfStmt 0x7fd83206df68 <line:12:3, line:15:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fd83206ddd0 <line:12:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd83206dda8 <col:7> 'int' lvalue ParmVar 0x7fd83206d910 'c' 'int'
+    | |-BinaryOperator 0x7fd83206de58 <line:13:5, col:10> 'int *' '='
+    | | |-DeclRefExpr 0x7fd83206dde8 <col:5> 'int *' lvalue Var 0x7fd83206dd30 't' 'int *'
+    | | `-UnaryOperator 0x7fd83206de38 <col:9, col:10> 'int *' prefix '&'
+    | |   `-DeclRefExpr 0x7fd83206de10 <col:10> 'int' lvalue ParmVar 0x7fd83206d898 'i' 'int'
+    | `-BinaryOperator 0x7fd83206df40 <line:15:5, col:14> 'int *' '='
+    |   |-DeclRefExpr 0x7fd83206de80 <col:5> 'int *' lvalue Var 0x7fd83206dd30 't' 'int *'
+    |   `-UnaryOperator 0x7fd83206df20 <col:9, col:14> 'int *' prefix '&'
+    |     `-MemberExpr 0x7fd83206dee8 <col:10, col:14> 'int' lvalue ->i 0x7fd83206d838
+    |       `-ImplicitCastExpr 0x7fd83206ded0 <col:10> 'struct f *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fd83206dea8 <col:10> 'struct f *' lvalue ParmVar 0x7fd83206da20 'ff' 'struct f *'
+    `-ReturnStmt 0x7fd83206e018 <line:16:3, col:11>
+      `-ImplicitCastExpr 0x7fd83206e000 <col:10, col:11> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7fd83206dfe0 <col:10, col:11> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fd83206dfc8 <col:11> 'int *' <LValueToRValue>
+            `-DeclRefExpr 0x7fd83206dfa0 <col:11> 'int *' lvalue Var 0x7fd83206dd30 't' 'int *'

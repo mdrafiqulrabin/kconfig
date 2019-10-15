@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f885b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f885b020660 <../Data/C2AST/pr61215.c:5:1, col:21> col:6 used fn1 'void (int *, ...)'
+| `-ParmVarDecl 0x7f885b02c9a0 <col:11, col:15> col:16 'int *'
+`-FunctionDecl 0x7f885b020828 <line:6:1, line:10:1> line:6:5 fn2 'int (int)'
+  |-ParmVarDecl 0x7f885b020760 <col:10, col:14> col:14 used p1 'int'
+  `-CompoundStmt 0x7f885b020ac0 <line:7:1, line:10:1>
+    |-CallExpr 0x7f885b020a20 <line:8:3, col:26> 'void'
+    | |-ImplicitCastExpr 0x7f885b020a08 <col:3> 'void (*)(int *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f885b0208d0 <col:3> 'void (int *, ...)' Function 0x7f885b020660 'fn1' 'void (int *, ...)'
+    | |-ImplicitCastExpr 0x7f885b020a58 <col:8> 'int *' <NullToPointer>
+    | | `-IntegerLiteral 0x7f885b0208f8 <col:8> 'int' 0
+    | `-ImplicitCastExpr 0x7f885b020a70 <col:11, col:24> 'int' <IntegralCast>
+    |   `-CStyleCastExpr 0x7f885b0209b8 <col:11, col:24> 'short' <IntegralCast>
+    |     `-CStyleCastExpr 0x7f885b020978 <col:18, col:24> 'int' <PointerToIntegral>
+    |       `-UnaryOperator 0x7f885b020940 <col:23, col:24> 'int *' prefix '&'
+    |         `-DeclRefExpr 0x7f885b020918 <col:24> 'int' lvalue ParmVar 0x7f885b020760 'p1' 'int'
+    `-ReturnStmt 0x7f885b020aa8 <line:9:3, col:10>
+      `-IntegerLiteral 0x7f885b020a88 <col:10> 'int' 0

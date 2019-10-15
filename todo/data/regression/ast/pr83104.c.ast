@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fea0a82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fea0a82c9a0 <../Data/C2AST/pr83104.c:1:1, col:6> col:6 used a 'int *'
+`-FunctionDecl 0x7fea0b020490 <line:2:1, line:5:1> line:2:5 foo 'int ()'
+  `-CompoundStmt 0x7fea0b020730 <col:11, line:5:1>
+    `-IfStmt 0x7fea0b0206f8 <line:3:3, line:4:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fea0b020698 <line:3:7, col:27> 'int' '&&'
+      | |-ImplicitCastExpr 0x7fea0b020680 <col:7> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fea0b020530 <col:7> 'int *' lvalue Var 0x7fea0a82c9a0 'a' 'int *'
+      | `-BinaryOperator 0x7fea0b020658 <col:12, col:27> 'int' '>'
+      |   |-BinaryOperator 0x7fea0b0205f8 <col:12, col:23> 'long' '-'
+      |   | |-ImplicitCastExpr 0x7fea0b0205e0 <col:12> 'int *' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fea0b020558 <col:12> 'int *' lvalue Var 0x7fea0a82c9a0 'a' 'int *'
+      |   | `-CStyleCastExpr 0x7fea0b0205b8 <col:16, col:23> 'int *' <NullToPointer>
+      |   |   `-IntegerLiteral 0x7fea0b020580 <col:23> 'int' 0
+      |   `-ImplicitCastExpr 0x7fea0b020640 <col:27> 'long' <IntegralCast>
+      |     `-IntegerLiteral 0x7fea0b020620 <col:27> 'int' 0
+      |-ReturnStmt 0x7fea0b0206e0 <line:4:5, col:12>
+      | `-IntegerLiteral 0x7fea0b0206c0 <col:12> 'int' 0
+      `-<<<NULL>>>

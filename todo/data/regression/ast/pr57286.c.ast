@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f9ffd02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ffd085238 <../Data/C2AST/pr57286.c:4:1, col:13> col:13 referenced vec '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f9ffd085200 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f9ffd02bde0 'int'
+`-FunctionDecl 0x7f9ffd085420 <line:5:1, line:7:1> line:5:6 f 'void (vec *)'
+  |-ParmVarDecl 0x7f9ffd085318 <col:9, col:14> col:14 used x 'vec *'
+  `-CompoundStmt 0x7f9ffd0856e8 <col:16, line:7:1>
+    `-BinaryOperator 0x7f9ffd0856c0 <line:6:5, col:21> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' '='
+      |-UnaryOperator 0x7f9ffd085548 <col:5, col:6> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7f9ffd085530 <col:6> 'vec *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9ffd085508 <col:6> 'vec *' lvalue ParmVar 0x7f9ffd085318 'x' 'vec *'
+      `-BinaryOperator 0x7f9ffd085698 <col:10, col:21> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '|'
+        |-ParenExpr 0x7f9ffd085640 <col:10, col:17> '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        | `-BinaryOperator 0x7f9ffd085618 <col:11, col:16> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<'
+        |   |-ImplicitCastExpr 0x7f9ffd0855e8 <col:11, col:12> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        |   | `-UnaryOperator 0x7f9ffd0855a8 <col:11, col:12> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue prefix '*'
+        |   |   `-ImplicitCastExpr 0x7f9ffd085590 <col:12> 'vec *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f9ffd085568 <col:12> 'vec *' lvalue ParmVar 0x7f9ffd085318 'x' 'vec *'
+        |   `-ImplicitCastExpr 0x7f9ffd085600 <col:16> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <VectorSplat>
+        |     `-IntegerLiteral 0x7f9ffd0855c8 <col:16> 'int' 0
+        `-ImplicitCastExpr 0x7f9ffd085680 <col:21> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <VectorSplat>
+          `-IntegerLiteral 0x7f9ffd085660 <col:21> 'int' 1

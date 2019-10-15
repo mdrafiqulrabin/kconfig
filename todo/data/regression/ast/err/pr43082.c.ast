@@ -1,0 +1,28 @@
+../Data/C2AST/pr43082.c:7:3: error: statement requires expression of scalar type ('void' invalid)
+  if (x ? (void)(0) : (void)(1))  
+  ^   ~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f8ab70068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8ab7006e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8ab7006b80 '__int128'
+|-TypedefDecl 0x7f8ab7006ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8ab7006ba0 'unsigned __int128'
+|-TypedefDecl 0x7f8ab70071a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8ab7006fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8ab7006f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8ab7007240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8ab7007200 'char *'
+|   `-BuiltinType 0x7f8ab7006980 'char'
+|-TypedefDecl 0x7f8ab7007508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8ab70074b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8ab7007320 'struct __va_list_tag'
+|     `-Record 0x7f8ab7007298 '__va_list_tag'
+`-FunctionDecl 0x7f8ab5824c60 <../Data/C2AST/pr43082.c:4:1, line:9:1> line:5:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f8ab7007578 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7f8ab5825328 <line:6:1, line:9:1>
+    `-IfStmt 0x7f8ab58252f0 <line:7:3, line:8:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-OpaqueValueExpr 0x7f8ab58252d0 <<invalid sloc>> '_Bool'
+      |-NullStmt 0x7f8ab58252c0 <col:5>
+      `-<<<NULL>>>

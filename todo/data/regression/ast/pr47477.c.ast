@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fd74a829ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd74a82a988 <../Data/C2AST/pr47477.c:6:1, col:13> col:13 referenced int64_t 'long'
+| |-BuiltinType 0x7fd74a829e00 'long'
+| `-ModeAttr 0x7fd74b000000 <col:37, col:53> __DI__
+|-TypedefDecl 0x7fd74b000090 <line:7:1, col:15> col:15 referenced intptr_t 'int *'
+| `-PointerType 0x7fd74b000050 'int *'
+|   `-BuiltinType 0x7fd74a829de0 'int'
+|-RecordDecl 0x7fd74b0000e8 <line:9:9, col:16> col:16 struct toto_s
+|-TypedefDecl 0x7fd74b000240 <col:1, col:24> col:24 referenced toto_t 'struct toto_s *'
+| `-PointerType 0x7fd74b0001f0 'struct toto_s *'
+|   `-ElaboratedType 0x7fd74b000190 'struct toto_s' sugar
+|     `-RecordType 0x7fd74b000170 'struct toto_s'
+|       `-Record 0x7fd74b0000e8 'toto_s'
+`-FunctionDecl 0x7fd74b000460 <line:10:1, line:13:1> line:10:8 add 'toto_t (toto_t, toto_t)'
+  |-ParmVarDecl 0x7fd74b0002e0 <col:13, col:20> col:20 used a 'toto_t':'struct toto_s *'
+  |-ParmVarDecl 0x7fd74b000350 <col:23, col:30> col:30 used b 'toto_t':'struct toto_s *'
+  `-CompoundStmt 0x7fd74b0008f0 <col:33, line:13:1>
+    |-DeclStmt 0x7fd74b000810 <line:11:3, col:66>
+    | `-VarDecl 0x7fd74b000580 <col:3, col:65> col:11 used tmp 'int64_t':'long' cinit
+    |   `-BinaryOperator 0x7fd74b0007e8 <col:17, col:65> 'long' '+'
+    |     |-CStyleCastExpr 0x7fd74b000688 <col:17, col:36> 'int64_t':'long' <PointerToIntegral>
+    |     | `-CStyleCastExpr 0x7fd74b000650 <col:26, col:36> 'intptr_t':'int *' <BitCast>
+    |     |   `-ImplicitCastExpr 0x7fd74b000638 <col:36> 'toto_t':'struct toto_s *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fd74b000600 <col:36> 'toto_t':'struct toto_s *' lvalue ParmVar 0x7fd74b0002e0 'a' 'toto_t':'struct toto_s *'
+    |     `-ParenExpr 0x7fd74b0007c8 <col:40, col:65> 'long'
+    |       `-BinaryOperator 0x7fd74b0007a0 <col:41, col:63> 'long' '&'
+    |         |-CStyleCastExpr 0x7fd74b000738 <col:41, col:60> 'int64_t':'long' <PointerToIntegral>
+    |         | `-CStyleCastExpr 0x7fd74b000700 <col:50, col:60> 'intptr_t':'int *' <BitCast>
+    |         |   `-ImplicitCastExpr 0x7fd74b0006e8 <col:60> 'toto_t':'struct toto_s *' <LValueToRValue>
+    |         |     `-DeclRefExpr 0x7fd74b0006b0 <col:60> 'toto_t':'struct toto_s *' lvalue ParmVar 0x7fd74b000350 'b' 'toto_t':'struct toto_s *'
+    |         `-UnaryOperator 0x7fd74b000780 <col:62, col:63> 'long' prefix '~'
+    |           `-IntegerLiteral 0x7fd74b000760 <col:63> 'long' 1
+    `-ReturnStmt 0x7fd74b0008d8 <line:12:3, col:29>
+      `-CStyleCastExpr 0x7fd74b0008b0 <col:10, col:29> 'toto_t':'struct toto_s *' <BitCast>
+        `-CStyleCastExpr 0x7fd74b000878 <col:18, col:29> 'intptr_t':'int *' <IntegralToPointer>
+          `-ImplicitCastExpr 0x7fd74b000860 <col:29> 'int64_t':'long' <LValueToRValue>
+            `-DeclRefExpr 0x7fd74b000828 <col:29> 'int64_t':'long' lvalue Var 0x7fd74b000580 'tmp' 'int64_t':'long'

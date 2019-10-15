@@ -1,0 +1,31 @@
+../Data/C2AST/pr83488.c:8:8: error: use of unknown builtin '__builtin_ia32_vpshldv_v8di' [-Wimplicit-function-declaration]
+  *d = __builtin_ia32_vpshldv_v8di (*a, *b, *c);  
+       ^
+../Data/C2AST/pr83488.c:8:6: error: assigning to '__v8di' (vector of 8 'long long' values) from incompatible type 'int'
+  *d = __builtin_ia32_vpshldv_v8di (*a, *b, *c);  
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fa8dd0266e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa8dd026c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa8dd026980 '__int128'
+|-TypedefDecl 0x7fa8dd026cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa8dd0269a0 'unsigned __int128'
+|-TypedefDecl 0x7fa8dd026fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa8dd026db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa8dd026d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa8dd027040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa8dd027000 'char *'
+|   `-BuiltinType 0x7fa8dd026780 'char'
+|-TypedefDecl 0x7fa8dd027308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa8dd0272b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa8dd027120 'struct __va_list_tag'
+|     `-Record 0x7fa8dd027098 '__va_list_tag'
+|-TypedefDecl 0x7fa8dd069400 <../Data/C2AST/pr83488.c:4:1, col:19> col:19 referenced __v8di '__attribute__((__vector_size__(8 * sizeof(long long)))) long long'
+| `-VectorType 0x7fa8dd027380 '__attribute__((__vector_size__(8 * sizeof(long long)))) long long' 8
+|   `-BuiltinType 0x7fa8dd026820 'long long'
+`-FunctionDecl 0x7fa8dd069780 <line:5:1, line:9:1> line:6:1 foo 'void (__v8di *, __v8di *, __v8di *, __v8di *)'
+  |-ParmVarDecl 0x7fa8dd0694e8 <col:6, col:14> col:14 used a '__v8di *'
+  |-ParmVarDecl 0x7fa8dd069558 <col:17, col:25> col:25 used b '__v8di *'
+  |-ParmVarDecl 0x7fa8dd0695c8 <col:28, col:36> col:36 used c '__v8di *'
+  |-ParmVarDecl 0x7fa8dd069638 <col:39, col:47> col:47 used d '__v8di *'
+  `-CompoundStmt 0x7fa8dd069fd0 <line:7:1, line:9:1>

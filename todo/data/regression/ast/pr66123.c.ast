@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fee958294e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fee95017868 <../Data/C2AST/pr66123.c:4:1, line:12:1> line:5:1 test 'int (int)'
+  |-ParmVarDecl 0x7fee9582a178 <col:7, col:11> col:11 used foo 'int'
+  `-CompoundStmt 0x7fee95017e30 <line:6:1, line:12:1>
+    |-DeclStmt 0x7fee95017bb8 <line:7:3, col:38>
+    | `-VarDecl 0x7fee950179a0 <col:3, col:37> col:16 dummy 'void *[2]' static cinit
+    |   `-InitListExpr 0x7fee95017b20 <col:26, col:37> 'void *[2]'
+    |     |-AddrLabelExpr 0x7fee95017a48 <col:28, col:30> 'void *' a 0x7fee95017a00
+    |     `-AddrLabelExpr 0x7fee95017ab0 <col:33, col:35> 'void *' b 0x7fee95017a68
+    |-IndirectGotoStmt 0x7fee95017db0 <line:8:3, col:38>
+    | `-ImplicitCastExpr 0x7fee95017d98 <col:9, col:38> 'const void *' <BitCast>
+    |   `-ParenExpr 0x7fee95017d48 <col:9, col:38> 'char *'
+    |     `-BinaryOperator 0x7fee95017d20 <col:10, col:37> 'char *' '-'
+    |       |-CStyleCastExpr 0x7fee95017c08 <col:10, col:21> 'char *' <BitCast>
+    |       | `-AddrLabelExpr 0x7fee95017bd0 <col:19, col:21> 'void *' b 0x7fee95017a68
+    |       `-BinaryOperator 0x7fee95017cf8 <col:25, col:37> 'int' '*'
+    |         |-IntegerLiteral 0x7fee95017c30 <col:25> 'int' 2
+    |         `-ParenExpr 0x7fee95017cd8 <col:29, col:37> 'int'
+    |           `-BinaryOperator 0x7fee95017cb0 <col:30, col:36> 'int' '<'
+    |             |-ImplicitCastExpr 0x7fee95017c98 <col:30> 'int' <LValueToRValue>
+    |             | `-DeclRefExpr 0x7fee95017c50 <col:30> 'int' lvalue ParmVar 0x7fee9582a178 'foo' 'int'
+    |             `-IntegerLiteral 0x7fee95017c78 <col:36> 'int' 0
+    `-LabelStmt 0x7fee95017e18 <line:9:1, line:11:10> 'a'
+      `-LabelStmt 0x7fee95017e00 <line:10:1, line:11:10> 'b'
+        `-ReturnStmt 0x7fee95017de8 <col:3, col:10>
+          `-IntegerLiteral 0x7fee95017dc8 <col:10> 'int' 0

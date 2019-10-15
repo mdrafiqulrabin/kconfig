@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7ff5ed02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff5ed814268 <../Data/C2AST/pr59034-2.c:5:1, col:24> col:12 used foo 'int (int, ...)' extern
+| `-ParmVarDecl 0x7ff5ed02c978 <col:16> col:19 'int'
+`-FunctionDecl 0x7ff5ed814418 <line:6:1, line:10:1> line:6:5 bar 'int (void)'
+  `-CompoundStmt 0x7ff5ed8146b8 <col:15, line:10:1>
+    |-DeclStmt 0x7ff5ed814568 <line:7:3, col:27>
+    | `-VarDecl 0x7ff5ed8144d0 <col:3, col:19> col:15 used l 'long double' cinit
+    |   `-ImplicitCastExpr 0x7ff5ed814550 <col:19> 'long double' <FloatingCast>
+    |     `-FloatingLiteral 0x7ff5ed814530 <col:19> 'double' 1.234500e+06
+    |-CallExpr 0x7ff5ed814630 <line:8:3, col:11> 'int'
+    | |-ImplicitCastExpr 0x7ff5ed814618 <col:3> 'int (*)(int, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff5ed814580 <col:3> 'int (int, ...)' Function 0x7ff5ed814268 'foo' 'int (int, ...)'
+    | |-IntegerLiteral 0x7ff5ed8145a8 <col:7> 'int' 0
+    | `-ImplicitCastExpr 0x7ff5ed814668 <col:10> 'long double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff5ed8145c8 <col:10> 'long double' lvalue Var 0x7ff5ed8144d0 'l' 'long double'
+    `-ReturnStmt 0x7ff5ed8146a0 <line:9:3, col:10>
+      `-IntegerLiteral 0x7ff5ed814680 <col:10> 'int' 0

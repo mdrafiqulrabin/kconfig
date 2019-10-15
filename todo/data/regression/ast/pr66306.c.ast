@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7f88d582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f88d582c960 <../Data/C2AST/pr66306.c:6:1, line:10:1> line:6:8 struct line_map definition
+| |-FieldDecl 0x7f88d586d838 <line:8:3, col:12> col:12 referenced start_location 'unsigned int'
+| `-FieldDecl 0x7f88d586d898 <line:9:3, col:12> col:12 referenced ordinary 'unsigned int'
+|-FunctionDecl 0x7f88d586daf8 <line:11:1, line:12:52> col:1 used linemap_resolve_location 'unsigned int (struct line_map **)'
+| `-ParmVarDecl 0x7f88d586d9f0 <col:27, col:45> col:45 loc_map 'struct line_map **'
+|-FunctionDecl 0x7f88d586dd48 <line:14:1, line:25:1> line:15:1 linemap_position_for_loc_and_offset 'unsigned int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f88d586dbf8 <col:38, col:47> col:47 used h 'unsigned int'
+| |-ParmVarDecl 0x7f88d586dc70 <col:50, col:59> col:59 used loc 'unsigned int'
+| `-CompoundStmt 0x7f88d586e630 <line:16:1, line:25:1>
+|   |-DeclStmt 0x7f88d586deb8 <line:17:3, col:27>
+|   | `-VarDecl 0x7f88d586de20 <col:3, col:26> col:20 used map 'struct line_map *' cinit
+|   |   `-ImplicitCastExpr 0x7f88d586dea0 <col:26> 'struct line_map *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7f88d586de80 <col:26> 'int' 0
+|   |-CallExpr 0x7f88d586dfb0 <line:18:3, col:33> 'unsigned int'
+|   | |-ImplicitCastExpr 0x7f88d586df98 <col:3> 'unsigned int (*)(struct line_map **)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f88d586ded0 <col:3> 'unsigned int (struct line_map **)' Function 0x7f88d586daf8 'linemap_resolve_location' 'unsigned int (struct line_map **)'
+|   | `-UnaryOperator 0x7f88d586df20 <col:29, col:30> 'struct line_map **' prefix '&'
+|   |   `-DeclRefExpr 0x7f88d586def8 <col:30> 'struct line_map *' lvalue Var 0x7f88d586de20 'map' 'struct line_map *'
+|   |-IfStmt 0x7f88d586e3f8 <line:20:3, line:21:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f88d586e220 <line:20:7, col:57> 'int' '<='
+|   | | |-ImplicitCastExpr 0x7f88d586e208 <col:7, col:12> 'unsigned int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f88d586e020 <col:7, col:12> 'unsigned int' lvalue ->ordinary 0x7f88d586d898
+|   | | |   `-ImplicitCastExpr 0x7f88d586e008 <col:7> 'struct line_map *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7f88d586dfe0 <col:7> 'struct line_map *' lvalue Var 0x7f88d586de20 'map' 'struct line_map *'
+|   | | `-BinaryOperator 0x7f88d586e1e0 <col:24, col:57> 'unsigned int' '+'
+|   | |   |-BinaryOperator 0x7f88d586e128 <col:24, col:35> 'unsigned int' '+'
+|   | |   | |-ImplicitCastExpr 0x7f88d586e0f8 <col:24> 'unsigned int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7f88d586e058 <col:24> 'unsigned int' lvalue ParmVar 0x7f88d586dc70 'loc' 'unsigned int'
+|   | |   | `-ImplicitCastExpr 0x7f88d586e110 <col:30, col:35> 'unsigned int' <LValueToRValue>
+|   | |   |   `-MemberExpr 0x7f88d586e0c0 <col:30, col:35> 'unsigned int' lvalue ->start_location 0x7f88d586d838
+|   | |   |     `-ImplicitCastExpr 0x7f88d586e0a8 <col:30> 'struct line_map *' <LValueToRValue>
+|   | |   |       `-DeclRefExpr 0x7f88d586e080 <col:30> 'struct line_map *' lvalue Var 0x7f88d586de20 'map' 'struct line_map *'
+|   | |   `-ImplicitCastExpr 0x7f88d586e1c8 <col:52, col:57> 'unsigned int' <LValueToRValue>
+|   | |     `-MemberExpr 0x7f88d586e190 <col:52, col:57> 'unsigned int' lvalue ->ordinary 0x7f88d586d898
+|   | |       `-ImplicitCastExpr 0x7f88d586e178 <col:52> 'struct line_map *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7f88d586e150 <col:52> 'struct line_map *' lvalue Var 0x7f88d586de20 'map' 'struct line_map *'
+|   | |-CallExpr 0x7f88d586e3d0 <line:21:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f88d586e3b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f88d586e368 <col:5> '<builtin fn type>' Function 0x7f88d586e280 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x7f88d586e5f8 <line:23:3, line:24:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f88d586e568 <line:23:7, col:23> 'int' '>='
+|     | |-ImplicitCastExpr 0x7f88d586e550 <col:7> 'unsigned int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f88d586e430 <col:7> 'unsigned int' lvalue ParmVar 0x7f88d586dbf8 'h' 'unsigned int'
+|     | `-BinaryOperator 0x7f88d586e528 <col:12, col:23> 'unsigned int' '+'
+|     |   |-ImplicitCastExpr 0x7f88d586e4f8 <col:12> 'unsigned int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7f88d586e458 <col:12> 'unsigned int' lvalue ParmVar 0x7f88d586dc70 'loc' 'unsigned int'
+|     |   `-ImplicitCastExpr 0x7f88d586e510 <col:18, col:23> 'unsigned int' <LValueToRValue>
+|     |     `-MemberExpr 0x7f88d586e4c0 <col:18, col:23> 'unsigned int' lvalue ->start_location 0x7f88d586d838
+|     |       `-ImplicitCastExpr 0x7f88d586e4a8 <col:18> 'struct line_map *' <LValueToRValue>
+|     |         `-DeclRefExpr 0x7f88d586e480 <col:18> 'struct line_map *' lvalue Var 0x7f88d586de20 'map' 'struct line_map *'
+|     |-CallExpr 0x7f88d586e5d0 <line:24:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f88d586e5b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f88d586e590 <col:5> '<builtin fn type>' Function 0x7f88d586e280 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f88d586e280 <line:21:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f88d586e320 <col:5> Implicit

@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7fa64f80e8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa64f80f578 <../Data/C2AST/pr67784-4.c:5:1, col:13> col:13 referenced T 'int'
+| `-BuiltinType 0x7fa64f80e9e0 'int'
+|-FunctionDecl 0x7fa6500224b0 <line:7:1, line:14:1> line:8:1 fn1 'void (void)'
+| `-CompoundStmt 0x7fa650022858 <line:9:1, line:14:1>
+|   |-SwitchStmt 0x7fa650022710 <line:10:3, line:12:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fa6500226f0 <line:10:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-4.c:10:19)':'enum (anonymous at ../Data/C2AST/pr67784-4.c:10:19)'
+|   | `-IfStmt 0x7fa650022770 <line:11:5, line:12:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa650022740 <line:11:9> 'int' 1
+|   |   |-NullStmt 0x7fa650022760 <line:12:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa650022840 <line:13:3, col:6>
+|     `-VarDecl 0x7fa6500227e0 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7fa650022908 <line:16:1, line:24:1> line:17:1 fn2 'void (void)'
+| `-CompoundStmt 0x7fa650022d28 <line:18:1, line:24:1>
+|   |-DeclStmt 0x7fa650022a40 <line:19:3, col:12>
+|   | `-VarDecl 0x7fa6500229c0 <col:3, col:11> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7fa650022a20 <col:11> 'int' 0
+|   |-SwitchStmt 0x7fa650022bd0 <line:20:3, line:22:8>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fa650022bb0 <line:20:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-4.c:20:19)':'enum (anonymous at ../Data/C2AST/pr67784-4.c:20:19)'
+|   | `-IfStmt 0x7fa650022c68 <line:21:5, line:22:8>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa650022c00 <line:21:9> 'int' 1
+|   |   |-UnaryOperator 0x7fa650022c48 <line:22:7, col:8> 'int' postfix '++'
+|   |   | `-DeclRefExpr 0x7fa650022c20 <col:7> 'int' lvalue Var 0x7fa6500229c0 'i' 'int'
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa650022d10 <line:23:3, col:6>
+|     `-VarDecl 0x7fa650022cb0 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7fa650022de0 <line:26:1, line:34:1> line:27:1 fn3 'void (void)'
+| `-CompoundStmt 0x7fa650023120 <line:28:1, line:34:1>
+|   |-SwitchStmt 0x7fa650023000 <line:29:3, line:32:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fa650022fe0 <line:29:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-4.c:29:19)':'enum (anonymous at ../Data/C2AST/pr67784-4.c:29:19)'
+|   | `-IfStmt 0x7fa650023060 <line:30:5, line:32:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa650023030 <line:30:9> 'int' 1
+|   |   |-CompoundStmt 0x7fa650023050 <line:31:7, line:32:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa650023108 <line:33:3, col:6>
+|     `-VarDecl 0x7fa6500230a8 <col:3, col:5> col:5 x 'T':'int'
+|-FunctionDecl 0x7fa6500231d0 <line:36:1, line:44:1> line:37:1 fn4 'void (void)'
+| `-CompoundStmt 0x7fa65003f180 <line:38:1, line:44:1>
+|   |-SwitchStmt 0x7fa65003f000 <line:39:3, line:42:7>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryExprOrTypeTraitExpr 0x7fa6500233d0 <line:39:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-4.c:39:19)':'enum (anonymous at ../Data/C2AST/pr67784-4.c:39:19)'
+|   | `-IfStmt 0x7fa65003f0c0 <line:40:5, line:42:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-IntegerLiteral 0x7fa65003f030 <line:40:9> 'int' 1
+|   |   |-LabelStmt 0x7fa65003f0a8 <line:41:1, line:42:7> 'L'
+|   |   | `-NullStmt 0x7fa65003f050 <col:7>
+|   |   `-<<<NULL>>>
+|   `-DeclStmt 0x7fa65003f168 <line:43:3, col:6>
+|     `-VarDecl 0x7fa65003f108 <col:3, col:5> col:5 x 'T':'int'
+`-FunctionDecl 0x7fa65003f230 <line:46:1, line:55:1> line:47:1 fn5 'void (void)'
+  `-CompoundStmt 0x7fa65003f580 <line:48:1, line:55:1>
+    |-SwitchStmt 0x7fa65003f450 <line:49:3, line:53:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryExprOrTypeTraitExpr 0x7fa65003f430 <line:49:11, col:29> 'unsigned long' sizeof 'enum (anonymous enum at ../Data/C2AST/pr67784-4.c:49:19)':'enum (anonymous at ../Data/C2AST/pr67784-4.c:49:19)'
+    | `-IfStmt 0x7fa65003f4c0 <line:50:5, line:53:7>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-IntegerLiteral 0x7fa65003f480 <line:50:9> 'int' 1
+    |   |-NullStmt 0x7fa65003f4a0 <line:51:7>
+    |   `-NullStmt 0x7fa65003f4b0 <line:53:7>
+    `-DeclStmt 0x7fa65003f568 <line:54:3, col:6>
+      `-VarDecl 0x7fa65003f508 <col:3, col:5> col:5 x 'T':'int'

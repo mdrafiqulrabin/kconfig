@@ -1,0 +1,341 @@
+TranslationUnitDecl 0x7ff990818ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff990819978 <../Data/C2AST/pr55888.c:3:1, col:18> col:18 referenced _GCC_ATTR_ALIGN_u32t 'unsigned int'
+| `-BuiltinType 0x7ff990818e80 'unsigned int'
+|-TypedefDecl 0x7ff990852630 <line:4:1, col:30> col:30 referenced _Uint32t '_GCC_ATTR_ALIGN_u32t':'unsigned int'
+| |-TypedefType 0x7ff9908199d0 '_GCC_ATTR_ALIGN_u32t' sugar
+| | |-Typedef 0x7ff990819978 '_GCC_ATTR_ALIGN_u32t'
+| | `-BuiltinType 0x7ff990818e80 'unsigned int'
+| `-AlignedAttr 0x7ff990852688 <col:55, col:69> aligned
+|   `-IntegerLiteral 0x7ff990852600 <col:68> 'int' 4
+|-TypedefDecl 0x7ff990852700 <line:5:1, col:22> col:22 referenced _GCC_ATTR_ALIGN_u8t 'unsigned char'
+| |-BuiltinType 0x7ff990818e40 'unsigned char'
+| `-ModeAttr 0x7ff990852768 <col:58, col:74> __QI__
+|-TypedefDecl 0x7ff990852810 <line:6:1, col:29> col:29 referenced _Uint8t '_GCC_ATTR_ALIGN_u8t':'unsigned char'
+| |-TypedefType 0x7ff9908527c0 '_GCC_ATTR_ALIGN_u8t' sugar
+| | |-Typedef 0x7ff990852700 '_GCC_ATTR_ALIGN_u8t'
+| | `-BuiltinType 0x7ff990818e40 'unsigned char'
+| `-AlignedAttr 0x7ff990852868 <col:53, col:67> aligned
+|   `-IntegerLiteral 0x7ff9908527e0 <col:66> 'int' 1
+|-TypedefDecl 0x7ff9908528d0 <line:7:1, col:18> col:18 referenced _Sizet 'unsigned int'
+| `-BuiltinType 0x7ff990818e80 'unsigned int'
+|-TypedefDecl 0x7ff990852960 <line:8:1, col:16> col:16 referenced size_t '_Sizet':'unsigned int'
+| `-TypedefType 0x7ff990852930 '_Sizet' sugar
+|   |-Typedef 0x7ff9908528d0 '_Sizet'
+|   `-BuiltinType 0x7ff990818e80 'unsigned int'
+|-TypedefDecl 0x7ff9908529f0 <line:9:1, col:17> col:17 referenced uint8_t '_Uint8t':'unsigned char'
+| `-TypedefType 0x7ff9908529c0 '_Uint8t' sugar
+|   |-Typedef 0x7ff990852810 '_Uint8t'
+|   `-TypedefType 0x7ff9908527c0 '_GCC_ATTR_ALIGN_u8t' sugar
+|     |-Typedef 0x7ff990852700 '_GCC_ATTR_ALIGN_u8t'
+|     `-BuiltinType 0x7ff990818e40 'unsigned char'
+|-TypedefDecl 0x7ff990852a80 <line:10:1, col:18> col:18 referenced uint32_t '_Uint32t':'unsigned int'
+| `-TypedefType 0x7ff990852a50 '_Uint32t' sugar
+|   |-Typedef 0x7ff990852630 '_Uint32t'
+|   `-TypedefType 0x7ff9908199d0 '_GCC_ATTR_ALIGN_u32t' sugar
+|     |-Typedef 0x7ff990819978 '_GCC_ATTR_ALIGN_u32t'
+|     `-BuiltinType 0x7ff990818e80 'unsigned int'
+|-EnumDecl 0x7ff990852ad8 <line:11:9, line:15:1> line:11:9
+| |-EnumConstantDecl 0x7ff990852b90 <line:13:3> col:3 referenced PROTOBUF_C_LABEL_REQUIRED 'int'
+| |-EnumConstantDecl 0x7ff990852bd8 <col:30> col:30 PROTOBUF_C_LABEL_OPTIONAL 'int'
+| `-EnumConstantDecl 0x7ff990852c20 <line:14:5> col:5 PROTOBUF_C_LABEL_REPEATED 'int'
+|-TypedefDecl 0x7ff990852cc0 <line:11:1, line:16:1> col:1 referenced ProtobufCLabel 'enum ProtobufCLabel':'ProtobufCLabel'
+| `-ElaboratedType 0x7ff990852c70 'enum ProtobufCLabel' sugar
+|   `-EnumType 0x7ff990852b70 'ProtobufCLabel'
+|     `-Enum 0x7ff990852ad8 ''
+|-EnumDecl 0x7ff990852d30 <line:17:9, line:25:1> line:17:9
+| |-EnumConstantDecl 0x7ff990852df0 <line:19:3> col:3 PROTOBUF_C_TYPE_INT32 'int'
+| |-EnumConstantDecl 0x7ff990852e38 <col:26> col:26 PROTOBUF_C_TYPE_SINT32 'int'
+| |-EnumConstantDecl 0x7ff990852e80 <col:50> col:50 PROTOBUF_C_TYPE_SFIXED32 'int'
+| |-EnumConstantDecl 0x7ff990852ec8 <line:20:5> col:5 PROTOBUF_C_TYPE_INT64 'int'
+| |-EnumConstantDecl 0x7ff990852f10 <col:28> col:28 PROTOBUF_C_TYPE_SINT64 'int'
+| |-EnumConstantDecl 0x7ff990852f58 <col:52> col:52 PROTOBUF_C_TYPE_SFIXED64 'int'
+| |-EnumConstantDecl 0x7ff990852fa0 <line:21:5> col:5 PROTOBUF_C_TYPE_UINT32 'int'
+| |-EnumConstantDecl 0x7ff990852fe8 <col:29> col:29 PROTOBUF_C_TYPE_FIXED32 'int'
+| |-EnumConstantDecl 0x7ff990853030 <col:54> col:54 PROTOBUF_C_TYPE_UINT64 'int'
+| |-EnumConstantDecl 0x7ff990853078 <line:22:5> col:5 PROTOBUF_C_TYPE_FIXED64 'int'
+| |-EnumConstantDecl 0x7ff9908530c0 <col:30> col:30 PROTOBUF_C_TYPE_FLOAT 'int'
+| |-EnumConstantDecl 0x7ff990853108 <col:53> col:53 PROTOBUF_C_TYPE_DOUBLE 'int'
+| |-EnumConstantDecl 0x7ff990853150 <line:23:5> col:5 PROTOBUF_C_TYPE_BOOL 'int'
+| |-EnumConstantDecl 0x7ff990853198 <col:27> col:27 PROTOBUF_C_TYPE_ENUM 'int'
+| |-EnumConstantDecl 0x7ff9908531e0 <col:49> col:49 PROTOBUF_C_TYPE_STRING 'int'
+| |-EnumConstantDecl 0x7ff990853228 <line:24:5> col:5 referenced PROTOBUF_C_TYPE_BYTES 'int'
+| `-EnumConstantDecl 0x7ff990853270 <col:28> col:28 referenced PROTOBUF_C_TYPE_MESSAGE 'int'
+|-TypedefDecl 0x7ff990853310 <line:17:1, line:26:1> col:1 referenced ProtobufCType 'enum ProtobufCType':'ProtobufCType'
+| `-ElaboratedType 0x7ff9908532c0 'enum ProtobufCType' sugar
+|   `-EnumType 0x7ff990852dd0 'ProtobufCType'
+|     `-Enum 0x7ff990852d30 ''
+|-RecordDecl 0x7ff990853380 <line:27:9, col:16> col:16 struct _ProtobufCBinaryData
+|-TypedefDecl 0x7ff990853480 <col:1, col:37> col:37 referenced ProtobufCBinaryData 'struct _ProtobufCBinaryData':'struct _ProtobufCBinaryData'
+| `-ElaboratedType 0x7ff990853430 'struct _ProtobufCBinaryData' sugar
+|   `-RecordType 0x7ff990853410 'struct _ProtobufCBinaryData'
+|     `-Record 0x7ff9908534f0 '_ProtobufCBinaryData'
+|-RecordDecl 0x7ff9908534f0 prev 0x7ff990853380 <line:28:1, line:31:1> line:28:8 struct _ProtobufCBinaryData definition
+| `-FieldDecl 0x7ff9908535b0 <line:30:3, col:10> col:10 referenced len 'size_t':'unsigned int'
+|-RecordDecl 0x7ff990005200 <line:32:9, col:16> col:16 struct _ProtobufCMessageDescriptor
+|-TypedefDecl 0x7ff990005300 <col:1, col:44> col:44 referenced ProtobufCMessageDescriptor 'struct _ProtobufCMessageDescriptor':'struct _ProtobufCMessageDescriptor'
+| `-ElaboratedType 0x7ff9900052b0 'struct _ProtobufCMessageDescriptor' sugar
+|   `-RecordType 0x7ff990005290 'struct _ProtobufCMessageDescriptor'
+|     `-Record 0x7ff9900058b8 '_ProtobufCMessageDescriptor'
+|-RecordDecl 0x7ff990005370 <line:33:9, col:16> col:16 struct _ProtobufCFieldDescriptor
+|-TypedefDecl 0x7ff990005470 <col:1, col:42> col:42 referenced ProtobufCFieldDescriptor 'struct _ProtobufCFieldDescriptor':'struct _ProtobufCFieldDescriptor'
+| `-ElaboratedType 0x7ff990005420 'struct _ProtobufCFieldDescriptor' sugar
+|   `-RecordType 0x7ff990005400 'struct _ProtobufCFieldDescriptor'
+|     `-Record 0x7ff990005650 '_ProtobufCFieldDescriptor'
+|-RecordDecl 0x7ff9900054e0 <line:34:9, col:16> col:16 struct _ProtobufCMessage
+|-TypedefDecl 0x7ff9900055e0 <col:1, col:34> col:34 referenced ProtobufCMessage 'struct _ProtobufCMessage':'struct _ProtobufCMessage'
+| `-ElaboratedType 0x7ff990005590 'struct _ProtobufCMessage' sugar
+|   `-RecordType 0x7ff990005570 'struct _ProtobufCMessage'
+|     `-Record 0x7ff990005a70 '_ProtobufCMessage'
+|-RecordDecl 0x7ff990005650 prev 0x7ff990005370 <line:35:1, line:41:1> line:35:8 struct _ProtobufCFieldDescriptor definition
+| |-FieldDecl 0x7ff990005710 <line:37:3, col:12> col:12 referenced id 'uint32_t':'unsigned int'
+| |-FieldDecl 0x7ff990005790 <line:38:3, col:18> col:18 referenced label 'ProtobufCLabel':'ProtobufCLabel'
+| |-FieldDecl 0x7ff990005810 <line:39:3, col:17> col:17 referenced type 'ProtobufCType':'ProtobufCType'
+| `-FieldDecl 0x7ff990005870 <line:40:3, col:12> col:12 referenced offset 'unsigned int'
+|-RecordDecl 0x7ff9900058b8 prev 0x7ff990005200 <line:42:1, line:46:1> line:42:8 struct _ProtobufCMessageDescriptor definition
+| |-FieldDecl 0x7ff990005958 <line:44:3, col:12> col:12 referenced n_fields 'unsigned int'
+| `-FieldDecl 0x7ff990005a28 <line:45:3, col:35> col:35 referenced fields 'const ProtobufCFieldDescriptor *'
+|-RecordDecl 0x7ff990005a70 prev 0x7ff9900054e0 <line:47:1, line:50:1> line:47:8 struct _ProtobufCMessage definition
+| `-FieldDecl 0x7ff990005b88 <line:49:3, col:37> col:37 referenced descriptor 'const ProtobufCMessageDescriptor *'
+|-EnumDecl 0x7ff990005bd0 <line:51:9, line:56:1> line:51:9
+| |-EnumConstantDecl 0x7ff990005c90 <line:53:3> col:3 PROTOBUF_C_WIRE_TYPE_VARINT 'int'
+| |-EnumConstantDecl 0x7ff990005cd8 <col:32> col:32 PROTOBUF_C_WIRE_TYPE_64BIT 'int'
+| |-EnumConstantDecl 0x7ff990005d20 <line:54:5> col:5 referenced PROTOBUF_C_WIRE_TYPE_LENGTH_PREFIXED 'int'
+| |-EnumConstantDecl 0x7ff990005d68 <col:43> col:43 PROTOBUF_C_WIRE_TYPE_START_GROUP 'int'
+| |-EnumConstantDecl 0x7ff990005db0 <line:55:5> col:5 PROTOBUF_C_WIRE_TYPE_END_GROUP 'int'
+| `-EnumConstantDecl 0x7ff990005df8 <col:37> col:37 PROTOBUF_C_WIRE_TYPE_32BIT 'int'
+|-TypedefDecl 0x7ff990005e90 <line:51:1, line:57:1> col:1 ProtobufCWireType 'enum ProtobufCWireType':'ProtobufCWireType'
+| `-ElaboratedType 0x7ff990005e40 'enum ProtobufCWireType' sugar
+|   `-EnumType 0x7ff990005c70 'ProtobufCWireType'
+|     `-Enum 0x7ff990005bd0 ''
+|-FunctionDecl 0x7ff990006110 <line:58:1, col:37> col:8 used tag_pack 'size_t (uint32_t, uint8_t *)'
+| |-ParmVarDecl 0x7ff990005f10 <col:18> col:26 'uint32_t':'unsigned int'
+| `-ParmVarDecl 0x7ff990005ff8 <col:28, col:36> col:37 'uint8_t *'
+|-FunctionDecl 0x7ff990006410 <line:59:1, col:60> col:8 used prefixed_message_pack 'size_t (ProtobufCMessage *, uint8_t *)'
+| |-ParmVarDecl 0x7ff990006288 <col:31, col:48> col:49 'ProtobufCMessage *'
+| `-ParmVarDecl 0x7ff9900062f8 <col:51, col:59> col:60 'uint8_t *'
+|-FunctionDecl 0x7ff9900065d0 <line:60:1, line:72:1> line:61:1 used uint32_pack 'size_t (uint32_t, uint8_t *)' static inline
+| |-ParmVarDecl 0x7ff9900064d0 <col:14, col:23> col:23 used value 'uint32_t':'unsigned int'
+| |-ParmVarDecl 0x7ff990006540 <col:30, col:40> col:40 used out 'uint8_t *'
+| `-CompoundStmt 0x7ff990006af0 <line:62:1, line:72:1>
+|   |-DeclStmt 0x7ff990006730 <line:63:3, col:18>
+|   | `-VarDecl 0x7ff990006698 <col:3, col:17> col:12 used rv 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ff990006718 <col:17> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7ff9900066f8 <col:17> 'int' 0
+|   |-IfStmt 0x7ff990006988 <line:64:3, line:70:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff9900067c0 <line:64:7, col:16> 'int' '>='
+|   | | |-ImplicitCastExpr 0x7ff990006790 <col:7> 'uint32_t':'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff990006748 <col:7> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ff9900064d0 'value' 'uint32_t':'unsigned int'
+|   | | `-ImplicitCastExpr 0x7ff9900067a8 <col:16> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ff990006770 <col:16> 'int' 128
+|   | |-CompoundStmt 0x7ff990006970 <line:65:5, line:70:5>
+|   | | `-IfStmt 0x7ff990006938 <line:66:7, line:69:2>
+|   | |   |-<<<NULL>>>
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7ff990006860 <line:66:11, col:20> 'int' '>='
+|   | |   | |-ImplicitCastExpr 0x7ff990006830 <col:11> 'uint32_t':'unsigned int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7ff9900067e8 <col:11> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ff9900064d0 'value' 'uint32_t':'unsigned int'
+|   | |   | `-ImplicitCastExpr 0x7ff990006848 <col:20> 'unsigned int' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7ff990006810 <col:20> 'int' 128
+|   | |   |-CompoundStmt 0x7ff990006920 <line:67:2, line:69:2>
+|   | |   | `-CompoundAssignOperator 0x7ff9900068e8 <line:68:4, col:14> 'uint32_t':'unsigned int' '>>=' ComputeLHSTy='uint32_t':'unsigned int' ComputeResultTy='uint32_t':'unsigned int'
+|   | |   |   |-DeclRefExpr 0x7ff990006888 <col:4> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ff9900064d0 'value' 'uint32_t':'unsigned int'
+|   | |   |   `-IntegerLiteral 0x7ff9900068b0 <col:14> 'int' 7
+|   | |   `-<<<NULL>>>
+|   | `-<<<NULL>>>
+|   `-BinaryOperator 0x7ff990006ac8 <line:71:3, col:15> 'uint8_t':'unsigned char' '='
+|     |-ArraySubscriptExpr 0x7ff990006a48 <col:3, col:11> 'uint8_t':'unsigned char' lvalue
+|     | |-ImplicitCastExpr 0x7ff990006a30 <col:3> 'uint8_t *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff9900069c0 <col:3> 'uint8_t *' lvalue ParmVar 0x7ff990006540 'out' 'uint8_t *'
+|     | `-UnaryOperator 0x7ff990006a10 <col:7, col:9> 'unsigned int' postfix '++'
+|     |   `-DeclRefExpr 0x7ff9900069e8 <col:7> 'unsigned int' lvalue Var 0x7ff990006698 'rv' 'unsigned int'
+|     `-ImplicitCastExpr 0x7ff990006ab0 <col:15> 'uint8_t':'unsigned char' <IntegralCast>
+|       `-ImplicitCastExpr 0x7ff990006a98 <col:15> 'uint32_t':'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff990006a70 <col:15> 'uint32_t':'unsigned int' lvalue ParmVar 0x7ff9900064d0 'value' 'uint32_t':'unsigned int'
+|-FunctionDecl 0x7ff990006d30 <line:74:1, line:80:1> line:75:1 used binary_data_pack 'size_t (const ProtobufCBinaryData *, uint8_t *)' static inline
+| |-ParmVarDecl 0x7ff990006ba8 <col:19, col:47> col:47 used bd 'const ProtobufCBinaryData *'
+| |-ParmVarDecl 0x7ff990006c18 <col:51, col:61> col:61 used out 'uint8_t *'
+| `-CompoundStmt 0x7ff990007190 <line:76:1, line:80:1>
+|   |-DeclStmt 0x7ff990006ee0 <line:77:3, col:23>
+|   | `-VarDecl 0x7ff990006df0 <col:3, col:20> col:10 used len 'size_t':'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7ff990006ec8 <col:16, col:20> 'size_t':'unsigned int' <LValueToRValue>
+|   |     `-MemberExpr 0x7ff990006e90 <col:16, col:20> 'const size_t':'const unsigned int' lvalue ->len 0x7ff9908535b0
+|   |       `-ImplicitCastExpr 0x7ff990006e78 <col:16> 'const ProtobufCBinaryData *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff990006e50 <col:16> 'const ProtobufCBinaryData *' lvalue ParmVar 0x7ff990006ba8 'bd' 'const ProtobufCBinaryData *'
+|   |-DeclStmt 0x7ff9900070b8 <line:78:3, col:37>
+|   | `-VarDecl 0x7ff990006f08 <col:3, col:36> col:10 used rv 'size_t':'unsigned int' cinit
+|   |   `-CallExpr 0x7ff990007050 <col:15, col:36> 'size_t':'unsigned int'
+|   |     |-ImplicitCastExpr 0x7ff990007038 <col:15> 'size_t (*)(uint32_t, uint8_t *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff990006f68 <col:15> 'size_t (uint32_t, uint8_t *)' Function 0x7ff9900065d0 'uint32_pack' 'size_t (uint32_t, uint8_t *)'
+|   |     |-ImplicitCastExpr 0x7ff990007088 <col:28> 'size_t':'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ff990006f90 <col:28> 'size_t':'unsigned int' lvalue Var 0x7ff990006df0 'len' 'size_t':'unsigned int'
+|   |     `-ImplicitCastExpr 0x7ff9900070a0 <col:33> 'uint8_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff990006fb8 <col:33> 'uint8_t *' lvalue ParmVar 0x7ff990006c18 'out' 'uint8_t *'
+|   `-ReturnStmt 0x7ff990007178 <line:79:3, col:15>
+|     `-BinaryOperator 0x7ff990007150 <col:10, col:15> 'unsigned int' '+'
+|       |-ImplicitCastExpr 0x7ff990007120 <col:10> 'size_t':'unsigned int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ff9900070d0 <col:10> 'size_t':'unsigned int' lvalue Var 0x7ff990006f08 'rv' 'size_t':'unsigned int'
+|       `-ImplicitCastExpr 0x7ff990007138 <col:15> 'size_t':'unsigned int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ff9900070f8 <col:15> 'size_t':'unsigned int' lvalue Var 0x7ff990006df0 'len' 'size_t':'unsigned int'
+|-FunctionDecl 0x7ff990014840 <line:82:1, line:104:1> line:83:1 used required_field_pack 'size_t (const ProtobufCFieldDescriptor *, const void *, uint8_t *)' static
+| |-ParmVarDecl 0x7ff990014600 <col:22, col:55> col:55 used field 'const ProtobufCFieldDescriptor *'
+| |-ParmVarDecl 0x7ff9900146a0 <line:84:8, col:20> col:20 used member 'const void *'
+| |-ParmVarDecl 0x7ff990014710 <col:28, col:38> col:38 used out 'uint8_t *'
+| `-CompoundStmt 0x7ff990015538 <line:85:1, line:104:1>
+|   |-DeclStmt 0x7ff990014ab0 <line:86:3, col:40>
+|   | `-VarDecl 0x7ff990014908 <col:3, col:39> col:10 used rv 'size_t':'unsigned int' cinit
+|   |   `-CallExpr 0x7ff990014a48 <col:15, col:39> 'size_t':'unsigned int'
+|   |     |-ImplicitCastExpr 0x7ff990014a30 <col:15> 'size_t (*)(uint32_t, uint8_t *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff990014968 <col:15> 'size_t (uint32_t, uint8_t *)' Function 0x7ff990006110 'tag_pack' 'size_t (uint32_t, uint8_t *)'
+|   |     |-ImplicitCastExpr 0x7ff990014a80 <col:25, col:32> 'uint32_t':'unsigned int' <LValueToRValue>
+|   |     | `-MemberExpr 0x7ff9900149d0 <col:25, col:32> 'const uint32_t':'const unsigned int' lvalue ->id 0x7ff990005710
+|   |     |   `-ImplicitCastExpr 0x7ff9900149b8 <col:25> 'const ProtobufCFieldDescriptor *' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7ff990014990 <col:25> 'const ProtobufCFieldDescriptor *' lvalue ParmVar 0x7ff990014600 'field' 'const ProtobufCFieldDescriptor *'
+|   |     `-ImplicitCastExpr 0x7ff990014a98 <col:36> 'uint8_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff990014a08 <col:36> 'uint8_t *' lvalue ParmVar 0x7ff990014710 'out' 'uint8_t *'
+|   `-SwitchStmt 0x7ff990014b70 <line:87:3, line:103:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7ff990014b58 <line:87:11, col:18> 'unsigned int' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7ff990014b40 <col:11, col:18> 'ProtobufCType':'ProtobufCType' <LValueToRValue>
+|     |   `-MemberExpr 0x7ff990014b08 <col:11, col:18> 'const ProtobufCType':'const ProtobufCType' lvalue ->type 0x7ff990005810
+|     |     `-ImplicitCastExpr 0x7ff990014af0 <col:11> 'const ProtobufCFieldDescriptor *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7ff990014ac8 <col:11> 'const ProtobufCFieldDescriptor *' lvalue ParmVar 0x7ff990014600 'field' 'const ProtobufCFieldDescriptor *'
+|     `-CompoundStmt 0x7ff9900154e8 <line:88:5, line:103:5>
+|       |-CaseStmt 0x7ff990014bc8 <line:89:5, line:95:7>
+|       | |-ImplicitCastExpr 0x7ff990015520 <line:89:10> 'unsigned int' <IntegralCast>
+|       | | `-DeclRefExpr 0x7ff990014ba0 <col:10> 'int' EnumConstant 0x7ff990853228 'PROTOBUF_C_TYPE_BYTES' 'int'
+|       | |-<<<NULL>>>
+|       | `-CompoundStmt 0x7ff990015048 <line:90:7, line:95:7>
+|       |   |-DeclStmt 0x7ff990014d08 <line:91:2, line:92:42>
+|       |   | `-VarDecl 0x7ff990014c10 <line:91:2, line:92:41> line:91:29 used bd 'const ProtobufCBinaryData *' cinit
+|       |   |   `-ParenExpr 0x7ff990014ce8 <line:92:4, col:41> 'const ProtobufCBinaryData *'
+|       |   |     `-CStyleCastExpr 0x7ff990014cc0 <col:5, col:35> 'const ProtobufCBinaryData *' <BitCast>
+|       |   |       `-ImplicitCastExpr 0x7ff990014ca8 <col:35> 'const void *' <LValueToRValue>
+|       |   |         `-DeclRefExpr 0x7ff990014c70 <col:35> 'const void *' lvalue ParmVar 0x7ff9900146a0 'member' 'const void *'
+|       |   |-CompoundAssignOperator 0x7ff990014dd0 <line:93:2, col:12> 'uint8_t':'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|       |   | |-ArraySubscriptExpr 0x7ff990014d80 <col:2, col:7> 'uint8_t':'unsigned char' lvalue
+|       |   | | |-ImplicitCastExpr 0x7ff990014d68 <col:2> 'uint8_t *' <LValueToRValue>
+|       |   | | | `-DeclRefExpr 0x7ff990014d20 <col:2> 'uint8_t *' lvalue ParmVar 0x7ff990014710 'out' 'uint8_t *'
+|       |   | | `-IntegerLiteral 0x7ff990014d48 <col:6> 'int' 0
+|       |   | `-DeclRefExpr 0x7ff990014da8 <col:12> 'int' EnumConstant 0x7ff990005d20 'PROTOBUF_C_WIRE_TYPE_LENGTH_PREFIXED' 'int'
+|       |   `-ReturnStmt 0x7ff990015030 <line:94:2, col:44>
+|       |     `-BinaryOperator 0x7ff990015008 <col:9, col:44> 'unsigned int' '+'
+|       |       |-ImplicitCastExpr 0x7ff990014ff0 <col:9> 'size_t':'unsigned int' <LValueToRValue>
+|       |       | `-DeclRefExpr 0x7ff990014e08 <col:9> 'size_t':'unsigned int' lvalue Var 0x7ff990014908 'rv' 'size_t':'unsigned int'
+|       |       `-CallExpr 0x7ff990014fa0 <col:14, col:44> 'size_t':'unsigned int'
+|       |         |-ImplicitCastExpr 0x7ff990014f88 <col:14> 'size_t (*)(const ProtobufCBinaryData *, uint8_t *)' <FunctionToPointerDecay>
+|       |         | `-DeclRefExpr 0x7ff990014e30 <col:14> 'size_t (const ProtobufCBinaryData *, uint8_t *)' Function 0x7ff990006d30 'binary_data_pack' 'size_t (const ProtobufCBinaryData *, uint8_t *)'
+|       |         |-ImplicitCastExpr 0x7ff990014fd8 <col:32> 'const ProtobufCBinaryData *' <LValueToRValue>
+|       |         | `-DeclRefExpr 0x7ff990014e58 <col:32> 'const ProtobufCBinaryData *' lvalue Var 0x7ff990014c10 'bd' 'const ProtobufCBinaryData *'
+|       |         `-BinaryOperator 0x7ff990014f00 <col:36, col:42> 'uint8_t *' '+'
+|       |           |-ImplicitCastExpr 0x7ff990014ed0 <col:36> 'uint8_t *' <LValueToRValue>
+|       |           | `-DeclRefExpr 0x7ff990014e80 <col:36> 'uint8_t *' lvalue ParmVar 0x7ff990014710 'out' 'uint8_t *'
+|       |           `-ImplicitCastExpr 0x7ff990014ee8 <col:42> 'size_t':'unsigned int' <LValueToRValue>
+|       |             `-DeclRefExpr 0x7ff990014ea8 <col:42> 'size_t':'unsigned int' lvalue Var 0x7ff990014908 'rv' 'size_t':'unsigned int'
+|       `-CaseStmt 0x7ff990015098 <line:96:5, line:102:7>
+|         |-ImplicitCastExpr 0x7ff990015508 <line:96:10> 'unsigned int' <IntegralCast>
+|         | `-DeclRefExpr 0x7ff990015070 <col:10> 'int' EnumConstant 0x7ff990853270 'PROTOBUF_C_TYPE_MESSAGE' 'int'
+|         |-<<<NULL>>>
+|         `-CompoundStmt 0x7ff9900154c8 <line:97:7, line:102:7>
+|           |-CompoundAssignOperator 0x7ff990015180 <line:98:2, col:12> 'uint8_t':'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|           | |-ArraySubscriptExpr 0x7ff990015130 <col:2, col:7> 'uint8_t':'unsigned char' lvalue
+|           | | |-ImplicitCastExpr 0x7ff990015118 <col:2> 'uint8_t *' <LValueToRValue>
+|           | | | `-DeclRefExpr 0x7ff9900150d0 <col:2> 'uint8_t *' lvalue ParmVar 0x7ff990014710 'out' 'uint8_t *'
+|           | | `-IntegerLiteral 0x7ff9900150f8 <col:6> 'int' 0
+|           | `-DeclRefExpr 0x7ff990015158 <col:12> 'int' EnumConstant 0x7ff990005d20 'PROTOBUF_C_WIRE_TYPE_LENGTH_PREFIXED' 'int'
+|           `-ReturnStmt 0x7ff9900154b0 <line:99:2, line:101:14>
+|             `-BinaryOperator 0x7ff990015488 <line:99:9, line:101:14> 'unsigned int' '+'
+|               |-ImplicitCastExpr 0x7ff990015470 <line:99:9> 'size_t':'unsigned int' <LValueToRValue>
+|               | `-DeclRefExpr 0x7ff9900151b8 <col:9> 'size_t':'unsigned int' lvalue Var 0x7ff990014908 'rv' 'size_t':'unsigned int'
+|               `-CallExpr 0x7ff990015420 <line:100:4, line:101:14> 'size_t':'unsigned int'
+|                 |-ImplicitCastExpr 0x7ff990015408 <line:100:4> 'size_t (*)(ProtobufCMessage *, uint8_t *)' <FunctionToPointerDecay>
+|                 | `-DeclRefExpr 0x7ff9900151e0 <col:4> 'size_t (ProtobufCMessage *, uint8_t *)' Function 0x7ff990006410 'prefixed_message_pack' 'size_t (ProtobufCMessage *, uint8_t *)'
+|                 |-ImplicitCastExpr 0x7ff990015458 <col:27, col:57> 'ProtobufCMessage *' <LValueToRValue>
+|                 | `-UnaryOperator 0x7ff9900152e0 <col:27, col:57> 'ProtobufCMessage *const' lvalue prefix '*'
+|                 |   `-CStyleCastExpr 0x7ff9900152b8 <col:28, col:57> 'ProtobufCMessage *const *' <BitCast>
+|                 |     `-ImplicitCastExpr 0x7ff9900152a0 <col:57> 'const void *' <LValueToRValue>
+|                 |       `-DeclRefExpr 0x7ff990015208 <col:57> 'const void *' lvalue ParmVar 0x7ff9900146a0 'member' 'const void *'
+|                 `-BinaryOperator 0x7ff990015380 <line:101:6, col:12> 'uint8_t *' '+'
+|                   |-ImplicitCastExpr 0x7ff990015350 <col:6> 'uint8_t *' <LValueToRValue>
+|                   | `-DeclRefExpr 0x7ff990015300 <col:6> 'uint8_t *' lvalue ParmVar 0x7ff990014710 'out' 'uint8_t *'
+|                   `-ImplicitCastExpr 0x7ff990015368 <col:12> 'size_t':'unsigned int' <LValueToRValue>
+|                     `-DeclRefExpr 0x7ff990015328 <col:12> 'size_t':'unsigned int' lvalue Var 0x7ff990014908 'rv' 'size_t':'unsigned int'
+`-FunctionDecl 0x7ff990016780 <line:106:1, line:118:1> line:107:1 protobuf_c_message_pack 'size_t (const ProtobufCMessage *, uint8_t *)'
+  |-ParmVarDecl 0x7ff990016600 <col:26, col:51> col:51 used message 'const ProtobufCMessage *'
+  |-ParmVarDecl 0x7ff990016670 <col:60, col:70> col:70 used out 'uint8_t *'
+  `-CompoundStmt 0x7ff990017370 <line:108:1, line:118:1>
+    |-DeclStmt 0x7ff9900168a8 <line:109:3, col:13>
+    | `-VarDecl 0x7ff990016848 <col:3, col:12> col:12 used i 'unsigned int'
+    |-DeclStmt 0x7ff990016968 <line:110:3, col:16>
+    | `-VarDecl 0x7ff9900168d0 <col:3, col:15> col:10 used rv 'size_t':'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7ff990016950 <col:15> 'size_t':'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff990016930 <col:15> 'int' 0
+    `-ForStmt 0x7ff990017338 <line:111:3, line:117:5>
+      |-BinaryOperator 0x7ff9900169e0 <line:111:8, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7ff990016980 <col:8> 'unsigned int' lvalue Var 0x7ff990016848 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7ff9900169c8 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7ff9900169a8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff990016b28 <col:15, col:40> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff990016af8 <col:15> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff990016a08 <col:15> 'unsigned int' lvalue Var 0x7ff990016848 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7ff990016b10 <col:19, col:40> 'unsigned int' <LValueToRValue>
+      |   `-MemberExpr 0x7ff990016ac0 <col:19, col:40> 'const unsigned int' lvalue ->n_fields 0x7ff990005958
+      |     `-ImplicitCastExpr 0x7ff990016aa8 <col:19, col:28> 'const ProtobufCMessageDescriptor *' <LValueToRValue>
+      |       `-MemberExpr 0x7ff990016a70 <col:19, col:28> 'const ProtobufCMessageDescriptor *const' lvalue ->descriptor 0x7ff990005b88
+      |         `-ImplicitCastExpr 0x7ff990016a58 <col:19> 'const ProtobufCMessage *' <LValueToRValue>
+      |           `-DeclRefExpr 0x7ff990016a30 <col:19> 'const ProtobufCMessage *' lvalue ParmVar 0x7ff990016600 'message' 'const ProtobufCMessage *'
+      |-UnaryOperator 0x7ff990016b78 <col:50, col:51> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7ff990016b50 <col:50> 'unsigned int' lvalue Var 0x7ff990016848 'i' 'unsigned int'
+      `-CompoundStmt 0x7ff990017310 <line:112:5, line:117:5>
+        |-DeclStmt 0x7ff990016d50 <line:113:7, col:78>
+        | `-VarDecl 0x7ff990016ba8 <col:7, col:77> col:39 used field 'const ProtobufCFieldDescriptor *' cinit
+        |   `-BinaryOperator 0x7ff990016d28 <col:47, col:77> 'const ProtobufCFieldDescriptor *' '+'
+        |     |-ImplicitCastExpr 0x7ff990016cf8 <col:47, col:68> 'const ProtobufCFieldDescriptor *' <LValueToRValue>
+        |     | `-MemberExpr 0x7ff990016c98 <col:47, col:68> 'const ProtobufCFieldDescriptor *const' lvalue ->fields 0x7ff990005a28
+        |     |   `-ImplicitCastExpr 0x7ff990016c80 <col:47, col:56> 'const ProtobufCMessageDescriptor *' <LValueToRValue>
+        |     |     `-MemberExpr 0x7ff990016c48 <col:47, col:56> 'const ProtobufCMessageDescriptor *const' lvalue ->descriptor 0x7ff990005b88
+        |     |       `-ImplicitCastExpr 0x7ff990016c30 <col:47> 'const ProtobufCMessage *' <LValueToRValue>
+        |     |         `-DeclRefExpr 0x7ff990016c08 <col:47> 'const ProtobufCMessage *' lvalue ParmVar 0x7ff990016600 'message' 'const ProtobufCMessage *'
+        |     `-ImplicitCastExpr 0x7ff990016d10 <col:77> 'unsigned int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7ff990016cd0 <col:77> 'unsigned int' lvalue Var 0x7ff990016848 'i' 'unsigned int'
+        |-DeclStmt 0x7ff990016f50 <line:114:7, col:68>
+        | `-VarDecl 0x7ff990016d80 <col:7, col:62> col:19 used member 'const void *' cinit
+        |   `-ImplicitCastExpr 0x7ff990016f38 <col:28, col:62> 'const void *' <BitCast>
+        |     `-BinaryOperator 0x7ff990016f10 <col:28, col:62> 'const char *' '+'
+        |       |-ParenExpr 0x7ff990016e60 <col:28, col:51> 'const char *'
+        |       | `-CStyleCastExpr 0x7ff990016e38 <col:29, col:44> 'const char *' <BitCast>
+        |       |   `-ImplicitCastExpr 0x7ff990016e20 <col:44> 'const ProtobufCMessage *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7ff990016de0 <col:44> 'const ProtobufCMessage *' lvalue ParmVar 0x7ff990016600 'message' 'const ProtobufCMessage *'
+        |       `-ImplicitCastExpr 0x7ff990016ef8 <col:55, col:62> 'unsigned int' <LValueToRValue>
+        |         `-MemberExpr 0x7ff990016ec0 <col:55, col:62> 'const unsigned int' lvalue ->offset 0x7ff990005870
+        |           `-ImplicitCastExpr 0x7ff990016ea8 <col:55> 'const ProtobufCFieldDescriptor *' <LValueToRValue>
+        |             `-DeclRefExpr 0x7ff990016e80 <col:55> 'const ProtobufCFieldDescriptor *' lvalue Var 0x7ff990016ba8 'field' 'const ProtobufCFieldDescriptor *'
+        `-IfStmt 0x7ff9900172d8 <line:115:7, line:116:52>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7ff990017050 <line:115:11, col:27> 'int' '=='
+          | |-ImplicitCastExpr 0x7ff990017020 <col:11, col:18> 'unsigned int' <IntegralCast>
+          | | `-ImplicitCastExpr 0x7ff990017008 <col:11, col:18> 'ProtobufCLabel':'ProtobufCLabel' <LValueToRValue>
+          | |   `-MemberExpr 0x7ff990016fa8 <col:11, col:18> 'const ProtobufCLabel':'const ProtobufCLabel' lvalue ->label 0x7ff990005790
+          | |     `-ImplicitCastExpr 0x7ff990016f90 <col:11> 'const ProtobufCFieldDescriptor *' <LValueToRValue>
+          | |       `-DeclRefExpr 0x7ff990016f68 <col:11> 'const ProtobufCFieldDescriptor *' lvalue Var 0x7ff990016ba8 'field' 'const ProtobufCFieldDescriptor *'
+          | `-ImplicitCastExpr 0x7ff990017038 <col:27> 'unsigned int' <IntegralCast>
+          |   `-DeclRefExpr 0x7ff990016fe0 <col:27> 'int' EnumConstant 0x7ff990852b90 'PROTOBUF_C_LABEL_REQUIRED' 'int'
+          |-CompoundAssignOperator 0x7ff9900172a0 <line:116:2, col:52> 'size_t':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+          | |-DeclRefExpr 0x7ff990017078 <col:2> 'size_t':'unsigned int' lvalue Var 0x7ff9900168d0 'rv' 'size_t':'unsigned int'
+          | `-CallExpr 0x7ff990017230 <col:8, col:52> 'size_t':'unsigned int'
+          |   |-ImplicitCastExpr 0x7ff990017218 <col:8> 'size_t (*)(const ProtobufCFieldDescriptor *, const void *, uint8_t *)' <FunctionToPointerDecay>
+          |   | `-DeclRefExpr 0x7ff9900170a0 <col:8> 'size_t (const ProtobufCFieldDescriptor *, const void *, uint8_t *)' Function 0x7ff990014840 'required_field_pack' 'size_t (const ProtobufCFieldDescriptor *, const void *, uint8_t *)'
+          |   |-ImplicitCastExpr 0x7ff990017270 <col:29> 'const ProtobufCFieldDescriptor *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7ff9900170c8 <col:29> 'const ProtobufCFieldDescriptor *' lvalue Var 0x7ff990016ba8 'field' 'const ProtobufCFieldDescriptor *'
+          |   |-ImplicitCastExpr 0x7ff990017288 <col:36> 'const void *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7ff9900170f0 <col:36> 'const void *' lvalue Var 0x7ff990016d80 'member' 'const void *'
+          |   `-BinaryOperator 0x7ff990017198 <col:44, col:50> 'uint8_t *' '+'
+          |     |-ImplicitCastExpr 0x7ff990017168 <col:44> 'uint8_t *' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7ff990017118 <col:44> 'uint8_t *' lvalue ParmVar 0x7ff990016670 'out' 'uint8_t *'
+          |     `-ImplicitCastExpr 0x7ff990017180 <col:50> 'size_t':'unsigned int' <LValueToRValue>
+          |       `-DeclRefExpr 0x7ff990017140 <col:50> 'size_t':'unsigned int' lvalue Var 0x7ff9900168d0 'rv' 'size_t':'unsigned int'
+          `-<<<NULL>>>

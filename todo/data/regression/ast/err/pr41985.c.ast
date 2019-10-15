@@ -1,0 +1,25 @@
+../Data/C2AST/pr41985.c:9:21: error: invalid % escape in inline assembly string
+  asm volatile ("# %&": : "g" (i));      
+                ~~~~^~
+1 error generated.
+TranslationUnitDecl 0x7f8cd60196e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8cd6019c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8cd6019980 '__int128'
+|-TypedefDecl 0x7f8cd6019cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8cd60199a0 'unsigned __int128'
+|-TypedefDecl 0x7f8cd6019fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8cd6019db0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8cd6019d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8cd601a040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8cd601a000 'char *'
+|   `-BuiltinType 0x7f8cd6019780 'char'
+|-TypedefDecl 0x7f8cd601a308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8cd601a2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8cd601a120 'struct __va_list_tag'
+|     `-Record 0x7f8cd601a098 '__va_list_tag'
+`-FunctionDecl 0x7f8cd6826600 <../Data/C2AST/pr41985.c:5:1, line:11:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7f8cd6826920 <line:7:1, line:11:1>
+    |-DeclStmt 0x7f8cd6826758 <line:8:3, col:8>
+    | `-VarDecl 0x7f8cd68266f8 <col:3, col:7> col:7 used i 'int'
+    `-ReturnStmt 0x7f8cd6826908 <line:10:3, col:10>
+      `-IntegerLiteral 0x7f8cd68268e8 <col:10> 'int' 0

@@ -1,0 +1,30 @@
+../Data/C2AST/pr45074.c:2:27: error: unknown register name '$f20' in asm
+register double g __asm__("$f20");
+                          ^
+../Data/C2AST/pr45074.c:2:1: error: bad type for named register variable
+register double g __asm__("$f20");
+^
+../Data/C2AST/pr45074.c:4:1: error: unknown type name 'NOMIPS16'
+NOMIPS16 void
+^
+../Data/C2AST/pr45074.c:4:10: error: expected identifier or '('
+NOMIPS16 void
+         ^
+4 errors generated.
+TranslationUnitDecl 0x7fdcaf816ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdcaf817460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdcaf817180 '__int128'
+|-TypedefDecl 0x7fdcaf8174d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdcaf8171a0 'unsigned __int128'
+|-TypedefDecl 0x7fdcaf8177a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdcaf8175b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdcaf817528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdcaf817840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdcaf817800 'char *'
+|   `-BuiltinType 0x7fdcaf816f80 'char'
+|-TypedefDecl 0x7fdcaf817b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdcaf817ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdcaf817920 'struct __va_list_tag'
+|     `-Record 0x7fdcaf817898 '__va_list_tag'
+`-VarDecl 0x7fdcaf855400 <../Data/C2AST/pr45074.c:2:1, col:17> col:17 invalid g 'double' register
+  `-AsmLabelAttr 0x7fdcaf855460 <col:27> "$f20"

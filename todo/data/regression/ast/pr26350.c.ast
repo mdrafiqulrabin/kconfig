@@ -1,0 +1,92 @@
+TranslationUnitDecl 0x7fedbf0166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fedbf017388 <../Data/C2AST/pr26350.c:4:1, col:13> col:13 referenced int32_t 'int'
+| |-BuiltinType 0x7fedbf0167e0 'int'
+| `-ModeAttr 0x7fedbf059200 <col:37, col:53> __SI__
+|-TypedefDecl 0x7fedbf059268 <line:5:1, col:23> col:23 uint8_t 'unsigned char'
+| `-BuiltinType 0x7fedbf016840 'unsigned char'
+|-TypedefDecl 0x7fedbf0592d8 <line:6:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fedbf016880 'unsigned int'
+|-RecordDecl 0x7fedbf059330 <line:7:9, col:16> col:16 struct REGS
+|-TypedefDecl 0x7fedbf059430 <col:1, col:21> col:21 referenced REGS 'struct REGS':'struct REGS'
+| `-ElaboratedType 0x7fedbf0593e0 'struct REGS' sugar
+|   `-RecordType 0x7fedbf0593c0 'struct REGS'
+|     `-Record 0x7fedbf059c80 'REGS'
+|-RecordDecl 0x7fedbf0594a0 <line:8:9, col:29> col:9 union definition
+| `-FieldDecl 0x7fedbf059580 <col:17, col:26> col:26 referenced F 'uint32_t':'unsigned int'
+|-TypedefDecl 0x7fedbf059620 <col:1, col:31> col:31 referenced FW 'union FW':'FW'
+| `-ElaboratedType 0x7fedbf0595d0 'union FW' sugar
+|   `-RecordType 0x7fedbf059530 'FW'
+|     `-Record 0x7fedbf0594a0 ''
+|-RecordDecl 0x7fedbf059690 <line:9:9, col:37> col:9 union definition
+| |-RecordDecl 0x7fedbf059740 <col:17, col:32> col:17 struct definition
+| | `-FieldDecl 0x7fedbf059820 <col:26, col:29> col:29 referenced L 'FW':'FW'
+| `-FieldDecl 0x7fedbf059900 <col:17, col:34> col:34 referenced F 'struct (anonymous struct at ../Data/C2AST/pr26350.c:9:17)':'struct DW::(anonymous at ../Data/C2AST/pr26350.c:9:17)'
+|-TypedefDecl 0x7fedbf0599e0 <col:1, col:39> col:39 referenced DW 'union DW':'DW'
+| `-ElaboratedType 0x7fedbf059990 'union DW' sugar
+|   `-RecordType 0x7fedbf059720 'DW'
+|     `-Record 0x7fedbf059690 ''
+|-RecordDecl 0x7fedbf059a50 <line:10:9, line:12:1> line:10:16 struct _PSW definition
+| `-FieldDecl 0x7fedbf059b30 <line:11:3, col:6> col:6 referenced ia 'DW':'DW'
+|-TypedefDecl 0x7fedbf059c10 <line:10:1, line:12:3> col:3 referenced PSW 'struct _PSW':'struct _PSW'
+| `-ElaboratedType 0x7fedbf059bc0 'struct _PSW' sugar
+|   `-RecordType 0x7fedbf059ae0 'struct _PSW'
+|     `-Record 0x7fedbf059a50 '_PSW'
+|-RecordDecl 0x7fedbf059c80 prev 0x7fedbf059330 <line:13:1, line:16:1> line:13:8 struct REGS definition
+| |-FieldDecl 0x7fedbf059d40 <line:14:3, col:7> col:7 referenced psw 'PSW':'struct _PSW'
+| `-FieldDecl 0x7fedbf059e48 <line:15:3, col:11> col:6 referenced cr 'DW [16]'
+|-RecordDecl 0x7fedbf059ed8 <line:17:1, line:19:1> line:17:8 struct ebfp definition
+| `-FieldDecl 0x7fedbf059f98 <line:18:3, col:15> col:15 referenced v 'long double'
+|-FunctionDecl 0x7fedbf074e00 <line:20:1, col:29> col:6 used put_ebfp 'void (struct ebfp *)'
+| `-ParmVarDecl 0x7fedbf05a090 <col:16, col:28> col:29 'struct ebfp *'
+`-FunctionDecl 0x7fedbf075080 <line:22:1, line:30:1> line:22:6 s390_convert_fix32_to_bfp_ext_reg 'void (REGS *)'
+  |-ParmVarDecl 0x7fedbf074f78 <col:41, col:47> col:47 used regs 'REGS *'
+  `-CompoundStmt 0x7fedbf0759c0 <line:23:1, line:30:1>
+    |-DeclStmt 0x7fedbf0751a8 <line:24:3, col:18>
+    | `-VarDecl 0x7fedbf075148 <col:3, col:15> col:15 used op1 'struct ebfp':'struct ebfp'
+    |-DeclStmt 0x7fedbf075250 <line:25:3, col:14>
+    | `-VarDecl 0x7fedbf0751f0 <col:3, col:11> col:11 used op2 'int32_t':'int'
+    |-CompoundAssignOperator 0x7fedbf075458 <line:26:3, col:31> 'uint32_t':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-MemberExpr 0x7fedbf0753c8 <col:3, col:24> 'uint32_t':'unsigned int' lvalue .F 0x7fedbf059580
+    | | `-MemberExpr 0x7fedbf075390 <col:3, col:22> 'FW':'FW' lvalue .L 0x7fedbf059820
+    | |   `-MemberExpr 0x7fedbf075358 <col:3, col:20> 'struct (anonymous struct at ../Data/C2AST/pr26350.c:9:17)':'struct DW::(anonymous at ../Data/C2AST/pr26350.c:9:17)' lvalue .F 0x7fedbf059900
+    | |     `-MemberExpr 0x7fedbf075320 <col:3, col:17> 'DW':'DW' lvalue .ia 0x7fedbf059b30
+    | |       `-MemberExpr 0x7fedbf0752e8 <col:3, col:13> 'PSW':'struct _PSW' lvalue ->psw 0x7fedbf059d40
+    | |         `-ImplicitCastExpr 0x7fedbf0752d0 <col:3, col:10> 'REGS *' <LValueToRValue>
+    | |           `-ParenExpr 0x7fedbf0752b0 <col:3, col:10> 'REGS *' lvalue
+    | |             `-ParenExpr 0x7fedbf075290 <col:4, col:9> 'REGS *' lvalue
+    | |               `-DeclRefExpr 0x7fedbf075268 <col:5> 'REGS *' lvalue ParmVar 0x7fedbf074f78 'regs' 'REGS *'
+    | `-ImplicitCastExpr 0x7fedbf075440 <col:29, col:31> 'unsigned int' <IntegralCast>
+    |   `-ParenExpr 0x7fedbf075420 <col:29, col:31> 'int'
+    |     `-IntegerLiteral 0x7fedbf075400 <col:30> 'int' 4
+    |-IfStmt 0x7fedbf075870 <line:27:3, line:28:26>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7fedbf075748 <line:27:6, col:42> 'int' prefix '!'
+    | | `-ParenExpr 0x7fedbf075728 <col:7, col:42> 'unsigned int'
+    | |   `-BinaryOperator 0x7fedbf075700 <col:8, col:32> 'unsigned int' '&'
+    | |     |-ImplicitCastExpr 0x7fedbf0756d0 <col:8, col:28> 'uint32_t':'unsigned int' <LValueToRValue>
+    | |     | `-MemberExpr 0x7fedbf075678 <col:8, col:28> 'uint32_t':'unsigned int' lvalue .F 0x7fedbf059580
+    | |     |   `-MemberExpr 0x7fedbf075640 <col:8, col:26> 'FW':'FW' lvalue .L 0x7fedbf059820
+    | |     |     `-MemberExpr 0x7fedbf075608 <col:8, col:24> 'struct (anonymous struct at ../Data/C2AST/pr26350.c:9:17)':'struct DW::(anonymous at ../Data/C2AST/pr26350.c:9:17)' lvalue .F 0x7fedbf059900
+    | |     |       `-ArraySubscriptExpr 0x7fedbf0755e0 <col:8, col:22> 'DW':'DW' lvalue
+    | |     |         |-ImplicitCastExpr 0x7fedbf0755c8 <col:8, col:16> 'DW *' <ArrayToPointerDecay>
+    | |     |         | `-MemberExpr 0x7fedbf0754f0 <col:8, col:16> 'DW [16]' lvalue ->cr 0x7fedbf059e48
+    | |     |         |   `-ImplicitCastExpr 0x7fedbf0754d8 <col:8, col:13> 'REGS *' <LValueToRValue>
+    | |     |         |     `-ParenExpr 0x7fedbf0754b8 <col:8, col:13> 'REGS *' lvalue
+    | |     |         |       `-DeclRefExpr 0x7fedbf075490 <col:9> 'REGS *' lvalue ParmVar 0x7fedbf074f78 'regs' 'REGS *'
+    | |     |         `-ParenExpr 0x7fedbf075548 <col:19, col:21> 'int'
+    | |     |           `-IntegerLiteral 0x7fedbf075528 <col:20> 'int' 0
+    | |     `-ImplicitCastExpr 0x7fedbf0756e8 <col:32> 'unsigned int' <IntegralCast>
+    | |       `-IntegerLiteral 0x7fedbf0756b0 <col:32> 'int' 262144
+    | |-BinaryOperator 0x7fedbf075848 <line:28:5, col:26> 'long double' '='
+    | | |-MemberExpr 0x7fedbf075790 <col:5, col:9> 'long double' lvalue .v 0x7fedbf059f98
+    | | | `-DeclRefExpr 0x7fedbf075768 <col:5> 'struct ebfp':'struct ebfp' lvalue Var 0x7fedbf075148 'op1' 'struct ebfp':'struct ebfp'
+    | | `-CStyleCastExpr 0x7fedbf075820 <col:13, col:26> 'long double' <IntegralToFloating>
+    | |   `-ImplicitCastExpr 0x7fedbf075808 <col:26> 'int32_t':'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fedbf0757c8 <col:26> 'int32_t':'int' lvalue Var 0x7fedbf0751f0 'op2' 'int32_t':'int'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fedbf075990 <line:29:3, col:16> 'void'
+      |-ImplicitCastExpr 0x7fedbf075978 <col:3> 'void (*)(struct ebfp *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fedbf0758a8 <col:3> 'void (struct ebfp *)' Function 0x7fedbf074e00 'put_ebfp' 'void (struct ebfp *)'
+      `-UnaryOperator 0x7fedbf0758f8 <col:12, col:13> 'struct ebfp *' prefix '&'
+        `-DeclRefExpr 0x7fedbf0758d0 <col:13> 'struct ebfp':'struct ebfp' lvalue Var 0x7fedbf075148 'op1' 'struct ebfp':'struct ebfp'

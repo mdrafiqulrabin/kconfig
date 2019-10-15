@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7ffe9a82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffe9b814298 <../Data/C2AST/pr78339.c:4:23> col:23 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffe9b814338 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7ffe9b8143a0 prev 0x7ffe9b814298 <col:1, col:32> col:23 used exit 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7ffe9a82c978 <col:29> col:32 'int'
+| `-C11NoReturnAttr 0x7ffe9b814448 <col:8>
+`-FunctionDecl 0x7ffe9b814558 <line:5:1, col:29> col:5 main 'int (void)'
+  `-CompoundStmt 0x7ffe9b814720 <col:17, col:29>
+    `-CallExpr 0x7ffe9b8146f0 <col:19, col:26> 'void'
+      |-ImplicitCastExpr 0x7ffe9b8146d8 <col:19> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffe9b814668 <col:19> 'void (int) __attribute__((noreturn))' Function 0x7ffe9b8143a0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7ffe9b814690 <col:25> 'int' 1

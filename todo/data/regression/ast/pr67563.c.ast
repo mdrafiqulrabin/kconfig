@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fbb5b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbb5b814260 <../Data/C2AST/pr67563.c:4:1, line:10:1> line:5:1 used emit_package 'void (int)' static
+| |-ParmVarDecl 0x7fbb5b02c978 <col:15, col:19> col:19 p1 'int'
+| `-CompoundStmt 0x7fbb5b814790 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7fbb5b8143c0 <line:7:3, col:8>
+|   | `-VarDecl 0x7fbb5b814360 <col:3, col:7> col:7 used a 'int'
+|   |-DeclStmt 0x7fbb5b8144c0 <line:8:3, col:11>
+|   | `-VarDecl 0x7fbb5b814460 <col:3, col:10> col:7 b 'int [0]'
+|   `-BinaryOperator 0x7fbb5b814768 <line:9:3, col:30> 'int' '='
+|     |-DeclRefExpr 0x7fbb5b8144d8 <col:3> 'int' lvalue Var 0x7fbb5b814360 'a' 'int'
+|     `-CallExpr 0x7fbb5b814710 <col:7, col:30> 'int'
+|       |-ImplicitCastExpr 0x7fbb5b8146f8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fbb5b814600 <col:7> 'int ()' Function 0x7fbb5b814550 '__fprintf_chk' 'int ()'
+|       |-IntegerLiteral 0x7fbb5b814628 <col:22> 'int' 0
+|       |-IntegerLiteral 0x7fbb5b814648 <col:25> 'int' 0
+|       `-ImplicitCastExpr 0x7fbb5b814750 <col:28> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fbb5b8146a8 <col:28> 'char [1]' lvalue ""
+`-FunctionDecl 0x7fbb5b814808 <line:11:1, col:38> col:6 emit_lua 'void ()'
+  `-CompoundStmt 0x7fbb5b814960 <col:18, col:38>
+    `-CallExpr 0x7fbb5b814930 <col:20, col:35> 'void'
+      |-ImplicitCastExpr 0x7fbb5b814918 <col:20> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbb5b8148a8 <col:20> 'void (int)' Function 0x7fbb5b814260 'emit_package' 'void (int)'
+      `-IntegerLiteral 0x7fbb5b8148d0 <col:34> 'int' 0

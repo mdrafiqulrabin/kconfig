@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7fa5568216e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa556822360 <../Data/C2AST/pr49094.c:4:1, line:6:1> line:4:8 struct in_addr definition
+| `-FieldDecl 0x7fa55701e638 <line:5:2, col:15> col:15 referenced s_addr 'unsigned int'
+|-RecordDecl 0x7fa55701e680 <line:8:1, line:12:1> line:8:8 struct ip definition
+| |-PackedAttr 0x7fa55701e910 <line:12:31>
+| |-AlignedAttr 0x7fa55701e958 <col:19, col:28> aligned
+| | `-IntegerLiteral 0x7fa55701e8f0 <col:27> 'int' 1
+| |-FieldDecl 0x7fa55701e748 <line:9:2, col:16> col:16 ip_p 'unsigned char'
+| |-FieldDecl 0x7fa55701e7a8 <line:10:2, col:17> col:17 ip_sum 'unsigned short'
+| |-FieldDecl 0x7fa55701e840 <line:11:2, col:17> col:17 ip_src 'struct in_addr':'struct in_addr'
+| `-FieldDecl 0x7fa55701e8a8 <col:2, col:24> col:24 referenced ip_dst 'struct in_addr':'struct in_addr'
+|-VarDecl 0x7fa55701e9c0 <line:14:1, col:11> col:11 used ip_fw_fwd_addr 'struct ip':'struct ip'
+|-FunctionDecl 0x7fa55701eb48 <line:16:1, line:25:1> line:16:5 used test_alignment 'int (char *)'
+| |-ParmVarDecl 0x7fa55701ea78 <col:21, col:27> col:27 used m 'char *'
+| `-CompoundStmt 0x7fa55701f0b8 <line:17:1, line:25:1>
+|   |-DeclStmt 0x7fa55701ed60 <line:18:3, col:34>
+|   | `-VarDecl 0x7fa55701ec70 <col:3, col:33> col:14 used ip 'struct ip *' cinit
+|   |   `-CStyleCastExpr 0x7fa55701ed38 <col:19, col:33> 'struct ip *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fa55701ed20 <col:33> 'char *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa55701ecd0 <col:33> 'char *' lvalue ParmVar 0x7fa55701ea78 'm' 'char *'
+|   |-DeclStmt 0x7fa55701edf8 <line:19:3, col:25>
+|   | `-VarDecl 0x7fa55701ed98 <col:3, col:18> col:18 used pkt_dst 'struct in_addr':'struct in_addr'
+|   |-BinaryOperator 0x7fa55701eec8 <line:20:3, col:17> 'struct in_addr':'struct in_addr' '='
+|   | |-DeclRefExpr 0x7fa55701ee10 <col:3> 'struct in_addr':'struct in_addr' lvalue Var 0x7fa55701ed98 'pkt_dst' 'struct in_addr':'struct in_addr'
+|   | `-ImplicitCastExpr 0x7fa55701eeb0 <col:13, col:17> 'struct in_addr':'struct in_addr' <LValueToRValue>
+|   |   `-MemberExpr 0x7fa55701ee78 <col:13, col:17> 'struct in_addr':'struct in_addr' lvalue ->ip_dst 0x7fa55701e8a8
+|   |     `-ImplicitCastExpr 0x7fa55701ee60 <col:13> 'struct ip *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fa55701ee38 <col:13> 'struct ip *' lvalue Var 0x7fa55701ec70 'ip' 'struct ip *'
+|   `-IfStmt 0x7fa55701f080 <line:21:3, line:24:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fa55701efa0 <line:21:7, col:25> 'int' '=='
+|     | |-ImplicitCastExpr 0x7fa55701ef70 <col:7, col:15> 'unsigned int' <LValueToRValue>
+|     | | `-MemberExpr 0x7fa55701ef18 <col:7, col:15> 'unsigned int' lvalue .s_addr 0x7fa55701e638
+|     | |   `-DeclRefExpr 0x7fa55701eef0 <col:7> 'struct in_addr':'struct in_addr' lvalue Var 0x7fa55701ed98 'pkt_dst' 'struct in_addr':'struct in_addr'
+|     | `-ImplicitCastExpr 0x7fa55701ef88 <col:25> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fa55701ef50 <col:25> 'int' 0
+|     |-ReturnStmt 0x7fa55701f030 <line:22:5, col:12>
+|     | `-IntegerLiteral 0x7fa55701f010 <col:12> 'int' 1
+|     `-ReturnStmt 0x7fa55701f068 <line:24:5, col:12>
+|       `-IntegerLiteral 0x7fa55701f048 <col:12> 'int' 0
+|-FunctionDecl 0x7fa55701f190 <line:27:1, line:31:1> line:28:1 used intermediary 'int (char *)'
+| |-ParmVarDecl 0x7fa55701f100 <col:15, col:21> col:21 used p 'char *'
+| |-CompoundStmt 0x7fa55701f370 <line:29:1, line:31:1>
+| | `-ReturnStmt 0x7fa55701f358 <line:30:3, col:27>
+| |   `-CallExpr 0x7fa55701f310 <col:10, col:27> 'int'
+| |     |-ImplicitCastExpr 0x7fa55701f2f8 <col:10> 'int (*)(char *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fa55701f280 <col:10> 'int (char *)' Function 0x7fa55701eb48 'test_alignment' 'int (char *)'
+| |     `-ImplicitCastExpr 0x7fa55701f340 <col:26> 'char *' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa55701f2a8 <col:26> 'char *' lvalue ParmVar 0x7fa55701f100 'p' 'char *'
+| `-NoInlineAttr 0x7fa55701f238 <line:27:21>
+`-FunctionDecl 0x7fa55703c200 <line:33:1, line:38:1> line:34:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fa55701f3a0 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7fa55701f4b0 <col:17, col:28> col:23 argv 'char **':'char **'
+  `-CompoundStmt 0x7fa55703c530 <line:35:1, line:38:1>
+    |-BinaryOperator 0x7fa55703c380 <line:36:3, col:34> 'unsigned int' '='
+    | |-MemberExpr 0x7fa55703c310 <col:3, col:25> 'unsigned int' lvalue .s_addr 0x7fa55701e638
+    | | `-MemberExpr 0x7fa55703c2d8 <col:3, col:18> 'struct in_addr':'struct in_addr' lvalue .ip_dst 0x7fa55701e8a8
+    | |   `-DeclRefExpr 0x7fa55703c2b0 <col:3> 'struct ip':'struct ip' lvalue Var 0x7fa55701e9c0 'ip_fw_fwd_addr' 'struct ip':'struct ip'
+    | `-ImplicitCastExpr 0x7fa55703c368 <col:34> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa55703c348 <col:34> 'int' 1
+    `-ReturnStmt 0x7fa55703c518 <line:37:3, col:48>
+      `-CallExpr 0x7fa55703c4d0 <col:10, col:48> 'int'
+        |-ImplicitCastExpr 0x7fa55703c4b8 <col:10> 'int (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa55703c408 <col:10> 'int (char *)' Function 0x7fa55701f190 'intermediary' 'int (char *)'
+        `-ImplicitCastExpr 0x7fa55703c500 <col:24, col:34> 'char *' <BitCast>
+          `-CStyleCastExpr 0x7fa55703c490 <col:24, col:34> 'void *' <BitCast>
+            `-UnaryOperator 0x7fa55703c458 <col:33, col:34> 'struct ip *' prefix '&'
+              `-DeclRefExpr 0x7fa55703c430 <col:34> 'struct ip':'struct ip' lvalue Var 0x7fa55701e9c0 'ip_fw_fwd_addr' 'struct ip':'struct ip'

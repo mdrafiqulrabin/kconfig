@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f901600cce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9017023400 <../Data/C2AST/pr69644.c:4:1, line:11:1> line:5:1 main 'int ()'
+| `-CompoundStmt 0x7f9017023dc8 <line:6:1, line:11:1>
+|   |-DeclStmt 0x7f9017023590 <line:7:3, col:28>
+|   | `-VarDecl 0x7f90170234f8 <col:3, col:22> col:18 used x 'unsigned short' cinit
+|   |   `-ImplicitCastExpr 0x7f9017023578 <col:22> 'unsigned short' <IntegralCast>
+|   |     `-IntegerLiteral 0x7f9017023558 <col:22> 'int' 32768
+|   |-IfStmt 0x7f9017023d58 <line:8:3, line:9:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9017023b88 <line:8:7, col:56> 'int' '||'
+|   | | |-UnaryOperator 0x7f9017023b10 <col:7, col:51> 'int' prefix '!'
+|   | | | `-CallExpr 0x7f90170237a0 <col:8, col:51> '_Bool'
+|   | | |   |-ImplicitCastExpr 0x7f9017023af8 <col:8> '_Bool (*)(volatile short *, short, short, ...)' <BuiltinFnToFnPtr>
+|   | | |   | `-DeclRefExpr 0x7f9017023aa8 <col:8> '<builtin fn type>' Function 0x7f9017023858 '__sync_bool_compare_and_swap_2' '_Bool (volatile short *, short, short, ...)'
+|   | | |   |-UnaryOperator 0x7f90170236f8 <col:38, col:39> 'unsigned short *' prefix '&'
+|   | | |   | `-DeclRefExpr 0x7f90170236a0 <col:39> 'unsigned short' lvalue Var 0x7f90170234f8 'x' 'unsigned short'
+|   | | |   |-ImplicitCastExpr 0x7f9017023a78 <col:42> 'unsigned short' <IntegralCast>
+|   | | |   | `-IntegerLiteral 0x7f9017023718 <col:42> 'int' 32768
+|   | | |   `-ImplicitCastExpr 0x7f9017023a90 <col:50> 'unsigned short' <IntegralCast>
+|   | | |     `-IntegerLiteral 0x7f9017023738 <col:50> 'int' 0
+|   | | `-ImplicitCastExpr 0x7f9017023b70 <col:56> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x7f9017023b58 <col:56> 'unsigned short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f9017023b30 <col:56> 'unsigned short' lvalue Var 0x7f90170234f8 'x' 'unsigned short'
+|   | |-CallExpr 0x7f9017023d30 <line:9:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f9017023d18 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f9017023cc8 <col:5> '<builtin fn type>' Function 0x7f9017023be0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9017023db0 <line:10:3, col:10>
+|     `-IntegerLiteral 0x7f9017023d90 <col:10> 'int' 0
+|-FunctionDecl 0x7f90170235d8 <line:8:8> col:8 implicit used __sync_bool_compare_and_swap 'void ()' extern
+|-FunctionDecl 0x7f9017023858 <col:8> col:8 implicit __sync_bool_compare_and_swap_2 '_Bool (volatile short *, short, short, ...)' extern
+| |-ParmVarDecl 0x7f90170238f8 <<invalid sloc>> <invalid sloc> 'volatile short *'
+| |-ParmVarDecl 0x7f9017023958 <<invalid sloc>> <invalid sloc> 'short'
+| |-ParmVarDecl 0x7f90170239b8 <<invalid sloc>> <invalid sloc> 'short'
+| `-NoThrowAttr 0x7f9017023a30 <col:8> Implicit
+`-FunctionDecl 0x7f9017023be0 <line:9:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f9017023c80 <col:5> Implicit

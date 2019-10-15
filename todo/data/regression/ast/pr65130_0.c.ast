@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fc15302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc153814220 <../Data/C2AST/pr65130_0.c:3:1, col:22> col:13 used fn3 'void (void)' extern
+|-FunctionDecl 0x7fc153814390 <line:5:1, line:8:1> line:5:6 used fn2 'void (void)'
+| `-CompoundStmt 0x7fc1538144c8 <line:6:1, line:8:1>
+|   `-CallExpr 0x7fc1538144a0 <line:7:3, col:7> 'void'
+|     `-ImplicitCastExpr 0x7fc153814488 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fc153814430 <col:3> 'void (void)' Function 0x7fc153814220 'fn3' 'void (void)'
+|-FunctionDecl 0x7fc153814570 <line:10:1, line:13:1> line:10:6 fn1 'void (void)'
+| `-CompoundStmt 0x7fc153814678 <line:11:1, line:13:1>
+|   `-CallExpr 0x7fc153814650 <line:12:3, col:7> 'void'
+|     `-ImplicitCastExpr 0x7fc153814638 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fc153814610 <col:3> 'void (void)' Function 0x7fc153814390 'fn2' 'void (void)'
+`-FunctionDecl 0x7fc153814720 <line:15:1, line:18:1> line:15:6 fn4 'void (void)'
+  `-CompoundStmt 0x7fc153814828 <line:16:1, line:18:1>
+    `-CallExpr 0x7fc153814800 <line:17:3, col:7> 'void'
+      `-ImplicitCastExpr 0x7fc1538147e8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fc1538147c0 <col:3> 'void (void)' Function 0x7fc153814390 'fn2' 'void (void)'

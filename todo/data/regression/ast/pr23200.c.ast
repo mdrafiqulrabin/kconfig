@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fa77502bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa77502c970 <../Data/C2AST/pr23200.c:5:1, col:13> col:13 used var 'char' static
+|-FunctionDecl 0x7fa77506d900 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+| `-CompoundStmt 0x7fa77506db58 <line:9:1, line:11:1>
+|   `-GCCAsmStmt 0x7fa77506daf8 <line:10:3, col:37>
+|     `-BinaryOperator 0x7fa77506dad0 <col:28, col:35> 'char *' '+'
+|       |-UnaryOperator 0x7fa77506da90 <col:28, col:29> 'char *' prefix '&'
+|       | `-DeclRefExpr 0x7fa77506da68 <col:29> 'char' lvalue Var 0x7fa77502c970 'var' 'char'
+|       `-IntegerLiteral 0x7fa77506dab0 <col:35> 'int' 1
+|-TypedefDecl 0x7fa77506dbc0 <line:13:1, col:15> col:13 referenced T 'int []'
+| `-IncompleteArrayType 0x7fa77506db70 'int []' 
+|   `-BuiltinType 0x7fa77502bde0 'int'
+|-TypedefDecl 0x7fa77506dca8 <line:14:1, col:12> col:12 referenced P 'T *'
+| `-PointerType 0x7fa77506dc70 'T *'
+|   `-TypedefType 0x7fa77506dc20 'T' sugar
+|     |-Typedef 0x7fa77506dbc0 'T'
+|     `-IncompleteArrayType 0x7fa77506db70 'int []' 
+|       `-BuiltinType 0x7fa77502bde0 'int'
+|-VarDecl 0x7fa77506dd18 <line:16:1, col:5> col:5 used var2 'int'
+`-FunctionDecl 0x7fa77506de08 <line:18:1, line:22:1> line:19:1 bar 'void (void)'
+  `-CompoundStmt 0x7fa77506e0f0 <line:20:1, line:22:1>
+    `-GCCAsmStmt 0x7fa77506e090 <line:21:3, col:43>
+      `-UnaryOperator 0x7fa77506e070 <col:27, col:41> 'int *' prefix '&'
+        `-ArraySubscriptExpr 0x7fa77506e048 <col:28, col:41> 'int' lvalue
+          |-ImplicitCastExpr 0x7fa77506e030 <col:28, col:38> 'int *' <ArrayToPointerDecay>
+          | `-ParenExpr 0x7fa77506dff0 <col:28, col:38> 'T':'int []' lvalue
+          |   `-UnaryOperator 0x7fa77506dfd0 <col:29, col:34> 'T':'int []' lvalue prefix '*'
+          |     `-CStyleCastExpr 0x7fa77506dfa8 <col:30, col:34> 'P':'T *' <BitCast>
+          |       `-UnaryOperator 0x7fa77506df78 <col:33, col:34> 'int *' prefix '&'
+          |         `-DeclRefExpr 0x7fa77506df20 <col:34> 'int' lvalue Var 0x7fa77506dd18 'var2' 'int'
+          `-IntegerLiteral 0x7fa77506e010 <col:40> 'int' 1

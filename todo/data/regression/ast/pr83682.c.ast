@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7ffcde02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffcde815200 <../Data/C2AST/pr83682.c:5:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7ffcde02c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7ffcde02bee0 'float'
+|-TypedefDecl 0x7ffcde8152b8 <line:6:1, col:16> col:16 referenced W '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7ffcde815280 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7ffcde02bf00 'double'
+|-VarDecl 0x7ffcde815340 <line:7:1, col:3> col:3 used b 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-VarDecl 0x7ffcde815410 <line:8:1, col:3> col:3 used c 'W':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7ffcde815550 <line:10:1, line:17:1> line:11:1 foo 'void (void *)'
+| |-ParmVarDecl 0x7ffcde815488 <col:6, col:12> col:12 used p 'void *'
+| `-CompoundStmt 0x7ffcde815fd0 <line:12:1, line:17:1>
+|   |-DeclStmt 0x7ffcde815948 <line:13:3, col:39>
+|   | `-VarDecl 0x7ffcde815608 <col:3, col:38> col:5 used e 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|   |   `-CallExpr 0x7ffcde8158e0 <col:9, col:38> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |     |-ImplicitCastExpr 0x7ffcde8158c8 <col:9> '__attribute__((__vector_size__(4 * sizeof(float)))) float (*)(__attribute__((__vector_size__(4 * sizeof(float)))) float, __attribute__((__vector_size__(2 * sizeof(double)))) double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7ffcde815820 <col:9> '<builtin fn type>' Function 0x7ffcde8156b0 '__builtin_ia32_cvtsd2ss' '__attribute__((__vector_size__(4 * sizeof(float)))) float (__attribute__((__vector_size__(4 * sizeof(float)))) float, __attribute__((__vector_size__(2 * sizeof(double)))) double)'
+|   |     |-ImplicitCastExpr 0x7ffcde815918 <col:34> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffcde815848 <col:34> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ffcde815340 'b' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |     `-ImplicitCastExpr 0x7ffcde815930 <col:37> 'W':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffcde815870 <col:37> 'W':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7ffcde815410 'c' 'W':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-DeclStmt 0x7ffcde815a10 <line:14:3, col:10>
+|   | `-VarDecl 0x7ffcde815970 <col:3, col:9> col:5 used g 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|   |   `-ImplicitCastExpr 0x7ffcde8159f8 <col:9> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7ffcde8159d0 <col:9> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ffcde815608 'e' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |-DeclStmt 0x7ffcde815b28 <line:15:3, col:17>
+|   | `-VarDecl 0x7ffcde815a40 <col:3, col:16> col:9 used f 'float' cinit
+|   |   `-ImplicitCastExpr 0x7ffcde815b10 <col:13, col:16> 'float' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7ffcde815ae8 <col:13, col:16> 'float' lvalue vectorcomponent
+|   |       |-DeclRefExpr 0x7ffcde815aa0 <col:13> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ffcde815970 'g' 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|   |       `-IntegerLiteral 0x7ffcde815ac8 <col:15> 'int' 0
+|   `-CallExpr 0x7ffcde815f60 <line:16:3, col:38> 'void *'
+|     |-ImplicitCastExpr 0x7ffcde815f48 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffcde815dd8 <col:3> '<builtin fn type>' Function 0x7ffcde815bb8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|     |-ImplicitCastExpr 0x7ffcde815fa0 <col:21> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ffcde815e00 <col:21> 'void *' lvalue ParmVar 0x7ffcde815488 'p' 'void *'
+|     |-ImplicitCastExpr 0x7ffcde815fb8 <col:24, col:25> 'const void *' <BitCast>
+|     | `-UnaryOperator 0x7ffcde815e78 <col:24, col:25> 'float *' prefix '&'
+|     |   `-DeclRefExpr 0x7ffcde815e28 <col:25> 'float' lvalue Var 0x7ffcde815a40 'f' 'float'
+|     `-UnaryExprOrTypeTraitExpr 0x7ffcde815ee0 <col:28, col:37> 'unsigned long' sizeof
+|       `-ParenExpr 0x7ffcde815ec0 <col:35, col:37> 'float' lvalue
+|         `-DeclRefExpr 0x7ffcde815e98 <col:36> 'float' lvalue Var 0x7ffcde815a40 'f' 'float'
+|-FunctionDecl 0x7ffcde8156b0 <line:13:9> col:9 implicit used __builtin_ia32_cvtsd2ss '__attribute__((__vector_size__(4 * sizeof(float)))) float (__attribute__((__vector_size__(4 * sizeof(float)))) float, __attribute__((__vector_size__(2 * sizeof(double)))) double)' extern
+| |-ParmVarDecl 0x7ffcde815750 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-ParmVarDecl 0x7ffcde8157b0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7ffcde815bb8 <line:16:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7ffcde815c58 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7ffcde815cb8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7ffcde815d18 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7ffcde815d90 <col:3> Implicit

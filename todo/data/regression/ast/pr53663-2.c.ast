@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fedec0002e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fedeb83b850 <../Data/C2AST/pr53663-2.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fedeb83b8f0 prev 0x7fedeb83b850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fedeb83b990 <line:5:1, line:9:1> line:5:7 union u definition
+| |-FieldDecl 0x7fedeb83ba58 <line:7:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7fedeb83bab8 <line:8:3, col:9> col:9 referenced f 'short'
+|-VarDecl 0x7fedeb83bb50 <line:5:1, line:9:3> col:3 used v 'union u':'union u'
+|-FunctionDecl 0x7fedeb83bd18 <line:11:1, line:17:1> line:11:7 used foo 'short (short *)'
+| |-ParmVarDecl 0x7fedeb83bc50 <col:12, col:19> col:19 used f 'short *'
+| `-CompoundStmt 0x7fedeb83c0c8 <line:12:1, line:17:1>
+|   |-BinaryOperator 0x7fedeb83be58 <line:13:3, col:8> 'short' '='
+|   | |-UnaryOperator 0x7fedeb83be00 <col:3, col:4> 'short' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fedeb83bde8 <col:4> 'short *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fedeb83bdc0 <col:4> 'short *' lvalue ParmVar 0x7fedeb83bc50 'f' 'short *'
+|   | `-ImplicitCastExpr 0x7fedeb83be40 <col:8> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fedeb83be20 <col:8> 'int' 1
+|   |-BinaryOperator 0x7fedeb83bf00 <line:14:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fedeb83bea8 <col:3, col:5> 'int' lvalue .i 0x7fedeb83ba58
+|   | | `-DeclRefExpr 0x7fedeb83be80 <col:3> 'union u':'union u' lvalue Var 0x7fedeb83bb50 'v' 'union u':'union u'
+|   | `-IntegerLiteral 0x7fedeb83bee0 <col:9> 'int' 0
+|   |-BinaryOperator 0x7fedeb83c010 <line:15:3, col:9> 'short' '='
+|   | |-MemberExpr 0x7fedeb83bfa0 <col:3, col:5> 'short' lvalue .f 0x7fedeb83bab8
+|   | | `-DeclRefExpr 0x7fedeb83bf78 <col:3> 'union u':'union u' lvalue Var 0x7fedeb83bb50 'v' 'union u':'union u'
+|   | `-ImplicitCastExpr 0x7fedeb83bff8 <col:9> 'short' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fedeb83bfd8 <col:9> 'int' 0
+|   `-ReturnStmt 0x7fedeb83c0b0 <line:16:3, col:11>
+|     `-ImplicitCastExpr 0x7fedeb83c098 <col:10, col:11> 'short' <LValueToRValue>
+|       `-UnaryOperator 0x7fedeb83c078 <col:10, col:11> 'short' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fedeb83c060 <col:11> 'short *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fedeb83c038 <col:11> 'short *' lvalue ParmVar 0x7fedeb83bc50 'f' 'short *'
+`-FunctionDecl 0x7fedeb83c150 <line:19:1, line:24:1> line:19:5 main 'int ()'
+  `-CompoundStmt 0x7fedeb83c478 <line:20:1, line:24:1>
+    |-IfStmt 0x7fedeb83c408 <line:21:3, line:22:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fedeb83c348 <line:21:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fedeb83c330 <col:7, col:16> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7fedeb83c2e0 <col:7, col:16> 'short'
+    | | |   |-ImplicitCastExpr 0x7fedeb83c2c8 <col:7> 'short (*)(short *)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fedeb83c1f0 <col:7> 'short (short *)' Function 0x7fedeb83bd18 'foo' 'short (short *)'
+    | | |   `-UnaryOperator 0x7fedeb83c278 <col:12, col:15> 'short *' prefix '&'
+    | | |     `-MemberExpr 0x7fedeb83c240 <col:13, col:15> 'short' lvalue .f 0x7fedeb83bab8
+    | | |       `-DeclRefExpr 0x7fedeb83c218 <col:13> 'union u':'union u' lvalue Var 0x7fedeb83bb50 'v' 'union u':'union u'
+    | | `-IntegerLiteral 0x7fedeb83c310 <col:21> 'int' 0
+    | |-CallExpr 0x7fedeb83c3e0 <line:22:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fedeb83c3c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fedeb83c370 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fedeb83b8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fedeb83c460 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fedeb83c440 <col:10> 'int' 0

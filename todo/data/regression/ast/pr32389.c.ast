@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fccba027ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fccba045800 <../Data/C2AST/pr32389.c:7:1, col:11> col:8 used f1 'double ()'
+|-FunctionDecl 0x7fccba045930 <line:8:1, line:11:1> line:8:5 f2 'int ()'
+| `-CompoundStmt 0x7fccba045bf8 <col:10, line:11:1>
+|   |-CallExpr 0x7fccba045b10 <line:9:3, col:26> 'unsigned int'
+|   | `-ImplicitCastExpr 0x7fccba045af8 <col:3> 'unsigned int (*)(void)' <BuiltinFnToFnPtr>
+|   |   `-DeclRefExpr 0x7fccba045aa0 <col:3> '<builtin fn type>' Function 0x7fccba045a00 '__builtin_ia32_stmxcsr' 'unsigned int (void)'
+|   `-ReturnStmt 0x7fccba045be0 <line:10:3, col:13>
+|     `-ImplicitCastExpr 0x7fccba045bc8 <col:10, col:13> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7fccba045ba0 <col:10, col:13> 'double'
+|         `-ImplicitCastExpr 0x7fccba045b88 <col:10> 'double (*)()' <FunctionToPointerDecay>
+|           `-DeclRefExpr 0x7fccba045b38 <col:10> 'double ()' Function 0x7fccba045800 'f1' 'double ()'
+`-FunctionDecl 0x7fccba045a00 <line:9:3> col:3 implicit used __builtin_ia32_stmxcsr 'unsigned int (void)' extern

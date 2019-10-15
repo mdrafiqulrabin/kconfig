@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fdc1a82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdc1a86da90 <../Data/C2AST/pr17119.c:1:1, line:18:1> line:2:1 _mesa_DrawPixels 'void (int, int, unsigned int, unsigned int, const void *)'
+  |-ParmVarDecl 0x7fdc1a82c978 <col:19, col:23> col:23 width 'int'
+  |-ParmVarDecl 0x7fdc1a86d800 <col:30, col:34> col:34 height 'int'
+  |-ParmVarDecl 0x7fdc1a86d878 <col:42, col:51> col:51 used format 'unsigned int'
+  |-ParmVarDecl 0x7fdc1a86d8f0 <line:3:5, col:14> col:14 type 'unsigned int'
+  |-ParmVarDecl 0x7fdc1a86d990 <col:20, col:33> col:33 pixels 'const void *'
+  `-CompoundStmt 0x7fdc1a86e1c0 <line:4:1, line:18:1>
+    `-SwitchStmt 0x7fdc1a86dbd8 <line:5:3, line:17:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fdc1a86dbc0 <line:5:11> 'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fdc1a86db98 <col:11> 'unsigned int' lvalue ParmVar 0x7fdc1a86d878 'format' 'unsigned int'
+      `-CompoundStmt 0x7fdc1a86e100 <line:6:5, line:17:5>
+        |-CaseStmt 0x7fdc1a86dc28 <line:7:5, line:8:14>
+        | |-ImplicitCastExpr 0x7fdc1a86e1a8 <line:7:10> 'unsigned int' <IntegralCast>
+        | | `-IntegerLiteral 0x7fdc1a86dc08 <col:10> 'int' 6400
+        | |-<<<NULL>>>
+        | `-CallExpr 0x7fdc1a86ddd0 <line:8:7, col:14> 'int'
+        |   `-ImplicitCastExpr 0x7fdc1a86ddb8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7fdc1a86dd60 <col:7> 'int ()' Function 0x7fdc1a86dcb0 'func1' 'int ()'
+        |-BreakStmt 0x7fdc1a86ddf8 <line:9:7>
+        |-CaseStmt 0x7fdc1a86de20 <line:10:5, line:15:14>
+        | |-ImplicitCastExpr 0x7fdc1a86e190 <line:10:10> 'unsigned int' <IntegralCast>
+        | | `-IntegerLiteral 0x7fdc1a86de00 <col:10> 'int' 6407
+        | |-<<<NULL>>>
+        | `-CaseStmt 0x7fdc1a86de78 <line:11:5, line:15:14>
+        |   |-ImplicitCastExpr 0x7fdc1a86e178 <line:11:10> 'unsigned int' <IntegralCast>
+        |   | `-IntegerLiteral 0x7fdc1a86de58 <col:10> 'int' 32992
+        |   |-<<<NULL>>>
+        |   `-CaseStmt 0x7fdc1a86ded0 <line:12:5, line:15:14>
+        |     |-ImplicitCastExpr 0x7fdc1a86e160 <line:12:10> 'unsigned int' <IntegralCast>
+        |     | `-IntegerLiteral 0x7fdc1a86deb0 <col:10> 'int' 6408
+        |     |-<<<NULL>>>
+        |     `-CaseStmt 0x7fdc1a86df28 <line:13:5, line:15:14>
+        |       |-ImplicitCastExpr 0x7fdc1a86e148 <line:13:10> 'unsigned int' <IntegralCast>
+        |       | `-IntegerLiteral 0x7fdc1a86df08 <col:10> 'int' 32993
+        |       |-<<<NULL>>>
+        |       `-CaseStmt 0x7fdc1a86df80 <line:14:5, line:15:14>
+        |         |-ImplicitCastExpr 0x7fdc1a86e130 <line:14:10> 'unsigned int' <IntegralCast>
+        |         | `-IntegerLiteral 0x7fdc1a86df60 <col:10> 'int' 32768
+        |         |-<<<NULL>>>
+        |         `-CallExpr 0x7fdc1a86e0d0 <line:15:7, col:14> 'int'
+        |           `-ImplicitCastExpr 0x7fdc1a86e0b8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+        |             `-DeclRefExpr 0x7fdc1a86e090 <col:7> 'int ()' Function 0x7fdc1a86dfe0 'func2' 'int ()'
+        `-BreakStmt 0x7fdc1a86e0f8 <line:16:7>

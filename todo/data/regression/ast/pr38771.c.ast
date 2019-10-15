@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f9b0702bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9b0706d868 <../Data/C2AST/pr38771.c:3:1, line:7:1> line:4:1 foo 'unsigned long long (long long)'
+  |-ParmVarDecl 0x7f9b0702c978 <col:6, col:16> col:16 used x 'long long'
+  `-CompoundStmt 0x7f9b0706daf8 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7f9b0706dae0 <line:6:3, col:40>
+      `-UnaryOperator 0x7f9b0706dac0 <col:10, col:40> 'unsigned long long' prefix '-'
+        `-CStyleCastExpr 0x7f9b0706da98 <col:11, col:40> 'unsigned long long' <IntegralCast>
+          `-ParenExpr 0x7f9b0706da78 <col:32, col:40> 'long long'
+            `-BinaryConditionalOperator 0x7f9b0706d9f0 <col:33, col:39> 'long long'
+              |-ImplicitCastExpr 0x7f9b0706d9a0 <col:33> 'long long' <LValueToRValue>
+              | `-DeclRefExpr 0x7f9b0706d950 <col:33> 'long long' lvalue ParmVar 0x7f9b0702c978 'x' 'long long'
+              |-OpaqueValueExpr 0x7f9b0706d9b8 <col:33> 'long long'
+              | `-ImplicitCastExpr 0x7f9b0706d9a0 <col:33> 'long long' <LValueToRValue>
+              |   `-DeclRefExpr 0x7f9b0706d950 <col:33> 'long long' lvalue ParmVar 0x7f9b0702c978 'x' 'long long'
+              |-OpaqueValueExpr 0x7f9b0706d9b8 <col:33> 'long long'
+              | `-ImplicitCastExpr 0x7f9b0706d9a0 <col:33> 'long long' <LValueToRValue>
+              |   `-DeclRefExpr 0x7f9b0706d950 <col:33> 'long long' lvalue ParmVar 0x7f9b0702c978 'x' 'long long'
+              `-ImplicitCastExpr 0x7f9b0706d9d8 <col:39> 'long long' <LValueToRValue>
+                `-DeclRefExpr 0x7f9b0706d978 <col:39> 'long long' lvalue ParmVar 0x7f9b0702c978 'x' 'long long'

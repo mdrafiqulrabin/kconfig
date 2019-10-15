@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fe68502b6e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe68502c360 <../Data/C2AST/pr47925.c:1:1, col:37> col:8 struct s definition
+| `-FieldDecl 0x7fe6858148d0 <col:12, col:31> col:31 referenced next 'volatile struct s *'
+|-FunctionDecl 0x7fe685814a80 <line:3:1, line:7:1> line:4:1 used bar 'void (int, int)'
+| |-ParmVarDecl 0x7fe685814930 <col:6, col:10> col:10 ignored 'int'
+| |-ParmVarDecl 0x7fe6858149a8 <col:19, col:23> col:23 n 'int'
+| |-CompoundStmt 0x7fe685814c68 <line:5:1, line:7:1>
+| | `-GCCAsmStmt 0x7fe685814c20 <line:6:3, col:19>
+| `-NoInlineAttr 0x7fe685814b30 <line:3:21>
+|-FunctionDecl 0x7fe685814e38 <line:9:1, line:17:1> line:10:1 used foo 'int (volatile struct s *, int)'
+| |-ParmVarDecl 0x7fe685814ca8 <col:6, col:25> col:25 used ptr 'volatile struct s *'
+| |-ParmVarDecl 0x7fe685814d20 <col:30, col:34> col:34 used n 'int'
+| |-CompoundStmt 0x7fe685815338 <line:11:1, line:17:1>
+| | |-DeclStmt 0x7fe685814fa8 <line:12:3, col:8>
+| | | `-VarDecl 0x7fe685814f48 <col:3, col:7> col:7 used i 'int'
+| | |-CallExpr 0x7fe685815070 <line:14:3, col:12> 'void'
+| | | |-ImplicitCastExpr 0x7fe685815058 <col:3> 'void (*)(int, int)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fe685814fc0 <col:3> 'void (int, int)' Function 0x7fe685814a80 'bar' 'void (int, int)'
+| | | |-IntegerLiteral 0x7fe685814fe8 <col:8> 'int' 0
+| | | `-ImplicitCastExpr 0x7fe6858150a8 <col:11> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fe685815008 <col:11> 'int' lvalue ParmVar 0x7fe685814d20 'n' 'int'
+| | `-ForStmt 0x7fe685815300 <line:15:3, line:16:16>
+| |   |-BinaryOperator 0x7fe685815108 <line:15:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7fe6858150c0 <col:8> 'int' lvalue Var 0x7fe685814f48 'i' 'int'
+| |   | `-IntegerLiteral 0x7fe6858150e8 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fe6858151b0 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fe685815180 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fe685815130 <col:15> 'int' lvalue Var 0x7fe685814f48 'i' 'int'
+| |   | `-ImplicitCastExpr 0x7fe685815198 <col:19> 'int' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fe685815158 <col:19> 'int' lvalue ParmVar 0x7fe685814d20 'n' 'int'
+| |   |-UnaryOperator 0x7fe685815200 <col:22, col:23> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7fe6858151d8 <col:22> 'int' lvalue Var 0x7fe685814f48 'i' 'int'
+| |   `-BinaryOperator 0x7fe6858152d8 <line:16:5, col:16> 'volatile struct s *' '='
+| |     |-DeclRefExpr 0x7fe685815220 <col:5> 'volatile struct s *' lvalue ParmVar 0x7fe685814ca8 'ptr' 'volatile struct s *'
+| |     `-ImplicitCastExpr 0x7fe6858152c0 <col:11, col:16> 'volatile struct s *' <LValueToRValue>
+| |       `-MemberExpr 0x7fe685815288 <col:11, col:16> 'volatile struct s *volatile' lvalue ->next 0x7fe6858148d0
+| |         `-ImplicitCastExpr 0x7fe685815270 <col:11> 'volatile struct s *' <LValueToRValue>
+| |           `-DeclRefExpr 0x7fe685815248 <col:11> 'volatile struct s *' lvalue ParmVar 0x7fe685814ca8 'ptr' 'volatile struct s *'
+| `-NoInlineAttr 0x7fe685814ee8 <line:9:20>
+`-FunctionDecl 0x7fe685815428 <line:19:1, line:24:1> line:19:5 main 'int (void)'
+  `-CompoundStmt 0x7fe685820200 <line:20:1, line:24:1>
+    |-DeclStmt 0x7fe685815650 <line:21:3, col:35>
+    | `-VarDecl 0x7fe685815518 <col:3, col:34> col:21 used rec 'volatile struct s':'volatile struct s' cinit
+    |   `-InitListExpr 0x7fe685815608 <col:27, col:34> 'struct s':'struct s'
+    |     `-UnaryOperator 0x7fe6858155a0 <col:29, col:30> 'volatile struct s *' prefix '&'
+    |       `-DeclRefExpr 0x7fe685815578 <col:30> 'volatile struct s':'volatile struct s' lvalue Var 0x7fe685815518 'rec' 'volatile struct s':'volatile struct s'
+    |-CallExpr 0x7fe685815770 <line:22:3, col:16> 'int'
+    | |-ImplicitCastExpr 0x7fe685815758 <col:3> 'int (*)(volatile struct s *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe685815668 <col:3> 'int (volatile struct s *, int)' Function 0x7fe685814e38 'foo' 'int (volatile struct s *, int)'
+    | |-UnaryOperator 0x7fe6858156b8 <col:8, col:9> 'volatile struct s *' prefix '&'
+    | | `-DeclRefExpr 0x7fe685815690 <col:9> 'volatile struct s':'volatile struct s' lvalue Var 0x7fe685815518 'rec' 'volatile struct s':'volatile struct s'
+    | `-IntegerLiteral 0x7fe6858156d8 <col:14> 'int' 10
+    `-ReturnStmt 0x7fe6858157c8 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fe6858157a8 <col:10> 'int' 0

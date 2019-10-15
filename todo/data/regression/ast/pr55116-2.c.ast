@@ -1,0 +1,410 @@
+TranslationUnitDecl 0x7fa2598240e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa259824d60 <../Data/C2AST/pr55116-2.c:4:9, col:16> col:16 struct rtx_def
+|-TypedefDecl 0x7fa258814cd0 <col:1, col:25> col:25 referenced rtx 'struct rtx_def *'
+| `-PointerType 0x7fa258814c80 'struct rtx_def *'
+|   `-ElaboratedType 0x7fa258814c20 'struct rtx_def' sugar
+|     `-RecordType 0x7fa258814c00 'struct rtx_def'
+|       `-Record 0x7fa258815018 'rtx_def'
+|-EnumDecl 0x7fa258814d40 <line:5:1, col:23> col:6 rtx_code
+| `-EnumConstantDecl 0x7fa258814e00 <col:17> col:17 referenced MINUS 'int'
+|-RecordDecl 0x7fa258814e48 <line:6:1, line:8:1> line:6:7 union rtunion_def definition
+| `-FieldDecl 0x7fa258814f20 <line:7:3, col:7> col:7 referenced rt_rtx 'rtx':'struct rtx_def *'
+|-TypedefDecl 0x7fa258814fc0 <line:9:1, col:27> col:27 referenced rtunion 'union rtunion_def':'union rtunion_def'
+| `-ElaboratedType 0x7fa258814f70 'union rtunion_def' sugar
+|   `-RecordType 0x7fa258814ed0 'union rtunion_def'
+|     `-Record 0x7fa258814e48 'rtunion_def'
+|-RecordDecl 0x7fa258815018 prev 0x7fa259824d60 <line:10:1, line:16:1> line:10:8 struct rtx_def definition
+| |-FieldDecl 0x7fa258815110 <line:11:3, col:23> col:17 referenced code 'enum rtx_code':'enum rtx_code'
+| | `-IntegerLiteral 0x7fa2588150a0 <col:23> 'int' 16
+| |-RecordDecl 0x7fa258815158 parent 0x7fa2598240e8 <line:12:3, line:14:3> line:12:9 union u definition
+| | `-FieldDecl 0x7fa258815338 <line:13:5, col:18> col:13 referenced fld 'rtunion [1]'
+| `-FieldDecl 0x7fa2588153d0 <line:12:3, line:15:3> col:3 referenced u 'union u':'union u'
+|-FunctionDecl 0x7fa2588156d0 <line:17:1, line:18:27> line:17:5 used simplify_binary_operation 'rtx (enum rtx_code, int, rtx, rtx)'
+| |-ParmVarDecl 0x7fa258815438 <col:32, col:46> col:46 code 'enum rtx_code':'enum rtx_code'
+| |-ParmVarDecl 0x7fa2588154b0 <col:52, col:56> col:56 mode 'int'
+| |-ParmVarDecl 0x7fa258815520 <line:18:11, col:15> col:15 op0 'rtx':'struct rtx_def *'
+| `-ParmVarDecl 0x7fa258815590 <col:20, col:24> col:24 op1 'rtx':'struct rtx_def *'
+|-RecordDecl 0x7fa2588157d0 <line:19:1, line:22:1> line:19:8 struct simplify_plus_minus_op_data definition
+| |-FieldDecl 0x7fa258815890 <line:20:3, col:7> col:7 referenced op 'rtx':'struct rtx_def *'
+| `-FieldDecl 0x7fa2588158f0 <line:21:3, col:9> col:9 referenced neg 'short'
+|-FunctionDecl 0x7fa258815c00 <line:23:1, line:86:1> line:23:6 simplify_plus_minus 'void (enum rtx_code, int, rtx, rtx)'
+| |-ParmVarDecl 0x7fa258815958 <col:27, col:41> col:41 code 'enum rtx_code':'enum rtx_code'
+| |-ParmVarDecl 0x7fa2588159d0 <col:47, col:51> col:51 used mode 'int'
+| |-ParmVarDecl 0x7fa258815a40 <col:57, col:61> col:61 op0 'rtx':'struct rtx_def *'
+| |-ParmVarDecl 0x7fa258815ab0 <col:66, col:70> col:70 op1 'rtx':'struct rtx_def *'
+| `-CompoundStmt 0x7fa25981b770 <line:24:1, line:86:1>
+|   |-DeclStmt 0x7fa258815e68 <line:25:3, col:44>
+|   | `-VarDecl 0x7fa258815e08 <col:3, col:43> col:38 used ops 'struct simplify_plus_minus_op_data [8]'
+|   |-DeclStmt 0x7fa258815f48 <line:26:3, col:20>
+|   | `-VarDecl 0x7fa258815e90 <col:3, col:19> col:7 used tem 'rtx':'struct rtx_def *' cinit
+|   |   `-CStyleCastExpr 0x7fa258815f20 <col:13, col:19> 'rtx':'struct rtx_def *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7fa258815ef0 <col:19> 'int' 0
+|   |-DeclStmt 0x7fa2588160a8 <line:27:3, col:31>
+|   | |-VarDecl 0x7fa258815f78 <col:3, col:15> col:7 used n_ops 'int' cinit
+|   | | `-IntegerLiteral 0x7fa258815fd8 <col:15> 'int' 2
+|   | `-VarDecl 0x7fa258816010 <col:3, col:30> col:18 used input_ops 'int' cinit
+|   |   `-IntegerLiteral 0x7fa258816070 <col:30> 'int' 2
+|   |-DeclStmt 0x7fa2588161e8 <line:28:3, col:33>
+|   | |-VarDecl 0x7fa2588160d8 <col:3, col:7> col:7 used changed 'int'
+|   | `-VarDecl 0x7fa258816150 <col:3, col:32> col:16 used canonicalized 'int' cinit
+|   |   `-IntegerLiteral 0x7fa2588161b0 <col:32> 'int' 0
+|   |-DeclStmt 0x7fa258816308 <line:29:3, col:11>
+|   | |-VarDecl 0x7fa258816218 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7fa258816290 <col:3, col:10> col:10 used j 'int'
+|   |-CallExpr 0x7fa258816710 <line:30:3, col:41> 'void *'
+|   | |-ImplicitCastExpr 0x7fa2588166f8 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fa258816588 <col:3> '<builtin fn type>' Function 0x7fa258816368 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fa258816768 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fa258816750 <col:21> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa2588165b0 <col:21> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|   | |-IntegerLiteral 0x7fa2588165d8 <col:26> 'int' 0
+|   | `-UnaryExprOrTypeTraitExpr 0x7fa258816640 <col:29, col:40> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7fa258816620 <col:36, col:40> 'struct simplify_plus_minus_op_data [8]' lvalue
+|   |     `-DeclRefExpr 0x7fa2588165f8 <col:37> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|   |-DoStmt 0x7fa2598190e8 <line:31:3, line:52:17>
+|   | |-CompoundStmt 0x7fa259819088 <line:32:5, line:51:5>
+|   | | |-BinaryOperator 0x7fa2588167c8 <line:33:7, col:17> 'int' '='
+|   | | | |-DeclRefExpr 0x7fa258816780 <col:7> 'int' lvalue Var 0x7fa2588160d8 'changed' 'int'
+|   | | | `-IntegerLiteral 0x7fa2588167a8 <col:17> 'int' 0
+|   | | `-ForStmt 0x7fa259819050 <line:34:7, line:50:2>
+|   | |   |-BinaryOperator 0x7fa258816838 <line:34:12, col:16> 'int' '='
+|   | |   | |-DeclRefExpr 0x7fa2588167f0 <col:12> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|   | |   | `-IntegerLiteral 0x7fa258816818 <col:16> 'int' 0
+|   | |   |-<<<NULL>>>
+|   | |   |-BinaryOperator 0x7fa2588168e0 <col:19, col:23> 'int' '<'
+|   | |   | |-ImplicitCastExpr 0x7fa2588168b0 <col:19> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x7fa258816860 <col:19> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|   | |   | `-ImplicitCastExpr 0x7fa2588168c8 <col:23> 'int' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7fa258816888 <col:23> 'int' lvalue Var 0x7fa258815f78 'n_ops' 'int'
+|   | |   |-UnaryOperator 0x7fa258816930 <col:30, col:31> 'int' postfix '++'
+|   | |   | `-DeclRefExpr 0x7fa258816908 <col:30> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|   | |   `-CompoundStmt 0x7fa259819020 <line:35:2, line:50:2>
+|   | |     |-DeclStmt 0x7fa258816ab8 <line:36:4, col:27>
+|   | |     | `-VarDecl 0x7fa258816960 <col:4, col:25> col:8 used this_op 'rtx':'struct rtx_def *' cinit
+|   | |     |   `-ImplicitCastExpr 0x7fa258816aa0 <col:18, col:25> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   | |     |     `-MemberExpr 0x7fa258816a68 <col:18, col:25> 'rtx':'struct rtx_def *' lvalue .op 0x7fa258815890
+|   | |     |       `-ArraySubscriptExpr 0x7fa258816a40 <col:18, col:23> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|   | |     |         |-ImplicitCastExpr 0x7fa258816a10 <col:18> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|   | |     |         | `-DeclRefExpr 0x7fa2588169c0 <col:18> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|   | |     |         `-ImplicitCastExpr 0x7fa258816a28 <col:22> 'int' <LValueToRValue>
+|   | |     |           `-DeclRefExpr 0x7fa2588169e8 <col:22> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|   | |     |-DeclStmt 0x7fa259818a68 <line:37:4, col:29>
+|   | |     | `-VarDecl 0x7fa258816ae8 <col:4, col:26> col:8 used this_neg 'int' cinit
+|   | |     |   `-ImplicitCastExpr 0x7fa259818a50 <col:19, col:26> 'int' <IntegralCast>
+|   | |     |     `-ImplicitCastExpr 0x7fa259818a38 <col:19, col:26> 'short' <LValueToRValue>
+|   | |     |       `-MemberExpr 0x7fa259818a00 <col:19, col:26> 'short' lvalue .neg 0x7fa2588158f0
+|   | |     |         `-ArraySubscriptExpr 0x7fa258816bc8 <col:19, col:24> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|   | |     |           |-ImplicitCastExpr 0x7fa258816b98 <col:19> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|   | |     |           | `-DeclRefExpr 0x7fa258816b48 <col:19> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|   | |     |           `-ImplicitCastExpr 0x7fa258816bb0 <col:23> 'int' <LValueToRValue>
+|   | |     |             `-DeclRefExpr 0x7fa258816b70 <col:23> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|   | |     |-DeclStmt 0x7fa259818c48 <line:38:4, col:63>
+|   | |     | `-VarDecl 0x7fa259818aa0 <col:4, col:62> col:18 used this_code 'enum rtx_code':'enum rtx_code' cinit
+|   | |     |   `-ParenExpr 0x7fa259818c28 <col:30, col:62> 'enum rtx_code':'enum rtx_code'
+|   | |     |     `-CStyleCastExpr 0x7fa259818c00 <col:31, col:58> 'enum rtx_code':'enum rtx_code' <NoOp>
+|   | |     |       `-ImplicitCastExpr 0x7fa259818be8 <col:47, col:58> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|   | |     |         `-MemberExpr 0x7fa259818b90 <col:47, col:58> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7fa258815110
+|   | |     |           `-ImplicitCastExpr 0x7fa259818b78 <col:47, col:55> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   | |     |             `-ParenExpr 0x7fa259818b58 <col:47, col:55> 'rtx':'struct rtx_def *' lvalue
+|   | |     |               `-DeclRefExpr 0x7fa259818b00 <col:48> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258816960 'this_op' 'rtx':'struct rtx_def *'
+|   | |     `-SwitchStmt 0x7fa259818cb8 <line:39:4, line:49:6>
+|   | |       |-<<<NULL>>>
+|   | |       |-<<<NULL>>>
+|   | |       |-ImplicitCastExpr 0x7fa259818ca0 <line:39:12> 'unsigned int' <IntegralCast>
+|   | |       | `-ImplicitCastExpr 0x7fa259818c88 <col:12> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|   | |       |   `-DeclRefExpr 0x7fa259818c60 <col:12> 'enum rtx_code':'enum rtx_code' lvalue Var 0x7fa259818aa0 'this_code' 'enum rtx_code':'enum rtx_code'
+|   | |       `-CompoundStmt 0x7fa259818fc8 <line:40:6, line:49:6>
+|   | |         |-CaseStmt 0x7fa259818d10 <line:41:6, line:43:3>
+|   | |         | |-ImplicitCastExpr 0x7fa259819008 <line:41:11> 'unsigned int' <IntegralCast>
+|   | |         | | `-DeclRefExpr 0x7fa259818ce8 <col:11> 'int' EnumConstant 0x7fa258814e00 'MINUS' 'int'
+|   | |         | |-<<<NULL>>>
+|   | |         | `-IfStmt 0x7fa259818de8 <line:42:8, line:43:3>
+|   | |         |   |-<<<NULL>>>
+|   | |         |   |-<<<NULL>>>
+|   | |         |   |-BinaryOperator 0x7fa259818da8 <line:42:12, col:21> 'int' '=='
+|   | |         |   | |-ImplicitCastExpr 0x7fa259818d90 <col:12> 'int' <LValueToRValue>
+|   | |         |   | | `-DeclRefExpr 0x7fa259818d48 <col:12> 'int' lvalue Var 0x7fa258815f78 'n_ops' 'int'
+|   | |         |   | `-IntegerLiteral 0x7fa259818d70 <col:21> 'int' 7
+|   | |         |   |-ReturnStmt 0x7fa259818dd0 <line:43:3>
+|   | |         |   `-<<<NULL>>>
+|   | |         |-UnaryOperator 0x7fa259818e48 <line:44:8, col:13> 'int' postfix '++'
+|   | |         | `-DeclRefExpr 0x7fa259818e20 <col:8> 'int' lvalue Var 0x7fa258815f78 'n_ops' 'int'
+|   | |         |-UnaryOperator 0x7fa259818e90 <line:45:8, col:17> 'int' postfix '++'
+|   | |         | `-DeclRefExpr 0x7fa259818e68 <col:8> 'int' lvalue Var 0x7fa258816010 'input_ops' 'int'
+|   | |         |-BinaryOperator 0x7fa259818ef8 <line:46:8, col:18> 'int' '='
+|   | |         | |-DeclRefExpr 0x7fa259818eb0 <col:8> 'int' lvalue Var 0x7fa2588160d8 'changed' 'int'
+|   | |         | `-IntegerLiteral 0x7fa259818ed8 <col:18> 'int' 1
+|   | |         |-CompoundAssignOperator 0x7fa259818f88 <line:47:8, col:25> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |         | |-DeclRefExpr 0x7fa259818f20 <col:8> 'int' lvalue Var 0x7fa258816150 'canonicalized' 'int'
+|   | |         | `-ImplicitCastExpr 0x7fa259818f70 <col:25> 'int' <LValueToRValue>
+|   | |         |   `-DeclRefExpr 0x7fa259818f48 <col:25> 'int' lvalue Var 0x7fa258816ae8 'this_neg' 'int'
+|   | |         `-BreakStmt 0x7fa259818fc0 <line:48:8>
+|   | `-ImplicitCastExpr 0x7fa2598190d0 <line:52:10> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa2598190a8 <col:10> 'int' lvalue Var 0x7fa2588160d8 'changed' 'int'
+|   `-DoStmt 0x7fa25981b750 <line:53:3, line:85:17>
+|     |-CompoundStmt 0x7fa25981b6e8 <line:54:5, line:84:5>
+|     | |-BinaryOperator 0x7fa2598191b8 <line:55:7, col:20> 'int' '='
+|     | | |-DeclRefExpr 0x7fa259819108 <col:7> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     | | `-BinaryOperator 0x7fa259819190 <col:12, col:20> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7fa259819178 <col:12> 'int' <LValueToRValue>
+|     | |   | `-DeclRefExpr 0x7fa259819130 <col:12> 'int' lvalue Var 0x7fa258815f78 'n_ops' 'int'
+|     | |   `-IntegerLiteral 0x7fa259819158 <col:20> 'int' 1
+|     | |-ForStmt 0x7fa25981b158 <line:56:7, line:77:2>
+|     | | |-BinaryOperator 0x7fa259819290 <line:56:12, col:24> 'int' '='
+|     | | | |-DeclRefExpr 0x7fa2598191e0 <col:12> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     | | | `-BinaryOperator 0x7fa259819268 <col:16, col:24> 'int' '-'
+|     | | |   |-ImplicitCastExpr 0x7fa259819250 <col:16> 'int' <LValueToRValue>
+|     | | |   | `-DeclRefExpr 0x7fa259819208 <col:16> 'int' lvalue Var 0x7fa258815f78 'n_ops' 'int'
+|     | | |   `-IntegerLiteral 0x7fa259819230 <col:24> 'int' 1
+|     | | |-<<<NULL>>>
+|     | | |-BinaryOperator 0x7fa259819318 <col:27, col:32> 'int' '>='
+|     | | | |-ImplicitCastExpr 0x7fa259819300 <col:27> 'int' <LValueToRValue>
+|     | | | | `-DeclRefExpr 0x7fa2598192b8 <col:27> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     | | | `-IntegerLiteral 0x7fa2598192e0 <col:32> 'int' 0
+|     | | |-UnaryOperator 0x7fa259819368 <col:35, col:36> 'int' postfix '--'
+|     | | | `-DeclRefExpr 0x7fa259819340 <col:35> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     | | `-CompoundStmt 0x7fa25981b130 <line:57:2, line:77:2>
+|     | |   |-DeclStmt 0x7fa259819670 <line:58:4, col:40>
+|     | |   | |-VarDecl 0x7fa259819398 <col:4, col:21> col:8 used lhs 'rtx':'struct rtx_def *' cinit
+|     | |   | | `-ImplicitCastExpr 0x7fa2598194d8 <col:14, col:21> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |   | |   `-MemberExpr 0x7fa2598194a0 <col:14, col:21> 'rtx':'struct rtx_def *' lvalue .op 0x7fa258815890
+|     | |   | |     `-ArraySubscriptExpr 0x7fa259819478 <col:14, col:19> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |   | |       |-ImplicitCastExpr 0x7fa259819448 <col:14> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |   | |       | `-DeclRefExpr 0x7fa2598193f8 <col:14> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |   | |       `-ImplicitCastExpr 0x7fa259819460 <col:18> 'int' <LValueToRValue>
+|     | |   | |         `-DeclRefExpr 0x7fa259819420 <col:18> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     | |   | `-VarDecl 0x7fa259819500 <col:4, col:38> col:25 used rhs 'rtx':'struct rtx_def *' cinit
+|     | |   |   `-ImplicitCastExpr 0x7fa259819640 <col:31, col:38> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |   |     `-MemberExpr 0x7fa259819608 <col:31, col:38> 'rtx':'struct rtx_def *' lvalue .op 0x7fa258815890
+|     | |   |       `-ArraySubscriptExpr 0x7fa2598195e0 <col:31, col:36> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |   |         |-ImplicitCastExpr 0x7fa2598195b0 <col:31> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |   |         | `-DeclRefExpr 0x7fa259819560 <col:31> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |   |         `-ImplicitCastExpr 0x7fa2598195c8 <col:35> 'int' <LValueToRValue>
+|     | |   |           `-DeclRefExpr 0x7fa259819588 <col:35> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     | |   |-DeclStmt 0x7fa2598199b0 <line:59:4, col:44>
+|     | |   | |-VarDecl 0x7fa2598196a0 <col:4, col:22> col:8 used lneg 'int' cinit
+|     | |   | | `-ImplicitCastExpr 0x7fa2598197f8 <col:15, col:22> 'int' <IntegralCast>
+|     | |   | |   `-ImplicitCastExpr 0x7fa2598197e0 <col:15, col:22> 'short' <LValueToRValue>
+|     | |   | |     `-MemberExpr 0x7fa2598197a8 <col:15, col:22> 'short' lvalue .neg 0x7fa2588158f0
+|     | |   | |       `-ArraySubscriptExpr 0x7fa259819780 <col:15, col:20> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |   | |         |-ImplicitCastExpr 0x7fa259819750 <col:15> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |   | |         | `-DeclRefExpr 0x7fa259819700 <col:15> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |   | |         `-ImplicitCastExpr 0x7fa259819768 <col:19> 'int' <LValueToRValue>
+|     | |   | |           `-DeclRefExpr 0x7fa259819728 <col:19> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     | |   | `-VarDecl 0x7fa259819828 <col:4, col:41> col:27 used rneg 'int' cinit
+|     | |   |   `-ImplicitCastExpr 0x7fa259819980 <col:34, col:41> 'int' <IntegralCast>
+|     | |   |     `-ImplicitCastExpr 0x7fa259819968 <col:34, col:41> 'short' <LValueToRValue>
+|     | |   |       `-MemberExpr 0x7fa259819930 <col:34, col:41> 'short' lvalue .neg 0x7fa2588158f0
+|     | |   |         `-ArraySubscriptExpr 0x7fa259819908 <col:34, col:39> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |   |           |-ImplicitCastExpr 0x7fa2598198d8 <col:34> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |   |           | `-DeclRefExpr 0x7fa259819888 <col:34> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |   |           `-ImplicitCastExpr 0x7fa2598198f0 <col:38> 'int' <LValueToRValue>
+|     | |   |             `-DeclRefExpr 0x7fa2598198b0 <col:38> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     | |   `-IfStmt 0x7fa25981b0f8 <line:60:4, line:76:6>
+|     | |     |-<<<NULL>>>
+|     | |     |-<<<NULL>>>
+|     | |     |-BinaryOperator 0x7fa259819b18 <line:60:8, col:27> 'int' '&&'
+|     | |     | |-BinaryOperator 0x7fa259819a50 <col:8, col:15> 'int' '!='
+|     | |     | | |-ImplicitCastExpr 0x7fa259819a20 <col:8> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     | | | `-DeclRefExpr 0x7fa2598199c8 <col:8> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819398 'lhs' 'rtx':'struct rtx_def *'
+|     | |     | | `-ImplicitCastExpr 0x7fa259819a38 <col:15> 'rtx':'struct rtx_def *' <NullToPointer>
+|     | |     | |   `-IntegerLiteral 0x7fa259819a00 <col:15> 'int' 0
+|     | |     | `-BinaryOperator 0x7fa259819af0 <col:20, col:27> 'int' '!='
+|     | |     |   |-ImplicitCastExpr 0x7fa259819ac0 <col:20> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   | `-DeclRefExpr 0x7fa259819a78 <col:20> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819500 'rhs' 'rtx':'struct rtx_def *'
+|     | |     |   `-ImplicitCastExpr 0x7fa259819ad8 <col:27> 'rtx':'struct rtx_def *' <NullToPointer>
+|     | |     |     `-IntegerLiteral 0x7fa259819aa0 <col:27> 'int' 0
+|     | |     |-CompoundStmt 0x7fa25981b0d0 <line:61:6, line:76:6>
+|     | |     | |-DeclStmt 0x7fa259819c00 <line:62:8, col:35>
+|     | |     | | `-VarDecl 0x7fa259819b60 <col:8, col:30> col:22 used ncode 'enum rtx_code':'enum rtx_code' cinit
+|     | |     | |   `-ImplicitCastExpr 0x7fa259819be8 <col:30> 'enum rtx_code':'enum rtx_code' <IntegralCast>
+|     | |     | |     `-DeclRefExpr 0x7fa259819bc0 <col:30> 'int' EnumConstant 0x7fa258814e00 'MINUS' 'int'
+|     | |     | |-IfStmt 0x7fa25981a010 <line:63:8, line:64:57>
+|     | |     | | |-<<<NULL>>>
+|     | |     | | |-<<<NULL>>>
+|     | |     | | |-BinaryOperator 0x7fa259819db8 <line:63:12, col:45> 'int' '=='
+|     | |     | | | |-ImplicitCastExpr 0x7fa259819d88 <col:12, col:40> 'unsigned int' <IntegralCast>
+|     | |     | | | | `-ParenExpr 0x7fa259819d40 <col:12, col:40> 'enum rtx_code':'enum rtx_code'
+|     | |     | | | |   `-CStyleCastExpr 0x7fa259819d18 <col:13, col:36> 'enum rtx_code':'enum rtx_code' <NoOp>
+|     | |     | | | |     `-ImplicitCastExpr 0x7fa259819d00 <col:29, col:36> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|     | |     | | | |       `-MemberExpr 0x7fa259819ca8 <col:29, col:36> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7fa258815110
+|     | |     | | | |         `-ImplicitCastExpr 0x7fa259819c90 <col:29, col:33> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     | | | |           `-ParenExpr 0x7fa259819c70 <col:29, col:33> 'rtx':'struct rtx_def *' lvalue
+|     | |     | | | |             `-DeclRefExpr 0x7fa259819c18 <col:30> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819398 'lhs' 'rtx':'struct rtx_def *'
+|     | |     | | | `-ImplicitCastExpr 0x7fa259819da0 <col:45> 'unsigned int' <IntegralCast>
+|     | |     | | |   `-DeclRefExpr 0x7fa259819d60 <col:45> 'int' EnumConstant 0x7fa258814e00 'MINUS' 'int'
+|     | |     | | |-BinaryOperator 0x7fa259819fe8 <line:64:3, col:57> 'rtx':'struct rtx_def *' '='
+|     | |     | | | |-DeclRefExpr 0x7fa259819de0 <col:3> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258815e90 'tem' 'rtx':'struct rtx_def *'
+|     | |     | | | `-CallExpr 0x7fa259819f40 <col:9, col:57> 'rtx':'struct rtx_def *'
+|     | |     | | |   |-ImplicitCastExpr 0x7fa259819f28 <col:9> 'rtx (*)(enum rtx_code, int, rtx, rtx)' <FunctionToPointerDecay>
+|     | |     | | |   | `-DeclRefExpr 0x7fa259819e08 <col:9> 'rtx (enum rtx_code, int, rtx, rtx)' Function 0x7fa2588156d0 'simplify_binary_operation' 'rtx (enum rtx_code, int, rtx, rtx)'
+|     | |     | | |   |-ImplicitCastExpr 0x7fa259819f88 <col:36> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|     | |     | | |   | `-DeclRefExpr 0x7fa259819e30 <col:36> 'enum rtx_code':'enum rtx_code' lvalue Var 0x7fa259819b60 'ncode' 'enum rtx_code':'enum rtx_code'
+|     | |     | | |   |-ImplicitCastExpr 0x7fa259819fa0 <col:43> 'int' <LValueToRValue>
+|     | |     | | |   | `-DeclRefExpr 0x7fa259819e58 <col:43> 'int' lvalue ParmVar 0x7fa2588159d0 'mode' 'int'
+|     | |     | | |   |-ImplicitCastExpr 0x7fa259819fb8 <col:49> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     | | |   | `-DeclRefExpr 0x7fa259819e80 <col:49> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819398 'lhs' 'rtx':'struct rtx_def *'
+|     | |     | | |   `-ImplicitCastExpr 0x7fa259819fd0 <col:54> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     | | |     `-DeclRefExpr 0x7fa259819ea8 <col:54> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819500 'rhs' 'rtx':'struct rtx_def *'
+|     | |     | | `-<<<NULL>>>
+|     | |     | `-IfStmt 0x7fa25981b098 <line:65:8, line:75:3>
+|     | |     |   |-<<<NULL>>>
+|     | |     |   |-<<<NULL>>>
+|     | |     |   |-BinaryOperator 0x7fa25981aaa8 <line:65:12, line:67:67> 'int' '&&'
+|     | |     |   | |-ImplicitCastExpr 0x7fa25981aa90 <line:65:12> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   | | `-DeclRefExpr 0x7fa25981a048 <col:12> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258815e90 'tem' 'rtx':'struct rtx_def *'
+|     | |     |   | `-UnaryOperator 0x7fa25981aa70 <col:19, line:67:67> 'int' prefix '!'
+|     | |     |   |   `-ParenExpr 0x7fa25981aa50 <line:65:21, line:67:67> 'int'
+|     | |     |   |     `-BinaryOperator 0x7fa25981aa28 <line:65:22, line:67:64> 'int' '&&'
+|     | |     |   |       |-BinaryOperator 0x7fa25981a640 <line:65:22, line:66:64> 'int' '&&'
+|     | |     |   |       | |-BinaryOperator 0x7fa25981a210 <line:65:22, col:55> 'int' '=='
+|     | |     |   |       | | |-ImplicitCastExpr 0x7fa25981a1e0 <col:22, col:50> 'unsigned int' <IntegralCast>
+|     | |     |   |       | | | `-ParenExpr 0x7fa25981a198 <col:22, col:50> 'enum rtx_code':'enum rtx_code'
+|     | |     |   |       | | |   `-CStyleCastExpr 0x7fa25981a170 <col:23, col:46> 'enum rtx_code':'enum rtx_code' <NoOp>
+|     | |     |   |       | | |     `-ImplicitCastExpr 0x7fa25981a158 <col:39, col:46> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+|     | |     |   |       | | |       `-MemberExpr 0x7fa25981a100 <col:39, col:46> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7fa258815110
+|     | |     |   |       | | |         `-ImplicitCastExpr 0x7fa25981a0e8 <col:39, col:43> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |       | | |           `-ParenExpr 0x7fa25981a0c8 <col:39, col:43> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |       | | |             `-DeclRefExpr 0x7fa25981a070 <col:40> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258815e90 'tem' 'rtx':'struct rtx_def *'
+|     | |     |   |       | | `-ImplicitCastExpr 0x7fa25981a1f8 <col:55> 'unsigned int' <IntegralCast>
+|     | |     |   |       | |   `-DeclRefExpr 0x7fa25981a1b8 <col:55> 'int' EnumConstant 0x7fa258814e00 'MINUS' 'int'
+|     | |     |   |       | `-BinaryOperator 0x7fa25981a618 <line:66:11, col:64> 'int' '=='
+|     | |     |   |       |   |-ImplicitCastExpr 0x7fa25981a5e8 <col:11, col:59> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |       |   | `-ParenExpr 0x7fa25981a5a0 <col:11, col:59> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |       |   |   `-MemberExpr 0x7fa25981a568 <col:12, col:53> 'rtx':'struct rtx_def *' lvalue .rt_rtx 0x7fa258814f20
+|     | |     |   |       |   |     `-ParenExpr 0x7fa25981a548 <col:12, col:51> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |       |   |       `-ArraySubscriptExpr 0x7fa25981a520 <col:13, col:50> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |       |   |         |-ImplicitCastExpr 0x7fa25981a508 <col:13, col:45> 'rtunion *' <ArrayToPointerDecay>
+|     | |     |   |       |   |         | `-MemberExpr 0x7fa25981a4b0 <col:13, col:45> 'rtunion [1]' lvalue .fld 0x7fa258815338
+|     | |     |   |       |   |         |   `-MemberExpr 0x7fa25981a478 <col:13, col:43> 'union u':'union u' lvalue ->u 0x7fa2588153d0
+|     | |     |   |       |   |         |     `-ImplicitCastExpr 0x7fa25981a460 <col:13, col:40> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |       |   |         |       `-ParenExpr 0x7fa25981a440 <col:13, col:40> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |       |   |         |         `-ParenExpr 0x7fa25981a420 <col:14, col:39> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |       |   |         |           `-MemberExpr 0x7fa25981a3e8 <col:15, col:33> 'rtx':'struct rtx_def *' lvalue .rt_rtx 0x7fa258814f20
+|     | |     |   |       |   |         |             `-ParenExpr 0x7fa25981a3c8 <col:15, col:31> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |       |   |         |               `-ArraySubscriptExpr 0x7fa25981a3a0 <col:16, col:30> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |       |   |         |                 |-ImplicitCastExpr 0x7fa25981a388 <col:16, col:25> 'rtunion *' <ArrayToPointerDecay>
+|     | |     |   |       |   |         |                 | `-MemberExpr 0x7fa25981a2d0 <col:16, col:25> 'rtunion [1]' lvalue .fld 0x7fa258815338
+|     | |     |   |       |   |         |                 |   `-MemberExpr 0x7fa25981a298 <col:16, col:23> 'union u':'union u' lvalue ->u 0x7fa2588153d0
+|     | |     |   |       |   |         |                 |     `-ImplicitCastExpr 0x7fa25981a280 <col:16, col:20> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |       |   |         |                 |       `-ParenExpr 0x7fa25981a260 <col:16, col:20> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |       |   |         |                 |         `-DeclRefExpr 0x7fa25981a238 <col:17> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258815e90 'tem' 'rtx':'struct rtx_def *'
+|     | |     |   |       |   |         |                 `-IntegerLiteral 0x7fa25981a308 <col:29> 'int' 0
+|     | |     |   |       |   |         `-IntegerLiteral 0x7fa25981a4e8 <col:49> 'int' 0
+|     | |     |   |       |   `-ImplicitCastExpr 0x7fa25981a600 <col:64> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |       |     `-DeclRefExpr 0x7fa25981a5c0 <col:64> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819398 'lhs' 'rtx':'struct rtx_def *'
+|     | |     |   |       `-BinaryOperator 0x7fa25981aa00 <line:67:11, col:64> 'int' '=='
+|     | |     |   |         |-ImplicitCastExpr 0x7fa25981a9b8 <col:11, col:59> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |         | `-ParenExpr 0x7fa25981a970 <col:11, col:59> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |         |   `-MemberExpr 0x7fa25981a938 <col:12, col:53> 'rtx':'struct rtx_def *' lvalue .rt_rtx 0x7fa258814f20
+|     | |     |   |         |     `-ParenExpr 0x7fa25981a918 <col:12, col:51> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |         |       `-ArraySubscriptExpr 0x7fa25981a8f0 <col:13, col:50> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |         |         |-ImplicitCastExpr 0x7fa25981a8d8 <col:13, col:45> 'rtunion *' <ArrayToPointerDecay>
+|     | |     |   |         |         | `-MemberExpr 0x7fa25981a880 <col:13, col:45> 'rtunion [1]' lvalue .fld 0x7fa258815338
+|     | |     |   |         |         |   `-MemberExpr 0x7fa25981a848 <col:13, col:43> 'union u':'union u' lvalue ->u 0x7fa2588153d0
+|     | |     |   |         |         |     `-ImplicitCastExpr 0x7fa25981a830 <col:13, col:40> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |         |         |       `-ParenExpr 0x7fa25981a810 <col:13, col:40> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |         |         |         `-ParenExpr 0x7fa25981a7f0 <col:14, col:39> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |         |         |           `-MemberExpr 0x7fa25981a7b8 <col:15, col:33> 'rtx':'struct rtx_def *' lvalue .rt_rtx 0x7fa258814f20
+|     | |     |   |         |         |             `-ParenExpr 0x7fa25981a798 <col:15, col:31> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |         |         |               `-ArraySubscriptExpr 0x7fa25981a770 <col:16, col:30> 'rtunion':'union rtunion_def' lvalue
+|     | |     |   |         |         |                 |-ImplicitCastExpr 0x7fa25981a758 <col:16, col:25> 'rtunion *' <ArrayToPointerDecay>
+|     | |     |   |         |         |                 | `-MemberExpr 0x7fa25981a700 <col:16, col:25> 'rtunion [1]' lvalue .fld 0x7fa258815338
+|     | |     |   |         |         |                 |   `-MemberExpr 0x7fa25981a6c8 <col:16, col:23> 'union u':'union u' lvalue ->u 0x7fa2588153d0
+|     | |     |   |         |         |                 |     `-ImplicitCastExpr 0x7fa25981a6b0 <col:16, col:20> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |         |         |                 |       `-ParenExpr 0x7fa25981a690 <col:16, col:20> 'rtx':'struct rtx_def *' lvalue
+|     | |     |   |         |         |                 |         `-DeclRefExpr 0x7fa25981a668 <col:17> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258815e90 'tem' 'rtx':'struct rtx_def *'
+|     | |     |   |         |         |                 `-IntegerLiteral 0x7fa25981a738 <col:29> 'int' 0
+|     | |     |   |         |         `-IntegerLiteral 0x7fa25981a8b8 <col:49> 'int' 1
+|     | |     |   |         `-ImplicitCastExpr 0x7fa25981a9d0 <col:64> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   |           `-DeclRefExpr 0x7fa25981a990 <col:64> 'rtx':'struct rtx_def *' lvalue Var 0x7fa259819500 'rhs' 'rtx':'struct rtx_def *'
+|     | |     |   |-CompoundStmt 0x7fa25981b058 <line:68:3, line:75:3>
+|     | |     |   | |-CompoundAssignOperator 0x7fa25981ab38 <line:69:5, col:13> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|     | |     |   | | |-DeclRefExpr 0x7fa25981aad0 <col:5> 'int' lvalue Var 0x7fa2598196a0 'lneg' 'int'
+|     | |     |   | | `-ImplicitCastExpr 0x7fa25981ab20 <col:13> 'int' <LValueToRValue>
+|     | |     |   | |   `-DeclRefExpr 0x7fa25981aaf8 <col:13> 'int' lvalue Var 0x7fa259819828 'rneg' 'int'
+|     | |     |   | |-BinaryOperator 0x7fa25981ac90 <line:70:5, col:17> 'rtx':'struct rtx_def *' '='
+|     | |     |   | | |-MemberExpr 0x7fa25981ac18 <col:5, col:12> 'rtx':'struct rtx_def *' lvalue .op 0x7fa258815890
+|     | |     |   | | | `-ArraySubscriptExpr 0x7fa25981abf0 <col:5, col:10> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |     |   | | |   |-ImplicitCastExpr 0x7fa25981abc0 <col:5> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |     |   | | |   | `-DeclRefExpr 0x7fa25981ab70 <col:5> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |     |   | | |   `-ImplicitCastExpr 0x7fa25981abd8 <col:9> 'int' <LValueToRValue>
+|     | |     |   | | |     `-DeclRefExpr 0x7fa25981ab98 <col:9> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     | |     |   | | `-ImplicitCastExpr 0x7fa25981ac78 <col:17> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     | |     |   | |   `-DeclRefExpr 0x7fa25981ac50 <col:17> 'rtx':'struct rtx_def *' lvalue Var 0x7fa258815e90 'tem' 'rtx':'struct rtx_def *'
+|     | |     |   | |-BinaryOperator 0x7fa25981adf0 <line:71:5, col:18> 'short' '='
+|     | |     |   | | |-MemberExpr 0x7fa25981ad60 <col:5, col:12> 'short' lvalue .neg 0x7fa2588158f0
+|     | |     |   | | | `-ArraySubscriptExpr 0x7fa25981ad38 <col:5, col:10> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |     |   | | |   |-ImplicitCastExpr 0x7fa25981ad08 <col:5> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |     |   | | |   | `-DeclRefExpr 0x7fa25981acb8 <col:5> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |     |   | | |   `-ImplicitCastExpr 0x7fa25981ad20 <col:9> 'int' <LValueToRValue>
+|     | |     |   | | |     `-DeclRefExpr 0x7fa25981ace0 <col:9> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     | |     |   | | `-ImplicitCastExpr 0x7fa25981add8 <col:18> 'short' <IntegralCast>
+|     | |     |   | |   `-ImplicitCastExpr 0x7fa25981adc0 <col:18> 'int' <LValueToRValue>
+|     | |     |   | |     `-DeclRefExpr 0x7fa25981ad98 <col:18> 'int' lvalue Var 0x7fa2598196a0 'lneg' 'int'
+|     | |     |   | |-BinaryOperator 0x7fa25981af50 <line:72:5, col:23> 'rtx':'struct rtx_def *' '='
+|     | |     |   | | |-MemberExpr 0x7fa25981aec0 <col:5, col:12> 'rtx':'struct rtx_def *' lvalue .op 0x7fa258815890
+|     | |     |   | | | `-ArraySubscriptExpr 0x7fa25981ae98 <col:5, col:10> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     | |     |   | | |   |-ImplicitCastExpr 0x7fa25981ae68 <col:5> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     | |     |   | | |   | `-DeclRefExpr 0x7fa25981ae18 <col:5> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     | |     |   | | |   `-ImplicitCastExpr 0x7fa25981ae80 <col:9> 'int' <LValueToRValue>
+|     | |     |   | | |     `-DeclRefExpr 0x7fa25981ae40 <col:9> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     | |     |   | | `-CStyleCastExpr 0x7fa25981af28 <col:17, col:23> 'rtx':'struct rtx_def *' <NullToPointer>
+|     | |     |   | |   `-IntegerLiteral 0x7fa25981aef8 <col:23> 'int' 0
+|     | |     |   | |-BinaryOperator 0x7fa25981afc0 <line:73:5, col:15> 'int' '='
+|     | |     |   | | |-DeclRefExpr 0x7fa25981af78 <col:5> 'int' lvalue Var 0x7fa2588160d8 'changed' 'int'
+|     | |     |   | | `-IntegerLiteral 0x7fa25981afa0 <col:15> 'int' 1
+|     | |     |   | `-BinaryOperator 0x7fa25981b030 <line:74:5, col:21> 'int' '='
+|     | |     |   |   |-DeclRefExpr 0x7fa25981afe8 <col:5> 'int' lvalue Var 0x7fa258816150 'canonicalized' 'int'
+|     | |     |   |   `-IntegerLiteral 0x7fa25981b010 <col:21> 'int' 1
+|     | |     |   `-<<<NULL>>>
+|     | |     `-<<<NULL>>>
+|     | `-ForStmt 0x7fa25981b6b0 <line:78:7, line:83:4>
+|     |   |-BinaryOperator 0x7fa25981b270 <line:78:12, col:23> 'int' ','
+|     |   | |-BinaryOperator 0x7fa25981b1d8 <col:12, col:16> 'int' '='
+|     |   | | |-DeclRefExpr 0x7fa25981b190 <col:12> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     |   | | `-IntegerLiteral 0x7fa25981b1b8 <col:16> 'int' 0
+|     |   | `-BinaryOperator 0x7fa25981b248 <col:19, col:23> 'int' '='
+|     |   |   |-DeclRefExpr 0x7fa25981b200 <col:19> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     |   |   `-IntegerLiteral 0x7fa25981b228 <col:23> 'int' 0
+|     |   |-<<<NULL>>>
+|     |   |-BinaryOperator 0x7fa25981b318 <col:26, col:30> 'int' '<'
+|     |   | |-ImplicitCastExpr 0x7fa25981b2e8 <col:26> 'int' <LValueToRValue>
+|     |   | | `-DeclRefExpr 0x7fa25981b298 <col:26> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     |   | `-ImplicitCastExpr 0x7fa25981b300 <col:30> 'int' <LValueToRValue>
+|     |   |   `-DeclRefExpr 0x7fa25981b2c0 <col:30> 'int' lvalue Var 0x7fa258815f78 'n_ops' 'int'
+|     |   |-UnaryOperator 0x7fa25981b368 <col:37, col:38> 'int' postfix '++'
+|     |   | `-DeclRefExpr 0x7fa25981b340 <col:37> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     |   `-IfStmt 0x7fa25981b678 <line:79:2, line:83:4>
+|     |     |-<<<NULL>>>
+|     |     |-<<<NULL>>>
+|     |     |-ImplicitCastExpr 0x7fa25981b468 <line:79:6, col:13> 'rtx':'struct rtx_def *' <LValueToRValue>
+|     |     | `-MemberExpr 0x7fa25981b430 <col:6, col:13> 'rtx':'struct rtx_def *' lvalue .op 0x7fa258815890
+|     |     |   `-ArraySubscriptExpr 0x7fa25981b408 <col:6, col:11> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     |     |     |-ImplicitCastExpr 0x7fa25981b3d8 <col:6> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     |     |     | `-DeclRefExpr 0x7fa25981b388 <col:6> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     |     |     `-ImplicitCastExpr 0x7fa25981b3f0 <col:10> 'int' <LValueToRValue>
+|     |     |       `-DeclRefExpr 0x7fa25981b3b0 <col:10> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     |     |-CompoundStmt 0x7fa25981b658 <line:80:4, line:83:4>
+|     |     | |-BinaryOperator 0x7fa25981b5e8 <line:81:6, col:20> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' '='
+|     |     | | |-ArraySubscriptExpr 0x7fa25981b500 <col:6, col:11> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     |     | | | |-ImplicitCastExpr 0x7fa25981b4d0 <col:6> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     |     | | | | `-DeclRefExpr 0x7fa25981b480 <col:6> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     |     | | | `-ImplicitCastExpr 0x7fa25981b4e8 <col:10> 'int' <LValueToRValue>
+|     |     | | |   `-DeclRefExpr 0x7fa25981b4a8 <col:10> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     |     | | `-ImplicitCastExpr 0x7fa25981b5d0 <col:15, col:20> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' <LValueToRValue>
+|     |     | |   `-ArraySubscriptExpr 0x7fa25981b5a8 <col:15, col:20> 'struct simplify_plus_minus_op_data':'struct simplify_plus_minus_op_data' lvalue
+|     |     | |     |-ImplicitCastExpr 0x7fa25981b578 <col:15> 'struct simplify_plus_minus_op_data *' <ArrayToPointerDecay>
+|     |     | |     | `-DeclRefExpr 0x7fa25981b528 <col:15> 'struct simplify_plus_minus_op_data [8]' lvalue Var 0x7fa258815e08 'ops' 'struct simplify_plus_minus_op_data [8]'
+|     |     | |     `-ImplicitCastExpr 0x7fa25981b590 <col:19> 'int' <LValueToRValue>
+|     |     | |       `-DeclRefExpr 0x7fa25981b550 <col:19> 'int' lvalue Var 0x7fa258816290 'j' 'int'
+|     |     | `-UnaryOperator 0x7fa25981b638 <line:82:6, col:7> 'int' postfix '++'
+|     |     |   `-DeclRefExpr 0x7fa25981b610 <col:6> 'int' lvalue Var 0x7fa258816218 'i' 'int'
+|     |     `-<<<NULL>>>
+|     `-ImplicitCastExpr 0x7fa25981b738 <line:85:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa25981b710 <col:10> 'int' lvalue Var 0x7fa2588160d8 'changed' 'int'
+`-FunctionDecl 0x7fa258816368 <line:30:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fa258816408 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fa258816468 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fa2588164c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fa258816540 <col:3> Implicit

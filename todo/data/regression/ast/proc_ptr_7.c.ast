@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fdb260272e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdb26819628 <../Data/C2AST/proc_ptr_7.c:3:1, line:5:1> line:3:5 used f 'int (void)'
+| `-CompoundStmt 0x7fdb26819740 <col:13, line:5:1>
+|   `-ReturnStmt 0x7fdb26819728 <line:4:3, col:10>
+|     `-IntegerLiteral 0x7fdb26819708 <col:10> 'int' 42
+`-FunctionDecl 0x7fdb268199f0 <line:7:1, line:9:1> line:7:6 assignf_ 'void (int (**)(void))'
+  |-ParmVarDecl 0x7fdb268198f0 <col:15, col:30> col:21 used ptr 'int (**)(void)'
+  `-CompoundStmt 0x7fdb26819b60 <col:33, line:9:1>
+    `-BinaryOperator 0x7fdb26819b38 <line:8:3, col:10> 'int (*)(void)' '='
+      |-UnaryOperator 0x7fdb26819ad8 <col:3, col:4> 'int (*)(void)' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fdb26819ac0 <col:4> 'int (**)(void)' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdb26819a98 <col:4> 'int (**)(void)' lvalue ParmVar 0x7fdb268198f0 'ptr' 'int (**)(void)'
+      `-ImplicitCastExpr 0x7fdb26819b20 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fdb26819af8 <col:10> 'int (void)' Function 0x7fdb26819628 'f' 'int (void)'

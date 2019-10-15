@@ -1,0 +1,80 @@
+TranslationUnitDecl 0x7fcd268032e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcd26803f60 <../Data/C2AST/pr45865.c:5:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fcd26854ad0 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fcd26854a80 'union tree_node *'
+|   `-ElaboratedType 0x7fcd26854a20 'union tree_node' sugar
+|     `-RecordType 0x7fcd26854a00 'union tree_node'
+|       `-Record 0x7fcd26803f60 'tree_node'
+|-EnumDecl 0x7fcd26854b40 <line:6:1, line:9:1> line:6:6 ix86_builtin_type
+| |-EnumConstantDecl 0x7fcd26854c00 <line:7:3> col:3 IX86_BT_LAST_VECT 'int'
+| `-EnumConstantDecl 0x7fcd26854c48 <line:8:3> col:3 referenced IX86_BT_LAST_PTR 'int'
+|-VarDecl 0x7fcd26854d48 <line:10:1, col:64> col:37 used ix86_builtin_type_ptr_base 'const enum ix86_builtin_type []' extern
+|-FunctionDecl 0x7fcd26854fb0 <line:11:1, col:44> col:13 used build_qualified_type 'tree (tree, int)' extern
+| |-ParmVarDecl 0x7fcd26854e20 <col:35> col:39 'tree':'union tree_node *'
+| `-ParmVarDecl 0x7fcd26854e98 <col:41> col:44 'int'
+|-FunctionDecl 0x7fcd26855170 <line:12:1, col:37> col:13 used build_pointer_type 'tree (tree)' extern
+| `-ParmVarDecl 0x7fcd26855070 <col:33> col:37 'tree':'union tree_node *'
+`-FunctionDecl 0x7fcd268553c0 <line:13:1, line:28:1> line:14:1 referenced ix86_get_builtin_type 'tree (enum ix86_builtin_type, unsigned int)'
+  |-ParmVarDecl 0x7fcd26855238 <col:24, col:47> col:47 used tcode 'enum ix86_builtin_type':'enum ix86_builtin_type'
+  |-ParmVarDecl 0x7fcd268552b0 <col:54, col:67> col:67 used index 'unsigned int'
+  `-CompoundStmt 0x7fcd26855e88 <line:15:1, line:28:1>
+    |-DeclStmt 0x7fcd26855568 <line:16:3, col:19>
+    | |-VarDecl 0x7fcd26855480 <col:3, col:8> col:8 used type 'tree':'union tree_node *'
+    | `-VarDecl 0x7fcd268554f0 <col:3, col:14> col:14 used itype 'tree':'union tree_node *'
+    |-DeclStmt 0x7fcd268555f8 <line:17:3, col:12>
+    | `-VarDecl 0x7fcd26855598 <col:3, col:7> col:7 used quals 'int'
+    |-IfStmt 0x7fcd268557b0 <line:18:3, line:21:13>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcd268556a8 <line:18:7, col:16> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fcd26855678 <col:7> 'unsigned int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fcd26855660 <col:7> 'enum ix86_builtin_type':'enum ix86_builtin_type' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fcd26855610 <col:7> 'enum ix86_builtin_type':'enum ix86_builtin_type' lvalue ParmVar 0x7fcd26855238 'tcode' 'enum ix86_builtin_type':'enum ix86_builtin_type'
+    | | `-ImplicitCastExpr 0x7fcd26855690 <col:16> 'unsigned int' <IntegralCast>
+    | |   `-DeclRefExpr 0x7fcd26855638 <col:16> 'int' EnumConstant 0x7fcd26854c48 'IX86_BT_LAST_PTR' 'int'
+    | |-BinaryOperator 0x7fcd26855718 <line:19:5, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fcd268556d0 <col:5> 'int' lvalue Var 0x7fcd26855598 'quals' 'int'
+    | | `-IntegerLiteral 0x7fcd268556f8 <col:13> 'int' 0
+    | `-BinaryOperator 0x7fcd26855788 <line:21:5, col:13> 'int' '='
+    |   |-DeclRefExpr 0x7fcd26855740 <col:5> 'int' lvalue Var 0x7fcd26855598 'quals' 'int'
+    |   `-IntegerLiteral 0x7fcd26855768 <col:13> 'int' 1
+    |-BinaryOperator 0x7fcd26855a48 <line:22:3, line:23:11> 'tree':'union tree_node *' '='
+    | |-DeclRefExpr 0x7fcd268557e8 <line:22:3> 'tree':'union tree_node *' lvalue Var 0x7fcd268554f0 'itype' 'tree':'union tree_node *'
+    | `-CallExpr 0x7fcd268559e0 <col:11, line:23:11> 'tree':'union tree_node *'
+    |   |-ImplicitCastExpr 0x7fcd268559c8 <line:22:11> 'tree (*)(enum ix86_builtin_type, unsigned int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fcd26855810 <col:11> 'tree (enum ix86_builtin_type, unsigned int)' Function 0x7fcd268553c0 'ix86_get_builtin_type' 'tree (enum ix86_builtin_type, unsigned int)'
+    |   |-ImplicitCastExpr 0x7fcd26855a18 <col:34, col:66> 'enum ix86_builtin_type':'enum ix86_builtin_type' <LValueToRValue>
+    |   | `-ArraySubscriptExpr 0x7fcd26855918 <col:34, col:66> 'const enum ix86_builtin_type':'const enum ix86_builtin_type' lvalue
+    |   |   |-ImplicitCastExpr 0x7fcd268558e8 <col:34> 'const enum ix86_builtin_type *' <ArrayToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7fcd26855838 <col:34> 'const enum ix86_builtin_type []' lvalue Var 0x7fcd26854d48 'ix86_builtin_type_ptr_base' 'const enum ix86_builtin_type []'
+    |   |   `-ImplicitCastExpr 0x7fcd26855900 <col:61> 'unsigned int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fcd26855860 <col:61> 'unsigned int' lvalue ParmVar 0x7fcd268552b0 'index' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fcd26855a30 <line:23:6> 'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fcd26855940 <col:6> 'unsigned int' lvalue ParmVar 0x7fcd268552b0 'index' 'unsigned int'
+    |-IfStmt 0x7fcd26855ca0 <line:24:3, line:25:47>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcd26855ad0 <line:24:7, col:16> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcd26855ab8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcd26855a70 <col:7> 'int' lvalue Var 0x7fcd26855598 'quals' 'int'
+    | | `-IntegerLiteral 0x7fcd26855a98 <col:16> 'int' 0
+    | |-BinaryOperator 0x7fcd26855c78 <line:25:5, col:47> 'tree':'union tree_node *' '='
+    | | |-DeclRefExpr 0x7fcd26855af8 <col:5> 'tree':'union tree_node *' lvalue Var 0x7fcd268554f0 'itype' 'tree':'union tree_node *'
+    | | `-CallExpr 0x7fcd26855c10 <col:13, col:47> 'tree':'union tree_node *'
+    | |   |-ImplicitCastExpr 0x7fcd26855bf8 <col:13> 'tree (*)(tree, int)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fcd26855b20 <col:13> 'tree (tree, int)' Function 0x7fcd26854fb0 'build_qualified_type' 'tree (tree, int)'
+    | |   |-ImplicitCastExpr 0x7fcd26855c48 <col:35> 'tree':'union tree_node *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fcd26855b48 <col:35> 'tree':'union tree_node *' lvalue Var 0x7fcd268554f0 'itype' 'tree':'union tree_node *'
+    | |   `-ImplicitCastExpr 0x7fcd26855c60 <col:42> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fcd26855b70 <col:42> 'int' lvalue Var 0x7fcd26855598 'quals' 'int'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fcd26855e08 <line:26:3, col:35> 'tree':'union tree_node *' '='
+    | |-DeclRefExpr 0x7fcd26855cd8 <col:3> 'tree':'union tree_node *' lvalue Var 0x7fcd26855480 'type' 'tree':'union tree_node *'
+    | `-CallExpr 0x7fcd26855dc0 <col:10, col:35> 'tree':'union tree_node *'
+    |   |-ImplicitCastExpr 0x7fcd26855da8 <col:10> 'tree (*)(tree)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fcd26855d00 <col:10> 'tree (tree)' Function 0x7fcd26855170 'build_pointer_type' 'tree (tree)'
+    |   `-ImplicitCastExpr 0x7fcd26855df0 <col:30> 'tree':'union tree_node *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fcd26855d28 <col:30> 'tree':'union tree_node *' lvalue Var 0x7fcd268554f0 'itype' 'tree':'union tree_node *'
+    `-ReturnStmt 0x7fcd26855e70 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7fcd26855e58 <col:10> 'tree':'union tree_node *' <LValueToRValue>
+        `-DeclRefExpr 0x7fcd26855e30 <col:10> 'tree':'union tree_node *' lvalue Var 0x7fcd26855480 'type' 'tree':'union tree_node *'

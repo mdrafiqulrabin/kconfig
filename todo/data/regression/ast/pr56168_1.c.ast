@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fe3ab81dee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe3ab860ad8 <../Data/C2AST/pr56168_1.c:4:1> col:1 implicit pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7fe3ab860b78 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fe3ab860bd8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fe3ab860c48 <col:1> Implicit
+| `-NoThrowAttr 0x7fe3ab860c90 <col:1> Implicit
+`-FunctionDecl 0x7fe3ab860ca0 prev 0x7fe3ab860ad8 <line:3:1, line:4:40> col:1 pow 'double (double, double)'
+  |-ParmVarDecl 0x7fe3ab81eb78 <col:6, col:13> col:13 x 'double'
+  |-ParmVarDecl 0x7fe3ab860a00 <col:16, col:23> col:23 y 'double'
+  |-CompoundStmt 0x7fe3ab860df0 <col:26, col:40>
+  | `-ReturnStmt 0x7fe3ab860dd8 <col:28, col:35>
+  |   `-FloatingLiteral 0x7fe3ab860db8 <col:35> 'double' 0.000000e+00
+  |-NoInlineAttr 0x7fe3ab860d50 <line:3:23>
+  |-ConstAttr 0x7fe3ab860d98 <line:4:1> Inherited Implicit
+  `-NoThrowAttr 0x7fe3ab860da8 <col:1> Inherited Implicit

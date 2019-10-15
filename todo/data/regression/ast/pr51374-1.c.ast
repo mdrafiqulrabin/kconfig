@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fac4802bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fac48817220 <../Data/C2AST/pr51374-1.c:4:1, line:12:1> line:4:6 vector_18 'void (void)'
+  `-CompoundStmt 0x7fac488177b0 <line:5:1, line:12:1>
+    |-DeclStmt 0x7fac48817380 <line:6:5, col:21>
+    | `-VarDecl 0x7fac48817310 parent 0x7fac4802bce8 <col:5, col:17> col:17 used slot 'char' extern
+    |-DeclStmt 0x7fac488174f0 <line:7:5, col:61>
+    | `-VarDecl 0x7fac488173b0 <col:5, col:60> col:19 used status 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7fac488174d8 <col:28, col:60> 'unsigned char' <LValueToRValue>
+    |     `-ParenExpr 0x7fac488174b8 <col:28, col:60> 'volatile unsigned char' lvalue
+    |       `-UnaryOperator 0x7fac48817498 <col:29, col:56> 'volatile unsigned char' lvalue prefix '*'
+    |         `-CStyleCastExpr 0x7fac48817470 <col:30, col:56> 'volatile unsigned char *' <IntegralToPointer>
+    |           `-IntegerLiteral 0x7fac48817410 <col:56> 'int' 43
+    |-DeclStmt 0x7fac48817638 <line:8:5, col:61>
+    | `-VarDecl 0x7fac48817520 <col:5, col:60> col:19 data 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7fac48817620 <col:28, col:60> 'unsigned char' <LValueToRValue>
+    |     `-ParenExpr 0x7fac48817600 <col:28, col:60> 'volatile unsigned char' lvalue
+    |       `-UnaryOperator 0x7fac488175e0 <col:29, col:56> 'volatile unsigned char' lvalue prefix '*'
+    |         `-CStyleCastExpr 0x7fac488175b8 <col:30, col:56> 'volatile unsigned char *' <IntegralToPointer>
+    |           `-IntegerLiteral 0x7fac48817580 <col:56> 'int' 44
+    `-IfStmt 0x7fac48817778 <line:10:5, line:11:16>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fac488176c8 <line:10:9, col:18> 'int' '&'
+      | |-ImplicitCastExpr 0x7fac488176b0 <col:9> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fac48817698 <col:9> 'unsigned char' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fac48817650 <col:9> 'unsigned char' lvalue Var 0x7fac488173b0 'status' 'unsigned char'
+      | `-IntegerLiteral 0x7fac48817678 <col:18> 'int' 16
+      |-BinaryOperator 0x7fac48817750 <line:11:9, col:16> 'char' '='
+      | |-DeclRefExpr 0x7fac488176f0 <col:9> 'char' lvalue Var 0x7fac48817310 'slot' 'char'
+      | `-ImplicitCastExpr 0x7fac48817738 <col:16> 'char' <IntegralCast>
+      |   `-IntegerLiteral 0x7fac48817718 <col:16> 'int' 0
+      `-<<<NULL>>>

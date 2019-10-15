@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fca898178e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fca89818560 <../Data/C2AST/pr54321.c:2:1, col:23> col:8 struct S definition
+| `-FieldDecl 0x7fca8982f698 <col:12, col:20> col:17 referenced s 'char [0]'
+|-VarDecl 0x7fca8982f790 <col:1, col:26> col:26 used a 'struct S *'
+`-FunctionDecl 0x7fca8982f910 <line:4:1, line:12:1> line:5:1 foo 'void (void)'
+  `-CompoundStmt 0x7fca8982fe20 <line:6:1, line:12:1>
+    |-DeclStmt 0x7fca8982fab8 <line:7:3, col:17>
+    | `-VarDecl 0x7fca8982f9c8 <col:3, col:16> col:9 used b 'char *' cinit
+    |   `-ImplicitCastExpr 0x7fca8982faa0 <col:13, col:16> 'char *' <ArrayToPointerDecay>
+    |     `-MemberExpr 0x7fca8982fa68 <col:13, col:16> 'char [0]' lvalue ->s 0x7fca8982f698
+    |       `-ImplicitCastExpr 0x7fca8982fa50 <col:13> 'struct S *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fca8982fa28 <col:13> 'struct S *' lvalue Var 0x7fca8982f790 'a' 'struct S *'
+    |-DeclStmt 0x7fca8982fb68 <line:8:3, col:12>
+    | `-VarDecl 0x7fca8982fae8 <col:3, col:11> col:7 used c 'int' cinit
+    |   `-IntegerLiteral 0x7fca8982fb48 <col:11> 'int' 0
+    |-BinaryOperator 0x7fca8982fc40 <line:9:3, col:10> 'char' '='
+    | |-ArraySubscriptExpr 0x7fca8982fbe0 <col:3, col:6> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fca8982fbc8 <col:3> 'char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fca8982fb80 <col:3> 'char *' lvalue Var 0x7fca8982f9c8 'b' 'char *'
+    | | `-IntegerLiteral 0x7fca8982fba8 <col:5> 'int' 0
+    | `-ImplicitCastExpr 0x7fca8982fc28 <col:10> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fca8982fc08 <col:10> 'int' 0
+    `-WhileStmt 0x7fca8982fe00 <line:10:3, line:11:12>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fca8982fcd0 <line:10:10, col:16> 'int' '<'
+      | |-UnaryOperator 0x7fca8982fc90 <col:10, col:12> 'int' prefix '++'
+      | | `-DeclRefExpr 0x7fca8982fc68 <col:12> 'int' lvalue Var 0x7fca8982fae8 'c' 'int'
+      | `-IntegerLiteral 0x7fca8982fcb0 <col:16> 'int' 9
+      `-BinaryOperator 0x7fca8982fdd8 <line:11:5, col:12> 'char' '='
+        |-ArraySubscriptExpr 0x7fca8982fd78 <col:5, col:8> 'char' lvalue
+        | |-ImplicitCastExpr 0x7fca8982fd48 <col:5> 'char *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fca8982fcf8 <col:5> 'char *' lvalue Var 0x7fca8982f9c8 'b' 'char *'
+        | `-ImplicitCastExpr 0x7fca8982fd60 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fca8982fd20 <col:7> 'int' lvalue Var 0x7fca8982fae8 'c' 'int'
+        `-ImplicitCastExpr 0x7fca8982fdc0 <col:12> 'char' <IntegralCast>
+          `-IntegerLiteral 0x7fca8982fda0 <col:12> 'int' 255

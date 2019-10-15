@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7f8a320258e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8a320674d8 <../Data/C2AST/pr60071.c:1:1, line:8:1> line:2:1 foo 'int (int, int)'
+| |-ParmVarDecl 0x7f8a32026578 <col:6, col:10> col:10 used cls 'int'
+| |-ParmVarDecl 0x7f8a32067400 <col:15, col:19> col:19 used sign 'int'
+| `-CompoundStmt 0x7f8a32067df0 <line:3:1, line:8:1>
+|   `-IfStmt 0x7f8a32067db8 <line:4:3, line:7:44>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7f8a320678f0 <line:4:7, col:36> 'long'
+|     | |-ImplicitCastExpr 0x7f8a320678d8 <col:7> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7f8a320677d8 <col:7> '<builtin fn type>' Function 0x7f8a32067610 '__builtin_expect' 'long (long, long)'
+|     | |-ImplicitCastExpr 0x7f8a32067928 <col:25, col:32> 'long' <IntegralCast>
+|     | | `-BinaryOperator 0x7f8a32067860 <col:25, col:32> 'int' '=='
+|     | |   |-ImplicitCastExpr 0x7f8a32067848 <col:25> 'int' <LValueToRValue>
+|     | |   | `-DeclRefExpr 0x7f8a32067800 <col:25> 'int' lvalue ParmVar 0x7f8a32026578 'cls' 'int'
+|     | |   `-IntegerLiteral 0x7f8a32067828 <col:32> 'int' 4
+|     | `-ImplicitCastExpr 0x7f8a32067940 <col:35> 'long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8a32067888 <col:35> 'int' 0
+|     |-ReturnStmt 0x7f8a32067da0 <line:5:5, line:7:44>
+|     | `-ParenExpr 0x7f8a32067d80 <line:5:12, line:7:44> 'int'
+|     |   `-ConditionalOperator 0x7f8a32067d50 <line:5:13, line:7:43> 'int'
+|     |     |-ImplicitCastExpr 0x7f8a32067d38 <line:5:13> 'int' <LValueToRValue>
+|     |     | `-DeclRefExpr 0x7f8a32067958 <col:13> 'int' lvalue ParmVar 0x7f8a32067400 'sign' 'int'
+|     |     |-BinaryOperator 0x7f8a32067b78 <line:6:15, col:48> 'int' '-'
+|     |     | |-ParenExpr 0x7f8a32067b38 <col:15, col:46> 'int'
+|     |     | | `-UnaryOperator 0x7f8a32067b18 <col:16, col:45> 'int' prefix '-'
+|     |     | |   `-ParenExpr 0x7f8a32067af8 <col:17, col:45> 'int'
+|     |     | |     `-CStyleCastExpr 0x7f8a32067ad0 <col:18, col:44> 'int' <IntegralCast>
+|     |     | |       `-ParenExpr 0x7f8a32067ab0 <col:24, col:44> 'unsigned int'
+|     |     | |         `-BinaryOperator 0x7f8a32067a40 <col:25, col:43> 'unsigned int' '>>'
+|     |     | |           |-ParenExpr 0x7f8a32067a00 <col:25, col:38> 'unsigned int'
+|     |     | |           | `-UnaryOperator 0x7f8a320679e0 <col:26, col:37> 'unsigned int' prefix '~'
+|     |     | |           |   `-CStyleCastExpr 0x7f8a320679b8 <col:27, col:37> 'unsigned int' <IntegralCast>
+|     |     | |           |     `-IntegerLiteral 0x7f8a32067980 <col:37> 'int' 0
+|     |     | |           `-IntegerLiteral 0x7f8a32067a20 <col:43> 'int' 1
+|     |     | `-IntegerLiteral 0x7f8a32067b58 <col:48> 'int' 1
+|     |     `-ParenExpr 0x7f8a32067d18 <line:7:15, col:43> 'int'
+|     |       `-CStyleCastExpr 0x7f8a32067cf0 <col:16, col:42> 'int' <IntegralCast>
+|     |         `-ParenExpr 0x7f8a32067cd0 <col:22, col:42> 'unsigned int'
+|     |           `-BinaryOperator 0x7f8a32067c60 <col:23, col:41> 'unsigned int' '>>'
+|     |             |-ParenExpr 0x7f8a32067c20 <col:23, col:36> 'unsigned int'
+|     |             | `-UnaryOperator 0x7f8a32067c00 <col:24, col:35> 'unsigned int' prefix '~'
+|     |             |   `-CStyleCastExpr 0x7f8a32067bd8 <col:25, col:35> 'unsigned int' <IntegralCast>
+|     |             |     `-IntegerLiteral 0x7f8a32067ba0 <col:35> 'int' 0
+|     |             `-IntegerLiteral 0x7f8a32067c40 <col:41> 'int' 1
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f8a32067610 <line:4:7> col:7 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7f8a320676b0 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7f8a32067710 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7f8a32067780 <col:7> Implicit
+  `-ConstAttr 0x7f8a320677c8 <col:7> Implicit

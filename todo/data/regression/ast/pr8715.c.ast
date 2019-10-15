@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fa99782bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa997820e00 <../Data/C2AST/pr8715.c:6:1, line:13:1> line:6:5 foo 'int ()'
+  `-CompoundStmt 0x7fa9978210f0 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fa997820f88 <line:8:3, col:24>
+    | `-VarDecl 0x7fa997820ef8 <col:3, col:21> col:17 used b 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7fa997820f70 <col:21> 'unsigned char' <IntegralCast>
+    |     `-CharacterLiteral 0x7fa997820f58 <col:21> 'int' 49
+    |-DeclStmt 0x7fa9978210a0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:31:14, ../Data/C2AST/pr8715.c:10:14>
+    | `-VarDecl 0x7fa997820fb0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:31:14, ../Data/C2AST/pr8715.c:10:13> col:8 x 'bool' cinit
+    |   `-ImplicitCastExpr 0x7fa997821088 <col:12, col:13> 'bool' <IntegralToBoolean>
+    |     `-UnaryOperator 0x7fa997821068 <col:12, col:13> 'int' prefix '~'
+    |       `-ImplicitCastExpr 0x7fa997821050 <col:13> 'int' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7fa997821038 <col:13> 'unsigned char' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fa997821010 <col:13> 'unsigned char' lvalue Var 0x7fa997820ef8 'b' 'unsigned char'
+    `-ReturnStmt 0x7fa9978210d8 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fa9978210b8 <col:10> 'int' 0

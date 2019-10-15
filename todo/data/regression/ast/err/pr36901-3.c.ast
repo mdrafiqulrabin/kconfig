@@ -1,0 +1,23 @@
+../Data/C2AST/pr36901-3.c:3:10: fatal error: 'pr36901.h' file not found
+#include "pr36901.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe38c02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe38c02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe38c02bf80 '__int128'
+|-TypedefDecl 0x7fe38c02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe38c02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe38c02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe38c02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe38c02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe38c02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe38c02c600 'char *'
+|   `-BuiltinType 0x7fe38c02bd80 'char'
+|-TypedefDecl 0x7fe38c02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe38c02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe38c02c720 'struct __va_list_tag'
+|     `-Record 0x7fe38c02c698 '__va_list_tag'
+`-FunctionDecl 0x7fe38c815220 <../Data/C2AST/pr36901-3.c:4:1, line:7:1> line:4:6 foo 'void (void)'
+  `-CompoundStmt 0x7fe38c8153b8 <line:5:1, line:7:1>
+    `-DeclStmt 0x7fe38c8153a0 <line:6:3, col:13>
+      `-VarDecl 0x7fe38c815318 <col:3, col:7> col:7 invalid s 'int'

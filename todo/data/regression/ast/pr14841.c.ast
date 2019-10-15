@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7f835b02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f835b02c960 <../Data/C2AST/pr14841.c:6:1, line:9:1> line:6:8 struct car definition
+| |-FieldDecl 0x7f835b06d838 <line:7:3, col:7> col:7 speed 'int'
+| `-FieldDecl 0x7f835b06d900 <line:8:3, col:22> col:7 referenced tire_pressure 'int [4]'
+|-VarDecl 0x7f835b06da08 <line:11:1, line:15:1> line:11:25 used cars 'const struct car [3]' static cinit
+| `-InitListExpr 0x7f835b06def0 <col:34, line:15:1> 'const struct car [3]'
+|   |-InitListExpr 0x7f835b06df30 <line:12:3, col:28> 'struct car':'struct car'
+|   | |-IntegerLiteral 0x7f835b06daa8 <col:5> 'int' 75
+|   | `-InitListExpr 0x7f835b06df88 <col:9, col:26> 'int [4]'
+|   |   |-IntegerLiteral 0x7f835b06dac8 <col:11> 'int' 10
+|   |   |-IntegerLiteral 0x7f835b06dae8 <col:15> 'int' 20
+|   |   |-IntegerLiteral 0x7f835b06db08 <col:19> 'int' 30
+|   |   `-IntegerLiteral 0x7f835b06db28 <col:23> 'int' 40
+|   |-InitListExpr 0x7f835b06dfe8 <line:13:3, col:28> 'struct car':'struct car'
+|   | |-IntegerLiteral 0x7f835b06dbf8 <col:5> 'int' 35
+|   | `-InitListExpr 0x7f835b06e048 <col:9, col:26> 'int [4]'
+|   |   |-IntegerLiteral 0x7f835b06dc18 <col:11> 'int' 12
+|   |   |-IntegerLiteral 0x7f835b06dc38 <col:15> 'int' 34
+|   |   |-IntegerLiteral 0x7f835b06dc58 <col:19> 'int' 56
+|   |   `-IntegerLiteral 0x7f835b06dc78 <col:23> 'int' 78
+|   `-InitListExpr 0x7f835b06e0a8 <line:14:3, col:28> 'struct car':'struct car'
+|     |-IntegerLiteral 0x7f835b06dd48 <col:5> 'int' 40
+|     `-InitListExpr 0x7f835b06e118 <col:9, col:26> 'int [4]'
+|       |-IntegerLiteral 0x7f835b06dd68 <col:11> 'int' 19
+|       |-IntegerLiteral 0x7f835b06dd88 <col:15> 'int' 28
+|       |-IntegerLiteral 0x7f835b06dda8 <col:19> 'int' 37
+|       `-IntegerLiteral 0x7f835b06ddc8 <col:23> 'int' 46
+|-FunctionDecl 0x7f835b06e2c0 <line:17:1, col:29> col:13 used link_error 'void (void)' extern
+|-FunctionDecl 0x7f835b06e3f0 <line:19:1, line:24:1> line:20:1 foo 'void (void)'
+| `-CompoundStmt 0x7f835b06e838 <line:21:1, line:24:1>
+|   `-IfStmt 0x7f835b06e800 <line:22:3, line:23:17>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f835b06e680 <line:22:7, col:35> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f835b06e668 <col:7, col:30> 'int' <LValueToRValue>
+|     | | `-ArraySubscriptExpr 0x7f835b06e620 <col:7, col:30> 'const int' lvalue
+|     | |   |-ImplicitCastExpr 0x7f835b06e608 <col:7, col:15> 'const int *' <ArrayToPointerDecay>
+|     | |   | `-MemberExpr 0x7f835b06e578 <col:7, col:15> 'int const[4]' lvalue .tire_pressure 0x7f835b06d900
+|     | |   |   `-ArraySubscriptExpr 0x7f835b06e550 <col:7, col:13> 'const struct car':'const struct car' lvalue
+|     | |   |     |-ImplicitCastExpr 0x7f835b06e538 <col:7> 'const struct car *' <ArrayToPointerDecay>
+|     | |   |     | `-DeclRefExpr 0x7f835b06e490 <col:7> 'const struct car [3]' lvalue Var 0x7f835b06da08 'cars' 'const struct car [3]'
+|     | |   |     `-IntegerLiteral 0x7f835b06e4b8 <col:12> 'int' 1
+|     | |   `-IntegerLiteral 0x7f835b06e5b0 <col:29> 'int' 2
+|     | `-IntegerLiteral 0x7f835b06e648 <col:35> 'int' 56
+|     |-CallExpr 0x7f835b06e7c0 <line:23:5, col:17> 'void'
+|     | `-ImplicitCastExpr 0x7f835b06e7a8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f835b06e750 <col:5> 'void (void)' Function 0x7f835b06e2c0 'link_error' 'void (void)'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f835b06e8a0 <line:26:1, col:25> col:5 main 'int ()'
+  `-CompoundStmt 0x7f835b06e978 <col:13, col:25>
+    `-ReturnStmt 0x7f835b06e960 <col:15, col:22>
+      `-IntegerLiteral 0x7f835b06e940 <col:22> 'int' 0

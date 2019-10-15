@@ -1,0 +1,222 @@
+TranslationUnitDecl 0x7f9da182bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9da182c978 <../Data/C2AST/pr39726.c:4:1, col:15> col:15 used v 'unsigned char'
+|-FunctionDecl 0x7f9da20143a8 <line:6:1, line:10:1> line:6:5 a0bs 'int (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9da2014258 <col:11, col:25> col:25 used u 'unsigned char'
+| |-ParmVarDecl 0x7f9da20142d0 <col:28, col:42> col:42 used w 'unsigned char'
+| `-CompoundStmt 0x7f9da2014658 <line:7:1, line:10:1>
+|   `-IfStmt 0x7f9da2014620 <line:8:3, line:9:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2014570 <line:8:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2014530 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da2014508 <col:8, col:12> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7f9da20144c0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da20144a8 <col:8> 'unsigned char' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2014458 <col:8> 'unsigned char' lvalue ParmVar 0x7f9da2014258 'u' 'unsigned char'
+|     | |   `-ImplicitCastExpr 0x7f9da20144f0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da20144d8 <col:12> 'unsigned char' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2014480 <col:12> 'unsigned char' lvalue ParmVar 0x7f9da20142d0 'w' 'unsigned char'
+|     | `-IntegerLiteral 0x7f9da2014550 <col:17> 'int' 128
+|     |-BinaryOperator 0x7f9da20145f8 <line:9:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2014598 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da20145e0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da20145c0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da2014798 <line:12:1, line:16:1> line:12:5 a1bs 'int (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9da2014688 <col:11, col:25> col:25 used u 'unsigned char'
+| |-ParmVarDecl 0x7f9da2014700 <col:28, col:42> col:42 used w 'unsigned char'
+| `-CompoundStmt 0x7f9da2014a48 <line:13:1, line:16:1>
+|   `-IfStmt 0x7f9da2014a10 <line:14:3, line:15:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2014960 <line:14:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2014920 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da20148f8 <col:8, col:12> 'int' '+'
+|     | |   |-ImplicitCastExpr 0x7f9da20148b0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da2014898 <col:8> 'unsigned char' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2014848 <col:8> 'unsigned char' lvalue ParmVar 0x7f9da2014688 'u' 'unsigned char'
+|     | |   `-ImplicitCastExpr 0x7f9da20148e0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da20148c8 <col:12> 'unsigned char' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2014870 <col:12> 'unsigned char' lvalue ParmVar 0x7f9da2014700 'w' 'unsigned char'
+|     | `-IntegerLiteral 0x7f9da2014940 <col:17> 'int' 128
+|     |-BinaryOperator 0x7f9da20149e8 <line:15:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2014988 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da20149d0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da20149b0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da2014b88 <line:18:1, line:22:1> line:18:5 a0b 'int (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9da2014a78 <col:10, col:24> col:24 used u 'unsigned char'
+| |-ParmVarDecl 0x7f9da2014af0 <col:27, col:41> col:41 used w 'unsigned char'
+| `-CompoundStmt 0x7f9da2014e38 <line:19:1, line:22:1>
+|   `-IfStmt 0x7f9da2014e00 <line:20:3, line:21:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2014d50 <line:20:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2014d10 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da2014ce8 <col:8, col:12> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7f9da2014ca0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da2014c88 <col:8> 'unsigned char' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2014c38 <col:8> 'unsigned char' lvalue ParmVar 0x7f9da2014a78 'u' 'unsigned char'
+|     | |   `-ImplicitCastExpr 0x7f9da2014cd0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da2014cb8 <col:12> 'unsigned char' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2014c60 <col:12> 'unsigned char' lvalue ParmVar 0x7f9da2014af0 'w' 'unsigned char'
+|     | `-IntegerLiteral 0x7f9da2014d30 <col:17> 'int' 34
+|     |-BinaryOperator 0x7f9da2014dd8 <line:21:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2014d78 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da2014dc0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da2014da0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da2014f78 <line:24:1, line:28:1> line:24:5 a1b 'int (unsigned char, unsigned char)'
+| |-ParmVarDecl 0x7f9da2014e68 <col:10, col:24> col:24 used u 'unsigned char'
+| |-ParmVarDecl 0x7f9da2014ee0 <col:27, col:41> col:41 used w 'unsigned char'
+| `-CompoundStmt 0x7f9da2015238 <line:25:1, line:28:1>
+|   `-IfStmt 0x7f9da2015200 <line:26:3, line:27:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2015140 <line:26:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2015100 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da20150d8 <col:8, col:12> 'int' '+'
+|     | |   |-ImplicitCastExpr 0x7f9da2015090 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da2015078 <col:8> 'unsigned char' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2015028 <col:8> 'unsigned char' lvalue ParmVar 0x7f9da2014e68 'u' 'unsigned char'
+|     | |   `-ImplicitCastExpr 0x7f9da20150c0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da20150a8 <col:12> 'unsigned char' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2015050 <col:12> 'unsigned char' lvalue ParmVar 0x7f9da2014ee0 'w' 'unsigned char'
+|     | `-IntegerLiteral 0x7f9da2015120 <col:17> 'int' 34
+|     |-BinaryOperator 0x7f9da20151c8 <line:27:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2015168 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da20151b0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da2015190 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da20153b8 <line:30:1, line:34:1> line:30:5 a0ws 'int (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9da2015268 <col:11, col:26> col:26 used u 'unsigned short'
+| |-ParmVarDecl 0x7f9da20152e0 <col:29, col:44> col:44 used w 'unsigned short'
+| `-CompoundStmt 0x7f9da2015668 <line:31:1, line:34:1>
+|   `-IfStmt 0x7f9da2015630 <line:32:3, line:33:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2015580 <line:32:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2015540 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da2015518 <col:8, col:12> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7f9da20154d0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da20154b8 <col:8> 'unsigned short' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2015468 <col:8> 'unsigned short' lvalue ParmVar 0x7f9da2015268 'u' 'unsigned short'
+|     | |   `-ImplicitCastExpr 0x7f9da2015500 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da20154e8 <col:12> 'unsigned short' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2015490 <col:12> 'unsigned short' lvalue ParmVar 0x7f9da20152e0 'w' 'unsigned short'
+|     | `-IntegerLiteral 0x7f9da2015560 <col:17> 'int' 32768
+|     |-BinaryOperator 0x7f9da2015608 <line:33:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da20155a8 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da20155f0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da20155d0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da20157a8 <line:36:1, line:40:1> line:36:5 a1ws 'int (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9da2015698 <col:11, col:26> col:26 used u 'unsigned short'
+| |-ParmVarDecl 0x7f9da2015710 <col:29, col:44> col:44 used w 'unsigned short'
+| `-CompoundStmt 0x7f9da2015a58 <line:37:1, line:40:1>
+|   `-IfStmt 0x7f9da2015a20 <line:38:3, line:39:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2015970 <line:38:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2015930 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da2015908 <col:8, col:12> 'int' '+'
+|     | |   |-ImplicitCastExpr 0x7f9da20158c0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da20158a8 <col:8> 'unsigned short' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2015858 <col:8> 'unsigned short' lvalue ParmVar 0x7f9da2015698 'u' 'unsigned short'
+|     | |   `-ImplicitCastExpr 0x7f9da20158f0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da20158d8 <col:12> 'unsigned short' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2015880 <col:12> 'unsigned short' lvalue ParmVar 0x7f9da2015710 'w' 'unsigned short'
+|     | `-IntegerLiteral 0x7f9da2015950 <col:17> 'int' 32768
+|     |-BinaryOperator 0x7f9da20159f8 <line:39:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2015998 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da20159e0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da20159c0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da2015b98 <line:42:1, line:46:1> line:42:5 a0wbs 'int (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9da2015a88 <col:12, col:27> col:27 used u 'unsigned short'
+| |-ParmVarDecl 0x7f9da2015b00 <col:30, col:45> col:45 used w 'unsigned short'
+| `-CompoundStmt 0x7f9da2015e48 <line:43:1, line:46:1>
+|   `-IfStmt 0x7f9da2015e10 <line:44:3, line:45:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2015d60 <line:44:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2015d20 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da2015cf8 <col:8, col:12> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7f9da2015cb0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da2015c98 <col:8> 'unsigned short' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2015c48 <col:8> 'unsigned short' lvalue ParmVar 0x7f9da2015a88 'u' 'unsigned short'
+|     | |   `-ImplicitCastExpr 0x7f9da2015ce0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da2015cc8 <col:12> 'unsigned short' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2015c70 <col:12> 'unsigned short' lvalue ParmVar 0x7f9da2015b00 'w' 'unsigned short'
+|     | `-IntegerLiteral 0x7f9da2015d40 <col:17> 'int' 128
+|     |-BinaryOperator 0x7f9da2015de8 <line:45:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2015d88 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da2015dd0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da2015db0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da2015f88 <line:48:1, line:52:1> line:48:5 a1wbs 'int (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9da2015e78 <col:12, col:27> col:27 used u 'unsigned short'
+| |-ParmVarDecl 0x7f9da2015ef0 <col:30, col:45> col:45 used w 'unsigned short'
+| `-CompoundStmt 0x7f9da202bc38 <line:49:1, line:52:1>
+|   `-IfStmt 0x7f9da202bc00 <line:50:3, line:51:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da2016150 <line:50:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da2016110 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da20160e8 <col:8, col:12> 'int' '+'
+|     | |   |-ImplicitCastExpr 0x7f9da20160a0 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da2016088 <col:8> 'unsigned short' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da2016038 <col:8> 'unsigned short' lvalue ParmVar 0x7f9da2015e78 'u' 'unsigned short'
+|     | |   `-ImplicitCastExpr 0x7f9da20160d0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da20160b8 <col:12> 'unsigned short' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da2016060 <col:12> 'unsigned short' lvalue ParmVar 0x7f9da2015ef0 'w' 'unsigned short'
+|     | `-IntegerLiteral 0x7f9da2016130 <col:17> 'int' 128
+|     |-BinaryOperator 0x7f9da20161d8 <line:51:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da2016178 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da20161c0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da20161a0 <col:9> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f9da202bd78 <line:54:1, line:58:1> line:54:5 a0w 'int (unsigned short, unsigned short)'
+| |-ParmVarDecl 0x7f9da202bc68 <col:10, col:25> col:25 used u 'unsigned short'
+| |-ParmVarDecl 0x7f9da202bce0 <col:28, col:43> col:43 used w 'unsigned short'
+| `-CompoundStmt 0x7f9da202c028 <line:55:1, line:58:1>
+|   `-IfStmt 0x7f9da202bff0 <line:56:3, line:57:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9da202bf40 <line:56:7, col:17> 'int' '&'
+|     | |-ParenExpr 0x7f9da202bf00 <col:7, col:13> 'int'
+|     | | `-BinaryOperator 0x7f9da202bed8 <col:8, col:12> 'int' '-'
+|     | |   |-ImplicitCastExpr 0x7f9da202be90 <col:8> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7f9da202be78 <col:8> 'unsigned short' <LValueToRValue>
+|     | |   |   `-DeclRefExpr 0x7f9da202be28 <col:8> 'unsigned short' lvalue ParmVar 0x7f9da202bc68 'u' 'unsigned short'
+|     | |   `-ImplicitCastExpr 0x7f9da202bec0 <col:12> 'int' <IntegralCast>
+|     | |     `-ImplicitCastExpr 0x7f9da202bea8 <col:12> 'unsigned short' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f9da202be50 <col:12> 'unsigned short' lvalue ParmVar 0x7f9da202bce0 'w' 'unsigned short'
+|     | `-IntegerLiteral 0x7f9da202bf20 <col:17> 'int' 33825
+|     |-BinaryOperator 0x7f9da202bfc8 <line:57:5, col:9> 'unsigned char' '='
+|     | |-DeclRefExpr 0x7f9da202bf68 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+|     | `-ImplicitCastExpr 0x7f9da202bfb0 <col:9> 'unsigned char' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f9da202bf90 <col:9> 'int' 1
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f9da202c168 <line:60:1, line:64:1> line:60:5 a1w 'int (unsigned short, unsigned short)'
+  |-ParmVarDecl 0x7f9da202c058 <col:10, col:25> col:25 used u 'unsigned short'
+  |-ParmVarDecl 0x7f9da202c0d0 <col:28, col:43> col:43 used w 'unsigned short'
+  `-CompoundStmt 0x7f9da202c418 <line:61:1, line:64:1>
+    `-IfStmt 0x7f9da202c3e0 <line:62:3, line:63:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9da202c330 <line:62:7, col:17> 'int' '&'
+      | |-ParenExpr 0x7f9da202c2f0 <col:7, col:13> 'int'
+      | | `-BinaryOperator 0x7f9da202c2c8 <col:8, col:12> 'int' '+'
+      | |   |-ImplicitCastExpr 0x7f9da202c280 <col:8> 'int' <IntegralCast>
+      | |   | `-ImplicitCastExpr 0x7f9da202c268 <col:8> 'unsigned short' <LValueToRValue>
+      | |   |   `-DeclRefExpr 0x7f9da202c218 <col:8> 'unsigned short' lvalue ParmVar 0x7f9da202c058 'u' 'unsigned short'
+      | |   `-ImplicitCastExpr 0x7f9da202c2b0 <col:12> 'int' <IntegralCast>
+      | |     `-ImplicitCastExpr 0x7f9da202c298 <col:12> 'unsigned short' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7f9da202c240 <col:12> 'unsigned short' lvalue ParmVar 0x7f9da202c0d0 'w' 'unsigned short'
+      | `-IntegerLiteral 0x7f9da202c310 <col:17> 'int' 33825
+      |-BinaryOperator 0x7f9da202c3b8 <line:63:5, col:9> 'unsigned char' '='
+      | |-DeclRefExpr 0x7f9da202c358 <col:5> 'unsigned char' lvalue Var 0x7f9da182c978 'v' 'unsigned char'
+      | `-ImplicitCastExpr 0x7f9da202c3a0 <col:9> 'unsigned char' <IntegralCast>
+      |   `-IntegerLiteral 0x7f9da202c380 <col:9> 'int' 1
+      `-<<<NULL>>>

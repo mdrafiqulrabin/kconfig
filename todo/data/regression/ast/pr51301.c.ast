@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fdcde824ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdcde825978 <../Data/C2AST/pr51301.c:3:1, col:21> col:21 referenced int8_t 'signed char'
+| `-BuiltinType 0x7fdcde824da0 'signed char'
+|-TypedefDecl 0x7fdcde861000 <line:4:1, col:26> col:26 referenced int64_t 'long long'
+| `-BuiltinType 0x7fdcde824e20 'long long'
+`-FunctionDecl 0x7fdcde861210 <line:5:1, line:13:1> line:6:1 f0a 'int64_t (int8_t *restrict)'
+  |-ParmVarDecl 0x7fdcde861108 <col:6, col:28> col:28 used arg1 'int8_t *restrict'
+  `-CompoundStmt 0x7fdcde8619c0 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fdcde861370 <line:8:3, col:10>
+    | `-VarDecl 0x7fdcde861310 <col:3, col:7> col:7 used idx 'int'
+    |-DeclStmt 0x7fdcde861430 <line:9:3, col:21>
+    | `-VarDecl 0x7fdcde861398 <col:3, col:20> col:11 used result 'int64_t':'long long' cinit
+    |   `-ImplicitCastExpr 0x7fdcde861418 <col:20> 'int64_t':'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fdcde8613f8 <col:20> 'int' 0
+    |-ForStmt 0x7fdcde861930 <line:10:3, line:11:51>
+    | |-BinaryOperator 0x7fdcde861490 <line:10:8, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fdcde861448 <col:8> 'int' lvalue Var 0x7fdcde861310 'idx' 'int'
+    | | `-IntegerLiteral 0x7fdcde861470 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdcde861518 <col:17, col:23> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fdcde861500 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fdcde8614b8 <col:17> 'int' lvalue Var 0x7fdcde861310 'idx' 'int'
+    | | `-IntegerLiteral 0x7fdcde8614e0 <col:23> 'int' 416
+    | |-CompoundAssignOperator 0x7fdcde861588 <col:28, col:35> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fdcde861540 <col:28> 'int' lvalue Var 0x7fdcde861310 'idx' 'int'
+    | | `-IntegerLiteral 0x7fdcde861568 <col:35> 'int' 1
+    | `-CompoundAssignOperator 0x7fdcde8618f8 <line:11:5, col:51> 'int64_t':'long long' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    |   |-DeclRefExpr 0x7fdcde8615c0 <col:5> 'int64_t':'long long' lvalue Var 0x7fdcde861398 'result' 'int64_t':'long long'
+    |   `-ImplicitCastExpr 0x7fdcde8618e0 <col:15, col:51> 'long long' <IntegralCast>
+    |     `-BinaryOperator 0x7fdcde8618b8 <col:15, col:51> 'int' '<<'
+    |       |-ImplicitCastExpr 0x7fdcde8618a0 <col:15, col:23> 'int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7fdcde861888 <col:15, col:23> 'int8_t':'signed char' <LValueToRValue>
+    |       |   `-ArraySubscriptExpr 0x7fdcde861668 <col:15, col:23> 'int8_t':'signed char' lvalue
+    |       |     |-ImplicitCastExpr 0x7fdcde861638 <col:15> 'int8_t *' <LValueToRValue>
+    |       |     | `-DeclRefExpr 0x7fdcde8615e8 <col:15> 'int8_t *restrict' lvalue ParmVar 0x7fdcde861108 'arg1' 'int8_t *restrict'
+    |       |     `-ImplicitCastExpr 0x7fdcde861650 <col:20> 'int' <LValueToRValue>
+    |       |       `-DeclRefExpr 0x7fdcde861610 <col:20> 'int' lvalue Var 0x7fdcde861310 'idx' 'int'
+    |       `-ParenExpr 0x7fdcde861868 <col:28, col:51> 'int'
+    |         `-BinaryOperator 0x7fdcde861840 <col:29, col:50> 'int' '=='
+    |           |-ImplicitCastExpr 0x7fdcde8617f8 <col:29, col:37> 'int' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7fdcde8617e0 <col:29, col:37> 'int8_t':'signed char' <LValueToRValue>
+    |           |   `-ArraySubscriptExpr 0x7fdcde861710 <col:29, col:37> 'int8_t':'signed char' lvalue
+    |           |     |-ImplicitCastExpr 0x7fdcde8616e0 <col:29> 'int8_t *' <LValueToRValue>
+    |           |     | `-DeclRefExpr 0x7fdcde861690 <col:29> 'int8_t *restrict' lvalue ParmVar 0x7fdcde861108 'arg1' 'int8_t *restrict'
+    |           |     `-ImplicitCastExpr 0x7fdcde8616f8 <col:34> 'int' <LValueToRValue>
+    |           |       `-DeclRefExpr 0x7fdcde8616b8 <col:34> 'int' lvalue Var 0x7fdcde861310 'idx' 'int'
+    |           `-ImplicitCastExpr 0x7fdcde861828 <col:42, col:50> 'int' <IntegralCast>
+    |             `-ImplicitCastExpr 0x7fdcde861810 <col:42, col:50> 'int8_t':'signed char' <LValueToRValue>
+    |               `-ArraySubscriptExpr 0x7fdcde8617b8 <col:42, col:50> 'int8_t':'signed char' lvalue
+    |                 |-ImplicitCastExpr 0x7fdcde861788 <col:42> 'int8_t *' <LValueToRValue>
+    |                 | `-DeclRefExpr 0x7fdcde861738 <col:42> 'int8_t *restrict' lvalue ParmVar 0x7fdcde861108 'arg1' 'int8_t *restrict'
+    |                 `-ImplicitCastExpr 0x7fdcde8617a0 <col:47> 'int' <LValueToRValue>
+    |                   `-DeclRefExpr 0x7fdcde861760 <col:47> 'int' lvalue Var 0x7fdcde861310 'idx' 'int'
+    `-ReturnStmt 0x7fdcde8619a8 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fdcde861990 <col:10> 'int64_t':'long long' <LValueToRValue>
+        `-DeclRefExpr 0x7fdcde861968 <col:10> 'int64_t':'long long' lvalue Var 0x7fdcde861398 'result' 'int64_t':'long long'

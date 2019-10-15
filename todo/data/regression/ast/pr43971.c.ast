@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fa5c2818ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa5c2819960 <../Data/C2AST/pr43971.c:4:1, line:6:1> line:4:7 union ktime definition
+| `-FieldDecl 0x7fa5c3004038 <line:5:5, col:10> col:10 referenced tv64 'long'
+|-TypedefDecl 0x7fa5c30040d0 <line:7:1, col:21> col:21 referenced ktime_t 'union ktime':'union ktime'
+| `-ElaboratedType 0x7fa5c3004080 'union ktime' sugar
+|   `-RecordType 0x7fa5c3004000 'union ktime'
+|     `-Record 0x7fa5c2819960 'ktime'
+`-FunctionDecl 0x7fa5c30042e0 <line:8:1, line:14:1> line:9:1 do_one_initcall 'ktime_t (ktime_t, ktime_t)'
+  |-ParmVarDecl 0x7fa5c3004160 <col:17, col:25> col:25 used rettime 'ktime_t':'union ktime'
+  |-ParmVarDecl 0x7fa5c30041d0 <col:34, col:42> col:42 used calltime 'ktime_t':'union ktime'
+  `-CompoundStmt 0x7fa5c30047b0 <line:10:1, line:14:1>
+    |-DeclStmt 0x7fa5c3004440 <line:11:5, col:18>
+    | `-VarDecl 0x7fa5c30043e0 <col:5, col:13> col:13 used delta 'ktime_t':'union ktime' nrvo
+    |-BinaryOperator 0x7fa5c3004730 <line:12:5, col:72> 'ktime_t':'union ktime' '='
+    | |-DeclRefExpr 0x7fa5c3004458 <col:5> 'ktime_t':'union ktime' lvalue Var 0x7fa5c30043e0 'delta' 'ktime_t':'union ktime'
+    | `-StmtExpr 0x7fa5c3004710 <col:13, col:72> 'ktime_t':'union ktime'
+    |   `-CompoundStmt 0x7fa5c30046f8 <col:14, col:71>
+    |     `-ImplicitCastExpr 0x7fa5c30046e0 <col:16, col:68> 'ktime_t':'union ktime' <LValueToRValue>
+    |       `-CompoundLiteralExpr 0x7fa5c30046b8 <col:16, col:68> 'ktime_t':'union ktime' lvalue
+    |         `-InitListExpr 0x7fa5c3004670 <col:25, col:68> 'ktime_t':'union ktime' field Field 0x7fa5c3004038 'tv64' 'long'
+    |           `-BinaryOperator 0x7fa5c30045c0 <col:35, col:63> 'long' '-'
+    |             |-ImplicitCastExpr 0x7fa5c3004590 <col:35, col:45> 'long' <LValueToRValue>
+    |             | `-MemberExpr 0x7fa5c30044d8 <col:35, col:45> 'long' lvalue .tv64 0x7fa5c3004038
+    |             |   `-ParenExpr 0x7fa5c30044b8 <col:35, col:43> 'ktime_t':'union ktime' lvalue
+    |             |     `-DeclRefExpr 0x7fa5c3004490 <col:36> 'ktime_t':'union ktime' lvalue ParmVar 0x7fa5c3004160 'rettime' 'ktime_t':'union ktime'
+    |             `-ImplicitCastExpr 0x7fa5c30045a8 <col:52, col:63> 'long' <LValueToRValue>
+    |               `-MemberExpr 0x7fa5c3004558 <col:52, col:63> 'long' lvalue .tv64 0x7fa5c3004038
+    |                 `-ParenExpr 0x7fa5c3004538 <col:52, col:61> 'ktime_t':'union ktime' lvalue
+    |                   `-DeclRefExpr 0x7fa5c3004510 <col:53> 'ktime_t':'union ktime' lvalue ParmVar 0x7fa5c30041d0 'calltime' 'ktime_t':'union ktime'
+    `-ReturnStmt 0x7fa5c3004798 <line:13:5, col:12>
+      `-ImplicitCastExpr 0x7fa5c3004780 <col:12> 'ktime_t':'union ktime' <LValueToRValue>
+        `-DeclRefExpr 0x7fa5c3004758 <col:12> 'ktime_t':'union ktime' lvalue Var 0x7fa5c30043e0 'delta' 'ktime_t':'union ktime'

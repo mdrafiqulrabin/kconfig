@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7fceb982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fceba809a50 <../Data/C2AST/pr53516.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fceba809af0 prev 0x7fceba809a50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fceba809b90 <line:6:1, line:10:1> line:6:8 struct Foo definition
+| |-FieldDecl 0x7fceba809c70 <line:8:3, col:12> col:8 referenced a 'char'
+| | `-IntegerLiteral 0x7fceba809c40 <col:12> 'int' 1
+| `-FieldDecl 0x7fceba809ce8 <line:9:3, col:12> col:8 referenced b 'char'
+|   `-IntegerLiteral 0x7fceba809cb8 <col:12> 'int' 7
+|-VarDecl 0x7fceba809e78 <line:12:1, col:17> col:12 used x 'struct Foo [256]'
+|-VarDecl 0x7fceba809fa0 <line:13:1, col:10> col:5 used y 'int [256]'
+|-FunctionDecl 0x7fceba80a0e0 <line:15:1, line:23:1> line:15:40 used bar 'void (int)'
+| |-ParmVarDecl 0x7fceba80a018 <col:45, col:49> col:49 used n 'int'
+| |-CompoundStmt 0x7fceba80a6d0 <line:16:1, line:23:1>
+| | |-DeclStmt 0x7fceba80a248 <line:17:3, col:8>
+| | | `-VarDecl 0x7fceba80a1e8 <col:3, col:7> col:7 used i 'int'
+| | `-ForStmt 0x7fceba80a698 <line:18:3, line:22:5>
+| |   |-BinaryOperator 0x7fceba80a2a8 <line:18:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7fceba80a260 <col:8> 'int' lvalue Var 0x7fceba80a1e8 'i' 'int'
+| |   | `-IntegerLiteral 0x7fceba80a288 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fceba80a350 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7fceba80a320 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fceba80a2d0 <col:15> 'int' lvalue Var 0x7fceba80a1e8 'i' 'int'
+| |   | `-ImplicitCastExpr 0x7fceba80a338 <col:19> 'int' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fceba80a2f8 <col:19> 'int' lvalue ParmVar 0x7fceba80a018 'n' 'int'
+| |   |-UnaryOperator 0x7fceba80a3a0 <col:22, col:24> 'int' prefix '++'
+| |   | `-DeclRefExpr 0x7fceba80a378 <col:24> 'int' lvalue Var 0x7fceba80a1e8 'i' 'int'
+| |   `-CompoundStmt 0x7fceba80a678 <line:19:5, line:22:5>
+| |     |-BinaryOperator 0x7fceba80a530 <line:20:7, col:16> 'char' '='
+| |     | |-MemberExpr 0x7fceba80a4c0 <col:7, col:12> 'char' lvalue bitfield .a 0x7fceba809c70
+| |     | | `-ArraySubscriptExpr 0x7fceba80a498 <col:7, col:10> 'struct Foo':'struct Foo' lvalue
+| |     | |   |-ImplicitCastExpr 0x7fceba80a468 <col:7> 'struct Foo *' <ArrayToPointerDecay>
+| |     | |   | `-DeclRefExpr 0x7fceba80a3c0 <col:7> 'struct Foo [256]' lvalue Var 0x7fceba809e78 'x' 'struct Foo [256]'
+| |     | |   `-ImplicitCastExpr 0x7fceba80a480 <col:9> 'int' <LValueToRValue>
+| |     | |     `-DeclRefExpr 0x7fceba80a3e8 <col:9> 'int' lvalue Var 0x7fceba80a1e8 'i' 'int'
+| |     | `-ImplicitCastExpr 0x7fceba80a518 <col:16> 'char' <IntegralCast>
+| |     |   `-IntegerLiteral 0x7fceba80a4f8 <col:16> 'int' 0
+| |     `-BinaryOperator 0x7fceba80a650 <line:21:7, col:14> 'int' '='
+| |       |-ArraySubscriptExpr 0x7fceba80a608 <col:7, col:10> 'int' lvalue
+| |       | |-ImplicitCastExpr 0x7fceba80a5d8 <col:7> 'int *' <ArrayToPointerDecay>
+| |       | | `-DeclRefExpr 0x7fceba80a558 <col:7> 'int [256]' lvalue Var 0x7fceba809fa0 'y' 'int [256]'
+| |       | `-ImplicitCastExpr 0x7fceba80a5f0 <col:9> 'int' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7fceba80a580 <col:9> 'int' lvalue Var 0x7fceba80a1e8 'i' 'int'
+| |       `-IntegerLiteral 0x7fceba80a630 <col:14> 'int' 3
+| `-NoInlineAttr 0x7fceba80a188 <line:15:21>
+`-FunctionDecl 0x7fceba80a740 <line:25:1, line:32:1> line:25:5 main 'int ()'
+  `-CompoundStmt 0x7fceba022418 <line:26:1, line:32:1>
+    |-BinaryOperator 0x7fceba80a8d8 <line:27:3, col:12> 'char' '='
+    | |-MemberExpr 0x7fceba80a868 <col:3, col:8> 'char' lvalue bitfield .b 0x7fceba809ce8
+    | | `-ArraySubscriptExpr 0x7fceba80a840 <col:3, col:6> 'struct Foo':'struct Foo' lvalue
+    | |   |-ImplicitCastExpr 0x7fceba80a828 <col:3> 'struct Foo *' <ArrayToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fceba80a7e0 <col:3> 'struct Foo [256]' lvalue Var 0x7fceba809e78 'x' 'struct Foo [256]'
+    | |   `-IntegerLiteral 0x7fceba80a808 <col:5> 'int' 5
+    | `-ImplicitCastExpr 0x7fceba80a8c0 <col:12> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fceba80a8a0 <col:12> 'int' 7
+    |-CallExpr 0x7fceba80a990 <line:28:3, col:11> 'void'
+    | |-ImplicitCastExpr 0x7fceba80a978 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fceba80a900 <col:3> 'void (int)' Function 0x7fceba80a0e0 'bar' 'void (int)'
+    | `-IntegerLiteral 0x7fceba80a928 <col:8> 'int' 256
+    |-IfStmt 0x7fceba0223a8 <line:29:3, line:30:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fceba0222e8 <line:29:7, col:17> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fceba0222d0 <col:7, col:12> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fceba0222b8 <col:7, col:12> 'char' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fceba022260 <col:7, col:12> 'char' lvalue bitfield .b 0x7fceba809ce8
+    | | |     `-ArraySubscriptExpr 0x7fceba022238 <col:7, col:10> 'struct Foo':'struct Foo' lvalue
+    | | |       |-ImplicitCastExpr 0x7fceba022220 <col:7> 'struct Foo *' <ArrayToPointerDecay>
+    | | |       | `-DeclRefExpr 0x7fceba80a9c0 <col:7> 'struct Foo [256]' lvalue Var 0x7fceba809e78 'x' 'struct Foo [256]'
+    | | |       `-IntegerLiteral 0x7fceba022200 <col:9> 'int' 5
+    | | `-IntegerLiteral 0x7fceba022298 <col:17> 'int' 7
+    | |-CallExpr 0x7fceba022380 <line:30:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fceba022368 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fceba022310 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fceba809af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fceba022400 <line:31:3, col:10>
+      `-IntegerLiteral 0x7fceba0223e0 <col:10> 'int' 0

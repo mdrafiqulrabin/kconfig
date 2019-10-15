@@ -1,0 +1,21 @@
+../Data/C2AST/pr37529.c:8:9: error: expected expression
+  goto *;        
+        ^
+1 error generated.
+TranslationUnitDecl 0x7ffa7e0174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa7e017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffa7e017780 '__int128'
+|-TypedefDecl 0x7ffa7e017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffa7e0177a0 'unsigned __int128'
+|-TypedefDecl 0x7ffa7e017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffa7e017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffa7e017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffa7e017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffa7e017e00 'char *'
+|   `-BuiltinType 0x7ffa7e017580 'char'
+|-TypedefDecl 0x7ffa7e018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffa7e0180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffa7e017f20 'struct __va_list_tag'
+|     `-Record 0x7ffa7e017e98 '__va_list_tag'
+`-FunctionDecl 0x7ffa7d829200 <../Data/C2AST/pr37529.c:5:1, line:9:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7ffa7d8292e0 <line:7:1, line:9:1>

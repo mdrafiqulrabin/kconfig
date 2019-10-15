@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fe55a01dee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe55981b788 <../Data/C2AST/pr81736-4.c:4:1, line:8:1> line:5:1 foo 'int (int, int, int, int, int, int, int)'
+  |-ParmVarDecl 0x7fe55a01eb78 <col:6, col:10> col:10 i1 'int'
+  |-ParmVarDecl 0x7fe55981b400 <col:14, col:18> col:18 i2 'int'
+  |-ParmVarDecl 0x7fe55981b478 <col:22, col:26> col:26 i3 'int'
+  |-ParmVarDecl 0x7fe55981b4f0 <col:30, col:34> col:34 i4 'int'
+  |-ParmVarDecl 0x7fe55981b568 <col:38, col:42> col:42 i5 'int'
+  |-ParmVarDecl 0x7fe55981b5e0 <col:46, col:50> col:50 i6 'int'
+  |-ParmVarDecl 0x7fe55981b658 <col:54, col:58> col:58 used i7 'int'
+  `-CompoundStmt 0x7fe55981b8f8 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fe55981b8e0 <line:7:3, col:10>
+      `-ImplicitCastExpr 0x7fe55981b8c8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe55981b8a0 <col:10> 'int' lvalue ParmVar 0x7fe55981b658 'i7' 'int'

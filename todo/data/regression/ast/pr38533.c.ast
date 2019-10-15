@@ -1,0 +1,2147 @@
+TranslationUnitDecl 0x7fad8902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fad8a000028 <../Data/C2AST/pr38533.c:7:1, line:13:1> line:8:1 used foo 'int (void)'
+| `-CompoundStmt 0x7fad8a813200 <line:9:1, line:13:1>
+|   |-DeclStmt 0x7fad8a000230 <line:10:3, col:15>
+|   | |-VarDecl 0x7fad8a000120 <col:3, col:11> col:7 used e 'int' cinit
+|   | | `-IntegerLiteral 0x7fad8a000180 <col:11> 'int' 0
+|   | `-VarDecl 0x7fad8a0001b8 <col:3, col:14> col:14 used f 'int'
+|   |-GCCAsmStmt 0x7fad8a0003c8 <line:3:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000318 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0003a8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0004a8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a000440 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a000490 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000468 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0005b0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000538 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a000590 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a000690 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a000628 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a000678 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000650 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a000798 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000720 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a000778 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a000878 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a000810 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a000860 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000838 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a000980 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000908 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a000960 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a000a60 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0009f8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a000a48 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000a20 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a000b68 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000af0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a000b48 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a000c48 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a000be0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a000c30 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000c08 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a000d50 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000cd8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a000d30 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a000e30 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a000dc8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a000e18 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000df0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a000f38 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a000ec0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a000f18 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a001018 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a000fb0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a001000 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a000fd8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a001120 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0010a8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a001100 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a001200 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001198 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0011e8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0011c0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a001308 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001290 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0012e8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0013e8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001380 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0013d0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0013a8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0014f0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001478 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0014d0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0015d0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001568 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0015b8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a001590 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0016d8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001660 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0016b8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0017b8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001750 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0017a0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a001778 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0018c0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001848 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0018a0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0019a0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001938 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a001988 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a001960 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a001aa8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001a30 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a001a88 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a001b88 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001b20 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a001b70 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a001b48 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a001c90 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001c18 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a001c70 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a001d70 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001d08 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a001d58 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a001d30 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a001e78 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a001e00 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a001e58 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a001f58 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a001ef0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a001f40 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a001f18 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002078 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a002000 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002058 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002158 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0020f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a002140 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a002118 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002260 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0021e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002240 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002340 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0022d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a002328 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a002300 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002448 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0023d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002428 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002528 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0024c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a002510 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0024e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002630 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0025b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002610 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002710 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0026a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0026f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0026d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002818 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0027a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0027f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0028f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a002890 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0028e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0028b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002a00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a002988 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0029e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002ae0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a002a78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a002ac8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a002aa0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002be8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a002b70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002bc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002cc8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a002c60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a002cb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a002c88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002dd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a002d58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002db0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a002eb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a002e48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a002e98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a002e70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a002fb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a002f40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a002f98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003098 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a003030 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003080 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003058 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0031a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a003128 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003180 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003280 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a003218 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003268 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003240 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003388 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a003310 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003368 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003468 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a003400 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003450 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003428 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003570 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0034f8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003550 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003650 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0035e8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003638 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003610 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003758 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0036e0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003738 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003838 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0037d0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003820 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0037f8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003940 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0038c8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003920 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003a20 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0039b8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003a08 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0039e0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003b28 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a003ab0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003b08 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003c08 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a003ba0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003bf0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003bc8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003d10 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a003c98 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003cf0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a003df0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a003d88 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003dd8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003db0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a003ef8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a003e80 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a003ed8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a004600 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a003f70 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a003fc0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a003f98 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a004708 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a004690 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0046e8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0047e8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a004780 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0047d0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0047a8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0048f0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a004878 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0048d0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0049d0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a004968 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0049b8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a004990 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a004ad8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a004a60 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a004ab8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a004bb8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a004b50 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a004ba0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a004b78 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a004cc0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a004c48 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a004ca0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a004da0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a004d38 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a004d88 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a004d60 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a004ea8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a004e30 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a004e88 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a004f88 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a004f20 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a004f70 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a004f48 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a005090 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a005018 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a005070 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a005170 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a005108 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a005158 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a005130 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a005278 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a005200 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a005258 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a005358 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0052f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a005340 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a005318 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a005460 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0053e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a005440 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a005540 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0054d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a005528 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a005500 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a005c50 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0055d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a005c30 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a005d30 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a005cc8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a005d18 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a005cf0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a005e38 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a005dc0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a005e18 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a005f18 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a005eb0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a005f00 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a005ed8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a006020 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a005fa8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a006000 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a006100 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006098 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0060e8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0060c0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a006208 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006190 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0061e8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0062e8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006280 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0062d0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0062a8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0063f0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006378 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0063d0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0064d0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006468 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0064b8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a006490 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0065d8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006560 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0065b8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0066b8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006650 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0066a0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a006678 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0067c0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006748 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0067a0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0068a0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006838 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a006888 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a006860 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0069a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006930 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a006988 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a006a88 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006a20 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a006a70 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a006a48 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a006b90 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006b18 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a006b70 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a006c78 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006c10 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a006c60 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a006c38 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a006d80 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006d08 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a006d60 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a006e60 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006df8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a006e48 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a006e20 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a006f68 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a006ef0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a006f48 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a007048 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a006fe0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a007030 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a007008 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a007150 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0070d8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a007130 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a007230 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0071c8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a007218 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0071f0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a007338 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0072c0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a007318 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a007418 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0073b0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a007400 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0073d8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a007520 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0074a8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a007500 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a007600 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a007598 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0075e8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0075c0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a007708 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a007690 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0076e8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0077e8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a007780 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0077d0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0077a8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0078f0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a007878 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0078d0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0079d0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a007968 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0079b8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a007990 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a007ad8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a007a60 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a007ab8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a007bb8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a007b50 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a007ba0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a007b78 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0088d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a008858 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0088b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0089b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a008948 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a008998 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a008970 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a008ab8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a008a40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a008a98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a008b98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a008b30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a008b80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a008b58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a008ca0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a008c28 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a008c80 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a008d80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a008d18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a008d68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a008d40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a008e88 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a008e10 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a008e68 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a008f68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a008f00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a008f50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a008f28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009070 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a008ff8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009050 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009150 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0090e8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a009138 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a009110 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009258 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0091e0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009238 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009338 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0092d0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a009320 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0092f8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009440 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0093c8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009420 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009520 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0094b8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a009508 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0094e0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009628 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0095b0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009608 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009708 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0096a0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0096f0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0096c8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009820 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a009798 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009800 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009900 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a009898 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0098e8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0098c0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009a08 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a009990 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0099e8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009ae8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a009a80 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a009ad0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a009aa8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009bf0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a009b78 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009bd0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009cd0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a009c68 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a009cb8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a009c90 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009dd8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a009d60 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009db8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a009eb8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a009e50 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a009ea0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a009e78 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a009fc0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a009f48 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a009fa0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00a0a0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00a038 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00a088 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00a060 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00a1a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00a130 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00a188 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00a288 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00a220 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00a270 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00a248 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00a390 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00a318 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00a370 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00a470 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00a408 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00a458 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00a430 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00a578 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00a500 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00a558 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00a658 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00a5f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00a640 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00a618 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00a760 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00a6e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00a740 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00b240 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00a7d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00b228 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00b200 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00b348 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00b2d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00b328 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00b428 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00b3c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00b410 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00b3e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00b530 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00b4b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00b510 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00b610 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00b5a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00b5f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00b5d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00b718 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00b6a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00b6f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00b7f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00b790 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00b7e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00b7b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00b900 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00b888 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00b8e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00b9e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00b978 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00b9c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00b9a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00bae8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00ba70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00bac8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00bbc8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00bb60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00bbb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00bb88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00bcd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00bc58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00bcb0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00bdb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00bd48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00bd98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00bd70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00beb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00be40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00be98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00bf98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00bf30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00bf80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00bf58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00c0a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00c028 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00c080 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00c180 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00c118 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00c168 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00c140 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00c2a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00c230 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00c288 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00c388 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00c320 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00c370 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00c348 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00c490 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00c418 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00c470 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00c570 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00c508 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00c558 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00c530 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00c678 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00c600 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00c658 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00c758 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00c6f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00c740 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00c718 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00c860 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00c7e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00c840 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00c940 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00c8d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00c928 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00c900 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00ca48 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00c9d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00ca28 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00cb28 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00cac0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00cb10 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00cae8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00cc30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00cbb8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00cc10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00cd10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00cca8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00ccf8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00ccd0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00ce18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00cda0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00cdf8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00cef8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00ce90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00cee0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00ceb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00d000 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00cf88 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00cfe0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00d0e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00d078 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00d0c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00d0a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00d200 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00d170 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00d1c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00d2e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00d278 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00d2c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00d2a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00d3e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00d370 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00d3c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00d4c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00d460 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00d4b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00d488 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00d5d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00d558 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00d5b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00d6b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00d648 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00d698 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00d670 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00d7b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00d740 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00d798 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00d898 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00d830 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00d880 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00d858 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00d9a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00d928 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00d980 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00da80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00da18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00da68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00da40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00db88 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00db10 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00db68 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00dc68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00dc00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00dc50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00dc28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00dd70 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00dcf8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00dd50 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00de50 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00dde8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00de38 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00de10 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00df58 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00dee0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00df38 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00e038 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00dfd0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00e020 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00dff8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00e140 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00e0c8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00e120 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00e240 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00e1b8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00e228 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00e200 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00e348 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00e2d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00e328 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00e428 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00e3c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00e410 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00e3e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00e530 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00e4b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00e510 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00e610 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00e5a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00e5f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00e5d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00e718 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00e6a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00e6f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00e7f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00e790 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00e7e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00e7b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00e900 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00e888 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00e8e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00e9e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00e978 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00e9c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00e9a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00eae8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00ea70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00eac8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00ebc8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00eb60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00ebb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00eb88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00ecd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00ec58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00ecb0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00edb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00ed48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00ed98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00ed70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00eeb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00ee40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00ee98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00ef98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00ef30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00ef80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00ef58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00f0a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00f028 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00f080 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00f180 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00f118 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00f168 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00f140 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00f2a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00f230 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00f288 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00f388 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00f320 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00f370 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00f348 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00f490 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00f418 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00f470 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00f570 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00f508 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00f558 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00f530 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00f678 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00f600 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00f658 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00f758 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00f6f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00f740 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00f718 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00f860 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00f7e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00f840 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00f940 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00f8d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00f928 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00f900 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00fa48 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00f9d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00fa28 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00fb28 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00fac0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00fb10 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00fae8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00fc30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00fbb8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00fc10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00fd10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00fca8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00fcf8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00fcd0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a00fe18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00fda0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00fdf8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a00fef8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a00fe90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a00fee0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a00feb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a010000 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a00ff88 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a00ffe0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0100e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a010078 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0100c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0100a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a011a00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a010170 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0101c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a011ae0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a011a78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a011ac8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a011aa0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a011be8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a011b70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a011bc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a011cc8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a011c60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a011cb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a011c88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a011dd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a011d58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a011db0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a011eb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a011e48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a011e98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a011e70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a011fb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a011f40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a011f98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012098 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a012030 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012080 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012058 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0121a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a012128 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012180 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012280 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a012218 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012268 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012240 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012388 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a012310 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012368 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012468 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a012400 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012450 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012428 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012570 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0124f8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012550 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012650 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0125e8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012638 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012610 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012758 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0126e0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012738 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012838 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0127d0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012820 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0127f8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012940 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0128c8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012920 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012a40 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0129b8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012a28 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012a00 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012b48 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a012ad0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012b28 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012c28 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a012bc0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012c10 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012be8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012d30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a012cb8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012d10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012e10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a012da8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012df8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012dd0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a012f18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a012ea0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a012ef8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a012ff8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a012f90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a012fe0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a012fb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a013100 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a013088 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0130e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0131e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a013178 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0131c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0131a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0132e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a013270 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0132c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0133c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a013360 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0133b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a013388 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0134d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a013458 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0134b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0135b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a013548 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a013598 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a013570 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0136b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a013640 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a013698 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a013798 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a013730 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a013780 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a013758 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0138a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a013828 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a013880 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a013980 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a013918 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a013968 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a013940 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a014ca8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a014c30 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a014c88 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a014d88 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a014d20 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a014d70 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a014d48 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a014e90 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a014e18 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a014e70 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a014f70 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a014f08 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a014f58 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a014f30 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015078 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a015000 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015058 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015158 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0150f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a015140 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a015118 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015260 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0151e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015240 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015340 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0152d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a015328 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a015300 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015448 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0153d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015428 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015528 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0154c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a015510 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0154e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015630 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0155b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015610 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015710 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0156a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0156f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0156d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015818 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0157a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0157f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0158f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a015890 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0158e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0158b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015a00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a015988 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0159e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015ae0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a015a78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a015ac8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a015aa0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015c00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a015b70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015bc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015ce0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a015c78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a015cc8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a015ca0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015de8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a015d70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015dc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a015ec8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a015e60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a015eb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a015e88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a015fd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a015f58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a015fb0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0160b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016048 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016098 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016070 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0161b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a016140 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016198 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016298 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016230 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016280 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016258 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0163a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a016328 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016380 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016480 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016418 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016468 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016440 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a016588 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a016510 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016568 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016668 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016600 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016650 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016628 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a016770 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0166f8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016750 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016850 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0167e8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016838 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016810 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a016958 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0168e0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016938 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016a38 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0169d0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016a20 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0169f8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a016b40 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a016ac8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016b20 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016c40 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016bb8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016c28 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016c00 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a016d48 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a016cd0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016d28 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a016e28 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016dc0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016e10 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016de8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a016f30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a016eb8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a016f10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a017010 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a016fa8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a016ff8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a016fd0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a017118 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0170a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0170f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0171f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017190 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0171e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0171b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a017300 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017288 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0172e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0173e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017378 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0173c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0173a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0174e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017470 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0174c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0175c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017560 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0175b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a017588 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0176d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017658 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0176b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0177b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017748 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a017798 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a017770 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0178b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017840 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a017898 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a017998 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017930 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a017980 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a017958 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a017aa0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017a28 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a017a80 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a017b80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017b18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a017b68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a017b40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a017ca8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017c30 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a017c88 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a017d88 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017d20 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a017d70 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a017d48 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a017e90 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a017e18 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a017e70 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a017f70 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a017f08 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a017f58 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a017f30 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018078 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a018000 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018058 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018158 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0180f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a018140 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a018118 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018260 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0181e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018240 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018340 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0182d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a018328 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a018300 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018448 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0183d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018428 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018528 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0184c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a018510 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0184e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018630 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0185b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018610 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018710 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0186a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0186f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0186d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018818 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0187a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0187f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0188f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a018890 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a0188e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0188b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018a00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a018988 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a0189e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018ae0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a018a78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a018ac8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a018aa0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018c00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a018b70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018bc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018ce0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a018c78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a018cc8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a018ca0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018de8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a018d70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018dc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a018ec8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a018e60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a018eb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a018e88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a018fd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a018f58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a018fb0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a0190b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019048 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019098 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019070 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0191b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a019140 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019198 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019298 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019230 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019280 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019258 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a0193a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a019328 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019380 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019480 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019418 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019468 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019440 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a019588 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a019510 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019568 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019668 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019600 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019650 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019628 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a019770 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0196f8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019750 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019850 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0197e8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019838 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019810 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a019958 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a0198e0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019938 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019a38 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a0199d0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019a20 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a0199f8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a019b40 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a019ac8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019b20 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019c40 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019bb8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019c28 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019c00 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a019d48 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a019cd0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019d28 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a019e28 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019dc0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019e10 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019de8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a019f30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a019eb8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a019f10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01a010 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a019fa8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a019ff8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a019fd0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01a118 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01a0a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01a0f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01a1f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01a190 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01a1e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01a1b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01a300 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01a288 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01a2e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01a3e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01a378 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01a3c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01a3a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01a4e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01a470 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01a4c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01a5c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01a560 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01a5b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01a588 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01a6d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01a658 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01a6b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01a7b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01a748 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01a798 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01a770 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01a8b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01a840 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01a898 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01a998 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01a930 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01a980 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01a958 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01aaa0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01aa28 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01aa80 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01ab80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01ab18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01ab68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01ab40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01aca8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01ac30 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01ac88 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01ad88 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01ad20 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01ad70 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01ad48 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01ae90 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01ae18 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01ae70 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01af70 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01af08 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01af58 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01af30 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01b078 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01b000 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01b058 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01b158 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01b0f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01b140 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01b118 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01b260 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01b1e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01b240 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01b340 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01b2d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01b328 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01b300 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01b448 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01b3d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01b428 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01b528 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01b4c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01b510 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01b4e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01b630 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01b5b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01b610 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01b710 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01b6a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01b6f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01b6d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01b818 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01b7a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01b7f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01b8f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01b890 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01b8e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01b8b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a01ba00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01b988 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01b9e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a01bae0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a01ba78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a01bac8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a01baa0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a800000 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a01bb70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a01bbc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8000e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800078 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8000c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8000a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8001e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800170 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8001c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8002c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800260 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8002b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800288 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8003d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800358 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8003b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8004b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800448 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a800498 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800470 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8005b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800540 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a800598 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a800698 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800630 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a800680 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800658 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8007a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800728 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a800780 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a800880 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800818 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a800868 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800840 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a800988 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800910 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a800968 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a800a68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800a00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a800a50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800a28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a800b70 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800af8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a800b50 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a800c50 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800be8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a800c38 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800c10 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a800d58 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800ce0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a800d38 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a800e38 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800dd0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a800e20 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a800df8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a800f40 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a800ec8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a800f20 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a801040 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a800fb8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a801028 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a801000 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801148 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8010d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a801128 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a801228 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8011c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a801210 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8011e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801330 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8012b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a801310 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a801410 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8013a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8013f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8013d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801518 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8014a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8014f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8015f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a801590 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8015e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8015b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801700 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a801688 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8016e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8017e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a801778 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8017c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8017a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8018e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a801870 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8018c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8019c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a801960 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8019b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a801988 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801ad0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a801a58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a801ab0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a801bb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a801b48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a801b98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a801b70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801cb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a801c40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a801c98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a801d98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a801d30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a801d80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a801d58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a801ea0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a801e28 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a801e80 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a801f80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a801f18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a801f68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a801f40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8020a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a802030 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802088 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802188 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a802120 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802170 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802148 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802290 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a802218 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802270 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802370 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a802308 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802358 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802330 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802478 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a802400 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802458 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802558 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8024f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802540 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802518 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802660 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8025e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802640 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802740 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8026d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802728 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802700 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802848 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8027d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802828 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802928 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8028c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802910 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8028e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802a30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8029b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802a10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802b10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a802aa8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802af8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802ad0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802c18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a802ba0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802bf8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802cf8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a802c90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802ce0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802cb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a802e00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a802d88 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802de0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a802ee0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a802e78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a802ec8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a802ea0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a803000 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a802f70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a802fc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8030e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803078 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8030c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8030a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8031e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803170 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8031c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8032c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803260 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8032b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803288 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8033d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803358 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8033b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8034b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803448 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a803498 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803470 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8035b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803540 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a803598 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a803698 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803630 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a803680 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803658 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8037a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803728 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a803780 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a803880 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803818 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a803868 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803840 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a803988 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803910 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a803968 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a803a68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803a00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a803a50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803a28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a803b70 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803af8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a803b50 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a803c50 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803be8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a803c38 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803c10 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a803d58 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803ce0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a803d38 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a803e38 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803dd0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a803e20 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a803df8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a803f40 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a803ec8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a803f20 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a804040 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a803fb8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a804028 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a804000 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804148 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8040d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a804128 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a804228 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8041c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a804210 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8041e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804330 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8042b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a804310 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a804410 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8043a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8043f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8043d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804518 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8044a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8044f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8045f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a804590 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8045e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8045b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804700 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a804688 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8046e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8047e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a804778 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8047c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8047a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8048e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a804870 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8048c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8049c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a804960 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8049b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a804988 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804ad0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a804a58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a804ab0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a804bb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a804b48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a804b98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a804b70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804cb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a804c40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a804c98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a804d98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a804d30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a804d80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a804d58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a804ea0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a804e28 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a804e80 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a804f80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a804f18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a804f68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a804f40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8080a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a808030 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808088 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808188 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a808120 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808170 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808148 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808290 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a808218 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808270 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808370 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a808308 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808358 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808330 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808478 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a808400 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808458 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808558 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8084f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808540 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808518 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808660 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8085e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808640 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808740 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8086d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808728 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808700 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808848 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8087d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808828 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808928 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8088c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808910 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8088e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808a30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8089b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808a10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808b10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a808aa8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808af8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808ad0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808c18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a808ba0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808bf8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808cf8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a808c90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808ce0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808cb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a808e00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a808d88 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808de0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a808ee0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a808e78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a808ec8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a808ea0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a809000 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a808f70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a808fc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8090e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809078 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8090c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8090a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8091e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809170 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8091c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8092c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809260 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8092b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809288 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8093d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809358 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8093b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8094b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809448 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a809498 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809470 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8095b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809540 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a809598 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a809698 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809630 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a809680 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809658 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8097a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809728 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a809780 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a809880 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809818 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a809868 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809840 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a809988 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809910 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a809968 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a809a68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809a00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a809a50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809a28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a809b70 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809af8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a809b50 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a809c50 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809be8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a809c38 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809c10 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a809d58 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809ce0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a809d38 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a809e38 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809dd0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a809e20 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a809df8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a809f40 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a809ec8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a809f20 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80a040 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a809fb8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80a028 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80a000 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80a148 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80a0d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80a128 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80a228 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80a1c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80a210 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80a1e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80a330 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80a2b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80a310 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80a410 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80a3a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80a3f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80a3d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80a518 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80a4a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80a4f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80a5f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80a590 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80a5e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80a5b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80a700 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80a688 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80a6e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80a7e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80a778 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80a7c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80a7a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80a8e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80a870 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80a8c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80a9c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80a960 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80a9b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80a988 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80aad0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80aa58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80aab0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80abb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80ab48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80ab98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80ab70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80acb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80ac40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80ac98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80ad98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80ad30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80ad80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80ad58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80aea0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80ae28 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80ae80 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80af80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80af18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80af68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80af40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80b0a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80b030 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80b088 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80b188 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80b120 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80b170 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80b148 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80b290 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80b218 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80b270 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80b370 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80b308 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80b358 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80b330 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80b478 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80b400 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80b458 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80b558 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80b4f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80b540 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80b518 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80b660 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80b5e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80b640 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80b740 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80b6d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80b728 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80b700 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80b848 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80b7d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80b828 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80b928 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80b8c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80b910 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80b8e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80ba30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80b9b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80ba10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80bb10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80baa8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80baf8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80bad0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80bc18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80bba0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80bbf8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80bcf8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80bc90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80bce0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80bcb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80be00 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80bd88 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80bde0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80bee0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80be78 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80bec8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80bea0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80e200 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80bf70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80bfc8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80e2e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80e278 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80e2c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80e2a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80e3e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80e370 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80e3c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80e4c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80e460 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80e4b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80e488 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80e5d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80e558 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80e5b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80e6b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80e648 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80e698 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80e670 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80e7b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80e740 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80e798 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80e898 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80e830 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80e880 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80e858 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80e9a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80e928 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80e980 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80ea80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80ea18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80ea68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80ea40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80eb88 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80eb10 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80eb68 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80ec68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80ec00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80ec50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80ec28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80ed70 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80ecf8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80ed50 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80ee50 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80ede8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80ee38 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80ee10 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80ef58 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80eee0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80ef38 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80f038 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80efd0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80f020 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80eff8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80f140 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80f0c8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80f120 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80f240 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80f1b8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80f228 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80f200 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80f348 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80f2d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80f328 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80f428 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80f3c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80f410 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80f3e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80f530 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80f4b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80f510 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80f610 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80f5a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80f5f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80f5d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80f718 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80f6a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80f6f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80f7f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80f790 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80f7e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80f7b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80f900 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80f888 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80f8e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80f9e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80f978 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80f9c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80f9a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80fae8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80fa70 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80fac8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80fbc8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80fb60 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80fbb0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80fb88 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80fcd0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80fc58 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80fcb0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80fdb0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80fd48 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80fd98 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80fd70 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a80feb8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a80fe40 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a80fe98 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a80ff98 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a80ff30 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a80ff80 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a80ff58 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8100a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810028 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810080 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810180 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a810118 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810168 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810140 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8102a8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810230 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810288 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810388 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a810320 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810370 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810348 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a810490 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810418 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810470 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810570 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a810508 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810558 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810530 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a810678 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810600 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810658 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810758 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8106f0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810740 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810718 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a810860 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8107e8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810840 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810940 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8108d8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810928 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810900 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a810a48 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8109d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810a28 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810b28 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a810ac0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810b10 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810ae8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a810c30 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810bb8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810c10 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810d10 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a810ca8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810cf8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810cd0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a810e18 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810da0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810df8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a810ef8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a810e90 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a810ee0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a810eb8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a811000 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a810f88 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a810fe0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8110e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811078 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8110c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8110a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a811200 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811170 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8111c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8112e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811278 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8112c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8112a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8113e8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811370 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8113c8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8114c8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811460 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8114b0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811488 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8115d0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811558 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8115b0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8116b0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811648 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a811698 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811670 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8117b8 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811740 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a811798 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a811898 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811830 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a811880 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811858 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a8119a0 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811928 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a811980 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a811a80 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811a18 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a811a68 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811a40 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a811b88 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811b10 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a811b68 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a811c68 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811c00 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a811c50 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811c28 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a811d70 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811cf8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a811d50 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a811e50 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811de8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a811e38 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811e10 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a811f58 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a811ee0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a811f38 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a812038 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a811fd0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a812020 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a811ff8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a812140 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8120c8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a812120 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a812240 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8121b8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a812228 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a812200 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a812348 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8122d0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a812328 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a812428 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8123c0 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a812410 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8123e8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a812530 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8124b8 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a812510 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a812610 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a8125a8 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8125f8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8125d0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a812718 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a8126a0 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8126f8 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8127f8 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a812790 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8127e0 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8127b8 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   |-GCCAsmStmt 0x7fad8a812900 <col:11, col:48>
+|   | |-DeclRefExpr 0x7fad8a812888 <col:36> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   | `-IntegerLiteral 0x7fad8a8128e0 <col:46> 'int' 0
+|   |-CompoundAssignOperator 0x7fad8a8129e0 <col:51, col:56> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fad8a812978 <col:51> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|   | `-ImplicitCastExpr 0x7fad8a8129c8 <col:56> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fad8a8129a0 <col:56> 'int' lvalue Var 0x7fad8a0001b8 'f' 'int'
+|   `-ReturnStmt 0x7fad8a812a58 <line:12:3, col:10>
+|     `-ImplicitCastExpr 0x7fad8a812a40 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fad8a812a18 <col:10> 'int' lvalue Var 0x7fad8a000120 'e' 'int'
+|-FunctionDecl 0x7fad8a812b08 <line:15:1, line:21:1> line:16:1 main 'int (void)'
+| `-CompoundStmt 0x7fad8a812e88 <line:17:1, line:21:1>
+|   |-IfStmt 0x7fad8a812e18 <line:18:3, line:19:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fad8a812c40 <line:18:7, col:12> 'int'
+|   | | `-ImplicitCastExpr 0x7fad8a812c28 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fad8a812bd8 <col:7> 'int (void)' Function 0x7fad8a000028 'foo' 'int (void)'
+|   | |-CallExpr 0x7fad8a812df0 <line:19:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fad8a812dd8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fad8a812d88 <col:5> '<builtin fn type>' Function 0x7fad8a812ca0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fad8a812e70 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7fad8a812e50 <col:10> 'int' 0
+`-FunctionDecl 0x7fad8a812ca0 <line:19:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fad8a812d40 <col:5> Implicit

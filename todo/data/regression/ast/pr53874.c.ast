@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fcd188248e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fcd18825560 <../Data/C2AST/pr53874.c:5:1, col:18> col:6 E
+| |-EnumConstantDecl 0x7fcd19817820 <col:10> col:10 referenced A 'int'
+| |-EnumConstantDecl 0x7fcd19817868 <col:13> col:13 referenced B 'int'
+| `-EnumConstantDecl 0x7fcd198178b0 <col:16> col:16 C 'int'
+|-RecordDecl 0x7fcd198178f8 <line:6:1, col:24> col:8 struct S definition
+| `-FieldDecl 0x7fcd19817a10 <col:12, col:21> col:19 referenced e 'enum E':'enum E'
+|   `-IntegerLiteral 0x7fcd198179a0 <col:21> 'int' 2
+|-TypedefDecl 0x7fcd19817ab0 <line:7:1, col:18> col:18 referenced TS 'struct S':'struct S'
+| `-ElaboratedType 0x7fcd19817a60 'struct S' sugar
+|   `-RecordType 0x7fcd19817980 'struct S'
+|     `-Record 0x7fcd198178f8 'S'
+|-FunctionDecl 0x7fcd19817c98 <line:9:1, line:21:1> line:10:1 fn0 'int (struct S *)'
+| |-ParmVarDecl 0x7fcd19817b90 <col:6, col:16> col:16 used s 'struct S *'
+| `-CompoundStmt 0x7fcd19818008 <line:11:1, line:21:1>
+|   `-SwitchStmt 0x7fcd19817e28 <line:12:3, line:20:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fcd19817e10 <line:12:11, col:14> 'int' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7fcd19817df8 <col:11, col:14> 'enum E':'enum E' <LValueToRValue>
+|     |   `-MemberExpr 0x7fcd19817dc0 <col:11, col:14> 'enum E':'enum E' lvalue bitfield ->e 0x7fcd19817a10
+|     |     `-ImplicitCastExpr 0x7fcd19817da8 <col:11> 'struct S *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7fcd19817d80 <col:11> 'struct S *' lvalue ParmVar 0x7fcd19817b90 's' 'struct S *'
+|     `-CompoundStmt 0x7fcd19817fe0 <line:13:5, line:20:5>
+|       |-CaseStmt 0x7fcd19817e80 <line:14:5, line:15:14>
+|       | |-DeclRefExpr 0x7fcd19817e58 <line:14:10> 'int' EnumConstant 0x7fcd19817820 'A' 'int'
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fcd19817ed8 <line:15:7, col:14>
+|       |   `-IntegerLiteral 0x7fcd19817eb8 <col:14> 'int' 1
+|       |-CaseStmt 0x7fcd19817f18 <line:16:5, line:17:14>
+|       | |-DeclRefExpr 0x7fcd19817ef0 <line:16:10> 'int' EnumConstant 0x7fcd19817868 'B' 'int'
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fcd19817f70 <line:17:7, col:14>
+|       |   `-IntegerLiteral 0x7fcd19817f50 <col:14> 'int' 2
+|       `-DefaultStmt 0x7fcd19817fc0 <line:18:5, line:19:14>
+|         `-ReturnStmt 0x7fcd19817fa8 <col:7, col:14>
+|           `-IntegerLiteral 0x7fcd19817f88 <col:14> 'int' 0
+`-FunctionDecl 0x7fcd19818148 <line:23:1, line:35:1> line:24:1 fn1 'int (TS *)'
+  |-ParmVarDecl 0x7fcd19818078 <col:6, col:10> col:10 used s 'TS *'
+  `-CompoundStmt 0x7fcd19818478 <line:25:1, line:35:1>
+    `-SwitchStmt 0x7fcd19818298 <line:26:3, line:34:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fcd19818280 <line:26:11, col:14> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fcd19818268 <col:11, col:14> 'enum E':'enum E' <LValueToRValue>
+      |   `-MemberExpr 0x7fcd19818230 <col:11, col:14> 'enum E':'enum E' lvalue bitfield ->e 0x7fcd19817a10
+      |     `-ImplicitCastExpr 0x7fcd19818218 <col:11> 'TS *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fcd198181f0 <col:11> 'TS *' lvalue ParmVar 0x7fcd19818078 's' 'TS *'
+      `-CompoundStmt 0x7fcd19818450 <line:27:5, line:34:5>
+        |-CaseStmt 0x7fcd198182f0 <line:28:5, line:29:14>
+        | |-DeclRefExpr 0x7fcd198182c8 <line:28:10> 'int' EnumConstant 0x7fcd19817820 'A' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fcd19818348 <line:29:7, col:14>
+        |   `-IntegerLiteral 0x7fcd19818328 <col:14> 'int' 1
+        |-CaseStmt 0x7fcd19818388 <line:30:5, line:31:14>
+        | |-DeclRefExpr 0x7fcd19818360 <line:30:10> 'int' EnumConstant 0x7fcd19817868 'B' 'int'
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fcd198183e0 <line:31:7, col:14>
+        |   `-IntegerLiteral 0x7fcd198183c0 <col:14> 'int' 2
+        `-DefaultStmt 0x7fcd19818430 <line:32:5, line:33:14>
+          `-ReturnStmt 0x7fcd19818418 <col:7, col:14>
+            `-IntegerLiteral 0x7fcd198183f8 <col:14> 'int' 0

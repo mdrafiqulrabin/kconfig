@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7f8e998068e8 <<invalid sloc>> <invalid sloc>
+`-TypedefDecl 0x7f8e99017a00 <../Data/C2AST/pr21969.c:4:1, col:15> col:15 vsf '__attribute__((__vector_size__(512 * sizeof(float)))) float'
+  `-VectorType 0x7f8e99807580 '__attribute__((__vector_size__(512 * sizeof(float)))) float' 512
+    `-BuiltinType 0x7f8e99806ae0 'float'

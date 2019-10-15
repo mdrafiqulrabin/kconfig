@@ -1,0 +1,19 @@
+../Data/C2AST/pr38016.c:1:10: fatal error: 'fp-cmp-8.c' file not found
+#include "fp-cmp-8.c"
+         ^~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f90a38172e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f90a3817860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f90a3817580 '__int128'
+|-TypedefDecl 0x7f90a38178d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f90a38175a0 'unsigned __int128'
+|-TypedefDecl 0x7f90a3817ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f90a38179b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f90a3817928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f90a3817c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f90a3817c00 'char *'
+|   `-BuiltinType 0x7f90a3817380 'char'
+`-TypedefDecl 0x7f90a3817f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7f90a3817eb0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7f90a3817d20 'struct __va_list_tag'
+      `-Record 0x7f90a3817c98 '__va_list_tag'

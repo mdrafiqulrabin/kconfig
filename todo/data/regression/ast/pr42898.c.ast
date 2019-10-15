@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fd4ff82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd4ff82c960 <../Data/C2AST/pr42898.c:5:1, line:11:1> line:5:8 struct hardware definition
+| |-FieldDecl 0x7fd50000a058 <line:6:3, col:13> col:7 parm1 'int'
+| | `-IntegerLiteral 0x7fd50000a020 <col:13> 'int' 8
+| |-FieldDecl 0x7fd50000a0d8 <line:7:3, col:8> col:3 'int'
+| | `-IntegerLiteral 0x7fd50000a0a0 <col:8> 'int' 4
+| |-FieldDecl 0x7fd50000a158 <line:8:3, col:13> col:7 parm2 'int'
+| | `-IntegerLiteral 0x7fd50000a120 <col:13> 'int' 4
+| |-FieldDecl 0x7fd50000a1d8 <line:9:3, col:13> col:7 parm3 'int'
+| | `-IntegerLiteral 0x7fd50000a1a0 <col:13> 'int' 15
+| `-FieldDecl 0x7fd50000a258 <line:10:3, col:13> col:7 parm4 'int'
+|   `-IntegerLiteral 0x7fd50000a220 <col:13> 'int' 1
+`-FunctionDecl 0x7fd50000a450 <line:13:1, line:21:1> line:13:6 f1 'void (volatile struct hardware *)'
+  |-ParmVarDecl 0x7fd50000a350 <col:9, col:35> col:35 used ptr 'volatile struct hardware *'
+  `-CompoundStmt 0x7fd50000a868 <line:14:1, line:21:1>
+    `-BinaryOperator 0x7fd50000a840 <line:15:3, line:20:3> 'struct hardware':'struct hardware' '='
+      |-UnaryOperator 0x7fd50000a578 <line:15:3, col:4> 'volatile struct hardware':'volatile struct hardware' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fd50000a560 <col:4> 'volatile struct hardware *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd50000a538 <col:4> 'volatile struct hardware *' lvalue ParmVar 0x7fd50000a350 'ptr' 'volatile struct hardware *'
+      `-ImplicitCastExpr 0x7fd50000a828 <col:8, line:20:3> 'struct hardware':'struct hardware' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fd50000a800 <line:15:8, line:20:3> 'struct hardware':'struct hardware' lvalue
+          `-InitListExpr 0x7fd50000a798 <line:15:26, line:20:3> 'struct hardware':'struct hardware'
+            |-IntegerLiteral 0x7fd50000a5b8 <line:16:12> 'int' 42
+            |-IntegerLiteral 0x7fd50000a618 <line:17:12> 'int' 13
+            |-IntegerLiteral 0x7fd50000a678 <line:18:12> 'int' 11850
+            `-IntegerLiteral 0x7fd50000a6d8 <line:19:12> 'int' 1

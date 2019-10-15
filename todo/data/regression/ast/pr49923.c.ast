@@ -1,0 +1,74 @@
+TranslationUnitDecl 0x7fd9f50068e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd9f5007560 <../Data/C2AST/pr49923.c:6:1, line:9:1> line:6:15 struct aostk_point_u8 definition
+| |-PackedAttr 0x7fd9f4056220 <line:4:32>
+| |-FieldDecl 0x7fd9f4056280 <line:7:3, col:17> col:17 x 'unsigned char'
+| `-FieldDecl 0x7fd9f40562e0 <line:8:3, col:17> col:17 y 'unsigned char'
+|-RecordDecl 0x7fd9f4056328 <line:11:1, line:14:1> line:11:15 struct aostk_size_u8 definition
+| |-PackedAttr 0x7fd9f40563d0 <line:4:32>
+| |-FieldDecl 0x7fd9f4056430 <line:12:3, col:17> col:17 width 'unsigned char'
+| `-FieldDecl 0x7fd9f4056490 <line:13:3, col:17> col:17 height 'unsigned char'
+|-RecordDecl 0x7fd9f40564d8 <line:16:1, line:24:1> line:16:15 struct aostk_glyph definition
+| |-PackedAttr 0x7fd9f4056580 <line:4:32>
+| |-FieldDecl 0x7fd9f40565e0 <line:17:2, col:17> col:17 i 'unsigned short'
+| |-FieldDecl 0x7fd9f4056680 <line:18:2, col:23> col:23 size 'struct aostk_size_u8':'struct aostk_size_u8'
+| |-FieldDecl 0x7fd9f40566d8 <line:19:2, col:7> col:7 top 'char'
+| |-FieldDecl 0x7fd9f4056770 <line:20:2, col:24> col:24 advance 'struct aostk_point_u8':'struct aostk_point_u8'
+| |-FieldDecl 0x7fd9f40567d0 <line:21:2, col:16> col:16 pitch 'unsigned char'
+| |-FieldDecl 0x7fd9f4056860 <line:22:2, col:17> col:17 data 'unsigned char *'
+| `-FieldDecl 0x7fd9f40568b8 <line:23:2, col:7> col:7 left 'char'
+|-RecordDecl 0x7fd9f4056900 <line:27:1, line:31:1> line:27:15 struct aostk_font definition
+| |-PackedAttr 0x7fd9f40569b0 <line:4:32>
+| |-FieldDecl 0x7fd9f4056a10 <line:28:2, col:17> col:17 numglyphs 'unsigned short'
+| |-FieldDecl 0x7fd9f4056a70 <line:29:2, col:16> col:16 height 'unsigned char'
+| `-FieldDecl 0x7fd9f4056b70 <line:30:2, col:22> col:22 referenced glyphs 'struct aostk_glyph *'
+|-VarDecl 0x7fd9f4056c10 <line:33:1, col:19> col:19 used glob_font 'struct aostk_font':'struct aostk_font'
+|-FunctionDecl 0x7fd9f4056ed8 <line:35:1, line:37:1> line:35:28 used aostk_get_glyph 'struct aostk_glyph *(struct aostk_font *, unsigned int)' static
+| |-ParmVarDecl 0x7fd9f4056d30 <col:44, col:63> col:63 used f 'struct aostk_font *'
+| |-ParmVarDecl 0x7fd9f4056da8 <col:66, col:79> col:79 c 'unsigned int'
+| `-CompoundStmt 0x7fd9f4057030 <col:82, line:37:1>
+|   `-ReturnStmt 0x7fd9f4057018 <line:36:2, col:12>
+|     `-ImplicitCastExpr 0x7fd9f4057000 <col:9, col:12> 'struct aostk_glyph *' <LValueToRValue>
+|       `-MemberExpr 0x7fd9f4056fc8 <col:9, col:12> 'struct aostk_glyph *' lvalue ->glyphs 0x7fd9f4056b70
+|         `-ImplicitCastExpr 0x7fd9f4056fb0 <col:9> 'struct aostk_font *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd9f4056f88 <col:9> 'struct aostk_font *' lvalue ParmVar 0x7fd9f4056d30 'f' 'struct aostk_font *'
+|-FunctionDecl 0x7fd9f406cc38 <line:39:1, line:42:1> line:39:5 used aostk_font_strwidth 'int (struct aostk_font *, const char *)'
+| |-ParmVarDecl 0x7fd9f4057070 <col:25, col:44> col:44 used font 'struct aostk_font *'
+| |-ParmVarDecl 0x7fd9f40570e8 <col:50, col:62> col:62 str 'const char *'
+| `-CompoundStmt 0x7fd9f406cfa8 <col:67, line:42:1>
+|   |-DeclStmt 0x7fd9f406ceb8 <line:40:2, col:50>
+|   | `-VarDecl 0x7fd9f406cd10 <col:2, col:49> col:22 used g 'struct aostk_glyph *' cinit
+|   |   `-CallExpr 0x7fd9f406ce50 <col:26, col:49> 'struct aostk_glyph *'
+|   |     |-ImplicitCastExpr 0x7fd9f406ce38 <col:26> 'struct aostk_glyph *(*)(struct aostk_font *, unsigned int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fd9f406cd70 <col:26> 'struct aostk_glyph *(struct aostk_font *, unsigned int)' Function 0x7fd9f4056ed8 'aostk_get_glyph' 'struct aostk_glyph *(struct aostk_font *, unsigned int)'
+|   |     |-ImplicitCastExpr 0x7fd9f406ce88 <col:42> 'struct aostk_font *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fd9f406cd98 <col:42> 'struct aostk_font *' lvalue ParmVar 0x7fd9f4057070 'font' 'struct aostk_font *'
+|   |     `-ImplicitCastExpr 0x7fd9f406cea0 <col:48> 'unsigned int' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fd9f406cdc0 <col:48> 'int' 0
+|   `-ReturnStmt 0x7fd9f406cf90 <line:41:2, col:16>
+|     `-ParenExpr 0x7fd9f406cf70 <col:9, col:16> 'int'
+|       `-BinaryOperator 0x7fd9f406cf48 <col:10, col:15> 'int' '!='
+|         |-ImplicitCastExpr 0x7fd9f406cf18 <col:10> 'struct aostk_glyph *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fd9f406ced0 <col:10> 'struct aostk_glyph *' lvalue Var 0x7fd9f406cd10 'g' 'struct aostk_glyph *'
+|         `-ImplicitCastExpr 0x7fd9f406cf30 <col:15> 'struct aostk_glyph *' <NullToPointer>
+|           `-IntegerLiteral 0x7fd9f406cef8 <col:15> 'int' 0
+|-FunctionDecl 0x7fd9f406d0d8 <line:44:1, line:49:1> line:46:1 used get_some_font 'struct aostk_font *(void)'
+| |-CompoundStmt 0x7fd9f406d220 <line:47:1, line:49:1>
+| | `-ReturnStmt 0x7fd9f406d208 <line:48:3, col:11>
+| |   `-UnaryOperator 0x7fd9f406d1e8 <col:10, col:11> 'struct aostk_font *' prefix '&'
+| |     `-DeclRefExpr 0x7fd9f406d1c0 <col:11> 'struct aostk_font':'struct aostk_font' lvalue Var 0x7fd9f4056c10 'glob_font' 'struct aostk_font':'struct aostk_font'
+| `-NoInlineAttr 0x7fd9f406d178 <line:45:17>
+`-FunctionDecl 0x7fd9f406d478 <line:51:1, line:55:1> line:51:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fd9f406d250 <col:11, col:15> col:15 argc 'int'
+  |-ParmVarDecl 0x7fd9f406d360 <col:21, col:32> col:27 argv 'char **':'char **'
+  `-CompoundStmt 0x7fd9f406d7c0 <line:52:1, line:55:1>
+    `-ReturnStmt 0x7fd9f406d7a8 <line:53:3, col:60>
+      `-CStyleCastExpr 0x7fd9f406d780 <col:10, col:60> 'int' <NoOp>
+        `-CallExpr 0x7fd9f406d700 <col:16, col:60> 'int'
+          |-ImplicitCastExpr 0x7fd9f406d6e8 <col:16> 'int (*)(struct aostk_font *, const char *)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fd9f406d528 <col:16> 'int (struct aostk_font *, const char *)' Function 0x7fd9f406cc38 'aostk_font_strwidth' 'int (struct aostk_font *, const char *)'
+          |-CallExpr 0x7fd9f406d5f0 <col:37, col:52> 'struct aostk_font *'
+          | `-ImplicitCastExpr 0x7fd9f406d5d8 <col:37> 'struct aostk_font *(*)(void)' <FunctionToPointerDecay>
+          |   `-DeclRefExpr 0x7fd9f406d550 <col:37> 'struct aostk_font *(void)' Function 0x7fd9f406d0d8 'get_some_font' 'struct aostk_font *(void)'
+          `-ImplicitCastExpr 0x7fd9f406d750 <col:55> 'const char *' <BitCast>
+            `-ImplicitCastExpr 0x7fd9f406d738 <col:55> 'char *' <ArrayToPointerDecay>
+              `-StringLiteral 0x7fd9f406d658 <col:55> 'char [4]' lvalue "sth"

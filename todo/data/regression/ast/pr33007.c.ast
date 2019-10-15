@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f85df02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f85df814268 <../Data/C2AST/pr33007.c:5:1, line:11:1> line:6:1 foo 'long (int)'
+| |-ParmVarDecl 0x7f85df02c978 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7f85df814720 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7f85df8143c8 <line:8:3, col:10>
+|   | `-VarDecl 0x7f85df814368 <col:3, col:9> col:9 used x 'float'
+|   |-BinaryOperator 0x7f85df814460 <line:9:3, col:7> 'float' '='
+|   | |-DeclRefExpr 0x7f85df8143e0 <col:3> 'float' lvalue Var 0x7f85df814368 'x' 'float'
+|   | `-ImplicitCastExpr 0x7f85df814448 <col:7> 'float' <IntegralToFloating>
+|   |   `-ImplicitCastExpr 0x7f85df814430 <col:7> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f85df814408 <col:7> 'int' lvalue ParmVar 0x7f85df02c978 'i' 'int'
+|   `-ReturnStmt 0x7f85df814708 <line:10:3, col:30>
+|     `-CallExpr 0x7f85df8146c0 <col:10, col:30> 'long'
+|       |-ImplicitCastExpr 0x7f85df8146a8 <col:10> 'long (*)(float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f85df814628 <col:10> '<builtin fn type>' Function 0x7f85df8144c8 '__builtin_lroundf' 'long (float)'
+|       `-ImplicitCastExpr 0x7f85df8146f0 <col:29> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7f85df814650 <col:29> 'float' lvalue Var 0x7f85df814368 'x' 'float'
+`-FunctionDecl 0x7f85df8144c8 <col:10> col:10 implicit used __builtin_lroundf 'long (float)' extern
+  |-ParmVarDecl 0x7f85df814568 <<invalid sloc>> <invalid sloc> 'float'
+  |-ConstAttr 0x7f85df8145d0 <col:10> Implicit
+  `-NoThrowAttr 0x7f85df814618 <col:10> Implicit

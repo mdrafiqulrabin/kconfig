@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f898081a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f898081b560 <../Data/C2AST/pr34971.c:1:1, line:4:1> line:1:8 struct foo definition
+| `-FieldDecl 0x7f8981014258 <line:3:3, col:24> col:22 referenced b 'unsigned long long'
+|   `-IntegerLiteral 0x7f8981014220 <col:24> 'int' 40
+|-VarDecl 0x7f89810142f0 <line:1:1, line:4:3> col:3 used x 'struct foo':'struct foo'
+|-FunctionDecl 0x7f89810144a0 <line:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8981014540 prev 0x7f89810144a0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f89810146c0 <line:8:1, line:13:1> line:8:6 used test1 'void (unsigned long long)'
+| |-ParmVarDecl 0x7f89810145f8 <col:12, col:31> col:31 used res 'unsigned long long'
+| `-CompoundStmt 0x7f8981014ad0 <line:9:1, line:13:1>
+|   `-IfStmt 0x7f8981014a98 <line:11:3, line:12:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8981014990 <line:11:7, col:31> 'int' '!='
+|     | |-BinaryOperator 0x7f8981014928 <col:7, col:26> 'unsigned long long' '+'
+|     | | |-ParenExpr 0x7f8981014828 <col:7, col:14> 'unsigned long long'
+|     | | | `-BinaryOperator 0x7f8981014800 <col:8, col:13> 'unsigned long long' '<<'
+|     | | |   |-ImplicitCastExpr 0x7f89810147e8 <col:8, col:10> 'unsigned long long' <LValueToRValue>
+|     | | |   | `-MemberExpr 0x7f8981014790 <col:8, col:10> 'unsigned long long' lvalue bitfield .b 0x7f8981014258
+|     | | |   |   `-DeclRefExpr 0x7f8981014768 <col:8> 'struct foo':'struct foo' lvalue Var 0x7f89810142f0 'x' 'struct foo':'struct foo'
+|     | | |   `-IntegerLiteral 0x7f89810147c8 <col:13> 'int' 8
+|     | | `-ParenExpr 0x7f8981014908 <col:18, col:26> 'unsigned long long'
+|     | |   `-BinaryOperator 0x7f89810148e0 <col:19, col:24> 'unsigned long long' '>>'
+|     | |     |-ImplicitCastExpr 0x7f89810148c8 <col:19, col:21> 'unsigned long long' <LValueToRValue>
+|     | |     | `-MemberExpr 0x7f8981014870 <col:19, col:21> 'unsigned long long' lvalue bitfield .b 0x7f8981014258
+|     | |     |   `-DeclRefExpr 0x7f8981014848 <col:19> 'struct foo':'struct foo' lvalue Var 0x7f89810142f0 'x' 'struct foo':'struct foo'
+|     | |     `-IntegerLiteral 0x7f89810148a8 <col:24> 'int' 32
+|     | `-ImplicitCastExpr 0x7f8981014978 <col:31> 'unsigned long long' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8981014950 <col:31> 'unsigned long long' lvalue ParmVar 0x7f89810145f8 'res' 'unsigned long long'
+|     |-CallExpr 0x7f8981014a70 <line:12:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7f8981014a58 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8981014a00 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f8981014540 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f8981014b40 <line:15:1, line:22:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7f8981014f18 <line:16:1, line:22:1>
+    |-BinaryOperator 0x7f8981014c78 <line:17:3, col:9> 'unsigned long long' '='
+    | |-MemberExpr 0x7f8981014c08 <col:3, col:5> 'unsigned long long' lvalue bitfield .b 0x7f8981014258
+    | | `-DeclRefExpr 0x7f8981014be0 <col:3> 'struct foo':'struct foo' lvalue Var 0x7f89810142f0 'x' 'struct foo':'struct foo'
+    | `-ImplicitCastExpr 0x7f8981014c60 <col:9> 'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8981014c40 <col:9> 'long' 4294967297
+    |-CallExpr 0x7f8981014d30 <line:18:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7f8981014d18 <col:3> 'void (*)(unsigned long long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8981014ca0 <col:3> 'void (unsigned long long)' Function 0x7f89810146c0 'test1' 'void (unsigned long long)'
+    | `-ImplicitCastExpr 0x7f8981014d60 <col:9> 'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8981014cc8 <col:9> 'int' 257
+    |-BinaryOperator 0x7f8981014e10 <line:19:3, col:9> 'unsigned long long' '='
+    | |-MemberExpr 0x7f8981014da0 <col:3, col:5> 'unsigned long long' lvalue bitfield .b 0x7f8981014258
+    | | `-DeclRefExpr 0x7f8981014d78 <col:3> 'struct foo':'struct foo' lvalue Var 0x7f89810142f0 'x' 'struct foo':'struct foo'
+    | `-ImplicitCastExpr 0x7f8981014df8 <col:9> 'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8981014dd8 <col:9> 'long' 4294967296
+    |-CallExpr 0x7f8981014e98 <line:20:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7f8981014e80 <col:3> 'void (*)(unsigned long long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8981014e38 <col:3> 'void (unsigned long long)' Function 0x7f89810146c0 'test1' 'void (unsigned long long)'
+    | `-ImplicitCastExpr 0x7f8981014ec8 <col:9> 'unsigned long long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8981014e60 <col:9> 'int' 1
+    `-ReturnStmt 0x7f8981014f00 <line:21:3, col:10>
+      `-IntegerLiteral 0x7f8981014ee0 <col:10> 'int' 0

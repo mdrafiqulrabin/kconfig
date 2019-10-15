@@ -1,0 +1,53 @@
+../Data/C2AST/pr85044.c:10:24: error: function definition is not allowed here
+  void callback (void) { ok = 1; }
+                       ^
+../Data/C2AST/pr85044.c:12:12: error: use of undeclared identifier 'callback'
+  callme (&callback);
+           ^
+2 errors generated.
+TranslationUnitDecl 0x7f85e602bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f85e602c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f85e602bf80 '__int128'
+|-TypedefDecl 0x7f85e602c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f85e602bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f85e602c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f85e602c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f85e602c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f85e602c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f85e602c600 'char *'
+|   `-BuiltinType 0x7f85e602bd80 'char'
+|-TypedefDecl 0x7f85e602c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f85e602c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f85e602c720 'struct __va_list_tag'
+|     `-Record 0x7f85e602c698 '__va_list_tag'
+|-FunctionDecl 0x7f85e68143c0 <../Data/C2AST/pr85044.c:4:1, col:37> col:6 used callme 'void (void (*)(void))'
+| `-ParmVarDecl 0x7f85e68142b8 <col:14, col:36> col:21 callback 'void (*)(void)'
+|-FunctionDecl 0x7f85e6814578 <line:6:1, line:17:1> line:7:1 main 'int (void)'
+| `-CompoundStmt 0x7f85e6814af8 <line:8:1, line:17:1>
+|   |-DeclStmt 0x7f85e68146e0 <line:9:3, col:13>
+|   | `-VarDecl 0x7f85e6814660 <col:3, col:12> col:7 used ok 'int' cinit
+|   |   `-IntegerLiteral 0x7f85e68146c0 <col:12> 'int' 0
+|   |-IfStmt 0x7f85e6814a88 <line:14:3, line:15:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f85e68148c0 <line:14:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f85e68148a8 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f85e6814880 <col:8> 'int' lvalue Var 0x7f85e6814660 'ok' 'int'
+|   | |-CallExpr 0x7f85e6814a60 <line:15:4, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7f85e6814a48 <col:4> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f85e68149f8 <col:4> '<builtin fn type>' Function 0x7f85e6814910 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f85e6814ae0 <line:16:3, col:10>
+|     `-IntegerLiteral 0x7f85e6814ac0 <col:10> 'int' 0
+|-FunctionDecl 0x7f85e6814910 <line:15:4> col:4 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f85e68149b0 <col:4> Implicit
+`-FunctionDecl 0x7f85e6814c48 prev 0x7f85e68143c0 <line:19:1, line:24:1> line:21:1 used callme 'void (void (*)(void))'
+  |-ParmVarDecl 0x7f85e6814bc0 <col:9, col:31> col:16 used callback 'void (*)(void)'
+  |-CompoundStmt 0x7f85e6814df8 <line:22:1, line:24:1>
+  | `-CallExpr 0x7f85e6814dd0 <line:23:3, col:16> 'void'
+  |   `-ImplicitCastExpr 0x7f85e6814db8 <col:3, col:13> 'void (*)(void)' <FunctionToPointerDecay>
+  |     `-ParenExpr 0x7f85e6814d98 <col:3, col:13> 'void (void)':'void (void)'
+  |       `-UnaryOperator 0x7f85e6814d78 <col:4, col:5> 'void (void)':'void (void)' prefix '*'
+  |         `-ImplicitCastExpr 0x7f85e6814d60 <col:5> 'void (*)(void)' <LValueToRValue>
+  |           `-DeclRefExpr 0x7f85e6814d38 <col:5> 'void (*)(void)' lvalue ParmVar 0x7f85e6814bc0 'callback' 'void (*)(void)'
+  `-NoInlineAttr 0x7f85e6814cf0 <line:19:16>

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fd927017ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd92601d420 <../Data/C2AST/pr84941.c:5:1, line:10:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd92601d9a0 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fd92601d6d8 <line:8:3, col:22>
+    | `-VarDecl 0x7fd92601d5b0 <col:3, col:21> col:10 used b 'short *[1]' cinit
+    |   `-InitListExpr 0x7fd92601d678 <col:17, col:21> 'short *[1]'
+    |     `-ImplicitCastExpr 0x7fd92601d6c0 <col:19> 'short *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fd92601d610 <col:19> 'int' 0
+    `-GCCAsmStmt 0x7fd92601d910 <line:9:3, col:56>
+      |-DeclRefExpr 0x7fd92601d7b8 <col:30> 'short *[1]' lvalue Var 0x7fd92601d5b0 'b' 'short *[1]'
+      |-DeclRefExpr 0x7fd92601d810 <col:42> 'short *[1]' lvalue Var 0x7fd92601d5b0 'b' 'short *[1]'
+      `-ImplicitCastExpr 0x7fd92601d8f8 <col:54> 'short **' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fd92601d8a8 <col:54> 'short *[1]' lvalue Var 0x7fd92601d5b0 'b' 'short *[1]'

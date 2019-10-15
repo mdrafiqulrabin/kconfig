@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fdb7a8262e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdb7c017850 <../Data/C2AST/pr51762.c:5:1, col:44> col:6 used noret 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fdb7c0179f8 <line:6:1, col:14> col:5 used bar 'int (void)'
+|-FunctionDecl 0x7fdb7c017b70 <line:7:1, col:23> col:6 used baz 'void (const char *)'
+| `-ParmVarDecl 0x7fdb7c017ab0 <col:11, col:22> col:23 'const char *'
+|-VarDecl 0x7fdb7c017c30 <line:8:1, col:17> col:12 used v 'int' static cinit
+| `-UnaryOperator 0x7fdb7c017cb0 <col:16, col:17> 'int' prefix '-'
+|   `-IntegerLiteral 0x7fdb7c017c90 <col:17> 'int' 1
+`-FunctionDecl 0x7fdb7c017d60 <line:10:1, line:19:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fdb7c0181f8 <line:12:1, line:19:1>
+    |-IfStmt 0x7fdb7c018158 <line:13:3, line:17:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdb7c017f40 <line:13:7, col:23> 'int' '&&'
+    | | |-CallExpr 0x7fdb7c017e70 <col:7, col:12> 'int'
+    | | | `-ImplicitCastExpr 0x7fdb7c017e58 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fdb7c017e00 <col:7> 'int (void)' Function 0x7fdb7c0179f8 'bar' 'int (void)'
+    | | `-BinaryOperator 0x7fdb7c017f18 <col:17, col:23> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7fdb7c017f00 <col:17> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fdb7c017e98 <col:17> 'int' lvalue Var 0x7fdb7c017c30 'v' 'int'
+    | |   `-UnaryOperator 0x7fdb7c017ee0 <col:22, col:23> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7fdb7c017ec0 <col:23> 'int' 1
+    | |-CompoundStmt 0x7fdb7c018138 <line:14:5, line:17:5>
+    | | |-CallExpr 0x7fdb7c018040 <line:15:7, col:17> 'void'
+    | | | |-ImplicitCastExpr 0x7fdb7c018028 <col:7> 'void (*)(const char *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fdb7c017f68 <col:7> 'void (const char *)' Function 0x7fdb7c017b70 'baz' 'void (const char *)'
+    | | | `-ImplicitCastExpr 0x7fdb7c018088 <col:12> 'const char *' <BitCast>
+    | | |   `-ImplicitCastExpr 0x7fdb7c018070 <col:12> 'char *' <ArrayToPointerDecay>
+    | | |     `-StringLiteral 0x7fdb7c017fc8 <col:12> 'char [4]' lvalue "baz"
+    | | `-CallExpr 0x7fdb7c018110 <line:16:7, col:14> 'void'
+    | |   `-ImplicitCastExpr 0x7fdb7c0180f8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7fdb7c0180a0 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fdb7c017850 'noret' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fdb7c0181d0 <line:18:3, col:10> 'void'
+      `-ImplicitCastExpr 0x7fdb7c0181b8 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fdb7c018190 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7fdb7c017850 'noret' 'void (void) __attribute__((noreturn))'

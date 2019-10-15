@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fc8d7821ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc8d8814268 <../Data/C2AST/pr66221_0.c:5:1, col:24> col:5 used test1 'int (const char *)'
+| `-ParmVarDecl 0x7fc8d7822978 <col:12, col:23> col:24 'const char *'
+`-FunctionDecl 0x7fc8d88144e8 <line:7:1, line:10:1> line:7:5 main 'int (int, const char **)'
+  |-ParmVarDecl 0x7fc8d8814368 <col:11, col:15> col:15 argc 'int'
+  |-ParmVarDecl 0x7fc8d8814410 <col:21, col:34> col:34 used argv 'const char **'
+  `-CompoundStmt 0x7fc8d8814720 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fc8d8814708 <line:9:3, col:24>
+      `-CallExpr 0x7fc8d88146c0 <col:10, col:24> 'int'
+        |-ImplicitCastExpr 0x7fc8d88146a8 <col:10> 'int (*)(const char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc8d88145c8 <col:10> 'int (const char *)' Function 0x7fc8d8814268 'test1' 'int (const char *)'
+        `-ImplicitCastExpr 0x7fc8d88146f0 <col:17, col:23> 'const char *' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fc8d8814650 <col:17, col:23> 'const char *' lvalue
+            |-ImplicitCastExpr 0x7fc8d8814638 <col:17> 'const char **' <LValueToRValue>
+            | `-DeclRefExpr 0x7fc8d88145f0 <col:17> 'const char **' lvalue ParmVar 0x7fc8d8814410 'argv' 'const char **'
+            `-IntegerLiteral 0x7fc8d8814618 <col:22> 'int' 0

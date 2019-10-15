@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fa1028124e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa102813178 <../Data/C2AST/pr82012.c:5:1, col:12> col:8 used g 'double' cinit
+| `-FloatingLiteral 0x7fa102855040 <col:12> 'double' 1.000000e+00
+|-FunctionDecl 0x7fa102855148 <line:9:1, line:12:1> line:9:37 used foo1 'int (int)'
+| |-ParmVarDecl 0x7fa102855078 <col:43, col:47> col:47 a 'int'
+| |-CompoundStmt 0x7fa102855270 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7fa102855258 <line:11:3, col:10>
+| |   `-IntegerLiteral 0x7fa102855238 <col:10> 'int' 0
+| `-AlwaysInlineAttr 0x7fa1028551f0 <line:9:21> always_inline
+|-FunctionDecl 0x7fa1028553a8 <line:14:1, line:17:1> line:14:45 test1 'int (int)'
+| |-ParmVarDecl 0x7fa102855318 <col:52, col:56> col:56 used a 'int'
+| |-CompoundStmt 0x7fa1028555a0 <line:15:1, line:17:1>
+| | `-ReturnStmt 0x7fa102855588 <line:16:3, col:17>
+| |   `-CallExpr 0x7fa102855540 <col:10, col:17> 'int'
+| |     |-ImplicitCastExpr 0x7fa102855528 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fa1028554b0 <col:10> 'int (int)' Function 0x7fa102855148 'foo1' 'int (int)'
+| |     `-ImplicitCastExpr 0x7fa102855570 <col:16> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa1028554d8 <col:16> 'int' lvalue ParmVar 0x7fa102855318 'a' 'int'
+| `-TargetAttr 0x7fa102855450 <line:14:21, col:41> "soft-float"
+|-FunctionDecl 0x7fa102855660 <line:21:1, line:25:1> line:21:37 used foo2 'int (int)'
+| |-ParmVarDecl 0x7fa1028555d0 <col:43, col:47> col:47 a 'int'
+| |-CompoundStmt 0x7fa1028557f8 <line:22:1, line:25:1>
+| | |-BinaryOperator 0x7fa102855798 <line:23:3, col:7> 'double' '='
+| | | |-DeclRefExpr 0x7fa102855750 <col:3> 'double' lvalue Var 0x7fa102813178 'g' 'double'
+| | | `-FloatingLiteral 0x7fa102855778 <col:7> 'double' 2.000000e+00
+| | `-ReturnStmt 0x7fa1028557e0 <line:24:3, col:10>
+| |   `-IntegerLiteral 0x7fa1028557c0 <col:10> 'int' 0
+| `-AlwaysInlineAttr 0x7fa102855708 <line:21:21> always_inline
+|-FunctionDecl 0x7fa1028558f8 <line:27:1, line:30:1> line:27:45 test2 'int (int)'
+| |-ParmVarDecl 0x7fa102855868 <col:52, col:56> col:56 used a 'int'
+| |-CompoundStmt 0x7fa102855ac8 <line:28:1, line:30:1>
+| | `-ReturnStmt 0x7fa102855ab0 <line:29:3, col:17>
+| |   `-CallExpr 0x7fa102855a68 <col:10, col:17> 'int'
+| |     |-ImplicitCastExpr 0x7fa102855a50 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fa102855a00 <col:10> 'int (int)' Function 0x7fa102855660 'foo2' 'int (int)'
+| |     `-ImplicitCastExpr 0x7fa102855a98 <col:16> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa102855a28 <col:16> 'int' lvalue ParmVar 0x7fa102855868 'a' 'int'
+| `-TargetAttr 0x7fa1028559a0 <line:27:21, col:41> "soft-float"
+|-FunctionDecl 0x7fa102855b88 <line:34:1, line:38:1> line:34:37 used foo3 'int (int)'
+| |-ParmVarDecl 0x7fa102855af8 <col:43, col:47> col:47 used a 'int'
+| |-CompoundStmt 0x7fa102855dc8 <line:35:1, line:38:1>
+| | |-BinaryOperator 0x7fa102855d68 <line:36:3, col:20> 'double' '='
+| | | |-DeclRefExpr 0x7fa102855c78 <col:3> 'double' lvalue Var 0x7fa102813178 'g' 'double'
+| | | `-BinaryOperator 0x7fa102855d40 <col:7, col:20> 'double' '/'
+| | |   |-CStyleCastExpr 0x7fa102855cf8 <col:7, col:16> 'double' <IntegralToFloating>
+| | |   | `-ImplicitCastExpr 0x7fa102855ce0 <col:16> 'int' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fa102855ca0 <col:16> 'int' lvalue ParmVar 0x7fa102855af8 'a' 'int'
+| | |   `-FloatingLiteral 0x7fa102855d20 <col:20> 'double' 2.000000e+00
+| | `-ReturnStmt 0x7fa102855db0 <line:37:3, col:10>
+| |   `-IntegerLiteral 0x7fa102855d90 <col:10> 'int' 0
+| `-AlwaysInlineAttr 0x7fa102855c30 <line:34:21> always_inline
+`-FunctionDecl 0x7fa102855ec8 <line:40:1, line:43:1> line:40:45 test3 'int (int)'
+  |-ParmVarDecl 0x7fa102855e38 <col:52, col:56> col:56 used a 'int'
+  |-CompoundStmt 0x7fa10286daa0 <line:41:1, line:43:1>
+  | `-ReturnStmt 0x7fa10286da88 <line:42:3, col:17>
+  |   `-CallExpr 0x7fa10286da40 <col:10, col:17> 'int'
+  |     |-ImplicitCastExpr 0x7fa10286da28 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x7fa102855fd0 <col:10> 'int (int)' Function 0x7fa102855b88 'foo3' 'int (int)'
+  |     `-ImplicitCastExpr 0x7fa10286da70 <col:16> 'int' <LValueToRValue>
+  |       `-DeclRefExpr 0x7fa10286da00 <col:16> 'int' lvalue ParmVar 0x7fa102855e38 'a' 'int'
+  `-TargetAttr 0x7fa102855f70 <line:40:21, col:41> "soft-float"

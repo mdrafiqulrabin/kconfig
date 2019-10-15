@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fa1d902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa1d9814260 <../Data/C2AST/pr69247.c:6:1, col:18> col:6 used foo 'void (short *)'
+| `-ParmVarDecl 0x7fa1d902c9a0 <col:11, col:17> col:18 'short *'
+`-FunctionDecl 0x7fa1d98144b0 <line:8:1, line:14:1> line:9:1 bar 'void (short, int)'
+  |-ParmVarDecl 0x7fa1d9814360 <col:6, col:12> col:12 used x 'short'
+  |-ParmVarDecl 0x7fa1d98143d8 <col:15, col:19> col:19 used y 'int'
+  `-CompoundStmt 0x7fa1d98148d0 <line:10:1, line:14:1>
+    |-IfStmt 0x7fa1d98147b0 <line:11:3, line:12:40>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa1d9814588 <line:11:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa1d9814560 <col:7> 'int' lvalue ParmVar 0x7fa1d98143d8 'y' 'int'
+    | |-BinaryOperator 0x7fa1d9814788 <line:12:5, col:40> 'short' '='
+    | | |-DeclRefExpr 0x7fa1d98145a0 <col:5> 'short' lvalue ParmVar 0x7fa1d9814360 'x' 'short'
+    | | `-ImplicitCastExpr 0x7fa1d9814770 <col:9, col:40> 'short' <IntegralCast>
+    | |   `-BinaryOperator 0x7fa1d9814748 <col:9, col:40> 'int' '|'
+    | |     |-BinaryOperator 0x7fa1d9814640 <col:9, col:14> 'int' '<<'
+    | |     | |-ImplicitCastExpr 0x7fa1d9814628 <col:9> 'int' <IntegralCast>
+    | |     | | `-ImplicitCastExpr 0x7fa1d9814610 <col:9> 'short' <LValueToRValue>
+    | |     | |   `-DeclRefExpr 0x7fa1d98145c8 <col:9> 'short' lvalue ParmVar 0x7fa1d9814360 'x' 'short'
+    | |     | `-IntegerLiteral 0x7fa1d98145f0 <col:14> 'int' 8
+    | |     `-BinaryOperator 0x7fa1d9814720 <col:18, col:40> 'int' '>>'
+    | |       |-ImplicitCastExpr 0x7fa1d9814708 <col:18, col:35> 'int' <IntegralCast>
+    | |       | `-CStyleCastExpr 0x7fa1d98146c0 <col:18, col:35> 'unsigned short' <IntegralCast>
+    | |       |   `-ImplicitCastExpr 0x7fa1d98146a8 <col:35> 'short' <LValueToRValue>
+    | |       |     `-DeclRefExpr 0x7fa1d9814668 <col:35> 'short' lvalue ParmVar 0x7fa1d9814360 'x' 'short'
+    | |       `-IntegerLiteral 0x7fa1d98146e8 <col:40> 'int' 8
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fa1d98148a0 <line:13:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fa1d9814888 <col:3> 'void (*)(short *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa1d98147e8 <col:3> 'void (short *)' Function 0x7fa1d9814260 'foo' 'void (short *)'
+      `-UnaryOperator 0x7fa1d9814838 <col:8, col:9> 'short *' prefix '&'
+        `-DeclRefExpr 0x7fa1d9814810 <col:9> 'short' lvalue ParmVar 0x7fa1d9814360 'x' 'short'

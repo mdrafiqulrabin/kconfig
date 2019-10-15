@@ -1,0 +1,78 @@
+TranslationUnitDecl 0x7fc27581bee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc276815608 <../Data/C2AST/pr43869.c:3:1, line:8:1> line:4:1 used bugged 'int (float, float, float, float, float, float, float, float)'
+| |-ParmVarDecl 0x7fc27581cb78 <col:8, col:14> col:14 used f1 'float'
+| |-ParmVarDecl 0x7fc276815200 <col:18, col:24> col:24 used f2 'float'
+| |-ParmVarDecl 0x7fc276815278 <col:28, col:34> col:34 used f3 'float'
+| |-ParmVarDecl 0x7fc2768152f0 <col:38, col:44> col:44 used f4 'float'
+| |-ParmVarDecl 0x7fc276815368 <line:5:8, col:14> col:14 used f5 'float'
+| |-ParmVarDecl 0x7fc2768153e0 <col:18, col:24> col:24 used f6 'float'
+| |-ParmVarDecl 0x7fc276815458 <col:28, col:34> col:34 used f7 'float'
+| |-ParmVarDecl 0x7fc2768154d0 <col:38, col:44> col:44 used f8 'float'
+| |-CompoundStmt 0x7fc276815c20 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7fc276815c08 <line:7:5, col:78>
+| |   `-BinaryOperator 0x7fc276815be0 <col:12, col:78> 'int' '||'
+| |     |-BinaryOperator 0x7fc276815b18 <col:12, col:66> 'int' '||'
+| |     | |-BinaryOperator 0x7fc276815a50 <col:12, col:54> 'int' '||'
+| |     | | |-BinaryOperator 0x7fc276815988 <col:12, col:42> 'int' '||'
+| |     | | | |-BinaryOperator 0x7fc2768158c0 <col:12, col:30> 'int' '||'
+| |     | | | | |-BinaryOperator 0x7fc276815858 <col:12, col:24> 'int' '||'
+| |     | | | | | |-BinaryOperator 0x7fc2768157f0 <col:12, col:18> 'int' '||'
+| |     | | | | | | |-ImplicitCastExpr 0x7fc2768157c0 <col:12> 'float' <LValueToRValue>
+| |     | | | | | | | `-DeclRefExpr 0x7fc276815770 <col:12> 'float' lvalue ParmVar 0x7fc27581cb78 'f1' 'float'
+| |     | | | | | | `-ImplicitCastExpr 0x7fc2768157d8 <col:18> 'float' <LValueToRValue>
+| |     | | | | | |   `-DeclRefExpr 0x7fc276815798 <col:18> 'float' lvalue ParmVar 0x7fc276815200 'f2' 'float'
+| |     | | | | | `-ImplicitCastExpr 0x7fc276815840 <col:24> 'float' <LValueToRValue>
+| |     | | | | |   `-DeclRefExpr 0x7fc276815818 <col:24> 'float' lvalue ParmVar 0x7fc276815278 'f3' 'float'
+| |     | | | | `-ImplicitCastExpr 0x7fc2768158a8 <col:30> 'float' <LValueToRValue>
+| |     | | | |   `-DeclRefExpr 0x7fc276815880 <col:30> 'float' lvalue ParmVar 0x7fc2768152f0 'f4' 'float'
+| |     | | | `-BinaryOperator 0x7fc276815960 <col:36, col:42> 'int' '!='
+| |     | | |   |-ImplicitCastExpr 0x7fc276815948 <col:36> 'double' <FloatingCast>
+| |     | | |   | `-ImplicitCastExpr 0x7fc276815930 <col:36> 'float' <LValueToRValue>
+| |     | | |   |   `-DeclRefExpr 0x7fc2768158e8 <col:36> 'float' lvalue ParmVar 0x7fc276815368 'f5' 'float'
+| |     | | |   `-FloatingLiteral 0x7fc276815910 <col:42> 'double' 1.000000e+00
+| |     | | `-BinaryOperator 0x7fc276815a28 <col:48, col:54> 'int' '!='
+| |     | |   |-ImplicitCastExpr 0x7fc276815a10 <col:48> 'double' <FloatingCast>
+| |     | |   | `-ImplicitCastExpr 0x7fc2768159f8 <col:48> 'float' <LValueToRValue>
+| |     | |   |   `-DeclRefExpr 0x7fc2768159b0 <col:48> 'float' lvalue ParmVar 0x7fc2768153e0 'f6' 'float'
+| |     | |   `-FloatingLiteral 0x7fc2768159d8 <col:54> 'double' 1.000000e+00
+| |     | `-BinaryOperator 0x7fc276815af0 <col:60, col:66> 'int' '!='
+| |     |   |-ImplicitCastExpr 0x7fc276815ad8 <col:60> 'double' <FloatingCast>
+| |     |   | `-ImplicitCastExpr 0x7fc276815ac0 <col:60> 'float' <LValueToRValue>
+| |     |   |   `-DeclRefExpr 0x7fc276815a78 <col:60> 'float' lvalue ParmVar 0x7fc276815458 'f7' 'float'
+| |     |   `-FloatingLiteral 0x7fc276815aa0 <col:66> 'double' 1.000000e+00
+| |     `-BinaryOperator 0x7fc276815bb8 <col:72, col:78> 'int' '!='
+| |       |-ImplicitCastExpr 0x7fc276815ba0 <col:72> 'double' <FloatingCast>
+| |       | `-ImplicitCastExpr 0x7fc276815b88 <col:72> 'float' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7fc276815b40 <col:72> 'float' lvalue ParmVar 0x7fc2768154d0 'f8' 'float'
+| |       `-FloatingLiteral 0x7fc276815b68 <col:78> 'double' 1.000000e+00
+| `-NoInlineAttr 0x7fc2768156e8 <line:3:20>
+|-FunctionDecl 0x7fc276815d50 <line:10:1, line:13:1> line:10:47 used isbugged 'int (void) __attribute__((ms_abi))':'int (void) __attribute__((ms_abi))'
+| |-CompoundStmt 0x7fc2768160f0 <line:11:1, line:13:1>
+| | `-ReturnStmt 0x7fc2768160d8 <line:12:5, col:45>
+| |   `-CallExpr 0x7fc276815fb0 <col:12, col:45> 'int'
+| |     |-ImplicitCastExpr 0x7fc276815f98 <col:12> 'int (*)(float, float, float, float, float, float, float, float)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fc276815e48 <col:12> 'int (float, float, float, float, float, float, float, float)' Function 0x7fc276815608 'bugged' 'int (float, float, float, float, float, float, float, float)'
+| |     |-ImplicitCastExpr 0x7fc276816018 <col:19> 'float' <IntegralToFloating>
+| |     | `-IntegerLiteral 0x7fc276815e70 <col:19> 'int' 0
+| |     |-ImplicitCastExpr 0x7fc276816030 <col:22> 'float' <IntegralToFloating>
+| |     | `-IntegerLiteral 0x7fc276815e90 <col:22> 'int' 0
+| |     |-ImplicitCastExpr 0x7fc276816048 <col:25> 'float' <IntegralToFloating>
+| |     | `-IntegerLiteral 0x7fc276815eb0 <col:25> 'int' 0
+| |     |-ImplicitCastExpr 0x7fc276816060 <col:28> 'float' <IntegralToFloating>
+| |     | `-IntegerLiteral 0x7fc276815ed0 <col:28> 'int' 0
+| |     |-ImplicitCastExpr 0x7fc276816078 <col:31> 'float' <FloatingCast>
+| |     | `-FloatingLiteral 0x7fc276815ef0 <col:31> 'double' 1.000000e+00
+| |     |-ImplicitCastExpr 0x7fc276816090 <col:35> 'float' <FloatingCast>
+| |     | `-FloatingLiteral 0x7fc276815f10 <col:35> 'double' 1.000000e+00
+| |     |-ImplicitCastExpr 0x7fc2768160a8 <col:39> 'float' <FloatingCast>
+| |     | `-FloatingLiteral 0x7fc276815f30 <col:39> 'double' 1.000000e+00
+| |     `-ImplicitCastExpr 0x7fc2768160c0 <col:43> 'float' <FloatingCast>
+| |       `-FloatingLiteral 0x7fc276815f50 <col:43> 'double' 1.000000e+00
+| |-NoInlineAttr 0x7fc276815df0 <line:10:20>
+| `-NoInlineAttr 0x7fc276815e38 <col:20>
+`-FunctionDecl 0x7fc276816160 <line:15:1, line:18:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7fc2770000e0 <line:16:1, line:18:1>
+    `-ReturnStmt 0x7fc2770000c8 <line:17:5, col:21>
+      `-CallExpr 0x7fc2770000a0 <col:12, col:21> 'int'
+        `-ImplicitCastExpr 0x7fc277000088 <col:12> 'int (*)(void) __attribute__((ms_abi))' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fc277000000 <col:12> 'int (void) __attribute__((ms_abi))':'int (void) __attribute__((ms_abi))' Function 0x7fc276815d50 'isbugged' 'int (void) __attribute__((ms_abi))':'int (void) __attribute__((ms_abi))'

@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7f8f4b8288e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8f4b019558 <../Data/C2AST/pr67985-2.c:4:1, line:9:1> line:6:1 foo 'float (float, float)'
+  |-ParmVarDecl 0x7f8f4b019400 <col:6, col:12> col:12 used x 'float'
+  |-ParmVarDecl 0x7f8f4b019478 <col:15, col:21> col:21 used y 'float'
+  |-CompoundStmt 0x7f8f4b019768 <line:7:1, line:9:1>
+  | `-ReturnStmt 0x7f8f4b019750 <line:8:3, col:14>
+  |   `-BinaryOperator 0x7f8f4b019728 <col:10, col:14> 'float' '*'
+  |     |-ImplicitCastExpr 0x7f8f4b0196f8 <col:10> 'float' <LValueToRValue>
+  |     | `-DeclRefExpr 0x7f8f4b0196a8 <col:10> 'float' lvalue ParmVar 0x7f8f4b019400 'x' 'float'
+  |     `-ImplicitCastExpr 0x7f8f4b019710 <col:14> 'float' <LValueToRValue>
+  |       `-DeclRefExpr 0x7f8f4b0196d0 <col:14> 'float' lvalue ParmVar 0x7f8f4b019478 'y' 'float'
+  `-TargetAttr 0x7f8f4b019608 <line:5:16, col:38> "arch=lakemont"

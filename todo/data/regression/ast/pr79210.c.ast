@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7ff56f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff5700153d0 <../Data/C2AST/pr79210.c:4:1, line:5:67> col:6 used dev_printk 'void (const char *, void *, const char *, ...)'
+| |-ParmVarDecl 0x7ff570015200 <col:17, col:29> col:29 level 'const char *'
+| |-ParmVarDecl 0x7ff570015278 <col:36, col:42> col:42 dev 'void *'
+| |-ParmVarDecl 0x7ff5700152f0 <col:47, col:59> col:59 fmt 'const char *'
+| `-FormatAttr 0x7ff570015488 <line:4:16, col:35> printf 3 4
+|-VarDecl 0x7ff570015538 <line:15:39, <scratch space>:2:1> col:1 lpfc_peer_port_login 'unsigned int'
+|-FunctionDecl 0x7ff570015700 <../Data/C2AST/pr79210.c:7:37, line:12:41> <scratch space>:5:1 lpfc_peer_port_login_init 'void (void *, unsigned int)'
+| |-ParmVarDecl 0x7ff5700155b0 <../Data/C2AST/pr79210.c:8:25, col:31> col:31 vport 'void *'
+| |-ParmVarDecl 0x7ff570015628 <col:38, col:51> col:51 used val 'unsigned int'
+| `-CompoundStmt 0x7ff570015aa0 <col:56, line:12:41>
+|   `-CallExpr 0x7ff5700159e0 <line:10:2, line:12:38> 'void'
+|     |-ImplicitCastExpr 0x7ff5700159c8 <line:10:2> 'void (*)(const char *, void *, const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ff5700157b0 <col:2> 'void (const char *, void *, const char *, ...)' Function 0x7ff5700153d0 'dev_printk' 'void (const char *, void *, const char *, ...)'
+|     |-ImplicitCastExpr 0x7ff570015a40 <col:13> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ff570015a28 <col:13> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7ff570015818 <col:13> 'char [2]' lvalue "3"
+|     |-CStyleCastExpr 0x7ff570015880 <col:18, col:26> 'void *' <NullToPointer>
+|     | `-IntegerLiteral 0x7ff570015848 <col:26> 'int' 0
+|     |-ImplicitCastExpr 0x7ff570015a70 <line:11:6, line:12:6> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ff570015a58 <line:11:6, line:12:6> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7ff5700158e8 <line:11:6, line:12:6> 'char [82]' lvalue "0423 lpfc_peer_port_login attribute cannot be set to %d, allowed range is [0, 1]\n"
+|     `-ImplicitCastExpr 0x7ff570015a88 <col:35> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff570015978 <col:35> 'unsigned int' lvalue ParmVar 0x7ff570015628 'val' 'unsigned int'
+`-EmptyDecl 0x7ff570015ab8 <line:21:14> col:14

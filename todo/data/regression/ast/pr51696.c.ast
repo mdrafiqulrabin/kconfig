@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fb18582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb18582c960 <../Data/C2AST/pr51696.c:4:1, line:6:1> line:4:8 struct list definition
+| `-FieldDecl 0x7fb185822108 <line:5:3, col:19> col:10 referenced compare 'void (*)()'
+|-VarDecl 0x7fb185822200 <line:4:1, line:6:4> col:4 used listPtr 'struct list *'
+|-VarDecl 0x7fb1858222e8 <line:8:1, col:24> col:15 used compare 'void (*)()' static
+`-FunctionDecl 0x7fb185822368 <line:10:1, line:14:1> line:11:13 func 'void ()' static
+  `-CompoundStmt 0x7fb185822528 <col:21, line:14:1>
+    |-CallExpr 0x7fb185822498 <line:12:3, col:20> 'void'
+    | `-ImplicitCastExpr 0x7fb185822480 <col:3, col:12> 'void (*)()' <LValueToRValue>
+    |   `-MemberExpr 0x7fb185822448 <col:3, col:12> 'void (*)()' lvalue ->compare 0x7fb185822108
+    |     `-ImplicitCastExpr 0x7fb185822430 <col:3> 'struct list *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fb185822408 <col:3> 'struct list *' lvalue Var 0x7fb185822200 'listPtr' 'struct list *'
+    `-CallExpr 0x7fb185822500 <line:13:3, col:11> 'void'
+      `-ImplicitCastExpr 0x7fb1858224e8 <col:3> 'void (*)()' <LValueToRValue>
+        `-DeclRefExpr 0x7fb1858224c0 <col:3> 'void (*)()' lvalue Var 0x7fb1858222e8 'compare' 'void (*)()'

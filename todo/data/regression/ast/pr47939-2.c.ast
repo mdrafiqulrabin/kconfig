@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7f9e5780f4e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9e57810160 <../Data/C2AST/pr47939-2.c:4:15, col:42> col:22 struct _Harry definition
+| `-FieldDecl 0x7f9e57851638 <col:31, col:35> col:35 dummy 'int'
+|-TypedefDecl 0x7f9e578516d0 <col:1, col:44> col:44 referenced Harry_t 'const struct _Harry':'const struct _Harry'
+| `-QualType 0x7f9e57851681 'const struct _Harry' const
+|   `-ElaboratedType 0x7f9e57851680 'struct _Harry' sugar
+|     `-RecordType 0x7f9e57851600 'struct _Harry'
+|       `-Record 0x7f9e57810160 '_Harry'
+`-VarDecl 0x7f9e57851770 <line:5:1, col:9> col:9 harry 'Harry_t':'const struct _Harry'

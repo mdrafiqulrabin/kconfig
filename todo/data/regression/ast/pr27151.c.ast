@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fc9b78294e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc9b786b000 <../Data/C2AST/pr27151.c:5:1, col:17> col:7 used vs_data 'float [75]'
+`-FunctionDecl 0x7fc9b786b0e8 <line:6:1, line:13:1> line:6:6 vis_clear_data 'void ()'
+  `-CompoundStmt 0x7fc9b786b5f8 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fc9b786b290 <line:8:3, col:18>
+    | |-VarDecl 0x7fc9b786b1a0 <col:3, col:7> col:7 used vis_type 'int'
+    | `-VarDecl 0x7fc9b786b218 <col:3, col:17> col:17 used i 'int'
+    `-ForStmt 0x7fc9b786b5c0 <line:9:3, line:12:5>
+      |-BinaryOperator 0x7fc9b786b2f0 <line:9:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc9b786b2a8 <col:8> 'int' lvalue Var 0x7fc9b786b218 'i' 'int'
+      | `-IntegerLiteral 0x7fc9b786b2d0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc9b786b378 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc9b786b360 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc9b786b318 <col:15> 'int' lvalue Var 0x7fc9b786b218 'i' 'int'
+      | `-IntegerLiteral 0x7fc9b786b340 <col:19> 'int' 75
+      |-UnaryOperator 0x7fc9b786b3c8 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fc9b786b3a0 <col:23> 'int' lvalue Var 0x7fc9b786b218 'i' 'int'
+      `-CompoundStmt 0x7fc9b786b5a8 <line:10:5, line:12:5>
+        `-BinaryOperator 0x7fc9b786b580 <line:11:7, col:34> 'float' '='
+          |-ArraySubscriptExpr 0x7fc9b786b498 <col:7, col:16> 'float' lvalue
+          | |-ImplicitCastExpr 0x7fc9b786b468 <col:7> 'float *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x7fc9b786b3e8 <col:7> 'float [75]' lvalue Var 0x7fc9b786b000 'vs_data' 'float [75]'
+          | `-ImplicitCastExpr 0x7fc9b786b480 <col:15> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc9b786b410 <col:15> 'int' lvalue Var 0x7fc9b786b218 'i' 'int'
+          `-ImplicitCastExpr 0x7fc9b786b568 <col:20, col:34> 'float' <IntegralToFloating>
+            `-ParenExpr 0x7fc9b786b548 <col:20, col:34> 'int'
+              `-BinaryOperator 0x7fc9b786b520 <col:21, col:33> 'int' '=='
+                |-ImplicitCastExpr 0x7fc9b786b508 <col:21> 'int' <LValueToRValue>
+                | `-DeclRefExpr 0x7fc9b786b4c0 <col:21> 'int' lvalue Var 0x7fc9b786b1a0 'vis_type' 'int'
+                `-IntegerLiteral 0x7fc9b786b4e8 <col:33> 'int' 1

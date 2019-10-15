@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7ffea30174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffea28142f0 <../Data/C2AST/pr58330.c:6:1, line:11:1> line:7:1 write_reverse 'void (unsigned long *, unsigned long)'
+| |-ParmVarDecl 0x7ffea30181a0 <col:16, col:31> col:31 used addr 'unsigned long *'
+| |-ParmVarDecl 0x7ffea2814218 <col:37, col:51> col:51 used val 'unsigned long'
+| `-CompoundStmt 0x7ffea2814988 <line:8:1, line:11:1>
+|   |-DeclStmt 0x7ffea2814708 <line:9:3, col:50>
+|   | `-VarDecl 0x7ffea28143f8 <col:3, col:49> col:17 used reverse 'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7ffea28146f0 <col:27, col:49> 'unsigned long' <IntegralCast>
+|   |     `-CallExpr 0x7ffea2814690 <col:27, col:49> 'unsigned long long'
+|   |       |-ImplicitCastExpr 0x7ffea2814678 <col:27> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7ffea28145f8 <col:27> '<builtin fn type>' Function 0x7ffea2814498 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|   |       `-ImplicitCastExpr 0x7ffea28146d8 <col:46> 'unsigned long long' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7ffea28146c0 <col:46> 'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7ffea2814620 <col:46> 'unsigned long' lvalue ParmVar 0x7ffea2814218 'val' 'unsigned long'
+|   `-AtomicExpr 0x7ffea2814930 <line:10:3, col:52> 'void'
+|     |-ImplicitCastExpr 0x7ffea2814900 <col:21> 'unsigned long *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ffea2814810 <col:21> 'unsigned long *' lvalue ParmVar 0x7ffea30181a0 'addr' 'unsigned long *'
+|     |-IntegerLiteral 0x7ffea2814860 <<built-in>:11:26> 'int' 0
+|     `-ImplicitCastExpr 0x7ffea2814918 <../Data/C2AST/pr58330.c:10:27> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffea2814838 <col:27> 'unsigned long' lvalue Var 0x7ffea28143f8 'reverse' 'unsigned long'
+|-FunctionDecl 0x7ffea2814498 <line:9:27> col:27 implicit used __builtin_bswap64 'unsigned long long (unsigned long long)' extern
+| |-ParmVarDecl 0x7ffea2814538 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7ffea28145a0 <col:27> Implicit
+| `-ConstAttr 0x7ffea28145e8 <col:27> Implicit
+`-FunctionDecl 0x7ffea2814748 <line:10:3> col:3 implicit used __atomic_store_n 'void ()' extern

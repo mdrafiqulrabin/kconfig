@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe1b982bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe1ba014228 <../Data/C2AST/pr59667.c:5:1, line:12:1> line:6:1 main 'int (void)'
+  `-CompoundStmt 0x7fe1ba0148b0 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fe1ba0143e8 <line:8:3, col:23>
+    | `-VarDecl 0x7fe1ba014350 <col:3, col:22> col:16 used len 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fe1ba0143d0 <col:22> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fe1ba0143b0 <col:22> 'int' 1
+    |-DeclStmt 0x7fe1ba014668 <line:9:3, col:27>
+    | `-VarDecl 0x7fe1ba0145d0 <col:3, col:26> col:11 used P 'float (*)[len][len]' cinit
+    |   `-ImplicitCastExpr 0x7fe1ba014650 <col:26> 'float (*)[len][len]' <NullToPointer>
+    |     `-IntegerLiteral 0x7fe1ba014630 <col:26> 'int' 0
+    |-BinaryOperator 0x7fe1ba014850 <line:10:3, col:16> 'float' '='
+    | |-ArraySubscriptExpr 0x7fe1ba0147f0 <col:3, col:12> 'float' lvalue
+    | | |-ImplicitCastExpr 0x7fe1ba0147d8 <col:3, col:9> 'float *' <ArrayToPointerDecay>
+    | | | `-ArraySubscriptExpr 0x7fe1ba014760 <col:3, col:9> 'float [len]' lvalue
+    | | |   |-ImplicitCastExpr 0x7fe1ba014748 <col:3, col:6> 'float (*)[len]' <ArrayToPointerDecay>
+    | | |   | `-ParenExpr 0x7fe1ba0146e0 <col:3, col:6> 'float [len][len]':'float [len][len]' lvalue
+    | | |   |   `-UnaryOperator 0x7fe1ba0146c0 <col:4, col:5> 'float [len][len]':'float [len][len]' lvalue prefix '*'
+    | | |   |     `-ImplicitCastExpr 0x7fe1ba0146a8 <col:5> 'float (*)[len][len]' <LValueToRValue>
+    | | |   |       `-DeclRefExpr 0x7fe1ba014680 <col:5> 'float (*)[len][len]' lvalue Var 0x7fe1ba0145d0 'P' 'float (*)[len][len]'
+    | | |   `-IntegerLiteral 0x7fe1ba014700 <col:8> 'int' 0
+    | | `-IntegerLiteral 0x7fe1ba014788 <col:11> 'int' 0
+    | `-ImplicitCastExpr 0x7fe1ba014838 <col:16> 'float' <IntegralToFloating>
+    |   `-IntegerLiteral 0x7fe1ba014818 <col:16> 'int' 1
+    `-ReturnStmt 0x7fe1ba014898 <line:11:3, col:10>
+      `-IntegerLiteral 0x7fe1ba014878 <col:10> 'int' 0

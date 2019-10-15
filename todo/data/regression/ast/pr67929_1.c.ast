@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f951082a4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9511815268 <../Data/C2AST/pr67929_1.c:1:1, line:5:1> line:2:1 used foo 'int (float)'
+| |-ParmVarDecl 0x7f951082b178 <col:6, col:12> col:12 used a 'float'
+| |-CompoundStmt 0x7f9511815450 <line:3:1, line:5:1>
+| | `-ReturnStmt 0x7f9511815438 <line:4:3, col:14>
+| |   `-ImplicitCastExpr 0x7f9511815420 <col:10, col:14> 'int' <FloatingToIntegral>
+| |     `-BinaryOperator 0x7f95118153f8 <col:10, col:14> 'float' '*'
+| |       |-ImplicitCastExpr 0x7f95118153e0 <col:10> 'float' <LValueToRValue>
+| |       | `-DeclRefExpr 0x7f9511815398 <col:10> 'float' lvalue ParmVar 0x7f951082b178 'a' 'float'
+| |       `-FloatingLiteral 0x7f95118153c0 <col:14> 'float' 4.900000e+00
+| `-NoInlineAttr 0x7f9511815310 <line:1:21>
+|-FunctionDecl 0x7f9511815538 <line:8:1, line:15:1> line:9:1 main 'int (void)'
+| `-CompoundStmt 0x7f9511815928 <line:10:1, line:15:1>
+|   |-IfStmt 0x7f95118158b8 <line:11:3, line:12:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f95118156e0 <line:11:7, col:22> 'int' '!='
+|   | | |-CallExpr 0x7f9511815690 <col:7, col:17> 'int'
+|   | | | |-ImplicitCastExpr 0x7f9511815678 <col:7> 'int (*)(float)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7f9511815608 <col:7> 'int (float)' Function 0x7f9511815268 'foo' 'int (float)'
+|   | | | `-FloatingLiteral 0x7f9511815630 <col:12> 'float' 1.000000e+01
+|   | | `-IntegerLiteral 0x7f95118156c0 <col:22> 'int' 49
+|   | |-CallExpr 0x7f9511815890 <line:12:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f9511815878 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f9511815828 <col:5> '<builtin fn type>' Function 0x7f9511815740 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9511815910 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7f95118158f0 <col:10> 'int' 0
+`-FunctionDecl 0x7f9511815740 <line:12:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f95118157e0 <col:5> Implicit

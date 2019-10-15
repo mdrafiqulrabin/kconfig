@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7f7f5282bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f7f5286d800 <../Data/C2AST/pr81697.c:5:1, col:39> col:12 used kRecoveryInstallString 'const char [4]' cinit
+| `-StringLiteral 0x7f7f5286d8d8 <col:39> 'const char [4]' lvalue "NEW"
+|-VarDecl 0x7f7f5286d968 <line:6:1, col:38> col:12 used kRecoveryUpdateString 'const char [7]' cinit
+| `-StringLiteral 0x7f7f5286da08 <col:38> 'const char [7]' lvalue "UPDATE"
+|-VarDecl 0x7f7f5286da98 <line:7:1, col:47> col:12 used kRecoveryUninstallationString1 'const char [8]' cinit
+| `-StringLiteral 0x7f7f5286db38 <col:47> 'const char [8]' lvalue "INSTALL"
+|-VarDecl 0x7f7f5286dbc8 <line:8:1, col:47> col:12 used kRecoveryUninstallationString2 'const char [10]' cinit
+| `-StringLiteral 0x7f7f5286dc68 <col:47> 'const char [10]' lvalue "UNINSTALL"
+|-VarDecl 0x7f7f5286dcf0 <line:10:1, col:27> col:20 used zero 'const volatile int' cinit
+| `-IntegerLiteral 0x7f7f5286dd50 <col:27> 'int' 0
+`-FunctionDecl 0x7f7f5286ddc0 <line:12:1, line:20:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7f7f5286e6f8 <line:14:1, line:20:1>
+    |-DeclStmt 0x7f7f5286dfd8 <line:15:3, col:45>
+    | `-VarDecl 0x7f7f5286de70 <col:3, col:44> col:8 used x1 'char' cinit
+    |   `-ImplicitCastExpr 0x7f7f5286dfc0 <col:13, col:44> 'char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f7f5286df98 <col:13, col:44> 'const char' lvalue
+    |       |-ImplicitCastExpr 0x7f7f5286df80 <col:13> 'const char *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f7f5286ded0 <col:13> 'const char [4]' lvalue Var 0x7f7f5286d800 'kRecoveryInstallString' 'const char [4]'
+    |       `-BinaryOperator 0x7f7f5286df58 <col:36, col:43> 'int' '+'
+    |         |-ImplicitCastExpr 0x7f7f5286df40 <col:36> 'int' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f7f5286def8 <col:36> 'const volatile int' lvalue Var 0x7f7f5286dcf0 'zero' 'const volatile int'
+    |         `-IntegerLiteral 0x7f7f5286df20 <col:43> 'int' 0
+    |-DeclStmt 0x7f7f5286e168 <line:16:3, col:44>
+    | `-VarDecl 0x7f7f5286e000 <col:3, col:43> col:8 used x2 'char' cinit
+    |   `-ImplicitCastExpr 0x7f7f5286e150 <col:13, col:43> 'char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f7f5286e128 <col:13, col:43> 'const char' lvalue
+    |       |-ImplicitCastExpr 0x7f7f5286e110 <col:13> 'const char *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f7f5286e060 <col:13> 'const char [7]' lvalue Var 0x7f7f5286d968 'kRecoveryUpdateString' 'const char [7]'
+    |       `-BinaryOperator 0x7f7f5286e0e8 <col:35, col:42> 'int' '+'
+    |         |-ImplicitCastExpr 0x7f7f5286e0d0 <col:35> 'int' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f7f5286e088 <col:35> 'const volatile int' lvalue Var 0x7f7f5286dcf0 'zero' 'const volatile int'
+    |         `-IntegerLiteral 0x7f7f5286e0b0 <col:42> 'int' 0
+    |-DeclStmt 0x7f7f5286e2f8 <line:17:3, col:53>
+    | `-VarDecl 0x7f7f5286e190 <col:3, col:52> col:8 used x3 'char' cinit
+    |   `-ImplicitCastExpr 0x7f7f5286e2e0 <col:13, col:52> 'char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f7f5286e2b8 <col:13, col:52> 'const char' lvalue
+    |       |-ImplicitCastExpr 0x7f7f5286e2a0 <col:13> 'const char *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f7f5286e1f0 <col:13> 'const char [8]' lvalue Var 0x7f7f5286da98 'kRecoveryUninstallationString1' 'const char [8]'
+    |       `-BinaryOperator 0x7f7f5286e278 <col:44, col:51> 'int' '+'
+    |         |-ImplicitCastExpr 0x7f7f5286e260 <col:44> 'int' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f7f5286e218 <col:44> 'const volatile int' lvalue Var 0x7f7f5286dcf0 'zero' 'const volatile int'
+    |         `-IntegerLiteral 0x7f7f5286e240 <col:51> 'int' 0
+    |-DeclStmt 0x7f7f5286e488 <line:18:3, col:53>
+    | `-VarDecl 0x7f7f5286e320 <col:3, col:52> col:8 used x4 'char' cinit
+    |   `-ImplicitCastExpr 0x7f7f5286e470 <col:13, col:52> 'char' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f7f5286e448 <col:13, col:52> 'const char' lvalue
+    |       |-ImplicitCastExpr 0x7f7f5286e430 <col:13> 'const char *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f7f5286e380 <col:13> 'const char [10]' lvalue Var 0x7f7f5286dbc8 'kRecoveryUninstallationString2' 'const char [10]'
+    |       `-BinaryOperator 0x7f7f5286e408 <col:44, col:51> 'int' '+'
+    |         |-ImplicitCastExpr 0x7f7f5286e3f0 <col:44> 'int' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f7f5286e3a8 <col:44> 'const volatile int' lvalue Var 0x7f7f5286dcf0 'zero' 'const volatile int'
+    |         `-IntegerLiteral 0x7f7f5286e3d0 <col:51> 'int' 0
+    `-ReturnStmt 0x7f7f5286e6e0 <line:19:3, col:33>
+      `-BinaryOperator 0x7f7f5286e6b8 <col:10, col:33> 'int' '=='
+        |-ParenExpr 0x7f7f5286e678 <col:10, col:28> 'int'
+        | `-BinaryOperator 0x7f7f5286e650 <col:11, col:26> 'int' '+'
+        |   |-BinaryOperator 0x7f7f5286e5d0 <col:11, col:21> 'int' '+'
+        |   | |-BinaryOperator 0x7f7f5286e550 <col:11, col:16> 'int' '+'
+        |   | | |-ImplicitCastExpr 0x7f7f5286e508 <col:11> 'int' <IntegralCast>
+        |   | | | `-ImplicitCastExpr 0x7f7f5286e4f0 <col:11> 'char' <LValueToRValue>
+        |   | | |   `-DeclRefExpr 0x7f7f5286e4a0 <col:11> 'char' lvalue Var 0x7f7f5286de70 'x1' 'char'
+        |   | | `-ImplicitCastExpr 0x7f7f5286e538 <col:16> 'int' <IntegralCast>
+        |   | |   `-ImplicitCastExpr 0x7f7f5286e520 <col:16> 'char' <LValueToRValue>
+        |   | |     `-DeclRefExpr 0x7f7f5286e4c8 <col:16> 'char' lvalue Var 0x7f7f5286e000 'x2' 'char'
+        |   | `-ImplicitCastExpr 0x7f7f5286e5b8 <col:21> 'int' <IntegralCast>
+        |   |   `-ImplicitCastExpr 0x7f7f5286e5a0 <col:21> 'char' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7f7f5286e578 <col:21> 'char' lvalue Var 0x7f7f5286e190 'x3' 'char'
+        |   `-ImplicitCastExpr 0x7f7f5286e638 <col:26> 'int' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7f7f5286e620 <col:26> 'char' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f7f5286e5f8 <col:26> 'char' lvalue Var 0x7f7f5286e320 'x4' 'char'
+        `-IntegerLiteral 0x7f7f5286e698 <col:33> 'int' 0

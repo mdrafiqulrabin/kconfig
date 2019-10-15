@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fc59a0070e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc59a007d78 <../Data/C2AST/pr64061.c:4:1, col:14> col:14 used buf 'void *' extern
+|-FunctionDecl 0x7fc59a061f00 <line:6:1, col:22> col:13 used bar 'void (void)' extern
+|-FunctionDecl 0x7fc59a062088 <line:8:1, line:21:1> line:9:1 foo 'int (int)'
+| |-ParmVarDecl 0x7fc59a061fb8 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fc59a062780 <line:10:1, line:21:1>
+|   |-DeclStmt 0x7fc59a0621c8 <line:11:3, col:12>
+|   | `-VarDecl 0x7fc59a062148 <col:3, col:11> col:7 used j 'int' cinit
+|   |   `-IntegerLiteral 0x7fc59a0621a8 <col:11> 'int' 0
+|   |-IfStmt 0x7fc59a062660 <line:12:3, line:19:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc59a0624c0 <line:12:7, col:33> 'int' '=='
+|   | | |-CallExpr 0x7fc59a062440 <col:7, col:28> 'int'
+|   | | | |-ImplicitCastExpr 0x7fc59a062428 <col:7> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fc59a062398 <col:7> '<builtin fn type>' Function 0x7fc59a062248 '__builtin_setjmp' 'int (void **)'
+|   | | | `-ImplicitCastExpr 0x7fc59a062488 <col:25> 'void **' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fc59a062470 <col:25> 'void *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fc59a0623c0 <col:25> 'void *' lvalue Var 0x7fc59a007d78 'buf' 'void *'
+|   | | `-IntegerLiteral 0x7fc59a0624a0 <col:33> 'int' 0
+|   | |-CompoundStmt 0x7fc59a062648 <line:13:5, line:19:5>
+|   | | `-WhileStmt 0x7fc59a062628 <line:14:7, line:18:4>
+|   | |   |-<<<NULL>>>
+|   | |   |-IntegerLiteral 0x7fc59a0624e8 <line:14:14> 'int' 1
+|   | |   `-CompoundStmt 0x7fc59a062608 <line:15:7, line:18:4>
+|   | |     |-BinaryOperator 0x7fc59a062550 <line:16:9, col:13> 'int' '='
+|   | |     | |-DeclRefExpr 0x7fc59a062508 <col:9> 'int' lvalue Var 0x7fc59a062148 'j' 'int'
+|   | |     | `-IntegerLiteral 0x7fc59a062530 <col:13> 'int' 1
+|   | |     `-CallExpr 0x7fc59a0625e0 <line:17:4, col:9> 'void'
+|   | |       `-ImplicitCastExpr 0x7fc59a0625c8 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |         `-DeclRefExpr 0x7fc59a062578 <col:4> 'void (void)' Function 0x7fc59a061f00 'bar' 'void (void)'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc59a062768 <line:20:3, col:18>
+|     `-ConditionalOperator 0x7fc59a062738 <col:10, col:18> 'int'
+|       |-ImplicitCastExpr 0x7fc59a062708 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc59a062698 <col:10> 'int' lvalue Var 0x7fc59a062148 'j' 'int'
+|       |-ImplicitCastExpr 0x7fc59a062720 <col:14> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc59a0626c0 <col:14> 'int' lvalue ParmVar 0x7fc59a061fb8 'i' 'int'
+|       `-IntegerLiteral 0x7fc59a0626e8 <col:18> 'int' 0
+`-FunctionDecl 0x7fc59a062248 <line:12:7> col:7 implicit used __builtin_setjmp 'int (void **)' extern
+  |-ParmVarDecl 0x7fc59a0622e8 <<invalid sloc>> <invalid sloc> 'void **'
+  `-ReturnsTwiceAttr 0x7fc59a062350 <col:7> Implicit

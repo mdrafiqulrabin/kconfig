@@ -1,0 +1,87 @@
+TranslationUnitDecl 0x7ffae3817ae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffae3818760 <../Data/C2AST/pr42164.c:1:9, line:4:1> line:1:9 struct definition
+| `-FieldDecl 0x7ffae3028638 <line:3:3, col:22> col:22 referenced pte 'unsigned long long'
+|-TypedefDecl 0x7ffae30286d0 <line:1:1, line:4:3> col:3 referenced pte_t 'struct pte_t':'pte_t'
+| `-ElaboratedType 0x7ffae3028680 'struct pte_t' sugar
+|   `-RecordType 0x7ffae3028600 'pte_t'
+|     `-Record 0x7ffae3818760 ''
+|-FunctionDecl 0x7ffae3028880 <line:5:1, line:10:1> line:5:7 used mk_swap_pte 'pte_t (unsigned long)'
+| |-ParmVarDecl 0x7ffae3028778 <col:20, col:34> col:34 used offset 'unsigned long'
+| `-CompoundStmt 0x7ffae3028bd8 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7ffae30289d8 <line:7:3, col:12>
+|   | `-VarDecl 0x7ffae3028978 <col:3, col:9> col:9 used pte 'pte_t':'pte_t' nrvo
+|   |-BinaryOperator 0x7ffae3028b10 <line:8:3, col:26> 'unsigned long long' '='
+|   | |-MemberExpr 0x7ffae3028a18 <col:3, col:7> 'unsigned long long' lvalue .pte 0x7ffae3028638
+|   | | `-DeclRefExpr 0x7ffae30289f0 <col:3> 'pte_t':'pte_t' lvalue Var 0x7ffae3028978 'pte' 'pte_t':'pte_t'
+|   | `-ImplicitCastExpr 0x7ffae3028af8 <col:13, col:26> 'unsigned long long' <IntegralCast>
+|   |   `-ParenExpr 0x7ffae3028ad8 <col:13, col:26> 'unsigned long'
+|   |     `-BinaryOperator 0x7ffae3028ab0 <col:14, col:24> 'unsigned long' '<<'
+|   |       |-ImplicitCastExpr 0x7ffae3028a98 <col:14> 'unsigned long' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7ffae3028a50 <col:14> 'unsigned long' lvalue ParmVar 0x7ffae3028778 'offset' 'unsigned long'
+|   |       `-IntegerLiteral 0x7ffae3028a78 <col:24> 'int' 40
+|   `-ReturnStmt 0x7ffae3028bc0 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7ffae3028ba8 <col:10> 'pte_t':'pte_t' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffae3028b80 <col:10> 'pte_t':'pte_t' lvalue Var 0x7ffae3028978 'pte' 'pte_t':'pte_t'
+|-FunctionDecl 0x7ffae3028d18 <line:11:1, line:14:1> line:11:5 used pte_file 'int (pte_t)'
+| |-ParmVarDecl 0x7ffae3028c10 <col:15, col:21> col:21 used pte 'pte_t':'pte_t'
+| `-CompoundStmt 0x7ffae3028f30 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7ffae3028f18 <line:13:3, col:27>
+|     `-ImplicitCastExpr 0x7ffae3028f00 <col:10, col:27> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7ffae3028ed8 <col:10, col:27> 'unsigned long long' '&'
+|         |-ImplicitCastExpr 0x7ffae3028ea8 <col:10, col:14> 'unsigned long long' <LValueToRValue>
+|         | `-MemberExpr 0x7ffae3028de8 <col:10, col:14> 'unsigned long long' lvalue .pte 0x7ffae3028638
+|         |   `-DeclRefExpr 0x7ffae3028dc0 <col:10> 'pte_t':'pte_t' lvalue ParmVar 0x7ffae3028c10 'pte' 'pte_t':'pte_t'
+|         `-ImplicitCastExpr 0x7ffae3028ec0 <col:20, col:27> 'unsigned long long' <IntegralCast>
+|           `-ParenExpr 0x7ffae3028e88 <col:20, col:27> 'int'
+|             `-BinaryOperator 0x7ffae3028e60 <col:21, col:26> 'int' '<<'
+|               |-IntegerLiteral 0x7ffae3028e20 <col:21> 'int' 1
+|               `-IntegerLiteral 0x7ffae3028e40 <col:26> 'int' 4
+|-RecordDecl 0x7ffae3028f48 <line:15:9, line:18:1> line:15:9 struct definition
+| `-FieldDecl 0x7ffae3029008 <line:17:3, col:17> col:17 referenced val 'unsigned long'
+|-TypedefDecl 0x7ffae30290a0 <line:15:1, line:18:3> col:3 referenced swp_entry_t 'struct swp_entry_t':'swp_entry_t'
+| `-ElaboratedType 0x7ffae3029050 'struct swp_entry_t' sugar
+|   `-RecordType 0x7ffae3028fd0 'swp_entry_t'
+|     `-Record 0x7ffae3028f48 ''
+`-FunctionDecl 0x7ffae3029240 <line:19:1, line:25:1> line:19:7 swp_entry_to_pte 'pte_t (swp_entry_t)'
+  |-ParmVarDecl 0x7ffae3029140 <col:25, col:37> col:37 used entry 'swp_entry_t':'swp_entry_t'
+  `-CompoundStmt 0x7ffae3040760 <line:20:1, line:25:1>
+    |-DeclStmt 0x7ffae3029358 <line:21:3, col:25>
+    | `-VarDecl 0x7ffae30292f8 <col:3, col:15> col:15 used arch_entry 'swp_entry_t':'swp_entry_t'
+    |-BinaryOperator 0x7ffae30401a8 <line:22:3, col:66> 'swp_entry_t':'swp_entry_t' '='
+    | |-DeclRefExpr 0x7ffae3029370 <col:3> 'swp_entry_t':'swp_entry_t' lvalue Var 0x7ffae30292f8 'arch_entry' 'swp_entry_t':'swp_entry_t'
+    | `-ImplicitCastExpr 0x7ffae3040190 <col:16, col:66> 'swp_entry_t':'swp_entry_t' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7ffae3040168 <col:16, col:66> 'swp_entry_t':'swp_entry_t' lvalue
+    |     `-InitListExpr 0x7ffae3040108 <col:29, col:66> 'swp_entry_t':'swp_entry_t'
+    |       `-ImplicitCastExpr 0x7ffae3040150 <col:30, col:63> 'unsigned long' <IntegralCast>
+    |         `-MemberExpr 0x7ffae3040088 <col:30, col:63> 'unsigned long long' .pte 0x7ffae3028638
+    |           `-CallExpr 0x7ffae3040040 <col:30, col:61> 'pte_t':'pte_t'
+    |             |-ImplicitCastExpr 0x7ffae3040028 <col:30> 'pte_t (*)(unsigned long)' <FunctionToPointerDecay>
+    |             | `-DeclRefExpr 0x7ffae30293a8 <col:30> 'pte_t (unsigned long)' Function 0x7ffae3028880 'mk_swap_pte' 'pte_t (unsigned long)'
+    |             `-ImplicitCastExpr 0x7ffae3040070 <col:43, col:60> 'unsigned long' <IntegralCast>
+    |               `-CallExpr 0x7ffae3029560 <col:43, col:60> 'int'
+    |                 |-ImplicitCastExpr 0x7ffae3029548 <col:43> 'int (*)()' <FunctionToPointerDecay>
+    |                 | `-DeclRefExpr 0x7ffae30294d0 <col:43> 'int ()' Function 0x7ffae3029420 'swp_offset' 'int ()'
+    |                 `-ImplicitCastExpr 0x7ffae3029590 <col:55> 'swp_entry_t':'swp_entry_t' <LValueToRValue>
+    |                   `-DeclRefExpr 0x7ffae30294f8 <col:55> 'swp_entry_t':'swp_entry_t' lvalue ParmVar 0x7ffae3029140 'entry' 'swp_entry_t':'swp_entry_t'
+    |-CallExpr 0x7ffae3040560 <line:23:3, col:64> 'int'
+    | |-ImplicitCastExpr 0x7ffae3040548 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffae30402a8 <col:3> 'int ()' Function 0x7ffae30401f8 '__BUG_ON' 'int ()'
+    | `-CStyleCastExpr 0x7ffae3040520 <col:13, col:63> 'unsigned long' <IntegralCast>
+    |   `-CallExpr 0x7ffae30404c0 <col:29, col:63> 'int'
+    |     |-ImplicitCastExpr 0x7ffae30404a8 <col:29> 'int (*)(pte_t)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffae30402d0 <col:29> 'int (pte_t)' Function 0x7ffae3028d18 'pte_file' 'int (pte_t)'
+    |     `-ImplicitCastExpr 0x7ffae30404f0 <col:39, col:62> 'pte_t':'pte_t' <LValueToRValue>
+    |       `-CompoundLiteralExpr 0x7ffae3040428 <col:39, col:62> 'pte_t':'pte_t' lvalue
+    |         `-InitListExpr 0x7ffae30403b0 <col:47, col:62> 'pte_t':'pte_t'
+    |           `-ImplicitCastExpr 0x7ffae3040410 <col:48, col:59> 'unsigned long long' <IntegralCast>
+    |             `-ImplicitCastExpr 0x7ffae30403f8 <col:48, col:59> 'unsigned long' <LValueToRValue>
+    |               `-MemberExpr 0x7ffae3040330 <col:48, col:59> 'unsigned long' lvalue .val 0x7ffae3029008
+    |                 `-DeclRefExpr 0x7ffae3040308 <col:48> 'swp_entry_t':'swp_entry_t' lvalue Var 0x7ffae30292f8 'arch_entry' 'swp_entry_t':'swp_entry_t'
+    `-ReturnStmt 0x7ffae3040748 <line:24:3, col:33>
+      `-ImplicitCastExpr 0x7ffae3040730 <col:10, col:33> 'pte_t':'pte_t' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7ffae3040708 <col:10, col:33> 'pte_t':'pte_t' lvalue
+          `-InitListExpr 0x7ffae3040690 <col:18, col:33> 'pte_t':'pte_t'
+            `-ImplicitCastExpr 0x7ffae30406f0 <col:19, col:30> 'unsigned long long' <IntegralCast>
+              `-ImplicitCastExpr 0x7ffae30406d8 <col:19, col:30> 'unsigned long' <LValueToRValue>
+                `-MemberExpr 0x7ffae3040610 <col:19, col:30> 'unsigned long' lvalue .val 0x7ffae3029008
+                  `-DeclRefExpr 0x7ffae30405e8 <col:19> 'swp_entry_t':'swp_entry_t' lvalue Var 0x7ffae30292f8 'arch_entry' 'swp_entry_t':'swp_entry_t'

@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7f90938166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9093817378 <../Data/C2AST/pr39464.c:5:1, col:13> col:13 referenced T 'int'
+| |-BuiltinType 0x7f90938167e0 'int'
+| `-MayAliasAttr 0x7f90938173d0 <col:30>
+|-TypedefDecl 0x7f9092819c50 <line:6:1, col:22> col:22 referenced U 'unsigned int'
+| |-BuiltinType 0x7f9093816880 'unsigned int'
+| `-MayAliasAttr 0x7f9092819ca8 <col:39>
+`-FunctionDecl 0x7f9092819dd0 <line:8:1, line:19:1> line:9:1 foo 'void (void *)'
+  |-ParmVarDecl 0x7f9092819d08 <col:6, col:12> col:12 used p 'void *'
+  `-CompoundStmt 0x7f909281a5b8 <line:10:1, line:19:1>
+    |-DeclStmt 0x7f909281a028 <line:11:3, col:19>
+    | `-VarDecl 0x7f9092819f48 <col:3, col:18> col:6 used a 'T *' cinit
+    |   `-CStyleCastExpr 0x7f909281a000 <col:10, col:18> 'int *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f9092819fe8 <col:18> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9092819fa8 <col:18> 'void *' lvalue ParmVar 0x7f9092819d08 'p' 'void *'
+    |-DeclStmt 0x7f909281a130 <line:12:3, col:19>
+    | `-VarDecl 0x7f909281a058 <col:3, col:18> col:8 used b 'int *' cinit
+    |   `-CStyleCastExpr 0x7f909281a108 <col:12, col:18> 'T *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f909281a0f0 <col:18> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f909281a0b8 <col:18> 'void *' lvalue ParmVar 0x7f9092819d08 'p' 'void *'
+    |-DeclStmt 0x7f909281a2b8 <line:13:3, col:28>
+    | `-VarDecl 0x7f909281a1d8 <col:3, col:27> col:6 used c 'U *' cinit
+    |   `-CStyleCastExpr 0x7f909281a290 <col:10, col:27> 'unsigned int *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f909281a278 <col:27> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f909281a238 <col:27> 'void *' lvalue ParmVar 0x7f9092819d08 'p' 'void *'
+    |-DeclStmt 0x7f909281a3c0 <line:14:3, col:28>
+    | `-VarDecl 0x7f909281a2e8 <col:3, col:27> col:17 used d 'unsigned int *' cinit
+    |   `-CStyleCastExpr 0x7f909281a398 <col:21, col:27> 'U *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f909281a380 <col:27> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f909281a348 <col:27> 'void *' lvalue ParmVar 0x7f9092819d08 'p' 'void *'
+    |-CStyleCastExpr 0x7f909281a428 <line:15:3, col:10> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7f909281a410 <col:10> 'T *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f909281a3d8 <col:10> 'T *' lvalue Var 0x7f9092819f48 'a' 'T *'
+    |-CStyleCastExpr 0x7f909281a4a0 <line:16:3, col:10> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7f909281a488 <col:10> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f909281a450 <col:10> 'int *' lvalue Var 0x7f909281a058 'b' 'int *'
+    |-CStyleCastExpr 0x7f909281a518 <line:17:3, col:10> 'void' <ToVoid>
+    | `-ImplicitCastExpr 0x7f909281a500 <col:10> 'U *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f909281a4c8 <col:10> 'U *' lvalue Var 0x7f909281a1d8 'c' 'U *'
+    `-CStyleCastExpr 0x7f909281a590 <line:18:3, col:10> 'void' <ToVoid>
+      `-ImplicitCastExpr 0x7f909281a578 <col:10> 'unsigned int *' <LValueToRValue>
+        `-DeclRefExpr 0x7f909281a540 <col:10> 'unsigned int *' lvalue Var 0x7f909281a2e8 'd' 'unsigned int *'

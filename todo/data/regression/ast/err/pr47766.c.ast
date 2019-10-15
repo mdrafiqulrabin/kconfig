@@ -1,0 +1,28 @@
+../Data/C2AST/pr47766.c:10:10: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+     int arg[key];
+         ^
+1 error generated.
+TranslationUnitDecl 0x7fde568174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde56817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde56817780 '__int128'
+|-TypedefDecl 0x7fde56817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde568177a0 'unsigned __int128'
+|-TypedefDecl 0x7fde56817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde56817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fde56817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde56817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde56817e00 'char *'
+|   `-BuiltinType 0x7fde56817580 'char'
+|-TypedefDecl 0x7fde56818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde568180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde56817f20 'struct __va_list_tag'
+|     `-Record 0x7fde56817e98 '__va_list_tag'
+`-FunctionDecl 0x7fde56859068 <../Data/C2AST/pr47766.c:5:1, line:13:1> line:6:1 parse_opt 'int (int)'
+  |-ParmVarDecl 0x7fde56818178 <col:12, col:16> col:16 used key 'int'
+  `-CompoundStmt 0x7fde56859408 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fde568593b8 <line:8:4, line:11:13>
+    | |-RecordDecl 0x7fde56859150 <line:8:4, line:11:4> line:8:4 invalid struct definition
+    | | `-FieldDecl 0x7fde568592a0 <line:10:6, col:17> col:10 invalid arg 'int [key]'
+    | `-VarDecl 0x7fde56859340 <line:8:4, line:11:6> col:6 reqdata 'struct (anonymous struct at ../Data/C2AST/pr47766.c:8:4)':'struct (anonymous at ../Data/C2AST/pr47766.c:8:4)'
+    `-ReturnStmt 0x7fde568593f0 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fde568593d0 <col:10> 'int' 0

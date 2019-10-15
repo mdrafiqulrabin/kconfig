@@ -1,0 +1,651 @@
+TranslationUnitDecl 0x7fd3fe02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd3fe02c970 <../Data/C2AST/pr70232.c:10:1, col:15> col:15 referenced bool '_Bool'
+| `-BuiltinType 0x7fd3fe02bd60 '_Bool'
+|-TypedefDecl 0x7fd3fe06e800 <line:11:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fd3fe02be40 'unsigned char'
+|-TypedefDecl 0x7fd3fe06e870 <line:12:1, col:23> col:23 referenced uint32_t 'unsigned long'
+| `-BuiltinType 0x7fd3fe02bea0 'unsigned long'
+|-TypedefDecl 0x7fd3fe06e8e0 <line:13:1, col:28> col:28 referenced uint64_t 'unsigned long long'
+| `-BuiltinType 0x7fd3fe02bec0 'unsigned long long'
+|-TypedefDecl 0x7fd3fe06e950 <line:14:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7fd3fe02be80 'unsigned int'
+|-EnumDecl 0x7fd3fe06e9a8 <line:16:1, line:19:1> line:16:1
+| |-EnumConstantDecl 0x7fd3fe06ea80 <line:17:2, col:10> col:2 referenced false 'int'
+| | `-IntegerLiteral 0x7fd3fe06ea60 <col:10> 'int' 0
+| `-EnumConstantDecl 0x7fd3fe06eae8 <line:18:2, col:9> col:2 referenced true 'int'
+|   `-IntegerLiteral 0x7fd3fe06eac8 <col:9> 'int' 1
+|-RecordDecl 0x7fd3fe06eb30 <line:21:1, line:23:1> line:21:8 struct list_head definition
+| |-FieldDecl 0x7fd3fe06ec90 <line:22:2, col:20> col:20 referenced next 'struct list_head *'
+| `-FieldDecl 0x7fd3fe06ed00 <col:2, col:27> col:27 prev 'struct list_head *'
+|-FunctionDecl 0x7fd3fe06f018 <line:26:15> col:15 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd3fe06f0b8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fd3fe06f118 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fd3fe06f178 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd3fe06f1f0 prev 0x7fd3fe06f018 <col:1, col:50> col:15 used memcpy 'void *(void *, const void *, size_t)' extern
+| |-ParmVarDecl 0x7fd3fe06ed60 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fd3fe06ee00 <col:30, col:41> col:42 'const void *'
+| `-ParmVarDecl 0x7fd3fe06ee90 <col:44> col:50 'size_t':'unsigned int'
+|-FunctionDecl 0x7fd3fe06f538 <line:27:12> col:12 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fd3fe06f5d8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fd3fe06f638 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fd3fe06f698 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd3fe06f710 prev 0x7fd3fe06f538 <col:1, col:51> col:12 used memcmp 'int (const void *, const void *, size_t)' extern
+| |-ParmVarDecl 0x7fd3fe06f2c0 <col:19, col:30> col:31 'const void *'
+| |-ParmVarDecl 0x7fd3fe06f338 <col:32, col:43> col:44 'const void *'
+| `-ParmVarDecl 0x7fd3fe06f3a8 <col:45> col:51 'size_t':'unsigned int'
+|-FunctionDecl 0x7fd3fe06fa78 <line:28:15> col:15 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fd3fe06fb18 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fd3fe06fb78 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fd3fe06fbd8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd3fe06fc50 prev 0x7fd3fe06fa78 <col:1, col:41> col:15 used memset 'void *(void *, int, size_t)' extern
+| |-ParmVarDecl 0x7fd3fe06f800 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fd3fe06f878 <col:30> col:33 'int'
+| `-ParmVarDecl 0x7fd3fe06f8e8 <col:35> col:41 'size_t':'unsigned int'
+|-FunctionDecl 0x7fd3fe06fea0 <line:29:1, col:42> col:13 used __memzero 'void (void *, size_t)' extern
+| |-ParmVarDecl 0x7fd3fe06fd20 <col:23, col:29> col:29 ptr 'void *'
+| `-ParmVarDecl 0x7fd3fe06fd90 <col:34, col:41> col:41 n 'size_t':'unsigned int'
+|-FunctionDecl 0x7fd3fe070140 <line:31:1, line:37:1> line:31:24 used wwn_to_uint64_t 'uint64_t (uint8_t *)' static inline
+| |-ParmVarDecl 0x7fd3fe070038 <col:40, col:49> col:49 used wwn 'uint8_t *'
+| `-CompoundStmt 0x7fd3fe0875d0 <line:32:1, line:37:1>
+|   `-ReturnStmt 0x7fd3fe0875b8 <line:33:2, line:36:45>
+|     `-BinaryOperator 0x7fd3fe087590 <line:33:9, line:36:45> 'unsigned long long' '|'
+|       |-BinaryOperator 0x7fd3fe087490 <line:33:9, line:36:26> 'unsigned long long' '|'
+|       | |-BinaryOperator 0x7fd3fe087348 <line:33:9, line:35:51> 'unsigned long long' '|'
+|       | | |-BinaryOperator 0x7fd3fe087200 <line:33:9, line:35:26> 'unsigned long long' '|'
+|       | | | |-BinaryOperator 0x7fd3fe0706b8 <line:33:9, line:34:51> 'unsigned long long' '|'
+|       | | | | |-BinaryOperator 0x7fd3fe070570 <line:33:9, line:34:26> 'unsigned long long' '|'
+|       | | | | | |-BinaryOperator 0x7fd3fe070428 <line:33:9, col:54> 'unsigned long long' '|'
+|       | | | | | | |-BinaryOperator 0x7fd3fe0702e0 <col:9, col:29> 'uint64_t':'unsigned long long' '<<'
+|       | | | | | | | |-CStyleCastExpr 0x7fd3fe070298 <col:9, col:24> 'uint64_t':'unsigned long long' <IntegralCast>
+|       | | | | | | | | `-ImplicitCastExpr 0x7fd3fe070280 <col:19, col:24> 'uint8_t':'unsigned char' <LValueToRValue>
+|       | | | | | | | |   `-ArraySubscriptExpr 0x7fd3fe070248 <col:19, col:24> 'uint8_t':'unsigned char' lvalue
+|       | | | | | | | |     |-ImplicitCastExpr 0x7fd3fe070230 <col:19> 'uint8_t *' <LValueToRValue>
+|       | | | | | | | |     | `-DeclRefExpr 0x7fd3fe0701e8 <col:19> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       | | | | | | | |     `-IntegerLiteral 0x7fd3fe070210 <col:23> 'int' 0
+|       | | | | | | | `-IntegerLiteral 0x7fd3fe0702c0 <col:29> 'int' 56
+|       | | | | | | `-BinaryOperator 0x7fd3fe070400 <col:34, col:54> 'uint64_t':'unsigned long long' '<<'
+|       | | | | | |   |-CStyleCastExpr 0x7fd3fe0703b8 <col:34, col:49> 'uint64_t':'unsigned long long' <IntegralCast>
+|       | | | | | |   | `-ImplicitCastExpr 0x7fd3fe0703a0 <col:44, col:49> 'uint8_t':'unsigned char' <LValueToRValue>
+|       | | | | | |   |   `-ArraySubscriptExpr 0x7fd3fe070368 <col:44, col:49> 'uint8_t':'unsigned char' lvalue
+|       | | | | | |   |     |-ImplicitCastExpr 0x7fd3fe070350 <col:44> 'uint8_t *' <LValueToRValue>
+|       | | | | | |   |     | `-DeclRefExpr 0x7fd3fe070308 <col:44> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       | | | | | |   |     `-IntegerLiteral 0x7fd3fe070330 <col:48> 'int' 1
+|       | | | | | |   `-IntegerLiteral 0x7fd3fe0703e0 <col:54> 'int' 48
+|       | | | | | `-BinaryOperator 0x7fd3fe070548 <line:34:6, col:26> 'uint64_t':'unsigned long long' '<<'
+|       | | | | |   |-CStyleCastExpr 0x7fd3fe070500 <col:6, col:21> 'uint64_t':'unsigned long long' <IntegralCast>
+|       | | | | |   | `-ImplicitCastExpr 0x7fd3fe0704e8 <col:16, col:21> 'uint8_t':'unsigned char' <LValueToRValue>
+|       | | | | |   |   `-ArraySubscriptExpr 0x7fd3fe0704b0 <col:16, col:21> 'uint8_t':'unsigned char' lvalue
+|       | | | | |   |     |-ImplicitCastExpr 0x7fd3fe070498 <col:16> 'uint8_t *' <LValueToRValue>
+|       | | | | |   |     | `-DeclRefExpr 0x7fd3fe070450 <col:16> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       | | | | |   |     `-IntegerLiteral 0x7fd3fe070478 <col:20> 'int' 2
+|       | | | | |   `-IntegerLiteral 0x7fd3fe070528 <col:26> 'int' 40
+|       | | | | `-BinaryOperator 0x7fd3fe070690 <col:31, col:51> 'uint64_t':'unsigned long long' '<<'
+|       | | | |   |-CStyleCastExpr 0x7fd3fe070648 <col:31, col:46> 'uint64_t':'unsigned long long' <IntegralCast>
+|       | | | |   | `-ImplicitCastExpr 0x7fd3fe070630 <col:41, col:46> 'uint8_t':'unsigned char' <LValueToRValue>
+|       | | | |   |   `-ArraySubscriptExpr 0x7fd3fe0705f8 <col:41, col:46> 'uint8_t':'unsigned char' lvalue
+|       | | | |   |     |-ImplicitCastExpr 0x7fd3fe0705e0 <col:41> 'uint8_t *' <LValueToRValue>
+|       | | | |   |     | `-DeclRefExpr 0x7fd3fe070598 <col:41> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       | | | |   |     `-IntegerLiteral 0x7fd3fe0705c0 <col:45> 'int' 3
+|       | | | |   `-IntegerLiteral 0x7fd3fe070670 <col:51> 'int' 32
+|       | | | `-BinaryOperator 0x7fd3fe0707d8 <line:35:6, col:26> 'uint64_t':'unsigned long long' '<<'
+|       | | |   |-CStyleCastExpr 0x7fd3fe070790 <col:6, col:21> 'uint64_t':'unsigned long long' <IntegralCast>
+|       | | |   | `-ImplicitCastExpr 0x7fd3fe070778 <col:16, col:21> 'uint8_t':'unsigned char' <LValueToRValue>
+|       | | |   |   `-ArraySubscriptExpr 0x7fd3fe070740 <col:16, col:21> 'uint8_t':'unsigned char' lvalue
+|       | | |   |     |-ImplicitCastExpr 0x7fd3fe070728 <col:16> 'uint8_t *' <LValueToRValue>
+|       | | |   |     | `-DeclRefExpr 0x7fd3fe0706e0 <col:16> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       | | |   |     `-IntegerLiteral 0x7fd3fe070708 <col:20> 'int' 4
+|       | | |   `-IntegerLiteral 0x7fd3fe0707b8 <col:26> 'int' 24
+|       | | `-BinaryOperator 0x7fd3fe087320 <col:31, col:51> 'uint64_t':'unsigned long long' '<<'
+|       | |   |-CStyleCastExpr 0x7fd3fe0872d8 <col:31, col:46> 'uint64_t':'unsigned long long' <IntegralCast>
+|       | |   | `-ImplicitCastExpr 0x7fd3fe0872c0 <col:41, col:46> 'uint8_t':'unsigned char' <LValueToRValue>
+|       | |   |   `-ArraySubscriptExpr 0x7fd3fe087288 <col:41, col:46> 'uint8_t':'unsigned char' lvalue
+|       | |   |     |-ImplicitCastExpr 0x7fd3fe087270 <col:41> 'uint8_t *' <LValueToRValue>
+|       | |   |     | `-DeclRefExpr 0x7fd3fe087228 <col:41> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       | |   |     `-IntegerLiteral 0x7fd3fe087250 <col:45> 'int' 5
+|       | |   `-IntegerLiteral 0x7fd3fe087300 <col:51> 'int' 16
+|       | `-BinaryOperator 0x7fd3fe087468 <line:36:6, col:26> 'uint64_t':'unsigned long long' '<<'
+|       |   |-CStyleCastExpr 0x7fd3fe087420 <col:6, col:21> 'uint64_t':'unsigned long long' <IntegralCast>
+|       |   | `-ImplicitCastExpr 0x7fd3fe087408 <col:16, col:21> 'uint8_t':'unsigned char' <LValueToRValue>
+|       |   |   `-ArraySubscriptExpr 0x7fd3fe0873d0 <col:16, col:21> 'uint8_t':'unsigned char' lvalue
+|       |   |     |-ImplicitCastExpr 0x7fd3fe0873b8 <col:16> 'uint8_t *' <LValueToRValue>
+|       |   |     | `-DeclRefExpr 0x7fd3fe087370 <col:16> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|       |   |     `-IntegerLiteral 0x7fd3fe087398 <col:20> 'int' 6
+|       |   `-IntegerLiteral 0x7fd3fe087448 <col:26> 'int' 8
+|       `-CStyleCastExpr 0x7fd3fe087568 <col:30, col:45> 'uint64_t':'unsigned long long' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fd3fe087550 <col:40, col:45> 'uint8_t':'unsigned char' <LValueToRValue>
+|           `-ArraySubscriptExpr 0x7fd3fe087518 <col:40, col:45> 'uint8_t':'unsigned char' lvalue
+|             |-ImplicitCastExpr 0x7fd3fe087500 <col:40> 'uint8_t *' <LValueToRValue>
+|             | `-DeclRefExpr 0x7fd3fe0874b8 <col:40> 'uint8_t *' lvalue ParmVar 0x7fd3fe070038 'wwn' 'uint8_t *'
+|             `-IntegerLiteral 0x7fd3fe0874e0 <col:44> 'int' 7
+|-RecordDecl 0x7fd3fe0875e8 <line:39:1, line:43:1> line:39:8 struct lpfc_name definition
+| |-RecordDecl 0x7fd3fe087690 <line:40:2, line:42:2> line:40:2 union definition
+| | `-FieldDecl 0x7fd3fe0877f8 <line:41:3, col:16> col:11 referenced wwn 'uint8_t [8]'
+| `-FieldDecl 0x7fd3fe087890 <line:40:2, line:42:4> col:4 referenced u 'union (anonymous union at ../Data/C2AST/pr70232.c:40:2)':'union lpfc_name::(anonymous at ../Data/C2AST/pr70232.c:40:2)'
+|-RecordDecl 0x7fd3fe087920 <line:45:1, line:49:1> line:45:8 struct lpfc_hba definition
+| |-FieldDecl 0x7fd3fe087a00 <line:46:2, col:11> col:11 referenced cfg_fof 'uint32_t':'unsigned long'
+| |-FieldDecl 0x7fd3fe087a58 <line:47:2, col:11> col:11 referenced cfg_oas_flags 'uint32_t':'unsigned long'
+| `-FieldDecl 0x7fd3fe087ac0 <line:48:2, col:19> col:19 referenced luns 'struct list_head':'struct list_head'
+|-RecordDecl 0x7fd3fe087b08 <line:51:1, line:55:1> line:51:8 struct lpfc_device_id definition
+| |-FieldDecl 0x7fd3fe087c00 <line:52:2, col:19> col:19 referenced vport_wwpn 'struct lpfc_name':'struct lpfc_name'
+| |-FieldDecl 0x7fd3fe087c68 <line:53:2, col:19> col:19 referenced target_wwpn 'struct lpfc_name':'struct lpfc_name'
+| `-FieldDecl 0x7fd3fe087cc0 <line:54:2, col:11> col:11 referenced lun 'uint64_t':'unsigned long long'
+|-RecordDecl 0x7fd3fe087d50 <line:57:1, line:62:1> line:57:8 struct lpfc_device_data definition
+| |-FieldDecl 0x7fd3fe087e20 <line:58:2, col:19> col:19 referenced listentry 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7fd3fe087ec0 <line:59:2, col:24> col:24 referenced device_id 'struct lpfc_device_id':'struct lpfc_device_id'
+| |-FieldDecl 0x7fd3fe087f40 <line:60:2, col:7> col:7 referenced oas_enabled 'bool':'_Bool'
+| `-FieldDecl 0x7fd3fe087f98 <line:61:2, col:7> col:7 referenced available 'bool':'_Bool'
+|-FunctionDecl 0x7fd3fe088750 <line:64:1, line:126:1> line:65:1 lpfc_find_next_oas_lun 'bool (struct lpfc_hba *, struct lpfc_name *, struct lpfc_name *, uint64_t *, struct lpfc_name *, struct lpfc_name *, uint64_t *, uint32_t *)'
+| |-ParmVarDecl 0x7fd3fe0880e0 <col:24, col:41> col:41 used phba 'struct lpfc_hba *'
+| |-ParmVarDecl 0x7fd3fe088200 <col:47, col:65> col:65 used vport_wwpn 'struct lpfc_name *'
+| |-ParmVarDecl 0x7fd3fe088288 <line:66:10, col:28> col:28 used target_wwpn 'struct lpfc_name *'
+| |-ParmVarDecl 0x7fd3fe088358 <col:41, col:51> col:51 used starting_lun 'uint64_t *'
+| |-ParmVarDecl 0x7fd3fe0883e0 <line:67:10, col:28> col:28 used found_vport_wwpn 'struct lpfc_name *'
+| |-ParmVarDecl 0x7fd3fe088468 <line:68:10, col:28> col:28 used found_target_wwpn 'struct lpfc_name *'
+| |-ParmVarDecl 0x7fd3fe0884d8 <line:69:10, col:20> col:20 used found_lun 'uint64_t *'
+| |-ParmVarDecl 0x7fd3fe0885a8 <line:70:10, col:20> col:20 used found_lun_status 'uint32_t *'
+| `-CompoundStmt 0x7fd3fe8019d8 <line:71:1, line:126:1>
+|   |-DeclStmt 0x7fd3fe088940 <line:73:2, col:35>
+|   | `-VarDecl 0x7fd3fe0888e0 <col:2, col:27> col:27 used lun_info 'struct lpfc_device_data *'
+|   |-DeclStmt 0x7fd3fe088a40 <line:74:2, col:34>
+|   | `-VarDecl 0x7fd3fe0889e0 <col:2, col:25> col:25 used device_id 'struct lpfc_device_id *'
+|   |-DeclStmt 0x7fd3fe088ac8 <line:75:2, col:14>
+|   | `-VarDecl 0x7fd3fe088a68 <col:2, col:11> col:11 used lun 'uint64_t':'unsigned long long'
+|   |-DeclStmt 0x7fd3fe088b90 <line:76:2, col:20>
+|   | `-VarDecl 0x7fd3fe088af0 <col:2, col:15> col:7 used found 'bool':'_Bool' cinit
+|   |   `-ImplicitCastExpr 0x7fd3fe088b78 <col:15> 'bool':'_Bool' <IntegralToBoolean>
+|   |     `-DeclRefExpr 0x7fd3fe088b50 <col:15> 'int' EnumConstant 0x7fd3fe06ea80 'false' 'int'
+|   |-IfStmt 0x7fd3fe0895a8 <line:78:2, line:83:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd3fe089528 <line:78:6, line:82:13> 'int' '||'
+|   | | |-BinaryOperator 0x7fd3fe089450 <line:78:6, line:81:27> 'int' '||'
+|   | | | |-BinaryOperator 0x7fd3fe089310 <line:78:6, line:80:43> 'int' '||'
+|   | | | | |-BinaryOperator 0x7fd3fe089288 <line:78:6, line:80:29> 'int' '||'
+|   | | | | | |-BinaryOperator 0x7fd3fe089200 <line:78:6, line:80:7> 'int' '||'
+|   | | | | | | |-BinaryOperator 0x7fd3fe089160 <line:78:6, line:79:24> 'int' '||'
+|   | | | | | | | |-BinaryOperator 0x7fd3fe0890d8 <line:78:6, line:79:7> 'int' '||'
+|   | | | | | | | | |-BinaryOperator 0x7fd3fe089050 <line:78:6, col:56> 'int' '||'
+|   | | | | | | | | | |-BinaryOperator 0x7fd3fe088fc8 <col:6, col:41> 'int' '||'
+|   | | | | | | | | | | |-CallExpr 0x7fd3fe088f00 <col:6, col:35> 'long'
+|   | | | | | | | | | | | |-ImplicitCastExpr 0x7fd3fe088ee8 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | | | | | | | | | | `-DeclRefExpr 0x7fd3fe088db8 <col:6> '<builtin fn type>' Function 0x7fd3fe088bf0 '__builtin_expect' 'long (long, long)'
+|   | | | | | | | | | | | |-ImplicitCastExpr 0x7fd3fe088f38 <col:23, col:31> 'long' <IntegralCast>
+|   | | | | | | | | | | | | `-UnaryOperator 0x7fd3fe088e80 <col:23, col:31> 'int' prefix '!'
+|   | | | | | | | | | | | |   `-UnaryOperator 0x7fd3fe088e60 <col:24, col:31> 'int' prefix '!'
+|   | | | | | | | | | | | |     `-ParenExpr 0x7fd3fe088e40 <col:25, col:31> 'int'
+|   | | | | | | | | | | | |       `-UnaryOperator 0x7fd3fe088e20 <col:26, col:27> 'int' prefix '!'
+|   | | | | | | | | | | | |         `-ImplicitCastExpr 0x7fd3fe088e08 <col:27> 'struct lpfc_hba *' <LValueToRValue>
+|   | | | | | | | | | | | |           `-DeclRefExpr 0x7fd3fe088de0 <col:27> 'struct lpfc_hba *' lvalue ParmVar 0x7fd3fe0880e0 'phba' 'struct lpfc_hba *'
+|   | | | | | | | | | | | `-ImplicitCastExpr 0x7fd3fe088f50 <col:34> 'long' <IntegralCast>
+|   | | | | | | | | | | |   `-IntegerLiteral 0x7fd3fe088ea0 <col:34> 'int' 0
+|   | | | | | | | | | | `-UnaryOperator 0x7fd3fe088fa8 <col:40, col:41> 'int' prefix '!'
+|   | | | | | | | | | |   `-ImplicitCastExpr 0x7fd3fe088f90 <col:41> 'struct lpfc_name *' <LValueToRValue>
+|   | | | | | | | | | |     `-DeclRefExpr 0x7fd3fe088f68 <col:41> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088200 'vport_wwpn' 'struct lpfc_name *'
+|   | | | | | | | | | `-UnaryOperator 0x7fd3fe089030 <col:55, col:56> 'int' prefix '!'
+|   | | | | | | | | |   `-ImplicitCastExpr 0x7fd3fe089018 <col:56> 'struct lpfc_name *' <LValueToRValue>
+|   | | | | | | | | |     `-DeclRefExpr 0x7fd3fe088ff0 <col:56> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088288 'target_wwpn' 'struct lpfc_name *'
+|   | | | | | | | | `-UnaryOperator 0x7fd3fe0890b8 <line:79:6, col:7> 'int' prefix '!'
+|   | | | | | | | |   `-ImplicitCastExpr 0x7fd3fe0890a0 <col:7> 'uint64_t *' <LValueToRValue>
+|   | | | | | | | |     `-DeclRefExpr 0x7fd3fe089078 <col:7> 'uint64_t *' lvalue ParmVar 0x7fd3fe088358 'starting_lun' 'uint64_t *'
+|   | | | | | | | `-UnaryOperator 0x7fd3fe089140 <col:23, col:24> 'int' prefix '!'
+|   | | | | | | |   `-ImplicitCastExpr 0x7fd3fe089128 <col:24> 'struct lpfc_name *' <LValueToRValue>
+|   | | | | | | |     `-DeclRefExpr 0x7fd3fe089100 <col:24> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe0883e0 'found_vport_wwpn' 'struct lpfc_name *'
+|   | | | | | | `-UnaryOperator 0x7fd3fe0891c8 <line:80:6, col:7> 'int' prefix '!'
+|   | | | | | |   `-ImplicitCastExpr 0x7fd3fe0891b0 <col:7> 'struct lpfc_name *' <LValueToRValue>
+|   | | | | | |     `-DeclRefExpr 0x7fd3fe089188 <col:7> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088468 'found_target_wwpn' 'struct lpfc_name *'
+|   | | | | | `-UnaryOperator 0x7fd3fe089268 <col:28, col:29> 'int' prefix '!'
+|   | | | | |   `-ImplicitCastExpr 0x7fd3fe089250 <col:29> 'uint64_t *' <LValueToRValue>
+|   | | | | |     `-DeclRefExpr 0x7fd3fe089228 <col:29> 'uint64_t *' lvalue ParmVar 0x7fd3fe0884d8 'found_lun' 'uint64_t *'
+|   | | | | `-UnaryOperator 0x7fd3fe0892f0 <col:42, col:43> 'int' prefix '!'
+|   | | | |   `-ImplicitCastExpr 0x7fd3fe0892d8 <col:43> 'uint32_t *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7fd3fe0892b0 <col:43> 'uint32_t *' lvalue ParmVar 0x7fd3fe0885a8 'found_lun_status' 'uint32_t *'
+|   | | | `-ParenExpr 0x7fd3fe089430 <line:81:6, col:27> 'int'
+|   | | |   `-BinaryOperator 0x7fd3fe089408 <col:7, col:25> 'int' '=='
+|   | | |     |-ImplicitCastExpr 0x7fd3fe0893d8 <col:7, col:8> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   | | |     | `-UnaryOperator 0x7fd3fe089378 <col:7, col:8> 'uint64_t':'unsigned long long' lvalue prefix '*'
+|   | | |     |   `-ImplicitCastExpr 0x7fd3fe089360 <col:8> 'uint64_t *' <LValueToRValue>
+|   | | |     |     `-DeclRefExpr 0x7fd3fe089338 <col:8> 'uint64_t *' lvalue ParmVar 0x7fd3fe088358 'starting_lun' 'uint64_t *'
+|   | | |     `-ImplicitCastExpr 0x7fd3fe0893f0 <col:24, col:25> 'unsigned long long' <IntegralCast>
+|   | | |       `-UnaryOperator 0x7fd3fe0893b8 <col:24, col:25> 'unsigned int' prefix '-'
+|   | | |         `-IntegerLiteral 0x7fd3fe089398 <col:25> 'unsigned int' 1
+|   | | `-UnaryOperator 0x7fd3fe089508 <line:82:6, col:13> 'int' prefix '!'
+|   | |   `-ImplicitCastExpr 0x7fd3fe0894f0 <col:7, col:13> 'uint32_t':'unsigned long' <LValueToRValue>
+|   | |     `-MemberExpr 0x7fd3fe0894b8 <col:7, col:13> 'uint32_t':'unsigned long' lvalue ->cfg_fof 0x7fd3fe087a00
+|   | |       `-ImplicitCastExpr 0x7fd3fe0894a0 <col:7> 'struct lpfc_hba *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fd3fe089478 <col:7> 'struct lpfc_hba *' lvalue ParmVar 0x7fd3fe0880e0 'phba' 'struct lpfc_hba *'
+|   | |-ReturnStmt 0x7fd3fe089590 <line:83:3, col:10>
+|   | | `-ImplicitCastExpr 0x7fd3fe089578 <col:10> 'bool':'_Bool' <IntegralToBoolean>
+|   | |   `-DeclRefExpr 0x7fd3fe089550 <col:10> 'int' EnumConstant 0x7fd3fe06ea80 'false' 'int'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd3fe089680 <line:85:2, col:9> 'uint64_t':'unsigned long long' '='
+|   | |-DeclRefExpr 0x7fd3fe0895e0 <col:2> 'uint64_t':'unsigned long long' lvalue Var 0x7fd3fe088a68 'lun' 'uint64_t':'unsigned long long'
+|   | `-ImplicitCastExpr 0x7fd3fe089668 <col:8, col:9> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   |   `-UnaryOperator 0x7fd3fe089648 <col:8, col:9> 'uint64_t':'unsigned long long' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7fd3fe089630 <col:9> 'uint64_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd3fe089608 <col:9> 'uint64_t *' lvalue ParmVar 0x7fd3fe088358 'starting_lun' 'uint64_t *'
+|   |-BinaryOperator 0x7fd3fe089760 <line:86:2, col:16> 'uint64_t':'unsigned long long' '='
+|   | |-UnaryOperator 0x7fd3fe0896e8 <col:2, col:3> 'uint64_t':'unsigned long long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fd3fe0896d0 <col:3> 'uint64_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fd3fe0896a8 <col:3> 'uint64_t *' lvalue ParmVar 0x7fd3fe0884d8 'found_lun' 'uint64_t *'
+|   | `-ImplicitCastExpr 0x7fd3fe089748 <col:15, col:16> 'uint64_t':'unsigned long long' <IntegralCast>
+|   |   `-UnaryOperator 0x7fd3fe089728 <col:15, col:16> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x7fd3fe089708 <col:16> 'int' 1
+|   |-BinaryOperator 0x7fd3fe089840 <line:87:2, col:19> 'uint64_t':'unsigned long long' '='
+|   | |-UnaryOperator 0x7fd3fe0897c8 <col:2, col:3> 'uint64_t':'unsigned long long' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fd3fe0897b0 <col:3> 'uint64_t *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fd3fe089788 <col:3> 'uint64_t *' lvalue ParmVar 0x7fd3fe088358 'starting_lun' 'uint64_t *'
+|   | `-ImplicitCastExpr 0x7fd3fe089828 <col:18, col:19> 'uint64_t':'unsigned long long' <IntegralCast>
+|   |   `-UnaryOperator 0x7fd3fe089808 <col:18, col:19> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x7fd3fe0897e8 <col:19> 'int' 1
+|   |-ForStmt 0x7fd3fe801948 <line:91:2, line:124:2>
+|   | |-BinaryOperator 0x7fd3fe08a070 <line:91:7, col:198> 'struct lpfc_device_data *' '='
+|   | | |-DeclRefExpr 0x7fd3fe089868 <col:7> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   | | `-StmtExpr 0x7fd3fe08a050 <col:18, col:198> 'typeof (*lun_info) *'
+|   | |   `-CompoundStmt 0x7fd3fe08a030 <col:19, col:197>
+|   | |     |-DeclStmt 0x7fd3fe089c60 <col:21, col:104>
+|   | |     | `-VarDecl 0x7fd3fe089ac0 <col:21, col:103> col:74 used __mptr 'const typeof (((typeof (*lun_info) *)0)->listentry) *' cinit
+|   | |     |   `-ImplicitCastExpr 0x7fd3fe089c48 <col:83, col:103> 'const typeof (((typeof (*lun_info) *)0)->listentry) *' <BitCast>
+|   | |     |     `-ImplicitCastExpr 0x7fd3fe089c30 <col:83, col:103> 'struct list_head *' <LValueToRValue>
+|   | |     |       `-ParenExpr 0x7fd3fe089c10 <col:83, col:103> 'struct list_head *' lvalue
+|   | |     |         `-MemberExpr 0x7fd3fe089bd8 <col:84, col:99> 'struct list_head *' lvalue ->next 0x7fd3fe06ec90
+|   | |     |           `-ParenExpr 0x7fd3fe089bb8 <col:84, col:96> 'struct list_head *'
+|   | |     |             `-UnaryOperator 0x7fd3fe089b98 <col:85, col:92> 'struct list_head *' prefix '&'
+|   | |     |               `-MemberExpr 0x7fd3fe089b60 <col:86, col:92> 'struct list_head':'struct list_head' lvalue ->luns 0x7fd3fe087ac0
+|   | |     |                 `-ImplicitCastExpr 0x7fd3fe089b48 <col:86> 'struct lpfc_hba *' <LValueToRValue>
+|   | |     |                   `-DeclRefExpr 0x7fd3fe089b20 <col:86> 'struct lpfc_hba *' lvalue ParmVar 0x7fd3fe0880e0 'phba' 'struct lpfc_hba *'
+|   | |     `-CStyleCastExpr 0x7fd3fe089f50 <col:106, col:195> 'typeof (*lun_info) *' <BitCast>
+|   | |       `-ParenExpr 0x7fd3fe089f30 <col:127, col:195> 'char *'
+|   | |         `-BinaryOperator 0x7fd3fe089e70 <col:129, col:193> 'char *' '-'
+|   | |           |-CStyleCastExpr 0x7fd3fe089d50 <col:129, col:137> 'char *' <BitCast>
+|   | |           | `-ImplicitCastExpr 0x7fd3fe089d38 <col:137> 'const typeof (((typeof (*lun_info) *)0)->listentry) *' <LValueToRValue>
+|   | |           |   `-DeclRefExpr 0x7fd3fe089cf8 <col:137> 'const typeof (((typeof (*lun_info) *)0)->listentry) *' lvalue Var 0x7fd3fe089ac0 '__mptr' 'const typeof (((typeof (*lun_info) *)0)->listentry) *'
+|   | |           `-OffsetOfExpr 0x7fd3fe089e38 <col:146, col:193> 'unsigned long'
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd3fe08a600 <col:201, col:237> 'int' '!='
+|   | | |-UnaryOperator 0x7fd3fe08a110 <col:201, col:212> 'struct list_head *' prefix '&'
+|   | | | `-MemberExpr 0x7fd3fe08a0d8 <col:202, col:212> 'struct list_head':'struct list_head' lvalue ->listentry 0x7fd3fe087e20
+|   | | |   `-ImplicitCastExpr 0x7fd3fe08a0c0 <col:202> 'struct lpfc_device_data *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fd3fe08a098 <col:202> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   | | `-ParenExpr 0x7fd3fe08a1c8 <col:225, col:237> 'struct list_head *'
+|   | |   `-UnaryOperator 0x7fd3fe08a1a8 <col:226, col:233> 'struct list_head *' prefix '&'
+|   | |     `-MemberExpr 0x7fd3fe08a170 <col:227, col:233> 'struct list_head':'struct list_head' lvalue ->luns 0x7fd3fe087ac0
+|   | |       `-ImplicitCastExpr 0x7fd3fe08a158 <col:227> 'struct lpfc_hba *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x7fd3fe08a130 <col:227> 'struct lpfc_hba *' lvalue ParmVar 0x7fd3fe0880e0 'phba' 'struct lpfc_hba *'
+|   | |-BinaryOperator 0x7fd3fe08ad88 <col:240, col:444> 'struct lpfc_device_data *' '='
+|   | | |-DeclRefExpr 0x7fd3fe08a628 <col:240> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   | | `-StmtExpr 0x7fd3fe08ad68 <col:251, col:444> 'typeof (*(lun_info)) *'
+|   | |   `-CompoundStmt 0x7fd3fe08ad48 <col:252, col:443>
+|   | |     |-DeclStmt 0x7fd3fe08a9f0 <col:254, col:346>
+|   | |     | `-VarDecl 0x7fd3fe08a870 <col:254, col:345> col:309 used __mptr 'const typeof (((typeof (*(lun_info)) *)0)->listentry) *' cinit
+|   | |     |   `-ImplicitCastExpr 0x7fd3fe08a9d8 <col:318, col:345> 'const typeof (((typeof (*(lun_info)) *)0)->listentry) *' <BitCast>
+|   | |     |     `-ImplicitCastExpr 0x7fd3fe08a9c0 <col:318, col:345> 'struct list_head *' <LValueToRValue>
+|   | |     |       `-ParenExpr 0x7fd3fe08a9a0 <col:318, col:345> 'struct list_head *' lvalue
+|   | |     |         `-MemberExpr 0x7fd3fe08a968 <col:319, col:341> 'struct list_head *' lvalue .next 0x7fd3fe06ec90
+|   | |     |           `-MemberExpr 0x7fd3fe08a930 <col:319, col:331> 'struct list_head':'struct list_head' lvalue ->listentry 0x7fd3fe087e20
+|   | |     |             `-ImplicitCastExpr 0x7fd3fe08a918 <col:319, col:328> 'struct lpfc_device_data *' <LValueToRValue>
+|   | |     |               `-ParenExpr 0x7fd3fe08a8f8 <col:319, col:328> 'struct lpfc_device_data *' lvalue
+|   | |     |                 `-DeclRefExpr 0x7fd3fe08a8d0 <col:320> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   | |     `-CStyleCastExpr 0x7fd3fe08ad20 <col:348, col:441> 'typeof (*(lun_info)) *' <BitCast>
+|   | |       `-ParenExpr 0x7fd3fe08ad00 <col:371, col:441> 'char *'
+|   | |         `-BinaryOperator 0x7fd3fe08ac40 <col:373, col:439> 'char *' '-'
+|   | |           |-CStyleCastExpr 0x7fd3fe08ab00 <col:373, col:381> 'char *' <BitCast>
+|   | |           | `-ImplicitCastExpr 0x7fd3fe08aae8 <col:381> 'const typeof (((typeof (*(lun_info)) *)0)->listentry) *' <LValueToRValue>
+|   | |           |   `-DeclRefExpr 0x7fd3fe08aaa8 <col:381> 'const typeof (((typeof (*(lun_info)) *)0)->listentry) *' lvalue Var 0x7fd3fe08a870 '__mptr' 'const typeof (((typeof (*(lun_info)) *)0)->listentry) *'
+|   | |           `-OffsetOfExpr 0x7fd3fe08ac08 <col:390, col:439> 'unsigned long'
+|   | `-CompoundStmt 0x7fd3fe801930 <col:447, line:124:2>
+|   |   `-IfStmt 0x7fd3fe8018f8 <line:92:3, line:123:3>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fd3fe08bc78 <line:92:7, line:98:29> 'int' '&&'
+|   |     | |-BinaryOperator 0x7fd3fe08bb88 <line:92:7, line:97:39> 'int' '&&'
+|   |     | | |-ParenExpr 0x7fd3fe08b2d0 <line:92:7, line:94:39> 'int'
+|   |     | | | `-BinaryOperator 0x7fd3fe08b2a8 <line:92:8, line:94:38> 'int' '||'
+|   |     | | |   |-ParenExpr 0x7fd3fe08afa8 <line:92:8, col:48> 'int'
+|   |     | | |   | `-BinaryOperator 0x7fd3fe08af80 <col:9, col:47> 'int' '=='
+|   |     | | |   |   |-CallExpr 0x7fd3fe08af00 <col:9, col:42> 'uint64_t':'unsigned long long'
+|   |     | | |   |   | |-ImplicitCastExpr 0x7fd3fe08aee8 <col:9> 'uint64_t (*)(uint8_t *)' <FunctionToPointerDecay>
+|   |     | | |   |   | | `-DeclRefExpr 0x7fd3fe08adb0 <col:9> 'uint64_t (uint8_t *)' Function 0x7fd3fe070140 'wwn_to_uint64_t' 'uint64_t (uint8_t *)'
+|   |     | | |   |   | `-ImplicitCastExpr 0x7fd3fe08af30 <col:25, col:39> 'uint8_t *' <ArrayToPointerDecay>
+|   |     | | |   |   |   `-MemberExpr 0x7fd3fe08ae50 <col:25, col:39> 'uint8_t [8]' lvalue .wwn 0x7fd3fe0877f8
+|   |     | | |   |   |     `-MemberExpr 0x7fd3fe08ae18 <col:25, col:37> 'union (anonymous union at ../Data/C2AST/pr70232.c:40:2)':'union lpfc_name::(anonymous at ../Data/C2AST/pr70232.c:40:2)' lvalue ->u 0x7fd3fe087890
+|   |     | | |   |   |       `-ImplicitCastExpr 0x7fd3fe08ae00 <col:25> 'struct lpfc_name *' <LValueToRValue>
+|   |     | | |   |   |         `-DeclRefExpr 0x7fd3fe08add8 <col:25> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088200 'vport_wwpn' 'struct lpfc_name *'
+|   |     | | |   |   `-ImplicitCastExpr 0x7fd3fe08af68 <col:47> 'unsigned long long' <IntegralCast>
+|   |     | | |   |     `-IntegerLiteral 0x7fd3fe08af48 <col:47> 'int' 0
+|   |     | | |   `-ParenExpr 0x7fd3fe08b288 <line:93:8, line:94:38> 'int'
+|   |     | | |     `-BinaryOperator 0x7fd3fe08b260 <line:93:9, line:94:37> 'int' '=='
+|   |     | | |       |-CallExpr 0x7fd3fe08b1a0 <line:93:9, line:94:32> 'int'
+|   |     | | |       | |-ImplicitCastExpr 0x7fd3fe08b188 <line:93:9> 'int (*)(const void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     | | |       | | `-DeclRefExpr 0x7fd3fe08afc8 <col:9> 'int (const void *, const void *, size_t)' Function 0x7fd3fe06f710 'memcmp' 'int (const void *, const void *, size_t)'
+|   |     | | |       | |-ImplicitCastExpr 0x7fd3fe08b1e0 <col:16, col:37> 'const void *' <BitCast>
+|   |     | | |       | | `-UnaryOperator 0x7fd3fe08b0a0 <col:16, col:37> 'struct lpfc_name *' prefix '&'
+|   |     | | |       | |   `-MemberExpr 0x7fd3fe08b068 <col:17, col:37> 'struct lpfc_name':'struct lpfc_name' lvalue .vport_wwpn 0x7fd3fe087c00
+|   |     | | |       | |     `-MemberExpr 0x7fd3fe08b030 <col:17, col:27> 'struct lpfc_device_id':'struct lpfc_device_id' lvalue ->device_id 0x7fd3fe087ec0
+|   |     | | |       | |       `-ImplicitCastExpr 0x7fd3fe08b018 <col:17> 'struct lpfc_device_data *' <LValueToRValue>
+|   |     | | |       | |         `-DeclRefExpr 0x7fd3fe08aff0 <col:17> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   |     | | |       | |-ImplicitCastExpr 0x7fd3fe08b210 <col:49> 'const void *' <BitCast>
+|   |     | | |       | | `-ImplicitCastExpr 0x7fd3fe08b1f8 <col:49> 'struct lpfc_name *' <LValueToRValue>
+|   |     | | |       | |   `-DeclRefExpr 0x7fd3fe08b0c0 <col:49> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088200 'vport_wwpn' 'struct lpfc_name *'
+|   |     | | |       | `-ImplicitCastExpr 0x7fd3fe08b228 <line:94:8, col:31> 'size_t':'unsigned int' <IntegralCast>
+|   |     | | |       |   `-UnaryExprOrTypeTraitExpr 0x7fd3fe08b108 <col:8, col:31> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     | | |       `-IntegerLiteral 0x7fd3fe08b240 <col:37> 'int' 0
+|   |     | | `-ParenExpr 0x7fd3fe08bb68 <line:95:7, line:97:39> 'int'
+|   |     | |   `-BinaryOperator 0x7fd3fe08bb40 <line:95:8, line:97:38> 'int' '||'
+|   |     | |     |-ParenExpr 0x7fd3fe08b488 <line:95:8, col:49> 'int'
+|   |     | |     | `-BinaryOperator 0x7fd3fe08b460 <col:9, col:48> 'int' '=='
+|   |     | |     |   |-CallExpr 0x7fd3fe08b3e0 <col:9, col:43> 'uint64_t':'unsigned long long'
+|   |     | |     |   | |-ImplicitCastExpr 0x7fd3fe08b3c8 <col:9> 'uint64_t (*)(uint8_t *)' <FunctionToPointerDecay>
+|   |     | |     |   | | `-DeclRefExpr 0x7fd3fe08b2f0 <col:9> 'uint64_t (uint8_t *)' Function 0x7fd3fe070140 'wwn_to_uint64_t' 'uint64_t (uint8_t *)'
+|   |     | |     |   | `-ImplicitCastExpr 0x7fd3fe08b410 <col:25, col:40> 'uint8_t *' <ArrayToPointerDecay>
+|   |     | |     |   |   `-MemberExpr 0x7fd3fe08b390 <col:25, col:40> 'uint8_t [8]' lvalue .wwn 0x7fd3fe0877f8
+|   |     | |     |   |     `-MemberExpr 0x7fd3fe08b358 <col:25, col:38> 'union (anonymous union at ../Data/C2AST/pr70232.c:40:2)':'union lpfc_name::(anonymous at ../Data/C2AST/pr70232.c:40:2)' lvalue ->u 0x7fd3fe087890
+|   |     | |     |   |       `-ImplicitCastExpr 0x7fd3fe08b340 <col:25> 'struct lpfc_name *' <LValueToRValue>
+|   |     | |     |   |         `-DeclRefExpr 0x7fd3fe08b318 <col:25> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088288 'target_wwpn' 'struct lpfc_name *'
+|   |     | |     |   `-ImplicitCastExpr 0x7fd3fe08b448 <col:48> 'unsigned long long' <IntegralCast>
+|   |     | |     |     `-IntegerLiteral 0x7fd3fe08b428 <col:48> 'int' 0
+|   |     | |     `-ParenExpr 0x7fd3fe08bb20 <line:96:8, line:97:38> 'int'
+|   |     | |       `-BinaryOperator 0x7fd3fe08baf8 <line:96:9, line:97:37> 'int' '=='
+|   |     | |         |-CallExpr 0x7fd3fe08ba38 <line:96:9, line:97:32> 'int'
+|   |     | |         | |-ImplicitCastExpr 0x7fd3fe08ba20 <line:96:9> 'int (*)(const void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     | |         | | `-DeclRefExpr 0x7fd3fe08b4a8 <col:9> 'int (const void *, const void *, size_t)' Function 0x7fd3fe06f710 'memcmp' 'int (const void *, const void *, size_t)'
+|   |     | |         | |-ImplicitCastExpr 0x7fd3fe08ba78 <col:16, col:37> 'const void *' <BitCast>
+|   |     | |         | | `-UnaryOperator 0x7fd3fe08b580 <col:16, col:37> 'struct lpfc_name *' prefix '&'
+|   |     | |         | |   `-MemberExpr 0x7fd3fe08b548 <col:17, col:37> 'struct lpfc_name':'struct lpfc_name' lvalue .target_wwpn 0x7fd3fe087c68
+|   |     | |         | |     `-MemberExpr 0x7fd3fe08b510 <col:17, col:27> 'struct lpfc_device_id':'struct lpfc_device_id' lvalue ->device_id 0x7fd3fe087ec0
+|   |     | |         | |       `-ImplicitCastExpr 0x7fd3fe08b4f8 <col:17> 'struct lpfc_device_data *' <LValueToRValue>
+|   |     | |         | |         `-DeclRefExpr 0x7fd3fe08b4d0 <col:17> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   |     | |         | |-ImplicitCastExpr 0x7fd3fe08baa8 <col:50> 'const void *' <BitCast>
+|   |     | |         | | `-ImplicitCastExpr 0x7fd3fe08ba90 <col:50> 'struct lpfc_name *' <LValueToRValue>
+|   |     | |         | |   `-DeclRefExpr 0x7fd3fe08b5a0 <col:50> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088288 'target_wwpn' 'struct lpfc_name *'
+|   |     | |         | `-ImplicitCastExpr 0x7fd3fe08bac0 <line:97:8, col:31> 'size_t':'unsigned int' <IntegralCast>
+|   |     | |         |   `-UnaryExprOrTypeTraitExpr 0x7fd3fe08ba00 <col:8, col:31> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     | |         `-IntegerLiteral 0x7fd3fe08bad8 <col:37> 'int' 0
+|   |     | `-ImplicitCastExpr 0x7fd3fe08bc60 <line:98:7, col:29> 'int' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7fd3fe08bc48 <col:7, col:29> 'bool':'_Bool' <LValueToRValue>
+|   |     |     `-ParenExpr 0x7fd3fe08bc28 <col:7, col:29> 'bool':'_Bool' lvalue
+|   |     |       `-MemberExpr 0x7fd3fe08bbf0 <col:8, col:18> 'bool':'_Bool' lvalue ->oas_enabled 0x7fd3fe087f40
+|   |     |         `-ImplicitCastExpr 0x7fd3fe08bbd8 <col:8> 'struct lpfc_device_data *' <LValueToRValue>
+|   |     |           `-DeclRefExpr 0x7fd3fe08bbb0 <col:8> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   |     |-CompoundStmt 0x7fd3fe8018d8 <col:32, line:123:3>
+|   |     | |-BinaryOperator 0x7fd3fe08bd60 <line:99:4, col:27> 'struct lpfc_device_id *' '='
+|   |     | | |-DeclRefExpr 0x7fd3fe08bca0 <col:4> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     | | `-UnaryOperator 0x7fd3fe08bd40 <col:16, col:27> 'struct lpfc_device_id *' prefix '&'
+|   |     | |   `-MemberExpr 0x7fd3fe08bd08 <col:17, col:27> 'struct lpfc_device_id':'struct lpfc_device_id' lvalue ->device_id 0x7fd3fe087ec0
+|   |     | |     `-ImplicitCastExpr 0x7fd3fe08bcf0 <col:17> 'struct lpfc_device_data *' <LValueToRValue>
+|   |     | |       `-DeclRefExpr 0x7fd3fe08bcc8 <col:17> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   |     | `-IfStmt 0x7fd3fe8018a0 <line:100:4, line:122:4>
+|   |     |   |-<<<NULL>>>
+|   |     |   |-<<<NULL>>>
+|   |     |   |-BinaryOperator 0x7fd3fe08c028 <line:100:8, col:58> 'int' '&&'
+|   |     |   | |-ParenExpr 0x7fd3fe08bde8 <col:8, col:15> 'int'
+|   |     |   | | `-UnaryOperator 0x7fd3fe08bdc8 <col:9, col:10> 'int' prefix '!'
+|   |     |   | |   `-ImplicitCastExpr 0x7fd3fe08bdb0 <col:10> 'bool':'_Bool' <LValueToRValue>
+|   |     |   | |     `-DeclRefExpr 0x7fd3fe08bd88 <col:10> 'bool':'_Bool' lvalue Var 0x7fd3fe088af0 'found' 'bool':'_Bool'
+|   |     |   | `-ParenExpr 0x7fd3fe08c008 <col:20, col:58> 'int'
+|   |     |   |   `-BinaryOperator 0x7fd3fe08bfe0 <col:21, col:57> 'int' '||'
+|   |     |   |     |-ParenExpr 0x7fd3fe08bea8 <col:21, col:30> 'int'
+|   |     |   |     | `-BinaryOperator 0x7fd3fe08be80 <col:22, col:29> 'int' '=='
+|   |     |   |     |   |-ImplicitCastExpr 0x7fd3fe08be50 <col:22> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   |     |   |     |   | `-DeclRefExpr 0x7fd3fe08be08 <col:22> 'uint64_t':'unsigned long long' lvalue Var 0x7fd3fe088a68 'lun' 'uint64_t':'unsigned long long'
+|   |     |   |     |   `-ImplicitCastExpr 0x7fd3fe08be68 <col:29> 'unsigned long long' <IntegralCast>
+|   |     |   |     |     `-IntegerLiteral 0x7fd3fe08be30 <col:29> 'int' 0
+|   |     |   |     `-ParenExpr 0x7fd3fe08bfc0 <col:35, col:57> 'int'
+|   |     |   |       `-BinaryOperator 0x7fd3fe08bf98 <col:36, col:54> 'int' '=='
+|   |     |   |         |-ImplicitCastExpr 0x7fd3fe08bf68 <col:36, col:47> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   |     |   |         | `-MemberExpr 0x7fd3fe08bf08 <col:36, col:47> 'uint64_t':'unsigned long long' lvalue ->lun 0x7fd3fe087cc0
+|   |     |   |         |   `-ImplicitCastExpr 0x7fd3fe08bef0 <col:36> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |   |         |     `-DeclRefExpr 0x7fd3fe08bec8 <col:36> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |   |         `-ImplicitCastExpr 0x7fd3fe08bf80 <col:54> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   |     |   |           `-DeclRefExpr 0x7fd3fe08bf40 <col:54> 'uint64_t':'unsigned long long' lvalue Var 0x7fd3fe088a68 'lun' 'uint64_t':'unsigned long long'
+|   |     |   |-CompoundStmt 0x7fd3fe8012d0 <col:61, line:115:4>
+|   |     |   | |-BinaryOperator 0x7fd3fe08c140 <line:101:5, col:29> 'uint64_t':'unsigned long long' '='
+|   |     |   | | |-UnaryOperator 0x7fd3fe08c090 <col:5, col:6> 'uint64_t':'unsigned long long' lvalue prefix '*'
+|   |     |   | | | `-ImplicitCastExpr 0x7fd3fe08c078 <col:6> 'uint64_t *' <LValueToRValue>
+|   |     |   | | |   `-DeclRefExpr 0x7fd3fe08c050 <col:6> 'uint64_t *' lvalue ParmVar 0x7fd3fe0884d8 'found_lun' 'uint64_t *'
+|   |     |   | | `-ImplicitCastExpr 0x7fd3fe08c128 <col:18, col:29> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   |     |   | |   `-MemberExpr 0x7fd3fe08c0f0 <col:18, col:29> 'uint64_t':'unsigned long long' lvalue ->lun 0x7fd3fe087cc0
+|   |     |   | |     `-ImplicitCastExpr 0x7fd3fe08c0d8 <col:18> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |   | |       `-DeclRefExpr 0x7fd3fe08c0b0 <col:18> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |   | |-CallExpr 0x7fd3fe08c300 <line:102:5, col:78> 'void *'
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c2e8 <col:5> 'void *(*)(void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     |   | | | `-DeclRefExpr 0x7fd3fe08c168 <col:5> 'void *(void *, const void *, size_t)' Function 0x7fd3fe06f1f0 'memcpy' 'void *(void *, const void *, size_t)'
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c358 <col:12> 'void *' <BitCast>
+|   |     |   | | | `-ImplicitCastExpr 0x7fd3fe08c340 <col:12> 'struct lpfc_name *' <LValueToRValue>
+|   |     |   | | |   `-DeclRefExpr 0x7fd3fe08c190 <col:12> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe0883e0 'found_vport_wwpn' 'struct lpfc_name *'
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c370 <col:30, col:42> 'const void *' <BitCast>
+|   |     |   | | | `-UnaryOperator 0x7fd3fe08c230 <col:30, col:42> 'struct lpfc_name *' prefix '&'
+|   |     |   | | |   `-MemberExpr 0x7fd3fe08c1f8 <col:31, col:42> 'struct lpfc_name':'struct lpfc_name' lvalue ->vport_wwpn 0x7fd3fe087c00
+|   |     |   | | |     `-ImplicitCastExpr 0x7fd3fe08c1e0 <col:31> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |   | | |       `-DeclRefExpr 0x7fd3fe08c1b8 <col:31> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |   | | `-ImplicitCastExpr 0x7fd3fe08c388 <col:54, col:77> 'size_t':'unsigned int' <IntegralCast>
+|   |     |   | |   `-UnaryExprOrTypeTraitExpr 0x7fd3fe08c270 <col:54, col:77> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     |   | |-CallExpr 0x7fd3fe08c4e0 <line:103:5, col:80> 'void *'
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c4c8 <col:5> 'void *(*)(void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     |   | | | `-DeclRefExpr 0x7fd3fe08c3a0 <col:5> 'void *(void *, const void *, size_t)' Function 0x7fd3fe06f1f0 'memcpy' 'void *(void *, const void *, size_t)'
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c538 <col:12> 'void *' <BitCast>
+|   |     |   | | | `-ImplicitCastExpr 0x7fd3fe08c520 <col:12> 'struct lpfc_name *' <LValueToRValue>
+|   |     |   | | |   `-DeclRefExpr 0x7fd3fe08c3c8 <col:12> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088468 'found_target_wwpn' 'struct lpfc_name *'
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c550 <col:31, col:43> 'const void *' <BitCast>
+|   |     |   | | | `-UnaryOperator 0x7fd3fe08c468 <col:31, col:43> 'struct lpfc_name *' prefix '&'
+|   |     |   | | |   `-MemberExpr 0x7fd3fe08c430 <col:32, col:43> 'struct lpfc_name':'struct lpfc_name' lvalue ->target_wwpn 0x7fd3fe087c68
+|   |     |   | | |     `-ImplicitCastExpr 0x7fd3fe08c418 <col:32> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |   | | |       `-DeclRefExpr 0x7fd3fe08c3f0 <col:32> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |   | | `-ImplicitCastExpr 0x7fd3fe08c568 <col:56, col:79> 'size_t':'unsigned int' <IntegralCast>
+|   |     |   | |   `-UnaryExprOrTypeTraitExpr 0x7fd3fe08c4a8 <col:56, col:79> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     |   | |-IfStmt 0x7fd3fe08c790 <line:104:5, line:107:26>
+|   |     |   | | |-<<<NULL>>>
+|   |     |   | | |-<<<NULL>>>
+|   |     |   | | |-ImplicitCastExpr 0x7fd3fe08c5f8 <line:104:9, col:19> 'bool':'_Bool' <LValueToRValue>
+|   |     |   | | | `-MemberExpr 0x7fd3fe08c5c0 <col:9, col:19> 'bool':'_Bool' lvalue ->available 0x7fd3fe087f98
+|   |     |   | | |   `-ImplicitCastExpr 0x7fd3fe08c5a8 <col:9> 'struct lpfc_device_data *' <LValueToRValue>
+|   |     |   | | |     `-DeclRefExpr 0x7fd3fe08c580 <col:9> 'struct lpfc_device_data *' lvalue Var 0x7fd3fe0888e0 'lun_info' 'struct lpfc_device_data *'
+|   |     |   | | |-BinaryOperator 0x7fd3fe08c6a8 <line:105:6, col:26> 'uint32_t':'unsigned long' '='
+|   |     |   | | | |-UnaryOperator 0x7fd3fe08c650 <col:6, col:7> 'uint32_t':'unsigned long' lvalue prefix '*'
+|   |     |   | | | | `-ImplicitCastExpr 0x7fd3fe08c638 <col:7> 'uint32_t *' <LValueToRValue>
+|   |     |   | | | |   `-DeclRefExpr 0x7fd3fe08c610 <col:7> 'uint32_t *' lvalue ParmVar 0x7fd3fe0885a8 'found_lun_status' 'uint32_t *'
+|   |     |   | | | `-ImplicitCastExpr 0x7fd3fe08c690 <col:26> 'uint32_t':'unsigned long' <IntegralCast>
+|   |     |   | | |   `-IntegerLiteral 0x7fd3fe08c670 <col:26> 'int' 1
+|   |     |   | | `-BinaryOperator 0x7fd3fe08c768 <line:107:6, col:26> 'uint32_t':'unsigned long' '='
+|   |     |   | |   |-UnaryOperator 0x7fd3fe08c710 <col:6, col:7> 'uint32_t':'unsigned long' lvalue prefix '*'
+|   |     |   | |   | `-ImplicitCastExpr 0x7fd3fe08c6f8 <col:7> 'uint32_t *' <LValueToRValue>
+|   |     |   | |   |   `-DeclRefExpr 0x7fd3fe08c6d0 <col:7> 'uint32_t *' lvalue ParmVar 0x7fd3fe0885a8 'found_lun_status' 'uint32_t *'
+|   |     |   | |   `-ImplicitCastExpr 0x7fd3fe08c750 <col:26> 'uint32_t':'unsigned long' <IntegralCast>
+|   |     |   | |     `-IntegerLiteral 0x7fd3fe08c730 <col:26> 'int' 0
+|   |     |   | |-IfStmt 0x7fd3fe8008e8 <line:108:5, line:109:205>
+|   |     |   | | |-<<<NULL>>>
+|   |     |   | | |-<<<NULL>>>
+|   |     |   | | |-BinaryOperator 0x7fd3fe08c890 <line:108:9, col:31> 'unsigned long' '&'
+|   |     |   | | | |-ImplicitCastExpr 0x7fd3fe08c860 <col:9, col:15> 'uint32_t':'unsigned long' <LValueToRValue>
+|   |     |   | | | | `-MemberExpr 0x7fd3fe08c808 <col:9, col:15> 'uint32_t':'unsigned long' lvalue ->cfg_oas_flags 0x7fd3fe087a58
+|   |     |   | | | |   `-ImplicitCastExpr 0x7fd3fe08c7f0 <col:9> 'struct lpfc_hba *' <LValueToRValue>
+|   |     |   | | | |     `-DeclRefExpr 0x7fd3fe08c7c8 <col:9> 'struct lpfc_hba *' lvalue ParmVar 0x7fd3fe0880e0 'phba' 'struct lpfc_hba *'
+|   |     |   | | | `-ImplicitCastExpr 0x7fd3fe08c878 <col:31> 'unsigned long' <IntegralCast>
+|   |     |   | | |   `-IntegerLiteral 0x7fd3fe08c840 <col:31> 'int' 1
+|   |     |   | | |-StmtExpr 0x7fd3fe8008c8 <line:109:6, col:205> 'void *'
+|   |     |   | | | `-CompoundStmt 0x7fd3fe800898 <col:7, col:204>
+|   |     |   | | |   |-DeclStmt 0x7fd3fe08c9a8 <col:9, col:33>
+|   |     |   | | |   | `-VarDecl 0x7fd3fe08c8d0 <col:9, col:32> col:15 used __p 'void *' cinit
+|   |     |   | | |   |   `-ImplicitCastExpr 0x7fd3fe08c990 <col:21, col:32> 'void *' <BitCast>
+|   |     |   | | |   |     `-ImplicitCastExpr 0x7fd3fe08c978 <col:21, col:32> 'struct lpfc_name *' <LValueToRValue>
+|   |     |   | | |   |       `-ParenExpr 0x7fd3fe08c958 <col:21, col:32> 'struct lpfc_name *' lvalue
+|   |     |   | | |   |         `-DeclRefExpr 0x7fd3fe08c930 <col:22> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088200 'vport_wwpn' 'struct lpfc_name *'
+|   |     |   | | |   |-DeclStmt 0x7fd3fe8000b8 <col:35, col:72>
+|   |     |   | | |   | `-VarDecl 0x7fd3fe800000 <col:35, col:71> col:42 used __n 'size_t':'unsigned int' cinit
+|   |     |   | | |   |   `-ImplicitCastExpr 0x7fd3fe8000a0 <col:48, col:71> 'size_t':'unsigned int' <IntegralCast>
+|   |     |   | | |   |     `-UnaryExprOrTypeTraitExpr 0x7fd3fe800080 <col:48, col:71> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     |   | | |   |-IfStmt 0x7fd3fe800800 <col:74, col:195>
+|   |     |   | | |   | |-<<<NULL>>>
+|   |     |   | | |   | |-<<<NULL>>>
+|   |     |   | | |   | |-BinaryOperator 0x7fd3fe800168 <col:78, col:87> 'int' '!='
+|   |     |   | | |   | | |-ImplicitCastExpr 0x7fd3fe800138 <col:78, col:82> 'size_t':'unsigned int' <LValueToRValue>
+|   |     |   | | |   | | | `-ParenExpr 0x7fd3fe8000f8 <col:78, col:82> 'size_t':'unsigned int' lvalue
+|   |     |   | | |   | | |   `-DeclRefExpr 0x7fd3fe8000d0 <col:79> 'size_t':'unsigned int' lvalue Var 0x7fd3fe800000 '__n' 'size_t':'unsigned int'
+|   |     |   | | |   | | `-ImplicitCastExpr 0x7fd3fe800150 <col:87> 'unsigned int' <IntegralCast>
+|   |     |   | | |   | |   `-IntegerLiteral 0x7fd3fe800118 <col:87> 'int' 0
+|   |     |   | | |   | |-CompoundStmt 0x7fd3fe8007e8 <col:90, col:195>
+|   |     |   | | |   | | `-IfStmt 0x7fd3fe8007b0 <col:92, col:192>
+|   |     |   | | |   | |   |-<<<NULL>>>
+|   |     |   | | |   | |   |-<<<NULL>>>
+|   |     |   | | |   | |   |-BinaryOperator 0x7fd3fe800418 <col:96, col:136> 'int' '&&'
+|   |     |   | | |   | |   | |-CallExpr 0x7fd3fe800360 <col:96, col:122> 'int'
+|   |     |   | | |   | |   | | |-ImplicitCastExpr 0x7fd3fe800348 <col:96> 'int (*)()' <BuiltinFnToFnPtr>
+|   |     |   | | |   | |   | | | `-DeclRefExpr 0x7fd3fe8002b0 <col:96> '<builtin fn type>' Function 0x7fd3fe8001b8 '__builtin_constant_p' 'int ()'
+|   |     |   | | |   | |   | | `-ParenExpr 0x7fd3fe8002f8 <col:117, col:121> 'int'
+|   |     |   | | |   | |   | |   `-IntegerLiteral 0x7fd3fe8002d8 <col:118> 'int' 0
+|   |     |   | | |   | |   | `-BinaryOperator 0x7fd3fe8003f0 <col:127, col:136> 'int' '=='
+|   |     |   | | |   | |   |   |-ParenExpr 0x7fd3fe8003b0 <col:127, col:131> 'int'
+|   |     |   | | |   | |   |   | `-IntegerLiteral 0x7fd3fe800390 <col:128> 'int' 0
+|   |     |   | | |   | |   |   `-IntegerLiteral 0x7fd3fe8003d0 <col:136> 'int' 0
+|   |     |   | | |   | |   |-CallExpr 0x7fd3fe800570 <col:139, col:160> 'void'
+|   |     |   | | |   | |   | |-ImplicitCastExpr 0x7fd3fe800558 <col:139> 'void (*)(void *, size_t)' <FunctionToPointerDecay>
+|   |     |   | | |   | |   | | `-DeclRefExpr 0x7fd3fe800440 <col:139> 'void (void *, size_t)' Function 0x7fd3fe06fea0 '__memzero' 'void (void *, size_t)'
+|   |     |   | | |   | |   | |-ImplicitCastExpr 0x7fd3fe8005a8 <col:149, col:153> 'void *' <LValueToRValue>
+|   |     |   | | |   | |   | | `-ParenExpr 0x7fd3fe800490 <col:149, col:153> 'void *' lvalue
+|   |     |   | | |   | |   | |   `-DeclRefExpr 0x7fd3fe800468 <col:150> 'void *' lvalue Var 0x7fd3fe08c8d0 '__p' 'void *'
+|   |     |   | | |   | |   | `-ImplicitCastExpr 0x7fd3fe8005c0 <col:155, col:159> 'size_t':'unsigned int' <LValueToRValue>
+|   |     |   | | |   | |   |   `-ParenExpr 0x7fd3fe8004d8 <col:155, col:159> 'size_t':'unsigned int' lvalue
+|   |     |   | | |   | |   |     `-DeclRefExpr 0x7fd3fe8004b0 <col:156> 'size_t':'unsigned int' lvalue Var 0x7fd3fe800000 '__n' 'size_t':'unsigned int'
+|   |     |   | | |   | |   `-CallExpr 0x7fd3fe800740 <col:168, col:192> 'void *'
+|   |     |   | | |   | |     |-ImplicitCastExpr 0x7fd3fe800728 <col:168> 'void *(*)(void *, int, size_t)' <FunctionToPointerDecay>
+|   |     |   | | |   | |     | `-DeclRefExpr 0x7fd3fe8005d8 <col:168> 'void *(void *, int, size_t)' Function 0x7fd3fe06fc50 'memset' 'void *(void *, int, size_t)'
+|   |     |   | | |   | |     |-ImplicitCastExpr 0x7fd3fe800780 <col:175, col:179> 'void *' <LValueToRValue>
+|   |     |   | | |   | |     | `-ParenExpr 0x7fd3fe800628 <col:175, col:179> 'void *' lvalue
+|   |     |   | | |   | |     |   `-DeclRefExpr 0x7fd3fe800600 <col:176> 'void *' lvalue Var 0x7fd3fe08c8d0 '__p' 'void *'
+|   |     |   | | |   | |     |-ParenExpr 0x7fd3fe800668 <col:181, col:185> 'int'
+|   |     |   | | |   | |     | `-IntegerLiteral 0x7fd3fe800648 <col:182> 'int' 0
+|   |     |   | | |   | |     `-ImplicitCastExpr 0x7fd3fe800798 <col:187, col:191> 'size_t':'unsigned int' <LValueToRValue>
+|   |     |   | | |   | |       `-ParenExpr 0x7fd3fe8006b0 <col:187, col:191> 'size_t':'unsigned int' lvalue
+|   |     |   | | |   | |         `-DeclRefExpr 0x7fd3fe800688 <col:188> 'size_t':'unsigned int' lvalue Var 0x7fd3fe800000 '__n' 'size_t':'unsigned int'
+|   |     |   | | |   | `-<<<NULL>>>
+|   |     |   | | |   `-ImplicitCastExpr 0x7fd3fe800880 <col:197, col:201> 'void *' <LValueToRValue>
+|   |     |   | | |     `-ParenExpr 0x7fd3fe800860 <col:197, col:201> 'void *' lvalue
+|   |     |   | | |       `-DeclRefExpr 0x7fd3fe800838 <col:198> 'void *' lvalue Var 0x7fd3fe08c8d0 '__p' 'void *'
+|   |     |   | | `-<<<NULL>>>
+|   |     |   | |-IfStmt 0x7fd3fe801208 <line:111:5, line:112:206>
+|   |     |   | | |-<<<NULL>>>
+|   |     |   | | |-<<<NULL>>>
+|   |     |   | | |-BinaryOperator 0x7fd3fe8009e8 <line:111:9, col:31> 'unsigned long' '&'
+|   |     |   | | | |-ImplicitCastExpr 0x7fd3fe8009b8 <col:9, col:15> 'uint32_t':'unsigned long' <LValueToRValue>
+|   |     |   | | | | `-MemberExpr 0x7fd3fe800960 <col:9, col:15> 'uint32_t':'unsigned long' lvalue ->cfg_oas_flags 0x7fd3fe087a58
+|   |     |   | | | |   `-ImplicitCastExpr 0x7fd3fe800948 <col:9> 'struct lpfc_hba *' <LValueToRValue>
+|   |     |   | | | |     `-DeclRefExpr 0x7fd3fe800920 <col:9> 'struct lpfc_hba *' lvalue ParmVar 0x7fd3fe0880e0 'phba' 'struct lpfc_hba *'
+|   |     |   | | | `-ImplicitCastExpr 0x7fd3fe8009d0 <col:31> 'unsigned long' <IntegralCast>
+|   |     |   | | |   `-IntegerLiteral 0x7fd3fe800998 <col:31> 'int' 2
+|   |     |   | | |-StmtExpr 0x7fd3fe8011e8 <line:112:6, col:206> 'void *'
+|   |     |   | | | `-CompoundStmt 0x7fd3fe8011b8 <col:7, col:205>
+|   |     |   | | |   |-DeclStmt 0x7fd3fe800b00 <col:9, col:34>
+|   |     |   | | |   | `-VarDecl 0x7fd3fe800a28 <col:9, col:33> col:15 used __p 'void *' cinit
+|   |     |   | | |   |   `-ImplicitCastExpr 0x7fd3fe800ae8 <col:21, col:33> 'void *' <BitCast>
+|   |     |   | | |   |     `-ImplicitCastExpr 0x7fd3fe800ad0 <col:21, col:33> 'struct lpfc_name *' <LValueToRValue>
+|   |     |   | | |   |       `-ParenExpr 0x7fd3fe800ab0 <col:21, col:33> 'struct lpfc_name *' lvalue
+|   |     |   | | |   |         `-DeclRefExpr 0x7fd3fe800a88 <col:22> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088288 'target_wwpn' 'struct lpfc_name *'
+|   |     |   | | |   |-DeclStmt 0x7fd3fe800be0 <col:36, col:73>
+|   |     |   | | |   | `-VarDecl 0x7fd3fe800b28 <col:36, col:72> col:43 used __n 'size_t':'unsigned int' cinit
+|   |     |   | | |   |   `-ImplicitCastExpr 0x7fd3fe800bc8 <col:49, col:72> 'size_t':'unsigned int' <IntegralCast>
+|   |     |   | | |   |     `-UnaryExprOrTypeTraitExpr 0x7fd3fe800ba8 <col:49, col:72> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     |   | | |   |-IfStmt 0x7fd3fe801120 <col:75, col:196>
+|   |     |   | | |   | |-<<<NULL>>>
+|   |     |   | | |   | |-<<<NULL>>>
+|   |     |   | | |   | |-BinaryOperator 0x7fd3fe800c90 <col:79, col:88> 'int' '!='
+|   |     |   | | |   | | |-ImplicitCastExpr 0x7fd3fe800c60 <col:79, col:83> 'size_t':'unsigned int' <LValueToRValue>
+|   |     |   | | |   | | | `-ParenExpr 0x7fd3fe800c20 <col:79, col:83> 'size_t':'unsigned int' lvalue
+|   |     |   | | |   | | |   `-DeclRefExpr 0x7fd3fe800bf8 <col:80> 'size_t':'unsigned int' lvalue Var 0x7fd3fe800b28 '__n' 'size_t':'unsigned int'
+|   |     |   | | |   | | `-ImplicitCastExpr 0x7fd3fe800c78 <col:88> 'unsigned int' <IntegralCast>
+|   |     |   | | |   | |   `-IntegerLiteral 0x7fd3fe800c40 <col:88> 'int' 0
+|   |     |   | | |   | |-CompoundStmt 0x7fd3fe801108 <col:91, col:196>
+|   |     |   | | |   | | `-IfStmt 0x7fd3fe8010d0 <col:93, col:193>
+|   |     |   | | |   | |   |-<<<NULL>>>
+|   |     |   | | |   | |   |-<<<NULL>>>
+|   |     |   | | |   | |   |-BinaryOperator 0x7fd3fe800df0 <col:97, col:137> 'int' '&&'
+|   |     |   | | |   | |   | |-CallExpr 0x7fd3fe800d38 <col:97, col:123> 'int'
+|   |     |   | | |   | |   | | |-ImplicitCastExpr 0x7fd3fe800d20 <col:97> 'int (*)()' <BuiltinFnToFnPtr>
+|   |     |   | | |   | |   | | | `-DeclRefExpr 0x7fd3fe800cb8 <col:97> '<builtin fn type>' Function 0x7fd3fe8001b8 '__builtin_constant_p' 'int ()'
+|   |     |   | | |   | |   | | `-ParenExpr 0x7fd3fe800d00 <col:118, col:122> 'int'
+|   |     |   | | |   | |   | |   `-IntegerLiteral 0x7fd3fe800ce0 <col:119> 'int' 0
+|   |     |   | | |   | |   | `-BinaryOperator 0x7fd3fe800dc8 <col:128, col:137> 'int' '=='
+|   |     |   | | |   | |   |   |-ParenExpr 0x7fd3fe800d88 <col:128, col:132> 'int'
+|   |     |   | | |   | |   |   | `-IntegerLiteral 0x7fd3fe800d68 <col:129> 'int' 0
+|   |     |   | | |   | |   |   `-IntegerLiteral 0x7fd3fe800da8 <col:137> 'int' 0
+|   |     |   | | |   | |   |-CallExpr 0x7fd3fe800ee8 <col:140, col:161> 'void'
+|   |     |   | | |   | |   | |-ImplicitCastExpr 0x7fd3fe800ed0 <col:140> 'void (*)(void *, size_t)' <FunctionToPointerDecay>
+|   |     |   | | |   | |   | | `-DeclRefExpr 0x7fd3fe800e18 <col:140> 'void (void *, size_t)' Function 0x7fd3fe06fea0 '__memzero' 'void (void *, size_t)'
+|   |     |   | | |   | |   | |-ImplicitCastExpr 0x7fd3fe800f20 <col:150, col:154> 'void *' <LValueToRValue>
+|   |     |   | | |   | |   | | `-ParenExpr 0x7fd3fe800e68 <col:150, col:154> 'void *' lvalue
+|   |     |   | | |   | |   | |   `-DeclRefExpr 0x7fd3fe800e40 <col:151> 'void *' lvalue Var 0x7fd3fe800a28 '__p' 'void *'
+|   |     |   | | |   | |   | `-ImplicitCastExpr 0x7fd3fe800f38 <col:156, col:160> 'size_t':'unsigned int' <LValueToRValue>
+|   |     |   | | |   | |   |   `-ParenExpr 0x7fd3fe800eb0 <col:156, col:160> 'size_t':'unsigned int' lvalue
+|   |     |   | | |   | |   |     `-DeclRefExpr 0x7fd3fe800e88 <col:157> 'size_t':'unsigned int' lvalue Var 0x7fd3fe800b28 '__n' 'size_t':'unsigned int'
+|   |     |   | | |   | |   `-CallExpr 0x7fd3fe801060 <col:169, col:193> 'void *'
+|   |     |   | | |   | |     |-ImplicitCastExpr 0x7fd3fe801048 <col:169> 'void *(*)(void *, int, size_t)' <FunctionToPointerDecay>
+|   |     |   | | |   | |     | `-DeclRefExpr 0x7fd3fe800f50 <col:169> 'void *(void *, int, size_t)' Function 0x7fd3fe06fc50 'memset' 'void *(void *, int, size_t)'
+|   |     |   | | |   | |     |-ImplicitCastExpr 0x7fd3fe8010a0 <col:176, col:180> 'void *' <LValueToRValue>
+|   |     |   | | |   | |     | `-ParenExpr 0x7fd3fe800fa0 <col:176, col:180> 'void *' lvalue
+|   |     |   | | |   | |     |   `-DeclRefExpr 0x7fd3fe800f78 <col:177> 'void *' lvalue Var 0x7fd3fe800a28 '__p' 'void *'
+|   |     |   | | |   | |     |-ParenExpr 0x7fd3fe800fe0 <col:182, col:186> 'int'
+|   |     |   | | |   | |     | `-IntegerLiteral 0x7fd3fe800fc0 <col:183> 'int' 0
+|   |     |   | | |   | |     `-ImplicitCastExpr 0x7fd3fe8010b8 <col:188, col:192> 'size_t':'unsigned int' <LValueToRValue>
+|   |     |   | | |   | |       `-ParenExpr 0x7fd3fe801028 <col:188, col:192> 'size_t':'unsigned int' lvalue
+|   |     |   | | |   | |         `-DeclRefExpr 0x7fd3fe801000 <col:189> 'size_t':'unsigned int' lvalue Var 0x7fd3fe800b28 '__n' 'size_t':'unsigned int'
+|   |     |   | | |   | `-<<<NULL>>>
+|   |     |   | | |   `-ImplicitCastExpr 0x7fd3fe8011a0 <col:198, col:202> 'void *' <LValueToRValue>
+|   |     |   | | |     `-ParenExpr 0x7fd3fe801180 <col:198, col:202> 'void *' lvalue
+|   |     |   | | |       `-DeclRefExpr 0x7fd3fe801158 <col:199> 'void *' lvalue Var 0x7fd3fe800a28 '__p' 'void *'
+|   |     |   | | `-<<<NULL>>>
+|   |     |   | `-BinaryOperator 0x7fd3fe8012a8 <line:114:5, col:13> 'bool':'_Bool' '='
+|   |     |   |   |-DeclRefExpr 0x7fd3fe801240 <col:5> 'bool':'_Bool' lvalue Var 0x7fd3fe088af0 'found' 'bool':'_Bool'
+|   |     |   |   `-ImplicitCastExpr 0x7fd3fe801290 <col:13> 'bool':'_Bool' <IntegralToBoolean>
+|   |     |   |     `-DeclRefExpr 0x7fd3fe801268 <col:13> 'int' EnumConstant 0x7fd3fe06eae8 'true' 'int'
+|   |     |   `-IfStmt 0x7fd3fe801868 <line:115:11, line:122:4>
+|   |     |     |-<<<NULL>>>
+|   |     |     |-<<<NULL>>>
+|   |     |     |-ImplicitCastExpr 0x7fd3fe801340 <line:115:15> 'bool':'_Bool' <LValueToRValue>
+|   |     |     | `-DeclRefExpr 0x7fd3fe801318 <col:15> 'bool':'_Bool' lvalue Var 0x7fd3fe088af0 'found' 'bool':'_Bool'
+|   |     |     |-CompoundStmt 0x7fd3fe801838 <col:22, line:122:4>
+|   |     |     | |-BinaryOperator 0x7fd3fe801448 <line:116:5, col:32> 'uint64_t':'unsigned long long' '='
+|   |     |     | | |-UnaryOperator 0x7fd3fe801398 <col:5, col:6> 'uint64_t':'unsigned long long' lvalue prefix '*'
+|   |     |     | | | `-ImplicitCastExpr 0x7fd3fe801380 <col:6> 'uint64_t *' <LValueToRValue>
+|   |     |     | | |   `-DeclRefExpr 0x7fd3fe801358 <col:6> 'uint64_t *' lvalue ParmVar 0x7fd3fe088358 'starting_lun' 'uint64_t *'
+|   |     |     | | `-ImplicitCastExpr 0x7fd3fe801430 <col:21, col:32> 'uint64_t':'unsigned long long' <LValueToRValue>
+|   |     |     | |   `-MemberExpr 0x7fd3fe8013f8 <col:21, col:32> 'uint64_t':'unsigned long long' lvalue ->lun 0x7fd3fe087cc0
+|   |     |     | |     `-ImplicitCastExpr 0x7fd3fe8013e0 <col:21> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |     | |       `-DeclRefExpr 0x7fd3fe8013b8 <col:21> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |     | |-CallExpr 0x7fd3fe8015b0 <line:117:5, line:118:36> 'void *'
+|   |     |     | | |-ImplicitCastExpr 0x7fd3fe801598 <line:117:5> 'void *(*)(void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     |     | | | `-DeclRefExpr 0x7fd3fe801470 <col:5> 'void *(void *, const void *, size_t)' Function 0x7fd3fe06f1f0 'memcpy' 'void *(void *, const void *, size_t)'
+|   |     |     | | |-ImplicitCastExpr 0x7fd3fe801608 <col:12> 'void *' <BitCast>
+|   |     |     | | | `-ImplicitCastExpr 0x7fd3fe8015f0 <col:12> 'struct lpfc_name *' <LValueToRValue>
+|   |     |     | | |   `-DeclRefExpr 0x7fd3fe801498 <col:12> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088200 'vport_wwpn' 'struct lpfc_name *'
+|   |     |     | | |-ImplicitCastExpr 0x7fd3fe801620 <col:24, col:36> 'const void *' <BitCast>
+|   |     |     | | | `-UnaryOperator 0x7fd3fe801538 <col:24, col:36> 'struct lpfc_name *' prefix '&'
+|   |     |     | | |   `-MemberExpr 0x7fd3fe801500 <col:25, col:36> 'struct lpfc_name':'struct lpfc_name' lvalue ->vport_wwpn 0x7fd3fe087c00
+|   |     |     | | |     `-ImplicitCastExpr 0x7fd3fe8014e8 <col:25> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |     | | |       `-DeclRefExpr 0x7fd3fe8014c0 <col:25> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |     | | `-ImplicitCastExpr 0x7fd3fe801638 <line:118:12, col:35> 'size_t':'unsigned int' <IntegralCast>
+|   |     |     | |   `-UnaryExprOrTypeTraitExpr 0x7fd3fe801578 <col:12, col:35> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     |     | |-CallExpr 0x7fd3fe801790 <line:119:5, line:120:36> 'void *'
+|   |     |     | | |-ImplicitCastExpr 0x7fd3fe801778 <line:119:5> 'void *(*)(void *, const void *, size_t)' <FunctionToPointerDecay>
+|   |     |     | | | `-DeclRefExpr 0x7fd3fe801650 <col:5> 'void *(void *, const void *, size_t)' Function 0x7fd3fe06f1f0 'memcpy' 'void *(void *, const void *, size_t)'
+|   |     |     | | |-ImplicitCastExpr 0x7fd3fe8017e8 <col:12> 'void *' <BitCast>
+|   |     |     | | | `-ImplicitCastExpr 0x7fd3fe8017d0 <col:12> 'struct lpfc_name *' <LValueToRValue>
+|   |     |     | | |   `-DeclRefExpr 0x7fd3fe801678 <col:12> 'struct lpfc_name *' lvalue ParmVar 0x7fd3fe088288 'target_wwpn' 'struct lpfc_name *'
+|   |     |     | | |-ImplicitCastExpr 0x7fd3fe801800 <col:25, col:37> 'const void *' <BitCast>
+|   |     |     | | | `-UnaryOperator 0x7fd3fe801718 <col:25, col:37> 'struct lpfc_name *' prefix '&'
+|   |     |     | | |   `-MemberExpr 0x7fd3fe8016e0 <col:26, col:37> 'struct lpfc_name':'struct lpfc_name' lvalue ->target_wwpn 0x7fd3fe087c68
+|   |     |     | | |     `-ImplicitCastExpr 0x7fd3fe8016c8 <col:26> 'struct lpfc_device_id *' <LValueToRValue>
+|   |     |     | | |       `-DeclRefExpr 0x7fd3fe8016a0 <col:26> 'struct lpfc_device_id *' lvalue Var 0x7fd3fe0889e0 'device_id' 'struct lpfc_device_id *'
+|   |     |     | | `-ImplicitCastExpr 0x7fd3fe801818 <line:120:12, col:35> 'size_t':'unsigned int' <IntegralCast>
+|   |     |     | |   `-UnaryExprOrTypeTraitExpr 0x7fd3fe801758 <col:12, col:35> 'unsigned long' sizeof 'struct lpfc_name':'struct lpfc_name'
+|   |     |     | `-BreakStmt 0x7fd3fe801830 <line:121:5>
+|   |     |     `-<<<NULL>>>
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd3fe8019c0 <line:125:2, col:9>
+|     `-ImplicitCastExpr 0x7fd3fe8019a8 <col:9> 'bool':'_Bool' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd3fe801980 <col:9> 'bool':'_Bool' lvalue Var 0x7fd3fe088af0 'found' 'bool':'_Bool'
+|-FunctionDecl 0x7fd3fe088bf0 <line:78:6> col:6 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7fd3fe088c90 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7fd3fe088cf0 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7fd3fe088d60 <col:6> Implicit
+| `-ConstAttr 0x7fd3fe088da8 <col:6> Implicit
+`-FunctionDecl 0x7fd3fe8001b8 <line:109:96> col:96 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7fd3fe800258 <col:96> Implicit
+  `-ConstAttr 0x7fd3fe8002a0 <col:96> Implicit

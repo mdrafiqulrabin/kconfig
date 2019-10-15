@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7f91cb8052e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f91cb83a2f0 <../Data/C2AST/pr81313-5.c:4:1, col:46> col:13 used foo 'void (int, int, int, int, int, int)' extern
+| |-ParmVarDecl 0x7f91cb805f78 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7f91cb83a000 <col:23> col:26 'int'
+| |-ParmVarDecl 0x7f91cb83a078 <col:28> col:31 'int'
+| |-ParmVarDecl 0x7f91cb83a0f0 <col:33> col:36 'int'
+| |-ParmVarDecl 0x7f91cb83a168 <col:38> col:41 'int'
+| `-ParmVarDecl 0x7f91cb83a1e0 <col:43> col:46 'int'
+`-FunctionDecl 0x7f91cb83a810 <line:6:1, line:10:1> line:7:1 bar 'void (int, int, int, int, int, int, int)'
+  |-ParmVarDecl 0x7f91cb83a418 <col:6, col:10> col:10 used i1 'int'
+  |-ParmVarDecl 0x7f91cb83a490 <col:14, col:18> col:18 used i2 'int'
+  |-ParmVarDecl 0x7f91cb83a508 <col:22, col:26> col:26 used i3 'int'
+  |-ParmVarDecl 0x7f91cb83a580 <col:30, col:34> col:34 used i4 'int'
+  |-ParmVarDecl 0x7f91cb83a5f8 <col:38, col:42> col:42 used i5 'int'
+  |-ParmVarDecl 0x7f91cb83a670 <col:46, col:50> col:50 used i6 'int'
+  |-ParmVarDecl 0x7f91cb83a6e8 <col:54, col:58> col:58 i7 'int'
+  `-CompoundStmt 0x7f91cb83ab28 <line:8:1, line:10:1>
+    `-CallExpr 0x7f91cb83aa40 <line:9:3, col:30> 'void'
+      |-ImplicitCastExpr 0x7f91cb83aa28 <col:3> 'void (*)(int, int, int, int, int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f91cb83a8e8 <col:3> 'void (int, int, int, int, int, int)' Function 0x7f91cb83a2f0 'foo' 'void (int, int, int, int, int, int)'
+      |-ImplicitCastExpr 0x7f91cb83aa98 <col:8> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f91cb83a910 <col:8> 'int' lvalue ParmVar 0x7f91cb83a418 'i1' 'int'
+      |-ImplicitCastExpr 0x7f91cb83aab0 <col:12> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f91cb83a938 <col:12> 'int' lvalue ParmVar 0x7f91cb83a490 'i2' 'int'
+      |-ImplicitCastExpr 0x7f91cb83aac8 <col:16> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f91cb83a960 <col:16> 'int' lvalue ParmVar 0x7f91cb83a508 'i3' 'int'
+      |-ImplicitCastExpr 0x7f91cb83aae0 <col:20> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f91cb83a988 <col:20> 'int' lvalue ParmVar 0x7f91cb83a580 'i4' 'int'
+      |-ImplicitCastExpr 0x7f91cb83aaf8 <col:24> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f91cb83a9b0 <col:24> 'int' lvalue ParmVar 0x7f91cb83a5f8 'i5' 'int'
+      `-ImplicitCastExpr 0x7f91cb83ab10 <col:28> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f91cb83a9d8 <col:28> 'int' lvalue ParmVar 0x7f91cb83a670 'i6' 'int'

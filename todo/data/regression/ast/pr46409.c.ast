@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f9d0302bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9d03814498 <../Data/C2AST/pr46409.c:4:1, line:9:1> line:5:1 foo 'int (int (*)(unsigned long long), unsigned long long)'
+  |-ParmVarDecl 0x7f9d03814308 <col:6, col:34> col:12 used x 'int (*)(unsigned long long)'
+  |-ParmVarDecl 0x7f9d03814380 <col:37, col:56> col:56 used y 'unsigned long long'
+  `-CompoundStmt 0x7f9d03814718 <line:6:1, line:9:1>
+    |-DeclStmt 0x7f9d038146c8 <line:7:3, col:25>
+    | `-VarDecl 0x7f9d038145a0 <col:3, col:24> col:16 z 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f9d038146b0 <col:20, col:24> 'unsigned int' <IntegralCast>
+    |     `-CallExpr 0x7f9d03814668 <col:20, col:24> 'int'
+    |       |-ImplicitCastExpr 0x7f9d03814650 <col:20> 'int (*)(unsigned long long)' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7f9d03814600 <col:20> 'int (*)(unsigned long long)' lvalue ParmVar 0x7f9d03814308 'x' 'int (*)(unsigned long long)'
+    |       `-ImplicitCastExpr 0x7f9d03814698 <col:23> 'unsigned long long' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9d03814628 <col:23> 'unsigned long long' lvalue ParmVar 0x7f9d03814380 'y' 'unsigned long long'
+    `-ReturnStmt 0x7f9d03814700 <line:8:3, col:10>
+      `-IntegerLiteral 0x7f9d038146e0 <col:10> 'int' 0

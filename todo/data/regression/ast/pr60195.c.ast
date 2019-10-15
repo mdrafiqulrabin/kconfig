@@ -1,0 +1,76 @@
+TranslationUnitDecl 0x7f80d182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f80d182c9a8 <../Data/C2AST/pr60195.c:5:1, col:21> col:21 referenced atomic_int '_Atomic(int)'
+| `-AtomicType 0x7f80d182c960 '_Atomic(int)'
+|   `-BuiltinType 0x7f80d182bde0 'int'
+|-FunctionDecl 0x7f80d2014310 <line:7:1, line:12:1> line:8:1 fn1 'atomic_int (void)'
+| `-CompoundStmt 0x7f80d2014538 <line:9:1, line:12:1>
+|   |-DeclStmt 0x7f80d2014498 <line:10:3, col:19>
+|   | `-VarDecl 0x7f80d2014400 <col:3, col:18> col:14 used y 'atomic_int':'_Atomic(int)' cinit
+|   |   `-ImplicitCastExpr 0x7f80d2014480 <col:18> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|   |     `-IntegerLiteral 0x7f80d2014460 <col:18> 'int' 0
+|   `-ReturnStmt 0x7f80d2014520 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7f80d2014508 <col:10> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|       `-ImplicitCastExpr 0x7f80d20144f0 <col:10> 'int' <AtomicToNonAtomic>
+|         `-ImplicitCastExpr 0x7f80d20144d8 <col:10> 'atomic_int':'_Atomic(int)' <LValueToRValue>
+|           `-DeclRefExpr 0x7f80d20144b0 <col:10> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014400 'y' 'atomic_int':'_Atomic(int)'
+|-FunctionDecl 0x7f80d20145e8 <line:14:1, line:20:1> line:15:1 fn2 'atomic_int (void)'
+| `-CompoundStmt 0x7f80d2014828 <line:16:1, line:20:1>
+|   |-DeclStmt 0x7f80d2014730 <line:17:3, col:19>
+|   | `-VarDecl 0x7f80d2014698 <col:3, col:18> col:14 used y 'atomic_int':'_Atomic(int)' cinit
+|   |   `-ImplicitCastExpr 0x7f80d2014718 <col:18> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|   |     `-IntegerLiteral 0x7f80d20146f8 <col:18> 'int' 0
+|   |-ImplicitCastExpr 0x7f80d2014788 <line:18:3> 'int' <AtomicToNonAtomic>
+|   | `-ImplicitCastExpr 0x7f80d2014770 <col:3> 'atomic_int':'_Atomic(int)' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f80d2014748 <col:3> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014698 'y' 'atomic_int':'_Atomic(int)'
+|   `-ReturnStmt 0x7f80d2014810 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7f80d20147f8 <col:10> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|       `-ImplicitCastExpr 0x7f80d20147e0 <col:10> 'int' <AtomicToNonAtomic>
+|         `-ImplicitCastExpr 0x7f80d20147c8 <col:10> 'atomic_int':'_Atomic(int)' <LValueToRValue>
+|           `-DeclRefExpr 0x7f80d20147a0 <col:10> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014698 'y' 'atomic_int':'_Atomic(int)'
+|-FunctionDecl 0x7f80d20148e0 <line:22:1, line:28:1> line:23:1 fn3 'atomic_int (void)'
+| `-CompoundStmt 0x7f80d2014b10 <line:24:1, line:28:1>
+|   |-DeclStmt 0x7f80d2014a28 <line:25:3, col:19>
+|   | `-VarDecl 0x7f80d2014990 <col:3, col:18> col:14 used y 'atomic_int':'_Atomic(int)' cinit
+|   |   `-ImplicitCastExpr 0x7f80d2014a10 <col:18> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|   |     `-IntegerLiteral 0x7f80d20149f0 <col:18> 'int' 0
+|   |-UnaryOperator 0x7f80d2014a68 <line:26:3, col:4> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7f80d2014a40 <col:3> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014990 'y' 'atomic_int':'_Atomic(int)'
+|   `-ReturnStmt 0x7f80d2014af8 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7f80d2014ae0 <col:10> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|       `-ImplicitCastExpr 0x7f80d2014ac8 <col:10> 'int' <AtomicToNonAtomic>
+|         `-ImplicitCastExpr 0x7f80d2014ab0 <col:10> 'atomic_int':'_Atomic(int)' <LValueToRValue>
+|           `-DeclRefExpr 0x7f80d2014a88 <col:10> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014990 'y' 'atomic_int':'_Atomic(int)'
+|-FunctionDecl 0x7f80d2014c00 <line:30:1, line:36:1> line:31:1 fn4 'void (void)'
+| `-CompoundStmt 0x7f80d2014e40 <line:32:1, line:36:1>
+|   |-DeclStmt 0x7f80d2014d10 <line:33:3, col:15>
+|   | `-VarDecl 0x7f80d2014cb0 <col:3, col:14> col:14 used y 'atomic_int':'_Atomic(int)'
+|   |-BinaryOperator 0x7f80d2014d88 <line:34:3, col:7> 'atomic_int':'_Atomic(int)' '='
+|   | |-DeclRefExpr 0x7f80d2014d28 <col:3> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014cb0 'y' 'atomic_int':'_Atomic(int)'
+|   | `-ImplicitCastExpr 0x7f80d2014d70 <col:7> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|   |   `-IntegerLiteral 0x7f80d2014d50 <col:7> 'int' 0
+|   `-CStyleCastExpr 0x7f80d2014e18 <line:35:3, col:10> 'void' <ToVoid>
+|     `-ImplicitCastExpr 0x7f80d2014e00 <col:10> 'int' <AtomicToNonAtomic>
+|       `-ImplicitCastExpr 0x7f80d2014de8 <col:10> 'atomic_int':'_Atomic(int)' <LValueToRValue>
+|         `-DeclRefExpr 0x7f80d2014db0 <col:10> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d2014cb0 'y' 'atomic_int':'_Atomic(int)'
+|-FunctionDecl 0x7f80d2014ef8 <line:38:1, line:42:1> line:39:1 fn5 'void (void)'
+| `-CompoundStmt 0x7f80d2015058 <line:40:1, line:42:1>
+|   `-DeclStmt 0x7f80d2015040 <line:41:3, col:19>
+|     `-VarDecl 0x7f80d2014fa8 <col:3, col:18> col:14 y 'atomic_int':'_Atomic(int)' cinit
+|       `-ImplicitCastExpr 0x7f80d2015028 <col:18> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|         `-IntegerLiteral 0x7f80d2015008 <col:18> 'int' 0
+|-FunctionDecl 0x7f80d2015100 <line:44:1, line:49:1> line:45:1 fn6 'void (void)'
+| `-CompoundStmt 0x7f80d202bd00 <line:46:1, line:49:1>
+|   |-DeclStmt 0x7f80d202bc60 <line:47:3, col:15>
+|   | `-VarDecl 0x7f80d202bc00 <col:3, col:14> col:14 used y 'atomic_int':'_Atomic(int)'
+|   `-BinaryOperator 0x7f80d202bcd8 <line:48:3, col:7> 'atomic_int':'_Atomic(int)' '='
+|     |-DeclRefExpr 0x7f80d202bc78 <col:3> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d202bc00 'y' 'atomic_int':'_Atomic(int)'
+|     `-ImplicitCastExpr 0x7f80d202bcc0 <col:7> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+|       `-IntegerLiteral 0x7f80d202bca0 <col:7> 'int' 0
+`-FunctionDecl 0x7f80d202bdb0 <line:51:1, line:56:1> line:52:1 fn7 'void (void)'
+  `-CompoundStmt 0x7f80d202bf58 <line:53:1, line:56:1>
+    |-DeclStmt 0x7f80d202bef8 <line:54:3, col:19>
+    | `-VarDecl 0x7f80d202be60 <col:3, col:18> col:14 used y 'atomic_int':'_Atomic(int)' cinit
+    |   `-ImplicitCastExpr 0x7f80d202bee0 <col:18> 'atomic_int':'_Atomic(int)' <NonAtomicToAtomic>
+    |     `-IntegerLiteral 0x7f80d202bec0 <col:18> 'int' 0
+    `-UnaryOperator 0x7f80d202bf38 <line:55:3, col:4> 'int' postfix '++'
+      `-DeclRefExpr 0x7f80d202bf10 <col:3> 'atomic_int':'_Atomic(int)' lvalue Var 0x7f80d202be60 'y' 'atomic_int':'_Atomic(int)'

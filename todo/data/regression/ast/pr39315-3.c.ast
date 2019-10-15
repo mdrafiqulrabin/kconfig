@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fb0150068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb01504d400 <../Data/C2AST/pr39315-3.c:10:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fb015007580 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fb015006ae0 'float'
+|-FunctionDecl 0x7fb01504d5f0 <line:12:1, col:26> col:13 used bar 'void (__m128 *)' extern
+| `-ParmVarDecl 0x7fb01504d4e8 <col:18, col:25> col:26 '__m128 *'
+`-FunctionDecl 0x7fb01504d770 <line:14:1, line:19:1> line:15:1 foo 'void (__m128 *)'
+  |-ParmVarDecl 0x7fb01504d6e8 <col:6, col:14> col:14 used x '__m128 *'
+  `-CompoundStmt 0x7fb01504daa0 <line:16:1, line:19:1>
+    |-DeclStmt 0x7fb01504d970 <line:17:3, col:48>
+    | `-VarDecl 0x7fb01504d848 <col:3, col:47> col:10 used b '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   |-ImplicitCastExpr 0x7fb01504d958 <col:46, col:47> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   | `-UnaryOperator 0x7fb01504d938 <col:46, col:47> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+    |   |   `-ImplicitCastExpr 0x7fb01504d920 <col:47> '__m128 *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fb01504d8f8 <col:47> '__m128 *' lvalue ParmVar 0x7fb01504d6e8 'x' '__m128 *'
+    |   `-AlignedAttr 0x7fb01504d8a8 <col:29, col:40> aligned
+    |     `-IntegerLiteral 0x7fb01504d818 <col:37> 'int' 128
+    `-CallExpr 0x7fb01504da70 <line:18:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fb01504da58 <col:3> 'void (*)(__m128 *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb01504d988 <col:3> 'void (__m128 *)' Function 0x7fb01504d5f0 'bar' 'void (__m128 *)'
+      `-UnaryOperator 0x7fb01504d9d8 <col:8, col:9> '__m128 *' prefix '&'
+        `-DeclRefExpr 0x7fb01504d9b0 <col:9> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fb01504d848 'b' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'

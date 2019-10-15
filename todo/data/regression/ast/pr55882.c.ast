@@ -1,0 +1,155 @@
+TranslationUnitDecl 0x7fa75182bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fa75182c960 <../Data/C2AST/pr55882.c:3:9, line:9:1> line:3:9
+| |-EnumConstantDecl 0x7fa752014240 <line:5:3, col:11> col:3 PVT_A 'int'
+| | `-IntegerLiteral 0x7fa752014220 <col:11> 'int' 0
+| |-EnumConstantDecl 0x7fa7520142a8 <line:6:3, col:11> col:3 PVT_B 'int'
+| | `-IntegerLiteral 0x7fa752014288 <col:11> 'int' 1
+| |-EnumConstantDecl 0x7fa752014310 <line:7:3, col:16> col:3 PVT_CONFIG 'int'
+| | `-IntegerLiteral 0x7fa7520142f0 <col:16> 'int' 2
+| `-EnumConstantDecl 0x7fa752014378 <line:8:3, col:19> col:3 PVT_RESERVED3 'int'
+|   `-IntegerLiteral 0x7fa752014358 <col:19> 'int' 3
+|-TypedefDecl 0x7fa752014410 <line:3:1, line:9:3> col:3 referenced T_CR_SELECT 'enum T_CR_SELECT':'T_CR_SELECT'
+| `-ElaboratedType 0x7fa7520143c0 'enum T_CR_SELECT' sugar
+|   `-EnumType 0x7fa752014200 'T_CR_SELECT'
+|     `-Enum 0x7fa75182c960 ''
+|-EnumDecl 0x7fa752014480 <line:11:9, line:15:1> line:11:9
+| |-EnumConstantDecl 0x7fa752014560 <line:13:3, col:18> col:3 STD_ULOGIC_0 'int'
+| | `-IntegerLiteral 0x7fa752014540 <col:18> 'int' 0
+| `-EnumConstantDecl 0x7fa7520145c8 <line:14:3, col:18> col:3 STD_ULOGIC_1 'int'
+|   `-IntegerLiteral 0x7fa7520145a8 <col:18> 'int' 1
+|-TypedefDecl 0x7fa752014660 <line:11:1, line:15:3> col:3 referenced STD_ULOGIC 'enum STD_ULOGIC':'STD_ULOGIC'
+| `-ElaboratedType 0x7fa752014610 'enum STD_ULOGIC' sugar
+|   `-EnumType 0x7fa752014520 'STD_ULOGIC'
+|     `-Enum 0x7fa752014480 ''
+|-RecordDecl 0x7fa7520146d0 <line:17:9, line:21:1> line:17:9 struct definition
+| |-FieldDecl 0x7fa7520147b8 <line:19:3, col:23> col:17 rtp 'unsigned char'
+| | `-IntegerLiteral 0x7fa752014780 <col:23> 'int' 3
+| `-FieldDecl 0x7fa752014838 <line:20:3, col:23> col:17 rtn 'unsigned char'
+|   `-IntegerLiteral 0x7fa752014800 <col:23> 'int' 3
+|-TypedefDecl 0x7fa7520148d0 <line:17:1, line:21:3> col:3 referenced C 'struct C':'C'
+| `-ElaboratedType 0x7fa752014880 'struct C' sugar
+|   `-RecordType 0x7fa752014760 'C'
+|     `-Record 0x7fa7520146d0 ''
+|-RecordDecl 0x7fa752014940 <line:23:9, line:29:1> line:23:9 struct definition
+| |-FieldDecl 0x7fa752014a08 <line:25:3, col:17> col:17 nd 'unsigned char'
+| |-FieldDecl 0x7fa752014a68 <line:26:3, col:17> col:17 pd 'unsigned char'
+| |-FieldDecl 0x7fa752014ac8 <line:27:3, col:17> col:17 rtn 'unsigned char'
+| `-FieldDecl 0x7fa752014b28 <line:28:3, col:17> col:17 rtp 'unsigned char'
+|-TypedefDecl 0x7fa752014bc0 <line:23:1, line:29:3> col:3 referenced A 'struct A':'A'
+| `-ElaboratedType 0x7fa752014b70 'struct A' sugar
+|   `-RecordType 0x7fa7520149d0 'A'
+|     `-Record 0x7fa752014940 ''
+|-RecordDecl 0x7fa752014c30 <line:31:9, line:36:1> line:31:9 struct definition
+| |-FieldDecl 0x7fa752014d18 <line:33:3, col:29> col:18 reserved 'unsigned short'
+| | `-IntegerLiteral 0x7fa752014ce0 <col:29> 'int' 14
+| |-FieldDecl 0x7fa752014d98 <line:34:3, col:31> col:17 Z_rx_enable 'unsigned char'
+| | `-IntegerLiteral 0x7fa752014d60 <col:31> 'int' 2
+| `-FieldDecl 0x7fa752014e10 <line:35:3, col:5> col:5 pvt 'A':'A'
+|-TypedefDecl 0x7fa752014eb0 <line:31:1, line:36:3> col:3 referenced B 'struct B':'B'
+| `-ElaboratedType 0x7fa752014e60 'struct B' sugar
+|   `-RecordType 0x7fa752014cc0 'B'
+|     `-Record 0x7fa752014c30 ''
+|-RecordDecl 0x7fa752014f20 <line:38:9, line:67:1> line:38:9 struct definition
+| |-FieldDecl 0x7fa752015000 <line:40:3, col:5> col:5 cr_dsclk_q3 'B':'B'
+| |-FieldDecl 0x7fa752015058 <line:41:3, col:5> col:5 cr_data_q3 'B':'B'
+| |-FieldDecl 0x7fa7520150b0 <line:42:3, col:5> col:5 cr_addr_q3 'B':'B'
+| |-FieldDecl 0x7fa752015108 <line:43:3, col:5> col:5 cr_cmd_q3 'B':'B'
+| |-FieldDecl 0x7fa752015160 <line:44:3, col:5> col:5 cr_pres_q3 'B':'B'
+| |-FieldDecl 0x7fa7520152e8 <line:45:3, col:17> col:5 cr_vref_q3 'C [6]'
+| |-FieldDecl 0x7fa752015348 <line:46:3, col:17> col:17 pres_disable 'unsigned char'
+| |-FieldDecl 0x7fa7520153a8 <line:47:3, col:17> col:17 pres_drive_high 'unsigned char'
+| |-FieldDecl 0x7fa752015408 <line:48:3, col:17> col:17 c_enab_120 'unsigned char'
+| |-FieldDecl 0x7fa752015480 <line:49:3, col:14> col:14 clk_tximp 'STD_ULOGIC':'STD_ULOGIC'
+| |-FieldDecl 0x7fa7520154d8 <line:50:3, col:14> col:14 dqs_tximp 'STD_ULOGIC':'STD_ULOGIC'
+| |-FieldDecl 0x7fa752015530 <line:51:3, col:14> col:14 cmd_tximp 'STD_ULOGIC':'STD_ULOGIC'
+| |-FieldDecl 0x7fa752015588 <line:52:3, col:14> col:14 data_tximp 'STD_ULOGIC':'STD_ULOGIC'
+| |-FieldDecl 0x7fa7520155e0 <line:53:3, col:14> col:14 dqs_rxterm 'STD_ULOGIC':'STD_ULOGIC'
+| |-FieldDecl 0x7fa752015638 <line:54:3, col:14> col:14 data_rxterm 'STD_ULOGIC':'STD_ULOGIC'
+| |-FieldDecl 0x7fa7520156b0 <line:55:3, col:15> col:15 cr_clk_sel 'T_CR_SELECT':'T_CR_SELECT'
+| |-FieldDecl 0x7fa752015730 <line:56:3, col:26> col:17 cr_clk 'unsigned char'
+| | `-IntegerLiteral 0x7fa7520156f8 <col:26> 'int' 5
+| |-FieldDecl 0x7fa752015788 <line:57:3, col:15> col:15 cr_dsclk_odd_sel 'T_CR_SELECT':'T_CR_SELECT'
+| |-FieldDecl 0x7fa752015808 <line:58:3, col:32> col:17 cr_dsclk_odd 'unsigned char'
+| | `-IntegerLiteral 0x7fa7520157d0 <col:32> 'int' 5
+| |-FieldDecl 0x7fa752015860 <line:59:3, col:15> col:15 cr_dsclk_even_sel 'T_CR_SELECT':'T_CR_SELECT'
+| |-FieldDecl 0x7fa7520158e0 <line:60:3, col:33> col:17 cr_dsclk_even 'unsigned char'
+| | `-IntegerLiteral 0x7fa7520158a8 <col:33> 'int' 5
+| |-FieldDecl 0x7fa752015938 <line:61:3, col:15> col:15 cr_data_sel 'T_CR_SELECT':'T_CR_SELECT'
+| |-FieldDecl 0x7fa7520159b8 <line:62:3, col:27> col:17 cr_data 'unsigned char'
+| | `-IntegerLiteral 0x7fa752015980 <col:27> 'int' 5
+| |-FieldDecl 0x7fa752015a10 <line:63:3, col:15> col:15 cr_vref_sel 'T_CR_SELECT':'T_CR_SELECT'
+| |-FieldDecl 0x7fa752015a90 <line:64:3, col:27> col:17 cr_vref 'unsigned char'
+| | `-IntegerLiteral 0x7fa752015a58 <col:27> 'int' 5
+| |-FieldDecl 0x7fa752015ae8 <line:65:3, col:15> col:15 cr_others_sel 'T_CR_SELECT':'T_CR_SELECT'
+| `-FieldDecl 0x7fa752015b68 <line:66:3, col:29> col:17 cr_others 'unsigned char'
+|   `-IntegerLiteral 0x7fa752015b30 <col:29> 'int' 5
+|-TypedefDecl 0x7fa752015cc0 <line:38:1, line:67:3> col:3 referenced CONFIG 'struct CONFIG':'CONFIG'
+| `-ElaboratedType 0x7fa752015c70 'struct CONFIG' sugar
+|   `-RecordType 0x7fa752014fb0 'CONFIG'
+|     `-Record 0x7fa752014f20 ''
+|-RecordDecl 0x7fa752015d30 <line:69:9, line:77:1> line:69:9 struct definition
+| |-FieldDecl 0x7fa752015df8 <line:71:3, col:17> col:17 enable_monitor 'unsigned char'
+| |-FieldDecl 0x7fa752015e78 <line:72:3, col:37> col:18 step_out_pointer 'unsigned short'
+| | `-IntegerLiteral 0x7fa752015e40 <col:37> 'int' 12
+| |-FieldDecl 0x7fa752015ef8 <line:73:3, col:37> col:18 hold_out_pointer 'unsigned short'
+| | `-IntegerLiteral 0x7fa752015ec0 <col:37> 'int' 12
+| |-FieldDecl 0x7fa752015f78 <line:74:3, col:34> col:18 enable_wr_dqs 'unsigned short'
+| | `-IntegerLiteral 0x7fa752015f40 <col:34> 'int' 12
+| |-FieldDecl 0x7fa752015ff8 <line:75:3, col:35> col:18 referenced use_alt_rd_dqs 'unsigned short'
+| | `-IntegerLiteral 0x7fa752015fc0 <col:35> 'int' 12
+| `-FieldDecl 0x7fa752016070 <line:76:3, col:10> col:10 io_buf 'CONFIG':'CONFIG'
+|-TypedefDecl 0x7fa752016110 <line:69:1, line:77:3> col:3 referenced mystruct 'struct mystruct':'mystruct'
+| `-ElaboratedType 0x7fa7520160c0 'struct mystruct' sugar
+|   `-RecordType 0x7fa752015dc0 'mystruct'
+|     `-Record 0x7fa752015d30 ''
+|-FunctionDecl 0x7fa75202cc68 <line:79:1, line:86:1> line:80:1 used testfunction 'unsigned short (unsigned int)'
+| |-ParmVarDecl 0x7fa752016198 <col:14, col:23> col:23 used i 'unsigned int'
+| |-CompoundStmt 0x7fa75202d430 <line:81:1, line:86:1>
+| | |-DeclStmt 0x7fa75202d068 <line:82:3, col:19>
+| | | `-VarDecl 0x7fa75202d008 <col:3, col:18> col:12 used dmfe 'mystruct [8]'
+| | |-BinaryOperator 0x7fa75202d1d8 <line:83:3, col:28> 'unsigned short' '='
+| | | |-MemberExpr 0x7fa75202d168 <col:3, col:11> 'unsigned short' lvalue bitfield .use_alt_rd_dqs 0x7fa752015ff8
+| | | | `-ArraySubscriptExpr 0x7fa75202d140 <col:3, col:9> 'mystruct':'mystruct' lvalue
+| | | |   |-ImplicitCastExpr 0x7fa75202d128 <col:3> 'mystruct *' <ArrayToPointerDecay>
+| | | |   | `-DeclRefExpr 0x7fa75202d080 <col:3> 'mystruct [8]' lvalue Var 0x7fa75202d008 'dmfe' 'mystruct [8]'
+| | | |   `-IntegerLiteral 0x7fa75202d0a8 <col:8> 'int' 0
+| | | `-ImplicitCastExpr 0x7fa75202d1c0 <col:28> 'unsigned short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fa75202d1a0 <col:28> 'int' 1
+| | |-BinaryOperator 0x7fa75202d318 <line:84:3, col:28> 'unsigned short' '='
+| | | |-MemberExpr 0x7fa75202d2a8 <col:3, col:11> 'unsigned short' lvalue bitfield .use_alt_rd_dqs 0x7fa752015ff8
+| | | | `-ArraySubscriptExpr 0x7fa75202d280 <col:3, col:9> 'mystruct':'mystruct' lvalue
+| | | |   |-ImplicitCastExpr 0x7fa75202d250 <col:3> 'mystruct *' <ArrayToPointerDecay>
+| | | |   | `-DeclRefExpr 0x7fa75202d200 <col:3> 'mystruct [8]' lvalue Var 0x7fa75202d008 'dmfe' 'mystruct [8]'
+| | | |   `-ImplicitCastExpr 0x7fa75202d268 <col:8> 'unsigned int' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fa75202d228 <col:8> 'unsigned int' lvalue ParmVar 0x7fa752016198 'i' 'unsigned int'
+| | | `-ImplicitCastExpr 0x7fa75202d300 <col:28> 'unsigned short' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fa75202d2e0 <col:28> 'int' 0
+| | `-ReturnStmt 0x7fa75202d418 <line:85:3, col:18>
+| |   `-ImplicitCastExpr 0x7fa75202d400 <col:10, col:18> 'unsigned short' <LValueToRValue>
+| |     `-MemberExpr 0x7fa75202d3c8 <col:10, col:18> 'unsigned short' lvalue bitfield .use_alt_rd_dqs 0x7fa752015ff8
+| |       `-ArraySubscriptExpr 0x7fa75202d3a0 <col:10, col:16> 'mystruct':'mystruct' lvalue
+| |         |-ImplicitCastExpr 0x7fa75202d388 <col:10> 'mystruct *' <ArrayToPointerDecay>
+| |         | `-DeclRefExpr 0x7fa75202d340 <col:10> 'mystruct [8]' lvalue Var 0x7fa75202d008 'dmfe' 'mystruct [8]'
+| |         `-IntegerLiteral 0x7fa75202d368 <col:15> 'int' 0
+| `-NoInlineAttr 0x7fa75202cd10 <line:79:31>
+|-FunctionDecl 0x7fa75202d550 <line:88:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa75202d5f0 prev 0x7fa75202d550 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fa75202d6e0 <line:89:1, line:94:1> line:89:5 main 'int ()'
+  `-CompoundStmt 0x7fa75202d9b8 <line:90:1, line:94:1>
+    |-IfStmt 0x7fa75202d948 <line:91:3, line:92:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa75202d890 <line:91:7, col:26> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa75202d878 <col:7, col:21> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7fa75202d810 <col:7, col:21> 'unsigned short'
+    | | |   |-ImplicitCastExpr 0x7fa75202d7f8 <col:7> 'unsigned short (*)(unsigned int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fa75202d780 <col:7> 'unsigned short (unsigned int)' Function 0x7fa75202cc68 'testfunction' 'unsigned short (unsigned int)'
+    | | |   `-ImplicitCastExpr 0x7fa75202d840 <col:20> 'unsigned int' <IntegralCast>
+    | | |     `-IntegerLiteral 0x7fa75202d7a8 <col:20> 'int' 0
+    | | `-IntegerLiteral 0x7fa75202d858 <col:26> 'int' 0
+    | |-CallExpr 0x7fa75202d920 <line:92:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fa75202d908 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa75202d8b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa75202d5f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa75202d9a0 <line:93:3, col:10>
+      `-IntegerLiteral 0x7fa75202d980 <col:10> 'int' 0

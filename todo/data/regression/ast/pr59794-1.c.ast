@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f991501a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9914809400 <../Data/C2AST/pr59794-1.c:6:1, col:13> col:13 referenced __v2si '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7f991501b580 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7f991501a9e0 'int'
+|-VarDecl 0x7f9914809490 <line:8:1, col:15> col:15 used x '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' extern
+|-FunctionDecl 0x7f9914809640 <line:10:1, col:24> col:13 used bar 'void (__v2si)' extern
+| `-ParmVarDecl 0x7f9914809540 <col:18> col:24 '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+`-FunctionDecl 0x7f99148097b0 <line:11:1, line:15:1> line:12:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9914809958 <line:13:1, line:15:1>
+    `-CallExpr 0x7f9914809910 <line:14:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7f99148098f8 <col:3> 'void (*)(__v2si)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9914809850 <col:3> 'void (__v2si)' Function 0x7f9914809640 'bar' 'void (__v2si)'
+      `-ImplicitCastExpr 0x7f9914809940 <col:8> '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7f9914809878 <col:8> '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7f9914809490 'x' '__v2si':'__attribute__((__vector_size__(2 * sizeof(int)))) int'

@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fa6d9819ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa6db000068 <../Data/C2AST/pr27364.c:1:1, line:6:1> line:1:5 used f 'int (unsigned int)'
+| |-ParmVarDecl 0x7fa6d981a978 <col:7, col:16> col:16 used number_of_digits_to_use 'unsigned int'
+| `-CompoundStmt 0x7fa6db000470 <line:2:1, line:6:1>
+|   |-IfStmt 0x7fa6db000228 <line:3:3, line:4:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa6db0001c8 <line:3:7, col:32> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fa6db000198 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fa6db000150 <col:7> 'unsigned int' lvalue ParmVar 0x7fa6d981a978 'number_of_digits_to_use' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7fa6db0001b0 <col:32> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fa6db000178 <col:32> 'int' 1294
+|   | |-ReturnStmt 0x7fa6db000210 <line:4:5, col:12>
+|   | | `-IntegerLiteral 0x7fa6db0001f0 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa6db000458 <line:5:3, col:61>
+|     `-ImplicitCastExpr 0x7fa6db000440 <col:10, col:61> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7fa6db000418 <col:10, col:61> 'unsigned int' '/'
+|         |-ParenExpr 0x7fa6db0003c0 <col:10, col:58> 'unsigned int'
+|         | `-BinaryOperator 0x7fa6db000398 <col:11, col:57> 'unsigned int' '+'
+|         |   |-BinaryOperator 0x7fa6db000338 <col:11, col:47> 'unsigned int' '/'
+|         |   | |-BinaryOperator 0x7fa6db0002d8 <col:11, col:37> 'unsigned int' '*'
+|         |   | | |-ImplicitCastExpr 0x7fa6db0002a8 <col:11> 'unsigned int' <LValueToRValue>
+|         |   | | | `-DeclRefExpr 0x7fa6db000260 <col:11> 'unsigned int' lvalue ParmVar 0x7fa6d981a978 'number_of_digits_to_use' 'unsigned int'
+|         |   | | `-ImplicitCastExpr 0x7fa6db0002c0 <col:37> 'unsigned int' <IntegralCast>
+|         |   | |   `-IntegerLiteral 0x7fa6db000288 <col:37> 'int' 3321928
+|         |   | `-ImplicitCastExpr 0x7fa6db000320 <col:47> 'unsigned int' <IntegralCast>
+|         |   |   `-IntegerLiteral 0x7fa6db000300 <col:47> 'int' 1000000
+|         |   `-ImplicitCastExpr 0x7fa6db000380 <col:57> 'unsigned int' <IntegralCast>
+|         |     `-IntegerLiteral 0x7fa6db000360 <col:57> 'int' 1
+|         `-ImplicitCastExpr 0x7fa6db000400 <col:61> 'unsigned int' <IntegralCast>
+|           `-IntegerLiteral 0x7fa6db0003e0 <col:61> 'int' 16
+|-FunctionDecl 0x7fa6db000558 <line:8:1, line:13:1> line:8:5 main 'int (void)'
+| `-CompoundStmt 0x7fa6db000b20 <line:9:1, line:13:1>
+|   |-IfStmt 0x7fa6db0008e8 <line:10:3, line:11:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa6db000718 <line:10:7, col:16> 'int' '!='
+|   | | |-CallExpr 0x7fa6db0006b0 <col:7, col:11> 'int'
+|   | | | |-ImplicitCastExpr 0x7fa6db000698 <col:7> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fa6db000628 <col:7> 'int (unsigned int)' Function 0x7fa6db000068 'f' 'int (unsigned int)'
+|   | | | `-ImplicitCastExpr 0x7fa6db0006e0 <col:9> 'unsigned int' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x7fa6db000650 <col:9> 'int' 11
+|   | | `-IntegerLiteral 0x7fa6db0006f8 <col:16> 'int' 2
+|   | |-CallExpr 0x7fa6db0008c0 <line:11:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fa6db0008a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fa6db000858 <col:5> '<builtin fn type>' Function 0x7fa6db000770 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fa6db000af0 <line:12:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fa6db000ad8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa6db000a60 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fa6db000958 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fa6db000a88 <col:9> 'int' 0
+|-FunctionDecl 0x7fa6db000770 <line:11:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fa6db000810 <col:5> Implicit
+`-FunctionDecl 0x7fa6db000958 <line:12:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7fa6db0009f8 <<invalid sloc>> <invalid sloc> 'int'

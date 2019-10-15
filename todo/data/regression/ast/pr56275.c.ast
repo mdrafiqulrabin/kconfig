@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fc89381a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc89283c638 <../Data/C2AST/pr56275.c:5:1, col:19> col:19 referenced v2tw '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fc89283c600 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fc89381aa20 'long long'
+`-FunctionDecl 0x7fc89283c8b0 <line:7:1, line:12:1> line:7:6 tiger_block_v2 'void (long long, v2tw *)'
+  |-ParmVarDecl 0x7fc89283c6a8 <col:22, col:32> col:32 used in1 'long long'
+  |-ParmVarDecl 0x7fc89283c798 <col:37, col:43> col:43 used res 'v2tw *'
+  `-CompoundStmt 0x7fc89283cca0 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fc89283cb30 <line:9:3, col:25>
+    | `-VarDecl 0x7fc89283c9b0 <col:3, col:24> col:8 used i1 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' cinit
+    |   `-InitListExpr 0x7fc89283cab0 <col:13, col:24> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    |     |-ImplicitCastExpr 0x7fc89283cb00 <col:15> 'long long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fc89283ca10 <col:15> 'long long' lvalue ParmVar 0x7fc89283c6a8 'in1' 'long long'
+    |     `-ImplicitCastExpr 0x7fc89283cb18 <col:20> 'long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fc89283ca38 <col:20> 'long long' lvalue ParmVar 0x7fc89283c6a8 'in1' 'long long'
+    `-BinaryOperator 0x7fc89283cc78 <line:11:3, col:16> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+      |-UnaryOperator 0x7fc89283cb88 <col:3, col:4> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fc89283cb70 <col:4> 'v2tw *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc89283cb48 <col:4> 'v2tw *' lvalue ParmVar 0x7fc89283c798 'res' 'v2tw *'
+      `-BinaryOperator 0x7fc89283cc50 <col:10, col:16> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '<<'
+        |-ImplicitCastExpr 0x7fc89283cbf0 <col:10> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc89283cba8 <col:10> 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fc89283c9b0 'i1' 'v2tw':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fc89283cc38 <col:16> 'int __attribute__((ext_vector_type(2)))' <VectorSplat>
+          `-IntegerLiteral 0x7fc89283cbd0 <col:16> 'int' 1

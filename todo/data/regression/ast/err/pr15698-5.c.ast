@@ -1,0 +1,29 @@
+../Data/C2AST/pr15698-5.c:7:5: error: conflicting types for 'isnan'
+int isnan(a) int a; {}  
+    ^
+../Data/C2AST/pr15698-5.c:6:20: note: previous declaration is here
+void f(void) { int isnan(void); }  
+                   ^
+1 error generated.
+TranslationUnitDecl 0x7fd2410174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd241017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd241017780 '__int128'
+|-TypedefDecl 0x7fd241017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd2410177a0 'unsigned __int128'
+|-TypedefDecl 0x7fd241017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd241017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd241017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd241017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd241017e00 'char *'
+|   `-BuiltinType 0x7fd241017580 'char'
+|-TypedefDecl 0x7fd241018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd2410180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd241017f20 'struct __va_list_tag'
+|     `-Record 0x7fd241017e98 '__va_list_tag'
+|-FunctionDecl 0x7fd241059020 <../Data/C2AST/pr15698-5.c:6:1, col:33> col:6 f 'void (void)'
+| `-CompoundStmt 0x7fd241059290 <col:14, col:33>
+|   `-DeclStmt 0x7fd241059278 <col:16, col:31>
+|     `-FunctionDecl 0x7fd2410591c8 parent 0x7fd2410174e8 <col:16, col:30> col:20 isnan 'int (void)'
+`-FunctionDecl 0x7fd241059388 <line:7:1, col:22> col:5 invalid isnan 'int (int)'
+  |-ParmVarDecl 0x7fd2410592c0 <col:14, col:18> col:18 a 'int'
+  `-CompoundStmt 0x7fd241059430 <col:21, col:22>

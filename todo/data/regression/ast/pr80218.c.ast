@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fec6e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fec70031d20 <../Data/C2AST/pr80218.c:6:1, col:18> col:6 used foo 'void (float *)'
+| `-ParmVarDecl 0x7fec70031c58 <col:11, col:17> col:18 'float *'
+|-FunctionDecl 0x7fec70031e68 <line:8:1, line:12:1> line:9:1 f1 'void (float *)'
+| |-ParmVarDecl 0x7fec70031de0 <col:5, col:12> col:12 used x 'float *'
+| `-CompoundStmt 0x7fec700320d0 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7fec700320a8 <line:11:3, col:21> 'float' '='
+|     |-ArraySubscriptExpr 0x7fec70031f70 <col:3, col:6> 'float' lvalue
+|     | |-ImplicitCastExpr 0x7fec70031f58 <col:3> 'float *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fec70031f10 <col:3> 'float *' lvalue ParmVar 0x7fec70031de0 'x' 'float *'
+|     | `-IntegerLiteral 0x7fec70031f38 <col:5> 'int' 0
+|     `-CallExpr 0x7fec70032060 <col:10, col:21> 'float'
+|       |-ImplicitCastExpr 0x7fec70032048 <col:10> 'float (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fec70031f98 <col:10> 'float (float)' Function 0x7fec7000aa48 'sqrtf' 'float (float)'
+|       `-ImplicitCastExpr 0x7fec70032090 <col:17, col:20> 'float' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7fec70032020 <col:17, col:20> 'float' lvalue
+|           |-ImplicitCastExpr 0x7fec70032008 <col:17> 'float *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fec70031fc0 <col:17> 'float *' lvalue ParmVar 0x7fec70031de0 'x' 'float *'
+|           `-IntegerLiteral 0x7fec70031fe8 <col:19> 'int' 0
+|-FunctionDecl 0x7fec70032188 <line:14:1, line:19:1> line:15:1 f2 'void (float *)'
+| |-ParmVarDecl 0x7fec70032100 <col:5, col:12> col:12 used x 'float *'
+| `-CompoundStmt 0x7fec70032418 <line:16:1, line:19:1>
+|   |-CallExpr 0x7fec700322f8 <line:17:3, col:14> 'float'
+|   | |-ImplicitCastExpr 0x7fec700322e0 <col:3> 'float (*)(float)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec70032230 <col:3> 'float (float)' Function 0x7fec7000aa48 'sqrtf' 'float (float)'
+|   | `-ImplicitCastExpr 0x7fec70032328 <col:10, col:13> 'float' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7fec700322b8 <col:10, col:13> 'float' lvalue
+|   |     |-ImplicitCastExpr 0x7fec700322a0 <col:10> 'float *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fec70032258 <col:10> 'float *' lvalue ParmVar 0x7fec70032100 'x' 'float *'
+|   |     `-IntegerLiteral 0x7fec70032280 <col:12> 'int' 0
+|   `-CallExpr 0x7fec700323d0 <line:18:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7fec700323b8 <col:3> 'void (*)(float *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fec70032340 <col:3> 'void (float *)' Function 0x7fec70031d20 'foo' 'void (float *)'
+|     `-ImplicitCastExpr 0x7fec70032400 <col:8> 'float *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec70032368 <col:8> 'float *' lvalue ParmVar 0x7fec70032100 'x' 'float *'
+`-FunctionDecl 0x7fec700324d8 <line:21:1, line:26:1> line:22:1 f3 'void (float *)'
+  |-ParmVarDecl 0x7fec70032450 <col:5, col:12> col:12 used x 'float *'
+  `-CompoundStmt 0x7fec70032740 <line:23:1, line:26:1>
+    |-CallExpr 0x7fec70032648 <line:24:3, col:14> 'float'
+    | |-ImplicitCastExpr 0x7fec70032630 <col:3> 'float (*)(float)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fec70032580 <col:3> 'float (float)' Function 0x7fec6f824000 'acosf' 'float (float)'
+    | `-ImplicitCastExpr 0x7fec70032678 <col:10, col:13> 'float' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fec70032608 <col:10, col:13> 'float' lvalue
+    |     |-ImplicitCastExpr 0x7fec700325f0 <col:10> 'float *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fec700325a8 <col:10> 'float *' lvalue ParmVar 0x7fec70032450 'x' 'float *'
+    |     `-IntegerLiteral 0x7fec700325d0 <col:12> 'int' 0
+    `-CallExpr 0x7fec700326f8 <line:25:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fec700326e0 <col:3> 'void (*)(float *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fec70032690 <col:3> 'void (float *)' Function 0x7fec70031d20 'foo' 'void (float *)'
+      `-ImplicitCastExpr 0x7fec70032728 <col:8> 'float *' <LValueToRValue>
+        `-DeclRefExpr 0x7fec700326b8 <col:8> 'float *' lvalue ParmVar 0x7fec70032450 'x' 'float *'

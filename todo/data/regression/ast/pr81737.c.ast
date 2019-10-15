@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fa7fa0288e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa7fa814200 <../Data/C2AST/pr81737.c:5:1, col:14> col:12 used a 'int []' extern
+`-FunctionDecl 0x7fa7fa8142e8 <line:6:1, col:26> col:6 fn1 'void ()'
+  `-CompoundStmt 0x7fa7fa8144b8 <col:12, col:26>
+    `-ImplicitCastExpr 0x7fa7fa8144a0 <col:14, col:23> 'int' <LValueToRValue>
+      `-ArraySubscriptExpr 0x7fa7fa814478 <col:14, col:23> 'int' lvalue
+        |-ParenExpr 0x7fa7fa814438 <col:14, col:20> 'int *'
+        | `-BinaryOperator 0x7fa7fa814410 <col:15, col:19> 'int *' '+'
+        |   |-ImplicitCastExpr 0x7fa7fa8143f8 <col:15> 'int *' <ArrayToPointerDecay>
+        |   | `-DeclRefExpr 0x7fa7fa814388 <col:15> 'int []' lvalue Var 0x7fa7fa814200 'a' 'int []'
+        |   `-IntegerLiteral 0x7fa7fa8143b0 <col:19> 'int' 0
+        `-IntegerLiteral 0x7fa7fa814458 <col:22> 'int' 1

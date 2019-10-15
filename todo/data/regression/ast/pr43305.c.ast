@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fd5310180e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd52f817a68 <../Data/C2AST/pr43305.c:3:12> col:12 implicit used ilogbl 'int (long double)' extern
+| |-ParmVarDecl 0x7fd52f817b08 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7fd52f817b70 <col:12> Implicit
+| `-NoThrowAttr 0x7fd52f817bb8 <col:12> Implicit
+|-FunctionDecl 0x7fd52f817bc8 prev 0x7fd52f817a68 <col:1, col:30> col:12 used ilogbl 'int (long double)' extern
+| |-ParmVarDecl 0x7fd531018d78 <col:19, col:24> col:30 'long double'
+| |-ConstAttr 0x7fd52f817ca8 <col:12> Inherited Implicit
+| `-NoThrowAttr 0x7fd52f817cb8 <col:12> Inherited Implicit
+|-FunctionDecl 0x7fd52f817da8 <line:4:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fd52f817e48 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fd52f817eb0 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fd52f817f08 prev 0x7fd52f817da8 <col:1, col:42> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fd52f817ce0 <col:19, col:31> col:31 format 'const char *'
+| `-FormatAttr 0x7fd52f817fe8 <col:12> Inherited printf 1 2
+|-FunctionDecl 0x7fd52f8180b0 <line:6:1, line:10:1> line:7:5 used foo 'int (long double)'
+| |-ParmVarDecl 0x7fd52f818020 <col:9, col:21> col:21 used x 'long double'
+| |-CompoundStmt 0x7fd52f8182d0 <line:8:1, line:10:1>
+| | `-ReturnStmt 0x7fd52f8182b8 <line:9:3, col:18>
+| |   `-CallExpr 0x7fd52f818270 <col:10, col:18> 'int'
+| |     |-ImplicitCastExpr 0x7fd52f818258 <col:10> 'int (*)(long double)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x7fd52f8181e0 <col:10> 'int (long double)' Function 0x7fd52f817bc8 'ilogbl' 'int (long double)'
+| |     `-ImplicitCastExpr 0x7fd52f8182a0 <col:17> 'long double' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fd52f818208 <col:17> 'long double' lvalue ParmVar 0x7fd52f818020 'x' 'long double'
+| `-NoInlineAttr 0x7fd52f818158 <line:6:16>
+`-FunctionDecl 0x7fd52f818340 <line:12:1, line:16:1> line:12:5 main 'int ()'
+  `-CompoundStmt 0x7fd52f818600 <line:13:1, line:16:1>
+    |-CallExpr 0x7fd52f818560 <line:14:3, col:26> 'int'
+    | |-ImplicitCastExpr 0x7fd52f818548 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd52f8183e0 <col:3> 'int (const char *, ...)' Function 0x7fd52f817f08 'printf' 'int (const char *, ...)'
+    | |-ImplicitCastExpr 0x7fd52f8185b0 <col:10> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fd52f818598 <col:10> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7fd52f818448 <col:10> 'char [4]' lvalue "%d\n"
+    | `-CallExpr 0x7fd52f8184d8 <col:18, col:25> 'int'
+    |   |-ImplicitCastExpr 0x7fd52f8184c0 <col:18> 'int (*)(long double)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd52f818478 <col:18> 'int (long double)' Function 0x7fd52f8180b0 'foo' 'int (long double)'
+    |   `-ImplicitCastExpr 0x7fd52f818508 <col:22> 'long double' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fd52f8184a0 <col:22> 'int' 100
+    `-ReturnStmt 0x7fd52f8185e8 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fd52f8185c8 <col:10> 'int' 0

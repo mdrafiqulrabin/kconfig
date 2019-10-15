@@ -1,0 +1,97 @@
+TranslationUnitDecl 0x7fe71b81aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe71ca5b218 <../Data/C2AST/pr52736.c:8:1, col:16> col:16 referenced D 'double'
+| |-BuiltinType 0x7fe71b81ad00 'double'
+| `-MayAliasAttr 0x7fe71ca5b270 <col:33>
+|-VarDecl 0x7fe71ca5b3a0 <line:9:1, col:74> col:50 used r 'const double [4]' static cinit
+| |-InitListExpr 0x7fe71ca5b530 <col:57, col:74> 'const double [4]'
+| | |-FloatingLiteral 0x7fe71ca5b450 <col:59> 'double' 1.000000e+00
+| | |-FloatingLiteral 0x7fe71ca5b470 <col:63> 'double' 5.000000e+00
+| | |-FloatingLiteral 0x7fe71ca5b490 <col:67> 'double' 1.000000e+00
+| | `-FloatingLiteral 0x7fe71ca5b4b0 <col:71> 'double' 3.000000e+00
+| `-AlignedAttr 0x7fe71ca5b400 <col:16, col:26> aligned
+|   `-IntegerLiteral 0x7fe71ca5b2b8 <col:24> 'int' 16
+|-FunctionDecl 0x7fe71ca5b630 <line:11:1, line:18:1> line:13:1 used foo 'void (int)'
+| |-ParmVarDecl 0x7fe71ca5b5a8 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7fe71ca5bae0 <line:14:1, line:18:1>
+| | |-GCCAsmStmt 0x7fe71ca5b840 <line:15:3, col:43>
+| | | `-DeclRefExpr 0x7fe71ca5b7e8 <col:28> 'int' lvalue ParmVar 0x7fe71ca5b5a8 'x' 'int'
+| | `-IfStmt 0x7fe71ca5baa8 <line:16:3, line:17:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fe71ca5b908 <line:16:7, col:12> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fe71ca5b8f0 <col:7> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fe71ca5b8a8 <col:7> 'int' lvalue ParmVar 0x7fe71ca5b5a8 'x' 'int'
+| |   | `-IntegerLiteral 0x7fe71ca5b8d0 <col:12> 'int' 3
+| |   |-CallExpr 0x7fe71ca5ba80 <line:17:5, col:22> 'void'
+| |   | `-ImplicitCastExpr 0x7fe71ca5ba68 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7fe71ca5ba18 <col:5> '<builtin fn type>' Function 0x7fe71ca5b930 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fe71ca5b6d8 <line:11:16>
+|-FunctionDecl 0x7fe71ca5b930 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fe71ca5b9d0 <col:5> Implicit
+`-FunctionDecl 0x7fe71ca5bb50 <line:20:1, line:29:1> line:21:1 main 'int ()'
+  `-CompoundStmt 0x7fe71ca5c620 <line:22:1, line:29:1>
+    |-DeclStmt 0x7fe71ca5bcf0 <line:23:3, col:31>
+    | `-VarDecl 0x7fe71ca5bc00 <col:3, col:30> col:11 used t '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-CallExpr 0x7fe71ca5bcc0 <col:15, col:30> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7fe71ca5bca8 <col:15> '__m128d (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe71ca5bc60 <col:15> '__m128d (double)' Function 0x7fe71b89bec0 '_mm_set1_pd' '__m128d (double)'
+    |     `-FloatingLiteral 0x7fe71ca5bc88 <col:28> 'double' 5.000000e+00
+    |-BinaryOperator 0x7fe71ca5beb8 <line:24:3, col:20> 'D':'double' '='
+    | |-ArraySubscriptExpr 0x7fe71ca5be70 <col:3, col:16> 'D':'double' lvalue
+    | | |-ParenExpr 0x7fe71ca5be30 <col:3, col:13> 'D *'
+    | | | `-CStyleCastExpr 0x7fe71ca5be08 <col:4, col:12> 'D *' <BitCast>
+    | | |   `-ParenExpr 0x7fe71ca5bde8 <col:9, col:12> '__m128d *'
+    | | |     `-UnaryOperator 0x7fe71ca5bd58 <col:10, col:11> '__m128d *' prefix '&'
+    | | |       `-DeclRefExpr 0x7fe71ca5bd30 <col:11> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fe71ca5bc00 't' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    | | `-IntegerLiteral 0x7fe71ca5be50 <col:15> 'int' 0
+    | `-FloatingLiteral 0x7fe71ca5be98 <col:20> 'double' 1.000000e+00
+    |-CallExpr 0x7fe71ca5c188 <line:25:3, col:63> 'void'
+    | |-ImplicitCastExpr 0x7fe71ca5c170 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe71ca5bee0 <col:3> 'void (int)' Function 0x7fe71ca5b630 'foo' 'void (int)'
+    | `-CallExpr 0x7fe71ca5c140 <col:8, col:62> 'int'
+    |   |-ImplicitCastExpr 0x7fe71ca5c128 <col:8> 'int (*)(__m128d)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe71ca5bf08 <col:8> 'int (__m128d)' Function 0x7fe71b8c4500 '_mm_movemask_pd' 'int (__m128d)'
+    |   `-CallExpr 0x7fe71ca5c0b0 <col:25, col:61> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7fe71ca5c098 <col:25> '__m128d (*)(__m128d, __m128d)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe71ca5bf30 <col:25> '__m128d (__m128d, __m128d)' Function 0x7fe71b881e18 '_mm_cmpeq_pd' '__m128d (__m128d, __m128d)'
+    |     |-ImplicitCastExpr 0x7fe71ca5c0e8 <col:39> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fe71ca5bf58 <col:39> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fe71ca5bc00 't' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     `-CallExpr 0x7fe71ca5c068 <col:42, col:60> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |       |-ImplicitCastExpr 0x7fe71ca5c050 <col:42> '__m128d (*)(const double *)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fe71ca5bf80 <col:42> '__m128d (const double *)' Function 0x7fe71b894370 '_mm_load_pd' '__m128d (const double *)'
+    |       `-UnaryOperator 0x7fe71ca5c030 <col:55, col:59> 'const double *' prefix '&'
+    |         `-ArraySubscriptExpr 0x7fe71ca5c008 <col:56, col:59> 'const double' lvalue
+    |           |-ImplicitCastExpr 0x7fe71ca5bff0 <col:56> 'const double *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7fe71ca5bfa8 <col:56> 'const double [4]' lvalue Var 0x7fe71ca5b3a0 'r' 'const double [4]'
+    |           `-IntegerLiteral 0x7fe71ca5bfd0 <col:58> 'int' 0
+    |-BinaryOperator 0x7fe71ca5c310 <line:26:3, col:20> 'D':'double' '='
+    | |-ArraySubscriptExpr 0x7fe71ca5c2c8 <col:3, col:16> 'D':'double' lvalue
+    | | |-ParenExpr 0x7fe71ca5c288 <col:3, col:13> 'D *'
+    | | | `-CStyleCastExpr 0x7fe71ca5c260 <col:4, col:12> 'D *' <BitCast>
+    | | |   `-ParenExpr 0x7fe71ca5c240 <col:9, col:12> '__m128d *'
+    | | |     `-UnaryOperator 0x7fe71ca5c1e0 <col:10, col:11> '__m128d *' prefix '&'
+    | | |       `-DeclRefExpr 0x7fe71ca5c1b8 <col:11> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fe71ca5bc00 't' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    | | `-IntegerLiteral 0x7fe71ca5c2a8 <col:15> 'int' 1
+    | `-FloatingLiteral 0x7fe71ca5c2f0 <col:20> 'double' 3.000000e+00
+    |-CallExpr 0x7fe71ca5c5b8 <line:27:3, col:63> 'void'
+    | |-ImplicitCastExpr 0x7fe71ca5c5a0 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe71ca5c338 <col:3> 'void (int)' Function 0x7fe71ca5b630 'foo' 'void (int)'
+    | `-CallExpr 0x7fe71ca5c570 <col:8, col:62> 'int'
+    |   |-ImplicitCastExpr 0x7fe71ca5c558 <col:8> 'int (*)(__m128d)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe71ca5c360 <col:8> 'int (__m128d)' Function 0x7fe71b8c4500 '_mm_movemask_pd' 'int (__m128d)'
+    |   `-CallExpr 0x7fe71ca5c508 <col:25, col:61> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7fe71ca5c4f0 <col:25> '__m128d (*)(__m128d, __m128d)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe71ca5c388 <col:25> '__m128d (__m128d, __m128d)' Function 0x7fe71b881e18 '_mm_cmpeq_pd' '__m128d (__m128d, __m128d)'
+    |     |-ImplicitCastExpr 0x7fe71ca5c540 <col:39> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fe71ca5c3b0 <col:39> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fe71ca5bc00 't' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     `-CallExpr 0x7fe71ca5c4c0 <col:42, col:60> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |       |-ImplicitCastExpr 0x7fe71ca5c4a8 <col:42> '__m128d (*)(const double *)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fe71ca5c3d8 <col:42> '__m128d (const double *)' Function 0x7fe71b894370 '_mm_load_pd' '__m128d (const double *)'
+    |       `-UnaryOperator 0x7fe71ca5c488 <col:55, col:59> 'const double *' prefix '&'
+    |         `-ArraySubscriptExpr 0x7fe71ca5c460 <col:56, col:59> 'const double' lvalue
+    |           |-ImplicitCastExpr 0x7fe71ca5c448 <col:56> 'const double *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7fe71ca5c400 <col:56> 'const double [4]' lvalue Var 0x7fe71ca5b3a0 'r' 'const double [4]'
+    |           `-IntegerLiteral 0x7fe71ca5c428 <col:58> 'int' 2
+    `-ReturnStmt 0x7fe71ca5c608 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fe71ca5c5e8 <col:10> 'int' 0

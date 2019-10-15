@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f8c1b0146e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8c1a028860 <../Data/C2AST/pr33666.c:6:1, line:10:1> line:6:6 __lock_get_list 'void (void *)'
+  |-ParmVarDecl 0x7f8c1b015378 <col:22, col:28> col:28 used dp 'void *'
+  `-CompoundStmt 0x7f8c1a028b10 <line:7:1, line:10:1>
+    `-IfStmt 0x7f8c1a028ad8 <line:8:3, line:9:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8c1a028aa0 <line:8:7, col:34> 'unsigned long long' '&'
+      | |-ImplicitCastExpr 0x7f8c1a028a88 <col:7, col:29> 'unsigned long long' <IntegralCast>
+      | | `-ParenExpr 0x7f8c1a028a28 <col:7, col:29> 'unsigned long'
+      | |   `-BinaryOperator 0x7f8c1a028a00 <col:8, col:28> 'unsigned long' '+'
+      | |     |-CStyleCastExpr 0x7f8c1a0289a0 <col:8, col:23> 'unsigned long' <PointerToIntegral>
+      | |     | `-ImplicitCastExpr 0x7f8c1a028988 <col:23> 'void *' <LValueToRValue>
+      | |     |   `-DeclRefExpr 0x7f8c1a028948 <col:23> 'void *' lvalue ParmVar 0x7f8c1b015378 'dp' 'void *'
+      | |     `-ImplicitCastExpr 0x7f8c1a0289e8 <col:28> 'unsigned long' <IntegralCast>
+      | |       `-IntegerLiteral 0x7f8c1a0289c8 <col:28> 'int' 1
+      | `-UnaryOperator 0x7f8c1a028a68 <col:33, col:34> 'unsigned long long' prefix '~'
+      |   `-IntegerLiteral 0x7f8c1a028a48 <col:34> 'unsigned long long' 1
+      |-NullStmt 0x7f8c1a028ac8 <line:9:5>
+      `-<<<NULL>>>

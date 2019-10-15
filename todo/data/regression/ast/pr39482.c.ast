@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ff73f8164e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff73f80c868 <../Data/C2AST/pr39482.c:4:15> col:15 implicit used log 'double (double)' extern
+| |-ParmVarDecl 0x7ff73f80c908 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff73f80c970 <col:15> Implicit
+| `-NoThrowAttr 0x7ff73f80c9b8 <col:15> Implicit
+|-FunctionDecl 0x7ff73f80c9c8 prev 0x7ff73f80c868 <col:1, col:30> col:15 used log 'double (double)' extern
+| |-ParmVarDecl 0x7ff73f817178 <col:20, col:27> col:27 __x 'double'
+| |-ConstAttr 0x7ff73f80caa8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7ff73f80cab8 <col:15> Inherited Implicit
+`-FunctionDecl 0x7ff73f80cba8 <line:6:1, line:9:1> line:6:8 foo 'double (unsigned long)'
+  |-ParmVarDecl 0x7ff73f80cae0 <col:13, col:31> col:31 used m_liOutputBufferLen 'unsigned long'
+  `-CompoundStmt 0x7ff73f80cdc8 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ff73f80cdb0 <line:8:3, col:43>
+      `-CallExpr 0x7ff73f80cd80 <col:10, col:43> 'double'
+        |-ImplicitCastExpr 0x7ff73f80cd68 <col:10> 'double (*)(double)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff73f80cc90 <col:10> 'double (double)' Function 0x7ff73f80c9c8 'log' 'double (double)'
+        `-CStyleCastExpr 0x7ff73f80cd10 <col:15, col:24> 'double' <IntegralToFloating>
+          `-ImplicitCastExpr 0x7ff73f80ccf8 <col:24> 'unsigned long' <LValueToRValue>
+            `-DeclRefExpr 0x7ff73f80ccb8 <col:24> 'unsigned long' lvalue ParmVar 0x7ff73f80cae0 'm_liOutputBufferLen' 'unsigned long'

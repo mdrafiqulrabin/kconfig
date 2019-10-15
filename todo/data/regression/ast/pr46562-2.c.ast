@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fe0008058e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe000043828 <../Data/C2AST/pr46562-2.c:4:1, col:26> col:18 used a 'const int [4]' static cinit
+| `-InitListExpr 0x7fe000043908 <col:25, col:26> 'const int [4]'
+|   `-array filler
+|     `-ImplicitValueInitExpr 0x7fe000043948 <<invalid sloc>> 'const int'
+`-FunctionDecl 0x7fe000043a28 <line:5:1, line:10:1> line:5:5 foo 'int (void)'
+  `-CompoundStmt 0x7fe000043d60 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fe000043b60 <line:7:3, col:12>
+    | `-VarDecl 0x7fe000043ae0 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7fe000043b40 <col:11> 'int' 1
+    |-DeclStmt 0x7fe000043cb8 <line:8:3, col:23>
+    | `-VarDecl 0x7fe000043b90 <col:3, col:22> col:14 used p 'const int *' cinit
+    |   `-UnaryOperator 0x7fe000043c98 <col:18, col:22> 'const int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7fe000043c70 <col:19, col:22> 'const int' lvalue
+    |       |-ImplicitCastExpr 0x7fe000043c40 <col:19> 'const int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7fe000043bf0 <col:19> 'const int [4]' lvalue Var 0x7fe000043828 'a' 'const int [4]'
+    |       `-ImplicitCastExpr 0x7fe000043c58 <col:21> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fe000043c18 <col:21> 'int' lvalue Var 0x7fe000043ae0 'i' 'int'
+    `-ReturnStmt 0x7fe000043d48 <line:9:3, col:11>
+      `-ImplicitCastExpr 0x7fe000043d30 <col:10, col:11> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7fe000043d10 <col:10, col:11> 'const int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fe000043cf8 <col:11> 'const int *' <LValueToRValue>
+            `-DeclRefExpr 0x7fe000043cd0 <col:11> 'const int *' lvalue Var 0x7fe000043b90 'p' 'const int *'

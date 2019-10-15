@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fb506027ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb505818598 <../Data/C2AST/pr32421.c:4:1, line:9:1> line:4:5 f 'int (int **restrict, int **restrict)'
+  |-ParmVarDecl 0x7fb505818400 <col:7, col:24> col:24 used a 'int **restrict'
+  |-ParmVarDecl 0x7fb505818480 <col:27, col:45> col:45 used b 'int **restrict'
+  `-CompoundStmt 0x7fb505818a68 <line:5:1, line:9:1>
+    |-DeclStmt 0x7fb505818700 <line:6:3, col:8>
+    | `-VarDecl 0x7fb5058186a0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fb505818a30 <line:7:3, line:8:19>
+      |-BinaryOperator 0x7fb505818760 <line:7:7, col:10> 'int' '='
+      | |-DeclRefExpr 0x7fb505818718 <col:7> 'int' lvalue Var 0x7fb5058186a0 'i' 'int'
+      | `-IntegerLiteral 0x7fb505818740 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb5058187e8 <col:12, col:14> 'int' '<'
+      | |-ImplicitCastExpr 0x7fb5058187d0 <col:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb505818788 <col:12> 'int' lvalue Var 0x7fb5058186a0 'i' 'int'
+      | `-IntegerLiteral 0x7fb5058187b0 <col:14> 'int' 32
+      |-UnaryOperator 0x7fb505818838 <col:17, col:18> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fb505818810 <col:17> 'int' lvalue Var 0x7fb5058186a0 'i' 'int'
+      `-BinaryOperator 0x7fb505818a08 <line:8:5, col:19> 'int *' '='
+        |-ArraySubscriptExpr 0x7fb5058188d8 <col:5, col:8> 'int *' lvalue
+        | |-ImplicitCastExpr 0x7fb5058188a8 <col:5> 'int **' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fb505818858 <col:5> 'int **restrict' lvalue ParmVar 0x7fb505818400 'a' 'int **restrict'
+        | `-ImplicitCastExpr 0x7fb5058188c0 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fb505818880 <col:7> 'int' lvalue Var 0x7fb5058186a0 'i' 'int'
+        `-BinaryOperator 0x7fb5058189e0 <col:12, col:19> 'int *' '+'
+          |-ImplicitCastExpr 0x7fb5058189c8 <col:12, col:15> 'int *' <LValueToRValue>
+          | `-ArraySubscriptExpr 0x7fb505818980 <col:12, col:15> 'int *' lvalue
+          |   |-ImplicitCastExpr 0x7fb505818950 <col:12> 'int **' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fb505818900 <col:12> 'int **restrict' lvalue ParmVar 0x7fb505818480 'b' 'int **restrict'
+          |   `-ImplicitCastExpr 0x7fb505818968 <col:14> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fb505818928 <col:14> 'int' lvalue Var 0x7fb5058186a0 'i' 'int'
+          `-IntegerLiteral 0x7fb5058189a8 <col:19> 'int' 1

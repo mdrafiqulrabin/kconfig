@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7fb62f8068e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb62f807560 <../Data/C2AST/pr26778.c:5:9, line:8:1> line:5:9 union definition
+| |-FieldDecl 0x7fb62e811838 <line:6:3, col:13> col:13 referenced l 'long long'
+| `-FieldDecl 0x7fb62e811898 <line:7:3, col:10> col:10 referenced d 'double'
+|-TypedefDecl 0x7fb62e811930 <line:5:1, line:8:3> col:3 referenced db_number 'union db_number':'db_number'
+| `-ElaboratedType 0x7fb62e8118e0 'union db_number' sugar
+|   `-RecordType 0x7fb62e811800 'db_number'
+|     `-Record 0x7fb62f807560 ''
+`-FunctionDecl 0x7fb62e811b88 <line:10:1, line:19:1> line:10:8 test 'double (double *)'
+  |-ParmVarDecl 0x7fb62e811a80 <col:13, col:23> col:20 used x 'double *':'double *'
+  `-CompoundStmt 0x7fb62e812480 <col:26, line:19:1>
+    |-DeclStmt 0x7fb62e811e50 <line:11:3, col:26>
+    | `-VarDecl 0x7fb62e811c88 <col:3, col:25> col:10 used th 'double' cinit
+    |   `-BinaryOperator 0x7fb62e811e28 <col:15, col:25> 'double' '+'
+    |     |-ImplicitCastExpr 0x7fb62e811df8 <col:15, col:18> 'double' <LValueToRValue>
+    |     | `-ArraySubscriptExpr 0x7fb62e811d48 <col:15, col:18> 'double' lvalue
+    |     |   |-ImplicitCastExpr 0x7fb62e811d30 <col:15> 'double *':'double *' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x7fb62e811ce8 <col:15> 'double *':'double *' lvalue ParmVar 0x7fb62e811a80 'x' 'double *':'double *'
+    |     |   `-IntegerLiteral 0x7fb62e811d10 <col:17> 'int' 1
+    |     `-ImplicitCastExpr 0x7fb62e811e10 <col:22, col:25> 'double' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fb62e811dd0 <col:22, col:25> 'double' lvalue
+    |         |-ImplicitCastExpr 0x7fb62e811db8 <col:22> 'double *':'double *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7fb62e811d70 <col:22> 'double *':'double *' lvalue ParmVar 0x7fb62e811a80 'x' 'double *':'double *'
+    |         `-IntegerLiteral 0x7fb62e811d98 <col:24> 'int' 2
+    |-IfStmt 0x7fb62e812328 <line:12:3, line:17:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb62e812010 <line:12:7, col:23> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb62e811ff8 <col:7, col:10> 'double' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fb62e811ec8 <col:7, col:10> 'double' lvalue
+    | | |   |-ImplicitCastExpr 0x7fb62e811eb0 <col:7> 'double *':'double *' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7fb62e811e68 <col:7> 'double *':'double *' lvalue ParmVar 0x7fb62e811a80 'x' 'double *':'double *'
+    | | |   `-IntegerLiteral 0x7fb62e811e90 <col:9> 'int' 2
+    | | `-BinaryOperator 0x7fb62e811fd0 <col:15, col:23> 'double' '-'
+    | |   |-ImplicitCastExpr 0x7fb62e811fa0 <col:15> 'double' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fb62e811ef0 <col:15> 'double' lvalue Var 0x7fb62e811c88 'th' 'double'
+    | |   `-ImplicitCastExpr 0x7fb62e811fb8 <col:20, col:23> 'double' <LValueToRValue>
+    | |     `-ArraySubscriptExpr 0x7fb62e811f78 <col:20, col:23> 'double' lvalue
+    | |       |-ImplicitCastExpr 0x7fb62e811f60 <col:20> 'double *':'double *' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7fb62e811f18 <col:20> 'double *':'double *' lvalue ParmVar 0x7fb62e811a80 'x' 'double *':'double *'
+    | |       `-IntegerLiteral 0x7fb62e811f40 <col:22> 'int' 1
+    | |-CompoundStmt 0x7fb62e8122f8 <col:26, line:17:3>
+    | | |-DeclStmt 0x7fb62e8120d0 <line:13:5, col:19>
+    | | | `-VarDecl 0x7fb62e812070 <col:5, col:15> col:15 used thdb 'db_number':'db_number'
+    | | |-BinaryOperator 0x7fb62e812188 <line:14:5, col:14> 'double' '='
+    | | | |-MemberExpr 0x7fb62e812110 <col:5, col:10> 'double' lvalue .d 0x7fb62e811898
+    | | | | `-DeclRefExpr 0x7fb62e8120e8 <col:5> 'db_number':'db_number' lvalue Var 0x7fb62e812070 'thdb' 'db_number':'db_number'
+    | | | `-ImplicitCastExpr 0x7fb62e812170 <col:14> 'double' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fb62e812148 <col:14> 'double' lvalue Var 0x7fb62e811c88 'th' 'double'
+    | | |-UnaryOperator 0x7fb62e812210 <line:15:5, col:11> 'long long' postfix '++'
+    | | | `-MemberExpr 0x7fb62e8121d8 <col:5, col:10> 'long long' lvalue .l 0x7fb62e811838
+    | | |   `-DeclRefExpr 0x7fb62e8121b0 <col:5> 'db_number':'db_number' lvalue Var 0x7fb62e812070 'thdb' 'db_number':'db_number'
+    | | `-BinaryOperator 0x7fb62e8122d0 <line:16:5, col:15> 'double' '='
+    | |   |-DeclRefExpr 0x7fb62e812230 <col:5> 'double' lvalue Var 0x7fb62e811c88 'th' 'double'
+    | |   `-ImplicitCastExpr 0x7fb62e8122b8 <col:10, col:15> 'double' <LValueToRValue>
+    | |     `-MemberExpr 0x7fb62e812280 <col:10, col:15> 'double' lvalue .d 0x7fb62e811898
+    | |       `-DeclRefExpr 0x7fb62e812258 <col:10> 'db_number':'db_number' lvalue Var 0x7fb62e812070 'thdb' 'db_number':'db_number'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb62e812468 <line:18:3, col:17>
+      `-BinaryOperator 0x7fb62e812440 <col:10, col:17> 'double' '+'
+        |-ImplicitCastExpr 0x7fb62e812410 <col:10, col:13> 'double' <LValueToRValue>
+        | `-ArraySubscriptExpr 0x7fb62e8123c0 <col:10, col:13> 'double' lvalue
+        |   |-ImplicitCastExpr 0x7fb62e8123a8 <col:10> 'double *':'double *' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fb62e812360 <col:10> 'double *':'double *' lvalue ParmVar 0x7fb62e811a80 'x' 'double *':'double *'
+        |   `-IntegerLiteral 0x7fb62e812388 <col:12> 'int' 0
+        `-ImplicitCastExpr 0x7fb62e812428 <col:17> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fb62e8123e8 <col:17> 'double' lvalue Var 0x7fb62e811c88 'th' 'double'

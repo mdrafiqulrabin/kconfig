@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7fd06c017ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd06c018b60 <../Data/C2AST/pr41016.c:1:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7fd06c059a70 <col:1, col:25> col:25 referenced FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7fd06c059a20 'struct _IO_FILE' sugar
+|   `-RecordType 0x7fd06c059a00 'struct _IO_FILE'
+|     `-Record 0x7fd06c018b60 '_IO_FILE'
+`-FunctionDecl 0x7fd06c059eb0 <line:2:1, line:17:1> line:3:1 CompareRNAStructures 'void (FILE *, int, int, char *, char *)'
+  |-ParmVarDecl 0x7fd06c059b68 <col:23, col:30> col:30 ofp 'FILE *'
+  |-ParmVarDecl 0x7fd06c059be0 <col:35, col:39> col:39 start 'int'
+  |-ParmVarDecl 0x7fd06c059c58 <col:46, col:50> col:50 used L 'int'
+  |-ParmVarDecl 0x7fd06c059cd0 <col:53, col:59> col:59 ss_true 'char *'
+  |-ParmVarDecl 0x7fd06c059d48 <col:68, col:74> col:74 ss 'char *'
+  `-CompoundStmt 0x7fd06c071650 <line:4:1, line:17:1>
+    |-DeclStmt 0x7fd06c05a030 <line:5:3, col:8>
+    | `-VarDecl 0x7fd06c059fd0 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fd06c05a0f8 <line:6:3, col:19>
+    | `-VarDecl 0x7fd06c05a060 <col:3, col:17> col:9 used agree 'float' cinit
+    |   `-ImplicitCastExpr 0x7fd06c05a0e0 <col:17> 'float' <FloatingCast>
+    |     `-FloatingLiteral 0x7fd06c05a0c0 <col:17> 'double' 0.000000e+00
+    |-DeclStmt 0x7fd06c05a1c0 <line:7:3, col:19>
+    | `-VarDecl 0x7fd06c05a128 <col:3, col:17> col:9 used pairs 'float' cinit
+    |   `-ImplicitCastExpr 0x7fd06c05a1a8 <col:17> 'float' <FloatingCast>
+    |     `-FloatingLiteral 0x7fd06c05a188 <col:17> 'double' 0.000000e+00
+    |-DeclStmt 0x7fd06c05a288 <line:8:3, col:24>
+    | `-VarDecl 0x7fd06c05a1f0 <col:3, col:22> col:9 used pairs_true 'float' cinit
+    |   `-ImplicitCastExpr 0x7fd06c05a270 <col:22> 'float' <FloatingCast>
+    |     `-FloatingLiteral 0x7fd06c05a250 <col:22> 'double' 0.000000e+00
+    |-ForStmt 0x7fd06c05a520 <line:9:3, line:13:5>
+    | |-BinaryOperator 0x7fd06c05a2e8 <line:9:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fd06c05a2a0 <col:8> 'int' lvalue Var 0x7fd06c059fd0 'i' 'int'
+    | | `-IntegerLiteral 0x7fd06c05a2c8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd06c05a390 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd06c05a360 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd06c05a310 <col:15> 'int' lvalue Var 0x7fd06c059fd0 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fd06c05a378 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd06c05a338 <col:19> 'int' lvalue ParmVar 0x7fd06c059c58 'L' 'int'
+    | |-UnaryOperator 0x7fd06c05a3e0 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fd06c05a3b8 <col:22> 'int' lvalue Var 0x7fd06c059fd0 'i' 'int'
+    | `-CompoundStmt 0x7fd06c05a500 <line:10:5, line:13:5>
+    |   |-CompoundAssignOperator 0x7fd06c05a448 <line:11:7, col:21> 'float' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   | |-DeclRefExpr 0x7fd06c05a400 <col:7> 'float' lvalue Var 0x7fd06c05a1f0 'pairs_true' 'float'
+    |   | `-FloatingLiteral 0x7fd06c05a428 <col:21> 'double' 1.000000e+00
+    |   `-CompoundAssignOperator 0x7fd06c05a4c8 <line:12:7, col:16> 'float' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    |     |-DeclRefExpr 0x7fd06c05a480 <col:7> 'float' lvalue Var 0x7fd06c05a060 'agree' 'float'
+    |     `-FloatingLiteral 0x7fd06c05a4a8 <col:16> 'double' 1.000000e+00
+    `-IfStmt 0x7fd06c071618 <line:14:3, line:16:78>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd06c05a910 <line:14:7, line:15:31> 'int' '||'
+      | |-BinaryOperator 0x7fd06c05a7b8 <line:14:7, col:59> 'int' '||'
+      | | |-ParenExpr 0x7fd06c05a668 <col:7, col:28> 'int'
+      | | | `-BinaryOperator 0x7fd06c05a640 <col:8, col:27> 'int' '!='
+      | | |   |-BinaryOperator 0x7fd06c05a5f8 <col:8, col:22> 'int' '%'
+      | | |   | |-CStyleCastExpr 0x7fd06c05a5b0 <col:8, col:14> 'int' <FloatingToIntegral>
+      | | |   | | `-ImplicitCastExpr 0x7fd06c05a598 <col:14> 'float' <LValueToRValue>
+      | | |   | |   `-DeclRefExpr 0x7fd06c05a558 <col:14> 'float' lvalue Var 0x7fd06c05a128 'pairs' 'float'
+      | | |   | `-IntegerLiteral 0x7fd06c05a5d8 <col:22> 'int' 2
+      | | |   `-IntegerLiteral 0x7fd06c05a620 <col:27> 'int' 0
+      | | `-ParenExpr 0x7fd06c05a798 <col:33, col:59> 'int'
+      | |   `-BinaryOperator 0x7fd06c05a770 <col:34, col:58> 'int' '!='
+      | |     |-BinaryOperator 0x7fd06c05a728 <col:34, col:53> 'int' '%'
+      | |     | |-CStyleCastExpr 0x7fd06c05a6e0 <col:34, col:40> 'int' <FloatingToIntegral>
+      | |     | | `-ImplicitCastExpr 0x7fd06c05a6c8 <col:40> 'float' <LValueToRValue>
+      | |     | |   `-DeclRefExpr 0x7fd06c05a688 <col:40> 'float' lvalue Var 0x7fd06c05a1f0 'pairs_true' 'float'
+      | |     | `-IntegerLiteral 0x7fd06c05a708 <col:53> 'int' 2
+      | |     `-IntegerLiteral 0x7fd06c05a750 <col:58> 'int' 0
+      | `-ParenExpr 0x7fd06c05a8f0 <line:15:10, col:31> 'int'
+      |   `-BinaryOperator 0x7fd06c05a8c8 <col:11, col:30> 'int' '!='
+      |     |-BinaryOperator 0x7fd06c05a880 <col:11, col:25> 'int' '%'
+      |     | |-CStyleCastExpr 0x7fd06c05a838 <col:11, col:17> 'int' <FloatingToIntegral>
+      |     | | `-ImplicitCastExpr 0x7fd06c05a820 <col:17> 'float' <LValueToRValue>
+      |     | |   `-DeclRefExpr 0x7fd06c05a7e0 <col:17> 'float' lvalue Var 0x7fd06c05a060 'agree' 'float'
+      |     | `-IntegerLiteral 0x7fd06c05a860 <col:25> 'int' 2
+      |     `-IntegerLiteral 0x7fd06c05a8a8 <col:30> 'int' 0
+      |-CallExpr 0x7fd06c0715d0 <line:16:5, col:78> 'int'
+      | |-ImplicitCastExpr 0x7fd06c0715b8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fd06c0714b0 <col:5> 'int ()' Function 0x7fd06c071400 'Die' 'int ()'
+      | `-ImplicitCastExpr 0x7fd06c071600 <col:10> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fd06c071518 <col:10> 'char [66]' lvalue "Error in CompareRNAStrutures(); odd number of paired nucleotides\n"
+      `-<<<NULL>>>

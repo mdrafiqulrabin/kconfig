@@ -1,0 +1,608 @@
+TranslationUnitDecl 0x7fe75f02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe75f814250 <../Data/C2AST/pr61346.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe75f8142f0 prev 0x7fe75f814250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fe75f8143b8 <line:5:1, col:13> col:13 referenced int32_t 'int'
+| |-BuiltinType 0x7fe75f02bde0 'int'
+| `-ModeAttr 0x7fe75f814420 <col:37, col:45> SI
+|-TypedefDecl 0x7fe75f814498 <line:6:1, col:13> col:13 referenced int64_t 'long'
+| |-BuiltinType 0x7fe75f02be00 'long'
+| `-ModeAttr 0x7fe75f814500 <col:37, col:45> DI
+|-TypedefDecl 0x7fe75f814568 <line:7:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fe75f02bea0 'unsigned long'
+|-RecordDecl 0x7fe75f8145c0 <line:9:1, line:14:1> line:9:8 struct slice definition
+| |-FieldDecl 0x7fe75f8146b0 <line:11:3, col:18> col:18 referenced data 'unsigned char *'
+| |-FieldDecl 0x7fe75f814730 <line:12:3, col:11> col:11 referenced len 'int64_t':'long'
+| `-FieldDecl 0x7fe75f814788 <line:13:3, col:11> col:11 referenced cap 'int64_t':'long'
+|-FunctionDecl 0x7fe75f814900 <line:16:1, col:46> col:6 used fail 'void (int32_t)'
+| |-ParmVarDecl 0x7fe75f814800 <col:12> col:19 'int32_t':'int'
+| `-NoInlineAttr 0x7fe75f8149a8 <col:37>
+|-FunctionDecl 0x7fe75f814ac8 prev 0x7fe75f814900 <line:17:1, line:22:1> line:18:1 used fail 'void (int32_t)'
+| |-ParmVarDecl 0x7fe75f814a40 <col:7, col:15> col:15 used c 'int32_t':'int'
+| |-CompoundStmt 0x7fe75f814d10 <line:19:1, line:22:1>
+| | `-IfStmt 0x7fe75f814cd8 <line:20:3, line:21:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fe75f814c18 <line:20:7, col:12> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fe75f814c00 <col:7> 'int32_t':'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fe75f814bb8 <col:7> 'int32_t':'int' lvalue ParmVar 0x7fe75f814a40 'c' 'int32_t':'int'
+| |   | `-IntegerLiteral 0x7fe75f814be0 <col:12> 'int' 0
+| |   |-CallExpr 0x7fe75f814cb0 <line:21:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fe75f814c98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fe75f814c40 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe75f8142f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fe75f814ba8 <line:16:37> Inherited
+|-RecordDecl 0x7fe75f814d28 <line:24:1, line:28:1> line:24:8 struct decode_rune_ret definition
+| |-FieldDecl 0x7fe75f814de0 <line:26:3, col:11> col:11 referenced r 'int32_t':'int'
+| `-FieldDecl 0x7fe75f814e38 <line:27:3, col:11> col:11 referenced width 'int64_t':'long'
+|-FunctionDecl 0x7fe75f815010 <line:30:1, col:76> col:24 used decode_rune 'struct decode_rune_ret (struct slice)'
+| |-ParmVarDecl 0x7fe75f814ed0 <col:37, col:44> col:49 'struct slice':'struct slice'
+| `-NoInlineAttr 0x7fe75f8150b8 <col:67>
+|-FunctionDecl 0x7fe75f82bc00 prev 0x7fe75f815010 <line:31:1, line:38:1> line:32:1 used decode_rune 'struct decode_rune_ret (struct slice)'
+| |-ParmVarDecl 0x7fe75f815120 <col:14, col:27> col:27 used s 'struct slice':'struct slice'
+| |-CompoundStmt 0x7fe75f82c0c0 <line:33:1, line:38:1>
+| | |-DeclStmt 0x7fe75f82bd70 <line:34:3, col:28>
+| | | `-VarDecl 0x7fe75f82bd10 <col:3, col:26> col:26 used dr 'struct decode_rune_ret':'struct decode_rune_ret' nrvo
+| | |-BinaryOperator 0x7fe75f82bed8 <line:35:3, col:18> 'int32_t':'int' '='
+| | | |-MemberExpr 0x7fe75f82bdb0 <col:3, col:6> 'int32_t':'int' lvalue .r 0x7fe75f814de0
+| | | | `-DeclRefExpr 0x7fe75f82bd88 <col:3> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f82bd10 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| | | `-ImplicitCastExpr 0x7fe75f82bec0 <col:10, col:18> 'int32_t':'int' <IntegralCast>
+| | |   `-ImplicitCastExpr 0x7fe75f82bea8 <col:10, col:18> 'unsigned char' <LValueToRValue>
+| | |     `-ArraySubscriptExpr 0x7fe75f82be80 <col:10, col:18> 'unsigned char' lvalue
+| | |       |-ImplicitCastExpr 0x7fe75f82be68 <col:10, col:12> 'unsigned char *' <LValueToRValue>
+| | |       | `-MemberExpr 0x7fe75f82be10 <col:10, col:12> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |       |   `-DeclRefExpr 0x7fe75f82bde8 <col:10> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f815120 's' 'struct slice':'struct slice'
+| | |       `-IntegerLiteral 0x7fe75f82be48 <col:17> 'int' 0
+| | |-BinaryOperator 0x7fe75f82c040 <line:36:3, col:14> 'int64_t':'long' '='
+| | | |-MemberExpr 0x7fe75f82bfd0 <col:3, col:6> 'int64_t':'long' lvalue .width 0x7fe75f814e38
+| | | | `-DeclRefExpr 0x7fe75f82bfa8 <col:3> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f82bd10 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| | | `-ImplicitCastExpr 0x7fe75f82c028 <col:14> 'int64_t':'long' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fe75f82c008 <col:14> 'int' 1
+| | `-ReturnStmt 0x7fe75f82c0a8 <line:37:3, col:10>
+| |   `-ImplicitCastExpr 0x7fe75f82c090 <col:10> 'struct decode_rune_ret':'struct decode_rune_ret' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fe75f82c068 <col:10> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f82bd10 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| `-NoInlineAttr 0x7fe75f82bce0 <line:30:67> Inherited
+|-FunctionDecl 0x7fe75f82c200 <line:40:1, col:51> col:7 used is_space '_Bool (int32_t)'
+| |-ParmVarDecl 0x7fe75f82c100 <col:17> col:24 'int32_t':'int'
+| `-NoInlineAttr 0x7fe75f82c2a8 <col:42>
+|-FunctionDecl 0x7fe75f82c388 prev 0x7fe75f82c200 <line:41:1, line:45:1> line:42:1 used is_space '_Bool (int32_t)'
+| |-ParmVarDecl 0x7fe75f82c300 <col:11, col:19> col:19 used r 'int32_t':'int'
+| |-CompoundStmt 0x7fe75f82c528 <line:43:1, line:45:1>
+| | `-ReturnStmt 0x7fe75f82c510 <line:44:3, col:15>
+| |   `-ImplicitCastExpr 0x7fe75f82c4f8 <col:10, col:15> '_Bool' <IntegralToBoolean>
+| |     `-BinaryOperator 0x7fe75f82c4d0 <col:10, col:15> 'int' '=='
+| |       |-ImplicitCastExpr 0x7fe75f82c4b8 <col:10> 'int32_t':'int' <LValueToRValue>
+| |       | `-DeclRefExpr 0x7fe75f82c478 <col:10> 'int32_t':'int' lvalue ParmVar 0x7fe75f82c300 'r' 'int32_t':'int'
+| |       `-CharacterLiteral 0x7fe75f82c4a0 <col:15> 'int' 32
+| `-NoInlineAttr 0x7fe75f82c468 <line:40:42> Inherited
+|-RecordDecl 0x7fe75f82c540 <line:47:1, line:51:1> line:47:8 struct ret definition
+| |-FieldDecl 0x7fe75f82c600 <line:49:3, col:11> col:11 referenced advance 'int64_t':'long'
+| `-FieldDecl 0x7fe75f82c668 <line:50:3, col:16> col:16 referenced token 'struct slice':'struct slice'
+|-FunctionDecl 0x7fe75f82c890 <line:53:1, col:69> col:12 used scanwords 'struct ret (struct slice, _Bool)'
+| |-ParmVarDecl 0x7fe75f82c6d0 <col:23, col:30> col:35 'struct slice':'struct slice'
+| |-ParmVarDecl 0x7fe75f82c740 <col:37> col:42 '_Bool'
+| `-NoInlineAttr 0x7fe75f82c940 <col:60>
+|-FunctionDecl 0x7fe75f82cab8 prev 0x7fe75f82c890 <line:55:1, line:143:1> line:56:1 used scanwords 'struct ret (struct slice, _Bool)'
+| |-ParmVarDecl 0x7fe75f82c9a8 <col:12, col:25> col:25 used data 'struct slice':'struct slice'
+| |-ParmVarDecl 0x7fe75f82ca18 <col:31, col:37> col:37 used ateof '_Bool'
+| |-CompoundStmt 0x7fe75f837370 <line:57:1, line:143:1>
+| | |-DeclStmt 0x7fe75f82d060 <line:58:3, col:18>
+| | | `-VarDecl 0x7fe75f82d000 <col:3, col:11> col:11 used advance 'int64_t':'long'
+| | |-DeclStmt 0x7fe75f82d0f8 <line:59:3, col:21>
+| | | `-VarDecl 0x7fe75f82d098 <col:3, col:16> col:16 used token 'struct slice':'struct slice'
+| | |-DeclStmt 0x7fe75f82d1b8 <line:60:3, col:20>
+| | | `-VarDecl 0x7fe75f82d120 <col:3, col:19> col:11 used start 'int64_t':'long' cinit
+| | |   `-ImplicitCastExpr 0x7fe75f82d1a0 <col:19> 'int64_t':'long' <IntegralCast>
+| | |     `-IntegerLiteral 0x7fe75f82d180 <col:19> 'int' 0
+| | |-CompoundStmt 0x7fe75f82f240 <line:61:3, line:78:3>
+| | | |-DeclStmt 0x7fe75f82d240 <line:62:5, col:18>
+| | | | `-VarDecl 0x7fe75f82d1e0 <col:5, col:13> col:13 used width 'int64_t':'long'
+| | | `-ForStmt 0x7fe75f82f208 <line:63:5, line:77:7>
+| | |   |-BinaryOperator 0x7fe75f82d2b8 <line:63:10, col:18> 'int64_t':'long' '='
+| | |   | |-DeclRefExpr 0x7fe75f82d258 <col:10> 'int64_t':'long' lvalue Var 0x7fe75f82d1e0 'width' 'int64_t':'long'
+| | |   | `-ImplicitCastExpr 0x7fe75f82d2a0 <col:18> 'int64_t':'long' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7fe75f82d280 <col:18> 'int' 0
+| | |   |-<<<NULL>>>
+| | |   |-BinaryOperator 0x7fe75f82d398 <col:21, col:34> 'int' '<'
+| | |   | |-ImplicitCastExpr 0x7fe75f82d368 <col:21> 'int64_t':'long' <LValueToRValue>
+| | |   | | `-DeclRefExpr 0x7fe75f82d2e0 <col:21> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |   | `-ImplicitCastExpr 0x7fe75f82d380 <col:29, col:34> 'int64_t':'long' <LValueToRValue>
+| | |   |   `-MemberExpr 0x7fe75f82d330 <col:29, col:34> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |   |     `-DeclRefExpr 0x7fe75f82d308 <col:29> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |   |-CompoundAssignOperator 0x7fe75f82d428 <col:39, col:48> 'int64_t':'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+| | |   | |-DeclRefExpr 0x7fe75f82d3c0 <col:39> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |   | `-ImplicitCastExpr 0x7fe75f82d410 <col:48> 'int64_t':'long' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fe75f82d3e8 <col:48> 'int64_t':'long' lvalue Var 0x7fe75f82d1e0 'width' 'int64_t':'long'
+| | |   `-CompoundStmt 0x7fe75f82f1a8 <line:64:7, line:77:7>
+| | |     |-DeclStmt 0x7fe75f82d4f0 <line:65:2, col:15>
+| | |     | `-VarDecl 0x7fe75f82d470 <col:2, col:14> col:10 used r 'int32_t':'int' cinit
+| | |     |   `-IntegerLiteral 0x7fe75f82d4d0 <col:14> 'int' 0
+| | |     |-DeclStmt 0x7fe75f82d588 <line:66:2, col:16>
+| | |     | `-VarDecl 0x7fe75f82d528 <col:2, col:15> col:15 used s 'struct slice':'struct slice'
+| | |     |-IfStmt 0x7fe75f82d830 <line:67:2, line:68:11>
+| | |     | |-<<<NULL>>>
+| | |     | |-<<<NULL>>>
+| | |     | |-BinaryOperator 0x7fe75f82d720 <line:67:6, col:34> 'int' '||'
+| | |     | | |-BinaryOperator 0x7fe75f82d658 <col:6, col:19> 'int' '>'
+| | |     | | | |-ImplicitCastExpr 0x7fe75f82d628 <col:6> 'int64_t':'long' <LValueToRValue>
+| | |     | | | | `-DeclRefExpr 0x7fe75f82d5a0 <col:6> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | | | `-ImplicitCastExpr 0x7fe75f82d640 <col:14, col:19> 'int64_t':'long' <LValueToRValue>
+| | |     | | |   `-MemberExpr 0x7fe75f82d5f0 <col:14, col:19> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     | | |     `-DeclRefExpr 0x7fe75f82d5c8 <col:14> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     | | `-BinaryOperator 0x7fe75f82d6f8 <col:26, col:34> 'int' '<'
+| | |     | |   |-ImplicitCastExpr 0x7fe75f82d6c8 <col:26> 'int64_t':'long' <LValueToRValue>
+| | |     | |   | `-DeclRefExpr 0x7fe75f82d680 <col:26> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | |   `-ImplicitCastExpr 0x7fe75f82d6e0 <col:34> 'long' <IntegralCast>
+| | |     | |     `-IntegerLiteral 0x7fe75f82d6a8 <col:34> 'int' 0
+| | |     | |-CallExpr 0x7fe75f82d800 <line:68:4, col:11> 'void'
+| | |     | | |-ImplicitCastExpr 0x7fe75f82d7e8 <col:4> 'void (*)(int32_t)' <FunctionToPointerDecay>
+| | |     | | | `-DeclRefExpr 0x7fe75f82d748 <col:4> 'void (int32_t)' Function 0x7fe75f814ac8 'fail' 'void (int32_t)'
+| | |     | | `-IntegerLiteral 0x7fe75f82d770 <col:10> 'int' 3
+| | |     | `-<<<NULL>>>
+| | |     |-BinaryOperator 0x7fe75f82da08 <line:69:2, col:32> 'unsigned char *' '='
+| | |     | |-MemberExpr 0x7fe75f82d890 <col:2, col:4> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |     | | `-DeclRefExpr 0x7fe75f82d868 <col:2> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d528 's' 'struct slice':'struct slice'
+| | |     | `-BinaryOperator 0x7fe75f82d9e0 <col:11, col:32> 'unsigned char *' '+'
+| | |     |   |-ImplicitCastExpr 0x7fe75f82d9c8 <col:11, col:16> 'unsigned char *' <LValueToRValue>
+| | |     |   | `-MemberExpr 0x7fe75f82d8f0 <col:11, col:16> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |     |   |   `-DeclRefExpr 0x7fe75f82d8c8 <col:11> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     |   `-CStyleCastExpr 0x7fe75f82d9a0 <col:23, col:32> 'size_t':'unsigned long' <IntegralCast>
+| | |     |     `-ImplicitCastExpr 0x7fe75f82d988 <col:32> 'int64_t':'long' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7fe75f82d950 <col:32> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     |-BinaryOperator 0x7fe75f82db70 <line:70:2, col:21> 'int64_t':'long' '='
+| | |     | |-MemberExpr 0x7fe75f82da58 <col:2, col:4> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |     | | `-DeclRefExpr 0x7fe75f82da30 <col:2> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d528 's' 'struct slice':'struct slice'
+| | |     | `-BinaryOperator 0x7fe75f82db48 <col:10, col:21> 'long' '-'
+| | |     |   |-ImplicitCastExpr 0x7fe75f82db18 <col:10, col:15> 'int64_t':'long' <LValueToRValue>
+| | |     |   | `-MemberExpr 0x7fe75f82dab8 <col:10, col:15> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |     |   |   `-DeclRefExpr 0x7fe75f82da90 <col:10> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     |   `-ImplicitCastExpr 0x7fe75f82db30 <col:21> 'int64_t':'long' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x7fe75f82daf0 <col:21> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     |-BinaryOperator 0x7fe75f82dcd8 <line:71:2, col:21> 'int64_t':'long' '='
+| | |     | |-MemberExpr 0x7fe75f82dbc0 <col:2, col:4> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     | | `-DeclRefExpr 0x7fe75f82db98 <col:2> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d528 's' 'struct slice':'struct slice'
+| | |     | `-BinaryOperator 0x7fe75f82dcb0 <col:10, col:21> 'long' '-'
+| | |     |   |-ImplicitCastExpr 0x7fe75f82dc80 <col:10, col:15> 'int64_t':'long' <LValueToRValue>
+| | |     |   | `-MemberExpr 0x7fe75f82dc20 <col:10, col:15> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     |   |   `-DeclRefExpr 0x7fe75f82dbf8 <col:10> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     |   `-ImplicitCastExpr 0x7fe75f82dc98 <col:21> 'int64_t':'long' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x7fe75f82dc58 <col:21> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     |-DeclStmt 0x7fe75f82de88 <line:72:2, col:45>
+| | |     | `-VarDecl 0x7fe75f82dd20 <col:2, col:44> col:25 used dr 'struct decode_rune_ret':'struct decode_rune_ret' cinit
+| | |     |   `-CallExpr 0x7fe75f82de40 <col:30, col:44> 'struct decode_rune_ret':'struct decode_rune_ret'
+| | |     |     |-ImplicitCastExpr 0x7fe75f82de28 <col:30> 'struct decode_rune_ret (*)(struct slice)' <FunctionToPointerDecay>
+| | |     |     | `-DeclRefExpr 0x7fe75f82dd80 <col:30> 'struct decode_rune_ret (struct slice)' Function 0x7fe75f82bc00 'decode_rune' 'struct decode_rune_ret (struct slice)'
+| | |     |     `-ImplicitCastExpr 0x7fe75f82de70 <col:43> 'struct slice':'struct slice' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7fe75f82dda8 <col:43> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d528 's' 'struct slice':'struct slice'
+| | |     |-BinaryOperator 0x7fe75f82df40 <line:73:2, col:9> 'int32_t':'int' '='
+| | |     | |-DeclRefExpr 0x7fe75f82dea0 <col:2> 'int32_t':'int' lvalue Var 0x7fe75f82d470 'r' 'int32_t':'int'
+| | |     | `-ImplicitCastExpr 0x7fe75f82df28 <col:6, col:9> 'int32_t':'int' <LValueToRValue>
+| | |     |   `-MemberExpr 0x7fe75f82def0 <col:6, col:9> 'int32_t':'int' lvalue .r 0x7fe75f814de0
+| | |     |     `-DeclRefExpr 0x7fe75f82dec8 <col:6> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f82dd20 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| | |     |-BinaryOperator 0x7fe75f82f018 <line:74:2, col:13> 'int64_t':'long' '='
+| | |     | |-DeclRefExpr 0x7fe75f82df68 <col:2> 'int64_t':'long' lvalue Var 0x7fe75f82d1e0 'width' 'int64_t':'long'
+| | |     | `-ImplicitCastExpr 0x7fe75f82f000 <col:10, col:13> 'int64_t':'long' <LValueToRValue>
+| | |     |   `-MemberExpr 0x7fe75f82dfb8 <col:10, col:13> 'int64_t':'long' lvalue .width 0x7fe75f814e38
+| | |     |     `-DeclRefExpr 0x7fe75f82df90 <col:10> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f82dd20 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| | |     `-IfStmt 0x7fe75f82f170 <line:75:2, line:76:4>
+| | |       |-<<<NULL>>>
+| | |       |-<<<NULL>>>
+| | |       |-UnaryOperator 0x7fe75f82f148 <line:75:6, col:18> 'int' prefix '!'
+| | |       | `-CallExpr 0x7fe75f82f100 <col:7, col:18> '_Bool'
+| | |       |   |-ImplicitCastExpr 0x7fe75f82f0e8 <col:7> '_Bool (*)(int32_t)' <FunctionToPointerDecay>
+| | |       |   | `-DeclRefExpr 0x7fe75f82f040 <col:7> '_Bool (int32_t)' Function 0x7fe75f82c388 'is_space' '_Bool (int32_t)'
+| | |       |   `-ImplicitCastExpr 0x7fe75f82f130 <col:17> 'int32_t':'int' <LValueToRValue>
+| | |       |     `-DeclRefExpr 0x7fe75f82f068 <col:17> 'int32_t':'int' lvalue Var 0x7fe75f82d470 'r' 'int32_t':'int'
+| | |       |-BreakStmt 0x7fe75f82f168 <line:76:4>
+| | |       `-<<<NULL>>>
+| | |-DeclStmt 0x7fe75f82f310 <line:79:3, col:20>
+| | | `-VarDecl 0x7fe75f82f270 <col:3, col:15> col:9 used tmp '_Bool' cinit
+| | |   `-ImplicitCastExpr 0x7fe75f82f2f8 <col:15> '_Bool' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7fe75f82f2d0 <col:15> '_Bool' lvalue ParmVar 0x7fe75f82ca18 'ateof' '_Bool'
+| | |-IfStmt 0x7fe75f82f488 <line:80:3, line:83:10>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fe75f82f3a0 <line:80:7, col:14> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fe75f82f388 <col:7> 'int' <IntegralCast>
+| | | | | `-ImplicitCastExpr 0x7fe75f82f370 <col:7> '_Bool' <LValueToRValue>
+| | | | |   `-DeclRefExpr 0x7fe75f82f328 <col:7> '_Bool' lvalue Var 0x7fe75f82f270 'tmp' '_Bool'
+| | | | `-IntegerLiteral 0x7fe75f82f350 <col:14> 'int' 0
+| | | |-GotoStmt 0x7fe75f82f410 <line:81:5, col:10> 'L1' 0x7fe75f82f3c8
+| | | `-GotoStmt 0x7fe75f82f470 <line:83:5, col:10> 'L2' 0x7fe75f82f428
+| | |-LabelStmt 0x7fe75f82f600 <line:84:2, line:85:21> 'L1'
+| | | `-BinaryOperator 0x7fe75f82f5d8 <col:3, col:21> '_Bool' '='
+| | |   |-DeclRefExpr 0x7fe75f82f4c0 <col:3> '_Bool' lvalue Var 0x7fe75f82f270 'tmp' '_Bool'
+| | |   `-ImplicitCastExpr 0x7fe75f82f5c0 <col:9, col:21> '_Bool' <IntegralToBoolean>
+| | |     `-BinaryOperator 0x7fe75f82f598 <col:9, col:21> 'int' '=='
+| | |       |-ImplicitCastExpr 0x7fe75f82f568 <col:9, col:14> 'int64_t':'long' <LValueToRValue>
+| | |       | `-MemberExpr 0x7fe75f82f510 <col:9, col:14> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |       |   `-DeclRefExpr 0x7fe75f82f4e8 <col:9> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |       `-ImplicitCastExpr 0x7fe75f82f580 <col:21> 'long' <IntegralCast>
+| | |         `-IntegerLiteral 0x7fe75f82f548 <col:21> 'int' 0
+| | |-LabelStmt 0x7fe75f82f7b0 <line:86:2, line:90:10> 'L2'
+| | | `-IfStmt 0x7fe75f82f778 <line:87:3, line:90:10>
+| | |   |-<<<NULL>>>
+| | |   |-<<<NULL>>>
+| | |   |-BinaryOperator 0x7fe75f82f690 <line:87:7, col:14> 'int' '!='
+| | |   | |-ImplicitCastExpr 0x7fe75f82f678 <col:7> 'int' <IntegralCast>
+| | |   | | `-ImplicitCastExpr 0x7fe75f82f660 <col:7> '_Bool' <LValueToRValue>
+| | |   | |   `-DeclRefExpr 0x7fe75f82f618 <col:7> '_Bool' lvalue Var 0x7fe75f82f270 'tmp' '_Bool'
+| | |   | `-IntegerLiteral 0x7fe75f82f640 <col:14> 'int' 0
+| | |   |-GotoStmt 0x7fe75f82f700 <line:88:5, col:10> 'L11' 0x7fe75f82f6b8
+| | |   `-GotoStmt 0x7fe75f82f760 <line:90:5, col:10> 'L12' 0x7fe75f82f718
+| | |-LabelStmt 0x7fe75f82fdb0 <line:91:2, line:101:5> 'L11'
+| | | `-CompoundStmt 0x7fe75f82fd60 <line:92:5, line:101:5>
+| | |   |-DeclStmt 0x7fe75f82f848 <line:93:7, col:19>
+| | |   | `-VarDecl 0x7fe75f82f7e8 <col:7, col:18> col:18 used r 'struct ret':'struct ret' nrvo
+| | |   |-BinaryOperator 0x7fe75f82f8c0 <line:94:7, col:17> 'int64_t':'long' '='
+| | |   | |-DeclRefExpr 0x7fe75f82f860 <col:7> 'int64_t':'long' lvalue Var 0x7fe75f82d000 'advance' 'int64_t':'long'
+| | |   | `-ImplicitCastExpr 0x7fe75f82f8a8 <col:17> 'int64_t':'long' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7fe75f82f888 <col:17> 'int' 0
+| | |   |-BinaryOperator 0x7fe75f82f980 <line:95:7, col:20> 'unsigned char *' '='
+| | |   | |-MemberExpr 0x7fe75f82f910 <col:7, col:13> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |   | | `-DeclRefExpr 0x7fe75f82f8e8 <col:7> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |   | `-ImplicitCastExpr 0x7fe75f82f968 <col:20> 'unsigned char *' <NullToPointer>
+| | |   |   `-IntegerLiteral 0x7fe75f82f948 <col:20> 'int' 0
+| | |   |-BinaryOperator 0x7fe75f82fa40 <line:96:7, col:19> 'int64_t':'long' '='
+| | |   | |-MemberExpr 0x7fe75f82f9d0 <col:7, col:13> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |   | | `-DeclRefExpr 0x7fe75f82f9a8 <col:7> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |   | `-ImplicitCastExpr 0x7fe75f82fa28 <col:19> 'int64_t':'long' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7fe75f82fa08 <col:19> 'int' 0
+| | |   |-BinaryOperator 0x7fe75f82fb00 <line:97:7, col:19> 'int64_t':'long' '='
+| | |   | |-MemberExpr 0x7fe75f82fa90 <col:7, col:13> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |   | | `-DeclRefExpr 0x7fe75f82fa68 <col:7> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |   | `-ImplicitCastExpr 0x7fe75f82fae8 <col:19> 'int64_t':'long' <IntegralCast>
+| | |   |   `-IntegerLiteral 0x7fe75f82fac8 <col:19> 'int' 0
+| | |   |-BinaryOperator 0x7fe75f82fbc8 <line:98:7, col:19> 'int64_t':'long' '='
+| | |   | |-MemberExpr 0x7fe75f82fb50 <col:7, col:9> 'int64_t':'long' lvalue .advance 0x7fe75f82c600
+| | |   | | `-DeclRefExpr 0x7fe75f82fb28 <col:7> 'struct ret':'struct ret' lvalue Var 0x7fe75f82f7e8 'r' 'struct ret':'struct ret'
+| | |   | `-ImplicitCastExpr 0x7fe75f82fbb0 <col:19> 'int64_t':'long' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fe75f82fb88 <col:19> 'int64_t':'long' lvalue Var 0x7fe75f82d000 'advance' 'int64_t':'long'
+| | |   |-BinaryOperator 0x7fe75f82fce0 <line:99:7, col:17> 'struct slice':'struct slice' '='
+| | |   | |-MemberExpr 0x7fe75f82fc68 <col:7, col:9> 'struct slice':'struct slice' lvalue .token 0x7fe75f82c668
+| | |   | | `-DeclRefExpr 0x7fe75f82fc40 <col:7> 'struct ret':'struct ret' lvalue Var 0x7fe75f82f7e8 'r' 'struct ret':'struct ret'
+| | |   | `-ImplicitCastExpr 0x7fe75f82fcc8 <col:17> 'struct slice':'struct slice' <LValueToRValue>
+| | |   |   `-DeclRefExpr 0x7fe75f82fca0 <col:17> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |   `-ReturnStmt 0x7fe75f82fd48 <line:100:7, col:14>
+| | |     `-ImplicitCastExpr 0x7fe75f82fd30 <col:14> 'struct ret':'struct ret' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fe75f82fd08 <col:14> 'struct ret':'struct ret' lvalue Var 0x7fe75f82f7e8 'r' 'struct ret':'struct ret'
+| | |-LabelStmt 0x7fe75f82fdd8 <line:102:2, col:6> 'L12'
+| | | `-NullStmt 0x7fe75f82fdc8 <col:6>
+| | |-DeclStmt 0x7fe75f82fe60 <line:103:3, col:16>
+| | | `-VarDecl 0x7fe75f82fe00 <col:3, col:11> col:11 used width 'int64_t':'long'
+| | |-DeclStmt 0x7fe75f82fee8 <line:104:3, col:12>
+| | | `-VarDecl 0x7fe75f82fe88 <col:3, col:11> col:11 used i 'int64_t':'long'
+| | |-ForStmt 0x7fe75f831b80 <line:105:3, line:132:5>
+| | | |-BinaryOperator 0x7fe75f830028 <line:105:8, col:23> 'int64_t':'long' ','
+| | | | |-BinaryOperator 0x7fe75f82ff60 <col:8, col:16> 'int64_t':'long' '='
+| | | | | |-DeclRefExpr 0x7fe75f82ff00 <col:8> 'int64_t':'long' lvalue Var 0x7fe75f82fe00 'width' 'int64_t':'long'
+| | | | | `-ImplicitCastExpr 0x7fe75f82ff48 <col:16> 'int64_t':'long' <IntegralCast>
+| | | | |   `-IntegerLiteral 0x7fe75f82ff28 <col:16> 'int' 0
+| | | | `-BinaryOperator 0x7fe75f830000 <col:19, col:23> 'int64_t':'long' '='
+| | | |   |-DeclRefExpr 0x7fe75f82ff88 <col:19> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | | |   `-ImplicitCastExpr 0x7fe75f82ffd8 <col:23> 'int64_t':'long' <LValueToRValue>
+| | | |     `-DeclRefExpr 0x7fe75f82ffb0 <col:23> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fe75f830108 <col:30, col:39> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fe75f8300d8 <col:30> 'int64_t':'long' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fe75f830050 <col:30> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | | | `-ImplicitCastExpr 0x7fe75f8300f0 <col:34, col:39> 'int64_t':'long' <LValueToRValue>
+| | | |   `-MemberExpr 0x7fe75f8300a0 <col:34, col:39> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | | |     `-DeclRefExpr 0x7fe75f830078 <col:34> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | | |-CompoundAssignOperator 0x7fe75f830198 <col:44, col:49> 'int64_t':'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+| | | | |-DeclRefExpr 0x7fe75f830130 <col:44> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | | | `-ImplicitCastExpr 0x7fe75f830180 <col:49> 'int64_t':'long' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fe75f830158 <col:49> 'int64_t':'long' lvalue Var 0x7fe75f82fe00 'width' 'int64_t':'long'
+| | | `-CompoundStmt 0x7fe75f831b20 <line:106:5, line:132:5>
+| | |   |-DeclStmt 0x7fe75f830240 <line:107:7, col:16>
+| | |   | `-VarDecl 0x7fe75f8301e0 <col:7, col:15> col:15 used r 'int32_t':'int'
+| | |   |-DeclStmt 0x7fe75f8302d8 <line:108:7, col:21>
+| | |   | `-VarDecl 0x7fe75f830278 <col:7, col:20> col:20 used s 'struct slice':'struct slice'
+| | |   |-IfStmt 0x7fe75f830528 <line:109:7, line:110:9>
+| | |   | |-<<<NULL>>>
+| | |   | |-<<<NULL>>>
+| | |   | |-BinaryOperator 0x7fe75f830470 <line:109:11, col:31> 'int' '||'
+| | |   | | |-BinaryOperator 0x7fe75f8303a8 <col:11, col:20> 'int' '>'
+| | |   | | | |-ImplicitCastExpr 0x7fe75f830378 <col:11> 'int64_t':'long' <LValueToRValue>
+| | |   | | | | `-DeclRefExpr 0x7fe75f8302f0 <col:11> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |   | | | `-ImplicitCastExpr 0x7fe75f830390 <col:15, col:20> 'int64_t':'long' <LValueToRValue>
+| | |   | | |   `-MemberExpr 0x7fe75f830340 <col:15, col:20> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |   | | |     `-DeclRefExpr 0x7fe75f830318 <col:15> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |   | | `-BinaryOperator 0x7fe75f830448 <col:27, col:31> 'int' '<'
+| | |   | |   |-ImplicitCastExpr 0x7fe75f830418 <col:27> 'int64_t':'long' <LValueToRValue>
+| | |   | |   | `-DeclRefExpr 0x7fe75f8303d0 <col:27> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |   | |   `-ImplicitCastExpr 0x7fe75f830430 <col:31> 'long' <IntegralCast>
+| | |   | |     `-IntegerLiteral 0x7fe75f8303f8 <col:31> 'int' 0
+| | |   | |-CallExpr 0x7fe75f8304f8 <line:110:2, col:9> 'void'
+| | |   | | |-ImplicitCastExpr 0x7fe75f8304e0 <col:2> 'void (*)(int32_t)' <FunctionToPointerDecay>
+| | |   | | | `-DeclRefExpr 0x7fe75f830498 <col:2> 'void (int32_t)' Function 0x7fe75f814ac8 'fail' 'void (int32_t)'
+| | |   | | `-IntegerLiteral 0x7fe75f8304c0 <col:8> 'int' 3
+| | |   | `-<<<NULL>>>
+| | |   |-BinaryOperator 0x7fe75f8306a0 <line:111:7, col:28> 'unsigned char *' '='
+| | |   | |-MemberExpr 0x7fe75f830588 <col:7, col:9> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |   | | `-DeclRefExpr 0x7fe75f830560 <col:7> 'struct slice':'struct slice' lvalue Var 0x7fe75f830278 's' 'struct slice':'struct slice'
+| | |   | `-BinaryOperator 0x7fe75f830678 <col:16, col:28> 'unsigned char *' '+'
+| | |   |   |-ImplicitCastExpr 0x7fe75f830648 <col:16, col:21> 'unsigned char *' <LValueToRValue>
+| | |   |   | `-MemberExpr 0x7fe75f8305e8 <col:16, col:21> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |   |   |   `-DeclRefExpr 0x7fe75f8305c0 <col:16> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |   |   `-ImplicitCastExpr 0x7fe75f830660 <col:28> 'int64_t':'long' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x7fe75f830620 <col:28> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |   |-BinaryOperator 0x7fe75f830808 <line:112:7, col:26> 'int64_t':'long' '='
+| | |   | |-MemberExpr 0x7fe75f8306f0 <col:7, col:9> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |   | | `-DeclRefExpr 0x7fe75f8306c8 <col:7> 'struct slice':'struct slice' lvalue Var 0x7fe75f830278 's' 'struct slice':'struct slice'
+| | |   | `-BinaryOperator 0x7fe75f8307e0 <col:15, col:26> 'long' '-'
+| | |   |   |-ImplicitCastExpr 0x7fe75f8307b0 <col:15, col:20> 'int64_t':'long' <LValueToRValue>
+| | |   |   | `-MemberExpr 0x7fe75f830750 <col:15, col:20> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |   |   |   `-DeclRefExpr 0x7fe75f830728 <col:15> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |   |   `-ImplicitCastExpr 0x7fe75f8307c8 <col:26> 'int64_t':'long' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x7fe75f830788 <col:26> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |   |-BinaryOperator 0x7fe75f830970 <line:113:7, col:26> 'int64_t':'long' '='
+| | |   | |-MemberExpr 0x7fe75f830858 <col:7, col:9> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |   | | `-DeclRefExpr 0x7fe75f830830 <col:7> 'struct slice':'struct slice' lvalue Var 0x7fe75f830278 's' 'struct slice':'struct slice'
+| | |   | `-BinaryOperator 0x7fe75f830948 <col:15, col:26> 'long' '-'
+| | |   |   |-ImplicitCastExpr 0x7fe75f830918 <col:15, col:20> 'int64_t':'long' <LValueToRValue>
+| | |   |   | `-MemberExpr 0x7fe75f8308b8 <col:15, col:20> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |   |   |   `-DeclRefExpr 0x7fe75f830890 <col:15> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |   |   `-ImplicitCastExpr 0x7fe75f830930 <col:26> 'int64_t':'long' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x7fe75f8308f0 <col:26> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |   |-DeclStmt 0x7fe75f830ac8 <line:114:7, col:50>
+| | |   | `-VarDecl 0x7fe75f8309b8 <col:7, col:49> col:30 used dr 'struct decode_rune_ret':'struct decode_rune_ret' cinit
+| | |   |   `-CallExpr 0x7fe75f830a80 <col:35, col:49> 'struct decode_rune_ret':'struct decode_rune_ret'
+| | |   |     |-ImplicitCastExpr 0x7fe75f830a68 <col:35> 'struct decode_rune_ret (*)(struct slice)' <FunctionToPointerDecay>
+| | |   |     | `-DeclRefExpr 0x7fe75f830a18 <col:35> 'struct decode_rune_ret (struct slice)' Function 0x7fe75f82bc00 'decode_rune' 'struct decode_rune_ret (struct slice)'
+| | |   |     `-ImplicitCastExpr 0x7fe75f830ab0 <col:48> 'struct slice':'struct slice' <LValueToRValue>
+| | |   |       `-DeclRefExpr 0x7fe75f830a40 <col:48> 'struct slice':'struct slice' lvalue Var 0x7fe75f830278 's' 'struct slice':'struct slice'
+| | |   |-BinaryOperator 0x7fe75f830b80 <line:115:7, col:14> 'int32_t':'int' '='
+| | |   | |-DeclRefExpr 0x7fe75f830ae0 <col:7> 'int32_t':'int' lvalue Var 0x7fe75f8301e0 'r' 'int32_t':'int'
+| | |   | `-ImplicitCastExpr 0x7fe75f830b68 <col:11, col:14> 'int32_t':'int' <LValueToRValue>
+| | |   |   `-MemberExpr 0x7fe75f830b30 <col:11, col:14> 'int32_t':'int' lvalue .r 0x7fe75f814de0
+| | |   |     `-DeclRefExpr 0x7fe75f830b08 <col:11> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f8309b8 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| | |   |-BinaryOperator 0x7fe75f830c48 <line:116:7, col:18> 'int64_t':'long' '='
+| | |   | |-DeclRefExpr 0x7fe75f830ba8 <col:7> 'int64_t':'long' lvalue Var 0x7fe75f82fe00 'width' 'int64_t':'long'
+| | |   | `-ImplicitCastExpr 0x7fe75f830c30 <col:15, col:18> 'int64_t':'long' <LValueToRValue>
+| | |   |   `-MemberExpr 0x7fe75f830bf8 <col:15, col:18> 'int64_t':'long' lvalue .width 0x7fe75f814e38
+| | |   |     `-DeclRefExpr 0x7fe75f830bd0 <col:15> 'struct decode_rune_ret':'struct decode_rune_ret' lvalue Var 0x7fe75f8309b8 'dr' 'struct decode_rune_ret':'struct decode_rune_ret'
+| | |   `-IfStmt 0x7fe75f831ae8 <line:117:7, line:131:2>
+| | |     |-<<<NULL>>>
+| | |     |-<<<NULL>>>
+| | |     |-CallExpr 0x7fe75f830cd8 <line:117:11, col:22> '_Bool'
+| | |     | |-ImplicitCastExpr 0x7fe75f830cc0 <col:11> '_Bool (*)(int32_t)' <FunctionToPointerDecay>
+| | |     | | `-DeclRefExpr 0x7fe75f830c70 <col:11> '_Bool (int32_t)' Function 0x7fe75f82c388 'is_space' '_Bool (int32_t)'
+| | |     | `-ImplicitCastExpr 0x7fe75f830d08 <col:21> 'int32_t':'int' <LValueToRValue>
+| | |     |   `-DeclRefExpr 0x7fe75f830c98 <col:21> 'int32_t':'int' lvalue Var 0x7fe75f8301e0 'r' 'int32_t':'int'
+| | |     |-CompoundStmt 0x7fe75f831a88 <line:118:2, line:131:2>
+| | |     | |-IfStmt 0x7fe75f831030 <line:119:4, line:120:13>
+| | |     | | |-<<<NULL>>>
+| | |     | | |-<<<NULL>>>
+| | |     | | |-BinaryOperator 0x7fe75f830f70 <line:119:8, col:41> 'int' '||'
+| | |     | | | |-BinaryOperator 0x7fe75f830ea8 <col:8, col:30> 'int' '||'
+| | |     | | | | |-BinaryOperator 0x7fe75f830da0 <col:8, col:12> 'int' '<'
+| | |     | | | | | |-ImplicitCastExpr 0x7fe75f830d70 <col:8> 'int64_t':'long' <LValueToRValue>
+| | |     | | | | | | `-DeclRefExpr 0x7fe75f830d20 <col:8> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |     | | | | | `-ImplicitCastExpr 0x7fe75f830d88 <col:12> 'int64_t':'long' <LValueToRValue>
+| | |     | | | | |   `-DeclRefExpr 0x7fe75f830d48 <col:12> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | | | | `-BinaryOperator 0x7fe75f830e80 <col:21, col:30> 'int' '>'
+| | |     | | | |   |-ImplicitCastExpr 0x7fe75f830e50 <col:21> 'int64_t':'long' <LValueToRValue>
+| | |     | | | |   | `-DeclRefExpr 0x7fe75f830dc8 <col:21> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |     | | | |   `-ImplicitCastExpr 0x7fe75f830e68 <col:25, col:30> 'int64_t':'long' <LValueToRValue>
+| | |     | | | |     `-MemberExpr 0x7fe75f830e18 <col:25, col:30> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     | | | |       `-DeclRefExpr 0x7fe75f830df0 <col:25> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     | | | `-BinaryOperator 0x7fe75f830f48 <col:37, col:41> 'int' '<'
+| | |     | | |   |-ImplicitCastExpr 0x7fe75f830f18 <col:37> 'int64_t':'long' <LValueToRValue>
+| | |     | | |   | `-DeclRefExpr 0x7fe75f830ed0 <col:37> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |     | | |   `-ImplicitCastExpr 0x7fe75f830f30 <col:41> 'long' <IntegralCast>
+| | |     | | |     `-IntegerLiteral 0x7fe75f830ef8 <col:41> 'int' 0
+| | |     | | |-CallExpr 0x7fe75f831000 <line:120:6, col:13> 'void'
+| | |     | | | |-ImplicitCastExpr 0x7fe75f830fe0 <col:6> 'void (*)(int32_t)' <FunctionToPointerDecay>
+| | |     | | | | `-DeclRefExpr 0x7fe75f830f98 <col:6> 'void (int32_t)' Function 0x7fe75f814ac8 'fail' 'void (int32_t)'
+| | |     | | | `-IntegerLiteral 0x7fe75f830fc0 <col:12> 'int' 3
+| | |     | | `-<<<NULL>>>
+| | |     | |-IfStmt 0x7fe75f8312a0 <line:121:4, line:122:13>
+| | |     | | |-<<<NULL>>>
+| | |     | | |-<<<NULL>>>
+| | |     | | |-BinaryOperator 0x7fe75f8311e8 <line:121:8, col:36> 'int' '||'
+| | |     | | | |-BinaryOperator 0x7fe75f831120 <col:8, col:21> 'int' '>'
+| | |     | | | | |-ImplicitCastExpr 0x7fe75f8310f0 <col:8> 'int64_t':'long' <LValueToRValue>
+| | |     | | | | | `-DeclRefExpr 0x7fe75f831068 <col:8> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | | | | `-ImplicitCastExpr 0x7fe75f831108 <col:16, col:21> 'int64_t':'long' <LValueToRValue>
+| | |     | | | |   `-MemberExpr 0x7fe75f8310b8 <col:16, col:21> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     | | | |     `-DeclRefExpr 0x7fe75f831090 <col:16> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     | | | `-BinaryOperator 0x7fe75f8311c0 <col:28, col:36> 'int' '<'
+| | |     | | |   |-ImplicitCastExpr 0x7fe75f831190 <col:28> 'int64_t':'long' <LValueToRValue>
+| | |     | | |   | `-DeclRefExpr 0x7fe75f831148 <col:28> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | | |   `-ImplicitCastExpr 0x7fe75f8311a8 <col:36> 'long' <IntegralCast>
+| | |     | | |     `-IntegerLiteral 0x7fe75f831170 <col:36> 'int' 0
+| | |     | | |-CallExpr 0x7fe75f831270 <line:122:6, col:13> 'void'
+| | |     | | | |-ImplicitCastExpr 0x7fe75f831258 <col:6> 'void (*)(int32_t)' <FunctionToPointerDecay>
+| | |     | | | | `-DeclRefExpr 0x7fe75f831210 <col:6> 'void (int32_t)' Function 0x7fe75f814ac8 'fail' 'void (int32_t)'
+| | |     | | | `-IntegerLiteral 0x7fe75f831238 <col:12> 'int' 3
+| | |     | | `-<<<NULL>>>
+| | |     | |-DeclStmt 0x7fe75f831358 <line:123:4, col:16>
+| | |     | | `-VarDecl 0x7fe75f8312f8 <col:4, col:15> col:15 used r 'struct ret':'struct ret' nrvo
+| | |     | |-BinaryOperator 0x7fe75f831440 <line:124:4, col:18> 'int64_t':'long' '='
+| | |     | | |-DeclRefExpr 0x7fe75f831370 <col:4> 'int64_t':'long' lvalue Var 0x7fe75f82d000 'advance' 'int64_t':'long'
+| | |     | | `-BinaryOperator 0x7fe75f831418 <col:14, col:18> 'long' '+'
+| | |     | |   |-ImplicitCastExpr 0x7fe75f8313e8 <col:14> 'int64_t':'long' <LValueToRValue>
+| | |     | |   | `-DeclRefExpr 0x7fe75f831398 <col:14> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |     | |   `-ImplicitCastExpr 0x7fe75f831400 <col:18> 'int64_t':'long' <LValueToRValue>
+| | |     | |     `-DeclRefExpr 0x7fe75f8313c0 <col:18> 'int64_t':'long' lvalue Var 0x7fe75f82fe00 'width' 'int64_t':'long'
+| | |     | |-BinaryOperator 0x7fe75f8315e0 <line:125:4, col:38> 'unsigned char *' '='
+| | |     | | |-MemberExpr 0x7fe75f831490 <col:4, col:10> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |     | | | `-DeclRefExpr 0x7fe75f831468 <col:4> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |     | | `-BinaryOperator 0x7fe75f8315b8 <col:17, col:38> 'unsigned char *' '+'
+| | |     | |   |-ImplicitCastExpr 0x7fe75f8315a0 <col:17, col:22> 'unsigned char *' <LValueToRValue>
+| | |     | |   | `-MemberExpr 0x7fe75f8314f0 <col:17, col:22> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| | |     | |   |   `-DeclRefExpr 0x7fe75f8314c8 <col:17> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     | |   `-CStyleCastExpr 0x7fe75f831578 <col:29, col:38> 'size_t':'unsigned long' <IntegralCast>
+| | |     | |     `-ImplicitCastExpr 0x7fe75f831560 <col:38> 'int64_t':'long' <LValueToRValue>
+| | |     | |       `-DeclRefExpr 0x7fe75f831528 <col:38> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | |-BinaryOperator 0x7fe75f831710 <line:126:4, col:20> 'int64_t':'long' '='
+| | |     | | |-MemberExpr 0x7fe75f831630 <col:4, col:10> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| | |     | | | `-DeclRefExpr 0x7fe75f831608 <col:4> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |     | | `-BinaryOperator 0x7fe75f8316e8 <col:16, col:20> 'long' '-'
+| | |     | |   |-ImplicitCastExpr 0x7fe75f8316b8 <col:16> 'int64_t':'long' <LValueToRValue>
+| | |     | |   | `-DeclRefExpr 0x7fe75f831668 <col:16> 'int64_t':'long' lvalue Var 0x7fe75f82fe88 'i' 'int64_t':'long'
+| | |     | |   `-ImplicitCastExpr 0x7fe75f8316d0 <col:20> 'int64_t':'long' <LValueToRValue>
+| | |     | |     `-DeclRefExpr 0x7fe75f831690 <col:20> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | |-BinaryOperator 0x7fe75f831878 <line:127:4, col:27> 'int64_t':'long' '='
+| | |     | | |-MemberExpr 0x7fe75f831760 <col:4, col:10> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     | | | `-DeclRefExpr 0x7fe75f831738 <col:4> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |     | | `-BinaryOperator 0x7fe75f831850 <col:16, col:27> 'long' '-'
+| | |     | |   |-ImplicitCastExpr 0x7fe75f831820 <col:16, col:21> 'int64_t':'long' <LValueToRValue>
+| | |     | |   | `-MemberExpr 0x7fe75f8317c0 <col:16, col:21> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| | |     | |   |   `-DeclRefExpr 0x7fe75f831798 <col:16> 'struct slice':'struct slice' lvalue ParmVar 0x7fe75f82c9a8 'data' 'struct slice':'struct slice'
+| | |     | |   `-ImplicitCastExpr 0x7fe75f831838 <col:27> 'int64_t':'long' <LValueToRValue>
+| | |     | |     `-DeclRefExpr 0x7fe75f8317f8 <col:27> 'int64_t':'long' lvalue Var 0x7fe75f82d120 'start' 'int64_t':'long'
+| | |     | |-BinaryOperator 0x7fe75f831940 <line:128:4, col:16> 'int64_t':'long' '='
+| | |     | | |-MemberExpr 0x7fe75f8318c8 <col:4, col:6> 'int64_t':'long' lvalue .advance 0x7fe75f82c600
+| | |     | | | `-DeclRefExpr 0x7fe75f8318a0 <col:4> 'struct ret':'struct ret' lvalue Var 0x7fe75f8312f8 'r' 'struct ret':'struct ret'
+| | |     | | `-ImplicitCastExpr 0x7fe75f831928 <col:16> 'int64_t':'long' <LValueToRValue>
+| | |     | |   `-DeclRefExpr 0x7fe75f831900 <col:16> 'int64_t':'long' lvalue Var 0x7fe75f82d000 'advance' 'int64_t':'long'
+| | |     | |-BinaryOperator 0x7fe75f831a08 <line:129:4, col:14> 'struct slice':'struct slice' '='
+| | |     | | |-MemberExpr 0x7fe75f831990 <col:4, col:6> 'struct slice':'struct slice' lvalue .token 0x7fe75f82c668
+| | |     | | | `-DeclRefExpr 0x7fe75f831968 <col:4> 'struct ret':'struct ret' lvalue Var 0x7fe75f8312f8 'r' 'struct ret':'struct ret'
+| | |     | | `-ImplicitCastExpr 0x7fe75f8319f0 <col:14> 'struct slice':'struct slice' <LValueToRValue>
+| | |     | |   `-DeclRefExpr 0x7fe75f8319c8 <col:14> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| | |     | `-ReturnStmt 0x7fe75f831a70 <line:130:4, col:11>
+| | |     |   `-ImplicitCastExpr 0x7fe75f831a58 <col:11> 'struct ret':'struct ret' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x7fe75f831a30 <col:11> 'struct ret':'struct ret' lvalue Var 0x7fe75f8312f8 'r' 'struct ret':'struct ret'
+| | |     `-<<<NULL>>>
+| | `-CompoundStmt 0x7fe75f837320 <line:133:3, line:142:3>
+| |   |-DeclStmt 0x7fe75f831c38 <line:134:5, col:17>
+| |   | `-VarDecl 0x7fe75f831bd8 <col:5, col:16> col:16 used r 'struct ret':'struct ret' nrvo
+| |   |-BinaryOperator 0x7fe75f831cb0 <line:135:5, col:15> 'int64_t':'long' '='
+| |   | |-DeclRefExpr 0x7fe75f831c50 <col:5> 'int64_t':'long' lvalue Var 0x7fe75f82d000 'advance' 'int64_t':'long'
+| |   | `-ImplicitCastExpr 0x7fe75f831c98 <col:15> 'int64_t':'long' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fe75f831c78 <col:15> 'int' 0
+| |   |-BinaryOperator 0x7fe75f831d70 <line:136:5, col:18> 'unsigned char *' '='
+| |   | |-MemberExpr 0x7fe75f831d00 <col:5, col:11> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+| |   | | `-DeclRefExpr 0x7fe75f831cd8 <col:5> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| |   | `-ImplicitCastExpr 0x7fe75f831d58 <col:18> 'unsigned char *' <NullToPointer>
+| |   |   `-IntegerLiteral 0x7fe75f831d38 <col:18> 'int' 0
+| |   |-BinaryOperator 0x7fe75f831e30 <line:137:5, col:17> 'int64_t':'long' '='
+| |   | |-MemberExpr 0x7fe75f831dc0 <col:5, col:11> 'int64_t':'long' lvalue .len 0x7fe75f814730
+| |   | | `-DeclRefExpr 0x7fe75f831d98 <col:5> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| |   | `-ImplicitCastExpr 0x7fe75f831e18 <col:17> 'int64_t':'long' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fe75f831df8 <col:17> 'int' 0
+| |   |-BinaryOperator 0x7fe75f831ef0 <line:138:5, col:17> 'int64_t':'long' '='
+| |   | |-MemberExpr 0x7fe75f831e80 <col:5, col:11> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+| |   | | `-DeclRefExpr 0x7fe75f831e58 <col:5> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| |   | `-ImplicitCastExpr 0x7fe75f831ed8 <col:17> 'int64_t':'long' <IntegralCast>
+| |   |   `-IntegerLiteral 0x7fe75f831eb8 <col:17> 'int' 0
+| |   |-BinaryOperator 0x7fe75f831fb8 <line:139:5, col:17> 'int64_t':'long' '='
+| |   | |-MemberExpr 0x7fe75f831f40 <col:5, col:7> 'int64_t':'long' lvalue .advance 0x7fe75f82c600
+| |   | | `-DeclRefExpr 0x7fe75f831f18 <col:5> 'struct ret':'struct ret' lvalue Var 0x7fe75f831bd8 'r' 'struct ret':'struct ret'
+| |   | `-ImplicitCastExpr 0x7fe75f831fa0 <col:17> 'int64_t':'long' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fe75f831f78 <col:17> 'int64_t':'long' lvalue Var 0x7fe75f82d000 'advance' 'int64_t':'long'
+| |   |-BinaryOperator 0x7fe75f8372a0 <line:140:5, col:15> 'struct slice':'struct slice' '='
+| |   | |-MemberExpr 0x7fe75f837228 <col:5, col:7> 'struct slice':'struct slice' lvalue .token 0x7fe75f82c668
+| |   | | `-DeclRefExpr 0x7fe75f837200 <col:5> 'struct ret':'struct ret' lvalue Var 0x7fe75f831bd8 'r' 'struct ret':'struct ret'
+| |   | `-ImplicitCastExpr 0x7fe75f837288 <col:15> 'struct slice':'struct slice' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7fe75f837260 <col:15> 'struct slice':'struct slice' lvalue Var 0x7fe75f82d098 'token' 'struct slice':'struct slice'
+| |   `-ReturnStmt 0x7fe75f837308 <line:141:5, col:12>
+| |     `-ImplicitCastExpr 0x7fe75f8372f0 <col:12> 'struct ret':'struct ret' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fe75f8372c8 <col:12> 'struct ret':'struct ret' lvalue Var 0x7fe75f831bd8 'r' 'struct ret':'struct ret'
+| `-NoInlineAttr 0x7fe75f82cba0 <line:53:60> Inherited
+|-FunctionDecl 0x7fe75f837440 <line:145:1, line:162:1> line:146:1 main 'int ()'
+| `-CompoundStmt 0x7fe75f838678 <line:147:1, line:162:1>
+|   |-DeclStmt 0x7fe75f8375c0 <line:148:3, col:26>
+|   | `-VarDecl 0x7fe75f837560 <col:3, col:25> col:17 used buf 'unsigned char [1000]'
+|   |-DeclStmt 0x7fe75f837658 <line:149:3, col:17>
+|   | `-VarDecl 0x7fe75f8375f8 <col:3, col:16> col:16 used s 'struct slice':'struct slice'
+|   |-CallExpr 0x7fe75f837a10 <line:150:3, col:41> 'void *'
+|   | |-ImplicitCastExpr 0x7fe75f8379f8 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fe75f8378d8 <col:3> '<builtin fn type>' Function 0x7fe75f8376b8 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fe75f837a68 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fe75f837a50 <col:21> 'unsigned char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fe75f837900 <col:21> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   | |-IntegerLiteral 0x7fe75f837928 <col:26> 'int' 0
+|   | `-UnaryExprOrTypeTraitExpr 0x7fe75f837990 <col:29, col:40> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7fe75f837970 <col:36, col:40> 'unsigned char [1000]' lvalue
+|   |     `-DeclRefExpr 0x7fe75f837948 <col:37> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   |-BinaryOperator 0x7fe75f837b38 <line:151:3, col:12> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fe75f837ae0 <col:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fe75f837ac8 <col:3> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fe75f837a80 <col:3> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   | | `-IntegerLiteral 0x7fe75f837aa8 <col:7> 'int' 0
+|   | `-ImplicitCastExpr 0x7fe75f837b20 <col:12> 'unsigned char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7fe75f837b08 <col:12> 'int' 32
+|   |-BinaryOperator 0x7fe75f837c18 <line:152:3, col:12> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fe75f837bc0 <col:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fe75f837ba8 <col:3> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fe75f837b60 <col:3> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   | | `-IntegerLiteral 0x7fe75f837b88 <col:7> 'int' 1
+|   | `-ImplicitCastExpr 0x7fe75f837c00 <col:12> 'unsigned char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7fe75f837be8 <col:12> 'int' 97
+|   |-BinaryOperator 0x7fe75f837cf8 <line:153:3, col:12> 'unsigned char' '='
+|   | |-ArraySubscriptExpr 0x7fe75f837ca0 <col:3, col:8> 'unsigned char' lvalue
+|   | | |-ImplicitCastExpr 0x7fe75f837c88 <col:3> 'unsigned char *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fe75f837c40 <col:3> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   | | `-IntegerLiteral 0x7fe75f837c68 <col:7> 'int' 2
+|   | `-ImplicitCastExpr 0x7fe75f837ce0 <col:12> 'unsigned char' <IntegralCast>
+|   |   `-CharacterLiteral 0x7fe75f837cc8 <col:12> 'int' 32
+|   |-BinaryOperator 0x7fe75f837dc0 <line:154:3, col:12> 'unsigned char *' '='
+|   | |-MemberExpr 0x7fe75f837d48 <col:3, col:5> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+|   | | `-DeclRefExpr 0x7fe75f837d20 <col:3> 'struct slice':'struct slice' lvalue Var 0x7fe75f8375f8 's' 'struct slice':'struct slice'
+|   | `-ImplicitCastExpr 0x7fe75f837da8 <col:12> 'unsigned char *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7fe75f837d80 <col:12> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   |-BinaryOperator 0x7fe75f837e80 <line:155:3, col:11> 'int64_t':'long' '='
+|   | |-MemberExpr 0x7fe75f837e10 <col:3, col:5> 'int64_t':'long' lvalue .len 0x7fe75f814730
+|   | | `-DeclRefExpr 0x7fe75f837de8 <col:3> 'struct slice':'struct slice' lvalue Var 0x7fe75f8375f8 's' 'struct slice':'struct slice'
+|   | `-ImplicitCastExpr 0x7fe75f837e68 <col:11> 'int64_t':'long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fe75f837e48 <col:11> 'int' 3
+|   |-BinaryOperator 0x7fe75f837f88 <line:156:3, col:22> 'int64_t':'long' '='
+|   | |-MemberExpr 0x7fe75f837ed0 <col:3, col:5> 'int64_t':'long' lvalue .cap 0x7fe75f814788
+|   | | `-DeclRefExpr 0x7fe75f837ea8 <col:3> 'struct slice':'struct slice' lvalue Var 0x7fe75f8375f8 's' 'struct slice':'struct slice'
+|   | `-ImplicitCastExpr 0x7fe75f837f70 <col:11, col:22> 'int64_t':'long' <IntegralCast>
+|   |   `-UnaryExprOrTypeTraitExpr 0x7fe75f837f50 <col:11, col:22> 'unsigned long' sizeof
+|   |     `-ParenExpr 0x7fe75f837f30 <col:18, col:22> 'unsigned char [1000]' lvalue
+|   |       `-DeclRefExpr 0x7fe75f837f08 <col:19> 'unsigned char [1000]' lvalue Var 0x7fe75f837560 'buf' 'unsigned char [1000]'
+|   |-DeclStmt 0x7fe75f838030 <line:157:3, col:15>
+|   | `-VarDecl 0x7fe75f837fd0 <col:3, col:14> col:14 used r 'struct ret':'struct ret'
+|   |-BinaryOperator 0x7fe75f8381b8 <line:158:3, col:22> 'struct ret':'struct ret' '='
+|   | |-DeclRefExpr 0x7fe75f838048 <col:3> 'struct ret':'struct ret' lvalue Var 0x7fe75f837fd0 'r' 'struct ret':'struct ret'
+|   | `-CallExpr 0x7fe75f838150 <col:7, col:22> 'struct ret':'struct ret'
+|   |   |-ImplicitCastExpr 0x7fe75f838138 <col:7> 'struct ret (*)(struct slice, _Bool)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fe75f838070 <col:7> 'struct ret (struct slice, _Bool)' Function 0x7fe75f82cab8 'scanwords' 'struct ret (struct slice, _Bool)'
+|   |   |-ImplicitCastExpr 0x7fe75f838188 <col:18> 'struct slice':'struct slice' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fe75f838098 <col:18> 'struct slice':'struct slice' lvalue Var 0x7fe75f8375f8 's' 'struct slice':'struct slice'
+|   |   `-ImplicitCastExpr 0x7fe75f8381a0 <col:21> '_Bool' <IntegralToBoolean>
+|   |     `-IntegerLiteral 0x7fe75f8380c0 <col:21> 'int' 1
+|   |-IfStmt 0x7fe75f838608 <line:159:3, line:160:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fe75f838578 <line:159:7, col:66> 'int' '||'
+|   | | |-BinaryOperator 0x7fe75f838440 <col:7, col:44> 'int' '||'
+|   | | | |-BinaryOperator 0x7fe75f8382b0 <col:7, col:20> 'int' '!='
+|   | | | | |-ImplicitCastExpr 0x7fe75f838280 <col:7, col:9> 'int64_t':'long' <LValueToRValue>
+|   | | | | | `-MemberExpr 0x7fe75f838228 <col:7, col:9> 'int64_t':'long' lvalue .advance 0x7fe75f82c600
+|   | | | | |   `-DeclRefExpr 0x7fe75f838200 <col:7> 'struct ret':'struct ret' lvalue Var 0x7fe75f837fd0 'r' 'struct ret':'struct ret'
+|   | | | | `-ImplicitCastExpr 0x7fe75f838298 <col:20> 'long' <IntegralCast>
+|   | | | |   `-IntegerLiteral 0x7fe75f838260 <col:20> 'int' 3
+|   | | | `-BinaryOperator 0x7fe75f838418 <col:25, col:44> 'int' '!='
+|   | | |   |-ImplicitCastExpr 0x7fe75f838400 <col:25, col:39> 'int' <IntegralCast>
+|   | | |   | `-ImplicitCastExpr 0x7fe75f8383e8 <col:25, col:39> 'unsigned char' <LValueToRValue>
+|   | | |   |   `-ArraySubscriptExpr 0x7fe75f8383a8 <col:25, col:39> 'unsigned char' lvalue
+|   | | |   |     |-ImplicitCastExpr 0x7fe75f838390 <col:25, col:33> 'unsigned char *' <LValueToRValue>
+|   | | |   |     | `-MemberExpr 0x7fe75f838338 <col:25, col:33> 'unsigned char *' lvalue .data 0x7fe75f8146b0
+|   | | |   |     |   `-MemberExpr 0x7fe75f838300 <col:25, col:27> 'struct slice':'struct slice' lvalue .token 0x7fe75f82c668
+|   | | |   |     |     `-DeclRefExpr 0x7fe75f8382d8 <col:25> 'struct ret':'struct ret' lvalue Var 0x7fe75f837fd0 'r' 'struct ret':'struct ret'
+|   | | |   |     `-IntegerLiteral 0x7fe75f838370 <col:38> 'int' 0
+|   | | |   `-CharacterLiteral 0x7fe75f8383d0 <col:44> 'int' 97
+|   | | `-BinaryOperator 0x7fe75f838550 <col:51, col:66> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fe75f838520 <col:51, col:59> 'int64_t':'long' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7fe75f8384c8 <col:51, col:59> 'int64_t':'long' lvalue .len 0x7fe75f814730
+|   | |   |   `-MemberExpr 0x7fe75f838490 <col:51, col:53> 'struct slice':'struct slice' lvalue .token 0x7fe75f82c668
+|   | |   |     `-DeclRefExpr 0x7fe75f838468 <col:51> 'struct ret':'struct ret' lvalue Var 0x7fe75f837fd0 'r' 'struct ret':'struct ret'
+|   | |   `-ImplicitCastExpr 0x7fe75f838538 <col:66> 'long' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7fe75f838500 <col:66> 'int' 1
+|   | |-CallExpr 0x7fe75f8385e0 <line:160:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fe75f8385c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fe75f8385a0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe75f8142f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe75f838660 <line:161:3, col:10>
+|     `-IntegerLiteral 0x7fe75f838640 <col:10> 'int' 0
+`-FunctionDecl 0x7fe75f8376b8 <line:150:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fe75f837758 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fe75f8377b8 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fe75f837818 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fe75f837890 <col:3> Implicit

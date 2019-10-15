@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7ff380827ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff380828b60 <../Data/C2AST/pr55755.c:4:1, line:7:1> line:4:8 struct S4 definition
+| |-PackedAttr 0x7ff3818142a0 <line:7:18>
+| `-FieldDecl 0x7ff381814258 <line:6:3, col:15> col:12 f0 'unsigned int'
+|   `-IntegerLiteral 0x7ff381814220 <col:15> 'int' 24
+|-VarDecl 0x7ff381814340 <line:9:1, line:11:1> line:9:11 used g_10 'struct S4':'struct S4' cinit
+| `-InitListExpr 0x7ff381814448 <col:18, line:11:1> 'struct S4':'struct S4'
+|   `-ImplicitCastExpr 0x7ff381814490 <line:10:3> 'unsigned int' <IntegralCast>
+|     `-IntegerLiteral 0x7ff3818143e0 <col:3> 'int' 6210831
+|-RecordDecl 0x7ff3818144a8 <line:13:1, line:17:1> line:13:8 struct S5 definition
+| |-PackedAttr 0x7ff381814710 <line:17:19>
+| |-FieldDecl 0x7ff381814568 <line:15:3, col:7> col:7 referenced i 'int'
+| `-FieldDecl 0x7ff3818146c8 <line:16:3, col:18> col:13 referenced l_8 'struct S4 [2]'
+|-VarDecl 0x7ff381814770 <line:19:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ff3818147e8 <col:1, col:8> col:8 used b 'int'
+|-FunctionDecl 0x7ff381814990 <line:21:1, line:37:1> line:21:11 used func_2 'struct S4 (int)'
+| |-ParmVarDecl 0x7ff381814878 <col:19, col:23> col:23 used x 'int'
+| `-CompoundStmt 0x7ff38182bfa0 <line:22:1, line:37:1>
+|   |-DeclStmt 0x7ff381814de0 <line:23:3, line:26:4>
+|   | `-VarDecl 0x7ff381814a90 <line:23:3, line:26:3> line:23:13 used l 'struct S5':'struct S5' cinit
+|   |   `-InitListExpr 0x7ff381814c80 <col:17, line:26:3> 'struct S5':'struct S5'
+|   |     |-IntegerLiteral 0x7ff381814af0 <line:24:5> 'int' 0
+|   |     `-InitListExpr 0x7ff381814cd0 <line:25:5, col:14> 'struct S4 [2]'
+|   |       |-InitListExpr 0x7ff381814d20 <col:6, col:8> 'struct S4':'struct S4'
+|   |       | `-ImplicitCastExpr 0x7ff381814d68 <col:7> 'unsigned int' <IntegralCast>
+|   |       |   `-IntegerLiteral 0x7ff381814b10 <col:7> 'int' 0
+|   |       `-InitListExpr 0x7ff381814d80 <col:11, col:13> 'struct S4':'struct S4'
+|   |         `-ImplicitCastExpr 0x7ff381814dc8 <col:12> 'unsigned int' <IntegralCast>
+|   |           `-IntegerLiteral 0x7ff381814b78 <col:12> 'int' 0
+|   |-BinaryOperator 0x7ff381814e98 <line:27:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7ff381814e20 <col:3, col:5> 'int' lvalue .i 0x7ff381814568
+|   | | `-DeclRefExpr 0x7ff381814df8 <col:3> 'struct S5':'struct S5' lvalue Var 0x7ff381814a90 'l' 'struct S5':'struct S5'
+|   | `-ImplicitCastExpr 0x7ff381814e80 <col:9> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ff381814e58 <col:9> 'int' lvalue Var 0x7ff381814770 'a' 'int'
+|   |-BinaryOperator 0x7ff381815070 <line:28:3, col:17> 'struct S4':'struct S4' '='
+|   | |-DeclRefExpr 0x7ff381814f10 <col:3> 'struct S4':'struct S4' lvalue Var 0x7ff381814340 'g_10' 'struct S4':'struct S4'
+|   | `-ImplicitCastExpr 0x7ff381815058 <col:10, col:17> 'struct S4':'struct S4' <LValueToRValue>
+|   |   `-ArraySubscriptExpr 0x7ff381815030 <col:10, col:17> 'struct S4':'struct S4' lvalue
+|   |     |-ImplicitCastExpr 0x7ff381815018 <col:10, col:12> 'struct S4 *' <ArrayToPointerDecay>
+|   |     | `-MemberExpr 0x7ff381814f60 <col:10, col:12> 'struct S4 [2]' lvalue .l_8 0x7ff3818146c8
+|   |     |   `-DeclRefExpr 0x7ff381814f38 <col:10> 'struct S5':'struct S5' lvalue Var 0x7ff381814a90 'l' 'struct S5':'struct S5'
+|   |     `-IntegerLiteral 0x7ff381814f98 <col:16> 'int' 1
+|   |-ForStmt 0x7ff38182be48 <line:29:3, line:34:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff3818150f8 <line:29:10, col:12> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ff3818150e0 <col:10> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff381815098 <col:10> 'int' lvalue ParmVar 0x7ff381814878 'x' 'int'
+|   | | `-IntegerLiteral 0x7ff3818150c0 <col:12> 'int' 2
+|   | |-UnaryOperator 0x7ff381815148 <col:15, col:16> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7ff381815120 <col:15> 'int' lvalue ParmVar 0x7ff381814878 'x' 'int'
+|   | `-CompoundStmt 0x7ff38182be28 <col:20, line:34:3>
+|   |   |-DeclStmt 0x7ff38182bcc8 <line:30:5, line:32:6>
+|   |   | `-VarDecl 0x7ff381815188 <line:30:5, line:32:5> line:30:15 used tmp 'struct S4':'struct S4' cinit
+|   |   |   `-InitListExpr 0x7ff38182bc68 <col:21, line:32:5> 'struct S4':'struct S4'
+|   |   |     `-ImplicitCastExpr 0x7ff38182bcb0 <line:31:7> 'unsigned int' <IntegralCast>
+|   |   |       `-IntegerLiteral 0x7ff38182bc00 <col:7> 'int' 11936567
+|   |   `-BinaryOperator 0x7ff38182be00 <line:33:5, col:16> 'struct S4':'struct S4' '='
+|   |     |-ArraySubscriptExpr 0x7ff38182bd98 <col:5, col:12> 'struct S4':'struct S4' lvalue
+|   |     | |-ImplicitCastExpr 0x7ff38182bd68 <col:5, col:7> 'struct S4 *' <ArrayToPointerDecay>
+|   |     | | `-MemberExpr 0x7ff38182bd08 <col:5, col:7> 'struct S4 [2]' lvalue .l_8 0x7ff3818146c8
+|   |     | |   `-DeclRefExpr 0x7ff38182bce0 <col:5> 'struct S5':'struct S5' lvalue Var 0x7ff381814a90 'l' 'struct S5':'struct S5'
+|   |     | `-ImplicitCastExpr 0x7ff38182bd80 <col:11> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff38182bd40 <col:11> 'int' lvalue ParmVar 0x7ff381814878 'x' 'int'
+|   |     `-ImplicitCastExpr 0x7ff38182bde8 <col:16> 'struct S4':'struct S4' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff38182bdc0 <col:16> 'struct S4':'struct S4' lvalue Var 0x7ff381815188 'tmp' 'struct S4':'struct S4'
+|   |-BinaryOperator 0x7ff38182bf20 <line:35:3, col:9> 'int' '='
+|   | |-DeclRefExpr 0x7ff38182be80 <col:3> 'int' lvalue Var 0x7ff3818147e8 'b' 'int'
+|   | `-ImplicitCastExpr 0x7ff38182bf08 <col:7, col:9> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7ff38182bed0 <col:7, col:9> 'int' lvalue .i 0x7ff381814568
+|   |     `-DeclRefExpr 0x7ff38182bea8 <col:7> 'struct S5':'struct S5' lvalue Var 0x7ff381814a90 'l' 'struct S5':'struct S5'
+|   `-ReturnStmt 0x7ff38182bf88 <line:36:3, col:10>
+|     `-ImplicitCastExpr 0x7ff38182bf70 <col:10> 'struct S4':'struct S4' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff38182bf48 <col:10> 'struct S4':'struct S4' lvalue Var 0x7ff381814340 'g_10' 'struct S4':'struct S4'
+`-FunctionDecl 0x7ff38182c0a8 <line:39:1, line:43:1> line:39:5 main 'int (void)'
+  `-CompoundStmt 0x7ff38182c298 <line:40:1, line:43:1>
+    |-CallExpr 0x7ff38182c230 <line:41:3, col:12> 'struct S4':'struct S4'
+    | |-ImplicitCastExpr 0x7ff38182c218 <col:3> 'struct S4 (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff38182c178 <col:3> 'struct S4 (int)' Function 0x7ff381814990 'func_2' 'struct S4 (int)'
+    | `-IntegerLiteral 0x7ff38182c1a0 <col:11> 'int' 0
+    `-ReturnStmt 0x7ff38182c280 <line:42:3, col:10>
+      `-IntegerLiteral 0x7ff38182c260 <col:10> 'int' 0

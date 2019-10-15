@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f90e802bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f90e8856f18 <../Data/C2AST/pragma_arch_attribute_3.c:9:1, col:21> col:17 used bar 'uint32_t ()' extern
+|-FunctionDecl 0x7f90e8857190 <line:13:1, line:18:1> line:13:10 crc32cw 'uint32_t (uint32_t, uint32_t)'
+| |-ParmVarDecl 0x7f90e8857008 <col:18, col:27> col:27 used crc 'uint32_t':'unsigned int'
+| |-ParmVarDecl 0x7f90e8857078 <col:32, col:41> col:41 used val 'uint32_t':'unsigned int'
+| `-CompoundStmt 0x7f90e88575e0 <line:14:1, line:18:1>
+|   |-DeclStmt 0x7f90e88572b0 <line:15:5, col:17>
+|   | `-VarDecl 0x7f90e8857250 <col:5, col:14> col:14 used res 'uint32_t':'unsigned int'
+|   |-GCCAsmStmt 0x7f90e88574f8 <line:16:5, col:62>
+|   | |-DeclRefExpr 0x7f90e88573b8 <col:37> 'uint32_t':'unsigned int' lvalue Var 0x7f90e8857250 'res' 'uint32_t':'unsigned int'
+|   | |-ImplicitCastExpr 0x7f90e88574c8 <col:48> 'uint32_t':'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f90e8857448 <col:48> 'uint32_t':'unsigned int' lvalue ParmVar 0x7f90e8857008 'crc' 'uint32_t':'unsigned int'
+|   | `-ImplicitCastExpr 0x7f90e88574e0 <col:58> 'uint32_t':'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f90e88574a0 <col:58> 'uint32_t':'unsigned int' lvalue ParmVar 0x7f90e8857078 'val' 'uint32_t':'unsigned int'
+|   `-ReturnStmt 0x7f90e88575c8 <line:17:5, col:12>
+|     `-ImplicitCastExpr 0x7f90e88575b0 <col:12> 'uint32_t':'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f90e8857588 <col:12> 'uint32_t':'unsigned int' lvalue Var 0x7f90e8857250 'res' 'uint32_t':'unsigned int'
+`-FunctionDecl 0x7f90e8857628 <line:21:1, line:24:1> line:21:10 restored 'uint32_t ()'
+  `-CompoundStmt 0x7f90e88577a0 <line:22:1, line:24:1>
+    `-ReturnStmt 0x7f90e8857788 <line:23:3, col:14>
+      `-CallExpr 0x7f90e8857760 <col:10, col:14> 'uint32_t':'unsigned int'
+        `-ImplicitCastExpr 0x7f90e8857748 <col:10> 'uint32_t (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f90e88576c8 <col:10> 'uint32_t ()' Function 0x7f90e8856f18 'bar' 'uint32_t ()'

@@ -1,0 +1,37 @@
+../Data/C2AST/pr69866_0.c:9:39: error: aliases are not supported on darwin
+int weaks(int i) __attribute__((weak, alias("_umh")));
+                                      ^
+1 error generated.
+TranslationUnitDecl 0x7f98a28174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f98a2817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f98a2817780 '__int128'
+|-TypedefDecl 0x7f98a2817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98a28177a0 'unsigned __int128'
+|-TypedefDecl 0x7f98a2817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f98a2817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f98a2817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f98a2817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f98a2817e00 'char *'
+|   `-BuiltinType 0x7f98a2817580 'char'
+|-TypedefDecl 0x7f98a2818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98a28180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f98a2817f20 'struct __va_list_tag'
+|     `-Record 0x7f98a2817e98 '__va_list_tag'
+|-FunctionDecl 0x7f98a2859068 <../Data/C2AST/pr69866_0.c:4:1, line:7:1> line:4:5 _umh 'int (int)'
+| |-ParmVarDecl 0x7f98a2818178 <col:10, col:14> col:14 used i 'int'
+| `-CompoundStmt 0x7f98a28591f0 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f98a28591d8 <line:6:3, col:12>
+|     `-BinaryOperator 0x7f98a28591b0 <col:10, col:12> 'int' '+'
+|       |-ImplicitCastExpr 0x7f98a2859198 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f98a2859150 <col:10> 'int' lvalue ParmVar 0x7f98a2818178 'i' 'int'
+|       `-IntegerLiteral 0x7f98a2859178 <col:12> 'int' 1
+|-FunctionDecl 0x7f98a2859318 <line:9:1, col:53> col:5 used weaks 'int (int)'
+| |-ParmVarDecl 0x7f98a2859220 <col:11, col:15> col:15 i 'int'
+| `-WeakAttr 0x7f98a28593c0 <col:33>
+`-FunctionDecl 0x7f98a2859460 <line:11:1, line:14:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7f98a28595d8 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f98a28595c0 <line:13:3, col:18>
+      `-CallExpr 0x7f98a2859590 <col:10, col:18> 'int'
+        |-ImplicitCastExpr 0x7f98a2859578 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f98a2859500 <col:10> 'int (int)' Function 0x7f98a2859318 'weaks' 'int (int)'
+        `-IntegerLiteral 0x7f98a2859528 <col:16> 'int' 10

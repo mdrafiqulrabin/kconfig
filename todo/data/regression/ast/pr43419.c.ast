@@ -1,0 +1,107 @@
+TranslationUnitDecl 0x7fc4a380b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc4a3055330 <../Data/C2AST/pr43419.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc4a30553d0 prev 0x7fc4a3055330 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc4a3055550 <line:7:1, line:13:1> line:7:32 used f 'void (double)'
+| |-ParmVarDecl 0x7fc4a3055488 <col:35, col:42> col:42 used x 'double'
+| |-CompoundStmt 0x7fc4a3056bd0 <line:8:1, line:13:1>
+| | |-DeclStmt 0x7fc4a30557c0 <line:9:3, col:33>
+| | | `-VarDecl 0x7fc4a3055658 <col:3, col:32> col:10 used pluszero 'double' cinit
+| | |   `-CallExpr 0x7fc4a3055770 <col:21, col:32> 'double'
+| | |     |-ImplicitCastExpr 0x7fc4a3055758 <col:21> 'double (*)(double, double)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7fc4a30556b8 <col:21> 'double (double, double)' Function 0x7fc4a302e140 'pow' 'double (double, double)'
+| | |     |-ImplicitCastExpr 0x7fc4a30557a8 <col:26> 'double' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7fc4a30556e0 <col:26> 'double' lvalue ParmVar 0x7fc4a3055488 'x' 'double'
+| | |     `-FloatingLiteral 0x7fc4a3055708 <col:29> 'double' 5.000000e-01
+| | |-DeclStmt 0x7fc4a3055900 <line:10:3, col:30>
+| | | `-VarDecl 0x7fc4a30557f0 <col:3, col:29> col:10 used minuszero 'double' cinit
+| | |   `-CallExpr 0x7fc4a30558b8 <col:22, col:29> 'double'
+| | |     |-ImplicitCastExpr 0x7fc4a30558a0 <col:22> 'double (*)(double)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7fc4a3055850 <col:22> 'double (double)' Function 0x7fc4a302eb60 'sqrt' 'double (double)'
+| | |     `-ImplicitCastExpr 0x7fc4a30558e8 <col:28> 'double' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fc4a3055878 <col:28> 'double' lvalue ParmVar 0x7fc4a3055488 'x' 'double'
+| | `-IfStmt 0x7fc4a3056b98 <line:11:3, line:12:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fc4a3056ad8 </usr/include/math.h:184:5, line:186:72> 'int' '=='
+| |   | |-ParenExpr 0x7fc4a30564e8 <line:184:5, line:186:72> 'int'
+| |   | | `-ConditionalOperator 0x7fc4a30564b8 <line:184:7, line:186:71> 'int'
+| |   | |   |-BinaryOperator 0x7fc4a30559b8 <line:184:7, col:32> 'int' '=='
+| |   | |   | |-UnaryExprOrTypeTraitExpr 0x7fc4a3055960 <col:7, col:15> 'unsigned long' sizeof
+| |   | |   | | `-ParenExpr 0x7fc4a3055940 <col:13, col:15> 'double' lvalue
+| |   | |   | |   `-DeclRefExpr 0x7fc4a3055918 <../Data/C2AST/pr43419.c:11:16> 'double' lvalue Var 0x7fc4a3055658 'pluszero' 'double'
+| |   | |   | `-UnaryExprOrTypeTraitExpr 0x7fc4a3055998 </usr/include/math.h:184:20, col:32> 'unsigned long' sizeof 'float'
+| |   | |   |-CallExpr 0x7fc4a3056110 <col:37, col:65> 'int'
+| |   | |   | |-ImplicitCastExpr 0x7fc4a30560f8 <col:37> 'int (*)(float)' <FunctionToPointerDecay>
+| |   | |   | | `-DeclRefExpr 0x7fc4a3056000 <col:37> 'int (float)' Function 0x7fc4a2848f10 '__inline_signbitf' 'int (float)'
+| |   | |   | `-CStyleCastExpr 0x7fc4a30560d0 <col:55, col:64> 'float' <FloatingCast>
+| |   | |   |   `-ImplicitCastExpr 0x7fc4a30560b8 <col:62, col:64> 'double' <LValueToRValue>
+| |   | |   |     `-ParenExpr 0x7fc4a3056098 <col:62, col:64> 'double' lvalue
+| |   | |   |       `-DeclRefExpr 0x7fc4a3056028 <../Data/C2AST/pr43419.c:11:16> 'double' lvalue Var 0x7fc4a3055658 'pluszero' 'double'
+| |   | |   `-ConditionalOperator 0x7fc4a3056488 </usr/include/math.h:185:7, line:186:71> 'int'
+| |   | |     |-BinaryOperator 0x7fc4a30561e0 <line:185:7, col:33> 'int' '=='
+| |   | |     | |-UnaryExprOrTypeTraitExpr 0x7fc4a3056188 <col:7, col:15> 'unsigned long' sizeof
+| |   | |     | | `-ParenExpr 0x7fc4a3056168 <col:13, col:15> 'double' lvalue
+| |   | |     | |   `-DeclRefExpr 0x7fc4a3056140 <../Data/C2AST/pr43419.c:11:16> 'double' lvalue Var 0x7fc4a3055658 'pluszero' 'double'
+| |   | |     | `-UnaryExprOrTypeTraitExpr 0x7fc4a30561c0 </usr/include/math.h:185:20, col:33> 'unsigned long' sizeof 'double'
+| |   | |     |-CallExpr 0x7fc4a3056318 <col:37, col:66> 'int'
+| |   | |     | |-ImplicitCastExpr 0x7fc4a3056300 <col:37> 'int (*)(double)' <FunctionToPointerDecay>
+| |   | |     | | `-DeclRefExpr 0x7fc4a3056208 <col:37> 'int (double)' Function 0x7fc4a28495a0 '__inline_signbitd' 'int (double)'
+| |   | |     | `-CStyleCastExpr 0x7fc4a30562d8 <col:55, col:65> 'double' <NoOp>
+| |   | |     |   `-ImplicitCastExpr 0x7fc4a30562c0 <col:63, col:65> 'double' <LValueToRValue>
+| |   | |     |     `-ParenExpr 0x7fc4a30562a0 <col:63, col:65> 'double' lvalue
+| |   | |     |       `-DeclRefExpr 0x7fc4a3056230 <../Data/C2AST/pr43419.c:11:16> 'double' lvalue Var 0x7fc4a3055658 'pluszero' 'double'
+| |   | |     `-CallExpr 0x7fc4a3056458 </usr/include/math.h:186:37, col:71> 'int'
+| |   | |       |-ImplicitCastExpr 0x7fc4a3056440 <col:37> 'int (*)(long double)' <FunctionToPointerDecay>
+| |   | |       | `-DeclRefExpr 0x7fc4a3056348 <col:37> 'int (long double)' Function 0x7fc4a284ac60 '__inline_signbitl' 'int (long double)'
+| |   | |       `-CStyleCastExpr 0x7fc4a3056418 <col:55, col:70> 'long double' <FloatingCast>
+| |   | |         `-ImplicitCastExpr 0x7fc4a3056400 <col:68, col:70> 'double' <LValueToRValue>
+| |   | |           `-ParenExpr 0x7fc4a30563e0 <col:68, col:70> 'double' lvalue
+| |   | |             `-DeclRefExpr 0x7fc4a3056370 <../Data/C2AST/pr43419.c:11:16> 'double' lvalue Var 0x7fc4a3055658 'pluszero' 'double'
+| |   | `-ParenExpr 0x7fc4a3056ab8 </usr/include/math.h:184:5, line:186:72> 'int'
+| |   |   `-ConditionalOperator 0x7fc4a3056a88 <line:184:7, line:186:71> 'int'
+| |   |     |-BinaryOperator 0x7fc4a30565a8 <line:184:7, col:32> 'int' '=='
+| |   |     | |-UnaryExprOrTypeTraitExpr 0x7fc4a3056550 <col:7, col:15> 'unsigned long' sizeof
+| |   |     | | `-ParenExpr 0x7fc4a3056530 <col:13, col:15> 'double' lvalue
+| |   |     | |   `-DeclRefExpr 0x7fc4a3056508 <../Data/C2AST/pr43419.c:11:38> 'double' lvalue Var 0x7fc4a30557f0 'minuszero' 'double'
+| |   |     | `-UnaryExprOrTypeTraitExpr 0x7fc4a3056588 </usr/include/math.h:184:20, col:32> 'unsigned long' sizeof 'float'
+| |   |     |-CallExpr 0x7fc4a30566e0 <col:37, col:65> 'int'
+| |   |     | |-ImplicitCastExpr 0x7fc4a30566c8 <col:37> 'int (*)(float)' <FunctionToPointerDecay>
+| |   |     | | `-DeclRefExpr 0x7fc4a30565d0 <col:37> 'int (float)' Function 0x7fc4a2848f10 '__inline_signbitf' 'int (float)'
+| |   |     | `-CStyleCastExpr 0x7fc4a30566a0 <col:55, col:64> 'float' <FloatingCast>
+| |   |     |   `-ImplicitCastExpr 0x7fc4a3056688 <col:62, col:64> 'double' <LValueToRValue>
+| |   |     |     `-ParenExpr 0x7fc4a3056668 <col:62, col:64> 'double' lvalue
+| |   |     |       `-DeclRefExpr 0x7fc4a30565f8 <../Data/C2AST/pr43419.c:11:38> 'double' lvalue Var 0x7fc4a30557f0 'minuszero' 'double'
+| |   |     `-ConditionalOperator 0x7fc4a3056a58 </usr/include/math.h:185:7, line:186:71> 'int'
+| |   |       |-BinaryOperator 0x7fc4a30567b0 <line:185:7, col:33> 'int' '=='
+| |   |       | |-UnaryExprOrTypeTraitExpr 0x7fc4a3056758 <col:7, col:15> 'unsigned long' sizeof
+| |   |       | | `-ParenExpr 0x7fc4a3056738 <col:13, col:15> 'double' lvalue
+| |   |       | |   `-DeclRefExpr 0x7fc4a3056710 <../Data/C2AST/pr43419.c:11:38> 'double' lvalue Var 0x7fc4a30557f0 'minuszero' 'double'
+| |   |       | `-UnaryExprOrTypeTraitExpr 0x7fc4a3056790 </usr/include/math.h:185:20, col:33> 'unsigned long' sizeof 'double'
+| |   |       |-CallExpr 0x7fc4a30568e8 <col:37, col:66> 'int'
+| |   |       | |-ImplicitCastExpr 0x7fc4a30568d0 <col:37> 'int (*)(double)' <FunctionToPointerDecay>
+| |   |       | | `-DeclRefExpr 0x7fc4a30567d8 <col:37> 'int (double)' Function 0x7fc4a28495a0 '__inline_signbitd' 'int (double)'
+| |   |       | `-CStyleCastExpr 0x7fc4a30568a8 <col:55, col:65> 'double' <NoOp>
+| |   |       |   `-ImplicitCastExpr 0x7fc4a3056890 <col:63, col:65> 'double' <LValueToRValue>
+| |   |       |     `-ParenExpr 0x7fc4a3056870 <col:63, col:65> 'double' lvalue
+| |   |       |       `-DeclRefExpr 0x7fc4a3056800 <../Data/C2AST/pr43419.c:11:38> 'double' lvalue Var 0x7fc4a30557f0 'minuszero' 'double'
+| |   |       `-CallExpr 0x7fc4a3056a28 </usr/include/math.h:186:37, col:71> 'int'
+| |   |         |-ImplicitCastExpr 0x7fc4a3056a10 <col:37> 'int (*)(long double)' <FunctionToPointerDecay>
+| |   |         | `-DeclRefExpr 0x7fc4a3056918 <col:37> 'int (long double)' Function 0x7fc4a284ac60 '__inline_signbitl' 'int (long double)'
+| |   |         `-CStyleCastExpr 0x7fc4a30569e8 <col:55, col:70> 'long double' <FloatingCast>
+| |   |           `-ImplicitCastExpr 0x7fc4a30569d0 <col:68, col:70> 'double' <LValueToRValue>
+| |   |             `-ParenExpr 0x7fc4a30569b0 <col:68, col:70> 'double' lvalue
+| |   |               `-DeclRefExpr 0x7fc4a3056940 <../Data/C2AST/pr43419.c:11:38> 'double' lvalue Var 0x7fc4a30557f0 'minuszero' 'double'
+| |   |-CallExpr 0x7fc4a3056b70 <line:12:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fc4a3056b58 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fc4a3056b00 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc4a30553d0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fc4a30555f8 <line:7:21>
+`-FunctionDecl 0x7fc4a3056c90 <line:15:1, line:19:1> line:15:5 main 'int (void)'
+  `-CompoundStmt 0x7fc4a3056e68 <line:16:1, line:19:1>
+    |-CallExpr 0x7fc4a3056e00 <line:17:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fc4a3056de8 <col:3> 'void (*)(double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc4a3056d58 <col:3> 'void (double)' Function 0x7fc4a3055550 'f' 'void (double)'
+    | `-UnaryOperator 0x7fc4a3056da0 <col:6, col:7> 'double' prefix '-'
+    |   `-FloatingLiteral 0x7fc4a3056d80 <col:7> 'double' 0.000000e+00
+    `-ReturnStmt 0x7fc4a3056e50 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fc4a3056e30 <col:10> 'int' 0

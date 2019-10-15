@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f98e382bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f98e382c970 <../Data/C2AST/pr58066.c:7:1, col:22> col:22 used ccc1 'char' static tls
+|-FunctionDecl 0x7f98e4014290 <line:8:1, line:11:1> line:8:7 foo 'void *()'
+| `-CompoundStmt 0x7f98e40143a8 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f98e4014390 <line:10:2, col:10>
+|     `-ImplicitCastExpr 0x7f98e4014378 <col:9, col:10> 'void *' <BitCast>
+|       `-UnaryOperator 0x7f98e4014358 <col:9, col:10> 'char *' prefix '&'
+|         `-DeclRefExpr 0x7f98e4014330 <col:10> 'char' lvalue Var 0x7f98e382c970 'ccc1' 'char'
+|-VarDecl 0x7f98e40143d0 <line:13:1, col:15> col:15 used ccc2 'char' tls
+`-FunctionDecl 0x7f98e4014458 <line:14:1, line:17:1> line:14:7 goo 'void *()'
+  `-CompoundStmt 0x7f98e4014570 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7f98e4014558 <line:16:2, col:10>
+      `-ImplicitCastExpr 0x7f98e4014540 <col:9, col:10> 'void *' <BitCast>
+        `-UnaryOperator 0x7f98e4014520 <col:9, col:10> 'char *' prefix '&'
+          `-DeclRefExpr 0x7f98e40144f8 <col:10> 'char' lvalue Var 0x7f98e40143d0 'ccc2' 'char'

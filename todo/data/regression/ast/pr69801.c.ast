@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fa9a88292e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa9a8829f60 <../Data/C2AST/pr69801.c:5:1, line:7:1> line:5:1 struct definition
+| `-FieldDecl 0x7fa9a9017a98 <line:6:5, col:13> col:10 referenced c 'char [1]'
+|-VarDecl 0x7fa9a9017b30 <line:5:1, line:7:3> col:3 used b 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+|-VarDecl 0x7fa9a9017bf0 <line:5:1, line:7:6> col:6 used c 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+|-VarDecl 0x7fa9a9017c88 <line:8:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7fa9a9017d00 <col:1, col:8> col:8 used e 'int'
+`-FunctionDecl 0x7fa9a9017dc8 <line:9:1, col:49> col:6 fn1 'void ()'
+  `-CompoundStmt 0x7fa9a9018260 <col:12, col:49>
+    `-ConditionalOperator 0x7fa9a9018230 <col:14, col:46> 'char *'
+      |-ImplicitCastExpr 0x7fa9a9018120 <col:14> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa9a9017e68 <col:14> 'int' lvalue Var 0x7fa9a9017d00 'e' 'int'
+      |-ImplicitCastExpr 0x7fa9a9018138 <col:18, col:30> 'char *' <ArrayToPointerDecay>
+      | `-MemberExpr 0x7fa9a9017fa0 <col:18, col:30> 'char [1]' .c 0x7fa9a9017a98
+      |   `-ParenExpr 0x7fa9a9017f80 <col:18, col:28> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+      |     `-ConditionalOperator 0x7fa9a9017f50 <col:19, col:27> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+      |       |-ImplicitCastExpr 0x7fa9a9017f08 <col:19> 'int' <LValueToRValue>
+      |       | `-DeclRefExpr 0x7fa9a9017e90 <col:19> 'int' lvalue Var 0x7fa9a9017c88 'd' 'int'
+      |       |-ImplicitCastExpr 0x7fa9a9017f20 <col:23> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' <LValueToRValue>
+      |       | `-DeclRefExpr 0x7fa9a9017eb8 <col:23> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' lvalue Var 0x7fa9a9017b30 'b' 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+      |       `-ImplicitCastExpr 0x7fa9a9017f38 <col:27> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fa9a9017ee0 <col:27> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' lvalue Var 0x7fa9a9017bf0 'c' 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+      `-ImplicitCastExpr 0x7fa9a9018150 <col:34, col:46> 'char *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7fa9a90180e8 <col:34, col:46> 'char [1]' .c 0x7fa9a9017a98
+          `-ParenExpr 0x7fa9a90180c8 <col:34, col:44> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+            `-ConditionalOperator 0x7fa9a9018098 <col:35, col:43> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+              |-ImplicitCastExpr 0x7fa9a9018050 <col:35> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fa9a9017fd8 <col:35> 'int' lvalue Var 0x7fa9a9017c88 'd' 'int'
+              |-ImplicitCastExpr 0x7fa9a9018068 <col:39> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' <LValueToRValue>
+              | `-DeclRefExpr 0x7fa9a9018000 <col:39> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' lvalue Var 0x7fa9a9017b30 'b' 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'
+              `-ImplicitCastExpr 0x7fa9a9018080 <col:43> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' <LValueToRValue>
+                `-DeclRefExpr 0x7fa9a9018028 <col:43> 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)' lvalue Var 0x7fa9a9017bf0 'c' 'struct (anonymous struct at ../Data/C2AST/pr69801.c:5:1)':'struct (anonymous at ../Data/C2AST/pr69801.c:5:1)'

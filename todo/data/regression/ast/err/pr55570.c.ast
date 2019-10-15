@@ -1,0 +1,20 @@
+../Data/C2AST/pr55570.c:4:40: error: use of undeclared identifier 'SOME_NOT_DEFINED_MACRO'
+char array[16] __attribute__((aligned (SOME_NOT_DEFINED_MACRO)));  
+                                       ^
+1 error generated.
+TranslationUnitDecl 0x7faadb0258e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faadb025e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faadb025b80 '__int128'
+|-TypedefDecl 0x7faadb025ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faadb025ba0 'unsigned __int128'
+|-TypedefDecl 0x7faadb0261a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faadb025fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7faadb025f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7faadb026240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faadb026200 'char *'
+|   `-BuiltinType 0x7faadb025980 'char'
+|-TypedefDecl 0x7faadb026508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faadb0264b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faadb026320 'struct __va_list_tag'
+|     `-Record 0x7faadb026298 '__va_list_tag'
+`-VarDecl 0x7faadb800820 <../Data/C2AST/pr55570.c:4:1, col:14> col:6 array 'char [16]'

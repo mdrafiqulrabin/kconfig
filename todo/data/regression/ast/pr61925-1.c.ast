@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f9f0a82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9f0b015200 <../Data/C2AST/pr61925-1.c:8:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7f9f0a82c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7f9f0a82bee0 'float'
+| `-MayAliasAttr 0x7f9f0b015258 <col:60>
+|-TypedefDecl 0x7f9f0b0152f8 <line:9:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |-VectorType 0x7f9f0b0152c0 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+| | `-BuiltinType 0x7f9f0a82be20 'long long'
+| `-MayAliasAttr 0x7f9f0b015350 <col:65>
+|-FunctionDecl 0x7f9f0b0154f0 <line:10:1, line:13:1> line:11:1 bar '__m128i (__m128)'
+| |-ParmVarDecl 0x7f9f0b0153f0 <col:6, col:13> col:13 __A '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-CompoundStmt 0x7f9f0b0155d8 <line:12:1, line:13:1>
+`-FunctionDecl 0x7f9f0b0157d0 <line:17:1, line:21:1> line:18:1 foo '__attribute__((__vector_size__(4 * sizeof(int)))) int (__attribute__((__vector_size__(4 * sizeof(int)))) int, __attribute__((__vector_size__(4 * sizeof(int)))) int)'
+  |-ParmVarDecl 0x7f9f0b015668 <col:6, col:45> col:45 used a '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7f9f0b0156f8 <col:48, col:87> col:87 used b '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7f9f0b015940 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7f9f0b015928 <line:20:3, col:14>
+      `-BinaryOperator 0x7f9f0b015900 <col:10, col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7f9f0b0158d0 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9f0b015880 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7f9f0b015668 'a' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7f9f0b0158e8 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9f0b0158a8 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7f9f0b0156f8 'b' '__attribute__((__vector_size__(4 * sizeof(int)))) int'

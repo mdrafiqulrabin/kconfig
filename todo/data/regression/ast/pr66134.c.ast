@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fd5fe82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd5ff015228 <../Data/C2AST/pr66134.c:4:12> col:12 implicit used vfork 'int (void)' extern
+| `-ReturnsTwiceAttr 0x7fd5ff0152c8 <col:12> Implicit
+|-FunctionDecl 0x7fd5ff015310 prev 0x7fd5ff015228 <col:1, col:64> col:12 used vfork 'int (void)' extern
+| |-NoThrowAttr 0x7fd5ff0153b0 <col:41>
+| `-ReturnsTwiceAttr 0x7fd5ff0153f8 <col:12> Inherited Implicit
+|-FunctionDecl 0x7fd5ff0154d0 <line:5:1, col:17> col:6 used test1 'void (void)'
+|-FunctionDecl 0x7fd5ff015640 <line:6:1, col:17> col:6 used test2 'void (void)'
+|-FunctionDecl 0x7fd5ff0157e0 <line:7:1, col:18> col:6 used test3 'void (int *)'
+| `-ParmVarDecl 0x7fd5ff015720 <col:13, col:17> col:18 'int *'
+`-FunctionDecl 0x7fd5ff015928 <line:9:1, line:17:1> line:9:6 test 'void (int *)'
+  |-ParmVarDecl 0x7fd5ff0158a0 <col:12, col:17> col:17 used p 'int *'
+  `-CompoundStmt 0x7fd5ff015cd8 <line:10:1, line:17:1>
+    |-CallExpr 0x7fd5ff015a40 <line:11:2, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fd5ff015a28 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd5ff0159d0 <col:2> 'void (void)' Function 0x7fd5ff0154d0 'test1' 'void (void)'
+    |-UnaryOperator 0x7fd5ff015a90 <line:12:2, col:3> 'int *' postfix '++'
+    | `-DeclRefExpr 0x7fd5ff015a68 <col:2> 'int *' lvalue ParmVar 0x7fd5ff0158a0 'p' 'int *'
+    |-CallExpr 0x7fd5ff015af0 <line:13:2, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fd5ff015ad8 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd5ff015ab0 <col:2> 'void (void)' Function 0x7fd5ff015640 'test2' 'void (void)'
+    |-UnaryOperator 0x7fd5ff015b40 <line:14:2, col:3> 'int *' postfix '++'
+    | `-DeclRefExpr 0x7fd5ff015b18 <col:2> 'int *' lvalue ParmVar 0x7fd5ff0158a0 'p' 'int *'
+    |-CallExpr 0x7fd5ff015bd0 <line:15:2, col:9> 'int'
+    | `-ImplicitCastExpr 0x7fd5ff015bb8 <col:2> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd5ff015b60 <col:2> 'int (void)' Function 0x7fd5ff015310 'vfork' 'int (void)'
+    `-CallExpr 0x7fd5ff015c90 <line:16:2, col:10> 'void'
+      |-ImplicitCastExpr 0x7fd5ff015c78 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd5ff015bf8 <col:2> 'void (int *)' Function 0x7fd5ff0157e0 'test3' 'void (int *)'
+      `-ImplicitCastExpr 0x7fd5ff015cc0 <col:9> 'int *' <LValueToRValue>
+        `-DeclRefExpr 0x7fd5ff015c20 <col:9> 'int *' lvalue ParmVar 0x7fd5ff0158a0 'p' 'int *'

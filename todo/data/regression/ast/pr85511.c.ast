@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fdb258058e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdb2584ba28 <../Data/C2AST/pr85511.c:5:1, line:9:1> line:6:1 foo 'unsigned int (void)'
+| `-CompoundStmt 0x7fdb2584bca0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fdb2584bc88 <line:8:3, col:41>
+|     `-CallExpr 0x7fdb2584bc60 <col:10, col:41> 'unsigned int'
+|       `-ImplicitCastExpr 0x7fdb2584bc48 <col:10> 'unsigned int (*)(void)' <BuiltinFnToFnPtr>
+|         `-DeclRefExpr 0x7fdb2584bbf0 <col:10> '<builtin fn type>' Function 0x7fdb2584bb08 '__builtin_ia32_readeflags_u32' 'unsigned int (void)'
+|-FunctionDecl 0x7fdb2584bb08 <col:10> col:10 implicit used __builtin_ia32_readeflags_u32 'unsigned int (void)' extern
+| `-NoThrowAttr 0x7fdb2584bba8 <col:10> Implicit
+|-FunctionDecl 0x7fdb2584bd90 <line:11:1, line:15:1> line:12:1 bar 'void (unsigned int)'
+| |-ParmVarDecl 0x7fdb2584bcd0 <col:6, col:19> col:19 used x 'unsigned int'
+| `-CompoundStmt 0x7fdb2584c068 <line:13:1, line:15:1>
+|   `-CallExpr 0x7fdb2584c020 <line:14:3, col:36> 'void'
+|     |-ImplicitCastExpr 0x7fdb2584c008 <col:3> 'void (*)(unsigned int)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fdb2584bf88 <col:3> '<builtin fn type>' Function 0x7fdb2584be38 '__builtin_ia32_writeeflags_u32' 'void (unsigned int)'
+|     `-ImplicitCastExpr 0x7fdb2584c050 <col:35> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fdb2584bfb0 <col:35> 'unsigned int' lvalue ParmVar 0x7fdb2584bcd0 'x' 'unsigned int'
+`-FunctionDecl 0x7fdb2584be38 <col:3> col:3 implicit used __builtin_ia32_writeeflags_u32 'void (unsigned int)' extern
+  |-ParmVarDecl 0x7fdb2584bed8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  `-NoThrowAttr 0x7fdb2584bf40 <col:3> Implicit

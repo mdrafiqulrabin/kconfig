@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7ff42c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff42c82c988 <../Data/C2AST/pr79793-2.c:4:1, col:22> col:22 referenced uword_t 'unsigned long'
+| |-BuiltinType 0x7ff42c82bea0 'unsigned long'
+| `-ModeAttr 0x7ff42d015200 <col:46, col:60> __word__
+|-FunctionDecl 0x7ff42d015410 <line:6:1, line:12:1> line:8:1 used fn1 'void (void *, uword_t)'
+| |-ParmVarDecl 0x7ff42d015268 <col:6, col:12> col:12 frame 'void *'
+| |-ParmVarDecl 0x7ff42d015300 <col:19, col:27> col:27 error 'uword_t':'unsigned long'
+| |-CompoundStmt 0x7ff42d015910 <line:9:1, line:12:1>
+| | |-DeclStmt 0x7ff42d0156a8 <line:10:3, col:56>
+| | | `-VarDecl 0x7ff42d0155f8 <col:3, col:26> col:8 used fxsave_region 'char [512]'
+| | |   `-AlignedAttr 0x7ff42d015658 <col:43, col:53> aligned
+| | |     `-IntegerLiteral 0x7ff42d015578 <col:51> 'int' 16
+| | `-CallExpr 0x7ff42d0158b0 <line:11:3, col:41> 'void'
+| |   |-ImplicitCastExpr 0x7ff42d015898 <col:3> 'void (*)(void *)' <BuiltinFnToFnPtr>
+| |   | `-DeclRefExpr 0x7ff42d015800 <col:3> '<builtin fn type>' Function 0x7ff42d0156f8 '__builtin_ia32_fxsave64' 'void (void *)'
+| |   `-ImplicitCastExpr 0x7ff42d0158f8 <col:28> 'void *' <BitCast>
+| |     `-ImplicitCastExpr 0x7ff42d0158e0 <col:28> 'char *' <ArrayToPointerDecay>
+| |       `-DeclRefExpr 0x7ff42d015828 <col:28> 'char [512]' lvalue Var 0x7ff42d0155f8 'fxsave_region' 'char [512]'
+| |-AnyX86InterruptAttr 0x7ff42d0154c0 <line:7:18>
+| `-UsedAttr 0x7ff42d015508 <<invalid sloc>> Implicit
+`-FunctionDecl 0x7ff42d0156f8 <line:11:3> col:3 implicit used __builtin_ia32_fxsave64 'void (void *)' extern
+  `-ParmVarDecl 0x7ff42d015798 <<invalid sloc>> <invalid sloc> 'void *'

@@ -1,0 +1,103 @@
+TranslationUnitDecl 0x7ff3b982ace8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff3b982b960 <../Data/C2AST/pr67226.c:1:1, line:4:1> line:1:8 struct assembly_operand definition
+| |-FieldDecl 0x7ff3b986c838 <line:3:3, col:7> col:7 referenced type 'int'
+| |-FieldDecl 0x7ff3b986c898 <col:3, col:13> col:13 referenced value 'int'
+| |-FieldDecl 0x7ff3b986c8f8 <col:3, col:20> col:20 referenced symtype 'int'
+| |-FieldDecl 0x7ff3b986c958 <col:3, col:29> col:29 referenced symflags 'int'
+| `-FieldDecl 0x7ff3b986c9b8 <col:3, col:39> col:39 referenced marker 'int'
+|-VarDecl 0x7ff3b986ca50 <line:6:1, col:25> col:25 used to_input 'struct assembly_operand':'struct assembly_operand'
+|-VarDecl 0x7ff3b986cb10 <col:1, col:35> col:35 used from_input 'struct assembly_operand':'struct assembly_operand'
+|-FunctionDecl 0x7ff3b986cd30 <line:8:1, line:13:1> line:9:1 used assemblez_1 'void (int, struct assembly_operand)'
+| |-ParmVarDecl 0x7ff3b986cba0 <col:14, col:18> col:18 internal_number 'int'
+| |-ParmVarDecl 0x7ff3b986cc20 <col:35, col:59> col:59 used o1 'struct assembly_operand':'struct assembly_operand'
+| |-CompoundStmt 0x7ff3b986d190 <line:10:1, line:13:1>
+| | `-IfStmt 0x7ff3b986d158 <line:11:3, line:12:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff3b986cf18 <line:11:7, col:29> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7ff3b986cee8 <col:7, col:10> 'int' <LValueToRValue>
+| |   | | `-MemberExpr 0x7ff3b986ce50 <col:7, col:10> 'int' lvalue .type 0x7ff3b986c838
+| |   | |   `-DeclRefExpr 0x7ff3b986ce28 <col:7> 'struct assembly_operand':'struct assembly_operand' lvalue ParmVar 0x7ff3b986cc20 'o1' 'struct assembly_operand':'struct assembly_operand'
+| |   | `-ImplicitCastExpr 0x7ff3b986cf00 <col:18, col:29> 'int' <LValueToRValue>
+| |   |   `-MemberExpr 0x7ff3b986ceb0 <col:18, col:29> 'int' lvalue .type 0x7ff3b986c838
+| |   |     `-DeclRefExpr 0x7ff3b986ce88 <col:18> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+| |   |-CallExpr 0x7ff3b986d130 <line:12:5, col:22> 'void'
+| |   | `-ImplicitCastExpr 0x7ff3b986d118 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   |   `-DeclRefExpr 0x7ff3b986d0c8 <col:5> '<builtin fn type>' Function 0x7ff3b986cfe0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff3b986cde0 <line:8:22>
+|-FunctionDecl 0x7ff3b986cfe0 <line:12:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7ff3b986d080 <col:5> Implicit
+|-FunctionDecl 0x7ff3b986d360 <line:15:1, line:22:1> line:16:1 used t0 'void (struct assembly_operand, struct assembly_operand)'
+| |-ParmVarDecl 0x7ff3b986d1c8 <col:5, col:29> col:29 used to 'struct assembly_operand':'struct assembly_operand'
+| |-ParmVarDecl 0x7ff3b986d248 <col:33, col:57> col:57 used from 'struct assembly_operand':'struct assembly_operand'
+| |-CompoundStmt 0x7ff3b986d6f0 <line:17:1, line:22:1>
+| | `-IfStmt 0x7ff3b986d6b8 <line:18:3, line:21:22>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff3b986d4f0 <line:18:7, col:19> 'int' '=='
+| |   | |-ImplicitCastExpr 0x7ff3b986d4d8 <col:7, col:10> 'int' <LValueToRValue>
+| |   | | `-MemberExpr 0x7ff3b986d480 <col:7, col:10> 'int' lvalue .value 0x7ff3b986c898
+| |   | |   `-DeclRefExpr 0x7ff3b986d458 <col:7> 'struct assembly_operand':'struct assembly_operand' lvalue ParmVar 0x7ff3b986d1c8 'to' 'struct assembly_operand':'struct assembly_operand'
+| |   | `-IntegerLiteral 0x7ff3b986d4b8 <col:19> 'int' 0
+| |   |-CallExpr 0x7ff3b986d600 <line:19:5, col:26> 'void'
+| |   | |-ImplicitCastExpr 0x7ff3b986d5e8 <col:5> 'void (*)(int, struct assembly_operand)' <FunctionToPointerDecay>
+| |   | | `-DeclRefExpr 0x7ff3b986d518 <col:5> 'void (int, struct assembly_operand)' Function 0x7ff3b986cd30 'assemblez_1' 'void (int, struct assembly_operand)'
+| |   | |-IntegerLiteral 0x7ff3b986d540 <col:18> 'int' 32
+| |   | `-ImplicitCastExpr 0x7ff3b986d638 <col:22> 'struct assembly_operand':'struct assembly_operand' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x7ff3b986d560 <col:22> 'struct assembly_operand':'struct assembly_operand' lvalue ParmVar 0x7ff3b986d248 'from' 'struct assembly_operand':'struct assembly_operand'
+| |   `-CallExpr 0x7ff3b986d690 <line:21:5, col:22> 'void'
+| |     `-ImplicitCastExpr 0x7ff3b986d678 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |       `-DeclRefExpr 0x7ff3b986d650 <col:5> '<builtin fn type>' Function 0x7ff3b986cfe0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| `-NoInlineAttr 0x7ff3b986d410 <line:15:22>
+`-FunctionDecl 0x7ff3b9884200 <line:24:1, line:42:1> line:25:1 main 'int (void)'
+  `-CompoundStmt 0x7ff3b9884ae0 <line:26:1, line:42:1>
+    |-BinaryOperator 0x7ff3b9884348 <line:27:3, col:20> 'int' '='
+    | |-MemberExpr 0x7ff3b98842f0 <col:3, col:12> 'int' lvalue .value 0x7ff3b986c898
+    | | `-DeclRefExpr 0x7ff3b98842c8 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986ca50 'to_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884328 <col:20> 'int' 0
+    |-BinaryOperator 0x7ff3b98843f0 <line:28:3, col:19> 'int' '='
+    | |-MemberExpr 0x7ff3b9884398 <col:3, col:12> 'int' lvalue .type 0x7ff3b986c838
+    | | `-DeclRefExpr 0x7ff3b9884370 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986ca50 'to_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b98843d0 <col:19> 'int' 1
+    |-BinaryOperator 0x7ff3b9884498 <line:29:3, col:22> 'int' '='
+    | |-MemberExpr 0x7ff3b9884440 <col:3, col:12> 'int' lvalue .symtype 0x7ff3b986c8f8
+    | | `-DeclRefExpr 0x7ff3b9884418 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986ca50 'to_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884478 <col:22> 'int' 2
+    |-BinaryOperator 0x7ff3b9884540 <line:30:3, col:23> 'int' '='
+    | |-MemberExpr 0x7ff3b98844e8 <col:3, col:12> 'int' lvalue .symflags 0x7ff3b986c958
+    | | `-DeclRefExpr 0x7ff3b98844c0 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986ca50 'to_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884520 <col:23> 'int' 3
+    |-BinaryOperator 0x7ff3b98845e8 <line:31:3, col:21> 'int' '='
+    | |-MemberExpr 0x7ff3b9884590 <col:3, col:12> 'int' lvalue .marker 0x7ff3b986c9b8
+    | | `-DeclRefExpr 0x7ff3b9884568 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986ca50 'to_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b98845c8 <col:21> 'int' 4
+    |-BinaryOperator 0x7ff3b9884690 <line:33:3, col:22> 'int' '='
+    | |-MemberExpr 0x7ff3b9884638 <col:3, col:14> 'int' lvalue .value 0x7ff3b986c898
+    | | `-DeclRefExpr 0x7ff3b9884610 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884670 <col:22> 'int' 5
+    |-BinaryOperator 0x7ff3b9884738 <line:34:3, col:21> 'int' '='
+    | |-MemberExpr 0x7ff3b98846e0 <col:3, col:14> 'int' lvalue .type 0x7ff3b986c838
+    | | `-DeclRefExpr 0x7ff3b98846b8 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884718 <col:21> 'int' 6
+    |-BinaryOperator 0x7ff3b98847e0 <line:35:3, col:24> 'int' '='
+    | |-MemberExpr 0x7ff3b9884788 <col:3, col:14> 'int' lvalue .symtype 0x7ff3b986c8f8
+    | | `-DeclRefExpr 0x7ff3b9884760 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b98847c0 <col:24> 'int' 7
+    |-BinaryOperator 0x7ff3b9884888 <line:36:3, col:25> 'int' '='
+    | |-MemberExpr 0x7ff3b9884830 <col:3, col:14> 'int' lvalue .symflags 0x7ff3b986c958
+    | | `-DeclRefExpr 0x7ff3b9884808 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884868 <col:25> 'int' 8
+    |-BinaryOperator 0x7ff3b9884930 <line:37:3, col:23> 'int' '='
+    | |-MemberExpr 0x7ff3b98848d8 <col:3, col:14> 'int' lvalue .marker 0x7ff3b986c9b8
+    | | `-DeclRefExpr 0x7ff3b98848b0 <col:3> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-IntegerLiteral 0x7ff3b9884910 <col:23> 'int' 9
+    |-CallExpr 0x7ff3b9884a40 <line:39:3, col:27> 'void'
+    | |-ImplicitCastExpr 0x7ff3b9884a28 <col:3> 'void (*)(struct assembly_operand, struct assembly_operand)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff3b9884958 <col:3> 'void (struct assembly_operand, struct assembly_operand)' Function 0x7ff3b986d360 't0' 'void (struct assembly_operand, struct assembly_operand)'
+    | |-ImplicitCastExpr 0x7ff3b9884a78 <col:7> 'struct assembly_operand':'struct assembly_operand' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff3b9884980 <col:7> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986ca50 'to_input' 'struct assembly_operand':'struct assembly_operand'
+    | `-ImplicitCastExpr 0x7ff3b9884a90 <col:17> 'struct assembly_operand':'struct assembly_operand' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ff3b98849a8 <col:17> 'struct assembly_operand':'struct assembly_operand' lvalue Var 0x7ff3b986cb10 'from_input' 'struct assembly_operand':'struct assembly_operand'
+    `-ReturnStmt 0x7ff3b9884ac8 <line:41:3, col:10>
+      `-IntegerLiteral 0x7ff3b9884aa8 <col:10> 'int' 0

@@ -1,0 +1,70 @@
+../Data/C2AST/pr77624-2.c:8:32: error: too many arguments to function call, expected 2, have 3
+  __atomic_is_lock_free (2, a, 2);       
+  ~~~~~~~~~~~~~~~~~~~~~        ^
+../Data/C2AST/pr77624-2.c:9:27: error: too few arguments to function call, expected 2, have 1
+  __atomic_is_lock_free (2);             
+  ~~~~~~~~~~~~~~~~~~~~~   ^
+../Data/C2AST/pr77624-2.c:10:29: error: passing 'double' to parameter of incompatible type 'const volatile void *'
+  __atomic_is_lock_free (2, b);          
+                            ^
+../Data/C2AST/pr77624-2.c:20:36: error: too many arguments to function call, expected 2, have 3
+  __atomic_always_lock_free (2, a, 2);   
+  ~~~~~~~~~~~~~~~~~~~~~~~~~        ^
+../Data/C2AST/pr77624-2.c:21:31: error: too few arguments to function call, expected 2, have 1
+  __atomic_always_lock_free (2);         
+  ~~~~~~~~~~~~~~~~~~~~~~~~~   ^
+../Data/C2AST/pr77624-2.c:22:33: error: passing 'double' to parameter of incompatible type 'const volatile void *'
+  __atomic_always_lock_free (2, b);      
+                                ^
+6 errors generated.
+TranslationUnitDecl 0x7ffde902b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffde902b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffde902b580 '__int128'
+|-TypedefDecl 0x7ffde902b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffde902b5a0 'unsigned __int128'
+|-TypedefDecl 0x7ffde902bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffde902b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffde902b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffde902bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffde902bc00 'char *'
+|   `-BuiltinType 0x7ffde902b380 'char'
+|-TypedefDecl 0x7ffde902bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffde902beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffde902bd20 'struct __va_list_tag'
+|     `-Record 0x7ffde902bc98 '__va_list_tag'
+|-FunctionDecl 0x7ffde9814260 <../Data/C2AST/pr77624-2.c:4:1, line:14:1> line:5:1 foo 'void (int *)'
+| |-ParmVarDecl 0x7ffde902bfa0 <col:6, col:11> col:11 used a 'int *'
+| `-CompoundStmt 0x7ffde9814dc8 <line:6:1, line:14:1>
+|   |-DeclStmt 0x7ffde98143f8 <line:7:3, col:15>
+|   | `-VarDecl 0x7ffde9814360 <col:3, col:14> col:10 used b 'double' cinit
+|   |   `-ImplicitCastExpr 0x7ffde98143e0 <col:14> 'double' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7ffde98143c0 <col:14> 'int' 0
+|   `-CallExpr 0x7ffde9814d60 <line:13:3, col:30> 'int'
+|     |-ImplicitCastExpr 0x7ffde9814d48 <col:3> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffde9814ce0 <col:3> '<builtin fn type>' Function 0x7ffde9814480 '__atomic_is_lock_free' 'int (unsigned long, const volatile void *)'
+|     |-ImplicitCastExpr 0x7ffde9814d98 <col:26> 'unsigned long' <IntegralCast>
+|     | `-IntegerLiteral 0x7ffde9814d08 <col:26> 'int' 2
+|     `-ImplicitCastExpr 0x7ffde9814db0 <col:29> 'const volatile void *' <NullToPointer>
+|       `-IntegerLiteral 0x7ffde9814d28 <col:29> 'int' 0
+|-FunctionDecl 0x7ffde9814480 <line:8:3> col:3 implicit used __atomic_is_lock_free 'int (unsigned long, const volatile void *)' extern
+| |-ParmVarDecl 0x7ffde9814520 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7ffde9814580 <<invalid sloc>> <invalid sloc> 'const volatile void *'
+| `-NoThrowAttr 0x7ffde98145f0 <col:3> Implicit
+|-FunctionDecl 0x7ffde9814e88 <line:16:1, line:26:1> line:17:1 bar 'void (int *)'
+| |-ParmVarDecl 0x7ffde9814e00 <col:6, col:11> col:11 used a 'int *'
+| `-CompoundStmt 0x7ffde9021520 <line:18:1, line:26:1>
+|   |-DeclStmt 0x7ffde9814fe0 <line:19:3, col:15>
+|   | `-VarDecl 0x7ffde9814f48 <col:3, col:14> col:10 used b 'double' cinit
+|   |   `-ImplicitCastExpr 0x7ffde9814fc8 <col:14> 'double' <IntegralToFloating>
+|   |     `-IntegerLiteral 0x7ffde9814fa8 <col:14> 'int' 0
+|   `-CallExpr 0x7ffde90214b8 <line:25:3, col:34> 'int'
+|     |-ImplicitCastExpr 0x7ffde90214a0 <col:3> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffde9021438 <col:3> '<builtin fn type>' Function 0x7ffde9814ff8 '__atomic_always_lock_free' 'int (unsigned long, const volatile void *)'
+|     |-ImplicitCastExpr 0x7ffde90214f0 <col:30> 'unsigned long' <IntegralCast>
+|     | `-IntegerLiteral 0x7ffde9021460 <col:30> 'int' 2
+|     `-ImplicitCastExpr 0x7ffde9021508 <col:33> 'const volatile void *' <NullToPointer>
+|       `-IntegerLiteral 0x7ffde9021480 <col:33> 'int' 0
+`-FunctionDecl 0x7ffde9814ff8 <line:20:3> col:3 implicit used __atomic_always_lock_free 'int (unsigned long, const volatile void *)' extern
+  |-ParmVarDecl 0x7ffde9815098 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-ParmVarDecl 0x7ffde98150f8 <<invalid sloc>> <invalid sloc> 'const volatile void *'
+  `-NoThrowAttr 0x7ffde9815168 <col:3> Implicit

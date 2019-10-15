@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7ff5958174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff595818160 <../Data/C2AST/pr34458.c:3:9, line:6:1> line:3:9 struct definition
+| `-FieldDecl 0x7ff595007aa0 <line:5:3, col:16> col:7 referenced data 'int [1024]'
+|-TypedefDecl 0x7ff595007b40 <line:3:1, line:7:1> col:1 referenced Lint 'struct Lint':'Lint'
+| `-ElaboratedType 0x7ff595007af0 'struct Lint' sugar
+|   `-RecordType 0x7ff595007a00 'Lint'
+|     `-Record 0x7ff595818160 ''
+`-FunctionDecl 0x7ff595007d70 <line:8:1, line:16:1> line:8:6 lint_operate 'Lint (Lint, long long)'
+  |-ParmVarDecl 0x7ff595007be0 <col:20, col:25> col:25 used a 'Lint':'Lint'
+  |-ParmVarDecl 0x7ff595007c58 <col:28, col:38> col:38 used ammount 'long long'
+  `-CompoundStmt 0x7ff5950086f8 <line:9:1, line:16:1>
+    |-DeclStmt 0x7ff595007ed8 <line:10:3, col:12>
+    | `-VarDecl 0x7ff595007e78 <col:3, col:7> col:7 used index 'int'
+    |-DeclStmt 0x7ff595007f60 <line:11:3, col:11>
+    | `-VarDecl 0x7ff595007f00 <col:3, col:8> col:8 used ret 'Lint':'Lint' nrvo
+    |-ForStmt 0x7ff595008668 <line:12:3, line:14:70>
+    | |-BinaryOperator 0x7ff595007fc0 <line:12:8, col:16> 'int' '='
+    | | |-DeclRefExpr 0x7ff595007f78 <col:8> 'int' lvalue Var 0x7ff595007e78 'index' 'int'
+    | | `-IntegerLiteral 0x7ff595007fa0 <col:16> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff595008048 <col:19, col:27> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff595008030 <col:19> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff595007fe8 <col:19> 'int' lvalue Var 0x7ff595007e78 'index' 'int'
+    | | `-IntegerLiteral 0x7ff595008010 <col:27> 'int' 24
+    | |-UnaryOperator 0x7ff595008098 <col:31, col:36> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff595008070 <col:31> 'int' lvalue Var 0x7ff595007e78 'index' 'int'
+    | `-BinaryOperator 0x7ff595008640 <line:13:5, line:14:70> 'int' '='
+    |   |-ArraySubscriptExpr 0x7ff595008198 <line:13:5, col:19> 'int' lvalue
+    |   | |-ImplicitCastExpr 0x7ff595008168 <col:5, col:9> 'int *' <ArrayToPointerDecay>
+    |   | | `-MemberExpr 0x7ff5950080e0 <col:5, col:9> 'int [1024]' lvalue .data 0x7ff595007aa0
+    |   | |   `-DeclRefExpr 0x7ff5950080b8 <col:5> 'Lint':'Lint' lvalue Var 0x7ff595007f00 'ret' 'Lint':'Lint'
+    |   | `-ImplicitCastExpr 0x7ff595008180 <col:14> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff595008118 <col:14> 'int' lvalue Var 0x7ff595007e78 'index' 'int'
+    |   `-BinaryOperator 0x7ff595008618 <line:14:7, col:70> 'int' '<<'
+    |     |-ImplicitCastExpr 0x7ff5950085a0 <col:7, col:38> 'int' <LValueToRValue>
+    |     | `-ArraySubscriptExpr 0x7ff5950083b8 <col:7, col:38> 'int' lvalue
+    |     |   |-ImplicitCastExpr 0x7ff5950083a0 <col:7, col:9> 'int *' <ArrayToPointerDecay>
+    |     |   | `-MemberExpr 0x7ff5950081e8 <col:7, col:9> 'int [1024]' lvalue .data 0x7ff595007aa0
+    |     |   |   `-DeclRefExpr 0x7ff5950081c0 <col:7> 'Lint':'Lint' lvalue ParmVar 0x7ff595007be0 'a' 'Lint':'Lint'
+    |     |   `-BinaryOperator 0x7ff595008378 <col:14, col:37> 'long long' '+'
+    |     |     |-BinaryOperator 0x7ff595008318 <col:14, col:32> 'long long' '+'
+    |     |     | |-ImplicitCastExpr 0x7ff595008300 <col:14> 'long long' <IntegralCast>
+    |     |     | | `-ImplicitCastExpr 0x7ff5950082e8 <col:14> 'int' <LValueToRValue>
+    |     |     | |   `-DeclRefExpr 0x7ff595008220 <col:14> 'int' lvalue Var 0x7ff595007e78 'index' 'int'
+    |     |     | `-BinaryOperator 0x7ff5950082c0 <col:22, col:32> 'long long' '/'
+    |     |     |   |-ImplicitCastExpr 0x7ff595008290 <col:22> 'long long' <LValueToRValue>
+    |     |     |   | `-DeclRefExpr 0x7ff595008248 <col:22> 'long long' lvalue ParmVar 0x7ff595007c58 'ammount' 'long long'
+    |     |     |   `-ImplicitCastExpr 0x7ff5950082a8 <col:32> 'long long' <IntegralCast>
+    |     |     |     `-IntegerLiteral 0x7ff595008270 <col:32> 'int' 32
+    |     |     `-ImplicitCastExpr 0x7ff595008360 <col:37> 'long long' <IntegralCast>
+    |     |       `-IntegerLiteral 0x7ff595008340 <col:37> 'int' 1
+    |     `-ImplicitCastExpr 0x7ff5950085b8 <col:43, col:70> 'int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7ff595008578 <col:43, col:70> 'int' lvalue
+    |         |-ImplicitCastExpr 0x7ff595008560 <col:43, col:45> 'int *' <ArrayToPointerDecay>
+    |         | `-MemberExpr 0x7ff595008408 <col:43, col:45> 'int [1024]' lvalue .data 0x7ff595007aa0
+    |         |   `-DeclRefExpr 0x7ff5950083e0 <col:43> 'Lint':'Lint' lvalue ParmVar 0x7ff595007be0 'a' 'Lint':'Lint'
+    |         `-BinaryOperator 0x7ff595008538 <col:50, col:68> 'long long' '+'
+    |           |-ImplicitCastExpr 0x7ff595008520 <col:50> 'long long' <IntegralCast>
+    |           | `-ImplicitCastExpr 0x7ff595008508 <col:50> 'int' <LValueToRValue>
+    |           |   `-DeclRefExpr 0x7ff595008440 <col:50> 'int' lvalue Var 0x7ff595007e78 'index' 'int'
+    |           `-BinaryOperator 0x7ff5950084e0 <col:58, col:68> 'long long' '/'
+    |             |-ImplicitCastExpr 0x7ff5950084b0 <col:58> 'long long' <LValueToRValue>
+    |             | `-DeclRefExpr 0x7ff595008468 <col:58> 'long long' lvalue ParmVar 0x7ff595007c58 'ammount' 'long long'
+    |             `-ImplicitCastExpr 0x7ff5950084c8 <col:68> 'long long' <IntegralCast>
+    |               `-IntegerLiteral 0x7ff595008490 <col:68> 'int' 32
+    `-ReturnStmt 0x7ff5950086e0 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7ff5950086c8 <col:10> 'Lint':'Lint' <LValueToRValue>
+        `-DeclRefExpr 0x7ff5950086a0 <col:10> 'Lint':'Lint' lvalue Var 0x7ff595007f00 'ret' 'Lint':'Lint'

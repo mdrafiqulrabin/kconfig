@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fb08b0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb08a8292d8 <../Data/C2AST/pr58679-2.c:4:1, line:7:1> line:4:5 f 'int (long long, long long)'
+  |-ParmVarDecl 0x7fb08b018178 <col:8, col:18> col:18 used a 'long long'
+  |-ParmVarDecl 0x7fb08a829200 <col:21, col:31> col:31 used b 'long long'
+  `-CompoundStmt 0x7fb08a829508 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fb08a8294f0 <line:6:3, col:21>
+      `-ImplicitCastExpr 0x7fb08a8294d8 <col:10, col:21> 'int' <IntegralCast>
+        `-BinaryOperator 0x7fb08a8294b0 <col:10, col:21> 'long long' '>>'
+          |-ParenExpr 0x7fb08a829470 <col:10, col:16> 'long long'
+          | `-BinaryOperator 0x7fb08a829448 <col:11, col:15> 'long long' '*'
+          |   |-ImplicitCastExpr 0x7fb08a829418 <col:11> 'long long' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fb08a8293c8 <col:11> 'long long' lvalue ParmVar 0x7fb08b018178 'a' 'long long'
+          |   `-ImplicitCastExpr 0x7fb08a829430 <col:15> 'long long' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fb08a8293f0 <col:15> 'long long' lvalue ParmVar 0x7fb08a829200 'b' 'long long'
+          `-IntegerLiteral 0x7fb08a829490 <col:21> 'int' 16

@@ -1,0 +1,143 @@
+TranslationUnitDecl 0x7fd3480166e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd3488a8930 <../Data/C2AST/pr51782-1.c:11:1, col:20> col:8 struct R definition
+| `-FieldDecl 0x7fd3488a89f0 <col:12, col:17> col:17 referenced r 'char'
+|-RecordDecl 0x7fd3488a8a38 <line:12:1, col:26> col:8 struct RGB definition
+| |-FieldDecl 0x7fd3488a8af0 <col:14, col:19> col:19 referenced r 'char'
+| |-FieldDecl 0x7fd3488a8b48 <col:14, col:21> col:21 referenced g 'char'
+| `-FieldDecl 0x7fd3488a8ba0 <col:14, col:23> col:23 referenced b 'char'
+|-VarDecl 0x7fd3488a8c40 <line:14:9, col:34> col:24 used r1 'const struct R':'const struct R' cinit
+| `-InitListExpr 0x7fd3488a8d08 <col:29, col:34> 'struct R':'struct R'
+|   `-ImplicitCastExpr 0x7fd3488a8d50 <col:31> 'char' <IntegralCast>
+|     `-IntegerLiteral 0x7fd3488a8ca0 <col:31> 'int' 12
+|-VarDecl 0x7fd3488a8dc0 <line:15:9, col:44> col:26 used r3 'const struct RGB':'const struct RGB' cinit
+| `-InitListExpr 0x7fd3488a8ed8 <col:31, col:44> 'struct RGB':'struct RGB'
+|   |-ImplicitCastExpr 0x7fd3488a8f30 <col:33> 'char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fd3488a8e20 <col:33> 'int' 23
+|   |-ImplicitCastExpr 0x7fd3488a8f48 <col:37> 'char' <IntegralCast>
+|   | `-IntegerLiteral 0x7fd3488a8e40 <col:37> 'int' 56
+|   `-ImplicitCastExpr 0x7fd3488a8f60 <col:41> 'char' <IntegralCast>
+|     `-IntegerLiteral 0x7fd3488a8e60 <col:41> 'int' 78
+|-FunctionDecl 0x7fd3488a9100 <line:17:1, line:22:1> line:18:1 used read1_bug 'char (const struct R *)'
+| |-ParmVarDecl 0x7fd3488a9000 <col:12, col:36> col:36 used s 'const struct R *'
+| |-CompoundStmt 0x7fd3488a9390 <line:19:1, line:22:1>
+| | |-DeclStmt 0x7fd3488a92e8 <line:20:3, col:18>
+| | | `-VarDecl 0x7fd3488a9210 <col:3, col:17> col:12 used t 'struct R':'struct R' cinit
+| | |   `-ImplicitCastExpr 0x7fd3488a92d0 <col:16, col:17> 'struct R':'struct R' <LValueToRValue>
+| | |     `-UnaryOperator 0x7fd3488a92b0 <col:16, col:17> 'const struct R':'const struct R' lvalue prefix '*'
+| | |       `-ImplicitCastExpr 0x7fd3488a9298 <col:17> 'const struct R *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fd3488a9270 <col:17> 'const struct R *' lvalue ParmVar 0x7fd3488a9000 's' 'const struct R *'
+| | `-ReturnStmt 0x7fd3488a9378 <line:21:3, col:12>
+| |   `-ImplicitCastExpr 0x7fd3488a9360 <col:10, col:12> 'char' <LValueToRValue>
+| |     `-MemberExpr 0x7fd3488a9328 <col:10, col:12> 'char' lvalue .r 0x7fd3488a89f0
+| |       `-DeclRefExpr 0x7fd3488a9300 <col:10> 'struct R':'struct R' lvalue Var 0x7fd3488a9210 't' 'struct R':'struct R'
+| `-NoInlineAttr 0x7fd3488a91a8 <line:17:21>
+|-FunctionDecl 0x7fd3488a9460 <line:24:1, line:28:1> line:25:1 used read1_ok 'char (const struct R *)'
+| |-ParmVarDecl 0x7fd3488a93d8 <col:11, col:35> col:35 used s 'const struct R *'
+| |-CompoundStmt 0x7fd3488a95f8 <line:26:1, line:28:1>
+| | `-ReturnStmt 0x7fd3488a95e0 <line:27:3, col:13>
+| |   `-ImplicitCastExpr 0x7fd3488a95c8 <col:10, col:13> 'char' <LValueToRValue>
+| |     `-MemberExpr 0x7fd3488a9590 <col:10, col:13> 'const char' lvalue ->r 0x7fd3488a89f0
+| |       `-ImplicitCastExpr 0x7fd3488a9578 <col:10> 'const struct R *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fd3488a9550 <col:10> 'const struct R *' lvalue ParmVar 0x7fd3488a93d8 's' 'const struct R *'
+| `-NoInlineAttr 0x7fd3488a9508 <line:24:21>
+|-FunctionDecl 0x7fd3488a9790 <line:30:1, line:35:1> line:31:1 used read3_bug 'char (const struct RGB *)'
+| |-ParmVarDecl 0x7fd3488a9690 <col:12, col:38> col:38 used s 'const struct RGB *'
+| |-CompoundStmt 0x7fd3488a9c18 <line:32:1, line:35:1>
+| | |-DeclStmt 0x7fd3488a9978 <line:33:3, col:20>
+| | | `-VarDecl 0x7fd3488a98a0 <col:3, col:19> col:14 used t 'struct RGB':'struct RGB' cinit
+| | |   `-ImplicitCastExpr 0x7fd3488a9960 <col:18, col:19> 'struct RGB':'struct RGB' <LValueToRValue>
+| | |     `-UnaryOperator 0x7fd3488a9940 <col:18, col:19> 'const struct RGB':'const struct RGB' lvalue prefix '*'
+| | |       `-ImplicitCastExpr 0x7fd3488a9928 <col:19> 'const struct RGB *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fd3488a9900 <col:19> 'const struct RGB *' lvalue ParmVar 0x7fd3488a9690 's' 'const struct RGB *'
+| | `-ReturnStmt 0x7fd3488a9c00 <line:34:3, col:24>
+| |   `-ImplicitCastExpr 0x7fd3488a9b90 <col:10, col:24> 'char' <IntegralCast>
+| |     `-BinaryOperator 0x7fd3488a9b68 <col:10, col:24> 'int' '+'
+| |       |-BinaryOperator 0x7fd3488a9ab0 <col:10, col:18> 'int' '+'
+| |       | |-ImplicitCastExpr 0x7fd3488a9a68 <col:10, col:12> 'int' <IntegralCast>
+| |       | | `-ImplicitCastExpr 0x7fd3488a9a50 <col:10, col:12> 'char' <LValueToRValue>
+| |       | |   `-MemberExpr 0x7fd3488a99b8 <col:10, col:12> 'char' lvalue .r 0x7fd3488a8af0
+| |       | |     `-DeclRefExpr 0x7fd3488a9990 <col:10> 'struct RGB':'struct RGB' lvalue Var 0x7fd3488a98a0 't' 'struct RGB':'struct RGB'
+| |       | `-ImplicitCastExpr 0x7fd3488a9a98 <col:16, col:18> 'int' <IntegralCast>
+| |       |   `-ImplicitCastExpr 0x7fd3488a9a80 <col:16, col:18> 'char' <LValueToRValue>
+| |       |     `-MemberExpr 0x7fd3488a9a18 <col:16, col:18> 'char' lvalue .g 0x7fd3488a8b48
+| |       |       `-DeclRefExpr 0x7fd3488a99f0 <col:16> 'struct RGB':'struct RGB' lvalue Var 0x7fd3488a98a0 't' 'struct RGB':'struct RGB'
+| |       `-ImplicitCastExpr 0x7fd3488a9b50 <col:22, col:24> 'int' <IntegralCast>
+| |         `-ImplicitCastExpr 0x7fd3488a9b38 <col:22, col:24> 'char' <LValueToRValue>
+| |           `-MemberExpr 0x7fd3488a9b00 <col:22, col:24> 'char' lvalue .b 0x7fd3488a8ba0
+| |             `-DeclRefExpr 0x7fd3488a9ad8 <col:22> 'struct RGB':'struct RGB' lvalue Var 0x7fd3488a98a0 't' 'struct RGB':'struct RGB'
+| `-NoInlineAttr 0x7fd3488a9838 <line:30:21>
+|-FunctionDecl 0x7fd3488a9ce8 <line:37:1, line:41:1> line:38:1 used read3_ok 'char (const struct RGB *)'
+| |-ParmVarDecl 0x7fd3488a9c60 <col:11, col:37> col:37 used s 'const struct RGB *'
+| |-CompoundStmt 0x7fd3488aa058 <line:39:1, line:41:1>
+| | `-ReturnStmt 0x7fd3488aa040 <line:40:3, col:27>
+| |   `-ImplicitCastExpr 0x7fd3488aa028 <col:10, col:27> 'char' <IntegralCast>
+| |     `-BinaryOperator 0x7fd3488aa000 <col:10, col:27> 'int' '+'
+| |       |-BinaryOperator 0x7fd3488a9f28 <col:10, col:20> 'int' '+'
+| |       | |-ImplicitCastExpr 0x7fd3488a9ee0 <col:10, col:13> 'int' <IntegralCast>
+| |       | | `-ImplicitCastExpr 0x7fd3488a9ec8 <col:10, col:13> 'char' <LValueToRValue>
+| |       | |   `-MemberExpr 0x7fd3488a9e18 <col:10, col:13> 'const char' lvalue ->r 0x7fd3488a8af0
+| |       | |     `-ImplicitCastExpr 0x7fd3488a9e00 <col:10> 'const struct RGB *' <LValueToRValue>
+| |       | |       `-DeclRefExpr 0x7fd3488a9dd8 <col:10> 'const struct RGB *' lvalue ParmVar 0x7fd3488a9c60 's' 'const struct RGB *'
+| |       | `-ImplicitCastExpr 0x7fd3488a9f10 <col:17, col:20> 'int' <IntegralCast>
+| |       |   `-ImplicitCastExpr 0x7fd3488a9ef8 <col:17, col:20> 'char' <LValueToRValue>
+| |       |     `-MemberExpr 0x7fd3488a9e90 <col:17, col:20> 'const char' lvalue ->g 0x7fd3488a8b48
+| |       |       `-ImplicitCastExpr 0x7fd3488a9e78 <col:17> 'const struct RGB *' <LValueToRValue>
+| |       |         `-DeclRefExpr 0x7fd3488a9e50 <col:17> 'const struct RGB *' lvalue ParmVar 0x7fd3488a9c60 's' 'const struct RGB *'
+| |       `-ImplicitCastExpr 0x7fd3488a9fe0 <col:24, col:27> 'int' <IntegralCast>
+| |         `-ImplicitCastExpr 0x7fd3488a9fc8 <col:24, col:27> 'char' <LValueToRValue>
+| |           `-MemberExpr 0x7fd3488a9f90 <col:24, col:27> 'const char' lvalue ->b 0x7fd3488a8ba0
+| |             `-ImplicitCastExpr 0x7fd3488a9f78 <col:24> 'const struct RGB *' <LValueToRValue>
+| |               `-DeclRefExpr 0x7fd3488a9f50 <col:24> 'const struct RGB *' lvalue ParmVar 0x7fd3488a9c60 's' 'const struct RGB *'
+| `-NoInlineAttr 0x7fd3488a9d90 <line:37:21>
+|-VarDecl 0x7fd3488aa098 <line:43:9, col:41> col:35 used p1 'const struct R *volatile' cinit
+| `-UnaryOperator 0x7fd3488aa120 <col:40, col:41> 'const struct R *' prefix '&'
+|   `-DeclRefExpr 0x7fd3488aa0f8 <col:41> 'const struct R':'const struct R' lvalue Var 0x7fd3488a8c40 'r1' 'const struct R':'const struct R'
+|-VarDecl 0x7fd3488aa168 <line:44:9, col:43> col:37 used p3 'const struct RGB *volatile' cinit
+| `-UnaryOperator 0x7fd3488aa1f0 <col:42, col:43> 'const struct RGB *' prefix '&'
+|   `-DeclRefExpr 0x7fd3488aa1c8 <col:43> 'const struct RGB':'const struct RGB' lvalue Var 0x7fd3488a8dc0 'r3' 'const struct RGB':'const struct RGB'
+`-FunctionDecl 0x7fd3488aa2a8 <line:46:1, line:55:1> line:46:5 main 'int (void)'
+  `-CompoundStmt 0x7fd3488aa9a0 <line:47:1, line:55:1>
+    |-IfStmt 0x7fd3488aa5f8 <line:48:3, line:49:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd3488aa538 <line:48:7, col:37> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fd3488aa508 <col:7, col:20> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7fd3488aa410 <col:7, col:20> 'char'
+    | | |   |-ImplicitCastExpr 0x7fd3488aa3f8 <col:7> 'char (*)(const struct R *)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fd3488aa348 <col:7> 'char (const struct R *)' Function 0x7fd3488a9100 'read1_bug' 'char (const struct R *)'
+    | | |   `-ImplicitCastExpr 0x7fd3488aa440 <col:18> 'const struct R *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fd3488aa370 <col:18> 'const struct R *volatile' lvalue Var 0x7fd3488aa098 'p1' 'const struct R *volatile'
+    | | `-ImplicitCastExpr 0x7fd3488aa520 <col:25, col:37> 'int' <IntegralCast>
+    | |   `-CallExpr 0x7fd3488aa4c0 <col:25, col:37> 'char'
+    | |     |-ImplicitCastExpr 0x7fd3488aa4a8 <col:25> 'char (*)(const struct R *)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fd3488aa458 <col:25> 'char (const struct R *)' Function 0x7fd3488a9460 'read1_ok' 'char (const struct R *)'
+    | |     `-ImplicitCastExpr 0x7fd3488aa4f0 <col:35> 'const struct R *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fd3488aa480 <col:35> 'const struct R *volatile' lvalue Var 0x7fd3488aa098 'p1' 'const struct R *volatile'
+    | |-CallExpr 0x7fd3488aa5d0 <line:49:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fd3488aa5b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd3488aa560 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd3488f1220 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fd3488aa8a8 <line:51:3, line:52:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd3488aa818 <line:51:7, col:37> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fd3488aa7e8 <col:7, col:20> 'int' <IntegralCast>
+    | | | `-CallExpr 0x7fd3488aa6f0 <col:7, col:20> 'char'
+    | | |   |-ImplicitCastExpr 0x7fd3488aa6d8 <col:7> 'char (*)(const struct RGB *)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fd3488aa630 <col:7> 'char (const struct RGB *)' Function 0x7fd3488a9790 'read3_bug' 'char (const struct RGB *)'
+    | | |   `-ImplicitCastExpr 0x7fd3488aa720 <col:18> 'const struct RGB *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fd3488aa658 <col:18> 'const struct RGB *volatile' lvalue Var 0x7fd3488aa168 'p3' 'const struct RGB *volatile'
+    | | `-ImplicitCastExpr 0x7fd3488aa800 <col:25, col:37> 'int' <IntegralCast>
+    | |   `-CallExpr 0x7fd3488aa7a0 <col:25, col:37> 'char'
+    | |     |-ImplicitCastExpr 0x7fd3488aa788 <col:25> 'char (*)(const struct RGB *)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fd3488aa738 <col:25> 'char (const struct RGB *)' Function 0x7fd3488a9ce8 'read3_ok' 'char (const struct RGB *)'
+    | |     `-ImplicitCastExpr 0x7fd3488aa7d0 <col:35> 'const struct RGB *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fd3488aa760 <col:35> 'const struct RGB *volatile' lvalue Var 0x7fd3488aa168 'p3' 'const struct RGB *volatile'
+    | |-CallExpr 0x7fd3488aa880 <line:52:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fd3488aa868 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd3488aa840 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd3488f1220 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fd3488aa970 <line:54:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fd3488aa958 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd3488aa8e0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fd3488f4f38 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fd3488aa908 <col:9> 'int' 0

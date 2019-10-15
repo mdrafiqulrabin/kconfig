@@ -1,0 +1,32 @@
+../Data/C2AST/pr29521-2.c:14:3: error: void function 'func3' should not return a value [-Wreturn-type]
+  return 1;  
+  ^      ~
+1 error generated.
+TranslationUnitDecl 0x7f84ae8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f84ae817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f84ae817780 '__int128'
+|-TypedefDecl 0x7f84ae817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f84ae8177a0 'unsigned __int128'
+|-TypedefDecl 0x7f84ae817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f84ae817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f84ae817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f84ae817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f84ae817e00 'char *'
+|   `-BuiltinType 0x7f84ae817580 'char'
+|-TypedefDecl 0x7f84ae818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f84ae8180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f84ae817f20 'struct __va_list_tag'
+|     `-Record 0x7f84ae817e98 '__va_list_tag'
+|-FunctionDecl 0x7f84af039420 <../Data/C2AST/pr29521-2.c:5:1, col:20> col:6 used func 'void (void)'
+| `-CompoundStmt 0x7f84af039500 <col:18, col:20>
+|-FunctionDecl 0x7f84af0395a0 <line:7:1, line:10:1> line:7:6 func2 'void (void)'
+| `-CompoundStmt 0x7f84af0396f0 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7f84af0396d8 <line:9:3, col:16>
+|     `-CallExpr 0x7f84af0396b0 <col:10, col:16> 'void'
+|       `-ImplicitCastExpr 0x7f84af039698 <col:10> 'void (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f84af039640 <col:10> 'void (void)' Function 0x7f84af039420 'func' 'void (void)'
+`-FunctionDecl 0x7f84af039798 <line:12:1, line:15:1> line:12:6 func3 'void (void)'
+  `-CompoundStmt 0x7f84af039888 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7f84af039870 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7f84af039858 <col:10> 'void' <ToVoid>
+        `-IntegerLiteral 0x7f84af039838 <col:10> 'int' 1

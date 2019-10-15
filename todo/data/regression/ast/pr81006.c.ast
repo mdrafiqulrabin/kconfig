@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7f9f9d0174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9f9c806000 <../Data/C2AST/pr81006.c:4:1, col:12> col:5 a 'int [0]' cinit
+| `-InitListExpr 0x7f9f9c8060e0 <col:11, col:12> 'int [0]'
+`-FunctionDecl 0x7f9f9c8061a8 <line:6:1, line:10:1> line:6:6 foo 'void ()'
+  `-CompoundStmt 0x7f9f9c806258 <line:7:1, line:10:1>
+    `-CompoundStmt 0x7f9f9c806248 <line:9:5, col:6>

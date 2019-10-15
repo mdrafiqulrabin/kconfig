@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fedda80a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fedda041118 <../Data/C2AST/pr51235.c:4:1, line:17:1> line:4:7 foo 'void *(int, void **)'
+  |-ParmVarDecl 0x7fedda80b578 <col:12, col:16> col:16 used count 'int'
+  |-ParmVarDecl 0x7fedda041040 <col:23, col:30> col:30 used list 'void **'
+  `-CompoundStmt 0x7fedda041898 <line:5:1, line:17:1>
+    |-DeclStmt 0x7fedda041320 <line:6:3, col:26>
+    | `-VarDecl 0x7fedda041220 <col:3, col:25> col:9 used minaddr 'void *' cinit
+    |   `-ImplicitCastExpr 0x7fedda041308 <col:19, col:25> 'void *' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7fedda0412e0 <col:19, col:25> 'void *' lvalue
+    |       |-ImplicitCastExpr 0x7fedda0412c8 <col:19> 'void **' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fedda041280 <col:19> 'void **' lvalue ParmVar 0x7fedda041040 'list' 'void **'
+    |       `-IntegerLiteral 0x7fedda0412a8 <col:24> 'int' 0
+    |-DeclStmt 0x7fedda0413b0 <line:7:3, col:8>
+    | `-VarDecl 0x7fedda041350 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fedda041808 <line:9:3, line:14:5>
+    | |-BinaryOperator 0x7fedda041410 <line:9:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fedda0413c8 <col:8> 'int' lvalue Var 0x7fedda041350 'i' 'int'
+    | | `-IntegerLiteral 0x7fedda0413f0 <col:12> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fedda0414b8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fedda041488 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fedda041438 <col:15> 'int' lvalue Var 0x7fedda041350 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fedda0414a0 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fedda041460 <col:19> 'int' lvalue ParmVar 0x7fedda80b578 'count' 'int'
+    | |-UnaryOperator 0x7fedda041508 <col:26, col:27> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fedda0414e0 <col:26> 'int' lvalue Var 0x7fedda041350 'i' 'int'
+    | `-CompoundStmt 0x7fedda0417e8 <line:10:5, line:14:5>
+    |   |-DeclStmt 0x7fedda041660 <line:11:7, col:27>
+    |   | `-VarDecl 0x7fedda041540 <col:7, col:26> col:13 used addr 'void *' cinit
+    |   |   `-ImplicitCastExpr 0x7fedda041648 <col:20, col:26> 'void *' <LValueToRValue>
+    |   |     `-ArraySubscriptExpr 0x7fedda041620 <col:20, col:26> 'void *' lvalue
+    |   |       |-ImplicitCastExpr 0x7fedda0415f0 <col:20> 'void **' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7fedda0415a0 <col:20> 'void **' lvalue ParmVar 0x7fedda041040 'list' 'void **'
+    |   |       `-ImplicitCastExpr 0x7fedda041608 <col:25> 'int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fedda0415c8 <col:25> 'int' lvalue Var 0x7fedda041350 'i' 'int'
+    |   `-IfStmt 0x7fedda0417b0 <line:12:7, line:13:12>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fedda0416f8 <line:12:11, col:18> 'int' '<'
+    |     | |-ImplicitCastExpr 0x7fedda0416c8 <col:11> 'void *' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fedda041678 <col:11> 'void *' lvalue Var 0x7fedda041540 'addr' 'void *'
+    |     | `-ImplicitCastExpr 0x7fedda0416e0 <col:18> 'void *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fedda0416a0 <col:18> 'void *' lvalue Var 0x7fedda041220 'minaddr' 'void *'
+    |     |-BinaryOperator 0x7fedda041788 <line:13:2, col:12> 'void *' '='
+    |     | |-DeclRefExpr 0x7fedda041720 <col:2> 'void *' lvalue Var 0x7fedda041220 'minaddr' 'void *'
+    |     | `-ImplicitCastExpr 0x7fedda041770 <col:12> 'void *' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fedda041748 <col:12> 'void *' lvalue Var 0x7fedda041540 'addr' 'void *'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fedda041880 <line:16:3, col:10>
+      `-ImplicitCastExpr 0x7fedda041868 <col:10> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fedda041840 <col:10> 'void *' lvalue Var 0x7fedda041220 'minaddr' 'void *'

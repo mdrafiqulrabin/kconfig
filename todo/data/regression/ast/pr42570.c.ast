@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fbdf30166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbdf3017378 <../Data/C2AST/pr42570.c:1:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fbdf3016840 'unsigned char'
+|-VarDecl 0x7fbdf400a168 <line:2:1, col:17> col:9 referenced foo 'uint8_t [1][0]'
+|-FunctionDecl 0x7fbdf400a300 <line:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbdf400a3a0 prev 0x7fbdf400a300 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fbdf400a490 <line:4:1, line:9:1> line:4:5 main 'int ()'
+  `-CompoundStmt 0x7fbdf400a6f8 <line:5:1, line:9:1>
+    |-IfStmt 0x7fbdf400a688 <line:6:3, line:7:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbdf400a5d0 <line:6:7, col:23> 'int' '!='
+    | | |-UnaryExprOrTypeTraitExpr 0x7fbdf400a578 <col:7, col:18> 'unsigned long' sizeof
+    | | | `-ParenExpr 0x7fbdf400a558 <col:14, col:18> 'uint8_t [1][0]' lvalue
+    | | |   `-DeclRefExpr 0x7fbdf400a530 <col:15> 'uint8_t [1][0]' lvalue Var 0x7fbdf400a168 'foo' 'uint8_t [1][0]'
+    | | `-ImplicitCastExpr 0x7fbdf400a5b8 <col:23> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fbdf400a598 <col:23> 'int' 0
+    | |-CallExpr 0x7fbdf400a660 <line:7:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbdf400a648 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbdf400a5f8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbdf400a3a0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbdf400a6e0 <line:8:3, col:10>
+      `-IntegerLiteral 0x7fbdf400a6c0 <col:10> 'int' 0

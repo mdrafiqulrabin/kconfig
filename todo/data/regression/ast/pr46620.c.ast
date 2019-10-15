@@ -1,0 +1,129 @@
+TranslationUnitDecl 0x7fcf4f02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcf5080a530 <../Data/C2AST/pr46620.c:8:1, line:25:1> line:8:8 struct PCT definition
+| |-FieldDecl 0x7fcf5080a618 <line:10:3, col:23> col:17 pi1 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a5e0 <col:23> 'int' 4
+| |-FieldDecl 0x7fcf5080a698 <line:11:3, col:23> col:17 pi2 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a660 <col:23> 'int' 3
+| |-FieldDecl 0x7fcf5080a718 <line:12:3, col:23> col:17 pif 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a6e0 <col:23> 'int' 5
+| |-FieldDecl 0x7fcf5080a798 <line:14:3, col:22> col:17 sl 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a760 <col:22> 'int' 2
+| |-FieldDecl 0x7fcf5080a818 <line:15:3, col:22> col:17 uc 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a7e0 <col:22> 'int' 1
+| |-FieldDecl 0x7fcf5080a898 <line:16:3, col:22> col:17 st 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a860 <col:22> 'int' 1
+| |-FieldDecl 0x7fcf5080a918 <line:18:3, col:21> col:17 p 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a8e0 <col:21> 'int' 1
+| |-FieldDecl 0x7fcf5080a998 <line:19:3, col:22> col:17 cs 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a960 <col:22> 'int' 1
+| |-FieldDecl 0x7fcf5080aa18 <line:20:3, col:22> col:17 ss 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080a9e0 <col:22> 'int' 1
+| |-FieldDecl 0x7fcf5080aa98 <line:22:3, col:22> col:17 pc 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080aa60 <col:22> 'int' 3
+| |-FieldDecl 0x7fcf5080ab18 <line:23:3, col:23> col:17 referenced dmv 'unsigned char'
+| | `-IntegerLiteral 0x7fcf5080aae0 <col:23> 'int' 4
+| `-FieldDecl 0x7fcf5080ab98 <line:24:3, col:22> col:17 cv 'unsigned char'
+|   `-IntegerLiteral 0x7fcf5080ab60 <col:22> 'int' 4
+|-RecordDecl 0x7fcf5080ac00 <line:27:1, line:33:1> line:27:8 struct rt definition
+| |-FieldDecl 0x7fcf5080ad60 <line:29:3, col:15> col:15 d 'struct rt *'
+| |-FieldDecl 0x7fcf5080aef0 <line:30:3, col:27> col:10 referenced edo 'void (*)(void *const)'
+| |-FieldDecl 0x7fcf5080af50 <line:31:3, col:11> col:11 lId 'short'
+| `-FieldDecl 0x7fcf5080afa8 <line:32:3, col:17> col:17 dac 'char'
+|-RecordDecl 0x7fcf5080aff0 <line:35:1, line:40:1> line:35:8 struct pedr definition
+| |-FieldDecl 0x7fcf5080b0c0 <line:37:3, col:13> col:13 referenced re 'struct rt':'struct rt'
+| |-FieldDecl 0x7fcf5080b160 <line:38:3, col:14> col:14 referenced pc 'struct PCT':'struct PCT'
+| `-FieldDecl 0x7fcf5080b1c0 <line:39:3, col:17> col:17 referenced mid 'unsigned char'
+|-FunctionDecl 0x7fcf5080b4b0 <line:42:1, line:46:1> line:43:1 used rei 'void (struct rt *const, unsigned short, void *)'
+| |-ParmVarDecl 0x7fcf5080b290 <col:5, col:22> col:22 me 'struct rt *const'
+| |-ParmVarDecl 0x7fcf5080b308 <col:26, col:41> col:41 anId 'unsigned short'
+| |-ParmVarDecl 0x7fcf5080b380 <col:47, col:53> col:53 ad 'void *'
+| |-CompoundStmt 0x7fcf5080b658 <line:44:1, line:46:1>
+| | `-GCCAsmStmt 0x7fcf5080b610 <line:45:3, col:19>
+| `-NoInlineAttr 0x7fcf5080b568 <line:42:21>
+|-FunctionDecl 0x7fcf5080b710 <line:48:1, line:52:1> line:49:1 used pedrdo 'void (void *const)'
+| |-ParmVarDecl 0x7fcf5080b688 <col:8, col:21> col:21 p 'void *const'
+| |-CompoundStmt 0x7fcf5080b870 <line:50:1, line:52:1>
+| | `-GCCAsmStmt 0x7fcf5080b828 <line:51:3, col:19>
+| `-NoInlineAttr 0x7fcf5080b7b8 <line:48:21>
+|-FunctionDecl 0x7fcf5080bc00 <line:54:1, line:61:1> line:55:1 used pedri 'void (struct pedr *const, struct PCT, unsigned char)'
+| |-ParmVarDecl 0x7fcf5080b940 <col:8, col:28> col:28 used me 'struct pedr *const'
+| |-ParmVarDecl 0x7fcf5080b9c0 <col:32, col:43> col:43 used ppc 'struct PCT':'struct PCT'
+| |-ParmVarDecl 0x7fcf5080ba38 <col:48, col:62> col:62 used pmid 'unsigned char'
+| |-CompoundStmt 0x7fcf5080c228 <line:56:1, line:61:1>
+| | |-CallExpr 0x7fcf5080be90 <line:57:3, col:27> 'void'
+| | | |-ImplicitCastExpr 0x7fcf5080be78 <col:3> 'void (*)(struct rt *const, unsigned short, void *)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fcf5080bd00 <col:3> 'void (struct rt *const, unsigned short, void *)' Function 0x7fcf5080b4b0 'rei' 'void (struct rt *const, unsigned short, void *)'
+| | | |-UnaryOperator 0x7fcf5080bdc0 <col:7, col:15> 'struct rt *' prefix '&'
+| | | | `-ParenExpr 0x7fcf5080bda0 <col:8, col:15> 'struct rt':'struct rt' lvalue
+| | | |   `-MemberExpr 0x7fcf5080bd68 <col:9, col:13> 'struct rt':'struct rt' lvalue ->re 0x7fcf5080b0c0
+| | | |     `-ImplicitCastExpr 0x7fcf5080bd50 <col:9> 'struct pedr *' <LValueToRValue>
+| | | |       `-DeclRefExpr 0x7fcf5080bd28 <col:9> 'struct pedr *const' lvalue ParmVar 0x7fcf5080b940 'me' 'struct pedr *const'
+| | | |-ImplicitCastExpr 0x7fcf5080bed0 <col:18> 'unsigned short' <IntegralCast>
+| | | | `-IntegerLiteral 0x7fcf5080bde0 <col:18> 'int' 30212
+| | | `-ImplicitCastExpr 0x7fcf5080bee8 <col:26> 'void *' <NullToPointer>
+| | |   `-IntegerLiteral 0x7fcf5080be00 <col:26> 'int' 0
+| | |-BinaryOperator 0x7fcf5080bfb8 <line:58:3, col:12> 'struct PCT':'struct PCT' '='
+| | | |-MemberExpr 0x7fcf5080bf40 <col:3, col:7> 'struct PCT':'struct PCT' lvalue ->pc 0x7fcf5080b160
+| | | | `-ImplicitCastExpr 0x7fcf5080bf28 <col:3> 'struct pedr *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fcf5080bf00 <col:3> 'struct pedr *const' lvalue ParmVar 0x7fcf5080b940 'me' 'struct pedr *const'
+| | | `-ImplicitCastExpr 0x7fcf5080bfa0 <col:12> 'struct PCT':'struct PCT' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fcf5080bf78 <col:12> 'struct PCT':'struct PCT' lvalue ParmVar 0x7fcf5080b9c0 'ppc' 'struct PCT':'struct PCT'
+| | |-BinaryOperator 0x7fcf5080c098 <line:59:3, col:13> 'unsigned char' '='
+| | | |-MemberExpr 0x7fcf5080c020 <col:3, col:7> 'unsigned char' lvalue ->mid 0x7fcf5080b1c0
+| | | | `-ImplicitCastExpr 0x7fcf5080c008 <col:3> 'struct pedr *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fcf5080bfe0 <col:3> 'struct pedr *const' lvalue ParmVar 0x7fcf5080b940 'me' 'struct pedr *const'
+| | | `-ImplicitCastExpr 0x7fcf5080c080 <col:13> 'unsigned char' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fcf5080c058 <col:13> 'unsigned char' lvalue ParmVar 0x7fcf5080ba38 'pmid' 'unsigned char'
+| | `-BinaryOperator 0x7fcf5080c200 <line:60:3, col:18> 'void (*)(void *const)' '='
+| |   |-MemberExpr 0x7fcf5080c158 <col:3, col:12> 'void (*)(void *const)' lvalue .edo 0x7fcf5080aef0
+| |   | `-MemberExpr 0x7fcf5080c120 <col:3, col:9> 'struct rt':'struct rt' lvalue ->re 0x7fcf5080b0c0
+| |   |   `-ImplicitCastExpr 0x7fcf5080c108 <col:3, col:6> 'struct pedr *' <LValueToRValue>
+| |   |     `-ParenExpr 0x7fcf5080c0e8 <col:3, col:6> 'struct pedr *const' lvalue
+| |   |       `-DeclRefExpr 0x7fcf5080c0c0 <col:4> 'struct pedr *const' lvalue ParmVar 0x7fcf5080b940 'me' 'struct pedr *const'
+| |   `-ImplicitCastExpr 0x7fcf5080c1e8 <col:18> 'void (*)(void *const)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fcf5080c190 <col:18> 'void (void *const)' Function 0x7fcf5080b710 'pedrdo' 'void (void *const)'
+| `-NoInlineAttr 0x7fcf5080bcb8 <line:54:21>
+`-FunctionDecl 0x7fcf5080c2b0 <line:63:1, line:75:1> line:63:5 main 'int ()'
+  `-CompoundStmt 0x7fcf5080cb70 <line:64:1, line:75:1>
+    |-DeclStmt 0x7fcf5080c3d0 <line:65:3, col:16>
+    | `-VarDecl 0x7fcf5080c370 <col:3, col:14> col:14 used ps 'struct PCT':'struct PCT'
+    |-DeclStmt 0x7fcf5080c468 <line:66:3, col:17>
+    | `-VarDecl 0x7fcf5080c408 <col:3, col:15> col:15 used pm 'struct pedr':'struct pedr'
+    |-BinaryOperator 0x7fcf5080c550 <line:68:3, col:15> 'unsigned char' '='
+    | |-MemberExpr 0x7fcf5080c4e0 <col:3, col:9> 'unsigned char' lvalue bitfield .dmv 0x7fcf5080ab18
+    | | `-MemberExpr 0x7fcf5080c4a8 <col:3, col:6> 'struct PCT':'struct PCT' lvalue .pc 0x7fcf5080b160
+    | |   `-DeclRefExpr 0x7fcf5080c480 <col:3> 'struct pedr':'struct pedr' lvalue Var 0x7fcf5080c408 'pm' 'struct pedr':'struct pedr'
+    | `-ImplicitCastExpr 0x7fcf5080c538 <col:15> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fcf5080c518 <col:15> 'int' 0
+    |-BinaryOperator 0x7fcf5080c708 <line:69:3, col:12> 'unsigned char' '='
+    | |-MemberExpr 0x7fcf5080c698 <col:3, col:6> 'unsigned char' lvalue bitfield .dmv 0x7fcf5080ab18
+    | | `-DeclRefExpr 0x7fcf5080c670 <col:3> 'struct PCT':'struct PCT' lvalue Var 0x7fcf5080c370 'ps' 'struct PCT':'struct PCT'
+    | `-ImplicitCastExpr 0x7fcf5080c6f0 <col:12> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fcf5080c6d0 <col:12> 'int' 1
+    |-CallExpr 0x7fcf5080c860 <line:70:3, col:20> 'void'
+    | |-ImplicitCastExpr 0x7fcf5080c848 <col:3> 'void (*)(struct pedr *const, struct PCT, unsigned char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fcf5080c730 <col:3> 'void (struct pedr *const, struct PCT, unsigned char)' Function 0x7fcf5080bc00 'pedri' 'void (struct pedr *const, struct PCT, unsigned char)'
+    | |-UnaryOperator 0x7fcf5080c780 <col:9, col:10> 'struct pedr *' prefix '&'
+    | | `-DeclRefExpr 0x7fcf5080c758 <col:10> 'struct pedr':'struct pedr' lvalue Var 0x7fcf5080c408 'pm' 'struct pedr':'struct pedr'
+    | |-ImplicitCastExpr 0x7fcf5080c8a0 <col:14> 'struct PCT':'struct PCT' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fcf5080c7a0 <col:14> 'struct PCT':'struct PCT' lvalue Var 0x7fcf5080c370 'ps' 'struct PCT':'struct PCT'
+    | `-ImplicitCastExpr 0x7fcf5080c8b8 <col:18> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fcf5080c7c8 <col:18> 'int' 32
+    |-IfStmt 0x7fcf5080ca78 <line:72:3, line:73:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcf5080c9b8 <line:72:7, col:20> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcf5080c9a0 <col:7, col:13> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fcf5080c988 <col:7, col:13> 'unsigned char' <LValueToRValue>
+    | | |   `-MemberExpr 0x7fcf5080c930 <col:7, col:13> 'unsigned char' lvalue bitfield .dmv 0x7fcf5080ab18
+    | | |     `-MemberExpr 0x7fcf5080c8f8 <col:7, col:10> 'struct PCT':'struct PCT' lvalue .pc 0x7fcf5080b160
+    | | |       `-DeclRefExpr 0x7fcf5080c8d0 <col:7> 'struct pedr':'struct pedr' lvalue Var 0x7fcf5080c408 'pm' 'struct pedr':'struct pedr'
+    | | `-IntegerLiteral 0x7fcf5080c968 <col:20> 'int' 1
+    | |-CallExpr 0x7fcf5080ca50 <line:73:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcf5080ca38 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcf5080c9e0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcf4f844420 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fcf5080cb40 <line:74:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fcf5080cb28 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcf5080cab0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fcf4f848138 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fcf5080cad8 <col:9> 'int' 0

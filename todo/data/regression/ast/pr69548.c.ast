@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f92608280e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f925f818af8 <../Data/C2AST/pr69548.c:7:1, line:11:1> line:8:1 quad_exchange '__int128 (__int128 *, __int128)'
+| |-ParmVarDecl 0x7f9260828da0 <col:16, col:26> col:26 used ptr '__int128 *'
+| |-ParmVarDecl 0x7f925f818a18 <col:31, col:40> col:40 used newval '__int128'
+| `-CompoundStmt 0x7f925f818e70 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7f925f818e58 <line:10:3, col:60>
+|     `-AtomicExpr 0x7f925f818e00 <col:10, col:60> '__int128'
+|       |-ImplicitCastExpr 0x7f925f818dd0 <col:31> '__int128 *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f925f818ce0 <col:31> '__int128 *' lvalue ParmVar 0x7f9260828da0 'ptr' '__int128 *'
+|       |-IntegerLiteral 0x7f925f818d30 <<built-in>:11:26> 'int' 0
+|       `-ImplicitCastExpr 0x7f925f818de8 <../Data/C2AST/pr69548.c:10:36> '__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f925f818d08 <col:36> '__int128' lvalue ParmVar 0x7f925f818a18 'newval' '__int128'
+`-FunctionDecl 0x7f925f818c18 <col:10> col:10 implicit used __atomic_exchange_n 'void ()' extern

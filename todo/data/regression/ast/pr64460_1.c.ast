@@ -1,0 +1,207 @@
+TranslationUnitDecl 0x7fe59f82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe59f82c978 <../Data/C2AST/pr64460_1.c:4:1, col:22> col:22 referenced size_t 'unsigned int'
+| `-BuiltinType 0x7fe59f82be80 'unsigned int'
+|-TypedefDecl 0x7fe59f86e000 <line:5:1, col:28> col:28 referenced __uint16_t 'unsigned short'
+| `-BuiltinType 0x7fe59f82be60 'unsigned short'
+|-TypedefDecl 0x7fe59f86e070 <line:6:1, col:27> col:27 referenced __uint32_t 'unsigned long'
+| `-BuiltinType 0x7fe59f82bea0 'unsigned long'
+|-TypedefDecl 0x7fe59f86e0e0 <line:7:1, col:22> col:22 referenced __uintptr_t 'unsigned int'
+| `-BuiltinType 0x7fe59f82be80 'unsigned int'
+|-TypedefDecl 0x7fe59f86e170 <line:8:1, col:20> col:20 referenced uint16_t '__uint16_t':'unsigned short'
+| `-TypedefType 0x7fe59f86e140 '__uint16_t' sugar
+|   |-Typedef 0x7fe59f86e000 '__uint16_t'
+|   `-BuiltinType 0x7fe59f82be60 'unsigned short'
+|-TypedefDecl 0x7fe59f86e200 <line:9:1, col:20> col:20 referenced uint32_t '__uint32_t':'unsigned long'
+| `-TypedefType 0x7fe59f86e1d0 '__uint32_t' sugar
+|   |-Typedef 0x7fe59f86e070 '__uint32_t'
+|   `-BuiltinType 0x7fe59f82bea0 'unsigned long'
+|-TypedefDecl 0x7fe59f86e290 <line:10:1, col:21> col:21 referenced uintptr_t '__uintptr_t':'unsigned int'
+| `-TypedefType 0x7fe59f86e260 '__uintptr_t' sugar
+|   |-Typedef 0x7fe59f86e0e0 '__uintptr_t'
+|   `-BuiltinType 0x7fe59f82be80 'unsigned int'
+|-TypedefDecl 0x7fe59f86e320 <line:11:1, col:18> col:18 referenced Objects_Id 'uint32_t':'unsigned long'
+| `-TypedefType 0x7fe59f86e2f0 'uint32_t' sugar
+|   |-Typedef 0x7fe59f86e200 'uint32_t'
+|   `-TypedefType 0x7fe59f86e1d0 '__uint32_t' sugar
+|     |-Typedef 0x7fe59f86e070 '__uint32_t'
+|     `-BuiltinType 0x7fe59f82bea0 'unsigned long'
+|-TypedefDecl 0x7fe59f86e3b0 <line:12:1, col:18> col:18 referenced Objects_Maximum 'uint16_t':'unsigned short'
+| `-TypedefType 0x7fe59f86e380 'uint16_t' sugar
+|   |-Typedef 0x7fe59f86e170 'uint16_t'
+|   `-TypedefType 0x7fe59f86e140 '__uint16_t' sugar
+|     |-Typedef 0x7fe59f86e000 '__uint16_t'
+|     `-BuiltinType 0x7fe59f82be60 'unsigned short'
+|-RecordDecl 0x7fe59f86e408 <line:13:9, col:18> col:9 struct definition
+|-TypedefDecl 0x7fe59f86e500 <col:1, col:20> col:20 referenced Objects_Control 'struct Objects_Control':'Objects_Control'
+| `-ElaboratedType 0x7fe59f86e4b0 'struct Objects_Control' sugar
+|   `-RecordType 0x7fe59f86e490 'Objects_Control'
+|     `-Record 0x7fe59f86e408 ''
+|-FunctionDecl 0x7fe59f86e738 <line:15:1, line:19:1> line:15:25 used _Addresses_Align_up 'void *(void *, size_t)' static inline
+| |-ParmVarDecl 0x7fe59f86e588 <col:46, col:52> col:52 used address 'void *'
+| |-ParmVarDecl 0x7fe59f86e620 <col:61, col:68> col:68 used alignment 'size_t':'unsigned int'
+| `-CompoundStmt 0x7fe59f86ebc8 <line:16:1, line:19:1>
+|   |-DeclStmt 0x7fe59f86e980 <line:17:2, col:43>
+|   | `-VarDecl 0x7fe59f86e860 <col:2, col:42> col:12 used mask 'uintptr_t':'unsigned int' cinit
+|   |   `-BinaryOperator 0x7fe59f86e958 <col:19, col:42> 'unsigned int' '-'
+|   |     |-ImplicitCastExpr 0x7fe59f86e940 <col:19> 'size_t':'unsigned int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fe59f86e8c0 <col:19> 'size_t':'unsigned int' lvalue ParmVar 0x7fe59f86e620 'alignment' 'size_t':'unsigned int'
+|   |     `-CStyleCastExpr 0x7fe59f86e918 <col:31, col:42> 'uintptr_t':'unsigned int' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fe59f86e8e8 <col:42> 'int' 1
+|   `-ReturnStmt 0x7fe59f86ebb0 <line:18:2, col:52>
+|     `-CStyleCastExpr 0x7fe59f86eb88 <col:9, col:52> 'void *' <IntegralToPointer>
+|       `-ParenExpr 0x7fe59f86eb68 <col:16, col:52> 'unsigned int'
+|         `-BinaryOperator 0x7fe59f86eaf8 <col:17, col:48> 'unsigned int' '&'
+|           |-ParenExpr 0x7fe59f86ea78 <col:17, col:43> 'unsigned int'
+|           | `-BinaryOperator 0x7fe59f86ea50 <col:18, col:39> 'unsigned int' '+'
+|           |   |-CStyleCastExpr 0x7fe59f86e9e8 <col:18, col:29> 'uintptr_t':'unsigned int' <PointerToIntegral>
+|           |   | `-ImplicitCastExpr 0x7fe59f86e9d0 <col:29> 'void *' <LValueToRValue>
+|           |   |   `-DeclRefExpr 0x7fe59f86e998 <col:29> 'void *' lvalue ParmVar 0x7fe59f86e588 'address' 'void *'
+|           |   `-ImplicitCastExpr 0x7fe59f86ea38 <col:39> 'uintptr_t':'unsigned int' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fe59f86ea10 <col:39> 'uintptr_t':'unsigned int' lvalue Var 0x7fe59f86e860 'mask' 'uintptr_t':'unsigned int'
+|           `-UnaryOperator 0x7fe59f86ead8 <col:47, col:48> 'uintptr_t':'unsigned int' prefix '~'
+|             `-ImplicitCastExpr 0x7fe59f86eac0 <col:48> 'uintptr_t':'unsigned int' <LValueToRValue>
+|               `-DeclRefExpr 0x7fe59f86ea98 <col:48> 'uintptr_t':'unsigned int' lvalue Var 0x7fe59f86e860 'mask' 'uintptr_t':'unsigned int'
+|-RecordDecl 0x7fe59f86ebe8 <line:21:9, line:28:1> line:21:9 struct definition
+| |-FieldDecl 0x7fe59f86ecc0 <line:22:2, col:13> col:13 referenced minimum_id 'Objects_Id':'unsigned long'
+| |-FieldDecl 0x7fe59f86ed40 <line:23:2, col:18> col:18 referenced maximum 'Objects_Maximum':'unsigned short'
+| |-FieldDecl 0x7fe59f86ed98 <line:24:2, line:25:3> col:3 referenced auto_extend '_Bool'
+| |-FieldDecl 0x7fe59f86edf0 <line:26:2, col:18> col:18 referenced allocation_size 'Objects_Maximum':'unsigned short'
+| `-FieldDecl 0x7fe59f86ee80 <line:27:2, col:9> col:9 referenced object_blocks 'void **'
+|-TypedefDecl 0x7fe59f86ef20 <line:21:1, line:28:3> col:3 referenced Objects_Information 'struct Objects_Information':'Objects_Information'
+| `-ElaboratedType 0x7fe59f86eed0 'struct Objects_Information' sugar
+|   `-RecordType 0x7fe59f86ec70 'Objects_Information'
+|     `-Record 0x7fe59f86ebe8 ''
+|-FunctionDecl 0x7fe59f885aa0 <line:30:1, col:47> col:17 used _Objects_Get_index 'uint32_t (Objects_Id)' extern
+| `-ParmVarDecl 0x7fe59f86efa0 <col:37> col:47 'Objects_Id':'unsigned long'
+|-FunctionDecl 0x7fe59f885c68 <line:31:1, col:42> col:15 used _Workspace_Allocate 'void **(size_t)' extern
+| `-ParmVarDecl 0x7fe59f885b58 <col:36> col:42 'size_t':'unsigned int'
+`-FunctionDecl 0x7fe59f885ea0 <line:33:1, line:69:1> line:33:6 _Objects_Extend_information 'void (Objects_Information *)'
+  |-ParmVarDecl 0x7fe59f885d98 <col:35, col:56> col:56 used information 'Objects_Information *'
+  `-CompoundStmt 0x7fe59f8874b0 <line:34:1, line:69:1>
+    |-DeclStmt 0x7fe59f885fb8 <line:35:2, col:22>
+    | `-VarDecl 0x7fe59f885f58 <col:2, col:11> col:11 used block_count 'uint32_t':'unsigned long'
+    |-DeclStmt 0x7fe59f886040 <line:36:2, col:24>
+    | `-VarDecl 0x7fe59f885fe0 <col:2, col:11> col:11 used minimum_index 'uint32_t':'unsigned long'
+    |-DeclStmt 0x7fe59f8860c8 <line:37:2, col:18>
+    | `-VarDecl 0x7fe59f886068 <col:2, col:11> col:11 used maximum 'uint32_t':'unsigned long'
+    |-DeclStmt 0x7fe59f886150 <line:38:2, col:19>
+    | `-VarDecl 0x7fe59f8860f0 <col:2, col:9> col:9 used block_size 'size_t':'unsigned int'
+    |-DeclStmt 0x7fe59f886398 <line:39:2, line:41:64>
+    | `-VarDecl 0x7fe59f886178 <line:39:2, line:41:63> line:40:3 used do_extend '_Bool' cinit
+    |   `-ImplicitCastExpr 0x7fe59f886380 <line:41:3, col:63> '_Bool' <IntegralToBoolean>
+    |     `-BinaryOperator 0x7fe59f886358 <col:3, col:63> 'uint32_t':'unsigned long' '='
+    |       |-DeclRefExpr 0x7fe59f8861d8 <col:3> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f885fe0 'minimum_index' 'uint32_t':'unsigned long'
+    |       `-CallExpr 0x7fe59f886310 <col:19, col:63> 'uint32_t':'unsigned long'
+    |         |-ImplicitCastExpr 0x7fe59f8862f8 <col:19> 'uint32_t (*)(Objects_Id)' <FunctionToPointerDecay>
+    |         | `-DeclRefExpr 0x7fe59f886200 <col:19> 'uint32_t (Objects_Id)' Function 0x7fe59f885aa0 '_Objects_Get_index' 'uint32_t (Objects_Id)'
+    |         `-ImplicitCastExpr 0x7fe59f886340 <col:39, col:52> 'Objects_Id':'unsigned long' <LValueToRValue>
+    |           `-MemberExpr 0x7fe59f886268 <col:39, col:52> 'Objects_Id':'unsigned long' lvalue ->minimum_id 0x7fe59f86ecc0
+    |             `-ImplicitCastExpr 0x7fe59f886250 <col:39> 'Objects_Information *' <LValueToRValue>
+    |               `-DeclRefExpr 0x7fe59f886228 <col:39> 'Objects_Information *' lvalue ParmVar 0x7fe59f885d98 'information' 'Objects_Information *'
+    |-IfStmt 0x7fe59f886780 <line:42:2, line:48:2>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe59f8864d8 <line:42:7, line:43:14> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fe59f8864a8 <line:42:7, col:20> 'void **' <LValueToRValue>
+    | | | `-MemberExpr 0x7fe59f8863f0 <col:7, col:20> 'void **' lvalue ->object_blocks 0x7fe59f86ee80
+    | | |   `-ImplicitCastExpr 0x7fe59f8863d8 <col:7> 'Objects_Information *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fe59f8863b0 <col:7> 'Objects_Information *' lvalue ParmVar 0x7fe59f885d98 'information' 'Objects_Information *'
+    | | `-ImplicitCastExpr 0x7fe59f8864c0 <line:43:4, col:14> 'void **' <BitCast>
+    | |   `-ParenExpr 0x7fe59f886488 <col:4, col:14> 'void *'
+    | |     `-CStyleCastExpr 0x7fe59f886460 <col:5, col:13> 'void *' <NullToPointer>
+    | |       `-IntegerLiteral 0x7fe59f886428 <col:13> 'int' 0
+    | |-BinaryOperator 0x7fe59f886560 <line:45:3, col:17> 'uint32_t':'unsigned long' '='
+    | | |-DeclRefExpr 0x7fe59f886500 <col:3> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f885f58 'block_count' 'uint32_t':'unsigned long'
+    | | `-ImplicitCastExpr 0x7fe59f886548 <col:17> 'uint32_t':'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe59f886528 <col:17> 'int' 0
+    | `-CompoundStmt 0x7fe59f886768 <line:46:7, line:48:2>
+    |   `-BinaryOperator 0x7fe59f886740 <line:47:3, col:53> 'uint32_t':'unsigned long' '='
+    |     |-DeclRefExpr 0x7fe59f886588 <col:3> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f885f58 'block_count' 'uint32_t':'unsigned long'
+    |     `-ImplicitCastExpr 0x7fe59f886728 <col:17, col:53> 'uint32_t':'unsigned long' <IntegralCast>
+    |       `-BinaryOperator 0x7fe59f886700 <col:17, col:53> 'int' '/'
+    |         |-ImplicitCastExpr 0x7fe59f8866b8 <col:17, col:30> 'int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7fe59f8866a0 <col:17, col:30> 'Objects_Maximum':'unsigned short' <LValueToRValue>
+    |         |   `-MemberExpr 0x7fe59f8865f0 <col:17, col:30> 'Objects_Maximum':'unsigned short' lvalue ->maximum 0x7fe59f86ed40
+    |         |     `-ImplicitCastExpr 0x7fe59f8865d8 <col:17> 'Objects_Information *' <LValueToRValue>
+    |         |       `-DeclRefExpr 0x7fe59f8865b0 <col:17> 'Objects_Information *' lvalue ParmVar 0x7fe59f885d98 'information' 'Objects_Information *'
+    |         `-ImplicitCastExpr 0x7fe59f8866e8 <col:40, col:53> 'int' <IntegralCast>
+    |           `-ImplicitCastExpr 0x7fe59f8866d0 <col:40, col:53> 'Objects_Maximum':'unsigned short' <LValueToRValue>
+    |             `-MemberExpr 0x7fe59f886668 <col:40, col:53> 'Objects_Maximum':'unsigned short' lvalue ->allocation_size 0x7fe59f86edf0
+    |               `-ImplicitCastExpr 0x7fe59f886650 <col:40> 'Objects_Information *' <LValueToRValue>
+    |                 `-DeclRefExpr 0x7fe59f886628 <col:40> 'Objects_Information *' lvalue ParmVar 0x7fe59f885d98 'information' 'Objects_Information *'
+    `-IfStmt 0x7fe59f887478 <line:49:2, line:68:2>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe59f8867e0 <line:49:7> '_Bool' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe59f8867b8 <col:7> '_Bool' lvalue Var 0x7fe59f886178 'do_extend' '_Bool'
+      |-CompoundStmt 0x7fe59f887430 <col:19, line:68:2>
+      | |-DeclStmt 0x7fe59f886870 <line:50:3, col:23>
+      | | `-VarDecl 0x7fe59f886810 <col:3, col:10> col:10 used object_blocks 'void **'
+      | |-DeclStmt 0x7fe59f8868f8 <line:51:3, col:31>
+      | | `-VarDecl 0x7fe59f886898 <col:3, col:13> col:13 used object_blocks_size 'uintptr_t':'unsigned int'
+      | |-DeclStmt 0x7fe59f886980 <line:52:3, col:36>
+      | | `-VarDecl 0x7fe59f886920 <col:3, col:13> col:13 used inactive_per_block_size 'uintptr_t':'unsigned int'
+      | |-BinaryOperator 0x7fe59f886c48 <line:53:3, line:56:5> 'uintptr_t':'unsigned int' '='
+      | | |-DeclRefExpr 0x7fe59f886998 <line:53:3> 'uintptr_t':'unsigned int' lvalue Var 0x7fe59f886898 'object_blocks_size' 'uintptr_t':'unsigned int'
+      | | `-CStyleCastExpr 0x7fe59f886c20 <col:24, line:56:5> 'uintptr_t':'unsigned int' <PointerToIntegral>
+      | |   `-CallExpr 0x7fe59f886bc0 <line:53:35, line:56:5> 'void *'
+      | |     |-ImplicitCastExpr 0x7fe59f886ba8 <line:53:35> 'void *(*)(void *, size_t)' <FunctionToPointerDecay>
+      | |     | `-DeclRefExpr 0x7fe59f8869c0 <col:35> 'void *(void *, size_t)' Function 0x7fe59f86e738 '_Addresses_Align_up' 'void *(void *, size_t)'
+      | |     |-CStyleCastExpr 0x7fe59f886b08 <line:54:5, col:40> 'void *' <IntegralToPointer>
+      | |     | `-ParenExpr 0x7fe59f886ae8 <col:12, col:40> 'unsigned long'
+      | |     |   `-BinaryOperator 0x7fe59f886a78 <col:13, col:39> 'unsigned long' '*'
+      | |     |     |-ImplicitCastExpr 0x7fe59f886a60 <col:13> 'uint32_t':'unsigned long' <LValueToRValue>
+      | |     |     | `-DeclRefExpr 0x7fe59f886a00 <col:13> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f885f58 'block_count' 'uint32_t':'unsigned long'
+      | |     |     `-UnaryExprOrTypeTraitExpr 0x7fe59f886a40 <col:27, col:39> 'unsigned long' sizeof 'void *'
+      | |     `-ImplicitCastExpr 0x7fe59f886bf8 <line:55:5> 'size_t':'unsigned int' <IntegralCast>
+      | |       `-IntegerLiteral 0x7fe59f886b30 <col:5> 'int' 8
+      | |-BinaryOperator 0x7fe59f886ea8 <line:57:3, line:61:6> 'uintptr_t':'unsigned int' '='
+      | | |-DeclRefExpr 0x7fe59f886c70 <line:57:3> 'uintptr_t':'unsigned int' lvalue Var 0x7fe59f886920 'inactive_per_block_size' 'uintptr_t':'unsigned int'
+      | | `-CStyleCastExpr 0x7fe59f886e80 <line:58:4, line:61:6> 'uintptr_t':'unsigned int' <PointerToIntegral>
+      | |   `-CallExpr 0x7fe59f886e20 <line:58:15, line:61:6> 'void *'
+      | |     |-ImplicitCastExpr 0x7fe59f886e08 <line:58:15> 'void *(*)(void *, size_t)' <FunctionToPointerDecay>
+      | |     | `-DeclRefExpr 0x7fe59f886c98 <col:15> 'void *(void *, size_t)' Function 0x7fe59f86e738 '_Addresses_Align_up' 'void *(void *, size_t)'
+      | |     |-CStyleCastExpr 0x7fe59f886dc0 <line:59:6, col:44> 'void *' <IntegralToPointer>
+      | |     | `-ParenExpr 0x7fe59f886da0 <col:13, col:44> 'unsigned long'
+      | |     |   `-BinaryOperator 0x7fe59f886d30 <col:14, col:43> 'unsigned long' '*'
+      | |     |     |-ImplicitCastExpr 0x7fe59f886d18 <col:14> 'uint32_t':'unsigned long' <LValueToRValue>
+      | |     |     | `-DeclRefExpr 0x7fe59f886cc0 <col:14> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f885f58 'block_count' 'uint32_t':'unsigned long'
+      | |     |     `-UnaryExprOrTypeTraitExpr 0x7fe59f886cf8 <col:28, col:43> 'unsigned long' sizeof 'uint32_t':'unsigned long'
+      | |     `-ImplicitCastExpr 0x7fe59f886e58 <line:60:6> 'size_t':'unsigned int' <IntegralCast>
+      | |       `-IntegerLiteral 0x7fe59f886de8 <col:6> 'int' 8
+      | |-BinaryOperator 0x7fe59f8871b8 <line:62:3, line:63:58> 'size_t':'unsigned int' '='
+      | | |-DeclRefExpr 0x7fe59f886ed0 <line:62:3> 'size_t':'unsigned int' lvalue Var 0x7fe59f8860f0 'block_size' 'size_t':'unsigned int'
+      | | `-ImplicitCastExpr 0x7fe59f8871a0 <col:16, line:63:58> 'size_t':'unsigned int' <IntegralCast>
+      | |   `-BinaryOperator 0x7fe59f887178 <line:62:16, line:63:58> 'unsigned long' '+'
+      | |     |-ImplicitCastExpr 0x7fe59f887160 <line:62:16, col:37> 'unsigned long' <IntegralCast>
+      | |     | `-BinaryOperator 0x7fe59f886f78 <col:16, col:37> 'unsigned int' '+'
+      | |     |   |-ImplicitCastExpr 0x7fe59f886f48 <col:16> 'uintptr_t':'unsigned int' <LValueToRValue>
+      | |     |   | `-DeclRefExpr 0x7fe59f886ef8 <col:16> 'uintptr_t':'unsigned int' lvalue Var 0x7fe59f886898 'object_blocks_size' 'uintptr_t':'unsigned int'
+      | |     |   `-ImplicitCastExpr 0x7fe59f886f60 <col:37> 'uintptr_t':'unsigned int' <LValueToRValue>
+      | |     |     `-DeclRefExpr 0x7fe59f886f20 <col:37> 'uintptr_t':'unsigned int' lvalue Var 0x7fe59f886920 'inactive_per_block_size' 'uintptr_t':'unsigned int'
+      | |     `-ParenExpr 0x7fe59f887140 <line:63:4, col:58> 'unsigned long'
+      | |       `-BinaryOperator 0x7fe59f887118 <col:5, col:57> 'unsigned long' '*'
+      | |         |-ParenExpr 0x7fe59f887048 <col:5, col:29> 'unsigned long'
+      | |         | `-BinaryOperator 0x7fe59f887020 <col:6, col:16> 'unsigned long' '+'
+      | |         |   |-ImplicitCastExpr 0x7fe59f886ff0 <col:6> 'uint32_t':'unsigned long' <LValueToRValue>
+      | |         |   | `-DeclRefExpr 0x7fe59f886fa0 <col:6> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f886068 'maximum' 'uint32_t':'unsigned long'
+      | |         |   `-ImplicitCastExpr 0x7fe59f887008 <col:16> 'uint32_t':'unsigned long' <LValueToRValue>
+      | |         |     `-DeclRefExpr 0x7fe59f886fc8 <col:16> 'uint32_t':'unsigned long' lvalue Var 0x7fe59f885fe0 'minimum_index' 'uint32_t':'unsigned long'
+      | |         `-UnaryExprOrTypeTraitExpr 0x7fe59f8870f8 <col:33, col:57> 'unsigned long' sizeof 'Objects_Control *'
+      | `-IfStmt 0x7fe59f8873f8 <line:64:3, line:67:3>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7fe59f887258 <line:64:8, col:21> '_Bool' <LValueToRValue>
+      |   | `-MemberExpr 0x7fe59f887220 <col:8, col:21> '_Bool' lvalue ->auto_extend 0x7fe59f86ed98
+      |   |   `-ImplicitCastExpr 0x7fe59f887208 <col:8> 'Objects_Information *' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7fe59f8871e0 <col:8> 'Objects_Information *' lvalue ParmVar 0x7fe59f885d98 'information' 'Objects_Information *'
+      |   |-CompoundStmt 0x7fe59f8873d0 <col:35, line:66:3>
+      |   | `-BinaryOperator 0x7fe59f8873a8 <line:65:4, col:52> 'void **' '='
+      |   |   |-DeclRefExpr 0x7fe59f887270 <col:4> 'void **' lvalue Var 0x7fe59f886810 'object_blocks' 'void **'
+      |   |   `-CallExpr 0x7fe59f887360 <col:20, col:52> 'void **'
+      |   |     |-ImplicitCastExpr 0x7fe59f887348 <col:20> 'void **(*)(size_t)' <FunctionToPointerDecay>
+      |   |     | `-DeclRefExpr 0x7fe59f887298 <col:20> 'void **(size_t)' Function 0x7fe59f885c68 '_Workspace_Allocate' 'void **(size_t)'
+      |   |     `-ImplicitCastExpr 0x7fe59f887390 <col:41> 'size_t':'unsigned int' <LValueToRValue>
+      |   |       `-DeclRefExpr 0x7fe59f8872c0 <col:41> 'size_t':'unsigned int' lvalue Var 0x7fe59f8860f0 'block_size' 'size_t':'unsigned int'
+      |   `-CompoundStmt 0x7fe59f8873e8 <line:66:10, line:67:3>
+      `-<<<NULL>>>

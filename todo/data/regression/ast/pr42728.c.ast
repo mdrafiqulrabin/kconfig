@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ff023824ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff02385e060 <../Data/C2AST/pr42728.c:6:1, line:12:1> line:7:1 foo 'void (char *)'
+  |-ParmVarDecl 0x7ff023825978 <col:6, col:12> col:12 used a 'char *'
+  `-CompoundStmt 0x7ff02385e368 <line:8:1, line:12:1>
+    |-DeclStmt 0x7ff02385e1c0 <line:9:3, col:10>
+    | `-VarDecl 0x7ff02385e160 <col:3, col:9> col:9 used b 'char *'
+    `-ForStmt 0x7ff02385e330 <line:10:3, line:11:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff02385e238 <line:10:10, col:11> 'char' <LValueToRValue>
+      | `-UnaryOperator 0x7ff02385e218 <col:10, col:11> 'char' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7ff02385e200 <col:11> 'char *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ff02385e1d8 <col:11> 'char *' lvalue ParmVar 0x7ff023825978 'a' 'char *'
+      |-UnaryOperator 0x7ff02385e278 <col:14, col:15> 'char *' postfix '++'
+      | `-DeclRefExpr 0x7ff02385e250 <col:14> 'char *' lvalue ParmVar 0x7ff023825978 'a' 'char *'
+      `-BinaryOperator 0x7ff02385e308 <line:11:5, col:10> 'char *' '='
+        |-DeclRefExpr 0x7ff02385e298 <col:5> 'char *' lvalue ParmVar 0x7ff023825978 'a' 'char *'
+        `-UnaryOperator 0x7ff02385e2e8 <col:9, col:10> 'char *' postfix '++'
+          `-DeclRefExpr 0x7ff02385e2c0 <col:9> 'char *' lvalue Var 0x7ff02385e160 'b' 'char *'

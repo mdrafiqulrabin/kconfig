@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fab3282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fab3286e820 <../Data/C2AST/pr69558.c:17:1, col:43> col:34 used foo 'void (void)'
+| `-DeprecatedAttr 0x7fab3286e8c0 <col:16> "" ""
+`-FunctionDecl 0x7fab3286e9f0 <line:14:3, col:41> col:22 bar 'void (void)' static inline
+  `-CompoundStmt 0x7fab3286eb28 <col:33, col:41>
+    `-CallExpr 0x7fab3286eb00 <line:19:4, line:14:38> 'void'
+      `-ImplicitCastExpr 0x7fab3286eae8 <line:19:4> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fab3286ea90 <col:4> 'void (void)' Function 0x7fab3286e820 'foo' 'void (void)'

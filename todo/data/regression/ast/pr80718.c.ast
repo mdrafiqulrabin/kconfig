@@ -1,0 +1,802 @@
+TranslationUnitDecl 0x7fd42282b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd42282bf60 <../Data/C2AST/pr80718.c:9:9, line:13:1> line:9:9 struct definition
+| |-FieldDecl 0x7fd42286f438 <line:11:3, col:10> col:10 referenced real 'double'
+| `-FieldDecl 0x7fd42286f498 <line:12:3, col:10> col:10 referenced imag 'double'
+|-TypedefDecl 0x7fd42286f530 <line:9:1, line:13:3> col:3 referenced complex 'struct complex':'complex'
+| `-ElaboratedType 0x7fd42286f4e0 'struct complex' sugar
+|   `-RecordType 0x7fd42286f400 'complex'
+|     `-Record 0x7fd42282bf60 ''
+|-RecordDecl 0x7fd42286f5a0 <line:15:9, line:19:1> line:15:9 struct definition
+| |-FieldDecl 0x7fd42286f668 <line:17:3, col:10> col:10 real 'double'
+| `-FieldDecl 0x7fd42286f6c8 <line:18:3, col:10> col:10 imag 'double'
+|-TypedefDecl 0x7fd42286f760 <line:15:1, line:19:3> col:3 referenced double_complex 'struct double_complex':'double_complex'
+| `-ElaboratedType 0x7fd42286f710 'struct double_complex' sugar
+|   `-RecordType 0x7fd42286f630 'double_complex'
+|     `-Record 0x7fd42286f5a0 ''
+|-FunctionDecl 0x7fd42286f990 <line:21:1, col:34> col:9 cmplx 'complex (double, double)'
+| |-ParmVarDecl 0x7fd42286f808 <col:16, col:23> col:23 x 'double'
+| `-ParmVarDecl 0x7fd42286f880 <col:26, col:33> col:33 y 'double'
+|-FunctionDecl 0x7fd42286fc70 <line:22:1, col:39> col:9 cadd 'complex (complex *, complex *)'
+| |-ParmVarDecl 0x7fd42286fae8 <col:15, col:25> col:25 a 'complex *'
+| `-ParmVarDecl 0x7fd42286fb58 <col:28, col:38> col:38 b 'complex *'
+|-FunctionDecl 0x7fd42286fe30 <line:23:1, col:39> col:9 cmul 'complex (complex *, complex *)'
+| |-ParmVarDecl 0x7fd42286fd30 <col:15, col:25> col:25 a 'complex *'
+| `-ParmVarDecl 0x7fd42286fda0 <col:28, col:38> col:38 b 'complex *'
+|-FunctionDecl 0x7fd42286fff0 <line:24:1, col:39> col:9 csub 'complex (complex *, complex *)'
+| |-ParmVarDecl 0x7fd42286fef0 <col:15, col:25> col:25 a 'complex *'
+| `-ParmVarDecl 0x7fd42286ff60 <col:28, col:38> col:38 b 'complex *'
+|-FunctionDecl 0x7fd4228701b0 <line:25:1, col:39> col:9 cdiv 'complex (complex *, complex *)'
+| |-ParmVarDecl 0x7fd4228700b0 <col:15, col:25> col:25 a 'complex *'
+| `-ParmVarDecl 0x7fd422870120 <col:28, col:38> col:38 b 'complex *'
+|-FunctionDecl 0x7fd422870400 <line:26:1, col:27> col:9 conjg 'complex (complex *)'
+| `-ParmVarDecl 0x7fd422870270 <col:16, col:26> col:26 a 'complex *'
+|-FunctionDecl 0x7fd4228705c0 <line:27:1, col:32> col:9 ce_itheta 'complex (double)'
+| `-ParmVarDecl 0x7fd4228704c0 <col:20, col:27> col:27 theta 'double'
+|-FunctionDecl 0x7fd422870830 <line:29:1, col:42> col:16 dcmplx 'double_complex (double, double)'
+| |-ParmVarDecl 0x7fd4228706a8 <col:24, col:31> col:31 x 'double'
+| `-ParmVarDecl 0x7fd422870720 <col:34, col:41> col:41 y 'double'
+|-FunctionDecl 0x7fd422870ad0 <line:30:1, col:61> col:16 dcadd 'double_complex (double_complex *, double_complex *)'
+| |-ParmVarDecl 0x7fd422870948 <col:23, col:40> col:40 a 'double_complex *'
+| `-ParmVarDecl 0x7fd4228709b8 <col:43, col:60> col:60 b 'double_complex *'
+|-FunctionDecl 0x7fd422870c90 <line:31:1, col:61> col:16 dcmul 'double_complex (double_complex *, double_complex *)'
+| |-ParmVarDecl 0x7fd422870b90 <col:23, col:40> col:40 a 'double_complex *'
+| `-ParmVarDecl 0x7fd422870c00 <col:43, col:60> col:60 b 'double_complex *'
+|-FunctionDecl 0x7fd422870e50 <line:32:1, col:61> col:16 dcsub 'double_complex (double_complex *, double_complex *)'
+| |-ParmVarDecl 0x7fd422870d50 <col:23, col:40> col:40 a 'double_complex *'
+| `-ParmVarDecl 0x7fd422870dc0 <col:43, col:60> col:60 b 'double_complex *'
+|-FunctionDecl 0x7fd422871010 <line:33:1, col:61> col:16 dcdiv 'double_complex (double_complex *, double_complex *)'
+| |-ParmVarDecl 0x7fd422870f10 <col:23, col:40> col:40 a 'double_complex *'
+| `-ParmVarDecl 0x7fd422870f80 <col:43, col:60> col:60 b 'double_complex *'
+|-FunctionDecl 0x7fd4228711d0 <line:34:1, col:42> col:16 dconjg 'double_complex (double_complex *)'
+| `-ParmVarDecl 0x7fd4228710d0 <col:24, col:41> col:41 a 'double_complex *'
+|-FunctionDecl 0x7fd422871310 <line:35:1, col:41> col:16 dcexp 'double_complex (double_complex *)'
+| `-ParmVarDecl 0x7fd422871288 <col:23, col:40> col:40 a 'double_complex *'
+|-FunctionDecl 0x7fd422886e88 <line:36:1, col:41> col:16 dclog 'double_complex (double_complex *)'
+| `-ParmVarDecl 0x7fd422886e00 <col:23, col:40> col:40 a 'double_complex *'
+|-FunctionDecl 0x7fd422886fc8 <line:37:1, col:42> col:16 dcsqrt 'double_complex (double_complex *)'
+| `-ParmVarDecl 0x7fd422886f40 <col:24, col:41> col:41 z 'double_complex *'
+|-FunctionDecl 0x7fd422887190 <line:38:1, col:40> col:16 dce_itheta 'double_complex (double)'
+| `-ParmVarDecl 0x7fd422887088 <col:28, col:35> col:35 theta 'double'
+|-RecordDecl 0x7fd422887238 <line:40:9, line:45:1> line:40:9 struct definition
+| |-FieldDecl 0x7fd4228872f8 <line:42:3, col:17> col:17 r0 'unsigned long'
+| |-FieldDecl 0x7fd422887358 <col:3, col:21> col:21 r1 'unsigned long'
+| |-FieldDecl 0x7fd4228873b8 <col:3, col:25> col:25 r2 'unsigned long'
+| |-FieldDecl 0x7fd422887418 <col:3, col:29> col:29 r3 'unsigned long'
+| |-FieldDecl 0x7fd422887478 <col:3, col:33> col:33 r4 'unsigned long'
+| |-FieldDecl 0x7fd4228874d8 <col:3, col:37> col:37 r5 'unsigned long'
+| |-FieldDecl 0x7fd422887538 <col:3, col:41> col:41 r6 'unsigned long'
+| |-FieldDecl 0x7fd422887598 <line:43:3, col:17> col:17 multiplier 'unsigned long'
+| |-FieldDecl 0x7fd4228875f8 <col:3, col:29> col:29 addend 'unsigned long'
+| |-FieldDecl 0x7fd422887658 <col:3, col:37> col:37 ic_state 'unsigned long'
+| `-FieldDecl 0x7fd4228876b8 <line:44:3, col:10> col:10 scale 'double'
+|-TypedefDecl 0x7fd422887750 <line:40:1, line:45:3> col:3 referenced double_prn 'struct double_prn':'double_prn'
+| `-ElaboratedType 0x7fd422887700 'struct double_prn' sugar
+|   `-RecordType 0x7fd4228872c0 'double_prn'
+|     `-Record 0x7fd422887238 ''
+|-FunctionDecl 0x7fd422887958 <line:47:1, col:35> col:8 myrand 'double (double_prn *)'
+| `-ParmVarDecl 0x7fd422887848 <col:16, col:29> col:29 prn_pt 'double_prn *'
+|-RecordDecl 0x7fd422887a00 <line:49:9, line:52:1> line:49:9 struct definition
+| `-FieldDecl 0x7fd422887c68 <line:51:3, col:17> col:11 referenced e 'complex [3][3]'
+|-TypedefDecl 0x7fd422887d00 <line:49:1, line:52:3> col:3 referenced su3_matrix 'struct su3_matrix':'su3_matrix'
+| `-ElaboratedType 0x7fd422887cb0 'struct su3_matrix' sugar
+|   `-RecordType 0x7fd422887a90 'su3_matrix'
+|     `-Record 0x7fd422887a00 ''
+|-RecordDecl 0x7fd422887d70 <line:54:9, line:57:1> line:54:9 struct definition
+| `-FieldDecl 0x7fd422887e60 <line:56:3, col:14> col:11 referenced c 'complex [3]'
+|-TypedefDecl 0x7fd422887f00 <line:54:1, line:57:3> col:3 referenced su3_vector 'struct su3_vector':'su3_vector'
+| `-ElaboratedType 0x7fd422887eb0 'struct su3_vector' sugar
+|   `-RecordType 0x7fd422887e00 'su3_vector'
+|     `-Record 0x7fd422887d70 ''
+|-RecordDecl 0x7fd422887f70 <line:59:9, line:64:1> line:59:9 struct definition
+| |-FieldDecl 0x7fd422888030 <line:61:3, col:11> col:11 m01 'complex':'complex'
+| |-FieldDecl 0x7fd422888088 <col:3, col:16> col:16 m02 'complex':'complex'
+| |-FieldDecl 0x7fd4228880e0 <col:3, col:21> col:21 m12 'complex':'complex'
+| |-FieldDecl 0x7fd422888140 <line:62:3, col:10> col:10 m00im 'double'
+| |-FieldDecl 0x7fd4228881a0 <col:3, col:17> col:17 m11im 'double'
+| |-FieldDecl 0x7fd422888200 <col:3, col:24> col:24 m22im 'double'
+| `-FieldDecl 0x7fd422888260 <line:63:3, col:10> col:10 space 'double'
+|-TypedefDecl 0x7fd422888300 <line:59:1, line:64:3> col:3 referenced anti_hermitmat 'struct anti_hermitmat':'anti_hermitmat'
+| `-ElaboratedType 0x7fd4228882b0 'struct anti_hermitmat' sugar
+|   `-RecordType 0x7fd422888000 'anti_hermitmat'
+|     `-Record 0x7fd422887f70 ''
+|-RecordDecl 0x7fd422888370 <line:66:9, line:69:1> line:66:9 struct definition
+| `-FieldDecl 0x7fd422888588 <line:68:3, col:17> col:11 e 'complex [2][2]'
+|-TypedefDecl 0x7fd422888620 <line:66:1, line:69:3> col:3 referenced su2_matrix 'struct su2_matrix':'su2_matrix'
+| `-ElaboratedType 0x7fd4228885d0 'struct su2_matrix' sugar
+|   `-RecordType 0x7fd422888400 'su2_matrix'
+|     `-Record 0x7fd422888370 ''
+|-RecordDecl 0x7fd422888690 <line:70:9, line:73:1> line:70:9 struct definition
+| `-FieldDecl 0x7fd422888868 <line:72:3, col:17> col:14 d 'su3_vector [4]'
+|-TypedefDecl 0x7fd422888900 <line:70:1, line:73:3> col:3 referenced wilson_vector 'struct wilson_vector':'wilson_vector'
+| `-ElaboratedType 0x7fd4228888b0 'struct wilson_vector' sugar
+|   `-RecordType 0x7fd422888720 'wilson_vector'
+|     `-Record 0x7fd422888690 ''
+|-RecordDecl 0x7fd422888970 <line:74:9, line:77:1> line:74:9 struct definition
+| `-FieldDecl 0x7fd422888ad8 <line:76:3, col:17> col:14 h 'su3_vector [2]'
+|-TypedefDecl 0x7fd422888b70 <line:74:1, line:77:3> col:3 referenced half_wilson_vector 'struct half_wilson_vector':'half_wilson_vector'
+| `-ElaboratedType 0x7fd422888b20 'struct half_wilson_vector' sugar
+|   `-RecordType 0x7fd422888a00 'half_wilson_vector'
+|     `-Record 0x7fd422888970 ''
+|-RecordDecl 0x7fd422888be0 <line:78:9, line:81:1> line:78:9 struct definition
+| `-FieldDecl 0x7fd422888db8 <line:80:3, col:20> col:17 c 'wilson_vector [3]'
+|-TypedefDecl 0x7fd422888e50 <line:78:1, line:81:3> col:3 referenced color_wilson_vector 'struct color_wilson_vector':'color_wilson_vector'
+| `-ElaboratedType 0x7fd422888e00 'struct color_wilson_vector' sugar
+|   `-RecordType 0x7fd422888c70 'color_wilson_vector'
+|     `-Record 0x7fd422888be0 ''
+|-RecordDecl 0x7fd422888ec0 <line:82:9, line:85:1> line:82:9 struct definition
+| `-FieldDecl 0x7fd422889028 <line:84:3, col:20> col:17 d 'wilson_vector [4]'
+|-TypedefDecl 0x7fd4228890c0 <line:82:1, line:85:3> col:3 referenced spin_wilson_vector 'struct spin_wilson_vector':'spin_wilson_vector'
+| `-ElaboratedType 0x7fd422889070 'struct spin_wilson_vector' sugar
+|   `-RecordType 0x7fd422888f50 'spin_wilson_vector'
+|     `-Record 0x7fd422888ec0 ''
+|-RecordDecl 0x7fd422889130 <line:86:9, line:89:1> line:86:9 struct definition
+| `-FieldDecl 0x7fd422889308 <line:88:3, col:26> col:23 d 'color_wilson_vector [4]'
+|-TypedefDecl 0x7fd4228893a0 <line:86:1, line:89:3> col:3 referenced wilson_matrix 'struct wilson_matrix':'wilson_matrix'
+| `-ElaboratedType 0x7fd422889350 'struct wilson_matrix' sugar
+|   `-RecordType 0x7fd4228891c0 'wilson_matrix'
+|     `-Record 0x7fd422889130 ''
+|-RecordDecl 0x7fd422889410 <line:90:9, line:93:1> line:90:9 struct definition
+| `-FieldDecl 0x7fd4228895e8 <line:92:3, col:25> col:22 c 'spin_wilson_vector [3]'
+|-TypedefDecl 0x7fd422889680 <line:90:1, line:93:3> col:3 wilson_propagator 'struct wilson_propagator':'wilson_propagator'
+| `-ElaboratedType 0x7fd422889630 'struct wilson_propagator' sugar
+|   `-RecordType 0x7fd4228894a0 'wilson_propagator'
+|     `-Record 0x7fd422889410 ''
+|-FunctionDecl 0x7fd422889990 <line:95:1, col:65> col:6 mult_su3_nn 'void (su3_matrix *, su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd422889778 <col:19, col:32> col:32 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd4228897e8 <col:35, col:48> col:48 b 'su3_matrix *'
+| `-ParmVarDecl 0x7fd422889858 <col:51, col:64> col:64 c 'su3_matrix *'
+|-FunctionDecl 0x7fd422889bd0 <line:96:1, col:65> col:6 mult_su3_na 'void (su3_matrix *, su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd422889a58 <col:19, col:32> col:32 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422889ac8 <col:35, col:48> col:48 b 'su3_matrix *'
+| `-ParmVarDecl 0x7fd422889b38 <col:51, col:64> col:64 c 'su3_matrix *'
+|-FunctionDecl 0x7fd422889e38 <line:97:1, col:65> col:6 mult_su3_an 'void (su3_matrix *, su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd422889c98 <col:19, col:32> col:32 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422889d08 <col:35, col:48> col:48 b 'su3_matrix *'
+| `-ParmVarDecl 0x7fd422889d78 <col:51, col:64> col:64 c 'su3_matrix *'
+|-FunctionDecl 0x7fd42288a088 <line:98:1, col:53> col:8 realtrace_su3 'double (su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd422889f00 <col:23, col:36> col:36 a 'su3_matrix *'
+| `-ParmVarDecl 0x7fd422889f70 <col:39, col:52> col:52 b 'su3_matrix *'
+|-FunctionDecl 0x7fd42288a250 <line:99:1, col:34> col:9 trace_su3 'complex (su3_matrix *)'
+| `-ParmVarDecl 0x7fd42288a148 <col:20, col:33> col:33 a 'su3_matrix *'
+|-FunctionDecl 0x7fd42288a490 <line:100:1, col:57> col:9 complextrace_su3 'complex (su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288a308 <col:27, col:40> col:40 a 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288a378 <col:43, col:56> col:56 b 'su3_matrix *'
+|-FunctionDecl 0x7fd42288a5d8 <line:101:1, col:32> col:9 det_su3 'complex (su3_matrix *)'
+| `-ParmVarDecl 0x7fd42288a550 <col:18, col:31> col:31 a 'su3_matrix *'
+|-FunctionDecl 0x7fd42288a808 <line:102:1, col:68> col:6 add_su3_matrix 'void (su3_matrix *, su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288a690 <col:22, col:35> col:35 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288a700 <col:38, col:51> col:51 b 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288a770 <col:54, col:67> col:67 c 'su3_matrix *'
+|-FunctionDecl 0x7fd42288aa48 <line:103:1, col:68> col:6 sub_su3_matrix 'void (su3_matrix *, su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288a8d0 <col:22, col:35> col:35 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288a940 <col:38, col:51> col:51 b 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288a9b0 <col:54, col:67> col:67 c 'su3_matrix *'
+|-FunctionDecl 0x7fd42288ad30 <line:104:1, line:105:26> line:104:6 scalar_mult_su3_matrix 'void (su3_matrix *, double, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288ab10 <col:30, col:43> col:43 src 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288ab88 <col:48, col:55> col:55 scalar 'double'
+| `-ParmVarDecl 0x7fd42288abf8 <line:105:9, col:22> col:22 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288b8a0 <line:106:1, line:107:38> line:106:6 scalar_mult_add_su3_matrix 'void (su3_matrix *, su3_matrix *, double, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288b600 <col:34, col:47> col:47 src1 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288b670 <col:53, col:66> col:66 src2 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288b6e8 <line:107:6, col:13> col:13 scalar 'double'
+| `-ParmVarDecl 0x7fd42288b758 <col:21, col:34> col:34 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288bb68 <line:108:1, line:109:38> line:108:6 scalar_mult_sub_su3_matrix 'void (su3_matrix *, su3_matrix *, double, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288b970 <col:34, col:47> col:47 src1 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288b9e0 <col:53, col:66> col:66 src2 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288ba58 <line:109:6, col:13> col:13 scalar 'double'
+| `-ParmVarDecl 0x7fd42288bac8 <col:21, col:34> col:34 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288be50 <line:110:1, line:111:24> line:110:6 c_scalar_mult_su3mat 'void (su3_matrix *, complex *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288bc38 <col:28, col:41> col:41 src 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288bca8 <col:46, col:56> col:56 scalar 'complex *'
+| `-ParmVarDecl 0x7fd42288bd18 <line:111:7, col:20> col:20 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288c1b0 <line:112:1, line:113:46> line:112:6 c_scalar_mult_add_su3mat 'void (su3_matrix *, su3_matrix *, complex *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288bf18 <col:32, col:45> col:45 src1 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288bf88 <col:51, col:64> col:64 src2 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288bff8 <line:113:11, col:21> col:21 scalar 'complex *'
+| `-ParmVarDecl 0x7fd42288c068 <col:29, col:42> col:42 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288c470 <line:114:1, line:115:46> line:114:6 c_scalar_mult_sub_su3mat 'void (su3_matrix *, su3_matrix *, complex *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288c280 <col:32, col:45> col:45 src1 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288c2f0 <col:51, col:64> col:64 src2 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288c360 <line:115:11, col:21> col:21 scalar 'complex *'
+| `-ParmVarDecl 0x7fd42288c3d0 <col:29, col:42> col:42 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288d710 <line:116:1, col:49> col:6 su3_adjoint 'void (su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288c540 <col:19, col:32> col:32 a 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288d600 <col:35, col:48> col:48 b 'su3_matrix *'
+|-FunctionDecl 0x7fd42288d9d0 <line:117:1, col:64> col:6 make_anti_hermitian 'void (su3_matrix *, anti_hermitmat *)'
+| |-ParmVarDecl 0x7fd42288d7d0 <col:27, col:40> col:40 m3 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288d8b8 <col:44, col:61> col:61 ah3 'anti_hermitmat *'
+|-FunctionDecl 0x7fd42288dc10 <line:118:1, line:119:27> line:118:6 random_anti_hermitian 'void (anti_hermitmat *, double_prn *)'
+| |-ParmVarDecl 0x7fd42288da90 <col:29, col:46> col:46 mat_antihermit 'anti_hermitmat *'
+| `-ParmVarDecl 0x7fd42288db00 <line:119:8, col:21> col:21 prn_pt 'double_prn *'
+|-FunctionDecl 0x7fd42288de50 <line:120:1, col:76> col:6 uncompress_anti_hermitian 'void (anti_hermitmat *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288dcd0 <col:33, col:50> col:50 mat_anti 'anti_hermitmat *'
+| `-ParmVarDecl 0x7fd42288dd40 <col:60, col:73> col:73 mat 'su3_matrix *'
+|-FunctionDecl 0x7fd42288e010 <line:121:1, col:74> col:6 compress_anti_hermitian 'void (su3_matrix *, anti_hermitmat *)'
+| |-ParmVarDecl 0x7fd42288df10 <col:31, col:44> col:44 mat 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288df80 <col:49, col:66> col:66 mat_anti 'anti_hermitmat *'
+|-FunctionDecl 0x7fd42288e1d0 <line:122:1, col:37> col:6 clear_su3mat 'void (su3_matrix *)'
+| `-ParmVarDecl 0x7fd42288e0d0 <col:20, col:33> col:33 dest 'su3_matrix *'
+|-FunctionDecl 0x7fd42288e388 <line:123:1, col:49> col:6 su3mat_copy 'void (su3_matrix *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288e288 <col:19, col:32> col:32 a 'su3_matrix *'
+| `-ParmVarDecl 0x7fd42288e2f8 <col:35, col:48> col:48 b 'su3_matrix *'
+|-FunctionDecl 0x7fd42288e4d0 <line:124:1, col:29> col:6 dumpmat 'void (su3_matrix *)'
+| `-ParmVarDecl 0x7fd42288e448 <col:15, col:28> col:28 m 'su3_matrix *'
+|-FunctionDecl 0x7fd42288e810 <line:126:1, col:67> col:6 su3_projector 'void (su3_vector *, su3_vector *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd42288e600 <col:21, col:34> col:34 a 'su3_vector *'
+| |-ParmVarDecl 0x7fd42288e670 <col:37, col:50> col:50 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288e6e0 <col:53, col:66> col:66 c 'su3_matrix *'
+|-FunctionDecl 0x7fd42288ea60 <line:127:1, col:48> col:9 su3_dot 'complex (su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288e8d8 <col:18, col:31> col:31 a 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288e948 <col:34, col:47> col:47 b 'su3_vector *'
+|-FunctionDecl 0x7fd42288eca8 <line:128:1, col:48> col:8 su3_rdot 'double (su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288eb20 <col:18, col:31> col:31 a 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288eb90 <col:34, col:47> col:47 b 'su3_vector *'
+|-FunctionDecl 0x7fd42288ee78 <line:129:1, col:36> col:8 magsq_su3vec 'double (su3_vector *)'
+| `-ParmVarDecl 0x7fd42288ed68 <col:22, col:35> col:35 a 'su3_vector *'
+|-FunctionDecl 0x7fd42288f0b0 <line:130:1, col:49> col:6 su3vec_copy 'void (su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288ef30 <col:19, col:32> col:32 a 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288efa0 <col:35, col:48> col:48 b 'su3_vector *'
+|-FunctionDecl 0x7fd42288f270 <line:131:1, col:29> col:6 dumpvec 'void (su3_vector *)'
+| `-ParmVarDecl 0x7fd42288f170 <col:15, col:28> col:28 v 'su3_vector *'
+|-FunctionDecl 0x7fd42288f3b0 <line:132:1, col:30> col:6 clearvec 'void (su3_vector *)'
+| `-ParmVarDecl 0x7fd42288f328 <col:16, col:29> col:29 v 'su3_vector *'
+|-FunctionDecl 0x7fd42288f680 <line:134:1, col:70> col:6 mult_su3_mat_vec 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288f468 <col:24, col:37> col:37 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288f4d8 <col:40, col:53> col:53 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288f548 <col:56, col:69> col:69 c 'su3_vector *'
+|-FunctionDecl 0x7fd42288f8c0 <line:135:1, col:74> col:6 mult_su3_mat_vec_sum 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288f748 <col:28, col:41> col:41 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288f7b8 <col:44, col:57> col:57 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288f828 <col:60, col:73> col:73 c 'su3_vector *'
+|-FunctionDecl 0x7fd42288fd30 <line:136:1, line:138:36> line:136:6 mult_su3_mat_vec_sum_4dir 'void (su3_matrix *, su3_vector *, su3_vector *, su3_vector *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288f988 <col:33, col:46> col:46 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288f9f8 <col:49, col:62> col:62 b0 'su3_vector *'
+| |-ParmVarDecl 0x7fd42288fa68 <line:137:5, col:18> col:18 b1 'su3_vector *'
+| |-ParmVarDecl 0x7fd42288fad8 <col:22, col:35> col:35 b2 'su3_vector *'
+| |-ParmVarDecl 0x7fd42288fb48 <line:138:5, col:18> col:18 b3 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288fbb8 <col:22, col:35> col:35 c 'su3_vector *'
+|-FunctionDecl 0x7fd42288ff88 <line:139:1, col:75> col:6 mult_su3_mat_vec_nsum 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd42288fe10 <col:29, col:42> col:42 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd42288fe80 <col:45, col:58> col:58 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd42288fef0 <col:61, col:74> col:74 c 'su3_vector *'
+|-FunctionDecl 0x7fd4228901c8 <line:140:1, col:74> col:6 mult_adj_su3_mat_vec 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422890050 <col:28, col:41> col:41 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd4228900c0 <col:44, col:57> col:57 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd422890130 <col:60, col:73> col:73 c 'su3_vector *'
+|-FunctionDecl 0x7fd422890408 <line:141:1, line:142:19> line:141:6 mult_adj_su3_mat_vec_4dir 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422890290 <col:33, col:46> col:46 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422890300 <col:49, col:62> col:62 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd422890370 <line:142:5, col:18> col:18 c 'su3_vector *'
+|-FunctionDecl 0x7fd422890800 <line:143:1, line:145:46> line:143:6 mult_adj_su3_mat_4vec 'void (su3_matrix *, su3_vector *, su3_vector *, su3_vector *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd4228904d0 <col:29, col:42> col:42 mat 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422890540 <col:47, col:60> col:60 src 'su3_vector *'
+| |-ParmVarDecl 0x7fd422890600 <line:144:8, col:21> col:21 dest0 'su3_vector *'
+| |-ParmVarDecl 0x7fd422890670 <col:28, col:41> col:41 dest1 'su3_vector *'
+| |-ParmVarDecl 0x7fd4228906e0 <line:145:8, col:21> col:21 dest2 'su3_vector *'
+| `-ParmVarDecl 0x7fd422890750 <col:28, col:41> col:41 dest3 'su3_vector *'
+|-FunctionDecl 0x7fd422890a58 <line:146:1, line:147:25> line:146:6 mult_adj_su3_mat_vec_sum 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd4228908e0 <col:32, col:45> col:45 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422890950 <col:48, col:61> col:61 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd4228909c0 <line:147:11, col:24> col:24 c 'su3_vector *'
+|-FunctionDecl 0x7fd422890c98 <line:148:1, line:149:19> line:148:6 mult_adj_su3_mat_vec_nsum 'void (su3_matrix *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422890b20 <col:33, col:46> col:46 a 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422890b90 <col:49, col:62> col:62 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd422890c00 <line:149:5, col:18> col:18 c 'su3_vector *'
+|-FunctionDecl 0x7fd422890f70 <line:151:1, col:68> col:6 add_su3_vector 'void (su3_vector *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422890d60 <col:22, col:35> col:35 a 'su3_vector *'
+| |-ParmVarDecl 0x7fd422890dd0 <col:38, col:51> col:51 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd422890e40 <col:54, col:67> col:67 c 'su3_vector *'
+|-FunctionDecl 0x7fd4228911b0 <line:152:1, col:68> col:6 sub_su3_vector 'void (su3_vector *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422891038 <col:22, col:35> col:35 a 'su3_vector *'
+| |-ParmVarDecl 0x7fd4228910a8 <col:38, col:51> col:51 b 'su3_vector *'
+| `-ParmVarDecl 0x7fd422891118 <col:54, col:67> col:67 c 'su3_vector *'
+|-FunctionDecl 0x7fd422891600 <line:153:1, line:154:36> line:153:6 sub_four_su3_vecs 'void (su3_vector *, su3_vector *, su3_vector *, su3_vector *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422891278 <col:25, col:38> col:38 a 'su3_vector *'
+| |-ParmVarDecl 0x7fd4228912e8 <col:41, col:54> col:54 b1 'su3_vector *'
+| |-ParmVarDecl 0x7fd422891358 <col:58, col:71> col:71 b2 'su3_vector *'
+| |-ParmVarDecl 0x7fd4228913c8 <line:154:4, col:17> col:17 b3 'su3_vector *'
+| `-ParmVarDecl 0x7fd422891438 <col:21, col:34> col:34 b4 'su3_vector *'
+|-FunctionDecl 0x7fd4228918f0 <line:156:1, line:157:26> line:156:6 scalar_mult_su3_vector 'void (su3_vector *, double, su3_vector *)'
+| |-ParmVarDecl 0x7fd4228916d8 <col:30, col:43> col:43 src 'su3_vector *'
+| |-ParmVarDecl 0x7fd422891750 <col:48, col:55> col:55 scalar 'double'
+| `-ParmVarDecl 0x7fd4228917c0 <line:157:9, col:22> col:22 dest 'su3_vector *'
+|-FunctionDecl 0x7fd422891c50 <line:158:1, line:159:38> line:158:6 scalar_mult_add_su3_vector 'void (su3_vector *, su3_vector *, double, su3_vector *)'
+| |-ParmVarDecl 0x7fd4228919b8 <col:34, col:47> col:47 src1 'su3_vector *'
+| |-ParmVarDecl 0x7fd422891a28 <col:53, col:66> col:66 src2 'su3_vector *'
+| |-ParmVarDecl 0x7fd422891aa0 <line:159:6, col:13> col:13 scalar 'double'
+| `-ParmVarDecl 0x7fd422891b10 <col:21, col:34> col:34 dest 'su3_vector *'
+|-FunctionDecl 0x7fd422891f40 <line:160:1, line:161:19> line:160:6 scalar_mult_sum_su3_vector 'void (su3_vector *, su3_vector *, double)'
+| |-ParmVarDecl 0x7fd422891d20 <col:34, col:47> col:47 src1 'su3_vector *'
+| |-ParmVarDecl 0x7fd422891d90 <col:53, col:66> col:66 src2 'su3_vector *'
+| `-ParmVarDecl 0x7fd422891e08 <line:161:6, col:13> col:13 scalar 'double'
+|-FunctionDecl 0x7fd422892200 <line:162:1, line:163:38> line:162:6 scalar_mult_sub_su3_vector 'void (su3_vector *, su3_vector *, double, su3_vector *)'
+| |-ParmVarDecl 0x7fd422892008 <col:34, col:47> col:47 src1 'su3_vector *'
+| |-ParmVarDecl 0x7fd422892078 <col:53, col:66> col:66 src2 'su3_vector *'
+| |-ParmVarDecl 0x7fd4228920f0 <line:163:6, col:13> col:13 scalar 'double'
+| `-ParmVarDecl 0x7fd422892160 <col:21, col:34> col:34 dest 'su3_vector *'
+|-FunctionDecl 0x7fd422892540 <line:164:1, col:75> col:6 scalar_mult_wvec 'void (wilson_vector *, double, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422892328 <col:24, col:40> col:40 src 'wilson_vector *'
+| |-ParmVarDecl 0x7fd4228923a0 <col:45, col:52> col:52 s 'double'
+| `-ParmVarDecl 0x7fd422892410 <col:55, col:71> col:71 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd4228928a0 <line:165:1, line:166:29> line:165:6 scalar_mult_hwvec 'void (half_wilson_vector *, double, half_wilson_vector *)'
+| |-ParmVarDecl 0x7fd422892688 <col:25, col:46> col:46 src 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422892700 <col:51, col:58> col:58 s 'double'
+| `-ParmVarDecl 0x7fd422892770 <line:166:4, col:25> col:25 dest 'half_wilson_vector *'
+|-FunctionDecl 0x7fd422892c00 <line:167:1, line:168:42> line:167:6 scalar_mult_add_wvec 'void (wilson_vector *, wilson_vector *, double, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422892968 <col:28, col:44> col:44 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd4228929d8 <col:50, col:66> col:66 src2 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422892a50 <line:168:7, col:14> col:14 scalar 'double'
+| `-ParmVarDecl 0x7fd422892ac0 <col:22, col:38> col:38 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422892ec8 <line:169:1, line:170:44> line:169:6 scalar_mult_addtm_wvec 'void (wilson_vector *, wilson_vector *, double, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422892cd0 <col:30, col:46> col:46 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422892d40 <col:52, col:68> col:68 src2 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422892db8 <line:170:9, col:16> col:16 scalar 'double'
+| `-ParmVarDecl 0x7fd422892e28 <col:24, col:40> col:40 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd4228931b0 <line:171:1, line:172:25> line:171:6 c_scalar_mult_wvec 'void (wilson_vector *, complex *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422892f98 <col:26, col:42> col:42 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422893008 <col:48, col:58> col:58 phase 'complex *'
+| `-ParmVarDecl 0x7fd422893078 <line:172:5, col:21> col:21 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422893510 <line:173:1, line:174:46> line:173:6 c_scalar_mult_add_wvec 'void (wilson_vector *, wilson_vector *, complex *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422893278 <col:30, col:46> col:46 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd4228932e8 <col:52, col:68> col:68 src2 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422893358 <line:174:9, col:19> col:19 phase 'complex *'
+| `-ParmVarDecl 0x7fd4228933c8 <col:26, col:42> col:42 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422893890 <line:175:1, line:176:41> line:175:6 c_scalar_mult_add_wvec2 'void (wilson_vector *, wilson_vector *, complex, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422893600 <col:31, col:47> col:47 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422893670 <col:53, col:69> col:69 src2 'wilson_vector *'
+| |-ParmVarDecl 0x7fd4228936e0 <line:176:10, col:18> col:18 s 'complex':'complex'
+| `-ParmVarDecl 0x7fd422893750 <col:21, col:37> col:37 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422893b70 <line:177:1, line:178:24> line:177:6 c_scalar_mult_su3vec 'void (su3_vector *, complex *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422893960 <col:28, col:41> col:41 src 'su3_vector *'
+| |-ParmVarDecl 0x7fd4228939d0 <col:46, col:56> col:56 phase 'complex *'
+| `-ParmVarDecl 0x7fd422893a40 <line:178:7, col:20> col:20 dest 'su3_vector *'
+|-FunctionDecl 0x7fd422893db0 <line:179:1, line:180:26> line:179:6 c_scalar_mult_add_su3vec 'void (su3_vector *, complex *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422893c38 <col:32, col:45> col:45 v1 'su3_vector *'
+| |-ParmVarDecl 0x7fd422893ca8 <col:49, col:59> col:59 phase 'complex *'
+| `-ParmVarDecl 0x7fd422893d18 <line:180:11, col:24> col:24 v2 'su3_vector *'
+|-FunctionDecl 0x7fd422893ff0 <line:181:1, line:182:26> line:181:6 c_scalar_mult_sub_su3vec 'void (su3_vector *, complex *, su3_vector *)'
+| |-ParmVarDecl 0x7fd422893e78 <col:32, col:45> col:45 v1 'su3_vector *'
+| |-ParmVarDecl 0x7fd422893ee8 <col:49, col:59> col:59 phase 'complex *'
+| `-ParmVarDecl 0x7fd422893f58 <line:182:11, col:24> col:24 v2 'su3_vector *'
+|-FunctionDecl 0x7fd4228943e0 <line:184:1, col:69> col:6 left_su2_hit_n 'void (su2_matrix *, int, int, su3_matrix *)'
+| |-ParmVarDecl 0x7fd422894138 <col:22, col:35> col:35 u 'su2_matrix *'
+| |-ParmVarDecl 0x7fd4228941b0 <col:38, col:42> col:42 p 'int'
+| |-ParmVarDecl 0x7fd422894228 <col:45, col:49> col:49 q 'int'
+| `-ParmVarDecl 0x7fd422894298 <col:52, col:65> col:65 link 'su3_matrix *'
+|-FunctionDecl 0x7fd4228956b0 <line:185:1, col:70> col:6 right_su2_hit_a 'void (su2_matrix *, int, int, su3_matrix *)'
+| |-ParmVarDecl 0x7fd4228944b0 <col:23, col:36> col:36 u 'su2_matrix *'
+| |-ParmVarDecl 0x7fd422894528 <col:39, col:43> col:43 p 'int'
+| |-ParmVarDecl 0x7fd4228945a0 <col:46, col:50> col:50 q 'int'
+| `-ParmVarDecl 0x7fd422895610 <col:53, col:66> col:66 link 'su3_matrix *'
+|-FunctionDecl 0x7fd422895880 <line:186:1, col:29> col:6 dumpsu2 'void (su2_matrix *)'
+| `-ParmVarDecl 0x7fd422895780 <col:15, col:28> col:28 u 'su2_matrix *'
+|-FunctionDecl 0x7fd422895b50 <line:187:1, col:73> col:6 mult_su2_mat_vec_elem_n 'void (su2_matrix *, complex *, complex *)'
+| |-ParmVarDecl 0x7fd422895938 <col:31, col:44> col:44 u 'su2_matrix *'
+| |-ParmVarDecl 0x7fd4228959a8 <col:47, col:57> col:57 x0 'complex *'
+| `-ParmVarDecl 0x7fd422895a18 <col:61, col:71> col:71 x1 'complex *'
+|-FunctionDecl 0x7fd422895d90 <line:188:1, col:73> col:6 mult_su2_mat_vec_elem_a 'void (su2_matrix *, complex *, complex *)'
+| |-ParmVarDecl 0x7fd422895c18 <col:31, col:44> col:44 u 'su2_matrix *'
+| |-ParmVarDecl 0x7fd422895c88 <col:47, col:57> col:57 x0 'complex *'
+| `-ParmVarDecl 0x7fd422895cf8 <col:61, col:71> col:71 x1 'complex *'
+|-FunctionDecl 0x7fd422896070 <line:190:1, line:191:26> line:190:6 mult_mat_wilson_vec 'void (su3_matrix *, wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422895e58 <col:27, col:40> col:40 mat 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422895ec8 <col:45, col:61> col:61 src 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422895f38 <line:191:6, col:22> col:22 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422896350 <line:192:1, line:193:30> line:192:6 mult_su3_mat_hwvec 'void (su3_matrix *, half_wilson_vector *, half_wilson_vector *)'
+| |-ParmVarDecl 0x7fd422896138 <col:26, col:39> col:39 mat 'su3_matrix *'
+| |-ParmVarDecl 0x7fd4228961a8 <col:44, col:65> col:65 src 'half_wilson_vector *'
+| `-ParmVarDecl 0x7fd422896218 <line:193:5, col:26> col:26 dest 'half_wilson_vector *'
+|-FunctionDecl 0x7fd422896600 <line:194:1, line:195:30> line:194:6 mult_adj_mat_wilson_vec 'void (su3_matrix *, wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422896418 <col:31, col:44> col:44 mat 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422896488 <col:49, col:65> col:65 src 'wilson_vector *'
+| `-ParmVarDecl 0x7fd4228964f8 <line:195:10, col:26> col:26 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422896840 <line:196:1, line:197:34> line:196:6 mult_adj_su3_mat_hwvec 'void (su3_matrix *, half_wilson_vector *, half_wilson_vector *)'
+| |-ParmVarDecl 0x7fd4228966c8 <col:30, col:43> col:43 mat 'su3_matrix *'
+| |-ParmVarDecl 0x7fd422896738 <col:48, col:69> col:69 src 'half_wilson_vector *'
+| `-ParmVarDecl 0x7fd4228967a8 <line:197:9, col:30> col:30 dest 'half_wilson_vector *'
+|-FunctionDecl 0x7fd422896b20 <line:199:1, line:200:24> line:199:6 add_wilson_vector 'void (wilson_vector *, wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422896908 <col:25, col:41> col:41 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422896978 <col:47, col:63> col:63 src2 'wilson_vector *'
+| `-ParmVarDecl 0x7fd4228969e8 <line:200:4, col:20> col:20 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422896d60 <line:201:1, line:202:24> line:201:6 sub_wilson_vector 'void (wilson_vector *, wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422896be8 <col:25, col:41> col:41 src1 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422896c58 <col:47, col:63> col:63 src2 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422896cc8 <line:202:4, col:20> col:20 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422896f38 <line:203:1, col:39> col:8 magsq_wvec 'double (wilson_vector *)'
+| `-ParmVarDecl 0x7fd422896e28 <col:20, col:36> col:36 src 'wilson_vector *'
+|-FunctionDecl 0x7fd422897170 <line:204:1, col:61> col:9 wvec_dot 'complex (wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422896ff0 <col:19, col:35> col:35 src1 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422897060 <col:41, col:57> col:57 src2 'wilson_vector *'
+|-FunctionDecl 0x7fd422897330 <line:205:1, col:62> col:9 wvec2_dot 'complex (wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422897230 <col:20, col:36> col:36 src1 'wilson_vector *'
+| `-ParmVarDecl 0x7fd4228972a0 <col:42, col:58> col:58 src2 'wilson_vector *'
+|-FunctionDecl 0x7fd422897600 <line:206:1, col:55> col:8 wvec_rdot 'double (wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd4228973f0 <col:19, col:35> col:35 a 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422897460 <col:38, col:54> col:54 b 'wilson_vector *'
+|-FunctionDecl 0x7fd422897960 <line:208:1, line:209:20> line:208:6 wp_shrink 'void (wilson_vector *, half_wilson_vector *, int, int)'
+| |-ParmVarDecl 0x7fd4228976c0 <col:17, col:33> col:33 src 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422897730 <col:38, col:59> col:59 dest 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd4228977a8 <line:209:3, col:7> col:7 dir 'int'
+| `-ParmVarDecl 0x7fd422897820 <col:12, col:16> col:16 sign 'int'
+|-FunctionDecl 0x7fd422897de0 <line:210:1, line:212:41> line:210:6 wp_shrink_4dir 'void (wilson_vector *, half_wilson_vector *, half_wilson_vector *, half_wilson_vector *, half_wilson_vector *, int)'
+| |-ParmVarDecl 0x7fd422897a30 <col:22, col:38> col:38 a 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422897aa0 <col:41, col:62> col:62 b1 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422897b10 <line:211:8, col:29> col:29 b2 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422897b80 <col:33, col:54> col:54 b3 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422897bf0 <line:212:8, col:29> col:29 b4 'half_wilson_vector *'
+| `-ParmVarDecl 0x7fd422897c68 <col:33, col:37> col:37 sign 'int'
+|-FunctionDecl 0x7fd422898160 <line:213:1, line:214:25> line:213:6 wp_grow 'void (half_wilson_vector *, wilson_vector *, int, int)'
+| |-ParmVarDecl 0x7fd422897ec0 <col:15, col:36> col:36 src 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422897f30 <col:41, col:57> col:57 dest 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422897fa8 <line:214:8, col:12> col:12 dir 'int'
+| `-ParmVarDecl 0x7fd422898020 <col:17, col:21> col:21 sign 'int'
+|-FunctionDecl 0x7fd422898430 <line:215:1, line:216:22> line:215:6 wp_grow_add 'void (half_wilson_vector *, wilson_vector *, int, int)'
+| |-ParmVarDecl 0x7fd422898230 <col:19, col:40> col:40 src 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd4228982a0 <col:45, col:61> col:61 dest 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422898318 <line:216:5, col:9> col:9 dir 'int'
+| `-ParmVarDecl 0x7fd422898390 <col:14, col:18> col:18 sign 'int'
+|-FunctionDecl 0x7fd422898960 <line:217:1, line:219:48> line:217:6 grow_add_four_wvecs 'void (wilson_vector *, half_wilson_vector *, half_wilson_vector *, half_wilson_vector *, half_wilson_vector *, int, int)'
+| |-ParmVarDecl 0x7fd422898500 <col:27, col:43> col:43 a 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422898570 <col:46, col:67> col:67 b1 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422898600 <line:218:6, col:27> col:27 b2 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422898670 <col:31, col:52> col:52 b3 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd4228986e0 <line:219:6, col:27> col:27 b4 'half_wilson_vector *'
+| |-ParmVarDecl 0x7fd422898758 <col:31, col:35> col:35 sign 'int'
+| `-ParmVarDecl 0x7fd4228987d0 <col:41, col:45> col:45 sum 'int'
+|-FunctionDecl 0x7fd422898c60 <line:220:1, col:71> col:6 mult_by_gamma 'void (wilson_vector *, wilson_vector *, int)'
+| |-ParmVarDecl 0x7fd422898a48 <col:21, col:37> col:37 src 'wilson_vector *'
+| |-ParmVarDecl 0x7fd422898ab8 <col:42, col:58> col:58 dest 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422898b30 <col:64, col:68> col:68 dir 'int'
+|-FunctionDecl 0x7fd422898fc0 <line:221:1, col:76> col:6 mult_by_gamma_left 'void (wilson_matrix *, wilson_matrix *, int)'
+| |-ParmVarDecl 0x7fd422898da8 <col:26, col:42> col:42 src 'wilson_matrix *'
+| |-ParmVarDecl 0x7fd422898e18 <col:47, col:63> col:63 dest 'wilson_matrix *'
+| `-ParmVarDecl 0x7fd422898e90 <col:69, col:73> col:73 dir 'int'
+|-FunctionDecl 0x7fd422899208 <line:222:1, col:77> col:6 mult_by_gamma_right 'void (wilson_matrix *, wilson_matrix *, int)'
+| |-ParmVarDecl 0x7fd422899088 <col:27, col:43> col:43 src 'wilson_matrix *'
+| |-ParmVarDecl 0x7fd4228990f8 <col:48, col:64> col:64 dest 'wilson_matrix *'
+| `-ParmVarDecl 0x7fd422899170 <col:70, col:74> col:74 dir 'int'
+|-FunctionDecl 0x7fd422899540 <line:223:1, line:224:13> line:223:6 mult_swv_by_gamma_l 'void (spin_wilson_vector *, spin_wilson_vector *, int)'
+| |-ParmVarDecl 0x7fd422899328 <col:27, col:48> col:48 src 'spin_wilson_vector *'
+| |-ParmVarDecl 0x7fd422899398 <col:53, col:74> col:74 dest 'spin_wilson_vector *'
+| `-ParmVarDecl 0x7fd422899410 <line:224:6, col:10> col:10 dir 'int'
+|-FunctionDecl 0x7fd422899790 <line:225:1, line:226:13> line:225:6 mult_swv_by_gamma_r 'void (spin_wilson_vector *, spin_wilson_vector *, int)'
+| |-ParmVarDecl 0x7fd422899610 <col:27, col:48> col:48 src 'spin_wilson_vector *'
+| |-ParmVarDecl 0x7fd422899680 <col:53, col:74> col:74 dest 'spin_wilson_vector *'
+| `-ParmVarDecl 0x7fd4228996f8 <line:226:6, col:10> col:10 dir 'int'
+|-FunctionDecl 0x7fd422899a70 <line:227:1, col:75> col:6 su3_projector_w 'void (wilson_vector *, wilson_vector *, su3_matrix *)'
+| |-ParmVarDecl 0x7fd422899858 <col:23, col:39> col:39 a 'wilson_vector *'
+| |-ParmVarDecl 0x7fd4228998c8 <col:42, col:58> col:58 b 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422899938 <col:61, col:74> col:74 c 'su3_matrix *'
+|-FunctionDecl 0x7fd422899c40 <line:228:1, col:38> col:6 clear_wvec 'void (wilson_vector *)'
+| `-ParmVarDecl 0x7fd422899b38 <col:18, col:34> col:34 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422899e80 <line:229:1, col:58> col:6 copy_wvec 'void (wilson_vector *, wilson_vector *)'
+| |-ParmVarDecl 0x7fd422899cf8 <col:17, col:33> col:33 src 'wilson_vector *'
+| `-ParmVarDecl 0x7fd422899d68 <col:38, col:54> col:54 dest 'wilson_vector *'
+|-FunctionDecl 0x7fd422899fc8 <line:230:1, col:42> col:6 dump_wilson_vec 'void (wilson_vector *)'
+| `-ParmVarDecl 0x7fd422899f40 <col:23, col:39> col:39 src 'wilson_vector *'
+|-FunctionDecl 0x7fd42289a110 <line:232:1, col:45> col:8 gaussian_rand_no 'double (double_prn *)'
+| `-ParmVarDecl 0x7fd42289a080 <col:26, col:39> col:39 prn_pt 'double_prn *'
+|-TypedefDecl 0x7fd42289a1d0 <line:233:1, col:13> col:13 referenced int32type 'int'
+| `-BuiltinType 0x7fd42282b3e0 'int'
+|-TypedefDecl 0x7fd42289a240 <line:234:1, col:22> col:22 u_int32type 'unsigned int'
+| `-BuiltinType 0x7fd42282b480 'unsigned int'
+|-FunctionDecl 0x7fd42289a560 <line:235:1, col:36> col:6 byterevn 'void (int32type *, int)'
+| |-ParmVarDecl 0x7fd42289a3d0 <col:16, col:28> col:26 w 'int32type *':'int32type *'
+| `-ParmVarDecl 0x7fd42289a448 <col:31, col:35> col:35 n 'int'
+`-FunctionDecl 0x7fd42289a798 prev 0x7fd4228901c8 <line:237:1, line:293:1> line:238:1 mult_adj_su3_mat_vec 'void (su3_matrix *, su3_vector *, su3_vector *)'
+  |-ParmVarDecl 0x7fd42289a620 <col:23, col:36> col:36 used a 'su3_matrix *'
+  |-ParmVarDecl 0x7fd42289a690 <col:39, col:52> col:52 used b 'su3_vector *'
+  |-ParmVarDecl 0x7fd42289a700 <col:55, col:68> col:68 used c 'su3_vector *'
+  `-CompoundStmt 0x7fd42289e968 <line:239:1, line:293:1>
+    |-DeclStmt 0x7fd42289a8c8 <line:240:3, col:8>
+    | `-VarDecl 0x7fd42289a868 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fd42289ac68 <line:241:3, col:44>
+    | |-VarDecl 0x7fd42289a8f8 <col:3, col:19> col:19 used t 'double' register
+    | |-VarDecl 0x7fd42289a970 <col:3, col:22> col:22 used ar 'double' register
+    | |-VarDecl 0x7fd42289a9e8 <col:3, col:26> col:26 used ai 'double' register
+    | |-VarDecl 0x7fd42289aa60 <col:3, col:30> col:30 used br 'double' register
+    | |-VarDecl 0x7fd42289aad8 <col:3, col:34> col:34 used bi 'double' register
+    | |-VarDecl 0x7fd42289ab50 <col:3, col:38> col:38 used cr 'double' register
+    | `-VarDecl 0x7fd42289abc8 <col:3, col:42> col:42 used ci 'double' register
+    `-ForStmt 0x7fd42289e930 <line:242:3, line:292:5>
+      |-BinaryOperator 0x7fd42289acc8 <line:242:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fd42289ac80 <col:8> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+      | `-IntegerLiteral 0x7fd42289aca8 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd42289ad50 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd42289ad38 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd42289acf0 <col:15> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+      | `-IntegerLiteral 0x7fd42289ad18 <col:19> 'int' 3
+      |-UnaryOperator 0x7fd42289ada0 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd42289ad78 <col:22> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+      `-CompoundStmt 0x7fd42289e800 <line:243:5, line:292:5>
+        |-BinaryOperator 0x7fd42289afe8 <line:244:7, col:23> 'double' '='
+        | |-DeclRefExpr 0x7fd42289adc0 <col:7> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        | `-ImplicitCastExpr 0x7fd42289afd0 <col:12, col:23> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289af98 <col:12, col:23> 'double' lvalue .real 0x7fd42286f438
+        |     `-ArraySubscriptExpr 0x7fd42289af70 <col:12, col:21> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289af40 <col:12, col:18> 'complex *' <ArrayToPointerDecay>
+        |       | `-ArraySubscriptExpr 0x7fd42289aef0 <col:12, col:18> 'complex [3]' lvalue
+        |       |   |-ImplicitCastExpr 0x7fd42289aed8 <col:12, col:15> 'complex (*)[3]' <ArrayToPointerDecay>
+        |       |   | `-MemberExpr 0x7fd42289ae28 <col:12, col:15> 'complex [3][3]' lvalue ->e 0x7fd422887c68
+        |       |   |   `-ImplicitCastExpr 0x7fd42289ae10 <col:12> 'su3_matrix *' <LValueToRValue>
+        |       |   |     `-DeclRefExpr 0x7fd42289ade8 <col:12> 'su3_matrix *' lvalue ParmVar 0x7fd42289a620 'a' 'su3_matrix *'
+        |       |   `-IntegerLiteral 0x7fd42289ae60 <col:17> 'int' 0
+        |       `-ImplicitCastExpr 0x7fd42289af58 <col:20> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fd42289af18 <col:20> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        |-BinaryOperator 0x7fd42289b1e0 <line:245:7, col:23> 'double' '='
+        | |-DeclRefExpr 0x7fd42289b010 <col:7> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        | `-ImplicitCastExpr 0x7fd42289b1c8 <col:12, col:23> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289b190 <col:12, col:23> 'double' lvalue .imag 0x7fd42286f498
+        |     `-ArraySubscriptExpr 0x7fd42289b168 <col:12, col:21> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289b138 <col:12, col:18> 'complex *' <ArrayToPointerDecay>
+        |       | `-ArraySubscriptExpr 0x7fd42289b0e8 <col:12, col:18> 'complex [3]' lvalue
+        |       |   |-ImplicitCastExpr 0x7fd42289b0d0 <col:12, col:15> 'complex (*)[3]' <ArrayToPointerDecay>
+        |       |   | `-MemberExpr 0x7fd42289b078 <col:12, col:15> 'complex [3][3]' lvalue ->e 0x7fd422887c68
+        |       |   |   `-ImplicitCastExpr 0x7fd42289b060 <col:12> 'su3_matrix *' <LValueToRValue>
+        |       |   |     `-DeclRefExpr 0x7fd42289b038 <col:12> 'su3_matrix *' lvalue ParmVar 0x7fd42289a620 'a' 'su3_matrix *'
+        |       |   `-IntegerLiteral 0x7fd42289b0b0 <col:17> 'int' 0
+        |       `-ImplicitCastExpr 0x7fd42289b150 <col:20> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fd42289b110 <col:20> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        |-BinaryOperator 0x7fd42289b358 <line:247:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fd42289b208 <col:7> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        | `-ImplicitCastExpr 0x7fd42289b340 <col:12, col:20> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289b308 <col:12, col:20> 'double' lvalue .real 0x7fd42286f438
+        |     `-ArraySubscriptExpr 0x7fd42289b2e0 <col:12, col:18> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289b2c8 <col:12, col:15> 'complex *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fd42289b270 <col:12, col:15> 'complex [3]' lvalue ->c 0x7fd422887e60
+        |       |   `-ImplicitCastExpr 0x7fd42289b258 <col:12> 'su3_vector *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fd42289b230 <col:12> 'su3_vector *' lvalue ParmVar 0x7fd42289a690 'b' 'su3_vector *'
+        |       `-IntegerLiteral 0x7fd42289b2a8 <col:17> 'int' 0
+        |-BinaryOperator 0x7fd42289b4d0 <line:248:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fd42289b380 <col:7> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        | `-ImplicitCastExpr 0x7fd42289b4b8 <col:12, col:20> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289b480 <col:12, col:20> 'double' lvalue .imag 0x7fd42286f498
+        |     `-ArraySubscriptExpr 0x7fd42289b458 <col:12, col:18> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289b440 <col:12, col:15> 'complex *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fd42289b3e8 <col:12, col:15> 'complex [3]' lvalue ->c 0x7fd422887e60
+        |       |   `-ImplicitCastExpr 0x7fd42289b3d0 <col:12> 'su3_vector *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fd42289b3a8 <col:12> 'su3_vector *' lvalue ParmVar 0x7fd42289a690 'b' 'su3_vector *'
+        |       `-IntegerLiteral 0x7fd42289b420 <col:17> 'int' 0
+        |-BinaryOperator 0x7fd42289b5c8 <line:250:7, col:17> 'double' '='
+        | |-DeclRefExpr 0x7fd42289b4f8 <col:7> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        | `-BinaryOperator 0x7fd42289b5a0 <col:12, col:17> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289b570 <col:12> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289b520 <col:12> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289b588 <col:17> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289b548 <col:17> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        |-BinaryOperator 0x7fd42289c6d0 <line:251:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289c600 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289c6a8 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289c678 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289c628 <col:11> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289c690 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289c650 <col:16> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        |-CompoundAssignOperator 0x7fd42289c760 <line:252:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289c6f8 <col:7> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        | `-ImplicitCastExpr 0x7fd42289c748 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289c720 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289c868 <line:254:7, col:17> 'double' '='
+        | |-DeclRefExpr 0x7fd42289c798 <col:7> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'
+        | `-BinaryOperator 0x7fd42289c840 <col:12, col:17> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289c810 <col:12> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289c7c0 <col:12> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289c828 <col:17> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289c7e8 <col:17> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        |-BinaryOperator 0x7fd42289c960 <line:255:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289c890 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289c938 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289c908 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289c8b8 <col:11> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289c920 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289c8e0 <col:16> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        |-CompoundAssignOperator 0x7fd42289c9f0 <line:256:7, col:13> 'double' '-=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289c988 <col:7> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'
+        | `-ImplicitCastExpr 0x7fd42289c9d8 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289c9b0 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289cbf8 <line:258:7, col:23> 'double' '='
+        | |-DeclRefExpr 0x7fd42289ca28 <col:7> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        | `-ImplicitCastExpr 0x7fd42289cbe0 <col:12, col:23> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289cba8 <col:12, col:23> 'double' lvalue .real 0x7fd42286f438
+        |     `-ArraySubscriptExpr 0x7fd42289cb80 <col:12, col:21> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289cb50 <col:12, col:18> 'complex *' <ArrayToPointerDecay>
+        |       | `-ArraySubscriptExpr 0x7fd42289cb00 <col:12, col:18> 'complex [3]' lvalue
+        |       |   |-ImplicitCastExpr 0x7fd42289cae8 <col:12, col:15> 'complex (*)[3]' <ArrayToPointerDecay>
+        |       |   | `-MemberExpr 0x7fd42289ca90 <col:12, col:15> 'complex [3][3]' lvalue ->e 0x7fd422887c68
+        |       |   |   `-ImplicitCastExpr 0x7fd42289ca78 <col:12> 'su3_matrix *' <LValueToRValue>
+        |       |   |     `-DeclRefExpr 0x7fd42289ca50 <col:12> 'su3_matrix *' lvalue ParmVar 0x7fd42289a620 'a' 'su3_matrix *'
+        |       |   `-IntegerLiteral 0x7fd42289cac8 <col:17> 'int' 1
+        |       `-ImplicitCastExpr 0x7fd42289cb68 <col:20> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fd42289cb28 <col:20> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        |-BinaryOperator 0x7fd42289cdf0 <line:259:7, col:23> 'double' '='
+        | |-DeclRefExpr 0x7fd42289cc20 <col:7> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        | `-ImplicitCastExpr 0x7fd42289cdd8 <col:12, col:23> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289cda0 <col:12, col:23> 'double' lvalue .imag 0x7fd42286f498
+        |     `-ArraySubscriptExpr 0x7fd42289cd78 <col:12, col:21> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289cd48 <col:12, col:18> 'complex *' <ArrayToPointerDecay>
+        |       | `-ArraySubscriptExpr 0x7fd42289ccf8 <col:12, col:18> 'complex [3]' lvalue
+        |       |   |-ImplicitCastExpr 0x7fd42289cce0 <col:12, col:15> 'complex (*)[3]' <ArrayToPointerDecay>
+        |       |   | `-MemberExpr 0x7fd42289cc88 <col:12, col:15> 'complex [3][3]' lvalue ->e 0x7fd422887c68
+        |       |   |   `-ImplicitCastExpr 0x7fd42289cc70 <col:12> 'su3_matrix *' <LValueToRValue>
+        |       |   |     `-DeclRefExpr 0x7fd42289cc48 <col:12> 'su3_matrix *' lvalue ParmVar 0x7fd42289a620 'a' 'su3_matrix *'
+        |       |   `-IntegerLiteral 0x7fd42289ccc0 <col:17> 'int' 1
+        |       `-ImplicitCastExpr 0x7fd42289cd60 <col:20> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fd42289cd20 <col:20> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        |-BinaryOperator 0x7fd42289cf68 <line:261:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fd42289ce18 <col:7> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        | `-ImplicitCastExpr 0x7fd42289cf50 <col:12, col:20> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289cf18 <col:12, col:20> 'double' lvalue .real 0x7fd42286f438
+        |     `-ArraySubscriptExpr 0x7fd42289cef0 <col:12, col:18> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289ced8 <col:12, col:15> 'complex *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fd42289ce80 <col:12, col:15> 'complex [3]' lvalue ->c 0x7fd422887e60
+        |       |   `-ImplicitCastExpr 0x7fd42289ce68 <col:12> 'su3_vector *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fd42289ce40 <col:12> 'su3_vector *' lvalue ParmVar 0x7fd42289a690 'b' 'su3_vector *'
+        |       `-IntegerLiteral 0x7fd42289ceb8 <col:17> 'int' 1
+        |-BinaryOperator 0x7fd42289d0e0 <line:262:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fd42289cf90 <col:7> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        | `-ImplicitCastExpr 0x7fd42289d0c8 <col:12, col:20> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289d090 <col:12, col:20> 'double' lvalue .imag 0x7fd42286f498
+        |     `-ArraySubscriptExpr 0x7fd42289d068 <col:12, col:18> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289d050 <col:12, col:15> 'complex *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fd42289cff8 <col:12, col:15> 'complex [3]' lvalue ->c 0x7fd422887e60
+        |       |   `-ImplicitCastExpr 0x7fd42289cfe0 <col:12> 'su3_vector *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fd42289cfb8 <col:12> 'su3_vector *' lvalue ParmVar 0x7fd42289a690 'b' 'su3_vector *'
+        |       `-IntegerLiteral 0x7fd42289d030 <col:17> 'int' 1
+        |-BinaryOperator 0x7fd42289d1d8 <line:264:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289d108 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289d1b0 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289d180 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289d130 <col:11> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289d198 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289d158 <col:16> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        |-CompoundAssignOperator 0x7fd42289d268 <line:265:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289d200 <col:7> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        | `-ImplicitCastExpr 0x7fd42289d250 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289d228 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289d370 <line:266:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289d2a0 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289d348 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289d318 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289d2c8 <col:11> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289d330 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289d2f0 <col:16> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        |-CompoundAssignOperator 0x7fd42289d400 <line:267:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289d398 <col:7> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        | `-ImplicitCastExpr 0x7fd42289d3e8 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289d3c0 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289d508 <line:269:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289d438 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289d4e0 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289d4b0 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289d460 <col:11> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289d4c8 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289d488 <col:16> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        |-CompoundAssignOperator 0x7fd42289d598 <line:270:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289d530 <col:7> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'
+        | `-ImplicitCastExpr 0x7fd42289d580 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289d558 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289d6a8 <line:271:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289d5d0 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289d680 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289d650 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289d600 <col:11> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289d668 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289d628 <col:16> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        |-CompoundAssignOperator 0x7fd42289d738 <line:272:7, col:13> 'double' '-=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289d6d0 <col:7> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'
+        | `-ImplicitCastExpr 0x7fd42289d720 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289d6f8 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289d940 <line:274:7, col:23> 'double' '='
+        | |-DeclRefExpr 0x7fd42289d770 <col:7> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        | `-ImplicitCastExpr 0x7fd42289d928 <col:12, col:23> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289d8f0 <col:12, col:23> 'double' lvalue .real 0x7fd42286f438
+        |     `-ArraySubscriptExpr 0x7fd42289d8c8 <col:12, col:21> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289d898 <col:12, col:18> 'complex *' <ArrayToPointerDecay>
+        |       | `-ArraySubscriptExpr 0x7fd42289d848 <col:12, col:18> 'complex [3]' lvalue
+        |       |   |-ImplicitCastExpr 0x7fd42289d830 <col:12, col:15> 'complex (*)[3]' <ArrayToPointerDecay>
+        |       |   | `-MemberExpr 0x7fd42289d7d8 <col:12, col:15> 'complex [3][3]' lvalue ->e 0x7fd422887c68
+        |       |   |   `-ImplicitCastExpr 0x7fd42289d7c0 <col:12> 'su3_matrix *' <LValueToRValue>
+        |       |   |     `-DeclRefExpr 0x7fd42289d798 <col:12> 'su3_matrix *' lvalue ParmVar 0x7fd42289a620 'a' 'su3_matrix *'
+        |       |   `-IntegerLiteral 0x7fd42289d810 <col:17> 'int' 2
+        |       `-ImplicitCastExpr 0x7fd42289d8b0 <col:20> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fd42289d870 <col:20> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        |-BinaryOperator 0x7fd42289db38 <line:275:7, col:23> 'double' '='
+        | |-DeclRefExpr 0x7fd42289d968 <col:7> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        | `-ImplicitCastExpr 0x7fd42289db20 <col:12, col:23> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289dae8 <col:12, col:23> 'double' lvalue .imag 0x7fd42286f498
+        |     `-ArraySubscriptExpr 0x7fd42289dac0 <col:12, col:21> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289da90 <col:12, col:18> 'complex *' <ArrayToPointerDecay>
+        |       | `-ArraySubscriptExpr 0x7fd42289da40 <col:12, col:18> 'complex [3]' lvalue
+        |       |   |-ImplicitCastExpr 0x7fd42289da28 <col:12, col:15> 'complex (*)[3]' <ArrayToPointerDecay>
+        |       |   | `-MemberExpr 0x7fd42289d9d0 <col:12, col:15> 'complex [3][3]' lvalue ->e 0x7fd422887c68
+        |       |   |   `-ImplicitCastExpr 0x7fd42289d9b8 <col:12> 'su3_matrix *' <LValueToRValue>
+        |       |   |     `-DeclRefExpr 0x7fd42289d990 <col:12> 'su3_matrix *' lvalue ParmVar 0x7fd42289a620 'a' 'su3_matrix *'
+        |       |   `-IntegerLiteral 0x7fd42289da08 <col:17> 'int' 2
+        |       `-ImplicitCastExpr 0x7fd42289daa8 <col:20> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fd42289da68 <col:20> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        |-BinaryOperator 0x7fd42289dcb0 <line:277:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fd42289db60 <col:7> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        | `-ImplicitCastExpr 0x7fd42289dc98 <col:12, col:20> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289dc60 <col:12, col:20> 'double' lvalue .real 0x7fd42286f438
+        |     `-ArraySubscriptExpr 0x7fd42289dc38 <col:12, col:18> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289dc20 <col:12, col:15> 'complex *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fd42289dbc8 <col:12, col:15> 'complex [3]' lvalue ->c 0x7fd422887e60
+        |       |   `-ImplicitCastExpr 0x7fd42289dbb0 <col:12> 'su3_vector *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fd42289db88 <col:12> 'su3_vector *' lvalue ParmVar 0x7fd42289a690 'b' 'su3_vector *'
+        |       `-IntegerLiteral 0x7fd42289dc00 <col:17> 'int' 2
+        |-BinaryOperator 0x7fd42289de28 <line:278:7, col:20> 'double' '='
+        | |-DeclRefExpr 0x7fd42289dcd8 <col:7> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        | `-ImplicitCastExpr 0x7fd42289de10 <col:12, col:20> 'double' <LValueToRValue>
+        |   `-MemberExpr 0x7fd42289ddd8 <col:12, col:20> 'double' lvalue .imag 0x7fd42286f498
+        |     `-ArraySubscriptExpr 0x7fd42289ddb0 <col:12, col:18> 'complex':'complex' lvalue
+        |       |-ImplicitCastExpr 0x7fd42289dd98 <col:12, col:15> 'complex *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fd42289dd40 <col:12, col:15> 'complex [3]' lvalue ->c 0x7fd422887e60
+        |       |   `-ImplicitCastExpr 0x7fd42289dd28 <col:12> 'su3_vector *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fd42289dd00 <col:12> 'su3_vector *' lvalue ParmVar 0x7fd42289a690 'b' 'su3_vector *'
+        |       `-IntegerLiteral 0x7fd42289dd78 <col:17> 'int' 2
+        |-BinaryOperator 0x7fd42289df20 <line:280:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289de50 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289def8 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289dec8 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289de78 <col:11> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289dee0 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289dea0 <col:16> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        |-CompoundAssignOperator 0x7fd42289dfb0 <line:281:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289df48 <col:7> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        | `-ImplicitCastExpr 0x7fd42289df98 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289df70 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289e0b8 <line:282:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289dfe8 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289e090 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289e060 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289e010 <col:11> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289e078 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289e038 <col:16> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        |-CompoundAssignOperator 0x7fd42289e148 <line:283:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289e0e0 <col:7> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        | `-ImplicitCastExpr 0x7fd42289e130 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289e108 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289e250 <line:285:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289e180 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289e228 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289e1f8 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289e1a8 <col:11> 'double' lvalue Var 0x7fd42289a970 'ar' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289e210 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289e1d0 <col:16> 'double' lvalue Var 0x7fd42289aad8 'bi' 'double'
+        |-CompoundAssignOperator 0x7fd42289e2e0 <line:286:7, col:13> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289e278 <col:7> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'
+        | `-ImplicitCastExpr 0x7fd42289e2c8 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289e2a0 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289e3e8 <line:287:7, col:16> 'double' '='
+        | |-DeclRefExpr 0x7fd42289e318 <col:7> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        | `-BinaryOperator 0x7fd42289e3c0 <col:11, col:16> 'double' '*'
+        |   |-ImplicitCastExpr 0x7fd42289e390 <col:11> 'double' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd42289e340 <col:11> 'double' lvalue Var 0x7fd42289a9e8 'ai' 'double'
+        |   `-ImplicitCastExpr 0x7fd42289e3a8 <col:16> 'double' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd42289e368 <col:16> 'double' lvalue Var 0x7fd42289aa60 'br' 'double'
+        |-CompoundAssignOperator 0x7fd42289e478 <line:288:7, col:13> 'double' '-=' ComputeLHSTy='double' ComputeResultTy='double'
+        | |-DeclRefExpr 0x7fd42289e410 <col:7> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'
+        | `-ImplicitCastExpr 0x7fd42289e460 <col:13> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289e438 <col:13> 'double' lvalue Var 0x7fd42289a8f8 't' 'double'
+        |-BinaryOperator 0x7fd42289e640 <line:290:7, col:22> 'double' '='
+        | |-MemberExpr 0x7fd42289e5a8 <col:7, col:15> 'double' lvalue .real 0x7fd42286f438
+        | | `-ArraySubscriptExpr 0x7fd42289e580 <col:7, col:13> 'complex':'complex' lvalue
+        | |   |-ImplicitCastExpr 0x7fd42289e550 <col:7, col:10> 'complex *' <ArrayToPointerDecay>
+        | |   | `-MemberExpr 0x7fd42289e4f0 <col:7, col:10> 'complex [3]' lvalue ->c 0x7fd422887e60
+        | |   |   `-ImplicitCastExpr 0x7fd42289e4d8 <col:7> 'su3_vector *' <LValueToRValue>
+        | |   |     `-DeclRefExpr 0x7fd42289e4b0 <col:7> 'su3_vector *' lvalue ParmVar 0x7fd42289a700 'c' 'su3_vector *'
+        | |   `-ImplicitCastExpr 0x7fd42289e568 <col:12> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fd42289e528 <col:12> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+        | `-ImplicitCastExpr 0x7fd42289e628 <col:22> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd42289e600 <col:22> 'double' lvalue Var 0x7fd42289ab50 'cr' 'double'
+        `-BinaryOperator 0x7fd42289e7d8 <line:291:7, col:22> 'double' '='
+          |-MemberExpr 0x7fd42289e760 <col:7, col:15> 'double' lvalue .imag 0x7fd42286f498
+          | `-ArraySubscriptExpr 0x7fd42289e738 <col:7, col:13> 'complex':'complex' lvalue
+          |   |-ImplicitCastExpr 0x7fd42289e708 <col:7, col:10> 'complex *' <ArrayToPointerDecay>
+          |   | `-MemberExpr 0x7fd42289e6a8 <col:7, col:10> 'complex [3]' lvalue ->c 0x7fd422887e60
+          |   |   `-ImplicitCastExpr 0x7fd42289e690 <col:7> 'su3_vector *' <LValueToRValue>
+          |   |     `-DeclRefExpr 0x7fd42289e668 <col:7> 'su3_vector *' lvalue ParmVar 0x7fd42289a700 'c' 'su3_vector *'
+          |   `-ImplicitCastExpr 0x7fd42289e720 <col:12> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fd42289e6e0 <col:12> 'int' lvalue Var 0x7fd42289a868 'i' 'int'
+          `-ImplicitCastExpr 0x7fd42289e7c0 <col:22> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fd42289e798 <col:22> 'double' lvalue Var 0x7fd42289abc8 'ci' 'double'

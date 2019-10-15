@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fb8df0258e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb8df0674b0 <../Data/C2AST/pr15698-6.c:6:7> col:7 implicit strchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7fb8df067550 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7fb8df0675b0 <<invalid sloc>> <invalid sloc> 'int'
+`-FunctionDecl 0x7fb8df067620 prev 0x7fb8df0674b0 <col:1, col:44> col:7 strchr 'char *(const char *)'
+  |-ParmVarDecl 0x7fb8df026578 <col:17, col:29> col:29 a 'const char *'
+  `-CompoundStmt 0x7fb8df067718 <col:32, col:44>
+    `-ReturnStmt 0x7fb8df067700 <col:34, col:41>
+      `-ImplicitCastExpr 0x7fb8df0676e8 <col:41> 'char *' <NullToPointer>
+        `-IntegerLiteral 0x7fb8df0676c8 <col:41> 'int' 0

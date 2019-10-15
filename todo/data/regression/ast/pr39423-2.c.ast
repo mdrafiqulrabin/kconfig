@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fd2fc024ae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd2fb819dc8 <../Data/C2AST/pr39423-2.c:7:1, line:11:1> line:8:1 test_00 'int (unsigned short *, int)'
+  |-ParmVarDecl 0x7fd2fb819c30 <col:10, col:29> col:25 used tab 'unsigned short *':'unsigned short *'
+  |-ParmVarDecl 0x7fd2fb819ca8 <col:32, col:36> col:36 used index 'int'
+  `-CompoundStmt 0x7fd2fb819ff0 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fd2fb819fd8 <line:10:3, col:23>
+      `-ImplicitCastExpr 0x7fd2fb819fc0 <col:10, col:23> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fd2fb819fa8 <col:10, col:23> 'unsigned short' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fd2fb819f80 <col:10, col:23> 'unsigned short' lvalue
+            |-ImplicitCastExpr 0x7fd2fb819f68 <col:10> 'unsigned short *':'unsigned short *' <LValueToRValue>
+            | `-DeclRefExpr 0x7fd2fb819eb8 <col:10> 'unsigned short *':'unsigned short *' lvalue ParmVar 0x7fd2fb819c30 'tab' 'unsigned short *':'unsigned short *'
+            `-BinaryOperator 0x7fd2fb819f40 <col:14, col:22> 'int' '+'
+              |-ImplicitCastExpr 0x7fd2fb819f28 <col:14> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fd2fb819ee0 <col:14> 'int' lvalue ParmVar 0x7fd2fb819ca8 'index' 'int'
+              `-IntegerLiteral 0x7fd2fb819f08 <col:22> 'int' 1

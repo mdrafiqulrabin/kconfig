@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fc9a4822ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc9a4865868 <../Data/C2AST/pr18079.c:5:1, line:11:1> line:8:1 fn1 'int (int)'
+| |-ParmVarDecl 0x7fc9a4823978 <col:6, col:10> col:10 used r 'int'
+| |-CompoundStmt 0x7fc9a4865a48 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7fc9a4865a30 <line:10:3, col:14>
+| |   `-BinaryOperator 0x7fc9a4865a08 <col:10, col:14> 'int' '&'
+| |     |-ImplicitCastExpr 0x7fc9a48659f0 <col:10> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc9a48659a8 <col:10> 'int' lvalue ParmVar 0x7fc9a4823978 'r' 'int'
+| |     `-IntegerLiteral 0x7fc9a48659d0 <col:14> 'int' 4
+| |-AlwaysInlineAttr 0x7fc9a4865910 <line:6:17> always_inline
+| `-NoInlineAttr 0x7fc9a4865958 <line:5:17>
+|-FunctionDecl 0x7fc9a4865b08 <line:13:1, line:18:1> line:15:1 fn2 'int (int)'
+| |-ParmVarDecl 0x7fc9a4865a78 <col:6, col:10> col:10 used r 'int'
+| |-CompoundStmt 0x7fc9a4865ca8 <line:16:1, line:18:1>
+| | `-ReturnStmt 0x7fc9a4865c90 <line:17:3, col:14>
+| |   `-BinaryOperator 0x7fc9a4865c68 <col:10, col:14> 'int' '&'
+| |     |-ImplicitCastExpr 0x7fc9a4865c50 <col:10> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc9a4865c08 <col:10> 'int' lvalue ParmVar 0x7fc9a4865a78 'r' 'int'
+| |     `-IntegerLiteral 0x7fc9a4865c30 <col:14> 'int' 4
+| |-AlwaysInlineAttr 0x7fc9a4865bb0 <line:13:27> always_inline
+| `-NoInlineAttr 0x7fc9a4865bf8 <col:17>
+|-FunctionDecl 0x7fc9a4865d68 <line:20:1, line:26:1> line:23:1 fn3 'int (int)' inline
+| |-ParmVarDecl 0x7fc9a4865cd8 <col:6, col:10> col:10 used r 'int'
+| |-CompoundStmt 0x7fc9a4865f08 <line:24:1, line:26:1>
+| | `-ReturnStmt 0x7fc9a4865ef0 <line:25:3, col:14>
+| |   `-BinaryOperator 0x7fc9a4865ec8 <col:10, col:14> 'int' '&'
+| |     |-ImplicitCastExpr 0x7fc9a4865eb0 <col:10> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fc9a4865e68 <col:10> 'int' lvalue ParmVar 0x7fc9a4865cd8 'r' 'int'
+| |     `-IntegerLiteral 0x7fc9a4865e90 <col:14> 'int' 8
+| |-NoInlineAttr 0x7fc9a4865e10 <line:21:17>
+| `-AlwaysInlineAttr 0x7fc9a4865e58 <line:20:17> always_inline
+`-FunctionDecl 0x7fc9a4865fc8 <line:28:1, line:33:1> line:30:1 fn4 'int (int)' inline
+  |-ParmVarDecl 0x7fc9a4865f38 <col:6, col:10> col:10 used r 'int'
+  |-CompoundStmt 0x7fc9a4866168 <line:31:1, line:33:1>
+  | `-ReturnStmt 0x7fc9a4866150 <line:32:3, col:14>
+  |   `-BinaryOperator 0x7fc9a4866128 <col:10, col:14> 'int' '&'
+  |     |-ImplicitCastExpr 0x7fc9a4866110 <col:10> 'int' <LValueToRValue>
+  |     | `-DeclRefExpr 0x7fc9a48660c8 <col:10> 'int' lvalue ParmVar 0x7fc9a4865f38 'r' 'int'
+  |     `-IntegerLiteral 0x7fc9a48660f0 <col:14> 'int' 8
+  |-NoInlineAttr 0x7fc9a4866070 <line:28:32>
+  `-AlwaysInlineAttr 0x7fc9a48660b8 <col:17> always_inline

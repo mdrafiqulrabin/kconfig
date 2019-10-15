@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fa18082bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa1808a3d70 <../Data/C2AST/pr64307.c:6:1, col:24> col:24 referenced COMPLEX_FLOAT '_Complex float'
+| `-ComplexType 0x7fa18082c0c0 '_Complex float'
+|   `-BuiltinType 0x7fa18082bee0 'float'
+|-FunctionDecl 0x7fa1808a3ec8 <line:8:1, line:12:1> line:9:14 used real_part 'float (COMPLEX_FLOAT)' static
+| |-ParmVarDecl 0x7fa1808a3e00 <col:24, col:38> col:38 used a 'COMPLEX_FLOAT':'_Complex float'
+| |-CompoundStmt 0x7fa1808a41a8 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7fa1808a4190 <line:11:3, col:22>
+| |   `-ImplicitCastExpr 0x7fa1808a4178 <col:10, col:22> 'float' <LValueToRValue>
+| |     `-UnaryOperator 0x7fa1808a4158 <col:10, col:22> 'float' lvalue prefix '*'
+| |       `-CStyleCastExpr 0x7fa1808a4130 <col:11, col:22> 'float *' <BitCast>
+| |         `-ParenExpr 0x7fa1808a4110 <col:19, col:22> 'COMPLEX_FLOAT *'
+| |           `-UnaryOperator 0x7fa1808a4078 <col:20, col:21> 'COMPLEX_FLOAT *' prefix '&'
+| |             `-DeclRefExpr 0x7fa1808a3ff8 <col:21> 'COMPLEX_FLOAT':'_Complex float' lvalue ParmVar 0x7fa1808a3e00 'a' 'COMPLEX_FLOAT':'_Complex float'
+| `-NoInlineAttr 0x7fa1808a3f70 <line:8:17>
+|-FunctionDecl 0x7fa1808a6290 <line:14:1, line:18:1> line:15:14 used real_part_2 'float (COMPLEX_FLOAT)' static
+| |-ParmVarDecl 0x7fa1808a6200 <col:26, col:40> col:40 used a 'COMPLEX_FLOAT':'_Complex float'
+| |-CompoundStmt 0x7fa1808a64f0 <line:16:1, line:18:1>
+| | `-ReturnStmt 0x7fa1808a64d8 <line:17:3, col:26>
+| |   `-ImplicitCastExpr 0x7fa1808a64c0 <col:10, col:26> 'float' <LValueToRValue>
+| |     `-ArraySubscriptExpr 0x7fa1808a6498 <col:10, col:26> 'float' lvalue
+| |       |-ParenExpr 0x7fa1808a6458 <col:10, col:23> 'float *'
+| |       | `-CStyleCastExpr 0x7fa1808a6430 <col:11, col:22> 'float *' <BitCast>
+| |       |   `-ParenExpr 0x7fa1808a6410 <col:19, col:22> 'COMPLEX_FLOAT *'
+| |       |     `-UnaryOperator 0x7fa1808a63a8 <col:20, col:21> 'COMPLEX_FLOAT *' prefix '&'
+| |       |       `-DeclRefExpr 0x7fa1808a6380 <col:21> 'COMPLEX_FLOAT':'_Complex float' lvalue ParmVar 0x7fa1808a6200 'a' 'COMPLEX_FLOAT':'_Complex float'
+| |       `-IntegerLiteral 0x7fa1808a6478 <col:25> 'int' 0
+| `-NoInlineAttr 0x7fa1808a6338 <line:14:17>
+`-FunctionDecl 0x7fa1808a6560 <line:20:1, line:28:1> line:20:5 main 'int ()'
+  `-CompoundStmt 0x7fa1808a6af8 <line:21:1, line:28:1>
+    |-DeclStmt 0x7fa1808a6730 <line:22:3, col:38>
+    | `-VarDecl 0x7fa1808a6610 <col:3, /usr/include/complex.h:40:40> ../Data/C2AST/pr64307.c:22:17 used f 'COMPLEX_FLOAT':'_Complex float' cinit
+    |   `-BinaryOperator 0x7fa1808a6708 <col:21, /usr/include/complex.h:40:40> '_Complex float' '+'
+    |     |-FloatingLiteral 0x7fa1808a6670 <../Data/C2AST/pr64307.c:22:21> 'float' 1.000000e+00
+    |     `-ParenExpr 0x7fa1808a66e8 </usr/include/complex.h:40:20, col:40> '_Complex float'
+    |       `-UnaryOperator 0x7fa1808a66c8 <col:21, col:35> '_Complex float' prefix '__extension__'
+    |         `-ImaginaryLiteral 0x7fa1808a66b0 <col:35> '_Complex float'
+    |           `-FloatingLiteral 0x7fa1808a6690 <col:35> 'float' 1.000000e+00
+    |-DeclStmt 0x7fa1808a68c8 <../Data/C2AST/pr64307.c:24:3, col:26>
+    | `-VarDecl 0x7fa1808a6760 <col:3, col:25> col:9 used r1 'float' cinit
+    |   `-CallExpr 0x7fa1808a6880 <col:14, col:25> 'float'
+    |     |-ImplicitCastExpr 0x7fa1808a6868 <col:14> 'float (*)(COMPLEX_FLOAT)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa1808a67c0 <col:14> 'float (COMPLEX_FLOAT)' Function 0x7fa1808a3ec8 'real_part' 'float (COMPLEX_FLOAT)'
+    |     `-ImplicitCastExpr 0x7fa1808a68b0 <col:24> 'COMPLEX_FLOAT':'_Complex float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa1808a67e8 <col:24> 'COMPLEX_FLOAT':'_Complex float' lvalue Var 0x7fa1808a6610 'f' 'COMPLEX_FLOAT':'_Complex float'
+    |-DeclStmt 0x7fa1808a6a08 <line:25:3, col:28>
+    | `-VarDecl 0x7fa1808a68f8 <col:3, col:27> col:9 used r2 'float' cinit
+    |   `-CallExpr 0x7fa1808a69c0 <col:14, col:27> 'float'
+    |     |-ImplicitCastExpr 0x7fa1808a69a8 <col:14> 'float (*)(COMPLEX_FLOAT)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa1808a6958 <col:14> 'float (COMPLEX_FLOAT)' Function 0x7fa1808a6290 'real_part_2' 'float (COMPLEX_FLOAT)'
+    |     `-ImplicitCastExpr 0x7fa1808a69f0 <col:26> 'COMPLEX_FLOAT':'_Complex float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa1808a6980 <col:26> 'COMPLEX_FLOAT':'_Complex float' lvalue Var 0x7fa1808a6610 'f' 'COMPLEX_FLOAT':'_Complex float'
+    `-ReturnStmt 0x7fa1808a6ae0 <line:27:3, col:15>
+      `-ImplicitCastExpr 0x7fa1808a6ac8 <col:10, col:15> 'int' <FloatingToIntegral>
+        `-BinaryOperator 0x7fa1808a6aa0 <col:10, col:15> 'float' '-'
+          |-ImplicitCastExpr 0x7fa1808a6a70 <col:10> 'float' <LValueToRValue>
+          | `-DeclRefExpr 0x7fa1808a6a20 <col:10> 'float' lvalue Var 0x7fa1808a6760 'r1' 'float'
+          `-ImplicitCastExpr 0x7fa1808a6a88 <col:15> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7fa1808a6a48 <col:15> 'float' lvalue Var 0x7fa1808a68f8 'r2' 'float'

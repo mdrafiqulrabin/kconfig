@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7f823b023ae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f823b024760 <../Data/C2AST/pr33369.c:5:9, line:9:1> line:5:16 struct tagPOINT definition
+| |-FieldDecl 0x7f823a81c638 <line:7:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7f823a81c698 <line:8:3, col:7> col:7 referenced y 'int'
+|-TypedefDecl 0x7f823a81c730 <line:5:1, line:9:3> col:3 referenced POINT 'struct tagPOINT':'struct tagPOINT'
+| `-ElaboratedType 0x7f823a81c6e0 'struct tagPOINT' sugar
+|   `-RecordType 0x7f823a81c600 'struct tagPOINT'
+|     `-Record 0x7f823b024760 'tagPOINT'
+`-FunctionDecl 0x7f823a81c930 <line:11:1, line:20:1> line:12:1 f 'void (POINT *)'
+  |-ParmVarDecl 0x7f823a81c828 <col:4, col:12> col:12 used ptBuf 'POINT *'
+  `-CompoundStmt 0x7f823a81d150 <line:13:1, line:20:1>
+    |-DeclStmt 0x7f823a81ca90 <line:14:3, col:8>
+    | `-VarDecl 0x7f823a81ca30 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f823a81d118 <line:15:3, line:19:5>
+      |-BinaryOperator 0x7f823a81caf0 <line:15:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f823a81caa8 <col:8> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+      | `-IntegerLiteral 0x7f823a81cad0 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f823a81cb78 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f823a81cb60 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f823a81cb18 <col:15> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+      | `-IntegerLiteral 0x7f823a81cb40 <col:19> 'int' 4
+      |-UnaryOperator 0x7f823a81cbc8 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f823a81cba0 <col:22> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+      `-CompoundStmt 0x7f823a81d0f8 <line:16:5, line:19:5>
+        |-BinaryOperator 0x7f823a81ce48 <line:17:7, col:38> 'int' '='
+        | |-MemberExpr 0x7f823a81cc90 <col:7, col:16> 'int' lvalue .x 0x7f823a81c638
+        | | `-ArraySubscriptExpr 0x7f823a81cc68 <col:7, col:14> 'POINT':'struct tagPOINT' lvalue
+        | |   |-ImplicitCastExpr 0x7f823a81cc38 <col:7> 'POINT *' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7f823a81cbe8 <col:7> 'POINT *' lvalue ParmVar 0x7f823a81c828 'ptBuf' 'POINT *'
+        | |   `-ImplicitCastExpr 0x7f823a81cc50 <col:13> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f823a81cc10 <col:13> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+        | `-ParenExpr 0x7f823a81ce28 <col:20, col:38> 'int'
+        |   `-BinaryOperator 0x7f823a81ce00 <col:21, col:37> 'int' '<<'
+        |     |-ImplicitCastExpr 0x7f823a81cde8 <col:21, col:32> 'int' <LValueToRValue>
+        |     | `-ParenExpr 0x7f823a81cda8 <col:21, col:32> 'int' lvalue
+        |     |   `-MemberExpr 0x7f823a81cd70 <col:22, col:31> 'int' lvalue .x 0x7f823a81c638
+        |     |     `-ArraySubscriptExpr 0x7f823a81cd48 <col:22, col:29> 'POINT':'struct tagPOINT' lvalue
+        |     |       |-ImplicitCastExpr 0x7f823a81cd18 <col:22> 'POINT *' <LValueToRValue>
+        |     |       | `-DeclRefExpr 0x7f823a81ccc8 <col:22> 'POINT *' lvalue ParmVar 0x7f823a81c828 'ptBuf' 'POINT *'
+        |     |       `-ImplicitCastExpr 0x7f823a81cd30 <col:28> 'int' <LValueToRValue>
+        |     |         `-DeclRefExpr 0x7f823a81ccf0 <col:28> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+        |     `-IntegerLiteral 0x7f823a81cdc8 <col:37> 'int' 4
+        `-BinaryOperator 0x7f823a81d0d0 <line:18:7, col:38> 'int' '='
+          |-MemberExpr 0x7f823a81cf18 <col:7, col:16> 'int' lvalue .y 0x7f823a81c698
+          | `-ArraySubscriptExpr 0x7f823a81cef0 <col:7, col:14> 'POINT':'struct tagPOINT' lvalue
+          |   |-ImplicitCastExpr 0x7f823a81cec0 <col:7> 'POINT *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7f823a81ce70 <col:7> 'POINT *' lvalue ParmVar 0x7f823a81c828 'ptBuf' 'POINT *'
+          |   `-ImplicitCastExpr 0x7f823a81ced8 <col:13> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f823a81ce98 <col:13> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+          `-ParenExpr 0x7f823a81d0b0 <col:20, col:38> 'int'
+            `-BinaryOperator 0x7f823a81d088 <col:21, col:37> 'int' '<<'
+              |-ImplicitCastExpr 0x7f823a81d070 <col:21, col:32> 'int' <LValueToRValue>
+              | `-ParenExpr 0x7f823a81d030 <col:21, col:32> 'int' lvalue
+              |   `-MemberExpr 0x7f823a81cff8 <col:22, col:31> 'int' lvalue .y 0x7f823a81c698
+              |     `-ArraySubscriptExpr 0x7f823a81cfd0 <col:22, col:29> 'POINT':'struct tagPOINT' lvalue
+              |       |-ImplicitCastExpr 0x7f823a81cfa0 <col:22> 'POINT *' <LValueToRValue>
+              |       | `-DeclRefExpr 0x7f823a81cf50 <col:22> 'POINT *' lvalue ParmVar 0x7f823a81c828 'ptBuf' 'POINT *'
+              |       `-ImplicitCastExpr 0x7f823a81cfb8 <col:28> 'int' <LValueToRValue>
+              |         `-DeclRefExpr 0x7f823a81cf78 <col:28> 'int' lvalue Var 0x7f823a81ca30 'i' 'int'
+              `-IntegerLiteral 0x7f823a81d050 <col:37> 'int' 4

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fd68d8222e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd68e014358 <../Data/C2AST/pr68416.c:5:1, line:9:1> line:6:1 foo 'int (int **, int)'
+  |-ParmVarDecl 0x7fd68e014200 <col:5, col:11> col:11 used arr 'int **'
+  |-ParmVarDecl 0x7fd68e014278 <col:16, col:20> col:20 used i 'int'
+  `-CompoundStmt 0x7fd68e014578 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fd68e014560 <line:8:3, col:18>
+      `-ImplicitCastExpr 0x7fd68e014548 <col:10, col:18> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fd68e014520 <col:10, col:18> 'int' lvalue
+          |-ImplicitCastExpr 0x7fd68e0144f0 <col:10, col:15> 'int *' <LValueToRValue>
+          | `-ParenExpr 0x7fd68e0144a8 <col:10, col:15> 'int *' lvalue
+          |   `-UnaryOperator 0x7fd68e014488 <col:11, col:12> 'int *' lvalue prefix '*'
+          |     `-ImplicitCastExpr 0x7fd68e014470 <col:12> 'int **' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fd68e014448 <col:12> 'int **' lvalue ParmVar 0x7fd68e014200 'arr' 'int **'
+          `-ImplicitCastExpr 0x7fd68e014508 <col:17> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fd68e0144c8 <col:17> 'int' lvalue ParmVar 0x7fd68e014278 'i' 'int'

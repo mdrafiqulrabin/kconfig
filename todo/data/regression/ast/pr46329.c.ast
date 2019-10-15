@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7feeb6825ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7feeb7815400 <../Data/C2AST/pr46329.c:4:1, col:40> col:40 used x '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+`-FunctionDecl 0x7feeb7815560 <line:5:1, line:9:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7feeb78156a0 <line:7:1, line:9:1>
+    `-CompoundAssignOperator 0x7feeb7815668 <line:8:3, col:9> '__attribute__((__vector_size__(8 * sizeof(int)))) int' '<<=' ComputeLHSTy='__attribute__((__vector_size__(8 * sizeof(int)))) int' ComputeResultTy='__attribute__((__vector_size__(8 * sizeof(int)))) int'
+      |-DeclRefExpr 0x7feeb7815600 <col:3> '__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7feeb7815400 'x' '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+      `-ImplicitCastExpr 0x7feeb7815650 <col:9> '__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7feeb7815628 <col:9> '__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7feeb7815400 'x' '__attribute__((__vector_size__(8 * sizeof(int)))) int'

@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7fd01502aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd01502b778 <../Data/C2AST/pr21291.c:5:1, col:23> col:23 referenced bngdigit 'unsigned long'
+| `-BuiltinType 0x7fd01502aca0 'unsigned long'
+|-TypedefDecl 0x7fd01506c668 <line:6:1, col:19> col:19 referenced bng 'bngdigit *'
+| `-PointerType 0x7fd01506c630 'bngdigit *'
+|   `-TypedefType 0x7fd01502b7d0 'bngdigit' sugar
+|     |-Typedef 0x7fd01502b778 'bngdigit'
+|     `-BuiltinType 0x7fd01502aca0 'unsigned long'
+|-TypedefDecl 0x7fd01506c6d8 <line:7:1, col:22> col:22 referenced bngcarry 'unsigned int'
+| `-BuiltinType 0x7fd01502ac80 'unsigned int'
+|-TypedefDecl 0x7fd01506c748 <line:8:1, col:23> col:23 referenced bngsize 'unsigned long'
+| `-BuiltinType 0x7fd01502aca0 'unsigned long'
+`-FunctionDecl 0x7fd01506cb10 <line:10:1, line:32:1> line:11:1 bng_ia32_mult_sub_digit 'bngdigit (bng, bngsize, bng, bngsize, bngdigit)'
+  |-ParmVarDecl 0x7fd01506c7d0 <col:26, col:30> col:30 used a 'bng':'bngdigit *'
+  |-ParmVarDecl 0x7fd01506c860 <col:33, col:41> col:41 used alen 'bngsize':'unsigned long'
+  |-ParmVarDecl 0x7fd01506c8d0 <col:47, col:51> col:51 used b 'bng':'bngdigit *'
+  |-ParmVarDecl 0x7fd01506c940 <col:54, col:62> col:62 used blen 'bngsize':'unsigned long'
+  |-ParmVarDecl 0x7fd01506c9b0 <col:68, col:77> col:77 used d 'bngdigit':'unsigned long'
+  `-CompoundStmt 0x7fd01506d6d0 <line:12:1, line:32:1>
+    |-DeclStmt 0x7fd01506cd10 <line:13:3, col:20>
+    | |-VarDecl 0x7fd01506cc28 <col:3, col:12> col:12 used out 'bngdigit':'unsigned long'
+    | `-VarDecl 0x7fd01506cc98 <col:3, col:17> col:17 used tmp 'bngdigit':'unsigned long'
+    |-DeclStmt 0x7fd01506cdc0 <line:14:3, col:17>
+    | `-VarDecl 0x7fd01506cd60 <col:3, col:12> col:12 carry 'bngcarry':'unsigned int'
+    |-DeclStmt 0x7fd01506ce48 <line:15:3, col:15>
+    | `-VarDecl 0x7fd01506cde8 <col:3, col:12> col:12 used a11 'bngdigit':'unsigned long'
+    |-CompoundAssignOperator 0x7fd01506cec8 <line:17:3, col:11> 'bngsize':'unsigned long' '-=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    | |-DeclRefExpr 0x7fd01506ce60 <col:3> 'bngsize':'unsigned long' lvalue ParmVar 0x7fd01506c860 'alen' 'bngsize':'unsigned long'
+    | `-ImplicitCastExpr 0x7fd01506ceb0 <col:11> 'bngsize':'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd01506ce88 <col:11> 'bngsize':'unsigned long' lvalue ParmVar 0x7fd01506c940 'blen' 'bngsize':'unsigned long'
+    |-BinaryOperator 0x7fd01506cf60 <line:18:3, col:9> 'bngdigit':'unsigned long' '='
+    | |-DeclRefExpr 0x7fd01506cf00 <col:3> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cc28 'out' 'bngdigit':'unsigned long'
+    | `-ImplicitCastExpr 0x7fd01506cf48 <col:9> 'bngdigit':'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fd01506cf28 <col:9> 'int' 0
+    |-GCCAsmStmt 0x7fd01506d2f0 <line:19:3, line:22:22>
+    | |-DeclRefExpr 0x7fd01506d058 <line:20:16> 'bng':'bngdigit *' lvalue ParmVar 0x7fd01506c7d0 'a' 'bng':'bngdigit *'
+    | |-DeclRefExpr 0x7fd01506d0b0 <col:26> 'bng':'bngdigit *' lvalue ParmVar 0x7fd01506c8d0 'b' 'bng':'bngdigit *'
+    | |-DeclRefExpr 0x7fd01506d148 <col:37> 'bngsize':'unsigned long' lvalue ParmVar 0x7fd01506c940 'blen' 'bngsize':'unsigned long'
+    | |-DeclRefExpr 0x7fd01506d1a0 <col:51> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cc28 'out' 'bngdigit':'unsigned long'
+    | |-DeclRefExpr 0x7fd01506d1f8 <col:64> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cc98 'tmp' 'bngdigit':'unsigned long'
+    | `-ImplicitCastExpr 0x7fd01506d2d8 <line:21:16> 'bngdigit':'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd01506d250 <col:16> 'bngdigit':'unsigned long' lvalue ParmVar 0x7fd01506c9b0 'd' 'bngdigit':'unsigned long'
+    |-IfStmt 0x7fd01506d588 <line:23:3, line:27:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd01506d450 <line:23:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fd01506d420 <col:7> 'bngsize':'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd01506d3d8 <col:7> 'bngsize':'unsigned long' lvalue ParmVar 0x7fd01506c860 'alen' 'bngsize':'unsigned long'
+    | | `-ImplicitCastExpr 0x7fd01506d438 <col:15> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fd01506d400 <col:15> 'int' 0
+    | |-CompoundStmt 0x7fd01506d568 <line:24:5, line:27:5>
+    | | |-BinaryOperator 0x7fd01506d4e0 <line:25:7, col:13> 'bngdigit':'unsigned long' '='
+    | | | |-DeclRefExpr 0x7fd01506d478 <col:7> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cde8 'a11' 'bngdigit':'unsigned long'
+    | | | `-ImplicitCastExpr 0x7fd01506d4c8 <col:13> 'bngdigit':'unsigned long' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fd01506d4a0 <col:13> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cc28 'out' 'bngdigit':'unsigned long'
+    | | `-GotoStmt 0x7fd01506d550 <line:26:7, col:12> 't' 0x7fd01506d508
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fd01506d638 <line:29:3, col:9> 'bngdigit':'unsigned long' '='
+    | |-DeclRefExpr 0x7fd01506d5c0 <col:3> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cde8 'a11' 'bngdigit':'unsigned long'
+    | `-ImplicitCastExpr 0x7fd01506d620 <col:9> 'bngdigit':'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fd01506d600 <col:9> 'int' 1
+    `-LabelStmt 0x7fd01506d6b8 <line:30:2, line:31:10> 't'
+      `-ReturnStmt 0x7fd01506d6a0 <col:3, col:10>
+        `-ImplicitCastExpr 0x7fd01506d688 <col:10> 'bngdigit':'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7fd01506d660 <col:10> 'bngdigit':'unsigned long' lvalue Var 0x7fd01506cde8 'a11' 'bngdigit':'unsigned long'

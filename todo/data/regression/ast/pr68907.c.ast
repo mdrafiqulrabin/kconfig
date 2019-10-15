@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fb7f40126e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb7f481c200 <../Data/C2AST/pr68907.c:5:1, col:13> col:13 used a '_Atomic(int)'
+`-FunctionDecl 0x7fb7f481c360 <line:7:1, line:14:1> line:8:1 fn 'void (void)'
+  `-CompoundStmt 0x7fb7f481c520 <line:9:1, line:14:1>
+    |-UnaryOperator 0x7fb7f481c428 <line:10:3, col:5> 'int' prefix '++'
+    | `-DeclRefExpr 0x7fb7f481c400 <col:5> '_Atomic(int)' lvalue Var 0x7fb7f481c200 'a' '_Atomic(int)'
+    |-UnaryOperator 0x7fb7f481c470 <line:11:3, col:4> 'int' postfix '++'
+    | `-DeclRefExpr 0x7fb7f481c448 <col:3> '_Atomic(int)' lvalue Var 0x7fb7f481c200 'a' '_Atomic(int)'
+    |-UnaryOperator 0x7fb7f481c4b8 <line:12:3, col:5> 'int' prefix '--'
+    | `-DeclRefExpr 0x7fb7f481c490 <col:5> '_Atomic(int)' lvalue Var 0x7fb7f481c200 'a' '_Atomic(int)'
+    `-UnaryOperator 0x7fb7f481c500 <line:13:3, col:4> 'int' postfix '--'
+      `-DeclRefExpr 0x7fb7f481c4d8 <col:3> '_Atomic(int)' lvalue Var 0x7fb7f481c200 'a' '_Atomic(int)'

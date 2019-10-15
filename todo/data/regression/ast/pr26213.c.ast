@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fe8550252e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe855822460 <../Data/C2AST/pr26213.c:1:1, line:15:1> line:2:1 xnanosleep 'void (_Bool)'
+  |-ParmVarDecl 0x7fe855025f70 <col:13, col:19> col:19 used overflow '_Bool'
+  `-CompoundStmt 0x7fe855822c80 <line:3:1, line:15:1>
+    |-DeclStmt 0x7fe855822718 <line:4:3, col:35>
+    | |-RecordDecl 0x7fe855822548 <col:3, col:25> col:3 struct definition
+    | | `-FieldDecl 0x7fe855822608 <col:12, col:16> col:16 referenced tv_nsec 'int'
+    | `-VarDecl 0x7fe8558226a0 <col:3, col:27> col:27 used ts_sleep 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)'
+    |-IfStmt 0x7fe8558228b8 <line:5:3, line:6:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe8558227c8 <line:5:7, col:21> 'int' '<='
+    | | |-IntegerLiteral 0x7fe855822730 <col:7> 'int' 0
+    | | `-ImplicitCastExpr 0x7fe8558227b0 <col:12, col:21> 'int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fe855822778 <col:12, col:21> 'int' lvalue .tv_nsec 0x7fe855822608
+    | |     `-DeclRefExpr 0x7fe855822750 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)' lvalue Var 0x7fe8558226a0 'ts_sleep' 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)'
+    | |-CompoundAssignOperator 0x7fe855822880 <line:6:5, col:17> '_Bool' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fe855822838 <col:5> '_Bool' lvalue ParmVar 0x7fe855025f70 'overflow' '_Bool'
+    | | `-IntegerLiteral 0x7fe855822860 <col:17> 'int' 1
+    | `-<<<NULL>>>
+    `-ForStmt 0x7fe855822c48 <line:8:3, line:14:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fe855822c28 <line:9:5, line:14:5>
+        |-IfStmt 0x7fe8558229d8 <line:10:7, line:11:28>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fe855822918 <line:10:11> '_Bool' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fe8558228f0 <col:11> '_Bool' lvalue ParmVar 0x7fe855025f70 'overflow' '_Bool'
+        | |-BinaryOperator 0x7fe8558229b0 <line:11:9, col:28> 'int' '='
+        | | |-MemberExpr 0x7fe855822958 <col:9, col:18> 'int' lvalue .tv_nsec 0x7fe855822608
+        | | | `-DeclRefExpr 0x7fe855822930 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)' lvalue Var 0x7fe8558226a0 'ts_sleep' 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)'
+        | | `-IntegerLiteral 0x7fe855822990 <col:28> 'int' 0
+        | `-<<<NULL>>>
+        `-IfStmt 0x7fe855822bf0 <line:12:7, line:13:9>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-CallExpr 0x7fe855822ba0 <line:12:11, col:24> 'int'
+          | |-ImplicitCastExpr 0x7fe855822b88 <col:11> 'int (*)()' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7fe855822b10 <col:11> 'int ()' Function 0x7fe855822a60 'foo' 'int ()'
+          | `-ImplicitCastExpr 0x7fe855822bd0 <col:16> 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fe855822b38 <col:16> 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)' lvalue Var 0x7fe8558226a0 'ts_sleep' 'struct (anonymous struct at ../Data/C2AST/pr26213.c:4:3)':'struct (anonymous at ../Data/C2AST/pr26213.c:4:3)'
+          |-BreakStmt 0x7fe855822be8 <line:13:9>
+          `-<<<NULL>>>

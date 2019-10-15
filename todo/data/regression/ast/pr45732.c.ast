@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7ff1968262e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff196867e00 <../Data/C2AST/pr45732.c:3:1, col:21> col:14 referenced chars 'char [5]'
+| `-ConstantArrayType 0x7ff196826f80 'char [5]' 5 
+|   `-BuiltinType 0x7ff196826380 'char'
+|-VarDecl 0x7ff196867ef8 <line:4:1, col:32> col:13 used bad_chars 'const chars [1]' cinit
+| `-InitListExpr 0x7ff196868088 <col:27, col:32> 'const chars [1]'
+|   `-StringLiteral 0x7ff196867fd8 <col:29> 'const chars':'char const[5]' lvalue ""
+`-FunctionDecl 0x7ff1968681a0 <line:6:1, line:10:1> line:6:5 foo 'int ()'
+  `-CompoundStmt 0x7ff196868490 <line:7:1, line:10:1>
+    |-DeclStmt 0x7ff196868348 <line:8:3, col:29>
+    | `-VarDecl 0x7ff1968682a8 <col:3, col:20> col:16 used c 'const chars *' cinit
+    |   `-ImplicitCastExpr 0x7ff196868330 <col:20> 'const chars *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7ff196868308 <col:20> 'const chars [1]' lvalue Var 0x7ff196867ef8 'bad_chars' 'const chars [1]'
+    `-ReturnStmt 0x7ff196868478 <line:9:3, col:16>
+      `-ImplicitCastExpr 0x7ff196868460 <col:10, col:16> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7ff196868448 <col:10, col:16> 'char' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ff196868420 <col:10, col:16> 'const char' lvalue
+            |-ImplicitCastExpr 0x7ff196868408 <col:10, col:13> 'const char *' <ArrayToPointerDecay>
+            | `-ArraySubscriptExpr 0x7ff1968683c0 <col:10, col:13> 'const chars':'char const[5]' lvalue
+            |   |-ImplicitCastExpr 0x7ff1968683a8 <col:10> 'const chars *' <LValueToRValue>
+            |   | `-DeclRefExpr 0x7ff196868360 <col:10> 'const chars *' lvalue Var 0x7ff1968682a8 'c' 'const chars *'
+            |   `-IntegerLiteral 0x7ff196868388 <col:12> 'int' 0
+            `-IntegerLiteral 0x7ff1968683e8 <col:15> 'int' 0

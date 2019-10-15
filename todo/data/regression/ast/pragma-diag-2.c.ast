@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f954c0100e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f954c010d78 <../Data/C2AST/pragma-diag-2.c:5:1, col:9> col:5 i 'int' cinit
+| `-ImplicitCastExpr 0x7f954b824e60 <col:9> 'int' <IntegralCast>
+|   `-IntegerLiteral 0x7f954b824e40 <col:9> 'long long' 0
+`-VarDecl 0x7f954b824e90 <line:9:1, col:9> col:5 j 'int' cinit
+  `-ImplicitCastExpr 0x7f954b824f10 <col:9> 'int' <IntegralCast>
+    `-IntegerLiteral 0x7f954b824ef0 <col:9> 'long long' 1

@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7fe5f5817ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe5f5818778 <../Data/C2AST/pr42245.c:4:1, col:12> col:12 used N_words 'int' extern
+|-RecordDecl 0x7fe5f4830040 <line:5:9, col:16> col:16 struct DIS_node_struct
+|-TypedefDecl 0x7fe5f4830140 <col:1, col:32> col:32 referenced DIS_node 'struct DIS_node_struct':'struct DIS_node_struct'
+| `-ElaboratedType 0x7fe5f48300f0 'struct DIS_node_struct' sugar
+|   `-RecordType 0x7fe5f48300d0 'struct DIS_node_struct'
+|     `-Record 0x7fe5f4830320 'DIS_node_struct'
+|-RecordDecl 0x7fe5f48301b0 <line:6:9, col:16> col:16 struct CON_list_struct
+|-TypedefDecl 0x7fe5f48302b0 <col:1, col:32> col:32 referenced CON_list 'struct CON_list_struct':'struct CON_list_struct'
+| `-ElaboratedType 0x7fe5f4830260 'struct CON_list_struct' sugar
+|   `-RecordType 0x7fe5f4830240 'struct CON_list_struct'
+|     `-Record 0x7fe5f48301b0 'CON_list_struct'
+|-RecordDecl 0x7fe5f4830320 prev 0x7fe5f4830040 <line:8:1, line:11:1> line:8:8 struct DIS_node_struct definition
+| `-FieldDecl 0x7fe5f4830438 <line:10:3, col:13> col:13 referenced cl 'CON_list *'
+`-FunctionDecl 0x7fe5f4830540 <line:13:1, line:29:1> line:14:1 build_DIS_CON_tree 'void (void)'
+  `-CompoundStmt 0x7fe5f4830f58 <line:15:1, line:29:1>
+    |-DeclStmt 0x7fe5f4830658 <line:16:3, col:8>
+    | `-VarDecl 0x7fe5f48305f8 <col:3, col:7> col:7 used w 'int'
+    |-DeclStmt 0x7fe5f48307e0 <line:17:3, col:24>
+    | |-VarDecl 0x7fe5f48306f8 <col:3, col:13> col:13 used dnroot 'DIS_node *'
+    | `-VarDecl 0x7fe5f4830768 <col:3, col:22> col:22 used dn 'DIS_node *'
+    |-DeclStmt 0x7fe5f48308f0 <line:18:3, col:27>
+    | |-VarDecl 0x7fe5f4830808 <col:3, col:13> col:13 used child 'CON_list *'
+    | `-VarDecl 0x7fe5f4830878 <col:3, col:21> col:21 used xchild 'CON_list *'
+    `-ForStmt 0x7fe5f4830f20 <line:19:3, line:28:5>
+      |-BinaryOperator 0x7fe5f4830950 <line:19:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fe5f4830908 <col:8> 'int' lvalue Var 0x7fe5f48305f8 'w' 'int'
+      | `-IntegerLiteral 0x7fe5f4830930 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe5f48309f8 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe5f48309c8 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe5f4830978 <col:15> 'int' lvalue Var 0x7fe5f48305f8 'w' 'int'
+      | `-ImplicitCastExpr 0x7fe5f48309e0 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe5f48309a0 <col:19> 'int' lvalue Var 0x7fe5f5818778 'N_words' 'int'
+      |-UnaryOperator 0x7fe5f4830a48 <col:28, col:29> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe5f4830a20 <col:28> 'int' lvalue Var 0x7fe5f48305f8 'w' 'int'
+      `-CompoundStmt 0x7fe5f4830f08 <line:20:5, line:28:5>
+        `-IfStmt 0x7fe5f4830ed0 <line:21:7, line:27:9>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fe5f4830b40 <line:21:11, col:32> 'int' '=='
+          | |-ImplicitCastExpr 0x7fe5f4830b10 <col:11> 'DIS_node *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fe5f4830a68 <col:11> 'DIS_node *' lvalue Var 0x7fe5f48306f8 'dnroot' 'DIS_node *'
+          | `-ImplicitCastExpr 0x7fe5f4830b28 <col:21, col:32> 'DIS_node *' <BitCast>
+          |   `-ParenExpr 0x7fe5f4830af0 <col:21, col:32> 'void *'
+          |     `-CStyleCastExpr 0x7fe5f4830ac8 <col:22, col:31> 'void *' <NullToPointer>
+          |       `-IntegerLiteral 0x7fe5f4830a90 <col:31> 'int' 0
+          |-CompoundStmt 0x7fe5f4830eb0 <line:22:9, line:27:9>
+          | |-BinaryOperator 0x7fe5f4830bd0 <line:23:11, col:20> 'DIS_node *' '='
+          | | |-DeclRefExpr 0x7fe5f4830b68 <col:11> 'DIS_node *' lvalue Var 0x7fe5f48306f8 'dnroot' 'DIS_node *'
+          | | `-ImplicitCastExpr 0x7fe5f4830bb8 <col:20> 'DIS_node *' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7fe5f4830b90 <col:20> 'DIS_node *' lvalue Var 0x7fe5f4830768 'dn' 'DIS_node *'
+          | `-ForStmt 0x7fe5f4830e78 <line:24:11, line:26:13>
+          |   |-BinaryOperator 0x7fe5f4830cb0 <line:24:16, col:28> 'CON_list *' '='
+          |   | |-DeclRefExpr 0x7fe5f4830bf8 <col:16> 'CON_list *' lvalue Var 0x7fe5f4830808 'child' 'CON_list *'
+          |   | `-ImplicitCastExpr 0x7fe5f4830c98 <col:24, col:28> 'CON_list *' <LValueToRValue>
+          |   |   `-MemberExpr 0x7fe5f4830c60 <col:24, col:28> 'CON_list *' lvalue ->cl 0x7fe5f4830438
+          |   |     `-ImplicitCastExpr 0x7fe5f4830c48 <col:24> 'DIS_node *' <LValueToRValue>
+          |   |       `-DeclRefExpr 0x7fe5f4830c20 <col:24> 'DIS_node *' lvalue Var 0x7fe5f4830768 'dn' 'DIS_node *'
+          |   |-<<<NULL>>>
+          |   |-BinaryOperator 0x7fe5f4830db0 <col:32, col:52> 'int' '!='
+          |   | |-ImplicitCastExpr 0x7fe5f4830d80 <col:32> 'CON_list *' <LValueToRValue>
+          |   | | `-DeclRefExpr 0x7fe5f4830cd8 <col:32> 'CON_list *' lvalue Var 0x7fe5f4830808 'child' 'CON_list *'
+          |   | `-ImplicitCastExpr 0x7fe5f4830d98 <col:41, col:52> 'CON_list *' <BitCast>
+          |   |   `-ParenExpr 0x7fe5f4830d60 <col:41, col:52> 'void *'
+          |   |     `-CStyleCastExpr 0x7fe5f4830d38 <col:42, col:51> 'void *' <NullToPointer>
+          |   |       `-IntegerLiteral 0x7fe5f4830d00 <col:51> 'int' 0
+          |   |-BinaryOperator 0x7fe5f4830e40 <col:55, col:63> 'CON_list *' '='
+          |   | |-DeclRefExpr 0x7fe5f4830dd8 <col:55> 'CON_list *' lvalue Var 0x7fe5f4830808 'child' 'CON_list *'
+          |   | `-ImplicitCastExpr 0x7fe5f4830e28 <col:63> 'CON_list *' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7fe5f4830e00 <col:63> 'CON_list *' lvalue Var 0x7fe5f4830878 'xchild' 'CON_list *'
+          |   `-CompoundStmt 0x7fe5f4830e68 <line:25:13, line:26:13>
+          `-<<<NULL>>>

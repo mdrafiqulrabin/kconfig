@@ -1,0 +1,31 @@
+../Data/C2AST/pr79807.c:11:10: error: use of unknown builtin '__builtin_ia32_pd_pd256' [-Wimplicit-function-declaration]
+  return __builtin_ia32_pd_pd256 (x);
+         ^
+../Data/C2AST/pr79807.c:11:10: error: returning 'int' from a function with incompatible result type '__v2df' (vector of 2 'double' values)
+  return __builtin_ia32_pd_pd256 (x);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7ff61c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff61c82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff61c82bf80 '__int128'
+|-TypedefDecl 0x7ff61c82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff61c82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff61c82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff61c82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff61c82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff61c82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff61c82c600 'char *'
+|   `-BuiltinType 0x7ff61c82bd80 'char'
+|-TypedefDecl 0x7ff61c82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff61c82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff61c82c720 'struct __va_list_tag'
+|     `-Record 0x7ff61c82c698 '__va_list_tag'
+|-TypedefDecl 0x7ff61c86e800 <../Data/C2AST/pr79807.c:5:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7ff61c82c980 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7ff61c82bf00 'double'
+|-TypedefDecl 0x7ff61c86e8b8 <line:6:1, col:16> col:16 referenced __v4df '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7ff61c86e880 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7ff61c82bf00 'double'
+`-FunctionDecl 0x7ff61c86ea60 <line:8:1, line:12:1> line:9:1 foo '__v2df (__v4df)'
+  |-ParmVarDecl 0x7ff61c86e960 <col:6, col:13> col:13 used x '__v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+  `-CompoundStmt 0x7ff61c86f0f0 <line:10:1, line:12:1>

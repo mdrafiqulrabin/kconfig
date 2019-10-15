@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ffcd10174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffcd1018178 <../Data/C2AST/pr46254.c:6:1, col:10> col:10 used i '__int128'
+|-FunctionDecl 0x7ffcd0821a88 <line:8:1, line:11:1> line:8:6 test 'void ()'
+| `-CompoundStmt 0x7ffcd0822070 <line:9:1, line:11:1>
+|   `-CallExpr 0x7ffcd0821d00 <line:10:3, col:40> '__int128'
+|     |-ImplicitCastExpr 0x7ffcd0822058 <col:3> '__int128 (*)(volatile __int128 *, __int128, __int128, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffcd0822008 <col:3> '<builtin fn type>' Function 0x7ffcd0821db8 '__sync_val_compare_and_swap_16' '__int128 (volatile __int128 *, __int128, __int128, ...)'
+|     |-UnaryOperator 0x7ffcd0821c48 <col:32, col:33> '__int128 *' prefix '&'
+|     | `-DeclRefExpr 0x7ffcd0821bf0 <col:33> '__int128' lvalue Var 0x7ffcd1018178 'i' '__int128'
+|     |-ImplicitCastExpr 0x7ffcd0821fd8 <col:36> '__int128' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ffcd0821c68 <col:36> '__int128' lvalue Var 0x7ffcd1018178 'i' '__int128'
+|     `-ImplicitCastExpr 0x7ffcd0821ff0 <col:39> '__int128' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffcd0821c90 <col:39> '__int128' lvalue Var 0x7ffcd1018178 'i' '__int128'
+|-FunctionDecl 0x7ffcd0821b28 <col:3> col:3 implicit used __sync_val_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7ffcd0821db8 <col:3> col:3 implicit __sync_val_compare_and_swap_16 '__int128 (volatile __int128 *, __int128, __int128, ...)' extern
+  |-ParmVarDecl 0x7ffcd0821e58 <<invalid sloc>> <invalid sloc> 'volatile __int128 *'
+  |-ParmVarDecl 0x7ffcd0821eb8 <<invalid sloc>> <invalid sloc> '__int128'
+  |-ParmVarDecl 0x7ffcd0821f18 <<invalid sloc>> <invalid sloc> '__int128'
+  `-NoThrowAttr 0x7ffcd0821f90 <col:3> Implicit

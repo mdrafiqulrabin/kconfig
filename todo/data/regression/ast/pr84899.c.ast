@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fd0590222e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd059063e60 <../Data/C2AST/pr84899.c:5:1, line:12:1> line:6:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fd059022f78 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fd059064318 <line:7:1, line:12:1>
+    |-DeclStmt 0x7fd0590640f8 <line:8:3, col:23>
+    | |-VarDecl 0x7fd059063f60 <col:3, col:15> col:7 used a 'int' cinit
+    | | `-BinaryOperator 0x7fd059064020 <col:11, col:15> 'int' '/'
+    | |   |-IntegerLiteral 0x7fd059063fc0 <col:11> 'int' 1
+    | |   `-ImplicitCastExpr 0x7fd059064008 <col:15> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fd059063fe0 <col:15> 'int' lvalue ParmVar 0x7fd059022f78 'x' 'int'
+    | `-VarDecl 0x7fd059064060 <col:3, col:22> col:18 used b 'int' cinit
+    |   `-IntegerLiteral 0x7fd0590640c0 <col:22> 'int' 0
+    `-WhileStmt 0x7fd0590642f8 <line:10:3, <built-in>:38:21>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd059064260 <../Data/C2AST/pr84899.c:10:10, col:24> 'int' '<'
+      | |-ParenExpr 0x7fd059064200 <col:10, col:20> 'int'
+      | | `-BinaryOperator 0x7fd0590641d8 <col:11, col:19> 'int' '+'
+      | |   |-BinaryOperator 0x7fd059064190 <col:11, col:15> 'int' '+'
+      | |   | |-ImplicitCastExpr 0x7fd059064160 <col:11> 'int' <LValueToRValue>
+      | |   | | `-DeclRefExpr 0x7fd059064110 <col:11> 'int' lvalue Var 0x7fd059063f60 'a' 'int'
+      | |   | `-ImplicitCastExpr 0x7fd059064178 <col:15> 'int' <LValueToRValue>
+      | |   |   `-DeclRefExpr 0x7fd059064138 <col:15> 'int' lvalue Var 0x7fd059064060 'b' 'int'
+      | |   `-IntegerLiteral 0x7fd0590641b8 <col:19> 'int' 1
+      | `-ImplicitCastExpr 0x7fd059064248 <col:24> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd059064220 <col:24> 'int' lvalue ParmVar 0x7fd059022f78 'x' 'int'
+      `-BinaryOperator 0x7fd0590642d0 <line:11:5, <built-in>:38:21> 'int' '='
+        |-DeclRefExpr 0x7fd059064288 <../Data/C2AST/pr84899.c:11:5> 'int' lvalue Var 0x7fd059064060 'b' 'int'
+        `-IntegerLiteral 0x7fd0590642b0 <<built-in>:38:21> 'int' 2147483647

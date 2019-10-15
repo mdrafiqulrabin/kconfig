@@ -1,0 +1,62 @@
+TranslationUnitDecl 0x7fe77b0288e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe77b029578 <../Data/C2AST/pr52969.c:4:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe77b814258 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7fe77b814350 <line:5:1, col:15> col:7 used xsum 'float [100]'
+`-FunctionDecl 0x7fe77b8144b0 <line:6:1, line:16:1> line:6:6 foo 'void (float *)'
+  |-ParmVarDecl 0x7fe77b8143f0 <col:11, col:18> col:18 used cluster 'float *'
+  `-CompoundStmt 0x7fe77b814c00 <line:7:1, line:16:1>
+    |-DeclStmt 0x7fe77b8145d0 <line:8:3, col:8>
+    | `-VarDecl 0x7fe77b814570 <col:3, col:7> col:7 used j 'int'
+    |-ForStmt 0x7fe77b814a80 <line:9:3, line:13:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe77b814610 <line:9:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe77b8145e8 <col:10> 'int' lvalue Var 0x7fe77b029578 'a' 'int'
+    | |-UnaryOperator 0x7fe77b814650 <col:14, col:16> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7fe77b814628 <col:16> 'int' lvalue Var 0x7fe77b814570 'j' 'int'
+    | `-CompoundStmt 0x7fe77b814a60 <col:19, line:13:3>
+    |   |-BinaryOperator 0x7fe77b8147d8 <line:10:7, col:26> 'float' '='
+    |   | |-ArraySubscriptExpr 0x7fe77b8146f0 <col:7, col:13> 'float' lvalue
+    |   | | |-ImplicitCastExpr 0x7fe77b8146c0 <col:7> 'float *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fe77b814670 <col:7> 'float [100]' lvalue Var 0x7fe77b814350 'xsum' 'float [100]'
+    |   | | `-ImplicitCastExpr 0x7fe77b8146d8 <col:12> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe77b814698 <col:12> 'int' lvalue Var 0x7fe77b814570 'j' 'int'
+    |   | `-ImplicitCastExpr 0x7fe77b8147c0 <col:17, col:26> 'float' <LValueToRValue>
+    |   |   `-ArraySubscriptExpr 0x7fe77b814798 <col:17, col:26> 'float' lvalue
+    |   |     |-ImplicitCastExpr 0x7fe77b814768 <col:17> 'float *' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7fe77b814718 <col:17> 'float *' lvalue ParmVar 0x7fe77b8143f0 'cluster' 'float *'
+    |   |     `-ImplicitCastExpr 0x7fe77b814780 <col:25> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fe77b814740 <col:25> 'int' lvalue Var 0x7fe77b814570 'j' 'int'
+    |   `-IfStmt 0x7fe77b814a28 <line:11:7, line:12:12>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7fe77b8148f8 <line:11:11, col:21> 'int' '>'
+    |     | |-ImplicitCastExpr 0x7fe77b8148c8 <col:11, col:17> 'float' <LValueToRValue>
+    |     | | `-ArraySubscriptExpr 0x7fe77b814880 <col:11, col:17> 'float' lvalue
+    |     | |   |-ImplicitCastExpr 0x7fe77b814850 <col:11> 'float *' <ArrayToPointerDecay>
+    |     | |   | `-DeclRefExpr 0x7fe77b814800 <col:11> 'float [100]' lvalue Var 0x7fe77b814350 'xsum' 'float [100]'
+    |     | |   `-ImplicitCastExpr 0x7fe77b814868 <col:16> 'int' <LValueToRValue>
+    |     | |     `-DeclRefExpr 0x7fe77b814828 <col:16> 'int' lvalue Var 0x7fe77b814570 'j' 'int'
+    |     | `-ImplicitCastExpr 0x7fe77b8148e0 <col:21> 'float' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fe77b8148a8 <col:21> 'int' 0
+    |     |-BinaryOperator 0x7fe77b814a00 <line:12:2, col:12> 'float' '='
+    |     | |-ArraySubscriptExpr 0x7fe77b8149a0 <col:2, col:8> 'float' lvalue
+    |     | | |-ImplicitCastExpr 0x7fe77b814970 <col:2> 'float *' <ArrayToPointerDecay>
+    |     | | | `-DeclRefExpr 0x7fe77b814920 <col:2> 'float [100]' lvalue Var 0x7fe77b814350 'xsum' 'float [100]'
+    |     | | `-ImplicitCastExpr 0x7fe77b814988 <col:7> 'int' <LValueToRValue>
+    |     | |   `-DeclRefExpr 0x7fe77b814948 <col:7> 'int' lvalue Var 0x7fe77b814570 'j' 'int'
+    |     | `-ImplicitCastExpr 0x7fe77b8149e8 <col:12> 'float' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fe77b8149c8 <col:12> 'int' 0
+    |     `-<<<NULL>>>
+    `-IfStmt 0x7fe77b814bc8 <line:14:3, line:15:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe77b814b40 <line:14:7, col:13> 'float' <LValueToRValue>
+      | `-ArraySubscriptExpr 0x7fe77b814b18 <col:7, col:13> 'float' lvalue
+      |   |-ImplicitCastExpr 0x7fe77b814b00 <col:7> 'float *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7fe77b814ab8 <col:7> 'float [100]' lvalue Var 0x7fe77b814350 'xsum' 'float [100]'
+      |   `-IntegerLiteral 0x7fe77b814ae0 <col:12> 'int' 0
+      |-BinaryOperator 0x7fe77b814ba0 <line:15:5, col:9> 'int' '='
+      | |-DeclRefExpr 0x7fe77b814b58 <col:5> 'int' lvalue Var 0x7fe77b814258 'b' 'int'
+      | `-IntegerLiteral 0x7fe77b814b80 <col:9> 'int' 0
+      `-<<<NULL>>>

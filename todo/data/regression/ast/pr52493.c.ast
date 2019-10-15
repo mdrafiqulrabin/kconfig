@@ -1,0 +1,121 @@
+TranslationUnitDecl 0x7ff73e0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff73e018160 <../Data/C2AST/pr52493.c:3:1, line:6:1> line:3:8 struct Time definition
+| |-FieldDecl 0x7ff73e80e838 <line:4:5, col:14> col:14 referenced sec 'long'
+| `-FieldDecl 0x7ff73e80e898 <line:5:5, col:10> col:10 referenced usec 'long'
+|-RecordDecl 0x7ff73e80e8e0 <line:7:1, line:10:1> line:7:8 struct Flow definition
+| |-FieldDecl 0x7ff73e80e9a8 <line:8:5, col:20> col:20 iif 'unsigned short'
+| `-FieldDecl 0x7ff73e80ea40 <line:9:5, col:17> col:17 referenced mtime 'struct Time':'struct Time'
+|-RecordDecl 0x7ff73e80ea88 <line:11:1, line:15:1> line:11:8 struct NetFlow definition
+| |-FieldDecl 0x7ff73e80eb48 <line:12:5, col:14> col:14 MaxFlows 'unsigned int'
+| |-FieldDecl 0x7ff73e80eba8 <line:13:5, col:14> col:14 referenced HeaderFields 'unsigned int'
+| `-FieldDecl 0x7ff73e80ec30 <line:14:5, col:21> col:21 referenced HeaderFormat 'unsigned short *'
+|-VarDecl 0x7ff73e80ed30 <line:16:1, col:24> col:24 used netflow 'struct NetFlow *' static
+|-VarDecl 0x7ff73e80edf0 <line:17:1, col:20> col:20 used start_time 'struct Time':'struct Time' static
+|-VarDecl 0x7ff73e80eed0 <line:18:1, col:38> col:22 used emit_packet 'unsigned char [1500]' static
+|-FunctionDecl 0x7ff73e80f158 <line:19:1, line:22:1> line:19:17 used cmpmtime 'long (struct Time *, struct Time *)' inline
+| |-ParmVarDecl 0x7ff73e80efb0 <col:26, col:39> col:39 used t1 'struct Time *'
+| |-ParmVarDecl 0x7ff73e80f038 <col:43, col:56> col:56 used t2 'struct Time *'
+| `-CompoundStmt 0x7ff73e80f5d8 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7ff73e80f5c0 <line:21:3, col:63>
+|     `-BinaryOperator 0x7ff73e80f598 <col:10, col:63> 'long' '+'
+|       |-BinaryOperator 0x7ff73e80f3a8 <col:10, col:32> 'long' '*'
+|       | |-ParenExpr 0x7ff73e80f350 <col:10, col:28> 'long'
+|       | | `-BinaryOperator 0x7ff73e80f328 <col:11, col:25> 'long' '-'
+|       | |   |-ImplicitCastExpr 0x7ff73e80f2f8 <col:11, col:15> 'long' <LValueToRValue>
+|       | |   | `-MemberExpr 0x7ff73e80f248 <col:11, col:15> 'long' lvalue ->sec 0x7ff73e80e838
+|       | |   |   `-ImplicitCastExpr 0x7ff73e80f230 <col:11> 'struct Time *' <LValueToRValue>
+|       | |   |     `-DeclRefExpr 0x7ff73e80f208 <col:11> 'struct Time *' lvalue ParmVar 0x7ff73e80efb0 't1' 'struct Time *'
+|       | |   `-ImplicitCastExpr 0x7ff73e80f310 <col:21, col:25> 'long' <LValueToRValue>
+|       | |     `-MemberExpr 0x7ff73e80f2c0 <col:21, col:25> 'long' lvalue ->sec 0x7ff73e80e838
+|       | |       `-ImplicitCastExpr 0x7ff73e80f2a8 <col:21> 'struct Time *' <LValueToRValue>
+|       | |         `-DeclRefExpr 0x7ff73e80f280 <col:21> 'struct Time *' lvalue ParmVar 0x7ff73e80f038 't2' 'struct Time *'
+|       | `-ImplicitCastExpr 0x7ff73e80f390 <col:32> 'long' <IntegralCast>
+|       |   `-IntegerLiteral 0x7ff73e80f370 <col:32> 'int' 1000
+|       `-BinaryOperator 0x7ff73e80f570 <col:39, col:63> 'long' '/'
+|         |-ParenExpr 0x7ff73e80f518 <col:39, col:59> 'long'
+|         | `-BinaryOperator 0x7ff73e80f4f0 <col:40, col:55> 'long' '-'
+|         |   |-ImplicitCastExpr 0x7ff73e80f4c0 <col:40, col:44> 'long' <LValueToRValue>
+|         |   | `-MemberExpr 0x7ff73e80f410 <col:40, col:44> 'long' lvalue ->usec 0x7ff73e80e898
+|         |   |   `-ImplicitCastExpr 0x7ff73e80f3f8 <col:40> 'struct Time *' <LValueToRValue>
+|         |   |     `-DeclRefExpr 0x7ff73e80f3d0 <col:40> 'struct Time *' lvalue ParmVar 0x7ff73e80efb0 't1' 'struct Time *'
+|         |   `-ImplicitCastExpr 0x7ff73e80f4d8 <col:51, col:55> 'long' <LValueToRValue>
+|         |     `-MemberExpr 0x7ff73e80f488 <col:51, col:55> 'long' lvalue ->usec 0x7ff73e80e898
+|         |       `-ImplicitCastExpr 0x7ff73e80f470 <col:51> 'struct Time *' <LValueToRValue>
+|         |         `-DeclRefExpr 0x7ff73e80f448 <col:51> 'struct Time *' lvalue ParmVar 0x7ff73e80f038 't2' 'struct Time *'
+|         `-ImplicitCastExpr 0x7ff73e80f558 <col:63> 'long' <IntegralCast>
+|           `-IntegerLiteral 0x7ff73e80f538 <col:63> 'int' 1000
+|-FunctionDecl 0x7ff73e80f960 <line:23:1, line:34:1> line:23:13 used fill 'void (int, unsigned short *, struct Flow *, void *)' static
+| |-ParmVarDecl 0x7ff73e80f608 <col:18, col:22> col:22 used fields 'int'
+| |-ParmVarDecl 0x7ff73e80f680 <col:30, col:46> col:46 used format 'unsigned short *'
+| |-ParmVarDecl 0x7ff73e80f790 <line:24:5, col:18> col:18 used flow 'struct Flow *'
+| |-ParmVarDecl 0x7ff73e80f818 <col:24, col:30> col:30 used p 'void *'
+| `-CompoundStmt 0x7ff73e8101c0 <line:25:1, line:34:1>
+|   |-DeclStmt 0x7ff73e80fa98 <line:26:3, col:8>
+|   | `-VarDecl 0x7ff73e80fa38 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7ff73e810188 <line:27:3, line:33:7>
+|     |-BinaryOperator 0x7ff73e80faf8 <line:27:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7ff73e80fab0 <col:8> 'int' lvalue Var 0x7ff73e80fa38 'i' 'int'
+|     | `-IntegerLiteral 0x7ff73e80fad8 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff73e80fba0 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7ff73e80fb70 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff73e80fb20 <col:15> 'int' lvalue Var 0x7ff73e80fa38 'i' 'int'
+|     | `-ImplicitCastExpr 0x7ff73e80fb88 <col:19> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ff73e80fb48 <col:19> 'int' lvalue ParmVar 0x7ff73e80f608 'fields' 'int'
+|     |-UnaryOperator 0x7ff73e80fbf0 <col:27, col:28> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7ff73e80fbc8 <col:27> 'int' lvalue Var 0x7ff73e80fa38 'i' 'int'
+|     `-IfStmt 0x7ff73e810150 <line:28:5, line:33:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7ff73e80fd08 <line:28:9, col:22> 'int' '=='
+|       | |-ImplicitCastExpr 0x7ff73e80fcf0 <col:9, col:17> 'int' <IntegralCast>
+|       | | `-ImplicitCastExpr 0x7ff73e80fcd8 <col:9, col:17> 'unsigned short' <LValueToRValue>
+|       | |   `-ArraySubscriptExpr 0x7ff73e80fc90 <col:9, col:17> 'unsigned short' lvalue
+|       | |     |-ImplicitCastExpr 0x7ff73e80fc60 <col:9> 'unsigned short *' <LValueToRValue>
+|       | |     | `-DeclRefExpr 0x7ff73e80fc10 <col:9> 'unsigned short *' lvalue ParmVar 0x7ff73e80f680 'format' 'unsigned short *'
+|       | |     `-ImplicitCastExpr 0x7ff73e80fc78 <col:16> 'int' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7ff73e80fc38 <col:16> 'int' lvalue Var 0x7ff73e80fa38 'i' 'int'
+|       | `-IntegerLiteral 0x7ff73e80fcb8 <col:22> 'int' 21
+|       |-CompoundStmt 0x7ff73e810128 <line:29:7, line:33:7>
+|       | |-DeclStmt 0x7ff73e80fda8 <line:30:2, col:18>
+|       | | `-VarDecl 0x7ff73e80fd48 <col:2, col:15> col:15 used __v 'unsigned int'
+|       | |-BinaryOperator 0x7ff73e80ffb0 <line:31:2, col:42> 'unsigned int' '='
+|       | | |-DeclRefExpr 0x7ff73e80fdc0 <col:2> 'unsigned int' lvalue Var 0x7ff73e80fd48 '__v' 'unsigned int'
+|       | | `-ImplicitCastExpr 0x7ff73e80ff98 <col:8, col:42> 'unsigned int' <IntegralCast>
+|       | |   `-CallExpr 0x7ff73e80ff60 <col:8, col:42> 'long'
+|       | |     |-ImplicitCastExpr 0x7ff73e80ff48 <col:8> 'long (*)(struct Time *, struct Time *)' <FunctionToPointerDecay>
+|       | |     | `-DeclRefExpr 0x7ff73e80fde8 <col:8> 'long (struct Time *, struct Time *)' Function 0x7ff73e80f158 'cmpmtime' 'long (struct Time *, struct Time *)'
+|       | |     |-UnaryOperator 0x7ff73e80fe88 <col:17, col:24> 'struct Time *' prefix '&'
+|       | |     | `-MemberExpr 0x7ff73e80fe50 <col:18, col:24> 'struct Time':'struct Time' lvalue ->mtime 0x7ff73e80ea40
+|       | |     |   `-ImplicitCastExpr 0x7ff73e80fe38 <col:18> 'struct Flow *' <LValueToRValue>
+|       | |     |     `-DeclRefExpr 0x7ff73e80fe10 <col:18> 'struct Flow *' lvalue ParmVar 0x7ff73e80f790 'flow' 'struct Flow *'
+|       | |     `-UnaryOperator 0x7ff73e80fed0 <col:31, col:32> 'struct Time *' prefix '&'
+|       | |       `-DeclRefExpr 0x7ff73e80fea8 <col:32> 'struct Time':'struct Time' lvalue Var 0x7ff73e80edf0 'start_time' 'struct Time':'struct Time'
+|       | `-BinaryOperator 0x7ff73e810100 <line:32:2, col:26> 'unsigned int' '='
+|       |   |-UnaryOperator 0x7ff73e8100a0 <col:2, col:22> 'unsigned int' lvalue prefix '*'
+|       |   | `-ParenExpr 0x7ff73e810080 <col:3, col:22> 'unsigned int *'
+|       |   |   `-CStyleCastExpr 0x7ff73e810058 <col:4, col:21> 'unsigned int *' <BitCast>
+|       |   |     `-ImplicitCastExpr 0x7ff73e810040 <col:21> 'void *' <LValueToRValue>
+|       |   |       `-DeclRefExpr 0x7ff73e80ffd8 <col:21> 'void *' lvalue ParmVar 0x7ff73e80f818 'p' 'void *'
+|       |   `-ImplicitCastExpr 0x7ff73e8100e8 <col:26> 'unsigned int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7ff73e8100c0 <col:26> 'unsigned int' lvalue Var 0x7ff73e80fd48 '__v' 'unsigned int'
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7ff73e810228 <line:35:1, line:38:1> line:35:6 emit_thread 'void ()'
+  `-CompoundStmt 0x7ff73e8105b0 <line:36:1, line:38:1>
+    `-CallExpr 0x7ff73e8104f0 <line:37:3, col:69> 'void'
+      |-ImplicitCastExpr 0x7ff73e8104d8 <col:3> 'void (*)(int, unsigned short *, struct Flow *, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff73e8102c8 <col:3> 'void (int, unsigned short *, struct Flow *, void *)' Function 0x7ff73e80f960 'fill' 'void (int, unsigned short *, struct Flow *, void *)'
+      |-ImplicitCastExpr 0x7ff73e810550 <col:8, col:17> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7ff73e810538 <col:8, col:17> 'unsigned int' <LValueToRValue>
+      |   `-MemberExpr 0x7ff73e810330 <col:8, col:17> 'unsigned int' lvalue ->HeaderFields 0x7ff73e80eba8
+      |     `-ImplicitCastExpr 0x7ff73e810318 <col:8> 'struct NetFlow *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7ff73e8102f0 <col:8> 'struct NetFlow *' lvalue Var 0x7ff73e80ed30 'netflow' 'struct NetFlow *'
+      |-ImplicitCastExpr 0x7ff73e810568 <col:31, col:40> 'unsigned short *' <LValueToRValue>
+      | `-MemberExpr 0x7ff73e8103a8 <col:31, col:40> 'unsigned short *' lvalue ->HeaderFormat 0x7ff73e80ec30
+      |   `-ImplicitCastExpr 0x7ff73e810390 <col:31> 'struct NetFlow *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ff73e810368 <col:31> 'struct NetFlow *' lvalue Var 0x7ff73e80ed30 'netflow' 'struct NetFlow *'
+      |-ImplicitCastExpr 0x7ff73e810580 <col:54> 'struct Flow *' <NullToPointer>
+      | `-IntegerLiteral 0x7ff73e8103e0 <col:54> 'int' 0
+      `-ImplicitCastExpr 0x7ff73e810598 <col:57, col:58> 'void *' <BitCast>
+        `-UnaryOperator 0x7ff73e810458 <col:57, col:58> 'unsigned char (*)[1500]' prefix '&'
+          `-DeclRefExpr 0x7ff73e810400 <col:58> 'unsigned char [1500]' lvalue Var 0x7ff73e80eed0 'emit_packet' 'unsigned char [1500]'

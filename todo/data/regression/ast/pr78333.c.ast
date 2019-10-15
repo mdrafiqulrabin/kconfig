@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fec280258e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fec290152d0 <../Data/C2AST/pr78333.c:5:1, line:8:1> line:6:1 __cyg_profile_func_enter 'void (void *, void *)'
+| |-ParmVarDecl 0x7fec28026578 <col:26, col:32> col:32 this_fn 'void *'
+| |-ParmVarDecl 0x7fec29015200 <col:41, col:47> col:47 call_site 'void *'
+| |-CompoundStmt 0x7fec29015408 <line:7:1, line:8:1>
+| `-NoInstrumentFunctionAttr 0x7fec29015380 <line:5:21>
+|-FunctionDecl 0x7fec29015538 <line:10:1, line:13:1> line:11:1 __cyg_profile_func_exit 'void (void *, void *)'
+| |-ParmVarDecl 0x7fec29015430 <col:25, col:31> col:31 this_fn 'void *'
+| |-ParmVarDecl 0x7fec290154a8 <col:40, col:46> col:46 call_site 'void *'
+| |-CompoundStmt 0x7fec29015630 <line:12:1, line:13:1>
+| `-NoInstrumentFunctionAttr 0x7fec290155e8 <line:10:21>
+|-FunctionDecl 0x7fec29015690 <line:15:1, col:71> col:62 used foo 'int ()' extern inline
+| |-CompoundStmt 0x7fec29015788 <col:69, col:71>
+| |-AlwaysInlineAttr 0x7fec29015730 <col:42> always_inline
+| `-GNUInlineAttr 0x7fec29015778 <col:30>
+`-FunctionDecl 0x7fec290157c0 <line:16:1, line:20:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7fec29015930 <line:17:1, line:20:1>
+    |-CallExpr 0x7fec290158d0 <line:18:3, col:8> 'int'
+    | `-ImplicitCastExpr 0x7fec290158b8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fec29015860 <col:3> 'int ()' Function 0x7fec29015690 'foo' 'int ()'
+    `-ReturnStmt 0x7fec29015918 <line:19:3, col:10>
+      `-IntegerLiteral 0x7fec290158f8 <col:10> 'int' 0

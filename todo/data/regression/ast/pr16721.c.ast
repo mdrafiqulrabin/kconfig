@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd30102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd30102c960 <../Data/C2AST/pr16721.c:4:1, line:6:1> line:4:8 struct data definition
+| `-FieldDecl 0x7fd30106d860 <line:5:2, col:26> col:26 referenced addr 'volatile unsigned long *'
+|-VarDecl 0x7fd30106d960 <line:4:1, line:6:4> col:4 used p 'struct data *'
+`-FunctionDecl 0x7fd30106da70 <line:8:1, line:12:1> line:8:5 test 'int ()'
+  `-CompoundStmt 0x7fd30106dc10 <line:9:1, line:12:1>
+    |-ImplicitCastExpr 0x7fd30106dbc0 <line:10:2, col:6> 'unsigned long' <LValueToRValue>
+    | `-UnaryOperator 0x7fd30106dba0 <col:2, col:6> 'volatile unsigned long' lvalue prefix '*'
+    |   `-ImplicitCastExpr 0x7fd30106db88 <col:3, col:6> 'volatile unsigned long *' <LValueToRValue>
+    |     `-MemberExpr 0x7fd30106db50 <col:3, col:6> 'volatile unsigned long *' lvalue ->addr 0x7fd30106d860
+    |       `-ImplicitCastExpr 0x7fd30106db38 <col:3> 'struct data *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fd30106db10 <col:3> 'struct data *' lvalue Var 0x7fd30106d960 'p' 'struct data *'
+    `-ReturnStmt 0x7fd30106dbf8 <line:11:2, col:9>
+      `-IntegerLiteral 0x7fd30106dbd8 <col:9> 'int' 0

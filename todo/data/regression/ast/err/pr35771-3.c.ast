@@ -1,0 +1,23 @@
+../Data/C2AST/pr35771-3.c:9:10: fatal error: 'pr35771.h' file not found
+#include "pr35771.h"
+         ^~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fccd102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccd102c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fccd102bf80 '__int128'
+|-TypedefDecl 0x7fccd102c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fccd102bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fccd102c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fccd102c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fccd102c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fccd102c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fccd102c600 'char *'
+|   `-BuiltinType 0x7fccd102bd80 'char'
+|-TypedefDecl 0x7fccd102c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fccd102c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fccd102c720 'struct __va_list_tag'
+|     `-Record 0x7fccd102c698 '__va_list_tag'
+`-TypedefDecl 0x7fccd1815200 <../Data/C2AST/pr35771-3.c:5:1, col:19> col:19 __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  |-VectorType 0x7fccd102c980 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+  | `-BuiltinType 0x7fccd102be20 'long long'
+  `-MayAliasAttr 0x7fccd1815258 <col:65>

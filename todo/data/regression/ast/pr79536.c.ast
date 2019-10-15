@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7fb5e102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb5e102c978 <../Data/C2AST/pr79536.c:3:1, col:13> col:13 referenced A 'int'
+| `-BuiltinType 0x7fb5e102bde0 'int'
+`-FunctionDecl 0x7fb5e1814388 <line:4:1, line:10:1> line:5:1 fn1 'int (A, A)'
+  |-ParmVarDecl 0x7fb5e1814200 <col:6, col:8> col:8 used x 'A':'int'
+  |-ParmVarDecl 0x7fb5e1814270 <col:11, col:13> col:13 used y 'A':'int'
+  `-CompoundStmt 0x7fb5e1814970 <line:6:1, line:10:1>
+    |-IfStmt 0x7fb5e1814900 <line:7:3, line:8:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb5e18148a0 <line:7:7, col:48> 'int' '!='
+    | | |-ParenExpr 0x7fb5e1814660 <col:7, col:24> '_Complex int'
+    | | | `-BinaryOperator 0x7fb5e1814638 <col:8, col:22> '_Complex int' '+'
+    | | |   |-ImplicitCastExpr 0x7fb5e1814620 <col:8> '_Complex int' <IntegralRealToComplex>
+    | | |   | `-ImplicitCastExpr 0x7fb5e1814608 <col:8> 'A':'int' <LValueToRValue>
+    | | |   |   `-DeclRefExpr 0x7fb5e1814478 <col:8> 'A':'int' lvalue ParmVar 0x7fb5e1814200 'x' 'A':'int'
+    | | |   `-BinaryOperator 0x7fb5e18145e0 <col:12, col:22> '_Complex int' '*'
+    | | |     |-ImplicitCastExpr 0x7fb5e18145c8 <col:12, col:18> '_Complex int' <IntegralRealToComplex>
+    | | |     | `-ParenExpr 0x7fb5e1814548 <col:12, col:18> 'int'
+    | | |     |   `-BinaryOperator 0x7fb5e1814520 <col:13, col:17> 'int' '-'
+    | | |     |     |-ImplicitCastExpr 0x7fb5e18144f0 <col:13> 'A':'int' <LValueToRValue>
+    | | |     |     | `-DeclRefExpr 0x7fb5e18144a0 <col:13> 'A':'int' lvalue ParmVar 0x7fb5e1814200 'x' 'A':'int'
+    | | |     |     `-ImplicitCastExpr 0x7fb5e1814508 <col:17> 'A':'int' <LValueToRValue>
+    | | |     |       `-DeclRefExpr 0x7fb5e18144c8 <col:17> 'A':'int' lvalue ParmVar 0x7fb5e1814270 'y' 'A':'int'
+    | | |     `-ImaginaryLiteral 0x7fb5e1814588 <col:22> '_Complex int'
+    | | |       `-IntegerLiteral 0x7fb5e1814568 <col:22> 'int' 1
+    | | `-UnaryOperator 0x7fb5e1814880 <col:29, col:48> '_Complex int' prefix '-'
+    | |   `-ParenExpr 0x7fb5e1814860 <col:30, col:48> '_Complex int'
+    | |     `-BinaryOperator 0x7fb5e1814838 <col:31, col:46> '_Complex int' '+'
+    | |       |-ImplicitCastExpr 0x7fb5e1814820 <col:31, col:32> '_Complex int' <IntegralRealToComplex>
+    | |       | `-UnaryOperator 0x7fb5e18146c0 <col:31, col:32> 'A':'int' prefix '-'
+    | |       |   `-ImplicitCastExpr 0x7fb5e18146a8 <col:32> 'A':'int' <LValueToRValue>
+    | |       |     `-DeclRefExpr 0x7fb5e1814680 <col:32> 'A':'int' lvalue ParmVar 0x7fb5e1814200 'x' 'A':'int'
+    | |       `-BinaryOperator 0x7fb5e18147f8 <col:36, col:46> '_Complex int' '*'
+    | |         |-ImplicitCastExpr 0x7fb5e18147e0 <col:36, col:42> '_Complex int' <IntegralRealToComplex>
+    | |         | `-ParenExpr 0x7fb5e1814788 <col:36, col:42> 'int'
+    | |         |   `-BinaryOperator 0x7fb5e1814760 <col:37, col:41> 'int' '-'
+    | |         |     |-ImplicitCastExpr 0x7fb5e1814730 <col:37> 'A':'int' <LValueToRValue>
+    | |         |     | `-DeclRefExpr 0x7fb5e18146e0 <col:37> 'A':'int' lvalue ParmVar 0x7fb5e1814270 'y' 'A':'int'
+    | |         |     `-ImplicitCastExpr 0x7fb5e1814748 <col:41> 'A':'int' <LValueToRValue>
+    | |         |       `-DeclRefExpr 0x7fb5e1814708 <col:41> 'A':'int' lvalue ParmVar 0x7fb5e1814200 'x' 'A':'int'
+    | |         `-ImaginaryLiteral 0x7fb5e18147c8 <col:46> '_Complex int'
+    | |           `-IntegerLiteral 0x7fb5e18147a8 <col:46> 'int' 1
+    | |-ReturnStmt 0x7fb5e18148e8 <line:8:5, col:12>
+    | | `-IntegerLiteral 0x7fb5e18148c8 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb5e1814958 <line:9:3, col:10>
+      `-IntegerLiteral 0x7fb5e1814938 <col:10> 'int' 0

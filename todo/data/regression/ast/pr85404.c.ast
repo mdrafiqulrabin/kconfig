@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7ffe0602bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffe0606d8c0 <../Data/C2AST/pr85404.c:4:1, col:30> col:6 func 'void (void)'
+| `-AsmLabelAttr 0x7ffe0606d960 <col:23> "_func"
+|-FunctionDecl 0x7ffe0606dad0 <line:5:1, col:20> col:6 _func 'void (int)'
+| |-ParmVarDecl 0x7ffe0606da10 <col:12, col:16> col:16 x 'int'
+| `-CompoundStmt 0x7ffe0606db78 <col:19, col:20>
+`-FunctionDecl 0x7ffe0606dc18 prev 0x7ffe0606d8c0 <line:6:1, col:18> col:6 func 'void (void)'
+  |-CompoundStmt 0x7ffe0606dd10 <col:17, col:18>
+  `-AsmLabelAttr 0x7ffe0606dcf0 <line:4:23> Inherited "_func"

@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fd5cd82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd5cd86d868 <../Data/C2AST/pr44481.c:4:1, line:8:1> line:5:1 used parity 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x7fd5cd82c978 <col:9, col:18> col:18 used x 'unsigned int'
+| `-CompoundStmt 0x7fd5cd86dc20 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fd5cd86dc08 <line:7:3, col:40>
+|     `-CStyleCastExpr 0x7fd5cd86dbe0 <col:10, col:40> 'unsigned int' <IntegralCast>
+|       `-CallExpr 0x7fd5cd86db80 <col:21, col:40> 'int'
+|         |-ImplicitCastExpr 0x7fd5cd86db68 <col:21> 'int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fd5cd86dae8 <col:21> '<builtin fn type>' Function 0x7fd5cd86d988 '__builtin_parity' 'int (unsigned int)'
+|         `-ImplicitCastExpr 0x7fd5cd86dbb0 <col:39> 'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd5cd86db10 <col:39> 'unsigned int' lvalue ParmVar 0x7fd5cd82c978 'x' 'unsigned int'
+|-FunctionDecl 0x7fd5cd86d988 <col:21> col:21 implicit used __builtin_parity 'int (unsigned int)' extern
+| |-ParmVarDecl 0x7fd5cd86da28 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7fd5cd86da90 <col:21> Implicit
+| `-ConstAttr 0x7fd5cd86dad8 <col:21> Implicit
+`-FunctionDecl 0x7fd5cd86dce0 <line:10:1, line:14:1> line:11:1 f 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7fd5cd86dc50 <col:4, col:13> col:13 used rpoly 'unsigned int'
+  `-CompoundStmt 0x7fd5cd86e010 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fd5cd86dff8 <line:13:3, col:48>
+      `-BinaryOperator 0x7fd5cd86dfd0 <col:10, col:48> 'unsigned int' '^'
+        |-CallExpr 0x7fd5cd86de90 <col:10, col:27> 'unsigned int'
+        | |-ImplicitCastExpr 0x7fd5cd86de78 <col:10> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fd5cd86dd88 <col:10> 'unsigned int (unsigned int)' Function 0x7fd5cd86d868 'parity' 'unsigned int (unsigned int)'
+        | `-BinaryOperator 0x7fd5cd86de28 <col:18, col:26> 'unsigned int' '&'
+        |   |-ImplicitCastExpr 0x7fd5cd86ddf8 <col:18> 'unsigned int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fd5cd86ddb0 <col:18> 'unsigned int' lvalue ParmVar 0x7fd5cd86dc50 'rpoly' 'unsigned int'
+        |   `-ImplicitCastExpr 0x7fd5cd86de10 <col:26> 'unsigned int' <IntegralCast>
+        |     `-IntegerLiteral 0x7fd5cd86ddd8 <col:26> 'int' 1
+        `-CallExpr 0x7fd5cd86dfa0 <col:31, col:48> 'unsigned int'
+          |-ImplicitCastExpr 0x7fd5cd86df88 <col:31> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fd5cd86dec0 <col:31> 'unsigned int (unsigned int)' Function 0x7fd5cd86d868 'parity' 'unsigned int (unsigned int)'
+          `-BinaryOperator 0x7fd5cd86df60 <col:39, col:47> 'unsigned int' '&'
+            |-ImplicitCastExpr 0x7fd5cd86df30 <col:39> 'unsigned int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fd5cd86dee8 <col:39> 'unsigned int' lvalue ParmVar 0x7fd5cd86dc50 'rpoly' 'unsigned int'
+            `-ImplicitCastExpr 0x7fd5cd86df48 <col:47> 'unsigned int' <IntegralCast>
+              `-IntegerLiteral 0x7fd5cd86df10 <col:47> 'int' 6

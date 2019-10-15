@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fedad82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fedad86d868 <../Data/C2AST/pr17390.c:4:1, line:7:1> line:4:8 sgn 'double (double)'
+  |-ParmVarDecl 0x7fedad82c978 <col:13, col:20> col:20 used __x 'double'
+  `-CompoundStmt 0x7fedad86db78 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fedad86db60 <line:6:3, col:52>
+      `-ConditionalOperator 0x7fedad86db30 <col:10, col:52> 'double'
+        |-BinaryOperator 0x7fedad86d9b0 <col:10, col:17> 'int' '=='
+        | |-ImplicitCastExpr 0x7fedad86d998 <col:10> 'double' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fedad86d950 <col:10> 'double' lvalue ParmVar 0x7fedad82c978 '__x' 'double'
+        | `-FloatingLiteral 0x7fedad86d978 <col:17> 'double' 0.000000e+00
+        |-FloatingLiteral 0x7fedad86d9d8 <col:23> 'double' 0.000000e+00
+        `-ParenExpr 0x7fedad86db10 <col:29, col:52> 'double'
+          `-ConditionalOperator 0x7fedad86dae0 <col:30, col:49> 'double'
+            |-BinaryOperator 0x7fedad86da58 <col:30, col:36> 'int' '>'
+            | |-ImplicitCastExpr 0x7fedad86da40 <col:30> 'double' <LValueToRValue>
+            | | `-DeclRefExpr 0x7fedad86d9f8 <col:30> 'double' lvalue ParmVar 0x7fedad82c978 '__x' 'double'
+            | `-FloatingLiteral 0x7fedad86da20 <col:36> 'double' 0.000000e+00
+            |-FloatingLiteral 0x7fedad86da80 <col:42> 'double' 1.000000e+00
+            `-UnaryOperator 0x7fedad86dac0 <col:48, col:49> 'double' prefix '-'
+              `-FloatingLiteral 0x7fedad86daa0 <col:49> 'double' 1.000000e+00

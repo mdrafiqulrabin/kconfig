@@ -1,0 +1,113 @@
+TranslationUnitDecl 0x7fa4140152e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa414015f60 <../Data/C2AST/pr63477.c:5:9, line:9:1> line:5:9 struct definition
+| |-FieldDecl 0x7fa413815af0 <line:7:3, col:27> col:7 referenced itemList 'int [17]'
+| `-FieldDecl 0x7fa413815b50 <line:8:3, col:16> col:16 referenced numItems 'unsigned int'
+|-TypedefDecl 0x7fa413815bf0 <line:5:1, line:9:3> col:3 referenced ItemList 'struct ItemList':'ItemList'
+| `-ElaboratedType 0x7fa413815ba0 'struct ItemList' sugar
+|   `-RecordType 0x7fa413815a00 'ItemList'
+|     `-Record 0x7fa414015f60 ''
+`-FunctionDecl 0x7fa413815df0 <line:11:1, line:33:1> line:11:6 FrobList 'void (ItemList *)'
+  |-ParmVarDecl 0x7fa413815ce8 <col:16, col:26> col:26 used l 'ItemList *'
+  `-CompoundStmt 0x7fa413816db0 <line:12:1, line:33:1>
+    |-DeclStmt 0x7fa413815f50 <line:13:3, col:17>
+    | `-VarDecl 0x7fa413815ef0 <col:3, col:16> col:16 used i 'unsigned int'
+    `-ForStmt 0x7fa413816d78 <line:15:3, line:32:5>
+      |-BinaryOperator 0x7fa413815fc8 <line:15:8, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7fa413815f68 <col:8> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fa413815fb0 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fa413815f90 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa413816120 <col:15, col:33> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa413816108 <col:15> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa413815ff0 <col:15> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+      | `-BinaryOperator 0x7fa4138160e0 <col:19, col:33> 'unsigned int' '-'
+      |   |-ImplicitCastExpr 0x7fa4138160b0 <col:19, col:22> 'unsigned int' <LValueToRValue>
+      |   | `-MemberExpr 0x7fa413816058 <col:19, col:22> 'unsigned int' lvalue ->numItems 0x7fa413815b50
+      |   |   `-ImplicitCastExpr 0x7fa413816040 <col:19> 'ItemList *' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7fa413816018 <col:19> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+      |   `-ImplicitCastExpr 0x7fa4138160c8 <col:33> 'unsigned int' <IntegralCast>
+      |     `-IntegerLiteral 0x7fa413816090 <col:33> 'int' 1
+      |-UnaryOperator 0x7fa413816170 <col:36, col:37> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7fa413816148 <col:36> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+      `-CompoundStmt 0x7fa413816d40 <line:16:5, line:32:5>
+        |-DeclStmt 0x7fa413816348 <line:17:7, col:34>
+        | `-VarDecl 0x7fa4138161a8 <col:7, col:33> col:11 used minVal 'int' cinit
+        |   `-ImplicitCastExpr 0x7fa413816330 <col:20, col:33> 'int' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fa413816308 <col:20, col:33> 'int' lvalue
+        |       |-ImplicitCastExpr 0x7fa4138162d8 <col:20, col:23> 'int *' <ArrayToPointerDecay>
+        |       | `-MemberExpr 0x7fa413816248 <col:20, col:23> 'int [17]' lvalue ->itemList 0x7fa413815af0
+        |       |   `-ImplicitCastExpr 0x7fa413816230 <col:20> 'ItemList *' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fa413816208 <col:20> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+        |       `-ImplicitCastExpr 0x7fa4138162f0 <col:32> 'unsigned int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fa413816280 <col:32> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+        |-DeclStmt 0x7fa413816418 <line:19:7, col:30>
+        | `-VarDecl 0x7fa413816378 <col:7, col:29> col:20 used minIdx 'unsigned int' cinit
+        |   `-ImplicitCastExpr 0x7fa413816400 <col:29> 'unsigned int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fa4138163d8 <col:29> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+        |-DeclStmt 0x7fa4138164a8 <line:20:7, col:23>
+        | `-VarDecl 0x7fa413816448 <col:7, col:20> col:20 used idx 'unsigned int'
+        |-ForStmt 0x7fa413816ad8 <line:22:7, line:29:7>
+        | |-BinaryOperator 0x7fa413816588 <line:22:12, col:22> 'unsigned int' '='
+        | | |-DeclRefExpr 0x7fa4138164c0 <col:12> 'unsigned int' lvalue Var 0x7fa413816448 'idx' 'unsigned int'
+        | | `-BinaryOperator 0x7fa413816560 <col:18, col:22> 'unsigned int' '+'
+        | |   |-ImplicitCastExpr 0x7fa413816530 <col:18> 'unsigned int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fa4138164e8 <col:18> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+        | |   `-ImplicitCastExpr 0x7fa413816548 <col:22> 'unsigned int' <IntegralCast>
+        | |     `-IntegerLiteral 0x7fa413816510 <col:22> 'int' 1
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fa413816680 <col:25, col:34> 'int' '<'
+        | | |-ImplicitCastExpr 0x7fa413816650 <col:25> 'unsigned int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fa4138165b0 <col:25> 'unsigned int' lvalue Var 0x7fa413816448 'idx' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fa413816668 <col:31, col:34> 'unsigned int' <LValueToRValue>
+        | |   `-MemberExpr 0x7fa413816618 <col:31, col:34> 'unsigned int' lvalue ->numItems 0x7fa413815b50
+        | |     `-ImplicitCastExpr 0x7fa413816600 <col:31> 'ItemList *' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fa4138165d8 <col:31> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+        | |-UnaryOperator 0x7fa4138166d0 <col:44, col:46> 'unsigned int' prefix '++'
+        | | `-DeclRefExpr 0x7fa4138166a8 <col:46> 'unsigned int' lvalue Var 0x7fa413816448 'idx' 'unsigned int'
+        | `-CompoundStmt 0x7fa413816ac0 <col:51, line:29:7>
+        |   `-IfStmt 0x7fa413816a88 <line:24:2, line:28:4>
+        |     |-<<<NULL>>>
+        |     |-<<<NULL>>>
+        |     |-BinaryOperator 0x7fa413816840 <line:24:6, col:25> 'int' '<'
+        |     | |-ImplicitCastExpr 0x7fa413816810 <col:6, col:21> 'int' <LValueToRValue>
+        |     | | `-ArraySubscriptExpr 0x7fa4138167c0 <col:6, col:21> 'int' lvalue
+        |     | |   |-ImplicitCastExpr 0x7fa413816790 <col:6, col:9> 'int *' <ArrayToPointerDecay>
+        |     | |   | `-MemberExpr 0x7fa413816730 <col:6, col:9> 'int [17]' lvalue ->itemList 0x7fa413815af0
+        |     | |   |   `-ImplicitCastExpr 0x7fa413816718 <col:6> 'ItemList *' <LValueToRValue>
+        |     | |   |     `-DeclRefExpr 0x7fa4138166f0 <col:6> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+        |     | |   `-ImplicitCastExpr 0x7fa4138167a8 <col:18> 'unsigned int' <LValueToRValue>
+        |     | |     `-DeclRefExpr 0x7fa413816768 <col:18> 'unsigned int' lvalue Var 0x7fa413816448 'idx' 'unsigned int'
+        |     | `-ImplicitCastExpr 0x7fa413816828 <col:25> 'int' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7fa4138167e8 <col:25> 'int' lvalue Var 0x7fa4138161a8 'minVal' 'int'
+        |     |-CompoundStmt 0x7fa413816a68 <line:25:4, line:28:4>
+        |     | |-BinaryOperator 0x7fa4138169a0 <line:26:6, col:30> 'int' '='
+        |     | | |-DeclRefExpr 0x7fa413816868 <col:6> 'int' lvalue Var 0x7fa4138161a8 'minVal' 'int'
+        |     | | `-ImplicitCastExpr 0x7fa413816988 <col:15, col:30> 'int' <LValueToRValue>
+        |     | |   `-ArraySubscriptExpr 0x7fa413816960 <col:15, col:30> 'int' lvalue
+        |     | |     |-ImplicitCastExpr 0x7fa413816930 <col:15, col:18> 'int *' <ArrayToPointerDecay>
+        |     | |     | `-MemberExpr 0x7fa4138168d0 <col:15, col:18> 'int [17]' lvalue ->itemList 0x7fa413815af0
+        |     | |     |   `-ImplicitCastExpr 0x7fa4138168b8 <col:15> 'ItemList *' <LValueToRValue>
+        |     | |     |     `-DeclRefExpr 0x7fa413816890 <col:15> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+        |     | |     `-ImplicitCastExpr 0x7fa413816948 <col:27> 'unsigned int' <LValueToRValue>
+        |     | |       `-DeclRefExpr 0x7fa413816908 <col:27> 'unsigned int' lvalue Var 0x7fa413816448 'idx' 'unsigned int'
+        |     | `-BinaryOperator 0x7fa413816a40 <line:27:6, col:15> 'unsigned int' '='
+        |     |   |-DeclRefExpr 0x7fa4138169c8 <col:6> 'unsigned int' lvalue Var 0x7fa413816378 'minIdx' 'unsigned int'
+        |     |   `-ImplicitCastExpr 0x7fa413816a28 <col:15> 'unsigned int' <LValueToRValue>
+        |     |     `-DeclRefExpr 0x7fa413816a00 <col:15> 'unsigned int' lvalue Var 0x7fa413816448 'idx' 'unsigned int'
+        |     `-<<<NULL>>>
+        `-BinaryOperator 0x7fa413816d18 <line:31:7, col:42> 'int' '='
+          |-ArraySubscriptExpr 0x7fa413816be0 <col:7, col:20> 'int' lvalue
+          | |-ImplicitCastExpr 0x7fa413816bb0 <col:7, col:10> 'int *' <ArrayToPointerDecay>
+          | | `-MemberExpr 0x7fa413816b50 <col:7, col:10> 'int [17]' lvalue ->itemList 0x7fa413815af0
+          | |   `-ImplicitCastExpr 0x7fa413816b38 <col:7> 'ItemList *' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7fa413816b10 <col:7> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+          | `-ImplicitCastExpr 0x7fa413816bc8 <col:19> 'unsigned int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fa413816b88 <col:19> 'unsigned int' lvalue Var 0x7fa413815ef0 'i' 'unsigned int'
+          `-ImplicitCastExpr 0x7fa413816d00 <col:24, col:42> 'int' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fa413816cd8 <col:24, col:42> 'int' lvalue
+              |-ImplicitCastExpr 0x7fa413816ca8 <col:24, col:27> 'int *' <ArrayToPointerDecay>
+              | `-MemberExpr 0x7fa413816c48 <col:24, col:27> 'int [17]' lvalue ->itemList 0x7fa413815af0
+              |   `-ImplicitCastExpr 0x7fa413816c30 <col:24> 'ItemList *' <LValueToRValue>
+              |     `-DeclRefExpr 0x7fa413816c08 <col:24> 'ItemList *' lvalue ParmVar 0x7fa413815ce8 'l' 'ItemList *'
+              `-ImplicitCastExpr 0x7fa413816cc0 <col:36> 'unsigned int' <LValueToRValue>
+                `-DeclRefExpr 0x7fa413816c80 <col:36> 'unsigned int' lvalue Var 0x7fa413816378 'minIdx' 'unsigned int'

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f825082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f82510142d0 <../Data/C2AST/pr84212_1.c:3:1, col:35> col:13 used clear 'void (char *, unsigned int)' extern
+| |-ParmVarDecl 0x7f825082c978 <col:20, col:24> col:25 'char *'
+| `-ParmVarDecl 0x7f8251014200 <col:27> col:35 'unsigned int'
+`-FunctionDecl 0x7f8251014488 <line:5:1, line:10:1> line:5:5 main 'int (void)'
+  `-CompoundStmt 0x7f8251014768 <line:6:1, line:10:1>
+    |-DeclStmt 0x7f8251014638 <line:7:3, col:12>
+    | `-VarDecl 0x7f82510145d8 <col:3, col:11> col:8 used x 'char [3]'
+    `-CallExpr 0x7f8251014700 <line:9:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7f82510146e8 <col:3> 'void (*)(char *, unsigned int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8251014650 <col:3> 'void (char *, unsigned int)' Function 0x7f82510142d0 'clear' 'void (char *, unsigned int)'
+      |-ImplicitCastExpr 0x7f8251014738 <col:10> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7f8251014678 <col:10> 'char [3]' lvalue Var 0x7f82510145d8 'x' 'char [3]'
+      `-ImplicitCastExpr 0x7f8251014750 <col:13> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7f82510146a0 <col:13> 'int' 4

@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fdc448078e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdc44808560 <../Data/C2AST/pr33655.c:2:9, line:5:1> line:2:9 struct definition
+| |-FieldDecl 0x7fdc4502c038 <line:3:5, col:19> col:19 attr 'unsigned long'
+| `-FieldDecl 0x7fdc4502c100 <line:4:5, col:16> col:9 referenced chars 'int [2]'
+|-TypedefDecl 0x7fdc4502c1a0 <line:2:1, line:5:3> col:3 referenced cchar_t 'struct cchar_t':'cchar_t'
+| `-ElaboratedType 0x7fdc4502c150 'struct cchar_t' sugar
+|   `-RecordType 0x7fdc4502c000 'cchar_t'
+|     `-Record 0x7fdc44808560 ''
+|-RecordDecl 0x7fdc4502c210 <line:6:9, line:8:1> line:6:16 struct _win_st definition
+| `-FieldDecl 0x7fdc4502c2f0 <line:7:5, col:13> col:13 referenced _bkgrnd 'cchar_t':'cchar_t'
+|-TypedefDecl 0x7fdc4502c3e0 <line:6:1, line:8:3> col:3 referenced WINDOW 'struct _win_st':'struct _win_st'
+| `-ElaboratedType 0x7fdc4502c390 'struct _win_st' sugar
+|   `-RecordType 0x7fdc4502c2a0 'struct _win_st'
+|     `-Record 0x7fdc4502c210 '_win_st'
+`-FunctionDecl 0x7fdc4502c660 <line:9:1, line:14:1> line:9:6 render_char 'void (WINDOW *, cchar_t)'
+  |-ParmVarDecl 0x7fdc4502c4d8 <col:18, col:26> col:26 used win 'WINDOW *'
+  |-ParmVarDecl 0x7fdc4502c548 <col:31, col:39> col:39 used ch 'cchar_t':'cchar_t'
+  `-CompoundStmt 0x7fdc4502cb28 <line:10:1, line:14:1>
+    `-IfStmt 0x7fdc4502caf0 <line:11:5, line:13:24>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fdc4502c9e8 <line:11:9, line:12:29> 'int' '&&'
+      | |-BinaryOperator 0x7fdc4502c888 <line:11:9, col:26> 'int' '=='
+      | | |-ImplicitCastExpr 0x7fdc4502c870 <col:9, col:21> 'int' <LValueToRValue>
+      | | | `-ArraySubscriptExpr 0x7fdc4502c830 <col:9, col:21> 'int' lvalue
+      | | |   |-ImplicitCastExpr 0x7fdc4502c818 <col:9, col:14> 'int *' <ArrayToPointerDecay>
+      | | |   | `-MemberExpr 0x7fdc4502c798 <col:9, col:14> 'int [2]' lvalue .chars 0x7fdc4502c100
+      | | |   |   `-ParenExpr 0x7fdc4502c778 <col:9, col:12> 'cchar_t':'cchar_t' lvalue
+      | | |   |     `-DeclRefExpr 0x7fdc4502c750 <col:10> 'cchar_t':'cchar_t' lvalue ParmVar 0x7fdc4502c548 'ch' 'cchar_t':'cchar_t'
+      | | |   `-IntegerLiteral 0x7fdc4502c7d0 <col:20> 'int' 0
+      | | `-CharacterLiteral 0x7fdc4502c858 <col:26> 'int' 32
+      | `-BinaryOperator 0x7fdc4502c9c0 <line:12:12, col:29> 'int' '=='
+      |   |-ImplicitCastExpr 0x7fdc4502c9a8 <col:12, col:24> 'int' <LValueToRValue>
+      |   | `-ArraySubscriptExpr 0x7fdc4502c968 <col:12, col:24> 'int' lvalue
+      |   |   |-ImplicitCastExpr 0x7fdc4502c950 <col:12, col:17> 'int *' <ArrayToPointerDecay>
+      |   |   | `-MemberExpr 0x7fdc4502c8f8 <col:12, col:17> 'int [2]' lvalue .chars 0x7fdc4502c100
+      |   |   |   `-ParenExpr 0x7fdc4502c8d8 <col:12, col:15> 'cchar_t':'cchar_t' lvalue
+      |   |   |     `-DeclRefExpr 0x7fdc4502c8b0 <col:13> 'cchar_t':'cchar_t' lvalue ParmVar 0x7fdc4502c548 'ch' 'cchar_t':'cchar_t'
+      |   |   `-IntegerLiteral 0x7fdc4502c930 <col:23> 'int' 1
+      |   `-CharacterLiteral 0x7fdc4502c990 <col:29> 'int' 0
+      |-BinaryOperator 0x7fdc4502cac8 <line:13:9, col:24> 'cchar_t':'cchar_t' '='
+      | |-MemberExpr 0x7fdc4502ca50 <col:9, col:14> 'cchar_t':'cchar_t' lvalue ->_bkgrnd 0x7fdc4502c2f0
+      | | `-ImplicitCastExpr 0x7fdc4502ca38 <col:9> 'WINDOW *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fdc4502ca10 <col:9> 'WINDOW *' lvalue ParmVar 0x7fdc4502c4d8 'win' 'WINDOW *'
+      | `-ImplicitCastExpr 0x7fdc4502cab0 <col:24> 'cchar_t':'cchar_t' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdc4502ca88 <col:24> 'cchar_t':'cchar_t' lvalue ParmVar 0x7fdc4502c548 'ch' 'cchar_t':'cchar_t'
+      `-<<<NULL>>>

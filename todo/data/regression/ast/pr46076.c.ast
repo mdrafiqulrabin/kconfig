@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7ff909022ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff90a814220 <../Data/C2AST/pr46076.c:4:1, col:29> col:13 used link_error 'void (void)' extern
+|-TypedefDecl 0x7ff90a814460 <line:6:1, col:40> col:24 referenced Calculable 'unsigned char (*)(void)'
+| `-PointerType 0x7ff90a814400 'unsigned char (*)(void)'
+|   `-ParenType 0x7ff90a8143a0 'unsigned char (void)' sugar
+|     `-FunctionProtoType 0x7ff90a814370 'unsigned char (void)' cdecl
+|       `-BuiltinType 0x7ff909023040 'unsigned char'
+|-FunctionDecl 0x7ff90a814510 <line:8:1, col:40> col:22 used one 'unsigned char ()' static
+| `-CompoundStmt 0x7ff90a814600 <col:28, col:40>
+|   `-ReturnStmt 0x7ff90a8145e8 <col:30, col:37>
+|     `-ImplicitCastExpr 0x7ff90a8145d0 <col:37> 'unsigned char' <IntegralCast>
+|       `-IntegerLiteral 0x7ff90a8145b0 <col:37> 'int' 1
+|-FunctionDecl 0x7ff90a814640 <line:9:1, col:40> col:22 used two 'unsigned char ()' static
+| `-CompoundStmt 0x7ff90a814730 <col:28, col:40>
+|   `-ReturnStmt 0x7ff90a814718 <col:30, col:37>
+|     `-ImplicitCastExpr 0x7ff90a814700 <col:37> 'unsigned char' <IntegralCast>
+|       `-IntegerLiteral 0x7ff90a8146e0 <col:37> 'int' 2
+|-FunctionDecl 0x7ff90a814888 <line:11:1, line:15:1> line:12:1 used print 'int (Calculable)' static
+| |-ParmVarDecl 0x7ff90a814780 <col:7, col:18> col:18 used calculate 'Calculable':'unsigned char (*)(void)'
+| `-CompoundStmt 0x7ff90a814ab8 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ff90a814aa0 <line:14:3, col:38>
+|     `-BinaryOperator 0x7ff90a814a78 <col:10, col:38> 'int' '+'
+|       |-BinaryOperator 0x7ff90a814a30 <col:10, col:34> 'int' '+'
+|       | |-ImplicitCastExpr 0x7ff90a814a00 <col:10, col:20> 'int' <IntegralCast>
+|       | | `-CallExpr 0x7ff90a814970 <col:10, col:20> 'unsigned char'
+|       | |   `-ImplicitCastExpr 0x7ff90a814958 <col:10> 'Calculable':'unsigned char (*)(void)' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7ff90a814930 <col:10> 'Calculable':'unsigned char (*)(void)' lvalue ParmVar 0x7ff90a814780 'calculate' 'Calculable':'unsigned char (*)(void)'
+|       | `-ImplicitCastExpr 0x7ff90a814a18 <col:24, col:34> 'int' <IntegralCast>
+|       |   `-CallExpr 0x7ff90a8149d8 <col:24, col:34> 'unsigned char'
+|       |     `-ImplicitCastExpr 0x7ff90a8149c0 <col:24> 'Calculable':'unsigned char (*)(void)' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7ff90a814998 <col:24> 'Calculable':'unsigned char (*)(void)' lvalue ParmVar 0x7ff90a814780 'calculate' 'Calculable':'unsigned char (*)(void)'
+|       `-IntegerLiteral 0x7ff90a814a58 <col:38> 'int' 1
+`-FunctionDecl 0x7ff90a814b20 <line:17:1, line:26:1> line:18:1 main 'int ()'
+  `-CompoundStmt 0x7ff90a815008 <line:19:1, line:26:1>
+    |-IfStmt 0x7ff90a814de8 <line:21:3, line:22:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff90a814d28 <line:21:7, col:21> 'int' '!='
+    | | |-CallExpr 0x7ff90a814c80 <col:7, col:16> 'int'
+    | | | |-ImplicitCastExpr 0x7ff90a814c68 <col:7> 'int (*)(Calculable)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ff90a814bc0 <col:7> 'int (Calculable)' Function 0x7ff90a814888 'print' 'int (Calculable)'
+    | | | `-ImplicitCastExpr 0x7ff90a814cf0 <col:13> 'Calculable':'unsigned char (*)(void)' <BitCast>
+    | | |   `-ImplicitCastExpr 0x7ff90a814cd8 <col:13> 'unsigned char (*)()' <FunctionToPointerDecay>
+    | | |     `-DeclRefExpr 0x7ff90a814be8 <col:13> 'unsigned char ()' Function 0x7ff90a814510 'one' 'unsigned char ()'
+    | | `-IntegerLiteral 0x7ff90a814d08 <col:21> 'int' 3
+    | |-CallExpr 0x7ff90a814dc0 <line:22:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7ff90a814da8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff90a814d50 <col:5> 'void (void)' Function 0x7ff90a814220 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ff90a814f98 <line:23:3, line:24:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff90a814f08 <line:23:7, col:21> 'int' '!='
+    | | |-CallExpr 0x7ff90a814e88 <col:7, col:16> 'int'
+    | | | |-ImplicitCastExpr 0x7ff90a814e70 <col:7> 'int (*)(Calculable)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ff90a814e20 <col:7> 'int (Calculable)' Function 0x7ff90a814888 'print' 'int (Calculable)'
+    | | | `-ImplicitCastExpr 0x7ff90a814ed0 <col:13> 'Calculable':'unsigned char (*)(void)' <BitCast>
+    | | |   `-ImplicitCastExpr 0x7ff90a814eb8 <col:13> 'unsigned char (*)()' <FunctionToPointerDecay>
+    | | |     `-DeclRefExpr 0x7ff90a814e48 <col:13> 'unsigned char ()' Function 0x7ff90a814640 'two' 'unsigned char ()'
+    | | `-IntegerLiteral 0x7ff90a814ee8 <col:21> 'int' 5
+    | |-CallExpr 0x7ff90a814f70 <line:24:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7ff90a814f58 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff90a814f30 <col:5> 'void (void)' Function 0x7ff90a814220 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff90a814ff0 <line:25:3, col:10>
+      `-IntegerLiteral 0x7ff90a814fd0 <col:10> 'int' 0

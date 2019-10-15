@@ -1,0 +1,116 @@
+TranslationUnitDecl 0x7f7ee98228e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f7ee88179a8 <../Data/C2AST/pr37928.c:3:1, line:15:1> line:3:5 used get_state 'int (int, int *, int *)'
+| |-ParmVarDecl 0x7f7ee9823578 <col:15, col:19> col:19 size 'int'
+| |-ParmVarDecl 0x7f7ee8817840 <col:25, col:30> col:30 used node 'int *'
+| |-ParmVarDecl 0x7f7ee88178b8 <col:36, col:41> col:41 used hash 'int *'
+| `-CompoundStmt 0x7f7ee8818108 <line:4:1, line:15:1>
+|   |-DeclStmt 0x7f7ee8817b38 <line:5:3, col:10>
+|   | `-VarDecl 0x7f7ee8817ab8 <col:3, col:9> col:7 used i 'int' cinit
+|   |   `-IntegerLiteral 0x7f7ee8817b18 <col:9> 'int' 0
+|   |-WhileStmt 0x7f7ee8818090 <line:6:3, line:13:5>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f7ee8817bf8 <line:6:9, col:15> 'int' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7f7ee8817bd0 <col:9, col:15> 'int' lvalue
+|   | |   |-ImplicitCastExpr 0x7f7ee8817ba0 <col:9> 'int *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f7ee8817b50 <col:9> 'int *' lvalue ParmVar 0x7f7ee88178b8 'hash' 'int *'
+|   | |   `-ImplicitCastExpr 0x7f7ee8817bb8 <col:14> 'int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f7ee8817b78 <col:14> 'int' lvalue Var 0x7f7ee8817ab8 'i' 'int'
+|   | `-CompoundStmt 0x7f7ee8818068 <line:7:5, line:13:5>
+|   |   |-IfStmt 0x7f7ee8817eb8 <line:8:6, line:9:27>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7f7ee8817d70 <line:8:9, col:26> 'int' '=='
+|   |   | | |-ImplicitCastExpr 0x7f7ee8817d58 <col:9, col:21> 'int' <LValueToRValue>
+|   |   | | | `-ArraySubscriptExpr 0x7f7ee8817d10 <col:9, col:21> 'int' lvalue
+|   |   | | |   |-ImplicitCastExpr 0x7f7ee8817ce0 <col:9> 'int *' <LValueToRValue>
+|   |   | | |   | `-DeclRefExpr 0x7f7ee8817c10 <col:9> 'int *' lvalue ParmVar 0x7f7ee8817840 'node' 'int *'
+|   |   | | |   `-ImplicitCastExpr 0x7f7ee8817cf8 <col:14, col:20> 'int' <LValueToRValue>
+|   |   | | |     `-ArraySubscriptExpr 0x7f7ee8817cb8 <col:14, col:20> 'int' lvalue
+|   |   | | |       |-ImplicitCastExpr 0x7f7ee8817c88 <col:14> 'int *' <LValueToRValue>
+|   |   | | |       | `-DeclRefExpr 0x7f7ee8817c38 <col:14> 'int *' lvalue ParmVar 0x7f7ee88178b8 'hash' 'int *'
+|   |   | | |       `-ImplicitCastExpr 0x7f7ee8817ca0 <col:19> 'int' <LValueToRValue>
+|   |   | | |         `-DeclRefExpr 0x7f7ee8817c60 <col:19> 'int' lvalue Var 0x7f7ee8817ab8 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7f7ee8817d38 <col:26> 'int' 0
+|   |   | |-ReturnStmt 0x7f7ee8817ea0 <line:9:12, col:27>
+|   |   | | `-BinaryOperator 0x7f7ee8817e78 <col:19, col:27> 'int' '-'
+|   |   | |   |-ImplicitCastExpr 0x7f7ee8817e60 <col:19, col:25> 'int' <LValueToRValue>
+|   |   | |   | `-ArraySubscriptExpr 0x7f7ee8817e18 <col:19, col:25> 'int' lvalue
+|   |   | |   |   |-ImplicitCastExpr 0x7f7ee8817de8 <col:19> 'int *' <LValueToRValue>
+|   |   | |   |   | `-DeclRefExpr 0x7f7ee8817d98 <col:19> 'int *' lvalue ParmVar 0x7f7ee88178b8 'hash' 'int *'
+|   |   | |   |   `-ImplicitCastExpr 0x7f7ee8817e00 <col:24> 'int' <LValueToRValue>
+|   |   | |   |     `-DeclRefExpr 0x7f7ee8817dc0 <col:24> 'int' lvalue Var 0x7f7ee8817ab8 'i' 'int'
+|   |   | |   `-IntegerLiteral 0x7f7ee8817e40 <col:27> 'int' 1
+|   |   | `-<<<NULL>>>
+|   |   |-UnaryOperator 0x7f7ee8817f18 <line:10:7, col:8> 'int' postfix '++'
+|   |   | `-DeclRefExpr 0x7f7ee8817ef0 <col:7> 'int' lvalue Var 0x7f7ee8817ab8 'i' 'int'
+|   |   `-IfStmt 0x7f7ee8818030 <line:11:6, line:12:10>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7f7ee8817f98 <line:11:9, col:12> 'int' '=='
+|   |     | |-ImplicitCastExpr 0x7f7ee8817f80 <col:9> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7f7ee8817f38 <col:9> 'int' lvalue Var 0x7f7ee8817ab8 'i' 'int'
+|   |     | `-IntegerLiteral 0x7f7ee8817f60 <col:12> 'int' 5
+|   |     |-BinaryOperator 0x7f7ee8818008 <line:12:8, col:10> 'int' '='
+|   |     | |-DeclRefExpr 0x7f7ee8817fc0 <col:8> 'int' lvalue Var 0x7f7ee8817ab8 'i' 'int'
+|   |     | `-IntegerLiteral 0x7f7ee8817fe8 <col:10> 'int' 0
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7f7ee88180f0 <line:14:3, col:11>
+|     `-UnaryOperator 0x7f7ee88180d0 <col:10, col:11> 'int' prefix '-'
+|       `-IntegerLiteral 0x7f7ee88180b0 <col:11> 'int' 1
+|-FunctionDecl 0x7f7ee8818210 <line:17:1, col:14> col:6 used foo 'void (int)'
+| `-ParmVarDecl 0x7f7ee8818148 <col:11> col:14 'int'
+`-FunctionDecl 0x7f7ee8818460 <line:19:1, line:33:1> line:19:5 gate1 'int (int, int *, int *)'
+  |-ParmVarDecl 0x7f7ee88182d0 <col:11, col:15> col:15 used size 'int'
+  |-ParmVarDecl 0x7f7ee8818348 <col:21, col:26> col:26 used node 'int *'
+  |-ParmVarDecl 0x7f7ee88183c0 <col:32, col:37> col:37 used hash 'int *'
+  `-CompoundStmt 0x7f7ee8818ce0 <line:20:1, line:33:1>
+    |-DeclStmt 0x7f7ee8818620 <line:21:3, col:12>
+    | |-VarDecl 0x7f7ee8818530 <col:3, col:7> col:7 used i 'int'
+    | `-VarDecl 0x7f7ee88185a8 <col:3, col:10> col:10 used j 'int'
+    |-DeclStmt 0x7f7ee88186d0 <line:22:3, col:17>
+    | `-VarDecl 0x7f7ee8818650 <col:3, col:16> col:7 used add_size 'int' cinit
+    |   `-IntegerLiteral 0x7f7ee88186b0 <col:16> 'int' 0
+    |-ForStmt 0x7f7ee8818b60 <line:23:3, line:30:3>
+    | |-BinaryOperator 0x7f7ee8818730 <line:23:7, col:9> 'int' '='
+    | | |-DeclRefExpr 0x7f7ee88186e8 <col:7> 'int' lvalue Var 0x7f7ee8818530 'i' 'int'
+    | | `-IntegerLiteral 0x7f7ee8818710 <col:9> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f7ee88187d8 <col:12, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f7ee88187a8 <col:12> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f7ee8818758 <col:12> 'int' lvalue Var 0x7f7ee8818530 'i' 'int'
+    | | `-ImplicitCastExpr 0x7f7ee88187c0 <col:14> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f7ee8818780 <col:14> 'int' lvalue ParmVar 0x7f7ee88182d0 'size' 'int'
+    | |-UnaryOperator 0x7f7ee8818828 <col:20, col:21> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f7ee8818800 <col:20> 'int' lvalue Var 0x7f7ee8818530 'i' 'int'
+    | `-CompoundStmt 0x7f7ee8818b40 <line:24:3, line:30:3>
+    |   |-BinaryOperator 0x7f7ee88189d8 <line:25:6, col:35> 'int' '='
+    |   | |-DeclRefExpr 0x7f7ee8818848 <col:6> 'int' lvalue Var 0x7f7ee88185a8 'j' 'int'
+    |   | `-CallExpr 0x7f7ee8818950 <col:10, col:35> 'int'
+    |   |   |-ImplicitCastExpr 0x7f7ee8818938 <col:10> 'int (*)(int, int *, int *)' <FunctionToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7f7ee8818870 <col:10> 'int (int, int *, int *)' Function 0x7f7ee88179a8 'get_state' 'int (int, int *, int *)'
+    |   |   |-ImplicitCastExpr 0x7f7ee8818990 <col:20> 'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7f7ee8818898 <col:20> 'int' lvalue ParmVar 0x7f7ee88182d0 'size' 'int'
+    |   |   |-ImplicitCastExpr 0x7f7ee88189a8 <col:25> 'int *' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7f7ee88188c0 <col:25> 'int *' lvalue ParmVar 0x7f7ee8818348 'node' 'int *'
+    |   |   `-ImplicitCastExpr 0x7f7ee88189c0 <col:31> 'int *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f7ee88188e8 <col:31> 'int *' lvalue ParmVar 0x7f7ee88183c0 'hash' 'int *'
+    |   `-IfStmt 0x7f7ee8818b08 <line:26:6, line:29:6>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f7ee8818a80 <line:26:9, col:15> 'int' '=='
+    |     | |-ImplicitCastExpr 0x7f7ee8818a68 <col:9> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7f7ee8818a00 <col:9> 'int' lvalue Var 0x7f7ee88185a8 'j' 'int'
+    |     | `-UnaryOperator 0x7f7ee8818a48 <col:14, col:15> 'int' prefix '-'
+    |     |   `-IntegerLiteral 0x7f7ee8818a28 <col:15> 'int' 1
+    |     |-CompoundStmt 0x7f7ee8818af0 <line:27:6, line:29:6>
+    |     | `-UnaryOperator 0x7f7ee8818ad0 <line:28:6, col:14> 'int' postfix '++'
+    |     |   `-DeclRefExpr 0x7f7ee8818aa8 <col:6> 'int' lvalue Var 0x7f7ee8818650 'add_size' 'int'
+    |     `-<<<NULL>>>
+    `-CallExpr 0x7f7ee8818cb0 <line:32:3, col:21> 'void'
+      |-ImplicitCastExpr 0x7f7ee8818c98 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f7ee8818b98 <col:3> 'void (int)' Function 0x7f7ee8818210 'foo' 'void (int)'
+      `-BinaryOperator 0x7f7ee8818c40 <col:8, col:13> 'int' '+'
+        |-ImplicitCastExpr 0x7f7ee8818c10 <col:8> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f7ee8818bc0 <col:8> 'int' lvalue ParmVar 0x7f7ee88182d0 'size' 'int'
+        `-ImplicitCastExpr 0x7f7ee8818c28 <col:13> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f7ee8818be8 <col:13> 'int' lvalue Var 0x7f7ee8818650 'add_size' 'int'

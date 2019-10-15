@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f82af82a6e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f82b0014268 <../Data/C2AST/pr37285.c:1:1, line:14:1> line:1:1 _bfd_xcoff_canonicalize_dynamic_reloc 'int (unsigned long long)'
+  |-ParmVarDecl 0x7f82af82b378 <col:40, col:59> col:59 used l_symndx 'unsigned long long'
+  `-CompoundStmt 0x7f82b0014850 <line:2:1, line:14:1>
+    `-IfStmt 0x7f82b0014818 <line:3:3, line:13:3>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f82b00143c8 <line:3:7, col:18> 'int' '<'
+      | |-ImplicitCastExpr 0x7f82b0014398 <col:7> 'unsigned long long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f82b0014350 <col:7> 'unsigned long long' lvalue ParmVar 0x7f82af82b378 'l_symndx' 'unsigned long long'
+      | `-ImplicitCastExpr 0x7f82b00143b0 <col:18> 'unsigned long long' <IntegralCast>
+      |   `-IntegerLiteral 0x7f82b0014378 <col:18> 'int' 3
+      |-CompoundStmt 0x7f82b0014800 <line:4:5, line:13:3>
+      | `-SwitchStmt 0x7f82b0014430 <line:5:7, line:12:5>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7f82b0014418 <line:5:15> 'unsigned long long' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f82b00143f0 <col:15> 'unsigned long long' lvalue ParmVar 0x7f82af82b378 'l_symndx' 'unsigned long long'
+      |   `-CompoundStmt 0x7f82b0014798 <line:6:7, line:12:5>
+      |     |-CaseStmt 0x7f82b0014480 <line:7:9, line:9:10>
+      |     | |-ImplicitCastExpr 0x7f82b00147e8 <line:7:14> 'unsigned long long' <IntegralCast>
+      |     | | `-IntegerLiteral 0x7f82b0014460 <col:14> 'int' 0
+      |     | |-<<<NULL>>>
+      |     | `-CaseStmt 0x7f82b00144d8 <line:8:9, line:9:10>
+      |     |   |-ImplicitCastExpr 0x7f82b00147d0 <line:8:14> 'unsigned long long' <IntegralCast>
+      |     |   | `-IntegerLiteral 0x7f82b00144b8 <col:14> 'int' 1
+      |     |   |-<<<NULL>>>
+      |     |   `-BreakStmt 0x7f82b0014510 <line:9:10>
+      |     `-CaseStmt 0x7f82b0014538 <line:10:9, line:11:26>
+      |       |-ImplicitCastExpr 0x7f82b00147b8 <line:10:14> 'unsigned long long' <IntegralCast>
+      |       | `-IntegerLiteral 0x7f82b0014518 <col:14> 'int' 2
+      |       |-<<<NULL>>>
+      |       `-CallExpr 0x7f82b0014750 <line:11:10, col:26> 'int'
+      |         |-ImplicitCastExpr 0x7f82b0014738 <col:10> 'int (*)()' <FunctionToPointerDecay>
+      |         | `-DeclRefExpr 0x7f82b0014670 <col:10> 'int ()' Function 0x7f82b00145c0 '_bfd_abort' 'int ()'
+      |         `-ImplicitCastExpr 0x7f82b0014780 <col:22> 'char *' <ArrayToPointerDecay>
+      |           `-StringLiteral 0x7f82b00146d8 <col:22> 'char [3]' lvalue "HI"
+      `-<<<NULL>>>

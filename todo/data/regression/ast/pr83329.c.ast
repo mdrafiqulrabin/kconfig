@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fb68e02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb68e02c960 <../Data/C2AST/pr83329.c:4:9, line:7:1> line:4:9 struct definition
+| |-FieldDecl 0x7fb68e814238 <line:5:3, col:8> col:8 referenced a 'long'
+| `-FieldDecl 0x7fb68e814298 <line:6:3, col:8> col:8 referenced b 'long'
+|-TypedefDecl 0x7fb68e814330 <line:4:1, line:7:3> col:3 referenced c 'struct c':'c'
+| `-ElaboratedType 0x7fb68e8142e0 'struct c' sugar
+|   `-RecordType 0x7fb68e814200 'c'
+|     `-Record 0x7fb68e02c960 ''
+|-VarDecl 0x7fb68e814428 <line:9:1, col:4> col:4 used d 'c *'
+|-VarDecl 0x7fb68e8144d8 <line:10:1, col:6> col:6 used e 'char'
+|-VarDecl 0x7fb68e814548 <col:1, col:9> col:9 used f 'char'
+|-VarDecl 0x7fb68e8145b8 <col:1, col:12> col:12 used g 'char'
+`-FunctionDecl 0x7fb68e814688 <line:11:1, line:14:1> line:11:6 h 'void ()'
+  `-CompoundStmt 0x7fb68e814a68 <col:10, line:14:1>
+    |-BinaryOperator 0x7fb68e8148a0 <line:12:3, col:18> 'long' '='
+    | |-MemberExpr 0x7fb68e8147b0 <col:3, col:8> 'long' lvalue .a 0x7fb68e814238
+    | | `-ArraySubscriptExpr 0x7fb68e814788 <col:3, col:6> 'c':'c' lvalue
+    | |   |-ImplicitCastExpr 0x7fb68e814770 <col:3> 'c *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fb68e814728 <col:3> 'c *' lvalue Var 0x7fb68e814428 'd' 'c *'
+    | |   `-IntegerLiteral 0x7fb68e814750 <col:5> 'int' 0
+    | `-BinaryOperator 0x7fb68e814878 <col:12, col:18> 'long' '-'
+    |   |-UnaryOperator 0x7fb68e814810 <col:12, col:13> 'char *' prefix '&'
+    |   | `-DeclRefExpr 0x7fb68e8147e8 <col:13> 'char' lvalue Var 0x7fb68e8145b8 'g' 'char'
+    |   `-UnaryOperator 0x7fb68e814858 <col:17, col:18> 'char *' prefix '&'
+    |     `-DeclRefExpr 0x7fb68e814830 <col:18> 'char' lvalue Var 0x7fb68e814548 'f' 'char'
+    `-BinaryOperator 0x7fb68e814a40 <line:13:3, col:18> 'long' '='
+      |-MemberExpr 0x7fb68e814950 <col:3, col:8> 'long' lvalue .b 0x7fb68e814298
+      | `-ArraySubscriptExpr 0x7fb68e814928 <col:3, col:6> 'c':'c' lvalue
+      |   |-ImplicitCastExpr 0x7fb68e814910 <col:3> 'c *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fb68e8148c8 <col:3> 'c *' lvalue Var 0x7fb68e814428 'd' 'c *'
+      |   `-IntegerLiteral 0x7fb68e8148f0 <col:5> 'int' 0
+      `-BinaryOperator 0x7fb68e814a18 <col:12, col:18> 'long' '-'
+        |-UnaryOperator 0x7fb68e8149b0 <col:12, col:13> 'char *' prefix '&'
+        | `-DeclRefExpr 0x7fb68e814988 <col:13> 'char' lvalue Var 0x7fb68e8144d8 'e' 'char'
+        `-UnaryOperator 0x7fb68e8149f8 <col:17, col:18> 'char *' prefix '&'
+          `-DeclRefExpr 0x7fb68e8149d0 <col:18> 'char' lvalue Var 0x7fb68e814548 'f' 'char'

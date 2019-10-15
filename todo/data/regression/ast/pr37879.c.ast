@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fd4e382bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd4e40152a0 <../Data/C2AST/pr37879.c:5:1, col:55> col:20 used bar 'void (int) __attribute__((noreturn))' static inline
+| `-ParmVarDecl 0x7fd4e382c978 <col:25> col:28 'int'
+|-FunctionDecl 0x7fd4e4015408 <line:6:1, col:38> col:6 baz 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7fd4e4015588 <line:8:1, line:12:1> line:9:1 used foo 'int (int)' inline
+| |-ParmVarDecl 0x7fd4e40154c0 <col:6, col:10> col:10 used i 'int'
+| `-CompoundStmt 0x7fd4e4015688 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fd4e4015670 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7fd4e4015658 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd4e4015630 <col:10> 'int' lvalue ParmVar 0x7fd4e40154c0 'i' 'int'
+|-VarDecl 0x7fd4e40156b8 <line:14:1, col:9> col:5 used i 'int' cinit
+| `-IntegerLiteral 0x7fd4e4015718 <col:9> 'int' 23
+|-FunctionDecl 0x7fd4e40157d8 prev 0x7fd4e40152a0 <line:15:1, line:20:1> line:16:1 used bar 'void (int) __attribute__((noreturn))' static inline
+| |-ParmVarDecl 0x7fd4e4015750 <col:6, col:10> col:10 used j 'int'
+| `-CompoundStmt 0x7fd4e40159a0 <line:17:1, line:20:1>
+|   `-IfStmt 0x7fd4e4015968 <line:18:3, line:19:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fd4e40158a8 <line:18:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd4e4015880 <col:7> 'int' lvalue ParmVar 0x7fd4e4015750 'j' 'int'
+|     |-GCCAsmStmt 0x7fd4e4015920 <line:19:5, col:12>
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd4e40159d8 prev 0x7fd4e4015408 <line:22:1, line:28:1> line:23:1 baz 'void () __attribute__((noreturn))'
+  `-CompoundStmt 0x7fd4e4015d40 <line:24:1, line:28:1>
+    |-DeclStmt 0x7fd4e4015af0 <line:25:3, col:8>
+    | `-VarDecl 0x7fd4e4015a90 <col:3, col:7> col:7 used j 'int'
+    |-CallExpr 0x7fd4e4015ca0 <line:26:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7fd4e4015c88 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd4e4015b08 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fd4e40157d8 'bar' 'void (int) __attribute__((noreturn))'
+    | `-CallExpr 0x7fd4e4015c30 <col:8, col:20> 'int'
+    |   |-ImplicitCastExpr 0x7fd4e4015c18 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd4e4015b30 <col:8> 'int (int)' Function 0x7fd4e4015588 'foo' 'int (int)'
+    |   `-BinaryOperator 0x7fd4e4015bc8 <col:13, col:18> 'int' '='
+    |     |-DeclRefExpr 0x7fd4e4015b58 <col:13> 'int' lvalue Var 0x7fd4e4015a90 'j' 'int'
+    |     `-UnaryOperator 0x7fd4e4015ba8 <col:17, col:18> 'int' postfix '++'
+    |       `-DeclRefExpr 0x7fd4e4015b80 <col:17> 'int' lvalue Var 0x7fd4e40156b8 'i' 'int'
+    `-GCCAsmStmt 0x7fd4e4015cf8 <line:27:3, col:10>

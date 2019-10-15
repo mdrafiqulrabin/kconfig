@@ -1,0 +1,20 @@
+../Data/C2AST/pr34964.c:5:6: error: array initializer must be an initializer list or string literal
+char x[] = 0;    
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fd4e08124e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd4e0812a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd4e0812780 '__int128'
+|-TypedefDecl 0x7fd4e0812ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd4e08127a0 'unsigned __int128'
+|-TypedefDecl 0x7fd4e0812da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd4e0812bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd4e0812b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd4e0812e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd4e0812e00 'char *'
+|   `-BuiltinType 0x7fd4e0812580 'char'
+|-TypedefDecl 0x7fd4e0813108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd4e08130b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd4e0812f20 'struct __va_list_tag'
+|     `-Record 0x7fd4e0812e98 '__va_list_tag'
+`-VarDecl 0x7fd4e1814200 <../Data/C2AST/pr34964.c:5:1, col:8> col:6 invalid x 'char []'

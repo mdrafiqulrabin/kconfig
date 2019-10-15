@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fbd46817ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fbd46859a68 <../Data/C2AST/pr22589-1.c:1:1, line:4:1> line:1:5 bar 'int (char *)'
+  |-ParmVarDecl 0x7fbd46818b78 <col:10, col:16> col:16 used foo 'char *'
+  `-CompoundStmt 0x7fbd46859d20 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7fbd46859d08 <line:3:3, col:40>
+      `-BinaryOperator 0x7fbd46859ce0 <col:10, col:40> 'int' '<'
+        |-CStyleCastExpr 0x7fbd46859c80 <col:10, col:36> 'long long' <IntegralCast>
+        | `-ParenExpr 0x7fbd46859c60 <col:22, col:36> 'int'
+        |   `-BinaryOperator 0x7fbd46859bf0 <col:23, col:35> 'int' '+'
+        |     |-CStyleCastExpr 0x7fbd46859ba8 <col:23, col:29> 'int' <PointerToIntegral>
+        |     | `-ImplicitCastExpr 0x7fbd46859b90 <col:29> 'char *' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7fbd46859b50 <col:29> 'char *' lvalue ParmVar 0x7fbd46818b78 'foo' 'char *'
+        |     `-IntegerLiteral 0x7fbd46859bd0 <col:35> 'int' 0
+        `-ImplicitCastExpr 0x7fbd46859cc8 <col:40> 'long long' <IntegralCast>
+          `-IntegerLiteral 0x7fbd46859ca8 <col:40> 'int' 0

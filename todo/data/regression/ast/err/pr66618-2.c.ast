@@ -1,0 +1,68 @@
+../Data/C2AST/pr66618-2.c:9:9: error: initializer element is not a compile-time constant
+int e = "str"[4];                        
+        ^~~~~~~~
+../Data/C2AST/pr66618-2.c:10:9: error: initializer element is not a compile-time constant
+int f = "str"[-1];                       
+        ^~~~~~~~~
+TranslationUnitDecl 0x7fd72902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd72902c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd72902bf80 '__int128'
+|-TypedefDecl 0x7fd72902c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd72902bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fd72902c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd72902c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd72902c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd72902c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd72902c600 'char *'
+|   `-BuiltinType 0x7fd72902bd80 'char'
+|-TypedefDecl 0x7fd72902c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd72902c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd72902c720 'struct __va_list_tag'
+|     `-Record 0x7fd72902c698 '__va_list_tag'
+|-VarDecl 0x7fd72902c978 <../Data/C2AST/pr66618-2.c:5:1, col:16> col:5 a 'int' cinit
+| `-ImplicitCastExpr 0x7fd729814320 <col:9, col:16> 'int' <IntegralCast>
+|   `-ImplicitCastExpr 0x7fd729814308 <col:9, col:16> 'char' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x7fd7298142e0 <col:9, col:16> 'char' lvalue
+|       |-ImplicitCastExpr 0x7fd7298142c8 <col:9> 'char *' <ArrayToPointerDecay>
+|       | `-StringLiteral 0x7fd729814278 <col:9> 'char [4]' lvalue "foo"
+|       `-IntegerLiteral 0x7fd7298142a8 <col:15> 'int' 2
+|-VarDecl 0x7fd729814350 <line:6:1, col:16> col:5 b 'int' cinit
+| `-ImplicitCastExpr 0x7fd729814458 <col:9, col:16> 'int' <IntegralCast>
+|   `-ImplicitCastExpr 0x7fd729814440 <col:9, col:16> 'char' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x7fd729814418 <col:9, col:16> 'char' lvalue
+|       |-IntegerLiteral 0x7fd7298143b0 <col:9> 'int' 1
+|       `-ImplicitCastExpr 0x7fd729814400 <col:11> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fd7298143d0 <col:11> 'char [4]' lvalue "bar"
+|-VarDecl 0x7fd729814488 <line:7:1, col:31> col:5 c 'int' cinit
+| `-ImplicitCastExpr 0x7fd7298145f8 <col:9, col:31> 'int' <IntegralCast>
+|   `-ImplicitCastExpr 0x7fd7298145e0 <col:9, col:31> 'char' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x7fd7298145b8 <col:9, col:31> 'char' lvalue
+|       |-ImplicitCastExpr 0x7fd7298145a0 <col:9> 'char *' <ArrayToPointerDecay>
+|       | `-StringLiteral 0x7fd7298144e8 <col:9> 'char [4]' lvalue "baz"
+|       `-BinaryOperator 0x7fd729814578 <<built-in>:38:21, ../Data/C2AST/pr66618-2.c:7:30> 'int' '*'
+|         |-IntegerLiteral 0x7fd729814518 <<built-in>:38:21> 'int' 2147483647
+|         `-UnaryOperator 0x7fd729814558 <../Data/C2AST/pr66618-2.c:7:29, col:30> 'int' prefix '-'
+|           `-IntegerLiteral 0x7fd729814538 <col:30> 'int' 2
+|-VarDecl 0x7fd729814628 <line:8:1, col:16> col:5 d 'int' cinit
+| `-ImplicitCastExpr 0x7fd729814730 <col:9, col:16> 'int' <IntegralCast>
+|   `-ImplicitCastExpr 0x7fd729814718 <col:9, col:16> 'char' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x7fd7298146f0 <col:9, col:16> 'char' lvalue
+|       |-ImplicitCastExpr 0x7fd7298146d8 <col:9> 'char *' <ArrayToPointerDecay>
+|       | `-StringLiteral 0x7fd729814688 <col:9> 'char [4]' lvalue "str"
+|       `-IntegerLiteral 0x7fd7298146b8 <col:15> 'int' 3
+|-VarDecl 0x7fd729814760 <line:9:1, col:16> col:5 e 'int' cinit
+| `-ImplicitCastExpr 0x7fd729814868 <col:9, col:16> 'int' <IntegralCast>
+|   `-ImplicitCastExpr 0x7fd729814850 <col:9, col:16> 'char' <LValueToRValue>
+|     `-ArraySubscriptExpr 0x7fd729814828 <col:9, col:16> 'char' lvalue
+|       |-ImplicitCastExpr 0x7fd729814810 <col:9> 'char *' <ArrayToPointerDecay>
+|       | `-StringLiteral 0x7fd7298147c0 <col:9> 'char [4]' lvalue "str"
+|       `-IntegerLiteral 0x7fd7298147f0 <col:15> 'int' 4
+`-VarDecl 0x7fd729814898 <line:10:1, col:17> col:5 f 'int' cinit
+  `-ImplicitCastExpr 0x7fd7298149c0 <col:9, col:17> 'int' <IntegralCast>
+    `-ImplicitCastExpr 0x7fd7298149a8 <col:9, col:17> 'char' <LValueToRValue>
+      `-ArraySubscriptExpr 0x7fd72 errors generated.
+29814980 <col:9, col:17> 'char' lvalue
+        |-ImplicitCastExpr 0x7fd729814968 <col:9> 'char *' <ArrayToPointerDecay>
+        | `-StringLiteral 0x7fd7298148f8 <col:9> 'char [4]' lvalue "str"
+        `-UnaryOperator 0x7fd729814948 <col:15, col:16> 'int' prefix '-'
+          `-IntegerLiteral 0x7fd729814928 <col:16> 'int' 1

@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7fedf502b0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fedf502bd60 <../Data/C2AST/pr38752.c:1:9, line:4:1> line:1:9 struct definition
+| `-FieldDecl 0x7fedf506cc38 <line:3:3, col:19> col:19 referenced baddr 'int'
+|-TypedefDecl 0x7fedf506ccd0 <line:1:1, line:4:3> col:3 referenced mstruct_t 'struct mstruct_t':'mstruct_t'
+| `-ElaboratedType 0x7fedf506cc80 'struct mstruct_t' sugar
+|   `-RecordType 0x7fedf506cc00 'mstruct_t'
+|     `-Record 0x7fedf502bd60 ''
+|-RecordDecl 0x7fedf506cd40 <line:6:8, line:10:1> line:6:8 struct definition
+| |-FieldDecl 0x7fedf506ce08 <line:8:3, col:19> col:19 referenced mapnum 'unsigned int'
+| `-FieldDecl 0x7fedf506ce80 <line:9:3, col:19> col:19 referenced unused 'mstruct_t':'mstruct_t'
+|-VarDecl 0x7fedf506cf20 <line:6:1, line:10:3> col:3 used mtab 'struct (anonymous struct at ../Data/C2AST/pr38752.c:6:8)':'struct (anonymous at ../Data/C2AST/pr38752.c:6:8)' static
+|-VarDecl 0x7fedf506d048 <line:12:1, col:34> col:19 used mactab 'mstruct_t *' static cinit
+| `-UnaryOperator 0x7fedf506d108 <col:28, col:34> 'mstruct_t *' prefix '&'
+|   `-MemberExpr 0x7fedf506d0d0 <col:29, col:34> 'mstruct_t':'mstruct_t' lvalue .unused 0x7fedf506ce80
+|     `-DeclRefExpr 0x7fedf506d0a8 <col:29> 'struct (anonymous struct at ../Data/C2AST/pr38752.c:6:8)':'struct (anonymous at ../Data/C2AST/pr38752.c:6:8)' lvalue Var 0x7fedf506cf20 'mtab' 'struct (anonymous struct at ../Data/C2AST/pr38752.c:6:8)':'struct (anonymous at ../Data/C2AST/pr38752.c:6:8)'
+`-FunctionDecl 0x7fedf506d288 <line:14:1, line:24:1> line:15:1 main 'int (void)'
+  `-CompoundStmt 0x7fedf506d838 <line:16:1, line:24:1>
+    |-DeclStmt 0x7fedf506d3d0 <line:17:3, col:8>
+    | `-VarDecl 0x7fedf506d370 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fedf506d460 <line:18:3, col:11>
+    | `-VarDecl 0x7fedf506d400 <col:3, col:7> col:7 used addr 'int'
+    |-ForStmt 0x7fedf506d7c8 <line:20:3, line:22:7>
+    | |-BinaryOperator 0x7fedf506d4c0 <line:20:8, col:10> 'int' '='
+    | | |-DeclRefExpr 0x7fedf506d478 <col:8> 'int' lvalue Var 0x7fedf506d370 'i' 'int'
+    | | `-IntegerLiteral 0x7fedf506d4a0 <col:10> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fedf506d5b8 <col:13, col:23> 'int' '<='
+    | | |-ImplicitCastExpr 0x7fedf506d5a0 <col:13> 'unsigned int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fedf506d570 <col:13> 'int' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fedf506d4e8 <col:13> 'int' lvalue Var 0x7fedf506d370 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fedf506d588 <col:18, col:23> 'unsigned int' <LValueToRValue>
+    | |   `-MemberExpr 0x7fedf506d538 <col:18, col:23> 'unsigned int' lvalue .mapnum 0x7fedf506ce08
+    | |     `-DeclRefExpr 0x7fedf506d510 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr38752.c:6:8)':'struct (anonymous at ../Data/C2AST/pr38752.c:6:8)' lvalue Var 0x7fedf506cf20 'mtab' 'struct (anonymous struct at ../Data/C2AST/pr38752.c:6:8)':'struct (anonymous at ../Data/C2AST/pr38752.c:6:8)'
+    | |-UnaryOperator 0x7fedf506d608 <col:31, col:32> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fedf506d5e0 <col:31> 'int' lvalue Var 0x7fedf506d370 'i' 'int'
+    | `-IfStmt 0x7fedf506d790 <line:21:5, line:22:7>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fedf506d760 <line:21:9, col:26> 'int' '<'
+    |   | |-ImplicitCastExpr 0x7fedf506d730 <col:9> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fedf506d628 <col:9> 'int' lvalue Var 0x7fedf506d400 'addr' 'int'
+    |   | `-ImplicitCastExpr 0x7fedf506d748 <col:16, col:26> 'int' <LValueToRValue>
+    |   |   `-MemberExpr 0x7fedf506d6f8 <col:16, col:26> 'int' lvalue .baddr 0x7fedf506cc38
+    |   |     `-ArraySubscriptExpr 0x7fedf506d6d0 <col:16, col:24> 'mstruct_t':'mstruct_t' lvalue
+    |   |       |-ImplicitCastExpr 0x7fedf506d6a0 <col:16> 'mstruct_t *' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7fedf506d650 <col:16> 'mstruct_t *' lvalue Var 0x7fedf506d048 'mactab' 'mstruct_t *'
+    |   |       `-ImplicitCastExpr 0x7fedf506d6b8 <col:23> 'int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fedf506d678 <col:23> 'int' lvalue Var 0x7fedf506d370 'i' 'int'
+    |   |-BreakStmt 0x7fedf506d788 <line:22:7>
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7fedf506d820 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fedf506d800 <col:10> 'int' 0

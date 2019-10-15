@@ -1,0 +1,24 @@
+../Data/C2AST/pr53850.c:10:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fe8598174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe859817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe859817780 '__int128'
+|-TypedefDecl 0x7fe859817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe8598177a0 'unsigned __int128'
+|-TypedefDecl 0x7fe859817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe859817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe859817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe859817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe859817e00 'char *'
+|   `-BuiltinType 0x7fe859817580 'char'
+|-TypedefDecl 0x7fe859818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8598180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe859817f20 'struct __va_list_tag'
+|     `-Record 0x7fe859817e98 '__va_list_tag'
+|-VarDecl 0x7fe859028800 <../Data/C2AST/pr53850.c:4:1, col:21> col:15 pp 'unsigned char [100]'
+`-FunctionDecl 0x7fe859028960 <line:6:1, line:15:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe859028aa8 <line:8:1, line:15:1>
+    `-DeclStmt 0x7fe859028a78 <line:9:3, col:8>
+      `-VarDecl 0x7fe859028a18 <col:3, col:7> col:7 i 'int'

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7ffb5182b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffb5186ce68 <../Data/C2AST/pr26672.c:3:5> col:5 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7ffb5186cf08 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7ffb5186cf70 <col:5> Implicit printf 1 2
+|-FunctionDecl 0x7ffb5186cfc8 prev 0x7ffb5186ce68 <col:1, col:35> col:5 used printf 'int (const char *, ...)'
+| |-ParmVarDecl 0x7ffb5182bf78 <col:12, col:24> col:24 format 'const char *'
+| `-FormatAttr 0x7ffb5186d0a8 <col:5> Inherited printf 1 2
+|-VarDecl 0x7ffb5186d148 <line:4:1, col:31> col:19 used help_string 'const char []' extern
+|-FunctionDecl 0x7ffb5186d2b0 <line:5:1, line:7:1> line:5:6 app_opts 'void (void)'
+| `-CompoundStmt 0x7ffb5186d4d0 <col:21, line:7:1>
+|   `-CallExpr 0x7ffb5186d450 <line:6:5, col:29> 'int'
+|     |-ImplicitCastExpr 0x7ffb5186d438 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffb5186d350 <col:5> 'int (const char *, ...)' Function 0x7ffb5186cfc8 'printf' 'int (const char *, ...)'
+|     |-ImplicitCastExpr 0x7ffb5186d4a0 <col:12> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ffb5186d488 <col:12> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7ffb5186d3b8 <col:12> 'char [3]' lvalue "%s"
+|     `-ImplicitCastExpr 0x7ffb5186d4b8 <col:18> 'const char *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7ffb5186d3e8 <col:18> 'const char []' lvalue Var 0x7ffb5186d148 'help_string' 'const char []'
+`-VarDecl 0x7ffb5186d508 prev 0x7ffb5186d148 <line:8:1, col:28> col:12 used help_string 'const char [5]' cinit
+  `-StringLiteral 0x7ffb5186d5a8 <col:28> 'const char [5]' lvalue "foo\n"

@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fa6200274e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa620028178 <../Data/C2AST/pr84431.c:6:1, col:27> col:27 referenced U 'unsigned __int128'
+| `-BuiltinType 0x7fa6200277a0 'unsigned __int128'
+|-TypedefDecl 0x7fa620804000 <line:7:1, col:25> col:25 referenced S '__int128'
+| `-BuiltinType 0x7fa620027780 '__int128'
+|-FunctionDecl 0x7fa620804220 <line:15:1, col:42> col:3 f1 'S (S, int)'
+| |-ParmVarDecl 0x7fa620804090 <col:7, col:9> col:9 used a 'S':'__int128'
+| |-ParmVarDecl 0x7fa620804108 <col:12, col:16> col:16 used s 'int'
+| `-CompoundStmt 0x7fa620804438 <col:19, col:42>
+|   `-ReturnStmt 0x7fa620804420 <col:21, col:39>
+|     `-BinaryOperator 0x7fa6208043f8 <col:28, col:39> 'S':'__int128' '>>'
+|       |-ImplicitCastExpr 0x7fa6208043e0 <col:28> 'S':'__int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa620804310 <col:28> 'S':'__int128' lvalue ParmVar 0x7fa620804090 'a' 'S':'__int128'
+|       `-ParenExpr 0x7fa6208043c0 <col:33, col:39> 'int'
+|         `-BinaryOperator 0x7fa620804398 <col:34, line:8:12> 'int' '&'
+|           |-ImplicitCastExpr 0x7fa620804380 <line:15:34> 'int' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fa620804338 <col:34> 'int' lvalue ParmVar 0x7fa620804108 's' 'int'
+|           `-IntegerLiteral 0x7fa620804360 <line:8:12> 'int' 63
+|-FunctionDecl 0x7fa620804610 <line:16:1, col:42> col:3 f2 'U (U, int)'
+| |-ParmVarDecl 0x7fa620804480 <col:7, col:9> col:9 used a 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7fa6208044f8 <col:12, col:16> col:16 used s 'int'
+| `-CompoundStmt 0x7fa6208047e8 <col:19, col:42>
+|   `-ReturnStmt 0x7fa6208047d0 <col:21, col:39>
+|     `-BinaryOperator 0x7fa6208047a8 <col:28, col:39> 'U':'unsigned __int128' '>>'
+|       |-ImplicitCastExpr 0x7fa620804790 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa6208046c0 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7fa620804480 'a' 'U':'unsigned __int128'
+|       `-ParenExpr 0x7fa620804770 <col:33, col:39> 'int'
+|         `-BinaryOperator 0x7fa620804748 <col:34, line:8:12> 'int' '&'
+|           |-ImplicitCastExpr 0x7fa620804730 <line:16:34> 'int' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fa6208046e8 <col:34> 'int' lvalue ParmVar 0x7fa6208044f8 's' 'int'
+|           `-IntegerLiteral 0x7fa620804710 <line:8:12> 'int' 63
+`-FunctionDecl 0x7fa620804918 <line:17:1, col:42> col:3 f3 'U (U, int)'
+  |-ParmVarDecl 0x7fa620804810 <col:7, col:9> col:9 used a 'U':'unsigned __int128'
+  |-ParmVarDecl 0x7fa620804888 <col:12, col:16> col:16 used s 'int'
+  `-CompoundStmt 0x7fa620804af0 <col:19, col:42>
+    `-ReturnStmt 0x7fa620804ad8 <col:21, col:39>
+      `-BinaryOperator 0x7fa620804ab0 <col:28, col:39> 'U':'unsigned __int128' '<<'
+        |-ImplicitCastExpr 0x7fa620804a98 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+        | `-DeclRefExpr 0x7fa6208049c8 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7fa620804810 'a' 'U':'unsigned __int128'
+        `-ParenExpr 0x7fa620804a78 <col:33, col:39> 'int'
+          `-BinaryOperator 0x7fa620804a50 <col:34, line:8:12> 'int' '&'
+            |-ImplicitCastExpr 0x7fa620804a38 <line:17:34> 'int' <LValueToRValue>
+            | `-DeclRefExpr 0x7fa6208049f0 <col:34> 'int' lvalue ParmVar 0x7fa620804888 's' 'int'
+            `-IntegerLiteral 0x7fa620804a18 <line:8:12> 'int' 63

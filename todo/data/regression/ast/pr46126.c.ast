@@ -1,0 +1,159 @@
+TranslationUnitDecl 0x7f919c8002e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f919c800f78 <../Data/C2AST/pr46126.c:3:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7f919c8004a0 'unsigned long'
+|-RecordDecl 0x7f919d809000 <line:5:9, line:8:2> line:5:16 struct TypHeader definition
+| |-FieldDecl 0x7f919d8091c0 <line:6:6, col:27> col:27 referenced ptr 'struct TypHeader **'
+| `-FieldDecl 0x7f919d809220 <line:7:6, col:20> col:20 referenced type 'unsigned char'
+|-TypedefDecl 0x7f919d809290 <line:5:1, line:8:6> col:6 referenced TypHandle 'struct TypHeader *'
+| `-PointerType 0x7f919d809110 'struct TypHeader *'
+|   `-ElaboratedType 0x7f919d8090b0 'struct TypHeader' sugar
+|     `-RecordType 0x7f919d809090 'struct TypHeader'
+|       `-Record 0x7f919d809000 'TypHeader'
+|-VarDecl 0x7f919d809580 <line:9:2, col:48> col:22 used EvTab 'TypHandle (*[81])(TypHandle)' extern
+`-FunctionDecl 0x7f919d8096b8 <line:10:2, line:23:2> line:10:12 FunApplyRel 'TypHandle (TypHandle)'
+  |-ParmVarDecl 0x7f919d809630 <col:26, col:36> col:36 used hdCall 'TypHandle':'struct TypHeader *'
+  `-CompoundStmt 0x7f919c0200c8 <line:11:2, line:23:2>
+    |-DeclStmt 0x7f919d8097d0 <line:12:6, col:21>
+    | `-VarDecl 0x7f919d809770 <col:6, col:16> col:16 used hdApp 'TypHandle':'struct TypHeader *'
+    |-DeclStmt 0x7f919d809888 <line:13:6, col:23>
+    | `-VarDecl 0x7f919d809828 <col:6, col:18> col:18 used ptApp 'TypHandle *'
+    |-DeclStmt 0x7f919d809918 <line:14:6, col:13>
+    | `-VarDecl 0x7f919d8098b8 <col:6, col:11> col:11 used lp 'long'
+    |-DeclStmt 0x7f919d8099a8 <line:15:6, col:13>
+    | `-VarDecl 0x7f919d809948 <col:6, col:11> col:11 used lc 'long'
+    |-BinaryOperator 0x7f919d8212a0 <line:16:6, line:19:82> 'TypHandle':'struct TypHeader *' '='
+    | |-DeclRefExpr 0x7f919d8099c0 <line:16:6> 'TypHandle':'struct TypHeader *' lvalue Var 0x7f919d809770 'hdApp' 'TypHandle':'struct TypHeader *'
+    | `-ParenExpr 0x7f919d821280 <col:14, line:19:82> 'TypHandle':'struct TypHeader *'
+    |   `-ConditionalOperator 0x7f919d821250 <line:16:15, line:19:81> 'TypHandle':'struct TypHeader *'
+    |     |-BinaryOperator 0x7f919d809cb0 <line:16:15, col:61> 'unsigned long' '&'
+    |     | |-CStyleCastExpr 0x7f919d809c50 <col:15, col:59> 'uintptr_t':'unsigned long' <PointerToIntegral>
+    |     | | `-ImplicitCastExpr 0x7f919d809c38 <col:26, col:59> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |     | |   `-ParenExpr 0x7f919d809c18 <col:26, col:59> 'TypHandle':'struct TypHeader *' lvalue
+    |     | |     `-ArraySubscriptExpr 0x7f919d809bb0 <col:27, col:58> 'TypHandle':'struct TypHeader *' lvalue
+    |     | |       |-ParenExpr 0x7f919d809b70 <col:27, col:55> 'TypHandle *'
+    |     | |       | `-CStyleCastExpr 0x7f919d809b48 <col:28, col:54> 'TypHandle *' <NoOp>
+    |     | |       |   `-ImplicitCastExpr 0x7f919d809b08 <col:40, col:54> 'struct TypHeader **' <LValueToRValue>
+    |     | |       |     `-ParenExpr 0x7f919d809ae8 <col:40, col:54> 'struct TypHeader **' lvalue
+    |     | |       |       `-MemberExpr 0x7f919d809a70 <col:41, col:51> 'struct TypHeader **' lvalue ->ptr 0x7f919d8091c0
+    |     | |       |         `-ImplicitCastExpr 0x7f919d809a58 <col:41, col:48> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |     | |       |           `-ParenExpr 0x7f919d809a38 <col:41, col:48> 'TypHandle':'struct TypHeader *' lvalue
+    |     | |       |             `-DeclRefExpr 0x7f919d809a10 <col:42> 'TypHandle':'struct TypHeader *' lvalue ParmVar 0x7f919d809630 'hdCall' 'TypHandle':'struct TypHeader *'
+    |     | |       `-IntegerLiteral 0x7f919d809b90 <col:57> 'int' 1
+    |     | `-ImplicitCastExpr 0x7f919d809c98 <col:61> 'unsigned long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7f919d809c78 <col:61> 'int' 1
+    |     |-ImplicitCastExpr 0x7f919d821170 <line:17:1, col:34> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |     | `-ParenExpr 0x7f919d809e78 <col:1, col:34> 'TypHandle':'struct TypHeader *' lvalue
+    |     |   `-ArraySubscriptExpr 0x7f919d809e50 <col:2, col:33> 'TypHandle':'struct TypHeader *' lvalue
+    |     |     |-ParenExpr 0x7f919d809e10 <col:2, col:30> 'TypHandle *'
+    |     |     | `-CStyleCastExpr 0x7f919d809de8 <col:3, col:29> 'TypHandle *' <NoOp>
+    |     |     |   `-ImplicitCastExpr 0x7f919d809dd0 <col:15, col:29> 'struct TypHeader **' <LValueToRValue>
+    |     |     |     `-ParenExpr 0x7f919d809db0 <col:15, col:29> 'struct TypHeader **' lvalue
+    |     |     |       `-MemberExpr 0x7f919d809d38 <col:16, col:26> 'struct TypHeader **' lvalue ->ptr 0x7f919d8091c0
+    |     |     |         `-ImplicitCastExpr 0x7f919d809d20 <col:16, col:23> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |     |     |           `-ParenExpr 0x7f919d809d00 <col:16, col:23> 'TypHandle':'struct TypHeader *' lvalue
+    |     |     |             `-DeclRefExpr 0x7f919d809cd8 <col:17> 'TypHandle':'struct TypHeader *' lvalue ParmVar 0x7f919d809630 'hdCall' 'TypHandle':'struct TypHeader *'
+    |     |     `-IntegerLiteral 0x7f919d809e30 <col:32> 'int' 1
+    |     `-CallExpr 0x7f919d821128 <col:38, line:19:81> 'TypHandle':'struct TypHeader *'
+    |       |-ImplicitCastExpr 0x7f919d821110 <line:17:38, line:19:45> 'TypHandle (*)(TypHandle)' <FunctionToPointerDecay>
+    |       | `-ParenExpr 0x7f919d820f30 <line:17:38, line:19:45> 'TypHandle (TypHandle)':'TypHandle (TypHandle)'
+    |       |   `-UnaryOperator 0x7f919d820f10 <line:17:39, line:19:44> 'TypHandle (TypHandle)':'TypHandle (TypHandle)' prefix '*'
+    |       |     `-ImplicitCastExpr 0x7f919d820ef8 <line:18:1, line:19:44> 'TypHandle (*)(TypHandle)' <LValueToRValue>
+    |       |       `-ArraySubscriptExpr 0x7f919d820ed0 <line:18:1, line:19:44> 'TypHandle (*)(TypHandle)' lvalue
+    |       |         |-ImplicitCastExpr 0x7f919d820eb8 <line:18:1> 'TypHandle (**)(TypHandle)' <ArrayToPointerDecay>
+    |       |         | `-DeclRefExpr 0x7f919d809e98 <col:1> 'TypHandle (*[81])(TypHandle)' lvalue Var 0x7f919d809580 'EvTab' 'TypHandle (*[81])(TypHandle)'
+    |       |         `-ParenExpr 0x7f919d820e38 <col:7, line:19:43> 'int'
+    |       |           `-ConditionalOperator 0x7f919d820e08 <line:18:8, line:19:42> 'int'
+    |       |             |-ParenExpr 0x7f919d820b68 <line:18:8, col:58> 'unsigned long'
+    |       |             | `-BinaryOperator 0x7f919d820b40 <col:9, col:57> 'unsigned long' '&'
+    |       |             |   |-CStyleCastExpr 0x7f919d820ae0 <col:9, col:53> 'uintptr_t':'unsigned long' <PointerToIntegral>
+    |       |             |   | `-ImplicitCastExpr 0x7f919d820ac8 <col:20, col:53> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |       |             |   |   `-ParenExpr 0x7f919d820aa8 <col:20, col:53> 'TypHandle':'struct TypHeader *' lvalue
+    |       |             |   |     `-ArraySubscriptExpr 0x7f919d820a40 <col:21, col:52> 'TypHandle':'struct TypHeader *' lvalue
+    |       |             |   |       |-ParenExpr 0x7f919d820a00 <col:21, col:49> 'TypHandle *'
+    |       |             |   |       | `-CStyleCastExpr 0x7f919d809fd0 <col:22, col:48> 'TypHandle *' <NoOp>
+    |       |             |   |       |   `-ImplicitCastExpr 0x7f919d809fb8 <col:34, col:48> 'struct TypHeader **' <LValueToRValue>
+    |       |             |   |       |     `-ParenExpr 0x7f919d809f98 <col:34, col:48> 'struct TypHeader **' lvalue
+    |       |             |   |       |       `-MemberExpr 0x7f919d809f20 <col:35, col:45> 'struct TypHeader **' lvalue ->ptr 0x7f919d8091c0
+    |       |             |   |       |         `-ImplicitCastExpr 0x7f919d809f08 <col:35, col:42> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |       |             |   |       |           `-ParenExpr 0x7f919d809ee8 <col:35, col:42> 'TypHandle':'struct TypHeader *' lvalue
+    |       |             |   |       |             `-DeclRefExpr 0x7f919d809ec0 <col:36> 'TypHandle':'struct TypHeader *' lvalue ParmVar 0x7f919d809630 'hdCall' 'TypHandle':'struct TypHeader *'
+    |       |             |   |       `-IntegerLiteral 0x7f919d820a20 <col:51> 'int' 1
+    |       |             |   `-ImplicitCastExpr 0x7f919d820b28 <col:57> 'unsigned long' <IntegralCast>
+    |       |             |     `-IntegerLiteral 0x7f919d820b08 <col:57> 'int' 1
+    |       |             |-IntegerLiteral 0x7f919d820b88 <col:62> 'int' 1
+    |       |             `-ImplicitCastExpr 0x7f919d820df0 <line:19:1, col:42> 'int' <IntegralCast>
+    |       |               `-ImplicitCastExpr 0x7f919d820dd8 <col:1, col:42> 'unsigned char' <LValueToRValue>
+    |       |                 `-ParenExpr 0x7f919d820db8 <col:1, col:42> 'unsigned char' lvalue
+    |       |                   `-MemberExpr 0x7f919d820d80 <col:2, col:38> 'unsigned char' lvalue ->type 0x7f919d809220
+    |       |                     `-ImplicitCastExpr 0x7f919d820d68 <col:2, col:35> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |       |                       `-ParenExpr 0x7f919d820d48 <col:2, col:35> 'TypHandle':'struct TypHeader *' lvalue
+    |       |                         `-ArraySubscriptExpr 0x7f919d820d20 <col:3, col:34> 'TypHandle':'struct TypHeader *' lvalue
+    |       |                           |-ParenExpr 0x7f919d820ce0 <col:3, col:31> 'TypHandle *'
+    |       |                           | `-CStyleCastExpr 0x7f919d820cb8 <col:4, col:30> 'TypHandle *' <NoOp>
+    |       |                           |   `-ImplicitCastExpr 0x7f919d820ca0 <col:16, col:30> 'struct TypHeader **' <LValueToRValue>
+    |       |                           |     `-ParenExpr 0x7f919d820c80 <col:16, col:30> 'struct TypHeader **' lvalue
+    |       |                           |       `-MemberExpr 0x7f919d820c08 <col:17, col:27> 'struct TypHeader **' lvalue ->ptr 0x7f919d8091c0
+    |       |                           |         `-ImplicitCastExpr 0x7f919d820bf0 <col:17, col:24> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |       |                           |           `-ParenExpr 0x7f919d820bd0 <col:17, col:24> 'TypHandle':'struct TypHeader *' lvalue
+    |       |                           |             `-DeclRefExpr 0x7f919d820ba8 <col:18> 'TypHandle':'struct TypHeader *' lvalue ParmVar 0x7f919d809630 'hdCall' 'TypHandle':'struct TypHeader *'
+    |       |                           `-IntegerLiteral 0x7f919d820d00 <col:33> 'int' 1
+    |       `-ImplicitCastExpr 0x7f919d821158 <col:47, col:80> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |         `-ParenExpr 0x7f919d8210f0 <col:47, col:80> 'TypHandle':'struct TypHeader *' lvalue
+    |           `-ArraySubscriptExpr 0x7f919d8210c8 <col:48, col:79> 'TypHandle':'struct TypHeader *' lvalue
+    |             |-ParenExpr 0x7f919d821088 <col:48, col:76> 'TypHandle *'
+    |             | `-CStyleCastExpr 0x7f919d821060 <col:49, col:75> 'TypHandle *' <NoOp>
+    |             |   `-ImplicitCastExpr 0x7f919d821048 <col:61, col:75> 'struct TypHeader **' <LValueToRValue>
+    |             |     `-ParenExpr 0x7f919d821028 <col:61, col:75> 'struct TypHeader **' lvalue
+    |             |       `-MemberExpr 0x7f919d820fb0 <col:62, col:72> 'struct TypHeader **' lvalue ->ptr 0x7f919d8091c0
+    |             |         `-ImplicitCastExpr 0x7f919d820f98 <col:62, col:69> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |             |           `-ParenExpr 0x7f919d820f78 <col:62, col:69> 'TypHandle':'struct TypHeader *' lvalue
+    |             |             `-DeclRefExpr 0x7f919d820f50 <col:63> 'TypHandle':'struct TypHeader *' lvalue ParmVar 0x7f919d809630 'hdCall' 'TypHandle':'struct TypHeader *'
+    |             `-IntegerLiteral 0x7f919d8210a8 <col:78> 'int' 1
+    |-BinaryOperator 0x7f919d821448 <line:20:6, col:41> 'TypHandle *' '='
+    | |-DeclRefExpr 0x7f919d8212c8 <col:6> 'TypHandle *' lvalue Var 0x7f919d809828 'ptApp' 'TypHandle *'
+    | `-ParenExpr 0x7f919d821428 <col:14, col:41> 'TypHandle *'
+    |   `-CStyleCastExpr 0x7f919d821400 <col:15, col:40> 'TypHandle *' <NoOp>
+    |     `-ImplicitCastExpr 0x7f919d8213e8 <col:27, col:40> 'struct TypHeader **' <LValueToRValue>
+    |       `-ParenExpr 0x7f919d8213c8 <col:27, col:40> 'struct TypHeader **' lvalue
+    |         `-MemberExpr 0x7f919d821350 <col:28, col:37> 'struct TypHeader **' lvalue ->ptr 0x7f919d8091c0
+    |           `-ImplicitCastExpr 0x7f919d821338 <col:28, col:34> 'TypHandle':'struct TypHeader *' <LValueToRValue>
+    |             `-ParenExpr 0x7f919d821318 <col:28, col:34> 'TypHandle':'struct TypHeader *' lvalue
+    |               `-DeclRefExpr 0x7f919d8212f0 <col:29> 'TypHandle':'struct TypHeader *' lvalue Var 0x7f919d809770 'hdApp' 'TypHandle':'struct TypHeader *'
+    |-BinaryOperator 0x7f919d821770 <line:21:6, col:65> 'TypHandle':'struct TypHeader *' '='
+    | |-ArraySubscriptExpr 0x7f919d8214d0 <col:6, col:13> 'TypHandle':'struct TypHeader *' lvalue
+    | | |-ImplicitCastExpr 0x7f919d8214b8 <col:6> 'TypHandle *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f919d821470 <col:6> 'TypHandle *' lvalue Var 0x7f919d809828 'ptApp' 'TypHandle *'
+    | | `-IntegerLiteral 0x7f919d821498 <col:12> 'int' 1
+    | `-ParenExpr 0x7f919d821750 <col:17, col:65> 'TypHandle':'struct TypHeader *'
+    |   `-CStyleCastExpr 0x7f919d821728 <col:18, col:64> 'TypHandle':'struct TypHeader *' <IntegralToPointer>
+    |     `-CStyleCastExpr 0x7f919d8216f0 <col:30, col:64> 'uintptr_t':'unsigned long' <IntegralCast>
+    |       `-ParenExpr 0x7f919d8216d0 <col:42, col:64> 'long'
+    |         `-BinaryOperator 0x7f919d821668 <col:43, col:63> 'long' '+'
+    |           |-ParenExpr 0x7f919d821610 <col:43, col:59> 'long'
+    |           | `-BinaryOperator 0x7f919d8215e8 <col:44, col:58> 'long' '<<'
+    |           |   |-CStyleCastExpr 0x7f919d8215a0 <col:44, col:53> 'long' <NoOp>
+    |           |   | `-ImplicitCastExpr 0x7f919d821588 <col:50, col:53> 'long' <LValueToRValue>
+    |           |   |   `-ParenExpr 0x7f919d821568 <col:50, col:53> 'long' lvalue
+    |           |   |     `-DeclRefExpr 0x7f919d8214f8 <col:51> 'long' lvalue Var 0x7f919d8098b8 'lp' 'long'
+    |           |   `-IntegerLiteral 0x7f919d8215c8 <col:58> 'int' 2
+    |           `-ImplicitCastExpr 0x7f919d821650 <col:63> 'long' <IntegralCast>
+    |             `-IntegerLiteral 0x7f919d821630 <col:63> 'int' 1
+    `-BinaryOperator 0x7f919c0200a0 <line:22:6, col:65> 'TypHandle':'struct TypHeader *' '='
+      |-ArraySubscriptExpr 0x7f919d8217f8 <col:6, col:13> 'TypHandle':'struct TypHeader *' lvalue
+      | |-ImplicitCastExpr 0x7f919d8217e0 <col:6> 'TypHandle *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f919d821798 <col:6> 'TypHandle *' lvalue Var 0x7f919d809828 'ptApp' 'TypHandle *'
+      | `-IntegerLiteral 0x7f919d8217c0 <col:12> 'int' 2
+      `-ParenExpr 0x7f919c020080 <col:17, col:65> 'TypHandle':'struct TypHeader *'
+        `-CStyleCastExpr 0x7f919c020058 <col:18, col:64> 'TypHandle':'struct TypHeader *' <IntegralToPointer>
+          `-CStyleCastExpr 0x7f919c020020 <col:30, col:64> 'uintptr_t':'unsigned long' <IntegralCast>
+            `-ParenExpr 0x7f919c020000 <col:42, col:64> 'long'
+              `-BinaryOperator 0x7f919d821990 <col:43, col:63> 'long' '+'
+                |-ParenExpr 0x7f919d821938 <col:43, col:59> 'long'
+                | `-BinaryOperator 0x7f919d821910 <col:44, col:58> 'long' '<<'
+                |   |-CStyleCastExpr 0x7f919d8218c8 <col:44, col:53> 'long' <NoOp>
+                |   | `-ImplicitCastExpr 0x7f919d8218b0 <col:50, col:53> 'long' <LValueToRValue>
+                |   |   `-ParenExpr 0x7f919d821890 <col:50, col:53> 'long' lvalue
+                |   |     `-DeclRefExpr 0x7f919d821820 <col:51> 'long' lvalue Var 0x7f919d809948 'lc' 'long'
+                |   `-IntegerLiteral 0x7f919d8218f0 <col:58> 'int' 2
+                `-ImplicitCastExpr 0x7f919d821978 <col:63> 'long' <IntegralCast>
+                  `-IntegerLiteral 0x7f919d821958 <col:63> 'int' 1

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fef3d0128e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fef3d054460 <../Data/C2AST/pr49602.c:5:1, line:8:1> line:6:1 used foo 'void (int *)' static
+| |-ParmVarDecl 0x7fef3d0135a0 <col:6, col:11> col:11 x 'int *'
+| `-CompoundStmt 0x7fef3d054548 <line:7:1, line:8:1>
+`-FunctionDecl 0x7fef3d0545f8 <line:10:1, line:17:1> line:11:1 bar 'void (int *)'
+  |-ParmVarDecl 0x7fef3d054570 <col:6, col:11> col:11 used x 'int *'
+  `-CompoundStmt 0x7fef3d054a08 <line:12:1, line:17:1>
+    |-DeclStmt 0x7fef3d054718 <line:13:3, col:8>
+    | `-VarDecl 0x7fef3d0546b8 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fef3d0548f8 <line:14:3, line:15:9>
+    | |-BinaryOperator 0x7fef3d054778 <line:14:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fef3d054730 <col:8> 'int' lvalue Var 0x7fef3d0546b8 'i' 'int'
+    | | `-IntegerLiteral 0x7fef3d054758 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fef3d054800 <col:15, col:20> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fef3d0547e8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fef3d0547a0 <col:15> 'int' lvalue Var 0x7fef3d0546b8 'i' 'int'
+    | | `-IntegerLiteral 0x7fef3d0547c8 <col:20> 'int' 1
+    | |-UnaryOperator 0x7fef3d054850 <col:23, col:25> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7fef3d054828 <col:25> 'int' lvalue Var 0x7fef3d0546b8 'i' 'int'
+    | `-BinaryOperator 0x7fef3d0548d0 <line:15:5, col:9> 'int *' '='
+    |   |-DeclRefExpr 0x7fef3d054870 <col:5> 'int *' lvalue ParmVar 0x7fef3d054570 'x' 'int *'
+    |   `-ImplicitCastExpr 0x7fef3d0548b8 <col:9> 'int *' <NullToPointer>
+    |     `-IntegerLiteral 0x7fef3d054898 <col:9> 'int' 0
+    `-CallExpr 0x7fef3d0549c0 <line:16:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fef3d0549a8 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fef3d054930 <col:3> 'void (int *)' Function 0x7fef3d054460 'foo' 'void (int *)'
+      `-ImplicitCastExpr 0x7fef3d0549f0 <col:8> 'int *' <LValueToRValue>
+        `-DeclRefExpr 0x7fef3d054958 <col:8> 'int *' lvalue ParmVar 0x7fef3d054570 'x' 'int *'

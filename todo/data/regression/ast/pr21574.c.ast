@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ff45382bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff45386d868 <../Data/C2AST/pr21574.c:4:1, line:9:1> line:5:1 foo 'int (int *)'
+  |-ParmVarDecl 0x7ff45382c9a0 <col:6, col:11> col:11 used p 'int *'
+  `-CompoundStmt 0x7ff45386da88 <line:6:1, line:9:1>
+    |-BinaryOperator 0x7ff45386d9d0 <line:7:3, col:8> 'int' '='
+    | |-UnaryOperator 0x7ff45386d990 <col:3, col:4> 'int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7ff45386d978 <col:4> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff45386d950 <col:4> 'int *' lvalue ParmVar 0x7ff45382c9a0 'p' 'int *'
+    | `-IntegerLiteral 0x7ff45386d9b0 <col:8> 'int' 0
+    `-ReturnStmt 0x7ff45386da70 <line:8:3, col:11>
+      `-ImplicitCastExpr 0x7ff45386da58 <col:10, col:11> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7ff45386da38 <col:10, col:11> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7ff45386da20 <col:11> 'int *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff45386d9f8 <col:11> 'int *' lvalue ParmVar 0x7ff45382c9a0 'p' 'int *'

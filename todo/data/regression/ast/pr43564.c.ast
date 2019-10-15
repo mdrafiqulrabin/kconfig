@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fcd0b01aee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcd0b813068 <../Data/C2AST/pr43564.c:4:1, line:9:1> line:5:10 used __clz 'unsigned int (unsigned int)' static inline
+| |-ParmVarDecl 0x7fcd0b01bb78 <col:17, col:26> col:26 used input 'unsigned int'
+| |-CompoundStmt 0x7fcd0b813450 <line:6:1, line:9:1>
+| | |-DeclStmt 0x7fcd0b813210 <line:7:3, col:18>
+| | | `-VarDecl 0x7fcd0b8131b0 <col:3, col:12> col:12 used output 'unsigned int'
+| | `-GCCAsmStmt 0x7fcd0b8133d8 <line:8:3, col:63>
+| |   |-DeclRefExpr 0x7fcd0b813308 <col:44> 'unsigned int' lvalue Var 0x7fcd0b8131b0 'output' 'unsigned int'
+| |   `-ImplicitCastExpr 0x7fcd0b8133c0 <col:57> 'unsigned int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fcd0b813398 <col:57> 'unsigned int' lvalue ParmVar 0x7fcd0b01bb78 'input' 'unsigned int'
+| `-AlwaysInlineAttr 0x7fcd0b813110 <line:4:31> always_inline
+`-FunctionDecl 0x7fcd0b8134e8 <line:10:1, line:16:1> line:11:6 foo 'void ()'
+  `-CompoundStmt 0x7fcd0b8137d0 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fcd0b813600 <line:13:3, col:13>
+    | `-VarDecl 0x7fcd0b8135a0 <col:3, col:12> col:12 used a 'unsigned int'
+    |-DeclStmt 0x7fcd0b813690 <line:14:3, col:13>
+    | `-VarDecl 0x7fcd0b813630 <col:3, col:12> col:12 used b 'unsigned int'
+    `-BinaryOperator 0x7fcd0b8137a8 <line:15:3, col:15> 'unsigned int' '='
+      |-DeclRefExpr 0x7fcd0b8136a8 <col:3> 'unsigned int' lvalue Var 0x7fcd0b8135a0 'a' 'unsigned int'
+      `-CallExpr 0x7fcd0b813760 <col:7, col:15> 'unsigned int'
+        |-ImplicitCastExpr 0x7fcd0b813748 <col:7> 'unsigned int (*)(unsigned int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcd0b8136d0 <col:7> 'unsigned int (unsigned int)' Function 0x7fcd0b813068 '__clz' 'unsigned int (unsigned int)'
+        `-ImplicitCastExpr 0x7fcd0b813790 <col:14> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fcd0b8136f8 <col:14> 'unsigned int' lvalue Var 0x7fcd0b813630 'b' 'unsigned int'

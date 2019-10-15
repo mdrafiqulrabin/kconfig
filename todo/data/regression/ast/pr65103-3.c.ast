@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc18582bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc186004828 <../Data/C2AST/pr65103-3.c:6:1, col:21> col:13 used data 'int *[100]' static
+`-FunctionDecl 0x7fc186004a30 <line:8:1, line:19:1> line:8:6 test 'void (long, long)'
+  |-ParmVarDecl 0x7fc1860048e0 <col:12, col:17> col:17 used a 'long'
+  |-ParmVarDecl 0x7fc186004958 <col:20, col:25> col:25 used b 'long'
+  `-CompoundStmt 0x7fc186004ec8 <line:9:1, line:19:1>
+    `-DoStmt 0x7fc186004ea8 <line:10:3, line:18:16>
+      |-CompoundStmt 0x7fc186004de8 <line:11:5, line:17:5>
+      | `-IfStmt 0x7fc186004db0 <line:12:7, line:16:9>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-BinaryOperator 0x7fc186004b60 <line:12:11, col:15> 'int' '<'
+      |   | |-ImplicitCastExpr 0x7fc186004b30 <col:11> 'long' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x7fc186004ae0 <col:11> 'long' lvalue ParmVar 0x7fc1860048e0 'a' 'long'
+      |   | `-ImplicitCastExpr 0x7fc186004b48 <col:15> 'long' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fc186004b08 <col:15> 'long' lvalue ParmVar 0x7fc186004958 'b' 'long'
+      |   |-CompoundStmt 0x7fc186004d90 <line:13:9, line:16:9>
+      |   | |-BinaryOperator 0x7fc186004d20 <line:14:4, col:20> 'int *' '='
+      |   | | |-ArraySubscriptExpr 0x7fc186004c38 <col:4, col:10> 'int *' lvalue
+      |   | | | |-ImplicitCastExpr 0x7fc186004c08 <col:4> 'int **' <ArrayToPointerDecay>
+      |   | | | | `-DeclRefExpr 0x7fc186004b88 <col:4> 'int *[100]' lvalue Var 0x7fc186004828 'data' 'int *[100]'
+      |   | | | `-ImplicitCastExpr 0x7fc186004c20 <col:9> 'long' <LValueToRValue>
+      |   | | |   `-DeclRefExpr 0x7fc186004bb0 <col:9> 'long' lvalue ParmVar 0x7fc1860048e0 'a' 'long'
+      |   | | `-ImplicitCastExpr 0x7fc186004d08 <col:14, col:20> 'int *' <LValueToRValue>
+      |   | |   `-ArraySubscriptExpr 0x7fc186004ce0 <col:14, col:20> 'int *' lvalue
+      |   | |     |-ImplicitCastExpr 0x7fc186004cb0 <col:14> 'int **' <ArrayToPointerDecay>
+      |   | |     | `-DeclRefExpr 0x7fc186004c60 <col:14> 'int *[100]' lvalue Var 0x7fc186004828 'data' 'int *[100]'
+      |   | |     `-ImplicitCastExpr 0x7fc186004cc8 <col:19> 'long' <LValueToRValue>
+      |   | |       `-DeclRefExpr 0x7fc186004c88 <col:19> 'long' lvalue ParmVar 0x7fc186004958 'b' 'long'
+      |   | `-UnaryOperator 0x7fc186004d70 <line:15:4, col:5> 'long' postfix '++'
+      |   |   `-DeclRefExpr 0x7fc186004d48 <col:4> 'long' lvalue ParmVar 0x7fc1860048e0 'a' 'long'
+      |   `-<<<NULL>>>
+      `-BinaryOperator 0x7fc186004e80 <line:18:10, col:15> 'int' '<='
+        |-ImplicitCastExpr 0x7fc186004e50 <col:10> 'long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc186004e00 <col:10> 'long' lvalue ParmVar 0x7fc1860048e0 'a' 'long'
+        `-ImplicitCastExpr 0x7fc186004e68 <col:15> 'long' <LValueToRValue>
+          `-DeclRefExpr 0x7fc186004e28 <col:15> 'long' lvalue ParmVar 0x7fc186004958 'b' 'long'

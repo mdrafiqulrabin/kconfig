@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fab9682bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fab9682c9a0 <../Data/C2AST/pr80112.c:6:1, col:8> col:8 used a 'void **'
+`-FunctionDecl 0x7fab97014320 <line:8:1, line:22:1> line:9:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fab97014258 <col:6, col:10> col:10 used c 'int'
+  `-CompoundStmt 0x7fab97014928 <line:10:1, line:22:1>
+    |-DeclStmt 0x7fab97014638 <line:11:3, col:25>
+    | `-VarDecl 0x7fab97014420 <col:3, col:24> col:9 used d 'void *[2]' cinit
+    |   `-InitListExpr 0x7fab970145a0 <col:15, col:24> 'void *[2]'
+    |     |-AddrLabelExpr 0x7fab970144c8 <col:16, col:18> 'void *' e 0x7fab97014480
+    |     `-AddrLabelExpr 0x7fab97014530 <col:21, col:23> 'void *' f 0x7fab970144e8
+    |-BinaryOperator 0x7fab970146b8 <line:12:3, col:7> 'void **' '='
+    | |-DeclRefExpr 0x7fab97014650 <col:3> 'void **' lvalue Var 0x7fab9682c9a0 'a' 'void **'
+    | `-ImplicitCastExpr 0x7fab970146a0 <col:7> 'void **' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fab97014678 <col:7> 'void *[2]' lvalue Var 0x7fab97014420 'd' 'void *[2]'
+    `-SwitchStmt 0x7fab97014720 <line:13:3, line:21:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fab97014708 <line:13:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fab970146e0 <col:11> 'int' lvalue ParmVar 0x7fab97014258 'c' 'int'
+      `-CompoundStmt 0x7fab97014900 <line:14:5, line:21:5>
+        |-LabelStmt 0x7fab970147c0 <line:15:5, line:16:11> 'f'
+        | `-BinaryOperator 0x7fab97014798 <col:7, col:11> 'int' '='
+        |   |-DeclRefExpr 0x7fab97014750 <col:7> 'int' lvalue ParmVar 0x7fab97014258 'c' 'int'
+        |   `-IntegerLiteral 0x7fab97014778 <col:11> 'int' 9
+        |-CaseStmt 0x7fab970147f8 <line:18:5, line:19:14>
+        | |-IntegerLiteral 0x7fab970147d8 <line:18:10> 'int' 9
+        | |-<<<NULL>>>
+        | `-IndirectGotoStmt 0x7fab970148c0 <line:19:7, col:14>
+        |   `-ImplicitCastExpr 0x7fab970148a8 <col:13, col:14> 'const void *' <BitCast>
+        |     `-UnaryOperator 0x7fab97014858 <col:13, col:14> 'void **' postfix '++'
+        |       `-DeclRefExpr 0x7fab97014830 <col:13> 'void **' lvalue Var 0x7fab9682c9a0 'a' 'void **'
+        `-LabelStmt 0x7fab970148e8 <line:20:5, col:7> 'e'
+          `-NullStmt 0x7fab970148d8 <col:7>

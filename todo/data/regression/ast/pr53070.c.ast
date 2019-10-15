@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f836d82b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f836e806068 <../Data/C2AST/pr53070.c:3:1, line:10:1> line:4:1 foo 'int (int)'
+  |-ParmVarDecl 0x7f836d82bf78 <col:6, col:10> col:10 used c 'int'
+  `-CompoundStmt 0x7f836e806540 <line:5:1, line:10:1>
+    |-DeclStmt 0x7f836e806298 <line:6:3, col:19>
+    | |-VarDecl 0x7f836e806168 <col:3, col:11> col:7 used t 'int' cinit
+    | | `-IntegerLiteral 0x7f836e8061c8 <col:11> 'int' 0
+    | `-VarDecl 0x7f836e806200 <col:3, col:18> col:14 used i 'int' cinit
+    |   `-IntegerLiteral 0x7f836e806260 <col:18> 'int' 0
+    |-ForStmt 0x7f836e8064b0 <line:7:3, line:8:18>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f836e806310 <line:7:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f836e8062f8 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f836e8062b0 <col:10> 'int' lvalue Var 0x7f836e806200 'i' 'int'
+    | | `-IntegerLiteral 0x7f836e8062d8 <col:14> 'int' 100
+    | |-UnaryOperator 0x7f836e806360 <col:19, col:20> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f836e806338 <col:19> 'int' lvalue Var 0x7f836e806200 'i' 'int'
+    | `-CompoundAssignOperator 0x7f836e806478 <line:8:5, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7f836e806380 <col:5> 'int' lvalue Var 0x7f836e806168 't' 'int'
+    |   `-ConditionalOperator 0x7f836e806448 <col:10, col:18> 'int'
+    |     |-ImplicitCastExpr 0x7f836e806418 <col:10> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f836e8063a8 <col:10> 'int' lvalue ParmVar 0x7f836d82bf78 'c' 'int'
+    |     |-ImplicitCastExpr 0x7f836e806430 <col:14> 'int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f836e8063d0 <col:14> 'int' lvalue ParmVar 0x7f836d82bf78 'c' 'int'
+    |     `-IntegerLiteral 0x7f836e8063f8 <col:18> 'int' 1
+    `-ReturnStmt 0x7f836e806528 <line:9:3, col:10>
+      `-ImplicitCastExpr 0x7f836e806510 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f836e8064e8 <col:10> 'int' lvalue Var 0x7f836e806168 't' 'int'

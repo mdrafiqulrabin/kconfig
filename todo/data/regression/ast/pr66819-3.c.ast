@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fb24982bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb24986d968 <../Data/C2AST/pr66819-3.c:5:1, col:21> col:8 used bar 'void (*)(int, int)'
+`-FunctionDecl 0x7fb24986db28 <line:7:1, line:10:1> line:7:6 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fb24986da20 <col:10, col:14> col:14 used i 'int'
+  |-ParmVarDecl 0x7fb24986da98 <col:17, col:21> col:21 used j 'int'
+  `-CompoundStmt 0x7fb24986dcd0 <line:8:1, line:10:1>
+    `-CallExpr 0x7fb24986dc68 <line:9:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7fb24986dc50 <col:3> 'void (*)(int, int)' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb24986dbd8 <col:3> 'void (*)(int, int)' lvalue Var 0x7fb24986d968 'bar' 'void (*)(int, int)'
+      |-ImplicitCastExpr 0x7fb24986dca0 <col:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb24986dc00 <col:7> 'int' lvalue ParmVar 0x7fb24986da20 'i' 'int'
+      `-ImplicitCastExpr 0x7fb24986dcb8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb24986dc28 <col:10> 'int' lvalue ParmVar 0x7fb24986da98 'j' 'int'

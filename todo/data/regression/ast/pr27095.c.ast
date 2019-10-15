@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fd8d100e8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd8d0029368 <../Data/C2AST/pr27095.c:9:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fd8d0029408 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fd8d0029468 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fd8d00294c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fd8d0029540 prev 0x7fd8d0029368 <col:1, col:48> col:14 used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fd8d100f578 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fd8d0029200 <col:30> col:33 'int'
+| `-ParmVarDecl 0x7fd8d0029278 <<built-in>:81:23, col:37> ../Data/C2AST/pr27095.c:9:48 'unsigned long'
+|-FunctionDecl 0x7fd8d00296d8 <line:10:22> col:22 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7fd8d0029778 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fd8d00297e0 prev 0x7fd8d00296d8 <col:1, col:42> col:22 used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7fd8d0029610 <col:30, col:41> col:42 'const char *'
+`-FunctionDecl 0x7fd8d0029a18 <line:12:1, line:18:1> line:13:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fd8d00298a0 <col:7, col:11> col:11 used argc 'int'
+  |-ParmVarDecl 0x7fd8d0029940 <col:17, col:24> col:24 argv 'char **'
+  `-CompoundStmt 0x7fd8d0029f20 <line:14:1, line:18:1>
+    |-DeclStmt 0x7fd8d0029c58 <line:15:3, col:20>
+    | `-VarDecl 0x7fd8d0029b88 <col:3, col:15> col:8 used x 'char [8]' cinit
+    |   `-StringLiteral 0x7fd8d0029c28 <col:15> 'char [8]' lvalue "abc"
+    |-CallExpr 0x7fd8d0029e60 <line:16:3, col:30> 'void *'
+    | |-ImplicitCastExpr 0x7fd8d0029e48 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd8d0029c70 <col:3> 'void *(void *, int, unsigned long)' Function 0x7fd8d0029540 'memset' 'void *(void *, int, unsigned long)'
+    | |-ImplicitCastExpr 0x7fd8d0029eb8 <col:11> 'void *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fd8d0029ea0 <col:11> 'char *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd8d0029c98 <col:11> 'char [8]' lvalue Var 0x7fd8d0029b88 'x' 'char [8]'
+    | |-ImplicitCastExpr 0x7fd8d0029ed0 <col:14> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd8d0029cc0 <col:14> 'int' lvalue ParmVar 0x7fd8d00298a0 'argc' 'int'
+    | `-CallExpr 0x7fd8d0029d90 <col:20, col:29> 'unsigned long'
+    |   |-ImplicitCastExpr 0x7fd8d0029d78 <col:20> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fd8d0029ce8 <col:20> 'unsigned long (const char *)' Function 0x7fd8d00297e0 'strlen' 'unsigned long (const char *)'
+    |   `-ImplicitCastExpr 0x7fd8d0029dd8 <col:28> 'const char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd8d0029dc0 <col:28> 'char *' <ArrayToPointerDecay>
+    |       `-DeclRefExpr 0x7fd8d0029d10 <col:28> 'char [8]' lvalue Var 0x7fd8d0029b88 'x' 'char [8]'
+    `-ReturnStmt 0x7fd8d0029f08 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fd8d0029ee8 <col:10> 'int' 0

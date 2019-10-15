@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fdf8082bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdf81810e28 <../Data/C2AST/pr31866.c:20:1, line:28:1> line:21:1 foo 'long (void)'
+  `-CompoundStmt 0x7fdf818114a0 <line:22:1, line:28:1>
+    |-DeclStmt 0x7fdf81810f80 <line:23:3, col:22>
+    | `-VarDecl 0x7fdf81810f20 <col:3, col:21> col:21 used s 'unsigned long'
+    |-DeclStmt 0x7fdf81811070 <line:24:3, col:28>
+    | `-VarDecl 0x7fdf81810fb0 <col:3, col:27> col:12 used a 'long' cinit
+    |   `-CStyleCastExpr 0x7fdf81811048 <col:16, col:27> 'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fdf81811010 <col:27> 'int' 0
+    |-DeclStmt 0x7fdf81811208 <line:25:3, col:36>
+    | `-VarDecl 0x7fdf81811110 <col:3, col:35> col:21 used r 'long' register cinit
+    |   |-ImplicitCastExpr 0x7fdf818111f0 <col:35> 'long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fdf818111c8 <col:35> 'long' lvalue Var 0x7fdf81810fb0 'a' 'long'
+    |   `-AsmLabelAttr 0x7fdf81811170 <line:17:14> "rax"
+    |-GCCAsmStmt 0x7fdf818113b8 <line:26:3, col:31>
+    | |-DeclRefExpr 0x7fdf818112e8 <col:19> 'unsigned long' lvalue Var 0x7fdf81810f20 's' 'unsigned long'
+    | `-ImplicitCastExpr 0x7fdf818113a0 <col:29> 'long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdf81811378 <col:29> 'long' lvalue Var 0x7fdf81811110 'r' 'long'
+    `-ReturnStmt 0x7fdf81811488 <line:27:3, col:10>
+      `-ImplicitCastExpr 0x7fdf81811470 <col:10> 'long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fdf81811458 <col:10> 'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7fdf81811430 <col:10> 'unsigned long' lvalue Var 0x7fdf81810f20 's' 'unsigned long'

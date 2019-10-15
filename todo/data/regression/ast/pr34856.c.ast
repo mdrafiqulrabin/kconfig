@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7f8a0c82b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a0c86de00 <../Data/C2AST/pr34856.c:4:1, col:30> col:30 referenced qword '__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char'
+| `-VectorType 0x7f8a0c82bf80 '__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char' 16
+|   `-BuiltinType 0x7f8a0c82b3a0 'signed char'
+|-TypedefDecl 0x7f8a0c86deb8 <line:5:1, col:31> col:31 referenced VU32 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7f8a0c86de80 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7f8a0c82b480 'unsigned int'
+|-VarDecl 0x7f8a0c86dfe0 <line:6:1, col:23> col:14 used g 'short [208]' extern
+|-FunctionDecl 0x7f8a0c86e1b0 <line:7:1, col:13> col:6 used f 'void (qword)'
+| `-ParmVarDecl 0x7f8a0c86e0b0 <col:8> col:13 'qword':'__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char'
+`-FunctionDecl 0x7f8a0c86e330 <line:8:1, line:17:1> line:8:6 f1 'void (unsigned int)'
+  |-ParmVarDecl 0x7f8a0c86e270 <col:10, col:19> col:19 used ctr 'unsigned int'
+  `-CompoundStmt 0x7f8a0c86e938 <line:9:1, line:17:1>
+    |-DeclStmt 0x7f8a0c86e470 <line:10:3, col:11>
+    | `-VarDecl 0x7f8a0c86e410 <col:3, col:8> col:8 used pin 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    |-BinaryOperator 0x7f8a0c86e708 <line:11:3, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '='
+    | |-DeclRefExpr 0x7f8a0c86e488 <col:3> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7f8a0c86e410 'pin' 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    | `-ImplicitCastExpr 0x7f8a0c86e6f0 <col:9, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7f8a0c86e6c8 <col:9, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue
+    |     `-InitListExpr 0x7f8a0c86e620 <col:15, col:37> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+    |       `-ImplicitCastExpr 0x7f8a0c86e680 <col:16, col:36> 'unsigned int' <IntegralCast>
+    |         `-CStyleCastExpr 0x7f8a0c86e5b0 <col:16, col:36> 'unsigned long' <PointerToIntegral>
+    |           `-UnaryOperator 0x7f8a0c86e578 <col:31, col:36> 'short *' prefix '&'
+    |             `-ArraySubscriptExpr 0x7f8a0c86e550 <col:32, col:36> 'short' lvalue
+    |               |-ImplicitCastExpr 0x7f8a0c86e538 <col:32> 'short *' <ArrayToPointerDecay>
+    |               | `-DeclRefExpr 0x7f8a0c86e4c0 <col:32> 'short [208]' lvalue Var 0x7f8a0c86dfe0 'g' 'short [208]'
+    |               `-IntegerLiteral 0x7f8a0c86e4e8 <col:34> 'int' 16
+    `-DoStmt 0x7f8a0c86e918 <line:12:3, line:16:10>
+      |-CompoundStmt 0x7f8a0c86e8b8 <line:12:6, line:15:3>
+      | |-CallExpr 0x7f8a0c86e840 <line:13:4, col:16> 'void'
+      | | |-ImplicitCastExpr 0x7f8a0c86e828 <col:4> 'void (*)(qword)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7f8a0c86e730 <col:4> 'void (qword)' Function 0x7f8a0c86e1b0 'f' 'void (qword)'
+      | | `-CStyleCastExpr 0x7f8a0c86e7a8 <col:6, col:13> 'qword':'__attribute__((__vector_size__(16 * sizeof(signed char)))) signed char' <BitCast>
+      | |   `-ImplicitCastExpr 0x7f8a0c86e790 <col:13> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f8a0c86e758 <col:13> 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7f8a0c86e410 'pin' 'VU32':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+      | `-UnaryOperator 0x7f8a0c86e898 <line:14:4, col:7> 'unsigned int' postfix '--'
+      |   `-DeclRefExpr 0x7f8a0c86e870 <col:4> 'unsigned int' lvalue ParmVar 0x7f8a0c86e270 'ctr' 'unsigned int'
+      `-ImplicitCastExpr 0x7f8a0c86e900 <line:16:7> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8a0c86e8d8 <col:7> 'unsigned int' lvalue ParmVar 0x7f8a0c86e270 'ctr' 'unsigned int'

@@ -1,0 +1,44 @@
+../Data/C2AST/pr84136.c:14:5: error: indirect goto in function with no address-of-label expressions
+    goto *a;
+    ^
+1 error generated.
+TranslationUnitDecl 0x7f996c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f996c82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f996c82bf80 '__int128'
+|-TypedefDecl 0x7f996c82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f996c82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f996c82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f996c82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f996c82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f996c82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f996c82c600 'char *'
+|   `-BuiltinType 0x7f996c82bd80 'char'
+|-TypedefDecl 0x7f996c82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f996c82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f996c82c720 'struct __va_list_tag'
+|     `-Record 0x7f996c82c698 '__va_list_tag'
+|-VarDecl 0x7f996c82c978 <../Data/C2AST/pr84136.c:3:1, col:7> col:7 used a 'void *'
+|-FunctionDecl 0x7f996d014288 <line:5:1, line:10:1> line:5:6 used foo 'void ()'
+| `-CompoundStmt 0x7f996d014478 <col:12, line:10:1>
+|   |-IfStmt 0x7f996d014418 <line:6:5, line:7:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7f996d0143e0 <line:6:9, col:17> 'void *'
+|   | | `-BinaryOperator 0x7f996d0143b8 <col:10, col:16> 'void *' '='
+|   | |   |-DeclRefExpr 0x7f996d014328 <col:10> 'void *' lvalue Var 0x7f996c82c978 'a' 'void *'
+|   | |   `-AddrLabelExpr 0x7f996d014398 <col:14, col:16> 'void *' l 0x7f996d014350
+|   | |-ReturnStmt 0x7f996d014400 <line:7:9>
+|   | `-<<<NULL>>>
+|   `-LabelStmt 0x7f996d014460 <line:9:5, col:7> 'l'
+|     `-NullStmt 0x7f996d014450 <col:7>
+`-FunctionDecl 0x7f996d0144f0 <line:12:1, line:17:1> line:12:5 main 'int ()'
+  `-CompoundStmt 0x7f996d0146f8 <col:12, line:17:1>
+    |-CallExpr 0x7f996d014600 <line:13:5, col:9> 'void'
+    | `-ImplicitCastExpr 0x7f996d0145e8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f996d014590 <col:5> 'void ()' Function 0x7f996d014288 'foo' 'void ()'
+    |-IndirectGotoStmt 0x7f996d0146a8 <line:14:5, col:11>
+    | `-ImplicitCastExpr 0x7f996d014690 <col:11> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f996d014678 <col:11> 'void *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f996d014628 <col:11> 'void *' lvalue Var 0x7f996c82c978 'a' 'void *'
+    `-ReturnStmt 0x7f996d0146e0 <line:16:5, col:12>
+      `-IntegerLiteral 0x7f996d0146c0 <col:12> 'int' 0

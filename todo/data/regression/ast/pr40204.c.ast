@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fea948128e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fea94813560 <../Data/C2AST/pr40204.c:4:1, line:8:1> line:4:8 struct S definition
+| |-FieldDecl 0x7fea9402d658 <line:6:3, col:20> col:16 referenced a 'unsigned int'
+| | `-IntegerLiteral 0x7fea9402d620 <col:20> 'int' 4
+| `-FieldDecl 0x7fea9402d6d8 <line:7:3, col:20> col:16 b 'unsigned int'
+|   `-IntegerLiteral 0x7fea9402d6a0 <col:20> 'int' 28
+|-VarDecl 0x7fea9402d770 <line:4:1, line:8:3> col:3 used s 'struct S':'struct S'
+|-VarDecl 0x7fea9402d838 <line:9:1, col:6> col:6 used c 'char'
+`-FunctionDecl 0x7fea9402d960 <line:11:1, line:15:1> line:12:1 f 'void (void)'
+  `-CompoundStmt 0x7fea9402dc80 <line:13:1, line:15:1>
+    `-BinaryOperator 0x7fea9402dc08 <line:14:3, col:28> 'unsigned int' '='
+      |-MemberExpr 0x7fea9402da28 <col:3, col:5> 'unsigned int' lvalue bitfield .a 0x7fea9402d658
+      | `-DeclRefExpr 0x7fea9402da00 <col:3> 'struct S':'struct S' lvalue Var 0x7fea9402d770 's' 'struct S':'struct S'
+      `-ImplicitCastExpr 0x7fea9402dbf0 <col:9, col:28> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7fea9402dbc8 <col:9, col:28> 'int' '&'
+          |-ParenExpr 0x7fea9402db00 <col:9, col:16> 'int'
+          | `-BinaryOperator 0x7fea9402dad8 <col:10, col:15> 'int' '>>'
+          |   |-ImplicitCastExpr 0x7fea9402dac0 <col:10> 'int' <IntegralCast>
+          |   | `-ImplicitCastExpr 0x7fea9402daa8 <col:10> 'char' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7fea9402da60 <col:10> 'char' lvalue Var 0x7fea9402d838 'c' 'char'
+          |   `-IntegerLiteral 0x7fea9402da88 <col:15> 'int' 4
+          `-UnaryOperator 0x7fea9402dba8 <col:20, col:28> 'int' prefix '~'
+            `-ParenExpr 0x7fea9402db88 <col:21, col:28> 'int'
+              `-BinaryOperator 0x7fea9402db60 <col:22, col:27> 'int' '<<'
+                |-IntegerLiteral 0x7fea9402db20 <col:22> 'int' 1
+                `-IntegerLiteral 0x7fea9402db40 <col:27> 'int' 4

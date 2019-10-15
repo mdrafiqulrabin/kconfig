@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f887e0098e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f887e00a560 <../Data/C2AST/pr27336.c:4:1, col:19> col:8 struct B definition
+| `-FieldDecl 0x7f887e056838 <col:12, col:16> col:16 x 'int'
+|-FunctionDecl 0x7f887e056a30 <line:5:1, col:56> col:13 used g3 'void (struct B *)' extern
+| |-ParmVarDecl 0x7f887e056930 <col:16, col:26> col:26 that 'struct B *'
+| `-NonNullAttr 0x7f887e056ad8 <col:48>
+`-FunctionDecl 0x7f887e056c98 <line:6:1, line:10:1> line:6:5 f3 'int (struct B *)'
+  |-ParmVarDecl 0x7f887e056b90 <col:8, col:18> col:18 used a 'struct B *'
+  `-CompoundStmt 0x7f887e056f40 <line:7:1, line:10:1>
+    |-CallExpr 0x7f887e056e00 <line:8:3, col:7> 'void'
+    | |-ImplicitCastExpr 0x7f887e056de8 <col:3> 'void (*)(struct B *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f887e056d40 <col:3> 'void (struct B *)' Function 0x7f887e056a30 'g3' 'void (struct B *)'
+    | `-ImplicitCastExpr 0x7f887e056e30 <col:6> 'struct B *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f887e056d68 <col:6> 'struct B *' lvalue ParmVar 0x7f887e056b90 'a' 'struct B *'
+    `-ReturnStmt 0x7f887e056f28 <line:9:3, col:23>
+      `-BinaryOperator 0x7f887e056f00 <col:10, col:23> 'int' '!='
+        |-ImplicitCastExpr 0x7f887e056ed0 <col:10> 'struct B *' <LValueToRValue>
+        | `-DeclRefExpr 0x7f887e056e48 <col:10> 'struct B *' lvalue ParmVar 0x7f887e056b90 'a' 'struct B *'
+        `-ImplicitCastExpr 0x7f887e056ee8 <col:15, col:23> 'struct B *' <BitCast>
+          `-CStyleCastExpr 0x7f887e056ea8 <col:15, col:23> 'void *' <NullToPointer>
+            `-IntegerLiteral 0x7f887e056e70 <col:23> 'int' 0

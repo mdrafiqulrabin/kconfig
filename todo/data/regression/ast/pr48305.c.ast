@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fb18b82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb18c014268 <../Data/C2AST/pr48305.c:3:1, line:7:1> line:4:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fb18b82c978 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7fb18c014510 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fb18c0144f8 <line:6:3, col:28>
+      `-BinaryOperator 0x7fb18c0144d0 <col:10, col:28> 'int' '=='
+        |-ImplicitCastExpr 0x7fb18c0144b8 <col:10, col:16> 'unsigned int' <IntegralCast>
+        | `-ParenExpr 0x7fb18c0143d8 <col:10, col:16> 'int'
+        |   `-BinaryOperator 0x7fb18c0143b0 <col:11, col:15> 'int' '^'
+        |     |-ImplicitCastExpr 0x7fb18c014398 <col:11> 'int' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7fb18c014350 <col:11> 'int' lvalue ParmVar 0x7fb18b82c978 'x' 'int'
+        |     `-IntegerLiteral 0x7fb18c014378 <col:15> 'int' 1
+        `-ParenExpr 0x7fb18c014498 <col:21, col:28> 'unsigned int'
+          `-BinaryOperator 0x7fb18c014470 <col:22, col:26> 'unsigned int' '^'
+            |-ImplicitCastExpr 0x7fb18c014458 <col:22> 'unsigned int' <IntegralCast>
+            | `-ImplicitCastExpr 0x7fb18c014440 <col:22> 'int' <LValueToRValue>
+            |   `-DeclRefExpr 0x7fb18c0143f8 <col:22> 'int' lvalue ParmVar 0x7fb18b82c978 'x' 'int'
+            `-IntegerLiteral 0x7fb18c014420 <col:26> 'unsigned int' 1

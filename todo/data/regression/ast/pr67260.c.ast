@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fe31002bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe31006d860 <../Data/C2AST/pr67260.c:6:1, col:41> col:17 used foo '_Complex double (_Complex double)'
+| |-ParmVarDecl 0x7fe31002c970 <col:22, col:38> col:38 arg '_Complex double'
+| `-VisibilityAttr 0x7fe31006d948 <line:4:13> Implicit Hidden
+`-FunctionDecl 0x7fe31006da28 <line:8:1, line:12:1> line:9:1 bar '_Complex double (_Complex double)'
+  |-ParmVarDecl 0x7fe31006d9a0 <col:6, col:22> col:22 used arg '_Complex double'
+  |-CompoundStmt 0x7fe31006dc10 <line:10:1, line:12:1>
+  | `-ReturnStmt 0x7fe31006dbf8 <line:11:3, col:18>
+  |   `-CallExpr 0x7fe31006dbb0 <col:10, col:18> '_Complex double'
+  |     |-ImplicitCastExpr 0x7fe31006db98 <col:10> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+  |     | `-DeclRefExpr 0x7fe31006db18 <col:10> '_Complex double (_Complex double)' Function 0x7fe31006d860 'foo' '_Complex double (_Complex double)'
+  |     `-ImplicitCastExpr 0x7fe31006dbe0 <col:15> '_Complex double' <LValueToRValue>
+  |       `-DeclRefExpr 0x7fe31006db40 <col:15> '_Complex double' lvalue ParmVar 0x7fe31006d9a0 'arg' '_Complex double'
+  `-VisibilityAttr 0x7fe31006dad0 <line:4:13> Implicit Hidden

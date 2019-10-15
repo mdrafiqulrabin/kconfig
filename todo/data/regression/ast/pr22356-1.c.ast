@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb388023ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb388024970 <../Data/C2AST/pr22356-1.c:3:1, col:24> col:24 referenced GFC_COMPLEX_4 '_Complex float'
+| `-ComplexType 0x7fb3880240c0 '_Complex float'
+|   `-BuiltinType 0x7fb388023ee0 'float'
+`-FunctionDecl 0x7fb388069a80 <line:4:1, line:11:1> line:4:6 product_c4 'void (GFC_COMPLEX_4 *, GFC_COMPLEX_4 *, int)'
+  |-ParmVarDecl 0x7fb388069868 <col:18, col:33> col:33 used src 'GFC_COMPLEX_4 *'
+  |-ParmVarDecl 0x7fb3880698d8 <col:38, col:53> col:53 used dest 'GFC_COMPLEX_4 *'
+  |-ParmVarDecl 0x7fb388069950 <col:59, col:63> col:63 used len 'int'
+  `-CompoundStmt 0x7fb38806a070 <line:5:1, line:11:1>
+    |-DeclStmt 0x7fb388069bf0 <line:6:3, col:8>
+    | `-VarDecl 0x7fb388069b90 <col:3, col:7> col:7 used n 'int'
+    |-DeclStmt 0x7fb388069c78 <line:7:3, col:23>
+    | `-VarDecl 0x7fb388069c18 <col:3, col:17> col:17 used result 'GFC_COMPLEX_4':'_Complex float'
+    |-ForStmt 0x7fb388069f70 <line:8:3, line:9:16>
+    | |-BinaryOperator 0x7fb388069cd8 <line:8:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fb388069c90 <col:8> 'int' lvalue Var 0x7fb388069b90 'n' 'int'
+    | | `-IntegerLiteral 0x7fb388069cb8 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb388069d80 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fb388069d50 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb388069d00 <col:15> 'int' lvalue Var 0x7fb388069b90 'n' 'int'
+    | | `-ImplicitCastExpr 0x7fb388069d68 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb388069d28 <col:19> 'int' lvalue ParmVar 0x7fb388069950 'len' 'int'
+    | |-BinaryOperator 0x7fb388069e70 <col:24, col:36> 'GFC_COMPLEX_4 *' ','
+    | | |-UnaryOperator 0x7fb388069dd0 <col:24, col:25> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7fb388069da8 <col:24> 'int' lvalue Var 0x7fb388069b90 'n' 'int'
+    | | `-CompoundAssignOperator 0x7fb388069e38 <col:29, col:36> 'GFC_COMPLEX_4 *' '+=' ComputeLHSTy='GFC_COMPLEX_4 *' ComputeResultTy='GFC_COMPLEX_4 *'
+    | |   |-DeclRefExpr 0x7fb388069df0 <col:29> 'GFC_COMPLEX_4 *' lvalue ParmVar 0x7fb388069868 'src' 'GFC_COMPLEX_4 *'
+    | |   `-IntegerLiteral 0x7fb388069e18 <col:36> 'int' 1
+    | `-CompoundAssignOperator 0x7fb388069f38 <line:9:5, col:16> 'GFC_COMPLEX_4':'_Complex float' '*=' ComputeLHSTy='_Complex float' ComputeResultTy='_Complex float'
+    |   |-DeclRefExpr 0x7fb388069e98 <col:5> 'GFC_COMPLEX_4':'_Complex float' lvalue Var 0x7fb388069c18 'result' 'GFC_COMPLEX_4':'_Complex float'
+    |   `-ImplicitCastExpr 0x7fb388069f20 <col:15, col:16> 'GFC_COMPLEX_4':'_Complex float' <LValueToRValue>
+    |     `-UnaryOperator 0x7fb388069f00 <col:15, col:16> 'GFC_COMPLEX_4':'_Complex float' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fb388069ee8 <col:16> 'GFC_COMPLEX_4 *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb388069ec0 <col:16> 'GFC_COMPLEX_4 *' lvalue ParmVar 0x7fb388069868 'src' 'GFC_COMPLEX_4 *'
+    `-BinaryOperator 0x7fb38806a048 <line:10:3, col:11> 'GFC_COMPLEX_4':'_Complex float' '='
+      |-UnaryOperator 0x7fb388069fe8 <col:3, col:4> 'GFC_COMPLEX_4':'_Complex float' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb388069fd0 <col:4> 'GFC_COMPLEX_4 *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb388069fa8 <col:4> 'GFC_COMPLEX_4 *' lvalue ParmVar 0x7fb3880698d8 'dest' 'GFC_COMPLEX_4 *'
+      `-ImplicitCastExpr 0x7fb38806a030 <col:11> 'GFC_COMPLEX_4':'_Complex float' <LValueToRValue>
+        `-DeclRefExpr 0x7fb38806a008 <col:11> 'GFC_COMPLEX_4':'_Complex float' lvalue Var 0x7fb388069c18 'result' 'GFC_COMPLEX_4':'_Complex float'

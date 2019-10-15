@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fde5301a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fde52026460 <../Data/C2AST/pr81654.c:4:1, line:8:1> line:6:1 used fn 'void (void *)'
+  |-ParmVarDecl 0x7fde5301b578 <col:5, col:11> col:11 frame 'void *'
+  |-CompoundStmt 0x7fde520265b0 <line:7:1, line:8:1>
+  |-NakedAttr 0x7fde52026508 <line:4:27>
+  |-AnyX86InterruptAttr 0x7fde52026550 <col:16>
+  `-UsedAttr 0x7fde52026560 <<invalid sloc>> Implicit

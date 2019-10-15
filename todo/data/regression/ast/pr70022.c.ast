@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7ffa1182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffa12015200 <../Data/C2AST/pr70022.c:4:1, col:13> col:13 referenced v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7ffa1182c980 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7ffa1182bde0 'int'
+`-FunctionDecl 0x7ffa12015398 <line:6:1, line:10:1> line:7:1 foo 'int (v4si)'
+  |-ParmVarDecl 0x7ffa12015290 <col:6, col:11> col:11 used v 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7ffa12015540 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7ffa12015528 <line:9:3, col:16>
+      `-ImplicitCastExpr 0x7ffa12015510 <col:10, col:16> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7ffa120154e8 <col:10, col:16> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7ffa12015480 <col:10> 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7ffa12015290 'v' 'v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-UnaryOperator 0x7ffa120154c8 <col:12, col:13> 'unsigned long' prefix '~'
+            `-IntegerLiteral 0x7ffa120154a8 <col:13> 'unsigned long' 0

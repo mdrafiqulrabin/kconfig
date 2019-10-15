@@ -1,0 +1,65 @@
+TranslationUnitDecl 0x7f849b82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f849b82c960 <../Data/C2AST/pr80706.c:5:1, col:63> col:7 union U definition
+| |-FieldDecl 0x7f849c014238 <col:11, col:18> col:18 referenced value 'double'
+| |-RecordDecl 0x7f849c014280 parent 0x7f849b82bce8 <col:25, col:54> col:32 struct S definition
+| | |-FieldDecl 0x7f849c014358 <col:36, col:40> col:40 referenced lsw 'int'
+| | `-FieldDecl 0x7f849c0143b8 <col:45, col:49> col:49 msw 'int'
+| `-FieldDecl 0x7f849c014450 <col:25, col:56> col:56 referenced parts 'struct S':'struct S'
+|-FunctionDecl 0x7f849c014568 <line:7:1, line:12:1> line:8:1 used foo 'double (void)'
+| |-CompoundStmt 0x7f849c0147e0 <line:9:1, line:12:1>
+| | |-GCCAsmStmt 0x7f849c014758 <line:10:3, col:36>
+| | `-ReturnStmt 0x7f849c0147c8 <line:11:3, col:10>
+| |   `-FloatingLiteral 0x7f849c0147a8 <col:10> 'double' 2.000000e+00
+| `-NoInlineAttr 0x7f849c014608 <line:7:16>
+|-FunctionDecl 0x7f849c014898 <line:14:1, line:22:1> line:15:1 used bar 'double (void)'
+| |-CompoundStmt 0x7f849c014fb0 <line:16:1, line:22:1>
+| | |-DeclStmt 0x7f849c014a88 <line:17:3, col:20>
+| | | `-VarDecl 0x7f849c014998 <col:3, col:19> col:10 used s 'double' cinit
+| | |   `-CallExpr 0x7f849c014a60 <col:14, col:19> 'double'
+| | |     `-ImplicitCastExpr 0x7f849c014a48 <col:14> 'double (*)(void)' <FunctionToPointerDecay>
+| | |       `-DeclRefExpr 0x7f849c0149f8 <col:14> 'double (void)' Function 0x7f849c014568 'foo' 'double (void)'
+| | |-DeclStmt 0x7f849c014b50 <line:18:3, col:12>
+| | | `-VarDecl 0x7f849c014af0 <col:3, col:11> col:11 used z 'union U':'union U'
+| | |-BinaryOperator 0x7f849c014c08 <line:19:3, col:13> 'double' '='
+| | | |-MemberExpr 0x7f849c014b90 <col:3, col:5> 'double' lvalue .value 0x7f849c014238
+| | | | `-DeclRefExpr 0x7f849c014b68 <col:3> 'union U':'union U' lvalue Var 0x7f849c014af0 'z' 'union U':'union U'
+| | | `-ImplicitCastExpr 0x7f849c014bf0 <col:13> 'double' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f849c014bc8 <col:13> 'double' lvalue Var 0x7f849c014998 's' 'double'
+| | |-BinaryOperator 0x7f849c014ce8 <line:20:3, col:17> 'int' '='
+| | | |-MemberExpr 0x7f849c014c90 <col:3, col:11> 'int' lvalue .lsw 0x7f849c014358
+| | | | `-MemberExpr 0x7f849c014c58 <col:3, col:5> 'struct S':'struct S' lvalue .parts 0x7f849c014450
+| | | |   `-DeclRefExpr 0x7f849c014c30 <col:3> 'union U':'union U' lvalue Var 0x7f849c014af0 'z' 'union U':'union U'
+| | | `-IntegerLiteral 0x7f849c014cc8 <col:17> 'int' 0
+| | `-ReturnStmt 0x7f849c014f98 <line:21:3, col:34>
+| |   `-BinaryOperator 0x7f849c014f70 <col:10, col:34> 'double' '+'
+| |     |-BinaryOperator 0x7f849c014ea0 <col:10, col:22> 'double' '*'
+| |     | |-ImplicitCastExpr 0x7f849c014e70 <col:10, col:12> 'double' <LValueToRValue>
+| |     | | `-MemberExpr 0x7f849c014dd8 <col:10, col:12> 'double' lvalue .value 0x7f849c014238
+| |     | |   `-DeclRefExpr 0x7f849c014db0 <col:10> 'union U':'union U' lvalue Var 0x7f849c014af0 'z' 'union U':'union U'
+| |     | `-ImplicitCastExpr 0x7f849c014e88 <col:20, col:22> 'double' <LValueToRValue>
+| |     |   `-MemberExpr 0x7f849c014e38 <col:20, col:22> 'double' lvalue .value 0x7f849c014238
+| |     |     `-DeclRefExpr 0x7f849c014e10 <col:20> 'union U':'union U' lvalue Var 0x7f849c014af0 'z' 'union U':'union U'
+| |     `-BinaryOperator 0x7f849c014f48 <col:30, col:34> 'double' '*'
+| |       |-ImplicitCastExpr 0x7f849c014f18 <col:30> 'double' <LValueToRValue>
+| |       | `-DeclRefExpr 0x7f849c014ec8 <col:30> 'double' lvalue Var 0x7f849c014998 's' 'double'
+| |       `-ImplicitCastExpr 0x7f849c014f30 <col:34> 'double' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f849c014ef0 <col:34> 'double' lvalue Var 0x7f849c014998 's' 'double'
+| `-NoInlineAttr 0x7f849c014938 <line:14:16>
+|-FunctionDecl 0x7f849c015040 <line:24:1, line:30:1> line:25:1 main 'int ()'
+| `-CompoundStmt 0x7f849c02bde8 <line:26:1, line:30:1>
+|   |-IfStmt 0x7f849c02bd78 <line:27:3, line:28:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f849c015168 <line:27:7, col:17> 'int' '!='
+|   | | |-CallExpr 0x7f849c015120 <col:7, col:12> 'double'
+|   | | | `-ImplicitCastExpr 0x7f849c015108 <col:7> 'double (*)(void)' <FunctionToPointerDecay>
+|   | | |   `-DeclRefExpr 0x7f849c0150e0 <col:7> 'double (void)' Function 0x7f849c014898 'bar' 'double (void)'
+|   | | `-FloatingLiteral 0x7f849c015148 <col:17> 'double' 8.000000e+00
+|   | |-CallExpr 0x7f849c02bd50 <line:28:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f849c02bd38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f849c02bce8 <col:5> '<builtin fn type>' Function 0x7f849c02bc00 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f849c02bdd0 <line:29:3, col:10>
+|     `-IntegerLiteral 0x7f849c02bdb0 <col:10> 'int' 0
+`-FunctionDecl 0x7f849c02bc00 <line:28:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f849c02bca0 <col:5> Implicit

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f9ec002bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9ec006d828 <../Data/C2AST/pr50571.c:5:1, col:40> col:18 used var 'const int [4]' static cinit
+| `-InitListExpr 0x7f9ec006d9a8 <col:27, col:40> 'const int [4]'
+|   |-IntegerLiteral 0x7f9ec006d8c8 <col:29> 'int' 1
+|   |-IntegerLiteral 0x7f9ec006d8e8 <col:32> 'int' 2
+|   |-IntegerLiteral 0x7f9ec006d908 <col:35> 'int' 3
+|   `-IntegerLiteral 0x7f9ec006d928 <col:38> 'int' 4
+`-FunctionDecl 0x7f9ec006dad0 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9ec006dd90 <line:9:1, line:11:1>
+    `-GCCAsmStmt 0x7f9ec006dd30 <line:10:3, col:44>
+      `-UnaryOperator 0x7f9ec006dd10 <col:31, col:40> 'int' lvalue prefix '*'
+        `-CStyleCastExpr 0x7f9ec006dce8 <col:32, col:40> 'int *' <BitCast>
+          `-ImplicitCastExpr 0x7f9ec006dca0 <col:40> 'const int *' <ArrayToPointerDecay>
+            `-DeclRefExpr 0x7f9ec006dc38 <col:40> 'const int [4]' lvalue Var 0x7f9ec006d828 'var' 'const int [4]'

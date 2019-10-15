@@ -1,0 +1,52 @@
+../Data/C2AST/pr80163.c:13:25: error: initializer element is not a compile-time constant
+  static __int128_t d = (long) &&a - (long) &&b;         
+                        ^~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fcba082bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcba082c260 <<invalid sloc>> <invalid sloc> implicit referenced __int128_t '__int128'
+| `-BuiltinType 0x7fcba082bf80 '__int128'
+|-TypedefDecl 0x7fcba082c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcba082bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fcba082c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcba082c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcba082c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcba082c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcba082c600 'char *'
+|   `-BuiltinType 0x7fcba082bd80 'char'
+|-TypedefDecl 0x7fcba082c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcba082c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcba082c720 'struct __va_list_tag'
+|     `-Record 0x7fcba082c698 '__va_list_tag'
+|-FunctionDecl 0x7fcba1014220 <../Data/C2AST/pr80163.c:5:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7fcba1014470 <line:7:1, line:15:1> line:8:1 foo '__int128_t *(void)'
+| `-CompoundStmt 0x7fcba1014860 <line:9:1, line:15:1>
+|   |-LabelStmt 0x7fcba10145f0 <line:10:1, line:11:8> 'a'
+|   | `-CallExpr 0x7fcba1014580 <col:3, col:8> 'void'
+|   |   `-ImplicitCastExpr 0x7fcba1014568 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |     `-DeclRefExpr 0x7fcba1014510 <col:3> 'void (void)' Function 0x7fcba1014220 'bar' 'void (void)'
+|   |-LabelStmt 0x7fcba1014660 <line:12:1, col:3> 'b'
+|   | `-NullStmt 0x7fcba1014608 <col:3>
+|   |-DeclStmt 0x7fcba10147e8 <line:13:3, col:48>
+|   | `-VarDecl 0x7fcba1014688 <col:3, col:47> col:21 used d '__int128_t':'__int128' static cinit
+|   |   `-ImplicitCastExpr 0x7fcba10147d0 <col:25, col:47> '__int128_t':'__int128' <IntegralCast>
+|   |     `-BinaryOperator 0x7fcba10147a8 <col:25, col:47> 'long' '-'
+|   |       |-CStyleCastExpr 0x7fcba1014720 <col:25, col:34> 'long' <PointerToIntegral>
+|   |       | `-AddrLabelExpr 0x7fcba10146e8 <col:32, col:34> 'void *' a 0x7fcba10145a8
+|   |       `-CStyleCastExpr 0x7fcba1014780 <col:38, col:47> 'long' <PointerToIntegral>
+|   |         `-AddrLabelExpr 0x7fcba1014748 <col:45, col:47> 'void *' b 0x7fcba1014618
+|   `-ReturnStmt 0x7fcba1014848 <line:14:3, col:11>
+|     `-UnaryOperator 0x7fcba1014828 <col:10, col:11> '__int128_t *' prefix '&'
+|       `-DeclRefExpr 0x7fcba1014800 <col:11> '__int128_t':'__int128' lvalue Var 0x7fcba1014688 'd' '__int128_t':'__int128'
+`-FunctionDecl 0x7fcba1014920 <line:17:1, line:22:1> line:18:1 baz '__int128_t *(void)'
+  `-CompoundStmt 0x7fcba1014bb8 <line:19:1, line:22:1>
+    |-DeclStmt 0x7fcba1014b40 <line:20:3, col:39>
+    | `-VarDecl 0x7fcba10149d0 <col:3, col:38> col:21 used d '__int128_t':'__int128' static cinit
+    |   `-ImplicitCastExpr 0x7fcba1014b28 <col:25, col:38> '__int128_t':'__int128' <IntegralCast>
+    |     `-CStyleCastExpr 0x7fcba1014b00 <col:25, col:38> 'long' <IntegralCast>
+    |       `-ParenExpr 0x7fcba1014ae0 <col:32, col:38> 'int'
+    |         `-BinaryOperator 0x7fcba1014a70 <col:33, col:37> 'int' '*'
+    |           |-IntegerLiteral 0x7fcba1014a30 <col:33> 'int' 3
+    |           `-IntegerLiteral 0x7fcba1014a50 <col:37> 'int' 4
+    `-ReturnStmt 0x7fcba1014ba0 <line:21:3, col:11>
+      `-UnaryOperator 0x7fcba1014b80 <col:10, col:11> '__int128_t *' prefix '&'
+        `-DeclRefExpr 0x7fcba1014b58 <col:11> '__int128_t':'__int128' lvalue Var 0x7fcba10149d0 'd' '__int128_t':'__int128'

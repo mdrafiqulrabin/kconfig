@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7fb1b282bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fb1b282c960 <../Data/C2AST/pr84670-2.c:4:1, line:8:1> line:4:6 b
+| |-EnumConstantDecl 0x7fb1b3014220 <line:6:3> col:3 referenced c 'int'
+| `-EnumConstantDecl 0x7fb1b3014268 <line:7:3> col:3 referenced d 'int'
+|-RecordDecl 0x7fb1b30142b0 <line:9:1, line:12:1> line:9:8 struct e definition
+| `-FieldDecl 0x7fb1b30143b0 <line:11:3, col:10> col:10 referenced code 'enum b':'enum b'
+|-RecordDecl 0x7fb1b30143f8 <line:13:1, line:16:1> line:13:8 struct f definition
+| `-FieldDecl 0x7fb1b30144b8 <line:15:3, col:12> col:12 referenced g 'unsigned int'
+|-VarDecl 0x7fb1b3014518 <line:17:1, col:5> col:5 used h 'int'
+|-VarDecl 0x7fb1b30145d0 <col:1, col:8> col:8 used i 'int'
+|-RecordDecl 0x7fb1b3014648 <line:18:1, line:22:1> line:18:8 struct a definition
+| |-FieldDecl 0x7fb1b3014740 <line:20:3, col:12> col:12 referenced common 'struct e':'struct e'
+| `-FieldDecl 0x7fb1b30147e0 <line:21:3, col:12> col:12 referenced j 'struct f':'struct f'
+`-FunctionDecl 0x7fb1b30149a0 <line:24:1, line:33:1> line:24:10 k 'struct a (void)'
+  `-CompoundStmt 0x7fb1b38000d0 <line:25:1, line:33:1>
+    |-DeclStmt 0x7fb1b3014b20 <line:26:3, col:14>
+    | `-VarDecl 0x7fb1b3014ac0 <col:3, col:13> col:13 used l 'struct a *'
+    `-DoStmt 0x7fb1b38000b0 <line:27:3, line:32:34>
+      |-IfStmt 0x7fb1b30150b8 <line:28:5, line:31:40>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-BinaryOperator 0x7fb1b3014da8 <line:28:9, col:41> 'int' '&&'
+      | | |-BinaryOperator 0x7fb1b3014c58 <col:9, col:27> 'int' '=='
+      | | | |-ImplicitCastExpr 0x7fb1b3014c28 <col:9, col:19> 'unsigned int' <IntegralCast>
+      | | | | `-ImplicitCastExpr 0x7fb1b3014c10 <col:9, col:19> 'enum b':'enum b' <LValueToRValue>
+      | | | |   `-MemberExpr 0x7fb1b3014bb0 <col:9, col:19> 'enum b':'enum b' lvalue .code 0x7fb1b30143b0
+      | | | |     `-MemberExpr 0x7fb1b3014b78 <col:9, col:12> 'struct e':'struct e' lvalue ->common 0x7fb1b3014740
+      | | | |       `-ImplicitCastExpr 0x7fb1b3014b60 <col:9> 'struct a *' <LValueToRValue>
+      | | | |         `-DeclRefExpr 0x7fb1b3014b38 <col:9> 'struct a *' lvalue Var 0x7fb1b3014ac0 'l' 'struct a *'
+      | | | `-ImplicitCastExpr 0x7fb1b3014c40 <col:27> 'unsigned int' <IntegralCast>
+      | | |   `-DeclRefExpr 0x7fb1b3014be8 <col:27> 'int' EnumConstant 0x7fb1b3014268 'd' 'int'
+      | | `-BinaryOperator 0x7fb1b3014d80 <col:32, col:41> 'unsigned int' '*'
+      | |   |-ImplicitCastExpr 0x7fb1b3014d50 <col:32, col:37> 'unsigned int' <LValueToRValue>
+      | |   | `-MemberExpr 0x7fb1b3014cf8 <col:32, col:37> 'unsigned int' lvalue .g 0x7fb1b30144b8
+      | |   |   `-MemberExpr 0x7fb1b3014cc0 <col:32, col:35> 'struct f':'struct f' lvalue ->j 0x7fb1b30147e0
+      | |   |     `-ImplicitCastExpr 0x7fb1b3014ca8 <col:32> 'struct a *' <LValueToRValue>
+      | |   |       `-DeclRefExpr 0x7fb1b3014c80 <col:32> 'struct a *' lvalue Var 0x7fb1b3014ac0 'l' 'struct a *'
+      | |   `-ImplicitCastExpr 0x7fb1b3014d68 <col:41> 'unsigned int' <IntegralCast>
+      | |     `-IntegerLiteral 0x7fb1b3014d30 <col:41> 'int' 4
+      | |-NullStmt 0x7fb1b3014dd0 <line:29:7>
+      | `-BinaryOperator 0x7fb1b3015090 <line:31:7, col:40> 'int' '='
+      |   |-DeclRefExpr 0x7fb1b3014de0 <col:7> 'int' lvalue Var 0x7fb1b30145d0 'i' 'int'
+      |   `-ImplicitCastExpr 0x7fb1b3015078 <col:11, col:40> 'int' <IntegralCast>
+      |     `-BinaryOperator 0x7fb1b3015050 <col:11, col:40> 'unsigned int' '|'
+      |       |-ImplicitCastExpr 0x7fb1b3015020 <col:11, col:16> 'unsigned int' <LValueToRValue>
+      |       | `-MemberExpr 0x7fb1b3014e80 <col:11, col:16> 'unsigned int' lvalue .g 0x7fb1b30144b8
+      |       |   `-MemberExpr 0x7fb1b3014e48 <col:11, col:14> 'struct f':'struct f' lvalue ->j 0x7fb1b30147e0
+      |       |     `-ImplicitCastExpr 0x7fb1b3014e30 <col:11> 'struct a *' <LValueToRValue>
+      |       |       `-DeclRefExpr 0x7fb1b3014e08 <col:11> 'struct a *' lvalue Var 0x7fb1b3014ac0 'l' 'struct a *'
+      |       `-ImplicitCastExpr 0x7fb1b3015038 <col:20, col:40> 'unsigned int' <IntegralCast>
+      |         `-ParenExpr 0x7fb1b3015000 <col:20, col:40> 'int'
+      |           `-BinaryOperator 0x7fb1b3014fd8 <col:21, col:39> 'int' '&&'
+      |             |-ImplicitCastExpr 0x7fb1b3014fa8 <col:21, col:31> 'unsigned int' <IntegralCast>
+      |             | `-ImplicitCastExpr 0x7fb1b3014f90 <col:21, col:31> 'enum b':'enum b' <LValueToRValue>
+      |             |   `-MemberExpr 0x7fb1b3014f30 <col:21, col:31> 'enum b':'enum b' lvalue .code 0x7fb1b30143b0
+      |             |     `-MemberExpr 0x7fb1b3014ef8 <col:21, col:24> 'struct e':'struct e' lvalue ->common 0x7fb1b3014740
+      |             |       `-ImplicitCastExpr 0x7fb1b3014ee0 <col:21> 'struct a *' <LValueToRValue>
+      |             |         `-DeclRefExpr 0x7fb1b3014eb8 <col:21> 'struct a *' lvalue Var 0x7fb1b3014ac0 'l' 'struct a *'
+      |             `-ImplicitCastExpr 0x7fb1b3014fc0 <col:39> 'struct a *' <LValueToRValue>
+      |               `-DeclRefExpr 0x7fb1b3014f68 <col:39> 'struct a *' lvalue Var 0x7fb1b3014ac0 'l' 'struct a *'
+      `-BinaryOperator 0x7fb1b3800088 <line:32:10, col:33> 'int' '&&'
+        |-ImplicitCastExpr 0x7fb1b3800070 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fb1b30150f0 <col:10> 'int' lvalue Var 0x7fb1b3014518 'h' 'int'
+        `-BinaryOperator 0x7fb1b3800048 <col:15, col:33> 'int' '=='
+          |-ImplicitCastExpr 0x7fb1b3800018 <col:15, col:25> 'unsigned int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fb1b3800000 <col:15, col:25> 'enum b':'enum b' <LValueToRValue>
+          |   `-MemberExpr 0x7fb1b3015190 <col:15, col:25> 'enum b':'enum b' lvalue .code 0x7fb1b30143b0
+          |     `-MemberExpr 0x7fb1b3015158 <col:15, col:18> 'struct e':'struct e' lvalue ->common 0x7fb1b3014740
+          |       `-ImplicitCastExpr 0x7fb1b3015140 <col:15> 'struct a *' <LValueToRValue>
+          |         `-DeclRefExpr 0x7fb1b3015118 <col:15> 'struct a *' lvalue Var 0x7fb1b3014ac0 'l' 'struct a *'
+          `-ImplicitCastExpr 0x7fb1b3800030 <col:33> 'unsigned int' <IntegralCast>
+            `-DeclRefExpr 0x7fb1b30151c8 <col:33> 'int' EnumConstant 0x7fb1b3014220 'c' 'int'

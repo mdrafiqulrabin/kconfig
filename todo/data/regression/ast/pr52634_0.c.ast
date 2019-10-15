@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7faf3802bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7faf3802c978 <../Data/C2AST/pr52634_0.c:5:1, col:12> col:12 used cfliteValueCallBacks 'int' extern
+|-FunctionDecl 0x7faf38814340 <line:6:1, col:16> col:6 used baz 'void (int *)'
+| `-ParmVarDecl 0x7faf38814280 <col:11, col:15> col:16 'int *'
+`-FunctionDecl 0x7faf38814440 <line:7:1, col:43> col:5 main 'int ()'
+  `-CompoundStmt 0x7faf388145c0 <col:13, col:43>
+    `-CallExpr 0x7faf38814590 <col:15, col:40> 'void'
+      |-ImplicitCastExpr 0x7faf38814578 <col:15> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7faf388144e0 <col:15> 'void (int *)' Function 0x7faf38814340 'baz' 'void (int *)'
+      `-UnaryOperator 0x7faf38814530 <col:19, col:20> 'int *' prefix '&'
+        `-DeclRefExpr 0x7faf38814508 <col:20> 'int' lvalue Var 0x7faf3802c978 'cfliteValueCallBacks' 'int'

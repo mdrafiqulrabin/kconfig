@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fa0ef02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa0ef06d820 <../Data/C2AST/pr21085.c:3:1, line:8:1> line:3:6 foo 'void (void)'
+  `-CompoundStmt 0x7fa0ef06dd10 <line:4:1, line:8:1>
+    |-DeclStmt 0x7fa0ef06d998 <line:5:3, col:23>
+    | `-VarDecl 0x7fa0ef06d918 <col:3, col:22> col:7 used maxstringlen 'int' cinit
+    |   `-IntegerLiteral 0x7fa0ef06d978 <col:22> 'int' 1
+    |-DeclStmt 0x7fa0ef06db98 <line:6:3, col:47>
+    | |-VarDecl 0x7fa0ef06d9c8 <col:3, col:15> col:7 limit 'int' cinit
+    | | `-IntegerLiteral 0x7fa0ef06da28 <col:15> 'int' 0
+    | |-VarDecl 0x7fa0ef06da60 <col:3, col:29> col:18 maxblock 'int' cinit
+    | | `-IntegerLiteral 0x7fa0ef06dac0 <col:29> 'int' 0
+    | `-VarDecl 0x7fa0ef06daf8 <col:3, col:46> col:32 used maxblockrem 'int' cinit
+    |   `-IntegerLiteral 0x7fa0ef06db58 <col:46> 'int' 0
+    `-BinaryOperator 0x7fa0ef06dce8 <line:7:3, col:49> 'int' '='
+      |-DeclRefExpr 0x7fa0ef06dbb0 <col:3> 'int' lvalue Var 0x7fa0ef06daf8 'maxblockrem' 'int'
+      `-BinaryOperator 0x7fa0ef06dcc0 <col:17, col:49> 'int' '%'
+        |-ImplicitCastExpr 0x7fa0ef06dca8 <col:17, col:30> 'int' <LValueToRValue>
+        | `-ParenExpr 0x7fa0ef06dc00 <col:17, col:30> 'int' lvalue
+        |   `-DeclRefExpr 0x7fa0ef06dbd8 <col:18> 'int' lvalue Var 0x7fa0ef06d918 'maxstringlen' 'int'
+        `-ParenExpr 0x7fa0ef06dc88 <col:34, col:49> 'int'
+          `-BinaryOperator 0x7fa0ef06dc60 <col:35, col:48> 'int' '+'
+            |-IntegerLiteral 0x7fa0ef06dc20 <col:35> 'int' 2147483647
+            `-IntegerLiteral 0x7fa0ef06dc40 <col:48> 'int' 1

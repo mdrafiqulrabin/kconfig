@@ -1,0 +1,156 @@
+TranslationUnitDecl 0x7f872902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f872a014260 <../Data/C2AST/pr70467-1.c:5:1, col:31> col:6 used foo 'void (unsigned long long *)'
+| `-ParmVarDecl 0x7f872902c9a0 <col:11, col:30> col:31 'unsigned long long *'
+`-FunctionDecl 0x7f872a014410 <line:7:1, line:48:1> line:8:1 bar 'void (void)'
+  `-CompoundStmt 0x7f872980da28 <line:9:1, line:48:1>
+    |-DeclStmt 0x7f872a014528 <line:10:3, col:23>
+    | `-VarDecl 0x7f872a0144c8 <col:3, col:22> col:22 used a 'unsigned long long'
+    |-CallExpr 0x7f872a0145f0 <line:11:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a0145d8 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014540 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014590 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014568 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a014668 <line:12:3, col:8> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014620 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a014648 <col:8> 'unsigned long long' 9223372036854775807
+    |-CallExpr 0x7f872a014728 <line:13:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014710 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a0146a0 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a0146f0 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a0146c8 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a0147a0 <line:14:3, col:8> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014758 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a014780 <col:8> 'unsigned long long' 18446744071562067967
+    |-CallExpr 0x7f872a014860 <line:15:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014848 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a0147d8 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014828 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014800 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a0148d8 <line:16:3, col:8> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014890 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a0148b8 <col:8> 'unsigned long long' 9223372032559808512
+    |-CallExpr 0x7f872a014998 <line:17:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014980 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014910 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014960 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014938 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a014a10 <line:18:3, col:8> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a0149c8 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a0149f0 <col:8> 'unsigned long long' 2147483647
+    |-CallExpr 0x7f872a014ad0 <line:19:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014ab8 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014a48 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014a98 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014a70 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a014b48 <line:20:3, col:8> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014b00 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a014b28 <col:8> 'unsigned long long' 4294967295
+    |-CallExpr 0x7f872a014c08 <line:21:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014bf0 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014b80 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014bd0 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014ba8 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a014c80 <line:22:3, col:8> 'unsigned long long' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014c38 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a014c60 <col:8> 'unsigned long long' 18446744069414584320
+    |-CallExpr 0x7f872a014d40 <line:23:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014d28 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014cb8 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014d08 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014ce0 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a014db8 <line:24:3, col:8> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014d70 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a014d98 <col:8> 'unsigned long long' 9223372036854775807
+    |-CallExpr 0x7f872a014e78 <line:25:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014e60 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014df0 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014e40 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014e18 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a014ef0 <line:26:3, col:8> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014ea8 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a014ed0 <col:8> 'unsigned long long' 18446744071562067967
+    |-CallExpr 0x7f872a014fb0 <line:27:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a014f98 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a014f28 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a014f78 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a014f50 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a015028 <line:28:3, col:8> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a014fe0 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a015008 <col:8> 'unsigned long long' 9223372032559808512
+    |-CallExpr 0x7f872a0150e8 <line:29:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872a0150d0 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a015060 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872a0150b0 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a015088 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872a015160 <line:30:3, col:8> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872a015118 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872a015140 <col:8> 'unsigned long long' 2147483647
+    |-CallExpr 0x7f872980d038 <line:31:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d020 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872a015198 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d000 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872a0151c0 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d0b0 <line:32:3, col:8> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d068 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d090 <col:8> 'unsigned long long' 4294967295
+    |-CallExpr 0x7f872980d170 <line:33:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d158 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d0e8 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d138 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d110 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d1e8 <line:34:3, col:8> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d1a0 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d1c8 <col:8> 'unsigned long long' 18446744069414584320
+    |-CallExpr 0x7f872980d2a8 <line:35:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d290 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d220 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d270 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d248 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d320 <line:36:3, col:8> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d2d8 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d300 <col:8> 'unsigned long long' 9223372036854775807
+    |-CallExpr 0x7f872980d3e0 <line:37:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d3c8 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d358 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d3a8 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d380 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d458 <line:38:3, col:8> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d410 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d438 <col:8> 'unsigned long long' 18446744071562067967
+    |-CallExpr 0x7f872980d518 <line:39:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d500 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d490 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d4e0 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d4b8 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d590 <line:40:3, col:8> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d548 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d570 <col:8> 'unsigned long long' 9223372032559808512
+    |-CallExpr 0x7f872980d650 <line:41:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d638 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d5c8 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d618 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d5f0 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d6c8 <line:42:3, col:8> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d680 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d6a8 <col:8> 'unsigned long long' 2147483647
+    |-CallExpr 0x7f872980d788 <line:43:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d770 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d700 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d750 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d728 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d800 <line:44:3, col:8> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d7b8 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d7e0 <col:8> 'unsigned long long' 4294967295
+    |-CallExpr 0x7f872980d8c0 <line:45:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7f872980d8a8 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f872980d838 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+    | `-UnaryOperator 0x7f872980d888 <col:8, col:9> 'unsigned long long *' prefix '&'
+    |   `-DeclRefExpr 0x7f872980d860 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    |-CompoundAssignOperator 0x7f872980d938 <line:46:3, col:8> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    | |-DeclRefExpr 0x7f872980d8f0 <col:3> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'
+    | `-IntegerLiteral 0x7f872980d918 <col:8> 'unsigned long long' 18446744069414584320
+    `-CallExpr 0x7f872980d9f8 <line:47:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f872980d9e0 <col:3> 'void (*)(unsigned long long *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f872980d970 <col:3> 'void (unsigned long long *)' Function 0x7f872a014260 'foo' 'void (unsigned long long *)'
+      `-UnaryOperator 0x7f872980d9c0 <col:8, col:9> 'unsigned long long *' prefix '&'
+        `-DeclRefExpr 0x7f872980d998 <col:9> 'unsigned long long' lvalue Var 0x7f872a0144c8 'a' 'unsigned long long'

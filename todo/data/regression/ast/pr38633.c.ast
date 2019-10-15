@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fa34302bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa343047800 <../Data/C2AST/pr38633.c:5:1, line:14:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7fa343047c68 <line:7:1, line:14:1>
+    `-CompoundStmt 0x7fa343047c40 <line:9:3, line:13:3>
+      |-DeclStmt 0x7fa343047ab8 <line:10:5, col:26>
+      | |-RecordDecl 0x7fa3430478e0 <col:5, col:23> col:12 struct A definition
+      | | `-FieldDecl 0x7fa3430479a8 <col:16, col:20> col:20 referenced i 'int'
+      | `-VarDecl 0x7fa343047a40 <col:5, col:25> col:25 used j 'struct A':'struct A'
+      |-BinaryOperator 0x7fa343047b50 <line:11:5, col:11> 'int' '='
+      | |-MemberExpr 0x7fa343047af8 <col:5, col:7> 'int' lvalue .i 0x7fa3430479a8
+      | | `-DeclRefExpr 0x7fa343047ad0 <col:5> 'struct A':'struct A' lvalue Var 0x7fa343047a40 'j' 'struct A':'struct A'
+      | `-IntegerLiteral 0x7fa343047b30 <col:11> 'int' 6
+      `-UnaryOperator 0x7fa343047c20 <line:12:5, col:8> 'int' postfix '++'
+        `-MemberExpr 0x7fa343047be8 <col:5, col:7> 'int' lvalue .i 0x7fa3430479a8
+          `-DeclRefExpr 0x7fa343047bc0 <col:5> 'struct A':'struct A' lvalue Var 0x7fa343047a40 'j' 'struct A':'struct A'

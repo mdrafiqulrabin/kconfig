@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7facc5827ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7facc6014268 <../Data/C2AST/pr43668.c:5:1, line:7:1> line:5:5 used foo 'int (int, ...)'
+| |-ParmVarDecl 0x7facc5828778 <col:9, col:13> col:13 used i 'int'
+| `-CompoundStmt 0x7facc60143a8 <col:21, line:7:1>
+|   `-ReturnStmt 0x7facc6014390 <line:6:3, col:10>
+|     `-ImplicitCastExpr 0x7facc6014378 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7facc6014350 <col:10> 'int' lvalue ParmVar 0x7facc5828778 'i' 'int'
+`-FunctionDecl 0x7facc6014410 <line:8:1, line:10:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7facc60145b0 <col:12, line:10:1>
+    `-ReturnStmt 0x7facc6014598 <line:9:3, col:20>
+      `-CallExpr 0x7facc6014560 <col:10, col:20> 'int'
+        |-ImplicitCastExpr 0x7facc6014548 <col:10> 'int (*)(int, ...)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7facc60144b0 <col:10> 'int (int, ...)' Function 0x7facc6014268 'foo' 'int (int, ...)'
+        |-IntegerLiteral 0x7facc60144d8 <col:14> 'int' 0
+        `-FloatingLiteral 0x7facc60144f8 <col:17> 'double' 0.000000e+00

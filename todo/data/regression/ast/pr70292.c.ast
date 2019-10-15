@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fdb41028ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdb41817200 <../Data/C2AST/pr70292.c:4:1, col:13> col:6 used bar 'void ()'
+| `-CompoundStmt 0x7fdb418172e0 <col:12, col:13>
+|-FunctionDecl 0x7fdb41817458 <line:6:1, line:12:1> line:6:5 t106_1mul 'int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7fdb41817308 <col:15, col:28> col:28 used x 'unsigned int'
+| |-ParmVarDecl 0x7fdb41817380 <col:31, col:44> col:44 used y 'unsigned int'
+| `-CompoundStmt 0x7fdb41817900 <col:47, line:12:1>
+|   |-DeclStmt 0x7fdb41817580 <line:7:5, col:10>
+|   | `-VarDecl 0x7fdb41817520 <col:5, col:9> col:9 used r 'int'
+|   |-IfStmt 0x7fdb41817870 <line:8:5, line:10:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fdb418177b0 <line:8:9, col:40> '_Bool'
+|   | | |-ImplicitCastExpr 0x7fdb41817798 <col:9> 'void (*)()' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fdb41817680 <col:9> '<builtin fn type>' Function 0x7fdb41817598 '__builtin_mul_overflow' 'void ()'
+|   | | |-DeclRefExpr 0x7fdb418176a8 <col:32> 'unsigned int' lvalue ParmVar 0x7fdb41817308 'x' 'unsigned int'
+|   | | |-DeclRefExpr 0x7fdb418176d0 <col:35> 'unsigned int' lvalue ParmVar 0x7fdb41817380 'y' 'unsigned int'
+|   | | `-UnaryOperator 0x7fdb41817748 <col:38, col:39> 'int *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fdb418176f8 <col:39> 'int' lvalue Var 0x7fdb41817520 'r' 'int'
+|   | |-CompoundStmt 0x7fdb41817858 <col:43, line:10:5>
+|   | | `-CallExpr 0x7fdb41817830 <line:9:9, col:13> 'void'
+|   | |   `-ImplicitCastExpr 0x7fdb41817818 <col:9> 'void (*)()' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7fdb418177f0 <col:9> 'void ()' Function 0x7fdb41817200 'bar' 'void ()'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdb418178e8 <line:11:5, col:12>
+|     `-ImplicitCastExpr 0x7fdb418178d0 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fdb418178a8 <col:12> 'int' lvalue Var 0x7fdb41817520 'r' 'int'
+`-FunctionDecl 0x7fdb41817598 <line:8:9> col:9 implicit used __builtin_mul_overflow 'void ()' extern
+  `-NoThrowAttr 0x7fdb41817638 <col:9> Implicit

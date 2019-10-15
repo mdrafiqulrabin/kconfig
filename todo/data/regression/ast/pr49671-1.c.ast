@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f80058128e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8005813578 <../Data/C2AST/pr49671-1.c:3:1, col:14> col:14 used t 'volatile int'
+|-FunctionDecl 0x7f8005854548 <line:4:1, line:7:1> line:4:19 used cvmx_atomic_get32 'int (volatile int *)' static inline
+| |-ParmVarDecl 0x7f8005854480 <col:37, col:51> col:51 used ptr 'volatile int *'
+| `-CompoundStmt 0x7f8005854680 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f8005854668 <line:6:5, col:13>
+|     `-ImplicitCastExpr 0x7f8005854650 <col:12, col:13> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7f8005854630 <col:12, col:13> 'volatile int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7f8005854618 <col:13> 'volatile int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f80058545f0 <col:13> 'volatile int *' lvalue ParmVar 0x7f8005854480 'ptr' 'volatile int *'
+`-FunctionDecl 0x7f8005854760 <line:8:1, line:12:1> line:8:6 f 'void (void)'
+  `-CompoundStmt 0x7f8005854930 <line:9:1, line:12:1>
+    `-WhileStmt 0x7f8005854910 <line:10:3, line:11:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f80058548e0 <line:10:10, col:31> 'int' prefix '!'
+      | `-CallExpr 0x7f80058548b0 <col:11, col:31> 'int'
+      |   |-ImplicitCastExpr 0x7f8005854898 <col:11> 'int (*)(volatile int *)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7f8005854800 <col:11> 'int (volatile int *)' Function 0x7f8005854548 'cvmx_atomic_get32' 'int (volatile int *)'
+      |   `-UnaryOperator 0x7f8005854850 <col:29, col:30> 'volatile int *' prefix '&'
+      |     `-DeclRefExpr 0x7f8005854828 <col:30> 'volatile int' lvalue Var 0x7f8005813578 't' 'volatile int'
+      `-NullStmt 0x7f8005854900 <line:11:5>

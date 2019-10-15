@@ -1,0 +1,42 @@
+../Data/C2AST/pr56989.c:11:19: error: invalid operands to binary expression ('void' and 'int')
+      || voidf () < 0)  
+         ~~~~~~~~ ^ ~
+../Data/C2AST/pr56989.c:14:16: error: invalid operands to binary expression ('void' and 'int')
+  if (voidf () < 0  
+      ~~~~~~~~ ^ ~
+2 errors generated.
+TranslationUnitDecl 0x7fc03300e6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc03300ec60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc03300e980 '__int128'
+|-TypedefDecl 0x7fc03300ecd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc03300e9a0 'unsigned __int128'
+|-TypedefDecl 0x7fc03300efa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc03300edb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc03300ed28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc03300f040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc03300f000 'char *'
+|   `-BuiltinType 0x7fc03300e780 'char'
+|-TypedefDecl 0x7fc03300f308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc03300f2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc03300f120 'struct __va_list_tag'
+|     `-Record 0x7fc03300f098 '__va_list_tag'
+|-FunctionDecl 0x7fc03381bc20 <../Data/C2AST/pr56989.c:4:1, col:24> col:13 used voidf 'void (void)' extern
+|-FunctionDecl 0x7fc03381bdc8 <line:5:1, col:22> col:12 used intf 'int (void)' extern
+`-FunctionDecl 0x7fc03381bf00 <line:7:1, line:19:1> line:8:1 f 'int (void)'
+  `-CompoundStmt 0x7fc03381c780 <line:9:1, line:19:1>
+    |-IfStmt 0x7fc03381c548 <line:10:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc03381c528 <<invalid sloc>> '_Bool'
+    | |-ReturnStmt 0x7fc03381c510 <col:5, col:12>
+    | | `-IntegerLiteral 0x7fc03381c4f0 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc03381c710 <line:14:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-OpaqueValueExpr 0x7fc03381c6f0 <<invalid sloc>> '_Bool'
+    | |-ReturnStmt 0x7fc03381c6d8 <col:5, col:12>
+    | | `-IntegerLiteral 0x7fc03381c6b8 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc03381c768 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fc03381c748 <col:10> 'int' 0

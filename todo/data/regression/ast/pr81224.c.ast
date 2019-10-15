@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fd0e78200e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd0e7820d78 <../Data/C2AST/pr81224.c:5:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fd0e7017a90 <line:6:1, line:11:1> line:7:1 b 'int ()'
+  `-CompoundStmt 0x7fd0e7017e08 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fd0e7017d30 <line:9:3, col:82>
+    | `-VarDecl 0x7fd0e7017c78 <col:3, col:69> col:69 used c '__attribute__((__vector_size__(4 * sizeof(int)))) int' register
+    |   `-AsmLabelAttr 0x7fd0e7017cd8 <col:75> "xmm0"
+    `-ReturnStmt 0x7fd0e7017df0 <line:10:3, col:13>
+      `-ImplicitCastExpr 0x7fd0e7017dd8 <col:10, col:13> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fd0e7017db0 <col:10, col:13> 'int' lvalue vectorcomponent
+          |-DeclRefExpr 0x7fd0e7017d48 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7fd0e7017c78 'c' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7fd0e7017d98 <col:12> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fd0e7017d70 <col:12> 'int' lvalue Var 0x7fd0e7820d78 'a' 'int'

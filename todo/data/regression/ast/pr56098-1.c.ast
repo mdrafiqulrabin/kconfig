@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f8eed82ace8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8eed82b9a0 <../Data/C2AST/pr56098-1.c:5:1, col:15> col:15 used p 'volatile int *'
+`-FunctionDecl 0x7f8eed86c920 <line:7:1, line:13:1> line:8:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f8eed86c858 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7f8eed86cb90 <line:9:1, line:13:1>
+    |-BinaryOperator 0x7f8eed86ca48 <line:10:3, col:8> 'int' '='
+    | |-UnaryOperator 0x7f8eed86ca08 <col:3, col:4> 'volatile int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7f8eed86c9f0 <col:4> 'volatile int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8eed86c9c8 <col:4> 'volatile int *' lvalue Var 0x7f8eed82b9a0 'p' 'volatile int *'
+    | `-IntegerLiteral 0x7f8eed86ca28 <col:8> 'int' 1
+    `-IfStmt 0x7f8eed86cb58 <line:11:3, line:12:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8eed86ca98 <line:11:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8eed86ca70 <col:7> 'int' lvalue ParmVar 0x7f8eed86c858 'x' 'int'
+      |-BinaryOperator 0x7f8eed86cb30 <line:12:5, col:10> 'int' '='
+      | |-UnaryOperator 0x7f8eed86caf0 <col:5, col:6> 'volatile int' lvalue prefix '*'
+      | | `-ImplicitCastExpr 0x7f8eed86cad8 <col:6> 'volatile int *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f8eed86cab0 <col:6> 'volatile int *' lvalue Var 0x7f8eed82b9a0 'p' 'volatile int *'
+      | `-IntegerLiteral 0x7f8eed86cb10 <col:10> 'int' 2
+      `-<<<NULL>>>

@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb4ea022ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb4ea064068 <../Data/C2AST/pr24626-3.c:3:1, col:14> col:6 used fff 'long (int *)'
+| `-ParmVarDecl 0x7fb4ea023ba0 <col:10, col:13> col:14 'int *'
+|-FunctionDecl 0x7fb4ea064230 <line:4:1, col:12> col:6 used T 'void (int *)'
+| `-ParmVarDecl 0x7fb4ea064168 <col:8, col:11> col:12 'int *'
+`-FunctionDecl 0x7fb4ea064380 <line:6:1, line:19:1> line:6:6 F2 'long (int *)'
+  |-ParmVarDecl 0x7fb4ea0642f0 <col:9, col:14> col:14 used node 'int *'
+  `-CompoundStmt 0x7fb4ea064908 <line:7:1, line:19:1>
+    |-DeclStmt 0x7fb4ea0644d8 <line:8:2, col:22>
+    | `-VarDecl 0x7fb4ea064440 <col:2, col:21> col:7 used call_result 'long' cinit
+    |   `-ImplicitCastExpr 0x7fb4ea0644c0 <col:21> 'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fb4ea0644a0 <col:21> 'int' 0
+    |-IfStmt 0x7fb4ea064680 <line:10:2, line:11:8>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb4ea0645f8 <line:10:6, col:28> 'long' '='
+    | | |-DeclRefExpr 0x7fb4ea0644f0 <col:6> 'long' lvalue Var 0x7fb4ea064440 'call_result' 'long'
+    | | `-CallExpr 0x7fb4ea0645b0 <col:20, col:28> 'long'
+    | |   |-ImplicitCastExpr 0x7fb4ea064598 <col:20> 'long (*)(int *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fb4ea064518 <col:20> 'long (int *)' Function 0x7fb4ea064068 'fff' 'long (int *)'
+    | |   `-ImplicitCastExpr 0x7fb4ea0645e0 <col:24> 'int *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fb4ea064540 <col:24> 'int *' lvalue ParmVar 0x7fb4ea0642f0 'node' 'int *'
+    | |-GotoStmt 0x7fb4ea064668 <line:11:3, col:8> 'error_free_node' 0x7fb4ea064620
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fb4ea064750 <line:13:2, col:8> 'void'
+    | |-ImplicitCastExpr 0x7fb4ea064738 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb4ea0646b8 <col:2> 'void (int *)' Function 0x7fb4ea064230 'T' 'void (int *)'
+    | `-ImplicitCastExpr 0x7fb4ea064780 <col:4> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fb4ea0646e0 <col:4> 'int *' lvalue ParmVar 0x7fb4ea0642f0 'node' 'int *'
+    |-ReturnStmt 0x7fb4ea0647d0 <line:14:2, col:9>
+    | `-ImplicitCastExpr 0x7fb4ea0647b8 <col:9> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fb4ea064798 <col:9> 'int' 0
+    |-LabelStmt 0x7fb4ea064898 <line:16:1, line:17:8> 'error_free_node'
+    | `-CallExpr 0x7fb4ea064850 <col:2, col:8> 'void'
+    |   |-ImplicitCastExpr 0x7fb4ea064838 <col:2> 'void (*)(int *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb4ea0647e8 <col:2> 'void (int *)' Function 0x7fb4ea064230 'T' 'void (int *)'
+    |   `-ImplicitCastExpr 0x7fb4ea064880 <col:4> 'int *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb4ea064810 <col:4> 'int *' lvalue ParmVar 0x7fb4ea0642f0 'node' 'int *'
+    `-ReturnStmt 0x7fb4ea0648f0 <line:18:2, col:9>
+      `-ImplicitCastExpr 0x7fb4ea0648d8 <col:9> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7fb4ea0648b0 <col:9> 'long' lvalue Var 0x7fb4ea064440 'call_result' 'long'

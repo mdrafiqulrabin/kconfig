@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe5088240e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe50781ba00 <../Data/C2AST/pr50902.c:3:1, col:15> col:7 used data '_Bool [128]'
+`-FunctionDecl 0x7fe50781bba0 <line:4:1, line:9:1> line:4:6 foo 'void (_Bool *)'
+  |-ParmVarDecl 0x7fe50781bae0 <col:11, col:18> col:18 used init '_Bool *'
+  `-CompoundStmt 0x7fe50781bf98 <line:5:1, line:9:1>
+    |-DeclStmt 0x7fe50781bcc0 <line:6:3, col:8>
+    | `-VarDecl 0x7fe50781bc60 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fe50781bf60 <line:7:3, line:8:16>
+      |-BinaryOperator 0x7fe50781bd20 <line:7:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fe50781bcd8 <col:8> 'int' lvalue Var 0x7fe50781bc60 'i' 'int'
+      | `-IntegerLiteral 0x7fe50781bd00 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe50781bda8 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fe50781bd90 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe50781bd48 <col:15> 'int' lvalue Var 0x7fe50781bc60 'i' 'int'
+      | `-IntegerLiteral 0x7fe50781bd70 <col:19> 'int' 128
+      |-UnaryOperator 0x7fe50781bdf8 <col:24, col:25> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fe50781bdd0 <col:24> 'int' lvalue Var 0x7fe50781bc60 'i' 'int'
+      `-BinaryOperator 0x7fe50781bf38 <line:8:5, col:16> '_Bool' '='
+        |-ArraySubscriptExpr 0x7fe50781be98 <col:5, col:11> '_Bool' lvalue
+        | |-ImplicitCastExpr 0x7fe50781be68 <col:5> '_Bool *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7fe50781be18 <col:5> '_Bool [128]' lvalue Var 0x7fe50781ba00 'data' '_Bool [128]'
+        | `-ImplicitCastExpr 0x7fe50781be80 <col:10> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe50781be40 <col:10> 'int' lvalue Var 0x7fe50781bc60 'i' 'int'
+        `-ImplicitCastExpr 0x7fe50781bf20 <col:15, col:16> '_Bool' <LValueToRValue>
+          `-UnaryOperator 0x7fe50781bf00 <col:15, col:16> '_Bool' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fe50781bee8 <col:16> '_Bool *' <LValueToRValue>
+              `-DeclRefExpr 0x7fe50781bec0 <col:16> '_Bool *' lvalue ParmVar 0x7fe50781bae0 'init' '_Bool *'

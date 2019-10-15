@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f98ce022ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f98ce814200 <../Data/C2AST/pr53470_0.c:4:1, line:9:1> line:4:5 main 'int ()'
+  `-CompoundStmt 0x7f98ce814488 <line:5:1, line:9:1>
+    `-CompoundStmt 0x7f98ce814470 <line:6:3, line:8:3>
+      `-DeclStmt 0x7f98ce814458 <line:7:5, col:18>
+        |-RecordDecl 0x7f98ce8142e0 <col:5, col:15> col:11 union A definition
+        `-VarDecl 0x7f98ce8143e0 <col:5, col:17> col:17 v 'union A':'union A'

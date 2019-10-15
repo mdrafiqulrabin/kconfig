@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fbe538262e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbe54014200 <../Data/C2AST/pr55315.c:3:1, col:14> col:5 used data 'int [4096]'
+`-FunctionDecl 0x7fbe54014368 <line:5:1, line:9:1> line:6:1 f 'int (void)'
+  `-CompoundStmt 0x7fbe540145d0 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fbe540145b8 <line:8:3, col:52>
+      `-ParenExpr 0x7fbe54014598 <col:10, col:52> 'int'
+        `-BinaryOperator 0x7fbe54014570 <col:11, col:41> 'int' '=='
+          |-ParenExpr 0x7fbe54014518 <col:11, col:36> 'unsigned long'
+          | `-CStyleCastExpr 0x7fbe540144f0 <col:12, col:35> 'unsigned long' <PointerToIntegral>
+          |   `-UnaryOperator 0x7fbe540144b8 <col:28, col:35> 'int *' prefix '&'
+          |     `-ArraySubscriptExpr 0x7fbe54014490 <col:29, col:35> 'int' lvalue
+          |       |-ImplicitCastExpr 0x7fbe54014478 <col:29> 'int *' <ArrayToPointerDecay>
+          |       | `-DeclRefExpr 0x7fbe54014408 <col:29> 'int [4096]' lvalue Var 0x7fbe54014200 'data' 'int [4096]'
+          |       `-IntegerLiteral 0x7fbe54014430 <col:34> 'int' 0
+          `-ImplicitCastExpr 0x7fbe54014558 <col:41> 'unsigned long' <IntegralCast>
+            `-IntegerLiteral 0x7fbe54014538 <col:41> 'unsigned int' 3735928480

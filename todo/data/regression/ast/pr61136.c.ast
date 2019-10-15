@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fa92d02b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa92d06ce68 <../Data/C2AST/pr61136.c:1:1, line:5:1> line:2:1 foo 'unsigned long long (int)'
+  |-ParmVarDecl 0x7fa92d02bf78 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fa92d06d098 <line:3:1, line:5:1>
+    `-ReturnStmt 0x7fa92d06d080 <line:4:3, col:26>
+      `-BinaryOperator 0x7fa92d06d058 <col:10, col:26> 'unsigned long long' '&'
+        |-ImplicitCastExpr 0x7fa92d06d040 <col:10, col:14> 'unsigned long long' <IntegralCast>
+        | `-BinaryOperator 0x7fa92d06cfb0 <col:10, col:14> 'int' '*'
+        |   |-ImplicitCastExpr 0x7fa92d06cf98 <col:10> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fa92d06cf50 <col:10> 'int' lvalue ParmVar 0x7fa92d02bf78 'a' 'int'
+        |   `-IntegerLiteral 0x7fa92d06cf78 <col:14> 'int' 7
+        `-BinaryOperator 0x7fa92d06d018 <col:18, col:26> 'unsigned long long' '<<'
+          |-IntegerLiteral 0x7fa92d06cfd8 <col:18> 'unsigned long long' 1
+          `-IntegerLiteral 0x7fa92d06cff8 <col:26> 'int' 63

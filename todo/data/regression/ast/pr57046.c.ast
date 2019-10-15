@@ -1,0 +1,204 @@
+TranslationUnitDecl 0x7fceeb00a6e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fceeb00b360 <../Data/C2AST/pr57046.c:4:1, line:6:1> line:4:8 struct emac definition
+| `-FieldDecl 0x7fceec8108a0 <line:5:9, col:24> col:18 referenced reg 'unsigned int [23]'
+|-RecordDecl 0x7fceec8108e8 <line:8:1, line:11:1> line:8:8 struct mop definition
+| |-FieldDecl 0x7fceec8109a8 <line:9:9, col:28> col:28 referenced addr 'unsigned long long'
+| `-FieldDecl 0x7fceec810a08 <line:10:9, col:22> col:22 referenced size 'unsigned int'
+|-FunctionDecl 0x7fceec810c08 <line:13:1, line:17:1> line:14:1 used level 'unsigned int (const struct emac *)'
+| |-ParmVarDecl 0x7fceec810b00 <col:7, col:26> col:26 obj 'const struct emac *'
+| |-CompoundStmt 0x7fceec810d88 <line:15:1, line:17:1>
+| | `-ReturnStmt 0x7fceec810d70 <line:16:2, col:9>
+| |   `-ImplicitCastExpr 0x7fceec810d58 <col:9> 'unsigned int' <IntegralCast>
+| |     `-IntegerLiteral 0x7fceec810d38 <col:9> 'int' 0
+| `-NoInlineAttr 0x7fceec810cb0 <line:13:29>
+|-FunctionDecl 0x7fceec810fb0 <line:19:1, line:23:1> line:20:1 used info 'void (struct emac *, unsigned long long)'
+| |-ParmVarDecl 0x7fceec810e20 <col:6, col:19> col:19 dev 'struct emac *'
+| |-ParmVarDecl 0x7fceec810e98 <col:24, col:43> col:43 addr 'unsigned long long'
+| |-CompoundStmt 0x7fceec8111c8 <line:21:1, line:23:1>
+| | `-GCCAsmStmt 0x7fceec811178 <line:22:2, col:23>
+| `-NoInlineAttr 0x7fceec811060 <line:19:21>
+|-FunctionDecl 0x7fceec811398 <line:25:1, line:29:1> line:26:1 used get_value 'unsigned long long (const struct mop *)'
+| |-ParmVarDecl 0x7fceec811290 <col:11, col:29> col:29 mop 'const struct mop *'
+| |-CompoundStmt 0x7fceec8114c0 <line:27:1, line:29:1>
+| | `-ReturnStmt 0x7fceec8114a8 <line:28:9, col:16>
+| |   `-IntegerLiteral 0x7fceec811488 <col:16> 'unsigned long long' 1311768467294899695
+| `-NoInlineAttr 0x7fceec811440 <line:25:35>
+|-FunctionDecl 0x7fceec8116f8 <line:31:1, line:63:1> line:32:1 used emac_operation 'int (struct emac *, struct mop *)'
+| |-ParmVarDecl 0x7fceec811500 <col:16, col:29> col:29 used obj 'struct emac *'
+| |-ParmVarDecl 0x7fceec8115e0 <col:34, col:46> col:46 used mop 'struct mop *'
+| |-CompoundStmt 0x7fceeb01b1a8 <line:33:1, line:63:1>
+| | |-DeclStmt 0x7fceeb01a108 <line:34:9, col:44>
+| | | `-VarDecl 0x7fceeb01a018 <col:9, col:40> col:28 used addr 'unsigned long long' cinit
+| | |   `-ImplicitCastExpr 0x7fceeb01a0f0 <col:35, col:40> 'unsigned long long' <LValueToRValue>
+| | |     `-MemberExpr 0x7fceeb01a0b8 <col:35, col:40> 'unsigned long long' lvalue ->addr 0x7fceec8109a8
+| | |       `-ImplicitCastExpr 0x7fceeb01a0a0 <col:35> 'struct mop *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fceeb01a078 <col:35> 'struct mop *' lvalue ParmVar 0x7fceec8115e0 'mop' 'struct mop *'
+| | |-DeclStmt 0x7fceeb01a238 <line:35:9, col:30>
+| | | `-VarDecl 0x7fceeb01a138 <col:9, col:29> col:13 used index 'int' cinit
+| | |   `-ImplicitCastExpr 0x7fceeb01a220 <col:21, col:29> 'int' <IntegralCast>
+| | |     `-BinaryOperator 0x7fceeb01a1f8 <col:21, col:29> 'unsigned long long' '>>'
+| | |       |-ImplicitCastExpr 0x7fceeb01a1e0 <col:21> 'unsigned long long' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fceeb01a198 <col:21> 'unsigned long long' lvalue Var 0x7fceeb01a018 'addr' 'unsigned long long'
+| | |       `-IntegerLiteral 0x7fceeb01a1c0 <col:29> 'int' 2
+| | |-DeclStmt 0x7fceeb01a358 <line:36:2, col:31>
+| | | |-VarDecl 0x7fceeb01a268 <col:2, col:15> col:15 used value 'unsigned int'
+| | | `-VarDecl 0x7fceeb01a2e0 <col:2, col:22> col:22 used old_value 'unsigned int'
+| | |-IfStmt 0x7fceeb01a498 <line:38:9, line:39:24>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fceeb01a438 <line:38:13, col:26> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fceeb01a408 <col:13, col:18> 'unsigned int' <LValueToRValue>
+| | | | | `-MemberExpr 0x7fceeb01a3b0 <col:13, col:18> 'unsigned int' lvalue ->size 0x7fceec810a08
+| | | | |   `-ImplicitCastExpr 0x7fceeb01a398 <col:13> 'struct mop *' <LValueToRValue>
+| | | | |     `-DeclRefExpr 0x7fceeb01a370 <col:13> 'struct mop *' lvalue ParmVar 0x7fceec8115e0 'mop' 'struct mop *'
+| | | | `-ImplicitCastExpr 0x7fceeb01a420 <col:26> 'unsigned int' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fceeb01a3e8 <col:26> 'int' 4
+| | | |-ReturnStmt 0x7fceeb01a480 <line:39:17, col:24>
+| | | | `-IntegerLiteral 0x7fceeb01a460 <col:24> 'int' 0
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fceeb01a8c8 <line:41:9, line:45:9>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fceeb01a530 <line:41:13, col:22> 'int' '>='
+| | | | |-ImplicitCastExpr 0x7fceeb01a518 <col:13> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fceeb01a4d0 <col:13> 'int' lvalue Var 0x7fceeb01a138 'index' 'int'
+| | | | `-IntegerLiteral 0x7fceeb01a4f8 <col:22> 'int' 23
+| | | |-CompoundStmt 0x7fceeb01a8a8 <col:26, line:45:9>
+| | | | |-IfStmt 0x7fceeb01a838 <line:42:17, line:43:39>
+| | | | | |-<<<NULL>>>
+| | | | | |-<<<NULL>>>
+| | | | | |-BinaryOperator 0x7fceeb01a6b8 <line:42:21, col:35> 'int' '>='
+| | | | | | |-CallExpr 0x7fceeb01a620 <col:21, col:30> 'unsigned int'
+| | | | | | | |-ImplicitCastExpr 0x7fceeb01a608 <col:21> 'unsigned int (*)(const struct emac *)' <FunctionToPointerDecay>
+| | | | | | | | `-DeclRefExpr 0x7fceeb01a558 <col:21> 'unsigned int (const struct emac *)' Function 0x7fceec810c08 'level' 'unsigned int (const struct emac *)'
+| | | | | | | `-ImplicitCastExpr 0x7fceeb01a668 <col:27> 'const struct emac *' <BitCast>
+| | | | | | |   `-ImplicitCastExpr 0x7fceeb01a650 <col:27> 'struct emac *' <LValueToRValue>
+| | | | | | |     `-DeclRefExpr 0x7fceeb01a580 <col:27> 'struct emac *' lvalue ParmVar 0x7fceec811500 'obj' 'struct emac *'
+| | | | | | `-ImplicitCastExpr 0x7fceeb01a6a0 <col:35> 'unsigned int' <IntegralCast>
+| | | | | |   `-IntegerLiteral 0x7fceeb01a680 <col:35> 'int' 1
+| | | | | |-CallExpr 0x7fceeb01a7d0 <line:43:25, col:39> 'void'
+| | | | | | |-ImplicitCastExpr 0x7fceeb01a7b8 <col:25> 'void (*)(struct emac *, unsigned long long)' <FunctionToPointerDecay>
+| | | | | | | `-DeclRefExpr 0x7fceeb01a6e0 <col:25> 'void (struct emac *, unsigned long long)' Function 0x7fceec810fb0 'info' 'void (struct emac *, unsigned long long)'
+| | | | | | |-ImplicitCastExpr 0x7fceeb01a808 <col:30> 'struct emac *' <LValueToRValue>
+| | | | | | | `-DeclRefExpr 0x7fceeb01a708 <col:30> 'struct emac *' lvalue ParmVar 0x7fceec811500 'obj' 'struct emac *'
+| | | | | | `-ImplicitCastExpr 0x7fceeb01a820 <col:35> 'unsigned long long' <LValueToRValue>
+| | | | | |   `-DeclRefExpr 0x7fceeb01a730 <col:35> 'unsigned long long' lvalue Var 0x7fceeb01a018 'addr' 'unsigned long long'
+| | | | | `-<<<NULL>>>
+| | | | `-ReturnStmt 0x7fceeb01a890 <line:44:17, col:24>
+| | | |   `-IntegerLiteral 0x7fceeb01a870 <col:24> 'int' 0
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fceeb01aa68 <line:47:9, col:30> 'unsigned int' '='
+| | | |-DeclRefExpr 0x7fceeb01a900 <col:9> 'unsigned int' lvalue Var 0x7fceeb01a268 'value' 'unsigned int'
+| | | `-ImplicitCastExpr 0x7fceeb01aa50 <col:17, col:30> 'unsigned int' <IntegralCast>
+| | |   `-CallExpr 0x7fceeb01a9f0 <col:17, col:30> 'unsigned long long'
+| | |     |-ImplicitCastExpr 0x7fceeb01a9d8 <col:17> 'unsigned long long (*)(const struct mop *)' <FunctionToPointerDecay>
+| | |     | `-DeclRefExpr 0x7fceeb01a928 <col:17> 'unsigned long long (const struct mop *)' Function 0x7fceec811398 'get_value' 'unsigned long long (const struct mop *)'
+| | |     `-ImplicitCastExpr 0x7fceeb01aa38 <col:27> 'const struct mop *' <BitCast>
+| | |       `-ImplicitCastExpr 0x7fceeb01aa20 <col:27> 'struct mop *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fceeb01a950 <col:27> 'struct mop *' lvalue ParmVar 0x7fceec8115e0 'mop' 'struct mop *'
+| | |-BinaryOperator 0x7fceeb01abf8 <line:48:9, col:35> 'unsigned int' '='
+| | | |-DeclRefExpr 0x7fceeb01aa90 <col:9> 'unsigned int' lvalue Var 0x7fceeb01a2e0 'old_value' 'unsigned int'
+| | | `-ImplicitCastExpr 0x7fceeb01abe0 <col:21, col:35> 'unsigned int' <LValueToRValue>
+| | |   `-ArraySubscriptExpr 0x7fceeb01abb8 <col:21, col:35> 'unsigned int' lvalue
+| | |     |-ImplicitCastExpr 0x7fceeb01ab88 <col:21, col:26> 'unsigned int *' <ArrayToPointerDecay>
+| | |     | `-MemberExpr 0x7fceeb01aaf8 <col:21, col:26> 'unsigned int [23]' lvalue ->reg 0x7fceec8108a0
+| | |     |   `-ImplicitCastExpr 0x7fceeb01aae0 <col:21> 'struct emac *' <LValueToRValue>
+| | |     |     `-DeclRefExpr 0x7fceeb01aab8 <col:21> 'struct emac *' lvalue ParmVar 0x7fceec811500 'obj' 'struct emac *'
+| | |     `-ImplicitCastExpr 0x7fceeb01aba0 <col:30> 'int' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fceeb01ab30 <col:30> 'int' lvalue Var 0x7fceeb01a138 'index' 'int'
+| | |-CallExpr 0x7fceeb01aca8 <line:50:9, col:20> 'void'
+| | | |-ImplicitCastExpr 0x7fceeb01ac90 <col:9> 'void (*)(struct emac *, unsigned long long)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fceeb01ac20 <col:9> 'void (struct emac *, unsigned long long)' Function 0x7fceec810fb0 'info' 'void (struct emac *, unsigned long long)'
+| | | |-ImplicitCastExpr 0x7fceeb01ace0 <col:14> 'struct emac *' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fceeb01ac48 <col:14> 'struct emac *' lvalue ParmVar 0x7fceec811500 'obj' 'struct emac *'
+| | | `-ImplicitCastExpr 0x7fceeb01acf8 <col:19> 'unsigned long long' <IntegralCast>
+| | |   `-IntegerLiteral 0x7fceeb01ac70 <col:19> 'int' 0
+| | |-SwitchStmt 0x7fceeb01ad50 <line:52:9, line:60:9>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fceeb01ad38 <line:52:17> 'int' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fceeb01ad10 <col:17> 'int' lvalue Var 0x7fceeb01a138 'index' 'int'
+| | | `-CompoundStmt 0x7fceeb01b140 <col:24, line:60:9>
+| | |   |-CaseStmt 0x7fceeb01ada0 <line:53:9, line:54:31>
+| | |   | |-IntegerLiteral 0x7fceeb01ad80 <line:53:14> 'int' 0
+| | |   | |-<<<NULL>>>
+| | |   | `-BinaryOperator 0x7fceeb01aef0 <line:54:17, col:31> 'unsigned int' '='
+| | |   |   |-ArraySubscriptExpr 0x7fceeb01ae88 <col:17, col:27> 'unsigned int' lvalue
+| | |   |   | |-ImplicitCastExpr 0x7fceeb01ae70 <col:17, col:22> 'unsigned int *' <ArrayToPointerDecay>
+| | |   |   | | `-MemberExpr 0x7fceeb01ae18 <col:17, col:22> 'unsigned int [23]' lvalue ->reg 0x7fceec8108a0
+| | |   |   | |   `-ImplicitCastExpr 0x7fceeb01ae00 <col:17> 'struct emac *' <LValueToRValue>
+| | |   |   | |     `-DeclRefExpr 0x7fceeb01add8 <col:17> 'struct emac *' lvalue ParmVar 0x7fceec811500 'obj' 'struct emac *'
+| | |   |   | `-IntegerLiteral 0x7fceeb01ae50 <col:26> 'int' 0
+| | |   |   `-ImplicitCastExpr 0x7fceeb01aed8 <col:31> 'unsigned int' <LValueToRValue>
+| | |   |     `-DeclRefExpr 0x7fceeb01aeb0 <col:31> 'unsigned int' lvalue Var 0x7fceeb01a2e0 'old_value' 'unsigned int'
+| | |   |-BreakStmt 0x7fceeb01af18 <line:55:17>
+| | |   |-CaseStmt 0x7fceeb01af40 <line:56:9, line:58:35>
+| | |   | |-IntegerLiteral 0x7fceeb01af20 <line:56:14> 'int' 7
+| | |   | |-<<<NULL>>>
+| | |   | `-CaseStmt 0x7fceeb01af98 <line:57:9, line:58:35>
+| | |   |   |-IntegerLiteral 0x7fceeb01af78 <line:57:14> 'int' 8
+| | |   |   |-<<<NULL>>>
+| | |   |   `-BinaryOperator 0x7fceeb01b110 <line:58:17, col:35> 'unsigned int' '='
+| | |   |     |-ArraySubscriptExpr 0x7fceeb01b0a8 <col:17, col:31> 'unsigned int' lvalue
+| | |   |     | |-ImplicitCastExpr 0x7fceeb01b078 <col:17, col:22> 'unsigned int *' <ArrayToPointerDecay>
+| | |   |     | | `-MemberExpr 0x7fceeb01b018 <col:17, col:22> 'unsigned int [23]' lvalue ->reg 0x7fceec8108a0
+| | |   |     | |   `-ImplicitCastExpr 0x7fceeb01b000 <col:17> 'struct emac *' <LValueToRValue>
+| | |   |     | |     `-DeclRefExpr 0x7fceeb01afd0 <col:17> 'struct emac *' lvalue ParmVar 0x7fceec811500 'obj' 'struct emac *'
+| | |   |     | `-ImplicitCastExpr 0x7fceeb01b090 <col:26> 'int' <LValueToRValue>
+| | |   |     |   `-DeclRefExpr 0x7fceeb01b050 <col:26> 'int' lvalue Var 0x7fceeb01a138 'index' 'int'
+| | |   |     `-ImplicitCastExpr 0x7fceeb01b0f8 <col:35> 'unsigned int' <LValueToRValue>
+| | |   |       `-DeclRefExpr 0x7fceeb01b0d0 <col:35> 'unsigned int' lvalue Var 0x7fceeb01a268 'value' 'unsigned int'
+| | |   `-BreakStmt 0x7fceeb01b138 <line:59:17>
+| | `-ReturnStmt 0x7fceeb01b190 <line:62:9, col:16>
+| |   `-IntegerLiteral 0x7fceeb01b170 <col:16> 'int' 0
+| `-NoInlineAttr 0x7fceec8117a8 <line:31:20>
+|-FunctionDecl 0x7fceeb01b2d8 <line:65:1, line:77:1> line:65:5 main 'int (void)'
+| `-CompoundStmt 0x7fceeb01bd48 <line:66:1, line:77:1>
+|   |-DeclStmt 0x7fceeb01b590 <line:67:2, col:27>
+|   | `-VarDecl 0x7fceeb01b3c8 <col:2, col:26> col:14 used e 'struct emac':'struct emac' cinit
+|   |   `-InitListExpr 0x7fceeb01b4d8 <col:18, col:26> 'struct emac':'struct emac'
+|   |     `-InitListExpr 0x7fceeb01b520 <col:20, col:24> 'unsigned int [23]'
+|   |       |-array filler
+|   |       | `-ImplicitValueInitExpr 0x7fceeb01b580 <<invalid sloc>> 'unsigned int'
+|   |       `-ImplicitCastExpr 0x7fceeb01b560 <col:22> 'unsigned int' <IntegralCast>
+|   |         `-IntegerLiteral 0x7fceeb01b428 <col:22> 'int' 0
+|   |-DeclStmt 0x7fceeb01b738 <line:68:2, col:28>
+|   | `-VarDecl 0x7fceeb01b5c8 <col:2, col:27> col:13 used mop 'struct mop':'struct mop' cinit
+|   |   `-InitListExpr 0x7fceeb01b6b8 <col:19, col:27> 'struct mop':'struct mop'
+|   |     |-ImplicitCastExpr 0x7fceeb01b708 <col:21> 'unsigned long long' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7fceeb01b628 <col:21> 'int' 32
+|   |     `-ImplicitCastExpr 0x7fceeb01b720 <col:25> 'unsigned int' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fceeb01b648 <col:25> 'int' 4
+|   |-BinaryOperator 0x7fceeb01b830 <line:70:2, col:13> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7fceeb01b7e8 <col:2, col:9> 'unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7fceeb01b7d0 <col:2, col:4> 'unsigned int *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fceeb01b778 <col:2, col:4> 'unsigned int [23]' lvalue .reg 0x7fceec8108a0
+|   | | |   `-DeclRefExpr 0x7fceeb01b750 <col:2> 'struct emac':'struct emac' lvalue Var 0x7fceeb01b3c8 'e' 'struct emac':'struct emac'
+|   | | `-IntegerLiteral 0x7fceeb01b7b0 <col:8> 'int' 8
+|   | `-IntegerLiteral 0x7fceeb01b810 <col:13> 'unsigned int' 3735928559
+|   |-CallExpr 0x7fceeb01b9d0 <line:71:2, col:25> 'int'
+|   | |-ImplicitCastExpr 0x7fceeb01b9b8 <col:2> 'int (*)(struct emac *, struct mop *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fceeb01b8a0 <col:2> 'int (struct emac *, struct mop *)' Function 0x7fceec8116f8 'emac_operation' 'int (struct emac *, struct mop *)'
+|   | |-UnaryOperator 0x7fceeb01b8f0 <col:17, col:18> 'struct emac *' prefix '&'
+|   | | `-DeclRefExpr 0x7fceeb01b8c8 <col:18> 'struct emac':'struct emac' lvalue Var 0x7fceeb01b3c8 'e' 'struct emac':'struct emac'
+|   | `-UnaryOperator 0x7fceeb01b938 <col:21, col:22> 'struct mop *' prefix '&'
+|   |   `-DeclRefExpr 0x7fceeb01b910 <col:22> 'struct mop':'struct mop' lvalue Var 0x7fceeb01b5c8 'mop' 'struct mop':'struct mop'
+|   |-IfStmt 0x7fceeb01bcd8 <line:73:2, line:74:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fceeb01bb00 <line:73:6, col:18> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fceeb01bae8 <col:6, col:13> 'unsigned int' <LValueToRValue>
+|   | | | `-ArraySubscriptExpr 0x7fceeb01baa0 <col:6, col:13> 'unsigned int' lvalue
+|   | | |   |-ImplicitCastExpr 0x7fceeb01ba88 <col:6, col:8> 'unsigned int *' <ArrayToPointerDecay>
+|   | | |   | `-MemberExpr 0x7fceeb01ba30 <col:6, col:8> 'unsigned int [23]' lvalue .reg 0x7fceec8108a0
+|   | | |   |   `-DeclRefExpr 0x7fceeb01ba08 <col:6> 'struct emac':'struct emac' lvalue Var 0x7fceeb01b3c8 'e' 'struct emac':'struct emac'
+|   | | |   `-IntegerLiteral 0x7fceeb01ba68 <col:12> 'int' 8
+|   | | `-IntegerLiteral 0x7fceeb01bac8 <col:18> 'unsigned int' 2427178479
+|   | |-CallExpr 0x7fceeb01bcb0 <line:74:5, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7fceeb01bc98 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fceeb01bc48 <col:5> '<builtin fn type>' Function 0x7fceeb01bb60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fceeb01bd30 <line:76:5, col:12>
+|     `-IntegerLiteral 0x7fceeb01bd10 <col:12> 'int' 0
+`-FunctionDecl 0x7fceeb01bb60 <line:74:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fceeb01bc00 <col:5> Implicit

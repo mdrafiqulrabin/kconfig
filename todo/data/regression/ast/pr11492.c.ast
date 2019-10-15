@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7ffb3602bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffb3606d828 <../Data/C2AST/pr11492.c:4:1, line:12:1> line:4:5 main 'int (void)'
+  `-CompoundStmt 0x7ffb3606dd90 <line:5:1, line:12:1>
+    |-DeclStmt 0x7ffb3606d9b0 <line:6:3, col:17>
+    | `-VarDecl 0x7ffb3606d950 <col:3, col:16> col:16 used a 'unsigned int'
+    |-DeclStmt 0x7ffb3606da40 <line:7:3, col:18>
+    | `-VarDecl 0x7ffb3606d9e0 <col:3, col:17> col:17 used b 'unsigned char'
+    |-ForStmt 0x7ffb3606dd20 <line:8:3, line:9:9>
+    | |-BinaryOperator 0x7ffb3606db68 <line:8:9, col:20> 'unsigned char' ','
+    | | |-BinaryOperator 0x7ffb3606dab8 <col:9, col:13> 'unsigned int' '='
+    | | | |-DeclRefExpr 0x7ffb3606da58 <col:9> 'unsigned int' lvalue Var 0x7ffb3606d950 'a' 'unsigned int'
+    | | | `-ImplicitCastExpr 0x7ffb3606daa0 <col:13> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7ffb3606da80 <col:13> 'int' 0
+    | | `-BinaryOperator 0x7ffb3606db40 <col:16, col:20> 'unsigned char' '='
+    | |   |-DeclRefExpr 0x7ffb3606dae0 <col:16> 'unsigned char' lvalue Var 0x7ffb3606d9e0 'b' 'unsigned char'
+    | |   `-ImplicitCastExpr 0x7ffb3606db28 <col:20> 'unsigned char' <IntegralCast>
+    | |     `-IntegerLiteral 0x7ffb3606db08 <col:20> 'int' 2
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffb3606dc88 <col:23, col:31> 'int' '>'
+    | | |-ImplicitCastExpr 0x7ffb3606dc58 <col:23> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffb3606db90 <col:23> 'unsigned int' lvalue Var 0x7ffb3606d950 'a' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7ffb3606dc70 <col:27, col:31> 'unsigned int' <IntegralCast>
+    | |   `-BinaryOperator 0x7ffb3606dc30 <col:27, col:31> 'int' '*'
+    | |     |-ImplicitCastExpr 0x7ffb3606dc18 <col:27> 'int' <IntegralCast>
+    | |     | `-ImplicitCastExpr 0x7ffb3606dc00 <col:27> 'unsigned char' <LValueToRValue>
+    | |     |   `-DeclRefExpr 0x7ffb3606dbb8 <col:27> 'unsigned char' lvalue Var 0x7ffb3606d9e0 'b' 'unsigned char'
+    | |     `-IntegerLiteral 0x7ffb3606dbe0 <col:31> 'int' 100
+    | |-UnaryOperator 0x7ffb3606dcd8 <col:36, col:37> 'unsigned int' postfix '++'
+    | | `-DeclRefExpr 0x7ffb3606dcb0 <col:36> 'unsigned int' lvalue Var 0x7ffb3606d950 'a' 'unsigned int'
+    | `-CompoundStmt 0x7ffb3606dd08 <line:9:5, col:9>
+    |   `-NullStmt 0x7ffb3606dcf8 <col:7>
+    `-ReturnStmt 0x7ffb3606dd78 <line:11:3, col:10>
+      `-IntegerLiteral 0x7ffb3606dd58 <col:10> 'int' 0

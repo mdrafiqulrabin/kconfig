@@ -1,0 +1,42 @@
+../Data/C2AST/pr82765.c:5:31: error: integer literal is too large to be represented in any integer type
+int main() { int *b[] = {a, a[1820408606019012862278468], a, a, a}; }
+                              ^
+1 error generated.
+TranslationUnitDecl 0x7fdc5002bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdc5002c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdc5002bf80 '__int128'
+|-TypedefDecl 0x7fdc5002c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdc5002bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fdc5002c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdc5002c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdc5002c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdc5002c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdc5002c600 'char *'
+|   `-BuiltinType 0x7fdc5002bd80 'char'
+|-TypedefDecl 0x7fdc5002c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdc5002c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdc5002c720 'struct __va_list_tag'
+|     `-Record 0x7fdc5002c698 '__va_list_tag'
+|-VarDecl 0x7fdc50814270 <../Data/C2AST/pr82765.c:4:1, col:11> col:5 used a 'int [1][1]'
+`-FunctionDecl 0x7fdc50814360 <line:5:1, col:69> col:5 main 'int ()'
+  `-CompoundStmt 0x7fdc508148b0 <col:12, col:69>
+    `-DeclStmt 0x7fdc50814898 <col:14, col:67>
+      `-VarDecl 0x7fdc50814480 <col:14, col:66> col:19 b 'int *[5]' cinit
+        `-InitListExpr 0x7fdc50814698 <col:25, col:66> 'int *[5]'
+          |-ImplicitCastExpr 0x7fdc508146f0 <col:26> 'int *' <BitCast>
+          | `-ImplicitCastExpr 0x7fdc508146d8 <col:26> 'int (*)[1]' <ArrayToPointerDecay>
+          |   `-DeclRefExpr 0x7fdc508144e0 <col:26> 'int [1][1]' lvalue Var 0x7fdc50814270 'a' 'int [1][1]'
+          |-ImplicitCastExpr 0x7fdc50814740 <col:29, col:56> 'int *' <ArrayToPointerDecay>
+          | `-ArraySubscriptExpr 0x7fdc50814590 <col:29, col:56> 'int [1]' lvalue
+          |   |-ImplicitCastExpr 0x7fdc50814578 <col:29> 'int (*)[1]' <ArrayToPointerDecay>
+          |   | `-DeclRefExpr 0x7fdc50814508 <col:29> 'int [1][1]' lvalue Var 0x7fdc50814270 'a' 'int [1][1]'
+          |   `-IntegerLiteral 0x7fdc50814530 <col:31> 'unsigned long long' 10113849059470605124
+          |-ImplicitCastExpr 0x7fdc50814780 <col:59> 'int *' <BitCast>
+          | `-ImplicitCastExpr 0x7fdc50814768 <col:59> 'int (*)[1]' <ArrayToPointerDecay>
+          |   `-DeclRefExpr 0x7fdc508145b8 <col:59> 'int [1][1]' lvalue Var 0x7fdc50814270 'a' 'int [1][1]'
+          |-ImplicitCastExpr 0x7fdc508147d0 <col:62> 'int *' <BitCast>
+          | `-ImplicitCastExpr 0x7fdc508147b8 <col:62> 'int (*)[1]' <ArrayToPointerDecay>
+          |   `-DeclRefExpr 0x7fdc508145e0 <col:62> 'int [1][1]' lvalue Var 0x7fdc50814270 'a' 'int [1][1]'
+          `-ImplicitCastExpr 0x7fdc50814800 <col:65> 'int *' <BitCast>
+            `-ImplicitCastExpr 0x7fdc508147e8 <col:65> 'int (*)[1]' <ArrayToPointerDecay>
+              `-DeclRefExpr 0x7fdc50814608 <col:65> 'int [1][1]' lvalue Var 0x7fdc50814270 'a' 'int [1][1]'

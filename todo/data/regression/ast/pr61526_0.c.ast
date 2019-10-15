@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f9ca202bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9ca202c978 <../Data/C2AST/pr61526_0.c:7:1, col:14> col:14 used master 'void *' static
+`-FunctionDecl 0x7f9ca206d890 <line:8:1, col:31> col:7 foo 'void *()'
+  `-CompoundStmt 0x7f9ca206d988 <col:14, col:31>
+    `-ReturnStmt 0x7f9ca206d970 <col:16, col:23>
+      `-ImplicitCastExpr 0x7f9ca206d958 <col:23> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7f9ca206d930 <col:23> 'void *' lvalue Var 0x7f9ca202c978 'master' 'void *'

@@ -1,0 +1,143 @@
+TranslationUnitDecl 0x7fb1950174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb195018160 <../Data/C2AST/pr28675.c:1:1, line:8:1> line:1:8 struct fb_cmap definition
+| |-FieldDecl 0x7fb195059038 <line:2:2, col:15> col:15 start 'unsigned int'
+| |-FieldDecl 0x7fb195059098 <line:3:2, col:15> col:15 len 'unsigned int'
+| |-FieldDecl 0x7fb195059120 <line:4:2, col:18> col:18 referenced red 'unsigned short *'
+| |-FieldDecl 0x7fb195059180 <line:5:2, col:18> col:18 referenced green 'unsigned short *'
+| |-FieldDecl 0x7fb1950591e0 <line:6:2, col:18> col:18 referenced blue 'unsigned short *'
+| `-FieldDecl 0x7fb195059240 <line:7:2, col:18> col:18 referenced transp 'unsigned short *'
+|-RecordDecl 0x7fb195059288 <line:10:9, line:15:1> line:10:9 struct definition
+| |-FieldDecl 0x7fb195059348 <line:11:5, col:9> col:9 referenced r 'int'
+| |-FieldDecl 0x7fb1950593a8 <line:12:5, col:9> col:9 referenced g 'int'
+| |-FieldDecl 0x7fb195059408 <line:13:5, col:9> col:9 referenced b 'int'
+| `-FieldDecl 0x7fb195059468 <line:14:5, col:9> col:9 referenced a 'int'
+|-TypedefDecl 0x7fb195059500 <line:10:1, line:15:3> col:3 referenced rgba_t 'struct rgba_t':'rgba_t'
+| `-ElaboratedType 0x7fb1950594b0 'struct rgba_t' sugar
+|   `-RecordType 0x7fb195059310 'rgba_t'
+|     `-Record 0x7fb195059288 ''
+|-VarDecl 0x7fb195059588 <line:17:1, col:21> col:21 used cmap_len 'unsigned int' static
+|-VarDecl 0x7fb195059640 <line:19:1, col:21> col:21 used red_len 'unsigned int' extern
+|-VarDecl 0x7fb1950596b8 <col:1, col:30> col:30 used green_len 'unsigned int' extern
+|-VarDecl 0x7fb195059730 <col:1, col:41> col:41 used blue_len 'unsigned int' extern
+|-VarDecl 0x7fb1950597a8 <col:1, col:51> col:51 used alpha_len 'unsigned int' extern
+|-VarDecl 0x7fb195059880 <line:20:1, col:23> col:23 used fb_cmap 'struct fb_cmap':'struct fb_cmap' extern
+|-VarDecl 0x7fb195059968 <line:21:1, col:16> col:16 used clut 'rgba_t *' extern
+|-FunctionDecl 0x7fb195059a98 <line:22:1, col:28> col:12 fb_set_cmap 'int (void)' extern
+`-FunctionDecl 0x7fb195059c00 <line:24:1, line:38:1> line:24:6 directcolor_update_cmap 'void (void)'
+  `-CompoundStmt 0x7fb194005210 <line:25:1, line:38:1>
+    |-DeclStmt 0x7fb195059d18 <line:26:5, col:19>
+    | `-VarDecl 0x7fb195059cb8 <col:5, col:18> col:18 used i 'unsigned int'
+    `-ForStmt 0x7fb1940051d8 <line:28:5, line:37:5>
+      |-BinaryOperator 0x7fb195059d90 <line:28:10, col:14> 'unsigned int' '='
+      | |-DeclRefExpr 0x7fb195059d30 <col:10> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fb195059d78 <col:14> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fb195059d58 <col:14> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb195059e38 <col:17, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7fb195059e08 <col:17> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb195059db8 <col:17> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fb195059e20 <col:21> 'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb195059de0 <col:21> 'unsigned int' lvalue Var 0x7fb195059588 'cmap_len' 'unsigned int'
+      |-UnaryOperator 0x7fb195059e88 <col:31, col:32> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7fb195059e60 <col:31> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+      `-CompoundStmt 0x7fb1940051a8 <col:36, line:37:5>
+        |-IfStmt 0x7fb1940047e8 <line:29:7, line:30:27>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fb195059f28 <line:29:11, col:15> 'int' '<'
+        | | |-ImplicitCastExpr 0x7fb195059ef8 <col:11> 'unsigned int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb195059ea8 <col:11> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb195059f10 <col:15> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fb195059ed0 <col:15> 'unsigned int' lvalue Var 0x7fb195059640 'red_len' 'unsigned int'
+        | |-BinaryOperator 0x7fb194004750 <line:30:2, col:27> 'unsigned short' '='
+        | | |-ArraySubscriptExpr 0x7fb194004618 <col:2, col:15> 'unsigned short' lvalue
+        | | | |-ImplicitCastExpr 0x7fb195059fd8 <col:2, col:10> 'unsigned short *' <LValueToRValue>
+        | | | | `-MemberExpr 0x7fb195059f78 <col:2, col:10> 'unsigned short *' lvalue .red 0x7fb195059120
+        | | | |   `-DeclRefExpr 0x7fb195059f50 <col:2> 'struct fb_cmap':'struct fb_cmap' lvalue Var 0x7fb195059880 'fb_cmap' 'struct fb_cmap':'struct fb_cmap'
+        | | | `-ImplicitCastExpr 0x7fb194004600 <col:14> 'unsigned int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fb195059fb0 <col:14> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb194004738 <col:19, col:27> 'unsigned short' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7fb194004720 <col:19, col:27> 'int' <LValueToRValue>
+        | |     `-MemberExpr 0x7fb1940046e8 <col:19, col:27> 'int' lvalue .r 0x7fb195059348
+        | |       `-ArraySubscriptExpr 0x7fb1940046c0 <col:19, col:25> 'rgba_t':'rgba_t' lvalue
+        | |         |-ImplicitCastExpr 0x7fb194004690 <col:19> 'rgba_t *' <LValueToRValue>
+        | |         | `-DeclRefExpr 0x7fb194004640 <col:19> 'rgba_t *' lvalue Var 0x7fb195059968 'clut' 'rgba_t *'
+        | |         `-ImplicitCastExpr 0x7fb1940046a8 <col:24> 'unsigned int' <LValueToRValue>
+        | |           `-DeclRefExpr 0x7fb194004668 <col:24> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | `-<<<NULL>>>
+        |-IfStmt 0x7fb194004ae0 <line:31:7, line:32:29>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fb1940048a0 <line:31:11, col:15> 'int' '<'
+        | | |-ImplicitCastExpr 0x7fb194004870 <col:11> 'unsigned int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb194004820 <col:11> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb194004888 <col:15> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fb194004848 <col:15> 'unsigned int' lvalue Var 0x7fb1950596b8 'green_len' 'unsigned int'
+        | |-BinaryOperator 0x7fb194004ab8 <line:32:2, col:29> 'unsigned short' '='
+        | | |-ArraySubscriptExpr 0x7fb194004980 <col:2, col:17> 'unsigned short' lvalue
+        | | | |-ImplicitCastExpr 0x7fb194004950 <col:2, col:10> 'unsigned short *' <LValueToRValue>
+        | | | | `-MemberExpr 0x7fb1940048f0 <col:2, col:10> 'unsigned short *' lvalue .green 0x7fb195059180
+        | | | |   `-DeclRefExpr 0x7fb1940048c8 <col:2> 'struct fb_cmap':'struct fb_cmap' lvalue Var 0x7fb195059880 'fb_cmap' 'struct fb_cmap':'struct fb_cmap'
+        | | | `-ImplicitCastExpr 0x7fb194004968 <col:16> 'unsigned int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fb194004928 <col:16> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb194004aa0 <col:21, col:29> 'unsigned short' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7fb194004a88 <col:21, col:29> 'int' <LValueToRValue>
+        | |     `-MemberExpr 0x7fb194004a50 <col:21, col:29> 'int' lvalue .g 0x7fb1950593a8
+        | |       `-ArraySubscriptExpr 0x7fb194004a28 <col:21, col:27> 'rgba_t':'rgba_t' lvalue
+        | |         |-ImplicitCastExpr 0x7fb1940049f8 <col:21> 'rgba_t *' <LValueToRValue>
+        | |         | `-DeclRefExpr 0x7fb1940049a8 <col:21> 'rgba_t *' lvalue Var 0x7fb195059968 'clut' 'rgba_t *'
+        | |         `-ImplicitCastExpr 0x7fb194004a10 <col:26> 'unsigned int' <LValueToRValue>
+        | |           `-DeclRefExpr 0x7fb1940049d0 <col:26> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | `-<<<NULL>>>
+        |-IfStmt 0x7fb194004dd8 <line:33:7, line:34:28>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7fb194004b98 <line:33:11, col:15> 'int' '<'
+        | | |-ImplicitCastExpr 0x7fb194004b68 <col:11> 'unsigned int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb194004b18 <col:11> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb194004b80 <col:15> 'unsigned int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fb194004b40 <col:15> 'unsigned int' lvalue Var 0x7fb195059730 'blue_len' 'unsigned int'
+        | |-BinaryOperator 0x7fb194004db0 <line:34:2, col:28> 'unsigned short' '='
+        | | |-ArraySubscriptExpr 0x7fb194004c78 <col:2, col:16> 'unsigned short' lvalue
+        | | | |-ImplicitCastExpr 0x7fb194004c48 <col:2, col:10> 'unsigned short *' <LValueToRValue>
+        | | | | `-MemberExpr 0x7fb194004be8 <col:2, col:10> 'unsigned short *' lvalue .blue 0x7fb1950591e0
+        | | | |   `-DeclRefExpr 0x7fb194004bc0 <col:2> 'struct fb_cmap':'struct fb_cmap' lvalue Var 0x7fb195059880 'fb_cmap' 'struct fb_cmap':'struct fb_cmap'
+        | | | `-ImplicitCastExpr 0x7fb194004c60 <col:15> 'unsigned int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fb194004c20 <col:15> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | | `-ImplicitCastExpr 0x7fb194004d98 <col:20, col:28> 'unsigned short' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7fb194004d80 <col:20, col:28> 'int' <LValueToRValue>
+        | |     `-MemberExpr 0x7fb194004d48 <col:20, col:28> 'int' lvalue .b 0x7fb195059408
+        | |       `-ArraySubscriptExpr 0x7fb194004d20 <col:20, col:26> 'rgba_t':'rgba_t' lvalue
+        | |         |-ImplicitCastExpr 0x7fb194004cf0 <col:20> 'rgba_t *' <LValueToRValue>
+        | |         | `-DeclRefExpr 0x7fb194004ca0 <col:20> 'rgba_t *' lvalue Var 0x7fb195059968 'clut' 'rgba_t *'
+        | |         `-ImplicitCastExpr 0x7fb194004d08 <col:25> 'unsigned int' <LValueToRValue>
+        | |           `-DeclRefExpr 0x7fb194004cc8 <col:25> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+        | `-<<<NULL>>>
+        `-IfStmt 0x7fb194005170 <line:35:7, line:36:30>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fb194004f30 <line:35:11, col:33> 'int' '&&'
+          | |-ImplicitCastExpr 0x7fb194004f18 <col:11, col:19> 'unsigned short *' <LValueToRValue>
+          | | `-MemberExpr 0x7fb194004e38 <col:11, col:19> 'unsigned short *' lvalue .transp 0x7fb195059240
+          | |   `-DeclRefExpr 0x7fb194004e10 <col:11> 'struct fb_cmap':'struct fb_cmap' lvalue Var 0x7fb195059880 'fb_cmap' 'struct fb_cmap':'struct fb_cmap'
+          | `-BinaryOperator 0x7fb194004ef0 <col:29, col:33> 'int' '<'
+          |   |-ImplicitCastExpr 0x7fb194004ec0 <col:29> 'unsigned int' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fb194004e70 <col:29> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+          |   `-ImplicitCastExpr 0x7fb194004ed8 <col:33> 'unsigned int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fb194004e98 <col:33> 'unsigned int' lvalue Var 0x7fb1950597a8 'alpha_len' 'unsigned int'
+          |-BinaryOperator 0x7fb194005148 <line:36:2, col:30> 'unsigned short' '='
+          | |-ArraySubscriptExpr 0x7fb194005010 <col:2, col:18> 'unsigned short' lvalue
+          | | |-ImplicitCastExpr 0x7fb194004fe0 <col:2, col:10> 'unsigned short *' <LValueToRValue>
+          | | | `-MemberExpr 0x7fb194004f80 <col:2, col:10> 'unsigned short *' lvalue .transp 0x7fb195059240
+          | | |   `-DeclRefExpr 0x7fb194004f58 <col:2> 'struct fb_cmap':'struct fb_cmap' lvalue Var 0x7fb195059880 'fb_cmap' 'struct fb_cmap':'struct fb_cmap'
+          | | `-ImplicitCastExpr 0x7fb194004ff8 <col:17> 'unsigned int' <LValueToRValue>
+          | |   `-DeclRefExpr 0x7fb194004fb8 <col:17> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+          | `-ImplicitCastExpr 0x7fb194005130 <col:22, col:30> 'unsigned short' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7fb194005118 <col:22, col:30> 'int' <LValueToRValue>
+          |     `-MemberExpr 0x7fb1940050e0 <col:22, col:30> 'int' lvalue .a 0x7fb195059468
+          |       `-ArraySubscriptExpr 0x7fb1940050b8 <col:22, col:28> 'rgba_t':'rgba_t' lvalue
+          |         |-ImplicitCastExpr 0x7fb194005088 <col:22> 'rgba_t *' <LValueToRValue>
+          |         | `-DeclRefExpr 0x7fb194005038 <col:22> 'rgba_t *' lvalue Var 0x7fb195059968 'clut' 'rgba_t *'
+          |         `-ImplicitCastExpr 0x7fb1940050a0 <col:27> 'unsigned int' <LValueToRValue>
+          |           `-DeclRefExpr 0x7fb194005060 <col:27> 'unsigned int' lvalue Var 0x7fb195059cb8 'i' 'unsigned int'
+          `-<<<NULL>>>

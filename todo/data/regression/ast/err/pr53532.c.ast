@@ -1,0 +1,29 @@
+../Data/C2AST/pr53532.c:11:8: error: variable has incomplete type 'struct T'
+  foo ((struct T) {});   
+       ^~~~~~~~~~~~~
+../Data/C2AST/pr53532.c:11:16: note: forward declaration of 'struct T'
+  foo ((struct T) {});   
+               ^
+1 error generated.
+TranslationUnitDecl 0x7ffaa400a6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffaa400ac60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffaa400a980 '__int128'
+|-TypedefDecl 0x7ffaa400acd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffaa400a9a0 'unsigned __int128'
+|-TypedefDecl 0x7ffaa400afa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffaa400adb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffaa400ad28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffaa400b040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffaa400b000 'char *'
+|   `-BuiltinType 0x7ffaa400a780 'char'
+|-TypedefDecl 0x7ffaa400b308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffaa400b2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffaa400b120 'struct __va_list_tag'
+|     `-Record 0x7ffaa400b098 '__va_list_tag'
+|-RecordDecl 0x7ffaa400b360 <../Data/C2AST/pr53532.c:5:1, col:11> col:8 struct S definition
+|-FunctionDecl 0x7ffaa481b778 <line:6:1, col:25> col:12 used foo 'int (struct S)' extern
+| `-ParmVarDecl 0x7ffaa481b670 <col:17, col:24> col:25 'struct S':'struct S'
+`-FunctionDecl 0x7ffaa481b8b0 <line:8:1, line:13:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7ffaa481be98 <line:10:1, line:13:1>
+    `-ReturnStmt 0x7ffaa481be80 <line:12:3, col:10>
+      `-IntegerLiteral 0x7ffaa481be60 <col:10> 'int' 0

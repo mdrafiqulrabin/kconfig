@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fe6de8174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe6de818160 <../Data/C2AST/pr39082-1.c:6:1, line:10:1> line:6:7 union un definition
+| |-FieldDecl 0x7fe6df80b038 <line:8:3, col:15> col:15 x 'long double'
+| `-FieldDecl 0x7fe6df80b098 <line:9:3, col:7> col:7 referenced i 'int'
+|-FunctionDecl 0x7fe6df80b238 <line:12:1, col:26> col:12 used bar1 'int (union un)' extern
+| `-ParmVarDecl 0x7fe6df80b130 <col:18, col:24> col:26 'union un':'union un'
+|-FunctionDecl 0x7fe6df80b450 <line:13:1, col:26> col:17 used bar2 'union un (int)' extern
+| `-ParmVarDecl 0x7fe6df80b338 <col:23> col:26 'int'
+|-FunctionDecl 0x7fe6df80b5a8 <line:15:1, line:20:1> line:16:1 used foo1 'int (union un)'
+| |-ParmVarDecl 0x7fe6df80b518 <col:7, col:16> col:16 used u 'union un':'union un'
+| `-CompoundStmt 0x7fe6df80b7e8 <line:17:1, line:20:1>
+|   |-CallExpr 0x7fe6df80b710 <line:18:3, col:10> 'int'
+|   | |-ImplicitCastExpr 0x7fe6df80b6f8 <col:3> 'int (*)(union un)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe6df80b650 <col:3> 'int (union un)' Function 0x7fe6df80b238 'bar1' 'int (union un)'
+|   | `-ImplicitCastExpr 0x7fe6df80b740 <col:9> 'union un':'union un' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fe6df80b678 <col:9> 'union un':'union un' lvalue ParmVar 0x7fe6df80b518 'u' 'union un':'union un'
+|   `-ReturnStmt 0x7fe6df80b7d0 <line:19:3, col:12>
+|     `-ImplicitCastExpr 0x7fe6df80b7b8 <col:10, col:12> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7fe6df80b780 <col:10, col:12> 'int' lvalue .i 0x7fe6df80b098
+|         `-DeclRefExpr 0x7fe6df80b758 <col:10> 'union un':'union un' lvalue ParmVar 0x7fe6df80b518 'u' 'union un':'union un'
+|-FunctionDecl 0x7fe6df80b8d8 <line:22:1, line:28:1> line:23:1 foo2 'int (void)'
+| `-CompoundStmt 0x7fe6df80bca8 <line:24:1, line:28:1>
+|   |-DeclStmt 0x7fe6df80b9f8 <line:25:3, col:13>
+|   | `-VarDecl 0x7fe6df80b998 <col:3, col:12> col:12 used u 'union un':'union un'
+|   |-BinaryOperator 0x7fe6df80ba90 <line:26:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fe6df80ba38 <col:3, col:5> 'int' lvalue .i 0x7fe6df80b098
+|   | | `-DeclRefExpr 0x7fe6df80ba10 <col:3> 'union un':'union un' lvalue Var 0x7fe6df80b998 'u' 'union un':'union un'
+|   | `-IntegerLiteral 0x7fe6df80ba70 <col:9> 'int' 1
+|   `-ReturnStmt 0x7fe6df80bc90 <line:27:3, col:28>
+|     `-BinaryOperator 0x7fe6df80bc68 <col:10, col:28> 'int' '+'
+|       |-CallExpr 0x7fe6df80bb70 <col:10, col:17> 'int'
+|       | |-ImplicitCastExpr 0x7fe6df80bb58 <col:10> 'int (*)(union un)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fe6df80bb08 <col:10> 'int (union un)' Function 0x7fe6df80b5a8 'foo1' 'int (union un)'
+|       | `-ImplicitCastExpr 0x7fe6df80bba0 <col:16> 'union un':'union un' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe6df80bb30 <col:16> 'union un':'union un' lvalue Var 0x7fe6df80b998 'u' 'union un':'union un'
+|       `-CallExpr 0x7fe6df80bc20 <col:21, col:28> 'int'
+|         |-ImplicitCastExpr 0x7fe6df80bc08 <col:21> 'int (*)(union un)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fe6df80bbb8 <col:21> 'int (union un)' Function 0x7fe6df80b238 'bar1' 'int (union un)'
+|         `-ImplicitCastExpr 0x7fe6df80bc50 <col:27> 'union un':'union un' <LValueToRValue>
+|           `-DeclRefExpr 0x7fe6df80bbe0 <col:27> 'union un':'union un' lvalue Var 0x7fe6df80b998 'u' 'union un':'union un'
+`-FunctionDecl 0x7fe6df80bdb8 <line:30:1, line:35:1> line:31:1 foo3 'int (int)'
+  |-ParmVarDecl 0x7fe6df80bce8 <col:7, col:11> col:11 used x 'int'
+  `-CompoundStmt 0x7fe6df009690 <line:32:1, line:35:1>
+    |-DeclStmt 0x7fe6df80bfe8 <line:33:3, col:24>
+    | `-VarDecl 0x7fe6df80be80 <col:3, col:23> col:12 used u 'union un':'union un' cinit
+    |   `-CallExpr 0x7fe6df80bfa0 <col:16, col:23> 'union un':'union un'
+    |     |-ImplicitCastExpr 0x7fe6df80bf88 <col:16> 'union un (*)(int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fe6df80bee0 <col:16> 'union un (int)' Function 0x7fe6df80b450 'bar2' 'union un (int)'
+    |     `-ImplicitCastExpr 0x7fe6df80bfd0 <col:22> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fe6df80bf08 <col:22> 'int' lvalue ParmVar 0x7fe6df80bce8 'x' 'int'
+    `-ReturnStmt 0x7fe6df009678 <line:34:3, col:12>
+      `-ImplicitCastExpr 0x7fe6df009660 <col:10, col:12> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fe6df009628 <col:10, col:12> 'int' lvalue .i 0x7fe6df80b098
+          `-DeclRefExpr 0x7fe6df009600 <col:10> 'union un':'union un' lvalue Var 0x7fe6df80be80 'u' 'union un':'union un'

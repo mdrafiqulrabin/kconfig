@@ -1,0 +1,30 @@
+../Data/C2AST/pr69483.c:5:10: error: tentative definition has type 'struct S' that is never completed
+struct S b;  
+         ^
+../Data/C2AST/pr69483.c:4:19: note: forward declaration of 'struct S'
+struct T { struct S *a; };
+                  ^
+1 error generated.
+TranslationUnitDecl 0x7fa3c902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa3c902c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa3c902bf80 '__int128'
+|-TypedefDecl 0x7fa3c902c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa3c902bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa3c902c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa3c902c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa3c902c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa3c902c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa3c902c600 'char *'
+|   `-BuiltinType 0x7fa3c902bd80 'char'
+|-TypedefDecl 0x7fa3c902c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa3c902c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa3c902c720 'struct __va_list_tag'
+|     `-Record 0x7fa3c902c698 '__va_list_tag'
+|-RecordDecl 0x7fa3c902c960 <../Data/C2AST/pr69483.c:4:1, col:25> col:8 struct T definition
+| |-RecordDecl 0x7fa3c9061620 parent 0x7fa3c902bce8 <col:12, col:19> col:19 struct S
+| `-FieldDecl 0x7fa3c9061790 <col:12, col:22> col:22 a 'struct S *'
+|-VarDecl 0x7fa3c90617f8 <line:5:1, col:10> col:10 used invalid b 'struct S':'struct S'
+`-VarDecl 0x7fa3c90618f0 <line:6:1, col:19> col:10 c 'struct T':'struct T' cinit
+  `-InitListExpr 0x7fa3c90619e0 <col:14, col:19> 'struct T':'struct T'
+    `-UnaryOperator 0x7fa3c9061978 <col:16, col:17> 'struct S *' prefix '&'
+      `-DeclRefExpr 0x7fa3c9061950 <col:17> 'struct S':'struct S' lvalue Var 0x7fa3c90617f8 'b' 'struct S':'struct S'

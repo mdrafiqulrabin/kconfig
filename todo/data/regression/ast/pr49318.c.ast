@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7feb0902bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7feb0902c960 <../Data/C2AST/pr49318.c:5:9, col:25> col:9
+| `-EnumConstantDecl 0x7feb09814220 <col:16> col:16 GL_FALSE 'int'
+|-TypedefDecl 0x7feb098142c0 <col:1, col:27> col:27 referenced GLenum 'enum GLenum':'GLenum'
+| `-ElaboratedType 0x7feb09814270 'enum GLenum' sugar
+|   `-EnumType 0x7feb09814200 'GLenum'
+|     `-Enum 0x7feb0902c960 ''
+|-TypedefDecl 0x7feb09814348 <line:6:1, col:23> col:23 GLboolean 'unsigned char'
+| `-BuiltinType 0x7feb0902be40 'unsigned char'
+|-TypedefDecl 0x7feb098143b8 <line:7:1, col:13> col:13 referenced GLint 'int'
+| `-BuiltinType 0x7feb0902bde0 'int'
+|-TypedefDecl 0x7feb09814428 <line:8:1, col:22> col:22 referenced GLuint 'unsigned int'
+| `-BuiltinType 0x7feb0902be80 'unsigned int'
+|-TypedefDecl 0x7feb09814498 <line:9:1, col:15> col:15 referenced GLfloat 'float'
+| `-BuiltinType 0x7feb0902bee0 'float'
+|-TypedefDecl 0x7feb09814508 <line:10:1, col:16> col:16 referenced GLdouble 'double'
+| `-BuiltinType 0x7feb0902bf00 'double'
+|-RecordDecl 0x7feb09814560 <line:11:9, col:16> col:16 struct gl_context
+|-TypedefDecl 0x7feb09814660 <col:1, col:27> col:27 referenced GLcontext 'struct gl_context':'struct gl_context'
+| `-ElaboratedType 0x7feb09814610 'struct gl_context' sugar
+|   `-RecordType 0x7feb098145f0 'struct gl_context'
+|     `-Record 0x7feb098146d0 'gl_context'
+|-RecordDecl 0x7feb098146d0 prev 0x7feb09814560 <line:12:1, line:15:1> line:12:8 struct gl_context definition
+| |-FieldDecl 0x7feb09814838 <line:13:3, col:27> col:11 referenced TextureMatrix 'GLfloat [16]'
+| `-FieldDecl 0x7feb098148b0 <line:14:3, col:10> col:10 Primitive 'GLenum':'GLenum'
+`-FunctionDecl 0x7feb09814c20 <line:16:1, line:20:1> line:16:6 gl_GetDoublev 'void (GLcontext *, GLenum, GLdouble *)'
+  |-ParmVarDecl 0x7feb09814988 <col:21, col:32> col:32 used ctx 'GLcontext *'
+  |-ParmVarDecl 0x7feb098149f8 <col:37, col:44> col:44 pname 'GLenum':'GLenum'
+  |-ParmVarDecl 0x7feb09814ae8 <col:51, col:61> col:61 used params 'GLdouble *'
+  `-CompoundStmt 0x7feb0982bc38 <col:70, line:20:1>
+    |-DeclStmt 0x7feb09814db0 <line:17:3, col:11>
+    | `-VarDecl 0x7feb09814d50 <col:3, col:10> col:10 used i 'GLuint':'unsigned int'
+    `-ForStmt 0x7feb0982bc00 <line:18:3, line:19:45>
+      |-BinaryOperator 0x7feb09814e28 <line:18:8, col:10> 'GLuint':'unsigned int' '='
+      | |-DeclRefExpr 0x7feb09814dc8 <col:8> 'GLuint':'unsigned int' lvalue Var 0x7feb09814d50 'i' 'GLuint':'unsigned int'
+      | `-ImplicitCastExpr 0x7feb09814e10 <col:10> 'GLuint':'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7feb09814df0 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7feb09814ec8 <col:13, col:15> 'int' '<'
+      | |-ImplicitCastExpr 0x7feb09814e98 <col:13> 'GLuint':'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7feb09814e50 <col:13> 'GLuint':'unsigned int' lvalue Var 0x7feb09814d50 'i' 'GLuint':'unsigned int'
+      | `-ImplicitCastExpr 0x7feb09814eb0 <col:15> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7feb09814e78 <col:15> 'int' 16
+      |-UnaryOperator 0x7feb09814f18 <col:19, col:20> 'GLuint':'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7feb09814ef0 <col:19> 'GLuint':'unsigned int' lvalue Var 0x7feb09814d50 'i' 'GLuint':'unsigned int'
+      `-BinaryOperator 0x7feb098151b8 <line:19:5, col:45> 'GLdouble':'double' '='
+        |-ArraySubscriptExpr 0x7feb09814fb8 <col:5, col:13> 'GLdouble':'double' lvalue
+        | |-ImplicitCastExpr 0x7feb09814f88 <col:5> 'GLdouble *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7feb09814f38 <col:5> 'GLdouble *' lvalue ParmVar 0x7feb09814ae8 'params' 'GLdouble *'
+        | `-ImplicitCastExpr 0x7feb09814fa0 <col:12> 'GLuint':'unsigned int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7feb09814f60 <col:12> 'GLuint':'unsigned int' lvalue Var 0x7feb09814d50 'i' 'GLuint':'unsigned int'
+        `-ImplicitCastExpr 0x7feb098151a0 <col:17, col:45> 'GLdouble':'double' <IntegralToFloating>
+          `-CStyleCastExpr 0x7feb09815178 <col:17, col:45> 'GLint':'int' <FloatingToIntegral>
+            `-ImplicitCastExpr 0x7feb09815160 <col:25, col:45> 'GLfloat':'float' <LValueToRValue>
+              `-ArraySubscriptExpr 0x7feb09815128 <col:25, col:45> 'GLfloat':'float' lvalue
+                |-ImplicitCastExpr 0x7feb098150f8 <col:25, col:30> 'GLfloat *' <ArrayToPointerDecay>
+                | `-MemberExpr 0x7feb09815040 <col:25, col:30> 'GLfloat [16]' lvalue ->TextureMatrix 0x7feb09814838
+                |   `-ImplicitCastExpr 0x7feb09815028 <col:25> 'GLcontext *' <LValueToRValue>
+                |     `-DeclRefExpr 0x7feb09815000 <col:25> 'GLcontext *' lvalue ParmVar 0x7feb09814988 'ctx' 'GLcontext *'
+                `-ImplicitCastExpr 0x7feb09815110 <col:44> 'GLuint':'unsigned int' <LValueToRValue>
+                  `-DeclRefExpr 0x7feb09815078 <col:44> 'GLuint':'unsigned int' lvalue Var 0x7feb09814d50 'i' 'GLuint':'unsigned int'

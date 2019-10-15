@@ -1,0 +1,55 @@
+../Data/C2AST/pr78605.c:7:10: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  return __builtin_sprintf (d, "%i %i", i, i);
+         ^
+../Data/C2AST/pr78605.c:12:10: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  return __builtin_sprintf (d, "%.2f %.2f", f, f);
+         ^
+2 errors generated.
+TranslationUnitDecl 0x7fa0f082b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa0f082b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa0f082b580 '__int128'
+|-TypedefDecl 0x7fa0f082b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa0f082b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fa0f082bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa0f082b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa0f082b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa0f082bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa0f082bc00 'char *'
+|   `-BuiltinType 0x7fa0f082b380 'char'
+|-TypedefDecl 0x7fa0f082bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa0f082beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa0f082bd20 'struct __va_list_tag'
+|     `-Record 0x7fa0f082bc98 '__va_list_tag'
+|-VarDecl 0x7fa0f1014200 <../Data/C2AST/pr78605.c:3:1, col:10> col:6 used d 'char [10]'
+|-FunctionDecl 0x7fa0f1014388 <line:5:1, line:8:1> line:5:5 f 'int (int)'
+| |-ParmVarDecl 0x7fa0f10142b8 <col:8, col:12> col:12 used i 'int'
+| `-CompoundStmt 0x7fa0f1014760 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fa0f1014748 <line:7:3, col:45>
+|     `-CallExpr 0x7fa0f10146a0 <col:10, col:45> 'int'
+|       |-ImplicitCastExpr 0x7fa0f1014688 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fa0f1014550 <col:10> 'int ()' Function 0x7fa0f10144a0 '__builtin_sprintf' 'int ()'
+|       |-ImplicitCastExpr 0x7fa0f10146e8 <col:29> 'char *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x7fa0f1014578 <col:29> 'char [10]' lvalue Var 0x7fa0f1014200 'd' 'char [10]'
+|       |-ImplicitCastExpr 0x7fa0f1014700 <col:32> 'char *' <ArrayToPointerDecay>
+|       | `-StringLiteral 0x7fa0f10145d8 <col:32> 'char [6]' lvalue "%i %i"
+|       |-ImplicitCastExpr 0x7fa0f1014718 <col:41> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa0f1014608 <col:41> 'int' lvalue ParmVar 0x7fa0f10142b8 'i' 'int'
+|       `-ImplicitCastExpr 0x7fa0f1014730 <col:44> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa0f1014630 <col:44> 'int' lvalue ParmVar 0x7fa0f10142b8 'i' 'int'
+`-FunctionDecl 0x7fa0f1014858 <line:10:1, line:13:1> line:10:5 g 'int (float)'
+  |-ParmVarDecl 0x7fa0f1014790 <col:8, col:14> col:14 used f 'float'
+  `-CompoundStmt 0x7fa0f1014ae0 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7fa0f1014ac8 <line:12:3, col:49>
+      `-CallExpr 0x7fa0f10149f0 <col:10, col:49> 'int'
+        |-ImplicitCastExpr 0x7fa0f10149d8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fa0f1014900 <col:10> 'int ()' Function 0x7fa0f10144a0 '__builtin_sprintf' 'int ()'
+        |-ImplicitCastExpr 0x7fa0f1014a38 <col:29> 'char *' <ArrayToPointerDecay>
+        | `-DeclRefExpr 0x7fa0f1014928 <col:29> 'char [10]' lvalue Var 0x7fa0f1014200 'd' 'char [10]'
+        |-ImplicitCastExpr 0x7fa0f1014a50 <col:32> 'char *' <ArrayToPointerDecay>
+        | `-StringLiteral 0x7fa0f1014950 <col:32> 'char [10]' lvalue "%.2f %.2f"
+        |-ImplicitCastExpr 0x7fa0f1014a80 <col:45> 'double' <FloatingCast>
+        | `-ImplicitCastExpr 0x7fa0f1014a68 <col:45> 'float' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fa0f1014988 <col:45> 'float' lvalue ParmVar 0x7fa0f1014790 'f' 'float'
+        `-ImplicitCastExpr 0x7fa0f1014ab0 <col:48> 'double' <FloatingCast>
+          `-ImplicitCastExpr 0x7fa0f1014a98 <col:48> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7fa0f10149b0 <col:48> 'float' lvalue ParmVar 0x7fa0f1014790 'f' 'float'

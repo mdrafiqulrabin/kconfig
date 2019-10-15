@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f9bbc0280e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9bbc06ac00 <../Data/C2AST/pr27802-1.c:5:1, col:39> col:8 used bar1 'double () __attribute__((noreturn))'
+|-FunctionDecl 0x7f9bbc06ad28 <line:6:1, col:23> col:6 foo1 'void ()'
+| `-CompoundStmt 0x7f9bbc06ae58 <col:13, col:23>
+|   `-CallExpr 0x7f9bbc06ae30 <col:15, col:20> 'double'
+|     `-ImplicitCastExpr 0x7f9bbc06ae18 <col:15> 'double (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f9bbc06adc8 <col:15> 'double () __attribute__((noreturn))' Function 0x7f9bbc06ac00 'bar1' 'double () __attribute__((noreturn))'
+|-FunctionDecl 0x7f9bbc06ae98 <line:8:1, col:39> col:8 used bar2 'double () __attribute__((noreturn))'
+|-FunctionDecl 0x7f9bbc06af60 <line:9:1, col:32> col:8 foo2 'double ()'
+| `-CompoundStmt 0x7f9bbc06b080 <col:15, col:32>
+|   `-ReturnStmt 0x7f9bbc06b068 <col:17, col:29>
+|     `-CallExpr 0x7f9bbc06b040 <col:24, col:29> 'double'
+|       `-ImplicitCastExpr 0x7f9bbc06b028 <col:24> 'double (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f9bbc06b000 <col:24> 'double () __attribute__((noreturn))' Function 0x7f9bbc06ae98 'bar2' 'double () __attribute__((noreturn))'
+|-FunctionDecl 0x7f9bbc06b0e8 <line:11:1, col:37> col:6 used bar3 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7f9bbc06b1b0 <line:12:1, col:25> col:8 foo3 'double ()'
+| `-CompoundStmt 0x7f9bbc06b2e8 <col:15, col:25>
+|   `-CallExpr 0x7f9bbc06b2c0 <col:17, col:22> 'void'
+|     `-ImplicitCastExpr 0x7f9bbc06b2a8 <col:17> 'void (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f9bbc06b250 <col:17> 'void () __attribute__((noreturn))' Function 0x7f9bbc06b0e8 'bar3' 'void () __attribute__((noreturn))'
+|-FunctionDecl 0x7f9bbc06b328 <line:14:1, col:39> col:8 used bar4 'double () __attribute__((noreturn))'
+`-FunctionDecl 0x7f9bbc06b3f0 <line:15:1, col:25> col:8 foo4 'double ()'
+  `-CompoundStmt 0x7f9bbc06b4f8 <col:15, col:25>
+    `-CallExpr 0x7f9bbc06b4d0 <col:17, col:22> 'double'
+      `-ImplicitCastExpr 0x7f9bbc06b4b8 <col:17> 'double (*)() __attribute__((noreturn))' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f9bbc06b490 <col:17> 'double () __attribute__((noreturn))' Function 0x7f9bbc06b328 'bar4' 'double () __attribute__((noreturn))'

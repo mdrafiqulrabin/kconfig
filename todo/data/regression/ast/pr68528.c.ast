@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f9f3102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9f31814250 <../Data/C2AST/pr68528.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9f318142f0 prev 0x7f9f31814250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f9f31814458 <line:7:1, line:17:1> line:7:5 main 'int (void)'
+  `-CompoundStmt 0x7f9f31814d78 <line:8:1, line:17:1>
+    |-DeclStmt 0x7f9f31814688 <line:9:3, col:20>
+    | `-VarDecl 0x7f9f31814580 <col:3, line:3:36> line:9:8 used x0 'int' cinit
+    |   `-ParenExpr 0x7f9f31814668 <line:3:17, col:36> 'int'
+    |     `-BinaryOperator 0x7f9f31814640 <col:19, col:34> 'int' '-'
+    |       |-UnaryOperator 0x7f9f31814600 <col:19, <built-in>:38:21> 'int' prefix '-'
+    |       | `-IntegerLiteral 0x7f9f318145e0 <col:21> 'int' 2147483647
+    |       `-IntegerLiteral 0x7f9f31814620 <../Data/C2AST/pr68528.c:3:34> 'int' 1
+    |-DeclStmt 0x7f9f31814738 <line:10:3, col:15>
+    | `-VarDecl 0x7f9f318146b8 <col:3, col:13> col:8 used x1 'long' cinit
+    |   `-IntegerLiteral 0x7f9f31814718 <col:13> 'long' 0
+    |-DeclStmt 0x7f9f318147e8 <line:11:3, col:14>
+    | `-VarDecl 0x7f9f31814768 <col:3, col:13> col:8 used x2 'int' cinit
+    |   `-IntegerLiteral 0x7f9f318147c8 <col:13> 'int' 0
+    |-DeclStmt 0x7f9f31814b20 <line:12:3, col:53>
+    | `-VarDecl 0x7f9f31814818 <col:3, col:52> col:8 used t 'int' cinit
+    |   `-ParenExpr 0x7f9f31814b00 <col:13, col:52> 'int'
+    |     `-BinaryOperator 0x7f9f31814ad8 <col:15, col:50> 'int' '||'
+    |       |-IntegerLiteral 0x7f9f31814878 <col:15> 'int' 0
+    |       `-ParenExpr 0x7f9f31814ab8 <col:20, col:50> 'int'
+    |         `-BinaryOperator 0x7f9f31814a90 <line:3:17, line:12:48> 'int' '-'
+    |           |-ParenExpr 0x7f9f31814920 <line:3:17, col:36> 'int'
+    |           | `-BinaryOperator 0x7f9f318148f8 <col:19, col:34> 'int' '-'
+    |           |   |-UnaryOperator 0x7f9f318148b8 <col:19, <built-in>:38:21> 'int' prefix '-'
+    |           |   | `-IntegerLiteral 0x7f9f31814898 <col:21> 'int' 2147483647
+    |           |   `-IntegerLiteral 0x7f9f318148d8 <../Data/C2AST/pr68528.c:3:34> 'int' 1
+    |           `-CStyleCastExpr 0x7f9f31814a68 <line:12:32, col:48> 'int' <IntegralCast>
+    |             `-ParenExpr 0x7f9f31814a48 <col:38, col:48> 'long'
+    |               `-BinaryOperator 0x7f9f318149d8 <col:40, col:45> 'long' '-'
+    |                 |-ImplicitCastExpr 0x7f9f318149c0 <col:40> 'long' <IntegralCast>
+    |                 | `-ImplicitCastExpr 0x7f9f31814990 <col:40> 'int' <LValueToRValue>
+    |                 |   `-DeclRefExpr 0x7f9f31814940 <col:40> 'int' lvalue Var 0x7f9f31814580 'x0' 'int'
+    |                 `-ImplicitCastExpr 0x7f9f318149a8 <col:45> 'long' <LValueToRValue>
+    |                   `-DeclRefExpr 0x7f9f31814968 <col:45> 'long' lvalue Var 0x7f9f318146b8 'x1' 'long'
+    |-IfStmt 0x7f9f31814d08 <line:14:3, col:36>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9f31814b98 <col:8, col:13> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f9f31814b80 <col:8> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9f31814b38 <col:8> 'int' lvalue Var 0x7f9f31814818 't' 'int'
+    | | `-IntegerLiteral 0x7f9f31814b60 <col:13> 'int' 0
+    | |-CompoundStmt 0x7f9f31814ce8 <col:17, col:36>
+    | | |-BinaryOperator 0x7f9f31814c28 <col:19, col:24> 'int' '='
+    | | | |-DeclRefExpr 0x7f9f31814bc0 <col:19> 'int' lvalue Var 0x7f9f31814768 'x2' 'int'
+    | | | `-ImplicitCastExpr 0x7f9f31814c10 <col:24> 'int' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f9f31814be8 <col:24> 'int' lvalue Var 0x7f9f31814818 't' 'int'
+    | | `-CallExpr 0x7f9f31814cc0 <col:27, col:33> 'void'
+    | |   `-ImplicitCastExpr 0x7f9f31814ca8 <col:27> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x7f9f31814c50 <col:27> 'void (void) __attribute__((noreturn))' Function 0x7f9f318142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9f31814d60 <line:16:3, col:10>
+      `-IntegerLiteral 0x7f9f31814d40 <col:10> 'int' 0

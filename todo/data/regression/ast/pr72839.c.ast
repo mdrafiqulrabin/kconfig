@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f952b023ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f952c0024d8 <../Data/C2AST/pr72839.c:5:14> col:14 implicit used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7f952c002578 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7f952c0025d8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f952c002648 prev 0x7f952c0024d8 <col:1, col:42> col:14 used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7f952b024b78 <col:22, col:27> col:28 'char *'
+| `-ParmVarDecl 0x7f952c002400 <col:30, col:41> col:42 'const char *'
+`-FunctionDecl 0x7f952c0027d0 <line:7:1, line:13:1> line:8:1 foo 'void (char *)'
+  |-ParmVarDecl 0x7f952c002710 <col:6, col:12> col:12 used s 'char *'
+  `-CompoundStmt 0x7f952c002ab0 <line:9:1, line:13:1>
+    `-CallExpr 0x7f952c002a30 <line:10:3, line:12:13> 'char *'
+      |-ImplicitCastExpr 0x7f952c002a18 <line:10:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f952c0028b8 <col:3> 'char *(char *, const char *)' Function 0x7f952c002648 'strcpy' 'char *(char *, const char *)'
+      |-ImplicitCastExpr 0x7f952c002a68 <col:11> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f952c0028e0 <col:11> 'char *' lvalue ParmVar 0x7f952c002710 's' 'char *'
+      `-ImplicitCastExpr 0x7f952c002a98 <line:11:4, line:12:4> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7f952c002a80 <line:11:4, line:12:4> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7f952c002948 <line:11:4, line:12:4> 'char [64]' lvalue "123456781234567812345678123456781234567812345678123456781234567"

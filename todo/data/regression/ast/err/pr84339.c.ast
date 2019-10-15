@@ -1,0 +1,134 @@
+../Data/C2AST/pr84339.c:20:17: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  struct S *p = __builtin_malloc (sizeof (struct S) + 16);
+                ^
+../Data/C2AST/pr84339.c:20:17: note: did you mean '__builtin_strlen'?
+../Data/C2AST/pr84339.c:8:10: note: '__builtin_strlen' declared here
+  return __builtin_strlen (&p->b[0]);
+         ^
+../Data/C2AST/pr84339.c:27:7: error: use of unknown builtin '__builtin_free' [-Wimplicit-function-declaration]
+      __builtin_free (p);
+      ^
+../Data/C2AST/pr84339.c:27:7: note: did you mean '__builtin_strlen'?
+../Data/C2AST/pr84339.c:8:10: note: '__builtin_strlen' declared here
+  return __builtin_strlen (&p->b[0]);
+         ^
+TranslationUnitDecl 0x7ffe0782b0e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe0782b660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe0782b380 '__int128'
+|-TypedefDecl 0x7ffe0782b6d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe0782b3a0 'unsigned __int128'
+|-TypedefDecl 0x7ffe0782b9a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe0782b7b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe0782b728 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe0782ba40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe0782ba00 'char *'
+|   `-BuiltinType 0x7ffe0782b180 'char'
+|-TypedefDecl 0x7ffe0782bd08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe0782bcb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe0782bb20 'struct __va_list_tag'
+|     `-Record 0x7ffe0782ba98 '__va_list_tag'
+|-RecordDecl 0x7ffe0782bd60 <../Data/C2AST/pr84339.c:3:1, col:30> col:8 struct S definition
+| |-FieldDecl 0x7ffe0786b638 <col:12, col:16> col:16 referenced a 'int'
+| `-FieldDecl 0x7ffe0786b6f8 <col:19, col:27> col:24 referenced b 'char [1]'
+|-FunctionDecl 0x7ffe0786b8f8 <line:5:1, line:9:1> line:6:1 used foo 'int (struct S *)'
+| |-ParmVarDecl 0x7ffe0786b7f0 <col:6, col:16> col:16 used p 'struct S *'
+| `-CompoundStmt 0x7ffe0786bd48 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ffe0786bd30 <line:8:3, col:36>
+|     `-ImplicitCastExpr 0x7ffe0786bd18 <col:10, col:36> 'int' <IntegralCast>
+|       `-CallExpr 0x7ffe0786bcd0 <col:10, col:36> 'unsigned long'
+|         |-ImplicitCastExpr 0x7ffe0786bcb8 <col:10> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ffe0786bb68 <col:10> '<builtin fn type>' Function 0x7ffe0786ba18 '__builtin_strlen' 'unsigned long (const char *)'
+|         `-ImplicitCastExpr 0x7ffe0786bd00 <col:28, col:35> 'const char *' <BitCast>
+|           `-UnaryOperator 0x7ffe0786bc68 <col:28, col:35> 'char *' prefix '&'
+|             `-ArraySubscriptExpr 0x7ffe0786bc40 <col:29, col:35> 'char' lvalue
+|               |-ImplicitCastExpr 0x7ffe0786bc28 <col:29, col:32> 'char *' <ArrayToPointerDecay>
+|               | `-MemberExpr 0x7ffe0786bbd0 <col:29, col:32> 'char [1]' lvalue ->b 0x7ffe0786b6f8
+|               |   `-ImplicitCastExpr 0x7ffe0786bbb8 <col:29> 'struct S *' <LValueToRValue>
+|               |     `-DeclRefExpr 0x7ffe0786bb90 <col:29> 'struct S *' lvalue ParmVar 0x7ffe0786b7f0 'p' 'struct S *'
+|               `-IntegerLiteral 0x7ffe0786bc08 <col:34> 'int' 0
+|-FunctionDecl 0x7ffe0786ba18 <col:10> col:10 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+| |-ParmVarDecl 0x7ffe0786bab8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7ffe0786bb20 <col:10> Implicit
+|-FunctionDecl 0x7ffe0786be18 <line:11:1, line:15:1> line:12:1 used bar 'int (struct S *)'
+| |-ParmVarDecl 0x7ffe0786bd88 <col:6, col:16> col:16 used p 'struct S *'
+| `-CompoundStmt 0x7ffe0786c020 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7ffe0786c008 <line:14:3, col:32>
+|     `-ImplicitCastExpr 0x7ffe0786bff0 <col:10, col:32> 'int' <IntegralCast>
+|       `-CallExpr 0x7ffe0786bf90 <col:10, col:32> 'unsigned long'
+|         |-ImplicitCastExpr 0x7ffe0786bf78 <col:10> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ffe0786bec0 <col:10> '<builtin fn type>' Function 0x7ffe0786ba18 '__builtin_strlen' 'unsigned long (const char *)'
+|         `-ImplicitCastExpr 0x7ffe0786bfd8 <col:28, col:31> 'const char *' <BitCast>
+|           `-ImplicitCastExpr 0x7ffe0786bfc0 <col:28, col:31> 'char *' <ArrayToPointerDecay>
+|             `-MemberExpr 0x7ffe0786bf28 <col:28, col:31> 'char [1]' lvalue ->b 0x7ffe0786b6f8
+|               `-ImplicitCastExpr 0x7ffe0786bf10 <col:28> 'struct S *' <LValueToRValue>
+|                 `-DeclRefExpr 0x7ffe0786bee8 <col:28> 'struct S *' lvalue ParmVar 0x7ffe0786bd88 'p' 'struct S *'
+|-FunctionDecl 0x7ffe0786c090 <line:17:1, line:30:1> line:18:1 main 'int ()'
+| `-CompoundStmt 0x7ffe07884a38 <line:19:1, line:30:1>
+|   |-DeclStmt 0x7ffe0786c448 <line:20:3, col:58>
+|   | `-VarDecl 0x7ffe0786c158 <col:3, col:57> col:13 used p 'struct S *' cinit
+|   |   `-ImplicitCastExpr 0x7ffe0786c3e0 <col:17, col:57> 'struct S *' <IntegralToPointer>
+|   |     `-CallExpr 0x7ffe0786c3b0 <col:17, col:57> 'int'
+|   |       |-ImplicitCastExpr 0x7ffe0786c398 <col:17> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7ffe0786c2a8 <col:17> 'int ()' Function 0x7ffe0786c1f8 '__builtin_malloc' 'int ()'
+|   |       `-BinaryOperator 0x7ffe0786c348 <col:35, col:55> 'unsigned long' '+'
+|   |         |-UnaryExprOrTypeTraitExpr 0x7ffe0786c2f0 <col:35, col:51> 'unsigned long' sizeof 'struct S':'struct S'
+|   |         `-ImplicitCastExpr 0x7ffe0786c330 <col:55> 'unsigned long' <IntegralCast>
+|   |           `-IntegerLiteral 0x7ffe0786c310 <col:55> 'int' 16
+|   |-IfStmt 0x7ffe078849c8 <line:21:3, line:28:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7ffe0786c488 <line:21:7> 'struct S *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7ffe0786c460 <col:7> 'struct S *' lvalue Var 0x7ffe0786c158 'p' 'struct S *'
+|   | |-CompoundStmt 0x7ffe07884998 <line:22:5, line:28:5>
+|   | | |-BinaryOperator 0x7ffe0786c538 <line:23:7, col:14> 'int' '='
+|   | | | |-MemberExpr 0x7ffe0786c4e0 <col:7, col:10> 'int' lvalue ->a 0x7ffe0786b638
+|   | | | | `-ImplicitCastExpr 0x7ffe0786c4c8 <col:7> 'struct S *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7ffe0786c4a0 <col:7> 'struct S *' lvalue Var 0x7ffe0786c158 'p' 'struct S *'
+|   | | | `-IntegerLiteral 0x7ffe0786c518 <col:14> 'int' 1
+|   | | |-CallExpr 0x7ffe07884340 <line:24:7, col:40> 'char *'
+|   | | | |-ImplicitCastExpr 0x7ffe07884328 <col:7> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7ffe078841b8 <col:7> '<builtin fn type>' Function 0x7ffe07884000 '__builtin_strcpy' 'char *(char *, const char *)'
+|   | | | |-ImplicitCastExpr 0x7ffe07884378 <col:25, col:28> 'char *' <ArrayToPointerDecay>
+|   | | | | `-MemberExpr 0x7ffe07884220 <col:25, col:28> 'char [1]' lvalue ->b 0x7ffe0786b6f8
+|   | | | |   `-ImplicitCastExpr 0x7ffe07884208 <col:25> 'struct S *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x7ffe078841e0 <col:25> 'struct S *' lvalue Var 0x7ffe0786c158 'p' 'struct S *'
+|   | | | `-ImplicitCastExpr 0x7ffe078843a8 <col:31> 'const char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7ffe07884390 <col:31> 'char *' <ArrayToPointerDecay>
+|   | | |     `-StringLiteral 0x7ffe07884298 <col:31> 'char [8]' lvalue "abcdefg"
+|   | | |-IfStmt 0x7ffe078847d8 <line:25:7, line:26:19>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-BinaryOperator 0x7ffe07884608 <line:25:11, col:38> 'int' '||'
+|   | | | | |-BinaryOperator 0x7ffe078844e8 <col:11, col:22> 'int' '!='
+|   | | | | | |-CallExpr 0x7ffe07884480 <col:11, col:17> 'int'
+|   | | | | | | |-ImplicitCastExpr 0x7ffe07884468 <col:11> 'int (*)(struct S *)' <FunctionToPointerDecay>
+|   | | | | | | | `-DeclRefExpr 0x7ffe078843c0 <col:11> 'int (struct S *)' Function 0x7ffe0786b8f8 'foo' 'int (struct S *)'
+|   | | | | | | `-ImplicitCastExpr 0x7ffe078844b0 <col:16> 'struct S *' <LValueToRValue>
+|   | | | | | |   `-DeclRefExpr 0x7ffe078843e8 <col:16> 'struct S *' lvalue Var 0x7ffe0786c158 'p' 'struct S *'
+|   | | | | | `-IntegerLiteral 0x7ffe078844c8 <col:22> 'int' 7
+|   | | | | `-BinaryOperator 0x7ffe078845e0 <col:27, col:38> 'int' '!='
+|   | | | |   |-CallExpr 0x7ffe07884578 <col:27, col:33> 'int'
+|   | | | |   | |-ImplicitCastExpr 0x7ffe07884560 <col:27> 'int (*)(struct S *)' <FunctionToPointerDecay>
+|   | | | |   | | `-DeclRefExpr 0x7ffe07884510 <col:27> 'int (struct S *)' Function 0x7ffe0786be18 'bar' 'int (struct S *)'
+|   | | | |   | `-ImplicitCastExpr 0x7ffe078845a8 <col:32> 'struct S *' <LValueToRValue>
+|   | | | |   |   `-DeclRefExpr 0x7ffe07884538 <col:32> 'struct S *' lvalue Var 0x7ffe0786c158 'p' 'struct S *'
+|   | | | |   `-IntegerLiteral 0x7ffe078845c0 <col:38> 'int' 7
+|   | | | |-CallExpr 0x7ffe078847b0 <line:2 errors generated.
+26:2, col:19> 'void'
+|   | | | | `-ImplicitCastExpr 0x7ffe07884798 <col:2> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | | | |   `-DeclRefExpr 0x7ffe07884748 <col:2> '<builtin fn type>' Function 0x7ffe07884660 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | | | `-<<<NULL>>>
+|   | | `-CallExpr 0x7ffe07884950 <line:27:7, col:24> 'int'
+|   | |   |-ImplicitCastExpr 0x7ffe07884938 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7ffe078848e8 <col:7> 'int ()' Function 0x7ffe07884838 '__builtin_free' 'int ()'
+|   | |   `-ImplicitCastExpr 0x7ffe07884980 <col:23> 'struct S *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7ffe07884910 <col:23> 'struct S *' lvalue Var 0x7ffe0786c158 'p' 'struct S *'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffe07884a20 <line:29:3, col:10>
+|     `-IntegerLiteral 0x7ffe07884a00 <col:10> 'int' 0
+|-FunctionDecl 0x7ffe07884000 <line:24:7> col:7 implicit used __builtin_strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7ffe078840a0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7ffe07884100 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7ffe07884170 <col:7> Implicit
+`-FunctionDecl 0x7ffe07884660 <line:26:2> col:2 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ffe07884700 <col:2> Implicit

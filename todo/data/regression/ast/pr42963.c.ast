@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fa626013ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa626055220 <../Data/C2AST/pr42963.c:3:1, col:22> col:13 used foo 'void (void)' extern
+|-VarDecl 0x7fa626055318 <line:4:1, col:12> col:12 used i 'int' extern
+`-FunctionDecl 0x7fa626055408 <line:5:1, line:26:1> line:6:1 bar 'void (void)'
+  `-CompoundStmt 0x7fa626055858 <line:7:1, line:26:1>
+    |-SwitchStmt 0x7fa6260554e8 <line:8:3, line:15:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa6260554d0 <line:8:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa6260554a8 <col:11> 'int' lvalue Var 0x7fa626055318 'i' 'int'
+    | `-CompoundStmt 0x7fa626055670 <line:9:5, line:15:5>
+    |   |-CaseStmt 0x7fa626055538 <line:10:5, line:11:12>
+    |   | |-IntegerLiteral 0x7fa626055518 <line:10:10> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | `-CallExpr 0x7fa6260555e0 <line:11:7, col:12> 'void'
+    |   |   `-ImplicitCastExpr 0x7fa6260555c8 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+    |   |     `-DeclRefExpr 0x7fa626055570 <col:7> 'void (void)' Function 0x7fa626055220 'foo' 'void (void)'
+    |   |-BreakStmt 0x7fa626055608 <line:12:7>
+    |   `-CaseStmt 0x7fa626055630 <line:13:5, line:14:7>
+    |     |-IntegerLiteral 0x7fa626055610 <line:13:10> 'int' 1
+    |     |-<<<NULL>>>
+    |     `-BreakStmt 0x7fa626055668 <line:14:7>
+    `-SwitchStmt 0x7fa6260556d8 <line:18:3, line:25:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fa6260556c0 <line:18:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa626055698 <col:11> 'int' lvalue Var 0x7fa626055318 'i' 'int'
+      `-CompoundStmt 0x7fa626055830 <line:19:5, line:25:5>
+        |-CaseStmt 0x7fa626055728 <line:20:5, line:21:12>
+        | |-IntegerLiteral 0x7fa626055708 <line:20:10> 'int' 0
+        | |-<<<NULL>>>
+        | `-CallExpr 0x7fa6260557a0 <line:21:7, col:12> 'void'
+        |   `-ImplicitCastExpr 0x7fa626055788 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7fa626055760 <col:7> 'void (void)' Function 0x7fa626055220 'foo' 'void (void)'
+        |-BreakStmt 0x7fa6260557c8 <line:22:7>
+        `-CaseStmt 0x7fa6260557f0 <line:23:5, line:24:7>
+          |-IntegerLiteral 0x7fa6260557d0 <line:23:10> 'int' 1
+          |-<<<NULL>>>
+          `-BreakStmt 0x7fa626055828 <line:24:7>

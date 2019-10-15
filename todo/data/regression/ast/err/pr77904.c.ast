@@ -1,0 +1,35 @@
+../Data/C2AST/pr77904.c:23:11: error: unknown register name 'r0' in asm
+                  : : : "r0", "r4", "r5", "r6", "r7", "r8", "r10");
+                        ^
+1 error generated.
+TranslationUnitDecl 0x7f908b82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f908b82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f908b82bf80 '__int128'
+|-TypedefDecl 0x7f908b82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f908b82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f908b82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f908b82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f908b82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f908b82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f908b82c600 'char *'
+|   `-BuiltinType 0x7f908b82bd80 'char'
+|-TypedefDecl 0x7f908b82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f908b82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f908b82c720 'struct __va_list_tag'
+|     `-Record 0x7f908b82c698 '__va_list_tag'
+|-FunctionDecl 0x7f908c015220 <../Data/C2AST/pr77904.c:4:1, line:8:1> line:5:1 used clobber_sp 'void (void)'
+| |-CompoundStmt 0x7f908c015468 <line:6:1, line:8:1>
+| | `-GCCAsmStmt 0x7f908c015418 <line:7:3, col:32>
+| `-NoInlineAttr 0x7f908c0152c0 <line:4:17>
+`-FunctionDecl 0x7f908c015548 <line:10:1, line:45:1> line:11:1 main 'int (void)'
+  `-CompoundStmt 0x7f908c015c50 <line:12:1, line:45:1>
+    |-DeclStmt 0x7f908c015690 <line:13:3, col:10>
+    | `-VarDecl 0x7f908c015630 <col:3, col:7> col:7 used ret 'int'
+    |-CallExpr 0x7f908c0159a0 <line:24:3, col:15> 'void'
+    | `-ImplicitCastExpr 0x7f908c015988 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f908c015938 <col:3> 'void (void)' Function 0x7f908c015220 'clobber_sp' 'void (void)'
+    |-GCCAsmStmt 0x7f908c015b98 <line:26:3, line:43:21>
+    | `-DeclRefExpr 0x7f908c015b70 <col:13> 'int' lvalue Var 0x7f908c015630 'ret' 'int'
+    `-ReturnStmt 0x7f908c015c38 <line:44:3, col:10>
+      `-ImplicitCastExpr 0x7f908c015c20 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f908c015bf8 <col:10> 'int' lvalue Var 0x7f908c015630 'ret' 'int'

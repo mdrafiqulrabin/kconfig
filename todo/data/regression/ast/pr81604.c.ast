@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f98f302bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f98f306d800 <../Data/C2AST/pr81604.c:5:1, col:10> col:6 used a 'long [10]'
+|-FunctionDecl 0x7f98f306d9b8 <line:7:1, line:11:1> line:8:1 used foo 'long *(int)'
+| |-ParmVarDecl 0x7f98f306d8b8 <col:6, col:10> col:10 used i 'int'
+| |-CompoundStmt 0x7f98f306db88 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7f98f306db70 <line:10:3, col:14>
+| |   `-UnaryOperator 0x7f98f306db50 <col:10, col:14> 'long *' prefix '&'
+| |     `-ArraySubscriptExpr 0x7f98f306db28 <col:11, col:14> 'long' lvalue
+| |       |-ImplicitCastExpr 0x7f98f306daf8 <col:11> 'long *' <ArrayToPointerDecay>
+| |       | `-DeclRefExpr 0x7f98f306daa8 <col:11> 'long [10]' lvalue Var 0x7f98f306d800 'a' 'long [10]'
+| |       `-ImplicitCastExpr 0x7f98f306db10 <col:13> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7f98f306dad0 <col:13> 'int' lvalue ParmVar 0x7f98f306d8b8 'i' 'int'
+| `-NoInlineAttr 0x7f98f306da60 <line:7:16>
+|-FunctionDecl 0x7f98f306dd08 <line:13:1, line:17:1> line:14:1 used bar 'long (long, long)'
+| |-ParmVarDecl 0x7f98f306dbb8 <col:6, col:11> col:11 used x 'long'
+| |-ParmVarDecl 0x7f98f306dc30 <col:14, col:19> col:19 used y 'long'
+| |-CompoundStmt 0x7f98f306dec0 <line:15:1, line:17:1>
+| | `-ReturnStmt 0x7f98f306dea8 <line:16:3, col:14>
+| |   `-BinaryOperator 0x7f98f306de80 <col:10, col:14> 'long' '*'
+| |     |-ImplicitCastExpr 0x7f98f306de50 <col:10> 'long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7f98f306de00 <col:10> 'long' lvalue ParmVar 0x7f98f306dbb8 'x' 'long'
+| |     `-ImplicitCastExpr 0x7f98f306de68 <col:14> 'long' <LValueToRValue>
+| |       `-DeclRefExpr 0x7f98f306de28 <col:14> 'long' lvalue ParmVar 0x7f98f306dc30 'y' 'long'
+| `-NoInlineAttr 0x7f98f306ddb8 <line:13:16>
+`-FunctionDecl 0x7f98f306df30 <line:19:1, line:28:1> line:20:1 main 'int ()'
+  `-CompoundStmt 0x7f98f306e4b8 <line:21:1, line:28:1>
+    |-DeclStmt 0x7f98f306e088 <line:22:3, col:22>
+    | `-VarDecl 0x7f98f306dfe8 <col:3, col:21> col:16 used i 'volatile int' cinit
+    |   `-UnaryOperator 0x7f98f306e068 <col:20, col:21> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7f98f306e048 <col:21> 'int' 1
+    |-DeclStmt 0x7f98f306e138 <line:23:3, col:33>
+    | `-VarDecl 0x7f98f306e0b8 <col:3, <built-in>:39:22> ../Data/C2AST/pr81604.c:23:17 used l 'volatile long' cinit
+    |   `-IntegerLiteral 0x7f98f306e118 <<built-in>:39:22> 'long' 9223372036854775807
+    |-DeclStmt 0x7f98f306e1c8 <../Data/C2AST/pr81604.c:24:3, col:19>
+    | `-VarDecl 0x7f98f306e168 <col:3, col:18> col:18 used p 'long *volatile'
+    |-BinaryOperator 0x7f98f306e2e8 <line:25:3, col:13> 'long *' '='
+    | |-DeclRefExpr 0x7f98f306e1e0 <col:3> 'long *volatile' lvalue Var 0x7f98f306e168 'p' 'long *volatile'
+    | `-CallExpr 0x7f98f306e2a0 <col:7, col:13> 'long *'
+    |   |-ImplicitCastExpr 0x7f98f306e288 <col:7> 'long *(*)(int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f98f306e208 <col:7> 'long *(int)' Function 0x7f98f306d9b8 'foo' 'long *(int)'
+    |   `-ImplicitCastExpr 0x7f98f306e2d0 <col:12> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f98f306e230 <col:12> 'volatile int' lvalue Var 0x7f98f306dfe8 'i' 'volatile int'
+    |-BinaryOperator 0x7f98f306e458 <line:26:3, col:16> 'long' '='
+    | |-DeclRefExpr 0x7f98f306e310 <col:3> 'volatile long' lvalue Var 0x7f98f306e0b8 'l' 'volatile long'
+    | `-CallExpr 0x7f98f306e3f0 <col:7, col:16> 'long'
+    |   |-ImplicitCastExpr 0x7f98f306e3d8 <col:7> 'long (*)(long, long)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f98f306e338 <col:7> 'long (long, long)' Function 0x7f98f306dd08 'bar' 'long (long, long)'
+    |   |-ImplicitCastExpr 0x7f98f306e428 <col:12> 'long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f98f306e360 <col:12> 'volatile long' lvalue Var 0x7f98f306e0b8 'l' 'volatile long'
+    |   `-ImplicitCastExpr 0x7f98f306e440 <col:15> 'long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f98f306e388 <col:15> 'volatile long' lvalue Var 0x7f98f306e0b8 'l' 'volatile long'
+    `-ReturnStmt 0x7f98f306e4a0 <line:27:3, col:10>
+      `-IntegerLiteral 0x7f98f306e480 <col:10> 'int' 0

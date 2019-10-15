@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fe86180c4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe86180d188 <../Data/C2AST/pr36786.c:3:1, col:13> col:13 referenced DItype 'long'
+| |-BuiltinType 0x7fe86180c600 'long'
+| `-ModeAttr 0x7fe86004e800 <col:36, col:44> DI
+|-TypedefDecl 0x7fe86004e878 <line:4:1, col:22> col:22 referenced UDItype 'unsigned long'
+| |-BuiltinType 0x7fe86180c6a0 'unsigned long'
+| `-ModeAttr 0x7fe86004e8e0 <col:46, col:54> DI
+|-TypedefDecl 0x7fe86004e958 <line:5:1, col:13> col:13 referenced TItype '__int128'
+| |-BuiltinType 0x7fe86180c780 '__int128'
+| `-ModeAttr 0x7fe86004e9c0 <col:36, col:44> TI
+`-FunctionDecl 0x7fe86004eb48 <line:7:1, line:12:1> line:7:1 __floattisf 'int (TItype)'
+  |-ParmVarDecl 0x7fe86004ea40 <col:14, col:21> col:21 used u 'TItype':'__int128'
+  `-CompoundStmt 0x7fe86004f020 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fe86004edc8 <line:9:3, col:27>
+    | `-VarDecl 0x7fe86004ec60 <col:3, col:26> col:10 used hi 'DItype':'long' cinit
+    |   `-ImplicitCastExpr 0x7fe86004edb0 <col:15, col:26> 'DItype':'long' <IntegralCast>
+    |     `-BinaryOperator 0x7fe86004ed88 <col:15, col:26> 'TItype':'__int128' '>>'
+    |       |-ImplicitCastExpr 0x7fe86004ed70 <col:15> 'TItype':'__int128' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fe86004ecc0 <col:15> 'TItype':'__int128' lvalue ParmVar 0x7fe86004ea40 'u' 'TItype':'__int128'
+    |       `-ParenExpr 0x7fe86004ed50 <col:20, col:26> 'int'
+    |         `-BinaryOperator 0x7fe86004ed28 <col:21, col:25> 'int' '*'
+    |           |-IntegerLiteral 0x7fe86004ece8 <col:21> 'int' 8
+    |           `-IntegerLiteral 0x7fe86004ed08 <col:25> 'int' 8
+    |-DeclStmt 0x7fe86004eef8 <line:10:3, col:23>
+    | |-VarDecl 0x7fe86004ee10 <col:3, col:11> col:11 count 'UDItype':'unsigned long'
+    | `-VarDecl 0x7fe86004ee80 <col:3, col:18> col:18 used shift 'UDItype':'unsigned long'
+    `-BinaryOperator 0x7fe86004eff8 <line:11:3, col:13> 'DItype':'long' '='
+      |-DeclRefExpr 0x7fe86004ef10 <col:3> 'DItype':'long' lvalue Var 0x7fe86004ec60 'hi' 'DItype':'long'
+      `-ImplicitCastExpr 0x7fe86004efe0 <col:8, col:13> 'DItype':'long' <IntegralCast>
+        `-BinaryOperator 0x7fe86004efb8 <col:8, col:13> 'TItype':'__int128' '>>'
+          |-ImplicitCastExpr 0x7fe86004ef88 <col:8> 'TItype':'__int128' <LValueToRValue>
+          | `-DeclRefExpr 0x7fe86004ef38 <col:8> 'TItype':'__int128' lvalue ParmVar 0x7fe86004ea40 'u' 'TItype':'__int128'
+          `-ImplicitCastExpr 0x7fe86004efa0 <col:13> 'UDItype':'unsigned long' <LValueToRValue>
+            `-DeclRefExpr 0x7fe86004ef60 <col:13> 'UDItype':'unsigned long' lvalue Var 0x7fe86004ee80 'shift' 'UDItype':'unsigned long'

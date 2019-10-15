@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7f9d6e817ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9d6e818b60 <../Data/C2AST/pr62171.c:4:1, line:9:1> line:4:8 struct omp_data_i definition
+| |-FieldDecl 0x7f9d6e84f860 <line:6:3, col:24> col:24 referenced results 'double *restrict'
+| |-FieldDecl 0x7f9d6e84f8c0 <line:7:3, col:24> col:24 referenced pData 'double *restrict'
+| `-FieldDecl 0x7f9d6e84f920 <line:8:3, col:24> col:24 referenced coeff 'double *restrict'
+`-FunctionDecl 0x7f9d6e84fbb8 <line:13:1, line:23:1> line:14:1 f 'double (struct omp_data_i *restrict, int)'
+  |-ParmVarDecl 0x7f9d6e84fa20 <col:4, col:36> col:36 used p 'struct omp_data_i *restrict'
+  |-ParmVarDecl 0x7f9d6e84fa98 <col:39, col:43> col:43 used argc 'int'
+  |-CompoundStmt 0x7f9d6e850440 <line:15:1, line:23:1>
+  | |-DeclStmt 0x7f9d6e84fd68 <line:17:3, col:10>
+  | | `-VarDecl 0x7f9d6e84fd08 <col:3, col:7> col:7 used idx 'int'
+  | |-ForStmt 0x7f9d6e8502a0 <line:19:3, line:20:59>
+  | | |-BinaryOperator 0x7f9d6e84fdc8 <line:19:8, col:14> 'int' '='
+  | | | |-DeclRefExpr 0x7f9d6e84fd80 <col:8> 'int' lvalue Var 0x7f9d6e84fd08 'idx' 'int'
+  | | | `-IntegerLiteral 0x7f9d6e84fda8 <col:14> 'int' 0
+  | | |-<<<NULL>>>
+  | | |-BinaryOperator 0x7f9d6e84fe50 <col:17, line:11:17> 'int' '<'
+  | | | |-ImplicitCastExpr 0x7f9d6e84fe38 <line:19:17> 'int' <LValueToRValue>
+  | | | | `-DeclRefExpr 0x7f9d6e84fdf0 <col:17> 'int' lvalue Var 0x7f9d6e84fd08 'idx' 'int'
+  | | | `-IntegerLiteral 0x7f9d6e84fe18 <line:11:17> 'int' 1000000
+  | | |-UnaryOperator 0x7f9d6e84fea0 <line:19:32, col:35> 'int' postfix '++'
+  | | | `-DeclRefExpr 0x7f9d6e84fe78 <col:32> 'int' lvalue Var 0x7f9d6e84fd08 'idx' 'int'
+  | | `-BinaryOperator 0x7f9d6e850278 <line:20:5, col:59> 'double' '='
+  | |   |-ArraySubscriptExpr 0x7f9d6e84ffd0 <col:5, col:23> 'double' lvalue
+  | |   | |-ImplicitCastExpr 0x7f9d6e84ffa0 <col:5, col:18> 'double *' <LValueToRValue>
+  | |   | | `-ParenExpr 0x7f9d6e84ff58 <col:5, col:18> 'double *restrict' lvalue
+  | |   | |   `-ParenExpr 0x7f9d6e84ff38 <col:6, col:17> 'double *restrict' lvalue
+  | |   | |     `-MemberExpr 0x7f9d6e84ff00 <col:7, col:10> 'double *restrict' lvalue ->results 0x7f9d6e84f860
+  | |   | |       `-ImplicitCastExpr 0x7f9d6e84fee8 <col:7> 'struct omp_data_i *' <LValueToRValue>
+  | |   | |         `-DeclRefExpr 0x7f9d6e84fec0 <col:7> 'struct omp_data_i *restrict' lvalue ParmVar 0x7f9d6e84fa20 'p' 'struct omp_data_i *restrict'
+  | |   | `-ImplicitCastExpr 0x7f9d6e84ffb8 <col:20> 'int' <LValueToRValue>
+  | |   |   `-DeclRefExpr 0x7f9d6e84ff78 <col:20> 'int' lvalue Var 0x7f9d6e84fd08 'idx' 'int'
+  | |   `-BinaryOperator 0x7f9d6e850250 <col:27, col:59> 'double' '*'
+  | |     |-ImplicitCastExpr 0x7f9d6e850220 <col:27, col:39> 'double' <LValueToRValue>
+  | |     | `-ParenExpr 0x7f9d6e8500c8 <col:27, col:39> 'double' lvalue
+  | |     |   `-UnaryOperator 0x7f9d6e8500a8 <col:28, col:38> 'double' lvalue prefix '*'
+  | |     |     `-ImplicitCastExpr 0x7f9d6e850090 <col:29, col:38> 'double *' <LValueToRValue>
+  | |     |       `-ParenExpr 0x7f9d6e850070 <col:29, col:38> 'double *restrict' lvalue
+  | |     |         `-MemberExpr 0x7f9d6e850038 <col:30, col:33> 'double *restrict' lvalue ->coeff 0x7f9d6e84f920
+  | |     |           `-ImplicitCastExpr 0x7f9d6e850020 <col:30> 'struct omp_data_i *' <LValueToRValue>
+  | |     |             `-DeclRefExpr 0x7f9d6e84fff8 <col:30> 'struct omp_data_i *restrict' lvalue ParmVar 0x7f9d6e84fa20 'p' 'struct omp_data_i *restrict'
+  | |     `-ImplicitCastExpr 0x7f9d6e850238 <col:43, col:59> 'double' <LValueToRValue>
+  | |       `-ArraySubscriptExpr 0x7f9d6e8501f8 <col:43, col:59> 'double' lvalue
+  | |         |-ImplicitCastExpr 0x7f9d6e8501c8 <col:43, col:54> 'double *' <LValueToRValue>
+  | |         | `-ParenExpr 0x7f9d6e850180 <col:43, col:54> 'double *restrict' lvalue
+  | |         |   `-ParenExpr 0x7f9d6e850160 <col:44, col:53> 'double *restrict' lvalue
+  | |         |     `-MemberExpr 0x7f9d6e850128 <col:45, col:48> 'double *restrict' lvalue ->pData 0x7f9d6e84f8c0
+  | |         |       `-ImplicitCastExpr 0x7f9d6e850110 <col:45> 'struct omp_data_i *' <LValueToRValue>
+  | |         |         `-DeclRefExpr 0x7f9d6e8500e8 <col:45> 'struct omp_data_i *restrict' lvalue ParmVar 0x7f9d6e84fa20 'p' 'struct omp_data_i *restrict'
+  | |         `-ImplicitCastExpr 0x7f9d6e8501e0 <col:56> 'int' <LValueToRValue>
+  | |           `-DeclRefExpr 0x7f9d6e8501a0 <col:56> 'int' lvalue Var 0x7f9d6e84fd08 'idx' 'int'
+  | `-ReturnStmt 0x7f9d6e850428 <line:22:3, col:29>
+  |   `-ImplicitCastExpr 0x7f9d6e850410 <col:10, col:29> 'double' <LValueToRValue>
+  |     `-ArraySubscriptExpr 0x7f9d6e8503e8 <col:10, col:29> 'double' lvalue
+  |       |-ImplicitCastExpr 0x7f9d6e8503b8 <col:10, col:23> 'double *' <LValueToRValue>
+  |       | `-ParenExpr 0x7f9d6e850370 <col:10, col:23> 'double *restrict' lvalue
+  |       |   `-ParenExpr 0x7f9d6e850350 <col:11, col:22> 'double *restrict' lvalue
+  |       |     `-MemberExpr 0x7f9d6e850318 <col:12, col:15> 'double *restrict' lvalue ->results 0x7f9d6e84f860
+  |       |       `-ImplicitCastExpr 0x7f9d6e850300 <col:12> 'struct omp_data_i *' <LValueToRValue>
+  |       |         `-DeclRefExpr 0x7f9d6e8502d8 <col:12> 'struct omp_data_i *restrict' lvalue ParmVar 0x7f9d6e84fa20 'p' 'struct omp_data_i *restrict'
+  |       `-ImplicitCastExpr 0x7f9d6e8503d0 <col:25> 'int' <LValueToRValue>
+  |         `-DeclRefExpr 0x7f9d6e850390 <col:25> 'int' lvalue ParmVar 0x7f9d6e84fa98 'argc' 'int'
+  `-NoInlineAttr 0x7f9d6e84fc68 <line:13:23>

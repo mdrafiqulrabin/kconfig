@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fd00502bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd00502c960 <../Data/C2AST/pr40026.c:1:9, line:3:1> line:1:9 struct definition
+| `-FieldDecl 0x7fd006000038 <line:2:5, col:19> col:19 bits 'unsigned long'
+|-TypedefDecl 0x7fd0060000d0 <line:1:1, line:3:3> col:3 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7fd006000080 'struct S' sugar
+|   `-RecordType 0x7fd006000000 'S'
+|     `-Record 0x7fd00502c960 ''
+|-RecordDecl 0x7fd006000140 <line:4:1, line:7:1> line:4:8 struct T definition
+| |-FieldDecl 0x7fd006000220 <line:5:5, col:7> col:7 span 'S':'S'
+| `-FieldDecl 0x7fd006000280 <line:6:5, col:9> col:9 flags 'int'
+`-FunctionDecl 0x7fd006000470 <line:9:1, line:15:1> line:9:10 f 'struct T (int)'
+  |-ParmVarDecl 0x7fd006000328 <col:12, col:16> col:16 used x 'int'
+  `-CompoundStmt 0x7fd0060008d8 <line:10:1, line:15:1>
+    `-ReturnStmt 0x7fd0060008c0 <line:11:3, line:14:3>
+      `-ImplicitCastExpr 0x7fd0060008a8 <line:11:10, line:14:3> 'struct T':'struct T' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fd006000880 <line:11:10, line:14:3> 'struct T':'struct T' lvalue
+          `-InitListExpr 0x7fd006000818 <line:11:21, line:14:3> 'struct T':'struct T'
+            |-ImplicitCastExpr 0x7fd006000868 <line:12:15, col:25> 'S':'S' <LValueToRValue>
+            | `-CompoundLiteralExpr 0x7fd006000638 <col:15, col:25> 'S':'S' lvalue
+            |   `-InitListExpr 0x7fd0060005f0 <col:19, col:25> 'S':'S'
+            |     `-IntegerLiteral 0x7fd006000588 <col:21> 'unsigned long' 0
+            `-ParenExpr 0x7fd006000750 <line:13:16, col:28> 'int'
+              `-ConditionalOperator 0x7fd006000720 <col:17, col:27> 'int'
+                |-ImplicitCastExpr 0x7fd006000708 <col:17> 'int' <LValueToRValue>
+                | `-DeclRefExpr 0x7fd0060006a0 <col:17> 'int' lvalue ParmVar 0x7fd006000328 'x' 'int'
+                |-IntegerLiteral 0x7fd0060006c8 <col:21> 'int' 256
+                `-IntegerLiteral 0x7fd0060006e8 <col:27> 'int' 0

@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f7f59824ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f7f59825978 <../Data/C2AST/pr82659-6.c:5:1, col:12> col:12 used x 'int' extern
+|-FunctionDecl 0x7f7f58814d80 <line:7:2, line:12:1> line:9:1 used test 'void (int)'
+| |-ParmVarDecl 0x7f7f58814cc0 <col:7, col:11> col:11 used i 'int'
+| |-CompoundStmt 0x7f7f58814f00 <line:10:1, line:12:1>
+| | `-BinaryOperator 0x7f7f58814ed8 <line:11:3, col:7> 'int' '='
+| |   |-DeclRefExpr 0x7f7f58814e70 <col:3> 'int' lvalue Var 0x7f7f59825978 'x' 'int'
+| |   `-ImplicitCastExpr 0x7f7f58814ec0 <col:7> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f7f58814e98 <col:7> 'int' lvalue ParmVar 0x7f7f58814cc0 'i' 'int'
+| `-VisibilityAttr 0x7f7f58814e28 <line:7:18, col:38> Hidden
+`-FunctionDecl 0x7f7f58814fb8 <line:14:1, line:18:1> line:15:1 bar 'void (int)'
+  |-ParmVarDecl 0x7f7f58814f30 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7f7f58815138 <line:16:1, line:18:1>
+    `-CallExpr 0x7f7f588150f0 <line:17:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f7f588150d8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f7f58815060 <col:3> 'void (int)' Function 0x7f7f58814d80 'test' 'void (int)'
+      `-ImplicitCastExpr 0x7f7f58815120 <col:9> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f7f58815088 <col:9> 'int' lvalue ParmVar 0x7f7f58814f30 'i' 'int'

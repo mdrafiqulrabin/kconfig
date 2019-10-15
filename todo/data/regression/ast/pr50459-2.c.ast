@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fd32082bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fd32082c960 <../Data/C2AST/pr50459-2.c:5:1, col:23> col:1
+| |-EnumConstantDecl 0x7fd32086d840 <col:8, col:12> col:8 referenced A 'int'
+| | `-IntegerLiteral 0x7fd32086d820 <col:12> 'int' 128
+| `-EnumConstantDecl 0x7fd32086d8a8 <col:17, col:21> col:17 B 'int'
+|   `-IntegerLiteral 0x7fd32086d888 <col:21> 'int' 1
+|-FunctionDecl 0x7fd32086d9e0 <line:6:1, col:48> col:6 fn3 'void (void)'
+| `-ConstructorAttr 0x7fd32086da80 <col:32, col:46> 128
+`-FunctionDecl 0x7fd32086dbc0 <line:7:1, col:47> col:6 fn4 'void (void)'
+  `-DestructorAttr 0x7fd32086dc60 <col:32, col:45> 128

@@ -1,0 +1,88 @@
+TranslationUnitDecl 0x7fad4a800ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fad4a016068 <../Data/C2AST/pr66334.c:5:1, col:20> col:12 used foo 'int (int)' extern
+| `-ParmVarDecl 0x7fad4a801b78 <col:17> col:20 'int'
+|-FunctionDecl 0x7fad4a016270 <line:6:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fad4a016310 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fad4a016378 prev 0x7fad4a016270 <col:1, col:93> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7fad4a016168 <col:19, col:23> col:23 __status 'int'
+| `-NoThrowAttr 0x7fad4a016420 <col:49>
+|-RecordDecl 0x7fad4a016468 <line:7:1, line:13:1> line:7:8 struct __pthread_cleanup_frame definition
+| |-FieldDecl 0x7fad4a016690 <line:9:3, col:35> col:10 referenced __cancel_routine 'void (*)(void *)'
+| |-FieldDecl 0x7fad4a0166f0 <line:10:3, col:9> col:9 referenced __cancel_arg 'void *'
+| |-FieldDecl 0x7fad4a016750 <line:11:3, col:7> col:7 referenced __do_it 'int'
+| `-FieldDecl 0x7fad4a0167b0 <line:12:3, col:7> col:7 __cancel_type 'int'
+|-FunctionDecl 0x7fad4a0169b0 <line:14:1, line:19:1> line:15:1 used __pthread_cleanup_routine 'void (struct __pthread_cleanup_frame *)' extern inline
+| |-ParmVarDecl 0x7fad4a0168b0 <col:28, col:60> col:60 used __frame 'struct __pthread_cleanup_frame *'
+| `-CompoundStmt 0x7fad4a016c70 <line:16:1, line:19:1>
+|   `-IfStmt 0x7fad4a016c38 <line:17:3, line:18:53>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fad4a016ad0 <line:17:7, col:16> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7fad4a016a98 <col:7, col:16> 'int' lvalue ->__do_it 0x7fad4a016750
+|     |   `-ImplicitCastExpr 0x7fad4a016a80 <col:7> 'struct __pthread_cleanup_frame *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fad4a016a58 <col:7> 'struct __pthread_cleanup_frame *' lvalue ParmVar 0x7fad4a0168b0 '__frame' 'struct __pthread_cleanup_frame *'
+|     |-CallExpr 0x7fad4a016bf0 <line:18:5, col:53> 'void'
+|     | |-ImplicitCastExpr 0x7fad4a016bd8 <col:5, col:14> 'void (*)(void *)' <LValueToRValue>
+|     | | `-MemberExpr 0x7fad4a016b28 <col:5, col:14> 'void (*)(void *)' lvalue ->__cancel_routine 0x7fad4a016690
+|     | |   `-ImplicitCastExpr 0x7fad4a016b10 <col:5> 'struct __pthread_cleanup_frame *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7fad4a016ae8 <col:5> 'struct __pthread_cleanup_frame *' lvalue ParmVar 0x7fad4a0168b0 '__frame' 'struct __pthread_cleanup_frame *'
+|     | `-ImplicitCastExpr 0x7fad4a016c20 <col:32, col:41> 'void *' <LValueToRValue>
+|     |   `-MemberExpr 0x7fad4a016ba0 <col:32, col:41> 'void *' lvalue ->__cancel_arg 0x7fad4a0166f0
+|     |     `-ImplicitCastExpr 0x7fad4a016b88 <col:32> 'struct __pthread_cleanup_frame *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7fad4a016b60 <col:32> 'struct __pthread_cleanup_frame *' lvalue ParmVar 0x7fad4a0168b0 '__frame' 'struct __pthread_cleanup_frame *'
+|     `-<<<NULL>>>
+|-VarDecl 0x7fad4a016ca0 <line:20:1, col:12> col:12 used cl_called 'int' static
+|-FunctionDecl 0x7fad4a016da0 <line:22:1, line:26:1> line:23:1 used cl 'void (void *)' static
+| |-ParmVarDecl 0x7fad4a016d18 <col:5, col:11> col:11 arg 'void *'
+| `-CompoundStmt 0x7fad4a016e90 <line:24:1, line:26:1>
+|   `-UnaryOperator 0x7fad4a016e70 <line:25:3, col:5> 'int' prefix '++'
+|     `-DeclRefExpr 0x7fad4a016e48 <col:5> 'int' lvalue Var 0x7fad4a016ca0 'cl_called' 'int'
+`-FunctionDecl 0x7fad4a02da00 <line:29:1, line:41:1> line:30:1 tf_usleep 'void *(void *)'
+  |-ParmVarDecl 0x7fad4a016ec0 <col:12, col:18> col:18 used arg 'void *'
+  `-CompoundStmt 0x7fad4a02e3b0 <line:31:1, line:41:1>
+    |-DoStmt 0x7fad4a02e2d0 <line:33:3, line:38:40>
+    | |-CompoundStmt 0x7fad4a02e280 <line:33:6, line:38:30>
+    | | |-DeclStmt 0x7fad4a02de48 <line:33:8, line:34:49>
+    | | | `-VarDecl 0x7fad4a02daf0 <line:33:8, line:34:48> line:33:39 used __clframe 'struct __pthread_cleanup_frame':'struct __pthread_cleanup_frame' cinit
+    | | |   |-InitListExpr 0x7fad4a02ddc0 <col:109, line:34:48> 'struct __pthread_cleanup_frame':'struct __pthread_cleanup_frame'
+    | | |   | |-ImplicitCastExpr 0x7fad4a02de20 <line:33:131, col:134> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | |   | | `-ParenExpr 0x7fad4a02dbc8 <col:131, col:134> 'void (void *)'
+    | | |   | |   `-DeclRefExpr 0x7fad4a02dba0 <col:132> 'void (void *)' Function 0x7fad4a016da0 'cl' 'void (void *)'
+    | | |   | |-ParenExpr 0x7fad4a02dca8 <col:153, line:34:32> 'void *'
+    | | |   | | `-ParenExpr 0x7fad4a02dc88 <col:21, col:31> 'void *'
+    | | |   | |   `-CStyleCastExpr 0x7fad4a02dc60 <col:22, col:30> 'void *' <NullToPointer>
+    | | |   | |     `-IntegerLiteral 0x7fad4a02dc28 <col:30> 'int' 0
+    | | |   | |-IntegerLiteral 0x7fad4a02dd08 <col:46> 'int' 1
+    | | |   | `-ImplicitValueInitExpr 0x7fad4a02de38 <<invalid sloc>> 'int'
+    | | |   `-CleanupAttr 0x7fad4a02db50 <line:33:65, col:103> Function 0x7fad4a0169b0 '__pthread_cleanup_routine' 'void (struct __pthread_cleanup_frame *)'
+    | | |-NullStmt 0x7fad4a02de60 <line:34:50>
+    | | |-CallExpr 0x7fad4a02e110 <line:36:5, col:60> 'int'
+    | | | |-ImplicitCastExpr 0x7fad4a02e0f8 <col:5> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fad4a02de70 <col:5> 'int (int)' Function 0x7fad4a016068 'foo' 'int (int)'
+    | | | `-ImplicitCastExpr 0x7fad4a02e140 <col:10, col:59> 'int' <IntegralCast>
+    | | |   `-ConditionalOperator 0x7fad4a02e0a0 <col:10, col:59> 'unsigned long'
+    | | |     |-BinaryOperator 0x7fad4a02df58 <col:10, col:27> 'int' '=='
+    | | |     | |-ImplicitCastExpr 0x7fad4a02df40 <col:10> 'void *' <LValueToRValue>
+    | | |     | | `-DeclRefExpr 0x7fad4a02de98 <col:10> 'void *' lvalue ParmVar 0x7fad4a016ec0 'arg' 'void *'
+    | | |     | `-ParenExpr 0x7fad4a02df20 <col:17, col:27> 'void *'
+    | | |     |   `-CStyleCastExpr 0x7fad4a02def8 <col:18, col:26> 'void *' <NullToPointer>
+    | | |     |     `-IntegerLiteral 0x7fad4a02dec0 <col:26> 'int' 0
+    | | |     |-ParenExpr 0x7fad4a02e048 <col:31, col:55> 'unsigned long'
+    | | |     | `-BinaryOperator 0x7fad4a02e020 <col:32, col:52> 'unsigned long' '+'
+    | | |     |   |-BinaryOperator 0x7fad4a02dfd8 <col:32, col:46> 'unsigned long' '*'
+    | | |     |   | |-ImplicitCastExpr 0x7fad4a02dfc0 <col:32> 'unsigned long' <IntegralCast>
+    | | |     |   | | `-IntegerLiteral 0x7fad4a02df80 <col:32> 'long' 2147483647
+    | | |     |   | `-IntegerLiteral 0x7fad4a02dfa0 <col:46> 'unsigned long' 2
+    | | |     |   `-IntegerLiteral 0x7fad4a02e000 <col:52> 'unsigned long' 1
+    | | |     `-ImplicitCastExpr 0x7fad4a02e088 <col:59> 'unsigned long' <IntegralCast>
+    | | |       `-IntegerLiteral 0x7fad4a02e068 <col:59> 'int' 0
+    | | `-BinaryOperator 0x7fad4a02e1f8 <line:38:5, col:27> 'int' '='
+    | |   |-MemberExpr 0x7fad4a02e180 <col:5, col:15> 'int' lvalue .__do_it 0x7fad4a016750
+    | |   | `-DeclRefExpr 0x7fad4a02e158 <col:5> 'struct __pthread_cleanup_frame':'struct __pthread_cleanup_frame' lvalue Var 0x7fad4a02daf0 '__clframe' 'struct __pthread_cleanup_frame':'struct __pthread_cleanup_frame'
+    | |   `-ParenExpr 0x7fad4a02e1d8 <col:25, col:27> 'int'
+    | |     `-IntegerLiteral 0x7fad4a02e1b8 <col:26> 'int' 0
+    | `-IntegerLiteral 0x7fad4a02e2b0 <col:39> 'int' 0
+    `-CallExpr 0x7fad4a02e380 <line:40:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fad4a02e368 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fad4a02e2f0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fad4a016378 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fad4a02e318 <col:9> 'int' 1

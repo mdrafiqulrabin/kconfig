@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fccdb02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fccdb02c978 <../Data/C2AST/pr65873.c:1:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fccdb02bea0 'unsigned long'
+|-FunctionDecl 0x7fccdb06ba68 <line:4:1> col:1 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fccdb06bb08 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fccdb06bb68 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7fccdb06bbc8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fccdb06bc40 prev 0x7fccdb06ba68 <line:3:1, line:7:1> line:4:1 used memcpy 'void *(void *, const void *, unsigned long)' extern inline
+| |-ParmVarDecl 0x7fccdb06b800 <col:9, col:26> col:26 used __dest 'void *restrict'
+| |-ParmVarDecl 0x7fccdb06b8a0 <col:34, col:57> col:57 used __src 'const void *restrict'
+| |-ParmVarDecl 0x7fccdb06b930 <col:64, col:71> col:71 used __len 'size_t':'unsigned long'
+| |-CompoundStmt 0x7fccdb06c538 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7fccdb06c520 <line:6:3, col:89>
+| |   `-CallExpr 0x7fccdb06c490 <col:10, col:89> 'void *'
+| |     |-ImplicitCastExpr 0x7fccdb06c478 <col:10> 'void *(*)(void *, const void *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+| |     | `-DeclRefExpr 0x7fccdb06c038 <col:10> '<builtin fn type>' Function 0x7fccdb06bdb0 '__builtin___memcpy_chk' 'void *(void *, const void *, unsigned long, unsigned long)'
+| |     |-ImplicitCastExpr 0x7fccdb06c4d8 <col:34> 'void *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fccdb06c060 <col:34> 'void *restrict' lvalue ParmVar 0x7fccdb06b800 '__dest' 'void *restrict'
+| |     |-ImplicitCastExpr 0x7fccdb06c4f0 <col:42> 'const void *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fccdb06c088 <col:42> 'const void *restrict' lvalue ParmVar 0x7fccdb06b8a0 '__src' 'const void *restrict'
+| |     |-ImplicitCastExpr 0x7fccdb06c508 <col:49> 'size_t':'unsigned long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fccdb06c0b0 <col:49> 'size_t':'unsigned long' lvalue ParmVar 0x7fccdb06b930 '__len' 'size_t':'unsigned long'
+| |     `-CallExpr 0x7fccdb06c3a0 <col:56, col:88> 'unsigned long'
+| |       |-ImplicitCastExpr 0x7fccdb06c388 <col:56> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |       | `-DeclRefExpr 0x7fccdb06c2d8 <col:56> '<builtin fn type>' Function 0x7fccdb06c120 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |       |-ImplicitCastExpr 0x7fccdb06c3f0 <col:79> 'const void *' <BitCast>
+| |       | `-ImplicitCastExpr 0x7fccdb06c3d8 <col:79> 'void *' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7fccdb06c300 <col:79> 'void *restrict' lvalue ParmVar 0x7fccdb06b800 '__dest' 'void *restrict'
+| |       `-IntegerLiteral 0x7fccdb06c328 <col:87> 'int' 0
+| |-NoThrowAttr 0x7fccdb06bcf8 <line:3:82>
+| |-GNUInlineAttr 0x7fccdb06bd40 <col:50>
+| `-AlwaysInlineAttr 0x7fccdb06bd50 <col:31> always_inline
+|-FunctionDecl 0x7fccdb06bdb0 <line:6:10> col:10 implicit used __builtin___memcpy_chk 'void *(void *, const void *, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fccdb06be50 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fccdb06beb0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fccdb06bf10 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fccdb06bf70 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fccdb06bff0 <col:10> Implicit
+|-FunctionDecl 0x7fccdb06c120 <col:56> col:56 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7fccdb06c1c0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fccdb06c220 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fccdb06c290 <col:56> Implicit
+`-FunctionDecl 0x7fccdc000000 <line:9:1, line:13:1> line:10:1 bar 'void (void *, void *, size_t)'
+  |-ParmVarDecl 0x7fccdb06c5d0 <col:6, col:12> col:12 used d 'void *'
+  |-ParmVarDecl 0x7fccdb06c648 <col:15, col:21> col:21 used s 'void *'
+  |-ParmVarDecl 0x7fccdb06c6b8 <col:24, col:31> col:31 used l 'size_t':'unsigned long'
+  `-CompoundStmt 0x7fccdc0002c0 <line:11:1, line:13:1>
+    `-CallExpr 0x7fccdc000220 <line:12:3, col:18> 'void *'
+      |-ImplicitCastExpr 0x7fccdc000208 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fccdc0000f8 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7fccdb06bc40 'memcpy' 'void *(void *, const void *, unsigned long)'
+      |-ImplicitCastExpr 0x7fccdc000260 <col:11> 'void *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fccdc000120 <col:11> 'void *' lvalue ParmVar 0x7fccdb06c5d0 'd' 'void *'
+      |-ImplicitCastExpr 0x7fccdc000290 <col:14> 'const void *' <BitCast>
+      | `-ImplicitCastExpr 0x7fccdc000278 <col:14> 'void *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fccdc000148 <col:14> 'void *' lvalue ParmVar 0x7fccdb06c648 's' 'void *'
+      `-ImplicitCastExpr 0x7fccdc0002a8 <col:17> 'size_t':'unsigned long' <LValueToRValue>
+        `-DeclRefExpr 0x7fccdc000170 <col:17> 'size_t':'unsigned long' lvalue ParmVar 0x7fccdb06c6b8 'l' 'size_t':'unsigned long'

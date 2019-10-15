@@ -1,0 +1,28 @@
+../Data/C2AST/pr60606-3.c:7:32: error: unknown register name 'cc' in asm
+  register unsigned int r asm ("cc");  
+                               ^
+1 error generated.
+TranslationUnitDecl 0x7fb13801a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb13801ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb13801ab80 '__int128'
+|-TypedefDecl 0x7fb13801aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb13801aba0 'unsigned __int128'
+|-TypedefDecl 0x7fb13801b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb13801afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb13801af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb13801b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb13801b200 'char *'
+|   `-BuiltinType 0x7fb13801a980 'char'
+|-TypedefDecl 0x7fb13801b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb13801b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb13801b320 'struct __va_list_tag'
+|     `-Record 0x7fb13801b298 '__va_list_tag'
+`-FunctionDecl 0x7fb13805c428 <../Data/C2AST/pr60606-3.c:4:1, line:9:1> line:5:1 f 'int (void)'
+  `-CompoundStmt 0x7fb13805c6d0 <line:6:1, line:9:1>
+    |-DeclStmt 0x7fb13805c648 <line:7:3, col:37>
+    | `-VarDecl 0x7fb13805c590 <col:3, col:25> col:25 used r 'unsigned int' register
+    |   `-AsmLabelAttr 0x7fb13805c5f0 <col:32> "cc"
+    `-ReturnStmt 0x7fb13805c6b8 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7fb13805c6a0 <col:10> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb13805c688 <col:10> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fb13805c660 <col:10> 'unsigned int' lvalue Var 0x7fb13805c590 'r' 'unsigned int'

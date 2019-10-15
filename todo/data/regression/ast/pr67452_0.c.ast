@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f89168064e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f891501f070 <../Data/C2AST/pr67452_0.c:4:1, col:13> col:7 used b 'float [3][3]'
+|-FunctionDecl 0x7f891501f158 <line:6:1, line:14:1> line:7:1 used foo 'void ()'
+| |-CompoundStmt 0x7f891501f840 <line:8:1, line:14:1>
+| | |-DeclStmt 0x7f891501f358 <line:9:3, col:13>
+| | | |-VarDecl 0x7f891501f268 <col:3, col:7> col:7 used v1 'int'
+| | | `-VarDecl 0x7f891501f2e0 <col:3, col:11> col:11 used v2 'int'
+| | `-ForStmt 0x7f891501f808 <line:11:3, line:13:19>
+| |   |-BinaryOperator 0x7f891501f3b8 <line:11:8, col:13> 'int' '='
+| |   | |-DeclRefExpr 0x7f891501f370 <col:8> 'int' lvalue Var 0x7f891501f268 'v1' 'int'
+| |   | `-IntegerLiteral 0x7f891501f398 <col:13> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7f891501f440 <col:16, col:21> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7f891501f428 <col:16> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7f891501f3e0 <col:16> 'int' lvalue Var 0x7f891501f268 'v1' 'int'
+| |   | `-IntegerLiteral 0x7f891501f408 <col:21> 'int' 3
+| |   |-UnaryOperator 0x7f891501f490 <col:24, col:26> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7f891501f468 <col:24> 'int' lvalue Var 0x7f891501f268 'v1' 'int'
+| |   `-ForStmt 0x7f891501f7d0 <line:12:5, line:13:19>
+| |     |-BinaryOperator 0x7f891501f4f8 <line:12:10, col:15> 'int' '='
+| |     | |-DeclRefExpr 0x7f891501f4b0 <col:10> 'int' lvalue Var 0x7f891501f2e0 'v2' 'int'
+| |     | `-IntegerLiteral 0x7f891501f4d8 <col:15> 'int' 0
+| |     |-<<<NULL>>>
+| |     |-BinaryOperator 0x7f891501f580 <col:18, col:23> 'int' '<'
+| |     | |-ImplicitCastExpr 0x7f891501f568 <col:18> 'int' <LValueToRValue>
+| |     | | `-DeclRefExpr 0x7f891501f520 <col:18> 'int' lvalue Var 0x7f891501f2e0 'v2' 'int'
+| |     | `-IntegerLiteral 0x7f891501f548 <col:23> 'int' 3
+| |     |-UnaryOperator 0x7f891501f5d0 <col:26, col:28> 'int' postfix '++'
+| |     | `-DeclRefExpr 0x7f891501f5a8 <col:26> 'int' lvalue Var 0x7f891501f2e0 'v2' 'int'
+| |     `-BinaryOperator 0x7f891501f7a8 <line:13:7, col:19> 'float' '='
+| |       |-ArraySubscriptExpr 0x7f891501f748 <col:7, col:15> 'float' lvalue
+| |       | |-ImplicitCastExpr 0x7f891501f718 <col:7, col:11> 'float *' <ArrayToPointerDecay>
+| |       | | `-ArraySubscriptExpr 0x7f891501f698 <col:7, col:11> 'float [3]' lvalue
+| |       | |   |-ImplicitCastExpr 0x7f891501f668 <col:7> 'float (*)[3]' <ArrayToPointerDecay>
+| |       | |   | `-DeclRefExpr 0x7f891501f5f0 <col:7> 'float [3][3]' lvalue Var 0x7f891501f070 'b' 'float [3][3]'
+| |       | |   `-ImplicitCastExpr 0x7f891501f680 <col:9> 'int' <LValueToRValue>
+| |       | |     `-DeclRefExpr 0x7f891501f618 <col:9> 'int' lvalue Var 0x7f891501f268 'v1' 'int'
+| |       | `-ImplicitCastExpr 0x7f891501f730 <col:13> 'int' <LValueToRValue>
+| |       |   `-DeclRefExpr 0x7f891501f6c0 <col:13> 'int' lvalue Var 0x7f891501f2e0 'v2' 'int'
+| |       `-ImplicitCastExpr 0x7f891501f790 <col:19> 'float' <FloatingCast>
+| |         `-FloatingLiteral 0x7f891501f770 <col:19> 'double' 2.500000e+00
+| |-NoInlineAttr 0x7f891501f1f8 <line:6:22>
+| `-UsedAttr 0x7f891501f240 <col:16>
+`-FunctionDecl 0x7f891501f8b0 <line:16:1, line:23:1> line:17:1 main 'int ()'
+  `-CompoundStmt 0x7f891501fd20 <line:18:1, line:23:1>
+    |-GCCAsmStmt 0x7f891501fac0 <line:19:3, col:42>
+    | `-ImplicitCastExpr 0x7f891501faa8 <col:29> 'float (*)[3]' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f891501fa18 <col:29> 'float [3][3]' lvalue Var 0x7f891501f070 'b' 'float [3][3]'
+    |-CallExpr 0x7f891501fb90 <line:20:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7f891501fb78 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f891501fb28 <col:3> 'void ()' Function 0x7f891501f158 'foo' 'void ()'
+    |-GCCAsmStmt 0x7f891501fc80 <line:21:3, col:42>
+    | `-ImplicitCastExpr 0x7f891501fc68 <col:29> 'float (*)[3]' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7f891501fc10 <col:29> 'float [3][3]' lvalue Var 0x7f891501f070 'b' 'float [3][3]'
+    `-ReturnStmt 0x7f891501fd08 <line:22:3, col:10>
+      `-IntegerLiteral 0x7f891501fce8 <col:10> 'int' 0

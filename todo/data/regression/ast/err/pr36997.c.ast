@@ -1,0 +1,30 @@
+../Data/C2AST/pr36997.c:7:42: error: passing 'long long' to parameter of incompatible type '__attribute__((__vector_size__(1 * sizeof(long long)))) long long' (vector of 1 'long long' value)
+    return (__m64) __builtin_ia32_paddq ((long long)__m1, (long long)__m2);  
+                                         ^~~~~~~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7fe517022ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe517023460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe517023180 '__int128'
+|-TypedefDecl 0x7fe5170234d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe5170231a0 'unsigned __int128'
+|-TypedefDecl 0x7fe5170237a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe5170235b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe517023528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe517023840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe517023800 'char *'
+|   `-BuiltinType 0x7fe517022f80 'char'
+|-TypedefDecl 0x7fe517023b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe517023ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe517023920 'struct __va_list_tag'
+|     `-Record 0x7fe517023898 '__va_list_tag'
+|-TypedefDecl 0x7fe51681e200 <../Data/C2AST/pr36997.c:4:1, col:13> col:13 referenced __m64 '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-VectorType 0x7fe517023b80 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+| | `-BuiltinType 0x7fe517022fe0 'int'
+| `-MayAliasAttr 0x7fe51681e258 <col:56>
+|-FunctionDecl 0x7fe51681e450 <line:5:1, line:9:1> line:5:7 _mm_add_si64 '__m64 (__m64, __m64)'
+| |-ParmVarDecl 0x7fe51681e2d0 <col:21, col:27> col:27 used __m1 '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7fe51681e340 <col:33, col:39> col:39 used __m2 '__m64':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-CompoundStmt 0x7fe51681ec80 <line:6:1, line:9:1>
+`-FunctionDecl 0x7fe51681e5b0 <line:7:20> col:20 implicit used __builtin_ia32_paddq '__attribute__((__vector_size__(1 * sizeof(long long)))) long long (__attribute__((__vector_size__(1 * sizeof(long long)))) long long, __attribute__((__vector_size__(1 * sizeof(long long)))) long long)' extern
+  |-ParmVarDecl 0x7fe51681e650 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+  `-ParmVarDecl 0x7fe51681e6b0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(1 * sizeof(long long)))) long long'

@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fda7080bae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fda70846c00 <../Data/C2AST/pr70325.c:5:1, col:14> col:14 referenced C '__attribute__((__vector_size__(32 * sizeof(char)))) char'
+| `-VectorType 0x7fda7080c780 '__attribute__((__vector_size__(32 * sizeof(char)))) char' 32
+|   `-BuiltinType 0x7fda7080bb80 'char'
+|-TypedefDecl 0x7fda70846cb8 <line:6:1, col:13> col:13 referenced I '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fda70846c80 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fda7080bbe0 'int'
+|-FunctionDecl 0x7fda70846ed0 <line:8:1, line:12:1> line:9:1 referenced f 'void (int, I)'
+| |-ParmVarDecl 0x7fda70846d28 <col:3, col:7> col:7 used a 'int'
+| |-ParmVarDecl 0x7fda70846dc0 <col:9, col:11> col:11 used b 'I':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-CompoundStmt 0x7fda708474d0 <line:10:1, line:12:1>
+|   `-CallExpr 0x7fda70847460 <line:11:3, col:49> 'void'
+|     |-ImplicitCastExpr 0x7fda70847448 <col:3> 'void (*)(__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fda70847210 <col:3> '<builtin fn type>' Function 0x7fda70847038 '__builtin_ia32_storedquqi256_mask' 'void (__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)'
+|     |-CStyleCastExpr 0x7fda70847340 <col:37, col:41> 'C *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fda70847328 <col:41> 'void (*)(int, I)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fda70847260 <col:41> 'void (int, I)' Function 0x7fda70846ed0 'f' 'void (int, I)'
+|     |-CStyleCastExpr 0x7fda708473b8 <col:43, col:46> 'C':'__attribute__((__vector_size__(32 * sizeof(char)))) char' <BitCast>
+|     | `-ImplicitCastExpr 0x7fda708473a0 <col:46> 'I':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fda70847368 <col:46> 'I':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7fda70846dc0 'b' 'I':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+|     `-ImplicitCastExpr 0x7fda708474b8 <col:48> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fda708474a0 <col:48> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fda708473e0 <col:48> 'int' lvalue ParmVar 0x7fda70846d28 'a' 'int'
+`-FunctionDecl 0x7fda70847038 <col:3> col:3 implicit used __builtin_ia32_storedquqi256_mask 'void (__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)' extern
+  |-ParmVarDecl 0x7fda708470d8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(32 * sizeof(char)))) char *'
+  |-ParmVarDecl 0x7fda70847138 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(32 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7fda70847198 <<invalid sloc>> <invalid sloc> 'unsigned int'

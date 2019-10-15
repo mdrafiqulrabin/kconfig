@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f89178174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f891780e800 <../Data/C2AST/pr32708-2.c:4:1, col:19> col:19 referenced __v2di '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7f8917818180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7f8917817620 'long long'
+|-TypedefDecl 0x7f891780e888 <line:5:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7f8917818180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7f8917817620 'long long'
+|-FunctionDecl 0x7f891780eaa0 <line:7:1, line:11:1> line:8:1 used _mm_set_epi64x '__m128i (long long, long long)' static inline
+| |-ParmVarDecl 0x7f891780e918 <col:17, col:27> col:27 used __q1 'long long'
+| |-ParmVarDecl 0x7f891780e990 <col:33, col:43> col:43 used __q0 'long long'
+| |-CompoundStmt 0x7f891780ede0 <line:9:1, line:11:1>
+| | `-ReturnStmt 0x7f891780edc8 <line:10:3, col:54>
+| |   `-UnaryOperator 0x7f891780eda8 <col:10, col:54> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' prefix '__extension__'
+| |     `-CStyleCastExpr 0x7f891780ed80 <col:24, col:54> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+| |       `-ImplicitCastExpr 0x7f891780ed68 <col:33, col:54> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+| |         `-CompoundLiteralExpr 0x7f891780ed30 <col:33, col:54> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+| |           `-InitListExpr 0x7f891780ecb0 <col:41, col:54> '__v2di':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |             |-ImplicitCastExpr 0x7f891780ed00 <col:43> 'long long' <LValueToRValue>
+| |             | `-DeclRefExpr 0x7f891780ec10 <col:43> 'long long' lvalue ParmVar 0x7f891780e990 '__q0' 'long long'
+| |             `-ImplicitCastExpr 0x7f891780ed18 <col:49> 'long long' <LValueToRValue>
+| |               `-DeclRefExpr 0x7f891780ec38 <col:49> 'long long' lvalue ParmVar 0x7f891780e918 '__q1' 'long long'
+| `-AlwaysInlineAttr 0x7f891780eb50 <line:7:40> always_inline
+`-FunctionDecl 0x7f891780ef10 <line:13:1, line:16:1> line:13:9 long2vector '__m128i (long long)'
+  |-ParmVarDecl 0x7f891780ee10 <col:21, col:31> col:31 used __i 'long long'
+  `-CompoundStmt 0x7f891780f120 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7f891780f108 <line:15:3, col:32>
+      `-CallExpr 0x7f891780f0a0 <col:10, col:32> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7f891780f088 <col:10> '__m128i (*)(long long, long long)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f891780efb8 <col:10> '__m128i (long long, long long)' Function 0x7f891780eaa0 '_mm_set_epi64x' '__m128i (long long, long long)'
+        |-ImplicitCastExpr 0x7f891780f0d8 <col:26> 'long long' <IntegralCast>
+        | `-IntegerLiteral 0x7f891780efe0 <col:26> 'int' 0
+        `-ImplicitCastExpr 0x7f891780f0f0 <col:29> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f891780f000 <col:29> 'long long' lvalue ParmVar 0x7f891780ee10 '__i' 'long long'

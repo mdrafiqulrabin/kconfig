@@ -1,0 +1,42 @@
+../Data/C2AST/pr35334.c:16:23: error: called object type '_Complex int' is not a function or function pointer
+  ((__complex__ int)i)();                
+  ~~~~~~~~~~~~~~~~~~~~^
+../Data/C2AST/pr35334.c:17:23: error: called object type '_Complex int' is not a function or function pointer
+  ((__complex__ int)j)();                
+  ~~~~~~~~~~~~~~~~~~~~^
+../Data/C2AST/pr35334.c:18:23: error: called object type '_Complex int' is not a function or function pointer
+  ((__complex__ int)k)();                
+  ~~~~~~~~~~~~~~~~~~~~^
+../Data/C2AST/pr35334.c:19:31: error: called object type '_Complex long double' is not a function or function pointer
+  ((__complex__ long double)l)();        
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+../Data/C2AST/pr35334.c:20:31: error: called object type '_Complex long double' is not a function or function pointer
+  ((__complex__ long double)m)();        
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+../Data/C2AST/pr35334.c:21:31: error: called object type '_Complex long double' is not a function or function pointer
+  ((__complex__ long double)n)();        
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+6 errors generated.
+TranslationUnitDecl 0x7f83190228e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8319022e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8319022b80 '__int128'
+|-TypedefDecl 0x7f8319022ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8319022ba0 'unsigned __int128'
+|-TypedefDecl 0x7f83190231a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8319022fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8319022f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8319023240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8319023200 'char *'
+|   `-BuiltinType 0x7f8319022980 'char'
+|-TypedefDecl 0x7f8319023508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f83190234b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8319023320 'struct __va_list_tag'
+|     `-Record 0x7f8319023298 '__va_list_tag'
+|-VarDecl 0x7f8319023598 <../Data/C2AST/pr35334.c:6:1, col:26> col:26 used i '_Complex unsigned int'
+|-VarDecl 0x7f831a014258 <line:7:1, col:5> col:5 used j 'int'
+|-VarDecl 0x7f831a0142c8 <line:8:1, col:6> col:6 used k 'char'
+|-VarDecl 0x7f831a014338 <line:9:1, col:20> col:20 used l '_Complex double'
+|-VarDecl 0x7f831a0143b0 <line:10:1, col:8> col:8 used m 'double'
+|-VarDecl 0x7f831a014428 <line:11:1, col:7> col:7 used n 'float'
+`-FunctionDecl 0x7f831a0144d8 <line:13:1, line:22:1> line:14:1 foo 'void ()'
+  `-CompoundStmt 0x7f831a014e18 <line:15:1, line:22:1>

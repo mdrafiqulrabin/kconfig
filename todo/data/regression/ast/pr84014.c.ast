@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fe7af82b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe7b0024228 <../Data/C2AST/pr84014.c:4:1, line:7:1> line:5:1 used nh 'int (void)'
+| `-CompoundStmt 0x7fe7b0024308 <line:6:1, line:7:1>
+|-FunctionDecl 0x7fe7b00243e8 <line:9:1, line:12:1> line:10:1 used si 'long long (void)'
+| `-CompoundStmt 0x7fe7b0024488 <line:11:1, line:12:1>
+`-FunctionDecl 0x7fe7b0024578 <line:14:1, line:20:1> line:15:1 xf 'int (int)'
+  |-ParmVarDecl 0x7fe7b00244b0 <col:5, col:9> col:9 used fg 'int'
+  `-CompoundStmt 0x7fe7b0024998 <line:16:1, line:20:1>
+    |-DeclStmt 0x7fe7b0024728 <line:17:3, col:17>
+    | `-VarDecl 0x7fe7b0024638 <col:3, col:16> col:7 used y5 'int' cinit
+    |   `-CallExpr 0x7fe7b0024700 <col:12, col:16> 'int'
+    |     `-ImplicitCastExpr 0x7fe7b00246e8 <col:12> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fe7b0024698 <col:12> 'int (void)' Function 0x7fe7b0024228 'nh' 'int (void)'
+    |-CompoundAssignOperator 0x7fe7b0024908 <line:18:3, col:25> 'int' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    | |-DeclRefExpr 0x7fe7b0024740 <col:3> 'int' lvalue ParmVar 0x7fe7b00244b0 'fg' 'int'
+    | `-ConditionalOperator 0x7fe7b00248d8 <col:9, col:25> 'long long'
+    |   |-UnaryOperator 0x7fe7b00247c8 <col:9, col:11> 'int' prefix '!'
+    |   | `-UnaryOperator 0x7fe7b00247a8 <col:10, col:11> 'int' prefix '!'
+    |   |   `-ImplicitCastExpr 0x7fe7b0024790 <col:11> 'int' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fe7b0024768 <col:11> 'int' lvalue Var 0x7fe7b0024638 'y5' 'int'
+    |   |-ImplicitCastExpr 0x7fe7b00248c0 <col:16> 'long long' <IntegralCast>
+    |   | `-ImplicitCastExpr 0x7fe7b00248a8 <col:16> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fe7b00247e8 <col:16> 'int' lvalue Var 0x7fe7b0024638 'y5' 'int'
+    |   `-CallExpr 0x7fe7b0024880 <col:21, col:25> 'long long'
+    |     `-ImplicitCastExpr 0x7fe7b0024868 <col:21> 'long long (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fe7b0024810 <col:21> 'long long (void)' Function 0x7fe7b00243e8 'si' 'long long (void)'
+    `-ReturnStmt 0x7fe7b0024980 <line:19:3, col:10>
+      `-ImplicitCastExpr 0x7fe7b0024968 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe7b0024940 <col:10> 'int' lvalue ParmVar 0x7fe7b00244b0 'fg' 'int'

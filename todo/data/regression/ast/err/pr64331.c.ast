@@ -1,0 +1,116 @@
+../Data/C2AST/pr64331.c:34:3: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  __builtin_exit (0);
+  ^
+../Data/C2AST/pr64331.c:34:3: note: did you mean '__builtin_abort'?
+../Data/C2AST/pr64331.c:32:5: note: '__builtin_abort' declared here
+    __builtin_abort();
+    ^
+TranslationUnitDecl 0x7fd8ef81bee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd8ef81c460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd8ef81c180 '__int128'
+|-TypedefDecl 0x7fd8ef81c4d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd8ef81c1a0 'unsigned __int128'
+|-TypedefDecl 0x7fd8ef81c7a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd8ef81c5b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd8ef81c528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd8ef81c840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd8ef81c800 'char *'
+|   `-BuiltinType 0x7fd8ef81bf80 'char'
+|-TypedefDecl 0x7fd8ef81cb08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd8ef81cab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd8ef81c920 'struct __va_list_tag'
+|     `-Record 0x7fd8ef81c898 '__va_list_tag'
+|-RecordDecl 0x7fd8ef81cb60 <../Data/C2AST/pr64331.c:3:9, line:6:1> line:3:9 struct definition
+| |-FieldDecl 0x7fd8f0044438 <line:5:3, col:12> col:12 referenced a 'unsigned int'
+| `-FieldDecl 0x7fd8f0044498 <col:3, col:15> col:15 referenced b 'unsigned int'
+|-TypedefDecl 0x7fd8f0044530 <line:3:1, line:6:3> col:3 referenced T2 'struct T2':'T2'
+| `-ElaboratedType 0x7fd8f00444e0 'struct T2' sugar
+|   `-RecordType 0x7fd8f0044400 'T2'
+|     `-Record 0x7fd8ef81cb60 ''
+|-FunctionDecl 0x7fd8f00447b0 <line:9:1, line:19:1> line:10:6 used foo2 'void (T2 *, int)'
+| |-ParmVarDecl 0x7fd8f0044628 <col:12, col:16> col:16 used t 'T2 *'
+| |-ParmVarDecl 0x7fd8f00446a0 <col:19, col:23> col:23 used x 'int'
+| |-CompoundStmt 0x7fd8f0044dd0 <line:11:1, line:19:1>
+| | `-IfStmt 0x7fd8f0044d98 <line:12:3, line:18:5>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fd8f00449d0 <line:12:7, col:15> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fd8f00449b8 <col:7> 'unsigned int' <IntegralCast>
+| |   | | `-ImplicitCastExpr 0x7fd8f0044988 <col:7> 'int' <LValueToRValue>
+| |   | |   `-DeclRefExpr 0x7fd8f00448e8 <col:7> 'int' lvalue ParmVar 0x7fd8f00446a0 'x' 'int'
+| |   | `-ImplicitCastExpr 0x7fd8f00449a0 <col:12, col:15> 'unsigned int' <LValueToRValue>
+| |   |   `-MemberExpr 0x7fd8f0044950 <col:12, col:15> 'unsigned int' lvalue ->a 0x7fd8f0044438
+| |   |     `-ImplicitCastExpr 0x7fd8f0044938 <col:12> 'T2 *' <LValueToRValue>
+| |   |       `-DeclRefExpr 0x7fd8f0044910 <col:12> 'T2 *' lvalue ParmVar 0x7fd8f0044628 't' 'T2 *'
+| |   |-CompoundStmt 0x7fd8f0044d78 <line:13:5, line:18:5>
+| |   | |-BinaryOperator 0x7fd8f0044ac8 <line:14:7, col:14> 'unsigned int' '='
+| |   | | |-MemberExpr 0x7fd8f0044a38 <col:7, col:10> 'unsigned int' lvalue ->a 0x7fd8f0044438
+| |   | | | `-ImplicitCastExpr 0x7fd8f0044a20 <col:7> 'T2 *' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x7fd8f00449f8 <col:7> 'T2 *' lvalue ParmVar 0x7fd8f0044628 't' 'T2 *'
+| |   | | `-ImplicitCastExpr 0x7fd8f0044ab0 <col:14> 'unsigned int' <IntegralCast>
+| |   | |   `-ImplicitCastExpr 0x7fd8f0044a98 <col:14> 'int' <LValueToRValue>
+| |   | |     `-DeclRefExpr 0x7fd8f0044a70 <col:14> 'int' lvalue ParmVar 0x7fd8f00446a0 'x' 'int'
+| |   | `-IfStmt 0x7fd8f0044d40 <line:16:7, line:17:9>
+| |   |   |-<<<NULL>>>
+| |   |   |-<<<NULL>>>
+| |   |   |-BinaryOperator 0x7fd8f0044c40 <line:16:11, col:24> 'int' '&&'
+| |   |   | |-ImplicitCastExpr 0x7fd8f0044c28 <col:11> 'int' <LValueToRValue>
+| |   |   | | `-DeclRefExpr 0x7fd8f0044af0 <col:11> 'int' lvalue ParmVar 0x7fd8f00446a0 'x' 'int'
+| |   |   | `-BinaryOperator 0x7fd8f0044c00 <col:16, col:24> 'int' '=='
+| |   |   |   |-ImplicitCastExpr 0x7fd8f0044be8 <col:16> 'unsigned int' <IntegralCast>
+| |   |   |   | `-ImplicitCastExpr 0x7fd8f0044bb8 <col:16> 'int' <LValueToRValue>
+| |   |   |   |   `-DeclRefExpr 0x7fd8f0044b18 <col:16> 'int' lvalue ParmVar 0x7fd8f00446a0 'x' 'int'
+| |   |   |   `-ImplicitCastExpr 0x7fd8f0044bd0 <col:21, col:24> 'unsigned int' <LValueToRValue>
+| |   |   |     `-MemberExpr 0x7fd8f0044b80 <col:21, col:241 error generated.
+> 'unsigned int' lvalue ->b 0x7fd8f0044498
+| |   |   |       `-ImplicitCastExpr 0x7fd8f0044b68 <col:21> 'T2 *' <LValueToRValue>
+| |   |   |         `-DeclRefExpr 0x7fd8f0044b40 <col:21> 'T2 *' lvalue ParmVar 0x7fd8f0044628 't' 'T2 *'
+| |   |   |-BinaryOperator 0x7fd8f0044d18 <line:17:2, col:9> 'unsigned int' '='
+| |   |   | |-MemberExpr 0x7fd8f0044ca8 <col:2, col:5> 'unsigned int' lvalue ->a 0x7fd8f0044438
+| |   |   | | `-ImplicitCastExpr 0x7fd8f0044c90 <col:2> 'T2 *' <LValueToRValue>
+| |   |   | |   `-DeclRefExpr 0x7fd8f0044c68 <col:2> 'T2 *' lvalue ParmVar 0x7fd8f0044628 't' 'T2 *'
+| |   |   | `-ImplicitCastExpr 0x7fd8f0044d00 <col:9> 'unsigned int' <IntegralCast>
+| |   |   |   `-IntegerLiteral 0x7fd8f0044ce0 <col:9> 'int' 20
+| |   |   `-<<<NULL>>>
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fd8f0044860 <line:9:16>
+|-VarDecl 0x7fd8f0044df8 <line:22:1, col:4> col:4 used t 'T2':'T2'
+|-FunctionDecl 0x7fd8f0044f28 <line:24:1, line:37:1> line:24:5 main 'int (void)'
+| `-CompoundStmt 0x7fd8f10007f8 <line:25:1, line:37:1>
+|   |-BinaryOperator 0x7fd8f0045090 <line:26:3, col:9> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd8f0045020 <col:3, col:5> 'unsigned int' lvalue .a 0x7fd8f0044438
+|   | | `-DeclRefExpr 0x7fd8f0044ff8 <col:3> 'T2':'T2' lvalue Var 0x7fd8f0044df8 't' 'T2':'T2'
+|   | `-ImplicitCastExpr 0x7fd8f0045078 <col:9> 'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fd8f0045058 <col:9> 'int' 1
+|   |-BinaryOperator 0x7fd8f00451a0 <line:27:3, col:9> 'unsigned int' '='
+|   | |-MemberExpr 0x7fd8f0045130 <col:3, col:5> 'unsigned int' lvalue .b 0x7fd8f0044498
+|   | | `-DeclRefExpr 0x7fd8f0045108 <col:3> 'T2':'T2' lvalue Var 0x7fd8f0044df8 't' 'T2':'T2'
+|   | `-ImplicitCastExpr 0x7fd8f0045188 <col:9> 'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fd8f0045168 <col:9> 'int' 1234
+|   |-CallExpr 0x7fd8f00452d0 <line:29:3, col:17> 'void'
+|   | |-ImplicitCastExpr 0x7fd8f00452b8 <col:3> 'void (*)(T2 *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd8f00451c8 <col:3> 'void (T2 *, int)' Function 0x7fd8f00447b0 'foo2' 'void (T2 *, int)'
+|   | |-UnaryOperator 0x7fd8f0045218 <col:9, col:10> 'T2 *' prefix '&'
+|   | | `-DeclRefExpr 0x7fd8f00451f0 <col:10> 'T2':'T2' lvalue Var 0x7fd8f0044df8 't' 'T2':'T2'
+|   | `-IntegerLiteral 0x7fd8f0045238 <col:13> 'int' 1234
+|   |-IfStmt 0x7fd8f10005a8 <line:31:3, line:32:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd8f00453b8 <line:31:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fd8f0045388 <col:7, col:9> 'unsigned int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fd8f0045330 <col:7, col:9> 'unsigned int' lvalue .a 0x7fd8f0044438
+|   | | |   `-DeclRefExpr 0x7fd8f0045308 <col:7> 'T2':'T2' lvalue Var 0x7fd8f0044df8 't' 'T2':'T2'
+|   | | `-ImplicitCastExpr 0x7fd8f00453a0 <col:14> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fd8f0045368 <col:14> 'int' 20
+|   | |-CallExpr 0x7fd8f1000580 <line:32:5, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7fd8f1000568 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd8f1000518 <col:5> '<builtin fn type>' Function 0x7fd8f1000430 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd8f1000790 <line:34:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7fd8f1000778 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd8f1000700 <col:3> 'int ()' Function 0x7fd8f1000650 '__builtin_exit' 'int ()'
+|   | `-IntegerLiteral 0x7fd8f1000728 <col:19> 'int' 0
+|   `-ReturnStmt 0x7fd8f10007e0 <line:36:3, col:10>
+|     `-IntegerLiteral 0x7fd8f10007c0 <col:10> 'int' 0
+`-FunctionDecl 0x7fd8f1000430 <line:32:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fd8f10004d0 <col:5> Implicit

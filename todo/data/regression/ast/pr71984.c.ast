@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fb603822ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb604015200 <../Data/C2AST/pr71984.c:4:1, col:23> col:23 referenced v64u8 '__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+| `-VectorType 0x7fb603823b80 '__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' 64
+|   `-BuiltinType 0x7fb603823040 'unsigned char'
+|-TypedefDecl 0x7fb6040152b8 <line:5:1, col:23> col:23 referenced v64u64 '__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long'
+| `-VectorType 0x7fb604015280 '__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long' 8
+|   `-BuiltinType 0x7fb6038230a0 'unsigned long'
+|-TypedefDecl 0x7fb604015328 <line:6:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fb603823040 'unsigned char'
+|-FunctionDecl 0x7fb6040154d0 <line:8:1, line:12:1> line:9:1 used foo 'u8 (v64u64)' static
+| |-ParmVarDecl 0x7fb6040153d0 <col:6, col:13> col:13 used v64u64_0 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long'
+| |-CompoundStmt 0x7fb604015918 <line:10:1, line:12:1>
+| | `-ReturnStmt 0x7fb604015900 <line:11:3, col:46>
+| |   `-ArraySubscriptExpr 0x7fb6040158d8 <col:10, col:46> 'unsigned char'
+| |     |-ParenExpr 0x7fb604015898 <col:10, col:42> 'v64u8':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char'
+| |     | `-CStyleCastExpr 0x7fb604015870 <col:11, col:41> 'v64u8':'__attribute__((__vector_size__(64 * sizeof(unsigned char)))) unsigned char' <BitCast>
+| |     |   `-ImplicitCastExpr 0x7fb604015858 <col:18, col:41> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long' <LValueToRValue>
+| |     |     `-CompoundLiteralExpr 0x7fb604015820 <col:18, col:41> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long' lvalue
+| |     |       `-InitListExpr 0x7fb604015710 <col:26, col:41> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long'
+| |     |         |-ImplicitCastExpr 0x7fb604015790 <col:27> 'unsigned long' <IntegralCast>
+| |     |         | `-IntegerLiteral 0x7fb604015630 <col:27> 'int' 0
+| |     |         `-ImplicitCastExpr 0x7fb6040157a8 <col:30, col:40> 'unsigned long' <LValueToRValue>
+| |     |           `-ArraySubscriptExpr 0x7fb604015698 <col:30, col:40> 'unsigned long' lvalue vectorcomponent
+| |     |             |-DeclRefExpr 0x7fb604015650 <col:30> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long' lvalue ParmVar 0x7fb6040153d0 'v64u64_0' 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long'
+| |     |             `-IntegerLiteral 0x7fb604015678 <col:39> 'int' 0
+| |     `-IntegerLiteral 0x7fb6040158b8 <col:44> 'int' 13
+| `-NoInlineAttr 0x7fb604015578 <line:8:27>
+|-FunctionDecl 0x7fb604015980 <line:14:1, line:23:1> line:15:1 main 'int ()'
+| `-CompoundStmt 0x7fb604015fd8 <line:16:1, line:23:1>
+|   |-DeclStmt 0x7fb604015d08 <line:17:3, col:45>
+|   | `-VarDecl 0x7fb604015a30 <col:3, col:44> col:6 used x 'u8':'unsigned char' cinit
+|   |   `-CallExpr 0x7fb604015cc0 <col:10, col:44> 'u8':'unsigned char'
+|   |     |-ImplicitCastExpr 0x7fb604015ca8 <col:10> 'u8 (*)(v64u64)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fb604015a90 <col:10> 'u8 (v64u64)' Function 0x7fb6040154d0 'foo' 'u8 (v64u64)'
+|   |     `-ImplicitCastExpr 0x7fb604015cf0 <col:14, col:43> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long' <LValueToRValue>
+|   |       `-CompoundLiteralExpr 0x7fb604015c20 <col:14, col:43> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long' lvalue
+|   |         `-InitListExpr 0x7fb604015b30 <col:22, col:43> 'v64u64':'__attribute__((__vector_size__(8 * sizeof(unsigned long)))) unsigned long'
+|   |           `-IntegerLiteral 0x7fb604015ac8 <col:23> 'unsigned long' 506097522914230528
+|   |-IfStmt 0x7fb604015f68 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fb604015d98 <line:19:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fb604015d80 <col:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fb604015d68 <col:7> 'u8':'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fb604015d20 <col:7> 'u8':'unsigned char' lvalue Var 0x7fb604015a30 'x' 'u8':'unsigned char'
+|   | | `-IntegerLiteral 0x7fb604015d48 <col:12> 'int' 5
+|   | |-CallExpr 0x7fb604015f40 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fb604015f28 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fb604015ed8 <col:5> '<builtin fn type>' Function 0x7fb604015df0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fb604015fc0 <line:22:3, col:10>
+|     `-IntegerLiteral 0x7fb604015fa0 <col:10> 'int' 0
+`-FunctionDecl 0x7fb604015df0 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fb604015e90 <col:5> Implicit

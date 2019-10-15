@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fcd2702bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcd2706d868 <../Data/C2AST/pr80833-3.c:4:1, line:11:1> line:4:10 test '__int128 (__int128)'
+  |-ParmVarDecl 0x7fcd2702c978 <col:16, col:25> col:25 used a '__int128'
+  `-CompoundStmt 0x7fcd2706def0 <line:5:1, line:11:1>
+    |-GCCAsmStmt 0x7fcd2706ddb8 <line:6:3, line:9:39>
+    | `-DeclRefExpr 0x7fcd2706da18 <line:6:19> '__int128' lvalue ParmVar 0x7fcd2702c978 'a' '__int128'
+    `-ReturnStmt 0x7fcd2706ded8 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fcd2706dec0 <col:10> '__int128' <LValueToRValue>
+        `-DeclRefExpr 0x7fcd2706de98 <col:10> '__int128' lvalue ParmVar 0x7fcd2702c978 'a' '__int128'

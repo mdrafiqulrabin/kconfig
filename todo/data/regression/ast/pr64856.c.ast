@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f9d8d81aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9d8d81bb60 <../Data/C2AST/pr64856.c:5:1, line:7:1> line:5:8 struct A definition
+| `-FieldDecl 0x7f9d8e024438 <line:6:3, col:17> col:17 b 'unsigned long'
+|-RecordDecl 0x7f9d8e024480 <line:9:1, line:11:1> line:9:8 struct B definition
+| `-FieldDecl 0x7f9d8e024678 <line:10:3, col:15> col:12 c 'struct A [5]'
+`-VarDecl 0x7f9d8e024710 <line:13:1, col:58> col:10 d 'struct B':'struct B' cinit
+  `-InitListExpr 0x7f9d8e024ad8 <col:14, col:58> 'struct B':'struct B'
+    `-InitListExpr 0x7f9d8e024b20 <col:21, col:56> 'struct A [5]'
+      |-ImplicitCastExpr 0x7f9d8e024b88 <col:35, col:54> 'struct A':'struct A' <LValueToRValue>
+      | `-CompoundLiteralExpr 0x7f9d8e024918 <col:35, col:54> 'struct A':'struct A' lvalue
+      |   `-InitListExpr 0x7f9d8e0248b8 <col:45, col:54> 'struct A':'struct A'
+      |     `-ImplicitCastExpr 0x7f9d8e024900 <col:52> 'unsigned long' <IntegralCast>
+      |       `-IntegerLiteral 0x7f9d8e024810 <col:52> 'int' 2
+      |-ImplicitCastExpr 0x7f9d8e024ba0 <col:35, col:54> 'struct A':'struct A' <LValueToRValue>
+      | `-CompoundLiteralExpr 0x7f9d8e024918 <col:35, col:54> 'struct A':'struct A' lvalue
+      |   `-InitListExpr 0x7f9d8e0248b8 <col:45, col:54> 'struct A':'struct A'
+      |     `-ImplicitCastExpr 0x7f9d8e024900 <col:52> 'unsigned long' <IntegralCast>
+      |       `-IntegerLiteral 0x7f9d8e024810 <col:52> 'int' 2
+      |-ImplicitCastExpr 0x7f9d8e024bb8 <col:35, col:54> 'struct A':'struct A' <LValueToRValue>
+      | `-CompoundLiteralExpr 0x7f9d8e024918 <col:35, col:54> 'struct A':'struct A' lvalue
+      |   `-InitListExpr 0x7f9d8e0248b8 <col:45, col:54> 'struct A':'struct A'
+      |     `-ImplicitCastExpr 0x7f9d8e024900 <col:52> 'unsigned long' <IntegralCast>
+      |       `-IntegerLiteral 0x7f9d8e024810 <col:52> 'int' 2
+      |-ImplicitCastExpr 0x7f9d8e024bd0 <col:35, col:54> 'struct A':'struct A' <LValueToRValue>
+      | `-CompoundLiteralExpr 0x7f9d8e024918 <col:35, col:54> 'struct A':'struct A' lvalue
+      |   `-InitListExpr 0x7f9d8e0248b8 <col:45, col:54> 'struct A':'struct A'
+      |     `-ImplicitCastExpr 0x7f9d8e024900 <col:52> 'unsigned long' <IntegralCast>
+      |       `-IntegerLiteral 0x7f9d8e024810 <col:52> 'int' 2
+      `-ImplicitCastExpr 0x7f9d8e024be8 <col:35, col:54> 'struct A':'struct A' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7f9d8e024918 <col:35, col:54> 'struct A':'struct A' lvalue
+          `-InitListExpr 0x7f9d8e0248b8 <col:45, col:54> 'struct A':'struct A'
+            `-ImplicitCastExpr 0x7f9d8e024900 <col:52> 'unsigned long' <IntegralCast>
+              `-IntegerLiteral 0x7f9d8e024810 <col:52> 'int' 2

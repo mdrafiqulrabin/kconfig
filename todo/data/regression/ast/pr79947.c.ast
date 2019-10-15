@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f94b28174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f94b2818178 <../Data/C2AST/pr79947.c:6:1, col:7> col:7 used a 'float'
+|-VarDecl 0x7f94b3004058 <col:1, col:10> col:10 used b 'float'
+|-FunctionDecl 0x7f94b3004118 <line:7:1, line:11:1> line:8:1 c 'void ()'
+| `-CompoundStmt 0x7f94b3004480 <line:9:1, line:11:1>
+|   `-BinaryOperator 0x7f94b3004458 <line:10:3, col:25> 'float' '='
+|     |-DeclRefExpr 0x7f94b30041b8 <col:3> 'float' lvalue Var 0x7f94b2818178 'a' 'float'
+|     `-CallExpr 0x7f94b3004410 <col:7, col:25> 'float'
+|       |-ImplicitCastExpr 0x7f94b30043f8 <col:7> 'float (*)(float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f94b3004378 <col:7> '<builtin fn type>' Function 0x7f94b3004218 '__builtin_sqrtf' 'float (float)'
+|       `-ImplicitCastExpr 0x7f94b3004440 <col:24> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7f94b30043a0 <col:24> 'float' lvalue Var 0x7f94b3004058 'b' 'float'
+`-FunctionDecl 0x7f94b3004218 <col:7> col:7 implicit used __builtin_sqrtf 'float (float)' extern
+  |-ParmVarDecl 0x7f94b30042b8 <<invalid sloc>> <invalid sloc> 'float'
+  |-ConstAttr 0x7f94b3004320 <col:7> Implicit
+  `-NoThrowAttr 0x7f94b3004368 <col:7> Implicit

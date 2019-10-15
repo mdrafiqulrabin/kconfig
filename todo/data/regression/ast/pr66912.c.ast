@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fb41082bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb411015200 <../Data/C2AST/pr66912.c:4:1, line:5:5> col:5 used n_common 'int'
+| `-VisibilityAttr 0x7fb411015260 <line:4:16, col:38> Default
+|-VarDecl 0x7fb411015338 <line:7:1, line:8:5> col:5 used n_weak_common 'int'
+| |-VisibilityAttr 0x7fb411015398 <line:7:22, col:44> Default
+| `-WeakAttr 0x7fb4110153e0 <col:16>
+|-VarDecl 0x7fb411015440 <line:10:1, line:11:15> col:5 used n_init 'int' cinit
+| |-UnaryOperator 0x7fb411015508 <col:14, col:15> 'int' prefix '-'
+| | `-IntegerLiteral 0x7fb4110154e8 <col:15> 'int' 1
+| `-VisibilityAttr 0x7fb4110154a0 <line:10:16, col:38> Default
+|-VarDecl 0x7fb411015578 <line:13:1, line:14:20> col:5 used n_weak_init 'int' cinit
+| |-UnaryOperator 0x7fb411015650 <col:19, col:20> 'int' prefix '-'
+| | `-IntegerLiteral 0x7fb411015630 <col:20> 'int' 1
+| |-VisibilityAttr 0x7fb4110155d8 <line:13:22, col:44> Default
+| `-WeakAttr 0x7fb411015620 <col:16>
+|-FunctionDecl 0x7fb4110156c0 <line:16:1, line:21:1> line:17:1 f1 'int ()'
+| `-CompoundStmt 0x7fb4110157b8 <line:18:1, line:21:1>
+|   `-ReturnStmt 0x7fb4110157a0 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fb411015788 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb411015760 <col:10> 'int' lvalue Var 0x7fb411015200 'n_common' 'int'
+|-FunctionDecl 0x7fb4110157f8 <line:23:1, line:28:1> line:24:1 f2 'int ()'
+| `-CompoundStmt 0x7fb4110158f0 <line:25:1, line:28:1>
+|   `-ReturnStmt 0x7fb4110158d8 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fb4110158c0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb411015898 <col:10> 'int' lvalue Var 0x7fb411015338 'n_weak_common' 'int'
+|-FunctionDecl 0x7fb411015930 <line:30:1, line:35:1> line:31:1 f3 'int ()'
+| `-CompoundStmt 0x7fb411015a28 <line:32:1, line:35:1>
+|   `-ReturnStmt 0x7fb411015a10 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7fb4110159f8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb4110159d0 <col:10> 'int' lvalue Var 0x7fb411015440 'n_init' 'int'
+`-FunctionDecl 0x7fb411015a68 <line:37:1, line:42:1> line:38:1 f4 'int ()'
+  `-CompoundStmt 0x7fb411015b60 <line:39:1, line:42:1>
+    `-ReturnStmt 0x7fb411015b48 <line:41:3, col:10>
+      `-ImplicitCastExpr 0x7fb411015b30 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb411015b08 <col:10> 'int' lvalue Var 0x7fb411015578 'n_weak_init' 'int'

@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fab6a028ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fab6a063420 <../Data/C2AST/pr55033.c:6:1, col:20> col:13 f 'void (void)' extern
+|-RecordDecl 0x7fab6a063500 <line:8:1, line:12:1> line:8:8 struct s definition
+| |-FieldDecl 0x7fab6a0635f0 <line:10:3, col:8> col:8 p 'int *'
+| `-FieldDecl 0x7fab6a063650 <line:11:3, col:8> col:8 q 'int *'
+|-VarDecl 0x7fab6a0636b0 <line:14:1, col:12> col:12 used a 'int' extern
+|-VarDecl 0x7fab6a063760 <line:16:1, col:23> col:23 c 'const struct s':'const struct s' extern
+|-VarDecl 0x7fab6a0637e0 prev 0x7fab6a063760 <line:18:1, col:28> col:16 c 'const struct s':'const struct s' cinit
+| `-InitListExpr 0x7fab6a0638f8 <col:20, col:28> 'struct s':'struct s'
+|   |-UnaryOperator 0x7fab6a063868 <col:22, col:23> 'int *' prefix '&'
+|   | `-DeclRefExpr 0x7fab6a063840 <col:23> 'int' lvalue Var 0x7fab6a0636b0 'a' 'int'
+|   `-ImplicitCastExpr 0x7fab6a063948 <col:26> 'int *' <NullToPointer>
+|     `-IntegerLiteral 0x7fab6a063888 <col:26> 'int' 0
+`-FunctionDecl 0x7fab6a0639f0 prev 0x7fab6a063420 <line:20:1, line:24:1> line:21:1 f 'void (void)'
+  `-CompoundStmt 0x7fab6a063d20 <line:22:1, line:24:1>
+    `-DeclStmt 0x7fab6a063d08 <line:23:3, col:31>
+      `-VarDecl 0x7fab6a063b08 <col:3, col:30> col:8 buf 'char [4]' cinit
+        `-InitListExpr 0x7fab6a063c48 <col:17, col:30> 'char [4]'
+          |-ImplicitCastExpr 0x7fab6a063ca8 <col:19> 'char' <IntegralCast>
+          | `-IntegerLiteral 0x7fab6a063b68 <col:19> 'int' 0
+          |-ImplicitCastExpr 0x7fab6a063cc0 <col:22> 'char' <IntegralCast>
+          | `-IntegerLiteral 0x7fab6a063b88 <col:22> 'int' 1
+          |-ImplicitCastExpr 0x7fab6a063cd8 <col:25> 'char' <IntegralCast>
+          | `-IntegerLiteral 0x7fab6a063ba8 <col:25> 'int' 2
+          `-ImplicitCastExpr 0x7fab6a063cf0 <col:28> 'char' <IntegralCast>
+            `-IntegerLiteral 0x7fab6a063bc8 <col:28> 'int' 3

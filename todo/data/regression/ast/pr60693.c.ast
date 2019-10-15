@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fcb7802bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcb78814260 <../Data/C2AST/pr60693.c:5:1, col:17> col:6 used bar 'void (char *)'
+| `-ParmVarDecl 0x7fcb7802c978 <col:11, col:16> col:17 'char *'
+|-FunctionDecl 0x7fcb78814410 <line:7:1, line:13:1> line:8:1 foo 'void (void)'
+| `-CompoundStmt 0x7fcb78814ad8 <line:9:1, line:13:1>
+|   |-DeclStmt 0x7fcb78814588 <line:10:3, col:17>
+|   | `-VarDecl 0x7fcb78814528 <col:3, col:16> col:8 used buf 'char [4096]'
+|   |-CallExpr 0x7fcb78814960 <line:11:3, col:47> 'void *'
+|   | |-ImplicitCastExpr 0x7fcb78814948 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fcb78814838 <col:3> '<builtin fn type>' Function 0x7fcb78814618 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fcb788149b8 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fcb788149a0 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fcb78814860 <col:21> 'char [4096]' lvalue Var 0x7fcb78814528 'buf' 'char [4096]'
+|   | |-ImplicitCastExpr 0x7fcb788149d0 <col:26, col:35> 'const void *' <BitCast>
+|   | | `-CStyleCastExpr 0x7fcb788148c0 <col:26, col:35> 'void *' <IntegralToPointer>
+|   | |   `-IntegerLiteral 0x7fcb78814888 <col:35> 'int' 32768
+|   | `-ImplicitCastExpr 0x7fcb788149e8 <col:43> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fcb788148e8 <col:43> 'int' 4096
+|   `-CallExpr 0x7fcb78814a90 <line:12:3, col:11> 'void'
+|     |-ImplicitCastExpr 0x7fcb78814a78 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fcb78814a00 <col:3> 'void (char *)' Function 0x7fcb78814260 'bar' 'void (char *)'
+|     `-ImplicitCastExpr 0x7fcb78814ac0 <col:8> 'char *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7fcb78814a28 <col:8> 'char [4096]' lvalue Var 0x7fcb78814528 'buf' 'char [4096]'
+`-FunctionDecl 0x7fcb78814618 <line:11:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fcb788146b8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fcb78814718 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fcb78814778 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fcb788147f0 <col:3> Implicit

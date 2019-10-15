@@ -1,0 +1,31 @@
+../Data/C2AST/pr43404.c:8:3: error: non-ASM statement in naked function is not supported
+  long foo;  
+  ^
+../Data/C2AST/pr43404.c:5:17: note: attribute is here
+__attribute__ ((naked))
+                ^
+1 error generated.
+TranslationUnitDecl 0x7fca798174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fca79817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fca79817780 '__int128'
+|-TypedefDecl 0x7fca79817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fca798177a0 'unsigned __int128'
+|-TypedefDecl 0x7fca79817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fca79817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fca79817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fca79817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fca79817e00 'char *'
+|   `-BuiltinType 0x7fca79817580 'char'
+|-TypedefDecl 0x7fca79818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fca798180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fca79817f20 'struct __va_list_tag'
+|     `-Record 0x7fca79817e98 '__va_list_tag'
+`-FunctionDecl 0x7fca7a015220 <../Data/C2AST/pr43404.c:5:1, line:10:1> line:6:6 invalid __data_abort 'void (void)'
+  |-CompoundStmt 0x7fca7a0154e0 <line:7:1, line:10:1>
+  | |-DeclStmt 0x7fca7a0153c0 <line:8:3, col:11>
+  | | `-VarDecl 0x7fca7a015360 <col:3, col:8> col:8 used foo 'long'
+  | `-DeclStmt 0x7fca7a0154c8 <line:9:3, col:19>
+  |   `-VarDecl 0x7fca7a015420 <col:3, col:16> col:9 bar 'long *' cinit
+  |     `-UnaryOperator 0x7fca7a0154a8 <col:15, col:16> 'long *' prefix '&'
+  |       `-DeclRefExpr 0x7fca7a015480 <col:16> 'long' lvalue Var 0x7fca7a015360 'foo' 'long'
+  `-NakedAttr 0x7fca7a0152c0 <line:5:17>

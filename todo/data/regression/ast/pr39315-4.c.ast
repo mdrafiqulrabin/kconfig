@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fe30f021ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe30e809400 <../Data/C2AST/pr39315-4.c:7:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fe30f022980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fe30f021ee0 'float'
+|-FunctionDecl 0x7fe30e809670 <line:9:1, col:31> col:13 used bar 'void (__m128 *, int)' extern
+| |-ParmVarDecl 0x7fe30e8094e8 <col:18, col:25> col:26 '__m128 *'
+| `-ParmVarDecl 0x7fe30e809560 <col:28> col:31 'int'
+`-FunctionDecl 0x7fe30e809870 <line:11:1, line:16:1> line:12:1 foo 'void (__m128 *)'
+  |-ParmVarDecl 0x7fe30e809770 <col:6, col:14> col:14 used x '__m128 *'
+  `-CompoundStmt 0x7fe30e809c20 <line:13:1, line:16:1>
+    |-DeclStmt 0x7fe30e809a70 <line:14:3, col:47>
+    | `-VarDecl 0x7fe30e809948 <col:3, col:46> col:10 used b '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   |-ImplicitCastExpr 0x7fe30e809a58 <col:45, col:46> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+    |   | `-UnaryOperator 0x7fe30e809a38 <col:45, col:46> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+    |   |   `-ImplicitCastExpr 0x7fe30e809a20 <col:46> '__m128 *' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fe30e8099f8 <col:46> '__m128 *' lvalue ParmVar 0x7fe30e809770 'x' '__m128 *'
+    |   `-AlignedAttr 0x7fe30e8099a8 <col:28, col:39> aligned
+    |     `-IntegerLiteral 0x7fe30e809918 <col:36> 'int' 128
+    `-CallExpr 0x7fe30e809bd0 <line:15:3, col:27> 'void'
+      |-ImplicitCastExpr 0x7fe30e809bb8 <col:3> 'void (*)(__m128 *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe30e809a88 <col:3> 'void (__m128 *, int)' Function 0x7fe30e809670 'bar' 'void (__m128 *, int)'
+      |-UnaryOperator 0x7fe30e809ad8 <col:8, col:9> '__m128 *' prefix '&'
+      | `-DeclRefExpr 0x7fe30e809ab0 <col:9> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fe30e809948 'b' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      `-ImplicitCastExpr 0x7fe30e809c08 <col:12, col:26> 'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fe30e809b40 <col:12, col:26> 'unsigned long' alignof
+          `-ParenExpr 0x7fe30e809b20 <col:24, col:26> '__m128 *' lvalue
+            `-DeclRefExpr 0x7fe30e809af8 <col:25> '__m128 *' lvalue ParmVar 0x7fe30e809770 'x' '__m128 *'

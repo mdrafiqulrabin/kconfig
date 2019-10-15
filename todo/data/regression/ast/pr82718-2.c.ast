@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f81a38198e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f81a3014828 <../Data/C2AST/pr82718-2.c:5:1, col:21> col:12 used bar 'int (void)' extern
+|-FunctionDecl 0x7f81a30149e8 <line:7:1, line:12:1> line:8:1 foo 'int (int)'
+| |-ParmVarDecl 0x7f81a3014920 <col:6, col:10> col:10 x 'int'
+| `-CompoundStmt 0x7f81a3014d10 <line:9:1, line:12:1>
+|   `-IfStmt 0x7f81a3014cd8 <line:10:3, line:11:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7f81a3014b00 <line:10:7, col:12> 'int'
+|     | `-ImplicitCastExpr 0x7f81a3014ae8 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f81a3014a90 <col:7> 'int (void)' Function 0x7f81a3014828 'bar' 'int (void)'
+|     |-CallExpr 0x7f81a3014cb0 <line:11:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7f81a3014c98 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7f81a3014c48 <col:5> '<builtin fn type>' Function 0x7f81a3014b60 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f81a3014b60 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f81a3014c00 <col:5> Implicit

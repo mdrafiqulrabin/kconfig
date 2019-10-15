@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fd30502bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd30502c978 <../Data/C2AST/pr82879.c:1:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fd305834458 <col:1, col:8> col:8 used b 'int'
+|-FunctionDecl 0x7fd305834518 <line:2:1, line:6:1> line:2:35 used fn1 'void ()' static
+| |-CompoundStmt 0x7fd3058346c0 <col:41, line:6:1>
+| | `-ForStmt 0x7fd305834688 <line:3:3, line:5:7>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   `-ForStmt 0x7fd305834650 <line:4:5, line:5:7>
+| |     |-<<<NULL>>>
+| |     |-<<<NULL>>>
+| |     |-ImplicitCastExpr 0x7fd305834628 <line:4:12> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fd305834600 <col:12> 'int' lvalue Var 0x7fd30502c978 'a' 'int'
+| |     |-<<<NULL>>>
+| |     `-NullStmt 0x7fd305834640 <line:5:7>
+| `-ColdAttr 0x7fd3058345b8 <line:2:23>
+`-FunctionDecl 0x7fd3058346f8 <line:7:1, line:10:1> line:7:6 fn2 'void ()'
+  `-CompoundStmt 0x7fd3058348a0 <col:12, line:10:1>
+    `-IfStmt 0x7fd305834868 <line:8:3, line:9:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd3058347c0 <line:8:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd305834798 <col:7> 'int' lvalue Var 0x7fd305834458 'b' 'int'
+      |-CallExpr 0x7fd305834840 <line:9:5, col:9> 'void'
+      | `-ImplicitCastExpr 0x7fd305834828 <col:5> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd3058347d8 <col:5> 'void ()' Function 0x7fd305834518 'fn1' 'void ()'
+      `-<<<NULL>>>

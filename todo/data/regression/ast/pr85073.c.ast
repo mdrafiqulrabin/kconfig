@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f87350024e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8735814668 <../Data/C2AST/pr85073.c:5:1, line:16:1> line:6:1 foo 'int (unsigned int)'
+  |-ParmVarDecl 0x7f8735003178 <col:6, col:15> col:15 used x 'unsigned int'
+  `-CompoundStmt 0x7f8735814ad0 <line:7:1, line:16:1>
+    |-DeclStmt 0x7f87358147e8 <line:8:3, col:12>
+    | `-VarDecl 0x7f8735814768 <col:3, col:11> col:7 used c 'int' cinit
+    |   `-IntegerLiteral 0x7f87358147c8 <col:11> 'int' 0
+    |-WhileStmt 0x7f8735814a58 <line:9:3, line:13:5>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8735814828 <line:9:10> 'unsigned int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8735814800 <col:10> 'unsigned int' lvalue ParmVar 0x7f8735003178 'x' 'unsigned int'
+    | `-CompoundStmt 0x7f8735814a38 <line:10:5, line:13:5>
+    |   |-CompoundAssignOperator 0x7f8735814888 <line:11:7, col:12> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7f8735814840 <col:7> 'int' lvalue Var 0x7f8735814768 'c' 'int'
+    |   | `-IntegerLiteral 0x7f8735814868 <col:12> 'int' 1
+    |   `-BinaryOperator 0x7f8735814a10 <line:12:7, col:21> 'unsigned int' '='
+    |     |-DeclRefExpr 0x7f87358148c0 <col:7> 'unsigned int' lvalue ParmVar 0x7f8735003178 'x' 'unsigned int'
+    |     `-BinaryOperator 0x7f87358149e8 <col:11, col:21> 'unsigned int' '&'
+    |       |-ParenExpr 0x7f8735814988 <col:11, col:17> 'unsigned int'
+    |       | `-BinaryOperator 0x7f8735814960 <col:12, col:16> 'unsigned int' '-'
+    |       |   |-ImplicitCastExpr 0x7f8735814930 <col:12> 'unsigned int' <LValueToRValue>
+    |       |   | `-DeclRefExpr 0x7f87358148e8 <col:12> 'unsigned int' lvalue ParmVar 0x7f8735003178 'x' 'unsigned int'
+    |       |   `-ImplicitCastExpr 0x7f8735814948 <col:16> 'unsigned int' <IntegralCast>
+    |       |     `-IntegerLiteral 0x7f8735814910 <col:16> 'int' 1
+    |       `-ImplicitCastExpr 0x7f87358149d0 <col:21> 'unsigned int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f87358149a8 <col:21> 'unsigned int' lvalue ParmVar 0x7f8735003178 'x' 'unsigned int'
+    `-ReturnStmt 0x7f8735814ab8 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7f8735814aa0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8735814a78 <col:10> 'int' lvalue Var 0x7f8735814768 'c' 'int'

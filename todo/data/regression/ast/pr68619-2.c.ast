@@ -1,0 +1,383 @@
+TranslationUnitDecl 0x7fecae02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fecae02c960 <../Data/C2AST/pr68619-2.c:4:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fecae06e2d0 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fecae06e280 'union tree_node *'
+|   `-ElaboratedType 0x7fecae06e220 'union tree_node' sugar
+|     `-RecordType 0x7fecae06e200 'union tree_node'
+|       `-Record 0x7fecae06f310 'tree_node'
+|-RecordDecl 0x7fecae06e340 <line:5:1, line:8:1> line:5:8 struct gcc_options definition
+| `-FieldDecl 0x7fecae06e408 <line:7:3, col:7> col:7 referenced x_flag_finite_math_only 'int'
+|-VarDecl 0x7fecae06e4a0 <line:9:1, col:27> col:27 used global_options 'struct gcc_options':'struct gcc_options' extern
+|-EnumDecl 0x7fecae06e540 <line:10:1, line:16:1> line:10:6 mode_class
+| |-EnumConstantDecl 0x7fecae06e600 <line:11:3> col:3 MODE_RANDOM 'int'
+| |-EnumConstantDecl 0x7fecae06e648 <col:16> col:16 MODE_CC 'int'
+| |-EnumConstantDecl 0x7fecae06e690 <col:25> col:25 MODE_INT 'int'
+| |-EnumConstantDecl 0x7fecae06e6d8 <col:35> col:35 MODE_PARTIAL_INT 'int'
+| |-EnumConstantDecl 0x7fecae06e720 <col:53> col:53 MODE_FRACT 'int'
+| |-EnumConstantDecl 0x7fecae06e768 <col:65> col:65 MODE_UFRACT 'int'
+| |-EnumConstantDecl 0x7fecae06e7b0 <line:12:3> col:3 MODE_ACCUM 'int'
+| |-EnumConstantDecl 0x7fecae06e7f8 <col:15> col:15 MODE_UACCUM 'int'
+| |-EnumConstantDecl 0x7fecae06e840 <col:28> col:28 MODE_FLOAT 'int'
+| |-EnumConstantDecl 0x7fecae06e888 <col:40> col:40 MODE_DECIMAL_FLOAT 'int'
+| |-EnumConstantDecl 0x7fecae06e8d0 <col:60> col:60 MODE_COMPLEX_INT 'int'
+| |-EnumConstantDecl 0x7fecae06e918 <line:13:3> col:3 MODE_COMPLEX_FLOAT 'int'
+| |-EnumConstantDecl 0x7fecae06e960 <col:23> col:23 MODE_VECTOR_INT 'int'
+| |-EnumConstantDecl 0x7fecae06e9a8 <col:40> col:40 MODE_VECTOR_FRACT 'int'
+| |-EnumConstantDecl 0x7fecae06e9f0 <line:14:3> col:3 MODE_VECTOR_UFRACT 'int'
+| |-EnumConstantDecl 0x7fecae06ea38 <col:23> col:23 MODE_VECTOR_ACCUM 'int'
+| |-EnumConstantDecl 0x7fecae06ea80 <col:42> col:42 MODE_VECTOR_UACCUM 'int'
+| |-EnumConstantDecl 0x7fecae06eac8 <line:15:3> col:3 referenced MODE_VECTOR_FLOAT 'int'
+| `-EnumConstantDecl 0x7fecae06eb10 <col:22> col:22 MAX_MODE_CLASS 'int'
+|-VarDecl 0x7fecae06ec20 <line:17:1, col:41> col:28 used mode_class 'const unsigned char [27]' extern
+|-VarDecl 0x7fecae06ecc8 <line:18:1, col:41> col:28 used mode_inner 'const unsigned char [27]' extern
+|-RecordDecl 0x7fecae06ed28 <line:19:1, line:21:1> line:19:8 struct real_value definition
+|-RecordDecl 0x7fecae06edd0 <line:22:1, line:25:1> line:22:8 struct real_format definition
+| `-FieldDecl 0x7fecae06ee98 <line:24:3, col:17> col:17 referenced has_inf 'unsigned char'
+|-VarDecl 0x7fecae06f200 <line:26:1, line:27:32> line:26:34 used real_format_for_mode 'const struct real_format *[10]' extern
+|-RecordDecl 0x7fecae06f260 <line:28:1, line:30:1> line:28:8 struct tree_type definition
+|-RecordDecl 0x7fecae06f310 prev 0x7fecae02c960 <line:31:1, line:36:1> line:31:7 union tree_node definition
+| |-FieldDecl 0x7fecae06f3b0 <line:33:3, col:7> col:7 referenced code 'int'
+| |-FieldDecl 0x7fecae06f410 <line:34:3, col:7> col:7 referenced mode 'int'
+| `-FieldDecl 0x7fecae06f4b0 <line:35:3, col:20> col:20 type 'struct tree_type':'struct tree_type'
+`-FunctionDecl 0x7fecae06f6b0 <line:37:1, line:89:1> line:38:1 omp_reduction_init 'tree (tree, tree)'
+  |-ParmVarDecl 0x7fecae06f530 <col:21, col:26> col:26 clause 'tree':'union tree_node *'
+  |-ParmVarDecl 0x7fecae06f5a0 <col:34, col:39> col:39 used type 'tree':'union tree_node *'
+  `-CompoundStmt 0x7fecae08d4a0 <line:39:1, line:89:1>
+    `-IfStmt 0x7fecae08d468 <line:40:3, line:88:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ParenExpr 0x7fecae06f878 <line:40:7, col:28> 'int'
+      | `-BinaryOperator 0x7fecae06f850 <col:8, col:26> 'int' '=='
+      |   |-ImplicitCastExpr 0x7fecae06f838 <col:8, col:21> 'int' <LValueToRValue>
+      |   | `-ParenExpr 0x7fecae06f7f8 <col:8, col:21> 'int' lvalue
+      |   |   `-MemberExpr 0x7fecae06f7c0 <col:9, col:17> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |     `-ImplicitCastExpr 0x7fecae06f7a8 <col:9, col:14> 'tree':'union tree_node *' <LValueToRValue>
+      |   |       `-ParenExpr 0x7fecae06f788 <col:9, col:14> 'tree':'union tree_node *' lvalue
+      |   |         `-DeclRefExpr 0x7fecae06f760 <col:10> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   `-IntegerLiteral 0x7fecae06f818 <col:26> 'int' 64
+      |-CompoundStmt 0x7fecae08d448 <line:41:5, line:88:5>
+      | |-DeclStmt 0x7fecae06f950 <line:42:7, col:28>
+      | | `-VarDecl 0x7fecae06f8f0 <col:7, col:25> col:25 used max 'struct real_value':'struct real_value'
+      | `-IfStmt 0x7fecae08d410 <line:43:7, line:87:16>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ParenExpr 0x7fecae08d208 <line:43:11, line:86:63> 'int'
+      |   | `-BinaryOperator 0x7fecae08d1e0 <line:43:12, line:86:40> 'int' '&&'
+      |   |   |-ParenExpr 0x7fecae08d0e0 <line:43:12, line:86:19> 'int'
+      |   |   | `-BinaryOperator 0x7fecae08d0b8 <line:43:13, line:86:12> 'int' '&&'
+      |   |   |   |-ParenExpr 0x7fecae06feb8 <line:43:13, line:47:24> 'int'
+      |   |   |   | `-BinaryOperator 0x7fecae06fe90 <line:43:14, line:47:7> 'int' '=='
+      |   |   |   |   |-ImplicitCastExpr 0x7fecae06fe78 <line:43:14, line:46:22> 'int' <IntegralCast>
+      |   |   |   |   | `-ImplicitCastExpr 0x7fecae06fe60 <line:43:14, line:46:22> 'unsigned char' <LValueToRValue>
+      |   |   |   |   |   `-ParenExpr 0x7fecae06fe18 <line:43:14, line:46:22> 'const unsigned char' lvalue
+      |   |   |   |   |     `-ArraySubscriptExpr 0x7fecae06fdf0 <line:43:15, line:46:21> 'const unsigned char' lvalue
+      |   |   |   |   |       |-ImplicitCastExpr 0x7fecae06fdd8 <line:43:15> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |   |   |       | `-DeclRefExpr 0x7fecae06f968 <col:15> 'const unsigned char [27]' lvalue Var 0x7fecae06ec20 'mode_class' 'const unsigned char [27]'
+      |   |   |   |   |       `-ParenExpr 0x7fecae06fd88 <col:26, line:46:20> 'int'
+      |   |   |   |   |         `-ConditionalOperator 0x7fecae06fd58 <line:43:27, line:46:16> 'int'
+      |   |   |   |   |           |-BinaryOperator 0x7fecae06faa0 <line:43:27, line:44:6> 'int' '=='
+      |   |   |   |   |           | |-ImplicitCastExpr 0x7fecae06fa88 <line:43:27, col:42> 'int' <LValueToRValue>
+      |   |   |   |   |           | | `-ParenExpr 0x7fecae06fa48 <col:27, col:42> 'int' lvalue
+      |   |   |   |   |           | |   `-MemberExpr 0x7fecae06fa10 <col:28, col:38> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |   |   |           | |     `-ImplicitCastExpr 0x7fecae06f9f8 <col:28, col:35> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |   |   |           | |       `-ParenExpr 0x7fecae06f9d8 <col:28, col:35> 'tree':'union tree_node *' lvalue
+      |   |   |   |   |           | |         `-ParenExpr 0x7fecae06f9b8 <col:29, col:34> 'tree':'union tree_node *' lvalue
+      |   |   |   |   |           | |           `-DeclRefExpr 0x7fecae06f990 <col:30> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |   |   |           | `-IntegerLiteral 0x7fecae06fa68 <line:44:6> 'int' 32
+      |   |   |   |   |           |-CallExpr 0x7fecae06fc60 <line:45:6, col:28> 'int'
+      |   |   |   |   |           | |-ImplicitCastExpr 0x7fecae06fc48 <col:6> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |   |   |           | | `-DeclRefExpr 0x7fecae06fbd0 <col:6> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |   |   |           | `-ImplicitCastExpr 0x7fecae06fc90 <col:24> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |   |   |           |   `-DeclRefExpr 0x7fecae06fbf8 <col:24> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |   |   |           `-ImplicitCastExpr 0x7fecae06fd40 <line:46:8, col:16> 'int' <LValueToRValue>
+      |   |   |   |   |             `-MemberExpr 0x7fecae06fd08 <col:8, col:16> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |   |   |               `-ImplicitCastExpr 0x7fecae06fcf0 <col:8, col:13> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |   |   |                 `-ParenExpr 0x7fecae06fcd0 <col:8, col:13> 'tree':'union tree_node *' lvalue
+      |   |   |   |   |                   `-DeclRefExpr 0x7fecae06fca8 <col:9> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |   |   `-DeclRefExpr 0x7fecae06fe38 <line:47:7> 'int' EnumConstant 0x7fecae06eac8 'MODE_VECTOR_FLOAT' 'int'
+      |   |   |   `-ImplicitCastExpr 0x7fecae08d0a0 <line:49:6, line:86:12> 'int' <IntegralCast>
+      |   |   |     `-ImplicitCastExpr 0x7fecae08d088 <line:49:6, line:86:12> 'unsigned char' <LValueToRValue>
+      |   |   |       `-MemberExpr 0x7fecae08d050 <line:49:6, line:86:12> 'const unsigned char' lvalue ->has_inf 0x7fecae06ee98
+      |   |   |         `-ImplicitCastExpr 0x7fecae08d038 <line:49:6, line:86:9> 'const struct real_format *' <LValueToRValue>
+      |   |   |           `-ParenExpr 0x7fecae08d018 <line:49:6, line:86:9> 'const struct real_format *' lvalue
+      |   |   |             `-ParenExpr 0x7fecae08cff8 <line:49:7, line:86:8> 'const struct real_format *' lvalue
+      |   |   |               `-ArraySubscriptExpr 0x7fecae08cfd0 <line:49:8, line:86:7> 'const struct real_format *' lvalue
+      |   |   |                 |-ImplicitCastExpr 0x7fecae08cfb8 <line:49:8> 'const struct real_format **' <ArrayToPointerDecay>
+      |   |   |                 | `-DeclRefExpr 0x7fecae06fed8 <col:8> 'const struct real_format *[10]' lvalue Var 0x7fecae06f200 'real_format_for_mode' 'const struct real_format *[10]'
+      |   |   |                 `-ConditionalOperator 0x7fecae08cf30 <line:50:9, line:86:6> 'int'
+      |   |   |                   |-ParenExpr 0x7fecae08b6f8 <line:50:9, line:64:5> 'int'
+      |   |   |                   | `-BinaryOperator 0x7fecae08b6d0 <line:50:10, line:64:3> 'int' '=='
+      |   |   |                   |   |-ImplicitCastExpr 0x7fecae08b6b8 <line:50:10, line:63:27> 'int' <IntegralCast>
+      |   |   |                   |   | `-ImplicitCastExpr 0x7fecae08b6a0 <line:50:10, line:63:27> 'unsigned char' <LValueToRValue>
+      |   |   |                   |   |   `-ParenExpr 0x7fecae08b660 <line:50:10, line:63:27> 'const unsigned char' lvalue
+      |   |   |                   |   |     `-ArraySubscriptExpr 0x7fecae08b638 <line:50:11, line:63:26> 'const unsigned char' lvalue
+      |   |   |                   |   |       |-ImplicitCastExpr 0x7fecae08b620 <line:50:11> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                   |   |       | `-DeclRefExpr 0x7fecae06ff00 <col:11> 'const unsigned char [27]' lvalue Var 0x7fecae06ec20 'mode_class' 'const unsigned char [27]'
+      |   |   |                   |   |       `-ConditionalOperator 0x7fecae08b5f0 <col:22, line:63:25> 'int'
+      |   |   |                   |   |         |-ParenExpr 0x7fecae08af28 <line:50:22, line:54:11> 'int'
+      |   |   |                   |   |         | `-BinaryOperator 0x7fecae08af00 <line:50:23, line:54:9> 'int' '=='
+      |   |   |                   |   |         |   |-ImplicitCastExpr 0x7fecae08aee8 <line:50:23, line:53:24> 'int' <IntegralCast>
+      |   |   |                   |   |         |   | `-ImplicitCastExpr 0x7fecae08aed0 <line:50:23, line:53:24> 'unsigned char' <LValueToRValue>
+      |   |   |                   |   |         |   |   `-ParenExpr 0x7fecae08ae90 <line:50:23, line:53:24> 'const unsigned char' lvalue
+      |   |   |                   |   |         |   |     `-ArraySubscriptExpr 0x7fecae08ae68 <line:50:24, line:53:23> 'const unsigned char' lvalue
+      |   |   |                   |   |         |   |       |-ImplicitCastExpr 0x7fecae08ae50 <line:50:24> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                   |   |         |   |       | `-DeclRefExpr 0x7fecae06ff28 <col:24> 'const unsigned char [27]' lvalue Var 0x7fecae06ec20 'mode_class' 'const unsigned char [27]'
+      |   |   |                   |   |         |   |       `-ParenExpr 0x7fecae08ae30 <col:35, line:53:22> 'int'
+      |   |   |                   |   |         |   |         `-ConditionalOperator 0x7fecae08ae00 <line:50:36, line:53:18> 'int'
+      |   |   |                   |   |         |   |           |-BinaryOperator 0x7fecae070060 <line:50:36, line:51:8> 'int' '=='
+      |   |   |                   |   |         |   |           | |-ImplicitCastExpr 0x7fecae070048 <line:50:36, col:51> 'int' <LValueToRValue>
+      |   |   |                   |   |         |   |           | | `-ParenExpr 0x7fecae070008 <col:36, col:51> 'int' lvalue
+      |   |   |                   |   |         |   |           | |   `-MemberExpr 0x7fecae06ffd0 <col:37, col:47> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                   |   |         |   |           | |     `-ImplicitCastExpr 0x7fecae06ffb8 <col:37, col:44> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |         |   |           | |       `-ParenExpr 0x7fecae06ff98 <col:37, col:44> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |         |   |           | |         `-ParenExpr 0x7fecae06ff78 <col:38, col:43> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |         |   |           | |           `-DeclRefExpr 0x7fecae06ff50 <col:39> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |         |   |           | `-IntegerLiteral 0x7fecae070028 <line:51:8> 'int' 32
+      |   |   |                   |   |         |   |           |-CallExpr 0x7fecae0700f0 <line:52:8, col:30> 'int'
+      |   |   |                   |   |         |   |           | |-ImplicitCastExpr 0x7fecae0700d8 <col:8> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                   |   |         |   |           | | `-DeclRefExpr 0x7fecae070088 <col:8> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                   |   |         |   |           | `-ImplicitCastExpr 0x7fecae070120 <col:26> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |         |   |           |   `-DeclRefExpr 0x7fecae0700b0 <col:26> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |         |   |           `-ImplicitCastExpr 0x7fecae0701d0 <line:53:10, col:18> 'int' <LValueToRValue>
+      |   |   |                   |   |         |   |             `-MemberExpr 0x7fecae070198 <col:10, col:18> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                   |   |         |   |               `-ImplicitCastExpr 0x7fecae070180 <col:10, col:15> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |         |   |                 `-ParenExpr 0x7fecae070160 <col:10, col:15> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |         |   |                   `-DeclRefExpr 0x7fecae070138 <col:11> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |         |   `-IntegerLiteral 0x7fecae08aeb0 <line:54:9> 'int' 12
+      |   |   |                   |   |         |-ParenExpr 0x7fecae08b230 <col:15, line:59:25> 'int'
+      |   |   |                   |   |         | `-ParenExpr 0x7fecae08b210 <line:54:16, line:59:24> 'int'
+      |   |   |                   |   |         |   `-ConditionalOperator 0x7fecae08b1e0 <line:54:17, line:59:20> 'int'
+      |   |   |                   |   |         |     |-BinaryOperator 0x7fecae08b058 <line:54:17, line:56:10> 'int' '=='
+      |   |   |                   |   |         |     | |-ImplicitCastExpr 0x7fecae08b040 <line:54:17, col:32> 'int' <LValueToRValue>
+      |   |   |                   |   |         |     | | `-ParenExpr 0x7fecae08b000 <col:17, col:32> 'int' lvalue
+      |   |   |                   |   |         |     | |   `-MemberExpr 0x7fecae08afc8 <col:18, col:28> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                   |   |         |     | |     `-ImplicitCastExpr 0x7fecae08afb0 <col:18, col:25> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |         |     | |       `-ParenExpr 0x7fecae08af90 <col:18, col:25> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |         |     | |         `-ParenExpr 0x7fecae08af70 <col:19, col:24> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |         |     | |           `-DeclRefExpr 0x7fecae08af48 <col:20> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |         |     | `-IntegerLiteral 0x7fecae08b020 <line:56:10> 'int' 32
+      |   |   |                   |   |         |     |-CallExpr 0x7fecae08b0e8 <line:57:10, line:58:15> 'int'
+      |   |   |                   |   |         |     | |-ImplicitCastExpr 0x7fecae08b0d0 <line:57:10> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                   |   |         |     | | `-DeclRefExpr 0x7fecae08b080 <col:10> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                   |   |         |     | `-ImplicitCastExpr 0x7fecae08b118 <line:58:11> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |         |     |   `-DeclRefExpr 0x7fecae08b0a8 <col:11> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |         |     `-ImplicitCastExpr 0x7fecae08b1c8 <line:59:12, col:20> 'int' <LValueToRValue>
+      |   |   |                   |   |         |       `-MemberExpr 0x7fecae08b190 <col:12, col:20> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                   |   |         |         `-ImplicitCastExpr 0x7fecae08b178 <col:12, col:17> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |         |           `-ParenExpr 0x7fecae08b158 <col:12, col:17> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |         |             `-DeclRefExpr 0x7fecae08b130 <col:13> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |         `-ImplicitCastExpr 0x7fecae08b5d8 <line:60:10, line:63:25> 'int' <IntegralCast>
+      |   |   |                   |   |           `-ImplicitCastExpr 0x7fecae08b5c0 <line:60:10, line:63:25> 'unsigned char' <LValueToRValue>
+      |   |   |                   |   |             `-ParenExpr 0x7fecae08b5a0 <line:60:10, line:63:25> 'const unsigned char' lvalue
+      |   |   |                   |   |               `-ArraySubscriptExpr 0x7fecae08b578 <line:60:11, line:63:24> 'const unsigned char' lvalue
+      |   |   |                   |   |                 |-ImplicitCastExpr 0x7fecae08b560 <line:60:11> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                   |   |                 | `-DeclRefExpr 0x7fecae08b250 <col:11> 'const unsigned char [27]' lvalue Var 0x7fecae06ecc8 'mode_inner' 'const unsigned char [27]'
+      |   |   |                   |   |                 `-ParenExpr 0x7fecae08b540 <col:22, line:63:23> 'int'
+      |   |   |                   |   |                   `-ConditionalOperator 0x7fecae08b510 <line:60:23, line:63:19> 'int'
+      |   |   |                   |   |                     |-BinaryOperator 0x7fecae08b388 <line:60:23, line:61:9> 'int' '=='
+      |   |   |                   |   |                     | |-ImplicitCastExpr 0x7fecae08b370 <line:60:23, col:38> 'int' <LValueToRValue>
+      |   |   |                   |   |                     | | `-ParenExpr 0x7fecae08b330 <col:23, col:38> 'int' lvalue
+      |   |   |                   |   |                     | |   `-MemberExpr 0x7fecae08b2f8 <col:24, col:34> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                   |   |                     | |     `-ImplicitCastExpr 0x7fecae08b2e0 <col:24, col:31> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |                     | |       `-ParenExpr 0x7fecae08b2c0 <col:24, col:31> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |                     | |         `-ParenExpr 0x7fecae08b2a0 <col:25, col:30> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |                     | |           `-DeclRefExpr 0x7fecae08b278 <col:26> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |                     | `-IntegerLiteral 0x7fecae08b350 <line:61:9> 'int' 32
+      |   |   |                   |   |                     |-CallExpr 0x7fecae08b418 <line:62:9, col:31> 'int'
+      |   |   |                   |   |                     | |-ImplicitCastExpr 0x7fecae08b400 <col:9> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                   |   |                     | | `-DeclRefExpr 0x7fecae08b3b0 <col:9> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                   |   |                     | `-ImplicitCastExpr 0x7fecae08b448 <col:27> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |                     |   `-DeclRefExpr 0x7fecae08b3d8 <col:27> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |                     `-ImplicitCastExpr 0x7fecae08b4f8 <line:63:11, col:19> 'int' <LValueToRValue>
+      |   |   |                   |   |                       `-MemberExpr 0x7fecae08b4c0 <col:11, col:19> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                   |   |                         `-ImplicitCastExpr 0x7fecae08b4a8 <col:11, col:16> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |                           `-ParenExpr 0x7fecae08b488 <col:11, col:16> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |                             `-DeclRefExpr 0x7fecae08b460 <col:12> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   `-IntegerLiteral 0x7fecae08b680 <line:64:3> 'int' 12
+      |   |   |                   |-ParenExpr 0x7fecae08c390 <line:65:11, line:77:8> 'int'
+      |   |   |                   | `-BinaryOperator 0x7fecae08c368 <line:65:12, line:77:7> 'int' '+'
+      |   |   |                   |   |-ParenExpr 0x7fecae08c278 <line:65:12, line:75:33> 'int'
+      |   |   |                   |   | `-BinaryOperator 0x7fecae08c250 <line:65:13, line:75:31> 'int' '-'
+      |   |   |                   |   |   |-ParenExpr 0x7fecae08c210 <line:65:13, line:75:27> 'int'
+      |   |   |                   |   |   | `-ConditionalOperator 0x7fecae08c1e0 <line:65:14, line:75:26> 'int'
+      |   |   |                   |   |   |   |-ParenExpr 0x7fecae08bb00 <line:65:14, line:68:10> 'int'
+      |   |   |                   |   |   |   | `-BinaryOperator 0x7fecae08bad8 <line:65:15, line:68:8> 'int' '=='
+      |   |   |                   |   |   |   |   |-ImplicitCastExpr 0x7fecae08bac0 <line:65:15, line:67:23> 'int' <IntegralCast>
+      |   |   |                   |   |   |   |   | `-ImplicitCastExpr 0x7fecae08baa8 <line:65:15, line:67:23> 'unsigned char' <LValueToRValue>
+      |   |   |                   |   |   |   |   |   `-ParenExpr 0x7fecae08ba68 <line:65:15, line:67:23> 'const unsigned char' lvalue
+      |   |   |                   |   |   |   |   |     `-ArraySubscriptExpr 0x7fecae08ba40 <line:65:16, line:67:22> 'const unsigned char' lvalue
+      |   |   |                   |   |   |   |   |       |-ImplicitCastExpr 0x7fecae08ba28 <line:65:16> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                   |   |   |   |   |       | `-DeclRefExpr 0x7fecae08b718 <col:16> 'const unsigned char [27]' lvalue Var 0x7fecae06ec20 'mode_class' 'const unsigned char [27]'
+      |   |   |                   |   |   |   |   |       `-ParenExpr 0x7fecae08ba08 <col:27, line:67:21> 'int'
+      |   |   |                   |   |   |   |   |         `-ConditionalOperator 0x7fecae08b9d8 <line:65:28, line:67:17> 'int'
+      |   |   |                   |   |   |   |   |           |-BinaryOperator 0x7fecae08b850 <line:65:28, line:66:7> 'int' '=='
+      |   |   |                   |   |   |   |   |           | |-ImplicitCastExpr 0x7fecae08b838 <line:65:28, col:43> 'int' <LValueToRValue>
+      |   |   |                   |   |   |   |   |           | | `-ParenExpr 0x7fecae08b7f8 <col:28, col:43> 'int' lvalue
+      |   |   |                   |   |   |   |   |           | |   `-MemberExpr 0x7fecae08b7c0 <col:29, col:39> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                   |   |   |   |   |           | |     `-ImplicitCastExpr 0x7fecae08b7a8 <col:29, col:36> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |   |   |           | |       `-ParenExpr 0x7fecae08b788 <col:29, col:36> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |   |   |           | |         `-ParenExpr 0x7fecae08b768 <col:30, col:35> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |   |   |           | |           `-DeclRefExpr 0x7fecae08b740 <col:31> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |   |   |           | `-IntegerLiteral 0x7fecae08b818 <line:66:7> 'int' 32
+      |   |   |                   |   |   |   |   |           |-CallExpr 0x7fecae08b8e0 <col:12, col:34> 'int'
+      |   |   |                   |   |   |   |   |           | |-ImplicitCastExpr 0x7fecae08b8c8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                   |   |   |   |   |           | | `-DeclRefExpr 0x7fecae08b878 <col:12> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                   |   |   |   |   |           | `-ImplicitCastExpr 0x7fecae08b910 <col:30> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |   |   |           |   `-DeclRefExpr 0x7fecae08b8a0 <col:30> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |   |   |           `-ImplicitCastExpr 0x7fecae08b9c0 <line:67:9, col:17> 'int' <LValueToRValue>
+      |   |   |                   |   |   |   |   |             `-MemberExpr 0x7fecae08b988 <col:9, col:17> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                   |   |   |   |   |               `-ImplicitCastExpr 0x7fecae08b970 <col:9, col:14> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |   |   |                 `-ParenExpr 0x7fecae08b950 <col:9, col:14> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |   |   |                   `-DeclRefExpr 0x7fecae08b928 <col:10> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |   |   `-IntegerLiteral 0x7fecae08ba88 <line:68:8> 'int' 12
+      |   |   |                   |   |   |   |-ParenExpr 0x7fecae08be20 <col:14, line:71:24> 'int'
+      |   |   |                   |   |   |   | `-ParenExpr 0x7fecae08be00 <line:68:15, line:71:23> 'int'
+      |   |   |                   |   |   |   |   `-ConditionalOperator 0x7fecae08bdb8 <line:68:16, line:71:19> 'int'
+      |   |   |                   |   |   |   |     |-BinaryOperator 0x7fecae08bc30 <line:68:16, line:69:9> 'int' '=='
+      |   |   |                   |   |   |   |     | |-ImplicitCastExpr 0x7fecae08bc18 <line:68:16, col:31> 'int' <LValueToRValue>
+      |   |   |                   |   |   |   |     | | `-ParenExpr 0x7fecae08bbd8 <col:16, col:31> 'int' lvalue
+      |   |   |                   |   |   |   |     | |   `-MemberExpr 0x7fecae08bba0 <col:17, col:27> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                   |   |   |   |     | |     `-ImplicitCastExpr 0x7fecae08bb88 <col:17, col:24> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |   |     | |       `-ParenExpr 0x7fecae08bb68 <col:17, col:24> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |   |     | |         `-ParenExpr 0x7fecae08bb48 <col:18, col:23> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |   |     | |           `-DeclRefExpr 0x7fecae08bb20 <col:19> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |   |     | `-IntegerLiteral 0x7fecae08bbf8 <line:69:9> 'int' 32
+      |   |   |                   |   |   |   |     |-CallExpr 0x7fecae08bcc0 <line:70:9, col:31> 'int'
+      |   |   |                   |   |   |   |     | |-ImplicitCastExpr 0x7fecae08bca8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                   |   |   |   |     | | `-DeclRefExpr 0x7fecae08bc58 <col:9> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                   |   |   |   |     | `-ImplicitCastExpr 0x7fecae08bcf0 <col:27> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |   |     |   `-DeclRefExpr 0x7fecae08bc80 <col:27> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |   |     `-ImplicitCastExpr 0x7fecae08bda0 <line:71:11, col:19> 'int' <LValueToRValue>
+      |   |   |                   |   |   |   |       `-MemberExpr 0x7fecae08bd68 <col:11, col:19> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                   |   |   |   |         `-ImplicitCastExpr 0x7fecae08bd50 <col:11, col:16> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |   |           `-ParenExpr 0x7fecae08bd30 <col:11, col:16> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |   |             `-DeclRefExpr 0x7fecae08bd08 <col:12> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |   `-ImplicitCastExpr 0x7fecae08c1c8 <col:28, line:75:26> 'int' <IntegralCast>
+      |   |   |                   |   |   |     `-ImplicitCastExpr 0x7fecae08c1b0 <line:71:28, line:75:26> 'unsigned char' <LValueToRValue>
+      |   |   |                   |   |   |       `-ParenExpr 0x7fecae08c190 <line:71:28, line:75:26> 'const unsigned char' lvalue
+      |   |   |                   |   |   |         `-ArraySubscriptExpr 0x7fecae08c168 <line:71:29, line:75:25> 'const unsigned char' lvalue
+      |   |   |                   |   |   |           |-ImplicitCastExpr 0x7fecae08c150 <line:71:29> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                   |   |   |           | `-DeclRefExpr 0x7fecae08be40 <col:29> 'const unsigned char [27]' lvalue Var 0x7fecae06ecc8 'mode_inner' 'const unsigned char [27]'
+      |   |   |                   |   |   |           `-ParenExpr 0x7fecae08c130 <line:72:9, line:75:24> 'int'
+      |   |   |                   |   |   |             `-ConditionalOperator 0x7fecae08c100 <line:72:10, line:75:20> 'int'
+      |   |   |                   |   |   |               |-BinaryOperator 0x7fecae08bf78 <line:72:10, line:73:10> 'int' '=='
+      |   |   |                   |   |   |               | |-ImplicitCastExpr 0x7fecae08bf60 <line:72:10, col:25> 'int' <LValueToRValue>
+      |   |   |                   |   |   |               | | `-ParenExpr 0x7fecae08bf20 <col:10, col:25> 'int' lvalue
+      |   |   |                   |   |   |               | |   `-MemberExpr 0x7fecae08bee8 <col:11, col:21> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                   |   |   |               | |     `-ImplicitCastExpr 0x7fecae08bed0 <col:11, col:18> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |               | |       `-ParenExpr 0x7fecae08beb0 <col:11, col:18> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |               | |         `-ParenExpr 0x7fecae08be90 <col:12, col:17> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |               | |           `-DeclRefExpr 0x7fecae08be68 <col:13> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |               | `-IntegerLiteral 0x7fecae08bf40 <line:73:10> 'int' 32
+      |   |   |                   |   |   |               |-CallExpr 0x7fecae08c008 <line:74:10, col:32> 'int'
+      |   |   |                   |   |   |               | |-ImplicitCastExpr 0x7fecae08bff0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                   |   |   |               | | `-DeclRefExpr 0x7fecae08bfa0 <col:10> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                   |   |   |               | `-ImplicitCastExpr 0x7fecae08c038 <col:28> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |               |   `-DeclRefExpr 0x7fecae08bfc8 <col:28> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   |               `-ImplicitCastExpr 0x7fecae08c0e8 <line:75:12, col:20> 'int' <LValueToRValue>
+      |   |   |                   |   |   |                 `-MemberExpr 0x7fecae08c0b0 <col:12, col:20> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                   |   |   |                   `-ImplicitCastExpr 0x7fecae08c098 <col:12, col:17> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                   |   |   |                     `-ParenExpr 0x7fecae08c078 <col:12, col:17> 'tree':'union tree_node *' lvalue
+      |   |   |                   |   |   |                       `-DeclRefExpr 0x7fecae08c050 <col:13> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                   |   |   `-IntegerLiteral 0x7fecae08c230 <col:31> 'int' 10
+      |   |   |                   |   `-ParenExpr 0x7fecae08c348 <line:76:5, line:77:7> 'int'
+      |   |   |                   |     `-BinaryOperator 0x7fecae08c320 <line:76:6, line:77:6> 'int' '+'
+      |   |   |                   |       |-BinaryOperator 0x7fecae08c2d8 <line:76:6, col:10> 'int' '-'
+      |   |   |                   |       | |-IntegerLiteral 0x7fecae08c298 <col:6> 'int' 5
+      |   |   |                   |       | `-IntegerLiteral 0x7fecae08c2b8 <col:10> 'int' 2
+      |   |   |                   |       `-IntegerLiteral 0x7fecae08c300 <line:77:6> 'int' 1
+      |   |   |                   `-ParenExpr 0x7fecae08cf10 <line:78:11, line:86:6> 'int'
+      |   |   |                     `-BinaryOperator 0x7fecae08cee8 <line:78:12, line:86:5> 'int' '-'
+      |   |   |                       |-ParenExpr 0x7fecae08cea8 <line:78:12, line:85:26> 'int'
+      |   |   |                       | `-ConditionalOperator 0x7fecae08ce78 <line:78:13, line:85:25> 'int'
+      |   |   |                       |   |-ParenExpr 0x7fecae08c798 <line:78:13, line:81:9> 'int'
+      |   |   |                       |   | `-BinaryOperator 0x7fecae08c770 <line:78:14, line:81:7> 'int' '=='
+      |   |   |                       |   |   |-ImplicitCastExpr 0x7fecae08c758 <line:78:14, line:80:55> 'int' <IntegralCast>
+      |   |   |                       |   |   | `-ImplicitCastExpr 0x7fecae08c740 <line:78:14, line:80:55> 'unsigned char' <LValueToRValue>
+      |   |   |                       |   |   |   `-ParenExpr 0x7fecae08c700 <line:78:14, line:80:55> 'const unsigned char' lvalue
+      |   |   |                       |   |   |     `-ArraySubscriptExpr 0x7fecae08c6d8 <line:78:15, line:80:54> 'const unsigned char' lvalue
+      |   |   |                       |   |   |       |-ImplicitCastExpr 0x7fecae08c6c0 <line:78:15> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                       |   |   |       | `-DeclRefExpr 0x7fecae08c3b0 <col:15> 'const unsigned char [27]' lvalue Var 0x7fecae06ec20 'mode_class' 'const unsigned char [27]'
+      |   |   |                       |   |   |       `-ParenExpr 0x7fecae08c6a0 <line:79:9, line:80:53> 'int'
+      |   |   |                       |   |   |         `-ConditionalOperator 0x7fecae08c670 <line:79:10, line:80:49> 'int'
+      |   |   |                       |   |   |           |-BinaryOperator 0x7fecae08c4e8 <line:79:10, line:80:10> 'int' '=='
+      |   |   |                       |   |   |           | |-ImplicitCastExpr 0x7fecae08c4d0 <line:79:10, col:25> 'int' <LValueToRValue>
+      |   |   |                       |   |   |           | | `-ParenExpr 0x7fecae08c490 <col:10, col:25> 'int' lvalue
+      |   |   |                       |   |   |           | |   `-MemberExpr 0x7fecae08c458 <col:11, col:21> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                       |   |   |           | |     `-ImplicitCastExpr 0x7fecae08c440 <col:11, col:18> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |   |   |           | |       `-ParenExpr 0x7fecae08c420 <col:11, col:18> 'tree':'union tree_node *' lvalue
+      |   |   |                       |   |   |           | |         `-ParenExpr 0x7fecae08c400 <col:12, col:17> 'tree':'union tree_node *' lvalue
+      |   |   |                       |   |   |           | |           `-DeclRefExpr 0x7fecae08c3d8 <col:13> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |   |   |           | `-IntegerLiteral 0x7fecae08c4b0 <line:80:10> 'int' 32
+      |   |   |                       |   |   |           |-CallExpr 0x7fecae08c578 <col:15, col:37> 'int'
+      |   |   |                       |   |   |           | |-ImplicitCastExpr 0x7fecae08c560 <col:15> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                       |   |   |           | | `-DeclRefExpr 0x7fecae08c510 <col:15> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                       |   |   |           | `-ImplicitCastExpr 0x7fecae08c5a8 <col:33> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |   |   |           |   `-DeclRefExpr 0x7fecae08c538 <col:33> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |   |   |           `-ImplicitCastExpr 0x7fecae08c658 <col:41, col:49> 'int' <LValueToRValue>
+      |   |   |                       |   |   |             `-MemberExpr 0x7fecae08c620 <col:41, col:49> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                       |   |   |               `-ImplicitCastExpr 0x7fecae08c608 <col:41, col:46> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |   |   |                 `-ParenExpr 0x7fecae08c5e8 <col:41, col:46> 'tree':'union tree_node *' lvalue
+      |   |   |                       |   |   |                   `-DeclRefExpr 0x7fecae08c5c0 <col:42> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |   |   `-IntegerLiteral 0x7fecae08c720 <line:81:7> 'int' 12
+      |   |   |                       |   |-ParenExpr 0x7fecae08caa0 <col:13, line:83:13> 'int'
+      |   |   |                       |   | `-ParenExpr 0x7fecae08ca80 <line:81:14, line:83:12> 'int'
+      |   |   |                       |   |   `-ConditionalOperator 0x7fecae08ca50 <line:81:15, line:83:8> 'int'
+      |   |   |                       |   |     |-BinaryOperator 0x7fecae08c8c8 <line:81:15, line:82:8> 'int' '=='
+      |   |   |                       |   |     | |-ImplicitCastExpr 0x7fecae08c8b0 <line:81:15, col:30> 'int' <LValueToRValue>
+      |   |   |                       |   |     | | `-ParenExpr 0x7fecae08c870 <col:15, col:30> 'int' lvalue
+      |   |   |                       |   |     | |   `-MemberExpr 0x7fecae08c838 <col:16, col:26> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                       |   |     | |     `-ImplicitCastExpr 0x7fecae08c820 <col:16, col:23> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |   |     | |       `-ParenExpr 0x7fecae08c800 <col:16, col:23> 'tree':'union tree_node *' lvalue
+      |   |   |                       |   |     | |         `-ParenExpr 0x7fecae08c7e0 <col:17, col:22> 'tree':'union tree_node *' lvalue
+      |   |   |                       |   |     | |           `-DeclRefExpr 0x7fecae08c7b8 <col:18> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |   |     | `-IntegerLiteral 0x7fecae08c890 <line:82:8> 'int' 32
+      |   |   |                       |   |     |-CallExpr 0x7fecae08c958 <col:13, col:35> 'int'
+      |   |   |                       |   |     | |-ImplicitCastExpr 0x7fecae08c940 <col:13> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                       |   |     | | `-DeclRefExpr 0x7fecae08c8f0 <col:13> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                       |   |     | `-ImplicitCastExpr 0x7fecae08c988 <col:31> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |   |     |   `-DeclRefExpr 0x7fecae08c918 <col:31> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |   |     `-ImplicitCastExpr 0x7fecae08ca38 <col:39, line:83:8> 'int' <LValueToRValue>
+      |   |   |                       |   |       `-MemberExpr 0x7fecae08ca00 <line:82:39, line:83:8> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                       |   |         `-ImplicitCastExpr 0x7fecae08c9e8 <line:82:39, col:44> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |   |           `-ParenExpr 0x7fecae08c9c8 <col:39, col:44> 'tree':'union tree_node *' lvalue
+      |   |   |                       |   |             `-DeclRefExpr 0x7fecae08c9a0 <col:40> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |   `-ImplicitCastExpr 0x7fecae08ce60 <line:83:17, line:85:25> 'int' <IntegralCast>
+      |   |   |                       |     `-ImplicitCastExpr 0x7fecae08ce48 <line:83:17, line:85:25> 'unsigned char' <LValueToRValue>
+      |   |   |                       |       `-ParenExpr 0x7fecae08ce28 <line:83:17, line:85:25> 'const unsigned char' lvalue
+      |   |   |                       |         `-ArraySubscriptExpr 0x7fecae08ce00 <line:83:18, line:85:24> 'const unsigned char' lvalue
+      |   |   |                       |           |-ImplicitCastExpr 0x7fecae08cdd0 <line:83:18> 'const unsigned char *' <ArrayToPointerDecay>
+      |   |   |                       |           | `-DeclRefExpr 0x7fecae08cac0 <col:18> 'const unsigned char [27]' lvalue Var 0x7fecae06ecc8 'mode_inner' 'const unsigned char [27]'
+      |   |   |                       |           `-ParenExpr 0x7fecae08cdb0 <col:29, line:85:23> 'int'
+      |   |   |                       |             `-ConditionalOperator 0x7fecae08cd80 <line:83:30, line:85:19> 'int'
+      |   |   |                       |               |-BinaryOperator 0x7fecae08cbf8 <line:83:30, line:84:9> 'int' '=='
+      |   |   |                       |               | |-ImplicitCastExpr 0x7fecae08cbe0 <line:83:30, col:45> 'int' <LValueToRValue>
+      |   |   |                       |               | | `-ParenExpr 0x7fecae08cba0 <col:30, col:45> 'int' lvalue
+      |   |   |                       |               | |   `-MemberExpr 0x7fecae08cb68 <col:31, col:41> 'int' lvalue ->code 0x7fecae06f3b0
+      |   |   |                       |               | |     `-ImplicitCastExpr 0x7fecae08cb50 <col:31, col:38> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |               | |       `-ParenExpr 0x7fecae08cb30 <col:31, col:38> 'tree':'union tree_node *' lvalue
+      |   |   |                       |               | |         `-ParenExpr 0x7fecae08cb10 <col:32, col:37> 'tree':'union tree_node *' lvalue
+      |   |   |                       |               | |           `-DeclRefExpr 0x7fecae08cae8 <col:33> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |               | `-IntegerLiteral 0x7fecae08cbc0 <line:84:9> 'int' 32
+      |   |   |                       |               |-CallExpr 0x7fecae08cc88 <col:14, col:36> 'int'
+      |   |   |                       |               | |-ImplicitCastExpr 0x7fecae08cc70 <col:14> 'int (*)()' <FunctionToPointerDecay>
+      |   |   |                       |               | | `-DeclRefExpr 0x7fecae08cc20 <col:14> 'int ()' Function 0x7fecae06fb20 'vector_type_mode' 'int ()'
+      |   |   |                       |               | `-ImplicitCastExpr 0x7fecae08ccb8 <col:32> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |               |   `-DeclRefExpr 0x7fecae08cc48 <col:32> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       |               `-ImplicitCastExpr 0x7fecae08cd68 <line:85:11, col:19> 'int' <LValueToRValue>
+      |   |   |                       |                 `-MemberExpr 0x7fecae08cd30 <col:11, col:19> 'int' lvalue ->mode 0x7fecae06f410
+      |   |   |                       |                   `-ImplicitCastExpr 0x7fecae08cd18 <col:11, col:16> 'tree':'union tree_node *' <LValueToRValue>
+      |   |   |                       |                     `-ParenExpr 0x7fecae08ccf8 <col:11, col:16> 'tree':'union tree_node *' lvalue
+      |   |   |                       |                       `-DeclRefExpr 0x7fecae08ccd0 <col:12> 'tree':'union tree_node *' lvalue ParmVar 0x7fecae06f5a0 'type' 'tree':'union tree_node *'
+      |   |   |                       `-IntegerLiteral 0x7fecae08cec8 <line:86:5> 'int' 2
+      |   |   `-UnaryOperator 0x7fecae08d178 <col:24, col:40> 'int' prefix '!'
+      |   |     `-ImplicitCastExpr 0x7fecae08d160 <col:25, col:40> 'int' <LValueToRValue>
+      |   |       `-MemberExpr 0x7fecae08d128 <col:25, col:40> 'int' lvalue .x_flag_finite_math_only 0x7fecae06e408
+      |   |         `-DeclRefExpr 0x7fecae08d100 <col:25> 'struct gcc_options':'struct gcc_options' lvalue Var 0x7fecae06e4a0 'global_options' 'struct gcc_options':'struct gcc_options'
+      |   |-CallExpr 0x7fecae08d3e0 <line:87:2, col:16> 'int'
+      |   | |-ImplicitCastExpr 0x7fecae08d3c8 <col:2> 'int (*)()' <FunctionToPointerDecay>
+      |   | | `-DeclRefExpr 0x7fecae08d300 <col:2> 'int ()' Function 0x7fecae08d250 'real_inf' 'int ()'
+      |   | `-UnaryOperator 0x7fecae08d3a8 <col:12, col:13> 'struct real_value *' prefix '&'
+      |   |   `-DeclRefExpr 0x7fecae08d328 <col:13> 'struct real_value':'struct real_value' lvalue Var 0x7fecae06f8f0 'max' 'struct real_value':'struct real_value'
+      |   `-<<<NULL>>>
+      `-<<<NULL>>>

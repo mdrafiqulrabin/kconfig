@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7f80fe82aae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f80fe86d6b8 <../Data/C2AST/pr67963-2.c:4:1, line:9:1> line:6:1 foo 'float (void)'
+  |-CompoundStmt 0x7f80fe86d830 <line:7:1, line:9:1>
+  | `-ReturnStmt 0x7f80fe86d818 <line:8:3, col:10>
+  |   `-FloatingLiteral 0x7f80fe86d7f8 <col:10> 'float' 0.000000e+00
+  `-TargetAttr 0x7f80fe86d758 <line:5:16, col:38> "arch=lakemont"

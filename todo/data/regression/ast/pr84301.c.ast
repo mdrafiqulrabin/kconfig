@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fda598238e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fda59824578 <../Data/C2AST/pr84301.c:5:1, col:5> col:5 used lr 'int'
+|-VarDecl 0x7fda59865458 <line:6:1, col:10> col:10 used xl 'long'
+`-FunctionDecl 0x7fda59865588 <line:8:1, line:15:1> line:9:1 v4 'int (void)'
+  `-CompoundStmt 0x7fda59865890 <line:10:1, line:15:1>
+    |-DeclStmt 0x7fda598656a0 <line:11:3, col:9>
+    | `-VarDecl 0x7fda59865640 <col:3, col:7> col:7 used mp 'int'
+    |-UnaryOperator 0x7fda598656e0 <line:13:3, col:5> 'long' prefix '++'
+    | `-DeclRefExpr 0x7fda598656b8 <col:5> 'long' lvalue Var 0x7fda59865458 'xl' 'long'
+    `-BinaryOperator 0x7fda59865868 <line:14:3, col:20> 'int' '='
+      |-DeclRefExpr 0x7fda59865700 <col:3> 'int' lvalue Var 0x7fda59865640 'mp' 'int'
+      `-BinaryOperator 0x7fda59865840 <col:8, col:20> 'int' '>'
+        |-ParenExpr 0x7fda598657e8 <col:8, col:16> 'long'
+        | `-BinaryOperator 0x7fda598657c0 <col:9, col:14> 'long' '-'
+        |   |-ImplicitCastExpr 0x7fda598657a8 <col:9> 'long' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7fda59865778 <col:9> 'int' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7fda59865728 <col:9> 'int' lvalue Var 0x7fda59824578 'lr' 'int'
+        |   `-ImplicitCastExpr 0x7fda59865790 <col:14> 'long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fda59865750 <col:14> 'long' lvalue Var 0x7fda59865458 'xl' 'long'
+        `-ImplicitCastExpr 0x7fda59865828 <col:20> 'long' <IntegralCast>
+          `-IntegerLiteral 0x7fda59865808 <col:20> 'int' 1

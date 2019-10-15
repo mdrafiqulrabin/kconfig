@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7ff74582bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff74582c978 <../Data/C2AST/pr45457.c:4:1, line:9:1> line:4:13 a 'const char *' cinit
+| `-ImplicitCastExpr 0x7ff74586d8c8 <line:6:1, line:9:1> 'const char *' <BitCast>
+|   `-ImplicitCastExpr 0x7ff74586d8b0 <line:6:1, line:9:1> 'char *' <ArrayToPointerDecay>
+|     `-StringLiteral 0x7ff74586d878 <line:6:1, line:9:1> 'char [3]' lvalue "ab"
+`-VarDecl 0x7ff74586d8f8 <line:18:1, <built-in>:143:21> ../Data/C2AST/pr45457.c:18:8 b 'double' cinit
+  `-BinaryOperator 0x7ff74586da28 <<built-in>:130:28, line:143:21> 'double' '+'
+    |-BinaryOperator 0x7ff74586d9e0 <line:130:28, line:140:21> 'double' '+'
+    | |-BinaryOperator 0x7ff74586d998 <line:130:28, line:134:25> 'double' '+'
+    | | |-FloatingLiteral 0x7ff74586d958 <line:130:28> 'double' 4.940656e-324
+    | | `-FloatingLiteral 0x7ff74586d978 <line:134:25> 'double' 2.220446e-16
+    | `-FloatingLiteral 0x7ff74586d9c0 <line:140:21> 'double' 1.797693e+308
+    `-FloatingLiteral 0x7ff74586da08 <line:143:21> 'double' 2.225074e-308

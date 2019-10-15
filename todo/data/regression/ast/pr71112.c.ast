@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fe0a3829ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe0a4814200 <../Data/C2AST/pr71112.c:4:1, col:19> col:12 used dbs 'int [100]' extern
+|-FunctionDecl 0x7fe0a48143a0 <line:5:1, col:14> col:6 used f 'void (int *)'
+| `-ParmVarDecl 0x7fe0a48142e0 <col:9, col:13> col:14 'int *'
+`-FunctionDecl 0x7fe0a4814518 <line:6:1, line:10:1> line:6:5 nscd_init 'int (void)'
+  `-CompoundStmt 0x7fe0a48146d0 <line:7:1, line:10:1>
+    |-CallExpr 0x7fe0a4814650 <line:8:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fe0a4814638 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe0a48145b8 <col:3> 'void (int *)' Function 0x7fe0a48143a0 'f' 'void (int *)'
+    | `-ImplicitCastExpr 0x7fe0a4814680 <col:6> 'int *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fe0a48145e0 <col:6> 'int [100]' lvalue Var 0x7fe0a4814200 'dbs' 'int [100]'
+    `-ReturnStmt 0x7fe0a48146b8 <line:9:3, col:10>
+      `-IntegerLiteral 0x7fe0a4814698 <col:10> 'int' 0

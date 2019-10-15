@@ -1,0 +1,45 @@
+../Data/C2AST/pr16660-3.c:4:10: fatal error: 'check.h' file not found
+#include "check.h"
+         ^~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7ffc1b82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc1b82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffc1b82bf80 '__int128'
+|-TypedefDecl 0x7ffc1b82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffc1b82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffc1b82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffc1b82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffc1b82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffc1b82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffc1b82c600 'char *'
+|   `-BuiltinType 0x7ffc1b82bd80 'char'
+|-TypedefDecl 0x7ffc1b82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffc1b82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffc1b82c720 'struct __va_list_tag'
+|     `-Record 0x7ffc1b82c698 '__va_list_tag'
+|-TypedefDecl 0x7ffc1b82c978 <../Data/C2AST/pr16660-3.c:6:1, col:23> col:23 size_t 'unsigned long'
+| `-BuiltinType 0x7ffc1b82bea0 'unsigned long'
+`-FunctionDecl 0x7ffc1b86e8b8 <line:8:1, line:15:1> line:8:5 main 'int (void)'
+  `-CompoundStmt 0x7ffc1b86f0a8 <line:9:1, line:15:1>
+    |-DeclStmt 0x7ffc1b86eb90 <line:10:3, col:67>
+    | `-VarDecl 0x7ffc1b86eae0 <col:3, col:30> col:7 used a 'int [64]'
+    |   `-AlignedAttr 0x7ffc1b86eb40 <col:47, col:64> aligned
+    |     `-IntegerLiteral 0x7ffc1b86ea60 <line:7:19> 'int' 256
+    |-CallExpr 0x7ffc1b86edb0 <line:11:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7ffc1b86ed98 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffc1b86ecb0 <col:3> 'int ()' Function 0x7ffc1b86ec00 'check' 'int ()'
+    | |-UnaryOperator 0x7ffc1b86ed28 <col:10, col:11> 'int (*)[64]' prefix '&'
+    | | `-DeclRefExpr 0x7ffc1b86ecd8 <col:11> 'int [64]' lvalue Var 0x7ffc1b86eae0 'a' 'int [64]'
+    | `-IntegerLiteral 0x7ffc1b86ed48 <line:7:19> 'int' 256
+    |-DeclStmt 0x7ffc1b86ef78 <line:12:3, col:67>
+    | `-VarDecl 0x7ffc1b86eec8 <col:3, col:30> col:7 used b 'int [64]'
+    |   `-AlignedAttr 0x7ffc1b86ef28 <col:47, col:64> aligned
+    |     `-IntegerLiteral 0x7ffc1b86ee80 <line:7:19> 'int' 256
+    |-CallExpr 0x7ffc1b86f038 <line:13:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7ffc1b86f020 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffc1b86ef90 <col:3> 'int ()' Function 0x7ffc1b86ec00 'check' 'int ()'
+    | |-UnaryOperator 0x7ffc1b86efe0 <col:10, col:11> 'int (*)[64]' prefix '&'
+    | | `-DeclRefExpr 0x7ffc1b86efb8 <col:11> 'int [64]' lvalue Var 0x7ffc1b86eec8 'b' 'int [64]'
+    | `-IntegerLiteral 0x7ffc1b86f000 <line:7:19> 'int' 256
+    `-ReturnStmt 0x7ffc1b86f090 <line:14:3, col:10>
+      `-IntegerLiteral 0x7ffc1b86f070 <col:10> 'int' 0

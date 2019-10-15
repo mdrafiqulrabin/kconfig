@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fa9870174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa986800e60 <../Data/C2AST/pr43245.c:5:1, line:8:1> line:6:1 used foo 'void (char *)'
+| |-ParmVarDecl 0x7fa987018178 <col:6, col:12> col:12 p 'char *'
+| `-CompoundStmt 0x7fa986800f48 <line:7:1, line:8:1>
+`-FunctionDecl 0x7fa986801028 <line:10:1, line:18:1> line:11:1 bar 'char *(void)'
+  `-CompoundStmt 0x7fa9868014e0 <line:12:1, line:18:1>
+    |-DeclStmt 0x7fa9868011d8 <line:13:3, col:24>
+    | `-VarDecl 0x7fa9868010e0 <col:3, col:19> col:15 used s 'const char *' cinit
+    |   `-ImplicitCastExpr 0x7fa9868011c0 <col:19> 'const char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fa9868011a8 <col:19> 'char *' <ArrayToPointerDecay>
+    |       `-StringLiteral 0x7fa986801178 <col:19> 'char [4]' lvalue "foo"
+    |-DeclStmt 0x7fa9868012c0 <line:14:3, col:15>
+    | `-VarDecl 0x7fa986801208 <col:3, col:14> col:9 used s1 'char *' cinit
+    |   `-ImplicitCastExpr 0x7fa9868012a8 <col:14> 'char *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fa986801290 <col:14> 'const char *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa986801268 <col:14> 'const char *' lvalue Var 0x7fa9868010e0 's' 'const char *'
+    |-BinaryOperator 0x7fa986801358 <line:15:3, col:8> 'char *' '='
+    | |-DeclRefExpr 0x7fa9868012d8 <col:3> 'char *' lvalue Var 0x7fa986801208 's1' 'char *'
+    | `-ImplicitCastExpr 0x7fa986801340 <col:8> 'char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fa986801328 <col:8> 'const char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa986801300 <col:8> 'const char *' lvalue Var 0x7fa9868010e0 's' 'const char *'
+    |-CallExpr 0x7fa986801410 <line:16:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fa9868013f8 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa986801380 <col:3> 'void (char *)' Function 0x7fa986800e60 'foo' 'void (char *)'
+    | `-ImplicitCastExpr 0x7fa986801458 <col:8> 'char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fa986801440 <col:8> 'const char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa9868013a8 <col:8> 'const char *' lvalue Var 0x7fa9868010e0 's' 'const char *'
+    `-ReturnStmt 0x7fa9868014c8 <line:17:3, col:10>
+      `-ImplicitCastExpr 0x7fa9868014b0 <col:10> 'char *' <BitCast>
+        `-ImplicitCastExpr 0x7fa986801498 <col:10> 'const char *' <LValueToRValue>
+          `-DeclRefExpr 0x7fa986801470 <col:10> 'const char *' lvalue Var 0x7fa9868010e0 's' 'const char *'

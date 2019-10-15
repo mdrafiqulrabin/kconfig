@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fd97902bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd9798142d0 <../Data/C2AST/pr85300.c:5:1, line:16:1> line:6:1 foo 'void (double, unsigned char)'
+  |-ParmVarDecl 0x7fd97902c978 <col:6, col:13> col:13 used x 'double'
+  |-ParmVarDecl 0x7fd979814200 <col:16, col:30> col:30 used y 'unsigned char'
+  `-CompoundStmt 0x7fd9798147a0 <line:7:1, line:16:1>
+    `-WhileStmt 0x7fd979814780 <line:8:3, line:15:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd979814460 <line:8:10, col:20> 'int' '<'
+      | |-CStyleCastExpr 0x7fd979814418 <col:10, col:16> 'int' <FloatingToIntegral>
+      | | `-ImplicitCastExpr 0x7fd979814400 <col:16> 'double' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fd9798143c0 <col:16> 'double' lvalue ParmVar 0x7fd97902c978 'x' 'double'
+      | `-IntegerLiteral 0x7fd979814440 <col:20> 'int' 1
+      `-CompoundStmt 0x7fd979814750 <line:9:5, line:15:5>
+        |-DeclStmt 0x7fd979814500 <line:10:7, col:14>
+        | `-VarDecl 0x7fd9798144a0 <col:7, col:13> col:13 used a 'float'
+        |-BinaryOperator 0x7fd9798145f8 <line:12:7, col:15> 'float' '='
+        | |-DeclRefExpr 0x7fd979814518 <col:7> 'float' lvalue Var 0x7fd9798144a0 'a' 'float'
+        | `-ImplicitCastExpr 0x7fd9798145e0 <col:11, col:15> 'float' <IntegralToFloating>
+        |   `-BinaryOperator 0x7fd9798145b8 <col:11, col:15> 'int' '|'
+        |     |-ImplicitCastExpr 0x7fd9798145a0 <col:11> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7fd979814588 <col:11> 'unsigned char' <LValueToRValue>
+        |     |   `-DeclRefExpr 0x7fd979814540 <col:11> 'unsigned char' lvalue ParmVar 0x7fd979814200 'y' 'unsigned char'
+        |     `-IntegerLiteral 0x7fd979814568 <col:15> 'int' 256
+        |-BinaryOperator 0x7fd979814680 <line:13:7, col:11> 'unsigned char' '='
+        | |-DeclRefExpr 0x7fd979814620 <col:7> 'unsigned char' lvalue ParmVar 0x7fd979814200 'y' 'unsigned char'
+        | `-ImplicitCastExpr 0x7fd979814668 <col:11> 'unsigned char' <IntegralCast>
+        |   `-IntegerLiteral 0x7fd979814648 <col:11> 'int' 0
+        `-BinaryOperator 0x7fd979814728 <line:14:7, col:11> 'double' '='
+          |-DeclRefExpr 0x7fd9798146a8 <col:7> 'double' lvalue ParmVar 0x7fd97902c978 'x' 'double'
+          `-ImplicitCastExpr 0x7fd979814710 <col:11> 'double' <FloatingCast>
+            `-ImplicitCastExpr 0x7fd9798146f8 <col:11> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fd9798146d0 <col:11> 'float' lvalue Var 0x7fd9798144a0 'a' 'float'

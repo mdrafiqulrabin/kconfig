@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f9ac88288e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9ac8829560 <../Data/C2AST/pr39120.c:1:1, col:20> col:8 struct X definition
+| `-FieldDecl 0x7f9ac8015660 <col:12, col:17> col:17 referenced p 'int *'
+|-VarDecl 0x7f9ac8015700 <col:1, col:22> col:22 used x 'struct X':'struct X'
+|-FunctionDecl 0x7f9ac80158e0 <line:3:1, line:4:46> col:1 used foo 'struct X (int *)'
+| |-ParmVarDecl 0x7f9ac80157d0 <col:5, col:10> col:10 used p 'int *'
+| |-CompoundStmt 0x7f9ac8015b88 <col:13, col:46>
+| | |-DeclStmt 0x7f9ac8015a50 <col:15, col:25>
+| | | `-VarDecl 0x7f9ac80159f0 <col:15, col:24> col:24 used x 'struct X':'struct X' nrvo
+| | |-BinaryOperator 0x7f9ac8015b08 <col:27, col:33> 'int *' '='
+| | | |-MemberExpr 0x7f9ac8015a90 <col:27, col:29> 'int *' lvalue .p 0x7f9ac8015660
+| | | | `-DeclRefExpr 0x7f9ac8015a68 <col:27> 'struct X':'struct X' lvalue Var 0x7f9ac80159f0 'x' 'struct X':'struct X'
+| | | `-ImplicitCastExpr 0x7f9ac8015af0 <col:33> 'int *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f9ac8015ac8 <col:33> 'int *' lvalue ParmVar 0x7f9ac80157d0 'p' 'int *'
+| | `-ReturnStmt 0x7f9ac8015b70 <col:36, col:43>
+| |   `-ImplicitCastExpr 0x7f9ac8015b58 <col:43> 'struct X':'struct X' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9ac8015b30 <col:43> 'struct X':'struct X' lvalue Var 0x7f9ac80159f0 'x' 'struct X':'struct X'
+| `-NoInlineAttr 0x7f9ac8015988 <line:3:25>
+|-FunctionDecl 0x7f9ac8015bf8 <line:6:1, line:7:19> col:1 used bar 'void ()'
+| |-CompoundStmt 0x7f9ac8015e08 <col:7, col:19>
+| | `-BinaryOperator 0x7f9ac8015d98 <col:9, col:16> 'int' '='
+| |   |-UnaryOperator 0x7f9ac8015d58 <col:9, col:12> 'int' lvalue prefix '*'
+| |   | `-ImplicitCastExpr 0x7f9ac8015d40 <col:10, col:12> 'int *' <LValueToRValue>
+| |   |   `-MemberExpr 0x7f9ac8015d08 <col:10, col:12> 'int *' lvalue .p 0x7f9ac8015660
+| |   |     `-DeclRefExpr 0x7f9ac8015ce0 <col:10> 'struct X':'struct X' lvalue Var 0x7f9ac8015700 'x' 'struct X':'struct X'
+| |   `-IntegerLiteral 0x7f9ac8015d78 <col:16> 'int' 1
+| `-NoInlineAttr 0x7f9ac8015c98 <line:6:19>
+|-FunctionDecl 0x7f9ac8015f10 <line:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9ac8015fb0 prev 0x7f9ac8015f10 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f9ac80160a0 <line:10:1, line:18:1> line:10:5 main 'int ()'
+  `-CompoundStmt 0x7f9ac8016578 <line:11:1, line:18:1>
+    |-DeclStmt 0x7f9ac80161d8 <line:12:3, col:12>
+    | `-VarDecl 0x7f9ac8016158 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7f9ac80161b8 <col:11> 'int' 0
+    |-BinaryOperator 0x7f9ac8016330 <line:13:3, col:13> 'struct X':'struct X' '='
+    | |-DeclRefExpr 0x7f9ac80161f0 <col:3> 'struct X':'struct X' lvalue Var 0x7f9ac8015700 'x' 'struct X':'struct X'
+    | `-CallExpr 0x7f9ac8016300 <col:7, col:13> 'struct X':'struct X'
+    |   |-ImplicitCastExpr 0x7f9ac80162e8 <col:7> 'struct X (*)(int *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f9ac8016218 <col:7> 'struct X (int *)' Function 0x7f9ac80158e0 'foo' 'struct X (int *)'
+    |   `-UnaryOperator 0x7f9ac8016268 <col:11, col:12> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7f9ac8016240 <col:12> 'int' lvalue Var 0x7f9ac8016158 'i' 'int'
+    |-CallExpr 0x7f9ac80163c0 <line:14:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7f9ac80163a8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9ac8016358 <col:3> 'void ()' Function 0x7f9ac8015bf8 'bar' 'void ()'
+    |-IfStmt 0x7f9ac8016508 <line:15:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9ac8016448 <line:15:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f9ac8016430 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9ac80163e8 <col:7> 'int' lvalue Var 0x7f9ac8016158 'i' 'int'
+    | | `-IntegerLiteral 0x7f9ac8016410 <col:12> 'int' 1
+    | |-CallExpr 0x7f9ac80164e0 <line:16:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9ac80164c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9ac8016470 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9ac8015fb0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9ac8016560 <line:17:3, col:10>
+      `-IntegerLiteral 0x7f9ac8016540 <col:10> 'int' 0

@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fb7930166e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb793017360 <../Data/C2AST/pr41282.c:1:1, line:4:1> line:1:8 struct S definition
+| `-FieldDecl 0x7fb792829a38 <line:3:3, col:16> col:16 iu 'unsigned int'
+|-RecordDecl 0x7fb792829a80 <line:6:1, line:10:1> line:6:7 union U definition
+| |-FieldDecl 0x7fb792829b80 <line:8:3, col:12> col:12 referenced s 'struct S':'struct S'
+| `-FieldDecl 0x7fb792829be0 <line:9:3, col:14> col:14 referenced is 'int'
+|-FunctionDecl 0x7fb792829cc0 <line:12:1, col:24> col:19 used bar 'int ()' extern
+`-FunctionDecl 0x7fb792829ea0 <line:14:1, line:20:1> line:14:10 foo 'struct S (void)'
+  `-CompoundStmt 0x7fb79282a200 <line:15:1, line:20:1>
+    |-DeclStmt 0x7fb792829ff0 <line:16:3, col:12>
+    | `-VarDecl 0x7fb792829f90 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-BinaryOperator 0x7fb79282a0f8 <line:18:3, col:15> 'int' '='
+    | |-MemberExpr 0x7fb79282a030 <col:3, col:5> 'int' lvalue .is 0x7fb792829be0
+    | | `-DeclRefExpr 0x7fb79282a008 <col:3> 'union U':'union U' lvalue Var 0x7fb792829f90 'u' 'union U':'union U'
+    | `-CallExpr 0x7fb79282a0d0 <col:10, col:15> 'int'
+    |   `-ImplicitCastExpr 0x7fb79282a0b8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fb79282a068 <col:10> 'int ()' Function 0x7fb792829cc0 'bar' 'int ()'
+    `-ReturnStmt 0x7fb79282a1e8 <line:19:3, col:12>
+      `-ImplicitCastExpr 0x7fb79282a1d0 <col:10, col:12> 'struct S':'struct S' <LValueToRValue>
+        `-MemberExpr 0x7fb79282a198 <col:10, col:12> 'struct S':'struct S' lvalue .s 0x7fb792829b80
+          `-DeclRefExpr 0x7fb79282a170 <col:10> 'union U':'union U' lvalue Var 0x7fb792829f90 'u' 'union U':'union U'

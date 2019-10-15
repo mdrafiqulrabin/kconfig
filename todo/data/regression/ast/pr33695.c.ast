@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f8df98274e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8dfa0143a8 <../Data/C2AST/pr33695.c:5:1, line:8:1> line:5:14 bfstages 'unsigned int (int, float *, int)'
+  |-ParmVarDecl 0x7f8df9828178 <col:23, col:27> col:27 used M 'int'
+  |-ParmVarDecl 0x7f8dfa014240 <col:30, col:37> col:37 Utbl 'float *'
+  |-ParmVarDecl 0x7f8dfa0142b8 <col:43, col:47> col:47 used Ustride 'int'
+  `-CompoundStmt 0x7f8dfa014620 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f8dfa014608 <line:7:4, col:37>
+      `-BinaryOperator 0x7f8dfa0145e0 <col:11, col:37> 'unsigned int' '*'
+        |-ParenExpr 0x7f8dfa014568 <col:11, col:33> 'unsigned int'
+        | `-BinaryOperator 0x7f8dfa014540 <col:12, col:32> 'unsigned int' '<<'
+        |   |-CStyleCastExpr 0x7f8dfa0144d8 <col:12, col:27> 'unsigned int' <IntegralCast>
+        |   | `-IntegerLiteral 0x7f8dfa0144a0 <col:27> 'int' 1
+        |   `-ImplicitCastExpr 0x7f8dfa014528 <col:32> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f8dfa014500 <col:32> 'int' lvalue ParmVar 0x7f8df9828178 'M' 'int'
+        `-ImplicitCastExpr 0x7f8dfa0145c8 <col:37> 'unsigned int' <IntegralCast>
+          `-ImplicitCastExpr 0x7f8dfa0145b0 <col:37> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7f8dfa014588 <col:37> 'int' lvalue ParmVar 0x7f8dfa0142b8 'Ustride' 'int'

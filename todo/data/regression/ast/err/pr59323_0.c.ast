@@ -1,0 +1,62 @@
+../Data/C2AST/pr59323_0.c:19:11: error: 'asm goto' constructs are not supported yet
+      asm goto ("" : : : : lab);
+          ^
+../Data/C2AST/pr59323_0.c:29:5: error: function definition is not allowed here
+    {
+    ^
+2 errors generated.
+TranslationUnitDecl 0x7fc4b502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc4b502c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc4b502bf80 '__int128'
+|-TypedefDecl 0x7fc4b502c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc4b502bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc4b502c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc4b502c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc4b502c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc4b502c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc4b502c600 'char *'
+|   `-BuiltinType 0x7fc4b502bd80 'char'
+|-TypedefDecl 0x7fc4b502c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc4b502c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc4b502c720 'struct __va_list_tag'
+|     `-Record 0x7fc4b502c698 '__va_list_tag'
+|-FunctionDecl 0x7fc4b580b220 <../Data/C2AST/pr59323_0.c:5:1, col:21> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7fc4b580b498 <line:7:1, line:37:1> line:7:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fc4b580b318 <col:10, col:14> col:14 used argc 'int'
+  |-ParmVarDecl 0x7fc4b580b3c0 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7fc4b580be18 <line:8:1, line:37:1>
+    |-DeclStmt 0x7fc4b580b5c0 <line:9:3, col:8>
+    | `-VarDecl 0x7fc4b580b560 <col:3, col:7> col:7 used i 'int'
+    |-IfStmt 0x7fc4b580b9e8 <line:11:3, line:23:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc4b580b638 <line:11:7, col:15> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fc4b580b620 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc4b580b5d8 <col:7> 'int' lvalue ParmVar 0x7fc4b580b318 'argc' 'int'
+    | | `-IntegerLiteral 0x7fc4b580b600 <col:15> 'int' 1
+    | |-CompoundStmt 0x7fc4b580b9c0 <col:18, line:23:3>
+    | | |-DeclStmt 0x7fc4b580b768 <line:12:5, col:15>
+    | | | `-EnumDecl 0x7fc4b580b660 <col:5, col:14> col:5
+    | | |   `-EnumConstantDecl 0x7fc4b580b720 <col:12> col:12 X 'int'
+    | | |-CallExpr 0x7fc4b580b7f0 <line:14:5, col:9> 'void'
+    | | | `-ImplicitCastExpr 0x7fc4b580b7d8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fc4b580b780 <col:5> 'void (void)' Function 0x7fc4b580b220 'bar' 'void (void)'
+    | | `-CompoundStmt 0x7fc4b580b9a0 <line:16:5, line:22:5>
+    | |   |-DeclStmt 0x7fc4b580b918 <line:17:7, col:17>
+    | |   | `-EnumDecl 0x7fc4b580b818 <col:7, col:16> col:7
+    | |   |   `-EnumConstantDecl 0x7fc4b580b8d0 <col:14> col:14 X 'int'
+    | |   `-LabelStmt 0x7fc4b580b988 <line:20:1, line:21:7> 'lab'
+    | |     `-NullStmt 0x7fc4b580b930 <col:7>
+    | `-<<<NULL>>>
+    |-CompoundStmt 0x7fc4b580bda0 <line:25:3, line:34:3>
+    | |-DeclStmt 0x7fc4b580bb28 <line:26:5, col:15>
+    | | `-EnumDecl 0x7fc4b580ba20 <col:5, col:14> col:5
+    | |   `-EnumConstantDecl 0x7fc4b580bae0 <col:12> col:12 X 'int'
+    | `-BinaryOperator 0x7fc4b580bd78 <line:33:5, col:13> 'int' '='
+    |   |-DeclRefExpr 0x7fc4b580bbb0 <col:5> 'int' lvalue Var 0x7fc4b580b560 'i' 'int'
+    |   `-CallExpr 0x7fc4b580bd50 <col:9, col:13> 'int'
+    |     `-ImplicitCastExpr 0x7fc4b580bd38 <col:9> 'int (*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fc4b580bce0 <col:9> 'int ()' Function 0x7fc4b580bc30 'foo' 'int ()'
+    `-ReturnStmt 0x7fc4b580be00 <line:36:3, col:10>
+      `-ImplicitCastExpr 0x7fc4b580bde8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc4b580bdc0 <col:10> 'int' lvalue Var 0x7fc4b580b560 'i' 'int'

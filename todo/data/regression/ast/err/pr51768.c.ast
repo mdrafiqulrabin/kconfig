@@ -1,0 +1,40 @@
+../Data/C2AST/pr51768.c:8:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : : : lab, lab, lab2, lab);     
+      ^
+../Data/C2AST/pr51768.c:16:7: error: 'asm goto' constructs are not supported yet
+  asm goto ("" : : [lab] "i" (0) : : lab);       
+      ^
+2 errors generated.
+TranslationUnitDecl 0x7fa37202aae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa37202b060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa37202ad80 '__int128'
+|-TypedefDecl 0x7fa37202b0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa37202ada0 'unsigned __int128'
+|-TypedefDecl 0x7fa37202b3a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa37202b1b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa37202b128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa37202b440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa37202b400 'char *'
+|   `-BuiltinType 0x7fa37202ab80 'char'
+|-TypedefDecl 0x7fa37202b708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa37202b6b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa37202b520 'struct __va_list_tag'
+|     `-Record 0x7fa37202b498 '__va_list_tag'
+|-FunctionDecl 0x7fa371814c20 <../Data/C2AST/pr51768.c:5:1, line:11:1> line:6:1 foo 'void (void)'
+| `-CompoundStmt 0x7fa371814de0 <line:7:1, line:11:1>
+|   |-LabelStmt 0x7fa371814d58 <line:9:1, col:5> 'lab'
+|   | `-NullStmt 0x7fa371814d00 <col:5>
+|   `-LabelStmt 0x7fa371814dc8 <line:10:1, col:6> 'lab2'
+|     `-NullStmt 0x7fa371814d70 <col:6>
+|-FunctionDecl 0x7fa371814e90 <line:13:1, line:18:1> line:14:1 bar 'void (void)'
+| `-CompoundStmt 0x7fa371814fa0 <line:15:1, line:18:1>
+|   `-LabelStmt 0x7fa371814f88 <line:17:1, col:5> 'lab'
+|     `-NullStmt 0x7fa371814f30 <col:5>
+`-FunctionDecl 0x7fa371815048 <line:20:1, line:25:1> line:21:1 baz 'void (void)'
+  `-CompoundStmt 0x7fa371815390 <line:22:1, line:25:1>
+    |-DeclStmt 0x7fa371815160 <line:23:3, col:8>
+    | `-VarDecl 0x7fa371815100 <col:3, col:7> col:7 used x 'int'
+    `-GCCAsmStmt 0x7fa371815318 <line:24:3, col:43>
+      |-DeclRefExpr 0x7fa371815248 <col:25> 'int' lvalue Var 0x7fa371815100 'x' 'int'
+      `-ImplicitCastExpr 0x7fa371815300 <col:41> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa3718152d8 <col:41> 'int' lvalue Var 0x7fa371815100 'x' 'int'

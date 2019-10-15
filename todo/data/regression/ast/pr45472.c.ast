@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fedf58222e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fedf5822f60 <../Data/C2AST/pr45472.c:4:1, line:8:1> line:4:8 struct S definition
+| |-FieldDecl 0x7fedf583ce38 <line:6:3, col:17> col:17 referenced vl 'volatile long'
+| `-FieldDecl 0x7fedf583ce98 <line:7:3, col:7> col:7 i 'int'
+|-VarDecl 0x7fedf583cf30 <line:9:1, col:10> col:10 used s1 'struct S':'struct S'
+|-VarDecl 0x7fedf583cff0 <col:1, col:14> col:14 used s2 'struct S':'struct S'
+`-FunctionDecl 0x7fedf583d1d0 <line:11:1, line:21:1> line:12:1 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fedf583d080 <col:6, col:10> col:10 used j 'int'
+  |-ParmVarDecl 0x7fedf583d0f8 <col:13, col:17> col:17 used c 'int'
+  `-CompoundStmt 0x7fedf583d730 <line:13:1, line:21:1>
+    |-DeclStmt 0x7fedf583d2f8 <line:14:3, col:8>
+    | `-VarDecl 0x7fedf583d298 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fedf583d6f8 <line:15:3, line:20:5>
+      |-BinaryOperator 0x7fedf583d358 <line:15:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fedf583d310 <col:8> 'int' lvalue Var 0x7fedf583d298 'i' 'int'
+      | `-IntegerLiteral 0x7fedf583d338 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fedf583d400 <col:15, col:20> 'int' '<='
+      | |-ImplicitCastExpr 0x7fedf583d3d0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fedf583d380 <col:15> 'int' lvalue Var 0x7fedf583d298 'i' 'int'
+      | `-ImplicitCastExpr 0x7fedf583d3e8 <col:20> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fedf583d3a8 <col:20> 'int' lvalue ParmVar 0x7fedf583d080 'j' 'int'
+      |-UnaryOperator 0x7fedf583d450 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fedf583d428 <col:23> 'int' lvalue Var 0x7fedf583d298 'i' 'int'
+      `-CompoundStmt 0x7fedf583d6d8 <line:16:5, line:20:5>
+        |-IfStmt 0x7fedf583d610 <line:17:7, line:18:14>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fedf583d498 <line:17:11> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fedf583d470 <col:11> 'int' lvalue ParmVar 0x7fedf583d0f8 'c' 'int'
+        | |-CompoundAssignOperator 0x7fedf583d588 <line:18:2, col:14> 'long' '+=' ComputeLHSTy='long' ComputeResultTy='long'
+        | | |-MemberExpr 0x7fedf583d4d8 <col:2, col:5> 'volatile long' lvalue .vl 0x7fedf583ce38
+        | | | `-DeclRefExpr 0x7fedf583d4b0 <col:2> 'struct S':'struct S' lvalue Var 0x7fedf583cff0 's2' 'struct S':'struct S'
+        | | `-ImplicitCastExpr 0x7fedf583d570 <col:11, col:14> 'long' <LValueToRValue>
+        | |   `-MemberExpr 0x7fedf583d538 <col:11, col:14> 'volatile long' lvalue .vl 0x7fedf583ce38
+        | |     `-DeclRefExpr 0x7fedf583d510 <col:11> 'struct S':'struct S' lvalue Var 0x7fedf583cf30 's1' 'struct S':'struct S'
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7fedf583d6b0 <line:19:7, col:12> 'struct S':'struct S' '='
+          |-DeclRefExpr 0x7fedf583d648 <col:7> 'struct S':'struct S' lvalue Var 0x7fedf583cf30 's1' 'struct S':'struct S'
+          `-ImplicitCastExpr 0x7fedf583d698 <col:12> 'struct S':'struct S' <LValueToRValue>
+            `-DeclRefExpr 0x7fedf583d670 <col:12> 'struct S':'struct S' lvalue Var 0x7fedf583cff0 's2' 'struct S':'struct S'

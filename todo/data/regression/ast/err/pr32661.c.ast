@@ -1,0 +1,84 @@
+../Data/C2AST/pr32661.c:9:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v4si' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v4si(*val, 1);
+         ^
+../Data/C2AST/pr32661.c:15:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v4si' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v4si(*val, 2);
+         ^
+../Data/C2AST/pr32661.c:21:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v4sf' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v4sf(*val, 2);
+         ^
+../Data/C2AST/pr32661.c:27:10: error: use of unknown builtin '__builtin_ia32_vec_ext_v4sf' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vec_ext_v4sf(*val, 3);
+         ^
+TranslationUnitDecl 0x7fac4581e6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fac4581ec60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fac4581e980 '__int128'
+|-TypedefDecl 0x7fac4581ecd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fac4581e9a0 'unsigned __int128'
+|-TypedefDecl 0x7fac4581efa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fac4581edb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fac4581ed28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fac4581f040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fac4581f000 'char *'
+|   `-BuiltinType 0x7fac4581e780 'char'
+|-TypedefDecl 0x7fac4581f308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fac4581f2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fac4581f120 'struct __va_list_tag'
+|     `-Record 0x7fac4581f098 '__va_list_tag'
+|-TypedefDecl 0x7fac46825600 <../Data/C2AST/pr32661.c:4:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fac4581f380 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fac4581e7e0 'int'
+|-TypedefDecl 0x7fac468256b8 <line:5:1, col:15> col:15 referenced __v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fac46825680 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fac4581e8e0 'float'
+|-FunctionDecl 0x7fac468258a8 <line:7:1, line:10:1> line:7:5 fooSI_1 'int (__v4si *)'
+| |-ParmVarDecl 0x7fac46825798 <col:13, col:21> col:21 used val '__v4si *'
+| `-CompoundStmt 0x7fac46825c08 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fac46825bf0 <line:9:3, col:45>
+|     `-CallExpr 0x7fac46825ba0 <col:10, col:45> 'int'
+|       |-ImplicitCastExpr 0x7fac46825b88 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fac46825ab0 <col:10> 'int ()' Function 0x7fac46825a00 '__builtin_ia32_vec_ext_v4si' 'int ()'
+|       |-ImplicitCastExpr 0x7fac46825bd8 <col:38, col:39> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       | `-UnaryOperator 0x7fac46825b18 <col:38, col:39> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7fac46825b00 <col:39> '__v4si *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fac46825ad8 <col:39> '__v4si *' lvalue ParmVar 0x7fac46825798 'val' '__v4si *'
+|       `-IntegerLiteral 0x7fac46825b38 <col:44> 'int' 1
+|-FunctionDecl 0x7fac46825cc0 <line:13:1, line:16:1> line:13:5 fooSI_2 'int (__v4si *)'
+| |-ParmVarDecl 0x7fac46825c30 <col:13, col:21> col:21 used val '__v4si *'
+| `-CompoundStmt 0x7fac46825e90 <line:14:1, line:16:1>
+|   `-ReturnStmt 0x7fac46825e78 <line:15:3, col:45>
+|     `-CallExpr 0x7fac46825e28 <col:10, col:45> 'int'
+|       |-ImplicitCastExpr 0x7fac46825e10 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fac46825d68 <col:10> 'int ()' Function 0x7fac46825a00 '__builtin_ia32_vec_ext_v4si' 'int ()'
+|       |-ImplicitCastExpr 0x7fac46825e60 <col:38, col:39> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       | `-UnaryOperator 0x7fac46825dd0 <col:38, col:39> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7fac46825db8 <col:39> '__v4si *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fac46825d90 <col:39> '__v4si *' lvalue ParmVar 0x7fac46825c30 'val' '__v4si *'
+|       `-IntegerLiteral 0x7fac46825df0 <col:44> 'int' 2
+|-FunctionDecl 0x7fac46826048 <line:19:1, line:22:1> line:19:7 fooSF_2 'float (__v4sf *)'
+| |-ParmVarDecl 0x7fac46825f38 <col:15, col:23> col:23 used val '__v4sf *'
+| `-CompoundStmt 0x7fac46826308 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7fac468262f0 <line:21:3, col:45>
+|     `-ImplicitCastExpr 0x7fac468262d8 <col:10, col:45> 'float' <IntegralToFloating>
+|       `-CallExpr4 errors generated.
+ 0x7fac46826288 <col:10, col:45> 'int'
+|         |-ImplicitCastExpr 0x7fac46826270 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fac468261c8 <col:10> 'int ()' Function 0x7fac46826118 '__builtin_ia32_vec_ext_v4sf' 'int ()'
+|         |-ImplicitCastExpr 0x7fac468262c0 <col:38, col:39> '__v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|         | `-UnaryOperator 0x7fac46826230 <col:38, col:39> '__v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+|         |   `-ImplicitCastExpr 0x7fac46826218 <col:39> '__v4sf *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fac468261f0 <col:39> '__v4sf *' lvalue ParmVar 0x7fac46825f38 'val' '__v4sf *'
+|         `-IntegerLiteral 0x7fac46826250 <col:44> 'int' 2
+`-FunctionDecl 0x7fac468263c0 <line:25:1, line:28:1> line:25:7 fooSF_3 'float (__v4sf *)'
+  |-ParmVarDecl 0x7fac46826330 <col:15, col:23> col:23 used val '__v4sf *'
+  `-CompoundStmt 0x7fac468265a8 <line:26:1, line:28:1>
+    `-ReturnStmt 0x7fac46826590 <line:27:3, col:45>
+      `-ImplicitCastExpr 0x7fac46826578 <col:10, col:45> 'float' <IntegralToFloating>
+        `-CallExpr 0x7fac46826528 <col:10, col:45> 'int'
+          |-ImplicitCastExpr 0x7fac46826510 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fac46826468 <col:10> 'int ()' Function 0x7fac46826118 '__builtin_ia32_vec_ext_v4sf' 'int ()'
+          |-ImplicitCastExpr 0x7fac46826560 <col:38, col:39> '__v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+          | `-UnaryOperator 0x7fac468264d0 <col:38, col:39> '__v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+          |   `-ImplicitCastExpr 0x7fac468264b8 <col:39> '__v4sf *' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fac46826490 <col:39> '__v4sf *' lvalue ParmVar 0x7fac46826330 'val' '__v4sf *'
+          `-IntegerLiteral 0x7fac468264f0 <col:44> 'int' 3

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f8a660258e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8a668122e8 <../Data/C2AST/pr39941.c:1:1, col:33> col:16 referenced entry_func 'void (*)(void) __attribute__((noreturn))'
+| `-PointerType 0x7f8a66812290 'void (*)(void) __attribute__((noreturn))'
+|   `-ParenType 0x7f8a66812230 'void (void) __attribute__((noreturn))' sugar
+|     `-FunctionProtoType 0x7f8a66812200 'void (void) __attribute__((noreturn))' noreturn cdecl
+|       `-BuiltinType 0x7f8a66025940 'void'
+|-VarDecl 0x7f8a66812370 <line:2:1, col:19> col:19 used entry_addr 'entry_func':'void (*)(void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8a668124a0 <line:3:1, line:6:1> line:3:13 used bsd_boot_entry 'void (void)' static
+| `-CompoundStmt 0x7f8a668126d8 <line:4:1, line:6:1>
+|   `-CallExpr 0x7f8a668126b0 <line:5:3, col:9> 'int'
+|     `-ImplicitCastExpr 0x7f8a66812698 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8a66812640 <col:3> 'int ()' Function 0x7f8a66812590 'stop' 'int ()'
+`-FunctionDecl 0x7f8a66812780 <line:7:1, line:11:1> line:7:6 bsd_boot 'void (void)'
+  `-CompoundStmt 0x7f8a668129d0 <line:8:1, line:11:1>
+    |-BinaryOperator 0x7f8a668128e8 <line:9:3, col:29> 'entry_func':'void (*)(void) __attribute__((noreturn))' '='
+    | |-DeclRefExpr 0x7f8a66812820 <col:3> 'entry_func':'void (*)(void) __attribute__((noreturn))' lvalue Var 0x7f8a66812370 'entry_addr' 'entry_func':'void (*)(void) __attribute__((noreturn))'
+    | `-CStyleCastExpr 0x7f8a668128c0 <col:16, col:29> 'entry_func':'void (*)(void) __attribute__((noreturn))' <BitCast>
+    |   `-ImplicitCastExpr 0x7f8a668128a8 <col:29> 'void (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7f8a66812848 <col:29> 'void (void)' Function 0x7f8a668124a0 'bsd_boot_entry' 'void (void)'
+    `-CallExpr 0x7f8a668129a8 <line:10:3, col:18> 'void'
+      `-ImplicitCastExpr 0x7f8a66812990 <col:3, col:15> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+        `-ParenExpr 0x7f8a66812970 <col:3, col:15> 'void (void) __attribute__((noreturn))':'void (void) __attribute__((noreturn))'
+          `-UnaryOperator 0x7f8a66812950 <col:4, col:5> 'void (void) __attribute__((noreturn))':'void (void) __attribute__((noreturn))' prefix '*'
+            `-ImplicitCastExpr 0x7f8a66812938 <col:5> 'entry_func':'void (*)(void) __attribute__((noreturn))' <LValueToRValue>
+              `-DeclRefExpr 0x7f8a66812910 <col:5> 'entry_func':'void (*)(void) __attribute__((noreturn))' lvalue Var 0x7f8a66812370 'entry_addr' 'entry_func':'void (*)(void) __attribute__((noreturn))'

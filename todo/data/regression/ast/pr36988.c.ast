@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f96760006e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9676001360 <../Data/C2AST/pr36988.c:1:9, line:3:1> line:1:9 struct definition
+| `-FieldDecl 0x7f9675034a38 <line:2:5, col:19> col:19 referenced mbxCommand 'unsigned char'
+|-TypedefDecl 0x7f9675034ad0 <line:1:1, line:3:3> col:3 referenced MAILBOX_t 'struct MAILBOX_t':'MAILBOX_t'
+| `-ElaboratedType 0x7f9675034a80 'struct MAILBOX_t' sugar
+|   `-RecordType 0x7f9675034a00 'MAILBOX_t'
+|     `-Record 0x7f9676001360 ''
+`-FunctionDecl 0x7f9675034c00 <line:4:1, line:11:1> line:4:6 lpfc_sli_brdrestart 'void (void)'
+  `-CompoundStmt 0x7f9675035308 <line:5:1, line:11:1>
+    |-DeclStmt 0x7f9675034d58 <line:6:3, col:30>
+    | `-VarDecl 0x7f9675034cf8 <col:3, col:25> col:25 used word0 'volatile unsigned int'
+    |-DeclStmt 0x7f9675034e58 <line:7:3, col:16>
+    | `-VarDecl 0x7f9675034df8 <col:3, col:14> col:14 used mb 'MAILBOX_t *'
+    |-BinaryOperator 0x7f9675034f70 <line:8:3, col:23> 'MAILBOX_t *' '='
+    | |-DeclRefExpr 0x7f9675034e70 <col:3> 'MAILBOX_t *' lvalue Var 0x7f9675034df8 'mb' 'MAILBOX_t *'
+    | `-CStyleCastExpr 0x7f9675034f48 <col:8, col:23> 'MAILBOX_t *' <BitCast>
+    |   `-UnaryOperator 0x7f9675034ee8 <col:22, col:23> 'volatile unsigned int *' prefix '&'
+    |     `-DeclRefExpr 0x7f9675034e98 <col:23> 'volatile unsigned int' lvalue Var 0x7f9675034cf8 'word0' 'volatile unsigned int'
+    |-BinaryOperator 0x7f9675035048 <line:9:3, col:20> 'unsigned char' '='
+    | |-MemberExpr 0x7f9675034fd8 <col:3, col:7> 'unsigned char' lvalue ->mbxCommand 0x7f9675034a38
+    | | `-ImplicitCastExpr 0x7f9675034fc0 <col:3> 'MAILBOX_t *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9675034f98 <col:3> 'MAILBOX_t *' lvalue Var 0x7f9675034df8 'mb' 'MAILBOX_t *'
+    | `-ImplicitCastExpr 0x7f9675035030 <col:20> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9675035010 <col:20> 'int' 26
+    `-CallExpr 0x7f96750352c0 <line:10:3, col:34> 'int'
+      |-ImplicitCastExpr 0x7f96750352a8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9675035170 <col:3> 'int ()' Function 0x7f96750350c0 '__writel' 'int ()'
+      `-ImplicitCastExpr 0x7f96750352f0 <col:12, col:33> 'unsigned int' <LValueToRValue>
+        `-ParenExpr 0x7f9675035260 <col:12, col:33> 'unsigned int' lvalue
+          `-UnaryOperator 0x7f9675035240 <col:13, col:31> 'unsigned int' lvalue prefix '*'
+            `-CStyleCastExpr 0x7f9675035218 <col:14, col:31> 'unsigned int *' <BitCast>
+              `-ImplicitCastExpr 0x7f9675035200 <col:31> 'MAILBOX_t *' <LValueToRValue>
+                `-DeclRefExpr 0x7f9675035198 <col:31> 'MAILBOX_t *' lvalue Var 0x7f9675034df8 'mb' 'MAILBOX_t *'

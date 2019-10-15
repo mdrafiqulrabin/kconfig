@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fe18e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe18f00dab8 <../Data/C2AST/pr70955_1.c:1:1, line:16:1> line:2:1 va_demo 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))'
+| |-ParmVarDecl 0x7fe18e82c978 <col:10, col:14> col:14 used count 'int'
+| `-CompoundStmt 0x7fe18f00e418 <line:3:1, line:16:1>
+|   |-DeclStmt 0x7fe18f00dc38 <line:4:3, col:14>
+|   | `-VarDecl 0x7fe18f00dbb8 <col:3, col:13> col:7 used sum 'int' cinit
+|   |   `-IntegerLiteral 0x7fe18f00dc18 <col:13> 'int' 0
+|   |-DeclStmt 0x7fe18f00dce0 <line:5:3, col:26>
+|   | `-VarDecl 0x7fe18f00dc80 <col:3, col:24> col:24 used ap '__builtin_ms_va_list':'char *'
+|   |-CallExpr 0x7fe18f00df70 <line:7:3, col:35> 'void'
+|   | |-ImplicitCastExpr 0x7fe18f00df58 <col:3> 'void (*)(char *&, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fe18f00deb8 <col:3> '<builtin fn type>' Function 0x7fe18f00dd68 '__builtin_ms_va_start' 'void (char *&, ...)'
+|   | |-DeclRefExpr 0x7fe18f00dee0 <col:26> '__builtin_ms_va_list':'char *' lvalue Var 0x7fe18f00dc80 'ap' '__builtin_ms_va_list':'char *'
+|   | `-DeclRefExpr 0x7fe18f00df08 <col:30> 'int' lvalue ParmVar 0x7fe18e82c978 'count' 'int'
+|   |-WhileStmt 0x7fe18f00e138 <line:8:3, line:12:5>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fe18f00dfd0 <line:8:10> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fe18f00dfa8 <col:10> 'int' lvalue ParmVar 0x7fe18e82c978 'count' 'int'
+|   | `-CompoundStmt 0x7fe18f00e118 <line:9:5, line:12:5>
+|   |   |-CompoundAssignOperator 0x7fe18f00e098 <line:10:7, col:39> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   | |-DeclRefExpr 0x7fe18f00dfe8 <col:7> 'int' lvalue Var 0x7fe18f00dbb8 'sum' 'int'
+|   |   | `-VAArgExpr 0x7fe18f00e070 <col:14, col:39> 'int'
+|   |   |   `-DeclRefExpr 0x7fe18f00e010 <col:32> '__builtin_ms_va_list':'char *' lvalue Var 0x7fe18f00dc80 'ap' '__builtin_ms_va_list':'char *'
+|   |   `-UnaryOperator 0x7fe18f00e0f8 <line:11:7, col:9> 'int' prefix '--'
+|   |     `-DeclRefExpr 0x7fe18f00e0d0 <col:9> 'int' lvalue ParmVar 0x7fe18e82c978 'count' 'int'
+|   |-CallExpr 0x7fe18f00e390 <line:14:3, col:26> 'void'
+|   | |-ImplicitCastExpr 0x7fe18f00e378 <col:3> 'void (*)(char *&)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fe18f00e2e8 <col:3> '<builtin fn type>' Function 0x7fe18f00e198 '__builtin_ms_va_end' 'void (char *&)'
+|   | `-DeclRefExpr 0x7fe18f00e310 <col:24> '__builtin_ms_va_list':'char *' lvalue Var 0x7fe18f00dc80 'ap' '__builtin_ms_va_list':'char *'
+|   `-ReturnStmt 0x7fe18f00e400 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7fe18f00e3e8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe18f00e3c0 <col:10> 'int' lvalue Var 0x7fe18f00dbb8 'sum' 'int'
+|-FunctionDecl 0x7fe18f00dd68 <line:7:3> col:3 implicit used __builtin_ms_va_start 'void (char *&, ...)' extern
+| |-ParmVarDecl 0x7fe18f00de08 <<invalid sloc>> <invalid sloc> 'char *&'
+| `-NoThrowAttr 0x7fe18f00de70 <col:3> Implicit
+`-FunctionDecl 0x7fe18f00e198 <line:14:3> col:3 implicit used __builtin_ms_va_end 'void (char *&)' extern
+  |-ParmVarDecl 0x7fe18f00e238 <<invalid sloc>> <invalid sloc> 'char *&'
+  `-NoThrowAttr 0x7fe18f00e2a0 <col:3> Implicit

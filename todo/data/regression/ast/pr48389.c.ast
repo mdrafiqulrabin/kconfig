@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fc158005ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc157016c00 <../Data/C2AST/pr48389.c:5:1, col:15> col:15 referenced V2SF '__attribute__((__vector_size__(32 * sizeof(float)))) float'
+| `-VectorType 0x7fc158006b80 '__attribute__((__vector_size__(32 * sizeof(float)))) float' 32
+|   `-BuiltinType 0x7fc1580060e0 'float'
+`-FunctionDecl 0x7fc157016e20 <line:6:1, line:13:1> line:6:6 foo 'V2SF (int, V2SF)'
+  |-ParmVarDecl 0x7fc157016c98 <col:11, col:15> col:15 used x 'int'
+  |-ParmVarDecl 0x7fc157016d08 <col:18, col:23> col:23 used a 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+  `-CompoundStmt 0x7fc157017560 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fc157017300 <line:8:3, col:14>
+    | `-VarDecl 0x7fc157016f20 <col:3, col:13> col:8 used b 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' cinit
+    |   `-InitListExpr 0x7fc157016fc0 <col:12, col:13> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+    |-IfStmt 0x7fc157017430 <line:9:3, line:10:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc157017378 <line:9:7, col:11> 'int' '&'
+    | | |-ImplicitCastExpr 0x7fc157017360 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc157017318 <col:7> 'int' lvalue ParmVar 0x7fc157016c98 'x' 'int'
+    | | `-IntegerLiteral 0x7fc157017340 <col:11> 'int' 42
+    | |-BinaryOperator 0x7fc157017408 <line:10:5, col:9> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' '='
+    | | |-DeclRefExpr 0x7fc1570173a0 <col:5> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' lvalue Var 0x7fc157016f20 'b' 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+    | | `-ImplicitCastExpr 0x7fc1570173f0 <col:9> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fc1570173c8 <col:9> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' lvalue ParmVar 0x7fc157016d08 'a' 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+    | `-<<<NULL>>>
+    |-CompoundAssignOperator 0x7fc1570174d0 <line:11:3, col:8> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' '+=' ComputeLHSTy='V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' ComputeResultTy='V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+    | |-DeclRefExpr 0x7fc157017468 <col:3> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' lvalue ParmVar 0x7fc157016d08 'a' 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+    | `-ImplicitCastExpr 0x7fc1570174b8 <col:8> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fc157017490 <col:8> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' lvalue Var 0x7fc157016f20 'b' 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'
+    `-ReturnStmt 0x7fc157017548 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fc157017530 <col:10> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' <LValueToRValue>
+        `-DeclRefExpr 0x7fc157017508 <col:10> 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float' lvalue ParmVar 0x7fc157016d08 'a' 'V2SF':'__attribute__((__vector_size__(32 * sizeof(float)))) float'

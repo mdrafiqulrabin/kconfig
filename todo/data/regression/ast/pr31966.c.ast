@@ -1,0 +1,140 @@
+TranslationUnitDecl 0x7fef3502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fef3502c978 <../Data/C2AST/pr31966.c:6:1, col:28> col:28 referenced word 'unsigned long long'
+| `-BuiltinType 0x7fef3502bec0 'unsigned long long'
+|-VarDecl 0x7fef35814200 <line:8:1, col:35> col:20 used MP_WORD_BITS 'const unsigned int' cinit
+| `-ImplicitCastExpr 0x7fef358142c0 <col:35> 'unsigned int' <IntegralCast>
+|   `-IntegerLiteral 0x7fef358142a0 <col:35> 'int' 64
+|-VarDecl 0x7fef35814310 <line:9:1, col:36> col:12 MP_WORD_MASK 'const word':'const unsigned long long' cinit
+| `-UnaryOperator 0x7fef358143e8 <col:27, col:36> 'word':'unsigned long long' prefix '~'
+|   `-ParenExpr 0x7fef358143c8 <col:28, col:36> 'word':'unsigned long long'
+|     `-CStyleCastExpr 0x7fef358143a0 <col:29, col:35> 'word':'unsigned long long' <IntegralCast>
+|       `-IntegerLiteral 0x7fef35814370 <col:35> 'int' 0
+|-VarDecl 0x7fef35814418 <line:10:1, col:60> col:12 used MP_WORD_TOP_BIT 'const word':'const unsigned long long' cinit
+| `-BinaryOperator 0x7fef358145e0 <col:30, col:60> 'word':'unsigned long long' '<<'
+|   |-CStyleCastExpr 0x7fef358144a8 <col:30, col:36> 'word':'unsigned long long' <IntegralCast>
+|   | `-IntegerLiteral 0x7fef35814478 <col:36> 'int' 1
+|   `-ParenExpr 0x7fef358145c0 <col:41, col:60> 'unsigned long'
+|     `-BinaryOperator 0x7fef35814598 <col:42, col:59> 'unsigned long' '-'
+|       |-BinaryOperator 0x7fef35814538 <col:42, col:55> 'unsigned long' '*'
+|       | |-ImplicitCastExpr 0x7fef35814520 <col:42> 'unsigned long' <IntegralCast>
+|       | | `-IntegerLiteral 0x7fef358144d0 <col:42> 'int' 8
+|       | `-UnaryExprOrTypeTraitExpr 0x7fef35814500 <col:44, col:55> 'unsigned long' sizeof 'word':'unsigned long long'
+|       `-ImplicitCastExpr 0x7fef35814580 <col:59> 'unsigned long' <IntegralCast>
+|         `-IntegerLiteral 0x7fef35814560 <col:59> 'int' 1
+|-FunctionDecl 0x7fef35814700 <line:12:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fef358147a0 prev 0x7fef35814700 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fef35814a60 <line:14:1, line:35:1> line:14:6 used do_div 'word (word, word, word)'
+| |-ParmVarDecl 0x7fef35814850 <col:13, col:18> col:18 used n1 'word':'unsigned long long'
+| |-ParmVarDecl 0x7fef358148c0 <col:22, col:27> col:27 used n0 'word':'unsigned long long'
+| |-ParmVarDecl 0x7fef35814930 <col:31, col:36> col:36 used d 'word':'unsigned long long'
+| `-CompoundStmt 0x7fef35021220 <line:15:1, line:35:1>
+|   |-DeclStmt 0x7fef35814cf0 <line:16:3, col:35>
+|   | |-VarDecl 0x7fef35814b28 <col:3, col:20> col:8 used high 'word':'unsigned long long' cinit
+|   | | `-BinaryOperator 0x7fef35814c08 <col:15, col:20> 'unsigned long long' '%'
+|   | |   |-ImplicitCastExpr 0x7fef35814bd8 <col:15> 'word':'unsigned long long' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fef35814b88 <col:15> 'word':'unsigned long long' lvalue ParmVar 0x7fef35814850 'n1' 'word':'unsigned long long'
+|   | |   `-ImplicitCastExpr 0x7fef35814bf0 <col:20> 'word':'unsigned long long' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fef35814bb0 <col:20> 'word':'unsigned long long' lvalue ParmVar 0x7fef35814930 'd' 'word':'unsigned long long'
+|   | `-VarDecl 0x7fef35814c40 <col:3, col:34> col:23 used quotient 'word':'unsigned long long' cinit
+|   |   `-ImplicitCastExpr 0x7fef35814cc0 <col:34> 'word':'unsigned long long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fef35814ca0 <col:34> 'int' 0
+|   |-DeclStmt 0x7fef35814d80 <line:17:3, col:17>
+|   | `-VarDecl 0x7fef35814d20 <col:3, col:16> col:16 used j 'unsigned int'
+|   |-ForStmt 0x7fef35021190 <line:19:3, line:32:5>
+|   | |-BinaryOperator 0x7fef35814df8 <line:19:7, col:11> 'unsigned int' '='
+|   | | |-DeclRefExpr 0x7fef35814d98 <col:7> 'unsigned int' lvalue Var 0x7fef35814d20 'j' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7fef35814de0 <col:11> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fef35814dc0 <col:11> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fef35814ea0 <col:14, col:19> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fef35814e70 <col:14> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fef35814e20 <col:14> 'unsigned int' lvalue Var 0x7fef35814d20 'j' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7fef35814e88 <col:19> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fef35814e48 <col:19> 'const unsigned int' lvalue Var 0x7fef35814200 'MP_WORD_BITS' 'const unsigned int'
+|   | |-UnaryOperator 0x7fef35814f48 <col:33, col:35> 'unsigned int' prefix '++'
+|   | | `-DeclRefExpr 0x7fef35814f20 <col:35> 'unsigned int' lvalue Var 0x7fef35814d20 'j' 'unsigned int'
+|   | `-CompoundStmt 0x7fef35021158 <line:20:5, line:32:5>
+|   |   |-DeclStmt 0x7fef358150f8 <line:21:7, col:51>
+|   |   | `-VarDecl 0x7fef35814f78 <col:7, col:50> col:12 used high_top_bit 'word':'unsigned long long' cinit
+|   |   |   `-ParenExpr 0x7fef35815080 <col:27, col:50> 'unsigned long long'
+|   |   |     `-BinaryOperator 0x7fef35815058 <col:28, col:35> 'unsigned long long' '&'
+|   |   |       |-ImplicitCastExpr 0x7fef35815028 <col:28> 'word':'unsigned long long' <LValueToRValue>
+|   |   |       | `-DeclRefExpr 0x7fef35814fd8 <col:28> 'word':'unsigned long long' lvalue Var 0x7fef35814b28 'high' 'word':'unsigned long long'
+|   |   |       `-ImplicitCastExpr 0x7fef35815040 <col:35> 'word':'unsigned long long' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fef35815000 <col:35> 'const word':'const unsigned long long' lvalue Var 0x7fef35814418 'MP_WORD_TOP_BIT' 'const word':'const unsigned long long'
+|   |   |-CompoundAssignOperator 0x7fef35815170 <line:23:7, col:16> 'word':'unsigned long long' '<<=' ComputeLHSTy='word':'unsigned long long' ComputeResultTy='word':'unsigned long long'
+|   |   | |-DeclRefExpr 0x7fef35815110 <col:7> 'word':'unsigned long long' lvalue Var 0x7fef35814b28 'high' 'word':'unsigned long long'
+|   |   | `-IntegerLiteral 0x7fef35815138 <col:16> 'int' 1
+|   |   |-CompoundAssignOperator 0x7fef35020de8 <line:24:7, col:44> 'word':'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   |   | |-DeclRefExpr 0x7fef358151a8 <col:7> 'word':'unsigned long long' lvalue Var 0x7fef35814b28 'high' 'word':'unsigned long long'
+|   |   | `-BinaryOperator 0x7fef35020dc0 <col:15, col:44> 'unsigned long long' '&'
+|   |   |   |-ParenExpr 0x7fef35020d68 <col:15, col:40> 'word':'unsigned long long'
+|   |   |   | `-BinaryOperator 0x7fef35020d40 <col:16, col:39> 'word':'unsigned long long' '>>'
+|   |   |   |   |-ImplicitCastExpr 0x7fef35020d28 <col:16> 'word':'unsigned long long' <LValueToRValue>
+|   |   |   |   | `-DeclRefExpr 0x7fef358151d0 <col:16> 'word':'unsigned long long' lvalue ParmVar 0x7fef358148c0 'n0' 'word':'unsigned long long'
+|   |   |   |   `-ParenExpr 0x7fef35020d08 <col:22, col:39> 'unsigned int'
+|   |   |   |     `-BinaryOperator 0x7fef35020ce0 <col:23, col:38> 'unsigned int' '-'
+|   |   |   |       |-BinaryOperator 0x7fef35020c78 <col:23, col:36> 'unsigned int' '-'
+|   |   |   |       | |-ImplicitCastExpr 0x7fef35020c48 <col:23> 'unsigned int' <LValueToRValue>
+|   |   |   |       | | `-DeclRefExpr 0x7fef35020c00 <col:23> 'const unsigned int' lvalue Var 0x7fef35814200 'MP_WORD_BITS' 'const unsigned int'
+|   |   |   |       | `-ImplicitCastExpr 0x7fef35020c60 <col:36> 'unsigned int' <IntegralCast>
+|   |   |   |       |   `-IntegerLiteral 0x7fef35020c28 <col:36> 'int' 1
+|   |   |   |       `-ImplicitCastExpr 0x7fef35020cc8 <col:38> 'unsigned int' <LValueToRValue>
+|   |   |   |         `-DeclRefExpr 0x7fef35020ca0 <col:38> 'unsigned int' lvalue Var 0x7fef35814d20 'j' 'unsigned int'
+|   |   |   `-ImplicitCastExpr 0x7fef35020da8 <col:44> 'unsigned long long' <IntegralCast>
+|   |   |     `-IntegerLiteral 0x7fef35020d88 <col:44> 'int' 1
+|   |   |-CompoundAssignOperator 0x7fef35020e80 <line:25:7, col:20> 'word':'unsigned long long' '<<=' ComputeLHSTy='word':'unsigned long long' ComputeResultTy='word':'unsigned long long'
+|   |   | |-DeclRefExpr 0x7fef35020e20 <col:7> 'word':'unsigned long long' lvalue Var 0x7fef35814c40 'quotient' 'word':'unsigned long long'
+|   |   | `-IntegerLiteral 0x7fef35020e48 <col:20> 'int' 1
+|   |   `-IfStmt 0x7fef35021120 <line:27:7, line:31:2>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fef35020fa0 <line:27:10, col:34> 'int' '||'
+|   |     | |-ImplicitCastExpr 0x7fef35020f88 <col:10> 'word':'unsigned long long' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fef35020eb8 <col:10> 'word':'unsigned long long' lvalue Var 0x7fef35814f78 'high_top_bit' 'word':'unsigned long long'
+|   |     | `-BinaryOperator 0x7fef35020f60 <col:26, col:34> 'int' '>='
+|   |     |   |-ImplicitCastExpr 0x7fef35020f30 <col:26> 'word':'unsigned long long' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fef35020ee0 <col:26> 'word':'unsigned long long' lvalue Var 0x7fef35814b28 'high' 'word':'unsigned long long'
+|   |     |   `-ImplicitCastExpr 0x7fef35020f48 <col:34> 'word':'unsigned long long' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fef35020f08 <col:34> 'word':'unsigned long long' lvalue ParmVar 0x7fef35814930 'd' 'word':'unsigned long long'
+|   |     |-CompoundStmt 0x7fef35021100 <line:28:2, line:31:2>
+|   |     | |-CompoundAssignOperator 0x7fef35021030 <line:29:4, col:12> 'word':'unsigned long long' '-=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   |     | | |-DeclRefExpr 0x7fef35020fc8 <col:4> 'word':'unsigned long long' lvalue Var 0x7fef35814b28 'high' 'word':'unsigned long long'
+|   |     | | `-ImplicitCastExpr 0x7fef35021018 <col:12> 'word':'unsigned long long' <LValueToRValue>
+|   |     | |   `-DeclRefExpr 0x7fef35020ff0 <col:12> 'word':'unsigned long long' lvalue ParmVar 0x7fef35814930 'd' 'word':'unsigned long long'
+|   |     | `-CompoundAssignOperator 0x7fef350210c8 <line:30:4, col:16> 'word':'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   |     |   |-DeclRefExpr 0x7fef35021068 <col:4> 'word':'unsigned long long' lvalue Var 0x7fef35814c40 'quotient' 'word':'unsigned long long'
+|   |     |   `-ImplicitCastExpr 0x7fef350210b0 <col:16> 'unsigned long long' <IntegralCast>
+|   |     |     `-IntegerLiteral 0x7fef35021090 <col:16> 'int' 1
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7fef35021208 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7fef350211f0 <col:10> 'word':'unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fef350211c8 <col:10> 'word':'unsigned long long' lvalue Var 0x7fef35814c40 'quotient' 'word':'unsigned long long'
+`-FunctionDecl 0x7fef350212a0 <line:37:1, line:50:1> line:37:5 main 'int ()'
+  `-CompoundStmt 0x7fef35021728 <line:38:1, line:50:1>
+    |-DeclStmt 0x7fef350213b0 <line:39:3, col:14>
+    | `-VarDecl 0x7fef35021350 <col:3, col:8> col:8 used result 'word':'unsigned long long'
+    |-BinaryOperator 0x7fef35021560 <line:41:3, line:43:25> 'word':'unsigned long long' '='
+    | |-DeclRefExpr 0x7fef350213c8 <line:41:3> 'word':'unsigned long long' lvalue Var 0x7fef35021350 'result' 'word':'unsigned long long'
+    | `-CallExpr 0x7fef350214f0 <col:12, line:43:25> 'word':'unsigned long long'
+    |   |-ImplicitCastExpr 0x7fef350214d8 <line:41:12> 'word (*)(word, word, word)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fef350213f0 <col:12> 'word (word, word, word)' Function 0x7fef35814a60 'do_div' 'word (word, word, word)'
+    |   |-ImplicitCastExpr 0x7fef35021530 <col:19> 'word':'unsigned long long' <IntegralCast>
+    |   | `-IntegerLiteral 0x7fef35021418 <col:19> 'long long' 2097152
+    |   |-ImplicitCastExpr 0x7fef35021548 <line:42:5> 'word':'unsigned long long' <IntegralCast>
+    |   | `-IntegerLiteral 0x7fef35021438 <col:5> 'long long' 0
+    |   `-IntegerLiteral 0x7fef35021458 <line:43:5> 'unsigned long long' 9720233197349896192
+    |-IfStmt 0x7fef350216b8 <line:46:3, line:47:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fef35021600 <line:46:7, col:17> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fef350215d0 <col:7> 'word':'unsigned long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fef35021588 <col:7> 'word':'unsigned long long' lvalue Var 0x7fef35021350 'result' 'word':'unsigned long long'
+    | | `-ImplicitCastExpr 0x7fef350215e8 <col:17> 'unsigned long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fef350215b0 <col:17> 'int' 3979907
+    | |-CallExpr 0x7fef35021690 <line:47:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fef35021678 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fef35021628 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fef358147a0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fef35021710 <line:49:3, col:10>
+      `-IntegerLiteral 0x7fef350216f0 <col:10> 'int' 0

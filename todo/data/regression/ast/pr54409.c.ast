@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fe20982bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe20982c978 <../Data/C2AST/pr54409.c:3:1, col:5> col:5 used b 'int'
+|-RecordDecl 0x7fe20a01fc40 <line:5:1, line:11:1> line:5:8 struct S definition
+| |-FieldDecl 0x7fe20a01fd08 <line:7:3, col:9> col:9 p 'char *'
+| |-RecordDecl 0x7fe20a01fd50 <line:8:3, line:9:3> line:8:3 struct definition
+| |-FieldDecl 0x7fe20a01fe50 <col:3, line:9:5> col:5 referenced s 'struct (anonymous struct at ../Data/C2AST/pr54409.c:8:3)':'struct S::(anonymous at ../Data/C2AST/pr54409.c:8:3)'
+| `-FieldDecl 0x7fe20a01feb0 <line:10:3, col:7> col:7 referenced a 'int'
+|-FunctionDecl 0x7fe20a020000 <line:13:1, line:21:1> line:14:1 used fn2 '_Bool (int *)' static
+| |-ParmVarDecl 0x7fe20a01ff40 <col:6, col:11> col:11 used p1 'int *'
+| `-CompoundStmt 0x7fe20a0203f8 <line:15:1, line:21:1>
+|   `-IfStmt 0x7fe20a0203c0 <line:16:3, line:20:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fe20a0200d0 <line:16:7> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fe20a0200a8 <col:7> 'int' lvalue Var 0x7fe20982c978 'b' 'int'
+|     |-CompoundStmt 0x7fe20a0203a0 <line:17:5, line:20:5>
+|     | |-DeclStmt 0x7fe20a0202c8 <line:18:7, col:37>
+|     | | `-VarDecl 0x7fe20a0201a0 <col:7, col:35> col:17 used c 'struct S *' cinit
+|     | |   `-CStyleCastExpr 0x7fe20a0202a0 <col:21, col:35> 'struct S *' <BitCast>
+|     | |     `-UnaryOperator 0x7fe20a020258 <col:34, col:35> 'int **' prefix '&'
+|     | |       `-DeclRefExpr 0x7fe20a020200 <col:35> 'int *' lvalue ParmVar 0x7fe20a01ff40 'p1' 'int *'
+|     | `-ReturnStmt 0x7fe20a020388 <line:19:7, col:17>
+|     |   `-ImplicitCastExpr 0x7fe20a020370 <col:14, col:17> '_Bool' <IntegralToBoolean>
+|     |     `-ImplicitCastExpr 0x7fe20a020358 <col:14, col:17> 'int' <LValueToRValue>
+|     |       `-MemberExpr 0x7fe20a020320 <col:14, col:17> 'int' lvalue ->a 0x7fe20a01feb0
+|     |         `-ImplicitCastExpr 0x7fe20a020308 <col:14> 'struct S *' <LValueToRValue>
+|     |           `-DeclRefExpr 0x7fe20a0202e0 <col:14> 'struct S *' lvalue Var 0x7fe20a0201a0 'c' 'struct S *'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fe20a020540 <line:23:1, line:28:1> line:24:1 fn3 '_Bool (struct S *)'
+  |-ParmVarDecl 0x7fe20a020438 <col:6, col:16> col:16 used p1 'struct S *'
+  `-CompoundStmt 0x7fe20a020848 <line:25:1, line:28:1>
+    `-IfStmt 0x7fe20a020810 <line:26:3, line:27:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fe20a020790 <line:26:7, col:26> '_Bool'
+      | |-ImplicitCastExpr 0x7fe20a020778 <col:7> '_Bool (*)(int *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fe20a0205e8 <col:7> '_Bool (int *)' Function 0x7fe20a020000 'fn2' '_Bool (int *)'
+      | `-CStyleCastExpr 0x7fe20a020720 <col:12, col:25> 'int *' <BitCast>
+      |   `-UnaryOperator 0x7fe20a0206e8 <col:20, col:25> 'struct (anonymous struct at ../Data/C2AST/pr54409.c:8:3) *' prefix '&'
+      |     `-MemberExpr 0x7fe20a020650 <col:21, col:25> 'struct (anonymous struct at ../Data/C2AST/pr54409.c:8:3)':'struct S::(anonymous at ../Data/C2AST/pr54409.c:8:3)' lvalue ->s 0x7fe20a01fe50
+      |       `-ImplicitCastExpr 0x7fe20a020638 <col:21> 'struct S *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7fe20a020610 <col:21> 'struct S *' lvalue ParmVar 0x7fe20a020438 'p1' 'struct S *'
+      |-ReturnStmt 0x7fe20a0207f8 <line:27:5, col:12>
+      | `-ImplicitCastExpr 0x7fe20a0207e0 <col:12> '_Bool' <IntegralToBoolean>
+      |   `-IntegerLiteral 0x7fe20a0207c0 <col:12> 'int' 0
+      `-<<<NULL>>>

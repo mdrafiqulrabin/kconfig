@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f99a702b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f99a706ce20 <../Data/C2AST/pr36141.c:1:1, col:35> col:13 used ffi_closure_unix 'void (void)' extern
+`-FunctionDecl 0x7f99a706cfc8 <line:2:1, line:17:1> line:2:1 ffi_prep_closure_loc 'int (void)'
+  `-CompoundStmt 0x7f99a706d7e0 <line:3:1, line:17:1>
+    |-DeclStmt 0x7f99a706d1d0 <line:4:3, line:8:4>
+    | `-RecordDecl 0x7f99a706d068 <line:4:3, line:8:3> line:4:10 struct ia64_fd definition
+    |   |-FieldDecl 0x7f99a706d128 <line:6:5, col:24> col:24 referenced code_pointer 'unsigned long long'
+    |   `-FieldDecl 0x7f99a706d188 <line:7:5, col:24> col:24 gp 'unsigned long long'
+    |-DeclStmt 0x7f99a706d2f0 <line:9:3, line:12:4>
+    | `-RecordDecl 0x7f99a706d1e8 <line:9:3, line:12:3> line:9:10 struct ffi_ia64_trampoline_struct definition
+    |   `-FieldDecl 0x7f99a706d2a8 <line:11:5, col:24> col:24 referenced code_pointer 'unsigned long long'
+    |-DeclStmt 0x7f99a706d420 <line:13:3, col:43>
+    | `-VarDecl 0x7f99a706d3c0 <col:3, col:38> col:38 used tramp 'struct ffi_ia64_trampoline_struct *'
+    |-DeclStmt 0x7f99a706d550 <line:14:3, col:21>
+    | `-VarDecl 0x7f99a706d4f0 <col:3, col:19> col:19 used fd 'struct ia64_fd *'
+    |-BinaryOperator 0x7f99a706d688 <line:15:3, col:34> 'struct ia64_fd *' '='
+    | |-DeclRefExpr 0x7f99a706d568 <col:3> 'struct ia64_fd *' lvalue Var 0x7f99a706d4f0 'fd' 'struct ia64_fd *'
+    | `-CStyleCastExpr 0x7f99a706d660 <col:8, col:34> 'struct ia64_fd *' <BitCast>
+    |   `-CStyleCastExpr 0x7f99a706d610 <col:26, col:34> 'void *' <BitCast>
+    |     `-ImplicitCastExpr 0x7f99a706d5f8 <col:34> 'void (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7f99a706d590 <col:34> 'void (void)' Function 0x7f99a706ce20 'ffi_closure_unix' 'void (void)'
+    `-BinaryOperator 0x7f99a706d7b8 <line:16:3, col:29> 'unsigned long long' '='
+      |-MemberExpr 0x7f99a706d6f0 <col:3, col:10> 'unsigned long long' lvalue ->code_pointer 0x7f99a706d2a8
+      | `-ImplicitCastExpr 0x7f99a706d6d8 <col:3> 'struct ffi_ia64_trampoline_struct *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f99a706d6b0 <col:3> 'struct ffi_ia64_trampoline_struct *' lvalue Var 0x7f99a706d3c0 'tramp' 'struct ffi_ia64_trampoline_struct *'
+      `-ImplicitCastExpr 0x7f99a706d7a0 <col:25, col:29> 'unsigned long long' <LValueToRValue>
+        `-MemberExpr 0x7f99a706d768 <col:25, col:29> 'unsigned long long' lvalue ->code_pointer 0x7f99a706d128
+          `-ImplicitCastExpr 0x7f99a706d750 <col:25> 'struct ia64_fd *' <LValueToRValue>
+            `-DeclRefExpr 0x7f99a706d728 <col:25> 'struct ia64_fd *' lvalue Var 0x7f99a706d4f0 'fd' 'struct ia64_fd *'

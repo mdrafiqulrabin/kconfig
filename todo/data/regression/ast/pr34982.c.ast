@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe75982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe75a011250 <../Data/C2AST/pr34982.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe75a0112f0 prev 0x7fe75a011250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe75a0113d8 <line:3:1, col:23> col:13 used something 'void ()' static
+|-FunctionDecl 0x7fe75a011510 <line:5:1, line:9:1> line:5:5 main 'int ()'
+| `-CompoundStmt 0x7fe75a0116c8 <line:6:1, line:9:1>
+|   |-CallExpr 0x7fe75a011660 <line:7:3, col:15> 'void'
+|   | |-ImplicitCastExpr 0x7fe75a011648 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fe75a0115b0 <col:3> 'void ()' Function 0x7fe75a0113d8 'something' 'void ()'
+|   | `-UnaryOperator 0x7fe75a0115f8 <col:13, col:14> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7fe75a0115d8 <col:14> 'int' 1
+|   `-ReturnStmt 0x7fe75a0116b0 <line:8:3, col:10>
+|     `-IntegerLiteral 0x7fe75a011690 <col:10> 'int' 0
+`-FunctionDecl 0x7fe75a0117c0 prev 0x7fe75a0113d8 <line:11:1, line:15:1> line:11:13 used something 'void (int)' static
+  |-ParmVarDecl 0x7fe75a011700 <col:23, col:27> col:27 used i 'int'
+  `-CompoundStmt 0x7fe75a0119e0 <line:12:1, line:15:1>
+    `-IfStmt 0x7fe75a0119a8 <line:13:3, line:14:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe75a0118e8 <line:13:7, col:13> 'int' '!='
+      | |-ImplicitCastExpr 0x7fe75a0118d0 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe75a011868 <col:7> 'int' lvalue ParmVar 0x7fe75a011700 'i' 'int'
+      | `-UnaryOperator 0x7fe75a0118b0 <col:12, col:13> 'int' prefix '-'
+      |   `-IntegerLiteral 0x7fe75a011890 <col:13> 'int' 1
+      |-CallExpr 0x7fe75a011980 <line:14:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7fe75a011968 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fe75a011910 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe75a0112f0 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

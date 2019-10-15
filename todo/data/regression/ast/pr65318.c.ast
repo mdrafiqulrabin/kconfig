@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f82ed013ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f82ed014978 <../Data/C2AST/pr65318.c:4:1, col:18> col:14 used a 'short' static cinit
+| `-ImplicitCastExpr 0x7f82ee019460 <col:18> 'short' <IntegralCast>
+|   `-IntegerLiteral 0x7f82ee019440 <col:18> 'int' 0
+|-VarDecl 0x7f82ee019490 <line:5:1, col:12> col:7 used b 'short' cinit
+| `-ImplicitCastExpr 0x7f82ee019530 <col:11, col:12> 'short' <IntegralCast>
+|   `-UnaryOperator 0x7f82ee019510 <col:11, col:12> 'int' prefix '-'
+|     `-IntegerLiteral 0x7f82ee0194f0 <col:12> 'int' 1
+|-VarDecl 0x7f82ee019560 <line:6:1, col:27> col:23 c 'unsigned short' static cinit
+| `-ImplicitCastExpr 0x7f82ee0195e0 <col:27> 'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7f82ee0195c0 <col:27> 'int' 0
+`-FunctionDecl 0x7f82ee019650 <line:8:1, line:15:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7f82ee019870 <line:10:1, line:15:1>
+    |-IfStmt 0x7f82ee019800 <line:11:3, line:12:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f82ee0197a0 <line:11:7, col:12> 'int' '<='
+    | | |-ImplicitCastExpr 0x7f82ee019758 <col:7> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7f82ee019740 <col:7> 'short' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f82ee0196f0 <col:7> 'short' lvalue Var 0x7f82ed014978 'a' 'short'
+    | | `-ImplicitCastExpr 0x7f82ee019788 <col:12> 'int' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7f82ee019770 <col:12> 'short' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f82ee019718 <col:12> 'short' lvalue Var 0x7f82ee019490 'b' 'short'
+    | |-ReturnStmt 0x7f82ee0197e8 <line:12:4, col:11>
+    | | `-IntegerLiteral 0x7f82ee0197c8 <col:11> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f82ee019858 <line:14:3, col:10>
+      `-IntegerLiteral 0x7f82ee019838 <col:10> 'int' 0

@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7ff68b817ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff68b818960 <../Data/C2AST/pr37617.c:1:9, line:6:1> line:1:9 union definition
+| |-FieldDecl 0x7ff68b859838 <line:3:3, col:9> col:9 referenced string 'char *'
+| |-FieldDecl 0x7ff68b859898 <line:4:3, col:10> col:10 referenced dval 'double'
+| `-FieldDecl 0x7ff68b8598f8 <line:5:3, col:9> col:9 referenced fval 'float'
+|-TypedefDecl 0x7ff68b859990 <line:1:1, line:6:3> col:3 referenced yystype 'union yystype':'yystype'
+| `-ElaboratedType 0x7ff68b859940 'union yystype' sugar
+|   `-RecordType 0x7ff68b859800 'yystype'
+|     `-Record 0x7ff68b818960 ''
+|-FunctionDecl 0x7ff68b859ac8 <line:7:1, line:12:1> line:7:7 f 'char *(void)'
+| `-CompoundStmt 0x7ff68b859dc8 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7ff68b859c40 <line:9:3, col:14>
+|   | `-VarDecl 0x7ff68b859be0 <col:3, col:11> col:11 used tok 'yystype':'yystype'
+|   |-BinaryOperator 0x7ff68b859cf0 <line:10:3, col:14> 'double' '='
+|   | |-MemberExpr 0x7ff68b859c80 <col:3, col:7> 'double' lvalue .dval 0x7ff68b859898
+|   | | `-DeclRefExpr 0x7ff68b859c58 <col:3> 'yystype':'yystype' lvalue Var 0x7ff68b859be0 'tok' 'yystype':'yystype'
+|   | `-ImplicitCastExpr 0x7ff68b859cd8 <col:14> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7ff68b859cb8 <col:14> 'int' 0
+|   `-ReturnStmt 0x7ff68b859db0 <line:11:3, col:21>
+|     `-ImplicitCastExpr 0x7ff68b859d98 <col:10, col:21> 'char *' <LValueToRValue>
+|       `-ParenExpr 0x7ff68b859d78 <col:10, col:21> 'char *' lvalue
+|         `-MemberExpr 0x7ff68b859d40 <col:11, col:15> 'char *' lvalue .string 0x7ff68b859838
+|           `-DeclRefExpr 0x7ff68b859d18 <col:11> 'yystype':'yystype' lvalue Var 0x7ff68b859be0 'tok' 'yystype':'yystype'
+`-FunctionDecl 0x7ff68b859e88 <line:13:1, line:18:1> line:13:7 f1 'char *(void)'
+  `-CompoundStmt 0x7ff68b85a120 <line:14:1, line:18:1>
+    |-DeclStmt 0x7ff68b859f98 <line:15:3, col:14>
+    | `-VarDecl 0x7ff68b859f38 <col:3, col:11> col:11 used tok 'yystype':'yystype'
+    |-BinaryOperator 0x7ff68b85a048 <line:16:3, col:14> 'float' '='
+    | |-MemberExpr 0x7ff68b859fd8 <col:3, col:7> 'float' lvalue .fval 0x7ff68b8598f8
+    | | `-DeclRefExpr 0x7ff68b859fb0 <col:3> 'yystype':'yystype' lvalue Var 0x7ff68b859f38 'tok' 'yystype':'yystype'
+    | `-ImplicitCastExpr 0x7ff68b85a030 <col:14> 'float' <IntegralToFloating>
+    |   `-IntegerLiteral 0x7ff68b85a010 <col:14> 'int' 0
+    `-ReturnStmt 0x7ff68b85a108 <line:17:3, col:21>
+      `-ImplicitCastExpr 0x7ff68b85a0f0 <col:10, col:21> 'char *' <LValueToRValue>
+        `-ParenExpr 0x7ff68b85a0d0 <col:10, col:21> 'char *' lvalue
+          `-MemberExpr 0x7ff68b85a098 <col:11, col:15> 'char *' lvalue .string 0x7ff68b859838
+            `-DeclRefExpr 0x7ff68b85a070 <col:11> 'yystype':'yystype' lvalue Var 0x7ff68b859f38 'tok' 'yystype':'yystype'

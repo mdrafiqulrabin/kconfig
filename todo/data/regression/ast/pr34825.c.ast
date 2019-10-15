@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fd77b0068e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd77a8350d8 <../Data/C2AST/pr34825.c:4:1, line:7:1> line:4:8 foo 'double (double, double)'
+  |-ParmVarDecl 0x7fd77b007578 <col:12, col:19> col:19 used x 'double'
+  |-ParmVarDecl 0x7fd77a835000 <col:22, col:29> col:29 used y 'double'
+  `-CompoundStmt 0x7fd77a835468 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fd77a835450 <line:6:3, col:29>
+      `-ConditionalOperator 0x7fd77a835420 <col:10, col:29> 'double'
+        |-BinaryOperator 0x7fd77a835248 <col:10, col:15> 'int' '=='
+        | |-ImplicitCastExpr 0x7fd77a835218 <col:10> 'double' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fd77a8351c8 <col:10> 'double' lvalue ParmVar 0x7fd77b007578 'x' 'double'
+        | `-ImplicitCastExpr 0x7fd77a835230 <col:15> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd77a8351f0 <col:15> 'double' lvalue ParmVar 0x7fd77a835000 'y' 'double'
+        |-BinaryOperator 0x7fd77a8353c0 <col:19, col:25> 'double' '/'
+        | |-BinaryOperator 0x7fd77a835358 <col:19, col:23> 'double' '*'
+        | | |-BinaryOperator 0x7fd77a8352f0 <col:19, col:21> 'double' '/'
+        | | | |-ImplicitCastExpr 0x7fd77a8352c0 <col:19> 'double' <LValueToRValue>
+        | | | | `-DeclRefExpr 0x7fd77a835270 <col:19> 'double' lvalue ParmVar 0x7fd77b007578 'x' 'double'
+        | | | `-ImplicitCastExpr 0x7fd77a8352d8 <col:21> 'double' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7fd77a835298 <col:21> 'double' lvalue ParmVar 0x7fd77a835000 'y' 'double'
+        | | `-ImplicitCastExpr 0x7fd77a835340 <col:23> 'double' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fd77a835318 <col:23> 'double' lvalue ParmVar 0x7fd77b007578 'x' 'double'
+        | `-ImplicitCastExpr 0x7fd77a8353a8 <col:25> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fd77a835380 <col:25> 'double' lvalue ParmVar 0x7fd77a835000 'y' 'double'
+        `-ImplicitCastExpr 0x7fd77a835408 <col:29> 'double' <IntegralToFloating>
+          `-IntegerLiteral 0x7fd77a8353e8 <col:29> 'int' 0

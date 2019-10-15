@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f9dbc8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9dbd006a00 <../Data/C2AST/pr44024.c:5:1, col:10> col:6 used foo 'void ()'
+|-FunctionDecl 0x7f9dbd006ba0 <line:6:1, col:22> col:6 used link_error 'void (void)'
+`-FunctionDecl 0x7f9dbd006c90 <line:8:1, line:13:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7f9dbd006f48 <line:9:1, line:13:1>
+    |-IfStmt 0x7f9dbd006ed8 <line:10:3, line:11:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9dbd006e18 <line:10:7, col:22> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f9dbd006de8 <col:7> 'void (*)()' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f9dbd006d30 <col:7> 'void ()' Function 0x7f9dbd006a00 'foo' 'void ()'
+    | | `-ImplicitCastExpr 0x7f9dbd006e00 <col:14, col:22> 'void (*)()' <BitCast>
+    | |   `-CStyleCastExpr 0x7f9dbd006d90 <col:14, col:22> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x7f9dbd006d58 <col:22> 'int' 0
+    | |-CallExpr 0x7f9dbd006eb0 <line:11:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7f9dbd006e98 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9dbd006e40 <col:5> 'void (void)' Function 0x7f9dbd006ba0 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9dbd006f30 <line:12:3, col:10>
+      `-IntegerLiteral 0x7f9dbd006f10 <col:10> 'int' 0

@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe3ff82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe400056e98 <../Data/C2AST/pr71977-1.c:9:9, line:13:1> line:9:9 union definition
+| |-FieldDecl 0x7fe400056f58 <line:11:3, col:9> col:9 referenced value 'float'
+| `-FieldDecl 0x7fe400056fb0 <line:12:3, col:12> col:12 referenced word 'uint32_t':'unsigned int'
+|-TypedefDecl 0x7fe400057050 <line:9:1, line:13:3> col:3 referenced ieee_float_shape_type 'union ieee_float_shape_type':'ieee_float_shape_type'
+| `-ElaboratedType 0x7fe400057000 'union ieee_float_shape_type' sugar
+|   `-RecordType 0x7fe400056f20 'ieee_float_shape_type'
+|     `-Record 0x7fe400056e98 ''
+`-FunctionDecl 0x7fe400057268 <line:15:1, line:24:1> line:16:1 mask_and_float_var 'float (float, uint32_t)'
+  |-ParmVarDecl 0x7fe4000570d8 <col:21, col:27> col:27 used f 'float'
+  |-ParmVarDecl 0x7fe400057148 <col:30, col:39> col:39 used mask 'uint32_t':'unsigned int'
+  `-CompoundStmt 0x7fe400057688 <line:17:1, line:24:1>
+    |-DeclStmt 0x7fe4000573f0 <line:18:3, col:26>
+    | `-VarDecl 0x7fe400057390 <col:3, col:25> col:25 used u 'ieee_float_shape_type':'ieee_float_shape_type'
+    |-BinaryOperator 0x7fe4000574a8 <line:20:3, col:13> 'float' '='
+    | |-MemberExpr 0x7fe400057430 <col:3, col:5> 'float' lvalue .value 0x7fe400056f58
+    | | `-DeclRefExpr 0x7fe400057408 <col:3> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7fe400057390 'u' 'ieee_float_shape_type':'ieee_float_shape_type'
+    | `-ImplicitCastExpr 0x7fe400057490 <col:13> 'float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe400057468 <col:13> 'float' lvalue ParmVar 0x7fe4000570d8 'f' 'float'
+    |-CompoundAssignOperator 0x7fe400057570 <line:21:3, col:13> 'uint32_t':'unsigned int' '&=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-MemberExpr 0x7fe4000574f8 <col:3, col:5> 'uint32_t':'unsigned int' lvalue .word 0x7fe400056fb0
+    | | `-DeclRefExpr 0x7fe4000574d0 <col:3> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7fe400057390 'u' 'ieee_float_shape_type':'ieee_float_shape_type'
+    | `-ImplicitCastExpr 0x7fe400057558 <col:13> 'uint32_t':'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe400057530 <col:13> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fe400057148 'mask' 'uint32_t':'unsigned int'
+    `-ReturnStmt 0x7fe400057670 <line:23:3, col:12>
+      `-ImplicitCastExpr 0x7fe400057658 <col:10, col:12> 'float' <LValueToRValue>
+        `-MemberExpr 0x7fe400057620 <col:10, col:12> 'float' lvalue .value 0x7fe400056f58
+          `-DeclRefExpr 0x7fe4000575f8 <col:10> 'ieee_float_shape_type':'ieee_float_shape_type' lvalue Var 0x7fe400057390 'u' 'ieee_float_shape_type':'ieee_float_shape_type'

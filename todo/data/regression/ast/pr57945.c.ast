@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f9ecc02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9ecc02c978 <../Data/C2AST/pr57945.c:4:1, col:12> col:12 j 'int' extern
+|-VarDecl 0x7f9ecc8142c0 <line:5:1, col:12> col:12 used i 'int' static
+| |-AliasAttr 0x7f9ecc814320 <col:29, col:40> "j"
+| `-WeakRefAttr 0x7f9ecc814378 <col:29, col:40> ""
+`-FunctionDecl 0x7f9ecc814458 <line:8:1, line:12:1> line:9:1 foo 'int (void)'
+  `-CompoundStmt 0x7f9ecc814610 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7f9ecc8145f8 <line:11:3, col:19>
+      `-ConditionalOperator 0x7f9ecc8145c8 <col:10, col:19> 'int'
+        |-UnaryOperator 0x7f9ecc814548 <col:10, col:11> 'int *' prefix '&'
+        | `-DeclRefExpr 0x7f9ecc8144f8 <col:11> 'int' lvalue Var 0x7f9ecc8142c0 'i' 'int'
+        |-ImplicitCastExpr 0x7f9ecc8145b0 <col:15> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9ecc814568 <col:15> 'int' lvalue Var 0x7f9ecc8142c0 'i' 'int'
+        `-IntegerLiteral 0x7f9ecc814590 <col:19> 'int' 0

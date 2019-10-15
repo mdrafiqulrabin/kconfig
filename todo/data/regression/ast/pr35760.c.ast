@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fe08882bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe089000a20 <../Data/C2AST/pr35760.c:3:1, line:7:1> line:4:1 foo 'void (void)'
+  `-CompoundStmt 0x7fe089000bd8 <line:5:1, line:7:1>
+    `-DeclStmt 0x7fe089000bc0 <line:6:3, col:26>
+      `-VarDecl 0x7fe089000b10 <col:3, col:25> col:21 i '_Complex float' cinit
+        `-ImplicitCastExpr 0x7fe089000ba8 <col:25> '_Complex float' <FloatingRealToComplex>
+          `-ImplicitCastExpr 0x7fe089000b90 <col:25> 'float' <IntegralToFloating>
+            `-IntegerLiteral 0x7fe089000b70 <col:25> 'int' 0

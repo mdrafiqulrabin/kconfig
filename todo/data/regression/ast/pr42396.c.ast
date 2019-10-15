@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7feb9d021ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7feb9d022978 <../Data/C2AST/pr42396.c:4:1, col:12> col:12 used i 'int' static
+|-FunctionDecl 0x7feb9b801120 <line:5:1, col:20> col:13 used baz 'void (int)' extern
+| `-ParmVarDecl 0x7feb9b801058 <col:17> col:20 'int'
+|-FunctionDecl 0x7feb9b801218 <line:6:1, col:21> col:6 foo 'void ()'
+| `-CompoundStmt 0x7feb9b801328 <col:12, col:21>
+|   `-BinaryOperator 0x7feb9b801300 <col:14, col:18> 'int' '='
+|     |-DeclRefExpr 0x7feb9b8012b8 <col:14> 'int' lvalue Var 0x7feb9d022978 'i' 'int'
+|     `-IntegerLiteral 0x7feb9b8012e0 <col:18> 'int' 3
+`-FunctionDecl 0x7feb9b801360 <line:7:1, col:30> col:6 bar 'void ()'
+  `-CompoundStmt 0x7feb9b801550 <col:12, col:30>
+    `-CallExpr 0x7feb9b801520 <col:14, col:27> 'void'
+      |-ImplicitCastExpr 0x7feb9b801508 <col:14> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7feb9b801400 <col:14> 'void (int)' Function 0x7feb9b801120 'baz' 'void (int)'
+      `-ConditionalOperator 0x7feb9b8014a8 <col:18, col:26> 'int'
+        |-ImplicitCastExpr 0x7feb9b801490 <col:18> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7feb9b801428 <col:18> 'int' lvalue Var 0x7feb9d022978 'i' 'int'
+        |-IntegerLiteral 0x7feb9b801450 <col:22> 'int' 2
+        `-IntegerLiteral 0x7feb9b801470 <col:26> 'int' 1

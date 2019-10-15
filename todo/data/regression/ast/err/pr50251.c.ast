@@ -1,0 +1,56 @@
+../Data/C2AST/pr50251.c:13:7: error: use of unknown builtin '__builtin_stack_save' [-Wimplicit-function-declaration]
+  p = __builtin_stack_save ();
+      ^
+../Data/C2AST/pr50251.c:15:3: error: use of unknown builtin '__builtin_stack_restore' [-Wimplicit-function-declaration]
+  __builtin_stack_restore (p);
+  ^
+../Data/C2AST/pr50251.c:15:3: note: did you mean '__builtin_stack_save'?
+../Data/C2AST/pr50251.c:13:7: note: '__builtin_stack_save' declared here
+  p = __builtin_stack_save ();
+      ^
+2 errors generated.
+TranslationUnitDecl 0x7fa456026ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa456027460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa456027180 '__int128'
+|-TypedefDecl 0x7fa4560274d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa4560271a0 'unsigned __int128'
+|-TypedefDecl 0x7fa4560277a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa4560275b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa456027528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa456027840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa456027800 'char *'
+|   `-BuiltinType 0x7fa456026f80 'char'
+|-TypedefDecl 0x7fa456027b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa456027ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa456027920 'struct __va_list_tag'
+|     `-Record 0x7fa456027898 '__va_list_tag'
+|-FunctionDecl 0x7fa455819a60 <../Data/C2AST/pr50251.c:5:1, col:22> col:13 used bar 'void (int *)' extern
+| `-ParmVarDecl 0x7fa456027ba0 <col:18, col:21> col:22 'int *'
+|-VarDecl 0x7fa455819b60 <line:7:1, col:7> col:7 used p 'char *'
+`-FunctionDecl 0x7fa455819c10 <line:9:1, line:18:1> line:10:1 main 'int ()'
+  `-CompoundStmt 0x7fa45581a288 <line:11:1, line:18:1>
+    |-DeclStmt 0x7fa455819d28 <line:12:3, col:8>
+    | `-VarDecl 0x7fa455819cc8 <col:3, col:7> col:7 used q 'int'
+    |-BinaryOperator 0x7fa455819f00 <line:13:3, col:29> 'char *' '='
+    | |-DeclRefExpr 0x7fa455819d40 <col:3> 'char *' lvalue Var 0x7fa455819b60 'p' 'char *'
+    | `-ImplicitCastExpr 0x7fa455819ee8 <col:7, col:29> 'char *' <IntegralToPointer>
+    |   `-CallExpr 0x7fa455819ec0 <col:7, col:29> 'int'
+    |     `-ImplicitCastExpr 0x7fa455819ea8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fa455819e58 <col:7> 'int ()' Function 0x7fa455819da8 '__builtin_stack_save' 'int ()'
+    |-CallExpr 0x7fa455819fe0 <line:14:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fa455819fc8 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa455819f28 <col:3> 'void (int *)' Function 0x7fa455819a60 'bar' 'void (int *)'
+    | `-UnaryOperator 0x7fa455819f78 <col:8, col:9> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7fa455819f50 <col:9> 'int' lvalue Var 0x7fa455819cc8 'q' 'int'
+    |-CallExpr 0x7fa45581a150 <line:15:3, col:29> 'int'
+    | |-ImplicitCastExpr 0x7fa45581a138 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa45581a0e8 <col:3> 'int ()' Function 0x7fa45581a038 '__builtin_stack_restore' 'int ()'
+    | `-ImplicitCastExpr 0x7fa45581a180 <col:28> 'char *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa45581a110 <col:28> 'char *' lvalue Var 0x7fa455819b60 'p' 'char *'
+    |-CallExpr 0x7fa45581a220 <line:16:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fa45581a208 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa45581a198 <col:3> 'void (int *)' Function 0x7fa455819a60 'bar' 'void (int *)'
+    | `-UnaryOperator 0x7fa45581a1e8 <col:8, col:9> 'int *' prefix '&'
+    |   `-DeclRefExpr 0x7fa45581a1c0 <col:9> 'int' lvalue Var 0x7fa455819cc8 'q' 'int'
+    `-ReturnStmt 0x7fa45581a270 <line:17:3, col:10>
+      `-IntegerLiteral 0x7fa45581a250 <col:10> 'int' 0

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fe85402bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe855000068 <../Data/C2AST/pr51835.c:7:1, line:10:1> line:7:5 func1 'int (double)'
+| |-ParmVarDecl 0x7fe85402c978 <col:12, col:19> col:19 used d 'double'
+| `-CompoundStmt 0x7fe8550001e8 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fe8550001d0 <line:9:3, col:15>
+|     `-CStyleCastExpr 0x7fe8550001a8 <col:10, col:15> 'int' <FloatingToIntegral>
+|       `-ImplicitCastExpr 0x7fe855000190 <col:15> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe855000150 <col:15> 'double' lvalue ParmVar 0x7fe85402c978 'd' 'double'
+`-FunctionDecl 0x7fe8550002e8 <line:11:1, line:14:1> line:11:14 func2 'unsigned int (double)'
+  |-ParmVarDecl 0x7fe855000218 <col:21, col:28> col:28 used d 'double'
+  `-CompoundStmt 0x7fe855000428 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fe855000410 <line:13:3, col:24>
+      `-CStyleCastExpr 0x7fe8550003e8 <col:10, col:24> 'unsigned int' <FloatingToIntegral>
+        `-ImplicitCastExpr 0x7fe8550003d0 <col:24> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fe855000390 <col:24> 'double' lvalue ParmVar 0x7fe855000218 'd' 'double'

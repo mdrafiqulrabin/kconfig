@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fd6af015ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd6ae01be68 <../Data/C2AST/pr46934.c:1:1, line:17:1> line:1:5 caller 'int (unsigned int)'
+  |-ParmVarDecl 0x7fd6af016978 <col:13, col:26> col:26 used reg_type 'unsigned int'
+  `-CompoundStmt 0x7fd6ae01c810 <line:2:1, line:17:1>
+    `-SwitchStmt 0x7fd6ae01bf90 <line:3:3, line:16:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd6ae01bf78 <line:3:11> 'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd6ae01bf50 <col:11> 'unsigned int' lvalue ParmVar 0x7fd6af016978 'reg_type' 'unsigned int'
+      `-CompoundStmt 0x7fd6ae01c7e0 <line:4:5, line:16:5>
+        |-CaseStmt 0x7fd6ae01bfe0 <line:5:5, line:6:23>
+        | |-IntegerLiteral 0x7fd6ae01bfc0 <line:5:10> 'unsigned int' 2147483648
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fd6ae01c1f8 <line:6:7, col:23>
+        |   `-CStyleCastExpr 0x7fd6ae01c1d0 <col:14, col:23> 'int' <NoOp>
+        |     `-CallExpr 0x7fd6ae01c190 <col:19, col:23> 'int'
+        |       `-ImplicitCastExpr 0x7fd6ae01c178 <col:19> 'int (*)()' <FunctionToPointerDecay>
+        |         `-DeclRefExpr 0x7fd6ae01c120 <col:19> 'int ()' Function 0x7fd6ae01c070 'foo' 'int ()'
+        |-CaseStmt 0x7fd6ae01c230 <line:8:5, line:9:24>
+        | |-IntegerLiteral 0x7fd6ae01c210 <line:8:10> 'unsigned int' 2147483651
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fd6ae01c3e8 <line:9:7, col:24>
+        |   `-CStyleCastExpr 0x7fd6ae01c3c0 <col:14, col:24> 'int' <NoOp>
+        |     `-CallExpr 0x7fd6ae01c380 <col:20, col:24> 'int'
+        |       `-ImplicitCastExpr 0x7fd6ae01c368 <col:20> 'int (*)()' <FunctionToPointerDecay>
+        |         `-DeclRefExpr 0x7fd6ae01c340 <col:20> 'int ()' Function 0x7fd6ae01c290 'bar' 'int ()'
+        |-CaseStmt 0x7fd6ae01c420 <line:11:5, line:12:24>
+        | |-IntegerLiteral 0x7fd6ae01c400 <line:11:10> 'unsigned int' 2147483649
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7fd6ae01c5d8 <line:12:7, col:24>
+        |   `-CStyleCastExpr 0x7fd6ae01c5b0 <col:14, col:24> 'int' <NoOp>
+        |     `-CallExpr 0x7fd6ae01c570 <col:20, col:24> 'int'
+        |       `-ImplicitCastExpr 0x7fd6ae01c558 <col:20> 'int (*)()' <FunctionToPointerDecay>
+        |         `-DeclRefExpr 0x7fd6ae01c530 <col:20> 'int ()' Function 0x7fd6ae01c480 'baz' 'int ()'
+        `-CaseStmt 0x7fd6ae01c610 <line:14:5, line:15:25>
+          |-IntegerLiteral 0x7fd6ae01c5f0 <line:14:10> 'unsigned int' 2147483652
+          |-<<<NULL>>>
+          `-ReturnStmt 0x7fd6ae01c7c8 <line:15:7, col:25>
+            `-CStyleCastExpr 0x7fd6ae01c7a0 <col:14, col:25> 'int' <NoOp>
+              `-CallExpr 0x7fd6ae01c760 <col:20, col:25> 'int'
+                `-ImplicitCastExpr 0x7fd6ae01c748 <col:20> 'int (*)()' <FunctionToPointerDecay>
+                  `-DeclRefExpr 0x7fd6ae01c720 <col:20> 'int ()' Function 0x7fd6ae01c670 'fooz' 'int ()'

@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fc91801aee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc917804868 <../Data/C2AST/pr70703.c:6:1, line:9:1> line:6:10 ud_x_641_mul 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7fc91801bb78 <col:23, col:32> col:32 used x 'unsigned int'
+  `-CompoundStmt 0x7fc917804ac8 <col:35, line:9:1>
+    `-ReturnStmt 0x7fc917804ab0 <line:8:5, col:50>
+      `-ImplicitCastExpr 0x7fc917804a98 <col:12, col:50> 'unsigned int' <IntegralCast>
+        `-BinaryOperator 0x7fc917804a70 <col:12, col:50> 'unsigned long long' '>>'
+          |-ParenExpr 0x7fc917804a30 <col:12, col:45> 'unsigned long long'
+          | `-BinaryOperator 0x7fc917804a08 <col:13, col:37> 'unsigned long long' '*'
+          |   |-CStyleCastExpr 0x7fc9178049a8 <col:13, col:33> 'unsigned long long' <IntegralCast>
+          |   | `-ImplicitCastExpr 0x7fc917804990 <col:33> 'unsigned int' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x7fc917804950 <col:33> 'unsigned int' lvalue ParmVar 0x7fc91801bb78 'x' 'unsigned int'
+          |   `-ImplicitCastExpr 0x7fc9178049f0 <col:37> 'unsigned long long' <IntegralCast>
+          |     `-IntegerLiteral 0x7fc9178049d0 <col:37> 'int' 6700417
+          `-IntegerLiteral 0x7fc917804a50 <col:50> 'int' 32

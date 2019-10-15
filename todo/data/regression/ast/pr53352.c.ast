@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7ffd1482bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffd16019730 <../Data/C2AST/pr53352.c:6:9, line:16:1> line:6:9 union definition
+| |-RecordDecl 0x7ffd160197e0 <line:8:3, line:14:3> line:8:3 struct definition
+| | |-FieldDecl 0x7ffd160198a8 <line:10:5, col:19> col:19 a 'unsigned char'
+| | |-FieldDecl 0x7ffd16019908 <line:11:5, col:19> col:19 b 'unsigned char'
+| | |-FieldDecl 0x7ffd16019968 <line:12:5, col:19> col:19 referenced c 'unsigned char'
+| | `-FieldDecl 0x7ffd160199c8 <line:13:5, col:19> col:19 d 'unsigned char'
+| |-FieldDecl 0x7ffd16019a60 <line:8:3, line:14:5> col:5 referenced parts 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)'
+| `-FieldDecl 0x7ffd16019ac0 <line:15:3, col:17> col:17 referenced whole 'unsigned long'
+|-TypedefDecl 0x7ffd16019bc0 <line:6:1, line:16:3> col:3 referenced T 'union T':'T'
+| `-ElaboratedType 0x7ffd16019b70 'union T' sugar
+|   `-RecordType 0x7ffd160197c0 'T'
+|     `-Record 0x7ffd16019730 ''
+|-VarDecl 0x7ffd16019cb8 <line:18:1, col:4> col:4 used g_t 'T *'
+|-FunctionDecl 0x7ffd16019e00 <line:20:1, line:24:1> line:20:6 used bar 'void (unsigned long)'
+| |-ParmVarDecl 0x7ffd16019d30 <col:11, col:25> col:25 used x 'unsigned long'
+| `-CompoundStmt 0x7ffd1601a010 <line:21:1, line:24:1>
+|   `-IfStmt 0x7ffd16019fd8 <line:22:3, line:23:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ffd16019f20 <line:22:7, col:12> 'int' '!='
+|     | |-ImplicitCastExpr 0x7ffd16019ef0 <col:7> 'unsigned long' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ffd16019ea8 <col:7> 'unsigned long' lvalue ParmVar 0x7ffd16019d30 'x' 'unsigned long'
+|     | `-ImplicitCastExpr 0x7ffd16019f08 <col:12> 'unsigned long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7ffd16019ed0 <col:12> 'int' 0
+|     |-CallExpr 0x7ffd16019fb0 <line:23:5, col:12> 'void'
+|     | `-ImplicitCastExpr 0x7ffd16019f98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7ffd16019f48 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffd15079420 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7ffd1601a080 <line:26:1, line:42:1> line:26:5 main 'int ()'
+  `-CompoundStmt 0x7ffd1601aaf0 <line:27:1, line:42:1>
+    |-DeclStmt 0x7ffd1601a190 <line:28:3, col:8>
+    | `-VarDecl 0x7ffd1601a130 <col:3, col:5> col:5 used one 'T':'T'
+    |-DeclStmt 0x7ffd1601a218 <line:29:3, col:8>
+    | `-VarDecl 0x7ffd1601a1b8 <col:3, col:5> col:5 used two 'T':'T'
+    |-DeclStmt 0x7ffd1601a328 <line:30:3, col:15>
+    | |-VarDecl 0x7ffd1601a240 <col:3, col:5> col:5 used tmp1 'T':'T'
+    | `-VarDecl 0x7ffd1601a2b0 <col:3, col:11> col:11 used tmp2 'T':'T'
+    |-BinaryOperator 0x7ffd1601a3c0 <line:32:3, col:15> 'unsigned long' '='
+    | |-MemberExpr 0x7ffd1601a368 <col:3, col:7> 'unsigned long' lvalue .whole 0x7ffd16019ac0
+    | | `-DeclRefExpr 0x7ffd1601a340 <col:3> 'T':'T' lvalue Var 0x7ffd1601a130 'one' 'T':'T'
+    | `-IntegerLiteral 0x7ffd1601a3a0 <col:15> 'unsigned long' 4292927712
+    |-BinaryOperator 0x7ffd1601a4b8 <line:33:3, col:15> 'unsigned long' '='
+    | |-MemberExpr 0x7ffd1601a460 <col:3, col:7> 'unsigned long' lvalue .whole 0x7ffd16019ac0
+    | | `-DeclRefExpr 0x7ffd1601a438 <col:3> 'T':'T' lvalue Var 0x7ffd1601a1b8 'two' 'T':'T'
+    | `-IntegerLiteral 0x7ffd1601a498 <col:15> 'unsigned long' 4278190080
+    |-BinaryOperator 0x7ffd1601a5b8 <line:34:3, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' '='
+    | |-MemberExpr 0x7ffd1601a508 <col:3, col:8> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    | | `-DeclRefExpr 0x7ffd1601a4e0 <col:3> 'T':'T' lvalue Var 0x7ffd1601a240 'tmp1' 'T':'T'
+    | `-ImplicitCastExpr 0x7ffd1601a5a0 <col:16, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' <LValueToRValue>
+    |   `-MemberExpr 0x7ffd1601a568 <col:16, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    |     `-DeclRefExpr 0x7ffd1601a540 <col:16> 'T':'T' lvalue Var 0x7ffd1601a1b8 'two' 'T':'T'
+    |-BinaryOperator 0x7ffd1601a6b8 <line:35:3, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' '='
+    | |-MemberExpr 0x7ffd1601a608 <col:3, col:8> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    | | `-DeclRefExpr 0x7ffd1601a5e0 <col:3> 'T':'T' lvalue Var 0x7ffd1601a2b0 'tmp2' 'T':'T'
+    | `-ImplicitCastExpr 0x7ffd1601a6a0 <col:16, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' <LValueToRValue>
+    |   `-MemberExpr 0x7ffd1601a668 <col:16, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    |     `-DeclRefExpr 0x7ffd1601a640 <col:16> 'T':'T' lvalue Var 0x7ffd1601a130 'one' 'T':'T'
+    |-BinaryOperator 0x7ffd1601a828 <line:36:3, col:29> 'unsigned char' '='
+    | |-MemberExpr 0x7ffd1601a740 <col:3, col:14> 'unsigned char' lvalue .c 0x7ffd16019968
+    | | `-MemberExpr 0x7ffd1601a708 <col:3, col:8> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    | |   `-DeclRefExpr 0x7ffd1601a6e0 <col:3> 'T':'T' lvalue Var 0x7ffd1601a2b0 'tmp2' 'T':'T'
+    | `-ImplicitCastExpr 0x7ffd1601a810 <col:18, col:29> 'unsigned char' <LValueToRValue>
+    |   `-MemberExpr 0x7ffd1601a7d8 <col:18, col:29> 'unsigned char' lvalue .c 0x7ffd16019968
+    |     `-MemberExpr 0x7ffd1601a7a0 <col:18, col:23> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    |       `-DeclRefExpr 0x7ffd1601a778 <col:18> 'T':'T' lvalue Var 0x7ffd1601a240 'tmp1' 'T':'T'
+    |-BinaryOperator 0x7ffd1601a928 <line:37:3, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' '='
+    | |-MemberExpr 0x7ffd1601a878 <col:3, col:7> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    | | `-DeclRefExpr 0x7ffd1601a850 <col:3> 'T':'T' lvalue Var 0x7ffd1601a130 'one' 'T':'T'
+    | `-ImplicitCastExpr 0x7ffd1601a910 <col:15, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' <LValueToRValue>
+    |   `-MemberExpr 0x7ffd1601a8d8 <col:15, col:20> 'struct (anonymous struct at ../Data/C2AST/pr53352.c:8:3)':'struct T::(anonymous at ../Data/C2AST/pr53352.c:8:3)' lvalue .parts 0x7ffd16019a60
+    |     `-DeclRefExpr 0x7ffd1601a8b0 <col:15> 'T':'T' lvalue Var 0x7ffd1601a2b0 'tmp2' 'T':'T'
+    |-BinaryOperator 0x7ffd1601a9c0 <line:39:3, col:10> 'T *' '='
+    | |-DeclRefExpr 0x7ffd1601a950 <col:3> 'T *' lvalue Var 0x7ffd16019cb8 'g_t' 'T *'
+    | `-UnaryOperator 0x7ffd1601a9a0 <col:9, col:10> 'T *' prefix '&'
+    |   `-DeclRefExpr 0x7ffd1601a978 <col:10> 'T':'T' lvalue Var 0x7ffd1601a130 'one' 'T':'T'
+    |-CallExpr 0x7ffd1601aa70 <line:40:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7ffd1601aa58 <col:3> 'void (*)(unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffd1601a9e8 <col:3> 'void (unsigned long)' Function 0x7ffd16019e00 'bar' 'void (unsigned long)'
+    | `-ImplicitCastExpr 0x7ffd1601aaa0 <col:8> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7ffd1601aa10 <col:8> 'int' 0
+    `-ReturnStmt 0x7ffd1601aad8 <line:41:3, col:10>
+      `-IntegerLiteral 0x7ffd1601aab8 <col:10> 'int' 0

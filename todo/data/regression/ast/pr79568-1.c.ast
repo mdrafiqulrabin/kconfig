@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7faad00060e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7faad08153c0 <../Data/C2AST/pr79568-1.c:7:1, line:11:1> line:8:1 foo 'void (char *, __attribute__((__vector_size__(32 * sizeof(char)))) char *, int)'
+| |-ParmVarDecl 0x7faad0006d78 <col:6, col:12> col:12 used x 'char *'
+| |-ParmVarDecl 0x7faad0815268 <col:15, col:59> col:59 used y '__attribute__((__vector_size__(32 * sizeof(char)))) char *'
+| |-ParmVarDecl 0x7faad08152e0 <col:62, col:66> col:66 used z 'int'
+| `-CompoundStmt 0x7faad0815950 <line:9:1, line:11:1>
+|   `-CallExpr 0x7faad0815840 <line:10:3, col:46> 'void'
+|     |-ImplicitCastExpr 0x7faad0815828 <col:3> 'void (*)(__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7faad08156e0 <col:3> '<builtin fn type>' Function 0x7faad0815508 '__builtin_ia32_storedquqi256_mask' 'void (__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)'
+|     |-ImplicitCastExpr 0x7faad08158c8 <col:38> '__attribute__((__vector_size__(32 * sizeof(char)))) char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7faad0815880 <col:38> 'char *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7faad0815708 <col:38> 'char *' lvalue ParmVar 0x7faad0006d78 'x' 'char *'
+|     |-ImplicitCastExpr 0x7faad0815908 <col:41, col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char' <LValueToRValue>
+|     | `-UnaryOperator 0x7faad0815770 <col:41, col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char' lvalue prefix '*'
+|     |   `-ImplicitCastExpr 0x7faad0815758 <col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7faad0815730 <col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char *' lvalue ParmVar 0x7faad0815268 'y' '__attribute__((__vector_size__(32 * sizeof(char)))) char *'
+|     `-ImplicitCastExpr 0x7faad0815938 <col:45> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7faad0815920 <col:45> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7faad0815790 <col:45> 'int' lvalue ParmVar 0x7faad08152e0 'z' 'int'
+|-FunctionDecl 0x7faad0815508 <col:3> col:3 implicit used __builtin_ia32_storedquqi256_mask 'void (__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)' extern
+| |-ParmVarDecl 0x7faad08155a8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(32 * sizeof(char)))) char *'
+| |-ParmVarDecl 0x7faad0815608 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(32 * sizeof(char)))) char'
+| `-ParmVarDecl 0x7faad0815668 <<invalid sloc>> <invalid sloc> 'unsigned int'
+`-FunctionDecl 0x7faad0815b20 <line:14:1, line:18:1> line:15:1 bar 'void (char *, __attribute__((__vector_size__(32 * sizeof(char)))) char *, int)'
+  |-ParmVarDecl 0x7faad0815980 <col:6, col:12> col:12 used x 'char *'
+  |-ParmVarDecl 0x7faad0815a10 <col:15, col:59> col:59 used y '__attribute__((__vector_size__(32 * sizeof(char)))) char *'
+  |-ParmVarDecl 0x7faad0815a88 <col:62, col:66> col:66 used z 'int'
+  `-CompoundStmt 0x7faad0815dc8 <line:16:1, line:18:1>
+    `-CallExpr 0x7faad0815d10 <line:17:3, col:46> 'void'
+      |-ImplicitCastExpr 0x7faad0815cf8 <col:3> 'void (*)(__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)' <BuiltinFnToFnPtr>
+      | `-DeclRefExpr 0x7faad0815bd8 <col:3> '<builtin fn type>' Function 0x7faad0815508 '__builtin_ia32_storedquqi256_mask' 'void (__attribute__((__vector_size__(32 * sizeof(char)))) char *, __attribute__((__vector_size__(32 * sizeof(char)))) char, unsigned int)'
+      |-ImplicitCastExpr 0x7faad0815d68 <col:38> '__attribute__((__vector_size__(32 * sizeof(char)))) char *' <BitCast>
+      | `-ImplicitCastExpr 0x7faad0815d50 <col:38> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7faad0815c00 <col:38> 'char *' lvalue ParmVar 0x7faad0815980 'x' 'char *'
+      |-ImplicitCastExpr 0x7faad0815d80 <col:41, col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char' <LValueToRValue>
+      | `-UnaryOperator 0x7faad0815c68 <col:41, col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7faad0815c50 <col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7faad0815c28 <col:42> '__attribute__((__vector_size__(32 * sizeof(char)))) char *' lvalue ParmVar 0x7faad0815a10 'y' '__attribute__((__vector_size__(32 * sizeof(char)))) char *'
+      `-ImplicitCastExpr 0x7faad0815db0 <col:45> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7faad0815d98 <col:45> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7faad0815c88 <col:45> 'int' lvalue ParmVar 0x7faad0815a88 'z' 'int'

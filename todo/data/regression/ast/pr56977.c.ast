@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f896782bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8968015220 <../Data/C2AST/pr56977.c:4:1, col:49> col:42 used error 'void ()'
+|-FunctionDecl 0x7f89680153e0 <line:6:1, line:10:1> line:6:6 f 'void (int)'
+| |-ParmVarDecl 0x7f8968015318 <col:9, col:13> col:13 used i 'int'
+| `-CompoundStmt 0x7f8968015758 <col:16, line:10:1>
+|   `-IfStmt 0x7f8968015720 <line:7:5, line:9:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7f8968015640 <line:7:9, col:32> 'int'
+|     | |-ImplicitCastExpr 0x7f8968015628 <col:9> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7f89680155b0 <col:9> '<builtin fn type>' Function 0x7f89680154b8 '__builtin_constant_p' 'int ()'
+|     | `-DeclRefExpr 0x7f89680155d8 <col:31> 'int' lvalue ParmVar 0x7f8968015318 'i' 'int'
+|     |-CompoundStmt 0x7f8968015708 <col:35, line:9:5>
+|     | `-CallExpr 0x7f89680156e0 <line:8:2, col:9> 'void'
+|     |   `-ImplicitCastExpr 0x7f89680156c8 <col:2> 'void (*)()' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7f8968015670 <col:2> 'void ()' Function 0x7f8968015220 'error' 'void ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f89680154b8 <line:7:9> col:9 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7f8968015558 <col:9> Implicit
+  `-ConstAttr 0x7f89680155a0 <col:9> Implicit

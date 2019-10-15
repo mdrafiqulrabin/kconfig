@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fa26501a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa26505c468 <../Data/C2AST/pr30132.c:1:1, line:4:1> line:1:8 testit 'double (_Complex double *)'
+  |-ParmVarDecl 0x7fa26501b598 <col:15, col:32> col:32 used t '_Complex double *'
+  `-CompoundStmt 0x7fa26505c740 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7fa26505c728 <line:3:3, col:24>
+      `-ImplicitCastExpr 0x7fa26505c710 <col:10, col:24> 'double' <FloatingComplexToReal>
+        `-ConditionalOperator 0x7fa26505c6e0 <col:10, col:24> '_Complex double'
+          |-BinaryOperator 0x7fa26505c5e8 <col:10, col:14> 'int' '=='
+          | |-ImplicitCastExpr 0x7fa26505c5d0 <col:10, col:11> '_Complex double' <LValueToRValue>
+          | | `-UnaryOperator 0x7fa26505c590 <col:10, col:11> '_Complex double' lvalue prefix '*'
+          | |   `-ImplicitCastExpr 0x7fa26505c578 <col:11> '_Complex double *' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7fa26505c550 <col:11> '_Complex double *' lvalue ParmVar 0x7fa26501b598 't' '_Complex double *'
+          | `-FloatingLiteral 0x7fa26505c5b0 <col:14> 'double' 0.000000e+00
+          |-ImplicitCastExpr 0x7fa26505c6c8 <col:18> '_Complex double' <FloatingRealToComplex>
+          | `-FloatingLiteral 0x7fa26505c610 <col:18> 'double' 0.000000e+00
+          `-UnaryOperator 0x7fa26505c6a8 <col:22, col:24> '_Complex double' prefix '-'
+            `-ImplicitCastExpr 0x7fa26505c690 <col:23, col:24> '_Complex double' <LValueToRValue>
+              `-UnaryOperator 0x7fa26505c670 <col:23, col:24> '_Complex double' lvalue prefix '*'
+                `-ImplicitCastExpr 0x7fa26505c658 <col:24> '_Complex double *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fa26505c630 <col:24> '_Complex double *' lvalue ParmVar 0x7fa26501b598 't' '_Complex double *'

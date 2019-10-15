@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fb40c81fee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb40c865460 <../Data/C2AST/pr59963-3.c:5:1, col:25> col:13 used foo 'void (void *)' extern
+| `-ParmVarDecl 0x7fb40c820b78 <col:18, col:24> col:24 p 'void *'
+`-FunctionDecl 0x7fb40c865610 <line:7:1, line:14:1> line:8:1 bar 'void (void)'
+  `-CompoundStmt 0x7fb40c8657f8 <line:9:1, line:14:1>
+    `-CompoundStmt 0x7fb40c8657e0 <line:10:3, line:13:3>
+      `-DeclStmt 0x7fb40c8657c8 <line:12:5, col:41>
+        `-VarDecl 0x7fb40c8656f0 <col:5, col:9> col:9 i 'int'
+          `-CleanupAttr 0x7fb40c865778 <col:26, col:38> Function 0x7fb40c865460 'foo' 'void (void *)'

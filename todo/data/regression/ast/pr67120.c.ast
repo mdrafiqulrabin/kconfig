@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fbd990174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbd9881fa00 <../Data/C2AST/pr67120.c:3:1, col:25> col:25 used a 'volatile int *volatile *'
+|-VarDecl 0x7fbd9881fae8 <line:4:1, col:38> col:33 used b 'volatile int *volatile **' static cinit
+| `-UnaryOperator 0x7fbd9881fb70 <col:37, col:38> 'volatile int *volatile **' prefix '&'
+|   `-DeclRefExpr 0x7fbd9881fb48 <col:38> 'volatile int *volatile *' lvalue Var 0x7fbd9881fa00 'a' 'volatile int *volatile *'
+|-FunctionDecl 0x7fbd9881fbe0 <line:6:1, line:16:1> line:7:1 main 'int ()'
+| `-CompoundStmt 0x7fbd988200a8 <line:8:1, line:16:1>
+|   |-DeclStmt 0x7fbd9881fcf8 <line:9:3, col:27>
+|   | `-VarDecl 0x7fbd9881fc98 <col:3, col:26> col:26 used c 'volatile int *volatile'
+|   |-BinaryOperator 0x7fbd9881fdb8 <line:10:3, col:9> 'volatile int *volatile *' '='
+|   | |-UnaryOperator 0x7fbd9881fd50 <col:3, col:4> 'volatile int *volatile *' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fbd9881fd38 <col:4> 'volatile int *volatile **' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fbd9881fd10 <col:4> 'volatile int *volatile **' lvalue Var 0x7fbd9881fae8 'b' 'volatile int *volatile **'
+|   | `-UnaryOperator 0x7fbd9881fd98 <col:8, col:9> 'volatile int *volatile *' prefix '&'
+|   |   `-DeclRefExpr 0x7fbd9881fd70 <col:9> 'volatile int *volatile' lvalue Var 0x7fbd9881fc98 'c' 'volatile int *volatile'
+|   |-IfStmt 0x7fbd98820038 <line:12:3, line:13:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbd9881fe68 <line:12:7, col:13> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fbd9881fe50 <col:7> 'volatile int *volatile *' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fbd9881fde0 <col:7> 'volatile int *volatile *' lvalue Var 0x7fbd9881fa00 'a' 'volatile int *volatile *'
+|   | | `-UnaryOperator 0x7fbd9881fe30 <col:12, col:13> 'volatile int *volatile *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fbd9881fe08 <col:13> 'volatile int *volatile' lvalue Var 0x7fbd9881fc98 'c' 'volatile int *volatile'
+|   | |-CallExpr 0x7fbd98820010 <line:13:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fbd9881fff8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fbd9881ffa8 <col:5> '<builtin fn type>' Function 0x7fbd9881fec0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fbd98820090 <line:15:3, col:10>
+|     `-IntegerLiteral 0x7fbd98820070 <col:10> 'int' 0
+`-FunctionDecl 0x7fbd9881fec0 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fbd9881ff60 <col:5> Implicit

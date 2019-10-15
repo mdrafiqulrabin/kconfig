@@ -1,0 +1,98 @@
+TranslationUnitDecl 0x7ffca682bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffca7014428 <../Data/C2AST/pr59523.c:7:1, line:18:1> line:8:1 foo 'int *(int, int *, int *, int *)'
+| |-ParmVarDecl 0x7ffca682c978 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7ffca7014240 <col:13, col:18> col:18 used b 'int *'
+| |-ParmVarDecl 0x7ffca70142b8 <col:21, col:26> col:26 used c 'int *'
+| |-ParmVarDecl 0x7ffca7014330 <col:29, col:34> col:34 used d 'int *'
+| `-CompoundStmt 0x7ffca702bf88 <line:9:1, line:18:1>
+|   |-DeclStmt 0x7ffca7014930 <line:10:3, col:50>
+|   | |-VarDecl 0x7ffca7014540 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7ffca70145b8 <col:3, col:49> col:11 used r 'int *' cinit
+|   |   `-ImplicitCastExpr 0x7ffca7014900 <col:15, col:49> 'int *' <BitCast>
+|   |     `-CallExpr 0x7ffca70148d0 <col:15, col:49> 'void *'
+|   |       |-ImplicitCastExpr 0x7ffca70148b8 <col:15> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7ffca70147a8 <col:15> '<builtin fn type>' Function 0x7ffca7014658 '__builtin_alloca' 'void *(unsigned long)'
+|   |       `-BinaryOperator 0x7ffca7014860 <col:33, col:48> 'unsigned long' '*'
+|   |         |-ImplicitCastExpr 0x7ffca7014848 <col:33> 'unsigned long' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7ffca7014830 <col:33> 'int' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7ffca70147d0 <col:33> 'int' lvalue ParmVar 0x7ffca682c978 'a' 'int'
+|   |         `-UnaryExprOrTypeTraitExpr 0x7ffca7014810 <col:37, col:48> 'unsigned long' sizeof 'int'
+|   |-CallExpr 0x7ffca7014d90 <line:11:3, col:43> 'void *'
+|   | |-ImplicitCastExpr 0x7ffca7014d78 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7ffca7014be8 <col:3> '<builtin fn type>' Function 0x7ffca70149c8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7ffca7014de8 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7ffca7014dd0 <col:21> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffca7014c10 <col:21> 'int *' lvalue Var 0x7ffca70145b8 'r' 'int *'
+|   | |-ImplicitCastExpr 0x7ffca7014e18 <col:24> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7ffca7014e00 <col:24> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffca7014c38 <col:24> 'int *' lvalue ParmVar 0x7ffca7014330 'd' 'int *'
+|   | `-BinaryOperator 0x7ffca7014cf0 <col:27, col:42> 'unsigned long' '*'
+|   |   |-ImplicitCastExpr 0x7ffca7014cd8 <col:27> 'unsigned long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7ffca7014cc0 <col:27> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7ffca7014c60 <col:27> 'int' lvalue ParmVar 0x7ffca682c978 'a' 'int'
+|   |   `-UnaryExprOrTypeTraitExpr 0x7ffca7014ca0 <col:31, col:42> 'unsigned long' sizeof 'int'
+|   |-ForStmt 0x7ffca7015110 <line:12:3, line:13:16>
+|   | |-BinaryOperator 0x7ffca7014e78 <line:12:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7ffca7014e30 <col:8> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   | | `-IntegerLiteral 0x7ffca7014e58 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffca7014f00 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ffca7014ee8 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffca7014ea0 <col:15> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   | | `-IntegerLiteral 0x7ffca7014ec8 <col:19> 'int' 64
+|   | |-UnaryOperator 0x7ffca7014f50 <col:23, col:24> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7ffca7014f28 <col:23> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   | `-CompoundAssignOperator 0x7ffca70150d8 <line:13:5, col:16> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-ArraySubscriptExpr 0x7ffca7014ff0 <col:5, col:8> 'int' lvalue
+|   |   | |-ImplicitCastExpr 0x7ffca7014fc0 <col:5> 'int *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7ffca7014f70 <col:5> 'int *' lvalue ParmVar 0x7ffca70142b8 'c' 'int *'
+|   |   | `-ImplicitCastExpr 0x7ffca7014fd8 <col:7> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7ffca7014f98 <col:7> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   |   `-ImplicitCastExpr 0x7ffca70150c0 <col:13, col:16> 'int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7ffca7015098 <col:13, col:16> 'int' lvalue
+|   |       |-ImplicitCastExpr 0x7ffca7015068 <col:13> 'int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7ffca7015018 <col:13> 'int *' lvalue ParmVar 0x7ffca7014240 'b' 'int *'
+|   |       `-ImplicitCastExpr 0x7ffca7015080 <col:15> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ffca7015040 <col:15> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   |-ForStmt 0x7ffca702bef8 <line:14:3, line:16:14>
+|   | |-BinaryOperator 0x7ffca7015190 <line:14:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7ffca7015148 <col:8> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   | | `-IntegerLiteral 0x7ffca7015170 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffca702bc58 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ffca702bc28 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffca70151b8 <col:15> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7ffca702bc40 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ffca702bc00 <col:19> 'int' lvalue ParmVar 0x7ffca682c978 'a' 'int'
+|   | |-UnaryOperator 0x7ffca702bca8 <col:22, col:23> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7ffca702bc80 <col:22> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   | `-IfStmt 0x7ffca702bec0 <line:15:5, line:16:14>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7ffca702bda8 <line:15:9, col:17> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7ffca702bd90 <col:9, col:12> 'int' <LValueToRValue>
+|   |   | | `-ArraySubscriptExpr 0x7ffca702bd48 <col:9, col:12> 'int' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7ffca702bd18 <col:9> 'int *' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7ffca702bcc8 <col:9> 'int *' lvalue Var 0x7ffca70145b8 'r' 'int *'
+|   |   | |   `-ImplicitCastExpr 0x7ffca702bd30 <col:11> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7ffca702bcf0 <col:11> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   |   | `-IntegerLiteral 0x7ffca702bd70 <col:17> 'int' 0
+|   |   |-BinaryOperator 0x7ffca702be98 <line:16:7, col:14> 'int' '='
+|   |   | |-ArraySubscriptExpr 0x7ffca702be50 <col:7, col:10> 'int' lvalue
+|   |   | | |-ImplicitCastExpr 0x7ffca702be20 <col:7> 'int *' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7ffca702bdd0 <col:7> 'int *' lvalue Var 0x7ffca70145b8 'r' 'int *'
+|   |   | | `-ImplicitCastExpr 0x7ffca702be38 <col:9> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7ffca702bdf8 <col:9> 'int' lvalue Var 0x7ffca7014540 'i' 'int'
+|   |   | `-IntegerLiteral 0x7ffca702be78 <col:14> 'int' 1
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffca702bf70 <line:17:3, col:10>
+|     `-ImplicitCastExpr 0x7ffca702bf58 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffca702bf30 <col:10> 'int *' lvalue Var 0x7ffca70145b8 'r' 'int *'
+|-FunctionDecl 0x7ffca7014658 <line:10:15> col:15 implicit used __builtin_alloca 'void *(unsigned long)' extern
+| |-ParmVarDecl 0x7ffca70146f8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7ffca7014760 <col:15> Implicit
+`-FunctionDecl 0x7ffca70149c8 <line:11:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7ffca7014a68 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7ffca7014ac8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7ffca7014b28 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7ffca7014ba0 <col:3> Implicit

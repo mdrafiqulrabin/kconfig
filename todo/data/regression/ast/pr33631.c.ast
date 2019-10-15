@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fcbd10246e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcbd1025360 <../Data/C2AST/pr33631.c:1:9, line:4:1> line:1:9 union definition
+| `-FieldDecl 0x7fcbd1066238 <line:3:3, col:7> col:7 __lock 'int'
+|-TypedefDecl 0x7fcbd10662d0 <line:1:1, line:4:3> col:3 referenced pthread_mutex_t 'union pthread_mutex_t':'pthread_mutex_t'
+| `-ElaboratedType 0x7fcbd1066280 'union pthread_mutex_t' sugar
+|   `-RecordType 0x7fcbd1066200 'pthread_mutex_t'
+|     `-Record 0x7fcbd1025360 ''
+|-FunctionDecl 0x7fcbd1066430 <line:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcbd10664d0 prev 0x7fcbd1066430 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fcbd10665c0 <line:8:1, line:14:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fcbd1066cb8 <line:9:1, line:14:1>
+    |-DeclStmt 0x7fcbd1066a48 <line:10:5, col:56>
+    | |-RecordDecl 0x7fcbd10666a0 <col:5, col:40> col:5 struct definition
+    | | |-FieldDecl 0x7fcbd1066768 <col:14, col:18> col:18 referenced c 'int'
+    | | `-FieldDecl 0x7fcbd10667e0 <col:21, col:37> col:37 m 'pthread_mutex_t':'pthread_mutex_t'
+    | `-VarDecl 0x7fcbd1066880 <col:5, col:55> col:42 used r 'struct (anonymous struct at ../Data/C2AST/pr33631.c:10:5)':'struct (anonymous at ../Data/C2AST/pr33631.c:10:5)' cinit
+    |   `-InitListExpr 0x7fcbd1066988 <col:46, col:55> 'struct (anonymous struct at ../Data/C2AST/pr33631.c:10:5)':'struct (anonymous at ../Data/C2AST/pr33631.c:10:5)'
+    |     |-ImplicitValueInitExpr 0x7fcbd1066a20 <<invalid sloc>> 'int'
+    |     `-InitListExpr 0x7fcbd10669d8 <col:53> 'pthread_mutex_t':'pthread_mutex_t' field Field 0x7fcbd1066238 '__lock' 'int'
+    |       `-IntegerLiteral 0x7fcbd10668e0 <col:53> 'int' 0
+    |-IfStmt 0x7fcbd1066c48 <line:11:5, line:12:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcbd1066af8 <line:11:9, col:16> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcbd1066ae0 <col:9, col:11> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fcbd1066a88 <col:9, col:11> 'int' lvalue .c 0x7fcbd1066768
+    | | |   `-DeclRefExpr 0x7fcbd1066a60 <col:9> 'struct (anonymous struct at ../Data/C2AST/pr33631.c:10:5)':'struct (anonymous at ../Data/C2AST/pr33631.c:10:5)' lvalue Var 0x7fcbd1066880 'r' 'struct (anonymous struct at ../Data/C2AST/pr33631.c:10:5)':'struct (anonymous at ../Data/C2AST/pr33631.c:10:5)'
+    | | `-IntegerLiteral 0x7fcbd1066ac0 <col:16> 'int' 0
+    | |-CallExpr 0x7fcbd1066c20 <line:12:7, col:14> 'void'
+    | | `-ImplicitCastExpr 0x7fcbd1066c08 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcbd1066bb8 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7fcbd10664d0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcbd1066ca0 <line:13:5, col:12>
+      `-IntegerLiteral 0x7fcbd1066c80 <col:12> 'int' 0

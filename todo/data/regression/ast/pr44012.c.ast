@@ -1,0 +1,93 @@
+TranslationUnitDecl 0x7fcaf90262e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcaf9067e00 <../Data/C2AST/pr44012.c:4:1, col:17> col:13 used fe 'void ()' extern
+|-VarDecl 0x7fcaf9067ef8 <line:6:1, col:12> col:12 used i 'int' extern
+|-FunctionDecl 0x7fcaf9068120 <line:8:1, line:13:1> line:9:1 used FX 'void (void (*)())' static inline
+| |-ParmVarDecl 0x7fcaf9068018 <col:5, col:16> col:12 used f 'void (*)()'
+| `-CompoundStmt 0x7fcaf90682f0 <line:10:1, line:13:1>
+|   |-CallExpr 0x7fcaf9068208 <line:11:3, col:7> 'void'
+|   | `-ImplicitCastExpr 0x7fcaf90681f0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fcaf90681c8 <col:3> 'void ()' Function 0x7fcaf9067e00 'fe' 'void ()'
+|   `-CallExpr 0x7fcaf90682c8 <line:12:3, col:9> 'void'
+|     `-ImplicitCastExpr 0x7fcaf90682b0 <col:3, col:6> 'void (*)()' <FunctionToPointerDecay>
+|       `-ParenExpr 0x7fcaf9068290 <col:3, col:6> 'void ()':'void ()'
+|         `-UnaryOperator 0x7fcaf9068270 <col:4, col:5> 'void ()':'void ()' prefix '*'
+|           `-ImplicitCastExpr 0x7fcaf9068258 <col:5> 'void (*)()' <LValueToRValue>
+|             `-DeclRefExpr 0x7fcaf9068230 <col:5> 'void (*)()' lvalue ParmVar 0x7fcaf9068018 'f' 'void (*)()'
+|-FunctionDecl 0x7fcaf9068330 <line:15:1, line:27:1> line:16:1 used f4 'void ()' static inline
+| `-CompoundStmt 0x7fcaf9068650 <line:17:1, line:27:1>
+|   `-ForStmt 0x7fcaf9068618 <line:18:3, line:26:7>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-SwitchStmt 0x7fcaf9068410 <line:19:5, line:26:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-ImplicitCastExpr 0x7fcaf90683f8 <line:19:13> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fcaf90683d0 <col:13> 'int' lvalue Var 0x7fcaf9067ef8 'i' 'int'
+|       `-CompoundStmt 0x7fcaf90685f0 <line:20:7, line:26:7>
+|         |-CaseStmt 0x7fcaf9068460 <line:21:7, line:22:14>
+|         | |-IntegerLiteral 0x7fcaf9068440 <line:21:12> 'int' 306
+|         | |-<<<NULL>>>
+|         | `-CallExpr 0x7fcaf9068580 <line:22:7, col:14> 'void'
+|         |   |-ImplicitCastExpr 0x7fcaf9068568 <col:7> 'void (*)(void (*)())' <FunctionToPointerDecay>
+|         |   | `-DeclRefExpr 0x7fcaf9068498 <col:7> 'void (void (*)())' Function 0x7fcaf9068120 'FX' 'void (void (*)())'
+|         |   `-UnaryOperator 0x7fcaf90684e8 <col:11, col:12> 'void (*)()' prefix '&'
+|         |     `-DeclRefExpr 0x7fcaf90684c0 <col:12> 'void ()' Function 0x7fcaf9067e00 'fe' 'void ()'
+|         |-BreakStmt 0x7fcaf90685b0 <line:23:7>
+|         `-DefaultStmt 0x7fcaf90685d0 <line:24:7, line:25:7>
+|           `-ReturnStmt 0x7fcaf90685b8 <col:7>
+|-FunctionDecl 0x7fcaf9068688 <line:29:1, line:42:1> line:30:1 used f3 'void ()' static inline
+| `-CompoundStmt 0x7fcaf90689b0 <line:31:1, line:42:1>
+|   |-CallExpr 0x7fcaf9068768 <line:32:3, col:7> 'void'
+|   | `-ImplicitCastExpr 0x7fcaf9068750 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fcaf9068728 <col:3> 'void ()' Function 0x7fcaf9068330 'f4' 'void ()'
+|   `-ForStmt 0x7fcaf9068978 <line:33:3, line:41:7>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-SwitchStmt 0x7fcaf90687d0 <line:34:5, line:41:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-ImplicitCastExpr 0x7fcaf90687b8 <line:34:13> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fcaf9068790 <col:13> 'int' lvalue Var 0x7fcaf9067ef8 'i' 'int'
+|       `-CompoundStmt 0x7fcaf9068950 <line:35:7, line:41:7>
+|         |-CaseStmt 0x7fcaf9068820 <line:36:7, line:37:14>
+|         | |-IntegerLiteral 0x7fcaf9068800 <line:36:12> 'int' 267
+|         | |-<<<NULL>>>
+|         | `-CallExpr 0x7fcaf90688e0 <line:37:7, col:14> 'void'
+|         |   |-ImplicitCastExpr 0x7fcaf90688c8 <col:7> 'void (*)(void (*)())' <FunctionToPointerDecay>
+|         |   | `-DeclRefExpr 0x7fcaf9068858 <col:7> 'void (void (*)())' Function 0x7fcaf9068120 'FX' 'void (void (*)())'
+|         |   `-UnaryOperator 0x7fcaf90688a8 <col:11, col:12> 'void (*)()' prefix '&'
+|         |     `-DeclRefExpr 0x7fcaf9068880 <col:12> 'void ()' Function 0x7fcaf9068330 'f4' 'void ()'
+|         |-BreakStmt 0x7fcaf9068910 <line:38:7>
+|         `-DefaultStmt 0x7fcaf9068930 <line:39:7, line:40:7>
+|           `-ReturnStmt 0x7fcaf9068918 <col:7>
+|-FunctionDecl 0x7fcaf90689f0 <line:44:1, line:50:1> line:45:1 used f2 'void ()' static inline
+| `-CompoundStmt 0x7fcaf9068c10 <line:46:1, line:50:1>
+|   |-CallExpr 0x7fcaf9068ad0 <line:47:3, col:7> 'void'
+|   | `-ImplicitCastExpr 0x7fcaf9068ab8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fcaf9068a90 <col:3> 'void ()' Function 0x7fcaf9068688 'f3' 'void ()'
+|   `-WhileStmt 0x7fcaf9068bf0 <line:48:3, line:49:12>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fcaf9068b20 <line:48:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fcaf9068af8 <col:10> 'int' lvalue Var 0x7fcaf9067ef8 'i' 'int'
+|     `-CallExpr 0x7fcaf9068bc0 <line:49:5, col:12> 'void'
+|       |-ImplicitCastExpr 0x7fcaf9068ba8 <col:5> 'void (*)(void (*)())' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fcaf9068b38 <col:5> 'void (void (*)())' Function 0x7fcaf9068120 'FX' 'void (void (*)())'
+|       `-UnaryOperator 0x7fcaf9068b88 <col:9, col:10> 'void (*)()' prefix '&'
+|         `-DeclRefExpr 0x7fcaf9068b60 <col:10> 'void ()' Function 0x7fcaf9068688 'f3' 'void ()'
+`-FunctionDecl 0x7fcaf9068c50 <line:52:1, line:58:1> line:53:1 f1 'void ()'
+  `-CompoundStmt 0x7fcaf9068e50 <line:54:1, line:58:1>
+    |-CallExpr 0x7fcaf9068d30 <line:55:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7fcaf9068d18 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fcaf9068cf0 <col:3> 'void ()' Function 0x7fcaf90689f0 'f2' 'void ()'
+    `-WhileStmt 0x7fcaf9068e30 <line:56:3, line:57:12>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7fcaf9068d58 <line:56:10> 'int' 1
+      `-CallExpr 0x7fcaf9068e00 <line:57:5, col:12> 'void'
+        |-ImplicitCastExpr 0x7fcaf9068de8 <col:5> 'void (*)(void (*)())' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcaf9068d78 <col:5> 'void (void (*)())' Function 0x7fcaf9068120 'FX' 'void (void (*)())'
+        `-UnaryOperator 0x7fcaf9068dc8 <col:9, col:10> 'void (*)()' prefix '&'
+          `-DeclRefExpr 0x7fcaf9068da0 <col:10> 'void ()' Function 0x7fcaf90689f0 'f2' 'void ()'

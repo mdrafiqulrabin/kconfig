@@ -1,0 +1,42 @@
+../Data/C2AST/pr48437.c:5:10: fatal error: '../nop.h' file not found
+#include "../nop.h"
+         ^~~~~~~~~~
+1 error generated.
+TranslationUnitDecl 0x7f93e582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f93e582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f93e582bf80 '__int128'
+|-TypedefDecl 0x7f93e582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f93e582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f93e582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f93e582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f93e582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f93e582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f93e582c600 'char *'
+|   `-BuiltinType 0x7f93e582bd80 'char'
+|-TypedefDecl 0x7f93e582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f93e582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f93e582c720 'struct __va_list_tag'
+|     `-Record 0x7f93e582c698 '__va_list_tag'
+|-VarDecl 0x7f93e582c978 <../Data/C2AST/pr48437.c:7:1, col:5> col:5 used i 'int'
+| `-UsedAttr 0x7f93e582c9d8 <col:22>
+`-FunctionDecl 0x7f93e70010d0 <line:8:1, line:17:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7f93e70014b0 <line:9:1, line:17:1>
+    |-DeclStmt 0x7f93e70011e8 <line:10:3, col:17>
+    | `-VarDecl 0x7f93e7001188 <col:3, col:16> col:16 used i 'volatile int'
+    |-ForStmt 0x7f93e7001440 <line:11:3, line:15:5>
+    | |-BinaryOperator 0x7f93e7001248 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f93e7001200 <col:8> 'volatile int' lvalue Var 0x7f93e7001188 'i' 'volatile int'
+    | | `-IntegerLiteral 0x7f93e7001228 <col:12> 'int' 3
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f93e70012d0 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f93e70012b8 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f93e7001270 <col:15> 'volatile int' lvalue Var 0x7f93e7001188 'i' 'volatile int'
+    | | `-IntegerLiteral 0x7f93e7001298 <col:19> 'int' 7
+    | |-UnaryOperator 0x7f93e7001320 <col:22, col:24> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7f93e70012f8 <col:24> 'volatile int' lvalue Var 0x7f93e7001188 'i' 'volatile int'
+    | `-CompoundStmt 0x7f93e7001428 <line:12:5, line:15:5>
+    |   `-DeclStmt 0x7f93e7001410 <line:13:7, col:19>
+    |     `-VarDecl 0x7f93e7001358 parent 0x7f93e582bce8 prev 0x7f93e582c978 <col:7, col:18> col:18 used i 'int' extern
+    |       `-UsedAttr 0x7f93e70013c8 <line:7:22> Inherited
+    `-ReturnStmt 0x7f93e7001498 <line:16:3, col:10>
+      `-IntegerLiteral 0x7f93e7001478 <col:10> 'int' 0

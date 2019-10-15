@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fb89602bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb896814200 <../Data/C2AST/pr71619.c:6:1, line:11:1> line:7:1 foo 'void ()'
+  `-CompoundStmt 0x7fb896814428 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fb896814398 <line:9:3, col:18>
+    | `-VarDecl 0x7fb8968142f8 <col:3, col:16> col:7 used count 'int' cinit
+    |   `-UnaryOperator 0x7fb896814378 <col:15, col:16> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fb896814358 <col:16> 'int' 10
+    `-WhileStmt 0x7fb896814408 <line:10:3, col:18>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fb8968143d8 <col:10, col:15> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fb8968143b0 <col:10> 'int' lvalue Var 0x7fb8968142f8 'count' 'int'
+      `-NullStmt 0x7fb8968143f8 <col:18>

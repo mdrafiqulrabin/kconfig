@@ -1,0 +1,107 @@
+TranslationUnitDecl 0x7fece181a6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fece1852268 <../Data/C2AST/pr56424.c:6:20> col:20 implicit used cosl 'long double (long double)' extern
+| |-ParmVarDecl 0x7fece1852308 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7fece1852370 <col:20> Implicit
+| `-NoThrowAttr 0x7fece18523b8 <col:20> Implicit
+|-FunctionDecl 0x7fece18523c8 prev 0x7fece1852268 <col:1, col:37> col:20 used cosl 'long double (long double)' extern
+| |-ParmVarDecl 0x7fece181b378 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7fece18524a8 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7fece18524b8 <col:20> Inherited Implicit
+|-FunctionDecl 0x7fece1852570 <line:7:20> col:20 implicit used sinl 'long double (long double)' extern
+| |-ParmVarDecl 0x7fece1852610 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7fece1852678 <col:20> Implicit
+| `-NoThrowAttr 0x7fece18526c0 <col:20> Implicit
+|-FunctionDecl 0x7fece18526d0 prev 0x7fece1852570 <col:1, col:37> col:20 used sinl 'long double (long double)' extern
+| |-ParmVarDecl 0x7fece18524e0 <col:26, col:31> col:37 'long double'
+| |-ConstAttr 0x7fece18527b0 <col:20> Inherited Implicit
+| `-NoThrowAttr 0x7fece18527c0 <col:20> Inherited Implicit
+|-FunctionDecl 0x7fece1852938 <line:8:1, col:50> col:20 used reml 'long double (long double, long double)' extern
+| |-ParmVarDecl 0x7fece18527e8 <col:26, col:31> col:37 'long double'
+| `-ParmVarDecl 0x7fece1852860 <col:39, col:44> col:50 'long double'
+|-FunctionDecl 0x7fece1852ad0 <line:10:1, line:13:1> line:10:13 used my_cos 'long double (long double)'
+| |-ParmVarDecl 0x7fece1852a40 <col:21, col:33> col:33 used arg 'long double'
+| `-CompoundStmt 0x7fece1852c70 <line:11:1, line:13:1>
+|   `-ReturnStmt 0x7fece1852c58 <line:12:3, col:19>
+|     `-CallExpr 0x7fece1852c10 <col:10, col:19> 'long double'
+|       |-ImplicitCastExpr 0x7fece1852bf8 <col:10> 'long double (*)(long double)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fece1852b78 <col:10> 'long double (long double)' Function 0x7fece18523c8 'cosl' 'long double (long double)'
+|       `-ImplicitCastExpr 0x7fece1852c40 <col:16> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fece1852ba0 <col:16> 'long double' lvalue ParmVar 0x7fece1852a40 'arg' 'long double'
+|-FunctionDecl 0x7fece1852d30 <line:15:1, line:21:1> line:15:13 used my_sin 'long double (long double)'
+| |-ParmVarDecl 0x7fece1852ca0 <col:21, col:33> col:33 used arg 'long double'
+| `-CompoundStmt 0x7fece1853218 <line:16:1, line:21:1>
+|   |-IfStmt 0x7fece1853110 <line:17:3, line:18:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fece1853090 <line:17:7, col:30> 'int' '<'
+|   | | |-CallExpr 0x7fece1853010 <col:7, col:26> 'double'
+|   | | | |-ImplicitCastExpr 0x7fece1852ff8 <col:7> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fece1852f78 <col:7> '<builtin fn type>' Function 0x7fece1852e18 '__builtin_fabs' 'double (double)'
+|   | | | `-ImplicitCastExpr 0x7fece1853058 <col:23> 'double' <FloatingCast>
+|   | | |   `-ImplicitCastExpr 0x7fece1853040 <col:23> 'long double' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fece1852fa0 <col:23> 'long double' lvalue ParmVar 0x7fece1852ca0 'arg' 'long double'
+|   | | `-FloatingLiteral 0x7fece1853070 <col:30> 'double' 1.000000e+00
+|   | |-ReturnStmt 0x7fece18530f8 <line:18:5, col:12>
+|   | | `-ImplicitCastExpr 0x7fece18530e0 <col:12> 'long double' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fece18530b8 <col:12> 'long double' lvalue ParmVar 0x7fece1852ca0 'arg' 'long double'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fece1853200 <line:20:3, col:19>
+|     `-CallExpr 0x7fece18531b0 <col:10, col:19> 'long double'
+|       |-ImplicitCastExpr 0x7fece1853198 <col:10> 'long double (*)(long double)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fece1853148 <col:10> 'long double (long double)' Function 0x7fece18526d0 'sinl' 'long double (long double)'
+|       `-ImplicitCastExpr 0x7fece18531e0 <col:16> 'long double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fece1853170 <col:16> 'long double' lvalue ParmVar 0x7fece1852ca0 'arg' 'long double'
+|-FunctionDecl 0x7fece1852e18 <line:17:7> col:7 implicit used __builtin_fabs 'double (double)' extern
+| |-ParmVarDecl 0x7fece1852eb8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fece1852f20 <col:7> Implicit
+| `-ConstAttr 0x7fece1852f68 <col:7> Implicit
+|-FunctionDecl 0x7fece1853360 <line:23:1, line:27:1> line:23:13 my_cot 'long double (long double, long double)'
+| |-ParmVarDecl 0x7fece1853250 <col:21, col:33> col:33 used arg 'long double'
+| |-ParmVarDecl 0x7fece18532c8 <col:38, col:50> col:50 used cycle 'long double'
+| `-CompoundStmt 0x7fece1853760 <line:24:1, line:27:1>
+|   |-DeclStmt 0x7fece18535a8 <line:25:3, col:36>
+|   | `-VarDecl 0x7fece1853428 <col:3, col:35> col:15 used t 'long double' cinit
+|   |   `-CallExpr 0x7fece1853540 <col:19, col:35> 'long double'
+|   |     |-ImplicitCastExpr 0x7fece1853528 <col:19> 'long double (*)(long double, long double)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fece1853488 <col:19> 'long double (long double, long double)' Function 0x7fece1852938 'reml' 'long double (long double, long double)'
+|   |     |-ImplicitCastExpr 0x7fece1853578 <col:25> 'long double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fece18534b0 <col:25> 'long double' lvalue ParmVar 0x7fece1853250 'arg' 'long double'
+|   |     `-ImplicitCastExpr 0x7fece1853590 <col:30> 'long double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fece18534d8 <col:30> 'long double' lvalue ParmVar 0x7fece18532c8 'cycle' 'long double'
+|   `-ReturnStmt 0x7fece1853748 <line:26:3, col:32>
+|     `-BinaryOperator 0x7fece1853720 <col:10, col:32> 'long double' '/'
+|       |-CallExpr 0x7fece1853628 <col:10, col:19> 'long double'
+|       | |-ImplicitCastExpr 0x7fece1853610 <col:10> 'long double (*)(long double)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fece18535c0 <col:10> 'long double (long double)' Function 0x7fece1852ad0 'my_cos' 'long double (long double)'
+|       | `-ImplicitCastExpr 0x7fece1853658 <col:18> 'long double' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fece18535e8 <col:18> 'long double' lvalue Var 0x7fece1853428 't' 'long double'
+|       `-CallExpr 0x7fece18536d8 <col:23, col:32> 'long double'
+|         |-ImplicitCastExpr 0x7fece18536c0 <col:23> 'long double (*)(long double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fece1853670 <col:23> 'long double (long double)' Function 0x7fece1852d30 'my_sin' 'long double (long double)'
+|         `-ImplicitCastExpr 0x7fece1853708 <col:31> 'long double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fece1853698 <col:31> 'long double' lvalue Var 0x7fece1853428 't' 'long double'
+`-FunctionDecl 0x7fece18538a8 <line:29:1, line:33:1> line:29:13 my_tan 'long double (long double, long double)'
+  |-ParmVarDecl 0x7fece1853798 <col:21, col:33> col:33 used arg 'long double'
+  |-ParmVarDecl 0x7fece1853810 <col:38, col:50> col:50 used cycle 'long double'
+  `-CompoundStmt 0x7fece1853c80 <line:30:1, line:33:1>
+    |-DeclStmt 0x7fece1853ac8 <line:31:3, col:36>
+    | `-VarDecl 0x7fece1853970 <col:3, col:35> col:15 used t 'long double' cinit
+    |   `-CallExpr 0x7fece1853a60 <col:19, col:35> 'long double'
+    |     |-ImplicitCastExpr 0x7fece1853a48 <col:19> 'long double (*)(long double, long double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fece18539d0 <col:19> 'long double (long double, long double)' Function 0x7fece1852938 'reml' 'long double (long double, long double)'
+    |     |-ImplicitCastExpr 0x7fece1853a98 <col:25> 'long double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fece18539f8 <col:25> 'long double' lvalue ParmVar 0x7fece1853798 'arg' 'long double'
+    |     `-ImplicitCastExpr 0x7fece1853ab0 <col:30> 'long double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fece1853a20 <col:30> 'long double' lvalue ParmVar 0x7fece1853810 'cycle' 'long double'
+    `-ReturnStmt 0x7fece1853c68 <line:32:3, col:32>
+      `-BinaryOperator 0x7fece1853c40 <col:10, col:32> 'long double' '/'
+        |-CallExpr 0x7fece1853b48 <col:10, col:19> 'long double'
+        | |-ImplicitCastExpr 0x7fece1853b30 <col:10> 'long double (*)(long double)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fece1853ae0 <col:10> 'long double (long double)' Function 0x7fece1852d30 'my_sin' 'long double (long double)'
+        | `-ImplicitCastExpr 0x7fece1853b78 <col:18> 'long double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fece1853b08 <col:18> 'long double' lvalue Var 0x7fece1853970 't' 'long double'
+        `-CallExpr 0x7fece1853bf8 <col:23, col:32> 'long double'
+          |-ImplicitCastExpr 0x7fece1853be0 <col:23> 'long double (*)(long double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fece1853b90 <col:23> 'long double (long double)' Function 0x7fece1852ad0 'my_cos' 'long double (long double)'
+          `-ImplicitCastExpr 0x7fece1853c28 <col:31> 'long double' <LValueToRValue>
+            `-DeclRefExpr 0x7fece1853bb8 <col:31> 'long double' lvalue Var 0x7fece1853970 't' 'long double'

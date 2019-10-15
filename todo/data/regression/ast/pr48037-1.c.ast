@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7feca00166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec9f82aa00 <../Data/C2AST/pr48037-1.c:4:1, col:16> col:16 referenced __m128d '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7feca0017380 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7feca0016900 'double'
+|-FunctionDecl 0x7fec9f82ab90 <line:5:1, line:11:1> line:5:9 vsqrt1 '__m128d (const __m128d)'
+| |-ParmVarDecl 0x7fec9f82aa90 <col:17, col:31> col:31 used x 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const'
+| `-CompoundStmt 0x7fec9f82b4d8 <line:6:1, line:11:1>
+|   |-DeclStmt 0x7fec9f82ae30 <line:7:3, col:57>
+|   | `-VarDecl 0x7fec9f82acc0 <col:3, col:56> col:36 used y 'const double *const restrict' cinit
+|   |   `-CStyleCastExpr 0x7fec9f82ae08 <col:40, col:56> 'const double *' <BitCast>
+|   |     `-UnaryOperator 0x7fec9f82ada8 <col:55, col:56> 'const __m128d *' prefix '&'
+|   |       `-DeclRefExpr 0x7fec9f82ad20 <col:56> 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const' lvalue ParmVar 0x7fec9f82aa90 'x' 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const'
+|   |-DeclStmt 0x7fec9f82b198 <line:8:3, col:40>
+|   | `-VarDecl 0x7fec9f82ae60 <col:3, col:39> col:16 used a 'const double' cinit
+|   |   `-CallExpr 0x7fec9f82b150 <col:20, col:39> 'double'
+|   |     |-ImplicitCastExpr 0x7fec9f82b138 <col:20> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fec9f82b058 <col:20> '<builtin fn type>' Function 0x7fec9f82aef8 '__builtin_sqrt' 'double (double)'
+|   |     `-ImplicitCastExpr 0x7fec9f82b180 <col:35, col:38> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fec9f82b0e0 <col:35, col:38> 'const double' lvalue
+|   |         |-ImplicitCastExpr 0x7fec9f82b0c8 <col:35> 'const double *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fec9f82b080 <col:35> 'const double *const restrict' lvalue Var 0x7fec9f82acc0 'y' 'const double *const restrict'
+|   |         `-IntegerLiteral 0x7fec9f82b0a8 <col:37> 'int' 0
+|   |-DeclStmt 0x7fec9f82b338 <line:9:3, col:40>
+|   | `-VarDecl 0x7fec9f82b1c8 <col:3, col:39> col:16 used b 'const double' cinit
+|   |   `-CallExpr 0x7fec9f82b2f0 <col:20, col:39> 'double'
+|   |     |-ImplicitCastExpr 0x7fec9f82b2d8 <col:20> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fec9f82b228 <col:20> '<builtin fn type>' Function 0x7fec9f82aef8 '__builtin_sqrt' 'double (double)'
+|   |     `-ImplicitCastExpr 0x7fec9f82b320 <col:35, col:38> 'double' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7fec9f82b2b0 <col:35, col:38> 'const double' lvalue
+|   |         |-ImplicitCastExpr 0x7fec9f82b298 <col:35> 'const double *' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fec9f82b250 <col:35> 'const double *const restrict' lvalue Var 0x7fec9f82acc0 'y' 'const double *const restrict'
+|   |         `-IntegerLiteral 0x7fec9f82b278 <col:37> 'int' 1
+|   `-ReturnStmt 0x7fec9f82b4c0 <line:10:3, col:27>
+|     `-ImplicitCastExpr 0x7fec9f82b4a8 <col:10, col:27> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|       `-CompoundLiteralExpr 0x7fec9f82b480 <col:10, col:27> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+|         `-InitListExpr 0x7fec9f82b400 <col:20, col:27> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|           |-ImplicitCastExpr 0x7fec9f82b450 <col:22> 'double' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fec9f82b360 <col:22> 'const double' lvalue Var 0x7fec9f82ae60 'a' 'const double'
+|           `-ImplicitCastExpr 0x7fec9f82b468 <col:25> 'double' <LValueToRValue>
+|             `-DeclRefExpr 0x7fec9f82b388 <col:25> 'const double' lvalue Var 0x7fec9f82b1c8 'b' 'const double'
+`-FunctionDecl 0x7fec9f82aef8 <line:8:20> col:20 implicit used __builtin_sqrt 'double (double)' extern
+  |-ParmVarDecl 0x7fec9f82af98 <<invalid sloc>> <invalid sloc> 'double'
+  |-ConstAttr 0x7fec9f82b000 <col:20> Implicit
+  `-NoThrowAttr 0x7fec9f82b048 <col:20> Implicit

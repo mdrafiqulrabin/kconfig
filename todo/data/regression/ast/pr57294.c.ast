@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f87fd8128e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f87fd019a20 <../Data/C2AST/pr57294.c:4:1, col:15> col:6 used baz 'void (void)'
+|-FunctionDecl 0x7f87fd019b50 <line:5:1, col:11> col:5 used func 'int ()'
+|-FunctionDecl 0x7f87fd019eb0 <line:7:1, line:12:1> line:8:1 used bar 'void (int, int (*)(void))' static
+| |-ParmVarDecl 0x7f87fd019c08 <col:6, col:10> col:10 a 'int'
+| |-ParmVarDecl 0x7f87fd019da0 <col:13, col:26> col:17 used foo 'int (*)(void)':'int (*)(void)'
+| `-CompoundStmt 0x7f87fd01a060 <line:9:1, line:12:1>
+|   |-CallExpr 0x7f87fd019fd0 <line:10:3, col:8> 'void'
+|   | `-ImplicitCastExpr 0x7f87fd019fb8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f87fd019f60 <col:3> 'void (void)' Function 0x7f87fd019a20 'baz' 'void (void)'
+|   `-CallExpr 0x7f87fd01a038 <line:11:3, col:8> 'int'
+|     `-ImplicitCastExpr 0x7f87fd01a020 <col:3> 'int (*)(void)':'int (*)(void)' <LValueToRValue>
+|       `-DeclRefExpr 0x7f87fd019ff8 <col:3> 'int (*)(void)':'int (*)(void)' lvalue ParmVar 0x7f87fd019da0 'foo' 'int (*)(void)':'int (*)(void)'
+`-FunctionDecl 0x7f87fd01a110 prev 0x7f87fd019a20 <line:14:1, line:18:1> line:15:1 used baz 'void (void)'
+  `-CompoundStmt 0x7f87fd01a328 <line:16:1, line:18:1>
+    `-CallExpr 0x7f87fd01a290 <line:17:3, col:15> 'void'
+      |-ImplicitCastExpr 0x7f87fd01a278 <col:3> 'void (*)(int, int (*)(void))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f87fd01a1b0 <col:3> 'void (int, int (*)(void))' Function 0x7f87fd019eb0 'bar' 'void (int, int (*)(void))'
+      |-IntegerLiteral 0x7f87fd01a1d8 <col:8> 'int' 0
+      `-ImplicitCastExpr 0x7f87fd01a310 <col:11> 'int (*)(void)':'int (*)(void)' <BitCast>
+        `-ImplicitCastExpr 0x7f87fd01a2f8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f87fd01a1f8 <col:11> 'int ()' Function 0x7f87fd019b50 'func' 'int ()'

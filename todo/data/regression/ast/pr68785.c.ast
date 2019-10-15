@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7ff3b4808ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff3b4051028 <../Data/C2AST/pr68785.c:5:1, line:9:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7ff3b4051240 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ff3b4051228 <line:8:3, col:19>
+      `-ImplicitCastExpr 0x7ff3b4051210 <col:10, col:19> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7ff3b40511f0 <col:10, col:19> 'int' lvalue prefix '*'
+          `-CStyleCastExpr 0x7ff3b40511c8 <col:11, col:19> 'int *' <BitCast>
+            `-ImplicitCastExpr 0x7ff3b40511b0 <col:19> 'char *' <ArrayToPointerDecay>
+              `-StringLiteral 0x7ff3b4051148 <col:19> 'char [1]' lvalue ""

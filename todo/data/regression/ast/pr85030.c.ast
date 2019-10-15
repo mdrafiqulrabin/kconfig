@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fd2d302bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd2d302c960 <../Data/C2AST/pr85030.c:3:1, col:27> col:8 struct S definition
+| |-FieldDecl 0x7fd2d306d838 <col:12, col:16> col:16 c 'int'
+| |-FieldDecl 0x7fd2d306d8c0 <col:12, col:20> col:20 b 'int *'
+| `-FieldDecl 0x7fd2d306d920 <col:12, col:24> col:24 e 'int *'
+`-FunctionDecl 0x7fd2d306d9b8 <line:5:1, line:10:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7fd2d306ddb8 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fd2d306db50 <line:8:3, col:13>
+    | `-VarDecl 0x7fd2d306daf0 <col:3, col:12> col:12 used a 'struct S':'struct S'
+    `-GCCAsmStmt 0x7fd2d306dd40 <line:9:3, col:41>
+      |-DeclRefExpr 0x7fd2d306dc38 <col:29> 'struct S':'struct S' lvalue Var 0x7fd2d306daf0 'a' 'struct S':'struct S'
+      `-IntegerLiteral 0x7fd2d306dcc8 <col:39> 'int' 1

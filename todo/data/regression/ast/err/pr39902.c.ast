@@ -1,0 +1,93 @@
+../Data/C2AST/pr39902.c:3:10: fatal error: 'dfp-dbg.h' file not found
+#include "dfp-dbg.h"
+         ^~~~~~~~~~~
+TranslationUnitDecl 0x7fc53c0174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc53c017a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc53c017780 '__int128'
+|-TypedefDecl 0x7fc53c017ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc53c0177a0 'unsigned __int128'
+|-TypedefDecl 0x7fc53c017da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc53c017bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc53c017b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc53c017e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc53c017e00 'char *'
+|   `-BuiltinType 0x7fc53c017580 'char'
+|-TypedefDecl 0x7fc53c018108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc53c0180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc53c017f20 'struct __va_list_tag'
+|     `-Record 0x7fc53c017e98 '__va_list_tag'
+|-RecordDecl 0x7fc53c018160 <../Data/C2AST/pr39902.c:14:9, line:17:1> line:14:9 invalid union definition
+| |-FieldDecl 0x7fc53c05ae38 <line:15:3, col:14> col:14 invalid d 'int'
+| `-FieldDecl 0x7fc53c05ae98 <line:16:3, col:16> col:16 referenced i 'unsigned int'
+|-TypedefDecl 0x7fc53c05af30 <line:14:1, line:17:3> col:3 referenced u32 'union (anonymous union at ../Data/C2AST/pr39902.c:14:9)':'union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+| `-ElaboratedType 0x7fc53c05aee0 'union (anonymous union at ../Data/C2AST/pr39902.c:14:9)' sugar
+|   `-RecordType 0x7fc53c05ae00 'union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|     `-Record 0x7fc53c018160 ''
+|-RecordDecl 0x7fc53c05afa0 <line:19:9, line:22:1> line:19:9 invalid union definition
+| |-FieldDecl 0x7fc53c05b068 <line:20:3, col:14> col:14 invalid d 'int'
+| `-FieldDecl 0x7fc53c05b130 <line:21:3, col:19> col:16 referenced i 'unsigned int [2]'
+|-TypedefDecl 0x7fc53c05b1d0 <line:19:1, line:22:3> col:3 referenced u64 'union (anonymous union at ../Data/C2AST/pr39902.c:19:9)':'union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+| `-ElaboratedType 0x7fc53c05b180 'union (anonymous union at ../Data/C2AST/pr39902.c:19:9)' sugar
+|   `-RecordType 0x7fc53c05b030 'union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|     `-Record 0x7fc53c05afa0 ''
+|-RecordDecl 0x7fc53c05b240 <line:24:9, line:27:1> line:24:9 invalid union definition
+| |-FieldDecl 0x7fc53c05b308 <line:25:3, col:15> col:15 invalid d 'int'
+| `-FieldDecl 0x7fc53c05b3d0 <line:26:3, col:19> col:16 referenced i 'unsigned int [4]'
+|-TypedefDecl 0x7fc53c05b470 <line:24:1, line:27:3> col:3 referenced u128 'union (anonymous union at ../Data/C2AST/pr39902.c:24:9)':'union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+| `-ElaboratedType 0x7fc53c05b420 'union (anonymous union at ../Data/C2AST/pr39902.c:24:9)' sugar
+|   `-RecordType 0x7fc53c05b2d0 'union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|     `-Record 0x7fc53c05b240 ''
+|-VarDecl 0x7fc53c05b510 <line:29:1, col:14> col:14 used p32_1 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b5c0 <line:30:1, col:14> col:14 used p32_1_0 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b630 <line:31:1, col:14> col:14 used p32_2_0 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b6a0 <line:32:1, col:14> col:14 used m32_1 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b710 <line:33:1, col:14> col:14 used m32_1_0 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b780 <line:34:1, col:14> col:14 used m32_2_0 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b7f0 <line:35:1, col:14> col:14 used a32 'volatile u32':'volatile union (anonymous at ../Data/C2AST/pr39902.c:14:9)'
+|-VarDecl 0x7fc53c05b880 <line:37:1, col:14> col:14 used p64_1 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05b8f0 <line:38:1, col:14> col:14 used p64_1_0 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05b960 <line:39:1, col:14> col:14 used p64_2_0 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05b9d0 <line:40:1, col:14> col:14 used m64_1 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05ba40 <line:41:1, col:14> col:14 used m64_1_0 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05bab0 <line:42:1, col:14> col:14 used m64_2_0 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05bb20 <line:43:1, col:14> col:14 used a64 'volatile u64':'volatile union (anonymous at ../Data/C2AST/pr39902.c:19:9)'
+|-VarDecl 0x7fc53c05bbb0 <line:45:1, col:15> col:15 used p128_1 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-VarDecl 0x7fc53c05bc20 <line:46:1, col:15> col:15 used p128_1_0 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-VarDecl 0x7fc53c05bc90 <line:47:1, col:15> col:15 used p128_2_0 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-VarDecl 0x7fc53c05bd00 <line:48:1, col:15> col:15 used m128_1 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-VarDecl 0x7fc53c05bd70 <line:49:1, col:15> col:15 used m128_1_0 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-VarDecl 0x7fc53c071800 <line:50:1, col:15> col:15 used m128_2_0 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-VarDecl 0x7fc53c071870 <line:51:1, col:15> col:15 used a128 'volatile u128':'volatile union (anonymous at ../Data/C2AST/pr39902.c:24:9)'
+|-FunctionDecl 0x7fc53c071990 <line:53:1, line:62:1> line:54:1 used init32 'void (void)'
+| `-CompoundStmt 0x7fc53c071b20 <line:55:1, line:62:1>
+|-FunctionDecl 0x7fc53c071bc0 <line:64:1, line:73:1> line:65:1 used init64 'void (void)'
+| `-CompoundStmt 0x7fc53c071d50 <line:66:1, line:73:1>
+|-FunctionDecl 0x7fc53c071df0 <line:75:1, line:84:1> line:76:1 used init128 'void (void)'
+| `-CompoundStmt 0x7fc53c071f80 <line:77:1, line:84:1>
+|-FunctionDecl 0x7fc53c072020 <line:86:1, line:124:1> line:87:1 used doit32 'void (void)'
+| `-CompoundStmt 0x7fc53c072b20 <line:88:1, line:124:1>
+|-FunctionDecl 0x7fc53c072bc0 <line:126:1, line:164:1> line:127:1 used doit64 'void (void)'
+| `-CompoundStmt 0x7fc53c075340 <line:128:1, line:164:1>
+|-FunctionDecl 0x7fc53c0753e0 <line:166:1, line:204:1> line:167:1 used doit128 'void (void)'
+| `-CompoundStmt 0x7fc53c07b930 <line:168:1, line:204:1>
+`-FunctionDecl 0x7fc53c07ba08 <line:206:1, line:218:1> line:207:1 main 'int (void)'
+  `-CompoundStmt 0x7fc53c07bd70 <line:208:1, line:218:1>
+    |-CallExpr 0x7fc53c07bb40 <line:209:3, col:11> 'void'
+    | `-ImplicitCastExpr 0x7fc53c07bb28 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc53c07bad8 <col:3> 'void (void)' Function 0x7fc53c071990 'init32' 'void (void)'
+    |-CallExpr 0x7fc53c07bba8 <line:210:3, col:11> 'void'
+    | `-ImplicitCastExpr 0x7fc53c07bb90 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc53c07bb68 <col:3> 'void (void)' Function 0x7fc53c071bc0 'init64' 'void (void)'
+    |-CallExpr 0x7fc53c07bc10 <line:211:3, col:12> 'void'
+    | `-ImplicitCastExpr 0x7fc53c07bbf8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc53c07bbd0 <col:3> 'void (void)' Function 0x7fc53c071df0 'init128' 'void (void)'
+    |-CallExpr 0x7fc53c07bc78 <line:213:3, col:11> 'void'
+    | `-ImplicitCastExpr 0x7fc53c07bc60 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc53c07bc38 <col:3> 'void (void)' Function 0x7fc53c072020 'doit32' 'void (void)'
+    |-CallExpr 0x7fc53c07bce0 <line:214:3, col:11> 'void'
+    | `-ImplicitCastExpr 0x7fc53c07bcc8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fc53c07bca0 <col:3> 'void (void1 error generated.
+)' Function 0x7fc53c072bc0 'doit64' 'void (void)'
+    `-CallExpr 0x7fc53c07bd48 <line:215:3, col:12> 'void'
+      `-ImplicitCastExpr 0x7fc53c07bd30 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fc53c07bd08 <col:3> 'void (void)' Function 0x7fc53c0753e0 'doit128' 'void (void)'

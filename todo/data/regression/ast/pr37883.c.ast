@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f86900128e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f869003c400 <../Data/C2AST/pr37883.c:3:1, line:10:1> line:3:6 test_sort 'void ()'
+  `-CompoundStmt 0x7f869003c990 <line:4:1, line:10:1>
+    |-DeclStmt 0x7f869003c558 <line:5:3, col:13>
+    | `-VarDecl 0x7f869003c4f8 <col:3, col:9> col:9 used base 'char *'
+    |-DeclStmt 0x7f869003c6f0 <line:6:3, col:27>
+    | |-VarDecl 0x7f869003c580 <col:3, col:17> col:17 used c 'char' register
+    | |-VarDecl 0x7f869003c5f8 <col:3, col:21> col:21 used i 'char *' register
+    | `-VarDecl 0x7f869003c670 <col:3, col:25> col:25 used hi 'char *' register
+    `-ForStmt 0x7f869003c958 <line:8:3, line:9:12>
+      |-BinaryOperator 0x7f869003c770 <line:8:8, col:12> 'char *' '='
+      | |-DeclRefExpr 0x7f869003c708 <col:8> 'char *' lvalue Var 0x7f869003c5f8 'i' 'char *'
+      | `-ImplicitCastExpr 0x7f869003c758 <col:12> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f869003c730 <col:12> 'char *' lvalue Var 0x7f869003c4f8 'base' 'char *'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f869003c818 <col:18, col:22> 'int' '<'
+      | |-ImplicitCastExpr 0x7f869003c7e8 <col:18> 'char *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f869003c798 <col:18> 'char *' lvalue Var 0x7f869003c5f8 'i' 'char *'
+      | `-ImplicitCastExpr 0x7f869003c800 <col:22> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f869003c7c0 <col:22> 'char *' lvalue Var 0x7f869003c670 'hi' 'char *'
+      |-UnaryOperator 0x7f869003c868 <col:26, col:27> 'char *' postfix '++'
+      | `-DeclRefExpr 0x7f869003c840 <col:26> 'char *' lvalue Var 0x7f869003c5f8 'i' 'char *'
+      `-BinaryOperator 0x7f869003c930 <line:9:5, col:12> 'char' '='
+        |-UnaryOperator 0x7f869003c8d0 <col:5, col:7> 'char' lvalue prefix '*'
+        | `-UnaryOperator 0x7f869003c8b0 <col:6, col:7> 'char *' postfix '++'
+        |   `-DeclRefExpr 0x7f869003c888 <col:6> 'char *' lvalue Var 0x7f869003c5f8 'i' 'char *'
+        `-ImplicitCastExpr 0x7f869003c918 <col:12> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7f869003c8f0 <col:12> 'char' lvalue Var 0x7f869003c580 'c' 'char'

@@ -1,0 +1,293 @@
+../Data/C2AST/pr50444.c:28:20: error: use of unknown builtin '__builtin_ia32_pxor128' [-Wimplicit-function-declaration]
+  ret.m = (__m128i)__builtin_ia32_pxor128 ((__v2di)in.m, (__v2di)k.m);
+                   ^
+../Data/C2AST/pr50444.c:28:11: error: invalid conversion between vector type '__m128i' (vector of 2 'long long' values) and integer type 'int' of different size
+  ret.m = (__m128i)__builtin_ia32_pxor128 ((__v2di)in.m, (__v2di)k.m);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TranslationUnitDecl 0x7f8f458174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f45817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f45817780 '__int128'
+|-TypedefDecl 0x7f8f45817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f458177a0 'unsigned __int128'
+|-TypedefDecl 0x7f8f45817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f45817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f45817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f45817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f45817e00 'char *'
+|   `-BuiltinType 0x7f8f45817580 'char'
+|-TypedefDecl 0x7f8f45818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f458180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f45817f20 'struct __va_list_tag'
+|     `-Record 0x7f8f45817e98 '__va_list_tag'
+|-TypedefDecl 0x7f8f46015200 <../Data/C2AST/pr50444.c:5:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |-VectorType 0x7f8f45818180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+| | `-BuiltinType 0x7f8f45817620 'long long'
+| `-MayAliasAttr 0x7f8f46015258 <line:6:1>
+|-TypedefDecl 0x7f8f460152f8 <line:7:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7f8f460152c0 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7f8f458175e0 'int'
+|-TypedefDecl 0x7f8f46015380 <line:8:1, col:19> col:19 referenced __v2di '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7f8f45818180 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7f8f45817620 'long long'
+|-TypedefDecl 0x7f8f460153f0 <line:9:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7f8f45817680 'unsigned int'
+|-RecordDecl 0x7f8f46015448 <line:11:9, line:13:1> line:11:9 struct definition
+| `-FieldDecl 0x7f8f460155c8 <line:12:5, col:17> col:14 referenced v 'uint32_t [4]'
+|-TypedefDecl 0x7f8f46015660 <line:11:1, line:13:3> col:3 referenced a4x32 'struct a4x32':'a4x32'
+| `-ElaboratedType 0x7f8f46015610 'struct a4x32' sugar
+|   `-RecordType 0x7f8f460154d0 'a4x32'
+|     `-Record 0x7f8f46015448 ''
+|-FunctionDecl 0x7f8f46015860 <line:15:1, line:19:1> line:15:8 used incr 'a4x32 *(a4x32 *)'
+| |-ParmVarDecl 0x7f8f46015758 <col:13, col:20> col:20 used x 'a4x32 *'
+| `-CompoundStmt 0x7f8f46015b40 <line:16:1, line:19:1>
+|   |-CompoundAssignOperator 0x7f8f46015ab0 <line:17:3, col:14> 'uint32_t':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-ArraySubscriptExpr 0x7f8f46015a50 <col:3, col:9> 'uint32_t':'unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7f8f46015a38 <col:3, col:6> 'uint32_t *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7f8f46015988 <col:3, col:6> 'uint32_t [4]' lvalue ->v 0x7f8f460155c8
+|   | | |   `-ImplicitCastExpr 0x7f8f46015970 <col:3> 'a4x32 *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7f8f46015948 <col:3> 'a4x32 *' lvalue ParmVar 0x7f8f46015758 'x' 'a4x32 *'
+|   | | `-IntegerLiteral 0x7f8f460159c0 <col:8> 'int' 0
+|   | `-ImplicitCastExpr 0x7f8f46015a98 <col:14> 'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8f46015a78 <col:14> 'int' 1
+|   `-ReturnStmt 0x7f8f46015b28 <line:18:3, col:10>
+|     `-ImplicitCastExpr 0x7f8f46015b10 <col:10> 'a4x32 *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8f46015ae8 <col:10> 'a4x32 *' lvalue ParmVar 0x7f8f46015758 'x' 'a4x32 *'
+|-RecordDecl 0x7f8f46015b60 <line:21:9, line:23:1> line:21:9 struct definition
+| `-FieldDecl 0x7f8f46015c40 <line:22:5, col:13> col:13 referenced m '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|-TypedefDecl 0x7f8f46015ce0 <line:21:1, line:23:3> col:3 referenced a1xm128i 'struct a1xm128i':'a1xm128i'
+| `-ElaboratedType 0x7f8f46015c90 'struct a1xm128i' sugar
+|   `-RecordType 0x7f8f46015bf0 'a1xm128i'
+|     `-Record 0x7f8f46015b60 ''
+|-FunctionDecl 0x7f8f46015f00 <line:25:1, line:30:1> line:25:25 used ssefunc 'a1xm128i (a1xm128i, a1xm128i)' static inline
+| |-ParmVarDecl 0x7f8f46015d80 <col:34, col:43> col:43 used in 'a1xm128i':'a1xm128i'
+| |-ParmVarDecl 0x7f8f46015df0 <col:48, col:57> col:57 used k 'a1xm128i':'a1xm128i'
+| `-CompoundStmt 0x7f8f4602d7f8 <line:26:1, line:30:1>
+|   |-DeclStmt 0x7f8f46016020 <line:27:3, col:15>
+|   | `-VarDecl 0x7f8f46015fc0 <col:3, col:12> col:12 used ret 'a1xm128i':'a1xm128i' nrvo
+|   `-ReturnStmt 0x7f8f4602d7e0 <line:29:3, col:10>
+|     `-ImplicitCastExpr 0x7f8f4602d7c8 <col:10> 'a1xm128i':'a1xm128i' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8f4602d7a0 <col:10> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f46015fc0 'ret' 'a1xm128i':'a1xm128i'
+|-FunctionDecl 0x7f8f4602d9b0 <line:32:1, line:40:1> line:32:16 used caster 'a4x32 (a4x32, a1xm128i)' static
+| |-ParmVarDecl 0x7f8f4602d828 <col:24, col:30> col:30 used c4x32 'a4x32':'a4x32'
+| |-ParmVarDecl 0x7f8f4602d898 <col:38, col:47> col:47 used k 'a1xm128i':'a1xm128i'
+| `-CompoundStmt 0x7f8f4602b6c0 <line:33:1, line:40:1>
+|   |-DeclStmt 0x7f8f4602dad0 <line:34:3, col:18>
+|   | `-VarDecl 0x7f8f4602da70 <col:3, col:12> col:12 used c1x128 'a1xm128i':'a1xm128i'
+|   |-IfStmt 0x7f8f4602de18 <line:35:3, col:57>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8f4602dbb8 <col:7, col:37> 'int' '!='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7f8f4602db30 <col:7, col:19> 'unsigned long' sizeof
+|   | | | `-ParenExpr 0x7f8f4602db10 <col:13, col:19> 'a4x32':'a4x32' lvalue
+|   | | |   `-DeclRefExpr 0x7f8f4602dae8 <col:14> 'a4x32':'a4x32' lvalue ParmVar 0x7f8f4602d828 'c4x32' 'a4x32':'a4x32'
+|   | | `-UnaryExprOrTypeTraitExpr 0x7f8f4602db98 <col:24, col:37> 'unsigned long' sizeof
+|   | |   `-ParenExpr 0x7f8f4602db78 <col:30, col:37> 'a1xm128i':'a1xm128i' lvalue
+|   | |     `-DeclRefExpr 0x7f8f4602db50 <col:31> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f4602da70 'c1x128' 'a1xm128i':'a1xm128i'
+|   | |-CallExpr 0x7f8f4602ddf0 <col:41, col:57> 'void'
+|   | | `-ImplicitCastExpr 0x7f8f4602ddd8 <col:41> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8f4602dd88 <col:41> '<builtin fn type>' Function 0x7f8f4602dca0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7f8f4602b2b0 <line:36:3, col:51> 'void *'
+|   | |-ImplicitCastExpr 0x7f8f4602b298 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8f4602e0e8 <col:3> '<builtin fn type>' Function 0x7f8f4602dec8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8f4602b2f0 <col:20, col:21> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8f4602e198 <col:20, col:21> 'a1xm128i *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8f4602e110 <col:21> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f4602da70 'c1x128' 'a1xm128i':'a1xm128i'
+|   | |-ImplicitCastExpr 0x7f8f4602b308 <col:29, col:30> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8f4602e1e0 <col:29, col:30> 'a4x32 *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8f4602e1b8 <col:30> 'a4x32':'a4x32' lvalue ParmVar 0x7f8f4602d828 'c4x32' 'a4x32':'a4x32'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8f4602b248 <col:37, col:50> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f8f4602b228 <col:43, col:50> 'a1xm128i':'a1xm128i' lvalue
+|   |     `-DeclRefExpr 0x7f8f4602b200 <col:44> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f4602da70 'c1x128' 'a1xm128i':'a1xm128i'
+|   |-BinaryOperator 0x7f8f4602b498 <line:37:3, col:29> 'a1xm128i':'a1xm128i' '='
+|   | |-DeclRefExpr 0x7f8f4602b320 <col:3> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f4602da70 'c1x128' 'a1xm128i':'a1xm128i'
+|   | `-CallExpr 0x7f8f4602b430 <col:12, col:29> 'a1xm128i':'a1xm128i'
+|   |   |-ImplicitCastExpr 0x7f8f4602b418 <col:12> 'a1xm128i (*)(a1xm128i, a1xm128i)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f8f4602b348 <col:12> 'a1xm128i (a1xm128i, a1xm128i)' Function 0x7f8f46015f00 'ssefunc' 'a1xm128i (a1xm128i, a1xm128i)'
+|   |   |-ImplicitCastExpr 0x7f8f4602b468 <col:20> 'a1xm128i':'a1xm128i' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f8f4602b370 <col:20> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f4602da70 'c1x128' 'a1xm128i':'a1xm128i'
+|   |   `-ImplicitCastExpr 0x7f8f4602b480 <col:28> 'a1xm128i':'a1xm128i' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8f4602b398 <col:28> 'a1xm128i':'a1xm128i' lvalue ParmVar 0x7f8f4602d898 'k' 'a1xm128i':'a1xm128i'
+|   |-CallExpr 0x7f8f4602b5f8 <line:38:3, col:50> 'void *'
+|   | |-ImplicitCastExpr 0x7f8f4602b5e0 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8f4602b4c0 <col:3> '<builtin fn type>' Function 0x7f8f4602dec8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8f4602b638 <col:20, col:21> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8f4602b510 <col:20, col:21> 'a4x32 *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8f4602b4e8 <col:21> 'a4x32':'a4x32' lvalue ParmVar 0x7f8f4602d828 'c4x32' 'a4x32':'a4x32'
+|   | |-ImplicitCastExpr 0x7f8f4602b650 <col:28, col:29> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8f4602b558 <col:28, col:29> 'a1xm128i *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8f4602b530 <col:29> 'a1xm128i':'a1xm128i' lvalue Var 0x7f8f4602da70 'c1x128' 'a1xm128i':'a1xm128i'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8f4602b5c0 <col:37, col:49> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f8f4602b5a0 <col:43, col:49> 'a4x32':'a4x32' lvalue
+|   |     `-DeclRefExpr 0x7f8f4602b578 <col:44> 'a4x32':'a4x32' lvalue ParmVar 0x7f8f4602d828 'c4x32' 'a4x32':'a4x32'
+|   `-ReturnStmt 0x7f8f4602b6a8 <line:39:3, col:10>
+|     `-ImplicitCastExpr 0x7f8f4602b690 <col:10> 'a4x32':'a4x32' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8f4602b668 <col:10> 'a4x32':'a4x32' lvalue ParmVar 0x7f8f4602d828 'c4x32' 'a4x32':'a4x32'
+|-FunctionDecl 0x7f8f4602dca0 <line:35:41> col:41 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7f8f4602dd40 <col:41> Implicit
+|-FunctionDecl 0x7f8f4602dec8 <line:36:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f8f4602df68 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f8f4602dfc8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f8f4602e028 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7f8f4602e0a0 <col:3> Implicit
+|-RecordDecl 0x7f8f4602b700 <line:42:9, line:47:1> line:42:9 struct definition
+| |-FieldDecl 0x7f8f4602b7c0 <line:43:5, col:14> col:14 referenced key 'a1xm128i':'a1xm128i'
+| |-FieldDecl 0x7f8f4602b818 <line:44:5, col:11> col:11 referenced c 'a4x32':'a4x32'
+| |-FieldDecl 0x7f8f4602b878 <<built-in>:81:23, ../Data/C2AST/pr50444.c:45:19> col:19 referenced elem 'unsigned long'
+| `-FieldDecl 0x7f8f4602b8d0 <line:46:5, col:11> col:11 referenced v 'a4x32':'a4x32'
+|-TypedefDecl 0x7f8f4602b970 <line:42:1, line:47:3> col:3 referenced Engine 'struct Engine':'Engine'
+| `-ElaboratedType 0x7f8f4602b920 'struct Engine' sugar
+|   `-RecordType 0x7f8f4602b790 'Engine'
+|     `-Record 0x7f8f4602b700 ''
+|-FunctionDecl 0x7f8f4602bb70 <line:49:1, line:57:1> line:49:6 used ctor 'void (Engine *)'
+| |-ParmVarDecl 0x7f8f4602ba68 <col:11, col:19> col:19 used e 'Engine *'
+| `-CompoundStmt 0x7f8f46030b80 <line:50:1, line:57:1>
+|   |-BinaryOperator 0x7f8f4602bcc8 <line:51:3, col:13> 'unsigned long' '='
+|   | |-MemberExpr 0x7f8f4602bc58 <col:3, col:6> 'unsigned long' lvalue ->elem 0x7f8f4602b878
+|   | | `-ImplicitCastExpr 0x7f8f4602bc40 <col:3> 'Engine *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8f4602bc18 <col:3> 'Engine *' lvalue ParmVar 0x7f8f4602ba68 'e' 'Engine *'
+|   | `-ImplicitCastExpr 0x7f8f4602bcb0 <col:13> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8f4602bc90 <col:13> 'int' 0
+|   |-BinaryOperator 0x7f8f4602bf88 <line:52:3, col:44> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+|   | |-MemberExpr 0x7f8f4602bd68 <col:3, col:10> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue .m 0x7f8f46015c40
+|   | | `-MemberExpr 0x7f8f4602bd30 <col:3, col:6> 'a1xm128i':'a1xm128i' lvalue ->key 0x7f8f4602b7c0
+|   | |   `-ImplicitCastExpr 0x7f8f4602bd18 <col:3> 'Engine *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f8f4602bcf0 <col:3> 'Engine *' lvalue ParmVar 0x7f8f4602ba68 'e' 'Engine *'
+|   | `-CStyleCastExpr 0x7f8f4602bf60 <col:14, col:44> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f8f4602bf48 <col:23, col:44> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|   |     `-CompoundLiteralExpr 0x7f8f4602bf10 <col:23, col:44> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+|   |       `-InitListExpr 0x7f8f4602beb0 <col:31, col:44> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|   |         |-IntegerLiteral 0x7f8f4602bdd0 <col:33> 'int' 0
+|   |         |-IntegerLiteral 0x7f8f4602bdf0 <col:36> 'int' 0
+|   |         |-IntegerLiteral 0x7f8f4602be10 <col:39> 'int' 0
+|   |         `-IntegerLiteral 0x7f8f4602be30 <col:42> 'int' 0
+|   |-BinaryOperator 0x7f8f4602c0f8 <line:53:3, col:15> 'uint32_t':'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7f8f4602c098 <col:3, col:11> 'uint32_t':'unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7f8f4602c080 <col:3, col:8> 'uint32_t *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7f8f4602c028 <col:3, col:8> 'uint32_t [4]' lvalue .v 0x7f8f460155c8
+|   | | |   `-MemberExpr 0x7f8f4602bff0 <col:3, col:6> 'a4x32':'a4x32' lvalue ->c 0x7f8f4602b818
+|   | | |     `-ImplicitCastExpr 0x7f8f4602bfd8 <col:3> 'Engine *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f8f4602bfb0 <col:3> 'Engine *' lvalue ParmVar 0x7f8f4602ba68 'e' 'Engine *'
+|   | | `-IntegerLiteral 0x7f8f4602c060 <col:10> 'int' 0
+|   | `-ImplicitCastExpr 0x7f8f4602c0e0 <col:15> 'uint32_t':'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8f4602c0c0 <col:15> 'int' 0
+|   |-BinaryOperator 0x7f8f46030878 <line:54:3, col:15> 'uint32_t':'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7f8f46030818 <col:3, col:11> 'uint32_t':'unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7f8f46030800 <col:3, col:8> 'uint32_t *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7f8f4602c198 <col:3, col:8> 'uint32_t [4]' lvalue .v 0x7f8f460155c8
+|   | | |   `-MemberExpr 0x7f8f4602c160 <col:3, col:6> 'a4x32':'a4x32' lvalue ->c 0x7f8f4602b818
+|   | | |     `-ImplicitCastExpr 0x7f8f4602c148 <col:3> 'Engine *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f8f4602c120 <col:3> 'Engine *' lvalue ParmVar 0x7f8f4602ba68 'e' 'Engine *'
+|   | | `-IntegerLiteral 0x7f8f4602c1d0 <col:10> 'int' 1
+|   | `-ImplicitCastExpr 0x7f8f46030860 <col:15> 'uint32_t':'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8f46030840 <col:15> 'int' 0
+|   |-BinaryOperator 0x7f8f460309e8 <line:55:3, col:15> 'uint32_t':'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x7f8f46030988 <col:3, col:11> 'uint32_t':'unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x7f8f46030970 <col:3, col:8> 'uint32_t *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7f8f46030918 <col:3, col:8> 'uint32_t [4]' lvalue .v 0x7f8f460155c8
+|   | | |   `-MemberExpr 0x7f8f460308e0 <col:3, col:6> 'a4x32':'a4x32' lvalue ->c 0x7f8f4602b818
+|   | | |     `-ImplicitCastExpr 0x7f8f460308c8 <col:3> 'Engine *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f8f460308a0 <col:3> 'Engine *' lvalue ParmVar 0x7f8f4602ba68 'e' 'Engine *'
+|   | | `-IntegerLiteral 0x7f8f46030950 <col:10> 'int' 2
+|   | `-ImplicitCastExpr 0x7f8f460309d0 <col:15> 'uint32_t':'unsigned int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f8f460309b0 <col:15> 'int' 0
+|   `-BinaryOperator 0x7f8f46030b58 <line:56:3, col:15> 'uint32_t':'unsigned int' '='
+|     |-ArraySubscriptExpr 0x7f8f46030af8 <col:3, col:11> 'uint32_t':'unsigned int' lvalue
+|     | |-ImplicitCastExpr 0x7f8f46030ae0 <col:3, col:8> 'uint32_t *' <ArrayToPointerDecay>
+|     | | `-MemberExpr 0x7f8f46030a88 <col:3, col:8> 'uint32_t [4]' lvalue .v 0x7f8f460155c8
+|     | |   `-MemberExpr 0x7f8f46030a50 <col:3, col:6> 'a4x32':'a4x32' lvalue ->c 0x7f8f4602b818
+|     | |     `-ImplicitCastExpr 0x7f8f46030a38 <col:3> 'Engine *' <LValueToRValue>
+|     | |       `-DeclRefExpr 0x7f8f46030a10 <col:3> 'Engine *' lvalue ParmVar 0x7f8f4602ba68 'e' 'Engine *'
+|     | `-IntegerLiteral 0x7f8f46030ac0 <col:10> 'int' 3
+|     `-ImplicitCastExpr 0x7f8f46030b40 <col:15> 'uint32_t':'unsigned int' <IntegralCast>
+|       `-IntegerLiteral 0x7f8f46030b20 <col:15> 'int' 0
+|-FunctionDecl 0x7f8f46030cd0 <line:59:1, line:67:1> line:59:10 used method 'uint32_t (Engine *)'
+| |-ParmVarDecl 0x7f8f46030bd0 <col:18, col:26> col:26 used e 'Engine *'
+| `-CompoundStmt 0x7f8f460314f8 <line:60:1, line:67:1>
+|   |-IfStmt 0x7f8f46031308 <line:61:3, line:65:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8f46030e40 <line:61:7, col:18> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7f8f46030e10 <col:7, col:10> 'unsigned long' <LValueToRValue>
+|   | | | `-MemberExpr 0x7f8f46030db8 <col:7, col:10> 'unsigned long' lvalue ->elem 0x7f8f4602b878
+|   | | |   `-ImplicitCastExpr 0x7f8f46030da0 <col:7> 'Engine *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7f8f46030d78 <col:7> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+|   | | `-ImplicitCastExpr 0x7f8f46030e28 <col:18> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f8f46030df0 <col:18> 'int' 0
+|   | |-CompoundStmt 0x7f8f460312e8 <line:62:5, line:65:5>
+|   | | |-BinaryOperator 0x7f8f460311e8 <line:63:7, col:41> 'a4x32':'a4x32' '='
+|   | | | |-MemberExpr 0x7f8f46030ea8 <col:7, col:10> 'a4x32':'a4x32' lvalue ->v 0x7f8f4602b8d0
+|   | | | | `-ImplicitCastExpr 0x7f8f46030e90 <col:7> 'Engine *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x7f8f46030e68 <col:7> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+|   | | | `-CallExpr 0x7f8f46031180 <col:14, col:41> 'a4x32':'a4x32'
+|   | | |   |-ImplicitCastExpr 0x7f8f46031168 <col:14> 'a4x32 (*)(a4x32, a1xm128i)' <FunctionToPointerDecay>
+|   | | |   | `-DeclRefExpr 0x7f8f46030ee0 <col:14> 'a4x32 (a4x32, a1xm128i)' Function 0x7f8f4602d9b0 'caster' 'a4x32 (a4x32, a1xm128i)'
+|   | | |   |-ImplicitCastExpr 0x7f8f460311b8 <col:21, col:32> 'a4x32':'a4x32' <LValueToRValue>
+|   | | |   | `-UnaryOperator 0x7f8f46031070 <col:21, col:32> 'a4x32':'a4x32' lvalue prefix '*'
+|   | | |   |   `-CallExpr 0x7f8f46031040 <col:22, col:32> 'a4x32 *'
+|   | | |   |     |-ImplicitCastExpr 0x7f8f46031028 <col:22> 'a4x32 *(*)(a4x32 *)' <FunctionToPointerDecay>
+|   | | |   |     | `-DeclRefExpr 0x7f8f46030f08 <col:22> 'a4x32 *(a4x32 *)' Function 0x7f8f46015860 'incr' 'a4x32 *(a4x32 *)'
+|   | | |   |     `-UnaryOperator 0x7f8f46030fa8 <col:27, col:31> 'a4x32 *' prefix '&'
+|   | | |   |       `-MemberExpr 0x7f8f46030f70 <col:28, col:31> 'a4x32':'a4x32' lvalue ->c 0x7f8f4602b818
+|   | | |   |         `-ImplicitCastExpr 0x7f8f46030f58 <col:28> 'Engine *' <LValueToRValue>
+|   | | |   |           `-DeclRefExpr 0x7f8f46030f30 <col:28> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+|   | | |   `-ImplicitCastExpr 0x7f8f460311d0 <col:35, col:38> 'a1xm128i':'a1xm128i' <LValueToRValue>
+|   | | |     `-MemberExpr 0x7f8f460310d0 <col:35, col:38> 'a1xm128i':'a1xm128i' lvalue ->key 0x7f8f4602b7c0
+|   | | |       `-ImplicitCastExpr 0x7f8f460310b8 <col:35> 'Engine *' <LValueToRValue>
+|   | | |         `-DeclRefExpr 0x7f8f46031090 <col:35> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+|   | | `-BinaryOperator 0x7f8f460312c0 <line:64:7, col:17> 'unsigned long' '='
+|   | |   |-MemberExpr 0x7f8f46031250 <col:7, col:10> 'unsigned long' lvalue ->elem 0x7f8f4602b878
+|   | |   | `-ImplicitCastExpr 0x7f8f46031238 <col:7> 'Engine *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x7f8f46031210 <col:7> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+|   | |   `-ImplicitCastExpr 0x7f8f460312a8 <col:17> 'unsigned long' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7f8f46031288 <col:17> 'int' 4
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8f460314e0 <line:66:3, col:26>
+|     `-ImplicitCastExpr 0x7f8f460314c8 <col:10, col:26> 'uint32_t':'unsigned int' <LValueToRValue>
+|      2 errors generated.
+ `-ArraySubscriptExpr 0x7f8f460314a0 <col:10, col:26> 'uint32_t':'unsigned int' lvalue
+|         |-ImplicitCastExpr 0x7f8f46031488 <col:10, col:15> 'uint32_t *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7f8f460313b8 <col:10, col:15> 'uint32_t [4]' lvalue .v 0x7f8f460155c8
+|         |   `-MemberExpr 0x7f8f46031380 <col:10, col:13> 'a4x32':'a4x32' lvalue ->v 0x7f8f4602b8d0
+|         |     `-ImplicitCastExpr 0x7f8f46031368 <col:10> 'Engine *' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7f8f46031340 <col:10> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+|         `-UnaryOperator 0x7f8f46031468 <col:17, col:22> 'unsigned long' prefix '--'
+|           `-MemberExpr 0x7f8f46031430 <col:19, col:22> 'unsigned long' lvalue ->elem 0x7f8f4602b878
+|             `-ImplicitCastExpr 0x7f8f46031418 <col:19> 'Engine *' <LValueToRValue>
+|               `-DeclRefExpr 0x7f8f460313f0 <col:19> 'Engine *' lvalue ParmVar 0x7f8f46030bd0 'e' 'Engine *'
+`-FunctionDecl 0x7f8f46031540 <line:69:1, line:76:1> line:69:5 main 'int ()'
+  `-CompoundStmt 0x7f8f46031b98 <line:70:1, line:76:1>
+    |-DeclStmt 0x7f8f46031650 <line:71:3, col:12>
+    | `-VarDecl 0x7f8f460315f0 <col:3, col:10> col:10 used e4 'Engine':'Engine'
+    |-CallExpr 0x7f8f46031750 <col:14, col:22> 'void'
+    | |-ImplicitCastExpr 0x7f8f46031738 <col:14> 'void (*)(Engine *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8f46031668 <col:14> 'void (Engine *)' Function 0x7f8f4602bb70 'ctor' 'void (Engine *)'
+    | `-UnaryOperator 0x7f8f460316b8 <col:19, col:20> 'Engine *' prefix '&'
+    |   `-DeclRefExpr 0x7f8f46031690 <col:20> 'Engine':'Engine' lvalue Var 0x7f8f460315f0 'e4' 'Engine':'Engine'
+    |-DeclStmt 0x7f8f46031800 <line:72:3, col:12>
+    | `-VarDecl 0x7f8f46031790 <col:3, col:10> col:10 used e5 'Engine':'Engine'
+    |-CallExpr 0x7f8f460318a0 <col:14, col:22> 'void'
+    | |-ImplicitCastExpr 0x7f8f46031888 <col:14> 'void (*)(Engine *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8f46031818 <col:14> 'void (Engine *)' Function 0x7f8f4602bb70 'ctor' 'void (Engine *)'
+    | `-UnaryOperator 0x7f8f46031868 <col:19, col:20> 'Engine *' prefix '&'
+    |   `-DeclRefExpr 0x7f8f46031840 <col:20> 'Engine':'Engine' lvalue Var 0x7f8f46031790 'e5' 'Engine':'Engine'
+    |-IfStmt 0x7f8f46031b28 <line:73:3, line:74:22>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8f46031a98 <line:73:6, col:29> 'int' '!='
+    | | |-CallExpr 0x7f8f460319b0 <col:6, col:16> 'uint32_t':'unsigned int'
+    | | | |-ImplicitCastExpr 0x7f8f46031998 <col:6> 'uint32_t (*)(Engine *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f8f460318d0 <col:6> 'uint32_t (Engine *)' Function 0x7f8f46030cd0 'method' 'uint32_t (Engine *)'
+    | | | `-UnaryOperator 0x7f8f46031920 <col:13, col:14> 'Engine *' prefix '&'
+    | | |   `-DeclRefExpr 0x7f8f460318f8 <col:14> 'Engine':'Engine' lvalue Var 0x7f8f460315f0 'e4' 'Engine':'Engine'
+    | | `-CallExpr 0x7f8f46031a68 <col:19, col:29> 'uint32_t':'unsigned int'
+    | |   |-ImplicitCastExpr 0x7f8f46031a50 <col:19> 'uint32_t (*)(Engine *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f8f460319e0 <col:19> 'uint32_t (Engine *)' Function 0x7f8f46030cd0 'method' 'uint32_t (Engine *)'
+    | |   `-UnaryOperator 0x7f8f46031a30 <col:26, col:27> 'Engine *' prefix '&'
+    | |     `-DeclRefExpr 0x7f8f46031a08 <col:27> 'Engine':'Engine' lvalue Var 0x7f8f46031790 'e5' 'Engine':'Engine'
+    | |-CallExpr 0x7f8f46031b00 <line:74:5, col:22> 'void'
+    | | `-ImplicitCastExpr 0x7f8f46031ae8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7f8f46031ac0 <col:5> '<builtin fn type>' Function 0x7f8f4602dca0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8f46031b80 <line:75:3, col:10>
+      `-IntegerLiteral 0x7f8f46031b60 <col:10> 'int' 0

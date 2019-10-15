@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f8d048228e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8d0401d868 <../Data/C2AST/pr48084-5.c:4:1, line:8:1> line:5:1 _rdrand16_step 'int (unsigned short *)'
+| |-ParmVarDecl 0x7f8d048235a0 <col:17, col:33> col:33 used __P 'unsigned short *'
+| `-CompoundStmt 0x7f8d0401dbb8 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7f8d0401dba0 <line:7:3, col:43>
+|     `-ImplicitCastExpr 0x7f8d0401db88 <col:10, col:43> 'int' <IntegralCast>
+|       `-CallExpr 0x7f8d0401db40 <col:10, col:43> 'unsigned int'
+|         |-ImplicitCastExpr 0x7f8d0401db28 <col:10> 'unsigned int (*)(unsigned short *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f8d0401da90 <col:10> '<builtin fn type>' Function 0x7f8d0401d988 '__builtin_ia32_rdrand16_step' 'unsigned int (unsigned short *)'
+|         `-ImplicitCastExpr 0x7f8d0401db70 <col:40> 'unsigned short *' <LValueToRValue>
+|           `-DeclRefExpr 0x7f8d0401dab8 <col:40> 'unsigned short *' lvalue ParmVar 0x7f8d048235a0 '__P' 'unsigned short *'
+`-FunctionDecl 0x7f8d0401d988 <col:10> col:10 implicit used __builtin_ia32_rdrand16_step 'unsigned int (unsigned short *)' extern
+  `-ParmVarDecl 0x7f8d0401da28 <<invalid sloc>> <invalid sloc> 'unsigned short *'

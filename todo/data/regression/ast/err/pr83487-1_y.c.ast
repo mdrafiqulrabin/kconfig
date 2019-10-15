@@ -1,0 +1,87 @@
+../Data/C2AST/pr83487-1_y.c:1:10: fatal error: 'pr83487-1.h' file not found
+#include "pr83487-1.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7fb8fd02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb8fd02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb8fd02bf80 '__int128'
+|-TypedefDecl 0x7fb8fd02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb8fd02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb8fd02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb8fd02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb8fd02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb8fd02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb8fd02c600 'char *'
+|   `-BuiltinType 0x7fb8fd02bd80 'char'
+|-TypedefDecl 0x7fb8fd02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb8fd02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb8fd02c720 'struct __va_list_tag'
+|     `-Record 0x7fb8fd02c698 '__va_list_tag'
+|-RecordDecl 0x7fb8fd02c960 <../Data/C2AST/pr83487-1_y.c:3:1, col:8> col:8 struct A
+|-VarDecl 0x7fb8fd06e870 <col:1, col:10> col:10 used invalid a 'struct A':'struct A'
+|-RecordDecl 0x7fb8fd06e928 <line:4:1, col:8> col:8 struct B
+|-VarDecl 0x7fb8fd06ea20 <col:1, col:10> col:10 used invalid b 'struct B':'struct B'
+|-RecordDecl 0x7fb8fd06ea98 <line:5:1, col:8> col:8 struct C
+|-VarDecl 0x7fb8fd06eb90 <col:1, col:10> col:10 used invalid c 'struct C':'struct C'
+|-FunctionDecl 0x7fb8fd06f110 <line:7:1, col:74> col:13 used f1 'void (int, int, int, int, int, int, int, struct A)' extern
+| |-ParmVarDecl 0x7fb8fd06ec20 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fb8fd06ec98 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fb8fd06ed10 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fb8fd06ed88 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fb8fd06ee00 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fb8fd06ee78 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fb8fd06eef0 <col:59, col:63> col:63 o 'int'
+| `-ParmVarDecl 0x7fb8fd06ef70 <col:66, col:73> col:74 'struct A':'struct A'
+|-FunctionDecl 0x7fb8fd085270 <line:8:1, col:88> col:13 used f2 'void (int, int, int, int, int, int, int, struct A, int, int)' extern
+| |-ParmVarDecl 0x7fb8fd06f208 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fb8fd06f280 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fb8fd06f2f8 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fb8fd06f370 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fb8fd06f3e8 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fb8fd06f460 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fb8fd06f4d8 <col:59, col:63> col:63 o 'int'
+| |-ParmVarDecl 0x7fb8fd06f558 <col:66, col:73> col:74 'struct A':'struct A'
+| |-ParmVarDecl 0x7fb8fd06f5d0 <col:76, col:80> col:80 p 'int'
+| `-ParmVarDecl 0x7fb8fd06f648 <col:83, col:87> col:87 q 'int'
+|-FunctionDecl 0x7fb8fd085990 <line:9:1, col:88> col:13 used f3 'void (int, int, int, int, int, int, int, struct B, int, int)' extern
+| |-ParmVarDecl 0x7fb8fd085378 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fb8fd0853f0 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fb8fd085468 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fb8fd0854e0 <col:38, col:42> col:42 l 'int'
+| |-ParmVarDecl 0x7fb8fd085558 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fb8fd0855d0 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fb8fd085648 <col:59, col:63> col:63 o 'int'
+| |-ParmVarDecl 0x7fb8fd0856c8 <col:66, col:73> col:74 'struct B':'struct B'
+| |-ParmVarDecl 0x7fb8fd085740 <col:76, col:80> col:80 p 'int'
+| `-ParmVarDecl 0x7fb8fd0857b8 <col:83, col:87> col:87 q 'int'
+|-FunctionDecl 0x7fb8fd0860b0 <line:10:1, col:88> col:13 used f4 'void (int, int, int, int, int, int, int, struct C, int, int)' extern
+| |-ParmVarDecl 0x7fb8fd085a98 <col:17, col:21> col:21 i 'int'
+| |-ParmVarDecl 0x7fb8fd085b10 <col:24, col:28> col:28 j 'int'
+| |-ParmVarDecl 0x7fb8fd085b88 <col:31, col:35> col:35 k 'int'
+| |-ParmVarDecl 0x7fb8fd085c00 <col:38, col:42> col:42 l 'in1 error generated.
+t'
+| |-ParmVarDecl 0x7fb8fd085c78 <col:45, col:49> col:49 m 'int'
+| |-ParmVarDecl 0x7fb8fd085cf0 <col:52, col:56> col:56 n 'int'
+| |-ParmVarDecl 0x7fb8fd085d68 <col:59, col:63> col:63 o 'int'
+| |-ParmVarDecl 0x7fb8fd085de8 <col:66, col:73> col:74 'struct C':'struct C'
+| |-ParmVarDecl 0x7fb8fd085e60 <col:76, col:80> col:80 p 'int'
+| `-ParmVarDecl 0x7fb8fd085ed8 <col:83, col:87> col:87 q 'int'
+|-FunctionDecl 0x7fb8fd086390 <line:11:1, col:32> col:13 used f5 'void (int, struct A)' extern
+| |-ParmVarDecl 0x7fb8fd086200 <col:17, col:21> col:21 o 'int'
+| `-ParmVarDecl 0x7fb8fd086280 <col:24, col:31> col:32 'struct A':'struct A'
+|-FunctionDecl 0x7fb8fd086710 <line:12:1, col:46> col:13 used f6 'void (int, struct A, int, int)' extern
+| |-ParmVarDecl 0x7fb8fd086458 <col:17, col:21> col:21 o 'int'
+| |-ParmVarDecl 0x7fb8fd0864d8 <col:24, col:31> col:32 'struct A':'struct A'
+| |-ParmVarDecl 0x7fb8fd086550 <col:34, col:38> col:38 p 'int'
+| `-ParmVarDecl 0x7fb8fd0865c8 <col:41, col:45> col:45 q 'int'
+|-FunctionDecl 0x7fb8fd086aa0 <line:13:1, col:46> col:13 used f7 'void (int, struct B, int, int)' extern
+| |-ParmVarDecl 0x7fb8fd0867e8 <col:17, col:21> col:21 o 'int'
+| |-ParmVarDecl 0x7fb8fd086868 <col:24, col:31> col:32 'struct B':'struct B'
+| |-ParmVarDecl 0x7fb8fd0868e0 <col:34, col:38> col:38 p 'int'
+| `-ParmVarDecl 0x7fb8fd086958 <col:41, col:45> col:45 q 'int'
+|-FunctionDecl 0x7fb8fd086e30 <line:14:1, col:46> col:13 used f8 'void (int, struct C, int, int)' extern
+| |-ParmVarDecl 0x7fb8fd086b78 <col:17, col:21> col:21 o 'int'
+| |-ParmVarDecl 0x7fb8fd086bf8 <col:24, col:31> col:32 'struct C':'struct C'
+| |-ParmVarDecl 0x7fb8fd086c70 <col:34, col:38> col:38 p 'int'
+| `-ParmVarDecl 0x7fb8fd086ce8 <col:41, col:45> col:45 q 'int'
+`-FunctionDecl 0x7fb8fd086f38 <line:16:1, line:27:1> line:17:1 do_test 'void ()'
+  `-CompoundStmt 0x7fb8fd087e88 <line:18:1, line:27:1>

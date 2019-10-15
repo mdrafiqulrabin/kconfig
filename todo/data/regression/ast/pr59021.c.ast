@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7fa05702bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa057814250 <../Data/C2AST/pr59021.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa0578142f0 prev 0x7fa057814250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fa057814390 <line:6:1, line:10:1> line:6:8 struct S definition
+| |-FieldDecl 0x7fa057814458 <line:7:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fa0578144b8 <line:8:3, col:7> col:7 i2 'int'
+| `-FieldDecl 0x7fa057814518 <line:9:3, col:7> col:7 i3 'int'
+|-TypedefDecl 0x7fa0578145b8 <line:12:1, col:16> col:16 referenced v4df '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7fa057814580 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7fa05702bf00 'double'
+|-FunctionDecl 0x7fa057814ae8 <line:14:1, col:73> col:12 used foo 'int (v4df, int, int, int, int, int, struct S)' extern
+| |-ParmVarDecl 0x7fa057814640 <col:17> col:21 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7fa0578146b8 <col:23, col:27> col:27 i1 'int'
+| |-ParmVarDecl 0x7fa057814730 <col:31, col:35> col:35 i2 'int'
+| |-ParmVarDecl 0x7fa0578147a8 <col:39, col:43> col:43 i3 'int'
+| |-ParmVarDecl 0x7fa057814820 <col:47, col:51> col:51 i4 'int'
+| |-ParmVarDecl 0x7fa057814898 <col:55, col:59> col:59 i5 'int'
+| `-ParmVarDecl 0x7fa057814950 <col:63, col:72> col:72 s 'struct S':'struct S'
+`-FunctionDecl 0x7fa057814da0 <line:16:1, line:21:1> line:16:6 bar 'void (v4df, struct S)'
+  |-ParmVarDecl 0x7fa057814c10 <col:11, col:16> col:16 used v 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+  |-ParmVarDecl 0x7fa057814c90 <col:19, col:28> col:28 used s 'struct S':'struct S'
+  `-CompoundStmt 0x7fa05782bc00 <line:17:1, line:21:1>
+    |-DeclStmt 0x7fa0578150e0 <line:18:3, col:36>
+    | `-VarDecl 0x7fa057814e68 <col:3, col:35> col:7 used r 'int' cinit
+    |   `-CallExpr 0x7fa057815050 <col:11, col:35> 'int'
+    |     |-ImplicitCastExpr 0x7fa057815038 <col:11> 'int (*)(v4df, int, int, int, int, int, struct S)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa057814ec8 <col:11> 'int (v4df, int, int, int, int, int, struct S)' Function 0x7fa057814ae8 'foo' 'int (v4df, int, int, int, int, int, struct S)'
+    |     |-ImplicitCastExpr 0x7fa0578150b0 <col:16> 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fa057814ef0 <col:16> 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue ParmVar 0x7fa057814c10 'v' 'v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |     |-IntegerLiteral 0x7fa057814f18 <col:19> 'int' 1
+    |     |-IntegerLiteral 0x7fa057814f38 <col:22> 'int' 2
+    |     |-IntegerLiteral 0x7fa057814f58 <col:25> 'int' 3
+    |     |-IntegerLiteral 0x7fa057814f78 <col:28> 'int' 4
+    |     |-IntegerLiteral 0x7fa057814f98 <col:31> 'int' 5
+    |     `-ImplicitCastExpr 0x7fa0578150c8 <col:34> 'struct S':'struct S' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa057814fb8 <col:34> 'struct S':'struct S' lvalue ParmVar 0x7fa057814c90 's' 'struct S':'struct S'
+    `-IfStmt 0x7fa0578151c8 <line:19:3, line:20:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fa057815120 <line:19:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fa0578150f8 <col:7> 'int' lvalue Var 0x7fa057814e68 'r' 'int'
+      |-CallExpr 0x7fa0578151a0 <line:20:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7fa057815188 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fa057815138 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa0578142f0 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

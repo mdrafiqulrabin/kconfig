@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7feb4382bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7feb44014250 <../Data/C2AST/pr47967.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7feb440142f0 prev 0x7feb44014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7feb440143d8 <line:5:1, col:18> col:13 used bar 'void ()' static
+|-FunctionDecl 0x7feb440144d8 <line:7:1, line:11:1> line:8:1 foo 'void ()'
+| `-CompoundStmt 0x7feb44014630 <line:9:1, line:11:1>
+|   `-CallExpr 0x7feb44014600 <line:10:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7feb440145e8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7feb44014578 <col:3> 'void ()' Function 0x7feb440143d8 'bar' 'void ()'
+|     `-IntegerLiteral 0x7feb440145a0 <col:8> 'int' 1
+`-FunctionDecl 0x7feb44014720 prev 0x7feb440143d8 <line:13:1, line:18:1> line:14:1 used bar 'void (double)' static
+  |-ParmVarDecl 0x7feb44014660 <col:6, col:13> col:13 used i 'double'
+  `-CompoundStmt 0x7feb440148d0 <line:15:1, line:18:1>
+    `-IfStmt 0x7feb44014898 <line:16:3, line:17:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7feb440147f0 <line:16:7> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7feb440147c8 <col:7> 'double' lvalue ParmVar 0x7feb44014660 'i' 'double'
+      |-CallExpr 0x7feb44014870 <line:17:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7feb44014858 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7feb44014808 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7feb440142f0 'abort' 'void (void) __attribute__((noreturn))'
+      `-<<<NULL>>>

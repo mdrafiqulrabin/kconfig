@@ -1,0 +1,174 @@
+TranslationUnitDecl 0x7ff30802b6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff30806d268 <../Data/C2AST/pr42614.c:1:14> col:14 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7ff30806d308 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7ff30806d370 prev 0x7ff30806d268 <col:1, col:34> col:14 used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7ff30802c378 <<built-in>:81:23, col:37> ../Data/C2AST/pr42614.c:1:34 'unsigned long'
+|-FunctionDecl 0x7ff30806d510 <line:2:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff30806d5b0 prev 0x7ff30806d510 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff30806d730 <line:3:1, col:24> col:13 used free 'void (void *)' extern
+| `-ParmVarDecl 0x7ff30806d668 <col:18, col:23> col:24 'void *'
+|-RecordDecl 0x7ff30806d818 <line:5:9, line:8:1> line:5:16 struct SEntry definition
+| `-FieldDecl 0x7ff30806d8d8 <line:7:3, col:17> col:17 referenced num 'unsigned char'
+|-TypedefDecl 0x7ff30806d970 <line:5:1, line:8:3> col:3 referenced TEntry 'struct SEntry':'struct SEntry'
+| `-ElaboratedType 0x7ff30806d920 'struct SEntry' sugar
+|   `-RecordType 0x7ff30806d8a0 'struct SEntry'
+|     `-Record 0x7ff30806d818 'SEntry'
+|-RecordDecl 0x7ff30806d9e0 <line:10:9, line:13:1> line:10:16 struct STable definition
+| `-FieldDecl 0x7ff30806dbb8 <line:12:3, col:16> col:10 referenced data 'TEntry [2]'
+|-TypedefDecl 0x7ff30806dc50 <line:10:1, line:13:3> col:3 referenced TTable 'struct STable':'struct STable'
+| `-ElaboratedType 0x7ff30806dc00 'struct STable' sugar
+|   `-RecordType 0x7ff30806da70 'struct STable'
+|     `-Record 0x7ff30806d9e0 'STable'
+|-FunctionDecl 0x7ff30806ddb8 <line:15:1, line:18:1> line:15:9 used init 'TTable *()'
+| `-CompoundStmt 0x7ff30806df50 <line:16:1, line:18:1>
+|   `-ReturnStmt 0x7ff30806df38 <line:17:3, col:31>
+|     `-ImplicitCastExpr 0x7ff30806df20 <col:10, col:31> 'TTable *' <BitCast>
+|       `-CallExpr 0x7ff30806def0 <col:10, col:31> 'void *'
+|         |-ImplicitCastExpr 0x7ff30806ded8 <col:10> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7ff30806de58 <col:10> 'void *(unsigned long)' Function 0x7ff30806d370 'malloc' 'void *(unsigned long)'
+|         `-UnaryExprOrTypeTraitExpr 0x7ff30806de90 <col:17, col:30> 'unsigned long' sizeof 'TTable':'struct STable'
+|-FunctionDecl 0x7ff30806e0f0 <line:20:1, line:21:64> col:1 used expect_func 'void (int, unsigned char *)'
+| |-ParmVarDecl 0x7ff30806df80 <col:14, col:18> col:18 a 'int'
+| |-ParmVarDecl 0x7ff30806e020 <col:21, col:36> col:36 b 'unsigned char *'
+| `-NoInlineAttr 0x7ff30806e1a0 <col:55>
+|-FunctionDecl 0x7ff308085df0 <line:23:1, line:24:41> col:1 used inlined_wrong 'void (TEntry *, int)' static inline
+| |-ParmVarDecl 0x7ff308085c68 <col:16, col:24> col:24 entry_p 'TEntry *'
+| `-ParmVarDecl 0x7ff308085ce0 <col:33, col:37> col:37 flag 'int'
+|-FunctionDecl 0x7ff308085fb8 prev 0x7ff308085df0 <line:26:1, line:42:1> line:27:1 used inlined_wrong 'void (TEntry *, int)'
+| |-ParmVarDecl 0x7ff308085eb0 <col:16, col:24> col:24 used entry_p 'TEntry *'
+| |-ParmVarDecl 0x7ff308085f28 <col:33, col:37> col:37 used flag 'int'
+| `-CompoundStmt 0x7ff3080866c8 <line:28:1, line:42:1>
+|   |-DeclStmt 0x7ff3080860e0 <line:29:3, col:22>
+|   | `-VarDecl 0x7ff308086080 <col:3, col:17> col:17 used index 'unsigned char'
+|   |-BinaryOperator 0x7ff3080861a8 <line:30:3, col:18> 'unsigned char' '='
+|   | |-MemberExpr 0x7ff308086138 <col:3, col:12> 'unsigned char' lvalue ->num 0x7ff30806d8d8
+|   | | `-ImplicitCastExpr 0x7ff308086120 <col:3> 'TEntry *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7ff3080860f8 <col:3> 'TEntry *' lvalue ParmVar 0x7ff308085eb0 'entry_p' 'TEntry *'
+|   | `-ImplicitCastExpr 0x7ff308086190 <col:18> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7ff308086170 <col:18> 'int' 0
+|   |-IfStmt 0x7ff3080862e8 <line:32:3, line:33:11>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff308086230 <line:32:7, col:15> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7ff308086218 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff3080861d0 <col:7> 'int' lvalue ParmVar 0x7ff308085f28 'flag' 'int'
+|   | | `-IntegerLiteral 0x7ff3080861f8 <col:15> 'int' 0
+|   | |-CallExpr 0x7ff3080862c0 <line:33:5, col:11> 'void'
+|   | | `-ImplicitCastExpr 0x7ff3080862a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7ff308086258 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff30806d5b0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-ForStmt 0x7ff308086528 <line:35:3, line:36:17>
+|   | |-BinaryOperator 0x7ff308086380 <line:35:8, col:16> 'unsigned char' '='
+|   | | |-DeclRefExpr 0x7ff308086320 <col:8> 'unsigned char' lvalue Var 0x7ff308086080 'index' 'unsigned char'
+|   | | `-ImplicitCastExpr 0x7ff308086368 <col:16> 'unsigned char' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7ff308086348 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff308086420 <col:19, col:27> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ff308086408 <col:19> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7ff3080863f0 <col:19> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7ff3080863a8 <col:19> 'unsigned char' lvalue Var 0x7ff308086080 'index' 'unsigned char'
+|   | | `-IntegerLiteral 0x7ff3080863d0 <col:27> 'int' 1
+|   | |-UnaryOperator 0x7ff308086470 <col:30, col:35> 'unsigned char' postfix '++'
+|   | | `-DeclRefExpr 0x7ff308086448 <col:30> 'unsigned char' lvalue Var 0x7ff308086080 'index' 'unsigned char'
+|   | `-UnaryOperator 0x7ff308086508 <line:36:5, col:17> 'unsigned char' postfix '++'
+|   |   `-MemberExpr 0x7ff3080864d0 <col:5, col:14> 'unsigned char' lvalue ->num 0x7ff30806d8d8
+|   |     `-ImplicitCastExpr 0x7ff3080864b8 <col:5> 'TEntry *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff308086490 <col:5> 'TEntry *' lvalue ParmVar 0x7ff308085eb0 'entry_p' 'TEntry *'
+|   `-IfStmt 0x7ff308086690 <line:38:3, line:41:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7ff3080865f0 <line:38:7, col:17> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7ff3080865d8 <col:8, col:17> 'unsigned char' <LValueToRValue>
+|     |   `-MemberExpr 0x7ff3080865a0 <col:8, col:17> 'unsigned char' lvalue ->num 0x7ff30806d8d8
+|     |     `-ImplicitCastExpr 0x7ff308086588 <col:8> 'TEntry *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7ff308086560 <col:8> 'TEntry *' lvalue ParmVar 0x7ff308085eb0 'entry_p' 'TEntry *'
+|     |-CompoundStmt 0x7ff308086678 <line:39:5, line:41:5>
+|     | `-CallExpr 0x7ff308086650 <line:40:7, col:13> 'void'
+|     |   `-ImplicitCastExpr 0x7ff308086638 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     |     `-DeclRefExpr 0x7ff308086610 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7ff30806d5b0 'abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7ff308086820 prev 0x7ff30806e0f0 <line:44:1, line:51:1> line:45:1 used expect_func 'void (int, unsigned char *)'
+| |-ParmVarDecl 0x7ff308086718 <col:14, col:18> col:18 used a 'int'
+| |-ParmVarDecl 0x7ff308086790 <col:21, col:36> col:36 used b 'unsigned char *'
+| |-CompoundStmt 0x7ff308086e70 <line:46:1, line:51:1>
+| | |-IfStmt 0x7ff308086c68 <line:47:3, line:48:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-CallExpr 0x7ff308086bd0 <line:47:7, col:20> 'int'
+| | | | |-ImplicitCastExpr 0x7ff308086bb8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7ff308086ab8 <col:7> 'int (int)' Function 0x7ff308086958 'abs' 'int (int)'
+| | | | `-ParenExpr 0x7ff308086b68 <col:12, col:19> 'int'
+| | | |   `-BinaryOperator 0x7ff308086b40 <col:13, col:18> 'int' '=='
+| | | |     |-ImplicitCastExpr 0x7ff308086b28 <col:13> 'int' <LValueToRValue>
+| | | |     | `-DeclRefExpr 0x7ff308086ae0 <col:13> 'int' lvalue ParmVar 0x7ff308086718 'a' 'int'
+| | | |     `-IntegerLiteral 0x7ff308086b08 <col:18> 'int' 0
+| | | |-CallExpr 0x7ff308086c40 <line:48:5, col:12> 'void'
+| | | | `-ImplicitCastExpr 0x7ff308086c28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7ff308086c00 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff30806d5b0 'abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-IfStmt 0x7ff308086e38 <line:49:3, line:50:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-CallExpr 0x7ff308086da0 <line:49:7, col:20> 'int'
+| |   | |-ImplicitCastExpr 0x7ff308086d88 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+| |   | | `-DeclRefExpr 0x7ff308086ca0 <col:7> 'int (int)' Function 0x7ff308086958 'abs' 'int (int)'
+| |   | `-ParenExpr 0x7ff308086d68 <col:12, col:19> 'int'
+| |   |   `-BinaryOperator 0x7ff308086d40 <col:13, col:18> 'int' '=='
+| |   |     |-ImplicitCastExpr 0x7ff308086d10 <col:13> 'unsigned char *' <LValueToRValue>
+| |   |     | `-DeclRefExpr 0x7ff308086cc8 <col:13> 'unsigned char *' lvalue ParmVar 0x7ff308086790 'b' 'unsigned char *'
+| |   |     `-ImplicitCastExpr 0x7ff308086d28 <col:18> 'unsigned char *' <NullToPointer>
+| |   |       `-IntegerLiteral 0x7ff308086cf0 <col:18> 'int' 0
+| |   |-CallExpr 0x7ff308086e10 <line:50:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7ff308086df8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7ff308086dd0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff30806d5b0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7ff308086908 <line:21:55> Inherited
+|-FunctionDecl 0x7ff308086958 <line:47:7> col:7 implicit used abs 'int (int)' extern
+| |-ParmVarDecl 0x7ff3080869f8 <<invalid sloc>> <invalid sloc> 'int'
+| |-NoThrowAttr 0x7ff308086a60 <col:7> Implicit
+| `-ConstAttr 0x7ff308086aa8 <col:7> Implicit
+`-FunctionDecl 0x7ff308086ee0 <line:53:1, line:67:1> line:54:1 main 'int ()'
+  `-CompoundStmt 0x7ff308087748 <line:55:1, line:67:1>
+    |-DeclStmt 0x7ff308087030 <line:56:3, col:26>
+    | `-VarDecl 0x7ff308086f98 <col:3, col:25> col:17 used index 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7ff308087018 <col:25> 'unsigned char' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff308086ff8 <col:25> 'int' 0
+    |-DeclStmt 0x7ff308087178 <line:57:3, col:27>
+    | `-VarDecl 0x7ff308087058 <col:3, col:26> col:11 used table_p 'TTable *' cinit
+    |   `-CallExpr 0x7ff308087150 <col:21, col:26> 'TTable *'
+    |     `-ImplicitCastExpr 0x7ff308087138 <col:21> 'TTable *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7ff3080870b8 <col:21> 'TTable *()' Function 0x7ff30806ddb8 'init' 'TTable *()'
+    |-DeclStmt 0x7ff308087200 <line:58:3, col:14>
+    | `-VarDecl 0x7ff3080871a0 <col:3, col:10> col:10 used work 'TEntry':'struct SEntry'
+    |-CallExpr 0x7ff3080873f0 <line:60:3, col:40> 'void'
+    | |-ImplicitCastExpr 0x7ff3080873d8 <col:3> 'void (*)(TEntry *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff308087218 <col:3> 'void (TEntry *, int)' Function 0x7ff308085fb8 'inlined_wrong' 'void (TEntry *, int)'
+    | |-UnaryOperator 0x7ff308087338 <col:18, col:36> 'TEntry *' prefix '&'
+    | | `-ParenExpr 0x7ff308087318 <col:19, col:36> 'TEntry':'struct SEntry' lvalue
+    | |   `-ArraySubscriptExpr 0x7ff3080872f0 <col:20, col:35> 'TEntry':'struct SEntry' lvalue
+    | |     |-ImplicitCastExpr 0x7ff3080872d8 <col:20, col:29> 'TEntry *' <ArrayToPointerDecay>
+    | |     | `-MemberExpr 0x7ff308087280 <col:20, col:29> 'TEntry [2]' lvalue ->data 0x7ff30806dbb8
+    | |     |   `-ImplicitCastExpr 0x7ff308087268 <col:20> 'TTable *' <LValueToRValue>
+    | |     |     `-DeclRefExpr 0x7ff308087240 <col:20> 'TTable *' lvalue Var 0x7ff308087058 'table_p' 'TTable *'
+    | |     `-IntegerLiteral 0x7ff3080872b8 <col:34> 'int' 1
+    | `-IntegerLiteral 0x7ff308087358 <col:39> 'int' 1
+    |-CallExpr 0x7ff308087500 <line:61:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7ff3080874e8 <col:3> 'void (*)(int, unsigned char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff308087428 <col:3> 'void (int, unsigned char *)' Function 0x7ff308086820 'expect_func' 'void (int, unsigned char *)'
+    | |-IntegerLiteral 0x7ff308087450 <col:16> 'int' 1
+    | `-UnaryOperator 0x7ff308087498 <col:19, col:20> 'unsigned char *' prefix '&'
+    |   `-DeclRefExpr 0x7ff308087470 <col:20> 'unsigned char' lvalue Var 0x7ff308086f98 'index' 'unsigned char'
+    |-CallExpr 0x7ff3080875e0 <line:62:3, col:26> 'void'
+    | |-ImplicitCastExpr 0x7ff3080875c8 <col:3> 'void (*)(TEntry *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff308087538 <col:3> 'void (TEntry *, int)' Function 0x7ff308085fb8 'inlined_wrong' 'void (TEntry *, int)'
+    | |-UnaryOperator 0x7ff308087588 <col:18, col:19> 'TEntry *' prefix '&'
+    | | `-DeclRefExpr 0x7ff308087560 <col:19> 'TEntry':'struct SEntry' lvalue Var 0x7ff3080871a0 'work' 'TEntry':'struct SEntry'
+    | `-IntegerLiteral 0x7ff3080875a8 <col:25> 'int' 1
+    |-CallExpr 0x7ff3080876b0 <line:64:3, col:16> 'void'
+    | |-ImplicitCastExpr 0x7ff308087698 <col:3> 'void (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ff308087618 <col:3> 'void (void *)' Function 0x7ff30806d730 'free' 'void (void *)'
+    | `-ImplicitCastExpr 0x7ff3080876f8 <col:9> 'void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7ff3080876e0 <col:9> 'TTable *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7ff308087640 <col:9> 'TTable *' lvalue Var 0x7ff308087058 'table_p' 'TTable *'
+    `-ReturnStmt 0x7ff308087730 <line:66:3, col:10>
+      `-IntegerLiteral 0x7ff308087710 <col:10> 'int' 0

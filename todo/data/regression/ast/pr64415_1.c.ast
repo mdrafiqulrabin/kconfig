@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f7f6c82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f7f6c82c978 <../Data/C2AST/pr64415_1.c:3:1, col:12> col:12 used n 'int' extern
+|-FunctionDecl 0x7f7f6d0143a0 <line:5:1, col:21> col:6 bar 'void (char *, int)'
+| |-ParmVarDecl 0x7f7f6d014258 <col:10, col:15> col:16 'char *'
+| `-ParmVarDecl 0x7f7f6d0142d0 <col:18> col:21 'int'
+`-FunctionDecl 0x7f7f6d014570 prev 0x7f7f6d0143a0 <line:7:1, line:17:1> line:7:13 bar 'void (char *, int)' inline
+  |-ParmVarDecl 0x7f7f6d014468 <col:17, col:23> col:23 used s 'char *'
+  |-ParmVarDecl 0x7f7f6d0144e0 <col:26, col:30> col:30 i 'int'
+  `-CompoundStmt 0x7f7f6d014828 <line:8:1, line:17:1>
+    |-DeclStmt 0x7f7f6d0146d8 <line:9:3, col:14>
+    | `-VarDecl 0x7f7f6d014638 <col:3, col:13> col:9 p 'char *' cinit
+    |   `-ImplicitCastExpr 0x7f7f6d0146c0 <col:13> 'char *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f7f6d014698 <col:13> 'char *' lvalue ParmVar 0x7f7f6d014468 's' 'char *'
+    `-IfStmt 0x7f7f6d0147f0 <line:14:3, line:16:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f7f6d014718 <line:14:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f7f6d0146f0 <col:7> 'int' lvalue Var 0x7f7f6c82c978 'n' 'int'
+      |-BinaryOperator 0x7f7f6d0147c8 <line:16:5, col:10> 'char' '='
+      | |-UnaryOperator 0x7f7f6d014770 <col:5, col:6> 'char' lvalue prefix '*'
+      | | `-ImplicitCastExpr 0x7f7f6d014758 <col:6> 'char *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f7f6d014730 <col:6> 'char *' lvalue ParmVar 0x7f7f6d014468 's' 'char *'
+      | `-ImplicitCastExpr 0x7f7f6d0147b0 <col:10> 'char' <IntegralCast>
+      |   `-IntegerLiteral 0x7f7f6d014790 <col:10> 'int' 0
+      `-<<<NULL>>>

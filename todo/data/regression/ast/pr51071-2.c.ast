@@ -1,0 +1,88 @@
+TranslationUnitDecl 0x7fd4aa01a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd4aa01b578 <../Data/C2AST/pr51071-2.c:5:15, col:40> col:40 referenced uintptr_t 'unsigned long'
+| `-BuiltinType 0x7fd4aa01aaa0 'unsigned long'
+|-RecordDecl 0x7fd4aa814200 <line:7:8, col:15> col:15 struct module
+|-VarDecl 0x7fd4aa814300 <col:1, col:22> col:22 used __this_module 'struct module':'struct module' extern
+|-FunctionDecl 0x7fd4aa8145e0 <line:8:1, line:9:56> col:1 used trace_module_get 'void (struct module *, uintptr_t)' static inline
+| |-ParmVarDecl 0x7fd4aa814440 <col:20, col:35> col:35 mod 'struct module *'
+| |-ParmVarDecl 0x7fd4aa8144d0 <col:40, col:50> col:50 ip 'uintptr_t':'unsigned long'
+| `-CompoundStmt 0x7fd4aa814690 <col:54, col:56>
+|-RecordDecl 0x7fd4aa8146a0 prev 0x7fd4aa814200 <line:10:1, col:8> col:8 struct module
+|-FunctionDecl 0x7fd4aa814858 <line:11:1, col:36> col:5 used module_is_live 'int (struct module *)'
+| `-ParmVarDecl 0x7fd4aa814750 <col:21, col:35> col:36 'struct module *'
+|-FunctionDecl 0x7fd4aa8149b8 <line:12:1, line:29:1> line:13:5 used try_module_get 'int (struct module *)' static inline
+| |-ParmVarDecl 0x7fd4aa814928 <col:20, col:35> col:35 used module 'struct module *'
+| |-CompoundStmt 0x7fd4aa8150b0 <line:14:1, line:29:1>
+| | |-DeclStmt 0x7fd4aa814b40 <line:15:3, col:14>
+| | | `-VarDecl 0x7fd4aa814ac0 <col:3, col:13> col:7 used ret 'int' cinit
+| | |   `-IntegerLiteral 0x7fd4aa814b20 <col:13> 'int' 1
+| | |-IfStmt 0x7fd4aa815020 <line:16:3, line:27:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-ImplicitCastExpr 0x7fd4aa814b80 <line:16:7> 'struct module *' <LValueToRValue>
+| | | | `-DeclRefExpr 0x7fd4aa814b58 <col:7> 'struct module *' lvalue ParmVar 0x7fd4aa814928 'module' 'struct module *'
+| | | |-CompoundStmt 0x7fd4aa815008 <line:17:5, line:27:5>
+| | | | `-IfStmt 0x7fd4aa814fd0 <line:18:7, line:26:8>
+| | | |   |-<<<NULL>>>
+| | | |   |-<<<NULL>>>
+| | | |   |-CallExpr 0x7fd4aa814c60 <line:18:11, col:32> 'int'
+| | | |   | |-ImplicitCastExpr 0x7fd4aa814c48 <col:11> 'int (*)(struct module *)' <FunctionToPointerDecay>
+| | | |   | | `-DeclRefExpr 0x7fd4aa814b98 <col:11> 'int (struct module *)' Function 0x7fd4aa814858 'module_is_live' 'int (struct module *)'
+| | | |   | `-ImplicitCastExpr 0x7fd4aa814c90 <col:26> 'struct module *' <LValueToRValue>
+| | | |   |   `-DeclRefExpr 0x7fd4aa814bc0 <col:26> 'struct module *' lvalue ParmVar 0x7fd4aa814928 'module' 'struct module *'
+| | | |   |-CompoundStmt 0x7fd4aa814f38 <line:19:2, line:24:2>
+| | | |   | |-DeclStmt 0x7fd4aa814cf0 <line:20:4, col:20>
+| | | |   | | `-LabelDecl 0x7fd4aa814ca8 <col:4, col:14> col:14 used __here
+| | | |   | |-GCCAsmStmt 0x7fd4aa814d70 <line:21:4, col:10>
+| | | |   | `-LabelStmt 0x7fd4aa814f20 <line:22:4, line:23:48> '__here'
+| | | |   |   `-CallExpr 0x7fd4aa814ed0 <col:4, col:48> 'void'
+| | | |   |     |-ImplicitCastExpr 0x7fd4aa814eb8 <col:4> 'void (*)(struct module *, uintptr_t)' <FunctionToPointerDecay>
+| | | |   |     | `-DeclRefExpr 0x7fd4aa814db8 <col:4> 'void (struct module *, uintptr_t)' Function 0x7fd4aa8145e0 'trace_module_get' 'void (struct module *, uintptr_t)'
+| | | |   |     |-ImplicitCastExpr 0x7fd4aa814f08 <col:21> 'struct module *' <LValueToRValue>
+| | | |   |     | `-DeclRefExpr 0x7fd4aa814de0 <col:21> 'struct module *' lvalue ParmVar 0x7fd4aa814928 'module' 'struct module *'
+| | | |   |     `-CStyleCastExpr 0x7fd4aa814e38 <col:29, col:42> 'uintptr_t':'unsigned long' <PointerToIntegral>
+| | | |   |       `-AddrLabelExpr 0x7fd4aa814e08 <col:40, col:42> 'void *' __here 0x7fd4aa814ca8
+| | | |   `-BinaryOperator 0x7fd4aa814fa8 <line:26:2, col:8> 'int' '='
+| | | |     |-DeclRefExpr 0x7fd4aa814f60 <col:2> 'int' lvalue Var 0x7fd4aa814ac0 'ret' 'int'
+| | | |     `-IntegerLiteral 0x7fd4aa814f88 <col:8> 'int' 0
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fd4aa815098 <line:28:3, col:10>
+| |   `-ImplicitCastExpr 0x7fd4aa815080 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fd4aa815058 <col:10> 'int' lvalue Var 0x7fd4aa814ac0 'ret' 'int'
+| `-NoInstrumentFunctionAttr 0x7fd4aa814a60 <line:12:30>
+|-RecordDecl 0x7fd4aa8150d8 <line:30:1, col:8> col:8 struct net_device
+|-RecordDecl 0x7fd4aa831e00 <line:31:1, line:33:1> line:31:8 struct net_device_ops definition
+| `-FieldDecl 0x7fd4aa832108 <line:32:5, col:43> col:11 ndo_open 'int (*)(struct net_device *)'
+|-FunctionDecl 0x7fd4aa832208 <line:34:1, col:35> col:5 used hdlc_open 'int (struct net_device *)'
+| `-ParmVarDecl 0x7fd4aa832178 <col:16, col:34> col:35 'struct net_device *'
+|-FunctionDecl 0x7fd4aa832368 <line:35:1, line:42:1> line:35:5 used t3e3_open 'int (struct net_device *)'
+| |-ParmVarDecl 0x7fd4aa8322d8 <col:15, col:34> col:34 used dev 'struct net_device *'
+| `-CompoundStmt 0x7fd4aa832760 <line:36:1, line:42:1>
+|   |-DeclStmt 0x7fd4aa832568 <line:37:3, col:27>
+|   | `-VarDecl 0x7fd4aa832428 <col:3, col:26> col:7 used ret 'int' cinit
+|   |   `-CallExpr 0x7fd4aa832520 <col:13, col:26> 'int'
+|   |     |-ImplicitCastExpr 0x7fd4aa832508 <col:13> 'int (*)(struct net_device *)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fd4aa832488 <col:13> 'int (struct net_device *)' Function 0x7fd4aa832208 'hdlc_open' 'int (struct net_device *)'
+|   |     `-ImplicitCastExpr 0x7fd4aa832550 <col:23> 'struct net_device *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd4aa8324b0 <col:23> 'struct net_device *' lvalue ParmVar 0x7fd4aa8322d8 'dev' 'struct net_device *'
+|   |-IfStmt 0x7fd4aa832618 <line:38:3, line:39:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fd4aa8325a8 <line:38:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fd4aa832580 <col:7> 'int' lvalue Var 0x7fd4aa832428 'ret' 'int'
+|   | |-ReturnStmt 0x7fd4aa832600 <line:39:5, col:12>
+|   | | `-ImplicitCastExpr 0x7fd4aa8325e8 <col:12> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fd4aa8325c0 <col:12> 'int' lvalue Var 0x7fd4aa832428 'ret' 'int'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd4aa8326f8 <line:40:3, col:34> 'int'
+|   | |-ImplicitCastExpr 0x7fd4aa8326e0 <col:3> 'int (*)(struct module *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd4aa832650 <col:3> 'int (struct module *)' Function 0x7fd4aa8149b8 'try_module_get' 'int (struct module *)'
+|   | `-ParenExpr 0x7fd4aa8326c0 <col:18, col:33> 'struct module *'
+|   |   `-UnaryOperator 0x7fd4aa8326a0 <col:19, col:20> 'struct module *' prefix '&'
+|   |     `-DeclRefExpr 0x7fd4aa832678 <col:20> 'struct module':'struct module' lvalue Var 0x7fd4aa814300 '__this_module' 'struct module':'struct module'
+|   `-ReturnStmt 0x7fd4aa832748 <line:41:3, col:10>
+|     `-IntegerLiteral 0x7fd4aa832728 <col:10> 'int' 0
+`-VarDecl 0x7fd4aa8327e0 <line:43:1, col:64> col:29 t3e3_ops 'const struct net_device_ops':'const struct net_device_ops' cinit
+  `-InitListExpr 0x7fd4aa8328f0 <col:40, col:64> 'struct net_device_ops':'struct net_device_ops'
+    `-ImplicitCastExpr 0x7fd4aa832938 <col:54> 'int (*)(struct net_device *)' <FunctionToPointerDecay>
+      `-DeclRefExpr 0x7fd4aa832840 <col:54> 'int (struct net_device *)' Function 0x7fd4aa832368 't3e3_open' 'int (struct net_device *)'

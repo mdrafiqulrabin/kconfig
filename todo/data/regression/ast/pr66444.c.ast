@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7f9f1b00fae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9f1a828650 <../Data/C2AST/pr66444.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9f1a8286f0 prev 0x7f9f1a828650 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f9f1a828858 <line:24:1, line:28:1> line:25:1 used bar 'int (void)'
+| |-CompoundStmt 0x7f9f1a8289b8 <line:26:1, line:28:1>
+| | `-ReturnStmt 0x7f9f1a8289a0 <line:27:3, col:10>
+| |   `-IntegerLiteral 0x7f9f1a828980 <col:10> 'int' 1
+| `-NoInlineAttr 0x7f9f1a8288f8 <line:24:20>
+|-RecordDecl 0x7f9f1a8289d0 <line:30:1, line:34:1> line:30:8 struct S definition
+| |-FieldDecl 0x7f9f1a828a98 <line:32:3, col:17> col:17 p 'unsigned long'
+| |-FieldDecl 0x7f9f1a828af8 <col:3, col:20> col:20 q 'unsigned long'
+| |-FieldDecl 0x7f9f1a828b58 <col:3, col:23> col:23 r 'unsigned long'
+| `-FieldDecl 0x7f9f1a828bb8 <line:33:3, col:9> col:9 v 'void *'
+|-VarDecl 0x7f9f1a828cb0 <line:36:1, col:11> col:11 used s1 'struct S *'
+|-VarDecl 0x7f9f1a828d38 <line:37:1, col:11> col:11 used s2 'struct S *'
+|-FunctionDecl 0x7f9f1a828ec0 <line:39:1, line:43:1> line:40:1 used fn2 'void (struct S *)'
+| |-ParmVarDecl 0x7f9f1a828dc0 <col:6, col:16> col:16 used x 'struct S *'
+| |-CompoundStmt 0x7f9f1a829040 <line:41:1, line:43:1>
+| | `-BinaryOperator 0x7f9f1a829018 <line:42:3, col:8> 'struct S *' '='
+| |   |-DeclRefExpr 0x7f9f1a828fb0 <col:3> 'struct S *' lvalue Var 0x7f9f1a828d38 's2' 'struct S *'
+| |   `-ImplicitCastExpr 0x7f9f1a829000 <col:8> 'struct S *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9f1a828fd8 <col:8> 'struct S *' lvalue ParmVar 0x7f9f1a828dc0 'x' 'struct S *'
+| `-NoInlineAttr 0x7f9f1a828f68 <line:39:21>
+|-FunctionDecl 0x7f9f1a829188 <line:45:1, line:52:1> line:46:1 used fn1 'void *(struct S *)'
+| |-ParmVarDecl 0x7f9f1a829080 <col:6, col:16> col:16 used x 'struct S *'
+| |-CompoundStmt 0x7f9f1a829380 <line:47:1, line:52:1>
+| | |-BinaryOperator 0x7f9f1a8292e0 <line:49:3, col:8> 'struct S *' '='
+| | | |-DeclRefExpr 0x7f9f1a829278 <col:3> 'struct S *' lvalue Var 0x7f9f1a828cb0 's1' 'struct S *'
+| | | `-ImplicitCastExpr 0x7f9f1a8292c8 <col:8> 'struct S *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f9f1a8292a0 <col:8> 'struct S *' lvalue ParmVar 0x7f9f1a829080 'x' 'struct S *'
+| | `-ReturnStmt 0x7f9f1a829368 <line:51:3, col:18>
+| |   `-CStyleCastExpr 0x7f9f1a829340 <col:10, col:18> 'void *' <NullToPointer>
+| |     `-IntegerLiteral 0x7f9f1a829308 <col:18> 'int' 0
+| `-NoInlineAttr 0x7f9f1a829230 <line:45:16>
+|-FunctionDecl 0x7f9f1a829438 <line:54:1, line:65:1> line:55:1 used baz 'int (void)'
+| |-CompoundStmt 0x7f9f1a841b80 <line:56:1, line:65:1>
+| | |-DeclStmt 0x7f9f1a841828 <line:57:3, col:39>
+| | | `-VarDecl 0x7f9f1a829548 <col:3, <scratch space>:2:1> ../Data/C2AST/pr66444.c:57:13 used x 'struct S *' cinit
+| | |   `-CStyleCastExpr 0x7f9f1a841800 <col:17, <scratch space>:2:1> 'struct S *' <IntegralToPointer>
+| | |     `-IntegerLiteral 0x7f9f1a8295a8 <col:1> 'unsigned long long' 2147483648
+| | |-CompoundAssignOperator 0x7f9f1a8418f8 <../Data/C2AST/pr66444.c:59:3, col:13> 'struct S *' '+=' ComputeLHSTy='struct S *' ComputeResultTy='struct S *'
+| | | |-DeclRefExpr 0x7f9f1a841840 <col:3> 'struct S *' lvalue Var 0x7f9f1a829548 'x' 'struct S *'
+| | | `-CallExpr 0x7f9f1a8418d0 <col:8, col:13> 'int'
+| | |   `-ImplicitCastExpr 0x7f9f1a8418b8 <col:8> 'int (*)(void)' <FunctionToPointerDecay>
+| | |     `-DeclRefExpr 0x7f9f1a841868 <col:8> 'int (void)' Function 0x7f9f1a828858 'bar' 'int (void)'
+| | |-CallExpr 0x7f9f1a8419f0 <line:61:3, col:9> 'void *'
+| | | |-ImplicitCastExpr 0x7f9f1a8419d8 <col:3> 'void *(*)(struct S *)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7f9f1a841930 <col:3> 'void *(struct S *)' Function 0x7f9f1a829188 'fn1' 'void *(struct S *)'
+| | | `-ImplicitCastExpr 0x7f9f1a841a20 <col:8> 'struct S *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f9f1a841958 <col:8> 'struct S *' lvalue Var 0x7f9f1a829548 'x' 'struct S *'
+| | |-CallExpr 0x7f9f1a841b00 <line:62:3, col:9> 'void'
+| | | |-ImplicitCastExpr 0x7f9f1a841ae8 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7f9f1a841a38 <col:3> 'void (struct S *)' Function 0x7f9f1a828ec0 'fn2' 'void (struct S *)'
+| | | `-ImplicitCastExpr 0x7f9f1a841b30 <col:8> 'struct S *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7f9f1a841a60 <col:8> 'struct S *' lvalue Var 0x7f9f1a829548 'x' 'struct S *'
+| | `-ReturnStmt 0x7f9f1a841b68 <line:64:3, col:10>
+| |   `-IntegerLiteral 0x7f9f1a841b48 <col:10> 'int' 0
+| `-NoInlineAttr 0x7f9f1a8294d8 <line:54:20>
+`-FunctionDecl 0x7f9f1a841c50 <line:67:1, line:76:1> line:68:1 main 'int (void)'
+  `-CompoundStmt 0x7f9f1a842048 <line:69:1, line:76:1>
+    |-CallExpr 0x7f9f1a841d58 <line:70:3, col:8> 'int'
+    | `-ImplicitCastExpr 0x7f9f1a841d40 <col:3> 'int (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f9f1a841d18 <col:3> 'int (void)' Function 0x7f9f1a829438 'baz' 'int (void)'
+    |-IfStmt 0x7f9f1a841fd8 <line:72:3, line:73:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9f1a841eb8 <line:72:7, col:42> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f9f1a841ea0 <col:7> 'struct S *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9f1a841d80 <col:7> 'struct S *' lvalue Var 0x7f9f1a828d38 's2' 'struct S *'
+    | | `-ParenExpr 0x7f9f1a841e80 <col:13, col:42> 'struct S *'
+    | |   `-BinaryOperator 0x7f9f1a841e58 <col:14, col:41> 'struct S *' '+'
+    | |     |-ParenExpr 0x7f9f1a841e18 <col:14, col:37> 'struct S *'
+    | |     | `-CStyleCastExpr 0x7f9f1a841df0 <col:15, <scratch space>:3:1> 'struct S *' <IntegralToPointer>
+    | |     |   `-IntegerLiteral 0x7f9f1a841da8 <col:1> 'unsigned long long' 2147483648
+    | |     `-IntegerLiteral 0x7f9f1a841e38 <../Data/C2AST/pr66444.c:72:41> 'int' 1
+    | |-CallExpr 0x7f9f1a841fb0 <line:73:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f9f1a841f98 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f9f1a841f40 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f9f1a8286f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9f1a842030 <line:75:3, col:10>
+      `-IntegerLiteral 0x7f9f1a842010 <col:10> 'int' 0

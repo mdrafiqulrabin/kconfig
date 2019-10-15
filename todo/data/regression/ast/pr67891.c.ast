@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fcbf082bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcbf082c978 <../Data/C2AST/pr67891.c:4:1, col:14> col:14 used a 'unsigned int'
+|-VarDecl 0x7fcbf1014280 <col:1, col:18> col:18 used b 'unsigned int *'
+|-VarDecl 0x7fcbf1014310 <line:5:1, col:16> col:16 used c 'unsigned short'
+|-VarDecl 0x7fcbf1014388 <line:6:1, col:5> col:5 used d 'int'
+`-FunctionDecl 0x7fcbf1014438 <line:8:1, line:14:1> line:9:1 fn1 'void ()'
+  `-CompoundStmt 0x7fcbf10147e0 <line:10:1, line:14:1>
+    |-BinaryOperator 0x7fcbf1014590 <line:11:3, col:8> 'unsigned int *' '='
+    | |-DeclRefExpr 0x7fcbf10144d8 <col:3> 'unsigned int *' lvalue Var 0x7fcbf1014280 'b' 'unsigned int *'
+    | `-ImplicitCastExpr 0x7fcbf1014578 <col:7, col:8> 'unsigned int *' <BitCast>
+    |   `-UnaryOperator 0x7fcbf1014558 <col:7, col:8> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fcbf1014500 <col:8> 'int' lvalue Var 0x7fcbf1014388 'd' 'int'
+    |-BinaryOperator 0x7fcbf10146d8 <line:12:3, col:12> 'unsigned int' '='
+    | |-UnaryOperator 0x7fcbf10145f8 <col:3, col:4> 'unsigned int' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fcbf10145e0 <col:4> 'unsigned int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fcbf10145b8 <col:4> 'unsigned int *' lvalue Var 0x7fcbf1014280 'b' 'unsigned int *'
+    | `-ImplicitCastExpr 0x7fcbf10146c0 <col:8, col:12> 'unsigned int' <IntegralCast>
+    |   `-BinaryOperator 0x7fcbf1014698 <col:8, col:12> 'unsigned short' '='
+    |     |-DeclRefExpr 0x7fcbf1014618 <col:8> 'unsigned short' lvalue Var 0x7fcbf1014310 'c' 'unsigned short'
+    |     `-ImplicitCastExpr 0x7fcbf1014680 <col:12> 'unsigned short' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fcbf1014668 <col:12> 'unsigned int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fcbf1014640 <col:12> 'unsigned int' lvalue Var 0x7fcbf082c978 'a' 'unsigned int'
+    `-BinaryOperator 0x7fcbf10147b8 <line:13:3, col:8> 'unsigned int' '='
+      |-UnaryOperator 0x7fcbf1014740 <col:3, col:4> 'unsigned int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fcbf1014728 <col:4> 'unsigned int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcbf1014700 <col:4> 'unsigned int *' lvalue Var 0x7fcbf1014280 'b' 'unsigned int *'
+      `-ImplicitCastExpr 0x7fcbf10147a0 <col:8> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fcbf1014788 <col:8> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fcbf1014760 <col:8> 'int' lvalue Var 0x7fcbf1014388 'd' 'int'

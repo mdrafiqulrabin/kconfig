@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7fc76f82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc770801000 <../Data/C2AST/pr38405.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc7708010a0 prev 0x7fc770801000 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc770801288 <line:4:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fc770801328 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fc770801390 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fc7708013e8 prev 0x7fc770801288 <col:1, col:39> col:12 used printf 'int (char *, ...)' extern
+| `-ParmVarDecl 0x7fc770801180 <col:20, col:26> col:26 __format 'char *'
+|-RecordDecl 0x7fc770801490 <line:6:1, line:9:1> line:6:8 struct vpiBinaryConst definition
+| |-FieldDecl 0x7fc770801578 <line:7:2, col:19> col:6 referenced signed_flag 'int'
+| | `-IntegerLiteral 0x7fc770801540 <col:19> 'int' 1
+| `-FieldDecl 0x7fc7708015f8 <line:8:2, col:18> col:6 sized_flag 'int'
+|   `-IntegerLiteral 0x7fc7708015c0 <col:18> 'int' 1
+|-FunctionDecl 0x7fc770801888 <line:11:1, line:20:1> line:11:5 used binary_get 'int (int, struct vpiBinaryConst *)'
+| |-ParmVarDecl 0x7fc770801658 <col:16, col:20> col:20 used code 'int'
+| |-ParmVarDecl 0x7fc770801770 <col:26, col:49> col:49 used rfp 'struct vpiBinaryConst *'
+| `-CompoundStmt 0x7fc770801d68 <line:12:1, line:20:1>
+|   `-SwitchStmt 0x7fc7708019b8 <line:13:2, line:19:2>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fc7708019a0 <line:13:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fc770801978 <col:10> 'int' lvalue ParmVar 0x7fc770801658 'code' 'int'
+|     `-CompoundStmt 0x7fc770801d40 <col:16, line:19:2>
+|       |-CaseStmt 0x7fc770801a08 <line:14:3, line:15:34>
+|       | |-IntegerLiteral 0x7fc7708019e8 <line:14:8> 'int' 1
+|       | |-<<<NULL>>>
+|       | `-ReturnStmt 0x7fc770801b40 <line:15:4, col:34>
+|       |   `-ConditionalOperator 0x7fc770801b10 <col:11, col:34> 'int'
+|       |     |-ImplicitCastExpr 0x7fc770801af8 <col:11, col:16> 'int' <LValueToRValue>
+|       |     | `-MemberExpr 0x7fc770801a80 <col:11, col:16> 'int' lvalue bitfield ->signed_flag 0x7fc770801578
+|       |     |   `-ImplicitCastExpr 0x7fc770801a68 <col:11> 'struct vpiBinaryConst *' <LValueToRValue>
+|       |     |     `-DeclRefExpr 0x7fc770801a40 <col:11> 'struct vpiBinaryConst *' lvalue ParmVar 0x7fc770801770 'rfp' 'struct vpiBinaryConst *'
+|       |     |-IntegerLiteral 0x7fc770801ab8 <col:30> 'int' 1
+|       |     `-IntegerLiteral 0x7fc770801ad8 <col:34> 'int' 0
+|       |-DefaultStmt 0x7fc770801cc8 <line:16:3, line:17:44>
+|       | `-CallExpr 0x7fc770801c60 <col:4, col:44> 'int'
+|       |   |-ImplicitCastExpr 0x7fc770801c48 <col:4> 'int (*)(char *, ...)' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7fc770801b58 <col:4> 'int (char *, ...)' Function 0x7fc7708013e8 'printf' 'int (char *, ...)'
+|       |   |-ImplicitCastExpr 0x7fc770801c98 <col:11> 'char *' <ArrayToPointerDecay>
+|       |   | `-StringLiteral 0x7fc770801bb8 <col:11> 'char [25]' lvalue "error: %d not supported\n"
+|       |   `-ImplicitCastExpr 0x7fc770801cb0 <col:40> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fc770801bf8 <col:40> 'int' lvalue ParmVar 0x7fc770801658 'code' 'int'
+|       `-ReturnStmt 0x7fc770801d28 <line:18:4, col:11>
+|         `-ImplicitCastExpr 0x7fc770801d10 <col:11> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc770801ce8 <col:11> 'int' lvalue ParmVar 0x7fc770801658 'code' 'int'
+`-FunctionDecl 0x7fc770801e48 <line:22:1, line:29:1> line:22:5 main 'int (void)'
+  `-CompoundStmt 0x7fc770802408 <line:23:1, line:29:1>
+    |-DeclStmt 0x7fc7708020a0 <line:24:2, col:31>
+    | `-VarDecl 0x7fc770801f38 <col:2, col:30> col:24 used x 'struct vpiBinaryConst':'struct vpiBinaryConst' cinit
+    |   `-InitListExpr 0x7fc770802050 <col:26, col:30> 'struct vpiBinaryConst':'struct vpiBinaryConst'
+    |     |-IntegerLiteral 0x7fc770801f98 <col:27> 'int' 1
+    |     `-IntegerLiteral 0x7fc770801fb8 <col:29> 'int' 0
+    |-DeclStmt 0x7fc770802268 <line:25:2, col:25>
+    | `-VarDecl 0x7fc7708020d0 <col:2, col:24> col:6 used y 'int' cinit
+    |   `-CallExpr 0x7fc770802230 <col:8, col:24> 'int'
+    |     |-ImplicitCastExpr 0x7fc770802218 <col:8> 'int (*)(int, struct vpiBinaryConst *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fc770802130 <col:8> 'int (int, struct vpiBinaryConst *)' Function 0x7fc770801888 'binary_get' 'int (int, struct vpiBinaryConst *)'
+    |     |-IntegerLiteral 0x7fc770802158 <col:19> 'int' 1
+    |     `-UnaryOperator 0x7fc7708021a0 <col:22, col:23> 'struct vpiBinaryConst *' prefix '&'
+    |       `-DeclRefExpr 0x7fc770802178 <col:23> 'struct vpiBinaryConst':'struct vpiBinaryConst' lvalue Var 0x7fc770801f38 'x' 'struct vpiBinaryConst':'struct vpiBinaryConst'
+    |-IfStmt 0x7fc770802398 <line:26:2, line:27:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc7708022e0 <line:26:6, col:9> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc7708022c8 <col:6> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc770802280 <col:6> 'int' lvalue Var 0x7fc7708020d0 'y' 'int'
+    | | `-IntegerLiteral 0x7fc7708022a8 <col:9> 'int' 1
+    | |-CallExpr 0x7fc770802370 <line:27:4, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7fc770802358 <col:4> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc770802308 <col:4> 'void (void) __attribute__((noreturn))' Function 0x7fc7708010a0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc7708023f0 <line:28:2, col:9>
+      `-IntegerLiteral 0x7fc7708023d0 <col:9> 'int' 0

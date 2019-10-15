@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fbd380254e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fbd38067060 <../Data/C2AST/pr23233-1.c:1:1, line:8:1> line:1:6 foo 'void (volatile long long *)'
+  |-ParmVarDecl 0x7fbd380261a0 <col:11, col:31> col:31 used x 'volatile long long *'
+  `-CompoundStmt 0x7fbd380673e8 <line:2:1, line:8:1>
+    `-WhileStmt 0x7fbd380673c8 <line:3:3, line:7:5>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fbd380671a8 <line:3:10, col:11> 'long long' <LValueToRValue>
+      | `-UnaryOperator 0x7fbd38067188 <col:10, col:11> 'volatile long long' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7fbd38067170 <col:11> 'volatile long long *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fbd38067148 <col:11> 'volatile long long *' lvalue ParmVar 0x7fbd380261a0 'x' 'volatile long long *'
+      `-CompoundStmt 0x7fbd380673a8 <line:4:5, line:7:5>
+        |-BinaryOperator 0x7fbd38067258 <line:5:7, col:12> 'long long' '='
+        | |-UnaryOperator 0x7fbd38067200 <col:7, col:8> 'volatile long long' lvalue prefix '*'
+        | | `-ImplicitCastExpr 0x7fbd380671e8 <col:8> 'volatile long long *' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fbd380671c0 <col:8> 'volatile long long *' lvalue ParmVar 0x7fbd380261a0 'x' 'volatile long long *'
+        | `-ImplicitCastExpr 0x7fbd38067240 <col:12> 'long long' <IntegralCast>
+        |   `-IntegerLiteral 0x7fbd38067220 <col:12> 'int' 0
+        `-BinaryOperator 0x7fbd38067380 <line:6:7, col:32> 'char' '='
+          |-UnaryOperator 0x7fbd38067328 <col:7, col:28> 'volatile char' lvalue prefix '*'
+          | `-ParenExpr 0x7fbd38067308 <col:8, col:28> 'volatile char *'
+          |   `-CStyleCastExpr 0x7fbd380672e0 <col:9, col:27> 'volatile char *' <NullToPointer>
+          |     `-IntegerLiteral 0x7fbd38067280 <col:27> 'int' 0
+          `-ImplicitCastExpr 0x7fbd38067368 <col:32> 'char' <IntegralCast>
+            `-IntegerLiteral 0x7fbd38067348 <col:32> 'int' 0

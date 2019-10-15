@@ -1,0 +1,113 @@
+TranslationUnitDecl 0x7f7ef80114e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f7ef7824a50 <../Data/C2AST/pr39565.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f7ef7824af0 prev 0x7f7ef7824a50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f7ef7824ca8 <line:7:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f7ef7824d48 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f7ef7824db0 prev 0x7f7ef7824ca8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f7ef7824ba8 <col:19> col:22 'int'
+|-FunctionDecl 0x7f7ef7824fc8 <line:8:12> col:12 implicit used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f7ef7825068 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f7ef78250c8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f7ef7825138 prev 0x7f7ef7824fc8 <col:1, col:46> col:12 used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f7ef7824e70 <col:20, col:31> col:32 'const char *'
+| `-ParmVarDecl 0x7f7ef7824ee8 <col:34, col:45> col:46 'const char *'
+|-RecordDecl 0x7f7ef78251e8 <line:10:14, line:15:1> line:10:20 union codestrs_t_4 definition
+| |-RecordDecl 0x7f7ef7825290 <line:11:3, line:13:3> line:11:3 struct definition
+| | `-FieldDecl 0x7f7ef7825410 <line:12:5, col:41> col:10 str_2 'char [15]'
+| |-FieldDecl 0x7f7ef78254b0 <line:11:3> col:3 implicit 'struct codestrs_t_4::(anonymous at ../Data/C2AST/pr39565.c:11:3)'
+| |-IndirectFieldDecl 0x7f7ef7825508 <line:12:10> col:10 implicit str_2 'char [15]'
+| | |-Field 0x7f7ef78254b0 '' 'struct codestrs_t_4::(anonymous at ../Data/C2AST/pr39565.c:11:3)'
+| | `-Field 0x7f7ef7825410 'str_2' 'char [15]'
+| `-FieldDecl 0x7f7ef78255c8 <line:14:3, col:13> col:8 referenced str 'char [0]'
+|-VarDecl 0x7f7ef78256b0 <line:10:1, line:15:37> col:3 used codestrs_4 'const union codestrs_t_4':'const union codestrs_t_4' static cinit
+| `-InitListExpr 0x7f7ef7825818 <col:16, col:37> 'union codestrs_t_4':'union codestrs_t_4' field Field 0x7f7ef78254b0 '' 'struct codestrs_t_4::(anonymous at ../Data/C2AST/pr39565.c:11:3)'
+|   `-InitListExpr 0x7f7ef7825860 <col:18, col:35> 'struct codestrs_t_4::(anonymous at ../Data/C2AST/pr39565.c:11:3)'
+|     `-StringLiteral 0x7f7ef7825750 <col:19> 'char [15]' lvalue "Illegal opcode"
+|-RecordDecl 0x7f7ef78258c0 <line:17:14, line:22:1> line:17:20 union codestrs_t_8 definition
+| |-RecordDecl 0x7f7ef7825970 <line:18:3, line:20:3> line:18:3 struct definition
+| | `-FieldDecl 0x7f7ef80062f8 <line:19:5, col:50> col:10 str_12 'char [23]'
+| |-FieldDecl 0x7f7ef8006390 <line:18:3> col:3 implicit 'struct codestrs_t_8::(anonymous at ../Data/C2AST/pr39565.c:18:3)'
+| |-IndirectFieldDecl 0x7f7ef80063e8 <line:19:10> col:10 implicit str_12 'char [23]'
+| | |-Field 0x7f7ef8006390 '' 'struct codestrs_t_8::(anonymous at ../Data/C2AST/pr39565.c:18:3)'
+| | `-Field 0x7f7ef80062f8 'str_12' 'char [23]'
+| `-FieldDecl 0x7f7ef8006468 <line:21:3, col:13> col:8 referenced str 'char [0]'
+|-VarDecl 0x7f7ef8006550 <line:17:1, line:22:45> col:3 used codestrs_8 'const union codestrs_t_8':'const union codestrs_t_8' static cinit
+| `-InitListExpr 0x7f7ef8006680 <col:16, col:45> 'union codestrs_t_8':'union codestrs_t_8' field Field 0x7f7ef8006390 '' 'struct codestrs_t_8::(anonymous at ../Data/C2AST/pr39565.c:18:3)'
+|   `-InitListExpr 0x7f7ef80066c8 <col:18, col:43> 'struct codestrs_t_8::(anonymous at ../Data/C2AST/pr39565.c:18:3)'
+|     `-StringLiteral 0x7f7ef80065b0 <col:19> 'char [23]' lvalue "Integer divide by zero"
+|-FunctionDecl 0x7f7ef8006808 <line:24:1, line:35:1> line:25:1 used psiginfo 'const char *(int)'
+| |-ParmVarDecl 0x7f7ef8006740 <col:11, col:15> col:15 used pinfo 'int'
+| `-CompoundStmt 0x7f7ef8006d60 <line:26:1, line:35:1>
+|   |-DeclStmt 0x7f7ef80069c0 <line:27:3, col:33>
+|   | `-VarDecl 0x7f7ef80068c8 <col:3, col:32> col:15 used base 'const char *' cinit
+|   |   `-ImplicitCastExpr 0x7f7ef80069a8 <col:22, col:32> 'const char *' <NullToPointer>
+|   |     `-ParenExpr 0x7f7ef8006988 <col:22, col:32> 'void *'
+|   |       `-CStyleCastExpr 0x7f7ef8006960 <col:23, col:31> 'void *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7f7ef8006928 <col:31> 'int' 0
+|   |-SwitchStmt 0x7f7ef8006a18 <line:29:3, line:33:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f7ef8006a00 <line:29:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f7ef80069d8 <col:11> 'int' lvalue ParmVar 0x7f7ef8006740 'pinfo' 'int'
+|   | `-CompoundStmt 0x7f7ef8006cd8 <line:30:5, line:33:5>
+|   |   |-CaseStmt 0x7f7ef8006a68 <line:31:5, col:31>
+|   |   | |-IntegerLiteral 0x7f7ef8006a48 <col:10> 'int' 4
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f7ef8006b80 <col:13, col:31> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f7ef8006aa0 <col:13> 'const char *' lvalue Var 0x7f7ef80068c8 'base' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f7ef8006b68 <col:20, col:31> 'const char *' <ArrayToPointerDecay>
+|   |   |     `-MemberExpr 0x7f7ef8006af0 <col:20, col:31> 'char const[0]' lvalue .str 0x7f7ef78255c8
+|   |   |       `-DeclRefExpr 0x7f7ef8006ac8 <col:20> 'const union codestrs_t_4':'const union codestrs_t_4' lvalue Var 0x7f7ef78256b0 'codestrs_4' 'const union codestrs_t_4':'const union codestrs_t_4'
+|   |   |-BreakStmt 0x7f7ef8006ba8 <col:36>
+|   |   |-CaseStmt 0x7f7ef8006bd0 <line:32:5, col:31>
+|   |   | |-IntegerLiteral 0x7f7ef8006bb0 <col:10> 'int' 8
+|   |   | |-<<<NULL>>>
+|   |   | `-BinaryOperator 0x7f7ef8006ca8 <col:13, col:31> 'const char *' '='
+|   |   |   |-DeclRefExpr 0x7f7ef8006c08 <col:13> 'const char *' lvalue Var 0x7f7ef80068c8 'base' 'const char *'
+|   |   |   `-ImplicitCastExpr 0x7f7ef8006c90 <col:20, col:31> 'const char *' <ArrayToPointerDecay>
+|   |   |     `-MemberExpr 0x7f7ef8006c58 <col:20, col:31> 'char const[0]' lvalue .str 0x7f7ef8006468
+|   |   |       `-DeclRefExpr 0x7f7ef8006c30 <col:20> 'const union codestrs_t_8':'const union codestrs_t_8' lvalue Var 0x7f7ef8006550 'codestrs_8' 'const union codestrs_t_8':'const union codestrs_t_8'
+|   |   `-BreakStmt 0x7f7ef8006cd0 <col:36>
+|   `-ReturnStmt 0x7f7ef8006d48 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7f7ef8006d30 <col:10> 'const char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f7ef8006d08 <col:10> 'const char *' lvalue Var 0x7f7ef80068c8 'base' 'const char *'
+`-FunctionDecl 0x7f7ef8006e58 <line:37:1, line:45:1> line:38:1 main 'int (void)'
+  `-CompoundStmt 0x7f7ef7825cf0 <line:39:1, line:45:1>
+    |-IfStmt 0x7f7ef80071b8 <line:40:3, line:41:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7f7ef80070d0 <line:40:7, col:43> 'int'
+    | | |-ImplicitCastExpr 0x7f7ef80070b8 <col:7> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f7ef8006f28 <col:7> 'int (const char *, const char *)' Function 0x7f7ef7825138 'strcmp' 'int (const char *, const char *)'
+    | | |-CallExpr 0x7f7ef8006fe0 <col:15, col:26> 'const char *'
+    | | | |-ImplicitCastExpr 0x7f7ef8006fc8 <col:15> 'const char *(*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f7ef8006f50 <col:15> 'const char *(int)' Function 0x7f7ef8006808 'psiginfo' 'const char *(int)'
+    | | | `-IntegerLiteral 0x7f7ef8006f78 <col:25> 'int' 4
+    | | `-ImplicitCastExpr 0x7f7ef8007108 <col:29, col:40> 'const char *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7f7ef8007038 <col:29, col:40> 'char const[0]' lvalue .str 0x7f7ef78255c8
+    | |     `-DeclRefExpr 0x7f7ef8007010 <col:29> 'const union codestrs_t_4':'const union codestrs_t_4' lvalue Var 0x7f7ef78256b0 'codestrs_4' 'const union codestrs_t_4':'const union codestrs_t_4'
+    | |-CallExpr 0x7f7ef8007190 <line:41:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f7ef8007178 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f7ef8007120 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f7ef7824af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f7ef7825c00 <line:42:3, line:43:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7f7ef7825b48 <line:42:7, col:43> 'int'
+    | | |-ImplicitCastExpr 0x7f7ef7825b30 <col:7> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f7ef7825a00 <col:7> 'int (const char *, const char *)' Function 0x7f7ef7825138 'strcmp' 'int (const char *, const char *)'
+    | | |-CallExpr 0x7f7ef7825a88 <col:15, col:26> 'const char *'
+    | | | |-ImplicitCastExpr 0x7f7ef7825a70 <col:15> 'const char *(*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f7ef7825a28 <col:15> 'const char *(int)' Function 0x7f7ef8006808 'psiginfo' 'const char *(int)'
+    | | | `-IntegerLiteral 0x7f7ef7825a50 <col:25> 'int' 8
+    | | `-ImplicitCastExpr 0x7f7ef7825b80 <col:29, col:40> 'const char *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7f7ef7825ae0 <col:29, col:40> 'char const[0]' lvalue .str 0x7f7ef8006468
+    | |     `-DeclRefExpr 0x7f7ef7825ab8 <col:29> 'const union codestrs_t_8':'const union codestrs_t_8' lvalue Var 0x7f7ef8006550 'codestrs_8' 'const union codestrs_t_8':'const union codestrs_t_8'
+    | |-CallExpr 0x7f7ef7825bd8 <line:43:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f7ef7825bc0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f7ef7825b98 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f7ef7824af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f7ef7825cc0 <line:44:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f7ef7825ca8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f7ef7825c38 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f7ef7824db0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7f7ef7825c60 <col:9> 'int' 0

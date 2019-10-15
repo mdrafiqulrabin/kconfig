@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fe1718174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe171029268 <../Data/C2AST/pr50763.c:4:1, col:15> col:5 used bar 'int (int)'
+| `-ParmVarDecl 0x7fe171818178 <col:10, col:14> col:14 i 'int'
+`-FunctionDecl 0x7fe1710294b0 <line:6:1, line:13:1> line:7:1 foo 'void (int, int)'
+  |-ParmVarDecl 0x7fe171029368 <col:6, col:10> col:10 used c 'int'
+  |-ParmVarDecl 0x7fe1710293e0 <col:13, col:17> col:17 used d 'int'
+  `-CompoundStmt 0x7fe171029868 <line:8:1, line:13:1>
+    |-IfStmt 0x7fe1710296e8 <line:9:3, line:10:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fe1710295f0 <line:9:7, col:13> 'int'
+    | | |-ImplicitCastExpr 0x7fe1710295d8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fe171029560 <col:7> 'int (int)' Function 0x7fe171029268 'bar' 'int (int)'
+    | | `-ImplicitCastExpr 0x7fe171029620 <col:12> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe171029588 <col:12> 'int' lvalue ParmVar 0x7fe171029368 'c' 'int'
+    | |-CallExpr 0x7fe1710296a0 <line:10:5, col:11> 'int'
+    | | |-ImplicitCastExpr 0x7fe171029688 <col:5> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fe171029638 <col:5> 'int (int)' Function 0x7fe171029268 'bar' 'int (int)'
+    | | `-ImplicitCastExpr 0x7fe1710296d0 <col:10> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe171029660 <col:10> 'int' lvalue ParmVar 0x7fe171029368 'c' 'int'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fe171029768 <line:11:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe171029720 <col:3> 'int' lvalue ParmVar 0x7fe1710293e0 'd' 'int'
+    | `-IntegerLiteral 0x7fe171029748 <col:7> 'int' 33
+    `-WhileStmt 0x7fe171029848 <line:12:3, col:17>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe171029810 <col:10, col:15> 'int' '=='
+      | |-ImplicitCastExpr 0x7fe1710297e0 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe171029790 <col:10> 'int' lvalue ParmVar 0x7fe171029368 'c' 'int'
+      | `-ImplicitCastExpr 0x7fe1710297f8 <col:15> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe1710297b8 <col:15> 'int' lvalue ParmVar 0x7fe1710293e0 'd' 'int'
+      `-NullStmt 0x7fe171029838 <col:17>

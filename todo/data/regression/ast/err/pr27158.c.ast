@@ -1,0 +1,38 @@
+../Data/C2AST/pr27158.c:19:20: error: use of unknown builtin '__builtin_altivec_vspltisw' [-Wimplicit-function-declaration]
+      tmp = (v4sf) __builtin_altivec_vspltisw (1);
+                   ^
+../Data/C2AST/pr27158.c:19:13: error: invalid conversion between vector type 'v4sf' (vector of 4 'float' values) and integer type 'int' of different size
+      tmp = (v4sf) __builtin_altivec_vspltisw (1);
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fe7ff82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe7ff82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe7ff82bf80 '__int128'
+|-TypedefDecl 0x7fe7ff82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe7ff82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fe7ff82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe7ff82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe7ff82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe7ff82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe7ff82c600 'char *'
+|   `-BuiltinType 0x7fe7ff82bd80 'char'
+|-TypedefDecl 0x7fe7ff82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe7ff82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe7ff82c720 'struct __va_list_tag'
+|     `-Record 0x7fe7ff82c698 '__va_list_tag'
+|-TypedefDecl 0x7fe7ff86e800 <../Data/C2AST/pr27158.c:10:1, col:50> col:50 referenced v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fe7ff82c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fe7ff82bee0 'float'
+`-FunctionDecl 0x7fe7ff86e930 <line:12:1, line:21:1> line:13:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fe7ff86e870 <col:6, col:10> col:10 used H 'int'
+  `-CompoundStmt 0x7fe7ff8879a8 <line:14:1, line:21:1>
+    |-DeclStmt 0x7fe7ff86eab0 <line:15:3, col:20>
+    | `-VarDecl 0x7fe7ff86ea50 <col:3, col:17> col:17 used tmp 'volatile v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float volatile'
+    `-WhileStmt 0x7fe7ff887988 <line:16:3, line:20:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe7ff86eb30 <line:16:10, col:16> 'int' '>'
+      | |-UnaryOperator 0x7fe7ff86eaf0 <col:10, col:11> 'int' postfix '--'
+      | | `-DeclRefExpr 0x7fe7ff86eac8 <col:10> 'int' lvalue ParmVar 0x7fe7ff86e870 'H' 'int'
+      | `-IntegerLiteral 0x7fe7ff86eb10 <col:16> 'int' 0
+      `-CompoundStmt 0x7fe7ff887970 <line:17:5, line:20:5>
+        `-GCCAsmStmt 0x7fe7ff86f238 <line:18:7, col:28>

@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7ff6bb8288e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff6bb829560 <../Data/C2AST/pr47201.c:5:1, line:9:1> line:5:7 union U definition
+| |-FieldDecl 0x7ff6bb018438 <<built-in>:96:26, ../Data/C2AST/pr47201.c:7:20> col:20 m 'unsigned long'
+| `-FieldDecl 0x7ff6bb018498 <line:8:3, col:9> col:9 referenced d 'float'
+|-VarDecl 0x7ff6bb018530 <line:5:1, line:9:3> col:3 used u 'union U':'union U'
+`-FunctionDecl 0x7ff6bb0186b8 <line:11:1, line:18:1> line:12:1 foo 'int (void)'
+  `-CompoundStmt 0x7ff6bb018ae0 <line:13:1, line:18:1>
+    |-DeclStmt 0x7ff6bb018948 <line:14:3, line:16:4>
+    | `-VarDecl 0x7ff6bb018778 <line:14:3, line:16:3> line:14:11 used v 'union U':'union U' cinit
+    |   `-InitListExpr 0x7ff6bb018900 <col:15, line:16:3> 'union U':'union U' field Field 0x7ff6bb018438 'm' 'unsigned long'
+    |     `-CStyleCastExpr 0x7ff6bb018890 <line:15:5, col:24> 'unsigned long' <PointerToIntegral>
+    |       `-UnaryOperator 0x7ff6bb018858 <col:23, col:24> 'union U *' prefix '&'
+    |         `-DeclRefExpr 0x7ff6bb0187d8 <col:24> 'union U':'union U' lvalue Var 0x7ff6bb018530 'u' 'union U':'union U'
+    `-ReturnStmt 0x7ff6bb018ac8 <line:17:3, col:19>
+      `-BinaryOperator 0x7ff6bb018a50 <col:10, col:19> 'int' '=='
+        |-ImplicitCastExpr 0x7ff6bb018a20 <col:10, col:12> 'float' <LValueToRValue>
+        | `-MemberExpr 0x7ff6bb018988 <col:10, col:12> 'float' lvalue .d 0x7ff6bb018498
+        |   `-DeclRefExpr 0x7ff6bb018960 <col:10> 'union U':'union U' lvalue Var 0x7ff6bb018530 'u' 'union U':'union U'
+        `-ImplicitCastExpr 0x7ff6bb018a38 <col:17, col:19> 'float' <LValueToRValue>
+          `-MemberExpr 0x7ff6bb0189e8 <col:17, col:19> 'float' lvalue .d 0x7ff6bb018498
+            `-DeclRefExpr 0x7ff6bb0189c0 <col:17> 'union U':'union U' lvalue Var 0x7ff6bb018778 'v' 'union U':'union U'

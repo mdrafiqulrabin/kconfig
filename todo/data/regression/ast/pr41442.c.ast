@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fc2ab0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc2ab018160 <../Data/C2AST/pr41442.c:4:9, col:16> col:16 struct LINK
+|-TypedefDecl 0x7fc2ab059070 <col:1, col:21> col:21 referenced link 'struct LINK':'struct LINK'
+| `-ElaboratedType 0x7fc2ab059020 'struct LINK' sugar
+|   `-RecordType 0x7fc2ab059000 'struct LINK'
+|     `-Record 0x7fc2ab0590e0 'LINK'
+|-RecordDecl 0x7fc2ab0590e0 prev 0x7fc2ab018160 <line:5:1, line:8:1> line:5:8 struct LINK definition
+| `-FieldDecl 0x7fc2ab0591f8 <line:7:5, col:11> col:11 referenced next 'link *'
+`-FunctionDecl 0x7fc2ab0593d8 <line:10:1, line:16:1> line:10:5 haha 'int (link *, link *)'
+  |-ParmVarDecl 0x7fc2ab059250 <col:10, col:16> col:16 used p1 'link *'
+  |-ParmVarDecl 0x7fc2ab0592c0 <col:20, col:26> col:26 used p2 'link *'
+  `-CompoundStmt 0x7fc2ab0597b0 <line:11:1, line:16:1>
+    |-IfStmt 0x7fc2ab059740 <line:12:3, line:13:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc2ab0596e0 <line:12:7, col:38> 'int' '||'
+    | | |-ParenExpr 0x7fc2ab059630 <col:7, col:29> 'int'
+    | | | `-BinaryOperator 0x7fc2ab059608 <col:8, col:25> 'int' '&&'
+    | | |   |-ImplicitCastExpr 0x7fc2ab0595f0 <col:8, col:12> 'link *' <LValueToRValue>
+    | | |   | `-MemberExpr 0x7fc2ab059508 <col:8, col:12> 'link *' lvalue ->next 0x7fc2ab0591f8
+    | | |   |   `-ImplicitCastExpr 0x7fc2ab0594f0 <col:8> 'link *' <LValueToRValue>
+    | | |   |     `-DeclRefExpr 0x7fc2ab0594c8 <col:8> 'link *' lvalue ParmVar 0x7fc2ab059250 'p1' 'link *'
+    | | |   `-UnaryOperator 0x7fc2ab0595d0 <col:20, col:25> 'int' prefix '!'
+    | | |     `-ImplicitCastExpr 0x7fc2ab0595b8 <col:21, col:25> 'link *' <LValueToRValue>
+    | | |       `-MemberExpr 0x7fc2ab059580 <col:21, col:25> 'link *' lvalue ->next 0x7fc2ab0591f8
+    | | |         `-ImplicitCastExpr 0x7fc2ab059568 <col:21> 'link *' <LValueToRValue>
+    | | |           `-DeclRefExpr 0x7fc2ab059540 <col:21> 'link *' lvalue ParmVar 0x7fc2ab0592c0 'p2' 'link *'
+    | | `-ImplicitCastExpr 0x7fc2ab0596c8 <col:34, col:38> 'link *' <LValueToRValue>
+    | |   `-MemberExpr 0x7fc2ab059690 <col:34, col:38> 'link *' lvalue ->next 0x7fc2ab0591f8
+    | |     `-ImplicitCastExpr 0x7fc2ab059678 <col:34> 'link *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7fc2ab059650 <col:34> 'link *' lvalue ParmVar 0x7fc2ab0592c0 'p2' 'link *'
+    | |-ReturnStmt 0x7fc2ab059728 <line:13:5, col:12>
+    | | `-IntegerLiteral 0x7fc2ab059708 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc2ab059798 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fc2ab059778 <col:10> 'int' 1

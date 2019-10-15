@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fdd0b021ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdd0a82a4e8 <../Data/C2AST/pr53512-3.c:8:1, line:12:1> line:9:1 test_func_00 'float (float)'
+  |-ParmVarDecl 0x7fdd0a82a458 <col:15, col:21> col:21 used x 'float'
+  `-CompoundStmt 0x7fdd0a82a6b8 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fdd0a82a6a0 <line:11:3, col:22>
+      `-BinaryOperator 0x7fdd0a82a678 <col:10, col:22> 'float' '/'
+        |-ImplicitCastExpr 0x7fdd0a82a660 <col:10> 'float' <IntegralToFloating>
+        | `-IntegerLiteral 0x7fdd0a82a590 <col:10> 'int' 1
+        `-CallExpr 0x7fdd0a82a618 <col:14, col:22> 'float'
+          |-ImplicitCastExpr 0x7fdd0a82a600 <col:14> 'float (*)(float)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fdd0a82a5b0 <col:14> 'float (float)' Function 0x7fdd0b07ec48 'sqrtf' 'float (float)'
+          `-ImplicitCastExpr 0x7fdd0a82a648 <col:21> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7fdd0a82a5d8 <col:21> 'float' lvalue ParmVar 0x7fdd0a82a458 'x' 'float'

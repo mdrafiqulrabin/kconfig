@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f94a8819ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94a881a778 <../Data/C2AST/pr45059.c:3:1, col:22> col:22 referenced T 'unsigned int'
+| `-BuiltinType 0x7f94a8819c80 'unsigned int'
+|-FunctionDecl 0x7f94a8004f60 <line:4:1, col:36> col:13 used foo 'void (signed char *, int)' extern
+| |-ParmVarDecl 0x7f94a8004e18 <col:18, col:30> col:31 'signed char *'
+| `-ParmVarDecl 0x7f94a8004e90 <col:33> col:36 'int'
+|-VarDecl 0x7f94a8005068 <line:6:1, col:20> col:20 used a 'signed char' static
+|-VarDecl 0x7f94a80051a8 <line:7:1, col:22> col:10 used b 'T [1]' static cinit
+| `-InitListExpr 0x7f94a8005290 <col:17, col:22> 'T [1]'
+|   `-ImplicitCastExpr 0x7f94a80052d8 <col:19, col:20> 'T':'unsigned int' <IntegralCast>
+|     `-UnaryOperator 0x7f94a8005228 <col:19, col:20> 'int' prefix '-'
+|       `-IntegerLiteral 0x7f94a8005208 <col:20> 'int' 1
+|-VarDecl 0x7f94a8005308 <line:8:1, col:22> col:22 used c 'unsigned char' static
+|-FunctionDecl 0x7f94a8005448 <line:10:1, line:15:1> line:11:1 used bar 'short (short)' static inline
+| |-ParmVarDecl 0x7f94a8005380 <col:6, col:12> col:12 v 'short'
+| `-CompoundStmt 0x7f94a8005720 <line:12:1, line:15:1>
+|   |-CompoundAssignOperator 0x7f94a8005698 <line:13:3, col:15> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f94a80054f0 <col:3> 'unsigned char' lvalue Var 0x7f94a8005308 'c' 'unsigned char'
+|   | `-BinaryOperator 0x7f94a8005670 <col:8, col:15> 'int' '<'
+|   |   |-ImplicitCastExpr 0x7f94a8005640 <col:8> 'unsigned int' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7f94a8005628 <col:8> 'signed char' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f94a8005518 <col:8> 'signed char' lvalue Var 0x7f94a8005068 'a' 'signed char'
+|   |   `-ImplicitCastExpr 0x7f94a8005658 <col:12, col:15> 'T':'unsigned int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7f94a8005600 <col:12, col:15> 'T':'unsigned int' lvalue
+|   |       |-ImplicitCastExpr 0x7f94a80055e8 <col:12> 'T *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f94a8005540 <col:12> 'T [1]' lvalue Var 0x7f94a80051a8 'b' 'T [1]'
+|   |       `-IntegerLiteral 0x7f94a8005568 <col:14> 'int' 0
+|   `-ReturnStmt 0x7f94a8005708 <line:14:3, col:10>
+|     `-ImplicitCastExpr 0x7f94a80056f0 <col:10> 'short' <IntegralCast>
+|       `-IntegerLiteral 0x7f94a80056d0 <col:10> 'int' 0
+`-FunctionDecl 0x7f94a8005790 <line:17:1, line:23:1> line:18:1 main 'int ()'
+  `-CompoundStmt 0x7f94a8005ba0 <line:19:1, line:23:1>
+    |-DeclStmt 0x7f94a80058f0 <line:20:3, col:22>
+    | `-VarDecl 0x7f94a8005848 <col:3, col:21> col:16 used e 'signed char *' cinit
+    |   `-UnaryOperator 0x7f94a80058d0 <col:20, col:21> 'signed char *' prefix '&'
+    |     `-DeclRefExpr 0x7f94a80058a8 <col:21> 'signed char' lvalue Var 0x7f94a8005068 'a' 'signed char'
+    |-CallExpr 0x7f94a8005b00 <line:21:3, col:24> 'void'
+    | |-ImplicitCastExpr 0x7f94a8005ae8 <col:3> 'void (*)(signed char *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f94a8005908 <col:3> 'void (signed char *, int)' Function 0x7f94a8004f60 'foo' 'void (signed char *, int)'
+    | |-ImplicitCastExpr 0x7f94a8005b38 <col:8> 'signed char *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f94a8005930 <col:8> 'signed char *' lvalue Var 0x7f94a8005848 'e' 'signed char *'
+    | `-ImplicitCastExpr 0x7f94a8005b50 <col:11, col:23> 'int' <IntegralCast>
+    |   `-CallExpr 0x7f94a8005a88 <col:11, col:23> 'short'
+    |     |-ImplicitCastExpr 0x7f94a8005a70 <col:11> 'short (*)(short)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f94a8005958 <col:11> 'short (short)' Function 0x7f94a8005448 'bar' 'short (short)'
+    |     `-CallExpr 0x7f94a8005a10 <col:16, col:22> 'short'
+    |       |-ImplicitCastExpr 0x7f94a80059f8 <col:16> 'short (*)(short)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7f94a8005980 <col:16> 'short (short)' Function 0x7f94a8005448 'bar' 'short (short)'
+    |       `-ImplicitCastExpr 0x7f94a8005a58 <col:21> 'short' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7f94a8005a40 <col:21> 'unsigned char' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f94a80059a8 <col:21> 'unsigned char' lvalue Var 0x7f94a8005308 'c' 'unsigned char'
+    `-ReturnStmt 0x7f94a8005b88 <line:22:3, col:10>
+      `-IntegerLiteral 0x7f94a8005b68 <col:10> 'int' 0

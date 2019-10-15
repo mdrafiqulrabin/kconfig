@@ -1,0 +1,46 @@
+../Data/C2AST/pr27301.c:9:53: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  __asm__ __volatile__ ("" :: "m" (({ struct { char x[n]; } *p = ptr; *p; })));
+                                                    ^
+../Data/C2AST/pr27301.c:9:36: error: invalid lvalue in asm input for constraint 'm'
+  __asm__ __volatile__ ("" :: "m" (({ struct { char x[n]; } *p = ptr; *p; })));
+                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr27301.c:15:54: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  __asm__ __volatile__ ("" :: "m" (*({ struct { char x[n]; } *p = ptr; p; })));
+                                                     ^
+3 errors generated.
+TranslationUnitDecl 0x7fa5b882bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa5b882c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa5b882bf80 '__int128'
+|-TypedefDecl 0x7fa5b882c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa5b882bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa5b882c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa5b882c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa5b882c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa5b882c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa5b882c600 'char *'
+|   `-BuiltinType 0x7fa5b882bd80 'char'
+|-TypedefDecl 0x7fa5b882c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa5b882c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa5b882c720 'struct __va_list_tag'
+|     `-Record 0x7fa5b882c698 '__va_list_tag'
+|-FunctionDecl 0x7fa5b886d8d0 <../Data/C2AST/pr27301.c:6:1, line:10:1> line:7:1 foo 'void (void *, long)'
+| |-ParmVarDecl 0x7fa5b882c978 <col:6, col:12> col:12 used ptr 'void *'
+| |-ParmVarDecl 0x7fa5b886d800 <col:17, col:22> col:22 used n 'long'
+| `-CompoundStmt 0x7fa5b886de60 <line:8:1, line:10:1>
+`-FunctionDecl 0x7fa5b886df90 <line:12:1, line:16:1> line:13:1 bar 'void (void *, long)'
+  |-ParmVarDecl 0x7fa5b886de88 <col:6, col:12> col:12 used ptr 'void *'
+  |-ParmVarDecl 0x7fa5b886df00 <col:17, col:22> col:22 used n 'long'
+  `-CompoundStmt 0x7fa5b886e4b8 <line:14:1, line:16:1>
+    `-GCCAsmStmt 0x7fa5b886e458 <line:15:3, col:78>
+      `-UnaryOperator 0x7fa5b886e438 <col:36, col:76> 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40)':'struct (anonymous at ../Data/C2AST/pr27301.c:15:40)' lvalue prefix '*'
+        `-StmtExpr 0x7fa5b886e418 <col:37, col:76> 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40) *'
+          `-CompoundStmt 0x7fa5b886e3f8 <col:38, col:75>
+            |-DeclStmt 0x7fa5b886e3a0 <col:40, col:70>
+            | |-RecordDecl 0x7fa5b886e098 <col:40, col:60> col:40 invalid struct definition
+            | | `-FieldDecl 0x7fa5b886e1d8 <col:49, col:57> col:54 invalid x 'char [n]'
+            | `-VarDecl 0x7fa5b886e2d0 <col:40, col:67> col:63 used p 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40) *' cinit
+            |   `-ImplicitCastExpr 0x7fa5b886e370 <col:67> 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40) *' <BitCast>
+            |     `-ImplicitCastExpr 0x7fa5b886e358 <col:67> 'void *' <LValueToRValue>
+            |       `-DeclRefExpr 0x7fa5b886e330 <col:67> 'void *' lvalue ParmVar 0x7fa5b886de88 'ptr' 'void *'
+            `-ImplicitCastExpr 0x7fa5b886e3e0 <col:72> 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40) *' <LValueToRValue>
+              `-DeclRefExpr 0x7fa5b886e3b8 <col:72> 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40) *' lvalue Var 0x7fa5b886e2d0 'p' 'struct (anonymous struct at ../Data/C2AST/pr27301.c:15:40) *'

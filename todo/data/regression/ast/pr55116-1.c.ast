@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f9a4b82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9a4c014200 <../Data/C2AST/pr55116-1.c:4:1, col:21> col:5 used glob_int_arr 'int [100]'
+|-VarDecl 0x7f9a4c0142b8 <line:5:1, col:16> col:5 used glob_int 'int' cinit
+| `-IntegerLiteral 0x7f9a4c014318 <col:16> 'int' 4
+|-FunctionDecl 0x7f9a4c014400 <line:7:1, line:11:1> line:8:1 expr_global 'void (void)'
+| `-CompoundStmt 0x7f9a4c014838 <line:9:1, line:11:1>
+|   `-CallExpr 0x7f9a4c0147e0 <line:10:3, col:52> 'void'
+|     |-ImplicitCastExpr 0x7f9a4c0147c8 <col:3> 'void (*)(const void *, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f9a4c014668 <col:3> '<builtin fn type>' Function 0x7f9a4c014508 '__builtin_prefetch' 'void (const void *, ...)'
+|     |-ImplicitCastExpr 0x7f9a4c014820 <col:23, col:38> 'const void *' <BitCast>
+|     | `-BinaryOperator 0x7f9a4c014738 <col:23, col:38> 'int *' '+'
+|     |   |-ImplicitCastExpr 0x7f9a4c014708 <col:23> 'int *' <ArrayToPointerDecay>
+|     |   | `-DeclRefExpr 0x7f9a4c014690 <col:23> 'int [100]' lvalue Var 0x7f9a4c014200 'glob_int_arr' 'int [100]'
+|     |   `-ImplicitCastExpr 0x7f9a4c014720 <col:38> 'int' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f9a4c0146b8 <col:38> 'int' lvalue Var 0x7f9a4c0142b8 'glob_int' 'int'
+|     |-IntegerLiteral 0x7f9a4c014760 <col:48> 'int' 0
+|     `-IntegerLiteral 0x7f9a4c014780 <col:51> 'int' 0
+`-FunctionDecl 0x7f9a4c014508 <col:3> col:3 implicit used __builtin_prefetch 'void (const void *, ...)' extern
+  |-ParmVarDecl 0x7f9a4c0145a8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-NoThrowAttr 0x7f9a4c014610 <col:3> Implicit
+  `-ConstAttr 0x7f9a4c014658 <col:3> Implicit

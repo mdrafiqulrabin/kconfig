@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7f818701eee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f818701fb78 <../Data/C2AST/pr68234.c:4:1, col:12> col:12 used nc 'int' extern
+|-FunctionDecl 0x7f818681c120 <line:5:1, col:28> col:6 used ff 'void (unsigned long long)'
+| `-ParmVarDecl 0x7f818681c058 <col:10, col:24> col:28 'unsigned long long'
+`-FunctionDecl 0x7f818681c290 <line:7:1, line:20:1> line:8:1 f 'void (void)'
+  `-CompoundStmt 0x7f818681cb18 <line:9:1, line:20:1>
+    |-DeclStmt 0x7f818681c410 <line:10:3, col:27>
+    | `-VarDecl 0x7f818681c3b0 <col:3, col:26> col:17 used resp 'unsigned char [1024]'
+    |-DeclStmt 0x7f818681c4a0 <line:11:3, col:8>
+    | `-VarDecl 0x7f818681c440 <col:3, col:7> col:7 used c 'int'
+    |-DeclStmt 0x7f818681c550 <line:12:3, col:13>
+    | `-VarDecl 0x7f818681c4d0 <col:3, col:12> col:7 used bl 'int' cinit
+    |   `-IntegerLiteral 0x7f818681c530 <col:12> 'int' 0
+    |-DeclStmt 0x7f818681c758 <line:13:3, col:65>
+    | `-VarDecl 0x7f818681c5b0 <col:3, col:64> col:23 used dwords 'unsigned long long *' cinit
+    |   `-CStyleCastExpr 0x7f818681c730 <col:32, col:64> 'unsigned long long *' <BitCast>
+    |     `-ParenExpr 0x7f818681c710 <col:55, col:64> 'unsigned char *'
+    |       `-BinaryOperator 0x7f818681c6a0 <col:56, col:63> 'unsigned char *' '+'
+    |         |-ImplicitCastExpr 0x7f818681c688 <col:56> 'unsigned char *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7f818681c610 <col:56> 'unsigned char [1024]' lvalue Var 0x7f818681c3b0 'resp' 'unsigned char [1024]'
+    |         `-IntegerLiteral 0x7f818681c638 <col:63> 'int' 5
+    `-ForStmt 0x7f818681cae0 <line:14:3, line:19:5>
+      |-BinaryOperator 0x7f818681c7b8 <line:14:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f818681c770 <col:8> 'int' lvalue Var 0x7f818681c440 'c' 'int'
+      | `-IntegerLiteral 0x7f818681c798 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f818681c860 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f818681c830 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f818681c7e0 <col:15> 'int' lvalue Var 0x7f818681c440 'c' 'int'
+      | `-ImplicitCastExpr 0x7f818681c848 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f818681c808 <col:19> 'int' lvalue Var 0x7f818701fb78 'nc' 'int'
+      |-UnaryOperator 0x7f818681c8b0 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f818681c888 <col:23> 'int' lvalue Var 0x7f818681c440 'c' 'int'
+      `-CompoundStmt 0x7f818681cac0 <line:15:5, line:19:5>
+        |-CallExpr 0x7f818681ca30 <line:17:7, col:26> 'void'
+        | |-ImplicitCastExpr 0x7f818681ca18 <col:7> 'void (*)(unsigned long long)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7f818681c8d0 <col:7> 'void (unsigned long long)' Function 0x7f818681c120 'ff' 'void (unsigned long long)'
+        | `-ImplicitCastExpr 0x7f818681ca60 <col:11, col:25> 'unsigned long long' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7f818681c9c0 <col:11, col:25> 'unsigned long long' lvalue
+        |     |-ImplicitCastExpr 0x7f818681c9a8 <col:11> 'unsigned long long *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f818681c8f8 <col:11> 'unsigned long long *' lvalue Var 0x7f818681c5b0 'dwords' 'unsigned long long *'
+        |     `-BinaryOperator 0x7f818681c980 <col:18, col:23> 'int' '/'
+        |       |-ImplicitCastExpr 0x7f818681c968 <col:18> 'int' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7f818681c920 <col:18> 'int' lvalue Var 0x7f818681c4d0 'bl' 'int'
+        |       `-IntegerLiteral 0x7f818681c948 <col:23> 'int' 64
+        `-UnaryOperator 0x7f818681caa0 <line:18:7, col:9> 'int' postfix '++'
+          `-DeclRefExpr 0x7f818681ca78 <col:7> 'int' lvalue Var 0x7f818681c4d0 'bl' 'int'

@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7f866f82b0e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f866f885e50 <../Data/C2AST/pr57363.c:9:1, line:18:1> line:9:5 main 'int (void)'
+| `-CompoundStmt 0x7f866f8867a8 <line:10:1, line:18:1>
+|   |-DeclStmt 0x7f866f886270 <line:11:3, col:32>
+|   | `-VarDecl 0x7f866f885f30 <col:3, col:31> col:10 used x 'double' cinit
+|   |   `-CallExpr 0x7f866f886210 <col:14, col:31> 'double'
+|   |     |-ImplicitCastExpr 0x7f866f8861f8 <col:14> 'double (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f866f886128 <col:14> '<builtin fn type>' Function 0x7f866f885fc8 '__builtin_nan' 'double (const char *)'
+|   |     `-ImplicitCastExpr 0x7f866f886258 <col:29> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7f866f886240 <col:29> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7f866f886188 <col:29> 'char [1]' lvalue ""
+|   |-DeclStmt 0x7f866f886330 <line:12:3, col:23>
+|   | `-VarDecl 0x7f866f8862a0 <col:3, col:19> col:15 used y 'long double' cinit
+|   |   `-FloatingLiteral 0x7f866f886300 <col:19> 'long double' 1.100000e+00
+|   |-CallExpr 0x7f866f8864e0 <line:14:3, col:29> 'int'
+|   | |-ImplicitCastExpr 0x7f866f8864c8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f866f886450 <col:3> 'int ()' Function 0x7f866f8863a0 'feenableexcept' 'int ()'
+|   | `-IntegerLiteral 0x7f866f886478 </usr/include/fenv.h:202:29> 'int' 32
+|   |-CallExpr 0x7f866f8865a0 <../Data/C2AST/pr57363.c:15:3, col:31> 'int'
+|   | |-ImplicitCastExpr 0x7f866f886588 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f866f886510 <col:3> 'int (int)' Function 0x7f866f86e158 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7f866f886538 </usr/include/fenv.h:213:29> 'int' 63
+|   |-BinaryOperator 0x7f866f8866d8 <../Data/C2AST/pr57363.c:16:3, col:11> 'double' '='
+|   | |-DeclRefExpr 0x7f866f8865d0 <col:3> 'double' lvalue Var 0x7f866f885f30 'x' 'double'
+|   | `-ImplicitCastExpr 0x7f866f8866c0 <col:7, col:11> 'double' <FloatingCast>
+|   |   `-BinaryOperator 0x7f866f886698 <col:7, col:11> 'long double' '+'
+|   |     |-ImplicitCastExpr 0x7f866f886680 <col:7> 'long double' <FloatingCast>
+|   |     | `-ImplicitCastExpr 0x7f866f886650 <col:7> 'double' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7f866f886600 <col:7> 'double' lvalue Var 0x7f866f885f30 'x' 'double'
+|   |     `-ImplicitCastExpr 0x7f866f886668 <col:11> 'long double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f866f886628 <col:11> 'long double' lvalue Var 0x7f866f8862a0 'y' 'long double'
+|   `-ReturnStmt 0x7f866f886790 <line:17:3, col:33>
+|     `-CallExpr 0x7f866f886760 <col:10, col:33> 'int'
+|       |-ImplicitCastExpr 0x7f866f886748 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f866f886700 <col:10> 'int (int)' Function 0x7f866f86e970 'fetestexcept' 'int (int)'
+|       `-IntegerLiteral 0x7f866f886728 </usr/include/fenv.h:202:29> 'int' 32
+`-FunctionDecl 0x7f866f885fc8 <../Data/C2AST/pr57363.c:11:14> col:14 implicit used __builtin_nan 'double (const char *)' extern
+  |-ParmVarDecl 0x7f866f886068 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-NoThrowAttr 0x7f866f8860d0 <col:14> Implicit
+  `-ConstAttr 0x7f866f886118 <col:14> Implicit

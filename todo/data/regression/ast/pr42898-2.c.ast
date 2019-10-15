@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fe2e481a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe2e481b560 <../Data/C2AST/pr42898-2.c:5:1, line:11:1> line:5:8 struct hardware definition
+| |-FieldDecl 0x7fe2e400ac58 <line:6:3, col:13> col:7 parm1 'int'
+| | `-IntegerLiteral 0x7fe2e400ac20 <col:13> 'int' 8
+| |-FieldDecl 0x7fe2e400acd8 <line:7:3, col:8> col:3 'int'
+| | `-IntegerLiteral 0x7fe2e400aca0 <col:8> 'int' 4
+| |-FieldDecl 0x7fe2e400ad58 <line:8:3, col:13> col:7 parm2 'int'
+| | `-IntegerLiteral 0x7fe2e400ad20 <col:13> 'int' 4
+| |-FieldDecl 0x7fe2e400add8 <line:9:3, col:13> col:7 parm3 'int'
+| | `-IntegerLiteral 0x7fe2e400ada0 <col:13> 'int' 15
+| `-FieldDecl 0x7fe2e400ae58 <line:10:3, col:13> col:7 parm4 'int'
+|   `-IntegerLiteral 0x7fe2e400ae20 <col:13> 'int' 1
+|-VarDecl 0x7fe2e400aef0 <line:13:1, line:18:1> line:13:23 used h 'const struct hardware':'const struct hardware' cinit
+| `-InitListExpr 0x7fe2e400b170 <col:27, line:18:1> 'struct hardware':'struct hardware'
+|   |-IntegerLiteral 0x7fe2e400af90 <line:14:10> 'int' 42
+|   |-IntegerLiteral 0x7fe2e400aff0 <line:15:10> 'int' 13
+|   |-IntegerLiteral 0x7fe2e400b050 <line:16:10> 'int' 11850
+|   `-IntegerLiteral 0x7fe2e400b0b0 <line:17:10> 'int' 1
+`-FunctionDecl 0x7fe2e400b360 <line:20:1, line:23:1> line:20:6 f1 'void (volatile struct hardware *)'
+  |-ParmVarDecl 0x7fe2e400b260 <col:9, col:35> col:35 used ptr 'volatile struct hardware *'
+  `-CompoundStmt 0x7fe2e400b4d0 <line:21:1, line:23:1>
+    `-BinaryOperator 0x7fe2e400b4a8 <line:22:3, col:10> 'struct hardware':'struct hardware' '='
+      |-UnaryOperator 0x7fe2e400b448 <col:3, col:4> 'volatile struct hardware':'volatile struct hardware' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe2e400b430 <col:4> 'volatile struct hardware *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe2e400b408 <col:4> 'volatile struct hardware *' lvalue ParmVar 0x7fe2e400b260 'ptr' 'volatile struct hardware *'
+      `-ImplicitCastExpr 0x7fe2e400b490 <col:10> 'struct hardware':'struct hardware' <LValueToRValue>
+        `-DeclRefExpr 0x7fe2e400b468 <col:10> 'const struct hardware':'const struct hardware' lvalue Var 0x7fe2e400aef0 'h' 'const struct hardware':'const struct hardware'

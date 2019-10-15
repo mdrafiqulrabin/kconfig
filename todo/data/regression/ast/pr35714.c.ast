@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fcc3c82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcc3d9701e0 <../Data/C2AST/pr35714.c:6:1, col:16> col:16 used a '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' extern
+|-FunctionDecl 0x7fcc3d9702d8 <line:8:1, line:11:1> line:8:9 madd '__m128i (__m128i)'
+| |-ParmVarDecl 0x7fcc3d970250 <col:15, col:23> col:23 used b '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fcc3d970490 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fcc3d970478 <line:10:3, col:29>
+|     `-CallExpr 0x7fcc3d970410 <col:10, col:29> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7fcc3d9703f8 <col:10> '__m128i (*)(__m128i, __m128i)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fcc3d970380 <col:10> '__m128i (__m128i, __m128i)' Function 0x7fcc3d938b00 '_mm_madd_epi16' '__m128i (__m128i, __m128i)'
+|       |-ImplicitCastExpr 0x7fcc3d970448 <col:25> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fcc3d9703a8 <col:25> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fcc3d9701e0 'a' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|       `-ImplicitCastExpr 0x7fcc3d970460 <col:28> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fcc3d9703d0 <col:28> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fcc3d970250 'b' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+`-FunctionDecl 0x7fcc3d970540 <line:13:1, line:16:1> line:13:9 madd_swapped '__m128i (__m128i)'
+  |-ParmVarDecl 0x7fcc3d9704b8 <col:23, col:31> col:31 used b '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fcc3d9706f8 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7fcc3d9706e0 <line:15:5, col:31>
+      `-CallExpr 0x7fcc3d970678 <col:12, col:31> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fcc3d970660 <col:12> '__m128i (*)(__m128i, __m128i)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fcc3d9705e8 <col:12> '__m128i (__m128i, __m128i)' Function 0x7fcc3d938b00 '_mm_madd_epi16' '__m128i (__m128i, __m128i)'
+        |-ImplicitCastExpr 0x7fcc3d9706b0 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7fcc3d970610 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fcc3d9704b8 'b' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        `-ImplicitCastExpr 0x7fcc3d9706c8 <col:30> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fcc3d970638 <col:30> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fcc3d9701e0 'a' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'

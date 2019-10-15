@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fb86f027ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb86f069628 <../Data/C2AST/pr26632.c:5:1, col:12> col:5 used g 'int (void)'
+|-FunctionDecl 0x7fb86f0697d8 <line:6:1, col:13> col:6 used h 'long (void)'
+`-FunctionDecl 0x7fb86f069940 <line:8:1, line:12:1> line:9:1 f 'void (void)'
+  `-CompoundStmt 0x7fb86f069b70 <line:10:1, line:12:1>
+    `-ConditionalOperator 0x7fb86f069b40 <line:11:3, col:17> 'long'
+      |-IntegerLiteral 0x7fb86f0699e0 <col:3> 'int' 0
+      |-CallExpr 0x7fb86f069a70 <col:7, col:10> 'long'
+      | `-ImplicitCastExpr 0x7fb86f069a58 <col:7> 'long (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fb86f069a00 <col:7> 'long (void)' Function 0x7fb86f0697d8 'h' 'long (void)'
+      `-ImplicitCastExpr 0x7fb86f069b28 <col:14, col:17> 'long' <IntegralCast>
+        `-CallExpr 0x7fb86f069b00 <col:14, col:17> 'int'
+          `-ImplicitCastExpr 0x7fb86f069ae8 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fb86f069a98 <col:14> 'int (void)' Function 0x7fb86f069628 'g' 'int (void)'

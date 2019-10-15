@@ -1,0 +1,119 @@
+../Data/C2AST/pr65947-4.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7fafb681a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fafb681ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fafb681ab80 '__int128'
+|-TypedefDecl 0x7fafb681aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fafb681aba0 'unsigned __int128'
+|-TypedefDecl 0x7fafb681b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fafb681afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fafb681af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fafb681b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fafb681b200 'char *'
+|   `-BuiltinType 0x7fafb681a980 'char'
+|-TypedefDecl 0x7fafb681b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fafb681b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fafb681b320 'struct __va_list_tag'
+|     `-Record 0x7fafb681b298 '__va_list_tag'
+|-FunctionDecl 0x7fafb5832e50 <../Data/C2AST/pr65947-4.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fafb5832ef0 prev 0x7fafb5832e50 <col:1, col:51> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fafb5833128 <line:11:1, line:21:1> line:12:1 used condition_reduction 'int (int *, int)'
+| |-ParmVarDecl 0x7fafb5832fd0 <col:22, col:27> col:27 used a 'int *'
+| |-ParmVarDecl 0x7fafb5833048 <col:30, col:34> col:34 used min_v 'int'
+| `-CompoundStmt 0x7fafb5833710 <line:13:1, line:21:1>
+|   |-DeclStmt 0x7fafb58332f8 <line:14:3, col:20>
+|   | `-VarDecl 0x7fafb5833230 <col:3, col:18> col:7 used last 'int' cinit
+|   |   `-BinaryOperator 0x7fafb58332d0 <line:7:11, line:14:18> 'int' '+'
+|   |     |-IntegerLiteral 0x7fafb5833290 <line:7:11> 'int' 27
+|   |     `-IntegerLiteral 0x7fafb58332b0 <line:14:18> 'int' 96
+|   |-ForStmt 0x7fafb5833680 <line:16:3, line:18:14>
+|   | |-DeclStmt 0x7fafb58333a8 <line:16:8, col:17>
+|   | | `-VarDecl 0x7fafb5833328 <col:8, col:16> col:12 used i 'int' cinit
+|   | |   `-IntegerLiteral 0x7fafb5833388 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fafb5833420 <col:19, line:7:11> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fafb5833408 <line:16:19> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fafb58333c0 <col:19> 'int' lvalue Var 0x7fafb5833328 'i' 'int'
+|   | | `-IntegerLiteral 0x7fafb58333e8 <line:7:11> 'int' 27
+|   | |-UnaryOperator 0x7fafb5833470 <line:16:26, col:27> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fafb5833448 <col:26> 'int' lvalue Var 0x7fafb5833328 'i' 'int'
+|   | `-IfStmt 0x7fafb5833648 <line:17:5, line:18:14>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fafb5833590 <line:17:9, col:16> 'int' '>'
+|   |   | |-ImplicitCastExpr 0x7fafb5833560 <col:9, col:12> 'int' <LValueToRValue>
+|   |   | | `-ArraySubscriptExpr 0x7fafb5833510 <col:9, col:12> 'int' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fafb58334e0 <col:9> 'int *' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fafb5833490 <col:9> 'int *' lvalue ParmVar 0x7fafb5832fd0 'a' 'int *'
+|   |   | |   `-ImplicitCastExpr 0x7fafb58334f8 <col:11> 'int' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fafb58334b8 <col:11> 'int' lvalue Var 0x7fafb5833328 'i' 'int'
+|   |   | `-ImplicitCastExpr 0x7fafb5833578 <col:16> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fafb5833538 <col:16> 'int' lvalue ParmVar 0x7fafb5833048 'min_v' 'int'
+|   |   |-BinaryOperator 0x7fafb5833620 <line:18:7, col:14> 'int' '='
+|   |   | |-DeclRefExpr 0x7fafb58335b8 <col:7> 'int' lvalue Var 0x7fafb5833230 'last' 'int'
+|   |   | `-ImplicitCastExpr 0x7fafb5833608 <col:14> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fafb58335e0 <col:14> 'int' lvalue Var 0x7fafb5833328 'i' 'int'
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fafb58336f8 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fafb58336e0 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fafb58336b8 <col:10> 'int' lvalue Var 0x7fafb5833230 'last' 'in1 error generated.
+t'
+`-FunctionDecl 0x7fafb5833808 <line:23:1, line:41:1> line:24:1 main 'int (void)'
+  `-CompoundStmt 0x7fafb5834508 <line:25:1, line:41:1>
+    |-DeclStmt 0x7fafb5833ff0 <line:26:3, line:30:4>
+    | `-VarDecl 0x7fafb5833960 <line:26:3, line:30:3> line:26:7 used a 'int [27]' cinit
+    |   `-InitListExpr 0x7fafb5833ed8 <col:14, line:30:3> 'int [27]'
+    |     |-IntegerLiteral 0x7fafb58339c0 <line:27:3> 'int' 11
+    |     |-IntegerLiteral 0x7fafb58339e0 <col:7> 'int' 12
+    |     |-IntegerLiteral 0x7fafb5833a00 <col:11> 'int' 13
+    |     |-IntegerLiteral 0x7fafb5833a20 <col:15> 'int' 14
+    |     |-IntegerLiteral 0x7fafb5833a40 <col:19> 'int' 15
+    |     |-IntegerLiteral 0x7fafb5833a60 <col:23> 'int' 16
+    |     |-IntegerLiteral 0x7fafb5833a80 <col:27> 'int' 17
+    |     |-IntegerLiteral 0x7fafb5833aa0 <col:31> 'int' 18
+    |     |-IntegerLiteral 0x7fafb5833ac0 <col:35> 'int' 19
+    |     |-IntegerLiteral 0x7fafb5833ae0 <col:39> 'int' 20
+    |     |-IntegerLiteral 0x7fafb5833b00 <line:28:3> 'int' 1
+    |     |-IntegerLiteral 0x7fafb5833b20 <col:6> 'int' 2
+    |     |-IntegerLiteral 0x7fafb5833b40 <col:9> 'int' 3
+    |     |-IntegerLiteral 0x7fafb5833b60 <col:12> 'int' 4
+    |     |-IntegerLiteral 0x7fafb5833b80 <col:15> 'int' 5
+    |     |-IntegerLiteral 0x7fafb5833ba0 <col:18> 'int' 6
+    |     |-IntegerLiteral 0x7fafb5833bc0 <col:21> 'int' 7
+    |     |-IntegerLiteral 0x7fafb5833be0 <col:24> 'int' 8
+    |     |-IntegerLiteral 0x7fafb5833c00 <col:27> 'int' 9
+    |     |-IntegerLiteral 0x7fafb5833c20 <col:30> 'int' 10
+    |     |-IntegerLiteral 0x7fafb5833c40 <line:29:3> 'int' 21
+    |     |-IntegerLiteral 0x7fafb5833c60 <col:7> 'int' 22
+    |     |-IntegerLiteral 0x7fafb5833c80 <col:11> 'int' 23
+    |     |-IntegerLiteral 0x7fafb5833ca0 <col:15> 'int' 24
+    |     |-IntegerLiteral 0x7fafb5833cc0 <col:19> 'int' 25
+    |     |-IntegerLiteral 0x7fafb5833ce0 <col:23> 'int' 26
+    |     `-IntegerLiteral 0x7fafb5833d00 <col:27> 'int' 27
+    |-CallExpr 0x7fafb5834180 <line:32:3, col:15> 'int'
+    | `-ImplicitCastExpr 0x7fafb5834168 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fafb5834110 <col:3> 'int ()' Function 0x7fafb5834060 'check_vect' 'int ()'
+    |-DeclStmt 0x7fafb5834320 <line:34:3, col:40>
+    | `-VarDecl 0x7fafb58341c0 <col:3, col:39> col:7 used ret 'int' cinit
+    |   `-CallExpr 0x7fafb58342d0 <col:13, col:39> 'int'
+    |     |-ImplicitCastExpr 0x7fafb58342b8 <col:13> 'int (*)(int *, int)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fafb5834220 <col:13> 'int (int *, int)' Function 0x7fafb5833128 'condition_reduction' 'int (int *, int)'
+    |     |-ImplicitCastExpr 0x7fafb5834308 <col:34> 'int *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7fafb5834248 <col:34> 'int [27]' lvalue Var 0x7fafb5833960 'a' 'int [27]'
+    |     `-IntegerLiteral 0x7fafb5834270 <col:37> 'int' 46
+    |-IfStmt 0x7fafb5834498 <line:37:3, line:38:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fafb58343e0 <line:37:7, col:18> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fafb58343c8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fafb5834338 <col:7> 'int' lvalue Var 0x7fafb58341c0 'ret' 'int'
+    | | `-BinaryOperator 0x7fafb58343a0 <line:7:11, line:37:18> 'int' '+'
+    | |   |-IntegerLiteral 0x7fafb5834360 <line:7:11> 'int' 27
+    | |   `-IntegerLiteral 0x7fafb5834380 <line:37:18> 'int' 96
+    | |-CallExpr 0x7fafb5834470 <line:38:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fafb5834458 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fafb5834408 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fafb5832ef0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fafb58344f0 <line:40:3, col:10>
+      `-IntegerLiteral 0x7fafb58344d0 <col:10> 'int' 0

@@ -1,0 +1,900 @@
+TranslationUnitDecl 0x7fe9368174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe936818160 <../Data/C2AST/pr68619-5.c:3:9, col:15> col:15 union tree_node
+|-TypedefDecl 0x7fe9360292d0 <col:1, col:26> col:26 referenced tree 'union tree_node *'
+| `-PointerType 0x7fe936029280 'union tree_node *'
+|   `-ElaboratedType 0x7fe936029220 'union tree_node' sugar
+|     `-RecordType 0x7fe936029200 'union tree_node'
+|       `-Record 0x7fe936056768 'tree_node'
+|-RecordDecl 0x7fe936029340 <line:4:9, col:15> col:15 union gimple_statement_d
+|-TypedefDecl 0x7fe9360294a0 <col:1, col:35> col:35 referenced gimple 'union gimple_statement_d *'
+| `-PointerType 0x7fe936029450 'union gimple_statement_d *'
+|   `-ElaboratedType 0x7fe9360293f0 'union gimple_statement_d' sugar
+|     `-RecordType 0x7fe9360293d0 'union gimple_statement_d'
+|       `-Record 0x7fe936029340 'gimple_statement_d'
+|-EnumDecl 0x7fe936029510 <line:5:1, line:35:52> line:5:6 machine_mode
+| |-EnumConstantDecl 0x7fe9360295d0 <line:6:3> col:3 referenced VOIDmode 'int'
+| |-EnumConstantDecl 0x7fe936029618 <col:13> col:13 referenced BLKmode 'int'
+| |-EnumConstantDecl 0x7fe936029660 <col:22> col:22 referenced CCmode 'int'
+| |-EnumConstantDecl 0x7fe9360296a8 <col:30> col:30 CCGCmode 'int'
+| |-EnumConstantDecl 0x7fe9360296f0 <col:40> col:40 CCGOCmode 'int'
+| |-EnumConstantDecl 0x7fe936029738 <col:51> col:51 CCNOmode 'int'
+| |-EnumConstantDecl 0x7fe936029780 <col:61> col:61 CCAmode 'int'
+| |-EnumConstantDecl 0x7fe9360297c8 <col:70> col:70 CCCmode 'int'
+| |-EnumConstantDecl 0x7fe936029810 <line:7:5> col:5 CCOmode 'int'
+| |-EnumConstantDecl 0x7fe936029858 <col:14> col:14 CCSmode 'int'
+| |-EnumConstantDecl 0x7fe9360298a0 <col:23> col:23 CCZmode 'int'
+| |-EnumConstantDecl 0x7fe9360298e8 <col:32> col:32 CCFPmode 'int'
+| |-EnumConstantDecl 0x7fe936029930 <col:42> col:42 referenced CCFPUmode 'int'
+| |-EnumConstantDecl 0x7fe936029978 <col:53> col:53 BImode 'int'
+| |-EnumConstantDecl 0x7fe9360299c0 <col:61> col:61 referenced QImode 'int'
+| |-EnumConstantDecl 0x7fe936029a08 <col:69> col:69 HImode 'int'
+| |-EnumConstantDecl 0x7fe936029a50 <line:8:5> col:5 SImode 'int'
+| |-EnumConstantDecl 0x7fe936029a98 <col:13> col:13 DImode 'int'
+| |-EnumConstantDecl 0x7fe936029ae0 <col:21> col:21 TImode 'int'
+| |-EnumConstantDecl 0x7fe936029b28 <col:29> col:29 referenced OImode 'int'
+| |-EnumConstantDecl 0x7fe936029b70 <col:37> col:37 referenced QQmode 'int'
+| |-EnumConstantDecl 0x7fe936029bb8 <col:45> col:45 HQmode 'int'
+| |-EnumConstantDecl 0x7fe936029c00 <col:53> col:53 SQmode 'int'
+| |-EnumConstantDecl 0x7fe936029c48 <col:61> col:61 DQmode 'int'
+| |-EnumConstantDecl 0x7fe936029c90 <col:69> col:69 referenced TQmode 'int'
+| |-EnumConstantDecl 0x7fe936029cd8 <line:9:5> col:5 referenced UQQmode 'int'
+| |-EnumConstantDecl 0x7fe936029d20 <col:14> col:14 UHQmode 'int'
+| |-EnumConstantDecl 0x7fe936029d68 <col:23> col:23 USQmode 'int'
+| |-EnumConstantDecl 0x7fe936029db0 <col:32> col:32 UDQmode 'int'
+| |-EnumConstantDecl 0x7fe936029df8 <col:41> col:41 referenced UTQmode 'int'
+| |-EnumConstantDecl 0x7fe936029e40 <col:50> col:50 referenced HAmode 'int'
+| |-EnumConstantDecl 0x7fe936029e88 <col:58> col:58 SAmode 'int'
+| |-EnumConstantDecl 0x7fe936029ed0 <col:66> col:66 DAmode 'int'
+| |-EnumConstantDecl 0x7fe936029f18 <line:10:5> col:5 referenced TAmode 'int'
+| |-EnumConstantDecl 0x7fe936029f60 <col:13> col:13 referenced UHAmode 'int'
+| |-EnumConstantDecl 0x7fe936029fa8 <col:22> col:22 USAmode 'int'
+| |-EnumConstantDecl 0x7fe936029ff0 <col:31> col:31 UDAmode 'int'
+| |-EnumConstantDecl 0x7fe93602a038 <col:40> col:40 referenced UTAmode 'int'
+| |-EnumConstantDecl 0x7fe93602a080 <col:49> col:49 referenced SFmode 'int'
+| |-EnumConstantDecl 0x7fe93602a0c8 <col:57> col:57 DFmode 'int'
+| |-EnumConstantDecl 0x7fe93602a110 <col:65> col:65 XFmode 'int'
+| |-EnumConstantDecl 0x7fe93602a158 <line:11:5> col:5 referenced TFmode 'int'
+| |-EnumConstantDecl 0x7fe93602a1a0 <col:13> col:13 referenced SDmode 'int'
+| |-EnumConstantDecl 0x7fe93602a200 <col:21> col:21 DDmode 'int'
+| |-EnumConstantDecl 0x7fe93602a248 <col:29> col:29 referenced TDmode 'int'
+| |-EnumConstantDecl 0x7fe93602a290 <col:37> col:37 referenced CQImode 'int'
+| |-EnumConstantDecl 0x7fe93602a2d8 <col:46> col:46 CHImode 'int'
+| |-EnumConstantDecl 0x7fe93602a320 <col:55> col:55 CSImode 'int'
+| |-EnumConstantDecl 0x7fe93602a368 <col:64> col:64 CDImode 'int'
+| |-EnumConstantDecl 0x7fe93602a3b0 <line:12:5> col:5 CTImode 'int'
+| |-EnumConstantDecl 0x7fe93602a3f8 <col:14> col:14 referenced COImode 'int'
+| |-EnumConstantDecl 0x7fe93602a440 <col:23> col:23 referenced SCmode 'int'
+| |-EnumConstantDecl 0x7fe93602a488 <col:31> col:31 DCmode 'int'
+| |-EnumConstantDecl 0x7fe93602a4d0 <col:39> col:39 XCmode 'int'
+| |-EnumConstantDecl 0x7fe93602a518 <col:47> col:47 referenced TCmode 'int'
+| |-EnumConstantDecl 0x7fe93602a560 <col:55> col:55 referenced V2QImode 'int'
+| |-EnumConstantDecl 0x7fe93602a5a8 <col:65> col:65 V4QImode 'int'
+| |-EnumConstantDecl 0x7fe93602a5f0 <line:13:5> col:5 V2HImode 'int'
+| |-EnumConstantDecl 0x7fe93602a638 <col:15> col:15 V1SImode 'int'
+| |-EnumConstantDecl 0x7fe93602a680 <col:25> col:25 V8QImode 'int'
+| |-EnumConstantDecl 0x7fe93602a6c8 <col:35> col:35 V4HImode 'int'
+| |-EnumConstantDecl 0x7fe93602a710 <col:45> col:45 V2SImode 'int'
+| |-EnumConstantDecl 0x7fe93602a758 <col:55> col:55 V1DImode 'int'
+| |-EnumConstantDecl 0x7fe93602a7a0 <col:65> col:65 V16QImode 'int'
+| |-EnumConstantDecl 0x7fe93602a7e8 <line:14:5> col:5 V8HImode 'int'
+| |-EnumConstantDecl 0x7fe93602a830 <col:15> col:15 V4SImode 'int'
+| |-EnumConstantDecl 0x7fe93602a878 <col:25> col:25 V2DImode 'int'
+| |-EnumConstantDecl 0x7fe93602a8c0 <col:35> col:35 V1TImode 'int'
+| |-EnumConstantDecl 0x7fe93602a908 <col:45> col:45 V32QImode 'int'
+| |-EnumConstantDecl 0x7fe93602a950 <col:56> col:56 V16HImode 'int'
+| |-EnumConstantDecl 0x7fe93602a998 <col:67> col:67 V8SImode 'int'
+| |-EnumConstantDecl 0x7fe93602a9e0 <line:15:5> col:5 V4DImode 'int'
+| |-EnumConstantDecl 0x7fe93602aa28 <col:15> col:15 V2TImode 'int'
+| |-EnumConstantDecl 0x7fe93602aa70 <col:25> col:25 V64QImode 'int'
+| |-EnumConstantDecl 0x7fe93602aab8 <col:36> col:36 V32HImode 'int'
+| |-EnumConstantDecl 0x7fe93602ab00 <col:47> col:47 V16SImode 'int'
+| |-EnumConstantDecl 0x7fe93602ab48 <col:58> col:58 V8DImode 'int'
+| |-EnumConstantDecl 0x7fe93602ab90 <col:68> col:68 referenced V4TImode 'int'
+| |-EnumConstantDecl 0x7fe93602abd8 <line:16:5> col:5 referenced V2SFmode 'int'
+| |-EnumConstantDecl 0x7fe93602ac20 <col:15> col:15 V4SFmode 'int'
+| |-EnumConstantDecl 0x7fe93602ac68 <col:25> col:25 V2DFmode 'int'
+| |-EnumConstantDecl 0x7fe93602acb0 <col:35> col:35 V8SFmode 'int'
+| |-EnumConstantDecl 0x7fe93602acf8 <col:45> col:45 V4DFmode 'int'
+| |-EnumConstantDecl 0x7fe93602ad40 <col:55> col:55 V2TFmode 'int'
+| |-EnumConstantDecl 0x7fe93602ad88 <col:65> col:65 V16SFmode 'int'
+| |-EnumConstantDecl 0x7fe93602add0 <line:17:5> col:5 V8DFmode 'int'
+| |-EnumConstantDecl 0x7fe93602ae18 <col:15> col:15 referenced V4TFmode 'int'
+| |-EnumConstantDecl 0x7fe93602ae60 <col:25> col:25 referenced MAX_MACHINE_MODE 'int'
+| |-EnumConstantDecl 0x7fe93602aed0 <col:43, line:18:5> line:17:43 MIN_MODE_RANDOM 'int'
+| | `-DeclRefExpr 0x7fe93602aea8 <line:18:5> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe93602af40 <col:15, col:33> col:15 MAX_MODE_RANDOM 'int'
+| | `-DeclRefExpr 0x7fe93602af18 <col:33> 'int' EnumConstant 0x7fe936029618 'BLKmode' 'int'
+| |-EnumConstantDecl 0x7fe93602afb0 <col:42, col:56> col:42 MIN_MODE_CC 'int'
+| | `-DeclRefExpr 0x7fe93602af88 <col:56> 'int' EnumConstant 0x7fe936029660 'CCmode' 'int'
+| |-EnumConstantDecl 0x7fe93602b020 <col:64, line:19:5> line:18:64 MAX_MODE_CC 'int'
+| | `-DeclRefExpr 0x7fe93602aff8 <line:19:5> 'int' EnumConstant 0x7fe936029930 'CCFPUmode' 'int'
+| |-EnumConstantDecl 0x7fe93602b090 <col:16, col:31> col:16 MIN_MODE_INT 'int'
+| | `-DeclRefExpr 0x7fe93602b068 <col:31> 'int' EnumConstant 0x7fe9360299c0 'QImode' 'int'
+| |-EnumConstantDecl 0x7fe93602b100 <col:39, line:20:5> line:19:39 MAX_MODE_INT 'int'
+| | `-DeclRefExpr 0x7fe93602b0d8 <line:20:5> 'int' EnumConstant 0x7fe936029b28 'OImode' 'int'
+| |-EnumConstantDecl 0x7fe93602b170 <col:13, col:36> col:13 MIN_MODE_PARTIAL_INT 'int'
+| | `-DeclRefExpr 0x7fe93602b148 <col:36> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe936040a00 <col:46, line:21:5> line:20:46 MAX_MODE_PARTIAL_INT 'int'
+| | `-DeclRefExpr 0x7fe93602b1b8 <line:21:5> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe936040a70 <col:15, col:32> col:15 MIN_MODE_FRACT 'int'
+| | `-DeclRefExpr 0x7fe936040a48 <col:32> 'int' EnumConstant 0x7fe936029b70 'QQmode' 'int'
+| |-EnumConstantDecl 0x7fe936040ae0 <col:40, line:22:5> line:21:40 MAX_MODE_FRACT 'int'
+| | `-DeclRefExpr 0x7fe936040ab8 <line:22:5> 'int' EnumConstant 0x7fe936029c90 'TQmode' 'int'
+| |-EnumConstantDecl 0x7fe936040b50 <col:13, col:31> col:13 MIN_MODE_UFRACT 'int'
+| | `-DeclRefExpr 0x7fe936040b28 <col:31> 'int' EnumConstant 0x7fe936029cd8 'UQQmode' 'int'
+| |-EnumConstantDecl 0x7fe936040bc0 <col:40, line:23:5> line:22:40 MAX_MODE_UFRACT 'int'
+| | `-DeclRefExpr 0x7fe936040b98 <line:23:5> 'int' EnumConstant 0x7fe936029df8 'UTQmode' 'int'
+| |-EnumConstantDecl 0x7fe936040c30 <col:14, col:31> col:14 MIN_MODE_ACCUM 'int'
+| | `-DeclRefExpr 0x7fe936040c08 <col:31> 'int' EnumConstant 0x7fe936029e40 'HAmode' 'int'
+| |-EnumConstantDecl 0x7fe936040ca0 <col:39, line:24:5> line:23:39 MAX_MODE_ACCUM 'int'
+| | `-DeclRefExpr 0x7fe936040c78 <line:24:5> 'int' EnumConstant 0x7fe936029f18 'TAmode' 'int'
+| |-EnumConstantDecl 0x7fe936040d10 <col:13, col:31> col:13 MIN_MODE_UACCUM 'int'
+| | `-DeclRefExpr 0x7fe936040ce8 <col:31> 'int' EnumConstant 0x7fe936029f60 'UHAmode' 'int'
+| |-EnumConstantDecl 0x7fe936040d80 <col:40, line:25:5> line:24:40 MAX_MODE_UACCUM 'int'
+| | `-DeclRefExpr 0x7fe936040d58 <line:25:5> 'int' EnumConstant 0x7fe93602a038 'UTAmode' 'int'
+| |-EnumConstantDecl 0x7fe936040df0 <col:14, col:31> col:14 referenced MIN_MODE_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe936040dc8 <col:31> 'int' EnumConstant 0x7fe93602a080 'SFmode' 'int'
+| |-EnumConstantDecl 0x7fe936040e60 <col:39, line:26:5> line:25:39 referenced MAX_MODE_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe936040e38 <line:26:5> 'int' EnumConstant 0x7fe93602a158 'TFmode' 'int'
+| |-EnumConstantDecl 0x7fe936040ed0 <col:13, col:38> col:13 referenced MIN_MODE_DECIMAL_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe936040ea8 <col:38> 'int' EnumConstant 0x7fe93602a1a0 'SDmode' 'int'
+| |-EnumConstantDecl 0x7fe936040f40 <col:46, line:27:5> line:26:46 referenced MAX_MODE_DECIMAL_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe936040f18 <line:27:5> 'int' EnumConstant 0x7fe93602a248 'TDmode' 'int'
+| |-EnumConstantDecl 0x7fe936040fb0 <col:13, col:36> col:13 MIN_MODE_COMPLEX_INT 'int'
+| | `-DeclRefExpr 0x7fe936040f88 <col:36> 'int' EnumConstant 0x7fe93602a290 'CQImode' 'int'
+| |-EnumConstantDecl 0x7fe936041020 <col:45, line:28:5> line:27:45 MAX_MODE_COMPLEX_INT 'int'
+| | `-DeclRefExpr 0x7fe936040ff8 <line:28:5> 'int' EnumConstant 0x7fe93602a3f8 'COImode' 'int'
+| |-EnumConstantDecl 0x7fe936041090 <col:14, col:39> col:14 MIN_MODE_COMPLEX_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe936041068 <col:39> 'int' EnumConstant 0x7fe93602a440 'SCmode' 'int'
+| |-EnumConstantDecl 0x7fe936041100 <col:47, line:29:5> line:28:47 MAX_MODE_COMPLEX_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe9360410d8 <line:29:5> 'int' EnumConstant 0x7fe93602a518 'TCmode' 'int'
+| |-EnumConstantDecl 0x7fe936041170 <col:13, col:35> col:13 MIN_MODE_VECTOR_INT 'int'
+| | `-DeclRefExpr 0x7fe936041148 <col:35> 'int' EnumConstant 0x7fe93602a560 'V2QImode' 'int'
+| |-EnumConstantDecl 0x7fe9360411e0 <col:45, line:30:5> line:29:45 MAX_MODE_VECTOR_INT 'int'
+| | `-DeclRefExpr 0x7fe9360411b8 <line:30:5> 'int' EnumConstant 0x7fe93602ab90 'V4TImode' 'int'
+| |-EnumConstantDecl 0x7fe936041250 <col:15, col:39> col:15 MIN_MODE_VECTOR_FRACT 'int'
+| | `-DeclRefExpr 0x7fe936041228 <col:39> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe9360412c0 <col:49, line:31:5> line:30:49 MAX_MODE_VECTOR_FRACT 'int'
+| | `-DeclRefExpr 0x7fe936041298 <line:31:5> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe936041330 <col:15, col:40> col:15 MIN_MODE_VECTOR_UFRACT 'int'
+| | `-DeclRefExpr 0x7fe936041308 <col:40> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe9360413a0 <col:50, line:32:5> line:31:50 MAX_MODE_VECTOR_UFRACT 'int'
+| | `-DeclRefExpr 0x7fe936041378 <line:32:5> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe936041410 <col:15, col:39> col:15 MIN_MODE_VECTOR_ACCUM 'int'
+| | `-DeclRefExpr 0x7fe9360413e8 <col:39> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe936041480 <col:49, line:33:5> line:32:49 MAX_MODE_VECTOR_ACCUM 'int'
+| | `-DeclRefExpr 0x7fe936041458 <line:33:5> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe9360414f0 <col:15, col:40> col:15 MIN_MODE_VECTOR_UACCUM 'int'
+| | `-DeclRefExpr 0x7fe9360414c8 <col:40> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe936041560 <col:50, line:34:5> line:33:50 MAX_MODE_VECTOR_UACCUM 'int'
+| | `-DeclRefExpr 0x7fe936041538 <line:34:5> 'int' EnumConstant 0x7fe9360295d0 'VOIDmode' 'int'
+| |-EnumConstantDecl 0x7fe9360415d0 <col:15, col:39> col:15 MIN_MODE_VECTOR_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe9360415a8 <col:39> 'int' EnumConstant 0x7fe93602abd8 'V2SFmode' 'int'
+| |-EnumConstantDecl 0x7fe936041640 <col:49, line:35:5> line:34:49 MAX_MODE_VECTOR_FLOAT 'int'
+| | `-DeclRefExpr 0x7fe936041618 <line:35:5> 'int' EnumConstant 0x7fe93602ae18 'V4TFmode' 'int'
+| `-EnumConstantDecl 0x7fe9360416b0 <col:15, col:35> col:15 referenced NUM_MACHINE_MODES 'int'
+|   `-DeclRefExpr 0x7fe936041688 <col:35> 'int' EnumConstant 0x7fe93602ae60 'MAX_MACHINE_MODE' 'int'
+|-EnumDecl 0x7fe9360416f8 <line:36:1, line:41:39> line:36:6 mode_class
+| |-EnumConstantDecl 0x7fe9360417b0 <line:37:3> col:3 MODE_RANDOM 'int'
+| |-EnumConstantDecl 0x7fe9360417f8 <col:16> col:16 MODE_CC 'int'
+| |-EnumConstantDecl 0x7fe936041840 <col:25> col:25 MODE_INT 'int'
+| |-EnumConstantDecl 0x7fe936041888 <col:35> col:35 MODE_PARTIAL_INT 'int'
+| |-EnumConstantDecl 0x7fe9360418d0 <col:53> col:53 MODE_FRACT 'int'
+| |-EnumConstantDecl 0x7fe936041918 <col:65> col:65 MODE_UFRACT 'int'
+| |-EnumConstantDecl 0x7fe936041960 <line:38:5> col:5 MODE_ACCUM 'int'
+| |-EnumConstantDecl 0x7fe9360419a8 <col:17> col:17 MODE_UACCUM 'int'
+| |-EnumConstantDecl 0x7fe936041a00 <col:30> col:30 MODE_FLOAT 'int'
+| |-EnumConstantDecl 0x7fe936041a48 <col:42> col:42 referenced MODE_DECIMAL_FLOAT 'int'
+| |-EnumConstantDecl 0x7fe936041a90 <col:62> col:62 MODE_COMPLEX_INT 'int'
+| |-EnumConstantDecl 0x7fe936041ad8 <line:39:5> col:5 MODE_COMPLEX_FLOAT 'int'
+| |-EnumConstantDecl 0x7fe936041b20 <col:25> col:25 MODE_VECTOR_INT 'int'
+| |-EnumConstantDecl 0x7fe936041b68 <col:42> col:42 MODE_VECTOR_FRACT 'int'
+| |-EnumConstantDecl 0x7fe936041bb0 <line:40:5> col:5 MODE_VECTOR_UFRACT 'int'
+| |-EnumConstantDecl 0x7fe936041bf8 <col:25> col:25 MODE_VECTOR_ACCUM 'int'
+| |-EnumConstantDecl 0x7fe936041c40 <col:44> col:44 MODE_VECTOR_UACCUM 'int'
+| |-EnumConstantDecl 0x7fe936041c88 <line:41:5> col:5 referenced MODE_VECTOR_FLOAT 'int'
+| `-EnumConstantDecl 0x7fe936041cd0 <col:24> col:24 MAX_MODE_CLASS 'int'
+|-VarDecl 0x7fe936041de0 <line:42:1, col:56> col:28 used mode_class 'const unsigned char [87]' extern
+|-VarDecl 0x7fe936041ed0 <line:43:1, col:56> col:28 used mode_inner 'const unsigned char [87]' extern
+|-RecordDecl 0x7fe936041f30 <line:44:1, line:47:1> line:44:8 struct real_format definition
+| `-FieldDecl 0x7fe936041ff8 <line:46:3, col:17> col:17 referenced has_nans 'unsigned char'
+|-VarDecl 0x7fe936042330 <line:48:1, line:52:14> line:48:34 used real_format_for_mode 'const struct real_format *[7]' extern
+|-EnumDecl 0x7fe936042390 <line:53:1, line:118:34> line:53:6 tree_code
+| |-EnumConstantDecl 0x7fe936042450 <line:54:3> col:3 ERROR_MARK 'int'
+| |-EnumConstantDecl 0x7fe936042498 <col:15> col:15 IDENTIFIER_NODE 'int'
+| |-EnumConstantDecl 0x7fe9360424e0 <col:32> col:32 TREE_LIST 'int'
+| |-EnumConstantDecl 0x7fe936042528 <col:43> col:43 TREE_VEC 'int'
+| |-EnumConstantDecl 0x7fe936042570 <col:53> col:53 BLOCK 'int'
+| |-EnumConstantDecl 0x7fe9360425b8 <col:60> col:60 OFFSET_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042600 <line:55:5> col:5 ENUMERAL_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042648 <col:20> col:20 BOOLEAN_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042690 <col:34> col:34 INTEGER_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360426d8 <col:48> col:48 REAL_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042720 <col:59> col:59 POINTER_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042768 <line:56:5> col:5 REFERENCE_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360427b0 <col:21> col:21 NULLPTR_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360427f8 <col:35> col:35 FIXED_POINT_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042840 <col:53> col:53 COMPLEX_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042888 <col:67> col:67 referenced VECTOR_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360428d0 <line:57:5> col:5 ARRAY_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042918 <col:17> col:17 RECORD_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936042960 <col:30> col:30 UNION_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360429a8 <col:42> col:42 QUAL_UNION_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936048c00 <col:59> col:59 VOID_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936048c48 <line:58:5> col:5 FUNCTION_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936048c90 <col:20> col:20 METHOD_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936048cd8 <col:33> col:33 LANG_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936048d20 <col:44> col:44 INTEGER_CST 'int'
+| |-EnumConstantDecl 0x7fe936048d68 <col:57> col:57 REAL_CST 'int'
+| |-EnumConstantDecl 0x7fe936048db0 <col:67> col:67 FIXED_CST 'int'
+| |-EnumConstantDecl 0x7fe936048df8 <line:59:5> col:5 COMPLEX_CST 'int'
+| |-EnumConstantDecl 0x7fe936048e40 <col:18> col:18 VECTOR_CST 'int'
+| |-EnumConstantDecl 0x7fe936048e88 <col:30> col:30 STRING_CST 'int'
+| |-EnumConstantDecl 0x7fe936048ed0 <col:42> col:42 FUNCTION_DECL 'int'
+| |-EnumConstantDecl 0x7fe936048f18 <col:57> col:57 LABEL_DECL 'int'
+| |-EnumConstantDecl 0x7fe936048f60 <line:60:5> col:5 FIELD_DECL 'int'
+| |-EnumConstantDecl 0x7fe936048fa8 <col:17> col:17 VAR_DECL 'int'
+| |-EnumConstantDecl 0x7fe936048ff0 <col:27> col:27 CONST_DECL 'int'
+| |-EnumConstantDecl 0x7fe936049038 <col:39> col:39 PARM_DECL 'int'
+| |-EnumConstantDecl 0x7fe936049080 <col:50> col:50 TYPE_DECL 'int'
+| |-EnumConstantDecl 0x7fe9360490c8 <col:61> col:61 RESULT_DECL 'int'
+| |-EnumConstantDecl 0x7fe936049110 <line:61:5> col:5 DEBUG_EXPR_DECL 'int'
+| |-EnumConstantDecl 0x7fe936049158 <col:22> col:22 NAMESPACE_DECL 'int'
+| |-EnumConstantDecl 0x7fe9360491a0 <col:38> col:38 IMPORTED_DECL 'int'
+| |-EnumConstantDecl 0x7fe9360491e8 <col:53> col:53 TRANSLATION_UNIT_DECL 'int'
+| |-EnumConstantDecl 0x7fe936049230 <line:62:5> col:5 COMPONENT_REF 'int'
+| |-EnumConstantDecl 0x7fe936049278 <col:20> col:20 BIT_FIELD_REF 'int'
+| |-EnumConstantDecl 0x7fe9360492c0 <col:35> col:35 REALPART_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049308 <col:50> col:50 IMAGPART_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049350 <col:65> col:65 ARRAY_REF 'int'
+| |-EnumConstantDecl 0x7fe936049398 <line:63:5> col:5 ARRAY_RANGE_REF 'int'
+| |-EnumConstantDecl 0x7fe9360493e0 <col:22> col:22 INDIRECT_REF 'int'
+| |-EnumConstantDecl 0x7fe936049428 <col:36> col:36 OBJ_TYPE_REF 'int'
+| |-EnumConstantDecl 0x7fe936049470 <col:50> col:50 CONSTRUCTOR 'int'
+| |-EnumConstantDecl 0x7fe9360494b8 <col:63> col:63 COMPOUND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049500 <line:64:5> col:5 MODIFY_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049548 <col:18> col:18 INIT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049590 <col:29> col:29 TARGET_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360495d8 <col:42> col:42 COND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049620 <col:53> col:53 VEC_COND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049668 <col:68> col:68 BIND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360496b0 <line:65:5> col:5 CALL_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360496f8 <col:16> col:16 WITH_CLEANUP_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049740 <col:35> col:35 CLEANUP_POINT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049788 <col:55> col:55 PLACEHOLDER_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360497d0 <line:66:5> col:5 PLUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049818 <col:16> col:16 MINUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049860 <col:28> col:28 MULT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360498a8 <col:39> col:39 POINTER_PLUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360498f0 <col:58> col:58 TRUNC_DIV_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049938 <line:67:5> col:5 CEIL_DIV_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049980 <col:20> col:20 FLOOR_DIV_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360499c8 <col:36> col:36 ROUND_DIV_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049a10 <col:52> col:52 TRUNC_MOD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049a58 <line:68:5> col:5 CEIL_MOD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049aa0 <col:20> col:20 FLOOR_MOD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049ae8 <col:36> col:36 ROUND_MOD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049b30 <col:52> col:52 RDIV_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049b78 <col:63> col:63 EXACT_DIV_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f200 <line:69:5> col:5 FIX_TRUNC_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f248 <col:21> col:21 FLOAT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f290 <col:33> col:33 NEGATE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f2d8 <col:46> col:46 MIN_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f320 <col:56> col:56 MAX_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f368 <col:66> col:66 ABS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f3b0 <line:70:5> col:5 LSHIFT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f3f8 <col:18> col:18 RSHIFT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f440 <col:31> col:31 LROTATE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f488 <col:45> col:45 RROTATE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f4d0 <col:59> col:59 BIT_IOR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f518 <line:71:5> col:5 BIT_XOR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f560 <col:19> col:19 BIT_AND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f5a8 <col:33> col:33 BIT_NOT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f5f0 <col:47> col:47 TRUTH_ANDIF_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f638 <line:72:5> col:5 TRUTH_ORIF_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f680 <col:22> col:22 TRUTH_AND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f6c8 <col:38> col:38 TRUTH_OR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f710 <col:53> col:53 TRUTH_XOR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f758 <line:73:5> col:5 TRUTH_NOT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f7a0 <col:21> col:21 LT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f7e8 <col:30> col:30 LE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f830 <col:39> col:39 GT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f878 <col:48> col:48 GE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f8c0 <col:57> col:57 EQ_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f908 <col:66> col:66 NE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f950 <line:74:5> col:5 UNORDERED_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f998 <col:21> col:21 ORDERED_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605f9e0 <col:35> col:35 UNLT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fa28 <col:46> col:46 UNLE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fa70 <col:57> col:57 UNGT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fab8 <col:68> col:68 UNGE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fb00 <line:75:5> col:5 UNEQ_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fb48 <col:16> col:16 LTGT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fb90 <col:27> col:27 RANGE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fbd8 <col:39> col:39 PAREN_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fc20 <col:51> col:51 CONVERT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fc68 <line:76:5> col:5 ADDR_SPACE_CONVERT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fcb0 <col:30> col:30 FIXED_CONVERT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fcf8 <col:50> col:50 NOP_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fd40 <col:60> col:60 NON_LVALUE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fd88 <line:77:5> col:5 VIEW_CONVERT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fdd0 <col:24> col:24 COMPOUND_LITERAL_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fe18 <col:47> col:47 SAVE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fe60 <col:58> col:58 ADDR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fea8 <line:78:5> col:5 FDESC_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605fef0 <col:17> col:17 COMPLEX_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605ff38 <col:31> col:31 CONJ_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605ff80 <col:42> col:42 PREDECREMENT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93605ffc8 <col:61> col:61 PREINCREMENT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936060010 <line:79:5> col:5 POSTDECREMENT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936060058 <col:25> col:25 POSTINCREMENT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360600a0 <col:45> col:45 VA_ARG_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360600e8 <col:58> col:58 TRY_CATCH_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936060130 <line:80:5> col:5 TRY_FINALLY_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936060178 <col:23> col:23 DECL_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049c00 <col:34> col:34 LABEL_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049c48 <col:46> col:46 GOTO_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049c90 <col:57> col:57 RETURN_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049cd8 <line:81:5> col:5 EXIT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049d20 <col:16> col:16 LOOP_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049d68 <col:27> col:27 SWITCH_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049db0 <col:40> col:40 CASE_LABEL_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049df8 <col:57> col:57 ASM_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049e40 <col:67> col:67 SSA_NAME 'int'
+| |-EnumConstantDecl 0x7fe936049e88 <line:82:5> col:5 CATCH_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049ed0 <col:17> col:17 EH_FILTER_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936049f18 <col:33> col:33 SCEV_KNOWN 'int'
+| |-EnumConstantDecl 0x7fe936049f60 <col:45> col:45 SCEV_NOT_KNOWN 'int'
+| |-EnumConstantDecl 0x7fe936049fa8 <col:61> col:61 POLYNOMIAL_CHREC 'int'
+| |-EnumConstantDecl 0x7fe936049ff0 <line:83:5> col:5 STATEMENT_LIST 'int'
+| |-EnumConstantDecl 0x7fe93604a038 <col:21> col:21 ASSERT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a080 <col:34> col:34 TREE_BINFO 'int'
+| |-EnumConstantDecl 0x7fe93604a0c8 <col:46> col:46 WITH_SIZE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a110 <line:84:5> col:5 REALIGN_LOAD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a158 <col:24> col:24 TARGET_MEM_REF 'int'
+| |-EnumConstantDecl 0x7fe93604a1a0 <col:40> col:40 MEM_REF 'int'
+| |-EnumConstantDecl 0x7fe93604a1e8 <col:49> col:49 OMP_PARALLEL 'int'
+| |-EnumConstantDecl 0x7fe93604a230 <col:63> col:63 OMP_TASK 'int'
+| |-EnumConstantDecl 0x7fe93604a278 <line:85:5> col:5 OMP_FOR 'int'
+| |-EnumConstantDecl 0x7fe93604a2c0 <col:14> col:14 OMP_SECTIONS 'int'
+| |-EnumConstantDecl 0x7fe93604a308 <col:28> col:28 OMP_SINGLE 'int'
+| |-EnumConstantDecl 0x7fe93604a350 <col:40> col:40 OMP_SECTION 'int'
+| |-EnumConstantDecl 0x7fe93604a398 <col:53> col:53 OMP_MASTER 'int'
+| |-EnumConstantDecl 0x7fe93604a3e0 <col:65> col:65 OMP_ORDERED 'int'
+| |-EnumConstantDecl 0x7fe93604a428 <line:86:5> col:5 OMP_CRITICAL 'int'
+| |-EnumConstantDecl 0x7fe93604a470 <col:19> col:19 OMP_ATOMIC 'int'
+| |-EnumConstantDecl 0x7fe93604a4b8 <col:31> col:31 OMP_CLAUSE 'int'
+| |-EnumConstantDecl 0x7fe93604a500 <col:43> col:43 REDUC_MAX_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a548 <col:59> col:59 REDUC_MIN_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a590 <line:87:5> col:5 REDUC_PLUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a5d8 <col:22> col:22 DOT_PROD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a620 <col:37> col:37 WIDEN_SUM_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a668 <col:53> col:53 WIDEN_MULT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a6b0 <line:88:5> col:5 WIDEN_MULT_PLUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a6f8 <col:27> col:27 WIDEN_MULT_MINUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a740 <col:50> col:50 FMA_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a788 <col:60> col:60 VEC_LSHIFT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a7d0 <line:89:5> col:5 VEC_RSHIFT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a818 <col:22> col:22 VEC_WIDEN_MULT_HI_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a860 <col:46> col:46 VEC_WIDEN_MULT_LO_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a8a8 <line:90:5> col:5 VEC_UNPACK_HI_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a8f0 <col:25> col:25 VEC_UNPACK_LO_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a938 <col:45> col:45 VEC_UNPACK_FLOAT_HI_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a980 <line:91:5> col:5 VEC_UNPACK_FLOAT_LO_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604a9c8 <col:31> col:31 VEC_PACK_TRUNC_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604aa10 <col:52> col:52 VEC_PACK_SAT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604aa58 <line:92:5> col:5 VEC_PACK_FIX_TRUNC_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604aaa0 <col:30> col:30 VEC_EXTRACT_EVEN_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604aae8 <col:53> col:53 VEC_EXTRACT_ODD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ab30 <line:93:5> col:5 VEC_INTERLEAVE_HIGH_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ab78 <col:31> col:31 VEC_INTERLEAVE_LOW_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bc00 <col:56> col:56 PREDICT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bc48 <line:94:5> col:5 OPTIMIZATION_NODE 'int'
+| |-EnumConstantDecl 0x7fe93604bc90 <col:24> col:24 TARGET_OPTION_NODE 'int'
+| |-EnumConstantDecl 0x7fe93604bcd8 <col:44> col:44 LAST_AND_UNUSED_TREE_CODE 'int'
+| |-EnumConstantDecl 0x7fe93604bd20 <line:95:5> col:5 C_MAYBE_CONST_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bd68 <col:25> col:25 EXCESS_PRECISION_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bdb0 <col:48> col:48 UNCONSTRAINED_ARRAY_TYPE 'int'
+| |-EnumConstantDecl 0x7fe93604bdf8 <line:96:5> col:5 UNCONSTRAINED_ARRAY_REF 'int'
+| |-EnumConstantDecl 0x7fe93604be40 <col:30> col:30 NULL_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604be88 <col:41> col:41 PLUS_NOMOD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bed0 <col:58> col:58 MINUS_NOMOD_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bf18 <line:97:5> col:5 ATTR_ADDR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604bf60 <col:21> col:21 STMT_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604bfa8 <col:32> col:32 LOOP_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604bff0 <col:43> col:43 EXIT_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604c038 <col:54> col:54 OFFSET_REF 'int'
+| |-EnumConstantDecl 0x7fe93604c080 <col:66> col:66 PTRMEM_CST 'int'
+| |-EnumConstantDecl 0x7fe93604c0c8 <line:98:5> col:5 NEW_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c110 <col:15> col:15 VEC_NEW_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c158 <col:29> col:29 DELETE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c1a0 <col:42> col:42 VEC_DELETE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c1e8 <col:59> col:59 SCOPE_REF 'int'
+| |-EnumConstantDecl 0x7fe93604c230 <line:99:5> col:5 MEMBER_REF 'int'
+| |-EnumConstantDecl 0x7fe93604c278 <col:17> col:17 TYPE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c2c0 <col:28> col:28 AGGR_INIT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c308 <col:44> col:44 VEC_INIT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c350 <col:59> col:59 THROW_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c398 <line:100:5> col:5 EMPTY_CLASS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c3e0 <col:23> col:23 BASELINK 'int'
+| |-EnumConstantDecl 0x7fe93604c428 <col:33> col:33 TEMPLATE_DECL 'int'
+| |-EnumConstantDecl 0x7fe93604c470 <col:48> col:48 TEMPLATE_PARM_INDEX 'int'
+| |-EnumConstantDecl 0x7fe93604c4b8 <line:101:5> col:5 TEMPLATE_TEMPLATE_PARM 'int'
+| |-EnumConstantDecl 0x7fe93604c500 <col:29> col:29 TEMPLATE_TYPE_PARM 'int'
+| |-EnumConstantDecl 0x7fe93604c548 <col:49> col:49 TYPENAME_TYPE 'int'
+| |-EnumConstantDecl 0x7fe93604c590 <col:64> col:64 TYPEOF_TYPE 'int'
+| |-EnumConstantDecl 0x7fe93604c5d8 <line:102:5> col:5 BOUND_TEMPLATE_TEMPLATE_PARM 'int'
+| |-EnumConstantDecl 0x7fe93604c620 <col:35> col:35 UNBOUND_CLASS_TEMPLATE 'int'
+| |-EnumConstantDecl 0x7fe93604c668 <col:59> col:59 USING_DECL 'int'
+| |-EnumConstantDecl 0x7fe93604c6b0 <line:103:5> col:5 USING_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604c6f8 <col:17> col:17 DEFAULT_ARG 'int'
+| |-EnumConstantDecl 0x7fe93604c740 <col:30> col:30 TEMPLATE_ID_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c788 <col:48> col:48 OVERLOAD 'int'
+| |-EnumConstantDecl 0x7fe93604c7d0 <col:58> col:58 PSEUDO_DTOR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c818 <line:104:5> col:5 MODOP_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c860 <col:17> col:17 CAST_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c8a8 <col:28> col:28 REINTERPRET_CAST_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c8f0 <col:51> col:51 CONST_CAST_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c938 <line:105:5> col:5 STATIC_CAST_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c980 <col:23> col:23 DYNAMIC_CAST_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604c9c8 <col:42> col:42 DOTSTAR_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ca10 <col:56> col:56 TYPEID_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ca58 <line:106:5> col:5 NOEXCEPT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604caa0 <col:20> col:20 NON_DEPENDENT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604cae8 <col:40> col:40 CTOR_INITIALIZER 'int'
+| |-EnumConstantDecl 0x7fe93604cb30 <col:58> col:58 TRY_BLOCK 'int'
+| |-EnumConstantDecl 0x7fe93604cb78 <line:107:5> col:5 EH_SPEC_BLOCK 'int'
+| |-EnumConstantDecl 0x7fe93604fa00 <col:20> col:20 HANDLER 'int'
+| |-EnumConstantDecl 0x7fe93604fa48 <col:29> col:29 MUST_NOT_THROW_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604fa90 <col:50> col:50 CLEANUP_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fad8 <col:64> col:64 IF_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fb20 <line:108:5> col:5 FOR_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fb68 <col:15> col:15 RANGE_FOR_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fbb0 <col:31> col:31 WHILE_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fbf8 <col:43> col:43 DO_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fc40 <col:52> col:52 BREAK_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fc88 <col:64> col:64 CONTINUE_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fcd0 <line:109:5> col:5 SWITCH_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fd18 <col:18> col:18 EXPR_STMT 'int'
+| |-EnumConstantDecl 0x7fe93604fd60 <col:29> col:29 TAG_DEFN 'int'
+| |-EnumConstantDecl 0x7fe93604fda8 <col:39> col:39 OFFSETOF_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604fdf0 <col:54> col:54 SIZEOF_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604fe38 <col:67> col:67 ARROW_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604fe80 <line:110:5> col:5 ALIGNOF_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604fec8 <col:19> col:19 AT_ENCODE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ff10 <col:35> col:35 STMT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ff58 <col:46> col:46 UNARY_PLUS_EXPR 'int'
+| |-EnumConstantDecl 0x7fe93604ffa0 <col:63> col:63 STATIC_ASSERT 'int'
+| |-EnumConstantDecl 0x7fe93604ffe8 <line:111:5> col:5 TYPE_ARGUMENT_PACK 'int'
+| |-EnumConstantDecl 0x7fe936050030 <col:25> col:25 NONTYPE_ARGUMENT_PACK 'int'
+| |-EnumConstantDecl 0x7fe936050078 <col:48> col:48 TYPE_PACK_EXPANSION 'int'
+| |-EnumConstantDecl 0x7fe9360500c0 <line:112:5> col:5 EXPR_PACK_EXPANSION 'int'
+| |-EnumConstantDecl 0x7fe936050108 <col:26> col:26 ARGUMENT_PACK_SELECT 'int'
+| |-EnumConstantDecl 0x7fe936050150 <col:48> col:48 TRAIT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936050198 <col:60> col:60 LAMBDA_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360501e0 <line:113:5> col:5 DECLTYPE_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936050228 <col:20> col:20 TEMPLATE_INFO 'int'
+| |-EnumConstantDecl 0x7fe936050270 <col:35> col:35 URSHIFT_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360502b8 <col:49> col:49 COMPARE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936050300 <col:63> col:63 COMPARE_L_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936050348 <line:114:5> col:5 COMPARE_G_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936050390 <col:21> col:21 CLASS_INTERFACE_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360503d8 <col:43> col:43 CLASS_IMPLEMENTATION_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936050420 <line:115:5> col:5 CATEGORY_INTERFACE_TYPE 'int'
+| |-EnumConstantDecl 0x7fe936050468 <col:30> col:30 CATEGORY_IMPLEMENTATION_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360504b0 <line:116:5> col:5 PROTOCOL_INTERFACE_TYPE 'int'
+| |-EnumConstantDecl 0x7fe9360504f8 <col:30> col:30 KEYWORD_DECL 'int'
+| |-EnumConstantDecl 0x7fe936050540 <col:44> col:44 INSTANCE_METHOD_DECL 'int'
+| |-EnumConstantDecl 0x7fe936050588 <line:117:5> col:5 CLASS_METHOD_DECL 'int'
+| |-EnumConstantDecl 0x7fe9360505d0 <col:24> col:24 PROPERTY_DECL 'int'
+| |-EnumConstantDecl 0x7fe936050618 <col:39> col:39 MESSAGE_SEND_EXPR 'int'
+| |-EnumConstantDecl 0x7fe936050660 <col:58> col:58 CLASS_REFERENCE_EXPR 'int'
+| |-EnumConstantDecl 0x7fe9360506a8 <line:118:5> col:5 PROPERTY_REF 'int'
+| `-EnumConstantDecl 0x7fe9360506f0 <col:19> col:19 MAX_TREE_CODES 'int'
+|-RecordDecl 0x7fe936050738 <line:119:1, line:122:1> line:119:8 struct tree_base definition
+| `-FieldDecl 0x7fe936050850 <line:121:3, col:23> col:18 referenced code 'enum tree_code':'enum tree_code'
+|   `-IntegerLiteral 0x7fe9360507e0 <col:23> 'int' 16
+|-RecordDecl 0x7fe936050898 <line:123:1, line:126:1> line:123:8 struct tree_typed definition
+| `-FieldDecl 0x7fe936050970 <line:125:3, col:8> col:8 referenced type 'tree':'union tree_node *'
+|-RecordDecl 0x7fe936056600 <line:127:1, line:130:1> line:127:8 struct tree_type definition
+| `-FieldDecl 0x7fe936056720 <line:129:3, col:26> col:21 referenced mode 'enum machine_mode':'enum machine_mode'
+|   `-IntegerLiteral 0x7fe9360566b0 <col:26> 'int' 8
+|-RecordDecl 0x7fe936056768 prev 0x7fe936818160 <line:131:1, line:136:1> line:131:7 union tree_node definition
+| |-FieldDecl 0x7fe936056840 <line:133:3, col:20> col:20 referenced base 'struct tree_base':'struct tree_base'
+| |-FieldDecl 0x7fe9360568e0 <line:134:3, col:21> col:21 referenced typed 'struct tree_typed':'struct tree_typed'
+| `-FieldDecl 0x7fe936056980 <line:135:3, col:20> col:20 referenced type 'struct tree_type':'struct tree_type'
+`-FunctionDecl 0x7fe936056ca0 <line:137:1, line:172:1> line:138:1 parse_predicate 'enum tree_code (tree, tree *, tree *)'
+  |-ParmVarDecl 0x7fe936056a20 <col:18, col:23> col:23 cond 'tree':'union tree_node *'
+  |-ParmVarDecl 0x7fe936056ae8 <col:29, col:36> col:36 op0 'tree *'
+  |-ParmVarDecl 0x7fe936056b58 <col:41, col:48> col:48 op1 'tree *'
+  `-CompoundStmt 0x7fe937004670 <line:139:1, line:172:1>
+    |-DeclStmt 0x7fe936056df0 <line:140:3, col:11>
+    | `-VarDecl 0x7fe936056d90 <col:3, col:10> col:10 s 'gimple':'union gimple_statement_d *'
+    |-DeclStmt 0x7fe936056e78 <line:141:3, col:10>
+    | `-VarDecl 0x7fe936056e18 <col:3, col:8> col:8 used op 'tree':'union tree_node *'
+    |-DeclStmt 0x7fe936057048 <line:142:3, col:35>
+    | `-VarDecl 0x7fe936056ea0 <col:3, col:34> col:8 used type 'tree':'union tree_node *' cinit
+    |   `-ImplicitCastExpr 0x7fe936057030 <col:15, col:34> 'tree':'union tree_node *' <LValueToRValue>
+    |     `-ParenExpr 0x7fe936057010 <col:15, col:34> 'tree':'union tree_node *' lvalue
+    |       `-UnaryOperator 0x7fe936056ff0 <col:16, col:33> 'tree':'union tree_node *' lvalue prefix '*'
+    |         `-ParenExpr 0x7fe936056fd0 <col:17, col:33> 'tree *'
+    |           `-UnaryOperator 0x7fe936056fb0 <col:18, col:29> 'tree *' prefix '&'
+    |             `-MemberExpr 0x7fe936056f78 <col:19, col:29> 'tree':'union tree_node *' lvalue .type 0x7fe936050970
+    |               `-MemberExpr 0x7fe936056f40 <col:19, col:23> 'struct tree_typed':'struct tree_typed' lvalue ->typed 0x7fe9360568e0
+    |                 `-ImplicitCastExpr 0x7fe936056f28 <col:19> 'tree':'union tree_node *' <LValueToRValue>
+    |                   `-DeclRefExpr 0x7fe936056f00 <col:19> 'tree':'union tree_node *' lvalue Var 0x7fe936056e18 'op' 'tree':'union tree_node *'
+    |-DeclStmt 0x7fe9360570e0 <line:143:3, col:22>
+    | `-VarDecl 0x7fe936057080 <col:3, col:18> col:18 used code 'enum tree_code':'enum tree_code'
+    `-ReturnStmt 0x7fe937004658 <line:144:3, line:171:947>
+      `-ImplicitCastExpr 0x7fe937004640 <line:144:10, line:171:947> 'enum tree_code':'enum tree_code' <IntegralCast>
+        `-CallExpr 0x7fe9370045d8 <line:144:10, line:171:947> 'int'
+          |-ImplicitCastExpr 0x7fe9370045c0 <line:144:10> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe936057200 <col:10> 'int ()' Function 0x7fe936057150 'invert_tree_comparison' 'int ()'
+          |-ImplicitCastExpr 0x7fe937004628 <col:34> 'unsigned int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fe937004610 <col:34> 'enum tree_code':'enum tree_code' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fe936057228 <col:34> 'enum tree_code':'enum tree_code' lvalue Var 0x7fe936057080 'code' 'enum tree_code':'enum tree_code'
+          `-ParenExpr 0x7fe9370045a0 <line:145:6, line:171:946> 'int'
+            `-ParenExpr 0x7fe937004580 <line:145:7, line:171:943> 'int'
+              `-BinaryOperator 0x7fe937004558 <line:145:8, line:171:935> 'int' '&&'
+                |-ParenExpr 0x7fe937000618 <line:145:8, line:149:26> 'int'
+                | `-BinaryOperator 0x7fe9370005f0 <line:145:9, line:149:9> 'int' '=='
+                |   |-ImplicitCastExpr 0x7fe9370005d8 <line:145:9, line:148:33> 'int' <IntegralCast>
+                |   | `-ImplicitCastExpr 0x7fe9370005c0 <line:145:9, line:148:33> 'unsigned char' <LValueToRValue>
+                |   |   `-ParenExpr 0x7fe937000578 <line:145:9, line:148:33> 'const unsigned char' lvalue
+                |   |     `-ArraySubscriptExpr 0x7fe937000550 <line:145:10, line:148:32> 'const unsigned char' lvalue
+                |   |       |-ImplicitCastExpr 0x7fe937000538 <line:145:10> 'const unsigned char *' <ArrayToPointerDecay>
+                |   |       | `-DeclRefExpr 0x7fe936057250 <col:10> 'const unsigned char [87]' lvalue Var 0x7fe936041de0 'mode_class' 'const unsigned char [87]'
+                |   |       `-ParenExpr 0x7fe9370004e8 <line:146:11, line:148:31> 'int'
+                |   |         `-ConditionalOperator 0x7fe9370004b8 <line:146:12, line:148:27> 'int'
+                |   |           |-BinaryOperator 0x7fe9360573e0 <line:146:12, line:147:12> 'int' '=='
+                |   |           | |-ImplicitCastExpr 0x7fe9360573c8 <line:146:12, col:32> 'int' <IntegralCast>
+                |   |           | | `-ImplicitCastExpr 0x7fe9360573b0 <col:12, col:32> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                |   |           | |   `-ParenExpr 0x7fe936057368 <col:12, col:32> 'enum tree_code':'enum tree_code' lvalue bitfield
+                |   |           | |     `-MemberExpr 0x7fe936057330 <col:13, col:28> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                |   |           | |       `-MemberExpr 0x7fe9360572f8 <col:13, col:23> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                |   |           | |         `-ImplicitCastExpr 0x7fe9360572e0 <col:13, col:20> 'tree':'union tree_node *' <LValueToRValue>
+                |   |           | |           `-ParenExpr 0x7fe9360572c0 <col:13, col:20> 'tree':'union tree_node *' lvalue
+                |   |           | |             `-ParenExpr 0x7fe9360572a0 <col:14, col:19> 'tree':'union tree_node *' lvalue
+                |   |           | |               `-DeclRefExpr 0x7fe936057278 <col:15> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                |   |           | `-DeclRefExpr 0x7fe936057388 <line:147:12> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                |   |           |-CallExpr 0x7fe936057570 <col:26, col:48> 'int'
+                |   |           | |-ImplicitCastExpr 0x7fe936057558 <col:26> 'int (*)()' <FunctionToPointerDecay>
+                |   |           | | `-DeclRefExpr 0x7fe9360574e0 <col:26> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                |   |           | `-ImplicitCastExpr 0x7fe9360575a0 <col:44> 'tree':'union tree_node *' <LValueToRValue>
+                |   |           |   `-DeclRefExpr 0x7fe936057508 <col:44> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                |   |           `-ImplicitCastExpr 0x7fe9370004a0 <line:148:14, col:27> 'int' <IntegralCast>
+                |   |             `-ImplicitCastExpr 0x7fe937000488 <col:14, col:27> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                |   |               `-MemberExpr 0x7fe937000450 <col:14, col:27> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                |   |                 `-MemberExpr 0x7fe937000418 <col:14, col:22> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                |   |                   `-ImplicitCastExpr 0x7fe937000400 <col:14, col:19> 'tree':'union tree_node *' <LValueToRValue>
+                |   |                     `-ParenExpr 0x7fe9360575e0 <col:14, col:19> 'tree':'union tree_node *' lvalue
+                |   |                       `-DeclRefExpr 0x7fe9360575b8 <col:15> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                |   `-DeclRefExpr 0x7fe937000598 <line:149:9> 'int' EnumConstant 0x7fe936041c88 'MODE_VECTOR_FLOAT' 'int'
+                `-ImplicitCastExpr 0x7fe937004540 <line:151:8, line:171:935> 'int' <IntegralCast>
+                  `-ImplicitCastExpr 0x7fe937004528 <line:151:8, line:171:935> 'unsigned char' <LValueToRValue>
+                    `-MemberExpr 0x7fe9370044f0 <line:151:8, line:171:935> 'const unsigned char' lvalue ->has_nans 0x7fe936041ff8
+                      `-ImplicitCastExpr 0x7fe9370044d8 <line:151:8, line:171:932> 'const struct real_format *' <LValueToRValue>
+                        `-ParenExpr 0x7fe9370044b8 <line:151:8, line:171:932> 'const struct real_format *' lvalue
+                          `-ParenExpr 0x7fe937004498 <line:151:9, line:171:931> 'const struct real_format *' lvalue
+                            `-ArraySubscriptExpr 0x7fe937004470 <line:151:10, line:171:930> 'const struct real_format *' lvalue
+                              |-ImplicitCastExpr 0x7fe937004458 <line:151:10> 'const struct real_format **' <ArrayToPointerDecay>
+                              | `-DeclRefExpr 0x7fe937000638 <col:10> 'const struct real_format *[7]' lvalue Var 0x7fe936042330 'real_format_for_mode' 'const struct real_format *[7]'
+                              `-ConditionalOperator 0x7fe9370043a8 <line:152:11, line:171:929> 'unsigned int'
+                                |-ParenExpr 0x7fe9370025a0 <line:152:11, line:171:131> 'int'
+                                | `-BinaryOperator 0x7fe937002578 <line:152:12, line:171:113> 'int' '=='
+                                |   |-ImplicitCastExpr 0x7fe937002548 <line:152:12, line:171:108> 'unsigned int' <IntegralCast>
+                                |   | `-ParenExpr 0x7fe937002500 <line:152:12, line:171:108> 'enum mode_class':'enum mode_class'
+                                |   |   `-CStyleCastExpr 0x7fe9370024d8 <line:152:13, line:171:107> 'enum mode_class':'enum mode_class' <IntegralCast>
+                                |   |     `-ImplicitCastExpr 0x7fe9370024c0 <line:153:6, line:171:107> 'unsigned char' <LValueToRValue>
+                                |   |       `-ArraySubscriptExpr 0x7fe937002478 <line:153:6, line:171:107> 'const unsigned char' lvalue
+                                |   |         |-ImplicitCastExpr 0x7fe937002460 <line:153:6> 'const unsigned char *' <ArrayToPointerDecay>
+                                |   |         | `-DeclRefExpr 0x7fe937000660 <col:6> 'const unsigned char [87]' lvalue Var 0x7fe936041de0 'mode_class' 'const unsigned char [87]'
+                                |   |         `-ConditionalOperator 0x7fe937002430 <col:17, line:171:106> 'unsigned int'
+                                |   |           |-ParenExpr 0x7fe937000bb0 <line:153:17, line:163:29> 'int'
+                                |   |           | `-BinaryOperator 0x7fe937000b88 <line:153:18, line:163:11> 'int' '=='
+                                |   |           |   |-ImplicitCastExpr 0x7fe937000b58 <line:153:18, line:162:16> 'unsigned int' <IntegralCast>
+                                |   |           |   | `-ParenExpr 0x7fe937000b10 <line:153:18, line:162:16> 'enum mode_class':'enum mode_class'
+                                |   |           |   |   `-CStyleCastExpr 0x7fe937000ae8 <line:153:19, line:162:15> 'enum mode_class':'enum mode_class' <IntegralCast>
+                                |   |           |   |     `-ImplicitCastExpr 0x7fe937000ad0 <line:154:12, line:162:15> 'unsigned char' <LValueToRValue>
+                                |   |           |   |       `-ArraySubscriptExpr 0x7fe937000a58 <line:154:12, line:162:15> 'const unsigned char' lvalue
+                                |   |           |   |         |-ImplicitCastExpr 0x7fe937000a40 <line:154:12> 'const unsigned char *' <ArrayToPointerDecay>
+                                |   |           |   |         | `-DeclRefExpr 0x7fe937000688 <col:12> 'const unsigned char [87]' lvalue Var 0x7fe936041de0 'mode_class' 'const unsigned char [87]'
+                                |   |           |   |         `-ParenExpr 0x7fe937000a20 <col:23, line:162:14> 'int'
+                                |   |           |   |           `-ConditionalOperator 0x7fe9370009f0 <line:154:24, line:162:10> 'int'
+                                |   |           |   |             |-BinaryOperator 0x7fe937000818 <line:154:24, line:157:10> 'int' '=='
+                                |   |           |   |             | |-ImplicitCastExpr 0x7fe937000800 <line:154:24, line:156:15> 'int' <IntegralCast>
+                                |   |           |   |             | | `-ImplicitCastExpr 0x7fe9370007e8 <line:154:24, line:156:15> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                |   |           |   |             | |   `-ParenExpr 0x7fe9370007a0 <line:154:24, line:156:15> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                |   |           |   |             | |     `-MemberExpr 0x7fe937000768 <line:154:25, line:156:11> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                |   |           |   |             | |       `-MemberExpr 0x7fe937000730 <line:154:25, line:155:11> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                |   |           |   |             | |         `-ImplicitCastExpr 0x7fe937000718 <line:154:25, col:32> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |           |   |             | |           `-ParenExpr 0x7fe9370006f8 <col:25, col:32> 'tree':'union tree_node *' lvalue
+                                |   |           |   |             | |             `-ParenExpr 0x7fe9370006d8 <col:26, col:31> 'tree':'union tree_node *' lvalue
+                                |   |           |   |             | |               `-DeclRefExpr 0x7fe9370006b0 <col:27> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |           |   |             | `-DeclRefExpr 0x7fe9370007c0 <line:157:10> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                |   |           |   |             |-CallExpr 0x7fe9370008a8 <line:158:10, line:159:15> 'int'
+                                |   |           |   |             | |-ImplicitCastExpr 0x7fe937000890 <line:158:10> 'int (*)()' <FunctionToPointerDecay>
+                                |   |           |   |             | | `-DeclRefExpr 0x7fe937000840 <col:10> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                |   |           |   |             | `-ImplicitCastExpr 0x7fe9370008d8 <line:159:11> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |           |   |             |   `-DeclRefExpr 0x7fe937000868 <col:11> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |           |   |             `-ImplicitCastExpr 0x7fe9370009d8 <line:160:12, line:162:10> 'int' <IntegralCast>
+                                |   |           |   |               `-ImplicitCastExpr 0x7fe9370009c0 <line:160:12, line:162:10> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                |   |           |   |                 `-MemberExpr 0x7fe937000988 <line:160:12, line:162:10> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                |   |           |   |                   `-MemberExpr 0x7fe937000950 <line:160:12, line:161:10> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                |   |           |   |                     `-ImplicitCastExpr 0x7fe937000938 <line:160:12, col:17> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |           |   |                       `-ParenExpr 0x7fe937000918 <col:12, col:17> 'tree':'union tree_node *' lvalue
+                                |   |           |   |                         `-DeclRefExpr 0x7fe9370008f0 <col:13> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |           |   `-ImplicitCastExpr 0x7fe937000b70 <line:163:11> 'unsigned int' <IntegralCast>
+                                |   |           |     `-DeclRefExpr 0x7fe937000b30 <col:11> 'int' EnumConstant 0x7fe936041a48 'MODE_DECIMAL_FLOAT' 'int'
+                                |   |           |-ImplicitCastExpr 0x7fe937002418 <line:164:12, line:169:19> 'unsigned int' <IntegralCast>
+                                |   |           | `-ParenExpr 0x7fe937000f60 <line:164:12, line:169:19> 'int'
+                                |   |           |   `-ParenExpr 0x7fe937000f40 <line:164:13, line:169:18> 'int'
+                                |   |           |     `-ConditionalOperator 0x7fe937000f10 <line:164:14, line:169:14> 'int'
+                                |   |           |       |-BinaryOperator 0x7fe937000d38 <line:164:14, line:166:14> 'int' '=='
+                                |   |           |       | |-ImplicitCastExpr 0x7fe937000d20 <line:164:14, line:165:12> 'int' <IntegralCast>
+                                |   |           |       | | `-ImplicitCastExpr 0x7fe937000d08 <line:164:14, line:165:12> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                |   |           |       | |   `-ParenExpr 0x7fe937000cc0 <line:164:14, line:165:12> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                |   |           |       | |     `-MemberExpr 0x7fe937000c88 <line:164:15, line:165:8> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                |   |           |       | |       `-MemberExpr 0x7fe937000c50 <line:164:15, col:25> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                |   |           |       | |         `-ImplicitCastExpr 0x7fe937000c38 <col:15, col:22> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |           |       | |           `-ParenExpr 0x7fe937000c18 <col:15, col:22> 'tree':'union tree_node *' lvalue
+                                |   |           |       | |             `-ParenExpr 0x7fe937000bf8 <col:16, col:21> 'tree':'union tree_node *' lvalue
+                                |   |           |       | |               `-DeclRefExpr 0x7fe937000bd0 <col:17> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |           |       | `-DeclRefExpr 0x7fe937000ce0 <line:166:14> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                |   |           |       |-CallExpr 0x7fe937000dc8 <line:167:14, col:36> 'int'
+                                |   |           |       | |-ImplicitCastExpr 0x7fe937000db0 <col:14> 'int (*)()' <FunctionToPointerDecay>
+                                |   |           |       | | `-DeclRefExpr 0x7fe937000d60 <col:14> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                |   |           |       | `-ImplicitCastExpr 0x7fe937000df8 <col:32> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |           |       |   `-DeclRefExpr 0x7fe937000d88 <col:32> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |           |       `-ImplicitCastExpr 0x7fe937000ef8 <line:168:16, line:169:14> 'int' <IntegralCast>
+                                |   |           |         `-ImplicitCastExpr 0x7fe937000ee0 <line:168:16, line:169:14> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                |   |           |           `-MemberExpr 0x7fe937000ea8 <line:168:16, line:169:14> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                |   |           |             `-MemberExpr 0x7fe937000e70 <line:168:16, col:24> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                |   |           |               `-ImplicitCastExpr 0x7fe937000e58 <col:16, col:21> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |           |                 `-ParenExpr 0x7fe937000e38 <col:16, col:21> 'tree':'union tree_node *' lvalue
+                                |   |           |                   `-DeclRefExpr 0x7fe937000e10 <col:17> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |           `-ImplicitCastExpr 0x7fe937002400 <line:169:23, line:171:106> 'unsigned int' <IntegralCast>
+                                |   |             `-ParenExpr 0x7fe9370013d8 <line:169:23, line:171:106> 'enum machine_mode':'enum machine_mode'
+                                |   |               `-CStyleCastExpr 0x7fe9370013b0 <line:169:24, line:171:105> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+                                |   |                 `-ImplicitCastExpr 0x7fe937001398 <col:10, col:105> 'unsigned char' <LValueToRValue>
+                                |   |                   `-ArraySubscriptExpr 0x7fe937001350 <col:10, col:105> 'const unsigned char' lvalue
+                                |   |                     |-ImplicitCastExpr 0x7fe937001338 <col:10> 'const unsigned char *' <ArrayToPointerDecay>
+                                |   |                     | `-DeclRefExpr 0x7fe937000f80 <col:10> 'const unsigned char [87]' lvalue Var 0x7fe936041ed0 'mode_inner' 'const unsigned char [87]'
+                                |   |                     `-ParenExpr 0x7fe937001318 <col:21, col:104> 'int'
+                                |   |                       `-ConditionalOperator 0x7fe9370012e8 <col:22, col:100> 'int'
+                                |   |                         |-BinaryOperator 0x7fe937001110 <col:22, col:47> 'int' '=='
+                                |   |                         | |-ImplicitCastExpr 0x7fe9370010f8 <col:22, col:42> 'int' <IntegralCast>
+                                |   |                         | | `-ImplicitCastExpr 0x7fe9370010e0 <col:22, col:42> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                |   |                         | |   `-ParenExpr 0x7fe937001098 <col:22, col:42> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                |   |                         | |     `-MemberExpr 0x7fe937001060 <col:23, col:38> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                |   |                         | |       `-MemberExpr 0x7fe937001028 <col:23, col:33> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                |   |                         | |         `-ImplicitCastExpr 0x7fe937001010 <col:23, col:30> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |                         | |           `-ParenExpr 0x7fe937000ff0 <col:23, col:30> 'tree':'union tree_node *' lvalue
+                                |   |                         | |             `-ParenExpr 0x7fe937000fd0 <col:24, col:29> 'tree':'union tree_node *' lvalue
+                                |   |                         | |               `-DeclRefExpr 0x7fe937000fa8 <col:25> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |                         | `-DeclRefExpr 0x7fe9370010b8 <col:47> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                |   |                         |-CallExpr 0x7fe9370011a0 <col:61, col:83> 'int'
+                                |   |                         | |-ImplicitCastExpr 0x7fe937001188 <col:61> 'int (*)()' <FunctionToPointerDecay>
+                                |   |                         | | `-DeclRefExpr 0x7fe937001138 <col:61> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                |   |                         | `-ImplicitCastExpr 0x7fe9370011d0 <col:79> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |                         |   `-DeclRefExpr 0x7fe937001160 <col:79> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |                         `-ImplicitCastExpr 0x7fe9370012d0 <col:87, col:100> 'int' <IntegralCast>
+                                |   |                           `-ImplicitCastExpr 0x7fe9370012b8 <col:87, col:100> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                |   |                             `-MemberExpr 0x7fe937001280 <col:87, col:100> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                |   |                               `-MemberExpr 0x7fe937001248 <col:87, col:95> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                |   |                                 `-ImplicitCastExpr 0x7fe937001230 <col:87, col:92> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |                                   `-ParenExpr 0x7fe937001210 <col:87, col:92> 'tree':'union tree_node *' lvalue
+                                |   |                                     `-DeclRefExpr 0x7fe9370011e8 <col:88> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   `-ImplicitCastExpr 0x7fe937002560 <col:113> 'unsigned int' <IntegralCast>
+                                |     `-DeclRefExpr 0x7fe937002520 <col:113> 'int' EnumConstant 0x7fe936041a48 'MODE_DECIMAL_FLOAT' 'int'
+                                |-ParenExpr 0x7fe937003540 <col:135, col:555> 'unsigned int'
+                                | `-BinaryOperator 0x7fe937003518 <col:136, col:554> 'unsigned int' '+'
+                                |   |-ParenExpr 0x7fe937003400 <col:136, col:514> 'unsigned int'
+                                |   | `-BinaryOperator 0x7fe9370033c0 <col:137, col:492> 'unsigned int' '-'
+                                |   |   |-ParenExpr 0x7fe937003360 <col:137, col:488> 'unsigned int'
+                                |   |   | `-ConditionalOperator 0x7fe937003330 <col:138, col:487> 'unsigned int'
+                                |   |   |   |-ParenExpr 0x7fe937002ab8 <col:138, col:277> 'int'
+                                |   |   |   | `-BinaryOperator 0x7fe937002a90 <col:139, col:259> 'int' '=='
+                                |   |   |   |   |-ImplicitCastExpr 0x7fe937002a60 <col:139, col:254> 'unsigned int' <IntegralCast>
+                                |   |   |   |   | `-ParenExpr 0x7fe937002a18 <col:139, col:254> 'enum mode_class':'enum mode_class'
+                                |   |   |   |   |   `-CStyleCastExpr 0x7fe9370029f0 <col:140, col:253> 'enum mode_class':'enum mode_class' <IntegralCast>
+                                |   |   |   |   |     `-ImplicitCastExpr 0x7fe9370029d8 <col:158, col:253> 'unsigned char' <LValueToRValue>
+                                |   |   |   |   |       `-ArraySubscriptExpr 0x7fe937002990 <col:158, col:253> 'const unsigned char' lvalue
+                                |   |   |   |   |         |-ImplicitCastExpr 0x7fe937002978 <col:158> 'const unsigned char *' <ArrayToPointerDecay>
+                                |   |   |   |   |         | `-DeclRefExpr 0x7fe9370025c0 <col:158> 'const unsigned char [87]' lvalue Var 0x7fe936041de0 'mode_class' 'const unsigned char [87]'
+                                |   |   |   |   |         `-ParenExpr 0x7fe937002958 <col:169, col:252> 'int'
+                                |   |   |   |   |           `-ConditionalOperator 0x7fe937002928 <col:170, col:248> 'int'
+                                |   |   |   |   |             |-BinaryOperator 0x7fe937002750 <col:170, col:195> 'int' '=='
+                                |   |   |   |   |             | |-ImplicitCastExpr 0x7fe937002738 <col:170, col:190> 'int' <IntegralCast>
+                                |   |   |   |   |             | | `-ImplicitCastExpr 0x7fe937002720 <col:170, col:190> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                |   |   |   |   |             | |   `-ParenExpr 0x7fe9370026d8 <col:170, col:190> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                |   |   |   |   |             | |     `-MemberExpr 0x7fe9370026a0 <col:171, col:186> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                |   |   |   |   |             | |       `-MemberExpr 0x7fe937002668 <col:171, col:181> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                |   |   |   |   |             | |         `-ImplicitCastExpr 0x7fe937002650 <col:171, col:178> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |   |   |             | |           `-ParenExpr 0x7fe937002630 <col:171, col:178> 'tree':'union tree_node *' lvalue
+                                |   |   |   |   |             | |             `-ParenExpr 0x7fe937002610 <col:172, col:177> 'tree':'union tree_node *' lvalue
+                                |   |   |   |   |             | |               `-DeclRefExpr 0x7fe9370025e8 <col:173> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |   |   |             | `-DeclRefExpr 0x7fe9370026f8 <col:195> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                |   |   |   |   |             |-CallExpr 0x7fe9370027e0 <col:209, col:231> 'int'
+                                |   |   |   |   |             | |-ImplicitCastExpr 0x7fe9370027c8 <col:209> 'int (*)()' <FunctionToPointerDecay>
+                                |   |   |   |   |             | | `-DeclRefExpr 0x7fe937002778 <col:209> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                |   |   |   |   |             | `-ImplicitCastExpr 0x7fe937002810 <col:227> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |   |   |             |   `-DeclRefExpr 0x7fe9370027a0 <col:227> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |   |   |             `-ImplicitCastExpr 0x7fe937002910 <col:235, col:248> 'int' <IntegralCast>
+                                |   |   |   |   |               `-ImplicitCastExpr 0x7fe9370028f8 <col:235, col:248> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                |   |   |   |   |                 `-MemberExpr 0x7fe9370028c0 <col:235, col:248> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                |   |   |   |   |                   `-MemberExpr 0x7fe937002888 <col:235, col:243> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                |   |   |   |   |                     `-ImplicitCastExpr 0x7fe937002870 <col:235, col:240> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |   |   |                       `-ParenExpr 0x7fe937002850 <col:235, col:240> 'tree':'union tree_node *' lvalue
+                                |   |   |   |   |                         `-DeclRefExpr 0x7fe937002828 <col:236> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |   |   `-ImplicitCastExpr 0x7fe937002a78 <col:259> 'unsigned int' <IntegralCast>
+                                |   |   |   |     `-DeclRefExpr 0x7fe937002a38 <col:259> 'int' EnumConstant 0x7fe936041a48 'MODE_DECIMAL_FLOAT' 'int'
+                                |   |   |   |-ImplicitCastExpr 0x7fe937003318 <col:281, col:366> 'unsigned int' <IntegralCast>
+                                |   |   |   | `-ParenExpr 0x7fe937002e68 <col:281, col:366> 'int'
+                                |   |   |   |   `-ParenExpr 0x7fe937002e48 <col:282, col:365> 'int'
+                                |   |   |   |     `-ConditionalOperator 0x7fe937002e18 <col:283, col:361> 'int'
+                                |   |   |   |       |-BinaryOperator 0x7fe937002c40 <col:283, col:308> 'int' '=='
+                                |   |   |   |       | |-ImplicitCastExpr 0x7fe937002c28 <col:283, col:303> 'int' <IntegralCast>
+                                |   |   |   |       | | `-ImplicitCastExpr 0x7fe937002c10 <col:283, col:303> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                |   |   |   |       | |   `-ParenExpr 0x7fe937002bc8 <col:283, col:303> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                |   |   |   |       | |     `-MemberExpr 0x7fe937002b90 <col:284, col:299> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                |   |   |   |       | |       `-MemberExpr 0x7fe937002b58 <col:284, col:294> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                |   |   |   |       | |         `-ImplicitCastExpr 0x7fe937002b40 <col:284, col:291> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |   |       | |           `-ParenExpr 0x7fe937002b20 <col:284, col:291> 'tree':'union tree_node *' lvalue
+                                |   |   |   |       | |             `-ParenExpr 0x7fe937002b00 <col:285, col:290> 'tree':'union tree_node *' lvalue
+                                |   |   |   |       | |               `-DeclRefExpr 0x7fe937002ad8 <col:286> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |   |       | `-DeclRefExpr 0x7fe937002be8 <col:308> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                |   |   |   |       |-CallExpr 0x7fe937002cd0 <col:322, col:344> 'int'
+                                |   |   |   |       | |-ImplicitCastExpr 0x7fe937002cb8 <col:322> 'int (*)()' <FunctionToPointerDecay>
+                                |   |   |   |       | | `-DeclRefExpr 0x7fe937002c68 <col:322> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                |   |   |   |       | `-ImplicitCastExpr 0x7fe937002d00 <col:340> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |   |       |   `-DeclRefExpr 0x7fe937002c90 <col:340> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |   |       `-ImplicitCastExpr 0x7fe937002e00 <col:348, col:361> 'int' <IntegralCast>
+                                |   |   |   |         `-ImplicitCastExpr 0x7fe937002de8 <col:348, col:361> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                |   |   |   |           `-MemberExpr 0x7fe937002db0 <col:348, col:361> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                |   |   |   |             `-MemberExpr 0x7fe937002d78 <col:348, col:356> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                |   |   |   |               `-ImplicitCastExpr 0x7fe937002d60 <col:348, col:353> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |   |                 `-ParenExpr 0x7fe937002d40 <col:348, col:353> 'tree':'union tree_node *' lvalue
+                                |   |   |   |                   `-DeclRefExpr 0x7fe937002d18 <col:349> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |   `-ImplicitCastExpr 0x7fe937003300 <col:370, col:487> 'unsigned int' <IntegralCast>
+                                |   |   |     `-ParenExpr 0x7fe9370032e0 <col:370, col:487> 'enum machine_mode':'enum machine_mode'
+                                |   |   |       `-CStyleCastExpr 0x7fe9370032b8 <col:371, col:486> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+                                |   |   |         `-ImplicitCastExpr 0x7fe9370032a0 <col:391, col:486> 'unsigned char' <LValueToRValue>
+                                |   |   |           `-ArraySubscriptExpr 0x7fe937003258 <col:391, col:486> 'const unsigned char' lvalue
+                                |   |   |             |-ImplicitCastExpr 0x7fe937003240 <col:391> 'const unsigned char *' <ArrayToPointerDecay>
+                                |   |   |             | `-DeclRefExpr 0x7fe937002e88 <col:391> 'const unsigned char [87]' lvalue Var 0x7fe936041ed0 'mode_inner' 'const unsigned char [87]'
+                                |   |   |             `-ParenExpr 0x7fe937003220 <col:402, col:485> 'int'
+                                |   |   |               `-ConditionalOperator 0x7fe9370031f0 <col:403, col:481> 'int'
+                                |   |   |                 |-BinaryOperator 0x7fe937003018 <col:403, col:428> 'int' '=='
+                                |   |   |                 | |-ImplicitCastExpr 0x7fe937003000 <col:403, col:423> 'int' <IntegralCast>
+                                |   |   |                 | | `-ImplicitCastExpr 0x7fe937002fe8 <col:403, col:423> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                |   |   |                 | |   `-ParenExpr 0x7fe937002fa0 <col:403, col:423> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                |   |   |                 | |     `-MemberExpr 0x7fe937002f68 <col:404, col:419> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                |   |   |                 | |       `-MemberExpr 0x7fe937002f30 <col:404, col:414> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                |   |   |                 | |         `-ImplicitCastExpr 0x7fe937002f18 <col:404, col:411> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |                 | |           `-ParenExpr 0x7fe937002ef8 <col:404, col:411> 'tree':'union tree_node *' lvalue
+                                |   |   |                 | |             `-ParenExpr 0x7fe937002ed8 <col:405, col:410> 'tree':'union tree_node *' lvalue
+                                |   |   |                 | |               `-DeclRefExpr 0x7fe937002eb0 <col:406> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |                 | `-DeclRefExpr 0x7fe937002fc0 <col:428> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                |   |   |                 |-CallExpr 0x7fe9370030a8 <col:442, col:464> 'int'
+                                |   |   |                 | |-ImplicitCastExpr 0x7fe937003090 <col:442> 'int (*)()' <FunctionToPointerDecay>
+                                |   |   |                 | | `-DeclRefExpr 0x7fe937003040 <col:442> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                |   |   |                 | `-ImplicitCastExpr 0x7fe9370030d8 <col:460> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |                 |   `-DeclRefExpr 0x7fe937003068 <col:460> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   |                 `-ImplicitCastExpr 0x7fe9370031d8 <col:468, col:481> 'int' <IntegralCast>
+                                |   |   |                   `-ImplicitCastExpr 0x7fe9370031c0 <col:468, col:481> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                |   |   |                     `-MemberExpr 0x7fe937003188 <col:468, col:481> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                |   |   |                       `-MemberExpr 0x7fe937003150 <col:468, col:476> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                |   |   |                         `-ImplicitCastExpr 0x7fe937003138 <col:468, col:473> 'tree':'union tree_node *' <LValueToRValue>
+                                |   |   |                           `-ParenExpr 0x7fe937003118 <col:468, col:473> 'tree':'union tree_node *' lvalue
+                                |   |   |                             `-DeclRefExpr 0x7fe9370030f0 <col:469> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                |   |   `-ImplicitCastExpr 0x7fe9370033a8 <col:492> 'unsigned int' <IntegralCast>
+                                |   |     `-DeclRefExpr 0x7fe937003380 <col:492> 'int' EnumConstant 0x7fe936040ed0 'MIN_MODE_DECIMAL_FLOAT' 'int'
+                                |   `-ImplicitCastExpr 0x7fe937003500 <col:518, col:554> 'unsigned int' <IntegralCast>
+                                |     `-ParenExpr 0x7fe9370034e0 <col:518, col:554> 'int'
+                                |       `-BinaryOperator 0x7fe9370034b8 <col:519, col:553> 'int' '+'
+                                |         |-BinaryOperator 0x7fe937003470 <col:519, col:536> 'int' '-'
+                                |         | |-DeclRefExpr 0x7fe937003420 <col:519> 'int' EnumConstant 0x7fe936040e60 'MAX_MODE_FLOAT' 'int'
+                                |         | `-DeclRefExpr 0x7fe937003448 <col:536> 'int' EnumConstant 0x7fe936040df0 'MIN_MODE_FLOAT' 'int'
+                                |         `-IntegerLiteral 0x7fe937003498 <col:553> 'int' 1
+                                `-ParenExpr 0x7fe937004388 <col:559, col:929> 'unsigned int'
+                                  `-BinaryOperator 0x7fe937004360 <col:560, col:915> 'unsigned int' '-'
+                                    |-ParenExpr 0x7fe937004300 <col:560, col:911> 'unsigned int'
+                                    | `-ConditionalOperator 0x7fe9370042d0 <col:561, col:910> 'unsigned int'
+                                    |   |-ParenExpr 0x7fe937003a58 <col:561, col:700> 'int'
+                                    |   | `-BinaryOperator 0x7fe937003a30 <col:562, col:682> 'int' '=='
+                                    |   |   |-ImplicitCastExpr 0x7fe937003a00 <col:562, col:677> 'unsigned int' <IntegralCast>
+                                    |   |   | `-ParenExpr 0x7fe9370039b8 <col:562, col:677> 'enum mode_class':'enum mode_class'
+                                    |   |   |   `-CStyleCastExpr 0x7fe937003990 <col:563, col:676> 'enum mode_class':'enum mode_class' <IntegralCast>
+                                    |   |   |     `-ImplicitCastExpr 0x7fe937003978 <col:581, col:676> 'unsigned char' <LValueToRValue>
+                                    |   |   |       `-ArraySubscriptExpr 0x7fe937003930 <col:581, col:676> 'const unsigned char' lvalue
+                                    |   |   |         |-ImplicitCastExpr 0x7fe937003918 <col:581> 'const unsigned char *' <ArrayToPointerDecay>
+                                    |   |   |         | `-DeclRefExpr 0x7fe937003560 <col:581> 'const unsigned char [87]' lvalue Var 0x7fe936041de0 'mode_class' 'const unsigned char [87]'
+                                    |   |   |         `-ParenExpr 0x7fe9370038f8 <col:592, col:675> 'int'
+                                    |   |   |           `-ConditionalOperator 0x7fe9370038c8 <col:593, col:671> 'int'
+                                    |   |   |             |-BinaryOperator 0x7fe9370036f0 <col:593, col:618> 'int' '=='
+                                    |   |   |             | |-ImplicitCastExpr 0x7fe9370036d8 <col:593, col:613> 'int' <IntegralCast>
+                                    |   |   |             | | `-ImplicitCastExpr 0x7fe9370036c0 <col:593, col:613> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                    |   |   |             | |   `-ParenExpr 0x7fe937003678 <col:593, col:613> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                    |   |   |             | |     `-MemberExpr 0x7fe937003640 <col:594, col:609> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                    |   |   |             | |       `-MemberExpr 0x7fe937003608 <col:594, col:604> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                    |   |   |             | |         `-ImplicitCastExpr 0x7fe9370035f0 <col:594, col:601> 'tree':'union tree_node *' <LValueToRValue>
+                                    |   |   |             | |           `-ParenExpr 0x7fe9370035d0 <col:594, col:601> 'tree':'union tree_node *' lvalue
+                                    |   |   |             | |             `-ParenExpr 0x7fe9370035b0 <col:595, col:600> 'tree':'union tree_node *' lvalue
+                                    |   |   |             | |               `-DeclRefExpr 0x7fe937003588 <col:596> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |   |   |             | `-DeclRefExpr 0x7fe937003698 <col:618> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                    |   |   |             |-CallExpr 0x7fe937003780 <col:632, col:654> 'int'
+                                    |   |   |             | |-ImplicitCastExpr 0x7fe937003768 <col:632> 'int (*)()' <FunctionToPointerDecay>
+                                    |   |   |             | | `-DeclRefExpr 0x7fe937003718 <col:632> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                    |   |   |             | `-ImplicitCastExpr 0x7fe9370037b0 <col:650> 'tree':'union tree_node *' <LValueToRValue>
+                                    |   |   |             |   `-DeclRefExpr 0x7fe937003740 <col:650> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |   |   |             `-ImplicitCastExpr 0x7fe9370038b0 <col:658, col:671> 'int' <IntegralCast>
+                                    |   |   |               `-ImplicitCastExpr 0x7fe937003898 <col:658, col:671> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                    |   |   |                 `-MemberExpr 0x7fe937003860 <col:658, col:671> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                    |   |   |                   `-MemberExpr 0x7fe937003828 <col:658, col:666> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                    |   |   |                     `-ImplicitCastExpr 0x7fe937003810 <col:658, col:663> 'tree':'union tree_node *' <LValueToRValue>
+                                    |   |   |                       `-ParenExpr 0x7fe9370037f0 <col:658, col:663> 'tree':'union tree_node *' lvalue
+                                    |   |   |                         `-DeclRefExpr 0x7fe9370037c8 <col:659> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |   |   `-ImplicitCastExpr 0x7fe937003a18 <col:682> 'unsigned int' <IntegralCast>
+                                    |   |     `-DeclRefExpr 0x7fe9370039d8 <col:682> 'int' EnumConstant 0x7fe936041a48 'MODE_DECIMAL_FLOAT' 'int'
+                                    |   |-ImplicitCastExpr 0x7fe9370042b8 <col:704, col:789> 'unsigned int' <IntegralCast>
+                                    |   | `-ParenExpr 0x7fe937003e08 <col:704, col:789> 'int'
+                                    |   |   `-ParenExpr 0x7fe937003de8 <col:705, col:788> 'int'
+                                    |   |     `-ConditionalOperator 0x7fe937003db8 <col:706, col:784> 'int'
+                                    |   |       |-BinaryOperator 0x7fe937003be0 <col:706, col:731> 'int' '=='
+                                    |   |       | |-ImplicitCastExpr 0x7fe937003bc8 <col:706, col:726> 'int' <IntegralCast>
+                                    |   |       | | `-ImplicitCastExpr 0x7fe937003bb0 <col:706, col:726> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                    |   |       | |   `-ParenExpr 0x7fe937003b68 <col:706, col:726> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                    |   |       | |     `-MemberExpr 0x7fe937003b30 <col:707, col:722> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                    |   |       | |       `-MemberExpr 0x7fe937003af8 <col:707, col:717> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                    |   |       | |         `-ImplicitCastExpr 0x7fe937003ae0 <col:707, col:714> 'tree':'union tree_node *' <LValueToRValue>
+                                    |   |       | |           `-ParenExpr 0x7fe937003ac0 <col:707, col:714> 'tree':'union tree_node *' lvalue
+                                    |   |       | |             `-ParenExpr 0x7fe937003aa0 <col:708, col:713> 'tree':'union tree_node *' lvalue
+                                    |   |       | |               `-DeclRefExpr 0x7fe937003a78 <col:709> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |   |       | `-DeclRefExpr 0x7fe937003b88 <col:731> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                    |   |       |-CallExpr 0x7fe937003c70 <col:745, col:767> 'int'
+                                    |   |       | |-ImplicitCastExpr 0x7fe937003c58 <col:745> 'int (*)()' <FunctionToPointerDecay>
+                                    |   |       | | `-DeclRefExpr 0x7fe937003c08 <col:745> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                    |   |       | `-ImplicitCastExpr 0x7fe937003ca0 <col:763> 'tree':'union tree_node *' <LValueToRValue>
+                                    |   |       |   `-DeclRefExpr 0x7fe937003c30 <col:763> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |   |       `-ImplicitCastExpr 0x7fe937003da0 <col:771, col:784> 'int' <IntegralCast>
+                                    |   |         `-ImplicitCastExpr 0x7fe937003d88 <col:771, col:784> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                    |   |           `-MemberExpr 0x7fe937003d50 <col:771, col:784> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                    |   |             `-MemberExpr 0x7fe937003d18 <col:771, col:779> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                    |   |               `-ImplicitCastExpr 0x7fe937003d00 <col:771, col:776> 'tree':'union tree_node *' <LValueToRValue>
+                                    |   |                 `-ParenExpr 0x7fe937003ce0 <col:771, col:776> 'tree':'union tree_node *' lvalue
+                                    |   |                   `-DeclRefExpr 0x7fe937003cb8 <col:772> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |   `-ImplicitCastExpr 0x7fe9370042a0 <col:793, col:910> 'unsigned int' <IntegralCast>
+                                    |     `-ParenExpr 0x7fe937004280 <col:793, col:910> 'enum machine_mode':'enum machine_mode'
+                                    |       `-CStyleCastExpr 0x7fe937004258 <col:794, col:909> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+                                    |         `-ImplicitCastExpr 0x7fe937004240 <col:814, col:909> 'unsigned char' <LValueToRValue>
+                                    |           `-ArraySubscriptExpr 0x7fe9370041f8 <col:814, col:909> 'const unsigned char' lvalue
+                                    |             |-ImplicitCastExpr 0x7fe9370041e0 <col:814> 'const unsigned char *' <ArrayToPointerDecay>
+                                    |             | `-DeclRefExpr 0x7fe937003e28 <col:814> 'const unsigned char [87]' lvalue Var 0x7fe936041ed0 'mode_inner' 'const unsigned char [87]'
+                                    |             `-ParenExpr 0x7fe9370041c0 <col:825, col:908> 'int'
+                                    |               `-ConditionalOperator 0x7fe937004190 <col:826, col:904> 'int'
+                                    |                 |-BinaryOperator 0x7fe937003fb8 <col:826, col:851> 'int' '=='
+                                    |                 | |-ImplicitCastExpr 0x7fe937003fa0 <col:826, col:846> 'int' <IntegralCast>
+                                    |                 | | `-ImplicitCastExpr 0x7fe937003f88 <col:826, col:846> 'enum tree_code':'enum tree_code' <LValueToRValue>
+                                    |                 | |   `-ParenExpr 0x7fe937003f40 <col:826, col:846> 'enum tree_code':'enum tree_code' lvalue bitfield
+                                    |                 | |     `-MemberExpr 0x7fe937003f08 <col:827, col:842> 'enum tree_code':'enum tree_code' lvalue bitfield .code 0x7fe936050850
+                                    |                 | |       `-MemberExpr 0x7fe937003ed0 <col:827, col:837> 'struct tree_base':'struct tree_base' lvalue ->base 0x7fe936056840
+                                    |                 | |         `-ImplicitCastExpr 0x7fe937003eb8 <col:827, col:834> 'tree':'union tree_node *' <LValueToRValue>
+                                    |                 | |           `-ParenExpr 0x7fe937003e98 <col:827, col:834> 'tree':'union tree_node *' lvalue
+                                    |                 | |             `-ParenExpr 0x7fe937003e78 <col:828, col:833> 'tree':'union tree_node *' lvalue
+                                    |                 | |               `-DeclRefExpr 0x7fe937003e50 <col:829> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |                 | `-DeclRefExpr 0x7fe937003f60 <col:851> 'int' EnumConstant 0x7fe936042888 'VECTOR_TYPE' 'int'
+                                    |                 |-CallExpr 0x7fe937004048 <col:865, col:887> 'int'
+                                    |                 | |-ImplicitCastExpr 0x7fe937004030 <col:865> 'int (*)()' <FunctionToPointerDecay>
+                                    |                 | | `-DeclRefExpr 0x7fe937003fe0 <col:865> 'int ()' Function 0x7fe936057430 'vector_type_mode' 'int ()'
+                                    |                 | `-ImplicitCastExpr 0x7fe937004078 <col:883> 'tree':'union tree_node *' <LValueToRValue>
+                                    |                 |   `-DeclRefExpr 0x7fe937004008 <col:883> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    |                 `-ImplicitCastExpr 0x7fe937004178 <col:891, col:904> 'int' <IntegralCast>
+                                    |                   `-ImplicitCastExpr 0x7fe937004160 <col:891, col:904> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+                                    |                     `-MemberExpr 0x7fe937004128 <col:891, col:904> 'enum machine_mode':'enum machine_mode' lvalue bitfield .mode 0x7fe936056720
+                                    |                       `-MemberExpr 0x7fe9370040f0 <col:891, col:899> 'struct tree_type':'struct tree_type' lvalue ->type 0x7fe936056980
+                                    |                         `-ImplicitCastExpr 0x7fe9370040d8 <col:891, col:896> 'tree':'union tree_node *' <LValueToRValue>
+                                    |                           `-ParenExpr 0x7fe9370040b8 <col:891, col:896> 'tree':'union tree_node *' lvalue
+                                    |                             `-DeclRefExpr 0x7fe937004090 <col:892> 'tree':'union tree_node *' lvalue Var 0x7fe936056ea0 'type' 'tree':'union tree_node *'
+                                    `-ImplicitCastExpr 0x7fe937004348 <col:915> 'unsigned int' <IntegralCast>
+                                      `-DeclRefExpr 0x7fe937004320 <col:915> 'int' EnumConstant 0x7fe936040df0 'MIN_MODE_FLOAT' 'int'

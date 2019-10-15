@@ -1,0 +1,67 @@
+../Data/C2AST/pr71416-1.c:1:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7fdd1e02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdd1e02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdd1e02bf80 '__int128'
+|-TypedefDecl 0x7fdd1e02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdd1e02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fdd1e02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdd1e02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdd1e02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdd1e02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdd1e02c600 'char *'
+|   `-BuiltinType 0x7fdd1e02bd80 'char'
+|-TypedefDecl 0x7fdd1e02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdd1e02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdd1e02c720 'struct __va_list_tag'
+|     `-Record 0x7fdd1e02c698 '__va_list_tag'
+|-VarDecl 0x7fdd1e02c978 <../Data/C2AST/pr71416-1.c:3:1, col:7> col:7 used a 'short'
+|-VarDecl 0x7fdd1e815250 <line:4:1, col:6> col:6 used b 'char'
+|-VarDecl 0x7fdd1e8152c0 <col:1, col:9> col:9 used e 'char'
+|-VarDecl 0x7fdd1e815350 <line:5:1, col:14> col:14 used c 'short' static
+|-VarDecl 0x7fdd1e8153c8 <line:6:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7fdd1e815440 <col:1, col:8> col:8 used f 'int'
+`-FunctionDecl 0x7fdd1e815510 <line:7:1, line:17:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7fdd1e815bd0 <col:12, line:17:1>
+    |-DeclStmt 0x7fdd1e815628 <line:8:3, col:10>
+    | `-VarDecl 0x7fdd1e8155c8 <col:3, col:9> col:9 used g 'short'
+    |-CallExpr 0x7fdd1e815780 <line:9:3, col:15> 'int'
+    | `-ImplicitCastExpr 0x7fdd1e815768 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fdd1e815718 <col:3> 'int ()' Function 0x7fdd1e815668 'check_vect' 'int ()'
+    |-ForStmt 0x7fdd1e815b60 <line:10:3, line:15:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fdd1e8157d0 <line:10:10> 'char' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fdd1e8157a8 <col:10> 'char' lvalue Var 0x7fdd1e8152c0 'e' 'char'
+    | |-UnaryOperator 0x7fdd1e815810 <col:13, col:15> 'char' prefix '++'
+    | | `-DeclRefExpr 0x7fdd1e8157e8 <col:15> 'char' lvalue Var 0x7fdd1e8152c0 'e' 'char'
+    | `-CompoundStmt 0x7fdd1e815b38 <col:18, line:15:3>
+    |   |-BinaryOperator 0x7fdd1e8158b0 <line:11:5, col:9> 'int' '='
+    |   | |-DeclRefExpr 0x7fdd1e815830 <col:5> 'int' lvalue Var 0x7fdd1e8153c8 'd' 'int'
+    |   | `-ImplicitCastExpr 0x7fdd1e815898 <col:9> 'int' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7fdd1e815880 <col:9> 'short' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7fdd1e815858 <col:9> 'short' lvalue Var 0x7fdd1e02c978 'a' 'short'
+    |   |-BinaryOperator 0x7fdd1e815920 <line:12:5, col:9> 'int' '='
+    |   | |-DeclRefExpr 0x7fdd1e8158d8 <col:5> 'int' lvalue Var 0x7fdd1e815440 'f' 'int'
+    |   | `-IntegerLiteral 0x7fdd1e815900 <col:9> 'int' 0
+    |   `-IfStmt 0x7fdd1e815b00 <line:13:5, line:14:20>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-ImplicitCastExpr 0x7fdd1e815970 <line:13:9> 'char' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fdd1e815948 <col:9> 'char' lvalue Var 0x7fdd1e815250 'b' 'char'
+    |     |-BinaryOperator 0x7fdd1e815ad8 <line:14:7, col:20> 'int' '='
+    |     | |-DeclRefExpr 0x7fdd1e815988 <col:7> 'int' lvalue Var 0x7fdd1e8153c8 'd' 'int'
+    |     | `-BinaryOperator 0x7fdd1e815ab0 <col:11, col:20> 'int' '='
+    |     |   |-DeclRefExpr 0x7fdd1e8159b0 <col:11> 'int' lvalue Var 0x7fdd1e815440 'f' 'int'
+    |     |   `-BinaryOperator 0x7fdd1e815a88 <col:15, col:20> 'int' '>='
+    |     |     |-ImplicitCastExpr 0x7fdd1e815a40 <col:15> 'int' <IntegralCast>
+    |     |     | `-ImplicitCastExpr 0x7fdd1e815a28 <col:15> 'short' <LValueToRValue>
+    |     |     |   `-DeclRefExpr 0x7fdd1e8159d8 <col:15> 'short' lvalue Var 0x7fdd1e8155c8 'g' 'short'
+    |     |     `-ImplicitCastExpr 0x7fdd1e815a70 <col:20> 'int' <IntegralCast>
+    |     |       `-ImplicitCast1 error generated.
+Expr 0x7fdd1e815a58 <col:20> 'short' <LValueToRValue>
+    |     |         `-DeclRefExpr 0x7fdd1e815a00 <col:20> 'short' lvalue Var 0x7fdd1e815350 'c' 'short'
+    |     `-<<<NULL>>>
+    `-ReturnStmt 0x7fdd1e815bb8 <line:16:3, col:10>
+      `-IntegerLiteral 0x7fdd1e815b98 <col:10> 'int' 0

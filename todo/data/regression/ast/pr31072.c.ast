@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fd7818096e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd78180a378 <../Data/C2AST/pr31072.c:1:1, col:21> col:21 used ReadyFlag_NotProperlyInitialized 'volatile int' extern
+|-VarDecl 0x7fd78084e458 prev 0x7fd78180a378 <line:3:1, col:47> col:14 used ReadyFlag_NotProperlyInitialized 'volatile int' cinit
+| `-IntegerLiteral 0x7fd78084e4b8 <col:47> 'int' 1
+|-FunctionDecl 0x7fd78084e5a8 <line:5:1, line:10:1> line:5:5 main 'int (void)'
+| `-CompoundStmt 0x7fd78084e918 <line:6:1, line:10:1>
+|   |-IfStmt 0x7fd78084e8a8 <line:7:3, line:8:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd78084e6d8 <line:7:7, col:43> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fd78084e6c0 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fd78084e678 <col:7> 'volatile int' lvalue Var 0x7fd78084e458 'ReadyFlag_NotProperlyInitialized' 'volatile int'
+|   | | `-IntegerLiteral 0x7fd78084e6a0 <col:43> 'int' 1
+|   | |-CallExpr 0x7fd78084e880 <line:8:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd78084e868 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd78084e818 <col:5> '<builtin fn type>' Function 0x7fd78084e730 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd78084e900 <line:9:3, col:10>
+|     `-IntegerLiteral 0x7fd78084e8e0 <col:10> 'int' 0
+`-FunctionDecl 0x7fd78084e730 <line:8:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fd78084e7d0 <col:5> Implicit

@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f966b02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f966b06d8d8 <../Data/C2AST/pr42575.c:5:1, line:8:1> line:5:11 longfunc 'long long (long long, long long)'
+  |-ParmVarDecl 0x7f966b02c978 <col:20, col:30> col:30 used x 'long long'
+  |-ParmVarDecl 0x7f966b06d800 <col:33, col:43> col:43 used y 'long long'
+  `-CompoundStmt 0x7f966b06da88 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7f966b06da70 <line:7:7, col:18>
+      `-BinaryOperator 0x7f966b06da48 <col:14, col:18> 'long long' '*'
+        |-ImplicitCastExpr 0x7f966b06da18 <col:14> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f966b06d9c8 <col:14> 'long long' lvalue ParmVar 0x7f966b02c978 'x' 'long long'
+        `-ImplicitCastExpr 0x7f966b06da30 <col:18> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f966b06d9f0 <col:18> 'long long' lvalue ParmVar 0x7f966b06d800 'y' 'long long'

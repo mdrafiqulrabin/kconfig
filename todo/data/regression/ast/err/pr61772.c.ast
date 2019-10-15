@@ -1,0 +1,79 @@
+../Data/C2AST/pr61772.c:7:18: error: 'asm goto' constructs are not supported yet
+    asm volatile goto ("XXX %0, %l[cc_label]"
+                 ^
+TranslationUnitDecl 0x7fceaa82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fceaa82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fceaa82bf80 '__int128'
+|-TypedefDecl 0x7fceaa82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fceaa82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fceaa82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fceaa82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fceaa82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fceaa82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fceaa82c600 'char *'
+|   `-BuiltinType 0x7fceaa82bd80 'char'
+|-TypedefDecl 0x7fceaa82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fceaa82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fceaa82c720 'struct __va_list_tag'
+|     `-Record 0x7fceaa82c698 '__va_list_tag'
+|-FunctionDecl 0x7fceab015268 <../Data/C2AST/pr61772.c:5:1, line:12:1> line:5:50 used dec_and_test 'int (int *)' static inline
+| |-ParmVarDecl 0x7fceaa82c9a0 <col:64, col:69> col:69 i 'int *'
+| |-CompoundStmt 0x7fceab015468 <line:6:1, line:12:1>
+| | |-ReturnStmt 0x7fceab0153b8 <line:9:5, col:12>
+| | | `-IntegerLiteral 0x7fceab015398 <col:12> 'int' 0
+| | `-LabelStmt 0x7fceab015450 <line:10:1, line:11:12> 'cc_label'
+| |   `-ReturnStmt 0x7fceab0153f0 <col:5, col:12>
+| |     `-IntegerLiteral 0x7fceab0153d0 <col:12> 'int' 1
+| `-AlwaysInlineAttr 0x7fceab015310 <line:5:30> always_inline
+|-FunctionDecl 0x7fceab015530 <line:13:1, col:24> col:12 used getit 'int (int *)' extern
+| `-ParmVarDecl 0x7fceab0154a0 <col:19, col:23> col:24 'int *'
+`-FunctionDecl 0x7fceab015748 <line:14:1, line:25:1> line:14:5 f 'int (int *, int)'
+  |-ParmVarDecl 0x7fceab0155f0 <col:8, col:13> col:13 used i 'int *'
+  |-ParmVarDecl 0x7fceab015668 <col:16, col:20> col:20 used cond 'int'
+  `-CompoundStmt 0x7fceab015d40 <line:15:1, line:25:1>
+    |-IfStmt 0x7fceab015b00 <line:16:3, line:21:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fceab015820 <line:16:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fceab0157f8 <col:7> 'int' lvalue ParmVar 0x7fceab015668 'cond' 'int'
+    | |-CompoundStmt 0x7fceab015ad8 <col:13, line:21:3>
+    | | |-CallExpr 0x7fceab0158c0 <line:17:7, col:15> 'int'
+    | | | |-ImplicitCastExpr 0x7fceab0158a8 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fceab015838 <col:7> 'int (int *)' Function 0x7fceab015530 'getit' 'int (int *)'
+    | | | `-ImplicitCastExpr 0x7fceab0158f0 <col:14> 'int *' <NullToPointer>
+    | | |   `-IntegerLiteral 0x7fceab015860 <col:14> 'int' 0
+    | | |-IfStmt 0x7fceab015a68 <line:18:7, line:19:10>
+    | | | |-<<<NULL>>>
+    | | | |-<<<NULL>>>
+    | | | |-CallExpr 0x7fceab015970 <line:18:11, col:26> 'int'
+    | | | | |-ImplicitCastExpr 0x7fceab015958 <col:11> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | | | | `-DeclRefExpr 0x7fceab015908 <col:11> 'int (int *)' Function 0x7fceab015268 'dec_and_test' 'int (int *)'
+    | | | | `-ImplicitCastExpr 0x7fceab0159a0 <col:25> 'int *' <LValueToRValue>
+    | | | |   `-DeclRefExpr 0x7fceab015930 <col:25> 'int *' lvalue ParmVar 0x7fceab0155f0 'i' 'int *'
+    | | | |-CallExpr 0x7fceab015a20 <line:19:2, col:10> 'int'
+    | | | | |-ImplicitCastExpr 0x7fceab015a08 <col:2> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | | | | `-DeclRefExpr 0x7fceab0159b8 <col:2> 'int (int *)' Function 0x7fceab015530 'getit' 'int (int *)'
+    | | | | `-ImplicitCastExpr 0x7fceab015a50 <col:9> 'int *' <LValueToRValue>
+    | | | |   `-DeclRefExpr 0x7fceab0159e0 <col:9> 'int *' lvalue ParmVar 0x7fceab0155f0 'i' 'int *'
+    | | | `-<<<NULL>>>
+    | | `-ReturnStmt 0x7fceab015ac0 <line:20:7, col:14>
+    | |   `-IntegerLiteral 0x7fceab015aa0 <col:14> 'int' 42
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fceab015c40 <line:22:3, line:23:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fceab015ba0 <line:22:7, col:221 error generated.
+> 'int'
+    | | |-ImplicitCastExpr 0x7fceab015b88 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fceab015b38 <col:7> 'int (int *)' Function 0x7fceab015268 'dec_and_test' 'int (int *)'
+    | | `-ImplicitCastExpr 0x7fceab015bd0 <col:21> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fceab015b60 <col:21> 'int *' lvalue ParmVar 0x7fceab0155f0 'i' 'int *'
+    | |-CStyleCastExpr 0x7fceab015c18 <line:23:5, col:11> 'void' <ToVoid>
+    | | `-IntegerLiteral 0x7fceab015be8 <col:11> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fceab015d28 <line:24:3, col:18>
+      `-CallExpr 0x7fceab015ce0 <col:10, col:18> 'int'
+        |-ImplicitCastExpr 0x7fceab015cc8 <col:10> 'int (*)(int *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fceab015c78 <col:10> 'int (int *)' Function 0x7fceab015530 'getit' 'int (int *)'
+        `-ImplicitCastExpr 0x7fceab015d10 <col:17> 'int *' <LValueToRValue>
+          `-DeclRefExpr 0x7fceab015ca0 <col:17> 'int *' lvalue ParmVar 0x7fceab0155f0 'i' 'int *'

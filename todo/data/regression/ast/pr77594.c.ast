@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7ff45002bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff45006d918 <../Data/C2AST/pr77594.c:5:1, line:9:1> line:6:1 foo 'int (int, int *)'
+| |-ParmVarDecl 0x7ff45002c978 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7ff45006d840 <col:13, col:18> col:18 used b 'int *'
+| `-CompoundStmt 0x7ff45006dc70 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ff45006dc58 <line:8:3, col:41>
+|     `-ImplicitCastExpr 0x7ff45006dc40 <col:10, col:41> 'int' <IntegralCast>
+|       `-CallExpr 0x7ff45006dc00 <col:10, col:41> '_Bool'
+|         |-ImplicitCastExpr 0x7ff45006dbe8 <col:10> 'void (*)()' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7ff45006db20 <col:10> '<builtin fn type>' Function 0x7ff45006da38 '__builtin_sub_overflow' 'void ()'
+|         |-IntegerLiteral 0x7ff45006db48 <col:34> 'int' 0
+|         |-DeclRefExpr 0x7ff45006db68 <col:37> 'int' lvalue ParmVar 0x7ff45002c978 'a' 'int'
+|         `-DeclRefExpr 0x7ff45006db90 <col:40> 'int *' lvalue ParmVar 0x7ff45006d840 'b' 'int *'
+`-FunctionDecl 0x7ff45006da38 <col:10> col:10 implicit used __builtin_sub_overflow 'void ()' extern
+  `-NoThrowAttr 0x7ff45006dad8 <col:10> Implicit

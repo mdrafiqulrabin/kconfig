@@ -1,0 +1,647 @@
+TranslationUnitDecl 0x7f82bc02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f82bc02c978 <../Data/C2AST/pr53703.c:6:1, col:27> col:27 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7f82bc02bea0 'unsigned long'
+|-TypedefDecl 0x7f82bc814200 <line:7:1, col:28> col:28 referenced sa_family_t 'unsigned short'
+| `-BuiltinType 0x7f82bc02be60 'unsigned short'
+|-RecordDecl 0x7f82bc814258 <line:8:1, col:20> col:8 struct sockaddr definition
+|-TypedefDecl 0x7f82bc814318 <line:9:1, col:23> col:23 referenced __u8 'unsigned char'
+| `-BuiltinType 0x7f82bc02be40 'unsigned char'
+|-TypedefDecl 0x7f82bc814388 <line:10:1, col:24> col:24 referenced __u16 'unsigned short'
+| `-BuiltinType 0x7f82bc02be60 'unsigned short'
+|-TypedefDecl 0x7f82bc8143f8 <line:11:1, col:22> col:22 referenced __u32 'unsigned int'
+| `-BuiltinType 0x7f82bc02be80 'unsigned int'
+|-RecordDecl 0x7f82bc814450 <line:12:1, line:15:1> line:12:8 struct nlmsghdr definition
+| |-FieldDecl 0x7f82bc814530 <line:13:3, col:9> col:9 referenced nlmsg_len '__u32':'unsigned int'
+| `-FieldDecl 0x7f82bc8145b0 <line:14:3, col:9> col:9 referenced nlmsg_type '__u16':'unsigned short'
+|-RecordDecl 0x7f82bc8145f8 <line:16:1, line:18:1> line:16:8 struct ifaddrmsg definition
+| `-FieldDecl 0x7f82bc8146d0 <line:17:3, col:8> col:8 referenced ifa_family '__u8':'unsigned char'
+|-EnumDecl 0x7f82bc814718 <line:19:1, line:22:1> line:19:1
+| |-EnumConstantDecl 0x7f82bc8147d0 <line:20:3> col:3 referenced IFA_ADDRESS 'int'
+| `-EnumConstantDecl 0x7f82bc814818 <line:21:3> col:3 referenced IFA_LOCAL 'int'
+|-EnumDecl 0x7f82bc814860 <line:23:1, line:26:1> line:23:1
+| |-EnumConstantDecl 0x7f82bc814940 <line:24:3, col:17> col:3 referenced RTM_NEWLINK 'int'
+| | `-IntegerLiteral 0x7f82bc814920 <col:17> 'int' 16
+| `-EnumConstantDecl 0x7f82bc8149a8 <line:25:3, col:17> col:3 referenced RTM_NEWADDR 'int'
+|   `-IntegerLiteral 0x7f82bc814988 <col:17> 'int' 20
+|-RecordDecl 0x7f82bc8149f0 <line:27:1, line:30:1> line:27:8 struct rtattr definition
+| |-FieldDecl 0x7f82bc814ab8 <line:28:3, col:18> col:18 referenced rta_len 'unsigned short'
+| `-FieldDecl 0x7f82bc814b18 <line:29:3, col:18> col:18 referenced rta_type 'unsigned short'
+|-RecordDecl 0x7f82bc814b60 <line:31:1, line:34:1> line:31:8 struct ifaddrs definition
+| |-FieldDecl 0x7f82bc814cc0 <line:32:3, col:19> col:19 ifa_next 'struct ifaddrs *'
+| `-FieldDecl 0x7f82bc814d20 <line:33:3, col:18> col:18 referenced ifa_flags 'unsigned short'
+|-TypedefDecl 0x7f82bc814d80 <line:35:1, col:28> col:28 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7f82bc02be60 'unsigned short'
+|-TypedefDecl 0x7f82bc814df0 <line:36:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7f82bc02be80 'unsigned int'
+|-RecordDecl 0x7f82bc814e48 <line:37:1, line:40:1> line:37:8 struct nlmsg_list definition
+| |-FieldDecl 0x7f82bc814fa0 <line:38:3, col:22> col:22 referenced nlm_next 'struct nlmsg_list *'
+| `-FieldDecl 0x7f82bc815000 <line:39:3, col:7> col:7 referenced size 'int'
+|-RecordDecl 0x7f82bc815048 <line:41:1, line:46:1> line:41:8 struct rtmaddr_ifamap definition
+| |-FieldDecl 0x7f82bc815108 <line:42:3, col:9> col:9 referenced address 'void *'
+| |-FieldDecl 0x7f82bc815168 <line:43:3, col:9> col:9 referenced local 'void *'
+| |-FieldDecl 0x7f82bc815200 <line:44:3, col:7> col:7 referenced address_len 'int'
+| `-FieldDecl 0x7f82bc815260 <line:45:3, col:7> col:7 referenced local_len 'int'
+|-FunctionDecl 0x7f82bc815438 <line:47:1, line:149:1> line:47:5 usagi_getifaddrs 'int (struct ifaddrs **)'
+| |-ParmVarDecl 0x7f82bc815330 <col:23, col:40> col:40 ifap 'struct ifaddrs **'
+| `-CompoundStmt 0x7f82bd801c38 <line:48:1, line:149:1>
+|   |-DeclStmt 0x7f82bc8156d8 <line:49:3, col:50>
+|   | |-VarDecl 0x7f82bc815548 <col:3, col:22> col:22 used nlmsg_list 'struct nlmsg_list *'
+|   | |-VarDecl 0x7f82bc8155d0 <col:3, col:35> col:35 nlmsg_end 'struct nlmsg_list *'
+|   | `-VarDecl 0x7f82bc815658 <col:3, col:47> col:47 used nlm 'struct nlmsg_list *'
+|   |-DeclStmt 0x7f82bc815880 <line:50:3, col:26>
+|   | |-VarDecl 0x7f82bc815720 <col:3, col:10> col:10 used dlen 'size_t':'unsigned long'
+|   | |-VarDecl 0x7f82bc815790 <col:3, col:16> col:16 xlen 'size_t':'unsigned long'
+|   | `-VarDecl 0x7f82bc815800 <col:3, col:22> col:22 nlen 'size_t':'unsigned long'
+|   |-DeclStmt 0x7f82bc815910 <line:51:3, col:12>
+|   | `-VarDecl 0x7f82bc8158b0 <col:3, col:7> col:7 used build 'int'
+|   `-ForStmt 0x7f82bd801c00 <line:52:3, line:148:5>
+|     |-BinaryOperator 0x7f82bc815970 <line:52:8, col:16> 'int' '='
+|     | |-DeclRefExpr 0x7f82bc815928 <col:8> 'int' lvalue Var 0x7f82bc8158b0 'build' 'int'
+|     | `-IntegerLiteral 0x7f82bc815950 <col:16> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f82bc8159f8 <col:19, col:28> 'int' '<='
+|     | |-ImplicitCastExpr 0x7f82bc8159e0 <col:19> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f82bc815998 <col:19> 'int' lvalue Var 0x7f82bc8158b0 'build' 'int'
+|     | `-IntegerLiteral 0x7f82bc8159c0 <col:28> 'int' 1
+|     |-UnaryOperator 0x7f82bc815a48 <col:31, col:36> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f82bc815a20 <col:31> 'int' lvalue Var 0x7f82bc8158b0 'build' 'int'
+|     `-CompoundStmt 0x7f82bd801bc8 <line:53:5, line:148:5>
+|       |-DeclStmt 0x7f82bc815cc0 <line:54:7, col:60>
+|       | |-VarDecl 0x7f82bc815a90 <col:7, col:39> col:23 ifl 'struct ifaddrs *' cinit
+|       | | `-ImplicitCastExpr 0x7f82bc815b70 <col:29, col:39> 'struct ifaddrs *' <NullToPointer>
+|       | |   `-ParenExpr 0x7f82bc815b50 <col:29, col:39> 'void *'
+|       | |     `-CStyleCastExpr 0x7f82bc815b28 <col:30, col:38> 'void *' <NullToPointer>
+|       | |       `-IntegerLiteral 0x7f82bc815af0 <col:38> 'int' 0
+|       | `-VarDecl 0x7f82bc815bb0 <col:7, col:59> col:43 used ifa 'struct ifaddrs *' cinit
+|       |   `-ImplicitCastExpr 0x7f82bc815c90 <col:49, col:59> 'struct ifaddrs *' <NullToPointer>
+|       |     `-ParenExpr 0x7f82bc815c70 <col:49, col:59> 'void *'
+|       |       `-CStyleCastExpr 0x7f82bc815c48 <col:50, col:58> 'void *' <NullToPointer>
+|       |         `-IntegerLiteral 0x7f82bc815c10 <col:58> 'int' 0
+|       |-DeclStmt 0x7f82bc815e90 <line:55:7, col:34>
+|       | |-VarDecl 0x7f82bc815d90 <col:7, col:24> col:24 used nlh 'struct nlmsghdr *'
+|       | `-VarDecl 0x7f82bc815e18 <col:7, col:30> col:30 used nlh0 'struct nlmsghdr *'
+|       |-DeclStmt 0x7f82bc816030 <line:56:7, col:38>
+|       | `-VarDecl 0x7f82bc815f38 <col:7, col:37> col:17 used ifflist 'uint16_t *' cinit
+|       |   `-ImplicitCastExpr 0x7f82bc816018 <col:27, col:37> 'uint16_t *' <NullToPointer>
+|       |     `-ParenExpr 0x7f82bc815ff8 <col:27, col:37> 'void *'
+|       |       `-CStyleCastExpr 0x7f82bc815fd0 <col:28, col:36> 'void *' <NullToPointer>
+|       |         `-IntegerLiteral 0x7f82bc815f98 <col:36> 'int' 0
+|       |-DeclStmt 0x7f82bc816100 <line:57:7, col:35>
+|       | `-VarDecl 0x7f82bc8160a0 <col:7, col:29> col:29 used ifamap 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|       `-ForStmt 0x7f82bd801b90 <line:58:7, line:147:2>
+|         |-BinaryOperator 0x7f82bc816180 <line:58:12, col:18> 'struct nlmsg_list *' '='
+|         | |-DeclRefExpr 0x7f82bc816118 <col:12> 'struct nlmsg_list *' lvalue Var 0x7f82bc815658 'nlm' 'struct nlmsg_list *'
+|         | `-ImplicitCastExpr 0x7f82bc816168 <col:18> 'struct nlmsg_list *' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f82bc816140 <col:18> 'struct nlmsg_list *' lvalue Var 0x7f82bc815548 'nlmsg_list' 'struct nlmsg_list *'
+|         |-<<<NULL>>>
+|         |-ImplicitCastExpr 0x7f82bc8161d0 <col:30> 'struct nlmsg_list *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f82bc8161a8 <col:30> 'struct nlmsg_list *' lvalue Var 0x7f82bc815658 'nlm' 'struct nlmsg_list *'
+|         |-BinaryOperator 0x7f82bc831eb8 <col:35, col:46> 'struct nlmsg_list *' '='
+|         | |-DeclRefExpr 0x7f82bc831e00 <col:35> 'struct nlmsg_list *' lvalue Var 0x7f82bc815658 'nlm' 'struct nlmsg_list *'
+|         | `-ImplicitCastExpr 0x7f82bc831ea0 <col:41, col:46> 'struct nlmsg_list *' <LValueToRValue>
+|         |   `-MemberExpr 0x7f82bc831e68 <col:41, col:46> 'struct nlmsg_list *' lvalue ->nlm_next 0x7f82bc814fa0
+|         |     `-ImplicitCastExpr 0x7f82bc831e50 <col:41> 'struct nlmsg_list *' <LValueToRValue>
+|         |       `-DeclRefExpr 0x7f82bc831e28 <col:41> 'struct nlmsg_list *' lvalue Var 0x7f82bc815658 'nlm' 'struct nlmsg_list *'
+|         `-CompoundStmt 0x7f82bd801b70 <line:59:2, line:147:2>
+|           |-DeclStmt 0x7f82bc831fe8 <line:60:4, col:26>
+|           | `-VarDecl 0x7f82bc831ef8 <col:4, col:22> col:8 used nlmlen 'int' cinit
+|           |   `-ImplicitCastExpr 0x7f82bc831fd0 <col:17, col:22> 'int' <LValueToRValue>
+|           |     `-MemberExpr 0x7f82bc831f98 <col:17, col:22> 'int' lvalue ->size 0x7f82bc815000
+|           |       `-ImplicitCastExpr 0x7f82bc831f80 <col:17> 'struct nlmsg_list *' <LValueToRValue>
+|           |         `-DeclRefExpr 0x7f82bc831f58 <col:17> 'struct nlmsg_list *' lvalue Var 0x7f82bc815658 'nlm' 'struct nlmsg_list *'
+|           `-ForStmt 0x7f82bd801b38 <line:61:4, line:146:6>
+|             |-BinaryOperator 0x7f82bc832068 <line:61:9, col:15> 'struct nlmsghdr *' '='
+|             | |-DeclRefExpr 0x7f82bc832000 <col:9> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             | `-ImplicitCastExpr 0x7f82bc832050 <col:15> 'struct nlmsghdr *' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7f82bc832028 <col:15> 'struct nlmsghdr *' lvalue Var 0x7f82bc815e18 'nlh0' 'struct nlmsghdr *'
+|             |-<<<NULL>>>
+|             |-ParenExpr 0x7f82bc832468 <line:62:9, line:64:34> 'int'
+|             | `-BinaryOperator 0x7f82bc832440 <line:62:10, line:64:33> 'int' '&&'
+|             |   |-BinaryOperator 0x7f82bc8322c8 <line:62:10, line:63:48> 'int' '&&'
+|             |   | |-BinaryOperator 0x7f82bc832170 <line:62:10, col:49> 'int' '>='
+|             |   | | |-ImplicitCastExpr 0x7f82bc832158 <col:10, col:17> 'int' <LValueToRValue>
+|             |   | | | `-ParenExpr 0x7f82bc8320b8 <col:10, col:17> 'int' lvalue
+|             |   | | |   `-DeclRefExpr 0x7f82bc832090 <col:11> 'int' lvalue Var 0x7f82bc831ef8 'nlmlen' 'int'
+|             |   | | `-CStyleCastExpr 0x7f82bc832130 <col:22, col:49> 'int' <IntegralCast>
+|             |   | |   `-UnaryExprOrTypeTraitExpr 0x7f82bc8320f8 <col:27, col:49> 'unsigned long' sizeof 'struct nlmsghdr':'struct nlmsghdr'
+|             |   | `-BinaryOperator 0x7f82bc8322a0 <line:63:6, col:48> 'int' '>='
+|             |   |   |-ImplicitCastExpr 0x7f82bc832288 <col:6, col:13> 'unsigned long' <IntegralCast>
+|             |   |   | `-ImplicitCastExpr 0x7f82bc832270 <col:6, col:13> '__u32':'unsigned int' <LValueToRValue>
+|             |   |   |   `-MemberExpr 0x7f82bc8321f8 <col:6, col:13> '__u32':'unsigned int' lvalue ->nlmsg_len 0x7f82bc814530
+|             |   |   |     `-ImplicitCastExpr 0x7f82bc8321e0 <col:6, col:10> 'struct nlmsghdr *' <LValueToRValue>
+|             |   |   |       `-ParenExpr 0x7f82bc8321c0 <col:6, col:10> 'struct nlmsghdr *' lvalue
+|             |   |   |         `-DeclRefExpr 0x7f82bc832198 <col:7> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             |   |   `-UnaryExprOrTypeTraitExpr 0x7f82bc832250 <col:26, col:48> 'unsigned long' sizeof 'struct nlmsghdr':'struct nlmsghdr'
+|             |   `-BinaryOperator 0x7f82bc832418 <line:64:6, col:33> 'int' '<='
+|             |     |-ImplicitCastExpr 0x7f82bc8323d0 <col:6, col:13> '__u32':'unsigned int' <LValueToRValue>
+|             |     | `-MemberExpr 0x7f82bc832350 <col:6, col:13> '__u32':'unsigned int' lvalue ->nlmsg_len 0x7f82bc814530
+|             |     |   `-ImplicitCastExpr 0x7f82bc832338 <col:6, col:10> 'struct nlmsghdr *' <LValueToRValue>
+|             |     |     `-ParenExpr 0x7f82bc832318 <col:6, col:10> 'struct nlmsghdr *' lvalue
+|             |     |       `-DeclRefExpr 0x7f82bc8322f0 <col:7> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             |     `-ImplicitCastExpr 0x7f82bc832400 <col:26, col:33> 'unsigned int' <IntegralCast>
+|             |       `-ImplicitCastExpr 0x7f82bc8323e8 <col:26, col:33> 'int' <LValueToRValue>
+|             |         `-ParenExpr 0x7f82bc8323b0 <col:26, col:33> 'int' lvalue
+|             |           `-DeclRefExpr 0x7f82bc832388 <col:27> 'int' lvalue Var 0x7f82bc831ef8 'nlmlen' 'int'
+|             |-BinaryOperator 0x7f82bc832cc0 <line:65:9, line:68:24> 'struct nlmsghdr *' '='
+|             | |-DeclRefExpr 0x7f82bc8324d8 <line:65:9> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             | `-ParenExpr 0x7f82bc832ca0 <col:15, line:68:24> 'struct nlmsghdr *'
+|             |   `-BinaryOperator 0x7f82bc832c78 <line:65:16, line:68:23> 'struct nlmsghdr *' ','
+|             |     |-CompoundAssignOperator 0x7f82bc8327e8 <line:65:16, col:68> 'int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|             |     | |-ParenExpr 0x7f82bc832528 <col:16, col:23> 'int' lvalue
+|             |     | | `-DeclRefExpr 0x7f82bc832500 <col:17> 'int' lvalue Var 0x7f82bc831ef8 'nlmlen' 'int'
+|             |     | `-ParenExpr 0x7f82bc8327c8 <col:28, col:68> 'unsigned int'
+|             |     |   `-BinaryOperator 0x7f82bc8327a0 <col:30, col:66> 'unsigned int' '&'
+|             |     |     |-ParenExpr 0x7f82bc8326c0 <col:30, col:55> 'unsigned int'
+|             |     |     | `-BinaryOperator 0x7f82bc832698 <col:31, col:54> 'unsigned int' '-'
+|             |     |     |   |-BinaryOperator 0x7f82bc832638 <col:31, col:50> 'unsigned int' '+'
+|             |     |     |   | |-ImplicitCastExpr 0x7f82bc832620 <col:31, col:48> '__u32':'unsigned int' <LValueToRValue>
+|             |     |     |   | | `-ParenExpr 0x7f82bc8325e0 <col:31, col:48> '__u32':'unsigned int' lvalue
+|             |     |     |   | |   `-MemberExpr 0x7f82bc8325a8 <col:32, col:39> '__u32':'unsigned int' lvalue ->nlmsg_len 0x7f82bc814530
+|             |     |     |   | |     `-ImplicitCastExpr 0x7f82bc832590 <col:32, col:36> 'struct nlmsghdr *' <LValueToRValue>
+|             |     |     |   | |       `-ParenExpr 0x7f82bc832570 <col:32, col:36> 'struct nlmsghdr *' lvalue
+|             |     |     |   | |         `-DeclRefExpr 0x7f82bc832548 <col:33> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             |     |     |   | `-IntegerLiteral 0x7f82bc832600 <col:50> 'unsigned int' 4
+|             |     |     |   `-ImplicitCastExpr 0x7f82bc832680 <col:54> 'unsigned int' <IntegralCast>
+|             |     |     |     `-IntegerLiteral 0x7f82bc832660 <col:54> 'int' 1
+|             |     |     `-UnaryOperator 0x7f82bc832780 <col:59, col:66> 'unsigned int' prefix '~'
+|             |     |       `-ParenExpr 0x7f82bc832760 <col:60, col:66> 'unsigned int'
+|             |     |         `-BinaryOperator 0x7f82bc832738 <col:61, col:65> 'unsigned int' '-'
+|             |     |           |-IntegerLiteral 0x7f82bc8326e0 <col:61> 'unsigned int' 4
+|             |     |           `-ImplicitCastExpr 0x7f82bc832720 <col:65> 'unsigned int' <IntegralCast>
+|             |     |             `-IntegerLiteral 0x7f82bc832700 <col:65> 'int' 1
+|             |     `-CStyleCastExpr 0x7f82bc832c50 <line:66:9, line:68:23> 'struct nlmsghdr *' <BitCast>
+|             |       `-ParenExpr 0x7f82bc832c30 <line:66:27, line:68:23> 'char *'
+|             |         `-BinaryOperator 0x7f82bc832bb0 <line:66:28, line:68:22> 'char *' '+'
+|             |           |-ParenExpr 0x7f82bc8328f0 <line:66:28, col:41> 'char *'
+|             |           | `-CStyleCastExpr 0x7f82bc8328c8 <col:29, col:40> 'char *' <BitCast>
+|             |           |   `-ImplicitCastExpr 0x7f82bc8328b0 <col:36, col:40> 'struct nlmsghdr *' <LValueToRValue>
+|             |           |     `-ParenExpr 0x7f82bc832890 <col:36, col:40> 'struct nlmsghdr *' lvalue
+|             |           |       `-DeclRefExpr 0x7f82bc832820 <col:37> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             |           `-ParenExpr 0x7f82bc832b90 <line:67:9, line:68:22> 'unsigned int'
+|             |             `-BinaryOperator 0x7f82bc832b68 <line:67:11, line:68:20> 'unsigned int' '&'
+|             |               |-ParenExpr 0x7f82bc832a88 <line:67:11, col:36> 'unsigned int'
+|             |               | `-BinaryOperator 0x7f82bc832a60 <col:12, col:35> 'unsigned int' '-'
+|             |               |   |-BinaryOperator 0x7f82bc832a00 <col:12, col:31> 'unsigned int' '+'
+|             |               |   | |-ImplicitCastExpr 0x7f82bc8329e8 <col:12, col:29> '__u32':'unsigned int' <LValueToRValue>
+|             |               |   | | `-ParenExpr 0x7f82bc8329a8 <col:12, col:29> '__u32':'unsigned int' lvalue
+|             |               |   | |   `-MemberExpr 0x7f82bc832970 <col:13, col:20> '__u32':'unsigned int' lvalue ->nlmsg_len 0x7f82bc814530
+|             |               |   | |     `-ImplicitCastExpr 0x7f82bc832958 <col:13, col:17> 'struct nlmsghdr *' <LValueToRValue>
+|             |               |   | |       `-ParenExpr 0x7f82bc832938 <col:13, col:17> 'struct nlmsghdr *' lvalue
+|             |               |   | |         `-DeclRefExpr 0x7f82bc832910 <col:14> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|             |               |   | `-IntegerLiteral 0x7f82bc8329c8 <col:31> 'unsigned int' 4
+|             |               |   `-ImplicitCastExpr 0x7f82bc832a48 <col:35> 'unsigned int' <IntegralCast>
+|             |               |     `-IntegerLiteral 0x7f82bc832a28 <col:35> 'int' 1
+|             |               `-UnaryOperator 0x7f82bc832b48 <line:68:13, col:20> 'unsigned int' prefix '~'
+|             |                 `-ParenExpr 0x7f82bc832b28 <col:14, col:20> 'unsigned int'
+|             |                   `-BinaryOperator 0x7f82bc832b00 <col:15, col:19> 'unsigned int' '-'
+|             |                     |-IntegerLiteral 0x7f82bc832aa8 <col:15> 'unsigned int' 4
+|             |                     `-ImplicitCastExpr 0x7f82bc832ae8 <col:19> 'unsigned int' <IntegralCast>
+|             |                       `-IntegerLiteral 0x7f82bc832ac8 <col:19> 'int' 1
+|             `-CompoundStmt 0x7f82bd801ae0 <line:69:6, line:146:6>
+|               |-DeclStmt 0x7f82bc832f60 <line:70:8, col:44>
+|               | |-RecordDecl 0x7f82bc832ce8 <col:8, col:15> col:15 struct ifinfomsg
+|               | `-VarDecl 0x7f82bc832e50 <col:8, col:43> col:26 used ifim 'struct ifinfomsg *' cinit
+|               |   `-ImplicitCastExpr 0x7f82bc832f30 <col:33, col:43> 'struct ifinfomsg *' <NullToPointer>
+|               |     `-ParenExpr 0x7f82bc832f10 <col:33, col:43> 'void *'
+|               |       `-CStyleCastExpr 0x7f82bc832ee8 <col:34, col:42> 'void *' <NullToPointer>
+|               |         `-IntegerLiteral 0x7f82bc832eb0 <col:42> 'int' 0
+|               |-DeclStmt 0x7f82bc833128 <line:71:8, col:44>
+|               | `-VarDecl 0x7f82bc833030 <col:8, col:43> col:26 used ifam 'struct ifaddrmsg *' cinit
+|               |   `-ImplicitCastExpr 0x7f82bc833110 <col:33, col:43> 'struct ifaddrmsg *' <NullToPointer>
+|               |     `-ParenExpr 0x7f82bc8330f0 <col:33, col:43> 'void *'
+|               |       `-CStyleCastExpr 0x7f82bc8330c8 <col:34, col:42> 'void *' <NullToPointer>
+|               |         `-IntegerLiteral 0x7f82bc833090 <col:42> 'int' 0
+|               |-DeclStmt 0x7f82bc833250 <line:72:8, col:26>
+|               | `-VarDecl 0x7f82bc8331f0 <col:8, col:23> col:23 used rta 'struct rtattr *'
+|               |-DeclStmt 0x7f82bc833338 <line:73:8, col:34>
+|               | `-VarDecl 0x7f82bc8332a0 <col:8, col:33> col:20 used nlm_family 'sa_family_t':'unsigned short' cinit
+|               |   `-ImplicitCastExpr 0x7f82bc833320 <col:33> 'sa_family_t':'unsigned short' <IntegralCast>
+|               |     `-IntegerLiteral 0x7f82bc833300 <col:33> 'int' 0
+|               |-DeclStmt 0x7f82bc8334d8 <line:74:8, col:45>
+|               | |-VarDecl 0x7f82bc833380 <col:8, col:29> col:17 nlm_scope 'uint32_t':'unsigned int' cinit
+|               | | `-ImplicitCastExpr 0x7f82bc833400 <col:29> 'uint32_t':'unsigned int' <IntegralCast>
+|               | |   `-IntegerLiteral 0x7f82bc8333e0 <col:29> 'int' 0
+|               | `-VarDecl 0x7f82bc833428 <col:8, col:44> col:32 used nlm_index 'uint32_t':'unsigned int' cinit
+|               |   `-ImplicitCastExpr 0x7f82bc8334a8 <col:44> 'uint32_t':'unsigned int' <IntegralCast>
+|               |     `-IntegerLiteral 0x7f82bc833488 <col:44> 'int' 0
+|               |-CallExpr 0x7f82bc8338a0 <line:75:8, col:43> 'void *'
+|               | |-ImplicitCastExpr 0x7f82bc833888 <col:8> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+|               | | `-DeclRefExpr 0x7f82bc833710 <col:8> 'void *(void *, int, unsigned long)' Function 0x7f82bc833538 'memset' 'void *(void *, int, unsigned long)'
+|               | |-ImplicitCastExpr 0x7f82bc8338e0 <col:16, col:17> 'void *' <BitCast>
+|               | | `-UnaryOperator 0x7f82bc8337b8 <col:16, col:17> 'struct rtmaddr_ifamap *' prefix '&'
+|               | |   `-DeclRefExpr 0x7f82bc833738 <col:17> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|               | |-IntegerLiteral 0x7f82bc8337d8 <col:25> 'int' 0
+|               | `-UnaryExprOrTypeTraitExpr 0x7f82bc833840 <col:28, col:42> 'unsigned long' sizeof
+|               |   `-ParenExpr 0x7f82bc833820 <col:35, col:42> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue
+|               |     `-DeclRefExpr 0x7f82bc8337f8 <col:36> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|               |-SwitchStmt 0x7f82bc8339a0 <line:76:8, line:98:3>
+|               | |-<<<NULL>>>
+|               | |-<<<NULL>>>
+|               | |-ImplicitCastExpr 0x7f82bc833988 <line:76:16, col:21> 'int' <IntegralCast>
+|               | | `-ImplicitCastExpr 0x7f82bc833970 <col:16, col:21> '__u16':'unsigned short' <LValueToRValue>
+|               | |   `-MemberExpr 0x7f82bc833938 <col:16, col:21> '__u16':'unsigned short' lvalue ->nlmsg_type 0x7f82bc8145b0
+|               | |     `-ImplicitCastExpr 0x7f82bc833920 <col:16> 'struct nlmsghdr *' <LValueToRValue>
+|               | |       `-DeclRefExpr 0x7f82bc8338f8 <col:16> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|               | `-CompoundStmt 0x7f82bc834d70 <line:77:3, line:98:3>
+|               |   |-CaseStmt 0x7f82bc8339f8 <line:78:3, line:84:25>
+|               |   | |-DeclRefExpr 0x7f82bc8339d0 <line:78:8> 'int' EnumConstant 0x7f82bc814940 'RTM_NEWLINK' 'int'
+|               |   | |-<<<NULL>>>
+|               |   | `-BinaryOperator 0x7f82bc834208 <line:79:5, line:84:25> 'struct ifinfomsg *' '='
+|               |   |   |-DeclRefExpr 0x7f82bc833a30 <line:79:5> 'struct ifinfomsg *' lvalue Var 0x7f82bc832e50 'ifim' 'struct ifinfomsg *'
+|               |   |   `-CStyleCastExpr 0x7f82bc8341e0 <col:12, line:84:25> 'struct ifinfomsg *' <BitCast>
+|               |   |     `-ParenExpr 0x7f82bc8341c0 <line:80:7, line:84:25> 'void *'
+|               |   |       `-CStyleCastExpr 0x7f82bc834140 <line:80:8, line:84:24> 'void *' <BitCast>
+|               |   |         `-ParenExpr 0x7f82bc834120 <line:80:15, line:84:24> 'char *'
+|               |   |           `-BinaryOperator 0x7f82bc8340b0 <line:80:16, line:84:23> 'char *' '+'
+|               |   |             |-ParenExpr 0x7f82bc833ad8 <line:80:16, col:27> 'char *'
+|               |   |             | `-CStyleCastExpr 0x7f82bc833ab0 <col:17, col:24> 'char *' <BitCast>
+|               |   |             |   `-ImplicitCastExpr 0x7f82bc833a98 <col:24> 'struct nlmsghdr *' <LValueToRValue>
+|               |   |             |     `-DeclRefExpr 0x7f82bc833a58 <col:24> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|               |   |             `-ParenExpr 0x7f82bc834090 <line:81:11, line:84:23> 'unsigned int'
+|               |   |               `-BinaryOperator 0x7f82bc834068 <line:81:12, line:84:22> 'unsigned int' '+'
+|               |   |                 |-ImplicitCastExpr 0x7f82bc834050 <line:81:12, col:14> 'unsigned int' <IntegralCast>
+|               |   |                 | `-ParenExpr 0x7f82bc833b18 <col:12, col:14> 'int'
+|               |   |                 |   `-IntegerLiteral 0x7f82bc833af8 <col:13> 'int' 0
+|               |   |                 `-ParenExpr 0x7f82bc834030 <col:16, line:84:22> 'unsigned int'
+|               |   |                   `-BinaryOperator 0x7f82bc834008 <line:81:18, line:84:20> 'unsigned int' '&'
+|               |   |                     |-ParenExpr 0x7f82bc833f28 <line:81:18, line:83:29> 'unsigned int'
+|               |   |                     | `-BinaryOperator 0x7f82bc833f00 <line:81:19, line:83:28> 'unsigned int' '-'
+|               |   |                     |   |-BinaryOperator 0x7f82bc833ea0 <line:81:19, line:83:24> 'unsigned int' '+'
+|               |   |                     |   | |-ImplicitCastExpr 0x7f82bc833e88 <line:81:19, line:83:22> 'unsigned int' <IntegralCast>
+|               |   |                     |   | | `-ParenExpr 0x7f82bc833e48 <line:81:19, line:83:22> 'int'
+|               |   |                     |   | |   `-ParenExpr 0x7f82bc833e28 <line:81:20, line:83:21> 'int'
+|               |   |                     |   | |     `-CStyleCastExpr 0x7f82bc833e00 <line:81:21, line:83:20> 'int' <IntegralCast>
+|               |   |                     |   | |       `-ParenExpr 0x7f82bc833dc0 <line:82:7, line:83:20> 'unsigned long'
+|               |   |                     |   | |         `-BinaryOperator 0x7f82bc833d50 <line:82:9, line:83:18> 'unsigned long' '&'
+|               |   |                     |   | |           |-ParenExpr 0x7f82bc833c58 <line:82:9, col:41> 'unsigned long'
+|               |   |                     |   | |           | `-BinaryOperator 0x7f82bc833c30 <col:10, col:40> 'unsigned long' '-'
+|               |   |                     |   | |           |   |-BinaryOperator 0x7f82bc833bd0 <col:10, col:36> 'unsigned long' '+'
+|               |   |                     |   | |           |   | |-ParenExpr 0x7f82bc833b78 <col:10, col:34> 'unsigned long'
+|               |   |                     |   | |           |   | | `-UnaryExprOrTypeTraitExpr 0x7f82bc833b58 <col:11, col:33> 'unsigned long' sizeof 'struct nlmsghdr':'struct nlmsghdr'
+|               |   |                     |   | |           |   | `-ImplicitCastExpr 0x7f82bc833bb8 <col:36> 'unsigned long' <IntegralCast>
+|               |   |                     |   | |           |   |   `-IntegerLiteral 0x7f82bc833b98 <col:36> 'unsigned int' 4
+|               |   |                     |   | |           |   `-ImplicitCastExpr 0x7f82bc833c18 <col:40> 'unsigned long' <IntegralCast>
+|               |   |                     |   | |           |     `-IntegerLiteral 0x7f82bc833bf8 <col:40> 'int' 1
+|               |   |                     |   | |           `-ImplicitCastExpr 0x7f82bc833d38 <line:83:11, col:18> 'unsigned long' <IntegralCast>
+|               |   |                     |   | |             `-UnaryOperator 0x7f82bc833d18 <col:11, col:18> 'unsigned int' prefix '~'
+|               |   |                     |   | |               `-ParenExpr 0x7f82bc833cf8 <col:12, col:18> 'unsigned int'
+|               |   |                     |   | |                 `-BinaryOperator 0x7f82bc833cd0 <col:13, col:17> 'unsigned int' '-'
+|               |   |                     |   | |                   |-IntegerLiteral 0x7f82bc833c78 <col:13> 'unsigned int' 4
+|               |   |                     |   | |                   `-ImplicitCastExpr 0x7f82bc833cb8 <col:17> 'unsigned int' <IntegralCast>
+|               |   |                     |   | |                     `-IntegerLiteral 0x7f82bc833c98 <col:17> 'int' 1
+|               |   |                     |   | `-IntegerLiteral 0x7f82bc833e68 <col:24> 'unsigned int' 4
+|               |   |                     |   `-ImplicitCastExpr 0x7f82bc833ee8 <col:28> 'unsigned int' <IntegralCast>
+|               |   |                     |     `-IntegerLiteral 0x7f82bc833ec8 <col:28> 'int' 1
+|               |   |                     `-UnaryOperator 0x7f82bc833fe8 <line:84:13, col:20> 'unsigned int' prefix '~'
+|               |   |                       `-ParenExpr 0x7f82bc833fc8 <col:14, col:20> 'unsigned int'
+|               |   |                         `-BinaryOperator 0x7f82bc833fa0 <col:15, col:19> 'unsigned int' '-'
+|               |   |                           |-IntegerLiteral 0x7f82bc833f48 <col:15> 'unsigned int' 4
+|               |   |                           `-ImplicitCastExpr 0x7f82bc833f88 <col:19> 'unsigned int' <IntegralCast>
+|               |   |                             `-IntegerLiteral 0x7f82bc833f68 <col:19> 'int' 1
+|               |   |-CaseStmt 0x7f82bc834258 <line:85:3, line:91:25>
+|               |   | |-DeclRefExpr 0x7f82bc834230 <line:85:8> 'int' EnumConstant 0x7f82bc8149a8 'RTM_NEWADDR' 'int'
+|               |   | |-<<<NULL>>>
+|               |   | `-BinaryOperator 0x7f82bc834a48 <line:86:5, line:91:25> 'struct ifaddrmsg *' '='
+|               |   |   |-DeclRefExpr 0x7f82bc834290 <line:86:5> 'struct ifaddrmsg *' lvalue Var 0x7f82bc833030 'ifam' 'struct ifaddrmsg *'
+|               |   |   `-CStyleCastExpr 0x7f82bc834a20 <col:12, line:91:25> 'struct ifaddrmsg *' <BitCast>
+|               |   |     `-ParenExpr 0x7f82bc834a00 <line:87:7, line:91:25> 'void *'
+|               |   |       `-CStyleCastExpr 0x7f82bc834980 <line:87:8, line:91:24> 'void *' <BitCast>
+|               |   |         `-ParenExpr 0x7f82bc834960 <line:87:15, line:91:24> 'char *'
+|               |   |           `-BinaryOperator 0x7f82bc8348f0 <line:87:16, line:91:23> 'char *' '+'
+|               |   |             |-ParenExpr 0x7f82bc834338 <line:87:16, col:27> 'char *'
+|               |   |             | `-CStyleCastExpr 0x7f82bc834310 <col:17, col:24> 'char *' <BitCast>
+|               |   |             |   `-ImplicitCastExpr 0x7f82bc8342f8 <col:24> 'struct nlmsghdr *' <LValueToRValue>
+|               |   |             |     `-DeclRefExpr 0x7f82bc8342b8 <col:24> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|               |   |             `-ParenExpr 0x7f82bc8348d0 <line:88:11, line:91:23> 'unsigned int'
+|               |   |               `-BinaryOperator 0x7f82bc8348a8 <line:88:12, line:91:22> 'unsigned int' '+'
+|               |   |                 |-ImplicitCastExpr 0x7f82bc834890 <line:88:12, col:14> 'unsigned int' <IntegralCast>
+|               |   |                 | `-ParenExpr 0x7f82bc834378 <col:12, col:14> 'int'
+|               |   |                 |   `-IntegerLiteral 0x7f82bc834358 <col:13> 'int' 0
+|               |   |                 `-ParenExpr 0x7f82bc834870 <col:16, line:91:22> 'unsigned int'
+|               |   |                   `-BinaryOperator 0x7f82bc834848 <line:88:18, line:91:20> 'unsigned int' '&'
+|               |   |                     |-ParenExpr 0x7f82bc834768 <line:88:18, line:90:29> 'unsigned int'
+|               |   |                     | `-BinaryOperator 0x7f82bc834740 <line:88:19, line:90:28> 'unsigned int' '-'
+|               |   |                     |   |-BinaryOperator 0x7f82bc8346e0 <line:88:19, line:90:24> 'unsigned int' '+'
+|               |   |                     |   | |-ImplicitCastExpr 0x7f82bc8346c8 <line:88:19, line:90:22> 'unsigned int' <IntegralCast>
+|               |   |                     |   | | `-ParenExpr 0x7f82bc834688 <line:88:19, line:90:22> 'int'
+|               |   |                     |   | |   `-ParenExpr 0x7f82bc834668 <line:88:20, line:90:21> 'int'
+|               |   |                     |   | |     `-CStyleCastExpr 0x7f82bc834640 <line:88:21, line:90:20> 'int' <IntegralCast>
+|               |   |                     |   | |       `-ParenExpr 0x7f82bc834620 <line:89:7, line:90:20> 'unsigned long'
+|               |   |                     |   | |         `-BinaryOperator 0x7f82bc8345b0 <line:89:9, line:90:18> 'unsigned long' '&'
+|               |   |                     |   | |           |-ParenExpr 0x7f82bc8344b8 <line:89:9, col:41> 'unsigned long'
+|               |   |                     |   | |           | `-BinaryOperator 0x7f82bc834490 <col:10, col:40> 'unsigned long' '-'
+|               |   |                     |   | |           |   |-BinaryOperator 0x7f82bc834430 <col:10, col:36> 'unsigned long' '+'
+|               |   |                     |   | |           |   | |-ParenExpr 0x7f82bc8343d8 <col:10, col:34> 'unsigned long'
+|               |   |                     |   | |           |   | | `-UnaryExprOrTypeTraitExpr 0x7f82bc8343b8 <col:11, col:33> 'unsigned long' sizeof 'struct nlmsghdr':'struct nlmsghdr'
+|               |   |                     |   | |           |   | `-ImplicitCastExpr 0x7f82bc834418 <col:36> 'unsigned long' <IntegralCast>
+|               |   |                     |   | |           |   |   `-IntegerLiteral 0x7f82bc8343f8 <col:36> 'unsigned int' 4
+|               |   |                     |   | |           |   `-ImplicitCastExpr 0x7f82bc834478 <col:40> 'unsigned long' <IntegralCast>
+|               |   |                     |   | |           |     `-IntegerLiteral 0x7f82bc834458 <col:40> 'int' 1
+|               |   |                     |   | |           `-ImplicitCastExpr 0x7f82bc834598 <line:90:11, col:18> 'unsigned long' <IntegralCast>
+|               |   |                     |   | |             `-UnaryOperator 0x7f82bc834578 <col:11, col:18> 'unsigned int' prefix '~'
+|               |   |                     |   | |               `-ParenExpr 0x7f82bc834558 <col:12, col:18> 'unsigned int'
+|               |   |                     |   | |                 `-BinaryOperator 0x7f82bc834530 <col:13, col:17> 'unsigned int' '-'
+|               |   |                     |   | |                   |-IntegerLiteral 0x7f82bc8344d8 <col:13> 'unsigned int' 4
+|               |   |                     |   | |                   `-ImplicitCastExpr 0x7f82bc834518 <col:17> 'unsigned int' <IntegralCast>
+|               |   |                     |   | |                     `-IntegerLiteral 0x7f82bc8344f8 <col:17> 'int' 1
+|               |   |                     |   | `-IntegerLiteral 0x7f82bc8346a8 <col:24> 'unsigned int' 4
+|               |   |                     |   `-ImplicitCastExpr 0x7f82bc834728 <col:28> 'unsigned int' <IntegralCast>
+|               |   |                     |     `-IntegerLiteral 0x7f82bc834708 <col:28> 'int' 1
+|               |   |                     `-UnaryOperator 0x7f82bc834828 <line:91:13, col:20> 'unsigned int' prefix '~'
+|               |   |                       `-ParenExpr 0x7f82bc834808 <col:14, col:20> 'unsigned int'
+|               |   |                         `-BinaryOperator 0x7f82bc8347e0 <col:15, col:19> 'unsigned int' '-'
+|               |   |                           |-IntegerLiteral 0x7f82bc834788 <col:15> 'unsigned int' 4
+|               |   |                           `-ImplicitCastExpr 0x7f82bc8347c8 <col:19> 'unsigned int' <IntegralCast>
+|               |   |                             `-IntegerLiteral 0x7f82bc8347a8 <col:19> 'int' 1
+|               |   |-BinaryOperator 0x7f82bc834b40 <line:92:5, col:24> 'sa_family_t':'unsigned short' '='
+|               |   | |-DeclRefExpr 0x7f82bc834a70 <col:5> 'sa_family_t':'unsigned short' lvalue Var 0x7f82bc8332a0 'nlm_family' 'sa_family_t':'unsigned short'
+|               |   | `-ImplicitCastExpr 0x7f82bc834b28 <col:18, col:24> 'sa_family_t':'unsigned short' <IntegralCast>
+|               |   |   `-ImplicitCastExpr 0x7f82bc834b10 <col:18, col:24> '__u8':'unsigned char' <LValueToRValue>
+|               |   |     `-MemberExpr 0x7f82bc834ad8 <col:18, col:24> '__u8':'unsigned char' lvalue ->ifa_family 0x7f82bc8146d0
+|               |   |       `-ImplicitCastExpr 0x7f82bc834ac0 <col:18> 'struct ifaddrmsg *' <LValueToRValue>
+|               |   |         `-DeclRefExpr 0x7f82bc834a98 <col:18> 'struct ifaddrmsg *' lvalue Var 0x7f82bc833030 'ifam' 'struct ifaddrmsg *'
+|               |   |-IfStmt 0x7f82bc834d08 <line:93:5, line:94:41>
+|               |   | |-<<<NULL>>>
+|               |   | |-<<<NULL>>>
+|               |   | |-ImplicitCastExpr 0x7f82bc834b90 <line:93:9> 'int' <LValueToRValue>
+|               |   | | `-DeclRefExpr 0x7f82bc834b68 <col:9> 'int' lvalue Var 0x7f82bc8158b0 'build' 'int'
+|               |   | |-BinaryOperator 0x7f82bc834ce0 <line:94:7, col:41> 'unsigned short' '='
+|               |   | | |-MemberExpr 0x7f82bc834be8 <col:7, col:12> 'unsigned short' lvalue ->ifa_flags 0x7f82bc814d20
+|               |   | | | `-ImplicitCastExpr 0x7f82bc834bd0 <col:7> 'struct ifaddrs *' <LValueToRValue>
+|               |   | | |   `-DeclRefExpr 0x7f82bc834ba8 <col:7> 'struct ifaddrs *' lvalue Var 0x7f82bc815bb0 'ifa' 'struct ifaddrs *'
+|               |   | | `-ImplicitCastExpr 0x7f82bc834cc8 <col:24, col:41> 'uint16_t':'unsigned short' <LValueToRValue>
+|               |   | |   `-ArraySubscriptExpr 0x7f82bc834ca0 <col:24, col:41> 'uint16_t':'unsigned short' lvalue
+|               |   | |     |-ImplicitCastExpr 0x7f82bc834c70 <col:24> 'uint16_t *' <LValueToRValue>
+|               |   | |     | `-DeclRefExpr 0x7f82bc834c20 <col:24> 'uint16_t *' lvalue Var 0x7f82bc815f38 'ifflist' 'uint16_t *'
+|               |   | |     `-ImplicitCastExpr 0x7f82bc834c88 <col:32> 'uint32_t':'unsigned int' <LValueToRValue>
+|               |   | |       `-DeclRefExpr 0x7f82bc834c48 <col:32> 'uint32_t':'unsigned int' lvalue Var 0x7f82bc833428 'nlm_index' 'uint32_t':'unsigned int'
+|               |   | `-<<<NULL>>>
+|               |   |-BreakStmt 0x7f82bc834d40 <line:95:5>
+|               |   `-DefaultStmt 0x7f82bc834d50 <line:96:3, line:97:5>
+|               |     `-ContinueStmt 0x7f82bc834d48 <col:5>
+|               |-IfStmt 0x7f82bd800628 <line:99:8, line:123:3>
+|               | |-<<<NULL>>>
+|               | |-<<<NULL>>>
+|               | |-UnaryOperator 0x7f82bd000000 <line:99:12, col:13> 'int' prefix '!'
+|               | | `-ImplicitCastExpr 0x7f82bc834dd8 <col:13> 'int' <LValueToRValue>
+|               | |   `-DeclRefExpr 0x7f82bc834db0 <col:13> 'int' lvalue Var 0x7f82bc8158b0 'build' 'int'
+|               | |-CompoundStmt 0x7f82bd800600 <line:100:3, line:123:3>
+|               | | |-DeclStmt 0x7f82bd000598 <line:101:5, line:103:27>
+|               | | | `-VarDecl 0x7f82bd000038 <line:101:5, line:103:26> line:101:11 used rtadata 'void *' cinit
+|               | | |   `-ParenExpr 0x7f82bd000528 <col:21, line:103:26> 'void *'
+|               | | |     `-CStyleCastExpr 0x7f82bd000500 <line:101:22, line:103:25> 'void *' <BitCast>
+|               | | |       `-ParenExpr 0x7f82bd0004e0 <line:101:29, line:103:25> 'char *'
+|               | | |         `-BinaryOperator 0x7f82bd000470 <line:101:30, line:103:24> 'char *' '+'
+|               | | |           |-ParenExpr 0x7f82bd000168 <line:101:30, col:43> 'char *'
+|               | | |           | `-CStyleCastExpr 0x7f82bd000140 <col:31, col:42> 'char *' <BitCast>
+|               | | |           |   `-ImplicitCastExpr 0x7f82bd000128 <col:38, col:42> 'struct rtattr *' <LValueToRValue>
+|               | | |           |     `-ParenExpr 0x7f82bd000108 <col:38, col:42> 'struct rtattr *' lvalue
+|               | | |           |       `-DeclRefExpr 0x7f82bd000098 <col:39> 'struct rtattr *' lvalue Var 0x7f82bc8331f0 'rta' 'struct rtattr *'
+|               | | |           `-ParenExpr 0x7f82bd000450 <line:102:11, line:103:24> 'unsigned long'
+|               | | |             `-BinaryOperator 0x7f82bd000428 <line:102:12, line:103:23> 'unsigned long' '+'
+|               | | |               |-ParenExpr 0x7f82bd0003b0 <line:102:12, line:103:17> 'unsigned long'
+|               | | |               | `-BinaryOperator 0x7f82bd000388 <line:102:14, line:103:15> 'unsigned long' '&'
+|               | | |               |   |-ParenExpr 0x7f82bd0002a8 <line:102:14, col:43> 'unsigned long'
+|               | | |               |   | `-BinaryOperator 0x7f82bd000280 <col:15, col:42> 'unsigned long' '-'
+|               | | |               |   |   |-BinaryOperator 0x7f82bd000220 <col:15, col:39> 'unsigned long' '+'
+|               | | |               |   |   | |-ParenExpr 0x7f82bd0001c8 <col:15, col:37> 'unsigned long'
+|               | | |               |   |   | | `-UnaryExprOrTypeTraitExpr 0x7f82bd0001a8 <col:16, col:36> 'unsigned long' sizeof 'struct rtattr':'struct rtattr'
+|               | | |               |   |   | `-ImplicitCastExpr 0x7f82bd000208 <col:39> 'unsigned long' <IntegralCast>
+|               | | |               |   |   |   `-IntegerLiteral 0x7f82bd0001e8 <col:39> 'int' 4
+|               | | |               |   |   `-ImplicitCastExpr 0x7f82bd000268 <col:42> 'unsigned long' <IntegralCast>
+|               | | |               |   |     `-IntegerLiteral 0x7f82bd000248 <col:42> 'int' 1
+|               | | |               |   `-ImplicitCastExpr 0x7f82bd000370 <line:103:9, col:15> 'unsigned long' <IntegralCast>
+|               | | |               |     `-UnaryOperator 0x7f82bd000350 <col:9, col:15> 'int' prefix '~'
+|               | | |               |       `-ParenExpr 0x7f82bd000330 <col:10, col:15> 'int'
+|               | | |               |         `-BinaryOperator 0x7f82bd000308 <col:11, col:14> 'int' '-'
+|               | | |               |           |-IntegerLiteral 0x7f82bd0002c8 <col:11> 'int' 4
+|               | | |               |           `-IntegerLiteral 0x7f82bd0002e8 <col:14> 'int' 1
+|               | | |               `-ImplicitCastExpr 0x7f82bd000410 <col:21, col:23> 'unsigned long' <IntegralCast>
+|               | | |                 `-ParenExpr 0x7f82bd0003f0 <col:21, col:23> 'int'
+|               | | |                   `-IntegerLiteral 0x7f82bd0003d0 <col:22> 'int' 0
+|               | | |-DeclStmt 0x7f82bd000aa8 <line:104:5, line:106:29>
+|               | | | `-VarDecl 0x7f82bd0005c0 <line:104:5, line:106:28> line:104:12 used rtapayload 'size_t':'unsigned long' cinit
+|               | | |   `-ParenExpr 0x7f82bd000a88 <col:25, line:106:28> 'unsigned long'
+|               | | |     `-BinaryOperator 0x7f82bd000a60 <line:104:26, line:106:27> 'unsigned long' '-'
+|               | | |       |-ImplicitCastExpr 0x7f82bd000a48 <line:104:26, col:46> 'unsigned long' <IntegralCast>
+|               | | |       | `-CStyleCastExpr 0x7f82bd000738 <col:26, col:46> 'int' <IntegralCast>
+|               | | |       |   `-ImplicitCastExpr 0x7f82bd000720 <col:31, col:46> 'unsigned short' <LValueToRValue>
+|               | | |       |     `-ParenExpr 0x7f82bd000700 <col:31, col:46> 'unsigned short' lvalue
+|               | | |       |       `-MemberExpr 0x7f82bd000680 <col:32, col:39> 'unsigned short' lvalue ->rta_len 0x7f82bc814ab8
+|               | | |       |         `-ImplicitCastExpr 0x7f82bd000668 <col:32, col:36> 'struct rtattr *' <LValueToRValue>
+|               | | |       |           `-ParenExpr 0x7f82bd000648 <col:32, col:36> 'struct rtattr *' lvalue
+|               | | |       |             `-DeclRefExpr 0x7f82bd000620 <col:33> 'struct rtattr *' lvalue Var 0x7f82bc8331f0 'rta' 'struct rtattr *'
+|               | | |       `-ParenExpr 0x7f82bd000a28 <line:105:14, line:106:27> 'unsigned long'
+|               | | |         `-BinaryOperator 0x7f82bd000a00 <line:105:15, line:106:26> 'unsigned long' '+'
+|               | | |           |-ParenExpr 0x7f82bd000988 <line:105:15, line:106:20> 'unsigned long'
+|               | | |           | `-BinaryOperator 0x7f82bd000960 <line:105:17, line:106:18> 'unsigned long' '&'
+|               | | |           |   |-ParenExpr 0x7f82bd000880 <line:105:17, col:46> 'unsigned long'
+|               | | |           |   | `-BinaryOperator 0x7f82bd000858 <col:18, col:45> 'unsigned long' '-'
+|               | | |           |   |   |-BinaryOperator 0x7f82bd0007f8 <col:18, col:42> 'unsigned long' '+'
+|               | | |           |   |   | |-ParenExpr 0x7f82bd0007a0 <col:18, col:40> 'unsigned long'
+|               | | |           |   |   | | `-UnaryExprOrTypeTraitExpr 0x7f82bd000780 <col:19, col:39> 'unsigned long' sizeof 'struct rtattr':'struct rtattr'
+|               | | |           |   |   | `-ImplicitCastExpr 0x7f82bd0007e0 <col:42> 'unsigned long' <IntegralCast>
+|               | | |           |   |   |   `-IntegerLiteral 0x7f82bd0007c0 <col:42> 'int' 4
+|               | | |           |   |   `-ImplicitCastExpr 0x7f82bd000840 <col:45> 'unsigned long' <IntegralCast>
+|               | | |           |   |     `-IntegerLiteral 0x7f82bd000820 <col:45> 'int' 1
+|               | | |           |   `-ImplicitCastExpr 0x7f82bd000948 <line:106:12, col:18> 'unsigned long' <IntegralCast>
+|               | | |           |     `-UnaryOperator 0x7f82bd000928 <col:12, col:18> 'int' prefix '~'
+|               | | |           |       `-ParenExpr 0x7f82bd000908 <col:13, col:18> 'int'
+|               | | |           |         `-BinaryOperator 0x7f82bd0008e0 <col:14, col:17> 'int' '-'
+|               | | |           |           |-IntegerLiteral 0x7f82bd0008a0 <col:14> 'int' 4
+|               | | |           |           `-IntegerLiteral 0x7f82bd0008c0 <col:17> 'int' 1
+|               | | |           `-ImplicitCastExpr 0x7f82bd0009e8 <col:24, col:26> 'unsigned long' <IntegralCast>
+|               | | |             `-ParenExpr 0x7f82bd0009c8 <col:24, col:26> 'int'
+|               | | |               `-IntegerLiteral 0x7f82bd0009a8 <col:25> 'int' 0
+|               | | `-SwitchStmt 0x7f82bd000b68 <line:107:5, line:122:7>
+|               | |   |-<<<NULL>>>
+|               | |   |-<<<NULL>>>
+|               | |   |-ImplicitCastExpr 0x7f82bd000b50 <line:107:13, col:18> 'int' <IntegralCast>
+|               | |   | `-ImplicitCastExpr 0x7f82bd000b38 <col:13, col:18> '__u16':'unsigned short' <LValueToRValue>
+|               | |   |   `-MemberExpr 0x7f82bd000b00 <col:13, col:18> '__u16':'unsigned short' lvalue ->nlmsg_type 0x7f82bc8145b0
+|               | |   |     `-ImplicitCastExpr 0x7f82bd000ae8 <col:13> 'struct nlmsghdr *' <LValueToRValue>
+|               | |   |       `-DeclRefExpr 0x7f82bd000ac0 <col:13> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|               | |   `-CompoundStmt 0x7f82bd8005d8 <line:108:7, line:122:7>
+|               | |     |-CaseStmt 0x7f82bd000bc0 <line:109:7, line:110:9>
+|               | |     | |-DeclRefExpr 0x7f82bd000b98 <line:109:12> 'int' EnumConstant 0x7f82bc814940 'RTM_NEWLINK' 'int'
+|               | |     | |-<<<NULL>>>
+|               | |     | `-BreakStmt 0x7f82bd000bf8 <line:110:9>
+|               | |     |-CaseStmt 0x7f82bd000c28 <line:111:7, line:113:4>
+|               | |     | |-DeclRefExpr 0x7f82bd000c00 <line:111:12> 'int' EnumConstant 0x7f82bc8149a8 'RTM_NEWADDR' 'int'
+|               | |     | |-<<<NULL>>>
+|               | |     | `-IfStmt 0x7f82bd000d08 <line:112:9, line:113:4>
+|               | |     |   |-<<<NULL>>>
+|               | |     |   |-<<<NULL>>>
+|               | |     |   |-BinaryOperator 0x7f82bd000cd8 <line:112:13, col:27> 'int' '=='
+|               | |     |   | |-ImplicitCastExpr 0x7f82bd000cc0 <col:13> 'int' <IntegralCast>
+|               | |     |   | | `-ImplicitCastExpr 0x7f82bd000ca8 <col:13> 'sa_family_t':'unsigned short' <LValueToRValue>
+|               | |     |   | |   `-DeclRefExpr 0x7f82bd000c60 <col:13> 'sa_family_t':'unsigned short' lvalue Var 0x7f82bc8332a0 'nlm_family' 'sa_family_t':'unsigned short'
+|               | |     |   | `-IntegerLiteral 0x7f82bd000c88 <col:27> 'int' 17
+|               | |     |   |-BreakStmt 0x7f82bd000d00 <line:113:4>
+|               | |     |   `-<<<NULL>>>
+|               | |     `-SwitchStmt 0x7f82bd000de8 <line:114:9, line:121:4>
+|               | |       |-<<<NULL>>>
+|               | |       |-<<<NULL>>>
+|               | |       |-ImplicitCastExpr 0x7f82bd000dd0 <line:114:17, col:22> 'int' <IntegralCast>
+|               | |       | `-ImplicitCastExpr 0x7f82bd000db8 <col:17, col:22> 'unsigned short' <LValueToRValue>
+|               | |       |   `-MemberExpr 0x7f82bd000d80 <col:17, col:22> 'unsigned short' lvalue ->rta_type 0x7f82bc814b18
+|               | |       |     `-ImplicitCastExpr 0x7f82bd000d68 <col:17> 'struct rtattr *' <LValueToRValue>
+|               | |       |       `-DeclRefExpr 0x7f82bd000d40 <col:17> 'struct rtattr *' lvalue Var 0x7f82bc8331f0 'rta' 'struct rtattr *'
+|               | |       `-CompoundStmt 0x7f82bd8005b0 <line:115:4, line:121:4>
+|               | |         |-CaseStmt 0x7f82bd000e40 <line:116:4, line:117:23>
+|               | |         | |-DeclRefExpr 0x7f82bd000e18 <line:116:9> 'int' EnumConstant 0x7f82bc8147d0 'IFA_ADDRESS' 'int'
+|               | |         | |-<<<NULL>>>
+|               | |         | `-BinaryOperator 0x7f82bd000f18 <line:117:6, col:23> 'void *' '='
+|               | |         |   |-MemberExpr 0x7f82bd000ea0 <col:6, col:13> 'void *' lvalue .address 0x7f82bc815108
+|               | |         |   | `-DeclRefExpr 0x7f82bd000e78 <col:6> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|               | |         |   `-ImplicitCastExpr 0x7f82bd000f00 <col:23> 'void *' <LValueToRValue>
+|               | |         |     `-DeclRefExpr 0x7f82bd000ed8 <col:23> 'void *' lvalue Var 0x7f82bd000038 'rtadata' 'void *'
+|               | |         |-BinaryOperator 0x7f82bd800400 <line:118:6, col:27> 'int' '='
+|               | |         | |-MemberExpr 0x7f82bd000f68 <col:6, col:13> 'int' lvalue .address_len 0x7f82bc815200
+|               | |         | | `-DeclRefExpr 0x7f82bd000f40 <col:6> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|               | |         | `-ImplicitCastExpr 0x7f82bd000fe0 <col:27> 'int' <IntegralCast>
+|               | |         |   `-ImplicitCastExpr 0x7f82bd000fc8 <col:27> 'size_t':'unsigned long' <LValueToRValue>
+|               | |         |     `-DeclRefExpr 0x7f82bd000fa0 <col:27> 'size_t':'unsigned long' lvalue Var 0x7f82bd0005c0 'rtapayload' 'size_t':'unsigned long'
+|               | |         `-CaseStmt 0x7f82bd8004b0 <line:119:4, line:120:21>
+|               | |           |-DeclRefExpr 0x7f82bd800488 <line:119:9> 'int' EnumConstant 0x7f82bc814818 'IFA_LOCAL' 'int'
+|               | |           |-<<<NULL>>>
+|               | |           `-BinaryOperator 0x7f82bd800588 <line:120:6, col:21> 'void *' '='
+|               | |             |-MemberExpr 0x7f82bd800510 <col:6, col:13> 'void *' lvalue .local 0x7f82bc815168
+|               | |             | `-DeclRefExpr 0x7f82bd8004e8 <col:6> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|               | |             `-ImplicitCastExpr 0x7f82bd800570 <col:21> 'void *' <LValueToRValue>
+|               | |               `-DeclRefExpr 0x7f82bd800548 <col:21> 'void *' lvalue Var 0x7f82bd000038 'rtadata' 'void *'
+|               | `-<<<NULL>>>
+|               `-IfStmt 0x7f82bd801aa8 <line:124:8, line:145:3>
+|                 |-<<<NULL>>>
+|                 |-<<<NULL>>>
+|                 |-BinaryOperator 0x7f82bd8007f8 <line:124:12, col:60> 'int' '&&'
+|                 | |-BinaryOperator 0x7f82bd800730 <col:12, col:31> 'int' '=='
+|                 | | |-ImplicitCastExpr 0x7f82bd800718 <col:12, col:17> 'int' <IntegralCast>
+|                 | | | `-ImplicitCastExpr 0x7f82bd800700 <col:12, col:17> '__u16':'unsigned short' <LValueToRValue>
+|                 | | |   `-MemberExpr 0x7f82bd8006a0 <col:12, col:17> '__u16':'unsigned short' lvalue ->nlmsg_type 0x7f82bc8145b0
+|                 | | |     `-ImplicitCastExpr 0x7f82bd800688 <col:12> 'struct nlmsghdr *' <LValueToRValue>
+|                 | | |       `-DeclRefExpr 0x7f82bd800660 <col:12> 'struct nlmsghdr *' lvalue Var 0x7f82bc815d90 'nlh' 'struct nlmsghdr *'
+|                 | | `-DeclRefExpr 0x7f82bd8006d8 <col:31> 'int' EnumConstant 0x7f82bc8149a8 'RTM_NEWADDR' 'int'
+|                 | `-BinaryOperator 0x7f82bd8007d0 <col:46, col:60> 'int' '!='
+|                 |   |-ImplicitCastExpr 0x7f82bd8007b8 <col:46> 'int' <IntegralCast>
+|                 |   | `-ImplicitCastExpr 0x7f82bd8007a0 <col:46> 'sa_family_t':'unsigned short' <LValueToRValue>
+|                 |   |   `-DeclRefExpr 0x7f82bd800758 <col:46> 'sa_family_t':'unsigned short' lvalue Var 0x7f82bc8332a0 'nlm_family' 'sa_family_t':'unsigned short'
+|                 |   `-IntegerLiteral 0x7f82bd800780 <col:60> 'int' 17
+|                 |-CompoundStmt 0x7f82bd801a80 <line:125:3, line:145:3>
+|                 | |-IfStmt 0x7f82bd800ad8 <line:126:5, line:130:7>
+|                 | | |-<<<NULL>>>
+|                 | | |-<<<NULL>>>
+|                 | | |-UnaryOperator 0x7f82bd800898 <line:126:9, col:17> 'int' prefix '!'
+|                 | | | `-ImplicitCastExpr 0x7f82bd800880 <col:10, col:17> 'void *' <LValueToRValue>
+|                 | | |   `-MemberExpr 0x7f82bd800848 <col:10, col:17> 'void *' lvalue .local 0x7f82bc815168
+|                 | | |     `-DeclRefExpr 0x7f82bd800820 <col:10> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | |-CompoundStmt 0x7f82bd800ab8 <line:127:7, line:130:7>
+|                 | | | |-BinaryOperator 0x7f82bd800990 <line:128:9, col:31> 'void *' '='
+|                 | | | | |-MemberExpr 0x7f82bd8008e0 <col:9, col:16> 'void *' lvalue .local 0x7f82bc815168
+|                 | | | | | `-DeclRefExpr 0x7f82bd8008b8 <col:9> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | | | `-ImplicitCastExpr 0x7f82bd800978 <col:24, col:31> 'void *' <LValueToRValue>
+|                 | | | |   `-MemberExpr 0x7f82bd800940 <col:24, col:31> 'void *' lvalue .address 0x7f82bc815108
+|                 | | | |     `-DeclRefExpr 0x7f82bd800918 <col:24> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | | `-BinaryOperator 0x7f82bd800a90 <line:129:9, col:35> 'int' '='
+|                 | | |   |-MemberExpr 0x7f82bd8009e0 <col:9, col:16> 'int' lvalue .local_len 0x7f82bc815260
+|                 | | |   | `-DeclRefExpr 0x7f82bd8009b8 <col:9> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | |   `-ImplicitCastExpr 0x7f82bd800a78 <col:28, col:35> 'int' <LValueToRValue>
+|                 | | |     `-MemberExpr 0x7f82bd800a40 <col:28, col:35> 'int' lvalue .address_len 0x7f82bc815200
+|                 | | |       `-DeclRefExpr 0x7f82bd800a18 <col:28> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | `-<<<NULL>>>
+|                 | |-IfStmt 0x7f82bd800cc0 <line:131:5, line:134:7>
+|                 | | |-<<<NULL>>>
+|                 | | |-<<<NULL>>>
+|                 | | |-UnaryOperator 0x7f82bd800b88 <line:131:9, col:17> 'int' prefix '!'
+|                 | | | `-ImplicitCastExpr 0x7f82bd800b70 <col:10, col:17> 'void *' <LValueToRValue>
+|                 | | |   `-MemberExpr 0x7f82bd800b38 <col:10, col:17> 'void *' lvalue .address 0x7f82bc815108
+|                 | | |     `-DeclRefExpr 0x7f82bd800b10 <col:10> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | |-CompoundStmt 0x7f82bd800ca8 <line:132:7, line:134:7>
+|                 | | | `-BinaryOperator 0x7f82bd800c80 <line:133:9, col:33> 'void *' '='
+|                 | | |   |-MemberExpr 0x7f82bd800bd0 <col:9, col:16> 'void *' lvalue .address 0x7f82bc815108
+|                 | | |   | `-DeclRefExpr 0x7f82bd800ba8 <col:9> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | |   `-ImplicitCastExpr 0x7f82bd800c68 <col:26, col:33> 'void *' <LValueToRValue>
+|                 | | |     `-MemberExpr 0x7f82bd800c30 <col:26, col:33> 'void *' lvalue .local 0x7f82bc815168
+|                 | | |       `-DeclRefExpr 0x7f82bd800c08 <col:26> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 | | `-<<<NULL>>>
+|                 | `-IfStmt 0x7f82bd801a48 <line:135:5, line:144:7>
+|                 |   |-<<<NULL>>>
+|                 |   |-<<<NULL>>>
+|                 |   |-BinaryOperator 0x7f82bd801478 <line:135:9, line:138:29> 'int' '||'
+|                 |   | |-BinaryOperator 0x7f82bd800de8 <line:135:9, col:38> 'int' '!='
+|                 |   | | |-ImplicitCastExpr 0x7f82bd800db8 <col:9, col:16> 'int' <LValueToRValue>
+|                 |   | | | `-MemberExpr 0x7f82bd800d20 <col:9, col:16> 'int' lvalue .address_len 0x7f82bc815200
+|                 |   | | |   `-DeclRefExpr 0x7f82bd800cf8 <col:9> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   | | `-ImplicitCastExpr 0x7f82bd800dd0 <col:31, col:38> 'int' <LValueToRValue>
+|                 |   | |   `-MemberExpr 0x7f82bd800d80 <col:31, col:38> 'int' lvalue .local_len 0x7f82bc815260
+|                 |   | |     `-DeclRefExpr 0x7f82bd800d58 <col:31> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   | `-ParenExpr 0x7f82bd801458 <line:136:12, line:138:29> 'int'
+|                 |   |   `-BinaryOperator 0x7f82bd801430 <line:136:13, line:138:28> 'int' '&&'
+|                 |   |     |-BinaryOperator 0x7f82bd800f08 <line:136:13, col:41> 'int' '!='
+|                 |   |     | |-ImplicitCastExpr 0x7f82bd800ef0 <col:13, col:20> 'void *' <LValueToRValue>
+|                 |   |     | | `-MemberExpr 0x7f82bd800e38 <col:13, col:20> 'void *' lvalue .address 0x7f82bc815108
+|                 |   |     | |   `-DeclRefExpr 0x7f82bd800e10 <col:13> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   |     | `-ParenExpr 0x7f82bd800ed0 <col:31, col:41> 'void *'
+|                 |   |     |   `-CStyleCastExpr 0x7f82bd800ea8 <col:32, col:40> 'void *' <NullToPointer>
+|                 |   |     |     `-IntegerLiteral 0x7f82bd800e70 <col:40> 'int' 0
+|                 |   |     `-CallExpr 0x7f82bd801350 <line:137:9, line:138:28> 'int'
+|                 |   |       |-ImplicitCastExpr 0x7f82bd801338 <line:137:9> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|                 |   |       | `-DeclRefExpr 0x7f82bd801180 <col:9> 'int (const void *, const void *, unsigned long)' Function 0x7f82bd800fa8 'memcmp' 'int (const void *, const void *, unsigned long)'
+|                 |   |       |-ImplicitCastExpr 0x7f82bd8013a8 <col:17, col:24> 'const void *' <BitCast>
+|                 |   |       | `-ImplicitCastExpr 0x7f82bd801390 <col:17, col:24> 'void *' <LValueToRValue>
+|                 |   |       |   `-MemberExpr 0x7f82bd8011d0 <col:17, col:24> 'void *' lvalue .address 0x7f82bc815108
+|                 |   |       |     `-DeclRefExpr 0x7f82bd8011a8 <col:17> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   |       |-ImplicitCastExpr 0x7f82bd8013d8 <col:33, col:40> 'const void *' <BitCast>
+|                 |   |       | `-ImplicitCastExpr 0x7f82bd8013c0 <col:33, col:40> 'void *' <LValueToRValue>
+|                 |   |       |   `-MemberExpr 0x7f82bd801230 <col:33, col:40> 'void *' lvalue .local 0x7f82bc815168
+|                 |   |       |     `-DeclRefExpr 0x7f82bd801208 <col:33> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   |       `-ImplicitCastExpr 0x7f82bd801418 <line:138:10, col:17> 'unsigned long' <IntegralCast>
+|                 |   |         `-ImplicitCastExpr 0x7f82bd801400 <col:10, col:17> 'int' <LValueToRValue>
+|                 |   |           `-MemberExpr 0x7f82bd801290 <col:10, col:17> 'int' lvalue .address_len 0x7f82bc815200
+|                 |   |             `-DeclRefExpr 0x7f82bd801268 <col:10> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   |-CompoundStmt 0x7f82bd801a30 <line:139:7, line:144:7>
+|                 |   | `-IfStmt 0x7f82bd8019f8 <line:140:9, line:143:17>
+|                 |   |   |-<<<NULL>>>
+|                 |   |   |-<<<NULL>>>
+|                 |   |   |-UnaryOperator 0x7f82bd8014e0 <line:140:13, col:14> 'int' prefix '!'
+|                 |   |   | `-ImplicitCastExpr 0x7f82bd8014c8 <col:14> 'int' <LValueToRValue>
+|                 |   |   |   `-DeclRefExpr 0x7f82bd8014a0 <col:14> 'int' lvalue Var 0x7f82bc8158b0 'build' 'int'
+|                 |   |   |-CompoundAssignOperator 0x7f82bd8019c0 <line:141:4, line:143:17> 'size_t':'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+|                 |   |   | |-DeclRefExpr 0x7f82bd801500 <line:141:4> 'size_t':'unsigned long' lvalue Var 0x7f82bc815720 'dlen' 'size_t':'unsigned long'
+|                 |   |   | `-ImplicitCastExpr 0x7f82bd8019a8 <col:12, line:143:17> 'unsigned long' <IntegralCast>
+|                 |   |   |   `-ParenExpr 0x7f82bd801988 <line:141:12, line:143:17> 'unsigned int'
+|                 |   |   |     `-BinaryOperator 0x7f82bd801960 <line:141:13, line:143:15> 'unsigned int' '&'
+|                 |   |   |       |-ParenExpr 0x7f82bd801880 <line:141:13, line:142:39> 'unsigned int'
+|                 |   |   |       | `-BinaryOperator 0x7f82bd801858 <line:141:14, line:142:38> 'unsigned int' '-'
+|                 |   |   |       |   |-BinaryOperator 0x7f82bd8017f8 <line:141:14, line:142:34> 'unsigned int' '+'
+|                 |   |   |       |   | |-ImplicitCastExpr 0x7f82bd8017e0 <line:141:14, line:142:32> 'unsigned int' <IntegralCast>
+|                 |   |   |       |   | | `-ParenExpr 0x7f82bd8017a0 <line:141:14, line:142:32> 'int'
+|                 |   |   |       |   | |   `-CallExpr 0x7f82bd801720 <line:141:15, line:142:31> 'int'
+|                 |   |   |       |   | |     |-ImplicitCastExpr 0x7f82bd801708 <line:141:15> 'int (*)()' <FunctionToPointerDecay>
+|                 |   |   |       |   | |     | `-DeclRefExpr 0x7f82bd801630 <col:15> 'int ()' Function 0x7f82bd801580 'ifa_sa_len' 'int ()'
+|                 |   |   |       |   | |     |-ImplicitCastExpr 0x7f82bd801770 <col:27> 'int' <IntegralCast>
+|                 |   |   |       |   | |     | `-ImplicitCastExpr 0x7f82bd801758 <col:27> 'sa_family_t':'unsigned short' <LValueToRValue>
+|                 |   |   |       |   | |     |   `-DeclRefExpr 0x7f82bd801658 <col:27> 'sa_family_t':'unsigned short' lvalue Var 0x7f82bc8332a0 'nlm_family' 'sa_family_t':'unsigned short'
+|                 |   |   |       |   | |     `-ImplicitCastExpr 0x7f82bd801788 <line:142:13, col:20> 'int' <LValueToRValue>
+|                 |   |   |       |   | |       `-MemberExpr 0x7f82bd8016a8 <col:13, col:20> 'int' lvalue .address_len 0x7f82bc815200
+|                 |   |   |       |   | |         `-DeclRefExpr 0x7f82bd801680 <col:13> 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap' lvalue Var 0x7f82bc8160a0 'ifamap' 'struct rtmaddr_ifamap':'struct rtmaddr_ifamap'
+|                 |   |   |       |   | `-IntegerLiteral 0x7f82bd8017c0 <col:34> 'unsigned int' 4
+|                 |   |   |       |   `-ImplicitCastExpr 0x7f82bd801840 <col:38> 'unsigned int' <IntegralCast>
+|                 |   |   |       |     `-IntegerLiteral 0x7f82bd801820 <col:38> 'int' 1
+|                 |   |   |       `-UnaryOperator 0x7f82bd801940 <line:143:8, col:15> 'unsigned int' prefix '~'
+|                 |   |   |         `-ParenExpr 0x7f82bd801920 <col:9, col:15> 'unsigned int'
+|                 |   |   |           `-BinaryOperator 0x7f82bd8018f8 <col:10, col:14> 'unsigned int' '-'
+|                 |   |   |             |-IntegerLiteral 0x7f82bd8018a0 <col:10> 'unsigned int' 4
+|                 |   |   |             `-ImplicitCastExpr 0x7f82bd8018e0 <col:14> 'unsigned int' <IntegralCast>
+|                 |   |   |               `-IntegerLiteral 0x7f82bd8018c0 <col:14> 'int' 1
+|                 |   |   `-<<<NULL>>>
+|                 |   `-<<<NULL>>>
+|                 `-<<<NULL>>>
+|-FunctionDecl 0x7f82bc833538 <line:75:8> col:8 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f82bc8335d8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f82bc833638 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f82bc833698 <<invalid sloc>> <invalid sloc> 'unsigned long'
+`-FunctionDecl 0x7f82bd800fa8 <line:137:9> col:9 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f82bd801048 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f82bd8010a8 <<invalid sloc>> <invalid sloc> 'const void *'
+  `-ParmVarDecl 0x7f82bd801108 <<invalid sloc>> <invalid sloc> 'unsigned long'

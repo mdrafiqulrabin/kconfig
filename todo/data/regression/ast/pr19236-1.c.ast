@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f874f0234e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f874f065068 <../Data/C2AST/pr19236-1.c:5:14> col:14 implicit used log1pf 'float (float)' extern
+| |-ParmVarDecl 0x7f874f065108 <<invalid sloc>> <invalid sloc> 'float'
+| |-ConstAttr 0x7f874f065170 <col:14> Implicit
+| `-NoThrowAttr 0x7f874f0651b8 <col:14> Implicit
+|-FunctionDecl 0x7f874f0651c8 prev 0x7f874f065068 <col:1, col:27> col:14 used log1pf 'float (float)' extern
+| |-ParmVarDecl 0x7f874f024178 <col:22> col:27 'float'
+| |-ConstAttr 0x7f874f0652a8 <col:14> Inherited Implicit
+| `-NoThrowAttr 0x7f874f0652b8 <col:14> Inherited Implicit
+|-FunctionDecl 0x7f874f0653a8 <line:6:15> col:15 implicit used log1p 'double (double)' extern
+| |-ParmVarDecl 0x7f874f065448 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f874f0654b0 <col:15> Implicit
+| `-NoThrowAttr 0x7f874f0654f8 <col:15> Implicit
+|-FunctionDecl 0x7f874f065508 prev 0x7f874f0653a8 <col:1, col:28> col:15 used log1p 'double (double)' extern
+| |-ParmVarDecl 0x7f874f0652e0 <col:22> col:28 'double'
+| |-ConstAttr 0x7f874f0655e8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7f874f0655f8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7f874f0656b0 <line:8:1, line:10:1> line:8:7 testf 'float (float)'
+| |-ParmVarDecl 0x7f874f065620 <col:14, col:20> col:20 __x 'float'
+| `-CompoundStmt 0x7f874f065880 <col:25, line:10:1>
+|   `-ReturnStmt 0x7f874f065868 <line:9:3, col:20>
+|     `-CallExpr 0x7f874f065820 <col:10, col:20> 'float'
+|       |-ImplicitCastExpr 0x7f874f065808 <col:10> 'float (*)(float)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f874f065798 <col:10> 'float (float)' Function 0x7f874f0651c8 'log1pf' 'float (float)'
+|       `-ImplicitCastExpr 0x7f874f065850 <col:17> 'float' <FloatingCast>
+|         `-FloatingLiteral 0x7f874f0657c0 <col:17> 'double' 1.000000e+00
+`-FunctionDecl 0x7f874f065940 <line:12:1, line:14:1> line:12:8 test 'double (double)'
+  |-ParmVarDecl 0x7f874f0658b0 <col:14, col:21> col:21 __x 'double'
+  `-CompoundStmt 0x7f874f065ab8 <col:26, line:14:1>
+    `-ReturnStmt 0x7f874f065aa0 <line:13:3, col:19>
+      `-CallExpr 0x7f874f065a70 <col:10, col:19> 'double'
+        |-ImplicitCastExpr 0x7f874f065a58 <col:10> 'double (*)(double)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f874f0659e8 <col:10> 'double (double)' Function 0x7f874f065508 'log1p' 'double (double)'
+        `-FloatingLiteral 0x7f874f065a10 <col:16> 'double' 1.000000e+00

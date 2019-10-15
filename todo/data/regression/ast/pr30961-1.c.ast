@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f8df60174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8df6808068 <../Data/C2AST/pr30961-1.c:4:1, line:10:1> line:5:1 convert 'double (long long)'
+| |-ParmVarDecl 0x7f8df6018178 <col:10, col:20> col:20 used in 'long long'
+| `-CompoundStmt 0x7f8df68086f8 <line:6:1, line:10:1>
+|   |-DeclStmt 0x7f8df68081c8 <line:7:3, col:11>
+|   | `-VarDecl 0x7f8df6808168 <col:3, col:10> col:10 used f 'double'
+|   |-CallExpr 0x7f8df6808630 <line:8:3, col:43> 'void *'
+|   | |-ImplicitCastExpr 0x7f8df6808618 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f8df6808478 <col:3> '<builtin fn type>' Function 0x7f8df6808258 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f8df6808670 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8df68084f8 <col:21, col:22> 'double *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8df68084a0 <col:22> 'double' lvalue Var 0x7f8df6808168 'f' 'double'
+|   | |-ImplicitCastExpr 0x7f8df6808688 <col:25, col:26> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7f8df6808568 <col:25, col:26> 'long long *' prefix '&'
+|   | |   `-DeclRefExpr 0x7f8df6808518 <col:26> 'long long' lvalue ParmVar 0x7f8df6018178 'in' 'long long'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f8df68085d0 <col:30, col:41> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7f8df68085b0 <col:36, col:41> 'long long' lvalue
+|   |     `-DeclRefExpr 0x7f8df6808588 <col:38> 'long long' lvalue ParmVar 0x7f8df6018178 'in' 'long long'
+|   `-ReturnStmt 0x7f8df68086e0 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7f8df68086c8 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8df68086a0 <col:10> 'double' lvalue Var 0x7f8df6808168 'f' 'double'
+`-FunctionDecl 0x7f8df6808258 <line:8:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f8df68082f8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f8df6808358 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f8df68083b8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f8df6808430 <col:3> Implicit

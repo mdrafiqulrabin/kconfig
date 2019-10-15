@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7feaaf0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7feaae813250 <../Data/C2AST/pr56837.c:1:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7feaae8132f0 prev 0x7feaae813250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7feaae813438 <line:2:1, col:20> col:14 used a '_Complex int [1024]'
+|-FunctionDecl 0x7feaae813568 <line:4:1, line:10:1> line:5:1 used foo 'void (void)'
+| |-CompoundStmt 0x7feaae8139a8 <line:6:1, line:10:1>
+| | |-DeclStmt 0x7feaae8136c8 <line:7:3, col:8>
+| | | `-VarDecl 0x7feaae813668 <col:3, col:7> col:7 used i 'int'
+| | `-ForStmt 0x7feaae813970 <line:8:3, line:9:13>
+| |   |-BinaryOperator 0x7feaae813728 <line:8:8, col:12> 'int' '='
+| |   | |-DeclRefExpr 0x7feaae8136e0 <col:8> 'int' lvalue Var 0x7feaae813668 'i' 'int'
+| |   | `-IntegerLiteral 0x7feaae813708 <col:12> 'int' 0
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7feaae8137b0 <col:15, col:19> 'int' '<'
+| |   | |-ImplicitCastExpr 0x7feaae813798 <col:15> 'int' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7feaae813750 <col:15> 'int' lvalue Var 0x7feaae813668 'i' 'int'
+| |   | `-IntegerLiteral 0x7feaae813778 <col:19> 'int' 1024
+| |   |-UnaryOperator 0x7feaae813800 <col:25, col:26> 'int' postfix '++'
+| |   | `-DeclRefExpr 0x7feaae8137d8 <col:25> 'int' lvalue Var 0x7feaae813668 'i' 'int'
+| |   `-BinaryOperator 0x7feaae813948 <line:9:5, col:13> '_Complex int' '='
+| |     |-ArraySubscriptExpr 0x7feaae8138c8 <col:5, col:8> '_Complex int' lvalue
+| |     | |-ImplicitCastExpr 0x7feaae813898 <col:5> '_Complex int *' <ArrayToPointerDecay>
+| |     | | `-DeclRefExpr 0x7feaae813820 <col:5> '_Complex int [1024]' lvalue Var 0x7feaae813438 'a' '_Complex int [1024]'
+| |     | `-ImplicitCastExpr 0x7feaae8138b0 <col:7> 'int' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x7feaae813848 <col:7> 'int' lvalue Var 0x7feaae813668 'i' 'int'
+| |     `-ImplicitCastExpr 0x7feaae813930 <col:12, col:13> '_Complex int' <IntegralRealToComplex>
+| |       `-UnaryOperator 0x7feaae813910 <col:12, col:13> 'int' prefix '-'
+| |         `-IntegerLiteral 0x7feaae8138f0 <col:13> 'int' 1
+| `-NoInlineAttr 0x7feaae813608 <line:4:16>
+`-FunctionDecl 0x7feaae813a20 <line:12:1, line:21:1> line:13:1 main 'int ()'
+  `-CompoundStmt 0x7feaae813fa0 <line:14:1, line:21:1>
+    |-DeclStmt 0x7feaae813b38 <line:15:3, col:8>
+    | `-VarDecl 0x7feaae813ad8 <col:3, col:7> col:7 used i 'int'
+    |-CallExpr 0x7feaae813bc0 <line:16:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7feaae813ba8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7feaae813b50 <col:3> 'void (void)' Function 0x7feaae813568 'foo' 'void (void)'
+    |-ForStmt 0x7feaae813f30 <line:17:3, line:19:14>
+    | |-BinaryOperator 0x7feaae813c30 <line:17:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7feaae813be8 <col:8> 'int' lvalue Var 0x7feaae813ad8 'i' 'int'
+    | | `-IntegerLiteral 0x7feaae813c10 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7feaae813cb8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7feaae813ca0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7feaae813c58 <col:15> 'int' lvalue Var 0x7feaae813ad8 'i' 'int'
+    | | `-IntegerLiteral 0x7feaae813c80 <col:19> 'int' 1024
+    | |-UnaryOperator 0x7feaae813d08 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7feaae813ce0 <col:25> 'int' lvalue Var 0x7feaae813ad8 'i' 'int'
+    | `-IfStmt 0x7feaae813ef8 <line:18:5, line:19:14>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7feaae813e40 <line:18:9, col:18> 'int' '!='
+    |   | |-ImplicitCastExpr 0x7feaae813e10 <col:9, col:12> '_Complex int' <LValueToRValue>
+    |   | | `-ArraySubscriptExpr 0x7feaae813da8 <col:9, col:12> '_Complex int' lvalue
+    |   | |   |-ImplicitCastExpr 0x7feaae813d78 <col:9> '_Complex int *' <ArrayToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7feaae813d28 <col:9> '_Complex int [1024]' lvalue Var 0x7feaae813438 'a' '_Complex int [1024]'
+    |   | |   `-ImplicitCastExpr 0x7feaae813d90 <col:11> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7feaae813d50 <col:11> 'int' lvalue Var 0x7feaae813ad8 'i' 'int'
+    |   | `-ImplicitCastExpr 0x7feaae813e28 <col:17, col:18> '_Complex int' <IntegralRealToComplex>
+    |   |   `-UnaryOperator 0x7feaae813df0 <col:17, col:18> 'int' prefix '-'
+    |   |     `-IntegerLiteral 0x7feaae813dd0 <col:18> 'int' 1
+    |   |-CallExpr 0x7feaae813ed0 <line:19:7, col:14> 'void'
+    |   | `-ImplicitCastExpr 0x7feaae813eb8 <col:7> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    |   |   `-DeclRefExpr 0x7feaae813e68 <col:7> 'void (void) __attribute__((noreturn))' Function 0x7feaae8132f0 'abort' 'void (void) __attribute__((noreturn))'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7feaae813f88 <line:20:3, col:10>
+      `-IntegerLiteral 0x7feaae813f68 <col:10> 'int' 0

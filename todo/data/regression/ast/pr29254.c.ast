@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7f94fb822ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f94fc811200 <../Data/C2AST/pr29254.c:4:1, col:20> col:5 used value_compare 'int ()'
+|-FunctionDecl 0x7f94fc8113e8 <line:6:1, line:11:1> line:7:1 used list_compare 'int (int *)'
+| |-ParmVarDecl 0x7f94fc811320 <col:15, col:21> col:21 used list1 'int *'
+| `-CompoundStmt 0x7f94fc8115a0 <line:8:1, line:11:1>
+|   `-IfStmt 0x7f94fc811568 <line:9:3, line:10:20>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f94fc8114b8 <line:9:7> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f94fc811490 <col:7> 'int *' lvalue ParmVar 0x7f94fc811320 'list1' 'int *'
+|     |-CallExpr 0x7f94fc811540 <line:10:5, col:20> 'int'
+|     | `-ImplicitCastExpr 0x7f94fc811528 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f94fc8114d0 <col:5> 'int ()' Function 0x7f94fc811200 'value_compare' 'int ()'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f94fc811660 <line:13:1, col:21> col:5 used func1 'int (int *)'
+| |-ParmVarDecl 0x7f94fc8115d0 <col:12, col:18> col:18 f 'int *'
+| `-CompoundStmt 0x7f94fc811708 <col:20, col:21>
+|-FunctionDecl 0x7f94fc8117c0 prev 0x7f94fc811200 <line:15:1, line:20:1> line:16:1 used value_compare 'int (int *)'
+| |-ParmVarDecl 0x7f94fc811730 <col:16, col:22> col:22 used a 'int *'
+| `-CompoundStmt 0x7f94fc8119c0 <line:17:1, line:20:1>
+|   `-IfStmt 0x7f94fc811988 <line:18:5, line:19:24>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f94fc811890 <line:18:9> 'int *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f94fc811868 <col:9> 'int *' lvalue ParmVar 0x7f94fc811730 'a' 'int *'
+|     |-CallExpr 0x7f94fc811940 <line:19:9, col:24> 'int'
+|     | |-ImplicitCastExpr 0x7f94fc811928 <col:9> 'int (*)(int *)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7f94fc8118a8 <col:9> 'int (int *)' Function 0x7f94fc8113e8 'list_compare' 'int (int *)'
+|     | `-ImplicitCastExpr 0x7f94fc811970 <col:23> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f94fc8118d0 <col:23> 'int *' lvalue ParmVar 0x7f94fc811730 'a' 'int *'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f94fc811ab8 <line:22:1, line:26:1> line:23:1 func2 'int (const int *)'
+  |-ParmVarDecl 0x7f94fc8119f0 <col:8, col:20> col:20 used fb 'const int *'
+  `-CompoundStmt 0x7f94fc811c78 <line:24:1, line:26:1>
+    `-CallExpr 0x7f94fc811c48 <line:25:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7f94fc811c30 <col:3> 'int (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f94fc811b60 <col:3> 'int (int *)' Function 0x7f94fc811660 'func1' 'int (int *)'
+      `-CStyleCastExpr 0x7f94fc811c08 <col:10, col:18> 'int *' <BitCast>
+        `-ImplicitCastExpr 0x7f94fc811bc8 <col:18> 'const int *' <LValueToRValue>
+          `-DeclRefExpr 0x7f94fc811b88 <col:18> 'const int *' lvalue ParmVar 0x7f94fc8119f0 'fb' 'const int *'

@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7fecfe82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fecfe82c978 <../Data/C2AST/pr70306.c:5:1, col:20> col:5 used ctor_counter 'int' cinit
+| `-IntegerLiteral 0x7fecfe86d840 <col:20> 'int' 1
+|-VarDecl 0x7fecfe86d878 <line:6:1, col:5> col:5 used dtor_counter 'int'
+|-FunctionDecl 0x7fecfe86d928 <line:8:1, line:12:1> line:9:6 A 'void ()'
+| |-CompoundStmt 0x7fecfe86da58 <line:10:1, line:12:1>
+| | `-UnaryOperator 0x7fecfe86da38 <line:11:3, col:15> 'int' postfix '++'
+| |   `-DeclRefExpr 0x7fecfe86da10 <col:3> 'int' lvalue Var 0x7fecfe82c978 'ctor_counter' 'int'
+| `-ConstructorAttr 0x7fecfe86d9c8 <line:8:16> 65535
+|-FunctionDecl 0x7fecfe86da90 <line:14:1, line:21:1> line:15:6 B 'void ()'
+| |-CompoundStmt 0x7fecfe86de28 <line:16:1, line:21:1>
+| | |-IfStmt 0x7fecfe86dda8 <line:17:3, line:18:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fecfe86dbd8 <line:17:7, col:23> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7fecfe86dbc0 <col:7> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fecfe86db78 <col:7> 'int' lvalue Var 0x7fecfe86d878 'dtor_counter' 'int'
+| | | | `-IntegerLiteral 0x7fecfe86dba0 <col:23> 'int' 0
+| | | |-CallExpr 0x7fecfe86dd80 <line:18:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fecfe86dd68 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fecfe86dd18 <col:5> '<builtin fn type>' Function 0x7fecfe86dc30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-UnaryOperator 0x7fecfe86de08 <line:20:3, col:15> 'int' postfix '--'
+| |   `-DeclRefExpr 0x7fecfe86dde0 <col:3> 'int' lvalue Var 0x7fecfe86d878 'dtor_counter' 'int'
+| `-DestructorAttr 0x7fecfe86db30 <line:14:16> 65535
+|-FunctionDecl 0x7fecfe86dc30 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fecfe86dcd0 <col:5> Implicit
+|-FunctionDecl 0x7fecfe86de68 <line:23:1, line:26:1> line:24:13 C 'void ()' static
+| |-CompoundStmt 0x7fecfe86df98 <col:17, line:26:1>
+| | `-UnaryOperator 0x7fecfe86df78 <line:25:5, col:17> 'int' postfix '++'
+| |   `-DeclRefExpr 0x7fecfe86df50 <col:5> 'int' lvalue Var 0x7fecfe82c978 'ctor_counter' 'int'
+| `-ConstructorAttr 0x7fecfe86df08 <line:23:16> 65535
+|-FunctionDecl 0x7fecfe86dfd0 <line:28:1, line:34:1> line:29:13 D 'void ()' static
+| |-CompoundStmt 0x7fecfe86e228 <col:17, line:34:1>
+| | |-IfStmt 0x7fecfe86e1a8 <line:30:3, line:31:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fecfe86e118 <line:30:7, col:23> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7fecfe86e100 <col:7> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fecfe86e0b8 <col:7> 'int' lvalue Var 0x7fecfe86d878 'dtor_counter' 'int'
+| | | | `-IntegerLiteral 0x7fecfe86e0e0 <col:23> 'int' 0
+| | | |-CallExpr 0x7fecfe86e180 <line:31:5, col:22> 'void'
+| | | | `-ImplicitCastExpr 0x7fecfe86e168 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| | | |   `-DeclRefExpr 0x7fecfe86e140 <col:5> '<builtin fn type>' Function 0x7fecfe86dc30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-UnaryOperator 0x7fecfe86e208 <line:33:3, col:15> 'int' postfix '--'
+| |   `-DeclRefExpr 0x7fecfe86e1e0 <col:3> 'int' lvalue Var 0x7fecfe86d878 'dtor_counter' 'int'
+| `-DestructorAttr 0x7fecfe86e070 <line:28:16> 65535
+`-FunctionDecl 0x7fecfe86e2a0 <line:36:1, line:44:1> line:36:5 main 'int ()'
+  `-CompoundStmt 0x7fecfe86e510 <line:37:1, line:44:1>
+    |-IfStmt 0x7fecfe86e430 <line:38:5, line:39:26>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fecfe86e3a0 <line:38:9, col:25> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fecfe86e388 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fecfe86e340 <col:9> 'int' lvalue Var 0x7fecfe82c978 'ctor_counter' 'int'
+    | | `-IntegerLiteral 0x7fecfe86e368 <col:25> 'int' 3
+    | |-CallExpr 0x7fecfe86e408 <line:39:9, col:26> 'void'
+    | | `-ImplicitCastExpr 0x7fecfe86e3f0 <col:9> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+    | |   `-DeclRefExpr 0x7fecfe86e3c8 <col:9> '<builtin fn type>' Function 0x7fecfe86dc30 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fecfe86e4b0 <line:41:5, col:20> 'int' '='
+    | |-DeclRefExpr 0x7fecfe86e468 <col:5> 'int' lvalue Var 0x7fecfe86d878 'dtor_counter' 'int'
+    | `-IntegerLiteral 0x7fecfe86e490 <col:20> 'int' 2
+    `-ReturnStmt 0x7fecfe86e4f8 <line:43:5, col:12>
+      `-IntegerLiteral 0x7fecfe86e4d8 <col:12> 'int' 0

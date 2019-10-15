@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fad158058e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fad1500d800 <../Data/C2AST/pr54472.c:4:1, line:9:1> line:4:5 main 'int ()'
+| `-CompoundStmt 0x7fad1500df08 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7fad1500daa0 <line:6:3, col:17>
+|   | `-VarDecl 0x7fad1500da40 <col:3, col:16> col:7 used a 'int [3][3][3]'
+|   |-CallExpr 0x7fad1500de60 <line:7:3, col:35> 'void *'
+|   | |-ImplicitCastExpr 0x7fad1500de48 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fad1500dd28 <col:3> '<builtin fn type>' Function 0x7fad1500db08 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fad1500deb8 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fad1500dea0 <col:21> 'int (*)[3][3]' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fad1500dd50 <col:21> 'int [3][3][3]' lvalue Var 0x7fad1500da40 'a' 'int [3][3][3]'
+|   | |-IntegerLiteral 0x7fad1500dd78 <col:24> 'int' 0
+|   | `-UnaryExprOrTypeTraitExpr 0x7fad1500ddc0 <col:27, col:34> 'unsigned long' sizeof
+|   |   `-DeclRefExpr 0x7fad1500dd98 <col:34> 'int [3][3][3]' lvalue Var 0x7fad1500da40 'a' 'int [3][3][3]'
+|   `-ReturnStmt 0x7fad1500def0 <line:8:3, col:10>
+|     `-IntegerLiteral 0x7fad1500ded0 <col:10> 'int' 0
+`-FunctionDecl 0x7fad1500db08 <line:7:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fad1500dba8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fad1500dc08 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fad1500dc68 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fad1500dce0 <col:3> Implicit

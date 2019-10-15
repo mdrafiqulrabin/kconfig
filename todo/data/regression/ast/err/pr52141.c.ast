@@ -1,0 +1,30 @@
+../Data/C2AST/pr52141.c:18:3: error: use of undeclared identifier '__transaction_atomic'
+  __transaction_atomic {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f8c8780b4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8c8780ba60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8c8780b780 '__int128'
+|-TypedefDecl 0x7f8c8780bad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8c8780b7a0 'unsigned __int128'
+|-TypedefDecl 0x7f8c8780bda8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8c8780bbb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8c8780bb28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8c8780be40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8c8780be00 'char *'
+|   `-BuiltinType 0x7f8c8780b580 'char'
+|-TypedefDecl 0x7f8c8780c108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8c8780c0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8c8780bf20 'struct __va_list_tag'
+|     `-Record 0x7f8c8780be98 '__va_list_tag'
+|-FunctionDecl 0x7f8c8680d220 <../Data/C2AST/pr52141.c:4:1, line:8:1> line:5:13 used asmfunc 'void (void)' static
+| |-CompoundStmt 0x7f8c8680d3f8 <line:6:1, line:8:1>
+| | `-GCCAsmStmt 0x7f8c8680d3b0 <line:7:3, col:14>
+| `-AlwaysInlineAttr 0x7f8c8680d2c0 <line:4:16> always_inline
+|-FunctionDecl 0x7f8c8680d4a0 <line:10:1, line:14:1> line:11:13 f 'void (void)' static
+| `-CompoundStmt 0x7f8c8680d5d8 <line:12:1, line:14:1>
+|   `-CallExpr 0x7f8c8680d5b0 <line:13:3, col:11> 'void'
+|     `-ImplicitCastExpr 0x7f8c8680d598 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8c8680d540 <col:3> 'void (void)' Function 0x7f8c8680d220 'asmfunc' 'void (void)'
+`-FunctionDecl 0x7f8c8680d640 <line:16:1, line:22:1> line:16:5 main 'int ()'
+  `-CompoundStmt 0x7f8c8680d6f8 <line:17:1, line:22:1>

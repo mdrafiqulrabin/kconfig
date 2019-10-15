@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7ffa0f814ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffa0f897e20 <../Data/C2AST/pr57287-2.c:7:1, line:11:1> line:7:8 struct node definition
+| |-FieldDecl 0x7ffa0f897f80 <line:9:3, col:16> col:16 referenced next 'struct node *'
+| `-FieldDecl 0x7ffa0f897fe0 <line:10:3, col:9> col:9 name 'char *'
+|-VarDecl 0x7ffa0f898050 <line:7:1, line:11:4> col:4 used list 'struct node *'
+|-VarDecl 0x7ffa0f8980f0 prev 0x7ffa0f898050 <line:13:1, col:14> col:14 used list 'struct node *'
+|-FunctionDecl 0x7ffa0f898668 <line:14:1, col:24> col:14 used head 'struct node *(void)'
+|-FunctionDecl 0x7ffa0f898860 <line:16:1, col:19> col:10 used bar 'jmp_buf *(void)'
+`-FunctionDecl 0x7ffa0f8989c8 <line:18:1, line:36:1> line:18:5 baz 'int (void)'
+  `-CompoundStmt 0x7ffa0f899350 <line:19:1, line:36:1>
+    |-DeclStmt 0x7ffa0f898af0 <line:20:3, col:17>
+    | `-VarDecl 0x7ffa0f898a90 <col:3, col:16> col:16 used n 'struct node *'
+    |-DeclStmt 0x7ffa0f898ba0 <line:21:3, col:18>
+    | `-VarDecl 0x7ffa0f898b20 <col:3, col:17> col:7 used varseen 'int' cinit
+    |   `-IntegerLiteral 0x7ffa0f898b80 <col:17> 'int' 0
+    |-BinaryOperator 0x7ffa0f898ca8 <line:23:3, col:16> 'struct node *' '='
+    | |-DeclRefExpr 0x7ffa0f898bb8 <col:3> 'struct node *' lvalue Var 0x7ffa0f8980f0 'list' 'struct node *'
+    | `-CallExpr 0x7ffa0f898c80 <col:10, col:16> 'struct node *'
+    |   `-ImplicitCastExpr 0x7ffa0f898c68 <col:10> 'struct node *(*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7ffa0f898be0 <col:10> 'struct node *(void)' Function 0x7ffa0f898668 'head' 'struct node *(void)'
+    |-ForStmt 0x7ffa0f899210 <line:24:3, line:31:5>
+    | |-BinaryOperator 0x7ffa0f898d38 <line:24:8, col:12> 'struct node *' '='
+    | | |-DeclRefExpr 0x7ffa0f898cd0 <col:8> 'struct node *' lvalue Var 0x7ffa0f898a90 'n' 'struct node *'
+    | | `-ImplicitCastExpr 0x7ffa0f898d20 <col:12> 'struct node *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa0f898cf8 <col:12> 'struct node *' lvalue Var 0x7ffa0f8980f0 'list' 'struct node *'
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffa0f898d88 <col:18> 'struct node *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ffa0f898d60 <col:18> 'struct node *' lvalue Var 0x7ffa0f898a90 'n' 'struct node *'
+    | |-BinaryOperator 0x7ffa0f898e58 <col:21, col:28> 'struct node *' '='
+    | | |-DeclRefExpr 0x7ffa0f898da0 <col:21> 'struct node *' lvalue Var 0x7ffa0f898a90 'n' 'struct node *'
+    | | `-ImplicitCastExpr 0x7ffa0f898e40 <col:25, col:28> 'struct node *' <LValueToRValue>
+    | |   `-MemberExpr 0x7ffa0f898e08 <col:25, col:28> 'struct node *' lvalue ->next 0x7ffa0f897f80
+    | |     `-ImplicitCastExpr 0x7ffa0f898df0 <col:25> 'struct node *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7ffa0f898dc8 <col:25> 'struct node *' lvalue Var 0x7ffa0f898a90 'n' 'struct node *'
+    | `-CompoundStmt 0x7ffa0f8991e8 <line:25:5, line:31:5>
+    |   |-IfStmt 0x7ffa0f898f50 <line:26:7, line:27:12>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7ffa0f898ec0 <line:26:11, col:12> 'int' prefix '!'
+    |   | | `-ImplicitCastExpr 0x7ffa0f898ea8 <col:12> 'int' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7ffa0f898e80 <col:12> 'int' lvalue Var 0x7ffa0f898b20 'varseen' 'int'
+    |   | |-BinaryOperator 0x7ffa0f898f28 <line:27:2, col:12> 'int' '='
+    |   | | |-DeclRefExpr 0x7ffa0f898ee0 <col:2> 'int' lvalue Var 0x7ffa0f898b20 'varseen' 'int'
+    |   | | `-IntegerLiteral 0x7ffa0f898f08 <col:12> 'int' 1
+    |   | `-<<<NULL>>>
+    |   |-DeclStmt 0x7ffa0f8990b8 <line:29:7, col:28>
+    |   | `-VarDecl 0x7ffa0f898f98 <col:7, col:27> col:16 used buf 'jmp_buf *' cinit
+    |   |   `-CallExpr 0x7ffa0f899090 <col:22, col:27> 'jmp_buf *'
+    |   |     `-ImplicitCastExpr 0x7ffa0f899078 <col:22> 'jmp_buf *(*)(void)' <FunctionToPointerDecay>
+    |   |       `-DeclRefExpr 0x7ffa0f898ff8 <col:22> 'jmp_buf *(void)' Function 0x7ffa0f898860 'bar' 'jmp_buf *(void)'
+    |   `-CallExpr 0x7ffa0f8991a0 <line:30:7, col:19> 'int'
+    |     |-ImplicitCastExpr 0x7ffa0f899188 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffa0f8990d0 <col:7> 'int (int *)' Function 0x7ffa0f895898 'setjmp' 'int (int *)'
+    |     `-ImplicitCastExpr 0x7ffa0f8991d0 <col:15, col:16> 'int *' <ArrayToPointerDecay>
+    |       `-UnaryOperator 0x7ffa0f899138 <col:15, col:16> 'jmp_buf':'int [37]' lvalue prefix '*'
+    |         `-ImplicitCastExpr 0x7ffa0f899120 <col:16> 'jmp_buf *' <LValueToRValue>
+    |           `-DeclRefExpr 0x7ffa0f8990f8 <col:16> 'jmp_buf *' lvalue Var 0x7ffa0f898f98 'buf' 'jmp_buf *'
+    |-IfStmt 0x7ffa0f8992e0 <line:33:3, line:34:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7ffa0f899288 <line:33:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7ffa0f899270 <col:8> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ffa0f899248 <col:8> 'int' lvalue Var 0x7ffa0f898b20 'varseen' 'int'
+    | |-ReturnStmt 0x7ffa0f8992c8 <line:34:5, col:12>
+    | | `-IntegerLiteral 0x7ffa0f8992a8 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ffa0f899338 <line:35:3, col:10>
+      `-IntegerLiteral 0x7ffa0f899318 <col:10> 'int' 1

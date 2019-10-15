@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7ff730827ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff730828b78 <../Data/C2AST/pr64083.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7ff730869a58 <col:1, col:8> col:8 used b 'int'
+`-FunctionDecl 0x7ff730869b18 <line:4:1, line:17:1> line:5:1 referenced fn1 'void ()'
+  `-CompoundStmt 0x7ff730869fa8 <line:6:1, line:17:1>
+    |-DeclStmt 0x7ff730869c50 <line:7:3, col:12>
+    | `-VarDecl 0x7ff730869bd0 <col:3, col:11> col:7 used c 'int' cinit
+    |   `-IntegerLiteral 0x7ff730869c30 <col:11> 'int' 0
+    `-WhileStmt 0x7ff730869f88 <line:8:3, line:16:5>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff730869c90 <line:8:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff730869c68 <col:10> 'int' lvalue Var 0x7ff730869a58 'b' 'int'
+      `-CompoundStmt 0x7ff730869f60 <line:9:5, line:16:5>
+        |-SwitchStmt 0x7ff730869ce8 <line:10:7, line:12:7>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7ff730869cd0 <line:10:15> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff730869ca8 <col:15> 'int' lvalue Var 0x7ff730869bd0 'c' 'int'
+        | `-CaseStmt 0x7ff730869d38 <line:11:5, line:12:7>
+        |   |-IntegerLiteral 0x7ff730869d18 <line:11:10> 'int' 1
+        |   |-<<<NULL>>>
+        |   `-CallExpr 0x7ff730869de0 <line:12:2, col:7> 'void'
+        |     `-ImplicitCastExpr 0x7ff730869dc8 <col:2> 'void (*)()' <FunctionToPointerDecay>
+        |       `-DeclRefExpr 0x7ff730869d70 <col:2> 'void ()' Function 0x7ff730869b18 'fn1' 'void ()'
+        |-IfStmt 0x7ff730869eb8 <line:13:2, line:14:8>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7ff730869e30 <line:13:6> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7ff730869e08 <col:6> 'int' lvalue Var 0x7ff730828b78 'a' 'int'
+        | |-BinaryOperator 0x7ff730869e90 <line:14:4, col:8> 'int' '='
+        | | |-DeclRefExpr 0x7ff730869e48 <col:4> 'int' lvalue Var 0x7ff730869bd0 'c' 'int'
+        | | `-IntegerLiteral 0x7ff730869e70 <col:8> 'int' 1
+        | `-<<<NULL>>>
+        `-BinaryOperator 0x7ff730869f38 <line:15:2, col:6> 'int' '='
+          |-DeclRefExpr 0x7ff730869ef0 <col:2> 'int' lvalue Var 0x7ff730869a58 'b' 'int'
+          `-IntegerLiteral 0x7ff730869f18 <col:6> 'int' 0

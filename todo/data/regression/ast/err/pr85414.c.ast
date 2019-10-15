@@ -1,0 +1,34 @@
+../Data/C2AST/pr85414.c:9:10: error: use of unknown builtin '__builtin_mul_overflow_p' [-Wimplicit-function-declaration]
+  return __builtin_mul_overflow_p (59, -c, (short) 0);
+         ^
+1 error generated.
+TranslationUnitDecl 0x7fb70582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb70582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb70582bf80 '__int128'
+|-TypedefDecl 0x7fb70582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb70582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb70582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb70582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb70582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb70582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb70582c600 'char *'
+|   `-BuiltinType 0x7fb70582bd80 'char'
+|-TypedefDecl 0x7fb70582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb70582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb70582c720 'struct __va_list_tag'
+|     `-Record 0x7fb70582c698 '__va_list_tag'
+`-FunctionDecl 0x7fb706014228 <../Data/C2AST/pr85414.c:5:1, line:10:1> line:6:1 foo 'int (void)'
+  `-CompoundStmt 0x7fb706014670 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fb706014380 <line:8:3, col:22>
+    | `-VarDecl 0x7fb706014320 <col:3, col:21> col:21 used c 'unsigned __int128'
+    `-ReturnStmt 0x7fb706014658 <line:9:3, col:53>
+      `-CallExpr 0x7fb706014600 <col:10, col:53> 'int'
+        |-ImplicitCastExpr 0x7fb7060145e8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fb7060144b0 <col:10> 'int ()' Function 0x7fb706014400 '__builtin_mul_overflow_p' 'int ()'
+        |-IntegerLiteral 0x7fb7060144d8 <col:36> 'int' 59
+        |-UnaryOperator 0x7fb706014538 <col:40, col:41> 'unsigned __int128' prefix '-'
+        | `-ImplicitCastExpr 0x7fb706014520 <col:41> 'unsigned __int128' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fb7060144f8 <col:41> 'unsigned __int128' lvalue Var 0x7fb706014320 'c' 'unsigned __int128'
+        `-ImplicitCastExpr 0x7fb706014640 <col:44, col:52> 'int' <IntegralCast>
+          `-CStyleCastExpr 0x7fb706014590 <col:44, col:52> 'short' <IntegralCast>
+            `-IntegerLiteral 0x7fb706014558 <col:52> 'int' 0

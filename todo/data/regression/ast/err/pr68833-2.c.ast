@@ -1,0 +1,60 @@
+../Data/C2AST/pr68833-2.c:12:3: error: use of unknown builtin '__builtin_vprintf' [-Wimplicit-function-declaration]
+  __builtin_vprintf (fmt, ap);  
+  ^
+TranslationUnitDecl 0x7f89be00a6e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f89be00ac60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f89be00a980 '__int128'
+|-TypedefDecl 0x7f89be00acd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f89be00a9a0 'unsigned __int128'
+|-TypedefDecl 0x7f89be00afa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f89be00adb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f89be00ad28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f89be00b040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f89be00b000 'char *'
+|   `-BuiltinType 0x7f89be00a780 'char'
+|-TypedefDecl 0x7f89be00b308 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f89be00b2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f89be00b120 'struct __va_list_tag'
+|     `-Record 0x7f89be00b098 '__va_list_tag'
+|-TypedefDecl 0x7f89be00b390 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:30:1, col:27> col:27 referenced va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f89be00b360 '__builtin_va_list' sugar
+|   |-Typedef 0x7f89be00b308 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f89be00b2b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f89be00b120 'struct __va_list_tag'
+|       `-Record 0x7f89be00b098 '__va_list_tag'
+|-TypedefDecl 0x7f89bf02bc00 <line:48:1, col:27> col:27 __gnuc_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7f89be00b360 '__builtin_va_list' sugar
+|   |-Typedef 0x7f89be00b308 '__builtin_va_list'
+|   `-ConstantArrayType 0x7f89be00b2b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7f89be00b120 'struct __va_list_tag'
+|       `-Record 0x7f89be00b098 '__va_list_tag'
+|-FunctionDecl 0x7f89bf02bd30 <../Data/C2AST/pr68833-2.c:7:1, line:14:1> line:8:1 foo 'void (const char *, ...)'
+| |-ParmVarDecl 0x7f89bf02bc70 <col:6, col:18> col:18 used fmt 'const char *'
+| `-CompoundStmt 0x7f89bf02c648 <line:9:1, line:14:1>
+|   |-DeclStmt 0x7f89bf02beb0 <line:10:3, col:13>
+|   | `-VarDecl 0x7f89bf02be50 <col:3, col:11> col:11 used ap 'va_list':'struct __va_list_tag [1]'
+|   |-CallExpr 0x7f89bf02c140 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:33:29, col:57> 'void'
+|   | |-ImplicitCastExpr 0x7f89bf02c128 <col:29> 'void (*)(struct __va_list_tag *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f89bf02c088 <col:29> '<builtin fn type>' Function 0x7f89bf02bf38 '__builtin_va_start' 'void (struct __va_list_tag *, ...)'
+|   | |-ImplicitCastExpr 0x7f89bf02c178 <../Data/C2AST/pr68833-2.c:11:13> 'struct __va_list_tag *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7f89bf02c0b0 <col:13> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7f89bf02be50 'ap' 'va_list':'struct __va_list_tag [1]'
+|   | `-DeclRefExpr 0x7f89bf02c0d8 <col:17> 'const char *' lvalue ParmVar 0x7f89bf02bc70 'fmt' 'const char *'
+|   |-CallExpr 0x7f89bf02c370 <line:12:3, col:29> 'int'
+|   | |-ImplicitCastExpr 0x7f89bf02c358 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f89bf02c2b0 <col:3> 'int ()' Function 0x7f89bf02c200 '__builtin_vprintf' 'int ()'
+|   | |-ImplicitCastExpr 0x7f89bf02c3a8 <col:22> 'const char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f89bf02c2d8 <col:22> 'const char *' lvalue ParmVar 0x7f89bf02bc70 'fmt' 'const char *'
+|   | `-ImplicitCastExpr 0x7f89bf02c3c0 <col:27> 'struct __va_list_tag *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7f89bf02c300 <col:27> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7f89bf02be50 'ap' 'va_list':'struct __va_list_tag [1]'
+|   `-CallExpr 0x7f89bf02c600 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:34:29, col:48> 'void'
+|     |-ImplicitCastExpr 0x7f89bf02c5e8 <col:29> 'void (*)(s1 error generated.
+truct __va_list_tag *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f89bf02c568 <col:29> '<builtin fn type>' Function 0x7f89bf02c418 '__builtin_va_end' 'void (struct __va_list_tag *)'
+|     `-ImplicitCastExpr 0x7f89bf02c630 <../Data/C2AST/pr68833-2.c:13:11> 'struct __va_list_tag *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7f89bf02c590 <col:11> 'va_list':'struct __va_list_tag [1]' lvalue Var 0x7f89bf02be50 'ap' 'va_list':'struct __va_list_tag [1]'
+|-FunctionDecl 0x7f89bf02bf38 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdarg.h:33:29> col:29 implicit used __builtin_va_start 'void (struct __va_list_tag *, ...)' extern
+| |-ParmVarDecl 0x7f89bf02bfd8 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+| `-NoThrowAttr 0x7f89bf02c040 <col:29> Implicit
+`-FunctionDecl 0x7f89bf02c418 <line:34:29> col:29 implicit used __builtin_va_end 'void (struct __va_list_tag *)' extern
+  |-ParmVarDecl 0x7f89bf02c4b8 <<invalid sloc>> <invalid sloc> 'struct __va_list_tag *'
+  `-NoThrowAttr 0x7f89bf02c520 <col:29> Implicit

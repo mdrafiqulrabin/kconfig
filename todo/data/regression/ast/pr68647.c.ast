@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7f8dd281cae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8dd3039868 <../Data/C2AST/pr68647.c:5:1, line:9:1> line:6:1 f1 'int (unsigned long long)'
+| |-ParmVarDecl 0x7f8dd281d778 <col:5, col:24> col:24 used a 'unsigned long long'
+| `-CompoundStmt 0x7f8dd3039ba0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f8dd3039b88 <line:8:3, col:33>
+|     `-CallExpr 0x7f8dd3039b40 <col:10, col:33> 'int'
+|       |-ImplicitCastExpr 0x7f8dd3039b28 <col:10> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f8dd3039ab0 <col:10> '<builtin fn type>' Function 0x7f8dd3039950 '__builtin_popcountll' 'int (unsigned long long)'
+|       `-ImplicitCastExpr 0x7f8dd3039b70 <col:32> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8dd3039ad8 <col:32> 'unsigned long long' lvalue ParmVar 0x7f8dd281d778 'a' 'unsigned long long'
+|-FunctionDecl 0x7f8dd3039950 <col:10> col:10 implicit used __builtin_popcountll 'int (unsigned long long)' extern
+| |-ParmVarDecl 0x7f8dd30399f0 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7f8dd3039a58 <col:10> Implicit
+| `-ConstAttr 0x7f8dd3039aa0 <col:10> Implicit
+|-FunctionDecl 0x7f8dd3039c60 <line:11:1, line:15:1> line:12:1 f2 'int (unsigned long long)'
+| |-ParmVarDecl 0x7f8dd3039bd0 <col:5, col:24> col:24 used a 'unsigned long long'
+| `-CompoundStmt 0x7f8dd3039f30 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7f8dd3039f18 <line:14:3, col:31>
+|     `-CallExpr 0x7f8dd3039ed0 <col:10, col:31> 'int'
+|       |-ImplicitCastExpr 0x7f8dd3039eb8 <col:10> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f8dd3039e68 <col:10> '<builtin fn type>' Function 0x7f8dd3039d08 '__builtin_parityll' 'int (unsigned long long)'
+|       `-ImplicitCastExpr 0x7f8dd3039f00 <col:30> 'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8dd3039e90 <col:30> 'unsigned long long' lvalue ParmVar 0x7f8dd3039bd0 'a' 'unsigned long long'
+`-FunctionDecl 0x7f8dd3039d08 <col:10> col:10 implicit used __builtin_parityll 'int (unsigned long long)' extern
+  |-ParmVarDecl 0x7f8dd3039da8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+  |-NoThrowAttr 0x7f8dd3039e10 <col:10> Implicit
+  `-ConstAttr 0x7f8dd3039e58 <col:10> Implicit

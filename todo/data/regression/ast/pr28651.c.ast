@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7ff17a8128e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff17a890850 <../Data/C2AST/pr28651.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff17a8908f0 prev 0x7ff17a890850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff17a890a78 <line:4:1, line:8:1> line:5:1 used foo 'int (unsigned int)'
+| |-ParmVarDecl 0x7ff17a8909a8 <col:6, col:19> col:19 used u 'unsigned int'
+| |-CompoundStmt 0x7ff17a890d98 <line:6:1, line:8:1>
+| | `-ReturnStmt 0x7ff17a890d80 <line:7:3, col:30>
+| |   `-BinaryOperator 0x7ff17a890d58 <col:10, col:30> 'int' '<'
+| |     |-CStyleCastExpr 0x7ff17a890cb0 <col:10, col:21> 'int' <IntegralCast>
+| |     | `-ParenExpr 0x7ff17a890c90 <col:15, col:21> 'unsigned int'
+| |     |   `-BinaryOperator 0x7ff17a890c20 <col:16, col:20> 'unsigned int' '+'
+| |     |     |-ImplicitCastExpr 0x7ff17a890bf0 <col:16> 'unsigned int' <LValueToRValue>
+| |     |     | `-DeclRefExpr 0x7ff17a890ba8 <col:16> 'unsigned int' lvalue ParmVar 0x7ff17a8909a8 'u' 'unsigned int'
+| |     |     `-ImplicitCastExpr 0x7ff17a890c08 <col:20> 'unsigned int' <IntegralCast>
+| |     |       `-IntegerLiteral 0x7ff17a890bd0 <col:20> 'int' 4
+| |     `-CStyleCastExpr 0x7ff17a890d30 <col:25, col:30> 'int' <IntegralCast>
+| |       `-ImplicitCastExpr 0x7ff17a890d18 <col:30> 'unsigned int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7ff17a890cd8 <col:30> 'unsigned int' lvalue ParmVar 0x7ff17a8909a8 'u' 'unsigned int'
+| `-NoInlineAttr 0x7ff17a890b20 <line:4:20>
+`-FunctionDecl 0x7ff17a890ff8 <line:10:1, line:18:1> line:11:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7ff17a890dc8 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7ff17a890ee0 <col:17, col:28> col:23 argv 'char **':'char **'
+  `-CompoundStmt 0x7ff17a891398 <line:12:1, line:18:1>
+    |-DeclStmt 0x7ff17a891158 <line:13:3, col:27>
+    | `-VarDecl 0x7ff17a8910c0 <col:3, <built-in>:38:21> ../Data/C2AST/pr28651.c:13:16 used u 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7ff17a891140 <<built-in>:38:21> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff17a891120 <col:21> 'int' 2147483647
+    |-IfStmt 0x7ff17a891328 <../Data/C2AST/pr28651.c:15:3, line:16:11>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff17a891268 <line:15:7, col:18> 'int' '=='
+    | | |-CallExpr 0x7ff17a891200 <col:7, col:13> 'int'
+    | | | |-ImplicitCastExpr 0x7ff17a8911e8 <col:7> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ff17a891170 <col:7> 'int (unsigned int)' Function 0x7ff17a890a78 'foo' 'int (unsigned int)'
+    | | | `-ImplicitCastExpr 0x7ff17a891230 <col:12> 'unsigned int' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff17a891198 <col:12> 'unsigned int' lvalue Var 0x7ff17a8910c0 'u' 'unsigned int'
+    | | `-IntegerLiteral 0x7ff17a891248 <col:18> 'int' 0
+    | |-CallExpr 0x7ff17a891300 <line:16:5, col:11> 'void'
+    | | `-ImplicitCastExpr 0x7ff17a8912e8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff17a891290 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff17a8908f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff17a891380 <line:17:3, col:10>
+      `-IntegerLiteral 0x7ff17a891360 <col:10> 'int' 0

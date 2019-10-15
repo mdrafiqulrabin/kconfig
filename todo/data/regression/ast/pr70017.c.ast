@@ -1,0 +1,1803 @@
+TranslationUnitDecl 0x7fa25a82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa25b80f020 <../Data/C2AST/pr70017.c:13:1, line:21:1> line:13:6 foo 'void (void)'
+  `-CompoundStmt 0x7fa25b86a400 <line:14:1, line:21:1>
+    |-DeclStmt 0x7fa25b80f1d8 <line:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f178 <col:16, col:28> <scratch space>:4:1 used aa00 'char [32]'
+    |-DeclStmt 0x7fa25b80f290 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f230 <col:16, col:28> <scratch space>:6:1 used aa01 'char [32]'
+    |-DeclStmt 0x7fa25b80f348 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f2e8 <col:16, col:28> <scratch space>:8:1 used aa02 'char [32]'
+    |-DeclStmt 0x7fa25b80f400 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f3a0 <col:16, col:28> <scratch space>:10:1 used aa03 'char [32]'
+    |-DeclStmt 0x7fa25b80f4b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f458 <col:16, col:28> <scratch space>:12:1 used aa04 'char [32]'
+    |-DeclStmt 0x7fa25b80f570 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f510 <col:16, col:28> <scratch space>:14:1 used aa05 'char [32]'
+    |-DeclStmt 0x7fa25b80f628 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f5c8 <col:16, col:28> <scratch space>:16:1 used aa06 'char [32]'
+    |-DeclStmt 0x7fa25b80f6e0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f680 <col:16, col:28> <scratch space>:18:1 used aa07 'char [32]'
+    |-DeclStmt 0x7fa25b80f798 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f738 <col:16, col:28> <scratch space>:20:1 used aa08 'char [32]'
+    |-DeclStmt 0x7fa25b80f850 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f7f0 <col:16, col:28> <scratch space>:22:1 used aa09 'char [32]'
+    |-DeclStmt 0x7fa25b80f908 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f8a8 <col:16, col:28> <scratch space>:25:1 used aa10 'char [32]'
+    |-DeclStmt 0x7fa25b80f9c0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80f960 <col:16, col:28> <scratch space>:27:1 used aa11 'char [32]'
+    |-DeclStmt 0x7fa25b80fa78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fa18 <col:16, col:28> <scratch space>:29:1 used aa12 'char [32]'
+    |-DeclStmt 0x7fa25b80fb30 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fad0 <col:16, col:28> <scratch space>:31:1 used aa13 'char [32]'
+    |-DeclStmt 0x7fa25b80fbe8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fb88 <col:16, col:28> <scratch space>:33:1 used aa14 'char [32]'
+    |-DeclStmt 0x7fa25b80fca0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fc40 <col:16, col:28> <scratch space>:35:1 used aa15 'char [32]'
+    |-DeclStmt 0x7fa25b80fd58 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fcf8 <col:16, col:28> <scratch space>:37:1 used aa16 'char [32]'
+    |-DeclStmt 0x7fa25b80fe10 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fdb0 <col:16, col:28> <scratch space>:39:1 used aa17 'char [32]'
+    |-DeclStmt 0x7fa25b80fec8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80fe68 <col:16, col:28> <scratch space>:41:1 used aa18 'char [32]'
+    |-DeclStmt 0x7fa25b80ff80 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b80ff20 <col:16, col:28> <scratch space>:43:1 used aa19 'char [32]'
+    |-DeclStmt 0x7fa25b82b060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b000 <col:16, col:28> <scratch space>:46:1 used aa20 'char [32]'
+    |-DeclStmt 0x7fa25b82b118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b0b8 <col:16, col:28> <scratch space>:48:1 used aa21 'char [32]'
+    |-DeclStmt 0x7fa25b82b1d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b170 <col:16, col:28> <scratch space>:50:1 used aa22 'char [32]'
+    |-DeclStmt 0x7fa25b82b288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b228 <col:16, col:28> <scratch space>:52:1 used aa23 'char [32]'
+    |-DeclStmt 0x7fa25b82b340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b2e0 <col:16, col:28> <scratch space>:54:1 used aa24 'char [32]'
+    |-DeclStmt 0x7fa25b82b3f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b398 <col:16, col:28> <scratch space>:56:1 used aa25 'char [32]'
+    |-DeclStmt 0x7fa25b82b4b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b450 <col:16, col:28> <scratch space>:58:1 used aa26 'char [32]'
+    |-DeclStmt 0x7fa25b82b568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b508 <col:16, col:28> <scratch space>:60:1 used aa27 'char [32]'
+    |-DeclStmt 0x7fa25b82b620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b5c0 <col:16, col:28> <scratch space>:62:1 used aa28 'char [32]'
+    |-DeclStmt 0x7fa25b82b6d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b678 <col:16, col:28> <scratch space>:64:1 used aa29 'char [32]'
+    |-DeclStmt 0x7fa25b82b790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b730 <col:16, col:28> <scratch space>:67:1 used aa30 'char [32]'
+    |-DeclStmt 0x7fa25b82b848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b7e8 <col:16, col:28> <scratch space>:69:1 used aa31 'char [32]'
+    |-DeclStmt 0x7fa25b82b900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b8a0 <col:16, col:28> <scratch space>:71:1 used aa32 'char [32]'
+    |-DeclStmt 0x7fa25b82b9b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82b958 <col:16, col:28> <scratch space>:73:1 used aa33 'char [32]'
+    |-DeclStmt 0x7fa25b82ba70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82ba10 <col:16, col:28> <scratch space>:75:1 used aa34 'char [32]'
+    |-DeclStmt 0x7fa25b82bb28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82bac8 <col:16, col:28> <scratch space>:77:1 used aa35 'char [32]'
+    |-DeclStmt 0x7fa25b82bbe0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82bb80 <col:16, col:28> <scratch space>:79:1 used aa36 'char [32]'
+    |-DeclStmt 0x7fa25b82bc98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82bc38 <col:16, col:28> <scratch space>:81:1 used aa37 'char [32]'
+    |-DeclStmt 0x7fa25b82bd50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82bcf0 <col:16, col:28> <scratch space>:83:1 used aa38 'char [32]'
+    |-DeclStmt 0x7fa25b82be08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82bda8 <col:16, col:28> <scratch space>:85:1 used aa39 'char [32]'
+    |-DeclStmt 0x7fa25b82bec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82be60 <col:16, col:28> <scratch space>:88:1 used aa40 'char [32]'
+    |-DeclStmt 0x7fa25b82bf78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82bf18 <col:16, col:28> <scratch space>:90:1 used aa41 'char [32]'
+    |-DeclStmt 0x7fa25b82d060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d000 <col:16, col:28> <scratch space>:92:1 used aa42 'char [32]'
+    |-DeclStmt 0x7fa25b82d118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d0b8 <col:16, col:28> <scratch space>:94:1 used aa43 'char [32]'
+    |-DeclStmt 0x7fa25b82d1d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d170 <col:16, col:28> <scratch space>:96:1 used aa44 'char [32]'
+    |-DeclStmt 0x7fa25b82d288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d228 <col:16, col:28> <scratch space>:98:1 used aa45 'char [32]'
+    |-DeclStmt 0x7fa25b82d340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d2e0 <col:16, col:28> <scratch space>:100:1 used aa46 'char [32]'
+    |-DeclStmt 0x7fa25b82d3f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d398 <col:16, col:28> <scratch space>:102:1 used aa47 'char [32]'
+    |-DeclStmt 0x7fa25b82d4b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d450 <col:16, col:28> <scratch space>:104:1 used aa48 'char [32]'
+    |-DeclStmt 0x7fa25b82d568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d508 <col:16, col:28> <scratch space>:106:1 used aa49 'char [32]'
+    |-DeclStmt 0x7fa25b82d620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d5c0 <col:16, col:28> <scratch space>:109:1 used aa50 'char [32]'
+    |-DeclStmt 0x7fa25b82d6d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d678 <col:16, col:28> <scratch space>:111:1 used aa51 'char [32]'
+    |-DeclStmt 0x7fa25b82d790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d730 <col:16, col:28> <scratch space>:113:1 used aa52 'char [32]'
+    |-DeclStmt 0x7fa25b82d848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d7e8 <col:16, col:28> <scratch space>:115:1 used aa53 'char [32]'
+    |-DeclStmt 0x7fa25b82d900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d8a0 <col:16, col:28> <scratch space>:117:1 used aa54 'char [32]'
+    |-DeclStmt 0x7fa25b82d9b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82d958 <col:16, col:28> <scratch space>:119:1 used aa55 'char [32]'
+    |-DeclStmt 0x7fa25b82da70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82da10 <col:16, col:28> <scratch space>:121:1 used aa56 'char [32]'
+    |-DeclStmt 0x7fa25b82db28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82dac8 <col:16, col:28> <scratch space>:123:1 used aa57 'char [32]'
+    |-DeclStmt 0x7fa25b82dbe0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82db80 <col:16, col:28> <scratch space>:125:1 used aa58 'char [32]'
+    |-DeclStmt 0x7fa25b82dc98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82dc38 <col:16, col:28> <scratch space>:127:1 used aa59 'char [32]'
+    |-DeclStmt 0x7fa25b82dd50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82dcf0 <col:16, col:28> <scratch space>:130:1 used aa60 'char [32]'
+    |-DeclStmt 0x7fa25b82de08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82dda8 <col:16, col:28> <scratch space>:132:1 used aa61 'char [32]'
+    |-DeclStmt 0x7fa25b82dec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82de60 <col:16, col:28> <scratch space>:134:1 used aa62 'char [32]'
+    |-DeclStmt 0x7fa25b82df78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82df18 <col:16, col:28> <scratch space>:136:1 used aa63 'char [32]'
+    |-DeclStmt 0x7fa25b831060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831000 <col:16, col:28> <scratch space>:138:1 used aa64 'char [32]'
+    |-DeclStmt 0x7fa25b831118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8310b8 <col:16, col:28> <scratch space>:140:1 used aa65 'char [32]'
+    |-DeclStmt 0x7fa25b8311d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831170 <col:16, col:28> <scratch space>:142:1 used aa66 'char [32]'
+    |-DeclStmt 0x7fa25b831288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831228 <col:16, col:28> <scratch space>:144:1 used aa67 'char [32]'
+    |-DeclStmt 0x7fa25b831340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8312e0 <col:16, col:28> <scratch space>:146:1 used aa68 'char [32]'
+    |-DeclStmt 0x7fa25b8313f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831398 <col:16, col:28> <scratch space>:148:1 used aa69 'char [32]'
+    |-DeclStmt 0x7fa25b8314b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831450 <col:16, col:28> <scratch space>:151:1 used aa70 'char [32]'
+    |-DeclStmt 0x7fa25b831568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831508 <col:16, col:28> <scratch space>:153:1 used aa71 'char [32]'
+    |-DeclStmt 0x7fa25b831620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8315c0 <col:16, col:28> <scratch space>:155:1 used aa72 'char [32]'
+    |-DeclStmt 0x7fa25b8316d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831678 <col:16, col:28> <scratch space>:157:1 used aa73 'char [32]'
+    |-DeclStmt 0x7fa25b831790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831730 <col:16, col:28> <scratch space>:159:1 used aa74 'char [32]'
+    |-DeclStmt 0x7fa25b831848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8317e8 <col:16, col:28> <scratch space>:161:1 used aa75 'char [32]'
+    |-DeclStmt 0x7fa25b831900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8318a0 <col:16, col:28> <scratch space>:163:1 used aa76 'char [32]'
+    |-DeclStmt 0x7fa25b8319b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831958 <col:16, col:28> <scratch space>:165:1 used aa77 'char [32]'
+    |-DeclStmt 0x7fa25b831a70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831a10 <col:16, col:28> <scratch space>:167:1 used aa78 'char [32]'
+    |-DeclStmt 0x7fa25b831b28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831ac8 <col:16, col:28> <scratch space>:169:1 used aa79 'char [32]'
+    |-DeclStmt 0x7fa25b831be0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831b80 <col:16, col:28> <scratch space>:172:1 used aa80 'char [32]'
+    |-DeclStmt 0x7fa25b831c98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831c38 <col:16, col:28> <scratch space>:174:1 used aa81 'char [32]'
+    |-DeclStmt 0x7fa25b831d50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831cf0 <col:16, col:28> <scratch space>:176:1 used aa82 'char [32]'
+    |-DeclStmt 0x7fa25b831e08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831da8 <col:16, col:28> <scratch space>:178:1 used aa83 'char [32]'
+    |-DeclStmt 0x7fa25b831ec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831e60 <col:16, col:28> <scratch space>:180:1 used aa84 'char [32]'
+    |-DeclStmt 0x7fa25b831f78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b831f18 <col:16, col:28> <scratch space>:182:1 used aa85 'char [32]'
+    |-DeclStmt 0x7fa25b833060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833000 <col:16, col:28> <scratch space>:184:1 used aa86 'char [32]'
+    |-DeclStmt 0x7fa25b833118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8330b8 <col:16, col:28> <scratch space>:186:1 used aa87 'char [32]'
+    |-DeclStmt 0x7fa25b8331d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833170 <col:16, col:28> <scratch space>:188:1 used aa88 'char [32]'
+    |-DeclStmt 0x7fa25b833288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833228 <col:16, col:28> <scratch space>:190:1 used aa89 'char [32]'
+    |-DeclStmt 0x7fa25b833340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8332e0 <col:16, col:28> <scratch space>:193:1 used aa90 'char [32]'
+    |-DeclStmt 0x7fa25b8333f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833398 <col:16, col:28> <scratch space>:195:1 used aa91 'char [32]'
+    |-DeclStmt 0x7fa25b8334b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833450 <col:16, col:28> <scratch space>:197:1 used aa92 'char [32]'
+    |-DeclStmt 0x7fa25b833568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833508 <col:16, col:28> <scratch space>:199:1 used aa93 'char [32]'
+    |-DeclStmt 0x7fa25b833620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8335c0 <col:16, col:28> <scratch space>:201:1 used aa94 'char [32]'
+    |-DeclStmt 0x7fa25b8336d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833678 <col:16, col:28> <scratch space>:203:1 used aa95 'char [32]'
+    |-DeclStmt 0x7fa25b833790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833730 <col:16, col:28> <scratch space>:205:1 used aa96 'char [32]'
+    |-DeclStmt 0x7fa25b833848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8337e8 <col:16, col:28> <scratch space>:207:1 used aa97 'char [32]'
+    |-DeclStmt 0x7fa25b833900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8338a0 <col:16, col:28> <scratch space>:209:1 used aa98 'char [32]'
+    |-DeclStmt 0x7fa25b8339b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833958 <col:16, col:28> <scratch space>:211:1 used aa99 'char [32]'
+    |-DeclStmt 0x7fa25b833a70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833a10 <col:16, col:28> <scratch space>:214:1 used ab00 'char [32]'
+    |-DeclStmt 0x7fa25b833b28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833ac8 <col:16, col:28> <scratch space>:216:1 used ab01 'char [32]'
+    |-DeclStmt 0x7fa25b833be0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833b80 <col:16, col:28> <scratch space>:218:1 used ab02 'char [32]'
+    |-DeclStmt 0x7fa25b833c98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833c38 <col:16, col:28> <scratch space>:220:1 used ab03 'char [32]'
+    |-DeclStmt 0x7fa25b833d50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833cf0 <col:16, col:28> <scratch space>:222:1 used ab04 'char [32]'
+    |-DeclStmt 0x7fa25b833e08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833da8 <col:16, col:28> <scratch space>:224:1 used ab05 'char [32]'
+    |-DeclStmt 0x7fa25b833ec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833e60 <col:16, col:28> <scratch space>:226:1 used ab06 'char [32]'
+    |-DeclStmt 0x7fa25b833f78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b833f18 <col:16, col:28> <scratch space>:228:1 used ab07 'char [32]'
+    |-DeclStmt 0x7fa25b829860 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829800 <col:16, col:28> <scratch space>:230:1 used ab08 'char [32]'
+    |-DeclStmt 0x7fa25b829918 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8298b8 <col:16, col:28> <scratch space>:232:1 used ab09 'char [32]'
+    |-DeclStmt 0x7fa25b8299d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829970 <col:16, col:28> <scratch space>:235:1 used ab10 'char [32]'
+    |-DeclStmt 0x7fa25b829a88 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829a28 <col:16, col:28> <scratch space>:237:1 used ab11 'char [32]'
+    |-DeclStmt 0x7fa25b829b40 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829ae0 <col:16, col:28> <scratch space>:239:1 used ab12 'char [32]'
+    |-DeclStmt 0x7fa25b829bf8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829b98 <col:16, col:28> <scratch space>:241:1 used ab13 'char [32]'
+    |-DeclStmt 0x7fa25b829cb0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829c50 <col:16, col:28> <scratch space>:243:1 used ab14 'char [32]'
+    |-DeclStmt 0x7fa25b829d68 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829d08 <col:16, col:28> <scratch space>:245:1 used ab15 'char [32]'
+    |-DeclStmt 0x7fa25b829e20 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829dc0 <col:16, col:28> <scratch space>:247:1 used ab16 'char [32]'
+    |-DeclStmt 0x7fa25b829ed8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829e78 <col:16, col:28> <scratch space>:249:1 used ab17 'char [32]'
+    |-DeclStmt 0x7fa25b829f90 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829f30 <col:16, col:28> <scratch space>:251:1 used ab18 'char [32]'
+    |-DeclStmt 0x7fa25b82a048 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b829fe8 <col:16, col:28> <scratch space>:253:1 used ab19 'char [32]'
+    |-DeclStmt 0x7fa25b82a100 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a0a0 <col:16, col:28> <scratch space>:256:1 used ab20 'char [32]'
+    |-DeclStmt 0x7fa25b82a1b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a158 <col:16, col:28> <scratch space>:258:1 used ab21 'char [32]'
+    |-DeclStmt 0x7fa25b82a270 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a210 <col:16, col:28> <scratch space>:260:1 used ab22 'char [32]'
+    |-DeclStmt 0x7fa25b82a328 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a2c8 <col:16, col:28> <scratch space>:262:1 used ab23 'char [32]'
+    |-DeclStmt 0x7fa25b82a3e0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a380 <col:16, col:28> <scratch space>:264:1 used ab24 'char [32]'
+    |-DeclStmt 0x7fa25b82a498 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a438 <col:16, col:28> <scratch space>:266:1 used ab25 'char [32]'
+    |-DeclStmt 0x7fa25b82a550 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a4f0 <col:16, col:28> <scratch space>:268:1 used ab26 'char [32]'
+    |-DeclStmt 0x7fa25b82a608 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a5a8 <col:16, col:28> <scratch space>:270:1 used ab27 'char [32]'
+    |-DeclStmt 0x7fa25b82a6c0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a660 <col:16, col:28> <scratch space>:272:1 used ab28 'char [32]'
+    |-DeclStmt 0x7fa25b82a778 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82a718 <col:16, col:28> <scratch space>:274:1 used ab29 'char [32]'
+    |-DeclStmt 0x7fa25b82f060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f000 <col:16, col:28> <scratch space>:277:1 used ab30 'char [32]'
+    |-DeclStmt 0x7fa25b82f118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f0b8 <col:16, col:28> <scratch space>:279:1 used ab31 'char [32]'
+    |-DeclStmt 0x7fa25b82f1d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f170 <col:16, col:28> <scratch space>:281:1 used ab32 'char [32]'
+    |-DeclStmt 0x7fa25b82f288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f228 <col:16, col:28> <scratch space>:283:1 used ab33 'char [32]'
+    |-DeclStmt 0x7fa25b82f340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f2e0 <col:16, col:28> <scratch space>:285:1 used ab34 'char [32]'
+    |-DeclStmt 0x7fa25b82f3f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f398 <col:16, col:28> <scratch space>:287:1 used ab35 'char [32]'
+    |-DeclStmt 0x7fa25b82f4b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f450 <col:16, col:28> <scratch space>:289:1 used ab36 'char [32]'
+    |-DeclStmt 0x7fa25b82f568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f508 <col:16, col:28> <scratch space>:291:1 used ab37 'char [32]'
+    |-DeclStmt 0x7fa25b82f620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f5c0 <col:16, col:28> <scratch space>:293:1 used ab38 'char [32]'
+    |-DeclStmt 0x7fa25b82f6d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f678 <col:16, col:28> <scratch space>:295:1 used ab39 'char [32]'
+    |-DeclStmt 0x7fa25b82f790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f730 <col:16, col:28> <scratch space>:298:1 used ab40 'char [32]'
+    |-DeclStmt 0x7fa25b82f848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f7e8 <col:16, col:28> <scratch space>:300:1 used ab41 'char [32]'
+    |-DeclStmt 0x7fa25b82f900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f8a0 <col:16, col:28> <scratch space>:302:1 used ab42 'char [32]'
+    |-DeclStmt 0x7fa25b82f9b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82f958 <col:16, col:28> <scratch space>:304:1 used ab43 'char [32]'
+    |-DeclStmt 0x7fa25b82fa70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fa10 <col:16, col:28> <scratch space>:306:1 used ab44 'char [32]'
+    |-DeclStmt 0x7fa25b82fb28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fac8 <col:16, col:28> <scratch space>:308:1 used ab45 'char [32]'
+    |-DeclStmt 0x7fa25b82fbe0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fb80 <col:16, col:28> <scratch space>:310:1 used ab46 'char [32]'
+    |-DeclStmt 0x7fa25b82fc98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fc38 <col:16, col:28> <scratch space>:312:1 used ab47 'char [32]'
+    |-DeclStmt 0x7fa25b82fd50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fcf0 <col:16, col:28> <scratch space>:314:1 used ab48 'char [32]'
+    |-DeclStmt 0x7fa25b82fe08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fda8 <col:16, col:28> <scratch space>:316:1 used ab49 'char [32]'
+    |-DeclStmt 0x7fa25b82fec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82fe60 <col:16, col:28> <scratch space>:319:1 used ab50 'char [32]'
+    |-DeclStmt 0x7fa25b82ff78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b82ff18 <col:16, col:28> <scratch space>:321:1 used ab51 'char [32]'
+    |-DeclStmt 0x7fa25b830060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830000 <col:16, col:28> <scratch space>:323:1 used ab52 'char [32]'
+    |-DeclStmt 0x7fa25b830118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8300b8 <col:16, col:28> <scratch space>:325:1 used ab53 'char [32]'
+    |-DeclStmt 0x7fa25b8301d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830170 <col:16, col:28> <scratch space>:327:1 used ab54 'char [32]'
+    |-DeclStmt 0x7fa25b830288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830228 <col:16, col:28> <scratch space>:329:1 used ab55 'char [32]'
+    |-DeclStmt 0x7fa25b830340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8302e0 <col:16, col:28> <scratch space>:331:1 used ab56 'char [32]'
+    |-DeclStmt 0x7fa25b8303f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830398 <col:16, col:28> <scratch space>:333:1 used ab57 'char [32]'
+    |-DeclStmt 0x7fa25b8304b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830450 <col:16, col:28> <scratch space>:335:1 used ab58 'char [32]'
+    |-DeclStmt 0x7fa25b830568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830508 <col:16, col:28> <scratch space>:337:1 used ab59 'char [32]'
+    |-DeclStmt 0x7fa25b830620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8305c0 <col:16, col:28> <scratch space>:340:1 used ab60 'char [32]'
+    |-DeclStmt 0x7fa25b8306d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830678 <col:16, col:28> <scratch space>:342:1 used ab61 'char [32]'
+    |-DeclStmt 0x7fa25b830790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830730 <col:16, col:28> <scratch space>:344:1 used ab62 'char [32]'
+    |-DeclStmt 0x7fa25b830848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8307e8 <col:16, col:28> <scratch space>:346:1 used ab63 'char [32]'
+    |-DeclStmt 0x7fa25b830900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8308a0 <col:16, col:28> <scratch space>:348:1 used ab64 'char [32]'
+    |-DeclStmt 0x7fa25b8309b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830958 <col:16, col:28> <scratch space>:350:1 used ab65 'char [32]'
+    |-DeclStmt 0x7fa25b830a70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830a10 <col:16, col:28> <scratch space>:352:1 used ab66 'char [32]'
+    |-DeclStmt 0x7fa25b830b28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830ac8 <col:16, col:28> <scratch space>:354:1 used ab67 'char [32]'
+    |-DeclStmt 0x7fa25b830be0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830b80 <col:16, col:28> <scratch space>:356:1 used ab68 'char [32]'
+    |-DeclStmt 0x7fa25b830c98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830c38 <col:16, col:28> <scratch space>:358:1 used ab69 'char [32]'
+    |-DeclStmt 0x7fa25b830d50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830cf0 <col:16, col:28> <scratch space>:361:1 used ab70 'char [32]'
+    |-DeclStmt 0x7fa25b830e08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830da8 <col:16, col:28> <scratch space>:363:1 used ab71 'char [32]'
+    |-DeclStmt 0x7fa25b830ec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830e60 <col:16, col:28> <scratch space>:365:1 used ab72 'char [32]'
+    |-DeclStmt 0x7fa25b830f78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b830f18 <col:16, col:28> <scratch space>:367:1 used ab73 'char [32]'
+    |-DeclStmt 0x7fa25b83b060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b000 <col:16, col:28> <scratch space>:369:1 used ab74 'char [32]'
+    |-DeclStmt 0x7fa25b83b118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b0b8 <col:16, col:28> <scratch space>:371:1 used ab75 'char [32]'
+    |-DeclStmt 0x7fa25b83b1d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b170 <col:16, col:28> <scratch space>:373:1 used ab76 'char [32]'
+    |-DeclStmt 0x7fa25b83b288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b228 <col:16, col:28> <scratch space>:375:1 used ab77 'char [32]'
+    |-DeclStmt 0x7fa25b83b340 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b2e0 <col:16, col:28> <scratch space>:377:1 used ab78 'char [32]'
+    |-DeclStmt 0x7fa25b83b3f8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b398 <col:16, col:28> <scratch space>:379:1 used ab79 'char [32]'
+    |-DeclStmt 0x7fa25b83b4b0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b450 <col:16, col:28> <scratch space>:382:1 used ab80 'char [32]'
+    |-DeclStmt 0x7fa25b83b568 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b508 <col:16, col:28> <scratch space>:384:1 used ab81 'char [32]'
+    |-DeclStmt 0x7fa25b83b620 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b5c0 <col:16, col:28> <scratch space>:386:1 used ab82 'char [32]'
+    |-DeclStmt 0x7fa25b83b6d8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b678 <col:16, col:28> <scratch space>:388:1 used ab83 'char [32]'
+    |-DeclStmt 0x7fa25b83b790 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b730 <col:16, col:28> <scratch space>:390:1 used ab84 'char [32]'
+    |-DeclStmt 0x7fa25b83b848 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b7e8 <col:16, col:28> <scratch space>:392:1 used ab85 'char [32]'
+    |-DeclStmt 0x7fa25b83b900 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b8a0 <col:16, col:28> <scratch space>:394:1 used ab86 'char [32]'
+    |-DeclStmt 0x7fa25b83b9b8 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83b958 <col:16, col:28> <scratch space>:396:1 used ab87 'char [32]'
+    |-DeclStmt 0x7fa25b83ba70 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83ba10 <col:16, col:28> <scratch space>:398:1 used ab88 'char [32]'
+    |-DeclStmt 0x7fa25b83bb28 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83bac8 <col:16, col:28> <scratch space>:400:1 used ab89 'char [32]'
+    |-DeclStmt 0x7fa25b83bbe0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83bb80 <col:16, col:28> <scratch space>:403:1 used ab90 'char [32]'
+    |-DeclStmt 0x7fa25b83bc98 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83bc38 <col:16, col:28> <scratch space>:405:1 used ab91 'char [32]'
+    |-DeclStmt 0x7fa25b83bd50 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83bcf0 <col:16, col:28> <scratch space>:407:1 used ab92 'char [32]'
+    |-DeclStmt 0x7fa25b83be08 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83bda8 <col:16, col:28> <scratch space>:409:1 used ab93 'char [32]'
+    |-DeclStmt 0x7fa25b83bec0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83be60 <col:16, col:28> <scratch space>:411:1 used ab94 'char [32]'
+    |-DeclStmt 0x7fa25b83bf78 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b83bf18 <col:16, col:28> <scratch space>:413:1 used ab95 'char [32]'
+    |-DeclStmt 0x7fa25b834060 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b834000 <col:16, col:28> <scratch space>:415:1 used ab96 'char [32]'
+    |-DeclStmt 0x7fa25b834118 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b8340b8 <col:16, col:28> <scratch space>:417:1 used ab97 'char [32]'
+    |-DeclStmt 0x7fa25b8341d0 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b834170 <col:16, col:28> <scratch space>:419:1 used ab98 'char [32]'
+    |-DeclStmt 0x7fa25b834288 <../Data/C2AST/pr70017.c:7:16, col:29>
+    | `-VarDecl 0x7fa25b834228 <col:16, col:28> <scratch space>:421:1 used ab99 'char [32]'
+    |-BinaryOperator 0x7fa25b834360 <line:424:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834300 <<scratch space>:424:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8342e8 <<scratch space>:424:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8342a0 <col:1> 'char [32]' lvalue Var 0x7fa25b80f178 'aa00' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8342c8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834348 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834328 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834448 <<scratch space>:426:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8343e8 <<scratch space>:426:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8343d0 <<scratch space>:426:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834388 <col:1> 'char [32]' lvalue Var 0x7fa25b80f230 'aa01' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8343b0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834430 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834410 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834530 <<scratch space>:428:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8344d0 <<scratch space>:428:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8344b8 <<scratch space>:428:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834470 <col:1> 'char [32]' lvalue Var 0x7fa25b80f2e8 'aa02' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834498 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834518 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8344f8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834618 <<scratch space>:430:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8345b8 <<scratch space>:430:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8345a0 <<scratch space>:430:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834558 <col:1> 'char [32]' lvalue Var 0x7fa25b80f3a0 'aa03' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834580 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834600 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8345e0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834700 <<scratch space>:432:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8346a0 <<scratch space>:432:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834688 <<scratch space>:432:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834640 <col:1> 'char [32]' lvalue Var 0x7fa25b80f458 'aa04' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834668 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8346e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8346c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8347e8 <<scratch space>:434:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834788 <<scratch space>:434:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834770 <<scratch space>:434:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834728 <col:1> 'char [32]' lvalue Var 0x7fa25b80f510 'aa05' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834750 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8347d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8347b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8348d0 <<scratch space>:436:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834870 <<scratch space>:436:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834858 <<scratch space>:436:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834810 <col:1> 'char [32]' lvalue Var 0x7fa25b80f5c8 'aa06' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834838 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8348b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834898 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8349b8 <<scratch space>:438:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834958 <<scratch space>:438:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834940 <<scratch space>:438:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8348f8 <col:1> 'char [32]' lvalue Var 0x7fa25b80f680 'aa07' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834920 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8349a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834980 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834aa0 <<scratch space>:440:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834a40 <<scratch space>:440:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834a28 <<scratch space>:440:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8349e0 <col:1> 'char [32]' lvalue Var 0x7fa25b80f738 'aa08' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834a08 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834a88 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834a68 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834b88 <<scratch space>:442:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834b28 <<scratch space>:442:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834b10 <<scratch space>:442:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834ac8 <col:1> 'char [32]' lvalue Var 0x7fa25b80f7f0 'aa09' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834af0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834b70 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834b50 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834c70 <<scratch space>:445:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834c10 <<scratch space>:445:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834bf8 <<scratch space>:445:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834bb0 <col:1> 'char [32]' lvalue Var 0x7fa25b80f8a8 'aa10' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834bd8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834c58 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834c38 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834d58 <<scratch space>:447:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834cf8 <<scratch space>:447:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834ce0 <<scratch space>:447:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834c98 <col:1> 'char [32]' lvalue Var 0x7fa25b80f960 'aa11' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834cc0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834d40 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834d20 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834e40 <<scratch space>:449:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834de0 <<scratch space>:449:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834dc8 <<scratch space>:449:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834d80 <col:1> 'char [32]' lvalue Var 0x7fa25b80fa18 'aa12' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834da8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834e28 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834e08 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b834f28 <<scratch space>:451:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834ec8 <<scratch space>:451:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834eb0 <<scratch space>:451:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834e68 <col:1> 'char [32]' lvalue Var 0x7fa25b80fad0 'aa13' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834e90 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b834f10 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834ef0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836018 <<scratch space>:453:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b834fb0 <<scratch space>:453:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b834f98 <<scratch space>:453:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b834f50 <col:1> 'char [32]' lvalue Var 0x7fa25b80fb88 'aa14' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b834f78 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836000 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b834fd8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836100 <<scratch space>:455:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8360a0 <<scratch space>:455:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836088 <<scratch space>:455:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836040 <col:1> 'char [32]' lvalue Var 0x7fa25b80fc40 'aa15' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836068 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8360e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8360c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8361e8 <<scratch space>:457:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836188 <<scratch space>:457:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836170 <<scratch space>:457:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836128 <col:1> 'char [32]' lvalue Var 0x7fa25b80fcf8 'aa16' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836150 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8361d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8361b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8362d0 <<scratch space>:459:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836270 <<scratch space>:459:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836258 <<scratch space>:459:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836210 <col:1> 'char [32]' lvalue Var 0x7fa25b80fdb0 'aa17' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836238 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8362b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836298 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8363b8 <<scratch space>:461:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836358 <<scratch space>:461:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836340 <<scratch space>:461:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8362f8 <col:1> 'char [32]' lvalue Var 0x7fa25b80fe68 'aa18' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836320 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8363a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836380 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8364a0 <<scratch space>:463:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836440 <<scratch space>:463:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836428 <<scratch space>:463:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8363e0 <col:1> 'char [32]' lvalue Var 0x7fa25b80ff20 'aa19' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836408 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836488 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836468 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836588 <<scratch space>:466:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836528 <<scratch space>:466:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836510 <<scratch space>:466:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8364c8 <col:1> 'char [32]' lvalue Var 0x7fa25b82b000 'aa20' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8364f0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836570 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836550 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836670 <<scratch space>:468:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836610 <<scratch space>:468:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8365f8 <<scratch space>:468:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8365b0 <col:1> 'char [32]' lvalue Var 0x7fa25b82b0b8 'aa21' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8365d8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836658 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836638 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836758 <<scratch space>:470:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8366f8 <<scratch space>:470:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8366e0 <<scratch space>:470:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836698 <col:1> 'char [32]' lvalue Var 0x7fa25b82b170 'aa22' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8366c0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836740 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836720 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836840 <<scratch space>:472:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8367e0 <<scratch space>:472:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8367c8 <<scratch space>:472:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836780 <col:1> 'char [32]' lvalue Var 0x7fa25b82b228 'aa23' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8367a8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836828 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836808 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836928 <<scratch space>:474:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8368c8 <<scratch space>:474:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8368b0 <<scratch space>:474:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836868 <col:1> 'char [32]' lvalue Var 0x7fa25b82b2e0 'aa24' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836890 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836910 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8368f0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836a10 <<scratch space>:476:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8369b0 <<scratch space>:476:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836998 <<scratch space>:476:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836950 <col:1> 'char [32]' lvalue Var 0x7fa25b82b398 'aa25' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836978 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8369f8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8369d8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836af8 <<scratch space>:478:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836a98 <<scratch space>:478:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836a80 <<scratch space>:478:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836a38 <col:1> 'char [32]' lvalue Var 0x7fa25b82b450 'aa26' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836a60 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836ae0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836ac0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836be0 <<scratch space>:480:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836b80 <<scratch space>:480:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836b68 <<scratch space>:480:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836b20 <col:1> 'char [32]' lvalue Var 0x7fa25b82b508 'aa27' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836b48 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836bc8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836ba8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836cc8 <<scratch space>:482:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836c68 <<scratch space>:482:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836c50 <<scratch space>:482:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836c08 <col:1> 'char [32]' lvalue Var 0x7fa25b82b5c0 'aa28' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836c30 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836cb0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836c90 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836db0 <<scratch space>:484:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836d50 <<scratch space>:484:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836d38 <<scratch space>:484:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836cf0 <col:1> 'char [32]' lvalue Var 0x7fa25b82b678 'aa29' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836d18 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836d98 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836d78 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836e98 <<scratch space>:487:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836e38 <<scratch space>:487:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836e20 <<scratch space>:487:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836dd8 <col:1> 'char [32]' lvalue Var 0x7fa25b82b730 'aa30' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836e00 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836e80 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836e60 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b836f80 <<scratch space>:489:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b836f20 <<scratch space>:489:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b836f08 <<scratch space>:489:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836ec0 <col:1> 'char [32]' lvalue Var 0x7fa25b82b7e8 'aa31' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836ee8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b836f68 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b836f48 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837078 <<scratch space>:491:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837018 <<scratch space>:491:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837000 <<scratch space>:491:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b836fa8 <col:1> 'char [32]' lvalue Var 0x7fa25b82b8a0 'aa32' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b836fd0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837060 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837040 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837160 <<scratch space>:493:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837100 <<scratch space>:493:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8370e8 <<scratch space>:493:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8370a0 <col:1> 'char [32]' lvalue Var 0x7fa25b82b958 'aa33' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8370c8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837148 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837128 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837248 <<scratch space>:495:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8371e8 <<scratch space>:495:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8371d0 <<scratch space>:495:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837188 <col:1> 'char [32]' lvalue Var 0x7fa25b82ba10 'aa34' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8371b0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837230 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837210 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837330 <<scratch space>:497:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8372d0 <<scratch space>:497:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8372b8 <<scratch space>:497:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837270 <col:1> 'char [32]' lvalue Var 0x7fa25b82bac8 'aa35' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837298 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837318 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8372f8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837418 <<scratch space>:499:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8373b8 <<scratch space>:499:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8373a0 <<scratch space>:499:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837358 <col:1> 'char [32]' lvalue Var 0x7fa25b82bb80 'aa36' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837380 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837400 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8373e0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837500 <<scratch space>:501:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8374a0 <<scratch space>:501:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837488 <<scratch space>:501:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837440 <col:1> 'char [32]' lvalue Var 0x7fa25b82bc38 'aa37' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837468 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8374e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8374c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8375e8 <<scratch space>:503:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837588 <<scratch space>:503:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837570 <<scratch space>:503:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837528 <col:1> 'char [32]' lvalue Var 0x7fa25b82bcf0 'aa38' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837550 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8375d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8375b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8376d0 <<scratch space>:505:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837670 <<scratch space>:505:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837658 <<scratch space>:505:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837610 <col:1> 'char [32]' lvalue Var 0x7fa25b82bda8 'aa39' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837638 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8376b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837698 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8377b8 <<scratch space>:508:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837758 <<scratch space>:508:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837740 <<scratch space>:508:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8376f8 <col:1> 'char [32]' lvalue Var 0x7fa25b82be60 'aa40' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837720 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8377a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837780 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8378a0 <<scratch space>:510:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837840 <<scratch space>:510:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837828 <<scratch space>:510:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8377e0 <col:1> 'char [32]' lvalue Var 0x7fa25b82bf18 'aa41' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837808 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837888 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837868 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837988 <<scratch space>:512:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837928 <<scratch space>:512:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837910 <<scratch space>:512:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8378c8 <col:1> 'char [32]' lvalue Var 0x7fa25b82d000 'aa42' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8378f0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837970 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837950 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837a70 <<scratch space>:514:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837a10 <<scratch space>:514:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8379f8 <<scratch space>:514:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8379b0 <col:1> 'char [32]' lvalue Var 0x7fa25b82d0b8 'aa43' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8379d8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837a58 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837a38 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837b58 <<scratch space>:516:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837af8 <<scratch space>:516:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837ae0 <<scratch space>:516:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837a98 <col:1> 'char [32]' lvalue Var 0x7fa25b82d170 'aa44' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837ac0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837b40 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837b20 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837c40 <<scratch space>:518:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837be0 <<scratch space>:518:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837bc8 <<scratch space>:518:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837b80 <col:1> 'char [32]' lvalue Var 0x7fa25b82d228 'aa45' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837ba8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837c28 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837c08 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837d28 <<scratch space>:520:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837cc8 <<scratch space>:520:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837cb0 <<scratch space>:520:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837c68 <col:1> 'char [32]' lvalue Var 0x7fa25b82d2e0 'aa46' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837c90 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837d10 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837cf0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837e10 <<scratch space>:522:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837db0 <<scratch space>:522:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837d98 <<scratch space>:522:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837d50 <col:1> 'char [32]' lvalue Var 0x7fa25b82d398 'aa47' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837d78 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837df8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837dd8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b837ef8 <<scratch space>:524:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837e98 <<scratch space>:524:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837e80 <<scratch space>:524:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837e38 <col:1> 'char [32]' lvalue Var 0x7fa25b82d450 'aa48' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837e60 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837ee0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837ec0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838000 <<scratch space>:526:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b837f80 <<scratch space>:526:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b837f68 <<scratch space>:526:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b837f20 <col:1> 'char [32]' lvalue Var 0x7fa25b82d508 'aa49' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b837f48 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b837fc8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b837fa8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8380e8 <<scratch space>:529:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838088 <<scratch space>:529:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838070 <<scratch space>:529:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838028 <col:1> 'char [32]' lvalue Var 0x7fa25b82d5c0 'aa50' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838050 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8380d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8380b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8381d0 <<scratch space>:531:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838170 <<scratch space>:531:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838158 <<scratch space>:531:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838110 <col:1> 'char [32]' lvalue Var 0x7fa25b82d678 'aa51' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838138 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8381b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838198 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8382b8 <<scratch space>:533:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838258 <<scratch space>:533:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838240 <<scratch space>:533:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8381f8 <col:1> 'char [32]' lvalue Var 0x7fa25b82d730 'aa52' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838220 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8382a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838280 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8383a0 <<scratch space>:535:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838340 <<scratch space>:535:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838328 <<scratch space>:535:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8382e0 <col:1> 'char [32]' lvalue Var 0x7fa25b82d7e8 'aa53' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838308 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838388 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838368 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838488 <<scratch space>:537:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838428 <<scratch space>:537:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838410 <<scratch space>:537:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8383c8 <col:1> 'char [32]' lvalue Var 0x7fa25b82d8a0 'aa54' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8383f0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838470 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838450 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838570 <<scratch space>:539:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838510 <<scratch space>:539:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8384f8 <<scratch space>:539:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8384b0 <col:1> 'char [32]' lvalue Var 0x7fa25b82d958 'aa55' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8384d8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838558 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838538 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838658 <<scratch space>:541:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8385f8 <<scratch space>:541:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8385e0 <<scratch space>:541:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838598 <col:1> 'char [32]' lvalue Var 0x7fa25b82da10 'aa56' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8385c0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838640 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838620 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838740 <<scratch space>:543:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8386e0 <<scratch space>:543:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8386c8 <<scratch space>:543:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838680 <col:1> 'char [32]' lvalue Var 0x7fa25b82dac8 'aa57' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8386a8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838728 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838708 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838828 <<scratch space>:545:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8387c8 <<scratch space>:545:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8387b0 <<scratch space>:545:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838768 <col:1> 'char [32]' lvalue Var 0x7fa25b82db80 'aa58' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838790 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838810 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8387f0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838910 <<scratch space>:547:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8388b0 <<scratch space>:547:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838898 <<scratch space>:547:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838850 <col:1> 'char [32]' lvalue Var 0x7fa25b82dc38 'aa59' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838878 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8388f8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8388d8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8389f8 <<scratch space>:550:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838998 <<scratch space>:550:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838980 <<scratch space>:550:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838938 <col:1> 'char [32]' lvalue Var 0x7fa25b82dcf0 'aa60' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838960 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8389e0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8389c0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838ae0 <<scratch space>:552:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838a80 <<scratch space>:552:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838a68 <<scratch space>:552:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838a20 <col:1> 'char [32]' lvalue Var 0x7fa25b82dda8 'aa61' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838a48 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838ac8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838aa8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838bc8 <<scratch space>:554:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838b68 <<scratch space>:554:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838b50 <<scratch space>:554:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838b08 <col:1> 'char [32]' lvalue Var 0x7fa25b82de60 'aa62' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838b30 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838bb0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838b90 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838cb0 <<scratch space>:556:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838c50 <<scratch space>:556:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838c38 <<scratch space>:556:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838bf0 <col:1> 'char [32]' lvalue Var 0x7fa25b82df18 'aa63' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838c18 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838c98 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838c78 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838d98 <<scratch space>:558:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838d38 <<scratch space>:558:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838d20 <<scratch space>:558:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838cd8 <col:1> 'char [32]' lvalue Var 0x7fa25b831000 'aa64' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838d00 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838d80 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838d60 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838e80 <<scratch space>:560:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838e20 <<scratch space>:560:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838e08 <<scratch space>:560:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838dc0 <col:1> 'char [32]' lvalue Var 0x7fa25b8310b8 'aa65' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838de8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838e68 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838e48 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b838f68 <<scratch space>:562:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b838f08 <<scratch space>:562:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838ef0 <<scratch space>:562:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838ea8 <col:1> 'char [32]' lvalue Var 0x7fa25b831170 'aa66' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838ed0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b838f50 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b838f30 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839060 <<scratch space>:564:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839000 <<scratch space>:564:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b838fd8 <<scratch space>:564:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b838f90 <col:1> 'char [32]' lvalue Var 0x7fa25b831228 'aa67' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b838fb8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839048 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839028 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839148 <<scratch space>:566:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8390e8 <<scratch space>:566:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8390d0 <<scratch space>:566:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839088 <col:1> 'char [32]' lvalue Var 0x7fa25b8312e0 'aa68' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8390b0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839130 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839110 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839230 <<scratch space>:568:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8391d0 <<scratch space>:568:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8391b8 <<scratch space>:568:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839170 <col:1> 'char [32]' lvalue Var 0x7fa25b831398 'aa69' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839198 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839218 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8391f8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839318 <<scratch space>:571:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8392b8 <<scratch space>:571:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8392a0 <<scratch space>:571:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839258 <col:1> 'char [32]' lvalue Var 0x7fa25b831450 'aa70' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839280 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839300 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8392e0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839400 <<scratch space>:573:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8393a0 <<scratch space>:573:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839388 <<scratch space>:573:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839340 <col:1> 'char [32]' lvalue Var 0x7fa25b831508 'aa71' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839368 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8393e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8393c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8394e8 <<scratch space>:575:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839488 <<scratch space>:575:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839470 <<scratch space>:575:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839428 <col:1> 'char [32]' lvalue Var 0x7fa25b8315c0 'aa72' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839450 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8394d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8394b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8395d0 <<scratch space>:577:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839570 <<scratch space>:577:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839558 <<scratch space>:577:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839510 <col:1> 'char [32]' lvalue Var 0x7fa25b831678 'aa73' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839538 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8395b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839598 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8396b8 <<scratch space>:579:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839658 <<scratch space>:579:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839640 <<scratch space>:579:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8395f8 <col:1> 'char [32]' lvalue Var 0x7fa25b831730 'aa74' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839620 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8396a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839680 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8397a0 <<scratch space>:581:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839740 <<scratch space>:581:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839728 <<scratch space>:581:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8396e0 <col:1> 'char [32]' lvalue Var 0x7fa25b8317e8 'aa75' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839708 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839788 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839768 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839888 <<scratch space>:583:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839828 <<scratch space>:583:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839810 <<scratch space>:583:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8397c8 <col:1> 'char [32]' lvalue Var 0x7fa25b8318a0 'aa76' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8397f0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839870 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839850 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839970 <<scratch space>:585:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839910 <<scratch space>:585:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8398f8 <<scratch space>:585:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8398b0 <col:1> 'char [32]' lvalue Var 0x7fa25b831958 'aa77' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8398d8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839958 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839938 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839a58 <<scratch space>:587:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8399f8 <<scratch space>:587:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8399e0 <<scratch space>:587:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839998 <col:1> 'char [32]' lvalue Var 0x7fa25b831a10 'aa78' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8399c0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839a40 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839a20 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839b40 <<scratch space>:589:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839ae0 <<scratch space>:589:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839ac8 <<scratch space>:589:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839a80 <col:1> 'char [32]' lvalue Var 0x7fa25b831ac8 'aa79' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839aa8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839b28 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839b08 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839c28 <<scratch space>:592:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839bc8 <<scratch space>:592:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839bb0 <<scratch space>:592:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839b68 <col:1> 'char [32]' lvalue Var 0x7fa25b831b80 'aa80' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839b90 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839c10 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839bf0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839d10 <<scratch space>:594:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839cb0 <<scratch space>:594:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839c98 <<scratch space>:594:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839c50 <col:1> 'char [32]' lvalue Var 0x7fa25b831c38 'aa81' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839c78 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839cf8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839cd8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839df8 <<scratch space>:596:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839d98 <<scratch space>:596:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839d80 <<scratch space>:596:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839d38 <col:1> 'char [32]' lvalue Var 0x7fa25b831cf0 'aa82' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839d60 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839de0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839dc0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839ee0 <<scratch space>:598:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839e80 <<scratch space>:598:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839e68 <<scratch space>:598:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839e20 <col:1> 'char [32]' lvalue Var 0x7fa25b831da8 'aa83' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839e48 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839ec8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839ea8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b839fc8 <<scratch space>:600:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b839f68 <<scratch space>:600:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b839f50 <<scratch space>:600:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b839f08 <col:1> 'char [32]' lvalue Var 0x7fa25b831e60 'aa84' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b839f30 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b839fb0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b839f90 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a2c0 <<scratch space>:602:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a260 <<scratch space>:602:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a248 <<scratch space>:602:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a200 <col:1> 'char [32]' lvalue Var 0x7fa25b831f18 'aa85' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a228 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a2a8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a288 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a3a8 <<scratch space>:604:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a348 <<scratch space>:604:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a330 <<scratch space>:604:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a2e8 <col:1> 'char [32]' lvalue Var 0x7fa25b833000 'aa86' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a310 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a390 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a370 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a490 <<scratch space>:606:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a430 <<scratch space>:606:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a418 <<scratch space>:606:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a3d0 <col:1> 'char [32]' lvalue Var 0x7fa25b8330b8 'aa87' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a3f8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a478 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a458 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a578 <<scratch space>:608:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a518 <<scratch space>:608:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a500 <<scratch space>:608:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a4b8 <col:1> 'char [32]' lvalue Var 0x7fa25b833170 'aa88' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a4e0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a560 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a540 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a660 <<scratch space>:610:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a600 <<scratch space>:610:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a5e8 <<scratch space>:610:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a5a0 <col:1> 'char [32]' lvalue Var 0x7fa25b833228 'aa89' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a5c8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a648 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a628 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a748 <<scratch space>:613:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a6e8 <<scratch space>:613:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a6d0 <<scratch space>:613:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a688 <col:1> 'char [32]' lvalue Var 0x7fa25b8332e0 'aa90' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a6b0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a730 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a710 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a830 <<scratch space>:615:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a7d0 <<scratch space>:615:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a7b8 <<scratch space>:615:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a770 <col:1> 'char [32]' lvalue Var 0x7fa25b833398 'aa91' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a798 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a818 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a7f8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84a918 <<scratch space>:617:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a8b8 <<scratch space>:617:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a8a0 <<scratch space>:617:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a858 <col:1> 'char [32]' lvalue Var 0x7fa25b833450 'aa92' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a880 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a900 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a8e0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84aa00 <<scratch space>:619:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84a9a0 <<scratch space>:619:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84a988 <<scratch space>:619:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84a940 <col:1> 'char [32]' lvalue Var 0x7fa25b833508 'aa93' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84a968 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84a9e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84a9c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84aae8 <<scratch space>:621:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84aa88 <<scratch space>:621:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84aa70 <<scratch space>:621:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84aa28 <col:1> 'char [32]' lvalue Var 0x7fa25b8335c0 'aa94' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84aa50 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84aad0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84aab0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84abd0 <<scratch space>:623:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ab70 <<scratch space>:623:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ab58 <<scratch space>:623:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ab10 <col:1> 'char [32]' lvalue Var 0x7fa25b833678 'aa95' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ab38 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84abb8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ab98 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84acb8 <<scratch space>:625:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ac58 <<scratch space>:625:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ac40 <<scratch space>:625:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84abf8 <col:1> 'char [32]' lvalue Var 0x7fa25b833730 'aa96' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ac20 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84aca0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ac80 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ada0 <<scratch space>:627:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ad40 <<scratch space>:627:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ad28 <<scratch space>:627:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ace0 <col:1> 'char [32]' lvalue Var 0x7fa25b8337e8 'aa97' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ad08 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ad88 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ad68 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ae88 <<scratch space>:629:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ae28 <<scratch space>:629:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ae10 <<scratch space>:629:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84adc8 <col:1> 'char [32]' lvalue Var 0x7fa25b8338a0 'aa98' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84adf0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ae70 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ae50 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84af70 <<scratch space>:631:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84af10 <<scratch space>:631:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84aef8 <<scratch space>:631:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84aeb0 <col:1> 'char [32]' lvalue Var 0x7fa25b833958 'aa99' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84aed8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84af58 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84af38 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b058 <<scratch space>:634:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84aff8 <<scratch space>:634:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84afe0 <<scratch space>:634:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84af98 <col:1> 'char [32]' lvalue Var 0x7fa25b833a10 'ab00' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84afc0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b040 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b020 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b140 <<scratch space>:636:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b0e0 <<scratch space>:636:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b0c8 <<scratch space>:636:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b080 <col:1> 'char [32]' lvalue Var 0x7fa25b833ac8 'ab01' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b0a8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b128 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b108 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b238 <<scratch space>:638:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b1c8 <<scratch space>:638:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b1b0 <<scratch space>:638:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b168 <col:1> 'char [32]' lvalue Var 0x7fa25b833b80 'ab02' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b190 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b220 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b200 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b320 <<scratch space>:640:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b2c0 <<scratch space>:640:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b2a8 <<scratch space>:640:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b260 <col:1> 'char [32]' lvalue Var 0x7fa25b833c38 'ab03' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b288 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b308 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b2e8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b408 <<scratch space>:642:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b3a8 <<scratch space>:642:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b390 <<scratch space>:642:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b348 <col:1> 'char [32]' lvalue Var 0x7fa25b833cf0 'ab04' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b370 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b3f0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b3d0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b4f0 <<scratch space>:644:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b490 <<scratch space>:644:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b478 <<scratch space>:644:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b430 <col:1> 'char [32]' lvalue Var 0x7fa25b833da8 'ab05' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b458 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b4d8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b4b8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b5d8 <<scratch space>:646:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b578 <<scratch space>:646:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b560 <<scratch space>:646:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b518 <col:1> 'char [32]' lvalue Var 0x7fa25b833e60 'ab06' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b540 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b5c0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b5a0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b6c0 <<scratch space>:648:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b660 <<scratch space>:648:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b648 <<scratch space>:648:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b600 <col:1> 'char [32]' lvalue Var 0x7fa25b833f18 'ab07' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b628 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b6a8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b688 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b7a8 <<scratch space>:650:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b748 <<scratch space>:650:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b730 <<scratch space>:650:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b6e8 <col:1> 'char [32]' lvalue Var 0x7fa25b829800 'ab08' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b710 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b790 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b770 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b890 <<scratch space>:652:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b830 <<scratch space>:652:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b818 <<scratch space>:652:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b7d0 <col:1> 'char [32]' lvalue Var 0x7fa25b8298b8 'ab09' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b7f8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b878 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b858 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84b978 <<scratch space>:655:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84b918 <<scratch space>:655:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b900 <<scratch space>:655:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b8b8 <col:1> 'char [32]' lvalue Var 0x7fa25b829970 'ab10' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b8e0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84b960 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84b940 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ba60 <<scratch space>:657:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ba00 <<scratch space>:657:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84b9e8 <<scratch space>:657:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84b9a0 <col:1> 'char [32]' lvalue Var 0x7fa25b829a28 'ab11' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84b9c8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ba48 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ba28 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84bb48 <<scratch space>:659:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84bae8 <<scratch space>:659:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84bad0 <<scratch space>:659:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ba88 <col:1> 'char [32]' lvalue Var 0x7fa25b829ae0 'ab12' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84bab0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84bb30 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84bb10 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84bc30 <<scratch space>:661:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84bbd0 <<scratch space>:661:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84bbb8 <<scratch space>:661:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84bb70 <col:1> 'char [32]' lvalue Var 0x7fa25b829b98 'ab13' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84bb98 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84bc18 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84bbf8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84bd18 <<scratch space>:663:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84bcb8 <<scratch space>:663:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84bca0 <<scratch space>:663:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84bc58 <col:1> 'char [32]' lvalue Var 0x7fa25b829c50 'ab14' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84bc80 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84bd00 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84bce0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84be00 <<scratch space>:665:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84bda0 <<scratch space>:665:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84bd88 <<scratch space>:665:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84bd40 <col:1> 'char [32]' lvalue Var 0x7fa25b829d08 'ab15' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84bd68 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84bde8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84bdc8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84bee8 <<scratch space>:667:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84be88 <<scratch space>:667:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84be70 <<scratch space>:667:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84be28 <col:1> 'char [32]' lvalue Var 0x7fa25b829dc0 'ab16' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84be50 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84bed0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84beb0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84bfd0 <<scratch space>:669:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84bf70 <<scratch space>:669:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84bf58 <<scratch space>:669:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84bf10 <col:1> 'char [32]' lvalue Var 0x7fa25b829e78 'ab17' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84bf38 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84bfb8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84bf98 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c0b8 <<scratch space>:671:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c058 <<scratch space>:671:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c040 <<scratch space>:671:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84bff8 <col:1> 'char [32]' lvalue Var 0x7fa25b829f30 'ab18' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c020 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c0a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c080 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c1a0 <<scratch space>:673:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c140 <<scratch space>:673:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c128 <<scratch space>:673:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c0e0 <col:1> 'char [32]' lvalue Var 0x7fa25b829fe8 'ab19' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c108 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c188 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c168 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c298 <<scratch space>:676:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c238 <<scratch space>:676:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c220 <<scratch space>:676:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c1c8 <col:1> 'char [32]' lvalue Var 0x7fa25b82a0a0 'ab20' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c200 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c280 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c260 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c380 <<scratch space>:678:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c320 <<scratch space>:678:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c308 <<scratch space>:678:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c2c0 <col:1> 'char [32]' lvalue Var 0x7fa25b82a158 'ab21' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c2e8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c368 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c348 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c468 <<scratch space>:680:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c408 <<scratch space>:680:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c3f0 <<scratch space>:680:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c3a8 <col:1> 'char [32]' lvalue Var 0x7fa25b82a210 'ab22' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c3d0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c450 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c430 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c550 <<scratch space>:682:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c4f0 <<scratch space>:682:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c4d8 <<scratch space>:682:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c490 <col:1> 'char [32]' lvalue Var 0x7fa25b82a2c8 'ab23' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c4b8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c538 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c518 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c638 <<scratch space>:684:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c5d8 <<scratch space>:684:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c5c0 <<scratch space>:684:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c578 <col:1> 'char [32]' lvalue Var 0x7fa25b82a380 'ab24' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c5a0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c620 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c600 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c720 <<scratch space>:686:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c6c0 <<scratch space>:686:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c6a8 <<scratch space>:686:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c660 <col:1> 'char [32]' lvalue Var 0x7fa25b82a438 'ab25' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c688 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c708 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c6e8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c808 <<scratch space>:688:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c7a8 <<scratch space>:688:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c790 <<scratch space>:688:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c748 <col:1> 'char [32]' lvalue Var 0x7fa25b82a4f0 'ab26' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c770 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c7f0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c7d0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c8f0 <<scratch space>:690:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c890 <<scratch space>:690:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c878 <<scratch space>:690:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c830 <col:1> 'char [32]' lvalue Var 0x7fa25b82a5a8 'ab27' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c858 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c8d8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c8b8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84c9d8 <<scratch space>:692:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84c978 <<scratch space>:692:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84c960 <<scratch space>:692:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84c918 <col:1> 'char [32]' lvalue Var 0x7fa25b82a660 'ab28' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84c940 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84c9c0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84c9a0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84cac0 <<scratch space>:694:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ca60 <<scratch space>:694:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ca48 <<scratch space>:694:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ca00 <col:1> 'char [32]' lvalue Var 0x7fa25b82a718 'ab29' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ca28 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84caa8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ca88 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84cba8 <<scratch space>:697:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84cb48 <<scratch space>:697:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84cb30 <<scratch space>:697:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84cae8 <col:1> 'char [32]' lvalue Var 0x7fa25b82f000 'ab30' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84cb10 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84cb90 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84cb70 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84cc90 <<scratch space>:699:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84cc30 <<scratch space>:699:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84cc18 <<scratch space>:699:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84cbd0 <col:1> 'char [32]' lvalue Var 0x7fa25b82f0b8 'ab31' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84cbf8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84cc78 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84cc58 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84cd78 <<scratch space>:701:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84cd18 <<scratch space>:701:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84cd00 <<scratch space>:701:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ccb8 <col:1> 'char [32]' lvalue Var 0x7fa25b82f170 'ab32' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84cce0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84cd60 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84cd40 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ce60 <<scratch space>:703:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ce00 <<scratch space>:703:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84cde8 <<scratch space>:703:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84cda0 <col:1> 'char [32]' lvalue Var 0x7fa25b82f228 'ab33' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84cdc8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ce48 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ce28 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84cf48 <<scratch space>:705:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84cee8 <<scratch space>:705:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ced0 <<scratch space>:705:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ce88 <col:1> 'char [32]' lvalue Var 0x7fa25b82f2e0 'ab34' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ceb0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84cf30 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84cf10 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d030 <<scratch space>:707:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84cfd0 <<scratch space>:707:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84cfb8 <<scratch space>:707:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84cf70 <col:1> 'char [32]' lvalue Var 0x7fa25b82f398 'ab35' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84cf98 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d018 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84cff8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d118 <<scratch space>:709:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d0b8 <<scratch space>:709:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d0a0 <<scratch space>:709:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d058 <col:1> 'char [32]' lvalue Var 0x7fa25b82f450 'ab36' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d080 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d100 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d0e0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d200 <<scratch space>:711:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d1a0 <<scratch space>:711:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d188 <<scratch space>:711:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d140 <col:1> 'char [32]' lvalue Var 0x7fa25b82f508 'ab37' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d168 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d1e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d1c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d2e8 <<scratch space>:713:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d288 <<scratch space>:713:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d270 <<scratch space>:713:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d228 <col:1> 'char [32]' lvalue Var 0x7fa25b82f5c0 'ab38' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d250 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d2d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d2b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d3d0 <<scratch space>:715:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d370 <<scratch space>:715:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d358 <<scratch space>:715:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d310 <col:1> 'char [32]' lvalue Var 0x7fa25b82f678 'ab39' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d338 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d3b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d398 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d4b8 <<scratch space>:718:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d458 <<scratch space>:718:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d440 <<scratch space>:718:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d3f8 <col:1> 'char [32]' lvalue Var 0x7fa25b82f730 'ab40' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d420 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d4a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d480 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d5a0 <<scratch space>:720:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d540 <<scratch space>:720:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d528 <<scratch space>:720:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d4e0 <col:1> 'char [32]' lvalue Var 0x7fa25b82f7e8 'ab41' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d508 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d588 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d568 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d688 <<scratch space>:722:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d628 <<scratch space>:722:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d610 <<scratch space>:722:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d5c8 <col:1> 'char [32]' lvalue Var 0x7fa25b82f8a0 'ab42' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d5f0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d670 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d650 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d770 <<scratch space>:724:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d710 <<scratch space>:724:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d6f8 <<scratch space>:724:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d6b0 <col:1> 'char [32]' lvalue Var 0x7fa25b82f958 'ab43' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d6d8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d758 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d738 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d858 <<scratch space>:726:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d7f8 <<scratch space>:726:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d7e0 <<scratch space>:726:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d798 <col:1> 'char [32]' lvalue Var 0x7fa25b82fa10 'ab44' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d7c0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d840 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d820 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84d940 <<scratch space>:728:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d8e0 <<scratch space>:728:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d8c8 <<scratch space>:728:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d880 <col:1> 'char [32]' lvalue Var 0x7fa25b82fac8 'ab45' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d8a8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84d928 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d908 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84da28 <<scratch space>:730:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84d9c8 <<scratch space>:730:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84d9b0 <<scratch space>:730:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84d968 <col:1> 'char [32]' lvalue Var 0x7fa25b82fb80 'ab46' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84d990 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84da10 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84d9f0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84db10 <<scratch space>:732:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84dab0 <<scratch space>:732:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84da98 <<scratch space>:732:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84da50 <col:1> 'char [32]' lvalue Var 0x7fa25b82fc38 'ab47' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84da78 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84daf8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84dad8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84dbf8 <<scratch space>:734:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84db98 <<scratch space>:734:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84db80 <<scratch space>:734:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84db38 <col:1> 'char [32]' lvalue Var 0x7fa25b82fcf0 'ab48' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84db60 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84dbe0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84dbc0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84dce0 <<scratch space>:736:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84dc80 <<scratch space>:736:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84dc68 <<scratch space>:736:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84dc20 <col:1> 'char [32]' lvalue Var 0x7fa25b82fda8 'ab49' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84dc48 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84dcc8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84dca8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ddc8 <<scratch space>:739:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84dd68 <<scratch space>:739:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84dd50 <<scratch space>:739:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84dd08 <col:1> 'char [32]' lvalue Var 0x7fa25b82fe60 'ab50' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84dd30 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ddb0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84dd90 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84deb0 <<scratch space>:741:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84de50 <<scratch space>:741:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84de38 <<scratch space>:741:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ddf0 <col:1> 'char [32]' lvalue Var 0x7fa25b82ff18 'ab51' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84de18 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84de98 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84de78 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84df98 <<scratch space>:743:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84df38 <<scratch space>:743:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84df20 <<scratch space>:743:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ded8 <col:1> 'char [32]' lvalue Var 0x7fa25b830000 'ab52' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84df00 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84df80 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84df60 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e080 <<scratch space>:745:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e020 <<scratch space>:745:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e008 <<scratch space>:745:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84dfc0 <col:1> 'char [32]' lvalue Var 0x7fa25b8300b8 'ab53' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84dfe8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e068 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e048 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e168 <<scratch space>:747:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e108 <<scratch space>:747:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e0f0 <<scratch space>:747:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e0a8 <col:1> 'char [32]' lvalue Var 0x7fa25b830170 'ab54' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e0d0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e150 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e130 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e260 <<scratch space>:749:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e200 <<scratch space>:749:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e1d8 <<scratch space>:749:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e190 <col:1> 'char [32]' lvalue Var 0x7fa25b830228 'ab55' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e1b8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e248 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e228 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e348 <<scratch space>:3:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e2e8 <<scratch space>:3:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e2d0 <<scratch space>:3:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e288 <col:1> 'char [32]' lvalue Var 0x7fa25b8302e0 'ab56' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e2b0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e330 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e310 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e430 <<scratch space>:5:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e3d0 <<scratch space>:5:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e3b8 <<scratch space>:5:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e370 <col:1> 'char [32]' lvalue Var 0x7fa25b830398 'ab57' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e398 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e418 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e3f8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e518 <<scratch space>:7:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e4b8 <<scratch space>:7:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e4a0 <<scratch space>:7:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e458 <col:1> 'char [32]' lvalue Var 0x7fa25b830450 'ab58' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e480 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e500 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e4e0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e600 <<scratch space>:9:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e5a0 <<scratch space>:9:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e588 <<scratch space>:9:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e540 <col:1> 'char [32]' lvalue Var 0x7fa25b830508 'ab59' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e568 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e5e8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e5c8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e6e8 <<scratch space>:12:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e688 <<scratch space>:12:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e670 <<scratch space>:12:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e628 <col:1> 'char [32]' lvalue Var 0x7fa25b8305c0 'ab60' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e650 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e6d0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e6b0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e7d0 <<scratch space>:14:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e770 <<scratch space>:14:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e758 <<scratch space>:14:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e710 <col:1> 'char [32]' lvalue Var 0x7fa25b830678 'ab61' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e738 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e7b8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e798 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e8b8 <<scratch space>:16:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e858 <<scratch space>:16:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e840 <<scratch space>:16:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e7f8 <col:1> 'char [32]' lvalue Var 0x7fa25b830730 'ab62' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e820 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e8a0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e880 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84e9a0 <<scratch space>:18:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84e940 <<scratch space>:18:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84e928 <<scratch space>:18:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e8e0 <col:1> 'char [32]' lvalue Var 0x7fa25b8307e8 'ab63' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e908 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84e988 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84e968 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ea88 <<scratch space>:20:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ea28 <<scratch space>:20:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ea10 <<scratch space>:20:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84e9c8 <col:1> 'char [32]' lvalue Var 0x7fa25b8308a0 'ab64' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84e9f0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ea70 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ea50 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84eb70 <<scratch space>:22:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84eb10 <<scratch space>:22:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84eaf8 <<scratch space>:22:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84eab0 <col:1> 'char [32]' lvalue Var 0x7fa25b830958 'ab65' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ead8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84eb58 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84eb38 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ec58 <<scratch space>:24:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ebf8 <<scratch space>:24:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ebe0 <<scratch space>:24:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84eb98 <col:1> 'char [32]' lvalue Var 0x7fa25b830a10 'ab66' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ebc0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ec40 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ec20 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ed40 <<scratch space>:26:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ece0 <<scratch space>:26:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ecc8 <<scratch space>:26:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ec80 <col:1> 'char [32]' lvalue Var 0x7fa25b830ac8 'ab67' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84eca8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ed28 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84ed08 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ee28 <<scratch space>:28:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84edc8 <<scratch space>:28:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84edb0 <<scratch space>:28:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ed68 <col:1> 'char [32]' lvalue Var 0x7fa25b830b80 'ab68' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ed90 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84ee10 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84edf0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84ef10 <<scratch space>:30:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84eeb0 <<scratch space>:30:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ee98 <<scratch space>:30:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ee50 <col:1> 'char [32]' lvalue Var 0x7fa25b830c38 'ab69' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ee78 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84eef8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84eed8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84eff8 <<scratch space>:33:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84ef98 <<scratch space>:33:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84ef80 <<scratch space>:33:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84ef38 <col:1> 'char [32]' lvalue Var 0x7fa25b830cf0 'ab70' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84ef60 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84efe0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84efc0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84f0e0 <<scratch space>:35:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84f080 <<scratch space>:35:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84f068 <<scratch space>:35:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84f020 <col:1> 'char [32]' lvalue Var 0x7fa25b830da8 'ab71' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84f048 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84f0c8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84f0a8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b84f1c8 <<scratch space>:37:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b84f168 <<scratch space>:37:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b84f150 <<scratch space>:37:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b84f108 <col:1> 'char [32]' lvalue Var 0x7fa25b830e60 'ab72' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b84f130 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b84f1b0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b84f190 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8504c0 <<scratch space>:39:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850460 <<scratch space>:39:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850448 <<scratch space>:39:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850400 <col:1> 'char [32]' lvalue Var 0x7fa25b830f18 'ab73' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850428 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8504a8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850488 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8505a8 <<scratch space>:41:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850548 <<scratch space>:41:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850530 <<scratch space>:41:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8504e8 <col:1> 'char [32]' lvalue Var 0x7fa25b83b000 'ab74' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850510 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850590 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850570 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850690 <<scratch space>:43:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850630 <<scratch space>:43:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850618 <<scratch space>:43:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8505d0 <col:1> 'char [32]' lvalue Var 0x7fa25b83b0b8 'ab75' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8505f8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850678 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850658 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850778 <<scratch space>:45:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850718 <<scratch space>:45:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850700 <<scratch space>:45:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8506b8 <col:1> 'char [32]' lvalue Var 0x7fa25b83b170 'ab76' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8506e0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850760 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850740 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850860 <<scratch space>:47:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850800 <<scratch space>:47:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8507e8 <<scratch space>:47:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8507a0 <col:1> 'char [32]' lvalue Var 0x7fa25b83b228 'ab77' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8507c8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850848 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850828 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850948 <<scratch space>:49:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8508e8 <<scratch space>:49:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8508d0 <<scratch space>:49:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850888 <col:1> 'char [32]' lvalue Var 0x7fa25b83b2e0 'ab78' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8508b0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850930 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850910 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850a30 <<scratch space>:51:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8509d0 <<scratch space>:51:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8509b8 <<scratch space>:51:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850970 <col:1> 'char [32]' lvalue Var 0x7fa25b83b398 'ab79' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850998 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850a18 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8509f8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850b18 <<scratch space>:54:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850ab8 <<scratch space>:54:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850aa0 <<scratch space>:54:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850a58 <col:1> 'char [32]' lvalue Var 0x7fa25b83b450 'ab80' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850a80 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850b00 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850ae0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850c00 <<scratch space>:56:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850ba0 <<scratch space>:56:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850b88 <<scratch space>:56:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850b40 <col:1> 'char [32]' lvalue Var 0x7fa25b83b508 'ab81' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850b68 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850be8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850bc8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850ce8 <<scratch space>:58:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850c88 <<scratch space>:58:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850c70 <<scratch space>:58:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850c28 <col:1> 'char [32]' lvalue Var 0x7fa25b83b5c0 'ab82' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850c50 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850cd0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850cb0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850dd0 <<scratch space>:60:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850d70 <<scratch space>:60:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850d58 <<scratch space>:60:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850d10 <col:1> 'char [32]' lvalue Var 0x7fa25b83b678 'ab83' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850d38 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850db8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850d98 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850eb8 <<scratch space>:62:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850e58 <<scratch space>:62:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850e40 <<scratch space>:62:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850df8 <col:1> 'char [32]' lvalue Var 0x7fa25b83b730 'ab84' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850e20 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850ea0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850e80 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b850fa0 <<scratch space>:64:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b850f40 <<scratch space>:64:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b850f28 <<scratch space>:64:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850ee0 <col:1> 'char [32]' lvalue Var 0x7fa25b83b7e8 'ab85' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850f08 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b850f88 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b850f68 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b851088 <<scratch space>:66:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b851028 <<scratch space>:66:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b851010 <<scratch space>:66:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b850fc8 <col:1> 'char [32]' lvalue Var 0x7fa25b83b8a0 'ab86' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b850ff0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b851070 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b851050 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b851170 <<scratch space>:68:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b851110 <<scratch space>:68:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8510f8 <<scratch space>:68:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8510b0 <col:1> 'char [32]' lvalue Var 0x7fa25b83b958 'ab87' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8510d8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b851158 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b851138 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b851258 <<scratch space>:70:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8511f8 <<scratch space>:70:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8511e0 <<scratch space>:70:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b851198 <col:1> 'char [32]' lvalue Var 0x7fa25b83ba10 'ab88' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8511c0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b851240 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b851220 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b851340 <<scratch space>:72:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8512e0 <<scratch space>:72:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8512c8 <<scratch space>:72:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b851280 <col:1> 'char [32]' lvalue Var 0x7fa25b83bac8 'ab89' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8512a8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b851328 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b851308 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b869438 <<scratch space>:75:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8513c8 <<scratch space>:75:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8513b0 <<scratch space>:75:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b851368 <col:1> 'char [32]' lvalue Var 0x7fa25b83bb80 'ab90' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b851390 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b869420 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b869400 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b869520 <<scratch space>:77:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8694c0 <<scratch space>:77:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b8694a8 <<scratch space>:77:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b869460 <col:1> 'char [32]' lvalue Var 0x7fa25b83bc38 'ab91' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869488 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b869508 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8694e8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b869608 <<scratch space>:79:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b8695a8 <<scratch space>:79:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869590 <<scratch space>:79:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b869548 <col:1> 'char [32]' lvalue Var 0x7fa25b83bcf0 'ab92' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869570 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8695f0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8695d0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8696f0 <<scratch space>:81:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b869690 <<scratch space>:81:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869678 <<scratch space>:81:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b869630 <col:1> 'char [32]' lvalue Var 0x7fa25b83bda8 'ab93' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869658 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8696d8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8696b8 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8697d8 <<scratch space>:83:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b869778 <<scratch space>:83:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869760 <<scratch space>:83:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b869718 <col:1> 'char [32]' lvalue Var 0x7fa25b83be60 'ab94' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869740 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8697c0 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b8697a0 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8698c0 <<scratch space>:85:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b869860 <<scratch space>:85:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869848 <<scratch space>:85:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b869800 <col:1> 'char [32]' lvalue Var 0x7fa25b83bf18 'ab95' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869828 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b8698a8 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b869888 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b8699a8 <<scratch space>:87:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b869948 <<scratch space>:87:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869930 <<scratch space>:87:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8698e8 <col:1> 'char [32]' lvalue Var 0x7fa25b834000 'ab96' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869910 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b869990 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b869970 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b869a90 <<scratch space>:89:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b869a30 <<scratch space>:89:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869a18 <<scratch space>:89:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b8699d0 <col:1> 'char [32]' lvalue Var 0x7fa25b8340b8 'ab97' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b8699f8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b869a78 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b869a58 <col:26> 'int' 0
+    |-BinaryOperator 0x7fa25b869b78 <<scratch space>:91:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+    | |-ArraySubscriptExpr 0x7fa25b869b18 <<scratch space>:91:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7fa25b869b00 <<scratch space>:91:1> 'char *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fa25b869ab8 <col:1> 'char [32]' lvalue Var 0x7fa25b834170 'ab98' 'char [32]'
+    | | `-IntegerLiteral 0x7fa25b869ae0 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+    | `-ImplicitCastExpr 0x7fa25b869b60 <col:26> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa25b869b40 <col:26> 'int' 0
+    `-BinaryOperator 0x7fa25b869c60 <<scratch space>:93:1, ../Data/C2AST/pr70017.c:18:26> 'char' '='
+      |-ArraySubscriptExpr 0x7fa25b869c00 <<scratch space>:93:1, ../Data/C2AST/pr70017.c:18:22> 'char' lvalue
+      | |-ImplicitCastExpr 0x7fa25b869be8 <<scratch space>:93:1> 'char *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7fa25b869ba0 <col:1> 'char [32]' lvalue Var 0x7fa25b834228 'ab99' 'char [32]'
+      | `-IntegerLiteral 0x7fa25b869bc8 <../Data/C2AST/pr70017.c:18:21> 'int' 0
+      `-ImplicitCastExpr 0x7fa25b869c48 <col:26> 'char' <IntegralCast>
+        `-IntegerLiteral 0x7fa25b869c28 <col:26> 'int' 0

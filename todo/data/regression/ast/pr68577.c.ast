@@ -1,0 +1,120 @@
+TranslationUnitDecl 0x7fb32d82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fb32d82c978 <../Data/C2AST/pr68577.c:3:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fb32e014258 <col:1, col:8> col:8 used b 'int'
+|-FunctionDecl 0x7fb32e014390 <line:5:1, line:13:1> line:6:1 __sched_cpucount 'void (void)'
+| `-CompoundStmt 0x7fb32e014898 <line:7:1, line:13:1>
+|   `-WhileStmt 0x7fb32e014878 <line:8:3, line:12:5>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fb32e014458 <line:8:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fb32e014430 <col:10> 'int' lvalue Var 0x7fb32e014258 'b' 'int'
+|     `-CompoundStmt 0x7fb32e014858 <line:9:5, line:12:5>
+|       |-DeclStmt 0x7fb32e014548 <line:10:7, col:19>
+|       | `-VarDecl 0x7fb32e014488 <col:7, col:17> col:12 used l 'long' cinit
+|       |   `-ImplicitCastExpr 0x7fb32e014530 <col:16, col:17> 'long' <IntegralCast>
+|       |     `-UnaryOperator 0x7fb32e014510 <col:16, col:17> 'int' postfix '++'
+|       |       `-DeclRefExpr 0x7fb32e0144e8 <col:16> 'int' lvalue Var 0x7fb32e014258 'b' 'int'
+|       `-CompoundAssignOperator 0x7fb32e014820 <line:11:7, col:33> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|         |-DeclRefExpr 0x7fb32e014560 <col:7> 'int' lvalue Var 0x7fb32d82c978 'a' 'int'
+|         `-CallExpr 0x7fb32e0147c0 <col:12, col:33> 'int'
+|           |-ImplicitCastExpr 0x7fb32e0147a8 <col:12> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+|           | `-DeclRefExpr 0x7fb32e014728 <col:12> '<builtin fn type>' Function 0x7fb32e0145c8 '__builtin_popcountl' 'int (unsigned long)'
+|           `-ImplicitCastExpr 0x7fb32e014808 <col:32> 'unsigned long' <IntegralCast>
+|             `-ImplicitCastExpr 0x7fb32e0147f0 <col:32> 'long' <LValueToRValue>
+|               `-DeclRefExpr 0x7fb32e014750 <col:32> 'long' lvalue Var 0x7fb32e014488 'l' 'long'
+|-FunctionDecl 0x7fb32e0145c8 <col:12> col:12 implicit used __builtin_popcountl 'int (unsigned long)' extern
+| |-ParmVarDecl 0x7fb32e014668 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-NoThrowAttr 0x7fb32e0146d0 <col:12> Implicit
+| `-ConstAttr 0x7fb32e014718 <col:12> Implicit
+`-FunctionDecl 0x7fb32e014a60 <line:15:1, line:25:1> line:16:1 slp_test 'void (int *, long *)'
+  |-ParmVarDecl 0x7fb32e0148f0 <col:11, col:16> col:16 used x 'int *'
+  |-ParmVarDecl 0x7fb32e014990 <col:19, col:25> col:25 used y 'long *'
+  `-CompoundStmt 0x7fb32e015748 <line:17:1, line:25:1>
+    `-ForStmt 0x7fb32e015710 <line:18:3, line:24:5>
+      |-DeclStmt 0x7fb32e014ba8 <line:18:8, col:17>
+      | `-VarDecl 0x7fb32e014b28 <col:8, col:16> col:12 used i 'int' cinit
+      |   `-IntegerLiteral 0x7fb32e014b88 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb32e014c20 <col:19, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7fb32e014c08 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb32e014bc0 <col:19> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+      | `-IntegerLiteral 0x7fb32e014be8 <col:23> 'int' 512
+      |-CompoundAssignOperator 0x7fb32e014c90 <col:28, col:33> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-DeclRefExpr 0x7fb32e014c48 <col:28> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+      | `-IntegerLiteral 0x7fb32e014c70 <col:33> 'int' 4
+      `-CompoundStmt 0x7fb32e0156e0 <line:19:5, line:24:5>
+        |-BinaryOperator 0x7fb32e014eb8 <line:20:7, col:38> 'int' '='
+        | |-ArraySubscriptExpr 0x7fb32e014d48 <col:7, col:10> 'int' lvalue
+        | | |-ImplicitCastExpr 0x7fb32e014d18 <col:7> 'int *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb32e014cc8 <col:7> 'int *' lvalue ParmVar 0x7fb32e0148f0 'x' 'int *'
+        | | `-ImplicitCastExpr 0x7fb32e014d30 <col:9> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fb32e014cf0 <col:9> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+        | `-CallExpr 0x7fb32e014e58 <col:14, col:38> 'int'
+        |   |-ImplicitCastExpr 0x7fb32e014e40 <col:14> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+        |   | `-DeclRefExpr 0x7fb32e014d70 <col:14> '<builtin fn type>' Function 0x7fb32e0145c8 '__builtin_popcountl' 'int (unsigned long)'
+        |   `-ImplicitCastExpr 0x7fb32e014ea0 <col:34, col:37> 'unsigned long' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7fb32e014e88 <col:34, col:37> 'long' <LValueToRValue>
+        |       `-ArraySubscriptExpr 0x7fb32e014e18 <col:34, col:37> 'long' lvalue
+        |         |-ImplicitCastExpr 0x7fb32e014de8 <col:34> 'long *' <LValueToRValue>
+        |         | `-DeclRefExpr 0x7fb32e014d98 <col:34> 'long *' lvalue ParmVar 0x7fb32e014990 'y' 'long *'
+        |         `-ImplicitCastExpr 0x7fb32e014e00 <col:36> 'int' <LValueToRValue>
+        |           `-DeclRefExpr 0x7fb32e014dc0 <col:36> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+        |-BinaryOperator 0x7fb32e015160 <line:21:7, col:46> 'int' '='
+        | |-ArraySubscriptExpr 0x7fb32e014fa8 <col:7, col:14> 'int' lvalue
+        | | |-ImplicitCastExpr 0x7fb32e014f90 <col:7> 'int *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb32e014ee0 <col:7> 'int *' lvalue ParmVar 0x7fb32e0148f0 'x' 'int *'
+        | | `-BinaryOperator 0x7fb32e014f68 <col:9, col:13> 'int' '+'
+        | |   |-ImplicitCastExpr 0x7fb32e014f50 <col:9> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fb32e014f08 <col:9> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+        | |   `-IntegerLiteral 0x7fb32e014f30 <col:13> 'int' 1
+        | `-CallExpr 0x7fb32e015100 <col:18, col:46> 'int'
+        |   |-ImplicitCastExpr 0x7fb32e0150e8 <col:18> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+        |   | `-DeclRefExpr 0x7fb32e014fd0 <col:18> '<builtin fn type>' Function 0x7fb32e0145c8 '__builtin_popcountl' 'int (unsigned long)'
+        |   `-ImplicitCastExpr 0x7fb32e015148 <col:38, col:45> 'unsigned long' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7fb32e015130 <col:38, col:45> 'long' <LValueToRValue>
+        |       `-ArraySubscriptExpr 0x7fb32e0150c0 <col:38, col:45> 'long' lvalue
+        |         |-ImplicitCastExpr 0x7fb32e0150a8 <col:38> 'long *' <LValueToRValue>
+        |         | `-DeclRefExpr 0x7fb32e014ff8 <col:38> 'long *' lvalue ParmVar 0x7fb32e014990 'y' 'long *'
+        |         `-BinaryOperator 0x7fb32e015080 <col:40, col:44> 'int' '+'
+        |           |-ImplicitCastExpr 0x7fb32e015068 <col:40> 'int' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7fb32e015020 <col:40> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+        |           `-IntegerLiteral 0x7fb32e015048 <col:44> 'int' 1
+        |-BinaryOperator 0x7fb32e015410 <line:22:7, col:46> 'int' '='
+        | |-ArraySubscriptExpr 0x7fb32e015258 <col:7, col:14> 'int' lvalue
+        | | |-ImplicitCastExpr 0x7fb32e015240 <col:7> 'int *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb32e015188 <col:7> 'int *' lvalue ParmVar 0x7fb32e0148f0 'x' 'int *'
+        | | `-BinaryOperator 0x7fb32e015218 <col:9, col:13> 'int' '+'
+        | |   |-ImplicitCastExpr 0x7fb32e015200 <col:9> 'int' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7fb32e0151b0 <col:9> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+        | |   `-IntegerLiteral 0x7fb32e0151d8 <col:13> 'int' 2
+        | `-CallExpr 0x7fb32e0153b0 <col:18, col:46> 'int'
+        |   |-ImplicitCastExpr 0x7fb32e015398 <col:18> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+        |   | `-DeclRefExpr 0x7fb32e015280 <col:18> '<builtin fn type>' Function 0x7fb32e0145c8 '__builtin_popcountl' 'int (unsigned long)'
+        |   `-ImplicitCastExpr 0x7fb32e0153f8 <col:38, col:45> 'unsigned long' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7fb32e0153e0 <col:38, col:45> 'long' <LValueToRValue>
+        |       `-ArraySubscriptExpr 0x7fb32e015370 <col:38, col:45> 'long' lvalue
+        |         |-ImplicitCastExpr 0x7fb32e015358 <col:38> 'long *' <LValueToRValue>
+        |         | `-DeclRefExpr 0x7fb32e0152a8 <col:38> 'long *' lvalue ParmVar 0x7fb32e014990 'y' 'long *'
+        |         `-BinaryOperator 0x7fb32e015330 <col:40, col:44> 'int' '+'
+        |           |-ImplicitCastExpr 0x7fb32e015318 <col:40> 'int' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7fb32e0152d0 <col:40> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+        |           `-IntegerLiteral 0x7fb32e0152f8 <col:44> 'int' 2
+        `-BinaryOperator 0x7fb32e0156b8 <line:23:7, col:46> 'int' '='
+          |-ArraySubscriptExpr 0x7fb32e015500 <col:7, col:14> 'int' lvalue
+          | |-ImplicitCastExpr 0x7fb32e0154e8 <col:7> 'int *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fb32e015438 <col:7> 'int *' lvalue ParmVar 0x7fb32e0148f0 'x' 'int *'
+          | `-BinaryOperator 0x7fb32e0154c0 <col:9, col:13> 'int' '+'
+          |   |-ImplicitCastExpr 0x7fb32e0154a8 <col:9> 'int' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fb32e015460 <col:9> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+          |   `-IntegerLiteral 0x7fb32e015488 <col:13> 'int' 3
+          `-CallExpr 0x7fb32e015658 <col:18, col:46> 'int'
+            |-ImplicitCastExpr 0x7fb32e015640 <col:18> 'int (*)(unsigned long)' <BuiltinFnToFnPtr>
+            | `-DeclRefExpr 0x7fb32e015528 <col:18> '<builtin fn type>' Function 0x7fb32e0145c8 '__builtin_popcountl' 'int (unsigned long)'
+            `-ImplicitCastExpr 0x7fb32e0156a0 <col:38, col:45> 'unsigned long' <IntegralCast>
+              `-ImplicitCastExpr 0x7fb32e015688 <col:38, col:45> 'long' <LValueToRValue>
+                `-ArraySubscriptExpr 0x7fb32e015618 <col:38, col:45> 'long' lvalue
+                  |-ImplicitCastExpr 0x7fb32e015600 <col:38> 'long *' <LValueToRValue>
+                  | `-DeclRefExpr 0x7fb32e015550 <col:38> 'long *' lvalue ParmVar 0x7fb32e014990 'y' 'long *'
+                  `-BinaryOperator 0x7fb32e0155d8 <col:40, col:44> 'int' '+'
+                    |-ImplicitCastExpr 0x7fb32e0155c0 <col:40> 'int' <LValueToRValue>
+                    | `-DeclRefExpr 0x7fb32e015578 <col:40> 'int' lvalue Var 0x7fb32e014b28 'i' 'int'
+                    `-IntegerLiteral 0x7fb32e0155a0 <col:44> 'int' 3

@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fc03382bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc03386d860 <../Data/C2AST/pr37432.c:1:1, line:3:1> line:1:13 used print_wkb_byte 'void (unsigned char)' static
+| |-ParmVarDecl 0x7fc03382c978 <col:28, col:42> col:42 used val 'unsigned char'
+| `-CompoundStmt 0x7fc03386dbf0 <col:47, line:3:1>
+|   `-CallExpr 0x7fc03386dbb0 <line:2:5, col:48> 'int'
+|     |-ImplicitCastExpr 0x7fc03386db98 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc03386da50 <col:5> 'int ()' Function 0x7fc03386d9a0 'print_wkb_bytes' 'int ()'
+|     |-CStyleCastExpr 0x7fc03386db00 <col:21, col:39> 'unsigned char *' <NoOp>
+|     | `-UnaryOperator 0x7fc03386dac8 <col:38, col:39> 'unsigned char *' prefix '&'
+|     |   `-DeclRefExpr 0x7fc03386da78 <col:39> 'unsigned char' lvalue ParmVar 0x7fc03382c978 'val' 'unsigned char'
+|     |-IntegerLiteral 0x7fc03386db28 <col:44> 'int' 1
+|     `-IntegerLiteral 0x7fc03386db48 <col:47> 'int' 1
+`-FunctionDecl 0x7fc03386dce0 <line:4:1, line:8:1> line:4:6 InsertMultiPoint 'void (int)'
+  |-ParmVarDecl 0x7fc03386dc20 <col:23, col:27> col:27 used b 'int'
+  `-CompoundStmt 0x7fc03386e040 <col:30, line:8:1>
+    |-DeclStmt 0x7fc03386de30 <line:5:5, col:15>
+    | `-VarDecl 0x7fc03386dd98 <col:5, col:14> col:10 used a 'char' cinit
+    |   `-ImplicitCastExpr 0x7fc03386de18 <col:14> 'char' <IntegralCast>
+    |     `-IntegerLiteral 0x7fc03386ddf8 <col:14> 'int' 1
+    |-IfStmt 0x7fc03386df10 <line:6:5, col:16>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc03386de70 <col:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc03386de48 <col:9> 'int' lvalue ParmVar 0x7fc03386dc20 'b' 'int'
+    | |-BinaryOperator 0x7fc03386dee8 <col:12, col:16> 'char' '='
+    | | |-DeclRefExpr 0x7fc03386de88 <col:12> 'char' lvalue Var 0x7fc03386dd98 'a' 'char'
+    | | `-ImplicitCastExpr 0x7fc03386ded0 <col:16> 'char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc03386deb0 <col:16> 'int' 0
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fc03386dfe0 <line:7:5, col:21> 'void'
+      |-ImplicitCastExpr 0x7fc03386dfc8 <col:5> 'void (*)(unsigned char)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc03386df48 <col:5> 'void (unsigned char)' Function 0x7fc03386d860 'print_wkb_byte' 'void (unsigned char)'
+      `-ImplicitCastExpr 0x7fc03386e028 <col:20> 'unsigned char' <IntegralCast>
+        `-ImplicitCastExpr 0x7fc03386e010 <col:20> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7fc03386df70 <col:20> 'char' lvalue Var 0x7fc03386dd98 'a' 'char'

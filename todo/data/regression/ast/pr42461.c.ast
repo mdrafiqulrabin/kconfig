@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7feaec82bae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7feaec86e668 <../Data/C2AST/pr42461.c:7:1, col:52> col:12 used link_failure 'int (int)' extern
+| |-ParmVarDecl 0x7feaec82c778 <col:26> col:29 'int'
+| `-PureAttr 0x7feaec86e710 <col:47>
+|-FunctionDecl 0x7feaec86e868 <line:9:1, line:14:1> line:9:5 main 'int (void)'
+| `-CompoundStmt 0x7feaec86ec58 <line:10:1, line:14:1>
+|   |-IfStmt 0x7feaec86ebe8 <line:11:3, line:12:28>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7feaec86ea10 <line:11:7, col:26> 'int' '<'
+|   | | |-CallExpr 0x7feaec86e9c0 <col:7, col:22> 'int'
+|   | | | |-ImplicitCastExpr 0x7feaec86e9a8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7feaec86e938 <col:7> 'int (int)' Function 0x7feaec86e668 'link_failure' 'int (int)'
+|   | | | `-IntegerLiteral 0x7feaec86e960 <col:21> 'int' 0
+|   | | `-IntegerLiteral 0x7feaec86e9f0 <col:26> 'int' 1
+|   | |-CallExpr 0x7feaec86ebc0 <line:12:5, col:28> 'void'
+|   | | `-ImplicitCastExpr 0x7feaec86eba8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7feaec86eb58 <col:5> '<builtin fn type>' Function 0x7feaec86ea70 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7feaec86ec40 <line:13:3, col:10>
+|     `-IntegerLiteral 0x7feaec86ec20 <col:10> 'int' 0
+`-FunctionDecl 0x7feaec86ea70 <line:12:5> col:5 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7feaec86eb10 <col:5> Implicit

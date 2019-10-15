@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fa7a4016ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa7a3018ef8 <../Data/C2AST/pr58742-1.c:4:1, line:10:1> line:5:1 fx 'int *(int *, int *)'
+  |-ParmVarDecl 0x7fa7a40179a0 <col:5, col:10> col:10 used b 'int *'
+  |-ParmVarDecl 0x7fa7a3018e18 <col:13, col:18> col:18 used e 'int *'
+  `-CompoundStmt 0x7fa7a30191f8 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fa7a3019120 <<built-in>:81:23, ../Data/C2AST/pr58742-1.c:7:26>
+    | `-VarDecl 0x7fa7a3019000 <<built-in>:81:23, ../Data/C2AST/pr58742-1.c:7:25> col:17 used p 'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7fa7a3019108 <col:21, col:25> 'unsigned long' <IntegralCast>
+    |     `-BinaryOperator 0x7fa7a30190e0 <col:21, col:25> 'long' '-'
+    |       |-ImplicitCastExpr 0x7fa7a30190b0 <col:21> 'int *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fa7a3019060 <col:21> 'int *' lvalue ParmVar 0x7fa7a3018e18 'e' 'int *'
+    |       `-ImplicitCastExpr 0x7fa7a30190c8 <col:25> 'int *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fa7a3019088 <col:25> 'int *' lvalue ParmVar 0x7fa7a40179a0 'b' 'int *'
+    `-ReturnStmt 0x7fa7a30191e0 <line:9:3, col:14>
+      `-BinaryOperator 0x7fa7a30191b8 <col:10, col:14> 'int *' '+'
+        |-ImplicitCastExpr 0x7fa7a3019188 <col:10> 'int *' <LValueToRValue>
+        | `-DeclRefExpr 0x7fa7a3019138 <col:10> 'int *' lvalue ParmVar 0x7fa7a40179a0 'b' 'int *'
+        `-ImplicitCastExpr 0x7fa7a30191a0 <col:14> 'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7fa7a3019160 <col:14> 'unsigned long' lvalue Var 0x7fa7a3019000 'p' 'unsigned long'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f8b458226e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8b470153e8 <../Data/C2AST/pr54602-3.c:6:1, line:10:1> line:7:1 test00 'int (int, int, int, int)'
+  |-ParmVarDecl 0x7f8b45823378 <col:9, col:13> col:13 used a 'int'
+  |-ParmVarDecl 0x7f8b47015200 <col:16, col:20> col:20 used b 'int'
+  |-ParmVarDecl 0x7f8b47015278 <col:23, col:27> col:27 c 'int'
+  |-ParmVarDecl 0x7f8b470152f0 <col:30, col:34> col:34 d 'int'
+  `-CompoundStmt 0x7f8b470155a8 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7f8b47015590 <line:9:3, col:14>
+      `-BinaryOperator 0x7f8b47015568 <col:10, col:14> 'int' '+'
+        |-ImplicitCastExpr 0x7f8b47015538 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f8b470154e8 <col:10> 'int' lvalue ParmVar 0x7f8b45823378 'a' 'int'
+        `-ImplicitCastExpr 0x7f8b47015550 <col:14> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f8b47015510 <col:14> 'int' lvalue ParmVar 0x7f8b47015200 'b' 'int'

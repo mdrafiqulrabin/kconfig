@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f89828288e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f89820184c8 <../Data/C2AST/pr61599-1.c:6:1, col:24> col:6 a 'char [1073741824]'
+|-VarDecl 0x7f8982018680 <line:7:1, col:24> col:6 b 'char [1073741824]'
+|-VarDecl 0x7f89820187f8 <line:8:1, col:24> col:6 used c 'char [1073741824]'
+|-FunctionDecl 0x7f89820188b0 <line:10:1, col:16> col:12 used bar 'int ()' extern
+`-FunctionDecl 0x7f8982018978 <line:11:1, line:14:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7f8982018ba0 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7f8982018b88 <line:13:3, col:23>
+      `-BinaryOperator 0x7f8982018b60 <col:10, col:23> 'int' '+'
+        |-CallExpr 0x7f8982018a80 <col:10, col:14> 'int'
+        | `-ImplicitCastExpr 0x7f8982018a68 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        |   `-DeclRefExpr 0x7f8982018a18 <col:10> 'int ()' Function 0x7f89820188b0 'bar' 'int ()'
+        `-ImplicitCastExpr 0x7f8982018b48 <col:18, col:23> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7f8982018b30 <col:18, col:23> 'char' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7f8982018b08 <col:18, col:23> 'char' lvalue
+              |-ImplicitCastExpr 0x7f8982018af0 <col:18> 'char *' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7f8982018aa8 <col:18> 'char [1073741824]' lvalue Var 0x7f89820187f8 'c' 'char [1073741824]'
+              `-IntegerLiteral 0x7f8982018ad0 <col:20> 'int' 225

@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f991101eae8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9911814bc8 <../Data/C2AST/pr60156.c:5:1, line:9:1> line:6:1 main 'int (int, char **, ...)'
+  |-ParmVarDecl 0x7f991101f778 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7f9911814ab0 <col:17, col:28> col:23 argv 'char **':'char **'
+  `-CompoundStmt 0x7f9911814cf0 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7f9911814cd8 <line:8:3, col:10>
+      `-IntegerLiteral 0x7f9911814cb8 <col:10> 'int' 0

@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7faa6782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa68015200 <../Data/C2AST/pr50788.c:4:1, col:19> col:19 referenced __m256i '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+| `-VectorType 0x7faa6782c980 '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' 4
+|   `-BuiltinType 0x7faa6782be20 'long long'
+|-TypedefDecl 0x7faa680152b8 <line:5:1, col:16> col:16 referenced __m256d '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+| `-VectorType 0x7faa68015280 '__attribute__((__vector_size__(4 * sizeof(double)))) double' 4
+|   `-BuiltinType 0x7faa6782bf00 'double'
+|-FunctionDecl 0x7faa68015540 <line:7:1, line:10:1> line:7:9 foo '__m256d (__m256d *, __m256i)'
+| |-ParmVarDecl 0x7faa68015398 <col:14, col:23> col:23 used __P '__m256d *'
+| |-ParmVarDecl 0x7faa68015430 <col:28, col:36> col:36 used __M '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7faa68015998 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7faa68015980 <line:9:3, col:49>
+|     `-CallExpr 0x7faa68015900 <col:10, col:49> '__attribute__((__vector_size__(4 * sizeof(double)))) double'
+|       |-ImplicitCastExpr 0x7faa680158e8 <col:10> '__attribute__((__vector_size__(4 * sizeof(double)))) double (*)(__attribute__((__vector_size__(4 * sizeof(double)))) double const *, __attribute__((__vector_size__(4 * sizeof(long long)))) long long)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7faa68015810 <col:10> '<builtin fn type>' Function 0x7faa680156a0 '__builtin_ia32_maskloadpd256' '__attribute__((__vector_size__(4 * sizeof(double)))) double (__attribute__((__vector_size__(4 * sizeof(double)))) double const *, __attribute__((__vector_size__(4 * sizeof(long long)))) long long)'
+|       |-ImplicitCastExpr 0x7faa68015950 <col:41> '__attribute__((__vector_size__(4 * sizeof(double)))) double const *' <BitCast>
+|       | `-ImplicitCastExpr 0x7faa68015938 <col:41> '__m256d *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7faa68015838 <col:41> '__m256d *' lvalue ParmVar 0x7faa68015398 '__P' '__m256d *'
+|       `-ImplicitCastExpr 0x7faa68015968 <col:46> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7faa68015860 <col:46> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue ParmVar 0x7faa68015430 '__M' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+`-FunctionDecl 0x7faa680156a0 <col:10> col:10 implicit used __builtin_ia32_maskloadpd256 '__attribute__((__vector_size__(4 * sizeof(double)))) double (__attribute__((__vector_size__(4 * sizeof(double)))) double const *, __attribute__((__vector_size__(4 * sizeof(long long)))) long long)' extern
+  |-ParmVarDecl 0x7faa68015740 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(double)))) double const *'
+  `-ParmVarDecl 0x7faa680157a0 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'

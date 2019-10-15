@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7faabe01b4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7faabe05d068 <../Data/C2AST/pr15784-3.c:7:15> col:15 implicit used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7faabe05d108 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7faabe05d170 <col:15> Implicit
+| `-ConstAttr 0x7faabe05d1b8 <col:15> Implicit
+|-FunctionDecl 0x7faabe05d1c8 prev 0x7faabe05d068 <col:1, col:27> col:15 used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7faabe01c178 <col:21> col:27 'double'
+| |-NoThrowAttr 0x7faabe05d2a8 <col:15> Inherited Implicit
+| `-ConstAttr 0x7faabe05d2b8 <col:15> Inherited Implicit
+`-FunctionDecl 0x7faabe05d3a8 <line:9:1, line:11:1> line:9:5 a 'int (float)'
+  |-ParmVarDecl 0x7faabe05d2e0 <col:8, col:14> col:14 used x 'float'
+  `-CompoundStmt 0x7faabe05d5e0 <col:17, line:11:1>
+    `-ReturnStmt 0x7faabe05d5c8 <line:10:2, col:20>
+      `-BinaryOperator 0x7faabe05d5a0 <col:9, col:20> 'int' '>='
+        |-CallExpr 0x7faabe05d520 <col:9, col:15> 'double'
+        | |-ImplicitCastExpr 0x7faabe05d508 <col:9> 'double (*)(double)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7faabe05d490 <col:9> 'double (double)' Function 0x7faabe05d1c8 'fabs' 'double (double)'
+        | `-ImplicitCastExpr 0x7faabe05d568 <col:14> 'double' <FloatingCast>
+        |   `-ImplicitCastExpr 0x7faabe05d550 <col:14> 'float' <LValueToRValue>
+        |     `-DeclRefExpr 0x7faabe05d4b8 <col:14> 'float' lvalue ParmVar 0x7faabe05d2e0 'x' 'float'
+        `-FloatingLiteral 0x7faabe05d580 <col:20> 'double' 0.000000e+00

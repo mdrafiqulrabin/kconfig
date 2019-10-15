@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7ff30682bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7ff30682c960 <../Data/C2AST/pr79058.c:6:1, col:62> col:1
+| |-EnumConstantDecl 0x7ff307014220 <col:8> col:8 NILFS_SEGMENT_USAGE_ACTIVE 'int'
+| `-EnumConstantDecl 0x7ff307014268 <col:36> col:36 referenced NILFS_SEGMENT_USAGE_DIRTY 'int'
+|-VarDecl 0x7ff307014300 <col:1, col:64> col:64 used a 'enum (anonymous enum at ../Data/C2AST/pr79058.c:6:1)':'enum (anonymous at ../Data/C2AST/pr79058.c:6:1)'
+|-FunctionDecl 0x7ff307014490 <line:8:1, col:20> col:6 used fn2 'void (long long)'
+| `-ParmVarDecl 0x7ff3070143d0 <col:11, col:16> col:20 'long long'
+`-FunctionDecl 0x7ff307014588 <line:10:1, line:13:1> line:10:6 fn1 'void ()'
+  `-CompoundStmt 0x7ff3070149a0 <col:12, line:13:1>
+    |-DeclStmt 0x7ff3070147c0 <line:11:3, col:45>
+    | `-VarDecl 0x7ff307014640 <col:3, col:20> col:7 used b 'int' cinit
+    |   `-ImplicitCastExpr 0x7ff3070147a8 <col:11, col:20> 'int' <IntegralCast>
+    |     `-BinaryOperator 0x7ff307014780 <col:11, col:20> 'unsigned int' '&'
+    |       |-ImplicitCastExpr 0x7ff307014750 <col:11> 'unsigned int' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7ff307014738 <col:11> 'enum (anonymous enum at ../Data/C2AST/pr79058.c:6:1)':'enum (anonymous at ../Data/C2AST/pr79058.c:6:1)' <LValueToRValue>
+    |       |   `-DeclRefExpr 0x7ff3070146a0 <col:11> 'enum (anonymous enum at ../Data/C2AST/pr79058.c:6:1)':'enum (anonymous at ../Data/C2AST/pr79058.c:6:1)' lvalue Var 0x7ff307014300 'a' 'enum (anonymous enum at ../Data/C2AST/pr79058.c:6:1)':'enum (anonymous at ../Data/C2AST/pr79058.c:6:1)'
+    |       `-ImplicitCastExpr 0x7ff307014768 <col:15, col:20> 'unsigned int' <IntegralCast>
+    |         `-BinaryOperator 0x7ff307014710 <col:15, col:20> 'int' '<<'
+    |           |-IntegerLiteral 0x7ff3070146c8 <col:15> 'int' 1
+    |           `-DeclRefExpr 0x7ff3070146e8 <col:20> 'int' EnumConstant 0x7ff307014268 'NILFS_SEGMENT_USAGE_DIRTY' 'int'
+    `-CallExpr 0x7ff307014970 <line:12:3, col:30> 'void'
+      |-ImplicitCastExpr 0x7ff307014958 <col:3> 'void (*)(long long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff3070147d8 <col:3> 'void (long long)' Function 0x7ff307014490 'fn2' 'void (long long)'
+      `-ConditionalOperator 0x7ff3070148f8 <col:8, col:29> 'long long'
+        |-ImplicitCastExpr 0x7ff3070148c8 <col:8> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7ff307014800 <col:8> 'int' lvalue Var 0x7ff307014640 'b' 'int'
+        |-CStyleCastExpr 0x7ff307014880 <col:12, col:25> 'long long' <IntegralCast>
+        | `-UnaryOperator 0x7ff307014848 <col:24, col:25> 'int' prefix '-'
+        |   `-IntegerLiteral 0x7ff307014828 <col:25> 'int' 1
+        `-ImplicitCastExpr 0x7ff3070148e0 <col:29> 'long long' <IntegralCast>
+          `-IntegerLiteral 0x7ff3070148a8 <col:29> 'int' 0

@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fd70800c0e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd70800cec0 <../Data/C2AST/pr38200.c:5:1, col:29> col:15 referenced callptr 'int (*)(void)'
+| `-PointerType 0x7fd70800ce60 'int (*)(void)'
+|   `-ParenType 0x7fd70800ce00 'int (void)' sugar
+|     `-FunctionProtoType 0x7fd70800cdd0 'int (void)' cdecl
+|       `-BuiltinType 0x7fd70800c1e0 'int'
+|-FunctionDecl 0x7fd70800d028 <line:6:1, col:18> col:5 used foo 'int (void **)'
+| `-ParmVarDecl 0x7fd70800cf60 <col:10, col:17> col:17 x 'void **'
+|-FunctionDecl 0x7fd70800d2a0 <line:7:1, col:21> col:6 used foo2 'void (callptr *)'
+| `-ParmVarDecl 0x7fd70800d198 <col:12, col:20> col:21 'callptr *'
+|-VarDecl 0x7fd70800d488 <line:8:1, col:29> col:7 used foo_ptr 'int (*)(void **)' cinit
+| `-ImplicitCastExpr 0x7fd70800d510 <col:29> 'int (*)(void **)' <FunctionToPointerDecay>
+|   `-DeclRefExpr 0x7fd70800d4e8 <col:29> 'int (void **)' Function 0x7fd70800d028 'foo' 'int (void **)'
+`-FunctionDecl 0x7fd70800d5f0 <line:10:1, line:16:1> line:11:1 bar 'void (void)'
+  `-CompoundStmt 0x7fd70800d9e0 <line:12:1, line:16:1>
+    |-DeclStmt 0x7fd70800d708 <line:13:3, col:12>
+    | `-VarDecl 0x7fd70800d6a8 <col:3, col:9> col:9 used ptr 'void *'
+    |-CallExpr 0x7fd70800d840 <line:14:3, col:25> 'void'
+    | |-ImplicitCastExpr 0x7fd70800d828 <col:3> 'void (*)(callptr *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd70800d720 <col:3> 'void (callptr *)' Function 0x7fd70800d2a0 'foo2' 'void (callptr *)'
+    | `-CStyleCastExpr 0x7fd70800d7a0 <col:9, col:22> 'callptr *' <BitCast>
+    |   `-UnaryOperator 0x7fd70800d770 <col:21, col:22> 'void **' prefix '&'
+    |     `-DeclRefExpr 0x7fd70800d748 <col:22> 'void *' lvalue Var 0x7fd70800d6a8 'ptr' 'void *'
+    `-BinaryOperator 0x7fd70800d9b8 <line:15:3, col:25> 'void *' '='
+      |-UnaryOperator 0x7fd70800d958 <col:3, col:15> 'void *' lvalue prefix '*'
+      | `-CStyleCastExpr 0x7fd70800d930 <col:4, col:15> 'void **' <BitCast>
+      |   `-UnaryOperator 0x7fd70800d8f8 <col:14, col:15> 'int (**)(void **)' prefix '&'
+      |     `-DeclRefExpr 0x7fd70800d870 <col:15> 'int (*)(void **)' lvalue Var 0x7fd70800d488 'foo_ptr' 'int (*)(void **)'
+      `-ImplicitCastExpr 0x7fd70800d9a0 <col:25> 'void *' <LValueToRValue>
+        `-DeclRefExpr 0x7fd70800d978 <col:25> 'void *' lvalue Var 0x7fd70800d6a8 'ptr' 'void *'

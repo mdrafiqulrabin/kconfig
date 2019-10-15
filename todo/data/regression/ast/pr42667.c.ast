@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ff89c82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff89d8010a8 <../Data/C2AST/pr42667.c:4:12> col:12 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7ff89d801148 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7ff89d8011b0 prev 0x7ff89d8010a8 <col:1, col:31> col:12 used strlen 'int (const char *)' extern
+| `-ParmVarDecl 0x7ff89c82c978 <col:19, col:30> col:31 'const char *'
+|-FunctionDecl 0x7ff89d801330 <line:5:1, col:27> col:6 used WriteTextDots 'void (int)'
+| `-ParmVarDecl 0x7ff89d801270 <col:20, col:24> col:24 len 'int'
+`-FunctionDecl 0x7ff89d8014f0 <line:7:1, line:12:1> line:7:6 OnDisplay 'void (char *)'
+  |-ParmVarDecl 0x7ff89d801430 <col:16, col:23> col:23 used string 'char *'
+  `-CompoundStmt 0x7ff89d801890 <line:8:1, line:12:1>
+    |-IfStmt 0x7ff89d8016c8 <line:9:3, line:10:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7ff89d8015d8 <line:9:7, col:8> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7ff89d8015c0 <col:8> 'char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7ff89d801598 <col:8> 'char *' lvalue ParmVar 0x7ff89d801430 'string' 'char *'
+    | |-BinaryOperator 0x7ff89d8016a0 <line:10:5, col:14> 'char *' '='
+    | | |-DeclRefExpr 0x7ff89d8015f8 <col:5> 'char *' lvalue ParmVar 0x7ff89d801430 'string' 'char *'
+    | | `-ImplicitCastExpr 0x7ff89d801688 <col:14> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7ff89d801658 <col:14> 'char [7]' lvalue "(none)"
+    | `-<<<NULL>>>
+    `-CallExpr 0x7ff89d801860 <line:11:3, col:31> 'void'
+      |-ImplicitCastExpr 0x7ff89d801848 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff89d801700 <col:3> 'void (int)' Function 0x7ff89d801330 'WriteTextDots' 'void (int)'
+      `-CallExpr 0x7ff89d8017c0 <col:17, col:30> 'int'
+        |-ImplicitCastExpr 0x7ff89d8017a8 <col:17> 'int (*)(const char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff89d801728 <col:17> 'int (const char *)' Function 0x7ff89d8011b0 'strlen' 'int (const char *)'
+        `-ImplicitCastExpr 0x7ff89d801808 <col:24> 'const char *' <BitCast>
+          `-ImplicitCastExpr 0x7ff89d8017f0 <col:24> 'char *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff89d801750 <col:24> 'char *' lvalue ParmVar 0x7ff89d801430 'string' 'char *'

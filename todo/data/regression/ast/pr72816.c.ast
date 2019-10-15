@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fb6a882bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6a886d800 <../Data/C2AST/pr72816.c:5:1, col:21> col:19 referenced A 'const int []'
+| `-IncompleteArrayType 0x7fb6a882c990 'const int []' 
+|   `-QualType 0x7fb6a882bde1 'const int' const
+|     `-BuiltinType 0x7fb6a882bde0 'int'
+`-RecordDecl 0x7fb6a886d858 <line:6:1, line:9:1> line:6:8 struct S definition
+  |-FieldDecl 0x7fb6a886d918 <line:7:3, col:7> col:7 a 'int'
+  `-FieldDecl 0x7fb6a886d990 <line:8:3, col:5> col:5 b 'A':'const int []'

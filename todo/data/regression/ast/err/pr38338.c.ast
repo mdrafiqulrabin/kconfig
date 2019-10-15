@@ -1,0 +1,57 @@
+../Data/C2AST/pr38338.c:17:16: error: use of unknown builtin '__builtin_apply_args' [-Wimplicit-function-declaration]
+  void *args = __builtin_apply_args ();
+               ^
+../Data/C2AST/pr38338.c:18:10: error: use of unknown builtin '__builtin_apply' [-Wimplicit-function-declaration]
+  return __builtin_apply ((fnp) foo, args, sizeof (void *));
+         ^
+../Data/C2AST/pr38338.c:18:10: note: did you mean '__builtin_apply_args'?
+../Data/C2AST/pr38338.c:17:16: note: '__builtin_apply_args' declared here
+  void *args = __builtin_apply_args ();
+               ^
+2 errors generated.
+TranslationUnitDecl 0x7fb82a02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb82a02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb82a02bf80 '__int128'
+|-TypedefDecl 0x7fb82a02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb82a02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb82a02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb82a02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb82a02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb82a02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb82a02c600 'char *'
+|   `-BuiltinType 0x7fb82a02bd80 'char'
+|-TypedefDecl 0x7fb82a02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb82a02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb82a02c720 'struct __va_list_tag'
+|     `-Record 0x7fb82a02c698 '__va_list_tag'
+|-TypedefDecl 0x7fb82a8142b8 <../Data/C2AST/pr38338.c:6:1, col:26> col:16 referenced fnp 'void (*)(void)'
+| `-PointerType 0x7fb82a814260 'void (*)(void)'
+|   `-ParenType 0x7fb82a814200 'void (void)' sugar
+|     `-FunctionProtoType 0x7fb82a02c9d0 'void (void)' cdecl
+|       `-BuiltinType 0x7fb82a02bd40 'void'
+|-FunctionDecl 0x7fb82a8143e0 <line:8:1, line:12:1> line:9:1 used foo 'char (char)' static
+| |-ParmVarDecl 0x7fb82a814320 <col:6, col:11> col:11 used x 'char'
+| `-CompoundStmt 0x7fb82a814520 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7fb82a814508 <line:11:3, col:10>
+|     `-ImplicitCastExpr 0x7fb82a8144f0 <col:10> 'char' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb82a8144c8 <col:10> 'char' lvalue ParmVar 0x7fb82a814320 'x' 'char'
+`-FunctionDecl 0x7fb82a814618 <line:14:1, line:19:1> line:15:1 bar 'void *(char)' static
+  |-ParmVarDecl 0x7fb82a814548 <col:6, col:11> col:11 x 'char'
+  `-CompoundStmt 0x7fb82a814be8 <line:16:1, line:19:1>
+    |-DeclStmt 0x7fb82a814900 <line:17:3, col:39>
+    | `-VarDecl 0x7fb82a8146d8 <col:3, col:38> col:9 used args 'void *' cinit
+    |   `-ImplicitCastExpr 0x7fb82a8148e8 <col:16, col:38> 'void *' <IntegralToPointer>
+    |     `-CallExpr 0x7fb82a8148c0 <col:16, col:38> 'int'
+    |       `-ImplicitCastExpr 0x7fb82a8148a8 <col:16> 'int (*)()' <FunctionToPointerDecay>
+    |         `-DeclRefExpr 0x7fb82a814850 <col:16> 'int ()' Function 0x7fb82a8147a0 '__builtin_apply_args' 'int ()'
+    `-ReturnStmt 0x7fb82a814bd0 <line:18:3, col:59>
+      `-ImplicitCastExpr 0x7fb82a814bb8 <col:10, col:59> 'void *' <IntegralToPointer>
+        `-CallExpr 0x7fb82a814b60 <col:10, col:59> 'int'
+          |-ImplicitCastExpr 0x7fb82a814b48 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fb82a8149f0 <col:10> 'int ()' Function 0x7fb82a814940 '__builtin_apply' 'int ()'
+          |-CStyleCastExpr 0x7fb82a814ac0 <col:27, col:33> 'fnp':'void (*)(void)' <BitCast>
+          | `-ImplicitCastExpr 0x7fb82a814aa8 <col:33> 'char (*)(char)' <FunctionToPointerDecay>
+          |   `-DeclRefExpr 0x7fb82a814a40 <col:33> 'char (char)' Function 0x7fb82a8143e0 'foo' 'char (char)'
+          |-ImplicitCastExpr 0x7fb82a814ba0 <col:38> 'void *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb82a814ae8 <col:38> 'void *' lvalue Var 0x7fb82a8146d8 'args' 'void *'
+          `-UnaryExprOrTypeTraitExpr 0x7fb82a814b28 <col:44, col:58> 'unsigned long' sizeof 'void *'

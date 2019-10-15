@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7fcddb02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcddb02c978 <../Data/C2AST/pr64409.c:5:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fcddb814310 <line:6:1, col:51> col:31 fn1 'int *() __attribute__((ms_abi))':'int *() __attribute__((ms_abi))'
+  `-CompoundStmt 0x7fcddb814410 <col:38, col:51>
+    `-ReturnStmt 0x7fcddb8143f8 <col:40, col:48>
+      `-UnaryOperator 0x7fcddb8143d8 <col:47, col:48> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fcddb8143b0 <col:48> 'int' lvalue Var 0x7fcddb02c978 'a' 'int'

@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7f80fd00b6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f80fc008858 <../Data/C2AST/pragma-re-1.c:9:1, col:20> col:12 used foo 'int (void)' extern
+| `-AsmLabelAttr 0x7f80fd00c360 <line:8:30> Implicit "bar"
+`-VarDecl 0x7f80fc008aa0 <line:10:1, col:18> col:7 p 'int (*)(void)' cinit
+  `-ImplicitCastExpr 0x7f80fc008b28 <col:18> 'int (*)(void)' <FunctionToPointerDecay>
+    `-DeclRefExpr 0x7f80fc008b00 <col:18> 'int (void)' Function 0x7f80fc008858 'foo' 'int (void)'

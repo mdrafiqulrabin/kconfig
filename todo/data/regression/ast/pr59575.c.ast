@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f828202b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8282814260 <../Data/C2AST/pr59575.c:5:1, col:16> col:6 used foo 'void (int *)'
+| `-ParmVarDecl 0x7f828202bfa0 <col:11, col:15> col:16 'int *'
+|-FunctionDecl 0x7f8282814538 <line:6:1, col:30> col:6 used bar 'int *(int, long long, int)'
+| |-ParmVarDecl 0x7f8282814360 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7f82828143d8 <col:16, col:21> col:25 'long long'
+| `-ParmVarDecl 0x7f8282814450 <col:27> col:30 'int'
+`-FunctionDecl 0x7f8282814690 <line:8:1, line:15:1> line:9:1 test 'void (int *)'
+  |-ParmVarDecl 0x7f8282814608 <col:7, col:12> col:12 used p 'int *'
+  `-CompoundStmt 0x7f8282814af0 <line:10:1, line:15:1>
+    `-IfStmt 0x7f8282814ab8 <line:11:3, line:14:11>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8282814760 <line:11:7> 'int *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8282814738 <col:7> 'int *' lvalue ParmVar 0x7f8282814608 'p' 'int *'
+      |-CallExpr 0x7f8282814810 <line:12:5, col:11> 'void'
+      | |-ImplicitCastExpr 0x7f82828147f8 <col:5> 'void (*)(int *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f8282814778 <col:5> 'void (int *)' Function 0x7f8282814260 'foo' 'void (int *)'
+      | `-ImplicitCastExpr 0x7f8282814840 <col:10> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f82828147a0 <col:10> 'int *' lvalue ParmVar 0x7f8282814608 'p' 'int *'
+      `-IfStmt 0x7f8282814a80 <line:13:8, line:14:11>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7f82828149a8 <line:13:12, col:28> 'int *' '='
+        | |-DeclRefExpr 0x7f8282814858 <col:12> 'int *' lvalue ParmVar 0x7f8282814608 'p' 'int *'
+        | `-CallExpr 0x7f8282814950 <col:16, col:28> 'int *'
+        |   |-ImplicitCastExpr 0x7f8282814938 <col:16> 'int *(*)(int, long long, int)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7f8282814880 <col:16> 'int *(int, long long, int)' Function 0x7f8282814538 'bar' 'int *(int, long long, int)'
+        |   |-IntegerLiteral 0x7f82828148a8 <col:21> 'int' 0
+        |   |-ImplicitCastExpr 0x7f8282814990 <col:24> 'long long' <IntegralCast>
+        |   | `-IntegerLiteral 0x7f82828148c8 <col:24> 'int' 1
+        |   `-IntegerLiteral 0x7f82828148e8 <col:27> 'int' 2
+        |-CallExpr 0x7f8282814a38 <line:14:5, col:11> 'void'
+        | |-ImplicitCastExpr 0x7f8282814a20 <col:5> 'void (*)(int *)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7f82828149d0 <col:5> 'void (int *)' Function 0x7f8282814260 'foo' 'void (int *)'
+        | `-ImplicitCastExpr 0x7f8282814a68 <col:10> 'int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f82828149f8 <col:10> 'int *' lvalue ParmVar 0x7f8282814608 'p' 'int *'
+        `-<<<NULL>>>

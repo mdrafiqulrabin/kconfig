@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fd8120262e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd81181ba68 <../Data/C2AST/pr35083.c:5:1, line:8:1> line:5:7 test 'float (unsigned int)'
+  |-ParmVarDecl 0x7fd812026f78 <col:13, col:26> col:26 used x 'unsigned int'
+  `-CompoundStmt 0x7fd81181bbe8 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fd81181bbd0 <line:7:3, col:18>
+      `-CStyleCastExpr 0x7fd81181bba8 <col:10, col:18> 'float' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7fd81181bb90 <col:18> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd81181bb50 <col:18> 'unsigned int' lvalue ParmVar 0x7fd812026f78 'x' 'unsigned int'

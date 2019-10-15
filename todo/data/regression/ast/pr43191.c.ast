@@ -1,0 +1,88 @@
+TranslationUnitDecl 0x7f9a2f019ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9a2f01ab60 <../Data/C2AST/pr43191.c:3:1, line:5:1> line:3:8 struct S0 definition
+|-RecordDecl 0x7f9a3001d420 <line:7:1, line:11:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7f9a3001d508 <line:9:3, col:15> col:12 f0 'unsigned int'
+| | `-IntegerLiteral 0x7f9a3001d4d0 <col:15> 'int' 27
+| `-FieldDecl 0x7f9a3001d588 <line:10:3, col:18> col:3 'const unsigned int'
+|   `-IntegerLiteral 0x7f9a3001d550 <col:18> 'int' 0
+|-RecordDecl 0x7f9a3001d5d0 <line:13:1, line:16:1> line:13:8 struct S2 definition
+| `-FieldDecl 0x7f9a3001d6b8 <line:15:3, col:15> col:12 f2 'unsigned int'
+|   `-IntegerLiteral 0x7f9a3001d680 <col:15> 'int' 1
+|-VarDecl 0x7f9a3001d9b0 <line:18:1, col:35> col:15 g_4 'unsigned char [1][8][3][1][1][1]'
+|-VarDecl 0x7f9a3001da90 <line:19:1, col:16> col:16 used g_17 'unsigned char *'
+|-VarDecl 0x7f9a3001dc88 <line:20:1, col:30> col:17 g_16 'unsigned char **[1][10][7]'
+|-VarDecl 0x7f9a3001dd40 <line:22:1, line:24:1> line:22:11 used g_35 'struct S2':'struct S2' cinit
+| `-InitListExpr 0x7f9a3001de08 <col:18, line:24:1> 'struct S2':'struct S2'
+|   `-ImplicitCastExpr 0x7f9a3001de50 <line:23:3> 'unsigned int' <IntegralCast>
+|     `-IntegerLiteral 0x7f9a3001dda0 <col:3> 'int' 0
+|-VarDecl 0x7f9a3001def0 <line:26:1, col:20> col:12 used g_34 'struct S2 *' cinit
+| `-UnaryOperator 0x7f9a3001df78 <col:19, col:20> 'struct S2 *' prefix '&'
+|   `-DeclRefExpr 0x7f9a3001df50 <col:20> 'struct S2':'struct S2' lvalue Var 0x7f9a3001dd40 'g_35' 'struct S2':'struct S2'
+|-FunctionDecl 0x7f9a3001e1e0 <line:28:1, line:35:1> line:28:11 used func_86 'struct S1 (unsigned char, struct S2 **)'
+| |-ParmVarDecl 0x7f9a3001dfb0 <col:20, col:34> col:34 p_87 'unsigned char'
+| |-ParmVarDecl 0x7f9a3001e090 <col:40, col:52> col:52 p_89 'struct S2 **'
+| `-CompoundStmt 0x7f9a3001ebe8 <line:29:1, line:35:1>
+|   |-DeclStmt 0x7f9a3001e880 <line:30:3, line:33:3>
+|   | `-VarDecl 0x7f9a3001e5d8 <line:30:3, line:32:3> line:30:13 used l_92 'struct S1 [6][8][1][1]' cinit
+|   |   `-InitListExpr 0x7f9a3001e6a0 <col:32, line:32:3> 'struct S1 [6][8][1][1]'
+|   |     |-array filler
+|   |     | `-ImplicitValueInitExpr 0x7f9a3001e870 <<invalid sloc>> 'struct S1 [8][1][1]'
+|   |     `-InitListExpr 0x7f9a3001e6e0 <line:31:5> 'struct S1 [8][1][1]'
+|   |       |-array filler
+|   |       | `-ImplicitValueInitExpr 0x7f9a3001e860 <<invalid sloc>> 'struct S1 [1][1]'
+|   |       `-InitListExpr 0x7f9a3001e768 <col:5> 'struct S1 [1][1]'
+|   |         `-InitListExpr 0x7f9a3001e7b0 <col:5> 'struct S1 [1]'
+|   |           `-InitListExpr 0x7f9a3001e7f8 <col:5> 'struct S1':'struct S1'
+|   |             `-ImplicitCastExpr 0x7f9a3001e848 <col:5> 'unsigned int' <IntegralCast>
+|   |               `-IntegerLiteral 0x7f9a3001e638 <col:5> 'int' 16143586
+|   `-ReturnStmt 0x7f9a3001ebd0 <line:34:3, col:25>
+|     `-ImplicitCastExpr 0x7f9a3001ebb8 <col:10, col:25> 'struct S1':'struct S1' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7f9a3001eb90 <col:10, col:25> 'struct S1':'struct S1' lvalue
+|         |-ImplicitCastExpr 0x7f9a3001eb78 <col:10, col:22> 'struct S1 *' <ArrayToPointerDecay>
+|         | `-ArraySubscriptExpr 0x7f9a3001ead0 <col:10, col:22> 'struct S1 [1]' lvalue
+|         |   |-ImplicitCastExpr 0x7f9a3001eab8 <col:10, col:19> 'struct S1 (*)[1]' <ArrayToPointerDecay>
+|         |   | `-ArraySubscriptExpr 0x7f9a3001ea10 <col:10, col:19> 'struct S1 [1][1]' lvalue
+|         |   |   |-ImplicitCastExpr 0x7f9a3001e9f8 <col:10, col:16> 'struct S1 (*)[1][1]' <ArrayToPointerDecay>
+|         |   |   | `-ArraySubscriptExpr 0x7f9a3001e950 <col:10, col:16> 'struct S1 [8][1][1]' lvalue
+|         |   |   |   |-ImplicitCastExpr 0x7f9a3001e938 <col:10> 'struct S1 (*)[8][1][1]' <ArrayToPointerDecay>
+|         |   |   |   | `-DeclRefExpr 0x7f9a3001e898 <col:10> 'struct S1 [6][8][1][1]' lvalue Var 0x7f9a3001e5d8 'l_92' 'struct S1 [6][8][1][1]'
+|         |   |   |   `-IntegerLiteral 0x7f9a3001e8c0 <col:15> 'int' 0
+|         |   |   `-IntegerLiteral 0x7f9a3001e978 <col:18> 'int' 0
+|         |   `-IntegerLiteral 0x7f9a3001ea38 <col:21> 'int' 0
+|         `-IntegerLiteral 0x7f9a3001eaf8 <col:24> 'int' 0
+|-FunctionDecl 0x7f9a3001edc0 <line:37:1, line:39:1> line:37:6 used func_28 'void (struct S1, const struct S1)'
+| |-ParmVarDecl 0x7f9a3001ec28 <col:15, col:25> col:25 p_30 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7f9a3001eca8 <col:31, col:47> col:47 p_32 'const struct S1':'const struct S1'
+| `-CompoundStmt 0x7f9a3001ee70 <line:38:1, line:39:1>
+`-FunctionDecl 0x7f9a3001ef60 <line:41:1, line:48:1> line:41:6 func_70 'void (unsigned char)'
+  |-ParmVarDecl 0x7f9a3001ee98 <col:15, col:29> col:29 used p_72 'unsigned char'
+  `-CompoundStmt 0x7f9a30034ff8 <line:42:1, line:48:1>
+    |-DeclStmt 0x7f9a3001f118 <line:43:3, col:37>
+    | `-VarDecl 0x7f9a3001f058 <col:3, col:33> col:25 l_93 'unsigned char *const *' cinit
+    |   `-ImplicitCastExpr 0x7f9a3001f100 <col:32, col:33> 'unsigned char *const *' <BitCast>
+    |     `-UnaryOperator 0x7f9a3001f0e0 <col:32, col:33> 'unsigned char **' prefix '&'
+    |       `-DeclRefExpr 0x7f9a3001f0b8 <col:33> 'unsigned char *' lvalue Var 0x7f9a3001da90 'g_17' 'unsigned char *'
+    |-DeclStmt 0x7f9a3001f1b8 <line:44:3, col:19>
+    | `-VarDecl 0x7f9a3001f158 <col:3, col:15> col:15 l_94 'struct S2 **'
+    |-DeclStmt 0x7f9a3001f2b0 <line:45:3, col:37>
+    | `-VarDecl 0x7f9a3001f1f0 <col:3, col:33> col:25 l_97 'unsigned char *const *' cinit
+    |   `-ImplicitCastExpr 0x7f9a3001f298 <col:32, col:33> 'unsigned char *const *' <BitCast>
+    |     `-UnaryOperator 0x7f9a3001f278 <col:32, col:33> 'unsigned char **' prefix '&'
+    |       `-DeclRefExpr 0x7f9a3001f250 <col:33> 'unsigned char *' lvalue Var 0x7f9a3001da90 'g_17' 'unsigned char *'
+    `-CallExpr 0x7f9a30034fc0 <line:46:3, line:47:33> 'void'
+      |-ImplicitCastExpr 0x7f9a30034fa8 <line:46:3> 'void (*)(struct S1, const struct S1)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9a3001f2c8 <col:3> 'void (struct S1, const struct S1)' Function 0x7f9a3001edc0 'func_28' 'void (struct S1, const struct S1)'
+      |-CallExpr 0x7f9a3001f3d0 <col:12, col:28> 'struct S1':'struct S1'
+      | |-ImplicitCastExpr 0x7f9a3001f3b8 <col:12> 'struct S1 (*)(unsigned char, struct S2 **)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f9a3001f2f0 <col:12> 'struct S1 (unsigned char, struct S2 **)' Function 0x7f9a3001e1e0 'func_86' 'struct S1 (unsigned char, struct S2 **)'
+      | |-ImplicitCastExpr 0x7f9a30034e18 <col:21> 'unsigned char' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9a3001f318 <col:21> 'unsigned char' lvalue ParmVar 0x7f9a3001ee98 'p_72' 'unsigned char'
+      | `-ImplicitCastExpr 0x7f9a30034e30 <col:27> 'struct S2 **' <NullToPointer>
+      |   `-IntegerLiteral 0x7f9a3001f340 <col:27> 'int' 0
+      `-CallExpr 0x7f9a30034ef8 <line:47:12, col:32> 'struct S1':'struct S1'
+        |-ImplicitCastExpr 0x7f9a30034ee0 <col:12> 'struct S1 (*)(unsigned char, struct S2 **)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f9a30034e48 <col:12> 'struct S1 (unsigned char, struct S2 **)' Function 0x7f9a3001e1e0 'func_86' 'struct S1 (unsigned char, struct S2 **)'
+        |-ImplicitCastExpr 0x7f9a30034f30 <col:21> 'unsigned char' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9a30034e70 <col:21> 'unsigned char' lvalue ParmVar 0x7f9a3001ee98 'p_72' 'unsigned char'
+        `-UnaryOperator 0x7f9a30034ec0 <col:27, col:28> 'struct S2 **' prefix '&'
+          `-DeclRefExpr 0x7f9a30034e98 <col:28> 'struct S2 *' lvalue Var 0x7f9a3001def0 'g_34' 'struct S2 *'

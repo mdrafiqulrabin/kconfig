@@ -1,0 +1,96 @@
+../Data/C2AST/pr82748-2.c:7:1: error: unknown type name '_Float128'
+_Float128
+^
+../Data/C2AST/pr82748-2.c:8:10: error: unknown type name '_Float128'
+do_fabs (_Float128 a)
+         ^
+../Data/C2AST/pr82748-2.c:10:10: error: use of unknown builtin '__builtin_fabsq' [-Wimplicit-function-declaration]
+  return __builtin_fabsq (a);
+         ^
+../Data/C2AST/pr82748-2.c:13:1: error: unknown type name '_Float128'
+_Float128
+^
+../Data/C2AST/pr82748-2.c:14:14: error: unknown type name '_Float128'
+do_copysign (_Float128 a, _Float128 b)
+             ^
+../Data/C2AST/pr82748-2.c:14:27: error: unknown type name '_Float128'
+do_copysign (_Float128 a, _Float128 b)
+                          ^
+../Data/C2AST/pr82748-2.c:16:10: error: use of unknown builtin '__builtin_copysignq' [-Wimplicit-function-declaration]
+  return __builtin_copysignq (a, b);
+         ^
+../Data/C2AST/pr82748-2.c:19:1: error: unknown type name '_Float128'
+_Float128
+^
+../Data/C2AST/pr82748-2.c:22:10: error: use of unknown builtin '__builtin_infq' [-Wimplicit-function-declaration]
+  return __builtin_infq ();
+         ^
+../Data/C2AST/pr82748-2.c:25:1: error: unknown type name '_Float128'
+_Float128
+^
+../Data/C2AST/pr82748-2.c:28:10: error: use of unknown builtin '__builtin_nanq' [-Wimplicit-function-declaration]
+  return __builtin_nanq ("");
+         ^
+../Data/C2AST/pr82748-2.c:31:1: error: unknown type name '_Float128'
+_Float128
+^
+../Data/C2AST/pr82748-2.c:34:10: error: use of unknown builtin '__builtin_nansq' [-Wimplicit-function-declaration]
+  return __builtin_nansq ("");
+         ^
+../Data/C2AST/pr82748-2.c:37:1: error: unknown type name '_Float128'
+_Float128
+^
+../Data/C2AST/pr82748-2.c:40:10: error: use of unknown builtin '__builtin_huge_valq' [-Wimplicit-function-declaration]
+  return __builtin_huge_valq ();
+         ^
+15 errors generated.
+TranslationUnitDecl 0x7fcd2782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcd2782c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcd2782bf80 '__int128'
+|-TypedefDecl 0x7fcd2782c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcd2782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fcd2782c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcd2782c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcd2782c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcd2782c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcd2782c600 'char *'
+|   `-BuiltinType 0x7fcd2782bd80 'char'
+|-TypedefDecl 0x7fcd2782c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcd2782c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcd2782c720 'struct __va_list_tag'
+|     `-Record 0x7fcd2782c698 '__va_list_tag'
+|-FunctionDecl 0x7fcd28015268 <../Data/C2AST/pr82748-2.c:7:1, line:11:1> line:8:1 invalid do_fabs 'int (int)'
+| |-ParmVarDecl 0x7fcd2782c990 <col:10, col:20> col:20 invalid a 'int'
+| `-CompoundStmt 0x7fcd28015478 <line:9:1, line:11:1>
+|-FunctionDecl 0x7fcd280155f8 <line:13:1, line:17:1> line:14:1 invalid do_copysign 'int (int, int)'
+| |-ParmVarDecl 0x7fcd280154a0 <col:14, col:24> col:24 invalid a 'int'
+| |-ParmVarDecl 0x7fcd28015518 <col:27, col:37> col:37 invalid b 'int'
+| `-CompoundStmt 0x7fcd280157a8 <line:15:1, line:17:1>
+|-FunctionDecl 0x7fcd28015888 <line:19:1, line:23:1> line:20:1 invalid do_inf 'int (void)'
+| `-CompoundStmt 0x7fcd28015ab0 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7fcd28015a98 <line:22:3, col:26>
+|     `-CallExpr 0x7fcd28015a70 <col:10, col:26> 'int'
+|       `-ImplicitCastExpr 0x7fcd28015a58 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7fcd28015a00 <col:10> 'int ()' Function 0x7fcd28015950 '__builtin_infq' 'int ()'
+|-FunctionDecl 0x7fcd28015b60 <line:25:1, line:29:1> line:26:1 invalid do_nan 'int (void)'
+| `-CompoundStmt 0x7fcd28015dd8 <line:27:1, line:29:1>
+|   `-ReturnStmt 0x7fcd28015dc0 <line:28:3, col:28>
+|     `-CallExpr 0x7fcd28015d78 <col:10, col:28> 'int'
+|       |-ImplicitCastExpr 0x7fcd28015d60 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fcd28015cd8 <col:10> 'int ()' Function 0x7fcd28015c28 '__builtin_nanq' 'int ()'
+|       `-ImplicitCastExpr 0x7fcd28015da8 <col:26> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fcd28015d38 <col:26> 'char [1]' lvalue ""
+|-FunctionDecl 0x7fcd28015e88 <line:31:1, line:35:1> line:32:1 invalid do_nans 'int (void)'
+| `-CompoundStmt 0x7fcd280160c8 <line:33:1, line:35:1>
+|   `-ReturnStmt 0x7fcd280160b0 <line:34:3, col:29>
+|     `-CallExpr 0x7fcd28016068 <col:10, col:29> 'int'
+|       |-ImplicitCastExpr 0x7fcd28016050 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fcd28016000 <col:10> 'int ()' Function 0x7fcd28015f50 '__builtin_nansq' 'int ()'
+|       `-ImplicitCastExpr 0x7fcd28016098 <col:27> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7fcd28016028 <col:27> 'char [1]' lvalue ""
+`-FunctionDecl 0x7fcd2802b600 <line:37:1, line:41:1> line:38:1 invalid do_huge_val 'int (void)'
+  `-CompoundStmt 0x7fcd2802b7f8 <line:39:1, line:41:1>
+    `-ReturnStmt 0x7fcd2802b7e0 <line:40:3, col:31>
+      `-CallExpr 0x7fcd2802b7b8 <col:10, col:31> 'int'
+        `-ImplicitCastExpr 0x7fcd2802b7a0 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fcd2802b778 <col:10> 'int ()' Function 0x7fcd2802b6c8 '__builtin_huge_valq' 'int ()'

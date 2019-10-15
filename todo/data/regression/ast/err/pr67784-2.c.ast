@@ -1,0 +1,110 @@
+../Data/C2AST/pr67784-2.c:10:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;)  
+                   ^
+../Data/C2AST/pr67784-2.c:13:6: error: use of undeclared identifier 'x'
+  T *x;  
+     ^
+../Data/C2AST/pr67784-2.c:21:7: error: expected expression
+      T = 1;  
+      ^
+../Data/C2AST/pr67784-2.c:22:6: error: use of undeclared identifier 'x'
+  T *x;  
+     ^
+../Data/C2AST/pr67784-2.c:28:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;)  
+                   ^
+../Data/C2AST/pr67784-2.c:32:6: error: use of undeclared identifier 'x'
+  T *x;  
+     ^
+../Data/C2AST/pr67784-2.c:38:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;)  
+                   ^
+../Data/C2AST/pr67784-2.c:42:6: error: use of undeclared identifier 'x'
+  T *x;  
+     ^
+../Data/C2AST/pr67784-2.c:48:20: error: declaration of non-local variable in 'for' loop
+  for (typedef int T;;)  
+                   ^
+../Data/C2AST/pr67784-2.c:53:6: error: use of undeclared identifier 'x'
+  T *x;  
+     ^
+10 errors generated.
+TranslationUnitDecl 0x7ff0f702bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff0f702c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff0f702bf80 '__int128'
+|-TypedefDecl 0x7ff0f702c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff0f702bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff0f702c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff0f702c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff0f702c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff0f702c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff0f702c600 'char *'
+|   `-BuiltinType 0x7ff0f702bd80 'char'
+|-TypedefDecl 0x7ff0f702c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff0f702c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff0f702c720 'struct __va_list_tag'
+|     `-Record 0x7ff0f702c698 '__va_list_tag'
+|-VarDecl 0x7ff0f702c978 <../Data/C2AST/pr67784-2.c:5:1, col:5> col:5 used T 'int'
+|-FunctionDecl 0x7ff0f7814300 <line:7:1, line:14:1> line:8:1 fn1 'void (void)'
+| `-CompoundStmt 0x7ff0f7814518 <line:9:1, line:14:1>
+|   `-ForStmt 0x7ff0f7814490 <line:10:3, line:12:7>
+|     |-DeclStmt 0x7ff0f7814410 <line:10:8, col:21>
+|     | `-TypedefDecl 0x7ff0f78143b8 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7ff0f702bde0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7ff0f7814458 <line:11:5, line:12:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7ff0f7814428 <line:11:9> 'int' 1
+|       |-NullStmt 0x7ff0f7814448 <line:12:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7ff0f78145c0 <line:16:1, line:23:1> line:17:1 fn2 'void (void)'
+| `-CompoundStmt 0x7ff0f7814768 <line:18:1, line:23:1>
+|-FunctionDecl 0x7ff0f7814808 <line:25:1, line:33:1> line:26:1 fn3 'void (void)'
+| `-CompoundStmt 0x7ff0f7814a08 <line:27:1, line:33:1>
+|   `-ForStmt 0x7ff0f7814998 <line:28:3, line:31:7>
+|     |-DeclStmt 0x7ff0f7814918 <line:28:8, col:21>
+|     | `-TypedefDecl 0x7ff0f78148c0 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7ff0f702bde0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7ff0f7814960 <line:29:5, line:31:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7ff0f7814930 <line:29:9> 'int' 1
+|       |-CompoundStmt 0x7ff0f7814950 <line:30:7, line:31:7>
+|       `-<<<NULL>>>
+|-FunctionDecl 0x7ff0f7814ab0 <line:35:1, line:43:1> line:36:1 fn4 'void (void)'
+| `-CompoundStmt 0x7ff0f7814d10 <line:37:1, line:43:1>
+|   `-ForStmt 0x7ff0f7814ca0 <line:38:3, line:41:7>
+|     |-DeclStmt 0x7ff0f7814bc0 <line:38:8, col:21>
+|     | `-TypedefDecl 0x7ff0f7814b68 <col:8, col:20> col:20 invalid T 'int'
+|     |   `-BuiltinType 0x7ff0f702bde0 'int'
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     `-IfStmt 0x7ff0f7814c68 <line:39:5, line:41:7>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-IntegerLiteral 0x7ff0f7814bd8 <line:39:9> 'int' 1
+|       |-LabelStmt 0x7ff0f7814c50 <line:40:1, line:41:7> 'L'
+|       | `-NullStmt 0x7ff0f7814bf8 <col:7>
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7ff0f7814db8 <line:45:1, line:54:1> line:46:1 fn5 'void (void)'
+  `-CompoundStmt 0x7ff0f7814fc8 <line:47:1, line:54:1>
+    `-ForStmt 0x7ff0f7814f58 <line:48:3, line:52:7>
+      |-DeclStmt 0x7ff0f7814ec8 <line:48:8, col:21>
+      | `-TypedefDecl 0x7ff0f7814e70 <col:8, col:20> col:20 invalid T 'int'
+      |   `-BuiltinType 0x7ff0f702bde0 'int'
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-IfStmt 0x7ff0f7814f20 <line:49:5, line:52:7>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-IntegerLiteral 0x7ff0f7814ee0 <line:49:9> 'int' 1
+        |-NullStmt 0x7ff0f7814f00 <line:50:7>
+        `-NullStmt 0x7ff0f7814f10 <line:52:7>

@@ -1,0 +1,58 @@
+TranslationUnitDecl 0x7fdb3c8268e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdb3c827560 <../Data/C2AST/pr42154.c:1:1, col:23> col:8 struct A definition
+| `-FieldDecl 0x7fdb3c014498 <col:12, col:20> col:17 referenced x 'char [1]'
+|-FunctionDecl 0x7fdb3c0145d0 <line:2:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdb3c014670 prev 0x7fdb3c0145d0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdb3c014860 <line:3:1, line:8:1> line:4:1 used foo 'void (struct A)'
+| |-ParmVarDecl 0x7fdb3c014760 <col:6, col:15> col:15 used a 'struct A':'struct A'
+| |-CompoundStmt 0x7fdb3c014bd0 <line:5:1, line:8:1>
+| | `-IfStmt 0x7fdb3c014b98 <line:6:3, line:7:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fdb3c014a98 <line:6:7, col:17> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fdb3c014a80 <col:7, col:12> 'int' <IntegralCast>
+| |   | | `-ImplicitCastExpr 0x7fdb3c014a68 <col:7, col:12> 'char' <LValueToRValue>
+| |   | |   `-ArraySubscriptExpr 0x7fdb3c014a28 <col:7, col:12> 'char' lvalue
+| |   | |     |-ImplicitCastExpr 0x7fdb3c014a10 <col:7, col:9> 'char *' <ArrayToPointerDecay>
+| |   | |     | `-MemberExpr 0x7fdb3c0149b8 <col:7, col:9> 'char [1]' lvalue .x 0x7fdb3c014498
+| |   | |     |   `-DeclRefExpr 0x7fdb3c014990 <col:7> 'struct A':'struct A' lvalue ParmVar 0x7fdb3c014760 'a' 'struct A':'struct A'
+| |   | |     `-IntegerLiteral 0x7fdb3c0149f0 <col:11> 'int' 0
+| |   | `-CharacterLiteral 0x7fdb3c014a50 <col:17> 'int' 97
+| |   |-CallExpr 0x7fdb3c014b70 <line:7:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fdb3c014b58 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fdb3c014b08 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdb3c014670 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fdb3c014908 <line:3:21>
+`-FunctionDecl 0x7fdb3c014c40 <line:9:1, line:17:1> line:9:5 main 'int ()'
+  `-CompoundStmt 0x7fdb3c015200 <line:10:1, line:17:1>
+    |-DeclStmt 0x7fdb3c014d60 <line:11:3, col:13>
+    | `-VarDecl 0x7fdb3c014d00 <col:3, col:12> col:12 used a 'struct A':'struct A'
+    |-DeclStmt 0x7fdb3c014df0 <line:12:3, col:8>
+    | `-VarDecl 0x7fdb3c014d90 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fdb3c015080 <line:13:3, line:14:14>
+    | |-BinaryOperator 0x7fdb3c014e50 <line:13:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fdb3c014e08 <col:8> 'int' lvalue Var 0x7fdb3c014d90 'i' 'int'
+    | | `-IntegerLiteral 0x7fdb3c014e30 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdb3c014ed8 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fdb3c014ec0 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fdb3c014e78 <col:15> 'int' lvalue Var 0x7fdb3c014d90 'i' 'int'
+    | | `-IntegerLiteral 0x7fdb3c014ea0 <col:19> 'int' 1
+    | |-UnaryOperator 0x7fdb3c014f28 <col:22, col:24> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7fdb3c014f00 <col:24> 'int' lvalue Var 0x7fdb3c014d90 'i' 'int'
+    | `-BinaryOperator 0x7fdb3c015058 <line:14:5, col:14> 'char' '='
+    |   |-ArraySubscriptExpr 0x7fdb3c015000 <col:5, col:10> 'char' lvalue
+    |   | |-ImplicitCastExpr 0x7fdb3c014fd0 <col:5, col:7> 'char *' <ArrayToPointerDecay>
+    |   | | `-MemberExpr 0x7fdb3c014f70 <col:5, col:7> 'char [1]' lvalue .x 0x7fdb3c014498
+    |   | |   `-DeclRefExpr 0x7fdb3c014f48 <col:5> 'struct A':'struct A' lvalue Var 0x7fdb3c014d00 'a' 'struct A':'struct A'
+    |   | `-ImplicitCastExpr 0x7fdb3c014fe8 <col:9> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fdb3c014fa8 <col:9> 'int' lvalue Var 0x7fdb3c014d90 'i' 'int'
+    |   `-ImplicitCastExpr 0x7fdb3c015040 <col:14> 'char' <IntegralCast>
+    |     `-CharacterLiteral 0x7fdb3c015028 <col:14> 'int' 97
+    |-CallExpr 0x7fdb3c015180 <line:15:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fdb3c015168 <col:3> 'void (*)(struct A)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fdb3c0150b8 <col:3> 'void (struct A)' Function 0x7fdb3c014860 'foo' 'void (struct A)'
+    | `-ImplicitCastExpr 0x7fdb3c0151b0 <col:8> 'struct A':'struct A' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fdb3c0150e0 <col:8> 'struct A':'struct A' lvalue Var 0x7fdb3c014d00 'a' 'struct A':'struct A'
+    `-ReturnStmt 0x7fdb3c0151e8 <line:16:3, col:10>
+      `-IntegerLiteral 0x7fdb3c0151c8 <col:10> 'int' 0

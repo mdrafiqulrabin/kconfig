@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fb4bd8192e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb4bd85ae68 <../Data/C2AST/pr45830.c:5:1, line:27:1> line:6:1 foo 'int (int *)'
+  |-ParmVarDecl 0x7fb4bd819fa0 <col:6, col:11> col:11 used a 'int *'
+  `-CompoundStmt 0x7fb4bd85b520 <line:7:1, line:27:1>
+    `-SwitchStmt 0x7fb4bd85afc8 <line:8:3, line:26:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb4bd85afb0 <line:8:11, col:12> 'int' <LValueToRValue>
+      | `-UnaryOperator 0x7fb4bd85af90 <col:11, col:12> 'int' lvalue prefix '*'
+      |   `-ImplicitCastExpr 0x7fb4bd85af78 <col:12> 'int *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fb4bd85af50 <col:12> 'int *' lvalue ParmVar 0x7fb4bd819fa0 'a' 'int *'
+      `-CompoundStmt 0x7fb4bd85b500 <line:9:5, line:26:5>
+        |-CaseStmt 0x7fb4bd85b018 <line:10:5, line:23:14>
+        | |-IntegerLiteral 0x7fb4bd85aff8 <line:10:10> 'int' 0
+        | |-<<<NULL>>>
+        | `-CaseStmt 0x7fb4bd85b070 <line:11:5, line:23:14>
+        |   |-IntegerLiteral 0x7fb4bd85b050 <line:11:10> 'int' 3
+        |   |-<<<NULL>>>
+        |   `-CaseStmt 0x7fb4bd85b0c8 <line:12:5, line:23:14>
+        |     |-IntegerLiteral 0x7fb4bd85b0a8 <line:12:10> 'int' 1
+        |     |-<<<NULL>>>
+        |     `-CaseStmt 0x7fb4bd85b120 <line:13:5, line:23:14>
+        |       |-IntegerLiteral 0x7fb4bd85b100 <line:13:10> 'int' 2
+        |       |-<<<NULL>>>
+        |       `-CaseStmt 0x7fb4bd85b178 <line:14:5, line:23:14>
+        |         |-IntegerLiteral 0x7fb4bd85b158 <line:14:10> 'int' 4
+        |         |-<<<NULL>>>
+        |         `-CaseStmt 0x7fb4bd85b1d0 <line:15:5, line:23:14>
+        |           |-IntegerLiteral 0x7fb4bd85b1b0 <line:15:10> 'int' 23
+        |           |-<<<NULL>>>
+        |           `-CaseStmt 0x7fb4bd85b228 <line:16:5, line:23:14>
+        |             |-IntegerLiteral 0x7fb4bd85b208 <line:16:10> 'int' 26
+        |             |-<<<NULL>>>
+        |             `-CaseStmt 0x7fb4bd85b280 <line:17:5, line:23:14>
+        |               |-IntegerLiteral 0x7fb4bd85b260 <line:17:10> 'int' 19
+        |               |-<<<NULL>>>
+        |               `-CaseStmt 0x7fb4bd85b2d8 <line:18:5, line:23:14>
+        |                 |-IntegerLiteral 0x7fb4bd85b2b8 <line:18:10> 'int' 5
+        |                 |-<<<NULL>>>
+        |                 `-CaseStmt 0x7fb4bd85b330 <line:19:5, line:23:14>
+        |                   |-IntegerLiteral 0x7fb4bd85b310 <line:19:10> 'int' 21
+        |                   |-<<<NULL>>>
+        |                   `-CaseStmt 0x7fb4bd85b388 <line:20:5, line:23:14>
+        |                     |-IntegerLiteral 0x7fb4bd85b368 <line:20:10> 'int' 20
+        |                     |-<<<NULL>>>
+        |                     `-CaseStmt 0x7fb4bd85b3e0 <line:21:5, line:23:14>
+        |                       |-IntegerLiteral 0x7fb4bd85b3c0 <line:21:10> 'int' 22
+        |                       |-<<<NULL>>>
+        |                       `-CaseStmt 0x7fb4bd85b438 <line:22:5, line:23:14>
+        |                         |-IntegerLiteral 0x7fb4bd85b418 <line:22:10> 'int' 27
+        |                         |-<<<NULL>>>
+        |                         `-ReturnStmt 0x7fb4bd85b490 <line:23:7, col:14>
+        |                           `-IntegerLiteral 0x7fb4bd85b470 <col:14> 'int' 1
+        `-DefaultStmt 0x7fb4bd85b4e0 <line:24:5, line:25:14>
+          `-ReturnStmt 0x7fb4bd85b4c8 <col:7, col:14>
+            `-IntegerLiteral 0x7fb4bd85b4a8 <col:14> 'int' 0

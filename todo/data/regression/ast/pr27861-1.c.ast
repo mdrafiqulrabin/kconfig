@@ -1,0 +1,187 @@
+TranslationUnitDecl 0x7fce768252e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fce76825f60 <../Data/C2AST/pr27861-1.c:6:9, col:16> col:16 struct sim_state
+|-TypedefDecl 0x7fce768674d0 <col:1, col:27> col:27 referenced SIM_DESC 'struct sim_state *'
+| `-PointerType 0x7fce76867480 'struct sim_state *'
+|   `-ElaboratedType 0x7fce76867420 'struct sim_state' sugar
+|     `-RecordType 0x7fce76867400 'struct sim_state'
+|       `-Record 0x7fce77000850 'sim_state'
+|-EnumDecl 0x7fce76867540 <line:7:9, line:10:1> line:7:9
+| |-EnumConstantDecl 0x7fce76867600 <line:9:3> col:3 SIM_OPEN_STANDALONE 'int'
+| `-EnumConstantDecl 0x7fce76867648 <col:24> col:24 SIM_OPEN_DEBUG 'int'
+|-TypedefDecl 0x7fce768676e0 <line:7:1, line:11:1> col:1 SIM_RC 'enum SIM_RC':'SIM_RC'
+| `-ElaboratedType 0x7fce76867690 'enum SIM_RC' sugar
+|   `-EnumType 0x7fce768675e0 'SIM_RC'
+|     `-Enum 0x7fce76867540 ''
+|-TypedefDecl 0x7fce76867778 <line:12:1, col:22> col:22 referenced unsigned32 'unsigned int'
+| |-BuiltinType 0x7fce76825480 'unsigned int'
+| `-ModeAttr 0x7fce768677e0 <col:49, col:65> __SI__
+|-TypedefDecl 0x7fce76867858 <line:13:1, col:22> col:22 referenced unsigned64 'unsigned long'
+| |-BuiltinType 0x7fce768254a0 'unsigned long'
+| `-ModeAttr 0x7fce768678c0 <col:49, col:65> __DI__
+|-TypedefDecl 0x7fce76867940 <line:14:1, col:20> col:20 referenced unsigned_address 'unsigned32':'unsigned int'
+| `-TypedefType 0x7fce76867910 'unsigned32' sugar
+|   |-Typedef 0x7fce76867778 'unsigned32'
+|   `-BuiltinType 0x7fce76825480 'unsigned int'
+|-TypedefDecl 0x7fce768679d0 <line:15:1, col:26> col:26 referenced address_word 'unsigned_address':'unsigned int'
+| `-TypedefType 0x7fce768679a0 'unsigned_address' sugar
+|   |-Typedef 0x7fce76867940 'unsigned_address'
+|   `-TypedefType 0x7fce76867910 'unsigned32' sugar
+|     |-Typedef 0x7fce76867778 'unsigned32'
+|     `-BuiltinType 0x7fce76825480 'unsigned int'
+|-FunctionDecl 0x7fce76867bf0 <line:16:1, line:22:1> line:17:32 used ROTR64 'unsigned64 (unsigned64, int)' static inline
+| |-ParmVarDecl 0x7fce76867a60 <col:40, col:51> col:51 used val 'unsigned64':'unsigned long'
+| |-ParmVarDecl 0x7fce76867ad8 <col:56, col:60> col:60 used shift 'int'
+| |-CompoundStmt 0x7fce76868138 <line:18:1, line:22:1>
+| | |-DeclStmt 0x7fce76867d98 <line:19:3, col:20>
+| | | `-VarDecl 0x7fce76867d38 <col:3, col:14> col:14 used result 'unsigned64':'unsigned long'
+| | |-BinaryOperator 0x7fce768680b8 <line:20:3, col:61> 'unsigned64':'unsigned long' '='
+| | | |-DeclRefExpr 0x7fce76867db0 <col:3> 'unsigned64':'unsigned long' lvalue Var 0x7fce76867d38 'result' 'unsigned64':'unsigned long'
+| | | `-ParenExpr 0x7fce76868098 <col:12, col:61> 'unsigned long'
+| | |   `-BinaryOperator 0x7fce76868070 <col:13, col:60> 'unsigned long' '|'
+| | |     |-ParenExpr 0x7fce76867ec0 <col:13, col:30> 'unsigned64':'unsigned long'
+| | |     | `-BinaryOperator 0x7fce76867e98 <col:14, col:29> 'unsigned64':'unsigned long' '>>'
+| | |     |   |-ImplicitCastExpr 0x7fce76867e68 <col:14, col:18> 'unsigned64':'unsigned long' <LValueToRValue>
+| | |     |   | `-ParenExpr 0x7fce76867e00 <col:14, col:18> 'unsigned64':'unsigned long' lvalue
+| | |     |   |   `-DeclRefExpr 0x7fce76867dd8 <col:15> 'unsigned64':'unsigned long' lvalue ParmVar 0x7fce76867a60 'val' 'unsigned64':'unsigned long'
+| | |     |   `-ImplicitCastExpr 0x7fce76867e80 <col:23, col:29> 'int' <LValueToRValue>
+| | |     |     `-ParenExpr 0x7fce76867e48 <col:23, col:29> 'int' lvalue
+| | |     |       `-DeclRefExpr 0x7fce76867e20 <col:24> 'int' lvalue ParmVar 0x7fce76867ad8 'shift' 'int'
+| | |     `-ParenExpr 0x7fce76868050 <col:34, col:60> 'unsigned64':'unsigned long'
+| | |       `-BinaryOperator 0x7fce76868028 <col:35, col:59> 'unsigned64':'unsigned long' '<<'
+| | |         |-ImplicitCastExpr 0x7fce76868010 <col:35, col:39> 'unsigned64':'unsigned long' <LValueToRValue>
+| | |         | `-ParenExpr 0x7fce76867f08 <col:35, col:39> 'unsigned64':'unsigned long' lvalue
+| | |         |   `-DeclRefExpr 0x7fce76867ee0 <col:36> 'unsigned64':'unsigned long' lvalue ParmVar 0x7fce76867a60 'val' 'unsigned64':'unsigned long'
+| | |         `-ParenExpr 0x7fce76867ff0 <col:44, col:59> 'int'
+| | |           `-BinaryOperator 0x7fce76867fc8 <col:45, col:58> 'int' '-'
+| | |             |-ParenExpr 0x7fce76867f48 <col:45, col:48> 'int'
+| | |             | `-IntegerLiteral 0x7fce76867f28 <col:46> 'int' 64
+| | |             `-ImplicitCastExpr 0x7fce76867fb0 <col:52, col:58> 'int' <LValueToRValue>
+| | |               `-ParenExpr 0x7fce76867f90 <col:52, col:58> 'int' lvalue
+| | |                 `-DeclRefExpr 0x7fce76867f68 <col:53> 'int' lvalue ParmVar 0x7fce76867ad8 'shift' 'int'
+| | `-ReturnStmt 0x7fce76868120 <line:21:3, col:10>
+| |   `-ImplicitCastExpr 0x7fce76868108 <col:10> 'unsigned64':'unsigned long' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fce768680e0 <col:10> 'unsigned64':'unsigned long' lvalue Var 0x7fce76867d38 'result' 'unsigned64':'unsigned long'
+| `-UnusedAttr 0x7fce76867ca0 <line:17:19> unused
+|-RecordDecl 0x7fce76868160 <line:23:9, col:16> col:16 struct _sim_cpu
+|-TypedefDecl 0x7fce76868260 <col:1, col:25> col:25 referenced sim_cpu 'struct _sim_cpu':'struct _sim_cpu'
+| `-ElaboratedType 0x7fce76868210 'struct _sim_cpu' sugar
+|   `-RecordType 0x7fce768681f0 'struct _sim_cpu'
+|     `-Record 0x7fce77000700 '_sim_cpu'
+|-EnumDecl 0x7fce768682d0 <line:24:1, line:27:1> line:24:1
+| |-EnumConstantDecl 0x7fce76868390 <line:26:5> col:5 TRACE_MEMORY_IDX 'int'
+| |-EnumConstantDecl 0x7fce77000000 <col:23> col:23 TRACE_MODEL_IDX 'int'
+| |-EnumConstantDecl 0x7fce77000048 <col:40> col:40 referenced TRACE_ALU_IDX 'int'
+| `-EnumConstantDecl 0x7fce77000090 <col:55> col:55 TRACE_CORE_IDX 'int'
+|-RecordDecl 0x7fce770000d8 <line:28:9, line:31:1> line:28:16 struct _trace_data definition
+| `-FieldDecl 0x7fce770001f8 <line:30:3, col:22> col:8 referenced trace_flags 'char [32]'
+|-TypedefDecl 0x7fce77000290 <line:28:1, line:32:1> col:1 referenced TRACE_DATA 'struct _trace_data':'struct _trace_data'
+| `-ElaboratedType 0x7fce77000240 'struct _trace_data' sugar
+|   `-RecordType 0x7fce77000160 'struct _trace_data'
+|     `-Record 0x7fce770000d8 '_trace_data'
+|-EnumDecl 0x7fce77000300 <line:33:9, line:36:1> line:33:9
+| `-EnumConstantDecl 0x7fce770003c0 <line:35:5> col:5 nr_watchpoint_types 'int'
+|-TypedefDecl 0x7fce77000460 <line:33:1, line:37:1> col:1 watchpoint_type 'enum watchpoint_type':'watchpoint_type'
+| `-ElaboratedType 0x7fce77000410 'enum watchpoint_type' sugar
+|   `-EnumType 0x7fce770003a0 'watchpoint_type'
+|     `-Enum 0x7fce77000300 ''
+|-RecordDecl 0x7fce770004d0 <line:38:9, line:41:1> line:38:16 struct _sim_watchpoints definition
+| `-FieldDecl 0x7fce770005b0 <line:40:3, col:14> col:14 referenced trace_data 'TRACE_DATA':'struct _trace_data'
+|-TypedefDecl 0x7fce77000690 <line:38:1, line:42:1> col:1 referenced sim_cpu_base 'struct _sim_watchpoints':'struct _sim_watchpoints'
+| `-ElaboratedType 0x7fce77000640 'struct _sim_watchpoints' sugar
+|   `-RecordType 0x7fce77000560 'struct _sim_watchpoints'
+|     `-Record 0x7fce770004d0 '_sim_watchpoints'
+|-RecordDecl 0x7fce77000700 prev 0x7fce76868160 <line:43:1, line:46:1> line:43:8 struct _sim_cpu definition
+| `-FieldDecl 0x7fce770007c0 <line:45:3, col:16> col:16 referenced base 'sim_cpu_base':'struct _sim_watchpoints'
+|-RecordDecl 0x7fce77000850 prev 0x7fce76825f60 <line:47:1, line:50:1> line:47:8 struct sim_state definition
+| `-FieldDecl 0x7fce77000a08 <line:49:3, col:16> col:11 referenced cpu 'sim_cpu [1]'
+|-TypedefDecl 0x7fce77000a80 <line:51:1, col:22> col:22 referenced instruction_address 'address_word':'unsigned int'
+| `-TypedefType 0x7fce77000a50 'address_word' sugar
+|   |-Typedef 0x7fce768679d0 'address_word'
+|   `-TypedefType 0x7fce768679a0 'unsigned_address' sugar
+|     |-Typedef 0x7fce76867940 'unsigned_address'
+|     `-TypedefType 0x7fce76867910 'unsigned32' sugar
+|       |-Typedef 0x7fce76867778 'unsigned32'
+|       `-BuiltinType 0x7fce76825480 'unsigned int'
+|-FunctionDecl 0x7fce77000b28 <line:52:1, col:26> col:6 used trace_result_word1 'void ()'
+`-FunctionDecl 0x7fce77000f58 <line:53:1, line:65:1> line:54:1 do_dror 'int (SIM_DESC, instruction_address, int, unsigned64, unsigned64)'
+  |-ParmVarDecl 0x7fce77000c00 <col:10, col:19> col:19 used sd 'SIM_DESC':'struct sim_state *'
+  |-ParmVarDecl 0x7fce77000c90 <col:23, col:43> col:43 cia 'instruction_address':'unsigned int'
+  |-ParmVarDecl 0x7fce77000d08 <col:48, col:52> col:52 MY_INDEX 'int'
+  |-ParmVarDecl 0x7fce77000d78 <col:62, col:73> col:73 used x 'unsigned64':'unsigned long'
+  |-ParmVarDecl 0x7fce77000de8 <line:55:3, col:14> col:14 used y 'unsigned64':'unsigned long'
+  `-CompoundStmt 0x7fce7687f9a8 <line:56:1, line:65:1>
+    |-DeclStmt 0x7fce7687ee98 <line:57:3, col:20>
+    | `-VarDecl 0x7fce7687ee38 <col:3, col:14> col:14 used result 'unsigned64':'unsigned long'
+    |-BinaryOperator 0x7fce7687f040 <line:58:3, col:24> 'unsigned64':'unsigned long' '='
+    | |-DeclRefExpr 0x7fce7687eeb0 <col:3> 'unsigned64':'unsigned long' lvalue Var 0x7fce7687ee38 'result' 'unsigned64':'unsigned long'
+    | `-CallExpr 0x7fce7687efc0 <col:12, col:24> 'unsigned64':'unsigned long'
+    |   |-ImplicitCastExpr 0x7fce7687efa8 <col:12> 'unsigned64 (*)(unsigned64, int)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fce7687eed8 <col:12> 'unsigned64 (unsigned64, int)' Function 0x7fce76867bf0 'ROTR64' 'unsigned64 (unsigned64, int)'
+    |   |-ImplicitCastExpr 0x7fce7687eff8 <col:20> 'unsigned64':'unsigned long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fce7687ef00 <col:20> 'unsigned64':'unsigned long' lvalue ParmVar 0x7fce77000d78 'x' 'unsigned64':'unsigned long'
+    |   `-ImplicitCastExpr 0x7fce7687f028 <col:23> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7fce7687f010 <col:23> 'unsigned64':'unsigned long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fce7687ef28 <col:23> 'unsigned64':'unsigned long' lvalue ParmVar 0x7fce77000de8 'y' 'unsigned64':'unsigned long'
+    `-CompoundStmt 0x7fce7687f990 <line:59:5, line:64:5>
+      `-IfStmt 0x7fce7687f958 <line:60:7, line:63:68>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ParenExpr 0x7fce7687f668 <line:60:11, line:62:41> 'int'
+        | `-BinaryOperator 0x7fce7687f640 <line:60:12, line:62:40> 'int' '&&'
+        |   |-BinaryOperator 0x7fce7687f1e0 <line:60:12, col:47> 'int' '!='
+        |   | |-ParenExpr 0x7fce7687f1a0 <col:12, col:42> 'int'
+        |   | | `-BinaryOperator 0x7fce7687f178 <col:13, col:41> 'int' '&'
+        |   | |   |-ParenExpr 0x7fce7687f0a8 <col:13, col:16> 'int'
+        |   | |   | `-UnaryOperator 0x7fce7687f088 <col:14, col:15> 'int' prefix '-'
+        |   | |   |   `-IntegerLiteral 0x7fce7687f068 <col:15> 'int' 1
+        |   | |   `-ParenExpr 0x7fce7687f158 <col:20, col:41> 'int'
+        |   | |     `-BinaryOperator 0x7fce7687f130 <col:21, col:40> 'int' '<<'
+        |   | |       |-IntegerLiteral 0x7fce7687f0c8 <col:21> 'int' 1
+        |   | |       `-ParenExpr 0x7fce7687f110 <col:26, col:40> 'int'
+        |   | |         `-DeclRefExpr 0x7fce7687f0e8 <col:27> 'int' EnumConstant 0x7fce77000048 'TRACE_ALU_IDX' 'int'
+        |   | `-IntegerLiteral 0x7fce7687f1c0 <col:47> 'int' 0
+        |   `-BinaryOperator 0x7fce7687f618 <line:61:8, line:62:40> 'int' '!='
+        |     |-ImplicitCastExpr 0x7fce7687f600 <line:61:8, line:62:35> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7fce7687f5e8 <line:61:8, line:62:35> 'char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7fce7687f5a0 <line:61:8, line:62:35> 'char' lvalue
+        |     |     |-ImplicitCastExpr 0x7fce7687f588 <line:61:8, line:62:20> 'char *' <ArrayToPointerDecay>
+        |     |     | `-ParenExpr 0x7fce7687f540 <line:61:8, line:62:20> 'char [32]' lvalue
+        |     |     |   `-MemberExpr 0x7fce7687f508 <line:61:9, line:62:9> 'char [32]' lvalue ->trace_flags 0x7fce770001f8
+        |     |     |     `-ParenExpr 0x7fce7687f4e8 <line:61:9, col:49> 'TRACE_DATA *'
+        |     |     |       `-ParenExpr 0x7fce7687f4c8 <col:10, col:48> 'TRACE_DATA *'
+        |     |     |         `-UnaryOperator 0x7fce7687f4a8 <col:11, col:38> 'TRACE_DATA *' prefix '&'
+        |     |     |           `-MemberExpr 0x7fce7687f410 <col:12, col:38> 'TRACE_DATA':'struct _trace_data' lvalue .trace_data 0x7fce770005b0
+        |     |     |             `-MemberExpr 0x7fce7687f3d8 <col:12, col:33> 'sim_cpu_base':'struct _sim_watchpoints' lvalue ->base 0x7fce770007c0
+        |     |     |               `-ParenExpr 0x7fce7687f3b8 <col:12, col:30> 'sim_cpu *'
+        |     |     |                 `-ParenExpr 0x7fce7687f398 <col:13, col:29> 'sim_cpu *'
+        |     |     |                   `-ParenExpr 0x7fce7687f378 <col:14, col:28> 'sim_cpu *'
+        |     |     |                     `-UnaryOperator 0x7fce7687f358 <col:15, col:27> 'sim_cpu *' prefix '&'
+        |     |     |                       `-ArraySubscriptExpr 0x7fce7687f330 <col:16, col:27> 'sim_cpu':'struct _sim_cpu' lvalue
+        |     |     |                         |-ImplicitCastExpr 0x7fce7687f318 <col:16, col:22> 'sim_cpu *' <ArrayToPointerDecay>
+        |     |     |                         | `-MemberExpr 0x7fce7687f268 <col:16, col:22> 'sim_cpu [1]' lvalue ->cpu 0x7fce77000a08
+        |     |     |                         |   `-ImplicitCastExpr 0x7fce7687f250 <col:16, col:19> 'SIM_DESC':'struct sim_state *' <LValueToRValue>
+        |     |     |                         |     `-ParenExpr 0x7fce7687f230 <col:16, col:19> 'SIM_DESC':'struct sim_state *' lvalue
+        |     |     |                         |       `-DeclRefExpr 0x7fce7687f208 <col:17> 'SIM_DESC':'struct sim_state *' lvalue ParmVar 0x7fce77000c00 'sd' 'SIM_DESC':'struct sim_state *'
+        |     |     |                         `-IntegerLiteral 0x7fce7687f2a0 <col:26> 'int' 0
+        |     |     `-DeclRefExpr 0x7fce7687f560 <line:62:22> 'int' EnumConstant 0x7fce77000048 'TRACE_ALU_IDX' 'int'
+        |     `-IntegerLiteral 0x7fce7687f5c8 <col:40> 'int' 0
+        |-CallExpr 0x7fce7687f8e0 <line:63:2, col:68> 'void'
+        | |-ImplicitCastExpr 0x7fce7687f8c8 <col:2> 'void (*)()' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fce7687f688 <col:2> 'void ()' Function 0x7fce77000b28 'trace_result_word1' 'void ()'
+        | |-ImplicitCastExpr 0x7fce7687f928 <col:22> 'SIM_DESC':'struct sim_state *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fce7687f6b0 <col:22> 'SIM_DESC':'struct sim_state *' lvalue ParmVar 0x7fce77000c00 'sd' 'SIM_DESC':'struct sim_state *'
+        | |-ParenExpr 0x7fce7687f810 <col:26, col:42> 'sim_cpu *'
+        | | `-ParenExpr 0x7fce7687f7f0 <col:27, col:41> 'sim_cpu *'
+        | |   `-UnaryOperator 0x7fce7687f7d0 <col:28, col:40> 'sim_cpu *' prefix '&'
+        | |     `-ArraySubscriptExpr 0x7fce7687f7a8 <col:29, col:40> 'sim_cpu':'struct _sim_cpu' lvalue
+        | |       |-ImplicitCastExpr 0x7fce7687f790 <col:29, col:35> 'sim_cpu *' <ArrayToPointerDecay>
+        | |       | `-MemberExpr 0x7fce7687f738 <col:29, col:35> 'sim_cpu [1]' lvalue ->cpu 0x7fce77000a08
+        | |       |   `-ImplicitCastExpr 0x7fce7687f720 <col:29, col:32> 'SIM_DESC':'struct sim_state *' <LValueToRValue>
+        | |       |     `-ParenExpr 0x7fce7687f700 <col:29, col:32> 'SIM_DESC':'struct sim_state *' lvalue
+        | |       |       `-DeclRefExpr 0x7fce7687f6d8 <col:30> 'SIM_DESC':'struct sim_state *' lvalue ParmVar 0x7fce77000c00 'sd' 'SIM_DESC':'struct sim_state *'
+        | |       `-IntegerLiteral 0x7fce7687f770 <col:39> 'int' 0
+        | |-DeclRefExpr 0x7fce7687f830 <col:45> 'int' EnumConstant 0x7fce77000048 'TRACE_ALU_IDX' 'int'
+        | `-ImplicitCastExpr 0x7fce7687f940 <col:60, col:67> 'unsigned64':'unsigned long' <LValueToRValue>
+        |   `-ParenExpr 0x7fce7687f880 <col:60, col:67> 'unsigned64':'unsigned long' lvalue
+        |     `-DeclRefExpr 0x7fce7687f858 <col:61> 'unsigned64':'unsigned long' lvalue Var 0x7fce7687ee38 'result' 'unsigned64':'unsigned long'
+        `-<<<NULL>>>

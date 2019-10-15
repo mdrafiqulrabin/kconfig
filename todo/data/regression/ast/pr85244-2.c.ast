@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fcfb482bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcfb482c960 <../Data/C2AST/pr85244-2.c:1:1, line:5:1> line:1:8 struct s definition
+| |-FieldDecl 0x7fcfb5014238 <line:2:5, col:10> col:10 a 'long'
+| |-FieldDecl 0x7fcfb5014298 <line:3:5, col:9> col:9 b 'int'
+| `-FieldDecl 0x7fcfb5014330 <line:4:5, col:13> col:9 tab 'int []'
+|-VarDecl 0x7fcfb5014390 <line:7:1, col:11> col:5 idx 'int' cinit
+| `-IntegerLiteral 0x7fcfb5014430 <col:11> 'int' 1
+`-VarDecl 0x7fcfb50144a0 <line:8:1, col:43> col:16 val 'const struct s':'const struct s' cinit
+  `-InitListExpr 0x7fcfb5014628 <col:22, col:43> 'struct s':'struct s'
+    |-ImplicitCastExpr 0x7fcfb5014680 <col:24> 'long' <IntegralCast>
+    | `-IntegerLiteral 0x7fcfb5014500 <col:24> 'int' 0
+    |-IntegerLiteral 0x7fcfb5014520 <col:27> 'int' 0
+    `-InitListExpr 0x7fcfb5014698 <col:30, col:41> 'int [2]'
+      |-IntegerLiteral 0x7fcfb5014540 <col:32> 'int' 42
+      `-IntegerLiteral 0x7fcfb5014560 <col:36> 'int' 1337

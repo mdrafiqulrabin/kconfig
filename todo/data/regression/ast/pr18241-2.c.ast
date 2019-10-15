@@ -1,0 +1,197 @@
+TranslationUnitDecl 0x7fae7682bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fae7686df68 <../Data/C2AST/pr18241-2.c:4:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fae7686e008 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fae7686e068 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fae7686e0c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fae7686e140 prev 0x7fae7686df68 <col:1, col:47> col:14 used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fae7682c978 <col:22, col:26> col:27 'void *'
+| |-ParmVarDecl 0x7fae7686de00 <col:29> col:32 'int'
+| `-ParmVarDecl 0x7fae7686de78 <<built-in>:81:23, col:37> ../Data/C2AST/pr18241-2.c:4:47 'unsigned long'
+|-FunctionDecl 0x7fae7686e2f0 <line:5:13> col:13 implicit abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fae7686e390 prev 0x7fae7686e2f0 <col:1, col:24> col:13 abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fae7686e430 <line:7:1, line:10:1> line:7:8 struct radix_tree_root definition
+| |-FieldDecl 0x7fae7686e4f8 <line:8:2, col:15> col:15 referenced height 'unsigned int'
+| |-RecordDecl 0x7fae7686e540 parent 0x7fae7682bce8 <line:9:2, col:9> col:9 struct radix_tree_node
+| `-FieldDecl 0x7fae7686e6b0 <col:2, col:26> col:26 referenced rnode 'struct radix_tree_node *'
+|-RecordDecl 0x7fae7686e6f8 prev 0x7fae7686e540 <line:12:1, line:16:1> line:12:8 struct radix_tree_node definition
+| |-FieldDecl 0x7fae7686e798 <line:13:2, col:15> col:15 referenced count 'unsigned int'
+| |-FieldDecl 0x7fae7686e860 <line:14:2, col:16> col:8 referenced slots 'void *[64]'
+| `-FieldDecl 0x7fae7686e930 <line:15:2, col:22> col:16 referenced tags 'unsigned long [2]'
+|-RecordDecl 0x7fae7686e978 <line:18:1, line:21:1> line:18:8 struct radix_tree_path definition
+| |-FieldDecl 0x7fae7686ea48 <line:19:2, col:26> col:26 referenced node 'struct radix_tree_node *'
+| |-FieldDecl 0x7fae7686eb10 <col:2, col:34> col:34 referenced slot 'struct radix_tree_node **'
+| `-FieldDecl 0x7fae7686eb70 <line:20:2, col:6> col:6 referenced offset 'int'
+|-FunctionDecl 0x7fae7686ee00 <line:23:1, line:49:1> line:23:6 used radix_tree_tag_clear 'void (struct radix_tree_root *, unsigned long)'
+| |-ParmVarDecl 0x7fae7686ec70 <col:27, col:51> col:51 used root 'struct radix_tree_root *'
+| |-ParmVarDecl 0x7fae7686ece8 <col:57, col:71> col:71 used index 'unsigned long'
+| `-CompoundStmt 0x7fae76885fe0 <line:24:1, line:49:1>
+|   |-DeclStmt 0x7fae7686f1e8 <line:25:2, col:47>
+|   | |-VarDecl 0x7fae7686f048 <col:2, col:31> col:25 used path 'struct radix_tree_path [7]'
+|   | `-VarDecl 0x7fae7686f130 <col:2, col:43> col:35 used pathp 'struct radix_tree_path *' cinit
+|   |   `-ImplicitCastExpr 0x7fae7686f1b8 <col:43> 'struct radix_tree_path *' <ArrayToPointerDecay>
+|   |     `-DeclRefExpr 0x7fae7686f190 <col:43> 'struct radix_tree_path [7]' lvalue Var 0x7fae7686f048 'path' 'struct radix_tree_path [7]'
+|   |-DeclStmt 0x7fae7686f308 <line:26:2, col:28>
+|   | |-VarDecl 0x7fae7686f218 <col:2, col:15> col:15 used height 'unsigned int'
+|   | `-VarDecl 0x7fae7686f290 <col:2, col:23> col:23 used shift 'unsigned int'
+|   |-DeclStmt 0x7fae7686f3c0 <line:27:2, col:30>
+|   | `-VarDecl 0x7fae7686f360 <col:2, col:26> col:26 used addr 'volatile unsigned long *'
+|   |-BinaryOperator 0x7fae7686f490 <line:29:2, col:17> 'unsigned int' '='
+|   | |-DeclRefExpr 0x7fae7686f3d8 <col:2> 'unsigned int' lvalue Var 0x7fae7686f218 'height' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7fae7686f478 <col:11, col:17> 'unsigned int' <LValueToRValue>
+|   |   `-MemberExpr 0x7fae7686f440 <col:11, col:17> 'unsigned int' lvalue ->height 0x7fae7686e4f8
+|   |     `-ImplicitCastExpr 0x7fae7686f428 <col:11> 'struct radix_tree_root *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fae7686f400 <col:11> 'struct radix_tree_root *' lvalue ParmVar 0x7fae7686ec70 'root' 'struct radix_tree_root *'
+|   |-BinaryOperator 0x7fae7686f600 <line:31:2, col:25> 'unsigned int' '='
+|   | |-DeclRefExpr 0x7fae7686f4b8 <col:2> 'unsigned int' lvalue Var 0x7fae7686f290 'shift' 'unsigned int'
+|   | `-BinaryOperator 0x7fae7686f5d8 <col:10, col:25> 'unsigned int' '*'
+|   |   |-ParenExpr 0x7fae7686f580 <col:10, col:21> 'unsigned int'
+|   |   | `-BinaryOperator 0x7fae7686f558 <col:11, col:20> 'unsigned int' '-'
+|   |   |   |-ImplicitCastExpr 0x7fae7686f528 <col:11> 'unsigned int' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fae7686f4e0 <col:11> 'unsigned int' lvalue Var 0x7fae7686f218 'height' 'unsigned int'
+|   |   |   `-ImplicitCastExpr 0x7fae7686f540 <col:20> 'unsigned int' <IntegralCast>
+|   |   |     `-IntegerLiteral 0x7fae7686f508 <col:20> 'int' 1
+|   |   `-ImplicitCastExpr 0x7fae7686f5c0 <col:25> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fae7686f5a0 <col:25> 'int' 6
+|   |-BinaryOperator 0x7fae7686f780 <line:32:2, col:24> 'struct radix_tree_node **' '='
+|   | |-MemberExpr 0x7fae7686f6b0 <col:2, col:10> 'struct radix_tree_node **' lvalue .slot 0x7fae7686eb10
+|   | | `-ArraySubscriptExpr 0x7fae7686f688 <col:2, col:8> 'struct radix_tree_path':'struct radix_tree_path' lvalue
+|   | |   |-ImplicitCastExpr 0x7fae7686f670 <col:2> 'struct radix_tree_path *' <ArrayToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fae7686f628 <col:2> 'struct radix_tree_path [7]' lvalue Var 0x7fae7686f048 'path' 'struct radix_tree_path [7]'
+|   | |   `-IntegerLiteral 0x7fae7686f650 <col:7> 'int' 0
+|   | `-UnaryOperator 0x7fae7686f760 <col:17, col:24> 'struct radix_tree_node **' prefix '&'
+|   |   `-MemberExpr 0x7fae7686f728 <col:18, col:24> 'struct radix_tree_node *' lvalue ->rnode 0x7fae7686e6b0
+|   |     `-ImplicitCastExpr 0x7fae7686f710 <col:18> 'struct radix_tree_root *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fae7686f6e8 <col:18> 'struct radix_tree_root *' lvalue ParmVar 0x7fae7686ec70 'root' 'struct radix_tree_root *'
+|   |-WhileStmt 0x7fae76885cc0 <line:34:2, line:45:2>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fae7686f820 <line:34:9, col:18> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fae7686f7f0 <col:9> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fae7686f7a8 <col:9> 'unsigned int' lvalue Var 0x7fae7686f218 'height' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7fae7686f808 <col:18> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fae7686f7d0 <col:18> 'int' 0
+|   | `-CompoundStmt 0x7fae76885c70 <col:21, line:45:2>
+|   |   |-DeclStmt 0x7fae7686f8c0 <line:35:3, col:13>
+|   |   | `-VarDecl 0x7fae7686f860 <col:3, col:7> col:7 used offset 'int'
+|   |   |-BinaryOperator 0x7fae7686faa8 <line:37:3, col:36> 'int' '='
+|   |   | |-DeclRefExpr 0x7fae7686f8d8 <col:3> 'int' lvalue Var 0x7fae7686f860 'offset' 'int'
+|   |   | `-ImplicitCastExpr 0x7fae7686fa90 <col:12, col:36> 'int' <IntegralCast>
+|   |   |   `-BinaryOperator 0x7fae7686fa68 <col:12, col:36> 'unsigned long' '&'
+|   |   |     |-ParenExpr 0x7fae7686f9a8 <col:12, col:27> 'unsigned long'
+|   |   |     | `-BinaryOperator 0x7fae7686f980 <col:13, col:22> 'unsigned long' '>>'
+|   |   |     |   |-ImplicitCastExpr 0x7fae7686f950 <col:13> 'unsigned long' <LValueToRValue>
+|   |   |     |   | `-DeclRefExpr 0x7fae7686f900 <col:13> 'unsigned long' lvalue ParmVar 0x7fae7686ece8 'index' 'unsigned long'
+|   |   |     |   `-ImplicitCastExpr 0x7fae7686f968 <col:22> 'unsigned int' <LValueToRValue>
+|   |   |     |     `-DeclRefExpr 0x7fae7686f928 <col:22> 'unsigned int' lvalue Var 0x7fae7686f290 'shift' 'unsigned int'
+|   |   |     `-ImplicitCastExpr 0x7fae7686fa50 <col:31, col:36> 'unsigned long' <IntegralCast>
+|   |   |       `-ParenExpr 0x7fae7686fa30 <col:31, col:36> 'int'
+|   |   |         `-BinaryOperator 0x7fae7686fa08 <col:32, col:35> 'int' '-'
+|   |   |           |-IntegerLiteral 0x7fae7686f9c8 <col:32> 'int' 64
+|   |   |           `-IntegerLiteral 0x7fae7686f9e8 <col:35> 'int' 1
+|   |   |-BinaryOperator 0x7fae7686fbd0 <line:38:3, col:21> 'int' '='
+|   |   | |-MemberExpr 0x7fae7686fb58 <col:3, col:12> 'int' lvalue .offset 0x7fae7686eb70
+|   |   | | `-ArraySubscriptExpr 0x7fae7686fb30 <col:3, col:10> 'struct radix_tree_path':'struct radix_tree_path' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fae7686fb18 <col:3> 'struct radix_tree_path *' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fae7686fad0 <col:3> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |   | |   `-IntegerLiteral 0x7fae7686faf8 <col:9> 'int' 1
+|   |   | `-ImplicitCastExpr 0x7fae7686fbb8 <col:21> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fae7686fb90 <col:21> 'int' lvalue Var 0x7fae7686f860 'offset' 'int'
+|   |   |-BinaryOperator 0x7fae7686fdc8 <line:39:3, col:29> 'struct radix_tree_node *' '='
+|   |   | |-MemberExpr 0x7fae7686fc80 <col:3, col:12> 'struct radix_tree_node *' lvalue .node 0x7fae7686ea48
+|   |   | | `-ArraySubscriptExpr 0x7fae7686fc58 <col:3, col:10> 'struct radix_tree_path':'struct radix_tree_path' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fae7686fc40 <col:3> 'struct radix_tree_path *' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fae7686fbf8 <col:3> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |   | |   `-IntegerLiteral 0x7fae7686fc20 <col:9> 'int' 1
+|   |   | `-ImplicitCastExpr 0x7fae7686fdb0 <col:19, col:29> 'struct radix_tree_node *' <LValueToRValue>
+|   |   |   `-UnaryOperator 0x7fae7686fd90 <col:19, col:29> 'struct radix_tree_node *' lvalue prefix '*'
+|   |   |     `-ImplicitCastExpr 0x7fae7686fd78 <col:20, col:29> 'struct radix_tree_node **' <LValueToRValue>
+|   |   |       `-MemberExpr 0x7fae7686fd40 <col:20, col:29> 'struct radix_tree_node **' lvalue .slot 0x7fae7686eb10
+|   |   |         `-ArraySubscriptExpr 0x7fae7686fd18 <col:20, col:27> 'struct radix_tree_path':'struct radix_tree_path' lvalue
+|   |   |           |-ImplicitCastExpr 0x7fae7686fd00 <col:20> 'struct radix_tree_path *' <LValueToRValue>
+|   |   |           | `-DeclRefExpr 0x7fae7686fcb8 <col:20> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |   |           `-IntegerLiteral 0x7fae7686fce0 <col:26> 'int' 0
+|   |   |-BinaryOperator 0x7fae76885b20 <line:40:3, line:41:34> 'struct radix_tree_node **' '='
+|   |   | |-MemberExpr 0x7fae76885888 <line:40:3, col:12> 'struct radix_tree_node **' lvalue .slot 0x7fae7686eb10
+|   |   | | `-ArraySubscriptExpr 0x7fae76885860 <col:3, col:10> 'struct radix_tree_path':'struct radix_tree_path' lvalue
+|   |   | |   |-ImplicitCastExpr 0x7fae76885848 <col:3> 'struct radix_tree_path *' <LValueToRValue>
+|   |   | |   | `-DeclRefExpr 0x7fae76885800 <col:3> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |   | |   `-IntegerLiteral 0x7fae76885828 <col:9> 'int' 1
+|   |   | `-CStyleCastExpr 0x7fae76885af8 <col:19, line:41:34> 'struct radix_tree_node **' <BitCast>
+|   |   |   `-ParenExpr 0x7fae76885ad8 <col:4, col:34> 'void **'
+|   |   |     `-BinaryOperator 0x7fae76885a58 <col:5, col:28> 'void **' '+'
+|   |   |       |-ImplicitCastExpr 0x7fae76885a28 <col:5, col:20> 'void **' <ArrayToPointerDecay>
+|   |   |       | `-MemberExpr 0x7fae76885998 <col:5, col:20> 'void *[64]' lvalue ->slots 0x7fae7686e860
+|   |   |       |   `-ImplicitCastExpr 0x7fae76885980 <col:5, col:14> 'struct radix_tree_node *' <LValueToRValue>
+|   |   |       |     `-MemberExpr 0x7fae76885948 <col:5, col:14> 'struct radix_tree_node *' lvalue .node 0x7fae7686ea48
+|   |   |       |       `-ArraySubscriptExpr 0x7fae76885920 <col:5, col:12> 'struct radix_tree_path':'struct radix_tree_path' lvalue
+|   |   |       |         |-ImplicitCastExpr 0x7fae76885908 <col:5> 'struct radix_tree_path *' <LValueToRValue>
+|   |   |       |         | `-DeclRefExpr 0x7fae768858c0 <col:5> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |   |       |         `-IntegerLiteral 0x7fae768858e8 <col:11> 'int' 1
+|   |   |       `-ImplicitCastExpr 0x7fae76885a40 <col:28> 'int' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fae768859d0 <col:28> 'int' lvalue Var 0x7fae7686f860 'offset' 'int'
+|   |   |-UnaryOperator 0x7fae76885b70 <line:42:3, col:8> 'struct radix_tree_path *' postfix '++'
+|   |   | `-DeclRefExpr 0x7fae76885b48 <col:3> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |   |-CompoundAssignOperator 0x7fae76885bf0 <line:43:3, col:12> 'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   |   | |-DeclRefExpr 0x7fae76885b90 <col:3> 'unsigned int' lvalue Var 0x7fae7686f290 'shift' 'unsigned int'
+|   |   | `-ImplicitCastExpr 0x7fae76885bd8 <col:12> 'unsigned int' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fae76885bb8 <col:12> 'int' 6
+|   |   `-UnaryOperator 0x7fae76885c50 <line:44:3, col:9> 'unsigned int' postfix '--'
+|   |     `-DeclRefExpr 0x7fae76885c28 <col:3> 'unsigned int' lvalue Var 0x7fae7686f218 'height' 'unsigned int'
+|   |-BinaryOperator 0x7fae76885ef8 <line:47:2, col:35> 'volatile unsigned long *' '='
+|   | |-DeclRefExpr 0x7fae76885ce0 <col:2> 'volatile unsigned long *' lvalue Var 0x7fae7686f360 'addr' 'volatile unsigned long *'
+|   | `-ImplicitCastExpr 0x7fae76885ee0 <col:9, col:35> 'volatile unsigned long *' <BitCast>
+|   |   `-BinaryOperator 0x7fae76885eb8 <col:9, col:35> 'unsigned long *' '+'
+|   |     |-UnaryOperator 0x7fae76885e78 <col:9, col:31> 'unsigned long *' prefix '&'
+|   |     | `-ParenExpr 0x7fae76885e58 <col:10, col:31> 'unsigned long' lvalue
+|   |     |   `-ArraySubscriptExpr 0x7fae76885e30 <col:11, col:30> 'unsigned long' lvalue
+|   |     |     |-ImplicitCastExpr 0x7fae76885e18 <col:11, col:24> 'unsigned long *' <ArrayToPointerDecay>
+|   |     |     | `-MemberExpr 0x7fae76885d98 <col:11, col:24> 'unsigned long [2]' lvalue ->tags 0x7fae7686e930
+|   |     |     |   `-ImplicitCastExpr 0x7fae76885d80 <col:11, col:18> 'struct radix_tree_node *' <LValueToRValue>
+|   |     |     |     `-MemberExpr 0x7fae76885d48 <col:11, col:18> 'struct radix_tree_node *' lvalue ->node 0x7fae7686ea48
+|   |     |     |       `-ImplicitCastExpr 0x7fae76885d30 <col:11> 'struct radix_tree_path *' <LValueToRValue>
+|   |     |     |         `-DeclRefExpr 0x7fae76885d08 <col:11> 'struct radix_tree_path *' lvalue Var 0x7fae7686f130 'pathp' 'struct radix_tree_path *'
+|   |     |     `-IntegerLiteral 0x7fae76885dd0 <col:29> 'int' 0
+|   |     `-IntegerLiteral 0x7fae76885e98 <col:35> 'int' 1
+|   `-BinaryOperator 0x7fae76885fb8 <line:48:2, col:10> 'unsigned long' '='
+|     |-UnaryOperator 0x7fae76885f60 <col:2, col:3> 'volatile unsigned long' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fae76885f48 <col:3> 'volatile unsigned long *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fae76885f20 <col:3> 'volatile unsigned long *' lvalue Var 0x7fae7686f360 'addr' 'volatile unsigned long *'
+|     `-ImplicitCastExpr 0x7fae76885fa0 <col:10> 'unsigned long' <IntegralCast>
+|       `-IntegerLiteral 0x7fae76885f80 <col:10> 'int' 574
+|-VarDecl 0x7fae76886058 <line:51:1, col:24> col:24 used r 'struct radix_tree_root':'struct radix_tree_root'
+|-VarDecl 0x7fae768860d8 <line:52:1, col:24> col:24 used node 'struct radix_tree_node':'struct radix_tree_node'
+`-FunctionDecl 0x7fae76886190 <line:54:1, line:65:1> line:54:5 main 'int ()'
+  `-CompoundStmt 0x7fae76887c50 <line:55:1, line:65:1>
+    |-BinaryOperator 0x7fae768862c8 <line:56:4, col:15> 'unsigned int' '='
+    | |-MemberExpr 0x7fae76886258 <col:4, col:6> 'unsigned int' lvalue .height 0x7fae7686e4f8
+    | | `-DeclRefExpr 0x7fae76886230 <col:4> 'struct radix_tree_root':'struct radix_tree_root' lvalue Var 0x7fae76886058 'r' 'struct radix_tree_root':'struct radix_tree_root'
+    | `-ImplicitCastExpr 0x7fae768862b0 <col:15> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fae76886290 <col:15> 'int' 1
+    |-BinaryOperator 0x7fae768863e8 <line:57:2, col:13> 'struct radix_tree_node *' '='
+    | |-MemberExpr 0x7fae76886368 <col:2, col:4> 'struct radix_tree_node *' lvalue .rnode 0x7fae7686e6b0
+    | | `-DeclRefExpr 0x7fae76886340 <col:2> 'struct radix_tree_root':'struct radix_tree_root' lvalue Var 0x7fae76886058 'r' 'struct radix_tree_root':'struct radix_tree_root'
+    | `-UnaryOperator 0x7fae768863c8 <col:12, col:13> 'struct radix_tree_node *' prefix '&'
+    |   `-DeclRefExpr 0x7fae768863a0 <col:13> 'struct radix_tree_node':'struct radix_tree_node' lvalue Var 0x7fae768860d8 'node' 'struct radix_tree_node':'struct radix_tree_node'
+    |-CallExpr 0x7fae76886550 <line:59:2, col:33> 'void *'
+    | |-ImplicitCastExpr 0x7fae76886538 <col:2> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fae76886410 <col:2> 'void *(void *, int, unsigned long)' Function 0x7fae7686e140 'memset' 'void *(void *, int, unsigned long)'
+    | |-ImplicitCastExpr 0x7fae76886590 <col:10, col:11> 'void *' <BitCast>
+    | | `-UnaryOperator 0x7fae76886460 <col:10, col:11> 'struct radix_tree_node *' prefix '&'
+    | |   `-DeclRefExpr 0x7fae76886438 <col:11> 'struct radix_tree_node':'struct radix_tree_node' lvalue Var 0x7fae768860d8 'node' 'struct radix_tree_node':'struct radix_tree_node'
+    | |-IntegerLiteral 0x7fae76886480 <col:17> 'int' 0
+    | `-UnaryExprOrTypeTraitExpr 0x7fae768864e8 <col:20, col:32> 'unsigned long' sizeof
+    |   `-ParenExpr 0x7fae768864c8 <col:27, col:32> 'struct radix_tree_node':'struct radix_tree_node' lvalue
+    |     `-DeclRefExpr 0x7fae768864a0 <col:28> 'struct radix_tree_node':'struct radix_tree_node' lvalue Var 0x7fae768860d8 'node' 'struct radix_tree_node':'struct radix_tree_node'
+    |-BinaryOperator 0x7fae76886640 <line:61:2, col:15> 'unsigned int' '='
+    | |-MemberExpr 0x7fae768865d0 <col:2, col:7> 'unsigned int' lvalue .count 0x7fae7686e798
+    | | `-DeclRefExpr 0x7fae768865a8 <col:2> 'struct radix_tree_node':'struct radix_tree_node' lvalue Var 0x7fae768860d8 'node' 'struct radix_tree_node':'struct radix_tree_node'
+    | `-ImplicitCastExpr 0x7fae76886628 <col:15> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fae76886608 <col:15> 'int' 1
+    |-CallExpr 0x7fae768867c0 <line:63:2, col:30> 'void'
+    | |-ImplicitCastExpr 0x7fae768867a8 <col:2> 'void (*)(struct radix_tree_root *, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fae768866c0 <col:2> 'void (struct radix_tree_root *, unsigned long)' Function 0x7fae7686ee00 'radix_tree_tag_clear' 'void (struct radix_tree_root *, unsigned long)'
+    | |-UnaryOperator 0x7fae76886710 <col:24, col:25> 'struct radix_tree_root *' prefix '&'
+    | | `-DeclRefExpr 0x7fae768866e8 <col:25> 'struct radix_tree_root':'struct radix_tree_root' lvalue Var 0x7fae76886058 'r' 'struct radix_tree_root':'struct radix_tree_root'
+    | `-ImplicitCastExpr 0x7fae76887c00 <col:28> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fae76886730 <col:28> 'int' 13
+    `-ReturnStmt 0x7fae76887c38 <line:64:2, col:9>
+      `-IntegerLiteral 0x7fae76887c18 <col:9> 'int' 0

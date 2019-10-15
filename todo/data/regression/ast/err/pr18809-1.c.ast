@@ -1,0 +1,33 @@
+../Data/C2AST/pr18809-1.c:6:17: error: variable has incomplete type 'enum E'
+void foo(enum E e) {}    
+                ^
+../Data/C2AST/pr18809-1.c:6:15: note: forward declaration of 'enum E'
+void foo(enum E e) {}    
+              ^
+../Data/C2AST/pr18809-1.c:9:18: error: argument type 'enum E' is incomplete
+void bar() { foo(0); }
+                 ^
+../Data/C2AST/pr18809-1.c:6:15: note: forward declaration of 'enum E'
+void foo(enum E e) {}    
+              ^
+2 errors generated.
+TranslationUnitDecl 0x7fbf4c8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf4c817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf4c817780 '__int128'
+|-TypedefDecl 0x7fbf4c817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf4c8177a0 'unsigned __int128'
+|-TypedefDecl 0x7fbf4c817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf4c817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf4c817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf4c817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf4c817e00 'char *'
+|   `-BuiltinType 0x7fbf4c817580 'char'
+|-TypedefDecl 0x7fbf4c818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf4c8180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf4c817f20 'struct __va_list_tag'
+|     `-Record 0x7fbf4c817e98 '__va_list_tag'
+|-FunctionDecl 0x7fbf4c859170 <../Data/C2AST/pr18809-1.c:6:1, col:21> col:6 used foo 'void (enum E)'
+| |-ParmVarDecl 0x7fbf4c859070 <col:10, col:17> col:17 invalid e 'enum E':'enum E'
+| `-CompoundStmt 0x7fbf4c859610 <col:20, col:21>
+`-FunctionDecl 0x7fbf4c859668 <line:9:1, col:22> col:6 bar 'void ()'
+  `-CompoundStmt 0x7fbf4c8597f0 <col:12, col:22>

@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fcc3d8288e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcc3d018468 <../Data/C2AST/pr55152-2.c:4:1, line:7:1> line:4:8 g 'double (double)'
+| |-ParmVarDecl 0x7fcc3d829578 <col:11, col:18> col:18 used a 'double'
+| `-CompoundStmt 0x7fcc3d018720 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7fcc3d018708 <line:6:3, col:20>
+|     `-ConditionalOperator 0x7fcc3d0186d8 <col:10, col:20> 'double'
+|       |-ParenExpr 0x7fcc3d018618 <col:10, col:15> 'int'
+|       | `-BinaryOperator 0x7fcc3d0185f0 <col:11, col:14> 'int' '<'
+|       |   |-ImplicitCastExpr 0x7fcc3d0185d8 <col:11> 'double' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fcc3d018550 <col:11> 'double' lvalue ParmVar 0x7fcc3d829578 'a' 'double'
+|       |   `-UnaryOperator 0x7fcc3d0185b8 <col:13, col:14> 'double' prefix '-'
+|       |     `-ImplicitCastExpr 0x7fcc3d0185a0 <col:14> 'double' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fcc3d018578 <col:14> 'double' lvalue ParmVar 0x7fcc3d829578 'a' 'double'
+|       |-ImplicitCastExpr 0x7fcc3d0186c0 <col:17> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fcc3d018638 <col:17> 'double' lvalue ParmVar 0x7fcc3d829578 'a' 'double'
+|       `-UnaryOperator 0x7fcc3d0186a0 <col:19, col:20> 'double' prefix '-'
+|         `-ImplicitCastExpr 0x7fcc3d018688 <col:20> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fcc3d018660 <col:20> 'double' lvalue ParmVar 0x7fcc3d829578 'a' 'double'
+`-FunctionDecl 0x7fcc3d018818 <line:8:1, line:11:1> line:8:5 f 'int (int)'
+  |-ParmVarDecl 0x7fcc3d018750 <col:7, col:11> col:11 used a 'int'
+  `-CompoundStmt 0x7fcc3d018a90 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fcc3d018a78 <line:10:3, col:20>
+      `-ConditionalOperator 0x7fcc3d018a48 <col:10, col:20> 'int'
+        |-ParenExpr 0x7fcc3d018988 <col:10, col:15> 'int'
+        | `-BinaryOperator 0x7fcc3d018960 <col:11, col:14> 'int' '<'
+        |   |-ImplicitCastExpr 0x7fcc3d018948 <col:11> 'int' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fcc3d0188c0 <col:11> 'int' lvalue ParmVar 0x7fcc3d018750 'a' 'int'
+        |   `-UnaryOperator 0x7fcc3d018928 <col:13, col:14> 'int' prefix '-'
+        |     `-ImplicitCastExpr 0x7fcc3d018910 <col:14> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fcc3d0188e8 <col:14> 'int' lvalue ParmVar 0x7fcc3d018750 'a' 'int'
+        |-ImplicitCastExpr 0x7fcc3d018a30 <col:17> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fcc3d0189a8 <col:17> 'int' lvalue ParmVar 0x7fcc3d018750 'a' 'int'
+        `-UnaryOperator 0x7fcc3d018a10 <col:19, col:20> 'int' prefix '-'
+          `-ImplicitCastExpr 0x7fcc3d0189f8 <col:20> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fcc3d0189d0 <col:20> 'int' lvalue ParmVar 0x7fcc3d018750 'a' 'int'

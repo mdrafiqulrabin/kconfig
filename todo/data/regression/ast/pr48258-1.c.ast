@@ -1,0 +1,125 @@
+TranslationUnitDecl 0x7f9b8b8256e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9b8c82ede0 <../Data/C2AST/pr48258-1.c:23:1, col:18> col:7 used values 'float [1024]'
+| `-AlignedAttr 0x7f9b8c82ee40 <col:35, col:49> aligned
+|   `-IntegerLiteral 0x7f9b8c82ed58 <col:47> 'int' 32
+|-FunctionDecl 0x7f9b8c82ef98 <line:25:1, line:35:1> line:26:1 vector_sum 'float (void)'
+| `-CompoundStmt 0x7f9b8c82f4e0 <line:27:1, line:35:1>
+|   |-DeclStmt 0x7f9b8c82f0d0 <line:28:3, col:11>
+|   | `-VarDecl 0x7f9b8c82f070 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7f9b8c82f180 <line:29:3, col:19>
+|   | `-VarDecl 0x7f9b8c82f100 <col:3, col:15> col:9 used sum 'float' cinit
+|   |   `-FloatingLiteral 0x7f9b8c82f160 <col:15> 'float' 0.000000e+00
+|   |-ForStmt 0x7f9b8c82f450 <line:31:3, line:32:20>
+|   | |-BinaryOperator 0x7f9b8c82f1f8 <line:31:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7f9b8c82f198 <col:8> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f070 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9b8c82f1e0 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9b8c82f1c0 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9b8c82f298 <col:15, line:20:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9b8c82f268 <line:31:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9b8c82f220 <col:15> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f070 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9b8c82f280 <line:20:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9b8c82f248 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7f9b8c82f2e8 <line:31:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7f9b8c82f2c0 <col:25> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f070 'i' 'size_t':'unsigned long'
+|   | `-CompoundAssignOperator 0x7f9b8c82f418 <line:32:5, col:20> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+|   |   |-DeclRefExpr 0x7f9b8c82f308 <col:5> 'float' lvalue Var 0x7f9b8c82f100 'sum' 'float'
+|   |   `-ImplicitCastExpr 0x7f9b8c82f400 <col:12, col:20> 'float' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7f9b8c82f3d8 <col:12, col:20> 'float' lvalue
+|   |       |-ImplicitCastExpr 0x7f9b8c82f3a8 <col:12> 'float *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f9b8c82f330 <col:12> 'float [1024]' lvalue Var 0x7f9b8c82ede0 'values' 'float [1024]'
+|   |       `-ImplicitCastExpr 0x7f9b8c82f3c0 <col:19> 'size_t':'unsigned long' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f9b8c82f358 <col:19> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f070 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7f9b8c82f4c8 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7f9b8c82f4b0 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9b8c82f488 <col:10> 'float' lvalue Var 0x7f9b8c82f100 'sum' 'float'
+|-FunctionDecl 0x7f9b8c82f5a8 <line:37:1, line:47:1> line:38:1 vector_min 'float (void)'
+| `-CompoundStmt 0x7f9b8b858810 <line:39:1, line:47:1>
+|   |-DeclStmt 0x7f9b8c82f6b8 <line:40:3, col:11>
+|   | `-VarDecl 0x7f9b8c82f658 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7f9b8c82f7e8 <line:41:3, col:24>
+|   | `-VarDecl 0x7f9b8c82f6e8 <col:3, col:23> col:9 used min 'float' cinit
+|   |   `-ImplicitCastExpr 0x7f9b8c82f7d0 <col:15, col:23> 'float' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7f9b8c82f7a8 <col:15, col:23> 'float' lvalue
+|   |       |-ImplicitCastExpr 0x7f9b8c82f790 <col:15> 'float *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f9b8c82f748 <col:15> 'float [1024]' lvalue Var 0x7f9b8c82ede0 'values' 'float [1024]'
+|   |       `-IntegerLiteral 0x7f9b8c82f770 <col:22> 'int' 0
+|   |-ForStmt 0x7f9b8b858780 <line:43:3, line:44:42>
+|   | |-BinaryOperator 0x7f9b8c82f860 <line:43:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7f9b8c82f800 <col:8> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f658 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9b8c82f848 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9b8c82f828 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9b8c82f900 <col:15, line:20:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9b8c82f8d0 <line:43:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9b8c82f888 <col:15> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f658 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9b8c82f8e8 <line:20:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9b8c82f8b0 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7f9b8c82f950 <line:43:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7f9b8c82f928 <col:25> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f658 'i' 'size_t':'unsigned long'
+|   | `-BinaryOperator 0x7f9b8b858758 <line:44:5, col:42> 'float' '='
+|   |   |-DeclRefExpr 0x7f9b8c82f970 <col:5> 'float' lvalue Var 0x7f9b8c82f6e8 'min' 'float'
+|   |   `-CallExpr 0x7f9b8b8586f0 <col:11, col:42> 'float'
+|   |     |-ImplicitCastExpr 0x7f9b8b8586d8 <col:11> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f9b8c82fba8 <col:11> '<builtin fn type>' Function 0x7f9b8c82f9e0 '__builtin_fminf' 'float (float, float)'
+|   |     |-ImplicitCastExpr 0x7f9b8b858728 <col:28> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9b8c82fbd0 <col:28> 'float' lvalue Var 0x7f9b8c82f6e8 'min' 'float'
+|   |     `-ImplicitCastExpr 0x7f9b8b858740 <col:33, col:41> 'float' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7f9b8b858680 <col:33, col:41> 'float' lvalue
+|   |         |-ImplicitCastExpr 0x7f9b8b858650 <col:33> 'float *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7f9b8b858600 <col:33> 'float [1024]' lvalue Var 0x7f9b8c82ede0 'values' 'float [1024]'
+|   |         `-ImplicitCastExpr 0x7f9b8b858668 <col:40> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9b8b858628 <col:40> 'size_t':'unsigned long' lvalue Var 0x7f9b8c82f658 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7f9b8b8587f8 <line:46:3, col:10>
+|     `-ImplicitCastExpr 0x7f9b8b8587e0 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9b8b8587b8 <col:10> 'float' lvalue Var 0x7f9b8c82f6e8 'min' 'float'
+|-FunctionDecl 0x7f9b8c82f9e0 <line:44:11> col:11 implicit used __builtin_fminf 'float (float, float)' extern
+| |-ParmVarDecl 0x7f9b8c82fa80 <<invalid sloc>> <invalid sloc> 'float'
+| |-ParmVarDecl 0x7f9b8c82fae0 <<invalid sloc>> <invalid sloc> 'float'
+| |-NoThrowAttr 0x7f9b8c82fb50 <col:11> Implicit
+| `-ConstAttr 0x7f9b8c82fb98 <col:11> Implicit
+|-FunctionDecl 0x7f9b8b8588d8 <line:49:1, line:59:1> line:50:1 vector_max 'float (void)'
+| `-CompoundStmt 0x7f9b8b8590c0 <line:51:1, line:59:1>
+|   |-DeclStmt 0x7f9b8b8589e8 <line:52:3, col:11>
+|   | `-VarDecl 0x7f9b8b858988 <col:3, col:10> col:10 used i 'size_t':'unsigned long'
+|   |-DeclStmt 0x7f9b8b858b18 <line:53:3, col:24>
+|   | `-VarDecl 0x7f9b8b858a18 <col:3, col:23> col:9 used max 'float' cinit
+|   |   `-ImplicitCastExpr 0x7f9b8b858b00 <col:15, col:23> 'float' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7f9b8b858ad8 <col:15, col:23> 'float' lvalue
+|   |       |-ImplicitCastExpr 0x7f9b8b858ac0 <col:15> 'float *' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7f9b8b858a78 <col:15> 'float [1024]' lvalue Var 0x7f9b8c82ede0 'values' 'float [1024]'
+|   |       `-IntegerLiteral 0x7f9b8b858aa0 <col:22> 'int' 0
+|   |-ForStmt 0x7f9b8b859030 <line:55:3, line:56:42>
+|   | |-BinaryOperator 0x7f9b8b858b90 <line:55:8, col:12> 'size_t':'unsigned long' '='
+|   | | |-DeclRefExpr 0x7f9b8b858b30 <col:8> 'size_t':'unsigned long' lvalue Var 0x7f9b8b858988 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9b8b858b78 <col:12> 'size_t':'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9b8b858b58 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9b8b858c30 <col:15, line:20:14> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9b8b858c00 <line:55:15> 'size_t':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9b8b858bb8 <col:15> 'size_t':'unsigned long' lvalue Var 0x7f9b8b858988 'i' 'size_t':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7f9b8b858c18 <line:20:14> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9b8b858be0 <col:14> 'int' 1024
+|   | |-UnaryOperator 0x7f9b8b858c80 <line:55:25, col:26> 'size_t':'unsigned long' postfix '++'
+|   | | `-DeclRefExpr 0x7f9b8b858c58 <col:25> 'size_t':'unsigned long' lvalue Var 0x7f9b8b858988 'i' 'size_t':'unsigned long'
+|   | `-BinaryOperator 0x7f9b8b859008 <line:56:5, col:42> 'float' '='
+|   |   |-DeclRefExpr 0x7f9b8b858ca0 <col:5> 'float' lvalue Var 0x7f9b8b858a18 'max' 'float'
+|   |   `-CallExpr 0x7f9b8b858fa0 <col:11, col:42> 'float'
+|   |     |-ImplicitCastExpr 0x7f9b8b858f88 <col:11> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7f9b8b858e90 <col:11> '<builtin fn type>' Function 0x7f9b8b858cc8 '__builtin_fmaxf' 'float (float, float)'
+|   |     |-ImplicitCastExpr 0x7f9b8b858fd8 <col:28> 'float' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f9b8b858eb8 <col:28> 'float' lvalue Var 0x7f9b8b858a18 'max' 'float'
+|   |     `-ImplicitCastExpr 0x7f9b8b858ff0 <col:33, col:41> 'float' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7f9b8b858f60 <col:33, col:41> 'float' lvalue
+|   |         |-ImplicitCastExpr 0x7f9b8b858f30 <col:33> 'float *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7f9b8b858ee0 <col:33> 'float [1024]' lvalue Var 0x7f9b8c82ede0 'values' 'float [1024]'
+|   |         `-ImplicitCastExpr 0x7f9b8b858f48 <col:40> 'size_t':'unsigned long' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9b8b858f08 <col:40> 'size_t':'unsigned long' lvalue Var 0x7f9b8b858988 'i' 'size_t':'unsigned long'
+|   `-ReturnStmt 0x7f9b8b8590a8 <line:58:3, col:10>
+|     `-ImplicitCastExpr 0x7f9b8b859090 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9b8b859068 <col:10> 'float' lvalue Var 0x7f9b8b858a18 'max' 'float'
+`-FunctionDecl 0x7f9b8b858cc8 <line:56:11> col:11 implicit used __builtin_fmaxf 'float (float, float)' extern
+  |-ParmVarDecl 0x7f9b8b858d68 <<invalid sloc>> <invalid sloc> 'float'
+  |-ParmVarDecl 0x7f9b8b858dc8 <<invalid sloc>> <invalid sloc> 'float'
+  |-NoThrowAttr 0x7f9b8b858e38 <col:11> Implicit
+  `-ConstAttr 0x7f9b8b858e80 <col:11> Implicit

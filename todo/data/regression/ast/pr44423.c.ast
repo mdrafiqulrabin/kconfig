@@ -1,0 +1,190 @@
+TranslationUnitDecl 0x7ff3e902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3ea0f69e0 <../Data/C2AST/pr44423.c:6:1, col:16> col:16 referenced v4sf '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-TypedefType 0x7ff3e983a850 '__m128' sugar
+|   |-Typedef 0x7ff3ea01ecd0 '__m128'
+|   `-VectorType 0x7ff3ea01ec10 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|     `-BuiltinType 0x7ff3e902bee0 'float'
+|-RecordDecl 0x7ff3ea0f6a38 <line:10:9, line:13:1> line:10:9 union definition
+| |-FieldDecl 0x7ff3ea0f6b60 <line:11:3, col:12> col:9 referenced f 'float [4]'
+| `-FieldDecl 0x7ff3ea0f6be0 <line:12:3, col:9> col:9 referenced v 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-TypedefDecl 0x7ff3ea0f6c80 <line:10:1, line:13:3> col:3 referenced V4SF 'union V4SF':'V4SF'
+| `-ElaboratedType 0x7ff3ea0f6c30 'union V4SF' sugar
+|   `-RecordType 0x7ff3ea0f6ac0 'V4SF'
+|     `-Record 0x7ff3ea0f6a38 ''
+|-RecordDecl 0x7ff3ea0f6cf0 <line:15:1, line:17:1> line:15:8 struct COLOUR definition
+| |-FieldDecl 0x7ff3ea0f6db8 <line:16:3, col:9> col:9 referenced r 'float'
+| |-FieldDecl 0x7ff3ea0f6e18 <col:3, col:11> col:11 referenced g 'float'
+| `-FieldDecl 0x7ff3ea0f6e78 <col:3, col:13> col:13 referenced b 'float'
+|-FunctionDecl 0x7ff3ea0f7290 <line:19:1, line:31:3> line:19:6 used func 'void (float *, float, struct COLOUR *, V4SF *)'
+| |-ParmVarDecl 0x7ff3ea0f6ed8 <col:12, col:19> col:19 used pre1 'float *'
+| |-ParmVarDecl 0x7ff3ea0f6f50 <col:25, col:31> col:31 used pre2 'float'
+| |-ParmVarDecl 0x7ff3ea0f7060 <col:37, col:52> col:52 used a 'struct COLOUR *'
+| |-ParmVarDecl 0x7ff3ea0f7148 <col:55, col:61> col:61 used lpic 'V4SF *'
+| `-CompoundStmt 0x7ff3ea0f82d8 <line:20:3, line:31:3>
+|   |-DeclStmt 0x7ff3ea0f73c0 <line:21:3, col:10>
+|   | `-VarDecl 0x7ff3ea0f7360 <col:3, col:8> col:8 used va 'V4SF':'V4SF'
+|   |-DeclStmt 0x7ff3ea0f7450 <line:22:3, col:8>
+|   | `-VarDecl 0x7ff3ea0f73f0 <col:3, col:7> col:7 used y 'int'
+|   |-BinaryOperator 0x7ff3ea0f75b8 <line:23:3, col:14> 'float' '='
+|   | |-ArraySubscriptExpr 0x7ff3ea0f7500 <col:3, col:9> 'float' lvalue
+|   | | |-ImplicitCastExpr 0x7ff3ea0f74e8 <col:3, col:6> 'float *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7ff3ea0f7490 <col:3, col:6> 'float [4]' lvalue .f 0x7ff3ea0f6b60
+|   | | |   `-DeclRefExpr 0x7ff3ea0f7468 <col:3> 'V4SF':'V4SF' lvalue Var 0x7ff3ea0f7360 'va' 'V4SF':'V4SF'
+|   | | `-IntegerLiteral 0x7ff3ea0f74c8 <col:8> 'int' 0
+|   | `-ImplicitCastExpr 0x7ff3ea0f75a0 <col:11, col:14> 'float' <LValueToRValue>
+|   |   `-MemberExpr 0x7ff3ea0f7568 <col:11, col:14> 'float' lvalue ->r 0x7ff3ea0f6db8
+|   |     `-ImplicitCastExpr 0x7ff3ea0f7550 <col:11> 'struct COLOUR *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff3ea0f7528 <col:11> 'struct COLOUR *' lvalue ParmVar 0x7ff3ea0f7060 'a' 'struct COLOUR *'
+|   |-BinaryOperator 0x7ff3ea0f7730 <col:16, col:27> 'float' '='
+|   | |-ArraySubscriptExpr 0x7ff3ea0f7678 <col:16, col:22> 'float' lvalue
+|   | | |-ImplicitCastExpr 0x7ff3ea0f7660 <col:16, col:19> 'float *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7ff3ea0f7608 <col:16, col:19> 'float [4]' lvalue .f 0x7ff3ea0f6b60
+|   | | |   `-DeclRefExpr 0x7ff3ea0f75e0 <col:16> 'V4SF':'V4SF' lvalue Var 0x7ff3ea0f7360 'va' 'V4SF':'V4SF'
+|   | | `-IntegerLiteral 0x7ff3ea0f7640 <col:21> 'int' 1
+|   | `-ImplicitCastExpr 0x7ff3ea0f7718 <col:24, col:27> 'float' <LValueToRValue>
+|   |   `-MemberExpr 0x7ff3ea0f76e0 <col:24, col:27> 'float' lvalue ->g 0x7ff3ea0f6e18
+|   |     `-ImplicitCastExpr 0x7ff3ea0f76c8 <col:24> 'struct COLOUR *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff3ea0f76a0 <col:24> 'struct COLOUR *' lvalue ParmVar 0x7ff3ea0f7060 'a' 'struct COLOUR *'
+|   |-BinaryOperator 0x7ff3ea0f78b8 <col:29, col:40> 'float' '='
+|   | |-ArraySubscriptExpr 0x7ff3ea0f7800 <col:29, col:35> 'float' lvalue
+|   | | |-ImplicitCastExpr 0x7ff3ea0f77d8 <col:29, col:32> 'float *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7ff3ea0f7780 <col:29, col:32> 'float [4]' lvalue .f 0x7ff3ea0f6b60
+|   | | |   `-DeclRefExpr 0x7ff3ea0f7758 <col:29> 'V4SF':'V4SF' lvalue Var 0x7ff3ea0f7360 'va' 'V4SF':'V4SF'
+|   | | `-IntegerLiteral 0x7ff3ea0f77b8 <col:34> 'int' 2
+|   | `-ImplicitCastExpr 0x7ff3ea0f78a0 <col:37, col:40> 'float' <LValueToRValue>
+|   |   `-MemberExpr 0x7ff3ea0f7868 <col:37, col:40> 'float' lvalue ->b 0x7ff3ea0f6e78
+|   |     `-ImplicitCastExpr 0x7ff3ea0f7850 <col:37> 'struct COLOUR *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff3ea0f7828 <col:37> 'struct COLOUR *' lvalue ParmVar 0x7ff3ea0f7060 'a' 'struct COLOUR *'
+|   |-BinaryOperator 0x7ff3ea0f79c0 <col:42, col:50> 'float' '='
+|   | |-ArraySubscriptExpr 0x7ff3ea0f7978 <col:42, col:48> 'float' lvalue
+|   | | |-ImplicitCastExpr 0x7ff3ea0f7960 <col:42, col:45> 'float *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7ff3ea0f7908 <col:42, col:45> 'float [4]' lvalue .f 0x7ff3ea0f6b60
+|   | | |   `-DeclRefExpr 0x7ff3ea0f78e0 <col:42> 'V4SF':'V4SF' lvalue Var 0x7ff3ea0f7360 'va' 'V4SF':'V4SF'
+|   | | `-IntegerLiteral 0x7ff3ea0f7940 <col:47> 'int' 3
+|   | `-FloatingLiteral 0x7ff3ea0f79a0 <col:50> 'float' 0.000000e+00
+|   `-ForStmt 0x7ff3ea0f82a0 <line:24:3, line:30:5>
+|     |-BinaryOperator 0x7ff3ea0f7a30 <line:24:8, col:10> 'int' '='
+|     | |-DeclRefExpr 0x7ff3ea0f79e8 <col:8> 'int' lvalue Var 0x7ff3ea0f73f0 'y' 'int'
+|     | `-IntegerLiteral 0x7ff3ea0f7a10 <col:10> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7ff3ea0f7ab8 <col:13, col:15> 'int' '<'
+|     | |-ImplicitCastExpr 0x7ff3ea0f7aa0 <col:13> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7ff3ea0f7a58 <col:13> 'int' lvalue Var 0x7ff3ea0f73f0 'y' 'int'
+|     | `-IntegerLiteral 0x7ff3ea0f7a80 <col:15> 'int' 20
+|     |-UnaryOperator 0x7ff3ea0f7b08 <col:19, col:21> 'int' prefix '++'
+|     | `-DeclRefExpr 0x7ff3ea0f7ae0 <col:21> 'int' lvalue Var 0x7ff3ea0f73f0 'y' 'int'
+|     `-CompoundStmt 0x7ff3ea0f8270 <line:25:5, line:30:5>
+|       |-DeclStmt 0x7ff3ea0f7cc8 <line:26:5, col:29>
+|       | `-VarDecl 0x7ff3ea0f7b40 <col:5, col:25> col:11 used att 'float' cinit
+|       |   `-BinaryOperator 0x7ff3ea0f7ca0 <col:17, col:25> 'float' '*'
+|       |     |-ImplicitCastExpr 0x7ff3ea0f7c70 <col:17, col:23> 'float' <LValueToRValue>
+|       |     | `-ArraySubscriptExpr 0x7ff3ea0f7c20 <col:17, col:23> 'float' lvalue
+|       |     |   |-ImplicitCastExpr 0x7ff3ea0f7bf0 <col:17> 'float *' <LValueToRValue>
+|       |     |   | `-DeclRefExpr 0x7ff3ea0f7ba0 <col:17> 'float *' lvalue ParmVar 0x7ff3ea0f6ed8 'pre1' 'float *'
+|       |     |   `-ImplicitCastExpr 0x7ff3ea0f7c08 <col:22> 'int' <LValueToRValue>
+|       |     |     `-DeclRefExpr 0x7ff3ea0f7bc8 <col:22> 'int' lvalue Var 0x7ff3ea0f73f0 'y' 'int'
+|       |     `-ImplicitCastExpr 0x7ff3ea0f7c88 <col:25> 'float' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7ff3ea0f7c48 <col:25> 'float' lvalue ParmVar 0x7ff3ea0f6f50 'pre2' 'float'
+|       |-DeclStmt 0x7ff3ea0f7e20 <line:27:5, col:35>
+|       | `-VarDecl 0x7ff3ea0f7cf0 <col:5, col:34> col:10 used tmpatt 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+|       |   `-CallExpr 0x7ff3ea0f7dd8 <col:17, col:34> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |     |-ImplicitCastExpr 0x7ff3ea0f7dc0 <col:17> '__m128 (*)(const float *)' <FunctionToPointerDecay>
+|       |     | `-DeclRefExpr 0x7ff3ea0f7d50 <col:17> '__m128 (const float *)' Function 0x7ff3e90db6f0 '_mm_load1_ps' '__m128 (const float *)'
+|       |     `-ImplicitCastExpr 0x7ff3ea0f7e08 <col:30, col:31> 'const float *' <BitCast>
+|       |       `-UnaryOperator 0x7ff3ea0f7da0 <col:30, col:31> 'float *' prefix '&'
+|       |         `-DeclRefExpr 0x7ff3ea0f7d78 <col:31> 'float' lvalue Var 0x7ff3ea0f7b40 'att' 'float'
+|       |-BinaryOperator 0x7ff3ea0f7f90 <line:28:5, col:34> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+|       | |-DeclRefExpr 0x7ff3ea0f7e38 <col:5> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff3ea0f7cf0 'tmpatt' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       | `-CallExpr 0x7ff3ea0f7f28 <col:12, col:34> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |   |-ImplicitCastExpr 0x7ff3ea0f7f10 <col:12> '__m128 (*)(__m128, __m128)' <FunctionToPointerDecay>
+|       |   | `-DeclRefExpr 0x7ff3ea0f7e60 <col:12> '__m128 (__m128, __m128)' Function 0x7ff3e983bf08 '_mm_mul_ps' '__m128 (__m128, __m128)'
+|       |   |-ImplicitCastExpr 0x7ff3ea0f7f60 <col:23> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7ff3ea0f7e88 <col:23> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff3ea0f7cf0 'tmpatt' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|       |   `-ImplicitCastExpr 0x7ff3ea0f7f78 <col:30, col:33> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|       |     `-MemberExpr 0x7ff3ea0f7ed8 <col:30, col:33> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue .v 0x7ff3ea0f6be0
+|       |       `-DeclRefExpr 0x7ff3ea0f7eb0 <col:30> 'V4SF':'V4SF' lvalue Var 0x7ff3ea0f7360 'va' 'V4SF':'V4SF'
+|       `-BinaryOperator 0x7ff3ea0f8248 <line:29:5, col:42> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+|         |-MemberExpr 0x7ff3ea0f8060 <col:5, col:13> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue .v 0x7ff3ea0f6be0
+|         | `-ArraySubscriptExpr 0x7ff3ea0f8038 <col:5, col:11> 'V4SF':'V4SF' lvalue
+|         |   |-ImplicitCastExpr 0x7ff3ea0f8008 <col:5> 'V4SF *' <LValueToRValue>
+|         |   | `-DeclRefExpr 0x7ff3ea0f7fb8 <col:5> 'V4SF *' lvalue ParmVar 0x7ff3ea0f7148 'lpic' 'V4SF *'
+|         |   `-ImplicitCastExpr 0x7ff3ea0f8020 <col:10> 'int' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7ff3ea0f7fe0 <col:10> 'int' lvalue Var 0x7ff3ea0f73f0 'y' 'int'
+|         `-CallExpr 0x7ff3ea0f81e0 <col:15, col:42> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|           |-ImplicitCastExpr 0x7ff3ea0f81c8 <col:15> '__m128 (*)(__m128, __m128)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7ff3ea0f8098 <col:15> '__m128 (__m128, __m128)' Function 0x7ff3e983ae50 '_mm_add_ps' '__m128 (__m128, __m128)'
+|           |-ImplicitCastExpr 0x7ff3ea0f8218 <col:26> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|           | `-DeclRefExpr 0x7ff3ea0f80c0 <col:26> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7ff3ea0f7cf0 'tmpatt' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|           `-ImplicitCastExpr 0x7ff3ea0f8230 <col:33, col:41> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+|             `-MemberExpr 0x7ff3ea0f8190 <col:33, col:41> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue .v 0x7ff3ea0f6be0
+|               `-ArraySubscriptExpr 0x7ff3ea0f8168 <col:33, col:39> 'V4SF':'V4SF' lvalue
+|                 |-ImplicitCastExpr 0x7ff3ea0f8138 <col:33> 'V4SF *' <LValueToRValue>
+|                 | `-DeclRefExpr 0x7ff3ea0f80e8 <col:33> 'V4SF *' lvalue ParmVar 0x7ff3ea0f7148 'lpic' 'V4SF *'
+|                 `-ImplicitCastExpr 0x7ff3ea0f8150 <col:38> 'int' <LValueToRValue>
+|                   `-DeclRefExpr 0x7ff3ea0f8110 <col:38> 'int' lvalue Var 0x7ff3ea0f73f0 'y' 'int'
+`-FunctionDecl 0x7ff3ea0f8370 <line:33:1, line:44:3> line:33:5 main 'int ()'
+  `-CompoundStmt 0x7ff3ea0f8ff0 <line:34:3, line:44:3>
+    |-DeclStmt 0x7ff3ea0f8578 <line:35:3, col:19>
+    | `-VarDecl 0x7ff3ea0f8518 <col:3, col:18> col:8 used lpic 'V4SF [1024]'
+    |-DeclStmt 0x7ff3ea0f8670 <line:36:3, col:20>
+    | `-VarDecl 0x7ff3ea0f8610 <col:3, col:19> col:9 used pre1 'float [1024]'
+    |-DeclStmt 0x7ff3ea0f8700 <line:37:3, col:8>
+    | `-VarDecl 0x7ff3ea0f86a0 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7ff3ea0f88f0 <line:38:3, col:31>
+    | `-VarDecl 0x7ff3ea0f8738 <col:3, col:30> col:17 used col 'struct COLOUR':'struct COLOUR' cinit
+    |   `-InitListExpr 0x7ff3ea0f8850 <col:21, col:30> 'struct COLOUR':'struct COLOUR'
+    |     |-ImplicitCastExpr 0x7ff3ea0f88a8 <col:22> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7ff3ea0f8798 <col:22> 'double' 0.000000e+00
+    |     |-ImplicitCastExpr 0x7ff3ea0f88c0 <col:25> 'float' <FloatingCast>
+    |     | `-FloatingLiteral 0x7ff3ea0f87b8 <col:25> 'double' 2.000000e+00
+    |     `-ImplicitCastExpr 0x7ff3ea0f88d8 <col:28> 'float' <FloatingCast>
+    |       `-FloatingLiteral 0x7ff3ea0f87d8 <col:28> 'double' 4.000000e+00
+    |-ForStmt 0x7ff3ea0f8b50 <line:39:3, line:40:13>
+    | |-BinaryOperator 0x7ff3ea0f8950 <line:39:8, col:10> 'int' '='
+    | | |-DeclRefExpr 0x7ff3ea0f8908 <col:8> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    | | `-IntegerLiteral 0x7ff3ea0f8930 <col:10> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff3ea0f89d8 <col:13, col:15> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff3ea0f89c0 <col:13> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff3ea0f8978 <col:13> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    | | `-IntegerLiteral 0x7ff3ea0f89a0 <col:15> 'int' 20
+    | |-UnaryOperator 0x7ff3ea0f8a28 <col:19, col:21> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7ff3ea0f8a00 <col:21> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    | `-BinaryOperator 0x7ff3ea0f8b28 <line:40:5, col:13> 'float' '='
+    |   |-ArraySubscriptExpr 0x7ff3ea0f8ac8 <col:5, col:11> 'float' lvalue
+    |   | |-ImplicitCastExpr 0x7ff3ea0f8a98 <col:5> 'float *' <ArrayToPointerDecay>
+    |   | | `-DeclRefExpr 0x7ff3ea0f8a48 <col:5> 'float [1024]' lvalue Var 0x7ff3ea0f8610 'pre1' 'float [1024]'
+    |   | `-ImplicitCastExpr 0x7ff3ea0f8ab0 <col:10> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff3ea0f8a70 <col:10> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    |   `-ImplicitCastExpr 0x7ff3ea0f8b10 <col:13> 'float' <FloatingCast>
+    |     `-FloatingLiteral 0x7ff3ea0f8af0 <col:13> 'double' 4.000000e-01
+    |-ForStmt 0x7ff3ea0f8f80 <line:41:3, line:42:36>
+    | |-BinaryOperator 0x7ff3ea0f8bd0 <line:41:8, col:10> 'int' '='
+    | | |-DeclRefExpr 0x7ff3ea0f8b88 <col:8> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    | | `-IntegerLiteral 0x7ff3ea0f8bb0 <col:10> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff3ea0f8c58 <col:12, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff3ea0f8c40 <col:12> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff3ea0f8bf8 <col:12> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    | | `-IntegerLiteral 0x7ff3ea0f8c20 <col:14> 'int' 10000000
+    | |-UnaryOperator 0x7ff3ea0f8ca8 <col:23, col:25> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7ff3ea0f8c80 <col:25> 'int' lvalue Var 0x7ff3ea0f86a0 'i' 'int'
+    | `-CallExpr 0x7ff3ea0f8f20 <line:42:5, col:36> 'void'
+    |   |-ImplicitCastExpr 0x7ff3ea0f8f08 <col:5> 'void (*)(float *, float, struct COLOUR *, V4SF *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7ff3ea0f8cc8 <col:5> 'void (float *, float, struct COLOUR *, V4SF *)' Function 0x7ff3ea0f7290 'func' 'void (float *, float, struct COLOUR *, V4SF *)'
+    |   |-UnaryOperator 0x7ff3ea0f8d78 <col:10, col:17> 'float *' prefix '&'
+    |   | `-ArraySubscriptExpr 0x7ff3ea0f8d50 <col:11, col:17> 'float' lvalue
+    |   |   |-ImplicitCastExpr 0x7ff3ea0f8d38 <col:11> 'float *' <ArrayToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7ff3ea0f8cf0 <col:11> 'float [1024]' lvalue Var 0x7ff3ea0f8610 'pre1' 'float [1024]'
+    |   |   `-IntegerLiteral 0x7ff3ea0f8d18 <col:16> 'int' 0
+    |   |-ImplicitCastExpr 0x7ff3ea0f8f68 <col:19> 'float' <FloatingCast>
+    |   | `-FloatingLiteral 0x7ff3ea0f8d98 <col:19> 'double' 3.000000e-01
+    |   |-UnaryOperator 0x7ff3ea0f8de0 <col:23, col:24> 'struct COLOUR *' prefix '&'
+    |   | `-DeclRefExpr 0x7ff3ea0f8db8 <col:24> 'struct COLOUR':'struct COLOUR' lvalue Var 0x7ff3ea0f8738 'col' 'struct COLOUR':'struct COLOUR'
+    |   `-UnaryOperator 0x7ff3ea0f8e88 <col:28, col:35> 'V4SF *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7ff3ea0f8e60 <col:29, col:35> 'V4SF':'V4SF' lvalue
+    |       |-ImplicitCastExpr 0x7ff3ea0f8e48 <col:29> 'V4SF *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7ff3ea0f8e00 <col:29> 'V4SF [1024]' lvalue Var 0x7ff3ea0f8518 'lpic' 'V4SF [1024]'
+    |       `-IntegerLiteral 0x7ff3ea0f8e28 <col:34> 'int' 0
+    `-ReturnStmt 0x7ff3ea0f8fd8 <line:43:3, col:10>
+      `-IntegerLiteral 0x7ff3ea0f8fb8 <col:10> 'int' 0

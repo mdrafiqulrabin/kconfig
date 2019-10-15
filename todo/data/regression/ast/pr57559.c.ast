@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7fc0350154e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc035016178 <../Data/C2AST/pr57559.c:6:1, col:13> col:13 referenced int32_t 'int'
+| `-BuiltinType 0x7fc0350155e0 'int'
+|-TypedefDecl 0x7fc035057000 <line:7:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fc035015640 'unsigned char'
+|-TypedefDecl 0x7fc035057070 <line:8:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fc035015680 'unsigned int'
+|-RecordDecl 0x7fc0350570c8 <line:9:1, line:11:1> line:9:8 struct _IO_marker definition
+|-VarDecl 0x7fc0350571a0 <line:12:1, col:31> col:22 used mfcone 'const int32_t':'const int' static cinit
+| `-IntegerLiteral 0x7fc035057240 <col:31> 'int' 1
+|-VarDecl 0x7fc0350572e8 <line:13:1, col:51> col:23 used mfctop 'const uint8_t *' static cinit
+| `-CStyleCastExpr 0x7fc0350573f8 <col:32, col:51> 'const uint8_t *' <BitCast>
+|   `-UnaryOperator 0x7fc035057398 <col:50, col:51> 'const int32_t *' prefix '&'
+|     `-DeclRefExpr 0x7fc035057348 <col:51> 'const int32_t':'const int' lvalue Var 0x7fc0350571a0 'mfcone' 'const int32_t':'const int'
+`-FunctionDecl 0x7fc035057530 <line:14:1, line:24:1> line:15:1 decContextTestEndian 'int32_t (uint8_t)'
+  |-ParmVarDecl 0x7fc035057430 <col:23, col:31> col:31 quiet 'uint8_t':'unsigned char'
+  `-CompoundStmt 0x7fc035057ac8 <line:16:1, line:24:1>
+    |-DeclStmt 0x7fc035057668 <line:17:3, col:18>
+    | `-VarDecl 0x7fc0350575e8 <col:3, col:17> col:11 used res 'int32_t':'int' cinit
+    |   `-IntegerLiteral 0x7fc035057648 <col:17> 'int' 0
+    |-DeclStmt 0x7fc035057768 <line:18:3, col:30>
+    | `-VarDecl 0x7fc0350576b0 <col:3, col:29> col:12 used dle 'uint32_t':'unsigned int' cinit
+    |   `-CStyleCastExpr 0x7fc035057740 <col:18, col:29> 'uint32_t':'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7fc035057710 <col:29> 'int' 0
+    |-IfStmt 0x7fc035057a38 <line:19:3, line:22:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc035057860 <line:19:7, col:22> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc035057848 <col:7, col:16> 'int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7fc035057808 <col:7, col:16> 'int' lvalue prefix '*'
+    | | |   `-CStyleCastExpr 0x7fc0350577e0 <col:8, col:16> 'int *' <IntegralToPointer>
+    | | |     `-IntegerLiteral 0x7fc035057780 <col:16> 'int' 10
+    | | `-IntegerLiteral 0x7fc035057828 <col:22> 'int' 0
+    | |-CompoundStmt 0x7fc035057a20 <line:20:5, line:22:5>
+    | | `-BinaryOperator 0x7fc0350579f8 <line:21:7, col:34> 'int32_t':'int' '='
+    | |   |-DeclRefExpr 0x7fc035057888 <col:7> 'int32_t':'int' lvalue Var 0x7fc0350575e8 'res' 'int32_t':'int'
+    | |   `-ImplicitCastExpr 0x7fc0350579e0 <col:13, col:34> 'int32_t':'int' <IntegralCast>
+    | |     `-BinaryOperator 0x7fc0350579b8 <col:13, col:34> 'unsigned int' '-'
+    | |       |-ImplicitCastExpr 0x7fc0350579a0 <col:13, col:25> 'unsigned int' <IntegralCast>
+    | |       | `-CStyleCastExpr 0x7fc035057938 <col:13, col:25> 'int32_t':'int' <IntegralCast>
+    | |       |   `-ImplicitCastExpr 0x7fc035057920 <col:23, col:25> 'uint8_t':'unsigned char' <LValueToRValue>
+    | |       |     `-UnaryOperator 0x7fc0350578f0 <col:23, col:25> 'const uint8_t':'const unsigned char' lvalue prefix '*'
+    | |       |       `-ImplicitCastExpr 0x7fc0350578d8 <col:25> 'const uint8_t *' <LValueToRValue>
+    | |       |         `-DeclRefExpr 0x7fc0350578b0 <col:25> 'const uint8_t *' lvalue Var 0x7fc0350572e8 'mfctop' 'const uint8_t *'
+    | |       `-ImplicitCastExpr 0x7fc035057988 <col:34> 'uint32_t':'unsigned int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fc035057960 <col:34> 'uint32_t':'unsigned int' lvalue Var 0x7fc0350576b0 'dle' 'uint32_t':'unsigned int'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc035057ab0 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7fc035057a98 <col:10> 'int32_t':'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc035057a70 <col:10> 'int32_t':'int' lvalue Var 0x7fc0350575e8 'res' 'int32_t':'int'

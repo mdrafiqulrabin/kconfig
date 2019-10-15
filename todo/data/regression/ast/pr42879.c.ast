@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7f96ac012ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f96ac013b60 <../Data/C2AST/pr42879.c:5:1, line:11:1> line:5:8 struct A definition
+| `-FieldDecl 0x7f96ab81d258 <line:10:3, col:9> col:7 referenced v 'int'
+|   `-IntegerLiteral 0x7f96ab81d220 <col:9> 'int' 1
+|-FunctionDecl 0x7f96ab81d2f0 <line:13:1, col:9> col:5 used bar 'int ()'
+`-FunctionDecl 0x7f96ab81d588 <line:14:1, line:19:1> line:14:5 foo 'int (struct A *)'
+  |-ParmVarDecl 0x7f96ab81d480 <col:9, col:19> col:19 used p 'struct A *'
+  `-CompoundStmt 0x7f96ab81d7e0 <line:15:1, line:19:1>
+    |-IfStmt 0x7f96ab81d6f8 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f96ab81d6a8 <line:16:7, col:10> 'int' <LValueToRValue>
+    | | `-MemberExpr 0x7f96ab81d670 <col:7, col:10> 'int' lvalue bitfield ->v 0x7f96ab81d258
+    | |   `-ImplicitCastExpr 0x7f96ab81d658 <col:7> 'struct A *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f96ab81d630 <col:7> 'struct A *' lvalue ParmVar 0x7f96ab81d480 'p' 'struct A *'
+    | |-ReturnStmt 0x7f96ab81d6e0 <line:17:5, col:12>
+    | | `-IntegerLiteral 0x7f96ab81d6c0 <col:12> 'int' 1
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f96ab81d7c8 <line:18:3, col:14>
+      `-CallExpr 0x7f96ab81d7a0 <col:10, col:14> 'int'
+        `-ImplicitCastExpr 0x7f96ab81d788 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f96ab81d730 <col:10> 'int ()' Function 0x7f96ab81d2f0 'bar' 'int ()'

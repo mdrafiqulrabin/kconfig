@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fb15f81a2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb15f81af60 <../Data/C2AST/pr77991.c:5:1, line:9:1> line:5:8 struct rcu_reader_data definition
+| |-FieldDecl 0x7fb15f85be38 <line:7:3, col:12> col:12 ctr 'unsigned int'
+| `-FieldDecl 0x7fb15f85be90 <line:8:3, col:9> col:9 referenced waiting '_Bool'
+|-VarDecl 0x7fb15f85bf30 <line:5:1, line:11:17> col:17 used rcu_reader 'struct rcu_reader_data':'struct rcu_reader_data' extern tls
+|-FunctionDecl 0x7fb15f85c038 <line:13:1, line:19:1> line:13:6 rcu_read_lock 'void ()'
+| `-CompoundStmt 0x7fb15f85c5a8 <line:14:1, line:19:1>
+|   |-DeclStmt 0x7fb15f85c208 <line:15:3, col:42>
+|   | `-VarDecl 0x7fb15f85c160 <col:3, col:32> col:27 used x 'struct rcu_reader_data *' cinit
+|   |   `-UnaryOperator 0x7fb15f85c1e8 <col:31, col:32> 'struct rcu_reader_data *' prefix '&'
+|   |     `-DeclRefExpr 0x7fb15f85c1c0 <col:32> 'struct rcu_reader_data':'struct rcu_reader_data' lvalue Var 0x7fb15f85bf30 'rcu_reader' 'struct rcu_reader_data':'struct rcu_reader_data'
+|   |-DeclStmt 0x7fb15f85c2c8 <line:16:3, col:16>
+|   | `-VarDecl 0x7fb15f85c230 <col:3, col:15> col:9 used val '_Bool' cinit
+|   |   `-ImplicitCastExpr 0x7fb15f85c2b0 <col:15> '_Bool' <IntegralToBoolean>
+|   |     `-IntegerLiteral 0x7fb15f85c290 <col:15> 'int' 0
+|   `-AtomicExpr 0x7fb15f85c550 <line:18:3, col:38> 'void'
+|     |-UnaryOperator 0x7fb15f85c448 <col:18, col:22> '_Bool *' prefix '&'
+|     | `-MemberExpr 0x7fb15f85c3e8 <col:19, col:22> '_Bool' lvalue ->waiting 0x7fb15f85be90
+|     |   `-ImplicitCastExpr 0x7fb15f85c3d0 <col:19> 'struct rcu_reader_data *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fb15f85c3a8 <col:19> 'struct rcu_reader_data *' lvalue Var 0x7fb15f85c160 'x' 'struct rcu_reader_data *'
+|     |-IntegerLiteral 0x7fb15f85c4b0 <col:37> 'int' 0
+|     `-UnaryOperator 0x7fb15f85c490 <col:31, col:32> '_Bool *' prefix '&'
+|       `-DeclRefExpr 0x7fb15f85c468 <col:32> '_Bool' lvalue Var 0x7fb15f85c230 'val' '_Bool'
+`-FunctionDecl 0x7fb15f85c2e0 <col:3> col:3 implicit used __atomic_store 'void ()' extern

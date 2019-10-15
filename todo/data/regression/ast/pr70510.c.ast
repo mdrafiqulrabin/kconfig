@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fe8220284e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe821815c00 <../Data/C2AST/pr70510.c:6:1, col:13> col:13 referenced V '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fe822029180 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fe8220285e0 'int'
+`-FunctionDecl 0x7fe821815e10 <line:8:1, line:14:1> line:9:1 foo 'V (V, V)'
+  |-ParmVarDecl 0x7fe821815c90 <col:6, col:8> col:8 used u 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fe821815d00 <col:11, col:13> col:13 used v 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fe821816248 <line:10:1, line:14:1>
+    |-CompoundAssignOperator 0x7fe821816060 <line:11:3, col:17> 'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-ArraySubscriptExpr 0x7fe821815f48 <col:3, col:6> 'int' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7fe821815f00 <col:3> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fe821815d00 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    | | `-IntegerLiteral 0x7fe821815f28 <col:5> 'int' 0
+    | `-ImplicitCastExpr 0x7fe821816048 <col:11, col:17> 'int' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fe821816020 <col:11, col:17> 'int' lvalue vectorcomponent
+    |     |-DeclRefExpr 0x7fe821815f70 <col:11> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fe821815d00 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    |     `-ImplicitCastExpr 0x7fe821816008 <col:13, col:16> 'int' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7fe821815fe0 <col:13, col:16> 'int' lvalue vectorcomponent
+    |         |-DeclRefExpr 0x7fe821815f98 <col:13> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fe821815c90 'u' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    |         `-IntegerLiteral 0x7fe821815fc0 <col:15> 'int' 0
+    |-CompoundAssignOperator 0x7fe8218161b8 <line:12:3, col:16> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' '/=' ComputeLHSTy='V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' ComputeResultTy='V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    | |-DeclRefExpr 0x7fe821816098 <col:3> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fe821815c90 'u' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    | `-ImplicitCastExpr 0x7fe8218161a0 <col:8, col:16> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <VectorSplat>
+    |   `-ArraySubscriptExpr 0x7fe821816178 <col:8, col:16> 'int'
+    |     |-ParenExpr 0x7fe821816138 <col:8, col:13> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    |     | `-CStyleCastExpr 0x7fe821816110 <col:9, col:12> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <BitCast>
+    |     |   `-ImplicitCastExpr 0x7fe8218160f8 <col:12> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fe8218160c0 <col:12> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fe821815d00 'v' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'
+    |     `-IntegerLiteral 0x7fe821816158 <col:15> 'int' 0
+    `-ReturnStmt 0x7fe821816230 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fe821816218 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe8218161f0 <col:10> 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int' lvalue ParmVar 0x7fe821815c90 'u' 'V':'__attribute__((__vector_size__(16 * sizeof(int)))) int'

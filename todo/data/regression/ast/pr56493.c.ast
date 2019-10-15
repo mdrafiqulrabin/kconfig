@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f9be282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9be286d828 <../Data/C2AST/pr56493.c:5:1, col:29> col:20 used bar 'unsigned long long (void)'
+|-VarDecl 0x7f9be286d920 <line:6:1, col:5> col:5 used x 'int'
+`-FunctionDecl 0x7f9be286da40 <line:8:1, line:12:1> line:9:1 foo 'void (void)'
+  `-CompoundStmt 0x7f9be286dbd0 <line:10:1, line:12:1>
+    `-CompoundAssignOperator 0x7f9be286db98 <line:11:3, col:13> 'int' '+=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+      |-DeclRefExpr 0x7f9be286dae0 <col:3> 'int' lvalue Var 0x7f9be286d920 'x' 'int'
+      `-CallExpr 0x7f9be286db70 <col:8, col:13> 'unsigned long long'
+        `-ImplicitCastExpr 0x7f9be286db58 <col:8> 'unsigned long long (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9be286db08 <col:8> 'unsigned long long (void)' Function 0x7f9be286d828 'bar' 'unsigned long long (void)'

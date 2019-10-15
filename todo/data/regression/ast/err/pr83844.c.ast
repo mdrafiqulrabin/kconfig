@@ -1,0 +1,78 @@
+../Data/C2AST/pr83844.c:16:9: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    int i3[n];
+        ^
+../Data/C2AST/pr83844.c:23:15: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    long long i3[n];
+              ^
+../Data/C2AST/pr83844.c:30:9: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+    int i3[2 * n];
+        ^
+TranslationUnitDecl 0x7fa52502bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa52502c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa52502bf80 '__int128'
+|-TypedefDecl 0x7fa52502c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa52502bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa52502c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa52502c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa52502c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa52502c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa52502c600 'char *'
+|   `-BuiltinType 0x7fa52502bd80 'char'
+|-TypedefDecl 0x7fa52502c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa52502c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa52502c720 'struct __va_list_tag'
+|     `-Record 0x7fa52502c698 '__va_list_tag'
+|-TypedefDecl 0x7fa526032400 <../Data/C2AST/pr83844.c:6:1, col:28> col:28 referenced __u64 'unsigned long long'
+| |-BuiltinType 0x7fa52502bec0 'unsigned long long'
+| `-AlignedAttr 0x7fa526032458 <col:49, col:58> aligned
+|   `-IntegerLiteral 0x7fa52502c960 <col:57> 'int' 4
+|-FunctionDecl 0x7fa526032690 <line:7:1, col:33> col:6 used bar 'void (void *, void *, void *)'
+| |-ParmVarDecl 0x7fa5260324c0 <col:11, col:16> col:17 'void *'
+| |-ParmVarDecl 0x7fa526032538 <col:19, col:24> col:25 'void *'
+| `-ParmVarDecl 0x7fa5260325b0 <col:27, col:32> col:33 'void *'
+`-FunctionDecl 0x7fa526032860 <line:9:1, line:37:1> line:10:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fa5260327a0 <col:6, col:10> col:10 used n 'int'
+  `-CompoundStmt 0x7fa526049278 <line:11:1, line:37:1>
+    |-DeclStmt 0x7fa526032c48 <line:12:3, line:18:33>
+    | `-RecordDecl 0x7fa526032908 <line:12:3, line:18:3> line:12:10 invalid struct A definition
+    |   |-AlignedAttr 0x7fa526032bf8 <line:18:20, col:30> aligned
+    |   | `-IntegerLiteral 0x7fa526032bd8 <col:29> 'int' 8
+    |   |-FieldDecl 0x7fa5260329c8 <line:14:5, col:9> col:9 i1 'int'
+    |   |-FieldDecl 0x7fa526032a28 <line:15:5, col:9> col:9 i2 'int'
+    |   |-FieldDecl 0x7fa526032b10 <line:16:5, col:13> col:9 invalid i3 'int [n]'
+    |   `-FieldDecl 0x7fa526032b90 <line:17:5, col:11> col:11 x '__u64':'unsigned long long'
+    |-DeclStmt 0x7fa526032f80 <line:19:3, line:25:33>
+    | `-RecordDecl 0x7fa526032c60 <line:19:3, line:25:3> line:19:10 invalid struct B definition
+    |   |-AlignedAttr 0x7fa526032f30 <line:25:20, col:30> aligned
+    |   | `-IntegerLiteral 0x7fa526032f10 <col:29> 'int' 8
+    |   |-FieldDecl 0x7fa526032d28 <line:21:5, col:9> col:9 i1 'int'
+    |   |-FieldDecl 0x7fa526032d88 <line:22:5, col:9> col:9 i2 'int'
+    |   |-FieldDecl 0x7fa526032e70 <line:23:5, col:19> col:15 invalid i3 'long long [n]'
+    |   `-FieldDecl 0x7fa526032ec8 <line:24:5, col:11> col:11 x '__u64':'unsigned long long'
+    |-DeclStmt 0x7fa526033300 <line:26:3, line:32:33>
+    | `-RecordDecl 0x7fa526032f98 <line:26:3, line:32:3> line:26:10 invalid struct C definition
+    |   |-AlignedAttr 0x7fa5260332b0 <line:32:20, col:30> aligned
+    |   | `-IntegerLiteral 0x7fa526033290 <col:29> 'int' 8
+    |   |-FieldDecl 0x7fa526033058 <line:28:5, col:9> col:9 i1 'int'
+    |   |-FieldDecl 0x7fa5260330b8 <line:29:5, col:9> col:9 i2 'int'
+    |   |-FieldDecl 0x7fa5260331f0 <line:30:5, col:17> col:9 invalid i3 'int [2 * n]'
+    |   `-FieldDecl 0x7fa526033248 <line:31:5, col:11> col:11 x '__u64':'unsigned long long'
+    |-DeclStmt 0x7fa5260333d0 <line:33:3, col:13>
+    | `-VarDecl 0x7fa526033370 <col:3, col:12> col:12 used a 'struct A':'struct A'
+    |-DeclStmt 0x7fa526048eb0 <line:34:3, col:13>
+    | `-VarDecl 0x7fa526048e50 <col:3, col:12> col:12 used b 'struct B':'struct B'
+    |-DeclStmt 0x7fa526048f80 <line:35:3, col:13>
+    | `-VarDecl 0x7fa526048f20 <col:3, col:12> col:12 used c 'struct C':'struct C'
+    `-CallExpr 0x7fa5260491f0 <line:36:3, col:18> 'void'
+      |-ImplicitCastExpr 0x7fa5260491d8 <col:3> 'v3 errors generated.
+oid (*)(void *, void *, void *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa526048f98 <col:3> 'void (void *, void *, void *)' Function 0x7fa526032690 'bar' 'void (void *, void *, void *)'
+      |-ImplicitCastExpr 0x7fa526049230 <col:8, col:9> 'void *' <BitCast>
+      | `-UnaryOperator 0x7fa526049048 <col:8, col:9> 'struct A *' prefix '&'
+      |   `-DeclRefExpr 0x7fa526048fc0 <col:9> 'struct A':'struct A' lvalue Var 0x7fa526033370 'a' 'struct A':'struct A'
+      |-ImplicitCastExpr 0x7fa526049248 <col:12, col:13> 'void *' <BitCast>
+      | `-UnaryOperator 0x7fa5260490e8 <col:12, col:13> 'struct B *' prefix '&'
+      |   `-DeclRefExpr 0x7fa526049068 <col:13> 'struct B':'struct B' lvalue Var 0x7fa526048e50 'b' 'struct B':'struct B'
+      `-ImplicitCastExpr 0x7fa526049260 <col:16, col:17> 'void *' <BitCast>
+        `-UnaryOperator 0x7fa526049188 <col:16, col:17> 'struct C *' prefix '&'
+          `-DeclRefExpr 0x7fa526049108 <col:17> 'struct C':'struct C' lvalue Var 0x7fa526048f20 'c' 'struct C':'struct C'

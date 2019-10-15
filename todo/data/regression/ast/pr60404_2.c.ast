@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fa68102bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa68102c978 <../Data/C2AST/pr60404_2.c:1:1, col:12> col:12 used b 'int' extern
+|-FunctionDecl 0x7fa68106d920 <line:2:1, col:21> col:13 used fn1 'void (int)' extern
+| `-ParmVarDecl 0x7fa68106d858 <col:18> col:21 'int'
+`-FunctionDecl 0x7fa68106da68 <line:4:1, line:9:1> line:5:1 fn2 'void (int)'
+  |-ParmVarDecl 0x7fa68106d9e0 <col:6, col:10> col:10 used p 'int'
+  `-CompoundStmt 0x7fa68106dc88 <line:6:1, line:9:1>
+    |-BinaryOperator 0x7fa68106db80 <line:7:3, col:8> 'int' '='
+    | |-DeclRefExpr 0x7fa68106db10 <col:3> 'int' lvalue Var 0x7fa68102c978 'b' 'int'
+    | `-UnaryOperator 0x7fa68106db60 <col:7, col:8> 'int' postfix '++'
+    |   `-DeclRefExpr 0x7fa68106db38 <col:7> 'int' lvalue ParmVar 0x7fa68106d9e0 'p' 'int'
+    `-CallExpr 0x7fa68106dc40 <line:8:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fa68106dc28 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa68106dba8 <col:3> 'void (int)' Function 0x7fa68106d920 'fn1' 'void (int)'
+      `-ImplicitCastExpr 0x7fa68106dc70 <col:8> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa68106dbd0 <col:8> 'int' lvalue ParmVar 0x7fa68106d9e0 'p' 'int'

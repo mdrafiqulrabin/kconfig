@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fd55302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd55306d860 <../Data/C2AST/pr10474.c:4:1, line:13:1> line:4:6 f 'void (int *)'
+| |-ParmVarDecl 0x7fd55302c9a0 <col:8, col:13> col:13 used i 'int *'
+| `-CompoundStmt 0x7fd55306dd90 <line:5:1, line:13:1>
+|   `-IfStmt 0x7fd55306dd58 <line:6:2, line:12:2>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7fd55306d988 <line:6:6, col:7> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7fd55306d970 <col:7> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd55306d948 <col:7> 'int *' lvalue ParmVar 0x7fd55302c9a0 'i' 'int *'
+|     |-ReturnStmt 0x7fd55306d9a8 <line:7:3>
+|     `-CompoundStmt 0x7fd55306dd38 <line:9:2, line:12:2>
+|       |-CallExpr 0x7fd55306dc30 <line:10:3, col:24> 'int'
+|       | |-ImplicitCastExpr 0x7fd55306dc18 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7fd55306db58 <col:3> '<builtin fn type>' Function 0x7fd55306d9f8 '__builtin_printf' 'int (const char *, ...)'
+|       | `-ImplicitCastExpr 0x7fd55306dc78 <col:20> 'const char *' <BitCast>
+|       |   `-ImplicitCastExpr 0x7fd55306dc60 <col:20> 'char *' <ArrayToPointerDecay>
+|       |     `-StringLiteral 0x7fd55306dbb8 <col:20> 'char [3]' lvalue "Hi"
+|       `-BinaryOperator 0x7fd55306dd10 <line:11:3, col:6> 'int' '='
+|         |-UnaryOperator 0x7fd55306dcd0 <col:3, col:4> 'int' lvalue prefix '*'
+|         | `-ImplicitCastExpr 0x7fd55306dcb8 <col:4> 'int *' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fd55306dc90 <col:4> 'int *' lvalue ParmVar 0x7fd55302c9a0 'i' 'int *'
+|         `-IntegerLiteral 0x7fd55306dcf0 <col:6> 'int' 0
+`-FunctionDecl 0x7fd55306d9f8 <line:10:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+  |-ParmVarDecl 0x7fd55306da98 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-FormatAttr 0x7fd55306db00 <col:3> Implicit printf 1 2

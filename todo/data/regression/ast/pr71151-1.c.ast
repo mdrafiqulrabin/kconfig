@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7feaa102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7feaa106d860 <../Data/C2AST/pr71151-1.c:8:1, col:28> col:13 used bar 'void (const char *)' extern
+| `-ParmVarDecl 0x7feaa102c978 <col:17, col:27> col:28 'const char *'
+`-FunctionDecl 0x7feaa106da10 <line:9:1, line:12:1> line:9:6 foo 'void (void)'
+  `-CompoundStmt 0x7feaa106dbf0 <line:10:1, line:12:1>
+    `-CallExpr 0x7feaa106db90 <line:11:3, col:19> 'void'
+      |-ImplicitCastExpr 0x7feaa106db78 <col:3> 'void (*)(const char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7feaa106dab0 <col:3> 'void (const char *)' Function 0x7feaa106d860 'bar' 'void (const char *)'
+      `-ImplicitCastExpr 0x7feaa106dbd8 <col:7> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7feaa106dbc0 <col:7> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7feaa106db18 <col:7> 'char [11]' lvalue "BBBBBBBBBB"

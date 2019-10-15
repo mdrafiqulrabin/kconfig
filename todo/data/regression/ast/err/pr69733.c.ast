@@ -1,0 +1,41 @@
+../Data/C2AST/pr69733.c:16:1: error: unknown type name '__seg_fs'
+__seg_fs int val3() {return val;}  
+^
+../Data/C2AST/pr69733.c:16:10: error: expected identifier or '('
+__seg_fs int val3() {return val;}  
+         ^
+2 errors generated.
+TranslationUnitDecl 0x7fc850018ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc850019260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc850018f80 '__int128'
+|-TypedefDecl 0x7fc8500192d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc850018fa0 'unsigned __int128'
+|-TypedefDecl 0x7fc8500195a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc8500193b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc850019328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc850019640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc850019600 'char *'
+|   `-BuiltinType 0x7fc850018d80 'char'
+|-TypedefDecl 0x7fc850019908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc8500198b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc850019720 'struct __va_list_tag'
+|     `-Record 0x7fc850019698 '__va_list_tag'
+|-TypedefDecl 0x7fc850019978 <../Data/C2AST/pr69733.c:4:1, col:22> col:22 referenced cd 'const double'
+| `-QualType 0x7fc850018f01 'const double' const
+|   `-BuiltinType 0x7fc850018f00 'double'
+|-VarDecl 0x7fc851009a00 <line:5:1, col:8> col:8 used val 'double'
+|-FunctionDecl 0x7fc851009af0 <line:7:1, col:33> col:14 val0 'const double ()'
+| `-CompoundStmt 0x7fc851009be8 <col:21, col:33>
+|   `-ReturnStmt 0x7fc851009bd0 <col:22, col:29>
+|     `-ImplicitCastExpr 0x7fc851009bb8 <col:29> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc851009b90 <col:29> 'double' lvalue Var 0x7fc851009a00 'val' 'double'
+|-FunctionDecl 0x7fc851009c50 <line:10:1, col:36> col:17 val1 'volatile double ()'
+| `-CompoundStmt 0x7fc851009d48 <col:24, col:36>
+|   `-ReturnStmt 0x7fc851009d30 <col:25, col:32>
+|     `-ImplicitCastExpr 0x7fc851009d18 <col:32> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc851009cf0 <col:32> 'double' lvalue Var 0x7fc851009a00 'val' 'double'
+`-FunctionDecl 0x7fc851009dc8 <line:13:1, col:23> col:4 val2 'cd ()'
+  `-CompoundStmt 0x7fc851009ec0 <col:11, col:23>
+    `-ReturnStmt 0x7fc851009ea8 <col:12, col:19>
+      `-ImplicitCastExpr 0x7fc851009e90 <col:19> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fc851009e68 <col:19> 'double' lvalue Var 0x7fc851009a00 'val' 'double'

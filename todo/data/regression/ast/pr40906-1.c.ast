@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc20b02b6e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc20c01b250 <../Data/C2AST/pr40906-1.c:6:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fc20c01b2f0 prev 0x7fc20c01b250 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fc20c01b470 <line:8:1, line:13:1> line:9:1 used f 'void (long double)'
+| |-ParmVarDecl 0x7fc20c01b3a8 <col:4, col:16> col:16 used a 'long double'
+| |-CompoundStmt 0x7fc20c01b700 <line:10:1, line:13:1>
+| | `-IfStmt 0x7fc20c01b6c8 <line:11:3, line:12:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fc20c01b610 <line:11:7, col:12> 'int' '!='
+| |   | |-ImplicitCastExpr 0x7fc20c01b5f8 <col:7> 'long double' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7fc20c01b5a0 <col:7> 'long double' lvalue ParmVar 0x7fc20c01b3a8 'a' 'long double'
+| |   | `-FloatingLiteral 0x7fc20c01b5c8 <col:12> 'long double' 1.230000e+00
+| |   |-CallExpr 0x7fc20c01b6a0 <line:12:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fc20c01b688 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fc20c01b638 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fc20c01b2f0 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fc20c01b518 <line:8:21>
+|-FunctionDecl 0x7fc20c01b7f8 <line:15:1, line:20:1> line:16:1 used g 'int (long double)'
+| |-ParmVarDecl 0x7fc20c01b730 <col:4, col:16> col:16 used b 'long double'
+| |-CompoundStmt 0x7fc20c01ba00 <line:17:1, line:20:1>
+| | |-CallExpr 0x7fc20c01b980 <line:18:3, col:7> 'void'
+| | | |-ImplicitCastExpr 0x7fc20c01b968 <col:3> 'void (*)(long double)' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fc20c01b8e8 <col:3> 'void (long double)' Function 0x7fc20c01b470 'f' 'void (long double)'
+| | | `-ImplicitCastExpr 0x7fc20c01b9b0 <col:6> 'long double' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fc20c01b910 <col:6> 'long double' lvalue ParmVar 0x7fc20c01b730 'b' 'long double'
+| | `-ReturnStmt 0x7fc20c01b9e8 <line:19:3, col:10>
+| |   `-IntegerLiteral 0x7fc20c01b9c8 <col:10> 'int' 0
+| `-NoInlineAttr 0x7fc20c01b8a0 <line:15:20>
+`-FunctionDecl 0x7fc20c01bae8 <line:22:1, line:27:1> line:23:1 main 'int (void)'
+  `-CompoundStmt 0x7fc20c01bcb8 <line:24:1, line:27:1>
+    |-CallExpr 0x7fc20c01bc50 <line:25:3, col:11> 'int'
+    | |-ImplicitCastExpr 0x7fc20c01bc38 <col:3> 'int (*)(long double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc20c01bbb8 <col:3> 'int (long double)' Function 0x7fc20c01b7f8 'g' 'int (long double)'
+    | `-FloatingLiteral 0x7fc20c01bbe0 <col:6> 'long double' 1.230000e+00
+    `-ReturnStmt 0x7fc20c01bca0 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fc20c01bc80 <col:10> 'int' 0

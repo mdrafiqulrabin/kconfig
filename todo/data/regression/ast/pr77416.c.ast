@@ -1,0 +1,114 @@
+TranslationUnitDecl 0x7fb71a0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb718828000 <../Data/C2AST/pr77416.c:7:1, col:17> col:12 used fn2 'int ()' extern
+|-FunctionDecl 0x7fb718828128 <line:8:1, col:18> col:13 used fn3 'void ()' extern
+|-FunctionDecl 0x7fb7188282a0 <line:9:1, col:21> col:13 used fn4 'void (int)' extern
+| `-ParmVarDecl 0x7fb7188281e0 <col:18> col:21 'int'
+|-VarDecl 0x7fb718828360 <line:10:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fb7188283d8 <col:1, col:8> col:8 used c 'int'
+|-VarDecl 0x7fb718828450 <col:1, col:11> col:11 used d 'int'
+|-VarDecl 0x7fb7188284c8 <col:1, col:14> col:14 used f 'int'
+|-VarDecl 0x7fb718828540 <col:1, col:17> col:17 used g 'int'
+|-VarDecl 0x7fb7188285b8 <col:1, col:20> col:20 used h 'int'
+|-VarDecl 0x7fb718828630 <col:1, col:23> col:23 used i 'int'
+|-VarDecl 0x7fb7188286a8 <col:1, col:26> col:26 used j 'int'
+|-VarDecl 0x7fb718828720 <col:1, col:29> col:29 used k 'int'
+|-VarDecl 0x7fb718828798 <col:1, col:32> col:32 used l 'int'
+|-VarDecl 0x7fb718828810 <col:1, col:35> col:35 used m 'int'
+|-VarDecl 0x7fb718828888 <col:1, col:38> col:38 used n 'int'
+|-RecordDecl 0x7fb718828950 <line:11:1, line:14:1> line:11:1 struct definition
+| `-FieldDecl 0x7fb718828a18 <line:13:3, col:7> col:7 referenced escape 'int'
+|-VarDecl 0x7fb718828b10 <line:11:1, line:14:4> col:4 used b 'struct (anonymous struct at ../Data/C2AST/pr77416.c:11:1) *'
+|-VarDecl 0x7fb718828c10 <line:15:1, col:8> col:5 used e 'int [8]'
+`-FunctionDecl 0x7fb718828dd0 <line:16:1, line:34:1> line:17:1 fn1 'void (int, int)'
+  |-ParmVarDecl 0x7fb718828c88 <col:6, col:10> col:10 used p1 'int'
+  |-ParmVarDecl 0x7fb718828d00 <col:14, col:18> col:18 used p2 'int'
+  `-CompoundStmt 0x7fb71a00c2b0 <line:18:1, line:34:1>
+    |-DeclStmt 0x7fb718828f38 <line:19:3, col:12>
+    | `-VarDecl 0x7fb718828e98 <col:3, col:11> col:7 used o 'int' cinit
+    |   `-ImplicitCastExpr 0x7fb718828f20 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb718828ef8 <col:11> 'int' lvalue Var 0x7fb718828360 'a' 'int'
+    `-ForStmt 0x7fb71a00c278 <line:20:3, line:33:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb718828f78 <line:20:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb718828f50 <col:10> 'int' lvalue Var 0x7fb7188284c8 'f' 'int'
+      |-UnaryOperator 0x7fb718828fb8 <col:13, col:14> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fb718828f90 <col:13> 'int' lvalue Var 0x7fb7188284c8 'f' 'int'
+      `-CompoundStmt 0x7fb71a00c230 <line:21:5, line:33:5>
+        |-DeclStmt 0x7fb71a00b860 <line:22:7, col:12>
+        | `-VarDecl 0x7fb71a00b800 <col:7, col:11> col:11 used p 'int'
+        |-IfStmt 0x7fb71a00b970 <line:23:7, line:24:7>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fb71a00b950 <line:23:11, col:14> 'int' <LValueToRValue>
+        | | `-ArraySubscriptExpr 0x7fb71a00b928 <col:11, col:14> 'int' lvalue
+        | |   |-ImplicitCastExpr 0x7fb71a00b8f8 <col:11> 'int *' <ArrayToPointerDecay>
+        | |   | `-DeclRefExpr 0x7fb71a00b878 <col:11> 'int [8]' lvalue Var 0x7fb718828c10 'e' 'int [8]'
+        | |   `-ImplicitCastExpr 0x7fb71a00b910 <col:13> 'int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fb71a00b8a0 <col:13> 'int' lvalue Var 0x7fb7188285b8 'h' 'int'
+        | |-ContinueStmt 0x7fb71a00b968 <line:24:7>
+        | `-<<<NULL>>>
+        |-IfStmt 0x7fb71a00bcf8 <line:25:7, line:26:7>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-CallExpr 0x7fb71a00bbc0 <line:25:11, col:45> 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bba8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+        | | | `-DeclRefExpr 0x7fb71a00b9a8 <col:11> 'int ()' Function 0x7fb718828000 'fn2' 'int ()'
+        | | |-ImplicitCastExpr 0x7fb71a00bc30 <col:16> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00b9d0 <col:16> 'int' lvalue Var 0x7fb718828e98 'o' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bc48 <col:19> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00b9f8 <col:19> 'int' lvalue Var 0x7fb718828450 'd' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bc60 <col:22> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00ba20 <col:22> 'int' lvalue Var 0x7fb718828798 'l' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bc78 <col:25> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00ba48 <col:25> 'int' lvalue Var 0x7fb718828888 'n' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bc90 <col:28> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00ba70 <col:28> 'int' lvalue ParmVar 0x7fb718828c88 'p1' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bca8 <col:32> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00ba98 <col:32> 'int' lvalue Var 0x7fb718828630 'i' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bcc0 <col:35> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00bac0 <col:35> 'int' lvalue Var 0x7fb7188286a8 'j' 'int'
+        | | |-ImplicitCastExpr 0x7fb71a00bcd8 <col:38> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7fb71a00bae8 <col:38> 'int' lvalue Var 0x7fb718828720 'k' 'int'
+        | | `-BinaryOperator 0x7fb71a00bb50 <col:41, col:44> 'int' '=='
+        | |   |-IntegerLiteral 0x7fb71a00bb10 <col:41> 'int' 0
+        | |   `-IntegerLiteral 0x7fb71a00bb30 <col:44> 'int' 0
+        | |-ContinueStmt 0x7fb71a00bcf0 <line:26:7>
+        | `-<<<NULL>>>
+        |-BinaryOperator 0x7fb71a00bd98 <line:27:7, col:11> 'int' '='
+        | |-DeclRefExpr 0x7fb71a00bd30 <col:7> 'int' lvalue Var 0x7fb71a00b800 'p' 'int'
+        | `-ImplicitCastExpr 0x7fb71a00bd80 <col:11> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fb71a00bd58 <col:11> 'int' lvalue ParmVar 0x7fb718828d00 'p2' 'int'
+        |-IfStmt 0x7fb71a00bf00 <line:28:7, line:29:8>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fb71a00bea0 <line:28:11, col:16> 'int' <LValueToRValue>
+        | | `-MemberExpr 0x7fb71a00be68 <col:11, col:16> 'int' lvalue .escape 0x7fb718828a18
+        | |   `-ArraySubscriptExpr 0x7fb71a00be40 <col:11, col:14> 'struct (anonymous struct at ../Data/C2AST/pr77416.c:11:1)':'struct (anonymous at ../Data/C2AST/pr77416.c:11:1)' lvalue
+        | |     |-ImplicitCastExpr 0x7fb71a00be10 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr77416.c:11:1) *' <LValueToRValue>
+        | |     | `-DeclRefExpr 0x7fb71a00bdc0 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr77416.c:11:1) *' lvalue Var 0x7fb718828b10 'b' 'struct (anonymous struct at ../Data/C2AST/pr77416.c:11:1) *'
+        | |     `-ImplicitCastExpr 0x7fb71a00be28 <col:13> 'int' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fb71a00bde8 <col:13> 'int' lvalue Var 0x7fb718828540 'g' 'int'
+        | |-UnaryOperator 0x7fb71a00bee0 <line:29:7, col:8> 'int' postfix '++'
+        | | `-DeclRefExpr 0x7fb71a00beb8 <col:7> 'int' lvalue Var 0x7fb71a00b800 'p' 'int'
+        | `-<<<NULL>>>
+        |-CallExpr 0x7fb71a00c050 <line:30:7, col:20> 'void'
+        | |-ImplicitCastExpr 0x7fb71a00c038 <col:7> 'void (*)()' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fb71a00bf38 <col:7> 'void ()' Function 0x7fb718828128 'fn3' 'void ()'
+        | |-ImplicitCastExpr 0x7fb71a00c090 <col:12> 'char *' <ArrayToPointerDecay>
+        | | `-StringLiteral 0x7fb71a00bf98 <col:12> 'char [1]' lvalue ""
+        | |-ImplicitCastExpr 0x7fb71a00c0a8 <col:16> 'int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fb71a00bfc0 <col:16> 'int' lvalue Var 0x7fb7188283d8 'c' 'int'
+        | `-ImplicitCastExpr 0x7fb71a00c0c0 <col:19> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fb71a00bfe8 <col:19> 'int' lvalue Var 0x7fb718828810 'm' 'int'
+        `-IfStmt 0x7fb71a00c1f8 <line:31:7, line:32:13>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fb71a00c100 <line:31:11> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fb71a00c0d8 <col:11> 'int' lvalue Var 0x7fb718828720 'k' 'int'
+          |-CallExpr 0x7fb71a00c1b0 <line:32:7, col:13> 'void'
+          | |-ImplicitCastExpr 0x7fb71a00c198 <col:7> 'void (*)(int)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7fb71a00c118 <col:7> 'void (int)' Function 0x7fb7188282a0 'fn4' 'void (int)'
+          | `-ImplicitCastExpr 0x7fb71a00c1e0 <col:12> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fb71a00c140 <col:12> 'int' lvalue Var 0x7fb71a00b800 'p' 'int'
+          `-<<<NULL>>>

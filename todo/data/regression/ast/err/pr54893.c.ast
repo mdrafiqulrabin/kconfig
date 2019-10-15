@@ -1,0 +1,23 @@
+../Data/C2AST/pr54893.c:10:3: error: use of undeclared identifier '__transaction_relaxed'
+  __transaction_relaxed {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7fbc840230e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc84023660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbc84023380 '__int128'
+|-TypedefDecl 0x7fbc840236d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbc840233a0 'unsigned __int128'
+|-TypedefDecl 0x7fbc840239a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbc840237b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbc84023728 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbc84023a40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbc84023a00 'char *'
+|   `-BuiltinType 0x7fbc84023180 'char'
+|-TypedefDecl 0x7fbc84023d08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbc84023cb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbc84023b20 'struct __va_list_tag'
+|     `-Record 0x7fbc84023a98 '__va_list_tag'
+|-VarDecl 0x7fbc84023d78 <../Data/C2AST/pr54893.c:6:1, col:25> col:14 test_var 'volatile int' cinit
+| `-IntegerLiteral 0x7fbc84067440 <col:25> 'int' 0
+`-FunctionDecl 0x7fbc840674b0 <line:8:1, line:13:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fbc84067568 <line:9:1, line:13:1>

@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fa0d102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa0d102c960 <../Data/C2AST/pr58679-1.c:4:9, col:39> col:9 struct definition
+| |-FieldDecl 0x7fa0d1814230 <col:18, col:23> col:23 referenced a 'char'
+| `-FieldDecl 0x7fa0d1814290 <col:26, col:36> col:36 referenced b 'long long'
+|-TypedefDecl 0x7fa0d1814330 <col:1, col:41> col:41 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7fa0d18142e0 'struct S' sugar
+|   `-RecordType 0x7fa0d1814200 'S'
+|     `-Record 0x7fa0d102c960 ''
+`-FunctionDecl 0x7fa0d1814550 <line:6:1, line:13:1> line:6:3 foo 'S (S, S)'
+  |-ParmVarDecl 0x7fa0d18143d0 <col:8, col:10> col:10 used x 'S':'S'
+  |-ParmVarDecl 0x7fa0d1814440 <col:13, col:15> col:15 used y 'S':'S'
+  `-CompoundStmt 0x7fa0d18149d0 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fa0d18146b0 <line:8:3, col:6>
+    | `-VarDecl 0x7fa0d1814650 <col:3, col:5> col:5 used z 'S':'S' nrvo
+    |-BinaryOperator 0x7fa0d1814760 <line:10:3, col:9> 'char' '='
+    | |-MemberExpr 0x7fa0d18146f0 <col:3, col:5> 'char' lvalue .a 0x7fa0d1814230
+    | | `-DeclRefExpr 0x7fa0d18146c8 <col:3> 'S':'S' lvalue Var 0x7fa0d1814650 'z' 'S':'S'
+    | `-ImplicitCastExpr 0x7fa0d1814748 <col:9> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fa0d1814728 <col:9> 'int' 0
+    |-BinaryOperator 0x7fa0d1814950 <line:11:3, col:17> 'long long' '='
+    | |-MemberExpr 0x7fa0d1814800 <col:3, col:5> 'long long' lvalue .b 0x7fa0d1814290
+    | | `-DeclRefExpr 0x7fa0d18147d8 <col:3> 'S':'S' lvalue Var 0x7fa0d1814650 'z' 'S':'S'
+    | `-BinaryOperator 0x7fa0d1814928 <col:9, col:17> 'long long' '/'
+    |   |-ImplicitCastExpr 0x7fa0d18148f8 <col:9, col:11> 'long long' <LValueToRValue>
+    |   | `-MemberExpr 0x7fa0d1814860 <col:9, col:11> 'long long' lvalue .b 0x7fa0d1814290
+    |   |   `-DeclRefExpr 0x7fa0d1814838 <col:9> 'S':'S' lvalue ParmVar 0x7fa0d18143d0 'x' 'S':'S'
+    |   `-ImplicitCastExpr 0x7fa0d1814910 <col:15, col:17> 'long long' <LValueToRValue>
+    |     `-MemberExpr 0x7fa0d18148c0 <col:15, col:17> 'long long' lvalue .b 0x7fa0d1814290
+    |       `-DeclRefExpr 0x7fa0d1814898 <col:15> 'S':'S' lvalue ParmVar 0x7fa0d1814440 'y' 'S':'S'
+    `-ReturnStmt 0x7fa0d18149b8 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fa0d18149a0 <col:10> 'S':'S' <LValueToRValue>
+        `-DeclRefExpr 0x7fa0d1814978 <col:10> 'S':'S' lvalue Var 0x7fa0d1814650 'z' 'S':'S'

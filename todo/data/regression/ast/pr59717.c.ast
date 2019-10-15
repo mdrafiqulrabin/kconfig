@@ -1,0 +1,1217 @@
+TranslationUnitDecl 0x7f99c102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f99c106e5c0 <../Data/C2AST/pr59717.c:5:1, line:124:1> line:6:1 math 'void (double, int *, double *)'
+| |-ParmVarDecl 0x7f99c102c978 <col:7, col:14> col:14 used d 'double'
+| |-ParmVarDecl 0x7f99c106e440 <col:17, col:22> col:22 used ex 'int *'
+| |-ParmVarDecl 0x7f99c106e4e0 <col:26, col:34> col:34 used dp 'double *'
+| `-CompoundStmt 0x7f99c108d648 <line:7:1, line:124:1>
+|   |-CallExpr 0x7f99c106e8f0 <line:8:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106e8d8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106e858 <col:3> 'double (double)' Function 0x7f99c106e6f8 'acos' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106e920 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106e880 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106eb00 <line:10:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106eae8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106ea98 <col:3> 'double (double)' Function 0x7f99c106e938 'acosh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106eb30 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106eac0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106ed10 <line:12:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106ecf8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106eca8 <col:3> 'double (double)' Function 0x7f99c106eb48 'asin' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106ed40 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106ecd0 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106ef20 <line:14:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106ef08 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106eeb8 <col:3> 'double (double)' Function 0x7f99c106ed58 'asinh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106ef50 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106eee0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106f130 <line:16:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106f118 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106f0c8 <col:3> 'double (double)' Function 0x7f99c106ef68 'atan' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106f160 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106f0f0 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106f340 <line:18:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106f328 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106f2d8 <col:3> 'double (double)' Function 0x7f99c106f178 'atanh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106f370 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106f300 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106f680 <line:20:3, col:14> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106f668 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106f5c8 <col:3> 'double (double, double)' Function 0x7f99c106f400 'atan2' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c106f6b8 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c106f5f0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c106f6d0 <col:13> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106f618 <col:13> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106f8b0 <line:22:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106f898 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106f848 <col:3> 'double (double)' Function 0x7f99c106f6e8 'cbrt' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106f8e0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106f870 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106fac0 <line:24:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106faa8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106fa58 <col:3> 'double (double)' Function 0x7f99c106f8f8 'ceil' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106faf0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106fa80 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106fd60 <line:26:3, col:17> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106fd48 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106fcd0 <col:3> 'double (double, double)' Function 0x7f99c106fb08 'copysign' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c106fd98 <col:13> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c106fcf8 <col:13> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c106fdb0 <col:16> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106fd20 <col:16> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c106ff90 <line:28:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f99c106ff78 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c106ff28 <col:3> 'double (double)' Function 0x7f99c106fdc8 'cos' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c106ffc0 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c106ff50 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10701a0 <line:30:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1070188 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1070138 <col:3> 'double (double)' Function 0x7f99c106ffd8 'cosh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10701d0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1070160 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10703b0 <line:32:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1070398 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1070348 <col:3> 'double (double)' Function 0x7f99c10701e8 'erf' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10703e0 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1070370 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1085fc8 <line:34:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1085fb0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1085f60 <col:3> 'double (double)' Function 0x7f99c1085e00 'erfc' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1085ff8 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1085f88 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10861d8 <line:36:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10861c0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1086170 <col:3> 'double (double)' Function 0x7f99c1086010 'exp' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1086208 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1086198 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10863e8 <line:38:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10863d0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1086380 <col:3> 'double (double)' Function 0x7f99c1086220 'exp2' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1086418 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10863a8 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10865f8 <line:40:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10865e0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1086590 <col:3> 'double (double)' Function 0x7f99c1086430 'expm1' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1086628 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10865b8 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1086808 <line:42:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10867f0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10867a0 <col:3> 'double (double)' Function 0x7f99c1086640 'fabs' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1086838 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10867c8 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1086aa8 <line:44:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1086a90 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1086a18 <col:3> 'double (double, double)' Function 0x7f99c1086850 'fdim' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c1086ae0 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1086a40 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1086af8 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1086a68 <col:12> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1086cd8 <line:46:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1086cc0 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1086c70 <col:3> 'double (double)' Function 0x7f99c1086b10 'floor' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1086d08 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1086c98 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1087110 <line:48:3, col:15> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10870f8 <col:3> 'double (*)(double, double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1087030 <col:3> 'double (double, double, double)' Function 0x7f99c1086e00 'fma' 'double (double, double, double)'
+|   | |-ImplicitCastExpr 0x7f99c1087150 <col:8> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087058 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | |-ImplicitCastExpr 0x7f99c1087168 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087080 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1087180 <col:14> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10870a8 <col:14> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10873f0 <line:50:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10873d8 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1087360 <col:3> 'double (double, double)' Function 0x7f99c1087198 'fmax' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c1087428 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087388 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1087440 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10873b0 <col:12> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10876b0 <line:52:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1087698 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1087620 <col:3> 'double (double, double)' Function 0x7f99c1087458 'fmin' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c10876e8 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087648 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1087700 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1087670 <col:12> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1087970 <line:54:3, col:13> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1087958 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10878e0 <col:3> 'double (double, double)' Function 0x7f99c1087718 'fmod' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c10879a8 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087908 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c10879c0 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1087930 <col:12> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1087cc0 <line:56:3, col:15> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1087ca8 <col:3> 'double (*)(double, int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1087bd8 <col:3> 'double (double, int *)' Function 0x7f99c1087a20 'frexp' 'double (double, int *)'
+|   | |-ImplicitCastExpr 0x7f99c1087cf8 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087c00 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1087d10 <col:13> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1087c28 <col:13> 'int *' lvalue ParmVar 0x7f99c106e440 'ex' 'int *'
+|   |-CallExpr 0x7f99c1087fb8 <line:58:3, col:14> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1087fa0 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1087f28 <col:3> 'double (double, double)' Function 0x7f99c1087d28 'hypot' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c1087ff0 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1087f50 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1088008 <col:13> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1087f78 <col:13> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1088250 <line:61:3, col:11> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1088238 <col:3> 'int (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10881b8 <col:3> 'int (double)' Function 0x7f99c1088058 'ilogb' 'int (double)'
+|   | `-ImplicitCastExpr 0x7f99c1088280 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10881e0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10885a0 <line:62:3, col:16> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1088588 <col:3> 'double (*)(double, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10884a8 <col:3> 'double (double, int)' Function 0x7f99c10882e0 'ldexp' 'double (double, int)'
+|   | |-ImplicitCastExpr 0x7f99c10885d8 <col:10> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c10884d0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c10885f0 <col:13, col:14> 'int' <LValueToRValue>
+|   |   `-UnaryOperator 0x7f99c1088538 <col:13, col:14> 'int' lvalue prefix '*'
+|   |     `-ImplicitCastExpr 0x7f99c1088520 <col:14> 'int *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f99c10884f8 <col:14> 'int *' lvalue ParmVar 0x7f99c106e440 'ex' 'int *'
+|   |-CallExpr 0x7f99c10887c0 <line:64:3, col:12> 'double'
+|   | |-ImplicitCastExpr 0x7f99c10887a8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1088758 <col:3> 'double (double)' Function 0x7f99c1088608 'lgamma' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10887f0 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1088780 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1088a40 <line:66:3, col:12> 'long long'
+|   | |-ImplicitCastExpr 0x7f99c1088a28 <col:3> 'long long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10889a8 <col:3> 'long long (double)' Function 0x7f99c1088848 'llrint' 'long long (double)'
+|   | `-ImplicitCastExpr 0x7f99c1088a70 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10889d0 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1088c50 <line:68:3, col:13> 'long long'
+|   | |-ImplicitCastExpr 0x7f99c1088c38 <col:3> 'long long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1088be8 <col:3> 'long long (double)' Function 0x7f99c1088a88 'llround' 'long long (double)'
+|   | `-ImplicitCastExpr 0x7f99c1088c80 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1088c10 <col:12> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1088e68 <line:70:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1088e50 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1088e00 <col:3> 'double (double)' Function 0x7f99c1088c98 'log' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c1088e98 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1088e28 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1089078 <line:72:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1089060 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089010 <col:3> 'double (double)' Function 0x7f99c1088eb0 'log10' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10890a8 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1089038 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1089288 <line:74:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1089270 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089220 <col:3> 'double (double)' Function 0x7f99c10890c0 'log1p' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10892b8 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1089248 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1089498 <line:76:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1089480 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089430 <col:3> 'double (double)' Function 0x7f99c10892d0 'log2' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10894c8 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1089458 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c10896a8 <line:78:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1089690 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089640 <col:3> 'double (double)' Function 0x7f99c10894e0 'logb' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c10896d8 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1089668 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1089920 <line:80:3, col:11> 'long'
+|   | |-ImplicitCastExpr 0x7f99c1089908 <col:3> 'long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089888 <col:3> 'long (double)' Function 0x7f99c1089728 'lrint' 'long (double)'
+|   | `-ImplicitCastExpr 0x7f99c1089950 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10898b0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1089b30 <line:82:3, col:12> 'long'
+|   | |-ImplicitCastExpr 0x7f99c1089b18 <col:3> 'long (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089ac8 <col:3> 'long (double)' Function 0x7f99c1089968 'lround' 'long (double)'
+|   | `-ImplicitCastExpr 0x7f99c1089b60 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1089af0 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c1089e70 <line:84:3, col:14> 'double'
+|   | |-ImplicitCastExpr 0x7f99c1089e58 <col:3> 'double (*)(double, double *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1089d78 <col:3> 'double (double, double *)' Function 0x7f99c1089bc0 'modf' 'double (double, double *)'
+|   | |-ImplicitCastExpr 0x7f99c1089ea8 <col:9> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1089da0 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c1089ec0 <col:12> 'double *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1089dc8 <col:12> 'double *' lvalue ParmVar 0x7f99c106e4e0 'dp' 'double *'
+|   |-CallExpr 0x7f99c108a160 <line:86:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108a148 <col:3> 'double (*)(const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108a078 <col:3> 'double (const char *)' Function 0x7f99c1089f18 'nan' 'double (const char *)'
+|   | `-ImplicitCastExpr 0x7f99c108a1a8 <col:8> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c108a190 <col:8> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c108a0d8 <col:8> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f99c108a388 <line:88:3, col:15> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108a370 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108a320 <col:3> 'double (double)' Function 0x7f99c108a1c0 'nearbyint' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108a3b8 <col:14> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108a348 <col:14> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108a628 <line:90:3, col:18> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108a610 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108a598 <col:3> 'double (double, double)' Function 0x7f99c108a3d0 'nextafter' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c108a660 <col:14> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108a5c0 <col:14> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c108a678 <col:17> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108a5e8 <col:17> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108a960 <line:92:3, col:23> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108a948 <col:3> 'double (*)(double, long double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108a898 <col:3> 'double (double, long double)' Function 0x7f99c108a6d0 'nexttoward' 'double (double, long double)'
+|   | |-ImplicitCastExpr 0x7f99c108a998 <col:15> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108a8c0 <col:15> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-FloatingLiteral 0x7f99c108a8e8 <col:18> 'long double' 2.000000e+01
+|   |-CallExpr 0x7f99c108ac08 <line:94:3, col:12> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108abf0 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ab78 <col:3> 'double (double, double)' Function 0x7f99c108a9b0 'pow' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c108ac40 <col:8> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108aba0 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c108ac58 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108abc8 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108aed8 <line:96:3, col:18> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108aec0 <col:3> 'double (*)(double, double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ae48 <col:3> 'double (double, double)' Function 0x7f99c108ac70 'remainder' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7f99c108af10 <col:14> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108ae70 <col:14> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c108af28 <col:17> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108ae98 <col:17> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108b2d0 <line:98:3, col:19> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108b2b8 <col:3> 'double (*)(double, double, int *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108b1a8 <col:3> 'double (double, double, int *)' Function 0x7f99c108af88 'remquo' 'double (double, double, int *)'
+|   | |-ImplicitCastExpr 0x7f99c108b310 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108b1d0 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | |-ImplicitCastExpr 0x7f99c108b328 <col:14> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108b1f8 <col:14> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-ImplicitCastExpr 0x7f99c108b340 <col:17> 'int *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108b220 <col:17> 'int *' lvalue ParmVar 0x7f99c106e440 'ex' 'int *'
+|   |-CallExpr 0x7f99c108b520 <line:100:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108b508 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108b4b8 <col:3> 'double (double)' Function 0x7f99c108b358 'rint' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108b550 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108b4e0 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108b730 <line:102:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108b718 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108b6c8 <col:3> 'double (double)' Function 0x7f99c108b568 'round' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108b760 <col:10> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108b6f0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108ba40 <line:104:3, col:19> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108ba28 <col:3> 'double (*)(double, long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108b988 <col:3> 'double (double, long)' Function 0x7f99c108b7c0 'scalbln' 'double (double, long)'
+|   | |-ImplicitCastExpr 0x7f99c108ba78 <col:12> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108b9b0 <col:12> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-IntegerLiteral 0x7f99c108b9d8 <col:15> 'long' 100
+|   |-CallExpr 0x7f99c108bce0 <line:106:3, col:17> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108bcc8 <col:3> 'double (*)(double, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108bc58 <col:3> 'double (double, int)' Function 0x7f99c108ba90 'scalbn' 'double (double, int)'
+|   | |-ImplicitCastExpr 0x7f99c108bd18 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108bc80 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | `-IntegerLiteral 0x7f99c108bca8 <col:14> 'int' 100
+|   |-CallExpr 0x7f99c108c728 <line:108:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108c710 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108c6c0 <col:3> 'double (double)' Function 0x7f99c108bd30 'sin' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108c758 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108c6e8 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108c938 <line:110:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108c920 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108c8d0 <col:3> 'double (double)' Function 0x7f99c108c770 'sinh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108c968 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108c8f8 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108cb60 <line:112:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7f99c108cb48 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ca80 <col:3> 'int ()' Function 0x7f99c108c9d0 'sincos' 'int ()'
+|   | |-ImplicitCastExpr 0x7f99c108cba0 <col:11> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108caa8 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   | |-ImplicitCastExpr 0x7f99c108cbb8 <col:14> 'double *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108cad0 <col:14> 'double *' lvalue ParmVar 0x7f99c106e4e0 'dp' 'double *'
+|   | `-ImplicitCastExpr 0x7f99c108cbd0 <col:18> 'double *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108caf8 <col:18> 'double *' lvalue ParmVar 0x7f99c106e4e0 'dp' 'double *'
+|   |-CallExpr 0x7f99c108cdb0 <line:114:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108cd98 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108cd48 <col:3> 'double (double)' Function 0x7f99c108cbe8 'sqrt' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108cde0 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108cd70 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108cfc0 <line:116:3, col:9> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108cfa8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108cf58 <col:3> 'double (double)' Function 0x7f99c108cdf8 'tan' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108cff0 <col:8> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108cf80 <col:8> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108d1d0 <line:118:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108d1b8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108d168 <col:3> 'double (double)' Function 0x7f99c108d008 'tanh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108d200 <col:9> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108d190 <col:9> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   |-CallExpr 0x7f99c108d3e0 <line:120:3, col:12> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108d3c8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108d378 <col:3> 'double (double)' Function 0x7f99c108d218 'tgamma' 'double (double)'
+|   | `-ImplicitCastExpr 0x7f99c108d410 <col:11> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108d3a0 <col:11> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|   `-CallExpr 0x7f99c108d600 <line:122:3, col:11> 'double'
+|     |-ImplicitCastExpr 0x7f99c108d5d8 <col:3> 'double (*)(double)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f99c108d588 <col:3> 'double (double)' Function 0x7f99c108d428 'trunc' 'double (double)'
+|     `-ImplicitCastExpr 0x7f99c108d630 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f99c108d5b0 <col:10> 'double' lvalue ParmVar 0x7f99c102c978 'd' 'double'
+|-FunctionDecl 0x7f99c106e6f8 <line:8:3> col:3 implicit used acos 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106e798 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106e800 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106e848 <col:3> Implicit
+|-FunctionDecl 0x7f99c106e938 <line:10:3> col:3 implicit used acosh 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106e9d8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106ea40 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106ea88 <col:3> Implicit
+|-FunctionDecl 0x7f99c106eb48 <line:12:3> col:3 implicit used asin 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106ebe8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106ec50 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106ec98 <col:3> Implicit
+|-FunctionDecl 0x7f99c106ed58 <line:14:3> col:3 implicit used asinh 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106edf8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106ee60 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106eea8 <col:3> Implicit
+|-FunctionDecl 0x7f99c106ef68 <line:16:3> col:3 implicit used atan 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106f008 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106f070 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106f0b8 <col:3> Implicit
+|-FunctionDecl 0x7f99c106f178 <line:18:3> col:3 implicit used atanh 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106f218 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106f280 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106f2c8 <col:3> Implicit
+|-FunctionDecl 0x7f99c106f400 <line:20:3> col:3 implicit used atan2 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c106f4a0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c106f500 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106f570 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106f5b8 <col:3> Implicit
+|-FunctionDecl 0x7f99c106f6e8 <line:22:3> col:3 implicit used cbrt 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106f788 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c106f7f0 <col:3> Implicit
+| `-ConstAttr 0x7f99c106f838 <col:3> Implicit
+|-FunctionDecl 0x7f99c106f8f8 <line:24:3> col:3 implicit used ceil 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106f998 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c106fa00 <col:3> Implicit
+| `-ConstAttr 0x7f99c106fa48 <col:3> Implicit
+|-FunctionDecl 0x7f99c106fb08 <line:26:3> col:3 implicit used copysign 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c106fba8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c106fc08 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c106fc78 <col:3> Implicit
+| `-ConstAttr 0x7f99c106fcc0 <col:3> Implicit
+|-FunctionDecl 0x7f99c106fdc8 <line:28:3> col:3 implicit used cos 'double (double)' extern
+| |-ParmVarDecl 0x7f99c106fe68 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c106fed0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c106ff18 <col:3> Implicit
+|-FunctionDecl 0x7f99c106ffd8 <line:30:3> col:3 implicit used cosh 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1070078 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c10700e0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1070128 <col:3> Implicit
+|-FunctionDecl 0x7f99c10701e8 <line:32:3> col:3 implicit used erf 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1070288 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c10702f0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1070338 <col:3> Implicit
+|-FunctionDecl 0x7f99c1085e00 <line:34:3> col:3 implicit used erfc 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1085ea0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1085f08 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1085f50 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086010 <line:36:3> col:3 implicit used exp 'double (double)' extern
+| |-ParmVarDecl 0x7f99c10860b0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1086118 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1086160 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086220 <line:38:3> col:3 implicit used exp2 'double (double)' extern
+| |-ParmVarDecl 0x7f99c10862c0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1086328 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1086370 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086430 <line:40:3> col:3 implicit used expm1 'double (double)' extern
+| |-ParmVarDecl 0x7f99c10864d0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1086538 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1086580 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086640 <line:42:3> col:3 implicit used fabs 'double (double)' extern
+| |-ParmVarDecl 0x7f99c10866e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c1086748 <col:3> Implicit
+| `-ConstAttr 0x7f99c1086790 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086850 <line:44:3> col:3 implicit used fdim 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c10868f0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1086950 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c10869c0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1086a08 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086b10 <line:46:3> col:3 implicit used floor 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1086bb0 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c1086c18 <col:3> Implicit
+| `-ConstAttr 0x7f99c1086c60 <col:3> Implicit
+|-FunctionDecl 0x7f99c1086e00 <line:48:3> col:3 implicit used fma 'double (double, double, double)' extern
+| |-ParmVarDecl 0x7f99c1086ea0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1086f00 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1086f60 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1086fd8 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1087020 <col:3> Implicit
+|-FunctionDecl 0x7f99c1087198 <line:50:3> col:3 implicit used fmax 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c1087238 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1087298 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c1087308 <col:3> Implicit
+| `-ConstAttr 0x7f99c1087350 <col:3> Implicit
+|-FunctionDecl 0x7f99c1087458 <line:52:3> col:3 implicit used fmin 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c10874f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1087558 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c10875c8 <col:3> Implicit
+| `-ConstAttr 0x7f99c1087610 <col:3> Implicit
+|-FunctionDecl 0x7f99c1087718 <line:54:3> col:3 implicit used fmod 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c10877b8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1087818 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1087888 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c10878d0 <col:3> Implicit
+|-FunctionDecl 0x7f99c1087a20 <line:56:3> col:3 implicit used frexp 'double (double, int *)' extern
+| |-ParmVarDecl 0x7f99c1087ac0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1087b20 <<invalid sloc>> <invalid sloc> 'int *'
+| `-NoThrowAttr 0x7f99c1087b90 <col:3> Implicit
+|-FunctionDecl 0x7f99c1087d28 <line:58:3> col:3 implicit used hypot 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c1087e00 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1087e60 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1087ed0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1087f18 <col:3> Implicit
+|-FunctionDecl 0x7f99c1088058 <line:61:3> col:3 implicit used ilogb 'int (double)' extern
+| |-ParmVarDecl 0x7f99c10880f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1088160 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c10881a8 <col:3> Implicit
+|-FunctionDecl 0x7f99c10882e0 <line:62:3> col:3 implicit used ldexp 'double (double, int)' extern
+| |-ParmVarDecl 0x7f99c1088380 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c10883e0 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7f99c1088450 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1088498 <col:3> Implicit
+|-FunctionDecl 0x7f99c1088608 <line:64:3> col:3 implicit used lgamma 'double (double)' extern
+| |-ParmVarDecl 0x7f99c10886a8 <<invalid sloc>> <invalid sloc> 'double'
+| `-NoThrowAttr 0x7f99c1088710 <col:3> Implicit
+|-FunctionDecl 0x7f99c1088848 <line:66:3> col:3 implicit used llrint 'long long (double)' extern
+| |-ParmVarDecl 0x7f99c10888e8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1088950 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1088998 <col:3> Implicit
+|-FunctionDecl 0x7f99c1088a88 <line:68:3> col:3 implicit used llround 'long long (double)' extern
+| |-ParmVarDecl 0x7f99c1088b28 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1088b90 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1088bd8 <col:3> Implicit
+|-FunctionDecl 0x7f99c1088c98 <line:70:3> col:3 implicit used log 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1088d38 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1088da0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1088de8 <col:3> Implicit
+|-FunctionDecl 0x7f99c1088eb0 <line:72:3> col:3 implicit used log10 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1088f50 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1088fb8 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1089000 <col:3> Implicit
+|-FunctionDecl 0x7f99c10890c0 <line:74:3> col:3 implicit used log1p 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1089160 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c10891c8 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1089210 <col:3> Implicit
+|-FunctionDecl 0x7f99c10892d0 <line:76:3> col:3 implicit used log2 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1089370 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c10893d8 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1089420 <col:3> Implicit
+|-FunctionDecl 0x7f99c10894e0 <line:78:3> col:3 implicit used logb 'double (double)' extern
+| |-ParmVarDecl 0x7f99c1089580 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c10895e8 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1089630 <col:3> Implicit
+|-FunctionDecl 0x7f99c1089728 <line:80:3> col:3 implicit used lrint 'long (double)' extern
+| |-ParmVarDecl 0x7f99c10897c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1089830 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1089878 <col:3> Implicit
+|-FunctionDecl 0x7f99c1089968 <line:82:3> col:3 implicit used lround 'long (double)' extern
+| |-ParmVarDecl 0x7f99c1089a08 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c1089a70 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1089ab8 <col:3> Implicit
+|-FunctionDecl 0x7f99c1089bc0 <line:84:3> col:3 implicit used modf 'double (double, double *)' extern
+| |-ParmVarDecl 0x7f99c1089c60 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c1089cc0 <<invalid sloc>> <invalid sloc> 'double *'
+| `-NoThrowAttr 0x7f99c1089d30 <col:3> Implicit
+|-FunctionDecl 0x7f99c1089f18 <line:86:3> col:3 implicit used nan 'double (const char *)' extern
+| |-ParmVarDecl 0x7f99c1089fb8 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7f99c108a020 <col:3> Implicit
+| `-PureAttr 0x7f99c108a068 <col:3> Implicit
+|-FunctionDecl 0x7f99c108a1c0 <line:88:3> col:3 implicit used nearbyint 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108a260 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c108a2c8 <col:3> Implicit
+| `-ConstAttr 0x7f99c108a310 <col:3> Implicit
+|-FunctionDecl 0x7f99c108a3d0 <line:90:3> col:3 implicit used nextafter 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c108a470 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108a4d0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108a540 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108a588 <col:3> Implicit
+|-FunctionDecl 0x7f99c108a6d0 <line:92:3> col:3 implicit used nexttoward 'double (double, long double)' extern
+| |-ParmVarDecl 0x7f99c108a770 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108a7d0 <<invalid sloc>> <invalid sloc> 'long double'
+| |-ConstAttr 0x7f99c108a840 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108a888 <col:3> Implicit
+|-FunctionDecl 0x7f99c108a9b0 <line:94:3> col:3 implicit used pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c108aa50 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108aab0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108ab20 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108ab68 <col:3> Implicit
+|-FunctionDecl 0x7f99c108ac70 <line:96:3> col:3 implicit used remainder 'double (double, double)' extern
+| |-ParmVarDecl 0x7f99c108ad10 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108ad70 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108ade0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108ae38 <col:3> Implicit
+|-FunctionDecl 0x7f99c108af88 <line:98:3> col:3 implicit used remquo 'double (double, double, int *)' extern
+| |-ParmVarDecl 0x7f99c108b028 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108b088 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108b0e8 <<invalid sloc>> <invalid sloc> 'int *'
+| `-NoThrowAttr 0x7f99c108b160 <col:3> Implicit
+|-FunctionDecl 0x7f99c108b358 <line:100:3> col:3 implicit used rint 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108b3f8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c108b460 <col:3> Implicit
+| `-ConstAttr 0x7f99c108b4a8 <col:3> Implicit
+|-FunctionDecl 0x7f99c108b568 <line:102:3> col:3 implicit used round 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108b608 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c108b670 <col:3> Implicit
+| `-ConstAttr 0x7f99c108b6b8 <col:3> Implicit
+|-FunctionDecl 0x7f99c108b7c0 <line:104:3> col:3 implicit used scalbln 'double (double, long)' extern
+| |-ParmVarDecl 0x7f99c108b860 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108b8c0 <<invalid sloc>> <invalid sloc> 'long'
+| |-ConstAttr 0x7f99c108b930 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108b978 <col:3> Implicit
+|-FunctionDecl 0x7f99c108ba90 <line:106:3> col:3 implicit used scalbn 'double (double, int)' extern
+| |-ParmVarDecl 0x7f99c108bb30 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f99c108bb90 <<invalid sloc>> <invalid sloc> 'int'
+| |-ConstAttr 0x7f99c108bc00 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108bc48 <col:3> Implicit
+|-FunctionDecl 0x7f99c108bd30 <line:108:3> col:3 implicit used sin 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108c600 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108c668 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108c6b0 <col:3> Implicit
+|-FunctionDecl 0x7f99c108c770 <line:110:3> col:3 implicit used sinh 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108c810 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108c878 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108c8c0 <col:3> Implicit
+|-FunctionDecl 0x7f99c108cbe8 <line:114:3> col:3 implicit used sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108cc88 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108ccf0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108cd38 <col:3> Implicit
+|-FunctionDecl 0x7f99c108cdf8 <line:116:3> col:3 implicit used tan 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108ce98 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108cf00 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108cf48 <col:3> Implicit
+|-FunctionDecl 0x7f99c108d008 <line:118:3> col:3 implicit used tanh 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108d0a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108d110 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108d158 <col:3> Implicit
+|-FunctionDecl 0x7f99c108d218 <line:120:3> col:3 implicit used tgamma 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108d2b8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f99c108d320 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108d368 <col:3> Implicit
+|-FunctionDecl 0x7f99c108d428 <line:122:3> col:3 implicit used trunc 'double (double)' extern
+| |-ParmVarDecl 0x7f99c108d4c8 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7f99c108d530 <col:3> Implicit
+| `-ConstAttr 0x7f99c108d578 <col:3> Implicit
+|-FunctionDecl 0x7f99c108d900 <line:126:1, line:173:1> line:127:1 cmplx 'void (_Complex double)'
+| |-ParmVarDecl 0x7f99c108d838 <col:8, col:24> col:24 used z '_Complex double'
+| `-CompoundStmt 0x7f99c1090a20 <line:128:1, line:173:1>
+|   |-CallExpr 0x7f99c108dbe0 <line:129:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108dbc8 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108db48 <col:3> 'double (_Complex double)' Function 0x7f99c108d9e8 'cabs' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108dc10 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108db70 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108de60 <line:131:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108de48 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ddc8 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108dc68 'cacos' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108de90 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108ddf0 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108e070 <line:133:3, col:12> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108e058 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108e008 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108dea8 'cacosh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108e0a0 <col:11> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108e030 <col:11> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108e280 <line:135:3, col:10> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108e268 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108e218 <col:3> 'double (_Complex double)' Function 0x7f99c108e0b8 'carg' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108e2b0 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108e240 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108e490 <line:137:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108e478 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108e428 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108e2c8 'casin' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108e4c0 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108e450 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108e6b0 <line:139:3, col:12> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108e698 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108e648 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108e4d8 'casinh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108e6e0 <col:11> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108e670 <col:11> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108e8c0 <line:141:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108e8a8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108e858 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108e6f8 'catan' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108e8f0 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108e880 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108ead0 <line:143:3, col:12> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108eab8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ea68 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108e908 'catanh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108eb00 <col:11> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108ea90 <col:11> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108ece0 <line:145:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108ecc8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ec78 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108eb18 'ccos' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108ed10 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108eca0 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108eef0 <line:147:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108eed8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108ee88 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108ed28 'ccosh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108ef20 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108eeb0 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108f100 <line:149:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108f0e8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108f098 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108ef38 'cexp' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108f130 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108f0c0 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108f310 <line:151:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108f2f8 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108f2a8 <col:3> 'double (_Complex double)' Function 0x7f99c108f148 'cimag' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108f340 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108f2d0 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108f520 <line:153:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108f508 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108f4b8 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108f358 'clog' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108f550 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108f4e0 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108f7c8 <line:155:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108f7b0 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108f760 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108f600 'conj' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108f7f8 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108f788 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108fad0 <line:157:3, col:13> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108fab8 <col:3> '_Complex double (*)(_Complex double, _Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108fa18 <col:3> '_Complex double (_Complex double, _Complex double)' Function 0x7f99c108f850 'cpow' '_Complex double (_Complex double, _Complex double)'
+|   | |-ImplicitCastExpr 0x7f99c108fb08 <col:9> '_Complex double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c108fa40 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   | `-ImplicitCastExpr 0x7f99c108fb20 <col:12> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108fa68 <col:12> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108fd00 <line:159:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c108fce8 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108fc98 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108fb38 'cproj' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108fd30 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108fcc0 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c108ff10 <line:161:3, col:11> 'double'
+|   | |-ImplicitCastExpr 0x7f99c108fef8 <col:3> 'double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c108fea8 <col:3> 'double (_Complex double)' Function 0x7f99c108fd48 'creal' 'double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c108ff40 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c108fed0 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c1090120 <line:163:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c1090108 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10900b8 <col:3> '_Complex double (_Complex double)' Function 0x7f99c108ff58 'csin' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c1090150 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10900e0 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c1090330 <line:165:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c1090318 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10902c8 <col:3> '_Complex double (_Complex double)' Function 0x7f99c1090168 'csinh' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c1090360 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10902f0 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c1090540 <line:167:3, col:11> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c1090528 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10904d8 <col:3> '_Complex double (_Complex double)' Function 0x7f99c1090378 'csqrt' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c1090570 <col:10> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1090500 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   |-CallExpr 0x7f99c10907c8 <line:169:3, col:10> '_Complex double'
+|   | |-ImplicitCastExpr 0x7f99c10907b0 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1090760 <col:3> '_Complex double (_Complex double)' Function 0x7f99c1090600 'ctan' '_Complex double (_Complex double)'
+|   | `-ImplicitCastExpr 0x7f99c10907f8 <col:9> '_Complex double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1090788 <col:9> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|   `-CallExpr 0x7f99c10909d8 <line:171:3, col:11> '_Complex double'
+|     |-ImplicitCastExpr 0x7f99c10909c0 <col:3> '_Complex double (*)(_Complex double)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f99c1090970 <col:3> '_Complex double (_Complex double)' Function 0x7f99c1090810 'ctanh' '_Complex double (_Complex double)'
+|     `-ImplicitCastExpr 0x7f99c1090a08 <col:10> '_Complex double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f99c1090998 <col:10> '_Complex double' lvalue ParmVar 0x7f99c108d838 'z' '_Complex double'
+|-FunctionDecl 0x7f99c108d9e8 <line:129:3> col:3 implicit used cabs 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108da88 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108daf0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108db38 <col:3> Implicit
+|-FunctionDecl 0x7f99c108dc68 <line:131:3> col:3 implicit used cacos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108dd08 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108dd70 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108ddb8 <col:3> Implicit
+|-FunctionDecl 0x7f99c108dea8 <line:133:3> col:3 implicit used cacosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108df48 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108dfb0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108dff8 <col:3> Implicit
+|-FunctionDecl 0x7f99c108e0b8 <line:135:3> col:3 implicit used carg 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108e158 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108e1c0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108e208 <col:3> Implicit
+|-FunctionDecl 0x7f99c108e2c8 <line:137:3> col:3 implicit used casin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108e368 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108e3d0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108e418 <col:3> Implicit
+|-FunctionDecl 0x7f99c108e4d8 <line:139:3> col:3 implicit used casinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108e578 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108e5e0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108e638 <col:3> Implicit
+|-FunctionDecl 0x7f99c108e6f8 <line:141:3> col:3 implicit used catan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108e798 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108e800 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108e848 <col:3> Implicit
+|-FunctionDecl 0x7f99c108e908 <line:143:3> col:3 implicit used catanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108e9a8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108ea10 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108ea58 <col:3> Implicit
+|-FunctionDecl 0x7f99c108eb18 <line:145:3> col:3 implicit used ccos '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108ebb8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108ec20 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108ec68 <col:3> Implicit
+|-FunctionDecl 0x7f99c108ed28 <line:147:3> col:3 implicit used ccosh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108edc8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108ee30 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108ee78 <col:3> Implicit
+|-FunctionDecl 0x7f99c108ef38 <line:149:3> col:3 implicit used cexp '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108efd8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108f040 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108f088 <col:3> Implicit
+|-FunctionDecl 0x7f99c108f148 <line:151:3> col:3 implicit used cimag 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108f1e8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f99c108f250 <col:3> Implicit
+| `-ConstAttr 0x7f99c108f298 <col:3> Implicit
+|-FunctionDecl 0x7f99c108f358 <line:153:3> col:3 implicit used clog '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108f3f8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108f460 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108f4a8 <col:3> Implicit
+|-FunctionDecl 0x7f99c108f600 <line:155:3> col:3 implicit used conj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108f6a0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f99c108f708 <col:3> Implicit
+| `-ConstAttr 0x7f99c108f750 <col:3> Implicit
+|-FunctionDecl 0x7f99c108f850 <line:157:3> col:3 implicit used cpow '_Complex double (_Complex double, _Complex double)' extern
+| |-ParmVarDecl 0x7f99c108f8f0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ParmVarDecl 0x7f99c108f950 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c108f9c0 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c108fa08 <col:3> Implicit
+|-FunctionDecl 0x7f99c108fb38 <line:159:3> col:3 implicit used cproj '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108fbd8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f99c108fc40 <col:3> Implicit
+| `-ConstAttr 0x7f99c108fc88 <col:3> Implicit
+|-FunctionDecl 0x7f99c108fd48 <line:161:3> col:3 implicit used creal 'double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108fde8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-NoThrowAttr 0x7f99c108fe50 <col:3> Implicit
+| `-ConstAttr 0x7f99c108fe98 <col:3> Implicit
+|-FunctionDecl 0x7f99c108ff58 <line:163:3> col:3 implicit used csin '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c108fff8 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c1090060 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c10900a8 <col:3> Implicit
+|-FunctionDecl 0x7f99c1090168 <line:165:3> col:3 implicit used csinh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c1090208 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c1090270 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c10902b8 <col:3> Implicit
+|-FunctionDecl 0x7f99c1090378 <line:167:3> col:3 implicit used csqrt '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c1090418 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c1090480 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c10904c8 <col:3> Implicit
+|-FunctionDecl 0x7f99c1090600 <line:169:3> col:3 implicit used ctan '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c10906a0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c1090708 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1090750 <col:3> Implicit
+|-FunctionDecl 0x7f99c1090810 <line:171:3> col:3 implicit used ctanh '_Complex double (_Complex double)' extern
+| |-ParmVarDecl 0x7f99c10908b0 <<invalid sloc>> <invalid sloc> '_Complex double'
+| |-ConstAttr 0x7f99c1090918 <col:3> Implicit
+| `-NoThrowAttr 0x7f99c1090960 <col:3> Implicit
+|-FunctionDecl 0x7f99c1090cd0 <line:175:1, line:214:1> line:176:1 string 'void (void *, void *, unsigned long)'
+| |-ParmVarDecl 0x7f99c1090af8 <col:9, col:15> col:15 used p 'void *'
+| |-ParmVarDecl 0x7f99c1090b70 <col:18, col:24> col:24 used q 'void *'
+| |-ParmVarDecl 0x7f99c1090be8 <<built-in>:81:23, ../Data/C2AST/pr59717.c:176:41> col:41 used sz 'unsigned long'
+| `-CompoundStmt 0x7f99c1094960 <line:177:1, line:214:1>
+|   |-CallExpr 0x7f99c10910f0 <line:178:3, col:19> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c10910d8 <col:3> 'void *(*)(const void *, int, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1090fe0 <col:3> 'void *(const void *, int, unsigned long)' Function 0x7f99c1090e08 'memchr' 'void *(const void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1091148 <col:11> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1091130 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1091008 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-IntegerLiteral 0x7f99c1091030 <col:14> 'int' 2
+|   | `-ImplicitCastExpr 0x7f99c1091160 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1091050 <col:17> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c10914d0 <line:181:3, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7f99c10914b8 <col:3> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10913a0 <col:3> 'int (const void *, const void *, unsigned long)' Function 0x7f99c10911c8 'memcmp' 'int (const void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1091528 <col:11> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1091510 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10913c8 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1091558 <col:14> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1091540 <col:14> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10913f0 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1091570 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1091418 <col:17> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c1091900 <line:182:3, col:19> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c10918e8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10917d8 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f99c1091600 'memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1091940 <col:11> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1091800 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1091970 <col:14> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1091958 <col:14> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1091828 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1091988 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1091850 <col:17> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c1091c78 <line:184:3, col:20> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1091c60 <col:3> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1091b78 <col:3> 'void *(void *, const void *, unsigned long)' Function 0x7f99c10919a0 'memmove' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1091cb8 <col:12> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1091ba0 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1091ce8 <col:15> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1091cd0 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1091bc8 <col:15> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1091d00 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1091bf0 <col:18> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c1092050 <line:186:3, col:19> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1092038 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1091f40 <col:3> 'void *(void *, int, unsigned long)' Function 0x7f99c1091d68 'memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1092090 <col:11> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1091f68 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-IntegerLiteral 0x7f99c1091f90 <col:14> 'int' 0
+|   | `-ImplicitCastExpr 0x7f99c10920a8 <col:17> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1091fb0 <col:17> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c1092360 <line:188:3, col:15> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c1092348 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1092270 <col:3> 'char *(char *, const char *)' Function 0x7f99c1092100 'strcat' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f99c10923b0 <col:11> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1092398 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1092298 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c10923e0 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c10923c8 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c10922c0 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   |-CallExpr 0x7f99c1092670 <line:190:3, col:17> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c1092658 <col:3> 'char *(*)(const char *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10925b0 <col:3> 'char *(const char *, int)' Function 0x7f99c1092440 'strchr' 'char *(const char *, int)'
+|   | |-ImplicitCastExpr 0x7f99c10926c0 <col:11> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c10926a8 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10925d8 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-CharacterLiteral 0x7f99c1092600 <col:14> 'int' 97
+|   |-CallExpr 0x7f99c1092980 <line:193:3, col:15> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1092968 <col:3> 'int (*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1092890 <col:3> 'int (const char *, const char *)' Function 0x7f99c1092720 'strcmp' 'int (const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f99c10929d0 <col:11> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c10929b8 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10928b8 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1092a00 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c10929e8 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c10928e0 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   |-CallExpr 0x7f99c1092c48 <line:194:3, col:15> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c1092c30 <col:3> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1092b88 <col:3> 'char *(char *, const char *)' Function 0x7f99c1092a18 'strcpy' 'char *(char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f99c1092c98 <col:11> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1092c80 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1092bb0 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1092cc8 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1092cb0 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c1092bd8 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   |-CallExpr 0x7f99c1092f80 <line:196:3, col:16> 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f99c1092f68 <col:3> 'unsigned long (*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1092e90 <col:3> 'unsigned long (const char *, const char *)' Function 0x7f99c1092d20 'strcspn' 'unsigned long (const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f99c1092fd0 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1092fb8 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1092eb8 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1093000 <col:15> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1092fe8 <col:15> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c1092ee0 <col:15> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   |-CallExpr 0x7f99c1093210 <line:198:3, col:12> 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f99c10931f8 <col:3> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1093160 <col:3> 'unsigned long (const char *)' Function 0x7f99c1093058 'strlen' 'unsigned long (const char *)'
+|   | `-ImplicitCastExpr 0x7f99c1093258 <col:11> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1093240 <col:11> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c1093188 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   |-CallExpr 0x7f99c10935c0 <line:200:3, col:20> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c10935a8 <col:3> 'char *(*)(char *, const char *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1093490 <col:3> 'char *(char *, const char *, unsigned long)' Function 0x7f99c10932b8 'strncat' 'char *(char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1093618 <col:12> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1093600 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10934b8 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1093648 <col:15> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1093630 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10934e0 <col:15> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1093660 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1093508 <col:18> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c10939d0 <line:203:3, col:20> 'int'
+|   | |-ImplicitCastExpr 0x7f99c10939b8 <col:3> 'int (*)(const char *, const char *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10938a0 <col:3> 'int (const char *, const char *, unsigned long)' Function 0x7f99c10936c8 'strncmp' 'int (const char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1093a28 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1093a10 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10938c8 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1093a58 <col:15> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1093a40 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10938f0 <col:15> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1093a70 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1093918 <col:18> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c1093d60 <line:204:3, col:20> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c1093d48 <col:3> 'char *(*)(char *, const char *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1093c60 <col:3> 'char *(char *, const char *, unsigned long)' Function 0x7f99c1093a88 'strncpy' 'char *(char *, const char *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1093db8 <col:12> 'char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1093da0 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1093c88 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1093de8 <col:15> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1093dd0 <col:15> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1093cb0 <col:15> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1093e00 <col:18> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1093cd8 <col:18> 'unsigned long' lvalue ParmVar 0x7f99c1090be8 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c10940c0 <line:206:3, col:16> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c10940a8 <col:3> 'char *(*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1093fd0 <col:3> 'char *(const char *, const char *)' Function 0x7f99c1093e60 'strpbrk' 'char *(const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f99c1094110 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c10940f8 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1093ff8 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1094140 <col:15> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1094128 <col:15> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c1094020 <col:15> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   |-CallExpr 0x7f99c1094360 <line:208:3, col:18> 'char *'
+|   | |-ImplicitCastExpr 0x7f99c1094348 <col:3> 'char *(*)(const char *, int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10942c8 <col:3> 'char *(const char *, int)' Function 0x7f99c1094158 'strrchr' 'char *(const char *, int)'
+|   | |-ImplicitCastExpr 0x7f99c10943b0 <col:12> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1094398 <col:12> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c10942f0 <col:12> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-CharacterLiteral 0x7f99c1094318 <col:15> 'int' 113
+|   |-CallExpr 0x7f99c1094600 <line:210:3, col:15> 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f99c10945e0 <col:3> 'unsigned long (*)(const char *, const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1094538 <col:3> 'unsigned long (const char *, const char *)' Function 0x7f99c10943c8 'strspn' 'unsigned long (const char *, const char *)'
+|   | |-ImplicitCastExpr 0x7f99c1094650 <col:11> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f99c1094638 <col:11> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f99c1094560 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1094680 <col:14> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1094668 <col:14> 'void *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f99c1094588 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|   `-CallExpr 0x7f99c10948c8 <line:212:3, col:15> 'char *'
+|     |-ImplicitCastExpr 0x7f99c10948b0 <col:3> 'char *(*)(const char *, const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f99c1094808 <col:3> 'char *(const char *, const char *)' Function 0x7f99c1094698 'strstr' 'char *(const char *, const char *)'
+|     |-ImplicitCastExpr 0x7f99c1094918 <col:11> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f99c1094900 <col:11> 'void *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f99c1094830 <col:11> 'void *' lvalue ParmVar 0x7f99c1090af8 'p' 'void *'
+|     `-ImplicitCastExpr 0x7f99c1094948 <col:14> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f99c1094930 <col:14> 'void *' <LValueToRValue>
+|         `-DeclRefExpr 0x7f99c1094858 <col:14> 'void *' lvalue ParmVar 0x7f99c1090b70 'q' 'void *'
+|-FunctionDecl 0x7f99c1090e08 <line:178:3> col:3 implicit used memchr 'void *(const void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1090ea8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f99c1090f08 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f99c1090f68 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c10911c8 <line:181:3> col:3 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1091268 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7f99c10912c8 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f99c1091328 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1091600 <line:182:3> col:3 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c10916a0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f99c1091700 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f99c1091760 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c10919a0 <line:184:3> col:3 implicit used memmove 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1091a40 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f99c1091aa0 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x7f99c1091b00 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1091d68 <line:186:3> col:3 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1091e08 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7f99c1091e68 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7f99c1091ec8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1092100 <line:188:3> col:3 implicit used strcat 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c10921a0 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7f99c1092200 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c1092440 <line:190:3> col:3 implicit used strchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7f99c10924e0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1092540 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f99c1092720 <line:193:3> col:3 implicit used strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c10927c0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1092820 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c1092a18 <line:194:3> col:3 implicit used strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c1092ab8 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7f99c1092b18 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c1092d20 <line:196:3> col:3 implicit used strcspn 'unsigned long (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c1092dc0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1092e20 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c1093058 <line:198:3> col:3 implicit used strlen 'unsigned long (const char *)' extern
+| `-ParmVarDecl 0x7f99c10930f8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c10932b8 <line:200:3> col:3 implicit used strncat 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1093358 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f99c10933b8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1093418 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c10936c8 <line:203:3> col:3 implicit used strncmp 'int (const char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1093768 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f99c10937c8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1093828 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1093a88 <line:204:3> col:3 implicit used strncpy 'char *(char *, const char *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1093b28 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f99c1093b88 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1093be8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1093e60 <line:206:3> col:3 implicit used strpbrk 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c1093f00 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1093f60 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c1094158 <line:208:3> col:3 implicit used strrchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x7f99c10941f8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1094258 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f99c10943c8 <line:210:3> col:3 implicit used strspn 'unsigned long (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c1094468 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c10944c8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7f99c1094698 <line:212:3> col:3 implicit used strstr 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x7f99c1094738 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x7f99c1094798 <<invalid sloc>> <invalid sloc> 'const char *'
+|-RecordDecl 0x7f99c1094a00 <line:217:9, col:25> col:9 struct definition
+| `-FieldDecl 0x7f99c1094ac8 <col:18, col:22> col:22 i 'int'
+|-TypedefDecl 0x7f99c1094b60 <col:1, col:27> col:27 referenced FILE 'struct FILE':'FILE'
+| `-ElaboratedType 0x7f99c1094b10 'struct FILE' sugar
+|   `-RecordType 0x7f99c1094a90 'FILE'
+|     `-Record 0x7f99c1094a00 ''
+|-FunctionDecl 0x7f99c1094e80 <line:219:1, line:238:1> line:220:1 stdio 'void (FILE *, void *, unsigned long)'
+| |-ParmVarDecl 0x7f99c1094c58 <col:8, col:14> col:14 used fp 'FILE *'
+| |-ParmVarDecl 0x7f99c1094cd0 <col:18, col:24> col:24 used p 'void *'
+| |-ParmVarDecl 0x7f99c1094d48 <<built-in>:81:23, ../Data/C2AST/pr59717.c:220:41> col:41 used sz 'unsigned long'
+| `-CompoundStmt 0x7f99c1096948 <line:221:1, line:238:1>
+|   |-CallExpr 0x7f99c1095270 <line:222:3, col:18> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1095258 <col:3> 'int (*)(FILE *, const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1095188 <col:3> 'int (FILE *, const char *, ...)' Function 0x7f99c1094fc0 'fprintf' 'int (FILE *, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f99c10952a8 <col:12> 'FILE *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c10951b0 <col:12> 'FILE *' lvalue ParmVar 0x7f99c1094c58 'fp' 'FILE *'
+|   | `-ImplicitCastExpr 0x7f99c10952d8 <col:16> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c10952c0 <col:16> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c10951d8 <col:16> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f99c10955b0 <line:224:3, col:17> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1095598 <col:3> 'int (*)(FILE *restrict, const char *restrict, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10954f8 <col:3> 'int (FILE *restrict, const char *restrict, ...)' Function 0x7f99c1095330 'fscanf' 'int (FILE *restrict, const char *restrict, ...)'
+|   | |-ImplicitCastExpr 0x7f99c10955e8 <col:11> 'FILE *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1095520 <col:11> 'FILE *' lvalue ParmVar 0x7f99c1094c58 'fp' 'FILE *'
+|   | `-ImplicitCastExpr 0x7f99c1095618 <col:15> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1095600 <col:15> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c1095548 <col:15> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f99c10957e8 <line:226:3, col:24> 'int'
+|   | |-ImplicitCastExpr 0x7f99c10957d0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1095708 <col:3> 'int ()' Function 0x7f99c1095658 'fwrite' 'int ()'
+|   | |-ImplicitCastExpr 0x7f99c1095830 <col:11> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1095730 <col:11> 'void *' lvalue ParmVar 0x7f99c1094cd0 'p' 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1095848 <col:14> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1095758 <col:14> 'unsigned long' lvalue ParmVar 0x7f99c1094d48 'sz' 'unsigned long'
+|   | |-ImplicitCastExpr 0x7f99c1095860 <col:18> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1095780 <col:18> 'unsigned long' lvalue ParmVar 0x7f99c1094d48 'sz' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7f99c1095878 <col:22> 'FILE *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10957a8 <col:22> 'FILE *' lvalue ParmVar 0x7f99c1094c58 'fp' 'FILE *'
+|   |-CallExpr 0x7f99c1095ac0 <line:228:3, col:13> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1095aa8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1095a28 <col:3> 'int (const char *, ...)' Function 0x7f99c10958c8 'printf' 'int (const char *, ...)'
+|   | `-ImplicitCastExpr 0x7f99c1095b08 <col:11> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1095af0 <col:11> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c1095a50 <col:11> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f99c1095d50 <line:230:3, col:12> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1095d38 <col:3> 'int (*)(const char *restrict, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1095cb8 <col:3> 'int (const char *restrict, ...)' Function 0x7f99c1095b58 'scanf' 'int (const char *restrict, ...)'
+|   | `-ImplicitCastExpr 0x7f99c1095d98 <col:10> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1095d80 <col:10> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c1095ce0 <col:10> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f99c1096110 <line:232:3, col:23> 'int'
+|   | |-ImplicitCastExpr 0x7f99c10960f8 <col:3> 'int (*)(char *, unsigned long, const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1096028 <col:3> 'int (char *, unsigned long, const char *, ...)' Function 0x7f99c1095df8 'snprintf' 'int (char *, unsigned long, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f99c1096150 <col:13> 'char *' <ArrayToPointerDecay>
+|   | | `-StringLiteral 0x7f99c1096050 <col:13> 'char [1]' lvalue ""
+|   | |-ImplicitCastExpr 0x7f99c1096168 <col:17> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1096078 <col:17> 'unsigned long' lvalue ParmVar 0x7f99c1094d48 'sz' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7f99c1096198 <col:21> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c1096180 <col:21> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c10960a0 <col:21> 'char [1]' lvalue ""
+|   |-CallExpr 0x7f99c1096470 <line:234:3, col:18> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1096458 <col:3> 'int (*)(char *, const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10963b8 <col:3> 'int (char *, const char *, ...)' Function 0x7f99c10961f0 'sprintf' 'int (char *, const char *, ...)'
+|   | |-ImplicitCastExpr 0x7f99c10964a8 <col:12> 'char *' <ArrayToPointerDecay>
+|   | | `-StringLiteral 0x7f99c10963e0 <col:12> 'char [1]' lvalue ""
+|   | `-ImplicitCastExpr 0x7f99c10964d8 <col:16> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7f99c10964c0 <col:16> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x7f99c1096408 <col:16> 'char [1]' lvalue ""
+|   `-CallExpr 0x7f99c10968b0 <line:236:3, col:17> 'int'
+|     |-ImplicitCastExpr 0x7f99c1096898 <col:3> 'int (*)(const char *restrict, const char *restrict, ...)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f99c10967c8 <col:3> 'int (const char *restrict, const char *restrict, ...)' Function 0x7f99c1096600 'sscanf' 'int (const char *restrict, const char *restrict, ...)'
+|     |-ImplicitCastExpr 0x7f99c1096900 <col:11> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7f99c10968e8 <col:11> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7f99c10967f0 <col:11> 'char [1]' lvalue ""
+|     `-ImplicitCastExpr 0x7f99c1096930 <col:15> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7f99c1096918 <col:15> 'char *' <ArrayToPointerDecay>
+|         `-StringLiteral 0x7f99c1096818 <col:15> 'char [1]' lvalue ""
+|-FunctionDecl 0x7f99c1094fc0 <line:222:3> col:3 implicit used fprintf 'int (FILE *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f99c1095060 <<invalid sloc>> <invalid sloc> 'FILE *'
+| |-ParmVarDecl 0x7f99c10950c0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f99c1095130 <col:3> Implicit printf 2 3
+|-FunctionDecl 0x7f99c1095330 <line:224:3> col:3 implicit used fscanf 'int (FILE *restrict, const char *restrict, ...)' extern
+| |-ParmVarDecl 0x7f99c10953d0 <<invalid sloc>> <invalid sloc> 'FILE *restrict'
+| |-ParmVarDecl 0x7f99c1095430 <<invalid sloc>> <invalid sloc> 'const char *restrict'
+| `-FormatAttr 0x7f99c10954a0 <col:3> Implicit scanf 2 3
+|-FunctionDecl 0x7f99c10958c8 <line:228:3> col:3 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f99c1095968 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f99c10959d0 <col:3> Implicit printf 1 2
+|-FunctionDecl 0x7f99c1095b58 <line:230:3> col:3 implicit used scanf 'int (const char *restrict, ...)' extern
+| |-ParmVarDecl 0x7f99c1095bf8 <<invalid sloc>> <invalid sloc> 'const char *restrict'
+| `-FormatAttr 0x7f99c1095c60 <col:3> Implicit scanf 1 2
+|-FunctionDecl 0x7f99c1095df8 <line:232:3> col:3 implicit used snprintf 'int (char *, unsigned long, const char *, ...)' extern
+| |-ParmVarDecl 0x7f99c1095e98 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f99c1095ef8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f99c1095f58 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f99c1095fd0 <col:3> Implicit printf 3 4
+|-FunctionDecl 0x7f99c10961f0 <line:234:3> col:3 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7f99c1096290 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7f99c10962f0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f99c1096360 <col:3> Implicit printf 2 3
+|-FunctionDecl 0x7f99c1096600 <line:236:3> col:3 implicit used sscanf 'int (const char *restrict, const char *restrict, ...)' extern
+| |-ParmVarDecl 0x7f99c10966a0 <<invalid sloc>> <invalid sloc> 'const char *restrict'
+| |-ParmVarDecl 0x7f99c1096700 <<invalid sloc>> <invalid sloc> 'const char *restrict'
+| `-FormatAttr 0x7f99c1096770 <col:3> Implicit scanf 2 3
+|-FunctionDecl 0x7f99c1096b38 <line:240:1, line:261:1> line:241:1 stdlib 'void (void *, void *, unsigned long)'
+| |-ParmVarDecl 0x7f99c10969b0 <col:9, col:15> col:15 used p 'void *'
+| |-ParmVarDecl 0x7f99c1096a28 <col:18, col:24> col:24 q 'void *'
+| |-ParmVarDecl 0x7f99c1096aa0 <<built-in>:81:23, ../Data/C2AST/pr59717.c:241:41> col:41 used sz 'unsigned long'
+| `-CompoundStmt 0x7f99c1097f98 <line:242:1, line:261:1>
+|   |-CallExpr 0x7f99c1096d30 <line:243:3, col:10> 'void'
+|   | `-ImplicitCastExpr 0x7f99c1096d18 <col:3> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7f99c1096cc0 <col:3> 'void (void) __attribute__((noreturn))' Function 0x7f99c1096c20 'abort' 'void (void) __attribute__((noreturn))'
+|   |-CallExpr 0x7f99c1096fe0 <line:245:3, col:16> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1096fc8 <col:3> 'void *(*)(unsigned long, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1096f10 <col:3> 'void *(unsigned long, unsigned long)' Function 0x7f99c1096da0 'calloc' 'void *(unsigned long, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1097018 <col:11> 'unsigned long' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1096f38 <col:11> 'unsigned long' lvalue ParmVar 0x7f99c1096aa0 'sz' 'unsigned long'
+|   | `-ImplicitCastExpr 0x7f99c1097030 <col:15> 'unsigned long' <IntegralCast>
+|   |   `-IntegerLiteral 0x7f99c1096f60 <col:15> 'int' 1
+|   |-CallExpr 0x7f99c1097220 <line:247:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7f99c1097208 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1097190 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f99c1097088 'exit' 'void (int) __attribute__((noreturn))'
+|   | `-IntegerLiteral 0x7f99c10971b8 <col:9> 'int' 1
+|   |-CallExpr 0x7f99c1097390 <line:249:3, col:10> 'int'
+|   | |-ImplicitCastExpr 0x7f99c1097378 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1097328 <col:3> 'int ()' Function 0x7f99c1097278 'free' 'int ()'
+|   | `-ImplicitCastExpr 0x7f99c10973c0 <col:9> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1097350 <col:9> 'void *' lvalue ParmVar 0x7f99c10969b0 'p' 'void *'
+|   |-CallExpr 0x7f99c1097600 <line:251:3, col:11> 'long'
+|   | |-ImplicitCastExpr 0x7f99c10975e8 <col:3> 'long (*)(long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1097578 <col:3> 'long (long)' Function 0x7f99c1097418 'labs' 'long (long)'
+|   | `-IntegerLiteral 0x7f99c10975a0 <col:9> 'long' 1
+|   |-CallExpr 0x7f99c1097850 <line:253:3, col:13> 'long long'
+|   | |-ImplicitCastExpr 0x7f99c1097838 <col:3> 'long long (*)(long long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10977c8 <col:3> 'long long (long long)' Function 0x7f99c1097668 'llabs' 'long long (long long)'
+|   | `-IntegerLiteral 0x7f99c10977f0 <col:10> 'long long' 1
+|   |-CallExpr 0x7f99c1097a70 <line:255:3, col:13> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1097a58 <col:3> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c10979c0 <col:3> 'void *(unsigned long)' Function 0x7f99c10978b8 'malloc' 'void *(unsigned long)'
+|   | `-ImplicitCastExpr 0x7f99c1097aa0 <col:11> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c10979e8 <col:11> 'unsigned long' lvalue ParmVar 0x7f99c1096aa0 'sz' 'unsigned long'
+|   |-CallExpr 0x7f99c1097d60 <line:257:3, col:17> 'void *'
+|   | |-ImplicitCastExpr 0x7f99c1097d48 <col:3> 'void *(*)(void *, unsigned long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f99c1097c70 <col:3> 'void *(void *, unsigned long)' Function 0x7f99c1097b00 'realloc' 'void *(void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f99c1097d98 <col:12> 'void *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f99c1097c98 <col:12> 'void *' lvalue ParmVar 0x7f99c10969b0 'p' 'void *'
+|   | `-ImplicitCastExpr 0x7f99c1097db0 <col:15> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f99c1097cc0 <col:15> 'unsigned long' lvalue ParmVar 0x7f99c1096aa0 'sz' 'unsigned long'
+|   `-CallExpr 0x7f99c1097f30 <line:259:3, col:24> 'int'
+|     |-ImplicitCastExpr 0x7f99c1097f18 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f99c1097ea0 <col:3> 'int ()' Function 0x7f99c1097df0 'aligned_alloc' 'int ()'
+|     |-ImplicitCastExpr 0x7f99c1097f68 <col:18> 'unsigned long' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f99c1097ec8 <col:18> 'unsigned long' lvalue ParmVar 0x7f99c1096aa0 'sz' 'unsigned long'
+|     `-ImplicitCastExpr 0x7f99c1097f80 <col:22> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f99c1097ef0 <col:22> 'unsigned long' lvalue ParmVar 0x7f99c1096aa0 'sz' 'unsigned long'
+|-FunctionDecl 0x7f99c1096c20 <line:243:3> col:3 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f99c1096da0 <line:245:3> col:3 implicit used calloc 'void *(unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1096e40 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-ParmVarDecl 0x7f99c1096ea0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1097088 <line:247:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f99c1097128 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f99c1097418 <line:251:3> col:3 implicit used labs 'long (long)' extern
+| |-ParmVarDecl 0x7f99c10974b8 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7f99c1097520 <col:3> Implicit
+| `-ConstAttr 0x7f99c1097568 <col:3> Implicit
+|-FunctionDecl 0x7f99c1097668 <line:253:3> col:3 implicit used llabs 'long long (long long)' extern
+| |-ParmVarDecl 0x7f99c1097708 <<invalid sloc>> <invalid sloc> 'long long'
+| |-NoThrowAttr 0x7f99c1097770 <col:3> Implicit
+| `-ConstAttr 0x7f99c10977b8 <col:3> Implicit
+|-FunctionDecl 0x7f99c10978b8 <line:255:3> col:3 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f99c1097958 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c1097b00 <line:257:3> col:3 implicit used realloc 'void *(void *, unsigned long)' extern
+| |-ParmVarDecl 0x7f99c1097ba0 <<invalid sloc>> <invalid sloc> 'void *'
+| `-ParmVarDecl 0x7f99c1097c00 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7f99c10980d0 <line:263:1, line:268:1> line:264:1 inttypes 'void (long)'
+| |-ParmVarDecl 0x7f99c1098008 <<built-in>:62:25, ../Data/C2AST/pr59717.c:264:27> col:27 used j 'long'
+| `-CompoundStmt 0x7f99c1098300 <line:265:1, line:268:1>
+|   `-CallExpr 0x7f99c10982b8 <line:266:3, col:13> 'int'
+|     |-ImplicitCastExpr 0x7f99c10982a0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f99c1098250 <col:3> 'int ()' Function 0x7f99c10981a0 'imaxabs' 'int ()'
+|     `-ImplicitCastExpr 0x7f99c10982e8 <col:12> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f99c1098278 <col:12> 'long' lvalue ParmVar 0x7f99c1098008 'j' 'long'
+|-RecordDecl 0x7f99c1098318 <line:270:1, col:8> col:8 struct tm
+`-FunctionDecl 0x7f99c109d8d0 <line:272:1, line:277:1> line:273:1 timeh 'void (char *, unsigned long, struct tm *)'
+  |-ParmVarDecl 0x7f99c10983d8 <col:8, col:14> col:14 used s 'char *'
+  |-ParmVarDecl 0x7f99c1098450 <<built-in>:81:23, ../Data/C2AST/pr59717.c:273:31> col:31 used sz 'unsigned long'
+  |-ParmVarDecl 0x7f99c1098560 <col:35, col:46> col:46 used tm 'struct tm *'
+  `-CompoundStmt 0x7f99c109dbe8 <line:274:1, line:277:1>
+    `-CallExpr 0x7f99c109db40 <line:275:3, col:26> 'int'
+      |-ImplicitCastExpr 0x7f99c109db28 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f99c109da60 <col:3> 'int ()' Function 0x7f99c109d9b0 'strftime' 'int ()'
+      |-ImplicitCastExpr 0x7f99c109db88 <col:13> 'char *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f99c109da88 <col:13> 'char *' lvalue ParmVar 0x7f99c10983d8 's' 'char *'
+      |-ImplicitCastExpr 0x7f99c109dba0 <col:16> 'unsigned long' <LValueToRValue>
+      | `-DeclRefExpr 0x7f99c109dab0 <col:16> 'unsigned long' lvalue ParmVar 0x7f99c1098450 'sz' 'unsigned long'
+      |-ImplicitCastExpr 0x7f99c109dbb8 <col:20> 'char *' <ArrayToPointerDecay>
+      | `-StringLiteral 0x7f99c109dad8 <col:20> 'char [1]' lvalue ""
+      `-ImplicitCastExpr 0x7f99c109dbd0 <col:24> 'struct tm *' <LValueToRValue>
+        `-DeclRefExpr 0x7f99c109db00 <col:24> 'struct tm *' lvalue ParmVar 0x7f99c1098560 'tm' 'struct tm *'

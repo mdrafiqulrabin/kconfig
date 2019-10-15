@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fc588823ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc58a00ea00 <../Data/C2AST/pr47715-5.c:5:1, col:21> col:21 used __libc_errno 'int' extern tls
+| `-TLSModelAttr 0x7fc58a00ea60 <col:50, col:75> "initial-exec"
+|-EmptyDecl 0x7fc58a00eb00 <line:6:1> col:1
+`-FunctionDecl 0x7fc58a00ec18 <line:7:1, line:11:1> line:8:1 __errno_location 'int *(void)'
+  `-CompoundStmt 0x7fc58a00ed18 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fc58a00ed00 <line:10:3, col:11>
+      `-UnaryOperator 0x7fc58a00ece0 <col:10, col:11> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fc58a00ecb8 <col:11> 'int' lvalue Var 0x7fc58a00ea00 '__libc_errno' 'int'

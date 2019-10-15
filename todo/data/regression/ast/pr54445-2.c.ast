@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fbf0a0108e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbf0a056a00 <../Data/C2AST/pr54445-2.c:4:1, col:36> col:24 used tls_array 'unsigned char [64]' tls
+`-FunctionDecl 0x7fbf0a056b88 <line:6:1, line:9:1> line:7:1 tls_array_lookup_with_negative_constant 'unsigned char (long long)'
+  |-ParmVarDecl 0x7fbf0a056ab8 <col:41, col:55> col:55 used position 'long long'
+  `-CompoundStmt 0x7fbf0a056d98 <col:65, line:9:1>
+    `-ReturnStmt 0x7fbf0a056d80 <line:8:3, col:32>
+      `-ImplicitCastExpr 0x7fbf0a056d68 <col:10, col:32> 'unsigned char' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fbf0a056d40 <col:10, col:32> 'unsigned char' lvalue
+          |-ImplicitCastExpr 0x7fbf0a056d28 <col:10> 'unsigned char *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7fbf0a056c30 <col:10> 'unsigned char [64]' lvalue Var 0x7fbf0a056a00 'tls_array' 'unsigned char [64]'
+          `-BinaryOperator 0x7fbf0a056cd0 <col:20, col:31> 'long long' '-'
+            |-ImplicitCastExpr 0x7fbf0a056ca0 <col:20> 'long long' <LValueToRValue>
+            | `-DeclRefExpr 0x7fbf0a056c58 <col:20> 'long long' lvalue ParmVar 0x7fbf0a056ab8 'position' 'long long'
+            `-ImplicitCastExpr 0x7fbf0a056cb8 <col:31> 'long long' <IntegralCast>
+              `-IntegerLiteral 0x7fbf0a056c80 <col:31> 'int' 1

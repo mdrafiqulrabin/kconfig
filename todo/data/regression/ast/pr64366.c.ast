@@ -1,0 +1,713 @@
+TranslationUnitDecl 0x7fc41482bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc41482c988 <../Data/C2AST/pr64366.c:4:1, col:13> col:13 referenced int8_t 'signed char'
+| |-BuiltinType 0x7fc41482bda0 'signed char'
+| `-ModeAttr 0x7fc41486fc00 <col:36, col:52> __QI__
+|-TypedefDecl 0x7fc41486fc78 <line:5:1, col:13> col:13 referenced int16_t 'short'
+| |-BuiltinType 0x7fc41482bdc0 'short'
+| `-ModeAttr 0x7fc41486fce0 <col:37, col:53> __HI__
+|-TypedefDecl 0x7fc41486fd58 <line:6:1, col:13> col:13 referenced int32_t 'int'
+| |-BuiltinType 0x7fc41482bde0 'int'
+| `-ModeAttr 0x7fc41486fdc0 <col:37, col:53> __SI__
+|-TypedefDecl 0x7fc41486fe38 <line:7:1, col:13> col:13 referenced int64_t 'long'
+| |-BuiltinType 0x7fc41482be00 'long'
+| `-ModeAttr 0x7fc41486fea0 <col:37, col:53> __DI__
+|-TypedefDecl 0x7fc41486ff08 <line:8:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fc41482be40 'unsigned char'
+|-TypedefDecl 0x7fc41486ff78 <line:9:1, col:28> col:28 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7fc41482be60 'unsigned short'
+|-TypedefDecl 0x7fc41486ffe8 <line:10:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fc41482be80 'unsigned int'
+|-TypedefDecl 0x7fc414870058 <line:11:15, col:46> col:46 referenced uint64_t 'unsigned long long'
+| `-BuiltinType 0x7fc41482bec0 'unsigned long long'
+|-TypedefDecl 0x7fc4148700c8 <line:12:1, col:13> col:13 referenced intptr_t 'int'
+| `-BuiltinType 0x7fc41482bde0 'int'
+|-RecordDecl 0x7fc414870120 <line:13:9, line:64:1> line:13:16 struct BigStruct definition
+| |-FieldDecl 0x7fc414870200 <line:14:3, col:11> col:11 referenced a 'uint8_t':'unsigned char'
+| |-FieldDecl 0x7fc414870280 <line:15:3, col:10> col:10 referenced b 'int8_t':'signed char'
+| |-FieldDecl 0x7fc414870300 <line:16:3, col:12> col:12 referenced c 'uint16_t':'unsigned short'
+| |-FieldDecl 0x7fc414870380 <line:17:3, col:11> col:11 referenced d 'int16_t':'short'
+| |-FieldDecl 0x7fc414870400 <line:18:3, col:12> col:12 referenced e 'uint32_t':'unsigned int'
+| |-FieldDecl 0x7fc414870480 <line:19:3, col:11> col:11 referenced f 'int32_t':'int'
+| |-FieldDecl 0x7fc414870500 <line:20:3, col:12> col:12 referenced g 'uint64_t':'unsigned long long'
+| |-FieldDecl 0x7fc414870580 <line:21:3, col:11> col:11 referenced h 'int64_t':'long'
+| |-FieldDecl 0x7fc4148705e0 <line:22:3, col:9> col:9 referenced i 'float'
+| |-FieldDecl 0x7fc414870640 <line:23:3, col:10> col:10 referenced j 'double'
+| |-FieldDecl 0x7fc4148706a0 <line:24:3, col:15> col:15 referenced k 'long double'
+| |-FieldDecl 0x7fc414870700 <line:25:3, col:9> col:9 referenced l 'char *'
+| |-FieldDecl 0x7fc414870758 <line:26:3, col:11> col:11 referenced m 'uint8_t':'unsigned char'
+| |-FieldDecl 0x7fc4148707b0 <line:27:3, col:10> col:10 referenced n 'int8_t':'signed char'
+| |-FieldDecl 0x7fc414870808 <line:28:3, col:12> col:12 referenced o 'uint16_t':'unsigned short'
+| |-FieldDecl 0x7fc414870860 <line:29:3, col:11> col:11 referenced p 'int16_t':'short'
+| |-FieldDecl 0x7fc4148708b8 <line:30:3, col:12> col:12 referenced q 'uint32_t':'unsigned int'
+| |-FieldDecl 0x7fc414870910 <line:31:3, col:11> col:11 referenced r 'int32_t':'int'
+| |-FieldDecl 0x7fc414870968 <line:32:3, col:12> col:12 referenced s 'uint64_t':'unsigned long long'
+| |-FieldDecl 0x7fc4148709c0 <line:33:3, col:11> col:11 referenced t 'int64_t':'long'
+| |-FieldDecl 0x7fc414870a20 <line:34:3, col:9> col:9 referenced u 'float'
+| |-FieldDecl 0x7fc414870a80 <line:35:3, col:10> col:10 referenced v 'double'
+| |-FieldDecl 0x7fc414870ae0 <line:36:3, col:15> col:15 referenced w 'long double'
+| |-FieldDecl 0x7fc414870b40 <line:37:3, col:9> col:9 referenced x 'char *'
+| |-FieldDecl 0x7fc414870b98 <line:38:3, col:11> col:11 referenced y 'uint8_t':'unsigned char'
+| |-FieldDecl 0x7fc414886600 <line:39:3, col:10> col:10 referenced z 'int8_t':'signed char'
+| |-FieldDecl 0x7fc414886658 <line:40:3, col:12> col:12 referenced aa 'uint16_t':'unsigned short'
+| |-FieldDecl 0x7fc4148866b0 <line:41:3, col:11> col:11 referenced bb 'int16_t':'short'
+| |-FieldDecl 0x7fc414886708 <line:42:3, col:12> col:12 referenced cc 'uint32_t':'unsigned int'
+| |-FieldDecl 0x7fc414886760 <line:43:3, col:11> col:11 referenced dd 'int32_t':'int'
+| |-FieldDecl 0x7fc4148867b8 <line:44:3, col:12> col:12 referenced ee 'uint64_t':'unsigned long long'
+| |-FieldDecl 0x7fc414886810 <line:45:3, col:11> col:11 referenced ff 'int64_t':'long'
+| |-FieldDecl 0x7fc414886870 <line:46:3, col:9> col:9 referenced gg 'float'
+| |-FieldDecl 0x7fc4148868d0 <line:47:3, col:10> col:10 referenced hh 'double'
+| |-FieldDecl 0x7fc414886930 <line:48:3, col:15> col:15 referenced ii 'long double'
+| |-FieldDecl 0x7fc414886990 <line:49:3, col:9> col:9 referenced jj 'char *'
+| |-FieldDecl 0x7fc4148869e8 <line:50:3, col:11> col:11 referenced kk 'uint8_t':'unsigned char'
+| |-FieldDecl 0x7fc414886a40 <line:51:3, col:10> col:10 referenced ll 'int8_t':'signed char'
+| |-FieldDecl 0x7fc414886a98 <line:52:3, col:12> col:12 referenced mm 'uint16_t':'unsigned short'
+| |-FieldDecl 0x7fc414886af0 <line:53:3, col:11> col:11 referenced nn 'int16_t':'short'
+| |-FieldDecl 0x7fc414886b48 <line:54:3, col:12> col:12 referenced oo 'uint32_t':'unsigned int'
+| |-FieldDecl 0x7fc414886ba0 <line:55:3, col:11> col:11 referenced pp 'int32_t':'int'
+| |-FieldDecl 0x7fc414886bf8 <line:56:3, col:12> col:12 referenced qq 'uint64_t':'unsigned long long'
+| |-FieldDecl 0x7fc414886c50 <line:57:3, col:11> col:11 referenced rr 'int64_t':'long'
+| |-FieldDecl 0x7fc414886cb0 <line:58:3, col:9> col:9 referenced ss 'float'
+| |-FieldDecl 0x7fc414886d10 <line:59:3, col:10> col:10 referenced tt 'double'
+| |-FieldDecl 0x7fc414886d70 <line:60:3, col:15> col:15 referenced uu 'long double'
+| |-FieldDecl 0x7fc414886dd0 <line:61:3, col:9> col:9 referenced vv 'char *'
+| |-FieldDecl 0x7fc414886e28 <line:62:3, col:11> col:11 referenced ww 'uint8_t':'unsigned char'
+| `-FieldDecl 0x7fc414886e80 <line:63:3, col:10> col:10 referenced xx 'int8_t':'signed char'
+|-TypedefDecl 0x7fc414886f20 <line:13:1, line:64:4> col:4 referenced BigStruct 'struct BigStruct':'struct BigStruct'
+| `-ElaboratedType 0x7fc414886ed0 'struct BigStruct' sugar
+|   `-RecordType 0x7fc4148701b0 'struct BigStruct'
+|     `-Record 0x7fc414870120 'BigStruct'
+|-FunctionDecl 0x7fc414886fd8 <line:66:1, col:20> col:13 used foobar 'void ()' extern
+`-FunctionDecl 0x7fc41488eef0 <line:68:1, line:128:1> line:69:1 test_large_fn 'void (uint8_t, int8_t, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t, float, double, long double, char *, uint8_t, int8_t, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t, float, double, long double, char *, uint8_t, int8_t, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t, float, double, long double, char *, uint8_t, int8_t, uint16_t, int16_t, uint32_t, int32_t, uint64_t, int64_t, float, double, long double, char *, uint8_t, int8_t)'
+  |-ParmVarDecl 0x7fc4148870c8 <col:16, col:24> col:24 used ui8_1 'uint8_t':'unsigned char'
+  |-ParmVarDecl 0x7fc414887138 <col:31, col:38> col:38 used si8_1 'int8_t':'signed char'
+  |-ParmVarDecl 0x7fc4148871a8 <col:45, col:54> col:54 used ui16_1 'uint16_t':'unsigned short'
+  |-ParmVarDecl 0x7fc414887218 <col:62, col:70> col:70 used si16_1 'int16_t':'short'
+  |-ParmVarDecl 0x7fc414887288 <line:70:9, col:18> col:18 used ui32_1 'uint32_t':'unsigned int'
+  |-ParmVarDecl 0x7fc4148872f8 <col:26, col:34> col:34 used si32_1 'int32_t':'int'
+  |-ParmVarDecl 0x7fc414887368 <col:42, col:51> col:51 used ui64_1 'uint64_t':'unsigned long long'
+  |-ParmVarDecl 0x7fc4148873d8 <col:59, col:67> col:67 used si64_1 'int64_t':'long'
+  |-ParmVarDecl 0x7fc414887450 <line:71:9, col:15> col:15 used f_1 'float'
+  |-ParmVarDecl 0x7fc4148874c8 <col:20, col:27> col:27 used d_1 'double'
+  |-ParmVarDecl 0x7fc414887540 <col:32, col:44> col:44 used ld_1 'long double'
+  |-ParmVarDecl 0x7fc41488c800 <col:50, col:56> col:56 used p_1 'char *'
+  |-ParmVarDecl 0x7fc41488c870 <line:72:9, col:17> col:17 used ui8_2 'uint8_t':'unsigned char'
+  |-ParmVarDecl 0x7fc41488c8e0 <col:24, col:31> col:31 used si8_2 'int8_t':'signed char'
+  |-ParmVarDecl 0x7fc41488c950 <col:38, col:47> col:47 used ui16_2 'uint16_t':'unsigned short'
+  |-ParmVarDecl 0x7fc41488c9c0 <col:55, col:63> col:63 used si16_2 'int16_t':'short'
+  |-ParmVarDecl 0x7fc41488ca30 <line:73:9, col:18> col:18 used ui32_2 'uint32_t':'unsigned int'
+  |-ParmVarDecl 0x7fc41488caa0 <col:26, col:34> col:34 used si32_2 'int32_t':'int'
+  |-ParmVarDecl 0x7fc41488cb10 <col:42, col:51> col:51 used ui64_2 'uint64_t':'unsigned long long'
+  |-ParmVarDecl 0x7fc41488cb80 <col:59, col:67> col:67 used si64_2 'int64_t':'long'
+  |-ParmVarDecl 0x7fc41488cbf8 <line:74:9, col:15> col:15 used f_2 'float'
+  |-ParmVarDecl 0x7fc41488cc70 <col:20, col:27> col:27 used d_2 'double'
+  |-ParmVarDecl 0x7fc41488cce8 <col:32, col:44> col:44 used ld_2 'long double'
+  |-ParmVarDecl 0x7fc41488cd60 <col:50, col:56> col:56 used p_2 'char *'
+  |-ParmVarDecl 0x7fc41488cdd0 <line:75:9, col:17> col:17 used ui8_3 'uint8_t':'unsigned char'
+  |-ParmVarDecl 0x7fc41488ce40 <col:24, col:31> col:31 used si8_3 'int8_t':'signed char'
+  |-ParmVarDecl 0x7fc41488ceb0 <col:38, col:47> col:47 used ui16_3 'uint16_t':'unsigned short'
+  |-ParmVarDecl 0x7fc41488cf20 <col:55, col:63> col:63 used si16_3 'int16_t':'short'
+  |-ParmVarDecl 0x7fc41488cf90 <line:76:9, col:18> col:18 used ui32_3 'uint32_t':'unsigned int'
+  |-ParmVarDecl 0x7fc41488d000 <col:26, col:34> col:34 used si32_3 'int32_t':'int'
+  |-ParmVarDecl 0x7fc41488d070 <col:42, col:51> col:51 used ui64_3 'uint64_t':'unsigned long long'
+  |-ParmVarDecl 0x7fc41488d0e0 <col:59, col:67> col:67 used si64_3 'int64_t':'long'
+  |-ParmVarDecl 0x7fc41488d158 <line:77:9, col:15> col:15 used f_3 'float'
+  |-ParmVarDecl 0x7fc41488d1d0 <col:20, col:27> col:27 used d_3 'double'
+  |-ParmVarDecl 0x7fc41488d248 <col:32, col:44> col:44 used ld_3 'long double'
+  |-ParmVarDecl 0x7fc41488d2c0 <col:50, col:56> col:56 used p_3 'char *'
+  |-ParmVarDecl 0x7fc41488d330 <line:78:9, col:17> col:17 used ui8_4 'uint8_t':'unsigned char'
+  |-ParmVarDecl 0x7fc41488d3a0 <col:24, col:31> col:31 used si8_4 'int8_t':'signed char'
+  |-ParmVarDecl 0x7fc41488d410 <col:38, col:47> col:47 used ui16_4 'uint16_t':'unsigned short'
+  |-ParmVarDecl 0x7fc41488d480 <col:55, col:63> col:63 used si16_4 'int16_t':'short'
+  |-ParmVarDecl 0x7fc41488d4f0 <line:79:9, col:18> col:18 used ui32_4 'uint32_t':'unsigned int'
+  |-ParmVarDecl 0x7fc41488d560 <col:26, col:34> col:34 used si32_4 'int32_t':'int'
+  |-ParmVarDecl 0x7fc41488d5d0 <col:42, col:51> col:51 used ui64_4 'uint64_t':'unsigned long long'
+  |-ParmVarDecl 0x7fc41488d640 <col:59, col:67> col:67 used si64_4 'int64_t':'long'
+  |-ParmVarDecl 0x7fc41488d6b8 <line:80:9, col:15> col:15 used f_4 'float'
+  |-ParmVarDecl 0x7fc41488d730 <col:20, col:27> col:27 used d_4 'double'
+  |-ParmVarDecl 0x7fc41488e800 <col:32, col:44> col:44 used ld_4 'long double'
+  |-ParmVarDecl 0x7fc41488e878 <col:50, col:56> col:56 used p_4 'char *'
+  |-ParmVarDecl 0x7fc41488e8e8 <line:81:9, col:17> col:17 used ui8_5 'uint8_t':'unsigned char'
+  |-ParmVarDecl 0x7fc41488e958 <col:24, col:31> col:31 used si8_5 'int8_t':'signed char'
+  `-CompoundStmt 0x7fc414896488 <line:82:1, line:128:1>
+    |-DeclStmt 0x7fc4148930d8 <line:83:5, line:98:8>
+    | `-VarDecl 0x7fc41488f150 <line:83:5, line:98:7> line:83:15 used retVal 'BigStruct':'struct BigStruct' cinit
+    |   `-InitListExpr 0x7fc414892d58 <line:84:7, line:98:7> 'BigStruct':'struct BigStruct'
+    |     |-ImplicitCastExpr 0x7fc414892f28 <line:85:2, col:10> 'uint8_t':'unsigned char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc41488f228 <col:2, col:10> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc41488f210 <col:2> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc41488f1f8 <col:2> 'uint8_t':'unsigned char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc41488f1b0 <col:2> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc4148870c8 'ui8_1' 'uint8_t':'unsigned char'
+    |     |   `-IntegerLiteral 0x7fc41488f1d8 <col:10> 'int' 1
+    |     |-ImplicitCastExpr 0x7fc414892f40 <col:13, col:21> 'int8_t':'signed char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc41488f2c8 <col:13, col:21> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc41488f2b0 <col:13> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc41488f298 <col:13> 'int8_t':'signed char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc41488f250 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc414887138 'si8_1' 'int8_t':'signed char'
+    |     |   `-IntegerLiteral 0x7fc41488f278 <col:21> 'int' 1
+    |     |-ImplicitCastExpr 0x7fc414892f58 <col:24, col:33> 'uint16_t':'unsigned short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc41488f368 <col:24, col:33> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc41488f350 <col:24> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc41488f338 <col:24> 'uint16_t':'unsigned short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc41488f2f0 <col:24> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc4148871a8 'ui16_1' 'uint16_t':'unsigned short'
+    |     |   `-IntegerLiteral 0x7fc41488f318 <col:33> 'int' 1
+    |     |-ImplicitCastExpr 0x7fc414892f70 <col:36, col:45> 'int16_t':'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc41488f408 <col:36, col:45> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc41488f3f0 <col:36> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc41488f3d8 <col:36> 'int16_t':'short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc41488f390 <col:36> 'int16_t':'short' lvalue ParmVar 0x7fc414887218 'si16_1' 'int16_t':'short'
+    |     |   `-IntegerLiteral 0x7fc41488f3b8 <col:45> 'int' 1
+    |     |-BinaryOperator 0x7fc41488f4a8 <line:86:2, col:11> 'unsigned int' '+'
+    |     | |-ImplicitCastExpr 0x7fc41488f478 <col:2> 'uint32_t':'unsigned int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f430 <col:2> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc414887288 'ui32_1' 'uint32_t':'unsigned int'
+    |     | `-ImplicitCastExpr 0x7fc41488f490 <col:11> 'unsigned int' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc41488f458 <col:11> 'int' 1
+    |     |-BinaryOperator 0x7fc41488f530 <col:14, col:23> 'int' '+'
+    |     | |-ImplicitCastExpr 0x7fc41488f518 <col:14> 'int32_t':'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f4d0 <col:14> 'int32_t':'int' lvalue ParmVar 0x7fc4148872f8 'si32_1' 'int32_t':'int'
+    |     | `-IntegerLiteral 0x7fc41488f4f8 <col:23> 'int' 1
+    |     |-BinaryOperator 0x7fc41488f5d0 <col:26, col:35> 'unsigned long long' '+'
+    |     | |-ImplicitCastExpr 0x7fc41488f5a0 <col:26> 'uint64_t':'unsigned long long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f558 <col:26> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc414887368 'ui64_1' 'uint64_t':'unsigned long long'
+    |     | `-ImplicitCastExpr 0x7fc41488f5b8 <col:35> 'unsigned long long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc41488f580 <col:35> 'int' 1
+    |     |-BinaryOperator 0x7fc41488f670 <col:38, col:47> 'long' '+'
+    |     | |-ImplicitCastExpr 0x7fc41488f640 <col:38> 'int64_t':'long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f5f8 <col:38> 'int64_t':'long' lvalue ParmVar 0x7fc4148873d8 'si64_1' 'int64_t':'long'
+    |     | `-ImplicitCastExpr 0x7fc41488f658 <col:47> 'long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc41488f620 <col:47> 'int' 1
+    |     |-BinaryOperator 0x7fc41488f710 <line:87:2, col:8> 'float' '+'
+    |     | |-ImplicitCastExpr 0x7fc41488f6e0 <col:2> 'float' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f698 <col:2> 'float' lvalue ParmVar 0x7fc414887450 'f_1' 'float'
+    |     | `-ImplicitCastExpr 0x7fc41488f6f8 <col:8> 'float' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc41488f6c0 <col:8> 'int' 1
+    |     |-BinaryOperator 0x7fc41488f7b0 <col:11, col:17> 'double' '+'
+    |     | |-ImplicitCastExpr 0x7fc41488f780 <col:11> 'double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f738 <col:11> 'double' lvalue ParmVar 0x7fc4148874c8 'd_1' 'double'
+    |     | `-ImplicitCastExpr 0x7fc41488f798 <col:17> 'double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc41488f760 <col:17> 'int' 1
+    |     |-BinaryOperator 0x7fc414890050 <col:20, col:27> 'long double' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890020 <col:20> 'long double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc41488f7d8 <col:20> 'long double' lvalue ParmVar 0x7fc414887540 'ld_1' 'long double'
+    |     | `-ImplicitCastExpr 0x7fc414890038 <col:27> 'long double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414890000 <col:27> 'int' 1
+    |     |-CStyleCastExpr 0x7fc4148901c8 <col:30, col:55> 'char *' <IntegralToPointer>
+    |     | `-ParenExpr 0x7fc4148901a8 <col:37, col:55> 'int'
+    |     |   `-BinaryOperator 0x7fc414890138 <col:38, col:54> 'int' '+'
+    |     |     |-CStyleCastExpr 0x7fc4148900f0 <col:38, col:48> 'intptr_t':'int' <PointerToIntegral>
+    |     |     | `-ImplicitCastExpr 0x7fc4148900d8 <col:48> 'char *' <LValueToRValue>
+    |     |     |   `-DeclRefExpr 0x7fc4148900a0 <col:48> 'char *' lvalue ParmVar 0x7fc41488c800 'p_1' 'char *'
+    |     |     `-IntegerLiteral 0x7fc414890118 <col:54> 'int' 1
+    |     |-ImplicitCastExpr 0x7fc414892f88 <line:88:2, col:10> 'uint8_t':'unsigned char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890268 <col:2, col:10> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890250 <col:2> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890238 <col:2> 'uint8_t':'unsigned char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc4148901f0 <col:2> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488c870 'ui8_2' 'uint8_t':'unsigned char'
+    |     |   `-IntegerLiteral 0x7fc414890218 <col:10> 'int' 2
+    |     |-ImplicitCastExpr 0x7fc414892fa0 <col:13, col:21> 'int8_t':'signed char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890308 <col:13, col:21> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc4148902f0 <col:13> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc4148902d8 <col:13> 'int8_t':'signed char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414890290 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488c8e0 'si8_2' 'int8_t':'signed char'
+    |     |   `-IntegerLiteral 0x7fc4148902b8 <col:21> 'int' 2
+    |     |-ImplicitCastExpr 0x7fc414892fb8 <col:24, col:33> 'uint16_t':'unsigned short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc4148903a8 <col:24, col:33> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890390 <col:24> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890378 <col:24> 'uint16_t':'unsigned short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414890330 <col:24> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc41488c950 'ui16_2' 'uint16_t':'unsigned short'
+    |     |   `-IntegerLiteral 0x7fc414890358 <col:33> 'int' 2
+    |     |-ImplicitCastExpr 0x7fc414892fd0 <col:36, col:45> 'int16_t':'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890448 <col:36, col:45> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890430 <col:36> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890418 <col:36> 'int16_t':'short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc4148903d0 <col:36> 'int16_t':'short' lvalue ParmVar 0x7fc41488c9c0 'si16_2' 'int16_t':'short'
+    |     |   `-IntegerLiteral 0x7fc4148903f8 <col:45> 'int' 2
+    |     |-BinaryOperator 0x7fc4148904e8 <line:89:2, col:11> 'unsigned int' '+'
+    |     | |-ImplicitCastExpr 0x7fc4148904b8 <col:2> 'uint32_t':'unsigned int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890470 <col:2> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc41488ca30 'ui32_2' 'uint32_t':'unsigned int'
+    |     | `-ImplicitCastExpr 0x7fc4148904d0 <col:11> 'unsigned int' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc414890498 <col:11> 'int' 2
+    |     |-BinaryOperator 0x7fc414890570 <col:14, col:23> 'int' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890558 <col:14> 'int32_t':'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890510 <col:14> 'int32_t':'int' lvalue ParmVar 0x7fc41488caa0 'si32_2' 'int32_t':'int'
+    |     | `-IntegerLiteral 0x7fc414890538 <col:23> 'int' 2
+    |     |-BinaryOperator 0x7fc414890610 <col:26, col:35> 'unsigned long long' '+'
+    |     | |-ImplicitCastExpr 0x7fc4148905e0 <col:26> 'uint64_t':'unsigned long long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890598 <col:26> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc41488cb10 'ui64_2' 'uint64_t':'unsigned long long'
+    |     | `-ImplicitCastExpr 0x7fc4148905f8 <col:35> 'unsigned long long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc4148905c0 <col:35> 'int' 2
+    |     |-BinaryOperator 0x7fc4148906b0 <col:38, col:47> 'long' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890680 <col:38> 'int64_t':'long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890638 <col:38> 'int64_t':'long' lvalue ParmVar 0x7fc41488cb80 'si64_2' 'int64_t':'long'
+    |     | `-ImplicitCastExpr 0x7fc414890698 <col:47> 'long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc414890660 <col:47> 'int' 2
+    |     |-BinaryOperator 0x7fc414890750 <line:90:2, col:8> 'float' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890720 <col:2> 'float' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc4148906d8 <col:2> 'float' lvalue ParmVar 0x7fc41488cbf8 'f_2' 'float'
+    |     | `-ImplicitCastExpr 0x7fc414890738 <col:8> 'float' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414890700 <col:8> 'int' 2
+    |     |-BinaryOperator 0x7fc4148907f0 <col:11, col:17> 'double' '+'
+    |     | |-ImplicitCastExpr 0x7fc4148907c0 <col:11> 'double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890778 <col:11> 'double' lvalue ParmVar 0x7fc41488cc70 'd_2' 'double'
+    |     | `-ImplicitCastExpr 0x7fc4148907d8 <col:17> 'double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc4148907a0 <col:17> 'int' 2
+    |     |-BinaryOperator 0x7fc414890890 <col:20, col:27> 'long double' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890860 <col:20> 'long double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890818 <col:20> 'long double' lvalue ParmVar 0x7fc41488cce8 'ld_2' 'long double'
+    |     | `-ImplicitCastExpr 0x7fc414890878 <col:27> 'long double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414890840 <col:27> 'int' 2
+    |     |-CStyleCastExpr 0x7fc4148909e0 <col:30, col:55> 'char *' <IntegralToPointer>
+    |     | `-ParenExpr 0x7fc4148909c0 <col:37, col:55> 'int'
+    |     |   `-BinaryOperator 0x7fc414890950 <col:38, col:54> 'int' '+'
+    |     |     |-CStyleCastExpr 0x7fc414890908 <col:38, col:48> 'intptr_t':'int' <PointerToIntegral>
+    |     |     | `-ImplicitCastExpr 0x7fc4148908f0 <col:48> 'char *' <LValueToRValue>
+    |     |     |   `-DeclRefExpr 0x7fc4148908b8 <col:48> 'char *' lvalue ParmVar 0x7fc41488cd60 'p_2' 'char *'
+    |     |     `-IntegerLiteral 0x7fc414890930 <col:54> 'int' 2
+    |     |-ImplicitCastExpr 0x7fc414892fe8 <line:91:2, col:10> 'uint8_t':'unsigned char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890a80 <col:2, col:10> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890a68 <col:2> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890a50 <col:2> 'uint8_t':'unsigned char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414890a08 <col:2> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488cdd0 'ui8_3' 'uint8_t':'unsigned char'
+    |     |   `-IntegerLiteral 0x7fc414890a30 <col:10> 'int' 3
+    |     |-ImplicitCastExpr 0x7fc414893000 <col:13, col:21> 'int8_t':'signed char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890b20 <col:13, col:21> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890b08 <col:13> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890af0 <col:13> 'int8_t':'signed char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414890aa8 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488ce40 'si8_3' 'int8_t':'signed char'
+    |     |   `-IntegerLiteral 0x7fc414890ad0 <col:21> 'int' 3
+    |     |-ImplicitCastExpr 0x7fc414893018 <col:24, col:33> 'uint16_t':'unsigned short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890bc0 <col:24, col:33> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890ba8 <col:24> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890b90 <col:24> 'uint16_t':'unsigned short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414890b48 <col:24> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc41488ceb0 'ui16_3' 'uint16_t':'unsigned short'
+    |     |   `-IntegerLiteral 0x7fc414890b70 <col:33> 'int' 3
+    |     |-ImplicitCastExpr 0x7fc414893030 <col:36, col:45> 'int16_t':'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414890c60 <col:36, col:45> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414890c48 <col:36> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414890c30 <col:36> 'int16_t':'short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414890be8 <col:36> 'int16_t':'short' lvalue ParmVar 0x7fc41488cf20 'si16_3' 'int16_t':'short'
+    |     |   `-IntegerLiteral 0x7fc414890c10 <col:45> 'int' 3
+    |     |-BinaryOperator 0x7fc414890d00 <line:92:2, col:11> 'unsigned int' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890cd0 <col:2> 'uint32_t':'unsigned int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890c88 <col:2> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc41488cf90 'ui32_3' 'uint32_t':'unsigned int'
+    |     | `-ImplicitCastExpr 0x7fc414890ce8 <col:11> 'unsigned int' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc414890cb0 <col:11> 'int' 3
+    |     |-BinaryOperator 0x7fc414890d88 <col:14, col:23> 'int' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890d70 <col:14> 'int32_t':'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890d28 <col:14> 'int32_t':'int' lvalue ParmVar 0x7fc41488d000 'si32_3' 'int32_t':'int'
+    |     | `-IntegerLiteral 0x7fc414890d50 <col:23> 'int' 3
+    |     |-BinaryOperator 0x7fc414890e28 <col:26, col:35> 'unsigned long long' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890df8 <col:26> 'uint64_t':'unsigned long long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890db0 <col:26> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc41488d070 'ui64_3' 'uint64_t':'unsigned long long'
+    |     | `-ImplicitCastExpr 0x7fc414890e10 <col:35> 'unsigned long long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc414890dd8 <col:35> 'int' 3
+    |     |-BinaryOperator 0x7fc414890ec8 <col:38, col:47> 'long' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890e98 <col:38> 'int64_t':'long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890e50 <col:38> 'int64_t':'long' lvalue ParmVar 0x7fc41488d0e0 'si64_3' 'int64_t':'long'
+    |     | `-ImplicitCastExpr 0x7fc414890eb0 <col:47> 'long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc414890e78 <col:47> 'int' 3
+    |     |-BinaryOperator 0x7fc414890f68 <line:93:2, col:8> 'float' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890f38 <col:2> 'float' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890ef0 <col:2> 'float' lvalue ParmVar 0x7fc41488d158 'f_3' 'float'
+    |     | `-ImplicitCastExpr 0x7fc414890f50 <col:8> 'float' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414890f18 <col:8> 'int' 3
+    |     |-BinaryOperator 0x7fc414892018 <col:11, col:17> 'double' '+'
+    |     | |-ImplicitCastExpr 0x7fc414890fd8 <col:11> 'double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414890f90 <col:11> 'double' lvalue ParmVar 0x7fc41488d1d0 'd_3' 'double'
+    |     | `-ImplicitCastExpr 0x7fc414892000 <col:17> 'double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414890fb8 <col:17> 'int' 3
+    |     |-BinaryOperator 0x7fc4148920b8 <col:20, col:27> 'long double' '+'
+    |     | |-ImplicitCastExpr 0x7fc414892088 <col:20> 'long double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414892040 <col:20> 'long double' lvalue ParmVar 0x7fc41488d248 'ld_3' 'long double'
+    |     | `-ImplicitCastExpr 0x7fc4148920a0 <col:27> 'long double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414892068 <col:27> 'int' 3
+    |     |-CStyleCastExpr 0x7fc414892208 <col:30, col:55> 'char *' <IntegralToPointer>
+    |     | `-ParenExpr 0x7fc4148921e8 <col:37, col:55> 'int'
+    |     |   `-BinaryOperator 0x7fc414892178 <col:38, col:54> 'int' '+'
+    |     |     |-CStyleCastExpr 0x7fc414892130 <col:38, col:48> 'intptr_t':'int' <PointerToIntegral>
+    |     |     | `-ImplicitCastExpr 0x7fc414892118 <col:48> 'char *' <LValueToRValue>
+    |     |     |   `-DeclRefExpr 0x7fc4148920e0 <col:48> 'char *' lvalue ParmVar 0x7fc41488d2c0 'p_3' 'char *'
+    |     |     `-IntegerLiteral 0x7fc414892158 <col:54> 'int' 3
+    |     |-ImplicitCastExpr 0x7fc414893048 <line:94:2, col:10> 'uint8_t':'unsigned char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc4148922a8 <col:2, col:10> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414892290 <col:2> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414892278 <col:2> 'uint8_t':'unsigned char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414892230 <col:2> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488d330 'ui8_4' 'uint8_t':'unsigned char'
+    |     |   `-IntegerLiteral 0x7fc414892258 <col:10> 'int' 4
+    |     |-ImplicitCastExpr 0x7fc414893060 <col:13, col:21> 'int8_t':'signed char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414892348 <col:13, col:21> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414892330 <col:13> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414892318 <col:13> 'int8_t':'signed char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc4148922d0 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488d3a0 'si8_4' 'int8_t':'signed char'
+    |     |   `-IntegerLiteral 0x7fc4148922f8 <col:21> 'int' 4
+    |     |-ImplicitCastExpr 0x7fc414893078 <col:24, col:33> 'uint16_t':'unsigned short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc4148923e8 <col:24, col:33> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc4148923d0 <col:24> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc4148923b8 <col:24> 'uint16_t':'unsigned short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414892370 <col:24> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc41488d410 'ui16_4' 'uint16_t':'unsigned short'
+    |     |   `-IntegerLiteral 0x7fc414892398 <col:33> 'int' 4
+    |     |-ImplicitCastExpr 0x7fc414893090 <col:36, col:45> 'int16_t':'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414892488 <col:36, col:45> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414892470 <col:36> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414892458 <col:36> 'int16_t':'short' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414892410 <col:36> 'int16_t':'short' lvalue ParmVar 0x7fc41488d480 'si16_4' 'int16_t':'short'
+    |     |   `-IntegerLiteral 0x7fc414892438 <col:45> 'int' 4
+    |     |-BinaryOperator 0x7fc414892528 <line:95:2, col:11> 'unsigned int' '+'
+    |     | |-ImplicitCastExpr 0x7fc4148924f8 <col:2> 'uint32_t':'unsigned int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc4148924b0 <col:2> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc41488d4f0 'ui32_4' 'uint32_t':'unsigned int'
+    |     | `-ImplicitCastExpr 0x7fc414892510 <col:11> 'unsigned int' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc4148924d8 <col:11> 'int' 4
+    |     |-BinaryOperator 0x7fc4148925b0 <col:14, col:23> 'int' '+'
+    |     | |-ImplicitCastExpr 0x7fc414892598 <col:14> 'int32_t':'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414892550 <col:14> 'int32_t':'int' lvalue ParmVar 0x7fc41488d560 'si32_4' 'int32_t':'int'
+    |     | `-IntegerLiteral 0x7fc414892578 <col:23> 'int' 4
+    |     |-BinaryOperator 0x7fc414892650 <col:26, col:35> 'unsigned long long' '+'
+    |     | |-ImplicitCastExpr 0x7fc414892620 <col:26> 'uint64_t':'unsigned long long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc4148925d8 <col:26> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc41488d5d0 'ui64_4' 'uint64_t':'unsigned long long'
+    |     | `-ImplicitCastExpr 0x7fc414892638 <col:35> 'unsigned long long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc414892600 <col:35> 'int' 4
+    |     |-BinaryOperator 0x7fc4148926f0 <col:38, col:47> 'long' '+'
+    |     | |-ImplicitCastExpr 0x7fc4148926c0 <col:38> 'int64_t':'long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414892678 <col:38> 'int64_t':'long' lvalue ParmVar 0x7fc41488d640 'si64_4' 'int64_t':'long'
+    |     | `-ImplicitCastExpr 0x7fc4148926d8 <col:47> 'long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7fc4148926a0 <col:47> 'int' 4
+    |     |-BinaryOperator 0x7fc414892790 <line:96:2, col:8> 'float' '+'
+    |     | |-ImplicitCastExpr 0x7fc414892760 <col:2> 'float' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414892718 <col:2> 'float' lvalue ParmVar 0x7fc41488d6b8 'f_4' 'float'
+    |     | `-ImplicitCastExpr 0x7fc414892778 <col:8> 'float' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414892740 <col:8> 'int' 4
+    |     |-BinaryOperator 0x7fc414892830 <col:11, col:17> 'double' '+'
+    |     | |-ImplicitCastExpr 0x7fc414892800 <col:11> 'double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc4148927b8 <col:11> 'double' lvalue ParmVar 0x7fc41488d730 'd_4' 'double'
+    |     | `-ImplicitCastExpr 0x7fc414892818 <col:17> 'double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc4148927e0 <col:17> 'int' 4
+    |     |-BinaryOperator 0x7fc4148928d0 <col:20, col:27> 'long double' '+'
+    |     | |-ImplicitCastExpr 0x7fc4148928a0 <col:20> 'long double' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7fc414892858 <col:20> 'long double' lvalue ParmVar 0x7fc41488e800 'ld_4' 'long double'
+    |     | `-ImplicitCastExpr 0x7fc4148928b8 <col:27> 'long double' <IntegralToFloating>
+    |     |   `-IntegerLiteral 0x7fc414892880 <col:27> 'int' 4
+    |     |-CStyleCastExpr 0x7fc414892a20 <col:30, col:55> 'char *' <IntegralToPointer>
+    |     | `-ParenExpr 0x7fc414892a00 <col:37, col:55> 'int'
+    |     |   `-BinaryOperator 0x7fc414892990 <col:38, col:54> 'int' '+'
+    |     |     |-CStyleCastExpr 0x7fc414892948 <col:38, col:48> 'intptr_t':'int' <PointerToIntegral>
+    |     |     | `-ImplicitCastExpr 0x7fc414892930 <col:48> 'char *' <LValueToRValue>
+    |     |     |   `-DeclRefExpr 0x7fc4148928f8 <col:48> 'char *' lvalue ParmVar 0x7fc41488e878 'p_4' 'char *'
+    |     |     `-IntegerLiteral 0x7fc414892970 <col:54> 'int' 4
+    |     |-ImplicitCastExpr 0x7fc4148930a8 <line:97:2, col:10> 'uint8_t':'unsigned char' <IntegralCast>
+    |     | `-BinaryOperator 0x7fc414892ac0 <col:2, col:10> 'int' '+'
+    |     |   |-ImplicitCastExpr 0x7fc414892aa8 <col:2> 'int' <IntegralCast>
+    |     |   | `-ImplicitCastExpr 0x7fc414892a90 <col:2> 'uint8_t':'unsigned char' <LValueToRValue>
+    |     |   |   `-DeclRefExpr 0x7fc414892a48 <col:2> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488e8e8 'ui8_5' 'uint8_t':'unsigned char'
+    |     |   `-IntegerLiteral 0x7fc414892a70 <col:10> 'int' 5
+    |     `-ImplicitCastExpr 0x7fc4148930c0 <col:13, col:21> 'int8_t':'signed char' <IntegralCast>
+    |       `-BinaryOperator 0x7fc414892b60 <col:13, col:21> 'int' '+'
+    |         |-ImplicitCastExpr 0x7fc414892b48 <col:13> 'int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7fc414892b30 <col:13> 'int8_t':'signed char' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fc414892ae8 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488e958 'si8_5' 'int8_t':'signed char'
+    |         `-IntegerLiteral 0x7fc414892b10 <col:21> 'int' 5
+    `-CallExpr 0x7fc414895280 <line:100:5, line:127:26> 'void'
+      |-ImplicitCastExpr 0x7fc414895268 <line:100:5> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc4148930f0 <col:5> 'void ()' Function 0x7fc414886fd8 'foobar' 'void ()'
+      |-ImplicitCastExpr 0x7fc4148955d0 <col:13, line:111:68> 'char *' <ArrayToPointerDecay>
+      | `-StringLiteral 0x7fc414893158 <line:100:13, line:111:68> 'char [422]' lvalue "%u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d: %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d %hu %hd %u %d %llu %lld %.0f %.0f %.0Lf %#lx %u %d\n"
+      |-ImplicitCastExpr 0x7fc414895600 <line:112:6> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc4148955e8 <col:6> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc4148934a8 <col:6> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc4148870c8 'ui8_1' 'uint8_t':'unsigned char'
+      |-ImplicitCastExpr 0x7fc414895630 <col:13> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895618 <col:13> 'int8_t':'signed char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc4148934d0 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc414887138 'si8_1' 'int8_t':'signed char'
+      |-ImplicitCastExpr 0x7fc414895660 <col:20> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895648 <col:20> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc4148934f8 <col:20> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc4148871a8 'ui16_1' 'uint16_t':'unsigned short'
+      |-ImplicitCastExpr 0x7fc414895690 <col:28> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895678 <col:28> 'int16_t':'short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893520 <col:28> 'int16_t':'short' lvalue ParmVar 0x7fc414887218 'si16_1' 'int16_t':'short'
+      |-ImplicitCastExpr 0x7fc4148956a8 <col:36> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893548 <col:36> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc414887288 'ui32_1' 'uint32_t':'unsigned int'
+      |-ImplicitCastExpr 0x7fc4148956c0 <col:44> 'int32_t':'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893570 <col:44> 'int32_t':'int' lvalue ParmVar 0x7fc4148872f8 'si32_1' 'int32_t':'int'
+      |-ImplicitCastExpr 0x7fc4148956d8 <col:52> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893598 <col:52> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc414887368 'ui64_1' 'uint64_t':'unsigned long long'
+      |-ImplicitCastExpr 0x7fc4148956f0 <col:60> 'int64_t':'long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc4148935c0 <col:60> 'int64_t':'long' lvalue ParmVar 0x7fc4148873d8 'si64_1' 'int64_t':'long'
+      |-ImplicitCastExpr 0x7fc414895720 <line:113:6> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414895708 <col:6> 'float' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc4148935e8 <col:6> 'float' lvalue ParmVar 0x7fc414887450 'f_1' 'float'
+      |-ImplicitCastExpr 0x7fc414895738 <col:11> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893610 <col:11> 'double' lvalue ParmVar 0x7fc4148874c8 'd_1' 'double'
+      |-ImplicitCastExpr 0x7fc414895750 <col:16> 'long double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893638 <col:16> 'long double' lvalue ParmVar 0x7fc414887540 'ld_1' 'long double'
+      |-CStyleCastExpr 0x7fc4148936b8 <col:22, col:37> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc4148936a0 <col:37> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893660 <col:37> 'char *' lvalue ParmVar 0x7fc41488c800 'p_1' 'char *'
+      |-ImplicitCastExpr 0x7fc414895780 <col:42> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895768 <col:42> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc4148936e0 <col:42> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488c870 'ui8_2' 'uint8_t':'unsigned char'
+      |-ImplicitCastExpr 0x7fc4148957b0 <col:49> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895798 <col:49> 'int8_t':'signed char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893708 <col:49> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488c8e0 'si8_2' 'int8_t':'signed char'
+      |-ImplicitCastExpr 0x7fc4148957e0 <col:56> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc4148957c8 <col:56> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893730 <col:56> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc41488c950 'ui16_2' 'uint16_t':'unsigned short'
+      |-ImplicitCastExpr 0x7fc414895810 <col:64> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc4148957f8 <col:64> 'int16_t':'short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893758 <col:64> 'int16_t':'short' lvalue ParmVar 0x7fc41488c9c0 'si16_2' 'int16_t':'short'
+      |-ImplicitCastExpr 0x7fc414895828 <line:114:6> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893780 <col:6> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc41488ca30 'ui32_2' 'uint32_t':'unsigned int'
+      |-ImplicitCastExpr 0x7fc414895840 <col:14> 'int32_t':'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc4148937a8 <col:14> 'int32_t':'int' lvalue ParmVar 0x7fc41488caa0 'si32_2' 'int32_t':'int'
+      |-ImplicitCastExpr 0x7fc414895858 <col:22> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc4148937d0 <col:22> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc41488cb10 'ui64_2' 'uint64_t':'unsigned long long'
+      |-ImplicitCastExpr 0x7fc414895870 <col:30> 'int64_t':'long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc4148937f8 <col:30> 'int64_t':'long' lvalue ParmVar 0x7fc41488cb80 'si64_2' 'int64_t':'long'
+      |-ImplicitCastExpr 0x7fc4148958a0 <col:38> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414895888 <col:38> 'float' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893820 <col:38> 'float' lvalue ParmVar 0x7fc41488cbf8 'f_2' 'float'
+      |-ImplicitCastExpr 0x7fc4148958b8 <col:43> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893848 <col:43> 'double' lvalue ParmVar 0x7fc41488cc70 'd_2' 'double'
+      |-ImplicitCastExpr 0x7fc4148958d0 <col:48> 'long double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893870 <col:48> 'long double' lvalue ParmVar 0x7fc41488cce8 'ld_2' 'long double'
+      |-CStyleCastExpr 0x7fc4148938f0 <col:54, col:69> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc4148938d8 <col:69> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893898 <col:69> 'char *' lvalue ParmVar 0x7fc41488cd60 'p_2' 'char *'
+      |-ImplicitCastExpr 0x7fc414895900 <line:115:6> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc4148958e8 <col:6> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893918 <col:6> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488cdd0 'ui8_3' 'uint8_t':'unsigned char'
+      |-ImplicitCastExpr 0x7fc414895930 <col:13> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895918 <col:13> 'int8_t':'signed char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893940 <col:13> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488ce40 'si8_3' 'int8_t':'signed char'
+      |-ImplicitCastExpr 0x7fc414895960 <col:20> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895948 <col:20> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893968 <col:20> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc41488ceb0 'ui16_3' 'uint16_t':'unsigned short'
+      |-ImplicitCastExpr 0x7fc414895990 <col:28> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895978 <col:28> 'int16_t':'short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893990 <col:28> 'int16_t':'short' lvalue ParmVar 0x7fc41488cf20 'si16_3' 'int16_t':'short'
+      |-ImplicitCastExpr 0x7fc4148959a8 <col:36> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc4148939b8 <col:36> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc41488cf90 'ui32_3' 'uint32_t':'unsigned int'
+      |-ImplicitCastExpr 0x7fc4148959c0 <col:44> 'int32_t':'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc4148939e0 <col:44> 'int32_t':'int' lvalue ParmVar 0x7fc41488d000 'si32_3' 'int32_t':'int'
+      |-ImplicitCastExpr 0x7fc4148959d8 <col:52> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893a08 <col:52> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc41488d070 'ui64_3' 'uint64_t':'unsigned long long'
+      |-ImplicitCastExpr 0x7fc4148959f0 <col:60> 'int64_t':'long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893a30 <col:60> 'int64_t':'long' lvalue ParmVar 0x7fc41488d0e0 'si64_3' 'int64_t':'long'
+      |-ImplicitCastExpr 0x7fc414895a20 <col:68> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414895a08 <col:68> 'float' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893a58 <col:68> 'float' lvalue ParmVar 0x7fc41488d158 'f_3' 'float'
+      |-ImplicitCastExpr 0x7fc414895a38 <line:116:6> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893a80 <col:6> 'double' lvalue ParmVar 0x7fc41488d1d0 'd_3' 'double'
+      |-ImplicitCastExpr 0x7fc414895a50 <col:11> 'long double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893aa8 <col:11> 'long double' lvalue ParmVar 0x7fc41488d248 'ld_3' 'long double'
+      |-CStyleCastExpr 0x7fc414893b28 <col:17, col:32> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc414893b10 <col:32> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893ad0 <col:32> 'char *' lvalue ParmVar 0x7fc41488d2c0 'p_3' 'char *'
+      |-ImplicitCastExpr 0x7fc414895a80 <col:37> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895a68 <col:37> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893b50 <col:37> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488d330 'ui8_4' 'uint8_t':'unsigned char'
+      |-ImplicitCastExpr 0x7fc414895ab0 <col:44> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895a98 <col:44> 'int8_t':'signed char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893b78 <col:44> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488d3a0 'si8_4' 'int8_t':'signed char'
+      |-ImplicitCastExpr 0x7fc414895ae0 <col:51> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895ac8 <col:51> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893ba0 <col:51> 'uint16_t':'unsigned short' lvalue ParmVar 0x7fc41488d410 'ui16_4' 'uint16_t':'unsigned short'
+      |-ImplicitCastExpr 0x7fc414895b10 <col:59> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895af8 <col:59> 'int16_t':'short' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893bc8 <col:59> 'int16_t':'short' lvalue ParmVar 0x7fc41488d480 'si16_4' 'int16_t':'short'
+      |-ImplicitCastExpr 0x7fc414895b28 <col:67> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893bf0 <col:67> 'uint32_t':'unsigned int' lvalue ParmVar 0x7fc41488d4f0 'ui32_4' 'uint32_t':'unsigned int'
+      |-ImplicitCastExpr 0x7fc414895b40 <line:117:6> 'int32_t':'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893c18 <col:6> 'int32_t':'int' lvalue ParmVar 0x7fc41488d560 'si32_4' 'int32_t':'int'
+      |-ImplicitCastExpr 0x7fc414895b58 <col:14> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893c40 <col:14> 'uint64_t':'unsigned long long' lvalue ParmVar 0x7fc41488d5d0 'ui64_4' 'uint64_t':'unsigned long long'
+      |-ImplicitCastExpr 0x7fc414895b70 <col:22> 'int64_t':'long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893c68 <col:22> 'int64_t':'long' lvalue ParmVar 0x7fc41488d640 'si64_4' 'int64_t':'long'
+      |-ImplicitCastExpr 0x7fc414895ba0 <col:30> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414895b88 <col:30> 'float' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893c90 <col:30> 'float' lvalue ParmVar 0x7fc41488d6b8 'f_4' 'float'
+      |-ImplicitCastExpr 0x7fc414895bb8 <col:35> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893cb8 <col:35> 'double' lvalue ParmVar 0x7fc41488d730 'd_4' 'double'
+      |-ImplicitCastExpr 0x7fc414895bd0 <col:40> 'long double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc414893ce0 <col:40> 'long double' lvalue ParmVar 0x7fc41488e800 'ld_4' 'long double'
+      |-CStyleCastExpr 0x7fc414893d60 <col:46, col:61> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc414893d48 <col:61> 'char *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893d08 <col:61> 'char *' lvalue ParmVar 0x7fc41488e878 'p_4' 'char *'
+      |-ImplicitCastExpr 0x7fc414895c00 <col:66> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895be8 <col:66> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893d88 <col:66> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fc41488e8e8 'ui8_5' 'uint8_t':'unsigned char'
+      |-ImplicitCastExpr 0x7fc414895c30 <line:118:6> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895c18 <col:6> 'int8_t':'signed char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc414893db0 <col:6> 'int8_t':'signed char' lvalue ParmVar 0x7fc41488e958 'si8_5' 'int8_t':'signed char'
+      |-ImplicitCastExpr 0x7fc414895c60 <col:13, col:20> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895c48 <col:13, col:20> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414893e00 <col:13, col:20> 'uint8_t':'unsigned char' lvalue .a 0x7fc414870200
+      |     `-DeclRefExpr 0x7fc414893dd8 <col:13> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895c90 <col:23, col:30> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895c78 <col:23, col:30> 'int8_t':'signed char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414893e60 <col:23, col:30> 'int8_t':'signed char' lvalue .b 0x7fc414870280
+      |     `-DeclRefExpr 0x7fc414893e38 <col:23> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895cc0 <col:33, col:40> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895ca8 <col:33, col:40> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414893ec0 <col:33, col:40> 'uint16_t':'unsigned short' lvalue .c 0x7fc414870300
+      |     `-DeclRefExpr 0x7fc414893e98 <col:33> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895cf0 <col:43, col:50> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895cd8 <col:43, col:50> 'int16_t':'short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414893f20 <col:43, col:50> 'int16_t':'short' lvalue .d 0x7fc414870380
+      |     `-DeclRefExpr 0x7fc414893ef8 <col:43> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895d08 <col:53, col:60> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-MemberExpr 0x7fc414893f80 <col:53, col:60> 'uint32_t':'unsigned int' lvalue .e 0x7fc414870400
+      |   `-DeclRefExpr 0x7fc414893f58 <col:53> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895d20 <col:63, col:70> 'int32_t':'int' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894000 <col:63, col:70> 'int32_t':'int' lvalue .f 0x7fc414870480
+      |   `-DeclRefExpr 0x7fc414893fb8 <col:63> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895d38 <line:119:6, col:13> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894060 <col:6, col:13> 'uint64_t':'unsigned long long' lvalue .g 0x7fc414870500
+      |   `-DeclRefExpr 0x7fc414894038 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895d50 <col:16, col:23> 'int64_t':'long' <LValueToRValue>
+      | `-MemberExpr 0x7fc4148940c0 <col:16, col:23> 'int64_t':'long' lvalue .h 0x7fc414870580
+      |   `-DeclRefExpr 0x7fc414894098 <col:16> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895d80 <col:26, col:33> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414895d68 <col:26, col:33> 'float' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894120 <col:26, col:33> 'float' lvalue .i 0x7fc4148705e0
+      |     `-DeclRefExpr 0x7fc4148940f8 <col:26> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895d98 <col:36, col:43> 'double' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894180 <col:36, col:43> 'double' lvalue .j 0x7fc414870640
+      |   `-DeclRefExpr 0x7fc414894158 <col:36> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895db0 <col:46, col:53> 'long double' <LValueToRValue>
+      | `-MemberExpr 0x7fc4148941e0 <col:46, col:53> 'long double' lvalue .k 0x7fc4148706a0
+      |   `-DeclRefExpr 0x7fc4148941b8 <col:46> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-CStyleCastExpr 0x7fc4148942a8 <line:120:6, col:28> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc414894290 <col:21, col:28> 'char *' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894240 <col:21, col:28> 'char *' lvalue .l 0x7fc414870700
+      |     `-DeclRefExpr 0x7fc414894218 <col:21> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895de0 <col:31, col:38> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895dc8 <col:31, col:38> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148942f8 <col:31, col:38> 'uint8_t':'unsigned char' lvalue .m 0x7fc414870758
+      |     `-DeclRefExpr 0x7fc4148942d0 <col:31> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895e10 <col:41, col:48> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895df8 <col:41, col:48> 'int8_t':'signed char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894358 <col:41, col:48> 'int8_t':'signed char' lvalue .n 0x7fc4148707b0
+      |     `-DeclRefExpr 0x7fc414894330 <col:41> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895e40 <col:51, col:58> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895e28 <col:51, col:58> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148943b8 <col:51, col:58> 'uint16_t':'unsigned short' lvalue .o 0x7fc414870808
+      |     `-DeclRefExpr 0x7fc414894390 <col:51> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895e70 <col:61, col:68> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895e58 <col:61, col:68> 'int16_t':'short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894418 <col:61, col:68> 'int16_t':'short' lvalue .p 0x7fc414870860
+      |     `-DeclRefExpr 0x7fc4148943f0 <col:61> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895e88 <line:121:6, col:13> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894478 <col:6, col:13> 'uint32_t':'unsigned int' lvalue .q 0x7fc4148708b8
+      |   `-DeclRefExpr 0x7fc414894450 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895ea0 <col:16, col:23> 'int32_t':'int' <LValueToRValue>
+      | `-MemberExpr 0x7fc4148944d8 <col:16, col:23> 'int32_t':'int' lvalue .r 0x7fc414870910
+      |   `-DeclRefExpr 0x7fc4148944b0 <col:16> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895eb8 <col:26, col:33> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894538 <col:26, col:33> 'uint64_t':'unsigned long long' lvalue .s 0x7fc414870968
+      |   `-DeclRefExpr 0x7fc414894510 <col:26> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895ed0 <col:36, col:43> 'int64_t':'long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894598 <col:36, col:43> 'int64_t':'long' lvalue .t 0x7fc4148709c0
+      |   `-DeclRefExpr 0x7fc414894570 <col:36> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895f00 <col:46, col:53> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414895ee8 <col:46, col:53> 'float' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148945f8 <col:46, col:53> 'float' lvalue .u 0x7fc414870a20
+      |     `-DeclRefExpr 0x7fc4148945d0 <col:46> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895f18 <col:56, col:63> 'double' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894658 <col:56, col:63> 'double' lvalue .v 0x7fc414870a80
+      |   `-DeclRefExpr 0x7fc414894630 <col:56> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895f30 <line:122:6, col:13> 'long double' <LValueToRValue>
+      | `-MemberExpr 0x7fc4148946b8 <col:6, col:13> 'long double' lvalue .w 0x7fc414870ae0
+      |   `-DeclRefExpr 0x7fc414894690 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-CStyleCastExpr 0x7fc414894780 <col:16, col:38> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc414894768 <col:31, col:38> 'char *' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894718 <col:31, col:38> 'char *' lvalue .x 0x7fc414870b40
+      |     `-DeclRefExpr 0x7fc4148946f0 <col:31> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895f60 <col:41, col:48> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895f48 <col:41, col:48> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148947d0 <col:41, col:48> 'uint8_t':'unsigned char' lvalue .y 0x7fc414870b98
+      |     `-DeclRefExpr 0x7fc4148947a8 <col:41> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895f90 <col:51, col:58> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895f78 <col:51, col:58> 'int8_t':'signed char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894830 <col:51, col:58> 'int8_t':'signed char' lvalue .z 0x7fc414886600
+      |     `-DeclRefExpr 0x7fc414894808 <col:51> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414895fc0 <col:61, col:68> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895fa8 <col:61, col:68> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894890 <col:61, col:68> 'uint16_t':'unsigned short' lvalue .aa 0x7fc414886658
+      |     `-DeclRefExpr 0x7fc414894868 <col:61> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896000 <line:123:6, col:13> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414895fd8 <col:6, col:13> 'int16_t':'short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148948f0 <col:6, col:13> 'int16_t':'short' lvalue .bb 0x7fc4148866b0
+      |     `-DeclRefExpr 0x7fc4148948c8 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896018 <col:17, col:24> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894950 <col:17, col:24> 'uint32_t':'unsigned int' lvalue .cc 0x7fc414886708
+      |   `-DeclRefExpr 0x7fc414894928 <col:17> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896030 <col:28, col:35> 'int32_t':'int' <LValueToRValue>
+      | `-MemberExpr 0x7fc4148949b0 <col:28, col:35> 'int32_t':'int' lvalue .dd 0x7fc414886760
+      |   `-DeclRefExpr 0x7fc414894988 <col:28> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896048 <col:39, col:46> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894a10 <col:39, col:46> 'uint64_t':'unsigned long long' lvalue .ee 0x7fc4148867b8
+      |   `-DeclRefExpr 0x7fc4148949e8 <col:39> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896060 <col:50, col:57> 'int64_t':'long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894a70 <col:50, col:57> 'int64_t':'long' lvalue .ff 0x7fc414886810
+      |   `-DeclRefExpr 0x7fc414894a48 <col:50> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896090 <col:61, col:68> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc414896078 <col:61, col:68> 'float' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894ad0 <col:61, col:68> 'float' lvalue .gg 0x7fc414886870
+      |     `-DeclRefExpr 0x7fc414894aa8 <col:61> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc4148960a8 <line:124:6, col:13> 'double' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894b30 <col:6, col:13> 'double' lvalue .hh 0x7fc4148868d0
+      |   `-DeclRefExpr 0x7fc414894b08 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc4148960c0 <col:17, col:24> 'long double' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894b90 <col:17, col:24> 'long double' lvalue .ii 0x7fc414886930
+      |   `-DeclRefExpr 0x7fc414894b68 <col:17> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-CStyleCastExpr 0x7fc414894c58 <col:28, col:50> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc414894c40 <col:43, col:50> 'char *' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894bf0 <col:43, col:50> 'char *' lvalue .jj 0x7fc414886990
+      |     `-DeclRefExpr 0x7fc414894bc8 <col:43> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc4148960f0 <col:54, col:61> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc4148960d8 <col:54, col:61> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894ca8 <col:54, col:61> 'uint8_t':'unsigned char' lvalue .kk 0x7fc4148869e8
+      |     `-DeclRefExpr 0x7fc414894c80 <col:54> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896120 <line:125:6, col:13> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414896108 <col:6, col:13> 'int8_t':'signed char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894d08 <col:6, col:13> 'int8_t':'signed char' lvalue .ll 0x7fc414886a40
+      |     `-DeclRefExpr 0x7fc414894ce0 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896150 <col:17, col:24> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414896138 <col:17, col:24> 'uint16_t':'unsigned short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894d68 <col:17, col:24> 'uint16_t':'unsigned short' lvalue .mm 0x7fc414886a98
+      |     `-DeclRefExpr 0x7fc414894d40 <col:17> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896180 <col:28, col:35> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414896168 <col:28, col:35> 'int16_t':'short' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894dc8 <col:28, col:35> 'int16_t':'short' lvalue .nn 0x7fc414886af0
+      |     `-DeclRefExpr 0x7fc414894da0 <col:28> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896198 <col:39, col:46> 'uint32_t':'unsigned int' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894e28 <col:39, col:46> 'uint32_t':'unsigned int' lvalue .oo 0x7fc414886b48
+      |   `-DeclRefExpr 0x7fc414894e00 <col:39> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc4148961b0 <col:50, col:57> 'int32_t':'int' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894e88 <col:50, col:57> 'int32_t':'int' lvalue .pp 0x7fc414886ba0
+      |   `-DeclRefExpr 0x7fc414894e60 <col:50> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc4148961c8 <col:61, col:68> 'uint64_t':'unsigned long long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894ee8 <col:61, col:68> 'uint64_t':'unsigned long long' lvalue .qq 0x7fc414886bf8
+      |   `-DeclRefExpr 0x7fc414894ec0 <col:61> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc4148961e0 <line:126:6, col:13> 'int64_t':'long' <LValueToRValue>
+      | `-MemberExpr 0x7fc414894f48 <col:6, col:13> 'int64_t':'long' lvalue .rr 0x7fc414886c50
+      |   `-DeclRefExpr 0x7fc414894f20 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896210 <col:17, col:24> 'double' <FloatingCast>
+      | `-ImplicitCastExpr 0x7fc4148961f8 <col:17, col:24> 'float' <LValueToRValue>
+      |   `-MemberExpr 0x7fc414894fa8 <col:17, col:24> 'float' lvalue .ss 0x7fc414886cb0
+      |     `-DeclRefExpr 0x7fc414894f80 <col:17> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896228 <col:28, col:35> 'double' <LValueToRValue>
+      | `-MemberExpr 0x7fc414895028 <col:28, col:35> 'double' lvalue .tt 0x7fc414886d10
+      |   `-DeclRefExpr 0x7fc414895000 <col:28> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896240 <col:39, col:46> 'long double' <LValueToRValue>
+      | `-MemberExpr 0x7fc414895088 <col:39, col:46> 'long double' lvalue .uu 0x7fc414886d70
+      |   `-DeclRefExpr 0x7fc414895060 <col:39> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-CStyleCastExpr 0x7fc414895150 <col:50, col:72> 'unsigned long' <PointerToIntegral>
+      | `-ImplicitCastExpr 0x7fc414895138 <col:65, col:72> 'char *' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148950e8 <col:65, col:72> 'char *' lvalue .vv 0x7fc414886dd0
+      |     `-DeclRefExpr 0x7fc4148950c0 <col:65> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      |-ImplicitCastExpr 0x7fc414896270 <line:127:6, col:13> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fc414896258 <col:6, col:13> 'uint8_t':'unsigned char' <LValueToRValue>
+      |   `-MemberExpr 0x7fc4148951a0 <col:6, col:13> 'uint8_t':'unsigned char' lvalue .ww 0x7fc414886e28
+      |     `-DeclRefExpr 0x7fc414895178 <col:6> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'
+      `-ImplicitCastExpr 0x7fc4148962a0 <col:17, col:24> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fc414896288 <col:17, col:24> 'int8_t':'signed char' <LValueToRValue>
+          `-MemberExpr 0x7fc414895200 <col:17, col:24> 'int8_t':'signed char' lvalue .xx 0x7fc414886e80
+            `-DeclRefExpr 0x7fc4148951d8 <col:17> 'BigStruct':'struct BigStruct' lvalue Var 0x7fc41488f150 'retVal' 'BigStruct':'struct BigStruct'

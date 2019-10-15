@@ -1,0 +1,55 @@
+TranslationUnitDecl 0x7fc18e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc18e86e868 <../Data/C2AST/pr51879-12.c:4:1, col:35> col:27 used bar 'int (int)'
+| |-ParmVarDecl 0x7fc18e82c978 <col:32> col:35 'int'
+| `-PureAttr 0x7fc18e86e910 <col:16>
+|-FunctionDecl 0x7fc18e86ea40 <line:5:1, col:36> col:27 used bar2 'int (int)'
+| |-ParmVarDecl 0x7fc18e86e9b0 <col:33> col:36 'int'
+| `-PureAttr 0x7fc18e86eae8 <col:16>
+|-FunctionDecl 0x7fc18e86ec10 <line:6:1, col:14> col:6 used baz 'void (int)'
+| `-ParmVarDecl 0x7fc18e86eb48 <col:11> col:14 'int'
+|-VarDecl 0x7fc18e86ecd0 <line:8:1, col:5> col:5 x 'int'
+|-VarDecl 0x7fc18e86ed48 <col:1, col:8> col:8 z 'int'
+`-FunctionDecl 0x7fc18e86ee60 <line:10:1, line:25:1> line:11:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fc18e86edd8 <col:6, col:10> col:10 used y 'int'
+  `-CompoundStmt 0x7fc18e86f578 <line:12:1, line:25:1>
+    |-DeclStmt 0x7fc18e86efa0 <line:13:3, col:12>
+    | `-VarDecl 0x7fc18e86ef20 <col:3, col:11> col:7 used a 'int' cinit
+    |   `-IntegerLiteral 0x7fc18e86ef80 <col:11> 'int' 0
+    |-IfStmt 0x7fc18e86f468 <line:14:3, line:23:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc18e86f018 <line:14:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fc18e86f000 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc18e86efb8 <col:7> 'int' lvalue ParmVar 0x7fc18e86edd8 'y' 'int'
+    | | `-IntegerLiteral 0x7fc18e86efe0 <col:12> 'int' 6
+    | |-CompoundStmt 0x7fc18e86f248 <line:15:5, line:18:5>
+    | | |-CompoundAssignOperator 0x7fc18e86f120 <line:16:7, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | | |-DeclRefExpr 0x7fc18e86f040 <col:7> 'int' lvalue Var 0x7fc18e86ef20 'a' 'int'
+    | | | `-CallExpr 0x7fc18e86f0f0 <col:12, col:18> 'int'
+    | | |   |-ImplicitCastExpr 0x7fc18e86f0d8 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fc18e86f068 <col:12> 'int (int)' Function 0x7fc18e86e868 'bar' 'int (int)'
+    | | |   `-IntegerLiteral 0x7fc18e86f090 <col:17> 'int' 7
+    | | `-CompoundAssignOperator 0x7fc18e86f210 <line:17:7, col:19> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |   |-DeclRefExpr 0x7fc18e86f158 <col:7> 'int' lvalue Var 0x7fc18e86ef20 'a' 'int'
+    | |   `-CallExpr 0x7fc18e86f1e0 <col:12, col:19> 'int'
+    | |     |-ImplicitCastExpr 0x7fc18e86f1c8 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fc18e86f180 <col:12> 'int (int)' Function 0x7fc18e86ea40 'bar2' 'int (int)'
+    | |     `-IntegerLiteral 0x7fc18e86f1a8 <col:18> 'int' 6
+    | `-CompoundStmt 0x7fc18e86f448 <line:20:5, line:23:5>
+    |   |-CompoundAssignOperator 0x7fc18e86f320 <line:21:7, col:19> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | |-DeclRefExpr 0x7fc18e86f268 <col:7> 'int' lvalue Var 0x7fc18e86ef20 'a' 'int'
+    |   | `-CallExpr 0x7fc18e86f2f0 <col:12, col:19> 'int'
+    |   |   |-ImplicitCastExpr 0x7fc18e86f2d8 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+    |   |   | `-DeclRefExpr 0x7fc18e86f290 <col:12> 'int (int)' Function 0x7fc18e86ea40 'bar2' 'int (int)'
+    |   |   `-IntegerLiteral 0x7fc18e86f2b8 <col:18> 'int' 6
+    |   `-CompoundAssignOperator 0x7fc18e86f410 <line:22:7, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-DeclRefExpr 0x7fc18e86f358 <col:7> 'int' lvalue Var 0x7fc18e86ef20 'a' 'int'
+    |     `-CallExpr 0x7fc18e86f3e0 <col:12, col:18> 'int'
+    |       |-ImplicitCastExpr 0x7fc18e86f3c8 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fc18e86f380 <col:12> 'int (int)' Function 0x7fc18e86e868 'bar' 'int (int)'
+    |       `-IntegerLiteral 0x7fc18e86f3a8 <col:17> 'int' 7
+    `-CallExpr 0x7fc18e86f530 <line:24:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fc18e86f518 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc18e86f4a0 <col:3> 'void (int)' Function 0x7fc18e86ec10 'baz' 'void (int)'
+      `-ImplicitCastExpr 0x7fc18e86f560 <col:8> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc18e86f4c8 <col:8> 'int' lvalue Var 0x7fc18e86ef20 'a' 'int'

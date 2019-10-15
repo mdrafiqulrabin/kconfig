@@ -1,0 +1,62 @@
+../Data/C2AST/pragma-message.c:3:9: error: pragma message requires parenthesized string
+#pragma message                   
+        ^
+../Data/C2AST/pragma-message.c:4:9: error: pragma message requires parenthesized string
+#pragma message 0                 
+        ^
+../Data/C2AST/pragma-message.c:5:9: error: pragma message requires parenthesized string
+#pragma message id                
+        ^
+../Data/C2AST/pragma-message.c:6:35: error: expected string literal in pragma message
+#pragma message (                 
+                                  ^
+../Data/C2AST/pragma-message.c:7:18: error: expected string literal in pragma message
+#pragma message (0                
+                 ^
+../Data/C2AST/pragma-message.c:8:18: error: expected string literal in pragma message
+#pragma message (id               
+                 ^
+../Data/C2AST/pragma-message.c:9:18: error: expected string literal in pragma message
+#pragma message ()                
+                 ^
+../Data/C2AST/pragma-message.c:10:18: error: expected string literal in pragma message
+#pragma message (0)               
+                 ^
+../Data/C2AST/pragma-message.c:11:18: error: expected string literal in pragma message
+#pragma message (id)              
+                 ^
+../Data/C2AST/pragma-message.c:15:9: error: pragma message requires parenthesized string
+#pragma message "
+        ^
+../Data/C2AST/pragma-message.c:18:9: error: pragma message requires parenthesized string
+#pragma message "Bad 1
+        ^
+../Data/C2AST/pragma-message.c:21:18: error: expected string literal in pragma message
+#pragma message ("Bad 2
+                 ^
+../Data/C2AST/pragma-message.c:24:25: error: pragma message requires parenthesized string
+#pragma message ("Bad 3"
+                        ^
+../Data/C2AST/pragma-message.c:27:20: error: pragma message requires parenthesized string
+#pragma message "" junk
+                   ^
+../Data/C2AST/pragma-message.c:30:22: error: pragma message requires parenthesized string
+#pragma message ("") junk
+                     ^
+15 errors generated.
+TranslationUnitDecl 0x7fa7c58068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa7c5806e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa7c5806b80 '__int128'
+|-TypedefDecl 0x7fa7c5806ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa7c5806ba0 'unsigned __int128'
+|-TypedefDecl 0x7fa7c58071a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa7c5806fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa7c5806f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa7c5807240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa7c5807200 'char *'
+|   `-BuiltinType 0x7fa7c5806980 'char'
+|-TypedefDecl 0x7fa7c5807508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa7c58074b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa7c5807320 'struct __va_list_tag'
+|     `-Record 0x7fa7c5807298 '__va_list_tag'
+`-VarDecl 0x7fa7c5807578 <../Data/C2AST/pragma-message.c:50:1, col:5> col:5 unused 'int'

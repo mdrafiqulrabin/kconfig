@@ -1,0 +1,32 @@
+../Data/C2AST/pr65588.c:5:33: error: register '%rsp' unsuitable for global register variables on this target
+register volatile int a __asm__("%rsp");
+                                ^
+1 error generated.
+TranslationUnitDecl 0x7fb47c81ace8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb47c81b260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb47c81af80 '__int128'
+|-TypedefDecl 0x7fb47c81b2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb47c81afa0 'unsigned __int128'
+|-TypedefDecl 0x7fb47c81b5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb47c81b3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb47c81b328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb47c81b640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb47c81b600 'char *'
+|   `-BuiltinType 0x7fb47c81ad80 'char'
+|-TypedefDecl 0x7fb47c81b908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb47c81b8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb47c81b720 'struct __va_list_tag'
+|     `-Record 0x7fb47c81b698 '__va_list_tag'
+|-VarDecl 0x7fb47c85c800 <../Data/C2AST/pr65588.c:5:1, col:23> col:23 used a 'volatile int' register
+| `-AsmLabelAttr 0x7fb47c85c860 <col:33> "%rsp"
+|-FunctionDecl 0x7fb47c85c950 <line:9:1, line:10:19> col:5 used t 'int ()'
+| |-CompoundStmt 0x7fb47c85caa8 <col:10, col:19>
+| | `-BinaryOperator 0x7fb47c85ca80 <col:12, col:16> 'int' '='
+| |   |-DeclRefExpr 0x7fb47c85ca38 <col:12> 'volatile int' lvalue Var 0x7fb47c85c800 'a' 'volatile int'
+| |   `-IntegerLiteral 0x7fb47c85ca60 <col:16> 'int' 0
+| `-UsedAttr 0x7fb47c85c9f0 <line:9:17>
+`-FunctionDecl 0x7fb47c85cae8 <line:11:1, col:22> col:5 main 'int ()'
+  `-CompoundStmt 0x7fb47c85cbf8 <col:13, col:22>
+    `-BinaryOperator 0x7fb47c85cbd0 <col:15, col:19> 'int' '='
+      |-DeclRefExpr 0x7fb47c85cb88 <col:15> 'volatile int' lvalue Var 0x7fb47c85c800 'a' 'volatile int'
+      `-IntegerLiteral 0x7fb47c85cbb0 <col:19> 'int' 0

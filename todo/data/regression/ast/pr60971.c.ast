@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7fc35601a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc35601b578 <../Data/C2AST/pr60971.c:8:1, col:24> col:24 used c 'volatile unsigned char'
+|-FunctionDecl 0x7fc356814308 <line:10:1, line:14:1> line:11:1 used foo 'unsigned char (void)'
+| |-CompoundStmt 0x7fc356814448 <line:12:1, line:14:1>
+| | `-ReturnStmt 0x7fc356814430 <line:13:3, col:10>
+| |   `-ImplicitCastExpr 0x7fc356814418 <col:10> 'unsigned char' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fc3568143f0 <col:10> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+| `-NoInlineAttr 0x7fc3568143a8 <line:10:16>
+|-FunctionDecl 0x7fc356814520 <line:16:1, line:20:1> line:17:1 used bar 'bool (void)'
+| |-CompoundStmt 0x7fc356814728 <line:18:1, line:20:1>
+| | `-ReturnStmt 0x7fc356814710 <line:19:3, col:19>
+| |   `-ImplicitCastExpr 0x7fc3568146f8 <col:10, col:19> 'bool' <IntegralToBoolean>
+| |     `-BinaryOperator 0x7fc3568146d0 <col:10, col:19> 'int' '&'
+| |       |-ImplicitCastExpr 0x7fc3568146b8 <col:10, col:15> 'int' <IntegralCast>
+| |       | `-CallExpr 0x7fc356814670 <col:10, col:15> 'unsigned char'
+| |       |   `-ImplicitCastExpr 0x7fc356814658 <col:10> 'unsigned char (*)(void)' <FunctionToPointerDecay>
+| |       |     `-DeclRefExpr 0x7fc356814608 <col:10> 'unsigned char (void)' Function 0x7fc356814308 'foo' 'unsigned char (void)'
+| |       `-IntegerLiteral 0x7fc356814698 <col:19> 'int' 1
+| `-NoInlineAttr 0x7fc3568145c0 <line:16:16>
+|-FunctionDecl 0x7fc356814790 <line:22:1, line:34:1> line:23:1 main 'int ()'
+| `-CompoundStmt 0x7fc356814f10 <line:24:1, line:34:1>
+|   |-BinaryOperator 0x7fc356814890 <line:25:3, col:7> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fc356814830 <col:3> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+|   | `-ImplicitCastExpr 0x7fc356814878 <col:7> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fc356814858 <col:7> 'int' 65
+|   |-BinaryOperator 0x7fc356814990 <line:26:3, col:12> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fc3568148b8 <col:3> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+|   | `-ImplicitCastExpr 0x7fc356814978 <col:7, col:12> 'unsigned char' <IntegralCast>
+|   |   `-CallExpr 0x7fc356814950 <col:7, col:12> 'bool'
+|   |     `-ImplicitCastExpr 0x7fc356814938 <col:7> 'bool (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fc3568148e0 <col:7> 'bool (void)' Function 0x7fc356814520 'bar' 'bool (void)'
+|   |-IfStmt 0x7fc356814c08 <line:27:3, line:28:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc356814a30 <line:27:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fc356814a18 <col:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fc356814a00 <col:7> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fc3568149b8 <col:7> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+|   | | `-IntegerLiteral 0x7fc3568149e0 <col:12> 'int' 1
+|   | |-CallExpr 0x7fc356814be0 <line:28:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fc356814bc8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc356814b78 <col:5> '<builtin fn type>' Function 0x7fc356814a90 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fc356814ca0 <line:29:3, col:7> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fc356814c40 <col:3> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+|   | `-ImplicitCastExpr 0x7fc356814c88 <col:7> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fc356814c68 <col:7> 'int' 32
+|   |-BinaryOperator 0x7fc356814d70 <line:30:3, col:12> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fc356814cc8 <col:3> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+|   | `-ImplicitCastExpr 0x7fc356814d58 <col:7, col:12> 'unsigned char' <IntegralCast>
+|   |   `-CallExpr 0x7fc356814d30 <col:7, col:12> 'bool'
+|   |     `-ImplicitCastExpr 0x7fc356814d18 <col:7> 'bool (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fc356814cf0 <col:7> 'bool (void)' Function 0x7fc356814520 'bar' 'bool (void)'
+|   |-IfStmt 0x7fc356814ea0 <line:31:3, line:32:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc356814e10 <line:31:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fc356814df8 <col:7> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fc356814de0 <col:7> 'unsigned char' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fc356814d98 <col:7> 'volatile unsigned char' lvalue Var 0x7fc35601b578 'c' 'volatile unsigned char'
+|   | | `-IntegerLiteral 0x7fc356814dc0 <col:12> 'int' 0
+|   | |-CallExpr 0x7fc356814e78 <line:32:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fc356814e60 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc356814e38 <col:5> '<builtin fn type>' Function 0x7fc356814a90 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc356814ef8 <line:33:3, col:10>
+|     `-IntegerLiteral 0x7fc356814ed8 <col:10> 'int' 0
+`-FunctionDecl 0x7fc356814a90 <line:28:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc356814b30 <col:5> Implicit

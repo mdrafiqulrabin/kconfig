@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7fd25282b0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd25282bd60 <../Data/C2AST/pr84357.c:6:9, line:8:1> line:6:16 struct s1 definition
+| `-FieldDecl 0x7fd253010e38 <line:7:5, col:19> col:19 referenced c 'unsigned char'
+|-TypedefDecl 0x7fd253010ed0 <line:6:1, line:8:3> col:3 referenced s1 'struct s1':'struct s1'
+| `-ElaboratedType 0x7fd253010e80 'struct s1' sugar
+|   `-RecordType 0x7fd253010e00 'struct s1'
+|     `-Record 0x7fd25282bd60 's1'
+|-RecordDecl 0x7fd253010f40 <line:10:9, line:14:1> line:10:16 struct s2 definition
+| |-FieldDecl 0x7fd253011000 <line:12:5, col:10> col:10 pad 'char'
+| `-FieldDecl 0x7fd253011178 <line:13:5, col:17> col:8 referenced arr 's1 [32]'
+|-TypedefDecl 0x7fd253011210 <line:10:1, line:14:3> col:3 referenced s2 'struct s2':'struct s2'
+| `-ElaboratedType 0x7fd2530111c0 'struct s2' sugar
+|   `-RecordType 0x7fd253010fd0 'struct s2'
+|     `-Record 0x7fd253010f40 's2'
+|-RecordDecl 0x7fd253011280 <line:16:9, line:18:1> line:16:16 struct s3 definition
+| `-FieldDecl 0x7fd253011370 <line:17:5, col:17> col:8 referenced arr 's1 [32]'
+|-TypedefDecl 0x7fd253011410 <line:16:1, line:18:3> col:3 referenced s3 'struct s3':'struct s3'
+| `-ElaboratedType 0x7fd2530113c0 'struct s3' sugar
+|   `-RecordType 0x7fd253011310 'struct s3'
+|     `-Record 0x7fd253011280 's3'
+|-FunctionDecl 0x7fd253011578 <line:20:1, col:13> col:6 used get_s2 's2 *()'
+|-VarDecl 0x7fd2530116e8 <line:21:1, col:6> col:6 used gActiveS3 's3 *'
+`-FunctionDecl 0x7fd253011798 <line:22:1, line:31:1> line:22:6 foo 'void ()'
+  `-CompoundStmt 0x7fd253011f20 <line:23:1, line:31:1>
+    |-DeclStmt 0x7fd2530118e8 <line:24:5, col:27>
+    | `-VarDecl 0x7fd253011848 <col:5, col:18> col:10 used three 's3 *' cinit
+    |   `-ImplicitCastExpr 0x7fd2530118d0 <col:18> 's3 *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fd2530118a8 <col:18> 's3 *' lvalue Var 0x7fd2530116e8 'gActiveS3' 's3 *'
+    |-DeclStmt 0x7fd253011a38 <line:25:5, col:24>
+    | `-VarDecl 0x7fd253011910 <col:5, col:23> col:10 used two 's2 *' cinit
+    |   `-CallExpr 0x7fd253011a10 <col:16, col:23> 's2 *'
+    |     `-ImplicitCastExpr 0x7fd2530119f8 <col:16> 's2 *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fd253011970 <col:16> 's2 *()' Function 0x7fd253011578 'get_s2' 's2 *()'
+    `-ForStmt 0x7fd253011ee8 <line:27:5, line:30:5>
+      |-DeclStmt 0x7fd253011ae8 <line:27:10, col:19>
+      | `-VarDecl 0x7fd253011a68 <col:10, col:18> col:14 used i 'int' cinit
+      |   `-IntegerLiteral 0x7fd253011ac8 <col:18> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd253011b60 <col:21, line:4:15> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd253011b48 <line:27:21> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd253011b00 <col:21> 'int' lvalue Var 0x7fd253011a68 'i' 'int'
+      | `-IntegerLiteral 0x7fd253011b28 <line:4:15> 'int' 32
+      |-UnaryOperator 0x7fd253011bb0 <line:27:32, col:33> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd253011b88 <col:32> 'int' lvalue Var 0x7fd253011a68 'i' 'int'
+      `-CompoundStmt 0x7fd253011ed0 <line:28:5, line:30:5>
+        `-BinaryOperator 0x7fd253011ea8 <line:29:9, col:39> 'unsigned char' '='
+          |-MemberExpr 0x7fd253011d20 <col:9, col:21> 'unsigned char' lvalue .c 0x7fd253010e38
+          | `-ArraySubscriptExpr 0x7fd253011cf8 <col:9, col:19> 's1':'struct s1' lvalue
+          |   |-ImplicitCastExpr 0x7fd253011cc8 <col:9, col:14> 's1 *' <ArrayToPointerDecay>
+          |   | `-MemberExpr 0x7fd253011c10 <col:9, col:14> 's1 [32]' lvalue ->arr 0x7fd253011178
+          |   |   `-ImplicitCastExpr 0x7fd253011bf8 <col:9> 's2 *' <LValueToRValue>
+          |   |     `-DeclRefExpr 0x7fd253011bd0 <col:9> 's2 *' lvalue Var 0x7fd253011910 'two' 's2 *'
+          |   `-ImplicitCastExpr 0x7fd253011ce0 <col:18> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fd253011c48 <col:18> 'int' lvalue Var 0x7fd253011a68 'i' 'int'
+          `-ImplicitCastExpr 0x7fd253011e90 <col:25, col:39> 'unsigned char' <LValueToRValue>
+            `-MemberExpr 0x7fd253011e58 <col:25, col:39> 'unsigned char' lvalue .c 0x7fd253010e38
+              `-ArraySubscriptExpr 0x7fd253011e30 <col:25, col:37> 's1':'struct s1' lvalue
+                |-ImplicitCastExpr 0x7fd253011e00 <col:25, col:32> 's1 *' <ArrayToPointerDecay>
+                | `-MemberExpr 0x7fd253011d98 <col:25, col:32> 's1 [32]' lvalue ->arr 0x7fd253011370
+                |   `-ImplicitCastExpr 0x7fd253011d80 <col:25> 's3 *' <LValueToRValue>
+                |     `-DeclRefExpr 0x7fd253011d58 <col:25> 's3 *' lvalue Var 0x7fd253011848 'three' 's3 *'
+                `-ImplicitCastExpr 0x7fd253011e18 <col:36> 'int' <LValueToRValue>
+                  `-DeclRefExpr 0x7fd253011dd0 <col:36> 'int' lvalue Var 0x7fd253011a68 'i' 'int'

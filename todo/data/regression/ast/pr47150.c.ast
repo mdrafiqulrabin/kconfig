@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7ff8d4821ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff8d502ead0 <../Data/C2AST/pr47150.c:3:1, col:33> col:16 used foo '_Complex float (float, float)'
+| |-ParmVarDecl 0x7ff8d4822978 <col:21> col:26 'float'
+| `-ParmVarDecl 0x7ff8d502ea00 <col:28> col:33 'float'
+`-FunctionDecl 0x7ff8d502ec08 <line:5:1, line:11:1> line:6:1 bar 'void ()'
+  `-CompoundStmt 0x7ff8d502f178 <line:7:1, line:11:1>
+    |-DeclStmt 0x7ff8d502ed58 <line:8:3, col:14>
+    | `-VarDecl 0x7ff8d502ecc0 <col:3, col:13> col:9 used w 'float' cinit
+    |   `-ImplicitCastExpr 0x7ff8d502ed40 <col:13> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7ff8d502ed20 <col:13> 'int' 2
+    |-DeclStmt 0x7ff8d502ede0 <line:9:3, col:19>
+    | `-VarDecl 0x7ff8d502ed80 <col:3, col:18> col:18 used b '_Complex float'
+    `-BinaryOperator 0x7ff8d502f150 <line:10:3, col:41> '_Complex float' '='
+      |-DeclRefExpr 0x7ff8d502edf8 <col:3> '_Complex float' lvalue Var 0x7ff8d502ed80 'b' '_Complex float'
+      `-ImplicitCastExpr 0x7ff8d502f138 <col:7, col:41> '_Complex float' <FloatingComplexCast>
+        `-BinaryOperator 0x7ff8d502f110 <col:7, col:41> '_Complex double' '*'
+          |-FloatingLiteral 0x7ff8d502ee20 <col:7> 'double' 5.000000e-01
+          `-ImplicitCastExpr 0x7ff8d502f0f8 <col:13, col:41> '_Complex double' <FloatingComplexCast>
+            `-ParenExpr 0x7ff8d502f0d8 <col:13, col:41> '_Complex float'
+              `-BinaryOperator 0x7ff8d502f0b0 <col:14, col:40> '_Complex float' '+'
+                |-CallExpr 0x7ff8d502eef0 <col:14, col:23> '_Complex float'
+                | |-ImplicitCastExpr 0x7ff8d502eed8 <col:14> '_Complex float (*)(float, float)' <FunctionToPointerDecay>
+                | | `-DeclRefExpr 0x7ff8d502ee40 <col:14> '_Complex float (float, float)' Function 0x7ff8d502ead0 'foo' '_Complex float (float, float)'
+                | |-ImplicitCastExpr 0x7ff8d502ef28 <col:19> 'float' <IntegralToFloating>
+                | | `-IntegerLiteral 0x7ff8d502ee68 <col:19> 'int' 0
+                | `-ImplicitCastExpr 0x7ff8d502ef40 <col:22> 'float' <LValueToRValue>
+                |   `-DeclRefExpr 0x7ff8d502ee88 <col:22> 'float' lvalue Var 0x7ff8d502ecc0 'w' 'float'
+                `-BinaryOperator 0x7ff8d502f088 <col:27, col:40> '_Complex float' '/'
+                  |-CallExpr 0x7ff8d502efe0 <col:27, col:36> '_Complex float'
+                  | |-ImplicitCastExpr 0x7ff8d502efc8 <col:27> '_Complex float (*)(float, float)' <FunctionToPointerDecay>
+                  | | `-DeclRefExpr 0x7ff8d502ef58 <col:27> '_Complex float (float, float)' Function 0x7ff8d502ead0 'foo' '_Complex float (float, float)'
+                  | |-ImplicitCastExpr 0x7ff8d502f018 <col:32> 'float' <IntegralToFloating>
+                  | | `-IntegerLiteral 0x7ff8d502ef80 <col:32> 'int' 1
+                  | `-ImplicitCastExpr 0x7ff8d502f030 <col:35> 'float' <LValueToRValue>
+                  |   `-DeclRefExpr 0x7ff8d502efa0 <col:35> 'float' lvalue Var 0x7ff8d502ecc0 'w' 'float'
+                  `-ImplicitCastExpr 0x7ff8d502f070 <col:40> 'float' <LValueToRValue>
+                    `-DeclRefExpr 0x7ff8d502f048 <col:40> 'float' lvalue Var 0x7ff8d502ecc0 'w' 'float'

@@ -1,0 +1,46 @@
+../Data/C2AST/pr25559.c:5:5: error: vector size not an integral multiple of component size
+int vs (-1) a;                   
+    ^   ~~
+../Data/C2AST/pr25559.c:4:30: note: expanded from macro 'vs'
+#define vs(n) __attribute__((vector_size (n)))
+                             ^            ~
+../Data/C2AST/pr25559.c:6:5: error: zero vector size
+int vs (0) b;                    
+    ^   ~
+../Data/C2AST/pr25559.c:4:30: note: expanded from macro 'vs'
+#define vs(n) __attribute__((vector_size (n)))
+                             ^            ~
+../Data/C2AST/pr25559.c:7:5: error: vector size not an integral multiple of component size
+int vs (1) c;                    
+    ^   ~
+../Data/C2AST/pr25559.c:4:30: note: expanded from macro 'vs'
+#define vs(n) __attribute__((vector_size (n)))
+                             ^            ~
+../Data/C2AST/pr25559.c:8:5: error: vector size not an integral multiple of component size
+int vs (sizeof (int) / 2) d;     
+    ^   ~~~~~~~~~~~~~~~~
+../Data/C2AST/pr25559.c:4:30: note: expanded from macro 'vs'
+#define vs(n) __attribute__((vector_size (n)))
+                             ^            ~
+4 errors generated.
+TranslationUnitDecl 0x7f9c7601aee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c7601b460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9c7601b180 '__int128'
+|-TypedefDecl 0x7f9c7601b4d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9c7601b1a0 'unsigned __int128'
+|-TypedefDecl 0x7f9c7601b7a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9c7601b5b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9c7601b528 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9c7601b840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9c7601b800 'char *'
+|   `-BuiltinType 0x7f9c7601af80 'char'
+|-TypedefDecl 0x7f9c7601bb08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9c7601bab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9c7601b920 'struct __va_list_tag'
+|     `-Record 0x7f9c7601b898 '__va_list_tag'
+|-VarDecl 0x7f9c7605da00 <../Data/C2AST/pr25559.c:5:1, col:13> col:13 a 'int'
+|-VarDecl 0x7f9c7605dad8 <line:6:1, col:12> col:12 b 'int'
+|-VarDecl 0x7f9c7605db70 <line:7:1, col:12> col:12 c 'int'
+|-VarDecl 0x7f9c7605dc80 <line:8:1, col:27> col:27 d 'int'
+|-VarDecl 0x7f9c7605dd58 <line:9:1, col:23> col:23 e '__attribute__((__vector_size__(1 * sizeof(int)))) int'
+`-VarDecl 0x7f9c7605de88 <line:10:1, col:27> col:27 f '__attribute__((__vector_size__(2 * sizeof(int)))) int'

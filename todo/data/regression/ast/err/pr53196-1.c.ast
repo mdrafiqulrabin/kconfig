@@ -1,0 +1,45 @@
+../Data/C2AST/pr53196-1.c:11:18: error: variable has incomplete type 'struct foo_typo'
+  struct foo f = (struct foo_typo) { };  
+                 ^~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr53196-1.c:11:26: note: forward declaration of 'struct foo_typo'
+  struct foo f = (struct foo_typo) { };  
+                         ^
+1 error generated.
+TranslationUnitDecl 0x7fbfbc01dce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbfbc01e260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbfbc01df80 '__int128'
+|-TypedefDecl 0x7fbfbc01e2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbfbc01dfa0 'unsigned __int128'
+|-TypedefDecl 0x7fbfbc01e5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbfbc01e3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbfbc01e328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbfbc01e640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbfbc01e600 'char *'
+|   `-BuiltinType 0x7fbfbc01dd80 'char'
+|-TypedefDecl 0x7fbfbc01e908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbfbc01e8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbfbc01e720 'struct __va_list_tag'
+|     `-Record 0x7fbfbc01e698 '__va_list_tag'
+|-FunctionDecl 0x7fbfbb814468 <../Data/C2AST/pr53196-1.c:5:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fbfbb814508 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fbfbb814570 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fbfbb8145c8 prev 0x7fbfbb814468 <col:1, col:37> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fbfbc01e978 <col:20, col:31> col:32 'const char *'
+| `-FormatAttr 0x7fbfbb8146a8 <col:12> Inherited printf 1 2
+|-RecordDecl 0x7fbfbb8146c8 <line:6:1, col:21> col:8 struct foo definition
+| `-FieldDecl 0x7fbfbb814788 <col:14, col:18> col:18 referenced i 'int'
+`-FunctionDecl 0x7fbfbb814820 <line:8:1, line:14:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7fbfbb8150a8 <line:10:1, line:14:1>
+    |-DeclStmt 0x7fbfbb814ea0 <line:11:3, col:39>
+    | `-VarDecl 0x7fbfbb814950 <col:3, col:14> col:14 used f 'struct foo':'struct foo'
+    |-CallExpr 0x7fbfbb814ff0 <line:12:3, col:22> 'int'
+    | |-ImplicitCastExpr 0x7fbfbb814fd8 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbfbb814eb8 <col:3> 'int (const char *, ...)' Function 0x7fbfbb8145c8 'printf' 'int (const char *, ...)'
+    | |-ImplicitCastExpr 0x7fbfbb815040 <col:11> 'const char *' <BitCast>
+    | | `-ImplicitCastExpr 0x7fbfbb815028 <col:11> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x7fbfbb814f18 <col:11> 'char [4]' lvalue "%d\n"
+    | `-ImplicitCastExpr 0x7fbfbb815058 <col:19, col:21> 'int' <LValueToRValue>
+    |   `-MemberExpr 0x7fbfbb814f70 <col:19, col:21> 'int' lvalue .i 0x7fbfbb814788
+    |     `-DeclRefExpr 0x7fbfbb814f48 <col:19> 'struct foo':'struct foo' lvalue Var 0x7fbfbb814950 'f' 'struct foo':'struct foo'
+    `-ReturnStmt 0x7fbfbb815090 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fbfbb815070 <col:10> 'int' 0

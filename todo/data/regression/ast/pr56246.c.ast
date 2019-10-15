@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fc12302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc123814260 <../Data/C2AST/pr56246.c:5:1, line:7:1> line:5:6 NoBarrier_AtomicExchange 'void (long long *)'
+| |-ParmVarDecl 0x7fc12302c9a0 <col:32, col:43> col:43 used ptr 'long long *'
+| `-CompoundStmt 0x7fc1238148b0 <col:48, line:7:1>
+|   `-WhileStmt 0x7fc123814890 <line:6:3, col:51>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fc1238144f0 <col:10, col:48> 'long long'
+|     | |-ImplicitCastExpr 0x7fc123814868 <col:10> 'long long (*)(volatile long long *, long long, long long, ...)' <BuiltinFnToFnPtr>
+|     | | `-DeclRefExpr 0x7fc123814818 <col:10> '<builtin fn type>' Function 0x7fc1238145c8 '__sync_val_compare_and_swap_8' 'long long (volatile long long *, long long, long long, ...)'
+|     | |-ImplicitCastExpr 0x7fc123814530 <col:39> 'long long *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fc123814440 <col:39> 'long long *' lvalue ParmVar 0x7fc12302c9a0 'ptr' 'long long *'
+|     | |-ImplicitCastExpr 0x7fc1238147e8 <col:44> 'long long' <IntegralCast>
+|     | | `-IntegerLiteral 0x7fc123814468 <col:44> 'int' 1
+|     | `-ImplicitCastExpr 0x7fc123814800 <col:47> 'long long' <IntegralCast>
+|     |   `-IntegerLiteral 0x7fc123814488 <col:47> 'int' 0
+|     `-NullStmt 0x7fc123814880 <col:51>
+|-FunctionDecl 0x7fc123814378 <col:10> col:10 implicit used __sync_val_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7fc1238145c8 <col:10> col:10 implicit __sync_val_compare_and_swap_8 'long long (volatile long long *, long long, long long, ...)' extern
+  |-ParmVarDecl 0x7fc123814668 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+  |-ParmVarDecl 0x7fc1238146c8 <<invalid sloc>> <invalid sloc> 'long long'
+  |-ParmVarDecl 0x7fc123814728 <<invalid sloc>> <invalid sloc> 'long long'
+  `-NoThrowAttr 0x7fc1238147a0 <col:10> Implicit

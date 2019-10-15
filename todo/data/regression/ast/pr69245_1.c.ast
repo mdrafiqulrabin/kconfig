@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fc0398154e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc039816178 <../Data/C2AST/pr69245_1.c:5:1, col:6> col:6 a 'long'
+|-FunctionDecl 0x7fc039817e88 <line:6:1, line:9:1> line:7:1 fn1 'void ()' static
+| `-CompoundStmt 0x7fc039817f28 <line:8:1, line:9:1>
+`-FunctionDecl 0x7fc039818018 <line:12:1, line:16:1> line:13:1 fn2 'float (float)'
+  |-ParmVarDecl 0x7fc039817f50 <col:6, col:12> col:12 used a 'float'
+  `-CompoundStmt 0x7fc039818190 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7fc039818178 <line:15:3, col:14>
+      `-ImplicitCastExpr 0x7fc039818160 <col:10, col:14> 'float' <FloatingCast>
+        `-BinaryOperator 0x7fc039818138 <col:10, col:14> 'double' '+'
+          |-ImplicitCastExpr 0x7fc039818120 <col:10> 'double' <FloatingCast>
+          | `-ImplicitCastExpr 0x7fc039818108 <col:10> 'float' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc0398180c0 <col:10> 'float' lvalue ParmVar 0x7fc039817f50 'a' 'float'
+          `-FloatingLiteral 0x7fc0398180e8 <col:14> 'double' 2.000000e+00

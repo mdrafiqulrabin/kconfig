@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fd83c01b0e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd83c01bd70 <../Data/C2AST/pr59569-1.c:2:1, col:13> col:13 used c 'char' extern
+`-FunctionDecl 0x7fd83b8241d0 <line:4:1, line:9:1> line:5:1 foo 'void (int, char **)'
+  |-ParmVarDecl 0x7fd83b824058 <col:6, col:10> col:10 used i 'int'
+  |-ParmVarDecl 0x7fd83b824100 <col:13, col:20> col:20 used j 'char **'
+  `-CompoundStmt 0x7fd83b824400 <line:6:1, line:9:1>
+    `-WhileStmt 0x7fd83b8243e0 <line:7:3, line:8:15>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd83b8242a8 <line:7:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd83b824280 <col:10> 'int' lvalue ParmVar 0x7fd83b824058 'i' 'int'
+      `-BinaryOperator 0x7fd83b8243b8 <line:8:5, col:15> 'char *' '='
+        |-ArraySubscriptExpr 0x7fd83b824348 <col:5, col:10> 'char *' lvalue
+        | |-ImplicitCastExpr 0x7fd83b824330 <col:5> 'char **' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fd83b8242c0 <col:5> 'char **' lvalue ParmVar 0x7fd83b824100 'j' 'char **'
+        | `-UnaryOperator 0x7fd83b824310 <col:7, col:9> 'int' prefix '--'
+        |   `-DeclRefExpr 0x7fd83b8242e8 <col:9> 'int' lvalue ParmVar 0x7fd83b824058 'i' 'int'
+        `-UnaryOperator 0x7fd83b824398 <col:14, col:15> 'char *' prefix '&'
+          `-DeclRefExpr 0x7fd83b824370 <col:15> 'char' lvalue Var 0x7fd83c01bd70 'c' 'char'

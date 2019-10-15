@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f94740174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f94738864e0 <../Data/C2AST/pr69904.c:10:1, col:13> col:13 used foo 'atomic_uint':'_Atomic(unsigned int)'
+|-VarDecl 0x7f9473886550 <line:11:1, col:13> col:13 used bar 'atomic_uint':'_Atomic(unsigned int)'
+|-VarDecl 0x7f94738865c8 <line:12:1, col:5> col:5 used glob 'int'
+|-FunctionDecl 0x7f94738866f8 <line:14:1, line:19:1> line:15:1 main 'int (void)'
+| `-CompoundStmt 0x7f9473886c08 <line:16:1, line:19:1>
+|   |-BinaryOperator 0x7f9473886b88 <line:17:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:140:165> 'int' '='
+|   | |-DeclRefExpr 0x7f94738867c8 <../Data/C2AST/pr69904.c:17:3> 'int' lvalue Var 0x7f94738865c8 'glob' 'int'
+|   | `-ImplicitCastExpr 0x7f9473886b70 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:140:67, col:165> 'int' <IntegralCast>
+|   |   `-AtomicExpr 0x7f9473886b18 <col:67, col:165> '_Bool'
+|   |     |-UnaryOperator 0x7f9473886968 <../Data/C2AST/pr69904.c:17:42, col:43> 'atomic_uint *' prefix '&'
+|   |     | `-DeclRefExpr 0x7f94738868e0 <col:43> 'atomic_uint':'_Atomic(unsigned int)' lvalue Var 0x7f94738864e0 'foo' 'atomic_uint':'_Atomic(unsigned int)'
+|   |     |-IntegerLiteral 0x7f94738869f0 <<built-in>:16:26> 'int' 5
+|   |     |-ImplicitCastExpr 0x7f9473886ae8 <../Data/C2AST/pr69904.c:17:48, col:49> 'unsigned int *' <BitCast>
+|   |     | `-UnaryOperator 0x7f94738869b0 <col:48, col:49> 'atomic_uint *' prefix '&'
+|   |     |   `-DeclRefExpr 0x7f9473886988 <col:49> 'atomic_uint':'_Atomic(unsigned int)' lvalue Var 0x7f9473886550 'bar' 'atomic_uint':'_Atomic(unsigned int)'
+|   |     |-IntegerLiteral 0x7f9473886a10 <<built-in>:16:26> 'int' 5
+|   |     `-ImplicitCastExpr 0x7f9473886b00 <../Data/C2AST/pr69904.c:17:54> 'unsigned int' <IntegralCast>
+|   |       `-IntegerLiteral 0x7f94738869d0 <col:54> 'int' 0
+|   `-ReturnStmt 0x7f9473886bf0 <line:18:3, col:10>
+|     `-ImplicitCastExpr 0x7f9473886bd8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9473886bb0 <col:10> 'int' lvalue Var 0x7f94738865c8 'glob' 'int'
+`-FunctionDecl 0x7f9473886818 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdatomic.h:140:67> col:67 implicit used __c11_atomic_compare_exchange_strong 'void ()' extern

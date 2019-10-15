@@ -1,0 +1,40 @@
+TranslationUnitDecl 0x7fb9bd8216e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb9be014268 <../Data/C2AST/pr39666-1.c:5:1, line:22:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fb9bd822378 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fb9be014820 <line:7:1, line:22:1>
+    |-DeclStmt 0x7fb9be0143c8 <line:8:3, col:8>
+    | `-VarDecl 0x7fb9be014368 <col:3, col:7> col:7 used j 'int'
+    |-SwitchStmt 0x7fb9be014420 <line:9:3, line:20:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb9be014408 <line:9:11> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb9be0143e0 <col:11> 'int' lvalue ParmVar 0x7fb9bd822378 'i' 'int'
+    | `-CompoundStmt 0x7fb9be014788 <line:10:5, line:20:5>
+    |   |-CaseStmt 0x7fb9be014518 <line:11:5, line:12:11>
+    |   | |-BinaryOperator 0x7fb9be0144b0 <line:11:10, col:25> 'int' '-'
+    |   | | |-UnaryOperator 0x7fb9be014470 <col:10, <built-in>:38:21> 'int' prefix '-'
+    |   | | | `-IntegerLiteral 0x7fb9be014450 <col:21> 'int' 2147483647
+    |   | | `-IntegerLiteral 0x7fb9be014490 <../Data/C2AST/pr39666-1.c:11:25> 'int' 1
+    |   | |-UnaryOperator 0x7fb9be0144f8 <col:31, col:32> 'int' prefix '-'
+    |   | | `-IntegerLiteral 0x7fb9be0144d8 <col:32> 'int' 1
+    |   | `-BinaryOperator 0x7fb9be014598 <line:12:7, col:11> 'int' '='
+    |   |   |-DeclRefExpr 0x7fb9be014550 <col:7> 'int' lvalue Var 0x7fb9be014368 'j' 'int'
+    |   |   `-IntegerLiteral 0x7fb9be014578 <col:11> 'int' 6
+    |   |-BreakStmt 0x7fb9be0145c0 <line:13:7>
+    |   |-CaseStmt 0x7fb9be0145e8 <line:14:5, line:15:11>
+    |   | |-IntegerLiteral 0x7fb9be0145c8 <line:14:10> 'int' 0
+    |   | |-<<<NULL>>>
+    |   | `-BinaryOperator 0x7fb9be014668 <line:15:7, col:11> 'int' '='
+    |   |   |-DeclRefExpr 0x7fb9be014620 <col:7> 'int' lvalue Var 0x7fb9be014368 'j' 'int'
+    |   |   `-IntegerLiteral 0x7fb9be014648 <col:11> 'int' 5
+    |   |-BreakStmt 0x7fb9be014690 <line:16:7>
+    |   |-CaseStmt 0x7fb9be0146d8 <line:17:5, line:18:11>
+    |   | |-IntegerLiteral 0x7fb9be014698 <line:17:10> 'int' 1
+    |   | |-IntegerLiteral 0x7fb9be0146b8 <<built-in>:38:21> 'int' 2147483647
+    |   | `-BinaryOperator 0x7fb9be014758 <../Data/C2AST/pr39666-1.c:18:7, col:11> 'int' '='
+    |   |   |-DeclRefExpr 0x7fb9be014710 <col:7> 'int' lvalue Var 0x7fb9be014368 'j' 'int'
+    |   |   `-IntegerLiteral 0x7fb9be014738 <col:11> 'int' 4
+    |   `-BreakStmt 0x7fb9be014780 <line:19:7>
+    `-ReturnStmt 0x7fb9be014808 <line:21:3, col:10>
+      `-ImplicitCastExpr 0x7fb9be0147f0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb9be0147c8 <col:10> 'int' lvalue Var 0x7fb9be014368 'j' 'int'

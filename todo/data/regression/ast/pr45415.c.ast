@@ -1,0 +1,433 @@
+TranslationUnitDecl 0x7fdb010174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb01018178 <../Data/C2AST/pr45415.c:4:1, col:27> col:27 referenced st 'unsigned long'
+| `-BuiltinType 0x7fdb010176a0 'unsigned long'
+|-TypedefDecl 0x7fdb01800400 <line:5:1, col:28> col:28 referenced dt 'unsigned long long'
+| `-BuiltinType 0x7fdb010176c0 'unsigned long long'
+|-RecordDecl 0x7fdb01800458 <line:6:9, line:14:1> line:6:9 union definition
+| |-FieldDecl 0x7fdb01800530 <line:8:3, col:6> col:6 referenced d 'dt':'unsigned long long'
+| |-RecordDecl 0x7fdb01800578 <line:9:3, line:12:3> line:9:3 struct definition
+| | |-FieldDecl 0x7fdb01800650 <line:11:5, col:8> col:8 referenced h 'st':'unsigned long'
+| | `-FieldDecl 0x7fdb018006a8 <col:5, col:11> col:11 referenced l 'st':'unsigned long'
+| `-FieldDecl 0x7fdb01800740 <line:9:3, line:13:3> col:3 referenced s 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)'
+|-TypedefDecl 0x7fdb018007e0 <line:6:1, line:14:3> col:3 referenced t_be 'union t_be':'t_be'
+| `-ElaboratedType 0x7fdb01800790 'union t_be' sugar
+|   `-RecordType 0x7fdb018004e0 't_be'
+|     `-Record 0x7fdb01800458 ''
+|-RecordDecl 0x7fdb01800850 <line:16:9, line:24:1> line:16:9 union definition
+| |-FieldDecl 0x7fdb01800910 <line:18:3, col:6> col:6 referenced d 'dt':'unsigned long long'
+| |-RecordDecl 0x7fdb01800958 <line:19:3, line:22:3> line:19:3 struct definition
+| | |-FieldDecl 0x7fdb01800a10 <line:21:5, col:8> col:8 referenced l 'st':'unsigned long'
+| | `-FieldDecl 0x7fdb01800a68 <col:5, col:11> col:11 referenced h 'st':'unsigned long'
+| `-FieldDecl 0x7fdb01800b00 <line:19:3, line:23:3> col:3 referenced s 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)'
+|-TypedefDecl 0x7fdb01800ba0 <line:16:1, line:24:3> col:3 referenced t_le 'union t_le':'t_le'
+| `-ElaboratedType 0x7fdb01800b50 'union t_le' sugar
+|   `-RecordType 0x7fdb018008e0 't_le'
+|     `-Record 0x7fdb01800850 ''
+|-FunctionDecl 0x7fdb01800dc8 <line:26:18, line:48:26> line:51:4 used f_le 'int (t_le, t_le)'
+| |-ParmVarDecl 0x7fdb01800c40 <col:10, line:28:6> col:6 used afh 't_le':'t_le'
+| |-ParmVarDecl 0x7fdb01800cb0 <line:51:10, line:28:13> col:13 used bfh 't_le':'t_le'
+| `-CompoundStmt 0x7fdb01808ba0 <col:18, line:48:26>
+|   |-DeclStmt 0x7fdb01800f28 <line:51:10, line:30:7>
+|   | `-VarDecl 0x7fdb01800ec8 <line:51:10, line:30:5> col:5 used hh 't_le':'t_le'
+|   |-DeclStmt 0x7fdb01801128 <line:51:10, line:31:18>
+|   | |-VarDecl 0x7fdb01800f50 <line:51:10, line:31:5> col:5 used hp 't_le':'t_le'
+|   | |-VarDecl 0x7fdb01800fc0 <line:51:10, line:31:9> col:9 used lp 't_le':'t_le'
+|   | |-VarDecl 0x7fdb01801030 <line:51:10, line:31:13> col:13 used dp 't_le':'t_le'
+|   | `-VarDecl 0x7fdb018010a0 <line:51:10, line:31:17> col:17 used m 't_le':'t_le'
+|   |-DeclStmt 0x7fdb01801238 <line:32:3, col:12>
+|   | |-VarDecl 0x7fdb01801150 <col:3, col:6> col:6 used ad 'st':'unsigned long'
+|   | `-VarDecl 0x7fdb018011c0 <col:3, col:10> col:10 used bd 'st':'unsigned long'
+|   |-DeclStmt 0x7fdb018012c8 <line:33:3, col:8>
+|   | `-VarDecl 0x7fdb01801268 <col:3, col:7> col:7 used s 'int'
+|   |-BinaryOperator 0x7fdb01801328 <line:34:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fdb018012e0 <col:3> 'int' lvalue Var 0x7fdb01801268 's' 'int'
+|   | `-IntegerLiteral 0x7fdb01801308 <col:7> 'int' 0
+|   |-BinaryOperator 0x7fdb01801528 <line:35:3, col:24> 'st':'unsigned long' '='
+|   | |-DeclRefExpr 0x7fdb01801350 <col:3> 'st':'unsigned long' lvalue Var 0x7fdb01801150 'ad' 'st':'unsigned long'
+|   | `-BinaryOperator 0x7fdb01801500 <col:8, col:24> 'unsigned long' '-'
+|   |   |-ImplicitCastExpr 0x7fdb018014d0 <col:8, col:14> 'st':'unsigned long' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fdb01801400 <col:8, col:14> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |   |   `-MemberExpr 0x7fdb018013a0 <col:8, col:12> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   |     `-DeclRefExpr 0x7fdb01801378 <col:8> 't_le':'t_le' lvalue ParmVar 0x7fdb01800c40 'afh' 't_le':'t_le'
+|   |   `-ImplicitCastExpr 0x7fdb018014e8 <col:18, col:24> 'st':'unsigned long' <LValueToRValue>
+|   |     `-MemberExpr 0x7fdb01801498 <col:18, col:24> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |       `-MemberExpr 0x7fdb01801460 <col:18, col:22> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |         `-DeclRefExpr 0x7fdb01801438 <col:18> 't_le':'t_le' lvalue ParmVar 0x7fdb01800c40 'afh' 't_le':'t_le'
+|   |-BinaryOperator 0x7fdb018017a0 <line:36:3, col:24> 'st':'unsigned long' '='
+|   | |-DeclRefExpr 0x7fdb018015f0 <col:3> 'st':'unsigned long' lvalue Var 0x7fdb018011c0 'bd' 'st':'unsigned long'
+|   | `-BinaryOperator 0x7fdb01801778 <col:8, col:24> 'unsigned long' '-'
+|   |   |-ImplicitCastExpr 0x7fdb01801748 <col:8, col:14> 'st':'unsigned long' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fdb01801678 <col:8, col:14> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |   |   `-MemberExpr 0x7fdb01801640 <col:8, col:12> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   |     `-DeclRefExpr 0x7fdb01801618 <col:8> 't_le':'t_le' lvalue ParmVar 0x7fdb01800cb0 'bfh' 't_le':'t_le'
+|   |   `-ImplicitCastExpr 0x7fdb01801760 <col:18, col:24> 'st':'unsigned long' <LValueToRValue>
+|   |     `-MemberExpr 0x7fdb01801710 <col:18, col:24> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |       `-MemberExpr 0x7fdb018016d8 <col:18, col:22> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |         `-DeclRefExpr 0x7fdb018016b0 <col:18> 't_le':'t_le' lvalue ParmVar 0x7fdb01800cb0 'bfh' 't_le':'t_le'
+|   |-IfStmt 0x7fdb01801a60 <line:37:3, line:41:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdb018018b8 <line:37:7, col:18> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fdb01801888 <col:7> 'st':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fdb018017c8 <col:7> 'st':'unsigned long' lvalue Var 0x7fdb018011c0 'bd' 'st':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fdb018018a0 <col:12, col:18> 'st':'unsigned long' <LValueToRValue>
+|   | |   `-MemberExpr 0x7fdb01801850 <col:12, col:18> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   | |     `-MemberExpr 0x7fdb01801818 <col:12, col:16> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   | |       `-DeclRefExpr 0x7fdb018017f0 <col:12> 't_le':'t_le' lvalue ParmVar 0x7fdb01800cb0 'bfh' 't_le':'t_le'
+|   | |-CompoundStmt 0x7fdb01801a40 <line:38:5, line:41:5>
+|   | | |-BinaryOperator 0x7fdb01801968 <line:39:7, col:13> 'st':'unsigned long' '='
+|   | | | |-DeclRefExpr 0x7fdb018018e0 <col:7> 'st':'unsigned long' lvalue Var 0x7fdb018011c0 'bd' 'st':'unsigned long'
+|   | | | `-UnaryOperator 0x7fdb01801948 <col:12, col:13> 'st':'unsigned long' prefix '-'
+|   | | |   `-ImplicitCastExpr 0x7fdb01801930 <col:13> 'st':'unsigned long' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fdb01801908 <col:13> 'st':'unsigned long' lvalue Var 0x7fdb018011c0 'bd' 'st':'unsigned long'
+|   | | `-BinaryOperator 0x7fdb01801a18 <line:40:7, col:12> 'int' '='
+|   | |   |-DeclRefExpr 0x7fdb01801990 <col:7> 'int' lvalue Var 0x7fdb01801268 's' 'int'
+|   | |   `-UnaryOperator 0x7fdb018019f8 <col:11, col:12> 'int' prefix '~'
+|   | |     `-ImplicitCastExpr 0x7fdb018019e0 <col:12> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fdb018019b8 <col:12> 'int' lvalue Var 0x7fdb01801268 's' 'int'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fdb01801cd0 <line:42:3, col:31> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb01801ac0 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   | | `-DeclRefExpr 0x7fdb01801a98 <col:3> 't_le':'t_le' lvalue Var 0x7fdb01800fc0 'lp' 't_le':'t_le'
+|   | `-BinaryOperator 0x7fdb01801ca8 <col:10, col:31> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fdb01801bb8 <col:10, col:21> 'dt':'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fdb01801ba0 <col:15, col:21> 'st':'unsigned long' <LValueToRValue>
+|   |   |   `-MemberExpr 0x7fdb01801b58 <col:15, col:21> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |   |     `-MemberExpr 0x7fdb01801b20 <col:15, col:19> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   |       `-DeclRefExpr 0x7fdb01801af8 <col:15> 't_le':'t_le' lvalue ParmVar 0x7fdb01800c40 'afh' 't_le':'t_le'
+|   |   `-ImplicitCastExpr 0x7fdb01801c90 <col:25, col:31> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01801c78 <col:25, col:31> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb01801c40 <col:25, col:31> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |         `-MemberExpr 0x7fdb01801c08 <col:25, col:29> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |           `-DeclRefExpr 0x7fdb01801be0 <col:25> 't_le':'t_le' lvalue ParmVar 0x7fdb01800cb0 'bfh' 't_le':'t_le'
+|   |-BinaryOperator 0x7fdb01801f30 <line:43:3, col:31> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb01801d20 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   | | `-DeclRefExpr 0x7fdb01801cf8 <col:3> 't_le':'t_le' lvalue Var 0x7fdb01800f50 'hp' 't_le':'t_le'
+|   | `-BinaryOperator 0x7fdb01801f08 <col:10, col:31> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fdb01801e18 <col:10, col:21> 'dt':'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fdb01801e00 <col:15, col:21> 'st':'unsigned long' <LValueToRValue>
+|   |   |   `-MemberExpr 0x7fdb01801db8 <col:15, col:21> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |   |     `-MemberExpr 0x7fdb01801d80 <col:15, col:19> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   |       `-DeclRefExpr 0x7fdb01801d58 <col:15> 't_le':'t_le' lvalue ParmVar 0x7fdb01800c40 'afh' 't_le':'t_le'
+|   |   `-ImplicitCastExpr 0x7fdb01801ef0 <col:25, col:31> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01801ed8 <col:25, col:31> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb01801ea0 <col:25, col:31> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |         `-MemberExpr 0x7fdb01801e68 <col:25, col:29> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |           `-DeclRefExpr 0x7fdb01801e40 <col:25> 't_le':'t_le' lvalue ParmVar 0x7fdb01800cb0 'bfh' 't_le':'t_le'
+|   |-BinaryOperator 0x7fdb018020b0 <line:44:3, col:19> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb01801f80 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   | | `-DeclRefExpr 0x7fdb01801f58 <col:3> 't_le':'t_le' lvalue Var 0x7fdb01801030 'dp' 't_le':'t_le'
+|   | `-BinaryOperator 0x7fdb01802088 <col:10, col:19> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fdb01802008 <col:10, col:15> 'dt':'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fdb01801ff0 <col:15> 'st':'unsigned long' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fdb01801fb8 <col:15> 'st':'unsigned long' lvalue Var 0x7fdb01801150 'ad' 'st':'unsigned long'
+|   |   `-ImplicitCastExpr 0x7fdb01802070 <col:19> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01802058 <col:19> 'st':'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fdb01802030 <col:19> 'st':'unsigned long' lvalue Var 0x7fdb018011c0 'bd' 'st':'unsigned long'
+|   |-CompoundAssignOperator 0x7fdb01802190 <line:45:3, col:11> 'dt':'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-MemberExpr 0x7fdb01802100 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   | | `-DeclRefExpr 0x7fdb018020d8 <col:3> 't_le':'t_le' lvalue Var 0x7fdb01801030 'dp' 't_le':'t_le'
+|   | `-ImplicitCastExpr 0x7fdb01802178 <col:11> 'unsigned long long' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fdb01802160 <col:11> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fdb01802138 <col:11> 'int' lvalue Var 0x7fdb01801268 's' 'int'
+|   |-BinaryOperator 0x7fdb01808580 <line:46:3, col:40> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb018021f0 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   | | `-DeclRefExpr 0x7fdb018021c8 <col:3> 't_le':'t_le' lvalue Var 0x7fdb01800ec8 'hh' 't_le':'t_le'
+|   | `-BinaryOperator 0x7fdb01808558 <col:10, col:40> 'unsigned long long' '+'
+|   |   |-BinaryOperator 0x7fdb01808468 <col:10, col:31> 'unsigned long long' '+'
+|   |   | |-BinaryOperator 0x7fdb01802368 <col:10, col:22> 'unsigned long long' '+'
+|   |   | | |-ImplicitCastExpr 0x7fdb01802320 <col:10, col:13> 'dt':'unsigned long long' <LValueToRValue>
+|   |   | | | `-MemberExpr 0x7fdb01802250 <col:10, col:13> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   |   | | |   `-DeclRefExpr 0x7fdb01802228 <col:10> 't_le':'t_le' lvalue Var 0x7fdb01800f50 'hp' 't_le':'t_le'
+|   |   | | `-ImplicitCastExpr 0x7fdb01802350 <col:17, col:22> 'unsigned long long' <IntegralCast>
+|   |   | |   `-ImplicitCastExpr 0x7fdb01802338 <col:17, col:22> 'st':'unsigned long' <LValueToRValue>
+|   |   | |     `-MemberExpr 0x7fdb018022e8 <col:17, col:22> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |   | |       `-MemberExpr 0x7fdb018022b0 <col:17, col:20> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   | |         `-DeclRefExpr 0x7fdb01802288 <col:17> 't_le':'t_le' lvalue Var 0x7fdb01800f50 'hp' 't_le':'t_le'
+|   |   | `-ImplicitCastExpr 0x7fdb01808450 <col:26, col:31> 'unsigned long long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb01808438 <col:26, col:31> 'st':'unsigned long' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7fdb01808400 <col:26, col:31> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |   |       `-MemberExpr 0x7fdb018023b8 <col:26, col:29> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   |         `-DeclRefExpr 0x7fdb01802390 <col:26> 't_le':'t_le' lvalue Var 0x7fdb01800fc0 'lp' 't_le':'t_le'
+|   |   `-ImplicitCastExpr 0x7fdb01808540 <col:35, col:40> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01808528 <col:35, col:40> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb018084f0 <col:35, col:40> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |         `-MemberExpr 0x7fdb018084b8 <col:35, col:38> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |           `-DeclRefExpr 0x7fdb01808490 <col:35> 't_le':'t_le' lvalue Var 0x7fdb01801030 'dp' 't_le':'t_le'
+|   |-BinaryOperator 0x7fdb018089c0 <line:47:3, col:46> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb018085d0 <col:3, col:5> 'dt':'unsigned long long' lvalue .d 0x7fdb01800910
+|   | | `-DeclRefExpr 0x7fdb018085a8 <col:3> 't_le':'t_le' lvalue Var 0x7fdb018010a0 'm' 't_le':'t_le'
+|   | `-BinaryOperator 0x7fdb01808998 <col:9, col:46> 'unsigned long long' '+'
+|   |   |-BinaryOperator 0x7fdb018088a8 <col:9, col:37> 'unsigned long long' '+'
+|   |   | |-BinaryOperator 0x7fdb018087b8 <col:9, col:28> 'unsigned long long' '+'
+|   |   | | |-CStyleCastExpr 0x7fdb018086c8 <col:9, col:19> 'dt':'unsigned long long' <IntegralCast>
+|   |   | | | `-ImplicitCastExpr 0x7fdb018086b0 <col:14, col:19> 'st':'unsigned long' <LValueToRValue>
+|   |   | | |   `-MemberExpr 0x7fdb01808668 <col:14, col:19> 'st':'unsigned long' lvalue .h 0x7fdb01800a68
+|   |   | | |     `-MemberExpr 0x7fdb01808630 <col:14, col:17> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   | | |       `-DeclRefExpr 0x7fdb01808608 <col:14> 't_le':'t_le' lvalue Var 0x7fdb01800fc0 'lp' 't_le':'t_le'
+|   |   | | `-ImplicitCastExpr 0x7fdb018087a0 <col:23, col:28> 'unsigned long long' <IntegralCast>
+|   |   | |   `-ImplicitCastExpr 0x7fdb01808788 <col:23, col:28> 'st':'unsigned long' <LValueToRValue>
+|   |   | |     `-MemberExpr 0x7fdb01808750 <col:23, col:28> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |   | |       `-MemberExpr 0x7fdb01808718 <col:23, col:26> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   | |         `-DeclRefExpr 0x7fdb018086f0 <col:23> 't_le':'t_le' lvalue Var 0x7fdb01800f50 'hp' 't_le':'t_le'
+|   |   | `-ImplicitCastExpr 0x7fdb01808890 <col:32, col:37> 'unsigned long long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb01808878 <col:32, col:37> 'st':'unsigned long' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7fdb01808840 <col:32, col:37> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |   |       `-MemberExpr 0x7fdb01808808 <col:32, col:35> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |   |         `-DeclRefExpr 0x7fdb018087e0 <col:32> 't_le':'t_le' lvalue Var 0x7fdb01800fc0 'lp' 't_le':'t_le'
+|   |   `-ImplicitCastExpr 0x7fdb01808980 <col:41, col:46> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01808968 <col:41, col:46> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb01808930 <col:41, col:46> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|   |         `-MemberExpr 0x7fdb018088f8 <col:41, col:44> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|   |           `-DeclRefExpr 0x7fdb018088d0 <col:41> 't_le':'t_le' lvalue Var 0x7fdb01801030 'dp' 't_le':'t_le'
+|   `-ReturnStmt 0x7fdb01808b88 <line:48:3, col:23>
+|     `-ImplicitCastExpr 0x7fdb01808b70 <col:10, col:23> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7fdb01808b48 <col:10, col:23> 'unsigned long' '+'
+|         |-ImplicitCastExpr 0x7fdb01808b18 <col:10, col:15> 'st':'unsigned long' <LValueToRValue>
+|         | `-MemberExpr 0x7fdb01808a48 <col:10, col:15> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|         |   `-MemberExpr 0x7fdb01808a10 <col:10, col:13> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|         |     `-DeclRefExpr 0x7fdb018089e8 <col:10> 't_le':'t_le' lvalue Var 0x7fdb01800ec8 'hh' 't_le':'t_le'
+|         `-ImplicitCastExpr 0x7fdb01808b30 <col:19, col:23> 'st':'unsigned long' <LValueToRValue>
+|           `-MemberExpr 0x7fdb01808ae0 <col:19, col:23> 'st':'unsigned long' lvalue .l 0x7fdb01800a10
+|             `-MemberExpr 0x7fdb01808aa8 <col:19, col:21> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:19:3)':'struct t_le::(anonymous at ../Data/C2AST/pr45415.c:19:3)' lvalue .s 0x7fdb01800b00
+|               `-DeclRefExpr 0x7fdb01808a80 <col:19> 't_le':'t_le' lvalue Var 0x7fdb018010a0 'm' 't_le':'t_le'
+|-FunctionDecl 0x7fdb01808de8 <line:26:18, line:48:26> line:52:4 used f_be 'int (t_be, t_be)'
+| |-ParmVarDecl 0x7fdb01808c60 <col:10, line:28:6> col:6 used afh 't_be':'t_be'
+| |-ParmVarDecl 0x7fdb01808cd0 <line:52:10, line:28:13> col:13 used bfh 't_be':'t_be'
+| `-CompoundStmt 0x7fdb0180ab68 <col:18, line:48:26>
+|   |-DeclStmt 0x7fdb01808f08 <line:52:10, line:30:7>
+|   | `-VarDecl 0x7fdb01808ea8 <line:52:10, line:30:5> col:5 used hh 't_be':'t_be'
+|   |-DeclStmt 0x7fdb01809108 <line:52:10, line:31:18>
+|   | |-VarDecl 0x7fdb01808f30 <line:52:10, line:31:5> col:5 used hp 't_be':'t_be'
+|   | |-VarDecl 0x7fdb01808fa0 <line:52:10, line:31:9> col:9 used lp 't_be':'t_be'
+|   | |-VarDecl 0x7fdb01809010 <line:52:10, line:31:13> col:13 used dp 't_be':'t_be'
+|   | `-VarDecl 0x7fdb01809080 <line:52:10, line:31:17> col:17 used m 't_be':'t_be'
+|   |-DeclStmt 0x7fdb01809218 <line:32:3, col:12>
+|   | |-VarDecl 0x7fdb01809130 <col:3, col:6> col:6 used ad 'st':'unsigned long'
+|   | `-VarDecl 0x7fdb018091a0 <col:3, col:10> col:10 used bd 'st':'unsigned long'
+|   |-DeclStmt 0x7fdb018092a8 <line:33:3, col:8>
+|   | `-VarDecl 0x7fdb01809248 <col:3, col:7> col:7 used s 'int'
+|   |-BinaryOperator 0x7fdb01809308 <line:34:3, col:7> 'int' '='
+|   | |-DeclRefExpr 0x7fdb018092c0 <col:3> 'int' lvalue Var 0x7fdb01809248 's' 'int'
+|   | `-IntegerLiteral 0x7fdb018092e8 <col:7> 'int' 0
+|   |-BinaryOperator 0x7fdb018094f0 <line:35:3, col:24> 'st':'unsigned long' '='
+|   | |-DeclRefExpr 0x7fdb01809330 <col:3> 'st':'unsigned long' lvalue Var 0x7fdb01809130 'ad' 'st':'unsigned long'
+|   | `-BinaryOperator 0x7fdb018094c8 <col:8, col:24> 'unsigned long' '-'
+|   |   |-ImplicitCastExpr 0x7fdb01809498 <col:8, col:14> 'st':'unsigned long' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fdb018093b8 <col:8, col:14> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |   |   `-MemberExpr 0x7fdb01809380 <col:8, col:12> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   |     `-DeclRefExpr 0x7fdb01809358 <col:8> 't_be':'t_be' lvalue ParmVar 0x7fdb01808c60 'afh' 't_be':'t_be'
+|   |   `-ImplicitCastExpr 0x7fdb018094b0 <col:18, col:24> 'st':'unsigned long' <LValueToRValue>
+|   |     `-MemberExpr 0x7fdb01809460 <col:18, col:24> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |       `-MemberExpr 0x7fdb01809428 <col:18, col:22> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |         `-DeclRefExpr 0x7fdb01809400 <col:18> 't_be':'t_be' lvalue ParmVar 0x7fdb01808c60 'afh' 't_be':'t_be'
+|   |-BinaryOperator 0x7fdb01809768 <line:36:3, col:24> 'st':'unsigned long' '='
+|   | |-DeclRefExpr 0x7fdb018095b8 <col:3> 'st':'unsigned long' lvalue Var 0x7fdb018091a0 'bd' 'st':'unsigned long'
+|   | `-BinaryOperator 0x7fdb01809740 <col:8, col:24> 'unsigned long' '-'
+|   |   |-ImplicitCastExpr 0x7fdb01809710 <col:8, col:14> 'st':'unsigned long' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fdb01809640 <col:8, col:14> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |   |   `-MemberExpr 0x7fdb01809608 <col:8, col:12> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   |     `-DeclRefExpr 0x7fdb018095e0 <col:8> 't_be':'t_be' lvalue ParmVar 0x7fdb01808cd0 'bfh' 't_be':'t_be'
+|   |   `-ImplicitCastExpr 0x7fdb01809728 <col:18, col:24> 'st':'unsigned long' <LValueToRValue>
+|   |     `-MemberExpr 0x7fdb018096d8 <col:18, col:24> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |       `-MemberExpr 0x7fdb018096a0 <col:18, col:22> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |         `-DeclRefExpr 0x7fdb01809678 <col:18> 't_be':'t_be' lvalue ParmVar 0x7fdb01808cd0 'bfh' 't_be':'t_be'
+|   |-IfStmt 0x7fdb01809a28 <line:37:3, line:41:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdb01809880 <line:37:7, col:18> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7fdb01809850 <col:7> 'st':'unsigned long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fdb01809790 <col:7> 'st':'unsigned long' lvalue Var 0x7fdb018091a0 'bd' 'st':'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fdb01809868 <col:12, col:18> 'st':'unsigned long' <LValueToRValue>
+|   | |   `-MemberExpr 0x7fdb01809818 <col:12, col:18> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   | |     `-MemberExpr 0x7fdb018097e0 <col:12, col:16> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   | |       `-DeclRefExpr 0x7fdb018097b8 <col:12> 't_be':'t_be' lvalue ParmVar 0x7fdb01808cd0 'bfh' 't_be':'t_be'
+|   | |-CompoundStmt 0x7fdb01809a08 <line:38:5, line:41:5>
+|   | | |-BinaryOperator 0x7fdb01809930 <line:39:7, col:13> 'st':'unsigned long' '='
+|   | | | |-DeclRefExpr 0x7fdb018098a8 <col:7> 'st':'unsigned long' lvalue Var 0x7fdb018091a0 'bd' 'st':'unsigned long'
+|   | | | `-UnaryOperator 0x7fdb01809910 <col:12, col:13> 'st':'unsigned long' prefix '-'
+|   | | |   `-ImplicitCastExpr 0x7fdb018098f8 <col:13> 'st':'unsigned long' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fdb018098d0 <col:13> 'st':'unsigned long' lvalue Var 0x7fdb018091a0 'bd' 'st':'unsigned long'
+|   | | `-BinaryOperator 0x7fdb018099e0 <line:40:7, col:12> 'int' '='
+|   | |   |-DeclRefExpr 0x7fdb01809958 <col:7> 'int' lvalue Var 0x7fdb01809248 's' 'int'
+|   | |   `-UnaryOperator 0x7fdb018099c0 <col:11, col:12> 'int' prefix '~'
+|   | |     `-ImplicitCastExpr 0x7fdb018099a8 <col:12> 'int' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fdb01809980 <col:12> 'int' lvalue Var 0x7fdb01809248 's' 'int'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fdb01809c98 <line:42:3, col:31> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb01809a88 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   | | `-DeclRefExpr 0x7fdb01809a60 <col:3> 't_be':'t_be' lvalue Var 0x7fdb01808fa0 'lp' 't_be':'t_be'
+|   | `-BinaryOperator 0x7fdb01809c70 <col:10, col:31> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fdb01809b80 <col:10, col:21> 'dt':'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fdb01809b68 <col:15, col:21> 'st':'unsigned long' <LValueToRValue>
+|   |   |   `-MemberExpr 0x7fdb01809b20 <col:15, col:21> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |   |     `-MemberExpr 0x7fdb01809ae8 <col:15, col:19> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   |       `-DeclRefExpr 0x7fdb01809ac0 <col:15> 't_be':'t_be' lvalue ParmVar 0x7fdb01808c60 'afh' 't_be':'t_be'
+|   |   `-ImplicitCastExpr 0x7fdb01809c58 <col:25, col:31> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01809c40 <col:25, col:31> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb01809c08 <col:25, col:31> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |         `-MemberExpr 0x7fdb01809bd0 <col:25, col:29> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |           `-DeclRefExpr 0x7fdb01809ba8 <col:25> 't_be':'t_be' lvalue ParmVar 0x7fdb01808cd0 'bfh' 't_be':'t_be'
+|   |-BinaryOperator 0x7fdb01809ef8 <line:43:3, col:31> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb01809ce8 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   | | `-DeclRefExpr 0x7fdb01809cc0 <col:3> 't_be':'t_be' lvalue Var 0x7fdb01808f30 'hp' 't_be':'t_be'
+|   | `-BinaryOperator 0x7fdb01809ed0 <col:10, col:31> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fdb01809de0 <col:10, col:21> 'dt':'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fdb01809dc8 <col:15, col:21> 'st':'unsigned long' <LValueToRValue>
+|   |   |   `-MemberExpr 0x7fdb01809d80 <col:15, col:21> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |   |     `-MemberExpr 0x7fdb01809d48 <col:15, col:19> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   |       `-DeclRefExpr 0x7fdb01809d20 <col:15> 't_be':'t_be' lvalue ParmVar 0x7fdb01808c60 'afh' 't_be':'t_be'
+|   |   `-ImplicitCastExpr 0x7fdb01809eb8 <col:25, col:31> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb01809ea0 <col:25, col:31> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb01809e68 <col:25, col:31> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |         `-MemberExpr 0x7fdb01809e30 <col:25, col:29> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |           `-DeclRefExpr 0x7fdb01809e08 <col:25> 't_be':'t_be' lvalue ParmVar 0x7fdb01808cd0 'bfh' 't_be':'t_be'
+|   |-BinaryOperator 0x7fdb0180a078 <line:44:3, col:19> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb01809f48 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   | | `-DeclRefExpr 0x7fdb01809f20 <col:3> 't_be':'t_be' lvalue Var 0x7fdb01809010 'dp' 't_be':'t_be'
+|   | `-BinaryOperator 0x7fdb0180a050 <col:10, col:19> 'unsigned long long' '*'
+|   |   |-CStyleCastExpr 0x7fdb01809fd0 <col:10, col:15> 'dt':'unsigned long long' <IntegralCast>
+|   |   | `-ImplicitCastExpr 0x7fdb01809fb8 <col:15> 'st':'unsigned long' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fdb01809f80 <col:15> 'st':'unsigned long' lvalue Var 0x7fdb01809130 'ad' 'st':'unsigned long'
+|   |   `-ImplicitCastExpr 0x7fdb0180a038 <col:19> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb0180a020 <col:19> 'st':'unsigned long' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fdb01809ff8 <col:19> 'st':'unsigned long' lvalue Var 0x7fdb018091a0 'bd' 'st':'unsigned long'
+|   |-CompoundAssignOperator 0x7fdb0180a158 <line:45:3, col:11> 'dt':'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-MemberExpr 0x7fdb0180a0c8 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   | | `-DeclRefExpr 0x7fdb0180a0a0 <col:3> 't_be':'t_be' lvalue Var 0x7fdb01809010 'dp' 't_be':'t_be'
+|   | `-ImplicitCastExpr 0x7fdb0180a140 <col:11> 'unsigned long long' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fdb0180a128 <col:11> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fdb0180a100 <col:11> 'int' lvalue Var 0x7fdb01809248 's' 'int'
+|   |-BinaryOperator 0x7fdb0180a548 <line:46:3, col:40> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb0180a1b8 <col:3, col:6> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   | | `-DeclRefExpr 0x7fdb0180a190 <col:3> 't_be':'t_be' lvalue Var 0x7fdb01808ea8 'hh' 't_be':'t_be'
+|   | `-BinaryOperator 0x7fdb0180a520 <col:10, col:40> 'unsigned long long' '+'
+|   |   |-BinaryOperator 0x7fdb0180a430 <col:10, col:31> 'unsigned long long' '+'
+|   |   | |-BinaryOperator 0x7fdb0180a330 <col:10, col:22> 'unsigned long long' '+'
+|   |   | | |-ImplicitCastExpr 0x7fdb0180a2e8 <col:10, col:13> 'dt':'unsigned long long' <LValueToRValue>
+|   |   | | | `-MemberExpr 0x7fdb0180a218 <col:10, col:13> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   |   | | |   `-DeclRefExpr 0x7fdb0180a1f0 <col:10> 't_be':'t_be' lvalue Var 0x7fdb01808f30 'hp' 't_be':'t_be'
+|   |   | | `-ImplicitCastExpr 0x7fdb0180a318 <col:17, col:22> 'unsigned long long' <IntegralCast>
+|   |   | |   `-ImplicitCastExpr 0x7fdb0180a300 <col:17, col:22> 'st':'unsigned long' <LValueToRValue>
+|   |   | |     `-MemberExpr 0x7fdb0180a2b0 <col:17, col:22> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |   | |       `-MemberExpr 0x7fdb0180a278 <col:17, col:20> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   | |         `-DeclRefExpr 0x7fdb0180a250 <col:17> 't_be':'t_be' lvalue Var 0x7fdb01808f30 'hp' 't_be':'t_be'
+|   |   | `-ImplicitCastExpr 0x7fdb0180a418 <col:26, col:31> 'unsigned long long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb0180a400 <col:26, col:31> 'st':'unsigned long' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7fdb0180a3b8 <col:26, col:31> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |   |       `-MemberExpr 0x7fdb0180a380 <col:26, col:29> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   |         `-DeclRefExpr 0x7fdb0180a358 <col:26> 't_be':'t_be' lvalue Var 0x7fdb01808fa0 'lp' 't_be':'t_be'
+|   |   `-ImplicitCastExpr 0x7fdb0180a508 <col:35, col:40> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb0180a4f0 <col:35, col:40> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb0180a4b8 <col:35, col:40> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |         `-MemberExpr 0x7fdb0180a480 <col:35, col:38> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |           `-DeclRefExpr 0x7fdb0180a458 <col:35> 't_be':'t_be' lvalue Var 0x7fdb01809010 'dp' 't_be':'t_be'
+|   |-BinaryOperator 0x7fdb0180a988 <line:47:3, col:46> 'dt':'unsigned long long' '='
+|   | |-MemberExpr 0x7fdb0180a598 <col:3, col:5> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+|   | | `-DeclRefExpr 0x7fdb0180a570 <col:3> 't_be':'t_be' lvalue Var 0x7fdb01809080 'm' 't_be':'t_be'
+|   | `-BinaryOperator 0x7fdb0180a960 <col:9, col:46> 'unsigned long long' '+'
+|   |   |-BinaryOperator 0x7fdb0180a870 <col:9, col:37> 'unsigned long long' '+'
+|   |   | |-BinaryOperator 0x7fdb0180a780 <col:9, col:28> 'unsigned long long' '+'
+|   |   | | |-CStyleCastExpr 0x7fdb0180a690 <col:9, col:19> 'dt':'unsigned long long' <IntegralCast>
+|   |   | | | `-ImplicitCastExpr 0x7fdb0180a678 <col:14, col:19> 'st':'unsigned long' <LValueToRValue>
+|   |   | | |   `-MemberExpr 0x7fdb0180a630 <col:14, col:19> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+|   |   | | |     `-MemberExpr 0x7fdb0180a5f8 <col:14, col:17> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   | | |       `-DeclRefExpr 0x7fdb0180a5d0 <col:14> 't_be':'t_be' lvalue Var 0x7fdb01808fa0 'lp' 't_be':'t_be'
+|   |   | | `-ImplicitCastExpr 0x7fdb0180a768 <col:23, col:28> 'unsigned long long' <IntegralCast>
+|   |   | |   `-ImplicitCastExpr 0x7fdb0180a750 <col:23, col:28> 'st':'unsigned long' <LValueToRValue>
+|   |   | |     `-MemberExpr 0x7fdb0180a718 <col:23, col:28> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |   | |       `-MemberExpr 0x7fdb0180a6e0 <col:23, col:26> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   | |         `-DeclRefExpr 0x7fdb0180a6b8 <col:23> 't_be':'t_be' lvalue Var 0x7fdb01808f30 'hp' 't_be':'t_be'
+|   |   | `-ImplicitCastExpr 0x7fdb0180a858 <col:32, col:37> 'unsigned long long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb0180a840 <col:32, col:37> 'st':'unsigned long' <LValueToRValue>
+|   |   |     `-MemberExpr 0x7fdb0180a808 <col:32, col:37> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |   |       `-MemberExpr 0x7fdb0180a7d0 <col:32, col:35> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |   |         `-DeclRefExpr 0x7fdb0180a7a8 <col:32> 't_be':'t_be' lvalue Var 0x7fdb01808fa0 'lp' 't_be':'t_be'
+|   |   `-ImplicitCastExpr 0x7fdb0180a948 <col:41, col:46> 'unsigned long long' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fdb0180a930 <col:41, col:46> 'st':'unsigned long' <LValueToRValue>
+|   |       `-MemberExpr 0x7fdb0180a8f8 <col:41, col:46> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|   |         `-MemberExpr 0x7fdb0180a8c0 <col:41, col:44> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|   |           `-DeclRefExpr 0x7fdb0180a898 <col:41> 't_be':'t_be' lvalue Var 0x7fdb01809010 'dp' 't_be':'t_be'
+|   `-ReturnStmt 0x7fdb0180ab50 <line:48:3, col:23>
+|     `-ImplicitCastExpr 0x7fdb0180ab38 <col:10, col:23> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7fdb0180ab10 <col:10, col:23> 'unsigned long' '+'
+|         |-ImplicitCastExpr 0x7fdb0180aae0 <col:10, col:15> 'st':'unsigned long' <LValueToRValue>
+|         | `-MemberExpr 0x7fdb0180aa10 <col:10, col:15> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|         |   `-MemberExpr 0x7fdb0180a9d8 <col:10, col:13> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|         |     `-DeclRefExpr 0x7fdb0180a9b0 <col:10> 't_be':'t_be' lvalue Var 0x7fdb01808ea8 'hh' 't_be':'t_be'
+|         `-ImplicitCastExpr 0x7fdb0180aaf8 <col:19, col:23> 'st':'unsigned long' <LValueToRValue>
+|           `-MemberExpr 0x7fdb0180aaa8 <col:19, col:23> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+|             `-MemberExpr 0x7fdb0180aa70 <col:19, col:21> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+|               `-DeclRefExpr 0x7fdb0180aa48 <col:19> 't_be':'t_be' lvalue Var 0x7fdb01809080 'm' 't_be':'t_be'
+|-FunctionDecl 0x7fdb0180ace0 <line:54:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fdb0180ad80 prev 0x7fdb0180ace0 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x7fdb0180af38 <line:55:6> col:6 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7fdb0180afd8 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7fdb0180b040 prev 0x7fdb0180af38 <col:1, col:15> col:6 used exit 'void (int) __attribute__((noreturn))'
+| `-ParmVarDecl 0x7fdb0180ae38 <col:12> col:15 'int'
+`-FunctionDecl 0x7fdb0180b140 <line:56:1, line:69:1> line:57:1 main 'int ()'
+  `-CompoundStmt 0x7fdb0180c030 <line:58:1, line:69:1>
+    |-DeclStmt 0x7fdb0180b250 <line:59:3, col:9>
+    | `-VarDecl 0x7fdb0180b1f0 <col:3, col:8> col:8 used x 't_be':'t_be'
+    |-BinaryOperator 0x7fdb0180b338 <line:60:3, col:11> 'st':'unsigned long' '='
+    | |-MemberExpr 0x7fdb0180b2c8 <col:3, col:7> 'st':'unsigned long' lvalue .h 0x7fdb01800650
+    | | `-MemberExpr 0x7fdb0180b290 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+    | |   `-DeclRefExpr 0x7fdb0180b268 <col:3> 't_be':'t_be' lvalue Var 0x7fdb0180b1f0 'x' 't_be':'t_be'
+    | `-ImplicitCastExpr 0x7fdb0180b320 <col:11> 'st':'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fdb0180b300 <col:11> 'unsigned int' 268435456
+    |-BinaryOperator 0x7fdb0180b838 <line:61:3, col:11> 'st':'unsigned long' '='
+    | |-MemberExpr 0x7fdb0180b3c0 <col:3, col:7> 'st':'unsigned long' lvalue .l 0x7fdb018006a8
+    | | `-MemberExpr 0x7fdb0180b388 <col:3, col:5> 'struct (anonymous struct at ../Data/C2AST/pr45415.c:9:3)':'struct t_be::(anonymous at ../Data/C2AST/pr45415.c:9:3)' lvalue .s 0x7fdb01800740
+    | |   `-DeclRefExpr 0x7fdb0180b360 <col:3> 't_be':'t_be' lvalue Var 0x7fdb0180b1f0 'x' 't_be':'t_be'
+    | `-ImplicitCastExpr 0x7fdb0180b820 <col:11> 'st':'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fdb0180b800 <col:11> 'unsigned int' 3758096384
+    |-IfStmt 0x7fdb0180bbc8 <line:62:3, line:64:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdb0180bb10 <line:62:7, line:63:66> 'int' '&&'
+    | | |-BinaryOperator 0x7fdb0180b8f8 <line:62:7, col:14> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fdb0180b8e0 <col:7, col:9> 'dt':'unsigned long long' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fdb0180b888 <col:7, col:9> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+    | | | |   `-DeclRefExpr 0x7fdb0180b860 <col:7> 't_be':'t_be' lvalue Var 0x7fdb0180b1f0 'x' 't_be':'t_be'
+    | | | `-IntegerLiteral 0x7fdb0180b8c0 <col:14> 'unsigned long long' 1152921508364943360
+    | | `-BinaryOperator 0x7fdb0180bae8 <line:63:10, col:66> 'int' '!='
+    | |   |-CallExpr 0x7fdb0180ba70 <col:10, col:60> 'int'
+    | |   | |-ImplicitCastExpr 0x7fdb0180ba58 <col:10> 'int (*)(t_be, t_be)' <FunctionToPointerDecay>
+    | |   | | `-DeclRefExpr 0x7fdb0180b920 <col:10> 'int (t_be, t_be)' Function 0x7fdb01808de8 'f_be' 'int (t_be, t_be)'
+    | |   | |-CStyleCastExpr 0x7fdb0180b978 <col:16, col:23> 't_be':'t_be' <ToUnion>
+    | |   | | `-IntegerLiteral 0x7fdb0180b948 <col:23> 'unsigned long long' 4294967296
+    | |   | `-CStyleCastExpr 0x7fdb0180b9d0 <col:39, col:46> 't_be':'t_be' <ToUnion>
+    | |   |   `-IntegerLiteral 0x7fdb0180b9a0 <col:46> 'unsigned long long' 4294967296
+    | |   `-UnaryOperator 0x7fdb0180bac8 <col:65, col:66> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7fdb0180baa8 <col:66> 'int' 1
+    | |-CallExpr 0x7fdb0180bba0 <line:64:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fdb0180bb88 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fdb0180bb38 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdb0180ad80 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fdb0180bf40 <line:65:3, line:67:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdb0180beb0 <line:65:7, line:66:66> 'int' '&&'
+    | | |-BinaryOperator 0x7fdb0180bc98 <line:65:7, col:14> 'int' '=='
+    | | | |-ImplicitCastExpr 0x7fdb0180bc80 <col:7, col:9> 'dt':'unsigned long long' <LValueToRValue>
+    | | | | `-MemberExpr 0x7fdb0180bc28 <col:7, col:9> 'dt':'unsigned long long' lvalue .d 0x7fdb01800530
+    | | | |   `-DeclRefExpr 0x7fdb0180bc00 <col:7> 't_be':'t_be' lvalue Var 0x7fdb0180b1f0 'x' 't_be':'t_be'
+    | | | `-IntegerLiteral 0x7fdb0180bc60 <col:14> 'unsigned long long' 16140901064764293120
+    | | `-BinaryOperator 0x7fdb0180be88 <line:66:10, col:66> 'int' '!='
+    | |   |-CallExpr 0x7fdb0180be10 <col:10, col:60> 'int'
+    | |   | |-ImplicitCastExpr 0x7fdb0180bdf8 <col:10> 'int (*)(t_le, t_le)' <FunctionToPointerDecay>
+    | |   | | `-DeclRefExpr 0x7fdb0180bcc0 <col:10> 'int (t_le, t_le)' Function 0x7fdb01800dc8 'f_le' 'int (t_le, t_le)'
+    | |   | |-CStyleCastExpr 0x7fdb0180bd18 <col:16, col:23> 't_le':'t_le' <ToUnion>
+    | |   | | `-IntegerLiteral 0x7fdb0180bce8 <col:23> 'unsigned long long' 4294967296
+    | |   | `-CStyleCastExpr 0x7fdb0180bd70 <col:39, col:46> 't_le':'t_le' <ToUnion>
+    | |   |   `-IntegerLiteral 0x7fdb0180bd40 <col:46> 'unsigned long long' 4294967296
+    | |   `-UnaryOperator 0x7fdb0180be68 <col:65, col:66> 'int' prefix '-'
+    | |     `-IntegerLiteral 0x7fdb0180be48 <col:66> 'int' 1
+    | |-CallExpr 0x7fdb0180bf18 <line:67:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fdb0180bf00 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fdb0180bed8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fdb0180ad80 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7fdb0180c000 <line:68:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7fdb0180bfe8 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdb0180bf78 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fdb0180b040 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7fdb0180bfa0 <col:9> 'int' 0

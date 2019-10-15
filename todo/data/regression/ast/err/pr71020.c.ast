@@ -1,0 +1,1317 @@
+../Data/C2AST/pr71020.c:65:1: error: use of unknown builtin '__builtin_exp10' [-Wimplicit-function-declaration]
+TEST_UNARY (exp10)
+^
+../Data/C2AST/pr71020.c:13:5: note: expanded from macro 'TEST_UNARY'
+    __builtin_##FUNC (d);                       \
+    ^
+<scratch space>:43:1: note: expanded from here
+__builtin_exp10
+^
+../Data/C2AST/pr71020.c:65:1: error: use of unknown builtin '__builtin_exp10' [-Wimplicit-function-declaration]
+../Data/C2AST/pr71020.c:24:9: note: expanded from macro 'TEST_UNARY'
+    d = __builtin_##FUNC (d);                   \
+        ^
+<scratch space>:45:1: note: expanded from here
+__builtin_exp10
+^
+../Data/C2AST/pr71020.c:70:1: error: use of unknown builtin '__builtin_significand' [-Wimplicit-function-declaration]
+TEST_UNARY (significand)
+^
+../Data/C2AST/pr71020.c:13:5: note: expanded from macro 'TEST_UNARY'
+    __builtin_##FUNC (d);                       \
+    ^
+<scratch space>:63:1: note: expanded from here
+__builtin_significand
+^
+../Data/C2AST/pr71020.c:70:1: error: use of unknown builtin '__builtin_significand' [-Wimplicit-function-declaration]
+../Data/C2AST/pr71020.c:24:9: note: expanded from macro 'TEST_UNARY'
+    d = __builtin_##FUNC (d);                   \
+        ^
+<scratch space>:65:1: note: expanded from here
+__builtin_significand
+^
+TranslationUnitDecl 0x7fec9102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec9102c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec9102bf80 '__int128'
+|-TypedefDecl 0x7fec9102c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec9102bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fec9102c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec9102c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fec9102c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec9102c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec9102c600 'char *'
+|   `-BuiltinType 0x7fec9102bd80 'char'
+|-TypedefDecl 0x7fec9102c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec9102c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec9102c720 'struct __va_list_tag'
+|     `-Record 0x7fec9102c698 '__va_list_tag'
+|-FunctionDecl 0x7fec9106e028 <../Data/C2AST/pr71020.c:3:1, col:27> col:8 used random_double 'double (void)'
+|-FunctionDecl 0x7fec9106e1e8 <line:4:1, col:19> col:5 used setjmp 'int (void *)'
+| |-ParmVarDecl 0x7fec9106e120 <col:13, col:18> col:19 'void *'
+| `-ReturnsTwiceAttr 0x7fec9106e290 <col:5> Implicit
+|-FunctionDecl 0x7fec9106e3a0 <line:5:1, col:24> col:6 used do_something 'void (void)'
+|-FunctionDecl 0x7fec9106e528 <line:8:3, line:17:3> <scratch space>:2:1 acos_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9106e458 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9106ebd0 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9106e6d8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9106e5e8 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9106e6b0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9106e698 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9106e648 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9106e780 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9106e768 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9106e6f0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9106e7b0 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9106e718 <col:13> 'void *' lvalue ParmVar 0x7fec9106e458 'buffer' 'void *'
+|   |-CallExpr 0x7fec9106ea00 <<scratch space>:3:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9106e9e8 <<scratch space>:3:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9106e968 <col:1> '<builtin fn type>' Function 0x7fec9106e808 '__builtin_acos' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9106ea30 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9106e990 <col:23> 'double' lvalue Var 0x7fec9106e5e8 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9106eaa8 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9106ea48 <col:5> 'double' lvalue Var 0x7fec9106e5e8 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9106ea90 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9106ea70 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9106eb50 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9106eb38 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9106eae0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9106ebb8 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9106eba0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9106eb78 <col:12> 'double' lvalue Var 0x7fec9106e5e8 'd' 'double'
+|-FunctionDecl 0x7fec9106e808 <<scratch space>:3:1> col:1 implicit used __builtin_acos 'double (double)' extern
+| |-ParmVarDecl 0x7fec9106e8a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9106e910 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9106e958 <col:1> Implicit
+|-FunctionDecl 0x7fec9106ecb8 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:4:1 acos_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9106ec28 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91087ae8 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9106ee40 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9106ed78 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9106ee18 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9106ee00 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9106edd8 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9106eec0 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9106eea8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9106ee58 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9106eef0 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9106ee80 <col:13> 'void *' lvalue ParmVar 0x7fec9106ec28 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91087a00 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9106ef08 <col:5> 'double' lvalue Var 0x7fec9106ed78 'd' 'double'
+|   | `-CallExpr 0x7fec9106ef98 <<scratch space>:5:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9106ef80 <<scratch space>:5:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9106ef30 <col:1> '<builtin fn type>' Function 0x7fec9106e808 '__builtin_acos' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9106efc8 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9106ef58 <col:27> 'double' lvalue Var 0x7fec9106ed78 'd' 'double'
+|   |-CallExpr 0x7fec91087a68 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91087a50 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91087a28 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91087ad0 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91087ab8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91087a90 <col:12> 'double' lvalue Var 0x7fec9106ed78 'd' 'double'
+|-FunctionDecl 0x7fec91087bc8 <line:8:3, line:17:3> <scratch space>:6:1 asin_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91087b38 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91088180 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec91087d50 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91087c88 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91087d28 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91087d10 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91087ce8 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91087dd0 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91087db8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91087d68 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91087e00 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91087d90 <col:13> 'void *' lvalue ParmVar 0x7fec91087b38 'buffer' 'void *'
+|   |-CallExpr 0x7fec91087fe0 <<scratch space>:7:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91087fc8 <<scratch space>:7:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91087f78 <col:1> '<builtin fn type>' Function 0x7fec91087e18 '__builtin_asin' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91088010 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91087fa0 <col:23> 'double' lvalue Var 0x7fec91087c88 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91088088 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91088028 <col:5> 'double' lvalue Var 0x7fec91087c88 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91088070 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91088050 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91088100 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec910880e8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec910880c0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91088168 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91088150 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91088128 <col:12> 'double' lvalue Var 0x7fec91087c88 'd' 'double'
+|-FunctionDecl 0x7fec91087e18 <<scratch space>:7:1> col:1 implicit used __builtin_asin 'double (double)' extern
+| |-ParmVarDecl 0x7fec91087eb8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91087f20 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91087f68 <col:1> Implicit
+|-FunctionDecl 0x7fec91088268 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:8:1 asin_live 'double (void *)'
+| |-ParmVarDecl 0x7fec910881d8 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91088678 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec910883f0 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91088328 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec910883c8 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec910883b0 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91088388 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91088470 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91088458 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91088408 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec910884a0 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91088430 <col:13> 'void *' lvalue ParmVar 0x7fec910881d8 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91088590 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec910884b8 <col:5> 'double' lvalue Var 0x7fec91088328 'd' 'double'
+|   | `-CallExpr 0x7fec91088548 <<scratch space>:9:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91088530 <<scratch space>:9:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec910884e0 <col:1> '<builtin fn type>' Function 0x7fec91087e18 '__builtin_asin' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91088578 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91088508 <col:27> 'double' lvalue Var 0x7fec91088328 'd' 'double'
+|   |-CallExpr 0x7fec910885f8 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec910885e0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec910885b8 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91088660 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91088648 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91088620 <col:12> 'double' lvalue Var 0x7fec91088328 'd' 'double'
+|-FunctionDecl 0x7fec91088758 <line:8:3, line:17:3> <scratch space>:10:1 asinh_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec910886c8 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91088d68 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec910888e0 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91088818 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec910888b8 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec910888a0 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91088878 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91088960 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91088948 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec910888f8 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91088990 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91088920 <col:13> 'void *' lvalue ParmVar 0x7fec910886c8 'buffer' 'void *'
+|   |-CallExpr 0x7fec91088bc8 <<scratch space>:11:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91088bb0 <<scratch space>:11:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91088b60 <col:1> '<builtin fn type>' Function 0x7fec91088a00 '__builtin_asinh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91088bf8 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91088b88 <col:23> 'double' lvalue Var 0x7fec91088818 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91088c70 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91088c10 <col:5> 'double' lvalue Var 0x7fec91088818 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91088c58 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91088c38 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91088ce8 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91088cd0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91088ca8 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91088d50 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91088d38 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91088d10 <col:12> 'double' lvalue Var 0x7fec91088818 'd' 'double'
+|-FunctionDecl 0x7fec91088a00 <<scratch space>:11:1> col:1 implicit used __builtin_asinh 'double (double)' extern
+| |-ParmVarDecl 0x7fec91088aa0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91088b08 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91088b50 <col:1> Implicit
+|-FunctionDecl 0x7fec91088e50 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:12:1 asinh_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91088dc0 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91089260 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91088fd8 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91088f10 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91088fb0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91088f98 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91088f70 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91089058 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91089040 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91088ff0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91089088 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91089018 <col:13> 'void *' lvalue ParmVar 0x7fec91088dc0 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91089178 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec910890a0 <col:5> 'double' lvalue Var 0x7fec91088f10 'd' 'double'
+|   | `-CallExpr 0x7fec91089130 <<scratch space>:13:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91089118 <<scratch space>:13:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec910890c8 <col:1> '<builtin fn type>' Function 0x7fec91088a00 '__builtin_asinh' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91089160 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec910890f0 <col:27> 'double' lvalue Var 0x7fec91088f10 'd' 'double'
+|   |-CallExpr 0x7fec910891e0 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec910891c8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec910891a0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91089248 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91089230 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91089208 <col:12> 'double' lvalue Var 0x7fec91088f10 'd' 'double'
+|-FunctionDecl 0x7fec91089340 <line:8:3, line:17:3> <scratch space>:14:1 atan_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec910892b0 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec910898f8 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec910894c8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91089400 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec910894a0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91089488 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91089460 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91089548 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91089530 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec910894e0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91089578 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91089508 <col:13> 'void *' lvalue ParmVar 0x7fec910892b0 'buffer' 'void *'
+|   |-CallExpr 0x7fec91089758 <<scratch space>:15:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91089740 <<scratch space>:15:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec910896f0 <col:1> '<builtin fn type>' Function 0x7fec91089590 '__builtin_atan' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91089788 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91089718 <col:23> 'double' lvalue Var 0x7fec91089400 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91089800 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec910897a0 <col:5> 'double' lvalue Var 0x7fec91089400 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec910897e8 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec910897c8 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91089878 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91089860 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91089838 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec910898e0 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec910898c8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec910898a0 <col:12> 'double' lvalue Var 0x7fec91089400 'd' 'double'
+|-FunctionDecl 0x7fec91089590 <<scratch space>:15:1> col:1 implicit used __builtin_atan 'double (double)' extern
+| |-ParmVarDecl 0x7fec91089630 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91089698 <col:1> Implicit
+| `-NoThrowAttr 0x7fec910896e0 <col:1> Implicit
+|-FunctionDecl 0x7fec91089a00 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:16:1 atan_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91089950 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91089e10 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91089b88 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91089ac0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91089b60 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91089b48 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91089b20 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91089c08 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91089bf0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91089ba0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91089c38 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91089bc8 <col:13> 'void *' lvalue ParmVar 0x7fec91089950 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91089d28 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91089c50 <col:5> 'double' lvalue Var 0x7fec91089ac0 'd' 'double'
+|   | `-CallExpr 0x7fec91089ce0 <<scratch space>:17:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91089cc8 <<scratch space>:17:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91089c78 <col:1> '<builtin fn type>' Function 0x7fec91089590 '__builtin_atan' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91089d10 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91089ca0 <col:27> 'double' lvalue Var 0x7fec91089ac0 'd' 'double'
+|   |-CallExpr 0x7fec91089d90 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91089d78 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91089d50 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91089df8 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91089de0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91089db8 <col:12> 'double' lvalue Var 0x7fec91089ac0 'd' 'double'
+|-FunctionDecl 0x7fec91089ef0 <line:8:3, line:17:3> <scratch space>:18:1 atanh_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91089e60 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108a4a8 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108a078 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91089fb0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108a050 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108a038 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108a010 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108a0f8 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108a0e0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108a090 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108a128 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108a0b8 <col:13> 'void *' lvalue ParmVar 0x7fec91089e60 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108a308 <<scratch space>:19:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9108a2f0 <<scratch space>:19:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108a2a0 <col:1> '<builtin fn type>' Function 0x7fec9108a140 '__builtin_atanh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9108a338 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108a2c8 <col:23> 'double' lvalue Var 0x7fec91089fb0 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108a3b0 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108a350 <col:5> 'double' lvalue Var 0x7fec91089fb0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108a398 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108a378 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108a428 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108a410 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108a3e8 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108a490 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108a478 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108a450 <col:12> 'double' lvalue Var 0x7fec91089fb0 'd' 'double'
+|-FunctionDecl 0x7fec9108a140 <<scratch space>:19:1> col:1 implicit used __builtin_atanh 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108a1e0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108a248 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108a290 <col:1> Implicit
+|-FunctionDecl 0x7fec9108a590 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:20:1 atanh_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108a500 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108a9a0 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108a718 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108a650 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108a6f0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108a6d8 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108a6b0 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108a798 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108a780 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108a730 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108a7c8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108a758 <col:13> 'void *' lvalue ParmVar 0x7fec9108a500 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108a8b8 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108a7e0 <col:5> 'double' lvalue Var 0x7fec9108a650 'd' 'double'
+|   | `-CallExpr 0x7fec9108a870 <<scratch space>:21:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9108a858 <<scratch space>:21:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9108a808 <col:1> '<builtin fn type>' Function 0x7fec9108a140 '__builtin_atanh' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9108a8a0 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9108a830 <col:27> 'double' lvalue Var 0x7fec9108a650 'd' 'double'
+|   |-CallExpr 0x7fec9108a920 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108a908 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108a8e0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108a988 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108a970 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108a948 <col:12> 'double' lvalue Var 0x7fec9108a650 'd' 'double'
+|-FunctionDecl 0x7fec9108aa90 <line:8:3, line:17:3> <scratch space>:22:1 cos_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108aa00 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108b048 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108ac18 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108ab50 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108abf0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108abd8 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108abb0 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108ac98 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108ac80 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108ac30 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108acc8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108ac58 <col:13> 'void *' lvalue ParmVar 0x7fec9108aa00 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108aea8 <<scratch space>:23:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9108ae90 <<scratch space>:23:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108ae40 <col:1> '<builtin fn type>' Function 0x7fec9108ace0 '__builtin_cos' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9108aed8 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108ae68 <col:23> 'double' lvalue Var 0x7fec9108ab50 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108af50 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108aef0 <col:5> 'double' lvalue Var 0x7fec9108ab50 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108af38 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108af18 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108afc8 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108afb0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108af88 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108b030 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108b018 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108aff0 <col:12> 'double' lvalue Var 0x7fec9108ab50 'd' 'double'
+|-FunctionDecl 0x7fec9108ace0 <<scratch space>:23:1> col:1 implicit used __builtin_cos 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108ad80 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108ade8 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108ae30 <col:1> Implicit
+|-FunctionDecl 0x7fec9108b130 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:24:1 cos_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108b0a0 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108b540 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108b2b8 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108b1f0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108b290 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108b278 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108b250 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108b338 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108b320 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108b2d0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108b368 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108b2f8 <col:13> 'void *' lvalue ParmVar 0x7fec9108b0a0 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108b458 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108b380 <col:5> 'double' lvalue Var 0x7fec9108b1f0 'd' 'double'
+|   | `-CallExpr 0x7fec9108b410 <<scratch space>:25:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9108b3f8 <<scratch space>:25:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9108b3a8 <col:1> '<builtin fn type>' Function 0x7fec9108ace0 '__builtin_cos' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9108b440 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9108b3d0 <col:27> 'double' lvalue Var 0x7fec9108b1f0 'd' 'double'
+|   |-CallExpr 0x7fec9108b4c0 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108b4a8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108b480 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108b528 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108b510 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108b4e8 <col:12> 'double' lvalue Var 0x7fec9108b1f0 'd' 'double'
+|-FunctionDecl 0x7fec9108b620 <line:8:3, line:17:3> <scratch space>:26:1 cosh_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108b590 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108c7e0 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108b7a8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108b6e0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108b780 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108b768 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108b740 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108b828 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108b810 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108b7c0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108b858 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108b7e8 <col:13> 'void *' lvalue ParmVar 0x7fec9108b590 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108c640 <<scratch space>:27:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9108c628 <<scratch space>:27:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108b9d0 <col:1> '<builtin fn type>' Function 0x7fec9108b870 '__builtin_cosh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9108c670 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108c600 <col:23> 'double' lvalue Var 0x7fec9108b6e0 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108c6e8 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108c688 <col:5> 'double' lvalue Var 0x7fec9108b6e0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108c6d0 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108c6b0 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108c760 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108c748 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108c720 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108c7c8 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108c7b0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108c788 <col:12> 'double' lvalue Var 0x7fec9108b6e0 'd' 'double'
+|-FunctionDecl 0x7fec9108b870 <<scratch space>:27:1> col:1 implicit used __builtin_cosh 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108b910 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108b978 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108b9c0 <col:1> Implicit
+|-FunctionDecl 0x7fec9108c8c8 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:28:1 cosh_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108c838 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108ccd8 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108ca50 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108c988 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108ca28 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108ca10 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108c9e8 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108cad0 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108cab8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108ca68 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108cb00 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108ca90 <col:13> 'void *' lvalue ParmVar 0x7fec9108c838 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108cbf0 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108cb18 <col:5> 'double' lvalue Var 0x7fec9108c988 'd' 'double'
+|   | `-CallExpr 0x7fec9108cba8 <<scratch space>:29:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9108cb90 <<scratch space>:29:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9108cb40 <col:1> '<builtin fn type>' Function 0x7fec9108b870 '__builtin_cosh' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9108cbd8 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9108cb68 <col:27> 'double' lvalue Var 0x7fec9108c988 'd' 'double'
+|   |-CallExpr 0x7fec9108cc58 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108cc40 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108cc18 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108ccc0 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108cca8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108cc80 <col:12> 'double' lvalue Var 0x7fec9108c988 'd' 'double'
+|-FunctionDecl 0x7fec9108cdb8 <line:8:3, line:17:3> <scratch space>:30:1 exp_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108cd28 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108d370 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108cf40 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108ce78 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108cf18 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108cf00 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108ced8 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108cfc0 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108cfa8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108cf58 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108cff0 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108cf80 <col:13> 'void *' lvalue ParmVar 0x7fec9108cd28 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108d1d0 <<scratch space>:31:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9108d1b8 <<scratch space>:31:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108d168 <col:1> '<builtin fn type>' Function 0x7fec9108d008 '__builtin_exp' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9108d200 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108d190 <col:23> 'double' lvalue Var 0x7fec9108ce78 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108d278 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108d218 <col:5> 'double' lvalue Var 0x7fec9108ce78 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108d260 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108d240 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108d2f0 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108d2d8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108d2b0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108d358 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108d340 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108d318 <col:12> 'double' lvalue Var 0x7fec9108ce78 'd' 'double'
+|-FunctionDecl 0x7fec9108d008 <<scratch space>:31:1> col:1 implicit used __builtin_exp 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108d0a8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108d110 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108d158 <col:1> Implicit
+|-FunctionDecl 0x7fec9108d458 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:32:1 exp_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108d3c8 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108d870 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108d5e0 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108d518 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108d5b8 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108d5a0 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108d578 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108d668 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108d650 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108d600 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108d698 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108d628 <col:13> 'void *' lvalue ParmVar 0x7fec9108d3c8 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108d788 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108d6b0 <col:5> 'double' lvalue Var 0x7fec9108d518 'd' 'double'
+|   | `-CallExpr 0x7fec9108d740 <<scratch space>:33:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9108d728 <<scratch space>:33:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9108d6d8 <col:1> '<builtin fn type>' Function 0x7fec9108d008 '__builtin_exp' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9108d770 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9108d700 <col:27> 'double' lvalue Var 0x7fec9108d518 'd' 'double'
+|   |-CallExpr 0x7fec9108d7f0 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108d7d8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108d7b0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108d858 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108d840 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108d818 <col:12> 'double' lvalue Var 0x7fec9108d518 'd' 'double'
+|-FunctionDecl 0x7fec9108d950 <line:8:3, line:17:3> <scratch space>:34:1 expm1_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108d8c0 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108df08 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108dad8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108da10 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108dab0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108da98 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108da70 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108db58 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108db40 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108daf0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108db88 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108db18 <col:13> 'void *' lvalue ParmVar 0x7fec9108d8c0 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108dd68 <<scratch space>:35:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9108dd50 <<scratch space>:35:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108dd00 <col:1> '<builtin fn type>' Function 0x7fec9108dba0 '__builtin_expm1' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9108dd98 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108dd28 <col:23> 'double' lvalue Var 0x7fec9108da10 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108de10 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108ddb0 <col:5> 'double' lvalue Var 0x7fec9108da10 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108ddf8 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108ddd8 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108de88 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108de70 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108de48 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108def0 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108ded8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108deb0 <col:12> 'double' lvalue Var 0x7fec9108da10 'd' 'double'
+|-FunctionDecl 0x7fec9108dba0 <<scratch space>:35:1> col:1 implicit used __builtin_expm1 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108dc40 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108dca8 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108dcf0 <col:1> Implicit
+|-FunctionDecl 0x7fec9108dff0 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:36:1 expm1_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108df60 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108e400 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108e178 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108e0b0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108e150 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108e138 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108e110 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108e1f8 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108e1e0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108e190 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108e228 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108e1b8 <col:13> 'void *' lvalue ParmVar 0x7fec9108df60 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108e318 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108e240 <col:5> 'double' lvalue Var 0x7fec9108e0b0 'd' 'double'
+|   | `-CallExpr 0x7fec9108e2d0 <<scratch space>:37:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9108e2b8 <<scratch space>:37:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9108e268 <col:1> '<builtin fn type>' Function 0x7fec9108dba0 '__builtin_expm1' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9108e300 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9108e290 <col:27> 'double' lvalue Var 0x7fec9108e0b0 'd' 'double'
+|   |-CallExpr 0x7fec9108e380 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108e368 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108e340 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108e3e8 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108e3d0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108e3a8 <col:12> 'double' lvalue Var 0x7fec9108e0b0 'd' 'double'
+|-FunctionDecl 0x7fec9108e4e0 <line:8:3, line:17:3> <scratch space>:38:1 exp2_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108e450 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108ea98 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108e668 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108e5a0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108e640 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108e628 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108e600 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108e6e8 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108e6d0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108e680 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108e718 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108e6a8 <col:13> 'void *' lvalue ParmVar 0x7fec9108e450 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108e8f8 <<scratch space>:39:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec9108e8e0 <<scratch space>:39:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108e890 <col:1> '<builtin fn type>' Function 0x7fec9108e730 '__builtin_exp2' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec9108e928 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108e8b8 <col:23> 'double' lvalue Var 0x7fec9108e5a0 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108e9a0 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108e940 <col:5> 'double' lvalue Var 0x7fec9108e5a0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108e988 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108e968 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108ea18 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108ea00 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108e9d8 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108ea80 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108ea68 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108ea40 <col:12> 'double' lvalue Var 0x7fec9108e5a0 'd' 'double'
+|-FunctionDecl 0x7fec9108e730 <<scratch space>:39:1> col:1 implicit used __builtin_exp2 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108e7d0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108e838 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108e880 <col:1> Implicit
+|-FunctionDecl 0x7fec9108eb80 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:40:1 exp2_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108eaf0 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108ef90 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108ed08 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108ec40 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108ece0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108ecc8 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108eca0 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108ed88 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108ed70 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108ed20 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108edb8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108ed48 <col:13> 'void *' lvalue ParmVar 0x7fec9108eaf0 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108eea8 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108edd0 <col:5> 'double' lvalue Var 0x7fec9108ec40 'd' 'double'
+|   | `-CallExpr 0x7fec9108ee60 <<scratch space>:41:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec9108ee48 <<scratch space>:41:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec9108edf8 <col:1> '<builtin fn type>' Function 0x7fec9108e730 '__builtin_exp2' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec9108ee90 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec9108ee20 <col:27> 'double' lvalue Var 0x7fec9108ec40 'd' 'double'
+|   |-CallExpr 0x7fec9108ef10 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108eef8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108eed0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108ef78 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108ef60 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108ef38 <col:12> 'double' lvalue Var 0x7fec9108ec40 'd' 'double'
+|-FunctionDecl 0x7fec9108f070 <line:8:3, line:17:3> <scratch space>:42:1 exp10_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108efe0 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108f618 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108f1f8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108f130 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108f1d0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108f1b8 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108f190 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108f278 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108f260 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108f210 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108f2a8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108f238 <col:13> 'void *' lvalue ParmVar 0x7fec9108efe0 'buffer' 'void *'
+|   |-CallExpr 0x7fec9108f470 <<scratch space>:43:1, ../Data/C2AST/pr71020.c:13:24> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108f458 <<scratch space>:43:1> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108f3e0 <col:1> 'int ()' Function 0x7fec9108f330 '__builtin_exp10' 'int ()'
+|   | `-ImplicitCastExpr 0x7fec9108f4a0 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108f408 <col:23> 'double' lvalue Var 0x7fec9108f130 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec9108f518 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec9108f4b8 <col:5> 'double' lvalue Var 0x7fec9108f130 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108f500 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec9108f4e0 <col:10> 'int' 1
+|   |-CallExpr 0x7fec9108f590 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108f578 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108f550 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108f600 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108f5e0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108f5b8 <col:12> 'double' lvalue Var 0x7fec9108f130 'd' 'double'
+|-FunctionDecl 0x7fec9108f700 <line:19:3, line:27:3> <scratch space>:44:1 exp10_live 'double (void *)'
+| |-ParmVarDecl 0x7fec9108f670 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec9108fb28 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec9108f888 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec9108f7c0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108f860 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108f848 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108f820 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108f908 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108f8f0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108f8a0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108f938 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108f8c8 <col:13> 'void *' lvalue ParmVar 0x7fec9108f670 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec9108fa40 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec9108f950 <col:5> 'double' lvalue Var 0x7fec9108f7c0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec9108fa28 <<scratch space>:45:1, ../Data/C2AST/pr71020.c:24:28> 'double' <IntegralToFloating>
+|   |   `-CallExpr 0x7fec9108f9e0 <<scratch space>:45:1, ../Data/C2AST/pr71020.c:24:28> 'int'
+|   |     |-ImplicitCastExpr 0x7fec9108f9c8 <<scratch space>:45:1> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fec9108f978 <col:1> 'int ()' Function 0x7fec9108f330 '__builtin_exp10' 'int ()'
+|   |     `-ImplicitCastExpr 0x7fec9108fa10 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fec9108f9a0 <col:27> 'double' lvalue Var 0x7fec9108f7c0 'd' 'double'
+|   |-CallExpr 0x7fec9108faa8 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec9108fa90 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec9108fa68 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec9108fb10 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec9108faf8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec9108fad0 <col:12> 'double' lvalue Var 0x7fec9108f7c0 'd' 'double'
+|-FunctionDecl 0x7fec9108fc08 <line:8:3, line:17:3> <scratch space>:46:1 log_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec9108fb78 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec910901c0 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec9108fd90 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec9108fcc8 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec9108fd68 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec9108fd50 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec9108fd28 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec9108fe10 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec9108fdf8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec9108fda8 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec9108fe40 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108fdd0 <col:13> 'void *' lvalue ParmVar 0x7fec9108fb78 'buffer' 'void *'
+|   |-CallExpr 0x7fec91090020 <<scratch space>:47:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91090008 <<scratch space>:47:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec9108ffb8 <col:1> '<builtin fn type>' Function 0x7fec9108fe58 '__builtin_log' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91090050 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec9108ffe0 <col:23> 'double' lvalue Var 0x7fec9108fcc8 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec910900c8 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91090068 <col:5> 'double' lvalue Var 0x7fec9108fcc8 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec910900b0 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91090090 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91090140 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91090128 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91090100 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec910901a8 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91090190 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91090168 <col:12> 'double' lvalue Var 0x7fec9108fcc8 'd' 'double'
+|-FunctionDecl 0x7fec9108fe58 <<scratch space>:47:1> col:1 implicit used __builtin_log 'double (double)' extern
+| |-ParmVarDecl 0x7fec9108fef8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec9108ff60 <col:1> Implicit
+| `-NoThrowAttr 0x7fec9108ffa8 <col:1> Implicit
+|-FunctionDecl 0x7fec910902a8 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:48:1 log_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91090218 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91090cc0 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91090430 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91090368 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91090408 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec910903f0 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec910903c8 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec910904b0 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91090498 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91090448 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec910904e0 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91090470 <col:13> 'void *' lvalue ParmVar 0x7fec91090218 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec910905d0 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec910904f8 <col:5> 'double' lvalue Var 0x7fec91090368 'd' 'double'
+|   | `-CallExpr 0x7fec91090588 <<scratch space>:49:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91090570 <<scratch space>:49:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91090520 <col:1> '<builtin fn type>' Function 0x7fec9108fe58 '__builtin_log' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec910905b8 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91090548 <col:27> 'double' lvalue Var 0x7fec91090368 'd' 'double'
+|   |-CallExpr 0x7fec91090c40 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91090c28 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91090c00 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91090ca8 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91090c90 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91090c68 <col:12> 'double' lvalue Var 0x7fec91090368 'd' 'double'
+|-FunctionDecl 0x7fec91090da0 <line:8:3, line:17:3> <scratch space>:50:1 log2_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91090d10 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91091358 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec91090f28 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91090e60 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91090f00 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91090ee8 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91090ec0 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91090fa8 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91090f90 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91090f40 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91090fd8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91090f68 <col:13> 'void *' lvalue ParmVar 0x7fec91090d10 'buffer' 'void *'
+|   |-CallExpr 0x7fec910911b8 <<scratch space>:51:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec910911a0 <<scratch space>:51:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91091150 <col:1> '<builtin fn type>' Function 0x7fec91090ff0 '__builtin_log2' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec910911e8 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91091178 <col:23> 'double' lvalue Var 0x7fec91090e60 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91091260 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91091200 <col:5> 'double' lvalue Var 0x7fec91090e60 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91091248 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91091228 <col:10> 'int' 1
+|   |-CallExpr 0x7fec910912d8 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec910912c0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91091298 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91091340 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91091328 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91091300 <col:12> 'double' lvalue Var 0x7fec91090e60 'd' 'double'
+|-FunctionDecl 0x7fec91090ff0 <<scratch space>:51:1> col:1 implicit used __builtin_log2 'double (double)' extern
+| |-ParmVarDecl 0x7fec91091090 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec910910f8 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91091140 <col:1> Implicit
+|-FunctionDecl 0x7fec91091440 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:52:1 log2_live 'double (void *)'
+| |-ParmVarDecl 0x7fec910913b0 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91091850 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec910915c8 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91091500 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec910915a0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91091588 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91091560 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91091648 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91091630 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec910915e0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91091678 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91091608 <col:13> 'void *' lvalue ParmVar 0x7fec910913b0 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91091768 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91091690 <col:5> 'double' lvalue Var 0x7fec91091500 'd' 'double'
+|   | `-CallExpr 0x7fec91091720 <<scratch space>:53:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91091708 <<scratch space>:53:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec910916b8 <col:1> '<builtin fn type>' Function 0x7fec91090ff0 '__builtin_log2' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91091750 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec910916e0 <col:27> 'double' lvalue Var 0x7fec91091500 'd' 'double'
+|   |-CallExpr 0x7fec910917d0 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec910917b8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91091790 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91091838 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91091820 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec910917f8 <col:12> 'double' lvalue Var 0x7fec91091500 'd' 'double'
+|-FunctionDecl 0x7fec91091930 <line:8:3, line:17:3> <scratch space>:54:1 log10_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec910918a0 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91093768 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec91091ab8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec910919f0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91091a90 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91091a78 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91091a50 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91091b38 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91091b20 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91091ad0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91091b68 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91091af8 <col:13> 'void *' lvalue ParmVar 0x7fec910918a0 'buffer' 'void *'
+|   |-CallExpr 0x7fec910935c8 <<scratch space>:55:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec910935b0 <<scratch space>:55:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91093560 <col:1> '<builtin fn type>' Function 0x7fec91093400 '__builtin_log10' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec910935f8 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91093588 <col:23> 'double' lvalue Var 0x7fec910919f0 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91093670 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91093610 <col:5> 'double' lvalue Var 0x7fec910919f0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91093658 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91093638 <col:10> 'int' 1
+|   |-CallExpr 0x7fec910936e8 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec910936d0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec910936a8 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91093750 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91093738 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91093710 <col:12> 'double' lvalue Var 0x7fec910919f0 'd' 'double'
+|-FunctionDecl 0x7fec91093400 <<scratch space>:55:1> col:1 implicit used __builtin_log10 'double (double)' extern
+| |-ParmVarDecl 0x7fec910934a0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91093508 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91093550 <col:1> Implicit
+|-FunctionDecl 0x7fec91093850 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:56:1 log10_live 'double (void *)'
+| |-ParmVarDecl 0x7fec910937c0 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91093c60 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec910939d8 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91093910 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec910939b0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91093998 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91093970 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91093a58 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91093a40 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec910939f0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91093a88 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91093a18 <col:13> 'void *' lvalue ParmVar 0x7fec910937c0 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91093b78 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91093aa0 <col:5> 'double' lvalue Var 0x7fec91093910 'd' 'double'
+|   | `-CallExpr 0x7fec91093b30 <<scratch space>:57:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91093b18 <<scratch space>:57:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91093ac8 <col:1> '<builtin fn type>' Function 0x7fec91093400 '__builtin_log10' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91093b60 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91093af0 <col:27> 'double' lvalue Var 0x7fec91093910 'd' 'double'
+|   |-CallExpr 0x7fec91093be0 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91093bc8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91093ba0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91093c48 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91093c30 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91093c08 <col:12> 'double' lvalue Var 0x7fec91093910 'd' 'double'
+|-FunctionDecl 0x7fec91093d40 <line:8:3, line:17:3> <scratch space>:58:1 log1p_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91093cb0 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec910942f8 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec91093ec8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91093e00 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91093ea0 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91093e88 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91093e60 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91093f48 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91093f30 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91093ee0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91093f78 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91093f08 <col:13> 'void *' lvalue ParmVar 0x7fec91093cb0 'buffer' 'void *'
+|   |-CallExpr 0x7fec91094158 <<scratch space>:59:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91094140 <<scratch space>:59:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec910940f0 <col:1> '<builtin fn type>' Function 0x7fec91093f90 '__builtin_log1p' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91094188 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91094118 <col:23> 'double' lvalue Var 0x7fec91093e00 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91094200 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec910941a0 <col:5> 'double' lvalue Var 0x7fec91093e00 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec910941e8 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec910941c8 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91094278 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91094260 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91094238 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec910942e0 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec910942c8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec910942a0 <col:12> 'double' lvalue Var 0x7fec91093e00 'd' 'double'
+|-FunctionDecl 0x7fec91093f90 <<scratch space>:59:1> col:1 implicit used __builtin_log1p 'double (double)' extern
+| |-ParmVarDecl 0x7fec91094030 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91094098 <col:1> Implicit
+| `-NoThrowAttr 0x7fec910940e0 <col:1> Implicit
+|-FunctionDecl 0x7fec91094400 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:60:1 log1p_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91094350 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91094810 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91094588 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec910944c0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91094560 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91094548 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91094520 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91094608 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec910945f0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec910945a0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91094638 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec910945c8 <col:13> 'void *' lvalue ParmVar 0x7fec91094350 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91094728 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91094650 <col:5> 'double' lvalue Var 0x7fec910944c0 'd' 'double'
+|   | `-CallExpr 0x7fec910946e0 <<scratch space>:61:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec910946c8 <<scratch space>:61:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91094678 <col:1> '<builtin fn type>' Function 0x7fec91093f90 '__builtin_log1p' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91094710 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec910946a0 <col:27> 'double' lvalue Var 0x7fec910944c0 'd' 'double'
+|   |-CallExpr 0x7fec91094790 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91094778 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91094750 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec910947f8 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec910947e0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec910947b8 <col:12> 'double' lvalue Var 0x7fec910944c0 'd' 'double'
+|-FunctionDecl 0x7fec910948f0 <line:8:3, line:17:3> <scratch space>:62:1 significand_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91094860 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91094e20 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec91094a78 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec910949b0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91094a50 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91094a38 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91094a10 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91094af8 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91094ae0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91094a90 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91094b28 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91094ab8 <col:13> 'void *' lvalue ParmVar 0x7fec91094860 'buffer' 'void *'
+|   |-CallExpr 0x7fec91094c80 <<scratch space>:63:1, ../Data/C2AST/pr71020.c:13:24> 'int'
+|   | |-ImplicitCastExpr 0x7fec91094c68 <<scratch space>:63:1> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91094c18 <col:1> 'int ()' Function 0x7fec91094b68 '__builtin_significand' 'int ()'
+|   | `-ImplicitCastExpr 0x7fec91094cb0 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91094c40 <col:23> 'double' lvalue Var 0x7fec910949b0 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91094d28 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91094cc8 <col:5> 'double' lvalue Var 0x7fec910949b0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91094d10 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91094cf0 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91094da0 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91094d88 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91094d60 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91094e08 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91094df0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91094dc8 <col:12> 'double' lvalue Var 0x7fec910949b0 'd' 'double'
+|-FunctionDecl 0x7fec91094f08 <line:19:3, line:27:3> <scratch space>:64:1 significand_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91094e78 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91095330 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91095090 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91094fc8 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91095068 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91095050 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91095028 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91095110 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec910950f8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec910950a8 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91095140 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec910950d0 <col:13> 'void *' lvalue ParmVar 0x7fec91094e78 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91095248 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91095158 <col:5> 'double' lvalue Var 0x7fec91094fc8 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91095230 <<scratch space>:65:1, ../Data/C2AST/pr71020.c:24:28> 'double' <IntegralToFloating>
+|   |   `-CallExpr 0x7fec910951e8 <<scratch space>:65:1, ../Data/C2AST/pr71020.c:24:28> 'int'
+|   |     |-ImplicitCastExpr 0x7fec910951d0 <<scratch space>:65:1> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7fec91095180 <col:1> 'int ()' Function 0x7fec91094b68 '__builtin_significand' 'int ()'
+|   |     `-ImplicitCastExpr 0x7fec91095218 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fec910951a8 <col:27> 'double' lvalue Var 0x7fec91094fc8 'd' 'double'
+|   |-CallExpr 0x7fec910952b0 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91095298 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91095270 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91095318 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91095300 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec910952d8 <col:12> 'double' lvalue Var 0x7fec91094fc8 'd' 'double'
+|-FunctionDecl 0x7fec91801030 <line:8:3, line:17:3> <scratch space>:66:1 sin_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91095380 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec918015e8 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec918011b8 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec918010f0 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91801190 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91801178 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91801150 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91801238 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91801220 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec918011d0 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91801268 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec918011f8 <col:13> 'void *' lvalue ParmVar 0x7fec91095380 'buffer' 'void *'
+|   |-CallExpr 0x7fec91801448 <<scratch space>:67:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91801430 <<scratch space>:67:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec918013e0 <col:1> '<builtin fn type>' Function 0x7fec91801280 '__builtin_sin' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91801478 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91801408 <col:23> 'double' lvalue Var 0x7fec918010f0 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec918014f0 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91801490 <col:5> 'double' lvalue Var 0x7fec918010f0 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec918014d8 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec918014b8 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91801568 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91801550 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91801528 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec918015d0 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec918015b8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91801590 <col:12> 'double' lvalue Var 0x7fec918010f0 'd' 'double'
+|-FunctionDecl 0x7fec91801280 <<scratch space>:67:1> col:1 implicit used __builtin_sin 'double (double)' extern
+| |-ParmVarDecl 0x7fec91801320 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91801388 <col:1> Implicit
+| `-NoThrowAttr 0x7fec918013d0 <col:1> Implicit
+|-FunctionDecl 0x7fec918016d0 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:68:1 sin_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91801640 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91801ae0 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91801858 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91801790 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91801830 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91801818 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec918017f0 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec918018d8 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec918018c0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91801870 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91801908 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91801898 <col:13> 'void *' lvalue ParmVar 0x7fec91801640 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec918019f8 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91801920 <col:5> 'double' lvalue Var 0x7fec91801790 'd' 'double'
+|   | `-CallExpr 0x7fec918019b0 <<scratch space>:69:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91801998 <<scratch space>:69:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91801948 <col:1> '<builtin fn type>' Function 0x7fec91801280 '__builtin_sin' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec918019e0 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91801970 <col:27> 'double' lvalue Var 0x7fec91801790 'd' 'double'
+|   |-CallExpr 0x7fec91801a60 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91801a48 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91801a20 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91801ac8 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91801ab0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91801a88 <col:12> 'double' lvalue Var 0x7fec91801790 'd' 'double'
+|-FunctionDecl 0x7fec91801bc0 <line:8:3, line:17:3> <scratch space>:70:1 sinh_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91801b30 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91802180 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec91801d48 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91801c80 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91801d20 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91801d08 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91801ce0 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91801dc8 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91801db0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91801d60 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91801df8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91801d88 <col:13> 'void *' lvalue ParmVar 0x7fec91801b30 'buffer' 'void *'
+|   |-CallExpr 0x7fec91801fd8 <<scratch space>:71:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91801fc0 <<scratch space>:71:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91801f70 <col:1> '<builtin fn type>' Function 0x7fec91801e10 '__builtin_sinh' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91802010 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91801f98 <col:23> 'double' lvalue Var 0x7fec91801c80 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91802088 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91802028 <col:5> 'double' lvalue Var 0x7fec91801c80 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91802070 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91802050 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91802100 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec918020e8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec918020c0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91802168 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91802150 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91802128 <col:12> 'double' lvalue Var 0x7fec91801c80 'd' 'double'
+|-FunctionDecl 0x7fec91801e10 <<scratch space>:71:1> col:1 implicit used __builtin_sinh 'double (double)' extern
+| |-ParmVarDecl 0x7fec91801eb0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91801f18 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91801f60 <col:1> Implicit
+|-FunctionDecl 0x7fec91802268 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:72:1 sinh_live 'double (void *)'
+| |-ParmVarDecl 0x7fec918021d8 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91802678 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec918023f0 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91802328 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec918023c8 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec918023b0 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91802388 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91802470 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91802458 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91802408 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec918024a0 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91802430 <col:13> 'void *' lvalue ParmVar 0x7fec918021d8 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91802590 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec918024b8 <col:5> 'double' lvalue Var 0x7fec91802328 'd' 'double'
+|   | `-CallExpr 0x7fec91802548 <<scratch space>:73:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec91802530 <<scratch space>:73:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec918024e0 <col:1> '<builtin fn type>' Function 0x7fec91801e10 '__builtin_sinh' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91802578 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91802508 <col:27> 'double' lvalue Var 0x7fec91802328 'd' 'double'
+|   |-CallExpr 0x7fec918025f8 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec918025e0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec918025b8 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91802660 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91802648 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91802620 <col:12> 'double' lvalue Var 0x7fec91802328 'd' 'double'
+|-FunctionDecl 0x7fec91802758 <line:8:3, line:17:3> <scratch space>:74:1 sqrt_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec918026c8 <../Data/C2AST/pr71020.c:9:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91802d10 <line:10:3, line:17:3>
+|   |-DeclStmt 0x7fec918028e0 <line:11:5, col:32>
+|   | `-VarDecl 0x7fec91802818 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec918028b8 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec918028a0 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91802878 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91802960 <line:12:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91802948 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec918028f8 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91802990 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91802920 <col:13> 'void *' lvalue ParmVar 0x7fec918026c8 'buffer' 'void *'
+|   |-CallExpr 0x7fec91802b70 <<scratch space>:75:1, ../Data/C2AST/pr71020.c:13:24> 'double'
+|   | |-ImplicitCastExpr 0x7fec91802b58 <<scratch space>:75:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91802b08 <col:1> '<builtin fn type>' Function 0x7fec918029a8 '__builtin_sqrt' 'double (double)'
+|   | `-ImplicitCastExpr 0x7fec91802ba0 <../Data/C2AST/pr71020.c:13:23> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91802b30 <col:23> 'double' lvalue Var 0x7fec91802818 'd' 'double'
+|   |-CompoundAssignOperator 0x7fec91802c18 <line:14:5, col:10> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91802bb8 <col:5> 'double' lvalue Var 0x7fec91802818 'd' 'double'
+|   | `-ImplicitCastExpr 0x7fec91802c00 <col:10> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91802be0 <col:10> 'int' 1
+|   |-CallExpr 0x7fec91802c90 <line:15:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91802c78 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91802c50 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91802cf8 <line:16:5, col:12>
+|     `-ImplicitCastExpr 0x7fec91802ce0 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec91802cb8 <col:12> 'double' lvalue Var 0x7fec91802818 'd' 'double'
+|-FunctionDecl 0x7fec918029a8 <<scratch space>:75:1> col:1 implicit used __builtin_sqrt 'double (double)' extern
+| |-ParmVarDecl 0x7fec91802a48 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91802ab0 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91802af8 <col:1> Implicit
+|-FunctionDecl 0x7fec91802df8 <../Data/C2AST/pr71020.c:19:3, line:27:3> <scratch space>:76:1 sqrt_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91802d68 <../Data/C2AST/pr71020.c:20:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91803208 <line:21:3, line:27:3>
+|   |-DeclStmt 0x7fec91802f80 <line:22:5, col:32>
+|   | `-VarDecl 0x7fec91802eb8 <col:5, col:31> col:12 used d 'double' cinit
+|   |   `-CallExpr 0x7fec91802f58 <col:16, col:31> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91802f40 <col:16> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91802f18 <col:16> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91803000 <line:23:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91802fe8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91802f98 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91803030 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91802fc0 <col:13> 'void *' lvalue ParmVar 0x7fec91802d68 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91803120 <line:24:5, col:28> 'double' '='
+|   | |-DeclRefExpr 0x7fec91803048 <col:5> 'double' lvalue Var 0x7fec91802eb8 'd' 'double'
+|   | `-CallExpr 0x7fec918030d8 <<scratch space>:77:1, ../Data/C2AST/pr71020.c:24:28> 'double'
+|   |   |-ImplicitCastExpr 0x7fec918030c0 <<scratch space>:77:1> 'double (*)(double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91803070 <col:1> '<builtin fn type>' Function 0x7fec918029a8 '__builtin_sqrt' 'double (double)'
+|   |   `-ImplicitCastExpr 0x7fec91803108 <../Data/C2AST/pr71020.c:24:27> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91803098 <col:27> 'double' lvalue Var 0x7fec91802eb8 'd' 'double'
+|   |-CallExpr 0x7fec91803188 <line:25:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91803170 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91803148 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec918031f0 <line:26:5, col:12>
+|     `-ImplicitCastExpr 0x7fec918031d8 <col:12> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fec918031b0 <col:12> 'double' lvalue Var 0x7fec91802eb8 'd' 'double'
+|-FunctionDecl 0x7fec918032e8 <line:31:3, line:42:3> <scratch space>:78:1 fmod_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec91803258 <../Data/C2AST/pr71020.c:32:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91803bb0 <line:33:3, line:42:3>
+|   |-DeclStmt 0x7fec91803470 <line:34:5, col:33>
+|   | `-VarDecl 0x7fec918033a8 <col:5, col:32> col:12 used d1 'double' cinit
+|   |   `-CallExpr 0x7fec91803448 <col:17, col:32> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91803430 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91803408 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-DeclStmt 0x7fec91803568 <line:35:5, col:33>
+|   | `-VarDecl 0x7fec918034a0 <col:5, col:32> col:12 used d2 'double' cinit
+|   |   `-CallExpr 0x7fec91803540 <col:17, col:32> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91803528 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91803500 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec918035e8 <line:36:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec918035d0 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91803580 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91803618 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec918035a8 <col:13> 'void *' lvalue ParmVar 0x7fec91803258 'buffer' 'void *'
+|   |-CallExpr 0x7fec918038f0 <<scratch space>:79:1, ../Data/C2AST/pr71020.c:37:29> 'double'
+|   | |-ImplicitCastExpr 0x7fec918038d8 <<scratch space>:79:1> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91803838 <col:1> '<builtin fn type>' Function 0x7fec91803670 '__builtin_fmod' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7fec91803928 <../Data/C2AST/pr71020.c:37:23> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fec91803860 <col:23> 'double' lvalue Var 0x7fec918033a8 'd1' 'double'
+|   | `-ImplicitCastExpr 0x7fec91803940 <col:27> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91803888 <col:27> 'double' lvalue Var 0x7fec918034a0 'd2' 'double'
+|   |-CompoundAssignOperator 0x7fec918039b8 <line:38:5, col:11> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91803958 <col:5> 'double' lvalue Var 0x7fec918033a8 'd1' 'double'
+|   | `-ImplicitCastExpr 0x7fec918039a0 <col:11> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91803980 <col:11> 'int' 1
+|   |-CompoundAssignOperator 0x7fec91803a50 <line:39:5, col:11> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec918039f0 <col:5> 'double' lvalue Var 0x7fec918034a0 'd2' 'double'
+|   | `-ImplicitCastExpr 0x7fec91803a38 <col:11> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91803a18 <col:11> 'int' 1
+|   |-CallExpr 0x7fec91803ac8 <line:40:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91803ab0 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91803a88 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91803b98 <line:41:5, col:17>
+|     `-BinaryOperator 0x7fec91803b70 <col:12, col:17> 'double' '+'
+|       |-ImplicitCastExpr 0x7fec91803b40 <col:12> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fec91803af0 <col:12> 'double' lvalue Var 0x7fec918033a8 'd1' 'double'
+|       `-ImplicitCastExpr 0x7fec91803b58 <col:17> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fec91803b18 <col:17> 'double' lvalue Var 0x7fec918034a0 'd2' 'double'
+|-FunctionDecl 0x7fec91803670 <<scratch space>:79:1> col:1 implicit used __builtin_fmod 'double (double, double)' extern
+| |-ParmVarDecl 0x7fec91803710 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fec91803770 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec918037e0 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91803828 <col:1> Implicit
+|-FunctionDecl 0x7fec91803ca8 <../Data/C2AST/pr71020.c:44:3, line:53:3> <scratch space>:80:1 fmod_live 'double (void *)'
+| |-ParmVarDecl 0x7fec91803c18 <../Data/C2AST/pr71020.c:45:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec918052a0 <line:46:3, line:53:3>
+|   |-DeclStmt 0x7fec91803e30 <line:47:5, col:33>
+|   | `-VarDecl 0x7fec91803d68 <col:5, col:32> col:12 used d1 'double' cinit
+|   |   `-CallExpr 0x7fec91803e08 <col:17, col:32> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91803df0 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91803dc8 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-DeclStmt 0x7fec91803f28 <line:48:5, col:33>
+|   | `-VarDecl 0x7fec91803e60 <col:5, col:32> col:12 used d2 'double' cinit
+|   |   `-CallExpr 0x7fec91803f00 <col:17, col:32> 'double'
+|   |     `-ImplicitCastExpr 0x7fec91803ee8 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec91803ec0 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91803fa8 <line:49:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91803f90 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91803f40 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec91803fd8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91803f68 <col:13> 'void *' lvalue ParmVar 0x7fec91803c18 'buffer' 'void *'
+|   |-BinaryOperator 0x7fec91805120 <line:50:5, col:34> 'double' '='
+|   | |-DeclRefExpr 0x7fec91805000 <col:5> 'double' lvalue Var 0x7fec91803d68 'd1' 'double'
+|   | `-CallExpr 0x7fec918050b8 <<scratch space>:81:1, ../Data/C2AST/pr71020.c:50:34> 'double'
+|   |   |-ImplicitCastExpr 0x7fec918050a0 <<scratch space>:81:1> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec91805028 <col:1> '<builtin fn type>' Function 0x7fec91803670 '__builtin_fmod' 'double (double, double)'
+|   |   |-ImplicitCastExpr 0x7fec918050f0 <../Data/C2AST/pr71020.c:50:28> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fec91805050 <col:28> 'double' lvalue Var 0x7fec91803d68 'd1' 'double'
+|   |   `-ImplicitCastExpr 0x7fec91805108 <col:32> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fec91805078 <col:32> 'double' lvalue Var 0x7fec91803e60 'd2' 'double'
+|   |-CompoundAssignOperator 0x7fec918051a8 <line:51:5, col:11> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91805148 <col:5> 'double' lvalue Var 0x7fec91803e60 'd2' 'double'
+|   | `-ImplicitCastExpr 0x7fec91805190 <col:11> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91805170 <col:11> 'int' 1
+|   `-ReturnStmt 0x7fec91805288 <line:52:5, col:17>
+|     `-BinaryOperator 0x7fec91805260 <col:12, col:17> 'double' '+'
+|       |-ImplicitCastExpr 0x7fec91805230 <col:12> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fec918051e0 <col:12> 'double' lvalue Var 0x7fec91803d68 'd1' 'double'
+|       `-ImplicitCastExpr 0x7fec91805248 <col:17> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fec91805208 <col:17> 'double' lvalue Var 0x7fec91803e60 'd2' 'double'
+|-FunctionDecl 0x7fec91805388 <line:31:3, line:42:3> <scratch space>:82:1 remainder_dead 'double (void *)'
+| |-ParmVarDecl 0x7fec918052f8 <../Data/C2AST/pr71020.c:32:16, col:22> col:22 used buffer 'void *'
+| `-CompoundStmt 0x7fec91805be8 <line:33:3, line:42:3>
+|   |-DeclStmt 0x7fec91805510 <line:34:5, col:33>
+|   | `-VarDecl 0x7fec91805448 <col:5, col:32> col:12 used d1 'double' cinit
+|   |   `-CallExpr 0x7fec918054e8 <col:17, col:32> 'double'
+|   |     `-ImplicitCastExpr 0x7fec918054d0 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec918054a8 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-DeclStmt 0x7fec91805608 <line:35:5, col:33>
+|   | `-VarDecl 0x7fec91805540 <col:5, col:32> col:12 used d2 'double' cinit
+|   |   `-CallExpr 0x7fec918055e0 <col:17, col:32> 'double'
+|   |     `-ImplicitCastExpr 0x7fec918055c8 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7fec918055a0 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+|   |-CallExpr 0x7fec91805688 <line:36:5, col:19> 'int'
+|   | |-ImplicitCastExpr 0x7fec91805670 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fec91805620 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+|   | `-ImplicitCastExpr 0x7fec918056b8 <col:13> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec91805648 <col:13> 'void *' lvalue ParmVar 0x7fec918052f8 'buffer' 'void *'
+|   |-CallExpr 0x7fec91805928 <<scratch space>:83:1, ../Data/C2AST/pr71020.c:37:29> 'double'
+|   | |-ImplicitCastExpr 0x7fec91805910 <<scratch space>:83:1> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fec91805898 <col:1> '<builtin fn type>' Function 0x7fec918056d0 '__builtin_remainder' 'double (double, double)'
+|   | |-ImplicitCastExpr 0x7fec91805960 <../Data/C2AST/pr71020.c:37:23> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fec918058c0 <col:23> 'double' lvalue Var 0x7fec91805448 'd1' 'double'
+|   | `-ImplicitCastExpr 0x7fec91805978 <col:27> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fec918058e8 <col:27> 'double' lvalue Var 0x7fec91805540 'd2' 'double'
+|   |-CompoundAssignOperator 0x7fec918059f0 <line:38:5, col:11> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91805990 <col:5> 'double' lvalue Var 0x7fec91805448 'd1' 'double'
+|   | `-ImplicitCastExpr 0x7fec918059d8 <col:11> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec918059b8 <col:11> 'int' 1
+|   |-CompoundAssignOperator 0x7fec91805a88 <line:39:5, col:11> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+|   | |-DeclRefExpr 0x7fec91805a28 <col:5> 'double' lvalue Var 0x7fec91805540 'd2' 'double'
+|   | `-ImplicitCastExpr 0x7fec91805a70 <col:11> 'double' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7fec91805a50 <col:11> 'int' 1
+|   |-CallExpr 0x7fec91805b00 <line:40:5, col:19> 'void'
+|   | `-ImplicitCastExpr 0x7fec91805ae8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fec91805ac0 <col:5> 'void (void)' Function 0x7fec9106e3a0 'do_something' 'void (void)'
+|   `-ReturnStmt 0x7fec91805bd0 <line:41:5, col:17>
+|     `-BinaryOperator 0x7fec91805ba8 <col:12, col:17> 'double' '+'
+|       |-ImplicitCastExpr 0x7fec91805b78 <col:12> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fec91805b28 <col:12> 'double' lvalue Var 4 errors generated.
+0x7fec91805448 'd1' 'double'
+|       `-ImplicitCastExpr 0x7fec91805b90 <col:17> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fec91805b50 <col:17> 'double' lvalue Var 0x7fec91805540 'd2' 'double'
+|-FunctionDecl 0x7fec918056d0 <<scratch space>:83:1> col:1 implicit used __builtin_remainder 'double (double, double)' extern
+| |-ParmVarDecl 0x7fec91805770 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7fec918057d0 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fec91805840 <col:1> Implicit
+| `-NoThrowAttr 0x7fec91805888 <col:1> Implicit
+`-FunctionDecl 0x7fec91805ce0 <../Data/C2AST/pr71020.c:44:3, line:53:3> <scratch space>:84:1 remainder_live 'double (void *)'
+  |-ParmVarDecl 0x7fec91805c50 <../Data/C2AST/pr71020.c:45:16, col:22> col:22 used buffer 'void *'
+  `-CompoundStmt 0x7fec918062c8 <line:46:3, line:53:3>
+    |-DeclStmt 0x7fec91805e68 <line:47:5, col:33>
+    | `-VarDecl 0x7fec91805da0 <col:5, col:32> col:12 used d1 'double' cinit
+    |   `-CallExpr 0x7fec91805e40 <col:17, col:32> 'double'
+    |     `-ImplicitCastExpr 0x7fec91805e28 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fec91805e00 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+    |-DeclStmt 0x7fec91805f60 <line:48:5, col:33>
+    | `-VarDecl 0x7fec91805e98 <col:5, col:32> col:12 used d2 'double' cinit
+    |   `-CallExpr 0x7fec91805f38 <col:17, col:32> 'double'
+    |     `-ImplicitCastExpr 0x7fec91805f20 <col:17> 'double (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fec91805ef8 <col:17> 'double (void)' Function 0x7fec9106e028 'random_double' 'double (void)'
+    |-CallExpr 0x7fec91805fe0 <line:49:5, col:19> 'int'
+    | |-ImplicitCastExpr 0x7fec91805fc8 <col:5> 'int (*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fec91805f78 <col:5> 'int (void *)' Function 0x7fec9106e1e8 'setjmp' 'int (void *)'
+    | `-ImplicitCastExpr 0x7fec91806010 <col:13> 'void *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fec91805fa0 <col:13> 'void *' lvalue ParmVar 0x7fec91805c50 'buffer' 'void *'
+    |-BinaryOperator 0x7fec91806148 <line:50:5, col:34> 'double' '='
+    | |-DeclRefExpr 0x7fec91806028 <col:5> 'double' lvalue Var 0x7fec91805da0 'd1' 'double'
+    | `-CallExpr 0x7fec918060e0 <<scratch space>:85:1, ../Data/C2AST/pr71020.c:50:34> 'double'
+    |   |-ImplicitCastExpr 0x7fec918060c8 <<scratch space>:85:1> 'double (*)(double, double)' <BuiltinFnToFnPtr>
+    |   | `-DeclRefExpr 0x7fec91806050 <col:1> '<builtin fn type>' Function 0x7fec918056d0 '__builtin_remainder' 'double (double, double)'
+    |   |-ImplicitCastExpr 0x7fec91806118 <../Data/C2AST/pr71020.c:50:28> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fec91806078 <col:28> 'double' lvalue Var 0x7fec91805da0 'd1' 'double'
+    |   `-ImplicitCastExpr 0x7fec91806130 <col:32> 'double' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fec918060a0 <col:32> 'double' lvalue Var 0x7fec91805e98 'd2' 'double'
+    |-CompoundAssignOperator 0x7fec918061d0 <line:51:5, col:11> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-DeclRefExpr 0x7fec91806170 <col:5> 'double' lvalue Var 0x7fec91805e98 'd2' 'double'
+    | `-ImplicitCastExpr 0x7fec918061b8 <col:11> 'double' <IntegralToFloating>
+    |   `-IntegerLiteral 0x7fec91806198 <col:11> 'int' 1
+    `-ReturnStmt 0x7fec918062b0 <line:52:5, col:17>
+      `-BinaryOperator 0x7fec91806288 <col:12, col:17> 'double' '+'
+        |-ImplicitCastExpr 0x7fec91806258 <col:12> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7fec91806208 <col:12> 'double' lvalue Var 0x7fec91805da0 'd1' 'double'
+        `-ImplicitCastExpr 0x7fec91806270 <col:17> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fec91806230 <col:17> 'double' lvalue Var 0x7fec91805e98 'd2' 'double'

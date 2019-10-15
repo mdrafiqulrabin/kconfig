@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f88250174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8824814af0 <../Data/C2AST/pr59569-2.c:2:1, line:6:1> line:2:6 foo 'void (int *, int)'
+  |-ParmVarDecl 0x7f88250181a0 <col:11, col:16> col:16 used a 'int *'
+  |-ParmVarDecl 0x7f8824814a18 <col:19, col:23> col:23 used b 'int'
+  `-CompoundStmt 0x7f8824814d90 <line:3:1, line:6:1>
+    `-ForStmt 0x7f8824814d58 <line:4:3, line:5:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7f8824814c08 <line:4:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7f8824814be0 <col:10> 'int' lvalue ParmVar 0x7f8824814a18 'b' 'int'
+      |-UnaryOperator 0x7f8824814c48 <col:13, col:14> 'int' postfix '--'
+      | `-DeclRefExpr 0x7f8824814c20 <col:13> 'int' lvalue ParmVar 0x7f8824814a18 'b' 'int'
+      `-BinaryOperator 0x7f8824814d30 <line:5:5, col:12> 'int' '='
+        |-ArraySubscriptExpr 0x7f8824814ce8 <col:5, col:8> 'int' lvalue
+        | |-ImplicitCastExpr 0x7f8824814cb8 <col:5> 'int *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f8824814c68 <col:5> 'int *' lvalue ParmVar 0x7f88250181a0 'a' 'int *'
+        | `-ImplicitCastExpr 0x7f8824814cd0 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f8824814c90 <col:7> 'int' lvalue ParmVar 0x7f8824814a18 'b' 'int'
+        `-IntegerLiteral 0x7f8824814d10 <col:12> 'int' 1

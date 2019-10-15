@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fe37f02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe37f02c978 <../Data/C2AST/pr78886.c:4:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fe37f02bea0 'unsigned long'
+|-FunctionDecl 0x7fe37f06d908 <line:5:7> col:7 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7fe37f06d9a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fe37f06da10 prev 0x7fe37f06d908 <col:1, col:22> col:7 used malloc 'void *(unsigned long)'
+| `-ParmVarDecl 0x7fe37f06d800 <col:14, col:21> col:21 x 'size_t':'unsigned long'
+`-FunctionDecl 0x7fe37f06db80 <line:7:1, line:12:1> line:7:6 foo 'void (void)'
+  `-CompoundStmt 0x7fe37f06de08 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fe37f06dcd8 <line:9:2, col:16>
+    | `-VarDecl 0x7fe37f06dc78 <col:2, col:15> col:15 used i 'volatile int'
+    |-CallExpr 0x7fe37f06dd80 <line:10:2, col:10> 'void *'
+    | |-ImplicitCastExpr 0x7fe37f06dd68 <col:2> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe37f06dcf0 <col:2> 'void *(unsigned long)' Function 0x7fe37f06da10 'malloc' 'void *(unsigned long)'
+    | `-ImplicitCastExpr 0x7fe37f06ddb0 <col:9> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe37f06dd18 <col:9> 'int' 1
+    `-ImplicitCastExpr 0x7fe37f06ddf0 <line:11:2> 'int' <LValueToRValue>
+      `-DeclRefExpr 0x7fe37f06ddc8 <col:2> 'volatile int' lvalue Var 0x7fe37f06dc78 'i' 'volatile int'

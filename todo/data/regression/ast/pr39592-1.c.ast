@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fabae0292e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fabae06ae68 <../Data/C2AST/pr39592-1.c:5:1, line:9:1> line:6:1 foo 'double (unsigned long)'
+  |-ParmVarDecl 0x7fabae029f78 <col:6, col:20> col:20 used var 'unsigned long'
+  `-CompoundStmt 0x7fabae06afc0 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fabae06afa8 <line:8:3, col:10>
+      `-ImplicitCastExpr 0x7fabae06af90 <col:10> 'double' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7fabae06af78 <col:10> 'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7fabae06af50 <col:10> 'unsigned long' lvalue ParmVar 0x7fabae029f78 'var' 'unsigned long'

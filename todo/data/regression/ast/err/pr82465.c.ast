@@ -1,0 +1,35 @@
+../Data/C2AST/pr82465.c:6:9: error: unknown type name '__vector'
+typedef __vector double v2df;
+        ^
+../Data/C2AST/pr82465.c:6:18: error: expected identifier or '('
+typedef __vector double v2df;
+                 ^
+In file included from ../Data/C2AST/pr82465.c:8:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/vecintrin.h:10468:2: error: "Use -fzvector to enable vector extensions"
+#error "Use -fzvector to enable vector extensions"
+ ^
+../Data/C2AST/pr82465.c:10:1: error: unknown type name 'v2df'
+v2df
+^
+../Data/C2AST/pr82465.c:11:6: error: unknown type name 'v2df'
+foo (v2df a)
+     ^
+5 errors generated.
+TranslationUnitDecl 0x7f98e382bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f98e382c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f98e382bf80 '__int128'
+|-TypedefDecl 0x7f98e382c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f98e382bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f98e382c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f98e382c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f98e382c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f98e382c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f98e382c600 'char *'
+|   `-BuiltinType 0x7f98e382bd80 'char'
+|-TypedefDecl 0x7f98e382c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f98e382c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f98e382c720 'struct __va_list_tag'
+|     `-Record 0x7f98e382c698 '__va_list_tag'
+`-FunctionDecl 0x7f98e402b268 <../Data/C2AST/pr82465.c:10:1, line:14:1> line:11:1 invalid foo 'int (int)'
+  |-ParmVarDecl 0x7f98e382c990 <col:6, col:11> col:11 invalid a 'int'
+  `-CompoundStmt 0x7f98e402b478 <line:12:1, line:14:1>

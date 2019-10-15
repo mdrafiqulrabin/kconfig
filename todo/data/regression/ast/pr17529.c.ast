@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fab0d82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fab0d86d8a0 <../Data/C2AST/pr17529.c:2:1, line:6:1> line:3:1 used bar 'void (const int *const)' static inline
+| |-ParmVarDecl 0x7fab0d82c978 <col:6, col:24> col:24 used x 'const int *const'
+| `-CompoundStmt 0x7fab0d86db18 <line:4:1, line:6:1>
+|   `-GCCAsmStmt 0x7fab0d86dab8 <line:5:3, col:37>
+|     `-UnaryOperator 0x7fab0d86da98 <col:34, col:35> 'const int' lvalue prefix '*'
+|       `-ImplicitCastExpr 0x7fab0d86da80 <col:35> 'const int *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fab0d86da58 <col:35> 'const int *const' lvalue ParmVar 0x7fab0d82c978 'x' 'const int *const'
+|-VarDecl 0x7fab0d86dbf0 <line:8:1, col:21> col:18 used y 'const int [1]' static
+`-FunctionDecl 0x7fab0d86dd10 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fab0d86deb8 <line:12:1, line:14:1>
+    `-CallExpr 0x7fab0d86de70 <line:13:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fab0d86de58 <col:3> 'void (*)(const int *const)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fab0d86ddb0 <col:3> 'void (const int *const)' Function 0x7fab0d86d8a0 'bar' 'void (const int *const)'
+      `-ImplicitCastExpr 0x7fab0d86dea0 <col:8> 'const int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fab0d86ddd8 <col:8> 'const int [1]' lvalue Var 0x7fab0d86dbf0 'y' 'const int [1]'

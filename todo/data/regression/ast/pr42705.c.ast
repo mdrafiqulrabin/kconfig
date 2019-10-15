@@ -1,0 +1,215 @@
+TranslationUnitDecl 0x7fbe070068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe07007578 <../Data/C2AST/pr42705.c:1:1, col:13> col:13 referenced GLint 'int'
+| `-BuiltinType 0x7fbe070069e0 'int'
+|-TypedefDecl 0x7fbe05841200 <line:2:1, col:23> col:23 referenced GLubyte 'unsigned char'
+| `-BuiltinType 0x7fbe07006a40 'unsigned char'
+|-TypedefDecl 0x7fbe05841270 <line:3:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fbe07006a80 'unsigned int'
+|-RecordDecl 0x7fbe058412c8 <line:4:1, line:7:1> line:4:8 struct radeon_bo definition
+| |-FieldDecl 0x7fbe05841388 <line:5:5, col:11> col:11 referenced ptr 'void *'
+| `-FieldDecl 0x7fbe05841400 <line:6:5, col:14> col:14 referenced flags 'uint32_t':'unsigned int'
+|-RecordDecl 0x7fbe05841448 <line:8:1, line:12:1> line:8:8 struct radeon_renderbuffer definition
+| |-FieldDecl 0x7fbe058415a0 <line:9:5, col:23> col:23 referenced bo 'struct radeon_bo *'
+| |-FieldDecl 0x7fbe05841600 <line:10:5, col:18> col:18 referenced cpp 'unsigned int'
+| `-FieldDecl 0x7fbe05841660 <line:11:5, col:9> col:9 referenced has_surface 'int'
+|-FunctionDecl 0x7fbe05841aa0 <line:13:1, line:47:1> line:14:7 used r600_1d_tile_helper 'GLint (const struct radeon_renderbuffer *, GLint, GLint, GLint, GLint)' static inline
+| |-ParmVarDecl 0x7fbe05841780 <col:27, col:62> col:62 used rrb 'const struct radeon_renderbuffer *'
+| |-ParmVarDecl 0x7fbe058417f0 <line:15:6, col:12> col:12 used x 'GLint':'int'
+| |-ParmVarDecl 0x7fbe05841860 <col:15, col:21> col:21 y 'GLint':'int'
+| |-ParmVarDecl 0x7fbe058418d0 <col:24, col:30> col:30 used is_depth 'GLint':'int'
+| |-ParmVarDecl 0x7fbe05841940 <col:40, col:46> col:46 is_stencil 'GLint':'int'
+| `-CompoundStmt 0x7fbe05843110 <line:16:1, line:47:1>
+|   |-DeclStmt 0x7fbe05841cc0 <line:17:3, col:33>
+|   | `-VarDecl 0x7fbe05841bb8 <col:3, col:30> col:9 used element_bytes 'GLint':'int' cinit
+|   |   `-ImplicitCastExpr 0x7fbe05841ca8 <col:25, col:30> 'GLint':'int' <IntegralCast>
+|   |     `-ImplicitCastExpr 0x7fbe05841c90 <col:25, col:30> 'unsigned int' <LValueToRValue>
+|   |       `-MemberExpr 0x7fbe05841c58 <col:25, col:30> 'const unsigned int' lvalue ->cpp 0x7fbe05841600
+|   |         `-ImplicitCastExpr 0x7fbe05841c40 <col:25> 'const struct radeon_renderbuffer *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fbe05841c18 <col:25> 'const struct radeon_renderbuffer *' lvalue ParmVar 0x7fbe05841780 'rrb' 'const struct radeon_renderbuffer *'
+|   |-DeclStmt 0x7fbe05841d68 <line:18:3, col:24>
+|   | `-VarDecl 0x7fbe05841ce8 <col:3, col:23> col:9 used num_samples 'GLint':'int' cinit
+|   |   `-IntegerLiteral 0x7fbe05841d48 <col:23> 'int' 1
+|   |-DeclStmt 0x7fbe05841e10 <line:19:3, col:23>
+|   | `-VarDecl 0x7fbe05841d90 <col:3, col:22> col:9 used tile_width 'GLint':'int' cinit
+|   |   `-IntegerLiteral 0x7fbe05841df0 <col:22> 'int' 8
+|   |-DeclStmt 0x7fbe05841eb8 <line:20:3, col:24>
+|   | `-VarDecl 0x7fbe05841e38 <col:3, col:23> col:9 used tile_height 'GLint':'int' cinit
+|   |   `-IntegerLiteral 0x7fbe05841e98 <col:23> 'int' 8
+|   |-DeclStmt 0x7fbe05841f60 <line:21:3, col:27>
+|   | `-VarDecl 0x7fbe05841ee0 <col:3, col:26> col:9 used tile_thickness 'GLint':'int' cinit
+|   |   `-IntegerLiteral 0x7fbe05841f40 <col:26> 'int' 1
+|   |-DeclStmt 0x7fbe05841fe8 <line:22:3, col:19>
+|   | `-VarDecl 0x7fbe05841f88 <col:3, col:9> col:9 used tile_bytes 'GLint':'int'
+|   |-DeclStmt 0x7fbe05842070 <line:23:3, col:22>
+|   | `-VarDecl 0x7fbe05842010 <col:3, col:9> col:9 used tiles_per_row 'GLint':'int'
+|   |-DeclStmt 0x7fbe058420f8 <line:24:3, col:21>
+|   | `-VarDecl 0x7fbe05842098 <col:3, col:9> col:9 used slice_offset 'GLint':'int'
+|   |-DeclStmt 0x7fbe05842180 <line:25:3, col:23>
+|   | `-VarDecl 0x7fbe05842120 <col:3, col:9> col:9 used tile_row_index 'GLint':'int'
+|   |-DeclStmt 0x7fbe05842260 <line:26:3, col:26>
+|   | `-VarDecl 0x7fbe05842200 <col:3, col:9> col:9 used tile_column_index 'GLint':'int'
+|   |-DeclStmt 0x7fbe058422e8 <line:27:3, col:20>
+|   | `-VarDecl 0x7fbe05842288 <col:3, col:9> col:9 used tile_offset 'GLint':'int'
+|   |-DeclStmt 0x7fbe05842390 <line:28:3, col:25>
+|   | `-VarDecl 0x7fbe05842310 <col:3, col:24> col:9 used pixel_number 'GLint':'int' cinit
+|   |   `-IntegerLiteral 0x7fbe05842370 <col:24> 'int' 0
+|   |-DeclStmt 0x7fbe05842418 <line:29:3, col:23>
+|   | `-VarDecl 0x7fbe058423b8 <col:3, col:9> col:9 used element_offset 'GLint':'int'
+|   |-DeclStmt 0x7fbe058424c0 <line:30:3, col:19>
+|   | `-VarDecl 0x7fbe05842440 <col:3, col:18> col:9 used offset 'GLint':'int' cinit
+|   |   `-IntegerLiteral 0x7fbe058424a0 <col:18> 'int' 0
+|   |-BinaryOperator 0x7fbe058426e0 <line:31:3, line:32:25> 'GLint':'int' '='
+|   | |-DeclRefExpr 0x7fbe058424d8 <line:31:3> 'GLint':'int' lvalue Var 0x7fbe05841f88 'tile_bytes' 'GLint':'int'
+|   | `-BinaryOperator 0x7fbe058426b8 <col:16, line:32:25> 'int' '*'
+|   |   |-BinaryOperator 0x7fbe05842650 <line:31:16, line:32:9> 'int' '*'
+|   |   | |-BinaryOperator 0x7fbe058425e8 <line:31:16, col:43> 'int' '*'
+|   |   | | |-BinaryOperator 0x7fbe05842580 <col:16, col:29> 'int' '*'
+|   |   | | | |-ImplicitCastExpr 0x7fbe05842550 <col:16> 'GLint':'int' <LValueToRValue>
+|   |   | | | | `-DeclRefExpr 0x7fbe05842500 <col:16> 'GLint':'int' lvalue Var 0x7fbe05841d90 'tile_width' 'GLint':'int'
+|   |   | | | `-ImplicitCastExpr 0x7fbe05842568 <col:29> 'GLint':'int' <LValueToRValue>
+|   |   | | |   `-DeclRefExpr 0x7fbe05842528 <col:29> 'GLint':'int' lvalue Var 0x7fbe05841e38 'tile_height' 'GLint':'int'
+|   |   | | `-ImplicitCastExpr 0x7fbe058425d0 <col:43> 'GLint':'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fbe058425a8 <col:43> 'GLint':'int' lvalue Var 0x7fbe05841ee0 'tile_thickness' 'GLint':'int'
+|   |   | `-ImplicitCastExpr 0x7fbe05842638 <line:32:9> 'GLint':'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fbe05842610 <col:9> 'GLint':'int' lvalue Var 0x7fbe05841bb8 'element_bytes' 'GLint':'int'
+|   |   `-ImplicitCastExpr 0x7fbe058426a0 <col:25> 'GLint':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbe05842678 <col:25> 'GLint':'int' lvalue Var 0x7fbe05841ce8 'num_samples' 'GLint':'int'
+|   |-BinaryOperator 0x7fbe058427d8 <line:33:3, col:27> 'GLint':'int' '='
+|   | |-DeclRefExpr 0x7fbe05842708 <col:3> 'GLint':'int' lvalue Var 0x7fbe05842200 'tile_column_index' 'GLint':'int'
+|   | `-BinaryOperator 0x7fbe058427b0 <col:23, col:27> 'int' '/'
+|   |   |-ImplicitCastExpr 0x7fbe05842780 <col:23> 'GLint':'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fbe05842730 <col:23> 'GLint':'int' lvalue ParmVar 0x7fbe058417f0 'x' 'GLint':'int'
+|   |   `-ImplicitCastExpr 0x7fbe05842798 <col:27> 'GLint':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbe05842758 <col:27> 'GLint':'int' lvalue Var 0x7fbe05841d90 'tile_width' 'GLint':'int'
+|   |-BinaryOperator 0x7fbe058429e0 <line:34:3, line:35:27> 'GLint':'int' '='
+|   | |-DeclRefExpr 0x7fbe05842800 <line:34:3> 'GLint':'int' lvalue Var 0x7fbe05842288 'tile_offset' 'GLint':'int'
+|   | `-BinaryOperator 0x7fbe058429b8 <col:17, line:35:27> 'int' '*'
+|   |   |-ParenExpr 0x7fbe05842958 <line:34:17, line:35:23> 'int'
+|   |   | `-BinaryOperator 0x7fbe05842930 <line:34:18, line:35:6> 'int' '+'
+|   |   |   |-ParenExpr 0x7fbe058428d0 <line:34:18, col:49> 'int'
+|   |   |   | `-BinaryOperator 0x7fbe058428a8 <col:19, col:36> 'int' '*'
+|   |   |   |   |-ImplicitCastExpr 0x7fbe05842878 <col:19> 'GLint':'int' <LValueToRValue>
+|   |   |   |   | `-DeclRefExpr 0x7fbe05842828 <col:19> 'GLint':'int' lvalue Var 0x7fbe05842120 'tile_row_index' 'GLint':'int'
+|   |   |   |   `-ImplicitCastExpr 0x7fbe05842890 <col:36> 'GLint':'int' <LValueToRValue>
+|   |   |   |     `-DeclRefExpr 0x7fbe05842850 <col:36> 'GLint':'int' lvalue Var 0x7fbe05842010 'tiles_per_row' 'GLint':'int'
+|   |   |   `-ImplicitCastExpr 0x7fbe05842918 <line:35:6> 'GLint':'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fbe058428f0 <col:6> 'GLint':'int' lvalue Var 0x7fbe05842200 'tile_column_index' 'GLint':'int'
+|   |   `-ImplicitCastExpr 0x7fbe058429a0 <col:27> 'GLint':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbe05842978 <col:27> 'GLint':'int' lvalue Var 0x7fbe05841f88 'tile_bytes' 'GLint':'int'
+|   |-IfStmt 0x7fbe05842f20 <line:36:3, line:44:3>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbe05842a30 <line:36:7> 'GLint':'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbe05842a08 <col:7> 'GLint':'int' lvalue ParmVar 0x7fbe058418d0 'is_depth' 'GLint':'int'
+|   | |-CompoundStmt 0x7fbe05842a48 <col:17, line:37:3>
+|   | `-CompoundStmt 0x7fbe05842ef8 <line:38:8, line:44:3>
+|   |   |-DeclStmt 0x7fbe05842ac8 <line:39:7, col:26>
+|   |   | `-VarDecl 0x7fbe05842a68 <col:7, col:13> col:13 used sample_offset 'GLint':'int'
+|   |   |-SwitchStmt 0x7fbe05842b20 <line:40:7, line:42:7>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-ImplicitCastExpr 0x7fbe05842b08 <line:40:15> 'GLint':'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fbe05842ae0 <col:15> 'GLint':'int' lvalue Var 0x7fbe05841bb8 'element_bytes' 'GLint':'int'
+|   |   | `-CompoundStmt 0x7fbe05842d60 <col:30, line:42:7>
+|   |   |   `-CaseStmt 0x7fbe05842b70 <line:41:4, col:52>
+|   |   |     |-IntegerLiteral 0x7fbe05842b50 <col:9> 'int' 1
+|   |   |     |-<<<NULL>>>
+|   |   |     `-CompoundAssignOperator 0x7fbe05842d28 <col:18, col:52> 'GLint':'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |       |-DeclRefExpr 0x7fbe05842ba8 <col:18> 'GLint':'int' lvalue Var 0x7fbe05842310 'pixel_number' 'GLint':'int'
+|   |   |       `-BinaryOperator 0x7fbe05842d00 <col:34, col:52> 'int' '<<'
+|   |   |         |-ParenExpr 0x7fbe05842cc0 <col:34, col:47> 'int'
+|   |   |         | `-BinaryOperator 0x7fbe05842c98 <col:35, col:46> 'int' '&'
+|   |   |         |   |-ParenExpr 0x7fbe05842c58 <col:35, col:42> 'GLint':'int'
+|   |   |         |   | `-BinaryOperator 0x7fbe05842c30 <col:36, col:41> 'GLint':'int' '>>'
+|   |   |         |   |   |-ImplicitCastExpr 0x7fbe05842c18 <col:36> 'GLint':'int' <LValueToRValue>
+|   |   |         |   |   | `-DeclRefExpr 0x7fbe05842bd0 <col:36> 'GLint':'int' lvalue ParmVar 0x7fbe058417f0 'x' 'GLint':'int'
+|   |   |         |   |   `-IntegerLiteral 0x7fbe05842bf8 <col:41> 'int' 0
+|   |   |         |   `-IntegerLiteral 0x7fbe05842c78 <col:46> 'int' 1
+|   |   |         `-IntegerLiteral 0x7fbe05842ce0 <col:52> 'int' 0
+|   |   `-BinaryOperator 0x7fbe05842ed0 <line:43:7, col:69> 'GLint':'int' '='
+|   |     |-DeclRefExpr 0x7fbe05842d78 <col:7> 'GLint':'int' lvalue Var 0x7fbe058423b8 'element_offset' 'GLint':'int'
+|   |     `-BinaryOperator 0x7fbe05842ea8 <col:24, col:69> 'int' '+'
+|   |       |-ImplicitCastExpr 0x7fbe05842e90 <col:24> 'GLint':'int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fbe05842da0 <col:24> 'GLint':'int' lvalue Var 0x7fbe05842a68 'sample_offset' 'GLint':'int'
+|   |       `-ParenExpr 0x7fbe05842e70 <col:40, col:69> 'int'
+|   |         `-BinaryOperator 0x7fbe05842e48 <col:41, col:56> 'int' '*'
+|   |           |-ImplicitCastExpr 0x7fbe05842e18 <col:41> 'GLint':'int' <LValueToRValue>
+|   |           | `-DeclRefExpr 0x7fbe05842dc8 <col:41> 'GLint':'int' lvalue Var 0x7fbe05842310 'pixel_number' 'GLint':'int'
+|   |           `-ImplicitCastExpr 0x7fbe05842e30 <col:56> 'GLint':'int' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fbe05842df0 <col:56> 'GLint':'int' lvalue Var 0x7fbe05841bb8 'element_bytes' 'GLint':'int'
+|   |-BinaryOperator 0x7fbe05843090 <line:45:3, col:41> 'GLint':'int' '='
+|   | |-DeclRefExpr 0x7fbe05842f58 <col:3> 'GLint':'int' lvalue Var 0x7fbe05842440 'offset' 'GLint':'int'
+|   | `-BinaryOperator 0x7fbe05843068 <col:12, col:41> 'int' '+'
+|   |   |-BinaryOperator 0x7fbe05843000 <col:12, col:27> 'int' '+'
+|   |   | |-ImplicitCastExpr 0x7fbe05842fd0 <col:12> 'GLint':'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fbe05842f80 <col:12> 'GLint':'int' lvalue Var 0x7fbe05842098 'slice_offset' 'GLint':'int'
+|   |   | `-ImplicitCastExpr 0x7fbe05842fe8 <col:27> 'GLint':'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fbe05842fa8 <col:27> 'GLint':'int' lvalue Var 0x7fbe05842288 'tile_offset' 'GLint':'int'
+|   |   `-ImplicitCastExpr 0x7fbe05843050 <col:41> 'GLint':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbe05843028 <col:41> 'GLint':'int' lvalue Var 0x7fbe058423b8 'element_offset' 'GLint':'int'
+|   `-ReturnStmt 0x7fbe058430f8 <line:46:3, col:10>
+|     `-ImplicitCastExpr 0x7fbe058430e0 <col:10> 'GLint':'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbe058430b8 <col:10> 'GLint':'int' lvalue Var 0x7fbe05842440 'offset' 'GLint':'int'
+`-FunctionDecl 0x7fbe05858ea0 <line:48:1, line:58:1> line:48:10 r600_ptr_color 'GLubyte *(const struct radeon_renderbuffer *, GLint, GLint)'
+  |-ParmVarDecl 0x7fbe05858c28 <col:25, col:60> col:60 used rrb 'const struct radeon_renderbuffer *'
+  |-ParmVarDecl 0x7fbe05858c98 <line:49:4, col:10> col:10 used x 'GLint':'int'
+  |-ParmVarDecl 0x7fbe05858d08 <col:13, col:19> col:19 used y 'GLint':'int'
+  `-CompoundStmt 0x7fbe05859810 <line:50:1, line:58:1>
+    |-DeclStmt 0x7fbe058590c0 <line:51:3, col:30>
+    | `-VarDecl 0x7fbe05858f68 <col:3, col:27> col:12 used ptr 'GLubyte *' cinit
+    |   `-ImplicitCastExpr 0x7fbe058590a8 <col:18, col:27> 'GLubyte *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fbe05859090 <col:18, col:27> 'void *' <LValueToRValue>
+    |       `-MemberExpr 0x7fbe05859058 <col:18, col:27> 'void *' lvalue ->ptr 0x7fbe05841388
+    |         `-ImplicitCastExpr 0x7fbe05859040 <col:18, col:23> 'struct radeon_bo *' <LValueToRValue>
+    |           `-MemberExpr 0x7fbe05859008 <col:18, col:23> 'struct radeon_bo *const' lvalue ->bo 0x7fbe058415a0
+    |             `-ImplicitCastExpr 0x7fbe05858ff0 <col:18> 'const struct radeon_renderbuffer *' <LValueToRValue>
+    |               `-DeclRefExpr 0x7fbe05858fc8 <col:18> 'const struct radeon_renderbuffer *' lvalue ParmVar 0x7fbe05858c28 'rrb' 'const struct radeon_renderbuffer *'
+    |-DeclStmt 0x7fbe058591c8 <line:52:3, col:24>
+    | `-VarDecl 0x7fbe058590e8 <col:3, col:23> col:12 used mask 'uint32_t':'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fbe058591b0 <col:19, col:23> 'uint32_t':'unsigned int' <IntegralCast>
+    |     `-BinaryOperator 0x7fbe05859188 <col:19, col:23> 'int' '|'
+    |       |-IntegerLiteral 0x7fbe05859148 <col:19> 'int' 1
+    |       `-IntegerLiteral 0x7fbe05859168 <col:23> 'int' 2
+    |-DeclStmt 0x7fbe05859250 <line:53:3, col:15>
+    | `-VarDecl 0x7fbe058591f0 <col:3, col:9> col:9 used offset 'GLint':'int'
+    |-IfStmt 0x7fbe058596f8 <line:54:3, line:56:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbe05859480 <line:54:7, col:50> 'int' '||'
+    | | |-ImplicitCastExpr 0x7fbe05859468 <col:7, col:12> 'int' <LValueToRValue>
+    | | | `-MemberExpr 0x7fbe058592a8 <col:7, col:12> 'const int' lvalue ->has_surface 0x7fbe05841660
+    | | |   `-ImplicitCastExpr 0x7fbe05859290 <col:7> 'const struct radeon_renderbuffer *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fbe05859268 <col:7> 'const struct radeon_renderbuffer *' lvalue ParmVar 0x7fbe05858c28 'rrb' 'const struct radeon_renderbuffer *'
+    | | `-UnaryOperator 0x7fbe05859448 <col:27, col:50> 'int' prefix '!'
+    | |   `-ParenExpr 0x7fbe05859428 <col:28, col:50> 'unsigned int'
+    | |     `-BinaryOperator 0x7fbe05859400 <col:29, col:46> 'unsigned int' '&'
+    | |       |-ImplicitCastExpr 0x7fbe058593d0 <col:29, col:38> 'uint32_t':'unsigned int' <LValueToRValue>
+    | |       | `-MemberExpr 0x7fbe05859370 <col:29, col:38> 'uint32_t':'unsigned int' lvalue ->flags 0x7fbe05841400
+    | |       |   `-ImplicitCastExpr 0x7fbe05859358 <col:29, col:34> 'struct radeon_bo *' <LValueToRValue>
+    | |       |     `-MemberExpr 0x7fbe05859320 <col:29, col:34> 'struct radeon_bo *const' lvalue ->bo 0x7fbe058415a0
+    | |       |       `-ImplicitCastExpr 0x7fbe05859308 <col:29> 'const struct radeon_renderbuffer *' <LValueToRValue>
+    | |       |         `-DeclRefExpr 0x7fbe058592e0 <col:29> 'const struct radeon_renderbuffer *' lvalue ParmVar 0x7fbe05858c28 'rrb' 'const struct radeon_renderbuffer *'
+    | |       `-ImplicitCastExpr 0x7fbe058593e8 <col:46> 'uint32_t':'unsigned int' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fbe058593a8 <col:46> 'uint32_t':'unsigned int' lvalue Var 0x7fbe058590e8 'mask' 'uint32_t':'unsigned int'
+    | |-CompoundStmt 0x7fbe058596e0 <col:53, line:56:3>
+    | | `-BinaryOperator 0x7fbe058596b8 <line:55:7, col:51> 'GLint':'int' '='
+    | |   |-DeclRefExpr 0x7fbe058594a8 <col:7> 'GLint':'int' lvalue Var 0x7fbe058591f0 'offset' 'GLint':'int'
+    | |   `-CallExpr 0x7fbe05859620 <col:16, col:51> 'GLint':'int'
+    | |     |-ImplicitCastExpr 0x7fbe05859608 <col:16> 'GLint (*)(const struct radeon_renderbuffer *, GLint, GLint, GLint, GLint)' <FunctionToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fbe058594d0 <col:16> 'GLint (const struct radeon_renderbuffer *, GLint, GLint, GLint, GLint)' Function 0x7fbe05841aa0 'r600_1d_tile_helper' 'GLint (const struct radeon_renderbuffer *, GLint, GLint, GLint, GLint)'
+    | |     |-ImplicitCastExpr 0x7fbe05859670 <col:36> 'const struct radeon_renderbuffer *' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fbe058594f8 <col:36> 'const struct radeon_renderbuffer *' lvalue ParmVar 0x7fbe05858c28 'rrb' 'const struct radeon_renderbuffer *'
+    | |     |-ImplicitCastExpr 0x7fbe05859688 <col:41> 'GLint':'int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fbe05859520 <col:41> 'GLint':'int' lvalue ParmVar 0x7fbe05858c98 'x' 'GLint':'int'
+    | |     |-ImplicitCastExpr 0x7fbe058596a0 <col:44> 'GLint':'int' <LValueToRValue>
+    | |     | `-DeclRefExpr 0x7fbe05859548 <col:44> 'GLint':'int' lvalue ParmVar 0x7fbe05858d08 'y' 'GLint':'int'
+    | |     |-IntegerLiteral 0x7fbe05859570 <col:47> 'int' 0
+    | |     `-IntegerLiteral 0x7fbe05859590 <col:50> 'int' 0
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbe058597f8 <line:57:3, col:21>
+      `-UnaryOperator 0x7fbe058597d8 <col:10, col:21> 'GLubyte *' prefix '&'
+        `-ArraySubscriptExpr 0x7fbe058597b0 <col:11, col:21> 'GLubyte':'unsigned char' lvalue
+          |-ImplicitCastExpr 0x7fbe05859780 <col:11> 'GLubyte *' <LValueToRValue>
+          | `-DeclRefExpr 0x7fbe05859730 <col:11> 'GLubyte *' lvalue Var 0x7fbe05858f68 'ptr' 'GLubyte *'
+          `-ImplicitCastExpr 0x7fbe05859798 <col:15> 'GLint':'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fbe05859758 <col:15> 'GLint':'int' lvalue Var 0x7fbe058591f0 'offset' 'GLint':'int'

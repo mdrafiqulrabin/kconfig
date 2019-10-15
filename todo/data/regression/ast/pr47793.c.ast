@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7fce3302bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fce33814228 <../Data/C2AST/pr47793.c:7:1, line:11:1> line:8:1 main 'int (void)'
+  `-CompoundStmt 0x7fce33814370 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fce33814358 <line:10:3, col:10>
+      `-IntegerLiteral 0x7fce33814338 <col:10> 'int' 0

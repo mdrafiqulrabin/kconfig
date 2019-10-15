@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7fece702bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fece702c960 <../Data/C2AST/pr51077.c:3:1, col:37> col:8 struct S definition
+| |-FieldDecl 0x7fece7809638 <col:12, col:26> col:26 s 'unsigned char'
+| `-FieldDecl 0x7fece7809700 <col:12, col:34> col:29 referenced t 'unsigned char [256]'
+|-FunctionDecl 0x7fece7809a90 <line:5:1, line:15:1> line:6:1 foo 'void (const struct S *, struct S *, int)'
+| |-ParmVarDecl 0x7fece7809800 <col:6, col:22> col:22 used x 'const struct S *'
+| |-ParmVarDecl 0x7fece78098e0 <col:25, col:35> col:35 used y 'struct S *'
+| |-ParmVarDecl 0x7fece7809958 <col:38, col:42> col:42 used z 'int'
+| `-CompoundStmt 0x7fece780aab0 <line:7:1, line:15:1>
+|   |-DeclStmt 0x7fece7809c00 <line:8:3, col:8>
+|   | `-VarDecl 0x7fece7809ba0 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7fece780aa78 <line:9:3, line:14:5>
+|     |-BinaryOperator 0x7fece7809c60 <line:9:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fece7809c18 <col:8> 'int' lvalue Var 0x7fece7809ba0 'i' 'int'
+|     | `-IntegerLiteral 0x7fece7809c40 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fece7809ce8 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fece7809cd0 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fece7809c88 <col:15> 'int' lvalue Var 0x7fece7809ba0 'i' 'int'
+|     | `-IntegerLiteral 0x7fece7809cb0 <col:19> 'int' 8
+|     |-UnaryOperator 0x7fece7809d38 <col:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fece7809d10 <col:22> 'int' lvalue Var 0x7fece7809ba0 'i' 'int'
+|     `-CompoundStmt 0x7fece780aa50 <line:10:5, line:14:5>
+|       |-DeclStmt 0x7fece7809ea8 <line:11:7, col:32>
+|       | `-VarDecl 0x7fece7809d80 <col:7, col:31> col:23 used a 'const struct S *' cinit
+|       |   `-UnaryOperator 0x7fece7809e88 <col:27, col:31> 'const struct S *' prefix '&'
+|       |     `-ArraySubscriptExpr 0x7fece7809e60 <col:28, col:31> 'const struct S':'const struct S' lvalue
+|       |       |-ImplicitCastExpr 0x7fece7809e30 <col:28> 'const struct S *' <LValueToRValue>
+|       |       | `-DeclRefExpr 0x7fece7809de0 <col:28> 'const struct S *' lvalue ParmVar 0x7fece7809800 'x' 'const struct S *'
+|       |       `-ImplicitCastExpr 0x7fece7809e48 <col:30> 'int' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7fece7809e08 <col:30> 'int' lvalue Var 0x7fece7809ba0 'i' 'int'
+|       |-CallExpr 0x7fece780a7c0 <line:12:7, col:77> 'void *'
+|       | |-ImplicitCastExpr 0x7fece780a7a8 <col:7> 'void *(*)(void *, const void *, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|       | | `-DeclRefExpr 0x7fece780a1c8 <col:7> '<builtin fn type>' Function 0x7fece7809f40 '__builtin___memcpy_chk' 'void *(void *, const void *, unsigned long, unsigned long)'
+|       | |-ImplicitCastExpr 0x7fece780a820 <col:31, col:34> 'void *' <BitCast>
+|       | | `-ImplicitCastExpr 0x7fece780a808 <col:31, col:34> 'unsigned char *' <ArrayToPointerDecay>
+|       | |   `-MemberExpr 0x7fece780a230 <col:31, col:34> 'unsigned char [256]' lvalue ->t 0x7fece7809700
+|       | |     `-ImplicitCastExpr 0x7fece780a218 <col:31> 'struct S *' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7fece780a1f0 <col:31> 'struct S *' lvalue ParmVar 0x7fece78098e0 'y' 'struct S *'
+|       | |-ImplicitCastExpr 0x7fece780a850 <col:37, col:40> 'const void *' <BitCast>
+|       | | `-ImplicitCastExpr 0x7fece780a838 <col:37, col:40> 'const unsigned char *' <ArrayToPointerDecay>
+|       | |   `-MemberExpr 0x7fece780a2a8 <col:37, col:40> 'unsigned char const[256]' lvalue ->t 0x7fece7809700
+|       | |     `-ImplicitCastExpr 0x7fece780a290 <col:37> 'const struct S *' <LValueToRValue>
+|       | |       `-DeclRefExpr 0x7fece780a268 <col:37> 'const struct S *' lvalue Var 0x7fece7809d80 'a' 'const struct S *'
+|       | |-ImplicitCastExpr 0x7fece780a880 <col:43> 'unsigned long' <IntegralCast>
+|       | | `-ImplicitCastExpr 0x7fece780a868 <col:43> 'int' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x7fece780a2e0 <col:43> 'int' lvalue ParmVar 0x7fece7809958 'z' 'int'
+|       | `-CallExpr 0x7fece780a660 <col:46, col:76> 'unsigned long'
+|       |   |-ImplicitCastExpr 0x7fece780a648 <col:46> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|       |   | `-DeclRefExpr 0x7fece780a508 <col:46> '<builtin fn type>' Function 0x7fece780a350 '__builtin_object_size' 'unsigned long (const void *, int)'
+|       |   |-ImplicitCastExpr 0x7fece780a6b0 <col:69, col:72> 'const void *' <BitCast>
+|       |   | `-ImplicitCastExpr 0x7fece780a698 <col:69, col:72> 'unsigned char *' <ArrayToPointerDecay>
+|       |   |   `-MemberExpr 0x7fece780a570 <col:69, col:72> 'unsigned char [256]' lvalue ->t 0x7fece7809700
+|       |   |     `-ImplicitCastExpr 0x7fece780a558 <col:69> 'struct S *' <LValueToRValue>
+|       |   |       `-DeclRefExpr 0x7fece780a530 <col:69> 'struct S *' lvalue ParmVar 0x7fece78098e0 'y' 'struct S *'
+|       |   `-IntegerLiteral 0x7fece780a5a8 <col:75> 'int' 0
+|       `-BinaryOperator 0x7fece780aa28 <line:13:7, col:31> 'struct S *' '='
+|         |-DeclRefExpr 0x7fece780a898 <col:7> 'struct S *' lvalue ParmVar 0x7fece78098e0 'y' 'struct S *'
+|         `-CStyleCastExpr 0x7fece780aa00 <col:11, col:31> 'struct S *' <BitCast>
+|           `-UnaryOperator 0x7fece780a9b8 <col:24, col:31> 'unsigned char *' prefix '&'
+|             `-ArraySubscriptExpr 0x7fece780a990 <col:25, col:31> 'unsigned char' lvalue
+|               |-ImplicitCastExpr 0x7fece780a960 <col:25, col:28> 'unsigned char *' <ArrayToPointerDecay>
+|               | `-MemberExpr 0x7fece780a900 <col:25, col:28> 'unsigned char [256]' lvalue ->t 0x7fece7809700
+|               |   `-ImplicitCastExpr 0x7fece780a8e8 <col:25> 'struct S *' <LValueToRValue>
+|               |     `-DeclRefExpr 0x7fece780a8c0 <col:25> 'struct S *' lvalue ParmVar 0x7fece78098e0 'y' 'struct S *'
+|               `-ImplicitCastExpr 0x7fece780a978 <col:30> 'int' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fece780a938 <col:30> 'int' lvalue ParmVar 0x7fece7809958 'z' 'int'
+|-FunctionDecl 0x7fece7809f40 <line:12:7> col:7 implicit used __builtin___memcpy_chk 'void *(void *, const void *, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fece7809fe0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fece780a040 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fece780a0a0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fece780a100 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fece780a180 <col:7> Implicit
+`-FunctionDecl 0x7fece780a350 <col:46> col:46 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+  |-ParmVarDecl 0x7fece780a3f0 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fece780a450 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7fece780a4c0 <col:46> Implicit

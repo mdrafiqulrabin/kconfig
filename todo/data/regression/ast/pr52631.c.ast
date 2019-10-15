@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f800a016ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f800900a268 <../Data/C2AST/pr52631.c:4:1, line:12:1> line:4:10 f 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7f800a017978 <col:12, col:21> col:21 used a 'unsigned int'
+  `-CompoundStmt 0x7f800900a520 <line:5:1, line:12:1>
+    |-DeclStmt 0x7f800900a450 <line:9:3, col:23>
+    | `-VarDecl 0x7f800900a368 <col:3, col:21> col:12 used b 'unsigned int' cinit
+    |   `-BinaryOperator 0x7f800900a428 <col:16, col:21> 'unsigned int' '>>'
+    |     |-ImplicitCastExpr 0x7f800900a410 <col:16> 'unsigned int' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f800900a3c8 <col:16> 'unsigned int' lvalue ParmVar 0x7f800a017978 'a' 'unsigned int'
+    |     `-IntegerLiteral 0x7f800900a3f0 <col:21> 'int' 31
+    `-ReturnStmt 0x7f800900a508 <line:11:3, col:12>
+      `-BinaryOperator 0x7f800900a4e0 <col:10, col:12> 'unsigned int' '&'
+        |-ImplicitCastExpr 0x7f800900a4b0 <col:10> 'unsigned int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f800900a468 <col:10> 'unsigned int' lvalue Var 0x7f800900a368 'b' 'unsigned int'
+        `-ImplicitCastExpr 0x7f800900a4c8 <col:12> 'unsigned int' <IntegralCast>
+          `-IntegerLiteral 0x7f800900a490 <col:12> 'int' 1

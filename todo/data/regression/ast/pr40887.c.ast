@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f831180a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f831081df08 <../Data/C2AST/pr40887.c:8:1, col:27> col:7 used indirect_func 'int (*)(int)'
+`-FunctionDecl 0x7f831081e000 <line:10:1, line:13:1> line:10:5 indirect_call 'int ()'
+  `-CompoundStmt 0x7f831081e200 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7f831081e1e8 <line:12:3, col:47>
+      `-BinaryOperator 0x7f831081e1c0 <col:10, col:47> 'int' '+'
+        |-CallExpr 0x7f831081e100 <col:10, col:26> 'int'
+        | |-ImplicitCastExpr 0x7f831081e0e8 <col:10> 'int (*)(int)' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f831081e0a0 <col:10> 'int (*)(int)' lvalue Var 0x7f831081df08 'indirect_func' 'int (*)(int)'
+        | `-IntegerLiteral 0x7f831081e0c8 <col:24> 'int' 20
+        `-CallExpr 0x7f831081e190 <col:30, col:47> 'int'
+          |-ImplicitCastExpr 0x7f831081e178 <col:30> 'int (*)(int)' <LValueToRValue>
+          | `-DeclRefExpr 0x7f831081e130 <col:30> 'int (*)(int)' lvalue Var 0x7f831081df08 'indirect_func' 'int (*)(int)'
+          `-IntegerLiteral 0x7f831081e158 <col:45> 'int' 40

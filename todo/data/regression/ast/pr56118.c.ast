@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f94bb00b6e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f94bb099448 <../Data/C2AST/pr56118.c:6:1, line:12:1> line:6:9 f '__m128d ()'
+  `-CompoundStmt 0x7f94bb099878 <line:7:1, line:12:1>
+    |-DeclStmt 0x7f94bb099668 <line:8:3, col:18>
+    | `-VarDecl 0x7f94bb0994f8 <col:3, col:17> col:11 used r '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-InitListExpr 0x7f94bb0995e8 <col:13, col:17> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7f94bb099638 <col:14> 'double' <IntegralToFloating>
+    |     | `-IntegerLiteral 0x7f94bb099558 <col:14> 'int' 3
+    |     `-ImplicitCastExpr 0x7f94bb099650 <col:16> 'double' <IntegralToFloating>
+    |       `-IntegerLiteral 0x7f94bb099578 <col:16> 'int' 4
+    |-BinaryOperator 0x7f94bb099728 <line:9:3, col:8> 'double' '='
+    | |-ArraySubscriptExpr 0x7f94bb0996c8 <col:3, col:6> 'double' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7f94bb099680 <col:3> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7f94bb0994f8 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    | | `-IntegerLiteral 0x7f94bb0996a8 <col:5> 'int' 0
+    | `-ImplicitCastExpr 0x7f94bb099710 <col:8> 'double' <IntegralToFloating>
+    |   `-IntegerLiteral 0x7f94bb0996f0 <col:8> 'int' 1
+    |-BinaryOperator 0x7f94bb0997f8 <line:10:3, col:8> 'double' '='
+    | |-ArraySubscriptExpr 0x7f94bb099798 <col:3, col:6> 'double' lvalue vectorcomponent
+    | | |-DeclRefExpr 0x7f94bb099750 <col:3> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7f94bb0994f8 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    | | `-IntegerLiteral 0x7f94bb099778 <col:5> 'int' 1
+    | `-ImplicitCastExpr 0x7f94bb0997e0 <col:8> 'double' <IntegralToFloating>
+    |   `-IntegerLiteral 0x7f94bb0997c0 <col:8> 'int' 2
+    `-ReturnStmt 0x7f94bb099860 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f94bb099848 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7f94bb099820 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7f94bb0994f8 'r' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f99ae82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f99ae86d828 <../Data/C2AST/pr37433.c:1:1, line:5:1> line:1:5 regex_subst 'int (void)'
+| `-CompoundStmt 0x7f99ae86dd08 <line:2:1, line:5:1>
+|   |-DeclStmt 0x7f99ae86da40 <line:3:3, col:25>
+|   | `-VarDecl 0x7f99ae86d950 <col:3, col:23> col:15 used subst 'const void *' cinit
+|   |   `-ImplicitCastExpr 0x7f99ae86da28 <col:23> 'const void *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7f99ae86da10 <col:23> 'char *' <ArrayToPointerDecay>
+|   |       `-StringLiteral 0x7f99ae86d9e8 <col:23> 'char [1]' lvalue ""
+|   `-ReturnStmt 0x7f99ae86dcf0 <line:4:3, col:35>
+|     `-CallExpr 0x7f99ae86dcc0 <col:10, col:35> 'int'
+|       |-ImplicitCastExpr 0x7f99ae86dca8 <col:10, col:31> 'int (*)(int)' <FunctionToPointerDecay>
+|       | `-ParenExpr 0x7f99ae86dc68 <col:10, col:31> 'int (int)':'int (int)'
+|       |   `-UnaryOperator 0x7f99ae86dc48 <col:11, col:26> 'int (int)':'int (int)' prefix '*'
+|       |     `-CStyleCastExpr 0x7f99ae86dc20 <col:12, col:26> 'int (*)(int)' <BitCast>
+|       |       `-ImplicitCastExpr 0x7f99ae86dc08 <col:26> 'const void *' <LValueToRValue>
+|       |         `-DeclRefExpr 0x7f99ae86dad0 <col:26> 'const void *' lvalue Var 0x7f99ae86d950 'subst' 'const void *'
+|       `-IntegerLiteral 0x7f99ae86dc88 <col:34> 'int' 0
+`-FunctionDecl 0x7f99ae86ddc0 <line:7:1, line:11:1> line:7:5 foobar 'int (void)'
+  `-CompoundStmt 0x7f99ae86e160 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f99ae86ded8 <line:9:3, col:8>
+    | `-VarDecl 0x7f99ae86de78 <col:3, col:7> col:7 used x 'int'
+    `-ReturnStmt 0x7f99ae86e148 <line:10:3, col:32>
+      `-CallExpr 0x7f99ae86e120 <col:10, col:32> 'int'
+        `-ImplicitCastExpr 0x7f99ae86e108 <col:10, col:29> 'int (*)(void)' <FunctionToPointerDecay>
+          `-ParenExpr 0x7f99ae86e0e8 <col:10, col:29> 'int (void)':'int (void)'
+            `-UnaryOperator 0x7f99ae86e0c8 <col:11, col:28> 'int (void)':'int (void)' prefix '*'
+              `-CStyleCastExpr 0x7f99ae86e0a0 <col:12, col:28> 'int (*)(void)' <BitCast>
+                `-UnaryOperator 0x7f99ae86dfb8 <col:27, col:28> 'int *' prefix '&'
+                  `-DeclRefExpr 0x7f99ae86df60 <col:28> 'int' lvalue Var 0x7f99ae86de78 'x' 'int'

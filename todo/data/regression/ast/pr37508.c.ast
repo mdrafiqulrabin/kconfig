@@ -1,0 +1,129 @@
+TranslationUnitDecl 0x7fdf0482bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdf0482c960 <../Data/C2AST/pr37508.c:4:1, line:6:1> line:4:8 struct foo1 definition
+| `-FieldDecl 0x7fdf0486d858 <line:5:3, col:9> col:7 referenced i 'int'
+|   `-IntegerLiteral 0x7fdf0486d820 <col:9> 'int' 1
+|-RecordDecl 0x7fdf0486d8a0 <line:7:1, line:9:1> line:7:8 struct foo2 definition
+| `-FieldDecl 0x7fdf0486d988 <line:8:3, col:14> col:12 referenced i 'unsigned int'
+|   `-IntegerLiteral 0x7fdf0486d950 <col:14> 'int' 1
+|-FunctionDecl 0x7fdf0486db88 <line:11:1, line:19:1> line:11:5 test1 'int (struct foo1 *)'
+| |-ParmVarDecl 0x7fdf0486da80 <col:12, col:25> col:25 used x 'struct foo1 *'
+| `-CompoundStmt 0x7fdf0486dfd8 <line:12:1, line:19:1>
+|   |-DeclStmt 0x7fdf0486dd78 <line:13:3, col:15>
+|   | `-VarDecl 0x7fdf0486dc88 <col:3, col:14> col:7 used i 'int' cinit
+|   |   `-ImplicitCastExpr 0x7fdf0486dd60 <col:11, col:14> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x7fdf0486dd28 <col:11, col:14> 'int' lvalue bitfield ->i 0x7fdf0486d858
+|   |       `-ImplicitCastExpr 0x7fdf0486dd10 <col:11> 'struct foo1 *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fdf0486dce8 <col:11> 'struct foo1 *' lvalue ParmVar 0x7fdf0486da80 'x' 'struct foo1 *'
+|   |-IfStmt 0x7fdf0486df68 <line:14:3, line:17:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdf0486ddf0 <line:14:7, col:12> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fdf0486ddd8 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fdf0486dd90 <col:7> 'int' lvalue Var 0x7fdf0486dc88 'i' 'int'
+|   | | `-IntegerLiteral 0x7fdf0486ddb8 <col:12> 'int' 0
+|   | |-ReturnStmt 0x7fdf0486de38 <line:15:5, col:12>
+|   | | `-IntegerLiteral 0x7fdf0486de18 <col:12> 'int' 1
+|   | `-IfStmt 0x7fdf0486df30 <line:16:8, line:17:12>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fdf0486ded0 <line:16:12, col:18> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7fdf0486deb8 <col:12> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fdf0486de50 <col:12> 'int' lvalue Var 0x7fdf0486dc88 'i' 'int'
+|   |   | `-UnaryOperator 0x7fdf0486de98 <col:17, col:18> 'int' prefix '-'
+|   |   |   `-IntegerLiteral 0x7fdf0486de78 <col:18> 'int' 1
+|   |   |-ReturnStmt 0x7fdf0486df18 <line:17:5, col:12>
+|   |   | `-IntegerLiteral 0x7fdf0486def8 <col:12> 'int' 1
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdf0486dfc0 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7fdf0486dfa0 <col:10> 'int' 0
+|-FunctionDecl 0x7fdf0486e1b8 <line:21:1, line:28:1> line:21:5 test2 'int (struct foo2 *)'
+| |-ParmVarDecl 0x7fdf0486e0b0 <col:12, col:25> col:25 used x 'struct foo2 *'
+| `-CompoundStmt 0x7fdf0486e578 <line:22:1, line:28:1>
+|   |-IfStmt 0x7fdf0486e508 <line:23:3, line:26:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdf0486e328 <line:23:7, col:15> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fdf0486e310 <col:7, col:10> 'int' <IntegralCast>
+|   | | | `-ImplicitCastExpr 0x7fdf0486e2f8 <col:7, col:10> 'unsigned int' <LValueToRValue>
+|   | | |   `-MemberExpr 0x7fdf0486e2a0 <col:7, col:10> 'unsigned int' lvalue bitfield ->i 0x7fdf0486d988
+|   | | |     `-ImplicitCastExpr 0x7fdf0486e288 <col:7> 'struct foo2 *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fdf0486e260 <col:7> 'struct foo2 *' lvalue ParmVar 0x7fdf0486e0b0 'x' 'struct foo2 *'
+|   | | `-IntegerLiteral 0x7fdf0486e2d8 <col:15> 'int' 0
+|   | |-ReturnStmt 0x7fdf0486e370 <line:24:5, col:12>
+|   | | `-IntegerLiteral 0x7fdf0486e350 <col:12> 'int' 1
+|   | `-IfStmt 0x7fdf0486e4d0 <line:25:8, line:26:12>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fdf0486e470 <line:25:12, col:21> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7fdf0486e458 <col:12, col:15> 'int' <IntegralCast>
+|   |   | | `-ImplicitCastExpr 0x7fdf0486e440 <col:12, col:15> 'unsigned int' <LValueToRValue>
+|   |   | |   `-MemberExpr 0x7fdf0486e3c8 <col:12, col:15> 'unsigned int' lvalue bitfield ->i 0x7fdf0486d988
+|   |   | |     `-ImplicitCastExpr 0x7fdf0486e3b0 <col:12> 'struct foo2 *' <LValueToRValue>
+|   |   | |       `-DeclRefExpr 0x7fdf0486e388 <col:12> 'struct foo2 *' lvalue ParmVar 0x7fdf0486e0b0 'x' 'struct foo2 *'
+|   |   | `-UnaryOperator 0x7fdf0486e420 <col:20, col:21> 'int' prefix '-'
+|   |   |   `-IntegerLiteral 0x7fdf0486e400 <col:21> 'int' 1
+|   |   |-ReturnStmt 0x7fdf0486e4b8 <line:26:5, col:12>
+|   |   | `-IntegerLiteral 0x7fdf0486e498 <col:12> 'int' 1
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdf0486e560 <line:27:3, col:10>
+|     `-IntegerLiteral 0x7fdf0486e540 <col:10> 'int' 0
+|-FunctionDecl 0x7fdf0486e650 <line:30:1, line:37:1> line:30:5 test3 'int (struct foo1 *)'
+| |-ParmVarDecl 0x7fdf0486e5c0 <col:12, col:25> col:25 used x 'struct foo1 *'
+| `-CompoundStmt 0x7fdf050001d0 <line:31:1, line:37:1>
+|   |-IfStmt 0x7fdf05000160 <line:32:3, line:35:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fdf0486e7a8 <line:32:7, col:15> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7fdf0486e790 <col:7, col:10> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fdf0486e738 <col:7, col:10> 'int' lvalue bitfield ->i 0x7fdf0486d858
+|   | | |   `-ImplicitCastExpr 0x7fdf0486e720 <col:7> 'struct foo1 *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fdf0486e6f8 <col:7> 'struct foo1 *' lvalue ParmVar 0x7fdf0486e5c0 'x' 'struct foo1 *'
+|   | | `-IntegerLiteral 0x7fdf0486e770 <col:15> 'int' 0
+|   | |-ReturnStmt 0x7fdf05000000 <line:33:5, col:12>
+|   | | `-IntegerLiteral 0x7fdf0486e7d0 <col:12> 'int' 1
+|   | `-IfStmt 0x7fdf05000128 <line:34:8, line:35:12>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fdf050000c8 <line:34:12, col:20> 'int' '=='
+|   |   | |-ImplicitCastExpr 0x7fdf050000b0 <col:12, col:15> 'int' <LValueToRValue>
+|   |   | | `-MemberExpr 0x7fdf05000058 <col:12, col:15> 'int' lvalue bitfield ->i 0x7fdf0486d858
+|   |   | |   `-ImplicitCastExpr 0x7fdf05000040 <col:12> 'struct foo1 *' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fdf05000018 <col:12> 'struct foo1 *' lvalue ParmVar 0x7fdf0486e5c0 'x' 'struct foo1 *'
+|   |   | `-IntegerLiteral 0x7fdf05000090 <col:20> 'int' 1
+|   |   |-ReturnStmt 0x7fdf05000110 <line:35:5, col:12>
+|   |   | `-IntegerLiteral 0x7fdf050000f0 <col:12> 'int' 1
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdf050001b8 <line:36:3, col:10>
+|     `-IntegerLiteral 0x7fdf05000198 <col:10> 'int' 0
+`-FunctionDecl 0x7fdf050002a8 <line:39:1, line:47:1> line:39:5 test4 'int (struct foo2 *)'
+  |-ParmVarDecl 0x7fdf05000218 <col:12, col:25> col:25 used x 'struct foo2 *'
+  `-CompoundStmt 0x7fdf050006c8 <line:40:1, line:47:1>
+    |-DeclStmt 0x7fdf05000458 <line:41:3, col:24>
+    | `-VarDecl 0x7fdf05000368 <col:3, col:23> col:16 used i 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7fdf05000440 <col:20, col:23> 'unsigned int' <LValueToRValue>
+    |     `-MemberExpr 0x7fdf05000408 <col:20, col:23> 'unsigned int' lvalue bitfield ->i 0x7fdf0486d988
+    |       `-ImplicitCastExpr 0x7fdf050003f0 <col:20> 'struct foo2 *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fdf050003c8 <col:20> 'struct foo2 *' lvalue ParmVar 0x7fdf05000218 'x' 'struct foo2 *'
+    |-IfStmt 0x7fdf05000658 <line:42:3, line:45:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fdf050004e8 <line:42:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fdf050004b8 <col:7> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fdf05000470 <col:7> 'unsigned int' lvalue Var 0x7fdf05000368 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7fdf050004d0 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fdf05000498 <col:12> 'int' 0
+    | |-ReturnStmt 0x7fdf05000530 <line:43:5, col:12>
+    | | `-IntegerLiteral 0x7fdf05000510 <col:12> 'int' 1
+    | `-IfStmt 0x7fdf05000620 <line:44:8, line:45:12>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fdf050005c0 <line:44:12, col:17> 'int' '=='
+    |   | |-ImplicitCastExpr 0x7fdf05000590 <col:12> 'unsigned int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fdf05000548 <col:12> 'unsigned int' lvalue Var 0x7fdf05000368 'i' 'unsigned int'
+    |   | `-ImplicitCastExpr 0x7fdf050005a8 <col:17> 'unsigned int' <IntegralCast>
+    |   |   `-IntegerLiteral 0x7fdf05000570 <col:17> 'int' 1
+    |   |-ReturnStmt 0x7fdf05000608 <line:45:5, col:12>
+    |   | `-IntegerLiteral 0x7fdf050005e8 <col:12> 'int' 1
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7fdf050006b0 <line:46:3, col:10>
+      `-IntegerLiteral 0x7fdf05000690 <col:10> 'int' 0

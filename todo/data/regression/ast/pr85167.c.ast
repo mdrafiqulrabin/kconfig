@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7f876c02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f876c02c960 <../Data/C2AST/pr85167.c:5:1, col:20> col:8 struct A definition
+| `-FieldDecl 0x7f876c814238 <col:12, col:17> col:17 referenced b 'long'
+|-VarDecl 0x7f876c814298 <line:6:1, col:5> col:5 used c 'int'
+|-VarDecl 0x7f876c814350 <col:1, col:8> col:8 used d 'int'
+|-VarDecl 0x7f876c8143c8 <col:1, col:11> col:11 used e 'int'
+|-FunctionDecl 0x7f876c814518 <line:7:1, col:14> col:5 used bar 'int (void)'
+`-FunctionDecl 0x7f876c814650 <line:9:1, line:16:1> line:10:1 foo 'int (void)'
+  `-CompoundStmt 0x7f876c814c50 <line:11:1, line:16:1>
+    |-DeclStmt 0x7f876c814768 <line:12:3, col:9>
+    | `-VarDecl 0x7f876c814708 <col:3, col:8> col:8 used g 'long'
+    `-ForStmt 0x7f876c814c18 <line:13:3, line:15:14>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ConditionalOperator 0x7f876c8148f0 <line:13:10, col:29> 'int'
+      | |-BinaryOperator 0x7f876c814818 <col:10, col:15> 'int' '=='
+      | | |-ImplicitCastExpr 0x7f876c8147d0 <col:10> 'long' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7f876c814780 <col:10> 'long' lvalue Var 0x7f876c814708 'g' 'long'
+      | | `-ImplicitCastExpr 0x7f876c814800 <col:15> 'long' <IntegralCast>
+      | |   `-ImplicitCastExpr 0x7f876c8147e8 <col:15> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f876c8147a8 <col:15> 'int' lvalue Var 0x7f876c814298 'c' 'int'
+      | |-IntegerLiteral 0x7f876c814840 <col:19> 'int' 0
+      | `-ParenExpr 0x7f876c8148d0 <col:23, col:29> 'int'
+      |   `-BinaryOperator 0x7f876c8148a8 <col:24, col:28> 'int' '='
+      |     |-DeclRefExpr 0x7f876c814860 <col:24> 'int' lvalue Var 0x7f876c8143c8 'e' 'int'
+      |     `-IntegerLiteral 0x7f876c814888 <col:28> 'int' 1
+      |-BinaryOperator 0x7f876c814ad0 <col:32, col:53> 'long' '='
+      | |-DeclRefExpr 0x7f876c814920 <col:32> 'long' lvalue Var 0x7f876c814708 'g' 'long'
+      | `-ImplicitCastExpr 0x7f876c814ab8 <col:36, col:53> 'long' <LValueToRValue>
+      |   `-MemberExpr 0x7f876c814a80 <col:36, col:53> 'long' lvalue ->b 0x7f876c814238
+      |     `-ParenExpr 0x7f876c814a60 <col:36, col:50> 'struct A *'
+      |       `-CStyleCastExpr 0x7f876c814a38 <col:37, col:49> 'struct A *' <IntegralToPointer>
+      |         `-ImplicitCastExpr 0x7f876c814a20 <col:49> 'long' <LValueToRValue>
+      |           `-DeclRefExpr 0x7f876c814948 <col:49> 'long' lvalue Var 0x7f876c814708 'g' 'long'
+      `-IfStmt 0x7f876c814be0 <line:14:5, line:15:14>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-CallExpr 0x7f876c814b60 <line:14:9, col:14> 'int'
+        | `-ImplicitCastExpr 0x7f876c814b48 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+        |   `-DeclRefExpr 0x7f876c814af8 <col:9> 'int (void)' Function 0x7f876c814518 'bar' 'int (void)'
+        |-ReturnStmt 0x7f876c814bc8 <line:15:7, col:14>
+        | `-ImplicitCastExpr 0x7f876c814bb0 <col:14> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f876c814b88 <col:14> 'int' lvalue Var 0x7f876c814350 'd' 'int'
+        `-<<<NULL>>>

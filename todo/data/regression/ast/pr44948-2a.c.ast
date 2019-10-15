@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f9a24816ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9a24817960 <../Data/C2AST/pr44948-2a.c:10:1, line:13:1> line:10:8 struct A definition
+| `-FieldDecl 0x7f9a24839878 <line:12:3, col:9> col:9 V4SF '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+`-FunctionDecl 0x7f9a24839988 <line:15:1, line:21:1> line:16:1 main 'int (void)'
+  `-CompoundStmt 0x7f9a2483a020 <line:17:1, line:21:1>
+    |-DeclStmt 0x7f9a24839d80 <line:18:3, col:34>
+    | `-VarDecl 0x7f9a24839af0 <col:3, col:33> col:12 used a 'struct A':'struct A' cinit
+    |   `-InitListExpr 0x7f9a24839c78 <col:16, col:33> 'struct A':'struct A'
+    |     `-InitListExpr 0x7f9a24839cc0 <col:18, col:31> '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |       |-ImplicitCastExpr 0x7f9a24839d20 <col:20> 'float' <IntegralToFloating>
+    |       | `-IntegerLiteral 0x7f9a24839b50 <col:20> 'int' 0
+    |       |-ImplicitCastExpr 0x7f9a24839d38 <col:23> 'float' <IntegralToFloating>
+    |       | `-IntegerLiteral 0x7f9a24839b70 <col:23> 'int' 1
+    |       |-ImplicitCastExpr 0x7f9a24839d50 <col:26> 'float' <IntegralToFloating>
+    |       | `-IntegerLiteral 0x7f9a24839b90 <col:26> 'int' 2
+    |       `-ImplicitCastExpr 0x7f9a24839d68 <col:29> 'float' <IntegralToFloating>
+    |         `-IntegerLiteral 0x7f9a24839bb0 <col:29> 'int' 3
+    |-CallExpr 0x7f9a24839f90 <line:19:3, col:21> 'int'
+    | |-ImplicitCastExpr 0x7f9a24839f78 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9a24839ea0 <col:3> 'int ()' Function 0x7f9a24839df0 'foo' 'int ()'
+    | |-FloatingLiteral 0x7f9a24839ec8 <col:8> 'long double' 8.000000e+00
+    | |-ImplicitCastExpr 0x7f9a24839fd0 <col:14> 'struct A':'struct A' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f9a24839ef8 <col:14> 'struct A':'struct A' lvalue Var 0x7f9a24839af0 'a' 'struct A':'struct A'
+    | `-FloatingLiteral 0x7f9a24839f20 <col:17> 'long double' 8.000000e+00
+    `-ReturnStmt 0x7f9a2483a008 <line:20:3, col:10>
+      `-IntegerLiteral 0x7f9a24839fe8 <col:10> 'int' 0

@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7ff6e702bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff6e7800060 <../Data/C2AST/pr79677.c:6:1, col:17> col:6 used foo 'void (char *)'
+| `-ParmVarDecl 0x7ff6e702c978 <col:11, col:16> col:17 'char *'
+|-FunctionDecl 0x7ff6e78001a0 <line:8:1, line:15:1> line:9:1 main 'int ()'
+| `-CompoundStmt 0x7ff6e7800748 <line:10:1, line:15:1>
+|   |-DeclStmt 0x7ff6e7800388 <line:11:3, col:20>
+|   | `-VarDecl 0x7ff6e78002b8 <col:3, col:16> col:8 used s 'char [10]' cinit
+|   |   `-StringLiteral 0x7ff6e7800358 <col:16> 'char [10]' lvalue "%s"
+|   |-CallExpr 0x7ff6e7800430 <line:12:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7ff6e7800418 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff6e78003a0 <col:3> 'void (char *)' Function 0x7ff6e7800060 'foo' 'void (char *)'
+|   | `-ImplicitCastExpr 0x7ff6e7800460 <col:8> 'char *' <ArrayToPointerDecay>
+|   |   `-DeclRefExpr 0x7ff6e78003c8 <col:8> 'char [10]' lvalue Var 0x7ff6e78002b8 's' 'char [10]'
+|   |-CallExpr 0x7ff6e78006b0 <line:13:3, col:22> 'int'
+|   | |-ImplicitCastExpr 0x7ff6e7800698 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7ff6e7800618 <col:3> '<builtin fn type>' Function 0x7ff6e78004b8 '__builtin_printf' 'int (const char *, ...)'
+|   | `-ImplicitCastExpr 0x7ff6e78006f8 <col:21> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7ff6e78006e0 <col:21> 'char *' <ArrayToPointerDecay>
+|   |     `-DeclRefExpr 0x7ff6e7800640 <col:21> 'char [10]' lvalue Var 0x7ff6e78002b8 's' 'char [10]'
+|   `-ReturnStmt 0x7ff6e7800730 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7ff6e7800710 <col:10> 'int' 0
+`-FunctionDecl 0x7ff6e78004b8 <line:13:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+  |-ParmVarDecl 0x7ff6e7800558 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-FormatAttr 0x7ff6e78005c0 <col:3> Implicit printf 1 2

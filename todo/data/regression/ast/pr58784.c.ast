@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f930a02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f930a02c960 <../Data/C2AST/pr58784.c:7:9, line:10:1> line:7:9 struct definition
+| |-PackedAttr 0x7f930a807020 <col:32>
+| `-FieldDecl 0x7f930a8070e8 <line:9:5, col:22> col:10 referenced valueField 'char [2]'
+|-TypedefDecl 0x7f930a807180 <line:7:1, line:10:3> col:3 referenced ptp_tlv_t 'struct ptp_tlv_t':'ptp_tlv_t'
+| `-ElaboratedType 0x7f930a807130 'struct ptp_tlv_t' sugar
+|   `-RecordType 0x7f930a807000 'ptp_tlv_t'
+|     `-Record 0x7f930a02c960 ''
+|-RecordDecl 0x7f930a8071f0 <line:11:9, line:15:1> line:11:9 struct definition
+| |-PackedAttr 0x7f930a8072a0 <col:32>
+| |-FieldDecl 0x7f930a8072f8 <line:13:5, col:10> col:10 stepsRemoved 'char'
+| `-FieldDecl 0x7f930a807468 <line:14:5, col:20> col:15 referenced tlv 'ptp_tlv_t [1]'
+|-TypedefDecl 0x7f930a807500 <line:11:1, line:15:3> col:3 referenced ptp_message_announce_t 'struct ptp_message_announce_t':'ptp_message_announce_t'
+| `-ElaboratedType 0x7f930a8074b0 'struct ptp_message_announce_t' sugar
+|   `-RecordType 0x7f930a807280 'ptp_message_announce_t'
+|     `-Record 0x7f930a8071f0 ''
+|-FunctionDecl 0x7f930a807700 <line:17:1, col:40> col:13 used f 'void (ptp_message_announce_t *)' extern
+| `-ParmVarDecl 0x7f930a8075f8 <col:16, col:39> col:40 'ptp_message_announce_t *'
+`-FunctionDecl 0x7f930a807958 <line:19:1, line:24:1> line:19:5 ptplib_send_announce 'int (int, int)'
+  |-ParmVarDecl 0x7f930a807800 <col:26, col:30> col:30 used sequenceId 'int'
+  |-ParmVarDecl 0x7f930a807878 <col:42, col:46> col:46 used i 'int'
+  `-CompoundStmt 0x7f930a807ed0 <line:20:1, line:24:1>
+    |-DeclStmt 0x7f930a807a78 <line:21:5, col:37>
+    | `-VarDecl 0x7f930a807a18 <col:5, col:28> col:28 used tx_packet 'ptp_message_announce_t':'ptp_message_announce_t'
+    |-BinaryOperator 0x7f930a807d40 <line:22:5, col:62> 'long long' '='
+    | |-ArraySubscriptExpr 0x7f930a807cc0 <col:5, col:58> 'long long' lvalue
+    | | |-ParenExpr 0x7f930a807c60 <col:5, col:46> 'long long *'
+    | | | `-CStyleCastExpr 0x7f930a807c38 <col:6, col:36> 'long long *' <BitCast>
+    | | |   `-ImplicitCastExpr 0x7f930a807c20 <col:19, col:36> 'char *' <ArrayToPointerDecay>
+    | | |     `-MemberExpr 0x7f930a807ba8 <col:19, col:36> 'char [2]' lvalue .valueField 0x7f930a8070e8
+    | | |       `-ArraySubscriptExpr 0x7f930a807b80 <col:19, col:34> 'ptp_tlv_t':'ptp_tlv_t' lvalue
+    | | |         |-ImplicitCastExpr 0x7f930a807b68 <col:19, col:29> 'ptp_tlv_t *' <ArrayToPointerDecay>
+    | | |         | `-MemberExpr 0x7f930a807ab8 <col:19, col:29> 'ptp_tlv_t [1]' lvalue .tlv 0x7f930a807468
+    | | |         |   `-DeclRefExpr 0x7f930a807a90 <col:19> 'ptp_message_announce_t':'ptp_message_announce_t' lvalue Var 0x7f930a807a18 'tx_packet' 'ptp_message_announce_t':'ptp_message_announce_t'
+    | | |         `-IntegerLiteral 0x7f930a807af0 <col:33> 'int' 0
+    | | `-ImplicitCastExpr 0x7f930a807ca8 <col:48> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f930a807c80 <col:48> 'int' lvalue ParmVar 0x7f930a807800 'sequenceId' 'int'
+    | `-ImplicitCastExpr 0x7f930a807d28 <col:62> 'long long' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7f930a807d10 <col:62> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f930a807ce8 <col:62> 'int' lvalue ParmVar 0x7f930a807878 'i' 'int'
+    `-CallExpr 0x7f930a807ea0 <line:23:5, col:17> 'void'
+      |-ImplicitCastExpr 0x7f930a807e88 <col:5> 'void (*)(ptp_message_announce_t *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f930a807db8 <col:5> 'void (ptp_message_announce_t *)' Function 0x7f930a807700 'f' 'void (ptp_message_announce_t *)'
+      `-UnaryOperator 0x7f930a807e08 <col:7, col:8> 'ptp_message_announce_t *' prefix '&'
+        `-DeclRefExpr 0x7f930a807de0 <col:8> 'ptp_message_announce_t':'ptp_message_announce_t' lvalue Var 0x7f930a807a18 'tx_packet' 'ptp_message_announce_t':'ptp_message_announce_t'

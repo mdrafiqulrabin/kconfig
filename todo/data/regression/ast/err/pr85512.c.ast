@@ -1,0 +1,1209 @@
+../Data/C2AST/pr85512.c:17:18: error: use of unknown builtin '__builtin_add_overflow_p' [-Wimplicit-function-declaration]
+l0:     u32_2 += __builtin_add_overflow_p((u32)(u64)u32_0, (u16)-(u32)u64_2, (u64)-(u64)(unsigned)__builtin_parityll((u16)(u16)(((u64)0x1a6cb5b10 << 0))));
+                 ^
+../Data/C2AST/pr85512.c:35:156: error: use of unknown builtin '__builtin_clrsb' [-Wimplicit-function-declaration]
+        u64_1 = (u64)(u16)bar1((u8)((u32)(u64)(((u64)0x3ffffff << 0))), (u16)((u8)(u16)(((u64)0x5b << 0))), (u32)((u32)~(u8)(1)), (u64)((u8)(u16)(unsigned)__builtin_clrsb((u32)~(u32)(unsigned)__builtin_clrsbll((u8)(u16)(((u64)0xffffffff << 0))))), (u8)((u8)-(u64)(((u64)0x3e43180756484 << 0))), (u16)((u8)(u16)(((u64)0x7 << 0))), (u32)((u64)(u32)(((u64)0x285fa35c89 << 0))), (u64)((u32)(u8)(((u64)0x3ffff << 0))), (u8)((u16)-(u32)(((u64)0x73d01 << 0))), (u16)((u16)-(u16)(((u64)0x1fffffffffffff << 0))), (u32)((u16)(u64)(0)), (u64)((u16)(u32)(((u64)0x4c << 0))), (u8)((u64)-(u64)(((u64)0x3fffffffffffff << 0))), (u16)((u16)~(u16)(((u64)0xfffffffff << 0))), (u32)((u64)(u16)(((u64)0x7edb0cc1c << 0))), (u64)((u32)(u64)(((u64)0x1ffffffffff << 0)))) > (u16)-(u64)(((u64)0x7 << 0)) ? (u16)(u8)u64_2 : (u64)(u16)u32_2;
+                                                                                                                                                           ^
+../Data/C2AST/pr85512.c:35:193: error: use of unknown builtin '__builtin_clrsbll' [-Wimplicit-function-declaration]
+        u64_1 = (u64)(u16)bar1((u8)((u32)(u64)(((u64)0x3ffffff << 0))), (u16)((u8)(u16)(((u64)0x5b << 0))), (u32)((u32)~(u8)(1)), (u64)((u8)(u16)(unsigned)__builtin_clrsb((u32)~(u32)(unsigned)__builtin_clrsbll((u8)(u16)(((u64)0xffffffff << 0))))), (u8)((u8)-(u64)(((u64)0x3e43180756484 << 0))), (u16)((u8)(u16)(((u64)0x7 << 0))), (u32)((u64)(u32)(((u64)0x285fa35c89 << 0))), (u64)((u32)(u8)(((u64)0x3ffff << 0))), (u8)((u16)-(u32)(((u64)0x73d01 << 0))), (u16)((u16)-(u16)(((u64)0x1fffffffffffff << 0))), (u32)((u16)(u64)(0)), (u64)((u16)(u32)(((u64)0x4c << 0))), (u8)((u64)-(u64)(((u64)0x3fffffffffffff << 0))), (u16)((u16)~(u16)(((u64)0xfffffffff << 0))), (u32)((u64)(u16)(((u64)0x7edb0cc1c << 0))), (u64)((u32)(u64)(((u64)0x1ffffffffff << 0)))) > (u16)-(u64)(((u64)0x7 << 0)) ? (u16)(u8)u64_2 : (u64)(u16)u32_2;
+                                                                                                                                                                                                ^
+../Data/C2AST/pr85512.c:35:193: note: did you mean '__builtin_clrsb'?
+../Data/C2AST/pr85512.c:35:156: note: '__builtin_clrsb' declared here
+        u64_1 = (u64)(u16)bar1((u8)((u32)(u64)(((u64)0x3ffffff << 0))), (u16)((u8)(u16)(((u64)0x5b << 0))), (u32)((u32)~(u8)(1)), (u64)((u8)(u16)(unsigned)__builtin_clrsb((u32)~(u32)(unsigned)__builtin_clrsbll((u8)(u16)(((u64)0xffffffff << 0))))), (u8)((u8)-(u64)(((u64)0x3e43180756484 << 0))), (u16)((u8)(u16)(((u64)0x7 << 0))), (u32)((u64)(u32)(((u64)0x285fa35c89 << 0))), (u64)((u32)(u8)(((u64)0x3ffff << 0))), (u8)((u16)-(u32)(((u64)0x73d01 << 0))), (u16)((u16)-(u16)(((u64)0x1fffffffffffff << 0))), (u32)((u16)(u64)(0)), (u64)((u16)(u32)(((u64)0x4c << 0))), (u8)((u64)-(u64)(((u64)0x3fffffffffffff << 0))), (u16)((u16)~(u16)(((u64)0xfffffffff << 0))), (u32)((u64)(u16)(((u64)0x7edb0cc1c << 0))), (u64)((u32)(u64)(((u64)0x1ffffffffff << 0)))) > (u16)-(u64)(((u64)0x7 << 0)) ? (u16)(u8)u64_2 : (u64)(u16)u32_2;
+                                                                                                                                                           ^                                    ~~~~~~~~~~~~~~~~~
+                                                                                                                                                                                                __builtin_clrsb
+../Data/C2AST/pr85512.c:37:18: error: use of unknown builtin '__builtin_mul_overflow_p' [-Wimplicit-function-declaration]
+        u16_1 *= __builtin_mul_overflow_p((u64)(u32)u32_1, (u16)(u8)(((u64)0x4ad149d89bf0be6 << 0)), (u64)(u32)(((u64)0x1bd7589 << 0)));
+                 ^
+../Data/C2AST/pr85512.c:37:18: note: did you mean '__builtin_mul_overflow'?
+../Data/C2AST/pr85512.c:21:16: note: '__builtin_mul_overflow' declared here
+        u8_2 = __builtin_mul_overflow((u64)(u8)__builtin_bswap32((u32)-(u32)u16_0), (u64)(u16)u16_2, &u8_3) ? (u64)~(u8)u8_3 : (u16)(u16)(((u64)0x7ffffff << 0));
+               ^
+TranslationUnitDecl 0x7fb56c82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb56c82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb56c82bf80 '__int128'
+|-TypedefDecl 0x7fb56c82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb56c82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb56c82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb56c82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb56c82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb56c82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb56c82c600 'char *'
+|   `-BuiltinType 0x7fb56c82bd80 'char'
+|-TypedefDecl 0x7fb56c82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb56c82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb56c82c720 'struct __va_list_tag'
+|     `-Record 0x7fb56c82c698 '__va_list_tag'
+|-TypedefDecl 0x7fb56c82c978 <../Data/C2AST/pr85512.c:4:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fb56c82be40 'unsigned char'
+|-TypedefDecl 0x7fb56d014200 <line:5:1, col:24> col:24 referenced u16 'unsigned short'
+| `-BuiltinType 0x7fb56c82be60 'unsigned short'
+|-TypedefDecl 0x7fb56d014270 <line:6:1, col:22> col:22 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fb56c82be80 'unsigned int'
+|-TypedefDecl 0x7fb56d0142e0 <line:7:1, col:28> col:28 referenced u64 'unsigned long long'
+| `-BuiltinType 0x7fb56c82bec0 'unsigned long long'
+|-FunctionDecl 0x7fb56d014cc0 <line:8:1, line:9:172> col:1 bar0 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)'
+| |-ParmVarDecl 0x7fb56d014390 <col:6, col:9> col:9 u8_0 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d014420 <col:15, col:19> col:19 u16_0 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0144b0 <col:26, col:30> col:30 u32_0 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d014520 <col:37, col:41> col:41 u64_0 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d014590 <col:48, col:51> col:51 u8_1 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d014600 <col:57, col:61> col:61 u16_1 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d014670 <col:68, col:72> col:72 u32_1 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d0146e0 <col:79, col:83> col:83 u64_1 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d014750 <col:90, col:93> col:93 u8_2 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d0147c0 <col:99, col:103> col:103 u16_2 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d014830 <col:110, col:114> col:114 u32_2 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d0148a0 <col:121, col:125> col:125 u64_2 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d014910 <col:132, col:135> col:135 u8_3 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d014980 <col:141, col:145> col:145 u16_3 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0149f0 <col:152, col:156> col:156 u32_3 'u32':'unsigned int'
+| `-ParmVarDecl 0x7fb56d014a60 <col:163, col:167> col:167 u64_3 'u64':'unsigned long long'
+|-FunctionDecl 0x7fb56d015610 <line:10:1, line:11:172> col:1 used bar1 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)'
+| |-ParmVarDecl 0x7fb56d014e30 <col:6, col:9> col:9 u8_0 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d014ea0 <col:15, col:19> col:19 u16_0 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d014f10 <col:26, col:30> col:30 u32_0 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d014f80 <col:37, col:41> col:41 u64_0 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d014ff0 <col:48, col:51> col:51 u8_1 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d015060 <col:57, col:61> col:61 u16_1 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0150d0 <col:68, col:72> col:72 u32_1 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d015140 <col:79, col:83> col:83 u64_1 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d015200 <col:90, col:93> col:93 u8_2 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d015270 <col:99, col:103> col:103 u16_2 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0152e0 <col:110, col:114> col:114 u32_2 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d015350 <col:121, col:125> col:125 u64_2 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d0153c0 <col:132, col:135> col:135 u8_3 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d015430 <col:141, col:145> col:145 u16_3 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0154a0 <col:152, col:156> col:156 u32_3 'u32':'unsigned int'
+| `-ParmVarDecl 0x7fb56d015510 <col:163, col:167> col:167 u64_3 'u64':'unsigned long long'
+|-FunctionDecl 0x7fb56d015ed0 <line:12:1, line:13:172> col:1 used bar2 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)'
+| |-ParmVarDecl 0x7fb56d015740 <col:6, col:9> col:9 u8_0 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d0157b0 <col:15, col:19> col:19 u16_0 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d015820 <col:26, col:30> col:30 u32_0 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d015890 <col:37, col:41> col:41 u64_0 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d015900 <col:48, col:51> col:51 u8_1 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d015970 <col:57, col:61> col:61 u16_1 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0159e0 <col:68, col:72> col:72 u32_1 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d015a50 <col:79, col:83> col:83 u64_1 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d015ac0 <col:90, col:93> col:93 u8_2 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d015b30 <col:99, col:103> col:103 u16_2 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d015ba0 <col:110, col:114> col:114 u32_2 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d015c10 <col:121, col:125> col:125 u64_2 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d015c80 <col:132, col:135> col:135 u8_3 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d015cf0 <col:141, col:145> col:145 u16_3 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d015d60 <col:152, col:156> col:156 u32_3 'u32':'unsigned int'
+| `-ParmVarDecl 0x7fb56d015dd0 <col:163, col:167> col:167 u64_3 'u64':'unsigned long long'
+|-FunctionDecl 0x7fb56d02c1d0 prev 0x7fb56d014cc0 <line:14:1, line:47:1> line:15:1 bar0 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)'
+| |-ParmVarDecl 0x7fb56d016000 <col:6, col:9> col:9 used u8_0 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d016070 <col:15, col:19> col:19 used u16_0 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d0160e0 <col:26, col:30> col:30 used u32_0 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d016150 <col:37, col:41> col:41 used u64_0 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d02bc00 <col:48, col:51> col:51 used u8_1 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d02bc70 <col:57, col:61> col:61 used u16_1 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d02bce0 <col:68, col:72> col:72 used u32_1 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d02bd50 <col:79, col:83> col:83 used u64_1 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d02bdc0 <col:90, col:93> col:93 used u8_2 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d02be30 <col:99, col:103> col:103 used u16_2 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d02bea0 <col:110, col:114> col:114 used u32_2 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d02bf10 <col:121, col:125> col:125 used u64_2 'u64':'unsigned long long'
+| |-ParmVarDecl 0x7fb56d02bf80 <col:132, col:135> col:135 used u8_3 'u8':'unsigned char'
+| |-ParmVarDecl 0x7fb56d02bff0 <col:141, col:145> col:145 used u16_3 'u16':'unsigned short'
+| |-ParmVarDecl 0x7fb56d02c060 <col:152, col:156> col:156 used u32_3 'u32':'unsigned int'
+| |-ParmVarDecl 0x7fb56d02c0d0 <col:163, col:167> col:167 used u64_3 'u64':'unsigned long long'
+| `-CompoundStmt 0x7fb56d030ee8 <line:16:1, line:47:1>
+|   |-LabelStmt 0x7fb56d02cbb0 <line:17:1, col:154> 'l0'
+|   | `-CompoundAssignOperator 0x7fb56d02cb30 <col:9, col:154> 'u32':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   |   |-DeclRefExpr 0x7fb56d02c2f0 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bea0 'u32_2' 'u32':'unsigned int'
+|   |   `-ImplicitCastExpr 0x7fb56d02cb18 <col:18, col:154> 'unsigned int' <IntegralCast>
+|   |     `-CallExpr 0x7fb56d02cac0 <col:18, col:154> 'int'
+|   |       |-ImplicitCastExpr 0x7fb56d02caa8 <col:18> 'int (*)()' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x7fb56d02c430 <col:18> 'int ()' Function 0x7fb56d02c380 '__builtin_add_overflow_p' 'int ()'
+|   |       |-CStyleCastExpr 0x7fb56d02c4e0 <col:43, col:53> 'u32':'unsigned int' <IntegralCast>
+|   |       | `-CStyleCastExpr 0x7fb56d02c4a8 <col:48, col:53> 'u64':'unsigned long long' <IntegralCast>
+|   |       |   `-ImplicitCastExpr 0x7fb56d02c490 <col:53> 'u32':'unsigned int' <LValueToRValue>
+|   |       |     `-DeclRefExpr 0x7fb56d02c458 <col:53> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d0160e0 'u32_0' 'u32':'unsigned int'
+|   |       |-ImplicitCastExpr 0x7fb56d02cb00 <col:60, col:71> 'int' <IntegralCast>
+|   |       | `-CStyleCastExpr 0x7fb56d02c5b0 <col:60, col:71> 'u16':'unsigned short' <IntegralCast>
+|   |       |   `-UnaryOperator 0x7fb56d02c580 <col:65, col:71> 'u32':'unsigned int' prefix '-'
+|   |       |     `-CStyleCastExpr 0x7fb56d02c558 <col:66, col:71> 'u32':'unsigned int' <IntegralCast>
+|   |       |       `-ImplicitCastExpr 0x7fb56d02c540 <col:71> 'u64':'unsigned long long' <LValueToRValue>
+|   |       |         `-DeclRefExpr 0x7fb56d02c508 <col:71> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bf10 'u64_2' 'u64':'unsigned long long'
+|   |       `-CStyleCastExpr 0x7fb56d02ca50 <col:78, col:153> 'u64':'unsigned long long' <NoOp>
+|   |         `-UnaryOperator 0x7fb56d02ca20 <col:83, col:153> 'u64':'unsigned long long' prefix '-'
+|   |           `-CStyleCastExpr 0x7fb56d02c9f8 <col:84, col:153> 'u64':'unsigned long long' <IntegralCast>
+|   |             `-CStyleCastExpr 0x7fb56d02c9c0 <col:89, col:153> 'unsigned int' <IntegralCast>
+|   |               `-CallExpr 0x7fb56d02c960 <col:99, col:153> 'int'
+|   |                 |-ImplicitCastExpr 0x7fb56d02c948 <col:99> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |                 | `-DeclRefExpr 0x7fb56d02c778 <col:99> '<builtin fn type>' Function 0x7fb56d02c618 '__builtin_parityll' 'int (unsigned long long)'
+|   |                 `-ImplicitCastExpr 0x7fb56d02c990 <col:118, col:152> 'unsigned long long' <IntegralCast>
+|   |                   `-CStyleCastExpr 0x7fb56d02c8f8 <col:118, col:152> 'u16':'unsigned short' <NoOp>
+|   |                     `-CStyleCastExpr 0x7fb56d02c8c0 <col:123, col:152> 'u16':'unsigned short' <IntegralCast>
+|   |                       `-ParenExpr 0x7fb56d02c8a0 <col:128, col:152> 'u64':'unsigned long long'
+|   |                         `-ParenExpr 0x7fb56d02c840 <col:129, col:151> 'u64':'unsigned long long'
+|   |                           `-BinaryOperator 0x7fb56d02c818 <col:130, col:150> 'u64':'unsigned long long' '<<'
+|   |                             |-CStyleCastExpr 0x7fb56d02c7d0 <col:130, col:135> 'u64':'unsigned long long' <IntegralCast>
+|   |                             | `-IntegerLiteral 0x7fb56d02c7a0 <col:135> 'long' 7093312272
+|   |                             `-IntegerLiteral 0x7fb56d02c7f8 <col:150> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56d8027c8 <line:18:9, col:140> 'u8':'unsigned char' '<<=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56d02cbc8 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   | `-ImplicitCastExpr 0x7fb56d8027b0 <col:18, col:140> 'int' <IntegralCast>
+|   |   `-CallExpr 0x7fb56d802740 <col:18, col:140> '_Bool'
+|   |     |-ImplicitCastExpr 0x7fb56d802728 <col:18> 'void (*)()' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fb56d802110 <col:18> '<builtin fn type>' Function 0x7fb56d802028 '__builtin_add_overflow' 'void ()'
+|   |     |-CStyleCastExpr 0x7fb56d8021e0 <col:41, col:52> 'u16':'unsigned short' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56d8021b0 <col:46, col:52> 'u32':'unsigned int' prefix '~'
+|   |     |   `-CStyleCastExpr 0x7fb56d802188 <col:47, col:52> 'u32':'unsigned int' <IntegralCast>
+|   |     |     `-ImplicitCastExpr 0x7fb56d802170 <col:52> 'u64':'unsigned long long' <LValueToRValue>
+|   |     |       `-DeclRefExpr 0x7fb56d802138 <col:52> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bf10 'u64_2' 'u64':'unsigned long long'
+|   |     |-CStyleCastExpr 0x7fb56d802630 <col:59, col:131> 'u16':'unsigned short' <IntegralCast>
+|   |     | `-CStyleCastExpr 0x7fb56d8025f8 <col:64, col:131> 'u8':'unsigned char' <IntegralCast>
+|   |     |   `-CStyleCastExpr 0x7fb56d8025c0 <col:68, col:131> 'unsigned int' <IntegralCast>
+|   |     |     `-CallExpr 0x7fb56d802560 <col:78, col:131> 'int'
+|   |     |       |-ImplicitCastExpr 0x7fb56d802548 <col:78> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |     |       | `-DeclRefExpr 0x7fb56d802368 <col:78> '<builtin fn type>' Function 0x7fb56d802208 '__builtin_popcountll' 'int (unsigned long long)'
+|   |     |       `-ImplicitCastExpr 0x7fb56d802590 <col:99, col:130> 'unsigned long long' <IntegralCast>
+|   |     |         `-CStyleCastExpr 0x7fb56d802520 <col:99, col:130> 'u16':'unsigned short' <IntegralCast>
+|   |     |           `-UnaryOperator 0x7fb56d8024f0 <col:104, col:130> 'int' prefix '-'
+|   |     |             `-ImplicitCastExpr 0x7fb56d8024d8 <col:105, col:130> 'int' <IntegralCast>
+|   |     |               `-CStyleCastExpr 0x7fb56d8024b0 <col:105, col:130> 'u8':'unsigned char' <IntegralCast>
+|   |     |                 `-ParenExpr 0x7fb56d802490 <col:109, col:130> 'u64':'unsigned long long'
+|   |     |                   `-ParenExpr 0x7fb56d802430 <col:110, col:129> 'u64':'unsigned long long'
+|   |     |                     `-BinaryOperator 0x7fb56d802408 <col:111, col:128> 'u64':'unsigned long long' '<<'
+|   |     |                       |-CStyleCastExpr 0x7fb56d8023c0 <col:111, col:116> 'u64':'unsigned long long' <IntegralCast>
+|   |     |                       | `-IntegerLiteral 0x7fb56d802390 <col:116> 'int' 7492994
+|   |     |                       `-IntegerLiteral 0x7fb56d8023e8 <col:128> 'int' 0
+|   |     `-UnaryOperator 0x7fb56d8026d8 <col:134, col:135> 'u32 *' prefix '&'
+|   |       `-DeclRefExpr 0x7fb56d802658 <col:135> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |-CompoundAssignOperator 0x7fb56d802958 <line:19:9, col:29> 'u64':'unsigned long long' '-=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-DeclRefExpr 0x7fb56d802800 <col:9> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bd50 'u64_1' 'u64':'unsigned long long'
+|   | `-ImplicitCastExpr 0x7fb56d802940 <col:18, col:29> 'unsigned long long' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56d802918 <col:18, col:29> 'u8':'unsigned char' <IntegralCast>
+|   |     `-UnaryOperator 0x7fb56d8028e8 <col:22, col:29> 'int' prefix '~'
+|   |       `-ImplicitCastExpr 0x7fb56d8028d0 <col:23, col:29> 'int' <IntegralCast>
+|   |         `-CStyleCastExpr 0x7fb56d8028a8 <col:23, col:29> 'u8':'unsigned char' <IntegralCast>
+|   |           `-ParenExpr 0x7fb56d802888 <col:27, col:29> 'int'
+|   |             `-IntegerLiteral 0x7fb56d802828 <col:28> 'int' 0
+|   |-BinaryOperator 0x7fb56d802f68 <line:20:9, col:95> 'u16':'unsigned short' '='
+|   | |-DeclRefExpr 0x7fb56d802990 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   | `-ImplicitCastExpr 0x7fb56d802f50 <col:17, col:95> 'u16':'unsigned short' <IntegralCast>
+|   |   `-BinaryOperator 0x7fb56d802f28 <col:17, col:95> 'int' '|'
+|   |     |-ParenExpr 0x7fb56d802bd0 <col:17, col:47> 'int'
+|   |     | `-BinaryOperator 0x7fb56d802ba8 <col:18, col:46> 'int' '>>'
+|   |     |   |-ImplicitCastExpr 0x7fb56d802b90 <col:18> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x7fb56d802b78 <col:18> 'u16':'unsigned short' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x7fb56d8029b8 <col:18> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   |     |   `-ParenExpr 0x7fb56d802b58 <col:27, col:46> 'unsigned int'
+|   |     |     `-BinaryOperator 0x7fb56d802b30 <col:28, col:44> 'unsigned int' '&'
+|   |     |       |-CStyleCastExpr 0x7fb56d802ad0 <col:28, col:40> 'u32':'unsigned int' <IntegralCast>
+|   |     |       | `-UnaryOperator 0x7fb56d802aa0 <col:33, col:40> 'int' prefix '~'
+|   |     |       |   `-ImplicitCastExpr 0x7fb56d802a88 <col:34, col:40> 'int' <IntegralCast>
+|   |     |       |     `-CStyleCastExpr 0x7fb56d802a60 <col:34, col:40> 'u8':'unsigned char' <IntegralCast>
+|   |     |       |       `-ParenExpr 0x7fb56d802a40 <col:38, col:40> 'int'
+|   |     |       |         `-IntegerLiteral 0x7fb56d8029e0 <col:39> 'int' 1
+|   |     |       `-ImplicitCastExpr 0x7fb56d802b18 <col:44> 'unsigned int' <IntegralCast>
+|   |     |         `-IntegerLiteral 0x7fb56d802af8 <col:44> 'int' 15
+|   |     `-ParenExpr 0x7fb56d802f08 <col:51, col:95> 'int'
+|   |       `-BinaryOperator 0x7fb56d802ee0 <col:52, col:94> 'int' '<<'
+|   |         |-ImplicitCastExpr 0x7fb56d802ec8 <col:52> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7fb56d802eb0 <col:52> 'u16':'unsigned short' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7fb56d802bf0 <col:52> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   |         `-ParenExpr 0x7fb56d802e90 <col:61, col:94> 'unsigned int'
+|   |           `-BinaryOperator 0x7fb56d802e68 <col:62, col:92> 'unsigned int' '&'
+|   |             |-ParenExpr 0x7fb56d802e10 <col:62, col:88> 'unsigned int'
+|   |             | `-BinaryOperator 0x7fb56d802de8 <col:63, col:87> 'unsigned int' '-'
+|   |             |   |-ImplicitCastExpr 0x7fb56d802dd0 <col:63> 'unsigned int' <IntegralCast>
+|   |             |   | `-IntegerLiteral 0x7fb56d802c18 <col:63> 'int' 16
+|   |             |   `-ParenExpr 0x7fb56d802db0 <col:68, col:87> 'unsigned int'
+|   |             |     `-BinaryOperator 0x7fb56d802d88 <col:69, col:85> 'unsigned int' '&'
+|   |             |       |-CStyleCastExpr 0x7fb56d802d28 <col:69, col:81> 'u32':'unsigned int' <IntegralCast>
+|   |             |       | `-UnaryOperator 0x7fb56d802cf8 <col:74, col:81> 'int' prefix '~'
+|   |             |       |   `-ImplicitCastExpr 0x7fb56d802ce0 <col:75, col:81> 'int' <IntegralCast>
+|   |             |       |     `-CStyleCastExpr 0x7fb56d802cb8 <col:75, col:81> 'u8':'unsigned char' <IntegralCast>
+|   |             |       |       `-ParenExpr 0x7fb56d802c98 <col:79, col:81> 'int'
+|   |             |       |         `-IntegerLiteral 0x7fb56d802c38 <col:80> 'int' 1
+|   |             |       `-ImplicitCastExpr 0x7fb56d802d70 <col:85> 'unsigned int' <IntegralCast>
+|   |             |         `-IntegerLiteral 0x7fb56d802d50 <col:85> 'int' 15
+|   |             `-ImplicitCastExpr 0x7fb56d802e50 <col:92> 'unsigned int' <IntegralCast>
+|   |               `-IntegerLiteral 0x7fb56d802e30 <col:92> 'int' 15
+|   |-BinaryOperator 0x7fb56c820f10 <line:21:9, col:160> 'u8':'unsigned char' '='
+|   | |-DeclRefExpr 0x7fb56d802f90 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bdc0 'u8_2' 'u8':'unsigned char'
+|   | `-ImplicitCastExpr 0x7fb56c820ef8 <col:16, col:160> 'u8':'unsigned char' <IntegralCast>
+|   |   `-ConditionalOperator 0x7fb56c820ec8 <col:16, col:160> 'unsigned long long'
+|   |     |-ImplicitCastExpr 0x7fb56c820e98 <col:16, col:107> 'int' <IntegralCast>
+|   |     | `-CallExpr 0x7fb56c820bf0 <col:16, col:107> '_Bool'
+|   |     |   |-ImplicitCastExpr 0x7fb56c820bd8 <col:16> 'void (*)()' <BuiltinFnToFnPtr>
+|   |     |   | `-DeclRefExpr 0x7fb56c8206e8 <col:16> '<builtin fn type>' Function 0x7fb56c820600 '__builtin_mul_overflow' 'void ()'
+|   |     |   |-CStyleCastExpr 0x7fb56c820a58 <col:39, col:82> 'u64':'unsigned long long' <IntegralCast>
+|   |     |   | `-CStyleCastExpr 0x7fb56c820a20 <col:44, col:82> 'u8':'unsigned char' <IntegralCast>
+|   |     |   |   `-CallExpr 0x7fb56c8209e0 <col:48, col:82> 'unsigned int'
+|   |     |   |     |-ImplicitCastExpr 0x7fb56c8209c8 <col:48> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |     |   |     | `-DeclRefExpr 0x7fb56c8208a8 <col:48> '<builtin fn type>' Function 0x7fb56c820748 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|   |     |   |     `-CStyleCastExpr 0x7fb56c820978 <col:66, col:77> 'u32':'unsigned int' <NoOp>
+|   |     |   |       `-UnaryOperator 0x7fb56c820948 <col:71, col:77> 'u32':'unsigned int' prefix '-'
+|   |     |   |         `-CStyleCastExpr 0x7fb56c820920 <col:72, col:77> 'u32':'unsigned int' <IntegralCast>
+|   |     |   |           `-ImplicitCastExpr 0x7fb56c820908 <col:77> 'u16':'unsigned short' <LValueToRValue>
+|   |     |   |             `-DeclRefExpr 0x7fb56c8208d0 <col:77> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d016070 'u16_0' 'u16':'unsigned short'
+|   |     |   |-CStyleCastExpr 0x7fb56c820b08 <col:85, col:95> 'u64':'unsigned long long' <IntegralCast>
+|   |     |   | `-CStyleCastExpr 0x7fb56c820ad0 <col:90, col:95> 'u16':'unsigned short' <NoOp>
+|   |     |   |   `-ImplicitCastExpr 0x7fb56c820ab8 <col:95> 'u16':'unsigned short' <LValueToRValue>
+|   |     |   |     `-DeclRefExpr 0x7fb56c820a80 <col:95> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02be30 'u16_2' 'u16':'unsigned short'
+|   |     |   `-UnaryOperator 0x7fb56c820bb8 <col:102, col:103> 'u8 *' prefix '&'
+|   |     |     `-DeclRefExpr 0x7fb56c820b30 <col:103> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   |     |-CStyleCastExpr 0x7fb56c820cf0 <col:111, col:121> 'u64':'unsigned long long' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56c820cc0 <col:116, col:121> 'int' prefix '~'
+|   |     |   `-ImplicitCastExpr 0x7fb56c820ca8 <col:117, col:121> 'int' <IntegralCast>
+|   |     |     `-CStyleCastExpr 0x7fb56c820c80 <col:117, col:121> 'u8':'unsigned char' <NoOp>
+|   |     |       `-ImplicitCastExpr 0x7fb56c820c68 <col:121> 'u8':'unsigned char' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7fb56c820c30 <col:121> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   |     `-ImplicitCastExpr 0x7fb56c820eb0 <col:128, col:160> 'unsigned long long' <IntegralCast>
+|   |       `-CStyleCastExpr 0x7fb56c820e70 <col:128, col:160> 'u16':'unsigned short' <NoOp>
+|   |         `-CStyleCastExpr 0x7fb56c820e38 <col:133, col:160> 'u16':'unsigned short' <IntegralCast>
+|   |           `-ParenExpr 0x7fb56c820e18 <col:138, col:160> 'u64':'unsigned long long'
+|   |             `-ParenExpr 0x7fb56c820db8 <col:139, col:159> 'u64':'unsigned long long'
+|   |               `-BinaryOperator 0x7fb56c820d90 <col:140, col:158> 'u64':'unsigned long long' '<<'
+|   |                 |-CStyleCastExpr 0x7fb56c820d48 <col:140, col:145> 'u64':'unsigned long long' <IntegralCast>
+|   |                 | `-IntegerLiteral 0x7fb56c820d18 <col:145> 'int' 134217727
+|   |                 `-IntegerLiteral 0x7fb56c820d70 <col:158> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56c8210f8 <line:22:9, col:56> 'u32':'unsigned int' '*=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-DeclRefExpr 0x7fb56c820f38 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d0160e0 'u32_0' 'u32':'unsigned int'
+|   | `-ImplicitCastExpr 0x7fb56c8210e0 <col:18, col:56> 'unsigned int' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56c8210b8 <col:18, col:56> 'u8':'unsigned char' <NoOp>
+|   |     `-CStyleCastExpr 0x7fb56c821080 <col:22, col:56> 'u8':'unsigned char' <IntegralCast>
+|   |       `-ParenExpr 0x7fb56c821060 <col:26, col:56> 'u64':'unsigned long long'
+|   |         `-ParenExpr 0x7fb56c821000 <col:27, col:55> 'u64':'unsigned long long'
+|   |           `-BinaryOperator 0x7fb56c820fd8 <col:28, col:54> 'u64':'unsigned long long' '<<'
+|   |             |-CStyleCastExpr 0x7fb56c820f90 <col:28, col:33> 'u64':'unsigned long long' <IntegralCast>
+|   |             | `-IntegerLiteral 0x7fb56c820f60 <col:33> 'long' 144115188075855871
+|   |             `-IntegerLiteral 0x7fb56c820fb8 <col:54> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56c821618 <line:23:9, col:128> 'u32':'unsigned int' '>>=' ComputeLHSTy='u32':'unsigned int' ComputeResultTy='u32':'unsigned int'
+|   | |-DeclRefExpr 0x7fb56c821130 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   | `-BinaryOperator 0x7fb56c8215c8 <col:19, col:128> 'int' '>='
+|   |   |-CStyleCastExpr 0x7fb56c8212d0 <col:19, col:59> 'u64':'unsigned long long' <NoOp>
+|   |   | `-UnaryOperator 0x7fb56c8212a0 <col:24, col:59> 'u64':'unsigned long long' prefix '~'
+|   |   |   `-CStyleCastExpr 0x7fb56c821278 <col:25, col:59> 'u64':'unsigned long long' <NoOp>
+|   |   |     `-ParenExpr 0x7fb56c821258 <col:30, col:59> 'u64':'unsigned long long'
+|   |   |       `-ParenExpr 0x7fb56c8211f8 <col:31, col:58> 'u64':'unsigned long long'
+|   |   |         `-BinaryOperator 0x7fb56c8211d0 <col:32, col:57> 'u64':'unsigned long long' '<<'
+|   |   |           |-CStyleCastExpr 0x7fb56c821188 <col:32, col:37> 'u64':'unsigned long long' <IntegralCast>
+|   |   |           | `-IntegerLiteral 0x7fb56c821158 <col:37> 'long' 27513655206214458
+|   |   |           `-IntegerLiteral 0x7fb56c8211b0 <col:57> 'int' 0
+|   |   `-ImplicitCastExpr 0x7fb56c8215b0 <col:64, col:128> 'unsigned long long' <IntegralCast>
+|   |     `-CStyleCastExpr 0x7fb56c821588 <col:64, col:128> 'u8':'unsigned char' <IntegralCast>
+|   |       `-CStyleCastExpr 0x7fb56c821550 <col:68, col:128> 'u16':'unsigned short' <IntegralCast>
+|   |         `-CStyleCastExpr 0x7fb56c821518 <col:73, col:128> 'unsigned int' <IntegralCast>
+|   |           `-CallExpr 0x7fb56c8214b8 <col:83, col:128> 'int'
+|   |             |-ImplicitCastExpr 0x7fb56c8214a0 <col:83> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |             | `-DeclRefExpr 0x7fb56c8212f8 <col:83> '<builtin fn type>' Function 0x7fb56d02c618 '__builtin_parityll' 'int (unsigned long long)'
+|   |             `-ImplicitCastExpr 0x7fb56c8214e8 <col:102, col:127> 'unsigned long long' <IntegralCast>
+|   |               `-CStyleCastExpr 0x7fb56c821478 <col:102, col:127> 'u16':'unsigned short' <IntegralCast>
+|   |                 `-CStyleCastExpr 0x7fb56c821440 <col:107, col:127> 'u8':'unsigned char' <IntegralCast>
+|   |                   `-ParenExpr 0x7fb56c821420 <col:111, col:127> 'u64':'unsigned long long'
+|   |                     `-ParenExpr 0x7fb56c8213c0 <col:112, col:126> 'u64':'unsigned long long'
+|   |                       `-BinaryOperator 0x7fb56c821398 <col:113, col:125> 'u64':'unsigned long long' '<<'
+|   |                         |-CStyleCastExpr 0x7fb56c821350 <col:113, col:118> 'u64':'unsigned long long' <IntegralCast>
+|   |                         | `-IntegerLiteral 0x7fb56c821320 <col:118> 'int' 6
+|   |                         `-IntegerLiteral 0x7fb56c821378 <col:125> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56c821e18 <line:24:9, col:173> 'u16':'unsigned short' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56c821650 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d016070 'u16_0' 'u16':'unsigned short'
+|   | `-CallExpr 0x7fb56c821d90 <col:19, col:173> 'int'
+|   |   |-ImplicitCastExpr 0x7fb56c821d78 <col:19> 'int (*)()' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fb56c821678 <col:19> 'int ()' Function 0x7fb56d02c380 '__builtin_add_overflow_p' 'int ()'
+|   |   |-CStyleCastExpr 0x7fb56c821830 <col:44, col:80> 'u64':'unsigned long long' <IntegralCast>
+|   |   | `-UnaryOperator 0x7fb56c821800 <col:49, col:80> 'int' prefix '-'
+|   |   |   `-ImplicitCastExpr 0x7fb56c8217e8 <col:50, col:80> 'int' <IntegralCast>
+|   |   |     `-CStyleCastExpr 0x7fb56c8217c0 <col:50, col:80> 'u8':'unsigned char' <IntegralCast>
+|   |   |       `-ParenExpr 0x7fb56c8217a0 <col:54, col:80> 'u64':'unsigned long long'
+|   |   |         `-ParenExpr 0x7fb56c821740 <col:55, col:79> 'u64':'unsigned long long'
+|   |   |           `-BinaryOperator 0x7fb56c821718 <col:56, col:78> 'u64':'unsigned long long' '<<'
+|   |   |             |-CStyleCastExpr 0x7fb56c8216d0 <col:56, col:61> 'u64':'unsigned long long' <IntegralCast>
+|   |   |             | `-IntegerLiteral 0x7fb56c8216a0 <col:61> 'long' 7195376375267
+|   |   |             `-IntegerLiteral 0x7fb56c8216f8 <col:78> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fb56c821dd0 <col:83, col:155> 'int' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56c821ca0 <col:83, col:155> 'u16':'unsigned short' <IntegralCast>
+|   |   |   `-CStyleCastExpr 0x7fb56c821c68 <col:88, col:155> 'u64':'unsigned long long' <NoOp>
+|   |   |     `-CallExpr 0x7fb56c821c10 <col:93, col:155> 'unsigned long long'
+|   |   |       |-ImplicitCastExpr 0x7fb56c821bf8 <col:93> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |   |       | `-DeclRefExpr 0x7fb56c8219f8 <col:93> '<builtin fn type>' Function 0x7fb56c821898 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|   |   |       `-ImplicitCastExpr 0x7fb56c821c40 <col:111, col:154> 'unsigned long long' <IntegralCast>
+|   |   |         `-CStyleCastExpr 0x7fb56c821ba8 <col:111, col:154> 'u16':'unsigned short' <IntegralCast>
+|   |   |           `-UnaryOperator 0x7fb56c821b78 <col:116, col:154> 'u32':'unsigned int' prefix '~'
+|   |   |             `-CStyleCastExpr 0x7fb56c821b50 <col:117, col:154> 'u32':'unsigned int' <NoOp>
+|   |   |               `-CallExpr 0x7fb56c821b10 <col:122, col:154> 'unsigned int'
+|   |   |                 |-ImplicitCastExpr 0x7fb56c821af8 <col:122> 'unsigned int (*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |   |                 | `-DeclRefExpr 0x7fb56c821a20 <col:122> '<builtin fn type>' Function 0x7fb56c820748 '__builtin_bswap32' 'unsigned int (unsigned int)'
+|   |   |                 `-CStyleCastExpr 0x7fb56c821ad0 <col:140, col:150> 'u32':'unsigned int' <NoOp>
+|   |   |                   `-CStyleCastExpr 0x7fb56c821a98 <col:145, col:150> 'u32':'unsigned int' <IntegralCast>
+|   |   |                     `-ImplicitCastExpr 0x7fb56c821a80 <col:150> 'u8':'unsigned char' <LValueToRValue>
+|   |   |                       `-DeclRefExpr 0x7fb56c821a48 <col:150> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   |   `-CStyleCastExpr 0x7fb56c821d50 <col:158, col:168> 'u64':'unsigned long long' <IntegralCast>
+|   |     `-CStyleCastExpr 0x7fb56c821d18 <col:163, col:168> 'u16':'unsigned short' <NoOp>
+|   |       `-ImplicitCastExpr 0x7fb56c821d00 <col:168> 'u16':'unsigned short' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fb56c821cc8 <col:168> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bc70 'u16_1' 'u16':'unsigned short'
+|   |-CompoundAssignOperator 0x7fb56c822030 <line:25:9, col:59> 'u64':'unsigned long long' '+=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-DeclRefExpr 0x7fb56c821e50 <col:9> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d016150 'u64_0' 'u64':'unsigned long long'
+|   | `-ImplicitCastExpr 0x7fb56c822018 <col:18, col:59> 'unsigned long long' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56c821ff0 <col:18, col:59> 'u8':'unsigned char' <IntegralCast>
+|   |     `-UnaryOperator 0x7fb56c821fc0 <col:22, col:59> 'u64':'unsigned long long' prefix '-'
+|   |       `-CStyleCastExpr 0x7fb56c821f98 <col:23, col:59> 'u64':'unsigned long long' <NoOp>
+|   |         `-ParenExpr 0x7fb56c821f78 <col:28, col:59> 'u64':'unsigned long long'
+|   |           `-ParenExpr 0x7fb56c821f18 <col:29, col:58> 'u64':'unsigned long long'
+|   |             `-BinaryOperator 0x7fb56c821ef0 <col:30, col:57> 'u64':'unsigned long long' '<<'
+|   |               |-CStyleCastExpr 0x7fb56c821ea8 <col:30, col:35> 'u64':'unsigned long long' <IntegralCast>
+|   |               | `-IntegerLiteral 0x7fb56c821e78 <col:35> 'unsigned long' 14738212025312963488
+|   |               `-IntegerLiteral 0x7fb56c821ed0 <col:57> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56c8223c0 <line:26:9, col:101> 'u32':'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-DeclRefExpr 0x7fb56c822068 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d0160e0 'u32_0' 'u32':'unsigned int'
+|   | `-ImplicitCastExpr 0x7fb56c8223a8 <col:18, col:101> 'unsigned int' <IntegralCast>
+|   |   `-CallExpr 0x7fb56c822368 <col:18, col:101> '_Bool'
+|   |     |-ImplicitCastExpr 0x7fb56c822350 <col:18> 'void (*)()' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fb56c822090 <col:18> '<builtin fn type>' Function 0x7fb56c820600 '__builtin_mul_overflow' 'void ()'
+|   |     |-CStyleCastExpr 0x7fb56c822230 <col:41, col:77> 'u8':'unsigned char' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56c822200 <col:45, col:77> 'u64':'unsigned long long' prefix '-'
+|   |     |   `-CStyleCastExpr 0x7fb56c8221d8 <col:46, col:77> 'u64':'unsigned long long' <NoOp>
+|   |     |     `-ParenExpr 0x7fb56c8221b8 <col:51, col:77> 'u64':'unsigned long long'
+|   |     |       `-ParenExpr 0x7fb56c822158 <col:52, col:76> 'u64':'unsigned long long'
+|   |     |         `-BinaryOperator 0x7fb56c822130 <col:53, col:75> 'u64':'unsigned long long' '<<'
+|   |     |           |-CStyleCastExpr 0x7fb56c8220e8 <col:53, col:58> 'u64':'unsigned long long' <IntegralCast>
+|   |     |           | `-IntegerLiteral 0x7fb56c8220b8 <col:58> 'long' 13782938986282
+|   |     |           `-IntegerLiteral 0x7fb56c822110 <col:75> 'int' 0
+|   |     |-CStyleCastExpr 0x7fb56c8222e0 <col:80, col:90> 'u64':'unsigned long long' <NoOp>
+|   |     | `-CStyleCastExpr 0x7fb56c8222a8 <col:85, col:90> 'u64':'unsigned long long' <IntegralCast>
+|   |     |   `-ImplicitCastExpr 0x7fb56c822290 <col:90> 'u8':'unsigned char' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fb56c822258 <col:90> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bdc0 'u8_2' 'u8':'unsigned char'
+|   |     `-UnaryOperator 0x7fb56c822330 <col:96, col:97> 'u8 *' prefix '&'
+|   |       `-DeclRefExpr 0x7fb56c822308 <col:97> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   |-CompoundAssignOperator 0x7fb56c822708 <line:27:9, col:80> 'u64':'unsigned long long' '>>=' ComputeLHSTy='u64':'unsigned long long' ComputeResultTy='u64':'unsigned long long'
+|   | |-DeclRefExpr 0x7fb56c8223f8 <col:9> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d016150 'u64_0' 'u64':'unsigned long long'
+|   | `-ImplicitCastExpr 0x7fb56c8226f0 <col:19, col:80> 'int' <IntegralCast>
+|   |   `-CallExpr 0x7fb56c822698 <col:19, col:80> '_Bool'
+|   |     |-ImplicitCastExpr 0x7fb56c822680 <col:19> 'void (*)()' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fb56c822420 <col:19> '<builtin fn type>' Function 0x7fb56d802028 '__builtin_add_overflow' 'void ()'
+|   |     |-CStyleCastExpr 0x7fb56c822520 <col:42, col:55> 'u32':'unsigned int' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56c8224f0 <col:47, col:55> 'u64':'unsigned long long' prefix '-'
+|   |     |   `-CStyleCastExpr 0x7fb56c8224c8 <col:48, col:55> 'u64':'unsigned long long' <IntegralCast>
+|   |     |     `-ParenExpr 0x7fb56c8224a8 <col:53, col:55> 'int'
+|   |     |       `-IntegerLiteral 0x7fb56c822448 <col:54> 'int' 0
+|   |     |-CStyleCastExpr 0x7fb56c822610 <col:58, col:69> 'u32':'unsigned int' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56c8225d8 <col:63, col:69> 'int' prefix '-'
+|   |     |   `-ImplicitCastExpr 0x7fb56c8225c0 <col:64, col:69> 'int' <IntegralCast>
+|   |     |     `-CStyleCastExpr 0x7fb56c822598 <col:64, col:69> 'u16':'unsigned short' <IntegralCast>
+|   |     |       `-ImplicitCastExpr 0x7fb56c822580 <col:69> 'u8':'unsigned char' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7fb56c822548 <col:69> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bc00 'u8_1' 'u8':'unsigned char'
+|   |     `-UnaryOperator 0x7fb56c822660 <col:75, col:76> 'u8 *' prefix '&'
+|   |       `-DeclRefExpr 0x7fb56c822638 <col:76> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bdc0 'u8_2' 'u8':'unsigned char'
+|   |-CompoundAssignOperator 0x7fb56c8228a8 <line:28:9, col:37> 'u16':'unsigned short' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56c822740 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bc70 'u16_1' 'u16':'unsigned short'
+|   | `-BinaryOperator 0x7fb56c822850 <col:19, col:37> 'unsigned int' '&'
+|   |   |-CStyleCastExpr 0x7fb56c8227f0 <col:19, col:29> 'u32':'unsigned int' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56c8227b8 <col:24, col:29> 'u64':'unsigned long long' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7fb56c8227a0 <col:29> 'u16':'unsigned short' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fb56c822768 <col:29> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bc70 'u16_1' 'u16':'unsigned short'
+|   |   `-ImplicitCastExpr 0x7fb56c822838 <col:37> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb56c822818 <col:37> 'int' 15
+|   |-CompoundAssignOperator 0x7fb56c822a38 <line:29:9, col:31> 'u16':'unsigned short' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56c8228e0 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   | `-ImplicitCastExpr 0x7fb56c822a20 <col:18, col:31> 'int' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56c8229f8 <col:18, col:31> 'u16':'unsigned short' <IntegralCast>
+|   |     `-UnaryOperator 0x7fb56c8229c8 <col:23, col:31> 'int' prefix '~'
+|   |       `-ImplicitCastExpr 0x7fb56c8229b0 <col:24, col:31> 'int' <IntegralCast>
+|   |         `-CStyleCastExpr 0x7fb56c822988 <col:24, col:31> 'u16':'unsigned short' <IntegralCast>
+|   |           `-ParenExpr 0x7fb56c822968 <col:29, col:31> 'int'
+|   |             `-IntegerLiteral 0x7fb56c822908 <col:30> 'int' 1
+|   |-CompoundAssignOperator 0x7fb56c822bb0 <line:30:9, col:31> 'u32':'unsigned int' '&=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | |-DeclRefExpr 0x7fb56c822a70 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bea0 'u32_2' 'u32':'unsigned int'
+|   | `-ImplicitCastExpr 0x7fb56c822b98 <col:18, col:31> 'unsigned int' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56c822b70 <col:18, col:31> 'u16':'unsigned short' <IntegralCast>
+|   |     `-UnaryOperator 0x7fb56c822b40 <col:23, col:31> 'u32':'unsigned int' prefix '-'
+|   |       `-CStyleCastExpr 0x7fb56c822b18 <col:24, col:31> 'u32':'unsigned int' <IntegralCast>
+|   |         `-ParenExpr 0x7fb56c822af8 <col:29, col:31> 'int'
+|   |           `-IntegerLiteral 0x7fb56c822a98 <col:30> 'int' 0
+|   |-LabelStmt 0x7fb56c823118 <line:31:1, col:99> 'l1'
+|   | `-BinaryOperator 0x7fb56c8230a8 <col:9, col:99> 'u32':'unsigned int' '='
+|   |   |-DeclRefExpr 0x7fb56c822be8 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02c060 'u32_3' 'u32':'unsigned int'
+|   |   `-BinaryOperator 0x7fb56c823080 <col:17, col:99> 'unsigned int' '|'
+|   |     |-ParenExpr 0x7fb56c822da8 <col:17, col:49> 'u32':'unsigned int'
+|   |     | `-BinaryOperator 0x7fb56c822d80 <col:18, col:48> 'u32':'unsigned int' '>>'
+|   |     |   |-ImplicitCastExpr 0x7fb56c822d68 <col:18> 'u32':'unsigned int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fb56c822c10 <col:18> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02c060 'u32_3' 'u32':'unsigned int'
+|   |     |   `-ParenExpr 0x7fb56c822d48 <col:27, col:48> 'unsigned long long'
+|   |     |     `-BinaryOperator 0x7fb56c822d20 <col:28, col:46> 'unsigned long long' '&'
+|   |     |       |-CStyleCastExpr 0x7fb56c822cc0 <col:28, col:38> 'u64':'unsigned long long' <IntegralCast>
+|   |     |       | `-CStyleCastExpr 0x7fb56c822c88 <col:33, col:38> 'u32':'unsigned int' <NoOp>
+|   |     |       |   `-ImplicitCastExpr 0x7fb56c822c70 <col:38> 'u32':'unsigned int' <LValueToRValue>
+|   |     |       |     `-DeclRefExpr 0x7fb56c822c38 <col:38> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |     |       `-ImplicitCastExpr 0x7fb56c822d08 <col:46> 'unsigned long long' <IntegralCast>
+|   |     |         `-IntegerLiteral 0x7fb56c822ce8 <col:46> 'int' 31
+|   |     `-ParenExpr 0x7fb56c823060 <col:53, col:99> 'u32':'unsigned int'
+|   |       `-BinaryOperator 0x7fb56c823038 <col:54, col:98> 'u32':'unsigned int' '<<'
+|   |         |-ImplicitCastExpr 0x7fb56c823020 <col:54> 'u32':'unsigned int' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fb56c822dc8 <col:54> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02c060 'u32_3' 'u32':'unsigned int'
+|   |         `-ParenExpr 0x7fb56c823000 <col:63, col:98> 'unsigned long long'
+|   |           `-BinaryOperator 0x7fb56c822fd8 <col:64, col:96> 'unsigned long long' '&'
+|   |             |-ParenExpr 0x7fb56c822f80 <col:64, col:92> 'unsigned long long'
+|   |             | `-BinaryOperator 0x7fb56c822f58 <col:65, col:91> 'unsigned long long' '-'
+|   |             |   |-ImplicitCastExpr 0x7fb56c822f40 <col:65> 'unsigned long long' <IntegralCast>
+|   |             |   | `-IntegerLiteral 0x7fb56c822df0 <col:65> 'int' 32
+|   |             |   `-ParenExpr 0x7fb56c822f20 <col:70, col:91> 'unsigned long long'
+|   |             |     `-BinaryOperator 0x7fb56c822ef8 <col:71, col:89> 'unsigned long long' '&'
+|   |             |       |-CStyleCastExpr 0x7fb56c822e98 <col:71, col:81> 'u64':'unsigned long long' <IntegralCast>
+|   |             |       | `-CStyleCastExpr 0x7fb56c822e60 <col:76, col:81> 'u32':'unsigned int' <NoOp>
+|   |             |       |   `-ImplicitCastExpr 0x7fb56c822e48 <col:81> 'u32':'unsigned int' <LValueToRValue>
+|   |             |       |     `-DeclRefExpr 0x7fb56c822e10 <col:81> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |             |       `-ImplicitCastExpr 0x7fb56c822ee0 <col:89> 'unsigned long long' <IntegralCast>
+|   |             |         `-IntegerLiteral 0x7fb56c822ec0 <col:89> 'int' 31
+|   |             `-ImplicitCastExpr 0x7fb56c822fc0 <col:96> 'unsigned long long' <IntegralCast>
+|   |               `-IntegerLiteral 0x7fb56c822fa0 <col:96> 'int' 31
+|   |-CompoundAssignOperator 0x7fb56c823380 <line:32:9, col:73> 'u64':'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-DeclRefExpr 0x7fb56c823130 <col:9> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bd50 'u64_1' 'u64':'unsigned long long'
+|   | `-CStyleCastExpr 0x7fb56c823358 <col:18, col:73> 'u64':'unsigned long long' <NoOp>
+|   |   `-UnaryOperator 0x7fb56c823328 <col:23, col:73> 'u64':'unsigned long long' prefix '~'
+|   |     `-CStyleCastExpr 0x7fb56c823300 <col:24, col:73> 'u64':'unsigned long long' <IntegralCast>
+|   |       `-CStyleCastExpr 0x7fb56c8232c8 <col:29, col:73> 'unsigned int' <IntegralCast>
+|   |         `-CallExpr 0x7fb56c823268 <col:39, col:73> 'int'
+|   |           |-ImplicitCastExpr 0x7fb56c823250 <col:39> 'int (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |           | `-DeclRefExpr 0x7fb56c823158 <col:39> '<builtin fn type>' Function 0x7fb56d02c618 '__builtin_parityll' 'int (unsigned long long)'
+|   |           `-ImplicitCastExpr 0x7fb56c823298 <col:58, col:68> 'unsigned long long' <IntegralCast>
+|   |             `-CStyleCastExpr 0x7fb56c823228 <col:58, col:68> 'u8':'unsigned char' <IntegralCast>
+|   |               `-UnaryOperator 0x7fb56c8231f8 <col:62, col:68> 'u32':'unsigned int' prefix '-'
+|   |                 `-CStyleCastExpr 0x7fb56c8231d0 <col:63, col:68> 'u32':'unsigned int' <NoOp>
+|   |                   `-ImplicitCastExpr 0x7fb56c8231b8 <col:68> 'u32':'unsigned int' <LValueToRValue>
+|   |                     `-DeclRefExpr 0x7fb56c823180 <col:68> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |-CompoundAssignOperator 0x7fb56c823800 <line:33:9, col:114> 'u8':'unsigned char' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56c8233b8 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   | `-ImplicitCastExpr 0x7fb56c8237e8 <col:17, col:114> 'int' <IntegralCast>
+|   |   `-CallExpr 0x7fb56c8237a8 <col:17, col:114> '_Bool'
+|   |     |-ImplicitCastExpr 0x7fb56c823790 <col:17> 'void (*)()' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fb56c8233e0 <col:17> '<builtin fn type>' Function 0x7fb56d802028 '__builtin_add_overflow' 'void ()'
+|   |     |-CStyleCastExpr 0x7fb56c823580 <col:40, col:70> 'u64':'unsigned long long' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56c823550 <col:45, col:70> 'u32':'unsigned int' prefix '-'
+|   |     |   `-CStyleCastExpr 0x7fb56c823528 <col:46, col:70> 'u32':'unsigned int' <IntegralCast>
+|   |     |     `-ParenExpr 0x7fb56c823508 <col:51, col:70> 'u64':'unsigned long long'
+|   |     |       `-ParenExpr 0x7fb56c8234a8 <col:52, col:69> 'u64':'unsigned long long'
+|   |     |         `-BinaryOperator 0x7fb56c823480 <col:53, col:68> 'u64':'unsigned long long' '<<'
+|   |     |           |-CStyleCastExpr 0x7fb56c823438 <col:53, col:58> 'u64':'unsigned long long' <IntegralCast>
+|   |     |           | `-IntegerLiteral 0x7fb56c823408 <col:58> 'int' 65535
+|   |     |           `-IntegerLiteral 0x7fb56c823460 <col:68> 'int' 0
+|   |     |-CStyleCastExpr 0x7fb56c823720 <col:73, col:105> 'u32':'unsigned int' <IntegralCast>
+|   |     | `-UnaryOperator 0x7fb56c8236f0 <col:78, col:105> 'u64':'unsigned long long' prefix '~'
+|   |     |   `-CStyleCastExpr 0x7fb56c8236c8 <col:79, col:105> 'u64':'unsigned long long' <NoOp>
+|   |     |     `-ParenExpr 0x7fb56c8236a8 <col:84, col:105> 'u64':'unsigned long long'
+|   |     |       `-ParenExpr 0x7fb56c823648 <col:85, col:104> 'u64':'unsigned long long'
+|   |     |         `-BinaryOperator 0x7fb56c823620 <col:86, col:103> 'u64':'unsigned long long' '<<'
+|   |     |           |-CStyleCastExpr 0x7fb56c8235d8 <col:86, col:91> 'u64':'unsigned long long' <IntegralCast>
+|   |     |           | `-IntegerLiteral 0x7fb56c8235a8 <col:91> 'int' 1146430
+|   |     |           `-IntegerLiteral 0x7fb56c823600 <col:103> 'int' 0
+|   |     `-UnaryOperator 0x7fb56c823770 <col:108, col:109> 'u32 *' prefix '&'
+|   |       `-DeclRefExpr 0x7fb56c823748 <col:109> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bea0 'u32_2' 'u32':'unsigned int'
+|   |-BinaryOperator 0x7fb56c823f50 <line:34:9, col:133> 'u16':'unsigned short' '='
+|   | |-DeclRefExpr 0x7fb56c823838 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   | `-ImplicitCastExpr 0x7fb56c823f38 <col:17, col:133> 'u16':'unsigned short' <IntegralCast>
+|   |   `-BinaryOperator 0x7fb56c823f10 <col:17, col:133> 'int' '|'
+|   |     |-ParenExpr 0x7fb56c823b18 <col:17, col:66> 'int'
+|   |     | `-BinaryOperator 0x7fb56c823af0 <col:18, col:65> 'int' '<<'
+|   |     |   |-ImplicitCastExpr 0x7fb56c823ad8 <col:18> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x7fb56c823ac0 <col:18> 'u16':'unsigned short' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x7fb56c823860 <col:18> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   |     |   `-ParenExpr 0x7fb56c823aa0 <col:27, col:65> 'unsigned long long'
+|   |     |     `-BinaryOperator 0x7fb56c823a78 <col:28, col:63> 'unsigned long long' '&'
+|   |     |       |-CStyleCastExpr 0x7fb56c823a18 <col:28, col:59> 'u64':'unsigned long long' <IntegralCast>
+|   |     |       | `-UnaryOperator 0x7fb56c8239e8 <col:33, col:59> 'int' prefix '~'
+|   |     |       |   `-ImplicitCastExpr 0x7fb56c8239d0 <col:34, col:59> 'int' <IntegralCast>
+|   |     |       |     `-CStyleCastExpr 0x7fb56c8239a8 <col:34, col:59> 'u8':'unsigned char' <IntegralCast>
+|   |     |       |       `-ParenExpr 0x7fb56c823988 <col:38, col:59> 'u64':'unsigned long long'
+|   |     |       |         `-ParenExpr 0x7fb56c823928 <col:39, col:58> 'u64':'unsigned long long'
+|   |     |       |           `-BinaryOperator 0x7fb56c823900 <col:40, col:57> 'u64':'unsigned long long' '<<'
+|   |     |       |             |-CStyleCastExpr 0x7fb56c8238b8 <col:40, col:45> 'u64':'unsigned long long' <IntegralCast>
+|   |     |       |             | `-IntegerLiteral 0x7fb56c823888 <col:45> 'int' 16223873
+|   |     |       |             `-IntegerLiteral 0x7fb56c8238e0 <col:57> 'int' 0
+|   |     |       `-ImplicitCastExpr 0x7fb56c823a60 <col:63> 'unsigned long long' <IntegralCast>
+|   |     |         `-IntegerLiteral 0x7fb56c823a40 <col:63> 'int' 15
+|   |     `-ParenExpr 0x7fb56c823ef0 <col:70, col:133> 'int'
+|   |       `-BinaryOperator 0x7fb56c823ec8 <col:71, col:132> 'int' '>>'
+|   |         |-ImplicitCastExpr 0x7fb56c823eb0 <col:71> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7fb56c823e98 <col:71> 'u16':'unsigned short' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7fb56c823b38 <col:71> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   |         `-ParenExpr 0x7fb56c823e78 <col:80, col:132> 'unsigned long long'
+|   |           `-BinaryOperator 0x7fb56c823e50 <col:81, col:130> 'unsigned long long' '&'
+|   |             |-ParenExpr 0x7fb56c823df8 <col:81, col:126> 'unsigned long long'
+|   |             | `-BinaryOperator 0x7fb56c823dd0 <col:82, col:125> 'unsigned long long' '-'
+|   |             |   |-ImplicitCastExpr 0x7fb56c823db8 <col:82> 'unsigned long long' <IntegralCast>
+|   |             |   | `-IntegerLiteral 0x7fb56c823b60 <col:82> 'int' 16
+|   |             |   `-ParenExpr 0x7fb56c823d98 <col:87, col:125> 'unsigned long long'
+|   |             |     `-BinaryOperator 0x7fb56c823d70 <col:88, col:123> 'unsigned long long' '&'
+|   |             |       |-CStyleCastExpr 0x7fb56c823d10 <col:88, col:119> 'u64':'unsigned long long' <IntegralCast>
+|   |             |       | `-UnaryOperator 0x7fb56c823ce0 <col:93, col:119> 'int' prefix '~'
+|   |             |       |   `-ImplicitCastExpr 0x7fb56c823cc8 <col:94, col:119> 'int' <IntegralCast>
+|   |             |       |     `-CStyleCastExpr 0x7fb56c823ca0 <col:94, col:119> 'u8':'unsigned char' <IntegralCast>
+|   |             |       |       `-ParenExpr 0x7fb56c823c80 <col:98, col:119> 'u64':'unsigned long long'
+|   |             |       |         `-ParenExpr 0x7fb56c823c20 <col:99, col:118> 'u64':'unsigned long long'
+|   |             |       |           `-BinaryOperator 0x7fb56c823bf8 <col:100, col:117> 'u64':'unsigned long long' '<<'
+|   |             |       |             |-CStyleCastExpr 0x7fb56c823bb0 <col:100, col:105> 'u64':'unsigned long long' <IntegralCast>
+|   |             |       |             | `-IntegerLiteral 0x7fb56c823b80 <col:105> 'int' 16223873
+|   |             |       |             `-IntegerLiteral 0x7fb56c823bd8 <col:117> 'int' 0
+|   |             |       `-ImplicitCastExpr 0x7fb56c823d58 <col:123> 'unsigned long long' <IntegralCast>
+|   |             |         `-IntegerLiteral 0x7fb56c823d38 <col:123> 'int' 15
+|   |             `-ImplicitCastExpr 0x7fb56c823e38 <col:130> 'unsigned long long' <IntegralCast>
+|   |               `-IntegerLiteral 0x7fb56c823e18 <col:130> 'int' 15
+|   |-BinaryOperator 0x7fb56c862fc0 <line:35:9, col:808> 'u64':'unsigned long long' '='
+|   | |-DeclRefExpr 0x7fb56c823f78 <col:9> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bd50 'u64_1' 'u64':'unsigned long long'
+|   | `-ConditionalOperator 0x7fb56c862f90 <col:17, col:808> 'unsigned long long'
+|   |   |-BinaryOperator 0x7fb56c862df0 <col:17, col:777> 'int' '>'
+|   |   | |-CStyleCastExpr 0x7fb56c862c10 <col:17, col:746> 'u64':'unsigned long long' <IntegralCast>
+|   |   | | `-CStyleCastExpr 0x7fb56c862bd8 <col:22, col:746> 'u16':'unsigned short' <IntegralCast>
+|   |   | |   `-CallExpr 0x7fb56c862b20 <col:27, col:746> 'u64':'unsigned long long'
+|   |   | |     |-ImplicitCastExpr 0x7fb56c862b08 <col:27> 'u64 (*)(u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)' <FunctionToPointerDecay>
+|   |   | |     | `-DeclRefExpr 0x7fb56c823fa0 <col:27> 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)' Function 0x7fb56d015610 'bar1' 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)'
+|   |   | |     |-CStyleCastExpr 0x7fb56c8241a8 <col:32, col:70> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c824188 <col:36, col:70> 'u32':'unsigned int'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c824120 <col:37, col:69> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c8240e8 <col:42, col:69> 'u64':'unsigned long long' <NoOp>
+|   |   | |     |       `-ParenExpr 0x7fb56c8240c8 <col:47, col:69> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c824068 <col:48, col:68> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c824040 <col:49, col:67> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c823ff8 <col:49, col:54> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c823fc8 <col:54> 'int' 67108863
+|   |   | |     |             `-IntegerLiteral 0x7fb56c824020 <col:67> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c8243b0 <col:73, col:106> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c824390 <col:78, col:106> 'u8':'unsigned char'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c824328 <col:79, col:105> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c8242f0 <col:83, col:105> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c8242d0 <col:88, col:105> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c824270 <col:89, col:104> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c824248 <col:90, col:103> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c824200 <col:90, col:95> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c8241d0 <col:95> 'int' 91
+|   |   | |     |             `-IntegerLiteral 0x7fb56c824228 <col:103> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c824550 <col:109, col:128> 'u32':'unsigned int' <NoOp>
+|   |   | |     | `-ParenExpr 0x7fb56c824530 <col:114, col:128> 'u32':'unsigned int'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c8244c8 <col:115, col:127> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     |     `-UnaryOperator 0x7fb56c824498 <col:120, col:127> 'int' prefix '~'
+|   |   | |     |       `-ImplicitCastExpr 0x7fb56c824480 <col:121, col:127> 'int' <IntegralCast>
+|   |   | |     |         `-CStyleCastExpr 0x7fb56c824458 <col:121, col:127> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |           `-ParenExpr 0x7fb56c824438 <col:125, col:127> 'int'
+|   |   | |     |             `-IntegerLiteral 0x7fb56c8243d8 <col:126> 'int' 1
+|   |   | |     |-CStyleCastExpr 0x7fb56c8603e0 <col:131, col:246> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c8603c0 <col:136, col:246> 'u8':'unsigned char'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c860358 <col:137, col:245> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c860320 <col:141, col:245> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |       `-CStyleCastExpr 0x7fb56c8602e8 <col:146, col:245> 'unsigned int' <IntegralCast>
+|   |   | |     |         `-CallExpr 0x7fb56c8602a0 <col:156, col:245> 'int'
+|   |   | |     |           |-ImplicitCastExpr 0x7fb56c860288 <col:156> 'int (*)()' <FunctionToPointerDecay>
+|   |   | |     |           | `-DeclRefExpr 0x7fb56c85feb0 <col:156> 'int ()' Function 0x7fb56c85fe00 '__builtin_clrsb' 'int ()'
+|   |   | |     |           `-CStyleCastExpr 0x7fb56c860260 <col:172, col:244> 'u32':'unsigned int' <NoOp>
+|   |   | |     |             `-UnaryOperator 0x7fb56c860230 <col:177, col:244> 'u32':'unsigned int' prefix '~'
+|   |   | |     |               `-CStyleCastExpr 0x7fb56c860208 <col:178, col:244> 'u32':'unsigned int' <NoOp>
+|   |   | |     |                 `-CStyleCastExpr 0x7fb56c8601d0 <col:183, col:244> 'unsigned int' <IntegralCast>
+|   |   | |     |                   `-CallExpr 0x7fb56c860170 <col:193, col:244> 'int'
+|   |   | |     |                     |-ImplicitCastExpr 0x7fb56c860158 <col:193> 'int (*)()' <FunctionToPointerDecay>
+|   |   | |     |                     | `-DeclRefExpr 0x7fb56c85ffb0 <col:193> 'int ()' Function 0x7fb56c85ff00 '__builtin_clrsbll' 'int ()'
+|   |   | |     |                     `-ImplicitCastExpr 0x7fb56c8601a0 <col:211, col:243> 'int' <IntegralCast>
+|   |   | |     |                       `-CStyleCastExpr 0x7fb56c860130 <col:211, col:243> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |                         `-CStyleCastExpr 0x7fb56c8600f8 <col:215, col:243> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |                           `-ParenExpr 0x7fb56c8600d8 <col:220, col:243> 'u64':'unsigned long long'
+|   |   | |     |                             `-ParenExpr 0x7fb56c860078 <col:221, col:242> 'u64':'unsigned long long'
+|   |   | |     |                               `-BinaryOperator 0x7fb56c860050 <col:222, col:241> 'u64':'unsigned long long' '<<'
+|   |   | |     |                                 |-CStyleCastExpr 0x7fb56c860008 <col:222, col:227> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |                                 | `-IntegerLiteral 0x7fb56c85ffd8 <col:227> 'unsigned int' 4294967295
+|   |   | |     |                                 `-IntegerLiteral 0x7fb56c860030 <col:241> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c860608 <col:249, col:293> 'u8':'unsigned char' <NoOp>
+|   |   | |     | `-ParenExpr 0x7fb56c8605e8 <col:253, col:293> 'u8':'unsigned char'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c860580 <col:254, col:292> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |     `-UnaryOperator 0x7fb56c860550 <col:258, col:292> 'u64':'unsigned long long' prefix '-'
+|   |   | |     |       `-CStyleCastExpr 0x7fb56c860528 <col:259, col:292> 'u64':'unsigned long long' <NoOp>
+|   |   | |     |         `-ParenExpr 0x7fb56c860508 <col:264, col:292> 'u64':'unsigned long long'
+|   |   | |     |           `-ParenExpr 0x7fb56c8604a8 <col:265, col:291> 'u64':'unsigned long long'
+|   |   | |     |             `-BinaryOperator 0x7fb56c860480 <col:266, col:290> 'u64':'unsigned long long' '<<'
+|   |   | |     |               |-CStyleCastExpr 0x7fb56c860438 <col:266, col:271> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |               | `-IntegerLiteral 0x7fb56c860408 <col:271> 'long' 1095326189839492
+|   |   | |     |               `-IntegerLiteral 0x7fb56c860460 <col:290> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c860810 <col:296, col:328> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c8607f0 <col:301, col:328> 'u8':'unsigned char'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c860788 <col:302, col:327> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c860750 <col:306, col:327> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c860730 <col:311, col:327> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c8606d0 <col:312, col:326> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c8606a8 <col:313, col:325> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c860660 <col:313, col:318> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c860630 <col:318> 'int' 7
+|   |   | |     |             `-IntegerLiteral 0x7fb56c860688 <col:325> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c860a18 <col:331, col:373> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c8609f8 <col:336, col:373> 'u64':'unsigned long long'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c860990 <col:337, col:372> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c860958 <col:342, col:372> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c860938 <col:347, col:372> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c8608d8 <col:348, col:371> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c8608b0 <col:349, col:370> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c860868 <col:349, col:354> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c860838 <col:354> 'long' 173403233417
+|   |   | |     |             `-IntegerLiteral 0x7fb56c860890 <col:370> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c860c20 <col:376, col:412> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c860c00 <col:381, col:412> 'u32':'unsigned int'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c860b98 <col:382, col:411> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c860b60 <col:387, col:411> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c860b40 <col:391, col:411> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c860ae0 <col:392, col:410> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c860ab8 <col:393, col:409> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c860a70 <col:393, col:398> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c860a40 <col:398> 'int' 262143
+|   |   | |     |             `-IntegerLiteral 0x7fb56c860a98 <col:409> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c861c60 <col:415, col:452> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c861c40 <col:419, col:452> 'u16':'unsigned short'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c860dc0 <col:420, col:451> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |     `-UnaryOperator 0x7fb56c860d90 <col:425, col:451> 'u32':'unsigned int' prefix '-'
+|   |   | |     |       `-CStyleCastExpr 0x7fb56c860d68 <col:426, col:451> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     |         `-ParenExpr 0x7fb56c860d48 <col:431, col:451> 'u64':'unsigned long long'
+|   |   | |     |           `-ParenExpr 0x7fb56c860ce8 <col:432, col:450> 'u64':'unsigned long long'
+|   |   | |     |             `-BinaryOperator 0x7fb56c860cc0 <col:433, col:449> 'u64':'unsigned long long' '<<'
+|   |   | |     |               |-CStyleCastExpr 0x7fb56c860c78 <col:433, col:438> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |               | `-IntegerLiteral 0x7fb56c860c48 <col:438> 'int' 474369
+|   |   | |     |               `-IntegerLiteral 0x7fb56c860ca0 <col:449> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c861ea0 <col:455, col:502> 'u16':'unsigned short' <NoOp>
+|   |   | |     | `-ParenExpr 0x7fb56c861e80 <col:460, col:502> 'u16':'unsigned short'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c861e18 <col:461, col:501> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |     `-UnaryOperator 0x7fb56c861de8 <col:466, col:501> 'int' prefix '-'
+|   |   | |     |       `-ImplicitCastExpr 0x7fb56c861dd0 <col:467, col:501> 'int' <IntegralCast>
+|   |   | |     |         `-CStyleCastExpr 0x7fb56c861da8 <col:467, col:501> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |           `-ParenExpr 0x7fb56c861d88 <col:472, col:501> 'u64':'unsigned long long'
+|   |   | |     |             `-ParenExpr 0x7fb56c861d28 <col:473, col:500> 'u64':'unsigned long long'
+|   |   | |     |               `-BinaryOperator 0x7fb56c861d00 <col:474, col:499> 'u64':'unsigned long long' '<<'
+|   |   | |     |                 |-CStyleCastExpr 0x7fb56c861cb8 <col:474, col:479> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |                 | `-IntegerLiteral 0x7fb56c861c88 <col:479> 'long' 9007199254740991
+|   |   | |     |                 `-IntegerLiteral 0x7fb56c861ce0 <col:499> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c862008 <col:505, col:524> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c861fe8 <col:510, col:524> 'u16':'unsigned short'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c861f80 <col:511, col:523> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c861f48 <col:516, col:523> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c861f28 <col:521, col:523> 'int'
+|   |   | |     |         `-IntegerLiteral 0x7fb56c861ec8 <col:522> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c862210 <col:527, col:561> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c8621f0 <col:532, col:561> 'u16':'unsigned short'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c862188 <col:533, col:560> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c862150 <col:538, col:560> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c862130 <col:543, col:560> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c8620d0 <col:544, col:559> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c8620a8 <col:545, col:558> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c862060 <col:545, col:550> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c862030 <col:550> 'int' 76
+|   |   | |     |             `-IntegerLiteral 0x7fb56c862088 <col:558> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c862438 <col:564, col:610> 'u8':'unsigned char' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c862418 <col:568, col:610> 'u64':'unsigned long long'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c8623b0 <col:569, col:609> 'u64':'unsigned long long' <NoOp>
+|   |   | |     |     `-UnaryOperator 0x7fb56c862380 <col:574, col:609> 'u64':'unsigned long long' prefix '-'
+|   |   | |     |       `-CStyleCastExpr 0x7fb56c862358 <col:575, col:609> 'u64':'unsigned long long' <NoOp>
+|   |   | |     |         `-ParenExpr 0x7fb56c862338 <col:580, col:609> 'u64':'unsigned long long'
+|   |   | |     |           `-ParenExpr 0x7fb56c8622d8 <col:581, col:608> 'u64':'unsigned long long'
+|   |   | |     |             `-BinaryOperator 0x7fb56c8622b0 <col:582, col:607> 'u64':'unsigned long long' '<<'
+|   |   | |     |               |-CStyleCastExpr 0x7fb56c862268 <col:582, col:587> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |               | `-IntegerLiteral 0x7fb56c862238 <col:587> 'long' 18014398509481983
+|   |   | |     |               `-IntegerLiteral 0x7fb56c862290 <col:607> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c862678 <col:613, col:655> 'u16':'unsigned short' <NoOp>
+|   |   | |     | `-ParenExpr 0x7fb56c862658 <col:618, col:655> 'u16':'unsigned short'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c8625f0 <col:619, col:654> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |     `-UnaryOperator 0x7fb56c8625c0 <col:624, col:654> 'int' prefix '~'
+|   |   | |     |       `-ImplicitCastExpr 0x7fb56c8625a8 <col:625, col:654> 'int' <IntegralCast>
+|   |   | |     |         `-CStyleCastExpr 0x7fb56c862580 <col:625, col:654> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |           `-ParenExpr 0x7fb56c862560 <col:630, col:654> 'u64':'unsigned long long'
+|   |   | |     |             `-ParenExpr 0x7fb56c862500 <col:631, col:653> 'u64':'unsigned long long'
+|   |   | |     |               `-BinaryOperator 0x7fb56c8624d8 <col:632, col:652> 'u64':'unsigned long long' '<<'
+|   |   | |     |                 |-CStyleCastExpr 0x7fb56c862490 <col:632, col:637> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |                 | `-IntegerLiteral 0x7fb56c862460 <col:637> 'long' 68719476735
+|   |   | |     |                 `-IntegerLiteral 0x7fb56c8624b8 <col:652> 'int' 0
+|   |   | |     |-CStyleCastExpr 0x7fb56c862880 <col:658, col:699> 'u32':'unsigned int' <IntegralCast>
+|   |   | |     | `-ParenExpr 0x7fb56c862860 <col:663, col:699> 'u64':'unsigned long long'
+|   |   | |     |   `-CStyleCastExpr 0x7fb56c8627f8 <col:664, col:698> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |     `-CStyleCastExpr 0x7fb56c8627c0 <col:669, col:698> 'u16':'unsigned short' <IntegralCast>
+|   |   | |     |       `-ParenExpr 0x7fb56c8627a0 <col:674, col:698> 'u64':'unsigned long long'
+|   |   | |     |         `-ParenExpr 0x7fb56c862740 <col:675, col:697> 'u64':'unsigned long long'
+|   |   | |     |           `-BinaryOperator 0x7fb56c862718 <col:676, col:696> 'u64':'unsigned long long' '<<'
+|   |   | |     |             |-CStyleCastExpr 0x7fb56c8626d0 <col:676, col:681> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |     |             | `-IntegerLiteral 0x7fb56c8626a0 <col:681> 'long' 34052557852
+|   |   | |     |             `-IntegerLiteral 0x7fb56c8626f8 <col:696> 'int' 0
+|   |   | |     `-CStyleCastExpr 0x7fb56c862a88 <col:702, col:745> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |       `-ParenExpr 0x7fb56c862a68 <col:707, col:745> 'u32':'unsigned int'
+|   |   | |         `-CStyleCastExpr 0x7fb56c862a00 <col:708, col:744> 'u32':'unsigned int' <IntegralCast>
+|   |   | |           `-CStyleCastExpr 0x7fb56c8629c8 <col:713, col:744> 'u64':'unsigned long long' <NoOp>
+|   |   | |             `-ParenExpr 0x7fb56c8629a8 <col:718, col:744> 'u64':'unsigned long long'
+|   |   | |               `-ParenExpr 0x7fb56c862948 <col:719, col:743> 'u64':'unsigned long long'
+|   |   | |                 `-BinaryOperator 0x7fb56c862920 <col:720, col:742> 'u64':'unsigned long long' '<<'
+|   |   | |                   |-CStyleCastExpr 0x7fb56c8628d8 <col:720, col:725> 'u64':'unsigned long long' <IntegralCast>
+|   |   | |                   | `-IntegerLiteral 0x7fb56c8628a8 <col:725> 'long' 2199023255551
+|   |   | |                   `-IntegerLiteral 0x7fb56c862900 <col:742> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7fb56c862dd8 <col:750, col:777> 'unsigned long long' <IntegralCast>
+|   |   |   `-CStyleCastExpr 0x7fb56c862db0 <col:750, col:777> 'u16':'unsigned short' <IntegralCast>
+|   |   |     `-UnaryOperator 0x7fb56c862d80 <col:755, col:777> 'u64':'unsigned long long' prefix '-'
+|   |   |       `-CStyleCastExpr 0x7fb56c862d58 <col:756, col:777> 'u64':'unsigned long long' <NoOp>
+|   |   |         `-ParenExpr 0x7fb56c862d38 <col:761, col:777> 'u64':'unsigned long long'
+|   |   |           `-ParenExpr 0x7fb56c862cd8 <col:762, col:776> 'u64':'unsigned long long'
+|   |   |             `-BinaryOperator 0x7fb56c862cb0 <col:763, col:775> 'u64':'unsigned long long' '<<'
+|   |   |               |-CStyleCastExpr 0x7fb56c862c68 <col:763, col:768> 'u64':'unsigned long long' <IntegralCast>
+|   |   |               | `-IntegerLiteral 0x7fb56c862c38 <col:768> 'int' 7
+|   |   |               `-IntegerLiteral 0x7fb56c862c90 <col:775> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fb56c862f78 <col:781, col:790> 'unsigned long long' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56c862ea0 <col:781, col:790> 'u16':'unsigned short' <IntegralCast>
+|   |   |   `-CStyleCastExpr 0x7fb56c862e68 <col:786, col:790> 'u8':'unsigned char' <IntegralCast>
+|   |   |     `-ImplicitCastExpr 0x7fb56c862e50 <col:790> 'u64':'unsigned long long' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fb56c862e18 <col:790> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bf10 'u64_2' 'u64':'unsigned long long'
+|   |   `-CStyleCastExpr 0x7fb56c862f50 <col:798, col:808> 'u64':'unsigned long long' <IntegralCast>
+|   |     `-CStyleCastExpr 0x7fb56c862f18 <col:803, col:808> 'u16':'unsigned short' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7fb56c862f00 <col:808> 'u32':'unsigned int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fb56c862ec8 <col:808> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bea0 'u32_2' 'u32':'unsigned int'
+|   |-CompoundAssignOperator 0x7fb56c8632d0 <line:36:9, col:61> 'u32':'unsigned int' '>>=' ComputeLHSTy='u32':'unsigned int' ComputeResultTy='u32':'unsigned int'
+|   | |-DeclRefExpr 0x7fb56c862fe8 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d0160e0 'u32_0' 'u32':'unsigned int'
+|   | `-BinaryOperator 0x7fb56c863290 <col:19, col:61> 'int' '!='
+|   |   |-ImplicitCastExpr 0x7fb56c863260 <col:19, col:45> 'int' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56c863168 <col:19, col:45> 'u8':'unsigned char' <IntegralCast>
+|   |   |   `-CStyleCastExpr 0x7fb56c863130 <col:23, col:45> 'u16':'unsigned short' <IntegralCast>
+|   |   |     `-ParenExpr 0x7fb56c863110 <col:28, col:45> 'u64':'unsigned long long'
+|   |   |       `-ParenExpr 0x7fb56c8630b0 <col:29, col:44> 'u64':'unsigned long long'
+|   |   |         `-BinaryOperator 0x7fb56c863088 <col:30, col:43> 'u64':'unsigned long long' '<<'
+|   |   |           |-CStyleCastExpr 0x7fb56c863040 <col:30, col:35> 'u64':'unsigned long long' <IntegralCast>
+|   |   |           | `-IntegerLiteral 0x7fb56c863010 <col:35> 'int' 50
+|   |   |           `-IntegerLiteral 0x7fb56c863068 <col:43> 'int' 0
+|   |   `-ImplicitCastExpr 0x7fb56c863278 <col:50, col:61> 'int' <IntegralCast>
+|   |     `-CStyleCastExpr 0x7fb56c863238 <col:50, col:61> 'u16':'unsigned short' <IntegralCast>
+|   |       `-UnaryOperator 0x7fb56c863208 <col:55, col:61> 'u64':'unsigned long long' prefix '-'
+|   |         `-CStyleCastExpr 0x7fb56c8631e0 <col:56, col:61> 'u64':'unsigned long long' <IntegralCast>
+|   |           `-ImplicitCastExpr 0x7fb56c8631c8 <col:61> 'u16':'unsigned short' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fb56c863190 <col:61> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   |-CompoundAssignOperator 0x7fb56c863850 <line:37:9, col:135> 'u16':'unsigned short' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56c863308 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bc70 'u16_1' 'u16':'unsigned short'
+|   | `-CallExpr 0x7fb56c8637f8 <col:18, col:135> 'int'
+|   |   |-ImplicitCastExpr 0x7fb56c8637e0 <col:18> 'int (*)()' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fb56c863408 <col:18> 'int ()' Function 0x7fb56c863358 '__builtin_mul_overflow_p' 'int ()'
+|   |   |-CStyleCastExpr 0x7fb56c8634b8 <col:43, col:53> 'u64':'unsigned long long' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56c863480 <col:48, col:53> 'u32':'unsigned int' <NoOp>
+|   |   |   `-ImplicitCastExpr 0x7fb56c863468 <col:53> 'u32':'unsigned int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fb56c863430 <col:53> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |   |-ImplicitCastExpr 0x7fb56c863838 <col:60, col:99> 'int' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56c863638 <col:60, col:99> 'u16':'unsigned short' <IntegralCast>
+|   |   |   `-CStyleCastExpr 0x7fb56c863600 <col:65, col:99> 'u8':'unsigned char' <IntegralCast>
+|   |   |     `-ParenExpr 0x7fb56c8635e0 <col:69, col:99> 'u64':'unsigned long long'
+|   |   |       `-ParenExpr 0x7fb56c863580 <col:70, col:98> 'u64':'unsigned long long'
+|   |   |         `-BinaryOperator 0x7fb56c863558 <col:71, col:97> 'u64':'unsigned long long' '<<'
+|   |   |           |-CStyleCastExpr 0x7fb56c863510 <col:71, col:76> 'u64':'unsigned long long' <IntegralCast>
+|   |   |           | `-IntegerLiteral 0x7fb56c8634e0 <col:76> 'long' 336948213976075238
+|   |   |           `-IntegerLiteral 0x7fb56c863538 <col:97> 'int' 0
+|   |   `-CStyleCastExpr 0x7fb56c8637b8 <col:102, col:134> 'u64':'unsigned long long' <IntegralCast>
+|   |     `-CStyleCastExpr 0x7fb56c863780 <col:107, col:134> 'u32':'unsigned int' <IntegralCast>
+|   |       `-ParenExpr 0x7fb56c863760 <col:112, col:134> 'u64':'unsigned long long'
+|   |         `-ParenExpr 0x7fb56c863700 <col:113, col:133> 'u64':'unsigned long long'
+|   |           `-BinaryOperator 0x7fb56c8636d8 <col:114, col:132> 'u64':'unsigned long long' '<<'
+|   |             |-CStyleCastExpr 0x7fb56c863690 <col:114, col:119> 'u64':'unsigned long long' <IntegralCast>
+|   |             | `-IntegerLiteral 0x7fb56c863660 <col:119> 'int' 29193609
+|   |             `-IntegerLiteral 0x7fb56c8636b8 <col:132> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56c863980 <line:38:9, col:28> 'u8':'unsigned char' '&=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-DeclRefExpr 0x7fb56c863888 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bc00 'u8_1' 'u8':'unsigned char'
+|   | `-CStyleCastExpr 0x7fb56c863958 <col:17, col:28> 'u64':'unsigned long long' <NoOp>
+|   |   `-UnaryOperator 0x7fb56c863928 <col:22, col:28> 'u64':'unsigned long long' prefix '-'
+|   |     `-CStyleCastExpr 0x7fb56c863900 <col:23, col:28> 'u64':'unsigned long long' <IntegralCast>
+|   |       `-ImplicitCastExpr 0x7fb56c8638e8 <col:28> 'u8':'unsigned char' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7fb56c8638b0 <col:28> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d016000 'u8_0' 'u8':'unsigned char'
+|   |-CompoundAssignOperator 0x7fb56d803ac8 <line:39:9, col:94> 'u16':'unsigned short' '%=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56c8639b8 <col:9> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|   | `-ImplicitCastExpr 0x7fb56d803ab0 <col:18, col:94> 'int' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56d803a88 <col:18, col:94> 'u16':'unsigned short' <NoOp>
+|   |     `-CStyleCastExpr 0x7fb56d803a50 <col:23, col:94> 'u16':'unsigned short' <IntegralCast>
+|   |       `-CStyleCastExpr 0x7fb56d803a18 <col:28, col:94> 'unsigned int' <IntegralCast>
+|   |         `-CallExpr 0x7fb56c863bc0 <col:38, col:94> 'int'
+|   |           |-ImplicitCastExpr 0x7fb56c863ba8 <col:38> 'int (*)()' <FunctionToPointerDecay>
+|   |           | `-DeclRefExpr 0x7fb56c8639e0 <col:38> 'int ()' Function 0x7fb56c85ff00 '__builtin_clrsbll' 'int ()'
+|   |           `-CStyleCastExpr 0x7fb56c863b80 <col:56, col:93> 'u32':'unsigned int' <NoOp>
+|   |             `-UnaryOperator 0x7fb56c863b50 <col:61, col:93> 'u32':'unsigned int' prefix '~'
+|   |               `-CStyleCastExpr 0x7fb56c863b28 <col:62, col:93> 'u32':'unsigned int' <IntegralCast>
+|   |                 `-ParenExpr 0x7fb56c863b08 <col:67, col:93> 'u64':'unsigned long long'
+|   |                   `-ParenExpr 0x7fb56c863aa8 <col:68, col:92> 'u64':'unsigned long long'
+|   |                     `-BinaryOperator 0x7fb56c863a80 <col:69, col:91> 'u64':'unsigned long long' '<<'
+|   |                       |-CStyleCastExpr 0x7fb56c863a38 <col:69, col:74> 'u64':'unsigned long long' <IntegralCast>
+|   |                       | `-IntegerLiteral 0x7fb56c863a08 <col:74> 'long' 4241399872889
+|   |                       `-IntegerLiteral 0x7fb56c863a60 <col:91> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56d803c68 <line:40:9, col:34> 'u8':'unsigned char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56d803b00 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   | `-BinaryOperator 0x7fb56d803c10 <col:18, col:34> 'unsigned int' '&'
+|   |   |-CStyleCastExpr 0x7fb56d803bb0 <col:18, col:27> 'u32':'unsigned int' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56d803b78 <col:23, col:27> 'u8':'unsigned char' <NoOp>
+|   |   |   `-ImplicitCastExpr 0x7fb56d803b60 <col:27> 'u8':'unsigned char' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fb56d803b28 <col:27> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bc00 'u8_1' 'u8':'unsigned char'
+|   |   `-ImplicitCastExpr 0x7fb56d803bf8 <col:34> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb56d803bd8 <col:34> 'int' 7
+|   |-CompoundAssignOperator 0x7fb56d02e8e0 <line:41:9, col:812> 'u64':'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+|   | |-DeclRefExpr 0x7fb56d803ca0 <col:9> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bd50 'u64_1' 'u64':'unsigned long long'
+|   | `-ImplicitCastExpr 0x7fb56d02e8c8 <col:18, col:812> 'unsigned long long' <IntegralCast>
+|   |   `-CStyleCastExpr 0x7fb56d02e8a0 <col:18, col:812> 'u8':'unsigned char' <IntegralCast>
+|   |     `-UnaryOperator 0x7fb56d02e870 <col:22, col:812> 'u64':'unsigned long long' prefix '-'
+|   |       `-CStyleCastExpr 0x7fb56d02e848 <col:23, col:812> 'u64':'unsigned long long' <IntegralCast>
+|   |         `-CStyleCastExpr 0x7fb56d02e810 <col:28, col:812> 'unsigned int' <IntegralCast>
+|   |           `-CallExpr 0x7fb56d02e7b0 <col:38, col:812> 'int'
+|   |             |-ImplicitCastExpr 0x7fb56d02e798 <col:38> 'int (*)(long long)' <BuiltinFnToFnPtr>
+|   |             | `-DeclRefExpr 0x7fb56d803e68 <col:38> '<builtin fn type>' Function 0x7fb56d803d08 '__builtin_ffsll' 'int (long long)'
+|   |             `-ImplicitCastExpr 0x7fb56d02e7e0 <col:54, col:811> 'long long' <IntegralCast>
+|   |               `-CStyleCastExpr 0x7fb56d02e748 <col:54, col:811> 'u32':'unsigned int' <IntegralCast>
+|   |                 `-UnaryOperator 0x7fb56d02e718 <col:59, col:811> 'u64':'unsigned long long' prefix '-'
+|   |                   `-CStyleCastExpr 0x7fb56d02e6f0 <col:60, col:811> 'u64':'unsigned long long' <NoOp>
+|   |                     `-CallExpr 0x7fb56d02e638 <col:65, col:811> 'u64':'unsigned long long'
+|   |                       |-ImplicitCastExpr 0x7fb56d02e620 <col:65> 'u64 (*)(u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)' <FunctionToPointerDecay>
+|   |                       | `-DeclRefExpr 0x7fb56d803e90 <col:65> 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)' Function 0x7fb56d015ed0 'bar2' 'u64 (u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64, u8, u16, u32, u64)'
+|   |                       |-CStyleCastExpr 0x7fb56d804098 <col:70, col:102> 'u8':'unsigned char' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d804078 <col:74, col:102> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d804010 <col:75, col:101> 'u16':'unsigned short' <NoOp>
+|   |                       |     `-CStyleCastExpr 0x7fb56d803fd8 <col:80, col:101> 'u16':'unsigned short' <IntegralCast>
+|   |                       |       `-ParenExpr 0x7fb56d803fb8 <col:85, col:101> 'u64':'unsigned long long'
+|   |                       |         `-ParenExpr 0x7fb56d803f58 <col:86, col:100> 'u64':'unsigned long long'
+|   |                       |           `-BinaryOperator 0x7fb56d803f30 <col:87, col:99> 'u64':'unsigned long long' '<<'
+|   |                       |             |-CStyleCastExpr 0x7fb56d803ee8 <col:87, col:92> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |             | `-IntegerLiteral 0x7fb56d803eb8 <col:92> 'int' 3
+|   |                       |             `-IntegerLiteral 0x7fb56d803f10 <col:99> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d8042d8 <col:105, col:142> 'u16':'unsigned short' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d8042b8 <col:110, col:142> 'u32':'unsigned int'
+|   |                       |   `-CStyleCastExpr 0x7fb56d804250 <col:111, col:141> 'u32':'unsigned int' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d804220 <col:116, col:141> 'int' prefix '-'
+|   |                       |       `-ImplicitCastExpr 0x7fb56d804208 <col:117, col:141> 'int' <IntegralCast>
+|   |                       |         `-CStyleCastExpr 0x7fb56d8041e0 <col:117, col:141> 'u8':'unsigned char' <IntegralCast>
+|   |                       |           `-ParenExpr 0x7fb56d8041c0 <col:121, col:141> 'u64':'unsigned long long'
+|   |                       |             `-ParenExpr 0x7fb56d804160 <col:122, col:140> 'u64':'unsigned long long'
+|   |                       |               `-BinaryOperator 0x7fb56d804138 <col:123, col:139> 'u64':'unsigned long long' '<<'
+|   |                       |                 |-CStyleCastExpr 0x7fb56d8040f0 <col:123, col:128> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                 | `-IntegerLiteral 0x7fb56d8040c0 <col:128> 'int' 551669
+|   |                       |                 `-IntegerLiteral 0x7fb56d804118 <col:139> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d804560 <col:145, col:195> 'u32':'unsigned int' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d804540 <col:150, col:195> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d8044d8 <col:151, col:194> 'u16':'unsigned short' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d8044a8 <col:156, col:194> 'u64':'unsigned long long' prefix '-'
+|   |                       |       `-CStyleCastExpr 0x7fb56d804480 <col:157, col:194> 'u64':'unsigned long long' <NoOp>
+|   |                       |         `-CallExpr 0x7fb56d804440 <col:162, col:194> 'unsigned long long'
+|   |                       |           |-ImplicitCastExpr 0x7fb56d804428 <col:162> 'unsigned long long (*)(unsigned long long)' <BuiltinFnToFnPtr>
+|   |                       |           | `-DeclRefExpr 0x7fb56d804300 <col:162> '<builtin fn type>' Function 0x7fb56c821898 '__builtin_bswap64' 'unsigned long long (unsigned long long)'
+|   |                       |           `-CStyleCastExpr 0x7fb56d804400 <col:180, col:193> 'u64':'unsigned long long' <NoOp>
+|   |                       |             `-UnaryOperator 0x7fb56d8043d0 <col:185, col:193> 'u64':'unsigned long long' prefix '-'
+|   |                       |               `-CStyleCastExpr 0x7fb56d8043a8 <col:186, col:193> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                 `-ParenExpr 0x7fb56d804388 <col:191, col:193> 'int'
+|   |                       |                   `-IntegerLiteral 0x7fb56d804328 <col:192> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d804768 <col:198, col:244> 'u64':'unsigned long long' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d804748 <col:203, col:244> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d8046e0 <col:204, col:243> 'u16':'unsigned short' <NoOp>
+|   |                       |     `-CStyleCastExpr 0x7fb56d8046a8 <col:209, col:243> 'u16':'unsigned short' <IntegralCast>
+|   |                       |       `-ParenExpr 0x7fb56d804688 <col:214, col:243> 'u64':'unsigned long long'
+|   |                       |         `-ParenExpr 0x7fb56d804628 <col:215, col:242> 'u64':'unsigned long long'
+|   |                       |           `-BinaryOperator 0x7fb56d804600 <col:216, col:241> 'u64':'unsigned long long' '<<'
+|   |                       |             |-CStyleCastExpr 0x7fb56d8045b8 <col:216, col:221> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |             | `-IntegerLiteral 0x7fb56d804588 <col:221> 'long' 32954030584792262
+|   |                       |             `-IntegerLiteral 0x7fb56d8045e0 <col:241> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d804970 <col:247, col:288> 'u8':'unsigned char' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d804950 <col:251, col:288> 'u64':'unsigned long long'
+|   |                       |   `-CStyleCastExpr 0x7fb56d8048e8 <col:252, col:287> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |     `-CStyleCastExpr 0x7fb56d8048b0 <col:257, col:287> 'u32':'unsigned int' <IntegralCast>
+|   |                       |       `-ParenExpr 0x7fb56d804890 <col:262, col:287> 'u64':'unsigned long long'
+|   |                       |         `-ParenExpr 0x7fb56d804830 <col:263, col:286> 'u64':'unsigned long long'
+|   |                       |           `-BinaryOperator 0x7fb56d804808 <col:264, col:285> 'u64':'unsigned long long' '<<'
+|   |                       |             |-CStyleCastExpr 0x7fb56d8047c0 <col:264, col:269> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |             | `-IntegerLiteral 0x7fb56d804790 <col:269> 'long' 549755813887
+|   |                       |             `-IntegerLiteral 0x7fb56d8047e8 <col:285> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02cdc0 <col:291, col:335> 'u16':'unsigned short' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02cda0 <col:296, col:335> 'u32':'unsigned int'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02cd38 <col:297, col:334> 'u32':'unsigned int' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d02cd08 <col:302, col:334> 'int' prefix '~'
+|   |                       |       `-ImplicitCastExpr 0x7fb56d02ccf0 <col:303, col:334> 'int' <IntegralCast>
+|   |                       |         `-CStyleCastExpr 0x7fb56d02ccc8 <col:303, col:334> 'u8':'unsigned char' <IntegralCast>
+|   |                       |           `-ParenExpr 0x7fb56d02cca8 <col:307, col:334> 'u64':'unsigned long long'
+|   |                       |             `-ParenExpr 0x7fb56d02cc48 <col:308, col:333> 'u64':'unsigned long long'
+|   |                       |               `-BinaryOperator 0x7fb56d02cc20 <col:309, col:332> 'u64':'unsigned long long' '<<'
+|   |                       |                 |-CStyleCastExpr 0x7fb56d8049c8 <col:309, col:314> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                 | `-IntegerLiteral 0x7fb56d804998 <col:314> 'long' 124977434967539
+|   |                       |                 `-IntegerLiteral 0x7fb56d02cc00 <col:332> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02cfc8 <col:338, col:386> 'u32':'unsigned int' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02cfa8 <col:343, col:386> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02cf40 <col:344, col:385> 'u16':'unsigned short' <IntegralCast>
+|   |                       |     `-CStyleCastExpr 0x7fb56d02cf08 <col:349, col:385> 'u32':'unsigned int' <IntegralCast>
+|   |                       |       `-ParenExpr 0x7fb56d02cee8 <col:354, col:385> 'u64':'unsigned long long'
+|   |                       |         `-ParenExpr 0x7fb56d02ce88 <col:355, col:384> 'u64':'unsigned long long'
+|   |                       |           `-BinaryOperator 0x7fb56d02ce60 <col:356, col:383> 'u64':'unsigned long long' '<<'
+|   |                       |             |-CStyleCastExpr 0x7fb56d02ce18 <col:356, col:361> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |             | `-IntegerLiteral 0x7fb56d02cde8 <col:361> 'unsigned long' 9761251466154416685
+|   |                       |             `-IntegerLiteral 0x7fb56d02ce40 <col:383> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02d130 <col:389, col:407> 'u64':'unsigned long long' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02d110 <col:394, col:407> 'u8':'unsigned char'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02d0a8 <col:395, col:406> 'u8':'unsigned char' <IntegralCast>
+|   |                       |     `-CStyleCastExpr 0x7fb56d02d070 <col:399, col:406> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |       `-ParenExpr 0x7fb56d02d050 <col:404, col:406> 'int'
+|   |                       |         `-IntegerLiteral 0x7fb56d02cff0 <col:405> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02d490 <col:410, col:494> 'u8':'unsigned char' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02d470 <col:414, col:494> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02d408 <col:415, col:493> 'u16':'unsigned short' <IntegralCast>
+|   |                       |     `-CStyleCastExpr 0x7fb56d02d3d0 <col:420, col:493> 'u8':'unsigned char' <IntegralCast>
+|   |                       |       `-CStyleCastExpr 0x7fb56d02d398 <col:424, col:493> 'unsigned int' <IntegralCast>
+|   |                       |         `-CallExpr 0x7fb56d02d338 <col:434, col:493> 'int'
+|   |                       |           |-ImplicitCastExpr 0x7fb56d02d320 <col:434> 'int (*)()' <FunctionToPointerDecay>
+|   |                       |           | `-DeclRefExpr 0x7fb56d02d158 <col:434> 'int ()' Function 0x7fb56c85ff00 '__builtin_clrsbll' 'int ()'
+|   |                       |           `-ImplicitCastExpr 0x7fb56d02d368 <col:452, col:492> 'int' <IntegralCast>
+|   |                       |             `-CStyleCastExpr 0x7fb56d02d2f8 <col:452, col:492> 'u16':'unsigned short' <IntegralCast>
+|   |                       |               `-UnaryOperator 0x7fb56d02d2c8 <col:457, col:492> 'u32':'unsigned int' prefix '~'
+|   |                       |                 `-CStyleCastExpr 0x7fb56d02d2a0 <col:458, col:492> 'u32':'unsigned int' <IntegralCast>
+|   |                       |                   `-ParenExpr 0x7fb56d02d280 <col:463, col:492> 'u64':'unsigned long long'
+|   |                       |                     `-ParenExpr 0x7fb56d02d220 <col:464, col:491> 'u64':'unsigned long long'
+|   |                       |                       `-BinaryOperator 0x7fb56d02d1f8 <col:465, col:490> 'u64':'unsigned long long' '<<'
+|   |                       |                         |-CStyleCastExpr 0x7fb56d02d1b0 <col:465, col:470> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                         | `-IntegerLiteral 0x7fb56d02d180 <col:470> 'long' 39962052200793136
+|   |                       |                         `-IntegerLiteral 0x7fb56d02d1d8 <col:490> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02d7d8 <col:497, col:577> 'u16':'unsigned short' <NoOp>
+|   |                       | `-ParenExpr 0x7fb56d02d7b8 <col:502, col:577> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02d750 <col:503, col:576> 'u16':'unsigned short' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d02d720 <col:508, col:576> 'u64':'unsigned long long' prefix '-'
+|   |                       |       `-CStyleCastExpr 0x7fb56d02d6f8 <col:509, col:576> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |         `-CStyleCastExpr 0x7fb56d02d6c0 <col:514, col:576> 'unsigned int' <IntegralCast>
+|   |                       |           `-CallExpr 0x7fb56d02d678 <col:524, col:576> 'int'
+|   |                       |             |-ImplicitCastExpr 0x7fb56d02d660 <col:524> 'int (*)()' <FunctionToPointerDecay>
+|   |                       |             | `-DeclRefExpr 0x7fb56d02d4b8 <col:524> 'int ()' Function 0x7fb56c85ff00 '__builtin_clrsbll' 'int ()'
+|   |                       |             `-CStyleCastExpr 0x7fb56d02d638 <col:542, col:575> 'u32':'unsigned int' <IntegralCast>
+|   |                       |               `-CStyleCastExpr 0x7fb56d02d600 <col:547, col:575> 'u64':'unsigned long long' <NoOp>
+|   |                       |                 `-ParenExpr 0x7fb56d02d5e0 <col:552, col:575> 'u64':'unsigned long long'
+|   |                       |                   `-ParenExpr 0x7fb56d02d580 <col:553, col:574> 'u64':'unsigned long long'
+|   |                       |                     `-BinaryOperator 0x7fb56d02d558 <col:554, col:573> 'u64':'unsigned long long' '<<'
+|   |                       |                       |-CStyleCastExpr 0x7fb56d02d510 <col:554, col:559> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                       | `-IntegerLiteral 0x7fb56d02d4e0 <col:559> 'int' 814785842
+|   |                       |                       `-IntegerLiteral 0x7fb56d02d538 <col:573> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02d978 <col:580, col:600> 'u32':'unsigned int' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02d958 <col:585, col:600> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02d8f0 <col:586, col:599> 'u16':'unsigned short' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d02d8c0 <col:591, col:599> 'int' prefix '~'
+|   |                       |       `-ImplicitCastExpr 0x7fb56d02d8a8 <col:592, col:599> 'int' <IntegralCast>
+|   |                       |         `-CStyleCastExpr 0x7fb56d02d880 <col:592, col:599> 'u16':'unsigned short' <IntegralCast>
+|   |                       |           `-ParenExpr 0x7fb56d02d860 <col:597, col:599> 'int'
+|   |                       |             `-IntegerLiteral 0x7fb56d02d800 <col:598> 'int' 1
+|   |                       |-CStyleCastExpr 0x7fb56d02db80 <col:603, col:646> 'u64':'unsigned long long' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02db60 <col:608, col:646> 'u8':'unsigned char'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02daf8 <col:609, col:645> 'u8':'unsigned char' <IntegralCast>
+|   |                       |     `-CStyleCastExpr 0x7fb56d02dac0 <col:613, col:645> 'u32':'unsigned int' <IntegralCast>
+|   |                       |       `-ParenExpr 0x7fb56d02daa0 <col:618, col:645> 'u64':'unsigned long long'
+|   |                       |         `-ParenExpr 0x7fb56d02da40 <col:619, col:644> 'u64':'unsigned long long'
+|   |                       |           `-BinaryOperator 0x7fb56d02da18 <col:620, col:643> 'u64':'unsigned long long' '<<'
+|   |                       |             |-CStyleCastExpr 0x7fb56d02d9d0 <col:620, col:625> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |             | `-IntegerLiteral 0x7fb56d02d9a0 <col:625> 'long' 140737488355327
+|   |                       |             `-IntegerLiteral 0x7fb56d02d9f8 <col:643> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02dd10 <col:649, col:668> 'u8':'unsigned char' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02dcf0 <col:653, col:668> 'u32':'unsigned int'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02dc88 <col:654, col:667> 'u32':'unsigned int' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d02dc58 <col:659, col:667> 'u64':'unsigned long long' prefix '~'
+|   |                       |       `-CStyleCastExpr 0x7fb56d02dc30 <col:660, col:667> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |         `-ParenExpr 0x7fb56d02dc10 <col:665, col:667> 'int'
+|   |                       |           `-IntegerLiteral 0x7fb56d02dba8 <col:666> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02e1b0 <col:671, col:724> 'u16':'unsigned short' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02e190 <col:676, col:724> 'u8':'unsigned char'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02e128 <col:677, col:723> 'u8':'unsigned char' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d02e0f8 <col:681, col:723> 'int' prefix '~'
+|   |                       |       `-ImplicitCastExpr 0x7fb56d02e0e0 <col:682, col:723> 'int' <IntegralCast>
+|   |                       |         `-CStyleCastExpr 0x7fb56d02e0b8 <col:682, col:723> 'u8':'unsigned char' <IntegralCast>
+|   |                       |           `-CStyleCastExpr 0x7fb56d02e080 <col:686, col:723> 'unsigned int' <IntegralCast>
+|   |                       |             `-CallExpr 0x7fb56d02e020 <col:696, col:723> 'int'
+|   |                       |               |-ImplicitCastExpr 0x7fb56d02e008 <col:696> 'int (*)(int)' <BuiltinFnToFnPtr>
+|   |                       |               | `-DeclRefExpr 0x7fb56d02ded8 <col:696> '<builtin fn type>' Function 0x7fb56d02dd78 '__builtin_ffs' 'int (int)'
+|   |                       |               `-ImplicitCastExpr 0x7fb56d02e050 <col:710, col:722> 'int' <IntegralCast>
+|   |                       |                 `-CStyleCastExpr 0x7fb56d02dfb8 <col:710, col:722> 'u64':'unsigned long long' <NoOp>
+|   |                       |                   `-CStyleCastExpr 0x7fb56d02df80 <col:715, col:722> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                     `-ParenExpr 0x7fb56d02df60 <col:720, col:722> 'int'
+|   |                       |                       `-IntegerLiteral 0x7fb56d02df00 <col:721> 'int' 0
+|   |                       |-CStyleCastExpr 0x7fb56d02e3f0 <col:727, col:766> 'u32':'unsigned int' <IntegralCast>
+|   |                       | `-ParenExpr 0x7fb56d02e3d0 <col:732, col:766> 'u16':'unsigned short'
+|   |                       |   `-CStyleCastExpr 0x7fb56d02e368 <col:733, col:765> 'u16':'unsigned short' <IntegralCast>
+|   |                       |     `-UnaryOperator 0x7fb56d02e338 <col:738, col:765> 'int' prefix '-'
+|   |                       |       `-ImplicitCastExpr 0x7fb56d02e320 <col:739, col:765> 'int' <IntegralCast>
+|   |                       |         `-CStyleCastExpr 0x7fb56d02e2f8 <col:739, col:765> 'u8':'unsigned char' <IntegralCast>
+|   |                       |           `-ParenExpr 0x7fb56d02e2d8 <col:743, col:765> 'u64':'unsigned long long'
+|   |                       |             `-ParenExpr 0x7fb56d02e278 <col:744, col:764> 'u64':'unsigned long long'
+|   |                       |               `-BinaryOperator 0x7fb56d02e250 <col:745, col:763> 'u64':'unsigned long long' '<<'
+|   |                       |                 |-CStyleCastExpr 0x7fb56d02e208 <col:745, col:750> 'u64':'unsigned long long' <IntegralCast>
+|   |                       |                 | `-IntegerLiteral 0x7fb56d02e1d8 <col:750> 'int' 98559746
+|   |                       |                 `-IntegerLiteral 0x7fb56d02e230 <col:763> 'int' 0
+|   |                       `-CStyleCastExpr 0x7fb56d02e5f8 <col:769, col:810> 'u64':'unsigned long long' <IntegralCast>
+|   |                         `-ParenExpr 0x7fb56d02e5d8 <col:774, col:810> 'u8':'unsigned char'
+|   |                           `-CStyleCastExpr 0x7fb56d02e570 <col:775, col:809> 'u8':'unsigned char' <IntegralCast>
+|   |                             `-CStyleCastExpr 0x7fb56d02e538 <col:779, col:809> 'u64':'unsigned long long' <NoOp>
+|   |                               `-ParenExpr 0x7fb56d02e518 <col:784, col:809> 'u64':'unsigned long long'
+|   |                                 `-ParenExpr 0x7fb56d02e4b8 <col:785, col:808> 'u64':'unsigned long long'
+|   |                                   `-BinaryOperator 0x7fb56d02e490 <col:786, col:807> 'u64':'unsigned long long' '<<'
+|   |                                     |-CStyleCastExpr 0x7fb56d02e448 <col:786, col:791> 'u64':'unsigned long long' <IntegralCast>
+|   |                                     | `-IntegerLiteral 0x7fb56d02e418 <col:791> 'long' 450747532512
+|   |                                     `-IntegerLiteral 0x7fb56d02e470 <col:807> 'int' 0
+|   |-CompoundAssignOperator 0x7fb56d02ea88 <line:42:9, col:38> 'u32':'unsigned int' '>>=' ComputeLHSTy='u32':'unsigned int' ComputeResultTy='u32':'unsigned int'
+|   | |-DeclRefExpr 0x7fb56d02e918 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02c060 'u32_3' 'u32':'unsigned int'
+|   | `-BinaryOperator 0x7fb56d02ea48 <col:19, col:38> 'unsigned int' '&'
+|   |   |-CStyleCastExpr 0x7fb56d02e9e8 <col:19, col:30> 'u32':'unsigned int' <NoOp>
+|   |   | `-UnaryOperator 0x7fb56d02e9b8 <col:24, col:30> 'u32':'unsigned int' prefix '-'
+|   |   |   `-CStyleCastExpr 0x7fb56d02e990 <col:25, col:30> 'u32':'unsigned int' <NoOp>
+|   |   |     `-ImplicitCastExpr 0x7fb56d02e978 <col:30> 'u32':'unsigned int' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fb56d02e940 <col:30> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bea0 'u32_2' 'u32':'unsigned int'
+|   |   `-ImplicitCastExpr 0x7fb56d02ea30 <col:38> 'unsigned int' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fb56d02ea10 <col:38> 'int' 31
+|   |-BinaryOperator 0x7fb56d030040 <line:43:9, col:90> 'u8':'unsigned char' '='
+|   | |-DeclRefExpr 0x7fb56d02eac0 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   | `-ImplicitCastExpr 0x7fb56d030028 <col:16, col:90> 'u8':'unsigned char' <IntegralCast>
+|   |   `-BinaryOperator 0x7fb56d030000 <col:16, col:90> 'int' '|'
+|   |     |-ParenExpr 0x7fb56d02fcd8 <col:16, col:45> 'int'
+|   |     | `-BinaryOperator 0x7fb56d02fcb0 <col:17, col:44> 'int' '>>'
+|   |     |   |-ImplicitCastExpr 0x7fb56d02fc98 <col:17> 'int' <IntegralCast>
+|   |     |   | `-ImplicitCastExpr 0x7fb56d02fc80 <col:17> 'u8':'unsigned char' <LValueToRValue>
+|   |     |   |   `-DeclRefExpr 0x7fb56d02eae8 <col:17> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   |     |   `-ParenExpr 0x7fb56d02fc60 <col:25, col:44> 'unsigned int'
+|   |     |     `-BinaryOperator 0x7fb56d02fc38 <col:26, col:43> 'unsigned int' '&'
+|   |     |       |-CStyleCastExpr 0x7fb56d02ebd0 <col:26, col:36> 'u32':'unsigned int' <IntegralCast>
+|   |     |       | `-UnaryOperator 0x7fb56d02eba0 <col:31, col:36> 'int' prefix '-'
+|   |     |       |   `-ImplicitCastExpr 0x7fb56d02eb88 <col:32, col:36> 'int' <IntegralCast>
+|   |     |       |     `-CStyleCastExpr 0x7fb56d02eb60 <col:32, col:36> 'u8':'unsigned char' <NoOp>
+|   |     |       |       `-ImplicitCastExpr 0x7fb56d02eb48 <col:36> 'u8':'unsigned char' <LValueToRValue>
+|   |     |       |         `-DeclRefExpr 0x7fb56d02eb10 <col:36> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bc00 'u8_1' 'u8':'unsigned char'
+|   |     |       `-ImplicitCastExpr 0x7fb56d02fc20 <col:43> 'unsigned int' <IntegralCast>
+|   |     |         `-IntegerLiteral 0x7fb56d02fc00 <col:43> 'int' 7
+|   |     `-ParenExpr 0x7fb56d02ffe0 <col:49, col:90> 'int'
+|   |       `-BinaryOperator 0x7fb56d02ffb8 <col:50, col:89> 'int' '<<'
+|   |         |-ImplicitCastExpr 0x7fb56d02ffa0 <col:50> 'int' <IntegralCast>
+|   |         | `-ImplicitCastExpr 0x7fb56d02ff88 <col:50> 'u8':'unsigned char' <LValueToRValue>
+|   |         |   `-DeclRefExpr 0x7fb56d02fcf8 <col:50> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|   |         `-ParenExpr 0x7fb56d02ff68 <col:58, col:89> 'unsigned int'
+|   |           `-BinaryOperator 0x7fb56d02ff40 <col:59, col:88> 'unsigned int' '&'
+|   |             |-ParenExpr 0x7fb56d02fee8 <col:59, col:84> 'unsigned int'
+|   |             | `-BinaryOperator 0x7fb56d02fec0 <col:60, col:83> 'unsigned int' '-'
+|   |             |   |-ImplicitCastExpr 0x7fb56d02fea8 <col:60> 'unsigned int' <IntegralCast>
+|   |             |   | `-IntegerLiteral 0x7fb56d02fd20 <col:60> 'int' 8
+|   |             |   `-ParenExpr 0x7fb56d02fe88 <col:64, col:83> 'unsigned int'
+|   |             |     `-BinaryOperator 0x7fb56d02fe60 <col:65, col:82> 'unsigned int' '&'
+|   |             |       |-CStyleCastExpr 0x7fb56d02fe00 <col:65, col:75> 'u32':'unsigned int' <IntegralCast>
+|   |             |       | `-UnaryOperator 0x7fb56d02fdd0 <col:70, col:75> 'int' prefix '-'
+|   |             |       |   `-ImplicitCastExpr 0x7fb56d02fdb8 <col:71, col:75> 'int' <IntegralCast>
+|   |             |       |     `-CStyleCastExpr 0x7fb56d02fd90 <col:71, col:75> 'u8':'unsigned char' <NoOp>
+|   |             |       |       `-ImplicitCastExpr 0x7fb56d02fd78 <col:75> 'u8':'unsigned char' <LValueToRValue>
+|   |             |       |         `-DeclRefExpr 0x7fb56d02fd40 <col:75> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bc00 'u8_1' 'u8':'unsigned char'
+|   |             |       `-ImplicitCastExpr 0x7fb56d02fe48 <col:82> 'unsigned int' <IntegralCast>
+|   |             |         `-IntegerLiteral 0x7fb56d02fe28 <col:82> 'int' 7
+|   |             `-ImplicitCastExpr 0x7fb56d02ff28 <col:88> 'unsigned int' <IntegralCast>
+|   |               `-IntegerLiteral 0x7fb56d02ff08 <col:88> 'int' 7
+|   |-CompoundAssignOperator 0x7fb56d0301f0 <line:44:9, col:37> 'u8':'unsigned char' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7fb56d030068 <col:9> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bdc0 'u8_2' 'u8':'unsigned char'
+|   | `-BinaryOperator 0x7fb56d030198 <col:18, col:37> 'int' '&'
+|   |   |-ImplicitCastExpr 0x7fb56d030180 <col:18, col:29> 'int' <IntegralCast>
+|   |   | `-CStyleCastExpr 0x7fb56d030138 <col:18, col:29> 'u16':'unsigned short' <IntegralCast>
+|   |   |   `-UnaryOperator 0x7fb56d030108 <col:23, col:29> 'u64':'unsigned long long' prefix '-'
+|   |   |     `-CStyleCastExpr 0x7fb56d0300e0 <col:24, col:29> 'u64':'unsigned long long' <NoOp>
+|   |   |       `-ImplicitCastExpr 0x7fb56d0300c8 <col:29> 'u64':'unsigned long long' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7fb56d030090 <col:29> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02c0d0 'u64_3' 'u64':'unsigned long long'
+|   |   `-IntegerLiteral 0x7fb56d030160 <col:37> 'int' 7
+|   |-BinaryOperator 0x7fb56d030718 <line:45:9, col:95> 'u32':'unsigned int' '='
+|   | |-DeclRefExpr 0x7fb56d030228 <col:9> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   | `-BinaryOperator 0x7fb56d0306f0 <col:17, col:95> 'unsigned int' '|'
+|   |   |-ParenExpr 0x7fb56d030418 <col:17, col:47> 'u32':'unsigned int'
+|   |   | `-BinaryOperator 0x7fb56d0303f0 <col:18, col:46> 'u32':'unsigned int' '>>'
+|   |   |   |-ImplicitCastExpr 0x7fb56d0303d8 <col:18> 'u32':'unsigned int' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fb56d030250 <col:18> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |   |   `-ParenExpr 0x7fb56d0303b8 <col:27, col:46> 'int'
+|   |   |     `-BinaryOperator 0x7fb56d030390 <col:28, col:44> 'int' '&'
+|   |   |       |-ImplicitCastExpr 0x7fb56d030378 <col:28, col:40> 'int' <IntegralCast>
+|   |   |       | `-CStyleCastExpr 0x7fb56d030330 <col:28, col:40> 'u16':'unsigned short' <NoOp>
+|   |   |       |   `-CStyleCastExpr 0x7fb56d0302f8 <col:33, col:40> 'u16':'unsigned short' <IntegralCast>
+|   |   |       |     `-ParenExpr 0x7fb56d0302d8 <col:38, col:40> 'int'
+|   |   |       |       `-IntegerLiteral 0x7fb56d030278 <col:39> 'int' 1
+|   |   |       `-IntegerLiteral 0x7fb56d030358 <col:44> 'int' 31
+|   |   `-ParenExpr 0x7fb56d0306d0 <col:51, col:95> 'u32':'unsigned int'
+|   |     `-BinaryOperator 0x7fb56d0306a8 <col:52, col:94> 'u32':'unsigned int' '<<'
+|   |       |-ImplicitCastExpr 0x7fb56d030690 <col:52> 'u32':'unsigned int' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7fb56d030438 <col:52> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|   |       `-ParenExpr 0x7fb56d030670 <col:61, col:94> 'int'
+|   |         `-BinaryOperator 0x7fb56d030648 <col:62, col:92> 'int' '&'
+|   |           |-ParenExpr 0x7fb56d030608 <col:62, col:88> 'int'
+|   |           | `-BinaryOperator 0x7fb56d0305e0 <col:63, col:87> 'int' '-'
+|   |           |   |-IntegerLiteral 0x7fb56d030460 <col:63> 'int' 32
+|   |           |   `-ParenExpr 0x7fb56d0305c0 <col:68, col:87> 'int'
+|   |           |     `-BinaryOperator 0x7fb56d030598 <col:69, col:85> 'int' '&'
+|   |           |       |-ImplicitCastExpr 0x7fb56d030580 <col:69, col:81> 'int' <IntegralCast>
+|   |           |       | `-CStyleCastExpr 0x7fb56d030538 <col:69, col:81> 'u16':'unsigned short' <NoOp>
+|   |           |       |   `-CStyleCastExpr 0x7fb56d030500 <col:74, col:81> 'u16':'unsigned short' <IntegralCast>
+|   |           |       |     `-ParenExpr 0x7fb56d0304e0 <col:79, col:81> 'int'
+|   |           |       |       `-IntegerLiteral 0x7fb56d030480 <col:80> 'int' 1
+|   |           |       `-IntegerLiteral 0x7fb56d030560 <col:85> 'int' 31
+|   |           `-IntegerLiteral 0x7fb56d030628 <col:92> 'int' 31
+|   `-ReturnStmt 0x7fb56d030ed0 <line:46:9, col:132>
+|     `-BinaryOperator 0x7fb56d030ea8 <col:16, col:132> 'unsigned long long' '+'
+|       |-BinaryOperator 0x7fb56d030e40 <col:16, col:124> 'unsigned long long' '+'
+|       | |-BinaryOperator 0x7fb56d030dc0 <col:16, col:116> 'unsigned long long' '+'
+|       | | |-BinaryOperator 0x7fb56d030d40 <col:16, col:109> 'unsigned long long' '+'
+|       | | | |-BinaryOperator 0x7fb56d030cc0 <col:16, col:101> 'unsigned long long' '+'
+|       | | | | |-BinaryOperator 0x7fb56d030c58 <col:16, col:93> 'unsigned long long' '+'
+|       | | | | | |-BinaryOperator 0x7fb56d030bd8 <col:16, col:85> 'unsigned long long' '+'
+|       | | | | | | |-BinaryOperator 0x7fb56d030b58 <col:16, col:78> 'unsigned long long' '+'
+|       | | | | | | | |-BinaryOperator 0x7fb56d030ad8 <col:16, col:70> 'unsigned long long' '+'
+|       | | | | | | | | |-BinaryOperator 0x7fb56d030a70 <col:16, col:62> 'unsigned long long' '+'
+|       | | | | | | | | | |-BinaryOperator 0x7fb56d0309f0 <col:16, col:54> 'unsigned long long' '+'
+|       | | | | | | | | | | |-BinaryOperator 0x7fb56d030970 <col:16, col:47> 'unsigned long long' '+'
+|       | | | | | | | | | | | |-BinaryOperator 0x7fb56d0308f0 <col:16, col:39> 'unsigned long long' '+'
+|       | | | | | | | | | | | | |-ImplicitCastExpr 0x7fb56d0308d8 <col:16, col:31> 'unsigned long long' <IntegralCast>
+|       | | | | | | | | | | | | | `-BinaryOperator 0x7fb56d030870 <col:16, col:31> 'unsigned int' '+'
+|       | | | | | | | | | | | | |   |-ImplicitCastExpr 0x7fb56d030858 <col:16, col:23> 'unsigned int' <IntegralCast>
+|       | | | | | | | | | | | | |   | `-BinaryOperator 0x7fb56d0307f0 <col:16, col:23> 'int' '+'
+|       | | | | | | | | | | | | |   |   |-ImplicitCastExpr 0x7fb56d0307a8 <col:16> 'int' <IntegralCast>
+|       | | | | | | | | | | | | |   |   | `-ImplicitCastExpr 0x7fb56d030790 <col:16> 'u8':'unsigned char' <LValueToRValue>
+|       | | | | | | | | | | | | |   |   |   `-DeclRefExpr 0x7fb56d030740 <col:16> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d016000 'u8_0' 'u8':'unsigned char'
+|       | | | | | | | | | | | | |   |   `-ImplicitCastExpr 0x7fb56d0307d8 <col:23> 'int' <IntegralCast>
+|       | | | | | | | | | | | | |   |     `-ImplicitCastExpr 0x7fb56d0307c0 <col:23> 'u16':'unsigned short' <LValueToRValue>
+|       | | | | | | | | | | | | |   |       `-DeclRefExpr 0x7fb56d030768 <col:23> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d016070 'u16_0' 'u16':'unsigned short'
+|       | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7fb56d030840 <col:31> 'u32':'unsigned int' <LValueToRValue>
+|       | | | | | | | | | | | | |     `-DeclRefExpr 0x7fb56d030818 <col:31> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d0160e0 'u32_0' 'u32':'unsigned int'
+|       | | | | | | | | | | | | `-ImplicitCastExpr 0x7fb56d0308c0 <col:39> 'u64':'unsigned long long' <LValueToRValue>
+|       | | | | | | | | | | | |   `-DeclRefExpr 0x7fb56d030898 <col:39> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d016150 'u64_0' 'u64':'unsigned long long'
+|       | | | | | | | | | | | `-ImplicitCastExpr 0x7fb56d030958 <col:47> 'unsigned long long' <IntegralCast>
+|       | | | | | | | | | | |   `-ImplicitCastExpr 0x7fb56d030940 <col:47> 'u8':'unsigned char' <LValueToRValue>
+|       | | | | | | | | | | |     `-DeclRefExpr 0x7fb56d030918 <col:47> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bc00 'u8_1' 'u8':'unsigned char'
+|       | | | | | | | | | | `-ImplicitCastExpr 0x7fb56d0309d8 <col:54> 'unsigned long long' <IntegralCast>
+|       | | | | | | | | | |   `-ImplicitCastExpr 0x7fb56d0309c0 <col:54> 'u16':'unsigned short' <LValueToRValue>
+|       | | | | | | | | | |     `-DeclRefExpr 0x7fb56d030998 <col:54> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bc70 'u16_1' 'u16':'unsigned short'
+|       | | | | | | | | | `-ImplicitCastExpr 0x7fb56d030a58 <col:62> 'unsigned long long' <IntegralCast>
+|       | | | | | | | | |   `-ImplicitCastExpr 0x7fb56d030a40 <col:62> 'u32':'unsigned int' <LValueToRValue>
+|       | | | | | | | | |     `-DeclRefExpr 0x7fb56d030a18 <col:62> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bce0 'u32_1' 'u32':'unsigned int'
+|       | | | | | | | | `-ImplicitCastExpr 0x7fb56d030ac0 <col:70> 'u64':'unsigned long long' <LValueToRValue>
+|       | | | | | | | |   `-DeclRefExpr 0x7fb56d030a98 <col:70> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bd50 'u64_1' 'u64':'unsigned long long'
+|       | | | | | | | `-ImplicitCastExpr 0x7fb56d030b40 <col:78> 'unsigned long long' <IntegralCast>
+|       | | | | | | |   `-ImplicitCastExpr 0x7fb56d030b28 <col:78> 'u8':'unsigned char' <LValueToRValue>
+|       | | | | | | |     `-DeclRefExpr 0x7fb56d030b00 <col:78> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bdc0 'u8_2' 'u8':'unsigned char'
+|       | | | | | | `-ImplicitCastExpr 0x7fb56d030bc0 <col:85> 'unsigned long long' <IntegralCast>
+|       | | | | | |   `-ImplicitCastExpr 0x7fb56d030ba8 <col:85> 'u16':'unsigned short' <LValueToRValue>
+|       | | | | | |     `-DeclRefExpr 0x7fb56d030b80 <col:85> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02be30 'u16_2' 'u16':'unsigned short'
+|       | | | | | `-ImplicitCastExpr 0x7fb56d030c40 <col:93> 'unsigned long long' <IntegralCast>
+|       | | | | |   `-ImplicitCastExpr 0x7fb56d030c28 <col:93> 'u32':'unsigned int' <LValueToRValue>
+|       | | | | |     `-DeclRefExpr 0x7fb56d030c00 <col:93> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02bea0 'u32_2' 'u32':'unsigned int'
+|       | | | | `-ImplicitCastExpr 0x7fb56d030ca8 <col:101> 'u64':'unsigned long long' <LValueToRValue>
+|       | | | |   `-DeclRefExpr 0x7fb56d030c80 <col:101> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02bf10 'u64_2' 'u64':'unsigned long long'
+|       | | | `-ImplicitCastExpr 0x7fb56d030d28 <col:109> 'unsigned long long' <IntegralCast>
+|       | | |   `-ImplicitCastExpr 0x7fb56d030d10 <col:109> 'u8':'unsigned char' <LValueToRValue>
+|       | | |     `-DeclRefExpr 0x7fb56d030ce8 <col:109> 'u8':'unsigned char' lvalue ParmVar 0x7fb56d02bf80 'u8_3' 'u8':'unsigned char'
+|       | | `-ImplicitCastExpr 0x7fb56d030da8 <col:116> 'unsigned long long' <IntegralCast>
+|       | |   `-ImplicitCastExpr 0x7fb56d030d90 <col:116> 'u16':'unsigned short' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7fb56d030d68 <col:116> 'u16':'unsigned short' lvalue ParmVar 0x7fb56d02bff0 'u16_3' 'u16':'unsigned short'
+|       | `-ImplicitCastExpr 0x7fb56d030e28 <col:124> 'unsigned long long' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7fb56d030e10 <col:124> 'u32':'unsigned int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fb56d030de8 <col:124> 'u32':'unsigned int' lvalue ParmVar 0x7fb56d02c060 'u32_3' 'u32':'unsigned int'
+|       `-ImplicitCastExpr 0x7fb56d030e90 <col:132> 'u64':'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb56d030e68 <col:132> 'u64':'unsigned long long' lvalue ParmVar 0x7fb56d02c0d0 'u64_3' 'u64':'unsigned long long'
+|-FunctionDecl 0x7fb56d02c618 <line:17:99> col:99 implicit used __builtin_parityll 'int (unsigned long long)' extern
+| |-ParmVarDecl 0x7fb56d02c6b8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7fb56d02c720 <col:99> Implicit
+| `-ConstAttr 0x7fb56d02c768 <col:99> Implicit
+|-FunctionDecl 0x7fb56d802028 <line:18:18> col:18 implicit used __builtin_add_overflow 'void ()' extern
+| `-NoThrowAttr 0x7fb56d8020c8 <col:18> Implicit
+|-FunctionDecl 0x7fb56d802208 <col:78> col:78 implicit used __builtin_popcountll 'int (unsigned long long)' extern
+| |-ParmVarDecl 0x7fb56d8022a8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7fb56d802310 <col:78> Implicit
+| `-ConstAttr 0x7fb56d802358 <col:78> Implicit
+|-FunctionDecl 0x7fb56c820600 <line:21:16> col:16 implicit used __builtin_mul_overflow 'void ()' extern
+| `-NoThrowAttr 0x7fb56c8206a0 <col:16> Implicit
+|-FunctionDecl 0x7fb56c820748 <col:48> col:48 implicit used __builtin_bswap32 'unsigned int (unsigned int)' extern
+| |-ParmVarDecl 0x7fb56c8207e8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| |-NoThrowAttr 0x7fb56c820850 <col:48> Implicit
+| `-C4 errors generated.
+onstAttr 0x7fb56c820898 <col:48> Implicit
+|-FunctionDecl 0x7fb56c821898 <line:24:93> col:93 implicit used __builtin_bswap64 'unsigned long long (unsigned long long)' extern
+| |-ParmVarDecl 0x7fb56c821938 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+| |-NoThrowAttr 0x7fb56c8219a0 <col:93> Implicit
+| `-ConstAttr 0x7fb56c8219e8 <col:93> Implicit
+|-FunctionDecl 0x7fb56d803d08 <line:41:38> col:38 implicit used __builtin_ffsll 'int (long long)' extern
+| |-ParmVarDecl 0x7fb56d803da8 <<invalid sloc>> <invalid sloc> 'long long'
+| |-NoThrowAttr 0x7fb56d803e10 <col:38> Implicit
+| `-ConstAttr 0x7fb56d803e58 <col:38> Implicit
+`-FunctionDecl 0x7fb56d02dd78 <col:696> col:696 implicit used __builtin_ffs 'int (int)' extern
+  |-ParmVarDecl 0x7fb56d02de18 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fb56d02de80 <col:696> Implicit
+  `-ConstAttr 0x7fb56d02dec8 <col:696> Implicit

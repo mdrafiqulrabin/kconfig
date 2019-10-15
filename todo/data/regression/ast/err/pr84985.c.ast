@@ -1,0 +1,26 @@
+../Data/C2AST/pr84985.c:5:36: error: more than one input constraint matches the same output '0'
+  asm("" : "=d"(a) : "0"(a), "0ae"(&a));
+                                   ^
+../Data/C2AST/pr84985.c:5:26: note: constraint '0' is already present here
+  asm("" : "=d"(a) : "0"(a), "0ae"(&a));
+                         ^
+1 error generated.
+TranslationUnitDecl 0x7fb2a30166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb2a3016c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb2a3016980 '__int128'
+|-TypedefDecl 0x7fb2a3016cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb2a30169a0 'unsigned __int128'
+|-TypedefDecl 0x7fb2a3016fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb2a3016db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb2a3016d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb2a3017040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb2a3017000 'char *'
+|   `-BuiltinType 0x7fb2a3016780 'char'
+|-TypedefDecl 0x7fb2a3017308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb2a30172b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb2a3017120 'struct __va_list_tag'
+|     `-Record 0x7fb2a3017098 '__va_list_tag'
+`-FunctionDecl 0x7fb2a2829a00 <../Data/C2AST/pr84985.c:3:1, line:6:1> line:3:5 main 'int ()'
+  `-CompoundStmt 0x7fb2a2829e70 <col:12, line:6:1>
+    `-DeclStmt 0x7fb2a2829b58 <line:4:3, col:8>
+      `-VarDecl 0x7fb2a2829af8 <col:3, col:7> col:7 used a 'int'

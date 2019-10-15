@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7fc78682bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc78686d820 <../Data/C2AST/pr58944.c:6:1, col:17> col:6 fn1 'void (void)'
+  `-CompoundStmt 0x7fc78686d900 <col:16, col:17>

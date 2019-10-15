@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fc5d181a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc5d103a468 <../Data/C2AST/pr41232.c:3:1, col:30> col:12 used atoi 'int (const char *)' extern
+| `-ParmVarDecl 0x7fc5d181b578 <col:18, col:29> col:30 'const char *'
+|-FunctionDecl 0x7fc5d103a6b8 <line:4:12> col:12 implicit used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7fc5d103a758 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x7fc5d103a7b8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fc5d103a828 <col:12> Implicit printf 2 3
+|-FunctionDecl 0x7fc5d103a880 prev 0x7fc5d103a6b8 <col:1, col:46> col:12 used sprintf 'int (char *, const char *, ...)' extern
+| |-ParmVarDecl 0x7fc5d103a568 <col:21, col:26> col:27 'char *'
+| |-ParmVarDecl 0x7fc5d103a5e0 <col:29, col:40> col:41 'const char *'
+| `-FormatAttr 0x7fc5d103a968 <col:12> Inherited printf 2 3
+`-FunctionDecl 0x7fc5d103a9d8 <line:5:1, line:14:1> line:5:6 malloc_init 'void ()'
+  `-CompoundStmt 0x7fc5d103b200 <col:20, line:14:1>
+    |-DeclStmt 0x7fc5d103aaf0 <line:6:3, col:13>
+    | `-VarDecl 0x7fc5d103aa90 <col:3, col:9> col:9 used cptr 'char *'
+    |-DeclStmt 0x7fc5d103abe8 <line:7:3, col:14>
+    | `-VarDecl 0x7fc5d103ab88 <col:3, col:13> col:8 used buf 'char [1]'
+    |-DeclStmt 0x7fc5d103ad70 <line:8:3, col:24>
+    | `-VarDecl 0x7fc5d103ac18 <col:3, col:23> col:7 used tmbd 'int' cinit
+    |   `-CallExpr 0x7fc5d103ad10 <col:14, col:23> 'int'
+    |     |-ImplicitCastExpr 0x7fc5d103acf8 <col:14> 'int (*)(const char *)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fc5d103ac78 <col:14> 'int (const char *)' Function 0x7fc5d103a468 'atoi' 'int (const char *)'
+    |     `-ImplicitCastExpr 0x7fc5d103ad58 <col:19> 'const char *' <BitCast>
+    |       `-ImplicitCastExpr 0x7fc5d103ad40 <col:19> 'char *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fc5d103aca0 <col:19> 'char *' lvalue Var 0x7fc5d103aa90 'cptr' 'char *'
+    |-IfStmt 0x7fc5d103b008 <line:9:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc5d103ade8 <line:9:7, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x7fc5d103add0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc5d103ad88 <col:7> 'int' lvalue Var 0x7fc5d103ac18 'tmbd' 'int'
+    | | `-IntegerLiteral 0x7fc5d103adb0 <col:14> 'int' 0
+    | |-BinaryOperator 0x7fc5d103af70 <line:10:5, col:35> 'int' '='
+    | | |-DeclRefExpr 0x7fc5d103ae10 <col:5> 'int' lvalue Var 0x7fc5d103ac18 'tmbd' 'int'
+    | | `-ConditionalOperator 0x7fc5d103af40 <col:12, col:35> 'int'
+    | |   |-ParenExpr 0x7fc5d103aec0 <col:12, col:24> 'int'
+    | |   | `-BinaryOperator 0x7fc5d103ae98 <col:13, col:21> 'int' '<='
+    | |   |   |-ImplicitCastExpr 0x7fc5d103ae80 <col:13> 'int' <LValueToRValue>
+    | |   |   | `-DeclRefExpr 0x7fc5d103ae38 <col:13> 'int' lvalue Var 0x7fc5d103ac18 'tmbd' 'int'
+    | |   |   `-IntegerLiteral 0x7fc5d103ae60 <col:21> 'int' 124
+    | |   |-ImplicitCastExpr 0x7fc5d103af28 <col:28> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fc5d103aee0 <col:28> 'int' lvalue Var 0x7fc5d103ac18 'tmbd' 'int'
+    | |   `-IntegerLiteral 0x7fc5d103af08 <col:35> 'int' 124
+    | `-BinaryOperator 0x7fc5d103afe0 <line:12:5, col:12> 'int' '='
+    |   |-DeclRefExpr 0x7fc5d103af98 <col:5> 'int' lvalue Var 0x7fc5d103ac18 'tmbd' 'int'
+    |   `-IntegerLiteral 0x7fc5d103afc0 <col:12> 'int' 0
+    `-CallExpr 0x7fc5d103b160 <line:13:4, col:29> 'int'
+      |-ImplicitCastExpr 0x7fc5d103b148 <col:4> 'int (*)(char *, const char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fc5d103b040 <col:4> 'int (char *, const char *, ...)' Function 0x7fc5d103a880 'sprintf' 'int (char *, const char *, ...)'
+      |-ImplicitCastExpr 0x7fc5d103b1a0 <col:12> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7fc5d103b068 <col:12> 'char [1]' lvalue Var 0x7fc5d103ab88 'buf' 'char [1]'
+      |-ImplicitCastExpr 0x7fc5d103b1d0 <col:17> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fc5d103b1b8 <col:17> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fc5d103b0c8 <col:17> 'char [4]' lvalue "%d\n"
+      `-ImplicitCastExpr 0x7fc5d103b1e8 <col:25> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc5d103b0f8 <col:25> 'int' lvalue Var 0x7fc5d103ac18 'tmbd' 'int'

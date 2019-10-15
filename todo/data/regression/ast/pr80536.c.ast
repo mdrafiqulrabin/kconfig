@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fcd0282bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcd0286d868 <../Data/C2AST/pr80536.c:5:1, line:9:1> line:6:1 foo 'int (int)'
+  |-ParmVarDecl 0x7fcd0282c978 <col:6, col:10> col:10 used i 'int'
+  `-CompoundStmt 0x7fcd0286dc30 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fcd0286dc18 <line:8:3, col:56>
+      `-ImplicitCastExpr 0x7fcd0286dc00 <col:10, col:56> 'int' <IntegralCast>
+        `-BinaryOperator 0x7fcd0286dbd8 <col:10, col:56> 'unsigned long long' '%'
+          |-ParenExpr 0x7fcd0286db80 <col:10, col:52> 'unsigned long long'
+          | `-BinaryOperator 0x7fcd0286db58 <col:11, col:51> 'unsigned long long' '*'
+          |   |-ParenExpr 0x7fcd0286db00 <col:11, col:47> 'unsigned long long'
+          |   | `-BinaryOperator 0x7fcd0286dad8 <col:12, col:46> 'unsigned long long' '*'
+          |   |   |-ImplicitCastExpr 0x7fcd0286dac0 <col:12> 'unsigned long long' <IntegralCast>
+          |   |   | `-ImplicitCastExpr 0x7fcd0286daa8 <col:12> 'int' <LValueToRValue>
+          |   |   |   `-DeclRefExpr 0x7fcd0286d950 <col:12> 'int' lvalue ParmVar 0x7fcd0282c978 'i' 'int'
+          |   |   `-CStyleCastExpr 0x7fcd0286da80 <col:16, col:46> 'unsigned long long' <IntegralCast>
+          |   |     `-ParenExpr 0x7fcd0286da60 <col:37, col:46> 'unsigned long'
+          |   |       `-BinaryOperator 0x7fcd0286d9f0 <col:38, col:43> 'unsigned long' '+'
+          |   |         |-ImplicitCastExpr 0x7fcd0286d9d8 <col:38, col:39> 'unsigned long' <IntegralCast>
+          |   |         | `-UnaryOperator 0x7fcd0286d998 <col:38, col:39> 'int' prefix '-'
+          |   |         |   `-IntegerLiteral 0x7fcd0286d978 <col:39> 'int' 0
+          |   |         `-IntegerLiteral 0x7fcd0286d9b8 <col:43> 'unsigned long' 1
+          |   `-ImplicitCastExpr 0x7fcd0286db40 <col:51> 'unsigned long long' <IntegralCast>
+          |     `-IntegerLiteral 0x7fcd0286db20 <col:51> 'int' 2
+          `-ImplicitCastExpr 0x7fcd0286dbc0 <col:56> 'unsigned long long' <IntegralCast>
+            `-IntegerLiteral 0x7fcd0286dba0 <col:56> 'int' 1

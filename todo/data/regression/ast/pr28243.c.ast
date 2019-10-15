@@ -1,0 +1,130 @@
+TranslationUnitDecl 0x7f8ded8262e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8ded826f60 <../Data/C2AST/pr28243.c:9:1, line:11:1> line:9:8 struct displayfuncs definition
+| `-FieldDecl 0x7f8ded867f08 <line:10:3, col:17> col:10 init 'void (*)()'
+|-VarDecl 0x7f8ded867fa0 <line:9:1, line:11:3> col:3 funcs 'struct displayfuncs':'struct displayfuncs'
+|-RecordDecl 0x7f8ded868058 <line:13:1, line:15:1> line:13:8 struct gpsdisplay definition
+| `-FieldDecl 0x7f8ded868180 <line:14:3, col:24> col:24 referenced funcs 'struct displayfuncs *'
+|-FunctionDecl 0x7f8ded8681e8 <line:17:1, col:15> col:6 used PSDoArc 'void ()'
+|-FunctionDecl 0x7f8ded868610 <line:19:1, line:30:1> line:19:13 used PSMyArc 'void (double, double, double, double, double, double)' static
+| |-ParmVarDecl 0x7f8ded8682a0 <col:21, col:28> col:28 used cx 'double'
+| |-ParmVarDecl 0x7f8ded868318 <col:32, col:39> col:39 cy 'double'
+| |-ParmVarDecl 0x7f8ded868390 <col:43, col:50> col:50 radx 'double'
+| |-ParmVarDecl 0x7f8ded868408 <col:56, col:63> col:63 rady 'double'
+| |-ParmVarDecl 0x7f8ded868480 <col:69, col:76> col:76 used sa 'double'
+| |-ParmVarDecl 0x7f8ded8684f8 <line:20:7, col:14> col:14 used ta 'double'
+| `-CompoundStmt 0x7f8ded868ed8 <line:21:1, line:30:1>
+|   |-DeclStmt 0x7f8ded868758 <line:22:3, col:12>
+|   | `-VarDecl 0x7f8ded8686f8 <col:3, col:10> col:10 used ea 'double'
+|   |-DeclStmt 0x7f8ded8687e8 <line:23:3, col:14>
+|   | `-VarDecl 0x7f8ded868788 <col:3, col:10> col:10 used temp 'double'
+|   |-BinaryOperator 0x7f8ded8688d0 <line:24:3, col:13> 'double' '='
+|   | |-DeclRefExpr 0x7f8ded868800 <col:3> 'double' lvalue Var 0x7f8ded8686f8 'ea' 'double'
+|   | `-BinaryOperator 0x7f8ded8688a8 <col:8, col:13> 'double' '+'
+|   |   |-ImplicitCastExpr 0x7f8ded868878 <col:8> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7f8ded868828 <col:8> 'double' lvalue ParmVar 0x7f8ded868480 'sa' 'double'
+|   |   `-ImplicitCastExpr 0x7f8ded868890 <col:13> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f8ded868850 <col:13> 'double' lvalue ParmVar 0x7f8ded8684f8 'ta' 'double'
+|   `-WhileStmt 0x7f8ded868eb8 <line:25:3, line:29:3>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8ded868978 <line:25:10, col:15> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f8ded868948 <col:10> 'double' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8ded8688f8 <col:10> 'double' lvalue ParmVar 0x7f8ded868480 'sa' 'double'
+|     | `-ImplicitCastExpr 0x7f8ded868960 <col:15> 'double' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8ded868920 <col:15> 'double' lvalue Var 0x7f8ded8686f8 'ea' 'double'
+|     `-CompoundStmt 0x7f8ded868e90 <col:19, line:29:3>
+|       |-BinaryOperator 0x7f8ded868b68 <line:26:5, col:31> 'double' '='
+|       | |-DeclRefExpr 0x7f8ded8689a0 <col:5> 'double' lvalue Var 0x7f8ded868788 'temp' 'double'
+|       | `-BinaryOperator 0x7f8ded868b40 <col:12, col:31> 'double' '*'
+|       |   |-ParenExpr 0x7f8ded868ae8 <col:12, col:27> 'double'
+|       |   | `-BinaryOperator 0x7f8ded868ac0 <col:13, col:25> 'double' '/'
+|       |   |   |-ParenExpr 0x7f8ded868a68 <col:13, col:21> 'double'
+|       |   |   | `-BinaryOperator 0x7f8ded868a40 <col:14, col:19> 'double' '+'
+|       |   |   |   |-ImplicitCastExpr 0x7f8ded868a10 <col:14> 'double' <LValueToRValue>
+|       |   |   |   | `-DeclRefExpr 0x7f8ded8689c8 <col:14> 'double' lvalue ParmVar 0x7f8ded868480 'sa' 'double'
+|       |   |   |   `-ImplicitCastExpr 0x7f8ded868a28 <col:19> 'double' <IntegralToFloating>
+|       |   |   |     `-IntegerLiteral 0x7f8ded8689f0 <col:19> 'int' 90
+|       |   |   `-ImplicitCastExpr 0x7f8ded868aa8 <col:25> 'double' <IntegralToFloating>
+|       |   |     `-IntegerLiteral 0x7f8ded868a88 <col:25> 'int' 90
+|       |   `-ImplicitCastExpr 0x7f8ded868b28 <col:31> 'double' <IntegralToFloating>
+|       |     `-IntegerLiteral 0x7f8ded868b08 <col:31> 'int' 90
+|       |-CallExpr 0x7f8ded868d78 <line:27:5, col:42> 'void'
+|       | |-ImplicitCastExpr 0x7f8ded868d60 <col:5> 'void (*)()' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7f8ded868b90 <col:5> 'void ()' Function 0x7f8ded8681e8 'PSDoArc' 'void ()'
+|       | |-ImplicitCastExpr 0x7f8ded868db8 <col:13> 'double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f8ded868bb8 <col:13> 'double' lvalue ParmVar 0x7f8ded8682a0 'cx' 'double'
+|       | |-ImplicitCastExpr 0x7f8ded868dd0 <col:17> 'double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f8ded868be0 <col:17> 'double' lvalue ParmVar 0x7f8ded868480 'sa' 'double'
+|       | `-ConditionalOperator 0x7f8ded868d30 <col:21, col:38> 'double'
+|       |   |-BinaryOperator 0x7f8ded868c88 <col:21, col:26> 'int' '<'
+|       |   | |-ImplicitCastExpr 0x7f8ded868c58 <col:21> 'double' <LValueToRValue>
+|       |   | | `-DeclRefExpr 0x7f8ded868c08 <col:21> 'double' lvalue Var 0x7f8ded8686f8 'ea' 'double'
+|       |   | `-ImplicitCastExpr 0x7f8ded868c70 <col:26> 'double' <LValueToRValue>
+|       |   |   `-DeclRefExpr 0x7f8ded868c30 <col:26> 'double' lvalue Var 0x7f8ded868788 'temp' 'double'
+|       |   |-ImplicitCastExpr 0x7f8ded868d00 <col:33> 'double' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f8ded868cb0 <col:33> 'double' lvalue Var 0x7f8ded8686f8 'ea' 'double'
+|       |   `-ImplicitCastExpr 0x7f8ded868d18 <col:38> 'double' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f8ded868cd8 <col:38> 'double' lvalue Var 0x7f8ded868788 'temp' 'double'
+|       `-BinaryOperator 0x7f8ded868e68 <line:28:5, col:10> 'double' '='
+|         |-DeclRefExpr 0x7f8ded868e00 <col:5> 'double' lvalue ParmVar 0x7f8ded868480 'sa' 'double'
+|         `-ImplicitCastExpr 0x7f8ded868e50 <col:10> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7f8ded868e28 <col:10> 'double' lvalue Var 0x7f8ded868788 'temp' 'double'
+|-FunctionDecl 0x7f8ded868f28 <line:32:1, line:40:1> line:32:13 used PSDrawElipse 'void ()' static
+| `-CompoundStmt 0x7f8ded869580 <line:33:1, line:40:1>
+|   |-DeclStmt 0x7f8ded869040 <line:34:3, col:11>
+|   | `-VarDecl 0x7f8ded868fe0 <col:3, col:9> col:9 used cx 'float'
+|   |-DeclStmt 0x7f8ded8690d0 <line:35:3, col:11>
+|   | `-VarDecl 0x7f8ded869070 <col:3, col:9> col:9 used cy 'float'
+|   |-DeclStmt 0x7f8ded869160 <line:36:3, col:13>
+|   | `-VarDecl 0x7f8ded869100 <col:3, col:9> col:9 used radx 'float'
+|   |-DeclStmt 0x7f8ded8691f0 <line:37:3, col:13>
+|   | `-VarDecl 0x7f8ded869190 <col:3, col:9> col:9 used rady 'float'
+|   `-IfStmt 0x7f8ded869548 <line:38:3, line:39:39>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8ded869288 <line:38:7, col:15> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f8ded869258 <col:7> 'float' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f8ded869208 <col:7> 'float' lvalue Var 0x7f8ded869100 'radx' 'float'
+|     | `-ImplicitCastExpr 0x7f8ded869270 <col:15> 'float' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8ded869230 <col:15> 'float' lvalue Var 0x7f8ded869190 'rady' 'float'
+|     |-CallExpr 0x7f8ded869400 <line:39:5, col:39> 'void'
+|     | |-ImplicitCastExpr 0x7f8ded8693e8 <col:5> 'void (*)(double, double, double, double, double, double)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7f8ded8692b0 <col:5> 'void (double, double, double, double, double, double)' Function 0x7f8ded868610 'PSMyArc' 'void (double, double, double, double, double, double)'
+|     | |-ImplicitCastExpr 0x7f8ded869470 <col:13> 'double' <FloatingCast>
+|     | | `-ImplicitCastExpr 0x7f8ded869458 <col:13> 'float' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f8ded8692d8 <col:13> 'float' lvalue Var 0x7f8ded868fe0 'cx' 'float'
+|     | |-ImplicitCastExpr 0x7f8ded8694a0 <col:17> 'double' <FloatingCast>
+|     | | `-ImplicitCastExpr 0x7f8ded869488 <col:17> 'float' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f8ded869300 <col:17> 'float' lvalue Var 0x7f8ded869070 'cy' 'float'
+|     | |-ImplicitCastExpr 0x7f8ded8694d0 <col:21> 'double' <FloatingCast>
+|     | | `-ImplicitCastExpr 0x7f8ded8694b8 <col:21> 'float' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f8ded869328 <col:21> 'float' lvalue Var 0x7f8ded869100 'radx' 'float'
+|     | |-ImplicitCastExpr 0x7f8ded869500 <col:27> 'double' <FloatingCast>
+|     | | `-ImplicitCastExpr 0x7f8ded8694e8 <col:27> 'float' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7f8ded869350 <col:27> 'float' lvalue Var 0x7f8ded869190 'rady' 'float'
+|     | |-ImplicitCastExpr 0x7f8ded869518 <col:33> 'double' <IntegralToFloating>
+|     | | `-IntegerLiteral 0x7f8ded869378 <col:33> 'int' 0
+|     | `-ImplicitCastExpr 0x7f8ded869530 <col:36> 'double' <IntegralToFloating>
+|     |   `-IntegerLiteral 0x7f8ded869398 <col:36> 'int' 360
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f8ded8695d8 <line:42:1, line:45:1> line:42:13 used PSDrawFillCircle 'void ()' static
+| `-CompoundStmt 0x7f8ded8696e0 <line:43:1, line:45:1>
+|   `-CallExpr 0x7f8ded8696b8 <line:44:3, col:16> 'void'
+|     `-ImplicitCastExpr 0x7f8ded8696a0 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8ded869678 <col:3> 'void ()' Function 0x7f8ded868f28 'PSDrawElipse' 'void ()'
+|-VarDecl 0x7f8ded869788 <line:47:1, line:49:1> line:47:28 used psfuncs 'struct displayfuncs [1]' static cinit
+| `-InitListExpr 0x7f8ded869870 <col:40, line:49:1> 'struct displayfuncs [1]'
+|   `-InitListExpr 0x7f8ded8698c8 <line:48:3> 'struct displayfuncs':'struct displayfuncs'
+|     `-ImplicitCastExpr 0x7f8ded869918 <col:3> 'void (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8ded8697e8 <col:3> 'void ()' Function 0x7f8ded8695d8 'PSDrawFillCircle' 'void ()'
+`-FunctionDecl 0x7f8ded8699c8 <line:51:1, line:55:1> line:51:6 _GPSDraw_CreateDisplay 'void ()'
+  `-CompoundStmt 0x7f8ded869d38 <line:52:1, line:55:1>
+    |-DeclStmt 0x7f8ded869b80 <line:53:3, col:27>
+    | `-VarDecl 0x7f8ded869b20 <col:3, col:22> col:22 used gdisp 'struct gpsdisplay *'
+    `-BinaryOperator 0x7f8ded869d10 <line:54:3, col:27> 'struct displayfuncs *' '='
+      |-MemberExpr 0x7f8ded869bd8 <col:3, col:10> 'struct displayfuncs *' lvalue ->funcs 0x7f8ded868180
+      | `-ImplicitCastExpr 0x7f8ded869bc0 <col:3> 'struct gpsdisplay *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8ded869b98 <col:3> 'struct gpsdisplay *' lvalue Var 0x7f8ded869b20 'gdisp' 'struct gpsdisplay *'
+      `-ImplicitCastExpr 0x7f8ded869cf8 <col:18, col:27> 'struct displayfuncs *' <BitCast>
+        `-CStyleCastExpr 0x7f8ded869cd0 <col:18, col:27> 'void *' <BitCast>
+          `-UnaryOperator 0x7f8ded869c98 <col:26, col:27> 'struct displayfuncs (*)[1]' prefix '&'
+            `-DeclRefExpr 0x7f8ded869c10 <col:27> 'struct displayfuncs [1]' lvalue Var 0x7f8ded869788 'psfuncs' 'struct displayfuncs [1]'

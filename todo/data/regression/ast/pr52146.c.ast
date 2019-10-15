@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fa4eb82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa4ed015a20 <../Data/C2AST/pr52146.c:4:1, line:9:1> line:5:1 test1 'void (void)'
+| `-CompoundStmt 0x7fa4ed015cd0 <line:6:1, line:9:1>
+|   |-DeclStmt 0x7fa4ed015c00 <line:7:3, col:42>
+|   | `-VarDecl 0x7fa4ed015b40 <col:3, col:32> col:8 used apic_tpr_addr 'int *' cinit
+|   |   `-CStyleCastExpr 0x7fa4ed015bd8 <col:24, col:32> 'int *' <IntegralToPointer>
+|   |     `-IntegerLiteral 0x7fa4ed015ba0 <col:32> 'unsigned int' 4276093056
+|   `-CompoundAssignOperator 0x7fa4ed015c98 <line:8:3, col:21> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|     |-UnaryOperator 0x7fa4ed015c58 <col:3, col:4> 'int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fa4ed015c40 <col:4> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa4ed015c18 <col:4> 'int *' lvalue Var 0x7fa4ed015b40 'apic_tpr_addr' 'int *'
+|     `-IntegerLiteral 0x7fa4ed015c78 <col:21> 'int' 4
+`-FunctionDecl 0x7fa4ed015d80 <line:11:1, line:16:1> line:12:1 test2 'void (void)'
+  `-CompoundStmt 0x7fa4ed015fb8 <line:13:1, line:16:1>
+    |-DeclStmt 0x7fa4ed015ef8 <line:14:3, col:42>
+    | `-VarDecl 0x7fa4ed015e38 <col:3, col:32> col:8 used apic_tpr_addr 'int *' cinit
+    |   `-CStyleCastExpr 0x7fa4ed015ed0 <col:24, col:32> 'int *' <IntegralToPointer>
+    |     `-IntegerLiteral 0x7fa4ed015e98 <col:32> 'unsigned int' 4276093056
+    `-BinaryOperator 0x7fa4ed015f90 <line:15:3, col:20> 'int' '='
+      |-UnaryOperator 0x7fa4ed015f50 <col:3, col:4> 'int' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fa4ed015f38 <col:4> 'int *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa4ed015f10 <col:4> 'int *' lvalue Var 0x7fa4ed015e38 'apic_tpr_addr' 'int *'
+      `-IntegerLiteral 0x7fa4ed015f70 <col:20> 'int' 0

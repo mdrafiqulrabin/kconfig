@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7ff9ad02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff9ad02c978 <../Data/C2AST/pr25023.c:6:1, col:22> col:22 used v 'unsigned char' extern
+`-FunctionDecl 0x7ff9ad818508 <line:8:1, line:12:1> line:9:1 foo 'float (void)'
+  `-CompoundStmt 0x7ff9ad818618 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7ff9ad818600 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7ff9ad8185e8 <col:10> 'float' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7ff9ad8185d0 <col:10> 'unsigned char' <LValueToRValue>
+          `-DeclRefExpr 0x7ff9ad8185a8 <col:10> 'unsigned char' lvalue Var 0x7ff9ad02c978 'v' 'unsigned char'

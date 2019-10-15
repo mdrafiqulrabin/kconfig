@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7ff5a302b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff5a302bf60 <../Data/C2AST/pr57478.c:3:9, col:16> col:16 struct Node
+|-TypedefDecl 0x7ff5a3814270 <col:1, col:21> col:21 referenced Node 'struct Node':'struct Node'
+| `-ElaboratedType 0x7ff5a3814220 'struct Node' sugar
+|   `-RecordType 0x7ff5a3814200 'struct Node'
+|     `-Record 0x7ff5a38142e0 'Node'
+|-RecordDecl 0x7ff5a38142e0 prev 0x7ff5a302bf60 <line:5:1, line:10:1> line:5:8 struct Node definition
+| |-FieldDecl 0x7ff5a38143f8 <line:7:3, col:9> col:9 referenced Pred 'Node *'
+| |-FieldDecl 0x7ff5a3814450 <col:3, col:16> col:16 referenced Suc 'Node *'
+| |-FieldDecl 0x7ff5a38144a8 <line:8:3, col:9> col:9 referenced SubBestPred 'Node *'
+| `-FieldDecl 0x7ff5a3814500 <line:9:3, col:9> col:9 referenced SubBestSuc 'Node *'
+`-FunctionDecl 0x7ff5a3814660 <line:12:1, line:21:1> line:13:1 foo 'void (Node *)'
+  |-ParmVarDecl 0x7ff5a3814558 <col:6, col:12> col:12 used N 'Node *'
+  `-CompoundStmt 0x7ff5a3814ac8 <line:14:1, line:21:1>
+    `-DoStmt 0x7ff5a3814aa8 <line:15:3, line:20:20>
+      |-CompoundStmt 0x7ff5a38149a8 <line:16:5, line:19:5>
+      | |-BinaryOperator 0x7ff5a3814850 <line:17:7, col:27> 'Node *' '='
+      | | |-MemberExpr 0x7ff5a3814788 <col:7, col:10> 'Node *' lvalue ->SubBestPred 0x7ff5a38144a8
+      | | | `-ImplicitCastExpr 0x7ff5a3814770 <col:7> 'Node *' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7ff5a3814748 <col:7> 'Node *' lvalue ParmVar 0x7ff5a3814558 'N' 'Node *'
+      | | `-ImplicitCastExpr 0x7ff5a3814838 <col:24, col:27> 'Node *' <LValueToRValue>
+      | |   `-MemberExpr 0x7ff5a3814800 <col:24, col:27> 'Node *' lvalue ->Pred 0x7ff5a38143f8
+      | |     `-ImplicitCastExpr 0x7ff5a38147e8 <col:24> 'Node *' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7ff5a38147c0 <col:24> 'Node *' lvalue ParmVar 0x7ff5a3814558 'N' 'Node *'
+      | `-BinaryOperator 0x7ff5a3814980 <line:18:7, col:26> 'Node *' '='
+      |   |-MemberExpr 0x7ff5a38148b8 <col:7, col:10> 'Node *' lvalue ->SubBestSuc 0x7ff5a3814500
+      |   | `-ImplicitCastExpr 0x7ff5a38148a0 <col:7> 'Node *' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7ff5a3814878 <col:7> 'Node *' lvalue ParmVar 0x7ff5a3814558 'N' 'Node *'
+      |   `-ImplicitCastExpr 0x7ff5a3814968 <col:23, col:26> 'Node *' <LValueToRValue>
+      |     `-MemberExpr 0x7ff5a3814930 <col:23, col:26> 'Node *' lvalue ->Suc 0x7ff5a3814450
+      |       `-ImplicitCastExpr 0x7ff5a3814918 <col:23> 'Node *' <LValueToRValue>
+      |         `-DeclRefExpr 0x7ff5a38148f0 <col:23> 'Node *' lvalue ParmVar 0x7ff5a3814558 'N' 'Node *'
+      `-BinaryOperator 0x7ff5a3814a80 <line:20:10, col:17> 'Node *' '='
+        |-DeclRefExpr 0x7ff5a38149c8 <col:10> 'Node *' lvalue ParmVar 0x7ff5a3814558 'N' 'Node *'
+        `-ImplicitCastExpr 0x7ff5a3814a68 <col:14, col:17> 'Node *' <LValueToRValue>
+          `-MemberExpr 0x7ff5a3814a30 <col:14, col:17> 'Node *' lvalue ->Suc 0x7ff5a3814450
+            `-ImplicitCastExpr 0x7ff5a3814a18 <col:14> 'Node *' <LValueToRValue>
+              `-DeclRefExpr 0x7ff5a38149f0 <col:14> 'Node *' lvalue ParmVar 0x7ff5a3814558 'N' 'Node *'

@@ -1,0 +1,234 @@
+TranslationUnitDecl 0x7f896c0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f896c018160 <../Data/C2AST/pr51801.c:3:9, col:30> col:9 struct definition
+| `-FieldDecl 0x7f896b829230 <col:18, col:23> col:23 referenced Vshow 'char'
+|-TypedefDecl 0x7f896b8292d0 <col:1, col:32> col:32 referenced TScreen 'struct TScreen':'TScreen'
+| `-ElaboratedType 0x7f896b829280 'struct TScreen' sugar
+|   `-RecordType 0x7f896b829200 'TScreen'
+|     `-Record 0x7f896c018160 ''
+|-RecordDecl 0x7f896b829340 <line:4:9, col:36> col:16 struct _Misc definition
+| `-FieldDecl 0x7f896b829400 <col:24, col:29> col:29 referenced Tshow 'char'
+|-TypedefDecl 0x7f896b8294a0 <col:1, col:38> col:38 referenced Misc 'struct _Misc':'struct _Misc'
+| `-ElaboratedType 0x7f896b829450 'struct _Misc' sugar
+|   `-RecordType 0x7f896b8293d0 'struct _Misc'
+|     `-Record 0x7f896b829340 '_Misc'
+|-RecordDecl 0x7f896b829510 <line:5:9, col:61> col:16 struct _XtermWidgetRec definition
+| |-FieldDecl 0x7f896b8295f0 <col:34, col:42> col:42 referenced screen 'TScreen':'TScreen'
+| `-FieldDecl 0x7f896b829670 <col:50, col:55> col:55 referenced misc 'Misc':'struct _Misc'
+|-TypedefDecl 0x7f896b829750 <col:1, col:63> col:63 XtermWidgetRec 'struct _XtermWidgetRec':'struct _XtermWidgetRec'
+| `-ElaboratedType 0x7f896b829700 'struct _XtermWidgetRec' sugar
+|   `-RecordType 0x7f896b8295a0 'struct _XtermWidgetRec'
+|     `-Record 0x7f896b829510 '_XtermWidgetRec'
+|-TypedefDecl 0x7f896b829830 <col:1, col:80> col:80 referenced XtermWidget 'struct _XtermWidgetRec *'
+| `-PointerType 0x7f896b8297e0 'struct _XtermWidgetRec *'
+|   `-ElaboratedType 0x7f896b829700 'struct _XtermWidgetRec' sugar
+|     `-RecordType 0x7f896b8295a0 'struct _XtermWidgetRec'
+|       `-Record 0x7f896b829510 '_XtermWidgetRec'
+|-VarDecl 0x7f896b8298e0 <line:6:1, col:20> col:20 used term 'XtermWidget':'struct _XtermWidgetRec *' extern
+|-FunctionDecl 0x7f896b829bb0 <line:7:1, col:33> col:6 used Bell 'void (XtermWidget, int, int)'
+| |-ParmVarDecl 0x7f896b829990 <col:12> col:23 'XtermWidget':'struct _XtermWidgetRec *'
+| |-ParmVarDecl 0x7f896b829a08 <col:25> col:28 'int'
+| `-ParmVarDecl 0x7f896b829a80 <col:30> col:33 'int'
+|-FunctionDecl 0x7f896b829d40 <line:8:1, col:29> col:6 used set_tek_visibility 'void (int)'
+| `-ParmVarDecl 0x7f896b829c80 <col:26> col:29 'int'
+|-FunctionDecl 0x7f896b829f50 <line:10:1, line:16:1> line:11:1 used handle_tekshow 'void (void *, int)'
+| |-ParmVarDecl 0x7f896b829e00 <col:17, col:23> col:23 gw 'void *'
+| |-ParmVarDecl 0x7f896b829e78 <col:27, col:31> col:31 allowswitch 'int'
+| `-CompoundStmt 0x7f896b82a2f8 <line:12:1, line:16:1>
+|   |-DeclStmt 0x7f896b82a0b0 <line:13:3, col:24>
+|   | `-VarDecl 0x7f896b82a010 <col:3, col:20> col:15 used xw 'XtermWidget':'struct _XtermWidgetRec *' cinit
+|   |   `-ImplicitCastExpr 0x7f896b82a098 <col:20> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f896b82a070 <col:20> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b8298e0 'term' 'XtermWidget':'struct _XtermWidgetRec *'
+|   `-IfStmt 0x7f896b82a2c0 <line:14:3, line:15:26>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x7f896b82a1d0 <line:14:7, col:25> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x7f896b82a1b8 <col:8, col:25> 'char' <LValueToRValue>
+|     |   `-ParenExpr 0x7f896b82a198 <col:8, col:25> 'char' lvalue
+|     |     `-MemberExpr 0x7f896b82a160 <col:9, col:20> 'char' lvalue .Tshow 0x7f896b829400
+|     |       `-MemberExpr 0x7f896b82a128 <col:9, col:15> 'Misc':'struct _Misc' lvalue ->misc 0x7f896b829670
+|     |         `-ImplicitCastExpr 0x7f896b82a110 <col:9, col:12> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+|     |           `-ParenExpr 0x7f896b82a0f0 <col:9, col:12> 'XtermWidget':'struct _XtermWidgetRec *' lvalue
+|     |             `-DeclRefExpr 0x7f896b82a0c8 <col:10> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b82a010 'xw' 'XtermWidget':'struct _XtermWidgetRec *'
+|     |-CallExpr 0x7f896b82a290 <line:15:5, col:26> 'void'
+|     | |-ImplicitCastExpr 0x7f896b82a278 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7f896b82a200 <col:5> 'void (int)' Function 0x7f896b829d40 'set_tek_visibility' 'void (int)'
+|     | `-IntegerLiteral 0x7f896b82a228 <col:25> 'int' 1
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f896b82a500 <line:18:1, line:22:1> line:19:1 used do_tekonoff 'void (void *, void *, void *)'
+| |-ParmVarDecl 0x7f896b82a330 <col:14, col:20> col:20 used gw 'void *'
+| |-ParmVarDecl 0x7f896b82a3a8 <col:24, col:30> col:30 closure 'void *'
+| |-ParmVarDecl 0x7f896b82a420 <col:39, col:45> col:45 data 'void *'
+| `-CompoundStmt 0x7f896b82a6c0 <line:20:1, line:22:1>
+|   `-CallExpr 0x7f896b82a670 <line:21:3, col:24> 'void'
+|     |-ImplicitCastExpr 0x7f896b82a658 <col:3> 'void (*)(void *, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f896b82a5b8 <col:3> 'void (void *, int)' Function 0x7f896b829f50 'handle_tekshow' 'void (void *, int)'
+|     |-ImplicitCastExpr 0x7f896b82a6a8 <col:19> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f896b82a5e0 <col:19> 'void *' lvalue ParmVar 0x7f896b82a330 'gw' 'void *'
+|     `-IntegerLiteral 0x7f896b82a608 <col:23> 'int' 0
+|-FunctionDecl 0x7f896b82a878 <line:24:1, line:27:1> line:25:1 used do_vtonoff 'void (void *, void *, void *)'
+| |-ParmVarDecl 0x7f896b82a6f0 <col:13, col:19> col:19 gw 'void *'
+| |-ParmVarDecl 0x7f896b82a768 <col:23, col:29> col:29 closure 'void *'
+| |-ParmVarDecl 0x7f896b82a7e0 <col:38, col:44> col:44 data 'void *'
+| `-CompoundStmt 0x7f896b82a930 <line:26:1, line:27:1>
+|-FunctionDecl 0x7f896b82b010 <line:29:1, line:47:1> line:30:1 used handle_toggle 'void (void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)'
+| |-ParmVarDecl 0x7f896b82ab80 <col:16, col:65> col:23 used proc 'void (*)(void *, void *, void *)'
+| |-ParmVarDecl 0x7f896b82abf8 <line:31:9, col:13> col:13 var 'int'
+| |-ParmVarDecl 0x7f896b82aca0 <col:18, col:25> col:25 params 'char **'
+| |-ParmVarDecl 0x7f896b82ad18 <col:33, col:46> col:46 used nparams 'unsigned int'
+| |-ParmVarDecl 0x7f896b82ad90 <col:55, col:61> col:61 used w 'void *'
+| |-ParmVarDecl 0x7f896b82ae08 <line:32:9, col:15> col:15 used closure 'void *'
+| |-ParmVarDecl 0x7f896b82ae80 <col:24, col:30> col:30 used data 'void *'
+| `-CompoundStmt 0x7f896b841218 <line:33:1, line:47:1>
+|   |-DeclStmt 0x7f896b82b198 <line:34:3, col:24>
+|   | `-VarDecl 0x7f896b82b0f8 <col:3, col:20> col:15 used xw 'XtermWidget':'struct _XtermWidgetRec *' cinit
+|   |   `-ImplicitCastExpr 0x7f896b82b180 <col:20> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f896b82b158 <col:20> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b8298e0 'term' 'XtermWidget':'struct _XtermWidgetRec *'
+|   |-DeclStmt 0x7f896b840ca0 <line:35:3, col:15>
+|   | `-VarDecl 0x7f896b840c00 <col:3, col:14> col:7 used dir 'int' cinit
+|   |   `-UnaryOperator 0x7f896b840c80 <col:13, col:14> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x7f896b840c60 <col:14> 'int' 2
+|   |-SwitchStmt 0x7f896b840cf8 <line:36:3, line:40:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f896b840ce0 <line:36:11> 'unsigned int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7f896b840cb8 <col:11> 'unsigned int' lvalue ParmVar 0x7f896b82ad18 'nparams' 'unsigned int'
+|   | `-CompoundStmt 0x7f896b840e10 <line:37:5, line:40:5>
+|   |   `-CaseStmt 0x7f896b840d48 <line:38:5, line:39:14>
+|   |     |-ImplicitCastExpr 0x7f896b840e28 <line:38:10> 'unsigned int' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f896b840d28 <col:10> 'int' 0
+|   |     |-<<<NULL>>>
+|   |     `-BinaryOperator 0x7f896b840de8 <line:39:7, col:14> 'int' '='
+|   |       |-DeclRefExpr 0x7f896b840d80 <col:7> 'int' lvalue Var 0x7f896b840c00 'dir' 'int'
+|   |       `-UnaryOperator 0x7f896b840dc8 <col:13, col:14> 'int' prefix '-'
+|   |         `-IntegerLiteral 0x7f896b840da8 <col:14> 'int' 1
+|   `-SwitchStmt 0x7f896b840e80 <line:41:3, line:46:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f896b840e68 <line:41:11> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7f896b840e40 <col:11> 'int' lvalue Var 0x7f896b840c00 'dir' 'int'
+|     `-CompoundStmt 0x7f896b8411f8 <line:42:5, line:46:5>
+|       |-CaseStmt 0x7f896b840ed0 <line:43:5, line:44:32>
+|       | |-IntegerLiteral 0x7f896b840eb0 <line:43:10> 'int' 1
+|       | |-<<<NULL>>>
+|       | `-CallExpr 0x7f896b841018 <line:44:7, col:32> 'void'
+|       |   |-ImplicitCastExpr 0x7f896b841000 <col:7, col:13> 'void (*)(void *, void *, void *)' <FunctionToPointerDecay>
+|       |   | `-ParenExpr 0x7f896b840f68 <col:7, col:13> 'void (void *, void *, void *)':'void (void *, void *, void *)'
+|       |   |   `-UnaryOperator 0x7f896b840f48 <col:8, col:9> 'void (void *, void *, void *)':'void (void *, void *, void *)' prefix '*'
+|       |   |     `-ImplicitCastExpr 0x7f896b840f30 <col:9> 'void (*)(void *, void *, void *)' <LValueToRValue>
+|       |   |       `-DeclRefExpr 0x7f896b840f08 <col:9> 'void (*)(void *, void *, void *)' lvalue ParmVar 0x7f896b82ab80 'proc' 'void (*)(void *, void *, void *)'
+|       |   |-ImplicitCastExpr 0x7f896b841058 <col:16> 'void *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f896b840f88 <col:16> 'void *' lvalue ParmVar 0x7f896b82ad90 'w' 'void *'
+|       |   |-ImplicitCastExpr 0x7f896b841070 <col:19> 'void *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7f896b840fb0 <col:19> 'void *' lvalue ParmVar 0x7f896b82ae08 'closure' 'void *'
+|       |   `-ImplicitCastExpr 0x7f896b841088 <col:28> 'void *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f896b840fd8 <col:28> 'void *' lvalue ParmVar 0x7f896b82ae80 'data' 'void *'
+|       `-CallExpr 0x7f896b8411a0 <line:45:7, col:21> 'void'
+|         |-ImplicitCastExpr 0x7f896b841188 <col:7> 'void (*)(XtermWidget, int, int)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7f896b8410a0 <col:7> 'void (XtermWidget, int, int)' Function 0x7f896b829bb0 'Bell' 'void (XtermWidget, int, int)'
+|         |-ImplicitCastExpr 0x7f896b8411e0 <col:13> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7f896b8410c8 <col:13> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b82b0f8 'xw' 'XtermWidget':'struct _XtermWidgetRec *'
+|         |-IntegerLiteral 0x7f896b8410f0 <col:17> 'int' 2
+|         `-IntegerLiteral 0x7f896b841110 <col:20> 'int' 0
+`-FunctionDecl 0x7f896b841460 <line:49:1, line:64:1> line:50:1 HandleVisibility 'void (void *, char **, unsigned int *)'
+  |-ParmVarDecl 0x7f896b841260 <col:19, col:25> col:25 used w 'void *'
+  |-ParmVarDecl 0x7f896b8412d8 <col:28, col:35> col:35 used params 'char **'
+  |-ParmVarDecl 0x7f896b841380 <col:43, col:57> col:57 used param_count 'unsigned int *'
+  `-CompoundStmt 0x7f896b843460 <line:51:1, line:64:1>
+    |-DeclStmt 0x7f896b8415c8 <line:52:3, col:24>
+    | `-VarDecl 0x7f896b841528 <col:3, col:20> col:15 used xw 'XtermWidget':'struct _XtermWidgetRec *' cinit
+    |   `-ImplicitCastExpr 0x7f896b8415b0 <col:20> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f896b841588 <col:20> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b8298e0 'term' 'XtermWidget':'struct _XtermWidgetRec *'
+    `-IfStmt 0x7f896b843428 <line:53:3, line:63:7>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f896b841690 <line:53:7, col:23> 'int' '=='
+      | |-ImplicitCastExpr 0x7f896b841660 <col:7, col:8> 'unsigned int' <LValueToRValue>
+      | | `-UnaryOperator 0x7f896b841620 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+      | |   `-ImplicitCastExpr 0x7f896b841608 <col:8> 'unsigned int *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f896b8415e0 <col:8> 'unsigned int *' lvalue ParmVar 0x7f896b841380 'param_count' 'unsigned int *'
+      | `-ImplicitCastExpr 0x7f896b841678 <col:23> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7f896b841640 <col:23> 'int' 2
+      |-SwitchStmt 0x7f896b8417d0 <line:54:5, line:63:7>
+      | |-<<<NULL>>>
+      | |-<<<NULL>>>
+      | |-ImplicitCastExpr 0x7f896b8417b8 <line:54:13, col:24> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7f896b8417a0 <col:13, col:24> 'char' <LValueToRValue>
+      | |   `-ArraySubscriptExpr 0x7f896b841778 <col:13, col:24> 'char' lvalue
+      | |     |-ImplicitCastExpr 0x7f896b841760 <col:13, col:21> 'char *' <LValueToRValue>
+      | |     | `-ArraySubscriptExpr 0x7f896b841718 <col:13, col:21> 'char *' lvalue
+      | |     |   |-ImplicitCastExpr 0x7f896b841700 <col:13> 'char **' <LValueToRValue>
+      | |     |   | `-DeclRefExpr 0x7f896b8416b8 <col:13> 'char **' lvalue ParmVar 0x7f896b8412d8 'params' 'char **'
+      | |     |   `-IntegerLiteral 0x7f896b8416e0 <col:20> 'int' 0
+      | |     `-IntegerLiteral 0x7f896b841740 <col:23> 'int' 0
+      | `-CompoundStmt 0x7f896b843408 <line:55:7, line:63:7>
+      |   |-CaseStmt 0x7f896b841818 <line:56:7, line:59:20>
+      |   | |-CharacterLiteral 0x7f896b841800 <line:56:12> 'int' 118
+      |   | |-<<<NULL>>>
+      |   | `-CallExpr 0x7f896b842e10 <line:57:2, line:59:20> 'void'
+      |   |   |-ImplicitCastExpr 0x7f896b842df8 <line:57:2> 'void (*)(void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)' <FunctionToPointerDecay>
+      |   |   | `-DeclRefExpr 0x7f896b841850 <col:2> 'void (void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)' Function 0x7f896b82b010 'handle_toggle' 'void (void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)'
+      |   |   |-ImplicitCastExpr 0x7f896b842e70 <col:17> 'void (*)(void *, void *, void *)' <FunctionToPointerDecay>
+      |   |   | `-DeclRefExpr 0x7f896b841878 <col:17> 'void (void *, void *, void *)' Function 0x7f896b82a878 'do_vtonoff' 'void (void *, void *, void *)'
+      |   |   |-CStyleCastExpr 0x7f896b841b00 <col:29, col:64> 'int' <NoOp>
+      |   |   | `-ParenExpr 0x7f896b841ae0 <col:35, col:64> 'int'
+      |   |   |   `-CStyleCastExpr 0x7f896b841a70 <col:36, col:59> 'int' <IntegralCast>
+      |   |   |     `-ImplicitCastExpr 0x7f896b841a58 <col:42, col:59> 'char' <LValueToRValue>
+      |   |   |       `-MemberExpr 0x7f896b841a08 <col:42, col:59> 'char' lvalue ->Vshow 0x7f896b829230
+      |   |   |         `-ParenExpr 0x7f896b8419e8 <col:42, col:56> 'TScreen *'
+      |   |   |           `-UnaryOperator 0x7f896b841998 <col:43, col:50> 'TScreen *' prefix '&'
+      |   |   |             `-MemberExpr 0x7f896b841900 <col:44, col:50> 'TScreen':'TScreen' lvalue ->screen 0x7f896b8295f0
+      |   |   |               `-ImplicitCastExpr 0x7f896b8418e8 <col:44, col:47> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+      |   |   |                 `-ParenExpr 0x7f896b8418c8 <col:44, col:47> 'XtermWidget':'struct _XtermWidgetRec *' lvalue
+      |   |   |                   `-DeclRefExpr 0x7f896b8418a0 <col:45> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b841528 'xw' 'XtermWidget':'struct _XtermWidgetRec *'
+      |   |   |-BinaryOperator 0x7f896b841b88 <line:58:10, col:19> 'char **' '+'
+      |   |   | |-ImplicitCastExpr 0x7f896b841b70 <col:10> 'char **' <LValueToRValue>
+      |   |   | | `-DeclRefExpr 0x7f896b841b28 <col:10> 'char **' lvalue ParmVar 0x7f896b8412d8 'params' 'char **'
+      |   |   | `-IntegerLiteral 0x7f896b841b50 <col:19> 'int' 1
+      |   |   |-BinaryOperator 0x7f896b842c90 <col:22, col:39> 'unsigned int' '-'
+      |   |   | |-ImplicitCastExpr 0x7f896b842c60 <col:22, col:35> 'unsigned int' <LValueToRValue>
+      |   |   | | `-ParenExpr 0x7f896b842c20 <col:22, col:35> 'unsigned int' lvalue
+      |   |   | |   `-UnaryOperator 0x7f896b842c00 <col:23, col:24> 'unsigned int' lvalue prefix '*'
+      |   |   | |     `-ImplicitCastExpr 0x7f896b841bd8 <col:24> 'unsigned int *' <LValueToRValue>
+      |   |   | |       `-DeclRefExpr 0x7f896b841bb0 <col:24> 'unsigned int *' lvalue ParmVar 0x7f896b841380 'param_count' 'unsigned int *'
+      |   |   | `-ImplicitCastExpr 0x7f896b842c78 <col:39> 'unsigned int' <IntegralCast>
+      |   |   |   `-IntegerLiteral 0x7f896b842c40 <col:39> 'int' 1
+      |   |   |-ImplicitCastExpr 0x7f896b842e88 <col:42> 'void *' <LValueToRValue>
+      |   |   | `-DeclRefExpr 0x7f896b842cb8 <col:42> 'void *' lvalue ParmVar 0x7f896b841260 'w' 'void *'
+      |   |   |-CStyleCastExpr 0x7f896b842d18 <col:45, col:54> 'void *' <NullToPointer>
+      |   |   | `-IntegerLiteral 0x7f896b842ce0 <col:54> 'int' 0
+      |   |   `-CStyleCastExpr 0x7f896b842d78 <line:59:10, col:19> 'void *' <NullToPointer>
+      |   |     `-IntegerLiteral 0x7f896b842d40 <col:19> 'int' 0
+      |   `-CallExpr 0x7f896b843378 <line:60:2, line:62:20> 'void'
+      |     |-ImplicitCastExpr 0x7f896b843360 <line:60:2> 'void (*)(void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7f896b842ea0 <col:2> 'void (void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)' Function 0x7f896b82b010 'handle_toggle' 'void (void (*)(void *, void *, void *), int, char **, unsigned int, void *, void *, void *)'
+      |     |-ImplicitCastExpr 0x7f896b8433d8 <col:17> 'void (*)(void *, void *, void *)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7f896b842ec8 <col:17> 'void (void *, void *, void *)' Function 0x7f896b82a500 'do_tekonoff' 'void (void *, void *, void *)'
+      |     |-CStyleCastExpr 0x7f896b8430d0 <col:30, col:61> 'int' <NoOp>
+      |     | `-ParenExpr 0x7f896b8430b0 <col:36, col:61> 'int'
+      |     |   `-CStyleCastExpr 0x7f896b843040 <col:37, col:60> 'int' <IntegralCast>
+      |     |     `-ImplicitCastExpr 0x7f896b843028 <col:43, col:60> 'char' <LValueToRValue>
+      |     |       `-ParenExpr 0x7f896b843008 <col:43, col:60> 'char' lvalue
+      |     |         `-MemberExpr 0x7f896b842f88 <col:44, col:55> 'char' lvalue .Tshow 0x7f896b829400
+      |     |           `-MemberExpr 0x7f896b842f50 <col:44, col:50> 'Misc':'struct _Misc' lvalue ->misc 0x7f896b829670
+      |     |             `-ImplicitCastExpr 0x7f896b842f38 <col:44, col:47> 'XtermWidget':'struct _XtermWidgetRec *' <LValueToRValue>
+      |     |               `-ParenExpr 0x7f896b842f18 <col:44, col:47> 'XtermWidget':'struct _XtermWidgetRec *' lvalue
+      |     |                 `-DeclRefExpr 0x7f896b842ef0 <col:45> 'XtermWidget':'struct _XtermWidgetRec *' lvalue Var 0x7f896b841528 'xw' 'XtermWidget':'struct _XtermWidgetRec *'
+      |     |-BinaryOperator 0x7f896b843158 <line:61:10, col:19> 'char **' '+'
+      |     | |-ImplicitCastExpr 0x7f896b843140 <col:10> 'char **' <LValueToRValue>
+      |     | | `-DeclRefExpr 0x7f896b8430f8 <col:10> 'char **' lvalue ParmVar 0x7f896b8412d8 'params' 'char **'
+      |     | `-IntegerLiteral 0x7f896b843120 <col:19> 'int' 1
+      |     |-BinaryOperator 0x7f896b843250 <col:22, col:39> 'unsigned int' '-'
+      |     | |-ImplicitCastExpr 0x7f896b843220 <col:22, col:35> 'unsigned int' <LValueToRValue>
+      |     | | `-ParenExpr 0x7f896b8431e0 <col:22, col:35> 'unsigned int' lvalue
+      |     | |   `-UnaryOperator 0x7f896b8431c0 <col:23, col:24> 'unsigned int' lvalue prefix '*'
+      |     | |     `-ImplicitCastExpr 0x7f896b8431a8 <col:24> 'unsigned int *' <LValueToRValue>
+      |     | |       `-DeclRefExpr 0x7f896b843180 <col:24> 'unsigned int *' lvalue ParmVar 0x7f896b841380 'param_count' 'unsigned int *'
+      |     | `-ImplicitCastExpr 0x7f896b843238 <col:39> 'unsigned int' <IntegralCast>
+      |     |   `-IntegerLiteral 0x7f896b843200 <col:39> 'int' 1
+      |     |-ImplicitCastExpr 0x7f896b8433f0 <col:42> 'void *' <LValueToRValue>
+      |     | `-DeclRefExpr 0x7f896b843278 <col:42> 'void *' lvalue ParmVar 0x7f896b841260 'w' 'void *'
+      |     |-CStyleCastExpr 0x7f896b8432d8 <col:45, col:54> 'void *' <NullToPointer>
+      |     | `-IntegerLiteral 0x7f896b8432a0 <col:54> 'int' 0
+      |     `-CStyleCastExpr 0x7f896b843338 <line:62:10, col:19> 'void *' <NullToPointer>
+      |       `-IntegerLiteral 0x7f896b843300 <col:19> 'int' 0
+      `-<<<NULL>>>

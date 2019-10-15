@@ -1,0 +1,51 @@
+../Data/C2AST/pr78541.c:12:19: error: function definition is not allowed here
+ double square () { __builtin_printf ("", *ptr); }
+                  ^
+1 error generated.
+TranslationUnitDecl 0x7feb418166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb41816c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb41816980 '__int128'
+|-TypedefDecl 0x7feb41816cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb418169a0 'unsigned __int128'
+|-TypedefDecl 0x7feb41816fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb41816db0 'struct __NSConstantString_tag'
+|   `-Record 0x7feb41816d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb41817040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb41817000 'char *'
+|   `-BuiltinType 0x7feb41816780 'char'
+|-TypedefDecl 0x7feb41817308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb418172b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb41817120 'struct __va_list_tag'
+|     `-Record 0x7feb41817098 '__va_list_tag'
+|-FunctionDecl 0x7feb420016d0 <../Data/C2AST/pr78541.c:5:1, line:15:1> line:5:6 used foo 'void (double, double)'
+| |-ParmVarDecl 0x7feb41817378 <col:11, col:18> col:18 used a 'double'
+| |-ParmVarDecl 0x7feb42001600 <col:21, col:28> col:28 used b 'double'
+| `-CompoundStmt 0x7feb42001c08 <line:6:1, line:15:1>
+|   |-DeclStmt 0x7feb42001860 <line:7:3, col:14>
+|   | `-VarDecl 0x7feb42001800 <col:3, col:11> col:11 used ptr 'double *'
+|   |-CompoundStmt 0x7feb42001a48 <line:8:5, line:11:5>
+|   | |-DeclStmt 0x7feb42001998 <line:9:7, col:23>
+|   | | `-VarDecl 0x7feb42001890 <col:7, col:22> col:14 used x 'double' cinit
+|   | |   `-BinaryOperator 0x7feb42001970 <col:18, col:22> 'double' '+'
+|   | |     |-ImplicitCastExpr 0x7feb42001940 <col:18> 'double' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7feb420018f0 <col:18> 'double' lvalue ParmVar 0x7feb41817378 'a' 'double'
+|   | |     `-ImplicitCastExpr 0x7feb42001958 <col:22> 'double' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7feb42001918 <col:22> 'double' lvalue ParmVar 0x7feb42001600 'b' 'double'
+|   | `-BinaryOperator 0x7feb42001a20 <line:10:7, col:14> 'double *' '='
+|   |   |-DeclRefExpr 0x7feb420019b0 <col:7> 'double *' lvalue Var 0x7feb42001800 'ptr' 'double *'
+|   |   `-UnaryOperator 0x7feb42001a00 <col:13, col:14> 'double *' prefix '&'
+|   |     `-DeclRefExpr 0x7feb420019d8 <col:14> 'double' lvalue Var 0x7feb42001890 'x' 'double'
+|   `-CallExpr 0x7feb42001be0 <line:14:2, col:10> 'int'
+|     `-ImplicitCastExpr 0x7feb42001bc8 <col:2> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7feb42001b70 <col:2> 'int ()' Function 0x7feb42001ac0 'square' 'int ()'
+`-FunctionDecl 0x7feb42001c58 <line:17:1, line:21:1> line:17:5 main 'int ()'
+  `-CompoundStmt 0x7feb42001e40 <line:18:1, line:21:1>
+    |-CallExpr 0x7feb42001da0 <line:19:3, col:18> 'void'
+    | |-ImplicitCastExpr 0x7feb42001d88 <col:3> 'void (*)(double, double)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7feb42001cf8 <col:3> 'void (double, double)' Function 0x7feb420016d0 'foo' 'void (double, double)'
+    | |-ImplicitCastExpr 0x7feb42001dd8 <col:8> 'double' <FloatingCast>
+    | | `-FloatingLiteral 0x7feb42001d20 <col:8> 'float' 1.200000e+00
+    | `-ImplicitCastExpr 0x7feb42001df0 <col:14> 'double' <FloatingCast>
+    |   `-FloatingLiteral 0x7feb42001d40 <col:14> 'float' 2.300000e+00
+    `-ReturnStmt 0x7feb42001e28 <line:20:3, col:10>
+      `-IntegerLiteral 0x7feb42001e08 <col:10> 'int' 0

@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ffc600058e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffc60006560 <../Data/C2AST/pr77916.c:6:9, line:9:1> line:6:9 struct definition
+| `-FieldDecl 0x7ffc6001a438 <line:8:3, col:9> col:9 referenced f1 'void *'
+|-TypedefDecl 0x7ffc6001a4d0 <line:6:1, line:9:3> col:3 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7ffc6001a480 'struct S' sugar
+|   `-RecordType 0x7ffc6001a400 'S'
+|     `-Record 0x7ffc60006560 ''
+|-VarDecl 0x7ffc6001a5c8 <line:11:1, col:4> col:4 used a 'S *'
+|-VarDecl 0x7ffc6001a680 <line:12:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7ffc6001a7a0 <line:14:1, line:19:1> line:15:1 fn1 'void (void)'
+  `-CompoundStmt 0x7ffc6001aa98 <line:16:1, line:19:1>
+    `-ForStmt 0x7ffc6001aa60 <line:17:3, line:18:13>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ffc6001a868 <line:17:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffc6001a840 <col:10> 'int' lvalue Var 0x7ffc6001a680 'b' 'int'
+      |-BinaryOperator 0x7ffc6001a910 <col:13, col:19> 'S *' ','
+      | |-UnaryOperator 0x7ffc6001a8a8 <col:13, col:14> 'int' postfix '++'
+      | | `-DeclRefExpr 0x7ffc6001a880 <col:13> 'int' lvalue Var 0x7ffc6001a680 'b' 'int'
+      | `-UnaryOperator 0x7ffc6001a8f0 <col:18, col:19> 'S *' postfix '++'
+      |   `-DeclRefExpr 0x7ffc6001a8c8 <col:18> 'S *' lvalue Var 0x7ffc6001a5c8 'a' 'S *'
+      `-BinaryOperator 0x7ffc6001aa38 <line:18:5, col:13> 'void *' '='
+        |-MemberExpr 0x7ffc6001a978 <col:5, col:8> 'void *' lvalue ->f1 0x7ffc6001a438
+        | `-ImplicitCastExpr 0x7ffc6001a960 <col:5> 'S *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffc6001a938 <col:5> 'S *' lvalue Var 0x7ffc6001a5c8 'a' 'S *'
+        `-ImplicitCastExpr 0x7ffc6001a9f0 <col:13> 'void *' <IntegralToPointer>
+          `-ImplicitCastExpr 0x7ffc6001a9d8 <col:13> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7ffc6001a9b0 <col:13> 'int' lvalue Var 0x7ffc6001a680 'b' 'int'

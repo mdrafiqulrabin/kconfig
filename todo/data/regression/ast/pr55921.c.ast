@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fbc778068e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbc77807560 <../Data/C2AST/pr55921.c:3:9, line:7:1> line:3:9 union definition
+| |-FieldDecl 0x7fbc7784ca30 <line:5:3, col:18> col:18 cf '_Complex float'
+| `-FieldDecl 0x7fbc7784ca90 <line:6:3, col:13> col:13 referenced ll 'long long'
+|-TypedefDecl 0x7fbc7784cb30 <line:3:1, line:7:3> col:3 referenced ucf 'union ucf':'ucf'
+| `-ElaboratedType 0x7fbc7784cae0 'union ucf' sugar
+|   `-RecordType 0x7fbc7784ca00 'ucf'
+|     `-Record 0x7fbc77807560 ''
+`-FunctionDecl 0x7fbc7784ce40 <line:9:1, line:21:1> line:10:1 foo 'void (ucf *, ucf *, _Complex float)'
+  |-ParmVarDecl 0x7fbc7784cc28 <col:6, col:11> col:11 used in 'ucf *'
+  |-ParmVarDecl 0x7fbc7784cc98 <col:15, col:20> col:20 used out 'ucf *'
+  |-ParmVarDecl 0x7fbc7784cd08 <col:25, col:40> col:40 used r '_Complex float'
+  `-CompoundStmt 0x7fbc7784d8b8 <line:11:1, line:21:1>
+    |-DeclStmt 0x7fbc7784cfb0 <line:12:3, col:8>
+    | `-VarDecl 0x7fbc7784cf50 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7fbc7784d038 <line:13:3, col:11>
+    | `-VarDecl 0x7fbc7784cfd8 <col:3, col:7> col:7 used ucf1 'ucf':'ucf'
+    |-DeclStmt 0x7fbc7784d0c0 <line:14:3, col:20>
+    | `-VarDecl 0x7fbc7784d060 <col:3, col:18> col:18 used cf '_Complex float'
+    |-BinaryOperator 0x7fbc7784d230 <line:16:3, col:19> 'long long' '='
+    | |-MemberExpr 0x7fbc7784d100 <col:3, col:8> 'long long' lvalue .ll 0x7fbc7784ca90
+    | | `-DeclRefExpr 0x7fbc7784d0d8 <col:3> 'ucf':'ucf' lvalue Var 0x7fbc7784cfd8 'ucf1' 'ucf':'ucf'
+    | `-ImplicitCastExpr 0x7fbc7784d218 <col:13, col:19> 'long long' <LValueToRValue>
+    |   `-MemberExpr 0x7fbc7784d1e0 <col:13, col:19> 'long long' lvalue .ll 0x7fbc7784ca90
+    |     `-ArraySubscriptExpr 0x7fbc7784d1b8 <col:13, col:17> 'ucf':'ucf' lvalue
+    |       |-ImplicitCastExpr 0x7fbc7784d188 <col:13> 'ucf *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fbc7784d138 <col:13> 'ucf *' lvalue ParmVar 0x7fbc7784cc28 'in' 'ucf *'
+    |       `-ImplicitCastExpr 0x7fbc7784d1a0 <col:16> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fbc7784d160 <col:16> 'int' lvalue Var 0x7fbc7784cf50 'i' 'int'
+    |-GCCAsmStmt 0x7fbc7784d480 <line:17:3, col:40>
+    | |-DeclRefExpr 0x7fbc7784d378 <col:21> '_Complex float' lvalue Var 0x7fbc7784d060 'cf' '_Complex float'
+    | `-ImplicitCastExpr 0x7fbc7784d468 <col:32, col:37> 'long long' <LValueToRValue>
+    |   `-MemberExpr 0x7fbc7784d430 <col:32, col:37> 'long long' lvalue .ll 0x7fbc7784ca90
+    |     `-DeclRefExpr 0x7fbc7784d408 <col:32> 'ucf':'ucf' lvalue Var 0x7fbc7784cfd8 'ucf1' 'ucf':'ucf'
+    |-CompoundAssignOperator 0x7fbc7784d560 <line:18:3, col:9> '_Complex float' '*=' ComputeLHSTy='_Complex float' ComputeResultTy='_Complex float'
+    | |-DeclRefExpr 0x7fbc7784d4f8 <col:3> '_Complex float' lvalue Var 0x7fbc7784d060 'cf' '_Complex float'
+    | `-ImplicitCastExpr 0x7fbc7784d548 <col:9> '_Complex float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbc7784d520 <col:9> '_Complex float' lvalue ParmVar 0x7fbc7784cd08 'r' '_Complex float'
+    |-GCCAsmStmt 0x7fbc7784d6c0 <line:19:3, col:40>
+    | |-MemberExpr 0x7fbc7784d618 <col:21, col:26> 'long long' lvalue .ll 0x7fbc7784ca90
+    | | `-DeclRefExpr 0x7fbc7784d5f0 <col:21> 'ucf':'ucf' lvalue Var 0x7fbc7784cfd8 'ucf1' 'ucf':'ucf'
+    | `-ImplicitCastExpr 0x7fbc7784d6a8 <col:37> '_Complex float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fbc7784d680 <col:37> '_Complex float' lvalue Var 0x7fbc7784d060 'cf' '_Complex float'
+    `-BinaryOperator 0x7fbc7784d890 <line:20:3, col:20> 'long long' '='
+      |-MemberExpr 0x7fbc7784d7e0 <col:3, col:10> 'long long' lvalue .ll 0x7fbc7784ca90
+      | `-ArraySubscriptExpr 0x7fbc7784d7b8 <col:3, col:8> 'ucf':'ucf' lvalue
+      |   |-ImplicitCastExpr 0x7fbc7784d788 <col:3> 'ucf *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fbc7784d738 <col:3> 'ucf *' lvalue ParmVar 0x7fbc7784cc98 'out' 'ucf *'
+      |   `-ImplicitCastExpr 0x7fbc7784d7a0 <col:7> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fbc7784d760 <col:7> 'int' lvalue Var 0x7fbc7784cf50 'i' 'int'
+      `-ImplicitCastExpr 0x7fbc7784d878 <col:15, col:20> 'long long' <LValueToRValue>
+        `-MemberExpr 0x7fbc7784d840 <col:15, col:20> 'long long' lvalue .ll 0x7fbc7784ca90
+          `-DeclRefExpr 0x7fbc7784d818 <col:15> 'ucf':'ucf' lvalue Var 0x7fbc7784cfd8 'ucf1' 'ucf':'ucf'

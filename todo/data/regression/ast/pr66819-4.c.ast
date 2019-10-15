@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fc16e82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc16f02bf08 <../Data/C2AST/pr66819-4.c:7:1, col:25> col:8 used bar 'void (*)(int, struct __va_list_tag *)'
+`-FunctionDecl 0x7fc16f02c0c0 <line:9:1, line:12:1> line:9:6 foo 'void (int, struct __va_list_tag *)'
+  |-ParmVarDecl 0x7fc16f02bfc0 <col:10, col:14> col:14 used i 'int'
+  |-ParmVarDecl 0x7fc16f02c030 <col:17, col:25> col:25 used args 'struct __va_list_tag *':'struct __va_list_tag *'
+  `-CompoundStmt 0x7fc16f02c268 <line:10:1, line:12:1>
+    `-CallExpr 0x7fc16f02c200 <line:11:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7fc16f02c1e8 <col:3> 'void (*)(int, struct __va_list_tag *)' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc16f02c170 <col:3> 'void (*)(int, struct __va_list_tag *)' lvalue Var 0x7fc16f02bf08 'bar' 'void (*)(int, struct __va_list_tag *)'
+      |-ImplicitCastExpr 0x7fc16f02c238 <col:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc16f02c198 <col:7> 'int' lvalue ParmVar 0x7fc16f02bfc0 'i' 'int'
+      `-ImplicitCastExpr 0x7fc16f02c250 <col:10> 'struct __va_list_tag *':'struct __va_list_tag *' <LValueToRValue>
+        `-DeclRefExpr 0x7fc16f02c1c0 <col:10> 'struct __va_list_tag *':'struct __va_list_tag *' lvalue ParmVar 0x7fc16f02c030 'args' 'struct __va_list_tag *':'struct __va_list_tag *'

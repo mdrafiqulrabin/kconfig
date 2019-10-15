@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f8d6a81b8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8d6a809ed8 <../Data/C2AST/pr65871-1.c:4:1, line:10:1> line:4:5 foo 'int (unsigned int, unsigned int)'
+| |-ParmVarDecl 0x7f8d6a81c578 <col:10, col:23> col:23 used x 'unsigned int'
+| |-ParmVarDecl 0x7f8d6a809e00 <col:26, col:39> col:39 used y 'unsigned int'
+| `-CompoundStmt 0x7f8d6a80a350 <line:5:1, line:10:1>
+|   |-IfStmt 0x7f8d6a80a2e0 <line:6:3, line:7:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7f8d6a80a240 <line:6:7, col:37> 'unsigned int'
+|   | | |-ImplicitCastExpr 0x7f8d6a80a228 <col:7> 'unsigned int (*)(unsigned int, unsigned int)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7f8d6a80a180 <col:7> '<builtin fn type>' Function 0x7f8d6a80a010 '__builtin_ia32_bextr_u32' 'unsigned int (unsigned int, unsigned int)'
+|   | | |-ImplicitCastExpr 0x7f8d6a80a278 <col:33> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f8d6a80a1a8 <col:33> 'unsigned int' lvalue ParmVar 0x7f8d6a81c578 'x' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7f8d6a80a290 <col:36> 'unsigned int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f8d6a80a1d0 <col:36> 'unsigned int' lvalue ParmVar 0x7f8d6a809e00 'y' 'unsigned int'
+|   | |-ReturnStmt 0x7f8d6a80a2c8 <line:7:5, col:12>
+|   | | `-IntegerLiteral 0x7f8d6a80a2a8 <col:12> 'int' 1
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8d6a80a338 <line:9:3, col:10>
+|     `-IntegerLiteral 0x7f8d6a80a318 <col:10> 'int' 0
+`-FunctionDecl 0x7f8d6a80a010 <line:6:7> col:7 implicit used __builtin_ia32_bextr_u32 'unsigned int (unsigned int, unsigned int)' extern
+  |-ParmVarDecl 0x7f8d6a80a0b0 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  `-ParmVarDecl 0x7f8d6a80a110 <<invalid sloc>> <invalid sloc> 'unsigned int'

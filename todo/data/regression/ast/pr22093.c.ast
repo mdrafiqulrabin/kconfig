@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7f94370072e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f9437007f60 <../Data/C2AST/pr22093.c:4:1, line:9:1> line:4:8 struct shared_ptr_struct definition
+| |-FieldDecl 0x7f943704d458 <line:6:3, col:25> col:17 phase 'unsigned long'
+| | `-IntegerLiteral 0x7f943704d420 <col:25> 'int' 48
+| |-FieldDecl 0x7f943704d4d8 <line:7:3, col:21> col:12 referenced thread 'unsigned int'
+| | `-IntegerLiteral 0x7f943704d4a0 <col:21> 'int' 16
+| `-FieldDecl 0x7f943704d538 <line:8:3, col:9> col:9 addr 'void *'
+|-VarDecl 0x7f943704d5d0 <line:4:1, line:9:3> col:3 used x 'struct shared_ptr_struct':'struct shared_ptr_struct'
+`-FunctionDecl 0x7f943704d750 <line:11:1, line:14:1> line:11:6 foo 'void (void)'
+  `-CompoundStmt 0x7f943704d908 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7f943704d888 <line:13:4, col:15> 'unsigned int' '='
+      |-MemberExpr 0x7f943704d818 <col:4, col:6> 'unsigned int' lvalue bitfield .thread 0x7f943704d4d8
+      | `-DeclRefExpr 0x7f943704d7f0 <col:4> 'struct shared_ptr_struct':'struct shared_ptr_struct' lvalue Var 0x7f943704d5d0 'x' 'struct shared_ptr_struct':'struct shared_ptr_struct'
+      `-ImplicitCastExpr 0x7f943704d870 <col:15> 'unsigned int' <IntegralCast>
+        `-IntegerLiteral 0x7f943704d850 <col:15> 'int' 2

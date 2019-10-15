@@ -1,0 +1,21 @@
+../Data/C2AST/pr34351.c:4:32: error: register 'ebx' unsuitable for global register variables on this target
+register int * volatile x asm ("ebx");  
+                               ^
+1 error generated.
+TranslationUnitDecl 0x7f8f2201a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8f2201ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8f2201ab80 '__int128'
+|-TypedefDecl 0x7f8f2201aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8f2201aba0 'unsigned __int128'
+|-TypedefDecl 0x7f8f2201b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8f2201afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8f2201af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8f2201b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8f2201b200 'char *'
+|   `-BuiltinType 0x7f8f2201a980 'char'
+|-TypedefDecl 0x7f8f2201b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8f2201b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8f2201b320 'struct __va_list_tag'
+|     `-Record 0x7f8f2201b298 '__va_list_tag'
+`-VarDecl 0x7f8f22817218 <../Data/C2AST/pr34351.c:4:1, col:25> col:25 x 'int *volatile' register
+  `-AsmLabelAttr 0x7f8f22817278 <col:32> "ebx"

@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fe48280b8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe483818e00 <../Data/C2AST/pr46567-2.c:4:1, col:11> col:5 used funky 'int ()'
+|-VarDecl 0x7fe483818ef8 <line:5:1, col:5> col:5 used global 'int'
+|-FunctionDecl 0x7fe483818fa8 <line:7:1, line:10:1> line:7:6 used SeqfileGetLine 'void ()'
+| `-CompoundStmt 0x7fe4838190d8 <line:8:1, line:10:1>
+|   `-CallExpr 0x7fe4838190b0 <line:9:3, col:9> 'int'
+|     `-ImplicitCastExpr 0x7fe483819098 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fe483819048 <col:3> 'int ()' Function 0x7fe483818e00 'funky' 'int ()'
+`-FunctionDecl 0x7fe483819110 <line:12:1, line:18:1> line:12:44 readLoop 'void ()'
+  `-CompoundStmt 0x7fe483819328 <line:13:1, line:18:1>
+    |-CallExpr 0x7fe483819220 <line:14:2, col:17> 'void'
+    | `-ImplicitCastExpr 0x7fe483819208 <col:2> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fe4838191b0 <col:2> 'void ()' Function 0x7fe483818fa8 'SeqfileGetLine' 'void ()'
+    `-IfStmt 0x7fe4838192f0 <line:15:2, line:16:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fe483819270 <line:15:6> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fe483819248 <col:6> 'int' lvalue Var 0x7fe483818ef8 'global' 'int'
+      |-CallExpr 0x7fe4838192c8 <line:16:4, col:10> 'int'
+      | `-ImplicitCastExpr 0x7fe4838192b0 <col:4> 'int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fe483819288 <col:4> 'int ()' Function 0x7fe483818e00 'funky' 'int ()'
+      `-<<<NULL>>>

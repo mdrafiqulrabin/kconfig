@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ffd5b024ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd5a015800 <../Data/C2AST/pr70738-1.c:4:1, col:13> col:13 referenced int32x2_t '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7ffd5b0257a0 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7ffd5b024be0 'int'
+`-FunctionDecl 0x7ffd5a015a10 <line:6:1, line:9:1> line:6:11 test 'int32x2_t (int32x2_t, int32x2_t)'
+  |-ParmVarDecl 0x7ffd5a015890 <col:17, col:27> col:27 used a 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7ffd5a015900 <col:30, col:40> col:40 used b 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  `-CompoundStmt 0x7ffd5a015bc0 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7ffd5a015ba8 <line:8:3, col:14>
+      `-BinaryOperator 0x7ffd5a015b80 <col:10, col:14> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7ffd5a015b50 <col:10> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7ffd5a015b00 <col:10> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7ffd5a015890 'a' 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7ffd5a015b68 <col:14> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7ffd5a015b28 <col:14> 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7ffd5a015900 'b' 'int32x2_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'

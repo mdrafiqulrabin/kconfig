@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fa1158192e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa11585aed8 <../Data/C2AST/pr60102.c:5:1, line:11:1> line:6:1 pr60102 'double (double, int)'
+  |-ParmVarDecl 0x7fa115819f78 <col:10, col:17> col:17 used x 'double'
+  |-ParmVarDecl 0x7fa11585ae00 <col:20, col:24> col:24 used m 'int'
+  `-CompoundStmt 0x7fa11585b230 <line:7:1, line:11:1>
+    |-DeclStmt 0x7fa11585b040 <line:8:3, col:11>
+    | `-VarDecl 0x7fa11585afe0 <col:3, col:10> col:10 used y 'double'
+    |-BinaryOperator 0x7fa11585b1b0 <line:9:3, col:20> 'double' '='
+    | |-DeclRefExpr 0x7fa11585b058 <col:3> 'double' lvalue Var 0x7fa11585afe0 'y' 'double'
+    | `-ConditionalOperator 0x7fa11585b180 <col:8, col:20> 'double'
+    |   |-BinaryOperator 0x7fa11585b0e0 <col:8, col:12> 'int' '%'
+    |   | |-ImplicitCastExpr 0x7fa11585b0c8 <col:8> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fa11585b080 <col:8> 'int' lvalue ParmVar 0x7fa11585ae00 'm' 'int'
+    |   | `-IntegerLiteral 0x7fa11585b0a8 <col:12> 'int' 2
+    |   |-ImplicitCastExpr 0x7fa11585b150 <col:16> 'double' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fa11585b108 <col:16> 'double' lvalue ParmVar 0x7fa115819f78 'x' 'double'
+    |   `-ImplicitCastExpr 0x7fa11585b168 <col:20> 'double' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fa11585b130 <col:20> 'int' 1
+    `-ReturnStmt 0x7fa11585b218 <line:10:3, col:10>
+      `-ImplicitCastExpr 0x7fa11585b200 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa11585b1d8 <col:10> 'double' lvalue Var 0x7fa11585afe0 'y' 'double'

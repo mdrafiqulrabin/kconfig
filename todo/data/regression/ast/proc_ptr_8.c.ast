@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f9b62825ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9b63014308 <../Data/C2AST/proc_ptr_8.c:3:1, col:22> col:7 used funpointer 'int (*)(int)'
+|-FunctionDecl 0x7f9b63014450 <line:5:1, line:8:1> line:5:5 used f 'int (int)'
+| |-ParmVarDecl 0x7f9b630143c0 <col:7, col:11> col:11 used t 'int'
+| `-CompoundStmt 0x7f9b63014598 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7f9b63014580 <line:7:3, col:12>
+|     `-BinaryOperator 0x7f9b63014558 <col:10, col:12> 'int' '*'
+|       |-ImplicitCastExpr 0x7f9b63014540 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9b630144f8 <col:10> 'int' lvalue ParmVar 0x7f9b630143c0 't' 'int'
+|       `-IntegerLiteral 0x7f9b63014520 <col:12> 'int' 3
+`-FunctionDecl 0x7f9b630145f8 <line:10:1, line:13:1> line:10:6 init 'void ()'
+  `-CompoundStmt 0x7f9b63014728 <line:11:1, line:13:1>
+    `-BinaryOperator 0x7f9b63014700 <line:12:2, col:13> 'int (*)(int)' '='
+      |-DeclRefExpr 0x7f9b63014698 <col:2> 'int (*)(int)' lvalue Var 0x7f9b63014308 'funpointer' 'int (*)(int)'
+      `-ImplicitCastExpr 0x7f9b630146e8 <col:13> 'int (*)(int)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f9b630146c0 <col:13> 'int (int)' Function 0x7f9b63014450 'f' 'int (int)'

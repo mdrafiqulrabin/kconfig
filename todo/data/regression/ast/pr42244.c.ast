@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f82e60166e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f82e6017378 <../Data/C2AST/pr42244.c:5:1, col:12> col:12 used a 'int' extern
+|-VarDecl 0x7f82e6058258 <col:1, col:15> col:15 used b 'int' extern
+`-FunctionDecl 0x7f82e60583b8 <line:7:1, line:13:1> line:8:1 foo 'double (double)'
+  |-ParmVarDecl 0x7f82e60582e8 <col:6, col:13> col:13 used x 'double'
+  `-CompoundStmt 0x7f82e60586c0 <line:9:1, line:13:1>
+    |-ForStmt 0x7f82e6058630 <line:10:3, line:11:19>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f82e60584e0 <line:10:10, col:14> 'int' '>'
+    | | |-ImplicitCastExpr 0x7f82e60584b0 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f82e6058460 <col:10> 'int' lvalue Var 0x7f82e6017378 'a' 'int'
+    | | `-ImplicitCastExpr 0x7f82e60584c8 <col:14> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f82e6058488 <col:14> 'int' lvalue Var 0x7f82e6058258 'b' 'int'
+    | |-UnaryOperator 0x7f82e6058530 <col:17, col:18> 'int' postfix '--'
+    | | `-DeclRefExpr 0x7f82e6058508 <col:17> 'int' lvalue Var 0x7f82e6017378 'a' 'int'
+    | `-CompoundAssignOperator 0x7f82e60585f8 <line:11:5, col:19> 'double' '*=' ComputeLHSTy='double' ComputeResultTy='double'
+    |   |-DeclRefExpr 0x7f82e6058550 <col:5> 'double' lvalue ParmVar 0x7f82e60582e8 'x' 'double'
+    |   `-CStyleCastExpr 0x7f82e60585d0 <col:10, col:19> 'double' <IntegralToFloating>
+    |     `-ImplicitCastExpr 0x7f82e60585b8 <col:19> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f82e6058578 <col:19> 'int' lvalue Var 0x7f82e6017378 'a' 'int'
+    `-ReturnStmt 0x7f82e60586a8 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7f82e6058690 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7f82e6058668 <col:10> 'double' lvalue ParmVar 0x7f82e60582e8 'x' 'double'

@@ -1,0 +1,87 @@
+TranslationUnitDecl 0x7fd65f82a2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd65f82af60 <../Data/C2AST/pr67410.c:5:1, line:7:1> line:5:1 struct definition
+| `-FieldDecl 0x7fd6608142a0 <<built-in>:93:25, ../Data/C2AST/pr67410.c:6:22> col:19 referenced s 'unsigned short [2]'
+|-VarDecl 0x7fd6608143a8 <line:5:1, line:7:79> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]' cinit
+| `-InitListExpr 0x7fd6608147b8 <col:9, col:79> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]'
+|   |-InitListExpr 0x7fd660814810 <col:11> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1)':'struct (anonymous at ../Data/C2AST/pr67410.c:5:1)'
+|   | `-DesignatedInitUpdateExpr 0x7fd660814860 <col:11> 'unsigned short [2]'
+|   |   |-StringLiteral 0x7fd660814488 <col:11> 'unsigned short [2]' lvalue u"ff"
+|   |   `-InitListExpr 0x7fd660814880 <col:23, col:29> 'unsigned short [2]'
+|   |     |-array filler
+|   |     | `-NoInitExpr 0x7fd660814a18 <<invalid sloc>> 'unsigned short'
+|   |     `-CharacterLiteral 0x7fd6608144f8 <col:29> 'unsigned short' 120
+|   `-InitListExpr 0x7fd6608148f0 <col:41> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1)':'struct (anonymous at ../Data/C2AST/pr67410.c:5:1)'
+|     `-DesignatedInitUpdateExpr 0x7fd660814938 <col:41> 'unsigned short [2]'
+|       |-StringLiteral 0x7fd6608145b0 <col:41> 'unsigned short [2]' lvalue u"\u1234\u4567"
+|       `-InitListExpr 0x7fd660814958 <col:63, col:69> 'unsigned short [2]'
+|         |-array filler
+|         | `-NoInitExpr 0x7fd660814a28 <<invalid sloc>> 'unsigned short'
+|         `-CharacterLiteral 0x7fd660814668 <col:69> 'unsigned short' 35243
+|-FunctionDecl 0x7fd660814aa0 <line:9:1, line:15:1> line:10:1 main 'int ()'
+| `-CompoundStmt 0x7fd660815528 <line:11:1, line:15:1>
+|   |-IfStmt 0x7fd6608154b8 <line:12:3, line:13:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fd6608152e8 <line:12:7, col:88> 'int' '||'
+|   | | |-BinaryOperator 0x7fd660815108 <col:7, col:62> 'int' '||'
+|   | | | |-BinaryOperator 0x7fd660814f38 <col:7, col:41> 'int' '||'
+|   | | | | |-BinaryOperator 0x7fd660814d20 <col:7, col:20> 'int' '!='
+|   | | | | | |-ImplicitCastExpr 0x7fd660814cf0 <col:7, col:15> 'int' <IntegralCast>
+|   | | | | | | `-ImplicitCastExpr 0x7fd660814cd8 <col:7, col:15> 'unsigned short' <LValueToRValue>
+|   | | | | | |   `-ArraySubscriptExpr 0x7fd660814c98 <col:7, col:15> 'unsigned short' lvalue
+|   | | | | | |     |-ImplicitCastExpr 0x7fd660814c80 <col:7, col:12> 'unsigned short *' <ArrayToPointerDecay>
+|   | | | | | |     | `-MemberExpr 0x7fd660814c28 <col:7, col:12> 'unsigned short [2]' lvalue .s 0x7fd6608142a0
+|   | | | | | |     |   `-ArraySubscriptExpr 0x7fd660814c00 <col:7, col:10> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1)':'struct (anonymous at ../Data/C2AST/pr67410.c:5:1)' lvalue
+|   | | | | | |     |     |-ImplicitCastExpr 0x7fd660814be8 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) *' <ArrayToPointerDecay>
+|   | | | | | |     |     | `-DeclRefExpr 0x7fd660814b40 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]' lvalue Var 0x7fd6608143a8 'a' 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]'
+|   | | | | | |     |     `-IntegerLiteral 0x7fd660814b68 <col:9> 'int' 0
+|   | | | | | |     `-IntegerLiteral 0x7fd660814c60 <col:14> 'int' 0
+|   | | | | | `-ImplicitCastExpr 0x7fd660814d08 <col:20> 'int' <IntegralCast>
+|   | | | | |   `-CharacterLiteral 0x7fd660814cc0 <col:20> 'unsigned short' 120
+|   | | | | `-BinaryOperator 0x7fd660814ec8 <col:28, col:41> 'int' '!='
+|   | | | |   |-ImplicitCastExpr 0x7fd660814e98 <col:28, col:36> 'int' <IntegralCast>
+|   | | | |   | `-ImplicitCastExpr 0x7fd660814e80 <col:28, col:36> 'unsigned short' <LValueToRValue>
+|   | | | |   |   `-ArraySubscriptExpr 0x7fd660814e40 <col:28, col:36> 'unsigned short' lvalue
+|   | | | |   |     |-ImplicitCastExpr 0x7fd660814e28 <col:28, col:33> 'unsigned short *' <ArrayToPointerDecay>
+|   | | | |   |     | `-MemberExpr 0x7fd660814dd0 <col:28, col:33> 'unsigned short [2]' lvalue .s 0x7fd6608142a0
+|   | | | |   |     |   `-ArraySubscriptExpr 0x7fd660814da8 <col:28, col:31> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1)':'struct (anonymous at ../Data/C2AST/pr67410.c:5:1)' lvalue
+|   | | | |   |     |     |-ImplicitCastExpr 0x7fd660814d90 <col:28> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) *' <ArrayToPointerDecay>
+|   | | | |   |     |     | `-DeclRefExpr 0x7fd660814d48 <col:28> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]' lvalue Var 0x7fd6608143a8 'a' 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]'
+|   | | | |   |     |     `-IntegerLiteral 0x7fd660814d70 <col:30> 'int' 0
+|   | | | |   |     `-IntegerLiteral 0x7fd660814e08 <col:35> 'int' 1
+|   | | | |   `-ImplicitCastExpr 0x7fd660814eb0 <col:41> 'int' <IntegralCast>
+|   | | | |     `-CharacterLiteral 0x7fd660814e68 <col:41> 'unsigned short' 102
+|   | | | `-BinaryOperator 0x7fd6608150e0 <col:49, col:62> 'int' '!='
+|   | | |   |-ImplicitCastExpr 0x7fd6608150b0 <col:49, col:57> 'int' <IntegralCast>
+|   | | |   | `-ImplicitCastExpr 0x7fd660815098 <col:49, col:57> 'unsigned short' <LValueToRValue>
+|   | | |   |   `-ArraySubscriptExpr 0x7fd660815058 <col:49, col:57> 'unsigned short' lvalue
+|   | | |   |     |-ImplicitCastExpr 0x7fd660815040 <col:49, col:54> 'unsigned short *' <ArrayToPointerDecay>
+|   | | |   |     | `-MemberExpr 0x7fd660814fe8 <col:49, col:54> 'unsigned short [2]' lvalue .s 0x7fd6608142a0
+|   | | |   |     |   `-ArraySubscriptExpr 0x7fd660814fc0 <col:49, col:52> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1)':'struct (anonymous at ../Data/C2AST/pr67410.c:5:1)' lvalue
+|   | | |   |     |     |-ImplicitCastExpr 0x7fd660814fa8 <col:49> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) *' <ArrayToPointerDecay>
+|   | | |   |     |     | `-DeclRefExpr 0x7fd660814f60 <col:49> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]' lvalue Var 0x7fd6608143a8 'a' 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]'
+|   | | |   |     |     `-IntegerLiteral 0x7fd660814f88 <col:51> 'int' 1
+|   | | |   |     `-IntegerLiteral 0x7fd660815020 <col:56> 'int' 0
+|   | | |   `-ImplicitCastExpr 0x7fd6608150c8 <col:62> 'int' <IntegralCast>
+|   | | |     `-CharacterLiteral 0x7fd660815080 <col:62> 'unsigned short' 35243
+|   | | `-BinaryOperator 0x7fd6608152c0 <col:75, col:88> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fd660815290 <col:75, col:83> 'int' <IntegralCast>
+|   | |   | `-ImplicitCastExpr 0x7fd660815278 <col:75, col:83> 'unsigned short' <LValueToRValue>
+|   | |   |   `-ArraySubscriptExpr 0x7fd660815238 <col:75, col:83> 'unsigned short' lvalue
+|   | |   |     |-ImplicitCastExpr 0x7fd660815220 <col:75, col:80> 'unsigned short *' <ArrayToPointerDecay>
+|   | |   |     | `-MemberExpr 0x7fd6608151b8 <col:75, col:80> 'unsigned short [2]' lvalue .s 0x7fd6608142a0
+|   | |   |     |   `-ArraySubscriptExpr 0x7fd660815190 <col:75, col:78> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1)':'struct (anonymous at ../Data/C2AST/pr67410.c:5:1)' lvalue
+|   | |   |     |     |-ImplicitCastExpr 0x7fd660815178 <col:75> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) *' <ArrayToPointerDecay>
+|   | |   |     |     | `-DeclRefExpr 0x7fd660815130 <col:75> 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]' lvalue Var 0x7fd6608143a8 'a' 'struct (anonymous struct at ../Data/C2AST/pr67410.c:5:1) [2]'
+|   | |   |     |     `-IntegerLiteral 0x7fd660815158 <col:77> 'int' 1
+|   | |   |     `-IntegerLiteral 0x7fd660815200 <col:82> 'int' 1
+|   | |   `-ImplicitCastExpr 0x7fd6608152a8 <col:88> 'int' <IntegralCast>
+|   | |     `-CharacterLiteral 0x7fd660815260 <col:88> 'unsigned short' 17767
+|   | |-CallExpr 0x7fd660815490 <line:13:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd660815478 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd660815428 <col:5> '<builtin fn type>' Function 0x7fd660815340 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd660815510 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7fd6608154f0 <col:10> 'int' 0
+`-FunctionDecl 0x7fd660815340 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fd6608153e0 <col:5> Implicit

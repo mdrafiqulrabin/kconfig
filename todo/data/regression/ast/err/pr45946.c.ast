@@ -1,0 +1,56 @@
+../Data/C2AST/pr45946.c:7:6: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+     ^
+../Data/C2AST/pr45946.c:7:19: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                  ^
+../Data/C2AST/pr45946.c:7:32: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                               ^
+../Data/C2AST/pr45946.c:7:45: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                                            ^
+../Data/C2AST/pr45946.c:7:58: error: GNU decimal type extension not supported
+bar (_Decimal128, _Decimal128, _Decimal128, _Decimal128, _Decimal128,
+                                                         ^
+../Data/C2AST/pr45946.c:8:6: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+     ^
+../Data/C2AST/pr45946.c:8:19: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+                  ^
+../Data/C2AST/pr45946.c:8:32: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+                               ^
+../Data/C2AST/pr45946.c:8:45: error: GNU decimal type extension not supported
+     _Decimal128, _Decimal128, _Decimal128, _Decimal128);
+                                            ^
+9 errors generated.
+TranslationUnitDecl 0x7fea3c8096e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fea3c809c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fea3c809980 '__int128'
+|-TypedefDecl 0x7fea3c809cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fea3c8099a0 'unsigned __int128'
+|-TypedefDecl 0x7fea3c809fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fea3c809db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fea3c809d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fea3c80a040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fea3c80a000 'char *'
+|   `-BuiltinType 0x7fea3c809780 'char'
+|-TypedefDecl 0x7fea3c80a308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fea3c80a2b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fea3c80a120 'struct __va_list_tag'
+|     `-Record 0x7fea3c80a098 '__va_list_tag'
+|-FunctionDecl 0x7fea3c010690 <../Data/C2AST/pr45946.c:5:1, line:8:56> line:7:1 invalid bar 'void (int, int, int, int, int, int, int, int, int)'
+| |-ParmVarDecl 0x7fea3c80a378 <col:6, <invalid sloc>> col:17 invalid 'int'
+| |-ParmVarDecl 0x7fea3c010200 <col:19, <invalid sloc>> col:30 invalid 'int'
+| |-ParmVarDecl 0x7fea3c010278 <col:32, <invalid sloc>> col:43 invalid 'int'
+| |-ParmVarDecl 0x7fea3c0102f0 <col:45, <invalid sloc>> col:56 invalid 'int'
+| |-ParmVarDecl 0x7fea3c010368 <col:58, <invalid sloc>> col:69 invalid 'int'
+| |-ParmVarDecl 0x7fea3c0103e0 <line:8:6, <invalid sloc>> col:17 invalid 'int'
+| |-ParmVarDecl 0x7fea3c010458 <col:19, <invalid sloc>> col:30 invalid 'int'
+| |-ParmVarDecl 0x7fea3c0104d0 <col:32, <invalid sloc>> col:43 invalid 'int'
+| |-ParmVarDecl 0x7fea3c010548 <col:45, <invalid sloc>> col:56 invalid 'int'
+| `-NoInlineAttr 0x7fea3c010778 <line:6:16>
+`-FunctionDecl 0x7fea3c010880 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+  `-CompoundStmt 0x7fea3c010a80 <line:12:1, line:14:1>

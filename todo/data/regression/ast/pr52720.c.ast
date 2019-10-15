@@ -1,0 +1,111 @@
+TranslationUnitDecl 0x7fc2e68182e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc2e6818f60 <../Data/C2AST/pr52720.c:4:1, line:7:1> line:4:8 struct alu_bank_swizzle definition
+| |-FieldDecl 0x7fc2e7032d10 <line:5:5, col:20> col:9 referenced hw_gpr 'int [3][4]'
+| `-FieldDecl 0x7fc2e7032da0 <line:6:5, col:24> col:9 referenced hw_cfile_addr 'int [4]'
+|-FunctionDecl 0x7fc2e7032fa0 <line:8:1, col:45> col:6 used check_vector 'void (struct alu_bank_swizzle *)'
+| `-ParmVarDecl 0x7fc2e7032ea0 <col:20, col:44> col:45 'struct alu_bank_swizzle *'
+|-FunctionDecl 0x7fc2e7033138 <line:9:1, line:17:1> line:9:13 used init_bank_swizzle 'void (struct alu_bank_swizzle *)' static
+| |-ParmVarDecl 0x7fc2e70330b0 <col:31, col:56> col:56 used bs 'struct alu_bank_swizzle *'
+| `-CompoundStmt 0x7fc2e7033b80 <line:10:1, line:17:1>
+|   |-DeclStmt 0x7fc2e7033368 <line:11:3, col:26>
+|   | |-VarDecl 0x7fc2e70331f8 <col:3, col:7> col:7 used i 'int'
+|   | |-VarDecl 0x7fc2e7033270 <col:3, col:10> col:10 used cycle 'int'
+|   | `-VarDecl 0x7fc2e70332e8 <col:3, col:17> col:17 used component 'int'
+|   |-ForStmt 0x7fc2e7033870 <line:12:3, line:14:39>
+|   | |-BinaryOperator 0x7fc2e70333c8 <line:12:8, col:16> 'int' '='
+|   | | |-DeclRefExpr 0x7fc2e7033380 <col:8> 'int' lvalue Var 0x7fc2e7033270 'cycle' 'int'
+|   | | `-IntegerLiteral 0x7fc2e70333a8 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc2e7033450 <col:19, col:27> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc2e7033438 <col:19> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc2e70333f0 <col:19> 'int' lvalue Var 0x7fc2e7033270 'cycle' 'int'
+|   | | `-IntegerLiteral 0x7fc2e7033418 <col:27> 'int' 3
+|   | |-UnaryOperator 0x7fc2e70334a0 <col:30, col:35> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc2e7033478 <col:30> 'int' lvalue Var 0x7fc2e7033270 'cycle' 'int'
+|   | `-ForStmt 0x7fc2e7033838 <line:13:5, line:14:39>
+|   |   |-BinaryOperator 0x7fc2e7033508 <line:13:10, col:22> 'int' '='
+|   |   | |-DeclRefExpr 0x7fc2e70334c0 <col:10> 'int' lvalue Var 0x7fc2e70332e8 'component' 'int'
+|   |   | `-IntegerLiteral 0x7fc2e70334e8 <col:22> 'int' 0
+|   |   |-<<<NULL>>>
+|   |   |-BinaryOperator 0x7fc2e7033590 <col:25, col:37> 'int' '<'
+|   |   | |-ImplicitCastExpr 0x7fc2e7033578 <col:25> 'int' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7fc2e7033530 <col:25> 'int' lvalue Var 0x7fc2e70332e8 'component' 'int'
+|   |   | `-IntegerLiteral 0x7fc2e7033558 <col:37> 'int' 4
+|   |   |-UnaryOperator 0x7fc2e70335e0 <col:40, col:49> 'int' postfix '++'
+|   |   | `-DeclRefExpr 0x7fc2e70335b8 <col:40> 'int' lvalue Var 0x7fc2e70332e8 'component' 'int'
+|   |   `-BinaryOperator 0x7fc2e7033810 <line:14:7, col:39> 'int' '='
+|   |     |-ArraySubscriptExpr 0x7fc2e70337a8 <col:7, col:34> 'int' lvalue
+|   |     | |-ImplicitCastExpr 0x7fc2e7033778 <col:7, col:23> 'int *' <ArrayToPointerDecay>
+|   |     | | `-ArraySubscriptExpr 0x7fc2e70336f8 <col:7, col:23> 'int [4]' lvalue
+|   |     | |   |-ImplicitCastExpr 0x7fc2e70336c8 <col:7, col:11> 'int (*)[4]' <ArrayToPointerDecay>
+|   |     | |   | `-MemberExpr 0x7fc2e7033640 <col:7, col:11> 'int [3][4]' lvalue ->hw_gpr 0x7fc2e7032d10
+|   |     | |   |   `-ImplicitCastExpr 0x7fc2e7033628 <col:7> 'struct alu_bank_swizzle *' <LValueToRValue>
+|   |     | |   |     `-DeclRefExpr 0x7fc2e7033600 <col:7> 'struct alu_bank_swizzle *' lvalue ParmVar 0x7fc2e70330b0 'bs' 'struct alu_bank_swizzle *'
+|   |     | |   `-ImplicitCastExpr 0x7fc2e70336e0 <col:18> 'int' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x7fc2e7033678 <col:18> 'int' lvalue Var 0x7fc2e7033270 'cycle' 'int'
+|   |     | `-ImplicitCastExpr 0x7fc2e7033790 <col:25> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc2e7033720 <col:25> 'int' lvalue Var 0x7fc2e70332e8 'component' 'int'
+|   |     `-UnaryOperator 0x7fc2e70337f0 <col:38, col:39> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7fc2e70337d0 <col:39> 'int' 1
+|   `-ForStmt 0x7fc2e7033b48 <line:15:3, line:16:29>
+|     |-BinaryOperator 0x7fc2e70338f0 <line:15:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fc2e70338a8 <col:8> 'int' lvalue Var 0x7fc2e70331f8 'i' 'int'
+|     | `-IntegerLiteral 0x7fc2e70338d0 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fc2e7033978 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fc2e7033960 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fc2e7033918 <col:15> 'int' lvalue Var 0x7fc2e70331f8 'i' 'int'
+|     | `-IntegerLiteral 0x7fc2e7033940 <col:19> 'int' 4
+|     |-UnaryOperator 0x7fc2e70339c8 <col:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fc2e70339a0 <col:22> 'int' lvalue Var 0x7fc2e70331f8 'i' 'int'
+|     `-BinaryOperator 0x7fc2e7033b20 <line:16:5, col:29> 'int' '='
+|       |-ArraySubscriptExpr 0x7fc2e7033ab8 <col:5, col:24> 'int' lvalue
+|       | |-ImplicitCastExpr 0x7fc2e7033a88 <col:5, col:9> 'int *' <ArrayToPointerDecay>
+|       | | `-MemberExpr 0x7fc2e7033a28 <col:5, col:9> 'int [4]' lvalue ->hw_cfile_addr 0x7fc2e7032da0
+|       | |   `-ImplicitCastExpr 0x7fc2e7033a10 <col:5> 'struct alu_bank_swizzle *' <LValueToRValue>
+|       | |     `-DeclRefExpr 0x7fc2e70339e8 <col:5> 'struct alu_bank_swizzle *' lvalue ParmVar 0x7fc2e70330b0 'bs' 'struct alu_bank_swizzle *'
+|       | `-ImplicitCastExpr 0x7fc2e7033aa0 <col:23> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fc2e7033a60 <col:23> 'int' lvalue Var 0x7fc2e70331f8 'i' 'int'
+|       `-UnaryOperator 0x7fc2e7033b00 <col:28, col:29> 'int' prefix '-'
+|         `-IntegerLiteral 0x7fc2e7033ae0 <col:29> 'int' 1
+`-FunctionDecl 0x7fc2e7033d58 <line:18:1, line:28:1> line:18:5 check_and_set_bank_swizzle 'int (int, int *)'
+  |-ParmVarDecl 0x7fc2e7033c00 <col:32, col:36> col:36 used max_slots 'int'
+  |-ParmVarDecl 0x7fc2e7033c78 <col:47, col:52> col:52 used slots 'int *'
+  `-CompoundStmt 0x7fc2e70343a8 <line:19:1, line:28:1>
+    |-DeclStmt 0x7fc2e7033e88 <line:20:3, col:29>
+    | `-VarDecl 0x7fc2e7033e28 <col:3, col:27> col:27 used bs 'struct alu_bank_swizzle':'struct alu_bank_swizzle'
+    |-DeclStmt 0x7fc2e7033f18 <line:21:3, col:8>
+    | `-VarDecl 0x7fc2e7033eb8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fc2e7034370 <line:22:3, line:27:5>
+      |-BinaryOperator 0x7fc2e7033f78 <line:22:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fc2e7033f30 <col:8> 'int' lvalue Var 0x7fc2e7033eb8 'i' 'int'
+      | `-IntegerLiteral 0x7fc2e7033f58 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc2e7034020 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fc2e7033ff0 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc2e7033fa0 <col:15> 'int' lvalue Var 0x7fc2e7033eb8 'i' 'int'
+      | `-ImplicitCastExpr 0x7fc2e7034008 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc2e7033fc8 <col:19> 'int' lvalue ParmVar 0x7fc2e7033c00 'max_slots' 'int'
+      |-UnaryOperator 0x7fc2e7034070 <col:30, col:31> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fc2e7034048 <col:30> 'int' lvalue Var 0x7fc2e7033eb8 'i' 'int'
+      `-CompoundStmt 0x7fc2e7034350 <line:23:5, line:27:5>
+        |-CallExpr 0x7fc2e7034170 <line:24:7, col:28> 'void'
+        | |-ImplicitCastExpr 0x7fc2e7034158 <col:7> 'void (*)(struct alu_bank_swizzle *)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fc2e7034090 <col:7> 'void (struct alu_bank_swizzle *)' Function 0x7fc2e7033138 'init_bank_swizzle' 'void (struct alu_bank_swizzle *)'
+        | `-UnaryOperator 0x7fc2e70340e0 <col:25, col:26> 'struct alu_bank_swizzle *' prefix '&'
+        |   `-DeclRefExpr 0x7fc2e70340b8 <col:26> 'struct alu_bank_swizzle':'struct alu_bank_swizzle' lvalue Var 0x7fc2e7033e28 'bs' 'struct alu_bank_swizzle':'struct alu_bank_swizzle'
+        `-IfStmt 0x7fc2e7034318 <line:25:7, line:26:18>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fc2e7034248 <line:25:11, col:18> 'int' <LValueToRValue>
+          | `-ArraySubscriptExpr 0x7fc2e7034220 <col:11, col:18> 'int' lvalue
+          |   |-ImplicitCastExpr 0x7fc2e70341f0 <col:11> 'int *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fc2e70341a0 <col:11> 'int *' lvalue ParmVar 0x7fc2e7033c78 'slots' 'int *'
+          |   `-ImplicitCastExpr 0x7fc2e7034208 <col:17> 'int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fc2e70341c8 <col:17> 'int' lvalue Var 0x7fc2e7033eb8 'i' 'int'
+          |-CallExpr 0x7fc2e70342e8 <line:26:2, col:18> 'void'
+          | |-ImplicitCastExpr 0x7fc2e70342d0 <col:2> 'void (*)(struct alu_bank_swizzle *)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7fc2e7034260 <col:2> 'void (struct alu_bank_swizzle *)' Function 0x7fc2e7032fa0 'check_vector' 'void (struct alu_bank_swizzle *)'
+          | `-UnaryOperator 0x7fc2e70342b0 <col:15, col:16> 'struct alu_bank_swizzle *' prefix '&'
+          |   `-DeclRefExpr 0x7fc2e7034288 <col:16> 'struct alu_bank_swizzle':'struct alu_bank_swizzle' lvalue Var 0x7fc2e7033e28 'bs' 'struct alu_bank_swizzle':'struct alu_bank_swizzle'
+          `-<<<NULL>>>

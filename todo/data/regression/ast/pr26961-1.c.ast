@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fe3340174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe3348194d8 <../Data/C2AST/pr26961-1.c:4:1, line:7:1> line:4:11 foo 'long long (int, int)'
+  |-ParmVarDecl 0x7fe334018178 <col:15, col:19> col:19 used i 'int'
+  |-ParmVarDecl 0x7fe334819400 <col:22, col:26> col:26 used j 'int'
+  `-CompoundStmt 0x7fe334819778 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7fe334819760 <line:6:3, col:32>
+      `-ConditionalOperator 0x7fe334819730 <col:10, col:32> 'long long'
+        |-ImplicitCastExpr 0x7fe334819700 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fe3348195c8 <col:10> 'int' lvalue ParmVar 0x7fe334018178 'i' 'int'
+        |-CStyleCastExpr 0x7fe3348196b8 <col:14, col:28> 'long long' <IntegralCast>
+        | `-ParenExpr 0x7fe334819698 <col:25, col:28> 'int'
+        |   `-UnaryOperator 0x7fe334819630 <col:26, col:27> 'int' prefix '!'
+        |     `-ImplicitCastExpr 0x7fe334819618 <col:27> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7fe3348195f0 <col:27> 'int' lvalue ParmVar 0x7fe334819400 'j' 'int'
+        `-ImplicitCastExpr 0x7fe334819718 <col:32> 'long long' <IntegralCast>
+          `-IntegerLiteral 0x7fe3348196e0 <col:32> 'int' 0

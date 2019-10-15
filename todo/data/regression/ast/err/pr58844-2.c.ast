@@ -1,0 +1,32 @@
+../Data/C2AST/pr58844-2.c:6:5: error: pasting formed 'x##', an invalid preprocessing token
+int A = 1;
+    ^
+../Data/C2AST/pr58844-2.c:5:12: note: expanded from macro 'A'
+#define A x######x
+           ^
+../Data/C2AST/pr58844-2.c:6:5: error: pasting formed '##x', an invalid preprocessing token
+../Data/C2AST/pr58844-2.c:5:16: note: expanded from macro 'A'
+#define A x######x
+               ^
+../Data/C2AST/pr58844-2.c:6:5: error: expected ';' after top level declarator
+../Data/C2AST/pr58844-2.c:5:14: note: expanded from macro 'A'
+#define A x######x
+             ^
+../Data/C2AST/pr58844-2.c:5:14: note: expanded from macro '##'
+3 errors generated.
+TranslationUnitDecl 0x7fb6e002bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6e002c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6e002bf80 '__int128'
+|-TypedefDecl 0x7fb6e002c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6e002bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb6e002c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6e002c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6e002c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6e002c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6e002c600 'char *'
+|   `-BuiltinType 0x7fb6e002bd80 'char'
+|-TypedefDecl 0x7fb6e002c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6e002c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6e002c720 'struct __va_list_tag'
+|     `-Record 0x7fb6e002c698 '__va_list_tag'
+`-VarDecl 0x7fb6e002c978 <../Data/C2AST/pr58844-2.c:6:1, line:5:11> col:11 x 'int'

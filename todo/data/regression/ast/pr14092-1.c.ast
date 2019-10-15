@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa6d28268e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa6d2827578 <../Data/C2AST/pr14092-1.c:5:15, col:39> col:39 referenced intptr_t 'long'
+| `-BuiltinType 0x7fa6d2826a00 'long'
+|-RecordDecl 0x7fa6d2868400 <line:7:9, line:10:1> line:7:16 struct _PLCI definition
+| |-FieldDecl 0x7fa6d28684c8 <line:8:3, col:17> col:17 referenced x 'unsigned char'
+| `-FieldDecl 0x7fa6d2868590 <line:9:3, col:22> col:17 referenced buf 'unsigned char [1]'
+|-TypedefDecl 0x7fa6d2868630 <line:7:1, line:10:3> col:3 referenced PLCI 'struct _PLCI':'struct _PLCI'
+| `-ElaboratedType 0x7fa6d28685e0 'struct _PLCI' sugar
+|   `-RecordType 0x7fa6d2868490 'struct _PLCI'
+|     `-Record 0x7fa6d2868400 '_PLCI'
+`-FunctionDecl 0x7fa6d2868830 <line:12:1, line:15:1> line:12:6 nl_ind 'void (PLCI *)'
+  |-ParmVarDecl 0x7fa6d2868728 <col:13, col:20> col:20 used plci 'PLCI *'
+  `-CompoundStmt 0x7fa6d2868bd8 <line:13:1, line:15:1>
+    `-BinaryOperator 0x7fa6d2868bb0 <line:14:3, col:40> 'unsigned char' '='
+      |-MemberExpr 0x7fa6d2868958 <col:3, col:9> 'unsigned char' lvalue ->x 0x7fa6d28684c8
+      | `-ImplicitCastExpr 0x7fa6d2868940 <col:3> 'PLCI *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fa6d2868918 <col:3> 'PLCI *' lvalue ParmVar 0x7fa6d2868728 'plci' 'PLCI *'
+      `-ImplicitCastExpr 0x7fa6d2868b98 <col:13, col:40> 'unsigned char' <IntegralCast>
+        `-BinaryOperator 0x7fa6d2868b70 <col:13, col:40> 'long' '&'
+          |-UnaryOperator 0x7fa6d2868b18 <col:13, col:36> 'intptr_t':'long' prefix '-'
+          | `-ParenExpr 0x7fa6d2868af8 <col:14, col:36> 'intptr_t':'long'
+          |   `-CStyleCastExpr 0x7fa6d2868ad0 <col:15, col:35> 'intptr_t':'long' <PointerToIntegral>
+          |     `-ImplicitCastExpr 0x7fa6d2868ab8 <col:25, col:35> 'unsigned char *' <ArrayToPointerDecay>
+          |       `-ParenExpr 0x7fa6d2868a68 <col:25, col:35> 'unsigned char [1]' lvalue
+          |         `-MemberExpr 0x7fa6d28689f0 <col:26, col:32> 'unsigned char [1]' lvalue ->buf 0x7fa6d2868590
+          |           `-ImplicitCastExpr 0x7fa6d28689d8 <col:26> 'PLCI *' <LValueToRValue>
+          |             `-DeclRefExpr 0x7fa6d28689b0 <col:26> 'PLCI *' lvalue ParmVar 0x7fa6d2868728 'plci' 'PLCI *'
+          `-ImplicitCastExpr 0x7fa6d2868b58 <col:40> 'long' <IntegralCast>
+            `-IntegerLiteral 0x7fa6d2868b38 <col:40> 'int' 3

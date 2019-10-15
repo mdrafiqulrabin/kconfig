@@ -1,0 +1,88 @@
+TranslationUnitDecl 0x7fa4b582b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa4b582bf78 <../Data/C2AST/pr65803.c:2:1, col:23> col:23 referenced __uint8_t 'unsigned char'
+| `-BuiltinType 0x7fa4b582b440 'unsigned char'
+|-TypedefDecl 0x7fa4b5014c00 <line:3:1, col:19> col:19 referenced uint8_t '__uint8_t':'unsigned char'
+| `-TypedefType 0x7fa4b582bfd0 '__uint8_t' sugar
+|   |-Typedef 0x7fa4b582bf78 '__uint8_t'
+|   `-BuiltinType 0x7fa4b582b440 'unsigned char'
+|-TypedefDecl 0x7fa4b5014c90 <line:4:1, col:17> col:17 referenced u8_t 'uint8_t':'unsigned char'
+| `-TypedefType 0x7fa4b5014c60 'uint8_t' sugar
+|   |-Typedef 0x7fa4b5014c00 'uint8_t'
+|   `-TypedefType 0x7fa4b582bfd0 '__uint8_t' sugar
+|     |-Typedef 0x7fa4b582bf78 '__uint8_t'
+|     `-BuiltinType 0x7fa4b582b440 'unsigned char'
+|-RecordDecl 0x7fa4b5014ce8 <line:5:9, col:16> col:16 struct ip_addr
+|-TypedefDecl 0x7fa4b5014de0 <col:1, col:24> col:24 referenced ip_addr_t 'struct ip_addr':'struct ip_addr'
+| `-ElaboratedType 0x7fa4b5014d90 'struct ip_addr' sugar
+|   `-RecordType 0x7fa4b5014d70 'struct ip_addr'
+|     `-Record 0x7fa4b5014ce8 'ip_addr'
+`-FunctionDecl 0x7fa4b5015108 <line:6:1, line:25:1> line:7:1 ipaddr_ntoa_r 'char *(const ip_addr_t *, char *, int)'
+  |-ParmVarDecl 0x7fa4b5014ed8 <col:16, col:34> col:34 addr 'const ip_addr_t *'
+  |-ParmVarDecl 0x7fa4b5014f50 <col:40, col:46> col:46 buf 'char *'
+  |-ParmVarDecl 0x7fa4b5014fc8 <col:51, col:55> col:55 used buflen 'int'
+  `-CompoundStmt 0x7fa4b502c680 <line:8:1, line:25:1>
+    |-DeclStmt 0x7fa4b50152d8 <line:9:3, col:14>
+    | `-VarDecl 0x7fa4b5015278 <col:3, col:13> col:8 used inv 'char [3]'
+    |-DeclStmt 0x7fa4b5015368 <line:10:3, col:11>
+    | `-VarDecl 0x7fa4b5015308 <col:3, col:9> col:9 used rp 'char *'
+    |-DeclStmt 0x7fa4b5015468 <line:11:3, col:11>
+    | `-VarDecl 0x7fa4b5015408 <col:3, col:9> col:9 used ap 'u8_t *'
+    |-DeclStmt 0x7fa4b50154f0 <line:12:3, col:9>
+    | `-VarDecl 0x7fa4b5015490 <col:3, col:8> col:8 used n 'u8_t':'unsigned char'
+    |-DeclStmt 0x7fa4b5015578 <line:13:3, col:9>
+    | `-VarDecl 0x7fa4b5015518 <col:3, col:8> col:8 used i 'u8_t':'unsigned char'
+    |-DeclStmt 0x7fa4b5015628 <line:14:3, col:14>
+    | `-VarDecl 0x7fa4b50155a8 <col:3, col:13> col:7 used len 'int' cinit
+    |   `-IntegerLiteral 0x7fa4b5015608 <col:13> 'int' 0
+    `-ForStmt 0x7fa4b502c648 <line:15:3, line:24:5>
+      |-BinaryOperator 0x7fa4b50156a0 <line:15:8, col:12> 'u8_t':'unsigned char' '='
+      | |-DeclRefExpr 0x7fa4b5015640 <col:8> 'u8_t':'unsigned char' lvalue Var 0x7fa4b5015490 'n' 'u8_t':'unsigned char'
+      | `-ImplicitCastExpr 0x7fa4b5015688 <col:12> 'u8_t':'unsigned char' <IntegralCast>
+      |   `-IntegerLiteral 0x7fa4b5015668 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa4b5015740 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa4b5015728 <col:15> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fa4b5015710 <col:15> 'u8_t':'unsigned char' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa4b50156c8 <col:15> 'u8_t':'unsigned char' lvalue Var 0x7fa4b5015490 'n' 'u8_t':'unsigned char'
+      | `-IntegerLiteral 0x7fa4b50156f0 <col:19> 'int' 4
+      |-UnaryOperator 0x7fa4b5015790 <col:22, col:23> 'u8_t':'unsigned char' postfix '++'
+      | `-DeclRefExpr 0x7fa4b5015768 <col:22> 'u8_t':'unsigned char' lvalue Var 0x7fa4b5015490 'n' 'u8_t':'unsigned char'
+      `-CompoundStmt 0x7fa4b502c620 <line:16:5, line:24:5>
+        |-WhileStmt 0x7fa4b5015838 <line:17:7, col:18>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fa4b5015810 <col:14, col:15> 'u8_t':'unsigned char' <LValueToRValue>
+        | | `-UnaryOperator 0x7fa4b50157f0 <col:14, col:15> 'u8_t':'unsigned char' lvalue prefix '*'
+        | |   `-ImplicitCastExpr 0x7fa4b50157d8 <col:15> 'u8_t *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fa4b50157b0 <col:15> 'u8_t *' lvalue Var 0x7fa4b5015408 'ap' 'u8_t *'
+        | `-NullStmt 0x7fa4b5015828 <col:18>
+        |-WhileStmt 0x7fa4b5015ba8 <line:18:7, line:23:2>
+        | |-<<<NULL>>>
+        | |-UnaryOperator 0x7fa4b5015880 <line:18:14, col:15> 'u8_t':'unsigned char' postfix '--'
+        | | `-DeclRefExpr 0x7fa4b5015858 <col:14> 'u8_t':'unsigned char' lvalue Var 0x7fa4b5015518 'i' 'u8_t':'unsigned char'
+        | `-CompoundStmt 0x7fa4b5015b88 <line:19:2, line:23:2>
+        |   |-IfStmt 0x7fa4b5015a00 <line:20:4, line:21:24>
+        |   | |-<<<NULL>>>
+        |   | |-<<<NULL>>>
+        |   | |-BinaryOperator 0x7fa4b5015928 <line:20:8, col:17> 'int' '>='
+        |   | | |-UnaryOperator 0x7fa4b50158c8 <col:8, col:11> 'int' postfix '++'
+        |   | | | `-DeclRefExpr 0x7fa4b50158a0 <col:8> 'int' lvalue Var 0x7fa4b50155a8 'len' 'int'
+        |   | | `-ImplicitCastExpr 0x7fa4b5015910 <col:17> 'int' <LValueToRValue>
+        |   | |   `-DeclRefExpr 0x7fa4b50158e8 <col:17> 'int' lvalue ParmVar 0x7fa4b5014fc8 'buflen' 'int'
+        |   | |-ReturnStmt 0x7fa4b50159e8 <line:21:6, col:24>
+        |   | | `-ImplicitCastExpr 0x7fa4b50159d0 <col:13, col:24> 'char *' <NullToPointer>
+        |   | |   `-ParenExpr 0x7fa4b50159b0 <col:13, col:24> 'void *'
+        |   | |     `-CStyleCastExpr 0x7fa4b5015988 <col:14, col:23> 'void *' <NullToPointer>
+        |   | |       `-IntegerLiteral 0x7fa4b5015950 <col:23> 'int' 0
+        |   | `-<<<NULL>>>
+        |   `-BinaryOperator 0x7fa4b5015b60 <line:22:4, col:17> 'char' '='
+        |     |-UnaryOperator 0x7fa4b5015a80 <col:4, col:7> 'char' lvalue prefix '*'
+        |     | `-UnaryOperator 0x7fa4b5015a60 <col:5, col:7> 'char *' postfix '++'
+        |     |   `-DeclRefExpr 0x7fa4b5015a38 <col:5> 'char *' lvalue Var 0x7fa4b5015308 'rp' 'char *'
+        |     `-ImplicitCastExpr 0x7fa4b5015b48 <col:12, col:17> 'char' <LValueToRValue>
+        |       `-ArraySubscriptExpr 0x7fa4b5015b20 <col:12, col:17> 'char' lvalue
+        |         |-ImplicitCastExpr 0x7fa4b5015af0 <col:12> 'char *' <ArrayToPointerDecay>
+        |         | `-DeclRefExpr 0x7fa4b5015aa0 <col:12> 'char [3]' lvalue Var 0x7fa4b5015278 'inv' 'char [3]'
+        |         `-ImplicitCastExpr 0x7fa4b5015b08 <col:16> 'u8_t':'unsigned char' <LValueToRValue>
+        |           `-DeclRefExpr 0x7fa4b5015ac8 <col:16> 'u8_t':'unsigned char' lvalue Var 0x7fa4b5015518 'i' 'u8_t':'unsigned char'
+        `-UnaryOperator 0x7fa4b502c600 <line:23:4, col:6> 'u8_t *' postfix '++'
+          `-DeclRefExpr 0x7fa4b5015bc8 <col:4> 'u8_t *' lvalue Var 0x7fa4b5015408 'ap' 'u8_t *'

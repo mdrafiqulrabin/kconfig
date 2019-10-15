@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fcf1e02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcf1e02c960 <../Data/C2AST/pr16566-3.c:3:1, col:8> col:8 struct S
+|-RecordDecl 0x7fcf1e839420 <line:4:1, line:7:1> line:4:8 struct C definition
+| |-FieldDecl 0x7fcf1e8394e8 <line:5:5, col:9> col:9 i 'int'
+| `-FieldDecl 0x7fcf1e839650 <line:6:5, col:19> col:15 referenced tab 'struct S *[]'
+|-RecordDecl 0x7fcf1e839698 prev 0x7fcf1e02c960 <line:8:1, col:24> col:8 struct S definition
+| `-FieldDecl 0x7fcf1e839770 <col:12, col:21> col:21 referenced c 'struct C':'struct C'
+`-FunctionDecl 0x7fcf1e839930 <line:9:1, line:11:1> line:9:6 foo 'void (struct S *)'
+  |-ParmVarDecl 0x7fcf1e839830 <col:11, col:21> col:21 used x 'struct S *'
+  `-CompoundStmt 0x7fcf1e839c98 <col:24, line:11:1>
+    `-BinaryOperator 0x7fcf1e839c70 <line:10:3, col:28> 'struct S *' '='
+      |-ArraySubscriptExpr 0x7fcf1e839c10 <col:3, col:24> 'struct S *' lvalue
+      | |-ImplicitCastExpr 0x7fcf1e839bf8 <col:3, col:19> 'struct S **' <ArrayToPointerDecay>
+      | | `-MemberExpr 0x7fcf1e839b48 <col:3, col:19> 'struct S *[]' .tab 0x7fcf1e839650
+      | |   `-ParenExpr 0x7fcf1e839b28 <col:3, col:17> 'struct C':'struct C'
+      | |     `-BinaryOperator 0x7fcf1e839b00 <col:4, col:16> 'struct C':'struct C' ','
+      | |       |-CStyleCastExpr 0x7fcf1e839a48 <col:4, col:10> 'void' <ToVoid>
+      | |       | `-IntegerLiteral 0x7fcf1e839a18 <col:10> 'int' 1
+      | |       `-ImplicitCastExpr 0x7fcf1e839ae8 <col:13, col:16> 'struct C':'struct C' <LValueToRValue>
+      | |         `-MemberExpr 0x7fcf1e839ab0 <col:13, col:16> 'struct C':'struct C' lvalue ->c 0x7fcf1e839770
+      | |           `-ImplicitCastExpr 0x7fcf1e839a98 <col:13> 'struct S *' <LValueToRValue>
+      | |             `-DeclRefExpr 0x7fcf1e839a70 <col:13> 'struct S *' lvalue ParmVar 0x7fcf1e839830 'x' 'struct S *'
+      | `-IntegerLiteral 0x7fcf1e839b80 <col:23> 'int' 0
+      `-ImplicitCastExpr 0x7fcf1e839c58 <col:28> 'struct S *' <NullToPointer>
+        `-IntegerLiteral 0x7fcf1e839c38 <col:28> 'int' 0

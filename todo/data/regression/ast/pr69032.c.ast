@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fe18681aee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe185008460 <../Data/C2AST/pr69032.c:4:1, line:11:1> line:4:6 foo 'void (long long)'
+  |-ParmVarDecl 0x7fe18681bb78 <col:11, col:21> col:21 used i 'long long'
+  `-CompoundStmt 0x7fe185008738 <line:5:1, line:11:1>
+    `-WhileStmt 0x7fe185008718 <line:6:4, line:10:6>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe1850085e0 <line:6:11, col:17> 'int' '!='
+      | |-ImplicitCastExpr 0x7fe1850085b0 <col:11> 'long long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe185008548 <col:11> 'long long' lvalue ParmVar 0x7fe18681bb78 'i' 'long long'
+      | `-ImplicitCastExpr 0x7fe1850085c8 <col:16, col:17> 'long long' <IntegralCast>
+      |   `-UnaryOperator 0x7fe185008590 <col:16, col:17> 'int' prefix '-'
+      |     `-IntegerLiteral 0x7fe185008570 <col:17> 'int' 1
+      `-CompoundStmt 0x7fe1850086f8 <line:7:6, line:10:6>
+        |-UnaryOperator 0x7fe185008630 <line:8:2, col:4> 'long long' prefix '++'
+        | `-DeclRefExpr 0x7fe185008608 <col:4> 'long long' lvalue ParmVar 0x7fe18681bb78 'i' 'long long'
+        `-GCCAsmStmt 0x7fe1850086b0 <line:9:3, col:14>

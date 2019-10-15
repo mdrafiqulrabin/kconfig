@@ -1,0 +1,35 @@
+../Data/C2AST/pr30552-3.c:10:10: error: expected ';' at end of declaration
+  int g()
+         ^
+         ;
+../Data/C2AST/pr30552-3.c:11:19: error: expected ';' at end of declaration
+    int a[( {int b} )];  
+                  ^
+                  ;
+../Data/C2AST/pr30552-3.c:11:11: error: size of array has non-integer type 'void'
+    int a[( {int b} )];  
+          ^~~~~~~~~~~
+3 errors generated.
+TranslationUnitDecl 0x7fdb8802bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdb8802c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdb8802bf80 '__int128'
+|-TypedefDecl 0x7fdb8802c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdb8802bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fdb8802c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdb8802c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdb8802c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdb8802c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdb8802c600 'char *'
+|   `-BuiltinType 0x7fdb8802bd80 'char'
+|-TypedefDecl 0x7fdb8802c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdb8802c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdb8802c720 'struct __va_list_tag'
+|     `-Record 0x7fdb8802c698 '__va_list_tag'
+`-FunctionDecl 0x7fdb8806d800 <../Data/C2AST/pr30552-3.c:8:1, line:13:1> line:8:5 main 'int ()'
+  `-CompoundStmt 0x7fdb8806df18 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fdb8806d9b8 <line:10:3, line:11:5>
+    | `-FunctionDecl 0x7fdb8806d908 parent 0x7fdb8802bce8 <line:10:3, col:9> col:7 g 'int ()'
+    |-DeclStmt 0x7fdb8806dec8 <line:11:5, col:23>
+    | `-VarDecl 0x7fdb8806de68 <col:5, col:9> col:9 invalid a 'int'
+    `-ReturnStmt 0x7fdb8806df00 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fdb8806dee0 <col:10> 'int' 0

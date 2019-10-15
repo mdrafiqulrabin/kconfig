@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fc32080a8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fc32080b578 <../Data/C2AST/pr69039.c:4:1, col:14> col:14 used b 'unsigned int'
+`-FunctionDecl 0x7fc32084db28 <line:6:1, line:15:1> line:7:1 fn1 'unsigned int (unsigned int)'
+  |-ParmVarDecl 0x7fc32084da58 <col:6, col:19> col:19 used d 'unsigned int'
+  `-CompoundStmt 0x7fc32084ded0 <line:8:1, line:15:1>
+    |-DeclStmt 0x7fc32084dc48 <line:9:3, col:8>
+    | `-VarDecl 0x7fc32084dbe8 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fc32084de40 <line:11:3, line:12:10>
+    | |-BinaryOperator 0x7fc32084dca8 <line:11:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fc32084dc60 <col:8> 'int' lvalue Var 0x7fc32084dbe8 'i' 'int'
+    | | `-IntegerLiteral 0x7fc32084dc88 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc32084dd30 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fc32084dd18 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc32084dcd0 <col:15> 'int' lvalue Var 0x7fc32084dbe8 'i' 'int'
+    | | `-IntegerLiteral 0x7fc32084dcf8 <col:19> 'int' 1000
+    | |-UnaryOperator 0x7fc32084dd80 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fc32084dd58 <col:25> 'int' lvalue Var 0x7fc32084dbe8 'i' 'int'
+    | `-CompoundAssignOperator 0x7fc32084de08 <line:12:5, col:10> 'unsigned int' '|=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    |   |-DeclRefExpr 0x7fc32084dda0 <col:5> 'unsigned int' lvalue Var 0x7fc32080b578 'b' 'unsigned int'
+    |   `-ImplicitCastExpr 0x7fc32084ddf0 <col:10> 'unsigned int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc32084ddc8 <col:10> 'unsigned int' lvalue ParmVar 0x7fc32084da58 'd' 'unsigned int'
+    `-ReturnStmt 0x7fc32084deb8 <line:14:3, col:10>
+      `-ImplicitCastExpr 0x7fc32084dea0 <col:10> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fc32084de78 <col:10> 'unsigned int' lvalue Var 0x7fc32080b578 'b' 'unsigned int'

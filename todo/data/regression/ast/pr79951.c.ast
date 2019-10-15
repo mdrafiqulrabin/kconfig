@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f9ee902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9ee98142d8 <../Data/C2AST/pr79951.c:6:1, line:9:1> line:6:7 testf 'float (float, float)'
+| |-ParmVarDecl 0x7f9ee902c978 <col:14, col:20> col:20 used x 'float'
+| |-ParmVarDecl 0x7f9ee9814200 <col:23, col:29> col:29 used y 'float'
+| `-CompoundStmt 0x7f9ee98146d0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f9ee98146b8 <line:8:3, col:35>
+|     `-CallExpr 0x7f9ee9814650 <col:10, col:35> 'float'
+|       |-ImplicitCastExpr 0x7f9ee9814638 <col:10> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f9ee9814590 <col:10> '<builtin fn type>' Function 0x7f9ee98143c8 '__builtin_copysignf' 'float (float, float)'
+|       |-ImplicitCastExpr 0x7f9ee9814688 <col:31> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f9ee98145b8 <col:31> 'float' lvalue ParmVar 0x7f9ee902c978 'x' 'float'
+|       `-ImplicitCastExpr 0x7f9ee98146a0 <col:34> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9ee98145e0 <col:34> 'float' lvalue ParmVar 0x7f9ee9814200 'y' 'float'
+`-FunctionDecl 0x7f9ee98143c8 <col:10> col:10 implicit used __builtin_copysignf 'float (float, float)' extern
+  |-ParmVarDecl 0x7f9ee9814468 <<invalid sloc>> <invalid sloc> 'float'
+  |-ParmVarDecl 0x7f9ee98144c8 <<invalid sloc>> <invalid sloc> 'float'
+  |-NoThrowAttr 0x7f9ee9814538 <col:10> Implicit
+  `-ConstAttr 0x7f9ee9814580 <col:10> Implicit

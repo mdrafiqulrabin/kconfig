@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fa57102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa57106e820 <../Data/C2AST/pr63874.c:5:1, col:52> col:35 used foo_weakref 'void (void)' extern
+| `-WeakAttr 0x7fa57106e8c0 <col:28>
+|-FunctionDecl 0x7fa57106e9d8 <line:6:1, line:9:1> line:6:38 used bar 'void (void)'
+| |-CompoundStmt 0x7fa57106eae8 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7fa57106ead0 <line:8:2>
+| |-NoInlineAttr 0x7fa57106ea78 <line:6:27>
+| `-WeakAttr 0x7fa57106eac0 <col:21>
+|-VarDecl 0x7fa57106ec28 <line:10:1, col:16> col:8 used f 'void (*)(void)'
+|-VarDecl 0x7fa57106ed28 <line:11:1, col:16> col:8 used g 'void (*)(void)'
+`-FunctionDecl 0x7fa57106ee58 <line:13:1, line:19:1> line:14:1 main 'int (void)'
+  `-CompoundStmt 0x7fa57106f090 <line:15:1, line:19:1>
+    |-BinaryOperator 0x7fa57106ef98 <line:16:2, col:7> 'void (*)(void)' '='
+    | |-DeclRefExpr 0x7fa57106ef28 <col:2> 'void (*)(void)' lvalue Var 0x7fa57106ec28 'f' 'void (*)(void)'
+    | `-UnaryOperator 0x7fa57106ef78 <col:6, col:7> 'void (*)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7fa57106ef50 <col:7> 'void (void)' Function 0x7fa57106e820 'foo_weakref' 'void (void)'
+    |-BinaryOperator 0x7fa57106f030 <line:17:2, col:7> 'void (*)(void)' '='
+    | |-DeclRefExpr 0x7fa57106efc0 <col:2> 'void (*)(void)' lvalue Var 0x7fa57106ed28 'g' 'void (*)(void)'
+    | `-UnaryOperator 0x7fa57106f010 <col:6, col:7> 'void (*)(void)' prefix '&'
+    |   `-DeclRefExpr 0x7fa57106efe8 <col:7> 'void (void)' Function 0x7fa57106e9d8 'bar' 'void (void)'
+    `-ReturnStmt 0x7fa57106f078 <line:18:2, col:9>
+      `-IntegerLiteral 0x7fa57106f058 <col:9> 'int' 0

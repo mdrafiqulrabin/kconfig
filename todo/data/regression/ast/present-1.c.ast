@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7fdd8502b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fdd86000060 <../Data/C2AST/present-1.c:3:1, line:8:1> line:4:1 f 'void (char *)'
+  |-ParmVarDecl 0x7fdd8502bf78 <col:4, col:10> col:10 cp 'char *'
+  `-CompoundStmt 0x7fdd86000158 <line:5:1, line:8:1>
+    `-NullStmt 0x7fdd86000148 <line:7:3>

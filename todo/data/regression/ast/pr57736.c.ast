@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fd21e82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd220149c98 <../Data/C2AST/pr57736.c:7:1, line:11:1> line:8:1 f1 'unsigned long long (void)'
+| `-CompoundStmt 0x7fd220149e58 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fd220149e40 <line:10:3, col:19>
+|     `-CallExpr 0x7fd220149e18 <col:10, col:19> 'unsigned long long'
+|       `-ImplicitCastExpr 0x7fd220149e00 <col:10> 'unsigned long long (*)(void)' <BuiltinFnToFnPtr>
+|         `-DeclRefExpr 0x7fd220149dd8 <col:10> '<builtin fn type>' Function 0x7fd220149d38 '__rdtsc' 'unsigned long long (void)'
+|-FunctionDecl 0x7fd220149d38 <col:10> col:10 implicit used __rdtsc 'unsigned long long (void)' extern
+|-FunctionDecl 0x7fd220149f18 <line:13:1, line:17:1> line:14:1 f2 'unsigned long long (unsigned int *)'
+| |-ParmVarDecl 0x7fd220149e88 <col:5, col:19> col:19 used x 'unsigned int *'
+| `-CompoundStmt 0x7fd22014a088 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fd22014a070 <line:16:3, col:21>
+|     `-CallExpr 0x7fd22014a028 <col:10, col:21> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7fd22014a010 <col:10> 'unsigned long long (*)(unsigned int *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd220149fc0 <col:10> 'unsigned long long (unsigned int *)' Function 0x7fd21f02e428 '__rdtscp' 'unsigned long long (unsigned int *)'
+|       `-ImplicitCastExpr 0x7fd22014a058 <col:20> 'unsigned int *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd220149fe8 <col:20> 'unsigned int *' lvalue ParmVar 0x7fd220149e88 'x' 'unsigned int *'
+|-FunctionDecl 0x7fd22014a188 <line:19:1, line:23:1> line:20:1 f3 'unsigned long long (unsigned int)'
+| |-ParmVarDecl 0x7fd22014a0b8 <col:5, col:18> col:18 used x 'unsigned int'
+| `-CompoundStmt 0x7fd22014a310 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7fd22014a2f8 <line:22:3, col:20>
+|     `-CallExpr 0x7fd22014a298 <col:10, col:20> 'unsigned long long'
+|       |-ImplicitCastExpr 0x7fd22014a280 <col:10> 'unsigned long long (*)(int)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd22014a230 <col:10> 'unsigned long long (int)' Function 0x7fd21f02e008 '__rdpmc' 'unsigned long long (int)'
+|       `-ImplicitCastExpr 0x7fd22014a2e0 <col:19> 'int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fd22014a2c8 <col:19> 'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd22014a258 <col:19> 'unsigned int' lvalue ParmVar 0x7fd22014a0b8 'x' 'unsigned int'
+|-FunctionDecl 0x7fd22014a3b8 <line:25:1, line:29:1> line:26:1 f4 'void (void)'
+| `-CompoundStmt 0x7fd22014a4c0 <line:27:1, line:29:1>
+|   `-CallExpr 0x7fd22014a498 <line:28:3, col:12> 'unsigned long long'
+|     `-ImplicitCastExpr 0x7fd22014a480 <col:3> 'unsigned long long (*)(void)' <BuiltinFnToFnPtr>
+|       `-DeclRefExpr 0x7fd22014a458 <col:3> '<builtin fn type>' Function 0x7fd220149d38 '__rdtsc' 'unsigned long long (void)'
+|-FunctionDecl 0x7fd22014a5b0 <line:31:1, line:35:1> line:32:1 f5 'void (unsigned int *)'
+| |-ParmVarDecl 0x7fd22014a4f0 <col:5, col:19> col:19 used x 'unsigned int *'
+| `-CompoundStmt 0x7fd22014a708 <line:33:1, line:35:1>
+|   `-CallExpr 0x7fd22014a6c0 <line:34:3, col:14> 'unsigned long long'
+|     |-ImplicitCastExpr 0x7fd22014a6a8 <col:3> 'unsigned long long (*)(unsigned int *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fd22014a658 <col:3> 'unsigned long long (unsigned int *)' Function 0x7fd21f02e428 '__rdtscp' 'unsigned long long (unsigned int *)'
+|     `-ImplicitCastExpr 0x7fd22014a6f0 <col:13> 'unsigned int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd22014a680 <col:13> 'unsigned int *' lvalue ParmVar 0x7fd22014a4f0 'x' 'unsigned int *'
+`-FunctionDecl 0x7fd22014a7c0 <line:37:1, line:41:1> line:38:1 f6 'void (unsigned int)'
+  |-ParmVarDecl 0x7fd22014a738 <col:5, col:18> col:18 used x 'unsigned int'
+  `-CompoundStmt 0x7fd22014a930 <line:39:1, line:41:1>
+    `-CallExpr 0x7fd22014a8d0 <line:40:3, col:13> 'unsigned long long'
+      |-ImplicitCastExpr 0x7fd22014a8b8 <col:3> 'unsigned long long (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd22014a868 <col:3> 'unsigned long long (int)' Function 0x7fd21f02e008 '__rdpmc' 'unsigned long long (int)'
+      `-ImplicitCastExpr 0x7fd22014a918 <col:12> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x7fd22014a900 <col:12> 'unsigned int' <LValueToRValue>
+          `-DeclRefExpr 0x7fd22014a890 <col:12> 'unsigned int' lvalue ParmVar 0x7fd22014a738 'x' 'unsigned int'

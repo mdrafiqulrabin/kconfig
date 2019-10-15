@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7ff59b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff59c0152c8 <../Data/C2AST/pr47315.c:4:1, line:5:22> col:7 used bar 'float (float)'
+| |-ParmVarDecl 0x7ff59c015200 <col:12, col:18> col:18 f 'float'
+| |-CompoundStmt 0x7ff59c015408 <col:21, col:22>
+| `-TargetAttr 0x7ff59c015370 <line:4:17, col:34> "avx"
+`-FunctionDecl 0x7ff59c0154f0 <line:7:1, line:10:1> line:7:6 foo 'void (float)'
+  |-ParmVarDecl 0x7ff59c015430 <col:11, col:17> col:17 used f 'float'
+  `-CompoundStmt 0x7ff59c015678 <line:8:1, line:10:1>
+    `-CallExpr 0x7ff59c015630 <line:9:5, col:11> 'float'
+      |-ImplicitCastExpr 0x7ff59c015618 <col:5> 'float (*)(float)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff59c015598 <col:5> 'float (float)' Function 0x7ff59c0152c8 'bar' 'float (float)'
+      `-ImplicitCastExpr 0x7ff59c015660 <col:10> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7ff59c0155c0 <col:10> 'float' lvalue ParmVar 0x7ff59c015430 'f' 'float'

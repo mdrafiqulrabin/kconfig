@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7f8f5d82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8f5e014220 <../Data/C2AST/pr60580_1.c:4:1, line:8:1> line:5:1 used func_leaf 'void (void)'
+| `-CompoundStmt 0x7f8f5e0143b0 <line:6:1, line:8:1>
+|   `-DeclStmt 0x7f8f5e014398 <line:7:3, col:12>
+|     `-VarDecl 0x7f8f5e014318 <col:3, col:11> col:7 a 'int' cinit
+|       `-IntegerLiteral 0x7f8f5e014378 <col:11> 'int' 0
+|-FunctionDecl 0x7f8f5e014458 <line:10:1, line:15:1> line:11:1 used func_no_leaf 'void (void)'
+| `-CompoundStmt 0x7f8f5e014638 <line:12:1, line:15:1>
+|   |-DeclStmt 0x7f8f5e014590 <line:13:3, col:12>
+|   | `-VarDecl 0x7f8f5e014510 <col:3, col:11> col:7 a 'int' cinit
+|   |   `-IntegerLiteral 0x7f8f5e014570 <col:11> 'int' 0
+|   `-CallExpr 0x7f8f5e014610 <line:14:3, col:14> 'void'
+|     `-ImplicitCastExpr 0x7f8f5e0145f8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8f5e0145a8 <col:3> 'void (void)' Function 0x7f8f5e014220 'func_leaf' 'void (void)'
+|-FunctionDecl 0x7f8f5e0146e8 <line:17:1, line:22:1> line:18:1 func1 'void (void)'
+| `-CompoundStmt 0x7f8f5e0148a0 <line:19:1, line:22:1>
+|   |-DeclStmt 0x7f8f5e014820 <line:20:3, col:12>
+|   | `-VarDecl 0x7f8f5e0147a0 <col:3, col:11> col:7 a 'int' cinit
+|   |   `-IntegerLiteral 0x7f8f5e014800 <col:11> 'int' 0
+|   `-CallExpr 0x7f8f5e014878 <line:21:3, col:17> 'void'
+|     `-ImplicitCastExpr 0x7f8f5e014860 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8f5e014838 <col:3> 'void (void)' Function 0x7f8f5e014458 'func_no_leaf' 'void (void)'
+|-FunctionDecl 0x7f8f5e0149c8 <line:25:1, line:31:1> line:27:1 func2 'void (void)'
+| `-CompoundStmt 0x7f8f5e014b80 <line:28:1, line:31:1>
+|   |-DeclStmt 0x7f8f5e014b00 <line:29:3, col:12>
+|   | `-VarDecl 0x7f8f5e014a80 <col:3, col:11> col:7 a 'int' cinit
+|   |   `-IntegerLiteral 0x7f8f5e014ae0 <col:11> 'int' 0
+|   `-CallExpr 0x7f8f5e014b58 <line:30:3, col:17> 'void'
+|     `-ImplicitCastExpr 0x7f8f5e014b40 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f8f5e014b18 <col:3> 'void (void)' Function 0x7f8f5e014458 'func_no_leaf' 'void (void)'
+`-FunctionDecl 0x7f8f5e014c30 <line:33:1, line:38:1> line:34:1 func3 'void (void)'
+  `-CompoundStmt 0x7f8f5e014de8 <line:35:1, line:38:1>
+    |-DeclStmt 0x7f8f5e014d68 <line:36:3, col:12>
+    | `-VarDecl 0x7f8f5e014ce8 <col:3, col:11> col:7 a 'int' cinit
+    |   `-IntegerLiteral 0x7f8f5e014d48 <col:11> 'int' 0
+    `-CallExpr 0x7f8f5e014dc0 <line:37:3, col:17> 'void'
+      `-ImplicitCastExpr 0x7f8f5e014da8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f8f5e014d80 <col:3> 'void (void)' Function 0x7f8f5e014458 'func_no_leaf' 'void (void)'

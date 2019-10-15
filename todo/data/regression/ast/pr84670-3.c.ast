@@ -1,0 +1,95 @@
+TranslationUnitDecl 0x7fe20e02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe20e02c978 <../Data/C2AST/pr84670-3.c:4:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x7fe20e02be40 'unsigned char'
+|-TypedefDecl 0x7fe20e06d800 <line:5:1, col:24> col:24 referenced u16 'unsigned short'
+| `-BuiltinType 0x7fe20e02be60 'unsigned short'
+|-TypedefDecl 0x7fe20e06d870 <line:6:1, col:22> col:22 referenced u32 'unsigned int'
+| `-BuiltinType 0x7fe20e02be80 'unsigned int'
+|-TypedefDecl 0x7fe20e06d900 <line:7:1, col:13> col:13 referenced acpi_rs_length 'u16':'unsigned short'
+| `-TypedefType 0x7fe20e06d8d0 'u16' sugar
+|   |-Typedef 0x7fe20e06d800 'u16'
+|   `-BuiltinType 0x7fe20e02be60 'unsigned short'
+|-TypedefDecl 0x7fe20e06d990 <line:8:1, col:13> col:13 referenced acpi_rsdesc_size 'u32':'unsigned int'
+| `-TypedefType 0x7fe20e06d960 'u32' sugar
+|   |-Typedef 0x7fe20e06d870 'u32'
+|   `-BuiltinType 0x7fe20e02be80 'unsigned int'
+|-RecordDecl 0x7fe20e06d9e8 <line:9:1, line:13:1> line:9:8 struct acpi_resource_source definition
+| |-FieldDecl 0x7fe20e06daa0 <line:11:3, col:7> col:7 referenced string_length 'u16':'unsigned short'
+| `-FieldDecl 0x7fe20e06db00 <line:12:3, col:9> col:9 referenced string_ptr 'char *'
+|-FunctionDecl 0x7fe20e06dcf0 <line:14:1, line:22:1> line:15:1 used acpi_rs_strcpy 'u16 (char *, char *)' static
+| |-ParmVarDecl 0x7fe20e06db60 <col:17, col:23> col:23 destination 'char *'
+| |-ParmVarDecl 0x7fe20e06dbd8 <col:36, col:42> col:42 used source 'char *'
+| `-CompoundStmt 0x7fe20e06e1a0 <line:16:1, line:22:1>
+|   |-DeclStmt 0x7fe20e06de50 <line:17:3, col:8>
+|   | `-VarDecl 0x7fe20e06ddf0 <col:3, col:7> col:7 used i 'u16':'unsigned short'
+|   |-ForStmt 0x7fe20e06e008 <line:18:3, line:20:5>
+|   | |-BinaryOperator 0x7fe20e06dec8 <line:18:8, col:12> 'u16':'unsigned short' '='
+|   | | |-DeclRefExpr 0x7fe20e06de68 <col:8> 'u16':'unsigned short' lvalue Var 0x7fe20e06ddf0 'i' 'u16':'unsigned short'
+|   | | `-ImplicitCastExpr 0x7fe20e06deb0 <col:12> 'u16':'unsigned short' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fe20e06de90 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fe20e06df98 <col:15, col:23> 'char' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7fe20e06df70 <col:15, col:23> 'char' lvalue
+|   | |   |-ImplicitCastExpr 0x7fe20e06df40 <col:15> 'char *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fe20e06def0 <col:15> 'char *' lvalue ParmVar 0x7fe20e06dbd8 'source' 'char *'
+|   | |   `-ImplicitCastExpr 0x7fe20e06df58 <col:22> 'u16':'unsigned short' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fe20e06df18 <col:22> 'u16':'unsigned short' lvalue Var 0x7fe20e06ddf0 'i' 'u16':'unsigned short'
+|   | |-UnaryOperator 0x7fe20e06dfd8 <col:26, col:27> 'u16':'unsigned short' postfix '++'
+|   | | `-DeclRefExpr 0x7fe20e06dfb0 <col:26> 'u16':'unsigned short' lvalue Var 0x7fe20e06ddf0 'i' 'u16':'unsigned short'
+|   | `-CompoundStmt 0x7fe20e06dff8 <line:19:5, line:20:5>
+|   `-ReturnStmt 0x7fe20e06e188 <line:21:3, col:24>
+|     `-ParenExpr 0x7fe20e06e168 <col:10, col:24> 'u16':'unsigned short'
+|       `-CStyleCastExpr 0x7fe20e06e140 <col:11, col:23> 'u16':'unsigned short' <IntegralCast>
+|         `-ParenExpr 0x7fe20e06e120 <col:17, col:23> 'int'
+|           `-BinaryOperator 0x7fe20e06e0b8 <col:18, col:22> 'int' '+'
+|             |-ImplicitCastExpr 0x7fe20e06e0a0 <col:18> 'int' <IntegralCast>
+|             | `-ImplicitCastExpr 0x7fe20e06e088 <col:18> 'u16':'unsigned short' <LValueToRValue>
+|             |   `-DeclRefExpr 0x7fe20e06e040 <col:18> 'u16':'unsigned short' lvalue Var 0x7fe20e06ddf0 'i' 'u16':'unsigned short'
+|             `-IntegerLiteral 0x7fe20e06e068 <col:22> 'int' 1
+|-RecordDecl 0x7fe20e06e1c8 <line:23:1, col:7> col:7 union aml_resource
+`-FunctionDecl 0x7fe20e06e710 <line:24:1, line:38:1> line:25:1 acpi_rs_get_resource_source 'acpi_rs_length (acpi_rs_length, acpi_rs_length, struct acpi_resource_source *, union aml_resource *, char *)'
+  |-ParmVarDecl 0x7fe20e06e2a0 <col:30, col:45> col:45 resource_length 'acpi_rs_length':'unsigned short'
+  |-ParmVarDecl 0x7fe20e06e310 <line:26:9, col:24> col:24 used minimum_length 'acpi_rs_length':'unsigned short'
+  |-ParmVarDecl 0x7fe20e06e420 <line:27:9, col:39> col:39 used resource_source 'struct acpi_resource_source *'
+  |-ParmVarDecl 0x7fe20e06e530 <line:28:9, col:30> col:30 aml 'union aml_resource *'
+  |-ParmVarDecl 0x7fe20e06e5a8 <col:35, col:41> col:41 string_ptr 'char *'
+  `-CompoundStmt 0x7fe20e085908 <line:29:1, line:38:1>
+    |-DeclStmt 0x7fe20e085270 <line:30:3, col:32>
+    | `-VarDecl 0x7fe20e085210 <col:3, col:20> col:20 used total_length 'acpi_rsdesc_size':'unsigned int'
+    |-DeclStmt 0x7fe20e085378 <line:31:3, col:26>
+    | `-VarDecl 0x7fe20e085318 <col:3, col:7> col:7 used aml_resource_source 'u8 *'
+    `-IfStmt 0x7fe20e0858d0 <line:32:3, line:37:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe20e0854f8 <line:32:7, col:60> 'int' '>'
+      | |-ImplicitCastExpr 0x7fe20e0854e0 <col:7> 'acpi_rsdesc_size':'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe20e085390 <col:7> 'acpi_rsdesc_size':'unsigned int' lvalue Var 0x7fe20e085210 'total_length' 'acpi_rsdesc_size':'unsigned int'
+      | `-CStyleCastExpr 0x7fe20e0854b8 <col:22, col:60> 'acpi_rsdesc_size':'unsigned int' <IntegralCast>
+      |   `-ParenExpr 0x7fe20e085498 <col:41, col:60> 'int'
+      |     `-BinaryOperator 0x7fe20e085430 <col:42, col:59> 'int' '+'
+      |       |-ImplicitCastExpr 0x7fe20e085418 <col:42> 'int' <IntegralCast>
+      |       | `-ImplicitCastExpr 0x7fe20e085400 <col:42> 'acpi_rs_length':'unsigned short' <LValueToRValue>
+      |       |   `-DeclRefExpr 0x7fe20e0853b8 <col:42> 'acpi_rs_length':'unsigned short' lvalue ParmVar 0x7fe20e06e310 'minimum_length' 'acpi_rs_length':'unsigned short'
+      |       `-IntegerLiteral 0x7fe20e0853e0 <col:59> 'int' 1
+      |-CompoundStmt 0x7fe20e0858b8 <line:33:5, line:37:5>
+      | `-BinaryOperator 0x7fe20e085890 <line:34:7, line:36:49> 'u16':'unsigned short' '='
+      |   |-MemberExpr 0x7fe20e085560 <line:34:7, col:24> 'u16':'unsigned short' lvalue ->string_length 0x7fe20e06daa0
+      |   | `-ImplicitCastExpr 0x7fe20e085548 <col:7> 'struct acpi_resource_source *' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fe20e085520 <col:7> 'struct acpi_resource_source *' lvalue ParmVar 0x7fe20e06e420 'resource_source' 'struct acpi_resource_source *'
+      |   `-CallExpr 0x7fe20e085840 <line:35:2, line:36:49> 'u16':'unsigned short'
+      |     |-ImplicitCastExpr 0x7fe20e085828 <line:35:2> 'u16 (*)(char *, char *)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7fe20e085598 <col:2> 'u16 (char *, char *)' Function 0x7fe20e06dcf0 'acpi_rs_strcpy' 'u16 (char *, char *)'
+      |     |-ImplicitCastExpr 0x7fe20e085878 <col:18, col:35> 'char *' <LValueToRValue>
+      |     | `-MemberExpr 0x7fe20e085600 <col:18, col:35> 'char *' lvalue ->string_ptr 0x7fe20e06db00
+      |     |   `-ImplicitCastExpr 0x7fe20e0855e8 <col:18> 'struct acpi_resource_source *' <LValueToRValue>
+      |     |     `-DeclRefExpr 0x7fe20e0855c0 <col:18> 'struct acpi_resource_source *' lvalue ParmVar 0x7fe20e06e420 'resource_source' 'struct acpi_resource_source *'
+      |     `-ParenExpr 0x7fe20e0857b0 <line:36:4, col:48> 'char *'
+      |       `-CStyleCastExpr 0x7fe20e085788 <col:5, col:47> 'char *' <BitCast>
+      |         `-CStyleCastExpr 0x7fe20e085748 <col:14, col:47> 'void *' <BitCast>
+      |           `-ParenExpr 0x7fe20e085728 <col:23, col:47> 'u8 *'
+      |             `-UnaryOperator 0x7fe20e0856c0 <col:24, col:46> 'u8 *' prefix '&'
+      |               `-ArraySubscriptExpr 0x7fe20e085698 <col:25, col:46> 'u8':'unsigned char' lvalue
+      |                 |-ImplicitCastExpr 0x7fe20e085680 <col:25> 'u8 *' <LValueToRValue>
+      |                 | `-DeclRefExpr 0x7fe20e085638 <col:25> 'u8 *' lvalue Var 0x7fe20e085318 'aml_resource_source' 'u8 *'
+      |                 `-IntegerLiteral 0x7fe20e085660 <col:45> 'int' 1
+      `-<<<NULL>>>

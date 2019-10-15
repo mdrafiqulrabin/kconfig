@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7faab6012ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7faab5016200 <../Data/C2AST/pr43636.c:3:1, col:15> col:13 used a 'char []' extern
+|-VarDecl 0x7faab50162f0 <col:1, col:21> col:19 used b 'char *[]' extern
+|-FunctionDecl 0x7faab50164d8 <line:5:1, line:10:1> line:6:1 foo 'char *(char *, int)'
+| |-ParmVarDecl 0x7faab5016380 <col:6, col:12> col:12 used x 'char *'
+| |-ParmVarDecl 0x7faab50163f8 <col:15, col:19> col:19 used y 'int'
+| `-CompoundStmt 0x7faab5016ac0 <line:7:1, line:10:1>
+|   |-BinaryOperator 0x7faab5016a40 <line:8:3, col:35> 'char *' '='
+|   | |-DeclRefExpr 0x7faab5016588 <col:3> 'char *' lvalue ParmVar 0x7faab5016380 'x' 'char *'
+|   | `-CallExpr 0x7faab50169c0 <col:7, col:35> 'char *'
+|   |   |-ImplicitCastExpr 0x7faab50169a8 <col:7> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7faab50167a8 <col:7> '<builtin fn type>' Function 0x7faab50165f0 '__builtin_stpcpy' 'char *(char *, const char *)'
+|   |   |-ImplicitCastExpr 0x7faab50169f8 <col:25> 'char *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7faab50167d0 <col:25> 'char *' lvalue ParmVar 0x7faab5016380 'x' 'char *'
+|   |   `-ImplicitCastExpr 0x7faab5016a28 <col:28, col:34> 'const char *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7faab5016a10 <col:28, col:34> 'char *' <LValueToRValue>
+|   |       `-ArraySubscriptExpr 0x7faab5016928 <col:28, col:34> 'char *' lvalue
+|   |         |-ImplicitCastExpr 0x7faab50168f8 <col:28> 'char **' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x7faab50167f8 <col:28> 'char *[]' lvalue Var 0x7faab50162f0 'b' 'char *[]'
+|   |         `-ImplicitCastExpr 0x7faab5016910 <col:30, col:33> 'char' <LValueToRValue>
+|   |           `-ArraySubscriptExpr 0x7faab50168a0 <col:30, col:33> 'char' lvalue
+|   |             |-ImplicitCastExpr 0x7faab5016870 <col:30> 'char *' <ArrayToPointerDecay>
+|   |             | `-DeclRefExpr 0x7faab5016820 <col:30> 'char []' lvalue Var 0x7faab5016200 'a' 'char []'
+|   |             `-ImplicitCastExpr 0x7faab5016888 <col:32> 'int' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7faab5016848 <col:32> 'int' lvalue ParmVar 0x7faab50163f8 'y' 'int'
+|   `-ReturnStmt 0x7faab5016aa8 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7faab5016a90 <col:10> 'char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7faab5016a68 <col:10> 'char *' lvalue ParmVar 0x7faab5016380 'x' 'char *'
+`-FunctionDecl 0x7faab50165f0 <line:8:7> col:7 implicit used __builtin_stpcpy 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7faab5016690 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7faab50166f0 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7faab5016760 <col:7> Implicit

@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f829302bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7f829302c960 <../Data/C2AST/pr61162.c:5:1, col:12> col:6 e
+| `-EnumConstantDecl 0x7f829306d820 <col:10> col:10 A 'int'
+`-FunctionDecl 0x7f829306d9a0 <line:6:1, line:12:1> line:7:1 fn1 'enum e (void)'
+  `-CompoundStmt 0x7f829306dce0 <line:8:1, line:12:1>
+    |-DeclStmt 0x7f829306dbd0 <line:9:3, col:18>
+    | |-VarDecl 0x7f829306daa0 <col:3, col:10> col:10 used e 'enum e':'enum e'
+    | `-VarDecl 0x7f829306db20 <col:3, col:17> col:13 q 'enum e':'enum e' cinit
+    |   `-ImplicitCastExpr 0x7f829306dba0 <col:17> 'enum e':'enum e' <IntegralCast>
+    |     `-IntegerLiteral 0x7f829306db80 <col:17> 'int' 0
+    |-BinaryOperator 0x7f829306dc48 <line:10:3, col:7> 'enum e':'enum e' '='
+    | |-DeclRefExpr 0x7f829306dbe8 <col:3> 'enum e':'enum e' lvalue Var 0x7f829306daa0 'e' 'enum e':'enum e'
+    | `-ImplicitCastExpr 0x7f829306dc30 <col:7> 'enum e':'enum e' <IntegralCast>
+    |   `-IntegerLiteral 0x7f829306dc10 <col:7> 'int' 0
+    |-IntegerLiteral 0x7f829306dc70 <line:11:3> 'int' 1
+    `-ReturnStmt 0x7f829306dcc8 <col:6, col:13>
+      `-ImplicitCastExpr 0x7f829306dcb0 <col:13> 'enum e':'enum e' <IntegralCast>
+        `-IntegerLiteral 0x7f829306dc90 <col:13> 'int' 0

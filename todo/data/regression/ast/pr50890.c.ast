@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fbd4982b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbd4986ce28 <../Data/C2AST/pr50890.c:3:1, line:6:1> line:3:14 used make_insn_raw 'float (void)' static
+| `-CompoundStmt 0x7fbd4986cf58 <line:4:1, line:6:1>
+|   `-ReturnStmt 0x7fbd4986cf40 <line:5:5, col:12>
+|     `-ImplicitCastExpr 0x7fbd4986cf28 <col:12> 'float' <IntegralToFloating>
+|       `-IntegerLiteral 0x7fbd4986cf08 <col:12> 'int' 0
+|-FunctionDecl 0x7fbd4986d198 <line:8:1, line:11:1> line:8:12 used emit_pattern_after_noloc 'int (int (*)())' static
+| |-ParmVarDecl 0x7fbd4986d090 <col:38, col:54> col:43 used make_raw 'int (*)()':'int (*)()'
+| `-CompoundStmt 0x7fbd4986d2c0 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fbd4986d2a8 <line:10:5, col:22>
+|     `-CallExpr 0x7fbd4986d280 <col:12, col:22> 'int'
+|       `-ImplicitCastExpr 0x7fbd4986d268 <col:12> 'int (*)()':'int (*)()' <LValueToRValue>
+|         `-DeclRefExpr 0x7fbd4986d240 <col:12> 'int (*)()':'int (*)()' lvalue ParmVar 0x7fbd4986d090 'make_raw' 'int (*)()':'int (*)()'
+`-FunctionDecl 0x7fbd4986d3a0 <line:13:1, line:16:1> line:13:6 emit_insn_after_noloc 'void (void)'
+  `-CompoundStmt 0x7fbd4986d5d8 <line:14:1, line:16:1>
+    `-CallExpr 0x7fbd4986d590 <line:15:5, col:53> 'int'
+      |-ImplicitCastExpr 0x7fbd4986d578 <col:5> 'int (*)(int (*)())' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fbd4986d440 <col:5> 'int (int (*)())' Function 0x7fbd4986d198 'emit_pattern_after_noloc' 'int (int (*)())'
+      `-ImplicitCastExpr 0x7fbd4986d5c0 <col:31, col:40> 'int (*)()':'int (*)()' <BitCast>
+        `-CStyleCastExpr 0x7fbd4986d4f0 <col:31, col:40> 'void *' <BitCast>
+          `-ImplicitCastExpr 0x7fbd4986d4d8 <col:40> 'float (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fbd4986d468 <col:40> 'float (void)' Function 0x7fbd4986ce28 'make_insn_raw' 'float (void)'

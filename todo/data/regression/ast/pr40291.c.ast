@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f9f2782bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9f28814b68 <../Data/C2AST/pr40291.c:3:1, line:7:1> line:4:1 foo 'int (void *, char *, unsigned long long)'
+| |-ParmVarDecl 0x7f9f2782c978 <col:6, col:12> col:12 used x 'void *'
+| |-ParmVarDecl 0x7f9f28814a00 <col:15, col:21> col:21 used y 'char *'
+| |-ParmVarDecl 0x7f9f28814a78 <col:24, col:43> col:43 used z 'unsigned long long'
+| `-CompoundStmt 0x7f9f288150c8 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f9f288150b0 <line:6:3, col:25>
+|     `-CallExpr 0x7f9f28814fe0 <col:10, col:25> 'int'
+|       |-ImplicitCastExpr 0x7f9f28814fc8 <col:10> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f9f28814eb0 <col:10> 'int (const void *, const void *, unsigned long)' Function 0x7f9f28814cd8 'memcmp' 'int (const void *, const void *, unsigned long)'
+|       |-ImplicitCastExpr 0x7f9f28815038 <col:18> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7f9f28815020 <col:18> 'void *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f9f28814ed8 <col:18> 'void *' lvalue ParmVar 0x7f9f2782c978 'x' 'void *'
+|       |-ImplicitCastExpr 0x7f9f28815068 <col:21> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7f9f28815050 <col:21> 'char *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f9f28814f00 <col:21> 'char *' lvalue ParmVar 0x7f9f28814a00 'y' 'char *'
+|       `-ImplicitCastExpr 0x7f9f28815098 <col:24> 'unsigned long' <IntegralCast>
+|         `-ImplicitCastExpr 0x7f9f28815080 <col:24> 'unsigned long long' <LValueToRValue>
+|           `-DeclRefExpr 0x7f9f28814f28 <col:24> 'unsigned long long' lvalue ParmVar 0x7f9f28814a78 'z' 'unsigned long long'
+`-FunctionDecl 0x7f9f28814cd8 <col:10> col:10 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f9f28814d78 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f9f28814dd8 <<invalid sloc>> <invalid sloc> 'const void *'
+  `-ParmVarDecl 0x7f9f28814e38 <<invalid sloc>> <invalid sloc> 'unsigned long'

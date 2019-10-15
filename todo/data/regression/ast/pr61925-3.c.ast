@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fdda4025ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdda4815200 <../Data/C2AST/pr61925-3.c:8:1, col:15> col:15 __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7fdda4026980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7fdda4025ee0 'float'
+| `-MayAliasAttr 0x7fdda4815258 <col:60>
+|-FunctionDecl 0x7fdda4815360 <line:10:1, line:13:1> line:11:1 foo 'void (void)'
+| `-CompoundStmt 0x7fdda4815440 <line:12:1, line:13:1>
+|-FunctionDecl 0x7fdda4815548 <line:15:1, line:18:1> line:16:1 bar 'void (void)'
+| |-CompoundStmt 0x7fdda4815640 <line:17:1, line:18:1>
+| `-TargetAttr 0x7fdda48155e8 <line:15:16, col:29> "avx"
+`-FunctionDecl 0x7fdda4815830 <line:23:1, line:27:1> line:24:1 baz '__attribute__((__vector_size__(4 * sizeof(int)))) int (__attribute__((__vector_size__(4 * sizeof(int)))) int, __attribute__((__vector_size__(4 * sizeof(int)))) int)'
+  |-ParmVarDecl 0x7fdda48156c8 <col:6, col:45> col:45 used a '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fdda4815758 <col:48, col:87> col:87 used b '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fdda48159a0 <line:25:1, line:27:1>
+    `-ReturnStmt 0x7fdda4815988 <line:26:3, col:14>
+      `-BinaryOperator 0x7fdda4815960 <col:10, col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '+'
+        |-ImplicitCastExpr 0x7fdda4815930 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fdda48158e0 <col:10> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fdda48156c8 'a' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-ImplicitCastExpr 0x7fdda4815948 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-DeclRefExpr 0x7fdda4815908 <col:14> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fdda4815758 'b' '__attribute__((__vector_size__(4 * sizeof(int)))) int'

@@ -1,0 +1,335 @@
+TranslationUnitDecl 0x7fd3548236e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd355818360 <../Data/C2AST/pr51244-13.c:6:1, col:43> col:6 used printk 'void (const char *, const char *, int)'
+| |-ParmVarDecl 0x7fd354824378 <col:14, col:24> col:25 'const char *'
+| |-ParmVarDecl 0x7fd355818200 <col:27, col:37> col:38 'const char *'
+| `-ParmVarDecl 0x7fd355818278 <col:40> col:43 'int'
+|-FunctionDecl 0x7fd3558185e0 <line:7:1, col:49> col:6 used __constant_set_bit 'void (int, unsigned long *)'
+| |-ParmVarDecl 0x7fd355818470 <col:26> col:29 'int'
+| `-ParmVarDecl 0x7fd355818510 <col:31, col:48> col:49 'unsigned long *'
+|-FunctionDecl 0x7fd3558187b0 <line:8:1, col:40> col:6 used __set_bit 'void (int, unsigned long *)'
+| |-ParmVarDecl 0x7fd3558186a8 <col:17> col:20 'int'
+| `-ParmVarDecl 0x7fd355818720 <col:22, col:39> col:40 'unsigned long *'
+|-FunctionDecl 0x7fd3558189f8 <line:10:1, line:16:1> line:11:1 used __test_bit 'int (unsigned long, volatile void *)' static inline
+| |-ParmVarDecl 0x7fd355818878 <col:13, col:27> col:27 nr 'unsigned long'
+| |-ParmVarDecl 0x7fd355818920 <col:31, col:47> col:47 addr 'volatile void *'
+| `-CompoundStmt 0x7fd355818bd8 <line:12:1, line:16:1>
+|   |-DeclStmt 0x7fd355818b20 <line:14:3, col:13>
+|   | `-VarDecl 0x7fd355818ac0 <col:3, col:7> col:7 used oldbit 'int'
+|   `-ReturnStmt 0x7fd355818bc0 <line:15:3, col:19>
+|     `-BinaryOperator 0x7fd355818b98 <col:10, col:19> 'int' '&'
+|       |-ImplicitCastExpr 0x7fd355818b80 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fd355818b38 <col:10> 'int' lvalue Var 0x7fd355818ac0 'oldbit' 'int'
+|       `-IntegerLiteral 0x7fd355818b60 <col:19> 'int' 1
+|-FunctionDecl 0x7fd355818d20 <line:18:1, line:22:1> line:19:1 used __constant_test_bit 'int (unsigned long, volatile void *)' static inline
+| |-ParmVarDecl 0x7fd355818c10 <col:22, col:36> col:36 used nr 'unsigned long'
+| |-ParmVarDecl 0x7fd355818c88 <col:40, col:56> col:56 used addr 'volatile void *'
+| `-CompoundStmt 0x7fd3558191d0 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7fd3558191b8 <line:21:3, col:65>
+|     `-BinaryOperator 0x7fd355819190 <col:10, col:65> 'int' '!='
+|       |-ParenExpr 0x7fd355819150 <col:10, col:60> 'int'
+|       | `-BinaryOperator 0x7fd355819128 <col:11, col:59> 'int' '&'
+|       |   |-ImplicitCastExpr 0x7fd355819110 <col:11, col:45> 'int' <IntegralCast>
+|       |   | `-ImplicitCastExpr 0x7fd3558190f8 <col:11, col:45> 'char' <LValueToRValue>
+|       |   |   `-ArraySubscriptExpr 0x7fd355818fa8 <col:11, col:45> 'volatile char' lvalue
+|       |   |     |-ParenExpr 0x7fd355818e80 <col:11, col:34> 'volatile char *'
+|       |   |     | `-CStyleCastExpr 0x7fd355818e58 <col:12, col:30> 'volatile char *' <BitCast>
+|       |   |     |   `-ImplicitCastExpr 0x7fd355818e40 <col:30> 'volatile void *' <LValueToRValue>
+|       |   |     |     `-DeclRefExpr 0x7fd355818dd0 <col:30> 'volatile void *' lvalue ParmVar 0x7fd355818c88 'addr' 'volatile void *'
+|       |   |     `-BinaryOperator 0x7fd355818f80 <col:36, col:44> 'unsigned long' '^'
+|       |   |       |-ParenExpr 0x7fd355818f28 <col:36, col:42> 'unsigned long'
+|       |   |       | `-BinaryOperator 0x7fd355818f00 <col:37, col:41> 'unsigned long' '>>'
+|       |   |       |   |-ImplicitCastExpr 0x7fd355818ee8 <col:37> 'unsigned long' <LValueToRValue>
+|       |   |       |   | `-DeclRefExpr 0x7fd355818ea0 <col:37> 'unsigned long' lvalue ParmVar 0x7fd355818c10 'nr' 'unsigned long'
+|       |   |       |   `-IntegerLiteral 0x7fd355818ec8 <col:41> 'int' 3
+|       |   |       `-ImplicitCastExpr 0x7fd355818f68 <col:44> 'unsigned long' <IntegralCast>
+|       |   |         `-IntegerLiteral 0x7fd355818f48 <col:44> 'int' 7
+|       |   `-ParenExpr 0x7fd3558190d8 <col:49, col:59> 'int'
+|       |     `-BinaryOperator 0x7fd3558190b0 <col:50, col:58> 'int' '<<'
+|       |       |-IntegerLiteral 0x7fd355818fd0 <col:50> 'int' 1
+|       |       `-ParenExpr 0x7fd355819090 <col:53, col:58> 'unsigned long'
+|       |         `-BinaryOperator 0x7fd355819068 <col:54, col:57> 'unsigned long' '&'
+|       |           |-ImplicitCastExpr 0x7fd355819038 <col:54> 'unsigned long' <LValueToRValue>
+|       |           | `-DeclRefExpr 0x7fd355818ff0 <col:54> 'unsigned long' lvalue ParmVar 0x7fd355818c10 'nr' 'unsigned long'
+|       |           `-ImplicitCastExpr 0x7fd355819050 <col:57> 'unsigned long' <IntegralCast>
+|       |             `-IntegerLiteral 0x7fd355819018 <col:57> 'int' 7
+|       `-IntegerLiteral 0x7fd355819170 <col:65> 'int' 0
+|-RecordDecl 0x7fd35582fc00 <line:24:1, line:27:1> line:24:8 struct list_head definition
+| |-FieldDecl 0x7fd35582fd60 <line:26:3, col:21> col:21 referenced next 'struct list_head *'
+| `-FieldDecl 0x7fd35582fdd0 <col:3, col:28> col:28 referenced prev 'struct list_head *'
+|-FunctionDecl 0x7fd35582ffe0 <line:29:1, col:52> col:6 used list_add 'void (struct list_head *, struct list_head *)'
+| |-ParmVarDecl 0x7fd35582fe40 <col:16, col:32> col:33 'struct list_head *'
+| `-ParmVarDecl 0x7fd35582fec8 <col:35, col:51> col:52 'struct list_head *'
+|-FunctionDecl 0x7fd3558301d0 <line:31:1, line:36:1> line:32:1 used __list_del 'void (struct list_head *, struct list_head *)' static inline
+| |-ParmVarDecl 0x7fd3558300b8 <col:13, col:31> col:31 used prev 'struct list_head *'
+| |-ParmVarDecl 0x7fd355830140 <col:37, col:55> col:55 used next 'struct list_head *'
+| `-CompoundStmt 0x7fd355830440 <line:33:1, line:36:1>
+|   |-BinaryOperator 0x7fd355830338 <line:34:3, col:16> 'struct list_head *' '='
+|   | |-MemberExpr 0x7fd3558302c0 <col:3, col:9> 'struct list_head *' lvalue ->prev 0x7fd35582fdd0
+|   | | `-ImplicitCastExpr 0x7fd3558302a8 <col:3> 'struct list_head *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fd355830280 <col:3> 'struct list_head *' lvalue ParmVar 0x7fd355830140 'next' 'struct list_head *'
+|   | `-ImplicitCastExpr 0x7fd355830320 <col:16> 'struct list_head *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fd3558302f8 <col:16> 'struct list_head *' lvalue ParmVar 0x7fd3558300b8 'prev' 'struct list_head *'
+|   `-BinaryOperator 0x7fd355830418 <line:35:3, col:16> 'struct list_head *' '='
+|     |-MemberExpr 0x7fd3558303a0 <col:3, col:9> 'struct list_head *' lvalue ->next 0x7fd35582fd60
+|     | `-ImplicitCastExpr 0x7fd355830388 <col:3> 'struct list_head *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd355830360 <col:3> 'struct list_head *' lvalue ParmVar 0x7fd3558300b8 'prev' 'struct list_head *'
+|     `-ImplicitCastExpr 0x7fd355830400 <col:16> 'struct list_head *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd3558303d8 <col:16> 'struct list_head *' lvalue ParmVar 0x7fd355830140 'next' 'struct list_head *'
+|-FunctionDecl 0x7fd355830590 <line:38:1, line:44:1> line:39:1 used list_del 'void (struct list_head *)' static inline
+| |-ParmVarDecl 0x7fd355830488 <col:11, col:29> col:29 used entry 'struct list_head *'
+| `-CompoundStmt 0x7fd3558309d8 <line:40:1, line:44:1>
+|   |-CallExpr 0x7fd3558307c0 <line:41:2, col:37> 'void'
+|   | |-ImplicitCastExpr 0x7fd3558307a8 <col:2> 'void (*)(struct list_head *, struct list_head *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd355830638 <col:2> 'void (struct list_head *, struct list_head *)' Function 0x7fd3558301d0 '__list_del' 'void (struct list_head *, struct list_head *)'
+|   | |-ImplicitCastExpr 0x7fd3558307f8 <col:13, col:20> 'struct list_head *' <LValueToRValue>
+|   | | `-MemberExpr 0x7fd3558306a0 <col:13, col:20> 'struct list_head *' lvalue ->prev 0x7fd35582fdd0
+|   | |   `-ImplicitCastExpr 0x7fd355830688 <col:13> 'struct list_head *' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7fd355830660 <col:13> 'struct list_head *' lvalue ParmVar 0x7fd355830488 'entry' 'struct list_head *'
+|   | `-ImplicitCastExpr 0x7fd355830810 <col:26, col:33> 'struct list_head *' <LValueToRValue>
+|   |   `-MemberExpr 0x7fd355830718 <col:26, col:33> 'struct list_head *' lvalue ->next 0x7fd35582fd60
+|   |     `-ImplicitCastExpr 0x7fd355830700 <col:26> 'struct list_head *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd3558306d8 <col:26> 'struct list_head *' lvalue ParmVar 0x7fd355830488 'entry' 'struct list_head *'
+|   |-BinaryOperator 0x7fd3558308d8 <line:42:2, col:16> 'struct list_head *' '='
+|   | |-MemberExpr 0x7fd355830868 <col:2, col:9> 'struct list_head *' lvalue ->next 0x7fd35582fd60
+|   | | `-ImplicitCastExpr 0x7fd355830850 <col:2> 'struct list_head *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fd355830828 <col:2> 'struct list_head *' lvalue ParmVar 0x7fd355830488 'entry' 'struct list_head *'
+|   | `-ImplicitCastExpr 0x7fd3558308c0 <col:16> 'struct list_head *' <NullToPointer>
+|   |   `-IntegerLiteral 0x7fd3558308a0 <col:16> 'int' 0
+|   `-BinaryOperator 0x7fd3558309b0 <line:43:2, col:16> 'struct list_head *' '='
+|     |-MemberExpr 0x7fd355830940 <col:2, col:9> 'struct list_head *' lvalue ->prev 0x7fd35582fdd0
+|     | `-ImplicitCastExpr 0x7fd355830928 <col:2> 'struct list_head *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fd355830900 <col:2> 'struct list_head *' lvalue ParmVar 0x7fd355830488 'entry' 'struct list_head *'
+|     `-ImplicitCastExpr 0x7fd355830998 <col:16> 'struct list_head *' <NullToPointer>
+|       `-IntegerLiteral 0x7fd355830978 <col:16> 'int' 0
+|-VarDecl 0x7fd355830a18 <line:46:1, col:12> col:12 used nr_active_pages 'int' extern
+|-VarDecl 0x7fd355830a90 <line:47:1, col:12> col:12 used nr_inactive_pages 'int' extern
+|-VarDecl 0x7fd355830b10 <line:48:1, col:25> col:25 used active_list 'struct list_head':'struct list_head' extern
+|-RecordDecl 0x7fd355830b70 <line:50:9, line:54:1> line:50:16 struct page definition
+| |-FieldDecl 0x7fd355830c38 <line:52:2, col:16> col:16 referenced flags 'unsigned long'
+| `-FieldDecl 0x7fd355830ca0 <line:53:2, col:19> col:19 referenced lru 'struct list_head':'struct list_head'
+|-TypedefDecl 0x7fd355830d40 <line:50:1, line:54:3> col:3 mem_map_t 'struct page':'struct page'
+| `-ElaboratedType 0x7fd355830cf0 'struct page' sugar
+|   `-RecordType 0x7fd355830c00 'struct page'
+|     `-Record 0x7fd355830b70 'page'
+|-FunctionDecl 0x7fd355830f30 <line:56:1, line:81:1> line:57:1 activate_page_nolock 'void (struct page *)'
+| |-ParmVarDecl 0x7fd355830e30 <col:23, col:37> col:37 used page 'struct page *'
+| `-CompoundStmt 0x7fd355838158 <line:58:1, line:81:1>
+|   `-IfStmt 0x7fd355838120 <line:59:2, line:80:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd355831a78 <line:59:6, line:64:46> 'int' '&&'
+|     | |-ParenExpr 0x7fd3558315b8 <line:59:6, line:61:42> 'int'
+|     | | `-ConditionalOperator 0x7fd355831588 <line:59:7, line:61:40> 'int'
+|     | |   |-CallExpr 0x7fd3558311b0 <line:59:7, col:31> 'int'
+|     | |   | |-ImplicitCastExpr 0x7fd355831198 <col:7> 'int (*)()' <BuiltinFnToFnPtr>
+|     | |   | | `-DeclRefExpr 0x7fd355831100 <col:7> '<builtin fn type>' Function 0x7fd355831008 '__builtin_constant_p' 'int ()'
+|     | |   | `-ParenExpr 0x7fd355831148 <col:28, col:30> 'int'
+|     | |   |   `-IntegerLiteral 0x7fd355831128 <col:29> 'int' 6
+|     | |   |-CallExpr 0x7fd355831360 <line:60:9, col:49> 'int'
+|     | |   | |-ImplicitCastExpr 0x7fd355831348 <col:9> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     | |   | | `-DeclRefExpr 0x7fd3558311e0 <col:9> 'int (unsigned long, volatile void *)' Function 0x7fd355818d20 '__constant_test_bit' 'int (unsigned long, volatile void *)'
+|     | |   | |-ImplicitCastExpr 0x7fd355831398 <col:29, col:31> 'unsigned long' <IntegralCast>
+|     | |   | | `-ParenExpr 0x7fd355831228 <col:29, col:31> 'int'
+|     | |   | |   `-IntegerLiteral 0x7fd355831208 <col:30> 'int' 6
+|     | |   | `-ImplicitCastExpr 0x7fd3558313b0 <col:33, col:48> 'volatile void *' <BitCast>
+|     | |   |   `-ParenExpr 0x7fd355831300 <col:33, col:48> 'unsigned long *'
+|     | |   |     `-UnaryOperator 0x7fd3558312e0 <col:34, col:43> 'unsigned long *' prefix '&'
+|     | |   |       `-MemberExpr 0x7fd3558312a8 <col:35, col:43> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | |   |         `-ImplicitCastExpr 0x7fd355831290 <col:35, col:40> 'struct page *' <LValueToRValue>
+|     | |   |           `-ParenExpr 0x7fd355831270 <col:35, col:40> 'struct page *' lvalue
+|     | |   |             `-DeclRefExpr 0x7fd355831248 <col:36> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | |   `-CallExpr 0x7fd355831520 <line:61:9, col:40> 'int'
+|     | |     |-ImplicitCastExpr 0x7fd355831508 <col:9> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     | |     | `-DeclRefExpr 0x7fd3558313c8 <col:9> 'int (unsigned long, volatile void *)' Function 0x7fd3558189f8 '__test_bit' 'int (unsigned long, volatile void *)'
+|     | |     |-ImplicitCastExpr 0x7fd355831558 <col:20, col:22> 'unsigned long' <IntegralCast>
+|     | |     | `-ParenExpr 0x7fd355831410 <col:20, col:22> 'int'
+|     | |     |   `-IntegerLiteral 0x7fd3558313f0 <col:21> 'int' 6
+|     | |     `-ImplicitCastExpr 0x7fd355831570 <col:24, col:39> 'volatile void *' <BitCast>
+|     | |       `-ParenExpr 0x7fd3558314e8 <col:24, col:39> 'unsigned long *'
+|     | |         `-UnaryOperator 0x7fd3558314c8 <col:25, col:34> 'unsigned long *' prefix '&'
+|     | |           `-MemberExpr 0x7fd355831490 <col:26, col:34> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | |             `-ImplicitCastExpr 0x7fd355831478 <col:26, col:31> 'struct page *' <LValueToRValue>
+|     | |               `-ParenExpr 0x7fd355831458 <col:26, col:31> 'struct page *' lvalue
+|     | |                 `-DeclRefExpr 0x7fd355831430 <col:27> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | `-UnaryOperator 0x7fd355831a58 <line:62:9, line:64:46> 'int' prefix '!'
+|     |   `-ParenExpr 0x7fd355831a38 <line:62:10, line:64:46> 'int'
+|     |     `-ConditionalOperator 0x7fd355831a08 <line:62:11, line:64:44> 'int'
+|     |       |-CallExpr 0x7fd355831658 <line:62:11, col:35> 'int'
+|     |       | |-ImplicitCastExpr 0x7fd355831640 <col:11> 'int (*)()' <BuiltinFnToFnPtr>
+|     |       | | `-DeclRefExpr 0x7fd3558315d8 <col:11> '<builtin fn type>' Function 0x7fd355831008 '__builtin_constant_p' 'int ()'
+|     |       | `-ParenExpr 0x7fd355831620 <col:32, col:34> 'int'
+|     |       |   `-IntegerLiteral 0x7fd355831600 <col:33> 'int' 7
+|     |       |-CallExpr 0x7fd3558317e0 <line:63:13, col:53> 'int'
+|     |       | |-ImplicitCastExpr 0x7fd3558317c8 <col:13> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     |       | | `-DeclRefExpr 0x7fd355831688 <col:13> 'int (unsigned long, volatile void *)' Function 0x7fd355818d20 '__constant_test_bit' 'int (unsigned long, volatile void *)'
+|     |       | |-ImplicitCastExpr 0x7fd355831818 <col:33, col:35> 'unsigned long' <IntegralCast>
+|     |       | | `-ParenExpr 0x7fd3558316d0 <col:33, col:35> 'int'
+|     |       | |   `-IntegerLiteral 0x7fd3558316b0 <col:34> 'int' 7
+|     |       | `-ImplicitCastExpr 0x7fd355831830 <col:37, col:52> 'volatile void *' <BitCast>
+|     |       |   `-ParenExpr 0x7fd3558317a8 <col:37, col:52> 'unsigned long *'
+|     |       |     `-UnaryOperator 0x7fd355831788 <col:38, col:47> 'unsigned long *' prefix '&'
+|     |       |       `-MemberExpr 0x7fd355831750 <col:39, col:47> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     |       |         `-ImplicitCastExpr 0x7fd355831738 <col:39, col:44> 'struct page *' <LValueToRValue>
+|     |       |           `-ParenExpr 0x7fd355831718 <col:39, col:44> 'struct page *' lvalue
+|     |       |             `-DeclRefExpr 0x7fd3558316f0 <col:40> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     |       `-CallExpr 0x7fd3558319a0 <line:64:13, col:44> 'int'
+|     |         |-ImplicitCastExpr 0x7fd355831988 <col:13> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     |         | `-DeclRefExpr 0x7fd355831848 <col:13> 'int (unsigned long, volatile void *)' Function 0x7fd3558189f8 '__test_bit' 'int (unsigned long, volatile void *)'
+|     |         |-ImplicitCastExpr 0x7fd3558319d8 <col:24, col:26> 'unsigned long' <IntegralCast>
+|     |         | `-ParenExpr 0x7fd355831890 <col:24, col:26> 'int'
+|     |         |   `-IntegerLiteral 0x7fd355831870 <col:25> 'int' 7
+|     |         `-ImplicitCastExpr 0x7fd3558319f0 <col:28, col:43> 'volatile void *' <BitCast>
+|     |           `-ParenExpr 0x7fd355831968 <col:28, col:43> 'unsigned long *'
+|     |             `-UnaryOperator 0x7fd355831948 <col:29, col:38> 'unsigned long *' prefix '&'
+|     |               `-MemberExpr 0x7fd355831910 <col:30, col:38> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     |                 `-ImplicitCastExpr 0x7fd3558318f8 <col:30, col:35> 'struct page *' <LValueToRValue>
+|     |                   `-ParenExpr 0x7fd3558318d8 <col:30, col:35> 'struct page *' lvalue
+|     |                     `-DeclRefExpr 0x7fd3558318b0 <col:31> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     |-CompoundStmt 0x7fd3558380d8 <line:65:5, line:80:5>
+|     | |-CallExpr 0x7fd355836e00 <line:66:7, col:28> 'void'
+|     | | |-ImplicitCastExpr 0x7fd355831bd8 <col:7> 'void (*)(struct list_head *)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7fd355831aa0 <col:7> 'void (struct list_head *)' Function 0x7fd355830590 'list_del' 'void (struct list_head *)'
+|     | | `-UnaryOperator 0x7fd355831b60 <col:16, col:25> 'struct list_head *' prefix '&'
+|     | |   `-MemberExpr 0x7fd355831b28 <col:17, col:25> 'struct list_head':'struct list_head' lvalue ->lru 0x7fd355830ca0
+|     | |     `-ImplicitCastExpr 0x7fd355831b10 <col:17, col:22> 'struct page *' <LValueToRValue>
+|     | |       `-ParenExpr 0x7fd355831af0 <col:17, col:22> 'struct page *' lvalue
+|     | |         `-DeclRefExpr 0x7fd355831ac8 <col:18> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | |-UnaryOperator 0x7fd355836e58 <line:67:7, col:24> 'int' postfix '--'
+|     | | `-DeclRefExpr 0x7fd355836e30 <col:7> 'int' lvalue Var 0x7fd355830a90 'nr_inactive_pages' 'int'
+|     | |-IfStmt 0x7fd3558374b0 <line:68:7, line:70:19>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-UnaryOperator 0x7fd3558372d8 <line:68:11, line:69:43> 'int' prefix '!'
+|     | | | `-ParenExpr 0x7fd3558372b8 <line:68:12, line:69:43> 'int'
+|     | | |   `-ConditionalOperator 0x7fd355837288 <line:68:13, line:69:42> 'int'
+|     | | |     |-CallExpr 0x7fd355836ed8 <line:68:13, col:35> 'int'
+|     | | |     | |-ImplicitCastExpr 0x7fd355836ec0 <col:13> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | |     | | `-DeclRefExpr 0x7fd355836e78 <col:13> '<builtin fn type>' Function 0x7fd355831008 '__builtin_constant_p' 'int ()'
+|     | | |     | `-IntegerLiteral 0x7fd355836ea0 <col:34> 'int' 6
+|     | | |     |-CallExpr 0x7fd355837060 <col:39, col:79> 'int'
+|     | | |     | |-ImplicitCastExpr 0x7fd355837048 <col:39> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     | | |     | | `-DeclRefExpr 0x7fd355836f08 <col:39> 'int (unsigned long, volatile void *)' Function 0x7fd355818d20 '__constant_test_bit' 'int (unsigned long, volatile void *)'
+|     | | |     | |-ImplicitCastExpr 0x7fd355837098 <col:59, col:61> 'unsigned long' <IntegralCast>
+|     | | |     | | `-ParenExpr 0x7fd355836f50 <col:59, col:61> 'int'
+|     | | |     | |   `-IntegerLiteral 0x7fd355836f30 <col:60> 'int' 6
+|     | | |     | `-ImplicitCastExpr 0x7fd3558370b0 <col:63, col:78> 'volatile void *' <BitCast>
+|     | | |     |   `-ParenExpr 0x7fd355837028 <col:63, col:78> 'unsigned long *'
+|     | | |     |     `-UnaryOperator 0x7fd355837008 <col:64, col:73> 'unsigned long *' prefix '&'
+|     | | |     |       `-MemberExpr 0x7fd355836fd0 <col:65, col:73> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | | |     |         `-ImplicitCastExpr 0x7fd355836fb8 <col:65, col:70> 'struct page *' <LValueToRValue>
+|     | | |     |           `-ParenExpr 0x7fd355836f98 <col:65, col:70> 'struct page *' lvalue
+|     | | |     |             `-DeclRefExpr 0x7fd355836f70 <col:66> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | | |     `-CallExpr 0x7fd355837220 <line:69:11, col:42> 'int'
+|     | | |       |-ImplicitCastExpr 0x7fd355837208 <col:11> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     | | |       | `-DeclRefExpr 0x7fd3558370c8 <col:11> 'int (unsigned long, volatile void *)' Function 0x7fd3558189f8 '__test_bit' 'int (unsigned long, volatile void *)'
+|     | | |       |-ImplicitCastExpr 0x7fd355837258 <col:22, col:24> 'unsigned long' <IntegralCast>
+|     | | |       | `-ParenExpr 0x7fd355837110 <col:22, col:24> 'int'
+|     | | |       |   `-IntegerLiteral 0x7fd3558370f0 <col:23> 'int' 6
+|     | | |       `-ImplicitCastExpr 0x7fd355837270 <col:26, col:41> 'volatile void *' <BitCast>
+|     | | |         `-ParenExpr 0x7fd3558371e8 <col:26, col:41> 'unsigned long *'
+|     | | |           `-UnaryOperator 0x7fd3558371c8 <col:27, col:36> 'unsigned long *' prefix '&'
+|     | | |             `-MemberExpr 0x7fd355837190 <col:28, col:36> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | | |               `-ImplicitCastExpr 0x7fd355837178 <col:28, col:33> 'struct page *' <LValueToRValue>
+|     | | |                 `-ParenExpr 0x7fd355837158 <col:28, col:33> 'struct page *' lvalue
+|     | | |                   `-DeclRefExpr 0x7fd355837130 <col:29> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | | |-CallExpr 0x7fd355837410 <line:70:2, col:19> 'void'
+|     | | | |-ImplicitCastExpr 0x7fd3558373f8 <col:2> 'void (*)(const char *, const char *, int)' <FunctionToPointerDecay>
+|     | | | | `-DeclRefExpr 0x7fd3558372f8 <col:2> 'void (const char *, const char *, int)' Function 0x7fd355818360 'printk' 'void (const char *, const char *, int)'
+|     | | | |-ImplicitCastExpr 0x7fd355837468 <col:9> 'const char *' <BitCast>
+|     | | | | `-ImplicitCastExpr 0x7fd355837450 <col:9> 'char *' <ArrayToPointerDecay>
+|     | | | |   `-StringLiteral 0x7fd355837358 <col:9> 'char [1]' lvalue ""
+|     | | | |-ImplicitCastExpr 0x7fd355837498 <col:13> 'const char *' <BitCast>
+|     | | | | `-ImplicitCastExpr 0x7fd355837480 <col:13> 'char *' <ArrayToPointerDecay>
+|     | | | |   `-StringLiteral 0x7fd355837380 <col:13> 'char [1]' lvalue ""
+|     | | | `-IntegerLiteral 0x7fd3558373a8 <col:17> 'int' 43
+|     | | `-<<<NULL>>>
+|     | |-IfStmt 0x7fd355837a98 <line:72:7, line:74:19>
+|     | | |-<<<NULL>>>
+|     | | |-<<<NULL>>>
+|     | | |-ParenExpr 0x7fd355837928 <line:72:11, line:73:42> 'int'
+|     | | | `-ConditionalOperator 0x7fd3558378f8 <line:72:12, line:73:41> 'int'
+|     | | |   |-CallExpr 0x7fd355837548 <line:72:12, col:34> 'int'
+|     | | |   | |-ImplicitCastExpr 0x7fd355837530 <col:12> 'int (*)()' <BuiltinFnToFnPtr>
+|     | | |   | | `-DeclRefExpr 0x7fd3558374e8 <col:12> '<builtin fn type>' Function 0x7fd355831008 '__builtin_constant_p' 'int ()'
+|     | | |   | `-IntegerLiteral 0x7fd355837510 <col:33> 'int' 7
+|     | | |   |-CallExpr 0x7fd3558376d0 <col:38, col:78> 'int'
+|     | | |   | |-ImplicitCastExpr 0x7fd3558376b8 <col:38> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     | | |   | | `-DeclRefExpr 0x7fd355837578 <col:38> 'int (unsigned long, volatile void *)' Function 0x7fd355818d20 '__constant_test_bit' 'int (unsigned long, volatile void *)'
+|     | | |   | |-ImplicitCastExpr 0x7fd355837708 <col:58, col:60> 'unsigned long' <IntegralCast>
+|     | | |   | | `-ParenExpr 0x7fd3558375c0 <col:58, col:60> 'int'
+|     | | |   | |   `-IntegerLiteral 0x7fd3558375a0 <col:59> 'int' 7
+|     | | |   | `-ImplicitCastExpr 0x7fd355837720 <col:62, col:77> 'volatile void *' <BitCast>
+|     | | |   |   `-ParenExpr 0x7fd355837698 <col:62, col:77> 'unsigned long *'
+|     | | |   |     `-UnaryOperator 0x7fd355837678 <col:63, col:72> 'unsigned long *' prefix '&'
+|     | | |   |       `-MemberExpr 0x7fd355837640 <col:64, col:72> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | | |   |         `-ImplicitCastExpr 0x7fd355837628 <col:64, col:69> 'struct page *' <LValueToRValue>
+|     | | |   |           `-ParenExpr 0x7fd355837608 <col:64, col:69> 'struct page *' lvalue
+|     | | |   |             `-DeclRefExpr 0x7fd3558375e0 <col:65> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | | |   `-CallExpr 0x7fd355837890 <line:73:10, col:41> 'int'
+|     | | |     |-ImplicitCastExpr 0x7fd355837878 <col:10> 'int (*)(unsigned long, volatile void *)' <FunctionToPointerDecay>
+|     | | |     | `-DeclRefExpr 0x7fd355837738 <col:10> 'int (unsigned long, volatile void *)' Function 0x7fd3558189f8 '__test_bit' 'int (unsigned long, volatile void *)'
+|     | | |     |-ImplicitCastExpr 0x7fd3558378c8 <col:21, col:23> 'unsigned long' <IntegralCast>
+|     | | |     | `-ParenExpr 0x7fd355837780 <col:21, col:23> 'int'
+|     | | |     |   `-IntegerLiteral 0x7fd355837760 <col:22> 'int' 7
+|     | | |     `-ImplicitCastExpr 0x7fd3558378e0 <col:25, col:40> 'volatile void *' <BitCast>
+|     | | |       `-ParenExpr 0x7fd355837858 <col:25, col:40> 'unsigned long *'
+|     | | |         `-UnaryOperator 0x7fd355837838 <col:26, col:35> 'unsigned long *' prefix '&'
+|     | | |           `-MemberExpr 0x7fd355837800 <col:27, col:35> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | | |             `-ImplicitCastExpr 0x7fd3558377e8 <col:27, col:32> 'struct page *' <LValueToRValue>
+|     | | |               `-ParenExpr 0x7fd3558377c8 <col:27, col:32> 'struct page *' lvalue
+|     | | |                 `-DeclRefExpr 0x7fd3558377a0 <col:28> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | | |-CallExpr 0x7fd3558379f8 <line:74:2, col:19> 'void'
+|     | | | |-ImplicitCastExpr 0x7fd3558379e0 <col:2> 'void (*)(const char *, const char *, int)' <FunctionToPointerDecay>
+|     | | | | `-DeclRefExpr 0x7fd355837948 <col:2> 'void (const char *, const char *, int)' Function 0x7fd355818360 'printk' 'void (const char *, const char *, int)'
+|     | | | |-ImplicitCastExpr 0x7fd355837a50 <col:9> 'const char *' <BitCast>
+|     | | | | `-ImplicitCastExpr 0x7fd355837a38 <col:9> 'char *' <ArrayToPointerDecay>
+|     | | | |   `-StringLiteral 0x7fd355837970 <col:9> 'char [1]' lvalue ""
+|     | | | |-ImplicitCastExpr 0x7fd355837a80 <col:13> 'const char *' <BitCast>
+|     | | | | `-ImplicitCastExpr 0x7fd355837a68 <col:13> 'char *' <ArrayToPointerDecay>
+|     | | | |   `-StringLiteral 0x7fd355837998 <col:13> 'char [1]' lvalue ""
+|     | | | `-IntegerLiteral 0x7fd3558379c0 <col:17> 'int' 43
+|     | | `-<<<NULL>>>
+|     | |-ParenExpr 0x7fd355837ef8 <line:76:7, line:77:46> 'void'
+|     | | `-ConditionalOperator 0x7fd355837ec8 <line:76:8, line:77:44> 'void'
+|     | |   |-CallExpr 0x7fd355837b30 <line:76:8, col:30> 'int'
+|     | |   | |-ImplicitCastExpr 0x7fd355837b18 <col:8> 'int (*)()' <BuiltinFnToFnPtr>
+|     | |   | | `-DeclRefExpr 0x7fd355837ad0 <col:8> '<builtin fn type>' Function 0x7fd355831008 '__builtin_constant_p' 'int ()'
+|     | |   | `-IntegerLiteral 0x7fd355837af8 <col:29> 'int' 7
+|     | |   |-CallExpr 0x7fd355837ce0 <col:34, col:73> 'void'
+|     | |   | |-ImplicitCastExpr 0x7fd355837cc8 <col:34> 'void (*)(int, unsigned long *)' <FunctionToPointerDecay>
+|     | |   | | `-DeclRefExpr 0x7fd355837b60 <col:34> 'void (int, unsigned long *)' Function 0x7fd3558185e0 '__constant_set_bit' 'void (int, unsigned long *)'
+|     | |   | |-ParenExpr 0x7fd355837ba8 <col:53, col:55> 'int'
+|     | |   | | `-IntegerLiteral 0x7fd355837b88 <col:54> 'int' 7
+|     | |   | `-ParenExpr 0x7fd355837c80 <col:57, col:72> 'unsigned long *'
+|     | |   |   `-UnaryOperator 0x7fd355837c60 <col:58, col:67> 'unsigned long *' prefix '&'
+|     | |   |     `-MemberExpr 0x7fd355837c28 <col:59, col:67> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | |   |       `-ImplicitCastExpr 0x7fd355837c10 <col:59, col:64> 'struct page *' <LValueToRValue>
+|     | |   |         `-ParenExpr 0x7fd355837bf0 <col:59, col:64> 'struct page *' lvalue
+|     | |   |           `-DeclRefExpr 0x7fd355837bc8 <col:60> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | |   `-CallExpr 0x7fd355837e90 <line:77:14, col:44> 'void'
+|     | |     |-ImplicitCastExpr 0x7fd355837e78 <col:14> 'void (*)(int, unsigned long *)' <FunctionToPointerDecay>
+|     | |     | `-DeclRefExpr 0x7fd355837d18 <col:14> 'void (int, unsigned long *)' Function 0x7fd3558187b0 '__set_bit' 'void (int, unsigned long *)'
+|     | |     |-ParenExpr 0x7fd355837d60 <col:24, col:26> 'int'
+|     | |     | `-IntegerLiteral 0x7fd355837d40 <col:25> 'int' 7
+|     | |     `-ParenExpr 0x7fd355837e58 <col:28, col:43> 'unsigned long *'
+|     | |       `-UnaryOperator 0x7fd355837e38 <col:29, col:38> 'unsigned long *' prefix '&'
+|     | |         `-MemberExpr 0x7fd355837e00 <col:30, col:38> 'unsigned long' lvalue ->flags 0x7fd355830c38
+|     | |           `-ImplicitCastExpr 0x7fd355837dc8 <col:30, col:35> 'struct page *' <LValueToRValue>
+|     | |             `-ParenExpr 0x7fd355837da8 <col:30, col:35> 'struct page *' lvalue
+|     | |               `-DeclRefExpr 0x7fd355837d80 <col:31> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | |-CallExpr 0x7fd355838058 <line:78:7, col:42> 'void'
+|     | | |-ImplicitCastExpr 0x7fd355838040 <col:7> 'void (*)(struct list_head *, struct list_head *)' <FunctionToPointerDecay>
+|     | | | `-DeclRefExpr 0x7fd355837f18 <col:7> 'void (struct list_head *, struct list_head *)' Function 0x7fd35582ffe0 'list_add' 'void (struct list_head *, struct list_head *)'
+|     | | |-UnaryOperator 0x7fd355837fd8 <col:16, col:25> 'struct list_head *' prefix '&'
+|     | | | `-MemberExpr 0x7fd355837fa0 <col:17, col:25> 'struct list_head':'struct list_head' lvalue ->lru 0x7fd355830ca0
+|     | | |   `-ImplicitCastExpr 0x7fd355837f88 <col:17, col:22> 'struct page *' <LValueToRValue>
+|     | | |     `-ParenExpr 0x7fd355837f68 <col:17, col:22> 'struct page *' lvalue
+|     | | |       `-DeclRefExpr 0x7fd355837f40 <col:18> 'struct page *' lvalue ParmVar 0x7fd355830e30 'page' 'struct page *'
+|     | | `-UnaryOperator 0x7fd355838020 <col:30, col:31> 'struct list_head *' prefix '&'
+|     | |   `-DeclRefExpr 0x7fd355837ff8 <col:31> 'struct list_head':'struct list_head' lvalue Var 0x7fd355830b10 'active_list' 'struct list_head':'struct list_head'
+|     | `-UnaryOperator 0x7fd3558380b8 <line:79:7, col:22> 'int' postfix '++'
+|     |   `-DeclRefExpr 0x7fd355838090 <col:7> 'int' lvalue Var 0x7fd355830a18 'nr_active_pages' 'int'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd355831008 <line:59:7> col:7 implicit used __builtin_constant_p 'int ()' extern
+  |-NoThrowAttr 0x7fd3558310a8 <col:7> Implicit
+  `-ConstAttr 0x7fd3558310f0 <col:7> Implicit

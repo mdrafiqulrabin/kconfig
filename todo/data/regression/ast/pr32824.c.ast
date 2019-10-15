@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7ff2a38174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff2a281ae60 <../Data/C2AST/pr32824.c:4:1, col:13> col:5 used a 'int [1600]'
+|-VarDecl 0x7ff2a281af18 <line:5:1, col:5> col:5 used e 'int'
+`-FunctionDecl 0x7ff2a281b040 <line:6:1, line:11:1> line:6:6 foo 'void (void)'
+  `-CompoundStmt 0x7ff2a281b478 <line:7:1, line:11:1>
+    |-DeclStmt 0x7ff2a281b158 <line:8:3, col:8>
+    | `-VarDecl 0x7ff2a281b0f8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ff2a281b440 <line:9:3, line:10:13>
+      |-BinaryOperator 0x7ff2a281b1b8 <line:9:7, col:11> 'int' '='
+      | |-DeclRefExpr 0x7ff2a281b170 <col:7> 'int' lvalue Var 0x7ff2a281b0f8 'i' 'int'
+      | `-IntegerLiteral 0x7ff2a281b198 <col:11> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff2a281b288 <col:13, col:18> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff2a281b270 <col:13> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff2a281b1e0 <col:13> 'int' lvalue Var 0x7ff2a281b0f8 'i' 'int'
+      | `-BinaryOperator 0x7ff2a281b248 <col:15, col:18> 'int' '*'
+      |   |-IntegerLiteral 0x7ff2a281b208 <col:15> 'int' 16
+      |   `-IntegerLiteral 0x7ff2a281b228 <col:18> 'int' 100
+      |-UnaryOperator 0x7ff2a281b2d8 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff2a281b2b0 <col:22> 'int' lvalue Var 0x7ff2a281b0f8 'i' 'int'
+      `-CompoundAssignOperator 0x7ff2a281b408 <line:10:5, col:13> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        |-DeclRefExpr 0x7ff2a281b2f8 <col:5> 'int' lvalue Var 0x7ff2a281af18 'e' 'int'
+        `-ImplicitCastExpr 0x7ff2a281b3f0 <col:10, col:13> 'int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ff2a281b3c8 <col:10, col:13> 'int' lvalue
+            |-ImplicitCastExpr 0x7ff2a281b398 <col:10> 'int *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7ff2a281b320 <col:10> 'int [1600]' lvalue Var 0x7ff2a281ae60 'a' 'int [1600]'
+            `-ImplicitCastExpr 0x7ff2a281b3b0 <col:12> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7ff2a281b348 <col:12> 'int' lvalue Var 0x7ff2a281b0f8 'i' 'int'

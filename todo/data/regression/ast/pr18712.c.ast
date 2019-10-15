@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc97182bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc97186d868 <../Data/C2AST/pr18712.c:1:1, line:17:1> line:1:7 eintr_source 'void *(void *)'
+  |-ParmVarDecl 0x7fc97182c978 <col:21, col:27> col:27 used arg 'void *'
+  `-CompoundStmt 0x7fc97186df60 <line:2:1, line:17:1>
+    |-DeclStmt 0x7fc97186d9e8 <line:3:3, col:13>
+    | `-VarDecl 0x7fc97186d968 <col:3, col:12> col:7 used ts 'int' cinit
+    |   `-IntegerLiteral 0x7fc97186d9c8 <col:12> 'int' 0
+    |-IfStmt 0x7fc97186dbd8 <line:5:3, line:6:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc97186da28 <line:5:7> 'void *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc97186da00 <col:7> 'void *' lvalue ParmVar 0x7fc97182c978 'arg' 'void *'
+    | |-CallExpr 0x7fc97186dbb0 <line:6:5, col:10> 'int'
+    | | `-ImplicitCastExpr 0x7fc97186db98 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc97186db40 <col:5> 'int ()' Function 0x7fc97186da90 'foo' 'int ()'
+    | `-<<<NULL>>>
+    |-WhileStmt 0x7fc97186def0 <line:8:3, line:14:5>
+    | |-<<<NULL>>>
+    | |-IntegerLiteral 0x7fc97186dc10 <line:8:10> 'int' 1
+    | `-CompoundStmt 0x7fc97186ded0 <line:9:5, line:14:5>
+    |   |-IfStmt 0x7fc97186dcd8 <line:10:7, line:11:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ImplicitCastExpr 0x7fc97186dc58 <line:10:11> 'void *' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fc97186dc30 <col:11> 'void *' lvalue ParmVar 0x7fc97182c978 'arg' 'void *'
+    |   | |-CallExpr 0x7fc97186dcb0 <line:11:2, col:7> 'int'
+    |   | | `-ImplicitCastExpr 0x7fc97186dc98 <col:2> 'int (*)()' <FunctionToPointerDecay>
+    |   | |   `-DeclRefExpr 0x7fc97186dc70 <col:2> 'int ()' Function 0x7fc97186da90 'foo' 'int ()'
+    |   | `-<<<NULL>>>
+    |   `-CallExpr 0x7fc97186dea0 <line:13:7, col:16> 'int'
+    |     |-ImplicitCastExpr 0x7fc97186de88 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fc97186dde8 <col:7> 'int ()' Function 0x7fc97186dd38 'foo1' 'int ()'
+    |     `-UnaryOperator 0x7fc97186de68 <col:13, col:14> 'int *' prefix '&'
+    |       `-DeclRefExpr 0x7fc97186de10 <col:14> 'int' lvalue Var 0x7fc97186d968 'ts' 'int'
+    `-ReturnStmt 0x7fc97186df48 <line:16:3, col:10>
+      `-ImplicitCastExpr 0x7fc97186df30 <col:10> 'void *' <NullToPointer>
+        `-IntegerLiteral 0x7fc97186df10 <col:10> 'int' 0

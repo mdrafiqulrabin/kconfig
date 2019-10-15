@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7fc50382bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc504015200 <../Data/C2AST/pr53037-1.c:6:1, col:28> col:28 referenced __u64 'unsigned long long'
+| |-BuiltinType 0x7fc50382bec0 'unsigned long long'
+| `-AlignedAttr 0x7fc504015258 <line:7:18, col:27> aligned
+|   `-IntegerLiteral 0x7fc50382c960 <col:26> 'int' 4
+|-RecordDecl 0x7fc5040152a8 <line:9:1, line:15:1> line:9:8 struct foo1 definition
+| |-FieldDecl 0x7fc504015368 <line:11:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fc5040153c8 <line:12:3, col:7> col:7 i2 'int'
+| |-FieldDecl 0x7fc504015428 <line:13:3, col:7> col:7 i3 'int'
+| `-FieldDecl 0x7fc5040154a0 <line:14:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fc5040154e8 <line:17:1, line:23:1> line:17:8 struct foo2 definition
+| |-AlignedAttr 0x7fc504015728 <line:23:18, col:27> aligned
+| | `-IntegerLiteral 0x7fc504015708 <col:26> 'int' 8
+| |-FieldDecl 0x7fc5040155a8 <line:19:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fc504015608 <line:20:3, col:7> col:7 i2 'int'
+| |-FieldDecl 0x7fc504015668 <line:21:3, col:7> col:7 i3 'int'
+| `-FieldDecl 0x7fc5040156c0 <line:22:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fc504015778 <line:25:1, line:30:1> line:25:8 struct foo3 definition
+| |-FieldDecl 0x7fc504015838 <line:27:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fc504015898 <line:28:3, col:7> col:7 i3 'int'
+| `-FieldDecl 0x7fc5040158f0 <line:29:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fc504015938 <line:32:1, line:37:1> line:32:8 struct foo4 definition
+| |-AlignedAttr 0x7fc504015b18 <line:37:18, col:27> aligned
+| | `-IntegerLiteral 0x7fc504015af8 <col:26> 'int' 8
+| |-FieldDecl 0x7fc5040159f8 <line:34:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fc504015a58 <line:35:3, col:7> col:7 i2 'int'
+| `-FieldDecl 0x7fc504015ab0 <line:36:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fc504015b68 <line:39:1, line:43:1> line:39:8 struct foo5 definition
+| |-FieldDecl 0x7fc504015c28 <line:41:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fc504015ca8 <line:42:3, col:7> col:7 x 'int'
+|-RecordDecl 0x7fc504015cf0 <line:45:1, line:49:1> line:45:8 struct foo6 definition
+| |-AlignedAttr 0x7fc504015ea0 <line:49:18, col:28> aligned
+| | `-IntegerLiteral 0x7fc504015e80 <col:26> 'int' 16
+| |-FieldDecl 0x7fc504015db8 <line:47:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fc504015e38 <line:48:3, col:7> col:7 x 'int'
+|-RecordDecl 0x7fc504015ef0 <line:51:1, line:58:1> line:51:8 struct foo7 definition
+| |-AlignedAttr 0x7fc5040161c0 <line:58:18, col:28> aligned
+| | `-IntegerLiteral 0x7fc5040161a0 <col:26> 'int' 16
+| |-FieldDecl 0x7fc504015fb8 <line:53:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7fc504016018 <line:54:3, col:7> col:7 i2 'int'
+| |-FieldDecl 0x7fc504016078 <line:55:3, col:7> col:7 i3 'int'
+| |-FieldDecl 0x7fc5040160d8 <line:56:3, col:7> col:7 i4 'int'
+| `-FieldDecl 0x7fc504016158 <line:57:3, col:7> col:7 x 'int'
+|-RecordDecl 0x7fc50402bc38 <line:60:1, line:64:1> line:60:7 union bar1 definition
+| |-FieldDecl 0x7fc50402bcf8 <line:62:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fc50402bd50 <line:63:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fc50402bd98 <line:66:1, line:70:1> line:66:7 union bar2 definition
+| |-AlignedAttr 0x7fc50402bf18 <line:70:18, col:27> aligned
+| | `-IntegerLiteral 0x7fc50402bef8 <col:26> 'int' 8
+| |-FieldDecl 0x7fc50402be58 <line:68:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fc50402beb0 <line:69:3, col:9> col:9 x '__u64':'unsigned long long'
+|-RecordDecl 0x7fc50402bf68 <line:72:1, line:76:1> line:72:7 union bar3 definition
+| |-FieldDecl 0x7fc50402c028 <line:74:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7fc50402c0a8 <line:75:3, col:7> col:7 x 'int'
+`-RecordDecl 0x7fc50402c0f0 <line:78:1, line:82:1> line:78:7 union bar4 definition
+  |-AlignedAttr 0x7fc50402c2a0 <line:82:18, col:28> aligned
+  | `-IntegerLiteral 0x7fc50402c280 <col:26> 'int' 16
+  |-FieldDecl 0x7fc50402c1b8 <line:80:3, col:7> col:7 i1 'int'
+  `-FieldDecl 0x7fc50402c238 <line:81:3, col:7> col:7 x 'int'

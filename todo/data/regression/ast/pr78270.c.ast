@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7ff1c502bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff1c502c960 <../Data/C2AST/pr78270.c:5:9, line:7:1> line:5:9 struct definition
+|-TypedefDecl 0x7ff1c506d870 <col:1, line:7:3> col:3 referenced bdaddr_t 'struct bdaddr_t':'bdaddr_t'
+| `-ElaboratedType 0x7ff1c506d820 'struct bdaddr_t' sugar
+|   `-RecordType 0x7ff1c506d800 'bdaddr_t'
+|     `-Record 0x7ff1c502c960 ''
+|-VarDecl 0x7ff1c506d8f8 <line:9:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7ff1c506d9e8 <line:10:1, line:14:1> line:10:6 fn1 'void ()'
+  `-CompoundStmt 0x7ff1c506dc58 <line:11:1, line:14:1>
+    `-SwitchStmt 0x7ff1c506dac8 <line:12:3, line:13:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff1c506dab0 <line:12:11> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff1c506da88 <col:11> 'int' lvalue Var 0x7ff1c506d8f8 'a' 'int'
+      `-UnaryOperator 0x7ff1c506dc38 <line:13:5, col:17> 'bdaddr_t *' prefix '&'
+        `-CompoundLiteralExpr 0x7ff1c506dbb0 <col:6, col:17> 'bdaddr_t':'bdaddr_t' lvalue
+          `-InitListExpr 0x7ff1c506db70 <col:16, col:17> 'bdaddr_t':'bdaddr_t'

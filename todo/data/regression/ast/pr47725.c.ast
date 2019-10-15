@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7fe21c81aae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe21c81b760 <../Data/C2AST/pr47725.c:3:1, line:7:1> line:3:8 struct _Unwind_Context definition
+| |-FieldDecl 0x7fe21c84daa0 <line:5:3, col:15> col:9 reg 'void *[17]'
+| `-FieldDecl 0x7fe21c84db00 <line:6:3, col:9> col:9 referenced ra 'void *'
+|-FunctionDecl 0x7fe21c84dd00 <line:8:1, col:42> col:13 used bar 'void (struct _Unwind_Context *)' extern
+| `-ParmVarDecl 0x7fe21c84dc00 <col:18, col:41> col:42 'struct _Unwind_Context *'
+|-FunctionDecl 0x7fe21c84dec0 <line:9:1, line:16:1> line:10:1 __frame_state_for 'void (void *)'
+| |-ParmVarDecl 0x7fe21c84de00 <col:20, col:26> col:26 used pc_target 'void *'
+| `-CompoundStmt 0x7fe21c84e5b0 <line:11:1, line:16:1>
+|   |-DeclStmt 0x7fe21c84dfe8 <line:12:3, col:33>
+|   | `-VarDecl 0x7fe21c84df88 <col:3, col:26> col:26 used context 'struct _Unwind_Context':'struct _Unwind_Context'
+|   |-CallExpr 0x7fe21c84e380 <line:13:3, col:65> 'void *'
+|   | |-ImplicitCastExpr 0x7fe21c84e368 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fe21c84e268 <col:3> '<builtin fn type>' Function 0x7fe21c84e048 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fe21c84e3c0 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fe21c84e2b8 <col:21, col:22> 'struct _Unwind_Context *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fe21c84e290 <col:22> 'struct _Unwind_Context':'struct _Unwind_Context' lvalue Var 0x7fe21c84df88 'context' 'struct _Unwind_Context':'struct _Unwind_Context'
+|   | |-IntegerLiteral 0x7fe21c84e2d8 <col:31> 'int' 0
+|   | `-UnaryExprOrTypeTraitExpr 0x7fe21c84e318 <col:34, col:64> 'unsigned long' sizeof 'struct _Unwind_Context':'struct _Unwind_Context'
+|   |-BinaryOperator 0x7fe21c84e478 <line:14:3, col:16> 'void *' '='
+|   | |-MemberExpr 0x7fe21c84e400 <col:3, col:11> 'void *' lvalue .ra 0x7fe21c84db00
+|   | | `-DeclRefExpr 0x7fe21c84e3d8 <col:3> 'struct _Unwind_Context':'struct _Unwind_Context' lvalue Var 0x7fe21c84df88 'context' 'struct _Unwind_Context':'struct _Unwind_Context'
+|   | `-ImplicitCastExpr 0x7fe21c84e460 <col:16> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fe21c84e438 <col:16> 'void *' lvalue ParmVar 0x7fe21c84de00 'pc_target' 'void *'
+|   `-CallExpr 0x7fe21c84e580 <line:15:3, col:16> 'void'
+|     |-ImplicitCastExpr 0x7fe21c84e568 <col:3> 'void (*)(struct _Unwind_Context *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe21c84e4a0 <col:3> 'void (struct _Unwind_Context *)' Function 0x7fe21c84dd00 'bar' 'void (struct _Unwind_Context *)'
+|     `-UnaryOperator 0x7fe21c84e4f0 <col:8, col:9> 'struct _Unwind_Context *' prefix '&'
+|       `-DeclRefExpr 0x7fe21c84e4c8 <col:9> 'struct _Unwind_Context':'struct _Unwind_Context' lvalue Var 0x7fe21c84df88 'context' 'struct _Unwind_Context':'struct _Unwind_Context'
+`-FunctionDecl 0x7fe21c84e048 <line:13:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fe21c84e0e8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fe21c84e148 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fe21c84e1a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fe21c84e220 <col:3> Implicit

@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fbe8d80e4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbe8e81dc38 <../Data/C2AST/pr57233.c:5:1, col:18> col:18 referenced V4 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+| `-VectorType 0x7fbe8e81dc00 '__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' 4
+|   `-BuiltinType 0x7fbe8d80e680 'unsigned int'
+|-VarDecl 0x7fbe8e81dcc0 <line:6:1, col:4> col:4 used a 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+`-FunctionDecl 0x7fbe8e81de20 <line:8:1, line:12:1> line:9:1 foo 'void (void)'
+  |-CompoundStmt 0x7fbe8e81e128 <line:10:1, line:12:1>
+  | `-BinaryOperator 0x7fbe8e81e100 <line:11:3, col:26> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '='
+  |   |-DeclRefExpr 0x7fbe8e81df08 <col:3> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fbe8e81dcc0 'a' 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+  |   `-BinaryOperator 0x7fbe8e81e0d8 <col:7, col:26> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '|'
+  |     |-ParenExpr 0x7fbe8e81dff8 <col:7, col:14> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+  |     | `-BinaryOperator 0x7fbe8e81dfd0 <col:8, col:13> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '<<'
+  |     |   |-ImplicitCastExpr 0x7fbe8e81df78 <col:8> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+  |     |   | `-DeclRefExpr 0x7fbe8e81df30 <col:8> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fbe8e81dcc0 'a' 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+  |     |   `-ImplicitCastExpr 0x7fbe8e81dfb8 <col:13> 'int __attribute__((ext_vector_type(4)))' <VectorSplat>
+  |     |     `-IntegerLiteral 0x7fbe8e81df58 <col:13> 'int' 2
+  |     `-ParenExpr 0x7fbe8e81e0b8 <col:18, col:26> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+  |       `-BinaryOperator 0x7fbe8e81e090 <col:19, col:24> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' '>>'
+  |         |-ImplicitCastExpr 0x7fbe8e81e060 <col:19> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' <LValueToRValue>
+  |         | `-DeclRefExpr 0x7fbe8e81e018 <col:19> 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int' lvalue Var 0x7fbe8e81dcc0 'a' 'V4':'__attribute__((__vector_size__(4 * sizeof(unsigned int)))) unsigned int'
+  |         `-ImplicitCastExpr 0x7fbe8e81e078 <col:24> 'int __attribute__((ext_vector_type(4)))' <VectorSplat>
+  |           `-IntegerLiteral 0x7fbe8e81e040 <col:24> 'int' 30
+  `-NoInlineAttr 0x7fbe8e81dec0 <line:8:16>

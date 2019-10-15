@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7f963202bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f963202c960 <../Data/C2AST/pr71727.c:4:1, line:11:1> line:4:8 struct test_struct_s definition
+| |-FieldDecl 0x7f9632814238 <line:6:3, col:8> col:8 referenced a 'long'
+| |-FieldDecl 0x7f9632814298 <line:7:3, col:8> col:8 referenced b 'long'
+| |-FieldDecl 0x7f96328142f8 <line:8:3, col:8> col:8 referenced c 'long'
+| |-FieldDecl 0x7f9632814358 <line:9:3, col:8> col:8 referenced d 'long'
+| `-FieldDecl 0x7f96328143b8 <line:10:3, col:17> col:17 referenced e 'unsigned long'
+|-VarDecl 0x7f9632814410 <line:14:1, col:6> col:6 _a 'char'
+|-VarDecl 0x7f9632814618 <line:15:1, col:32> col:22 used xarray 'struct test_struct_s [128]'
+`-FunctionDecl 0x7f9632814740 <line:17:1, line:30:1> line:18:1 _start 'void (void)'
+  `-CompoundStmt 0x7f9632814e20 <line:19:1, line:30:1>
+    |-DeclStmt 0x7f96328148c0 <line:20:3, col:34>
+    | `-VarDecl 0x7f9632814860 <col:3, col:25> col:25 used new_entry 'struct test_struct_s *'
+    |-BinaryOperator 0x7f96328149a8 <line:22:3, col:24> 'struct test_struct_s *' '='
+    | |-DeclRefExpr 0x7f96328148d8 <col:3> 'struct test_struct_s *' lvalue Var 0x7f9632814860 'new_entry' 'struct test_struct_s *'
+    | `-UnaryOperator 0x7f9632814988 <col:15, col:24> 'struct test_struct_s *' prefix '&'
+    |   `-ArraySubscriptExpr 0x7f9632814960 <col:16, col:24> 'struct test_struct_s':'struct test_struct_s' lvalue
+    |     |-ImplicitCastExpr 0x7f9632814948 <col:16> 'struct test_struct_s *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9632814900 <col:16> 'struct test_struct_s [128]' lvalue Var 0x7f9632814618 'xarray' 'struct test_struct_s [128]'
+    |     `-IntegerLiteral 0x7f9632814928 <col:23> 'int' 0
+    |-BinaryOperator 0x7f9632814a80 <line:23:3, col:18> 'long' '='
+    | |-MemberExpr 0x7f9632814a10 <col:3, col:14> 'long' lvalue ->a 0x7f9632814238
+    | | `-ImplicitCastExpr 0x7f96328149f8 <col:3> 'struct test_struct_s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f96328149d0 <col:3> 'struct test_struct_s *' lvalue Var 0x7f9632814860 'new_entry' 'struct test_struct_s *'
+    | `-ImplicitCastExpr 0x7f9632814a68 <col:18> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9632814a48 <col:18> 'int' 1
+    |-BinaryOperator 0x7f9632814b58 <line:24:3, col:18> 'long' '='
+    | |-MemberExpr 0x7f9632814ae8 <col:3, col:14> 'long' lvalue ->b 0x7f9632814298
+    | | `-ImplicitCastExpr 0x7f9632814ad0 <col:3> 'struct test_struct_s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9632814aa8 <col:3> 'struct test_struct_s *' lvalue Var 0x7f9632814860 'new_entry' 'struct test_struct_s *'
+    | `-ImplicitCastExpr 0x7f9632814b40 <col:18> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9632814b20 <col:18> 'int' 2
+    |-BinaryOperator 0x7f9632814c30 <line:25:3, col:18> 'long' '='
+    | |-MemberExpr 0x7f9632814bc0 <col:3, col:14> 'long' lvalue ->c 0x7f96328142f8
+    | | `-ImplicitCastExpr 0x7f9632814ba8 <col:3> 'struct test_struct_s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9632814b80 <col:3> 'struct test_struct_s *' lvalue Var 0x7f9632814860 'new_entry' 'struct test_struct_s *'
+    | `-ImplicitCastExpr 0x7f9632814c18 <col:18> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9632814bf8 <col:18> 'int' 3
+    |-BinaryOperator 0x7f9632814d08 <line:26:3, col:18> 'long' '='
+    | |-MemberExpr 0x7f9632814c98 <col:3, col:14> 'long' lvalue ->d 0x7f9632814358
+    | | `-ImplicitCastExpr 0x7f9632814c80 <col:3> 'struct test_struct_s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9632814c58 <col:3> 'struct test_struct_s *' lvalue Var 0x7f9632814860 'new_entry' 'struct test_struct_s *'
+    | `-ImplicitCastExpr 0x7f9632814cf0 <col:18> 'long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9632814cd0 <col:18> 'int' 4
+    |-BinaryOperator 0x7f9632814de0 <line:27:3, col:18> 'unsigned long' '='
+    | |-MemberExpr 0x7f9632814d70 <col:3, col:14> 'unsigned long' lvalue ->e 0x7f96328143b8
+    | | `-ImplicitCastExpr 0x7f9632814d58 <col:3> 'struct test_struct_s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9632814d30 <col:3> 'struct test_struct_s *' lvalue Var 0x7f9632814860 'new_entry' 'struct test_struct_s *'
+    | `-ImplicitCastExpr 0x7f9632814dc8 <col:18> 'unsigned long' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9632814da8 <col:18> 'int' 5
+    `-ReturnStmt 0x7f9632814e08 <line:29:3>

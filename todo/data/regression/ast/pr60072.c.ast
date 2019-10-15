@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f9eec80e8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9eec80f578 <../Data/C2AST/pr60072.c:3:1, col:9> col:5 used c 'int' cinit
+| `-IntegerLiteral 0x7f9eec850a40 <col:9> 'int' 1
+|-FunctionDecl 0x7f9eec850b88 <line:5:1, line:9:1> line:6:13 used foo 'int *(int *)' static
+| |-ParmVarDecl 0x7f9eec850ac0 <col:18, col:23> col:23 used p 'int *'
+| `-CompoundStmt 0x7f9eec850c88 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f9eec850c70 <line:8:3, col:10>
+|     `-ImplicitCastExpr 0x7f9eec850c58 <col:10> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9eec850c30 <col:10> 'int *' lvalue ParmVar 0x7f9eec850ac0 'p' 'int *'
+`-FunctionDecl 0x7f9eec850cf0 <line:11:1, line:16:1> line:12:1 main 'int ()'
+  `-CompoundStmt 0x7f9eec850f78 <line:13:1, line:16:1>
+    |-BinaryOperator 0x7f9eec850eb0 <line:14:3, col:15> 'int' '='
+    | |-UnaryOperator 0x7f9eec850e70 <col:3, col:11> 'int' lvalue prefix '*'
+    | | `-CallExpr 0x7f9eec850e40 <col:4, col:11> 'int *'
+    | |   |-ImplicitCastExpr 0x7f9eec850e28 <col:4> 'int *(*)(int *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7f9eec850d90 <col:4> 'int *(int *)' Function 0x7f9eec850b88 'foo' 'int *(int *)'
+    | |   `-UnaryOperator 0x7f9eec850de0 <col:9, col:10> 'int *' prefix '&'
+    | |     `-DeclRefExpr 0x7f9eec850db8 <col:10> 'int' lvalue Var 0x7f9eec80f578 'c' 'int'
+    | `-IntegerLiteral 0x7f9eec850e90 <col:15> 'int' 2
+    `-ReturnStmt 0x7f9eec850f60 <line:15:3, col:14>
+      `-BinaryOperator 0x7f9eec850f38 <col:10, col:14> 'int' '-'
+        |-ImplicitCastExpr 0x7f9eec850f20 <col:10> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9eec850ed8 <col:10> 'int' lvalue Var 0x7f9eec80f578 'c' 'int'
+        `-IntegerLiteral 0x7f9eec850f00 <col:14> 'int' 2

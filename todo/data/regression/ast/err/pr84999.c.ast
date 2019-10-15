@@ -1,0 +1,32 @@
+../Data/C2AST/pr84999.c:5:67: error: __float128 is not supported on this target
+typedef __float128 V __attribute__ ((__vector_size__ (2 * sizeof (__float128))));
+                                                                  ^
+../Data/C2AST/pr84999.c:5:9: error: __float128 is not supported on this target
+typedef __float128 V __attribute__ ((__vector_size__ (2 * sizeof (__float128))));
+        ^
+2 errors generated.
+TranslationUnitDecl 0x7fd86382b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd86382b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd86382b580 '__int128'
+|-TypedefDecl 0x7fd86382b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd86382b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fd86382bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd86382b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd86382b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd86382bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd86382bc00 'char *'
+|   `-BuiltinType 0x7fd86382b380 'char'
+|-TypedefDecl 0x7fd86382bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd86382beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd86382bd20 'struct __va_list_tag'
+|     `-Record 0x7fd86382bc98 '__va_list_tag'
+|-TypedefDecl 0x7fd86402bc38 <../Data/C2AST/pr84999.c:5:1, col:20> col:20 referenced V '__attribute__((__vector_size__(2 * sizeof(__float128)))) __float128'
+| `-VectorType 0x7fd86402bc00 '__attribute__((__vector_size__(2 * sizeof(__float128)))) __float128' 2
+|   `-BuiltinType 0x7fd86382b540 '__float128'
+|-VarDecl 0x7fd86402bcc0 <line:6:1, col:3> col:3 referenced a 'V':'__attribute__((__vector_size__(2 * sizeof(__float128)))) __float128'
+|-VarDecl 0x7fd86402be98 <line:7:1, col:17> col:17 b 'typeof (a != 0)':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|-VarDecl 0x7fd86402c008 <line:8:1, col:17> col:17 c 'typeof (a == 0)':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|-VarDecl 0x7fd86402c178 <line:9:1, col:16> col:16 d 'typeof (a < 0)':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|-VarDecl 0x7fd86402c2e8 <line:10:1, col:17> col:17 e 'typeof (a <= 0)':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+|-VarDecl 0x7fd86402c458 <line:11:1, col:16> col:16 f 'typeof (a > 0)':'__attribute__((__vector_size__(2 * sizeof(char)))) char'
+`-VarDecl 0x7fd86402c5c8 <line:12:1, col:17> col:17 g 'typeof (a >= 0)':'__attribute__((__vector_size__(2 * sizeof(char)))) char'

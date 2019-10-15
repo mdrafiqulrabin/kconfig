@@ -1,0 +1,605 @@
+TranslationUnitDecl 0x7fdb1782bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdb18040a88 <../Data/C2AST/pr51244-21.c:4:1, line:10:1> line:5:1 used blk_oversized_queue 'int (int *)' static inline
+| |-ParmVarDecl 0x7fdb180409c0 <col:22, col:27> col:27 used q 'int *'
+| `-CompoundStmt 0x7fdb18040e08 <line:6:1, line:10:1>
+|   |-IfStmt 0x7fdb18040cd0 <line:7:3, line:8:20>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fdb18040bb8 <line:7:7, col:10> 'int' <LValueToRValue>
+|   | | `-ArraySubscriptExpr 0x7fdb18040b90 <col:7, col:10> 'int' lvalue
+|   | |   |-ImplicitCastExpr 0x7fdb18040b78 <col:7> 'int *' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7fdb18040b30 <col:7> 'int *' lvalue ParmVar 0x7fdb180409c0 'q' 'int *'
+|   | |   `-IntegerLiteral 0x7fdb18040b58 <col:9> 'int' 2
+|   | |-ReturnStmt 0x7fdb18040cb8 <line:8:5, col:20>
+|   | | `-BinaryOperator 0x7fdb18040c90 <col:12, col:20> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fdb18040c78 <col:12, col:15> 'int' <LValueToRValue>
+|   | |   | `-ArraySubscriptExpr 0x7fdb18040c30 <col:12, col:15> 'int' lvalue
+|   | |   |   |-ImplicitCastExpr 0x7fdb18040c18 <col:12> 'int *' <LValueToRValue>
+|   | |   |   | `-DeclRefExpr 0x7fdb18040bd0 <col:12> 'int *' lvalue ParmVar 0x7fdb180409c0 'q' 'int *'
+|   | |   |   `-IntegerLiteral 0x7fdb18040bf8 <col:14> 'int' 1
+|   | |   `-IntegerLiteral 0x7fdb18040c58 <col:20> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fdb18040df0 <line:9:3, col:18>
+|     `-BinaryOperator 0x7fdb18040dc8 <col:10, col:18> 'int' '=='
+|       |-ImplicitCastExpr 0x7fdb18040db0 <col:10, col:13> 'int' <LValueToRValue>
+|       | `-ArraySubscriptExpr 0x7fdb18040d68 <col:10, col:13> 'int' lvalue
+|       |   |-ImplicitCastExpr 0x7fdb18040d50 <col:10> 'int *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x7fdb18040d08 <col:10> 'int *' lvalue ParmVar 0x7fdb180409c0 'q' 'int *'
+|       |   `-IntegerLiteral 0x7fdb18040d30 <col:12> 'int' 0
+|       `-IntegerLiteral 0x7fdb18040d90 <col:18> 'int' 0
+|-FunctionDecl 0x7fdb18040f98 <line:12:1, line:24:1> line:13:1 used get_request 'int (int *, int)'
+| |-ParmVarDecl 0x7fdb18040e40 <col:14, col:19> col:19 used q 'int *'
+| |-ParmVarDecl 0x7fdb18040eb8 <col:22, col:26> col:26 used rw 'int'
+| |-CompoundStmt 0x7fdb18041458 <line:14:1, line:24:1>
+| | |-IfStmt 0x7fdb180413c8 <line:15:3, line:21:5>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-CallExpr 0x7fdb18041120 <line:15:7, col:29> 'int'
+| | | | |-ImplicitCastExpr 0x7fdb18041108 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7fdb18041090 <col:7> 'int (int *)' Function 0x7fdb18040a88 'blk_oversized_queue' 'int (int *)'
+| | | | `-ImplicitCastExpr 0x7fdb18041150 <col:28> 'int *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fdb180410b8 <col:28> 'int *' lvalue ParmVar 0x7fdb18040e40 'q' 'int *'
+| | | |-CompoundStmt 0x7fdb180413a8 <line:16:5, line:21:5>
+| | | | |-IfStmt 0x7fdb18041338 <line:17:7, line:18:10>
+| | | | | |-<<<NULL>>>
+| | | | | |-<<<NULL>>>
+| | | | | |-BinaryOperator 0x7fdb180412b8 <line:17:11, col:32> 'int' '||'
+| | | | | | |-ParenExpr 0x7fdb180411f0 <col:11, col:19> 'int'
+| | | | | | | `-BinaryOperator 0x7fdb180411c8 <col:12, col:18> 'int' '=='
+| | | | | | |   |-ImplicitCastExpr 0x7fdb180411b0 <col:12> 'int' <LValueToRValue>
+| | | | | | |   | `-DeclRefExpr 0x7fdb18041168 <col:12> 'int' lvalue ParmVar 0x7fdb18040eb8 'rw' 'int'
+| | | | | | |   `-IntegerLiteral 0x7fdb18041190 <col:18> 'int' 1
+| | | | | | `-ParenExpr 0x7fdb18041298 <col:24, col:32> 'int'
+| | | | | |   `-BinaryOperator 0x7fdb18041270 <col:25, col:31> 'int' '=='
+| | | | | |     |-ImplicitCastExpr 0x7fdb18041258 <col:25> 'int' <LValueToRValue>
+| | | | | |     | `-DeclRefExpr 0x7fdb18041210 <col:25> 'int' lvalue ParmVar 0x7fdb18040eb8 'rw' 'int'
+| | | | | |     `-IntegerLiteral 0x7fdb18041238 <col:31> 'int' 0
+| | | | | |-ReturnStmt 0x7fdb18041320 <line:18:2, col:10>
+| | | | | | `-UnaryOperator 0x7fdb18041300 <col:9, col:10> 'int' prefix '-'
+| | | | | |   `-IntegerLiteral 0x7fdb180412e0 <col:10> 'int' 33
+| | | | | `-<<<NULL>>>
+| | | | `-ReturnStmt 0x7fdb18041390 <line:20:7, col:14>
+| | | |   `-IntegerLiteral 0x7fdb18041370 <col:14> 'int' 0
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7fdb18041440 <line:23:3, col:11>
+| |   `-UnaryOperator 0x7fdb18041420 <col:10, col:11> 'int' prefix '-'
+| |     `-IntegerLiteral 0x7fdb18041400 <col:11> 'int' 100
+| `-NoInlineAttr 0x7fdb18041048 <line:12:21>
+|-FunctionDecl 0x7fdb18041548 <line:26:1, line:75:1> line:26:5 main 'int (void)'
+| `-CompoundStmt 0x7fdb18049eb0 <line:27:1, line:75:1>
+|   |-DeclStmt 0x7fdb18042710 <line:28:3, col:11>
+|   | `-VarDecl 0x7fdb180426b0 <col:3, col:10> col:7 used x 'int [3]'
+|   |-DeclStmt 0x7fdb180427a0 <line:29:3, col:8>
+|   | `-VarDecl 0x7fdb18042740 <col:3, col:7> col:7 used r 'int'
+|   |-BinaryOperator 0x7fdb18042860 <line:31:3, col:10> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18042818 <col:3, col:6> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18042800 <col:3> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb180427b8 <col:3> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb180427e0 <col:5> 'int' 0
+|   | `-IntegerLiteral 0x7fdb18042840 <col:10> 'int' 0
+|   |-BinaryOperator 0x7fdb18042930 <col:13, col:20> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb180428e8 <col:13, col:16> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb180428d0 <col:13> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18042888 <col:13> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb180428b0 <col:15> 'int' 1
+|   | `-IntegerLiteral 0x7fdb18042910 <col:20> 'int' 1
+|   |-BinaryOperator 0x7fdb18042a00 <col:23, col:30> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb180429b8 <col:23, col:26> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb180429a0 <col:23> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18042958 <col:23> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18042980 <col:25> 'int' 2
+|   | `-IntegerLiteral 0x7fdb180429e0 <col:30> 'int' 1
+|   |-BinaryOperator 0x7fdb18042b50 <line:32:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18042a28 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18042b00 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18042ae8 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18042a50 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18042b38 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18042a78 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18042aa0 <col:23> 'int' 0
+|   |-ParenExpr 0x7fdb180432f8 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb180432c8 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18042f00 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18042ee8 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18042d88 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18042f38 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18042e78 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18042e58 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18042e30 <../Data/C2AST/pr51244-21.c:33:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18042e18 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18042db0 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb18042df8 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18042dd8 <col:17> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb18042f50 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18042e98 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb180431b0 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18043198 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18042f68 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb180431f8 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18043038 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18043008 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18043228 <<scratch space>:10:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18043210 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18043098 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb180430e0 <line:11:1> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb18043258 <line:9:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18043240 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18043138 <col:1> 'char [9]' lvalue "r == -33"
+|   |   `-CStyleCastExpr 0x7fdb180432a0 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18043270 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18043418 <../Data/C2AST/pr51244-21.c:35:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18043318 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb180433c8 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb180433b0 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18043340 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18043400 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18043368 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18043390 <col:23> 'int' 1
+|   |-ParenExpr 0x7fdb18044870 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18044840 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18043588 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18043570 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18043440 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb180435c0 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18043530 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18043510 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb180434e8 <../Data/C2AST/pr51244-21.c:36:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb180434d0 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18043468 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb180434b0 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18043490 <col:17> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb180435d8 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18043550 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18044728 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18044710 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18044600 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18044770 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18044658 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18044628 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb180447a0 <<scratch space>:13:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18044788 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18044678 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb180446c0 <line:14:1> 'int' 36
+|   |   | `-ImplicitCastExpr 0x7fdb180447d0 <line:12:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb180447b8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb180446e0 <col:1> 'char [9]' lvalue "r == -33"
+|   |   `-CStyleCastExpr 0x7fdb18044818 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb180447e8 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18044990 <../Data/C2AST/pr51244-21.c:38:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18044890 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18044940 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18044928 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180448b8 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18044978 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180448e0 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18044908 <col:23> 'int' 2
+|   |-ParenExpr 0x7fdb18044df8 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18044dc8 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18044ae0 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18044ac8 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb180449b8 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18044b18 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18044a88 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18044a68 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18044a40 <../Data/C2AST/pr51244-21.c:39:11, col:16> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18044a28 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb180449e0 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-IntegerLiteral 0x7fdb18044a08 <col:16> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7fdb18044b30 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18044aa8 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18044cb0 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18044c98 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18044b48 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18044cf8 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18044ba0 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18044b70 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18044d28 <<scratch space>:16:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18044d10 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18044bc0 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18044c08 <line:17:1> 'int' 39
+|   |   | `-ImplicitCastExpr 0x7fdb18044d58 <line:15:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18044d40 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18044c68 <col:1> 'char [7]' lvalue "r == 0"
+|   |   `-CStyleCastExpr 0x7fdb18044da0 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18044d70 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18044ec0 <../Data/C2AST/pr51244-21.c:42:3, col:10> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18044e78 <col:3, col:6> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18044e60 <col:3> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18044e18 <col:3> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18044e40 <col:5> 'int' 0
+|   | `-IntegerLiteral 0x7fdb18044ea0 <col:10> 'int' 0
+|   |-BinaryOperator 0x7fdb18044f90 <col:13, col:20> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18044f48 <col:13, col:16> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18044f30 <col:13> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18044ee8 <col:13> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18044f10 <col:15> 'int' 1
+|   | `-IntegerLiteral 0x7fdb18044f70 <col:20> 'int' 0
+|   |-BinaryOperator 0x7fdb18045060 <col:23, col:30> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18045018 <col:23, col:26> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18045000 <col:23> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18044fb8 <col:23> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18044fe0 <col:25> 'int' 2
+|   | `-IntegerLiteral 0x7fdb18045040 <col:30> 'int' 1
+|   |-BinaryOperator 0x7fdb18045188 <line:43:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18045088 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18045138 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18045120 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180450b0 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18045170 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180450d8 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18045100 <col:23> 'int' 0
+|   |-ParenExpr 0x7fdb18045630 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18045600 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb180452f8 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb180452e0 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb180451b0 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18045330 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb180452a0 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18045280 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18045258 <../Data/C2AST/pr51244-21.c:44:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18045240 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb180451d8 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb18045220 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18045200 <col:17> 'int' 100
+|   |   | `-ImplicitCastExpr 0x7fdb18045348 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb180452c0 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb180454c8 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb180454b0 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18045360 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18045510 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb180453b8 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18045388 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18045540 <<scratch space>:19:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18045528 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb180453d8 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18045420 <line:20:1> 'int' 44
+|   |   | `-ImplicitCastExpr 0x7fdb18045570 <line:18:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18045558 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18045478 <col:1> 'char [10]' lvalue "r == -100"
+|   |   `-CStyleCastExpr 0x7fdb180455b8 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18045588 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18045750 <../Data/C2AST/pr51244-21.c:46:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18045650 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18045700 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb180456e8 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18045678 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18045738 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180456a0 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb180456c8 <col:23> 'int' 1
+|   |-ParenExpr 0x7fdb18045ba0 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18045b70 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb180458c0 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb180458a8 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18045778 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb180458f8 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18045868 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18045848 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18045820 <../Data/C2AST/pr51244-21.c:47:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18045808 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb180457a0 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb180457e8 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb180457c8 <col:17> 'int' 100
+|   |   | `-ImplicitCastExpr 0x7fdb18045910 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18045888 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18045a58 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18045a40 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18045928 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18045aa0 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18045980 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18045950 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18045ad0 <<scratch space>:22:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18045ab8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb180459a0 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb180459e8 <line:23:1> 'int' 47
+|   |   | `-ImplicitCastExpr 0x7fdb18045b00 <line:21:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18045ae8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18045a08 <col:1> 'char [10]' lvalue "r == -100"
+|   |   `-CStyleCastExpr 0x7fdb18045b48 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18045b18 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18045cc0 <../Data/C2AST/pr51244-21.c:49:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18045bc0 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18045c70 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18045c58 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18045be8 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18045ca8 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18045c10 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18045c38 <col:23> 'int' 2
+|   |-ParenExpr 0x7fdb18046110 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb180460e0 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18045e30 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18045e18 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18045ce8 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18045e68 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18045dd8 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18045db8 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18045d90 <../Data/C2AST/pr51244-21.c:50:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18045d78 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18045d10 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb18045d58 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18045d38 <col:17> 'int' 100
+|   |   | `-ImplicitCastExpr 0x7fdb18045e80 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18045df8 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18045fc8 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18045fb0 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18045e98 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18046010 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18045ef0 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18045ec0 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18046040 <<scratch space>:25:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18046028 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18045f10 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18045f58 <line:26:1> 'int' 50
+|   |   | `-ImplicitCastExpr 0x7fdb18046070 <line:24:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18046058 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18045f78 <col:1> 'char [10]' lvalue "r == -100"
+|   |   `-CStyleCastExpr 0x7fdb180460b8 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18046088 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb180461d8 <../Data/C2AST/pr51244-21.c:53:3, col:10> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18046190 <col:3, col:6> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18046178 <col:3> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18046130 <col:3> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18046158 <col:5> 'int' 0
+|   | `-IntegerLiteral 0x7fdb180461b8 <col:10> 'int' 0
+|   |-BinaryOperator 0x7fdb180462a8 <col:13, col:20> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18046260 <col:13, col:16> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18046248 <col:13> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18046200 <col:13> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18046228 <col:15> 'int' 1
+|   | `-IntegerLiteral 0x7fdb18046288 <col:20> 'int' 0
+|   |-BinaryOperator 0x7fdb18046378 <col:23, col:30> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18046330 <col:23, col:26> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18046318 <col:23> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb180462d0 <col:23> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb180462f8 <col:25> 'int' 2
+|   | `-IntegerLiteral 0x7fdb18046358 <col:30> 'int' 0
+|   |-BinaryOperator 0x7fdb180464a0 <line:54:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb180463a0 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18046450 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18046438 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180463c8 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18046488 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb180463f0 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18046418 <col:23> 'int' 0
+|   |-ParenExpr 0x7fdb180468f0 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb180468c0 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18046618 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18046600 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb180464c8 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18046650 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb180465b8 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18046598 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18046570 <../Data/C2AST/pr51244-21.c:55:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18046558 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb180464f0 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb18046538 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18046518 <col:17> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb18046668 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb180465d8 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb180467a8 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18046790 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18046680 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb180467f0 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb180466d8 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb180466a8 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18046820 <<scratch space>:28:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18046808 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb180466f8 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18046740 <line:29:1> 'int' 55
+|   |   | `-ImplicitCastExpr 0x7fdb18046850 <line:27:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18046838 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18046760 <col:1> 'char [9]' lvalue "r == -33"
+|   |   `-CStyleCastExpr 0x7fdb18046898 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18046868 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18046a10 <../Data/C2AST/pr51244-21.c:57:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18046910 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb180469c0 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb180469a8 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18046938 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb180469f8 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18046960 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18046988 <col:23> 'int' 1
+|   |-ParenExpr 0x7fdb18046e58 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18046e28 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18046b80 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18046b68 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18046a38 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18046bb8 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18046b28 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18046b08 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18046ae0 <../Data/C2AST/pr51244-21.c:58:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18046ac8 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18046a60 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb18046aa8 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18046a88 <col:17> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb18046bd0 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18046b48 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18046d10 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18046cf8 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18046be8 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18046d58 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18046c40 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18046c10 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18046d88 <<scratch space>:31:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18046d70 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18046c60 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18046ca8 <line:32:1> 'int' 58
+|   |   | `-ImplicitCastExpr 0x7fdb18046db8 <line:30:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18046da0 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18046cc8 <col:1> 'char [9]' lvalue "r == -33"
+|   |   `-CStyleCastExpr 0x7fdb18046e00 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18046dd0 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18046f78 <../Data/C2AST/pr51244-21.c:60:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18046e78 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18046f28 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18046f10 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18046ea0 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18046f60 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18046ec8 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18046ef0 <col:23> 'int' 2
+|   |-ParenExpr 0x7fdb180473a0 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18047370 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb180470c8 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb180470b0 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18046fa0 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18047100 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18047070 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18047050 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18047028 <../Data/C2AST/pr51244-21.c:61:11, col:16> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18047010 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18046fc8 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-IntegerLiteral 0x7fdb18046ff0 <col:16> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7fdb18047118 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18047090 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18047258 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18047240 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18047130 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb180472a0 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18047188 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18047158 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb180472d0 <<scratch space>:34:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb180472b8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb180471a8 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb180471f0 <line:35:1> 'int' 61
+|   |   | `-ImplicitCastExpr 0x7fdb18047300 <line:33:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb180472e8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18047210 <col:1> 'char [7]' lvalue "r == 0"
+|   |   `-CStyleCastExpr 0x7fdb18047348 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18047318 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18047468 <../Data/C2AST/pr51244-21.c:64:3, col:10> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb18047420 <col:3, col:6> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb18047408 <col:3> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb180473c0 <col:3> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb180473e8 <col:5> 'int' 0
+|   | `-IntegerLiteral 0x7fdb18047448 <col:10> 'int' 0
+|   |-BinaryOperator 0x7fdb18047538 <col:13, col:20> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb180474f0 <col:13, col:16> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb180474d8 <col:13> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18047490 <col:13> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb180474b8 <col:15> 'int' 1
+|   | `-IntegerLiteral 0x7fdb18047518 <col:20> 'int' 0
+|   |-BinaryOperator 0x7fdb18047620 <col:23, col:30> 'int' '='
+|   | |-ArraySubscriptExpr 0x7fdb180475c0 <col:23, col:26> 'int' lvalue
+|   | | |-ImplicitCastExpr 0x7fdb180475a8 <col:23> 'int *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fdb18047560 <col:23> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   | | `-IntegerLiteral 0x7fdb18047588 <col:25> 'int' 2
+|   | `-IntegerLiteral 0x7fdb18047600 <col:30> 'int' 0
+|   |-BinaryOperator 0x7fdb18047748 <line:65:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18047648 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb180476f8 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb180476e0 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18047670 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18047730 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18047698 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb180476c0 <col:23> 'int' 0
+|   |-ParenExpr 0x7fdb18047b90 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18047b60 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb180478b8 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb180478a0 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18047770 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb180478f0 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18047860 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18047840 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18047818 <../Data/C2AST/pr51244-21.c:66:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18047800 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18047798 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb180477e0 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb180477c0 <col:17> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb18047908 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18047880 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18047a48 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18047a30 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18047920 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18047a90 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18047978 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18047948 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18047ac0 <<scratch space>:37:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18047aa8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18047998 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb180479e0 <line:38:1> 'int' 66
+|   |   | `-ImplicitCastExpr 0x7fdb18047af0 <line:36:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18047ad8 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18047a00 <col:1> 'char [9]' lvalue "r == -33"
+|   |   `-CStyleCastExpr 0x7fdb18047b38 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18047b08 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18047cb0 <../Data/C2AST/pr51244-21.c:68:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18047bb0 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb18047c60 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb18047c48 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18047bd8 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18047c98 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18047c00 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18047c28 <col:23> 'int' 1
+|   |-ParenExpr 0x7fdb180480f8 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb180480c8 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18047e20 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18047e08 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18047cd8 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb18047e58 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18047dc8 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb18047da8 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb18047d80 <../Data/C2AST/pr51244-21.c:69:11, col:17> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb18047d68 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18047d00 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-UnaryOperator 0x7fdb18047d48 <col:16, col:17> 'int' prefix '-'
+|   |   | |         `-IntegerLiteral 0x7fdb18047d28 <col:17> 'int' 33
+|   |   | `-ImplicitCastExpr 0x7fdb18047e70 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18047de8 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb18047fb0 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb18047f98 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb18047e88 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18047ff8 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18047ee0 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb18047eb0 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18048028 <<scratch space>:40:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18048010 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18047f00 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18047f48 <line:41:1> 'int' 69
+|   |   | `-ImplicitCastExpr 0x7fdb18048058 <line:39:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18048040 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb18047f68 <col:1> 'char [9]' lvalue "r == -33"
+|   |   `-CStyleCastExpr 0x7fdb180480a0 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb18048070 <col:89> 'int' 0
+|   |-BinaryOperator 0x7fdb18048218 <../Data/C2AST/pr51244-21.c:71:3, col:24> 'int' '='
+|   | |-DeclRefExpr 0x7fdb18048118 <col:3> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   | `-CallExpr 0x7fdb180481c8 <col:7, col:24> 'int'
+|   |   |-ImplicitCastExpr 0x7fdb180481b0 <col:7> 'int (*)(int *, int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18048140 <col:7> 'int (int *, int)' Function 0x7fdb18040f98 'get_request' 'int (int *, int)'
+|   |   |-ImplicitCastExpr 0x7fdb18048200 <col:20> 'int *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fdb18048168 <col:20> 'int [3]' lvalue Var 0x7fdb180426b0 'x' 'int [3]'
+|   |   `-IntegerLiteral 0x7fdb18048190 <col:23> 'int' 2
+|   |-ParenExpr 0x7fdb18049e58 </usr/include/assert.h:93:5, col:90> 'void'
+|   | `-ConditionalOperator 0x7fdb18049e28 <col:6, col:89> 'void'
+|   |   |-CallExpr 0x7fdb18048368 <col:6, col:30> 'long'
+|   |   | |-ImplicitCastExpr 0x7fdb18048350 <col:6> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   |   | | `-DeclRefExpr 0x7fdb18048240 <col:6> '<builtin fn type>' Function 0x7fdb18042bc0 '__builtin_expect' 'long (long, long)'
+|   |   | |-ImplicitCastExpr 0x7fdb180483a0 <col:23, col:26> 'long' <IntegralCast>
+|   |   | | `-UnaryOperator 0x7fdb18048310 <col:23, col:26> 'int' prefix '!'
+|   |   | |   `-ParenExpr 0x7fdb180482f0 <col:24, col:26> 'int'
+|   |   | |     `-BinaryOperator 0x7fdb180482c8 <../Data/C2AST/pr51244-21.c:72:11, col:16> 'int' '=='
+|   |   | |       |-ImplicitCastExpr 0x7fdb180482b0 <col:11> 'int' <LValueToRValue>
+|   |   | |       | `-DeclRefExpr 0x7fdb18048268 <col:11> 'int' lvalue Var 0x7fdb18042740 'r' 'int'
+|   |   | |       `-IntegerLiteral 0x7fdb18048290 <col:16> 'int' 0
+|   |   | `-ImplicitCastExpr 0x7fdb180483b8 </usr/include/assert.h:93:29> 'long' <IntegralCast>
+|   |   |   `-IntegerLiteral 0x7fdb18048330 <col:29> 'int' 0
+|   |   |-CallExpr 0x7fdb180484f8 <col:34, col:79> 'void'
+|   |   | |-ImplicitCastExpr 0x7fdb180484e0 <col:34> 'void (*)(const char *, const char *, int, const char *) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7fdb180483d0 <col:34> 'void (const char *, const char *, int, const char *) __attribute__((noreturn))' Function 0x7fdb18040830 '__assert_rtn' 'void (const char *, const char *, int, const char *) __attribute__((noreturn))'
+|   |   | |-ImplicitCastExpr 0x7fdb18048540 <col:47> 'const char *' <ArrayToPointerDecay>
+|   |   | | `-PredefinedExpr 0x7fdb18048428 <col:47> 'const char [5]' lvalue __func__
+|   |   | |   `-StringLiteral 0x7fdb180483f8 <col:47> 'const char [5]' lvalue "main"
+|   |   | |-ImplicitCastExpr 0x7fdb18048570 <<scratch space>:43:1> 'const char *' <BitCast>
+|   |   | | `-ImplicitCastExpr 0x7fdb18048558 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x7fdb18048448 <col:1> 'char [27]' lvalue "../Data/C2AST/pr51244-21.c"
+|   |   | |-IntegerLiteral 0x7fdb18048490 <line:44:1> 'int' 72
+|   |   | `-ImplicitCastExpr 0x7fdb180485a0 <line:42:1> 'const char *' <BitCast>
+|   |   |   `-ImplicitCastExpr 0x7fdb18048588 <col:1> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x7fdb180484b0 <col:1> 'char [7]' lvalue "r == 0"
+|   |   `-CStyleCastExpr 0x7fdb18049e00 </usr/include/assert.h:93:83, col:89> 'void' <ToVoid>
+|   |     `-IntegerLiteral 0x7fdb180485b8 <col:89> 'int' 0
+|   `-ReturnStmt 0x7fdb18049e98 <../Data/C2AST/pr51244-21.c:74:3, col:10>
+|     `-IntegerLiteral 0x7fdb18049e78 <col:10> 'int' 0
+`-FunctionDecl 0x7fdb18042bc0 </usr/include/assert.h:93:6> col:6 implicit used __builtin_expect 'long (long, long)' extern
+  |-ParmVarDecl 0x7fdb18042c60 <<invalid sloc>> <invalid sloc> 'long'
+  |-ParmVarDecl 0x7fdb18042cc0 <<invalid sloc>> <invalid sloc> 'long'
+  |-NoThrowAttr 0x7fdb18042d30 <col:6> Implicit
+  `-ConstAttr 0x7fdb18042d78 <col:6> Implicit

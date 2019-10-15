@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fe6148114e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe614854000 <../Data/C2AST/pr71585.c:12:1, line:15:1> line:12:35 foo 'void ()'
+| |-CompoundStmt 0x7fe6148541d8 <line:13:1, line:15:1>
+| | `-GCCAsmStmt 0x7fe614854190 <line:14:3, col:10>
+| `-ConstructorAttr 0x7fe6148540a0 <line:12:16> 65535
+`-FunctionDecl 0x7fe614854240 <line:19:1, col:24> col:5 main 'int ()'
+  `-CompoundStmt 0x7fe614854318 <col:12, col:24>
+    `-ReturnStmt 0x7fe614854300 <col:14, col:21>
+      `-IntegerLiteral 0x7fe6148542e0 <col:21> 'int' 0

@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7faa8302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7faa8400a1a8 <../Data/C2AST/pr79972.c:6:1, line:16:1> line:7:1 f 'int (int, int *, int *)'
+| |-ParmVarDecl 0x7faa8302c978 <col:4, col:8> col:8 used dim 'int'
+| |-ParmVarDecl 0x7faa8400a040 <col:13, col:18> col:18 used b 'int *'
+| |-ParmVarDecl 0x7faa8400a0b8 <col:21, col:26> col:26 used c 'int *'
+| `-CompoundStmt 0x7faa8400b1a8 <line:8:1, line:16:1>
+|   |-DeclStmt 0x7faa8400a410 <line:9:3, col:26>
+|   | `-VarDecl 0x7faa8400a3b0 <col:3, col:25> col:7 used newcentroid 'int [3][dim]'
+|   |-DeclStmt 0x7faa8400a570 <line:10:3, col:26>
+|   | `-VarDecl 0x7faa8400a440 <col:3, col:25> col:8 used a 'int *' cinit
+|   |   `-ImplicitCastExpr 0x7faa8400a558 <col:12, col:25> 'int *' <ArrayToPointerDecay>
+|   |     `-ArraySubscriptExpr 0x7faa8400a530 <col:12, col:25> 'int [dim]' lvalue
+|   |       |-ImplicitCastExpr 0x7faa8400a518 <col:12> 'int (*)[dim]' <ArrayToPointerDecay>
+|   |       | `-DeclRefExpr 0x7faa8400a4a0 <col:12> 'int [3][dim]' lvalue Var 0x7faa8400a3b0 'newcentroid' 'int [3][dim]'
+|   |       `-IntegerLiteral 0x7faa8400a4c8 <col:24> 'int' 2
+|   |-DeclStmt 0x7faa8400a6b0 <line:11:3, col:18>
+|   | |-VarDecl 0x7faa8400a5a0 <col:3, col:7> col:7 used i 'int'
+|   | `-VarDecl 0x7faa8400a618 <col:3, col:17> col:10 used dist 'int' cinit
+|   |   `-IntegerLiteral 0x7faa8400a678 <col:17> 'int' 0
+|   |-CallExpr 0x7faa8400ab00 <line:12:3, col:57> 'void *'
+|   | |-ImplicitCastExpr 0x7faa8400aae8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7faa8400a968 <col:3> '<builtin fn type>' Function 0x7faa8400a748 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7faa8400ab58 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7faa8400ab40 <col:21> 'int (*)[dim]' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7faa8400a990 <col:21> 'int [3][dim]' lvalue Var 0x7faa8400a3b0 'newcentroid' 'int [3][dim]'
+|   | |-ImplicitCastExpr 0x7faa8400ab88 <col:34> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7faa8400ab70 <col:34> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7faa8400a9b8 <col:34> 'int *' lvalue ParmVar 0x7faa8400a0b8 'c' 'int *'
+|   | `-UnaryExprOrTypeTraitExpr 0x7faa8400aa70 <col:37, col:56> 'unsigned long' sizeof
+|   |   `-ParenExpr 0x7faa8400aa50 <col:44, col:56> 'int [3][dim]' lvalue
+|   |     `-DeclRefExpr 0x7faa8400aa28 <col:45> 'int [3][dim]' lvalue Var 0x7faa8400a3b0 'newcentroid' 'int [3][dim]'
+|   |-ForStmt 0x7faa8400b118 <line:13:3, line:14:41>
+|   | |-BinaryOperator 0x7faa8400abe8 <line:13:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7faa8400aba0 <col:8> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   | | `-IntegerLiteral 0x7faa8400abc8 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7faa8400ac90 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7faa8400ac60 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7faa8400ac10 <col:15> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   | | `-ImplicitCastExpr 0x7faa8400ac78 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7faa8400ac38 <col:19> 'int' lvalue ParmVar 0x7faa8302c978 'dim' 'int'
+|   | |-UnaryOperator 0x7faa8400ace0 <col:24, col:25> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7faa8400acb8 <col:24> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   | `-CompoundAssignOperator 0x7faa8400b0e0 <line:14:5, col:41> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-DeclRefExpr 0x7faa8400ad00 <col:5> 'int' lvalue Var 0x7faa8400a618 'dist' 'int'
+|   |   `-BinaryOperator 0x7faa8400b0b8 <col:13, col:41> 'int' '*'
+|   |     |-ParenExpr 0x7faa8400aed0 <col:13, col:25> 'int'
+|   |     | `-BinaryOperator 0x7faa8400aea8 <col:14, col:24> 'int' '-'
+|   |     |   |-ImplicitCastExpr 0x7faa8400ae78 <col:14, col:17> 'int' <LValueToRValue>
+|   |     |   | `-ArraySubscriptExpr 0x7faa8400ada8 <col:14, col:17> 'int' lvalue
+|   |     |   |   |-ImplicitCastExpr 0x7faa8400ad78 <col:14> 'int *' <LValueToRValue>
+|   |     |   |   | `-DeclRefExpr 0x7faa8400ad28 <col:14> 'int *' lvalue Var 0x7faa8400a440 'a' 'int *'
+|   |     |   |   `-ImplicitCastExpr 0x7faa8400ad90 <col:16> 'int' <LValueToRValue>
+|   |     |   |     `-DeclRefExpr 0x7faa8400ad50 <col:16> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   |     |   `-ImplicitCastExpr 0x7faa8400ae90 <col:21, col:24> 'int' <LValueToRValue>
+|   |     |     `-ArraySubscriptExpr 0x7faa8400ae50 <col:21, col:24> 'int' lvalue
+|   |     |       |-ImplicitCastExpr 0x7faa8400ae20 <col:21> 'int *' <LValueToRValue>
+|   |     |       | `-DeclRefExpr 0x7faa8400add0 <col:21> 'int *' lvalue ParmVar 0x7faa8400a040 'b' 'int *'
+|   |     |       `-ImplicitCastExpr 0x7faa8400ae38 <col:23> 'int' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7faa8400adf8 <col:23> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   |     `-ParenExpr 0x7faa8400b098 <col:29, col:41> 'int'
+|   |       `-BinaryOperator 0x7faa8400b070 <col:30, col:40> 'int' '-'
+|   |         |-ImplicitCastExpr 0x7faa8400b040 <col:30, col:33> 'int' <LValueToRValue>
+|   |         | `-ArraySubscriptExpr 0x7faa8400af70 <col:30, col:33> 'int' lvalue
+|   |         |   |-ImplicitCastExpr 0x7faa8400af40 <col:30> 'int *' <LValueToRValue>
+|   |         |   | `-DeclRefExpr 0x7faa8400aef0 <col:30> 'int *' lvalue Var 0x7faa8400a440 'a' 'int *'
+|   |         |   `-ImplicitCastExpr 0x7faa8400af58 <col:32> 'int' <LValueToRValue>
+|   |         |     `-DeclRefExpr 0x7faa8400af18 <col:32> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   |         `-ImplicitCastExpr 0x7faa8400b058 <col:37, col:40> 'int' <LValueToRValue>
+|   |           `-ArraySubscriptExpr 0x7faa8400b018 <col:37, col:40> 'int' lvalue
+|   |             |-ImplicitCastExpr 0x7faa8400afe8 <col:37> 'int *' <LValueToRValue>
+|   |             | `-DeclRefExpr 0x7faa8400af98 <col:37> 'int *' lvalue ParmVar 0x7faa8400a040 'b' 'int *'
+|   |             `-ImplicitCastExpr 0x7faa8400b000 <col:39> 'int' <LValueToRValue>
+|   |               `-DeclRefExpr 0x7faa8400afc0 <col:39> 'int' lvalue Var 0x7faa8400a5a0 'i' 'int'
+|   `-ReturnStmt 0x7faa8400b190 <line:15:3, col:10>
+|     `-ImplicitCastExpr 0x7faa8400b178 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7faa8400b150 <col:10> 'int' lvalue Var 0x7faa8400a618 'dist' 'int'
+`-FunctionDecl 0x7faa8400a748 <line:12:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7faa8400a7e8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7faa8400a848 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7faa8400a8a8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7faa8400a920 <col:3> Implicit

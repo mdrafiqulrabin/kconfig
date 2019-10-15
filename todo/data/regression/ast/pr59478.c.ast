@@ -1,0 +1,100 @@
+TranslationUnitDecl 0x7fa41882bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa419014268 <../Data/C2AST/pr59478.c:11:1, line:21:1> line:12:1 test_00 'int (float)'
+| |-ParmVarDecl 0x7fa41882c978 <col:10, col:16> col:16 used val 'float'
+| `-CompoundStmt 0x7fa419014b78 <line:13:1, line:21:1>
+|   |-DeclStmt 0x7fa419014448 <line:14:3, col:32>
+|   | `-VarDecl 0x7fa4190143e8 <col:3, col:31> col:8 used valbytes 'char [4]'
+|   |-CallExpr 0x7fa419014850 <line:15:3, col:51> 'void *'
+|   | |-ImplicitCastExpr 0x7fa419014838 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fa4190146f8 <col:3> '<builtin fn type>' Function 0x7fa4190144d8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fa4190148a8 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fa419014890 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa419014720 <col:21> 'char [4]' lvalue Var 0x7fa4190143e8 'valbytes' 'char [4]'
+|   | |-ImplicitCastExpr 0x7fa4190148c0 <col:31, col:32> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7fa419014798 <col:31, col:32> 'float *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fa419014748 <col:32> 'float' lvalue ParmVar 0x7fa41882c978 'val' 'float'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fa4190147d0 <col:37, col:50> 'unsigned long' sizeof 'float'
+|   |-DeclStmt 0x7fa419014950 <line:17:3, col:13>
+|   | `-VarDecl 0x7fa4190148f0 <col:3, col:7> col:7 used result 'int'
+|   |-CallExpr 0x7fa419014a98 <line:18:3, col:52> 'void *'
+|   | |-ImplicitCastExpr 0x7fa419014a80 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fa419014968 <col:3> '<builtin fn type>' Function 0x7fa4190144d8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fa419014ad8 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fa4190149e8 <col:21, col:22> 'int *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fa419014990 <col:22> 'int' lvalue Var 0x7fa4190148f0 'result' 'int'
+|   | |-ImplicitCastExpr 0x7fa419014b08 <col:30> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fa419014af0 <col:30> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa419014a08 <col:30> 'char [4]' lvalue Var 0x7fa4190143e8 'valbytes' 'char [4]'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fa419014a48 <col:40, col:51> 'unsigned long' sizeof 'int'
+|   `-ReturnStmt 0x7fa419014b60 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fa419014b48 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa419014b20 <col:10> 'int' lvalue Var 0x7fa4190148f0 'result' 'int'
+|-FunctionDecl 0x7fa4190144d8 <line:15:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x7fa419014578 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fa4190145d8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7fa419014638 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fa4190146b0 <col:3> Implicit
+|-FunctionDecl 0x7fa419014c98 <line:23:1, line:33:1> line:24:1 test_01 'float (int)'
+| |-ParmVarDecl 0x7fa419014bc8 <col:10, col:14> col:14 used val 'int'
+| `-CompoundStmt 0x7fa41902bc18 <line:25:1, line:33:1>
+|   |-DeclStmt 0x7fa419014df8 <line:26:3, col:30>
+|   | `-VarDecl 0x7fa419014d98 <col:3, col:29> col:8 used valbytes 'char [4]'
+|   |-CallExpr 0x7fa419014f10 <line:27:3, col:49> 'void *'
+|   | |-ImplicitCastExpr 0x7fa419014ef8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fa419014e10 <col:3> '<builtin fn type>' Function 0x7fa4190144d8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fa419014f68 <col:21> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fa419014f50 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa419014e38 <col:21> 'char [4]' lvalue Var 0x7fa419014d98 'valbytes' 'char [4]'
+|   | |-ImplicitCastExpr 0x7fa419014f80 <col:31, col:32> 'const void *' <BitCast>
+|   | | `-UnaryOperator 0x7fa419014e88 <col:31, col:32> 'int *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fa419014e60 <col:32> 'int' lvalue ParmVar 0x7fa419014bc8 'val' 'int'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fa419014ec0 <col:37, col:48> 'unsigned long' sizeof 'int'
+|   |-DeclStmt 0x7fa419015010 <line:29:3, col:15>
+|   | `-VarDecl 0x7fa419014fb0 <col:3, col:9> col:9 used result 'float'
+|   |-CallExpr 0x7fa419015128 <line:30:3, col:54> 'void *'
+|   | |-ImplicitCastExpr 0x7fa419015110 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fa419015028 <col:3> '<builtin fn type>' Function 0x7fa4190144d8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7fa419015168 <col:21, col:22> 'void *' <BitCast>
+|   | | `-UnaryOperator 0x7fa419015078 <col:21, col:22> 'float *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fa419015050 <col:22> 'float' lvalue Var 0x7fa419014fb0 'result' 'float'
+|   | |-ImplicitCastExpr 0x7fa419015198 <col:30> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7fa419015180 <col:30> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa419015098 <col:30> 'char [4]' lvalue Var 0x7fa419014d98 'valbytes' 'char [4]'
+|   | `-UnaryExprOrTypeTraitExpr 0x7fa4190150d8 <col:40, col:53> 'unsigned long' sizeof 'float'
+|   `-ReturnStmt 0x7fa41902bc00 <line:32:3, col:10>
+|     `-ImplicitCastExpr 0x7fa4190151d8 <col:10> 'float' <LValueToRValue>
+|       `-DeclRefExpr 0x7fa4190151b0 <col:10> 'float' lvalue Var 0x7fa419014fb0 'result' 'float'
+|-FunctionDecl 0x7fa41902bcf8 <line:35:1, line:41:1> line:36:1 test_02 'int (float)'
+| |-ParmVarDecl 0x7fa41902bc68 <col:10, col:16> col:16 used val 'float'
+| `-CompoundStmt 0x7fa41902c148 <line:37:1, line:41:1>
+|   |-DeclStmt 0x7fa41902bfd8 <line:38:3, col:32>
+|   | |-RecordDecl 0x7fa41902bda0 <col:3, col:27> col:3 union definition
+|   | | |-FieldDecl 0x7fa41902be68 <col:11, col:15> col:15 referenced i 'int'
+|   | | `-FieldDecl 0x7fa41902bec8 <col:18, col:24> col:24 referenced f 'float'
+|   | `-VarDecl 0x7fa41902bf60 <col:3, col:29> col:29 used tmp 'union (anonymous union at ../Data/C2AST/pr59478.c:38:3)':'union (anonymous at ../Data/C2AST/pr59478.c:38:3)'
+|   |-BinaryOperator 0x7fa41902c090 <line:39:3, col:11> 'float' '='
+|   | |-MemberExpr 0x7fa41902c018 <col:3, col:7> 'float' lvalue .f 0x7fa41902bec8
+|   | | `-DeclRefExpr 0x7fa41902bff0 <col:3> 'union (anonymous union at ../Data/C2AST/pr59478.c:38:3)':'union (anonymous at ../Data/C2AST/pr59478.c:38:3)' lvalue Var 0x7fa41902bf60 'tmp' 'union (anonymous union at ../Data/C2AST/pr59478.c:38:3)':'union (anonymous at ../Data/C2AST/pr59478.c:38:3)'
+|   | `-ImplicitCastExpr 0x7fa41902c078 <col:11> 'float' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fa41902c050 <col:11> 'float' lvalue ParmVar 0x7fa41902bc68 'val' 'float'
+|   `-ReturnStmt 0x7fa41902c130 <line:40:3, col:14>
+|     `-ImplicitCastExpr 0x7fa41902c118 <col:10, col:14> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7fa41902c0e0 <col:10, col:14> 'int' lvalue .i 0x7fa41902be68
+|         `-DeclRefExpr 0x7fa41902c0b8 <col:10> 'union (anonymous union at ../Data/C2AST/pr59478.c:38:3)':'union (anonymous at ../Data/C2AST/pr59478.c:38:3)' lvalue Var 0x7fa41902bf60 'tmp' 'union (anonymous union at ../Data/C2AST/pr59478.c:38:3)':'union (anonymous at ../Data/C2AST/pr59478.c:38:3)'
+`-FunctionDecl 0x7fa41902c218 <line:43:1, line:49:1> line:44:1 test_03 'float (int)'
+  |-ParmVarDecl 0x7fa41902c188 <col:10, col:14> col:14 used val 'int'
+  `-CompoundStmt 0x7fa41902c6b8 <line:45:1, line:49:1>
+    |-DeclStmt 0x7fa41902c4f8 <line:46:3, col:32>
+    | |-RecordDecl 0x7fa41902c2c0 <col:3, col:27> col:3 union definition
+    | | |-FieldDecl 0x7fa41902c388 <col:11, col:15> col:15 referenced i 'int'
+    | | `-FieldDecl 0x7fa41902c3e8 <col:18, col:24> col:24 referenced f 'float'
+    | `-VarDecl 0x7fa41902c480 <col:3, col:29> col:29 used tmp 'union (anonymous union at ../Data/C2AST/pr59478.c:46:3)':'union (anonymous at ../Data/C2AST/pr59478.c:46:3)'
+    |-BinaryOperator 0x7fa41902c5b0 <line:47:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fa41902c538 <col:3, col:7> 'int' lvalue .i 0x7fa41902c388
+    | | `-DeclRefExpr 0x7fa41902c510 <col:3> 'union (anonymous union at ../Data/C2AST/pr59478.c:46:3)':'union (anonymous at ../Data/C2AST/pr59478.c:46:3)' lvalue Var 0x7fa41902c480 'tmp' 'union (anonymous union at ../Data/C2AST/pr59478.c:46:3)':'union (anonymous at ../Data/C2AST/pr59478.c:46:3)'
+    | `-ImplicitCastExpr 0x7fa41902c598 <col:11> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa41902c570 <col:11> 'int' lvalue ParmVar 0x7fa41902c188 'val' 'int'
+    `-ReturnStmt 0x7fa41902c6a0 <line:48:3, col:14>
+      `-ImplicitCastExpr 0x7fa41902c688 <col:10, col:14> 'float' <LValueToRValue>
+        `-MemberExpr 0x7fa41902c650 <col:10, col:14> 'float' lvalue .f 0x7fa41902c3e8
+          `-DeclRefExpr 0x7fa41902c628 <col:10> 'union (anonymous union at ../Data/C2AST/pr59478.c:46:3)':'union (anonymous at ../Data/C2AST/pr59478.c:46:3)' lvalue Var 0x7fa41902c480 'tmp' 'union (anonymous union at ../Data/C2AST/pr59478.c:46:3)':'union (anonymous at ../Data/C2AST/pr59478.c:46:3)'

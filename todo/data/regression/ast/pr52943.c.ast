@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7ff9270174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff926823a50 <../Data/C2AST/pr52943.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ff926823af0 prev 0x7ff926823a50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7ff926823be0 <line:4:1, col:24> col:5 used a 'int [4]' cinit
+| `-InitListExpr 0x7ff926823d60 <col:11, col:24> 'int [4]'
+|   |-IntegerLiteral 0x7ff926823c80 <col:13> 'int' 0
+|   |-IntegerLiteral 0x7ff926823ca0 <col:16> 'int' 0
+|   |-IntegerLiteral 0x7ff926823cc0 <col:19> 'int' 0
+|   `-IntegerLiteral 0x7ff926823ce0 <col:22> 'int' 6
+|-VarDecl 0x7ff926823e30 <line:6:1, col:5> col:5 used b 'int'
+`-FunctionDecl 0x7ff926823ee0 <line:7:1, line:20:1> line:8:1 main 'int ()'
+  `-CompoundStmt 0x7ff926824518 <line:9:1, line:20:1>
+    |-ForStmt 0x7ff9268242f8 <line:10:3, line:16:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7ff9268242d0 <line:11:5, line:16:5>
+    |   |-BinaryOperator 0x7ff926823fc8 <line:12:7, col:11> 'int' '='
+    |   | |-DeclRefExpr 0x7ff926823f80 <col:7> 'int' lvalue Var 0x7ff926823e30 'b' 'int'
+    |   | `-IntegerLiteral 0x7ff926823fa8 <col:11> 'int' 3
+    |   |-ForStmt 0x7ff926824290 <line:13:7, line:14:16>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ImplicitCastExpr 0x7ff926824018 <line:13:14> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7ff926823ff0 <col:14> 'int' lvalue Var 0x7ff926823e30 'b' 'int'
+    |   | |-CompoundAssignOperator 0x7ff926824078 <col:17, col:22> 'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   | | |-DeclRefExpr 0x7ff926824030 <col:17> 'int' lvalue Var 0x7ff926823e30 'b' 'int'
+    |   | | `-IntegerLiteral 0x7ff926824058 <col:22> 'int' 1
+    |   | `-BinaryOperator 0x7ff926824268 <line:14:2, col:16> 'int' '='
+    |   |   |-ArraySubscriptExpr 0x7ff926824158 <col:2, col:5> 'int' lvalue
+    |   |   | |-ImplicitCastExpr 0x7ff926824128 <col:2> 'int *' <ArrayToPointerDecay>
+    |   |   | | `-DeclRefExpr 0x7ff9268240b0 <col:2> 'int [4]' lvalue Var 0x7ff926823be0 'a' 'int [4]'
+    |   |   | `-ImplicitCastExpr 0x7ff926824140 <col:4> 'int' <LValueToRValue>
+    |   |   |   `-DeclRefExpr 0x7ff9268240d8 <col:4> 'int' lvalue Var 0x7ff926823e30 'b' 'int'
+    |   |   `-BinaryOperator 0x7ff926824240 <col:9, col:16> 'int' '>'
+    |   |     |-ImplicitCastExpr 0x7ff926824228 <col:9, col:12> 'int' <LValueToRValue>
+    |   |     | `-ArraySubscriptExpr 0x7ff9268241e0 <col:9, col:12> 'int' lvalue
+    |   |     |   |-ImplicitCastExpr 0x7ff9268241c8 <col:9> 'int *' <ArrayToPointerDecay>
+    |   |     |   | `-DeclRefExpr 0x7ff926824180 <col:9> 'int [4]' lvalue Var 0x7ff926823be0 'a' 'int [4]'
+    |   |     |   `-IntegerLiteral 0x7ff9268241a8 <col:11> 'int' 3
+    |   |     `-IntegerLiteral 0x7ff926824208 <col:16> 'int' 1
+    |   `-BreakStmt 0x7ff9268242c8 <line:15:7>
+    |-IfStmt 0x7ff9268244a8 <line:17:3, line:18:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff9268243f0 <line:17:7, col:15> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff9268243d8 <col:7, col:10> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7ff926824390 <col:7, col:10> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7ff926824378 <col:7> 'int *' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7ff926824330 <col:7> 'int [4]' lvalue Var 0x7ff926823be0 'a' 'int [4]'
+    | | |   `-IntegerLiteral 0x7ff926824358 <col:9> 'int' 1
+    | | `-IntegerLiteral 0x7ff9268243b8 <col:15> 'int' 0
+    | |-CallExpr 0x7ff926824480 <line:18:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ff926824468 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ff926824418 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ff926823af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ff926824500 <line:19:3, col:10>
+      `-IntegerLiteral 0x7ff9268244e0 <col:10> 'int' 0

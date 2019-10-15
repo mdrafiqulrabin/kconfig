@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fab8602bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fab8606d860 <../Data/C2AST/pr83994.c:5:1, col:16> col:6 used f1 'void (char *)'
+| `-ParmVarDecl 0x7fab8602c978 <col:10, col:15> col:16 'char *'
+`-FunctionDecl 0x7fab8606dba8 <line:7:1, line:15:1> line:9:1 f2 'int (int, int, int) __attribute__((regparm (3)))'
+  |-ParmVarDecl 0x7fab8606d980 <col:5, col:9> col:9 arg1 'int'
+  |-ParmVarDecl 0x7fab8606d9f8 <col:15, col:19> col:19 arg2 'int'
+  |-ParmVarDecl 0x7fab8606da70 <col:25, col:29> col:29 arg3 'int'
+  `-CompoundStmt 0x7fab8606df10 <line:10:1, line:15:1>
+    |-DeclStmt 0x7fab8606dd38 <line:11:3, col:18>
+    | `-VarDecl 0x7fab8606dcd8 <col:3, col:17> col:8 used buf 'char [16384]'
+    |-CallExpr 0x7fab8606dde0 <line:12:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fab8606ddc8 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fab8606dd50 <col:3> 'void (char *)' Function 0x7fab8606d860 'f1' 'void (char *)'
+    | `-ImplicitCastExpr 0x7fab8606de10 <col:7> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fab8606dd78 <col:7> 'char [16384]' lvalue Var 0x7fab8606dcd8 'buf' 'char [16384]'
+    |-CallExpr 0x7fab8606de90 <line:13:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7fab8606de78 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fab8606de28 <col:3> 'void (char *)' Function 0x7fab8606d860 'f1' 'void (char *)'
+    | `-ImplicitCastExpr 0x7fab8606dec0 <col:7> 'char *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fab8606de50 <col:7> 'char [16384]' lvalue Var 0x7fab8606dcd8 'buf' 'char [16384]'
+    `-ReturnStmt 0x7fab8606def8 <line:14:3, col:10>
+      `-IntegerLiteral 0x7fab8606ded8 <col:10> 'int' 0

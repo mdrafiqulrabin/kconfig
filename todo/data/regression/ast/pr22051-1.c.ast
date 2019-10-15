@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fcca881a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcca885c400 <../Data/C2AST/pr22051-1.c:5:1, col:12> col:7 used arf 'void *()'
+`-FunctionDecl 0x7fcca885c530 <line:6:1, line:15:1> line:7:1 foo 'int ()'
+  `-CompoundStmt 0x7fcca885c9c0 <line:8:1, line:15:1>
+    |-DeclStmt 0x7fcca885c6d8 <line:9:3, col:19>
+    | `-VarDecl 0x7fcca885c5e8 <col:3, col:18> col:9 used p 'void *' cinit
+    |   `-CallExpr 0x7fcca885c6b0 <col:13, col:18> 'void *'
+    |     `-ImplicitCastExpr 0x7fcca885c698 <col:13> 'void *(*)()' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fcca885c648 <col:13> 'void *()' Function 0x7fcca885c400 'arf' 'void *()'
+    `-IfStmt 0x7fcca885c988 <line:11:3, line:14:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcca885c8f0 <line:11:7, col:28> 'int' '!='
+      | |-CStyleCastExpr 0x7fcca885c890 <col:7, col:23> 'void (*)(void)' <BitCast>
+      | | `-ImplicitCastExpr 0x7fcca885c878 <col:23> 'void *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fcca885c760 <col:23> 'void *' lvalue Var 0x7fcca885c5e8 'p' 'void *'
+      | `-ImplicitCastExpr 0x7fcca885c8d8 <col:28> 'void (*)(void)' <NullToPointer>
+      |   `-IntegerLiteral 0x7fcca885c8b8 <col:28> 'int' 0
+      |-ReturnStmt 0x7fcca885c938 <line:12:5, col:12>
+      | `-IntegerLiteral 0x7fcca885c918 <col:12> 'int' 1
+      `-ReturnStmt 0x7fcca885c970 <line:14:5, col:12>
+        `-IntegerLiteral 0x7fcca885c950 <col:12> 'int' 2

@@ -1,0 +1,38 @@
+../Data/C2AST/pr80168.c:9:18: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct S { int c[a]; int q : 8; int e : 4; } f;
+                 ^
+1 error generated.
+TranslationUnitDecl 0x7fa37f02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa37f02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa37f02bf80 '__int128'
+|-TypedefDecl 0x7fa37f02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa37f02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fa37f02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa37f02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa37f02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa37f02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa37f02c600 'char *'
+|   `-BuiltinType 0x7fa37f02bd80 'char'
+|-TypedefDecl 0x7fa37f02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa37f02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa37f02c720 'struct __va_list_tag'
+|     `-Record 0x7fa37f02c698 '__va_list_tag'
+|-VarDecl 0x7fa37f02c978 <../Data/C2AST/pr80168.c:4:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fa37f06d908 <line:6:1, line:12:1> line:7:1 foo 'int (void)'
+  `-CompoundStmt 0x7fa37f06de58 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fa37f06dd08 <line:9:3, col:49>
+    | |-RecordDecl 0x7fa37f06d9a8 <col:3, col:46> col:10 invalid struct S definition
+    | | |-FieldDecl 0x7fa37f06daf0 <col:14, col:21> col:18 invalid c 'int [a]'
+    | | |-FieldDecl 0x7fa37f06db70 <col:24, col:32> col:28 q 'int'
+    | | | `-IntegerLiteral 0x7fa37f06db38 <col:32> 'int' 8
+    | | `-FieldDecl 0x7fa37f06dbf0 <col:35, col:43> col:39 referenced e 'int'
+    | |   `-IntegerLiteral 0x7fa37f06dbb8 <col:43> 'int' 4
+    | `-VarDecl 0x7fa37f06dc90 <col:3, col:48> col:48 used f 'struct S':'struct S'
+    |-BinaryOperator 0x7fa37f06dda0 <line:10:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fa37f06dd48 <col:3, col:5> 'int' lvalue bitfield .e 0x7fa37f06dbf0
+    | | `-DeclRefExpr 0x7fa37f06dd20 <col:3> 'struct S':'struct S' lvalue Var 0x7fa37f06dc90 'f' 'struct S':'struct S'
+    | `-IntegerLiteral 0x7fa37f06dd80 <col:9> 'int' 4
+    `-ReturnStmt 0x7fa37f06de40 <line:11:3, col:12>
+      `-ImplicitCastExpr 0x7fa37f06de28 <col:10, col:12> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fa37f06ddf0 <col:10, col:12> 'int' lvalue bitfield .e 0x7fa37f06dbf0
+          `-DeclRefExpr 0x7fa37f06ddc8 <col:10> 'struct S':'struct S' lvalue Var 0x7fa37f06dc90 'f' 'struct S':'struct S'

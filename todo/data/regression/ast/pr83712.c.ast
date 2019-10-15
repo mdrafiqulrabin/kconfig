@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fd44d02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd44d02c960 <../Data/C2AST/pr83712.c:5:1, line:10:1> line:5:8 struct itrm definition
+| |-FieldDecl 0x7fd44d814238 <line:6:2, col:6> col:6 referenced std_in 'int'
+| |-FieldDecl 0x7fd44d814298 <line:7:2, col:6> col:6 referenced std_out 'int'
+| |-FieldDecl 0x7fd44d8142f8 <line:8:2, col:6> col:6 referenced sock_in 'int'
+| `-FieldDecl 0x7fd44d814358 <line:9:2, col:6> col:6 referenced sock_out 'int'
+|-FunctionDecl 0x7fd44d814538 <line:12:1, col:24> col:14 used alloc 'struct itrm *(void)'
+|-FunctionDecl 0x7fd44d814890 <line:13:1, col:65> col:6 used queue_event 'void (struct itrm *, unsigned char *, int)'
+| |-ParmVarDecl 0x7fd44d814640 <col:18, col:31> col:31 itrm 'struct itrm *'
+| |-ParmVarDecl 0x7fd44d8146e0 <col:37, col:52> col:52 data 'unsigned char *'
+| `-ParmVarDecl 0x7fd44d814758 <col:58, col:62> col:62 len 'int'
+`-FunctionDecl 0x7fd44d814d50 <line:15:1, line:25:1> line:15:6 handle_trm 'void (int, int, int, int, int, void *, int)'
+  |-ParmVarDecl 0x7fd44d814960 <col:17, col:21> col:21 used std_in 'int'
+  |-ParmVarDecl 0x7fd44d8149d8 <col:29, col:33> col:33 used std_out 'int'
+  |-ParmVarDecl 0x7fd44d814a50 <col:42, col:46> col:46 used sock_in 'int'
+  |-ParmVarDecl 0x7fd44d814ac8 <col:55, col:59> col:59 used sock_out 'int'
+  |-ParmVarDecl 0x7fd44d814b40 <col:69, col:73> col:73 ctl_in 'int'
+  |-ParmVarDecl 0x7fd44d814bb8 <col:81, col:87> col:87 init_string 'void *'
+  |-ParmVarDecl 0x7fd44d814c30 <col:100, col:104> col:104 init_len 'int'
+  `-CompoundStmt 0x7fd44d8157a0 <line:16:1, line:25:1>
+    |-DeclStmt 0x7fd44d814eb0 <line:17:2, col:19>
+    | `-VarDecl 0x7fd44d814e50 <col:2, col:15> col:15 used itrm 'struct itrm *'
+    |-DeclStmt 0x7fd44d815088 <line:18:2, col:35>
+    | `-VarDecl 0x7fd44d814ee8 <col:2, col:34> col:14 used ev 'struct itrm':'struct itrm' cinit
+    |   `-InitListExpr 0x7fd44d815028 <col:19, col:34> 'struct itrm':'struct itrm'
+    |     |-IntegerLiteral 0x7fd44d814f48 <col:21> 'int' 0
+    |     |-IntegerLiteral 0x7fd44d814f68 <col:24> 'int' 80
+    |     |-IntegerLiteral 0x7fd44d814f88 <col:28> 'int' 24
+    |     `-IntegerLiteral 0x7fd44d814fa8 <col:32> 'int' 0
+    |-BinaryOperator 0x7fd44d815188 <line:19:2, col:15> 'struct itrm *' '='
+    | |-DeclRefExpr 0x7fd44d8150a0 <col:2> 'struct itrm *' lvalue Var 0x7fd44d814e50 'itrm' 'struct itrm *'
+    | `-CallExpr 0x7fd44d815160 <col:9, col:15> 'struct itrm *'
+    |   `-ImplicitCastExpr 0x7fd44d815148 <col:9> 'struct itrm *(*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x7fd44d8150c8 <col:9> 'struct itrm *(void)' Function 0x7fd44d814538 'alloc' 'struct itrm *(void)'
+    |-BinaryOperator 0x7fd44d815278 <line:20:2, col:17> 'int' '='
+    | |-MemberExpr 0x7fd44d815200 <col:2, col:8> 'int' lvalue ->std_in 0x7fd44d814238
+    | | `-ImplicitCastExpr 0x7fd44d8151d8 <col:2> 'struct itrm *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd44d8151b0 <col:2> 'struct itrm *' lvalue Var 0x7fd44d814e50 'itrm' 'struct itrm *'
+    | `-ImplicitCastExpr 0x7fd44d815260 <col:17> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd44d815238 <col:17> 'int' lvalue ParmVar 0x7fd44d814960 'std_in' 'int'
+    |-BinaryOperator 0x7fd44d815358 <line:21:2, col:18> 'int' '='
+    | |-MemberExpr 0x7fd44d8152e0 <col:2, col:8> 'int' lvalue ->std_out 0x7fd44d814298
+    | | `-ImplicitCastExpr 0x7fd44d8152c8 <col:2> 'struct itrm *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd44d8152a0 <col:2> 'struct itrm *' lvalue Var 0x7fd44d814e50 'itrm' 'struct itrm *'
+    | `-ImplicitCastExpr 0x7fd44d815340 <col:18> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd44d815318 <col:18> 'int' lvalue ParmVar 0x7fd44d8149d8 'std_out' 'int'
+    |-BinaryOperator 0x7fd44d815438 <line:22:2, col:18> 'int' '='
+    | |-MemberExpr 0x7fd44d8153c0 <col:2, col:8> 'int' lvalue ->sock_in 0x7fd44d8142f8
+    | | `-ImplicitCastExpr 0x7fd44d8153a8 <col:2> 'struct itrm *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd44d815380 <col:2> 'struct itrm *' lvalue Var 0x7fd44d814e50 'itrm' 'struct itrm *'
+    | `-ImplicitCastExpr 0x7fd44d815420 <col:18> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd44d8153f8 <col:18> 'int' lvalue ParmVar 0x7fd44d814a50 'sock_in' 'int'
+    |-BinaryOperator 0x7fd44d815518 <line:23:2, col:19> 'int' '='
+    | |-MemberExpr 0x7fd44d8154a0 <col:2, col:8> 'int' lvalue ->sock_out 0x7fd44d814358
+    | | `-ImplicitCastExpr 0x7fd44d815488 <col:2> 'struct itrm *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd44d815460 <col:2> 'struct itrm *' lvalue Var 0x7fd44d814e50 'itrm' 'struct itrm *'
+    | `-ImplicitCastExpr 0x7fd44d815500 <col:19> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd44d8154d8 <col:19> 'int' lvalue ParmVar 0x7fd44d814ac8 'sock_out' 'int'
+    `-CallExpr 0x7fd44d8156d0 <line:24:2, col:61> 'void'
+      |-ImplicitCastExpr 0x7fd44d8156b8 <col:2> 'void (*)(struct itrm *, unsigned char *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd44d815540 <col:2> 'void (struct itrm *, unsigned char *, int)' Function 0x7fd44d814890 'queue_event' 'void (struct itrm *, unsigned char *, int)'
+      |-ImplicitCastExpr 0x7fd44d815710 <col:14> 'struct itrm *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd44d815568 <col:14> 'struct itrm *' lvalue Var 0x7fd44d814e50 'itrm' 'struct itrm *'
+      |-CStyleCastExpr 0x7fd44d8155f0 <col:20, col:38> 'unsigned char *' <BitCast>
+      | `-UnaryOperator 0x7fd44d8155b8 <col:37, col:38> 'struct itrm *' prefix '&'
+      |   `-DeclRefExpr 0x7fd44d815590 <col:38> 'struct itrm':'struct itrm' lvalue Var 0x7fd44d814ee8 'ev' 'struct itrm':'struct itrm'
+      `-ImplicitCastExpr 0x7fd44d815728 <col:42, col:60> 'int' <IntegralCast>
+        `-UnaryExprOrTypeTraitExpr 0x7fd44d815638 <col:42, col:60> 'unsigned long' sizeof 'struct itrm':'struct itrm'

@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7f904e8296e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f904e82a378 <../Data/C2AST/pr25795-1.c:6:1, col:20> col:20 mystr 'const char *' extern
+|-VarDecl 0x7f904e86b258 prev 0x7f904e82a378 <line:7:1, col:13> col:13 mystr 'const char *'
+`-FunctionDecl 0x7f904e86b310 <line:8:1, line:11:1> line:9:1 main 'int ()'
+  `-CompoundStmt 0x7f904e86b3b0 <line:10:1, line:11:1>

@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fdcf68174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdcf6818160 <../Data/C2AST/pr44946.c:1:1, line:5:1> line:1:8 struct A definition
+| |-FieldDecl 0x7fdcf6859038 <line:3:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7fdcf6859098 <line:4:3, col:8> col:8 l 'long'
+|-RecordDecl 0x7fdcf68590e0 <line:7:1, line:10:1> line:7:8 struct B definition
+| `-FieldDecl 0x7fdcf68591a8 <line:9:3, col:7> col:7 i 'int'
+|-RecordDecl 0x7fdcf68591f0 <line:12:1, line:16:1> line:12:8 struct C definition
+| |-FieldDecl 0x7fdcf68592b8 <line:14:3, col:7> col:7 i 'int'
+| `-FieldDecl 0x7fdcf6859350 <line:15:3, col:12> col:12 referenced b 'struct B':'struct B'
+|-FunctionDecl 0x7fdcf6859500 <line:18:1, line:22:1> line:18:10 foo 'struct B (struct A)'
+| |-ParmVarDecl 0x7fdcf68593f0 <col:15, col:24> col:24 used a 'struct A':'struct A'
+| `-CompoundStmt 0x7fdcf68598b8 <line:19:1, line:22:1>
+|   |-DeclStmt 0x7fdcf68597f8 <line:20:3, col:32>
+|   | `-VarDecl 0x7fdcf68596a0 <col:3, col:31> col:13 used c 'struct C *' cinit
+|   |   `-CStyleCastExpr 0x7fdcf68597d0 <col:17, col:31> 'struct C *' <BitCast>
+|   |     `-UnaryOperator 0x7fdcf6859788 <col:30, col:31> 'struct A *' prefix '&'
+|   |       `-DeclRefExpr 0x7fdcf6859700 <col:31> 'struct A':'struct A' lvalue ParmVar 0x7fdcf68593f0 'a' 'struct A':'struct A'
+|   `-ReturnStmt 0x7fdcf68598a0 <line:21:3, col:13>
+|     `-ImplicitCastExpr 0x7fdcf6859888 <col:10, col:13> 'struct B':'struct B' <LValueToRValue>
+|       `-MemberExpr 0x7fdcf6859850 <col:10, col:13> 'struct B':'struct B' lvalue ->b 0x7fdcf6859350
+|         `-ImplicitCastExpr 0x7fdcf6859838 <col:10> 'struct C *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fdcf6859810 <col:10> 'struct C *' lvalue Var 0x7fdcf68596a0 'c' 'struct C *'
+`-FunctionDecl 0x7fdcf6859a90 <line:23:1, line:27:1> line:23:6 bar 'void (struct A, struct B)'
+  |-ParmVarDecl 0x7fdcf68598f8 <col:11, col:20> col:20 used a 'struct A':'struct A'
+  |-ParmVarDecl 0x7fdcf6859978 <col:23, col:32> col:32 used b 'struct B':'struct B'
+  `-CompoundStmt 0x7fdcf6859d58 <line:24:1, line:27:1>
+    |-DeclStmt 0x7fdcf6859c60 <line:25:3, col:32>
+    | `-VarDecl 0x7fdcf6859b68 <col:3, col:31> col:13 used c 'struct C *' cinit
+    |   `-CStyleCastExpr 0x7fdcf6859c38 <col:17, col:31> 'struct C *' <BitCast>
+    |     `-UnaryOperator 0x7fdcf6859bf0 <col:30, col:31> 'struct A *' prefix '&'
+    |       `-DeclRefExpr 0x7fdcf6859bc8 <col:31> 'struct A':'struct A' lvalue ParmVar 0x7fdcf68598f8 'a' 'struct A':'struct A'
+    `-BinaryOperator 0x7fdcf6859d30 <line:26:3, col:10> 'struct B':'struct B' '='
+      |-MemberExpr 0x7fdcf6859cb8 <col:3, col:6> 'struct B':'struct B' lvalue ->b 0x7fdcf6859350
+      | `-ImplicitCastExpr 0x7fdcf6859ca0 <col:3> 'struct C *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdcf6859c78 <col:3> 'struct C *' lvalue Var 0x7fdcf6859b68 'c' 'struct C *'
+      `-ImplicitCastExpr 0x7fdcf6859d18 <col:10> 'struct B':'struct B' <LValueToRValue>
+        `-DeclRefExpr 0x7fdcf6859cf0 <col:10> 'struct B':'struct B' lvalue ParmVar 0x7fdcf6859978 'b' 'struct B':'struct B'

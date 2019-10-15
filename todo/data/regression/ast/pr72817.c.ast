@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7ff1810088e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff181009578 <../Data/C2AST/pr72817.c:4:1, col:13> col:13 used a 'signed char'
+|-VarDecl 0x7ff182814258 <line:5:1, col:7> col:7 used b 'short'
+`-FunctionDecl 0x7ff182814310 <line:7:1, line:13:1> line:7:5 main 'int ()'
+  `-CompoundStmt 0x7ff182814658 <line:8:1, line:13:1>
+    |-ForStmt 0x7ff1828145e8 <line:9:3, line:11:7>
+    | |-BinaryOperator 0x7ff182814410 <line:9:8, col:12> 'signed char' '='
+    | | |-DeclRefExpr 0x7ff1828143b0 <col:8> 'signed char' lvalue Var 0x7ff181009578 'a' 'signed char'
+    | | `-ImplicitCastExpr 0x7ff1828143f8 <col:12> 'signed char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ff1828143d8 <col:12> 'int' 3
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff1828144d0 <col:15, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7ff1828144b8 <col:15> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7ff1828144a0 <col:15> 'signed char' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff182814438 <col:15> 'signed char' lvalue Var 0x7ff181009578 'a' 'signed char'
+    | | `-UnaryOperator 0x7ff182814480 <col:20, col:21> 'int' prefix '-'
+    | |   `-IntegerLiteral 0x7ff182814460 <col:21> 'int' 1
+    | |-CompoundAssignOperator 0x7ff182814540 <col:24, col:29> 'signed char' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7ff1828144f8 <col:24> 'signed char' lvalue Var 0x7ff181009578 'a' 'signed char'
+    | | `-IntegerLiteral 0x7ff182814520 <col:29> 'int' 5
+    | `-WhileStmt 0x7ff1828145c8 <line:10:5, line:11:7>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7ff1828145a0 <line:10:12> 'short' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7ff182814578 <col:12> 'short' lvalue Var 0x7ff182814258 'b' 'short'
+    |   `-NullStmt 0x7ff1828145b8 <line:11:7>
+    `-ReturnStmt 0x7ff182814640 <line:12:3, col:10>
+      `-IntegerLiteral 0x7ff182814620 <col:10> 'int' 0

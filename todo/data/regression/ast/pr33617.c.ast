@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fdf70828ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdf71816a00 <../Data/C2AST/pr33617.c:3:1, col:15> col:15 referenced V8SF '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-VectorType 0x7fdf70829780 '__attribute__((__vector_size__(8 * sizeof(float)))) float' 8
+|   `-BuiltinType 0x7fdf70828ce0 'float'
+|-FunctionDecl 0x7fdf71816b90 <line:4:1, col:15> col:6 used bar 'void (V8SF)'
+| `-ParmVarDecl 0x7fdf71816a90 <col:11> col:15 'V8SF':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+`-FunctionDecl 0x7fdf71816d50 <line:5:1, line:9:1> line:6:1 foo 'void (float)'
+  |-ParmVarDecl 0x7fdf71816c90 <col:6, col:12> col:12 used x 'float'
+  `-CompoundStmt 0x7fdf71817218 <line:7:1, line:9:1>
+    `-CallExpr 0x7fdf718171d0 <line:8:3, col:41> 'void'
+      |-ImplicitCastExpr 0x7fdf718171b8 <col:3> 'void (*)(V8SF)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdf71816df8 <col:3> 'void (V8SF)' Function 0x7fdf71816b90 'bar' 'void (V8SF)'
+      `-ImplicitCastExpr 0x7fdf71817200 <col:8, col:40> 'V8SF':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fdf71817130 <col:8, col:40> 'V8SF':'__attribute__((__vector_size__(8 * sizeof(float)))) float' lvalue
+          `-InitListExpr 0x7fdf71816ff0 <col:15, col:40> 'V8SF':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+            |-ImplicitCastExpr 0x7fdf71817070 <col:17> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816e30 <col:17> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            |-ImplicitCastExpr 0x7fdf71817088 <col:20> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816e58 <col:20> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            |-ImplicitCastExpr 0x7fdf718170a0 <col:23> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816e80 <col:23> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            |-ImplicitCastExpr 0x7fdf718170b8 <col:26> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816ea8 <col:26> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            |-ImplicitCastExpr 0x7fdf718170d0 <col:29> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816ed0 <col:29> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            |-ImplicitCastExpr 0x7fdf718170e8 <col:32> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816ef8 <col:32> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            |-ImplicitCastExpr 0x7fdf71817100 <col:35> 'float' <LValueToRValue>
+            | `-DeclRefExpr 0x7fdf71816f20 <col:35> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'
+            `-ImplicitCastExpr 0x7fdf71817118 <col:38> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fdf71816f48 <col:38> 'float' lvalue ParmVar 0x7fdf71816c90 'x' 'float'

@@ -1,0 +1,372 @@
+TranslationUnitDecl 0x7fc28d00fce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc28d010978 <../Data/C2AST/pr69062.c:6:1, col:23> col:23 referenced HARD_REG_ELT_TYPE 'unsigned long'
+| `-BuiltinType 0x7fc28d00fea0 'unsigned long'
+|-TypedefDecl 0x7fc28d82c8b8 <line:7:1, col:41> col:27 referenced HARD_REG_SET 'HARD_REG_ELT_TYPE [1]'
+| `-ConstantArrayType 0x7fc28d82c860 'HARD_REG_ELT_TYPE [1]' 1 
+|   `-TypedefType 0x7fc28d0109d0 'HARD_REG_ELT_TYPE' sugar
+|     |-Typedef 0x7fc28d010978 'HARD_REG_ELT_TYPE'
+|     `-BuiltinType 0x7fc28d00fea0 'unsigned long'
+|-RecordDecl 0x7fc28d82c910 <line:8:1, line:11:1> line:8:8 struct target_ira definition
+| `-FieldDecl 0x7fc28d82cb48 <line:10:3, col:53> col:16 referenced x_ira_prohibited_class_mode_regs 'HARD_REG_SET [1][1]'
+|-VarDecl 0x7fc28d82cc40 <line:12:1, col:27> col:27 used this_target_ira 'struct target_ira *' extern
+|-FunctionDecl 0x7fc28d82cd28 <line:13:1, line:16:1> line:14:1 used ira_object_conflict_iter_cond 'bool ()' static inline
+| `-CompoundStmt 0x7fc28d82cdc8 <line:15:1, line:16:1>
+|-FunctionDecl 0x7fc28d82d180 <line:18:1, line:52:1> line:19:1 used check_hard_reg_p 'bool (int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)' static inline
+| |-ParmVarDecl 0x7fc28d82cdf0 <col:19, col:23> col:23 used num_objects 'int'
+| |-ParmVarDecl 0x7fc28d82ce68 <col:36, col:40> col:40 used hard_regno 'int'
+| |-ParmVarDecl 0x7fc28d82cf38 <line:20:5, col:20> col:20 used conflict_regs 'HARD_REG_SET *'
+| |-ParmVarDecl 0x7fc28d82d040 <col:35, col:48> col:48 profitable_regs 'HARD_REG_ELT_TYPE *':'HARD_REG_ELT_TYPE *'
+| `-CompoundStmt 0x7fc28d82fe68 <line:21:1, line:52:1>
+|   |-DeclStmt 0x7fc28d82d3c8 <line:22:3, col:23>
+|   | |-VarDecl 0x7fc28d82d258 <col:3, col:7> col:7 used j 'int'
+|   | |-VarDecl 0x7fc28d82d2d0 <col:3, col:10> col:10 used nwords 'int'
+|   | `-VarDecl 0x7fc28d82d348 <col:3, col:18> col:18 used nregs 'int'
+|   |-IfStmt 0x7fc28d82eba8 <line:23:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:33:15>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ParenExpr 0x7fc28d82eb38 <../Data/C2AST/pr69062.c:23:7, line:28:42> 'int'
+|   | | `-UnaryOperator 0x7fc28d82eb18 <line:23:8, line:28:41> 'int' prefix '!'
+|   | |   `-UnaryOperator 0x7fc28d82eaf8 <line:23:10, line:28:41> 'int' prefix '!'
+|   | |     `-ParenExpr 0x7fc28d82ead8 <line:24:8, line:28:41> 'unsigned long'
+|   | |       `-BinaryOperator 0x7fc28d82eab0 <line:24:9, line:28:40> 'unsigned long' '&'
+|   | |         |-ImplicitCastExpr 0x7fc28d82ea98 <line:24:9, line:26:30> 'HARD_REG_ELT_TYPE':'unsigned long' <LValueToRValue>
+|   | |         | `-ArraySubscriptExpr 0x7fc28d82d788 <line:24:9, line:26:30> 'HARD_REG_ELT_TYPE':'unsigned long' lvalue
+|   | |         |   |-ImplicitCastExpr 0x7fc28d82d770 <line:24:9, line:25:43> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+|   | |         |   | `-ParenExpr 0x7fc28d82d598 <line:24:9, line:25:43> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]' lvalue
+|   | |         |   |   `-ArraySubscriptExpr 0x7fc28d82d570 <line:24:10, line:25:42> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]' lvalue
+|   | |         |   |     |-ImplicitCastExpr 0x7fc28d82d558 <line:24:10, line:25:39> 'HARD_REG_SET *' <ArrayToPointerDecay>
+|   | |         |   |     | `-ArraySubscriptExpr 0x7fc28d82d510 <line:24:10, line:25:39> 'HARD_REG_SET [1]' lvalue
+|   | |         |   |     |   |-ImplicitCastExpr 0x7fc28d82d4f8 <line:24:10, line:25:36> 'HARD_REG_SET (*)[1]' <ArrayToPointerDecay>
+|   | |         |   |     |   | `-ParenExpr 0x7fc28d82d458 <line:24:10, line:25:36> 'HARD_REG_SET [1][1]' lvalue
+|   | |         |   |     |   |   `-MemberExpr 0x7fc28d82d420 <line:24:11, line:25:4> 'HARD_REG_SET [1][1]' lvalue ->x_ira_prohibited_class_mode_regs 0x7fc28d82cb48
+|   | |         |   |     |   |     `-ImplicitCastExpr 0x7fc28d82d408 <line:24:11> 'struct target_ira *' <LValueToRValue>
+|   | |         |   |     |   |       `-DeclRefExpr 0x7fc28d82d3e0 <col:11> 'struct target_ira *' lvalue Var 0x7fc28d82cc40 'this_target_ira' 'struct target_ira *'
+|   | |         |   |     |   `-IntegerLiteral 0x7fc28d82d478 <line:25:38> 'int' 0
+|   | |         |   |     `-IntegerLiteral 0x7fc28d82d538 <col:41> 'int' 0
+|   | |         |   `-BinaryOperator 0x7fc28d82d748 <col:45, line:26:29> 'unsigned int' '/'
+|   | |         |     |-ImplicitCastExpr 0x7fc28d82d730 <line:25:45, col:56> 'unsigned int' <IntegralCast>
+|   | |         |     | `-ImplicitCastExpr 0x7fc28d82d718 <col:45, col:56> 'int' <LValueToRValue>
+|   | |         |     |   `-ParenExpr 0x7fc28d82d5e0 <col:45, col:56> 'int' lvalue
+|   | |         |     |     `-DeclRefExpr 0x7fc28d82d5b8 <col:46> 'int' lvalue ParmVar 0x7fc28d82ce68 'hard_regno' 'int'
+|   | |         |     `-ParenExpr 0x7fc28d82d6f8 <line:26:10, col:29> 'unsigned int'
+|   | |         |       `-CStyleCastExpr 0x7fc28d82d6d0 <col:11, col:28> 'unsigned int' <IntegralCast>
+|   | |         |         `-ParenExpr 0x7fc28d82d6b0 <col:22, col:28> 'int'
+|   | |         |           `-BinaryOperator 0x7fc28d82d640 <col:23, col:27> 'int' '*'
+|   | |         |             |-IntegerLiteral 0x7fc28d82d600 <col:23> 'int' 8
+|   | |         |             `-IntegerLiteral 0x7fc28d82d620 <col:27> 'int' 8
+|   | |         `-ParenExpr 0x7fc28d82ea78 <line:27:2, line:28:40> 'HARD_REG_ELT_TYPE':'unsigned long'
+|   | |           `-BinaryOperator 0x7fc28d82ea50 <line:27:3, line:28:39> 'HARD_REG_ELT_TYPE':'unsigned long' '<<'
+|   | |             |-ParenExpr 0x7fc28d82e858 <line:27:3, col:27> 'HARD_REG_ELT_TYPE':'unsigned long'
+|   | |             | `-CStyleCastExpr 0x7fc28d82e830 <col:4, col:26> 'HARD_REG_ELT_TYPE':'unsigned long' <IntegralCast>
+|   | |             |   `-ParenExpr 0x7fc28d82e810 <col:24, col:26> 'int'
+|   | |             |     `-IntegerLiteral 0x7fc28d82d7b0 <col:25> 'int' 1
+|   | |             `-ParenExpr 0x7fc28d82ea30 <line:28:3, col:39> 'unsigned int'
+|   | |               `-BinaryOperator 0x7fc28d82ea08 <col:4, col:38> 'unsigned int' '%'
+|   | |                 |-ImplicitCastExpr 0x7fc28d82e9f0 <col:4, col:15> 'unsigned int' <IntegralCast>
+|   | |                 | `-ImplicitCastExpr 0x7fc28d82e9d8 <col:4, col:15> 'int' <LValueToRValue>
+|   | |                 |   `-ParenExpr 0x7fc28d82e8a0 <col:4, col:15> 'int' lvalue
+|   | |                 |     `-DeclRefExpr 0x7fc28d82e878 <col:5> 'int' lvalue ParmVar 0x7fc28d82ce68 'hard_regno' 'int'
+|   | |                 `-ParenExpr 0x7fc28d82e9b8 <col:19, col:38> 'unsigned int'
+|   | |                   `-CStyleCastExpr 0x7fc28d82e990 <col:20, col:37> 'unsigned int' <IntegralCast>
+|   | |                     `-ParenExpr 0x7fc28d82e970 <col:31, col:37> 'int'
+|   | |                       `-BinaryOperator 0x7fc28d82e900 <col:32, col:36> 'int' '*'
+|   | |                         |-IntegerLiteral 0x7fc28d82e8c0 <col:32> 'int' 8
+|   | |                         `-IntegerLiteral 0x7fc28d82e8e0 <col:36> 'int' 8
+|   | |-ReturnStmt 0x7fc28d82eb90 <line:29:5, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:33:15>
+|   | | `-ImplicitCastExpr 0x7fc28d82eb78 <col:15> 'bool' <IntegralToBoolean>
+|   | |   `-IntegerLiteral 0x7fc28d82eb58 <col:15> 'int' 0
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fc28d82ec48 <../Data/C2AST/pr69062.c:30:3, col:12> 'int' '='
+|   | |-DeclRefExpr 0x7fc28d82ebe0 <col:3> 'int' lvalue Var 0x7fc28d82d2d0 'nwords' 'int'
+|   | `-ImplicitCastExpr 0x7fc28d82ec30 <col:12> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc28d82ec08 <col:12> 'int' lvalue ParmVar 0x7fc28d82cdf0 'num_objects' 'int'
+|   |-ForStmt 0x7fc28d82fd58 <line:31:3, line:50:5>
+|   | |-BinaryOperator 0x7fc28d82ecb8 <line:31:8, col:12> 'int' '='
+|   | | |-DeclRefExpr 0x7fc28d82ec70 <col:8> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   | | `-IntegerLiteral 0x7fc28d82ec98 <col:12> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc28d82ed60 <col:15, col:19> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7fc28d82ed30 <col:15> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fc28d82ece0 <col:15> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   | | `-ImplicitCastExpr 0x7fc28d82ed48 <col:19> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fc28d82ed08 <col:19> 'int' lvalue Var 0x7fc28d82d348 'nregs' 'int'
+|   | |-UnaryOperator 0x7fc28d82edb0 <col:26, col:27> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7fc28d82ed88 <col:26> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   | `-CompoundStmt 0x7fc28d82fd20 <line:32:5, line:50:5>
+|   |   |-DeclStmt 0x7fc28d82ee48 <line:33:7, col:12>
+|   |   | `-VarDecl 0x7fc28d82ede8 <col:7, col:11> col:11 used k 'int'
+|   |   |-DeclStmt 0x7fc28d82efc8 <line:34:7, col:58>
+|   |   | |-VarDecl 0x7fc28d82ee78 <col:7, col:31> col:11 used set_to_test_start 'int' cinit
+|   |   | | `-IntegerLiteral 0x7fc28d82eed8 <col:31> 'int' 0
+|   |   | `-VarDecl 0x7fc28d82ef10 <col:7, col:52> col:34 used set_to_test_end 'int' cinit
+|   |   |   `-ImplicitCastExpr 0x7fc28d82ef98 <col:52> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fc28d82ef70 <col:52> 'int' lvalue Var 0x7fc28d82d2d0 'nwords' 'int'
+|   |   |-IfStmt 0x7fc28d82f2c8 <line:35:7, line:41:2>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fc28d82f060 <line:35:11, col:20> 'int' '=='
+|   |   | | |-ImplicitCastExpr 0x7fc28d82f030 <col:11> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fc28d82efe0 <col:11> 'int' lvalue Var 0x7fc28d82d348 'nregs' 'int'
+|   |   | | `-ImplicitCastExpr 0x7fc28d82f048 <col:20> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fc28d82f008 <col:20> 'int' lvalue Var 0x7fc28d82d2d0 'nwords' 'int'
+|   |   | |-CompoundStmt 0x7fc28d82f2b0 <line:36:2, line:41:2>
+|   |   | | `-IfStmt 0x7fc28d82f278 <line:37:4, line:40:26>
+|   |   | |   |-<<<NULL>>>
+|   |   | |   |-<<<NULL>>>
+|   |   | |   |-IntegerLiteral 0x7fc28d82f088 <line:37:8> 'int' 0
+|   |   | |   |-BinaryOperator 0x7fc28d82f1c0 <line:38:6, col:39> 'int' '='
+|   |   | |   | |-DeclRefExpr 0x7fc28d82f0a8 <col:6> 'int' lvalue Var 0x7fc28d82ee78 'set_to_test_start' 'int'
+|   |   | |   | `-BinaryOperator 0x7fc28d82f198 <col:26, col:39> 'int' '-'
+|   |   | |   |   |-BinaryOperator 0x7fc28d82f150 <col:26, col:35> 'int' '-'
+|   |   | |   |   | |-ImplicitCastExpr 0x7fc28d82f120 <col:26> 'int' <LValueToRValue>
+|   |   | |   |   | | `-DeclRefExpr 0x7fc28d82f0d0 <col:26> 'int' lvalue Var 0x7fc28d82d2d0 'nwords' 'int'
+|   |   | |   |   | `-ImplicitCastExpr 0x7fc28d82f138 <col:35> 'int' <LValueToRValue>
+|   |   | |   |   |   `-DeclRefExpr 0x7fc28d82f0f8 <col:35> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   |   | |   |   `-IntegerLiteral 0x7fc28d82f178 <col:39> 'int' 1
+|   |   | |   `-BinaryOperator 0x7fc28d82f250 <line:40:6, col:26> 'int' '='
+|   |   | |     |-DeclRefExpr 0x7fc28d82f1e8 <col:6> 'int' lvalue Var 0x7fc28d82ee78 'set_to_test_start' 'int'
+|   |   | |     `-ImplicitCastExpr 0x7fc28d82f238 <col:26> 'int' <LValueToRValue>
+|   |   | |       `-DeclRefExpr 0x7fc28d82f210 <col:26> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   |   | `-<<<NULL>>>
+|   |   |-ForStmt 0x7fc28d82fc00 <line:42:7, line:47:4>
+|   |   | |-BinaryOperator 0x7fc28d82f368 <line:42:12, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7fc28d82f300 <col:12> 'int' lvalue Var 0x7fc28d82ede8 'k' 'int'
+|   |   | | `-ImplicitCastExpr 0x7fc28d82f350 <col:16> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fc28d82f328 <col:16> 'int' lvalue Var 0x7fc28d82ee78 'set_to_test_start' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fc28d82f410 <col:35, col:39> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7fc28d82f3e0 <col:35> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fc28d82f390 <col:35> 'int' lvalue Var 0x7fc28d82ede8 'k' 'int'
+|   |   | | `-ImplicitCastExpr 0x7fc28d82f3f8 <col:39> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fc28d82f3b8 <col:39> 'int' lvalue Var 0x7fc28d82ef10 'set_to_test_end' 'int'
+|   |   | |-UnaryOperator 0x7fc28d82f460 <col:56, col:57> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7fc28d82f438 <col:56> 'int' lvalue Var 0x7fc28d82ede8 'k' 'int'
+|   |   | `-IfStmt 0x7fc28d82fbc8 <line:43:2, line:47:4>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-ParenExpr 0x7fc28d82fba0 <line:43:6, line:46:52> 'int'
+|   |   |   | `-UnaryOperator 0x7fc28d82fb80 <line:43:7, line:46:51> 'int' prefix '!'
+|   |   |   |   `-UnaryOperator 0x7fc28d82fb60 <line:43:9, line:46:51> 'int' prefix '!'
+|   |   |   |     `-ParenExpr 0x7fc28d82fb40 <line:44:7, line:46:51> 'unsigned long'
+|   |   |   |       `-BinaryOperator 0x7fc28d82fb18 <line:44:8, line:46:50> 'unsigned long' '&'
+|   |   |   |         |-ImplicitCastExpr 0x7fc28d82fb00 <line:44:8, col:66> 'HARD_REG_ELT_TYPE':'unsigned long' <LValueToRValue>
+|   |   |   |         | `-ArraySubscriptExpr 0x7fc28d82f780 <col:8, col:66> 'HARD_REG_ELT_TYPE':'unsigned long' lvalue
+|   |   |   |         |   |-ImplicitCastExpr 0x7fc28d82f768 <col:8, col:25> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+|   |   |   |         |   | `-ParenExpr 0x7fc28d82f528 <col:8, col:25> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]' lvalue
+|   |   |   |         |   |   `-ArraySubscriptExpr 0x7fc28d82f500 <col:9, col:24> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]' lvalue
+|   |   |   |         |   |     |-ImplicitCastExpr 0x7fc28d82f4d0 <col:9> 'HARD_REG_SET *' <LValueToRValue>
+|   |   |   |         |   |     | `-DeclRefExpr 0x7fc28d82f480 <col:9> 'HARD_REG_SET *' lvalue ParmVar 0x7fc28d82cf38 'conflict_regs' 'HARD_REG_SET *'
+|   |   |   |         |   |     `-ImplicitCastExpr 0x7fc28d82f4e8 <col:23> 'int' <LValueToRValue>
+|   |   |   |         |   |       `-DeclRefExpr 0x7fc28d82f4a8 <col:23> 'int' lvalue Var 0x7fc28d82ede8 'k' 'int'
+|   |   |   |         |   `-BinaryOperator 0x7fc28d82f740 <col:27, col:65> 'unsigned int' '/'
+|   |   |   |         |     |-ImplicitCastExpr 0x7fc28d82f728 <col:27, col:42> 'unsigned int' <IntegralCast>
+|   |   |   |         |     | `-ParenExpr 0x7fc28d82f5f0 <col:27, col:42> 'int'
+|   |   |   |         |     |   `-BinaryOperator 0x7fc28d82f5c8 <col:28, col:41> 'int' '+'
+|   |   |   |         |     |     |-ImplicitCastExpr 0x7fc28d82f598 <col:28> 'int' <LValueToRValue>
+|   |   |   |         |     |     | `-DeclRefExpr 0x7fc28d82f548 <col:28> 'int' lvalue ParmVar 0x7fc28d82ce68 'hard_regno' 'int'
+|   |   |   |         |     |     `-ImplicitCastExpr 0x7fc28d82f5b0 <col:41> 'int' <LValueToRValue>
+|   |   |   |         |     |       `-DeclRefExpr 0x7fc28d82f570 <col:41> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   |   |   |         |     `-ParenExpr 0x7fc28d82f708 <col:46, col:65> 'unsigned int'
+|   |   |   |         |       `-CStyleCastExpr 0x7fc28d82f6e0 <col:47, col:64> 'unsigned int' <IntegralCast>
+|   |   |   |         |         `-ParenExpr 0x7fc28d82f6c0 <col:58, col:64> 'int'
+|   |   |   |         |           `-BinaryOperator 0x7fc28d82f650 <col:59, col:63> 'int' '*'
+|   |   |   |         |             |-IntegerLiteral 0x7fc28d82f610 <col:59> 'int' 8
+|   |   |   |         |             `-IntegerLiteral 0x7fc28d82f630 <col:63> 'int' 8
+|   |   |   |         `-ParenExpr 0x7fc28d82fae0 <line:45:8, line:46:50> 'HARD_REG_ELT_TYPE':'unsigned long'
+|   |   |   |           `-BinaryOperator 0x7fc28d82fab8 <line:45:9, line:46:49> 'HARD_REG_ELT_TYPE':'unsigned long' '<<'
+|   |   |   |             |-ParenExpr 0x7fc28d82f858 <line:45:9, col:33> 'HARD_REG_ELT_TYPE':'unsigned long'
+|   |   |   |             | `-CStyleCastExpr 0x7fc28d82f830 <col:10, col:32> 'HARD_REG_ELT_TYPE':'unsigned long' <IntegralCast>
+|   |   |   |             |   `-ParenExpr 0x7fc28d82f810 <col:30, col:32> 'int'
+|   |   |   |             |     `-IntegerLiteral 0x7fc28d82f7a8 <col:31> 'int' 1
+|   |   |   |             `-ParenExpr 0x7fc28d82fa98 <line:46:9, col:49> 'unsigned int'
+|   |   |   |               `-BinaryOperator 0x7fc28d82fa70 <col:10, col:48> 'unsigned int' '%'
+|   |   |   |                 |-ImplicitCastExpr 0x7fc28d82fa58 <col:10, col:25> 'unsigned int' <IntegralCast>
+|   |   |   |                 | `-ParenExpr 0x7fc28d82f920 <col:10, col:25> 'int'
+|   |   |   |                 |   `-BinaryOperator 0x7fc28d82f8f8 <col:11, col:24> 'int' '+'
+|   |   |   |                 |     |-ImplicitCastExpr 0x7fc28d82f8c8 <col:11> 'int' <LValueToRValue>
+|   |   |   |                 |     | `-DeclRefExpr 0x7fc28d82f878 <col:11> 'int' lvalue ParmVar 0x7fc28d82ce68 'hard_regno' 'int'
+|   |   |   |                 |     `-ImplicitCastExpr 0x7fc28d82f8e0 <col:24> 'int' <LValueToRValue>
+|   |   |   |                 |       `-DeclRefExpr 0x7fc28d82f8a0 <col:24> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|   |   |   |                 `-ParenExpr 0x7fc28d82fa38 <col:29, col:48> 'unsigned int'
+|   |   |   |                   `-CStyleCastExpr 0x7fc28d82fa10 <col:30, col:47> 'unsigned int' <IntegralCast>
+|   |   |   |                     `-ParenExpr 0x7fc28d82f9f0 <col:41, col:47> 'int'
+|   |   |   |                       `-BinaryOperator 0x7fc28d82f980 <col:42, col:46> 'int' '*'
+|   |   |   |                         |-IntegerLiteral 0x7fc28d82f940 <col:42> 'int' 8
+|   |   |   |                         `-IntegerLiteral 0x7fc28d82f960 <col:46> 'int' 8
+|   |   |   |-BreakStmt 0x7fc28d82fbc0 <line:47:4>
+|   |   |   `-<<<NULL>>>
+|   |   `-IfStmt 0x7fc28d82fce8 <line:48:7, line:49:2>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7fc28d82fcb8 <line:48:11, col:16> 'int' '!='
+|   |     | |-ImplicitCastExpr 0x7fc28d82fc88 <col:11> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x7fc28d82fc38 <col:11> 'int' lvalue Var 0x7fc28d82ede8 'k' 'int'
+|   |     | `-ImplicitCastExpr 0x7fc28d82fca0 <col:16> 'int' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7fc28d82fc60 <col:16> 'int' lvalue Var 0x7fc28d82ef10 'set_to_test_end' 'int'
+|   |     |-BreakStmt 0x7fc28d82fce0 <line:49:2>
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc28d82fe50 <line:51:3, col:15>
+|     `-ImplicitCastExpr 0x7fc28d82fe38 <col:10, col:15> 'bool' <IntegralToBoolean>
+|       `-BinaryOperator 0x7fc28d82fe10 <col:10, col:15> 'int' '=='
+|         |-ImplicitCastExpr 0x7fc28d82fde0 <col:10> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fc28d82fd90 <col:10> 'int' lvalue Var 0x7fc28d82d258 'j' 'int'
+|         `-ImplicitCastExpr 0x7fc28d82fdf8 <col:15> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc28d82fdb8 <col:15> 'int' lvalue Var 0x7fc28d82d348 'nregs' 'int'
+`-FunctionDecl 0x7fc28d82ff60 <line:54:1, line:89:1> line:55:1 improve_allocation 'void (void)'
+  `-CompoundStmt 0x7fc28d831bd0 <line:56:1, line:89:1>
+    |-DeclStmt 0x7fc28d830488 <line:57:3, col:76>
+    | |-VarDecl 0x7fc28d830018 <col:3, col:7> col:7 j 'int'
+    | |-VarDecl 0x7fc28d830090 <col:3, col:10> col:10 k 'int'
+    | |-VarDecl 0x7fc28d830108 <col:3, col:13> col:13 n 'int'
+    | |-VarDecl 0x7fc28d830180 <col:3, col:16> col:16 used hregno 'int'
+    | |-VarDecl 0x7fc28d8301f8 <col:3, col:24> col:24 used conflict_hregno 'int'
+    | |-VarDecl 0x7fc28d830270 <col:3, col:41> col:41 base_cost 'int'
+    | |-VarDecl 0x7fc28d8302e8 <col:3, col:52> col:52 class_size 'int'
+    | |-VarDecl 0x7fc28d830360 <col:3, col:64> col:64 used word 'int'
+    | `-VarDecl 0x7fc28d8303d8 <col:3, col:70> col:70 used nwords 'int'
+    |-DeclStmt 0x7fc28d830840 <line:58:3, col:66>
+    | |-VarDecl 0x7fc28d8304b8 <col:3, col:7> col:7 check 'int'
+    | |-VarDecl 0x7fc28d830530 <col:3, col:14> col:14 used spill_cost 'int'
+    | |-VarDecl 0x7fc28d8305a8 <col:3, col:26> col:26 used min_cost 'int'
+    | |-VarDecl 0x7fc28d830620 <col:3, col:36> col:36 used nregs 'int'
+    | |-VarDecl 0x7fc28d830698 <col:3, col:43> col:43 used conflict_nregs 'int'
+    | |-VarDecl 0x7fc28d830710 <col:3, col:59> col:59 used r 'int'
+    | `-VarDecl 0x7fc28d830788 <col:3, col:62> col:62 used best 'int'
+    |-DeclStmt 0x7fc28d830940 <line:59:3, col:16>
+    | `-VarDecl 0x7fc28d8308e0 <col:3, col:15> col:7 used costs 'int [81]'
+    |-DeclStmt 0x7fc28d830b00 <line:60:3, col:57>
+    | |-VarDecl 0x7fc28d830a18 <col:3, col:34> col:16 used conflicting_regs 'HARD_REG_SET [2]'
+    | `-VarDecl 0x7fc28d830a88 <col:3, col:37> col:37 used profitable_hard_regs 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]'
+    |-DeclStmt 0x7fc28d830b90 <line:61:3, col:8>
+    | `-VarDecl 0x7fc28d830b30 <col:3, col:7> col:7 used a 'int'
+    `-ForStmt 0x7fc28d831b98 <line:62:3, line:88:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fc28d831b78 <line:63:5, line:88:5>
+        |-BinaryOperator 0x7fc28d830c10 <line:64:7, col:16> 'int' '='
+        | |-DeclRefExpr 0x7fc28d830ba8 <col:7> 'int' lvalue Var 0x7fc28d8303d8 'nwords' 'int'
+        | `-ImplicitCastExpr 0x7fc28d830bf8 <col:16> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fc28d830bd0 <col:16> 'int' lvalue Var 0x7fc28d830b30 'a' 'int'
+        `-ForStmt 0x7fc28d831b40 <line:65:7, line:87:2>
+          |-BinaryOperator 0x7fc28d830c80 <line:65:12, col:19> 'int' '='
+          | |-DeclRefExpr 0x7fc28d830c38 <col:12> 'int' lvalue Var 0x7fc28d830360 'word' 'int'
+          | `-IntegerLiteral 0x7fc28d830c60 <col:19> 'int' 0
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fc28d830d28 <col:22, col:29> 'int' '<'
+          | |-ImplicitCastExpr 0x7fc28d830cf8 <col:22> 'int' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fc28d830ca8 <col:22> 'int' lvalue Var 0x7fc28d830360 'word' 'int'
+          | `-ImplicitCastExpr 0x7fc28d830d10 <col:29> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fc28d830cd0 <col:29> 'int' lvalue Var 0x7fc28d8303d8 'nwords' 'int'
+          |-UnaryOperator 0x7fc28d830d78 <col:37, col:41> 'int' postfix '++'
+          | `-DeclRefExpr 0x7fc28d830d50 <col:37> 'int' lvalue Var 0x7fc28d830360 'word' 'int'
+          `-CompoundStmt 0x7fc28d831b18 <line:66:2, line:87:2>
+            |-ForStmt 0x7fc28d8313d0 <line:67:4, line:74:6>
+            | |-<<<NULL>>>
+            | |-<<<NULL>>>
+            | |-CallExpr 0x7fc28d830e00 <line:67:11, col:42> 'bool'
+            | | `-ImplicitCastExpr 0x7fc28d830de8 <col:11> 'bool (*)()' <FunctionToPointerDecay>
+            | |   `-DeclRefExpr 0x7fc28d830d98 <col:11> 'bool ()' Function 0x7fc28d82cd28 'ira_object_conflict_iter_cond' 'bool ()'
+            | |-<<<NULL>>>
+            | `-CompoundStmt 0x7fc28d8313b8 <line:68:6, line:74:6>
+            |   `-ForStmt 0x7fc28d831380 <line:69:8, line:73:17>
+            |     |-BinaryOperator 0x7fc28d830e90 <line:69:13, col:17> 'int' '='
+            |     | |-DeclRefExpr 0x7fc28d830e28 <col:13> 'int' lvalue Var 0x7fc28d830710 'r' 'int'
+            |     | `-ImplicitCastExpr 0x7fc28d830e78 <col:17> 'int' <LValueToRValue>
+            |     |   `-DeclRefExpr 0x7fc28d830e50 <col:17> 'int' lvalue Var 0x7fc28d8301f8 'conflict_hregno' 'int'
+            |     |-<<<NULL>>>
+            |     |-BinaryOperator 0x7fc28d830fa0 <line:70:6, col:28> 'int' '<'
+            |     | |-ImplicitCastExpr 0x7fc28d830f88 <col:6> 'int' <LValueToRValue>
+            |     | | `-DeclRefExpr 0x7fc28d830eb8 <col:6> 'int' lvalue Var 0x7fc28d830710 'r' 'int'
+            |     | `-BinaryOperator 0x7fc28d830f60 <col:10, col:28> 'int' '+'
+            |     |   |-ImplicitCastExpr 0x7fc28d830f30 <col:10> 'int' <LValueToRValue>
+            |     |   | `-DeclRefExpr 0x7fc28d830ee0 <col:10> 'int' lvalue Var 0x7fc28d8301f8 'conflict_hregno' 'int'
+            |     |   `-ImplicitCastExpr 0x7fc28d830f48 <col:28> 'int' <LValueToRValue>
+            |     |     `-DeclRefExpr 0x7fc28d830f08 <col:28> 'int' lvalue Var 0x7fc28d830698 'conflict_nregs' 'int'
+            |     |-UnaryOperator 0x7fc28d830ff0 <col:44, col:45> 'int' postfix '++'
+            |     | `-DeclRefExpr 0x7fc28d830fc8 <col:44> 'int' lvalue Var 0x7fc28d830710 'r' 'int'
+            |     `-IfStmt 0x7fc28d831348 <line:71:3, line:73:17>
+            |       |-<<<NULL>>>
+            |       |-<<<NULL>>>
+            |       |-CallExpr 0x7fc28d831150 <line:71:7, line:72:52> 'bool'
+            |       | |-ImplicitCastExpr 0x7fc28d831138 <line:71:7> 'bool (*)(int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)' <FunctionToPointerDecay>
+            |       | | `-DeclRefExpr 0x7fc28d831010 <col:7> 'bool (int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)' Function 0x7fc28d82d180 'check_hard_reg_p' 'bool (int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)'
+            |       | |-ImplicitCastExpr 0x7fc28d831198 <line:72:8> 'int' <LValueToRValue>
+            |       | | `-DeclRefExpr 0x7fc28d831038 <col:8> 'int' lvalue Var 0x7fc28d830b30 'a' 'int'
+            |       | |-ImplicitCastExpr 0x7fc28d8311b0 <col:11> 'int' <LValueToRValue>
+            |       | | `-DeclRefExpr 0x7fc28d831060 <col:11> 'int' lvalue Var 0x7fc28d830710 'r' 'int'
+            |       | |-ImplicitCastExpr 0x7fc28d8311c8 <col:14> 'HARD_REG_SET *' <ArrayToPointerDecay>
+            |       | | `-DeclRefExpr 0x7fc28d831088 <col:14> 'HARD_REG_SET [2]' lvalue Var 0x7fc28d830a18 'conflicting_regs' 'HARD_REG_SET [2]'
+            |       | `-ImplicitCastExpr 0x7fc28d8311e0 <col:32> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+            |       |   `-DeclRefExpr 0x7fc28d8310b0 <col:32> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]' lvalue Var 0x7fc28d830a88 'profitable_hard_regs' 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]'
+            |       |-CompoundAssignOperator 0x7fc28d831310 <line:73:5, col:17> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+            |       | |-ArraySubscriptExpr 0x7fc28d8312a8 <col:5, col:12> 'int' lvalue
+            |       | | |-ImplicitCastExpr 0x7fc28d831278 <col:5> 'int *' <ArrayToPointerDecay>
+            |       | | | `-DeclRefExpr 0x7fc28d8311f8 <col:5> 'int [81]' lvalue Var 0x7fc28d8308e0 'costs' 'int [81]'
+            |       | | `-ImplicitCastExpr 0x7fc28d831290 <col:11> 'int' <LValueToRValue>
+            |       | |   `-DeclRefExpr 0x7fc28d831220 <col:11> 'int' lvalue Var 0x7fc28d830710 'r' 'int'
+            |       | `-ImplicitCastExpr 0x7fc28d8312f8 <col:17> 'int' <LValueToRValue>
+            |       |   `-DeclRefExpr 0x7fc28d8312d0 <col:17> 'int' lvalue Var 0x7fc28d830530 'spill_cost' 'int'
+            |       `-<<<NULL>>>
+            |-IfStmt 0x7fc28d8317a0 <line:75:4, line:80:6>
+            | |-<<<NULL>>>
+            | |-<<<NULL>>>
+            | |-BinaryOperator 0x7fc28d8316d0 <line:75:8, line:77:34> 'int' '&&'
+            | | |-ImplicitCastExpr 0x7fc28d8316b8 <line:75:8, line:76:58> 'int' <IntegralCast>
+            | | | `-CallExpr 0x7fc28d8314e8 <line:75:8, line:76:58> 'bool'
+            | | |   |-ImplicitCastExpr 0x7fc28d8314d0 <line:75:8> 'bool (*)(int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)' <FunctionToPointerDecay>
+            | | |   | `-DeclRefExpr 0x7fc28d831408 <col:8> 'bool (int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)' Function 0x7fc28d82d180 'check_hard_reg_p' 'bool (int, int, HARD_REG_SET *, HARD_REG_ELT_TYPE *)'
+            | | |   |-ImplicitCastExpr 0x7fc28d831530 <line:76:9> 'int' <LValueToRValue>
+            | | |   | `-DeclRefExpr 0x7fc28d831430 <col:9> 'int' lvalue Var 0x7fc28d830b30 'a' 'int'
+            | | |   |-ImplicitCastExpr 0x7fc28d831548 <col:12> 'int' <LValueToRValue>
+            | | |   | `-DeclRefExpr 0x7fc28d831458 <col:12> 'int' lvalue Var 0x7fc28d830180 'hregno' 'int'
+            | | |   |-ImplicitCastExpr 0x7fc28d831560 <col:20> 'HARD_REG_SET *' <ArrayToPointerDecay>
+            | | |   | `-DeclRefExpr 0x7fc28d831480 <col:20> 'HARD_REG_SET [2]' lvalue Var 0x7fc28d830a18 'conflicting_regs' 'HARD_REG_SET [2]'
+            | | |   `-ImplicitCastExpr 0x7fc28d831578 <col:38> 'HARD_REG_ELT_TYPE *' <ArrayToPointerDecay>
+            | | |     `-DeclRefExpr 0x7fc28d8314a8 <col:38> 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]' lvalue Var 0x7fc28d830a88 'profitable_hard_regs' 'HARD_REG_SET':'HARD_REG_ELT_TYPE [1]'
+            | | `-BinaryOperator 0x7fc28d831690 <line:77:11, col:34> 'int' '>'
+            | |   |-ImplicitCastExpr 0x7fc28d831660 <col:11> 'int' <LValueToRValue>
+            | |   | `-DeclRefExpr 0x7fc28d831590 <col:11> 'int' lvalue Var 0x7fc28d8305a8 'min_cost' 'int'
+            | |   `-ImplicitCastExpr 0x7fc28d831678 <col:22, col:34> 'int' <LValueToRValue>
+            | |     `-ArraySubscriptExpr 0x7fc28d831638 <col:22, col:34> 'int' lvalue
+            | |       |-ImplicitCastExpr 0x7fc28d831608 <col:22> 'int *' <ArrayToPointerDecay>
+            | |       | `-DeclRefExpr 0x7fc28d8315b8 <col:22> 'int [81]' lvalue Var 0x7fc28d8308e0 'costs' 'int [81]'
+            | |       `-ImplicitCastExpr 0x7fc28d831620 <col:28> 'int' <LValueToRValue>
+            | |         `-DeclRefExpr 0x7fc28d8315e0 <col:28> 'int' lvalue Var 0x7fc28d830180 'hregno' 'int'
+            | |-CompoundStmt 0x7fc28d831788 <line:78:6, line:80:6>
+            | | `-BinaryOperator 0x7fc28d831760 <line:79:8, col:15> 'int' '='
+            | |   |-DeclRefExpr 0x7fc28d8316f8 <col:8> 'int' lvalue Var 0x7fc28d830788 'best' 'int'
+            | |   `-ImplicitCastExpr 0x7fc28d831748 <col:15> 'int' <LValueToRValue>
+            | |     `-DeclRefExpr 0x7fc28d831720 <col:15> 'int' lvalue Var 0x7fc28d830180 'hregno' 'int'
+            | `-<<<NULL>>>
+            `-ForStmt 0x7fc28d831ae0 <line:81:4, line:86:6>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-CallExpr 0x7fc28d831818 <line:81:11, col:42> 'bool'
+              | `-ImplicitCastExpr 0x7fc28d831800 <col:11> 'bool (*)()' <FunctionToPointerDecay>
+              |   `-DeclRefExpr 0x7fc28d8317d8 <col:11> 'bool ()' Function 0x7fc28d82cd28 'ira_object_conflict_iter_cond' 'bool ()'
+              |-<<<NULL>>>
+              `-CompoundStmt 0x7fc28d831ac8 <line:82:6, line:86:6>
+                `-IfStmt 0x7fc28d831a90 <line:83:8, line:85:3>
+                  |-<<<NULL>>>
+                  |-<<<NULL>>>
+                  |-BinaryOperator 0x7fc28d831a60 <line:83:12, line:84:44> 'int' '||'
+                  | |-BinaryOperator 0x7fc28d831928 <line:83:12, col:28> 'int' '<='
+                  | | |-BinaryOperator 0x7fc28d8318c0 <col:12, col:19> 'int' '+'
+                  | | | |-ImplicitCastExpr 0x7fc28d831890 <col:12> 'int' <LValueToRValue>
+                  | | | | `-DeclRefExpr 0x7fc28d831840 <col:12> 'int' lvalue Var 0x7fc28d830788 'best' 'int'
+                  | | | `-ImplicitCastExpr 0x7fc28d8318a8 <col:19> 'int' <LValueToRValue>
+                  | | |   `-DeclRefExpr 0x7fc28d831868 <col:19> 'int' lvalue Var 0x7fc28d830620 'nregs' 'int'
+                  | | `-ImplicitCastExpr 0x7fc28d831910 <col:28> 'int' <LValueToRValue>
+                  | |   `-DeclRefExpr 0x7fc28d8318e8 <col:28> 'int' lvalue Var 0x7fc28d8301f8 'conflict_hregno' 'int'
+                  | `-BinaryOperator 0x7fc28d831a38 <line:84:8, col:44> 'int' '<='
+                  |   |-BinaryOperator 0x7fc28d8319d0 <col:8, col:26> 'int' '+'
+                  |   | |-ImplicitCastExpr 0x7fc28d8319a0 <col:8> 'int' <LValueToRValue>
+                  |   | | `-DeclRefExpr 0x7fc28d831950 <col:8> 'int' lvalue Var 0x7fc28d8301f8 'conflict_hregno' 'int'
+                  |   | `-ImplicitCastExpr 0x7fc28d8319b8 <col:26> 'int' <LValueToRValue>
+                  |   |   `-DeclRefExpr 0x7fc28d831978 <col:26> 'int' lvalue Var 0x7fc28d830698 'conflict_nregs' 'int'
+                  |   `-ImplicitCastExpr 0x7fc28d831a20 <col:44> 'int' <LValueToRValue>
+                  |     `-DeclRefExpr 0x7fc28d8319f8 <col:44> 'int' lvalue Var 0x7fc28d830788 'best' 'int'
+                  |-ContinueStmt 0x7fc28d831a88 <line:85:3>
+                  `-<<<NULL>>>

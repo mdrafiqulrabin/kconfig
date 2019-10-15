@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f9da78118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9da681de60 <../Data/C2AST/pr46521.c:4:1, line:7:1> line:4:13 used bmp_iter_next 'void (int *)' static
+| |-ParmVarDecl 0x7f9da78125a0 <col:28, col:33> col:33 used bi 'int *'
+| `-CompoundStmt 0x7f9da681e018 <line:5:1, line:7:1>
+|   `-CompoundAssignOperator 0x7f9da681dfe0 <line:6:3, col:11> 'int' '>>=' ComputeLHSTy='int' ComputeResultTy='int'
+|     |-UnaryOperator 0x7f9da681df88 <col:3, col:4> 'int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7f9da681df70 <col:4> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f9da681df48 <col:4> 'int *' lvalue ParmVar 0x7f9da78125a0 'bi' 'int *'
+|     `-IntegerLiteral 0x7f9da681dfa8 <col:11> 'int' 1
+|-FunctionDecl 0x7f9da681e198 <line:9:1, col:29> col:5 used bmp_iter_set 'int (int *, int)'
+| |-ParmVarDecl 0x7f9da681e048 <col:19, col:23> col:24 'int *'
+| `-ParmVarDecl 0x7f9da681e0c0 <col:26> col:29 'int'
+|-FunctionDecl 0x7f9da681e310 <line:10:1, col:24> col:6 used bitmap_clear 'void (void)'
+|-FunctionDecl 0x7f9da681e440 <line:11:1, col:34> col:6 used bitmap_initialize_stat 'void (void)'
+`-FunctionDecl 0x7f9da681e6d0 <line:13:1, line:20:1> line:13:6 df_md_alloc 'void (int, int, int)'
+  |-ParmVarDecl 0x7f9da681e4f8 <col:19, col:23> col:23 used bi 'int'
+  |-ParmVarDecl 0x7f9da681e570 <col:27, col:31> col:31 used bb_index 'int'
+  |-ParmVarDecl 0x7f9da681e5e8 <col:41, col:45> col:45 used bb_info 'int'
+  `-CompoundStmt 0x7f9da681eb40 <line:14:1, line:20:1>
+    `-ForStmt 0x7f9da681eb08 <line:15:3, line:19:31>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7f9da681e860 <line:15:10, col:37> 'int'
+      | |-ImplicitCastExpr 0x7f9da681e848 <col:10> 'int (*)(int *, int)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f9da681e788 <col:10> 'int (int *, int)' Function 0x7f9da681e198 'bmp_iter_set' 'int (int *, int)'
+      | |-UnaryOperator 0x7f9da681e7d8 <col:24, col:25> 'int *' prefix '&'
+      | | `-DeclRefExpr 0x7f9da681e7b0 <col:25> 'int' lvalue ParmVar 0x7f9da681e4f8 'bi' 'int'
+      | `-ImplicitCastExpr 0x7f9da681e898 <col:29> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f9da681e7f8 <col:29> 'int' lvalue ParmVar 0x7f9da681e570 'bb_index' 'int'
+      |-CallExpr 0x7f9da681e960 <col:40, col:58> 'void'
+      | |-ImplicitCastExpr 0x7f9da681e948 <col:40> 'void (*)(int *)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f9da681e8b0 <col:40> 'void (int *)' Function 0x7f9da681de60 'bmp_iter_next' 'void (int *)'
+      | `-UnaryOperator 0x7f9da681e900 <col:55, col:56> 'int *' prefix '&'
+      |   `-DeclRefExpr 0x7f9da681e8d8 <col:56> 'int' lvalue ParmVar 0x7f9da681e4f8 'bi' 'int'
+      `-IfStmt 0x7f9da681ead0 <line:16:5, line:19:31>
+        |-<<<NULL>>>
+        |-<<<NULL>>>
+        |-ImplicitCastExpr 0x7f9da681e9b8 <line:16:9> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7f9da681e990 <col:9> 'int' lvalue ParmVar 0x7f9da681e5e8 'bb_info' 'int'
+        |-CallExpr 0x7f9da681ea40 <line:17:7, col:21> 'void'
+        | `-ImplicitCastExpr 0x7f9da681ea28 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+        |   `-DeclRefExpr 0x7f9da681e9d0 <col:7> 'void (void)' Function 0x7f9da681e310 'bitmap_clear' 'void (void)'
+        `-CallExpr 0x7f9da681eaa8 <line:19:7, col:31> 'void'
+          `-ImplicitCastExpr 0x7f9da681ea90 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7f9da681ea68 <col:7> 'void (void)' Function 0x7f9da681e440 'bitmap_initialize_stat' 'void (void)'

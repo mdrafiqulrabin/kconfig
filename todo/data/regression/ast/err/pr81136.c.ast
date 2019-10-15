@@ -1,0 +1,61 @@
+../Data/C2AST/pr81136.c:3:10: fatal error: 'tree-vect.h' file not found
+#include "tree-vect.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7ffd9f02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffd9f02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffd9f02bf80 '__int128'
+|-TypedefDecl 0x7ffd9f02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffd9f02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffd9f02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffd9f02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffd9f02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffd9f02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffd9f02c600 'char *'
+|   `-BuiltinType 0x7ffd9f02bd80 'char'
+|-TypedefDecl 0x7ffd9f02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffd9f02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffd9f02c720 'struct __va_list_tag'
+|     `-Record 0x7ffd9f02c698 '__va_list_tag'
+|-RecordDecl 0x7ffd9f82bc00 <../Data/C2AST/pr81136.c:11:1, line:16:1> line:11:1 struct definition
+| |-AlignedAttr 0x7ffd9f82bcb0 <col:23, col:41> aligned
+| | `-IntegerLiteral 0x7ffd9f02c960 <line:8:19> 'int' 32
+| |-FieldDecl 0x7ffd9f82bd10 <line:13:3, col:8> col:8 misaligner 'char'
+| |-FieldDecl 0x7ffd9f82bde0 <line:14:3, col:14> col:7 referenced foo 'int [100]'
+| `-FieldDecl 0x7ffd9f82be70 <line:15:3, col:14> col:7 referenced bar 'int [100]'
+|-VarDecl 0x7ffd9f82bf70 <line:11:1, line:16:4> col:4 used a 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *'
+`-FunctionDecl 0x7ffd9f82c100 <line:18:1, line:24:1> line:19:1 fn1 'void (int)'
+  |-ParmVarDecl 0x7ffd9f82c040 <col:6, col:10> col:10 used n 'int'
+  `-CompoundStmt 0x7ffd9f82c6b0 <line:20:1, line:24:1>
+    |-DeclStmt 0x7ffd9f82c2e0 <line:21:3, col:18>
+    | `-VarDecl 0x7ffd9f82c1f0 <col:3, col:15> col:8 used b 'int *' cinit
+    |   `-ImplicitCastExpr 0x7ffd9f82c2c8 <col:12, col:15> 'int *' <ArrayToPointerDecay>
+    |     `-MemberExpr 0x7ffd9f82c290 <col:12, col:15> 'int [100]' lvalue ->foo 0x7ffd9f82bde0
+    |       `-ImplicitCastExpr 0x7ffd9f82c278 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7ffd9f82c250 <col:12> 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *' lvalue Var 0x7ffd9f82bf70 'a' 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *'
+    `-ForStmt 0x7ffd9f82c678 <line:22:3, line:23:20>
+      |-DeclStmt 0x7ffd9f82c390 <line:22:8, col:17>
+      | `-VarDecl 0x7ffd9f82c310 <col:8, col:16> col:12 used i 'int' cinit
+      |   `-IntegerLiteral 0x7ffd9f82c370 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffd9f82c428 <col:19, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7ffd9f82c3f8 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ffd9f82c3a8 <col:19> 'int' lvalue Var 0x7ffd9f82c310 'i' 'int'
+      | `-ImplicitCastExpr 0x7ffd9f82c410 <col:23> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffd9f82c3d0 <col:23> 'int' lvalue ParmVar 0x7ffd9f82c040 'n' 'int'
+      |-UnaryOperator 0x7ffd9f82c478 <col:26, col:27> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ffd9f82c450 <col:26> 'int' lvalue Var 0x7ffd9f82c310 'i' 'int'
+      `-BinaryOperator 0x7ffd9f82c650 <line:23:5, col:20> 'int' '='
+        |-ArraySubscriptExpr 0x7ffd9f82c568 <col:5, col:13> 'int' lvalue
+        | |-ImplicitCastExpr 0x7ffd9f82c538 <col:5, col:8> 'int *' <ArrayToPointerDecay>
+        | | `-MemberExpr 0x7ffd9f82c4d8 <col:5, col:8> 'int [100]' lvalue ->bar 0x7ffd9f82be70
+        | |   `-ImplicitCastExpr 0x7ffd9f82c4c0 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7ffd9f82c498 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *' lvalue Var 0x7ffd9f82bf70 'a' 'struct (anonymous struct at ../Data/C2AST/pr81136.c:11:1) *'
+        | `-ImplicitCastExpr 0x7ffd9f82c550 <col:12> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffd9f82c510 <col:12> 'int' lvalue V1 error generated.
+ar 0x7ffd9f82c310 'i' 'int'
+        `-ImplicitCastExpr 0x7ffd9f82c638 <col:17, col:20> 'int' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7ffd9f82c610 <col:17, col:20> 'int' lvalue
+            |-ImplicitCastExpr 0x7ffd9f82c5e0 <col:17> 'int *' <LValueToRValue>
+            | `-DeclRefExpr 0x7ffd9f82c590 <col:17> 'int *' lvalue Var 0x7ffd9f82c1f0 'b' 'int *'
+            `-ImplicitCastExpr 0x7ffd9f82c5f8 <col:19> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7ffd9f82c5b8 <col:19> 'int' lvalue Var 0x7ffd9f82c310 'i' 'int'

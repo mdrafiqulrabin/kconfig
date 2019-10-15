@@ -1,0 +1,22 @@
+../Data/C2AST/pragma_attribute.c:8:2: error: "__thumb__ is not defined"
+#error "__thumb__ is not defined"
+ ^
+../Data/C2AST/pragma_attribute.c:32:2: error: "__ARM_32BIT_STATE is not defined"
+#error  "__ARM_32BIT_STATE is not defined"
+ ^
+2 errors generated.
+TranslationUnitDecl 0x7ff1c582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff1c582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff1c582bf80 '__int128'
+|-TypedefDecl 0x7ff1c582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff1c582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff1c582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff1c582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff1c582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff1c582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff1c582c600 'char *'
+|   `-BuiltinType 0x7ff1c582bd80 'char'
+`-TypedefDecl 0x7ff1c582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7ff1c582c8b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7ff1c582c720 'struct __va_list_tag'
+      `-Record 0x7ff1c582c698 '__va_list_tag'

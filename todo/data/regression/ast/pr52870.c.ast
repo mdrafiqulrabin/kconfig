@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7f9544017ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9544039660 <../Data/C2AST/pr52870.c:4:1, col:28> col:6 used foo 'void (unsigned long)'
+| `-ParmVarDecl 0x7f9544018778 <col:11, col:25> col:28 'unsigned long'
+`-FunctionDecl 0x7f9544039858 <line:6:1, line:19:1> line:7:1 test 'long (int *)'
+  |-ParmVarDecl 0x7f9544039790 <col:7, col:12> col:12 used x 'int *'
+  `-CompoundStmt 0x7f9544039fa0 <line:8:1, line:19:1>
+    |-DeclStmt 0x7f9544039a08 <line:9:3, col:26>
+    | |-VarDecl 0x7f9544039918 <col:3, col:17> col:17 used sx 'unsigned long'
+    | `-VarDecl 0x7f9544039990 <col:3, col:21> col:21 used xprec 'unsigned long'
+    |-BinaryOperator 0x7f9544039c60 <line:11:3, col:25> 'unsigned long' '='
+    | |-DeclRefExpr 0x7f9544039a20 <col:3> 'unsigned long' lvalue Var 0x7f9544039918 'sx' 'unsigned long'
+    | `-ImplicitCastExpr 0x7f9544039c48 <col:8, col:25> 'unsigned long' <IntegralCast>
+    |   `-ConditionalOperator 0x7f9544039c18 <col:8, col:25> 'int'
+    |     |-BinaryOperator 0x7f9544039ae0 <col:8, col:14> 'int' '>='
+    |     | |-ImplicitCastExpr 0x7f9544039ac8 <col:8, col:9> 'int' <LValueToRValue>
+    |     | | `-UnaryOperator 0x7f9544039a88 <col:8, col:9> 'int' lvalue prefix '*'
+    |     | |   `-ImplicitCastExpr 0x7f9544039a70 <col:9> 'int *' <LValueToRValue>
+    |     | |     `-DeclRefExpr 0x7f9544039a48 <col:9> 'int *' lvalue ParmVar 0x7f9544039790 'x' 'int *'
+    |     | `-IntegerLiteral 0x7f9544039aa8 <col:14> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9544039c00 <col:18, col:19> 'int' <LValueToRValue>
+    |     | `-UnaryOperator 0x7f9544039b48 <col:18, col:19> 'int' lvalue prefix '*'
+    |     |   `-ImplicitCastExpr 0x7f9544039b30 <col:19> 'int *' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7f9544039b08 <col:19> 'int *' lvalue ParmVar 0x7f9544039790 'x' 'int *'
+    |     `-UnaryOperator 0x7f9544039be0 <col:23, col:25> 'int' prefix '-'
+    |       `-ImplicitCastExpr 0x7f9544039bc8 <col:24, col:25> 'int' <LValueToRValue>
+    |         `-UnaryOperator 0x7f9544039ba8 <col:24, col:25> 'int' lvalue prefix '*'
+    |           `-ImplicitCastExpr 0x7f9544039b90 <col:25> 'int *' <LValueToRValue>
+    |             `-DeclRefExpr 0x7f9544039b68 <col:25> 'int *' lvalue ParmVar 0x7f9544039790 'x' 'int *'
+    |-BinaryOperator 0x7f9544039d50 <line:13:3, col:16> 'unsigned long' '='
+    | |-DeclRefExpr 0x7f9544039c88 <col:3> 'unsigned long' lvalue Var 0x7f9544039990 'xprec' 'unsigned long'
+    | `-BinaryOperator 0x7f9544039d28 <col:11, col:16> 'unsigned long' '*'
+    |   |-ImplicitCastExpr 0x7f9544039cf8 <col:11> 'unsigned long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f9544039cb0 <col:11> 'unsigned long' lvalue Var 0x7f9544039918 'sx' 'unsigned long'
+    |   `-ImplicitCastExpr 0x7f9544039d10 <col:16> 'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f9544039cd8 <col:16> 'int' 64
+    |-IfStmt 0x7f9544039ef8 <line:15:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9544039df0 <line:15:7, col:12> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f9544039dc0 <col:7> 'unsigned long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9544039d78 <col:7> 'unsigned long' lvalue Var 0x7f9544039918 'sx' 'unsigned long'
+    | | `-ImplicitCastExpr 0x7f9544039dd8 <col:12> 'unsigned long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f9544039da0 <col:12> 'int' 16384
+    | |-CallExpr 0x7f9544039eb0 <line:16:5, col:12> 'void'
+    | | |-ImplicitCastExpr 0x7f9544039e98 <col:5> 'void (*)(unsigned long)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f9544039e18 <col:5> 'void (unsigned long)' Function 0x7f9544039660 'foo' 'void (unsigned long)'
+    | | `-ImplicitCastExpr 0x7f9544039ee0 <col:10> 'unsigned long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9544039e40 <col:10> 'unsigned long' lvalue Var 0x7f9544039918 'sx' 'unsigned long'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f9544039f88 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7f9544039f70 <col:10> 'long' <IntegralCast>
+        `-ImplicitCastExpr 0x7f9544039f58 <col:10> 'unsigned long' <LValueToRValue>
+          `-DeclRefExpr 0x7f9544039f30 <col:10> 'unsigned long' lvalue Var 0x7f9544039990 'xprec' 'unsigned long'

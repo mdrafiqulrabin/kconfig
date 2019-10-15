@@ -1,0 +1,85 @@
+../Data/C2AST/pr33560.c:10:17: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  struct T *q = __builtin_malloc (sizeof (struct T));
+                ^
+TranslationUnitDecl 0x7fabd302bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fabd302c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fabd302bf80 '__int128'
+|-TypedefDecl 0x7fabd302c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fabd302bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fabd302c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fabd302c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fabd302c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fabd302c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fabd302c600 'char *'
+|   `-BuiltinType 0x7fabd302bd80 'char'
+|-TypedefDecl 0x7fabd302c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fabd302c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fabd302c720 'struct __va_list_tag'
+|     `-Record 0x7fabd302c698 '__va_list_tag'
+|-RecordDecl 0x7fabd302c960 <../Data/C2AST/pr33560.c:3:1, line:6:1> line:3:8 struct T definition
+| |-FieldDecl 0x7fabd306d838 <line:5:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7fabd306d898 <col:3, col:10> col:10 referenced b 'int'
+|-VarDecl 0x7fabd306d930 <line:3:1, line:6:3> col:3 used t 'struct T':'struct T'
+|-FunctionDecl 0x7fabd306db88 <line:8:1, line:13:1> line:8:37 used f 'struct T *(struct T *)'
+| |-ParmVarDecl 0x7fabd306da70 <col:40, col:50> col:50 used p 'struct T *'
+| |-CompoundStmt 0x7fabd306e088 <line:9:1, line:13:1>
+| | |-DeclStmt 0x7fabd306df18 <line:10:3, col:53>
+| | | `-VarDecl 0x7fabd306dca0 <col:3, col:52> col:13 used q 'struct T *' cinit
+| | |   `-ImplicitCastExpr 0x7fabd306df00 <col:17, col:52> 'struct T *' <IntegralToPointer>
+| | |     `-CallExpr 0x7fabd306ded0 <col:17, col:52> 'int'
+| | |       |-ImplicitCastExpr 0x7fabd306deb8 <col:17> 'int (*)()' <FunctionToPointerDecay>
+| | |       | `-DeclRefExpr 0x7fabd306de20 <col:17> 'int ()' Function 0x7fabd306dd70 '__builtin_malloc' 'int ()'
+| | |       `-UnaryExprOrTypeTraitExpr 0x7fabd306de68 <col:35, col:51> 'unsigned long' sizeof 'struct T':'struct T'
+| | |-BinaryOperator 0x7fabd306e008 <line:11:3, col:9> 'struct T':'struct T' '='
+| | | |-UnaryOperator 0x7fabd306df70 <col:3, col:4> 'struct T':'struct T' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fabd306df58 <col:4> 'struct T *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fabd306df30 <col:4> 'struct T *' lvalue Var 0x7fabd306dca0 'q' 'struct T *'
+| | | `-ImplicitCastExpr 0x7fabd306dff0 <col:8, col:9> 'struct T':'struct T' <LValueToRValue>
+| | |   `-UnaryOperator 0x7fabd306dfd0 <col:8, col:9> 'struct T':'struct T' lvalue prefix '*'
+| | |     `-ImplicitCastExpr 0x7fabd306dfb8 <col:9> 'struct T *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fabd306df90 <col:9> 'struct T *' lvalue ParmVar 0x7fabd306da70 'p' 'struct T *'
+| | `-ReturnStmt 0x7fabd306e070 <line:12:3, col:10>
+| |   `-ImplicitCastExpr 0x7fabd306e058 <col:10> 'struct T *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fabd306e030 <col:10> 'struct T *' lvalue Var 0x7fabd306dca0 'q' 'struct T *'
+| `-NoInlineAttr 0x7fabd306dc30 <line:8:16>
+|-FunctionDecl 0x7fabd306e178 <line:15:1, line:28:1> line:15:5 main 'int (void)'
+| `-CompoundStmt 0x7fabd307e9e8 <line:16:1, line:28:1>
+|   |-DeclStmt 0x7fabd306e2d0 <line:17:3, col:14>
+|   | `-VarDecl 0x7fabd306e270 <col:3, col:13> col:13 used p 'struct T *'
+|   |-BinaryOperator 0x7fabd306e368 <line:19:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fabd306e310 <col:3, col:5> 'int' lvalue .a 0x7fabd306d838
+|   | | `-DeclRefExpr 0x7fabd306e2e8 <col:3> 'struct T':'struct T' lvalue Var 0x7fabd306d930 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fabd306e348 <col:9> 'int' 1
+|   |-BinaryOperator 0x7fabd306e460 <line:20:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fabd306e408 <col:3, col:5> 'int' lvalue .b 0x7fabd306d898
+|   | | `-DeclRefExpr 0x7fabd306e3e0 <col:3> 'struct T':'struct T' lvalue Var 0x7fabd306d930 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fabd306e440 <col:1 error generated.
+9> 'int' 2
+|   |-BinaryOperator 0x7fabd306e5c0 <line:21:3, col:12> 'struct T *' '='
+|   | |-DeclRefExpr 0x7fabd306e488 <col:3> 'struct T *' lvalue Var 0x7fabd306e270 'p' 'struct T *'
+|   | `-CallExpr 0x7fabd306e590 <col:7, col:12> 'struct T *'
+|   |   |-ImplicitCastExpr 0x7fabd306e578 <col:7> 'struct T *(*)(struct T *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fabd306e4b0 <col:7> 'struct T *(struct T *)' Function 0x7fabd306db88 'f' 'struct T *(struct T *)'
+|   |   `-UnaryOperator 0x7fabd306e500 <col:10, col:11> 'struct T *' prefix '&'
+|   |     `-DeclRefExpr 0x7fabd306e4d8 <col:11> 'struct T':'struct T' lvalue Var 0x7fabd306d930 't' 'struct T':'struct T'
+|   |-BinaryOperator 0x7fabd306e668 <line:22:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fabd306e610 <col:3, col:5> 'int' lvalue .a 0x7fabd306d838
+|   | | `-DeclRefExpr 0x7fabd306e5e8 <col:3> 'struct T':'struct T' lvalue Var 0x7fabd306d930 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fabd306e648 <col:9> 'int' 3
+|   |-IfStmt 0x7fabd307e978 <line:24:3, line:25:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fabd306e740 <line:24:7, col:15> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fabd306e728 <col:7, col:10> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fabd306e6d0 <col:7, col:10> 'int' lvalue ->a 0x7fabd306d838
+|   | | |   `-ImplicitCastExpr 0x7fabd306e6b8 <col:7> 'struct T *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fabd306e690 <col:7> 'struct T *' lvalue Var 0x7fabd306e270 'p' 'struct T *'
+|   | | `-IntegerLiteral 0x7fabd306e708 <col:15> 'int' 1
+|   | |-CallExpr 0x7fabd307e950 <line:25:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fabd307e938 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fabd307e8e8 <col:5> '<builtin fn type>' Function 0x7fabd307e800 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fabd307e9d0 <line:27:3, col:10>
+|     `-IntegerLiteral 0x7fabd307e9b0 <col:10> 'int' 0
+`-FunctionDecl 0x7fabd307e800 <line:25:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fabd307e8a0 <col:5> Implicit

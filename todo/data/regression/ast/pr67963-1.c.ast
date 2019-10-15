@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7f8ff1017ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8ff1818a28 <../Data/C2AST/pr67963-1.c:4:1, line:7:1> line:4:7 foo 'float (void)'
+  `-CompoundStmt 0x7f8ff1818b40 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7f8ff1818b28 <line:6:3, col:10>
+      `-FloatingLiteral 0x7f8ff1818b08 <col:10> 'float' 0.000000e+00

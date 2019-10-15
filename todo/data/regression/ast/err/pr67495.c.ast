@@ -1,0 +1,105 @@
+../Data/C2AST/pr67495.c:13:3: error: assignment to cast is illegal, lvalue casts are not supported
+  (float) a = b;         
+  ^~~~~~~~~ ~
+../Data/C2AST/pr67495.c:15:3: error: assignment to cast is illegal, lvalue casts are not supported
+  (float) a = b;         
+  ^~~~~~~~~ ~
+../Data/C2AST/pr67495.c:19:3: error: assignment to cast is illegal, lvalue casts are not supported
+  (float) a = b += c;    
+  ^~~~~~~~~ ~
+../Data/C2AST/pr67495.c:21:13: error: assignment to cast is illegal, lvalue casts are not supported
+  { a += b; (float) c = a; }     
+            ^~~~~~~~~ ~
+../Data/C2AST/pr67495.c:27:3: error: assignment to cast is illegal, lvalue casts are not supported
+  (int) a = b;           
+  ^~~~~~~ ~
+../Data/C2AST/pr67495.c:29:3: error: assignment to cast is illegal, lvalue casts are not supported
+  (int) a = b;           
+  ^~~~~~~ ~
+../Data/C2AST/pr67495.c:33:3: error: assignment to cast is illegal, lvalue casts are not supported
+  (int) a = b += c;      
+  ^~~~~~~ ~
+../Data/C2AST/pr67495.c:35:13: error: assignment to cast is illegal, lvalue casts are not supported
+  { a += b; (int) c = a; }       
+            ^~~~~~~ ~
+TranslationUnitDecl 0x7feb1482a4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7feb1482aa60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7feb1482a780 '__int128'
+|-TypedefDecl 0x7feb1482aad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7feb1482a7a0 'unsigned __int128'
+|-TypedefDecl 0x7feb1482ada8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7feb1482abb0 'struct __NSConstantString_tag'
+|   `-Record 0x7feb1482ab28 '__NSConstantString_tag'
+|-TypedefDecl 0x7feb1482ae40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7feb1482ae00 'char *'
+|   `-BuiltinType 0x7feb1482a580 'char'
+|-TypedefDecl 0x7feb1482b108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7feb1482b0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7feb1482af20 'struct __va_list_tag'
+|     `-Record 0x7feb1482ae98 '__va_list_tag'
+|-VarDecl 0x7feb1482b178 <../Data/C2AST/pr67495.c:5:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7feb13815258 <col:1, col:8> col:8 used b 'int'
+|-VarDecl 0x7feb138152d0 <col:1, col:11> col:11 used c 'int'
+`-FunctionDecl 0x7feb13815410 <line:7:1, line:38:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7feb1481eff8 <line:9:1, line:38:1>
+    |-BinaryOperator 0x7feb138155f0 <line:11:3, col:18> 'int' '='
+    | |-DeclRefExpr 0x7feb138154b0 <col:3> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    | `-ImplicitCastExpr 0x7feb138155d8 <col:7, col:18> 'int' <FloatingToIntegral>
+    |   `-BinaryOperator 0x7feb138155b0 <col:7, col:18> 'float' '+'
+    |     |-CStyleCastExpr 0x7feb13815530 <col:7, col:14> 'float' <IntegralToFloating>
+    |     | `-ImplicitCastExpr 0x7feb13815518 <col:14> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7feb138154d8 <col:14> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    |     `-ImplicitCastExpr 0x7feb13815598 <col:18> 'float' <IntegralToFloating>
+    |       `-ImplicitCastExpr 0x7feb13815580 <col:18> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7feb13815558 <col:18> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    |-BinaryOperator 0x7feb13815828 <line:17:3, col:15> 'int' '='
+    | |-DeclRefExpr 0x7feb13815768 <col:3> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    | `-ImplicitCastExpr 0x7feb13815810 <col:7, col:15> 'int' <FloatingToIntegral>
+    |   `-CStyleCastExpr 0x7feb138157e8 <col:7, col:15> 'float' <IntegralToFloating>
+    |     `-ImplicitCastExpr 0x7feb138157d0 <col:15> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7feb13815790 <col:15> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    |-CompoundStmt 0x7feb13815ab8 <line:21:3, col:28>
+    | `-CompoundAssignOperator 0x7feb138159d8 <col:5, col:10> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7feb13815970 <col:5> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    |   `-ImplicitCastExpr 0x7feb138159c0 <col:10> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7feb13815998 <col:10> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    |-CompoundStmt 0x7feb13815c58 <line:23:3, col:28>
+    | |-CompoundAssignOperator 0x7feb13815b38 <col:5, col:10> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7feb13815ad0 <col:5> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    | | `-ImplicitCastExpr 0x7feb13815b20 <col:10> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7feb13815af8 <col:10> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    | `-BinaryOperator 0x7feb13815c30 <col:13, col:25> 'int' '='
+    |   |-DeclRefExpr 0x7feb13815b70 <col:13> 'int' lvalue Var 0x7feb138152d0 'c' 'int'
+    |   `-ImplicitCastExpr 0x7feb13815c18 <col:17, col:25> 'int' <FloatingToIntegral>
+    |     `-CStyleCastExpr 0x7feb13815bf0 <col:17, col:25> 'float' <IntegralToFloating>
+    |       `-ImplicitCastExpr 0x7feb13815bd8 <col:25> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7feb13815b98 <col:25> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    |-BinaryOperator 0x7feb13815d88 <line:25:3, col:16> 'int' '='
+    8 errors generated.
+| |-DeclRefExpr 0x7feb13815c78 <col:3> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    | `-BinaryOperator 0x7feb13815d60 <col:7, col:16> 'int' '+'
+    |   |-CStyleCastExpr 0x7feb13815cf8 <col:7, col:12> 'int' <NoOp>
+    |   | `-ImplicitCastExpr 0x7feb13815ce0 <col:12> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7feb13815ca0 <col:12> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    |   `-ImplicitCastExpr 0x7feb13815d48 <col:16> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7feb13815d20 <col:16> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    |-BinaryOperator 0x7feb13815fa8 <line:31:3, col:13> 'int' '='
+    | |-DeclRefExpr 0x7feb13815f00 <col:3> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    | `-CStyleCastExpr 0x7feb13815f80 <col:7, col:13> 'int' <NoOp>
+    |   `-ImplicitCastExpr 0x7feb13815f68 <col:13> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7feb13815f28 <col:13> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    |-CompoundStmt 0x7feb1481ee50 <line:35:3, col:26>
+    | `-CompoundAssignOperator 0x7feb13816158 <col:5, col:10> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7feb138160f0 <col:5> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+    |   `-ImplicitCastExpr 0x7feb13816140 <col:10> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7feb13816118 <col:10> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+    `-CompoundStmt 0x7feb1481efd8 <line:37:3, col:26>
+      |-CompoundAssignOperator 0x7feb1481eed0 <col:5, col:10> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-DeclRefExpr 0x7feb1481ee68 <col:5> 'int' lvalue Var 0x7feb1482b178 'a' 'int'
+      | `-ImplicitCastExpr 0x7feb1481eeb8 <col:10> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7feb1481ee90 <col:10> 'int' lvalue Var 0x7feb13815258 'b' 'int'
+      `-BinaryOperator 0x7feb1481efb0 <col:13, col:23> 'int' '='
+        |-DeclRefExpr 0x7feb1481ef08 <col:13> 'int' lvalue Var 0x7feb138152d0 'c' 'int'
+        `-CStyleCastExpr 0x7feb1481ef88 <col:17, col:23> 'int' <NoOp>
+          `-ImplicitCastExpr 0x7feb1481ef70 <col:23> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7feb1481ef30 <col:23> 'int' lvalue Var 0x7feb1482b178 'a' 'int'

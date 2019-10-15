@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fd8c10002e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd8c0828130 <../Data/C2AST/pr84723-2.c:6:1, line:13:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fd8c08284f8 <line:9:1, line:13:1>
+    |-DeclStmt 0x7fd8c08282f0 <line:10:3, col:25>
+    | `-VarDecl 0x7fd8c0828228 <col:3, col:22> col:16 used p 'void *' static cinit
+    |   `-AddrLabelExpr 0x7fd8c08282d0 <col:20, col:22> 'void *' lab 0x7fd8c0828288
+    |-GCCAsmStmt 0x7fd8c0828468 <line:11:3, col:43>
+    | `-DeclRefExpr 0x7fd8c08283d8 <col:28> 'void *' lvalue Var 0x7fd8c0828228 'p' 'void *'
+    `-LabelStmt 0x7fd8c08284e0 <line:12:1, col:5> 'lab'
+      `-NullStmt 0x7fd8c08284d0 <col:5>

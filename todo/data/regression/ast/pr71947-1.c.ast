@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7f956482bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f95650112d8 <../Data/C2AST/pr71947-1.c:5:1, line:15:1> line:5:5 f 'int (int, int)'
+  |-ParmVarDecl 0x7f956482c978 <col:7, col:11> col:11 used x 'int'
+  |-ParmVarDecl 0x7f9565011200 <col:14, col:18> col:18 used y 'int'
+  `-CompoundStmt 0x7f95650116f8 <line:6:1, line:15:1>
+    |-DeclStmt 0x7f9565011440 <line:7:4, col:11>
+    | `-VarDecl 0x7f95650113e0 <col:4, col:8> col:8 used ret 'int'
+    |-IfStmt 0x7f9565011668 <line:9:4, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f95650114d8 <line:9:8, col:13> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f95650114a8 <col:8> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9565011458 <col:8> 'int' lvalue ParmVar 0x7f956482c978 'x' 'int'
+    | | `-ImplicitCastExpr 0x7f95650114c0 <col:13> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9565011480 <col:13> 'int' lvalue ParmVar 0x7f9565011200 'y' 'int'
+    | |-BinaryOperator 0x7f95650115d0 <line:10:6, col:16> 'int' '='
+    | | |-DeclRefExpr 0x7f9565011500 <col:6> 'int' lvalue Var 0x7f95650113e0 'ret' 'int'
+    | | `-BinaryOperator 0x7f95650115a8 <col:12, col:16> 'int' '^'
+    | |   |-ImplicitCastExpr 0x7f9565011578 <col:12> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7f9565011528 <col:12> 'int' lvalue ParmVar 0x7f956482c978 'x' 'int'
+    | |   `-ImplicitCastExpr 0x7f9565011590 <col:16> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f9565011550 <col:16> 'int' lvalue ParmVar 0x7f9565011200 'y' 'int'
+    | `-BinaryOperator 0x7f9565011640 <line:12:6, col:12> 'int' '='
+    |   |-DeclRefExpr 0x7f95650115f8 <col:6> 'int' lvalue Var 0x7f95650113e0 'ret' 'int'
+    |   `-IntegerLiteral 0x7f9565011620 <col:12> 'int' 1
+    `-ReturnStmt 0x7f95650116e0 <line:14:4, col:11>
+      `-ImplicitCastExpr 0x7f95650116c8 <col:11> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f95650116a0 <col:11> 'int' lvalue Var 0x7f95650113e0 'ret' 'int'

@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fd2b182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd2b186e800 <../Data/C2AST/pr21817-1.c:6:1, col:15> col:15 referenced v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7fd2b182c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7fd2b182bee0 'float'
+|-VarDecl 0x7fd2b186e890 <line:7:1, col:6> col:6 used value 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+`-FunctionDecl 0x7fd2b186e9f0 <line:8:1, line:15:1> line:8:6 foo 'void (void)'
+  `-CompoundStmt 0x7fd2b186eed0 <line:9:1, line:15:1>
+    |-DeclStmt 0x7fd2b186eb08 <line:10:3, col:20>
+    | `-VarDecl 0x7fd2b186eaa8 <col:3, col:16> col:16 used band 'unsigned int'
+    `-ForStmt 0x7fd2b186ee98 <line:11:3, line:14:5>
+      |-BinaryOperator 0x7fd2b186eb80 <line:11:7, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7fd2b186eb20 <col:7> 'unsigned int' lvalue Var 0x7fd2b186eaa8 'band' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fd2b186eb68 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fd2b186eb48 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd2b186ec20 <col:15, col:22> 'int' '<'
+      | |-ImplicitCastExpr 0x7fd2b186ebf0 <col:15> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd2b186eba8 <col:15> 'unsigned int' lvalue Var 0x7fd2b186eaa8 'band' 'unsigned int'
+      | `-ImplicitCastExpr 0x7fd2b186ec08 <col:22> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7fd2b186ebd0 <col:22> 'int' 2
+      |-UnaryOperator 0x7fd2b186ec70 <col:25, col:29> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7fd2b186ec48 <col:25> 'unsigned int' lvalue Var 0x7fd2b186eaa8 'band' 'unsigned int'
+      `-CompoundStmt 0x7fd2b186ee80 <line:12:5, line:14:5>
+        `-CompoundAssignOperator 0x7fd2b186ee48 <line:13:7, col:42> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '+=' ComputeLHSTy='v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' ComputeResultTy='v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+          |-DeclRefExpr 0x7fd2b186ec90 <col:7> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7fd2b186e890 'value' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+          `-ImplicitCastExpr 0x7fd2b186ee30 <col:16, col:42> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+            `-CompoundLiteralExpr 0x7fd2b186ee08 <col:16, col:42> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue
+              `-InitListExpr 0x7fd2b186eda8 <col:22, col:42> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+                |-FloatingLiteral 0x7fd2b186ecc8 <col:23> 'float' 1.000000e+09
+                |-FloatingLiteral 0x7fd2b186ece8 <col:28> 'float' 1.000000e+09
+                |-FloatingLiteral 0x7fd2b186ed08 <col:33> 'float' 1.000000e+09
+                `-FloatingLiteral 0x7fd2b186ed28 <col:38> 'float' 1.000000e+09

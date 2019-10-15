@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fcd6b02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fcd6b02c978 <../Data/C2AST/pr78818-real.c:1:1, col:48> col:33 persistent_1 'int' cinit
+| `-IntegerLiteral 0x7fcd6b815240 <col:48> 'int' 1
+|-VarDecl 0x7fcd6b815278 <line:2:1, col:48> col:33 persistent_2 'int' cinit
+| `-IntegerLiteral 0x7fcd6b8152d8 <col:48> 'int' 0
+|-VarDecl 0x7fcd6b815310 <line:3:1, col:55> col:40 persistent_3 'int' static cinit
+| `-IntegerLiteral 0x7fcd6b815370 <col:55> 'int' 1
+|-VarDecl 0x7fcd6b8153a8 <line:4:1, col:55> col:40 persistent_4 'int' static cinit
+| `-IntegerLiteral 0x7fcd6b815408 <col:55> 'int' 0
+`-FunctionDecl 0x7fcd6b8154f8 <line:6:1, line:9:1> line:6:5 main 'int (void)'
+  `-CompoundStmt 0x7fcd6b815600 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fcd6b8155e8 <line:8:3, col:10>
+      `-IntegerLiteral 0x7fcd6b8155c8 <col:10> 'int' 0

@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fb6878174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb687818178 <../Data/C2AST/pr46216.c:4:1, col:13> col:13 referenced Embryo_Cell 'int'
+| `-BuiltinType 0x7fb6878175e0 'int'
+`-FunctionDecl 0x7fb68803db78 <line:5:1, line:25:1> line:6:1 embryo_program_run 'int (Embryo_Cell *)'
+  |-ParmVarDecl 0x7fb68803da68 <col:20, col:33> col:33 used cip 'Embryo_Cell *'
+  `-CompoundStmt 0x7fb68803e4c0 <line:7:1, line:25:1>
+    |-DeclStmt 0x7fb68803dcd8 <line:8:5, col:21>
+    | `-VarDecl 0x7fb68803dc78 <col:5, col:19> col:19 used op 'unsigned char'
+    |-DeclStmt 0x7fb68803dd60 <line:9:5, col:21>
+    | `-VarDecl 0x7fb68803dd00 <col:5, col:17> col:17 used offs 'Embryo_Cell':'int'
+    |-DeclStmt 0x7fb68803e048 <line:10:5, line:12:6>
+    | `-VarDecl 0x7fb68803de30 <line:10:5, line:12:5> line:10:24 used switchtable 'const void *[256]' static cinit
+    |   `-InitListExpr 0x7fb68803dfb0 <col:43, line:12:5> 'const void *[256]'
+    |     |-array filler
+    |     | `-ImplicitValueInitExpr 0x7fb68803e038 <<invalid sloc>> 'const void *'
+    |     |-ImplicitCastExpr 0x7fb68803dff0 <line:11:2, col:4> 'const void *' <BitCast>
+    |     | `-AddrLabelExpr 0x7fb68803ded8 <col:2, col:4> 'void *' SWITCHTABLE_EMBRYO_OP_NONE 0x7fb68803de90
+    |     `-ImplicitCastExpr 0x7fb68803e010 <col:32, col:34> 'const void *' <BitCast>
+    |       `-AddrLabelExpr 0x7fb68803df40 <col:32, col:34> 'void *' SWITCHTABLE_EMBRYO_OP_LOAD_PRI 0x7fb68803def8
+    |-ForStmt 0x7fb68803e430 <line:13:5, line:23:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7fb68803e408 <line:14:7, line:23:7>
+    |   |-BinaryOperator 0x7fb68803e120 <line:15:2, col:11> 'unsigned char' '='
+    |   | |-DeclRefExpr 0x7fb68803e060 <col:2> 'unsigned char' lvalue Var 0x7fb68803dc78 'op' 'unsigned char'
+    |   | `-ImplicitCastExpr 0x7fb68803e108 <col:7, col:11> 'unsigned char' <IntegralCast>
+    |   |   `-ImplicitCastExpr 0x7fb68803e0f0 <col:7, col:11> 'Embryo_Cell':'int' <LValueToRValue>
+    |   |     `-UnaryOperator 0x7fb68803e0d0 <col:7, col:11> 'Embryo_Cell':'int' lvalue prefix '*'
+    |   |       `-UnaryOperator 0x7fb68803e0b0 <col:8, col:11> 'Embryo_Cell *' postfix '++'
+    |   |         `-DeclRefExpr 0x7fb68803e088 <col:8> 'Embryo_Cell *' lvalue ParmVar 0x7fb68803da68 'cip' 'Embryo_Cell *'
+    |   |-WhileStmt 0x7fb68803e3d8 <line:16:2, line:22:2>
+    |   | |-<<<NULL>>>
+    |   | |-IntegerLiteral 0x7fb68803e148 <line:16:9> 'int' 1
+    |   | `-CompoundStmt 0x7fb68803e3b0 <col:12, line:22:2>
+    |   |   |-IndirectGotoStmt 0x7fb68803e258 <line:17:6, col:26>
+    |   |   | `-ImplicitCastExpr 0x7fb68803e240 <col:12, col:26> 'const void *' <LValueToRValue>
+    |   |   |   `-ArraySubscriptExpr 0x7fb68803e218 <col:12, col:26> 'const void *' lvalue
+    |   |   |     |-ImplicitCastExpr 0x7fb68803e1e8 <col:12> 'const void **' <ArrayToPointerDecay>
+    |   |   |     | `-DeclRefExpr 0x7fb68803e168 <col:12> 'const void *[256]' lvalue Var 0x7fb68803de30 'switchtable' 'const void *[256]'
+    |   |   |     `-ImplicitCastExpr 0x7fb68803e200 <col:24> 'unsigned char' <LValueToRValue>
+    |   |   |       `-DeclRefExpr 0x7fb68803e190 <col:24> 'unsigned char' lvalue Var 0x7fb68803dc78 'op' 'unsigned char'
+    |   |   |-LabelStmt 0x7fb68803e378 <line:18:1, line:19:32> 'SWITCHTABLE_EMBRYO_OP_LOAD_PRI'
+    |   |   | `-BinaryOperator 0x7fb68803e350 <col:6, col:32> 'Embryo_Cell':'int' '='
+    |   |   |   |-DeclRefExpr 0x7fb68803e270 <col:6> 'Embryo_Cell':'int' lvalue Var 0x7fb68803dd00 'offs' 'Embryo_Cell':'int'
+    |   |   |   `-ImplicitCastExpr 0x7fb68803e338 <col:13, col:32> 'Embryo_Cell':'int' <LValueToRValue>
+    |   |   |     `-UnaryOperator 0x7fb68803e318 <col:13, col:32> 'Embryo_Cell':'int' lvalue prefix '*'
+    |   |   |       `-CStyleCastExpr 0x7fb68803e2f0 <col:14, col:32> 'Embryo_Cell *' <NoOp>
+    |   |   |         `-UnaryOperator 0x7fb68803e2c0 <col:29, col:32> 'Embryo_Cell *' postfix '++'
+    |   |   |           `-DeclRefExpr 0x7fb68803e298 <col:29> 'Embryo_Cell *' lvalue ParmVar 0x7fb68803da68 'cip' 'Embryo_Cell *'
+    |   |   `-LabelStmt 0x7fb68803e398 <line:20:1, line:21:6> 'SWITCHTABLE_EMBRYO_OP_NONE'
+    |   |     `-BreakStmt 0x7fb68803e390 <col:6>
+    |   `-NullStmt 0x7fb68803e3f8 <line:22:3>
+    `-ReturnStmt 0x7fb68803e4a8 <line:24:5, col:12>
+      `-ImplicitCastExpr 0x7fb68803e490 <col:12> 'Embryo_Cell':'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fb68803e468 <col:12> 'Embryo_Cell':'int' lvalue Var 0x7fb68803dd00 'offs' 'Embryo_Cell':'int'

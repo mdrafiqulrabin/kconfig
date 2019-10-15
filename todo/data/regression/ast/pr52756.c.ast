@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fc8988174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc899000110 <../Data/C2AST/pr52756.c:3:1, line:9:1> line:3:6 Env_FetchObj0AttrOffset 'void (unsigned int, int *)'
+  |-ParmVarDecl 0x7fc898818178 <col:31, col:44> col:44 used NumFields 'unsigned int'
+  |-ParmVarDecl 0x7fc899000040 <col:56, col:61> col:61 used Status 'int *'
+  `-CompoundStmt 0x7fc899000618 <line:4:1, line:9:1>
+    |-DeclStmt 0x7fc899000298 <line:5:3, col:16>
+    | `-VarDecl 0x7fc899000218 <col:3, col:15> col:7 used Found 'int' cinit
+    |   `-IntegerLiteral 0x7fc899000278 <col:15> 'int' 0
+    `-IfStmt 0x7fc8990005e0 <line:6:3, line:8:15>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc8990002d8 <line:6:7> 'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc8990002b0 <col:7> 'unsigned int' lvalue ParmVar 0x7fc898818178 'NumFields' 'unsigned int'
+      |-WhileStmt 0x7fc8990005c0 <line:7:5, line:8:15>
+      | |-<<<NULL>>>
+      | |-BinaryOperator 0x7fc899000528 <line:7:12, col:58> 'int' '&&'
+      | | |-BinaryOperator 0x7fc899000478 <col:12, col:44> 'int' '&&'
+      | | | |-ParenExpr 0x7fc8990003b0 <col:12, col:25> 'int'
+      | | | | `-BinaryOperator 0x7fc899000388 <col:13, col:24> 'int' '=='
+      | | | |   |-ImplicitCastExpr 0x7fc899000370 <col:13, col:14> 'int' <LValueToRValue>
+      | | | |   | `-UnaryOperator 0x7fc899000330 <col:13, col:14> 'int' lvalue prefix '*'
+      | | | |   |   `-ImplicitCastExpr 0x7fc899000318 <col:14> 'int *' <LValueToRValue>
+      | | | |   |     `-DeclRefExpr 0x7fc8990002f0 <col:14> 'int *' lvalue ParmVar 0x7fc899000040 'Status' 'int *'
+      | | | |   `-IntegerLiteral 0x7fc899000350 <col:24> 'int' 0
+      | | | `-BinaryOperator 0x7fc899000450 <col:30, col:44> 'int' '>'
+      | | |   |-UnaryOperator 0x7fc8990003f8 <col:30, col:39> 'unsigned int' postfix '--'
+      | | |   | `-DeclRefExpr 0x7fc8990003d0 <col:30> 'unsigned int' lvalue ParmVar 0x7fc898818178 'NumFields' 'unsigned int'
+      | | |   `-ImplicitCastExpr 0x7fc899000438 <col:44> 'unsigned int' <IntegralCast>
+      | | |     `-IntegerLiteral 0x7fc899000418 <col:44> 'int' 0
+      | | `-BinaryOperator 0x7fc899000500 <col:49, col:58> 'int' '=='
+      | |   |-ImplicitCastExpr 0x7fc8990004e8 <col:49> 'int' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7fc8990004a0 <col:49> 'int' lvalue Var 0x7fc899000218 'Found' 'int'
+      | |   `-IntegerLiteral 0x7fc8990004c8 <col:58> 'int' 0
+      | `-BinaryOperator 0x7fc899000598 <line:8:7, col:15> 'int' '='
+      |   |-DeclRefExpr 0x7fc899000550 <col:7> 'int' lvalue Var 0x7fc899000218 'Found' 'int'
+      |   `-IntegerLiteral 0x7fc899000578 <col:15> 'int' 1
+      `-<<<NULL>>>

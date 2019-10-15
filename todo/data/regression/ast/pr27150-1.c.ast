@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fe56e0252e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe56d831000 <../Data/C2AST/pr27150-1.c:3:1, col:24> col:12 used link_error 'int ()' extern
+|-FunctionDecl 0x7fe56d8311c8 <line:4:1, line:9:1> line:4:5 used g 'int (int)'
+| |-ParmVarDecl 0x7fe56d8310f8 <col:7, col:11> col:11 used f 'int'
+| `-CompoundStmt 0x7fe56d831598 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7fe56d8313f8 <line:6:3, col:20>
+|   | `-VarDecl 0x7fe56d831288 <col:3, col:19> col:7 used a 'int' cinit
+|   |   `-ParenExpr 0x7fe56d8313d8 <col:11, col:19> 'int'
+|   |     `-BinaryOperator 0x7fe56d8313b0 <col:12, col:18> 'int' '!='
+|   |       |-ParenExpr 0x7fe56d831358 <col:12, col:15> 'int *'
+|   |       | `-UnaryOperator 0x7fe56d831338 <col:13, col:14> 'int *' prefix '&'
+|   |       |   `-DeclRefExpr 0x7fe56d8312e8 <col:14> 'int' lvalue ParmVar 0x7fe56d8310f8 'f' 'int'
+|   |       `-ImplicitCastExpr 0x7fe56d831398 <col:18> 'int *' <NullToPointer>
+|   |         `-IntegerLiteral 0x7fe56d831378 <col:18> 'int' 0
+|   |-IfStmt 0x7fe56d831508 <line:7:3, col:23>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fe56d831450 <col:7, col:8> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7fe56d831438 <col:8> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe56d831410 <col:8> 'int' lvalue Var 0x7fe56d831288 'a' 'int'
+|   | |-CallExpr 0x7fe56d8314e0 <col:11, col:23> 'int'
+|   | | `-ImplicitCastExpr 0x7fe56d8314c8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fe56d831470 <col:11> 'int ()' Function 0x7fe56d831000 'link_error' 'int ()'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe56d831580 <line:8:3, col:10>
+|     `-ImplicitCastExpr 0x7fe56d831568 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe56d831540 <col:10> 'int' lvalue Var 0x7fe56d831288 'a' 'int'
+`-FunctionDecl 0x7fe56d8315e8 <line:11:1, line:14:1> line:11:5 main 'int ()'
+  `-CompoundStmt 0x7fe56d831740 <line:12:1, line:14:1>
+    `-CallExpr 0x7fe56d831710 <line:13:3, col:7> 'int'
+      |-ImplicitCastExpr 0x7fe56d8316f8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe56d831688 <col:3> 'int (int)' Function 0x7fe56d8311c8 'g' 'int (int)'
+      `-IntegerLiteral 0x7fe56d8316b0 <col:5> 'int' 10

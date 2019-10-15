@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7f8bdf824ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8bdf825960 <../Data/C2AST/pr33724.c:5:1, line:7:1> line:5:8 struct xt_entry_target definition
+| `-FieldDecl 0x7f8bdf014898 <line:6:3, col:14> col:8 referenced name 'char [1]'
+|-RecordDecl 0x7f8bdf0148e0 <line:8:1, line:10:1> line:8:8 struct ipt_entry definition
+| `-FieldDecl 0x7f8bdf014a10 <line:9:3, col:24> col:17 referenced elems 'unsigned char [1]'
+|-FunctionDecl 0x7f8bdf014b60 <line:11:1, col:43> col:6 used match_different 'void (const unsigned char *)'
+| `-ParmVarDecl 0x7f8bdf014aa0 <col:22, col:42> col:43 'const unsigned char *'
+|-FunctionDecl 0x7f8bdf014e08 <line:12:1, line:15:1> line:12:5 dump_entry 'int (struct xt_entry_target *)'
+| |-ParmVarDecl 0x7f8bdf014d00 <col:16, col:40> col:40 used t 'struct xt_entry_target *'
+| `-CompoundStmt 0x7f8bdf015290 <line:13:1, line:15:1>
+|   `-ReturnStmt 0x7f8bdf015278 <line:14:3, col:39>
+|     `-CallExpr 0x7f8bdf0151e0 <col:10, col:39> 'int'
+|       |-ImplicitCastExpr 0x7f8bdf0151c8 <col:10> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f8bdf0150a8 <col:10> '<builtin fn type>' Function 0x7f8bdf014ef0 '__builtin_strcmp' 'int (const char *, const char *)'
+|       |-ImplicitCastExpr 0x7f8bdf015230 <col:28, col:31> 'const char *' <BitCast>
+|       | `-ImplicitCastExpr 0x7f8bdf015218 <col:28, col:31> 'char *' <ArrayToPointerDecay>
+|       |   `-MemberExpr 0x7f8bdf015110 <col:28, col:31> 'char [1]' lvalue ->name 0x7f8bdf014898
+|       |     `-ImplicitCastExpr 0x7f8bdf0150f8 <col:28> 'struct xt_entry_target *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7f8bdf0150d0 <col:28> 'struct xt_entry_target *' lvalue ParmVar 0x7f8bdf014d00 't' 'struct xt_entry_target *'
+|       `-ImplicitCastExpr 0x7f8bdf015260 <col:37> 'const char *' <BitCast>
+|         `-ImplicitCastExpr 0x7f8bdf015248 <col:37> 'char *' <ArrayToPointerDecay>
+|           `-StringLiteral 0x7f8bdf015148 <col:37> 'char [1]' lvalue ""
+|-FunctionDecl 0x7f8bdf014ef0 <col:10> col:10 implicit used __builtin_strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x7f8bdf014f90 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7f8bdf014ff0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7f8bdf015060 <col:10> Implicit
+`-FunctionDecl 0x7f8bdf015460 <line:16:1, line:19:1> line:16:6 is_same 'void (const struct ipt_entry *)'
+  |-ParmVarDecl 0x7f8bdf015360 <col:14, col:38> col:38 used a 'const struct ipt_entry *'
+  `-CompoundStmt 0x7f8bdf015670 <line:17:1, line:19:1>
+    `-CallExpr 0x7f8bdf0155f0 <line:18:3, col:27> 'void'
+      |-ImplicitCastExpr 0x7f8bdf0155d8 <col:3> 'void (*)(const unsigned char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8bdf015508 <col:3> 'void (const unsigned char *)' Function 0x7f8bdf014b60 'match_different' 'void (const unsigned char *)'
+      `-ImplicitCastExpr 0x7f8bdf015658 <col:19, col:22> 'const unsigned char *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7f8bdf015570 <col:19, col:22> 'unsigned char const[1]' lvalue ->elems 0x7f8bdf014a10
+          `-ImplicitCastExpr 0x7f8bdf015558 <col:19> 'const struct ipt_entry *' <LValueToRValue>
+            `-DeclRefExpr 0x7f8bdf015530 <col:19> 'const struct ipt_entry *' lvalue ParmVar 0x7f8bdf015360 'a' 'const struct ipt_entry *'

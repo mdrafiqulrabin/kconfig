@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fd3e201aee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd3e201bb60 <../Data/C2AST/pr23445.c:1:2, line:3:2> line:1:9 struct buffer_head definition
+| `-FieldDecl 0x7fd3e181bc38 <line:2:4, col:10> col:10 referenced b_data 'char *'
+`-FunctionDecl 0x7fd3e181be30 <line:4:4, line:10:2> line:4:9 asfs_deletebnode 'void (struct buffer_head *)'
+  |-ParmVarDecl 0x7fd3e181bd30 <col:27, col:47> col:47 used bhsec 'struct buffer_head *'
+  `-CompoundStmt 0x7fd3e181c460 <col:55, line:10:2>
+    `-IfStmt 0x7fd3e181c428 <line:5:6, line:9:4>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd3e181bf90 <line:5:10, col:19> 'int' '=='
+      | |-ImplicitCastExpr 0x7fd3e181bf60 <col:10> 'struct buffer_head *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd3e181bf18 <col:10> 'struct buffer_head *' lvalue ParmVar 0x7fd3e181bd30 'bhsec' 'struct buffer_head *'
+      | `-ImplicitCastExpr 0x7fd3e181bf78 <col:19> 'struct buffer_head *' <NullToPointer>
+      |   `-IntegerLiteral 0x7fd3e181bf40 <col:19> 'int' 0
+      |-CompoundStmt 0x7fd3e181c400 <col:24, line:9:4>
+      | |-DeclStmt 0x7fd3e181c100 <line:6:6, col:41>
+      | | `-VarDecl 0x7fd3e181bfd0 <col:6, col:35> col:12 used bnc2 'void *' cinit
+      | |   `-CStyleCastExpr 0x7fd3e181c0d8 <col:19, col:35> 'void *' <BitCast>
+      | |     `-ImplicitCastExpr 0x7fd3e181c0c0 <col:28, col:35> 'char *' <LValueToRValue>
+      | |       `-MemberExpr 0x7fd3e181c070 <col:28, col:35> 'char *' lvalue ->b_data 0x7fd3e181bc38
+      | |         `-ImplicitCastExpr 0x7fd3e181c058 <col:28> 'struct buffer_head *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7fd3e181c030 <col:28> 'struct buffer_head *' lvalue ParmVar 0x7fd3e181bd30 'bhsec' 'struct buffer_head *'
+      | |-IfStmt 0x7fd3e181c170 <line:7:6, col:22>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-ImplicitCastExpr 0x7fd3e181c140 <col:10> 'void *' <LValueToRValue>
+      | | | `-DeclRefExpr 0x7fd3e181c118 <col:10> 'void *' lvalue Var 0x7fd3e181bfd0 'bnc2' 'void *'
+      | | |-ReturnStmt 0x7fd3e181c158 <col:22>
+      | | `-<<<NULL>>>
+      | `-IfStmt 0x7fd3e181c3c8 <line:8:6, col:37>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7fd3e181c1d0 <col:10> 'struct buffer_head *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fd3e181c1a8 <col:10> 'struct buffer_head *' lvalue ParmVar 0x7fd3e181bd30 'bhsec' 'struct buffer_head *'
+      |   |-CallExpr 0x7fd3e181c380 <col:23, col:37> 'int'
+      |   | |-ImplicitCastExpr 0x7fd3e181c368 <col:23> 'int (*)()' <FunctionToPointerDecay>
+      |   | | `-DeclRefExpr 0x7fd3e181c2f0 <col:23> 'int ()' Function 0x7fd3e181c240 '__brelse' 'int ()'
+      |   | `-ImplicitCastExpr 0x7fd3e181c3b0 <col:32> 'struct buffer_head *' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fd3e181c318 <col:32> 'struct buffer_head *' lvalue ParmVar 0x7fd3e181bd30 'bhsec' 'struct buffer_head *'
+      |   `-<<<NULL>>>
+      `-<<<NULL>>>

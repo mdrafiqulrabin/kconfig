@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ffdf5016ce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffdf4829a20 <../Data/C2AST/pr47501.c:4:1, line:11:1> line:5:1 referenced foo 'void (void)'
+  `-CompoundStmt 0x7ffdf4829dd0 <line:6:1, line:11:1>
+    |-DeclStmt 0x7ffdf4829b78 <line:7:3, col:18>
+    | `-VarDecl 0x7ffdf4829b18 <col:3, col:12> col:12 used numlen 'unsigned int'
+    |-DeclStmt 0x7ffdf4829c08 <line:8:3, col:19>
+    | `-VarDecl 0x7ffdf4829ba8 <col:3, col:12> col:12 used foldlen 'unsigned int'
+    `-ForStmt 0x7ffdf4829d98 <line:9:3, line:10:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ffdf4829c48 <line:9:10> 'unsigned int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ffdf4829c20 <col:10> 'unsigned int' lvalue Var 0x7ffdf4829ba8 'foldlen' 'unsigned int'
+      |-CompoundAssignOperator 0x7ffdf4829cc8 <col:19, col:30> 'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+      | |-DeclRefExpr 0x7ffdf4829c60 <col:19> 'unsigned int' lvalue Var 0x7ffdf4829ba8 'foldlen' 'unsigned int'
+      | `-ImplicitCastExpr 0x7ffdf4829cb0 <col:30> 'unsigned int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffdf4829c88 <col:30> 'unsigned int' lvalue Var 0x7ffdf4829b18 'numlen' 'unsigned int'
+      `-CallExpr 0x7ffdf4829d70 <line:10:5, col:10> 'void'
+        `-ImplicitCastExpr 0x7ffdf4829d58 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ffdf4829d00 <col:5> 'void (void)' Function 0x7ffdf4829a20 'foo' 'void (void)'

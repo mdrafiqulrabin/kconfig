@@ -1,0 +1,31 @@
+../Data/C2AST/pr83604.c:10:10: error: use of unknown builtin '__builtin_ia32_vpshrdv_v32hi' [-Wimplicit-function-declaration]
+  return __builtin_ia32_vpshrdv_v32hi (x, y, z);
+         ^
+../Data/C2AST/pr83604.c:10:10: error: returning 'int' from a function with incompatible result type 'V' (vector of 32 'short' values)
+  return __builtin_ia32_vpshrdv_v32hi (x, y, z);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fc45182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc45182c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc45182bf80 '__int128'
+|-TypedefDecl 0x7fc45182c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc45182bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc45182c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc45182c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc45182c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc45182c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc45182c600 'char *'
+|   `-BuiltinType 0x7fc45182bd80 'char'
+|-TypedefDecl 0x7fc45182c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc45182c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc45182c720 'struct __va_list_tag'
+|     `-Record 0x7fc45182c698 '__va_list_tag'
+|-TypedefDecl 0x7fc45186e800 <../Data/C2AST/pr83604.c:5:1, col:15> col:15 referenced V '__attribute__((__vector_size__(32 * sizeof(short)))) short'
+| `-VectorType 0x7fc45182c980 '__attribute__((__vector_size__(32 * sizeof(short)))) short' 32
+|   `-BuiltinType 0x7fc45182bdc0 'short'
+`-FunctionDecl 0x7fc45186eb10 <line:7:1, line:11:1> line:8:1 foo 'V (V, V, V)'
+  |-ParmVarDecl 0x7fc45186e900 <col:6, col:8> col:8 used x 'V':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+  |-ParmVarDecl 0x7fc45186e970 <col:11, col:13> col:13 used y 'V':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+  |-ParmVarDecl 0x7fc45186e9e0 <col:16, col:18> col:18 used z 'V':'__attribute__((__vector_size__(32 * sizeof(short)))) short'
+  |-CompoundStmt 0x7fc45186f2a0 <line:9:1, line:11:1>
+  `-TargetAttr 0x7fc45186ebc8 <line:7:16, col:37> "avx512vbmi2"

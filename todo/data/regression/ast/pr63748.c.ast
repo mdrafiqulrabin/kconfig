@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x7fe44a82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe44c001cf8 <../Data/C2AST/pr63748.c:7:1, col:25> col:10 used alloc_jmp_buf 'jmp_buf *()'
+|-FunctionDecl 0x7fe44c001e78 <line:8:1, col:16> col:5 used foo 'int (void *)'
+| `-ParmVarDecl 0x7fe44c001db0 <col:10, col:15> col:16 'void *'
+|-FunctionDecl 0x7fe44c0024d8 <line:10:1, line:36:1> line:11:1 test 'int (int, int)'
+| |-ParmVarDecl 0x7fe44c001f38 <col:7, col:11> col:11 used op 'int'
+| |-ParmVarDecl 0x7fe44c002400 <col:15, col:19> col:19 used noside 'int'
+| `-CompoundStmt 0x7fe44c002f38 <line:12:1, line:36:1>
+|   |-DeclStmt 0x7fe44c002638 <line:13:3, col:19>
+|   | `-VarDecl 0x7fe44c0025a0 <col:3, col:18> col:9 used argvec 'void *' cinit
+|   |   `-ImplicitCastExpr 0x7fe44c002620 <col:18> 'void *' <NullToPointer>
+|   |     `-IntegerLiteral 0x7fe44c002600 <col:18> 'int' 0
+|   |-IfStmt 0x7fe44c002be8 <line:15:3, line:29:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fe44c002678 <line:15:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fe44c002650 <col:7> 'int' lvalue ParmVar 0x7fe44c001f38 'op' 'int'
+|   | |-CompoundStmt 0x7fe44c002bb0 <line:16:5, line:29:5>
+|   | | |-DeclStmt 0x7fe44c0027c8 <line:17:7, col:38>
+|   | | | `-VarDecl 0x7fe44c0026a0 <col:7, col:37> col:16 used buf 'jmp_buf *' cinit
+|   | | |   `-CallExpr 0x7fe44c0027a0 <col:22, col:37> 'jmp_buf *'
+|   | | |     `-ImplicitCastExpr 0x7fe44c002788 <col:22> 'jmp_buf *(*)()' <FunctionToPointerDecay>
+|   | | |       `-DeclRefExpr 0x7fe44c002700 <col:22> 'jmp_buf *()' Function 0x7fe44c001cf8 'alloc_jmp_buf' 'jmp_buf *()'
+|   | | |-CallExpr 0x7fe44c0028b0 <line:18:7, col:19> 'int'
+|   | | | |-ImplicitCastExpr 0x7fe44c002898 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x7fe44c0027e0 <col:7> 'int (int *)' Function 0x7fe44b832c98 'setjmp' 'int (int *)'
+|   | | | `-ImplicitCastExpr 0x7fe44c0028e0 <col:15, col:16> 'int *' <ArrayToPointerDecay>
+|   | | |   `-UnaryOperator 0x7fe44c002848 <col:15, col:16> 'jmp_buf':'int [37]' lvalue prefix '*'
+|   | | |     `-ImplicitCastExpr 0x7fe44c002830 <col:16> 'jmp_buf *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7fe44c002808 <col:16> 'jmp_buf *' lvalue Var 0x7fe44c0026a0 'buf' 'jmp_buf *'
+|   | | |-IfStmt 0x7fe44c002998 <line:20:7, line:21:14>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-ImplicitCastExpr 0x7fe44c002920 <line:20:11> 'int' <LValueToRValue>
+|   | | | | `-DeclRefExpr 0x7fe44c0028f8 <col:11> 'int' lvalue ParmVar 0x7fe44c002400 'noside' 'int'
+|   | | | |-GotoStmt 0x7fe44c002980 <line:21:9, col:14> 'nosideret' 0x7fe44c002938
+|   | | | `-<<<NULL>>>
+|   | | |-LabelStmt 0x7fe44c002aa8 <line:23:5, line:26:14> 'do_call_it'
+|   | | | `-IfStmt 0x7fe44c002a28 <line:25:7, line:26:14>
+|   | | |   |-<<<NULL>>>
+|   | | |   |-<<<NULL>>>
+|   | | |   |-ImplicitCastExpr 0x7fe44c0029f8 <line:25:11> 'int' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x7fe44c0029d0 <col:11> 'int' lvalue ParmVar 0x7fe44c002400 'noside' 'int'
+|   | | |   |-GotoStmt 0x7fe44c002a10 <line:26:9, col:14> 'nosideret' 0x7fe44c002938
+|   | | |   `-<<<NULL>>>
+|   | | `-ReturnStmt 0x7fe44c002b98 <line:28:7, col:25>
+|   | |   `-CallExpr 0x7fe44c002b50 <col:14, col:25> 'int'
+|   | |     |-ImplicitCastExpr 0x7fe44c002b38 <col:14> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fe44c002ac0 <col:14> 'int (void *)' Function 0x7fe44c001e78 'foo' 'int (void *)'
+|   | |     `-ImplicitCastExpr 0x7fe44c002b80 <col:19> 'void *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7fe44c002ae8 <col:19> 'void *' lvalue Var 0x7fe44c0025a0 'argvec' 'void *'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fe44c002ea8 <line:31:3, col:31> 'void *' '='
+|   | |-DeclRefExpr 0x7fe44c002c20 <col:3> 'void *' lvalue Var 0x7fe44c0025a0 'argvec' 'void *'
+|   | `-CallExpr 0x7fe44c002e60 <col:12, col:31> 'void *'
+|   |   |-ImplicitCastExpr 0x7fe44c002e48 <col:12> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fe44c002dd8 <col:12> '<builtin fn type>' Function 0x7fe44c002c88 '__builtin_alloca' 'void *(unsigned long)'
+|   |   `-ImplicitCastExpr 0x7fe44c002e90 <col:30> 'unsigned long' <IntegralCast>
+|   |     `-IntegerLiteral 0x7fe44c002e00 <col:30> 'int' 1
+|   |-GotoStmt 0x7fe44c002ed0 <line:32:3, col:8> 'do_call_it' 0x7fe44c002a60
+|   `-LabelStmt 0x7fe44c002f20 <line:34:1, line:35:10> 'nosideret'
+|     `-ReturnStmt 0x7fe44c002f08 <col:3, col:10>
+|       `-IntegerLiteral 0x7fe44c002ee8 <col:10> 'int' 1
+`-FunctionDecl 0x7fe44c002c88 <line:31:12> col:12 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7fe44c002d28 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fe44c002d90 <col:12> Implicit

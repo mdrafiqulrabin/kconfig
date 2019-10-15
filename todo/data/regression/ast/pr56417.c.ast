@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7f888802b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8888814228 <../Data/C2AST/pr56417.c:5:1, line:9:1> line:6:1 referenced foo 'int (void)'
+| `-CompoundStmt 0x7f88888145f8 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f88888145e0 <line:8:3, col:32>
+|     `-ImplicitCastExpr 0x7f88888145c8 <col:10, col:32> 'int' <IntegralCast>
+|       `-CallExpr 0x7f8888814580 <col:10, col:32> 'unsigned long'
+|         |-ImplicitCastExpr 0x7f8888814568 <col:10> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f8888814498 <col:10> '<builtin fn type>' Function 0x7f8888814348 '__builtin_strlen' 'unsigned long (const char *)'
+|         `-ImplicitCastExpr 0x7f88888145b0 <col:28, col:29> 'const char *' <BitCast>
+|           `-UnaryOperator 0x7f8888814518 <col:28, col:29> 'int (*)(void)' prefix '&'
+|             `-DeclRefExpr 0x7f88888144c0 <col:29> 'int (void)' Function 0x7f8888814228 'foo' 'int (void)'
+`-FunctionDecl 0x7f8888814348 <col:10> col:10 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+  |-ParmVarDecl 0x7f88888143e8 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f8888814450 <col:10> Implicit

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fd8048118e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd80500da68 <../Data/C2AST/pr69969.c:6:1, col:29> col:5 bar 'int (int)'
+| |-ParmVarDecl 0x7fd804812578 <col:10, col:14> col:14 used x 'int'
+| `-CompoundStmt 0x7fd80500dba8 <col:17, col:29>
+|   `-ReturnStmt 0x7fd80500db90 <col:19, col:26>
+|     `-ImplicitCastExpr 0x7fd80500db78 <col:26> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fd80500db50 <col:26> 'int' lvalue ParmVar 0x7fd804812578 'x' 'int'
+`-FunctionDecl 0x7fd80500dcd0 <line:7:1, col:67> col:43 foo 'int (int)'
+  |-ParmVarDecl 0x7fd80500dc40 <col:48, col:52> col:52 used x 'int'
+  |-CompoundStmt 0x7fd80500de28 <col:55, col:67>
+  | `-ReturnStmt 0x7fd80500de10 <col:57, col:64>
+  |   `-ImplicitCastExpr 0x7fd80500ddf8 <col:64> 'int' <LValueToRValue>
+  |     `-DeclRefExpr 0x7fd80500ddd0 <col:64> 'int' lvalue ParmVar 0x7fd80500dc40 'x' 'int'
+  `-TargetAttr 0x7fd80500dd78 <col:16, col:35> "no-vsx"

@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7f8a4f0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8a4e020c00 <../Data/C2AST/pr32207.c:5:1, col:15> col:13 used z 'void ()' extern
+|-FunctionDecl 0x7f8a4e020d00 <line:7:1, col:26> col:6 f 'void ()'
+| `-CompoundStmt 0x7f8a4e020eb0 <col:10, col:26>
+|   `-IfStmt 0x7f8a4e020e78 <col:12, col:23>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f8a4e020df8 <col:17> 'void (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f8a4e020da0 <col:17> 'void ()' Function 0x7f8a4e020c00 'z' 'void ()'
+|     |-CallExpr 0x7f8a4e020e50 <col:21, col:23> 'void'
+|     | `-ImplicitCastExpr 0x7f8a4e020e38 <col:21> 'void (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8a4e020e10 <col:21> 'void ()' Function 0x7f8a4e020c00 'z' 'void ()'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7f8a4e020ee8 <line:8:1, col:31> col:6 g 'void ()'
+| `-CompoundStmt 0x7f8a4e0210c8 <col:10, col:31>
+|   `-IfStmt 0x7f8a4e021090 <col:12, col:28>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f8a4e021000 <col:17, col:22> 'int' '!='
+|     | |-ImplicitCastExpr 0x7f8a4e020fd0 <col:17> 'void (*)()' <FunctionToPointerDecay>
+|     | | `-DeclRefExpr 0x7f8a4e020f88 <col:17> 'void ()' Function 0x7f8a4e020c00 'z' 'void ()'
+|     | `-ImplicitCastExpr 0x7f8a4e020fe8 <col:22> 'void (*)()' <NullToPointer>
+|     |   `-IntegerLiteral 0x7f8a4e020fb0 <col:22> 'int' 0
+|     |-CallExpr 0x7f8a4e021068 <col:26, col:28> 'void'
+|     | `-ImplicitCastExpr 0x7f8a4e021050 <col:26> 'void (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7f8a4e021028 <col:26> 'void ()' Function 0x7f8a4e020c00 'z' 'void ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7f8a4e021100 <line:9:1, col:38> col:6 h 'void ()'
+  `-CompoundStmt 0x7f8a4e021320 <col:10, col:38>
+    `-IfStmt 0x7f8a4e0212e8 <col:12, col:35>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8a4e021258 <col:17, col:29> 'int' '!='
+      | |-ImplicitCastExpr 0x7f8a4e021228 <col:17> 'void (*)()' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f8a4e0211a0 <col:17> 'void ()' Function 0x7f8a4e020c00 'z' 'void ()'
+      | `-ImplicitCastExpr 0x7f8a4e021240 <col:22, col:29> 'void (*)()' <BitCast>
+      |   `-CStyleCastExpr 0x7f8a4e021200 <col:22, col:29> 'void *' <NullToPointer>
+      |     `-IntegerLiteral 0x7f8a4e0211c8 <col:29> 'int' 0
+      |-CallExpr 0x7f8a4e0212c0 <col:33, col:35> 'void'
+      | `-ImplicitCastExpr 0x7f8a4e0212a8 <col:33> 'void (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f8a4e021280 <col:33> 'void ()' Function 0x7f8a4e020c00 'z' 'void ()'
+      `-<<<NULL>>>

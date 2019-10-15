@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7ffcd782b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffcd782bf78 <../Data/C2AST/pr83100-2.c:7:1, col:11> col:11 used a 'const int'
+|-FunctionDecl 0x7ffcd8011c90 <line:9:1, line:15:1> line:10:1 main 'int ()'
+| `-CompoundStmt 0x7ffcd8011fd8 <line:11:1, line:15:1>
+|   |-IfStmt 0x7ffcd8011f68 <line:12:3, line:13:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ffcd8011d90 <line:12:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ffcd8011d78 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ffcd8011d30 <col:7> 'const int' lvalue Var 0x7ffcd782bf78 'a' 'const int'
+|   | | `-IntegerLiteral 0x7ffcd8011d58 <col:12> 'int' 7
+|   | |-CallExpr 0x7ffcd8011f40 <line:13:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ffcd8011f28 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ffcd8011ed8 <col:5> '<builtin fn type>' Function 0x7ffcd8011df0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ffcd8011fc0 <line:14:3, col:10>
+|     `-IntegerLiteral 0x7ffcd8011fa0 <col:10> 'int' 0
+`-FunctionDecl 0x7ffcd8011df0 <line:13:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ffcd8011e90 <col:5> Implicit

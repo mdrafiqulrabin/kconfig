@@ -1,0 +1,348 @@
+TranslationUnitDecl 0x7fe0ed82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe0ed82c960 <../Data/C2AST/pr53120.c:3:9, line:21:1> line:3:9 struct definition
+| |-FieldDecl 0x7fe0ee014258 <line:4:3, col:21> col:16 referenced en 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014220 <col:21> 'int' 1
+| |-FieldDecl 0x7fe0ee0142d8 <line:5:3, col:28> col:16 referenced bit_order 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0142a0 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee014358 <line:6:3, col:25> col:16 referenced scl_io 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014320 <col:25> 'int' 1
+| |-FieldDecl 0x7fe0ee0143d8 <line:7:3, col:26> col:16 referenced scl_inv 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0143a0 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee014458 <line:8:3, col:26> col:16 referenced sda0_io 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014420 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee0144d8 <line:9:3, col:28> col:16 referenced sda0_idle 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0144a0 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee014558 <line:10:3, col:26> col:16 sda1_io 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014520 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee0145d8 <line:11:3, col:28> col:16 sda1_idle 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0145a0 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee014658 <line:12:3, col:26> col:16 sda2_io 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014620 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee0146d8 <line:13:3, col:28> col:16 sda2_idle 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0146a0 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee014758 <line:14:3, col:26> col:16 sda3_io 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014720 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee0147d8 <line:15:3, col:28> col:16 sda3_idle 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0147a0 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee014858 <line:16:3, col:26> col:16 referenced sda_sel 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014820 <col:26> 'int' 2
+| |-FieldDecl 0x7fe0ee0148d8 <line:17:3, col:27> col:16 sen_idle 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0148a0 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee014958 <line:18:3, col:26> col:16 sen_inv 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014920 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee0149d8 <line:19:3, col:26> col:16 referenced sen_sel 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee0149a0 <col:26> 'int' 2
+| `-FieldDecl 0x7fe0ee014a58 <line:20:3, col:25> col:16 dummy1 'unsigned int'
+|   `-IntegerLiteral 0x7fe0ee014a20 <col:25> 'int' 14
+|-TypedefDecl 0x7fe0ee014af0 <line:3:1, line:21:3> col:3 referenced reg_gio_rw_i2c1_cfg 'struct reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+| `-ElaboratedType 0x7fe0ee014aa0 'struct reg_gio_rw_i2c1_cfg' sugar
+|   `-RecordType 0x7fe0ee014200 'reg_gio_rw_i2c1_cfg'
+|     `-Record 0x7fe0ed82c960 ''
+|-RecordDecl 0x7fe0ee014b60 <line:23:9, line:28:1> line:23:9 struct definition
+| |-FieldDecl 0x7fe0ee014c48 <line:24:3, col:24> col:16 referenced data0 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014c10 <col:24> 'int' 8
+| |-FieldDecl 0x7fe0ee014cc8 <line:25:3, col:24> col:16 referenced data1 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014c90 <col:24> 'int' 8
+| |-FieldDecl 0x7fe0ee014d48 <line:26:3, col:24> col:16 referenced data2 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014d10 <col:24> 'int' 8
+| `-FieldDecl 0x7fe0ee014dc8 <line:27:3, col:24> col:16 referenced data3 'unsigned int'
+|   `-IntegerLiteral 0x7fe0ee014d90 <col:24> 'int' 8
+|-TypedefDecl 0x7fe0ee014e60 <line:23:1, line:28:3> col:3 referenced reg_gio_rw_i2c1_data 'struct reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+| `-ElaboratedType 0x7fe0ee014e10 'struct reg_gio_rw_i2c1_data' sugar
+|   `-RecordType 0x7fe0ee014bf0 'reg_gio_rw_i2c1_data'
+|     `-Record 0x7fe0ee014b60 ''
+|-RecordDecl 0x7fe0ee014ed0 <line:30:9, line:46:1> line:30:9 struct definition
+| |-FieldDecl 0x7fe0ee014fb8 <line:31:3, col:27> col:16 referenced trf_bits 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee014f80 <col:27> 'int' 6
+| |-FieldDecl 0x7fe0ee015038 <line:32:3, col:29> col:16 referenced switch_dir 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015000 <col:29> 'int' 6
+| |-FieldDecl 0x7fe0ee0150b8 <line:33:3, col:30> col:16 referenced extra_start 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015080 <col:30> 'int' 3
+| |-FieldDecl 0x7fe0ee015138 <line:34:3, col:28> col:16 referenced early_end 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015100 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee0151b8 <line:35:3, col:29> col:16 referenced start_stop 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015180 <col:29> 'int' 1
+| |-FieldDecl 0x7fe0ee015238 <line:36:3, col:27> col:16 referenced ack_dir0 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015200 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee0152b8 <line:37:3, col:27> col:16 referenced ack_dir1 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015280 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee015338 <line:38:3, col:27> col:16 referenced ack_dir2 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015300 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee0153b8 <line:39:3, col:27> col:16 referenced ack_dir3 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015380 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee015438 <line:40:3, col:27> col:16 referenced ack_dir4 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015400 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee0154b8 <line:41:3, col:27> col:16 referenced ack_dir5 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015480 <col:27> 'int' 1
+| |-FieldDecl 0x7fe0ee015538 <line:42:3, col:26> col:16 referenced ack_bit 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015500 <col:26> 'int' 1
+| |-FieldDecl 0x7fe0ee0155b8 <line:43:3, col:28> col:16 referenced start_bit 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015580 <col:28> 'int' 1
+| |-FieldDecl 0x7fe0ee015638 <line:44:3, col:23> col:16 referenced freq 'unsigned int'
+| | `-IntegerLiteral 0x7fe0ee015600 <col:23> 'int' 2
+| `-FieldDecl 0x7fe0ee0156b8 <line:45:3, col:25> col:16 dummy1 'unsigned int'
+|   `-IntegerLiteral 0x7fe0ee015680 <col:25> 'int' 5
+|-TypedefDecl 0x7fe0ee015750 <line:30:1, line:46:3> col:3 referenced reg_gio_rw_i2c1_ctrl 'struct reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+| `-ElaboratedType 0x7fe0ee015700 'struct reg_gio_rw_i2c1_ctrl' sugar
+|   `-RecordType 0x7fe0ee014f60 'reg_gio_rw_i2c1_ctrl'
+|     `-Record 0x7fe0ee014ed0 ''
+|-VarDecl 0x7fe0ee0157f0 <line:48:1, col:28> col:28 used reg_gio 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' extern
+|-VarDecl 0x7fe0ee0158c0 <line:49:1, col:29> col:29 used reg_data 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' extern
+|-VarDecl 0x7fe0ee015938 <line:50:1, col:12> col:12 used reg_start 'int' extern
+|-VarDecl 0x7fe0ee0159d0 <line:51:1, col:29> col:29 used reg_ctrl 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' extern
+|-FunctionDecl 0x7fe0ee015af0 <line:53:1, col:24> col:13 used foobar 'void (void)' extern
+|-FunctionDecl 0x7fe0ee015c70 <line:54:1, col:20> col:13 used foo 'void (int)' extern
+| `-ParmVarDecl 0x7fe0ee015ba8 <col:17> col:20 'int'
+|-FunctionDecl 0x7fe0ee015df0 <line:55:1, col:30> col:13 used frob 'void (unsigned int)' extern
+| `-ParmVarDecl 0x7fe0ee015d30 <col:18, col:27> col:30 'unsigned int'
+|-FunctionDecl 0x7fe0ee015f38 <line:56:1, col:20> col:13 used bar 'void (int)' extern
+| `-ParmVarDecl 0x7fe0ee015eb0 <col:17> col:20 'int'
+|-FunctionDecl 0x7fe0ee016070 <line:57:1, col:21> col:13 used baz 'void (void)' extern
+`-FunctionDecl 0x7fe0ee02bcd8 <line:59:1, line:110:1> line:59:14 f 'unsigned int (int *, unsigned int)'
+  |-ParmVarDecl 0x7fe0ee016150 <col:16, col:21> col:21 used devspec 'int *'
+  |-ParmVarDecl 0x7fe0ee02bc00 <col:30, col:43> col:43 used addr 'unsigned int'
+  `-CompoundStmt 0x7fe0ee02e3d8 <line:60:1, line:110:1>
+    |-DeclStmt 0x7fe0ee02c010 <line:61:2, col:33>
+    | `-VarDecl 0x7fe0ee02bd98 <col:2, col:32> col:23 used ctrl 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' cinit
+    |   `-InitListExpr 0x7fe0ee02be60 <col:30, col:32> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    |     |-ImplicitCastExpr 0x7fe0ee02bf18 <col:31> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fe0ee02bdf8 <col:31> 'int' 0
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf30 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf40 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf50 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf60 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf70 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf80 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bf90 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bfa0 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bfb0 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bfc0 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bfd0 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bfe0 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02bff0 <<invalid sloc>> 'unsigned int'
+    |     `-ImplicitValueInitExpr 0x7fe0ee02c000 <<invalid sloc>> 'unsigned int'
+    |-DeclStmt 0x7fe0ee02c1a8 <line:62:2, col:33>
+    | `-VarDecl 0x7fe0ee02c038 <col:2, col:32> col:23 used data 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' cinit
+    |   `-InitListExpr 0x7fe0ee02c100 <col:30, col:32> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    |     |-ImplicitCastExpr 0x7fe0ee02c160 <col:31> 'unsigned int' <IntegralCast>
+    |     | `-IntegerLiteral 0x7fe0ee02c098 <col:31> 'int' 0
+    |     |-ImplicitValueInitExpr 0x7fe0ee02c178 <<invalid sloc>> 'unsigned int'
+    |     |-ImplicitValueInitExpr 0x7fe0ee02c188 <<invalid sloc>> 'unsigned int'
+    |     `-ImplicitValueInitExpr 0x7fe0ee02c198 <<invalid sloc>> 'unsigned int'
+    |-CallExpr 0x7fe0ee02c230 <line:64:2, col:9> 'void'
+    | `-ImplicitCastExpr 0x7fe0ee02c218 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fe0ee02c1c0 <col:2> 'void (void)' Function 0x7fe0ee015af0 'foobar' 'void (void)'
+    |-DeclStmt 0x7fe0ee02c2f0 <line:66:2, col:22>
+    | `-VarDecl 0x7fe0ee02c270 <col:2, col:21> col:13 used first 'int' static cinit
+    |   `-IntegerLiteral 0x7fe0ee02c2d0 <col:21> 'int' 1
+    |-IfStmt 0x7fe0ee02cf18 <line:68:2, line:82:2>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe0ee02c330 <line:68:6> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe0ee02c308 <col:6> 'int' lvalue Var 0x7fe0ee02c270 'first' 'int'
+    | |-CompoundStmt 0x7fe0ee02cea8 <col:13, line:82:2>
+    | | |-DeclStmt 0x7fe0ee02c600 <line:69:3, col:32>
+    | | | `-VarDecl 0x7fe0ee02c358 <col:3, col:31> col:23 used cfg 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' cinit
+    | | |   `-InitListExpr 0x7fe0ee02c420 <col:29, col:31> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | |     |-ImplicitCastExpr 0x7fe0ee02c4e8 <col:30> 'unsigned int' <IntegralCast>
+    | | |     | `-IntegerLiteral 0x7fe0ee02c3b8 <col:30> 'int' 0
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c500 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c510 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c520 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c530 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c540 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c550 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c560 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c570 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c580 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c590 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c5a0 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c5b0 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c5c0 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c5d0 <<invalid sloc>> 'unsigned int'
+    | | |     |-ImplicitValueInitExpr 0x7fe0ee02c5e0 <<invalid sloc>> 'unsigned int'
+    | | |     `-ImplicitValueInitExpr 0x7fe0ee02c5f0 <<invalid sloc>> 'unsigned int'
+    | | |-BinaryOperator 0x7fe0ee02c660 <line:70:3, col:11> 'int' '='
+    | | | |-DeclRefExpr 0x7fe0ee02c618 <col:3> 'int' lvalue Var 0x7fe0ee02c270 'first' 'int'
+    | | | `-IntegerLiteral 0x7fe0ee02c640 <col:11> 'int' 0
+    | | |-CallExpr 0x7fe0ee02c710 <line:72:3, col:8> 'void'
+    | | | |-ImplicitCastExpr 0x7fe0ee02c6f8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fe0ee02c688 <col:3> 'void (int)' Function 0x7fe0ee015c70 'foo' 'void (int)'
+    | | | `-IntegerLiteral 0x7fe0ee02c6b0 <col:7> 'int' 1
+    | | |-BinaryOperator 0x7fe0ee02c7d8 <line:73:3, col:19> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02c768 <col:3, col:7> 'unsigned int' lvalue bitfield .sda0_idle 0x7fe0ee0144d8
+    | | | | `-DeclRefExpr 0x7fe0ee02c740 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02c7c0 <col:19> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02c7a0 <col:19> 'int' 1
+    | | |-BinaryOperator 0x7fe0ee02c960 <line:74:3, col:17> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02c8f0 <col:3, col:7> 'unsigned int' lvalue bitfield .sda0_io 0x7fe0ee014458
+    | | | | `-DeclRefExpr 0x7fe0ee02c8c8 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02c948 <col:17> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02c928 <col:17> 'int' 0
+    | | |-BinaryOperator 0x7fe0ee02ca20 <line:75:3, col:17> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02c9b0 <col:3, col:7> 'unsigned int' lvalue bitfield .scl_inv 0x7fe0ee0143d8
+    | | | | `-DeclRefExpr 0x7fe0ee02c988 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02ca08 <col:17> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02c9e8 <col:17> 'int' 0
+    | | |-BinaryOperator 0x7fe0ee02cae0 <line:76:3, col:16> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02ca70 <col:3, col:7> 'unsigned int' lvalue bitfield .scl_io 0x7fe0ee014358
+    | | | | `-DeclRefExpr 0x7fe0ee02ca48 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02cac8 <col:16> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02caa8 <col:16> 'int' 0
+    | | |-BinaryOperator 0x7fe0ee02cba0 <line:77:3, col:19> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02cb30 <col:3, col:7> 'unsigned int' lvalue bitfield .bit_order 0x7fe0ee0142d8
+    | | | | `-DeclRefExpr 0x7fe0ee02cb08 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02cb88 <col:19> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02cb68 <col:19> 'int' 1
+    | | |-BinaryOperator 0x7fe0ee02cc70 <line:78:3, col:17> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02cc00 <col:3, col:7> 'unsigned int' lvalue bitfield .sda_sel 0x7fe0ee014858
+    | | | | `-DeclRefExpr 0x7fe0ee02cbc8 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02cc58 <col:17> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02cc38 <col:17> 'int' 0
+    | | |-BinaryOperator 0x7fe0ee02cd30 <line:79:3, col:17> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02ccc0 <col:3, col:7> 'unsigned int' lvalue bitfield .sen_sel 0x7fe0ee0149d8
+    | | | | `-DeclRefExpr 0x7fe0ee02cc98 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02cd18 <col:17> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02ccf8 <col:17> 'int' 0
+    | | |-BinaryOperator 0x7fe0ee02cdf0 <line:80:3, col:12> 'unsigned int' '='
+    | | | |-MemberExpr 0x7fe0ee02cd80 <col:3, col:7> 'unsigned int' lvalue bitfield .en 0x7fe0ee014258
+    | | | | `-DeclRefExpr 0x7fe0ee02cd58 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | | | `-ImplicitCastExpr 0x7fe0ee02cdd8 <col:12> 'unsigned int' <IntegralCast>
+    | | |   `-IntegerLiteral 0x7fe0ee02cdb8 <col:12> 'int' 1
+    | | `-BinaryOperator 0x7fe0ee02ce80 <line:81:3, col:13> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' '='
+    | |   |-DeclRefExpr 0x7fe0ee02ce18 <col:3> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee0157f0 'reg_gio' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | |   `-ImplicitCastExpr 0x7fe0ee02ce68 <col:13> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe0ee02ce40 <col:13> 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg' lvalue Var 0x7fe0ee02c358 'cfg' 'reg_gio_rw_i2c1_cfg':'reg_gio_rw_i2c1_cfg'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fe0ee02cfe8 <line:84:2, col:14> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02cf78 <col:2, col:7> 'unsigned int' lvalue bitfield .freq 0x7fe0ee015638
+    | | `-DeclRefExpr 0x7fe0ee02cf50 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02cfd0 <col:14> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02cfb0 <col:14> 'int' 1
+    |-BinaryOperator 0x7fe0ee02d160 <line:85:2, col:19> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d0f0 <col:2, col:7> 'unsigned int' lvalue bitfield .start_bit 0x7fe0ee0155b8
+    | | `-DeclRefExpr 0x7fe0ee02d0c8 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d148 <col:19> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d128 <col:19> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d220 <line:86:2, col:17> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d1b0 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_bit 0x7fe0ee015538
+    | | `-DeclRefExpr 0x7fe0ee02d188 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d208 <col:17> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d1e8 <col:17> 'int' 1
+    |-BinaryOperator 0x7fe0ee02d2e0 <line:87:2, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d270 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_dir0 0x7fe0ee015238
+    | | `-DeclRefExpr 0x7fe0ee02d248 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d2c8 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d2a8 <col:18> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d3a0 <line:88:2, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d330 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_dir1 0x7fe0ee0152b8
+    | | `-DeclRefExpr 0x7fe0ee02d308 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d388 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d368 <col:18> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d460 <line:89:2, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d3f0 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_dir2 0x7fe0ee015338
+    | | `-DeclRefExpr 0x7fe0ee02d3c8 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d448 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d428 <col:18> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d520 <line:90:2, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d4b0 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_dir3 0x7fe0ee0153b8
+    | | `-DeclRefExpr 0x7fe0ee02d488 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d508 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d4e8 <col:18> 'int' 1
+    |-BinaryOperator 0x7fe0ee02d5e0 <line:91:2, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d570 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_dir4 0x7fe0ee015438
+    | | `-DeclRefExpr 0x7fe0ee02d548 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d5c8 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d5a8 <col:18> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d6a0 <line:92:2, col:18> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d630 <col:2, col:7> 'unsigned int' lvalue bitfield .ack_dir5 0x7fe0ee0154b8
+    | | `-DeclRefExpr 0x7fe0ee02d608 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d688 <col:18> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d668 <col:18> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d760 <line:93:2, col:20> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d6f0 <col:2, col:7> 'unsigned int' lvalue bitfield .start_stop 0x7fe0ee0151b8
+    | | `-DeclRefExpr 0x7fe0ee02d6c8 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d748 <col:20> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d728 <col:20> 'int' 1
+    |-BinaryOperator 0x7fe0ee02d820 <line:94:2, col:19> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d7b0 <col:2, col:7> 'unsigned int' lvalue bitfield .early_end 0x7fe0ee015138
+    | | `-DeclRefExpr 0x7fe0ee02d788 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d808 <col:19> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d7e8 <col:19> 'int' 0
+    |-BinaryOperator 0x7fe0ee02d8e0 <line:95:2, col:21> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d870 <col:2, col:7> 'unsigned int' lvalue bitfield .extra_start 0x7fe0ee0150b8
+    | | `-DeclRefExpr 0x7fe0ee02d848 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d8c8 <col:21> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02d8a8 <col:21> 'int' 2
+    |-BinaryOperator 0x7fe0ee02d9e8 <line:96:2, col:22> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02d930 <col:2, col:7> 'unsigned int' lvalue bitfield .switch_dir 0x7fe0ee015038
+    | | `-DeclRefExpr 0x7fe0ee02d908 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02d9d0 <col:20, col:22> 'unsigned int' <IntegralCast>
+    |   `-BinaryOperator 0x7fe0ee02d9a8 <col:20, col:22> 'int' '*'
+    |     |-IntegerLiteral 0x7fe0ee02d968 <col:20> 'int' 8
+    |     `-IntegerLiteral 0x7fe0ee02d988 <col:22> 'int' 3
+    |-BinaryOperator 0x7fe0ee02daf0 <line:97:2, col:20> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02da38 <col:2, col:7> 'unsigned int' lvalue bitfield .trf_bits 0x7fe0ee014fb8
+    | | `-DeclRefExpr 0x7fe0ee02da10 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02dad8 <col:18, col:20> 'unsigned int' <IntegralCast>
+    |   `-BinaryOperator 0x7fe0ee02dab0 <col:18, col:20> 'int' '*'
+    |     |-IntegerLiteral 0x7fe0ee02da70 <col:18> 'int' 8
+    |     `-IntegerLiteral 0x7fe0ee02da90 <col:20> 'int' 4
+    |-BinaryOperator 0x7fe0ee02db80 <line:98:2, col:13> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' '='
+    | |-DeclRefExpr 0x7fe0ee02db18 <col:2> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee0159d0 'reg_ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    | `-ImplicitCastExpr 0x7fe0ee02db68 <col:13> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe0ee02db40 <col:13> 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl' lvalue Var 0x7fe0ee02bd98 'ctrl' 'reg_gio_rw_i2c1_ctrl':'reg_gio_rw_i2c1_ctrl'
+    |-CallExpr 0x7fe0ee02dc40 <line:99:2, col:11> 'void'
+    | |-ImplicitCastExpr 0x7fe0ee02dc28 <col:2> 'void (*)(unsigned int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe0ee02dba8 <col:2> 'void (unsigned int)' Function 0x7fe0ee015df0 'frob' 'void (unsigned int)'
+    | `-ImplicitCastExpr 0x7fe0ee02dc70 <col:7> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7fe0ee02dbd0 <col:7> 'int' 172
+    |-BinaryOperator 0x7fe0ee02dde8 <line:100:2, col:28> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02dcb0 <col:2, col:7> 'unsigned int' lvalue bitfield .data0 0x7fe0ee014c48
+    | | `-DeclRefExpr 0x7fe0ee02dc88 <col:2> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee02c038 'data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    | `-ImplicitCastExpr 0x7fe0ee02ddd0 <col:15, col:28> 'unsigned int' <IntegralCast>
+    |   `-BinaryOperator 0x7fe0ee02dda8 <col:15, col:28> 'int' '&'
+    |     |-ImplicitCastExpr 0x7fe0ee02dd90 <col:15, col:24> 'int' <LValueToRValue>
+    |     | `-ArraySubscriptExpr 0x7fe0ee02dd48 <col:15, col:24> 'int' lvalue
+    |     |   |-ImplicitCastExpr 0x7fe0ee02dd30 <col:15> 'int *' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x7fe0ee02dce8 <col:15> 'int *' lvalue ParmVar 0x7fe0ee016150 'devspec' 'int *'
+    |     |   `-IntegerLiteral 0x7fe0ee02dd10 <col:23> 'int' 1
+    |     `-IntegerLiteral 0x7fe0ee02dd70 <col:28> 'int' 192
+    |-BinaryOperator 0x7fe0ee02df10 <line:101:2, col:15> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02de98 <col:2, col:7> 'unsigned int' lvalue bitfield .data1 0x7fe0ee014cc8
+    | | `-DeclRefExpr 0x7fe0ee02de70 <col:2> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee02c038 'data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    | `-ImplicitCastExpr 0x7fe0ee02def8 <col:15> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe0ee02ded0 <col:15> 'unsigned int' lvalue ParmVar 0x7fe0ee02bc00 'addr' 'unsigned int'
+    |-BinaryOperator 0x7fe0ee02e098 <line:102:2, col:28> 'unsigned int' '='
+    | |-MemberExpr 0x7fe0ee02df60 <col:2, col:7> 'unsigned int' lvalue bitfield .data2 0x7fe0ee014d48
+    | | `-DeclRefExpr 0x7fe0ee02df38 <col:2> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee02c038 'data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    | `-ImplicitCastExpr 0x7fe0ee02e080 <col:15, col:28> 'unsigned int' <IntegralCast>
+    |   `-BinaryOperator 0x7fe0ee02e058 <col:15, col:28> 'int' '|'
+    |     |-ImplicitCastExpr 0x7fe0ee02e040 <col:15, col:24> 'int' <LValueToRValue>
+    |     | `-ArraySubscriptExpr 0x7fe0ee02dff8 <col:15, col:24> 'int' lvalue
+    |     |   |-ImplicitCastExpr 0x7fe0ee02dfe0 <col:15> 'int *' <LValueToRValue>
+    |     |   | `-DeclRefExpr 0x7fe0ee02df98 <col:15> 'int *' lvalue ParmVar 0x7fe0ee016150 'devspec' 'int *'
+    |     |   `-IntegerLiteral 0x7fe0ee02dfc0 <col:23> 'int' 1
+    |     `-IntegerLiteral 0x7fe0ee02e020 <col:28> 'int' 1
+    |-BinaryOperator 0x7fe0ee02e128 <line:103:2, col:13> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' '='
+    | |-DeclRefExpr 0x7fe0ee02e0c0 <col:2> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee0158c0 'reg_data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    | `-ImplicitCastExpr 0x7fe0ee02e110 <col:13> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe0ee02e0e8 <col:13> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee02c038 'data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    |-BinaryOperator 0x7fe0ee02e198 <line:104:2, col:14> 'int' '='
+    | |-DeclRefExpr 0x7fe0ee02e150 <col:2> 'int' lvalue Var 0x7fe0ee015938 'reg_start' 'int'
+    | `-IntegerLiteral 0x7fe0ee02e178 <col:14> 'int' 1
+    |-CallExpr 0x7fe0ee02e220 <line:105:2, col:9> 'void'
+    | |-ImplicitCastExpr 0x7fe0ee02e208 <col:2> 'void (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe0ee02e1c0 <col:2> 'void (int)' Function 0x7fe0ee015f38 'bar' 'void (int)'
+    | `-IntegerLiteral 0x7fe0ee02e1e8 <col:6> 'int' 100
+    |-BinaryOperator 0x7fe0ee02e2b8 <line:106:2, col:9> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' '='
+    | |-DeclRefExpr 0x7fe0ee02e250 <col:2> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee02c038 'data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    | `-ImplicitCastExpr 0x7fe0ee02e2a0 <col:9> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe0ee02e278 <col:9> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee0158c0 'reg_data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'
+    |-CallExpr 0x7fe0ee02e320 <line:107:2, col:6> 'void'
+    | `-ImplicitCastExpr 0x7fe0ee02e308 <col:2> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fe0ee02e2e0 <col:2> 'void (void)' Function 0x7fe0ee016070 'baz' 'void (void)'
+    `-ReturnStmt 0x7fe0ee02e3c0 <line:109:2, col:14>
+      `-ImplicitCastExpr 0x7fe0ee02e3a8 <col:9, col:14> 'unsigned int' <LValueToRValue>
+        `-MemberExpr 0x7fe0ee02e370 <col:9, col:14> 'unsigned int' lvalue bitfield .data3 0x7fe0ee014dc8
+          `-DeclRefExpr 0x7fe0ee02e348 <col:9> 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data' lvalue Var 0x7fe0ee02c038 'data' 'reg_gio_rw_i2c1_data':'reg_gio_rw_i2c1_data'

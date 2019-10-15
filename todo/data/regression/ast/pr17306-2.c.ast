@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fd85980eae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd85980f760 <../Data/C2AST/pr17306-2.c:6:1, line:9:1> line:6:8 struct x definition
+| |-FieldDecl 0x7fd85a817030 <line:7:3, col:8> col:8 referenced x 'char'
+| `-FieldDecl 0x7fd85a817088 <line:8:3, col:8> col:8 referenced y 'char'
+|-VarDecl 0x7fd85a817120 <line:11:1, col:42> col:42 used foo 'struct x':'struct x'
+|-FunctionDecl 0x7fd85a817210 <line:13:1, line:17:1> line:13:5 bar 'int ()'
+| `-CompoundStmt 0x7fd85a8175e0 <line:14:1, line:17:1>
+|   `-IfStmt 0x7fd85a8175a8 <line:15:2, line:16:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fd85a8173c8 <line:15:6, col:24> 'int' '!='
+|     | |-ParenExpr 0x7fd85a817388 <col:6, col:19> 'int'
+|     | | `-BinaryOperator 0x7fd85a817360 <col:7, col:15> 'int' '&'
+|     | |   |-ImplicitCastExpr 0x7fd85a817348 <col:7, col:11> 'int' <IntegralCast>
+|     | |   | `-ImplicitCastExpr 0x7fd85a817330 <col:7, col:11> 'char' <LValueToRValue>
+|     | |   |   `-MemberExpr 0x7fd85a8172d8 <col:7, col:11> 'char' lvalue .y 0x7fd85a817088
+|     | |   |     `-DeclRefExpr 0x7fd85a8172b0 <col:7> 'struct x':'struct x' lvalue Var 0x7fd85a817120 'foo' 'struct x':'struct x'
+|     | |   `-IntegerLiteral 0x7fd85a817310 <col:15> 'int' 128
+|     | `-IntegerLiteral 0x7fd85a8173a8 <col:24> 'int' 0
+|     |-CallExpr 0x7fd85a817580 <line:16:4, col:9> 'int'
+|     | `-ImplicitCastExpr 0x7fd85a817568 <col:4> 'int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd85a817518 <col:4> 'int ()' Function 0x7fd85a817468 'oof' 'int ()'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd85a817620 <line:19:1, line:23:1> line:19:5 com 'int ()'
+  `-CompoundStmt 0x7fd85a8178a0 <line:20:1, line:23:1>
+    `-IfStmt 0x7fd85a817868 <line:21:2, line:22:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd85a8177d8 <line:21:6, col:24> 'int' '!='
+      | |-ParenExpr 0x7fd85a817798 <col:6, col:19> 'int'
+      | | `-BinaryOperator 0x7fd85a817770 <col:7, col:15> 'int' '&'
+      | |   |-ImplicitCastExpr 0x7fd85a817758 <col:7, col:11> 'int' <IntegralCast>
+      | |   | `-ImplicitCastExpr 0x7fd85a817740 <col:7, col:11> 'char' <LValueToRValue>
+      | |   |   `-MemberExpr 0x7fd85a8176e8 <col:7, col:11> 'char' lvalue .x 0x7fd85a817030
+      | |   |     `-DeclRefExpr 0x7fd85a8176c0 <col:7> 'struct x':'struct x' lvalue Var 0x7fd85a817120 'foo' 'struct x':'struct x'
+      | |   `-IntegerLiteral 0x7fd85a817720 <col:15> 'int' 128
+      | `-IntegerLiteral 0x7fd85a8177b8 <col:24> 'int' 0
+      |-CallExpr 0x7fd85a817840 <line:22:4, col:9> 'int'
+      | `-ImplicitCastExpr 0x7fd85a817828 <col:4> 'int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd85a817800 <col:4> 'int ()' Function 0x7fd85a817468 'oof' 'int ()'
+      `-<<<NULL>>>

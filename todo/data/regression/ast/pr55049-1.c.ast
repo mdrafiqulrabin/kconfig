@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f816e0234e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f816d816060 <../Data/C2AST/pr55049-1.c:5:1, col:46> col:13 used __morestack_fail 'void (const char *)' extern
+| `-ParmVarDecl 0x7f816e024178 <col:31, col:43> col:43 msg 'const char *'
+`-FunctionDecl 0x7f816d816210 <line:6:1, line:11:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7f816d816548 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f816d816458 <line:9:3, col:67>
+    | `-VarDecl 0x7f816d816328 <col:3, col:29> col:21 used msg 'const char [37]' static cinit
+    |   `-StringLiteral 0x7f816d8163c8 <col:29> 'const char [37]' lvalue "munmap of stack space failed: errno "
+    `-CallExpr 0x7f816d816500 <line:10:3, col:24> 'void'
+      |-ImplicitCastExpr 0x7f816d8164e8 <col:3> 'void (*)(const char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f816d816470 <col:3> 'void (const char *)' Function 0x7f816d816060 '__morestack_fail' 'void (const char *)'
+      `-ImplicitCastExpr 0x7f816d816530 <col:21> 'const char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7f816d816498 <col:21> 'const char [37]' lvalue Var 0x7f816d816328 'msg' 'const char [37]'

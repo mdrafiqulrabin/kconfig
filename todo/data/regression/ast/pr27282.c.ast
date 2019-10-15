@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fd2b682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd2b682c960 <../Data/C2AST/pr27282.c:2:9, col:16> col:16 struct _ColRowInfo
+|-TypedefDecl 0x7fd2b686d870 <col:1, col:28> col:28 referenced ColRowInfo 'struct _ColRowInfo':'struct _ColRowInfo'
+| `-ElaboratedType 0x7fd2b686d820 'struct _ColRowInfo' sugar
+|   `-RecordType 0x7fd2b686d800 'struct _ColRowInfo'
+|     `-Record 0x7fd2b686da50 '_ColRowInfo'
+|-RecordDecl 0x7fd2b686d8e0 <line:3:9, col:18> col:9 struct definition
+|-TypedefDecl 0x7fd2b686d9e0 <col:1, line:4:1> col:1 GnmSheetRange 'struct GnmSheetRange':'GnmSheetRange'
+| `-ElaboratedType 0x7fd2b686d990 'struct GnmSheetRange' sugar
+|   `-RecordType 0x7fd2b686d970 'GnmSheetRange'
+|     `-Record 0x7fd2b686d8e0 ''
+|-RecordDecl 0x7fd2b686da50 prev 0x7fd2b682c960 <line:5:1, line:11:1> line:5:8 struct _ColRowInfo definition
+| |-FieldDecl 0x7fd2b686daf0 <line:7:3, col:9> col:9 referenced size_pts 'float'
+| |-FieldDecl 0x7fd2b686db70 <line:8:3, col:21> col:12 referenced margin_a 'unsigned int'
+| | `-IntegerLiteral 0x7fd2b686db38 <col:21> 'int' 3
+| |-FieldDecl 0x7fd2b686dbf0 <line:9:3, col:21> col:12 margin_b 'unsigned int'
+| | `-IntegerLiteral 0x7fd2b686dbb8 <col:21> 'int' 3
+| `-FieldDecl 0x7fd2b686dc70 <line:10:3, col:20> col:12 referenced visible 'unsigned int'
+|   `-IntegerLiteral 0x7fd2b686dc38 <col:20> 'int' 1
+`-FunctionDecl 0x7fd2b686ded8 <line:12:1, line:16:1> line:12:1 colrow_equal 'int (const ColRowInfo *, const ColRowInfo *)'
+  |-ParmVarDecl 0x7fd2b686dd48 <col:15, col:33> col:33 used a 'const ColRowInfo *'
+  |-ParmVarDecl 0x7fd2b686ddb8 <col:36, col:54> col:54 used b 'const ColRowInfo *'
+  `-CompoundStmt 0x7fd2b686e468 <line:13:1, line:16:1>
+    `-ReturnStmt 0x7fd2b686e450 <line:14:3, line:15:25>
+      `-BinaryOperator 0x7fd2b686e428 <line:14:10, line:15:25> 'int' '&&'
+        |-BinaryOperator 0x7fd2b686e288 <line:14:10, col:58> 'int' '&&'
+        | |-BinaryOperator 0x7fd2b686e0e8 <col:10, col:28> 'int' '=='
+        | | |-ImplicitCastExpr 0x7fd2b686e0b8 <col:10, col:13> 'float' <LValueToRValue>
+        | | | `-MemberExpr 0x7fd2b686e008 <col:10, col:13> 'const float' lvalue ->size_pts 0x7fd2b686daf0
+        | | |   `-ImplicitCastExpr 0x7fd2b686dff0 <col:10> 'const ColRowInfo *' <LValueToRValue>
+        | | |     `-DeclRefExpr 0x7fd2b686dfc8 <col:10> 'const ColRowInfo *' lvalue ParmVar 0x7fd2b686dd48 'a' 'const ColRowInfo *'
+        | | `-ImplicitCastExpr 0x7fd2b686e0d0 <col:25, col:28> 'float' <LValueToRValue>
+        | |   `-MemberExpr 0x7fd2b686e080 <col:25, col:28> 'const float' lvalue ->size_pts 0x7fd2b686daf0
+        | |     `-ImplicitCastExpr 0x7fd2b686e068 <col:25> 'const ColRowInfo *' <LValueToRValue>
+        | |       `-DeclRefExpr 0x7fd2b686e040 <col:25> 'const ColRowInfo *' lvalue ParmVar 0x7fd2b686ddb8 'b' 'const ColRowInfo *'
+        | `-BinaryOperator 0x7fd2b686e260 <col:40, col:58> 'int' '=='
+        |   |-ImplicitCastExpr 0x7fd2b686e218 <col:40, col:43> 'int' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7fd2b686e200 <col:40, col:43> 'unsigned int' <LValueToRValue>
+        |   |   `-MemberExpr 0x7fd2b686e150 <col:40, col:43> 'const unsigned int' lvalue bitfield ->margin_a 0x7fd2b686db70
+        |   |     `-ImplicitCastExpr 0x7fd2b686e138 <col:40> 'const ColRowInfo *' <LValueToRValue>
+        |   |       `-DeclRefExpr 0x7fd2b686e110 <col:40> 'const ColRowInfo *' lvalue ParmVar 0x7fd2b686dd48 'a' 'const ColRowInfo *'
+        |   `-ImplicitCastExpr 0x7fd2b686e248 <col:55, col:58> 'int' <IntegralCast>
+        |     `-ImplicitCastExpr 0x7fd2b686e230 <col:55, col:58> 'unsigned int' <LValueToRValue>
+        |       `-MemberExpr 0x7fd2b686e1c8 <col:55, col:58> 'const unsigned int' lvalue bitfield ->margin_a 0x7fd2b686db70
+        |         `-ImplicitCastExpr 0x7fd2b686e1b0 <col:55> 'const ColRowInfo *' <LValueToRValue>
+        |           `-DeclRefExpr 0x7fd2b686e188 <col:55> 'const ColRowInfo *' lvalue ParmVar 0x7fd2b686ddb8 'b' 'const ColRowInfo *'
+        `-BinaryOperator 0x7fd2b686e400 <line:15:8, col:25> 'int' '=='
+          |-ImplicitCastExpr 0x7fd2b686e3b8 <col:8, col:11> 'int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fd2b686e3a0 <col:8, col:11> 'unsigned int' <LValueToRValue>
+          |   `-MemberExpr 0x7fd2b686e2f0 <col:8, col:11> 'const unsigned int' lvalue bitfield ->visible 0x7fd2b686dc70
+          |     `-ImplicitCastExpr 0x7fd2b686e2d8 <col:8> 'const ColRowInfo *' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fd2b686e2b0 <col:8> 'const ColRowInfo *' lvalue ParmVar 0x7fd2b686dd48 'a' 'const ColRowInfo *'
+          `-ImplicitCastExpr 0x7fd2b686e3e8 <col:22, col:25> 'int' <IntegralCast>
+            `-ImplicitCastExpr 0x7fd2b686e3d0 <col:22, col:25> 'unsigned int' <LValueToRValue>
+              `-MemberExpr 0x7fd2b686e368 <col:22, col:25> 'const unsigned int' lvalue bitfield ->visible 0x7fd2b686dc70
+                `-ImplicitCastExpr 0x7fd2b686e350 <col:22> 'const ColRowInfo *' <LValueToRValue>
+                  `-DeclRefExpr 0x7fd2b686e328 <col:22> 'const ColRowInfo *' lvalue ParmVar 0x7fd2b686ddb8 'b' 'const ColRowInfo *'

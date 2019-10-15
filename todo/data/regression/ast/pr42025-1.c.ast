@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7fb31202bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb31202c978 <../Data/C2AST/pr42025-1.c:1:1, col:15> col:15 referenced Ptr 'void *'
+| `-PointerType 0x7fb31202c1e0 'void *'
+|   `-BuiltinType 0x7fb31202bd40 'void'
+|-RecordDecl 0x7fb312814200 <line:3:1, line:11:1> line:3:8 struct A definition
+| |-FieldDecl 0x7fb3128142c8 <line:5:3, col:7> col:7 referenced i 'int'
+| |-RecordDecl 0x7fb312814310 <line:6:3, line:10:3> line:6:3 union definition
+| | |-FieldDecl 0x7fb3128143f0 <line:8:5, col:9> col:9 referenced p 'Ptr':'void *'
+| | `-FieldDecl 0x7fb312814450 <line:9:5, col:11> col:11 referenced q 'char *'
+| `-FieldDecl 0x7fb3128144f0 <line:6:3, line:10:5> col:5 referenced u 'union (anonymous union at ../Data/C2AST/pr42025-1.c:6:3)':'union A::(anonymous at ../Data/C2AST/pr42025-1.c:6:3)'
+|-FunctionDecl 0x7fb312814780 <line:13:1, line:19:1> line:13:13 used foo 'void (struct A *, char *)' static
+| |-ParmVarDecl 0x7fb3128145f0 <col:17, col:27> col:27 used p 'struct A *'
+| |-ParmVarDecl 0x7fb312814668 <col:30, col:36> col:36 used q 'char *'
+| `-CompoundStmt 0x7fb312814b60 <line:14:1, line:19:1>
+|   `-IfStmt 0x7fb312814b28 <line:15:3, line:18:14>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fb3128148e8 <line:15:7, col:10> 'int' <LValueToRValue>
+|     | `-MemberExpr 0x7fb3128148b0 <col:7, col:10> 'int' lvalue ->i 0x7fb3128142c8
+|     |   `-ImplicitCastExpr 0x7fb312814898 <col:7> 'struct A *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7fb312814870 <col:7> 'struct A *' lvalue ParmVar 0x7fb3128145f0 'p' 'struct A *'
+|     |-BinaryOperator 0x7fb3128149e8 <line:16:5, col:14> 'Ptr':'void *' '='
+|     | |-MemberExpr 0x7fb312814978 <col:5, col:10> 'Ptr':'void *' lvalue .p 0x7fb3128143f0
+|     | | `-MemberExpr 0x7fb312814940 <col:5, col:8> 'union (anonymous union at ../Data/C2AST/pr42025-1.c:6:3)':'union A::(anonymous at ../Data/C2AST/pr42025-1.c:6:3)' lvalue ->u 0x7fb3128144f0
+|     | |   `-ImplicitCastExpr 0x7fb312814928 <col:5> 'struct A *' <LValueToRValue>
+|     | |     `-DeclRefExpr 0x7fb312814900 <col:5> 'struct A *' lvalue ParmVar 0x7fb3128145f0 'p' 'struct A *'
+|     | `-ImplicitCastExpr 0x7fb3128149d0 <col:14> 'Ptr':'void *' <NullToPointer>
+|     |   `-IntegerLiteral 0x7fb3128149b0 <col:14> 'int' 0
+|     `-BinaryOperator 0x7fb312814b00 <line:18:5, col:14> 'char *' '='
+|       |-MemberExpr 0x7fb312814a88 <col:5, col:10> 'char *' lvalue .q 0x7fb312814450
+|       | `-MemberExpr 0x7fb312814a50 <col:5, col:8> 'union (anonymous union at ../Data/C2AST/pr42025-1.c:6:3)':'union A::(anonymous at ../Data/C2AST/pr42025-1.c:6:3)' lvalue ->u 0x7fb3128144f0
+|       |   `-ImplicitCastExpr 0x7fb312814a38 <col:5> 'struct A *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fb312814a10 <col:5> 'struct A *' lvalue ParmVar 0x7fb3128145f0 'p' 'struct A *'
+|       `-ImplicitCastExpr 0x7fb312814ae8 <col:14> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb312814ac0 <col:14> 'char *' lvalue ParmVar 0x7fb312814668 'q' 'char *'
+`-FunctionDecl 0x7fb312814ca8 <line:21:1, line:24:1> line:21:6 bar 'void (struct A *, char *)'
+  |-ParmVarDecl 0x7fb312814ba0 <col:10, col:20> col:20 used p 'struct A *'
+  |-ParmVarDecl 0x7fb312814c18 <col:23, col:29> col:29 used q 'char *'
+  `-CompoundStmt 0x7fb312814ea8 <line:22:1, line:24:1>
+    `-CallExpr 0x7fb312814e40 <line:23:3, col:11> 'void'
+      |-ImplicitCastExpr 0x7fb312814e28 <col:3> 'void (*)(struct A *, char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb312814d58 <col:3> 'void (struct A *, char *)' Function 0x7fb312814780 'foo' 'void (struct A *, char *)'
+      |-ImplicitCastExpr 0x7fb312814e78 <col:7> 'struct A *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb312814d80 <col:7> 'struct A *' lvalue ParmVar 0x7fb312814ba0 'p' 'struct A *'
+      `-ImplicitCastExpr 0x7fb312814e90 <col:10> 'char *' <LValueToRValue>
+        `-DeclRefExpr 0x7fb312814da8 <col:10> 'char *' lvalue ParmVar 0x7fb312814c18 'q' 'char *'

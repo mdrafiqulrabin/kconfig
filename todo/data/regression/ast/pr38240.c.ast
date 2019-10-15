@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fe6de02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe6de06e800 <../Data/C2AST/pr38240.c:4:1, col:15> col:15 referenced V '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7fe6de02c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7fe6de02bee0 'float'
+| `-MayAliasAttr 0x7fe6de06e858 <line:5:41>
+|-FunctionDecl 0x7fe6de06eaa0 <line:7:1, col:65> col:34 f 'V (const V *)'
+| |-ParmVarDecl 0x7fe6de06e998 <col:36, col:45> col:45 used ptr 'const V *'
+| |-CompoundStmt 0x7fe6de06ec70 <col:50, col:65>
+| | `-ReturnStmt 0x7fe6de06ec58 <col:52, col:60>
+| |   `-ImplicitCastExpr 0x7fe6de06ec40 <col:59, col:60> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+| |     `-UnaryOperator 0x7fe6de06ec20 <col:59, col:60> 'const V':'__attribute__((__vector_size__(4 * sizeof(float)))) float const' lvalue prefix '*'
+| |       `-ImplicitCastExpr 0x7fe6de06ec08 <col:60> 'const V *' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fe6de06ebe0 <col:60> 'const V *' lvalue ParmVar 0x7fe6de06e998 'ptr' 'const V *'
+| `-TargetAttr 0x7fe6de06eb48 <col:18, col:30> "sse"
+`-FunctionDecl 0x7fe6de06ed20 <line:9:1, col:34> col:3 g 'V (const V *)'
+  |-ParmVarDecl 0x7fe6de06ec98 <col:5, col:14> col:14 used ptr 'const V *'
+  `-CompoundStmt 0x7fe6de06ee58 <col:19, col:34>
+    `-ReturnStmt 0x7fe6de06ee40 <col:21, col:29>
+      `-ImplicitCastExpr 0x7fe6de06ee28 <col:28, col:29> 'V':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        `-UnaryOperator 0x7fe6de06ee08 <col:28, col:29> 'const V':'__attribute__((__vector_size__(4 * sizeof(float)))) float const' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fe6de06edf0 <col:29> 'const V *' <LValueToRValue>
+            `-DeclRefExpr 0x7fe6de06edc8 <col:29> 'const V *' lvalue ParmVar 0x7fe6de06ec98 'ptr' 'const V *'

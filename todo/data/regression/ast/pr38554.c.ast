@@ -1,0 +1,139 @@
+TranslationUnitDecl 0x7fb59a02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb59a02c978 <../Data/C2AST/pr38554.c:1:1, col:23> col:23 referenced sample 'unsigned long'
+| `-BuiltinType 0x7fb59a02bea0 'unsigned long'
+|-RecordDecl 0x7fb59a814200 <line:2:1, line:5:1> line:2:8 struct pam definition
+| `-FieldDecl 0x7fb59a8142e0 <line:4:3, col:10> col:10 referenced maxval 'sample':'unsigned long'
+|-TypedefDecl 0x7fb59a814398 <line:6:1, col:17> col:17 referenced tuple 'sample *'
+| `-PointerType 0x7fb59a814360 'sample *'
+|   `-TypedefType 0x7fb59a8142b0 'sample' sugar
+|     |-Typedef 0x7fb59a02c978 'sample'
+|     `-BuiltinType 0x7fb59a02bea0 'unsigned long'
+|-EnumDecl 0x7fb59a8143f0 <line:7:1, line:11:3> line:7:6 function
+| |-EnumConstantDecl 0x7fb59a8144b0 <line:9:5> col:5 FN_MULTIPLY 'int'
+| |-EnumConstantDecl 0x7fb59a8144f8 <col:18> col:18 referenced FN_DIVIDE 'int'
+| |-EnumConstantDecl 0x7fb59a814540 <col:29> col:29 FN_ADD 'int'
+| |-EnumConstantDecl 0x7fb59a814588 <col:37> col:37 FN_SUBTRACT 'int'
+| |-EnumConstantDecl 0x7fb59a8145d0 <col:50> col:50 FN_MIN 'int'
+| |-EnumConstantDecl 0x7fb59a814618 <col:58> col:58 FN_MAX 'int'
+| |-EnumConstantDecl 0x7fb59a814660 <col:66> col:66 FN_AND 'int'
+| |-EnumConstantDecl 0x7fb59a8146a8 <col:74> col:74 FN_OR 'int'
+| |-EnumConstantDecl 0x7fb59a8146f0 <line:10:5> col:5 FN_XOR 'int'
+| |-EnumConstantDecl 0x7fb59a814738 <col:13> col:13 FN_NOT 'int'
+| |-EnumConstantDecl 0x7fb59a814780 <col:21> col:21 referenced FN_SHIFTLEFT 'int'
+| `-EnumConstantDecl 0x7fb59a8147c8 <col:35> col:35 FN_SHIFTRIGHT 'int'
+|-RecordDecl 0x7fb59a814810 <line:12:1, line:21:1> line:12:8 struct cmdlineInfo definition
+| |-FieldDecl 0x7fb59a814910 <line:14:3, col:17> col:17 referenced function 'enum function':'enum function'
+| |-RecordDecl 0x7fb59a814958 <line:15:3, line:19:3> line:15:3 union definition
+| | |-FieldDecl 0x7fb59a814a18 <line:17:5, col:11> col:11 referenced divisor 'float'
+| | `-FieldDecl 0x7fb59a814a78 <line:18:5, col:18> col:18 referenced shiftCount 'unsigned int'
+| `-FieldDecl 0x7fb59a814b10 <line:15:3, line:20:5> col:5 referenced u 'union (anonymous union at ../Data/C2AST/pr38554.c:15:3)':'union cmdlineInfo::(anonymous at ../Data/C2AST/pr38554.c:15:3)'
+`-FunctionDecl 0x7fb59a814fa8 <line:22:1, line:45:1> line:22:1 applyFunction 'int (const struct cmdlineInfo, const struct pam, const struct pam, tuple *const, tuple *const)'
+  |-ParmVarDecl 0x7fb59a814bb0 <col:16, col:41> col:41 used cmdline 'const struct cmdlineInfo':'const struct cmdlineInfo'
+  |-ParmVarDecl 0x7fb59a814c60 <col:50, col:67> col:67 inpam 'const struct pam':'const struct pam'
+  |-ParmVarDecl 0x7fb59a814ce0 <line:23:16, col:33> col:33 used outpam 'const struct pam':'const struct pam'
+  |-ParmVarDecl 0x7fb59a814dc8 <col:41, col:55> col:55 used inputRow 'tuple *const'
+  |-ParmVarDecl 0x7fb59a814e38 <line:24:16, col:30> col:30 used outputRow 'tuple *const'
+  `-CompoundStmt 0x7fb59a8161c8 <line:25:1, line:45:1>
+    |-DeclStmt 0x7fb59a8152e0 <line:26:3, col:53>
+    | `-VarDecl 0x7fb59a8150c8 <col:3, col:46> col:15 used oneOverDivisor 'const float' cinit
+    |   `-BinaryOperator 0x7fb59a815218 <col:32, col:46> 'float' '/'
+    |     |-ImplicitCastExpr 0x7fb59a815200 <col:32> 'float' <IntegralToFloating>
+    |     | `-IntegerLiteral 0x7fb59a815128 <col:32> 'int' 1
+    |     `-ImplicitCastExpr 0x7fb59a8151e0 <col:36, col:46> 'float' <LValueToRValue>
+    |       `-MemberExpr 0x7fb59a8151a8 <col:36, col:46> 'const float' lvalue .divisor 0x7fb59a814a18
+    |         `-MemberExpr 0x7fb59a815170 <col:36, col:44> 'const union (anonymous union at ../Data/C2AST/pr38554.c:15:3)':'const union cmdlineInfo::(anonymous at ../Data/C2AST/pr38554.c:15:3)' lvalue .u 0x7fb59a814b10
+    |           `-DeclRefExpr 0x7fb59a815148 <col:36> 'const struct cmdlineInfo':'const struct cmdlineInfo' lvalue ParmVar 0x7fb59a814bb0 'cmdline' 'const struct cmdlineInfo':'const struct cmdlineInfo'
+    |-DeclStmt 0x7fb59a815370 <line:27:3, col:10>
+    | `-VarDecl 0x7fb59a815310 <col:3, col:7> col:7 used col 'int'
+    `-CompoundStmt 0x7fb59a8161a8 <line:28:3, line:44:3>
+      |-DeclStmt 0x7fb59a815400 <line:29:5, col:14>
+      | `-VarDecl 0x7fb59a8153a0 <col:5, col:9> col:9 used plane 'int'
+      `-CompoundStmt 0x7fb59a816178 <line:30:5, line:43:5>
+        |-DeclStmt 0x7fb59a8155c8 <line:31:7, col:51>
+        | `-VarDecl 0x7fb59a815428 <col:7, col:50> col:20 used inSample 'const sample':'const unsigned long' cinit
+        |   `-ImplicitCastExpr 0x7fb59a8155b0 <col:31, col:50> 'sample':'unsigned long' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fb59a815588 <col:31, col:50> 'sample':'unsigned long' lvalue
+        |       |-ImplicitCastExpr 0x7fb59a815558 <col:31, col:43> 'tuple':'sample *' <LValueToRValue>
+        |       | `-ArraySubscriptExpr 0x7fb59a815508 <col:31, col:43> 'tuple':'sample *' lvalue
+        |       |   |-ImplicitCastExpr 0x7fb59a8154d8 <col:31> 'tuple *' <LValueToRValue>
+        |       |   | `-DeclRefExpr 0x7fb59a815488 <col:31> 'tuple *const' lvalue ParmVar 0x7fb59a814dc8 'inputRow' 'tuple *const'
+        |       |   `-ImplicitCastExpr 0x7fb59a8154f0 <col:40> 'int' <LValueToRValue>
+        |       |     `-DeclRefExpr 0x7fb59a8154b0 <col:40> 'int' lvalue Var 0x7fb59a815310 'col' 'int'
+        |       `-ImplicitCastExpr 0x7fb59a815570 <col:45> 'int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7fb59a815530 <col:45> 'int' lvalue Var 0x7fb59a8153a0 'plane' 'int'
+        |-DeclStmt 0x7fb59a815650 <line:32:7, col:23>
+        | `-VarDecl 0x7fb59a8155f0 <col:7, col:14> col:14 used outSample 'sample':'unsigned long'
+        |-SwitchStmt 0x7fb59a8156f8 <line:33:7, line:40:9>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-ImplicitCastExpr 0x7fb59a8156e0 <line:33:15, col:23> 'unsigned int' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7fb59a8156c8 <col:15, col:23> 'enum function':'enum function' <LValueToRValue>
+        | |   `-MemberExpr 0x7fb59a815690 <col:15, col:23> 'const enum function':'const enum function' lvalue .function 0x7fb59a814910
+        | |     `-DeclRefExpr 0x7fb59a815668 <col:15> 'const struct cmdlineInfo':'const struct cmdlineInfo' lvalue ParmVar 0x7fb59a814bb0 'cmdline' 'const struct cmdlineInfo':'const struct cmdlineInfo'
+        | `-CompoundStmt 0x7fb59a815d68 <line:34:9, line:40:9>
+        |   |-CaseStmt 0x7fb59a815750 <line:35:9, line:36:74>
+        |   | |-ImplicitCastExpr 0x7fb59a815da8 <line:35:14> 'unsigned int' <IntegralCast>
+        |   | | `-DeclRefExpr 0x7fb59a815728 <col:14> 'int' EnumConstant 0x7fb59a8144f8 'FN_DIVIDE' 'int'
+        |   | |-<<<NULL>>>
+        |   | `-BinaryOperator 0x7fb59a8159b8 <line:36:11, col:74> 'sample':'unsigned long' '='
+        |   |   |-DeclRefExpr 0x7fb59a815788 <col:11> 'sample':'unsigned long' lvalue Var 0x7fb59a8155f0 'outSample' 'sample':'unsigned long'
+        |   |   `-ImplicitCastExpr 0x7fb59a8159a0 <col:23, col:74> 'sample':'unsigned long' <IntegralCast>
+        |   |     `-ParenExpr 0x7fb59a815980 <col:23, col:74> 'unsigned int'
+        |   |       `-CStyleCastExpr 0x7fb59a815958 <col:24, col:73> 'unsigned int' <FloatingToIntegral>
+        |   |         `-ParenExpr 0x7fb59a815938 <col:39, col:73> 'double'
+        |   |           `-BinaryOperator 0x7fb59a8158c8 <col:40, col:70> 'double' '+'
+        |   |             |-ImplicitCastExpr 0x7fb59a8158b0 <col:40, col:66> 'double' <FloatingCast>
+        |   |             | `-ParenExpr 0x7fb59a815870 <col:40, col:66> 'float'
+        |   |             |   `-BinaryOperator 0x7fb59a815848 <col:41, col:52> 'float' '*'
+        |   |             |     |-ImplicitCastExpr 0x7fb59a815830 <col:41> 'float' <IntegralToFloating>
+        |   |             |     | `-ImplicitCastExpr 0x7fb59a815800 <col:41> 'sample':'unsigned long' <LValueToRValue>
+        |   |             |     |   `-DeclRefExpr 0x7fb59a8157b0 <col:41> 'const sample':'const unsigned long' lvalue Var 0x7fb59a815428 'inSample' 'const sample':'const unsigned long'
+        |   |             |     `-ImplicitCastExpr 0x7fb59a815818 <col:52> 'float' <LValueToRValue>
+        |   |             |       `-DeclRefExpr 0x7fb59a8157d8 <col:52> 'const float' lvalue Var 0x7fb59a8150c8 'oneOverDivisor' 'const float'
+        |   |             `-FloatingLiteral 0x7fb59a815890 <col:70> 'double' 5.000000e-01
+        |   |-BreakStmt 0x7fb59a815a90 <line:37:11>
+        |   `-CaseStmt 0x7fb59a815ac0 <line:38:9, line:39:67>
+        |     |-ImplicitCastExpr 0x7fb59a815d90 <line:38:14> 'unsigned int' <IntegralCast>
+        |     | `-DeclRefExpr 0x7fb59a815a98 <col:14> 'int' EnumConstant 0x7fb59a814780 'FN_SHIFTLEFT' 'int'
+        |     |-<<<NULL>>>
+        |     `-BinaryOperator 0x7fb59a815cf8 <line:39:11, col:67> 'sample':'unsigned long' '='
+        |       |-DeclRefExpr 0x7fb59a815af8 <col:11> 'sample':'unsigned long' lvalue Var 0x7fb59a8155f0 'outSample' 'sample':'unsigned long'
+        |       `-BinaryOperator 0x7fb59a815cd0 <col:23, col:67> 'unsigned long' '&'
+        |         |-ParenExpr 0x7fb59a815c38 <col:23, col:56> 'sample':'unsigned long'
+        |         | `-BinaryOperator 0x7fb59a815c10 <col:24, col:46> 'sample':'unsigned long' '<<'
+        |         |   |-ImplicitCastExpr 0x7fb59a815be0 <col:24> 'sample':'unsigned long' <LValueToRValue>
+        |         |   | `-DeclRefExpr 0x7fb59a815b20 <col:24> 'const sample':'const unsigned long' lvalue Var 0x7fb59a815428 'inSample' 'const sample':'const unsigned long'
+        |         |   `-ImplicitCastExpr 0x7fb59a815bf8 <col:36, col:46> 'unsigned int' <LValueToRValue>
+        |         |     `-MemberExpr 0x7fb59a815ba8 <col:36, col:46> 'const unsigned int' lvalue .shiftCount 0x7fb59a814a78
+        |         |       `-MemberExpr 0x7fb59a815b70 <col:36, col:44> 'const union (anonymous union at ../Data/C2AST/pr38554.c:15:3)':'const union cmdlineInfo::(anonymous at ../Data/C2AST/pr38554.c:15:3)' lvalue .u 0x7fb59a814b10
+        |         |         `-DeclRefExpr 0x7fb59a815b48 <col:36> 'const struct cmdlineInfo':'const struct cmdlineInfo' lvalue ParmVar 0x7fb59a814bb0 'cmdline' 'const struct cmdlineInfo':'const struct cmdlineInfo'
+        |         `-ImplicitCastExpr 0x7fb59a815cb8 <col:60, col:67> 'sample':'unsigned long' <LValueToRValue>
+        |           `-MemberExpr 0x7fb59a815c80 <col:60, col:67> 'const sample':'const unsigned long' lvalue .maxval 0x7fb59a8142e0
+        |             `-DeclRefExpr 0x7fb59a815c58 <col:60> 'const struct pam':'const struct pam' lvalue ParmVar 0x7fb59a814ce0 'outpam' 'const struct pam':'const struct pam'
+        `-BinaryOperator 0x7fb59a816150 <line:41:7, line:42:71> 'sample':'unsigned long' '='
+          |-ArraySubscriptExpr 0x7fb59a815ec0 <line:41:7, col:27> 'sample':'unsigned long' lvalue
+          | |-ImplicitCastExpr 0x7fb59a815e90 <col:7, col:20> 'tuple':'sample *' <LValueToRValue>
+          | | `-ArraySubscriptExpr 0x7fb59a815e40 <col:7, col:20> 'tuple':'sample *' lvalue
+          | |   |-ImplicitCastExpr 0x7fb59a815e10 <col:7> 'tuple *' <LValueToRValue>
+          | |   | `-DeclRefExpr 0x7fb59a815dc0 <col:7> 'tuple *const' lvalue ParmVar 0x7fb59a814e38 'outputRow' 'tuple *const'
+          | |   `-ImplicitCastExpr 0x7fb59a815e28 <col:17> 'int' <LValueToRValue>
+          | |     `-DeclRefExpr 0x7fb59a815de8 <col:17> 'int' lvalue Var 0x7fb59a815310 'col' 'int'
+          | `-ImplicitCastExpr 0x7fb59a815ea8 <col:22> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fb59a815e68 <col:22> 'int' lvalue Var 0x7fb59a8153a0 'plane' 'int'
+          `-ParenExpr 0x7fb59a816130 <line:42:9, col:71> 'unsigned long'
+            `-ConditionalOperator 0x7fb59a816100 <col:10, col:70> 'unsigned long'
+              |-BinaryOperator 0x7fb59a815fe0 <col:10, col:38> 'int' '<'
+              | |-ImplicitCastExpr 0x7fb59a815fb0 <col:10, col:24> 'sample':'unsigned long' <LValueToRValue>
+              | | `-ParenExpr 0x7fb59a815f48 <col:10, col:24> 'const sample':'const unsigned long' lvalue
+              | |   `-MemberExpr 0x7fb59a815f10 <col:11, col:18> 'const sample':'const unsigned long' lvalue .maxval 0x7fb59a8142e0
+              | |     `-DeclRefExpr 0x7fb59a815ee8 <col:11> 'const struct pam':'const struct pam' lvalue ParmVar 0x7fb59a814ce0 'outpam' 'const struct pam':'const struct pam'
+              | `-ImplicitCastExpr 0x7fb59a815fc8 <col:28, col:38> 'sample':'unsigned long' <LValueToRValue>
+              |   `-ParenExpr 0x7fb59a815f90 <col:28, col:38> 'sample':'unsigned long' lvalue
+              |     `-DeclRefExpr 0x7fb59a815f68 <col:29> 'sample':'unsigned long' lvalue Var 0x7fb59a8155f0 'outSample' 'sample':'unsigned long'
+              |-ImplicitCastExpr 0x7fb59a8160d0 <col:42, col:56> 'sample':'unsigned long' <LValueToRValue>
+              | `-ParenExpr 0x7fb59a816068 <col:42, col:56> 'const sample':'const unsigned long' lvalue
+              |   `-MemberExpr 0x7fb59a816030 <col:43, col:50> 'const sample':'const unsigned long' lvalue .maxval 0x7fb59a8142e0
+              |     `-DeclRefExpr 0x7fb59a816008 <col:43> 'const struct pam':'const struct pam' lvalue ParmVar 0x7fb59a814ce0 'outpam' 'const struct pam':'const struct pam'
+              `-ImplicitCastExpr 0x7fb59a8160e8 <col:60, col:70> 'sample':'unsigned long' <LValueToRValue>
+                `-ParenExpr 0x7fb59a8160b0 <col:60, col:70> 'sample':'unsigned long' lvalue
+                  `-DeclRefExpr 0x7fb59a816088 <col:61> 'sample':'unsigned long' lvalue Var 0x7fb59a8155f0 'outSample' 'sample':'unsigned long'

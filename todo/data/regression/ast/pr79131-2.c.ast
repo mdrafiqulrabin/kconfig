@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7f7ee102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f7ee102c960 <../Data/C2AST/pr79131-2.c:4:1, line:6:1> line:4:8 struct nilfs_segment_usage definition
+| `-FieldDecl 0x7f7ee1814238 <line:5:3, col:7> col:7 referenced su_flags 'int'
+|-VarDecl 0x7f7ee18142d0 <line:4:1, line:6:3> col:3 used a 'struct nilfs_segment_usage':'struct nilfs_segment_usage'
+|-EnumDecl 0x7f7ee1814388 <line:7:1, col:62> col:1
+| |-EnumConstantDecl 0x7f7ee1814440 <col:8> col:8 NILFS_SEGMENT_USAGE_ACTIVE 'int'
+| `-EnumConstantDecl 0x7f7ee1814488 <col:36> col:36 referenced NILFS_SEGMENT_USAGE_DIRTY 'int'
+|-FunctionDecl 0x7f7ee1814588 <col:1, col:68> col:64 used fn1 'enum (anonymous enum at ../Data/C2AST/pr79131-2.c:7:1) ()'
+|-VarDecl 0x7f7ee1814658 <line:8:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7f7ee1814850 <line:9:1, col:26> col:6 used fn2 'void (int *, long long)'
+| |-ParmVarDecl 0x7f7ee1814700 <col:10, col:14> col:15 'int *'
+| `-ParmVarDecl 0x7f7ee1814778 <col:17, col:22> col:26 'long long'
+`-FunctionDecl 0x7f7ee1814948 <line:10:1, line:17:1> line:10:6 fn3 'void ()'
+  `-CompoundStmt 0x7f7ee18150b0 <col:12, line:17:1>
+    |-DeclStmt 0x7f7ee1814af0 <line:11:3, col:11>
+    | |-VarDecl 0x7f7ee1814a00 <col:3, col:7> col:7 used c 'int'
+    | `-VarDecl 0x7f7ee1814a78 <col:3, col:10> col:10 used d 'int'
+    |-DeclStmt 0x7f7ee1814bc8 <line:12:3, col:35>
+    | `-VarDecl 0x7f7ee1814b28 <col:3, col:34> col:30 used e 'struct nilfs_segment_usage':'struct nilfs_segment_usage' cinit
+    |   `-ImplicitCastExpr 0x7f7ee1814bb0 <col:34> 'struct nilfs_segment_usage':'struct nilfs_segment_usage' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f7ee1814b88 <col:34> 'struct nilfs_segment_usage':'struct nilfs_segment_usage' lvalue Var 0x7f7ee18142d0 'a' 'struct nilfs_segment_usage':'struct nilfs_segment_usage'
+    |-CallExpr 0x7f7ee1814c80 <line:13:3, col:7> 'enum (anonymous enum at ../Data/C2AST/pr79131-2.c:7:1)':'enum (anonymous at ../Data/C2AST/pr79131-2.c:7:1)'
+    | `-ImplicitCastExpr 0x7f7ee1814c68 <col:3> 'enum (anonymous enum at ../Data/C2AST/pr79131-2.c:7:1) (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7f7ee1814be0 <col:3> 'enum (anonymous enum at ../Data/C2AST/pr79131-2.c:7:1) ()' Function 0x7f7ee1814588 'fn1' 'enum (anonymous enum at ../Data/C2AST/pr79131-2.c:7:1) ()'
+    |-BinaryOperator 0x7f7ee1814de0 <line:14:3, col:25> 'int' '='
+    | |-DeclRefExpr 0x7f7ee1814ca8 <col:3> 'int' lvalue Var 0x7f7ee1814a00 'c' 'int'
+    | `-BinaryOperator 0x7f7ee1814db8 <col:7, col:25> 'int' '&'
+    |   |-ImplicitCastExpr 0x7f7ee1814da0 <col:7, col:9> 'int' <LValueToRValue>
+    |   | `-MemberExpr 0x7f7ee1814cf8 <col:7, col:9> 'int' lvalue .su_flags 0x7f7ee1814238
+    |   |   `-DeclRefExpr 0x7f7ee1814cd0 <col:7> 'struct nilfs_segment_usage':'struct nilfs_segment_usage' lvalue Var 0x7f7ee1814b28 'e' 'struct nilfs_segment_usage':'struct nilfs_segment_usage'
+    |   `-BinaryOperator 0x7f7ee1814d78 <col:20, col:25> 'int' '<<'
+    |     |-IntegerLiteral 0x7f7ee1814d30 <col:20> 'int' 1
+    |     `-DeclRefExpr 0x7f7ee1814d50 <col:25> 'int' EnumConstant 0x7f7ee1814488 'NILFS_SEGMENT_USAGE_DIRTY' 'int'
+    |-BinaryOperator 0x7f7ee1814eb8 <line:15:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7f7ee1814e50 <col:3> 'int' lvalue Var 0x7f7ee1814a78 'd' 'int'
+    | `-ImplicitCastExpr 0x7f7ee1814ea0 <col:7> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f7ee1814e78 <col:7> 'int' lvalue Var 0x7f7ee1814a00 'c' 'int'
+    `-CallExpr 0x7f7ee1815060 <line:16:3, col:21> 'void'
+      |-ImplicitCastExpr 0x7f7ee1815048 <col:3> 'void (*)(int *, long long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f7ee1814ee0 <col:3> 'void (int *, long long)' Function 0x7f7ee1814850 'fn2' 'void (int *, long long)'
+      |-UnaryOperator 0x7f7ee1814f30 <col:7, col:8> 'int *' prefix '&'
+      | `-DeclRefExpr 0x7f7ee1814f08 <col:8> 'int' lvalue Var 0x7f7ee1814658 'b' 'int'
+      `-ImplicitCastExpr 0x7f7ee1815098 <col:11, col:20> 'long long' <IntegralCast>
+        `-ConditionalOperator 0x7f7ee1814ff0 <col:11, col:20> 'int'
+          |-ImplicitCastExpr 0x7f7ee1814fd8 <col:11> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7f7ee1814f50 <col:11> 'int' lvalue Var 0x7f7ee1814a78 'd' 'int'
+          |-UnaryOperator 0x7f7ee1814f98 <col:15, col:16> 'int' prefix '-'
+          | `-IntegerLiteral 0x7f7ee1814f78 <col:16> 'int' 1
+          `-IntegerLiteral 0x7f7ee1814fb8 <col:20> 'int' 0

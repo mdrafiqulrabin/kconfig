@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fa4ca82b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa4ca86cf30 <../Data/C2AST/pr35503-3.c:4:1, col:33> col:6 used f 'void (int *, int *restrict)'
+| |-ParmVarDecl 0x7fa4ca82bfa0 <col:8, col:13> col:13 x 'int *'
+| `-ParmVarDecl 0x7fa4ca86ce18 <col:16, col:32> col:32 y 'int *restrict'
+`-FunctionDecl 0x7fa4ca86d100 <line:6:1, line:9:1> line:6:6 foo 'void (int)'
+  |-ParmVarDecl 0x7fa4ca86d038 <col:10, col:14> col:14 used a 'int'
+  `-CompoundStmt 0x7fa4ca86d308 <line:7:1, line:9:1>
+    `-CallExpr 0x7fa4ca86d2d0 <line:8:3, col:12> 'void'
+      |-ImplicitCastExpr 0x7fa4ca86d2b8 <col:3> 'void (*)(int *, int *restrict)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa4ca86d1a8 <col:3> 'void (int *, int *restrict)' Function 0x7fa4ca86cf30 'f' 'void (int *, int *restrict)'
+      |-UnaryOperator 0x7fa4ca86d1f8 <col:6, col:7> 'int *' prefix '&'
+      | `-DeclRefExpr 0x7fa4ca86d1d0 <col:7> 'int' lvalue ParmVar 0x7fa4ca86d038 'a' 'int'
+      `-UnaryOperator 0x7fa4ca86d240 <col:10, col:11> 'int *' prefix '&'
+        `-DeclRefExpr 0x7fa4ca86d218 <col:11> 'int' lvalue ParmVar 0x7fa4ca86d038 'a' 'int'

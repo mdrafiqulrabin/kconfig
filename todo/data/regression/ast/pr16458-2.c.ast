@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7f855302bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f855302c9a0 <../Data/C2AST/pr16458-2.c:8:1, col:15> col:15 used a 'unsigned int *'
+|-VarDecl 0x7f855306d858 <col:1, col:19> col:19 used b 'unsigned int *'
+`-FunctionDecl 0x7f855306d998 <line:10:1, line:18:1> line:11:1 foo 'int (void)'
+  `-CompoundStmt 0x7f855306e090 <line:12:1, line:18:1>
+    |-IfStmt 0x7f855306db88 <line:13:3, col:24>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f855306db28 <col:7, col:14> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f855306daf8 <col:7, col:8> 'unsigned int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7f855306da78 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+    | | |   `-ImplicitCastExpr 0x7f855306da60 <col:8> 'unsigned int *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f855306da38 <col:8> 'unsigned int *' lvalue Var 0x7f855302c9a0 'a' 'unsigned int *'
+    | | `-ImplicitCastExpr 0x7f855306db10 <col:13, col:14> 'unsigned int' <LValueToRValue>
+    | |   `-UnaryOperator 0x7f855306dad8 <col:13, col:14> 'unsigned int' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7f855306dac0 <col:14> 'unsigned int *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f855306da98 <col:14> 'unsigned int *' lvalue Var 0x7f855306d858 'b' 'unsigned int *'
+    | |-ReturnStmt 0x7f855306db70 <col:17, col:24>
+    | | `-IntegerLiteral 0x7f855306db50 <col:24> 'int' 1
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f855306dd10 <line:14:3, col:24>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f855306dcb0 <col:7, col:13> 'int' '>'
+    | | |-ImplicitCastExpr 0x7f855306dc80 <col:7, col:8> 'unsigned int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7f855306dc00 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+    | | |   `-ImplicitCastExpr 0x7f855306dbe8 <col:8> 'unsigned int *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f855306dbc0 <col:8> 'unsigned int *' lvalue Var 0x7f855302c9a0 'a' 'unsigned int *'
+    | | `-ImplicitCastExpr 0x7f855306dc98 <col:12, col:13> 'unsigned int' <LValueToRValue>
+    | |   `-UnaryOperator 0x7f855306dc60 <col:12, col:13> 'unsigned int' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7f855306dc48 <col:13> 'unsigned int *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f855306dc20 <col:13> 'unsigned int *' lvalue Var 0x7f855306d858 'b' 'unsigned int *'
+    | |-ReturnStmt 0x7f855306dcf8 <col:17, col:24>
+    | | `-IntegerLiteral 0x7f855306dcd8 <col:24> 'int' 2
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f855306de98 <line:15:3, col:24>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f855306de38 <col:7, col:13> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f855306de08 <col:7, col:8> 'unsigned int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7f855306dd88 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+    | | |   `-ImplicitCastExpr 0x7f855306dd70 <col:8> 'unsigned int *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f855306dd48 <col:8> 'unsigned int *' lvalue Var 0x7f855302c9a0 'a' 'unsigned int *'
+    | | `-ImplicitCastExpr 0x7f855306de20 <col:12, col:13> 'unsigned int' <LValueToRValue>
+    | |   `-UnaryOperator 0x7f855306dde8 <col:12, col:13> 'unsigned int' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7f855306ddd0 <col:13> 'unsigned int *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f855306dda8 <col:13> 'unsigned int *' lvalue Var 0x7f855306d858 'b' 'unsigned int *'
+    | |-ReturnStmt 0x7f855306de80 <col:17, col:24>
+    | | `-IntegerLiteral 0x7f855306de60 <col:24> 'int' 3
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f855306e020 <line:16:3, col:24>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f855306dfc0 <col:7, col:14> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f855306df90 <col:7, col:8> 'unsigned int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7f855306df10 <col:7, col:8> 'unsigned int' lvalue prefix '*'
+    | | |   `-ImplicitCastExpr 0x7f855306def8 <col:8> 'unsigned int *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f855306ded0 <col:8> 'unsigned int *' lvalue Var 0x7f855302c9a0 'a' 'unsigned int *'
+    | | `-ImplicitCastExpr 0x7f855306dfa8 <col:13, col:14> 'unsigned int' <LValueToRValue>
+    | |   `-UnaryOperator 0x7f855306df70 <col:13, col:14> 'unsigned int' lvalue prefix '*'
+    | |     `-ImplicitCastExpr 0x7f855306df58 <col:14> 'unsigned int *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f855306df30 <col:14> 'unsigned int *' lvalue Var 0x7f855306d858 'b' 'unsigned int *'
+    | |-ReturnStmt 0x7f855306e008 <col:17, col:24>
+    | | `-IntegerLiteral 0x7f855306dfe8 <col:24> 'int' 4
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f855306e078 <line:17:3, col:10>
+      `-IntegerLiteral 0x7f855306e058 <col:10> 'int' 0

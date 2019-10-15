@@ -1,0 +1,149 @@
+TranslationUnitDecl 0x7fa1bd82b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa1bd8a1350 <../Data/C2AST/pr21101.c:6:1, col:5> col:5 used W 'int'
+`-FunctionDecl 0x7fa1bd8a13f8 <line:7:1, line:32:1> line:7:6 f 'void ()'
+  `-CompoundStmt 0x7fa1bd8a7c80 <line:8:1, line:32:1>
+    |-DeclStmt 0x7fa1bd8a1510 <line:9:3, col:8>
+    | `-VarDecl 0x7fa1bd8a14b0 <col:3, col:7> col:7 used j 'int'
+    |-DeclStmt 0x7fa1bd8a1630 <line:10:3, col:11>
+    | |-VarDecl 0x7fa1bd8a1540 <col:3, col:7> col:7 used B 'int'
+    | `-VarDecl 0x7fa1bd8a15b8 <col:3, col:10> col:10 used C 'int'
+    |-DeclStmt 0x7fa1bd8a16f0 <line:11:3, col:19>
+    | `-VarDecl 0x7fa1bd8a1690 <col:3, col:18> col:18 used S 'unsigned char *'
+    |-DeclStmt 0x7fa1bd8a1880 <line:12:3, col:26>
+    | `-VarDecl 0x7fa1bd8a1778 <col:3, col:25> col:10 used T '__m64 *' cinit
+    |   `-CStyleCastExpr 0x7fa1bd8a1858 <col:14, col:25> '__m64 *' <BitCast>
+    |     `-UnaryOperator 0x7fa1bd8a1828 <col:24, col:25> 'int *' prefix '&'
+    |       `-DeclRefExpr 0x7fa1bd8a17d8 <col:25> 'int' lvalue Var 0x7fa1bd8a1350 'W' 'int'
+    |-ForStmt 0x7fa1bd8a1dc0 <line:14:3, line:18:3>
+    | |-BinaryOperator 0x7fa1bd8a18e0 <line:14:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7fa1bd8a1898 <col:8> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+    | | `-IntegerLiteral 0x7fa1bd8a18c0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa1bd8a1968 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa1bd8a1950 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa1bd8a1908 <col:15> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+    | | `-IntegerLiteral 0x7fa1bd8a1930 <col:19> 'int' 16
+    | |-BinaryOperator 0x7fa1bd8a1a20 <col:23, col:29> '__m64 *' ','
+    | | |-UnaryOperator 0x7fa1bd8a19b8 <col:23, col:24> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7fa1bd8a1990 <col:23> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+    | | `-UnaryOperator 0x7fa1bd8a1a00 <col:28, col:29> '__m64 *' postfix '++'
+    | |   `-DeclRefExpr 0x7fa1bd8a19d8 <col:28> '__m64 *' lvalue Var 0x7fa1bd8a1778 'T' '__m64 *'
+    | `-CompoundStmt 0x7fa1bd8a1da0 <line:15:3, line:18:3>
+    |   |-BinaryOperator 0x7fa1bd8a1cd8 <line:16:5, col:34> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '='
+    |   | |-ArraySubscriptExpr 0x7fa1bd8a1aa8 <col:5, col:8> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa1bd8a1a90 <col:5> '__m64 *' <LValueToRValue>
+    |   | | | `-DeclRefExpr 0x7fa1bd8a1a48 <col:5> '__m64 *' lvalue Var 0x7fa1bd8a1778 'T' '__m64 *'
+    |   | | `-IntegerLiteral 0x7fa1bd8a1a70 <col:7> 'int' 0
+    |   | `-BinaryOperator 0x7fa1bd8a1cb0 <col:12, col:34> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '='
+    |   |   |-ArraySubscriptExpr 0x7fa1bd8a1b30 <col:12, col:15> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue
+    |   |   | |-ImplicitCastExpr 0x7fa1bd8a1b18 <col:12> '__m64 *' <LValueToRValue>
+    |   |   | | `-DeclRefExpr 0x7fa1bd8a1ad0 <col:12> '__m64 *' lvalue Var 0x7fa1bd8a1778 'T' '__m64 *'
+    |   |   | `-IntegerLiteral 0x7fa1bd8a1af8 <col:14> 'int' 1
+    |   |   `-CallExpr 0x7fa1bd8a1c50 <col:19, col:34> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+    |   |     |-ImplicitCastExpr 0x7fa1bd8a1c38 <col:19> '__m64 (*)(char)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fa1bd8a1b58 <col:19> '__m64 (char)' Function 0x7fa1bd89fd90 '_mm_set1_pi8' '__m64 (char)'
+    |   |     `-ImplicitCastExpr 0x7fa1bd8a1c98 <col:32, col:33> 'char' <IntegralCast>
+    |   |       `-ImplicitCastExpr 0x7fa1bd8a1c80 <col:32, col:33> 'unsigned char' <LValueToRValue>
+    |   |         `-UnaryOperator 0x7fa1bd8a1bc0 <col:32, col:33> 'unsigned char' lvalue prefix '*'
+    |   |           `-ImplicitCastExpr 0x7fa1bd8a1ba8 <col:33> 'unsigned char *' <LValueToRValue>
+    |   |             `-DeclRefExpr 0x7fa1bd8a1b80 <col:33> 'unsigned char *' lvalue Var 0x7fa1bd8a1690 'S' 'unsigned char *'
+    |   `-CompoundAssignOperator 0x7fa1bd8a1d68 <line:17:5, col:10> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+    |     |-DeclRefExpr 0x7fa1bd8a1d00 <col:5> 'unsigned char *' lvalue Var 0x7fa1bd8a1690 'S' 'unsigned char *'
+    |     `-ImplicitCastExpr 0x7fa1bd8a1d50 <col:10> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fa1bd8a1d28 <col:10> 'int' lvalue Var 0x7fa1bd8a1350 'W' 'int'
+    |-BinaryOperator 0x7fa1bd8a1ea8 <line:20:3, col:11> 'int' '='
+    | |-DeclRefExpr 0x7fa1bd8a1df8 <col:3> 'int' lvalue Var 0x7fa1bd8a15b8 'C' 'int'
+    | `-BinaryOperator 0x7fa1bd8a1e80 <col:7, col:11> 'int' '*'
+    |   |-IntegerLiteral 0x7fa1bd8a1e20 <col:7> 'int' 3
+    |   `-ImplicitCastExpr 0x7fa1bd8a1e68 <col:11> 'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fa1bd8a1e40 <col:11> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+    |-DeclStmt 0x7fa1bd8a7248 <line:22:3, col:53>
+    | `-VarDecl 0x7fa1bd8a1ee0 <col:3, col:52> col:9 used E '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' cinit
+    |   `-CallExpr 0x7fa1bd8a21a0 <col:13, col:52> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+    |     |-ImplicitCastExpr 0x7fa1bd8a2188 <col:13> '__m64 (*)(short, short, short, short)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa1bd8a1f40 <col:13> '__m64 (short, short, short, short)' Function 0x7fa1bd89d400 '_mm_set_pi16' '__m64 (short, short, short, short)'
+    |     |-ImplicitCastExpr 0x7fa1bd8a21e8 <col:26, col:30> 'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fa1bd8a1fc8 <col:26, col:30> 'int' '*'
+    |     |   |-IntegerLiteral 0x7fa1bd8a1f68 <col:26> 'int' 3
+    |     |   `-ImplicitCastExpr 0x7fa1bd8a1fb0 <col:30> 'int' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fa1bd8a1f88 <col:30> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+    |     |-ImplicitCastExpr 0x7fa1bd8a7200 <col:33, col:37> 'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fa1bd8a2050 <col:33, col:37> 'int' '*'
+    |     |   |-IntegerLiteral 0x7fa1bd8a1ff0 <col:33> 'int' 3
+    |     |   `-ImplicitCastExpr 0x7fa1bd8a2038 <col:37> 'int' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fa1bd8a2010 <col:37> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+    |     |-ImplicitCastExpr 0x7fa1bd8a7218 <col:40, col:44> 'short' <IntegralCast>
+    |     | `-BinaryOperator 0x7fa1bd8a20d8 <col:40, col:44> 'int' '*'
+    |     |   |-IntegerLiteral 0x7fa1bd8a2078 <col:40> 'int' 3
+    |     |   `-ImplicitCastExpr 0x7fa1bd8a20c0 <col:44> 'int' <LValueToRValue>
+    |     |     `-DeclRefExpr 0x7fa1bd8a2098 <col:44> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+    |     `-ImplicitCastExpr 0x7fa1bd8a7230 <col:47, col:51> 'short' <IntegralCast>
+    |       `-BinaryOperator 0x7fa1bd8a2160 <col:47, col:51> 'int' '*'
+    |         |-IntegerLiteral 0x7fa1bd8a2100 <col:47> 'int' 5
+    |         `-ImplicitCastExpr 0x7fa1bd8a2148 <col:51> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fa1bd8a2120 <col:51> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+    |-DeclStmt 0x7fa1bd8a7438 <line:23:3, col:33>
+    | `-VarDecl 0x7fa1bd8a7270 <col:3, col:32> col:9 used G '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' cinit
+    |   `-CallExpr 0x7fa1bd8a73f0 <col:13, col:32> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+    |     |-ImplicitCastExpr 0x7fa1bd8a73d8 <col:13> '__m64 (*)(short)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fa1bd8a72d0 <col:13> '__m64 (short)' Function 0x7fa1bd89f910 '_mm_set1_pi16' '__m64 (short)'
+    |     `-ImplicitCastExpr 0x7fa1bd8a7420 <col:27, col:31> 'short' <IntegralCast>
+    |       `-BinaryOperator 0x7fa1bd8a7358 <col:27, col:31> 'int' '*'
+    |         |-IntegerLiteral 0x7fa1bd8a72f8 <col:27> 'int' 3
+    |         `-ImplicitCastExpr 0x7fa1bd8a7340 <col:31> 'int' <LValueToRValue>
+    |           `-DeclRefExpr 0x7fa1bd8a7318 <col:31> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+    `-ForStmt 0x7fa1bd8a7c48 <line:25:3, line:31:3>
+      |-BinaryOperator 0x7fa1bd8a7498 <line:25:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fa1bd8a7450 <col:8> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+      | `-IntegerLiteral 0x7fa1bd8a7478 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa1bd8a7520 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa1bd8a7508 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa1bd8a74c0 <col:15> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+      | `-IntegerLiteral 0x7fa1bd8a74e8 <col:19> 'int' 16
+      |-UnaryOperator 0x7fa1bd8a7570 <col:23, col:24> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fa1bd8a7548 <col:23> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+      `-CompoundStmt 0x7fa1bd8a7c18 <line:26:3, line:31:3>
+        |-DeclStmt 0x7fa1bd8a7798 <line:27:5, col:39>
+        | `-VarDecl 0x7fa1bd8a75a0 <col:5, col:38> col:11 used R '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' cinit
+        |   `-CallExpr 0x7fa1bd8a7750 <col:15, col:38> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |     |-ImplicitCastExpr 0x7fa1bd8a7738 <col:15> '__m64 (*)(short)' <FunctionToPointerDecay>
+        |     | `-DeclRefExpr 0x7fa1bd8a7600 <col:15> '__m64 (short)' Function 0x7fa1bd89f910 '_mm_set1_pi16' '__m64 (short)'
+        |     `-ImplicitCastExpr 0x7fa1bd8a7780 <col:29, col:37> 'short' <IntegralCast>
+        |       `-BinaryOperator 0x7fa1bd8a7710 <col:29, col:37> 'int' '+'
+        |         |-ImplicitCastExpr 0x7fa1bd8a76f8 <col:29> 'int' <LValueToRValue>
+        |         | `-DeclRefExpr 0x7fa1bd8a7628 <col:29> 'int' lvalue Var 0x7fa1bd8a1540 'B' 'int'
+        |         `-BinaryOperator 0x7fa1bd8a76d0 <col:33, col:37> 'int' '*'
+        |           |-ImplicitCastExpr 0x7fa1bd8a76a0 <col:33> 'int' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7fa1bd8a7650 <col:33> 'int' lvalue Var 0x7fa1bd8a14b0 'j' 'int'
+        |           `-ImplicitCastExpr 0x7fa1bd8a76b8 <col:37> 'int' <LValueToRValue>
+        |             `-DeclRefExpr 0x7fa1bd8a7678 <col:37> 'int' lvalue Var 0x7fa1bd8a15b8 'C' 'int'
+        |-BinaryOperator 0x7fa1bd8a78f8 <line:28:5, col:22> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '='
+        | |-DeclRefExpr 0x7fa1bd8a77b0 <col:5> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a75a0 'R' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        | `-CallExpr 0x7fa1bd8a7890 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/mmintrin.h:1526:18, ../Data/C2AST/pr21101.c:28:22> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |   |-ImplicitCastExpr 0x7fa1bd8a7878 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/mmintrin.h:1526:18> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fa1bd8a77d8 <col:18> '__m64 (__m64, __m64)' Function 0x7fa1bd88add8 '_mm_add_pi16' '__m64 (__m64, __m64)'
+        |   |-ImplicitCastExpr 0x7fa1bd8a78c8 <../Data/C2AST/pr21101.c:28:18> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fa1bd8a7800 <col:18> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a75a0 'R' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |   `-ImplicitCastExpr 0x7fa1bd8a78e0 <col:21> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fa1bd8a7828 <col:21> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a1ee0 'E' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |-BinaryOperator 0x7fa1bd8a7a40 <line:29:5, col:22> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '='
+        | |-DeclRefExpr 0x7fa1bd8a7920 <col:5> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a75a0 'R' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        | `-CallExpr 0x7fa1bd8a79d8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/mmintrin.h:1526:18, ../Data/C2AST/pr21101.c:29:22> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |   |-ImplicitCastExpr 0x7fa1bd8a79c0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/mmintrin.h:1526:18> '__m64 (*)(__m64, __m64)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7fa1bd8a7948 <col:18> '__m64 (__m64, __m64)' Function 0x7fa1bd88add8 '_mm_add_pi16' '__m64 (__m64, __m64)'
+        |   |-ImplicitCastExpr 0x7fa1bd8a7a10 <../Data/C2AST/pr21101.c:29:18> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+        |   | `-DeclRefExpr 0x7fa1bd8a7970 <col:18> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a75a0 'R' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        |   `-ImplicitCastExpr 0x7fa1bd8a7a28 <col:21> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fa1bd8a7998 <col:21> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a7270 'G' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+        `-BinaryOperator 0x7fa1bd8a7bf0 <line:30:5, col:30> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' '='
+          |-ArraySubscriptExpr 0x7fa1bd8a7ac8 <col:5, col:8> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue
+          | |-ImplicitCastExpr 0x7fa1bd8a7ab0 <col:5> '__m64 *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fa1bd8a7a68 <col:5> '__m64 *' lvalue Var 0x7fa1bd8a1778 'T' '__m64 *'
+          | `-IntegerLiteral 0x7fa1bd8a7a90 <col:7> 'int' 0
+          `-CallExpr 0x7fa1bd8a7ba0 <col:12, col:30> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+            |-ImplicitCastExpr 0x7fa1bd8a7b88 <col:12> '__m64 (*)(__m64, int)' <FunctionToPointerDecay>
+            | `-DeclRefExpr 0x7fa1bd8a7af0 <col:12> '__m64 (__m64, int)' Function 0x7fa1bd893910 '_mm_srai_pi16' '__m64 (__m64, int)'
+            |-ImplicitCastExpr 0x7fa1bd8a7bd8 <col:26> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' <LValueToRValue>
+            | `-DeclRefExpr 0x7fa1bd8a7b18 <col:26> '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long' lvalue Var 0x7fa1bd8a75a0 'R' '__m64':'__attribute__((__vector_size__(1 * sizeof(long long)))) long long'
+            `-IntegerLiteral 0x7fa1bd8a7b40 <col:29> 'int' 3

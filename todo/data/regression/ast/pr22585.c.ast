@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7ffb0c0288e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffb0c8112d8 <../Data/C2AST/pr22585.c:7:1, line:12:1> line:8:1 foo 'int (long double, int)'
+  |-ParmVarDecl 0x7ffb0c029578 <col:6, col:18> col:18 used d 'long double'
+  |-ParmVarDecl 0x7ffb0c811200 <col:21, col:25> col:25 used i 'int'
+  `-CompoundStmt 0x7ffb0c811520 <line:9:1, line:12:1>
+    `-IfStmt 0x7ffb0c8114e8 <line:10:3, line:11:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ffb0c811488 <line:10:7, col:26> 'int' '=='
+      | |-ImplicitCastExpr 0x7ffb0c811470 <col:7> 'long double' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ffb0c8113c8 <col:7> 'long double' lvalue ParmVar 0x7ffb0c029578 'd' 'long double'
+      | `-CStyleCastExpr 0x7ffb0c811448 <col:12, col:26> 'long double' <IntegralToFloating>
+      |   `-ImplicitCastExpr 0x7ffb0c811430 <col:26> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7ffb0c8113f0 <col:26> 'int' lvalue ParmVar 0x7ffb0c811200 'i' 'int'
+      |-ReturnStmt 0x7ffb0c8114d0 <line:11:5, col:12>
+      | `-IntegerLiteral 0x7ffb0c8114b0 <col:12> 'int' 1
+      `-<<<NULL>>>

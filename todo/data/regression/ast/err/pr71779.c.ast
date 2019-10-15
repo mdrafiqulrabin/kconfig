@@ -1,0 +1,26 @@
+../Data/C2AST/pr71779.c:6:23: error: expected parameter declarator
+int __RTL (startwith ("cse1")) test (int n)
+                      ^
+../Data/C2AST/pr71779.c:6:23: error: expected ')'
+../Data/C2AST/pr71779.c:6:22: note: to match this '('
+int __RTL (startwith ("cse1")) test (int n)
+                     ^
+../Data/C2AST/pr71779.c:6:32: error: expected function body after function declarator
+int __RTL (startwith ("cse1")) test (int n)
+                               ^
+3 errors generated.
+TranslationUnitDecl 0x7fbf0282bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf0282c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf0282bf80 '__int128'
+|-TypedefDecl 0x7fbf0282c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf0282bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fbf0282c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf0282c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf0282c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf0282c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf0282c600 'char *'
+|   `-BuiltinType 0x7fbf0282bd80 'char'
+`-TypedefDecl 0x7fbf0282c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fbf0282c8b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fbf0282c720 'struct __va_list_tag'
+      `-Record 0x7fbf0282c698 '__va_list_tag'

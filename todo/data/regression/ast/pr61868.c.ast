@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fd9ed0166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd9ed057868 <../Data/C2AST/pr61868.c:4:1, col:20> col:12 used foo 'int (int)' extern
+| `-ParmVarDecl 0x7fd9ed017378 <col:17> col:20 'int'
+`-FunctionDecl 0x7fd9ed0579a0 <line:5:1, line:9:1> line:5:5 main 'int ()'
+  `-CompoundStmt 0x7fd9ed057b38 <line:6:1, line:9:1>
+    |-CallExpr 0x7fd9ed057ad0 <line:7:3, col:11> 'int'
+    | |-ImplicitCastExpr 0x7fd9ed057ab8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd9ed057a40 <col:3> 'int (int)' Function 0x7fd9ed057868 'foo' 'int (int)'
+    | `-IntegerLiteral 0x7fd9ed057a68 <col:8> 'int' 100
+    `-ReturnStmt 0x7fd9ed057b20 <line:8:3, col:10>
+      `-IntegerLiteral 0x7fd9ed057b00 <col:10> 'int' 0

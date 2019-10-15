@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f844102bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f844183ada8 <../Data/C2AST/pr47502-2.c:4:1, line:12:1> line:5:1 foo 'int (int, const void *, void *)'
+  |-ParmVarDecl 0x7f844102c978 <col:6, col:10> col:10 used how 'int'
+  |-ParmVarDecl 0x7f844183ac40 <col:15, col:27> col:27 used set 'const void *'
+  |-ParmVarDecl 0x7f844183acb8 <col:32, col:38> col:38 used oset 'void *'
+  `-CompoundStmt 0x7f844183b4b0 <line:6:1, line:12:1>
+    |-DeclStmt 0x7f844183af18 <line:7:3, col:16>
+    | `-VarDecl 0x7f844183aeb8 <col:3, col:7> col:7 used resultvar 'int'
+    |-GCCAsmStmt 0x7f844183b370 <line:8:3, line:10:97>
+    | |-DeclRefExpr 0x7f844183aff8 <line:9:25> 'int' lvalue Var 0x7f844183aeb8 'resultvar' 'int'
+    | |-IntegerLiteral 0x7f844183b088 <line:10:24> 'int' 14
+    | |-ImplicitCastExpr 0x7f844183b328 <col:35> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f844183b0d8 <col:35> 'int' lvalue ParmVar 0x7f844102c978 'how' 'int'
+    | |-ImplicitCastExpr 0x7f844183b340 <col:46, col:50> 'const void *' <LValueToRValue>
+    | | `-ParenExpr 0x7f844183b158 <col:46, col:50> 'const void *' lvalue
+    | |   `-DeclRefExpr 0x7f844183b130 <col:47> 'const void *' lvalue ParmVar 0x7f844183ac40 'set' 'const void *'
+    | |-ImplicitCastExpr 0x7f844183b358 <col:59, col:64> 'void *' <LValueToRValue>
+    | | `-ParenExpr 0x7f844183b1d0 <col:59, col:64> 'void *' lvalue
+    | |   `-DeclRefExpr 0x7f844183b1a8 <col:60> 'void *' lvalue ParmVar 0x7f844183acb8 'oset' 'void *'
+    | `-BinaryOperator 0x7f844183b260 <col:73, col:78> 'int' '/'
+    |   |-IntegerLiteral 0x7f844183b220 <col:73> 'int' 65
+    |   `-IntegerLiteral 0x7f844183b240 <col:78> 'int' 8
+    `-ReturnStmt 0x7f844183b498 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f844183b480 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f844183b458 <col:10> 'int' lvalue Var 0x7f844183aeb8 'resultvar' 'int'

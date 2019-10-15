@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7f80c681a8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f80c5bd5580 <../Data/C2AST/pr49002-1.c:7:1, line:12:1> line:7:6 foo 'void (const __m128d *, __m256d *, int)'
+  |-ParmVarDecl 0x7f80c5bd5368 <col:10, col:25> col:25 used from 'const __m128d *'
+  |-ParmVarDecl 0x7f80c5bd53d8 <col:31, col:40> col:40 used to '__m256d *'
+  |-ParmVarDecl 0x7f80c5bd5450 <col:44, col:48> col:48 used s 'int'
+  `-CompoundStmt 0x7f80c5bd6260 <line:8:1, line:12:1>
+    |-DeclStmt 0x7f80c5bd57b8 <line:9:3, col:48>
+    | `-VarDecl 0x7f80c5bd5648 <col:3, col:47> col:11 used var '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' cinit
+    |   `-CallExpr 0x7f80c5bd5770 <col:17, col:47> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7f80c5bd5758 <col:17> '__m256d (*)(__m128d)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f80c5bd56a8 <col:17> '__m256d (__m128d)' Function 0x7f80c6075ba0 '_mm256_castpd128_pd256' '__m256d (__m128d)'
+    |     `-ImplicitCastExpr 0x7f80c5bd57a0 <col:40, col:46> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7f80c5bd5730 <col:40, col:46> 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const' lvalue
+    |         |-ImplicitCastExpr 0x7f80c5bd5718 <col:40> 'const __m128d *' <LValueToRValue>
+    |         | `-DeclRefExpr 0x7f80c5bd56d0 <col:40> 'const __m128d *' lvalue ParmVar 0x7f80c5bd5368 'from' 'const __m128d *'
+    |         `-IntegerLiteral 0x7f80c5bd56f8 <col:45> 'int' 0
+    |-BinaryOperator 0x7f80c5bd6148 <line:10:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4725:28> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' '='
+    | |-DeclRefExpr 0x7f80c5bd57d0 <../Data/C2AST/pr49002-1.c:10:3> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7f80c5bd5648 'var' '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    | `-UnaryOperator 0x7f80c5bd6128 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4718:41, line:4725:28> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' prefix '__extension__'
+    |   `-StmtExpr 0x7f80c5bd6108 <line:4718:55, line:4725:28> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |     `-CompoundStmt 0x7f80c5bd60f0 <line:4718:56, line:4725:27>
+    |       `-CStyleCastExpr 0x7f80c5bd60c8 <line:4719:3, line:4725:25> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <BitCast>
+    |         `-ShuffleVectorExpr 0x7f80c5bd6060 <line:4719:12, line:4725:25> '__v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |           |-CStyleCastExpr 0x7f80c5bd58f8 <line:4720:5, col:25> '__v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <BitCast>
+    |           | `-CStyleCastExpr 0x7f80c5bd58c0 <col:13, col:25> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <BitCast>
+    |           |   `-ImplicitCastExpr 0x7f80c5bd58a8 <col:22, col:25> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+    |           |     `-ParenExpr 0x7f80c5bd5888 <col:22, col:25> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue
+    |           |       `-DeclRefExpr 0x7f80c5bd5820 <../Data/C2AST/pr49002-1.c:10:30> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7f80c5bd5648 'var' '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |           |-CStyleCastExpr 0x7f80c5bd5ae8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4721:5, col:49> '__v4df':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <BitCast>
+    |           | `-CallExpr 0x7f80c5bd5aa8 <col:13, col:49> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'
+    |           |   |-ImplicitCastExpr 0x7f80c5bd5a90 <col:13> '__m256d (*)(__m128d)' <FunctionToPointerDecay>
+    |           |   | `-DeclRefExpr 0x7f80c5bd5920 <col:13> '__m256d (__m128d)' Function 0x7f80c6075ba0 '_mm256_castpd128_pd256' '__m256d (__m128d)'
+    |           |   `-CStyleCastExpr 0x7f80c5bd5a68 <col:36, col:48> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <BitCast>
+    |           |     `-ImplicitCastExpr 0x7f80c5bd5a50 <col:45, col:48> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |           |       `-ParenExpr 0x7f80c5bd5a30 <col:45, col:48> 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const' lvalue
+    |           |         `-ArraySubscriptExpr 0x7f80c5bd59c8 <../Data/C2AST/pr49002-1.c:10:35, col:41> 'const __m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double const' lvalue
+    |           |           |-ImplicitCastExpr 0x7f80c5bd5998 <col:35> 'const __m128d *' <LValueToRValue>
+    |           |           | `-DeclRefExpr 0x7f80c5bd5948 <col:35> 'const __m128d *' lvalue ParmVar 0x7f80c5bd5368 'from' 'const __m128d *'
+    |           |           `-ImplicitCastExpr 0x7f80c5bd59b0 <col:40> 'int' <LValueToRValue>
+    |           |             `-DeclRefExpr 0x7f80c5bd5970 <col:40> 'int' lvalue ParmVar 0x7f80c5bd5450 's' 'int'
+    |           |-ParenExpr 0x7f80c5bd5c28 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4722:5, col:23> 'int'
+    |           | `-ConditionalOperator 0x7f80c5bd5bf8 <col:6, col:22> 'int'
+    |           |   |-ParenExpr 0x7f80c5bd5b98 <col:6, col:14> 'int'
+    |           |   | `-BinaryOperator 0x7f80c5bd5b70 <col:7, col:13> 'int' '&'
+    |           |   |   |-ParenExpr 0x7f80c5bd5b30 <col:7, col:9> 'int'
+    |           |   |   | `-IntegerLiteral 0x7f80c5bd5b10 <../Data/C2AST/pr49002-1.c:10:44> 'int' 1
+    |           |   |   `-IntegerLiteral 0x7f80c5bd5b50 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4722:13> 'int' 1
+    |           |   |-IntegerLiteral 0x7f80c5bd5bb8 <col:18> 'int' 0
+    |           |   `-IntegerLiteral 0x7f80c5bd5bd8 <col:22> 'int' 4
+    |           |-ParenExpr 0x7f80c5bd5d60 <line:4723:5, col:23> 'int'
+    |           | `-ConditionalOperator 0x7f80c5bd5d30 <col:6, col:22> 'int'
+    |           |   |-ParenExpr 0x7f80c5bd5cd0 <col:6, col:14> 'int'
+    |           |   | `-BinaryOperator 0x7f80c5bd5ca8 <col:7, col:13> 'int' '&'
+    |           |   |   |-ParenExpr 0x7f80c5bd5c68 <col:7, col:9> 'int'
+    |           |   |   | `-IntegerLiteral 0x7f80c5bd5c48 <../Data/C2AST/pr49002-1.c:10:44> 'int' 1
+    |           |   |   `-IntegerLiteral 0x7f80c5bd5c88 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4723:13> 'int' 1
+    |           |   |-IntegerLiteral 0x7f80c5bd5cf0 <col:18> 'int' 1
+    |           |   `-IntegerLiteral 0x7f80c5bd5d10 <col:22> 'int' 5
+    |           |-ParenExpr 0x7f80c5bd5e98 <line:4724:5, col:23> 'int'
+    |           | `-ConditionalOperator 0x7f80c5bd5e68 <col:6, col:22> 'int'
+    |           |   |-ParenExpr 0x7f80c5bd5e08 <col:6, col:14> 'int'
+    |           |   | `-BinaryOperator 0x7f80c5bd5de0 <col:7, col:13> 'int' '&'
+    |           |   |   |-ParenExpr 0x7f80c5bd5da0 <col:7, col:9> 'int'
+    |           |   |   | `-IntegerLiteral 0x7f80c5bd5d80 <../Data/C2AST/pr49002-1.c:10:44> 'int' 1
+    |           |   |   `-IntegerLiteral 0x7f80c5bd5dc0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4724:13> 'int' 1
+    |           |   |-IntegerLiteral 0x7f80c5bd5e28 <col:18> 'int' 4
+    |           |   `-IntegerLiteral 0x7f80c5bd5e48 <col:22> 'int' 2
+    |           `-ParenExpr 0x7f80c5bd5fd0 <line:4725:5, col:23> 'int'
+    |             `-ConditionalOperator 0x7f80c5bd5fa0 <col:6, col:22> 'int'
+    |               |-ParenExpr 0x7f80c5bd5f40 <col:6, col:14> 'int'
+    |               | `-BinaryOperator 0x7f80c5bd5f18 <col:7, col:13> 'int' '&'
+    |               |   |-ParenExpr 0x7f80c5bd5ed8 <col:7, col:9> 'int'
+    |               |   | `-IntegerLiteral 0x7f80c5bd5eb8 <../Data/C2AST/pr49002-1.c:10:44> 'int' 1
+    |               |   `-IntegerLiteral 0x7f80c5bd5ef8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:4725:13> 'int' 1
+    |               |-IntegerLiteral 0x7f80c5bd5f60 <col:18> 'int' 5
+    |               `-IntegerLiteral 0x7f80c5bd5f80 <col:22> 'int' 3
+    `-BinaryOperator 0x7f80c5bd6238 <../Data/C2AST/pr49002-1.c:11:3, col:11> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' '='
+      |-ArraySubscriptExpr 0x7f80c5bd61d0 <col:3, col:7> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue
+      | |-ImplicitCastExpr 0x7f80c5bd61b8 <col:3> '__m256d *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f80c5bd6170 <col:3> '__m256d *' lvalue ParmVar 0x7f80c5bd53d8 'to' '__m256d *'
+      | `-IntegerLiteral 0x7f80c5bd6198 <col:6> 'int' 0
+      `-ImplicitCastExpr 0x7f80c5bd6220 <col:11> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7f80c5bd61f8 <col:11> '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double' lvalue Var 0x7f80c5bd5648 'var' '__m256d':'__attribute__((__vector_size__(4 * sizeof(double)))) double'

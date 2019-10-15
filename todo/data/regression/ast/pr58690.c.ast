@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fe3d30280e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe3d3028d60 <../Data/C2AST/pr58690.c:5:1, line:8:1> line:5:8 struct gomp_thread definition
+| `-FieldDecl 0x7fe3d2804298 <line:7:3, col:14> col:8 foo 'char [41]'
+|-VarDecl 0x7fe3d2804330 <line:9:1, col:36> col:36 used gomp_tls_data 'struct gomp_thread':'struct gomp_thread' extern tls
+|-FunctionDecl 0x7fe3d2804490 <line:10:1, line:14:1> line:11:1 foo 'void (void)'
+| `-CompoundStmt 0x7fe3d2804988 <line:12:1, line:14:1>
+|   `-CallExpr 0x7fe3d2804930 <line:13:3, col:65> 'void *'
+|     |-ImplicitCastExpr 0x7fe3d2804918 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fe3d2804798 <col:3> '<builtin fn type>' Function 0x7fe3d2804578 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|     |-ImplicitCastExpr 0x7fe3d2804970 <col:21, col:22> 'void *' <BitCast>
+|     | `-UnaryOperator 0x7fe3d2804848 <col:21, col:22> 'struct gomp_thread *' prefix '&'
+|     |   `-DeclRefExpr 0x7fe3d28047c0 <col:22> 'struct gomp_thread':'struct gomp_thread' lvalue Var 0x7fe3d2804330 'gomp_tls_data' 'struct gomp_thread':'struct gomp_thread'
+|     |-CharacterLiteral 0x7fe3d2804868 <col:37> 'int' 0
+|     `-UnaryExprOrTypeTraitExpr 0x7fe3d28048c8 <col:43, col:64> 'unsigned long' sizeof
+|       `-ParenExpr 0x7fe3d28048a8 <col:50, col:64> 'struct gomp_thread':'struct gomp_thread' lvalue
+|         `-DeclRefExpr 0x7fe3d2804880 <col:51> 'struct gomp_thread':'struct gomp_thread' lvalue Var 0x7fe3d2804330 'gomp_tls_data' 'struct gomp_thread':'struct gomp_thread'
+`-FunctionDecl 0x7fe3d2804578 <col:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fe3d2804618 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fe3d2804678 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fe3d28046d8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fe3d2804750 <col:3> Implicit

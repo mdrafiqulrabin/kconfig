@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fda4902bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fda4906d918 <../Data/C2AST/pr35503-1.c:4:1, col:63> col:5 used foo 'int (char *restrict, const char *restrict, ...)'
+| |-ParmVarDecl 0x7fda4902c978 <col:10, col:27> col:27 buf 'char *restrict'
+| `-ParmVarDecl 0x7fda4906d800 <col:32, col:55> col:55 fmt 'const char *restrict'
+`-FunctionDecl 0x7fda4906dad0 <line:6:1, line:10:1> line:6:6 f 'void (void)'
+  `-CompoundStmt 0x7fda4906dee0 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fda4906dcb8 <line:8:3, col:26>
+    | `-VarDecl 0x7fda4906dbe8 <col:3, col:19> col:8 used buf 'char [100]' cinit
+    |   `-StringLiteral 0x7fda4906dc88 <col:19> 'char [100]' lvalue "hello"
+    `-CallExpr 0x7fda4906de20 <line:9:3, col:34> 'int'
+      |-ImplicitCastExpr 0x7fda4906de08 <col:3> 'int (*)(char *restrict, const char *restrict, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fda4906dcd0 <col:3> 'int (char *restrict, const char *restrict, ...)' Function 0x7fda4906d918 'foo' 'int (char *restrict, const char *restrict, ...)'
+      |-ImplicitCastExpr 0x7fda4906de68 <col:8> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7fda4906dcf8 <col:8> 'char [100]' lvalue Var 0x7fda4906dbe8 'buf' 'char [100]'
+      |-ImplicitCastExpr 0x7fda4906de98 <col:13> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fda4906de80 <col:13> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fda4906dd20 <col:13> 'char [6]' lvalue "%s-%s"
+      |-ImplicitCastExpr 0x7fda4906deb0 <col:22> 'char *' <ArrayToPointerDecay>
+      | `-DeclRefExpr 0x7fda4906dd50 <col:22> 'char [100]' lvalue Var 0x7fda4906dbe8 'buf' 'char [100]'
+      `-ImplicitCastExpr 0x7fda4906dec8 <col:27> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7fda4906dd78 <col:27> 'char [6]' lvalue "world"

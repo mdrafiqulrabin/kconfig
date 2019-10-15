@@ -1,0 +1,49 @@
+TranslationUnitDecl 0x7fae7f81b4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fae7f85d068 <../Data/C2AST/pr64088.c:3:12> col:12 implicit used abs 'int (int)' extern
+| |-ParmVarDecl 0x7fae7f85d108 <<invalid sloc>> <invalid sloc> 'int'
+| |-NoThrowAttr 0x7fae7f85d170 <col:12> Implicit
+| `-ConstAttr 0x7fae7f85d1b8 <col:12> Implicit
+|-FunctionDecl 0x7fae7f85d1c8 prev 0x7fae7f85d068 <col:1, col:20> col:12 used abs 'int (int)' extern
+| |-ParmVarDecl 0x7fae7f81c178 <col:17> col:20 'int'
+| |-NoThrowAttr 0x7fae7f85d2a8 <col:12> Inherited Implicit
+| `-ConstAttr 0x7fae7f85d2b8 <col:12> Inherited Implicit
+|-FunctionDecl 0x7fae7f85d3d0 <line:4:1, col:33> col:13 used attenuate_curve 'void (int *)' extern
+| `-ParmVarDecl 0x7fae7f85d310 <col:29, col:32> col:33 'int *'
+|-VarDecl 0x7fae7f85d4d0 <line:5:1, col:5> col:5 used a 'int'
+`-FunctionDecl 0x7fae7f85d578 <line:6:1, line:17:1> line:7:1 setup_tone_curves_center_boost 'void ()'
+  `-CompoundStmt 0x7fae7f85dc08 <line:8:1, line:17:1>
+    |-DeclStmt 0x7fae7f85d700 <line:9:3, col:11>
+    | `-VarDecl 0x7fae7f85d6a0 <col:3, col:10> col:7 used b 'int [0]'
+    |-BinaryOperator 0x7fae7f85d760 <line:10:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fae7f85d718 <col:3> 'int' lvalue Var 0x7fae7f85d4d0 'a' 'int'
+    | `-IntegerLiteral 0x7fae7f85d740 <col:7> 'int' 0
+    |-ForStmt 0x7fae7f85daf0 <line:11:3, line:15:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fae7f85d7e8 <line:11:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fae7f85d7d0 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fae7f85d788 <col:10> 'int' lvalue Var 0x7fae7f85d4d0 'a' 'int'
+    | | `-IntegerLiteral 0x7fae7f85d7b0 <col:14> 'int' 6
+    | |-UnaryOperator 0x7fae7f85d838 <col:17, col:18> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fae7f85d810 <col:17> 'int' lvalue Var 0x7fae7f85d4d0 'a' 'int'
+    | `-CompoundStmt 0x7fae7f85dad0 <line:12:5, line:15:5>
+    |   |-DeclStmt 0x7fae7f85d9a8 <line:13:7, col:22>
+    |   | `-VarDecl 0x7fae7f85d870 <col:7, col:21> col:11 used c 'int' cinit
+    |   |   `-CallExpr 0x7fae7f85d960 <col:15, col:21> 'int'
+    |   |     |-ImplicitCastExpr 0x7fae7f85d948 <col:15> 'int (*)(int)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fae7f85d8d0 <col:15> 'int (int)' Function 0x7fae7f85d1c8 'abs' 'int (int)'
+    |   |     `-ImplicitCastExpr 0x7fae7f85d990 <col:20> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fae7f85d8f8 <col:20> 'int' lvalue Var 0x7fae7f85d4d0 'a' 'int'
+    |   `-BinaryOperator 0x7fae7f85daa8 <line:14:7, col:14> 'int' '='
+    |     |-ArraySubscriptExpr 0x7fae7f85da40 <col:7, col:10> 'int' lvalue
+    |     | |-ImplicitCastExpr 0x7fae7f85da10 <col:7> 'int *' <ArrayToPointerDecay>
+    |     | | `-DeclRefExpr 0x7fae7f85d9c0 <col:7> 'int [0]' lvalue Var 0x7fae7f85d6a0 'b' 'int [0]'
+    |     | `-ImplicitCastExpr 0x7fae7f85da28 <col:9> 'int' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fae7f85d9e8 <col:9> 'int' lvalue Var 0x7fae7f85d4d0 'a' 'int'
+    |     `-ImplicitCastExpr 0x7fae7f85da90 <col:14> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fae7f85da68 <col:14> 'int' lvalue Var 0x7fae7f85d870 'c' 'int'
+    `-CallExpr 0x7fae7f85dbc0 <line:16:3, col:21> 'void'
+      |-ImplicitCastExpr 0x7fae7f85dba8 <col:3> 'void (*)(int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fae7f85db28 <col:3> 'void (int *)' Function 0x7fae7f85d3d0 'attenuate_curve' 'void (int *)'
+      `-ImplicitCastExpr 0x7fae7f85dbf0 <col:20> 'int *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fae7f85db50 <col:20> 'int [0]' lvalue Var 0x7fae7f85d6a0 'b' 'int [0]'

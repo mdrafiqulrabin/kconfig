@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7ffcf80234e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffcf7019400 <../Data/C2AST/pr53037-3.c:6:1, col:54> col:38 struct S8 definition
+| |-AlignedAttr 0x7ffcf70194b0 <col:24, col:34> aligned
+| | `-IntegerLiteral 0x7ffcf8024160 <col:33> 'int' 8
+| `-FieldDecl 0x7ffcf7019578 <col:43, col:51> col:48 a 'char [8]'
+|-RecordDecl 0x7ffcf70195c0 <line:7:1, line:9:1> line:7:33 struct S1 definition
+| |-PackedAttr 0x7ffcf7019670 <col:24>
+| `-FieldDecl 0x7ffcf7019710 <line:8:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7ffcf70197c0 <line:11:1, line:13:1> line:11:46 struct S2 definition
+| |-AlignedAttr 0x7ffcf7019870 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7ffcf70197a0 <col:41> 'int' 8
+| |-PackedAttr 0x7ffcf70198c0 <col:24>
+| `-FieldDecl 0x7ffcf70198f0 <line:12:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7ffcf7019958 <line:15:1, line:18:1> line:15:46 struct S3 definition
+| |-AlignedAttr 0x7ffcf7019a00 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7ffcf7019938 <col:41> 'int' 8
+| |-PackedAttr 0x7ffcf7019a50 <col:24>
+| |-FieldDecl 0x7ffcf7019a78 <line:16:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7ffcf7019ae0 <line:17:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7ffcf7019b48 <line:20:1, line:24:1> line:20:46 struct S4 definition
+| |-AlignedAttr 0x7ffcf7019bf0 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7ffcf7019b28 <col:41> 'int' 8
+| |-PackedAttr 0x7ffcf7019c40 <col:24>
+| |-FieldDecl 0x7ffcf7019c68 <line:21:3, col:7> col:7 i1 'int'
+| |-FieldDecl 0x7ffcf7019cc8 <line:22:3, col:7> col:7 i2 'int'
+| `-FieldDecl 0x7ffcf7019d30 <line:23:3, col:13> col:13 s8 'struct S8':'struct S8'
+|-RecordDecl 0x7ffcf7019d78 <line:26:1, line:28:1> line:26:33 struct S5 definition
+| |-PackedAttr 0x7ffcf7019e20 <col:24>
+| `-FieldDecl 0x7ffcf7019e80 <line:27:4, col:14> col:14 ll 'long long'
+|-RecordDecl 0x7ffcf7019ec8 <line:30:1, line:33:1> line:30:32 union U1 definition
+| |-PackedAttr 0x7ffcf7019f70 <col:23>
+| |-FieldDecl 0x7ffcf7019fd0 <line:31:3, col:7> col:7 i1 'int'
+| `-FieldDecl 0x7ffcf701a038 <line:32:3, col:13> col:13 s8 'struct S8':'struct S8'
+`-RecordDecl 0x7ffcf701a0a0 <line:35:1, line:38:1> line:35:45 union U2 definition
+  |-AlignedAttr 0x7ffcf701a150 <col:31, col:41> aligned
+  | `-IntegerLiteral 0x7ffcf701a080 <col:40> 'int' 8
+  |-PackedAttr 0x7ffcf701a1a0 <col:23>
+  |-FieldDecl 0x7ffcf701a1c8 <line:36:3, col:7> col:7 i1 'int'
+  `-FieldDecl 0x7ffcf701a230 <line:37:3, col:13> col:13 s8 'struct S8':'struct S8'

@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7f9274028ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9274029978 <../Data/C2AST/pr49032.c:4:1, col:16> col:12 used s 'int' static cinit
+| `-IntegerLiteral 0x7f9274817240 <col:16> 'int' 42
+`-FunctionDecl 0x7f92748172b0 <line:6:1, line:11:1> line:7:1 main 'int ()'
+  `-CompoundStmt 0x7f9274817a80 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f9274817a30 <line:9:3, col:76>
+    | `-VarDecl 0x7f9274817400 <col:3, col:75> col:8 l 'int *[18]' cinit
+    |   `-InitListExpr 0x7f9274817810 <col:16, col:75> 'int *[18]'
+    |     |-UnaryOperator 0x7f9274817488 <col:18, col:19> 'int *' prefix '&'
+    |     | `-DeclRefExpr 0x7f9274817460 <col:19> 'int' lvalue Var 0x7f9274029978 's' 'int'
+    |     |-UnaryOperator 0x7f92748174d0 <col:22, col:23> 'int *' prefix '&'
+    |     | `-DeclRefExpr 0x7f92748174a8 <col:23> 'int' lvalue Var 0x7f9274029978 's' 'int'
+    |     |-UnaryOperator 0x7f9274817518 <col:26, col:27> 'int *' prefix '&'
+    |     | `-DeclRefExpr 0x7f92748174f0 <col:27> 'int' lvalue Var 0x7f9274029978 's' 'int'
+    |     |-UnaryOperator 0x7f9274817560 <col:30, col:31> 'int *' prefix '&'
+    |     | `-DeclRefExpr 0x7f9274817538 <col:31> 'int' lvalue Var 0x7f9274029978 's' 'int'
+    |     |-ImplicitCastExpr 0x7f92748178e0 <col:34> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817580 <col:34> 'int' 0
+    |     |-ImplicitCastExpr 0x7f92748178f8 <col:37> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f92748175a0 <col:37> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817910 <col:40> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f92748175c0 <col:40> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817928 <col:43> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f92748175e0 <col:43> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817940 <col:46> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817600 <col:46> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817958 <col:49> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817620 <col:49> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817970 <col:52> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817640 <col:52> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817988 <col:55> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817660 <col:55> 'int' 0
+    |     |-ImplicitCastExpr 0x7f92748179a0 <col:58> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817680 <col:58> 'int' 0
+    |     |-ImplicitCastExpr 0x7f92748179b8 <col:61> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f92748176a0 <col:61> 'int' 0
+    |     |-ImplicitCastExpr 0x7f92748179d0 <col:64> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f92748176c0 <col:64> 'int' 0
+    |     |-ImplicitCastExpr 0x7f92748179e8 <col:67> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f92748176e0 <col:67> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9274817a00 <col:70> 'int *' <NullToPointer>
+    |     | `-IntegerLiteral 0x7f9274817700 <col:70> 'int' 0
+    |     `-ImplicitCastExpr 0x7f9274817a18 <col:73> 'int *' <NullToPointer>
+    |       `-IntegerLiteral 0x7f9274817720 <col:73> 'int' 0
+    `-ReturnStmt 0x7f9274817a68 <line:10:3, col:10>
+      `-IntegerLiteral 0x7f9274817a48 <col:10> 'int' 0

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fa9b10068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa9b2014220 <../Data/C2AST/pr34003-1.c:6:1, col:22> col:13 used foo 'void (void)' extern
+|-FunctionDecl 0x7fa9b20143c8 <line:7:1, col:36> col:5 bar 'int (void)'
+| `-CompoundStmt 0x7fa9b2014530 <col:16, col:36>
+|   |-CallExpr 0x7fa9b20144d0 <col:18, col:23> 'void'
+|   | `-ImplicitCastExpr 0x7fa9b20144b8 <col:18> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fa9b2014468 <col:18> 'void (void)' Function 0x7fa9b2014220 'foo' 'void (void)'
+|   `-ReturnStmt 0x7fa9b2014518 <col:26, col:33>
+|     `-IntegerLiteral 0x7fa9b20144f8 <col:33> 'int' 1
+`-FunctionDecl 0x7fa9b20145e0 prev 0x7fa9b2014220 <line:8:1, col:22> col:13 used foo 'void (void)' extern

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fde1080a6e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fde1080b360 <../Data/C2AST/pr22531.c:1:9, line:3:1> line:1:16 struct dw_cfi_oprnd_struct definition
+| `-FieldDecl 0x7fde10860838 <line:2:7, col:21> col:21 referenced reg 'unsigned long'
+|-TypedefDecl 0x7fde108608d0 <line:1:1, line:3:3> col:3 referenced dw_cfa_location 'struct dw_cfi_oprnd_struct':'struct dw_cfi_oprnd_struct'
+| `-ElaboratedType 0x7fde10860880 'struct dw_cfi_oprnd_struct' sugar
+|   `-RecordType 0x7fde10860800 'struct dw_cfi_oprnd_struct'
+|     `-Record 0x7fde1080b360 'dw_cfi_oprnd_struct'
+`-FunctionDecl 0x7fde10860a00 <line:4:1, line:7:1> line:4:6 def_cfa_1 'void (void)'
+  `-CompoundStmt 0x7fde10860cd0 <col:23, line:7:1>
+    |-DeclStmt 0x7fde10860b70 <line:5:7, col:26>
+    | `-VarDecl 0x7fde10860b10 <col:7, col:23> col:23 used loc 'dw_cfa_location':'struct dw_cfi_oprnd_struct'
+    `-BinaryOperator 0x7fde10860c60 <line:6:9, col:23> 'unsigned long' '='
+      |-MemberExpr 0x7fde10860bb0 <col:9, col:13> 'unsigned long' lvalue .reg 0x7fde10860838
+      | `-DeclRefExpr 0x7fde10860b88 <col:9> 'dw_cfa_location':'struct dw_cfi_oprnd_struct' lvalue Var 0x7fde10860b10 'loc' 'dw_cfa_location':'struct dw_cfi_oprnd_struct'
+      `-ImplicitCastExpr 0x7fde10860c48 <col:19, col:23> 'unsigned long' <LValueToRValue>
+        `-MemberExpr 0x7fde10860c10 <col:19, col:23> 'unsigned long' lvalue .reg 0x7fde10860838
+          `-DeclRefExpr 0x7fde10860be8 <col:19> 'dw_cfa_location':'struct dw_cfi_oprnd_struct' lvalue Var 0x7fde10860b10 'loc' 'dw_cfa_location':'struct dw_cfi_oprnd_struct'

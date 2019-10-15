@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fa49b81a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa49b011b38 <../Data/C2AST/pr82872.c:6:1, col:25> col:8 struct S definition
+| |-FieldDecl 0x7fa49b011bf8 <col:12, col:16> col:16 i 'int'
+| `-FieldDecl 0x7fa49b011cc0 <col:12, col:22> col:19 a 'int [1]'
+`-FunctionDecl 0x7fa49b011e20 <line:8:1, line:11:1> line:8:8 foo 'size_t (void)'
+  `-CompoundStmt 0x7fa49b011fd8 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7fa49b011fc0 <line:10:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stddef.h:120:47>
+      `-OffsetOfExpr 0x7fa49b011f70 <col:24, col:47> 'unsigned long'
+        `-IntegerLiteral 0x7fa49b011f50 <<built-in>:46:25> 'long' 9223372036854775807

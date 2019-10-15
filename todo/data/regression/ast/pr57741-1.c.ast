@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7ff95d02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff95c814370 <../Data/C2AST/pr57741-1.c:4:1, line:19:1> line:5:1 foo 'void (float *, float *, float)'
+  |-ParmVarDecl 0x7ff95d02c9a0 <col:6, col:13> col:13 used p 'float *'
+  |-ParmVarDecl 0x7ff95c814218 <col:16, col:23> col:23 used q 'float *'
+  |-ParmVarDecl 0x7ff95c814290 <col:26, col:32> col:32 used x 'float'
+  `-CompoundStmt 0x7ff95c814c48 <line:6:1, line:19:1>
+    |-DeclStmt 0x7ff95c8144e0 <line:7:3, col:8>
+    | `-VarDecl 0x7ff95c814480 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7ff95c814640 <line:8:3, col:27>
+    | |-VarDecl 0x7ff95c814510 <col:3, col:13> col:9 used f 'float' cinit
+    | | `-FloatingLiteral 0x7ff95c814570 <col:13> 'float' 1.000000e+00
+    | `-VarDecl 0x7ff95c8145a8 <col:3, col:23> col:19 used g 'float' cinit
+    |   `-FloatingLiteral 0x7ff95c814608 <col:23> 'float' 2.000000e+00
+    |-ForStmt 0x7ff95c814928 <line:9:3, line:13:5>
+    | |-BinaryOperator 0x7ff95c8146a0 <line:9:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7ff95c814658 <col:8> 'int' lvalue Var 0x7ff95c814480 'i' 'int'
+    | | `-IntegerLiteral 0x7ff95c814680 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff95c814728 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff95c814710 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff95c8146c8 <col:15> 'int' lvalue Var 0x7ff95c814480 'i' 'int'
+    | | `-IntegerLiteral 0x7ff95c8146f0 <col:19> 'int' 1024
+    | |-UnaryOperator 0x7ff95c814778 <col:25, col:26> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff95c814750 <col:25> 'int' lvalue Var 0x7ff95c814480 'i' 'int'
+    | `-CompoundStmt 0x7ff95c814908 <line:10:5, line:13:5>
+    |   |-BinaryOperator 0x7ff95c814840 <line:11:7, col:14> 'float' '='
+    |   | |-UnaryOperator 0x7ff95c8147e0 <col:7, col:9> 'float' lvalue prefix '*'
+    |   | | `-UnaryOperator 0x7ff95c8147c0 <col:8, col:9> 'float *' postfix '++'
+    |   | |   `-DeclRefExpr 0x7ff95c814798 <col:8> 'float *' lvalue ParmVar 0x7ff95d02c9a0 'p' 'float *'
+    |   | `-ImplicitCastExpr 0x7ff95c814828 <col:14> 'float' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7ff95c814800 <col:14> 'float' lvalue Var 0x7ff95c814510 'f' 'float'
+    |   `-CompoundAssignOperator 0x7ff95c8148d0 <line:12:7, col:12> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+    |     |-DeclRefExpr 0x7ff95c814868 <col:7> 'float' lvalue Var 0x7ff95c814510 'f' 'float'
+    |     `-ImplicitCastExpr 0x7ff95c8148b8 <col:12> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff95c814890 <col:12> 'float' lvalue ParmVar 0x7ff95c814290 'x' 'float'
+    `-ForStmt 0x7ff95c814c10 <line:14:3, line:18:5>
+      |-BinaryOperator 0x7ff95c8149a8 <line:14:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ff95c814960 <col:8> 'int' lvalue Var 0x7ff95c814480 'i' 'int'
+      | `-IntegerLiteral 0x7ff95c814988 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff95c814a30 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff95c814a18 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff95c8149d0 <col:15> 'int' lvalue Var 0x7ff95c814480 'i' 'int'
+      | `-IntegerLiteral 0x7ff95c8149f8 <col:19> 'int' 1024
+      |-UnaryOperator 0x7ff95c814a80 <col:25, col:26> 'int' postfix '++'
+      | `-DeclRefExpr 0x7ff95c814a58 <col:25> 'int' lvalue Var 0x7ff95c814480 'i' 'int'
+      `-CompoundStmt 0x7ff95c814bf0 <line:15:5, line:18:5>
+        |-BinaryOperator 0x7ff95c814b48 <line:16:7, col:14> 'float' '='
+        | |-UnaryOperator 0x7ff95c814ae8 <col:7, col:9> 'float' lvalue prefix '*'
+        | | `-UnaryOperator 0x7ff95c814ac8 <col:8, col:9> 'float *' postfix '++'
+        | |   `-DeclRefExpr 0x7ff95c814aa0 <col:8> 'float *' lvalue ParmVar 0x7ff95c814218 'q' 'float *'
+        | `-ImplicitCastExpr 0x7ff95c814b30 <col:14> 'float' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ff95c814b08 <col:14> 'float' lvalue Var 0x7ff95c8145a8 'g' 'float'
+        `-CompoundAssignOperator 0x7ff95c814bb8 <line:17:7, col:12> 'float' '+=' ComputeLHSTy='float' ComputeResultTy='float'
+          |-DeclRefExpr 0x7ff95c814b70 <col:7> 'float' lvalue Var 0x7ff95c8145a8 'g' 'float'
+          `-FloatingLiteral 0x7ff95c814b98 <col:12> 'float' 5.000000e-01

@@ -1,0 +1,88 @@
+../Data/C2AST/pr42224.c:4:45: error: mode attribute only supported for integer and floating-point types
+typedef char* __char_ptr32 __attribute__ (( mode (SI) ));
+                                            ^
+../Data/C2AST/pr42224.c:5:61: error: mode attribute only supported for integer and floating-point types
+typedef __char_ptr32 *__char_ptr_char_ptr32 __attribute__ ((mode (SI)));
+                                                            ^
+../Data/C2AST/pr42224.c:29:15: error: subscripted value is not an array, pointer, or vector
+    short_argv[argc] = (__char_ptr32) strdup32 (ptr64[argc]);
+    ~~~~~~~~~~^~~~~
+../Data/C2AST/pr42224.c:31:13: error: subscripted value is not an array, pointer, or vector
+  short_argv[argc] = (__char_ptr32) 0;
+  ~~~~~~~~~~^~~~~
+TranslationUnitDecl 0x7fbf4182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf4182c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf4182bf80 '__int128'
+|-TypedefDecl 0x7fbf4182c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf4182bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fbf4182c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf4182c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf4182c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf4182c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf4182c600 'char *'
+|   `-BuiltinType 0x7fbf4182bd80 'char'
+|-TypedefDecl 0x7fbf4182c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf4182c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf4182c720 'struct __va_list_tag'
+|     `-Record 0x7fbf4182c698 '__va_list_tag'
+|-TypedefDecl 0x7fbf4182c988 <../Data/C2AST/pr42224.c:4:1, col:15> col:15 referenced __char_ptr32 'unsigned int'
+| |-BuiltinType 0x7fbf4182be80 'unsigned int'
+| `-ModeAttr 0x7fbf42015200 <col:45, col:53> SI
+|-TypedefDecl 0x7fbf420152e8 <line:5:1, col:23> col:23 referenced __char_ptr_char_ptr32 'unsigned int'
+| |-BuiltinType 0x7fbf4182be80 'unsigned int'
+| `-ModeAttr 0x7fbf42015350 <col:61, col:69> SI
+|-FunctionDecl 0x7fbf42015480 <line:7:1, line:10:1> line:7:6 to_ptr32 'void (int)'
+| |-ParmVarDecl 0x7fbf420153b8 <col:16, col:20> col:20 used x 'int'
+| `-CompoundStmt 0x7fbf42015668 <line:8:1, line:10:1>
+|   `-DeclStmt 0x7fbf42015650 <line:9:3, col:38>
+|     `-VarDecl 0x7fbf42015578 <col:3, col:37> col:16 ptr '__char_ptr32':'unsigned int' cinit
+|       `-CStyleCastExpr 0x7fbf42015628 <col:22, col:37> '__char_ptr32':'unsigned int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fbf42015610 <col:37> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fbf420155d8 <col:37> 'int' lvalue ParmVar 0x7fbf420153b8 'x' 'int'
+|-FunctionDecl 0x7fbf42015790 <line:12:1, line:15:1> line:12:6 to_int 'void (__char_ptr32)'
+| |-ParmVarDecl 0x7fbf42015690 <col:14, col:27> col:27 used ptr '__char_ptr32':'unsigned int'
+| `-CompoundStmt 0x7fbf42015948 <line:13:1, line:15:1>
+|   `-DeclStmt 0x7fbf42015930 <line:14:3, col:20>
+|     `-VarDecl 0x7fbf42015850 <col:3, col:17> col:7 x 'int' cinit
+|       `-CStyleCastExpr 0x7fbf42015908 <col:11, col:17> 'int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7fbf420158f0 <col:17> '__char_ptr32':'unsigned int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fbf420158b0 <col:17> '__char_ptr32':'unsigned int' lvalue ParmVar 0x7fbf42015690 'ptr' '__char_ptr32':'unsigned int'
+`-FunctionDecl 0x7fbf42015ac0 <line:17:1, line:34:1> line:18:1 to_ptr32_ptr32 '__char_ptr_char_ptr32 (char **)'
+  |-ParmVarDecl 0x7fbf420159c0 <col:17, col:24> col:24 used ptr64 'char **'
+  `-CompoundStmt 0x7fbf4202d0f8 <line:19:1, line:34:1>
+    |-DeclStmt 0x7fbf42015be0 <line:20:3, col:11>
+    | `-VarDecl 0x7fbf42015b80 <col:3, col:7> col:7 used argc 'int'
+    |-DeclStmt 0x7fbf42015c68 <line:21:3, col:35>
+    | `-VarDecl 0x7fbf42015c08 <col:3, col:25> col:25 used short_argv '__char_ptr_char_ptr32':'unsigned int'
+    |-ForStmt 0x7fbf42015e08 <line:23:3, col:36>
+    | |-BinaryOperator 0x7fbf42015cc8 <col:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fbf42015c80 <col:8> 'int' lvalue Var 0x7fbf42015b80 'argc' 'int'
+    | | `-IntegerLiteral 0x7fbf42015ca8 <col:13> 'int' 0
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fbf42015d98 <col:16, col:26> 'char *' <LValueToRValue>
+    | | `-ArraySubscriptExpr 0x7fbf42015d70 <col:16, col:26> 'char *' lvalue
+    | |   |-ImplicitCastExpr 0x7fbf42015d40 <col:16> 'char **' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fbf42015cf0 <col:16> 'char **' lvalue ParmVar 0x7fbf420159c0 'ptr64' 'char **'
+    | |   `-ImplicitCastExpr 0x7fbf42015d58 <col:22> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fbf42015d18 <col:22> 'int' lvalue Var 0x7fbf42015b80 'argc' 'int'
+    | |-UnaryOper4 errors generated.
+ator 0x7fbf42015dd8 <col:29, col:33> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fbf42015db0 <col:29> 'int' lvalue Var 0x7fbf42015b80 'argc' 'int'
+    | `-NullStmt 0x7fbf42015df8 <col:36>
+    |-BinaryOperator 0x7fbf42016158 <line:25:3, line:26:40> '__char_ptr_char_ptr32':'unsigned int' '='
+    | |-DeclRefExpr 0x7fbf42015e40 <line:25:3> '__char_ptr_char_ptr32':'unsigned int' lvalue Var 0x7fbf42015c08 'short_argv' '__char_ptr_char_ptr32':'unsigned int'
+    | `-CStyleCastExpr 0x7fbf42016130 <col:16, line:26:40> '__char_ptr_char_ptr32':'unsigned int' <IntegralCast>
+    |   `-CallExpr 0x7fbf420160f0 <line:25:40, line:26:40> 'int'
+    |     |-ImplicitCastExpr 0x7fbf420160d8 <line:25:40> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fbf42015f70 <col:40> 'int ()' Function 0x7fbf42015ec0 'malloc32' 'int ()'
+    |     `-BinaryOperator 0x7fbf42016088 <line:26:6, col:39> 'unsigned long' '*'
+    |       |-UnaryExprOrTypeTraitExpr 0x7fbf42015fa8 <col:6, col:26> 'unsigned long' sizeof '__char_ptr32':'unsigned int'
+    |       `-ImplicitCastExpr 0x7fbf42016070 <col:30, col:39> 'unsigned long' <IntegralCast>
+    |         `-ParenExpr 0x7fbf42016050 <col:30, col:39> 'int'
+    |           `-BinaryOperator 0x7fbf42016028 <col:31, col:38> 'int' '+'
+    |             |-ImplicitCastExpr 0x7fbf42016010 <col:31> 'int' <LValueToRValue>
+    |             | `-DeclRefExpr 0x7fbf42015fc8 <col:31> 'int' lvalue Var 0x7fbf42015b80 'argc' 'int'
+    |             `-IntegerLiteral 0x7fbf42015ff0 <col:38> 'int' 1
+    `-ReturnStmt 0x7fbf4202d0e0 <line:32:3, col:10>
+      `-ImplicitCastExpr 0x7fbf4202d0c8 <col:10> '__char_ptr_char_ptr32':'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7fbf4202d0a0 <col:10> '__char_ptr_char_ptr32':'unsigned int' lvalue Var 0x7fbf42015c08 'short_argv' '__char_ptr_char_ptr32':'unsigned int'

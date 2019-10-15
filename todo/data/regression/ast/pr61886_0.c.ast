@@ -1,0 +1,167 @@
+TranslationUnitDecl 0x7ff45181dee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff45181eb78 <../Data/C2AST/pr61886_0.c:4:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ff45181e0a0 'unsigned long'
+|-RecordDecl 0x7ff451860400 <line:5:9, col:16> col:16 struct _IO_FILE
+|-TypedefDecl 0x7ff451860500 <col:1, col:25> col:25 referenced FILE 'struct _IO_FILE':'struct _IO_FILE'
+| `-ElaboratedType 0x7ff4518604b0 'struct _IO_FILE' sugar
+|   `-RecordType 0x7ff451860490 'struct _IO_FILE'
+|     `-Record 0x7ff451860400 '_IO_FILE'
+|-FunctionDecl 0x7ff4518609c0 <line:10:1, col:210> col:15 used fread 'size_t (void *restrict, size_t, size_t, size_t, FILE *restrict)' extern
+| |-ParmVarDecl 0x7ff4518605a8 <col:22, col:39> col:39 __ptr 'void *restrict'
+| |-ParmVarDecl 0x7ff451860618 <col:46, col:53> col:53 __ptrlen 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff451860688 <col:63, col:70> col:70 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff4518606f8 <col:78, col:85> col:85 __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff4518607e8 <col:90, col:107> col:107 __stream 'FILE *restrict'
+| |-AsmLabelAttr 0x7ff451860a60 <<scratch space>:2:1> "_fread"
+| `-WarnUnusedResultAttr 0x7ff451860ae0 <../Data/C2AST/pr61886_0.c:10:187> warn_unused_result
+|-FunctionDecl 0x7ff451860e98 <line:11:1, col:323> col:15 used fread_warn 'size_t (void *restrict, size_t, size_t, size_t, FILE *restrict)' extern
+| |-ParmVarDecl 0x7ff451860b48 <col:27, col:44> col:44 __ptr 'void *restrict'
+| |-ParmVarDecl 0x7ff451860bb8 <col:51, col:58> col:58 __ptrlen 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff451860c28 <col:68, col:75> col:75 __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff451860c98 <col:83, col:90> col:90 __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff451860d08 <col:95, col:112> col:112 __stream 'FILE *restrict'
+| |-AsmLabelAttr 0x7ff451860f38 <<scratch space>:3:1> "_fread"
+| `-WarnUnusedResultAttr 0x7ff451860fb8 <../Data/C2AST/pr61886_0.c:11:192> warn_unused_result
+|-FunctionDecl 0x7ff451861270 <line:13:1, line:27:1> line:15:1 used local_fread 'size_t (void *restrict, size_t, size_t, FILE *restrict)' extern inline
+| |-ParmVarDecl 0x7ff451860fe0 <col:14, col:31> col:31 used __ptr 'void *restrict'
+| |-ParmVarDecl 0x7ff451861050 <col:38, col:45> col:45 used __size 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff4518610c0 <col:53, col:60> col:60 used __n 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7ff451861130 <line:16:8, col:25> col:25 used __stream 'FILE *restrict'
+| |-CompoundStmt 0x7ff450801200 <line:17:1, line:27:1>
+| | `-IfStmt 0x7ff4508011c8 <line:18:3, line:26:5>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7ff4518793a0 <line:18:7, col:53> 'int' '!='
+| |   | |-CallExpr 0x7ff4518792c0 <col:7, col:38> 'unsigned long'
+| |   | | |-ImplicitCastExpr 0x7ff4518792a8 <col:7> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   | | | `-DeclRefExpr 0x7ff4518791f8 <col:7> '<builtin fn type>' Function 0x7ff451879040 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   | | |-ImplicitCastExpr 0x7ff451879310 <col:30> 'const void *' <BitCast>
+| |   | | | `-ImplicitCastExpr 0x7ff4518792f8 <col:30> 'void *' <LValueToRValue>
+| |   | | |   `-DeclRefExpr 0x7ff451879220 <col:30> 'void *restrict' lvalue ParmVar 0x7ff451860fe0 '__ptr' 'void *restrict'
+| |   | | `-IntegerLiteral 0x7ff451879248 <col:37> 'int' 0
+| |   | `-CStyleCastExpr 0x7ff451879378 <col:43, col:53> 'size_t':'unsigned long' <IntegralCast>
+| |   |   `-UnaryOperator 0x7ff451879348 <col:52, col:53> 'int' prefix '-'
+| |   |     `-IntegerLiteral 0x7ff451879328 <col:53> 'int' 1
+| |   |-CompoundStmt 0x7ff4508011a8 <line:19:5, line:26:5>
+| |   | |-IfStmt 0x7ff451879ca8 <line:20:7, line:23:85>
+| |   | | |-<<<NULL>>>
+| |   | | |-<<<NULL>>>
+| |   | | |-BinaryOperator 0x7ff451879970 <line:20:11, line:22:74> 'int' '||'
+| |   | | | |-BinaryOperator 0x7ff451879688 <line:20:11, line:21:40> 'int' '||'
+| |   | | | | |-UnaryOperator 0x7ff4518795b0 <line:20:11, col:40> 'int' prefix '!'
+| |   | | | | | `-CallExpr 0x7ff451879580 <col:12, col:40> 'int'
+| |   | | | | |   |-ImplicitCastExpr 0x7ff451879568 <col:12> 'int (*)()' <BuiltinFnToFnPtr>
+| |   | | | | |   | `-DeclRefExpr 0x7ff4518794f0 <col:12> '<builtin fn type>' Function 0x7ff4518793f8 '__builtin_constant_p' 'int ()'
+| |   | | | | |   `-DeclRefExpr 0x7ff451879518 <col:34> 'size_t':'unsigned long' lvalue ParmVar 0x7ff451861050 '__size' 'size_t':'unsigned long'
+| |   | | | | `-UnaryOperator 0x7ff451879668 <line:21:14, col:40> 'int' prefix '!'
+| |   | | | |   `-CallExpr 0x7ff451879638 <col:15, col:40> 'int'
+| |   | | | |     |-ImplicitCastExpr 0x7ff451879620 <col:15> 'int (*)()' <BuiltinFnToFnPtr>
+| |   | | | |     | `-DeclRefExpr 0x7ff4518795d0 <col:15> '<builtin fn type>' Function 0x7ff4518793f8 '__builtin_constant_p' 'int ()'
+| |   | | | |     `-DeclRefExpr 0x7ff4518795f8 <col:37> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4518610c0 '__n' 'size_t':'unsigned long'
+| |   | | | `-BinaryOperator 0x7ff451879948 <line:22:14, col:74> 'int' '>='
+| |   | | |   |-ParenExpr 0x7ff451879758 <col:14, col:27> 'unsigned long'
+| |   | | |   | `-BinaryOperator 0x7ff451879730 <col:15, col:24> 'unsigned long' '|'
+| |   | | |   |   |-ImplicitCastExpr 0x7ff451879700 <col:15> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   |   | `-DeclRefExpr 0x7ff4518796b0 <col:15> 'size_t':'unsigned long' lvalue ParmVar 0x7ff451861050 '__size' 'size_t':'unsigned long'
+| |   | | |   |   `-ImplicitCastExpr 0x7ff451879718 <col:24> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   |     `-DeclRefExpr 0x7ff4518796d8 <col:24> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4518610c0 '__n' 'size_t':'unsigned long'
+| |   | | |   `-ParenExpr 0x7ff451879928 <col:32, col:74> 'size_t':'unsigned long'
+| |   | | |     `-BinaryOperator 0x7ff451879900 <col:33, col:73> 'size_t':'unsigned long' '<<'
+| |   | | |       |-ParenExpr 0x7ff4518797d0 <col:33, col:44> 'size_t':'unsigned long'
+| |   | | |       | `-CStyleCastExpr 0x7ff4518797a8 <col:34, col:43> 'size_t':'unsigned long' <IntegralCast>
+| |   | | |       |   `-IntegerLiteral 0x7ff451879778 <col:43> 'int' 1
+| |   | | |       `-ParenExpr 0x7ff4518798e0 <col:49, col:73> 'unsigned long'
+| |   | | |         `-BinaryOperator 0x7ff4518798b8 <col:50, col:72> 'unsigned long' '/'
+| |   | | |           |-BinaryOperator 0x7ff451879858 <col:50, col:68> 'unsigned long' '*'
+| |   | | |           | |-ImplicitCastExpr 0x7ff451879840 <col:50> 'unsigned long' <IntegralCast>
+| |   | | |           | | `-IntegerLiteral 0x7ff4518797f0 <col:50> 'int' 8
+| |   | | |           | `-UnaryExprOrTypeTraitExpr 0x7ff451879820 <col:54, col:68> 'unsigned long' sizeof 'size_t':'unsigned long'
+| |   | | |           `-ImplicitCastExpr 0x7ff4518798a0 <col:72> 'unsigned long' <IntegralCast>
+| |   | | |             `-IntegerLiteral 0x7ff451879880 <col:72> 'int' 2
+| |   | | |-ReturnStmt 0x7ff451879c90 <line:23:9, col:85>
+| |   | | | `-CallExpr 0x7ff451879be0 <col:16, col:85> 'size_t':'unsigned long'
+| |   | | |   |-ImplicitCastExpr 0x7ff451879bc8 <col:16> 'size_t (*)(void *restrict, size_t, size_t, size_t, FILE *restrict)' <FunctionToPointerDecay>
+| |   | | |   | `-DeclRefExpr 0x7ff451879998 <col:16> 'size_t (void *restrict, size_t, size_t, size_t, FILE *restrict)' Function 0x7ff4518609c0 'fread' 'size_t (void *restrict, size_t, size_t, size_t, FILE *restrict)'
+| |   | | |   |-ImplicitCastExpr 0x7ff451879c30 <col:23> 'void *' <LValueToRValue>
+| |   | | |   | `-DeclRefExpr 0x7ff4518799c0 <col:23> 'void *restrict' lvalue ParmVar 0x7ff451860fe0 '__ptr' 'void *restrict'
+| |   | | |   |-CallExpr 0x7ff451879a88 <col:30, col:61> 'unsigned long'
+| |   | | |   | |-ImplicitCastExpr 0x7ff451879a70 <col:30> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   | | |   | | `-DeclRefExpr 0x7ff4518799e8 <col:30> '<builtin fn type>' Function 0x7ff451879040 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   | | |   | |-ImplicitCastExpr 0x7ff451879ad8 <col:53> 'const void *' <BitCast>
+| |   | | |   | | `-ImplicitCastExpr 0x7ff451879ac0 <col:53> 'void *' <LValueToRValue>
+| |   | | |   | |   `-DeclRefExpr 0x7ff451879a10 <col:53> 'void *restrict' lvalue ParmVar 0x7ff451860fe0 '__ptr' 'void *restrict'
+| |   | | |   | `-IntegerLiteral 0x7ff451879a38 <col:60> 'int' 0
+| |   | | |   |-ImplicitCastExpr 0x7ff451879c48 <col:64> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   | `-DeclRefExpr 0x7ff451879af0 <col:64> 'size_t':'unsigned long' lvalue ParmVar 0x7ff451861050 '__size' 'size_t':'unsigned long'
+| |   | | |   |-ImplicitCastExpr 0x7ff451879c60 <col:72> 'size_t':'unsigned long' <LValueToRValue>
+| |   | | |   | `-DeclRefExpr 0x7ff451879b18 <col:72> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4518610c0 '__n' 'size_t':'unsigned long'
+| |   | | |   `-ImplicitCastExpr 0x7ff451879c78 <col:77> 'FILE *' <LValueToRValue>
+| |   | | |     `-DeclRefExpr 0x7ff451879b40 <col:77> 'FILE *restrict' lvalue ParmVar 0x7ff451861130 '__stream' 'FILE *restrict'
+| |   | | `-<<<NULL>>>
+| |   | `-IfStmt 0x7ff450801170 <line:24:7, line:25:90>
+| |   |   |-<<<NULL>>>
+| |   |   |-<<<NULL>>>
+| |   |   |-BinaryOperator 0x7ff451879e90 <line:24:11, col:57> 'int' '>'
+| |   |   | |-BinaryOperator 0x7ff451879d60 <col:11, col:20> 'unsigned long' '*'
+| |   |   | | |-ImplicitCastExpr 0x7ff451879d30 <col:11> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   | | | `-DeclRefExpr 0x7ff451879ce0 <col:11> 'size_t':'unsigned long' lvalue ParmVar 0x7ff451861050 '__size' 'size_t':'unsigned long'
+| |   |   | | `-ImplicitCastExpr 0x7ff451879d48 <col:20> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   | |   `-DeclRefExpr 0x7ff451879d08 <col:20> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4518610c0 '__n' 'size_t':'unsigned long'
+| |   |   | `-CallExpr 0x7ff451879e28 <col:26, col:57> 'unsigned long'
+| |   |   |   |-ImplicitCastExpr 0x7ff451879e10 <col:26> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   |   |   | `-DeclRefExpr 0x7ff451879d88 <col:26> '<builtin fn type>' Function 0x7ff451879040 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   |   |   |-ImplicitCastExpr 0x7ff451879e78 <col:49> 'const void *' <BitCast>
+| |   |   |   | `-ImplicitCastExpr 0x7ff451879e60 <col:49> 'void *' <LValueToRValue>
+| |   |   |   |   `-DeclRefExpr 0x7ff451879db0 <col:49> 'void *restrict' lvalue ParmVar 0x7ff451860fe0 '__ptr' 'void *restrict'
+| |   |   |   `-IntegerLiteral 0x7ff451879dd8 <col:56> 'int' 0
+| |   |   |-ReturnStmt 0x7ff450801158 <line:25:9, col:90>
+| |   |   | `-CallExpr 0x7ff4508010a8 <col:16, col:90> 'size_t':'unsigned long'
+| |   |   |   |-ImplicitCastExpr 0x7ff450801090 <col:16> 'size_t (*)(void *restrict, size_t, size_t, size_t, FILE *restrict)' <FunctionToPointerDecay>
+| |   |   |   | `-DeclRefExpr 0x7ff451879eb8 <col:16> 'size_t (void *restrict, size_t, size_t, size_t, FILE *restrict)' Function 0x7ff451860e98 'fread_warn' 'size_t (void *restrict, size_t, size_t, size_t, FILE *restrict)'
+| |   |   |   |-ImplicitCastExpr 0x7ff4508010f8 <col:28> 'void *' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7ff451879ee0 <col:28> 'void *restrict' lvalue ParmVar 0x7ff451860fe0 '__ptr' 'void *restrict'
+| |   |   |   |-CallExpr 0x7ff451879fa8 <col:35, col:66> 'unsigned long'
+| |   |   |   | |-ImplicitCastExpr 0x7ff451879f90 <col:35> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+| |   |   |   | | `-DeclRefExpr 0x7ff451879f08 <col:35> '<builtin fn type>' Function 0x7ff451879040 '__builtin_object_size' 'unsigned long (const void *, int)'
+| |   |   |   | |-ImplicitCastExpr 0x7ff450801000 <col:58> 'const void *' <BitCast>
+| |   |   |   | | `-ImplicitCastExpr 0x7ff451879fe0 <col:58> 'void *' <LValueToRValue>
+| |   |   |   | |   `-DeclRefExpr 0x7ff451879f30 <col:58> 'void *restrict' lvalue ParmVar 0x7ff451860fe0 '__ptr' 'void *restrict'
+| |   |   |   | `-IntegerLiteral 0x7ff451879f58 <col:65> 'int' 0
+| |   |   |   |-ImplicitCastExpr 0x7ff450801110 <col:69> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7ff450801018 <col:69> 'size_t':'unsigned long' lvalue ParmVar 0x7ff451861050 '__size' 'size_t':'unsigned long'
+| |   |   |   |-ImplicitCastExpr 0x7ff450801128 <col:77> 'size_t':'unsigned long' <LValueToRValue>
+| |   |   |   | `-DeclRefExpr 0x7ff450801040 <col:77> 'size_t':'unsigned long' lvalue ParmVar 0x7ff4518610c0 '__n' 'size_t':'unsigned long'
+| |   |   |   `-ImplicitCastExpr 0x7ff450801140 <col:82> 'FILE *' <LValueToRValue>
+| |   |   |     `-DeclRefExpr 0x7ff450801068 <col:82> 'FILE *restrict' lvalue ParmVar 0x7ff451861130 '__stream' 'FILE *restrict'
+| |   |   `-<<<NULL>>>
+| |   `-<<<NULL>>>
+| |-WarnUnusedResultAttr 0x7ff451861330 <line:13:135> warn_unused_result
+| |-GNUInlineAttr 0x7ff451861378 <col:69>
+| `-AlwaysInlineAttr 0x7ff451861388 <col:33> always_inline
+|-FunctionDecl 0x7ff451879040 <line:18:7> col:7 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+| |-ParmVarDecl 0x7ff4518790e0 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x7ff451879140 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7ff4518791b0 <col:7> Implicit
+|-FunctionDecl 0x7ff4518793f8 <line:20:12> col:12 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7ff451879498 <col:12> Implicit
+| `-ConstAttr 0x7ff4518794e0 <col:12> Implicit
+|-VarDecl 0x7ff450801228 <line:29:1, col:17> col:17 used nmemb 'volatile size_t':'volatile unsigned long'
+|-VarDecl 0x7ff450801298 <line:30:1, col:7> col:7 used fp 'FILE *'
+`-FunctionDecl 0x7ff450801320 <line:31:1, line:36:1> line:31:5 main 'int ()'
+  `-CompoundStmt 0x7ff4508016d0 <line:32:1, line:36:1>
+    |-DeclStmt 0x7ff450801498 <line:33:3, col:27>
+    | `-VarDecl 0x7ff450801438 <col:3, col:26> col:8 used file_contents 'char [4096]'
+    `-ReturnStmt 0x7ff4508016b8 <line:35:3, col:50>
+      `-ImplicitCastExpr 0x7ff4508016a0 <col:10, col:50> 'int' <IntegralCast>
+        `-CallExpr 0x7ff4508015e0 <col:10, col:50> 'size_t':'unsigned long'
+          |-ImplicitCastExpr 0x7ff4508015c8 <col:10> 'size_t (*)(void *restrict, size_t, size_t, FILE *restrict)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff4508014b0 <col:10> 'size_t (void *restrict, size_t, size_t, FILE *restrict)' Function 0x7ff451861270 'local_fread' 'size_t (void *restrict, size_t, size_t, FILE *restrict)'
+          |-ImplicitCastExpr 0x7ff450801640 <col:23> 'void *' <BitCast>
+          | `-ImplicitCastExpr 0x7ff450801628 <col:23> 'char *' <ArrayToPointerDecay>
+          |   `-DeclRefExpr 0x7ff4508014d8 <col:23> 'char [4096]' lvalue Var 0x7ff450801438 'file_contents' 'char [4096]'
+          |-ImplicitCastExpr 0x7ff450801658 <col:38> 'size_t':'unsigned long' <IntegralCast>
+          | `-IntegerLiteral 0x7ff450801500 <col:38> 'int' 1
+          |-ImplicitCastExpr 0x7ff450801670 <col:41> 'size_t':'unsigned long' <LValueToRValue>
+          | `-DeclRefExpr 0x7ff450801520 <col:41> 'volatile size_t':'volatile unsigned long' lvalue Var 0x7ff450801228 'nmemb' 'volatile size_t':'volatile unsigned long'
+          `-ImplicitCastExpr 0x7ff450801688 <col:48> 'FILE *' <LValueToRValue>
+            `-DeclRefExpr 0x7ff450801548 <col:48> 'FILE *' lvalue Var 0x7ff450801298 'fp' 'FILE *'

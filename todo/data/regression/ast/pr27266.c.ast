@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fdb1801bae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fdb1801c778 <../Data/C2AST/pr27266.c:7:1, col:18> col:18 used sll 'long long'
+|-FunctionDecl 0x7fdb19045500 <line:9:1, line:13:1> line:10:1 foo 'void (void)'
+| `-CompoundStmt 0x7fdb19045a60 <line:11:1, line:13:1>
+|   `-CallExpr 0x7fdb19045770 <line:12:3, col:32> 'long long'
+|     |-ImplicitCastExpr 0x7fdb19045a48 <col:3> 'long long (*)(volatile long long *, long long, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fdb190459f0 <col:3> '<builtin fn type>' Function 0x7fdb19045820 '__sync_fetch_and_add_8' 'long long (volatile long long *, long long, ...)'
+|     |-UnaryOperator 0x7fdb190456e8 <col:25, col:26> 'long long *' prefix '&'
+|     | `-DeclRefExpr 0x7fdb19045690 <col:26> 'long long' lvalue Var 0x7fdb1801c778 'sll' 'long long'
+|     `-ImplicitCastExpr 0x7fdb190459d8 <col:31> 'long long' <IntegralCast>
+|       `-IntegerLiteral 0x7fdb19045708 <col:31> 'int' 1
+|-FunctionDecl 0x7fdb190455c8 <col:3> col:3 implicit used __sync_fetch_and_add 'void ()' extern
+`-FunctionDecl 0x7fdb19045820 <col:3> col:3 implicit __sync_fetch_and_add_8 'long long (volatile long long *, long long, ...)' extern
+  |-ParmVarDecl 0x7fdb190458c0 <<invalid sloc>> <invalid sloc> 'volatile long long *'
+  |-ParmVarDecl 0x7fdb19045920 <<invalid sloc>> <invalid sloc> 'long long'
+  `-NoThrowAttr 0x7fdb19045990 <col:3> Implicit

@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fcf3b82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcf3c015200 <../Data/C2AST/pr46567.c:1:1, line:5:1> line:2:13 used SeqfileGetLine 'void ()' static
+| `-CompoundStmt 0x7fcf3c015478 <line:3:1, line:5:1>
+|   `-CallExpr 0x7fcf3c015450 <line:4:3, col:23> 'int'
+|     `-ImplicitCastExpr 0x7fcf3c015438 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fcf3c0153e0 <col:3> 'int ()' Function 0x7fcf3c015330 'SSIGetFilePosition' 'int ()'
+`-FunctionDecl 0x7fcf3c015570 <line:7:1, line:18:1> line:8:13 readLoop 'void (int)' static
+  |-ParmVarDecl 0x7fcf3c0154a8 <col:23, col:27> col:27 used addfirst 'int'
+  `-CompoundStmt 0x7fcf3c015880 <line:9:1, line:18:1>
+    `-IfStmt 0x7fcf3c015848 <line:10:3, line:17:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fcf3c015658 <line:10:7, col:8> 'int' prefix '!'
+      | `-ImplicitCastExpr 0x7fcf3c015640 <col:8> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fcf3c015618 <col:8> 'int' lvalue ParmVar 0x7fcf3c0154a8 'addfirst' 'int'
+      |-CompoundStmt 0x7fcf3c015828 <line:11:5, line:17:5>
+      | |-IfStmt 0x7fcf3c015758 <line:12:7, line:15:2>
+      | | |-<<<NULL>>>
+      | | |-<<<NULL>>>
+      | | |-UnaryOperator 0x7fcf3c0156b8 <line:12:11, col:12> 'int' prefix '!'
+      | | | `-ImplicitCastExpr 0x7fcf3c0156a0 <col:12> 'int' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7fcf3c015678 <col:12> 'int' lvalue ParmVar 0x7fcf3c0154a8 'addfirst' 'int'
+      | | |-CompoundStmt 0x7fcf3c015740 <line:13:2, line:15:2>
+      | | | `-CallExpr 0x7fcf3c015718 <line:14:4, col:24> 'int'
+      | | |   `-ImplicitCastExpr 0x7fcf3c015700 <col:4> 'int (*)()' <FunctionToPointerDecay>
+      | | |     `-DeclRefExpr 0x7fcf3c0156d8 <col:4> 'int ()' Function 0x7fcf3c015330 'SSIGetFilePosition' 'int ()'
+      | | `-<<<NULL>>>
+      | `-CallExpr 0x7fcf3c015800 <line:16:7, col:23> 'void'
+      |   `-ImplicitCastExpr 0x7fcf3c0157e8 <col:7> 'void (*)()' <FunctionToPointerDecay>
+      |     `-DeclRefExpr 0x7fcf3c015790 <col:7> 'void ()' Function 0x7fcf3c015200 'SeqfileGetLine' 'void ()'
+      `-<<<NULL>>>

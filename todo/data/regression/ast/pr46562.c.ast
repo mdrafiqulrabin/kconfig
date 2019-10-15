@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f8eb28088e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8eb284e428 <../Data/C2AST/pr46562.c:4:1, col:26> col:18 used a 'const int [4]' static cinit
+| `-InitListExpr 0x7f8eb284e508 <col:25, col:26> 'const int [4]'
+|   `-array filler
+|     `-ImplicitValueInitExpr 0x7f8eb284e548 <<invalid sloc>> 'const int'
+`-FunctionDecl 0x7f8eb284e628 <line:5:1, line:10:1> line:5:5 foo 'int (void)'
+  `-CompoundStmt 0x7f8eb284e960 <line:6:1, line:10:1>
+    |-DeclStmt 0x7f8eb284e760 <line:7:3, col:12>
+    | `-VarDecl 0x7f8eb284e6e0 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7f8eb284e740 <col:11> 'int' 1
+    |-DeclStmt 0x7f8eb284e8b8 <line:8:3, col:23>
+    | `-VarDecl 0x7f8eb284e790 <col:3, col:22> col:14 used p 'const int *' cinit
+    |   `-UnaryOperator 0x7f8eb284e898 <col:18, col:22> 'const int *' prefix '&'
+    |     `-ArraySubscriptExpr 0x7f8eb284e870 <col:19, col:22> 'const int' lvalue
+    |       |-ImplicitCastExpr 0x7f8eb284e840 <col:19> 'const int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f8eb284e7f0 <col:19> 'const int [4]' lvalue Var 0x7f8eb284e428 'a' 'const int [4]'
+    |       `-ImplicitCastExpr 0x7f8eb284e858 <col:21> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f8eb284e818 <col:21> 'int' lvalue Var 0x7f8eb284e6e0 'i' 'int'
+    `-ReturnStmt 0x7f8eb284e948 <line:9:3, col:11>
+      `-ImplicitCastExpr 0x7f8eb284e930 <col:10, col:11> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7f8eb284e910 <col:10, col:11> 'const int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7f8eb284e8f8 <col:11> 'const int *' <LValueToRValue>
+            `-DeclRefExpr 0x7f8eb284e8d0 <col:11> 'const int *' lvalue Var 0x7f8eb284e790 'p' 'const int *'

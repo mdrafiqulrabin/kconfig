@@ -1,0 +1,247 @@
+TranslationUnitDecl 0x7fc7a482bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc7a482c988 <../Data/C2AST/pr24626-2.c:3:1, col:22> col:22 referenced u_int8_t 'unsigned char'
+| |-BuiltinType 0x7fc7a482be40 'unsigned char'
+| `-ModeAttr 0x7fc7a5013a00 <col:47, col:63> __QI__
+|-TypedefDecl 0x7fc7a5013a78 <line:4:1, col:22> col:22 referenced u_int32_t 'unsigned int'
+| |-BuiltinType 0x7fc7a482be80 'unsigned int'
+| `-ModeAttr 0x7fc7a5013ae0 <col:48, col:64> __SI__
+|-TypedefDecl 0x7fc7a5013b60 <line:5:1, col:19> col:19 referenced db_pgno_t 'u_int32_t':'unsigned int'
+| `-TypedefType 0x7fc7a5013b30 'u_int32_t' sugar
+|   |-Typedef 0x7fc7a5013a78 'u_int32_t'
+|   `-BuiltinType 0x7fc7a482be80 'unsigned int'
+|-RecordDecl 0x7fc7a5013bb8 <line:6:9, col:16> col:16 struct __db
+|-TypedefDecl 0x7fc7a5013cb0 <col:1, col:21> col:21 referenced DB 'struct __db':'struct __db'
+| `-ElaboratedType 0x7fc7a5013c60 'struct __db' sugar
+|   `-RecordType 0x7fc7a5013c40 'struct __db'
+|     `-Record 0x7fc7a5014170 '__db'
+|-RecordDecl 0x7fc7a5013d20 <line:7:9, col:16> col:16 struct __db_env
+|-TypedefDecl 0x7fc7a5013e20 <col:1, col:25> col:25 referenced DB_ENV 'struct __db_env':'struct __db_env'
+| `-ElaboratedType 0x7fc7a5013dd0 'struct __db_env' sugar
+|   `-RecordType 0x7fc7a5013db0 'struct __db_env'
+|     `-Record 0x7fc7a5014498 '__db_env'
+|-RecordDecl 0x7fc7a5013e90 <line:8:9, col:16> col:16 struct __db_mpoolfile
+|-TypedefDecl 0x7fc7a5013f90 <col:1, col:31> col:31 referenced DB_MPOOLFILE 'struct __db_mpoolfile':'struct __db_mpoolfile'
+| `-ElaboratedType 0x7fc7a5013f40 'struct __db_mpoolfile' sugar
+|   `-RecordType 0x7fc7a5013f20 'struct __db_mpoolfile'
+|     `-Record 0x7fc7a5013e90 '__db_mpoolfile'
+|-RecordDecl 0x7fc7a5014000 <line:9:9, col:16> col:16 struct __dbc
+|-TypedefDecl 0x7fc7a5014100 <col:1, col:22> col:22 referenced DBC 'struct __dbc':'struct __dbc'
+| `-ElaboratedType 0x7fc7a50140b0 'struct __dbc' sugar
+|   `-RecordType 0x7fc7a5014090 'struct __dbc'
+|     `-Record 0x7fc7a5014000 '__dbc'
+|-RecordDecl 0x7fc7a5014170 prev 0x7fc7a5013bb8 <line:10:1, line:15:1> line:10:8 struct __db definition
+| |-FieldDecl 0x7fc7a5014288 <line:11:5, col:19> col:19 referenced mpf 'DB_MPOOLFILE *'
+| |-FieldDecl 0x7fc7a5014300 <line:12:5, col:15> col:15 referenced meta_pgno 'db_pgno_t':'unsigned int'
+| |-RecordDecl 0x7fc7a5014348 parent 0x7fc7a482bce8 <line:13:5, line:14:5> line:13:12 struct __cq_aq definition
+| `-FieldDecl 0x7fc7a5014450 <col:5, line:14:7> col:7 s_links 'struct __cq_aq':'struct __cq_aq'
+|-RecordDecl 0x7fc7a5014498 prev 0x7fc7a5013d20 <line:16:1, line:20:1> line:16:8 struct __db_env definition
+| |-RecordDecl 0x7fc7a5014520 <line:17:5, line:18:5> line:17:5 struct definition
+| |-FieldDecl 0x7fc7a5014620 <col:5, line:18:7> col:7 xa_txn 'struct (anonymous struct at ../Data/C2AST/pr24626-2.c:17:5)':'struct __db_env::(anonymous at ../Data/C2AST/pr24626-2.c:17:5)'
+| `-FieldDecl 0x7fc7a5014678 <line:19:5, col:15> col:15 referenced flags 'u_int32_t':'unsigned int'
+|-EnumDecl 0x7fc7a5014700 <line:21:9, col:46> col:9
+| |-EnumConstantDecl 0x7fc7a50147c0 <col:16> col:16 referenced MU_REMOVE 'int'
+| |-EnumConstantDecl 0x7fc7a5014808 <col:27> col:27 MU_RENAME 'int'
+| `-EnumConstantDecl 0x7fc7a5014850 <col:38> col:38 MU_OPEN 'int'
+|-TypedefDecl 0x7fc7a50148f0 <col:1, col:48> col:48 mu_action 'enum mu_action':'mu_action'
+| `-ElaboratedType 0x7fc7a50148a0 'enum mu_action' sugar
+|   `-EnumType 0x7fc7a50147a0 'mu_action'
+|     `-Enum 0x7fc7a5014700 ''
+|-RecordDecl 0x7fc7a5014960 <line:22:9, line:24:1> line:22:16 struct __dbpginfo definition
+| `-FieldDecl 0x7fc7a5014e50 <line:23:5, col:14> col:14 referenced type 'u_int8_t':'unsigned char'
+|-TypedefDecl 0x7fc7a5014ef0 <line:22:1, line:24:3> col:3 referenced PAGE 'struct __dbpginfo':'struct __dbpginfo'
+| `-ElaboratedType 0x7fc7a5014ea0 'struct __dbpginfo' sugar
+|   `-RecordType 0x7fc7a5014e00 'struct __dbpginfo'
+|     `-Record 0x7fc7a5014960 '__dbpginfo'
+|-FunctionDecl 0x7fc7a5014fb0 <line:25:1, col:18> col:5 used __db_cursor 'int ()'
+|-FunctionDecl 0x7fc7a50150b8 <line:26:1, col:18> col:5 used __memp_fget 'int ()'
+|-FunctionDecl 0x7fc7a5015180 <line:27:1, col:16> col:5 used __db_free 'int ()'
+|-FunctionDecl 0x7fc7a5015248 <line:28:1, col:19> col:5 used __db_c_close 'int ()'
+`-FunctionDecl 0x7fc7a5015868 <line:29:1, line:58:1> line:29:5 __db_master_update 'int (DB *, DB *, int, int, int, int, int, int)'
+  |-ParmVarDecl 0x7fc7a5015648 <line:31:3, col:7> col:7 used mdbp 'DB *'
+  |-ParmVarDecl 0x7fc7a50156b8 <col:3, col:14> col:14 used sdbp 'DB *'
+  |-ParmVarDecl 0x7fc7a5015300 <line:30:3, col:7> col:7 used txn 'int'
+  |-ParmVarDecl 0x7fc7a5015378 <col:3, col:12> col:12 subdb 'int'
+  |-ParmVarDecl 0x7fc7a50153f0 <col:3, col:19> col:19 type 'int'
+  |-ParmVarDecl 0x7fc7a5015468 <col:3, col:25> col:25 used action 'int'
+  |-ParmVarDecl 0x7fc7a50154e0 <col:3, col:33> col:33 newname 'int'
+  |-ParmVarDecl 0x7fc7a5015558 <col:3, col:42> col:42 flags 'int'
+  `-CompoundStmt 0x7fc7a5018d98 <line:32:1, line:58:1>
+    |-DeclStmt 0x7fc7a5015a38 <line:33:5, col:18>
+    | `-VarDecl 0x7fc7a50159d8 <col:5, col:13> col:13 used dbenv 'DB_ENV *'
+    |-DeclStmt 0x7fc7a5015bc0 <line:34:5, col:20>
+    | |-VarDecl 0x7fc7a5015ad8 <col:5, col:10> col:10 used dbc 'DBC *'
+    | `-VarDecl 0x7fc7a5015b48 <col:5, col:16> col:16 used ndbc 'DBC *'
+    |-DeclStmt 0x7fc7a5015d50 <line:35:5, col:16>
+    | |-VarDecl 0x7fc7a5015c68 <col:5, col:11> col:11 used p 'PAGE *'
+    | `-VarDecl 0x7fc7a5015cd8 <col:5, col:15> col:15 used r 'PAGE *'
+    |-DeclStmt 0x7fc7a50162f8 <line:36:5, col:27>
+    | |-VarDecl 0x7fc7a5015d80 <col:5, col:9> col:9 used modify 'int'
+    | |-VarDecl 0x7fc7a5016200 <col:5, col:17> col:17 used ret 'int'
+    | `-VarDecl 0x7fc7a5016278 <col:5, col:22> col:22 used t_ret 'int'
+    |-IfStmt 0x7fc7a5016848 <line:37:5, line:40:7>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc7a50167c0 <line:37:9, line:39:33> 'int' '!='
+    | | |-ParenExpr 0x7fc7a5016780 <line:37:9, line:39:28> 'int'
+    | | | `-BinaryOperator 0x7fc7a5016758 <line:37:10, line:39:27> 'int' '='
+    | | |   |-DeclRefExpr 0x7fc7a5016310 <line:37:10> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'
+    | | |   `-CallExpr 0x7fc7a50166e0 <col:16, line:39:27> 'int'
+    | | |     |-ImplicitCastExpr 0x7fc7a50166c8 <line:37:16> 'int (*)()' <FunctionToPointerDecay>
+    | | |     | `-DeclRefExpr 0x7fc7a5016338 <col:16> 'int ()' Function 0x7fc7a5014fb0 '__db_cursor' 'int ()'
+    | | |     |-ImplicitCastExpr 0x7fc7a5016728 <col:28> 'DB *' <LValueToRValue>
+    | | |     | `-DeclRefExpr 0x7fc7a5016360 <col:28> 'DB *' lvalue ParmVar 0x7fc7a5015648 'mdbp' 'DB *'
+    | | |     |-ImplicitCastExpr 0x7fc7a5016740 <col:34> 'int' <LValueToRValue>
+    | | |     | `-DeclRefExpr 0x7fc7a5016388 <col:34> 'int' lvalue ParmVar 0x7fc7a5015300 'txn' 'int'
+    | | |     |-UnaryOperator 0x7fc7a5016438 <col:39, col:40> 'DBC **' prefix '&'
+    | | |     | `-DeclRefExpr 0x7fc7a50163b0 <col:40> 'DBC *' lvalue Var 0x7fc7a5015ad8 'dbc' 'DBC *'
+    | | |     `-ConditionalOperator 0x7fc7a5016670 <line:38:7, line:39:26> 'int'
+    | | |       |-ParenExpr 0x7fc7a5016610 <line:38:7, line:39:17> 'int'
+    | | |       | `-BinaryOperator 0x7fc7a50165e8 <line:38:8, line:39:11> 'int' '&&'
+    | | |       |   |-ParenExpr 0x7fc7a5016588 <line:38:8, col:37> 'unsigned int'
+    | | |       |   | `-BinaryOperator 0x7fc7a5016560 <col:9, col:36> 'unsigned int' '&'
+    | | |       |   |   |-ImplicitCastExpr 0x7fc7a5016530 <col:9, col:18> 'u_int32_t':'unsigned int' <LValueToRValue>
+    | | |       |   |   | `-MemberExpr 0x7fc7a50164b8 <col:9, col:18> 'u_int32_t':'unsigned int' lvalue ->flags 0x7fc7a5014678
+    | | |       |   |   |   `-ImplicitCastExpr 0x7fc7a50164a0 <col:9, col:15> 'DB_ENV *' <LValueToRValue>
+    | | |       |   |   |     `-ParenExpr 0x7fc7a5016480 <col:9, col:15> 'DB_ENV *' lvalue
+    | | |       |   |   |       `-DeclRefExpr 0x7fc7a5016458 <col:10> 'DB_ENV *' lvalue Var 0x7fc7a50159d8 'dbenv' 'DB_ENV *'
+    | | |       |   |   `-ImplicitCastExpr 0x7fc7a5016548 <col:26, col:36> 'unsigned int' <IntegralCast>
+    | | |       |   |     `-ParenExpr 0x7fc7a5016510 <col:26, col:36> 'int'
+    | | |       |   |       `-IntegerLiteral 0x7fc7a50164f0 <col:27> 'int' 2
+    | | |       |   `-ImplicitCastExpr 0x7fc7a50165d0 <line:39:11> 'int' <LValueToRValue>
+    | | |       |     `-DeclRefExpr 0x7fc7a50165a8 <col:11> 'int' lvalue Var 0x7fc7a5015d80 'modify' 'int'
+    | | |       |-IntegerLiteral 0x7fc7a5016630 <col:21> 'int' 35
+    | | |       `-IntegerLiteral 0x7fc7a5016650 <col:26> 'int' 0
+    | | `-IntegerLiteral 0x7fc7a50167a0 <col:33> 'int' 0
+    | |-GotoStmt 0x7fc7a5016830 <line:40:2, col:7> 'err' 0x7fc7a50167e8
+    | `-<<<NULL>>>
+    |-SwitchStmt 0x7fc7a50168c0 <line:41:5, line:53:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fc7a50168a8 <line:41:13> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc7a5016880 <col:13> 'int' lvalue ParmVar 0x7fc7a5015468 'action' 'int'
+    | `-CompoundStmt 0x7fc7a50188d0 <col:21, line:53:5>
+    |   |-CaseStmt 0x7fc7a5016918 <line:42:2, line:44:8>
+    |   | |-DeclRefExpr 0x7fc7a50168f0 <line:42:7> 'int' EnumConstant 0x7fc7a50147c0 'MU_REMOVE' 'int'
+    |   | |-<<<NULL>>>
+    |   | `-IfStmt 0x7fc7a5016ce8 <line:43:6, line:44:8>
+    |   |   |-<<<NULL>>>
+    |   |   |-<<<NULL>>>
+    |   |   |-BinaryOperator 0x7fc7a5016ca8 <line:43:10, col:69> 'int' '!='
+    |   |   | |-ParenExpr 0x7fc7a5016c68 <col:10, col:64> 'int'
+    |   |   | | `-BinaryOperator 0x7fc7a5016c40 <col:11, col:63> 'int' '='
+    |   |   | |   |-DeclRefExpr 0x7fc7a5016950 <col:11> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'
+    |   |   | |   `-CallExpr 0x7fc7a5016be0 <col:17, col:63> 'int'
+    |   |   | |     |-ImplicitCastExpr 0x7fc7a5016bc8 <col:17> 'int (*)()' <FunctionToPointerDecay>
+    |   |   | |     | `-DeclRefExpr 0x7fc7a5016978 <col:17> 'int ()' Function 0x7fc7a50150b8 '__memp_fget' 'int ()'
+    |   |   | |     |-ImplicitCastExpr 0x7fc7a5016c28 <col:29, col:35> 'DB_MPOOLFILE *' <LValueToRValue>
+    |   |   | |     | `-MemberExpr 0x7fc7a50169e0 <col:29, col:35> 'DB_MPOOLFILE *' lvalue ->mpf 0x7fc7a5014288
+    |   |   | |     |   `-ImplicitCastExpr 0x7fc7a50169c8 <col:29> 'DB *' <LValueToRValue>
+    |   |   | |     |     `-DeclRefExpr 0x7fc7a50169a0 <col:29> 'DB *' lvalue ParmVar 0x7fc7a5015648 'mdbp' 'DB *'
+    |   |   | |     |-UnaryOperator 0x7fc7a5016ae8 <col:40, col:47> 'db_pgno_t *' prefix '&'
+    |   |   | |     | `-MemberExpr 0x7fc7a5016a58 <col:41, col:47> 'db_pgno_t':'unsigned int' lvalue ->meta_pgno 0x7fc7a5014300
+    |   |   | |     |   `-ImplicitCastExpr 0x7fc7a5016a40 <col:41> 'DB *' <LValueToRValue>
+    |   |   | |     |     `-DeclRefExpr 0x7fc7a5016a18 <col:41> 'DB *' lvalue ParmVar 0x7fc7a50156b8 'sdbp' 'DB *'
+    |   |   | |     |-IntegerLiteral 0x7fc7a5016b08 <col:58> 'int' 0
+    |   |   | |     `-UnaryOperator 0x7fc7a5016ba8 <col:61, col:62> 'PAGE **' prefix '&'
+    |   |   | |       `-DeclRefExpr 0x7fc7a5016b28 <col:62> 'PAGE *' lvalue Var 0x7fc7a5015c68 'p' 'PAGE *'
+    |   |   | `-IntegerLiteral 0x7fc7a5016c88 <col:69> 'int' 0
+    |   |   |-GotoStmt 0x7fc7a5016cd0 <line:44:3, col:8> 'err' 0x7fc7a50167e8
+    |   |   `-<<<NULL>>>
+    |   |-IfStmt 0x7fc7a5017098 <line:45:6, line:47:6>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fc7a5016e60 <line:45:10, col:33> 'int' '=='
+    |   | | |-ImplicitCastExpr 0x7fc7a5016e48 <col:10, col:28> 'int' <IntegralCast>
+    |   | | | `-ImplicitCastExpr 0x7fc7a5016e30 <col:10, col:28> 'u_int8_t':'unsigned char' <LValueToRValue>
+    |   | | |   `-ParenExpr 0x7fc7a5016df0 <col:10, col:28> 'u_int8_t':'unsigned char' lvalue
+    |   | | |     `-MemberExpr 0x7fc7a5016db8 <col:11, col:24> 'u_int8_t':'unsigned char' lvalue ->type 0x7fc7a5014e50
+    |   | | |       `-ParenExpr 0x7fc7a5016d98 <col:11, col:21> 'PAGE *'
+    |   | | |         `-CStyleCastExpr 0x7fc7a5016d70 <col:12, col:20> 'PAGE *' <NoOp>
+    |   | | |           `-ImplicitCastExpr 0x7fc7a5016d58 <col:20> 'PAGE *' <LValueToRValue>
+    |   | | |             `-DeclRefExpr 0x7fc7a5016d20 <col:20> 'PAGE *' lvalue Var 0x7fc7a5015c68 'p' 'PAGE *'
+    |   | | `-IntegerLiteral 0x7fc7a5016e10 <col:33> 'int' 9
+    |   | |-CompoundStmt 0x7fc7a5017080 <col:36, line:47:6>
+    |   | | `-IfStmt 0x7fc7a5017048 <line:46:3, col:41>
+    |   | |   |-<<<NULL>>>
+    |   | |   |-<<<NULL>>>
+    |   | |   |-BinaryOperator 0x7fc7a5017010 <col:7, col:36> 'int' '!='
+    |   | |   | |-ParenExpr 0x7fc7a5016fd0 <col:7, col:31> 'int'
+    |   | |   | | `-BinaryOperator 0x7fc7a5016fa8 <col:8, col:30> 'int' '='
+    |   | |   | |   |-DeclRefExpr 0x7fc7a5016e88 <col:8> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'
+    |   | |   | |   `-CallExpr 0x7fc7a5016f40 <col:14, col:30> 'int'
+    |   | |   | |     |-ImplicitCastExpr 0x7fc7a5016f28 <col:14> 'int (*)()' <FunctionToPointerDecay>
+    |   | |   | |     | `-DeclRefExpr 0x7fc7a5016eb0 <col:14> 'int ()' Function 0x7fc7a5015180 '__db_free' 'int ()'
+    |   | |   | |     |-ImplicitCastExpr 0x7fc7a5016f78 <col:24> 'DBC *' <LValueToRValue>
+    |   | |   | |     | `-DeclRefExpr 0x7fc7a5016ed8 <col:24> 'DBC *' lvalue Var 0x7fc7a5015ad8 'dbc' 'DBC *'
+    |   | |   | |     `-ImplicitCastExpr 0x7fc7a5016f90 <col:29> 'PAGE *' <LValueToRValue>
+    |   | |   | |       `-DeclRefExpr 0x7fc7a5016f00 <col:29> 'PAGE *' lvalue Var 0x7fc7a5015cd8 'r' 'PAGE *'
+    |   | |   | `-IntegerLiteral 0x7fc7a5016ff0 <col:36> 'int' 0
+    |   | |   |-CompoundStmt 0x7fc7a5017038 <col:39, col:41>
+    |   | |   `-<<<NULL>>>
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fc7a50187b0 <line:48:6, line:51:6>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fc7a5018668 <line:48:10, col:39> 'int' '!='
+    |   | | |-ParenExpr 0x7fc7a5018628 <col:10, col:34> 'int'
+    |   | | | `-BinaryOperator 0x7fc7a5018600 <col:11, col:33> 'int' '='
+    |   | | |   |-DeclRefExpr 0x7fc7a50170d0 <col:11> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'
+    |   | | |   `-CallExpr 0x7fc7a5017188 <col:17, col:33> 'int'
+    |   | | |     |-ImplicitCastExpr 0x7fc7a5017170 <col:17> 'int (*)()' <FunctionToPointerDecay>
+    |   | | |     | `-DeclRefExpr 0x7fc7a50170f8 <col:17> 'int ()' Function 0x7fc7a5015180 '__db_free' 'int ()'
+    |   | | |     |-ImplicitCastExpr 0x7fc7a50171c0 <col:27> 'DBC *' <LValueToRValue>
+    |   | | |     | `-DeclRefExpr 0x7fc7a5017120 <col:27> 'DBC *' lvalue Var 0x7fc7a5015ad8 'dbc' 'DBC *'
+    |   | | |     `-ImplicitCastExpr 0x7fc7a50171d8 <col:32> 'PAGE *' <LValueToRValue>
+    |   | | |       `-DeclRefExpr 0x7fc7a5017148 <col:32> 'PAGE *' lvalue Var 0x7fc7a5015c68 'p' 'PAGE *'
+    |   | | `-IntegerLiteral 0x7fc7a5018648 <col:39> 'int' 0
+    |   | |-CompoundStmt 0x7fc7a5018790 <col:42, line:51:6>
+    |   | | |-BinaryOperator 0x7fc7a5018750 <line:49:3, col:17> 'PAGE *' '='
+    |   | | | |-DeclRefExpr 0x7fc7a5018690 <col:3> 'PAGE *' lvalue Var 0x7fc7a5015c68 'p' 'PAGE *'
+    |   | | | `-ImplicitCastExpr 0x7fc7a5018738 <col:7, col:17> 'PAGE *' <NullToPointer>
+    |   | | |   `-ParenExpr 0x7fc7a5018718 <col:7, col:17> 'void *'
+    |   | | |     `-CStyleCastExpr 0x7fc7a50186f0 <col:8, col:16> 'void *' <NullToPointer>
+    |   | | |       `-IntegerLiteral 0x7fc7a50186b8 <col:16> 'int' 0
+    |   | | `-GotoStmt 0x7fc7a5018778 <line:50:3, col:8> 'err' 0x7fc7a50167e8
+    |   | `-<<<NULL>>>
+    |   `-BinaryOperator 0x7fc7a50188a8 <line:52:6, col:20> 'PAGE *' '='
+    |     |-DeclRefExpr 0x7fc7a50187e8 <col:6> 'PAGE *' lvalue Var 0x7fc7a5015c68 'p' 'PAGE *'
+    |     `-ImplicitCastExpr 0x7fc7a5018890 <col:10, col:20> 'PAGE *' <NullToPointer>
+    |       `-ParenExpr 0x7fc7a5018870 <col:10, col:20> 'void *'
+    |         `-CStyleCastExpr 0x7fc7a5018848 <col:11, col:19> 'void *' <NullToPointer>
+    |           `-IntegerLiteral 0x7fc7a5018810 <col:19> 'int' 0
+    |-LabelStmt 0x7fc7a5018d08 <line:54:2, line:56:8> 'err'
+    | `-IfStmt 0x7fc7a5018cd0 <line:55:5, line:56:8>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-BinaryOperator 0x7fc7a5018c18 <line:55:9, col:76> 'int' '&&'
+    |   | |-BinaryOperator 0x7fc7a5018b68 <col:9, col:64> 'int' '&&'
+    |   | | |-BinaryOperator 0x7fc7a50189d8 <col:9, col:27> 'int' '!='
+    |   | | | |-ImplicitCastExpr 0x7fc7a50189a8 <col:9> 'DBC *' <LValueToRValue>
+    |   | | | | `-DeclRefExpr 0x7fc7a5018900 <col:9> 'DBC *' lvalue Var 0x7fc7a5015b48 'ndbc' 'DBC *'
+    |   | | | `-ImplicitCastExpr 0x7fc7a50189c0 <col:17, col:27> 'DBC *' <BitCast>
+    |   | | |   `-ParenExpr 0x7fc7a5018988 <col:17, col:27> 'void *'
+    |   | | |     `-CStyleCastExpr 0x7fc7a5018960 <col:18, col:26> 'void *' <NullToPointer>
+    |   | | |       `-IntegerLiteral 0x7fc7a5018928 <col:26> 'int' 0
+    |   | | `-BinaryOperator 0x7fc7a5018b40 <col:32, col:64> 'int' '!='
+    |   | |   |-ParenExpr 0x7fc7a5018b00 <col:32, col:59> 'int'
+    |   | |   | `-BinaryOperator 0x7fc7a5018ad8 <col:33, col:58> 'int' '='
+    |   | |   |   |-DeclRefExpr 0x7fc7a5018a00 <col:33> 'int' lvalue Var 0x7fc7a5016278 't_ret' 'int'
+    |   | |   |   `-CallExpr 0x7fc7a5018a90 <col:41, col:58> 'int'
+    |   | |   |     |-ImplicitCastExpr 0x7fc7a5018a78 <col:41> 'int (*)()' <FunctionToPointerDecay>
+    |   | |   |     | `-DeclRefExpr 0x7fc7a5018a28 <col:41> 'int ()' Function 0x7fc7a5015248 '__db_c_close' 'int ()'
+    |   | |   |     `-ImplicitCastExpr 0x7fc7a5018ac0 <col:54> 'DBC *' <LValueToRValue>
+    |   | |   |       `-DeclRefExpr 0x7fc7a5018a50 <col:54> 'DBC *' lvalue Var 0x7fc7a5015b48 'ndbc' 'DBC *'
+    |   | |   `-IntegerLiteral 0x7fc7a5018b20 <col:64> 'int' 0
+    |   | `-BinaryOperator 0x7fc7a5018bf0 <col:69, col:76> 'int' '=='
+    |   |   |-ImplicitCastExpr 0x7fc7a5018bd8 <col:69> 'int' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fc7a5018b90 <col:69> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'
+    |   |   `-IntegerLiteral 0x7fc7a5018bb8 <col:76> 'int' 0
+    |   |-BinaryOperator 0x7fc7a5018ca8 <line:56:2, col:8> 'int' '='
+    |   | |-DeclRefExpr 0x7fc7a5018c40 <col:2> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'
+    |   | `-ImplicitCastExpr 0x7fc7a5018c90 <col:8> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fc7a5018c68 <col:8> 'int' lvalue Var 0x7fc7a5016278 't_ret' 'int'
+    |   `-<<<NULL>>>
+    `-ReturnStmt 0x7fc7a5018d80 <line:57:5, col:16>
+      `-ImplicitCastExpr 0x7fc7a5018d68 <col:12, col:16> 'int' <LValueToRValue>
+        `-ParenExpr 0x7fc7a5018d48 <col:12, col:16> 'int' lvalue
+          `-DeclRefExpr 0x7fc7a5018d20 <col:13> 'int' lvalue Var 0x7fc7a5016200 'ret' 'int'

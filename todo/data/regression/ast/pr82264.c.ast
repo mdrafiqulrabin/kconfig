@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fea0382bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fea0382c970 <../Data/C2AST/pr82264.c:3:1, col:6> col:6 used a 'char'
+|-VarDecl 0x7fea03883858 <line:4:1, col:5> col:5 used c 'int'
+|-FunctionDecl 0x7fea03883910 <line:5:1, col:13> col:10 used b 'unsigned int ()'
+|-FunctionDecl 0x7fea038839d8 <line:6:1, line:9:1> line:7:1 used setjmp 'unsigned int ()'
+| |-CompoundStmt 0x7fea03883ac0 <line:8:1, line:9:1>
+| `-ReturnsTwiceAttr 0x7fea03883a78 <line:7:1> Implicit
+|-FunctionDecl 0x7fea03883b18 <line:10:1, line:15:1> line:11:1 used d 'void ()' static
+| `-CompoundStmt 0x7fea03883cf0 <line:12:1, line:15:1>
+|   `-IfStmt 0x7fea03883cb8 <line:13:3, line:14:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-CallExpr 0x7fea03883c20 <line:13:7, col:10> 'unsigned int'
+|     | `-ImplicitCastExpr 0x7fea03883c08 <col:7> 'unsigned int (*)()' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fea03883bb8 <col:7> 'unsigned int ()' Function 0x7fea03883910 'b' 'unsigned int ()'
+|     |-BinaryOperator 0x7fea03883c90 <line:14:5, col:9> 'int' '='
+|     | |-DeclRefExpr 0x7fea03883c48 <col:5> 'int' lvalue Var 0x7fea03883858 'c' 'int'
+|     | `-IntegerLiteral 0x7fea03883c70 <col:9> 'int' 3
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fea03883d28 <line:16:1, line:21:1> line:17:1 e 'void ()'
+  `-CompoundStmt 0x7fea03883f78 <line:18:1, line:21:1>
+    |-CallExpr 0x7fea03883e30 <line:19:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7fea03883e18 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fea03883dc8 <col:3> 'void ()' Function 0x7fea03883b18 'd' 'void ()'
+    `-BinaryOperator 0x7fea03883f50 <line:20:3, col:23> 'int' '&&'
+      |-ImplicitCastExpr 0x7fea03883f38 <col:3> 'int' <IntegralCast>
+      | `-ImplicitCastExpr 0x7fea03883f20 <col:3> 'char' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fea03883e58 <col:3> 'char' lvalue Var 0x7fea0382c970 'a' 'char'
+      `-StmtExpr 0x7fea03883f00 <col:8, col:23> 'unsigned int'
+        `-CompoundStmt 0x7fea03883ee8 <col:9, col:22>
+          `-CallExpr 0x7fea03883ec0 <col:11, col:19> 'unsigned int'
+            `-ImplicitCastExpr 0x7fea03883ea8 <col:11> 'unsigned int (*)()' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7fea03883e80 <col:11> 'unsigned int ()' Function 0x7fea038839d8 'setjmp' 'unsigned int ()'

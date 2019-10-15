@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fb0b682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb0b682c960 <../Data/C2AST/pr78904-1.c:7:1, line:12:1> line:7:8 struct S1 definition
+| |-FieldDecl 0x7fb0b7014238 <line:9:3, col:17> col:17 pad1 'unsigned char'
+| |-FieldDecl 0x7fb0b7014298 <line:10:3, col:17> col:17 referenced val 'unsigned char'
+| `-FieldDecl 0x7fb0b70142f8 <line:11:3, col:18> col:18 pad2 'unsigned short'
+|-FunctionDecl 0x7fb0b7014530 <line:14:1, line:19:1> line:14:11 test_and 'struct S1 (struct S1, struct S1)'
+| |-ParmVarDecl 0x7fb0b7014390 <col:21, col:31> col:31 used a 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7fb0b7014410 <col:34, col:44> col:44 used b 'struct S1':'struct S1'
+| `-CompoundStmt 0x7fb0b70147f8 <line:15:1, line:19:1>
+|   |-CompoundAssignOperator 0x7fb0b7014710 <line:16:3, col:14> 'unsigned char' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fb0b7014648 <col:3, col:5> 'unsigned char' lvalue .val 0x7fb0b7014298
+|   | | `-DeclRefExpr 0x7fb0b7014620 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014390 'a' 'struct S1':'struct S1'
+|   | `-ImplicitCastExpr 0x7fb0b70146f8 <col:12, col:14> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fb0b70146e0 <col:12, col:14> 'unsigned char' <LValueToRValue>
+|   |     `-MemberExpr 0x7fb0b70146a8 <col:12, col:14> 'unsigned char' lvalue .val 0x7fb0b7014298
+|   |       `-DeclRefExpr 0x7fb0b7014680 <col:12> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014410 'b' 'struct S1':'struct S1'
+|   `-ReturnStmt 0x7fb0b70147e0 <line:18:3, col:10>
+|     `-ImplicitCastExpr 0x7fb0b70147c8 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb0b70147a0 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014390 'a' 'struct S1':'struct S1'
+|-FunctionDecl 0x7fb0b7014958 <line:23:1, line:28:1> line:23:11 test_or 'struct S1 (struct S1, struct S1)'
+| |-ParmVarDecl 0x7fb0b7014838 <col:20, col:30> col:30 used a 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7fb0b70148b8 <col:33, col:43> col:43 used b 'struct S1':'struct S1'
+| `-CompoundStmt 0x7fb0b7014b88 <line:24:1, line:28:1>
+|   |-CompoundAssignOperator 0x7fb0b7014af8 <line:25:3, col:14> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fb0b7014a30 <col:3, col:5> 'unsigned char' lvalue .val 0x7fb0b7014298
+|   | | `-DeclRefExpr 0x7fb0b7014a08 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014838 'a' 'struct S1':'struct S1'
+|   | `-ImplicitCastExpr 0x7fb0b7014ae0 <col:12, col:14> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fb0b7014ac8 <col:12, col:14> 'unsigned char' <LValueToRValue>
+|   |     `-MemberExpr 0x7fb0b7014a90 <col:12, col:14> 'unsigned char' lvalue .val 0x7fb0b7014298
+|   |       `-DeclRefExpr 0x7fb0b7014a68 <col:12> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b70148b8 'b' 'struct S1':'struct S1'
+|   `-ReturnStmt 0x7fb0b7014b70 <line:27:3, col:10>
+|     `-ImplicitCastExpr 0x7fb0b7014b58 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb0b7014b30 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014838 'a' 'struct S1':'struct S1'
+|-FunctionDecl 0x7fb0b7014ce8 <line:32:1, line:37:1> line:32:11 test_xor 'struct S1 (struct S1, struct S1)'
+| |-ParmVarDecl 0x7fb0b7014bc8 <col:21, col:31> col:31 used a 'struct S1':'struct S1'
+| |-ParmVarDecl 0x7fb0b7014c48 <col:34, col:44> col:44 used b 'struct S1':'struct S1'
+| `-CompoundStmt 0x7fb0b7014f18 <line:33:1, line:37:1>
+|   |-CompoundAssignOperator 0x7fb0b7014e88 <line:34:3, col:14> 'unsigned char' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-MemberExpr 0x7fb0b7014dc0 <col:3, col:5> 'unsigned char' lvalue .val 0x7fb0b7014298
+|   | | `-DeclRefExpr 0x7fb0b7014d98 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014bc8 'a' 'struct S1':'struct S1'
+|   | `-ImplicitCastExpr 0x7fb0b7014e70 <col:12, col:14> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fb0b7014e58 <col:12, col:14> 'unsigned char' <LValueToRValue>
+|   |     `-MemberExpr 0x7fb0b7014e20 <col:12, col:14> 'unsigned char' lvalue .val 0x7fb0b7014298
+|   |       `-DeclRefExpr 0x7fb0b7014df8 <col:12> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014c48 'b' 'struct S1':'struct S1'
+|   `-ReturnStmt 0x7fb0b7014f00 <line:36:3, col:10>
+|     `-ImplicitCastExpr 0x7fb0b7014ee8 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb0b7014ec0 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014bc8 'a' 'struct S1':'struct S1'
+`-FunctionDecl 0x7fb0b7015078 <line:41:1, line:46:1> line:41:11 test_add 'struct S1 (struct S1, struct S1)'
+  |-ParmVarDecl 0x7fb0b7014f58 <col:21, col:31> col:31 used a 'struct S1':'struct S1'
+  |-ParmVarDecl 0x7fb0b7014fd8 <col:34, col:44> col:44 used b 'struct S1':'struct S1'
+  `-CompoundStmt 0x7fb0b70152a8 <line:42:1, line:46:1>
+    |-CompoundAssignOperator 0x7fb0b7015218 <line:43:3, col:14> 'unsigned char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-MemberExpr 0x7fb0b7015150 <col:3, col:5> 'unsigned char' lvalue .val 0x7fb0b7014298
+    | | `-DeclRefExpr 0x7fb0b7015128 <col:3> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014f58 'a' 'struct S1':'struct S1'
+    | `-ImplicitCastExpr 0x7fb0b7015200 <col:12, col:14> 'int' <IntegralCast>
+    |   `-ImplicitCastExpr 0x7fb0b70151e8 <col:12, col:14> 'unsigned char' <LValueToRValue>
+    |     `-MemberExpr 0x7fb0b70151b0 <col:12, col:14> 'unsigned char' lvalue .val 0x7fb0b7014298
+    |       `-DeclRefExpr 0x7fb0b7015188 <col:12> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014fd8 'b' 'struct S1':'struct S1'
+    `-ReturnStmt 0x7fb0b7015290 <line:45:3, col:10>
+      `-ImplicitCastExpr 0x7fb0b7015278 <col:10> 'struct S1':'struct S1' <LValueToRValue>
+        `-DeclRefExpr 0x7fb0b7015250 <col:10> 'struct S1':'struct S1' lvalue ParmVar 0x7fb0b7014f58 'a' 'struct S1':'struct S1'

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f9efb0002e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9efc00a060 <../Data/C2AST/pr36790.c:5:1, line:8:1> line:6:1 used foo 'void (char)'
+| |-ParmVarDecl 0x7f9efb000f70 <col:6, col:11> col:11 b 'char'
+| `-CompoundStmt 0x7f9efc00a148 <line:7:1, line:8:1>
+|-FunctionDecl 0x7f9efc00a1f0 <line:10:1, line:16:1> line:11:1 used bar 'void (char)'
+| |-ParmVarDecl 0x7f9efc00a168 <col:6, col:11> col:11 used b 'char'
+| `-CompoundStmt 0x7f9efc00a400 <line:12:1, line:16:1>
+|   |-CallExpr 0x7f9efc00a330 <line:13:3, col:9> 'void'
+|   | |-ImplicitCastExpr 0x7f9efc00a318 <col:3> 'void (*)(char)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7f9efc00a298 <col:3> 'void (char)' Function 0x7f9efc00a060 'foo' 'void (char)'
+|   | `-ImplicitCastExpr 0x7f9efc00a360 <col:8> 'char' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f9efc00a2c0 <col:8> 'char' lvalue ParmVar 0x7f9efc00a168 'b' 'char'
+|   `-BinaryOperator 0x7f9efc00a3d8 <line:15:5, col:9> 'char' '='
+|     |-DeclRefExpr 0x7f9efc00a378 <col:5> 'char' lvalue ParmVar 0x7f9efc00a168 'b' 'char'
+|     `-ImplicitCastExpr 0x7f9efc00a3c0 <col:9> 'char' <IntegralCast>
+|       `-IntegerLiteral 0x7f9efc00a3a0 <col:9> 'int' 0
+`-FunctionDecl 0x7f9efc00a470 <line:18:1, line:23:1> line:19:1 main 'int ()'
+  `-CompoundStmt 0x7f9efc00a5f0 <line:20:1, line:23:1>
+    |-CallExpr 0x7f9efc00a570 <line:21:3, col:9> 'void'
+    | |-ImplicitCastExpr 0x7f9efc00a558 <col:3> 'void (*)(char)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f9efc00a510 <col:3> 'void (char)' Function 0x7f9efc00a1f0 'bar' 'void (char)'
+    | `-ImplicitCastExpr 0x7f9efc00a5a0 <col:8> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9efc00a538 <col:8> 'int' 0
+    `-ReturnStmt 0x7f9efc00a5d8 <line:22:3, col:10>
+      `-IntegerLiteral 0x7f9efc00a5b8 <col:10> 'int' 0

@@ -1,0 +1,127 @@
+TranslationUnitDecl 0x7f82880128e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8287819e68 <../Data/C2AST/pr78720.c:3:1, line:7:1> line:4:1 used foo 'long (signed char)'
+| |-ParmVarDecl 0x7f8288013578 <col:6, col:18> col:18 used x 'signed char'
+| |-CompoundStmt 0x7f828781a0c0 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7f828781a0a8 <line:6:3, col:29>
+| |   `-ConditionalOperator 0x7f828781a078 <col:10, col:29> 'long'
+| |     |-BinaryOperator 0x7f828781a010 <col:10, col:14> 'int' '<'
+| |     | |-ImplicitCastExpr 0x7f8287819ff8 <col:10> 'int' <IntegralCast>
+| |     | | `-ImplicitCastExpr 0x7f8287819fe0 <col:10> 'signed char' <LValueToRValue>
+| |     | |   `-DeclRefExpr 0x7f8287819f98 <col:10> 'signed char' lvalue ParmVar 0x7f8288013578 'x' 'signed char'
+| |     | `-IntegerLiteral 0x7f8287819fc0 <col:14> 'int' 0
+| |     |-IntegerLiteral 0x7f828781a038 <col:18> 'long' 524288
+| |     `-IntegerLiteral 0x7f828781a058 <col:29> 'long' 0
+| `-NoInlineAttr 0x7f8287819f10 <line:3:16>
+|-FunctionDecl 0x7f828781a180 <line:9:1, line:13:1> line:10:1 used bar 'long (signed char)'
+| |-ParmVarDecl 0x7f828781a0f0 <col:6, col:18> col:18 used x 'signed char'
+| |-CompoundStmt 0x7f828781a398 <line:11:1, line:13:1>
+| | `-ReturnStmt 0x7f828781a380 <line:12:3, col:26>
+| |   `-ConditionalOperator 0x7f828781a350 <col:10, col:26> 'long'
+| |     |-BinaryOperator 0x7f828781a2e8 <col:10, col:14> 'int' '<'
+| |     | |-ImplicitCastExpr 0x7f828781a2d0 <col:10> 'int' <IntegralCast>
+| |     | | `-ImplicitCastExpr 0x7f828781a2b8 <col:10> 'signed char' <LValueToRValue>
+| |     | |   `-DeclRefExpr 0x7f828781a270 <col:10> 'signed char' lvalue ParmVar 0x7f828781a0f0 'x' 'signed char'
+| |     | `-IntegerLiteral 0x7f828781a298 <col:14> 'int' 0
+| |     |-IntegerLiteral 0x7f828781a310 <col:18> 'long' 128
+| |     `-IntegerLiteral 0x7f828781a330 <col:26> 'long' 0
+| `-NoInlineAttr 0x7f828781a228 <line:9:16>
+|-FunctionDecl 0x7f828781a458 <line:15:1, line:19:1> line:16:1 used baz 'long (signed char)'
+| |-ParmVarDecl 0x7f828781a3c8 <col:6, col:18> col:18 used x 'signed char'
+| |-CompoundStmt 0x7f828781a670 <line:17:1, line:19:1>
+| | `-ReturnStmt 0x7f828781a658 <line:18:3, col:26>
+| |   `-ConditionalOperator 0x7f828781a628 <col:10, col:26> 'long'
+| |     |-BinaryOperator 0x7f828781a5c0 <col:10, col:14> 'int' '<'
+| |     | |-ImplicitCastExpr 0x7f828781a5a8 <col:10> 'int' <IntegralCast>
+| |     | | `-ImplicitCastExpr 0x7f828781a590 <col:10> 'signed char' <LValueToRValue>
+| |     | |   `-DeclRefExpr 0x7f828781a548 <col:10> 'signed char' lvalue ParmVar 0x7f828781a3c8 'x' 'signed char'
+| |     | `-IntegerLiteral 0x7f828781a570 <col:14> 'int' 0
+| |     |-IntegerLiteral 0x7f828781a5e8 <col:18> 'long' 32
+| |     `-IntegerLiteral 0x7f828781a608 <col:26> 'long' 0
+| `-NoInlineAttr 0x7f828781a500 <line:15:16>
+|-FunctionDecl 0x7f828781a6e0 <line:21:1, line:29:1> line:22:1 main 'int ()'
+| `-CompoundStmt 0x7f8287830de8 <line:23:1, line:29:1>
+|   |-IfStmt 0x7f8287830d78 <line:24:3, line:27:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8287830ba8 <line:24:7, line:26:58> 'int' '||'
+|   | | |-BinaryOperator 0x7f8287830a90 <line:24:7, line:26:40> 'int' '||'
+|   | | | |-BinaryOperator 0x7f8287830978 <line:24:7, line:26:22> 'int' '||'
+|   | | | | |-BinaryOperator 0x7f8287830860 <line:24:7, line:25:55> 'int' '||'
+|   | | | | | |-BinaryOperator 0x7f828781ad38 <line:24:7, line:25:38> 'int' '||'
+|   | | | | | | |-BinaryOperator 0x7f828781ac20 <line:24:7, line:25:21> 'int' '||'
+|   | | | | | | | |-BinaryOperator 0x7f828781ab08 <line:24:7, col:64> 'int' '||'
+|   | | | | | | | | |-BinaryOperator 0x7f828781a9d0 <col:7, col:43> 'int' '||'
+|   | | | | | | | | | |-BinaryOperator 0x7f828781a898 <col:7, col:19> 'int' '!='
+|   | | | | | | | | | | |-CallExpr 0x7f828781a830 <col:7, col:14> 'long'
+|   | | | | | | | | | | | |-ImplicitCastExpr 0x7f828781a818 <col:7> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | | | | | | | | | | `-DeclRefExpr 0x7f828781a780 <col:7> 'long (signed char)' Function 0x7f8287819e68 'foo' 'long (signed char)'
+|   | | | | | | | | | | | `-ImplicitCastExpr 0x7f828781a860 <col:12, col:13> 'signed char' <IntegralCast>
+|   | | | | | | | | | | |   `-UnaryOperator 0x7f828781a7c8 <col:12, col:13> 'int' prefix '-'
+|   | | | | | | | | | | |     `-IntegerLiteral 0x7f828781a7a8 <col:13> 'int' 1
+|   | | | | | | | | | | `-IntegerLiteral 0x7f828781a878 <col:19> 'long' 524288
+|   | | | | | | | | | `-BinaryOperator 0x7f828781a9a8 <col:31, col:43> 'int' '!='
+|   | | | | | | | | |   |-CallExpr 0x7f828781a940 <col:31, col:38> 'long'
+|   | | | | | | | | |   | |-ImplicitCastExpr 0x7f828781a928 <col:31> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | | | | | | |   | | `-DeclRefExpr 0x7f828781a8c0 <col:31> 'long (signed char)' Function 0x7f828781a180 'bar' 'long (signed char)'
+|   | | | | | | | | |   | `-ImplicitCastExpr 0x7f828781a970 <col:36, col:37> 'signed char' <IntegralCast>
+|   | | | | | | | | |   |   `-UnaryOperator 0x7f828781a908 <col:36, col:37> 'int' prefix '-'
+|   | | | | | | | | |   |     `-IntegerLiteral 0x7f828781a8e8 <col:37> 'int' 1
+|   | | | | | | | | |   `-IntegerLiteral 0x7f828781a988 <col:43> 'long' 128
+|   | | | | | | | | `-BinaryOperator 0x7f828781aae0 <col:52, col:64> 'int' '!='
+|   | | | | | | | |   |-CallExpr 0x7f828781aa78 <col:52, col:59> 'long'
+|   | | | | | | | |   | |-ImplicitCastExpr 0x7f828781aa60 <col:52> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | | | | | |   | | `-DeclRefExpr 0x7f828781a9f8 <col:52> 'long (signed char)' Function 0x7f828781a458 'baz' 'long (signed char)'
+|   | | | | | | | |   | `-ImplicitCastExpr 0x7f828781aaa8 <col:57, col:58> 'signed char' <IntegralCast>
+|   | | | | | | | |   |   `-UnaryOperator 0x7f828781aa40 <col:57, col:58> 'int' prefix '-'
+|   | | | | | | | |   |     `-IntegerLiteral 0x7f828781aa20 <col:58> 'int' 1
+|   | | | | | | | |   `-IntegerLiteral 0x7f828781aac0 <col:64> 'long' 32
+|   | | | | | | | `-BinaryOperator 0x7f828781abf8 <line:25:10, col:21> 'int' '!='
+|   | | | | | | |   |-CallExpr 0x7f828781ab90 <col:10, col:16> 'long'
+|   | | | | | | |   | |-ImplicitCastExpr 0x7f828781ab78 <col:10> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | | | | |   | | `-DeclRefExpr 0x7f828781ab30 <col:10> 'long (signed char)' Function 0x7f8287819e68 'foo' 'long (signed char)'
+|   | | | | | | |   | `-ImplicitCastExpr 0x7f828781abc0 <col:15> 'signed char' <IntegralCast>
+|   | | | | | | |   |   `-IntegerLiteral 0x7f828781ab58 <col:15> 'int' 0
+|   | | | | | | |   `-IntegerLiteral 0x7f828781abd8 <col:21> 'long' 0
+|   | | | | | | `-BinaryOperator 0x7f828781ad10 <col:27, col:38> 'int' '!='
+|   | | | | | |   |-CallExpr 0x7f828781aca8 <col:27, col:33> 'long'
+|   | | | | | |   | |-ImplicitCastExpr 0x7f828781ac90 <col:27> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | | | |   | | `-DeclRefExpr 0x7f828781ac48 <col:27> 'long (signed char)' Function 0x7f828781a180 'bar' 'long (signed char)'
+|   | | | | | |   | `-ImplicitCastExpr 0x7f828781acd8 <col:32> 'signed char' <IntegralCast>
+|   | | | | | |   |   `-IntegerLiteral 0x7f828781ac70 <col:32> 'int' 0
+|   | | | | | |   `-IntegerLiteral 0x7f828781acf0 <col:38> 'long' 0
+|   | | | | | `-BinaryOperator 0x7f8287830838 <col:44, col:55> 'int' '!='
+|   | | | | |   |-CallExpr 0x7f828781adc0 <col:44, col:50> 'long'
+|   | | | | |   | |-ImplicitCastExpr 0x7f828781ada8 <col:44> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | | |   | | `-DeclRefExpr 0x7f828781ad60 <col:44> 'long (signed char)' Function 0x7f828781a458 'baz' 'long (signed char)'
+|   | | | | |   | `-ImplicitCastExpr 0x7f8287830800 <col:49> 'signed char' <IntegralCast>
+|   | | | | |   |   `-IntegerLiteral 0x7f828781ad88 <col:49> 'int' 0
+|   | | | | |   `-IntegerLiteral 0x7f8287830818 <col:55> 'long' 0
+|   | | | | `-BinaryOperator 0x7f8287830950 <line:26:10, col:22> 'int' '!='
+|   | | | |   |-CallExpr 0x7f82878308e8 <col:10, col:17> 'long'
+|   | | | |   | |-ImplicitCastExpr 0x7f82878308d0 <col:10> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | | |   | | `-DeclRefExpr 0x7f8287830888 <col:10> 'long (signed char)' Function 0x7f8287819e68 'foo' 'long (signed char)'
+|   | | | |   | `-ImplicitCastExpr 0x7f8287830918 <col:15> 'signed char' <IntegralCast>
+|   | | | |   |   `-IntegerLiteral 0x7f82878308b0 <col:15> 'int' 31
+|   | | | |   `-IntegerLiteral 0x7f8287830930 <col:22> 'long' 0
+|   | | | `-BinaryOperator 0x7f8287830a68 <col:28, col:40> 'int' '!='
+|   | | |   |-CallExpr 0x7f8287830a00 <col:28, col:35> 'long'
+|   | | |   | |-ImplicitCastExpr 0x7f82878309e8 <col:28> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | | |   | | `-DeclRefExpr 0x7f82878309a0 <col:28> 'long (signed char)' Function 0x7f828781a180 'bar' 'long (signed char)'
+|   | | |   | `-ImplicitCastExpr 0x7f8287830a30 <col:33> 'signed char' <IntegralCast>
+|   | | |   |   `-IntegerLiteral 0x7f82878309c8 <col:33> 'int' 31
+|   | | |   `-IntegerLiteral 0x7f8287830a48 <col:40> 'long' 0
+|   | | `-BinaryOperator 0x7f8287830b80 <col:46, col:58> 'int' '!='
+|   | |   |-CallExpr 0x7f8287830b18 <col:46, col:53> 'long'
+|   | |   | |-ImplicitCastExpr 0x7f8287830b00 <col:46> 'long (*)(signed char)' <FunctionToPointerDecay>
+|   | |   | | `-DeclRefExpr 0x7f8287830ab8 <col:46> 'long (signed char)' Function 0x7f828781a458 'baz' 'long (signed char)'
+|   | |   | `-ImplicitCastExpr 0x7f8287830b48 <col:51> 'signed char' <IntegralCast>
+|   | |   |   `-IntegerLiteral 0x7f8287830ae0 <col:51> 'int' 31
+|   | |   `-IntegerLiteral 0x7f8287830b60 <col:58> 'long' 0
+|   | |-CallExpr 0x7f8287830d50 <line:27:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8287830d38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8287830ce8 <col:5> '<builtin fn type>' Function 0x7f8287830c00 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8287830dd0 <line:28:3, col:10>
+|     `-IntegerLiteral 0x7f8287830db0 <col:10> 'int' 0
+`-FunctionDecl 0x7f8287830c00 <line:27:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f8287830ca0 <col:5> Implicit

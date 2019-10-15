@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fedfe8166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fedff00b050 <../Data/C2AST/pragma-darwin.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fedff00b0f0 prev 0x7fedff00b050 <col:1, col:23> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fedff00b190 <line:25:1, col:31> col:8 struct s2 definition
+| |-FieldDecl 0x7fedff00b258 <col:13, col:19> col:19 f1 'short'
+| `-FieldDecl 0x7fedff00b2b8 <col:23, col:27> col:27 f2 'int'
+|-RecordDecl 0x7fedff00b300 <line:31:1, col:31> col:8 struct s4 definition
+| |-FieldDecl 0x7fedff00b3c8 <col:13, col:19> col:19 f1 'short'
+| `-FieldDecl 0x7fedff00b428 <col:23, col:27> col:27 f2 'int'
+|-FunctionDecl 0x7fedff00b4c0 <line:40:1, line:59:1> line:41:1 main 'int ()'
+| `-CompoundStmt 0x7fedff00baf8 <line:42:1, line:59:1>
+|   |-DeclStmt 0x7fedff00b6a8 <line:43:3, col:11>
+|   | |-VarDecl 0x7fedff00b5b8 <col:3, col:7> col:7 x 'int'
+|   | | `-UnusedAttr 0x7fedff00b6c0 <line:44:19> Implicit unused
+|   | `-VarDecl 0x7fedff00b630 <line:43:3, col:10> col:10 z 'int'
+|   |-IfStmt 0x7fedff00b8c8 <line:50:3, line:51:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fedff00b7b8 <line:50:7, col:29> 'int' '!='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7fedff00b760 <col:7, col:24> 'unsigned long' sizeof 'struct s2':'struct s2'
+|   | | `-ImplicitCastExpr 0x7fedff00b7a0 <col:29> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fedff00b780 <col:29> 'int' 8
+|   | |-CallExpr 0x7fedff00b8a0 <line:51:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fedff00b888 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fedff00b830 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fedff00b0f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fedff00ba88 <line:56:3, line:57:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fedff00b9a8 <line:56:7, col:29> 'int' '!='
+|   | | |-UnaryExprOrTypeTraitExpr 0x7fedff00b950 <col:7, col:24> 'unsigned long' sizeof 'struct s4':'struct s4'
+|   | | `-ImplicitCastExpr 0x7fedff00b990 <col:29> 'unsigned long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fedff00b970 <col:29> 'int' 8
+|   | |-CallExpr 0x7fedff00ba60 <line:57:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fedff00ba48 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fedff00ba20 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fedff00b0f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fedff00bae0 <line:58:3, col:10>
+|     `-IntegerLiteral 0x7fedff00bac0 <col:10> 'int' 0
+`-FunctionDecl 0x7fedff00bb78 <line:61:1, line:69:1> line:62:1 unused_err_test 'void ()'
+  `-CompoundStmt 0x7fedff00bd38 <line:63:1, line:69:1>
+    `-DeclStmt 0x7fedff00bd20 <line:64:3, col:11>
+      |-VarDecl 0x7fedff00bc30 <col:3, col:7> col:7 a 'int'
+      `-VarDecl 0x7fedff00bca8 <col:3, col:10> col:10 b 'int'

@@ -1,0 +1,108 @@
+TranslationUnitDecl 0x7f80e08174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f80e0818160 <../Data/C2AST/pr15262-1.c:2:1, line:6:1> line:2:8 struct A definition
+| |-FieldDecl 0x7f80e0859038 <line:4:3, col:7> col:7 t 'int'
+| `-FieldDecl 0x7f80e0859098 <line:5:3, col:7> col:7 referenced i 'int'
+|-FunctionDecl 0x7f80e0859130 <line:8:1, col:24> col:5 used foo 'int ()'
+| `-CompoundStmt 0x7f80e0859248 <col:12, col:24>
+|   `-ReturnStmt 0x7f80e0859230 <col:14, col:21>
+|     `-IntegerLiteral 0x7f80e0859210 <col:21> 'int' 3
+|-FunctionDecl 0x7f80e0859288 <line:10:1, line:38:1> line:10:1 main 'int ()'
+| `-CompoundStmt 0x7f80e085a678 <line:11:1, line:38:1>
+|   |-DeclStmt 0x7f80e08594d8 <line:12:3, col:22>
+|   | |-VarDecl 0x7f80e0859380 <col:3, col:12> col:12 loc 'struct A':'struct A'
+|   | `-VarDecl 0x7f80e0859460 <col:3, col:18> col:18 used locp 'struct A *'
+|   |-DeclStmt 0x7f80e08596a0 <line:13:3, col:17>
+|   | |-VarDecl 0x7f80e0859508 <col:3, col:9> col:9 used f 'float'
+|   | |-VarDecl 0x7f80e0859580 <col:3, col:12> col:12 used g 'float'
+|   | `-VarDecl 0x7f80e0859620 <col:3, col:16> col:16 used p 'float *'
+|   |-DeclStmt 0x7f80e08597e8 <line:14:3, col:18>
+|   | |-VarDecl 0x7f80e08596d0 <col:3, col:7> col:7 used T355 'int'
+|   | `-VarDecl 0x7f80e0859770 <col:3, col:14> col:14 used T356 'int *'
+|   |-BinaryOperator 0x7f80e0859860 <line:17:3, col:7> 'float' '='
+|   | |-DeclRefExpr 0x7f80e0859800 <col:3> 'float' lvalue Var 0x7f80e0859508 'f' 'float'
+|   | `-ImplicitCastExpr 0x7f80e0859848 <col:7> 'float' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7f80e0859828 <col:7> 'int' 3
+|   |-BinaryOperator 0x7f80e08598e8 <line:18:3, col:7> 'float' '='
+|   | |-DeclRefExpr 0x7f80e0859888 <col:3> 'float' lvalue Var 0x7f80e0859580 'g' 'float'
+|   | `-ImplicitCastExpr 0x7f80e08598d0 <col:7> 'float' <IntegralToFloating>
+|   |   `-IntegerLiteral 0x7f80e08598b0 <col:7> 'int' 2
+|   |-BinaryOperator 0x7f80e0859b50 <line:19:3, col:22> 'float *' '='
+|   | |-DeclRefExpr 0x7f80e0859910 <col:3> 'float *' lvalue Var 0x7f80e0859620 'p' 'float *'
+|   | `-ConditionalOperator 0x7f80e0859b20 <col:7, col:22> 'float *'
+|   |   |-CallExpr 0x7f80e08599a0 <col:7, col:12> 'int'
+|   |   | `-ImplicitCastExpr 0x7f80e0859988 <col:7> 'int (*)()' <FunctionToPointerDecay>
+|   |   |   `-DeclRefExpr 0x7f80e0859938 <col:7> 'int ()' Function 0x7f80e0859130 'foo' 'int ()'
+|   |   |-UnaryOperator 0x7f80e08599f0 <col:16, col:17> 'float *' prefix '&'
+|   |   | `-DeclRefExpr 0x7f80e08599c8 <col:17> 'float' lvalue Var 0x7f80e0859580 'g' 'float'
+|   |   `-UnaryOperator 0x7f80e0859a38 <col:21, col:22> 'float *' prefix '&'
+|   |     `-DeclRefExpr 0x7f80e0859a10 <col:22> 'float' lvalue Var 0x7f80e0859508 'f' 'float'
+|   |-IfStmt 0x7f80e0859cd8 <line:20:3, line:21:9>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f80e0859c28 <line:20:7, col:12> 'int' '>'
+|   | | |-ImplicitCastExpr 0x7f80e0859c10 <col:7, col:8> 'double' <FloatingCast>
+|   | | | `-ImplicitCastExpr 0x7f80e0859bf8 <col:7, col:8> 'float' <LValueToRValue>
+|   | | |   `-UnaryOperator 0x7f80e0859bb8 <col:7, col:8> 'float' lvalue prefix '*'
+|   | | |     `-ImplicitCastExpr 0x7f80e0859ba0 <col:8> 'float *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f80e0859b78 <col:8> 'float *' lvalue Var 0x7f80e0859620 'p' 'float *'
+|   | | `-FloatingLiteral 0x7f80e0859bd8 <col:12> 'double' 0.000000e+00
+|   | |-BinaryOperator 0x7f80e0859cb0 <line:21:5, col:9> 'float' '='
+|   | | |-DeclRefExpr 0x7f80e0859c50 <col:5> 'float' lvalue Var 0x7f80e0859580 'g' 'float'
+|   | | `-ImplicitCastExpr 0x7f80e0859c98 <col:9> 'float' <IntegralToFloating>
+|   | |   `-IntegerLiteral 0x7f80e0859c78 <col:9> 'int' 1
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f80e0859fd8 <line:24:3, col:32> 'struct A *' '='
+|   | |-DeclRefExpr 0x7f80e0859d10 <col:3> 'struct A *' lvalue Var 0x7f80e0859460 'locp' 'struct A *'
+|   | `-ImplicitCastExpr 0x7f80e0859fc0 <col:10, col:32> 'struct A *' <BitCast>
+|   |   `-CallExpr 0x7f80e0859f90 <col:10, col:32> 'void *'
+|   |     |-ImplicitCastExpr 0x7f80e0859f78 <col:10> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f80e0859e80 <col:10> 'void *(unsigned long)' Function 0x7f80e0859d78 'malloc' 'void *(unsigned long)'
+|   |     `-UnaryExprOrTypeTraitExpr 0x7f80e0859f28 <col:18, col:31> 'unsigned long' sizeof
+|   |       `-ParenExpr 0x7f80e0859f08 <col:25, col:31> 'struct A':'struct A' lvalue
+|   |         `-UnaryOperator 0x7f80e0859ee8 <col:26, col:27> 'struct A':'struct A' lvalue prefix '*'
+|   |           `-ImplicitCastExpr 0x7f80e0859ed0 <col:27> 'struct A *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7f80e0859ea8 <col:27> 'struct A *' lvalue Var 0x7f80e0859460 'locp' 'struct A *'
+|   |-BinaryOperator 0x7f80e085a098 <line:25:3, col:13> 'int' '='
+|   | |-MemberExpr 0x7f80e085a040 <col:3, col:9> 'int' lvalue ->i 0x7f80e0859098
+|   | | `-ImplicitCastExpr 0x7f80e085a028 <col:3> 'struct A *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f80e085a000 <col:3> 'struct A *' lvalue Var 0x7f80e0859460 'locp' 'struct A *'
+|   | `-IntegerLiteral 0x7f80e085a078 <col:13> 'int' 10
+|   |-BinaryOperator 0x7f80e085a178 <line:26:3, col:16> 'int' '='
+|   | |-DeclRefExpr 0x7f80e085a0c0 <col:3> 'int' lvalue Var 0x7f80e08596d0 'T355' 'int'
+|   | `-ImplicitCastExpr 0x7f80e085a160 <col:10, col:16> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7f80e085a128 <col:10, col:16> 'int' lvalue ->i 0x7f80e0859098
+|   |     `-ImplicitCastExpr 0x7f80e085a110 <col:10> 'struct A *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f80e085a0e8 <col:10> 'struct A *' lvalue Var 0x7f80e0859460 'locp' 'struct A *'
+|   |-BinaryOperator 0x7f80e085a260 <line:29:3, col:17> 'int *' '='
+|   | |-DeclRefExpr 0x7f80e085a1a0 <col:3> 'int *' lvalue Var 0x7f80e0859770 'T356' 'int *'
+|   | `-UnaryOperator 0x7f80e085a240 <col:10, col:17> 'int *' prefix '&'
+|   |   `-MemberExpr 0x7f80e085a208 <col:11, col:17> 'int' lvalue ->i 0x7f80e0859098
+|   |     `-ImplicitCastExpr 0x7f80e085a1f0 <col:11> 'struct A *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f80e085a1c8 <col:11> 'struct A *' lvalue Var 0x7f80e0859460 'locp' 'struct A *'
+|   |-BinaryOperator 0x7f80e085a308 <line:30:3, col:11> 'int' '='
+|   | |-UnaryOperator 0x7f80e085a2c8 <col:3, col:4> 'int' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f80e085a2b0 <col:4> 'int *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f80e085a288 <col:4> 'int *' lvalue Var 0x7f80e0859770 'T356' 'int *'
+|   | `-IntegerLiteral 0x7f80e085a2e8 <col:11> 'int' 1
+|   |-BinaryOperator 0x7f80e085a3e8 <line:33:3, col:16> 'int' '='
+|   | |-DeclRefExpr 0x7f80e085a330 <col:3> 'int' lvalue Var 0x7f80e08596d0 'T355' 'int'
+|   | `-ImplicitCastExpr 0x7f80e085a3d0 <col:10, col:16> 'int' <LValueToRValue>
+|   |   `-MemberExpr 0x7f80e085a398 <col:10, col:16> 'int' lvalue ->i 0x7f80e0859098
+|   |     `-ImplicitCastExpr 0x7f80e085a380 <col:10> 'struct A *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f80e085a358 <col:10> 'struct A *' lvalue Var 0x7f80e0859460 'locp' 'struct A *'
+|   |-IfStmt 0x7f80e085a608 <line:34:3, line:35:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f80e085a470 <line:34:7, col:15> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f80e085a458 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f80e085a410 <col:7> 'int' lvalue Var 0x7f80e08596d0 'T355' 'int'
+|   | | `-IntegerLiteral 0x7f80e085a438 <col:15> 'int' 1
+|   | |-CallExpr 0x7f80e085a5e0 <line:35:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7f80e085a5c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f80e085a570 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f80e085a4d0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f80e085a660 <line:37:3, col:10>
+|     `-IntegerLiteral 0x7f80e085a640 <col:10> 'int' 0
+|-FunctionDecl 0x7f80e0859d78 <line:24:10> col:10 implicit used malloc 'void *(unsigned long)' extern
+| `-ParmVarDecl 0x7f80e0859e18 <<invalid sloc>> <invalid sloc> 'unsigned long'
+`-FunctionDecl 0x7f80e085a4d0 <line:35:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern

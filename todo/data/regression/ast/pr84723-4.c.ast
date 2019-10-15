@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fab2282bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fab23014330 <../Data/C2AST/pr84723-4.c:6:1, line:11:1> line:9:1 foo 'void (void)'
+  |-CompoundStmt 0x7fab23014458 <line:10:1, line:11:1>
+  `-NakedAttr 0x7fab230143d0 <line:7:16>

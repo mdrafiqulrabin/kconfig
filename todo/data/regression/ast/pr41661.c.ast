@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fe3018296e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe30182a378 <../Data/C2AST/pr41661.c:5:1, col:5> col:5 used g 'int'
+|-FunctionDecl 0x7fe30281a520 <line:7:1, line:10:1> line:7:6 used foo 'void (int)'
+| |-ParmVarDecl 0x7fe30281a458 <col:11, col:15> col:15 used x 'int'
+| `-CompoundStmt 0x7fe30281a658 <line:8:1, line:10:1>
+|   `-BinaryOperator 0x7fe30281a630 <line:9:3, col:7> 'int' '='
+|     |-DeclRefExpr 0x7fe30281a5c8 <col:3> 'int' lvalue Var 0x7fe30182a378 'g' 'int'
+|     `-ImplicitCastExpr 0x7fe30281a618 <col:7> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe30281a5f0 <col:7> 'int' lvalue ParmVar 0x7fe30281a458 'x' 'int'
+|-FunctionDecl 0x7fe30281a750 <line:12:1, line:15:1> line:12:6 used bar 'void (double)'
+| |-ParmVarDecl 0x7fe30281a688 <col:11, col:18> col:18 used d 'double'
+| `-CompoundStmt 0x7fe30281a930 <line:13:1, line:15:1>
+|   `-CallExpr 0x7fe30281a900 <line:14:3, col:14> 'void'
+|     |-ImplicitCastExpr 0x7fe30281a8e8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe30281a7f8 <col:3> 'void (int)' Function 0x7fe30281a520 'foo' 'void (int)'
+|     `-BinaryOperator 0x7fe30281a898 <col:8, col:13> 'int' '=='
+|       |-ImplicitCastExpr 0x7fe30281a868 <col:8> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe30281a820 <col:8> 'double' lvalue ParmVar 0x7fe30281a688 'd' 'double'
+|       `-ImplicitCastExpr 0x7fe30281a880 <col:13> 'double' <IntegralToFloating>
+|         `-IntegerLiteral 0x7fe30281a848 <col:13> 'int' 1
+`-FunctionDecl 0x7fe30281a9e8 <line:17:1, line:20:1> line:17:6 baz 'void (int)'
+  |-ParmVarDecl 0x7fe30281a960 <col:11, col:15> col:15 a 'int'
+  `-CompoundStmt 0x7fe30281ab68 <line:18:1, line:20:1>
+    `-CallExpr 0x7fe30281ab20 <line:19:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fe30281ab08 <col:3> 'void (*)(double)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe30281aa90 <col:3> 'void (double)' Function 0x7fe30281a750 'bar' 'void (double)'
+      `-ImplicitCastExpr 0x7fe30281ab50 <col:8> 'double' <IntegralToFloating>
+        `-IntegerLiteral 0x7fe30281aab8 <col:8> 'int' 1

@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fb71882bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb71882c960 <../Data/C2AST/pr16194.c:33:1, line:36:1> line:33:8 struct A definition
+| `-FieldDecl 0x7fb71886de38 <line:35:3, col:7> col:7 referenced a 'int'
+|-RecordDecl 0x7fb71886de80 <line:38:1, line:41:1> line:38:8 struct B definition
+| `-FieldDecl 0x7fb71886e078 <line:40:3, col:15> col:12 referenced b 'struct A [3]'
+|-RecordDecl 0x7fb71886e0c0 <line:43:1, line:46:1> line:43:8 struct C definition
+| `-FieldDecl 0x7fb71886e1c0 <line:45:3, col:12> col:12 referenced c 'struct B':'struct B'
+|-FunctionDecl 0x7fb71886e310 <line:48:1, line:52:1> line:48:6 bug 'void (void)'
+| `-CompoundStmt 0x7fb71886e710 <line:49:1, line:52:1>
+|   |-DeclStmt 0x7fb71886e528 <line:50:3, line:6:28>
+|   | `-VarDecl 0x7fb71886e470 <line:50:3, col:18> col:18 used dst 'char *' register
+|   |   `-AsmLabelAttr 0x7fb71886e4d0 <line:23:14> "rax"
+|   |-NullStmt 0x7fb71886e540 <line:50:29>
+|   `-GCCAsmStmt 0x7fb71886e6a8 <line:51:3, col:32>
+|     `-UnaryOperator 0x7fb71886e658 <col:20, col:21> 'char' lvalue prefix '*'
+|       `-ImplicitCastExpr 0x7fb71886e640 <col:21> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fb71886e618 <col:21> 'char *' lvalue Var 0x7fb71886e470 'dst' 'char *'
+|-FunctionDecl 0x7fb71886e7c8 <line:55:1, line:59:1> line:55:6 bug2 'void (void)'
+| `-CompoundStmt 0x7fb71886eb38 <line:56:1, line:59:1>
+|   |-DeclStmt 0x7fb71886e968 <line:57:3, line:6:28>
+|   | `-VarDecl 0x7fb71886e8b0 <line:57:3, col:18> col:18 used dst 'char *' register
+|   |   `-AsmLabelAttr 0x7fb71886e910 <line:23:14> "rax"
+|   |-NullStmt 0x7fb71886e980 <line:57:29>
+|   `-GCCAsmStmt 0x7fb71886ead0 <line:58:3, col:39>
+|     `-ImplicitCastExpr 0x7fb71886eab8 <col:21, col:22> 'char' <LValueToRValue>
+|       `-UnaryOperator 0x7fb71886ea68 <col:21, col:22> 'char' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fb71886ea50 <col:22> 'char *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb71886ea28 <col:22> 'char *' lvalue Var 0x7fb71886e8b0 'dst' 'char *'
+`-FunctionDecl 0x7fb71886ebf0 <line:61:1, line:66:1> line:62:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb7190002f8 <line:63:1, line:66:1>
+    |-DeclStmt 0x7fb719000038 <line:64:3, line:6:28>
+    | `-VarDecl 0x7fb71886ed70 <line:64:3, col:22> col:22 used dst 'struct C *' register
+    |   `-AsmLabelAttr 0x7fb71886edd0 <line:23:14> "rax"
+    |-NullStmt 0x7fb719000050 <line:64:33>
+    `-GCCAsmStmt 0x7fb719000290 <line:65:3, col:53>
+      `-MemberExpr 0x7fb719000228 <col:22, col:34> 'int' lvalue .a 0x7fb71886de38
+        `-ArraySubscriptExpr 0x7fb719000200 <col:22, col:32> 'struct A':'struct A' lvalue
+          |-ImplicitCastExpr 0x7fb7190001e8 <col:22, col:29> 'struct A *' <ArrayToPointerDecay>
+          | `-MemberExpr 0x7fb719000130 <col:22, col:29> 'struct A [3]' lvalue .b 0x7fb71886e078
+          |   `-MemberExpr 0x7fb7190000f8 <col:22, col:27> 'struct B':'struct B' lvalue ->c 0x7fb71886e1c0
+          |     `-ImplicitCastExpr 0x7fb7190000e0 <col:22> 'struct C *' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fb7190000b8 <col:22> 'struct C *' lvalue Var 0x7fb71886ed70 'dst' 'struct C *'
+          `-IntegerLiteral 0x7fb719000168 <col:31> 'int' 1

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f820d02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f820d02c9a0 <../Data/C2AST/pr62024.c:6:1, col:6> col:6 used p 'int *'
+|-FunctionDecl 0x7f820d06d8b0 <line:7:17> col:17 implicit used __atomic_always_lock_free 'int (unsigned long, const volatile void *)' extern
+| |-ParmVarDecl 0x7f820d06d950 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7f820d06d9b0 <<invalid sloc>> <invalid sloc> 'const volatile void *'
+| `-NoThrowAttr 0x7f820d06da20 <col:17> Implicit
+|-StaticAssertDecl 0x7f820d06dc28 <col:1, col:53> col:1
+| |-CallExpr 0x7f820d06db30 <col:17, col:48> 'int'
+| | |-ImplicitCastExpr 0x7f820d06db18 <col:17> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+| | | `-DeclRefExpr 0x7f820d06da68 <col:17> '<builtin fn type>' Function 0x7f820d06d8b0 '__atomic_always_lock_free' 'int (unsigned long, const volatile void *)'
+| | |-ImplicitCastExpr 0x7f820d06db68 <col:44> 'unsigned long' <IntegralCast>
+| | | `-IntegerLiteral 0x7f820d06da90 <col:44> 'int' 1
+| | `-ImplicitCastExpr 0x7f820d06db98 <col:47> 'const volatile void *' <BitCast>
+| |   `-ImplicitCastExpr 0x7f820d06db80 <col:47> 'int *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f820d06dab0 <col:47> 'int *' lvalue Var 0x7f820d02c9a0 'p' 'int *'
+| `-StringLiteral 0x7f820d06dbe8 <col:51> 'char [1]' lvalue ""
+`-StaticAssertDecl 0x7f820d06dd88 <line:8:1, col:53> col:1
+  |-CallExpr 0x7f820d06dce0 <col:17, col:48> 'int'
+  | |-ImplicitCastExpr 0x7f820d06dcc8 <col:17> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+  | | `-DeclRefExpr 0x7f820d06dc60 <col:17> '<builtin fn type>' Function 0x7f820d06d8b0 '__atomic_always_lock_free' 'int (unsigned long, const volatile void *)'
+  | |-ImplicitCastExpr 0x7f820d06dd18 <col:44> 'unsigned long' <IntegralCast>
+  | | `-IntegerLiteral 0x7f820d06dc88 <col:44> 'int' 1
+  | `-ImplicitCastExpr 0x7f820d06dd30 <col:47> 'const volatile void *' <NullToPointer>
+  |   `-IntegerLiteral 0x7f820d06dca8 <col:47> 'int' 0
+  `-StringLiteral 0x7f820d06dd48 <col:51> 'char [1]' lvalue ""

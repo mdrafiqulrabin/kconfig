@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fec2601a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec2601ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec2601ab80 '__int128'
+|-TypedefDecl 0x7fec2601aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec2601aba0 'unsigned __int128'
+|-TypedefDecl 0x7fec2601b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec2601afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fec2601af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec2601b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec2601b200 'char *'
+|   `-BuiltinType 0x7fec2601a980 'char'
+|-TypedefDecl 0x7fec2601b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec2601b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec2601b320 'struct __va_list_tag'
+|     `-Record 0x7fec2601b298 '__va_list_tag'
+`-VarDecl 0x7fec2601b578 <../Data/C2AST/pr34457-2.c:3:1, col:5> col:5 x 'int'

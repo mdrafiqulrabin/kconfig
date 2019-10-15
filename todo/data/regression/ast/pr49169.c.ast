@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fd61a028ee8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd6198763c8 <../Data/C2AST/pr49169.c:6:1, line:13:1> line:7:1 referenced main 'int (void)'
+  `-CompoundStmt 0x7fd619876778 <line:8:1, line:13:1>
+    |-DeclStmt 0x7fd619876568 <line:9:3, col:17>
+    | `-VarDecl 0x7fd619876480 <col:3, col:13> col:9 used p 'void *' cinit
+    |   `-ImplicitCastExpr 0x7fd619876550 <col:13> 'void *' <BitCast>
+    |     `-ImplicitCastExpr 0x7fd619876538 <col:13> 'int (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fd6198764e0 <col:13> 'int (void)' Function 0x7fd6198763c8 'main' 'int (void)'
+    |-IfStmt 0x7fd619876708 <line:10:3, line:11:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd619876650 <line:10:7, col:22> 'long' '&'
+    | | |-CStyleCastExpr 0x7fd6198765f0 <col:7, col:18> 'intptr_t':'long' <PointerToIntegral>
+    | | | `-ImplicitCastExpr 0x7fd6198765d8 <col:18> 'void *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fd6198765a0 <col:18> 'void *' lvalue Var 0x7fd619876480 'p' 'void *'
+    | | `-ImplicitCastExpr 0x7fd619876638 <col:22> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fd619876618 <col:22> 'int' 1
+    | |-CallExpr 0x7fd6198766e0 <line:11:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fd6198766c8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fd619876678 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd61986fc20 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fd619876760 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fd619876740 <col:10> 'int' 0

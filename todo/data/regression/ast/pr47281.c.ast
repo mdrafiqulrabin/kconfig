@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f8d5182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8d5182c960 <../Data/C2AST/pr47281.c:3:1, col:8> col:8 struct T
+|-TypedefDecl 0x7f8d520142e0 <line:4:1, col:20> col:14 referenced F 'void (void)'
+| `-FunctionProtoType 0x7f8d52014290 'void (void)' cdecl
+|   `-BuiltinType 0x7f8d5182bd40 'void'
+|-FunctionDecl 0x7f8d520145b0 <line:6:1, line:9:1> line:6:4 used aux 'F *(void (*)())'
+| |-ParmVarDecl 0x7f8d52014448 <col:8, col:18> col:15 used x 'void (*)()'
+| `-CompoundStmt 0x7f8d52014708 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7f8d520146f0 <line:8:3, col:10>
+|     `-ImplicitCastExpr 0x7f8d520146d8 <col:10> 'F *' <BitCast>
+|       `-ImplicitCastExpr 0x7f8d520146c0 <col:10> 'void (*)()' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8d52014698 <col:10> 'void (*)()' lvalue ParmVar 0x7f8d52014448 'x' 'void (*)()'
+|-FunctionDecl 0x7f8d52014800 <line:11:1, col:20> col:6 used make_mess 'void (int)'
+| `-ParmVarDecl 0x7f8d52014738 <col:17> col:20 'int'
+|-FunctionDecl 0x7f8d52014c70 <line:13:1, line:17:1> line:14:1 used get_funloc 'F *(void (*)(int), F *(*)())'
+| |-ParmVarDecl 0x7f8d520149e0 <col:13, col:26> col:20 used x 'void (*)(int)'
+| |-ParmVarDecl 0x7f8d52014b58 <col:29, col:37> col:34 used y 'F *(*)()'
+| `-CompoundStmt 0x7f8d52014de8 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7f8d52014dd0 <line:16:3, col:13>
+|     `-CallExpr 0x7f8d52014d88 <col:10, col:13> 'F *'
+|       |-ImplicitCastExpr 0x7f8d52014d70 <col:10> 'F *(*)()' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8d52014d20 <col:10> 'F *(*)()' lvalue ParmVar 0x7f8d52014b58 'y' 'F *(*)()'
+|       `-ImplicitCastExpr 0x7f8d52014db8 <col:12> 'void (*)(int)' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8d52014d48 <col:12> 'void (*)(int)' lvalue ParmVar 0x7f8d520149e0 'x' 'void (*)(int)'
+`-FunctionDecl 0x7f8d52014e20 <line:19:1, line:23:1> line:20:1 foo 'F *()'
+  `-CompoundStmt 0x7f8d520150a0 <line:21:1, line:23:1>
+    `-ReturnStmt 0x7f8d52015088 <line:22:3, col:36>
+      `-CallExpr 0x7f8d52014fb0 <col:10, col:36> 'F *'
+        |-ImplicitCastExpr 0x7f8d52014f98 <col:10> 'F *(*)(void (*)(int), F *(*)())' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8d52014ec0 <col:10> 'F *(void (*)(int), F *(*)())' Function 0x7f8d52014c70 'get_funloc' 'F *(void (*)(int), F *(*)())'
+        |-ImplicitCastExpr 0x7f8d52014fe8 <col:22> 'void (*)(int)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8d52014ee8 <col:22> 'void (int)' Function 0x7f8d52014800 'make_mess' 'void (int)'
+        `-ImplicitCastExpr 0x7f8d52015070 <col:33> 'F *(*)()' <BitCast>
+          `-ImplicitCastExpr 0x7f8d52015058 <col:33> 'F *(*)(void (*)())' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7f8d52014f10 <col:33> 'F *(void (*)())' Function 0x7f8d520145b0 'aux' 'F *(void (*)())'

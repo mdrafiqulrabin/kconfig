@@ -1,0 +1,42 @@
+../Data/C2AST/pr84723-3.c:11:41: error: function definition is not allowed here
+  __attribute__((noinline)) void bar () { goto lab; }
+                                        ^
+1 error generated.
+TranslationUnitDecl 0x7faa9082bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faa9082c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faa9082bf80 '__int128'
+|-TypedefDecl 0x7faa9082c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faa9082bfa0 'unsigned __int128'
+|-TypedefDecl 0x7faa9082c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faa9082c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7faa9082c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7faa9082c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faa9082c600 'char *'
+|   `-BuiltinType 0x7faa9082bd80 'char'
+|-TypedefDecl 0x7faa9082c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faa9082c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faa9082c720 'struct __va_list_tag'
+|     `-Record 0x7faa9082c698 '__va_list_tag'
+`-FunctionDecl 0x7faa91014348 <../Data/C2AST/pr84723-3.c:6:1, line:17:1> line:8:1 foo 'int (int)'
+  |-ParmVarDecl 0x7faa91014280 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7faa910147b8 <line:9:1, line:17:1>
+    |-DeclStmt 0x7faa91014478 <line:10:3, col:16>
+    | `-LabelDecl 0x7faa91014430 <col:3, col:13> col:13 lab
+    |-IfStmt 0x7faa910146b8 <line:12:3, line:13:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7faa910144f0 <line:12:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7faa910144d8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7faa91014490 <col:7> 'int' lvalue ParmVar 0x7faa91014280 'x' 'int'
+    | | `-IntegerLiteral 0x7faa910144b8 <col:12> 'int' 5
+    | |-CallExpr 0x7faa91014690 <line:13:5, col:10> 'int'
+    | | `-ImplicitCastExpr 0x7faa91014678 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7faa91014620 <col:5> 'int ()' Function 0x7faa91014570 'bar' 'int ()'
+    | `-<<<NULL>>>
+    |-UnaryOperator 0x7faa91014718 <line:14:3, col:4> 'int' postfix '++'
+    | `-DeclRefExpr 0x7faa910146f0 <col:3> 'int' lvalue ParmVar 0x7faa91014280 'x' 'int'
+    |-LabelStmt 0x7faa91014748 <line:15:1, col:5> 'lab'
+    | `-NullStmt 0x7faa91014738 <col:5>
+    `-ReturnStmt 0x7faa910147a0 <line:16:3, col:10>
+      `-ImplicitCastExpr 0x7faa91014788 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7faa91014760 <col:10> 'int' lvalue ParmVar 0x7faa91014280 'x' 'int'

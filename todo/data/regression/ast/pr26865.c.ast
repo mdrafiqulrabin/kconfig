@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f852082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f852086d820 <../Data/C2AST/pr26865.c:4:1, line:8:1> line:5:1 foo 'void (void)'
+| `-CompoundStmt 0x7f852086dbc8 <line:6:1, line:8:1>
+|   `-DeclStmt 0x7f852086dbb0 <line:7:3, col:25>
+|     `-VarDecl 0x7f852086d918 <col:3, col:24> col:9 e 'char *' cinit
+|       `-ImplicitCastExpr 0x7f852086db98 <col:13, col:24> 'char *' <BitCast>
+|         `-CallExpr 0x7f852086db50 <col:13, col:24> 'void *'
+|           |-ImplicitCastExpr 0x7f852086db38 <col:13> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7f852086dac0 <col:13> 'void *(unsigned long)' Function 0x7f852086d9b8 'alloca' 'void *(unsigned long)'
+|           `-ImplicitCastExpr 0x7f852086db80 <col:21> 'unsigned long' <IntegralCast>
+|             `-IntegerLiteral 0x7f852086dae8 <col:21> 'int' 100
+`-FunctionDecl 0x7f852086d9b8 <col:13> col:13 implicit used alloca 'void *(unsigned long)' extern
+  `-ParmVarDecl 0x7f852086da58 <<invalid sloc>> <invalid sloc> 'unsigned long'

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7ff3fc01f8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ff3fc81cc28 <../Data/C2AST/pr61010.c:3:1, line:8:1> line:3:5 main 'int (void)'
+  `-CompoundStmt 0x7ff3fc81d000 <line:4:1, line:8:1>
+    |-DeclStmt 0x7ff3fc81cdd0 <line:5:3, col:12>
+    | `-VarDecl 0x7ff3fc81cd50 <col:3, col:11> col:7 used a 'int' cinit
+    |   `-IntegerLiteral 0x7ff3fc81cdb0 <col:11> 'int' 0
+    |-DeclStmt 0x7ff3fc81cfb0 <line:6:3, col:36>
+    | `-VarDecl 0x7ff3fc81ce00 <col:3, col:33> col:12 b 'unsigned int' cinit
+    |   `-BinaryOperator 0x7ff3fc81cf88 <col:16, col:33> 'unsigned int' '|'
+    |     |-ImplicitCastExpr 0x7ff3fc81cf70 <col:16, col:29> 'unsigned int' <IntegralCast>
+    |     | `-ParenExpr 0x7ff3fc81cf30 <col:16, col:29> 'int'
+    |     |   `-BinaryOperator 0x7ff3fc81cf08 <col:17, col:26> 'int' '&'
+    |     |     |-BinaryOperator 0x7ff3fc81cec0 <col:17, col:21> 'int' '*'
+    |     |     | |-ImplicitCastExpr 0x7ff3fc81cea8 <col:17> 'int' <LValueToRValue>
+    |     |     | | `-DeclRefExpr 0x7ff3fc81ce60 <col:17> 'int' lvalue Var 0x7ff3fc81cd50 'a' 'int'
+    |     |     | `-IntegerLiteral 0x7ff3fc81ce88 <col:21> 'int' 64
+    |     |     `-IntegerLiteral 0x7ff3fc81cee8 <col:26> 'int' 192
+    |     `-IntegerLiteral 0x7ff3fc81cf50 <col:33> 'unsigned int' 63
+    `-ReturnStmt 0x7ff3fc81cfe8 <line:7:3, col:10>
+      `-IntegerLiteral 0x7ff3fc81cfc8 <col:10> 'int' 0

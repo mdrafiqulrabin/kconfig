@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7f87f802bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f87f8815200 <../Data/C2AST/pr69255-1.c:9:1, col:50> col:50 used a '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+|-VarDecl 0x7f87f88152f8 <line:10:1, col:44> col:44 used b '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-FunctionDecl 0x7f87f8815460 <line:12:1, line:18:1> line:13:1 foo 'void (const long long *)'
+| |-ParmVarDecl 0x7f87f88153a0 <col:6, col:23> col:23 used p 'const long long *'
+| `-CompoundStmt 0x7f87f8815a78 <line:14:1, line:18:1>
+|   `-BinaryOperator 0x7f87f8815a50 <line:15:3, col:50> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' '='
+|     |-DeclRefExpr 0x7f87f8815508 <col:3> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue Var 0x7f87f8815200 'a' '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+|     `-CallExpr 0x7f87f88159a0 <col:7, col:50> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f87f8815988 <col:7> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long (*)(__attribute__((__vector_size__(4 * sizeof(long long)))) long long, const long long *, __attribute__((__vector_size__(4 * sizeof(int)))) int, unsigned char, int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f87f8815830 <col:7> '<builtin fn type>' Function 0x7f87f8815588 '__builtin_ia32_gather3siv4di' '__attribute__((__vector_size__(4 * sizeof(long long)))) long long (__attribute__((__vector_size__(4 * sizeof(long long)))) long long, const long long *, __attribute__((__vector_size__(4 * sizeof(int)))) int, unsigned char, int)'
+|       |-ImplicitCastExpr 0x7f87f88159f0 <col:37> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87f8815858 <col:37> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue Var 0x7f87f8815200 'a' '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+|       |-ImplicitCastExpr 0x7f87f8815a08 <col:40> 'const long long *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87f8815880 <col:40> 'const long long *' lvalue ParmVar 0x7f87f88153a0 'p' 'const long long *'
+|       |-ImplicitCastExpr 0x7f87f8815a20 <col:43> '__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f87f88158a8 <col:43> '__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue Var 0x7f87f88152f8 'b' '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|       |-ImplicitCastExpr 0x7f87f8815a38 <col:46> 'unsigned char' <IntegralCast>
+|       | `-IntegerLiteral 0x7f87f88158d0 <col:46> 'int' 1
+|       `-IntegerLiteral 0x7f87f88158f0 <col:49> 'int' 1
+`-FunctionDecl 0x7f87f8815588 <col:7> col:7 implicit used __builtin_ia32_gather3siv4di '__attribute__((__vector_size__(4 * sizeof(long long)))) long long (__attribute__((__vector_size__(4 * sizeof(long long)))) long long, const long long *, __attribute__((__vector_size__(4 * sizeof(int)))) int, unsigned char, int)' extern
+  |-ParmVarDecl 0x7f87f8815628 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+  |-ParmVarDecl 0x7f87f8815688 <<invalid sloc>> <invalid sloc> 'const long long *'
+  |-ParmVarDecl 0x7f87f88156e8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7f87f8815748 <<invalid sloc>> <invalid sloc> 'unsigned char'
+  `-ParmVarDecl 0x7f87f88157a8 <<invalid sloc>> <invalid sloc> 'int'

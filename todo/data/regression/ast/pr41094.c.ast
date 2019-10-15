@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fced302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fced30a3730 <../Data/C2AST/pr41094.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fced30a37d0 prev 0x7fced30a3730 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fced30a3908 <line:8:1, line:12:1> line:8:8 used foo 'double (void)'
+| `-CompoundStmt 0x7fced30a3c00 <line:9:1, line:12:1>
+|   |-DeclStmt 0x7fced30a3a60 <line:10:3, col:18>
+|   | `-VarDecl 0x7fced30a39c0 <col:3, col:15> col:10 used x 'double' cinit
+|   |   `-UnaryOperator 0x7fced30a3a40 <col:14, col:15> 'double' prefix '-'
+|   |     `-FloatingLiteral 0x7fced30a3a20 <col:15> 'double' 4.000000e+00
+|   `-ReturnStmt 0x7fced30a3be8 <line:11:3, col:26>
+|     `-CallExpr 0x7fced30a3bb0 <col:10, col:26> 'double'
+|       |-ImplicitCastExpr 0x7fced30a3b98 <col:10> 'double (*)(double, double)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fced30a3a78 <col:10> 'double (double, double)' Function 0x7fced3088540 'pow' 'double (double, double)'
+|       |-BinaryOperator 0x7fced30a3b20 <col:15, col:19> 'double' '*'
+|       | |-ImplicitCastExpr 0x7fced30a3af0 <col:15> 'double' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fced30a3aa0 <col:15> 'double' lvalue Var 0x7fced30a39c0 'x' 'double'
+|       | `-ImplicitCastExpr 0x7fced30a3b08 <col:19> 'double' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fced30a3ac8 <col:19> 'double' lvalue Var 0x7fced30a39c0 'x' 'double'
+|       `-FloatingLiteral 0x7fced30a3b48 <col:22> 'double' 2.500000e-01
+`-FunctionDecl 0x7fced30a3c70 <line:14:1, line:19:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7fced3083ed8 <line:15:1, line:19:1>
+    |-IfStmt 0x7fced3083e68 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fced30a3d98 <line:16:7, col:16> 'int' '!='
+    | | |-CallExpr 0x7fced30a3d50 <col:7, col:11> 'double'
+    | | | `-ImplicitCastExpr 0x7fced30a3d38 <col:7> 'double (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7fced30a3d10 <col:7> 'double (void)' Function 0x7fced30a3908 'foo' 'double (void)'
+    | | `-FloatingLiteral 0x7fced30a3d78 <col:16> 'double' 2.000000e+00
+    | |-CallExpr 0x7fced3083e40 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fced3083e28 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fced30a3dc0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fced30a37d0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fced3083ec0 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fced3083ea0 <col:10> 'int' 0

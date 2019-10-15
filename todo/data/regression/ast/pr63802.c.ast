@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7fa055023ee8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa055024b60 <../Data/C2AST/pr63802.c:8:1, line:11:1> line:8:8 struct test_struct definition
+| |-AlignedAttr 0x7fa05504b500 <line:11:18, col:32> aligned
+| | `-IntegerLiteral 0x7fa05504b4e0 <col:30> 'int' 64
+| |-FieldDecl 0x7fa05504b438 <line:9:3, col:17> col:17 a 'unsigned long'
+| `-FieldDecl 0x7fa05504b498 <line:10:3, col:7> col:7 referenced b 'int'
+|-VarDecl 0x7fa05504b5c8 <line:13:1, col:11> col:6 used a 'char [200]'
+`-FunctionDecl 0x7fa05504b6c0 <line:15:1, line:21:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7fa055063e00 <line:16:1, line:21:1>
+    |-DeclStmt 0x7fa05504bdb8 <line:17:3, col:83>
+    | `-VarDecl 0x7fa05504b778 <col:3, col:82> col:16 x 'volatile int' cinit
+    |   `-ImplicitCastExpr 0x7fa05504bda0 <col:20, col:82> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fa05504bd68 <col:20, col:82> 'int' lvalue ->b 0x7fa05504b498
+    |       `-ParenExpr 0x7fa05504bd48 <col:20, col:79> 'struct test_struct *'
+    |         `-CStyleCastExpr 0x7fa05504bd20 <col:21, col:78> 'struct test_struct *' <IntegralToPointer>
+    |           `-ParenExpr 0x7fa05504bd00 <col:42, col:78> 'unsigned long'
+    |             `-BinaryOperator 0x7fa05504bbf0 <line:6:24, line:17:76> 'unsigned long' '+'
+    |               |-ParenExpr 0x7fa05504bb98 <line:6:24, col:57> 'unsigned long'
+    |               | `-BinaryOperator 0x7fa05504bb70 <col:25, col:56> 'unsigned long' '+'
+    |               |   |-ParenExpr 0x7fa05504bb18 <col:25, col:54> 'unsigned long'
+    |               |   | `-BinaryOperator 0x7fa05504baf0 <col:26, line:5:51> 'unsigned long' '|'
+    |               |   |   |-ParenExpr 0x7fa05504b8d8 <line:6:26, col:32> 'unsigned long'
+    |               |   |   | `-BinaryOperator 0x7fa05504b8b0 <col:27, col:31> 'unsigned long' '-'
+    |               |   |   |   |-ParenExpr 0x7fa05504b858 <col:27, col:29> 'unsigned long'
+    |               |   |   |   | `-CStyleCastExpr 0x7fa05504b830 <line:17:52, col:67> 'unsigned long' <PointerToIntegral>
+    |               |   |   |   |   `-ImplicitCastExpr 0x7fa05504b818 <col:67> 'char *' <ArrayToPointerDecay>
+    |               |   |   |   |     `-DeclRefExpr 0x7fa05504b7d8 <col:67> 'char [200]' lvalue Var 0x7fa05504b5c8 'a' 'char [200]'
+    |               |   |   |   `-ImplicitCastExpr 0x7fa05504b898 <line:6:31> 'unsigned long' <IntegralCast>
+    |               |   |   |     `-IntegerLiteral 0x7fa05504b878 <col:31> 'int' 1
+    |               |   |   `-ParenExpr 0x7fa05504bad0 <line:5:28, col:51> 'typeof ((unsigned long)a)':'unsigned long'
+    |               |   |     `-CStyleCastExpr 0x7fa05504baa8 <col:29, col:50> 'typeof ((unsigned long)a)':'unsigned long' <IntegralCast>
+    |               |   |       `-ParenExpr 0x7fa05504ba88 <col:44, col:50> 'int'
+    |               |   |         `-BinaryOperator 0x7fa05504b9f8 <col:45, col:49> 'int' '-'
+    |               |   |           |-ParenExpr 0x7fa05504b9b8 <col:45, col:47> 'int'
+    |               |   |           | `-IntegerLiteral 0x7fa05504b998 <line:17:70> 'int' 64
+    |               |   |           `-IntegerLiteral 0x7fa05504b9d8 <line:5:49> 'int' 1
+    |               |   `-ImplicitCastExpr 0x7fa05504bb58 <line:6:56> 'unsigned long' <IntegralCast>
+    |               |     `-IntegerLiteral 0x7fa05504bb38 <col:56> 'int' 1
+    |               `-ImplicitCastExpr 0x7fa05504bbd8 <line:17:76> 'unsigned long' <IntegralCast>
+    |                 `-IntegerLiteral 0x7fa05504bbb8 <col:76> 'int' 16
+    |-DeclStmt 0x7fa05504c398 <line:18:3, col:83>
+    | `-VarDecl 0x7fa05504bde8 <col:3, col:82> col:16 y 'volatile int' cinit
+    |   `-ImplicitCastExpr 0x7fa05504c380 <col:20, col:82> 'int' <LValueToRValue>
+    |     `-MemberExpr 0x7fa05504c348 <col:20, col:82> 'int' lvalue ->b 0x7fa05504b498
+    |       `-ParenExpr 0x7fa05504c328 <col:20, col:79> 'struct test_struct *'
+    |         `-CStyleCastExpr 0x7fa05504c300 <col:21, col:78> 'struct test_struct *' <IntegralToPointer>
+    |           `-ParenExpr 0x7fa05504c2e0 <col:42, col:78> 'unsigned long'
+    |             `-BinaryOperator 0x7fa05504c260 <line:6:24, line:18:76> 'unsigned long' '+'
+    |               |-ParenExpr 0x7fa05504c208 <line:6:24, col:57> 'unsigned long'
+    |               | `-BinaryOperator 0x7fa05504c1e0 <col:25, col:56> 'unsigned long' '+'
+    |               |   |-ParenExpr 0x7fa05504c188 <col:25, col:54> 'unsigned long'
+    |               |   | `-BinaryOperator 0x7fa05504c160 <col:26, line:5:51> 'unsigned long' '|'
+    |               |   |   |-ParenExpr 0x7fa05504bf48 <line:6:26, col:32> 'unsigned long'
+    |               |   |   | `-BinaryOperator 0x7fa05504bf20 <col:27, col:31> 'unsigned long' '-'
+    |               |   |   |   |-ParenExpr 0x7fa05504bec8 <col:27, col:29> 'unsigned long'
+    |               |   |   |   | `-CStyleCastExpr 0x7fa05504bea0 <line:18:52, col:67> 'unsigned long' <PointerToIntegral>
+    |               |   |   |   |   `-ImplicitCastExpr 0x7fa05504be88 <col:67> 'char *' <ArrayToPointerDecay>
+    |               |   |   |   |     `-DeclRefExpr 0x7fa05504be48 <col:67> 'char [200]' lvalue Var 0x7fa05504b5c8 'a' 'char [200]'
+    |               |   |   |   `-ImplicitCastExpr 0x7fa05504bf08 <line:6:31> 'unsigned long' <IntegralCast>
+    |               |   |   |     `-IntegerLiteral 0x7fa05504bee8 <col:31> 'int' 1
+    |               |   |   `-ParenExpr 0x7fa05504c140 <line:5:28, col:51> 'typeof ((unsigned long)a)':'unsigned long'
+    |               |   |     `-CStyleCastExpr 0x7fa05504c118 <col:29, col:50> 'typeof ((unsigned long)a)':'unsigned long' <IntegralCast>
+    |               |   |       `-ParenExpr 0x7fa05504c0f8 <col:44, col:50> 'int'
+    |               |   |         `-BinaryOperator 0x7fa05504c068 <col:45, col:49> 'int' '-'
+    |               |   |           |-ParenExpr 0x7fa05504c028 <col:45, col:47> 'int'
+    |               |   |           | `-IntegerLiteral 0x7fa05504c008 <line:18:70> 'int' 64
+    |               |   |           `-IntegerLiteral 0x7fa05504c048 <line:5:49> 'int' 1
+    |               |   `-ImplicitCastExpr 0x7fa05504c1c8 <line:6:56> 'unsigned long' <IntegralCast>
+    |               |     `-IntegerLiteral 0x7fa05504c1a8 <col:56> 'int' 1
+    |               `-ImplicitCastExpr 0x7fa05504c248 <line:18:76> 'unsigned long' <IntegralCast>
+    |                 `-IntegerLiteral 0x7fa05504c228 <col:76> 'int' 15
+    `-ReturnStmt 0x7fa05504c3d0 <line:20:3, col:10>
+      `-IntegerLiteral 0x7fa05504c3b0 <col:10> 'int' 0

@@ -1,0 +1,74 @@
+../Data/C2AST/pr85331.c:11:8: error: use of unknown builtin '__builtin_shuffle' [-Wimplicit-function-declaration]
+  *r = __builtin_shuffle (y, m);
+       ^
+../Data/C2AST/pr85331.c:11:6: error: assigning to 'V' (vector of 2 'double' values) from incompatible type 'int'
+  *r = __builtin_shuffle (y, m);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+TranslationUnitDecl 0x7fde50822ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fde50823460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fde50823180 '__int128'
+|-TypedefDecl 0x7fde508234d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fde508231a0 'unsigned __int128'
+|-TypedefDecl 0x7fde508237a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fde508235b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fde50823528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fde50823840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fde50823800 'char *'
+|   `-BuiltinType 0x7fde50822f80 'char'
+|-TypedefDecl 0x7fde50823b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fde50823ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fde50823920 'struct __va_list_tag'
+|     `-Record 0x7fde50823898 '__va_list_tag'
+|-TypedefDecl 0x7fde5087c438 <../Data/C2AST/pr85331.c:3:1, col:16> col:16 referenced V '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fde5087c400 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fde50823100 'double'
+|-TypedefDecl 0x7fde5087c568 <line:4:1, col:19> col:19 referenced W '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7fde5087c530 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7fde50823020 'long long'
+|-FunctionDecl 0x7fde5087c750 <line:6:1, line:12:1> line:7:1 used foo 'void (V *)'
+| |-ParmVarDecl 0x7fde5087c648 <col:6, col:9> col:9 used r 'V *'
+| `-CompoundStmt 0x7fde5087d180 <line:8:1, line:12:1>
+|   |-DeclStmt 0x7fde5087c988 <line:9:3, col:21>
+|   | `-VarDecl 0x7fde5087c848 <col:3, col:20> col:5 used y 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7fde5087c938 <col:9, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-FloatingLiteral 0x7fde5087c8a8 <col:11> 'double' 1.000000e+00
+|   |     `-FloatingLiteral 0x7fde5087c8c8 <col:16> 'double' 2.000000e+00
+|   `-DeclStmt 0x7fde5087cb10 <line:10:3, col:31>
+|     `-VarDecl 0x7fde5087c9d0 <col:3, col:30> col:5 used m 'W':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' cinit
+|       `-InitListExpr 0x7fde5087cac0 <col:9, col:30> 'W':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|         |-IntegerLiteral 0x7fde5087ca30 <col:11> 'long long' 10000000001
+|         `-IntegerLiteral 0x7fde5087ca50 <col:26> 'long long' 0
+|-FunctionDecl 0x7fde5087d1c8 <line:14:1, line:22:1> line:15:1 main 'int ()'
+| `-CompoundStmt 0x7fde5087f5e8 <line:16:1, line:22:1>
+|   |-DeclStmt 0x7fde5087d2d8 <line:17:3, col:6>
+|   | `-VarDecl 0x7fde5087d278 <col:3, col:5> col:5 used r 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-CallExpr 0x7fde5087d3d0 <line:18:3, col:10> 'void'
+|   | |-ImplicitCastExpr 0x7fde5087d3b8 <col:3> 'void (*)(V *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fde5087d2f0 <col:3> 'void (V *)' Function 0x7fde5087c750 'foo' 'void (V *)'
+|   | `-UnaryOperator 0x7fde5087d340 <col:8, col:9> 'V *' prefix '&'
+|   |   `-DeclRefExpr 0x7fde5087d318 <col:9> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fde5087d278 'r' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |-IfStmt 0x7fde5087f578 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fde5087f3a0 <line:19:7, col:30> 'int' '||'
+|   | | |-BinaryOperator 0x7fde5087f2a8 <col:7, col:15> 'int' '!='
+|   | | | |-ImplicitCastExpr 0x7fde5087f290 <col:7, col:10> 'double' <LValueToRValue>
+|   | | | | `-ArraySubscriptExpr 0x7fde5087f248 <col:7, col:10> 'double' lvalue vectorcomponent
+|   | | | |   |-DeclRefExpr 0x7fde5087f200 <col:7> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fde52 errors generated.
+087d278 'r' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   | | | |   `-IntegerLiteral 0x7fde5087f228 <col:9> 'int' 0
+|   | | | `-FloatingLiteral 0x7fde5087f270 <col:15> 'double' 2.000000e+00
+|   | | `-BinaryOperator 0x7fde5087f378 <col:22, col:30> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fde5087f360 <col:22, col:25> 'double' <LValueToRValue>
+|   | |   | `-ArraySubscriptExpr 0x7fde5087f318 <col:22, col:25> 'double' lvalue vectorcomponent
+|   | |   |   |-DeclRefExpr 0x7fde5087f2d0 <col:22> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fde5087d278 'r' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   | |   |   `-IntegerLiteral 0x7fde5087f2f8 <col:24> 'int' 1
+|   | |   `-FloatingLiteral 0x7fde5087f340 <col:30> 'double' 1.000000e+00
+|   | |-CallExpr 0x7fde5087f550 <line:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fde5087f538 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fde5087f4e8 <col:5> '<builtin fn type>' Function 0x7fde5087f400 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fde5087f5d0 <line:21:3, col:10>
+|     `-IntegerLiteral 0x7fde5087f5b0 <col:10> 'int' 0
+`-FunctionDecl 0x7fde5087f400 <line:20:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fde5087f4a0 <col:5> Implicit

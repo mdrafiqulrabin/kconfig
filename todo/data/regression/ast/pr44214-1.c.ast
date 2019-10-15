@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fe6208174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe62084de38 <../Data/C2AST/pr44214-1.c:4:1, col:16> col:16 referenced v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fe62084de00 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fe620817700 'double'
+`-FunctionDecl 0x7fe62084e0a0 <line:6:1, line:9:1> line:6:6 do_div 'void (v2df *, v2df *)'
+  |-ParmVarDecl 0x7fe62084df18 <col:14, col:20> col:20 used a 'v2df *'
+  |-ParmVarDecl 0x7fe62084df88 <col:23, col:29> col:29 used b 'v2df *'
+  `-CompoundStmt 0x7fe62084e3e8 <line:7:1, line:9:1>
+    `-BinaryOperator 0x7fe62084e3c0 <line:8:3, col:31> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+      |-UnaryOperator 0x7fe62084e1d0 <col:3, col:4> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fe62084e1b8 <col:4> 'v2df *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fe62084e190 <col:4> 'v2df *' lvalue ParmVar 0x7fe62084df18 'a' 'v2df *'
+      `-BinaryOperator 0x7fe62084e398 <col:8, col:31> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '/'
+        |-ImplicitCastExpr 0x7fe62084e368 <col:8, col:9> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        | `-UnaryOperator 0x7fe62084e230 <col:8, col:9> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7fe62084e218 <col:9> 'v2df *' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fe62084e1f0 <col:9> 'v2df *' lvalue ParmVar 0x7fe62084df88 'b' 'v2df *'
+        `-ImplicitCastExpr 0x7fe62084e380 <col:13, col:31> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+          `-CompoundLiteralExpr 0x7fe62084e340 <col:13, col:31> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+            `-InitListExpr 0x7fe62084e2f0 <col:20, col:31> 'v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+              |-FloatingLiteral 0x7fe62084e260 <col:22> 'double' 2.000000e+00
+              `-FloatingLiteral 0x7fe62084e280 <col:27> 'double' 3.000000e+00

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fa2ab011ee8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fa2ab012b60 <../Data/C2AST/pr77677-2.c:5:1, col:38> col:6 machine_mode
+| `-EnumConstantDecl 0x7fa2ac814220 <col:21> col:21 MAX_MACHINE_MODE 'int'
+|-RecordDecl 0x7fa2ac814268 <line:7:1, line:9:1> line:7:1 struct definition
+| `-FieldDecl 0x7fa2ac814348 <line:8:3, col:14> col:7 referenced mode 'int'
+|   `-IntegerLiteral 0x7fa2ac814310 <col:14> 'int' 8
+|-VarDecl 0x7fa2ac8143e0 <line:7:1, line:9:3> col:3 used a 'struct (anonymous struct at ../Data/C2AST/pr77677-2.c:7:1)':'struct (anonymous at ../Data/C2AST/pr77677-2.c:7:1)'
+|-VarDecl 0x7fa2ac8144b0 <line:10:1, col:5> col:5 used b 'int'
+|-FunctionDecl 0x7fa2ac814560 <line:12:1, col:16> col:12 used fn1 'int ()' static
+|-FunctionDecl 0x7fa2ac814648 <line:14:1, col:30> col:6 fn2 'void ()'
+| `-CompoundStmt 0x7fa2ac814848 <col:12, col:30>
+|   `-CallExpr 0x7fa2ac8147e0 <col:14, col:27> 'int'
+|     |-ImplicitCastExpr 0x7fa2ac8147c8 <col:14> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fa2ac8146e8 <col:14> 'int ()' Function 0x7fa2ac814560 'fn1' 'int ()'
+|     |-ImplicitCastExpr 0x7fa2ac814818 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr77677-2.c:7:1)':'struct (anonymous at ../Data/C2AST/pr77677-2.c:7:1)' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa2ac814710 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr77677-2.c:7:1)':'struct (anonymous at ../Data/C2AST/pr77677-2.c:7:1)' lvalue Var 0x7fa2ac8143e0 'a' 'struct (anonymous struct at ../Data/C2AST/pr77677-2.c:7:1)':'struct (anonymous at ../Data/C2AST/pr77677-2.c:7:1)'
+|     `-ImplicitCastExpr 0x7fa2ac814830 <col:21, col:23> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7fa2ac814760 <col:21, col:23> 'int' lvalue bitfield .mode 0x7fa2ac814348
+|         `-DeclRefExpr 0x7fa2ac814738 <col:21> 'struct (anonymous struct at ../Data/C2AST/pr77677-2.c:7:1)':'struct (anonymous at ../Data/C2AST/pr77677-2.c:7:1)' lvalue Var 0x7fa2ac8143e0 'a' 'struct (anonymous struct at ../Data/C2AST/pr77677-2.c:7:1)':'struct (anonymous at ../Data/C2AST/pr77677-2.c:7:1)'
+`-FunctionDecl 0x7fa2ac814a08 prev 0x7fa2ac814560 <line:16:1, line:17:18> line:16:5 used fn1 'int (int, unsigned int)'
+  |-ParmVarDecl 0x7fa2ac814928 <col:9> col:9 a 'int'
+  |-ParmVarDecl 0x7fa2ac8148b0 <col:18, col:36> col:36 mode 'enum machine_mode':'enum machine_mode'
+  `-CompoundStmt 0x7fa2ac814bd8 <line:17:1, col:18>
+    `-DeclStmt 0x7fa2ac814bc0 <col:3, col:16>
+      `-VarDecl 0x7fa2ac814ad0 <col:3, col:15> col:7 used c 'int' cinit
+        `-BinaryOperator 0x7fa2ac814b98 <col:11, col:15> 'int' '='
+          |-DeclRefExpr 0x7fa2ac814b30 <col:11> 'int' lvalue Var 0x7fa2ac8144b0 'b' 'int'
+          `-ImplicitCastExpr 0x7fa2ac814b80 <col:15> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7fa2ac814b58 <col:15> 'int' lvalue Var 0x7fa2ac814ad0 'c' 'int'

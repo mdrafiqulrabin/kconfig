@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fd0c38174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd0c4015200 <../Data/C2AST/pr77526.c:5:1, col:14> col:14 referenced U '__attribute__((__vector_size__(64 * sizeof(char)))) char'
+| `-VectorType 0x7fd0c3818180 '__attribute__((__vector_size__(64 * sizeof(char)))) char' 64
+|   `-BuiltinType 0x7fd0c3817580 'char'
+|-TypedefDecl 0x7fd0c40152b8 <line:6:1, col:18> col:18 referenced V '__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128'
+| `-VectorType 0x7fd0c4015280 '__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' 4
+|   `-BuiltinType 0x7fd0c3817780 '__int128'
+`-FunctionDecl 0x7fd0c4015610 <line:8:1, line:13:1> line:9:1 foo 'V (int, int, __int128, U)'
+  |-ParmVarDecl 0x7fd0c4015348 <col:6, col:10> col:10 used a 'int'
+  |-ParmVarDecl 0x7fd0c40153c0 <col:13, col:17> col:17 used b 'int'
+  |-ParmVarDecl 0x7fd0c4015438 <col:20, col:29> col:29 used c '__int128'
+  |-ParmVarDecl 0x7fd0c40154d0 <col:32, col:34> col:34 used u 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+  `-CompoundStmt 0x7fd0c4015c60 <line:10:1, line:13:1>
+    |-BinaryOperator 0x7fd0c4015a40 <line:11:3, col:38> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '='
+    | |-DeclRefExpr 0x7fd0c4015710 <col:3> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fd0c40154d0 'u' 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    | `-BinaryOperator 0x7fd0c4015a18 <col:7, col:38> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '|'
+    |   |-ParenExpr 0x7fd0c4015878 <col:7, col:20> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |   | `-BinaryOperator 0x7fd0c4015850 <col:8, col:19> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '>>'
+    |   |   |-ImplicitCastExpr 0x7fd0c4015838 <col:8> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+    |   |   | `-DeclRefExpr 0x7fd0c4015738 <col:8> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fd0c40154d0 'u' 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |   |   `-ParenExpr 0x7fd0c4015818 <col:13, col:19> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |   |     `-BinaryOperator 0x7fd0c40157f0 <col:14, col:18> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '&'
+    |   |       |-ImplicitCastExpr 0x7fd0c40157a8 <col:14> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7fd0c4015760 <col:14> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fd0c40154d0 'u' 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |   |       `-ImplicitCastExpr 0x7fd0c40157d8 <col:18> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <VectorSplat>
+    |   |         `-ImplicitCastExpr 0x7fd0c40157c0 <col:18> 'char' <IntegralCast>
+    |   |           `-IntegerLiteral 0x7fd0c4015788 <col:18> 'int' 7
+    |   `-ParenExpr 0x7fd0c40159f8 <col:24, col:38> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |     `-BinaryOperator 0x7fd0c40159d0 <col:25, col:37> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '<<'
+    |       |-ImplicitCastExpr 0x7fd0c40159b8 <col:25> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fd0c4015898 <col:25> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fd0c40154d0 'u' 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |       `-UnaryOperator 0x7fd0c4015998 <col:30, col:37> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' prefix '-'
+    |         `-ParenExpr 0x7fd0c4015978 <col:31, col:37> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |           `-BinaryOperator 0x7fd0c4015950 <col:32, col:36> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' '&'
+    |             |-ImplicitCastExpr 0x7fd0c4015908 <col:32> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+    |             | `-DeclRefExpr 0x7fd0c40158c0 <col:32> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fd0c40154d0 'u' 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'
+    |             `-ImplicitCastExpr 0x7fd0c4015938 <col:36> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <VectorSplat>
+    |               `-ImplicitCastExpr 0x7fd0c4015920 <col:36> 'char' <IntegralCast>
+    |                 `-IntegerLiteral 0x7fd0c40158e8 <col:36> 'int' 7
+    `-ReturnStmt 0x7fd0c4015c48 <line:12:3, col:25>
+      `-BinaryOperator 0x7fd0c4015c20 <col:10, col:25> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' '+'
+        |-ImplicitCastExpr 0x7fd0c4015c08 <col:10, col:18> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <VectorSplat>
+        | `-BinaryOperator 0x7fd0c4015b68 <col:10, col:18> '__int128' '+'
+        |   |-ImplicitCastExpr 0x7fd0c4015b50 <col:10, col:14> '__int128' <IntegralCast>
+        |   | `-BinaryOperator 0x7fd0c4015ae8 <col:10, col:14> 'int' '+'
+        |   |   |-ImplicitCastExpr 0x7fd0c4015ab8 <col:10> 'int' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7fd0c4015a68 <col:10> 'int' lvalue ParmVar 0x7fd0c4015348 'a' 'int'
+        |   |   `-ImplicitCastExpr 0x7fd0c4015ad0 <col:14> 'int' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fd0c4015a90 <col:14> 'int' lvalue ParmVar 0x7fd0c40153c0 'b' 'int'
+        |   `-ImplicitCastExpr 0x7fd0c4015b38 <col:18> '__int128' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fd0c4015b10 <col:18> '__int128' lvalue ParmVar 0x7fd0c4015438 'c' '__int128'
+        `-CStyleCastExpr 0x7fd0c4015be0 <col:22, col:25> 'V':'__attribute__((__vector_size__(4 * sizeof(__int128)))) __int128' <BitCast>
+          `-ImplicitCastExpr 0x7fd0c4015bc8 <col:25> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' <LValueToRValue>
+            `-DeclRefExpr 0x7fd0c4015b90 <col:25> 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char' lvalue ParmVar 0x7fd0c40154d0 'u' 'U':'__attribute__((__vector_size__(64 * sizeof(char)))) char'

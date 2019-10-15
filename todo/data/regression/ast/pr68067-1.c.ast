@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fef7481d8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fef75814200 <../Data/C2AST/pr68067-1.c:4:1, line:13:1> line:4:5 main 'int ()'
+| `-CompoundStmt 0x7fef758149d8 <line:5:1, line:13:1>
+|   |-DeclStmt 0x7fef75814398 <line:6:3, col:13>
+|   | `-VarDecl 0x7fef758142f8 <col:3, col:12> col:7 used a 'int' cinit
+|   |   `-UnaryOperator 0x7fef75814378 <col:11, col:12> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x7fef75814358 <col:12> 'int' 1
+|   |-DeclStmt 0x7fef758144b0 <line:7:3, col:33>
+|   | `-VarDecl 0x7fef758143c8 <col:3, col:32> col:14 used b 'int' static cinit
+|   |   `-BinaryOperator 0x7fef75814488 <col:18, col:32> 'int' '-'
+|   |     |-UnaryOperator 0x7fef75814448 <col:18, col:19> 'int' prefix '-'
+|   |     | `-IntegerLiteral 0x7fef75814428 <col:19> 'int' 2147483647
+|   |     `-IntegerLiteral 0x7fef75814468 <col:32> 'int' 1
+|   |-DeclStmt 0x7fef75814560 <line:8:3, col:19>
+|   | `-VarDecl 0x7fef758144e0 <col:3, col:18> col:14 used c 'int' static cinit
+|   |   `-IntegerLiteral 0x7fef75814540 <col:18> 'int' 0
+|   |-DeclStmt 0x7fef75814720 <line:9:3, col:22>
+|   | `-VarDecl 0x7fef75814590 <col:3, col:21> col:7 used t 'int' cinit
+|   |   `-BinaryOperator 0x7fef758146f8 <col:11, col:21> 'int' '-'
+|   |     |-ImplicitCastExpr 0x7fef758146e0 <col:11> 'int' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7fef758145f0 <col:11> 'int' lvalue Var 0x7fef758142f8 'a' 'int'
+|   |     `-ParenExpr 0x7fef758146c0 <col:15, col:21> 'int'
+|   |       `-BinaryOperator 0x7fef75814698 <col:16, col:20> 'int' '-'
+|   |         |-ImplicitCastExpr 0x7fef75814668 <col:16> 'int' <LValueToRValue>
+|   |         | `-DeclRefExpr 0x7fef75814618 <col:16> 'int' lvalue Var 0x7fef758143c8 'b' 'int'
+|   |         `-ImplicitCastExpr 0x7fef75814680 <col:20> 'int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7fef75814640 <col:20> 'int' lvalue Var 0x7fef758144e0 'c' 'int'
+|   |-IfStmt 0x7fef75814968 <line:10:3, line:11:21>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fef75814798 <line:10:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fef75814780 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fef75814738 <col:7> 'int' lvalue Var 0x7fef75814590 't' 'int'
+|   | | `-IntegerLiteral 0x7fef75814760 <col:12> 'int' 2147483647
+|   | |-CallExpr 0x7fef75814940 <line:11:5, col:21> 'void'
+|   | | `-ImplicitCastExpr 0x7fef75814928 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fef758148d8 <col:5> '<builtin fn type>' Function 0x7fef758147f0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fef758149c0 <line:12:3, col:10>
+|     `-IntegerLiteral 0x7fef758149a0 <col:10> 'int' 0
+`-FunctionDecl 0x7fef758147f0 <line:11:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fef75814890 <col:5> Implicit

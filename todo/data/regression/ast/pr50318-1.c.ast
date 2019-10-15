@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f883c0104e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f883c8020d8 <../Data/C2AST/pr50318-1.c:5:1, line:9:1> line:5:11 test 'long long (unsigned int, unsigned long long)'
+  |-ParmVarDecl 0x7f883c011178 <col:17, col:30> col:30 used sec 'unsigned int'
+  |-ParmVarDecl 0x7f883c802000 <col:35, col:54> col:54 used nsecs 'unsigned long long'
+  `-CompoundStmt 0x7f883c8023e8 <line:6:1, line:9:1>
+    `-ReturnStmt 0x7f883c8023d0 <line:7:4, line:8:9>
+      `-BinaryOperator 0x7f883c8023a8 <line:7:11, line:8:9> 'long long' '+'
+        |-BinaryOperator 0x7f883c8022c0 <line:7:11, col:34> 'long long' '*'
+        | |-CStyleCastExpr 0x7f883c802260 <col:11, col:28> 'long long' <IntegralCast>
+        | | `-CStyleCastExpr 0x7f883c802220 <col:22, col:28> 'long' <IntegralCast>
+        | |   `-ImplicitCastExpr 0x7f883c802208 <col:28> 'unsigned int' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7f883c8021c8 <col:28> 'unsigned int' lvalue ParmVar 0x7f883c011178 'sec' 'unsigned int'
+        | `-ImplicitCastExpr 0x7f883c8022a8 <col:34> 'long long' <IntegralCast>
+        |   `-IntegerLiteral 0x7f883c802288 <col:34> 'long' 1000000000
+        `-CStyleCastExpr 0x7f883c802380 <col:48, line:8:9> 'long long' <IntegralCast>
+          `-CStyleCastExpr 0x7f883c802340 <line:7:59, line:8:9> 'unsigned long' <IntegralCast>
+            `-ImplicitCastExpr 0x7f883c802328 <col:9> 'unsigned long long' <LValueToRValue>
+              `-DeclRefExpr 0x7f883c8022e8 <col:9> 'unsigned long long' lvalue ParmVar 0x7f883c802000 'nsecs' 'unsigned long long'

@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7f8ab502bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8ab58143c8 <../Data/C2AST/profile-update-warning.c:4:1, line:7:1> line:4:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7f8ab502c978 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7f8ab58142b0 <col:20, col:31> col:26 argv 'char **':'char **'
+  `-CompoundStmt 0x7f8ab58144f0 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7f8ab58144d8 <line:6:3, col:10>
+      `-IntegerLiteral 0x7f8ab58144b8 <col:10> 'int' 0

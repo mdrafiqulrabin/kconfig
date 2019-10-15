@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fc54b8288e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc54b86a468 <../Data/C2AST/pr43643.c:8:14> col:14 implicit used strdup 'char *(const char *)' extern
+| `-ParmVarDecl 0x7fc54b86a508 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fc54b86a570 prev 0x7fc54b86a468 <col:1, col:34> col:14 used strdup 'char *(const char *)' extern
+| `-ParmVarDecl 0x7fc54b829578 <col:22, col:33> col:34 'const char *'
+|-FunctionDecl 0x7fc54b86a800 <line:10:1, line:16:1> line:11:1 used func 'void (char *, char *, char *)'
+| |-ParmVarDecl 0x7fc54b86a630 <col:6, col:12> col:12 used a 'char *'
+| |-ParmVarDecl 0x7fc54b86a6a8 <col:15, col:21> col:21 used b 'char *'
+| |-ParmVarDecl 0x7fc54b86a720 <col:24, col:30> col:30 used c 'char *'
+| `-CompoundStmt 0x7fc54b86abc0 <line:12:1, line:16:1>
+|   |-CallExpr 0x7fc54b86a9a0 <line:13:3, col:11> 'char *'
+|   | |-ImplicitCastExpr 0x7fc54b86a988 <col:3> 'char *(*)(const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc54b86a8f8 <col:3> 'char *(const char *)' Function 0x7fc54b86a570 'strdup' 'char *(const char *)'
+|   | `-ImplicitCastExpr 0x7fc54b86a9e8 <col:10> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fc54b86a9d0 <col:10> 'char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc54b86a920 <col:10> 'char *' lvalue ParmVar 0x7fc54b86a630 'a' 'char *'
+|   |-CallExpr 0x7fc54b86aa80 <line:14:3, col:11> 'char *'
+|   | |-ImplicitCastExpr 0x7fc54b86aa68 <col:3> 'char *(*)(const char *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fc54b86aa00 <col:3> 'char *(const char *)' Function 0x7fc54b86a570 'strdup' 'char *(const char *)'
+|   | `-ImplicitCastExpr 0x7fc54b86aac8 <col:10> 'const char *' <BitCast>
+|   |   `-ImplicitCastExpr 0x7fc54b86aab0 <col:10> 'char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc54b86aa28 <col:10> 'char *' lvalue ParmVar 0x7fc54b86a6a8 'b' 'char *'
+|   `-CallExpr 0x7fc54b86ab60 <line:15:3, col:11> 'char *'
+|     |-ImplicitCastExpr 0x7fc54b86ab48 <col:3> 'char *(*)(const char *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fc54b86aae0 <col:3> 'char *(const char *)' Function 0x7fc54b86a570 'strdup' 'char *(const char *)'
+|     `-ImplicitCastExpr 0x7fc54b86aba8 <col:10> 'const char *' <BitCast>
+|       `-ImplicitCastExpr 0x7fc54b86ab90 <col:10> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fc54b86ab08 <col:10> 'char *' lvalue ParmVar 0x7fc54b86a720 'c' 'char *'
+`-FunctionDecl 0x7fc54b86acb8 <line:18:1, line:23:1> line:19:1 main 'int (void)'
+  `-CompoundStmt 0x7fc54b86af80 <line:20:1, line:23:1>
+    |-CallExpr 0x7fc54b86aec0 <line:21:3, col:21> 'void'
+    | |-ImplicitCastExpr 0x7fc54b86aea8 <col:3> 'void (*)(char *, char *, char *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fc54b86ad88 <col:3> 'void (char *, char *, char *)' Function 0x7fc54b86a800 'func' 'void (char *, char *, char *)'
+    | |-ImplicitCastExpr 0x7fc54b86af00 <col:8> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7fc54b86ade8 <col:8> 'char [2]' lvalue "a"
+    | |-ImplicitCastExpr 0x7fc54b86af18 <col:13> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x7fc54b86ae18 <col:13> 'char [2]' lvalue "b"
+    | `-ImplicitCastExpr 0x7fc54b86af30 <col:18> 'char *' <ArrayToPointerDecay>
+    |   `-StringLiteral 0x7fc54b86ae48 <col:18> 'char [2]' lvalue "c"
+    `-ReturnStmt 0x7fc54b86af68 <line:22:3, col:10>
+      `-IntegerLiteral 0x7fc54b86af48 <col:10> 'int' 0

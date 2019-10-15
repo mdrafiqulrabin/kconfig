@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f954301c2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9543814268 <../Data/C2AST/pr32370.c:18:1, line:24:1> line:19:1 used foo 'unsigned int (unsigned long)'
+| |-ParmVarDecl 0x7f954301cf78 <line:9:15, line:19:11> col:11 used port 'unsigned long'
+| `-CompoundStmt 0x7f9543814610 <line:20:1, line:24:1>
+|   |-DeclStmt 0x7f95438143c8 <line:21:3, col:17>
+|   | `-VarDecl 0x7f9543814368 <col:3, col:16> col:16 used v 'unsigned int'
+|   |-GCCAsmStmt 0x7f9543814540 <line:22:3, col:49>
+|   | |-DeclRefExpr 0x7f95438144a8 <col:33> 'unsigned int' lvalue Var 0x7f9543814368 'v' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7f9543814528 <col:44> 'unsigned long' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f9543814500 <col:44> 'unsigned long' lvalue ParmVar 0x7f954301cf78 'port' 'unsigned long'
+|   `-ReturnStmt 0x7f95438145f8 <line:23:3, col:10>
+|     `-ImplicitCastExpr 0x7f95438145e0 <col:10> 'unsigned int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f95438145b8 <col:10> 'unsigned int' lvalue Var 0x7f9543814368 'v' 'unsigned int'
+`-FunctionDecl 0x7f9543814700 <line:26:1, line:30:1> line:27:1 bar 'void (void)'
+  `-CompoundStmt 0x7f9543814878 <line:28:1, line:30:1>
+    `-CallExpr 0x7f9543814830 <line:29:3, col:9> 'unsigned int'
+      |-ImplicitCastExpr 0x7f9543814818 <col:3> 'unsigned int (*)(unsigned long)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f95438147a0 <col:3> 'unsigned int (unsigned long)' Function 0x7f9543814268 'foo' 'unsigned int (unsigned long)'
+      `-ImplicitCastExpr 0x7f9543814860 <col:8> 'unsigned long' <IntegralCast>
+        `-IntegerLiteral 0x7f95438147c8 <col:8> 'int' 0

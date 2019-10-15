@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fe14f0132e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe14e81b460 <../Data/C2AST/pr64269.c:3:1, line:9:1> line:4:1 foo 'void (char *)'
+| |-ParmVarDecl 0x7fe14f013f78 <col:6, col:12> col:12 used p 'char *'
+| `-CompoundStmt 0x7fe14e81bb50 <line:5:1, line:9:1>
+|   |-DeclStmt 0x7fe14e81b640 <<built-in>:81:23, ../Data/C2AST/pr64269.c:6:38>
+|   | `-VarDecl 0x7fe14e81b560 <<built-in>:81:23, ../Data/C2AST/pr64269.c:6:37> col:17 used s 'unsigned long' cinit
+|   |   `-UnaryOperator 0x7fe14e81b620 <col:21, col:37> 'unsigned long' prefix '~'
+|   |     `-CStyleCastExpr 0x7fe14e81b5f8 <col:22, col:37> 'unsigned long' <IntegralCast>
+|   |       `-IntegerLiteral 0x7fe14e81b5c0 <col:37> 'int' 0
+|   |-BinaryOperator 0x7fe14e81b6f0 <line:7:3, col:8> 'char' '='
+|   | |-UnaryOperator 0x7fe14e81b698 <col:3, col:4> 'char' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7fe14e81b680 <col:4> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe14e81b658 <col:4> 'char *' lvalue ParmVar 0x7fe14f013f78 'p' 'char *'
+|   | `-ImplicitCastExpr 0x7fe14e81b6d8 <col:8> 'char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fe14e81b6b8 <col:8> 'int' 0
+|   `-CallExpr 0x7fe14e81bae0 <line:8:3, col:32> 'void *'
+|     |-ImplicitCastExpr 0x7fe14e81bac8 <col:3> 'void *(*)(void *, int, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fe14e81b988 <col:3> '<builtin fn type>' Function 0x7fe14e81b768 '__builtin_memset' 'void *(void *, int, unsigned long)'
+|     |-ImplicitCastExpr 0x7fe14e81bb20 <col:21, col:25> 'void *' <BitCast>
+|     | `-BinaryOperator 0x7fe14e81ba10 <col:21, col:25> 'char *' '+'
+|     |   |-ImplicitCastExpr 0x7fe14e81b9f8 <col:21> 'char *' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7fe14e81b9b0 <col:21> 'char *' lvalue ParmVar 0x7fe14f013f78 'p' 'char *'
+|     |   `-IntegerLiteral 0x7fe14e81b9d8 <col:25> 'int' 1
+|     |-IntegerLiteral 0x7fe14e81ba38 <col:28> 'int' 0
+|     `-ImplicitCastExpr 0x7fe14e81bb38 <col:31> 'unsigned long' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe14e81ba58 <col:31> 'unsigned long' lvalue Var 0x7fe14e81b560 's' 'unsigned long'
+`-FunctionDecl 0x7fe14e81b768 <col:3> col:3 implicit used __builtin_memset 'void *(void *, int, unsigned long)' extern
+  |-ParmVarDecl 0x7fe14e81b808 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fe14e81b868 <<invalid sloc>> <invalid sloc> 'int'
+  |-ParmVarDecl 0x7fe14e81b8c8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fe14e81b940 <col:3> Implicit

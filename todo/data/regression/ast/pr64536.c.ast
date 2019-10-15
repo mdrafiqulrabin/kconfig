@@ -1,0 +1,185 @@
+TranslationUnitDecl 0x7fe76682b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe76682bf60 <../Data/C2AST/pr64536.c:7:1, col:20> col:8 struct S definition
+| `-FieldDecl 0x7fe76684d638 <col:12, col:17> col:17 referenced q 'long'
+|-VarDecl 0x7fe76684d730 <col:1, col:23> col:23 used h 'struct S *'
+|-VarDecl 0x7fe76684d800 <line:8:1, col:6> col:6 used a 'long'
+|-VarDecl 0x7fe76684d878 <col:1, col:9> col:9 used b 'long'
+|-VarDecl 0x7fe76684d8f0 <col:1, col:12> col:12 used g 'long'
+|-VarDecl 0x7fe76684d968 <col:1, col:15> col:15 used j 'long'
+|-VarDecl 0x7fe76684d9e0 <col:1, col:18> col:18 used k 'long'
+|-VarDecl 0x7fe76684da80 <col:1, col:22> col:22 used c 'long *'
+|-VarDecl 0x7fe76684daf8 <col:1, col:26> col:26 used d 'long *'
+|-VarDecl 0x7fe76684db70 <col:1, col:30> col:30 used e 'long *'
+|-VarDecl 0x7fe76684dbe8 <col:1, col:34> col:34 used f 'long *'
+|-VarDecl 0x7fe76684dc60 <col:1, col:38> col:38 used i 'long *'
+|-FunctionDecl 0x7fe76684dde8 <line:9:1, line:13:1> line:9:7 used baz 'long *(void)'
+| `-CompoundStmt 0x7fe76684e000 <line:10:1, line:13:1>
+|   |-GCCAsmStmt 0x7fe76684df58 <line:11:3, col:34>
+|   `-ReturnStmt 0x7fe76684dfe8 <line:12:3, col:10>
+|     `-ImplicitCastExpr 0x7fe76684dfd0 <col:10> 'long *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fe76684dfa8 <col:10> 'long *' lvalue Var 0x7fe76684db70 'e' 'long *'
+|-FunctionDecl 0x7fe76684e100 <line:15:1, line:62:1> line:16:1 bar 'void (int)'
+| |-ParmVarDecl 0x7fe76684e038 <col:6, col:10> col:10 used x 'int'
+| `-CompoundStmt 0x7fe7668661f0 <line:17:1, line:62:1>
+|   |-DeclStmt 0x7fe76684e220 <line:18:3, col:8>
+|   | `-VarDecl 0x7fe76684e1c0 <col:3, col:7> col:7 used y 'int'
+|   `-ForStmt 0x7fe7668661b8 <line:19:3, line:61:5>
+|     |-BinaryOperator 0x7fe76684e280 <line:19:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7fe76684e238 <col:8> 'int' lvalue Var 0x7fe76684e1c0 'y' 'int'
+|     | `-IntegerLiteral 0x7fe76684e260 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fe76684e328 <col:15, col:19> 'int' '<'
+|     | |-ImplicitCastExpr 0x7fe76684e2f8 <col:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fe76684e2a8 <col:15> 'int' lvalue Var 0x7fe76684e1c0 'y' 'int'
+|     | `-ImplicitCastExpr 0x7fe76684e310 <col:19> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe76684e2d0 <col:19> 'int' lvalue ParmVar 0x7fe76684e038 'x' 'int'
+|     |-UnaryOperator 0x7fe76684e378 <col:22, col:23> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7fe76684e350 <col:22> 'int' lvalue Var 0x7fe76684e1c0 'y' 'int'
+|     `-CompoundStmt 0x7fe766866198 <line:20:5, line:61:5>
+|       |-SwitchStmt 0x7fe76684e3d8 <line:21:7, line:32:2>
+|       | |-<<<NULL>>>
+|       | |-<<<NULL>>>
+|       | |-ImplicitCastExpr 0x7fe76684e3c0 <line:21:15> 'long' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fe76684e398 <col:15> 'long' lvalue Var 0x7fe76684d878 'b' 'long'
+|       | `-CompoundStmt 0x7fe76684e680 <line:22:2, line:32:2>
+|       |   |-CaseStmt 0x7fe76684e428 <line:23:2, line:25:5>
+|       |   | |-ImplicitCastExpr 0x7fe76684e700 <line:23:7> 'long' <IntegralCast>
+|       |   | | `-IntegerLiteral 0x7fe76684e408 <col:7> 'int' 0
+|       |   | |-<<<NULL>>>
+|       |   | `-CaseStmt 0x7fe76684e480 <line:24:2, line:25:5>
+|       |   |   |-ImplicitCastExpr 0x7fe76684e6e8 <line:24:7> 'long' <IntegralCast>
+|       |   |   | `-IntegerLiteral 0x7fe76684e460 <col:7> 'int' 2
+|       |   |   |-<<<NULL>>>
+|       |   |   `-UnaryOperator 0x7fe76684e4e0 <line:25:4, col:5> 'long' postfix '++'
+|       |   |     `-DeclRefExpr 0x7fe76684e4b8 <col:4> 'long' lvalue Var 0x7fe76684d800 'a' 'long'
+|       |   |-BreakStmt 0x7fe76684e500 <line:26:4>
+|       |   |-CaseStmt 0x7fe76684e528 <line:27:2, line:28:5>
+|       |   | |-ImplicitCastExpr 0x7fe76684e6d0 <line:27:7> 'long' <IntegralCast>
+|       |   | | `-IntegerLiteral 0x7fe76684e508 <col:7> 'int' 3
+|       |   | |-<<<NULL>>>
+|       |   | `-UnaryOperator 0x7fe76684e588 <line:28:4, col:5> 'long' postfix '++'
+|       |   |   `-DeclRefExpr 0x7fe76684e560 <col:4> 'long' lvalue Var 0x7fe76684d800 'a' 'long'
+|       |   |-BreakStmt 0x7fe76684e5a8 <line:29:4>
+|       |   `-CaseStmt 0x7fe76684e600 <line:30:2, line:31:5>
+|       |     |-ImplicitCastExpr 0x7fe76684e6b8 <line:30:7> 'long' <IntegralCast>
+|       |     | `-IntegerLiteral 0x7fe76684e5b0 <col:7> 'int' 1
+|       |     |-<<<NULL>>>
+|       |     `-UnaryOperator 0x7fe76684e660 <line:31:4, col:5> 'long' postfix '++'
+|       |       `-DeclRefExpr 0x7fe76684e638 <col:4> 'long' lvalue Var 0x7fe76684d800 'a' 'long'
+|       `-IfStmt 0x7fe766866160 <line:33:7, line:60:2>
+|         |-<<<NULL>>>
+|         |-<<<NULL>>>
+|         |-ImplicitCastExpr 0x7fe76684e740 <line:33:11> 'long *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fe76684e718 <col:11> 'long *' lvalue Var 0x7fe76684daf8 'd' 'long *'
+|         |-CompoundStmt 0x7fe76684ef30 <line:34:2, line:46:2>
+|         | |-BinaryOperator 0x7fe76684e818 <line:35:4, col:13> 'long *' '='
+|         | | |-DeclRefExpr 0x7fe76684e758 <col:4> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|         | | `-CallExpr 0x7fe76684e7f0 <col:8, col:13> 'long *'
+|         | |   `-ImplicitCastExpr 0x7fe76684e7d8 <col:8> 'long *(*)(void)' <FunctionToPointerDecay>
+|         | |     `-DeclRefExpr 0x7fe76684e780 <col:8> 'long *(void)' Function 0x7fe76684dde8 'baz' 'long *(void)'
+|         | |-BinaryOperator 0x7fe76684e8b0 <line:36:4, col:9> 'long' '='
+|         | | |-DeclRefExpr 0x7fe76684e840 <col:4> 'long' lvalue Var 0x7fe76684d8f0 'g' 'long'
+|         | | `-UnaryOperator 0x7fe76684e890 <col:8, col:9> 'long' postfix '++'
+|         | |   `-DeclRefExpr 0x7fe76684e868 <col:8> 'long' lvalue Var 0x7fe76684d9e0 'k' 'long'
+|         | |-IfStmt 0x7fe76684ed68 <line:37:4, line:43:29>
+|         | | |-<<<NULL>>>
+|         | | |-<<<NULL>>>
+|         | | |-UnaryOperator 0x7fe76684e950 <line:37:8, col:12> 'long *' prefix '&'
+|         | | | `-MemberExpr 0x7fe76684e918 <col:9, col:12> 'long' lvalue ->q 0x7fe76684d638
+|         | | |   `-ImplicitCastExpr 0x7fe76684e900 <col:9> 'struct S *' <LValueToRValue>
+|         | | |     `-DeclRefExpr 0x7fe76684e8d8 <col:9> 'struct S *' lvalue Var 0x7fe76684d730 'h' 'struct S *'
+|         | | |-CompoundStmt 0x7fe76684eb50 <line:38:6, line:41:6>
+|         | | | |-BinaryOperator 0x7fe76684ea10 <line:39:8, col:13> 'long' '='
+|         | | | | |-DeclRefExpr 0x7fe76684e970 <col:8> 'long' lvalue Var 0x7fe76684d968 'j' 'long'
+|         | | | | `-ImplicitCastExpr 0x7fe76684e9f8 <col:12, col:13> 'long' <LValueToRValue>
+|         | | | |   `-UnaryOperator 0x7fe76684e9d8 <col:12, col:13> 'long' lvalue prefix '*'
+|         | | | |     `-ImplicitCastExpr 0x7fe76684e9c0 <col:13> 'long *' <LValueToRValue>
+|         | | | |       `-DeclRefExpr 0x7fe76684e998 <col:13> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|         | | | `-BinaryOperator 0x7fe76684eb28 <line:40:8, col:16> 'long' '='
+|         | | |   |-MemberExpr 0x7fe76684ea78 <col:8, col:11> 'long' lvalue ->q 0x7fe76684d638
+|         | | |   | `-ImplicitCastExpr 0x7fe76684ea60 <col:8> 'struct S *' <LValueToRValue>
+|         | | |   |   `-DeclRefExpr 0x7fe76684ea38 <col:8> 'struct S *' lvalue Var 0x7fe76684d730 'h' 'struct S *'
+|         | | |   `-ImplicitCastExpr 0x7fe76684eb10 <col:15, col:16> 'long' <LValueToRValue>
+|         | | |     `-UnaryOperator 0x7fe76684eaf0 <col:15, col:16> 'long' lvalue prefix '*'
+|         | | |       `-ImplicitCastExpr 0x7fe76684ead8 <col:16> 'long *' <LValueToRValue>
+|         | | |         `-DeclRefExpr 0x7fe76684eab0 <col:16> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|         | | `-BinaryOperator 0x7fe76684ed40 <line:43:6, col:29> 'long *' '='
+|         | |   |-DeclRefExpr 0x7fe76684eb70 <col:6> 'long *' lvalue Var 0x7fe76684dc60 'i' 'long *'
+|         | |   `-CStyleCastExpr 0x7fe76684ed18 <col:10, col:29> 'long *' <IntegralToPointer>
+|         | |     `-ParenExpr 0x7fe76684ecf8 <col:19, col:29> 'long'
+|         | |       `-BinaryOperator 0x7fe76684ec88 <col:20, col:28> 'long' '='
+|         | |         |-MemberExpr 0x7fe76684ebd8 <col:20, col:23> 'long' lvalue ->q 0x7fe76684d638
+|         | |         | `-ImplicitCastExpr 0x7fe76684ebc0 <col:20> 'struct S *' <LValueToRValue>
+|         | |         |   `-DeclRefExpr 0x7fe76684eb98 <col:20> 'struct S *' lvalue Var 0x7fe76684d730 'h' 'struct S *'
+|         | |         `-ImplicitCastExpr 0x7fe76684ec70 <col:27, col:28> 'long' <LValueToRValue>
+|         | |           `-UnaryOperator 0x7fe76684ec50 <col:27, col:28> 'long' lvalue prefix '*'
+|         | |             `-ImplicitCastExpr 0x7fe76684ec38 <col:28> 'long *' <LValueToRValue>
+|         | |               `-DeclRefExpr 0x7fe76684ec10 <col:28> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|         | |-BinaryOperator 0x7fe76684ee88 <line:44:4, col:18> 'long' '='
+|         | | |-UnaryOperator 0x7fe76684ede8 <col:4, col:6> 'long' lvalue prefix '*'
+|         | | | `-UnaryOperator 0x7fe76684edc8 <col:5, col:6> 'long *' postfix '++'
+|         | | |   `-DeclRefExpr 0x7fe76684eda0 <col:5> 'long *' lvalue Var 0x7fe76684da80 'c' 'long *'
+|         | | `-CStyleCastExpr 0x7fe76684ee60 <col:11, col:18> 'long' <PointerToIntegral>
+|         | |   `-ImplicitCastExpr 0x7fe76684ee48 <col:18> 'long *' <LValueToRValue>
+|         | |     `-DeclRefExpr 0x7fe76684ee08 <col:18> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|         | `-CompoundAssignOperator 0x7fe76684eef8 <line:45:4, col:9> 'long *' '+=' ComputeLHSTy='long *' ComputeResultTy='long *'
+|         |   |-DeclRefExpr 0x7fe76684eeb0 <col:4> 'long *' lvalue Var 0x7fe76684db70 'e' 'long *'
+|         |   `-IntegerLiteral 0x7fe76684eed8 <col:9> 'int' 6
+|         `-CompoundStmt 0x7fe766866128 <line:48:2, line:60:2>
+|           |-BinaryOperator 0x7fe76684eff8 <line:49:4, col:13> 'long *' '='
+|           | |-DeclRefExpr 0x7fe76684ef68 <col:4> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|           | `-CallExpr 0x7fe76684efd0 <col:8, col:13> 'long *'
+|           |   `-ImplicitCastExpr 0x7fe76684efb8 <col:8> 'long *(*)(void)' <FunctionToPointerDecay>
+|           |     `-DeclRefExpr 0x7fe76684ef90 <col:8> 'long *(void)' Function 0x7fe76684dde8 'baz' 'long *(void)'
+|           |-BinaryOperator 0x7fe76684f090 <line:50:4, col:9> 'long' '='
+|           | |-DeclRefExpr 0x7fe76684f020 <col:4> 'long' lvalue Var 0x7fe76684d8f0 'g' 'long'
+|           | `-UnaryOperator 0x7fe76684f070 <col:8, col:9> 'long' postfix '++'
+|           |   `-DeclRefExpr 0x7fe76684f048 <col:8> 'long' lvalue Var 0x7fe76684d9e0 'k' 'long'
+|           |-IfStmt 0x7fe76684f548 <line:51:4, line:57:29>
+|           | |-<<<NULL>>>
+|           | |-<<<NULL>>>
+|           | |-UnaryOperator 0x7fe76684f130 <line:51:8, col:12> 'long *' prefix '&'
+|           | | `-MemberExpr 0x7fe76684f0f8 <col:9, col:12> 'long' lvalue ->q 0x7fe76684d638
+|           | |   `-ImplicitCastExpr 0x7fe76684f0e0 <col:9> 'struct S *' <LValueToRValue>
+|           | |     `-DeclRefExpr 0x7fe76684f0b8 <col:9> 'struct S *' lvalue Var 0x7fe76684d730 'h' 'struct S *'
+|           | |-CompoundStmt 0x7fe76684f330 <line:52:6, line:55:6>
+|           | | |-BinaryOperator 0x7fe76684f1f0 <line:53:8, col:13> 'long' '='
+|           | | | |-DeclRefExpr 0x7fe76684f150 <col:8> 'long' lvalue Var 0x7fe76684d968 'j' 'long'
+|           | | | `-ImplicitCastExpr 0x7fe76684f1d8 <col:12, col:13> 'long' <LValueToRValue>
+|           | | |   `-UnaryOperator 0x7fe76684f1b8 <col:12, col:13> 'long' lvalue prefix '*'
+|           | | |     `-ImplicitCastExpr 0x7fe76684f1a0 <col:13> 'long *' <LValueToRValue>
+|           | | |       `-DeclRefExpr 0x7fe76684f178 <col:13> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|           | | `-BinaryOperator 0x7fe76684f308 <line:54:8, col:16> 'long' '='
+|           | |   |-MemberExpr 0x7fe76684f258 <col:8, col:11> 'long' lvalue ->q 0x7fe76684d638
+|           | |   | `-ImplicitCastExpr 0x7fe76684f240 <col:8> 'struct S *' <LValueToRValue>
+|           | |   |   `-DeclRefExpr 0x7fe76684f218 <col:8> 'struct S *' lvalue Var 0x7fe76684d730 'h' 'struct S *'
+|           | |   `-ImplicitCastExpr 0x7fe76684f2f0 <col:15, col:16> 'long' <LValueToRValue>
+|           | |     `-UnaryOperator 0x7fe76684f2d0 <col:15, col:16> 'long' lvalue prefix '*'
+|           | |       `-ImplicitCastExpr 0x7fe76684f2b8 <col:16> 'long *' <LValueToRValue>
+|           | |         `-DeclRefExpr 0x7fe76684f290 <col:16> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|           | `-BinaryOperator 0x7fe76684f520 <line:57:6, col:29> 'long *' '='
+|           |   |-DeclRefExpr 0x7fe76684f350 <col:6> 'long *' lvalue Var 0x7fe76684dc60 'i' 'long *'
+|           |   `-CStyleCastExpr 0x7fe76684f4f8 <col:10, col:29> 'long *' <IntegralToPointer>
+|           |     `-ParenExpr 0x7fe76684f4d8 <col:19, col:29> 'long'
+|           |       `-BinaryOperator 0x7fe76684f468 <col:20, col:28> 'long' '='
+|           |         |-MemberExpr 0x7fe76684f3b8 <col:20, col:23> 'long' lvalue ->q 0x7fe76684d638
+|           |         | `-ImplicitCastExpr 0x7fe76684f3a0 <col:20> 'struct S *' <LValueToRValue>
+|           |         |   `-DeclRefExpr 0x7fe76684f378 <col:20> 'struct S *' lvalue Var 0x7fe76684d730 'h' 'struct S *'
+|           |         `-ImplicitCastExpr 0x7fe76684f450 <col:27, col:28> 'long' <LValueToRValue>
+|           |           `-UnaryOperator 0x7fe76684f430 <col:27, col:28> 'long' lvalue prefix '*'
+|           |             `-ImplicitCastExpr 0x7fe76684f418 <col:28> 'long *' <LValueToRValue>
+|           |               `-DeclRefExpr 0x7fe76684f3f0 <col:28> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|           |-BinaryOperator 0x7fe766866080 <line:58:4, col:18> 'long' '='
+|           | |-UnaryOperator 0x7fe76684f5c8 <col:4, col:6> 'long' lvalue prefix '*'
+|           | | `-UnaryOperator 0x7fe76684f5a8 <col:5, col:6> 'long *' postfix '++'
+|           | |   `-DeclRefExpr 0x7fe76684f580 <col:5> 'long *' lvalue Var 0x7fe76684da80 'c' 'long *'
+|           | `-CStyleCastExpr 0x7fe766866058 <col:11, col:18> 'long' <PointerToIntegral>
+|           |   `-ImplicitCastExpr 0x7fe766866040 <col:18> 'long *' <LValueToRValue>
+|           |     `-DeclRefExpr 0x7fe766866000 <col:18> 'long *' lvalue Var 0x7fe76684dbe8 'f' 'long *'
+|           `-CompoundAssignOperator 0x7fe7668660f0 <line:59:4, col:9> 'long *' '+=' ComputeLHSTy='long *' ComputeResultTy='long *'
+|             |-DeclRefExpr 0x7fe7668660a8 <col:4> 'long *' lvalue Var 0x7fe76684db70 'e' 'long *'
+|             `-IntegerLiteral 0x7fe7668660d0 <col:9> 'int' 6
+`-FunctionDecl 0x7fe766866260 <line:64:1, line:68:1> line:65:1 main 'int ()'
+  `-CompoundStmt 0x7fe766866338 <line:66:1, line:68:1>
+    `-ReturnStmt 0x7fe766866320 <line:67:3, col:10>
+      `-IntegerLiteral 0x7fe766866300 <col:10> 'int' 0

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7fb9d602bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb9d606d910 <../Data/C2AST/pr23435.c:3:1, line:7:1> line:4:1 foo 'void (unsigned long *, unsigned long long *)'
+  |-ParmVarDecl 0x7fb9d602c9a0 <col:6, col:21> col:21 used a 'unsigned long *'
+  |-ParmVarDecl 0x7fb9d606d840 <col:24, col:44> col:44 used p 'unsigned long long *'
+  `-CompoundStmt 0x7fb9d606db18 <line:5:1, line:7:1>
+    `-BinaryOperator 0x7fb9d606daf0 <line:6:3, col:9> 'unsigned long long' '='
+      |-UnaryOperator 0x7fb9d606da40 <col:3, col:4> 'unsigned long long' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fb9d606da28 <col:4> 'unsigned long long *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb9d606da00 <col:4> 'unsigned long long *' lvalue ParmVar 0x7fb9d606d840 'p' 'unsigned long long *'
+      `-ImplicitCastExpr 0x7fb9d606dad8 <col:8, col:9> 'unsigned long long' <IntegralCast>
+        `-ImplicitCastExpr 0x7fb9d606dac0 <col:8, col:9> 'unsigned long' <LValueToRValue>
+          `-UnaryOperator 0x7fb9d606daa0 <col:8, col:9> 'unsigned long' lvalue prefix '*'
+            `-ImplicitCastExpr 0x7fb9d606da88 <col:9> 'unsigned long *' <LValueToRValue>
+              `-DeclRefExpr 0x7fb9d606da60 <col:9> 'unsigned long *' lvalue ParmVar 0x7fb9d602c9a0 'a' 'unsigned long *'

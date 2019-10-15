@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7f9b200070e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9b21036c00 <../Data/C2AST/pr71626-1.c:3:1, col:25> col:25 referenced V '__attribute__((__vector_size__(1 * sizeof(long)))) long'
+| `-VectorType 0x7f9b20007da0 '__attribute__((__vector_size__(1 * sizeof(long)))) long' 1
+|   `-BuiltinType 0x7f9b20007200 'long'
+|-FunctionDecl 0x7f9b21036cf8 <line:5:1, line:10:1> line:6:1 used foo 'V ()'
+| |-CompoundStmt 0x7f9b21037068 <line:7:1, line:10:1>
+| | |-DeclStmt 0x7f9b21036ff8 <line:8:3, col:34>
+| | | `-VarDecl 0x7f9b21036e30 <col:3, col:33> col:5 used v 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' cinit
+| | |   `-InitListExpr 0x7f9b21036fb0 <col:9, col:33> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+| | |     `-CStyleCastExpr 0x7f9b21036f40 <col:11, col:29> 'long' <PointerToIntegral>
+| | |       `-ImplicitCastExpr 0x7f9b21036f28 <col:29> 'V (*)()' <FunctionToPointerDecay>
+| | |         `-DeclRefExpr 0x7f9b21036e90 <col:29> 'V ()' Function 0x7f9b21036cf8 'foo' 'V ()'
+| | `-ReturnStmt 0x7f9b21037050 <line:9:3, col:10>
+| |   `-ImplicitCastExpr 0x7f9b21037038 <col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f9b21037010 <col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' lvalue Var 0x7f9b21036e30 'v' 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+| `-NoInlineAttr 0x7f9b21036d98 <line:5:16>
+|-FunctionDecl 0x7f9b210370e0 <line:12:1, line:19:1> line:13:1 main 'int ()'
+| `-CompoundStmt 0x7f9b210375b8 <line:14:1, line:19:1>
+|   |-DeclStmt 0x7f9b21037258 <line:15:3, col:15>
+|   | `-VarDecl 0x7f9b21037190 <col:3, col:14> col:5 used v 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' cinit
+|   |   `-CallExpr 0x7f9b21037230 <col:9, col:14> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+|   |     `-ImplicitCastExpr 0x7f9b21037218 <col:9> 'V (*)()' <FunctionToPointerDecay>
+|   |       `-DeclRefExpr 0x7f9b210371f0 <col:9> 'V ()' Function 0x7f9b21036cf8 'foo' 'V ()'
+|   |-IfStmt 0x7f9b21037548 <line:16:3, line:17:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9b21037378 <line:16:7, col:33> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f9b21037360 <col:7, col:10> 'long' <LValueToRValue>
+|   | | | `-ArraySubscriptExpr 0x7f9b210372b8 <col:7, col:10> 'long' lvalue vectorcomponent
+|   | | |   |-DeclRefExpr 0x7f9b21037270 <col:7> 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long' lvalue Var 0x7f9b21037190 'v' 'V':'__attribute__((__vector_size__(1 * sizeof(long)))) long'
+|   | | |   `-IntegerLiteral 0x7f9b21037298 <col:9> 'int' 0
+|   | | `-CStyleCastExpr 0x7f9b21037338 <col:15, col:33> 'long' <PointerToIntegral>
+|   | |   `-ImplicitCastExpr 0x7f9b21037320 <col:33> 'V (*)()' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7f9b210372e0 <col:33> 'V ()' Function 0x7f9b21036cf8 'foo' 'V ()'
+|   | |-CallExpr 0x7f9b21037520 <line:17:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f9b21037508 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f9b210374b8 <col:5> '<builtin fn type>' Function 0x7f9b210373d0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9b210375a0 <line:18:3, col:10>
+|     `-IntegerLiteral 0x7f9b21037580 <col:10> 'int' 0
+`-FunctionDecl 0x7f9b210373d0 <line:17:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f9b21037470 <col:5> Implicit

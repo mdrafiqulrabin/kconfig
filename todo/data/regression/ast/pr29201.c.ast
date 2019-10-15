@@ -1,0 +1,365 @@
+TranslationUnitDecl 0x7fbc7f017ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbc7f018b78 <../Data/C2AST/pr29201.c:2:1, col:13> col:13 referenced gint 'int'
+| `-BuiltinType 0x7fbc7f017fe0 'int'
+|-TypedefDecl 0x7fbc7f05a600 <line:3:1, col:14> col:14 referenced gboolean 'gint':'int'
+| `-TypedefType 0x7fbc7f018bd0 'gint' sugar
+|   |-Typedef 0x7fbc7f018b78 'gint'
+|   `-BuiltinType 0x7fbc7f017fe0 'int'
+|-TypedefDecl 0x7fbc7f05a670 <line:4:1, col:22> col:22 referenced guint 'unsigned int'
+| `-BuiltinType 0x7fbc7f018080 'unsigned int'
+|-RecordDecl 0x7fbc7f05a6c8 <line:5:9, col:16> col:16 struct _MetaRectangle
+|-TypedefDecl 0x7fbc7f05a7c0 <col:1, col:31> col:31 referenced MetaRectangle 'struct _MetaRectangle':'struct _MetaRectangle'
+| `-ElaboratedType 0x7fbc7f05a770 'struct _MetaRectangle' sugar
+|   `-RecordType 0x7fbc7f05a750 'struct _MetaRectangle'
+|     `-Record 0x7fbc7f05a830 '_MetaRectangle'
+|-RecordDecl 0x7fbc7f05a830 prev 0x7fbc7f05a6c8 <line:6:1, line:10:1> line:6:8 struct _MetaRectangle definition
+| |-FieldDecl 0x7fbc7f05a8d0 <line:8:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7fbc7f05a930 <line:9:3, col:7> col:7 referenced y 'int'
+|-RecordDecl 0x7fbc7f05a978 <line:11:9, col:16> col:16 struct _MetaDisplay
+|-TypedefDecl 0x7fbc7f05aa70 <col:1, col:29> col:29 referenced MetaDisplay 'struct _MetaDisplay':'struct _MetaDisplay'
+| `-ElaboratedType 0x7fbc7f05aa20 'struct _MetaDisplay' sugar
+|   `-RecordType 0x7fbc7f05aa00 'struct _MetaDisplay'
+|     `-Record 0x7fbc7f05a978 '_MetaDisplay'
+|-RecordDecl 0x7fbc7f05aae0 <line:12:9, col:16> col:16 struct _MetaFrame
+|-TypedefDecl 0x7fbc7f05abe0 <col:1, col:27> col:27 referenced MetaFrame 'struct _MetaFrame':'struct _MetaFrame'
+| `-ElaboratedType 0x7fbc7f05ab90 'struct _MetaFrame' sugar
+|   `-RecordType 0x7fbc7f05ab70 'struct _MetaFrame'
+|     `-Record 0x7fbc7f05bee8 '_MetaFrame'
+|-RecordDecl 0x7fbc7f05ac50 <line:13:9, col:16> col:16 struct _MetaWindow
+|-TypedefDecl 0x7fbc7f05ad50 <col:1, col:28> col:28 referenced MetaWindow 'struct _MetaWindow':'struct _MetaWindow'
+| `-ElaboratedType 0x7fbc7f05ad00 'struct _MetaWindow' sugar
+|   `-RecordType 0x7fbc7f05ace0 'struct _MetaWindow'
+|     `-Record 0x7fbc7f05b530 '_MetaWindow'
+|-RecordDecl 0x7fbc7f05adc0 <line:14:9, line:17:1> line:14:9 struct definition
+| `-FieldDecl 0x7fbc7f05ae88 <line:16:3, col:7> col:7 referenced win_gravity 'int'
+|-TypedefDecl 0x7fbc7f05af20 <line:14:1, line:18:1> col:1 referenced XSizeHints 'struct XSizeHints':'XSizeHints'
+| `-ElaboratedType 0x7fbc7f05aed0 'struct XSizeHints' sugar
+|   `-RecordType 0x7fbc7f05ae50 'XSizeHints'
+|     `-Record 0x7fbc7f05adc0 ''
+|-EnumDecl 0x7fbc7f05af90 <line:19:9, line:24:1> line:19:9
+| |-EnumConstantDecl 0x7fbc7f05b0b8 <line:21:3, col:27> col:3 META_DEBUG_FOCUS 'int'
+| | `-BinaryOperator 0x7fbc7f05b090 <col:22, col:27> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05b050 <col:22> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05b070 <col:27> 'int' 0
+| |-EnumConstantDecl 0x7fbc7f05b168 <col:30, col:57> col:30 META_DEBUG_WORKAREA 'int'
+| | `-BinaryOperator 0x7fbc7f05b140 <col:52, col:57> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05b100 <col:52> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05b120 <col:57> 'int' 1
+| |-EnumConstantDecl 0x7fbc7f05b218 <col:60, line:22:10> line:21:60 META_DEBUG_STACK 'int'
+| | `-BinaryOperator 0x7fbc7f05b1f0 <line:22:5, col:10> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05b1b0 <col:5> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05b1d0 <col:10> 'int' 6
+| |-EnumConstantDecl 0x7fbc7f05b2c8 <col:13, col:42> col:13 META_DEBUG_WINDOW_OPS 'int'
+| | `-BinaryOperator 0x7fbc7f05b2a0 <col:37, col:42> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05b260 <col:37> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05b280 <col:42> 'int' 7
+| |-EnumConstantDecl 0x7fbc7f05b378 <col:45, line:23:10> line:22:45 referenced META_DEBUG_GEOMETRY 'int'
+| | `-BinaryOperator 0x7fbc7f05b350 <line:23:5, col:10> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05b310 <col:5> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05b330 <col:10> 'int' 20
+| `-EnumConstantDecl 0x7fbc7f05b428 <col:14, col:48> col:14 META_DEBUG_EDGE_RESISTANCE 'int'
+|   `-BinaryOperator 0x7fbc7f05b400 <col:43, col:48> 'int' '<<'
+|     |-IntegerLiteral 0x7fbc7f05b3c0 <col:43> 'int' 1
+|     `-IntegerLiteral 0x7fbc7f05b3e0 <col:48> 'int' 21
+|-TypedefDecl 0x7fbc7f05b4c0 <line:19:1, line:25:1> col:1 MetaStackLayer 'enum MetaStackLayer':'MetaStackLayer'
+| `-ElaboratedType 0x7fbc7f05b470 'enum MetaStackLayer' sugar
+|   `-EnumType 0x7fbc7f05b030 'MetaStackLayer'
+|     `-Enum 0x7fbc7f05af90 ''
+|-RecordDecl 0x7fbc7f05b530 prev 0x7fbc7f05ac50 <line:26:1, line:33:1> line:26:8 struct _MetaWindow definition
+| |-FieldDecl 0x7fbc7f05b668 <line:28:3, col:16> col:16 display 'MetaDisplay *'
+| |-FieldDecl 0x7fbc7f05b738 <line:29:3, col:14> col:14 referenced frame 'MetaFrame *'
+| |-FieldDecl 0x7fbc7f05b7d0 <line:30:3, col:31> col:9 referenced user_has_move_resized 'guint':'unsigned int'
+| | `-IntegerLiteral 0x7fbc7f05b7a0 <col:31> 'int' 1
+| |-FieldDecl 0x7fbc7f05b850 <line:31:3, col:17> col:17 referenced user_rect 'MetaRectangle':'struct _MetaRectangle'
+| `-FieldDecl 0x7fbc7f05b8d0 <line:32:3, col:14> col:14 referenced size_hints 'XSizeHints':'XSizeHints'
+|-FunctionDecl 0x7fbc7f05bc00 <line:34:1, col:67> col:6 used meta_window_get_position 'void (MetaWindow *, int *, int *)'
+| |-ParmVarDecl 0x7fbc7f05b9a8 <col:32, col:45> col:45 window 'MetaWindow *'
+| |-ParmVarDecl 0x7fbc7f05ba50 <col:53, col:58> col:58 x 'int *'
+| `-ParmVarDecl 0x7fbc7f05bac8 <col:61, col:66> col:66 y 'int *'
+|-RecordDecl 0x7fbc7f05bcf8 <line:35:9, col:16> col:16 struct _MetaFrameGeometry
+|-TypedefDecl 0x7fbc7f05bdf0 <col:1, col:35> col:35 referenced MetaFrameGeometry 'struct _MetaFrameGeometry':'struct _MetaFrameGeometry'
+| `-ElaboratedType 0x7fbc7f05bda0 'struct _MetaFrameGeometry' sugar
+|   `-RecordType 0x7fbc7f05bd80 'struct _MetaFrameGeometry'
+|     `-Record 0x7fbc7f05be60 '_MetaFrameGeometry'
+|-RecordDecl 0x7fbc7f05be60 prev 0x7fbc7f05bcf8 <line:36:1, line:38:1> line:36:8 struct _MetaFrameGeometry definition
+|-RecordDecl 0x7fbc7f05bee8 prev 0x7fbc7f05aae0 <line:39:1, line:45:1> line:39:8 struct _MetaFrame definition
+| |-FieldDecl 0x7fbc7f05bf80 <line:41:3, col:15> col:15 window 'MetaWindow *'
+| |-FieldDecl 0x7fbc7f05bfd8 <line:42:3, col:17> col:17 referenced rect 'MetaRectangle':'struct _MetaRectangle'
+| |-FieldDecl 0x7fbc7f05c038 <line:43:3, col:7> col:7 referenced child_x 'int'
+| `-FieldDecl 0x7fbc7f05c098 <line:44:3, col:7> col:7 referenced child_y 'int'
+|-EnumDecl 0x7fbc7f05c0e0 <line:46:9, line:50:1> line:46:9
+| |-EnumConstantDecl 0x7fbc7f05c208 <line:48:3, col:36> col:3 META_IS_CONFIGURE_REQUEST 'int'
+| | `-BinaryOperator 0x7fbc7f05c1e0 <col:31, col:36> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05c1a0 <col:31> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05c1c0 <col:36> 'int' 0
+| |-EnumConstantDecl 0x7fbc7f05c2b8 <col:39, line:49:10> line:48:39 META_DO_GRAVITY_ADJUST 'int'
+| | `-BinaryOperator 0x7fbc7f05c290 <line:49:5, col:10> 'int' '<<'
+| |   |-IntegerLiteral 0x7fbc7f05c250 <col:5> 'int' 1
+| |   `-IntegerLiteral 0x7fbc7f05c270 <col:10> 'int' 3
+| `-EnumConstantDecl 0x7fbc7f05c368 <col:13, col:42> col:13 META_IS_RESIZE_ACTION 'int'
+|   `-BinaryOperator 0x7fbc7f05c340 <col:37, col:42> 'int' '<<'
+|     |-IntegerLiteral 0x7fbc7f05c300 <col:37> 'int' 1
+|     `-IntegerLiteral 0x7fbc7f05c320 <col:42> 'int' 4
+|-TypedefDecl 0x7fbc7f05c400 <line:46:1, line:51:1> col:1 referenced MetaMoveResizeFlags 'enum MetaMoveResizeFlags':'MetaMoveResizeFlags'
+| `-ElaboratedType 0x7fbc7f05c3b0 'enum MetaMoveResizeFlags' sugar
+|   `-EnumType 0x7fbc7f05c180 'MetaMoveResizeFlags'
+|     `-Enum 0x7fbc7f05c0e0 ''
+|-FunctionDecl 0x7fbc7f0722b8 <line:52:1, line:76:1> line:52:1 used adjust_for_gravity 'int (MetaWindow *, MetaFrameGeometry *, gboolean, int, MetaRectangle *)'
+| |-ParmVarDecl 0x7fbc7f05c480 <col:21, col:34> col:34 window 'MetaWindow *'
+| |-ParmVarDecl 0x7fbc7f05c568 <col:42, col:62> col:62 fgeom 'MetaFrameGeometry *'
+| |-ParmVarDecl 0x7fbc7f072000 <line:53:7, col:16> col:16 coords_assume_border 'gboolean':'int'
+| |-ParmVarDecl 0x7fbc7f072078 <col:38, col:42> col:42 used gravity 'int'
+| |-ParmVarDecl 0x7fbc7f072148 <line:54:7, col:23> col:23 used rect 'MetaRectangle *'
+| `-CompoundStmt 0x7fbc80003400 <line:55:1, line:76:1>
+|   |-DeclStmt 0x7fbc7f072488 <line:56:3, col:19>
+|   | |-VarDecl 0x7fbc7f072398 <col:3, col:7> col:7 used ref_x 'int'
+|   | `-VarDecl 0x7fbc7f072410 <col:3, col:14> col:14 used ref_y 'int'
+|   |-DeclStmt 0x7fbc7f0725a8 <line:57:3, col:23>
+|   | |-VarDecl 0x7fbc7f0724b8 <col:3, col:7> col:7 used child_x 'int'
+|   | `-VarDecl 0x7fbc7f072530 <col:3, col:16> col:16 used child_y 'int'
+|   |-DeclStmt 0x7fbc7f0726c8 <line:58:3, col:32>
+|   | |-VarDecl 0x7fbc7f0725d8 <col:3, col:7> col:7 used frame_width 'int'
+|   | `-VarDecl 0x7fbc7f072650 <col:3, col:20> col:20 frame_height 'int'
+|   |-SwitchStmt 0x7fbc7f072720 <line:59:3, line:63:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fbc7f072708 <line:59:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbc7f0726e0 <col:11> 'int' lvalue ParmVar 0x7fbc7f072078 'gravity' 'int'
+|   | `-CompoundStmt 0x7fbc7f072888 <line:60:5, line:63:5>
+|   |   `-CaseStmt 0x7fbc7f072770 <line:61:5, line:62:21>
+|   |     |-IntegerLiteral 0x7fbc7f072750 <line:61:10> 'int' 1
+|   |     |-<<<NULL>>>
+|   |     `-BinaryOperator 0x7fbc7f072860 <line:62:7, col:21> 'int' '='
+|   |       |-DeclRefExpr 0x7fbc7f0727a8 <col:7> 'int' lvalue Var 0x7fbc7f072398 'ref_x' 'int'
+|   |       `-ImplicitCastExpr 0x7fbc7f072848 <col:15, col:21> 'int' <LValueToRValue>
+|   |         `-MemberExpr 0x7fbc7f072810 <col:15, col:21> 'int' lvalue ->x 0x7fbc7f05a8d0
+|   |           `-ImplicitCastExpr 0x7fbc7f0727f8 <col:15> 'MetaRectangle *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7fbc7f0727d0 <col:15> 'MetaRectangle *' lvalue ParmVar 0x7fbc7f072148 'rect' 'MetaRectangle *'
+|   `-SwitchStmt 0x7fbc7f0728e0 <line:64:3, line:75:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fbc7f0728c8 <line:64:11> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fbc7f0728a0 <col:11> 'int' lvalue ParmVar 0x7fbc7f072078 'gravity' 'int'
+|     `-CompoundStmt 0x7fbc7f072fc0 <line:65:5, line:75:5>
+|       |-CaseStmt 0x7fbc7f072930 <line:66:5, line:67:25>
+|       | |-IntegerLiteral 0x7fbc7f072910 <line:66:10> 'int' 1
+|       | |-<<<NULL>>>
+|       | `-BinaryOperator 0x7fbc7f072a88 <line:67:7, col:25> 'int' '='
+|       |   |-MemberExpr 0x7fbc7f0729a8 <col:7, col:13> 'int' lvalue ->y 0x7fbc7f05a930
+|       |   | `-ImplicitCastExpr 0x7fbc7f072990 <col:7> 'MetaRectangle *' <LValueToRValue>
+|       |   |   `-DeclRefExpr 0x7fbc7f072968 <col:7> 'MetaRectangle *' lvalue ParmVar 0x7fbc7f072148 'rect' 'MetaRectangle *'
+|       |   `-BinaryOperator 0x7fbc7f072a60 <col:17, col:25> 'int' '+'
+|       |     |-ImplicitCastExpr 0x7fbc7f072a30 <col:17> 'int' <LValueToRValue>
+|       |     | `-DeclRefExpr 0x7fbc7f0729e0 <col:17> 'int' lvalue Var 0x7fbc7f072410 'ref_y' 'int'
+|       |     `-ImplicitCastExpr 0x7fbc7f072a48 <col:25> 'int' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fbc7f072a08 <col:25> 'int' lvalue Var 0x7fbc7f072530 'child_y' 'int'
+|       |-CaseStmt 0x7fbc7f072ad0 <line:68:5, line:69:43>
+|       | |-IntegerLiteral 0x7fbc7f072ab0 <line:68:10> 'int' 2
+|       | |-<<<NULL>>>
+|       | `-BinaryOperator 0x7fbc7f072cd8 <line:69:7, col:43> 'int' '='
+|       |   |-MemberExpr 0x7fbc7f072b48 <col:7, col:13> 'int' lvalue ->x 0x7fbc7f05a8d0
+|       |   | `-ImplicitCastExpr 0x7fbc7f072b30 <col:7> 'MetaRectangle *' <LValueToRValue>
+|       |   |   `-DeclRefExpr 0x7fbc7f072b08 <col:7> 'MetaRectangle *' lvalue ParmVar 0x7fbc7f072148 'rect' 'MetaRectangle *'
+|       |   `-BinaryOperator 0x7fbc7f072cb0 <col:17, col:43> 'int' '+'
+|       |     |-BinaryOperator 0x7fbc7f072c48 <col:17, col:39> 'int' '-'
+|       |     | |-ImplicitCastExpr 0x7fbc7f072c30 <col:17> 'int' <LValueToRValue>
+|       |     | | `-DeclRefExpr 0x7fbc7f072b80 <col:17> 'int' lvalue Var 0x7fbc7f072398 'ref_x' 'int'
+|       |     | `-BinaryOperator 0x7fbc7f072c08 <col:25, col:39> 'int' '/'
+|       |     |   |-ImplicitCastExpr 0x7fbc7f072bf0 <col:25> 'int' <LValueToRValue>
+|       |     |   | `-DeclRefExpr 0x7fbc7f072ba8 <col:25> 'int' lvalue Var 0x7fbc7f0725d8 'frame_width' 'int'
+|       |     |   `-IntegerLiteral 0x7fbc7f072bd0 <col:39> 'int' 2
+|       |     `-ImplicitCastExpr 0x7fbc7f072c98 <col:43> 'int' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fbc7f072c70 <col:43> 'int' lvalue Var 0x7fbc7f0724b8 'child_x' 'int'
+|       |-BreakStmt 0x7fbc7f072d00 <line:70:7>
+|       `-CaseStmt 0x7fbc7f072d28 <line:71:5, line:74:39>
+|         |-IntegerLiteral 0x7fbc7f072d08 <line:71:10> 'int' 3
+|         |-<<<NULL>>>
+|         `-CaseStmt 0x7fbc7f072d80 <line:72:5, line:74:39>
+|           |-IntegerLiteral 0x7fbc7f072d60 <line:72:10> 'int' 5
+|           |-<<<NULL>>>
+|           `-CaseStmt 0x7fbc7f072dd8 <line:73:5, line:74:39>
+|             |-IntegerLiteral 0x7fbc7f072db8 <line:73:10> 'int' 6
+|             |-<<<NULL>>>
+|             `-BinaryOperator 0x7fbc7f072f98 <line:74:7, col:39> 'int' '='
+|               |-MemberExpr 0x7fbc7f072e50 <col:7, col:13> 'int' lvalue ->x 0x7fbc7f05a8d0
+|               | `-ImplicitCastExpr 0x7fbc7f072e38 <col:7> 'MetaRectangle *' <LValueToRValue>
+|               |   `-DeclRefExpr 0x7fbc7f072e10 <col:7> 'MetaRectangle *' lvalue ParmVar 0x7fbc7f072148 'rect' 'MetaRectangle *'
+|               `-BinaryOperator 0x7fbc7f072f70 <col:17, col:39> 'int' '+'
+|                 |-BinaryOperator 0x7fbc7f072f08 <col:17, col:25> 'int' '-'
+|                 | |-ImplicitCastExpr 0x7fbc7f072ed8 <col:17> 'int' <LValueToRValue>
+|                 | | `-DeclRefExpr 0x7fbc7f072e88 <col:17> 'int' lvalue Var 0x7fbc7f072398 'ref_x' 'int'
+|                 | `-ImplicitCastExpr 0x7fbc7f072ef0 <col:25> 'int' <LValueToRValue>
+|                 |   `-DeclRefExpr 0x7fbc7f072eb0 <col:25> 'int' lvalue Var 0x7fbc7f0725d8 'frame_width' 'int'
+|                 `-ImplicitCastExpr 0x7fbc7f072f58 <col:39> 'int' <LValueToRValue>
+|                   `-DeclRefExpr 0x7fbc7f072f30 <col:39> 'int' lvalue Var 0x7fbc7f0724b8 'child_x' 'int'
+|-FunctionDecl 0x7fbc800038d8 <line:77:1, line:107:1> line:77:1 meta_window_move_resize_internal 'int (MetaWindow *, MetaMoveResizeFlags, int, int, int, int, int)'
+| |-ParmVarDecl 0x7fbc80003448 <col:35, col:48> col:48 used window 'MetaWindow *'
+| |-ParmVarDecl 0x7fbc800034e0 <line:78:7, col:27> col:27 used flags 'MetaMoveResizeFlags':'MetaMoveResizeFlags'
+| |-ParmVarDecl 0x7fbc80003558 <line:79:7, col:11> col:11 used resize_gravity 'int'
+| |-ParmVarDecl 0x7fbc800035d0 <col:27, col:31> col:31 root_x_nw 'int'
+| |-ParmVarDecl 0x7fbc80003648 <line:80:7, col:11> col:11 root_y_nw 'int'
+| |-ParmVarDecl 0x7fbc800036c0 <col:22, col:26> col:26 w 'int'
+| |-ParmVarDecl 0x7fbc80003738 <col:29, col:33> col:33 h 'int'
+| `-CompoundStmt 0x7fbc80006708 <line:81:1, line:107:1>
+|   |-DeclStmt 0x7fbc80003a28 <line:82:3, col:20>
+|   | `-VarDecl 0x7fbc800039c8 <col:3, col:16> col:16 used mask 'unsigned int'
+|   |-DeclStmt 0x7fbc80003ab0 <line:83:3, col:26>
+|   | `-VarDecl 0x7fbc80003a50 <col:3, col:21> col:21 used fgeom 'MetaFrameGeometry':'struct _MetaFrameGeometry'
+|   |-DeclStmt 0x7fbc80003b78 <line:84:3, col:36>
+|   | `-VarDecl 0x7fbc80003ad8 <col:3, col:35> col:12 used need_resize_client 'gboolean':'int' cinit
+|   |   `-ParenExpr 0x7fbc80003b58 <col:33, col:35> 'int'
+|   |     `-IntegerLiteral 0x7fbc80003b38 <col:34> 'int' 0
+|   |-DeclStmt 0x7fbc80003c00 <line:85:3, col:32>
+|   | `-VarDecl 0x7fbc80003ba0 <col:3, col:12> col:12 used is_configure_request 'gboolean':'int'
+|   |-DeclStmt 0x7fbc80003c88 <line:86:3, col:25>
+|   | `-VarDecl 0x7fbc80003c28 <col:3, col:17> col:17 used new_rect 'MetaRectangle':'struct _MetaRectangle'
+|   |-DeclStmt 0x7fbc80003d10 <line:87:3, col:25>
+|   | `-VarDecl 0x7fbc80003cb0 <col:3, col:17> col:17 used old_rect 'MetaRectangle':'struct _MetaRectangle'
+|   |-CompoundStmt 0x7fbc80004148 <line:88:3, line:92:3>
+|   | `-CallExpr 0x7fbc800040b0 <line:89:5, line:91:13> 'int'
+|   |   |-ImplicitCastExpr 0x7fbc80004098 <line:89:5> 'int (*)(MetaWindow *, MetaFrameGeometry *, gboolean, int, MetaRectangle *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fbc80003d28 <col:5> 'int (MetaWindow *, MetaFrameGeometry *, gboolean, int, MetaRectangle *)' Function 0x7fbc7f0722b8 'adjust_for_gravity' 'int (MetaWindow *, MetaFrameGeometry *, gboolean, int, MetaRectangle *)'
+|   |   |-ImplicitCastExpr 0x7fbc80004100 <col:25> 'MetaWindow *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fbc80003d50 <col:25> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|   |   |-ConditionalOperator 0x7fbc80003ee8 <col:33, col:69> 'MetaFrameGeometry *'
+|   |   | |-ImplicitCastExpr 0x7fbc80003eb8 <col:33, col:41> 'MetaFrame *' <LValueToRValue>
+|   |   | | `-MemberExpr 0x7fbc80003db8 <col:33, col:41> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+|   |   | |   `-ImplicitCastExpr 0x7fbc80003da0 <col:33> 'MetaWindow *' <LValueToRValue>
+|   |   | |     `-DeclRefExpr 0x7fbc80003d78 <col:33> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|   |   | |-UnaryOperator 0x7fbc80003e18 <col:49, col:50> 'MetaFrameGeometry *' prefix '&'
+|   |   | | `-DeclRefExpr 0x7fbc80003df0 <col:50> 'MetaFrameGeometry':'struct _MetaFrameGeometry' lvalue Var 0x7fbc80003a50 'fgeom' 'MetaFrameGeometry':'struct _MetaFrameGeometry'
+|   |   | `-ImplicitCastExpr 0x7fbc80003ed0 <col:58, col:69> 'MetaFrameGeometry *' <NullToPointer>
+|   |   |   `-ParenExpr 0x7fbc80003e98 <col:58, col:69> 'void *'
+|   |   |     `-CStyleCastExpr 0x7fbc80003e70 <col:59, col:68> 'void *' <NullToPointer>
+|   |   |       `-IntegerLiteral 0x7fbc80003e38 <col:68> 'int' 0
+|   |   |-ImplicitCastExpr 0x7fbc80004118 <line:90:4> 'gboolean':'int' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fbc80003f18 <col:4> 'gboolean':'int' lvalue Var 0x7fbc80003ba0 'is_configure_request' 'gboolean':'int'
+|   |   |-ImplicitCastExpr 0x7fbc80004130 <col:26, col:45> 'int' <LValueToRValue>
+|   |   | `-MemberExpr 0x7fbc80003fb8 <col:26, col:45> 'int' lvalue .win_gravity 0x7fbc7f05ae88
+|   |   |   `-MemberExpr 0x7fbc80003f80 <col:26, col:34> 'XSizeHints':'XSizeHints' lvalue ->size_hints 0x7fbc7f05b8d0
+|   |   |     `-ImplicitCastExpr 0x7fbc80003f68 <col:26> 'MetaWindow *' <LValueToRValue>
+|   |   |       `-DeclRefExpr 0x7fbc80003f40 <col:26> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|   |   `-UnaryOperator 0x7fbc80004018 <line:91:4, col:5> 'MetaRectangle *' prefix '&'
+|   |     `-DeclRefExpr 0x7fbc80003ff0 <col:5> 'MetaRectangle':'struct _MetaRectangle' lvalue Var 0x7fbc80003c28 'new_rect' 'MetaRectangle':'struct _MetaRectangle'
+|   |-CallExpr 0x7fbc80005d80 <line:93:3, line:94:41> 'int'
+|   | |-ImplicitCastExpr 0x7fbc80005d68 <line:93:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fbc80004260 <col:3> 'int ()' Function 0x7fbc800041b0 'meta_window_constrain' 'int ()'
+|   | |-ImplicitCastExpr 0x7fbc80005dd8 <col:26> 'MetaWindow *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbc80004288 <col:26> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|   | |-ConditionalOperator 0x7fbc80005c30 <col:34, col:70> 'MetaFrameGeometry *'
+|   | | |-ImplicitCastExpr 0x7fbc80005c00 <col:34, col:42> 'MetaFrame *' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fbc800042f0 <col:34, col:42> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+|   | | |   `-ImplicitCastExpr 0x7fbc800042d8 <col:34> 'MetaWindow *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x7fbc800042b0 <col:34> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|   | | |-UnaryOperator 0x7fbc80004350 <col:50, col:51> 'MetaFrameGeometry *' prefix '&'
+|   | | | `-DeclRefExpr 0x7fbc80004328 <col:51> 'MetaFrameGeometry':'struct _MetaFrameGeometry' lvalue Var 0x7fbc80003a50 'fgeom' 'MetaFrameGeometry':'struct _MetaFrameGeometry'
+|   | | `-ImplicitCastExpr 0x7fbc80005c18 <col:59, col:70> 'MetaFrameGeometry *' <NullToPointer>
+|   | |   `-ParenExpr 0x7fbc800043d0 <col:59, col:70> 'void *'
+|   | |     `-CStyleCastExpr 0x7fbc800043a8 <col:60, col:69> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7fbc80004370 <col:69> 'int' 0
+|   | |-ImplicitCastExpr 0x7fbc80005e08 <col:73> 'unsigned int' <IntegralCast>
+|   | | `-ImplicitCastExpr 0x7fbc80005df0 <col:73> 'MetaMoveResizeFlags':'MetaMoveResizeFlags' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fbc80005c60 <col:73> 'MetaMoveResizeFlags':'MetaMoveResizeFlags' lvalue ParmVar 0x7fbc800034e0 'flags' 'MetaMoveResizeFlags':'MetaMoveResizeFlags'
+|   | |-ImplicitCastExpr 0x7fbc80005e20 <line:94:5> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fbc80005c88 <col:5> 'int' lvalue ParmVar 0x7fbc80003558 'resize_gravity' 'int'
+|   | |-UnaryOperator 0x7fbc80005cd8 <col:21, col:22> 'MetaRectangle *' prefix '&'
+|   | | `-DeclRefExpr 0x7fbc80005cb0 <col:22> 'MetaRectangle':'struct _MetaRectangle' lvalue Var 0x7fbc80003cb0 'old_rect' 'MetaRectangle':'struct _MetaRectangle'
+|   | `-UnaryOperator 0x7fbc80005d20 <col:32, col:33> 'MetaRectangle *' prefix '&'
+|   |   `-DeclRefExpr 0x7fbc80005cf8 <col:33> 'MetaRectangle':'struct _MetaRectangle' lvalue Var 0x7fbc80003c28 'new_rect' 'MetaRectangle':'struct _MetaRectangle'
+|   |-IfStmt 0x7fbc800062c0 <line:95:3, line:101:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbc80005eb0 <line:95:7, col:15> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fbc80005e80 <col:7> 'unsigned int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7fbc80005e38 <col:7> 'unsigned int' lvalue Var 0x7fbc800039c8 'mask' 'unsigned int'
+|   | | `-ImplicitCastExpr 0x7fbc80005e98 <col:15> 'unsigned int' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fbc80005e60 <col:15> 'int' 0
+|   | |-CompoundStmt 0x7fbc800062a8 <line:96:5, line:101:5>
+|   | | `-CompoundStmt 0x7fbc80006290 <line:97:7, line:100:7>
+|   | |   `-CallExpr 0x7fbc80006258 <line:98:2, line:99:42> 'int'
+|   | |     |-ImplicitCastExpr 0x7fbc80006240 <line:98:2> 'int (*)()' <FunctionToPointerDecay>
+|   | |     | `-DeclRefExpr 0x7fbc80005fb0 <col:2> 'int ()' Function 0x7fbc80005f00 'meta_topic_real' 'int ()'
+|   | |     |-DeclRefExpr 0x7fbc80005fd8 <col:19> 'int' EnumConstant 0x7fbc7f05b378 'META_DEBUG_GEOMETRY' 'int'
+|   | |     `-ConditionalOperator 0x7fbc80006210 <line:99:5, col:35> 'char *'
+|   | |       |-ImplicitCastExpr 0x7fbc80006108 <col:5> 'gboolean':'int' <LValueToRValue>
+|   | |       | `-DeclRefExpr 0x7fbc80006000 <col:5> 'gboolean':'int' lvalue Var 0x7fbc80003ad8 'need_resize_client' 'gboolean':'int'
+|   | |       |-ImplicitCastExpr 0x7fbc80006120 <col:26> 'char *' <ArrayToPointerDecay>
+|   | |       | `-StringLiteral 0x7fbc80006068 <col:26> 'char [5]' lvalue "true"
+|   | |       `-ImplicitCastExpr 0x7fbc80006138 <col:35> 'char *' <ArrayToPointerDecay>
+|   | |         `-StringLiteral 0x7fbc800060d8 <col:35> 'char [6]' lvalue "false"
+|   | `-<<<NULL>>>
+|   `-CompoundStmt 0x7fbc800066e8 <line:102:3, line:106:3>
+|     |-BinaryOperator 0x7fbc80006408 <line:103:5, col:42> 'guint':'unsigned int' '='
+|     | |-MemberExpr 0x7fbc80006338 <col:5, col:13> 'guint':'unsigned int' lvalue bitfield ->user_has_move_resized 0x7fbc7f05b7d0
+|     | | `-ImplicitCastExpr 0x7fbc80006320 <col:5> 'MetaWindow *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x7fbc800062f8 <col:5> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|     | `-ImplicitCastExpr 0x7fbc800063f0 <col:37, col:42> 'guint':'unsigned int' <IntegralCast>
+|     |   `-ParenExpr 0x7fbc800063d0 <col:37, col:42> 'int'
+|     |     `-UnaryOperator 0x7fbc800063b0 <col:38, col:41> 'int' prefix '!'
+|     |       `-ParenExpr 0x7fbc80006390 <col:39, col:41> 'int'
+|     |         `-IntegerLiteral 0x7fbc80006370 <col:40> 'int' 0
+|     `-CallExpr 0x7fbc80006690 <line:104:5, line:105:30> 'void'
+|       |-ImplicitCastExpr 0x7fbc80006678 <line:104:5> 'void (*)(MetaWindow *, int *, int *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fbc80006430 <col:5> 'void (MetaWindow *, int *, int *)' Function 0x7fbc7f05bc00 'meta_window_get_position' 'void (MetaWindow *, int *, int *)'
+|       |-ImplicitCastExpr 0x7fbc800066d0 <col:31> 'MetaWindow *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fbc80006458 <col:31> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|       |-UnaryOperator 0x7fbc80006530 <col:39, col:58> 'int *' prefix '&'
+|       | `-MemberExpr 0x7fbc800064f8 <col:40, col:58> 'int' lvalue .x 0x7fbc7f05a8d0
+|       |   `-MemberExpr 0x7fbc800064c0 <col:40, col:48> 'MetaRectangle':'struct _MetaRectangle' lvalue ->user_rect 0x7fbc7f05b850
+|       |     `-ImplicitCastExpr 0x7fbc800064a8 <col:40> 'MetaWindow *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x7fbc80006480 <col:40> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+|       `-UnaryOperator 0x7fbc80006600 <line:105:10, col:29> 'int *' prefix '&'
+|         `-MemberExpr 0x7fbc800065c8 <col:11, col:29> 'int' lvalue .y 0x7fbc7f05a930
+|           `-MemberExpr 0x7fbc80006590 <col:11, col:19> 'MetaRectangle':'struct _MetaRectangle' lvalue ->user_rect 0x7fbc7f05b850
+|             `-ImplicitCastExpr 0x7fbc80006578 <col:11> 'MetaWindow *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fbc80006550 <col:11> 'MetaWindow *' lvalue ParmVar 0x7fbc80003448 'window' 'MetaWindow *'
+`-FunctionDecl 0x7fbc80006900 prev 0x7fbc7f05bc00 <line:108:1, line:116:1> line:109:1 used meta_window_get_position 'void (MetaWindow *, int *, int *)'
+  |-ParmVarDecl 0x7fbc80006778 <col:27, col:40> col:40 used window 'MetaWindow *'
+  |-ParmVarDecl 0x7fbc800067f0 <col:48, col:53> col:53 used x 'int *'
+  |-ParmVarDecl 0x7fbc80006868 <col:56, col:61> col:61 used y 'int *'
+  `-CompoundStmt 0x7fbc80007408 <line:110:1, line:116:1>
+    `-IfStmt 0x7fbc800073d0 <line:111:3, line:115:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fbc80006a30 <line:111:7, col:15> 'MetaFrame *' <LValueToRValue>
+      | `-MemberExpr 0x7fbc800069f8 <col:7, col:15> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+      |   `-ImplicitCastExpr 0x7fbc800069e0 <col:7> 'MetaWindow *' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fbc800069b8 <col:7> 'MetaWindow *' lvalue ParmVar 0x7fbc80006778 'window' 'MetaWindow *'
+      |-CompoundStmt 0x7fbc800073b0 <line:112:5, line:115:5>
+      | |-BinaryOperator 0x7fbc800070e0 <line:113:7, col:51> 'int' '='
+      | | |-UnaryOperator 0x7fbc80006a88 <col:7, col:8> 'int' lvalue prefix '*'
+      | | | `-ImplicitCastExpr 0x7fbc80006a70 <col:8> 'int *' <LValueToRValue>
+      | | |   `-DeclRefExpr 0x7fbc80006a48 <col:8> 'int *' lvalue ParmVar 0x7fbc800067f0 'x' 'int *'
+      | | `-BinaryOperator 0x7fbc800070b8 <col:12, col:51> 'int' '+'
+      | |   |-ImplicitCastExpr 0x7fbc80007088 <col:12, col:32> 'int' <LValueToRValue>
+      | |   | `-MemberExpr 0x7fbc80006b70 <col:12, col:32> 'int' lvalue .x 0x7fbc7f05a8d0
+      | |   |   `-MemberExpr 0x7fbc80006b38 <col:12, col:27> 'MetaRectangle':'struct _MetaRectangle' lvalue ->rect 0x7fbc7f05bfd8
+      | |   |     `-ImplicitCastExpr 0x7fbc80006b20 <col:12, col:20> 'MetaFrame *' <LValueToRValue>
+      | |   |       `-MemberExpr 0x7fbc80006ae8 <col:12, col:20> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+      | |   |         `-ImplicitCastExpr 0x7fbc80006ad0 <col:12> 'MetaWindow *' <LValueToRValue>
+      | |   |           `-DeclRefExpr 0x7fbc80006aa8 <col:12> 'MetaWindow *' lvalue ParmVar 0x7fbc80006778 'window' 'MetaWindow *'
+      | |   `-ImplicitCastExpr 0x7fbc800070a0 <col:36, col:51> 'int' <LValueToRValue>
+      | |     `-MemberExpr 0x7fbc80007050 <col:36, col:51> 'int' lvalue ->child_x 0x7fbc7f05c038
+      | |       `-ImplicitCastExpr 0x7fbc80007038 <col:36, col:44> 'MetaFrame *' <LValueToRValue>
+      | |         `-MemberExpr 0x7fbc80007000 <col:36, col:44> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+      | |           `-ImplicitCastExpr 0x7fbc80006bd0 <col:36> 'MetaWindow *' <LValueToRValue>
+      | |             `-DeclRefExpr 0x7fbc80006ba8 <col:36> 'MetaWindow *' lvalue ParmVar 0x7fbc80006778 'window' 'MetaWindow *'
+      | `-BinaryOperator 0x7fbc80007388 <line:114:7, col:51> 'int' '='
+      |   |-UnaryOperator 0x7fbc80007148 <col:7, col:8> 'int' lvalue prefix '*'
+      |   | `-ImplicitCastExpr 0x7fbc80007130 <col:8> 'int *' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fbc80007108 <col:8> 'int *' lvalue ParmVar 0x7fbc80006868 'y' 'int *'
+      |   `-BinaryOperator 0x7fbc80007360 <col:12, col:51> 'int' '+'
+      |     |-ImplicitCastExpr 0x7fbc80007330 <col:12, col:32> 'int' <LValueToRValue>
+      |     | `-MemberExpr 0x7fbc80007230 <col:12, col:32> 'int' lvalue .y 0x7fbc7f05a930
+      |     |   `-MemberExpr 0x7fbc800071f8 <col:12, col:27> 'MetaRectangle':'struct _MetaRectangle' lvalue ->rect 0x7fbc7f05bfd8
+      |     |     `-ImplicitCastExpr 0x7fbc800071e0 <col:12, col:20> 'MetaFrame *' <LValueToRValue>
+      |     |       `-MemberExpr 0x7fbc800071a8 <col:12, col:20> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+      |     |         `-ImplicitCastExpr 0x7fbc80007190 <col:12> 'MetaWindow *' <LValueToRValue>
+      |     |           `-DeclRefExpr 0x7fbc80007168 <col:12> 'MetaWindow *' lvalue ParmVar 0x7fbc80006778 'window' 'MetaWindow *'
+      |     `-ImplicitCastExpr 0x7fbc80007348 <col:36, col:51> 'int' <LValueToRValue>
+      |       `-MemberExpr 0x7fbc800072f8 <col:36, col:51> 'int' lvalue ->child_y 0x7fbc7f05c098
+      |         `-ImplicitCastExpr 0x7fbc800072e0 <col:36, col:44> 'MetaFrame *' <LValueToRValue>
+      |           `-MemberExpr 0x7fbc800072a8 <col:36, col:44> 'MetaFrame *' lvalue ->frame 0x7fbc7f05b738
+      |             `-ImplicitCastExpr 0x7fbc80007290 <col:36> 'MetaWindow *' <LValueToRValue>
+      |               `-DeclRefExpr 0x7fbc80007268 <col:36> 'MetaWindow *' lvalue ParmVar 0x7fbc80006778 'window' 'MetaWindow *'
+      `-<<<NULL>>>

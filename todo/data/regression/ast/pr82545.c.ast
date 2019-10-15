@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fc02a82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc02a86d860 <../Data/C2AST/pr82545.c:4:1, col:18> col:13 used c 'void (int)' extern
+| `-ParmVarDecl 0x7fc02a82c978 <col:15> col:18 'int'
+|-FunctionDecl 0x7fc02a86da10 <line:5:1, col:19> col:13 used d 'void (void)' extern
+|-VarDecl 0x7fc02a86db30 <line:7:1, col:12> col:7 used buf 'void *[5]'
+|-FunctionDecl 0x7fc02a86dc20 <line:9:1, line:17:1> line:9:6 a 'void (void)'
+| `-CompoundStmt 0x7fc02a86e218 <col:14, line:17:1>
+|   |-CompoundStmt 0x7fc02a86e158 <line:10:3, line:15:3>
+|   | |-DeclStmt 0x7fc02a86dd38 <line:11:5, col:10>
+|   | | `-VarDecl 0x7fc02a86dcd8 <col:5, col:9> col:9 used b 'int'
+|   | |-UnaryOperator 0x7fc02a86dda8 <line:12:5, col:6> 'int *' prefix '&'
+|   | | `-DeclRefExpr 0x7fc02a86dd50 <col:6> 'int' lvalue Var 0x7fc02a86dcd8 'b' 'int'
+|   | |-CallExpr 0x7fc02a86e030 <line:13:5, col:25> 'int'
+|   | | |-ImplicitCastExpr 0x7fc02a86e018 <col:5> 'int (*)(void **)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fc02a86df88 <col:5> '<builtin fn type>' Function 0x7fc02a86de38 '__builtin_setjmp' 'int (void **)'
+|   | | `-ImplicitCastExpr 0x7fc02a86e060 <col:22> 'void **' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fc02a86dfb0 <col:22> 'void *[5]' lvalue Var 0x7fc02a86db30 'buf' 'void *[5]'
+|   | `-CallExpr 0x7fc02a86e110 <line:14:5, col:8> 'void'
+|   |   |-ImplicitCastExpr 0x7fc02a86e0f8 <col:5> 'void (*)(int)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fc02a86e078 <col:5> 'void (int)' Function 0x7fc02a86d860 'c' 'void (int)'
+|   |   `-ImplicitCastExpr 0x7fc02a86e140 <col:7> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fc02a86e0a0 <col:7> 'int' lvalue Var 0x7fc02a86dcd8 'b' 'int'
+|   `-CallExpr 0x7fc02a86e1f0 <line:16:3, col:5> 'void'
+|     `-ImplicitCastExpr 0x7fc02a86e1d8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fc02a86e188 <col:3> 'void (void)' Function 0x7fc02a86da10 'd' 'void (void)'
+`-FunctionDecl 0x7fc02a86de38 <line:13:5> col:5 implicit used __builtin_setjmp 'int (void **)' extern
+  |-ParmVarDecl 0x7fc02a86ded8 <<invalid sloc>> <invalid sloc> 'void **'
+  `-ReturnsTwiceAttr 0x7fc02a86df40 <col:5> Implicit

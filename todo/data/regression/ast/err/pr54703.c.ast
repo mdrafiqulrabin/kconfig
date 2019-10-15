@@ -1,0 +1,115 @@
+../Data/C2AST/pr54703.c:17:9: error: use of unknown builtin '__builtin_ia32_andpd' [-Wimplicit-function-declaration]
+  V y = __builtin_ia32_andpd (x, u.v);
+        ^
+../Data/C2AST/pr54703.c:17:5: error: initializing 'V' (vector of 2 'double' values) with an expression of incompatible type 'int'
+  V y = __builtin_ia32_andpd (x, u.v);
+    ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr54703.c:18:9: error: use of unknown builtin '__builtin_ia32_subpd' [-Wimplicit-function-declaration]
+  V z = __builtin_ia32_subpd (x, y);
+        ^
+../Data/C2AST/pr54703.c:18:9: note: did you mean '__builtin_ia32_andpd'?
+../Data/C2AST/pr54703.c:17:9: note: '__builtin_ia32_andpd' declared here
+  V y = __builtin_ia32_andpd (x, u.v);
+        ^
+../Data/C2AST/pr54703.c:19:10: error: use of unknown builtin '__builtin_ia32_mulpd' [-Wimplicit-function-declaration]
+  return __builtin_ia32_mulpd (y, z);
+         ^
+../Data/C2AST/pr54703.c:19:10: note: did you mean '__builtin_ia32_subpd'?
+../Data/C2AST/pr54703.c:18:9: note: '__builtin_ia32_subpd' declared here
+  V z = __builtin_ia32_subpd (x, y);
+        ^
+TranslationUnitDecl 0x7fb6e882bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6e882c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6e882bf80 '__int128'
+|-TypedefDecl 0x7fb6e882c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6e882bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb6e882c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6e882c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6e882c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6e882c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6e882c600 'char *'
+|   `-BuiltinType 0x7fb6e882bd80 'char'
+|-TypedefDecl 0x7fb6e882c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6e882c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6e882c720 'struct __va_list_tag'
+|     `-Record 0x7fb6e882c698 '__va_list_tag'
+|-FunctionDecl 0x7fb6e9014250 <../Data/C2AST/pr54703.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fb6e90142f0 prev 0x7fb6e9014250 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-TypedefDecl 0x7fb6e90143e8 <line:7:1, col:16> col:16 referenced V '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7fb6e90143b0 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7fb6e882bf00 'double'
+|-RecordDecl 0x7fb6e9014440 <line:9:1, line:12:1> line:9:1 union definition
+| |-FieldDecl 0x7fb6e9014570 <line:10:3, col:25> col:22 referenced m 'unsigned long long [2]'
+| `-FieldDecl 0x7fb6e90145f0 <line:11:3, col:5> col:5 referenced v 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-VarDecl 0x7fb6e9014690 <line:9:1, line:12:58> col:3 used u 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)' cinit
+| `-InitListExpr 0x7fb6e9014808 <col:7, col:58> 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)' field Field 0x7fb6e9014570 'm' 'unsigned long long [2]'
+|   `-InitListExpr 0x7fb6e9014850 <col:9, col:56> 'unsigned long long [2]'
+|     |-IntegerLiteral 0x7fb6e9014730 <col:11> 'unsigned long long' 18446744073692774400
+|     `-IntegerLiteral 0x7fb6e9014750 <col:34> 'unsigned long long' 18446744073692774400
+|-FunctionDecl 0x7fb6e90149d0 <line:14:1, line:20:1> line:15:1 used foo 'V (V)' static inline
+| |-ParmVarDecl 0x7fb6e90148c8 <col:6, col:8> col:8 used x 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-CompoundStmt 0x7fb6e8820840 <line:16:1, line:20:1>
+|   |-DeclStmt 0x7fb6e9015110 <line:17:3, col:38>
+|   | `-VarDecl 0x7fb6e9014a88 <col:3, col:5> col:5 invalid y 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   `-DeclStmt 0x7fb6e8820700 <line:18:3, col:36>
+|     `-VarDecl 0x7fb6e9015138 <col:3, col:5> col:5 used z 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|-FunctionDecl 0x7fb6e88209d0 <line:22:1, line:27:1> line:23:1 used test 'void (V *)'
+| |-ParmVarDecl 0x7fb6e88208c8 <col:7, col:10> col:10 used x 'V *'
+| `-CompoundStmt 0x7fb6e8820de8 <line:24:1, line:27:1>
+|   |-DeclStmt 0x7fb6e8820bc8 <line:25:3, col:21>
+|   | `-VarDecl 0x7fb6e8820a88 <col:3, col:20> col:5 used a 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+|   |   `-InitListExpr 0x7fb6e8820b78 <col:9, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|   |     |-FloatingLiteral 0x7fb6e8820ae8 <col:11> 'double' 2.100000e+00
+|   |     `-FloatingLiteral 0x7fb6e8820b08 <col:16> 'double' 2.100000e+00
+|   `-BinaryOperator 0x7fb6e8820dc0 <line:26:3, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' '='
+|     |-UnaryOperator 0x7fb6e8820c20 <col:3, col:4> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fb6e8820c08 <col:4> 'V *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb6e8820be0 <col:4> 'V *' lvalue ParmVar 0x7fb6e88208c8 'x' 'V *'
+|     `-CallExpr 0x7fb6e8820d90 <col:8, col:20> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|       |-ImplicitCastExpr 0x7fb6e8820d78 <col:8> 'V (*)(V)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fb6e8820c40 <col:8> 'V (V)' Function 0x7fb6e90149d0 'foo' 'V (V)'
+|       `-CallExpr 0x7fb6e8820d30 <col:13, col:19> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+|         |-ImplicitCastExpr 0x7fb6e8820d18 <col:13> 'V (*)(V)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fb6e8820c68 <col:13> 'V (V)' Function 0x7fb6e90149d0 'foo' 'V (V)'
+|         `-ImplicitCastExpr 0x7fb6e8820d60 <col:18> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb6e8820c90 <col:18> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7fb6e8820a88 'a' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7fb6e8820e30 <line:29:1, line:36:1> line:30:1 main 'int ()'
+  `-CompoundStmt 0x7fb6e88214b8 <line:31:1, line:36:1>
+    |-CallExpr 0x7fb6e8820ff0 <line:32:3, col:13> 'void'
+    | |-ImplicitCastExpr 0x7fb6e8820fd8 <col:3> 'void (*)(V *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb6e8820ed0 <col:3> 'void (V *)' Function 0x7fb6e88209d0 'test' 'void (V *)'
+    | `-UnaryOperator 0x7fb6e8820f58 <col:9, col:12> 'V *' prefix '&'
+    |   `-MemberExpr 0x7fb6e8820f20 <col:10, col:12> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue .v 0x7fb6e90145f0
+    |     `-DeclRefExpr 0x7fb6e8820ef8 <col:10> 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)' lvalue Var 0x7fb6e9014690 'u' 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)'
+    |-IfStmt 0x7fb6e8821448 <line:33:3, line:34:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb6e8821390 <line:33:7, col:57> 'int' '||'
+    | | |-BinaryOperator 0x7fb6e8821140 <col:7, col:17> 'int' '!='
+    | | | |-ImplicitCastExpr 0x7fb6e8821128 <col:7, col:12> 'unsigned long long' <LValueToRValue>
+    | | | | `-ArraySubscriptExpr 0x7fb6e88210e0 <col:7, col:12> 'unsigned long long' lvalue
+    | | | |   |-ImplicitCastExpr 0x7fb6e88210c8 <col:7, col:9> 'unsigned long long *' <ArrayToPointerDecay>
+    | | | |   | `-MemberExpr 0x7fb6e8821048 <col:7, col:9> 'unsigned long long [2]' lvalue .m 0x7fb6e9014570
+    | | | |   |   `-DeclRefExpr 0x7fb6e8821020 <col:7> 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)' lvalue Var 0x7fb6e9014690 'u' 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)'
+    | | | |   `-IntegerLiteral 0x7fb6e8821080 <col:11> 'int' 0
+    | | | `-IntegerLiteral 0x7fb6e8821108 <col:17> 'unsigned long long' 4236748739167061328
+    | | `-BinaryOperator 0x7fb6e8821318 <col:42, col:57> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fb6e88212e8 <col:42, col:47> 'unsigned long long' <LValueToRValue>
+    | |   | `-ArraySubscriptExpr 0x7fb6e8821200 <col:42, col:47> 'unsigned long long' lvalue
+    | |   |   |-ImplicitCastExpr 0x7fb6e88211e8 <col:42, col:44> 'unsigned long long *' <ArrayToPointerDecay>
+    | |   |   | `-MemberExpr 0x7fb6e8821190 <col:42, col:44> 'unsigned long long [2]' lvalue .m 0x7fb6e9014570
+    | |   |   |   `-DeclRefExpr 0x7fb6e8821168 <col:42> 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)' lvalue Var 0x7fb6e9014690 'u' 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)'
+    | |   |   `-IntegerLiteral 0x7fb6e88211c8 <col:46> 'int' 1
+    | |   `-ImplicitCastExpr 0x7fb6e8821300 <col:52, col:57> 'unsigned long long' <LValueToRValue>
+    | |     `-ArraySubscriptExpr 0x7fb6e88212c0 <col:52, col:57> 'unsigned long long' 4 errors generated.
+lvalue
+    | |       |-ImplicitCastExpr 0x7fb6e88212a8 <col:52, col:54> 'unsigned long long *' <ArrayToPointerDecay>
+    | |       | `-MemberExpr 0x7fb6e8821250 <col:52, col:54> 'unsigned long long [2]' lvalue .m 0x7fb6e9014570
+    | |       |   `-DeclRefExpr 0x7fb6e8821228 <col:52> 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)' lvalue Var 0x7fb6e9014690 'u' 'union (anonymous union at ../Data/C2AST/pr54703.c:9:1)':'union (anonymous at ../Data/C2AST/pr54703.c:9:1)'
+    | |       `-IntegerLiteral 0x7fb6e8821288 <col:56> 'int' 0
+    | |-CallExpr 0x7fb6e8821420 <line:34:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fb6e8821408 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fb6e88213b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb6e90142f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fb6e88214a0 <line:35:3, col:10>
+      `-IntegerLiteral 0x7fb6e8821480 <col:10> 'int' 0

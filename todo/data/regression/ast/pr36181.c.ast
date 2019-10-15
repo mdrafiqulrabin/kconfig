@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f928001a0e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9281017e00 <../Data/C2AST/pr36181.c:5:1, line:13:1> line:5:5 foo 'int ()'
+  `-CompoundStmt 0x7f9281018420 <line:6:1, line:13:1>
+    |-DeclStmt 0x7f92810180f0 <line:7:3, col:29>
+    | |-VarDecl 0x7f9281017ef8 <col:3, col:7> col:7 used i 'int'
+    | |-VarDecl 0x7f9281017f70 <col:3, col:16> col:10 used sum 'int' cinit
+    | | `-IntegerLiteral 0x7f9281017fd0 <col:16> 'int' 0
+    | `-VarDecl 0x7f9281018070 <col:3, col:28> col:19 used data 'int [1024]'
+    |-ForStmt 0x7f9281018390 <line:9:3, line:10:18>
+    | |-BinaryOperator 0x7f9281018150 <line:9:7, col:11> 'int' '='
+    | | |-DeclRefExpr 0x7f9281018108 <col:7> 'int' lvalue Var 0x7f9281017ef8 'i' 'int'
+    | | `-IntegerLiteral 0x7f9281018130 <col:11> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f92810181d8 <col:14, col:16> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f92810181c0 <col:14> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9281018178 <col:14> 'int' lvalue Var 0x7f9281017ef8 'i' 'int'
+    | | `-IntegerLiteral 0x7f92810181a0 <col:16> 'int' 1024
+    | |-UnaryOperator 0x7f9281018228 <col:22, col:23> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7f9281018200 <col:22> 'int' lvalue Var 0x7f9281017ef8 'i' 'int'
+    | `-CompoundAssignOperator 0x7f9281018358 <line:10:5, col:18> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x7f9281018248 <col:5> 'int' lvalue Var 0x7f9281017f70 'sum' 'int'
+    |   `-ImplicitCastExpr 0x7f9281018340 <col:12, col:18> 'int' <LValueToRValue>
+    |     `-ArraySubscriptExpr 0x7f9281018318 <col:12, col:18> 'int' lvalue
+    |       |-ImplicitCastExpr 0x7f92810182e8 <col:12> 'int *' <ArrayToPointerDecay>
+    |       | `-DeclRefExpr 0x7f9281018270 <col:12> 'int [1024]' lvalue Var 0x7f9281018070 'data' 'int [1024]'
+    |       `-ImplicitCastExpr 0x7f9281018300 <col:17> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9281018298 <col:17> 'int' lvalue Var 0x7f9281017ef8 'i' 'int'
+    `-ReturnStmt 0x7f9281018408 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7f92810183f0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7f92810183c8 <col:10> 'int' lvalue Var 0x7f9281017f70 'sum' 'int'

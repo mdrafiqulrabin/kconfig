@@ -1,0 +1,55 @@
+../Data/C2AST/pr78858.c:8:17: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  *x = (char *) __builtin_malloc (__builtin_strlen (y) + 1);     
+                ^
+TranslationUnitDecl 0x7f80fd02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f80fd02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f80fd02bf80 '__int128'
+|-TypedefDecl 0x7f80fd02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f80fd02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f80fd02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f80fd02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f80fd02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f80fd02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f80fd02c600 'char *'
+|   `-BuiltinType 0x7f80fd02bd80 'char'
+|-TypedefDecl 0x7f80fd02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f80fd02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f80fd02c720 'struct __va_list_tag'
+|     `-Record 0x7f80fd02c698 '__va_list_tag'
+|-FunctionDecl 0x7f80fd8142f0 <../Data/C2AST/pr78858.c:5:1, line:10:1> line:6:1 foo 'void (char **, const char *)'
+| |-ParmVarDecl 0x7f80fd02c9a0 <col:6, col:13> col:13 used x 'char **'
+| |-ParmVarDecl 0x7f80fd814218 <col:16, col:28> col:28 used y 'const char *'
+| `-CompoundStmt 0x7f80fd814cd8 <line:7:1, line:10:1>
+|   |-BinaryOperator 0x7f80fd814920 <line:8:3, col:59> 'char *' '='
+|   | |-UnaryOperator 0x7f80fd814420 <col:3, col:4> 'char *' lvalue prefix '*'
+|   | | `-ImplicitCastExpr 0x7f80fd814408 <col:4> 'char **' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f80fd8143e0 <col:4> 'char **' lvalue ParmVar 0x7f80fd02c9a0 'x' 'char **'
+|   | `-CStyleCastExpr 0x7f80fd8148f8 <col:8, col:59> 'char *' <IntegralToPointer>
+|   |   `-CallExpr 0x7f80fd8148b0 <col:17, col:59> 'int'
+|   |     |-ImplicitCastExpr 0x7f80fd814898 <col:17> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f80fd814560 <col:17> 'int ()' Function 0x7f80fd8144b0 '__builtin_malloc' 'int ()'
+|   |     `-BinaryOperator 0x7f80fd814840 <col:35, col:58> 'unsigned long' '+'
+|   |       |-CallExpr 0x7f80fd8147c0 <col:35, col:54> 'unsigned long'
+|   |       | |-ImplicitCastExpr 0x7f80fd8147a8 <col:35> 'unsigned long (*)(const char *)' <BuiltinFnToFnPtr>
+|   |       | | `-DeclRefExpr 0x7f80fd814718 <col:35> '<builtin fn type>' Function 0x7f80fd8145c8 '__builtin_strlen' 'unsigned long (const char *)'
+|   |       | `-ImplicitCastExpr 0x7f80fd8147f0 <col:53> 'const char *' <LValueToRValue>
+|   |       |   `-DeclRefExpr 0x7f80fd814740 <col:53> 'const char *' lvalue ParmVar 0x7f80fd814218 'y' 'const char *'
+|   |       `-ImplicitCastExpr 0x7f80fd814828 <col:58> 'unsigned long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7f80fd814808 <col:58> 'int' 1
+|   `-CallExpr 0x7f80fd814c70 <line:9:3, col:26> 'char *'
+|     |-ImplicitCastExpr 0x7f80fd814c58 <col:3> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7f80fd814b48 <col:3> '<builtin fn type>' Function 0x7f80fd814990 '__builtin_strcpy' 'char *(char *, const char *)'
+|     |-ImplicitCastExpr 0x7f80fd814ca8 <col:21, col:22> 'char *' <LValueToRValue>
+|     | `-UnaryOperator 0x7f80fd814bb0 <col:21, col:22> 'char *' lvalue prefix '*'
+|     |   `-ImplicitCastExpr 0x7f80fd814b98 <col:22> 'char **' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f80fd814b70 <col:22> 'char **' lvalue ParmVar 0x7f80fd02c9a0 'x' 'char **'
+|     `-ImplicitCastExpr 0x7f80fd814cc0 <col:25> 'const char *' <LValueToRValue>
+|       `-DeclRefExpr 0x7f80fd814bd0 <col:25> 'const char *' lvalue ParmVar 0x7f80fd814218 'y' 'const char *'
+|-FunctionDecl 0x7f80fd8145c8 <line:8:35> col:35 implicit used __builtin_strlen 'unsigned long (const char *)' extern
+| |-ParmVarDecl 0x7f80fd814668 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7f80fd8146d0 <col:35> Implicit
+`-FunctionDecl 0x7f80fd814990 <line:9:3> col:3 implicit used __builtin_strcpy 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7f80fd814a30 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7f80fd1 error generated.
+814a90 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f80fd814b00 <col:3> Implicit

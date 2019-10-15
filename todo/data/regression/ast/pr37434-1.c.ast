@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7f9c998068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9c99850a00 <../Data/C2AST/pr37434-1.c:4:1, col:15> col:15 referenced __v8hi '__attribute__((__vector_size__(8 * sizeof(short)))) short'
+| `-VectorType 0x7f9c99807580 '__attribute__((__vector_size__(8 * sizeof(short)))) short' 8
+|   `-BuiltinType 0x7f9c998069c0 'short'
+|-TypedefDecl 0x7f9c99850ab8 <line:5:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-VectorType 0x7f9c99850a80 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+|   `-BuiltinType 0x7f9c99806a20 'long long'
+`-FunctionDecl 0x7f9c99850c70 <line:6:1, line:12:1> line:6:9 Set_AC4R_SETUP_I '__m128i (const short *)'
+  |-ParmVarDecl 0x7f9c99850b70 <col:27, col:40> col:40 used val 'const short *'
+  `-CompoundStmt 0x7f9c99851568 <col:46, line:12:1>
+    |-DeclStmt 0x7f9c99850e48 <line:7:3, col:21>
+    | `-VarDecl 0x7f9c99850d70 <col:3, col:18> col:9 used D2073 'short' cinit
+    |   `-ImplicitCastExpr 0x7f9c99850e30 <col:17, col:18> 'short' <LValueToRValue>
+    |     `-UnaryOperator 0x7f9c99850e10 <col:17, col:18> 'const short' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7f9c99850df8 <col:18> 'const short *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7f9c99850dd0 <col:18> 'const short *' lvalue ParmVar 0x7f9c99850b70 'val' 'const short *'
+    |-DeclStmt 0x7f9c99850fb8 <line:8:3, col:27>
+    | `-VarDecl 0x7f9c99850e78 <col:3, col:26> col:9 used D2076 'short' cinit
+    |   `-ImplicitCastExpr 0x7f9c99850fa0 <col:17, col:26> 'short' <LValueToRValue>
+    |     `-UnaryOperator 0x7f9c99850f80 <col:17, col:26> 'const short' lvalue prefix '*'
+    |       `-ParenExpr 0x7f9c99850f60 <col:18, col:26> 'const short *'
+    |         `-BinaryOperator 0x7f9c99850f38 <col:19, col:25> 'const short *' '+'
+    |           |-ImplicitCastExpr 0x7f9c99850f20 <col:19> 'const short *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7f9c99850ed8 <col:19> 'const short *' lvalue ParmVar 0x7f9c99850b70 'val' 'const short *'
+    |           `-IntegerLiteral 0x7f9c99850f00 <col:25> 'int' 2
+    |-DeclStmt 0x7f9c99851128 <line:9:3, col:27>
+    | `-VarDecl 0x7f9c99850fe8 <col:3, col:26> col:9 used D2079 'short' cinit
+    |   `-ImplicitCastExpr 0x7f9c99851110 <col:17, col:26> 'short' <LValueToRValue>
+    |     `-UnaryOperator 0x7f9c998510f0 <col:17, col:26> 'const short' lvalue prefix '*'
+    |       `-ParenExpr 0x7f9c998510d0 <col:18, col:26> 'const short *'
+    |         `-BinaryOperator 0x7f9c998510a8 <col:19, col:25> 'const short *' '+'
+    |           |-ImplicitCastExpr 0x7f9c99851090 <col:19> 'const short *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7f9c99851048 <col:19> 'const short *' lvalue ParmVar 0x7f9c99850b70 'val' 'const short *'
+    |           `-IntegerLiteral 0x7f9c99851070 <col:25> 'int' 4
+    |-DeclStmt 0x7f9c998514c0 <line:10:3, col:66>
+    | `-VarDecl 0x7f9c99851170 <col:3, col:65> col:10 used D2094 '__v8hi':'__attribute__((__vector_size__(8 * sizeof(short)))) short' cinit
+    |   `-InitListExpr 0x7f9c99851380 <col:18, col:65> '__v8hi':'__attribute__((__vector_size__(8 * sizeof(short)))) short'
+    |     |-ImplicitCastExpr 0x7f9c99851400 <col:19> 'short' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9c998511d0 <col:19> 'short' lvalue Var 0x7f9c99850d70 'D2073' 'short'
+    |     |-ImplicitCastExpr 0x7f9c99851418 <col:26> 'short' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9c998511f8 <col:26> 'short' lvalue Var 0x7f9c99850e78 'D2076' 'short'
+    |     |-ImplicitCastExpr 0x7f9c99851430 <col:33> 'short' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9c99851220 <col:33> 'short' lvalue Var 0x7f9c99850fe8 'D2079' 'short'
+    |     |-ImplicitCastExpr 0x7f9c99851448 <col:40> 'short' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f9c99851248 <col:40> 'int' 0
+    |     |-ImplicitCastExpr 0x7f9c99851460 <col:43> 'short' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9c99851268 <col:43> 'short' lvalue Var 0x7f9c99850d70 'D2073' 'short'
+    |     |-ImplicitCastExpr 0x7f9c99851478 <col:50> 'short' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9c99851290 <col:50> 'short' lvalue Var 0x7f9c99850e78 'D2076' 'short'
+    |     |-ImplicitCastExpr 0x7f9c99851490 <col:57> 'short' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9c998512b8 <col:57> 'short' lvalue Var 0x7f9c99850fe8 'D2079' 'short'
+    |     `-ImplicitCastExpr 0x7f9c998514a8 <col:64> 'short' <IntegralCast>
+    |       `-IntegerLiteral 0x7f9c998512e0 <col:64> 'int' 0
+    `-ReturnStmt 0x7f9c99851550 <line:11:3, col:19>
+      `-CStyleCastExpr 0x7f9c99851528 <col:10, col:19> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+        `-ImplicitCastExpr 0x7f9c99851510 <col:19> '__v8hi':'__attribute__((__vector_size__(8 * sizeof(short)))) short' <LValueToRValue>
+          `-DeclRefExpr 0x7f9c998514d8 <col:19> '__v8hi':'__attribute__((__vector_size__(8 * sizeof(short)))) short' lvalue Var 0x7f9c99851170 'D2094' '__v8hi':'__attribute__((__vector_size__(8 * sizeof(short)))) short'

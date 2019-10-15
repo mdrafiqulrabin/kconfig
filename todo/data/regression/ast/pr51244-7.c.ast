@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fc3570288e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc35782a468 <../Data/C2AST/pr51244-7.c:7:1, col:26> col:5 used other_func 'int (long long)'
+| `-ParmVarDecl 0x7fc357029578 <col:17, col:22> col:26 'long long'
+`-FunctionDecl 0x7fc35782a6b8 <line:8:1, line:14:1> line:9:1 test_00 'int (unsigned long long, unsigned long long)'
+  |-ParmVarDecl 0x7fc35782a568 <col:10, col:29> col:29 used a 'unsigned long long'
+  |-ParmVarDecl 0x7fc35782a5e0 <col:32, col:51> col:51 used b 'unsigned long long'
+  `-CompoundStmt 0x7fc35782aa70 <line:10:1, line:14:1>
+    |-IfStmt 0x7fc35782aa00 <line:11:3, line:12:29>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc35782a868 <line:11:7, col:17> 'int' '>'
+    | | |-ParenExpr 0x7fc35782a810 <col:7, col:13> 'unsigned long long'
+    | | | `-BinaryOperator 0x7fc35782a7e8 <col:8, col:12> 'unsigned long long' '-'
+    | | |   |-ImplicitCastExpr 0x7fc35782a7b8 <col:8> 'unsigned long long' <LValueToRValue>
+    | | |   | `-DeclRefExpr 0x7fc35782a768 <col:8> 'unsigned long long' lvalue ParmVar 0x7fc35782a568 'a' 'unsigned long long'
+    | | |   `-ImplicitCastExpr 0x7fc35782a7d0 <col:12> 'unsigned long long' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fc35782a790 <col:12> 'unsigned long long' lvalue ParmVar 0x7fc35782a5e0 'b' 'unsigned long long'
+    | | `-ImplicitCastExpr 0x7fc35782a850 <col:17> 'unsigned long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fc35782a830 <col:17> 'long long' 4294967295
+    | |-ReturnStmt 0x7fc35782a9e8 <line:12:5, col:29>
+    | | `-CallExpr 0x7fc35782a9a0 <col:12, col:29> 'int'
+    | |   |-ImplicitCastExpr 0x7fc35782a988 <col:12> 'int (*)(long long)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fc35782a890 <col:12> 'int (long long)' Function 0x7fc35782a468 'other_func' 'int (long long)'
+    | |   `-ImplicitCastExpr 0x7fc35782a9d0 <col:24, col:28> 'long long' <IntegralCast>
+    | |     `-BinaryOperator 0x7fc35782a938 <col:24, col:28> 'unsigned long long' '-'
+    | |       |-ImplicitCastExpr 0x7fc35782a908 <col:24> 'unsigned long long' <LValueToRValue>
+    | |       | `-DeclRefExpr 0x7fc35782a8b8 <col:24> 'unsigned long long' lvalue ParmVar 0x7fc35782a568 'a' 'unsigned long long'
+    | |       `-ImplicitCastExpr 0x7fc35782a920 <col:28> 'unsigned long long' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7fc35782a8e0 <col:28> 'unsigned long long' lvalue ParmVar 0x7fc35782a5e0 'b' 'unsigned long long'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc35782aa58 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fc35782aa38 <col:10> 'int' 20

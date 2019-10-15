@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fbf28019ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbf27828450 <../Data/C2AST/pr42448-1.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbf278284f0 prev 0x7fbf27828450 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7fbf27828590 <line:6:1, line:10:1> line:6:8 struct S2180 definition
+| |-FieldDecl 0x7fbf27828650 <line:8:3, col:8> col:8 t 'char'
+| `-FieldDecl 0x7fbf27828748 <line:9:3, col:20> col:17 referenced u '_Complex char [2]'
+|-VarDecl 0x7fbf278287e0 <line:12:1, col:14> col:14 used s2180 'struct S2180':'struct S2180'
+`-FunctionDecl 0x7fbf27828948 <line:14:1, line:27:1> line:15:1 main 'int (void)'
+  `-CompoundStmt 0x7fbf278291f8 <line:16:1, line:27:1>
+    |-DeclStmt 0x7fbf27828a98 <line:17:3, col:26>
+    | `-VarDecl 0x7fbf27828a38 <col:3, col:25> col:25 used x 'volatile struct S2180':'volatile struct S2180'
+    |-BinaryOperator 0x7fbf27828c70 <line:19:3, col:20> '_Complex char' '='
+    | |-ArraySubscriptExpr 0x7fbf27828b70 <col:3, col:12> '_Complex char' lvalue
+    | | |-ImplicitCastExpr 0x7fbf27828b58 <col:3, col:9> '_Complex char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fbf27828ad8 <col:3, col:9> '_Complex char [2]' lvalue .u 0x7fbf27828748
+    | | |   `-DeclRefExpr 0x7fbf27828ab0 <col:3> 'struct S2180':'struct S2180' lvalue Var 0x7fbf278287e0 's2180' 'struct S2180':'struct S2180'
+    | | `-IntegerLiteral 0x7fbf27828b10 <col:11> 'int' 1
+    | `-ImplicitCastExpr 0x7fbf27828c58 <col:16, col:20> '_Complex char' <IntegralComplexCast>
+    |   `-BinaryOperator 0x7fbf27828c30 <col:16, col:20> '_Complex int' '+'
+    |     |-ImplicitCastExpr 0x7fbf27828c18 <col:16> '_Complex int' <IntegralRealToComplex>
+    |     | `-IntegerLiteral 0x7fbf27828b98 <col:16> 'int' 3
+    |     `-ImaginaryLiteral 0x7fbf27828bd8 <col:20> '_Complex int'
+    |       `-IntegerLiteral 0x7fbf27828bb8 <col:20> 'int' 4
+    |-BinaryOperator 0x7fbf27828ea0 <line:21:3, col:21> '_Complex char' '='
+    | |-ArraySubscriptExpr 0x7fbf27828da0 <col:3, col:8> 'volatile _Complex char' lvalue
+    | | |-ImplicitCastExpr 0x7fbf27828d88 <col:3, col:5> 'volatile _Complex char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fbf27828cc0 <col:3, col:5> '_Complex char volatile[2]' lvalue .u 0x7fbf27828748
+    | | |   `-DeclRefExpr 0x7fbf27828c98 <col:3> 'volatile struct S2180':'volatile struct S2180' lvalue Var 0x7fbf27828a38 'x' 'volatile struct S2180':'volatile struct S2180'
+    | | `-IntegerLiteral 0x7fbf27828cf8 <col:7> 'int' 1
+    | `-ImplicitCastExpr 0x7fbf27828e88 <col:12, col:21> '_Complex char' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fbf27828e60 <col:12, col:21> '_Complex char' lvalue
+    |     |-ImplicitCastExpr 0x7fbf27828e48 <col:12, col:18> '_Complex char *' <ArrayToPointerDecay>
+    |     | `-MemberExpr 0x7fbf27828df0 <col:12, col:18> '_Complex char [2]' lvalue .u 0x7fbf27828748
+    |     |   `-DeclRefExpr 0x7fbf27828dc8 <col:12> 'struct S2180':'struct S2180' lvalue Var 0x7fbf278287e0 's2180' 'struct S2180':'struct S2180'
+    |     `-IntegerLiteral 0x7fbf27828e28 <col:20> 'int' 1
+    |-IfStmt 0x7fbf27829188 <line:23:3, line:24:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fbf27829078 <line:23:7, col:26> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fbf27829048 <col:7, col:12> '_Complex char' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fbf27828f60 <col:7, col:12> 'volatile _Complex char' lvalue
+    | | |   |-ImplicitCastExpr 0x7fbf27828f48 <col:7, col:9> 'volatile _Complex char *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fbf27828ef0 <col:7, col:9> '_Complex char volatile[2]' lvalue .u 0x7fbf27828748
+    | | |   |   `-DeclRefExpr 0x7fbf27828ec8 <col:7> 'volatile struct S2180':'volatile struct S2180' lvalue Var 0x7fbf27828a38 'x' 'volatile struct S2180':'volatile struct S2180'
+    | | |   `-IntegerLiteral 0x7fbf27828f28 <col:11> 'int' 1
+    | | `-ImplicitCastExpr 0x7fbf27829060 <col:17, col:26> '_Complex char' <LValueToRValue>
+    | |   `-ArraySubscriptExpr 0x7fbf27829020 <col:17, col:26> '_Complex char' lvalue
+    | |     |-ImplicitCastExpr 0x7fbf27829008 <col:17, col:23> '_Complex char *' <ArrayToPointerDecay>
+    | |     | `-MemberExpr 0x7fbf27828fb0 <col:17, col:23> '_Complex char [2]' lvalue .u 0x7fbf27828748
+    | |     |   `-DeclRefExpr 0x7fbf27828f88 <col:17> 'struct S2180':'struct S2180' lvalue Var 0x7fbf278287e0 's2180' 'struct S2180':'struct S2180'
+    | |     `-IntegerLiteral 0x7fbf27828fe8 <col:25> 'int' 1
+    | |-CallExpr 0x7fbf27829160 <line:24:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fbf27829148 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fbf278290f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbf278284f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbf278291e0 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fbf278291c0 <col:10> 'int' 0

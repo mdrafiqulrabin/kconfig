@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f9d2b82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9d2c014220 <../Data/C2AST/pr70756-2.c:5:1, col:22> col:13 used bar 'void (void)' extern
+`-FunctionDecl 0x7f9d2c0143e0 <line:7:1, line:12:1> line:8:1 fn 'void (void *)'
+  |-ParmVarDecl 0x7f9d2c014318 <col:5, col:11> col:11 used p 'void *'
+  `-CompoundStmt 0x7f9d2c0147d0 <line:9:1, line:12:1>
+    |-DeclStmt 0x7f9d2c014588 <line:10:3, col:18>
+    | `-VarDecl 0x7f9d2c0144a0 <col:3, col:17> col:9 a 'void *' cinit
+    |   `-BinaryOperator 0x7f9d2c014560 <col:13, col:17> 'void *' '+'
+    |     |-ImplicitCastExpr 0x7f9d2c014548 <col:13> 'void *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9d2c014500 <col:13> 'void *' lvalue ParmVar 0x7f9d2c014318 'p' 'void *'
+    |     `-IntegerLiteral 0x7f9d2c014528 <col:17> 'int' 1
+    `-DeclStmt 0x7f9d2c0147b8 <line:11:3, col:30>
+      `-VarDecl 0x7f9d2c0146c8 <col:3, col:29> col:10 a2 'void (*)(void)' cinit
+        `-BinaryOperator 0x7f9d2c014790 <col:22, col:29> 'void (*)(void)' '+'
+          |-UnaryOperator 0x7f9d2c014750 <col:22, col:23> 'void (*)(void)' prefix '&'
+          | `-DeclRefExpr 0x7f9d2c014728 <col:23> 'void (void)' Function 0x7f9d2c014220 'bar' 'void (void)'
+          `-IntegerLiteral 0x7f9d2c014770 <col:29> 'int' 1

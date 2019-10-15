@@ -1,0 +1,388 @@
+../Data/C2AST/pr38245-4.c:5:10: fatal error: 'pr38245-3.h' file not found
+#include "pr38245-3.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7ffe9402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe9402c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe9402bf80 '__int128'
+|-TypedefDecl 0x7ffe9402c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe9402bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffe9402c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe9402c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe9402c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe9402c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe9402c600 'char *'
+|   `-BuiltinType 0x7ffe9402bd80 'char'
+|-TypedefDecl 0x7ffe9402c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe9402c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe9402c720 'struct __va_list_tag'
+|     `-Record 0x7ffe9402c698 '__va_list_tag'
+|-FunctionDecl 0x7ffe94086128 <../Data/C2AST/pr38245-4.c:7:1, line:21:1> line:8:1 b1 'int (long long, long, long, long, long, long, long, long, long long, long, long, long, long, long, long, long, long long, long, long, long, long, long, long, long, long long, long, long, long, long, long, long, long)'
+| |-ParmVarDecl 0x7ffe9402c978 <col:5, col:15> col:15 used a1 'long long'
+| |-ParmVarDecl 0x7ffe9406f600 <col:19, col:24> col:24 used a2 'long'
+| |-ParmVarDecl 0x7ffe9406f678 <col:28, col:33> col:33 used a3 'long'
+| |-ParmVarDecl 0x7ffe9406f6f0 <col:37, col:42> col:42 used a4 'long'
+| |-ParmVarDecl 0x7ffe9406f768 <line:9:5, col:10> col:10 used a5 'long'
+| |-ParmVarDecl 0x7ffe9406f7e0 <col:14, col:19> col:19 used a6 'long'
+| |-ParmVarDecl 0x7ffe9406f858 <col:23, col:28> col:28 used a7 'long'
+| |-ParmVarDecl 0x7ffe9406f8d0 <col:32, col:37> col:37 used a8 'long'
+| |-ParmVarDecl 0x7ffe9406f948 <line:10:5, col:15> col:15 used a9 'long long'
+| |-ParmVarDecl 0x7ffe9406f9c0 <col:19, col:24> col:24 used a10 'long'
+| |-ParmVarDecl 0x7ffe9406fa38 <col:29, col:34> col:34 used a11 'long'
+| |-ParmVarDecl 0x7ffe9406fab0 <col:39, col:44> col:44 used a12 'long'
+| |-ParmVarDecl 0x7ffe9406fb28 <line:11:5, col:10> col:10 used a13 'long'
+| |-ParmVarDecl 0x7ffe9406fba0 <col:15, col:20> col:20 used a14 'long'
+| |-ParmVarDecl 0x7ffe9406fc18 <col:25, col:30> col:30 used a15 'long'
+| |-ParmVarDecl 0x7ffe9406fc90 <col:35, col:40> col:40 used a16 'long'
+| |-ParmVarDecl 0x7ffe9406fd08 <line:12:5, col:15> col:15 used a17 'long long'
+| |-ParmVarDecl 0x7ffe9406fd80 <col:20, col:25> col:25 used a18 'long'
+| |-ParmVarDecl 0x7ffe9406fdf8 <col:30, col:35> col:35 used a19 'long'
+| |-ParmVarDecl 0x7ffe9406fe70 <col:40, col:45> col:45 used a20 'long'
+| |-ParmVarDecl 0x7ffe9406fee8 <line:13:5, col:10> col:10 used a21 'long'
+| |-ParmVarDecl 0x7ffe9406ff60 <col:15, col:20> col:20 used a22 'long'
+| |-ParmVarDecl 0x7ffe9406ffd8 <col:25, col:30> col:30 used a23 'long'
+| |-ParmVarDecl 0x7ffe94070050 <col:35, col:40> col:40 used a24 'long'
+| |-ParmVarDecl 0x7ffe940700c8 <line:14:5, col:15> col:15 used a25 'long long'
+| |-ParmVarDecl 0x7ffe94070140 <col:20, col:25> col:25 used a26 'long'
+| |-ParmVarDecl 0x7ffe940701b8 <col:30, col:35> col:35 used a27 'long'
+| |-ParmVarDecl 0x7ffe94070230 <col:40, col:45> col:45 used a28 'long'
+| |-ParmVarDecl 0x7ffe940702a8 <line:15:5, col:10> col:10 used a29 'long'
+| |-ParmVarDecl 0x7ffe94070320 <col:15, col:20> col:20 used a30 'long'
+| |-ParmVarDecl 0x7ffe94070398 <col:25, col:30> col:30 used a31 'long'
+| |-ParmVarDecl 0x7ffe94070410 <col:35, col:40> col:40 used a32 'long'
+| `-CompoundStmt 0x7ffe940872a8 <line:16:1, line:21:1>
+|-FunctionDecl 0x7ffe940882f0 <line:23:1, line:37:1> line:24:1 b2 'int (long long, long, long, long, long, long, long, long, long long, long, long, long, long, long, long, long, long long, long, long, long, long, long, long, long, long long, long, long, long, long, long, long, long)'
+| |-ParmVarDecl 0x7ffe940872d0 <col:5, col:15> col:15 used a1 'long long'
+| |-ParmVarDecl 0x7ffe94087348 <col:19, col:24> col:24 used a2 'long'
+| |-ParmVarDecl 0x7ffe940873c0 <col:28, col:33> col:33 used a3 'long'
+| |-ParmVarDecl 0x7ffe94087438 <col:37, col:42> col:42 used a4 'long'
+| |-ParmVarDecl 0x7ffe940874b0 <line:25:5, col:10> col:10 used a5 'long'
+| |-ParmVarDecl 0x7ffe94087528 <col:14, col:19> col:19 used a6 'long'
+| |-ParmVarDecl 0x7ffe940875a0 <col:23, col:28> col:28 used a7 'long'
+| |-ParmVarDecl 0x7ffe94087618 <col:32, col:37> col:37 used a8 'long'
+| |-ParmVarDecl 0x7ffe94087690 <line:26:5, col:15> col:15 used a9 'long long'
+| |-ParmVarDecl 0x7ffe94087708 <col:19, col:24> col:24 used a10 'long'
+| |-ParmVarDecl 0x7ffe94087780 <col:29, col:34> col:34 used a11 'long'
+| |-ParmVarDecl 0x7ffe940877f8 <col:39, col:44> col:44 used a12 'long'
+| |-ParmVarDecl 0x7ffe94087870 <line:27:5, col:10> col:10 used a13 'long'
+| |-ParmVarDecl 0x7ffe940878e8 <col:15, col:20> col:20 used a14 'long'
+| |-ParmVarDecl 0x7ffe94087960 <col:25, col:30> col:30 used a15 'long'
+| |-ParmVarDecl 0x7ffe940879d8 <col:35, col:40> col:40 used a16 'long'
+| |-ParmVarDecl 0x7ffe94087a50 <line:28:5, col:15> col:15 used a17 'long long'
+| |-ParmVarDecl 0x7ffe94087ac8 <col:20, col:25> col:25 used a18 'long'
+| |-ParmVarDecl 0x7ffe94087b40 <col:30, col:35> col:35 used a19 'long'
+| |-ParmVarDecl 0x7ffe94087bb8 <col:40, col:45> col:45 used a20 'long'
+| |-ParmVarDecl 0x7ffe94087c30 <line:29:5, col:10> col:10 used a21 'long'
+| |-ParmVarDecl 0x7ffe94087ca8 <col:15, col:20> col:20 used a22 'long'
+| |-ParmVarDecl 0x7ffe94087d20 <col:25, col:30> col:30 used a23 'long'
+| |-ParmVarDecl 0x7ffe94087d98 <col:35, col:40> col:40 used a24 'long'
+| |-ParmVarDecl 0x7ffe94087e10 <line:30:5, col:15> col:15 used a25 'long long'
+| |-ParmVarDecl 0x7ffe94087e88 <col:20, col:25> col:25 used a26 'long'
+| |-ParmVarDecl 0x7ffe94087f00 <col:30, col:35> col:35 used a27 'long'
+| |-ParmVarDecl 0x7ffe94087f78 <col:40, col:45> col:45 used a28 'long'
+| |-ParmVarDecl 0x7ffe94088000 <line:31:5, col:10> col:10 used a29 'long'
+| |-ParmVarDecl 0x7ffe94088078 <col:15, col:20> col:20 used a30 'long'
+| |-ParmVarDecl 0x7ffe940880f0 <col:25, col:30> col:30 used a31 'long'
+| |-ParmVarDecl 0x7ffe94088168 <col:35, col:40> col:40 used a32 'long'
+| `-CompoundStmt 0x7ffe94089440 <line:32:1, line:37:1>
+|   `-ReturnStmt 0x7ffe94089428 <line:33:3, line:36:11>
+|     `-ImplicitCastExpr 0x7ffe94089410 <line:33:10, line:36:11> 'int' <IntegralCast>
+|       `-BinaryOperator 0x7ffe940893e8 <line:33:10, line:36:11> 'long long' '+'
+|         |-BinaryOperator 0x7ffe94089368 <line:33:10, line:36:5> 'long long' '+'
+|         | |-BinaryOperator 0x7ffe940892e8 <line:33:10, line:35:59> 'long long' '+'
+|         | | |-BinaryOperator 0x7ffe94089268 <line:33:10, line:35:53> 'long long' '+'
+|         | | | |-BinaryOperator 0x7ffe940891e8 <line:33:10, line:35:47> 'long long' '+'
+|         | | | | |-BinaryOperator 0x7ffe94089168 <line:33:10, line:35:41> 'long long' '+'
+|         | | | | | |-BinaryOperator 0x7ffe940890e8 <line:33:10, line:35:35> 'long long' '+'
+|         | | | | | | |-BinaryOperator 0x7ffe94089068 <line:33:10, line:35:29> 'long long' '+'
+|         | | | | | | | |-BinaryOperator 0x7ffe94089000 <line:33:10, line:35:23> 'long long' '+'
+|         | | | | | | | | |-BinaryOperator 0x7ffe94088f78 <line:33:10, line:35:17> 'long long' '+'
+|         | | | | | | | | | |-BinaryOperator 0x7ffe94088ef8 <line:33:10, line:35:11> 'long long' '+'
+|         | | | | | | | | | | |-BinaryOperator 0x7ffe94088e78 <line:33:10, line:35:5> 'long long' '+'
+|         | | | | | | | | | | | |-BinaryOperator 0x7ffe94088df8 <line:33:10, line:34:59> 'long long' '+'
+|         | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088d78 <line:33:10, line:34:53> 'long long' '+'
+|         | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088cf8 <line:33:10, line:34:47> 'long long' '+'
+|         | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088c78 <line:33:10, line:34:41> 'long long' '+'
+|         | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088c10 <line:33:10, line:34:35> 'long long' '+'
+|         | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088b90 <line:33:10, line:34:29> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088b10 <line:33:10, line:34:23> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088a90 <line:33:10, line:34:17> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088a10 <line:33:10, line:34:11> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088990 <line:33:10, line:34:5> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088910 <line:33:10, col:55> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088890 <col:10, col:50> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088828 <col:10, col:45> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe940887a8 <col:10, col:40> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088728 <col:10, col:35> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe940886a8 <col:10, col:30> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088628 <col:10, col:25> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe940885a8 <col:10, col:20> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-BinaryOperator 0x7ffe94088528 <col:10, col:15> 'long long' '+'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |-ImplicitCastExpr 0x7ffe940884e0 <col:10> 'long long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-DeclRefExpr 0x7ffe94088490 <col:10> 'long long' lvalue ParmVar 0x7ffe940872d0 'a1' 'long long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088510 <col:15> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe940884f8 <col:15> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe940884b8 <col:15> 'long' lvalue ParmVar 0x7ffe94087348 'a2' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088590 <col:20> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088578 <col:20> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088550 <col:20> 'long' lvalue ParmVar 0x7ffe940873c0 'a3' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088610 <col:25> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe940885f8 <col:25> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe940885d0 <col:25> 'long' lvalue ParmVar 0x7ffe94087438 'a4' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088690 <col:30> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088678 <col:30> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088650 <col:30> 'long' lvalue ParmVar 0x7ffe940874b0 'a5' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088710 <col:35> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe940886f8 <col:35> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe940886d0 <col:35> 'long' lvalue ParmVar 0x7ffe94087528 'a6' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088790 <col:40> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088778 <col:40> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088750 <col:40> 'long' lvalue ParmVar 0x7ffe940875a0 'a7' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088810 <col:45> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe940887f8 <col:45> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe940887d0 <col:45> 'long' lvalue ParmVar 0x7ffe94087618 'a8' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088878 <col:50> 'long long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | | |   `-DeclRefExpr 0x7ffe94088850 <col:50> 'long long' lvalue ParmVar 0x7ffe94087690 'a9' 'long long'
+|         | | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe940888f8 <col:55> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe940888e0 <col:55> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe940888b8 <col:55> 'long' lvalue ParmVar 0x7ffe94087708 'a10' 'long'
+|         | | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088978 <line:34:5> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088960 <col:5> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088938 <col:5> 'long' lvalue ParmVar 0x7ffe94087780 'a11' 'long'
+|         | | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe940889f8 <col:11> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe940889e0 <col:11> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe940889b8 <col:11> 'long' lvalue ParmVar 0x7ffe940877f8 'a12' 'long'
+|         | | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088a78 <col:17> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088a60 <col:17> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088a38 <col:17> 'long' lvalue ParmVar 0x7ffe94087870 'a13' 'long'
+|         | | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088af8 <col:23> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088ae0 <col:23> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088ab8 <col:23> 'long' lvalue ParmVar 0x7ffe940878e8 'a14' 'long'
+|         | | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088b78 <col:29> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088b60 <col:29> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088b38 <col:29> 'long' lvalue ParmVar 0x7ffe94087960 'a15' 'long'
+|         | | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088bf8 <col:35> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088be0 <col:35> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088bb8 <col:35> 'long' lvalue ParmVar 0x7ffe940879d8 'a16' 'long'
+|         | | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088c60 <col:41> 'long long' <LValueToRValue>
+|         | | | | | | | | | | | | | | |   `-DeclRefExpr 0x7ffe94088c38 <col:41> 'long long' lvalue ParmVar 0x7ffe94087a50 'a17' 'long long'
+|         | | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088ce0 <col:47> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088cc8 <col:47> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088ca0 <col:47> 'long' lvalue ParmVar 0x7ffe94087ac8 'a18' 'long'
+|         | | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088d60 <col:53> 'long long' <IntegralCast>
+|         | | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088d48 <col:53> 'long' <LValueToRValue>
+|         | | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088d20 <col:53> 'long' lvalue ParmVar 0x7ffe94087b40 'a19' 'long'
+|         | | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088de0 <col:59> 'long long' <IntegralCast>
+|         | | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088dc8 <col:59> 'long' <LValueToRValue>
+|         | | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088da0 <col:59> 'long' lvalue ParmVar 0x7ffe94087bb8 'a20' 'long'
+|         | | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088e60 <line:35:5> 'long long' <IntegralCast>
+|         | | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088e48 <col:5> 'long' <LValueToRValue>
+|         | | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088e20 <col:5> 'long' lvalue ParmVar 0x7ffe94087c30 'a21' 'long'
+|         | | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088ee0 <col:11> 'long long' <IntegralCast>
+|         | | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088ec8 <col:11> 'long' <LValueToRValue>
+|         | | | | | | | | | |     `-DeclRefExpr 0x7ffe94088ea0 <col:11> 'long' lvalue ParmVar 0x7ffe94087ca8 'a22' 'long'
+|         | | | | | | | | | `-ImplicitCastExpr 0x7ffe94088f60 <col:17> 'long long' <IntegralCast>
+|         | | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088f48 <col:17> 'long' <LValueToRValue>
+|         | | | | | | | | |     `-DeclRefExpr 0x7ffe94088f20 <col:17> 'long' lvalue ParmVar 0x7ffe94087d20 'a23' 'long'
+|         | | | | | | | | `-ImplicitCastExpr 0x7ffe94088fe0 <col:23> 'long long' <IntegralCast>
+|         | | | | | | | |   `-ImplicitCastExpr 0x7ffe94088fc8 <col:23> 'long' <LValueToRValue>
+|         | | | | | | | |     `-DeclRefExpr 0x7ffe94088fa0 <col:23> 'long' lvalue ParmVar 0x7ffe94087d98 'a24' 'long'
+|         | | | | | | | `-ImplicitCastExpr 0x7ffe94089050 <col:29> 'long long' <LValueToRValue>
+|         | | | | | | |   `-DeclRefExpr 0x7ffe94089028 <col:29> 'long long' lvalue ParmVar 0x7ffe94087e10 'a25' 'long long'
+|         | | | | | | `-ImplicitCastExpr 0x7ffe940890d0 <col:35> 'long long' <IntegralCast>
+|         | | | | | |   `-ImplicitCastExpr 0x7ffe940890b8 <col:35> 'long' <LValueToRValue>
+|         | | | | | |     `-DeclRefExpr 0x7ffe94089090 <col:35> 'long' lvalue ParmVar 0x7ffe94087e88 'a26' 'long'
+|         | | | | | `-ImplicitCastExpr 0x7ffe94089150 <col:41> 'long long' <IntegralCast>
+|         | | | | |   `-ImplicitCastExpr 0x7ffe94089138 <col:41> 'long' <LValueToRValue>
+|         | | | | |     `-DeclRefExpr 0x7ffe94089110 <col:41> 'long' lvalue ParmVar 0x7ffe94087f00 'a27' 'long'
+|         | | | | `-ImplicitCastExpr 0x7ffe940891d0 <col:47> 'long long' <IntegralCast>
+|         | | | |   `-ImplicitCastExpr 0x7ffe940891b8 <col:47> 'long' <LValueToRValue>
+|         | | | |     `-DeclRefExpr 0x7ffe94089190 <col:47> 'long' lvalue ParmVar 0x7ffe94087f78 'a28' 'long'
+|         | | | `-ImplicitCastExpr 0x7ffe94089250 <col:53> 'long long' <IntegralCast>
+|         | | |   `-ImplicitCastExpr 0x7ffe94089238 <col:53> 'long' <LValueToRValue>
+|         | | |     `-DeclRefExpr 0x7ffe94089210 <col:53> 'long' lvalue ParmVar 0x7ffe94088000 'a29' 'long'
+|         | | `-ImplicitCastExpr 0x7ffe940892d0 <col:59> 'long long' <IntegralCast>
+|         | |   `-ImplicitCastExpr 0x7ffe940892b8 <col:59> 'long' <LValueToRValue>
+|         | |     `-DeclRefExpr 0x7ffe94089290 <col:59> 'long' lvalue ParmVar 0x7ffe94088078 'a30' 'long'
+|         | `-ImplicitCastExpr 0x7ffe94089350 <line:36:5> 'long long' <IntegralCast>
+|         |   `-ImplicitCastExpr 0x7ffe94089338 <col:5> 'long' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7ffe94089310 <col:5> 'long' lvalue ParmVar 0x7ffe940880f0 'a31' 'long'
+|         `-ImplicitCastExpr 0x7ffe940893d0 <col:11> 'long long' <IntegralCast>
+|           `-ImplicitCastExpr 0x7ffe940893b8 <col:11> 'long' <LValueToRValue>
+|             `-DeclRefExpr 0x7ffe94089390 <col:11> 'long' lvalue ParmVar 0x7ffe94088168 'a32' 'long'
+|-FunctionDecl 0x7ffe94800838 <line:39:1, line:53:1> line:40:1 b3 'int (long long, long, long, long, long, long, long, struct B, long long, struct B, long, struct B, long, long, long, long, long long, struct B, long, struct B, long, long, long, long, long long, struct B, long, struct B, long, long, long, long)'
+| |-ParmVarDecl 0x7ffe94089470 <col:5, col:15> col:15 used a1 'long long'
+| |-ParmVarDecl 0x7ffe940894e8 <col:19, col:24> col:24 used a2 'long'
+| |-ParmVarDecl 0x7ffe94089560 <col:28, col:33> col:33 used a3 'long'
+| |-ParmVarDecl 0x7ffe940895d8 <col:37, col:42> col:42 used a4 'long'
+| |-ParmVarDecl 0x7ffe94089650 <line:41:5, col:10> col:10 used a5 'long'
+| |-ParmVarDecl 0x7ffe940896c8 <col:14, col:19> col:19 used a6 'long'
+| |-ParmVarDecl 0x7ffe94089740 <col:23, col:28> col:28 used a7 'long'
+| |-ParmVarDecl 0x7ffe940898a0 <col:32, col:41> col:41 invalid a8 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94089918 <line:42:5, col:15> col:15 used a9 'long long'
+| |-ParmVarDecl 0x7ffe94089998 <col:19, col:28> col:28 invalid a10 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94089a10 <col:33, col:38> col:38 used a11 'long'
+| |-ParmVarDecl 0x7ffe94089a90 <col:43, col:52> col:52 invalid a12 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94089b08 <line:43:5, col:10> col:10 used a13 'long'
+| |-ParmVarDecl 0x7ffe94089b80 <col:15, col:20> col:20 used a14 'long'
+| |-ParmVarDecl 0x7ffe94089bf8 <col:25, col:30> col:30 used a15 'long'
+| |-ParmVarDecl 0x7ffe94089c70 <col:35, col:40> col:40 used a16 'long'
+| |-ParmVarDecl 0x7ffe94089ce8 <line:44:5, col:15> col:15 used a17 'long long'
+| |-ParmVarDecl 0x7ffe94089d68 <col:20, col:29> col:29 invalid a18 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94089de0 <col:34, col:39> col:39 used a19 'long'
+| |-ParmVarDecl 0x7ffe94089e60 <col:44, col:53> col:53 invalid a20 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94089ed8 <line:45:5, col:10> col:10 used a21 'long'
+| |-ParmVarDecl 0x7ffe94089f50 <col:15, col:20> col:20 used a22 'long'
+| |-ParmVarDecl 0x7ffe94800000 <col:25, col:30> col:30 used a23 'long'
+| |-ParmVarDecl 0x7ffe94800078 <col:35, col:40> col:40 used a24 'long'
+| |-ParmVarDecl 0x7ffe948000f0 <line:46:5, col:15> col:15 used a25 'long long'
+| |-ParmVarDecl 0x7ffe94800170 <col:20, col:29> col:29 invalid a26 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe948001e8 <col:34, col:39> col:39 used a27 'long'
+| |-ParmVarDecl 0x7ffe94800268 <col:44, col:53> col:53 invalid a28 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe948002e0 <line:47:5, col:10> col:10 used a29 'long'
+| |-ParmVarDecl 0x7ffe94800358 <col:15, col:20> col:20 used a30 'long'
+| |-ParmVarDecl 0x7ffe948003d0 <col:25, col:30> col:30 used a31 'long'
+| |-ParmVarDecl 0x7ffe94800448 <col:35, col:40> col:40 used a32 'long'
+| `-CompoundStmt 0x7ffe94800fe8 <line:48:1, line:53:1>
+|-FunctionDecl 0x7ffe948031e8 <line:55:1, line:69:1> line:56:1 b4 'int (long long, long, long, long, long, long, long, struct B, long long, struct B, long, struct B, long, long, long, long, long long, struct B, long, struct B, long, long, long, long, long long, struct B, long, struct B, long, long, long, long)'
+| |-ParmVarDecl 0x7ffe94801e18 <col:5, col:15> col:15 used a1 'long long'
+| |-ParmVarDecl 0x7ffe94801e90 <col:19, col:24> col:24 used a2 'long'
+| |-ParmVarDecl 0x7ffe94801f08 <col:28, col:33> col:33 used a3 'long'
+| |-ParmVarDecl 0x7ffe94801f80 <col:37, col:42> col:42 used a4 'long'
+| |-ParmVarDecl 0x7ffe94801ff8 <line:57:5, col:10> col:10 used a5 'long'
+| |-ParmVarDecl 0x7ffe94802070 <col:14, col:19> col:19 used a6 'long'
+| |-ParmVarDecl 0x7ffe948020e8 <col:23, col:28> col:28 used a7 'long'
+| |-ParmVarDecl 0x7ffe94802240 <col:32, col:41> col:41 invalid a8 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe948022b8 <line:58:5, col:15> col:15 used a9 'long long'
+| |-ParmVarDecl 0x7ffe94802338 <col:19, col:28> col:28 invalid a10 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe948023b0 <col:33, col:38> col:38 used a11 'long'
+| |-ParmVarDecl 0x7ffe94802430 <col:43, col:52> col:52 invalid a12 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe948024a8 <line:59:5, col:10> col:10 used a13 'long'
+| |-ParmVarDecl 0x7ffe94802520 <col:15, col:20> col:20 used a14 'long'
+| |-ParmVarDecl 0x7ffe94802598 <col:25, col:30> col:30 used a15 'long'
+| |-ParmVarDecl 0x7ffe94802610 <col:35, col:40> col:40 used a16 'long'
+| |-ParmVarDecl 0x7ffe94802688 <line:60:5, col:15> col:15 used a17 'long long'
+| |-ParmVarDecl 0x7ffe94802708 <col:20, col:29> col:29 invalid a18 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94802780 <col:34, col:39> col:39 used a19 'long'
+| |-ParmVarDecl 0x7ffe94802800 <col:44, col:53> col:53 invalid a20 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94802878 <line:61:5, col:10> col:10 used a21 'long'
+| |-ParmVarDecl 0x7ffe948028f0 <col:15, col:20> col:20 used a22 'long'
+| |-ParmVarDecl 0x7ffe94802968 <col:25, col:30> col:30 used a23 'long'
+| |-ParmVarDecl 0x7ffe948029e0 <col:35, col:40> col:40 used a24 'long'
+| |-ParmVarDecl 0x7ffe94802a58 <line:62:5, col:15> col:15 used a25 'long long'
+| |-ParmVarDecl 0x7ffe94802ad8 <col:20, col:29> col:29 invalid a26 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94802b50 <col:34, col:39> col:39 used a27 'long'
+| |-ParmVarDecl 0x7ffe94802bd0 <col:44, col:53> col:53 invalid a28 'struct B':'struct B'
+| |-ParmVarDecl 0x7ffe94802c48 <line:63:5, col:10> col:10 used a29 'long'
+| |-ParmVarDecl 0x7ffe94802cc0 <col:15, col:20> col:20 used a30 'long'
+| |-ParmVarDecl 0x7ffe94802d38 <col:25, col:30> col:30 used a31 'long'
+| |-ParmVarDecl 0x7ffe94802e00 <col:35, col:40> col:40 used a32 'long'
+| `-CompoundStmt 0x7ffe94803998 <line:64:1, line:69:1>
+|-FunctionDecl 0x7ffe94803ee8 <line:71:1, line:76:1> line:72:1 b5 'int (double, int, int, int, int, int, double, double, double)'
+| |-ParmVarDecl 0x7ffe948039c0 <col:5, col:12> col:12 used a1 'double'
+| |-ParmVarDecl 0x7ffe94803a38 <col:16, col:20> col:20 used a2 'int'
+| |-ParmVarDecl 0x7ffe94803ab0 <col:24, col:28> col:28 used a3 'int'
+| |-ParmVarDecl 0x7ffe94803b28 <col:32, col:36> col:36 used a4 'int'
+| |-ParmVarDecl 0x7ffe94803ba0 <col:40, col:44> col:44 used a5 'int'
+| |-ParmVarDecl 0x7ffe94803c18 <col:48, col:52> col:52 used a6 'int'
+| |-ParmVarDecl 0x7ffe94803c90 <col:56, col:63> col:63 used a7 'double'
+| |-ParmVarDecl 0x7ffe94803d08 <line:73:5, col:12> col:12 used a8 'double'
+| |-ParmVarDecl 0x7ffe94803d80 <col:16, col:23> col:23 used a9 'double'
+| `-CompoundStmt 0x7ffe948043c8 <line:74:1, line:76:1>
+|-FunctionDecl 0x7ffe94804880 <line:78:1, line:83:1> line:79:1 b6 'int (double, int, int, int, int, int, double, double, double)'
+| |-ParmVarDecl 0x7ffe948043f0 <col:5, col:12> col:12 used a1 'double'
+| |-ParmVarDecl 0x7ffe94804468 <col:16, col:20> col:20 used a2 'int'
+| |-ParmVarDecl 0x7ffe948044e0 <col:24, col:28> col:28 used a3 'int'
+| |-ParmVarDecl 0x7ffe94804558 <col:32, col:36> col:36 used a4 'int'
+| |-ParmVarDecl 0x7ffe948045d0 <col:40, col:44> col:44 used a5 'int'
+| |-ParmVarDecl 0x7ffe94804648 <col:48, col:52> col:52 used a6 'int'
+| |-ParmVarDecl 0x7ffe948046c0 <col:56, col:63> col:63 used a7 'double'
+| |-ParmVarDecl 0x7ffe94804738 <line:80:5, col:12> col:12 used a8 'double'
+| |-ParmVarDecl 0x7ffe948047b0 <col:16, col:23> col:23 used a9 'double'
+| `-CompoundStmt 0x7ffe94804d90 <line:81:1, line:83:1>
+|   `-ReturnStmt 0x7ffe94804d78 <line:82:3, col:50>
+|     `-ImplicitCastExpr 0x7ffe94804d60 <col:10, col:50> 'int' <FloatingToIntegral>
+|       `-BinaryOperator 0x7ffe94804d38 <col:10, col:50> 'double' '+'
+|         |-BinaryOperator 0x7ffe94804cd0 <col:10, col:45> 'double' '+'
+|         | |-BinaryOperator 0x7ffe94804c68 <col:10, col:40> 'double' '+'
+|         | | |-BinaryOperator 0x7ffe94804c00 <col:10, col:35> 'double' '+'
+|         | | | |-BinaryOperator 0x7ffe94804b80 <col:10, col:30> 'double' '+'
+|         | | | | |-BinaryOperator 0x7ffe94804b00 <col:10, col:25> 'double' '+'
+|         | | | | | |-BinaryOperator 0x7ffe94804a80 <col:10, col:20> 'double' '+'
+|         | | | | | | |-BinaryOperator 0x7ffe94804a00 <col:10, col:15> 'double' '+'
+|         | | | | | | | |-ImplicitCastExpr 0x7ffe948049b8 <col:10> 'double' <LValueToRValue>
+|         | | | | | | | | `-DeclRefExpr 0x7ffe94804968 <col:10> 'double' lvalue ParmVar 0x7ffe948043f0 'a1' 'double'
+|         | | | | | | | `-ImplicitCastExpr 0x7ffe948049e8 <col:15> 'double' <IntegralToFloating>
+|         | | | | | | |   `-ImplicitCastExpr 0x7ffe948049d0 <col:15> 'int' <LValueToRValue>
+|         | | | | | | |     `-DeclRefExpr 0x7ffe94804990 <col:15> 'int' lvalue ParmVar 0x7ffe94804468 'a2' 'int'
+|         | | | | | | `-ImplicitCastExpr 0x7ffe94804a68 <col:20> 'double' <IntegralToFloating>
+|         | | | | | |   `-ImplicitCastExpr 0x7ffe94804a50 <col:20> 'int' <LValueToRValue>
+|         | | | | | |     `-DeclRefExpr 0x7ffe94804a28 <col:20> 'int' lvalue ParmVar 0x7ffe948044e0 'a3' 'int'
+|         | | | | | `-ImplicitCastExpr 0x7ffe94804ae8 <col:25> 'double' <IntegralToFloating>
+|         | | | | |   `-ImplicitCastExpr 0x7ffe94804ad0 <col:25> 'int' <LValueToRValue>
+|         | | | | |     `-DeclRefExpr 0x7ffe94804aa8 <col:25> 'int' lvalue ParmVar 0x7ffe94804558 'a4' 'int'
+|         | | | | `-ImplicitCastExpr 0x7ffe94804b68 <col:30> 'double' <IntegralToFloating>
+|         | | | |   `-ImplicitCastExpr 0x7ffe94804b50 <col:30> 'int' <LValueToRValue>
+|         | | | |     `-DeclRefExpr 0x7ffe94804b28 <col:30> 'int' lvalue ParmVar 0x7ffe948045d0 'a5' 'int'
+|         | | | `-ImplicitCastExpr 0x7ffe94804be8 <col:35> 'double' <IntegralToFloating>
+|         | | |   `-ImplicitCastExpr 0x7ffe94804bd0 <col:35> 'int' <LValueToRValue>
+|         | | |     `-DeclRefExpr 0x7ffe94804ba8 <col:35> 'int' lvalue ParmVar 0x7ffe94804648 'a6' 'int'
+|         | | `-ImplicitCastExpr 0x7ffe94804c50 <col:40> 'double' <LValueToRValue>
+|         | |   `-DeclRefExpr 0x7ffe94804c28 <col:40> 'double' lvalue ParmVar 0x7ffe948046c0 'a7' 'double'
+|         | `-ImplicitCastExpr 0x7ffe94804cb8 <col:45> 'double' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7ffe94804c90 <col:45> 'double' lvalue ParmVar 0x7ffe94804738 'a8' 'double'
+|         `-ImplicitCastExpr 0x7ffe94804d20 <col:50> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7ffe94804cf8 <col:50> 'double' lvalue ParmVar 0x7ffe948047b0 'a9' 'double'
+|-FunctionDecl 0x7ffe94804f58 <line:85:1, line:89:1> line:86:1 b7 'int (int, int)'
+| |-ParmVarDecl 0x7ffe94804e00 <col:5, col:9> col:9 used a1 'int'
+| |-ParmVarDecl 0x7ffe94804e78 <col:13, col:17> col:17 used a2 'int'
+| `-CompoundStmt 0x7ffe948050b0 <line:87:1, line:89:1>
+|-FunctionDecl 0x7ffe948051e8 <line:91:1, line:95:1> line:92:1 b8 'int (int, int)'
+| |-ParmVarDecl 0x7ffe948050d8 <col:5, col:9> col:9 used a1 'int'
+| |-ParmVarDecl 0x7ffe94805150 <col:13, col:17> col:17 used a2 'int'
+| `-CompoundStmt 0x7ffe94805358 <line:93:1, line:95:1>
+|   `-ReturnStmt 0x7ffe94805340 <line:94:3, col:15>
+|     `-BinaryOperator 0x7ffe94805318 <col:10, col:15> 'int' '+'
+|       |-ImplicitCastExpr 0x7ffe948052e8 <col:10> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x7ffe94805298 <col:10> 'int' lvalue ParmVar 0x7ffe948050d8 'a1' 'int'
+|       `-ImplicitCastExpr 0x7ffe94805300 <col:15> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7ffe948052c0 <col:15> 'int' lvalue ParmVar 0x7ffe94805150 'a2' 'int'
+|-FunctionDecl 0x7ffe94805788 <line:97:1, line:101:1> line:98:1 b9 'int (int, int, int, int, int, int, int)'
+| |-ParmVarDecl 0x7ffe94805388 <col:5, col:9> col:9 used a1 'int'
+| |-ParmVarDecl 0x7ffe94805400 <col:13, col:17> col:17 used a2 'int'
+| |-ParmVarDecl 0x7ffe94805478 <col:21, col:25> col:25 used a3 'int'
+| |-ParmVarDecl 0x7ffe948054f0 <col:29, col:33> col:33 used a4 'int'
+| |-ParmVarDecl 0x7ffe94805568 <col:37, col:41> col:41 used a5 'int'
+| |-ParmVarDecl 0x7ffe948055e0 <col:45, col:49> col:49 used a6 'int'
+| |-ParmVarDecl 0x7ffe94805658 <col:53, col:57> col:57 used a7 'int'
+| `-CompoundStmt 0x7ffe94805b10 <line:99:1, line:101:1>
+`-FunctionDecl 0x7ffe94805ed8 <line:103:1, line:107:1> line:104:1 b10 'int (int, int, int, int, int, int, int)'
+  |-ParmVarDecl 0x7ffe94805b38 <col:6, col:10> 1 error generated.
+col:10 used a1 'int'
+  |-ParmVarDecl 0x7ffe94805bb0 <col:14, col:18> col:18 used a2 'int'
+  |-ParmVarDecl 0x7ffe94805c28 <col:22, col:26> col:26 used a3 'int'
+  |-ParmVarDecl 0x7ffe94805ca0 <col:30, col:34> col:34 used a4 'int'
+  |-ParmVarDecl 0x7ffe94805d18 <col:38, col:42> col:42 used a5 'int'
+  |-ParmVarDecl 0x7ffe94805d90 <col:46, col:50> col:50 used a6 'int'
+  |-ParmVarDecl 0x7ffe94805e18 <col:54, col:58> col:58 used a7 'int'
+  `-CompoundStmt 0x7ffe94806278 <line:105:1, line:107:1>
+    `-ReturnStmt 0x7ffe94806260 <line:106:3, col:40>
+      `-BinaryOperator 0x7ffe94806238 <col:10, col:40> 'int' '+'
+        |-BinaryOperator 0x7ffe948061d0 <col:10, col:35> 'int' '+'
+        | |-BinaryOperator 0x7ffe94806168 <col:10, col:30> 'int' '+'
+        | | |-BinaryOperator 0x7ffe94806100 <col:10, col:25> 'int' '+'
+        | | | |-BinaryOperator 0x7ffe94806098 <col:10, col:20> 'int' '+'
+        | | | | |-BinaryOperator 0x7ffe94806030 <col:10, col:15> 'int' '+'
+        | | | | | |-ImplicitCastExpr 0x7ffe94806000 <col:10> 'int' <LValueToRValue>
+        | | | | | | `-DeclRefExpr 0x7ffe94805fb0 <col:10> 'int' lvalue ParmVar 0x7ffe94805b38 'a1' 'int'
+        | | | | | `-ImplicitCastExpr 0x7ffe94806018 <col:15> 'int' <LValueToRValue>
+        | | | | |   `-DeclRefExpr 0x7ffe94805fd8 <col:15> 'int' lvalue ParmVar 0x7ffe94805bb0 'a2' 'int'
+        | | | | `-ImplicitCastExpr 0x7ffe94806080 <col:20> 'int' <LValueToRValue>
+        | | | |   `-DeclRefExpr 0x7ffe94806058 <col:20> 'int' lvalue ParmVar 0x7ffe94805c28 'a3' 'int'
+        | | | `-ImplicitCastExpr 0x7ffe948060e8 <col:25> 'int' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7ffe948060c0 <col:25> 'int' lvalue ParmVar 0x7ffe94805ca0 'a4' 'int'
+        | | `-ImplicitCastExpr 0x7ffe94806150 <col:30> 'int' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7ffe94806128 <col:30> 'int' lvalue ParmVar 0x7ffe94805d18 'a5' 'int'
+        | `-ImplicitCastExpr 0x7ffe948061b8 <col:35> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7ffe94806190 <col:35> 'int' lvalue ParmVar 0x7ffe94805d90 'a6' 'int'
+        `-ImplicitCastExpr 0x7ffe94806220 <col:40> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7ffe948061f8 <col:40> 'int' lvalue ParmVar 0x7ffe94805e18 'a7' 'int'

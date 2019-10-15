@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fdca20080e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdca3014580 <../Data/C2AST/pr81313-4.c:4:1, col:51> col:13 used foo 'void (int, int, int, int, int, int, int)' extern
+| |-ParmVarDecl 0x7fdca2008d78 <col:18> col:21 'int'
+| |-ParmVarDecl 0x7fdca3014200 <col:23> col:26 'int'
+| |-ParmVarDecl 0x7fdca3014278 <col:28> col:31 'int'
+| |-ParmVarDecl 0x7fdca30142f0 <col:33> col:36 'int'
+| |-ParmVarDecl 0x7fdca3014368 <col:38> col:41 'int'
+| |-ParmVarDecl 0x7fdca30143e0 <col:43> col:46 'int'
+| `-ParmVarDecl 0x7fdca3014458 <col:48> col:51 'int'
+`-FunctionDecl 0x7fdca3014760 <line:6:1, line:10:1> line:7:1 bar 'void (void)'
+  `-CompoundStmt 0x7fdca30149b0 <line:8:1, line:10:1>
+    `-CallExpr 0x7fdca3014950 <line:9:3, col:27> 'void'
+      |-ImplicitCastExpr 0x7fdca3014938 <col:3> 'void (*)(int, int, int, int, int, int, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fdca3014800 <col:3> 'void (int, int, int, int, int, int, int)' Function 0x7fdca3014580 'foo' 'void (int, int, int, int, int, int, int)'
+      |-IntegerLiteral 0x7fdca3014828 <col:8> 'int' 1
+      |-IntegerLiteral 0x7fdca3014848 <col:11> 'int' 2
+      |-IntegerLiteral 0x7fdca3014868 <col:14> 'int' 3
+      |-IntegerLiteral 0x7fdca3014888 <col:17> 'int' 4
+      |-IntegerLiteral 0x7fdca30148a8 <col:20> 'int' 5
+      |-IntegerLiteral 0x7fdca30148c8 <col:23> 'int' 6
+      `-IntegerLiteral 0x7fdca30148e8 <col:26> 'int' 7

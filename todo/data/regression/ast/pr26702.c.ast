@@ -1,0 +1,3 @@
+TranslationUnitDecl 0x7fec9a0028e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fec9a003578 <../Data/C2AST/pr26702.c:3:1, col:5> col:5 foo 'int'
+`-VarDecl 0x7fec9b025458 <line:4:1, col:12> col:12 static_foo 'int' static

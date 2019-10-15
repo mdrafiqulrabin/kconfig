@@ -1,0 +1,53 @@
+../Data/C2AST/pr66626-2.c:10:3: error: function definition is not allowed here
+  {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7f837c00e8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f837c00ee60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f837c00eb80 '__int128'
+|-TypedefDecl 0x7f837c00eed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f837c00eba0 'unsigned __int128'
+|-TypedefDecl 0x7f837c00f1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f837c00efb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f837c00ef28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f837c00f240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f837c00f200 'char *'
+|   `-BuiltinType 0x7f837c00e980 'char'
+|-TypedefDecl 0x7f837c00f508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f837c00f4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f837c00f320 'struct __va_list_tag'
+|     `-Record 0x7f837c00f298 '__va_list_tag'
+|-FunctionDecl 0x7f837b02a050 <../Data/C2AST/pr66626-2.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f837b02a0f0 prev 0x7f837b02a050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f837b02a278 <line:6:1, line:18:1> line:6:5 used s 'int (int)'
+| |-ParmVarDecl 0x7f837b02a1a8 <col:8, col:12> col:12 used i 'int'
+| `-CompoundStmt 0x7f837b02a690 <line:7:1, line:18:1>
+|   |-DeclStmt 0x7f837b02a3a8 <line:8:3, col:15>
+|   | `-LabelDecl 0x7f837b02a360 <col:3, col:13> col:13 l1
+|   |-ReturnStmt 0x7f837b02a618 <line:15:3, col:14>
+|   | `-CallExpr 0x7f837b02a5d0 <col:10, col:14> 'int'
+|   |   |-ImplicitCastExpr 0x7f837b02a5b8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7f837b02a540 <col:10> 'int ()' Function 0x7f837b02a490 'f' 'int ()'
+|   |   `-ImplicitCastExpr 0x7f837b02a600 <col:13> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7f837b02a568 <col:13> 'int' lvalue ParmVar 0x7f837b02a1a8 'i' 'int'
+|   |-LabelStmt 0x7f837b02a640 <line:16:2, col:5> 'l1'
+|   | `-NullStmt 0x7f837b02a630 <col:5>
+|   `-ReturnStmt 0x7f837b02a678 <line:17:3, col:10>
+|     `-IntegerLiteral 0x7f837b02a658 <col:10> 'int' 1
+`-FunctionDecl 0x7f837b02a6e8 <line:20:1, line:26:1> line:20:5 main 'int ()'
+  `-CompoundStmt 0x7f837b02a988 <line:21:1, line:26:1>
+    |-IfStmt 0x7f837b02a918 <line:22:3, line:23:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f837b02a860 <line:22:7, col:16> 'int' '!='
+    | | |-CallExpr 0x7f837b02a810 <col:7, col:11> 'int'
+    | | | |-ImplicitCastExpr 0x7f837b02a7f8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f837b02a788 <col:7> 'int (int)' Function 0x7f837b02a278 's' 'int (int)'
+    | | | `-IntegerLiteral 0x7f837b02a7b0 <col:10> 'int' 2
+    | | `-IntegerLiteral 0x7f837b02a840 <col:16> 'int' 1
+    | |-CallExpr 0x7f837b02a8f0 <line:23:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f837b02a8d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f837b02a888 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f837b02a0f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f837b02a970 <line:25:3, col:10>
+      `-IntegerLiteral 0x7f837b02a950 <col:10> 'int' 0

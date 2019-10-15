@@ -1,0 +1,83 @@
+TranslationUnitDecl 0x7feb1701b4e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7feb1701c170 <../Data/C2AST/pr55011.c:3:1, col:6> col:6 used a 'char'
+`-FunctionDecl 0x7feb16824d00 <line:5:1, line:22:1> line:5:6 f 'void (void)'
+  `-CompoundStmt 0x7feb168257c8 <line:6:1, line:22:1>
+    |-DeclStmt 0x7feb16824e48 <line:7:3, col:13>
+    | `-VarDecl 0x7feb16824db0 <col:3, col:12> col:8 used b 'char' cinit
+    |   `-ImplicitCastExpr 0x7feb16824e30 <col:12> 'char' <IntegralCast>
+    |     `-IntegerLiteral 0x7feb16824e10 <col:12> 'int' 2
+    `-ForStmt 0x7feb16825790 <line:9:3, line:21:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7feb16825760 <line:10:5, line:21:5>
+        |-DeclStmt 0x7feb16825090 <line:11:7, col:40>
+        | |-VarDecl 0x7feb16824e78 <col:7, col:26> col:22 used s 'unsigned short' cinit
+        | | `-ImplicitCastExpr 0x7feb16824ef8 <col:26> 'unsigned short' <IntegralCast>
+        | |   `-IntegerLiteral 0x7feb16824ed8 <col:26> 'int' 1
+        | |-VarDecl 0x7feb16824f50 <col:7, col:35> col:30 used p 'unsigned short *' cinit
+        | | `-UnaryOperator 0x7feb16824fd8 <col:34, col:35> 'unsigned short *' prefix '&'
+        | |   `-DeclRefExpr 0x7feb16824fb0 <col:35> 'unsigned short' lvalue Var 0x7feb16824e78 's' 'unsigned short'
+        | `-VarDecl 0x7feb16825010 <col:7, col:39> col:39 used i 'unsigned short *'
+        |-ForStmt 0x7feb168255c0 <line:13:7, line:15:4>
+        | |-BinaryOperator 0x7feb16825140 <line:13:11, col:16> 'unsigned short' '='
+        | | |-UnaryOperator 0x7feb168250e8 <col:11, col:12> 'unsigned short' lvalue prefix '*'
+        | | | `-ImplicitCastExpr 0x7feb168250d0 <col:12> 'unsigned short *' <LValueToRValue>
+        | | |   `-DeclRefExpr 0x7feb168250a8 <col:12> 'unsigned short *' lvalue Var 0x7feb16825010 'i' 'unsigned short *'
+        | | `-ImplicitCastExpr 0x7feb16825128 <col:16> 'unsigned short' <IntegralCast>
+        | |   `-IntegerLiteral 0x7feb16825108 <col:16> 'int' 0
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7feb16825218 <col:19, col:24> 'int' '<'
+        | | |-ImplicitCastExpr 0x7feb16825200 <col:19, col:20> 'int' <IntegralCast>
+        | | | `-ImplicitCastExpr 0x7feb168251e8 <col:19, col:20> 'unsigned short' <LValueToRValue>
+        | | |   `-UnaryOperator 0x7feb168251a8 <col:19, col:20> 'unsigned short' lvalue prefix '*'
+        | | |     `-ImplicitCastExpr 0x7feb16825190 <col:20> 'unsigned short *' <LValueToRValue>
+        | | |       `-DeclRefExpr 0x7feb16825168 <col:20> 'unsigned short *' lvalue Var 0x7feb16825010 'i' 'unsigned short *'
+        | | `-IntegerLiteral 0x7feb168251c8 <col:24> 'int' 4
+        | |-UnaryOperator 0x7feb168252a0 <col:27, col:30> 'unsigned short' prefix '++'
+        | | `-UnaryOperator 0x7feb16825280 <col:29, col:30> 'unsigned short' lvalue prefix '*'
+        | |   `-ImplicitCastExpr 0x7feb16825268 <col:30> 'unsigned short *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7feb16825240 <col:30> 'unsigned short *' lvalue Var 0x7feb16825010 'i' 'unsigned short *'
+        | `-IfStmt 0x7feb16825588 <line:14:2, line:15:4>
+        |   |-<<<NULL>>>
+        |   |-<<<NULL>>>
+        |   |-BinaryOperator 0x7feb16825548 <line:14:5, col:31> 'int' '|'
+        |   | |-ImplicitCastExpr 0x7feb16825530 <col:5> 'int' <IntegralCast>
+        |   | | `-ImplicitCastExpr 0x7feb16825518 <col:5> 'char' <LValueToRValue>
+        |   | |   `-DeclRefExpr 0x7feb168252c0 <col:5> 'char' lvalue Var 0x7feb1701c170 'a' 'char'
+        |   | `-BinaryOperator 0x7feb168254f0 <col:9, col:31> 'int' '<='
+        |   |   |-ImplicitCastExpr 0x7feb168254d8 <col:9, col:26> 'int' <IntegralCast>
+        |   |   | `-ParenExpr 0x7feb16825498 <col:9, col:26> 'unsigned short'
+        |   |   |   `-CompoundAssignOperator 0x7feb16825460 <col:10, col:25> 'unsigned short' '/=' ComputeLHSTy='int' ComputeResultTy='int'
+        |   |   |     |-UnaryOperator 0x7feb16825328 <col:10, col:11> 'unsigned short' lvalue prefix '*'
+        |   |   |     | `-ImplicitCastExpr 0x7feb16825310 <col:11> 'unsigned short *' <LValueToRValue>
+        |   |   |     |   `-DeclRefExpr 0x7feb168252e8 <col:11> 'unsigned short *' lvalue Var 0x7feb16824f50 'p' 'unsigned short *'
+        |   |   |     `-ImplicitCastExpr 0x7feb16825448 <col:16, col:25> 'int' <IntegralCast>
+        |   |   |       `-ParenExpr 0x7feb16825428 <col:16, col:25> 'char'
+        |   |   |         `-CompoundAssignOperator 0x7feb168253f0 <col:17, col:24> 'char' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        |   |   |           |-DeclRefExpr 0x7feb16825348 <col:17> 'char' lvalue Var 0x7feb16824db0 'b' 'char'
+        |   |   |           `-UnaryOperator 0x7feb168253d0 <col:22, col:24> 'int' prefix '!'
+        |   |   |             `-UnaryOperator 0x7feb168253b0 <col:23, col:24> 'int' prefix '!'
+        |   |   |               `-ImplicitCastExpr 0x7feb16825398 <col:24> 'char' <LValueToRValue>
+        |   |   |                 `-DeclRefExpr 0x7feb16825370 <col:24> 'char' lvalue Var 0x7feb1701c170 'a' 'char'
+        |   |   `-IntegerLiteral 0x7feb168254b8 <col:31> 'int' 63739
+        |   |-ReturnStmt 0x7feb16825570 <line:15:4>
+        |   `-<<<NULL>>>
+        |-IfStmt 0x7feb168256e0 <line:17:7, line:18:6>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-UnaryOperator 0x7feb16825638 <line:17:10, col:11> 'int' prefix '!'
+        | | `-ImplicitCastExpr 0x7feb16825620 <col:11> 'unsigned short' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7feb168255f8 <col:11> 'unsigned short' lvalue Var 0x7feb16824e78 's' 'unsigned short'
+        | |-BinaryOperator 0x7feb168256b8 <line:18:2, col:6> 'char' '='
+        | | |-DeclRefExpr 0x7feb16825658 <col:2> 'char' lvalue Var 0x7feb1701c170 'a' 'char'
+        | | `-ImplicitCastExpr 0x7feb168256a0 <col:6> 'char' <IntegralCast>
+        | |   `-IntegerLiteral 0x7feb16825680 <col:6> 'int' 0
+        | `-<<<NULL>>>
+        `-ForStmt 0x7feb16825728 <line:20:7, col:14>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          `-NullStmt 0x7feb16825718 <col:14>

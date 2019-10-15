@@ -1,0 +1,82 @@
+../Data/C2AST/pr59940.c:26:6: error: too few arguments to function call, expected 1, have 0
+  f ();  
+  ~  ^
+../Data/C2AST/pr59940.c:5:1: note: 'f' declared here
+int f (unsigned int);
+^
+../Data/C2AST/pr59940.c:27:6: error: too many arguments to function call, expected 0, have 1
+  g (0xa);  
+  ~  ^~~
+../Data/C2AST/pr59940.c:8:1: note: 'g' declared here
+int
+^
+TranslationUnitDecl 0x7fad3281aee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fad3281b460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fad3281b180 '__int128'
+|-TypedefDecl 0x7fad3281b4d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fad3281b1a0 'unsigned __int128'
+|-TypedefDecl 0x7fad3281b7a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fad3281b5b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fad3281b528 '__NSConstantString_tag'
+|-TypedefDecl 0x7fad3281b840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fad3281b800 'char *'
+|   `-BuiltinType 0x7fad3281af80 'char'
+|-TypedefDecl 0x7fad3281bb08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fad3281bab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fad3281b920 'struct __va_list_tag'
+|     `-Record 0x7fad3281b898 '__va_list_tag'
+|-FunctionDecl 0x7fad33822068 <../Data/C2AST/pr59940.c:5:1, col:20> col:5 used f 'int (unsigned int)'
+| `-ParmVarDecl 0x7fad3281bb78 <col:8, col:17> col:20 'unsigned int'
+|-TypedefDecl 0x7fad33822178 <line:6:1, col:13> col:13 referenced sitype 'int'
+| |-BuiltinType 0x7fad3281afe0 'int'
+| `-ModeAttr 0x7fad338221e0 <col:35, col:42> SI
+|-FunctionDecl 0x7fad338222f8 <line:8:1, line:21:1> line:9:1 used g 'int (void)'
+| `-CompoundStmt 0x7fad33822aa8 <line:10:1, line:21:1>
+|   |-DeclStmt 0x7fad33822450 <line:11:3, col:17>
+|   | `-VarDecl 0x7fad338223d0 <col:3, col:15> col:10 used si 'sitype':'int' cinit
+|   |   `-IntegerLiteral 0x7fad33822430 <col:15> 'int' 12
+|   |-DeclStmt 0x7fad33822538 <line:12:3, col:23>
+|   | `-VarDecl 0x7fad33822480 <col:3, col:22> col:16 used ui 'unsigned int' cinit
+|   |   `-ImplicitCastExpr 0x7fad33822520 <col:21, col:22> 'unsigned int' <IntegralCast>
+|   |     `-UnaryOperator 0x7fad33822500 <col:21, col:22> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7fad338224e0 <col:22> 'int' 1
+|   |-DeclStmt 0x7fad338225c8 <line:13:3, col:19>
+|   | `-VarDecl 0x7fad33822568 <col:3, col:17> col:17 used uc 'unsigned char'
+|   |-BinaryOperator 0x7fad33822660 <line:14:3, col:8> 'unsigned int' '='
+|   | |-DeclRefExpr 0x7fad338225e0 <col:3> 'unsigned int' lvalue Var 0x7fad33822480 'ui' 'unsigned int'
+|   | `-ImplicitCastExpr 0x7fad33822648 <col:8> 'unsigned int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7fad33822630 <col:8> 'sitype':'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fad33822608 <col:8> 'sitype':'int' lvalue Var 0x7fad338223d0 'si' 'sitype':'int'
+|   |-BinaryOperator 0x7fad338226e8 <line:15:3, col:8> 'sitype':'int' '='
+|   | |-DeclRefExpr 0x7fad33822688 <col:3> 'sitype':'int' lvalue Var 0x7fad338223d0 'si' 'sitype':'int'
+|   | `-ImplicitCastExpr 0x7fad338226d0 <col:8> 'sitype':'int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fad338226b0 <col:8> 'unsigned int' 2147483648
+|   |-BinaryOperator 0x7fad33822770 <line:16:3, col:8> 'sitype':'int' '='
+|   | |-DeclRefExpr 0x7fad33822710 <col:3> 'sitype':'int' lvalue Var 0x7fad338223d0 'si' 'sitype':'int'
+|   | `-ImplicitCastExpr 0x7fad33822758 <col:8> 'sitype':'int' <FloatingToIntegral>
+|   |   `-FloatingLiteral 0x7fad33822738 <col:8> 'float' 3.200000e+00
+|   |-BinaryOperator 0x7fad338227f8 <line:17:3, col:8> 'unsigned char' '='
+|   | |-DeclRefExpr 0x7fad33822798 <col:3> 'unsigned char' lvalue Var 0x7fad33822568 'uc' 'unsigned char'
+|   | `-ImplicitCastExpr 0x7fad338227e0 <col:8> 'unsigned char' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fad338227c0 <col:8> 'int' 256
+|   |-BinaryOperator 0x7fad33822880 <line:18:3, col:8> 'sitype':'int' '='
+|   | |-DeclRefExpr 0x7fad33822820 <col:3> 'sitype':'int' lvalue Var 0x7fad338223d0 'si' 'sitype':'int'
+|   | `-ImplicitCastExpr 0x7fad33822868 <col:8> 'sitype':'int' <IntegralCast>
+|   |   `-IntegerLiteral 0x7fad33822848 <col:8> 'long' 34359738368
+|   `-ReturnStmt 0x7fad33822a90 <line:19:3, line:20:17>
+|     `-BinaryOperator 0x7fad33822a68 <line:19:10, line:20:17> 'int' '+'
+|       |-CallExp2 errors generated.
+r 0x7fad33822940 <line:19:10, col:15> 'int'
+|       | |-ImplicitCastExpr 0x7fad33822928 <col:10> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7fad338228a8 <col:10> 'int (unsigned int)' Function 0x7fad33822068 'f' 'int (unsigned int)'
+|       | `-ImplicitCastExpr 0x7fad33822988 <col:13> 'unsigned int' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7fad33822970 <col:13> 'sitype':'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fad338228d0 <col:13> 'sitype':'int' lvalue Var 0x7fad338223d0 'si' 'sitype':'int'
+|       `-CallExpr 0x7fad33822a08 <line:20:12, col:17> 'int'
+|         |-ImplicitCastExpr 0x7fad338229f0 <col:12> 'int (*)(unsigned int)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fad338229a0 <col:12> 'int (unsigned int)' Function 0x7fad33822068 'f' 'int (unsigned int)'
+|         `-ImplicitCastExpr 0x7fad33822a50 <col:15> 'unsigned int' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fad33822a38 <col:15> 'sitype':'int' <LValueToRValue>
+|             `-DeclRefExpr 0x7fad338229c8 <col:15> 'sitype':'int' lvalue Var 0x7fad338223d0 'si' 'sitype':'int'
+`-FunctionDecl 0x7fad33822b98 <line:23:1, line:28:1> line:24:1 y 'int (void)'
+  `-CompoundStmt 0x7fad33822d70 <line:25:1, line:28:1>

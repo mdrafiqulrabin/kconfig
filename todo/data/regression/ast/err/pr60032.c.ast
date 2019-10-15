@@ -1,0 +1,45 @@
+../Data/C2AST/pr60032.c:7:34: error: unknown machine mode 'SD'
+  register float __attribute__ ((mode(SD))) r31 __asm__ ("r31");
+                                 ^
+../Data/C2AST/pr60032.c:7:58: error: unknown register name 'r31' in asm
+  register float __attribute__ ((mode(SD))) r31 __asm__ ("r31");
+                                                         ^
+../Data/C2AST/pr60032.c:8:34: error: unknown machine mode 'SD'
+  register float __attribute__ ((mode(SD))) fr1 __asm__ ("fr1");
+                                 ^
+../Data/C2AST/pr60032.c:8:58: error: unknown register name 'fr1' in asm
+  register float __attribute__ ((mode(SD))) fr1 __asm__ ("fr1");
+                                                         ^
+4 errors generated.
+TranslationUnitDecl 0x7f9a920128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9a92012e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f9a92012b80 '__int128'
+|-TypedefDecl 0x7f9a92012ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f9a92012ba0 'unsigned __int128'
+|-TypedefDecl 0x7f9a920131a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f9a92012fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f9a92012f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f9a92013240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f9a92013200 'char *'
+|   `-BuiltinType 0x7f9a92012980 'char'
+|-TypedefDecl 0x7f9a92013508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f9a920134b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f9a92013320 'struct __va_list_tag'
+|     `-Record 0x7f9a92013298 '__va_list_tag'
+`-FunctionDecl 0x7f9a92054420 <../Data/C2AST/pr60032.c:5:1, line:13:1> line:5:6 foo 'void (void)'
+  `-CompoundStmt 0x7f9a92054a80 <line:6:1, line:13:1>
+    |-DeclStmt 0x7f9a92054648 <line:7:3, col:64>
+    | `-VarDecl 0x7f9a92054590 <col:3, col:45> col:45 used r31 'float' register
+    |   `-AsmLabelAttr 0x7f9a920545f0 <col:58> "r31"
+    |-DeclStmt 0x7f9a92054770 <line:8:3, col:64>
+    | `-VarDecl 0x7f9a920546b8 <col:3, col:45> col:45 used fr1 'float' register
+    |   `-AsmLabelAttr 0x7f9a92054718 <col:58> "fr1"
+    |-GCCAsmStmt 0x7f9a92054890 <line:10:3, col:28>
+    | `-DeclRefExpr 0x7f9a92054868 <col:24> 'float' lvalue Var 0x7f9a920546b8 'fr1' 'float'
+    |-BinaryOperator 0x7f9a92054958 <line:11:3, col:9> 'float' '='
+    | |-DeclRefExpr 0x7f9a920548f0 <col:3> 'float' lvalue Var 0x7f9a92054590 'r31' 'float'
+    | `-ImplicitCastExpr 0x7f9a92054940 <col:9> 'float' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f9a92054918 <col:9> 'float' lvalue Var 0x7f9a920546b8 'fr1' 'float'
+    `-GCCAsmStmt 0x7f9a92054a20 <line:12:3, col:29>
+      `-ImplicitCastExpr 0x7f9a92054a08 <col:25> 'float' <LValueToRValue>
+        `-DeclRefExpr 0x7f9a920549e0 <col:25> 'float' lvalue Var 0x7f9a92054590 'r31' 'float'

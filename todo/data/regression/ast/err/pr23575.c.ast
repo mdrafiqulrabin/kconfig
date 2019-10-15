@@ -1,0 +1,71 @@
+../Data/C2AST/pr23575.c:12:20: error: use of unknown builtin '__builtin_ia32_movsd' [-Wimplicit-function-declaration]
+  return (__m128d) __builtin_ia32_movsd ((__v2df)__A, (__v2df)__B);
+                   ^
+../Data/C2AST/pr23575.c:12:10: error: invalid conversion between vector type '__m128d' (aka '__v2df') and integer type 'int' of different size
+  return (__m128d) __builtin_ia32_movsd ((__v2df)__A, (__v2df)__B);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TranslationUnitDecl 0x7faac70216e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7faac7021c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7faac7021980 '__int128'
+|-TypedefDecl 0x7faac7021cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7faac70219a0 'unsigned __int128'
+|-TypedefDecl 0x7faac7021fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7faac7021db0 'struct __NSConstantString_tag'
+|   `-Record 0x7faac7021d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7faac7022040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7faac7022000 'char *'
+|   `-BuiltinType 0x7faac7021780 'char'
+|-TypedefDecl 0x7faac7022308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7faac70222b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7faac7022120 'struct __va_list_tag'
+|     `-Record 0x7faac7022098 '__va_list_tag'
+|-TypedefDecl 0x7faac7064200 <../Data/C2AST/pr23575.c:6:1, col:16> col:16 referenced __v2df '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-VectorType 0x7faac7022380 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|   `-BuiltinType 0x7faac7021900 'double'
+|-TypedefDecl 0x7faac7064290 <line:7:1, col:16> col:16 referenced __m128d '__v2df':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-TypedefType 0x7faac7064260 '__v2df' sugar
+|   |-Typedef 0x7faac7064200 '__v2df'
+|   `-VectorType 0x7faac7022380 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+|     `-BuiltinType 0x7faac7021900 'double'
+|-FunctionDecl 0x7faac7064430 <line:8:1, line:10:1> line:8:60 used _mm_set1_pd '__m128d (double)' static inline
+| |-ParmVarDecl 0x7faac7064328 <col:73, col:80> col:80 used __F 'double'
+| |-CompoundStmt 0x7faac7064708 <col:85, line:10:1>
+| | `-ReturnStmt 0x7faac70646f0 <line:9:3, col:42>
+| |   `-ImplicitCastExpr 0x7faac70646d8 <col:10, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+| |     `-UnaryOperator 0x7faac70646b8 <col:10, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue prefix '__extension__'
+| |       `-CompoundLiteralExpr 0x7faac7064690 <col:24, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+| |         `-InitListExpr 0x7faac7064610 <col:33, col:42> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |           |-ImplicitCastExpr 0x7faac7064660 <col:34> 'double' <LValueToRValue>
+| |           | `-DeclRefExpr 0x7faac7064570 <col:34> 'double' lvalue ParmVar 0x7faac7064328 '__F' 'double'
+| |           `-ImplicitCastExpr 0x7faac7064678 <col:39> 'double' <LValueToRValue>
+| |             `-DeclRefExpr 0x7faac7064598 <col:39> 'double' lvalue ParmVar 0x7faac7064328 '__F' 'double'
+| `-AlwaysInlineAttr 0x7faac70644d8 <line:8:40> always_inline
+|-FunctionDecl 0x7faac70648b0 <line:11:1, line:13:1> line:11:60 used _mm_move_sd '__m128d (__m128d, __m128d)' static inline
+| |-ParmVarDecl 0x7faac7064730 <col:73, col:81> col:81 used __A '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7faac70647a0 <col:86, col:94> col:94 used __B '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-CompoundStmt 0x7faac7065020 <col:99, line:13:1>
+| `-AlwaysInlineAttr 0x7faac7064960 <line:11:40> always_inline
+|-FunctionDecl 0x7faac7065140 <line:14:1, col:17> col:6 g 'void (__m128d)'
+| `-ParmVarDecl 0x7faac7065040 <col:8, col:16> col:16 b '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+`-FunctionDecl 0x7faac7800500 <line:15:1, line:20:1> line:15:9 cross '__m128d (__m128d)'
+  |-ParmVarDecl 0x7faac7800400 <col:15, col:23> col:23 used tmp9 '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+  `-CompoundStmt 0x7faac7800948 <line:16:1, line:20:1>
+    |-DeclStmt 0x7faac7800700 <line:17:3, col:32>
+    | `-VarDecl 0x7faac78005b2 errors generated.
+8 <col:3, col:31> col:11 used t1 '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-CallExpr 0x7faac78006d0 <col:16, col:31> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7faac78006b8 <col:16> '__m128d (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7faac7800618 <col:16> '__m128d (double)' Function 0x7faac7064430 '_mm_set1_pd' '__m128d (double)'
+    |     `-FloatingLiteral 0x7faac7800640 <col:28> 'double' 1.000000e+00
+    |-DeclStmt 0x7faac78008d8 <line:18:3, col:40>
+    | `-VarDecl 0x7faac7800728 <col:3, col:39> col:11 used tmp10 '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' cinit
+    |   `-CallExpr 0x7faac7800870 <col:19, col:39> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     |-ImplicitCastExpr 0x7faac7800858 <col:19> '__m128d (*)(__m128d, __m128d)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7faac7800788 <col:19> '__m128d (__m128d, __m128d)' Function 0x7faac70648b0 '_mm_move_sd' '__m128d (__m128d, __m128d)'
+    |     |-ImplicitCastExpr 0x7faac78008a8 <col:31> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7faac78007b0 <col:31> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7faac78005b8 't1' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    |     `-ImplicitCastExpr 0x7faac78008c0 <col:35> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7faac78007d8 <col:35> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7faac7800400 'tmp9' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+    `-ReturnStmt 0x7faac7800930 <line:19:3, col:10>
+      `-ImplicitCastExpr 0x7faac7800918 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-DeclRefExpr 0x7faac78008f0 <col:10> '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue Var 0x7faac7800728 'tmp10' '__m128d':'__attribute__((__vector_size__(2 * sizeof(double)))) double'

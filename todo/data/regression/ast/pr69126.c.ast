@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fc35e80f0e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc35e030e00 <../Data/C2AST/pr69126.c:12:1, line:17:1> line:12:5 test_1 'int ()'
+| `-CompoundStmt 0x7fc35e030fa8 <line:13:1, line:17:1>
+|   |-DeclStmt 0x7fc35e030f58 <line:15:5, col:10>
+|   | `-VarDecl 0x7fc35e030ef8 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fc35e030f90 <line:16:5, col:12>
+|     `-IntegerLiteral 0x7fc35e030f70 <col:12> 'int' 0
+|-FunctionDecl 0x7fc35e030ff0 <line:24:1, line:29:1> line:24:5 test_2 'int ()'
+| `-CompoundStmt 0x7fc35e031158 <line:25:1, line:29:1>
+|   |-DeclStmt 0x7fc35e031108 <line:27:5, col:10>
+|   | `-VarDecl 0x7fc35e0310a8 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fc35e031140 <line:28:5, col:12>
+|     `-IntegerLiteral 0x7fc35e031120 <col:12> 'int' 0
+|-FunctionDecl 0x7fc35e0311a0 <line:39:1, line:44:1> line:39:5 test_3 'int ()'
+| `-CompoundStmt 0x7fc35e031308 <line:40:1, line:44:1>
+|   |-DeclStmt 0x7fc35e0312b8 <line:36:5, col:10>
+|   | `-VarDecl 0x7fc35e031258 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fc35e0312f0 <line:43:5, col:12>
+|     `-IntegerLiteral 0x7fc35e0312d0 <col:12> 'int' 0
+|-FunctionDecl 0x7fc35e031350 <line:57:1, line:62:1> line:57:5 test_4 'int ()'
+| `-CompoundStmt 0x7fc35e0314c8 <line:58:1, line:62:1>
+|   |-NullStmt 0x7fc35e0313f0 <line:59:13>
+|   |-DeclStmt 0x7fc35e031478 <line:55:5, col:10>
+|   | `-VarDecl 0x7fc35e031418 <col:5, col:9> col:9 x 'int'
+|   `-ReturnStmt 0x7fc35e0314b0 <line:61:5, col:12>
+|     `-IntegerLiteral 0x7fc35e031490 <col:12> 'int' 0
+`-FunctionDecl 0x7fc35e031518 <line:73:1, line:77:1> line:73:5 test_5 'int ()'
+  `-CompoundStmt 0x7fc35e031690 <line:74:1, line:77:1>
+    |-DeclStmt 0x7fc35e031630 <line:71:5, col:10>
+    | `-VarDecl 0x7fc35e0315d0 <col:5, col:9> col:9 x 'int'
+    |-NullStmt 0x7fc35e031648 <line:75:12>
+    `-ReturnStmt 0x7fc35e031678 <line:76:5, col:12>
+      `-IntegerLiteral 0x7fc35e031658 <col:12> 'int' 0

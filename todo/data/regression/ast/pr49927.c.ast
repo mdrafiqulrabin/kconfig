@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fedce02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fedce814268 <../Data/C2AST/pr49927.c:4:1, col:12> col:6 used a 'char [1][1]'
+|-VarDecl 0x7fedce814320 <line:5:1, col:11> col:11 used b 'long long'
+`-FunctionDecl 0x7fedce814440 <line:7:1, line:11:1> line:8:1 foo 'void (void)'
+  `-CompoundStmt 0x7fedce814650 <line:9:1, line:11:1>
+    `-UnaryOperator 0x7fedce814630 <line:10:3, col:11> 'char' prefix '--'
+      `-ArraySubscriptExpr 0x7fedce814608 <col:5, col:11> 'char' lvalue
+        |-ImplicitCastExpr 0x7fedce8145d8 <col:5, col:8> 'char *' <ArrayToPointerDecay>
+        | `-ArraySubscriptExpr 0x7fedce814588 <col:5, col:8> 'char [1]' lvalue
+        |   |-ImplicitCastExpr 0x7fedce814558 <col:5> 'char (*)[1]' <ArrayToPointerDecay>
+        |   | `-DeclRefExpr 0x7fedce8144e0 <col:5> 'char [1][1]' lvalue Var 0x7fedce814268 'a' 'char [1][1]'
+        |   `-ImplicitCastExpr 0x7fedce814570 <col:7> 'long long' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fedce814508 <col:7> 'long long' lvalue Var 0x7fedce814320 'b' 'long long'
+        `-ImplicitCastExpr 0x7fedce8145f0 <col:10> 'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fedce8145b0 <col:10> 'long long' lvalue Var 0x7fedce814320 'b' 'long long'

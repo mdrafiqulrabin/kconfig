@@ -1,0 +1,84 @@
+TranslationUnitDecl 0x7f94cc02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f94cc06d850 <../Data/C2AST/pr60003.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f94cc06d8f0 prev 0x7f94cc06d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7f94cc06da10 <line:6:1, col:29> col:20 used jmp_buf 'unsigned long long [5]'
+|-FunctionDecl 0x7f94cc06db40 <line:8:1, line:12:1> line:9:1 used baz 'void (void)'
+| |-CompoundStmt 0x7f94cc06df60 <line:10:1, line:12:1>
+| | `-CallExpr 0x7f94cc06df10 <line:11:3, col:33> 'void'
+| |   |-ImplicitCastExpr 0x7f94cc06def8 <col:3> 'void (*)(void **, int) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+| |   | `-DeclRefExpr 0x7f94cc06de10 <col:3> '<builtin fn type>' Function 0x7f94cc06dca0 '__builtin_longjmp' 'void (void **, int) __attribute__((noreturn))'
+| |   |-ImplicitCastExpr 0x7f94cc06df48 <col:22, col:23> 'void **' <BitCast>
+| |   | `-UnaryOperator 0x7f94cc06de88 <col:22, col:23> 'unsigned long long (*)[5]' prefix '&'
+| |   |   `-DeclRefExpr 0x7f94cc06de38 <col:23> 'unsigned long long [5]' lvalue Var 0x7f94cc06da10 'jmp_buf' 'unsigned long long [5]'
+| |   `-IntegerLiteral 0x7f94cc06dea8 <col:32> 'int' 1
+| `-NoInlineAttr 0x7f94cc06dbe0 <line:8:16>
+|-FunctionDecl 0x7f94cc06dca0 <line:11:3> col:3 implicit used __builtin_longjmp 'void (void **, int) __attribute__((noreturn))' extern
+| |-ParmVarDecl 0x7f94cc06dd40 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ParmVarDecl 0x7f94cc06dda0 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f94cc06e008 <line:14:1, line:18:1> line:15:1 used bar 'void (void)'
+| `-CompoundStmt 0x7f94cc06e138 <line:16:1, line:18:1>
+|   `-CallExpr 0x7f94cc06e110 <line:17:3, col:8> 'void'
+|     `-ImplicitCastExpr 0x7f94cc06e0f8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7f94cc06e0a8 <col:3> 'void (void)' Function 0x7f94cc06db40 'baz' 'void (void)'
+|-FunctionDecl 0x7f94cc06e238 <line:20:1, line:40:1> line:21:1 used foo 'int (int)'
+| |-ParmVarDecl 0x7f94cc06e168 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7f94cc0853a0 <line:22:1, line:40:1>
+| | |-DeclStmt 0x7f94cc06e3c0 <line:23:3, col:12>
+| | | `-VarDecl 0x7f94cc06e340 <col:3, col:11> col:7 used a 'int' cinit
+| | |   `-IntegerLiteral 0x7f94cc06e3a0 <col:11> 'int' 0
+| | `-IfStmt 0x7f94cc085368 <line:25:3, line:39:5>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7f94cc06e688 <line:25:7, col:38> 'int' '=='
+| |   | |-CallExpr 0x7f94cc06e620 <col:7, col:33> 'int'
+| |   | | |-ImplicitCastExpr 0x7f94cc06e608 <col:7> 'int (*)(void **)' <BuiltinFnToFnPtr>
+| |   | | | `-DeclRefExpr 0x7f94cc06e568 <col:7> '<builtin fn type>' Function 0x7f94cc06e418 '__builtin_setjmp' 'int (void **)'
+| |   | | `-ImplicitCastExpr 0x7f94cc06e650 <col:25, col:26> 'void **' <BitCast>
+| |   | |   `-UnaryOperator 0x7f94cc06e5b8 <col:25, col:26> 'unsigned long long (*)[5]' prefix '&'
+| |   | |     `-DeclRefExpr 0x7f94cc06e590 <col:26> 'unsigned long long [5]' lvalue Var 0x7f94cc06da10 'jmp_buf' 'unsigned long long [5]'
+| |   | `-IntegerLiteral 0x7f94cc06e668 <col:38> 'int' 0
+| |   |-CompoundStmt 0x7f94cc06e7e8 <line:26:5, line:32:5>
+| |   | `-WhileStmt 0x7f94cc06e7c8 <line:27:7, line:31:2>
+| |   |   |-<<<NULL>>>
+| |   |   |-IntegerLiteral 0x7f94cc06e6b0 <line:27:14> 'int' 1
+| |   |   `-CompoundStmt 0x7f94cc06e7a8 <line:28:2, line:31:2>
+| |   |     |-BinaryOperator 0x7f94cc06e718 <line:29:4, col:8> 'int' '='
+| |   |     | |-DeclRefExpr 0x7f94cc06e6d0 <col:4> 'int' lvalue Var 0x7f94cc06e340 'a' 'int'
+| |   |     | `-IntegerLiteral 0x7f94cc06e6f8 <col:8> 'int' 1
+| |   |     `-CallExpr 0x7f94cc06e780 <line:30:4, col:9> 'void'
+| |   |       `-ImplicitCastExpr 0x7f94cc06e768 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+| |   |         `-DeclRefExpr 0x7f94cc06e740 <col:4> 'void (void)' Function 0x7f94cc06e008 'bar' 'void (void)'
+| |   `-CompoundStmt 0x7f94cc085350 <line:34:5, line:39:5>
+| |     `-IfStmt 0x7f94cc085318 <line:35:7, line:38:9>
+| |       |-<<<NULL>>>
+| |       |-<<<NULL>>>
+| |       |-BinaryOperator 0x7f94cc085260 <line:35:11, col:16> 'int' '=='
+| |       | |-ImplicitCastExpr 0x7f94cc085248 <col:11> 'int' <LValueToRValue>
+| |       | | `-DeclRefExpr 0x7f94cc085200 <col:11> 'int' lvalue Var 0x7f94cc06e340 'a' 'int'
+| |       | `-IntegerLiteral 0x7f94cc085228 <col:16> 'int' 0
+| |       |-ReturnStmt 0x7f94cc0852a8 <line:36:2, col:9>
+| |       | `-IntegerLiteral 0x7f94cc085288 <col:9> 'int' 0
+| |       `-ReturnStmt 0x7f94cc085300 <line:38:2, col:9>
+| |         `-ImplicitCastExpr 0x7f94cc0852e8 <col:9> 'int' <LValueToRValue>
+| |           `-DeclRefExpr 0x7f94cc0852c0 <col:9> 'int' lvalue ParmVar 0x7f94cc06e168 'x' 'int'
+| `-NoInlineAttr 0x7f94cc06e2e0 <line:20:16>
+|-FunctionDecl 0x7f94cc06e418 <line:25:7> col:7 implicit used __builtin_setjmp 'int (void **)' extern
+| |-ParmVarDecl 0x7f94cc06e4b8 <<invalid sloc>> <invalid sloc> 'void **'
+| `-ReturnsTwiceAttr 0x7f94cc06e520 <col:7> Implicit
+`-FunctionDecl 0x7f94cc085410 <line:42:1, line:49:1> line:43:1 main 'int ()'
+  `-CompoundStmt 0x7f94cc0856b8 <line:44:1, line:49:1>
+    |-IfStmt 0x7f94cc085648 <line:45:3, line:46:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f94cc085590 <line:45:7, col:18> 'int' '=='
+    | | |-CallExpr 0x7f94cc085540 <col:7, col:13> 'int'
+    | | | |-ImplicitCastExpr 0x7f94cc085528 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f94cc0854b0 <col:7> 'int (int)' Function 0x7f94cc06e238 'foo' 'int (int)'
+    | | | `-IntegerLiteral 0x7f94cc0854d8 <col:12> 'int' 1
+    | | `-IntegerLiteral 0x7f94cc085570 <col:18> 'int' 0
+    | |-CallExpr 0x7f94cc085620 <line:46:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f94cc085608 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f94cc0855b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f94cc06d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f94cc0856a0 <line:48:3, col:10>
+      `-IntegerLiteral 0x7f94cc085680 <col:10> 'int' 0

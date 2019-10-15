@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7febe40174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7febe4018160 <../Data/C2AST/pr82244.c:3:9, line:5:1> line:3:16 struct a definition
+| `-FieldDecl 0x7febe4060ad0 <line:4:3, col:13> col:13 referenced b 'struct a *'
+|-TypedefDecl 0x7febe4060b38 <line:3:1, line:5:3> col:3 referenced a 'struct a':'struct a'
+| `-ElaboratedType 0x7febe4060a20 'struct a' sugar
+|   `-RecordType 0x7febe4060a00 'struct a'
+|     `-Record 0x7febe4018160 'a'
+|-FunctionDecl 0x7febe4060c78 <line:7:1, col:18> col:12 used d 'int (void)' extern
+|-FunctionDecl 0x7febe4060df0 <line:8:1, col:18> col:12 used g 'int (void)' extern
+|-FunctionDecl 0x7febe4060f28 <line:9:1, col:18> col:12 used h 'int (void)' extern
+|-FunctionDecl 0x7febe40610a8 <line:10:1, col:26> col:12 used _setjmp 'int (void *)' extern
+| |-ParmVarDecl 0x7febe4060fe0 <col:20, col:25> col:26 'void *'
+| `-ReturnsTwiceAttr 0x7febe4061150 <col:12> Implicit
+`-FunctionDecl 0x7febe4061230 <line:12:1, line:31:1> line:12:5 referenced c 'int (void)'
+  `-CompoundStmt 0x7febe4067e68 <line:13:1, line:31:1>
+    |-ConditionalOperator 0x7febe40613a8 <line:14:3, col:13> 'int'
+    | |-IntegerLiteral 0x7febe40612d0 <col:3> 'int' 1
+    | |-CallExpr 0x7febe4061360 <col:7, col:9> 'int'
+    | | `-ImplicitCastExpr 0x7febe4061348 <col:7> 'int (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7febe40612f0 <col:7> 'int (void)' Function 0x7febe4060c78 'd' 'int (void)'
+    | `-IntegerLiteral 0x7febe4061388 <col:13> 'int' 0
+    |-DeclStmt 0x7febe4061498 <line:16:3, col:7>
+    | `-VarDecl 0x7febe4061438 <col:3, col:6> col:6 used e 'a *'
+    `-WhileStmt 0x7febe4067e48 <line:17:3, line:30:3>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7febe40614d8 <line:17:10> 'a *' <LValueToRValue>
+      | `-DeclRefExpr 0x7febe40614b0 <col:10> 'a *' lvalue Var 0x7febe4061438 'e' 'a *'
+      `-CompoundStmt 0x7febe4067e28 <col:13, line:30:3>
+        |-BinaryOperator 0x7febe4061710 <line:18:7, col:35> 'a *' '='
+        | |-DeclRefExpr 0x7febe40614f0 <col:7> 'a *' lvalue Var 0x7febe4061438 'e' 'a *'
+        | `-ConditionalOperator 0x7febe40616e0 <col:11, col:35> 'struct a *'
+        |   |-ParenExpr 0x7febe40615f8 <col:11, col:24> 'int'
+        |   | `-BinaryOperator 0x7febe40615d0 <col:12, col:23> 'int' '=='
+        |   |   |-ImplicitCastExpr 0x7febe40615b8 <col:12> 'a *' <LValueToRValue>
+        |   |   | `-DeclRefExpr 0x7febe4061518 <col:12> 'a *' lvalue Var 0x7febe4061438 'e' 'a *'
+        |   |   `-CStyleCastExpr 0x7febe4061590 <col:17, col:23> 'a *' <BitCast>
+        |   |     `-ImplicitCastExpr 0x7febe4061578 <col:23> 'int (*)(void)' <FunctionToPointerDecay>
+        |   |       `-DeclRefExpr 0x7febe4061540 <col:23> 'int (void)' Function 0x7febe4061230 'c' 'int (void)'
+        |   |-ImplicitCastExpr 0x7febe40616c8 <col:28> 'struct a *' <NullToPointer>
+        |   | `-IntegerLiteral 0x7febe4061618 <col:28> 'int' 0
+        |   `-ImplicitCastExpr 0x7febe40616b0 <col:32, col:35> 'struct a *' <LValueToRValue>
+        |     `-MemberExpr 0x7febe4061678 <col:32, col:35> 'struct a *' lvalue ->b 0x7febe4060ad0
+        |       `-ImplicitCastExpr 0x7febe4061660 <col:32> 'a *' <LValueToRValue>
+        |         `-DeclRefExpr 0x7febe4061638 <col:32> 'a *' lvalue Var 0x7febe4061438 'e' 'a *'
+        `-WhileStmt 0x7febe4067e08 <line:19:7, line:29:7>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7febe4061760 <line:19:14> 'a *' <LValueToRValue>
+          | `-DeclRefExpr 0x7febe4061738 <col:14> 'a *' lvalue Var 0x7febe4061438 'e' 'a *'
+          `-CompoundStmt 0x7febe4067de0 <col:17, line:29:7>
+            |-DeclStmt 0x7febe4061810 <line:20:4, col:13>
+            | `-VarDecl 0x7febe4061790 <col:4, col:12> col:8 used f 'int' cinit
+            |   `-IntegerLiteral 0x7febe40617f0 <col:12> 'int' 0
+            |-CallExpr 0x7febe4061868 <line:21:4, col:6> 'int'
+            | `-ImplicitCastExpr 0x7febe4061850 <col:4> 'int (*)(void)' <FunctionToPointerDecay>
+            |   `-DeclRefExpr 0x7febe4061828 <col:4> 'int (void)' Function 0x7febe4060df0 'g' 'int (void)'
+            `-IfStmt 0x7febe4067da8 <line:22:4, line:28:4>
+              |-<<<NULL>>>
+              |-<<<NULL>>>
+              |-CallExpr 0x7febe4061920 <line:22:8, col:17> 'int'
+              | |-ImplicitCastExpr 0x7febe4061908 <col:8> 'int (*)(void *)' <FunctionToPointerDecay>
+              | | `-DeclRefExpr 0x7febe4061890 <col:8> 'int (void *)' Function 0x7febe40610a8 '_setjmp' 'int (void *)'
+              | `-ImplicitCastExpr 0x7febe4061950 <col:16> 'void *' <NullToPointer>
+              |   `-IntegerLiteral 0x7febe40618b8 <col:16> 'int' 0
+              |-CompoundStmt 0x7febe4067d90 <col:20, line:28:4>
+              | `-IfStmt 0x7febe4067d58 <line:23:8, line:27:8>
+              |   |-<<<NULL>>>
+              |   |-<<<NULL>>>
+              |   |-BinaryOperator 0x7febe40619c8 <line:23:12, col:16> 'int' '&'
+              |   | |-ImplicitCastExpr 0x7febe40619b0 <col:12> 'int' <LValueToRValue>
+              |   | | `-DeclRefExpr 0x7febe4061968 <col:12> 'int' lvalue Var 0x7febe4061790 'f' 'int'
+              |   | `-IntegerLiteral 0x7febe4061990 <col:16> 'int' 6
+              |   |-CompoundStmt 0x7febe4067c00 <col:19, line:25:8>
+              |   | `-NullStmt 0x7febe40619f0 <line:24:5>
+              |   `-IfStmt 0x7febe4067d20 <line:25:15, line:27:8>
+              |     |-<<<NULL>>>
+              |     |-<<<NULL>>>
+              |     |-BinaryOperator 0x7febe4067c78 <line:25:19, col:23> 'int' '&'
+              |     | |-ImplicitCastExpr 0x7febe4067c60 <col:19> 'int' <LValueToRValue>
+              |     | | `-DeclRefExpr 0x7febe4067c18 <col:19> 'int' lvalue Var 0x7febe4061790 'f' 'int'
+              |     | `-IntegerLiteral 0x7febe4067c40 <col:23> 'int' 2
+              |     |-CompoundStmt 0x7febe4067d08 <col:26, line:27:8>
+              |     | `-CallExpr 0x7febe4067ce0 <line:26:5, col:7> 'int'
+              |     |   `-ImplicitCastExpr 0x7febe4067cc8 <col:5> 'int (*)(void)' <FunctionToPointerDecay>
+              |     |     `-DeclRefExpr 0x7febe4067ca0 <col:5> 'int (void)' Function 0x7febe4060f28 'h' 'int (void)'
+              |     `-<<<NULL>>>
+              `-<<<NULL>>>

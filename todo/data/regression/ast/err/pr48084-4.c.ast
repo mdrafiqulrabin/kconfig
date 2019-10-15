@@ -1,0 +1,31 @@
+../Data/C2AST/pr48084-4.c:5:1: error: definition of builtin function '_mm_clflush'
+_mm_clflush (void const *__A)
+^
+1 error generated.
+TranslationUnitDecl 0x7ffcde01a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffcde01ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffcde01ab80 '__int128'
+|-TypedefDecl 0x7ffcde01aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffcde01aba0 'unsigned __int128'
+|-TypedefDecl 0x7ffcde01b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffcde01afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffcde01af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffcde01b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffcde01b200 'char *'
+|   `-BuiltinType 0x7ffcde01a980 'char'
+|-TypedefDecl 0x7ffcde01b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffcde01b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffcde01b320 'struct __va_list_tag'
+|     `-Record 0x7ffcde01b298 '__va_list_tag'
+|-FunctionDecl 0x7ffcdd830c60 <../Data/C2AST/pr48084-4.c:5:1> col:1 implicit _mm_clflush 'void (const void *)' extern
+| `-ParmVarDecl 0x7ffcdd830d00 <<invalid sloc>> <invalid sloc> 'const void *'
+|-FunctionDecl 0x7ffcdd830d68 prev 0x7ffcdd830c60 <line:4:1, line:8:1> line:5:1 invalid _mm_clflush 'void (const void *)'
+| |-ParmVarDecl 0x7ffcde01b5a0 <col:14, col:26> col:26 used __A 'const void *'
+| `-CompoundStmt 0x7ffcdd831008 <line:6:1, line:8:1>
+|   `-CallExpr 0x7ffcdd830fc0 <line:7:3, col:30> 'void'
+|     |-ImplicitCastExpr 0x7ffcdd830fa8 <col:3> 'void (*)(const void *)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7ffcdd830f18 <col:3> '<builtin fn type>' Function 0x7ffcdd830e10 '__builtin_ia32_clflush' 'void (const void *)'
+|     `-ImplicitCastExpr 0x7ffcdd830ff0 <col:27> 'const void *' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffcdd830f40 <col:27> 'const void *' lvalue ParmVar 0x7ffcde01b5a0 '__A' 'const void *'
+`-FunctionDecl 0x7ffcdd830e10 <col:3> col:3 implicit used __builtin_ia32_clflush 'void (const void *)' extern
+  `-ParmVarDecl 0x7ffcdd830eb0 <<invalid sloc>> <invalid sloc> 'const void *'

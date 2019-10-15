@@ -1,0 +1,51 @@
+../Data/C2AST/pr68102_1.c:4:9: error: unknown type name '__Float64x1_t'
+typedef __Float64x1_t float64x1_t;
+        ^
+1 error generated.
+TranslationUnitDecl 0x7f94c582bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f94c582c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f94c582bf80 '__int128'
+|-TypedefDecl 0x7f94c582c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f94c582bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f94c582c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f94c582c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f94c582c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f94c582c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f94c582c600 'char *'
+|   `-BuiltinType 0x7f94c582bd80 'char'
+|-TypedefDecl 0x7f94c582c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f94c582c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f94c582c720 'struct __va_list_tag'
+|     `-Record 0x7f94c582c698 '__va_list_tag'
+|-TypedefDecl 0x7f94c582c990 <../Data/C2AST/pr68102_1.c:4:1, col:23> col:23 referenced invalid float64x1_t 'int'
+| `-BuiltinType 0x7f94c582bde0 'int'
+|-TypedefDecl 0x7f94c6000400 <line:6:1, col:19> col:19 referenced int64_t 'long long'
+| `-BuiltinType 0x7f94c582be20 'long long'
+|-FunctionDecl 0x7f94c60005b0 <line:8:1, col:34> col:16 used bar 'int64_t (float64x1_t)' extern
+| `-ParmVarDecl 0x7f94c60004b0 <col:21, col:33> col:33 f 'float64x1_t':'int'
+`-FunctionDecl 0x7f94c6000768 <line:10:1, line:18:1> line:11:1 foo 'int (void)'
+  `-CompoundStmt 0x7f94c6000cc0 <line:12:1, line:18:1>
+    |-DeclStmt 0x7f94c6000940 <line:13:3, col:54>
+    | `-VarDecl 0x7f94c6000818 <col:3, col:53> col:15 used f 'float64x1_t':'int' cinit
+    |   `-InitListExpr 0x7f94c60008e0 <col:19, col:53> 'float64x1_t':'int'
+    |     `-ImplicitCastExpr 0x7f94c6000920 <col:21> 'float64x1_t':'int' <FloatingToIntegral>
+    |       `-FloatingLiteral 0x7f94c6000878 <col:21> 'double' 3.141593e+00
+    |-DeclStmt 0x7f94c6000a00 <line:14:3, col:33>
+    | `-VarDecl 0x7f94c6000968 <col:3, col:15> col:11 used c 'int64_t':'long long' cinit
+    |   `-ImplicitCastExpr 0x7f94c60009e8 <col:15> 'int64_t':'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f94c60009c8 <col:15> 'long' 4614256656552045848
+    |-DeclStmt 0x7f94c6000a88 <line:15:3, col:12>
+    | `-VarDecl 0x7f94c6000a28 <col:3, col:11> col:11 used r 'int64_t':'long long'
+    |-BinaryOperator 0x7f94c6000bd8 <line:16:3, col:13> 'int64_t':'long long' '='
+    | |-DeclRefExpr 0x7f94c6000aa0 <col:3> 'int64_t':'long long' lvalue Var 0x7f94c6000a28 'r' 'int64_t':'long long'
+    | `-CallExpr 0x7f94c6000b90 <col:7, col:13> 'int64_t':'long long'
+    |   |-ImplicitCastExpr 0x7f94c6000b78 <col:7> 'int64_t (*)(float64x1_t)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f94c6000ac8 <col:7> 'int64_t (float64x1_t)' Function 0x7f94c60005b0 'bar' 'int64_t (float64x1_t)'
+    |   `-ImplicitCastExpr 0x7f94c6000bc0 <col:12> 'float64x1_t':'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f94c6000af0 <col:12> 'float64x1_t':'int' lvalue Var 0x7f94c6000818 'f' 'float64x1_t':'int'
+    `-ReturnStmt 0x7f94c6000ca8 <line:17:3, col:15>
+      `-BinaryOperator 0x7f94c6000c80 <col:10, col:15> 'int' '=='
+        |-ImplicitCastExpr 0x7f94c6000c50 <col:10> 'int64_t':'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f94c6000c00 <col:10> 'int64_t':'long long' lvalue Var 0x7f94c6000a28 'r' 'int64_t':'long long'
+        `-ImplicitCastExpr 0x7f94c6000c68 <col:15> 'int64_t':'long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f94c6000c28 <col:15> 'int64_t':'long long' lvalue Var 0x7f94c6000968 'c' 'int64_t':'long long'

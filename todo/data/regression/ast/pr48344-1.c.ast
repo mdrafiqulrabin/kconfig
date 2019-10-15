@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7faf9a82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7faf9b806000 <../Data/C2AST/pr48344-1.c:3:1, line:8:1> line:3:6 foo 'void ()'
+  `-CompoundStmt 0x7faf9b8062a8 <line:4:1, line:8:1>
+    |-DeclStmt 0x7faf9b806178 <line:5:3, col:12>
+    | `-VarDecl 0x7faf9b8060f8 <col:3, col:11> col:7 used N 'int' cinit
+    |   `-IntegerLiteral 0x7faf9b806158 <col:11> 'int' 2
+    `-DeclStmt 0x7faf9b806290 <line:6:3, col:15>
+      `-VarDecl 0x7faf9b806230 <col:3, col:14> col:7 slots 'int [N]'

@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7ff0de82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff0df0142f0 <../Data/C2AST/pr48694-1.c:3:1, col:30> col:21 used g_89 'volatile int [5][9]' extern
+|-VarDecl 0x7ff0df0143a8 <line:4:1, col:12> col:12 used g 'int' extern
+|-VarDecl 0x7ff0df014450 <col:1, col:16> col:16 used gp 'int *' extern
+`-FunctionDecl 0x7ff0df014518 <line:5:1, line:14:1> line:5:6 func_64 'void ()'
+  `-CompoundStmt 0x7ff0df014b40 <line:6:1, line:14:1>
+    |-DeclStmt 0x7ff0df014630 <line:7:3, col:8>
+    | `-VarDecl 0x7ff0df0145d0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7ff0df014b08 <line:8:3, line:13:5>
+      |-BinaryOperator 0x7ff0df014690 <line:8:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7ff0df014648 <col:8> 'int' lvalue Var 0x7ff0df0145d0 'i' 'int'
+      | `-IntegerLiteral 0x7ff0df014670 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff0df014718 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff0df014700 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff0df0146b8 <col:15> 'int' lvalue Var 0x7ff0df0145d0 'i' 'int'
+      | `-IntegerLiteral 0x7ff0df0146e0 <col:19> 'int' 1
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7ff0df014ae8 <line:9:5, line:13:5>
+        |-ForStmt 0x7ff0df014850 <line:10:7, line:11:2>
+        | |-BinaryOperator 0x7ff0df014788 <line:10:12, col:16> 'int' '='
+        | | |-DeclRefExpr 0x7ff0df014740 <col:12> 'int' lvalue Var 0x7ff0df0143a8 'g' 'int'
+        | | `-IntegerLiteral 0x7ff0df014768 <col:16> 'int' 0
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7ff0df014810 <col:19, col:23> 'int' '<'
+        | | |-ImplicitCastExpr 0x7ff0df0147f8 <col:19> 'int' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7ff0df0147b0 <col:19> 'int' lvalue Var 0x7ff0df0143a8 'g' 'int'
+        | | `-IntegerLiteral 0x7ff0df0147d8 <col:23> 'int' 1
+        | |-<<<NULL>>>
+        | `-ReturnStmt 0x7ff0df014838 <line:11:2>
+        `-BinaryOperator 0x7ff0df014ac0 <line:12:7, col:29> 'int *' '='
+          |-DeclRefExpr 0x7ff0df014888 <col:7> 'int *' lvalue Var 0x7ff0df014450 'gp' 'int *'
+          `-CStyleCastExpr 0x7ff0df014a98 <col:12, col:29> 'int *' <BitCast>
+            `-UnaryOperator 0x7ff0df014a38 <col:19, col:29> 'volatile int *' prefix '&'
+              `-ArraySubscriptExpr 0x7ff0df014a10 <col:20, col:29> 'volatile int' lvalue
+                |-ImplicitCastExpr 0x7ff0df0149f8 <col:20, col:26> 'volatile int *' <ArrayToPointerDecay>
+                | `-ArraySubscriptExpr 0x7ff0df014988 <col:20, col:26> 'volatile int [9]' lvalue
+                |   |-ImplicitCastExpr 0x7ff0df014958 <col:20> 'volatile int (*)[9]' <ArrayToPointerDecay>
+                |   | `-DeclRefExpr 0x7ff0df0148b0 <col:20> 'volatile int [5][9]' lvalue Var 0x7ff0df0142f0 'g_89' 'volatile int [5][9]'
+                |   `-ImplicitCastExpr 0x7ff0df014970 <col:25> 'int' <LValueToRValue>
+                |     `-DeclRefExpr 0x7ff0df0148d8 <col:25> 'int' lvalue Var 0x7ff0df0143a8 'g' 'int'
+                `-IntegerLiteral 0x7ff0df0149b0 <col:28> 'int' 0

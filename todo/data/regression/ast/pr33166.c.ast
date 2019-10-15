@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7f8f80022ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8f81016310 <../Data/C2AST/pr33166.c:1:1, line:4:1> line:1:13 used ConvertAddr 'void (char *, void **)' static
+| |-ParmVarDecl 0x7f8f80023b78 <col:26, col:32> col:32 used saddr 'char *'
+| |-ParmVarDecl 0x7f8f81016240 <col:39, col:46> col:46 used addr 'void **'
+| `-CompoundStmt 0x7f8f81016540 <line:2:1, line:4:1>
+|   `-BinaryOperator 0x7f8f81016518 <line:3:3, col:21> 'void *' '='
+|     |-UnaryOperator 0x7f8f81016440 <col:3, col:4> 'void *' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7f8f81016428 <col:4> 'void **' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7f8f81016400 <col:4> 'void **' lvalue ParmVar 0x7f8f81016240 'addr' 'void **'
+|     `-CStyleCastExpr 0x7f8f810164f0 <col:11, col:21> 'void *' <BitCast>
+|       `-UnaryOperator 0x7f8f810164b8 <col:20, col:21> 'char **' prefix '&'
+|         `-DeclRefExpr 0x7f8f81016460 <col:21> 'char *' lvalue ParmVar 0x7f8f80023b78 'saddr' 'char *'
+`-FunctionDecl 0x7f8f81016630 <line:5:1, line:10:1> line:5:6 DefineSelf 'void (char *)'
+  |-ParmVarDecl 0x7f8f81016570 <col:18, col:24> col:24 used addr 'char *'
+  `-CompoundStmt 0x7f8f81016ab0 <line:6:1, line:10:1>
+    |-CallExpr 0x7f8f810167f0 <line:7:3, col:37> 'void'
+    | |-ImplicitCastExpr 0x7f8f810167d8 <col:3> 'void (*)(char *, void **)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f8f810166d8 <col:3> 'void (char *, void **)' Function 0x7f8f81016310 'ConvertAddr' 'void (char *, void **)'
+    | |-ImplicitCastExpr 0x7f8f81016828 <col:16> 'char *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f8f81016700 <col:16> 'char *' lvalue ParmVar 0x7f8f81016570 'addr' 'char *'
+    | `-CStyleCastExpr 0x7f8f81016788 <col:22, col:33> 'void **' <BitCast>
+    |   `-UnaryOperator 0x7f8f81016750 <col:32, col:33> 'char **' prefix '&'
+    |     `-DeclRefExpr 0x7f8f81016728 <col:33> 'char *' lvalue ParmVar 0x7f8f81016570 'addr' 'char *'
+    `-IfStmt 0x7f8f81016a78 <line:8:3, line:9:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8f81016a40 <line:8:7, col:36> 'int' '&&'
+      | |-BinaryOperator 0x7f8f81016918 <col:7, col:18> 'int' '=='
+      | | |-ImplicitCastExpr 0x7f8f81016900 <col:7, col:13> 'int' <IntegralCast>
+      | | | `-ImplicitCastExpr 0x7f8f810168e8 <col:7, col:13> 'char' <LValueToRValue>
+      | | |   `-ArraySubscriptExpr 0x7f8f810168a0 <col:7, col:13> 'char' lvalue
+      | | |     |-ImplicitCastExpr 0x7f8f81016888 <col:7> 'char *' <LValueToRValue>
+      | | |     | `-DeclRefExpr 0x7f8f81016840 <col:7> 'char *' lvalue ParmVar 0x7f8f81016570 'addr' 'char *'
+      | | |     `-IntegerLiteral 0x7f8f81016868 <col:12> 'int' 0
+      | | `-IntegerLiteral 0x7f8f810168c8 <col:18> 'int' 127
+      | `-BinaryOperator 0x7f8f81016a18 <col:25, col:36> 'int' '=='
+      |   |-ImplicitCastExpr 0x7f8f81016a00 <col:25, col:31> 'int' <IntegralCast>
+      |   | `-ImplicitCastExpr 0x7f8f810169e8 <col:25, col:31> 'char' <LValueToRValue>
+      |   |   `-ArraySubscriptExpr 0x7f8f810169a0 <col:25, col:31> 'char' lvalue
+      |   |     |-ImplicitCastExpr 0x7f8f81016988 <col:25> 'char *' <LValueToRValue>
+      |   |     | `-DeclRefExpr 0x7f8f81016940 <col:25> 'char *' lvalue ParmVar 0x7f8f81016570 'addr' 'char *'
+      |   |     `-IntegerLiteral 0x7f8f81016968 <col:30> 'int' 3
+      |   `-IntegerLiteral 0x7f8f810169c8 <col:36> 'int' 1
+      |-NullStmt 0x7f8f81016a68 <line:9:5>
+      `-<<<NULL>>>

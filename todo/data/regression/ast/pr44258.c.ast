@@ -1,0 +1,48 @@
+TranslationUnitDecl 0x7f8c0080ece8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8c0080f960 <../Data/C2AST/pr44258.c:4:1, line:7:1> line:4:8 struct blah definition
+| `-FieldDecl 0x7f8c00850a98 <line:6:3, col:11> col:8 referenced a 'char [4]'
+|-RecordDecl 0x7f8c00850ae0 <line:9:1, line:13:1> line:9:8 struct str definition
+| |-FieldDecl 0x7f8c00850be0 <line:11:3, col:15> col:15 referenced b1 'struct blah':'struct blah'
+| `-FieldDecl 0x7f8c00850c38 <line:12:3, col:8> col:8 x 'char'
+|-RecordDecl 0x7f8c00850cc8 <line:15:1, line:19:1> line:15:8 struct val definition
+| |-FieldDecl 0x7f8c00850d80 <line:17:3, col:8> col:8 y 'char'
+| `-FieldDecl 0x7f8c00850de8 <line:18:3, col:15> col:15 referenced b2 'struct blah':'struct blah'
+|-RecordDecl 0x7f8c00850e30 <line:21:1, line:25:1> line:21:7 union U definition
+| |-FieldDecl 0x7f8c00850f30 <line:23:3, col:14> col:14 referenced str 'struct str':'struct str'
+| `-FieldDecl 0x7f8c00850fd0 <line:24:3, col:14> col:14 referenced val 'struct val':'struct val'
+|-VarDecl 0x7f8c00851088 <line:28:1, col:20> col:20 used e_b1 'struct blah':'struct blah' extern
+|-VarDecl 0x7f8c00851148 <col:1, col:26> col:26 used e_b2 'struct blah':'struct blah' extern
+|-VarDecl 0x7f8c00851270 <line:29:1, col:17> col:17 used e_u 'union U *' extern
+`-FunctionDecl 0x7f8c008513b8 <line:31:1, line:40:1> line:31:5 foo 'int (int)'
+  |-ParmVarDecl 0x7f8c008512e8 <col:10, col:14> col:14 b 'int'
+  `-CompoundStmt 0x7f8c00851a00 <line:32:1, line:40:1>
+    |-DeclStmt 0x7f8c008514e0 <line:33:3, col:12>
+    | `-VarDecl 0x7f8c00851480 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-BinaryOperator 0x7f8c008515d0 <line:35:3, col:14> 'struct blah':'struct blah' '='
+    | |-MemberExpr 0x7f8c00851558 <col:3, col:9> 'struct blah':'struct blah' lvalue .b1 0x7f8c00850be0
+    | | `-MemberExpr 0x7f8c00851520 <col:3, col:5> 'struct str':'struct str' lvalue .str 0x7f8c00850f30
+    | |   `-DeclRefExpr 0x7f8c008514f8 <col:3> 'union U':'union U' lvalue Var 0x7f8c00851480 'u' 'union U':'union U'
+    | `-ImplicitCastExpr 0x7f8c008515b8 <col:14> 'struct blah':'struct blah' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8c00851590 <col:14> 'struct blah':'struct blah' lvalue Var 0x7f8c00851088 'e_b1' 'struct blah':'struct blah'
+    |-BinaryOperator 0x7f8c008516d0 <line:36:3, col:14> 'struct blah':'struct blah' '='
+    | |-MemberExpr 0x7f8c00851658 <col:3, col:9> 'struct blah':'struct blah' lvalue .b2 0x7f8c00850de8
+    | | `-MemberExpr 0x7f8c00851620 <col:3, col:5> 'struct val':'struct val' lvalue .val 0x7f8c00850fd0
+    | |   `-DeclRefExpr 0x7f8c008515f8 <col:3> 'union U':'union U' lvalue Var 0x7f8c00851480 'u' 'union U':'union U'
+    | `-ImplicitCastExpr 0x7f8c008516b8 <col:14> 'struct blah':'struct blah' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f8c00851690 <col:14> 'struct blah':'struct blah' lvalue Var 0x7f8c00851148 'e_b2' 'struct blah':'struct blah'
+    |-BinaryOperator 0x7f8c00851860 <line:37:3, col:19> 'char' '='
+    | |-ArraySubscriptExpr 0x7f8c00851800 <col:3, col:15> 'char' lvalue
+    | | |-ImplicitCastExpr 0x7f8c008517e8 <col:3, col:12> 'char *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7f8c00851790 <col:3, col:12> 'char [4]' lvalue .a 0x7f8c00850a98
+    | | |   `-MemberExpr 0x7f8c00851758 <col:3, col:9> 'struct blah':'struct blah' lvalue .b1 0x7f8c00850be0
+    | | |     `-MemberExpr 0x7f8c00851720 <col:3, col:5> 'struct str':'struct str' lvalue .str 0x7f8c00850f30
+    | | |       `-DeclRefExpr 0x7f8c008516f8 <col:3> 'union U':'union U' lvalue Var 0x7f8c00851480 'u' 'union U':'union U'
+    | | `-IntegerLiteral 0x7f8c008517c8 <col:14> 'int' 3
+    | `-ImplicitCastExpr 0x7f8c00851848 <col:19> 'char' <IntegralCast>
+    |   `-IntegerLiteral 0x7f8c00851828 <col:19> 'int' 0
+    `-BinaryOperator 0x7f8c008519c8 <line:39:3, col:10> 'union U':'union U' '='
+      |-UnaryOperator 0x7f8c00851968 <col:3, col:4> 'union U':'union U' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7f8c00851950 <col:4> 'union U *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8c00851928 <col:4> 'union U *' lvalue Var 0x7f8c00851270 'e_u' 'union U *'
+      `-ImplicitCastExpr 0x7f8c008519b0 <col:10> 'union U':'union U' <LValueToRValue>
+        `-DeclRefExpr 0x7f8c00851988 <col:10> 'union U':'union U' lvalue Var 0x7f8c00851480 'u' 'union U':'union U'

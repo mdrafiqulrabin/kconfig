@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fed9282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fed93014330 <../Data/C2AST/pr82167.c:4:1, line:8:1> line:5:1 fn1 'void (int *)'
+| |-ParmVarDecl 0x7fed93014230 <col:6, col:12> col:10 referenced a 'int *':'int *'
+| `-CompoundStmt 0x7fed930147f8 <line:6:1, line:8:1>
+|   `-CallExpr 0x7fed93014790 <line:7:3, col:42> 'int'
+|     |-ImplicitCastExpr 0x7fed93014778 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fed930145b8 <col:3> '<builtin fn type>' Function 0x7fed93014458 '__builtin_printf' 'int (const char *, ...)'
+|     |-ImplicitCastExpr 0x7fed930147e0 <col:21> 'const char *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fed930147c8 <col:21> 'char *' <ArrayToPointerDecay>
+|     |   `-StringLiteral 0x7fed93014618 <col:21> 'char [5]' lvalue "%zu\n"
+|     `-UnaryExprOrTypeTraitExpr 0x7fed93014728 <col:30, col:41> 'unsigned long' sizeof
+|       `-ParenExpr 0x7fed93014708 <col:37, col:41> 'int *':'int *' lvalue
+|         `-UnaryOperator 0x7fed930146e8 <col:38, col:40> 'int *':'int *' lvalue prefix '*'
+|           `-UnaryOperator 0x7fed930146c8 <col:39, col:40> 'int **' prefix '&'
+|             `-DeclRefExpr 0x7fed93014648 <col:40> 'int *':'int *' lvalue ParmVar 0x7fed93014230 'a' 'int *':'int *'
+|-FunctionDecl 0x7fed93014458 <col:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fed930144f8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fed93014560 <col:3> Implicit printf 1 2
+`-FunctionDecl 0x7fed93014990 <line:10:1, line:14:1> line:11:1 fn2 'void (int **)'
+  |-ParmVarDecl 0x7fed93014890 <col:6, col:13> col:11 referenced a 'int **':'int **'
+  `-CompoundStmt 0x7fed93014c18 <line:12:1, line:14:1>
+    `-CallExpr 0x7fed93014bb0 <line:13:3, col:42> 'int'
+      |-ImplicitCastExpr 0x7fed93014b98 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+      | `-DeclRefExpr 0x7fed93014a38 <col:3> '<builtin fn type>' Function 0x7fed93014458 '__builtin_printf' 'int (const char *, ...)'
+      |-ImplicitCastExpr 0x7fed93014c00 <col:21> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fed93014be8 <col:21> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fed93014a60 <col:21> 'char [5]' lvalue "%zu\n"
+      `-UnaryExprOrTypeTraitExpr 0x7fed93014b78 <col:30, col:41> 'unsigned long' sizeof
+        `-ParenExpr 0x7fed93014b58 <col:37, col:41> 'int **':'int **' lvalue
+          `-UnaryOperator 0x7fed93014b38 <col:38, col:40> 'int **':'int **' lvalue prefix '*'
+            `-UnaryOperator 0x7fed93014b18 <col:39, col:40> 'int ***' prefix '&'
+              `-DeclRefExpr 0x7fed93014a90 <col:40> 'int **':'int **' lvalue ParmVar 0x7fed93014890 'a' 'int **':'int **'

@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7f8eeb02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8eeb06d850 <../Data/C2AST/pr49079.c:3:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f8eeb06d8f0 prev 0x7f8eeb06d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-RecordDecl 0x7f8eeb06d990 <line:5:1, line:8:1> line:5:8 struct Ustr definition
+| `-FieldDecl 0x7f8eeb06dac0 <line:7:3, col:23> col:17 referenced data 'unsigned char [1]'
+|-FunctionDecl 0x7f8eeb06dc18 <line:10:1, line:14:1> line:11:1 used ustr_xi__embed_val_get 'unsigned int (const unsigned char *)' static
+| |-ParmVarDecl 0x7f8eeb06db50 <col:24, col:45> col:45 used data 'const unsigned char *'
+| `-CompoundStmt 0x7f8eeb06ddf8 <line:12:1, line:14:1>
+|   `-ReturnStmt 0x7f8eeb06dde0 <line:13:3, col:30>
+|     `-CStyleCastExpr 0x7f8eeb06ddb8 <col:10, col:30> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f8eeb06dda0 <col:24, col:30> 'unsigned char' <LValueToRValue>
+|         `-ArraySubscriptExpr 0x7f8eeb06dd60 <col:24, col:30> 'const unsigned char' lvalue
+|           |-ImplicitCastExpr 0x7f8eeb06dd48 <col:24> 'const unsigned char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x7f8eeb06dd00 <col:24> 'const unsigned char *' lvalue ParmVar 0x7f8eeb06db50 'data' 'const unsigned char *'
+|           `-IntegerLiteral 0x7f8eeb06dd28 <col:29> 'int' 0
+|-FunctionDecl 0x7f8eeb06ded8 <line:16:1, col:54> col:31 used zero 'int (void)'
+| |-CompoundStmt 0x7f8eeb06dff8 <col:42, col:54>
+| | `-ReturnStmt 0x7f8eeb06dfe0 <col:44, col:51>
+| |   `-IntegerLiteral 0x7f8eeb06dfc0 <col:51> 'int' 0
+| `-NoInlineAttr 0x7f8eeb06df78 <col:20>
+|-FunctionDecl 0x7f8eeb06e1c8 <line:18:1, line:22:1> line:19:1 used ustr_len 'unsigned int (const struct Ustr *)' static
+| |-ParmVarDecl 0x7f8eeb06e0c0 <col:10, col:29> col:29 used s1 'const struct Ustr *'
+| `-CompoundStmt 0x7f8eeb06e4e8 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7f8eeb06e4d0 <line:21:3, col:54>
+|     `-CallExpr 0x7f8eeb06e4a0 <col:10, col:54> 'unsigned int'
+|       |-ImplicitCastExpr 0x7f8eeb06e488 <col:10> 'unsigned int (*)(const unsigned char *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7f8eeb06e270 <col:10> 'unsigned int (const unsigned char *)' Function 0x7f8eeb06dc18 'ustr_xi__embed_val_get' 'unsigned int (const unsigned char *)'
+|       `-BinaryOperator 0x7f8eeb06e438 <col:33, col:53> 'const unsigned char *' '+'
+|         |-BinaryOperator 0x7f8eeb06e380 <col:33, col:44> 'const unsigned char *' '+'
+|         | |-ImplicitCastExpr 0x7f8eeb06e368 <col:33, col:37> 'const unsigned char *' <ArrayToPointerDecay>
+|         | | `-MemberExpr 0x7f8eeb06e2d8 <col:33, col:37> 'unsigned char const[1]' lvalue ->data 0x7f8eeb06dac0
+|         | |   `-ImplicitCastExpr 0x7f8eeb06e2c0 <col:33> 'const struct Ustr *' <LValueToRValue>
+|         | |     `-DeclRefExpr 0x7f8eeb06e298 <col:33> 'const struct Ustr *' lvalue ParmVar 0x7f8eeb06e0c0 's1' 'const struct Ustr *'
+|         | `-IntegerLiteral 0x7f8eeb06e310 <col:44> 'int' 1
+|         `-CallExpr 0x7f8eeb06e410 <col:48, col:53> 'int'
+|           `-ImplicitCastExpr 0x7f8eeb06e3f8 <col:48> 'int (*)(void)' <FunctionToPointerDecay>
+|             `-DeclRefExpr 0x7f8eeb06e3a8 <col:48> 'int (void)' Function 0x7f8eeb06ded8 'zero' 'int (void)'
+`-FunctionDecl 0x7f8eeb06e550 <line:24:1, line:31:1> line:25:1 main 'int ()'
+  `-CompoundStmt 0x7f8eeb086388 <line:26:1, line:31:1>
+    |-IfStmt 0x7f8eeb086318 <line:27:3, line:28:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8eeb086260 <line:27:7, col:60> 'int' '!='
+    | | |-CallExpr 0x7f8eeb06e7e0 <col:7, col:55> 'unsigned int'
+    | | | |-ImplicitCastExpr 0x7f8eeb06e7c8 <col:7> 'unsigned int (*)(const struct Ustr *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7f8eeb06e5f0 <col:7> 'unsigned int (const struct Ustr *)' Function 0x7f8eeb06e1c8 'ustr_len' 'unsigned int (const struct Ustr *)'
+    | | | `-ImplicitCastExpr 0x7f8eeb086210 <col:17, col:54> 'const struct Ustr *' <BitCast>
+    | | |   `-ParenExpr 0x7f8eeb06e750 <col:17, col:54> 'struct Ustr *'
+    | | |     `-CStyleCastExpr 0x7f8eeb06e728 <col:18, col:50> 'struct Ustr *' <BitCast>
+    | | |       `-ImplicitCastExpr 0x7f8eeb06e710 <col:34, col:50> 'char *' <ArrayToPointerDecay>
+    | | |         `-StringLiteral 0x7f8eeb06e658 <col:34, col:50> 'char [5]' lvalue "\001\002s2"
+    | | `-ImplicitCastExpr 0x7f8eeb086248 <col:60> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f8eeb086228 <col:60> 'int' 2
+    | |-CallExpr 0x7f8eeb0862f0 <line:28:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f8eeb0862d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f8eeb086288 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f8eeb06d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8eeb086370 <line:30:3, col:10>
+      `-IntegerLiteral 0x7f8eeb086350 <col:10> 'int' 0

@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fcad18288e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcad1829560 <../Data/C2AST/pr60647-2.c:4:1, line:7:1> line:4:8 struct _wincore definition
+| |-FieldDecl 0x7fcad2014238 <line:6:3, col:7> col:7 width 'int'
+| `-FieldDecl 0x7fcad2014298 <col:3, col:14> col:14 referenced height 'int'
+|-FunctionDecl 0x7fcad20143c0 <line:9:1, col:14> col:6 used fn1 'void (int)'
+| `-ParmVarDecl 0x7fcad20142f8 <col:11> col:14 'int'
+|-FunctionDecl 0x7fcad20146c0 <line:10:1, col:26> col:6 used fn2 'void (int, int, int *)'
+| |-ParmVarDecl 0x7fcad20144c0 <col:11> col:14 'int'
+| |-ParmVarDecl 0x7fcad2014538 <col:16> col:19 'int'
+| `-ParmVarDecl 0x7fcad20145e0 <col:21, col:25> col:26 'int *'
+|-FunctionDecl 0x7fcad2014a50 <line:12:1, line:16:1> line:13:1 used foo 'void (void *, struct _wincore *, int)' static
+| |-ParmVarDecl 0x7fcad2014790 <col:6, col:12> col:12 dpy 'void *'
+| |-ParmVarDecl 0x7fcad20148a0 <col:17, col:34> col:34 used winInfo 'struct _wincore *'
+| |-ParmVarDecl 0x7fcad2014918 <col:43, col:47> col:47 offset 'int'
+| `-CompoundStmt 0x7fcad2014c38 <line:14:1, line:16:1>
+|   `-CallExpr 0x7fcad2014bf0 <line:15:3, col:23> 'void'
+|     |-ImplicitCastExpr 0x7fcad2014bd8 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fcad2014b08 <col:3> 'void (int)' Function 0x7fcad20143c0 'fn1' 'void (int)'
+|     `-ImplicitCastExpr 0x7fcad2014c20 <col:8, col:17> 'int' <LValueToRValue>
+|       `-MemberExpr 0x7fcad2014b70 <col:8, col:17> 'int' lvalue ->height 0x7fcad2014298
+|         `-ImplicitCastExpr 0x7fcad2014b58 <col:8> 'struct _wincore *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fcad2014b30 <col:8> 'struct _wincore *' lvalue ParmVar 0x7fcad20148a0 'winInfo' 'struct _wincore *'
+|-FunctionDecl 0x7fcad2014e40 <line:18:1, line:23:1> line:19:1 used bar 'void (void *, int, int *)' static
+| |-ParmVarDecl 0x7fcad2014c68 <col:6, col:12> col:12 dpy 'void *'
+| |-ParmVarDecl 0x7fcad2014ce0 <col:17, col:21> col:21 used winInfo 'int'
+| |-ParmVarDecl 0x7fcad2014d58 <col:30, col:35> col:35 used visrgn 'int *'
+| `-CompoundStmt 0x7fcad202beb8 <line:20:1, line:23:1>
+|   |-CallExpr 0x7fcad202bd30 <line:21:3, col:62> 'void'
+|   | |-ParenExpr 0x7fcad202bc68 <col:3, col:37> 'void (*)(void *, int, int)'
+|   | | `-CStyleCastExpr 0x7fcad202bc40 <col:4, col:34> 'void (*)(void *, int, int)' <BitCast>
+|   | |   `-ImplicitCastExpr 0x7fcad202bc28 <col:34> 'void (*)(void *, struct _wincore *, int)' <FunctionToPointerDecay>
+|   | |     `-DeclRefExpr 0x7fcad2015060 <col:34> 'void (void *, struct _wincore *, int)' Function 0x7fcad2014a50 'foo' 'void (void *, struct _wincore *, int)'
+|   | |-CStyleCastExpr 0x7fcad202bcc0 <col:40, col:49> 'void *' <NullToPointer>
+|   | | `-IntegerLiteral 0x7fcad202bc88 <col:49> 'int' 0
+|   | |-ImplicitCastExpr 0x7fcad202bd70 <col:52> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fcad202bce8 <col:52> 'int' lvalue ParmVar 0x7fcad2014ce0 'winInfo' 'int'
+|   | `-IntegerLiteral 0x7fcad202bd10 <col:61> 'int' 0
+|   `-CallExpr 0x7fcad202be60 <line:22:3, col:20> 'void'
+|     |-ImplicitCastExpr 0x7fcad202be48 <col:3> 'void (*)(int, int, int *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fcad202bd88 <col:3> 'void (int, int, int *)' Function 0x7fcad20146c0 'fn2' 'void (int, int, int *)'
+|     |-IntegerLiteral 0x7fcad202bdb0 <col:8> 'int' 0
+|     |-IntegerLiteral 0x7fcad202bdd0 <col:11> 'int' 0
+|     `-ImplicitCastExpr 0x7fcad202bea0 <col:14> 'int *' <LValueToRValue>
+|       `-DeclRefExpr 0x7fcad202bdf0 <col:14> 'int *' lvalue ParmVar 0x7fcad2014d58 'visrgn' 'int *'
+`-FunctionDecl 0x7fcad202c078 <line:25:1, line:29:1> line:26:1 baz 'void (void *, int, int)'
+  |-ParmVarDecl 0x7fcad202bef0 <col:6, col:12> col:12 dpy 'void *'
+  |-ParmVarDecl 0x7fcad202bf68 <col:17, col:21> col:21 win 'int'
+  |-ParmVarDecl 0x7fcad202bfe0 <col:26, col:30> col:30 prop 'int'
+  `-CompoundStmt 0x7fcad202c2c0 <line:27:1, line:29:1>
+    `-CallExpr 0x7fcad202c280 <line:28:3, col:32> 'void'
+      |-ImplicitCastExpr 0x7fcad202c268 <col:3> 'void (*)(void *, int, int *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fcad202c130 <col:3> 'void (void *, int, int *)' Function 0x7fcad2014e40 'bar' 'void (void *, int, int *)'
+      |-CStyleCastExpr 0x7fcad202c190 <col:8, col:17> 'void *' <NullToPointer>
+      | `-IntegerLiteral 0x7fcad202c158 <col:17> 'int' 0
+      |-IntegerLiteral 0x7fcad202c1b8 <col:20> 'int' 0
+      `-CStyleCastExpr 0x7fcad202c210 <col:23, col:31> 'int *' <NullToPointer>
+        `-IntegerLiteral 0x7fcad202c1d8 <col:31> 'int' 0

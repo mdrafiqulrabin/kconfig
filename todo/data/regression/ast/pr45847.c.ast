@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7ffe8f8220e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffe8f0153f8 <../Data/C2AST/pr45847.c:4:1, line:12:1> line:4:11 foo 'long long (long long *restrict, int *restrict, int *restrict)'
+  |-ParmVarDecl 0x7ffe8f822da0 <col:16, col:38> col:38 a 'long long *restrict'
+  |-ParmVarDecl 0x7ffe8f015240 <col:42, col:58> col:58 used b 'int *restrict'
+  |-ParmVarDecl 0x7ffe8f0152b8 <col:61, col:77> col:77 used c 'int *restrict'
+  `-CompoundStmt 0x7ffe8f015a78 <line:5:1, line:12:1>
+    |-DeclStmt 0x7ffe8f015568 <line:6:3, col:8>
+    | `-VarDecl 0x7ffe8f015508 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7ffe8f015630 <line:7:3, col:18>
+    | `-VarDecl 0x7ffe8f015598 <col:3, col:17> col:13 used sum 'long long' cinit
+    |   `-ImplicitCastExpr 0x7ffe8f015618 <col:17> 'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ffe8f0155f8 <col:17> 'int' 0
+    |-ForStmt 0x7ffe8f0159e8 <line:8:3, line:9:32>
+    | |-BinaryOperator 0x7ffe8f015690 <line:8:8, col:10> 'int' '='
+    | | |-DeclRefExpr 0x7ffe8f015648 <col:8> 'int' lvalue Var 0x7ffe8f015508 'i' 'int'
+    | | `-IntegerLiteral 0x7ffe8f015670 <col:10> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffe8f015718 <col:12, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ffe8f015700 <col:12> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffe8f0156b8 <col:12> 'int' lvalue Var 0x7ffe8f015508 'i' 'int'
+    | | `-IntegerLiteral 0x7ffe8f0156e0 <col:14> 'int' 256
+    | |-UnaryOperator 0x7ffe8f015768 <col:18, col:19> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ffe8f015740 <col:18> 'int' lvalue Var 0x7ffe8f015508 'i' 'int'
+    | `-CompoundAssignOperator 0x7ffe8f0159b0 <line:9:4, col:32> 'long long' '+=' ComputeLHSTy='long long' ComputeResultTy='long long'
+    |   |-DeclRefExpr 0x7ffe8f015788 <col:4> 'long long' lvalue Var 0x7ffe8f015598 'sum' 'long long'
+    |   `-BinaryOperator 0x7ffe8f015988 <col:11, col:32> 'long long' '*'
+    |     |-CStyleCastExpr 0x7ffe8f015888 <col:11, col:25> 'long long' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7ffe8f015870 <col:22, col:25> 'int' <LValueToRValue>
+    |     |   `-ArraySubscriptExpr 0x7ffe8f015830 <col:22, col:25> 'int' lvalue
+    |     |     |-ImplicitCastExpr 0x7ffe8f015800 <col:22> 'int *' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x7ffe8f0157b0 <col:22> 'int *restrict' lvalue ParmVar 0x7ffe8f015240 'b' 'int *restrict'
+    |     |     `-ImplicitCastExpr 0x7ffe8f015818 <col:24> 'int' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7ffe8f0157d8 <col:24> 'int' lvalue Var 0x7ffe8f015508 'i' 'int'
+    |     `-ImplicitCastExpr 0x7ffe8f015970 <col:29, col:32> 'long long' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7ffe8f015958 <col:29, col:32> 'int' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7ffe8f015930 <col:29, col:32> 'int' lvalue
+    |           |-ImplicitCastExpr 0x7ffe8f015900 <col:29> 'int *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7ffe8f0158b0 <col:29> 'int *restrict' lvalue ParmVar 0x7ffe8f0152b8 'c' 'int *restrict'
+    |           `-ImplicitCastExpr 0x7ffe8f015918 <col:31> 'int' <LValueToRValue>
+    |             `-DeclRefExpr 0x7ffe8f0158d8 <col:31> 'int' lvalue Var 0x7ffe8f015508 'i' 'int'
+    `-ReturnStmt 0x7ffe8f015a60 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7ffe8f015a48 <col:10> 'long long' <LValueToRValue>
+        `-DeclRefExpr 0x7ffe8f015a20 <col:10> 'long long' lvalue Var 0x7ffe8f015598 'sum' 'long long'

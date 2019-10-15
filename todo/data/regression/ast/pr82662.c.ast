@@ -1,0 +1,126 @@
+TranslationUnitDecl 0x7f894782bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f894782c978 <../Data/C2AST/pr82662.c:6:1, col:27> col:27 referenced U 'unsigned __int128'
+| `-BuiltinType 0x7f894782bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f894786d800 <line:7:1, col:25> col:25 referenced S '__int128'
+| `-BuiltinType 0x7f894782bf80 '__int128'
+|-FunctionDecl 0x7f894786d920 <line:12:1, col:15> col:6 bar 'void (void)'
+|-FunctionDecl 0x7f894786dbb8 <line:13:1, col:36> col:5 f0 'int (U, U)'
+| |-ParmVarDecl 0x7f894786da30 <col:9, col:11> col:11 used x 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7f894786daa0 <col:14, col:16> col:16 used y 'U':'unsigned __int128'
+| `-CompoundStmt 0x7f894786dd28 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786dd10 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786dce8 <col:28, col:33> 'int' '=='
+|       |-ImplicitCastExpr 0x7f894786dcb8 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786dc68 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786da30 'x' 'U':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f894786dcd0 <col:33> 'U':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786dc90 <col:33> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786daa0 'y' 'U':'unsigned __int128'
+|-FunctionDecl 0x7f894786de58 <line:14:1, col:36> col:5 f1 'int (U, U)'
+| |-ParmVarDecl 0x7f894786dd50 <col:9, col:11> col:11 used x 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7f894786ddc0 <col:14, col:16> col:16 used y 'U':'unsigned __int128'
+| `-CompoundStmt 0x7f894786dfc8 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786dfb0 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786df88 <col:28, col:33> 'int' '!='
+|       |-ImplicitCastExpr 0x7f894786df58 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786df08 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786dd50 'x' 'U':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f894786df70 <col:33> 'U':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786df30 <col:33> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786ddc0 'y' 'U':'unsigned __int128'
+|-FunctionDecl 0x7f894786e0f8 <line:15:1, col:35> col:5 f2 'int (U, U)'
+| |-ParmVarDecl 0x7f894786dff0 <col:9, col:11> col:11 used x 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7f894786e060 <col:14, col:16> col:16 used y 'U':'unsigned __int128'
+| `-CompoundStmt 0x7f894786e268 <col:19, col:35>
+|   `-ReturnStmt 0x7f894786e250 <col:21, col:32>
+|     `-BinaryOperator 0x7f894786e228 <col:28, col:32> 'int' '>'
+|       |-ImplicitCastExpr 0x7f894786e1f8 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786e1a8 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786dff0 'x' 'U':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f894786e210 <col:32> 'U':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786e1d0 <col:32> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e060 'y' 'U':'unsigned __int128'
+|-FunctionDecl 0x7f894786e398 <line:16:1, col:36> col:5 f3 'int (U, U)'
+| |-ParmVarDecl 0x7f894786e290 <col:9, col:11> col:11 used x 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7f894786e300 <col:14, col:16> col:16 used y 'U':'unsigned __int128'
+| `-CompoundStmt 0x7f894786e508 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786e4f0 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786e4c8 <col:28, col:33> 'int' '>='
+|       |-ImplicitCastExpr 0x7f894786e498 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786e448 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e290 'x' 'U':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f894786e4b0 <col:33> 'U':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786e470 <col:33> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e300 'y' 'U':'unsigned __int128'
+|-FunctionDecl 0x7f894786e638 <line:17:1, col:35> col:5 f4 'int (U, U)'
+| |-ParmVarDecl 0x7f894786e530 <col:9, col:11> col:11 used x 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7f894786e5a0 <col:14, col:16> col:16 used y 'U':'unsigned __int128'
+| `-CompoundStmt 0x7f894786e7a8 <col:19, col:35>
+|   `-ReturnStmt 0x7f894786e790 <col:21, col:32>
+|     `-BinaryOperator 0x7f894786e768 <col:28, col:32> 'int' '<'
+|       |-ImplicitCastExpr 0x7f894786e738 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786e6e8 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e530 'x' 'U':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f894786e750 <col:32> 'U':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786e710 <col:32> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e5a0 'y' 'U':'unsigned __int128'
+|-FunctionDecl 0x7f894786e908 <line:18:1, col:36> col:5 f5 'int (U, U)'
+| |-ParmVarDecl 0x7f894786e800 <col:9, col:11> col:11 used x 'U':'unsigned __int128'
+| |-ParmVarDecl 0x7f894786e870 <col:14, col:16> col:16 used y 'U':'unsigned __int128'
+| `-CompoundStmt 0x7f894786ea78 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786ea60 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786ea38 <col:28, col:33> 'int' '<='
+|       |-ImplicitCastExpr 0x7f894786ea08 <col:28> 'U':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786e9b8 <col:28> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e800 'x' 'U':'unsigned __int128'
+|       `-ImplicitCastExpr 0x7f894786ea20 <col:33> 'U':'unsigned __int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786e9e0 <col:33> 'U':'unsigned __int128' lvalue ParmVar 0x7f894786e870 'y' 'U':'unsigned __int128'
+|-FunctionDecl 0x7f894786ec48 <line:19:1, col:36> col:5 f6 'int (S, S)'
+| |-ParmVarDecl 0x7f894786eac0 <col:9, col:11> col:11 used x 'S':'__int128'
+| |-ParmVarDecl 0x7f894786eb30 <col:14, col:16> col:16 used y 'S':'__int128'
+| `-CompoundStmt 0x7f894786edb8 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786eda0 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786ed78 <col:28, col:33> 'int' '=='
+|       |-ImplicitCastExpr 0x7f894786ed48 <col:28> 'S':'__int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786ecf8 <col:28> 'S':'__int128' lvalue ParmVar 0x7f894786eac0 'x' 'S':'__int128'
+|       `-ImplicitCastExpr 0x7f894786ed60 <col:33> 'S':'__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786ed20 <col:33> 'S':'__int128' lvalue ParmVar 0x7f894786eb30 'y' 'S':'__int128'
+|-FunctionDecl 0x7f894786eee8 <line:20:1, col:36> col:5 f7 'int (S, S)'
+| |-ParmVarDecl 0x7f894786ede0 <col:9, col:11> col:11 used x 'S':'__int128'
+| |-ParmVarDecl 0x7f894786ee50 <col:14, col:16> col:16 used y 'S':'__int128'
+| `-CompoundStmt 0x7f894786f058 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786f040 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786f018 <col:28, col:33> 'int' '!='
+|       |-ImplicitCastExpr 0x7f894786efe8 <col:28> 'S':'__int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786ef98 <col:28> 'S':'__int128' lvalue ParmVar 0x7f894786ede0 'x' 'S':'__int128'
+|       `-ImplicitCastExpr 0x7f894786f000 <col:33> 'S':'__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786efc0 <col:33> 'S':'__int128' lvalue ParmVar 0x7f894786ee50 'y' 'S':'__int128'
+|-FunctionDecl 0x7f894786f188 <line:21:1, col:35> col:5 f8 'int (S, S)'
+| |-ParmVarDecl 0x7f894786f080 <col:9, col:11> col:11 used x 'S':'__int128'
+| |-ParmVarDecl 0x7f894786f0f0 <col:14, col:16> col:16 used y 'S':'__int128'
+| `-CompoundStmt 0x7f894786f2f8 <col:19, col:35>
+|   `-ReturnStmt 0x7f894786f2e0 <col:21, col:32>
+|     `-BinaryOperator 0x7f894786f2b8 <col:28, col:32> 'int' '>'
+|       |-ImplicitCastExpr 0x7f894786f288 <col:28> 'S':'__int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786f238 <col:28> 'S':'__int128' lvalue ParmVar 0x7f894786f080 'x' 'S':'__int128'
+|       `-ImplicitCastExpr 0x7f894786f2a0 <col:32> 'S':'__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786f260 <col:32> 'S':'__int128' lvalue ParmVar 0x7f894786f0f0 'y' 'S':'__int128'
+|-FunctionDecl 0x7f894786f428 <line:22:1, col:36> col:5 f9 'int (S, S)'
+| |-ParmVarDecl 0x7f894786f320 <col:9, col:11> col:11 used x 'S':'__int128'
+| |-ParmVarDecl 0x7f894786f390 <col:14, col:16> col:16 used y 'S':'__int128'
+| `-CompoundStmt 0x7f894786f598 <col:19, col:36>
+|   `-ReturnStmt 0x7f894786f580 <col:21, col:33>
+|     `-BinaryOperator 0x7f894786f558 <col:28, col:33> 'int' '>='
+|       |-ImplicitCastExpr 0x7f894786f528 <col:28> 'S':'__int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786f4d8 <col:28> 'S':'__int128' lvalue ParmVar 0x7f894786f320 'x' 'S':'__int128'
+|       `-ImplicitCastExpr 0x7f894786f540 <col:33> 'S':'__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786f500 <col:33> 'S':'__int128' lvalue ParmVar 0x7f894786f390 'y' 'S':'__int128'
+|-FunctionDecl 0x7f894786f6c8 <line:23:1, col:36> col:5 f10 'int (S, S)'
+| |-ParmVarDecl 0x7f894786f5c0 <col:10, col:12> col:12 used x 'S':'__int128'
+| |-ParmVarDecl 0x7f894786f630 <col:15, col:17> col:17 used y 'S':'__int128'
+| `-CompoundStmt 0x7f8947885240 <col:20, col:36>
+|   `-ReturnStmt 0x7f8947885228 <col:22, col:33>
+|     `-BinaryOperator 0x7f8947885200 <col:29, col:33> 'int' '<'
+|       |-ImplicitCastExpr 0x7f894786f7c8 <col:29> 'S':'__int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f894786f778 <col:29> 'S':'__int128' lvalue ParmVar 0x7f894786f5c0 'x' 'S':'__int128'
+|       `-ImplicitCastExpr 0x7f894786f7e0 <col:33> 'S':'__int128' <LValueToRValue>
+|         `-DeclRefExpr 0x7f894786f7a0 <col:33> 'S':'__int128' lvalue ParmVar 0x7f894786f630 'y' 'S':'__int128'
+`-FunctionDecl 0x7f8947885370 <line:24:1, col:37> col:5 f11 'int (S, S)'
+  |-ParmVarDecl 0x7f8947885268 <col:10, col:12> col:12 used x 'S':'__int128'
+  |-ParmVarDecl 0x7f89478852d8 <col:15, col:17> col:17 used y 'S':'__int128'
+  `-CompoundStmt 0x7f89478854e0 <col:20, col:37>
+    `-ReturnStmt 0x7f89478854c8 <col:22, col:34>
+      `-BinaryOperator 0x7f89478854a0 <col:29, col:34> 'int' '<='
+        |-ImplicitCastExpr 0x7f8947885470 <col:29> 'S':'__int128' <LValueToRValue>
+        | `-DeclRefExpr 0x7f8947885420 <col:29> 'S':'__int128' lvalue ParmVar 0x7f8947885268 'x' 'S':'__int128'
+        `-ImplicitCastExpr 0x7f8947885488 <col:34> 'S':'__int128' <LValueToRValue>
+          `-DeclRefExpr 0x7f8947885448 <col:34> 'S':'__int128' lvalue ParmVar 0x7f89478852d8 'y' 'S':'__int128'

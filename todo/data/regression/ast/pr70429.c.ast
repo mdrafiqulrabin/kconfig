@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7f8b0202bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8b0206e868 <../Data/C2AST/pr70429.c:3:1, line:7:1> line:4:1 used foo 'int (int)'
+| |-ParmVarDecl 0x7f8b0202c978 <col:6, col:10> col:10 used a 'int'
+| |-CompoundStmt 0x7f8b0206eb10 <line:5:1, line:7:1>
+| | `-ReturnStmt 0x7f8b0206eaf8 <line:6:3, col:47>
+| |   `-BinaryOperator 0x7f8b0206ead0 <col:10, col:47> 'int' '>>'
+| |     |-CStyleCastExpr 0x7f8b0206ea88 <col:10, col:42> 'int' <IntegralCast>
+| |     | `-ParenExpr 0x7f8b0206ea68 <col:16, col:42> 'long long'
+| |     |   `-BinaryOperator 0x7f8b0206e9f8 <col:17, col:41> 'long long' '>>'
+| |     |     |-IntegerLiteral 0x7f8b0206e998 <col:17> 'long long' 1513049092259536159
+| |     |     `-ImplicitCastExpr 0x7f8b0206e9e0 <col:41> 'int' <LValueToRValue>
+| |     |       `-DeclRefExpr 0x7f8b0206e9b8 <col:41> 'int' lvalue ParmVar 0x7f8b0202c978 'a' 'int'
+| |     `-IntegerLiteral 0x7f8b0206eab0 <col:47> 'int' 4
+| `-NoInlineAttr 0x7f8b0206e910 <line:3:16>
+|-FunctionDecl 0x7f8b0206eb80 <line:9:1, line:17:1> line:10:1 main 'int ()'
+| `-CompoundStmt 0x7f8b0206f2b8 <line:11:1, line:17:1>
+|   |-IfStmt 0x7f8b0206ee40 <line:12:3, line:13:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8b0206ede0 <line:12:7, col:71> 'int' '||'
+|   | | |-BinaryOperator 0x7f8b0206ed50 <col:7, col:50> 'int' '||'
+|   | | | |-BinaryOperator 0x7f8b0206ec90 <col:7, col:23> 'int' '!='
+|   | | | | |-UnaryExprOrTypeTraitExpr 0x7f8b0206ec38 <col:7, col:18> 'unsigned long' sizeof 'int'
+|   | | | | `-ImplicitCastExpr 0x7f8b0206ec78 <col:23> 'unsigned long' <IntegralCast>
+|   | | | |   `-IntegerLiteral 0x7f8b0206ec58 <col:23> 'int' 4
+|   | | | `-BinaryOperator 0x7f8b0206ed28 <col:28, col:50> 'int' '!='
+|   | | |   |-UnaryExprOrTypeTraitExpr 0x7f8b0206ecd0 <col:28, col:45> 'unsigned long' sizeof 'long long'
+|   | | |   `-ImplicitCastExpr 0x7f8b0206ed10 <col:50> 'unsigned long' <IntegralCast>
+|   | | |     `-IntegerLiteral 0x7f8b0206ecf0 <col:50> 'int' 8
+|   | | `-BinaryOperator 0x7f8b0206edb8 <<built-in>:35:22, ../Data/C2AST/pr70429.c:12:71> 'int' '!='
+|   | |   |-IntegerLiteral 0x7f8b0206ed78 <<built-in>:35:22> 'int' 8
+|   | |   `-IntegerLiteral 0x7f8b0206ed98 <../Data/C2AST/pr70429.c:12:71> 'int' 8
+|   | |-ReturnStmt 0x7f8b0206ee28 <line:13:5, col:12>
+|   | | `-IntegerLiteral 0x7f8b0206ee08 <col:12> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f8b0206f248 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f8b0206f070 <line:14:7, col:42> 'int' '||'
+|   | | |-BinaryOperator 0x7f8b0206ef50 <col:7, col:18> 'int' '!='
+|   | | | |-CallExpr 0x7f8b0206ef00 <col:7, col:13> 'int'
+|   | | | | |-ImplicitCastExpr 0x7f8b0206eee8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | | | `-DeclRefExpr 0x7f8b0206ee78 <col:7> 'int (int)' Function 0x7f8b0206e868 'foo' 'int (int)'
+|   | | | | `-IntegerLiteral 0x7f8b0206eea0 <col:12> 'int' 1
+|   | | | `-IntegerLiteral 0x7f8b0206ef30 <col:18> 'int' 4119272
+|   | | `-BinaryOperator 0x7f8b0206f048 <col:30, col:42> 'int' '!='
+|   | |   |-CallExpr 0x7f8b0206efd8 <col:30, col:36> 'int'
+|   | |   | |-ImplicitCastExpr 0x7f8b0206efc0 <col:30> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | | `-DeclRefExpr 0x7f8b0206ef78 <col:30> 'int (int)' Function 0x7f8b0206e868 'foo' 'int (int)'
+|   | |   | `-IntegerLiteral 0x7f8b0206efa0 <col:35> 'int' 2
+|   | |   `-UnaryOperator 0x7f8b0206f028 <col:41, col:42> 'int' prefix '-'
+|   | |     `-IntegerLiteral 0x7f8b0206f008 <col:42> 'int' 132158092
+|   | |-CallExpr 0x7f8b0206f220 <line:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f8b0206f208 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f8b0206f1b8 <col:5> '<builtin fn type>' Function 0x7f8b0206f0d0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f8b0206f2a0 <line:16:3, col:10>
+|     `-IntegerLiteral 0x7f8b0206f280 <col:10> 'int' 0
+`-FunctionDecl 0x7f8b0206f0d0 <line:15:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f8b0206f170 <col:5> Implicit

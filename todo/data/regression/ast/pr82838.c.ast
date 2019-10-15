@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7fde2682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fde2682c960 <../Data/C2AST/pr82838.c:3:1, col:36> col:8 struct S definition
+| |-FieldDecl 0x7fde27014238 <col:12, col:27> col:27 referenced a 'unsigned short'
+| |-FieldDecl 0x7fde27014298 <col:12, col:30> col:30 referenced b 'unsigned short'
+| `-FieldDecl 0x7fde270142f8 <col:12, col:33> col:33 referenced c 'unsigned short'
+|-VarDecl 0x7fde27014498 <line:4:1, col:14> col:10 used f 'struct S [10]'
+`-FunctionDecl 0x7fde27014610 <line:6:1, line:12:1> line:7:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fde27014550 <col:6, col:10> col:10 used e 'int'
+  `-CompoundStmt 0x7fde27014bb8 <line:8:1, line:12:1>
+    |-DeclStmt 0x7fde270147a0 <line:9:3, col:14>
+    | `-VarDecl 0x7fde27014740 <col:3, col:13> col:13 used x 'struct S *'
+    |-BinaryOperator 0x7fde27014990 <line:10:3, col:17> 'unsigned short' '='
+    | |-MemberExpr 0x7fde27014860 <col:3, col:8> 'unsigned short' lvalue .b 0x7fde27014298
+    | | `-ArraySubscriptExpr 0x7fde27014838 <col:3, col:6> 'struct S':'struct S' lvalue
+    | |   |-ImplicitCastExpr 0x7fde27014808 <col:3> 'struct S *' <ArrayToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fde270147b8 <col:3> 'struct S [10]' lvalue Var 0x7fde27014498 'f' 'struct S [10]'
+    | |   `-ImplicitCastExpr 0x7fde27014820 <col:5> 'int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fde270147e0 <col:5> 'int' lvalue ParmVar 0x7fde27014550 'e' 'int'
+    | `-ImplicitCastExpr 0x7fde27014978 <col:12, col:17> 'unsigned short' <LValueToRValue>
+    |   `-MemberExpr 0x7fde27014940 <col:12, col:17> 'unsigned short' lvalue .a 0x7fde27014238
+    |     `-ArraySubscriptExpr 0x7fde27014918 <col:12, col:15> 'struct S':'struct S' lvalue
+    |       |-ImplicitCastExpr 0x7fde270148e8 <col:12> 'struct S *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fde27014898 <col:12> 'struct S *' lvalue Var 0x7fde27014740 'x' 'struct S *'
+    |       `-ImplicitCastExpr 0x7fde27014900 <col:14> 'int' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fde270148c0 <col:14> 'int' lvalue ParmVar 0x7fde27014550 'e' 'int'
+    `-BinaryOperator 0x7fde27014b90 <line:11:3, col:17> 'unsigned short' '='
+      |-MemberExpr 0x7fde27014a60 <col:3, col:8> 'unsigned short' lvalue .c 0x7fde270142f8
+      | `-ArraySubscriptExpr 0x7fde27014a38 <col:3, col:6> 'struct S':'struct S' lvalue
+      |   |-ImplicitCastExpr 0x7fde27014a08 <col:3> 'struct S *' <ArrayToPointerDecay>
+      |   | `-DeclRefExpr 0x7fde270149b8 <col:3> 'struct S [10]' lvalue Var 0x7fde27014498 'f' 'struct S [10]'
+      |   `-ImplicitCastExpr 0x7fde27014a20 <col:5> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fde270149e0 <col:5> 'int' lvalue ParmVar 0x7fde27014550 'e' 'int'
+      `-ImplicitCastExpr 0x7fde27014b78 <col:12, col:17> 'unsigned short' <LValueToRValue>
+        `-MemberExpr 0x7fde27014b40 <col:12, col:17> 'unsigned short' lvalue .b 0x7fde27014298
+          `-ArraySubscriptExpr 0x7fde27014b18 <col:12, col:15> 'struct S':'struct S' lvalue
+            |-ImplicitCastExpr 0x7fde27014ae8 <col:12> 'struct S *' <LValueToRValue>
+            | `-DeclRefExpr 0x7fde27014a98 <col:12> 'struct S *' lvalue Var 0x7fde27014740 'x' 'struct S *'
+            `-ImplicitCastExpr 0x7fde27014b00 <col:14> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fde27014ac0 <col:14> 'int' lvalue ParmVar 0x7fde27014550 'e' 'int'

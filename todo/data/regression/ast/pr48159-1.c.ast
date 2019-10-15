@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f81510174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8150817860 <../Data/C2AST/pr48159-1.c:5:1, line:10:1> line:6:1 foo 'void (double, int, double *restrict, double *restrict)'
+  |-ParmVarDecl 0x7f8151018178 <col:6, col:13> col:13 used x 'double'
+  |-ParmVarDecl 0x7f8150817600 <col:16, col:20> col:20 used y 'int'
+  |-ParmVarDecl 0x7f81508176a0 <col:23, col:42> col:42 used z 'double *restrict'
+  |-ParmVarDecl 0x7f8150817718 <col:45, col:64> col:64 used w 'double *restrict'
+  `-CompoundStmt 0x7f8150817ba8 <line:7:1, line:10:1>
+    `-WhileStmt 0x7f8150817b88 <line:8:3, line:9:25>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7f8150817988 <line:8:10, col:11> 'int' postfix '--'
+      | `-DeclRefExpr 0x7f8150817960 <col:10> 'int' lvalue ParmVar 0x7f8150817600 'y' 'int'
+      `-BinaryOperator 0x7f8150817b60 <line:9:5, col:25> 'double' '='
+        |-UnaryOperator 0x7f81508179f0 <col:5, col:7> 'double' lvalue prefix '*'
+        | `-UnaryOperator 0x7f81508179d0 <col:6, col:7> 'double *' postfix '++'
+        |   `-DeclRefExpr 0x7f81508179a8 <col:6> 'double *restrict' lvalue ParmVar 0x7f81508176a0 'z' 'double *restrict'
+        `-BinaryOperator 0x7f8150817b38 <col:12, col:25> 'double' '*'
+          |-ParenExpr 0x7f8150817ad8 <col:12, col:21> 'double'
+          | `-BinaryOperator 0x7f8150817ab0 <col:13, col:20> 'double' '='
+          |   |-UnaryOperator 0x7f8150817a58 <col:13, col:15> 'double' lvalue prefix '*'
+          |   | `-UnaryOperator 0x7f8150817a38 <col:14, col:15> 'double *' postfix '++'
+          |   |   `-DeclRefExpr 0x7f8150817a10 <col:14> 'double *restrict' lvalue ParmVar 0x7f8150817718 'w' 'double *restrict'
+          |   `-ImplicitCastExpr 0x7f8150817a98 <col:20> 'double' <IntegralToFloating>
+          |     `-IntegerLiteral 0x7f8150817a78 <col:20> 'int' 0
+          `-ImplicitCastExpr 0x7f8150817b20 <col:25> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7f8150817af8 <col:25> 'double' lvalue ParmVar 0x7f8151018178 'x' 'double'

@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ffd3200ece8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffd3204ca00 <../Data/C2AST/pr46233.c:5:1, line:11:1> line:6:1 referenced foo 'int ()'
+  `-CompoundStmt 0x7ffd3204ccc0 <line:7:1, line:11:1>
+    |-DeclStmt 0x7ffd3204cb78 <line:8:3, col:12>
+    | `-VarDecl 0x7ffd3204caf8 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7ffd3204cb58 <col:11> 'int' 0
+    `-WhileStmt 0x7ffd3204cca0 <line:9:3, line:10:15>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7ffd3204cb90 <line:9:10> 'int' 1
+      `-CompoundAssignOperator 0x7ffd3204cc68 <line:10:5, col:15> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+        |-DeclRefExpr 0x7ffd3204cbb0 <col:5> 'int' lvalue Var 0x7ffd3204caf8 'i' 'int'
+        `-CallExpr 0x7ffd3204cc40 <col:10, col:15> 'int'
+          `-ImplicitCastExpr 0x7ffd3204cc28 <col:10> 'int (*)()' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7ffd3204cbd8 <col:10> 'int ()' Function 0x7ffd3204ca00 'foo' 'int ()'

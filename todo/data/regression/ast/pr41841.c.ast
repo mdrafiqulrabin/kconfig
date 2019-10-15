@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7ffd2302bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffd2302c960 <../Data/C2AST/pr41841.c:5:9, col:16> col:16 struct S
+|-TypedefDecl 0x7ffd2306d8d0 <col:1, col:19> col:19 referenced T 'struct S *'
+| `-PointerType 0x7ffd2306d880 'struct S *'
+|   `-ElaboratedType 0x7ffd2306d820 'struct S' sugar
+|     `-RecordType 0x7ffd2306d800 'struct S'
+|       `-Record 0x7ffd2302c960 'S'
+|-RecordDecl 0x7ffd2306d940 <line:6:9, col:18> col:9 struct definition
+|-TypedefDecl 0x7ffd2306daa0 <col:1, col:21> col:21 referenced U 'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *'
+| `-PointerType 0x7ffd2306da50 'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *'
+|   `-ElaboratedType 0x7ffd2306d9f0 'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9)' sugar
+|     `-RecordType 0x7ffd2306d9d0 'struct (anonymous at ../Data/C2AST/pr41841.c:6:9)'
+|       `-Record 0x7ffd2306d940 ''
+|-FunctionDecl 0x7ffd2306dbd8 <line:7:1, col:20> col:12 used f1 'int (void)' extern
+|-FunctionDecl 0x7ffd2306de80 <line:9:1, line:14:1> line:10:1 used f3 'void (U, int)' static
+| |-ParmVarDecl 0x7ffd2306dcf0 <col:5, col:7> col:7 used x 'U':'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *'
+| |-ParmVarDecl 0x7ffd2306dd68 <col:10, col:14> col:14 used y 'int'
+| `-CompoundStmt 0x7ffd2306e148 <line:11:1, line:14:1>
+|   |-DeclStmt 0x7ffd2306e038 <line:12:3, col:14>
+|   | `-VarDecl 0x7ffd2306df60 <col:3, col:13> col:5 a 'T':'struct S *' cinit
+|   |   `-CStyleCastExpr 0x7ffd2306e010 <col:9, col:13> 'T':'struct S *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7ffd2306dff8 <col:13> 'U':'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ffd2306dfc0 <col:13> 'U':'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *' lvalue ParmVar 0x7ffd2306dcf0 'x' 'U':'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *'
+|   `-BinaryOperator 0x7ffd2306e120 <line:13:3, col:12> 'int' '&&'
+|     |-ImplicitCastExpr 0x7ffd2306e108 <col:3> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ffd2306e050 <col:3> 'int' lvalue ParmVar 0x7ffd2306dd68 'y' 'int'
+|     `-CallExpr 0x7ffd2306e0e0 <col:8, col:12> 'int'
+|       `-ImplicitCastExpr 0x7ffd2306e0c8 <col:8> 'int (*)(void)' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7ffd2306e078 <col:8> 'int (void)' Function 0x7ffd2306dbd8 'f1' 'int (void)'
+|-FunctionDecl 0x7ffd2306e280 <line:16:1, line:20:1> line:17:1 used f2 'void (T)' static
+| |-ParmVarDecl 0x7ffd2306e178 <col:5, col:7> col:7 used x 'T':'struct S *'
+| `-CompoundStmt 0x7ffd2306e498 <line:18:1, line:20:1>
+|   `-CallExpr 0x7ffd2306e460 <line:19:3, col:15> 'void'
+|     |-ImplicitCastExpr 0x7ffd2306e448 <col:3> 'void (*)(U, int)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7ffd2306e328 <col:3> 'void (U, int)' Function 0x7ffd2306de80 'f3' 'void (U, int)'
+|     |-CStyleCastExpr 0x7ffd2306e3a0 <col:7, col:11> 'U':'struct (anonymous struct at ../Data/C2AST/pr41841.c:6:9) *' <BitCast>
+|     | `-ImplicitCastExpr 0x7ffd2306e388 <col:11> 'T':'struct S *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7ffd2306e350 <col:11> 'T':'struct S *' lvalue ParmVar 0x7ffd2306e178 'x' 'T':'struct S *'
+|     `-IntegerLiteral 0x7ffd2306e3c8 <col:14> 'int' 1
+`-VarDecl 0x7ffd2306e4c8 <line:22:1, col:42> col:16 used a 'void *volatile' cinit
+  |-ImplicitCastExpr 0x7ffd2306e610 <col:42> 'void *' <BitCast>
+  | `-ImplicitCastExpr 0x7ffd2306e5f8 <col:42> 'void (*)(T)' <FunctionToPointerDecay>
+  |   `-DeclRefExpr 0x7ffd2306e570 <col:42> 'void (T)' Function 0x7ffd2306e280 'f2' 'void (T)'
+  `-UsedAttr 0x7ffd2306e528 <col:33>

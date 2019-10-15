@@ -1,0 +1,68 @@
+../Data/C2AST/pr67839.c:16:3: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x1f) |= 1;
+  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:17:3: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x1f) &= 0xFE;
+  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:19:3: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x20) |= 1;
+  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:20:3: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x20) &= 0xFE;
+  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:22:3: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x3f) = IO_ADDR(0x3f);
+  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:22:19: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x3f) = IO_ADDR(0x3f);
+                  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:24:3: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x40) = IO_ADDR(0x40);
+  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+../Data/C2AST/pr67839.c:24:19: error: use of undeclared identifier '__AVR_SFR_OFFSET__'
+  IO_ADDR(0x40) = IO_ADDR(0x40);
+                  ^
+../Data/C2AST/pr67839.c:13:44: note: expanded from macro 'IO_ADDR'
+#define IO_ADDR(x) (*((volatile char *)x + __AVR_SFR_OFFSET__))
+                                           ^
+8 errors generated.
+TranslationUnitDecl 0x7f969582b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f969582b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f969582b580 '__int128'
+|-TypedefDecl 0x7f969582b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f969582b5a0 'unsigned __int128'
+|-TypedefDecl 0x7f969582bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f969582b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f969582b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f969582bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f969582bc00 'char *'
+|   `-BuiltinType 0x7f969582b380 'char'
+|-TypedefDecl 0x7f969582bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f969582beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f969582bd20 'struct __va_list_tag'
+|     `-Record 0x7f969582bc98 '__va_list_tag'
+`-FunctionDecl 0x7f9696000000 <../Data/C2AST/pr67839.c:14:1, line:26:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7f9696000558 <line:15:1, line:26:1>
+    `-ReturnStmt 0x7f9696000540 <line:25:3, col:10>
+      `-IntegerLiteral 0x7f9696000520 <col:10> 'int' 0

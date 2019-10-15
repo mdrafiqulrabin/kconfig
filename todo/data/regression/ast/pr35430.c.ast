@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7f8eaa02b6e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8eaa06d260 <../Data/C2AST/pr35430.c:5:1, line:10:1> line:6:1 foo 'void (_Complex int)'
+  |-ParmVarDecl 0x7f8eaa02c398 <col:6, col:22> col:22 used i '_Complex int'
+  `-CompoundStmt 0x7f8eaa06d508 <line:7:1, line:10:1>
+    |-BinaryOperator 0x7f8eaa06d408 <line:8:3, col:8> 'int' '=='
+    | |-ImplicitCastExpr 0x7f8eaa06d3d8 <col:3> '_Complex unsigned int' <IntegralComplexCast>
+    | | `-ImplicitCastExpr 0x7f8eaa06d390 <col:3> '_Complex int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8eaa06d348 <col:3> '_Complex int' lvalue ParmVar 0x7f8eaa02c398 'i' '_Complex int'
+    | `-ImplicitCastExpr 0x7f8eaa06d3f0 <col:8> '_Complex unsigned int' <IntegralRealToComplex>
+    |   `-IntegerLiteral 0x7f8eaa06d370 <col:8> 'unsigned int' 0
+    `-BinaryOperator 0x7f8eaa06d4e0 <line:9:3, col:9> 'int' '=='
+      |-ImplicitCastExpr 0x7f8eaa06d4b0 <col:3> '_Complex unsigned int' <IntegralComplexCast>
+      | `-ImplicitCastExpr 0x7f8eaa06d498 <col:3> '_Complex int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8eaa06d430 <col:3> '_Complex int' lvalue ParmVar 0x7f8eaa02c398 'i' '_Complex int'
+      `-ImplicitCastExpr 0x7f8eaa06d4c8 <col:8, col:9> '_Complex unsigned int' <IntegralRealToComplex>
+        `-UnaryOperator 0x7f8eaa06d478 <col:8, col:9> 'unsigned int' prefix '~'
+          `-IntegerLiteral 0x7f8eaa06d458 <col:9> 'unsigned int' 1

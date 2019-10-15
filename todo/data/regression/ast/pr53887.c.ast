@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x7ff2098150e8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7ff209815d60 <../Data/C2AST/pr53887.c:4:1, line:5:31> line:4:1
+| |-EnumConstantDecl 0x7ff20b014a20 <line:5:3> col:3 Failed 'int'
+| |-EnumConstantDecl 0x7ff20b014a68 <col:11> col:11 NoError 'int'
+| `-EnumConstantDecl 0x7ff20b014ab0 <col:20> col:20 referenced NoDiskette 'int'
+|-VarDecl 0x7ff20b014b50 <line:4:1, line:6:1> col:1 used a 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)'
+|-VarDecl 0x7ff20b014c20 <line:7:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7ff20b014c98 <col:1, col:8> col:8 used c 'int'
+`-FunctionDecl 0x7ff20b014d58 <line:8:1, line:23:1> line:9:1 fn1 'void ()'
+  `-CompoundStmt 0x7ff20b0151f8 <line:10:1, line:23:1>
+    |-IfStmt 0x7ff20b014ed8 <line:11:5, line:12:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ff20b014e20 <line:11:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ff20b014df8 <col:9> 'int' lvalue Var 0x7ff20b014c98 'c' 'int'
+    | |-BinaryOperator 0x7ff20b014eb0 <line:12:9, col:14> 'unsigned int' '<<'
+    | | |-ImplicitCastExpr 0x7ff20b014e98 <col:9> 'unsigned int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7ff20b014e80 <col:9> 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7ff20b014e38 <col:9> 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)' lvalue Var 0x7ff20b014b50 'a' 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)'
+    | | `-IntegerLiteral 0x7ff20b014e60 <col:14> 'int' 1
+    | `-<<<NULL>>>
+    `-SwitchStmt 0x7ff20b014f50 <line:13:5, line:22:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff20b014f38 <line:13:13> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff20b014f10 <col:13> 'int' lvalue Var 0x7ff20b014c20 'b' 'int'
+      `-CompoundStmt 0x7ff20b0151d0 <line:14:5, line:22:5>
+        |-DefaultStmt 0x7ff20b015020 <line:15:5, line:16:14>
+        | `-BinaryOperator 0x7ff20b014ff8 <col:9, col:14> 'unsigned int' '<<'
+        |   |-ImplicitCastExpr 0x7ff20b014fe0 <col:9> 'unsigned int' <IntegralCast>
+        |   | `-ImplicitCastExpr 0x7ff20b014fc8 <col:9> 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)' <LValueToRValue>
+        |   |   `-DeclRefExpr 0x7ff20b014f80 <col:9> 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)' lvalue Var 0x7ff20b014b50 'a' 'enum (anonymous enum at ../Data/C2AST/pr53887.c:4:1)':'enum (anonymous at ../Data/C2AST/pr53887.c:4:1)'
+        |   `-IntegerLiteral 0x7ff20b014fa8 <col:14> 'int' 1
+        |-CaseStmt 0x7ff20b015060 <line:17:5, line:18:13>
+        | |-IntegerLiteral 0x7ff20b015040 <line:17:10> 'int' 0
+        | |-<<<NULL>>>
+        | `-BinaryOperator 0x7ff20b0150e0 <line:18:9, col:13> 'int' '='
+        |   |-DeclRefExpr 0x7ff20b015098 <col:9> 'int' lvalue Var 0x7ff20b014c20 'b' 'int'
+        |   `-IntegerLiteral 0x7ff20b0150c0 <col:13> 'int' 0
+        `-CaseStmt 0x7ff20b015128 <line:19:5, line:21:9>
+          |-IntegerLiteral 0x7ff20b015108 <line:19:10> 'int' 1
+          |-<<<NULL>>>
+          `-CaseStmt 0x7ff20b015188 <line:20:5, line:21:9>
+            |-DeclRefExpr 0x7ff20b015160 <line:20:10> 'int' EnumConstant 0x7ff20b014ab0 'NoDiskette' 'int'
+            |-<<<NULL>>>
+            `-NullStmt 0x7ff20b0151c0 <line:21:9>

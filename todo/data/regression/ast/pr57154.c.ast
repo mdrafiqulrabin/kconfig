@@ -1,0 +1,104 @@
+TranslationUnitDecl 0x7fd5fa02bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd5fa02c960 <../Data/C2AST/pr57154.c:8:1, line:11:1> line:8:8 struct cur definition
+| `-FieldDecl 0x7fd5fa06d838 <line:10:3, col:17> col:17 referenced flags 'unsigned long'
+|-VarDecl 0x7fd5fa06d930 <line:12:1, col:13> col:13 used cur 'struct cur *'
+|-VarDecl 0x7fd5fa06d9e8 <line:14:1, col:15> col:15 used freeze_cnt 'unsigned long'
+|-FunctionDecl 0x7fd5fa06db28 <line:16:1, col:22> col:12 used foo 'int (void *)' extern
+| `-ParmVarDecl 0x7fd5fa06da60 <col:16, col:21> col:22 'void *'
+|-FunctionDecl 0x7fd5fa06dc78 <line:17:1, col:28> col:12 used slow_path 'int (void *)' extern
+| `-ParmVarDecl 0x7fd5fa06dbe8 <col:22, col:27> col:28 'void *'
+|-FunctionDecl 0x7fd5fa06ddc8 <line:19:1, line:24:1> line:19:19 used freezing 'int (void *)' static inline
+| |-ParmVarDecl 0x7fd5fa06dd38 <col:28, col:34> col:34 used p 'void *'
+| `-CompoundStmt 0x7fd5fa06e450 <line:20:1, line:24:1>
+|   |-IfStmt 0x7fd5fa06e350 <line:21:9, line:22:24>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd5fa06e2b0 <line:6:24, col:49> 'long'
+|   | | |-ImplicitCastExpr 0x7fd5fa06e298 <col:24> 'long (*)(long, long)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fd5fa06e078 <col:24> '<builtin fn type>' Function 0x7fd5fa06deb0 '__builtin_expect' 'long (long, long)'
+|   | | |-ImplicitCastExpr 0x7fd5fa06e2e8 <col:41, col:45> 'long' <IntegralCast>
+|   | | | `-UnaryOperator 0x7fd5fa06e228 <col:41, col:45> 'int' prefix '!'
+|   | | |   `-UnaryOperator 0x7fd5fa06e208 <col:42, col:45> 'int' prefix '!'
+|   | | |     `-ParenExpr 0x7fd5fa06e1e8 <col:43, col:45> 'int'
+|   | | |       `-UnaryOperator 0x7fd5fa06e1c8 <line:21:20, col:36> 'int' prefix '!'
+|   | | |         `-CallExpr 0x7fd5fa06e180 <col:21, col:36> 'int'
+|   | | |           |-ImplicitCastExpr 0x7fd5fa06e168 <col:21> 'int (*)(void *)' <FunctionToPointerDecay>
+|   | | |           | `-DeclRefExpr 0x7fd5fa06e0a0 <col:21> 'int (void *)' Function 0x7fd5fa06db28 'foo' 'int (void *)'
+|   | | |           `-ImplicitCastExpr 0x7fd5fa06e1b0 <col:25, col:26> 'void *' <BitCast>
+|   | | |             `-UnaryOperator 0x7fd5fa06e118 <col:25, col:26> 'unsigned long *' prefix '&'
+|   | | |               `-DeclRefExpr 0x7fd5fa06e0c8 <col:26> 'unsigned long' lvalue Var 0x7fd5fa06d9e8 'freeze_cnt' 'unsigned long'
+|   | | `-ImplicitCastExpr 0x7fd5fa06e300 <line:6:48> 'long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7fd5fa06e248 <col:48> 'int' 1
+|   | |-ReturnStmt 0x7fd5fa06e338 <line:22:17, col:24>
+|   | | `-IntegerLiteral 0x7fd5fa06e318 <col:24> 'int' 0
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fd5fa06e438 <line:23:9, col:27>
+|     `-CallExpr 0x7fd5fa06e3f0 <col:16, col:27> 'int'
+|       |-ImplicitCastExpr 0x7fd5fa06e3d8 <col:16> 'int (*)(void *)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fd5fa06e388 <col:16> 'int (void *)' Function 0x7fd5fa06dc78 'slow_path' 'int (void *)'
+|       `-ImplicitCastExpr 0x7fd5fa06e420 <col:26> 'void *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fd5fa06e3b0 <col:26> 'void *' lvalue ParmVar 0x7fd5fa06dd38 'p' 'void *'
+|-FunctionDecl 0x7fd5fa06deb0 <line:6:24> col:24 implicit used __builtin_expect 'long (long, long)' extern
+| |-ParmVarDecl 0x7fd5fa06df50 <<invalid sloc>> <invalid sloc> 'long'
+| |-ParmVarDecl 0x7fd5fa06dfb0 <<invalid sloc>> <invalid sloc> 'long'
+| |-NoThrowAttr 0x7fd5fa06e020 <col:24> Implicit
+| `-ConstAttr 0x7fd5fa06e068 <col:24> Implicit
+|-FunctionDecl 0x7fd5fa06e538 <line:26:1, col:21> col:12 used blah 'int (void)' extern
+`-FunctionDecl 0x7fd5fa06e6b8 <line:28:1, line:44:1> line:28:5 testcase 'int (int)'
+  |-ParmVarDecl 0x7fd5fa06e5f0 <col:14, col:18> col:18 used check_kthr_stop 'int'
+  `-CompoundStmt 0x7fd5fa06ee18 <line:29:1, line:44:1>
+    |-DeclStmt 0x7fd5fa06e800 <line:30:3, col:21>
+    | `-VarDecl 0x7fd5fa06e778 <col:3, col:20> col:7 used was_frozen 'int' cinit
+    |   `-IntegerLiteral 0x7fd5fa06e7d8 <col:20> 'int' 0
+    |-ForStmt 0x7fd5fa06ed88 <line:32:3, line:41:3>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7fd5fa06ed60 <line:32:12, line:41:3>
+    |   |-IfStmt 0x7fd5fa06eb48 <line:33:5, line:5:19>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-BinaryOperator 0x7fd5fa06ea18 <line:33:9, line:34:35> 'int' '||'
+    |   | | |-UnaryOperator 0x7fd5fa06e8e0 <line:33:9, col:22> 'int' prefix '!'
+    |   | | | `-CallExpr 0x7fd5fa06e880 <col:10, col:22> 'int'
+    |   | | |   |-ImplicitCastExpr 0x7fd5fa06e868 <col:10> 'int (*)(void *)' <FunctionToPointerDecay>
+    |   | | |   | `-DeclRefExpr 0x7fd5fa06e818 <col:10> 'int (void *)' Function 0x7fd5fa06ddc8 'freezing' 'int (void *)'
+    |   | | |   `-ImplicitCastExpr 0x7fd5fa06e8c8 <col:19> 'void *' <BitCast>
+    |   | | |     `-ImplicitCastExpr 0x7fd5fa06e8b0 <col:19> 'struct cur *' <LValueToRValue>
+    |   | | |       `-DeclRefExpr 0x7fd5fa06e840 <col:19> 'struct cur *' lvalue Var 0x7fd5fa06d930 'cur' 'struct cur *'
+    |   | | `-ParenExpr 0x7fd5fa06e9f8 <line:34:9, col:35> 'int'
+    |   | |   `-BinaryOperator 0x7fd5fa06e9d0 <col:10, col:34> 'int' '&&'
+    |   | |     |-ImplicitCastExpr 0x7fd5fa06e9b8 <col:10> 'int' <LValueToRValue>
+    |   | |     | `-DeclRefExpr 0x7fd5fa06e900 <col:10> 'int' lvalue ParmVar 0x7fd5fa06e5f0 'check_kthr_stop' 'int'
+    |   | |     `-CallExpr 0x7fd5fa06e990 <col:29, col:34> 'int'
+    |   | |       `-ImplicitCastExpr 0x7fd5fa06e978 <col:29> 'int (*)(void)' <FunctionToPointerDecay>
+    |   | |         `-DeclRefExpr 0x7fd5fa06e928 <col:29> 'int (void)' Function 0x7fd5fa06e538 'blah' 'int (void)'
+    |   | |-CompoundAssignOperator 0x7fd5fa06eb10 <line:35:7, line:5:19> 'unsigned long' '&=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   | | |-MemberExpr 0x7fd5fa06ea80 <line:35:7, col:12> 'unsigned long' lvalue ->flags 0x7fd5fa06d838
+    |   | | | `-ImplicitCastExpr 0x7fd5fa06ea68 <col:7> 'struct cur *' <LValueToRValue>
+    |   | | |   `-DeclRefExpr 0x7fd5fa06ea40 <col:7> 'struct cur *' lvalue Var 0x7fd5fa06d930 'cur' 'struct cur *'
+    |   | | `-ImplicitCastExpr 0x7fd5fa06eaf8 <col:21, line:5:19> 'unsigned long' <IntegralCast>
+    |   | |   `-UnaryOperator 0x7fd5fa06ead8 <line:35:21, line:5:19> 'int' prefix '~'
+    |   | |     `-IntegerLiteral 0x7fd5fa06eab8 <col:19> 'int' 65536
+    |   | `-<<<NULL>>>
+    |   |-IfStmt 0x7fd5fa06ecb8 <line:37:5, line:38:7>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7fd5fa06ec90 <line:37:9, col:33> 'int' prefix '!'
+    |   | | `-ParenExpr 0x7fd5fa06ec70 <col:10, col:33> 'unsigned long'
+    |   | |   `-BinaryOperator 0x7fd5fa06ec48 <col:11, line:5:19> 'unsigned long' '&'
+    |   | |     |-ImplicitCastExpr 0x7fd5fa06ec18 <line:37:11, col:16> 'unsigned long' <LValueToRValue>
+    |   | |     | `-MemberExpr 0x7fd5fa06ebc0 <col:11, col:16> 'unsigned long' lvalue ->flags 0x7fd5fa06d838
+    |   | |     |   `-ImplicitCastExpr 0x7fd5fa06eba8 <col:11> 'struct cur *' <LValueToRValue>
+    |   | |     |     `-DeclRefExpr 0x7fd5fa06eb80 <col:11> 'struct cur *' lvalue Var 0x7fd5fa06d930 'cur' 'struct cur *'
+    |   | |     `-ImplicitCastExpr 0x7fd5fa06ec30 <line:5:19> 'unsigned long' <IntegralCast>
+    |   | |       `-IntegerLiteral 0x7fd5fa06ebf8 <col:19> 'int' 65536
+    |   | |-BreakStmt 0x7fd5fa06ecb0 <line:38:7>
+    |   | `-<<<NULL>>>
+    |   `-BinaryOperator 0x7fd5fa06ed38 <line:40:5, col:18> 'int' '='
+    |     |-DeclRefExpr 0x7fd5fa06ecf0 <col:5> 'int' lvalue Var 0x7fd5fa06e778 'was_frozen' 'int'
+    |     `-IntegerLiteral 0x7fd5fa06ed18 <col:18> 'int' 1
+    `-ReturnStmt 0x7fd5fa06ee00 <line:43:3, col:10>
+      `-ImplicitCastExpr 0x7fd5fa06ede8 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd5fa06edc0 <col:10> 'int' lvalue Var 0x7fd5fa06e778 'was_frozen' 'int'

@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fb74802b0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb74802bd60 <../Data/C2AST/pr48134.c:5:1, line:8:1> line:5:8 struct S definition
+| |-FieldDecl 0x7fb749014238 <line:7:3, col:7> col:7 referenced w 'int'
+| `-FieldDecl 0x7fb749014298 <col:3, col:10> col:10 z 'int'
+|-RecordDecl 0x7fb7490142e0 <line:9:1, line:12:1> line:9:8 struct T definition
+| `-FieldDecl 0x7fb7490143e0 <line:11:3, col:12> col:12 referenced s 'struct S':'struct S'
+|-VarDecl 0x7fb749014490 <line:14:1, col:5> col:5 used i 'int'
+|-FunctionDecl 0x7fb749014660 <line:16:1, line:21:1> line:17:1 used bar 'struct S (struct S)' static inline
+| |-ParmVarDecl 0x7fb749014550 <col:6, col:15> col:15 used x 'struct S':'struct S'
+| `-CompoundStmt 0x7fb7490147a8 <line:18:1, line:21:1>
+|   |-UnaryOperator 0x7fb749014730 <line:19:3, col:4> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7fb749014708 <col:3> 'int' lvalue Var 0x7fb749014490 'i' 'int'
+|   `-ReturnStmt 0x7fb749014790 <line:20:3, col:10>
+|     `-ImplicitCastExpr 0x7fb749014778 <col:10> 'struct S':'struct S' <LValueToRValue>
+|       `-DeclRefExpr 0x7fb749014750 <col:10> 'struct S':'struct S' lvalue ParmVar 0x7fb749014550 'x' 'struct S':'struct S'
+`-FunctionDecl 0x7fb7490149b8 <line:23:1, line:32:1> line:24:1 foo 'int (struct T, struct S)'
+  |-ParmVarDecl 0x7fb749014820 <col:6, col:15> col:15 used t 'struct T':'struct T'
+  |-ParmVarDecl 0x7fb7490148a0 <col:18, col:27> col:27 used s 'struct S':'struct S'
+  `-CompoundStmt 0x7fb749015078 <line:25:1, line:32:1>
+    |-DeclStmt 0x7fb749014b98 <line:26:3, col:19>
+    | `-VarDecl 0x7fb749014af0 <col:3, col:18> col:13 used c 'struct S *' cinit
+    |   `-UnaryOperator 0x7fb749014b78 <col:17, col:18> 'struct S *' prefix '&'
+    |     `-DeclRefExpr 0x7fb749014b50 <col:18> 'struct S':'struct S' lvalue ParmVar 0x7fb7490148a0 's' 'struct S':'struct S'
+    |-IfStmt 0x7fb749014cc0 <line:27:3, line:28:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fb749014bd8 <line:27:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fb749014bb0 <col:7> 'int' lvalue Var 0x7fb749014490 'i' 'int'
+    | |-BinaryOperator 0x7fb749014c98 <line:28:5, col:12> 'struct S *' '='
+    | | |-DeclRefExpr 0x7fb749014bf0 <col:5> 'struct S *' lvalue Var 0x7fb749014af0 'c' 'struct S *'
+    | | `-UnaryOperator 0x7fb749014c78 <col:9, col:12> 'struct S *' prefix '&'
+    | |   `-MemberExpr 0x7fb749014c40 <col:10, col:12> 'struct S':'struct S' lvalue .s 0x7fb7490143e0
+    | |     `-DeclRefExpr 0x7fb749014c18 <col:10> 'struct T':'struct T' lvalue ParmVar 0x7fb749014820 't' 'struct T':'struct T'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7fb749014db0 <line:29:3, col:11> 'int' '='
+    | |-MemberExpr 0x7fb749014d58 <col:3, col:7> 'int' lvalue .w 0x7fb749014238
+    | | `-MemberExpr 0x7fb749014d20 <col:3, col:5> 'struct S':'struct S' lvalue .s 0x7fb7490143e0
+    | |   `-DeclRefExpr 0x7fb749014cf8 <col:3> 'struct T':'struct T' lvalue ParmVar 0x7fb749014820 't' 'struct T':'struct T'
+    | `-IntegerLiteral 0x7fb749014d90 <col:11> 'int' 3
+    |-BinaryOperator 0x7fb749014f88 <line:30:3, col:14> 'struct S':'struct S' '='
+    | |-DeclRefExpr 0x7fb749014e20 <col:3> 'struct S':'struct S' lvalue ParmVar 0x7fb7490148a0 's' 'struct S':'struct S'
+    | `-CallExpr 0x7fb749014f40 <col:7, col:14> 'struct S':'struct S'
+    |   |-ImplicitCastExpr 0x7fb749014f28 <col:7> 'struct S (*)(struct S)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb749014e48 <col:7> 'struct S (struct S)' Function 0x7fb749014660 'bar' 'struct S (struct S)'
+    |   `-ImplicitCastExpr 0x7fb749014f70 <col:12, col:13> 'struct S':'struct S' <LValueToRValue>
+    |     `-UnaryOperator 0x7fb749014eb0 <col:12, col:13> 'struct S':'struct S' lvalue prefix '*'
+    |       `-ImplicitCastExpr 0x7fb749014e98 <col:13> 'struct S *' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fb749014e70 <col:13> 'struct S *' lvalue Var 0x7fb749014af0 'c' 'struct S *'
+    `-ReturnStmt 0x7fb749015060 <line:31:3, col:14>
+      `-ImplicitCastExpr 0x7fb749015048 <col:10, col:14> 'int' <LValueToRValue>
+        `-MemberExpr 0x7fb749015010 <col:10, col:14> 'int' lvalue .w 0x7fb749014238
+          `-MemberExpr 0x7fb749014fd8 <col:10, col:12> 'struct S':'struct S' lvalue .s 0x7fb7490143e0
+            `-DeclRefExpr 0x7fb749014fb0 <col:10> 'struct T':'struct T' lvalue ParmVar 0x7fb749014820 't' 'struct T':'struct T'

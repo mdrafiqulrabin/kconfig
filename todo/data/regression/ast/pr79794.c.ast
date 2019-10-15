@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fccb002bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fccb002c960 <../Data/C2AST/pr79794.c:6:1, line:10:1> line:6:8 struct node_struct definition
+| |-FieldDecl 0x7fccb0814230 <line:8:3, col:18> col:18 gap '_Complex float'
+| `-FieldDecl 0x7fccb0814290 <line:9:3, col:22> col:22 referenced state 'unsigned long long'
+|-RecordDecl 0x7fccb08142d8 <line:12:1, line:16:1> line:12:8 struct reg_struct definition
+| |-FieldDecl 0x7fccb0814398 <line:14:3, col:7> col:7 referenced size 'int'
+| `-FieldDecl 0x7fccb0814490 <line:15:3, col:23> col:23 referenced node 'struct node_struct *'
+`-FunctionDecl 0x7fccb0814710 <line:18:1, line:25:1> line:19:1 func 'void (int, struct reg_struct *)'
+  |-ParmVarDecl 0x7fccb08144f0 <col:6, col:10> col:10 used target 'int'
+  |-ParmVarDecl 0x7fccb0814600 <col:18, col:37> col:37 used reg 'struct reg_struct *'
+  `-CompoundStmt 0x7fccb0814cc8 <line:20:1, line:25:1>
+    |-DeclStmt 0x7fccb0814878 <line:21:3, col:8>
+    | `-VarDecl 0x7fccb0814818 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fccb0814c90 <line:23:3, line:24:60>
+      |-BinaryOperator 0x7fccb08148d8 <line:23:7, col:9> 'int' '='
+      | |-DeclRefExpr 0x7fccb0814890 <col:7> 'int' lvalue Var 0x7fccb0814818 'i' 'int'
+      | `-IntegerLiteral 0x7fccb08148b8 <col:9> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fccb08149d0 <col:12, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7fccb08149a0 <col:12> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fccb0814900 <col:12> 'int' lvalue Var 0x7fccb0814818 'i' 'int'
+      | `-ImplicitCastExpr 0x7fccb08149b8 <col:14, col:19> 'int' <LValueToRValue>
+      |   `-MemberExpr 0x7fccb0814968 <col:14, col:19> 'int' lvalue ->size 0x7fccb0814398
+      |     `-ImplicitCastExpr 0x7fccb0814950 <col:14> 'struct reg_struct *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fccb0814928 <col:14> 'struct reg_struct *' lvalue ParmVar 0x7fccb0814600 'reg' 'struct reg_struct *'
+      |-UnaryOperator 0x7fccb0814a20 <col:25, col:26> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fccb08149f8 <col:25> 'int' lvalue Var 0x7fccb0814818 'i' 'int'
+      `-CompoundAssignOperator 0x7fccb0814c58 <line:24:5, col:60> 'unsigned long long' '^=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+        |-MemberExpr 0x7fccb0814b38 <col:5, col:18> 'unsigned long long' lvalue .state 0x7fccb0814290
+        | `-ArraySubscriptExpr 0x7fccb0814b10 <col:5, col:16> 'struct node_struct':'struct node_struct' lvalue
+        |   |-ImplicitCastExpr 0x7fccb0814ae0 <col:5, col:10> 'struct node_struct *' <LValueToRValue>
+        |   | `-MemberExpr 0x7fccb0814a80 <col:5, col:10> 'struct node_struct *' lvalue ->node 0x7fccb0814490
+        |   |   `-ImplicitCastExpr 0x7fccb0814a68 <col:5> 'struct reg_struct *' <LValueToRValue>
+        |   |     `-DeclRefExpr 0x7fccb0814a40 <col:5> 'struct reg_struct *' lvalue ParmVar 0x7fccb0814600 'reg' 'struct reg_struct *'
+        |   `-ImplicitCastExpr 0x7fccb0814af8 <col:15> 'int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7fccb0814ab8 <col:15> 'int' lvalue Var 0x7fccb0814818 'i' 'int'
+        `-ParenExpr 0x7fccb0814c38 <col:27, col:60> 'unsigned long long'
+          `-BinaryOperator 0x7fccb0814c10 <col:28, col:54> 'unsigned long long' '<<'
+            |-CStyleCastExpr 0x7fccb0814ba8 <col:28, col:49> 'unsigned long long' <IntegralCast>
+            | `-IntegerLiteral 0x7fccb0814b70 <col:49> 'int' 1
+            `-ImplicitCastExpr 0x7fccb0814bf8 <col:54> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fccb0814bd0 <col:54> 'int' lvalue ParmVar 0x7fccb08144f0 'target' 'int'

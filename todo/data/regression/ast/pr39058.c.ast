@@ -1,0 +1,51 @@
+TranslationUnitDecl 0x7fc2ed02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc2ed06d800 <../Data/C2AST/pr39058.c:5:1, line:11:1> line:6:1 f1 'double ()'
+| `-CompoundStmt 0x7fc2ed06dbd8 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7fc2ed06d958 <line:8:3, col:11>
+|   | `-VarDecl 0x7fc2ed06d8f8 <col:3, col:10> col:10 used x 'double'
+|   |-GCCAsmStmt 0x7fc2ed06db08 <line:9:3, col:35>
+|   | |-DeclRefExpr 0x7fc2ed06da38 <col:21> 'double' lvalue Var 0x7fc2ed06d8f8 'x' 'double'
+|   | `-ImplicitCastExpr 0x7fc2ed06daf0 <col:33> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc2ed06dac8 <col:33> 'double' lvalue Var 0x7fc2ed06d8f8 'x' 'double'
+|   `-ReturnStmt 0x7fc2ed06dbc0 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7fc2ed06dba8 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc2ed06db80 <col:10> 'double' lvalue Var 0x7fc2ed06d8f8 'x' 'double'
+|-FunctionDecl 0x7fc2ed06dc28 <line:13:1, line:19:1> line:14:1 f2 'double ()'
+| `-CompoundStmt 0x7fc2ed06df88 <line:15:1, line:19:1>
+|   |-DeclStmt 0x7fc2ed06dd40 <line:16:3, col:11>
+|   | `-VarDecl 0x7fc2ed06dce0 <col:3, col:10> col:10 used x 'double'
+|   |-GCCAsmStmt 0x7fc2ed06deb8 <line:17:3, col:31>
+|   | |-DeclRefExpr 0x7fc2ed06dde8 <col:19> 'double' lvalue Var 0x7fc2ed06dce0 'x' 'double'
+|   | `-ImplicitCastExpr 0x7fc2ed06dea0 <col:29> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc2ed06de78 <col:29> 'double' lvalue Var 0x7fc2ed06dce0 'x' 'double'
+|   `-ReturnStmt 0x7fc2ed06df70 <line:18:3, col:10>
+|     `-ImplicitCastExpr 0x7fc2ed06df58 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc2ed06df30 <col:10> 'double' lvalue Var 0x7fc2ed06dce0 'x' 'double'
+|-FunctionDecl 0x7fc2ed06dfd8 <line:21:1, line:27:1> line:22:1 f3 'double ()'
+| `-CompoundStmt 0x7fc2ed06e430 <line:23:1, line:27:1>
+|   |-DeclStmt 0x7fc2ed06e180 <line:24:3, col:14>
+|   | |-VarDecl 0x7fc2ed06e090 <col:3, col:10> col:10 used x 'double'
+|   | `-VarDecl 0x7fc2ed06e108 <col:3, col:13> col:13 used y 'double'
+|   |-GCCAsmStmt 0x7fc2ed06e330 <line:25:3, col:59>
+|   | |-DeclRefExpr 0x7fc2ed06e1f0 <col:21> 'double' lvalue Var 0x7fc2ed06e090 'x' 'double'
+|   | |-DeclRefExpr 0x7fc2ed06e248 <col:33> 'double' lvalue Var 0x7fc2ed06e108 'y' 'double'
+|   | |-ImplicitCastExpr 0x7fc2ed06e318 <col:46> 'double' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fc2ed06e2a0 <col:46> 'double' lvalue Var 0x7fc2ed06e090 'x' 'double'
+|   | `-IntegerLiteral 0x7fc2ed06e2f8 <col:57> 'int' 0
+|   `-ReturnStmt 0x7fc2ed06e418 <line:26:3, col:10>
+|     `-ImplicitCastExpr 0x7fc2ed06e400 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7fc2ed06e3d8 <col:10> 'double' lvalue Var 0x7fc2ed06e090 'x' 'double'
+`-FunctionDecl 0x7fc2ed06e480 <line:29:1, line:35:1> line:30:1 f4 'double ()'
+  `-CompoundStmt 0x7fc2ed06e900 <line:31:1, line:35:1>
+    |-DeclStmt 0x7fc2ed06e628 <line:32:3, col:14>
+    | |-VarDecl 0x7fc2ed06e538 <col:3, col:10> col:10 used x 'double'
+    | `-VarDecl 0x7fc2ed06e5b0 <col:3, col:13> col:13 used y 'double'
+    |-GCCAsmStmt 0x7fc2ed06e800 <line:33:3, col:50>
+    | |-DeclRefExpr 0x7fc2ed06e698 <col:19> 'double' lvalue Var 0x7fc2ed06e538 'x' 'double'
+    | |-DeclRefExpr 0x7fc2ed06e6f0 <col:29> 'double' lvalue Var 0x7fc2ed06e5b0 'y' 'double'
+    | |-ImplicitCastExpr 0x7fc2ed06e7c0 <col:39> 'double' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fc2ed06e748 <col:39> 'double' lvalue Var 0x7fc2ed06e538 'x' 'double'
+    | `-IntegerLiteral 0x7fc2ed06e7a0 <col:48> 'int' 0
+    `-ReturnStmt 0x7fc2ed06e8e8 <line:34:3, col:10>
+      `-ImplicitCastExpr 0x7fc2ed06e8d0 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fc2ed06e8a8 <col:10> 'double' lvalue Var 0x7fc2ed06e538 'x' 'double'

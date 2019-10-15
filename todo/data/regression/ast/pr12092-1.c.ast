@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f8e488078e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8e47023710 <../Data/C2AST/pr12092-1.c:7:1, line:12:1> line:7:6 DecodeAC 'void (int, int *)'
+  |-ParmVarDecl 0x7f8e48808578 <col:15, col:19> col:19 used index 'int'
+  |-ParmVarDecl 0x7f8e47023640 <col:25, col:30> col:30 used matrix 'int *'
+  `-CompoundStmt 0x7f8e47023bb8 <line:8:1, line:12:1>
+    |-DeclStmt 0x7f8e47023878 <line:9:3, col:12>
+    | `-VarDecl 0x7f8e47023818 <col:3, col:8> col:8 used mptr 'int *'
+    `-ForStmt 0x7f8e47023b80 <line:11:3, col:59>
+      |-BinaryOperator 0x7f8e47023960 <col:7, col:19> 'int *' '='
+      | |-DeclRefExpr 0x7f8e47023890 <col:7> 'int *' lvalue Var 0x7f8e47023818 'mptr' 'int *'
+      | `-BinaryOperator 0x7f8e47023938 <col:12, col:19> 'int *' '+'
+      |   |-ImplicitCastExpr 0x7f8e47023908 <col:12> 'int *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f8e470238b8 <col:12> 'int *' lvalue ParmVar 0x7f8e47023640 'matrix' 'int *'
+      |   `-ImplicitCastExpr 0x7f8e47023920 <col:19> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f8e470238e0 <col:19> 'int' lvalue ParmVar 0x7f8e48808578 'index' 'int'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8e47023a50 <col:25, col:37> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8e47023a38 <col:25> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8e47023988 <col:25> 'int *' lvalue Var 0x7f8e47023818 'mptr' 'int *'
+      | `-BinaryOperator 0x7f8e47023a10 <col:30, col:37> 'int *' '+'
+      |   |-ImplicitCastExpr 0x7f8e470239f8 <col:30> 'int *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f8e470239b0 <col:30> 'int *' lvalue ParmVar 0x7f8e47023640 'matrix' 'int *'
+      |   `-IntegerLiteral 0x7f8e470239d8 <col:37> 'int' 64
+      |-UnaryOperator 0x7f8e47023aa0 <col:40, col:44> 'int *' postfix '++'
+      | `-DeclRefExpr 0x7f8e47023a78 <col:40> 'int *' lvalue Var 0x7f8e47023818 'mptr' 'int *'
+      `-CompoundStmt 0x7f8e47023b68 <col:48, col:59>
+        `-BinaryOperator 0x7f8e47023b40 <col:49, col:57> 'int' '='
+          |-UnaryOperator 0x7f8e47023b00 <col:49, col:50> 'int' lvalue prefix '*'
+          | `-ImplicitCastExpr 0x7f8e47023ae8 <col:50> 'int *' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f8e47023ac0 <col:50> 'int *' lvalue Var 0x7f8e47023818 'mptr' 'int *'
+          `-IntegerLiteral 0x7f8e47023b20 <col:57> 'int' 0

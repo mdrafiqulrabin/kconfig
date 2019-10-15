@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fd80b80a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd80c014220 <../Data/C2AST/pr70821.c:6:1, col:15> col:6 used bar 'void (void)'
+|-FunctionDecl 0x7fd80c014400 <line:8:1, line:13:1> line:9:1 foo 'void (int *)'
+| |-ParmVarDecl 0x7fd80c014340 <col:6, col:11> col:11 used p 'int *'
+| `-CompoundStmt 0x7fd80c0147d0 <line:10:1, line:13:1>
+|   `-IfStmt 0x7fd80c014798 <line:11:3, line:12:10>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-AtomicExpr 0x7fd80c0146a8 <line:11:7, col:49> 'int'
+|     | |-ImplicitCastExpr 0x7fd80c014690 <col:27> 'int *' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fd80c0145a0 <col:27> 'int *' lvalue ParmVar 0x7fd80c014340 'p' 'int *'
+|     | |-IntegerLiteral 0x7fd80c0145e8 <<built-in>:16:26> 'int' 5
+|     | `-IntegerLiteral 0x7fd80c0145c8 <../Data/C2AST/pr70821.c:11:30> 'int' 1
+|     |-CallExpr 0x7fd80c014770 <line:12:5, col:10> 'void'
+|     | `-ImplicitCastExpr 0x7fd80c014758 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|     |   `-DeclRefExpr 0x7fd80c014700 <col:5> 'void (void)' Function 0x7fd80c014220 'bar' 'void (void)'
+|     `-<<<NULL>>>
+`-FunctionDecl 0x7fd80c0144d8 <line:11:7> col:7 implicit used __atomic_sub_fetch 'void ()' extern

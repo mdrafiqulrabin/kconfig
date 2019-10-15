@@ -1,0 +1,93 @@
+TranslationUnitDecl 0x7fbae10128e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbae1090820 <../Data/C2AST/pr30260.c:6:1, col:22> col:6 used link_error 'void (void)'
+|-EnumDecl 0x7fbae1090900 <line:8:1, line:11:1> line:8:6 A
+| |-EnumConstantDecl 0x7fbae10909e0 <line:9:3, col:8> col:3 referenced A1 'int'
+| | `-IntegerLiteral 0x7fbae10909c0 <col:8> 'int' 0
+| `-EnumConstantDecl 0x7fbae1090a98 <line:10:3, col:13> col:3 referenced A2 'int'
+|   `-BinaryOperator 0x7fbae1090a70 <col:8, col:13> 'int' '-'
+|     |-DeclRefExpr 0x7fbae1090a28 <col:8> 'int' EnumConstant 0x7fbae10909e0 'A1' 'int'
+|     `-IntegerLiteral 0x7fbae1090a50 <col:13> 'int' 1
+|-EnumDecl 0x7fbae1090ae0 <line:12:1, line:15:1> line:12:6 B
+| |-EnumConstantDecl 0x7fbae1090bd8 <line:13:3, col:8> col:3 referenced B1 'int'
+| | `-ImplicitCastExpr 0x7fbae1090bc0 <col:8> 'int' <IntegralCast>
+| |   `-IntegerLiteral 0x7fbae1090ba0 <col:8> 'unsigned int' 0
+| `-EnumConstantDecl 0x7fbae1090c90 <line:14:3, col:13> col:3 referenced B2 'int'
+|   `-BinaryOperator 0x7fbae1090c68 <col:8, col:13> 'int' '-'
+|     |-DeclRefExpr 0x7fbae1090c20 <col:8> 'int' EnumConstant 0x7fbae1090bd8 'B1' 'int'
+|     `-IntegerLiteral 0x7fbae1090c48 <col:13> 'int' 1
+|-FunctionDecl 0x7fbae1090da8 <line:16:1, line:31:1> line:16:5 main 'int (void)'
+| `-CompoundStmt 0x7fbae10916c8 <line:17:1, line:31:1>
+|   |-DeclStmt 0x7fbae1090f88 <line:18:3, col:16>
+|   | `-VarDecl 0x7fbae1090ed0 <col:3, col:15> col:10 used a 'enum A':'enum A' cinit
+|   |   `-ImplicitCastExpr 0x7fbae1090f70 <col:14, col:15> 'enum A':'enum A' <IntegralCast>
+|   |     `-UnaryOperator 0x7fbae1090f50 <col:14, col:15> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7fbae1090f30 <col:15> 'int' 1
+|   |-DeclStmt 0x7fbae10910a8 <line:19:3, col:16>
+|   | `-VarDecl 0x7fbae1090ff0 <col:3, col:15> col:10 used b 'enum B':'enum B' cinit
+|   |   `-ImplicitCastExpr 0x7fbae1091090 <col:14, col:15> 'enum B':'enum B' <IntegralCast>
+|   |     `-UnaryOperator 0x7fbae1091070 <col:14, col:15> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7fbae1091050 <col:15> 'int' 1
+|   |-IfStmt 0x7fbae1091238 <line:21:3, line:22:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fbae1091180 <line:21:7, col:14> 'int' prefix '!'
+|   | | `-ParenExpr 0x7fbae1091160 <col:8, col:14> 'int'
+|   | |   `-BinaryOperator 0x7fbae1091138 <col:9, col:13> 'int' '<'
+|   | |     |-ImplicitCastExpr 0x7fbae1091120 <col:9> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7fbae1091108 <col:9> 'enum A':'enum A' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x7fbae10910c0 <col:9> 'enum A':'enum A' lvalue Var 0x7fbae1090ed0 'a' 'enum A':'enum A'
+|   | |     `-IntegerLiteral 0x7fbae10910e8 <col:13> 'int' 0
+|   | |-CallExpr 0x7fbae1091210 <line:22:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7fbae10911f8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbae10911a0 <col:5> 'void (void)' Function 0x7fbae1090820 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fbae1091388 <line:23:3, line:24:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fbae1091300 <line:23:7, col:15> 'int' prefix '!'
+|   | | `-ParenExpr 0x7fbae10912e0 <col:8, col:15> 'int'
+|   | |   `-BinaryOperator 0x7fbae10912b8 <col:9, col:14> 'int' '<'
+|   | |     |-DeclRefExpr 0x7fbae1091270 <col:9> 'int' EnumConstant 0x7fbae1090a98 'A2' 'int'
+|   | |     `-IntegerLiteral 0x7fbae1091298 <col:14> 'int' 0
+|   | |-CallExpr 0x7fbae1091360 <line:24:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7fbae1091348 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbae1091320 <col:5> 'void (void)' Function 0x7fbae1090820 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fbae1091508 <line:25:3, line:26:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fbae1091480 <line:25:7, col:14> 'int' prefix '!'
+|   | | `-ParenExpr 0x7fbae1091460 <col:8, col:14> 'int'
+|   | |   `-BinaryOperator 0x7fbae1091438 <col:9, col:13> 'int' '<'
+|   | |     |-ImplicitCastExpr 0x7fbae1091420 <col:9> 'int' <IntegralCast>
+|   | |     | `-ImplicitCastExpr 0x7fbae1091408 <col:9> 'enum B':'enum B' <LValueToRValue>
+|   | |     |   `-DeclRefExpr 0x7fbae10913c0 <col:9> 'enum B':'enum B' lvalue Var 0x7fbae1090ff0 'b' 'enum B':'enum B'
+|   | |     `-IntegerLiteral 0x7fbae10913e8 <col:13> 'int' 0
+|   | |-CallExpr 0x7fbae10914e0 <line:26:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7fbae10914c8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbae10914a0 <col:5> 'void (void)' Function 0x7fbae1090820 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fbae1091658 <line:27:3, line:28:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fbae10915d0 <line:27:7, col:15> 'int' prefix '!'
+|   | | `-ParenExpr 0x7fbae10915b0 <col:8, col:15> 'int'
+|   | |   `-BinaryOperator 0x7fbae1091588 <col:9, col:14> 'int' '<'
+|   | |     |-DeclRefExpr 0x7fbae1091540 <col:9> 'int' EnumConstant 0x7fbae1090c90 'B2' 'int'
+|   | |     `-IntegerLiteral 0x7fbae1091568 <col:14> 'int' 0
+|   | |-CallExpr 0x7fbae1091630 <line:28:5, col:17> 'void'
+|   | | `-ImplicitCastExpr 0x7fbae1091618 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbae10915f0 <col:5> 'void (void)' Function 0x7fbae1090820 'link_error' 'void (void)'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fbae10916b0 <line:30:3, col:10>
+|     `-IntegerLiteral 0x7fbae1091690 <col:10> 'int' 0
+|-EnumDecl 0x7fbae1091710 <line:33:1, col:30> col:6 E1
+| |-EnumConstantDecl 0x7fbae1091800 <col:11, <built-in>:38:21> ../Data/C2AST/pr30260.c:33:11 e10 'int'
+| | `-IntegerLiteral 0x7fbae10917d0 <<built-in>:38:21> 'int' 2147483647
+| `-EnumConstantDecl 0x7fbae1091848 <../Data/C2AST/pr30260.c:33:26> col:26 e11 'unsigned int'
+`-EnumDecl 0x7fbae1091890 <line:34:1, col:41> col:6 E2
+  |-EnumConstantDecl 0x7fbae10919c8 <col:11, <built-in>:38:21> ../Data/C2AST/pr30260.c:34:11 e20 'int'
+  | `-ImplicitCastExpr 0x7fbae10919b0 <col:17, <built-in>:38:21> 'int' <IntegralCast>
+  |   `-CStyleCastExpr 0x7fbae1091988 <../Data/C2AST/pr30260.c:34:17, <built-in>:38:21> 'unsigned int' <IntegralCast>
+  |     `-IntegerLiteral 0x7fbae1091950 <col:21> 'int' 2147483647
+  `-EnumConstantDecl 0x7fbae1091a10 <../Data/C2AST/pr30260.c:34:37> col:37 e21 'unsigned int'

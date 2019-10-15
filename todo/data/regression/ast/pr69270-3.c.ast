@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fd24e82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd24e82c978 <../Data/C2AST/pr69270-3.c:7:1, col:27> col:27 size_t 'unsigned long'
+| `-BuiltinType 0x7fd24e82bea0 'unsigned long'
+|-RecordDecl 0x7fd24f014200 <line:8:9, col:15> col:15 union gimple_statement_d
+|-TypedefDecl 0x7fd24f014360 <col:1, col:35> col:35 referenced gimple 'union gimple_statement_d *'
+| `-PointerType 0x7fd24f014310 'union gimple_statement_d *'
+|   `-ElaboratedType 0x7fd24f0142b0 'union gimple_statement_d' sugar
+|     `-RecordType 0x7fd24f014290 'union gimple_statement_d'
+|       `-Record 0x7fd24f014200 'gimple_statement_d'
+`-FunctionDecl 0x7fd24f014420 <line:9:1, line:24:1> line:10:1 propagate_with_phi 'unsigned char ()'
+  `-CompoundStmt 0x7fd24f015028 <line:11:1, line:24:1>
+    |-DeclStmt 0x7fd24f014590 <line:12:3, col:18>
+    | `-VarDecl 0x7fd24f014530 <col:3, col:10> col:10 use_stmt 'gimple':'union gimple_statement_d *'
+    |-DeclStmt 0x7fd24f014620 <line:13:3, col:29>
+    | `-VarDecl 0x7fd24f0145c0 <col:3, col:17> col:17 used phi_inserted 'unsigned char'
+    |-BinaryOperator 0x7fd24f014698 <line:14:3, col:18> 'unsigned char' '='
+    | |-DeclRefExpr 0x7fd24f014638 <col:3> 'unsigned char' lvalue Var 0x7fd24f0145c0 'phi_inserted' 'unsigned char'
+    | `-ImplicitCastExpr 0x7fd24f014680 <col:18> 'unsigned char' <IntegralCast>
+    |   `-IntegerLiteral 0x7fd24f014660 <col:18> 'int' 0
+    `-ForStmt 0x7fd24f014ff0 <line:15:3, line:23:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7fd24f014858 <line:15:10, col:31> 'int' prefix '!'
+      | `-CallExpr 0x7fd24f014830 <col:11, col:31> 'int'
+      |   `-ImplicitCastExpr 0x7fd24f014818 <col:11> 'int (*)()' <FunctionToPointerDecay>
+      |     `-DeclRefExpr 0x7fd24f0147c0 <col:11> 'int ()' Function 0x7fd24f014710 'end_imm_use_stmt_p' 'int ()'
+      |-CallExpr 0x7fd24f014990 <col:34, col:53> 'int'
+      | `-ImplicitCastExpr 0x7fd24f014978 <col:34> 'int (*)()' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fd24f014950 <col:34> 'int ()' Function 0x7fd24f0148a0 'next_imm_use_stmt' 'int ()'
+      `-CompoundStmt 0x7fd24f014fd0 <line:16:5, line:23:5>
+        |-IfStmt 0x7fd24f014d38 <line:17:7, line:18:9>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-UnaryOperator 0x7fd24f014d10 <line:17:11, col:41> 'int' prefix '!'
+        | | `-ParenExpr 0x7fd24f014cf0 <col:12, col:41> 'int'
+        | |   `-BinaryOperator 0x7fd24f014cc8 <col:13, col:39> 'int' '&&'
+        | |     |-BinaryOperator 0x7fd24f014b18 <col:13, col:23> 'int' '=='
+        | |     | |-CallExpr 0x7fd24f014ad0 <col:13, col:18> 'int'
+        | |     | | `-ImplicitCastExpr 0x7fd24f014ab8 <col:13> 'int (*)()' <FunctionToPointerDecay>
+        | |     | |   `-DeclRefExpr 0x7fd24f014a90 <col:13> 'int ()' Function 0x7fd24f0149e0 'arf' 'int ()'
+        | |     | `-IntegerLiteral 0x7fd24f014af8 <col:23> 'int' 10
+        | |     `-BinaryOperator 0x7fd24f014ca0 <col:29, col:39> 'int' '=='
+        | |       |-CallExpr 0x7fd24f014c58 <col:29, col:34> 'int'
+        | |       | `-ImplicitCastExpr 0x7fd24f014c40 <col:29> 'int (*)()' <FunctionToPointerDecay>
+        | |       |   `-DeclRefExpr 0x7fd24f014c18 <col:29> 'int ()' Function 0x7fd24f014b68 'boo' 'int ()'
+        | |       `-IntegerLiteral 0x7fd24f014c80 <col:39> 'int' 20
+        | |-ContinueStmt 0x7fd24f014d30 <line:18:9>
+        | `-<<<NULL>>>
+        `-IfStmt 0x7fd24f014f98 <line:19:7, line:22:22>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-UnaryOperator 0x7fd24f014db0 <line:19:11, col:12> 'int' prefix '!'
+          | `-ImplicitCastExpr 0x7fd24f014d98 <col:12> 'unsigned char' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fd24f014d70 <col:12> 'unsigned char' lvalue Var 0x7fd24f0145c0 'phi_inserted' 'unsigned char'
+          |-BinaryOperator 0x7fd24f014e30 <line:20:9, col:24> 'unsigned char' '='
+          | |-DeclRefExpr 0x7fd24f014dd0 <col:9> 'unsigned char' lvalue Var 0x7fd24f0145c0 'phi_inserted' 'unsigned char'
+          | `-ImplicitCastExpr 0x7fd24f014e18 <col:24> 'unsigned char' <IntegralCast>
+          |   `-IntegerLiteral 0x7fd24f014df8 <col:24> 'int' 1
+          `-CallExpr 0x7fd24f014f70 <line:22:9, col:22> 'int'
+            `-ImplicitCastExpr 0x7fd24f014f58 <col:9> 'int (*)()' <FunctionToPointerDecay>
+              `-DeclRefExpr 0x7fd24f014f30 <col:9> 'int ()' Function 0x7fd24f014e80 'update_stmt' 'int ()'

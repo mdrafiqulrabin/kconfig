@@ -1,0 +1,95 @@
+TranslationUnitDecl 0x7fea9b8174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fea9c07e930 <../Data/C2AST/pr41463.c:3:1, col:7> col:7 union tree_node
+|-RecordDecl 0x7fea9c07e9e0 <line:5:1, line:12:1> line:5:8 struct tree_common definition
+| |-FieldDecl 0x7fea9c07eaa8 <line:7:3, col:7> col:7 a 'int'
+| |-FieldDecl 0x7fea9c07eb08 <line:8:3, col:8> col:8 b 'long'
+| |-FieldDecl 0x7fea9c07eb68 <line:9:3, col:8> col:8 c 'long'
+| |-FieldDecl 0x7fea9c07ebc8 <line:10:3, col:9> col:9 p 'void *'
+| `-FieldDecl 0x7fea9c07ec28 <line:11:3, col:7> col:7 d 'int'
+|-RecordDecl 0x7fea9c07ec70 <line:14:1, line:18:1> line:14:8 struct other_tree definition
+| |-FieldDecl 0x7fea9c07ed70 <line:16:3, col:22> col:22 common 'struct tree_common':'struct tree_common'
+| `-FieldDecl 0x7fea9c07ee40 <line:17:3, col:13> col:7 arr 'int [14]'
+|-RecordDecl 0x7fea9c07eef0 <line:20:1, line:25:1> line:20:8 struct tree_vec definition
+| |-FieldDecl 0x7fea9b881c00 <line:22:3, col:22> col:22 common 'struct tree_common':'struct tree_common'
+| |-FieldDecl 0x7fea9b881c60 <line:23:3, col:7> col:7 length 'int'
+| `-FieldDecl 0x7fea9b881e10 <line:24:3, col:23> col:20 referenced a 'union tree_node *[1]'
+|-RecordDecl 0x7fea9b881e58 prev 0x7fea9c07e930 <line:27:1, line:31:1> line:27:7 union tree_node definition
+| |-FieldDecl 0x7fea9b881f30 <line:29:3, col:21> col:21 othr 'struct other_tree':'struct other_tree'
+| `-FieldDecl 0x7fea9b881fd0 <line:30:3, col:19> col:19 referenced vec 'struct tree_vec':'struct tree_vec'
+|-VarDecl 0x7fea9b882088 <line:33:1, col:17> col:17 used global 'union tree_node':'union tree_node'
+|-FunctionDecl 0x7fea9b8822b8 <line:35:1, line:43:1> line:36:1 used foo 'union tree_node *(union tree_node *, int)'
+| |-ParmVarDecl 0x7fea9b882110 <col:6, col:23> col:23 used p 'union tree_node *'
+| |-ParmVarDecl 0x7fea9b882188 <col:26, col:30> col:30 used i 'int'
+| |-CompoundStmt 0x7fea9b882a20 <line:37:1, line:43:1>
+| | |-DeclStmt 0x7fea9b882490 <line:38:3, col:22>
+| | | `-VarDecl 0x7fea9b882430 <col:3, col:21> col:21 used q 'union tree_node **'
+| | |-BinaryOperator 0x7fea9b882648 <line:39:3, col:37> 'union tree_node *' '='
+| | | |-ArraySubscriptExpr 0x7fea9b8825b0 <col:3, col:13> 'union tree_node *' lvalue
+| | | | |-ImplicitCastExpr 0x7fea9b882580 <col:3, col:10> 'union tree_node **' <ArrayToPointerDecay>
+| | | | | `-MemberExpr 0x7fea9b882520 <col:3, col:10> 'union tree_node *[1]' lvalue .a 0x7fea9b881e10
+| | | | |   `-MemberExpr 0x7fea9b8824e8 <col:3, col:6> 'struct tree_vec':'struct tree_vec' lvalue ->vec 0x7fea9b881fd0
+| | | | |     `-ImplicitCastExpr 0x7fea9b8824d0 <col:3> 'union tree_node *' <LValueToRValue>
+| | | | |       `-DeclRefExpr 0x7fea9b8824a8 <col:3> 'union tree_node *' lvalue ParmVar 0x7fea9b882110 'p' 'union tree_node *'
+| | | | `-ImplicitCastExpr 0x7fea9b882598 <col:12> 'int' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fea9b882558 <col:12> 'int' lvalue ParmVar 0x7fea9b882188 'i' 'int'
+| | | `-CStyleCastExpr 0x7fea9b882620 <col:17, col:37> 'union tree_node *' <NullToPointer>
+| | |   `-IntegerLiteral 0x7fea9b8825d8 <col:37> 'int' 0
+| | |-BinaryOperator 0x7fea9b8827c8 <line:40:3, col:18> 'union tree_node **' '='
+| | | |-DeclRefExpr 0x7fea9b882670 <col:3> 'union tree_node **' lvalue Var 0x7fea9b882430 'q' 'union tree_node **'
+| | | `-UnaryOperator 0x7fea9b8827a8 <col:7, col:18> 'union tree_node **' prefix '&'
+| | |   `-ArraySubscriptExpr 0x7fea9b882780 <col:8, col:18> 'union tree_node *' lvalue
+| | |     |-ImplicitCastExpr 0x7fea9b882768 <col:8, col:15> 'union tree_node **' <ArrayToPointerDecay>
+| | |     | `-MemberExpr 0x7fea9b882710 <col:8, col:15> 'union tree_node *[1]' lvalue .a 0x7fea9b881e10
+| | |     |   `-MemberExpr 0x7fea9b8826d8 <col:8, col:11> 'struct tree_vec':'struct tree_vec' lvalue ->vec 0x7fea9b881fd0
+| | |     |     `-ImplicitCastExpr 0x7fea9b8826c0 <col:8> 'union tree_node *' <LValueToRValue>
+| | |     |       `-DeclRefExpr 0x7fea9b882698 <col:8> 'union tree_node *' lvalue ParmVar 0x7fea9b882110 'p' 'union tree_node *'
+| | |     `-IntegerLiteral 0x7fea9b882748 <col:17> 'int' 1
+| | |-BinaryOperator 0x7fea9b882898 <line:41:3, col:9> 'union tree_node *' '='
+| | | |-UnaryOperator 0x7fea9b882830 <col:3, col:4> 'union tree_node *' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7fea9b882818 <col:4> 'union tree_node **' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fea9b8827f0 <col:4> 'union tree_node **' lvalue Var 0x7fea9b882430 'q' 'union tree_node **'
+| | | `-UnaryOperator 0x7fea9b882878 <col:8, col:9> 'union tree_node *' prefix '&'
+| | |   `-DeclRefExpr 0x7fea9b882850 <col:9> 'union tree_node':'union tree_node' lvalue Var 0x7fea9b882088 'global' 'union tree_node':'union tree_node'
+| | `-ReturnStmt 0x7fea9b882a08 <line:42:3, col:20>
+| |   `-ImplicitCastExpr 0x7fea9b8829f0 <col:10, col:20> 'union tree_node *' <LValueToRValue>
+| |     `-ArraySubscriptExpr 0x7fea9b8829c8 <col:10, col:20> 'union tree_node *' lvalue
+| |       |-ImplicitCastExpr 0x7fea9b882998 <col:10, col:17> 'union tree_node **' <ArrayToPointerDecay>
+| |       | `-MemberExpr 0x7fea9b882938 <col:10, col:17> 'union tree_node *[1]' lvalue .a 0x7fea9b881e10
+| |       |   `-MemberExpr 0x7fea9b882900 <col:10, col:13> 'struct tree_vec':'struct tree_vec' lvalue ->vec 0x7fea9b881fd0
+| |       |     `-ImplicitCastExpr 0x7fea9b8828e8 <col:10> 'union tree_node *' <LValueToRValue>
+| |       |       `-DeclRefExpr 0x7fea9b8828c0 <col:10> 'union tree_node *' lvalue ParmVar 0x7fea9b882110 'p' 'union tree_node *'
+| |       `-ImplicitCastExpr 0x7fea9b8829b0 <col:19> 'int' <LValueToRValue>
+| |         `-DeclRefExpr 0x7fea9b882970 <col:19> 'int' lvalue ParmVar 0x7fea9b882188 'i' 'int'
+| `-NoInlineAttr 0x7fea9b882368 <line:35:34>
+|-FunctionDecl 0x7fea9b882ae8 prev 0x7fea9c058820 <line:45:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fea9b882c30 prev 0x7fea9c05d668 <line:46:1, col:35> col:14 used malloc 'void *(unsigned long)' extern
+| |-ParmVarDecl 0x7fea9b882ba0 <<built-in>:81:23, col:37> ../Data/C2AST/pr41463.c:46:35 'unsigned long'
+| |-AllocSizeAttr 0x7fea9b882d10 </usr/include/stdlib.h:129:42> Inherited 1 0
+| `-WarnUnusedResultAttr 0x7fea9b882d28 </usr/include/sys/cdefs.h:265:43> Inherited warn_unused_result
+`-FunctionDecl 0x7fea9b882d90 <../Data/C2AST/pr41463.c:48:1, line:55:1> line:49:1 main 'int ()'
+  `-CompoundStmt 0x7fea9b883268 <line:50:1, line:55:1>
+    |-DeclStmt 0x7fea9b882fa8 <line:51:3, col:57>
+    | `-VarDecl 0x7fea9b882e58 <col:3, col:56> col:20 used p 'union tree_node *' cinit
+    |   `-ImplicitCastExpr 0x7fea9b882f90 <col:24, col:56> 'union tree_node *' <BitCast>
+    |     `-CallExpr 0x7fea9b882f60 <col:24, col:56> 'void *'
+    |       |-ImplicitCastExpr 0x7fea9b882f48 <col:24> 'void *(*)(unsigned long)' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fea9b882eb8 <col:24> 'void *(unsigned long)' Function 0x7fea9b882c30 'malloc' 'void *(unsigned long)'
+    |       `-UnaryExprOrTypeTraitExpr 0x7fea9b882f00 <col:32, col:55> 'unsigned long' sizeof 'union tree_node':'union tree_node'
+    |-IfStmt 0x7fea9b8831f8 <line:52:3, line:53:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fea9b883138 <line:52:7, col:22> 'int' '!='
+    | | |-CallExpr 0x7fea9b8830a0 <col:7, col:16> 'union tree_node *'
+    | | | |-ImplicitCastExpr 0x7fea9b883088 <col:7> 'union tree_node *(*)(union tree_node *, int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7fea9b882fc0 <col:7> 'union tree_node *(union tree_node *, int)' Function 0x7fea9b8822b8 'foo' 'union tree_node *(union tree_node *, int)'
+    | | | |-ImplicitCastExpr 0x7fea9b8830d8 <col:12> 'union tree_node *' <LValueToRValue>
+    | | | | `-DeclRefExpr 0x7fea9b882fe8 <col:12> 'union tree_node *' lvalue Var 0x7fea9b882e58 'p' 'union tree_node *'
+    | | | `-IntegerLiteral 0x7fea9b883010 <col:15> 'int' 1
+    | | `-UnaryOperator 0x7fea9b883118 <col:21, col:22> 'union tree_node *' prefix '&'
+    | |   `-DeclRefExpr 0x7fea9b8830f0 <col:22> 'union tree_node':'union tree_node' lvalue Var 0x7fea9b882088 'global' 'union tree_node':'union tree_node'
+    | |-CallExpr 0x7fea9b8831d0 <line:53:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fea9b8831b8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fea9b883160 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fea9b882ae8 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fea9b883250 <line:54:3, col:10>
+      `-IntegerLiteral 0x7fea9b883230 <col:10> 'int' 0

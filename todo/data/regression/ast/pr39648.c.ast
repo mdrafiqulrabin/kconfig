@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fcebf82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcec0014260 <../Data/C2AST/pr39648.c:1:1, line:12:1> line:2:1 yysyntax_error 'void (char *)'
+  |-ParmVarDecl 0x7fcebf82c978 <col:17, col:23> col:23 used yyp 'char *'
+  `-CompoundStmt 0x7fcec00148d8 <line:3:1, line:12:1>
+    |-DeclStmt 0x7fcec00143c0 <line:4:9, col:24>
+    | `-VarDecl 0x7fcec0014360 <col:9, col:21> col:21 used yyf 'const char *'
+    |-DeclStmt 0x7fcec00144b8 <line:5:9, col:25>
+    | `-VarDecl 0x7fcec0014458 <col:9, col:24> col:14 used yyformat 'char [5]'
+    |-BinaryOperator 0x7fcec0014550 <line:7:9, col:15> 'const char *' '='
+    | |-DeclRefExpr 0x7fcec00144d0 <col:9> 'const char *' lvalue Var 0x7fcec0014360 'yyf' 'const char *'
+    | `-ImplicitCastExpr 0x7fcec0014538 <col:15> 'const char *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fcec0014520 <col:15> 'char *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fcec00144f8 <col:15> 'char [5]' lvalue Var 0x7fcec0014458 'yyformat' 'char [5]'
+    `-WhileStmt 0x7fcec00148b8 <line:8:9, line:11:9>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fcec00146c8 <line:8:16, col:33> 'int' '!='
+      | |-ImplicitCastExpr 0x7fcec00146b0 <col:16, col:28> 'int' <IntegralCast>
+      | | `-ParenExpr 0x7fcec0014678 <col:16, col:28> 'char'
+      | |   `-BinaryOperator 0x7fcec0014650 <col:17, col:25> 'char' '='
+      | |     |-UnaryOperator 0x7fcec00145b8 <col:17, col:18> 'char' lvalue prefix '*'
+      | |     | `-ImplicitCastExpr 0x7fcec00145a0 <col:18> 'char *' <LValueToRValue>
+      | |     |   `-DeclRefExpr 0x7fcec0014578 <col:18> 'char *' lvalue ParmVar 0x7fcebf82c978 'yyp' 'char *'
+      | |     `-ImplicitCastExpr 0x7fcec0014638 <col:24, col:25> 'char' <LValueToRValue>
+      | |       `-UnaryOperator 0x7fcec0014618 <col:24, col:25> 'const char' lvalue prefix '*'
+      | |         `-ImplicitCastExpr 0x7fcec0014600 <col:25> 'const char *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7fcec00145d8 <col:25> 'const char *' lvalue Var 0x7fcec0014360 'yyf' 'const char *'
+      | `-CharacterLiteral 0x7fcec0014698 <col:33> 'int' 0
+      `-CompoundStmt 0x7fcec00148a0 <col:39, line:11:9>
+        `-IfStmt 0x7fcec0014868 <line:9:17, line:10:32>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x7fcec00147c0 <line:9:21, col:31> 'int' '=='
+          | |-ImplicitCastExpr 0x7fcec00147a8 <col:21, col:26> 'int' <IntegralCast>
+          | | `-ImplicitCastExpr 0x7fcec0014790 <col:21, col:26> 'char' <LValueToRValue>
+          | |   `-ArraySubscriptExpr 0x7fcec0014750 <col:21, col:26> 'const char' lvalue
+          | |     |-ImplicitCastExpr 0x7fcec0014738 <col:21> 'const char *' <LValueToRValue>
+          | |     | `-DeclRefExpr 0x7fcec00146f0 <col:21> 'const char *' lvalue Var 0x7fcec0014360 'yyf' 'const char *'
+          | |     `-IntegerLiteral 0x7fcec0014718 <col:25> 'int' 1
+          | `-CharacterLiteral 0x7fcec0014778 <col:31> 'int' 115
+          |-CompoundAssignOperator 0x7fcec0014830 <line:10:25, col:32> 'const char *' '+=' ComputeLHSTy='const char *' ComputeResultTy='const char *'
+          | |-DeclRefExpr 0x7fcec00147e8 <col:25> 'const char *' lvalue Var 0x7fcec0014360 'yyf' 'const char *'
+          | `-IntegerLiteral 0x7fcec0014810 <col:32> 'int' 2
+          `-<<<NULL>>>

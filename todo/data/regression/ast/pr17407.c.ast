@@ -1,0 +1,38 @@
+TranslationUnitDecl 0x7fc8908174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc890818160 <../Data/C2AST/pr17407.c:1:9, line:3:1> line:1:16 struct libxml_xpathCallback definition
+| `-FieldDecl 0x7fc88f823238 <line:2:3, col:9> col:9 referenced ns_uri 'void *'
+|-TypedefDecl 0x7fc88f8232d0 <line:1:1, line:3:3> col:3 referenced libxml_xpathCallback 'struct libxml_xpathCallback':'struct libxml_xpathCallback'
+| `-ElaboratedType 0x7fc88f823280 'struct libxml_xpathCallback' sugar
+|   `-RecordType 0x7fc88f823200 'struct libxml_xpathCallback'
+|     `-Record 0x7fc890818160 'libxml_xpathCallback'
+|-TypedefDecl 0x7fc88f8233d8 <line:5:1, col:56> col:30 referenced libxml_xpathCallbackArray 'libxml_xpathCallback []'
+| `-IncompleteArrayType 0x7fc88f823390 'libxml_xpathCallback []' 
+|   `-TypedefType 0x7fc88f823340 'libxml_xpathCallback' sugar
+|     |-Typedef 0x7fc88f8232d0 'libxml_xpathCallback'
+|     `-ElaboratedType 0x7fc88f823280 'struct libxml_xpathCallback' sugar
+|       `-RecordType 0x7fc88f823200 'struct libxml_xpathCallback'
+|         `-Record 0x7fc890818160 'libxml_xpathCallback'
+|-VarDecl 0x7fc88f8234b8 <line:7:1, col:28> col:28 used libxml_xpathCallbacks 'libxml_xpathCallbackArray *'
+|-FunctionDecl 0x7fc88f823620 <line:9:1, col:15> col:6 used foo1 'void (void)'
+`-FunctionDecl 0x7fc88f823750 <line:11:1, line:15:1> line:12:1 foo 'void (void)'
+  `-CompoundStmt 0x7fc88f823af0 <line:13:1, line:15:1>
+    `-IfStmt 0x7fc88f823ab8 <line:14:3, col:63>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc88f8239f8 <col:7, col:55> 'int' '!='
+      | |-ImplicitCastExpr 0x7fc88f8239e0 <col:7, col:35> 'void *' <LValueToRValue>
+      | | `-MemberExpr 0x7fc88f823928 <col:7, col:35> 'void *' lvalue .ns_uri 0x7fc88f823238
+      | |   `-ArraySubscriptExpr 0x7fc88f823900 <col:7, col:33> 'libxml_xpathCallback':'struct libxml_xpathCallback' lvalue
+      | |     |-ImplicitCastExpr 0x7fc88f8238e8 <col:7, col:30> 'libxml_xpathCallback *' <ArrayToPointerDecay>
+      | |     | `-ParenExpr 0x7fc88f823850 <col:7, col:30> 'libxml_xpathCallbackArray':'libxml_xpathCallback []' lvalue
+      | |     |   `-UnaryOperator 0x7fc88f823830 <col:8, col:9> 'libxml_xpathCallbackArray':'libxml_xpathCallback []' lvalue prefix '*'
+      | |     |     `-ImplicitCastExpr 0x7fc88f823818 <col:9> 'libxml_xpathCallbackArray *' <LValueToRValue>
+      | |     |       `-DeclRefExpr 0x7fc88f8237f0 <col:9> 'libxml_xpathCallbackArray *' lvalue Var 0x7fc88f8234b8 'libxml_xpathCallbacks' 'libxml_xpathCallbackArray *'
+      | |     `-IntegerLiteral 0x7fc88f823870 <col:32> 'int' 3
+      | `-ParenExpr 0x7fc88f8239c0 <col:45, col:55> 'void *'
+      |   `-CStyleCastExpr 0x7fc88f823998 <col:46, col:54> 'void *' <NullToPointer>
+      |     `-IntegerLiteral 0x7fc88f823960 <col:54> 'int' 0
+      |-CallExpr 0x7fc88f823a90 <col:58, col:63> 'void'
+      | `-ImplicitCastExpr 0x7fc88f823a78 <col:58> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fc88f823a20 <col:58> 'void (void)' Function 0x7fc88f823620 'foo1' 'void (void)'
+      `-<<<NULL>>>

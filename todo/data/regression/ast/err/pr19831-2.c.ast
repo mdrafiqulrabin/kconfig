@@ -1,0 +1,44 @@
+../Data/C2AST/pr19831-2.c:6:12: error: use of unknown builtin '__builtin_malloc' [-Wimplicit-function-declaration]
+  int *p = __builtin_malloc (sizeof (int) * 4);
+           ^
+../Data/C2AST/pr19831-2.c:8:3: error: use of unknown builtin '__builtin_free' [-Wimplicit-function-declaration]
+  __builtin_free (p);
+  ^
+2 errors generated.
+TranslationUnitDecl 0x7ff30e82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff30e82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff30e82bf80 '__int128'
+|-TypedefDecl 0x7ff30e82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff30e82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff30e82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff30e82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff30e82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff30e82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff30e82c600 'char *'
+|   `-BuiltinType 0x7ff30e82bd80 'char'
+|-TypedefDecl 0x7ff30e82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff30e82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff30e82c720 'struct __va_list_tag'
+|     `-Record 0x7ff30e82c698 '__va_list_tag'
+`-FunctionDecl 0x7ff30e86d820 <../Data/C2AST/pr19831-2.c:4:1, line:9:1> line:4:6 test1 'void (void)'
+  `-CompoundStmt 0x7ff30e86de58 <line:5:1, line:9:1>
+    |-DeclStmt 0x7ff30e86dc08 <line:6:3, col:47>
+    | `-VarDecl 0x7ff30e86d940 <col:3, col:46> col:8 used p 'int *' cinit
+    |   `-ImplicitCastExpr 0x7ff30e86dbf0 <col:12, col:46> 'int *' <IntegralToPointer>
+    |     `-CallExpr 0x7ff30e86dbc0 <col:12, col:46> 'int'
+    |       |-ImplicitCastExpr 0x7ff30e86dba8 <col:12> 'int (*)()' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7ff30e86dac0 <col:12> 'int ()' Function 0x7ff30e86da10 '__builtin_malloc' 'int ()'
+    |       `-BinaryOperator 0x7ff30e86db58 <col:30, col:45> 'unsigned long' '*'
+    |         |-UnaryExprOrTypeTraitExpr 0x7ff30e86db00 <col:30, col:41> 'unsigned long' sizeof 'int'
+    |         `-ImplicitCastExpr 0x7ff30e86db40 <col:45> 'unsigned long' <IntegralCast>
+    |           `-IntegerLiteral 0x7ff30e86db20 <col:45> 'int' 4
+    |-BinaryOperator 0x7ff30e86dca8 <line:7:3, col:10> 'int' '='
+    | |-UnaryOperator 0x7ff30e86dc68 <col:3, col:5> 'int' lvalue prefix '*'
+    | | `-UnaryOperator 0x7ff30e86dc48 <col:4, col:5> 'int *' postfix '++'
+    | |   `-DeclRefExpr 0x7ff30e86dc20 <col:4> 'int *' lvalue Var 0x7ff30e86d940 'p' 'int *'
+    | `-IntegerLiteral 0x7ff30e86dc88 <col:10> 'int' 4
+    `-CallExpr 0x7ff30e86de10 <line:8:3, col:20> 'int'
+      |-ImplicitCastExpr 0x7ff30e86ddf8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff30e86dda8 <col:3> 'int ()' Function 0x7ff30e86dcf8 '__builtin_free' 'int ()'
+      `-ImplicitCastExpr 0x7ff30e86de40 <col:19> 'int *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff30e86ddd0 <col:19> 'int *' lvalue Var 0x7ff30e86d940 'p' 'int *'

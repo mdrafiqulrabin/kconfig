@@ -1,0 +1,19 @@
+../Data/C2AST/pr59588-2.c:6:2: error: "__tune_i686__ should be defined for this test"
+#error "__tune_i686__ should be defined for this test"
+ ^
+1 error generated.
+TranslationUnitDecl 0x7fba1c8046e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fba1c804c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fba1c804980 '__int128'
+|-TypedefDecl 0x7fba1c804cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fba1c8049a0 'unsigned __int128'
+|-TypedefDecl 0x7fba1c804fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fba1c804db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fba1c804d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fba1c805040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fba1c805000 'char *'
+|   `-BuiltinType 0x7fba1c804780 'char'
+`-TypedefDecl 0x7fba1c805308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fba1c8052b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fba1c805120 'struct __va_list_tag'
+      `-Record 0x7fba1c805098 '__va_list_tag'

@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fecb882bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fecb882c960 <../Data/C2AST/pr36154.c:1:1, line:5:1> line:1:8 struct eth_test_pkt definition
+| |-PackedAttr 0x7fecb886d978 <line:5:19>
+| |-FieldDecl 0x7fecb886d838 <line:2:3, col:18> col:18 len 'unsigned short'
+| |-FieldDecl 0x7fecb886d898 <line:3:3, col:18> col:18 ctr 'unsigned short'
+| `-FieldDecl 0x7fecb886d930 <line:4:3, col:24> col:17 referenced packet 'unsigned char []'
+|-VarDecl 0x7fecb886da10 <line:6:1, col:58> col:21 used pkt_unaligned 'struct eth_test_pkt':'struct eth_test_pkt' cinit
+| `-InitListExpr 0x7fecb886dba0 <col:37, col:58> 'struct eth_test_pkt':'struct eth_test_pkt'
+|   |-ImplicitValueInitExpr 0x7fecb886dc98 <<invalid sloc>> 'unsigned short'
+|   |-ImplicitValueInitExpr 0x7fecb886dca8 <<invalid sloc>> 'unsigned short'
+|   `-InitListExpr 0x7fecb886dbf8 <col:49, col:56> 'unsigned char [1]'
+|     `-ImplicitCastExpr 0x7fecb886dc38 <col:51> 'unsigned char' <IntegralCast>
+|       `-IntegerLiteral 0x7fecb886dab0 <col:51> 'int' 252
+|-FunctionDecl 0x7fecb886ddc8 <line:7:1, line:10:1> line:7:5 cmd_unaligned 'int (const void *)'
+| |-ParmVarDecl 0x7fecb886dd00 <col:19, col:31> col:31 used p 'const void *'
+| `-CompoundStmt 0x7fecb886e2b8 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fecb886e2a0 <line:9:3, col:43>
+|     `-CallExpr 0x7fecb886e200 <col:10, col:43> 'int'
+|       |-ImplicitCastExpr 0x7fecb886e1e8 <col:10> 'int (*)(const void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fecb886e090 <col:10> 'int (const void *, const void *, unsigned long)' Function 0x7fecb886deb8 'memcmp' 'int (const void *, const void *, unsigned long)'
+|       |-ImplicitCastExpr 0x7fecb886e240 <col:17> 'const void *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fecb886e0b8 <col:17> 'const void *' lvalue ParmVar 0x7fecb886dd00 'p' 'const void *'
+|       |-ImplicitCastExpr 0x7fecb886e270 <col:20, col:34> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fecb886e258 <col:20, col:34> 'unsigned char *' <ArrayToPointerDecay>
+|       |   `-MemberExpr 0x7fecb886e108 <col:20, col:34> 'unsigned char []' lvalue .packet 0x7fecb886d930
+|       |     `-DeclRefExpr 0x7fecb886e0e0 <col:20> 'struct eth_test_pkt':'struct eth_test_pkt' lvalue Var 0x7fecb886da10 'pkt_unaligned' 'struct eth_test_pkt':'struct eth_test_pkt'
+|       `-ImplicitCastExpr 0x7fecb886e288 <col:42> 'unsigned long' <IntegralCast>
+|         `-IntegerLiteral 0x7fecb886e140 <col:42> 'int' 1
+`-FunctionDecl 0x7fecb886deb8 <col:10> col:10 implicit used memcmp 'int (const void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fecb886df58 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fecb886dfb8 <<invalid sloc>> <invalid sloc> 'const void *'
+  `-ParmVarDecl 0x7fecb886e018 <<invalid sloc>> <invalid sloc> 'unsigned long'

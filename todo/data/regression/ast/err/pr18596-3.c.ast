@@ -1,0 +1,55 @@
+../Data/C2AST/pr18596-3.c:6:3: error: function declared in block scope cannot have 'static' storage class
+  static g () = 0;  
+  ^
+../Data/C2AST/pr18596-3.c:6:10: error: illegal initializer (only variables can be initialized)
+  static g () = 0;  
+         ^
+../Data/C2AST/pr18596-3.c:7:3: error: function declared in block scope cannot have 'static' storage class
+  static int f () = 1;  
+  ^
+../Data/C2AST/pr18596-3.c:7:14: error: illegal initializer (only variables can be initialized)
+  static int f () = 1;  
+             ^
+../Data/C2AST/pr18596-3.c:8:3: error: illegal storage class on function
+  auto int h () = 0;  
+  ^
+../Data/C2AST/pr18596-3.c:10:3: error: function declared in block scope cannot have 'static' storage class
+  static int i () = { 0 };  
+  ^
+../Data/C2AST/pr18596-3.c:10:14: error: illegal initializer (only variables can be initialized)
+  static int i () = { 0 };  
+             ^
+../Data/C2AST/pr18596-3.c:11:3: error: function declared in block scope cannot have 'static' storage class
+  static int j () =  
+  ^
+../Data/C2AST/pr18596-3.c:11:14: error: illegal initializer (only variables can be initialized)
+  static int j () =  
+             ^
+9 errors generated.
+TranslationUnitDecl 0x7fce3681cce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fce3681d260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fce3681cf80 '__int128'
+|-TypedefDecl 0x7fce3681d2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fce3681cfa0 'unsigned __int128'
+|-TypedefDecl 0x7fce3681d5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fce3681d3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fce3681d328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fce3681d640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fce3681d600 'char *'
+|   `-BuiltinType 0x7fce3681cd80 'char'
+|-TypedefDecl 0x7fce3681d908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fce3681d8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fce3681d720 'struct __va_list_tag'
+|     `-Record 0x7fce3681d698 '__va_list_tag'
+`-FunctionDecl 0x7fce37800a00 <../Data/C2AST/pr18596-3.c:4:1, line:13:1> line:4:5 foo 'int ()'
+  `-CompoundStmt 0x7fce378010e8 <line:5:1, line:13:1>
+    |-DeclStmt 0x7fce37800bd8 <line:6:3, col:18>
+    | `-FunctionDecl 0x7fce37800b08 parent 0x7fce3681cce8 <col:3, col:13> col:10 invalid g 'int ()'
+    |-DeclStmt 0x7fce37800ce8 <line:7:3, col:22>
+    | `-FunctionDecl 0x7fce37800c18 parent 0x7fce3681cce8 <col:3, col:17> col:14 invalid f 'int ()'
+    |-DeclStmt 0x7fce37800df8 <line:8:3, col:20>
+    | `-FunctionDecl 0x7fce37800d28 parent 0x7fce3681cce8 <col:3, col:15> col:12 invalid h 'int ()'
+    |-DeclStmt 0x7fce37800f50 <line:10:3, col:26>
+    | `-FunctionDecl 0x7fce37800e38 parent 0x7fce3681cce8 <col:3, col:17> col:14 invalid i 'int ()'
+    `-DeclStmt 0x7fce378010d0 <line:11:3, line:12:12>
+      `-FunctionDecl 0x7fce37800f90 parent 0x7fce3681cce8 <line:11:3, col:17> col:14 invalid j 'int ()'

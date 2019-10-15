@@ -1,0 +1,101 @@
+TranslationUnitDecl 0x7fd0328274e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd032828178 <../Data/C2AST/pr36238.c:1:1, col:21> col:21 referenced int8_t 'signed char'
+| `-BuiltinType 0x7fd0328275a0 'signed char'
+|-TypedefDecl 0x7fd032015600 <line:2:1, col:13> col:13 referenced int32_t 'int'
+| `-BuiltinType 0x7fd0328275e0 'int'
+|-TypedefDecl 0x7fd032015670 <line:3:1, col:28> col:28 referenced uint16_t 'unsigned short'
+| `-BuiltinType 0x7fd032827660 'unsigned short'
+|-TypedefDecl 0x7fd0320156e0 <line:4:1, col:22> col:22 referenced uint32_t 'unsigned int'
+| `-BuiltinType 0x7fd032827680 'unsigned int'
+|-VarDecl 0x7fd032015770 <line:5:1, col:16> col:9 used g_19 'int32_t':'int' cinit
+| `-ImplicitCastExpr 0x7fd032015830 <col:16> 'int32_t':'int' <IntegralCast>
+|   `-IntegerLiteral 0x7fd032015810 <col:16> 'long' 1744154336
+|-VarDecl 0x7fd032015880 <line:6:1, col:18> col:10 used g_169 'uint16_t':'unsigned short' cinit
+| `-ImplicitCastExpr 0x7fd032015900 <col:18> 'uint16_t':'unsigned short' <IntegralCast>
+|   `-IntegerLiteral 0x7fd0320158e0 <col:18> 'long' 35299
+|-VarDecl 0x7fd032015950 <line:7:1, col:33> col:25 used g_258 'const volatile uint32_t':'const volatile unsigned int' cinit
+| `-ImplicitCastExpr 0x7fd0320159d0 <col:33> 'uint32_t':'unsigned int' <IntegralCast>
+|   `-IntegerLiteral 0x7fd0320159b0 <col:33> 'long' 1672473546
+|-VarDecl 0x7fd0320159f8 <line:8:1, col:9> col:9 used func_11 'int32_t':'int'
+|-VarDecl 0x7fd032015a68 <line:9:1, col:9> col:9 used func_29 'int32_t':'int'
+`-FunctionDecl 0x7fd032015cf0 <line:10:1, line:27:1> line:11:1 func_5 'int32_t (int32_t, int32_t, uint16_t)'
+  |-ParmVarDecl 0x7fd032015ad8 <col:9, col:17> col:17 used p_6 'int32_t':'int'
+  |-ParmVarDecl 0x7fd032015b48 <col:22, col:30> col:30 used p_8 'int32_t':'int'
+  |-ParmVarDecl 0x7fd032015bb8 <col:35, col:44> col:44 p_10 'uint16_t':'unsigned short'
+  `-CompoundStmt 0x7fd0320168c0 <line:12:1, line:27:1>
+    `-IfStmt 0x7fd032016888 <line:13:3, line:26:13>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-CallExpr 0x7fd032015f70 <line:13:7, col:31> 'int'
+      | |-ImplicitCastExpr 0x7fd032015f58 <col:7> 'int (*)()' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7fd032015eb0 <col:7> 'int ()' Function 0x7fd032015e00 'lshift_s_s' 'int ()'
+      | |-ImplicitCastExpr 0x7fd032015fa8 <col:19> 'int32_t':'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd032015ed8 <col:19> 'int32_t':'int' lvalue Var 0x7fd0320159f8 'func_11' 'int32_t':'int'
+      | `-ImplicitCastExpr 0x7fd032015fc0 <col:28> 'int32_t':'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd032015f00 <col:28> 'int32_t':'int' lvalue ParmVar 0x7fd032015b48 'p_8' 'int32_t':'int'
+      |-CompoundStmt 0x7fd0320167c0 <line:14:5, line:24:5>
+      | |-DeclStmt 0x7fd0320160a8 <line:15:7, col:26>
+      | | `-VarDecl 0x7fd032016010 <col:7, col:21> col:14 used l_18 'int8_t':'signed char' cinit
+      | |   `-ImplicitCastExpr 0x7fd032016090 <col:21> 'int8_t':'signed char' <IntegralCast>
+      | |     `-IntegerLiteral 0x7fd032016070 <col:21> 'long' 111
+      | `-IfStmt 0x7fd032016788 <line:16:7, line:23:11>
+      |   |-<<<NULL>>>
+      |   |-<<<NULL>>>
+      |   |-ImplicitCastExpr 0x7fd0320160e8 <line:16:11> 'int8_t':'signed char' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7fd0320160c0 <col:11> 'int8_t':'signed char' lvalue Var 0x7fd032016010 'l_18' 'int8_t':'signed char'
+      |   |-ForStmt 0x7fd032016750 <line:17:9, line:23:11>
+      |   | |-BinaryOperator 0x7fd032016168 <line:17:14, col:21> 'int32_t':'int' '='
+      |   | | |-DeclRefExpr 0x7fd032016100 <col:14> 'int32_t':'int' lvalue ParmVar 0x7fd032015ad8 'p_6' 'int32_t':'int'
+      |   | | `-UnaryOperator 0x7fd032016148 <col:20, col:21> 'int' prefix '-'
+      |   | |   `-IntegerLiteral 0x7fd032016128 <col:21> 'int' 14
+      |   | |-<<<NULL>>>
+      |   | |-<<<NULL>>>
+      |   | |-CompoundAssignOperator 0x7fd0320161d8 <col:26, col:34> 'int32_t':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      |   | | |-DeclRefExpr 0x7fd032016190 <col:26> 'int32_t':'int' lvalue Var 0x7fd032015770 'g_19' 'int32_t':'int'
+      |   | | `-IntegerLiteral 0x7fd0320161b8 <col:34> 'int' 6
+      |   | `-CompoundStmt 0x7fd032016730 <line:18:11, line:23:11>
+      |   |   |-DeclStmt 0x7fd0320162d8 <line:19:13, col:32>
+      |   |   | `-VarDecl 0x7fd032016220 <col:13, col:30> col:21 used l_283 'int32_t':'int' cinit
+      |   |   |   `-ImplicitCastExpr 0x7fd0320162c0 <col:29, col:30> 'int32_t':'int' <IntegralCast>
+      |   |   |     `-UnaryOperator 0x7fd0320162a0 <col:29, col:30> 'long' prefix '-'
+      |   |   |       `-IntegerLiteral 0x7fd032016280 <col:30> 'long' 1
+      |   |   `-IfStmt 0x7fd0320166f8 <line:20:13, line:22:25>
+      |   |     |-<<<NULL>>>
+      |   |     |-<<<NULL>>>
+      |   |     |-BinaryOperator 0x7fd032016510 <line:20:17, col:68> 'long' '/'
+      |   |     | |-ImplicitCastExpr 0x7fd0320164f8 <col:17, col:64> 'long' <IntegralCast>
+      |   |     | | `-ParenExpr 0x7fd0320164b8 <col:17, col:64> 'int'
+      |   |     | |   `-BinaryOperator 0x7fd032016490 <col:18, col:57> 'int' '>'
+      |   |     | |     |-BinaryOperator 0x7fd032016428 <col:18, col:52> 'int' '>'
+      |   |     | |     | |-ParenExpr 0x7fd032016358 <col:18, col:29> 'long'
+      |   |     | |     | | `-BinaryOperator 0x7fd032016330 <col:19, col:27> 'long' '/'
+      |   |     | |     | |   |-IntegerLiteral 0x7fd0320162f0 <col:19> 'long' 69
+      |   |     | |     | |   `-IntegerLiteral 0x7fd032016310 <col:27> 'long' 1
+      |   |     | |     | `-BinaryOperator 0x7fd032016400 <col:33, col:52> 'long' '/'
+      |   |     | |     |   |-BinaryOperator 0x7fd0320163b8 <col:33, col:47> 'long' '*'
+      |   |     | |     |   | |-IntegerLiteral 0x7fd032016378 <col:33> 'long' 121718033
+      |   |     | |     |   | `-IntegerLiteral 0x7fd032016398 <col:47> 'long' 1
+      |   |     | |     |   `-IntegerLiteral 0x7fd0320163e0 <col:52> 'long' 1
+      |   |     | |     `-ImplicitCastExpr 0x7fd032016478 <col:57> 'int32_t':'int' <LValueToRValue>
+      |   |     | |       `-DeclRefExpr 0x7fd032016450 <col:57> 'int32_t':'int' lvalue Var 0x7fd032015a68 'func_29' 'int32_t':'int'
+      |   |     | `-IntegerLiteral 0x7fd0320164d8 <col:68> 'long' 1
+      |   |     |-ForStmt 0x7fd0320166c0 <line:21:15, line:22:25>
+      |   |     | |-BinaryOperator 0x7fd032016580 <line:21:20, col:26> 'int32_t':'int' '='
+      |   |     | | |-DeclRefExpr 0x7fd032016538 <col:20> 'int32_t':'int' lvalue ParmVar 0x7fd032015b48 'p_8' 'int32_t':'int'
+      |   |     | | `-IntegerLiteral 0x7fd032016560 <col:26> 'int' 6
+      |   |     | |-<<<NULL>>>
+      |   |     | |-<<<NULL>>>
+      |   |     | |-CompoundAssignOperator 0x7fd032016600 <col:30, col:37> 'int32_t':'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+      |   |     | | |-DeclRefExpr 0x7fd0320165a8 <col:30> 'int32_t':'int' lvalue ParmVar 0x7fd032015b48 'p_8' 'int32_t':'int'
+      |   |     | | `-IntegerLiteral 0x7fd0320165d0 <col:37> 'int' 5
+      |   |     | `-BinaryOperator 0x7fd032016698 <line:22:17, col:25> 'int32_t':'int' '='
+      |   |     |   |-DeclRefExpr 0x7fd032016638 <col:17> 'int32_t':'int' lvalue Var 0x7fd032016220 'l_283' 'int32_t':'int'
+      |   |     |   `-ImplicitCastExpr 0x7fd032016680 <col:25> 'int32_t':'int' <IntegralCast>
+      |   |     |     `-IntegerLiteral 0x7fd032016660 <col:25> 'long' 3372564983
+      |   |     `-<<<NULL>>>
+      |   `-<<<NULL>>>
+      `-BinaryOperator 0x7fd032016860 <line:26:5, col:13> 'uint16_t':'unsigned short' '='
+        |-DeclRefExpr 0x7fd0320167e0 <col:5> 'uint16_t':'unsigned short' lvalue Var 0x7fd032015880 'g_169' 'uint16_t':'unsigned short'
+        `-ImplicitCastExpr 0x7fd032016848 <col:13> 'uint16_t':'unsigned short' <IntegralCast>
+          `-ImplicitCastExpr 0x7fd032016830 <col:13> 'uint32_t':'unsigned int' <LValueToRValue>
+            `-DeclRefExpr 0x7fd032016808 <col:13> 'const volatile uint32_t':'const volatile unsigned int' lvalue Var 0x7fd032015950 'g_258' 'const volatile uint32_t':'const volatile unsigned int'

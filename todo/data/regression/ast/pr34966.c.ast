@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fcafa02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcafa06d868 <../Data/C2AST/pr34966.c:1:15> col:15 implicit used sin 'double (double)' extern
+| |-ParmVarDecl 0x7fcafa06d908 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fcafa06d970 <col:15> Implicit
+| `-NoThrowAttr 0x7fcafa06d9b8 <col:15> Implicit
+|-FunctionDecl 0x7fcafa06d9c8 prev 0x7fcafa06d868 <col:1, col:26> col:15 used sin 'double (double)' extern
+| |-ParmVarDecl 0x7fcafa02c978 <col:20> col:26 'double'
+| |-ConstAttr 0x7fcafa06daa8 <col:15> Inherited Implicit
+| `-NoThrowAttr 0x7fcafa06dab8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fcafa06db70 <col:29> col:29 implicit used cos 'double (double)' extern
+| |-ParmVarDecl 0x7fcafa06dc10 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fcafa06dc78 <col:29> Implicit
+| `-NoThrowAttr 0x7fcafa06dcc0 <col:29> Implicit
+|-FunctionDecl 0x7fcafa06dcd0 prev 0x7fcafa06db70 <col:1, col:40> col:29 used cos 'double (double)' extern
+| |-ParmVarDecl 0x7fcafa06dae0 <col:34> col:40 'double'
+| |-ConstAttr 0x7fcafa06ddb0 <col:29> Inherited Implicit
+| `-NoThrowAttr 0x7fcafa06ddc0 <col:29> Inherited Implicit
+|-FunctionDecl 0x7fcafa06de90 <line:4:1> col:1 implicit used atan 'double (double)' extern
+| |-ParmVarDecl 0x7fcafa06df30 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7fcafa06df98 <col:1> Implicit
+| `-NoThrowAttr 0x7fcafa06dfe0 <col:1> Implicit
+|-FunctionDecl 0x7fcafa06dff0 prev 0x7fcafa06de90 <line:3:1, line:13:1> line:4:1 used atan 'double (double)' inline
+| |-ParmVarDecl 0x7fcafa06de00 <col:7, col:14> col:14 used __x 'double'
+| |-CompoundStmt 0x7fcafa06e3e8 <line:5:1, line:13:1>
+| | |-DeclStmt 0x7fcafa06e168 <line:6:3, col:27>
+| | | `-VarDecl 0x7fcafa06e108 <col:3, col:19> col:19 used __result 'double' register
+| | |-GCCAsmStmt 0x7fcafa06e318 <line:8:3, col:55>
+| | | |-DeclRefExpr 0x7fcafa06e248 <col:34> 'double' lvalue Var 0x7fcafa06e108 '__result' 'double'
+| | | `-ImplicitCastExpr 0x7fcafa06e300 <col:51> 'double' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fcafa06e2d8 <col:51> 'double' lvalue ParmVar 0x7fcafa06de00 '__x' 'double'
+| | `-ReturnStmt 0x7fcafa06e3d0 <line:12:3, col:10>
+| |   `-ImplicitCastExpr 0x7fcafa06e3b8 <col:10> 'double' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fcafa06e390 <col:10> 'double' lvalue Var 0x7fcafa06e108 '__result' 'double'
+| |-ConstAttr 0x7fcafa06e0d0 <line:4:1> Inherited Implicit
+| `-NoThrowAttr 0x7fcafa06e0e0 <col:1> Inherited Implicit
+`-FunctionDecl 0x7fcafa06e4b8 <line:15:1, line:20:1> line:16:1 f 'double (double)'
+  |-ParmVarDecl 0x7fcafa06e428 <col:3, col:10> col:10 used x 'double'
+  `-CompoundStmt 0x7fcafa06e8c8 <line:17:1, line:20:1>
+    |-DeclStmt 0x7fcafa06e6f8 <line:18:3, col:22>
+    | `-VarDecl 0x7fcafa06e5b8 <col:3, col:21> col:10 used t 'double' cinit
+    |   `-CallExpr 0x7fcafa06e6b0 <col:14, col:21> 'double'
+    |     |-ImplicitCastExpr 0x7fcafa06e698 <col:14> 'double (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7fcafa06e618 <col:14> 'double (double)' Function 0x7fcafa06dff0 'atan' 'double (double)'
+    |     `-ImplicitCastExpr 0x7fcafa06e6e0 <col:20> 'double' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fcafa06e640 <col:20> 'double' lvalue ParmVar 0x7fcafa06e428 'x' 'double'
+    `-ReturnStmt 0x7fcafa06e8b0 <line:19:3, col:26>
+      `-BinaryOperator 0x7fcafa06e888 <col:10, col:26> 'double' '+'
+        |-CallExpr 0x7fcafa06e778 <col:10, col:16> 'double'
+        | |-ImplicitCastExpr 0x7fcafa06e760 <col:10> 'double (*)(double)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7fcafa06e710 <col:10> 'double (double)' Function 0x7fcafa06dcd0 'cos' 'double (double)'
+        | `-ImplicitCastExpr 0x7fcafa06e7a8 <col:15> 'double' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fcafa06e738 <col:15> 'double' lvalue Var 0x7fcafa06e5b8 't' 'double'
+        `-CallExpr 0x7fcafa06e840 <col:20, col:26> 'double'
+          |-ImplicitCastExpr 0x7fcafa06e828 <col:20> 'double (*)(double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fcafa06e7c0 <col:20> 'double (double)' Function 0x7fcafa06d9c8 'sin' 'double (double)'
+          `-ImplicitCastExpr 0x7fcafa06e870 <col:25> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fcafa06e800 <col:25> 'double' lvalue Var 0x7fcafa06e5b8 't' 'double'

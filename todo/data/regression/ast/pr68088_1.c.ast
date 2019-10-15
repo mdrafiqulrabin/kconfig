@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7f949a021ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f949a063860 <../Data/C2AST/pr68088_1.c:4:1, col:24> col:6 used bar 'void (unsigned long)'
+| `-ParmVarDecl 0x7f949a022978 <col:11, col:20> col:24 'unsigned long'
+`-FunctionDecl 0x7f949a063b30 <line:6:1, line:15:1> line:7:1 foo 'void (unsigned long, unsigned int, unsigned int)'
+  |-ParmVarDecl 0x7f949a063960 <col:6, col:20> col:20 used aul 'unsigned long'
+  |-ParmVarDecl 0x7f949a0639d8 <col:25, col:34> col:34 used m 'unsigned int'
+  |-ParmVarDecl 0x7f949a063a50 <col:37, col:46> col:46 used i 'unsigned int'
+  `-CompoundStmt 0x7f949a063f10 <line:8:1, line:15:1>
+    `-WhileStmt 0x7f949a063ef0 <line:9:3, line:14:5>
+      |-<<<NULL>>>
+      |-IntegerLiteral 0x7f949a063be8 <line:9:10> 'int' 1
+      `-CompoundStmt 0x7f949a063ec8 <line:10:5, line:14:5>
+        |-CompoundAssignOperator 0x7f949a063c88 <line:11:7, col:14> 'unsigned long' '+=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+        | |-DeclRefExpr 0x7f949a063c08 <col:7> 'unsigned long' lvalue ParmVar 0x7f949a063960 'aul' 'unsigned long'
+        | `-ImplicitCastExpr 0x7f949a063c70 <col:14> 'unsigned long' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7f949a063c58 <col:14> 'unsigned int' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f949a063c30 <col:14> 'unsigned int' lvalue ParmVar 0x7f949a063a50 'i' 'unsigned int'
+        |-BinaryOperator 0x7f949a063dc0 <line:12:7, col:17> 'unsigned int' '='
+        | |-DeclRefExpr 0x7f949a063cc0 <col:7> 'unsigned int' lvalue ParmVar 0x7f949a063a50 'i' 'unsigned int'
+        | `-ImplicitCastExpr 0x7f949a063da8 <col:11, col:17> 'unsigned int' <IntegralCast>
+        |   `-BinaryOperator 0x7f949a063d80 <col:11, col:17> 'unsigned long' '%'
+        |     |-ImplicitCastExpr 0x7f949a063d38 <col:11> 'unsigned long' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f949a063ce8 <col:11> 'unsigned long' lvalue ParmVar 0x7f949a063960 'aul' 'unsigned long'
+        |     `-ImplicitCastExpr 0x7f949a063d68 <col:17> 'unsigned long' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f949a063d50 <col:17> 'unsigned int' <LValueToRValue>
+        |         `-DeclRefExpr 0x7f949a063d10 <col:17> 'unsigned int' lvalue ParmVar 0x7f949a0639d8 'm' 'unsigned int'
+        `-CallExpr 0x7f949a063e80 <line:13:7, col:15> 'void'
+          |-ImplicitCastExpr 0x7f949a063e68 <col:7> 'void (*)(unsigned long)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f949a063de8 <col:7> 'void (unsigned long)' Function 0x7f949a063860 'bar' 'void (unsigned long)'
+          `-ImplicitCastExpr 0x7f949a063eb0 <col:12> 'unsigned long' <LValueToRValue>
+            `-DeclRefExpr 0x7f949a063e10 <col:12> 'unsigned long' lvalue ParmVar 0x7f949a063960 'aul' 'unsigned long'

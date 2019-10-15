@@ -1,0 +1,71 @@
+../Data/C2AST/pr67580.c:11:3: error: must use 'struct' tag to refer to type 'S'
+  S s;  
+  ^
+  struct 
+../Data/C2AST/pr67580.c:12:3: error: must use 'union' tag to refer to type 'U'
+  U u;  
+  ^
+  union 
+../Data/C2AST/pr67580.c:13:3: error: must use 'enum' tag to refer to type 'E'
+  E e;  
+  ^
+  enum 
+../Data/C2AST/pr67580.c:22:3: error: must use 'struct' tag to refer to type 'T'
+  T t;  
+  ^
+  struct 
+../Data/C2AST/pr67580.c:23:3: error: must use 'union' tag to refer to type 'V'
+  V v;  
+  ^
+  union 
+../Data/C2AST/pr67580.c:24:3: error: must use 'enum' tag to refer to type 'F'
+  F f;  
+  ^
+  enum 
+6 errors generated.
+TranslationUnitDecl 0x7fc1b182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc1b182c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc1b182bf80 '__int128'
+|-TypedefDecl 0x7fc1b182c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc1b182bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc1b182c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc1b182c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc1b182c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc1b182c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc1b182c600 'char *'
+|   `-BuiltinType 0x7fc1b182bd80 'char'
+|-TypedefDecl 0x7fc1b182c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc1b182c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc1b182c720 'struct __va_list_tag'
+|     `-Record 0x7fc1b182c698 '__va_list_tag'
+|-RecordDecl 0x7fc1b182c960 <../Data/C2AST/pr67580.c:4:1, col:19> col:8 referenced struct S definition
+| `-FieldDecl 0x7fc1b1867638 <col:12, col:16> col:16 s 'int'
+|-RecordDecl 0x7fc1b1867680 <line:5:1, col:18> col:7 referenced union U definition
+| `-FieldDecl 0x7fc1b1867748 <col:11, col:15> col:15 s 'int'
+|-EnumDecl 0x7fc1b1867790 <line:6:1, col:12> col:6 referenced E
+| `-EnumConstantDecl 0x7fc1b1867850 <col:10> col:10 A 'int'
+|-FunctionDecl 0x7fc1b1867960 <line:8:1, line:14:1> line:9:1 f 'void (void)'
+| `-CompoundStmt 0x7fc1b1867bd8 <line:10:1, line:14:1>
+|   |-DeclStmt 0x7fc1b1867ab0 <line:11:3, col:6>
+|   | `-VarDecl 0x7fc1b1867a50 <col:3, col:5> col:5 s 'struct S'
+|   |-DeclStmt 0x7fc1b1867b38 <line:12:3, col:6>
+|   | `-VarDecl 0x7fc1b1867ad8 <col:3, col:5> col:5 u 'union U'
+|   `-DeclStmt 0x7fc1b1867bc0 <line:13:3, col:6>
+|     `-VarDecl 0x7fc1b1867b60 <col:3, col:5> col:5 e 'enum E'
+`-FunctionDecl 0x7fc1b1867c90 <line:16:1, line:25:1> line:17:1 g 'void (void)'
+  `-CompoundStmt 0x7fc1b1868228 <line:18:1, line:25:1>
+    |-DeclStmt 0x7fc1b1867e40 <line:19:3, col:22>
+    | `-RecordDecl 0x7fc1b1867d30 <col:3, col:21> col:10 referenced struct T definition
+    |   `-FieldDecl 0x7fc1b1867df8 <col:14, col:18> col:18 i 'int'
+    |-DeclStmt 0x7fc1b1867f60 <line:20:3, col:21>
+    | `-RecordDecl 0x7fc1b1867e58 <col:3, col:20> col:9 referenced union V definition
+    |   `-FieldDecl 0x7fc1b1867f18 <col:13, col:17> col:17 i 'int'
+    |-DeclStmt 0x7fc1b1868078 <line:21:3, col:15>
+    | `-EnumDecl 0x7fc1b1867f78 <col:3, col:14> col:8 referenced F
+    |   `-EnumConstantDecl 0x7fc1b1868030 <col:12> col:12 J 'int'
+    |-DeclStmt 0x7fc1b1868100 <line:22:3, col:6>
+    | `-VarDecl 0x7fc1b18680a0 <col:3, col:5> col:5 t 'struct T'
+    |-DeclStmt 0x7fc1b1868188 <line:23:3, col:6>
+    | `-VarDecl 0x7fc1b1868128 <col:3, col:5> col:5 v 'union V'
+    `-DeclStmt 0x7fc1b1868210 <line:24:3, col:6>
+      `-VarDecl 0x7fc1b18681b0 <col:3, col:5> col:5 f 'enum F'

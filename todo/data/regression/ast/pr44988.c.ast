@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7f8f6102bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8f6102c960 <../Data/C2AST/pr44988.c:1:1, line:4:1> line:1:8 struct S definition
+| `-FieldDecl 0x7f8f61020638 <line:3:3, col:7> col:7 i 'int'
+|-FunctionDecl 0x7f8f610207d0 <line:6:1, col:26> col:13 used bar 'void (struct S)' extern
+| `-ParmVarDecl 0x7f8f610206d0 <col:18, col:25> col:26 'struct S':'struct S'
+`-FunctionDecl 0x7f8f61020980 <line:8:1, line:13:1> line:9:1 foo 'void (void)'
+  `-CompoundStmt 0x7f8f61020cf8 <line:10:1, line:13:1>
+    |-DeclStmt 0x7f8f61020ab8 <line:11:3, col:12>
+    | `-VarDecl 0x7f8f61020a38 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7f8f61020a98 <col:11> 'int' 0
+    `-CallExpr 0x7f8f61020cb0 <line:12:3, col:24> 'void'
+      |-ImplicitCastExpr 0x7f8f61020c98 <col:3> 'void (*)(struct S)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f8f61020ad0 <col:3> 'void (struct S)' Function 0x7f8f610207d0 'bar' 'void (struct S)'
+      `-ImplicitCastExpr 0x7f8f61020ce0 <col:8, col:23> 'struct S':'struct S' <LValueToRValue>
+        `-UnaryOperator 0x7f8f61020c18 <col:8, col:23> 'struct S':'struct S' lvalue prefix '*'
+          `-CStyleCastExpr 0x7f8f61020bf0 <col:9, col:23> 'struct S *' <BitCast>
+            `-UnaryOperator 0x7f8f61020b48 <col:22, col:23> 'int *' prefix '&'
+              `-DeclRefExpr 0x7f8f61020af8 <col:23> 'int' lvalue Var 0x7f8f61020a38 'i' 'int'

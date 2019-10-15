@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f9b0902bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9b0902c978 <../Data/C2AST/pr65693.c:5:1, col:5> col:5 used a 'int'
+|-FunctionDecl 0x7f9b09814660 <line:7:1, line:13:1> line:8:1 foo 'void (int (*)(int, int, int), unsigned int)'
+| |-ParmVarDecl 0x7f9b098144d8 <col:6, col:30> col:12 used fn 'int (*)(int, int, int)'
+| |-ParmVarDecl 0x7f9b09814550 <col:33, col:46> col:46 used b 'unsigned int'
+| `-CompoundStmt 0x7f9b09814dd0 <line:9:1, line:13:1>
+|   |-DeclStmt 0x7f9b09814a80 <line:10:3, col:60>
+|   | `-VarDecl 0x7f9b09814750 <col:3, col:59> col:18 used c 'unsigned long *' cinit
+|   |   `-CStyleCastExpr 0x7f9b09814a58 <col:22, col:59> 'unsigned long *' <BitCast>
+|   |     `-CallExpr 0x7f9b098149e0 <col:40, col:59> 'void *'
+|   |       |-ImplicitCastExpr 0x7f9b098149c8 <col:40> 'void *(*)(unsigned long)' <BuiltinFnToFnPtr>
+|   |       | `-DeclRefExpr 0x7f9b09814938 <col:40> '<builtin fn type>' Function 0x7f9b098147e8 '__builtin_alloca' 'void *(unsigned long)'
+|   |       `-ImplicitCastExpr 0x7f9b09814a28 <col:58> 'unsigned long' <IntegralCast>
+|   |         `-ImplicitCastExpr 0x7f9b09814a10 <col:58> 'unsigned int' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7f9b09814960 <col:58> 'unsigned int' lvalue ParmVar 0x7f9b09814550 'b' 'unsigned int'
+|   |-BinaryOperator 0x7f9b09814b50 <line:11:3, col:8> 'int' '='
+|   | |-DeclRefExpr 0x7f9b09814a98 <col:3> 'int' lvalue Var 0x7f9b0902c978 'a' 'int'
+|   | `-ImplicitCastExpr 0x7f9b09814b38 <col:7, col:8> 'int' <IntegralCast>
+|   |   `-ImplicitCastExpr 0x7f9b09814b20 <col:7, col:8> 'unsigned long' <LValueToRValue>
+|   |     `-UnaryOperator 0x7f9b09814b00 <col:7, col:8> 'unsigned long' lvalue prefix '*'
+|   |       `-ImplicitCastExpr 0x7f9b09814ae8 <col:8> 'unsigned long *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f9b09814ac0 <col:8> 'unsigned long *' lvalue Var 0x7f9b09814750 'c' 'unsigned long *'
+|   `-DeclStmt 0x7f9b09814db8 <line:12:3, col:44>
+|     `-VarDecl 0x7f9b09814c00 <col:3, col:43> col:16 used d 'int' register cinit
+|       |-CallExpr 0x7f9b09814d60 <col:32, col:43> 'int'
+|       | |-ImplicitCastExpr 0x7f9b09814d48 <col:32> 'int (*)(int, int, int)' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f9b09814cb8 <col:32> 'int (*)(int, int, int)' lvalue ParmVar 0x7f9b098144d8 'fn' 'int (*)(int, int, int)'
+|       | |-IntegerLiteral 0x7f9b09814ce0 <col:36> 'int' 0
+|       | |-IntegerLiteral 0x7f9b09814d00 <col:39> 'int' 0
+|       | `-ImplicitCastExpr 0x7f9b09814da0 <col:42> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7f9b09814d20 <col:42> 'int' lvalue Var 0x7f9b09814c00 'd' 'int'
+|       `-AsmLabelAttr 0x7f9b09814c60 <col:23> "edx"
+`-FunctionDecl 0x7f9b098147e8 <line:10:40> col:40 implicit used __builtin_alloca 'void *(unsigned long)' extern
+  |-ParmVarDecl 0x7f9b09814888 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f9b098148f0 <col:40> Implicit

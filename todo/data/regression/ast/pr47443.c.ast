@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe6bb02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe6bb8150d8 <../Data/C2AST/pr47443.c:6:1, line:9:1> line:6:19 used bar 'int (char *, int)' static inline
+| |-ParmVarDecl 0x7fe6bb02c978 <col:24, col:30> col:30 used c 'char *'
+| |-ParmVarDecl 0x7fe6bb815000 <col:33, col:37> col:37 used i 'int'
+| `-CompoundStmt 0x7fe6bb8152f0 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fe6bb8152d8 <line:8:3, col:18>
+|     `-BinaryOperator 0x7fe6bb8152b0 <col:10, col:18> 'int' '>'
+|       |-BinaryOperator 0x7fe6bb815248 <col:10, col:14> 'char *' '+'
+|       | |-ImplicitCastExpr 0x7fe6bb815218 <col:10> 'char *' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7fe6bb8151c8 <col:10> 'char *' lvalue ParmVar 0x7fe6bb02c978 'c' 'char *'
+|       | `-ImplicitCastExpr 0x7fe6bb815230 <col:14> 'int' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fe6bb8151f0 <col:14> 'int' lvalue ParmVar 0x7fe6bb815000 'i' 'int'
+|       `-ImplicitCastExpr 0x7fe6bb815298 <col:18> 'char *' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe6bb815270 <col:18> 'char *' lvalue ParmVar 0x7fe6bb02c978 'c' 'char *'
+`-FunctionDecl 0x7fe6bb815360 <line:11:1, line:15:1> line:11:5 foo 'int ()'
+  `-CompoundStmt 0x7fe6bb815628 <line:12:1, line:15:1>
+    |-DeclStmt 0x7fe6bb8154d8 <line:13:3, col:14>
+    | `-VarDecl 0x7fe6bb815478 <col:3, col:13> col:8 used c 'char [100]'
+    `-ReturnStmt 0x7fe6bb815610 <line:14:3, col:21>
+      `-ParenExpr 0x7fe6bb8155f0 <col:10, col:21> 'int'
+        `-CallExpr 0x7fe6bb8155a0 <col:11, col:20> 'int'
+          |-ImplicitCastExpr 0x7fe6bb815588 <col:11> 'int (*)(char *, int)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe6bb8154f0 <col:11> 'int (char *, int)' Function 0x7fe6bb8150d8 'bar' 'int (char *, int)'
+          |-ImplicitCastExpr 0x7fe6bb8155d8 <col:16> 'char *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7fe6bb815518 <col:16> 'char [100]' lvalue Var 0x7fe6bb815478 'c' 'char [100]'
+          `-IntegerLiteral 0x7fe6bb815540 <col:19> 'int' 1

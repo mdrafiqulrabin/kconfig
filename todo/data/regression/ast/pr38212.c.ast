@@ -1,0 +1,73 @@
+TranslationUnitDecl 0x7ffcab02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffcab050b38 <../Data/C2AST/pr38212.c:1:1, line:13:1> line:2:1 used foo 'int (int *restrict, int)'
+| |-ParmVarDecl 0x7ffcab02c9a0 <col:6, col:22> col:22 used p 'int *restrict'
+| |-ParmVarDecl 0x7ffcab050a18 <col:25, col:29> col:29 used i 'int'
+| |-CompoundStmt 0x7ffcab051378 <line:3:1, line:13:1>
+| | |-DeclStmt 0x7ffcab050ce8 <line:4:3, col:20>
+| | | `-VarDecl 0x7ffcab050c88 <col:3, col:19> col:19 used q 'int *restrict'
+| | |-DeclStmt 0x7ffcab050d78 <line:5:3, col:20>
+| | | `-VarDecl 0x7ffcab050d18 <col:3, col:19> col:19 used r 'int *restrict'
+| | |-DeclStmt 0x7ffcab050e98 <line:6:3, col:11>
+| | | |-VarDecl 0x7ffcab050da8 <col:3, col:7> col:7 used v 'int'
+| | | `-VarDecl 0x7ffcab050e20 <col:3, col:10> col:10 used w 'int'
+| | |-BinaryOperator 0x7ffcab050f60 <line:7:3, col:11> 'int *' '='
+| | | |-DeclRefExpr 0x7ffcab050eb0 <col:3> 'int *restrict' lvalue Var 0x7ffcab050c88 'q' 'int *restrict'
+| | | `-BinaryOperator 0x7ffcab050f38 <col:7, col:11> 'int *' '+'
+| | |   |-ImplicitCastExpr 0x7ffcab050f20 <col:7> 'int *' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7ffcab050ed8 <col:7> 'int *restrict' lvalue ParmVar 0x7ffcab02c9a0 'p' 'int *restrict'
+| | |   `-IntegerLiteral 0x7ffcab050f00 <col:11> 'int' 1
+| | |-BinaryOperator 0x7ffcab051058 <line:8:3, col:11> 'int *' '='
+| | | |-DeclRefExpr 0x7ffcab050f88 <col:3> 'int *restrict' lvalue Var 0x7ffcab050d18 'r' 'int *restrict'
+| | | `-BinaryOperator 0x7ffcab051030 <col:7, col:11> 'int *' '-'
+| | |   |-ImplicitCastExpr 0x7ffcab051000 <col:7> 'int *' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7ffcab050fb0 <col:7> 'int *restrict' lvalue Var 0x7ffcab050c88 'q' 'int *restrict'
+| | |   `-ImplicitCastExpr 0x7ffcab051018 <col:11> 'int' <LValueToRValue>
+| | |     `-DeclRefExpr 0x7ffcab050fd8 <col:11> 'int' lvalue ParmVar 0x7ffcab050a18 'i' 'int'
+| | |-BinaryOperator 0x7ffcab051120 <line:9:3, col:8> 'int' '='
+| | | |-DeclRefExpr 0x7ffcab051080 <col:3> 'int' lvalue Var 0x7ffcab050da8 'v' 'int'
+| | | `-ImplicitCastExpr 0x7ffcab051108 <col:7, col:8> 'int' <LValueToRValue>
+| | |   `-UnaryOperator 0x7ffcab0510e8 <col:7, col:8> 'int' lvalue prefix '*'
+| | |     `-ImplicitCastExpr 0x7ffcab0510d0 <col:8> 'int *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ffcab0510a8 <col:8> 'int *restrict' lvalue Var 0x7ffcab050d18 'r' 'int *restrict'
+| | |-BinaryOperator 0x7ffcab0511c8 <line:10:3, col:8> 'int' '='
+| | | |-UnaryOperator 0x7ffcab051188 <col:3, col:4> 'int' lvalue prefix '*'
+| | | | `-ImplicitCastExpr 0x7ffcab051170 <col:4> 'int *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ffcab051148 <col:4> 'int *restrict' lvalue ParmVar 0x7ffcab02c9a0 'p' 'int *restrict'
+| | | `-IntegerLiteral 0x7ffcab0511a8 <col:8> 'int' 1
+| | |-BinaryOperator 0x7ffcab051290 <line:11:3, col:8> 'int' '='
+| | | |-DeclRefExpr 0x7ffcab0511f0 <col:3> 'int' lvalue Var 0x7ffcab050e20 'w' 'int'
+| | | `-ImplicitCastExpr 0x7ffcab051278 <col:7, col:8> 'int' <LValueToRValue>
+| | |   `-UnaryOperator 0x7ffcab051258 <col:7, col:8> 'int' lvalue prefix '*'
+| | |     `-ImplicitCastExpr 0x7ffcab051240 <col:8> 'int *' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7ffcab051218 <col:8> 'int *restrict' lvalue Var 0x7ffcab050d18 'r' 'int *restrict'
+| | `-ReturnStmt 0x7ffcab051360 <line:12:3, col:14>
+| |   `-BinaryOperator 0x7ffcab051338 <col:10, col:14> 'int' '+'
+| |     |-ImplicitCastExpr 0x7ffcab051308 <col:10> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7ffcab0512b8 <col:10> 'int' lvalue Var 0x7ffcab050da8 'v' 'int'
+| |     `-ImplicitCastExpr 0x7ffcab051320 <col:14> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x7ffcab0512e0 <col:14> 'int' lvalue Var 0x7ffcab050e20 'w' 'int'
+| `-NoInlineAttr 0x7ffcab050be8 <line:1:20>
+|-FunctionDecl 0x7ffcab0514c0 <line:14:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffcab051560 prev 0x7ffcab0514c0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7ffcab051650 <line:15:1, line:21:1> line:15:5 main 'int ()'
+  `-CompoundStmt 0x7ffcac000038 <line:16:1, line:21:1>
+    |-DeclStmt 0x7ffcab051788 <line:17:3, col:12>
+    | `-VarDecl 0x7ffcab051708 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7ffcab051768 <col:11> 'int' 0
+    |-IfStmt 0x7ffcab0519b8 <line:18:3, line:19:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffcab0518f8 <line:18:7, col:22> 'int' '!='
+    | | |-CallExpr 0x7ffcab0518a0 <col:7, col:17> 'int'
+    | | | |-ImplicitCastExpr 0x7ffcab051888 <col:7> 'int (*)(int *restrict, int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ffcab0517a0 <col:7> 'int (int *restrict, int)' Function 0x7ffcab050b38 'foo' 'int (int *restrict, int)'
+    | | | |-UnaryOperator 0x7ffcab0517f0 <col:12, col:13> 'int *' prefix '&'
+    | | | | `-DeclRefExpr 0x7ffcab0517c8 <col:13> 'int' lvalue Var 0x7ffcab051708 'i' 'int'
+    | | | `-IntegerLiteral 0x7ffcab051810 <col:16> 'int' 1
+    | | `-IntegerLiteral 0x7ffcab0518d8 <col:22> 'int' 1
+    | |-CallExpr 0x7ffcab051990 <line:19:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ffcab051978 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ffcab051920 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffcab051560 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7ffcac000020 <line:20:3, col:10>
+      `-IntegerLiteral 0x7ffcac000000 <col:10> 'int' 0

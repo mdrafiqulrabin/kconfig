@@ -1,0 +1,480 @@
+TranslationUnitDecl 0x7ffc4e0174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffc4e018178 <../Data/C2AST/pr38948.c:3:1, col:23> col:23 referenced byte 'unsigned char'
+| `-BuiltinType 0x7ffc4e017640 'unsigned char'
+|-TypedefDecl 0x7ffc4e059a00 <line:4:1, col:22> col:22 referenced uint 'unsigned int'
+| `-BuiltinType 0x7ffc4e017680 'unsigned int'
+|-TypedefDecl 0x7ffc4e059a70 <line:5:1, col:13> col:13 referenced bool 'int'
+| `-BuiltinType 0x7ffc4e0175e0 'int'
+|-RecordDecl 0x7ffc4e059ac8 <line:6:9, line:9:1> line:6:16 struct gs_const_string_s definition
+| `-FieldDecl 0x7ffc4e059bf8 <line:8:3, col:15> col:15 referenced data 'const byte *'
+|-TypedefDecl 0x7ffc4e059c90 <line:6:1, line:10:1> col:1 referenced gs_const_string 'struct gs_const_string_s':'struct gs_const_string_s'
+| `-ElaboratedType 0x7ffc4e059c40 'struct gs_const_string_s' sugar
+|   `-RecordType 0x7ffc4e059b50 'struct gs_const_string_s'
+|     `-Record 0x7ffc4e059ac8 'gs_const_string_s'
+|-RecordDecl 0x7ffc4e059d00 <line:11:1, line:14:1> line:11:8 struct gs_matrix_s definition
+| |-FieldDecl 0x7ffc4e059dc8 <line:13:3, col:9> col:9 xx 'float'
+| |-FieldDecl 0x7ffc4e059e28 <col:3, col:13> col:13 xy 'float'
+| |-FieldDecl 0x7ffc4e059e88 <col:3, col:17> col:17 yx 'float'
+| |-FieldDecl 0x7ffc4e059ee8 <col:3, col:21> col:21 yy 'float'
+| |-FieldDecl 0x7ffc4e059f48 <col:3, col:25> col:25 tx 'float'
+| `-FieldDecl 0x7ffc4e059fa8 <col:3, col:29> col:29 ty 'float'
+|-TypedefDecl 0x7ffc4e05a040 <line:15:1, col:28> col:28 referenced gs_matrix 'struct gs_matrix_s':'struct gs_matrix_s'
+| `-ElaboratedType 0x7ffc4e059ff0 'struct gs_matrix_s' sugar
+|   `-RecordType 0x7ffc4e059d90 'struct gs_matrix_s'
+|     `-Record 0x7ffc4e059d00 'gs_matrix_s'
+|-TypedefDecl 0x7ffc4e05a0b0 <line:16:1, col:14> col:14 referenced fixed 'long'
+| `-BuiltinType 0x7ffc4e017600 'long'
+|-RecordDecl 0x7ffc4e05a108 <line:17:9, line:20:1> line:17:16 struct gs_fixed_point_s definition
+| |-FieldDecl 0x7ffc4e05a1e0 <line:19:3, col:9> col:9 referenced x 'fixed':'long'
+| `-FieldDecl 0x7ffc4e05a238 <col:3, col:12> col:12 referenced y 'fixed':'long'
+|-TypedefDecl 0x7ffc4e05a2d0 <line:17:1, line:21:1> col:1 referenced gs_fixed_point 'struct gs_fixed_point_s':'struct gs_fixed_point_s'
+| `-ElaboratedType 0x7ffc4e05a280 'struct gs_fixed_point_s' sugar
+|   `-RecordType 0x7ffc4e05a190 'struct gs_fixed_point_s'
+|     `-Record 0x7ffc4e05a108 'gs_fixed_point_s'
+|-RecordDecl 0x7ffc4e05a340 <line:22:9, line:25:1> line:22:16 struct gs_matrix_fixed_s definition
+| `-FieldDecl 0x7ffc4e05a408 <line:24:3, col:7> col:7 x 'int'
+|-TypedefDecl 0x7ffc4e05a4a0 <line:22:1, line:26:1> col:1 referenced gs_matrix_fixed 'struct gs_matrix_fixed_s':'struct gs_matrix_fixed_s'
+| `-ElaboratedType 0x7ffc4e05a450 'struct gs_matrix_fixed_s' sugar
+|   `-RecordType 0x7ffc4e05a3d0 'struct gs_matrix_fixed_s'
+|     `-Record 0x7ffc4e05a340 'gs_matrix_fixed_s'
+|-FunctionDecl 0x7ffc4e05a560 <line:27:1, col:30> col:5 used gx_path_add_curve_notes 'int ()'
+|-FunctionDecl 0x7ffc4e05a8e8 <line:28:1, line:81:1> line:29:1 used append_simple 'int (const byte *, const gs_matrix_fixed *, void *)' static
+| |-ParmVarDecl 0x7ffc4e05a650 <col:16, col:29> col:29 used glyph 'const byte *'
+| |-ParmVarDecl 0x7ffc4e05a738 <col:36, col:60> col:60 pmat 'const gs_matrix_fixed *'
+| |-ParmVarDecl 0x7ffc4e05a7b0 <col:66, col:73> col:73 used ppath 'void *'
+| `-CompoundStmt 0x7ffc4e074648 <line:30:1, line:81:1>
+|   |-DeclStmt 0x7ffc4e05aec0 <line:31:3, line:32:74>
+|   | `-VarDecl 0x7ffc4e05aa00 <line:31:3, line:32:73> line:31:7 used numContours 'int' cinit
+|   |   `-CStyleCastExpr 0x7ffc4e05ae98 <line:32:5, col:73> 'int' <IntegralCast>
+|   |     `-ParenExpr 0x7ffc4e05ae78 <col:11, col:73> 'unsigned int'
+|   |       `-BinaryOperator 0x7ffc4e05ae08 <col:12, col:67> 'unsigned int' '-'
+|   |         |-ParenExpr 0x7ffc4e05adb0 <col:12, col:63> 'unsigned int'
+|   |         | `-BinaryOperator 0x7ffc4e05ad88 <col:13, col:57> 'unsigned int' '^'
+|   |         |   |-ParenExpr 0x7ffc4e05ad30 <col:13, col:53> 'unsigned int'
+|   |         |   | `-BinaryOperator 0x7ffc4e05ad08 <col:14, col:52> 'unsigned int' '+'
+|   |         |   |   |-ParenExpr 0x7ffc4e05ac10 <col:14, col:39> 'uint':'unsigned int'
+|   |         |   |   | `-BinaryOperator 0x7ffc4e05abe8 <col:15, col:38> 'uint':'unsigned int' '<<'
+|   |         |   |   |   |-CStyleCastExpr 0x7ffc4e05aba0 <col:15, col:33> 'uint':'unsigned int' <IntegralCast>
+|   |         |   |   |   | `-ImplicitCastExpr 0x7ffc4e05ab88 <col:22, col:33> 'byte':'unsigned char' <LValueToRValue>
+|   |         |   |   |   |   `-ParenExpr 0x7ffc4e05ab68 <col:22, col:33> 'const byte':'const unsigned char' lvalue
+|   |         |   |   |   |     `-ArraySubscriptExpr 0x7ffc4e05ab00 <col:23, col:32> 'const byte':'const unsigned char' lvalue
+|   |         |   |   |   |       |-ImplicitCastExpr 0x7ffc4e05aae8 <col:23, col:29> 'const byte *' <LValueToRValue>
+|   |         |   |   |   |       | `-ParenExpr 0x7ffc4e05aaa8 <col:23, col:29> 'const byte *' lvalue
+|   |         |   |   |   |       |   `-DeclRefExpr 0x7ffc4e05aa80 <col:24> 'const byte *' lvalue ParmVar 0x7ffc4e05a650 'glyph' 'const byte *'
+|   |         |   |   |   |       `-IntegerLiteral 0x7ffc4e05aac8 <col:31> 'int' 0
+|   |         |   |   |   `-IntegerLiteral 0x7ffc4e05abc8 <col:38> 'int' 8
+|   |         |   |   `-ImplicitCastExpr 0x7ffc4e05acf0 <col:43, col:52> 'unsigned int' <IntegralCast>
+|   |         |   |     `-ImplicitCastExpr 0x7ffc4e05acd8 <col:43, col:52> 'byte':'unsigned char' <LValueToRValue>
+|   |         |   |       `-ArraySubscriptExpr 0x7ffc4e05acb0 <col:43, col:52> 'const byte':'const unsigned char' lvalue
+|   |         |   |         |-ImplicitCastExpr 0x7ffc4e05ac98 <col:43, col:49> 'const byte *' <LValueToRValue>
+|   |         |   |         | `-ParenExpr 0x7ffc4e05ac58 <col:43, col:49> 'const byte *' lvalue
+|   |         |   |         |   `-DeclRefExpr 0x7ffc4e05ac30 <col:44> 'const byte *' lvalue ParmVar 0x7ffc4e05a650 'glyph' 'const byte *'
+|   |         |   |         `-IntegerLiteral 0x7ffc4e05ac78 <col:51> 'int' 1
+|   |         |   `-ImplicitCastExpr 0x7ffc4e05ad70 <col:57> 'unsigned int' <IntegralCast>
+|   |         |     `-IntegerLiteral 0x7ffc4e05ad50 <col:57> 'int' 32768
+|   |         `-ImplicitCastExpr 0x7ffc4e05adf0 <col:67> 'unsigned int' <IntegralCast>
+|   |           `-IntegerLiteral 0x7ffc4e05add0 <col:67> 'int' 32768
+|   |-DeclStmt 0x7ffc4e05afd0 <line:33:3, col:33>
+|   | `-VarDecl 0x7ffc4e05aee8 <col:3, col:31> col:15 used pends 'const byte *' cinit
+|   |   `-BinaryOperator 0x7ffc4e05afa8 <col:23, col:31> 'const byte *' '+'
+|   |     |-ImplicitCastExpr 0x7ffc4e05af90 <col:23> 'const byte *' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7ffc4e05af48 <col:23> 'const byte *' lvalue ParmVar 0x7ffc4e05a650 'glyph' 'const byte *'
+|   |     `-IntegerLiteral 0x7ffc4e05af70 <col:31> 'int' 10
+|   |-DeclStmt 0x7ffc4e05b080 <line:34:3, col:15>
+|   | `-VarDecl 0x7ffc4e05b000 <col:3, col:14> col:7 used code 'int' cinit
+|   |   `-IntegerLiteral 0x7ffc4e05b060 <col:14> 'int' 0
+|   `-CompoundStmt 0x7ffc4e074610 <line:35:3, line:80:3>
+|     |-DeclStmt 0x7ffc4e05b140 <line:36:5, col:15>
+|     | `-VarDecl 0x7ffc4e05b0a8 <col:5, col:14> col:10 used i 'uint':'unsigned int' cinit
+|     |   `-ImplicitCastExpr 0x7ffc4e05b128 <col:14> 'uint':'unsigned int' <IntegralCast>
+|     |     `-IntegerLiteral 0x7ffc4e05b108 <col:14> 'int' 0
+|     |-DeclStmt 0x7ffc4e05b200 <line:37:5, col:16>
+|     | `-VarDecl 0x7ffc4e05b168 <col:5, col:15> col:10 used np 'uint':'unsigned int' cinit
+|     |   `-ImplicitCastExpr 0x7ffc4e05b1e8 <col:15> 'uint':'unsigned int' <IntegralCast>
+|     |     `-IntegerLiteral 0x7ffc4e05b1c8 <col:15> 'int' 0
+|     |-DeclStmt 0x7ffc4e05b390 <line:38:5, col:28>
+|     | `-VarDecl 0x7ffc4e05b250 <col:5, col:27> col:20 used pt 'gs_fixed_point':'struct gs_fixed_point_s' cinit
+|     |   `-InitListExpr 0x7ffc4e05b318 <col:25, col:27> 'gs_fixed_point':'struct gs_fixed_point_s'
+|     |     |-ImplicitCastExpr 0x7ffc4e05b368 <col:26> 'fixed':'long' <IntegralCast>
+|     |     | `-IntegerLiteral 0x7ffc4e05b2b0 <col:26> 'int' 0
+|     |     `-ImplicitValueInitExpr 0x7ffc4e05b380 <<invalid sloc>> 'fixed':'long'
+|     |-DeclStmt 0x7ffc4e05b450 <line:39:5, col:18>
+|     | `-VarDecl 0x7ffc4e05b3b8 <col:5, col:17> col:10 used reps 'uint':'unsigned int' cinit
+|     |   `-ImplicitCastExpr 0x7ffc4e05b438 <col:17> 'uint':'unsigned int' <IntegralCast>
+|     |     `-IntegerLiteral 0x7ffc4e05b418 <col:17> 'int' 0
+|     `-ForStmt 0x7ffc4e0745d8 <line:40:5, line:79:7>
+|       |-BinaryOperator 0x7ffc4e05b578 <line:40:10, col:22> 'uint':'unsigned int' ','
+|       | |-BinaryOperator 0x7ffc4e05b4c8 <col:10, col:14> 'uint':'unsigned int' '='
+|       | | |-DeclRefExpr 0x7ffc4e05b468 <col:10> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b0a8 'i' 'uint':'unsigned int'
+|       | | `-ImplicitCastExpr 0x7ffc4e05b4b0 <col:14> 'uint':'unsigned int' <IntegralCast>
+|       | |   `-IntegerLiteral 0x7ffc4e05b490 <col:14> 'int' 0
+|       | `-BinaryOperator 0x7ffc4e05b550 <col:17, col:22> 'uint':'unsigned int' '='
+|       |   |-DeclRefExpr 0x7ffc4e05b4f0 <col:17> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b168 'np' 'uint':'unsigned int'
+|       |   `-ImplicitCastExpr 0x7ffc4e05b538 <col:22> 'uint':'unsigned int' <IntegralCast>
+|       |     `-IntegerLiteral 0x7ffc4e05b518 <col:22> 'int' 0
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7ffc4e05b638 <col:25, col:29> 'int' '<'
+|       | |-ImplicitCastExpr 0x7ffc4e05b5f0 <col:25> 'uint':'unsigned int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7ffc4e05b5a0 <col:25> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b0a8 'i' 'uint':'unsigned int'
+|       | `-ImplicitCastExpr 0x7ffc4e05b620 <col:29> 'unsigned int' <IntegralCast>
+|       |   `-ImplicitCastExpr 0x7ffc4e05b608 <col:29> 'int' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7ffc4e05b5c8 <col:29> 'int' lvalue Var 0x7ffc4e05aa00 'numContours' 'int'
+|       |-UnaryOperator 0x7ffc4e05b688 <col:42, col:44> 'uint':'unsigned int' prefix '++'
+|       | `-DeclRefExpr 0x7ffc4e05b660 <col:44> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b0a8 'i' 'uint':'unsigned int'
+|       `-CompoundStmt 0x7ffc4e0745a0 <line:41:7, line:79:7>
+|         |-DeclStmt 0x7ffc4e05b7b8 <line:42:2, col:24>
+|         | `-VarDecl 0x7ffc4e05b6e0 <col:2, col:23> col:7 used move 'bool':'int' cinit
+|         |   `-ParenExpr 0x7ffc4e05b798 <col:14, col:23> 'bool':'int'
+|         |     `-CStyleCastExpr 0x7ffc4e05b770 <col:15, col:22> 'bool':'int' <NoOp>
+|         |       `-IntegerLiteral 0x7ffc4e05b740 <col:22> 'int' 1
+|         |-DeclStmt 0x7ffc4e0726b0 <line:43:2, line:44:61>
+|         | `-VarDecl 0x7ffc4e05b7e0 <line:43:2, line:44:60> line:43:7 used last_point 'uint':'unsigned int' cinit
+|         |   `-ParenExpr 0x7ffc4e072690 <line:44:4, col:60> 'unsigned int'
+|         |     `-BinaryOperator 0x7ffc4e072668 <col:5, col:59> 'unsigned int' '+'
+|         |       |-ParenExpr 0x7ffc4e0724a8 <col:5, col:38> 'uint':'unsigned int'
+|         |       | `-BinaryOperator 0x7ffc4e072480 <col:6, col:37> 'uint':'unsigned int' '<<'
+|         |       |   |-CStyleCastExpr 0x7ffc4e072438 <col:6, col:32> 'uint':'unsigned int' <IntegralCast>
+|         |       |   | `-ImplicitCastExpr 0x7ffc4e072420 <col:13, col:32> 'byte':'unsigned char' <LValueToRValue>
+|         |       |   |   `-ParenExpr 0x7ffc4e072400 <col:13, col:32> 'const byte':'const unsigned char' lvalue
+|         |       |   |     `-ArraySubscriptExpr 0x7ffc4e05b988 <col:14, col:31> 'const byte':'const unsigned char' lvalue
+|         |       |   |       |-ParenExpr 0x7ffc4e05b948 <col:14, col:28> 'const byte *'
+|         |       |   |       | `-BinaryOperator 0x7ffc4e05b920 <col:15, col:27> 'const byte *' '+'
+|         |       |   |       |   |-ImplicitCastExpr 0x7ffc4e05b908 <col:15> 'const byte *' <LValueToRValue>
+|         |       |   |       |   | `-DeclRefExpr 0x7ffc4e05b840 <col:15> 'const byte *' lvalue Var 0x7ffc4e05aee8 'pends' 'const byte *'
+|         |       |   |       |   `-BinaryOperator 0x7ffc4e05b8e0 <col:23, col:27> 'unsigned int' '*'
+|         |       |   |       |     |-ImplicitCastExpr 0x7ffc4e05b8b0 <col:23> 'uint':'unsigned int' <LValueToRValue>
+|         |       |   |       |     | `-DeclRefExpr 0x7ffc4e05b868 <col:23> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b0a8 'i' 'uint':'unsigned int'
+|         |       |   |       |     `-ImplicitCastExpr 0x7ffc4e05b8c8 <col:27> 'unsigned int' <IntegralCast>
+|         |       |   |       |       `-IntegerLiteral 0x7ffc4e05b890 <col:27> 'int' 2
+|         |       |   |       `-IntegerLiteral 0x7ffc4e05b968 <col:30> 'int' 0
+|         |       |   `-IntegerLiteral 0x7ffc4e072460 <col:37> 'int' 8
+|         |       `-ImplicitCastExpr 0x7ffc4e072650 <col:42, col:59> 'unsigned int' <IntegralCast>
+|         |         `-ImplicitCastExpr 0x7ffc4e072638 <col:42, col:59> 'byte':'unsigned char' <LValueToRValue>
+|         |           `-ArraySubscriptExpr 0x7ffc4e072610 <col:42, col:59> 'const byte':'const unsigned char' lvalue
+|         |             |-ParenExpr 0x7ffc4e0725d0 <col:42, col:56> 'const byte *'
+|         |             | `-BinaryOperator 0x7ffc4e0725a8 <col:43, col:55> 'const byte *' '+'
+|         |             |   |-ImplicitCastExpr 0x7ffc4e072590 <col:43> 'const byte *' <LValueToRValue>
+|         |             |   | `-DeclRefExpr 0x7ffc4e0724c8 <col:43> 'const byte *' lvalue Var 0x7ffc4e05aee8 'pends' 'const byte *'
+|         |             |   `-BinaryOperator 0x7ffc4e072568 <col:51, col:55> 'unsigned int' '*'
+|         |             |     |-ImplicitCastExpr 0x7ffc4e072538 <col:51> 'uint':'unsigned int' <LValueToRValue>
+|         |             |     | `-DeclRefExpr 0x7ffc4e0724f0 <col:51> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b0a8 'i' 'uint':'unsigned int'
+|         |             |     `-ImplicitCastExpr 0x7ffc4e072550 <col:55> 'unsigned int' <IntegralCast>
+|         |             |       `-IntegerLiteral 0x7ffc4e072518 <col:55> 'int' 2
+|         |             `-IntegerLiteral 0x7ffc4e0725f0 <col:58> 'int' 1
+|         |-DeclStmt 0x7ffc4e072760 <line:45:2, col:19>
+|         | `-VarDecl 0x7ffc4e0726e0 <col:2, col:18> col:6 used off_curve 'int' cinit
+|         |   `-IntegerLiteral 0x7ffc4e072740 <col:18> 'int' 0
+|         |-DeclStmt 0x7ffc4e0728e8 <line:46:2, col:27>
+|         | `-VarDecl 0x7ffc4e072888 <col:2, col:26> col:17 used cpoints 'gs_fixed_point [3]'
+|         `-ForStmt 0x7ffc4e074568 <line:47:2, line:78:4>
+|           |-<<<NULL>>>
+|           |-<<<NULL>>>
+|           |-BinaryOperator 0x7ffc4e072980 <line:47:9, col:15> 'int' '<='
+|           | |-ImplicitCastExpr 0x7ffc4e072950 <col:9> 'uint':'unsigned int' <LValueToRValue>
+|           | | `-DeclRefExpr 0x7ffc4e072900 <col:9> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b168 'np' 'uint':'unsigned int'
+|           | `-ImplicitCastExpr 0x7ffc4e072968 <col:15> 'uint':'unsigned int' <LValueToRValue>
+|           |   `-DeclRefExpr 0x7ffc4e072928 <col:15> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b7e0 'last_point' 'uint':'unsigned int'
+|           |-BinaryOperator 0x7ffc4e072a38 <col:27, col:37> 'uint':'unsigned int' ','
+|           | |-UnaryOperator 0x7ffc4e0729d0 <col:27, col:29> 'uint':'unsigned int' prefix '--'
+|           | | `-DeclRefExpr 0x7ffc4e0729a8 <col:29> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b3b8 'reps' 'uint':'unsigned int'
+|           | `-UnaryOperator 0x7ffc4e072a18 <col:35, col:37> 'uint':'unsigned int' prefix '++'
+|           |   `-DeclRefExpr 0x7ffc4e0729f0 <col:37> 'uint':'unsigned int' lvalue Var 0x7ffc4e05b168 'np' 'uint':'unsigned int'
+|           `-CompoundStmt 0x7ffc4e074550 <line:48:4, line:78:4>
+|             `-IfStmt 0x7ffc4e074518 <line:49:6, line:77:8>
+|               |-<<<NULL>>>
+|               |-<<<NULL>>>
+|               |-ImplicitCastExpr 0x7ffc4e072a88 <line:49:10> 'bool':'int' <LValueToRValue>
+|               | `-DeclRefExpr 0x7ffc4e072a60 <col:10> 'bool':'int' lvalue Var 0x7ffc4e05b6e0 'move' 'bool':'int'
+|               |-CompoundStmt 0x7ffc4e072cb8 <line:50:8, line:53:8>
+|               | |-BinaryOperator 0x7ffc4e072bc8 <line:51:3, col:16> 'gs_fixed_point':'struct gs_fixed_point_s' '='
+|               | | |-ArraySubscriptExpr 0x7ffc4e072b60 <col:3, col:12> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|               | | | |-ImplicitCastExpr 0x7ffc4e072b48 <col:3> 'gs_fixed_point *' <ArrayToPointerDecay>
+|               | | | | `-DeclRefExpr 0x7ffc4e072aa0 <col:3> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|               | | | `-IntegerLiteral 0x7ffc4e072ac8 <col:11> 'int' 0
+|               | | `-ImplicitCastExpr 0x7ffc4e072bb0 <col:16> 'gs_fixed_point':'struct gs_fixed_point_s' <LValueToRValue>
+|               | |   `-DeclRefExpr 0x7ffc4e072b88 <col:16> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue Var 0x7ffc4e05b250 'pt' 'gs_fixed_point':'struct gs_fixed_point_s'
+|               | `-BinaryOperator 0x7ffc4e072c90 <line:52:3, col:19> 'bool':'int' '='
+|               |   |-DeclRefExpr 0x7ffc4e072bf0 <col:3> 'bool':'int' lvalue Var 0x7ffc4e05b6e0 'move' 'bool':'int'
+|               |   `-ParenExpr 0x7ffc4e072c70 <col:10, col:19> 'bool':'int'
+|               |     `-CStyleCastExpr 0x7ffc4e072c48 <col:11, col:18> 'bool':'int' <NoOp>
+|               |       `-IntegerLiteral 0x7ffc4e072c18 <col:18> 'int' 0
+|               `-CompoundStmt 0x7ffc4e074500 <line:55:8, line:77:8>
+|                 `-SwitchStmt 0x7ffc4e072d20 <line:56:3, line:76:5>
+|                   |-<<<NULL>>>
+|                   |-<<<NULL>>>
+|                   |-UnaryOperator 0x7ffc4e072d00 <line:56:11, col:20> 'int' postfix '++'
+|                   | `-DeclRefExpr 0x7ffc4e072cd8 <col:11> 'int' lvalue Var 0x7ffc4e0726e0 'off_curve' 'int'
+|                   `-CompoundStmt 0x7ffc4e0744c8 <line:57:5, line:76:5>
+|                     |-DefaultStmt 0x7ffc4e073050 <line:58:5, line:59:48>
+|                     | `-BinaryOperator 0x7ffc4e073028 <col:7, col:48> 'fixed':'long' '='
+|                     |   |-MemberExpr 0x7ffc4e072dd8 <col:7, col:18> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |   | `-ArraySubscriptExpr 0x7ffc4e072db0 <col:7, col:16> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |-ImplicitCastExpr 0x7ffc4e072d98 <col:7> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   | `-DeclRefExpr 0x7ffc4e072d50 <col:7> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   `-IntegerLiteral 0x7ffc4e072d78 <col:15> 'int' 2
+|                     |   `-ParenExpr 0x7ffc4e073008 <col:22, col:48> 'long'
+|                     |     `-BinaryOperator 0x7ffc4e072fe0 <col:23, col:47> 'long' '/'
+|                     |       |-ParenExpr 0x7ffc4e072f88 <col:23, col:43> 'long'
+|                     |       | `-BinaryOperator 0x7ffc4e072f60 <col:24, col:42> 'long' '+'
+|                     |       |   |-ImplicitCastExpr 0x7ffc4e072f30 <col:24, col:35> 'fixed':'long' <LValueToRValue>
+|                     |       |   | `-MemberExpr 0x7ffc4e072e98 <col:24, col:35> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |       |   |   `-ArraySubscriptExpr 0x7ffc4e072e70 <col:24, col:33> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |       |   |     |-ImplicitCastExpr 0x7ffc4e072e58 <col:24> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |       |   |     | `-DeclRefExpr 0x7ffc4e072e10 <col:24> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |       |   |     `-IntegerLiteral 0x7ffc4e072e38 <col:32> 'int' 1
+|                     |       |   `-ImplicitCastExpr 0x7ffc4e072f48 <col:39, col:42> 'fixed':'long' <LValueToRValue>
+|                     |       |     `-MemberExpr 0x7ffc4e072ef8 <col:39, col:42> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |       |       `-DeclRefExpr 0x7ffc4e072ed0 <col:39> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue Var 0x7ffc4e05b250 'pt' 'gs_fixed_point':'struct gs_fixed_point_s'
+|                     |       `-ImplicitCastExpr 0x7ffc4e072fc8 <col:47> 'long' <IntegralCast>
+|                     |         `-IntegerLiteral 0x7ffc4e072fa8 <col:47> 'int' 2
+|                     |-BinaryOperator 0x7ffc4e073348 <line:60:7, col:48> 'fixed':'long' '='
+|                     | |-MemberExpr 0x7ffc4e0730f8 <col:7, col:18> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     | | `-ArraySubscriptExpr 0x7ffc4e0730d0 <col:7, col:16> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     | |   |-ImplicitCastExpr 0x7ffc4e0730b8 <col:7> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     | |   | `-DeclRefExpr 0x7ffc4e073070 <col:7> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     | |   `-IntegerLiteral 0x7ffc4e073098 <col:15> 'int' 2
+|                     | `-ParenExpr 0x7ffc4e073328 <col:22, col:48> 'long'
+|                     |   `-BinaryOperator 0x7ffc4e073300 <col:23, col:47> 'long' '/'
+|                     |     |-ParenExpr 0x7ffc4e0732a8 <col:23, col:43> 'long'
+|                     |     | `-BinaryOperator 0x7ffc4e073280 <col:24, col:42> 'long' '+'
+|                     |     |   |-ImplicitCastExpr 0x7ffc4e073250 <col:24, col:35> 'fixed':'long' <LValueToRValue>
+|                     |     |   | `-MemberExpr 0x7ffc4e0731b8 <col:24, col:35> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |     |   |   `-ArraySubscriptExpr 0x7ffc4e073190 <col:24, col:33> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |     |   |     |-ImplicitCastExpr 0x7ffc4e073178 <col:24> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |     |   |     | `-DeclRefExpr 0x7ffc4e073130 <col:24> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |     |   |     `-IntegerLiteral 0x7ffc4e073158 <col:32> 'int' 1
+|                     |     |   `-ImplicitCastExpr 0x7ffc4e073268 <col:39, col:42> 'fixed':'long' <LValueToRValue>
+|                     |     |     `-MemberExpr 0x7ffc4e073218 <col:39, col:42> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |     |       `-DeclRefExpr 0x7ffc4e0731f0 <col:39> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue Var 0x7ffc4e05b250 'pt' 'gs_fixed_point':'struct gs_fixed_point_s'
+|                     |     `-ImplicitCastExpr 0x7ffc4e0732e8 <col:47> 'long' <IntegralCast>
+|                     |       `-IntegerLiteral 0x7ffc4e0732c8 <col:47> 'int' 2
+|                     |-BinaryOperator 0x7ffc4e0741f0 <line:61:7, line:72:14> 'int' '='
+|                     | |-DeclRefExpr 0x7ffc4e073370 <line:61:7> 'int' lvalue Var 0x7ffc4e05b000 'code' 'int'
+|                     | `-CallExpr 0x7ffc4e074140 <line:62:9, line:72:14> 'int'
+|                     |   |-ImplicitCastExpr 0x7ffc4e074128 <line:62:9> 'int (*)()' <FunctionToPointerDecay>
+|                     |   | `-DeclRefExpr 0x7ffc4e073398 <col:9> 'int ()' Function 0x7ffc4e05a560 'gx_path_add_curve_notes' 'int ()'
+|                     |   |-ImplicitCastExpr 0x7ffc4e0741a8 <col:34> 'void *' <LValueToRValue>
+|                     |   | `-DeclRefExpr 0x7ffc4e0733c0 <col:34> 'void *' lvalue ParmVar 0x7ffc4e05a7b0 'ppath' 'void *'
+|                     |   |-ParenExpr 0x7ffc4e0736b8 <line:63:13, line:64:29> 'long'
+|                     |   | `-BinaryOperator 0x7ffc4e073690 <line:63:14, line:64:28> 'long' '/'
+|                     |   |   |-ParenExpr 0x7ffc4e073638 <line:63:14, line:64:24> 'long'
+|                     |   |   | `-BinaryOperator 0x7ffc4e073610 <line:63:15, line:64:23> 'long' '+'
+|                     |   |   |   |-ImplicitCastExpr 0x7ffc4e0735f8 <line:63:15, col:26> 'fixed':'long' <LValueToRValue>
+|                     |   |   |   | `-MemberExpr 0x7ffc4e073488 <col:15, col:26> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |   |   |   |   `-ArraySubscriptExpr 0x7ffc4e073460 <col:15, col:24> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |   |     |-ImplicitCastExpr 0x7ffc4e073448 <col:15> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |   |     | `-DeclRefExpr 0x7ffc4e073400 <col:15> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |   |     `-IntegerLiteral 0x7ffc4e073428 <col:23> 'int' 0
+|                     |   |   |   `-BinaryOperator 0x7ffc4e0735d0 <line:64:8, col:23> 'long' '*'
+|                     |   |   |     |-ImplicitCastExpr 0x7ffc4e0735b8 <col:8> 'long' <IntegralCast>
+|                     |   |   |     | `-IntegerLiteral 0x7ffc4e0734c0 <col:8> 'int' 2
+|                     |   |   |     `-ImplicitCastExpr 0x7ffc4e0735a0 <col:12, col:23> 'fixed':'long' <LValueToRValue>
+|                     |   |   |       `-MemberExpr 0x7ffc4e073568 <col:12, col:23> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |   |   |         `-ArraySubscriptExpr 0x7ffc4e073540 <col:12, col:21> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |           |-ImplicitCastExpr 0x7ffc4e073528 <col:12> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |           | `-DeclRefExpr 0x7ffc4e0734e0 <col:12> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |           `-IntegerLiteral 0x7ffc4e073508 <col:20> 'int' 1
+|                     |   |   `-ImplicitCastExpr 0x7ffc4e073678 <col:28> 'long' <IntegralCast>
+|                     |   |     `-IntegerLiteral 0x7ffc4e073658 <col:28> 'int' 3
+|                     |   |-ParenExpr 0x7ffc4e073990 <line:65:13, line:66:29> 'long'
+|                     |   | `-BinaryOperator 0x7ffc4e073968 <line:65:14, line:66:28> 'long' '/'
+|                     |   |   |-ParenExpr 0x7ffc4e073910 <line:65:14, line:66:24> 'long'
+|                     |   |   | `-BinaryOperator 0x7ffc4e0738e8 <line:65:15, line:66:23> 'long' '+'
+|                     |   |   |   |-ImplicitCastExpr 0x7ffc4e0738d0 <line:65:15, col:26> 'fixed':'long' <LValueToRValue>
+|                     |   |   |   | `-MemberExpr 0x7ffc4e073760 <col:15, col:26> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |   |   |   |   `-ArraySubscriptExpr 0x7ffc4e073738 <col:15, col:24> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |   |     |-ImplicitCastExpr 0x7ffc4e073720 <col:15> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |   |     | `-DeclRefExpr 0x7ffc4e0736d8 <col:15> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |   |     `-IntegerLiteral 0x7ffc4e073700 <col:23> 'int' 0
+|                     |   |   |   `-BinaryOperator 0x7ffc4e0738a8 <line:66:8, col:23> 'long' '*'
+|                     |   |   |     |-ImplicitCastExpr 0x7ffc4e073890 <col:8> 'long' <IntegralCast>
+|                     |   |   |     | `-IntegerLiteral 0x7ffc4e073798 <col:8> 'int' 2
+|                     |   |   |     `-ImplicitCastExpr 0x7ffc4e073878 <col:12, col:23> 'fixed':'long' <LValueToRValue>
+|                     |   |   |       `-MemberExpr 0x7ffc4e073840 <col:12, col:23> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |   |   |         `-ArraySubscriptExpr 0x7ffc4e073818 <col:12, col:21> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |           |-ImplicitCastExpr 0x7ffc4e073800 <col:12> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |           | `-DeclRefExpr 0x7ffc4e0737b8 <col:12> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |           `-IntegerLiteral 0x7ffc4e0737e0 <col:20> 'int' 1
+|                     |   |   `-ImplicitCastExpr 0x7ffc4e073950 <col:28> 'long' <IntegralCast>
+|                     |   |     `-IntegerLiteral 0x7ffc4e073930 <col:28> 'int' 3
+|                     |   |-ParenExpr 0x7ffc4e073c68 <line:67:13, line:68:25> 'long'
+|                     |   | `-BinaryOperator 0x7ffc4e073c40 <line:67:14, line:68:24> 'long' '/'
+|                     |   |   |-ParenExpr 0x7ffc4e073be8 <line:67:14, line:68:20> 'long'
+|                     |   |   | `-BinaryOperator 0x7ffc4e073bc0 <line:67:15, line:68:19> 'long' '+'
+|                     |   |   |   |-BinaryOperator 0x7ffc4e073ac0 <line:67:15, col:30> 'long' '*'
+|                     |   |   |   | |-ImplicitCastExpr 0x7ffc4e073aa8 <col:15> 'long' <IntegralCast>
+|                     |   |   |   | | `-IntegerLiteral 0x7ffc4e0739b0 <col:15> 'int' 2
+|                     |   |   |   | `-ImplicitCastExpr 0x7ffc4e073a90 <col:19, col:30> 'fixed':'long' <LValueToRValue>
+|                     |   |   |   |   `-MemberExpr 0x7ffc4e073a58 <col:19, col:30> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |   |   |   |     `-ArraySubscriptExpr 0x7ffc4e073a30 <col:19, col:28> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |   |       |-ImplicitCastExpr 0x7ffc4e073a18 <col:19> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |   |       | `-DeclRefExpr 0x7ffc4e0739d0 <col:19> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |   |       `-IntegerLiteral 0x7ffc4e0739f8 <col:27> 'int' 1
+|                     |   |   |   `-ImplicitCastExpr 0x7ffc4e073ba8 <line:68:8, col:19> 'fixed':'long' <LValueToRValue>
+|                     |   |   |     `-MemberExpr 0x7ffc4e073b70 <col:8, col:19> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |   |   |       `-ArraySubscriptExpr 0x7ffc4e073b48 <col:8, col:17> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |         |-ImplicitCastExpr 0x7ffc4e073b30 <col:8> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |         | `-DeclRefExpr 0x7ffc4e073ae8 <col:8> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |         `-IntegerLiteral 0x7ffc4e073b10 <col:16> 'int' 2
+|                     |   |   `-ImplicitCastExpr 0x7ffc4e073c28 <col:24> 'long' <IntegralCast>
+|                     |   |     `-IntegerLiteral 0x7ffc4e073c08 <col:24> 'int' 3
+|                     |   |-ParenExpr 0x7ffc4e073f40 <line:69:13, line:70:25> 'long'
+|                     |   | `-BinaryOperator 0x7ffc4e073f18 <line:69:14, line:70:24> 'long' '/'
+|                     |   |   |-ParenExpr 0x7ffc4e073ec0 <line:69:14, line:70:20> 'long'
+|                     |   |   | `-BinaryOperator 0x7ffc4e073e98 <line:69:15, line:70:19> 'long' '+'
+|                     |   |   |   |-BinaryOperator 0x7ffc4e073d98 <line:69:15, col:30> 'long' '*'
+|                     |   |   |   | |-ImplicitCastExpr 0x7ffc4e073d80 <col:15> 'long' <IntegralCast>
+|                     |   |   |   | | `-IntegerLiteral 0x7ffc4e073c88 <col:15> 'int' 2
+|                     |   |   |   | `-ImplicitCastExpr 0x7ffc4e073d68 <col:19, col:30> 'fixed':'long' <LValueToRValue>
+|                     |   |   |   |   `-MemberExpr 0x7ffc4e073d30 <col:19, col:30> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |   |   |   |     `-ArraySubscriptExpr 0x7ffc4e073d08 <col:19, col:28> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |   |       |-ImplicitCastExpr 0x7ffc4e073cf0 <col:19> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |   |       | `-DeclRefExpr 0x7ffc4e073ca8 <col:19> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |   |       `-IntegerLiteral 0x7ffc4e073cd0 <col:27> 'int' 1
+|                     |   |   |   `-ImplicitCastExpr 0x7ffc4e073e80 <line:70:8, col:19> 'fixed':'long' <LValueToRValue>
+|                     |   |   |     `-MemberExpr 0x7ffc4e073e48 <col:8, col:19> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |   |   |       `-ArraySubscriptExpr 0x7ffc4e073e20 <col:8, col:17> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |   |         |-ImplicitCastExpr 0x7ffc4e073e08 <col:8> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |   |         | `-DeclRefExpr 0x7ffc4e073dc0 <col:8> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |   |         `-IntegerLiteral 0x7ffc4e073de8 <col:16> 'int' 2
+|                     |   |   `-ImplicitCastExpr 0x7ffc4e073f00 <col:24> 'long' <IntegralCast>
+|                     |   |     `-IntegerLiteral 0x7ffc4e073ee0 <col:24> 'int' 3
+|                     |   |-ImplicitCastExpr 0x7ffc4e0741c0 <line:71:13, col:24> 'fixed':'long' <LValueToRValue>
+|                     |   | `-MemberExpr 0x7ffc4e073fe8 <col:13, col:24> 'fixed':'long' lvalue .x 0x7ffc4e05a1e0
+|                     |   |   `-ArraySubscriptExpr 0x7ffc4e073fc0 <col:13, col:22> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |     |-ImplicitCastExpr 0x7ffc4e073fa8 <col:13> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |     | `-DeclRefExpr 0x7ffc4e073f60 <col:13> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |     `-IntegerLiteral 0x7ffc4e073f88 <col:21> 'int' 2
+|                     |   |-ImplicitCastExpr 0x7ffc4e0741d8 <col:27, col:38> 'fixed':'long' <LValueToRValue>
+|                     |   | `-MemberExpr 0x7ffc4e0740a8 <col:27, col:38> 'fixed':'long' lvalue .y 0x7ffc4e05a238
+|                     |   |   `-ArraySubscriptExpr 0x7ffc4e074080 <col:27, col:36> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |   |     |-ImplicitCastExpr 0x7ffc4e074068 <col:27> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |   |     | `-DeclRefExpr 0x7ffc4e074020 <col:27> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |   |     `-IntegerLiteral 0x7ffc4e074048 <col:35> 'int' 2
+|                     |   `-IntegerLiteral 0x7ffc4e0740e0 <line:72:13> 'int' 0
+|                     |-BinaryOperator 0x7ffc4e074340 <line:73:7, col:29> 'gs_fixed_point':'struct gs_fixed_point_s' '='
+|                     | |-ArraySubscriptExpr 0x7ffc4e074278 <col:7, col:16> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     | | |-ImplicitCastExpr 0x7ffc4e074260 <col:7> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     | | | `-DeclRefExpr 0x7ffc4e074218 <col:7> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     | | `-IntegerLiteral 0x7ffc4e074240 <col:15> 'int' 0
+|                     | `-ImplicitCastExpr 0x7ffc4e074328 <col:20, col:29> 'gs_fixed_point':'struct gs_fixed_point_s' <LValueToRValue>
+|                     |   `-ArraySubscriptExpr 0x7ffc4e074300 <col:20, col:29> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                     |     |-ImplicitCastExpr 0x7ffc4e0742e8 <col:20> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                     |     | `-DeclRefExpr 0x7ffc4e0742a0 <col:20> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                     |     `-IntegerLiteral 0x7ffc4e0742c8 <col:28> 'int' 2
+|                     `-CaseStmt 0x7ffc4e074388 <line:74:5, line:75:20>
+|                       |-IntegerLiteral 0x7ffc4e074368 <line:74:10> 'int' 0
+|                       |-<<<NULL>>>
+|                       `-BinaryOperator 0x7ffc4e0744a0 <line:75:7, col:20> 'gs_fixed_point':'struct gs_fixed_point_s' '='
+|                         |-ArraySubscriptExpr 0x7ffc4e074438 <col:7, col:16> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue
+|                         | |-ImplicitCastExpr 0x7ffc4e074420 <col:7> 'gs_fixed_point *' <ArrayToPointerDecay>
+|                         | | `-DeclRefExpr 0x7ffc4e0743c0 <col:7> 'gs_fixed_point [3]' lvalue Var 0x7ffc4e072888 'cpoints' 'gs_fixed_point [3]'
+|                         | `-IntegerLiteral 0x7ffc4e074400 <col:15> 'int' 1
+|                         `-ImplicitCastExpr 0x7ffc4e074488 <col:20> 'gs_fixed_point':'struct gs_fixed_point_s' <LValueToRValue>
+|                           `-DeclRefExpr 0x7ffc4e074460 <col:20> 'gs_fixed_point':'struct gs_fixed_point_s' lvalue Var 0x7ffc4e05b250 'pt' 'gs_fixed_point':'struct gs_fixed_point_s'
+|-FunctionDecl 0x7ffc4e074980 <line:82:1, col:69> col:6 used gs_matrix_multiply 'void (gs_matrix *, const gs_matrix *, gs_matrix *)'
+| |-ParmVarDecl 0x7ffc4e074708 <col:26, col:36> col:37 'gs_matrix *'
+| |-ParmVarDecl 0x7ffc4e0747d8 <col:39, col:55> col:56 'const gs_matrix *'
+| `-ParmVarDecl 0x7ffc4e074848 <col:58, col:68> col:69 'gs_matrix *'
+`-FunctionDecl 0x7ffc4e074c68 <line:83:1, line:103:1> line:84:1 append_outline 'int (uint, const gs_matrix_fixed *, void *)'
+  |-ParmVarDecl 0x7ffc4e074a48 <col:17, col:22> col:22 glyph_index 'uint':'unsigned int'
+  |-ParmVarDecl 0x7ffc4e074ab8 <col:35, col:58> col:58 used pmat 'const gs_matrix_fixed *'
+  |-ParmVarDecl 0x7ffc4e074b30 <col:64, col:70> col:70 used ppath 'void *'
+  `-CompoundStmt 0x7ffc4e075eb8 <line:85:1, line:103:1>
+    |-DeclStmt 0x7ffc4e074e78 <line:86:3, col:37>
+    | `-VarDecl 0x7ffc4e074d50 <col:3, col:36> col:19 used glyph_string 'gs_const_string':'struct gs_const_string_s' cinit
+    |   `-InitListExpr 0x7ffc4e074e18 <col:34, col:36> 'gs_const_string':'struct gs_const_string_s'
+    |     `-ImplicitCastExpr 0x7ffc4e074e60 <col:35> 'const byte *' <NullToPointer>
+    |       `-IntegerLiteral 0x7ffc4e074db0 <col:35> 'int' 0
+    |-DeclStmt 0x7ffc4e074f28 <line:87:3, col:22>
+    | `-VarDecl 0x7ffc4e074ea8 <col:3, col:21> col:7 used numContours 'int' cinit
+    |   `-IntegerLiteral 0x7ffc4e074f08 <col:21> 'int' 0
+    |-BinaryOperator 0x7ffc4e075428 <line:88:3, line:90:49> 'int' '='
+    | |-DeclRefExpr 0x7ffc4e074f40 <line:88:3> 'int' lvalue Var 0x7ffc4e074ea8 'numContours' 'int'
+    | `-CStyleCastExpr 0x7ffc4e075400 <line:89:5, line:90:49> 'int' <IntegralCast>
+    |   `-ParenExpr 0x7ffc4e0753d0 <line:89:11, line:90:49> 'unsigned int'
+    |     `-BinaryOperator 0x7ffc4e075360 <line:89:12, line:90:43> 'unsigned int' '-'
+    |       |-ParenExpr 0x7ffc4e075308 <line:89:12, line:90:39> 'unsigned int'
+    |       | `-BinaryOperator 0x7ffc4e0752e0 <line:89:13, line:90:33> 'unsigned int' '^'
+    |       |   |-ParenExpr 0x7ffc4e075288 <line:89:13, line:90:29> 'unsigned int'
+    |       |   | `-BinaryOperator 0x7ffc4e075260 <line:89:14, line:90:28> 'unsigned int' '+'
+    |       |   |   |-ParenExpr 0x7ffc4e075130 <line:89:14, col:51> 'uint':'unsigned int'
+    |       |   |   | `-BinaryOperator 0x7ffc4e075108 <col:15, col:50> 'uint':'unsigned int' '<<'
+    |       |   |   |   |-CStyleCastExpr 0x7ffc4e0750c0 <col:15, col:45> 'uint':'unsigned int' <IntegralCast>
+    |       |   |   |   | `-ImplicitCastExpr 0x7ffc4e0750a8 <col:22, col:45> 'byte':'unsigned char' <LValueToRValue>
+    |       |   |   |   |   `-ParenExpr 0x7ffc4e075088 <col:22, col:45> 'const byte':'const unsigned char' lvalue
+    |       |   |   |   |     `-ArraySubscriptExpr 0x7ffc4e075020 <col:23, col:44> 'const byte':'const unsigned char' lvalue
+    |       |   |   |   |       |-ImplicitCastExpr 0x7ffc4e075008 <col:23, col:41> 'const byte *' <LValueToRValue>
+    |       |   |   |   |       | `-ParenExpr 0x7ffc4e074fc8 <col:23, col:41> 'const byte *' lvalue
+    |       |   |   |   |       |   `-MemberExpr 0x7ffc4e074f90 <col:24, col:37> 'const byte *' lvalue .data 0x7ffc4e059bf8
+    |       |   |   |   |       |     `-DeclRefExpr 0x7ffc4e074f68 <col:24> 'gs_const_string':'struct gs_const_string_s' lvalue Var 0x7ffc4e074d50 'glyph_string' 'gs_const_string':'struct gs_const_string_s'
+    |       |   |   |   |       `-IntegerLiteral 0x7ffc4e074fe8 <col:43> 'int' 0
+    |       |   |   |   `-IntegerLiteral 0x7ffc4e0750e8 <col:50> 'int' 8
+    |       |   |   `-ImplicitCastExpr 0x7ffc4e075248 <line:90:7, col:28> 'unsigned int' <IntegralCast>
+    |       |   |     `-ImplicitCastExpr 0x7ffc4e075230 <col:7, col:28> 'byte':'unsigned char' <LValueToRValue>
+    |       |   |       `-ArraySubscriptExpr 0x7ffc4e075208 <col:7, col:28> 'const byte':'const unsigned char' lvalue
+    |       |   |         |-ImplicitCastExpr 0x7ffc4e0751f0 <col:7, col:25> 'const byte *' <LValueToRValue>
+    |       |   |         | `-ParenExpr 0x7ffc4e0751b0 <col:7, col:25> 'const byte *' lvalue
+    |       |   |         |   `-MemberExpr 0x7ffc4e075178 <col:8, col:21> 'const byte *' lvalue .data 0x7ffc4e059bf8
+    |       |   |         |     `-DeclRefExpr 0x7ffc4e075150 <col:8> 'gs_const_string':'struct gs_const_string_s' lvalue Var 0x7ffc4e074d50 'glyph_string' 'gs_const_string':'struct gs_const_string_s'
+    |       |   |         `-IntegerLiteral 0x7ffc4e0751d0 <col:27> 'int' 1
+    |       |   `-ImplicitCastExpr 0x7ffc4e0752c8 <col:33> 'unsigned int' <IntegralCast>
+    |       |     `-IntegerLiteral 0x7ffc4e0752a8 <col:33> 'int' 32768
+    |       `-ImplicitCastExpr 0x7ffc4e075348 <col:43> 'unsigned int' <IntegralCast>
+    |         `-IntegerLiteral 0x7ffc4e075328 <col:43> 'int' 32768
+    |-IfStmt 0x7ffc4e075710 <line:91:3, line:92:57>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffc4e0754f8 <line:91:7, col:22> 'int' '>='
+    | | |-ImplicitCastExpr 0x7ffc4e0754e0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ffc4e075498 <col:7> 'int' lvalue Var 0x7ffc4e074ea8 'numContours' 'int'
+    | | `-IntegerLiteral 0x7ffc4e0754c0 <col:22> 'int' 0
+    | |-ReturnStmt 0x7ffc4e0756f8 <line:92:5, col:57>
+    | | `-CallExpr 0x7ffc4e075670 <col:12, col:57> 'int'
+    | |   |-ImplicitCastExpr 0x7ffc4e075658 <col:12> 'int (*)(const byte *, const gs_matrix_fixed *, void *)' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7ffc4e075520 <col:12> 'int (const byte *, const gs_matrix_fixed *, void *)' Function 0x7ffc4e05a8e8 'append_simple' 'int (const byte *, const gs_matrix_fixed *, void *)'
+    | |   |-ImplicitCastExpr 0x7ffc4e0756b0 <col:27, col:40> 'const byte *' <LValueToRValue>
+    | |   | `-MemberExpr 0x7ffc4e075570 <col:27, col:40> 'const byte *' lvalue .data 0x7ffc4e059bf8
+    | |   |   `-DeclRefExpr 0x7ffc4e075548 <col:27> 'gs_const_string':'struct gs_const_string_s' lvalue Var 0x7ffc4e074d50 'glyph_string' 'gs_const_string':'struct gs_const_string_s'
+    | |   |-ImplicitCastExpr 0x7ffc4e0756c8 <col:46> 'const gs_matrix_fixed *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7ffc4e0755a8 <col:46> 'const gs_matrix_fixed *' lvalue ParmVar 0x7ffc4e074ab8 'pmat' 'const gs_matrix_fixed *'
+    | |   `-ImplicitCastExpr 0x7ffc4e0756e0 <col:52> 'void *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7ffc4e0755d0 <col:52> 'void *' lvalue ParmVar 0x7ffc4e074b30 'ppath' 'void *'
+    | `-<<<NULL>>>
+    `-CompoundStmt 0x7ffc4e075e98 <line:93:3, line:102:3>
+      |-DeclStmt 0x7ffc4e0757f0 <line:94:5, col:19>
+      | `-VarDecl 0x7ffc4e075758 <col:5, col:18> col:10 used flags 'uint':'unsigned int' cinit
+      |   `-ImplicitCastExpr 0x7ffc4e0757d8 <col:18> 'uint':'unsigned int' <IntegralCast>
+      |     `-IntegerLiteral 0x7ffc4e0757b8 <col:18> 'int' 0
+      `-DoStmt 0x7ffc4e075e78 <line:95:5, line:101:22>
+        |-CompoundStmt 0x7ffc4e075db0 <line:96:7, line:100:7>
+        | |-DeclStmt 0x7ffc4e075928 <line:97:2, col:27>
+        | | `-VarDecl 0x7ffc4e075818 <col:2, col:26> col:18 used mat 'gs_matrix_fixed':'struct gs_matrix_fixed_s' cinit
+        | |   `-InitListExpr 0x7ffc4e0758e0 <col:24, col:26> 'gs_matrix_fixed':'struct gs_matrix_fixed_s'
+        | |     `-IntegerLiteral 0x7ffc4e075878 <col:25> 'int' 0
+        | |-DeclStmt 0x7ffc4e075af0 <line:98:2, col:27>
+        | | `-VarDecl 0x7ffc4e075950 <col:2, col:26> col:12 used scale_mat 'gs_matrix':'struct gs_matrix_s' cinit
+        | |   `-InitListExpr 0x7ffc4e075a18 <col:24, col:26> 'gs_matrix':'struct gs_matrix_s'
+        | |     |-ImplicitCastExpr 0x7ffc4e075a88 <col:25> 'float' <IntegralToFloating>
+        | |     | `-IntegerLiteral 0x7ffc4e0759b0 <col:25> 'int' 0
+        | |     |-ImplicitValueInitExpr 0x7ffc4e075aa0 <<invalid sloc>> 'float'
+        | |     |-ImplicitValueInitExpr 0x7ffc4e075ab0 <<invalid sloc>> 'float'
+        | |     |-ImplicitValueInitExpr 0x7ffc4e075ac0 <<invalid sloc>> 'float'
+        | |     |-ImplicitValueInitExpr 0x7ffc4e075ad0 <<invalid sloc>> 'float'
+        | |     `-ImplicitValueInitExpr 0x7ffc4e075ae0 <<invalid sloc>> 'float'
+        | `-CallExpr 0x7ffc4e075d70 <line:99:2, col:79> 'void'
+        |   |-ImplicitCastExpr 0x7ffc4e075d58 <col:2> 'void (*)(gs_matrix *, const gs_matrix *, gs_matrix *)' <FunctionToPointerDecay>
+        |   | `-DeclRefExpr 0x7ffc4e075b08 <col:2> 'void (gs_matrix *, const gs_matrix *, gs_matrix *)' Function 0x7ffc4e074980 'gs_matrix_multiply' 'void (gs_matrix *, const gs_matrix *, gs_matrix *)'
+        |   |-UnaryOperator 0x7ffc4e075b58 <col:22, col:23> 'gs_matrix *' prefix '&'
+        |   | `-DeclRefExpr 0x7ffc4e075b30 <col:23> 'gs_matrix':'struct gs_matrix_s' lvalue Var 0x7ffc4e075950 'scale_mat' 'gs_matrix':'struct gs_matrix_s'
+        |   |-CStyleCastExpr 0x7ffc4e075c58 <col:34, col:55> 'const gs_matrix *' <BitCast>
+        |   | `-UnaryOperator 0x7ffc4e075bf8 <col:54, col:55> 'gs_matrix_fixed *' prefix '&'
+        |   |   `-DeclRefExpr 0x7ffc4e075b78 <col:55> 'gs_matrix_fixed':'struct gs_matrix_fixed_s' lvalue Var 0x7ffc4e075818 'mat' 'gs_matrix_fixed':'struct gs_matrix_fixed_s'
+        |   `-CStyleCastExpr 0x7ffc4e075cd8 <col:60, col:76> 'gs_matrix *' <BitCast>
+        |     `-UnaryOperator 0x7ffc4e075ca8 <col:74, col:76> 'gs_matrix_fixed *' prefix '&'
+        |       `-DeclRefExpr 0x7ffc4e075c80 <col:76> 'gs_matrix_fixed':'struct gs_matrix_fixed_s' lvalue Var 0x7ffc4e075818 'mat' 'gs_matrix_fixed':'struct gs_matrix_fixed_s'
+        `-BinaryOperator 0x7ffc4e075e50 <line:101:12, col:20> 'unsigned int' '&'
+          |-ImplicitCastExpr 0x7ffc4e075e20 <col:12> 'uint':'unsigned int' <LValueToRValue>
+          | `-DeclRefExpr 0x7ffc4e075dd8 <col:12> 'uint':'unsigned int' lvalue Var 0x7ffc4e075758 'flags' 'uint':'unsigned int'
+          `-ImplicitCastExpr 0x7ffc4e075e38 <col:20> 'unsigned int' <IntegralCast>
+            `-IntegerLiteral 0x7ffc4e075e00 <col:20> 'int' 32

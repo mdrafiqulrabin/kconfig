@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7ff01802bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff01806d9e0 <../Data/C2AST/pr51694.c:2:1, line:8:1> line:3:1 used foo 'void (int, void (*)())'
+| |-ParmVarDecl 0x7ff01806d8d0 <col:6> col:6 used x 'int'
+| |-ParmVarDecl 0x7ff01806d858 <line:4:3, col:15> col:10 used fn 'void (*)()'
+| `-CompoundStmt 0x7ff01806ded8 <line:5:1, line:8:1>
+|   |-DeclStmt 0x7ff01806dd90 <line:6:3, col:30>
+|   | `-VarDecl 0x7ff01806dae8 <col:3, col:29> col:7 a 'int' cinit
+|   |   `-CallExpr 0x7ff01806dd40 <col:11, col:29> 'int'
+|   |     |-ImplicitCastExpr 0x7ff01806dd28 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff01806dc50 <col:11> 'int ()' Function 0x7ff01806dba0 'baz' 'int ()'
+|   |     |-CStyleCastExpr 0x7ff01806dcb0 <col:16, col:25> 'void *' <NullToPointer>
+|   |     | `-IntegerLiteral 0x7ff01806dc78 <col:25> 'int' 0
+|   |     `-ImplicitCastExpr 0x7ff01806dd78 <col:28> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7ff01806dcd8 <col:28> 'int' lvalue ParmVar 0x7ff01806d8d0 'x' 'int'
+|   `-CallExpr 0x7ff01806de88 <line:7:3, col:14> 'void'
+|     |-ImplicitCastExpr 0x7ff01806de70 <col:3, col:7> 'void (*)()' <FunctionToPointerDecay>
+|     | `-ParenExpr 0x7ff01806de08 <col:3, col:7> 'void ()':'void ()'
+|     |   `-UnaryOperator 0x7ff01806dde8 <col:4, col:5> 'void ()':'void ()' prefix '*'
+|     |     `-ImplicitCastExpr 0x7ff01806ddd0 <col:5> 'void (*)()' <LValueToRValue>
+|     |       `-DeclRefExpr 0x7ff01806dda8 <col:5> 'void (*)()' lvalue ParmVar 0x7ff01806d858 'fn' 'void (*)()'
+|     |-ImplicitCastExpr 0x7ff01806dec0 <col:10> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7ff01806de28 <col:10> 'int' lvalue ParmVar 0x7ff01806d8d0 'x' 'int'
+|     `-IntegerLiteral 0x7ff01806de50 <col:13> 'int' 0
+`-FunctionDecl 0x7ff01806dfc0 <line:10:1, line:15:1> line:11:1 bar 'void (void)'
+  `-CompoundStmt 0x7ff01806e1f0 <line:12:1, line:15:1>
+    |-DeclStmt 0x7ff01806e110 <line:13:3, col:14>
+    | `-VarDecl 0x7ff01806e078 <col:3, col:13> col:9 used x 'void *' cinit
+    |   `-ImplicitCastExpr 0x7ff01806e0f8 <col:13> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7ff01806e0d8 <col:13> 'int' 0
+    `-CallExpr 0x7ff01806e190 <line:14:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7ff01806e178 <col:3> 'void (*)()' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff01806e128 <col:3> 'void ()' Function 0x7ff01806d9e0 'foo' 'void (int, void (*)())'
+      `-ImplicitCastExpr 0x7ff01806e1d8 <col:8> 'int' <PointerToIntegral>
+        `-ImplicitCastExpr 0x7ff01806e1c0 <col:8> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7ff01806e150 <col:8> 'void *' lvalue Var 0x7ff01806e078 'x' 'void *'

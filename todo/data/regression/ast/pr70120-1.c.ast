@@ -1,0 +1,230 @@
+TranslationUnitDecl 0x7f8041828ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8042015200 <../Data/C2AST/pr70120-1.c:4:1, col:15> col:15 referenced v32u16 '__attribute__((__vector_size__(16 * sizeof(short)))) short'
+| `-VectorType 0x7f8041829b80 '__attribute__((__vector_size__(16 * sizeof(short)))) short' 16
+|   `-BuiltinType 0x7f8041828fc0 'short'
+|-TypedefDecl 0x7f80420152b8 <line:5:1, col:13> col:13 referenced v32u32 '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7f8042015280 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7f8041828fe0 'int'
+|-TypedefDecl 0x7f8042015368 <line:6:1, col:14> col:14 referenced v32u64 '__attribute__((__vector_size__(4 * sizeof(long)))) long'
+| `-VectorType 0x7f8042015330 '__attribute__((__vector_size__(4 * sizeof(long)))) long' 4
+|   `-BuiltinType 0x7f8041829000 'long'
+|-TypedefDecl 0x7f80420153d8 <line:7:1, col:18> col:18 referenced u128 '__int128'
+| `-BuiltinType 0x7f8041829180 '__int128'
+|-TypedefDecl 0x7f8042015488 <line:8:1, col:18> col:18 referenced v32u128 '__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+| `-VectorType 0x7f8042015450 '__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' 2
+|   `-BuiltinType 0x7f8041829180 '__int128'
+`-FunctionDecl 0x7f8042015ec8 <line:10:1, line:19:1> line:11:1 foo 'int (int, int, int, u128, int, int, int, u128, v32u16, v32u32, v32u64, v32u128, v32u16, v32u32, v32u64, v32u128)'
+  |-ParmVarDecl 0x7f80420154f8 <col:5, col:9> col:9 u16_0 'int'
+  |-ParmVarDecl 0x7f8042015570 <col:16, col:20> col:20 u32_0 'int'
+  |-ParmVarDecl 0x7f80420155e8 <col:27, col:31> col:31 u64_0 'int'
+  |-ParmVarDecl 0x7f8042015680 <col:38, col:43> col:43 used u128_0 'u128':'__int128'
+  |-ParmVarDecl 0x7f80420156f8 <col:51, col:55> col:55 u16_1 'int'
+  |-ParmVarDecl 0x7f8042015770 <col:62, col:66> col:66 u32_1 'int'
+  |-ParmVarDecl 0x7f80420157e8 <col:73, col:77> col:77 used u64_1 'int'
+  |-ParmVarDecl 0x7f8042015858 <col:84, col:89> col:89 used u128_1 'u128':'__int128'
+  |-ParmVarDecl 0x7f80420158f0 <col:97, col:104> col:104 used v32u16_0 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+  |-ParmVarDecl 0x7f8042015980 <col:114, col:121> col:121 used v32u32_0 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7f8042015a10 <col:131, col:138> col:138 used v32u64_0 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+  |-ParmVarDecl 0x7f8042015aa0 <col:148, col:156> col:156 used v32u128_0 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+  |-ParmVarDecl 0x7f8042015b10 <col:167, col:174> col:174 used v32u16_1 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+  |-ParmVarDecl 0x7f8042015b80 <col:184, col:191> col:191 used v32u32_1 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7f8042015bf0 <col:201, col:208> col:208 used v32u64_1 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+  |-ParmVarDecl 0x7f8042015c60 <col:218, col:226> col:226 used v32u128_1 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+  `-CompoundStmt 0x7f804202e6a0 <line:12:1, line:19:1>
+    |-CompoundAssignOperator 0x7f80420160e8 <line:13:3, col:26> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '^=' ComputeLHSTy='v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' ComputeResultTy='v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    | |-DeclRefExpr 0x7f8042016028 <col:3> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015b80 'v32u32_1' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    | `-CStyleCastExpr 0x7f80420160c0 <col:15, col:26> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <BitCast>
+    |   `-UnaryOperator 0x7f8042016090 <col:24, col:26> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' prefix '~'
+    |     `-ImplicitCastExpr 0x7f8042016078 <col:26> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8042016050 <col:26> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015a10 'v32u64_0' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    |-CompoundAssignOperator 0x7f804202cc40 <line:14:3, col:37> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '%=' ComputeLHSTy='v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' ComputeResultTy='v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    | |-DeclRefExpr 0x7f8042016120 <col:3> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015b80 'v32u32_1' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    | `-BinaryOperator 0x7f804202cc18 <col:15, col:37> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '|'
+    |   |-CStyleCastExpr 0x7f80420161b8 <col:15, col:26> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <BitCast>
+    |   | `-UnaryOperator 0x7f8042016188 <col:24, col:26> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' prefix '-'
+    |   |   `-ImplicitCastExpr 0x7f8042016170 <col:26> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+    |   |     `-DeclRefExpr 0x7f8042016148 <col:26> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f8042015b10 'v32u16_1' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |   `-ImplicitCastExpr 0x7f804202cc00 <col:37> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <VectorSplat>
+    |     `-IntegerLiteral 0x7f80420161e0 <col:37> 'int' 1
+    |-CompoundAssignOperator 0x7f804202cd18 <line:15:3, col:24> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' '-=' ComputeLHSTy='v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' ComputeResultTy='v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | |-DeclRefExpr 0x7f804202cc78 <col:3> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f8042015b10 'v32u16_1' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | `-CStyleCastExpr 0x7f804202ccf0 <col:15, col:24> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <BitCast>
+    |   `-ImplicitCastExpr 0x7f804202ccd8 <col:24> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f804202cca0 <col:24> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f8042015b10 'v32u16_1' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |-CompoundAssignOperator 0x7f804202d0e0 <line:16:3, col:72> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' '*=' ComputeLHSTy='v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' ComputeResultTy='v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    | |-DeclRefExpr 0x7f804202cd50 <col:3> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015a10 'v32u64_0' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    | `-ImplicitCastExpr 0x7f804202d0c8 <col:15, col:72> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7f804202d0a0 <col:15, col:72> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue
+    |     `-InitListExpr 0x7f804202cf98 <col:23, col:72> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    |       |-ImplicitCastExpr 0x7f804202cff8 <col:24, col:26> 'long' <IntegralCast>
+    |       | `-UnaryOperator 0x7f804202cdc8 <col:24, col:26> 'u128':'__int128' prefix '~'
+    |       |   `-ImplicitCastExpr 0x7f804202cdb0 <col:26> 'u128':'__int128' <LValueToRValue>
+    |       |     `-DeclRefExpr 0x7f804202cd88 <col:26> 'u128':'__int128' lvalue ParmVar 0x7f8042015680 'u128_0' 'u128':'__int128'
+    |       |-ImplicitCastExpr 0x7f804202d028 <col:34, col:44> 'long' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7f804202d010 <col:34, col:44> 'short' <LValueToRValue>
+    |       |   `-ArraySubscriptExpr 0x7f804202ce30 <col:34, col:44> 'short' lvalue vectorcomponent
+    |       |     |-DeclRefExpr 0x7f804202cde8 <col:34> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f8042015b10 'v32u16_1' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |       |     `-IntegerLiteral 0x7f804202ce10 <col:43> 'int' 5
+    |       |-ImplicitCastExpr 0x7f804202d058 <col:47, col:58> 'long' <IntegralCast>
+    |       | `-ImplicitCastExpr 0x7f804202d040 <col:47, col:58> 'short' <LValueToRValue>
+    |       |   `-ArraySubscriptExpr 0x7f804202cea0 <col:47, col:58> 'short' lvalue vectorcomponent
+    |       |     |-DeclRefExpr 0x7f804202ce58 <col:47> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f80420158f0 'v32u16_0' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |       |     `-IntegerLiteral 0x7f804202ce80 <col:56> 'int' 15
+    |       `-ImplicitCastExpr 0x7f804202d088 <col:61, col:71> 'long' <IntegralCast>
+    |         `-ImplicitCastExpr 0x7f804202d070 <col:61, col:71> 'int' <LValueToRValue>
+    |           `-ArraySubscriptExpr 0x7f804202cf10 <col:61, col:71> 'int' lvalue vectorcomponent
+    |             |-DeclRefExpr 0x7f804202cec8 <col:61> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015b80 'v32u32_1' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+    |             `-IntegerLiteral 0x7f804202cef0 <col:70> 'int' 4
+    |-CompoundAssignOperator 0x7f804202d7a0 <line:17:3, col:116> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' '/=' ComputeLHSTy='v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' ComputeResultTy='v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | |-DeclRefExpr 0x7f804202d118 <col:3> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f80420158f0 'v32u16_0' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    | `-BinaryOperator 0x7f804202d778 <col:15, col:116> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' '|'
+    |   |-ImplicitCastExpr 0x7f804202d730 <col:15, col:113> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <LValueToRValue>
+    |   | `-CompoundLiteralExpr 0x7f804202d6e8 <col:15, col:113> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue
+    |   |   `-InitListExpr 0x7f804202d460 <col:23, col:113> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+    |   |     |-ImplicitCastExpr 0x7f804202d520 <col:24> 'short' <IntegralCast>
+    |   |     | `-IntegerLiteral 0x7f804202d150 <col:24> 'int' 22348
+    |   |     |-ImplicitCastExpr 0x7f804202d538 <col:32, col:33> 'short' <IntegralCast>
+    |   |     | `-UnaryOperator 0x7f804202d1b0 <col:32, col:33> 'u128':'__int128' prefix '~'
+    |   |     |   `-ImplicitCastExpr 0x7f804202d198 <col:33> 'u128':'__int128' <LValueToRValue>
+    |   |     |     `-DeclRefExpr 0x7f804202d170 <col:33> 'u128':'__int128' lvalue ParmVar 0x7f8042015858 'u128_1' 'u128':'__int128'
+    |   |     |-ImplicitCastExpr 0x7f804202d568 <col:41, col:52> 'short' <IntegralCast>
+    |   |     | `-ImplicitCastExpr 0x7f804202d550 <col:41, col:52> '__int128' <LValueToRValue>
+    |   |     |   `-ArraySubscriptExpr 0x7f804202d218 <col:41, col:52> '__int128' lvalue vectorcomponent
+    |   |     |     |-DeclRefExpr 0x7f804202d1d0 <col:41> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7f8042015c60 'v32u128_1' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+    |   |     |     `-IntegerLiteral 0x7f804202d1f8 <col:51> 'int' 0
+    |   |     |-ImplicitCastExpr 0x7f804202d598 <col:55> 'short' <IntegralCast>
+    |   |     | `-ImplicitCastExpr 0x7f804202d580 <col:55> 'int' <LValueToRValue>
+    |   |     |   `-DeclRefExpr 0x7f804202d240 <col:55> 'int' lvalue ParmVar 0x7f80420157e8 'u64_1' 'int'
+    |   |     |-ImplicitCastExpr 0x7f804202d5c8 <col:62, col:72> 'short' <IntegralCast>
+    |   |     | `-ImplicitCastExpr 0x7f804202d5b0 <col:62, col:72> 'long' <LValueToRValue>
+    |   |     |   `-ArraySubscriptExpr 0x7f804202d2b0 <col:62, col:72> 'long' lvalue vectorcomponent
+    |   |     |     |-DeclRefExpr 0x7f804202d268 <col:62> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015a10 'v32u64_0' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    |   |     |     `-IntegerLiteral 0x7f804202d290 <col:71> 'int' 1
+    |   |     |-ImplicitCastExpr 0x7f804202d5f8 <col:75, col:85> 'short' <IntegralCast>
+    |   |     | `-ImplicitCastExpr 0x7f804202d5e0 <col:75, col:85> 'long' <LValueToRValue>
+    |   |     |   `-ArraySubscriptExpr 0x7f804202d320 <col:75, col:85> 'long' lvalue vectorcomponent
+    |   |     |     |-DeclRefExpr 0x7f804202d2d8 <col:75> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015bf0 'v32u64_1' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+    |   |     |     `-IntegerLiteral 0x7f804202d300 <col:84> 'int' 2
+    |   |     |-ImplicitCastExpr 0x7f804202d610 <col:88> 'short' <IntegralCast>
+    |   |     | `-IntegerLiteral 0x7f804202d348 <col:88> 'int' 0
+    |   |     |-ImplicitCastExpr 0x7f804202d628 <col:91> 'short' <IntegralCast>
+    |   |     | `-IntegerLiteral 0x7f804202d368 <col:91> 'int' 36070
+    |   |     |-ImplicitCastExpr 0x7f804202d658 <col:99> 'short' <IntegralCast>
+    |   |     | `-ImplicitCastExpr 0x7f804202d640 <col:99> 'u128':'__int128' <LValueToRValue>
+    |   |     |   `-DeclRefExpr 0x7f804202d388 <col:99> 'u128':'__int128' lvalue ParmVar 0x7f8042015858 'u128_1' 'u128':'__int128'
+    |   |     `-ImplicitCastExpr 0x7f804202d670 <col:107> 'short' <IntegralCast>
+    |   |       `-IntegerLiteral 0x7f804202d3b0 <col:107> 'int' 24169
+    |   `-ImplicitCastExpr 0x7f804202d760 <col:116> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' <VectorSplat>
+    |     `-ImplicitCastExpr 0x7f804202d748 <col:116> 'short' <IntegralCast>
+    |       `-IntegerLiteral 0x7f804202d710 <col:116> 'int' 1
+    `-ReturnStmt 0x7f804202e688 <line:18:3, col:289>
+      `-ImplicitCastExpr 0x7f804202e670 <col:10, col:289> 'int' <IntegralCast>
+        `-BinaryOperator 0x7f804202e648 <col:10, col:289> '__int128' '+'
+          |-BinaryOperator 0x7f804202e598 <col:10, col:274> '__int128' '+'
+          | |-BinaryOperator 0x7f804202e4d0 <col:10, col:260> '__int128' '+'
+          | | |-BinaryOperator 0x7f804202e408 <col:10, col:246> '__int128' '+'
+          | | | |-BinaryOperator 0x7f804202e340 <col:10, col:232> '__int128' '+'
+          | | | | |-BinaryOperator 0x7f804202e278 <col:10, col:218> '__int128' '+'
+          | | | | | |-BinaryOperator 0x7f804202e1c8 <col:10, col:203> '__int128' '+'
+          | | | | | | |-ImplicitCastExpr 0x7f804202e1b0 <col:10, col:188> '__int128' <IntegralCast>
+          | | | | | | | `-BinaryOperator 0x7f804202e100 <col:10, col:188> 'long' '+'
+          | | | | | | |   |-BinaryOperator 0x7f804202e050 <col:10, col:174> 'long' '+'
+          | | | | | | |   | |-BinaryOperator 0x7f804202dfa0 <col:10, col:160> 'long' '+'
+          | | | | | | |   | | |-ImplicitCastExpr 0x7f804202df88 <col:10, col:146> 'long' <IntegralCast>
+          | | | | | | |   | | | `-BinaryOperator 0x7f804202ded8 <col:10, col:146> 'int' '+'
+          | | | | | | |   | | |   |-BinaryOperator 0x7f804202de28 <col:10, col:132> 'int' '+'
+          | | | | | | |   | | |   | |-BinaryOperator 0x7f804202dd78 <col:10, col:118> 'int' '+'
+          | | | | | | |   | | |   | | |-BinaryOperator 0x7f804202dcc8 <col:10, col:104> 'int' '+'
+          | | | | | | |   | | |   | | | |-BinaryOperator 0x7f804202dc18 <col:10, col:90> 'int' '+'
+          | | | | | | |   | | |   | | | | |-BinaryOperator 0x7f804202db58 <col:10, col:76> 'int' '+'
+          | | | | | | |   | | |   | | | | | |-BinaryOperator 0x7f804202daa8 <col:10, col:62> 'int' '+'
+          | | | | | | |   | | |   | | | | | | |-BinaryOperator 0x7f804202d9e0 <col:10, col:48> 'int' '+'
+          | | | | | | |   | | |   | | | | | | | |-BinaryOperator 0x7f804202d918 <col:10, col:34> 'int' '+'
+          | | | | | | |   | | |   | | | | | | | | |-ImplicitCastExpr 0x7f804202d8d0 <col:10, col:20> 'int' <IntegralCast>
+          | | | | | | |   | | |   | | | | | | | | | `-ImplicitCastExpr 0x7f804202d8b8 <col:10, col:20> 'short' <LValueToRValue>
+          | | | | | | |   | | |   | | | | | | | | |   `-ArraySubscriptExpr 0x7f804202d820 <col:10, col:20> 'short' lvalue vectorcomponent
+          | | | | | | |   | | |   | | | | | | | | |     |-DeclRefExpr 0x7f804202d7d8 <col:10> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f80420158f0 'v32u16_0' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+          | | | | | | |   | | |   | | | | | | | | |     `-IntegerLiteral 0x7f804202d800 <col:19> 'int' 0
+          | | | | | | |   | | |   | | | | | | | | `-ImplicitCastExpr 0x7f804202d900 <col:24, col:34> 'int' <IntegralCast>
+          | | | | | | |   | | |   | | | | | | | |   `-ImplicitCastExpr 0x7f804202d8e8 <col:24, col:34> 'short' <LValueToRValue>
+          | | | | | | |   | | |   | | | | | | | |     `-ArraySubscriptExpr 0x7f804202d890 <col:24, col:34> 'short' lvalue vectorcomponent
+          | | | | | | |   | | |   | | | | | | | |       |-DeclRefExpr 0x7f804202d848 <col:24> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f80420158f0 'v32u16_0' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+          | | | | | | |   | | |   | | | | | | | |       `-IntegerLiteral 0x7f804202d870 <col:33> 'int' 6
+          | | | | | | |   | | |   | | | | | | | `-ImplicitCastExpr 0x7f804202d9c8 <col:38, col:48> 'int' <IntegralCast>
+          | | | | | | |   | | |   | | | | | | |   `-ImplicitCastExpr 0x7f804202d9b0 <col:38, col:48> 'short' <LValueToRValue>
+          | | | | | | |   | | |   | | | | | | |     `-ArraySubscriptExpr 0x7f804202d988 <col:38, col:48> 'short' lvalue vectorcomponent
+          | | | | | | |   | | |   | | | | | | |       |-DeclRefExpr 0x7f804202d940 <col:38> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f80420158f0 'v32u16_0' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+          | | | | | | |   | | |   | | | | | | |       `-IntegerLiteral 0x7f804202d968 <col:47> 'int' 8
+          | | | | | | |   | | |   | | | | | | `-ImplicitCastExpr 0x7f804202da90 <col:52, col:62> 'int' <IntegralCast>
+          | | | | | | |   | | |   | | | | | |   `-ImplicitCastExpr 0x7f804202da78 <col:52, col:62> 'short' <LValueToRValue>
+          | | | | | | |   | | |   | | | | | |     `-ArraySubscriptExpr 0x7f804202da50 <col:52, col:62> 'short' lvalue vectorcomponent
+          | | | | | | |   | | |   | | | | | |       |-DeclRefExpr 0x7f804202da08 <col:52> 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short' lvalue ParmVar 0x7f80420158f0 'v32u16_0' 'v32u16':'__attribute__((__vector_size__(16 * sizeof(short)))) short'
+          | | | | | | |   | | |   | | | | | |       `-IntegerLiteral 0x7f804202da30 <col:61> 'int' 9
+          | | | | | | |   | | |   | | | | | `-ImplicitCastExpr 0x7f804202db40 <col:66, col:76> 'int' <LValueToRValue>
+          | | | | | | |   | | |   | | | | |   `-ArraySubscriptExpr 0x7f804202db18 <col:66, col:76> 'int' lvalue vectorcomponent
+          | | | | | | |   | | |   | | | | |     |-DeclRefExpr 0x7f804202dad0 <col:66> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015980 'v32u32_0' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | | | | |   | | |   | | | | |     `-IntegerLiteral 0x7f804202daf8 <col:75> 'int' 0
+          | | | | | | |   | | |   | | | | `-ImplicitCastExpr 0x7f804202dc00 <col:80, col:90> 'int' <LValueToRValue>
+          | | | | | | |   | | |   | | | |   `-ArraySubscriptExpr 0x7f804202dbc8 <col:80, col:90> 'int' lvalue vectorcomponent
+          | | | | | | |   | | |   | | | |     |-DeclRefExpr 0x7f804202db80 <col:80> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015980 'v32u32_0' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | | | | |   | | |   | | | |     `-IntegerLiteral 0x7f804202dba8 <col:89> 'int' 1
+          | | | | | | |   | | |   | | | `-ImplicitCastExpr 0x7f804202dcb0 <col:94, col:104> 'int' <LValueToRValue>
+          | | | | | | |   | | |   | | |   `-ArraySubscriptExpr 0x7f804202dc88 <col:94, col:104> 'int' lvalue vectorcomponent
+          | | | | | | |   | | |   | | |     |-DeclRefExpr 0x7f804202dc40 <col:94> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015980 'v32u32_0' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | | | | |   | | |   | | |     `-IntegerLiteral 0x7f804202dc68 <col:103> 'int' 2
+          | | | | | | |   | | |   | | `-ImplicitCastExpr 0x7f804202dd60 <col:108, col:118> 'int' <LValueToRValue>
+          | | | | | | |   | | |   | |   `-ArraySubscriptExpr 0x7f804202dd38 <col:108, col:118> 'int' lvalue vectorcomponent
+          | | | | | | |   | | |   | |     |-DeclRefExpr 0x7f804202dcf0 <col:108> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015980 'v32u32_0' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | | | | |   | | |   | |     `-IntegerLiteral 0x7f804202dd18 <col:117> 'int' 3
+          | | | | | | |   | | |   | `-ImplicitCastExpr 0x7f804202de10 <col:122, col:132> 'int' <LValueToRValue>
+          | | | | | | |   | | |   |   `-ArraySubscriptExpr 0x7f804202dde8 <col:122, col:132> 'int' lvalue vectorcomponent
+          | | | | | | |   | | |   |     |-DeclRefExpr 0x7f804202dda0 <col:122> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015980 'v32u32_0' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | | | | |   | | |   |     `-IntegerLiteral 0x7f804202ddc8 <col:131> 'int' 4
+          | | | | | | |   | | |   `-ImplicitCastExpr 0x7f804202dec0 <col:136, col:146> 'int' <LValueToRValue>
+          | | | | | | |   | | |     `-ArraySubscriptExpr 0x7f804202de98 <col:136, col:146> 'int' lvalue vectorcomponent
+          | | | | | | |   | | |       |-DeclRefExpr 0x7f804202de50 <col:136> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015980 'v32u32_0' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | | | | |   | | |       `-IntegerLiteral 0x7f804202de78 <col:145> 'int' 6
+          | | | | | | |   | | `-ImplicitCastExpr 0x7f804202df70 <col:150, col:160> 'long' <LValueToRValue>
+          | | | | | | |   | |   `-ArraySubscriptExpr 0x7f804202df48 <col:150, col:160> 'long' lvalue vectorcomponent
+          | | | | | | |   | |     |-DeclRefExpr 0x7f804202df00 <col:150> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015a10 'v32u64_0' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+          | | | | | | |   | |     `-IntegerLiteral 0x7f804202df28 <col:159> 'int' 0
+          | | | | | | |   | `-ImplicitCastExpr 0x7f804202e038 <col:164, col:174> 'long' <LValueToRValue>
+          | | | | | | |   |   `-ArraySubscriptExpr 0x7f804202e010 <col:164, col:174> 'long' lvalue vectorcomponent
+          | | | | | | |   |     |-DeclRefExpr 0x7f804202dfc8 <col:164> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015a10 'v32u64_0' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+          | | | | | | |   |     `-IntegerLiteral 0x7f804202dff0 <col:173> 'int' 2
+          | | | | | | |   `-ImplicitCastExpr 0x7f804202e0e8 <col:178, col:188> 'long' <LValueToRValue>
+          | | | | | | |     `-ArraySubscriptExpr 0x7f804202e0c0 <col:178, col:188> 'long' lvalue vectorcomponent
+          | | | | | | |       |-DeclRefExpr 0x7f804202e078 <col:178> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015a10 'v32u64_0' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+          | | | | | | |       `-IntegerLiteral 0x7f804202e0a0 <col:187> 'int' 3
+          | | | | | | `-ImplicitCastExpr 0x7f804202e198 <col:192, col:203> '__int128' <LValueToRValue>
+          | | | | | |   `-ArraySubscriptExpr 0x7f804202e170 <col:192, col:203> '__int128' lvalue vectorcomponent
+          | | | | | |     |-DeclRefExpr 0x7f804202e128 <col:192> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7f8042015aa0 'v32u128_0' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+          | | | | | |     `-IntegerLiteral 0x7f804202e150 <col:202> 'int' 0
+          | | | | | `-ImplicitCastExpr 0x7f804202e260 <col:207, col:218> '__int128' <LValueToRValue>
+          | | | | |   `-ArraySubscriptExpr 0x7f804202e238 <col:207, col:218> '__int128' lvalue vectorcomponent
+          | | | | |     |-DeclRefExpr 0x7f804202e1f0 <col:207> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7f8042015aa0 'v32u128_0' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+          | | | | |     `-IntegerLiteral 0x7f804202e218 <col:217> 'int' 1
+          | | | | `-ImplicitCastExpr 0x7f804202e328 <col:222, col:232> '__int128' <IntegralCast>
+          | | | |   `-ImplicitCastExpr 0x7f804202e310 <col:222, col:232> 'int' <LValueToRValue>
+          | | | |     `-ArraySubscriptExpr 0x7f804202e2e8 <col:222, col:232> 'int' lvalue vectorcomponent
+          | | | |       |-DeclRefExpr 0x7f804202e2a0 <col:222> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015b80 'v32u32_1' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | | |       `-IntegerLiteral 0x7f804202e2c8 <col:231> 'int' 0
+          | | | `-ImplicitCastExpr 0x7f804202e3f0 <col:236, col:246> '__int128' <IntegralCast>
+          | | |   `-ImplicitCastExpr 0x7f804202e3d8 <col:236, col:246> 'int' <LValueToRValue>
+          | | |     `-ArraySubscriptExpr 0x7f804202e3b0 <col:236, col:246> 'int' lvalue vectorcomponent
+          | | |       |-DeclRefExpr 0x7f804202e368 <col:236> 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7f8042015b80 'v32u32_1' 'v32u32':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+          | | |       `-IntegerLiteral 0x7f804202e390 <col:245> 'int' 2
+          | | `-ImplicitCastExpr 0x7f804202e4b8 <col:250, col:260> '__int128' <IntegralCast>
+          | |   `-ImplicitCastExpr 0x7f804202e4a0 <col:250, col:260> 'long' <LValueToRValue>
+          | |     `-ArraySubscriptExpr 0x7f804202e478 <col:250, col:260> 'long' lvalue vectorcomponent
+          | |       |-DeclRefExpr 0x7f804202e430 <col:250> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015bf0 'v32u64_1' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+          | |       `-IntegerLiteral 0x7f804202e458 <col:259> 'int' 2
+          | `-ImplicitCastExpr 0x7f804202e580 <col:264, col:274> '__int128' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7f804202e568 <col:264, col:274> 'long' <LValueToRValue>
+          |     `-ArraySubscriptExpr 0x7f804202e540 <col:264, col:274> 'long' lvalue vectorcomponent
+          |       |-DeclRefExpr 0x7f804202e4f8 <col:264> 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long' lvalue ParmVar 0x7f8042015bf0 'v32u64_1' 'v32u64':'__attribute__((__vector_size__(4 * sizeof(long)))) long'
+          |       `-IntegerLiteral 0x7f804202e520 <col:273> 'int' 3
+          `-ImplicitCastExpr 0x7f804202e630 <col:278, col:289> '__int128' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7f804202e608 <col:278, col:289> '__int128' lvalue vectorcomponent
+              |-DeclRefExpr 0x7f804202e5c0 <col:278> 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128' lvalue ParmVar 0x7f8042015c60 'v32u128_1' 'v32u128':'__attribute__((__vector_size__(2 * sizeof(__int128)))) __int128'
+              `-IntegerLiteral 0x7f804202e5e8 <col:288> 'int' 1

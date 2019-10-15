@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fd97f02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd97f06e8b0 <../Data/C2AST/pr59927.c:5:1, col:50> col:13 used baz 'void (int) __attribute__((ms_abi))':'void (int) __attribute__((ms_abi))' extern
+| `-ParmVarDecl 0x7fd97f02c978 <col:18> col:21 'int'
+|-FunctionDecl 0x7fd97f06ec90 <line:7:1, line:11:1> line:8:1 foo 'void (void (*)(int) __attribute__((ms_abi)))'
+| |-ParmVarDecl 0x7fd97f06eb88 <col:6, col:38> col:38 used fn 'void (*)(int) __attribute__((ms_abi))'
+| `-CompoundStmt 0x7fd97f06edc8 <line:9:1, line:11:1>
+|   `-CallExpr 0x7fd97f06ed98 <line:10:3, col:8> 'void'
+|     |-ImplicitCastExpr 0x7fd97f06ed80 <col:3> 'void (*)(int) __attribute__((ms_abi))' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fd97f06ed38 <col:3> 'void (*)(int) __attribute__((ms_abi))' lvalue ParmVar 0x7fd97f06eb88 'fn' 'void (*)(int) __attribute__((ms_abi))'
+|     `-IntegerLiteral 0x7fd97f06ed60 <col:7> 'int' 0
+`-FunctionDecl 0x7fd97f06eea0 <line:13:1, line:17:1> line:14:1 bar 'void (void)'
+  `-CompoundStmt 0x7fd97f06f000 <line:15:1, line:17:1>
+    `-CallExpr 0x7fd97f06efd0 <line:16:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fd97f06efb8 <col:3> 'void (*)(int) __attribute__((ms_abi))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd97f06ef40 <col:3> 'void (int) __attribute__((ms_abi))':'void (int) __attribute__((ms_abi))' Function 0x7fd97f06e8b0 'baz' 'void (int) __attribute__((ms_abi))':'void (int) __attribute__((ms_abi))'
+      `-IntegerLiteral 0x7fd97f06ef68 <col:8> 'int' 0

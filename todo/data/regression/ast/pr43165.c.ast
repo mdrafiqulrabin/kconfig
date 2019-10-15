@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fea3a8002e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fea3a800f60 <../Data/C2AST/pr43165.c:5:1, line:11:1> line:5:32 struct S definition
+| |-PackedAttr 0x7fea3b015220 <col:23>
+| |-FieldDecl 0x7fea3b015280 <line:7:3, col:17> col:17 a 'unsigned char'
+| |-FieldDecl 0x7fea3b0152e0 <line:8:3, col:18> col:18 b 'unsigned short'
+| |-FieldDecl 0x7fea3b015340 <line:9:3, col:18> col:18 referenced c 'unsigned short'
+| `-FieldDecl 0x7fea3b0153c0 <line:10:3, col:16> col:12 d 'unsigned int'
+|   `-IntegerLiteral 0x7fea3b015388 <col:16> 'int' 24
+`-FunctionDecl 0x7fea3b015560 <line:13:1, line:18:1> line:14:1 foo 'void (struct S)'
+  |-ParmVarDecl 0x7fea3b015460 <col:6, col:15> col:15 used p 'struct S':'struct S'
+  `-CompoundStmt 0x7fea3b015788 <line:15:1, line:18:1>
+    `-ForStmt 0x7fea3b015750 <line:16:3, line:17:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fea3b0156a8 <line:16:10, col:12> 'unsigned short' <LValueToRValue>
+      | `-MemberExpr 0x7fea3b015670 <col:10, col:12> 'unsigned short' lvalue .c 0x7fea3b015340
+      |   `-DeclRefExpr 0x7fea3b015648 <col:10> 'struct S':'struct S' lvalue ParmVar 0x7fea3b015460 'p' 'struct S':'struct S'
+      |-UnaryOperator 0x7fea3b015720 <col:15, col:18> 'unsigned short' postfix '++'
+      | `-MemberExpr 0x7fea3b0156e8 <col:15, col:17> 'unsigned short' lvalue .c 0x7fea3b015340
+      |   `-DeclRefExpr 0x7fea3b0156c0 <col:15> 'struct S':'struct S' lvalue ParmVar 0x7fea3b015460 'p' 'struct S':'struct S'
+      `-NullStmt 0x7fea3b015740 <line:17:5>

@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fe1f182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe1f1858800 <../Data/C2AST/pr79970.c:5:1, col:13> col:13 referenced c '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fe1f182c980 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fe1f182bde0 'int'
+|-FunctionDecl 0x7fe1f1858920 <line:7:1, col:44> col:37 used d 'void (void)'
+| `-AlwaysInlineAttr 0x7fe1f18589c0 <col:16> always_inline
+|-FunctionDecl 0x7fe1f1858b80 <line:8:1, col:11> col:6 used f 'void (c)'
+| `-ParmVarDecl 0x7fe1f1858a80 <col:8, col:10> col:10 x 'c':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+|-FunctionDecl 0x7fe1f1858da0 <line:10:1, line:12:1> line:10:13 used e 'void (c *)' inline
+| |-ParmVarDecl 0x7fe1f1858c98 <col:16, col:19> col:19 used b 'c *'
+| `-CompoundStmt 0x7fe1f1858f88 <col:22, line:12:1>
+|   `-CallExpr 0x7fe1f1858f40 <line:11:5, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fe1f1858f28 <col:5> 'void (*)(c)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe1f1858e48 <col:5> 'void (c)' Function 0x7fe1f1858b80 'f' 'void (c)'
+|     `-ImplicitCastExpr 0x7fe1f1858f70 <col:8, col:9> 'c':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+|       `-UnaryOperator 0x7fe1f1858eb0 <col:8, col:9> 'c':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7fe1f1858e98 <col:9> 'c *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fe1f1858e70 <col:9> 'c *' lvalue ParmVar 0x7fe1f1858c98 'b' 'c *'
+`-FunctionDecl 0x7fe1f1858fe8 <line:14:1, line:22:1> line:14:6 a 'void ()'
+  `-CompoundStmt 0x7fe1f18594e8 <line:15:1, line:22:1>
+    |-DeclStmt 0x7fe1f18592f8 <line:16:3, line:19:8>
+    | |-RecordDecl 0x7fe1f1859088 <line:16:3, line:19:5> line:16:3 struct definition
+    | | `-FieldDecl 0x7fe1f18591e8 <line:18:7, col:12> col:9 referenced g 'c [4]'
+    | `-VarDecl 0x7fe1f1859280 <line:16:3, line:19:7> col:7 used h 'struct (anonymous struct at ../Data/C2AST/pr79970.c:16:3)':'struct (anonymous at ../Data/C2AST/pr79970.c:16:3)'
+    |-CallExpr 0x7fe1f1859380 <line:20:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7fe1f1859368 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fe1f1859310 <col:3> 'void (void)' Function 0x7fe1f1858920 'd' 'void (void)'
+    `-CallExpr 0x7fe1f18594a0 <line:21:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fe1f1859488 <col:3> 'void (*)(c *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe1f18593a8 <col:3> 'void (c *)' Function 0x7fe1f1858da0 'e' 'void (c *)'
+      `-ImplicitCastExpr 0x7fe1f18594d0 <col:6, col:8> 'c *' <ArrayToPointerDecay>
+        `-MemberExpr 0x7fe1f18593f8 <col:6, col:8> 'c [4]' lvalue .g 0x7fe1f18591e8
+          `-DeclRefExpr 0x7fe1f18593d0 <col:6> 'struct (anonymous struct at ../Data/C2AST/pr79970.c:16:3)':'struct (anonymous at ../Data/C2AST/pr79970.c:16:3)' lvalue Var 0x7fe1f1859280 'h' 'struct (anonymous struct at ../Data/C2AST/pr79970.c:16:3)':'struct (anonymous at ../Data/C2AST/pr79970.c:16:3)'

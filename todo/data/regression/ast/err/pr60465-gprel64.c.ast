@@ -1,0 +1,64 @@
+../Data/C2AST/pr60465-gprel64.c:12:80: error: argument to 'section' attribute is not valid for this target: mach-o section specifier requires a segment and section separated by a comma
+struct rtld_global _rtld_local __attribute__ ((visibility ("hidden"), section (".sdata")));
+                                                                               ^
+TranslationUnitDecl 0x7f897b0002e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f897b000860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f897b000580 '__int128'
+|-TypedefDecl 0x7f897b0008d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f897b0005a0 'unsigned __int128'
+|-TypedefDecl 0x7f897b000ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f897b0009b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f897b000928 '__NSConstantString_tag'
+|-TypedefDecl 0x7f897b000c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f897b000c00 'char *'
+|   `-BuiltinType 0x7f897b000380 'char'
+|-TypedefDecl 0x7f897b000f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f897b000eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f897b000d20 'struct __va_list_tag'
+|     `-Record 0x7f897b000c98 '__va_list_tag'
+|-RecordDecl 0x7f897b000f60 <../Data/C2AST/pr60465-gprel64.c:7:1, line:10:1> line:7:8 struct rtld_global definition
+| `-FieldDecl 0x7f897b8314d0 <line:9:5, col:15> col:11 referenced p 'long *[77]'
+|-VarDecl 0x7f897b831610 <line:12:1, col:20> col:20 used _rtld_local 'struct rtld_global':'struct rtld_global'
+| `-VisibilityAttr 0x7f897b831670 <col:48, col:68> Hidden
+|-FunctionDecl 0x7f897b831910 <line:14:1, line:20:1> line:15:1 used elf_get_dynamic_info 'void (struct rtld_global *, long *)' static
+| |-ParmVarDecl 0x7f897b831780 <col:23, col:44> col:44 used g 'struct rtld_global *'
+| |-ParmVarDecl 0x7f897b8317f8 <col:47, col:54> col:54 used dyn 'long *'
+| |-CompoundStmt 0x7f897b831d98 <line:16:1, line:20:1>
+| | |-DeclStmt 0x7f897b831b58 <line:17:3, col:21>
+| | | `-VarDecl 0x7f897b831a68 <col:3, col:20> col:10 used info 'long **' cinit
+| | |   `-ImplicitCastExpr 0x7f897b831b40 <col:17, col:20> 'long **' <ArrayToPointerDecay>
+| | |     `-MemberExpr 0x7f897b831b08 <col:17, col:20> 'long *[77]' lvalue ->p 0x7f897b8314d0
+| | |       `-ImplicitCastExpr 0x7f897b831af0 <col:17> 'struct rtld_global *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7f897b831ac8 <col:17> 'struct rtld_global *' lvalue ParmVar 0x7f897b831780 'g' 'struct rtld_global *'
+| | `-BinaryOperator 0x7f897b831d70 <line:19:3, col:36> 'long *' '='
+| |   |-ArraySubscriptExpr 0x7f897b831d08 <col:3, col:32> 'long *' lvalue
+| |   | |-ImplicitCastExpr 0x7f897b831cf0 <col:3> 'long **' <LValueToRValue>
+| |   | | `-DeclRefExpr 0x7f897b831b70 <col:3> 'long **' lvalue Var 0x7f897b831a68 'info' 'long **'
+| |   | `-BinaryOperator 0x7f897b831cc8 <col:8, col:30> 'long' '+'
+| |   |   |-ParenExpr 0x7f897b831c70 <col:8, col:26> 'long'
+| |   |   | `-BinaryOperator 0x7f897b831c48 <col:9, col:23> 'long' '-'
+| |   |   |   |-ImplicitCastExpr 0x7f897b831c30 <col:9> 'long' <IntegralCast>
+| |   |   |   | `-IntegerLiteral 0x7f897b831b98 <col:9> 'int' 1879047935
+| |   |   |   `-ImplicitCastExpr 0x7f897b831c18 <col:22, col:23> 'long' <LValueToRValue>
+| |   |   |     `-UnaryOperator 0x7f897b831bf8 <col:22, col:23> 'long' lvalue prefix '*'
+| |   |   |       `-ImplicitCastExpr 0x7f897b831be0 <col:23> 'long *' <LValueToRValue>
+| |   |   |         `-DeclRefExpr 0x7f897b831bb8 <col:23> 'long *' lvalue ParmVar 0x7f897b8317f8 'dyn' 'long *'
+| |   |   `-ImplicitCastExpr 0x7f897b831cb0 <col:30> 'long' <IntegralCast>
+| |   |     `-IntegerLiteral 0x7f897b831c90 <col:30> 'int' 66
+| |   `-ImplicitCastExpr 0x7f897b831d58 <col:36> 'long *' <LValueToRValue>
+| |     `-DeclRefExpr 0x7f897b831d30 <col:36> 'long *' lvalue ParmVar 0x7f897b8317f8 'dyn' 'long *'
+| |-NoInlineAttr 0x7f897b8319c0 <line:14:37>
+| `-UnusedAttr 0x7f897b831a08 <col:29> unused
+`-FunctionDecl 0x7f897b831e90 <line:22:1, line:26:1> line:23:1 _dl_start 'void (long *)'
+  |-ParmVarDecl 0x7f897b831dd0 <col:12, col:19> col:19 used dyn 'long *'
+  |-CompoundStmt 0x7f897b8320f0 <line:24:1, line:26:1>
+  | `-CallExpr 0x7f897b8320a0 <line:25:3, col:41> 'void'
+  |   |-ImplicitCastExpr 0x7f897b832088 <col:3> 'void (*)(struct 1 error generated.
+rtld_global *, long *)' <FunctionToPointerDecay>
+  |   | `-DeclRefExpr 0x7f897b831f90 <col:3> 'void (struct rtld_global *, long *)' Function 0x7f897b831910 'elf_get_dynamic_info' 'void (struct rtld_global *, long *)'
+  |   |-UnaryOperator 0x7f897b831fe0 <col:24, col:25> 'struct rtld_global *' prefix '&'
+  |   | `-DeclRefExpr 0x7f897b831fb8 <col:25> 'struct rtld_global':'struct rtld_global' lvalue Var 0x7f897b831610 '_rtld_local' 'struct rtld_global':'struct rtld_global'
+  |   `-ImplicitCastExpr 0x7f897b8320d8 <col:38> 'long *' <LValueToRValue>
+  |     `-DeclRefExpr 0x7f897b832000 <col:38> 'long *' lvalue ParmVar 0x7f897b831dd0 'dyn' 'long *'
+  |-NoInlineAttr 0x7f897b831f38 <line:22:30>
+  `-UnusedAttr 0x7f897b831f80 <col:22> unused

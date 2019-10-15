@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fdbdb02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdbdb815200 <../Data/C2AST/pr77450.c:4:1, col:13> col:13 referenced V '__attribute__((__vector_size__(1 * sizeof(int)))) int'
+| `-VectorType 0x7fdbdb02c980 '__attribute__((__vector_size__(1 * sizeof(int)))) int' 1
+|   `-BuiltinType 0x7fdbdb02bde0 'int'
+`-FunctionDecl 0x7fdbdb815320 <line:6:1, line:10:1> line:7:1 foo 'void (void)'
+  `-CompoundStmt 0x7fdbdb815598 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7fdbdb815570 <line:9:3, col:17> 'int' '='
+      |-ArraySubscriptExpr 0x7fdbdb815528 <col:3, col:13> 'int' lvalue vectorcomponent
+      | |-CompoundLiteralExpr 0x7fdbdb8154e0 <col:3, col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(int)))) int' lvalue
+      | | `-InitListExpr 0x7fdbdb815498 <col:6, col:10> 'V':'__attribute__((__vector_size__(1 * sizeof(int)))) int'
+      | |   `-IntegerLiteral 0x7fdbdb815430 <col:8> 'int' 0
+      | `-IntegerLiteral 0x7fdbdb815508 <col:12> 'int' 0
+      `-IntegerLiteral 0x7fdbdb815550 <col:17> 'int' 0

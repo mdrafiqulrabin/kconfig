@@ -1,0 +1,26 @@
+TranslationUnitDecl 0x7fe5698166e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe568804ef8 <../Data/C2AST/pr70086-1.c:5:1, line:11:1> line:6:1 foo 'float (float, float, double, float, double, float)'
+  |-ParmVarDecl 0x7fe569817378 <col:6, col:12> col:12 a 'float'
+  |-ParmVarDecl 0x7fe568804c00 <col:15, col:21> col:21 b 'float'
+  |-ParmVarDecl 0x7fe568804c78 <col:24, col:31> col:31 c 'double'
+  |-ParmVarDecl 0x7fe568804cf0 <col:34, col:40> col:40 used d 'float'
+  |-ParmVarDecl 0x7fe568804d68 <col:43, col:50> col:50 used e 'double'
+  |-ParmVarDecl 0x7fe568804de0 <col:53, col:59> col:59 f 'float'
+  `-CompoundStmt 0x7fe568805250 <line:7:1, line:11:1>
+    |-CompoundAssignOperator 0x7fe568805088 <line:8:3, col:8> 'double' '-=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-DeclRefExpr 0x7fe568805008 <col:3> 'double' lvalue ParmVar 0x7fe568804d68 'e' 'double'
+    | `-ImplicitCastExpr 0x7fe568805070 <col:8> 'double' <FloatingCast>
+    |   `-ImplicitCastExpr 0x7fe568805058 <col:8> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe568805030 <col:8> 'float' lvalue ParmVar 0x7fe568804cf0 'd' 'float'
+    |-CompoundAssignOperator 0x7fe568805128 <line:9:3, col:8> 'float' '*=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-DeclRefExpr 0x7fe5688050c0 <col:3> 'float' lvalue ParmVar 0x7fe568804cf0 'd' 'float'
+    | `-ImplicitCastExpr 0x7fe568805110 <col:8> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe5688050e8 <col:8> 'double' lvalue ParmVar 0x7fe568804d68 'e' 'double'
+    `-ReturnStmt 0x7fe568805238 <line:10:3, col:14>
+      `-ImplicitCastExpr 0x7fe568805220 <col:10, col:14> 'float' <FloatingCast>
+        `-BinaryOperator 0x7fe5688051f8 <col:10, col:14> 'double' '+'
+          |-ImplicitCastExpr 0x7fe5688051b0 <col:10> 'double' <LValueToRValue>
+          | `-DeclRefExpr 0x7fe568805160 <col:10> 'double' lvalue ParmVar 0x7fe568804d68 'e' 'double'
+          `-ImplicitCastExpr 0x7fe5688051e0 <col:14> 'double' <FloatingCast>
+            `-ImplicitCastExpr 0x7fe5688051c8 <col:14> 'float' <LValueToRValue>
+              `-DeclRefExpr 0x7fe568805188 <col:14> 'float' lvalue ParmVar 0x7fe568804cf0 'd' 'float'

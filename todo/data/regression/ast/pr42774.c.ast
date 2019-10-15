@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7f935282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f935286d868 <../Data/C2AST/pr42774.c:4:1, line:10:1> line:4:14 ntfs_getinfo 'unsigned int (void *)'
+| |-ParmVarDecl 0x7f935282c978 <col:27, col:33> col:33 used p 'void *'
+| `-CompoundStmt 0x7f935286e060 <line:5:1, line:10:1>
+|   |-DeclStmt 0x7f935286da28 <line:6:5, col:21>
+|   | `-VarDecl 0x7f935286d9c8 <col:5, col:20> col:10 used bootsect 'char [8]'
+|   |-CallExpr 0x7f935286de10 <line:8:5, col:50> 'void *'
+|   | |-ImplicitCastExpr 0x7f935286ddf8 <col:5> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f935286dcd8 <col:5> '<builtin fn type>' Function 0x7f935286dab8 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|   | |-ImplicitCastExpr 0x7f935286de68 <col:22> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f935286de50 <col:22> 'char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x7f935286dd00 <col:22> 'char [8]' lvalue Var 0x7f935286d9c8 'bootsect' 'char [8]'
+|   | |-ImplicitCastExpr 0x7f935286de98 <col:32> 'const void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7f935286de80 <col:32> 'void *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f935286dd28 <col:32> 'void *' lvalue ParmVar 0x7f935282c978 'p' 'void *'
+|   | `-UnaryExprOrTypeTraitExpr 0x7f935286dd78 <col:35, col:42> 'unsigned long' sizeof
+|   |   `-DeclRefExpr 0x7f935286dd50 <col:42> 'char [8]' lvalue Var 0x7f935286d9c8 'bootsect' 'char [8]'
+|   `-ReturnStmt 0x7f935286e048 <line:9:5, col:44>
+|     `-ImplicitCastExpr 0x7f935286e030 <col:12, col:44> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7f935286e018 <col:12, col:44> 'unsigned short' <LValueToRValue>
+|         `-UnaryOperator 0x7f935286dff8 <col:12, col:44> 'unsigned short' lvalue prefix '*'
+|           `-CStyleCastExpr 0x7f935286dfd0 <col:13, col:44> 'unsigned short *' <BitCast>
+|             `-ParenExpr 0x7f935286dfb0 <col:31, col:44> 'char *'
+|               `-BinaryOperator 0x7f935286df10 <col:32, col:43> 'char *' '+'
+|                 |-ImplicitCastExpr 0x7f935286def8 <col:32> 'char *' <ArrayToPointerDecay>
+|                 | `-DeclRefExpr 0x7f935286deb0 <col:32> 'char [8]' lvalue Var 0x7f935286d9c8 'bootsect' 'char [8]'
+|                 `-IntegerLiteral 0x7f935286ded8 <col:43> 'int' 3
+`-FunctionDecl 0x7f935286dab8 <line:8:5> col:5 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7f935286db58 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7f935286dbb8 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7f935286dc18 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7f935286dc90 <col:5> Implicit

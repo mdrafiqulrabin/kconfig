@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f9f1e829ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9f20015828 <../Data/C2AST/pr57756.c:5:1, line:9:1> line:6:14 used callee 'int ()' inline
+| |-CompoundStmt 0x7f9f200159a8 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7f9f20015990 <line:8:3, col:10>
+| |   `-IntegerLiteral 0x7f9f20015970 <col:10> 'int' 0
+| |-TargetAttr 0x7f9f200158c8 <line:5:30, col:45> "sse4.2"
+| `-AlwaysInlineAttr 0x7f9f20015920 <col:16> always_inline
+|-FunctionDecl 0x7f9f20015a50 <line:11:1, line:15:1> line:12:21 used caller 'int ()' static inline
+| |-CompoundStmt 0x7f9f20015bf0 <line:13:1, line:15:1>
+| | `-ReturnStmt 0x7f9f20015bd8 <line:14:3, col:17>
+| |   `-CallExpr 0x7f9f20015bb0 <col:10, col:17> 'int'
+| |     `-ImplicitCastExpr 0x7f9f20015b98 <col:10> 'int (*)()' <FunctionToPointerDecay>
+| |       `-DeclRefExpr 0x7f9f20015b48 <col:10> 'int ()' Function 0x7f9f20015828 'callee' 'int ()'
+| `-TargetAttr 0x7f9f20015af0 <line:11:16, col:28> "sse"
+`-FunctionDecl 0x7f9f20015c30 <line:17:1, line:20:1> line:17:5 main 'int ()'
+  `-CompoundStmt 0x7f9f20015d50 <line:18:1, line:20:1>
+    `-ReturnStmt 0x7f9f20015d38 <line:19:3, col:17>
+      `-CallExpr 0x7f9f20015d10 <col:10, col:17> 'int'
+        `-ImplicitCastExpr 0x7f9f20015cf8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9f20015cd0 <col:10> 'int ()' Function 0x7f9f20015a50 'caller' 'int ()'

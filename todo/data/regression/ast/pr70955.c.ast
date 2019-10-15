@@ -1,0 +1,77 @@
+TranslationUnitDecl 0x7f845282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f845285dbd8 <../Data/C2AST/pr70955.c:8:1, line:25:1> line:9:1 used foo 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))'
+| |-ParmVarDecl 0x7f845285dac0 <col:6, col:10> col:10 used n 'int'
+| `-CompoundStmt 0x7f845285e618 <line:10:1, line:25:1>
+|   |-DeclStmt 0x7f845285dd10 <line:11:3, col:26>
+|   | `-VarDecl 0x7f845285dcb0 <col:3, col:24> col:24 used ap '__builtin_ms_va_list':'char *'
+|   |-DeclStmt 0x7f845285ddc0 <line:12:3, col:14>
+|   | `-VarDecl 0x7f845285dd40 <col:3, col:13> col:7 used sum 'int' cinit
+|   |   `-IntegerLiteral 0x7f845285dda0 <col:13> 'int' 0
+|   |-CallExpr 0x7f845285e050 <line:14:3, col:31> 'void'
+|   | |-ImplicitCastExpr 0x7f845285e038 <col:3> 'void (*)(char *&, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f845285df98 <col:3> '<builtin fn type>' Function 0x7f845285de48 '__builtin_ms_va_start' 'void (char *&, ...)'
+|   | |-DeclRefExpr 0x7f845285dfc0 <col:26> '__builtin_ms_va_list':'char *' lvalue Var 0x7f845285dcb0 'ap' '__builtin_ms_va_list':'char *'
+|   | `-DeclRefExpr 0x7f845285dfe8 <col:30> 'int' lvalue ParmVar 0x7f845285dac0 'n' 'int'
+|   |-WhileStmt 0x7f845285e340 <line:16:3, line:20:5>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f845285e0b0 <line:16:10, col:11> 'int' postfix '--'
+|   | | `-DeclRefExpr 0x7f845285e088 <col:10> 'int' lvalue ParmVar 0x7f845285dac0 'n' 'int'
+|   | `-CompoundStmt 0x7f845285e320 <line:17:5, line:20:5>
+|   |   |-CompoundAssignOperator 0x7f845285e160 <line:18:7, col:39> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   | |-DeclRefExpr 0x7f845285e0d0 <col:7> 'int' lvalue Var 0x7f845285dd40 'sum' 'int'
+|   |   | `-VAArgExpr 0x7f845285e138 <col:14, col:39> 'int'
+|   |   |   `-DeclRefExpr 0x7f845285e0f8 <col:32> '__builtin_ms_va_list':'char *' lvalue Var 0x7f845285dcb0 'ap' '__builtin_ms_va_list':'char *'
+|   |   `-CallExpr 0x7f845285e2a0 <line:19:7, col:32> 'int'
+|   |     |-ImplicitCastExpr 0x7f845285e288 <col:7> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f845285e198 <col:7> 'int (const char *, ...)' Function 0x7f8454005760 'printf' 'int (const char *, ...)'
+|   |     |-ImplicitCastExpr 0x7f845285e2f0 <col:15> 'const char *' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7f845285e2d8 <col:15> 'char *' <ArrayToPointerDecay>
+|   |     |   `-StringLiteral 0x7f845285e1f8 <col:15> 'char [10]' lvalue "sum = %d\n"
+|   |     `-ImplicitCastExpr 0x7f845285e308 <col:29> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f845285e230 <col:29> 'int' lvalue Var 0x7f845285dd40 'sum' 'int'
+|   |-CallExpr 0x7f845285e590 <line:22:3, col:26> 'void'
+|   | |-ImplicitCastExpr 0x7f845285e578 <col:3> 'void (*)(char *&)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f845285e4e8 <col:3> '<builtin fn type>' Function 0x7f845285e398 '__builtin_ms_va_end' 'void (char *&)'
+|   | `-DeclRefExpr 0x7f845285e510 <col:24> '__builtin_ms_va_list':'char *' lvalue Var 0x7f845285dcb0 'ap' '__builtin_ms_va_list':'char *'
+|   `-ReturnStmt 0x7f845285e600 <line:24:3, col:10>
+|     `-ImplicitCastExpr 0x7f845285e5e8 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7f845285e5c0 <col:10> 'int' lvalue Var 0x7f845285dd40 'sum' 'int'
+|-FunctionDecl 0x7f845285de48 <line:14:3> col:3 implicit used __builtin_ms_va_start 'void (char *&, ...)' extern
+| |-ParmVarDecl 0x7f845285dee8 <<invalid sloc>> <invalid sloc> 'char *&'
+| `-NoThrowAttr 0x7f845285df50 <col:3> Implicit
+|-FunctionDecl 0x7f845285e398 <line:22:3> col:3 implicit used __builtin_ms_va_end 'void (char *&)' extern
+| |-ParmVarDecl 0x7f845285e438 <<invalid sloc>> <invalid sloc> 'char *&'
+| `-NoThrowAttr 0x7f845285e4a0 <col:3> Implicit
+|-FunctionDecl 0x7f845285e6f0 <line:27:1, line:36:1> line:28:1 main 'int (void)'
+| `-CompoundStmt 0x7f845285ed38 <line:29:1, line:36:1>
+|   |-DeclStmt 0x7f845285ea80 <line:30:3, col:52>
+|   | `-VarDecl 0x7f845285e7a8 <col:3, col:51> col:7 used res 'int' cinit
+|   |   `-CallExpr 0x7f845285ea00 <col:13, col:51> 'int'
+|   |     |-ImplicitCastExpr 0x7f845285e9e8 <col:13> 'int (*)(int, ...) __attribute__((ms_abi))' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7f845285e808 <col:13> 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))' Function 0x7f845285dbd8 'foo' 'int (int, ...) __attribute__((ms_abi))':'int (int, ...) __attribute__((ms_abi))'
+|   |     |-IntegerLiteral 0x7f845285e830 <col:18> 'int' 10
+|   |     |-IntegerLiteral 0x7f845285e850 <col:22> 'int' 1
+|   |     |-IntegerLiteral 0x7f845285e870 <col:25> 'int' 2
+|   |     |-IntegerLiteral 0x7f845285e890 <col:28> 'int' 3
+|   |     |-IntegerLiteral 0x7f845285e8b0 <col:31> 'int' 4
+|   |     |-IntegerLiteral 0x7f845285e8d0 <col:34> 'int' 5
+|   |     |-IntegerLiteral 0x7f845285e8f0 <col:37> 'int' 6
+|   |     |-IntegerLiteral 0x7f845285e910 <col:40> 'int' 7
+|   |     |-IntegerLiteral 0x7f845285e930 <col:43> 'int' 8
+|   |     |-IntegerLiteral 0x7f845285e950 <col:46> 'int' 9
+|   |     `-IntegerLiteral 0x7f845285e970 <col:49> 'int' 10
+|   |-IfStmt 0x7f845285ecc8 <line:32:3, line:33:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f845285eaf8 <line:32:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7f845285eae0 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f845285ea98 <col:7> 'int' lvalue Var 0x7f845285e7a8 'res' 'int'
+|   | | `-IntegerLiteral 0x7f845285eac0 <col:14> 'int' 55
+|   | |-CallExpr 0x7f845285eca0 <line:33:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7f845285ec88 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7f845285ec38 <col:5> '<builtin fn type>' Function 0x7f845285eb50 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f845285ed20 <line:35:3, col:10>
+|     `-IntegerLiteral 0x7f845285ed00 <col:10> 'int' 0
+`-FunctionDecl 0x7f845285eb50 <line:33:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7f845285ebf0 <col:5> Implicit

@@ -1,0 +1,24 @@
+../Data/C2AST/pr84252.c:5:12: error: unknown type name '__Int32x4_t'
+struct S { __Int32x4_t b[2]; };
+           ^
+1 error generated.
+TranslationUnitDecl 0x7fc9d302bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc9d302c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc9d302bf80 '__int128'
+|-TypedefDecl 0x7fc9d302c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc9d302bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fc9d302c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc9d302c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc9d302c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc9d302c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc9d302c600 'char *'
+|   `-BuiltinType 0x7fc9d302bd80 'char'
+|-TypedefDecl 0x7fc9d302c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fc9d302c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fc9d302c720 'struct __va_list_tag'
+|     `-Record 0x7fc9d302c698 '__va_list_tag'
+|-RecordDecl 0x7fc9d302c960 <../Data/C2AST/pr84252.c:5:1, col:30> col:8 invalid struct S definition
+| `-FieldDecl 0x7fc9d306d8c0 <col:12, <invalid sloc>> col:24 invalid b 'int [2]'
+`-FunctionDecl 0x7fc9d306da60 <line:7:1, line:10:1> line:8:1 foo 'void (struct S)'
+  |-ParmVarDecl 0x7fc9d306d960 <col:6, col:15> col:15 x 'struct S':'struct S'
+  `-CompoundStmt 0x7fc9d306db48 <line:9:1, line:10:1>

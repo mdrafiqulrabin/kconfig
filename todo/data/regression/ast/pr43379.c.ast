@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fe6e10206e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe6e104af18 <../Data/C2AST/pr43379.c:6:1, line:12:1> line:6:7 foo 'void *(int, int *)'
+  |-ParmVarDecl 0x7fe6e1021378 <col:11, col:15> col:15 used i 'int'
+  |-ParmVarDecl 0x7fe6e104ae40 <col:18, col:23> col:23 used p 'int *'
+  `-CompoundStmt 0x7fe6e104b278 <line:7:1, line:12:1>
+    |-LabelStmt 0x7fe6e104b190 <line:8:1, line:9:15> 'lab'
+    | `-IfStmt 0x7fe6e104b110 <col:3, col:15>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7fe6e104b030 <col:7> 'int *' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7fe6e104b008 <col:7> 'int *' lvalue ParmVar 0x7fe6e104ae40 'p' 'int *'
+    |   |-BinaryOperator 0x7fe6e104b0e8 <col:10, col:15> 'int' '='
+    |   | |-UnaryOperator 0x7fe6e104b088 <col:10, col:11> 'int' lvalue prefix '*'
+    |   | | `-ImplicitCastExpr 0x7fe6e104b070 <col:11> 'int *' <LValueToRValue>
+    |   | |   `-DeclRefExpr 0x7fe6e104b048 <col:11> 'int *' lvalue ParmVar 0x7fe6e104ae40 'p' 'int *'
+    |   | `-ImplicitCastExpr 0x7fe6e104b0d0 <col:15> 'int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7fe6e104b0a8 <col:15> 'int' lvalue ParmVar 0x7fe6e1021378 'i' 'int'
+    |   `-<<<NULL>>>
+    |-IndirectGotoStmt 0x7fe6e104b228 <line:10:3, col:9>
+    | `-ImplicitCastExpr 0x7fe6e104b210 <col:9> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fe6e104b1f8 <col:9> 'int *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fe6e104b1a8 <col:9> 'int *' lvalue ParmVar 0x7fe6e104ae40 'p' 'int *'
+    `-ReturnStmt 0x7fe6e104b260 <line:11:3, col:12>
+      `-AddrLabelExpr 0x7fe6e104b240 <col:10, col:12> 'void *' lab 0x7fe6e104b148

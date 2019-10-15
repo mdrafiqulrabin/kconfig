@@ -1,0 +1,40 @@
+../Data/C2AST/pr53712.c:8:19: error: use of unknown builtin '__builtin_ia32_loaddqu' [-Wimplicit-function-declaration]
+  v16qi s1chars = __builtin_ia32_loaddqu ((const char *) s2);
+                  ^
+../Data/C2AST/pr53712.c:8:9: error: initializing 'v16qi' (vector of 16 'char' values) with an expression of incompatible type 'int'
+  v16qi s1chars = __builtin_ia32_loaddqu ((const char *) s2);
+        ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr53712.c:9:9: error: initializing 'v16qi' (vector of 16 'char' values) with an expression of incompatible type 'int'
+  v16qi s2chars = __builtin_ia32_loaddqu ((const char *) s1);
+        ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 errors generated.
+TranslationUnitDecl 0x7fbdb38174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbdb3817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbdb3817780 '__int128'
+|-TypedefDecl 0x7fbdb3817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbdb38177a0 'unsigned __int128'
+|-TypedefDecl 0x7fbdb3817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbdb3817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbdb3817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbdb3817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbdb3817e00 'char *'
+|   `-BuiltinType 0x7fbdb3817580 'char'
+|-TypedefDecl 0x7fbdb3818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbdb38180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbdb3817f20 'struct __va_list_tag'
+|     `-Record 0x7fbdb3817e98 '__va_list_tag'
+|-TypedefDecl 0x7fbdb3018600 <../Data/C2AST/pr53712.c:4:1, col:14> col:14 referenced v16qi '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+| `-VectorType 0x7fbdb3818180 '__attribute__((__vector_size__(16 * sizeof(char)))) char' 16
+|   `-BuiltinType 0x7fbdb3817580 'char'
+|-FunctionDecl 0x7fbdb30187c8 <line:6:1, line:11:1> line:6:5 test 'int (const char *, const char *)'
+| |-ParmVarDecl 0x7fbdb3018670 <col:11, col:23> col:23 used s1 'const char *'
+| |-ParmVarDecl 0x7fbdb30186e8 <col:27, col:39> col:39 used s2 'const char *'
+| `-CompoundStmt 0x7fbdb3019358 <line:7:1, line:11:1>
+|   |-DeclStmt 0x7fbdb3018f60 <line:8:3, col:61>
+|   | `-VarDecl 0x7fbdb30188f0 <col:3, col:9> col:9 invalid s1chars 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+|   `-DeclStmt 0x7fbdb30190d8 <line:9:3, col:61>
+|     `-VarDecl 0x7fbdb3018f88 <col:3, col:9> col:9 invalid s2chars 'v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char'
+`-FunctionDecl 0x7fbdb3019138 <line:10:10> col:10 implicit used __builtin_ia32_pcmpistri128 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' extern
+  |-ParmVarDecl 0x7fbdb30191d8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  |-ParmVarDecl 0x7fbdb3019238 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7fbdb3019298 <<invalid sloc>> <invalid sloc> 'char'

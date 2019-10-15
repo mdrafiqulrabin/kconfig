@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fbba182b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbba186ce68 <../Data/C2AST/pr24055.c:6:15> col:15 implicit used rint 'double (double)' extern
+| |-ParmVarDecl 0x7fbba186cf08 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fbba186cf70 <col:15> Implicit
+| `-ConstAttr 0x7fbba186cfb8 <col:15> Implicit
+|-FunctionDecl 0x7fbba186cfc8 prev 0x7fbba186ce68 <col:1, col:26> col:15 used rint 'double (double)' extern
+| |-ParmVarDecl 0x7fbba182bf78 <col:20> col:26 'double'
+| |-NoThrowAttr 0x7fbba186d0a8 <col:15> Inherited Implicit
+| `-ConstAttr 0x7fbba186d0b8 <col:15> Inherited Implicit
+|-FunctionDecl 0x7fbba186d260 <line:8:1, line:11:1> line:8:6 foo_1 'void (int *, double)'
+| |-ParmVarDecl 0x7fbba186d110 <col:13, col:18> col:18 used p 'int *'
+| |-ParmVarDecl 0x7fbba186d188 <col:21, col:28> col:28 used x 'double'
+| `-CompoundStmt 0x7fbba186d4c8 <line:9:1, line:11:1>
+|   `-BinaryOperator 0x7fbba186d4a0 <line:10:3, col:15> 'int' '='
+|     |-UnaryOperator 0x7fbba186d390 <col:3, col:4> 'int' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fbba186d378 <col:4> 'int *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fbba186d350 <col:4> 'int *' lvalue ParmVar 0x7fbba186d110 'p' 'int *'
+|     `-ImplicitCastExpr 0x7fbba186d488 <col:8, col:15> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7fbba186d440 <col:8, col:15> 'double'
+|         |-ImplicitCastExpr 0x7fbba186d428 <col:8> 'double (*)(double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fbba186d3b0 <col:8> 'double (double)' Function 0x7fbba186cfc8 'rint' 'double (double)'
+|         `-ImplicitCastExpr 0x7fbba186d470 <col:14> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fbba186d3d8 <col:14> 'double' lvalue ParmVar 0x7fbba186d188 'x' 'double'
+|-FunctionDecl 0x7fbba186d670 <line:13:1, line:16:1> line:13:6 foo_2 'void (long long *, double)'
+| |-ParmVarDecl 0x7fbba186d520 <col:13, col:24> col:24 used p 'long long *'
+| |-ParmVarDecl 0x7fbba186d598 <col:27, col:34> col:34 used x 'double'
+| `-CompoundStmt 0x7fbba186d870 <line:14:1, line:16:1>
+|   `-BinaryOperator 0x7fbba186d848 <line:15:3, col:15> 'long long' '='
+|     |-UnaryOperator 0x7fbba186d760 <col:3, col:4> 'long long' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fbba186d748 <col:4> 'long long *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fbba186d720 <col:4> 'long long *' lvalue ParmVar 0x7fbba186d520 'p' 'long long *'
+|     `-ImplicitCastExpr 0x7fbba186d830 <col:8, col:15> 'long long' <FloatingToIntegral>
+|       `-CallExpr 0x7fbba186d7e8 <col:8, col:15> 'double'
+|         |-ImplicitCastExpr 0x7fbba186d7d0 <col:8> 'double (*)(double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fbba186d780 <col:8> 'double (double)' Function 0x7fbba186cfc8 'rint' 'double (double)'
+|         `-ImplicitCastExpr 0x7fbba186d818 <col:14> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fbba186d7a8 <col:14> 'double' lvalue ParmVar 0x7fbba186d598 'x' 'double'
+|-FunctionDecl 0x7fbba186d968 <line:18:1, line:21:1> line:18:5 foo_3 'int (double)'
+| |-ParmVarDecl 0x7fbba186d8a0 <col:12, col:19> col:19 used x 'double'
+| `-CompoundStmt 0x7fbba186daf0 <line:19:1, line:21:1>
+|   `-ReturnStmt 0x7fbba186dad8 <line:20:3, col:17>
+|     `-ImplicitCastExpr 0x7fbba186dac0 <col:10, col:17> 'int' <FloatingToIntegral>
+|       `-CallExpr 0x7fbba186da78 <col:10, col:17> 'double'
+|         |-ImplicitCastExpr 0x7fbba186da60 <col:10> 'double (*)(double)' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x7fbba186da10 <col:10> 'double (double)' Function 0x7fbba186cfc8 'rint' 'double (double)'
+|         `-ImplicitCastExpr 0x7fbba186daa8 <col:16> 'double' <LValueToRValue>
+|           `-DeclRefExpr 0x7fbba186da38 <col:16> 'double' lvalue ParmVar 0x7fbba186d8a0 'x' 'double'
+`-FunctionDecl 0x7fbba186dbe8 <line:23:1, line:26:1> line:23:11 foo_4 'long long (double)'
+  |-ParmVarDecl 0x7fbba186db20 <col:18, col:25> col:25 used x 'double'
+  `-CompoundStmt 0x7fbba186dd70 <line:24:1, line:26:1>
+    `-ReturnStmt 0x7fbba186dd58 <line:25:3, col:17>
+      `-ImplicitCastExpr 0x7fbba186dd40 <col:10, col:17> 'long long' <FloatingToIntegral>
+        `-CallExpr 0x7fbba186dcf8 <col:10, col:17> 'double'
+          |-ImplicitCastExpr 0x7fbba186dce0 <col:10> 'double (*)(double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fbba186dc90 <col:10> 'double (double)' Function 0x7fbba186cfc8 'rint' 'double (double)'
+          `-ImplicitCastExpr 0x7fbba186dd28 <col:16> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fbba186dcb8 <col:16> 'double' lvalue ParmVar 0x7fbba186db20 'x' 'double'

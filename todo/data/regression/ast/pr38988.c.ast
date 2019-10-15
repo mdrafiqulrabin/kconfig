@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7ff99b8174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff99b818178 <../Data/C2AST/pr38988.c:6:15, col:37> col:37 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7ff99b8176a0 'unsigned long'
+|-TypedefDecl 0x7ff99b859148 <line:7:1, col:31> col:16 referenced func_ptr 'void (*)(void)'
+| `-PointerType 0x7ff99b8590f0 'void (*)(void)'
+|   `-ParenType 0x7ff99b859090 'void (void)' sugar
+|     `-FunctionProtoType 0x7ff99b859060 'void (void)' cdecl
+|       `-BuiltinType 0x7ff99b817540 'void'
+|-VarDecl 0x7ff99b859278 <line:9:1, col:54> col:17 used __DTOR_LIST__ 'func_ptr [1]' static cinit
+| `-InitListExpr 0x7ff99b859428 <col:36, col:54> 'func_ptr [1]'
+|   `-CStyleCastExpr 0x7ff99b8593b8 <col:38, col:52> 'func_ptr':'void (*)(void)' <IntegralToPointer>
+|     `-ParenExpr 0x7ff99b859398 <col:49, col:52> 'int'
+|       `-UnaryOperator 0x7ff99b859338 <col:50, col:51> 'int' prefix '-'
+|         `-IntegerLiteral 0x7ff99b859318 <col:51> 'int' 1
+`-FunctionDecl 0x7ff99b859500 <line:11:1, line:24:1> line:12:1 __do_global_dtors_aux 'void (void)'
+  `-CompoundStmt 0x7ff99b859cc8 <line:13:1, line:24:1>
+    |-DeclStmt 0x7ff99b859688 <line:14:3, col:33>
+    | `-VarDecl 0x7ff99b859618 parent 0x7ff99b8174e8 <col:3, col:32> col:19 used __DTOR_END__ 'func_ptr []' extern
+    |-DeclStmt 0x7ff99b859768 <line:15:3, col:22>
+    | `-VarDecl 0x7ff99b8596d0 <col:3, col:21> col:10 used dtor_idx 'size_t':'unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7ff99b859750 <col:21> 'size_t':'unsigned long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff99b859730 <col:21> 'int' 0
+    |-DeclStmt 0x7ff99b859968 <line:16:3, col:58>
+    | `-VarDecl 0x7ff99b859790 <col:3, col:57> col:16 used max_idx 'const size_t':'const unsigned long' cinit
+    |   `-ImplicitCastExpr 0x7ff99b859950 <col:26, col:57> 'size_t':'unsigned long' <IntegralCast>
+    |     `-BinaryOperator 0x7ff99b859928 <col:26, col:57> 'long' '-'
+    |       |-BinaryOperator 0x7ff99b8598c8 <col:26, col:41> 'long' '-'
+    |       | |-ImplicitCastExpr 0x7ff99b859898 <col:26> 'func_ptr *' <ArrayToPointerDecay>
+    |       | | `-DeclRefExpr 0x7ff99b8597f0 <col:26> 'func_ptr []' lvalue Var 0x7ff99b859618 '__DTOR_END__' 'func_ptr []'
+    |       | `-ImplicitCastExpr 0x7ff99b8598b0 <col:41> 'func_ptr *' <ArrayToPointerDecay>
+    |       |   `-DeclRefExpr 0x7ff99b859818 <col:41> 'func_ptr [1]' lvalue Var 0x7ff99b859278 '__DTOR_LIST__' 'func_ptr [1]'
+    |       `-ImplicitCastExpr 0x7ff99b859910 <col:57> 'long' <IntegralCast>
+    |         `-IntegerLiteral 0x7ff99b8598f0 <col:57> 'int' 1
+    |-DeclStmt 0x7ff99b8599f0 <line:17:3, col:13>
+    | `-VarDecl 0x7ff99b859990 <col:3, col:12> col:12 used f 'func_ptr':'void (*)(void)'
+    `-WhileStmt 0x7ff99b859ca8 <line:19:3, line:23:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff99b859a88 <line:19:10, col:21> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff99b859a58 <col:10> 'size_t':'unsigned long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff99b859a08 <col:10> 'size_t':'unsigned long' lvalue Var 0x7ff99b8596d0 'dtor_idx' 'size_t':'unsigned long'
+      | `-ImplicitCastExpr 0x7ff99b859a70 <col:21> 'size_t':'unsigned long' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff99b859a30 <col:21> 'const size_t':'const unsigned long' lvalue Var 0x7ff99b859790 'max_idx' 'const size_t':'const unsigned long'
+      `-CompoundStmt 0x7ff99b859c88 <line:20:5, line:23:5>
+        |-BinaryOperator 0x7ff99b859bf8 <line:21:7, col:35> 'func_ptr':'void (*)(void)' '='
+        | |-DeclRefExpr 0x7ff99b859b08 <col:7> 'func_ptr':'void (*)(void)' lvalue Var 0x7ff99b859990 'f' 'func_ptr':'void (*)(void)'
+        | `-ImplicitCastExpr 0x7ff99b859be0 <col:11, col:35> 'func_ptr':'void (*)(void)' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7ff99b859bb8 <col:11, col:35> 'func_ptr':'void (*)(void)' lvalue
+        |     |-ImplicitCastExpr 0x7ff99b859ba0 <col:11> 'func_ptr *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7ff99b859b30 <col:11> 'func_ptr [1]' lvalue Var 0x7ff99b859278 '__DTOR_LIST__' 'func_ptr [1]'
+        |     `-UnaryOperator 0x7ff99b859b80 <col:25, col:27> 'size_t':'unsigned long' prefix '++'
+        |       `-DeclRefExpr 0x7ff99b859b58 <col:27> 'size_t':'unsigned long' lvalue Var 0x7ff99b8596d0 'dtor_idx' 'size_t':'unsigned long'
+        `-CallExpr 0x7ff99b859c60 <line:22:7, col:10> 'void'
+          `-ImplicitCastExpr 0x7ff99b859c48 <col:7> 'func_ptr':'void (*)(void)' <LValueToRValue>
+            `-DeclRefExpr 0x7ff99b859c20 <col:7> 'func_ptr':'void (*)(void)' lvalue Var 0x7ff99b859990 'f' 'func_ptr':'void (*)(void)'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f9f0282b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f9f0286cfa8 <../Data/C2AST/pr23944.c:1:1, line:4:1> line:1:7 f 'float (float (*)[4])'
+  |-ParmVarDecl 0x7f9f0286cea0 <col:9, col:22> col:15 used src 'float (*)[4]':'float (*)[4]'
+  `-CompoundStmt 0x7f9f0286d1d0 <line:2:1, line:4:1>
+    `-ReturnStmt 0x7f9f0286d1b8 <line:3:2, col:17>
+      `-ImplicitCastExpr 0x7f9f0286d1a0 <col:9, col:17> 'float' <LValueToRValue>
+        `-UnaryOperator 0x7f9f0286d180 <col:9, col:17> 'float' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7f9f0286d168 <col:10, col:17> 'float *' <ArrayToPointerDecay>
+            `-ParenExpr 0x7f9f0286d118 <col:10, col:17> 'float [4]' lvalue
+              `-ArraySubscriptExpr 0x7f9f0286d0f0 <col:11, col:16> 'float [4]' lvalue
+                |-ImplicitCastExpr 0x7f9f0286d0d8 <col:11> 'float (*)[4]':'float (*)[4]' <LValueToRValue>
+                | `-DeclRefExpr 0x7f9f0286d090 <col:11> 'float (*)[4]':'float (*)[4]' lvalue ParmVar 0x7f9f0286cea0 'src' 'float (*)[4]':'float (*)[4]'
+                `-IntegerLiteral 0x7f9f0286d0b8 <col:15> 'int' 3

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fdd970002e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdd9700d000 <../Data/C2AST/pr59794-7.c:6:1, col:13> col:13 referenced __v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7fdd97000f80 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7fdd970003e0 'int'
+|-VarDecl 0x7fdd9700d090 <line:8:1, col:15> col:15 used x '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' extern
+`-FunctionDecl 0x7fdd9700d220 <line:10:1, line:14:1> line:11:1 foo '__v8si (void)'
+  `-CompoundStmt 0x7fdd9700d318 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fdd9700d300 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fdd9700d2e8 <col:10> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+        `-DeclRefExpr 0x7fdd9700d2c0 <col:10> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue Var 0x7fdd9700d090 'x' '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'

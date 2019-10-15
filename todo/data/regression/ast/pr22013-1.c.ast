@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7ff92c01b4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff92c01c178 <../Data/C2AST/pr22013-1.c:1:1, col:24> col:24 referenced W 'unsigned short'
+| `-BuiltinType 0x7ff92c01b660 'unsigned short'
+|-TypedefDecl 0x7ff92c05d068 <line:2:1, col:18> col:18 referenced P 'const W *'
+| `-PointerType 0x7ff92c05d030 'const W *'
+|   `-QualType 0x7ff92c01c1d1 'const W' const
+|     `-TypedefType 0x7ff92c01c1d0 'W' sugar
+|       |-Typedef 0x7ff92c01c178 'W'
+|       `-BuiltinType 0x7ff92c01b660 'unsigned short'
+|-FunctionDecl 0x7ff92c05d1f0 <line:4:1, col:16> col:13 used g 'void (P)' extern
+| `-ParmVarDecl 0x7ff92c05d0f0 <col:15> col:16 'P':'const W *'
+`-FunctionDecl 0x7ff92c05d328 <line:6:1, line:11:1> line:7:1 f 'void ()'
+  `-CompoundStmt 0x7ff92c05d758 <line:8:1, line:11:1>
+    |-DeclStmt 0x7ff92c05d638 <line:9:3, col:34>
+    | `-VarDecl 0x7ff92c05d3d8 <col:3, col:33> col:11 used s 'const P':'const W *const' cinit
+    |   `-ImplicitCastExpr 0x7ff92c05d620 <col:15, col:33> 'const W *' <ArrayToPointerDecay>
+    |     `-CompoundLiteralExpr 0x7ff92c05d5f8 <col:15, col:33> 'const W [1]' lvalue
+    |       `-InitListExpr 0x7ff92c05d518 <col:27, col:33> 'const W [1]'
+    |         `-ImplicitCastExpr 0x7ff92c05d558 <col:29> 'W':'unsigned short' <IntegralCast>
+    |           `-CharacterLiteral 0x7ff92c05d4b8 <col:29> 'int' 82
+    `-CallExpr 0x7ff92c05d710 <line:10:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7ff92c05d6f8 <col:3> 'void (*)(P)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff92c05d650 <col:3> 'void (P)' Function 0x7ff92c05d1f0 'g' 'void (P)'
+      `-ImplicitCastExpr 0x7ff92c05d740 <col:6> 'P':'const W *' <LValueToRValue>
+        `-DeclRefExpr 0x7ff92c05d678 <col:6> 'const P':'const W *const' lvalue Var 0x7ff92c05d3d8 's' 'const P':'const W *const'

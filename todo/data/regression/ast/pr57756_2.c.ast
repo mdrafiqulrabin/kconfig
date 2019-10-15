@@ -1,0 +1,135 @@
+TranslationUnitDecl 0x7f815182bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8151867028 <../Data/C2AST/pr57756_2.c:5:1, line:9:1> line:6:14 used c1 'int ()' inline
+| |-CompoundStmt 0x7f81518671a8 <line:7:1, line:9:1>
+| | `-ReturnStmt 0x7f8151867190 <line:8:3, col:10>
+| |   `-IntegerLiteral 0x7f8151867170 <col:10> 'int' 0
+| |-TargetAttr 0x7f81518670c8 <line:5:30, col:43> "avx2"
+| `-AlwaysInlineAttr 0x7f8151867120 <col:16> always_inline
+|-FunctionDecl 0x7f8151867250 <line:11:1, line:15:1> line:12:14 used c2 'int ()' inline
+| |-CompoundStmt 0x7f8151867390 <line:13:1, line:15:1>
+| | `-ReturnStmt 0x7f8151867378 <line:14:3, col:10>
+| |   `-IntegerLiteral 0x7f8151867358 <col:10> 'int' 0
+| |-TargetAttr 0x7f81518672f0 <line:11:30, col:42> "avx"
+| `-AlwaysInlineAttr 0x7f8151867348 <col:16> always_inline
+|-FunctionDecl 0x7f8151867440 <line:17:1, line:21:1> line:18:14 used c3 'int ()' inline
+| |-CompoundStmt 0x7f8151867580 <line:19:1, line:21:1>
+| | `-ReturnStmt 0x7f8151867568 <line:20:3, col:10>
+| |   `-IntegerLiteral 0x7f8151867548 <col:10> 'int' 0
+| |-TargetAttr 0x7f81518674e0 <line:17:30, col:45> "popcnt"
+| `-AlwaysInlineAttr 0x7f8151867538 <col:16> always_inline
+|-FunctionDecl 0x7f81518675f0 <line:23:1, line:27:1> line:24:14 used c4 'int ()' inline
+| |-CompoundStmt 0x7f8151867730 <line:25:1, line:27:1>
+| | `-ReturnStmt 0x7f8151867718 <line:26:3, col:10>
+| |   `-IntegerLiteral 0x7f81518676f8 <col:10> 'int' 0
+| |-TargetAttr 0x7f8151867690 <line:23:30, col:45> "sse4.2"
+| `-AlwaysInlineAttr 0x7f81518676e8 <col:16> always_inline
+|-FunctionDecl 0x7f81518677a0 <line:29:1, line:33:1> line:30:14 used c5 'int ()' inline
+| |-CompoundStmt 0x7f81518678e0 <line:31:1, line:33:1>
+| | `-ReturnStmt 0x7f81518678c8 <line:32:3, col:10>
+| |   `-IntegerLiteral 0x7f81518678a8 <col:10> 'int' 0
+| |-TargetAttr 0x7f8151867840 <line:29:30, col:45> "sse4.1"
+| `-AlwaysInlineAttr 0x7f8151867898 <col:16> always_inline
+|-FunctionDecl 0x7f8151867990 <line:35:1, line:39:1> line:36:14 used c6 'int ()' inline
+| |-CompoundStmt 0x7f8151867ad0 <line:37:1, line:39:1>
+| | `-ReturnStmt 0x7f8151867ab8 <line:38:3, col:10>
+| |   `-IntegerLiteral 0x7f8151867a98 <col:10> 'int' 0
+| |-TargetAttr 0x7f8151867a30 <line:35:30, col:44> "ssse3"
+| `-AlwaysInlineAttr 0x7f8151867a88 <col:16> always_inline
+|-FunctionDecl 0x7f8151867b40 <line:41:1, line:45:1> line:42:14 used c7 'int ()' inline
+| |-CompoundStmt 0x7f8151867c80 <line:43:1, line:45:1>
+| | `-ReturnStmt 0x7f8151867c68 <line:44:3, col:10>
+| |   `-IntegerLiteral 0x7f8151867c48 <col:10> 'int' 0
+| |-TargetAttr 0x7f8151867be0 <line:41:30, col:43> "sse3"
+| `-AlwaysInlineAttr 0x7f8151867c38 <col:16> always_inline
+|-FunctionDecl 0x7f8151867cf0 <line:47:1, line:51:1> line:48:14 used c8 'int ()' inline
+| |-CompoundStmt 0x7f8151867e30 <line:49:1, line:51:1>
+| | `-ReturnStmt 0x7f8151867e18 <line:50:3, col:10>
+| |   `-IntegerLiteral 0x7f8151867df8 <col:10> 'int' 0
+| |-TargetAttr 0x7f8151867d90 <line:47:30, col:43> "sse2"
+| `-AlwaysInlineAttr 0x7f8151867de8 <col:16> always_inline
+|-FunctionDecl 0x7f8151867e70 <line:53:1, line:56:1> line:53:5 nop 'int ()'
+| `-CompoundStmt 0x7f8151867f48 <line:54:1, line:56:1>
+|   `-ReturnStmt 0x7f8151867f30 <line:55:3, col:10>
+|     `-IntegerLiteral 0x7f8151867f10 <col:10> 'int' 1
+|-FunctionDecl 0x7f815187da00 <line:60:1, line:63:1> line:60:5 used C8 'int ()'
+| `-CompoundStmt 0x7f815187db50 <line:61:1, line:63:1>
+|   `-ReturnStmt 0x7f815187db38 <line:62:3, col:14>
+|     `-CallExpr 0x7f815187db10 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187daf8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187daa0 <col:10> 'int ()' Function 0x7f8151867cf0 'c8' 'int ()'
+|-FunctionDecl 0x7f815187db90 <line:69:1, line:72:1> line:69:5 used C7 'int ()'
+| `-CompoundStmt 0x7f815187dcb0 <line:70:1, line:72:1>
+|   `-ReturnStmt 0x7f815187dc98 <line:71:3, col:14>
+|     `-CallExpr 0x7f815187dc70 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187dc58 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187dc30 <col:10> 'int ()' Function 0x7f8151867b40 'c7' 'int ()'
+|-FunctionDecl 0x7f815187dcf0 <line:78:1, line:81:1> line:78:5 used C6 'int ()'
+| `-CompoundStmt 0x7f815187de10 <line:79:1, line:81:1>
+|   `-ReturnStmt 0x7f815187ddf8 <line:80:3, col:14>
+|     `-CallExpr 0x7f815187ddd0 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187ddb8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187dd90 <col:10> 'int ()' Function 0x7f8151867990 'c6' 'int ()'
+|-FunctionDecl 0x7f815187de50 <line:87:1, line:90:1> line:87:5 used C5 'int ()'
+| `-CompoundStmt 0x7f815187df70 <line:88:1, line:90:1>
+|   `-ReturnStmt 0x7f815187df58 <line:89:3, col:14>
+|     `-CallExpr 0x7f815187df30 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187df18 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187def0 <col:10> 'int ()' Function 0x7f81518677a0 'c5' 'int ()'
+|-FunctionDecl 0x7f815187dfb0 <line:96:1, line:99:1> line:96:5 used C4 'int ()'
+| `-CompoundStmt 0x7f815187e0d0 <line:97:1, line:99:1>
+|   `-ReturnStmt 0x7f815187e0b8 <line:98:3, col:14>
+|     `-CallExpr 0x7f815187e090 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187e078 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187e050 <col:10> 'int ()' Function 0x7f81518675f0 'c4' 'int ()'
+|-FunctionDecl 0x7f815187e110 <line:105:1, line:108:1> line:105:5 used C3 'int ()'
+| `-CompoundStmt 0x7f815187e230 <line:106:1, line:108:1>
+|   `-ReturnStmt 0x7f815187e218 <line:107:3, col:14>
+|     `-CallExpr 0x7f815187e1f0 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187e1d8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187e1b0 <col:10> 'int ()' Function 0x7f8151867440 'c3' 'int ()'
+|-FunctionDecl 0x7f815187e270 <line:114:1, line:117:1> line:114:5 used C2 'int ()'
+| `-CompoundStmt 0x7f815187e390 <line:115:1, line:117:1>
+|   `-ReturnStmt 0x7f815187e378 <line:116:3, col:14>
+|     `-CallExpr 0x7f815187e350 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187e338 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187e310 <col:10> 'int ()' Function 0x7f8151867250 'c2' 'int ()'
+|-FunctionDecl 0x7f815187e3d0 <line:123:1, line:126:1> line:123:5 used C1 'int ()'
+| `-CompoundStmt 0x7f815187e4f0 <line:124:1, line:126:1>
+|   `-ReturnStmt 0x7f815187e4d8 <line:125:3, col:14>
+|     `-CallExpr 0x7f815187e4b0 <col:10, col:14> 'int'
+|       `-ImplicitCastExpr 0x7f815187e498 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7f815187e470 <col:10> 'int ()' Function 0x7f8151867028 'c1' 'int ()'
+`-FunctionDecl 0x7f815187e530 <line:129:1, line:132:1> line:129:5 main 'int ()'
+  `-CompoundStmt 0x7f815187ea40 <line:130:1, line:132:1>
+    `-ReturnStmt 0x7f815187ea28 <line:131:3, col:70>
+      `-BinaryOperator 0x7f815187ea00 <col:10, col:70> 'int' '+'
+        |-BinaryOperator 0x7f815187e970 <col:10, col:62> 'int' '+'
+        | |-BinaryOperator 0x7f815187e8e0 <col:10, col:54> 'int' '+'
+        | | |-BinaryOperator 0x7f815187e850 <col:10, col:46> 'int' '+'
+        | | | |-BinaryOperator 0x7f815187e7c0 <col:10, col:38> 'int' '+'
+        | | | | |-BinaryOperator 0x7f815187e730 <col:10, col:30> 'int' '+'
+        | | | | | |-BinaryOperator 0x7f815187e6a0 <col:10, col:22> 'int' '+'
+        | | | | | | |-CallExpr 0x7f815187e610 <col:10, col:14> 'int'
+        | | | | | | | `-ImplicitCastExpr 0x7f815187e5f8 <col:10> 'int (*)()' <FunctionToPointerDecay>
+        | | | | | | |   `-DeclRefExpr 0x7f815187e5d0 <col:10> 'int ()' Function 0x7f815187e3d0 'C1' 'int ()'
+        | | | | | | `-CallExpr 0x7f815187e678 <col:18, col:22> 'int'
+        | | | | | |   `-ImplicitCastExpr 0x7f815187e660 <col:18> 'int (*)()' <FunctionToPointerDecay>
+        | | | | | |     `-DeclRefExpr 0x7f815187e638 <col:18> 'int ()' Function 0x7f815187e270 'C2' 'int ()'
+        | | | | | `-CallExpr 0x7f815187e708 <col:26, col:30> 'int'
+        | | | | |   `-ImplicitCastExpr 0x7f815187e6f0 <col:26> 'int (*)()' <FunctionToPointerDecay>
+        | | | | |     `-DeclRefExpr 0x7f815187e6c8 <col:26> 'int ()' Function 0x7f815187e110 'C3' 'int ()'
+        | | | | `-CallExpr 0x7f815187e798 <col:34, col:38> 'int'
+        | | | |   `-ImplicitCastExpr 0x7f815187e780 <col:34> 'int (*)()' <FunctionToPointerDecay>
+        | | | |     `-DeclRefExpr 0x7f815187e758 <col:34> 'int ()' Function 0x7f815187dfb0 'C4' 'int ()'
+        | | | `-CallExpr 0x7f815187e828 <col:42, col:46> 'int'
+        | | |   `-ImplicitCastExpr 0x7f815187e810 <col:42> 'int (*)()' <FunctionToPointerDecay>
+        | | |     `-DeclRefExpr 0x7f815187e7e8 <col:42> 'int ()' Function 0x7f815187de50 'C5' 'int ()'
+        | | `-CallExpr 0x7f815187e8b8 <col:50, col:54> 'int'
+        | |   `-ImplicitCastExpr 0x7f815187e8a0 <col:50> 'int (*)()' <FunctionToPointerDecay>
+        | |     `-DeclRefExpr 0x7f815187e878 <col:50> 'int ()' Function 0x7f815187dcf0 'C6' 'int ()'
+        | `-CallExpr 0x7f815187e948 <col:58, col:62> 'int'
+        |   `-ImplicitCastExpr 0x7f815187e930 <col:58> 'int (*)()' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7f815187e908 <col:58> 'int ()' Function 0x7f815187db90 'C7' 'int ()'
+        `-CallExpr 0x7f815187e9d8 <col:66, col:70> 'int'
+          `-ImplicitCastExpr 0x7f815187e9c0 <col:66> 'int (*)()' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7f815187e998 <col:66> 'int ()' Function 0x7f815187da00 'C8' 'int ()'

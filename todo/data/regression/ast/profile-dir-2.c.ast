@@ -1,0 +1,5 @@
+TranslationUnitDecl 0x7fac2e0174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fac2e814228 <../Data/C2AST/profile-dir-2.c:6:1, line:10:1> line:7:1 main 'int (void)'
+  `-CompoundStmt 0x7fac2e814370 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fac2e814358 <line:9:3, col:10>
+      `-IntegerLiteral 0x7fac2e814338 <col:10> 'int' 0

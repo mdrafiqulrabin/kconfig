@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fc21900bae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc21900c760 <../Data/C2AST/pr56150.c:3:1, line:5:1> line:3:1 struct definition
+| `-FieldDecl 0x7fc21881ac38 <line:4:5, col:9> col:9 f4 'int'
+|-VarDecl 0x7fc21881acd0 <line:3:1, line:5:3> col:3 used g1 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)'
+|-VarDecl 0x7fc21881ada0 <line:7:1, col:6> col:6 used g2 'long'
+|-VarDecl 0x7fc21881ae18 <line:9:1, col:15> col:15 used g3 'volatile long'
+`-FunctionDecl 0x7fc21881aec8 <line:11:1, line:17:1> line:11:6 func_1 'void ()'
+  `-CompoundStmt 0x7fc21881b0b0 <line:12:1, line:17:1>
+    `-IfStmt 0x7fc21881b078 <line:13:3, line:16:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fc21881af90 <line:13:7> 'long' <LValueToRValue>
+      | `-DeclRefExpr 0x7fc21881af68 <col:7> 'long' lvalue Var 0x7fc21881ada0 'g2' 'long'
+      |-BinaryOperator 0x7fc21881b010 <line:14:5, col:10> 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)' '='
+      | |-DeclRefExpr 0x7fc21881afa8 <col:5> 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)' lvalue Var 0x7fc21881acd0 'g1' 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)'
+      | `-ImplicitCastExpr 0x7fc21881aff8 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fc21881afd0 <col:10> 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)' lvalue Var 0x7fc21881acd0 'g1' 'struct (anonymous struct at ../Data/C2AST/pr56150.c:3:1)':'struct (anonymous at ../Data/C2AST/pr56150.c:3:1)'
+      `-ImplicitCastExpr 0x7fc21881b060 <line:16:5> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7fc21881b038 <col:5> 'volatile long' lvalue Var 0x7fc21881ae18 'g3' 'volatile long'

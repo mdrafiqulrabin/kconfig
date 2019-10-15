@@ -1,0 +1,402 @@
+TranslationUnitDecl 0x7f9e8f823ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9e8f84f868 <../Data/C2AST/pr54098.c:3:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f9e8f84f908 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7f9e8f84f970 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7f9e8f84f9c8 prev 0x7f9e8f84f868 <col:1, col:36> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7f9e8f824978 <col:19, col:30> col:31 'const char *'
+| `-FormatAttr 0x7f9e8f84faa8 <col:12> Inherited printf 1 2
+|-RecordDecl 0x7f9e8f84fac8 <line:4:1, line:6:1> line:4:8 struct list_head definition
+| |-FieldDecl 0x7f9e8f84fc20 <line:5:2, col:20> col:20 referenced next 'struct list_head *'
+| `-FieldDecl 0x7f9e8f84fc90 <col:2, col:27> col:27 prev 'struct list_head *'
+|-RecordDecl 0x7f9e8f84fcd8 <line:7:1, line:12:1> line:7:8 struct resource definition
+| |-FieldDecl 0x7f9e8f84fd98 <line:8:2, col:21> col:21 referenced start 'unsigned long long'
+| |-FieldDecl 0x7f9e8f84fdf8 <line:9:2, col:21> col:21 referenced end 'unsigned long long'
+| |-FieldDecl 0x7f9e8f84fe58 <line:10:2, col:16> col:16 referenced flags 'unsigned long'
+| |-FieldDecl 0x7f9e8f84ff50 <line:11:2, col:19> col:19 referenced parent 'struct resource *'
+| |-FieldDecl 0x7f9e8f84ffc0 <col:2, col:28> col:28 sibling 'struct resource *'
+| `-FieldDecl 0x7f9e8f850030 <col:2, col:38> col:38 child 'struct resource *'
+|-RecordDecl 0x7f9e8f850078 <line:13:1, line:16:1> line:13:8 struct pci_dev definition
+| |-FieldDecl 0x7f9e8f850140 <line:14:2, col:19> col:19 referenced bus_list 'struct list_head':'struct list_head'
+| `-FieldDecl 0x7f9e8f8502c8 <line:15:2, col:29> col:18 referenced resource 'struct resource [12]'
+|-RecordDecl 0x7f9e8f850360 <line:17:1, line:21:1> line:17:8 struct pci_bus definition
+| |-FieldDecl 0x7f9e8f850430 <line:18:2, col:19> col:19 referenced devices 'struct list_head':'struct list_head'
+| |-FieldDecl 0x7f9e8f850490 <line:19:2, col:16> col:16 referenced secondary 'unsigned char'
+| `-FieldDecl 0x7f9e8f8504f0 <line:20:2, col:16> col:16 referenced subordinate 'unsigned char'
+|-FunctionDecl 0x7f9e8f850800 <line:22:1, col:69> col:18 used pci_bus_resource_n 'struct resource *(const struct pci_bus *, int)'
+| |-ParmVarDecl 0x7f9e8f8505f0 <col:37, col:59> col:59 bus 'const struct pci_bus *'
+| `-ParmVarDecl 0x7f9e8f850668 <col:64, col:68> col:68 n 'int'
+|-FunctionDecl 0x7f9e8f850b18 <line:23:1, line:31:1> line:23:25 used find_free_bus_resource 'struct resource *(struct pci_bus *, unsigned long)' static
+| |-ParmVarDecl 0x7f9e8f850970 <col:48, col:64> col:64 used bus 'struct pci_bus *'
+| |-ParmVarDecl 0x7f9e8f8509e8 <col:69, col:83> col:83 used type 'unsigned long'
+| `-CompoundStmt 0x7f9e8f8515e0 <col:89, line:31:1>
+|   |-DeclStmt 0x7f9e8f850c40 <line:24:2, col:7>
+|   | `-VarDecl 0x7f9e8f850be0 <col:2, col:6> col:6 used i 'int'
+|   |-DeclStmt 0x7f9e8f850ce0 <line:25:2, col:20>
+|   | `-VarDecl 0x7f9e8f850c80 <col:2, col:19> col:19 used r 'struct resource *'
+|   |-DeclStmt 0x7f9e8f850e38 <line:26:2, col:64>
+|   | `-VarDecl 0x7f9e8f850d10 <col:2, col:54> col:16 used type_mask 'unsigned long' cinit
+|   |   `-ImplicitCastExpr 0x7f9e8f850e20 <col:28, col:54> 'unsigned long' <IntegralCast>
+|   |     `-BinaryOperator 0x7f9e8f850df8 <col:28, col:54> 'int' '|'
+|   |       |-BinaryOperator 0x7f9e8f850db0 <col:28, col:41> 'int' '|'
+|   |       | |-IntegerLiteral 0x7f9e8f850d70 <col:28> 'int' 256
+|   |       | `-IntegerLiteral 0x7f9e8f850d90 <col:41> 'int' 512
+|   |       `-IntegerLiteral 0x7f9e8f850dd8 <col:54> 'int' 8192
+|   |-ForStmt 0x7f9e8f8514f8 <line:27:2, line:29:2>
+|   | |-BinaryOperator 0x7f9e8f850e98 <line:27:7, col:11> 'int' '='
+|   | | |-DeclRefExpr 0x7f9e8f850e50 <col:7> 'int' lvalue Var 0x7f9e8f850be0 'i' 'int'
+|   | | `-IntegerLiteral 0x7f9e8f850e78 <col:11> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9e8f851120 <col:14, col:54> 'int' '||'
+|   | | |-ParenExpr 0x7f9e8f851078 <col:14, col:45> 'struct resource *'
+|   | | | `-BinaryOperator 0x7f9e8f851050 <col:15, col:44> 'struct resource *' '='
+|   | | |   |-DeclRefExpr 0x7f9e8f850ec0 <col:15> 'struct resource *' lvalue Var 0x7f9e8f850c80 'r' 'struct resource *'
+|   | | |   `-CallExpr 0x7f9e8f850fd0 <col:19, col:44> 'struct resource *'
+|   | | |     |-ImplicitCastExpr 0x7f9e8f850fb8 <col:19> 'struct resource *(*)(const struct pci_bus *, int)' <FunctionToPointerDecay>
+|   | | |     | `-DeclRefExpr 0x7f9e8f850ee8 <col:19> 'struct resource *(const struct pci_bus *, int)' Function 0x7f9e8f850800 'pci_bus_resource_n' 'struct resource *(const struct pci_bus *, int)'
+|   | | |     |-ImplicitCastExpr 0x7f9e8f851020 <col:38> 'const struct pci_bus *' <BitCast>
+|   | | |     | `-ImplicitCastExpr 0x7f9e8f851008 <col:38> 'struct pci_bus *' <LValueToRValue>
+|   | | |     |   `-DeclRefExpr 0x7f9e8f850f10 <col:38> 'struct pci_bus *' lvalue ParmVar 0x7f9e8f850970 'bus' 'struct pci_bus *'
+|   | | |     `-ImplicitCastExpr 0x7f9e8f851038 <col:43> 'int' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x7f9e8f850f38 <col:43> 'int' lvalue Var 0x7f9e8f850be0 'i' 'int'
+|   | | `-BinaryOperator 0x7f9e8f8510f8 <col:50, col:54> 'int' '<'
+|   | |   |-ImplicitCastExpr 0x7f9e8f8510e0 <col:50> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x7f9e8f851098 <col:50> 'int' lvalue Var 0x7f9e8f850be0 'i' 'int'
+|   | |   `-IntegerLiteral 0x7f9e8f8510c0 <col:54> 'int' 4
+|   | |-UnaryOperator 0x7f9e8f851170 <col:57, col:58> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7f9e8f851148 <col:57> 'int' lvalue Var 0x7f9e8f850be0 'i' 'int'
+|   | `-CompoundStmt 0x7f9e8f8514e0 <col:62, line:29:2>
+|   |   `-IfStmt 0x7f9e8f8514a8 <line:28:3, col:65>
+|   |     |-<<<NULL>>>
+|   |     |-<<<NULL>>>
+|   |     |-BinaryOperator 0x7f9e8f851428 <col:7, col:50> 'int' '&&'
+|   |     | |-BinaryOperator 0x7f9e8f851350 <col:7, col:38> 'int' '&&'
+|   |     | | |-ImplicitCastExpr 0x7f9e8f851338 <col:7> 'struct resource *' <LValueToRValue>
+|   |     | | | `-DeclRefExpr 0x7f9e8f851190 <col:7> 'struct resource *' lvalue Var 0x7f9e8f850c80 'r' 'struct resource *'
+|   |     | | `-BinaryOperator 0x7f9e8f851310 <col:12, col:38> 'int' '=='
+|   |     | |   |-ParenExpr 0x7f9e8f8512b0 <col:12, col:33> 'unsigned long'
+|   |     | |   | `-BinaryOperator 0x7f9e8f851288 <col:13, col:24> 'unsigned long' '&'
+|   |     | |   |   |-ImplicitCastExpr 0x7f9e8f851258 <col:13, col:16> 'unsigned long' <LValueToRValue>
+|   |     | |   |   | `-MemberExpr 0x7f9e8f8511f8 <col:13, col:16> 'unsigned long' lvalue ->flags 0x7f9e8f84fe58
+|   |     | |   |   |   `-ImplicitCastExpr 0x7f9e8f8511e0 <col:13> 'struct resource *' <LValueToRValue>
+|   |     | |   |   |     `-DeclRefExpr 0x7f9e8f8511b8 <col:13> 'struct resource *' lvalue Var 0x7f9e8f850c80 'r' 'struct resource *'
+|   |     | |   |   `-ImplicitCastExpr 0x7f9e8f851270 <col:24> 'unsigned long' <LValueToRValue>
+|   |     | |   |     `-DeclRefExpr 0x7f9e8f851230 <col:24> 'unsigned long' lvalue Var 0x7f9e8f850d10 'type_mask' 'unsigned long'
+|   |     | |   `-ImplicitCastExpr 0x7f9e8f8512f8 <col:38> 'unsigned long' <LValueToRValue>
+|   |     | |     `-DeclRefExpr 0x7f9e8f8512d0 <col:38> 'unsigned long' lvalue ParmVar 0x7f9e8f8509e8 'type' 'unsigned long'
+|   |     | `-UnaryOperator 0x7f9e8f851408 <col:46, col:50> 'int' prefix '!'
+|   |     |   `-ImplicitCastExpr 0x7f9e8f8513f0 <col:47, col:50> 'struct resource *' <LValueToRValue>
+|   |     |     `-MemberExpr 0x7f9e8f8513b8 <col:47, col:50> 'struct resource *' lvalue ->parent 0x7f9e8f84ff50
+|   |     |       `-ImplicitCastExpr 0x7f9e8f8513a0 <col:47> 'struct resource *' <LValueToRValue>
+|   |     |         `-DeclRefExpr 0x7f9e8f851378 <col:47> 'struct resource *' lvalue Var 0x7f9e8f850c80 'r' 'struct resource *'
+|   |     |-ReturnStmt 0x7f9e8f851490 <col:58, col:65>
+|   |     | `-ImplicitCastExpr 0x7f9e8f851478 <col:65> 'struct resource *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7f9e8f851450 <col:65> 'struct resource *' lvalue Var 0x7f9e8f850c80 'r' 'struct resource *'
+|   |     `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9e8f8515c8 <line:30:2, col:19>
+|     `-ImplicitCastExpr 0x7f9e8f8515b0 <col:9, col:19> 'struct resource *' <NullToPointer>
+|       `-ParenExpr 0x7f9e8f851590 <col:9, col:19> 'void *'
+|         `-CStyleCastExpr 0x7f9e8f851568 <col:10, col:18> 'void *' <NullToPointer>
+|           `-IntegerLiteral 0x7f9e8f851530 <col:18> 'int' 0
+|-FunctionDecl 0x7f9e8f86d528 <line:32:1, line:36:1> line:32:27 used calculate_memsize 'unsigned long long (unsigned long long, unsigned long long, unsigned long long, unsigned long long, unsigned long long)' static
+| |-ParmVarDecl 0x7f9e8f851630 <col:45, col:64> col:64 used size 'unsigned long long'
+| |-ParmVarDecl 0x7f9e8f8516a8 <col:70, col:89> col:89 min_size 'unsigned long long'
+| |-ParmVarDecl 0x7f9e8f851720 <col:99, col:118> col:118 size1 'unsigned long long'
+| |-ParmVarDecl 0x7f9e8f851798 <col:125, col:144> col:144 used old_size 'unsigned long long'
+| |-ParmVarDecl 0x7f9e8f86d418 <col:154, col:173> col:173 align 'unsigned long long'
+| `-CompoundStmt 0x7f9e8f86d918 <col:180, line:36:1>
+|   |-IfStmt 0x7f9e8f86d718 <line:33:2, col:33>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9e8f86d668 <col:6, col:18> 'int' '=='
+|   | | |-ImplicitCastExpr 0x7f9e8f86d638 <col:6> 'unsigned long long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9e8f86d5f0 <col:6> 'unsigned long long' lvalue ParmVar 0x7f9e8f851798 'old_size' 'unsigned long long'
+|   | | `-ImplicitCastExpr 0x7f9e8f86d650 <col:18> 'unsigned long long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9e8f86d618 <col:18> 'int' 1
+|   | |-BinaryOperator 0x7f9e8f86d6f0 <col:22, col:33> 'unsigned long long' '='
+|   | | |-DeclRefExpr 0x7f9e8f86d690 <col:22> 'unsigned long long' lvalue ParmVar 0x7f9e8f851798 'old_size' 'unsigned long long'
+|   | | `-ImplicitCastExpr 0x7f9e8f86d6d8 <col:33> 'unsigned long long' <IntegralCast>
+|   | |   `-IntegerLiteral 0x7f9e8f86d6b8 <col:33> 'int' 0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7f9e8f86d888 <line:34:2, col:30>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7f9e8f86d7d0 <col:6, col:13> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7f9e8f86d7a0 <col:6> 'unsigned long long' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7f9e8f86d750 <col:6> 'unsigned long long' lvalue ParmVar 0x7f9e8f851630 'size' 'unsigned long long'
+|   | | `-ImplicitCastExpr 0x7f9e8f86d7b8 <col:13> 'unsigned long long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9e8f86d778 <col:13> 'unsigned long long' lvalue ParmVar 0x7f9e8f851798 'old_size' 'unsigned long long'
+|   | |-BinaryOperator 0x7f9e8f86d860 <col:23, col:30> 'unsigned long long' '='
+|   | | |-DeclRefExpr 0x7f9e8f86d7f8 <col:23> 'unsigned long long' lvalue ParmVar 0x7f9e8f851630 'size' 'unsigned long long'
+|   | | `-ImplicitCastExpr 0x7f9e8f86d848 <col:30> 'unsigned long long' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f9e8f86d820 <col:30> 'unsigned long long' lvalue ParmVar 0x7f9e8f851798 'old_size' 'unsigned long long'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7f9e8f86d900 <line:35:2, col:9>
+|     `-ImplicitCastExpr 0x7f9e8f86d8e8 <col:9> 'unsigned long long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f9e8f86d8c0 <col:9> 'unsigned long long' lvalue ParmVar 0x7f9e8f851630 'size' 'unsigned long long'
+`-FunctionDecl 0x7f9e8f86dd30 <line:37:1, line:72:1> line:37:6 pbus_size_mem 'void (struct pci_bus *, unsigned long, unsigned long, unsigned long long, unsigned long long, void *)'
+  |-ParmVarDecl 0x7f9e8f86d968 <col:20, col:36> col:36 used bus 'struct pci_bus *'
+  |-ParmVarDecl 0x7f9e8f86d9e0 <col:41, col:55> col:55 used mask 'unsigned long'
+  |-ParmVarDecl 0x7f9e8f86da58 <col:61, col:75> col:75 used type 'unsigned long'
+  |-ParmVarDecl 0x7f9e8f86dad0 <col:81, col:100> col:100 used min_size 'unsigned long long'
+  |-ParmVarDecl 0x7f9e8f86db48 <col:110, col:129> col:129 used add_size 'unsigned long long'
+  |-ParmVarDecl 0x7f9e8f86dbc0 <col:139, col:145> col:145 used realloc_head 'void *'
+  `-CompoundStmt 0x7f9e8f870ec0 <col:159, line:72:1>
+    |-DeclStmt 0x7f9e8f86df10 <line:38:2, col:21>
+    | `-VarDecl 0x7f9e8f86deb0 <col:2, col:18> col:18 used dev 'struct pci_dev *'
+    |-DeclStmt 0x7f9e8f86e1b0 <line:39:2, col:57>
+    | |-VarDecl 0x7f9e8f86df40 <col:2, col:21> col:21 used min_align 'unsigned long long'
+    | |-VarDecl 0x7f9e8f86dfb8 <col:2, col:32> col:32 used align 'unsigned long long'
+    | |-VarDecl 0x7f9e8f86e030 <col:2, col:39> col:39 used size 'unsigned long long'
+    | |-VarDecl 0x7f9e8f86e0a8 <col:2, col:45> col:45 used size0 'unsigned long long'
+    | `-VarDecl 0x7f9e8f86e120 <col:2, col:52> col:52 used size1 'unsigned long long'
+    |-DeclStmt 0x7f9e8f86e240 <line:40:2, col:11>
+    | `-VarDecl 0x7f9e8f86e1e0 <col:2, col:6> col:6 used order 'int'
+    |-DeclStmt 0x7f9e8f86e448 <line:41:2, col:60>
+    | `-VarDecl 0x7f9e8f86e280 <col:2, col:59> col:19 used b_res 'struct resource *' cinit
+    |   `-CallExpr 0x7f9e8f86e3d0 <col:27, col:59> 'struct resource *'
+    |     |-ImplicitCastExpr 0x7f9e8f86e3b8 <col:27> 'struct resource *(*)(struct pci_bus *, unsigned long)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9e8f86e2e0 <col:27> 'struct resource *(struct pci_bus *, unsigned long)' Function 0x7f9e8f850b18 'find_free_bus_resource' 'struct resource *(struct pci_bus *, unsigned long)'
+    |     |-ImplicitCastExpr 0x7f9e8f86e418 <col:50> 'struct pci_bus *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9e8f86e308 <col:50> 'struct pci_bus *' lvalue ParmVar 0x7f9e8f86d968 'bus' 'struct pci_bus *'
+    |     `-ImplicitCastExpr 0x7f9e8f86e430 <col:55> 'unsigned long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9e8f86e330 <col:55> 'unsigned long' lvalue ParmVar 0x7f9e8f86da58 'type' 'unsigned long'
+    |-DeclStmt 0x7f9e8f86e510 <line:42:2, col:42>
+    | `-VarDecl 0x7f9e8f86e478 <col:2, col:41> col:21 used children_add_size 'unsigned long long' cinit
+    |   `-ImplicitCastExpr 0x7f9e8f86e4f8 <col:41> 'unsigned long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7f9e8f86e4d8 <col:41> 'int' 0
+    |-IfStmt 0x7f9e8f86e5a0 <line:43:2, col:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f9e8f86e568 <col:6, col:7> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7f9e8f86e550 <col:7> 'struct resource *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e8f86e528 <col:7> 'struct resource *' lvalue Var 0x7f9e8f86e280 'b_res' 'struct resource *'
+    | |-ReturnStmt 0x7f9e8f86e588 <col:14>
+    | `-<<<NULL>>>
+    |-ForStmt 0x7f9e8f870330 <line:44:2, line:66:2>
+    | |-BinaryOperator 0x7f9e8f86ed98 <line:44:7, line:48:6> 'struct pci_dev *' '='
+    | | |-DeclRefExpr 0x7f9e8f86e5d8 <line:44:7> 'struct pci_dev *' lvalue Var 0x7f9e8f86deb0 'dev' 'struct pci_dev *'
+    | | `-StmtExpr 0x7f9e8f86ed78 <col:13, line:48:6> 'typeof (*dev) *'
+    | |   `-CompoundStmt 0x7f9e8f86ed58 <line:44:14, line:47:5>
+    | |     |-DeclStmt 0x7f9e8f86e9d0 <line:45:5, col:84>
+    | |     | `-VarDecl 0x7f9e8f86e830 <col:5, col:83> col:52 used __mptr 'const typeof (((typeof (*dev) *)0)->bus_list) *' cinit
+    | |     |   `-ImplicitCastExpr 0x7f9e8f86e9b8 <col:61, col:83> 'const typeof (((typeof (*dev) *)0)->bus_list) *' <BitCast>
+    | |     |     `-ImplicitCastExpr 0x7f9e8f86e9a0 <col:61, col:83> 'struct list_head *' <LValueToRValue>
+    | |     |       `-ParenExpr 0x7f9e8f86e980 <col:61, col:83> 'struct list_head *' lvalue
+    | |     |         `-MemberExpr 0x7f9e8f86e948 <col:62, col:79> 'struct list_head *' lvalue ->next 0x7f9e8f84fc20
+    | |     |           `-ParenExpr 0x7f9e8f86e928 <col:62, col:76> 'struct list_head *'
+    | |     |             `-UnaryOperator 0x7f9e8f86e908 <col:63, col:69> 'struct list_head *' prefix '&'
+    | |     |               `-MemberExpr 0x7f9e8f86e8d0 <col:64, col:69> 'struct list_head':'struct list_head' lvalue ->devices 0x7f9e8f850430
+    | |     |                 `-ImplicitCastExpr 0x7f9e8f86e8b8 <col:64> 'struct pci_bus *' <LValueToRValue>
+    | |     |                   `-DeclRefExpr 0x7f9e8f86e890 <col:64> 'struct pci_bus *' lvalue ParmVar 0x7f9e8f86d968 'bus' 'struct pci_bus *'
+    | |     `-CStyleCastExpr 0x7f9e8f86ece0 <line:46:5, col:82> 'typeof (*dev) *' <BitCast>
+    | |       `-ParenExpr 0x7f9e8f86ecc0 <col:21, col:82> 'char *'
+    | |         `-BinaryOperator 0x7f9e8f86ec00 <col:23, col:80> 'char *' '-'
+    | |           |-CStyleCastExpr 0x7f9e8f86eae8 <col:23, col:31> 'char *' <BitCast>
+    | |           | `-ImplicitCastExpr 0x7f9e8f86eaa8 <col:31> 'const typeof (((typeof (*dev) *)0)->bus_list) *' <LValueToRValue>
+    | |           |   `-DeclRefExpr 0x7f9e8f86ea68 <col:31> 'const typeof (((typeof (*dev) *)0)->bus_list) *' lvalue Var 0x7f9e8f86e830 '__mptr' 'const typeof (((typeof (*dev) *)0)->bus_list) *'
+    | |           `-OffsetOfExpr 0x7f9e8f86ebc8 <col:40, col:80> 'unsigned long'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9e8f86ef10 <line:49:4, col:36> 'int' '!='
+    | | |-UnaryOperator 0x7f9e8f86ee38 <col:4, col:10> 'struct list_head *' prefix '&'
+    | | | `-MemberExpr 0x7f9e8f86ee00 <col:5, col:10> 'struct list_head':'struct list_head' lvalue ->bus_list 0x7f9e8f850140
+    | | |   `-ImplicitCastExpr 0x7f9e8f86ede8 <col:5> 'struct pci_dev *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7f9e8f86edc0 <col:5> 'struct pci_dev *' lvalue Var 0x7f9e8f86deb0 'dev' 'struct pci_dev *'
+    | | `-ParenExpr 0x7f9e8f86eef0 <col:22, col:36> 'struct list_head *'
+    | |   `-UnaryOperator 0x7f9e8f86eed0 <col:23, col:29> 'struct list_head *' prefix '&'
+    | |     `-MemberExpr 0x7f9e8f86ee98 <col:24, col:29> 'struct list_head':'struct list_head' lvalue ->devices 0x7f9e8f850430
+    | |       `-ImplicitCastExpr 0x7f9e8f86ee80 <col:24> 'struct pci_bus *' <LValueToRValue>
+    | |         `-DeclRefExpr 0x7f9e8f86ee58 <col:24> 'struct pci_bus *' lvalue ParmVar 0x7f9e8f86d968 'bus' 'struct pci_bus *'
+    | |-BinaryOperator 0x7f9e8f86f618 <line:50:4, line:54:10> 'struct pci_dev *' '='
+    | | |-DeclRefExpr 0x7f9e8f86ef38 <line:50:4> 'struct pci_dev *' lvalue Var 0x7f9e8f86deb0 'dev' 'struct pci_dev *'
+    | | `-StmtExpr 0x7f9e8f86f5f8 <col:10, line:54:10> 'typeof (*dev) *'
+    | |   `-CompoundStmt 0x7f9e8f86f5d8 <line:50:11, line:53:5>
+    | |     |-DeclStmt 0x7f9e8f86f2c0 <line:51:5, col:81>
+    | |     | `-VarDecl 0x7f9e8f86f160 <col:5, col:80> col:52 used __mptr 'const typeof (((typeof (*dev) *)0)->bus_list) *' cinit
+    | |     |   `-ImplicitCastExpr 0x7f9e8f86f2a8 <col:61, col:80> 'const typeof (((typeof (*dev) *)0)->bus_list) *' <BitCast>
+    | |     |     `-ImplicitCastExpr 0x7f9e8f86f290 <col:61, col:80> 'struct list_head *' <LValueToRValue>
+    | |     |       `-ParenExpr 0x7f9e8f86f270 <col:61, col:80> 'struct list_head *' lvalue
+    | |     |         `-MemberExpr 0x7f9e8f86f238 <col:62, col:76> 'struct list_head *' lvalue .next 0x7f9e8f84fc20
+    | |     |           `-MemberExpr 0x7f9e8f86f200 <col:62, col:67> 'struct list_head':'struct list_head' lvalue ->bus_list 0x7f9e8f850140
+    | |     |             `-ImplicitCastExpr 0x7f9e8f86f1e8 <col:62> 'struct pci_dev *' <LValueToRValue>
+    | |     |               `-DeclRefExpr 0x7f9e8f86f1c0 <col:62> 'struct pci_dev *' lvalue Var 0x7f9e8f86deb0 'dev' 'struct pci_dev *'
+    | |     `-CStyleCastExpr 0x7f9e8f86f5b0 <line:52:5, col:82> 'typeof (*dev) *' <BitCast>
+    | |       `-ParenExpr 0x7f9e8f86f590 <col:21, col:82> 'char *'
+    | |         `-BinaryOperator 0x7f9e8f86f4d0 <col:23, col:80> 'char *' '-'
+    | |           |-CStyleCastExpr 0x7f9e8f86f3b0 <col:23, col:31> 'char *' <BitCast>
+    | |           | `-ImplicitCastExpr 0x7f9e8f86f398 <col:31> 'const typeof (((typeof (*dev) *)0)->bus_list) *' <LValueToRValue>
+    | |           |   `-DeclRefExpr 0x7f9e8f86f358 <col:31> 'const typeof (((typeof (*dev) *)0)->bus_list) *' lvalue Var 0x7f9e8f86f160 '__mptr' 'const typeof (((typeof (*dev) *)0)->bus_list) *'
+    | |           `-OffsetOfExpr 0x7f9e8f86f498 <col:40, col:80> 'unsigned long'
+    | `-CompoundStmt 0x7f9e8f870310 <line:54:13, line:66:2>
+    |   |-DeclStmt 0x7f9e8f86f6b8 <line:55:3, col:8>
+    |   | `-VarDecl 0x7f9e8f86f658 <col:3, col:7> col:7 used i 'int'
+    |   `-ForStmt 0x7f9e8f8702d8 <line:56:3, line:65:3>
+    |     |-BinaryOperator 0x7f9e8f86f718 <line:56:8, col:12> 'int' '='
+    |     | |-DeclRefExpr 0x7f9e8f86f6d0 <col:8> 'int' lvalue Var 0x7f9e8f86f658 'i' 'int'
+    |     | `-IntegerLiteral 0x7f9e8f86f6f8 <col:12> 'int' 0
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f9e8f86f7a0 <col:15, col:19> 'int' '<'
+    |     | |-ImplicitCastExpr 0x7f9e8f86f788 <col:15> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7f9e8f86f740 <col:15> 'int' lvalue Var 0x7f9e8f86f658 'i' 'int'
+    |     | `-IntegerLiteral 0x7f9e8f86f768 <col:19> 'int' 12
+    |     |-UnaryOperator 0x7f9e8f86f7f0 <col:23, col:24> 'int' postfix '++'
+    |     | `-DeclRefExpr 0x7f9e8f86f7c8 <col:23> 'int' lvalue Var 0x7f9e8f86f658 'i' 'int'
+    |     `-CompoundStmt 0x7f9e8f870298 <col:28, line:65:3>
+    |       |-DeclStmt 0x7f9e8f86f9b0 <line:57:4, col:42>
+    |       | `-VarDecl 0x7f9e8f86f838 <col:4, col:41> col:21 used r 'struct resource *' cinit
+    |       |   `-UnaryOperator 0x7f9e8f86f990 <col:25, col:41> 'struct resource *' prefix '&'
+    |       |     `-ArraySubscriptExpr 0x7f9e8f86f968 <col:26, col:41> 'struct resource':'struct resource' lvalue
+    |       |       |-ImplicitCastExpr 0x7f9e8f86f938 <col:26, col:31> 'struct resource *' <ArrayToPointerDecay>
+    |       |       | `-MemberExpr 0x7f9e8f86f8d8 <col:26, col:31> 'struct resource [12]' lvalue ->resource 0x7f9e8f8502c8
+    |       |       |   `-ImplicitCastExpr 0x7f9e8f86f8c0 <col:26> 'struct pci_dev *' <LValueToRValue>
+    |       |       |     `-DeclRefExpr 0x7f9e8f86f898 <col:26> 'struct pci_dev *' lvalue Var 0x7f9e8f86deb0 'dev' 'struct pci_dev *'
+    |       |       `-ImplicitCastExpr 0x7f9e8f86f950 <col:40> 'int' <LValueToRValue>
+    |       |         `-DeclRefExpr 0x7f9e8f86f910 <col:40> 'int' lvalue Var 0x7f9e8f86f658 'i' 'int'
+    |       |-DeclStmt 0x7f9e8f86fa40 <line:58:4, col:29>
+    |       | `-VarDecl 0x7f9e8f86f9e0 <col:4, col:23> col:23 used r_size 'unsigned long long'
+    |       |-IfStmt 0x7f9e8f86fc98 <line:59:4, col:48>
+    |       | |-<<<NULL>>>
+    |       | |-<<<NULL>>>
+    |       | |-BinaryOperator 0x7f9e8f86fc68 <col:8, col:42> 'int' '||'
+    |       | | |-ImplicitCastExpr 0x7f9e8f86fc50 <col:8, col:11> 'struct resource *' <LValueToRValue>
+    |       | | | `-MemberExpr 0x7f9e8f86fa98 <col:8, col:11> 'struct resource *' lvalue ->parent 0x7f9e8f84ff50
+    |       | | |   `-ImplicitCastExpr 0x7f9e8f86fa80 <col:8> 'struct resource *' <LValueToRValue>
+    |       | | |     `-DeclRefExpr 0x7f9e8f86fa58 <col:8> 'struct resource *' lvalue Var 0x7f9e8f86f838 'r' 'struct resource *'
+    |       | | `-BinaryOperator 0x7f9e8f86fc28 <col:21, col:42> 'int' '!='
+    |       | |   |-ParenExpr 0x7f9e8f86fbc8 <col:21, col:37> 'unsigned long'
+    |       | |   | `-BinaryOperator 0x7f9e8f86fba0 <col:22, col:33> 'unsigned long' '&'
+    |       | |   |   |-ImplicitCastExpr 0x7f9e8f86fb70 <col:22, col:25> 'unsigned long' <LValueToRValue>
+    |       | |   |   | `-MemberExpr 0x7f9e8f86fb10 <col:22, col:25> 'unsigned long' lvalue ->flags 0x7f9e8f84fe58
+    |       | |   |   |   `-ImplicitCastExpr 0x7f9e8f86faf8 <col:22> 'struct resource *' <LValueToRValue>
+    |       | |   |   |     `-DeclRefExpr 0x7f9e8f86fad0 <col:22> 'struct resource *' lvalue Var 0x7f9e8f86f838 'r' 'struct resource *'
+    |       | |   |   `-ImplicitCastExpr 0x7f9e8f86fb88 <col:33> 'unsigned long' <LValueToRValue>
+    |       | |   |     `-DeclRefExpr 0x7f9e8f86fb48 <col:33> 'unsigned long' lvalue ParmVar 0x7f9e8f86d9e0 'mask' 'unsigned long'
+    |       | |   `-ImplicitCastExpr 0x7f9e8f86fc10 <col:42> 'unsigned long' <LValueToRValue>
+    |       | |     `-DeclRefExpr 0x7f9e8f86fbe8 <col:42> 'unsigned long' lvalue ParmVar 0x7f9e8f86da58 'type' 'unsigned long'
+    |       | |-ContinueStmt 0x7f9e8f86fc90 <col:48>
+    |       | `-<<<NULL>>>
+    |       |-BinaryOperator 0x7f9e8f86fea0 <line:60:4, col:33> 'unsigned long long' '='
+    |       | |-DeclRefExpr 0x7f9e8f86fcd0 <col:4> 'unsigned long long' lvalue Var 0x7f9e8f86f9e0 'r_size' 'unsigned long long'
+    |       | `-BinaryOperator 0x7f9e8f86fe78 <col:13, col:33> 'unsigned long long' '+'
+    |       |   |-BinaryOperator 0x7f9e8f86fe18 <col:13, col:25> 'unsigned long long' '-'
+    |       |   | |-ImplicitCastExpr 0x7f9e8f86fde8 <col:13, col:16> 'unsigned long long' <LValueToRValue>
+    |       |   | | `-MemberExpr 0x7f9e8f86fd38 <col:13, col:16> 'unsigned long long' lvalue ->end 0x7f9e8f84fdf8
+    |       |   | |   `-ImplicitCastExpr 0x7f9e8f86fd20 <col:13> 'struct resource *' <LValueToRValue>
+    |       |   | |     `-DeclRefExpr 0x7f9e8f86fcf8 <col:13> 'struct resource *' lvalue Var 0x7f9e8f86f838 'r' 'struct resource *'
+    |       |   | `-ImplicitCastExpr 0x7f9e8f86fe00 <col:22, col:25> 'unsigned long long' <LValueToRValue>
+    |       |   |   `-MemberExpr 0x7f9e8f86fdb0 <col:22, col:25> 'unsigned long long' lvalue ->start 0x7f9e8f84fd98
+    |       |   |     `-ImplicitCastExpr 0x7f9e8f86fd98 <col:22> 'struct resource *' <LValueToRValue>
+    |       |   |       `-DeclRefExpr 0x7f9e8f86fd70 <col:22> 'struct resource *' lvalue Var 0x7f9e8f86f838 'r' 'struct resource *'
+    |       |   `-ImplicitCastExpr 0x7f9e8f86fe60 <col:33> 'unsigned long long' <IntegralCast>
+    |       |     `-IntegerLiteral 0x7f9e8f86fe40 <col:33> 'int' 1
+    |       |-IfStmt 0x7f9e8f8701c0 <line:61:4, line:63:4>
+    |       | |-<<<NULL>>>
+    |       | |-<<<NULL>>>
+    |       | |-BinaryOperator 0x7f9e8f86ff28 <line:61:8, col:16> 'int' '>'
+    |       | | |-ImplicitCastExpr 0x7f9e8f86ff10 <col:8> 'int' <LValueToRValue>
+    |       | | | `-DeclRefExpr 0x7f9e8f86fec8 <col:8> 'int' lvalue Var 0x7f9e8f86e1e0 'order' 'int'
+    |       | | `-IntegerLiteral 0x7f9e8f86fef0 <col:16> 'int' 11
+    |       | |-CompoundStmt 0x7f9e8f8701a8 <col:20, line:63:4>
+    |       | | `-CallExpr 0x7f9e8f870100 <line:62:5, col:63> 'int'
+    |       | |   |-ImplicitCastExpr 0x7f9e8f8700e8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+    |       | |   | `-DeclRefExpr 0x7f9e8f86ff50 <col:5> 'int (const char *, ...)' Function 0x7f9e8f84f9c8 'printf' 'int (const char *, ...)'
+    |       | |   |-ImplicitCastExpr 0x7f9e8f870160 <col:12> 'const char *' <BitCast>
+    |       | |   | `-ImplicitCastExpr 0x7f9e8f870148 <col:12> 'char *' <ArrayToPointerDecay>
+    |       | |   |   `-StringLiteral 0x7f9e8f86ffb8 <col:12> 'char [15]' lvalue "%d: %pR %#llx\n"
+    |       | |   |-ImplicitCastExpr 0x7f9e8f870178 <col:31> 'int' <LValueToRValue>
+    |       | |   | `-DeclRefExpr 0x7f9e8f86fff0 <col:31> 'int' lvalue Var 0x7f9e8f86f658 'i' 'int'
+    |       | |   |-ImplicitCastExpr 0x7f9e8f870190 <col:34> 'struct resource *' <LValueToRValue>
+    |       | |   | `-DeclRefExpr 0x7f9e8f870018 <col:34> 'struct resource *' lvalue Var 0x7f9e8f86f838 'r' 'struct resource *'
+    |       | |   `-CStyleCastExpr 0x7f9e8f870098 <col:37, col:58> 'unsigned long long' <NoOp>
+    |       | |     `-ImplicitCastExpr 0x7f9e8f870080 <col:58> 'unsigned long long' <LValueToRValue>
+    |       | |       `-DeclRefExpr 0x7f9e8f870040 <col:58> 'unsigned long long' lvalue Var 0x7f9e8f86dfb8 'align' 'unsigned long long'
+    |       | `-<<<NULL>>>
+    |       `-CompoundAssignOperator 0x7f9e8f870260 <line:64:4, col:12> 'unsigned long long' '+=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+    |         |-DeclRefExpr 0x7f9e8f8701f8 <col:4> 'unsigned long long' lvalue Var 0x7f9e8f86e030 'size' 'unsigned long long'
+    |         `-ImplicitCastExpr 0x7f9e8f870248 <col:12> 'unsigned long long' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f9e8f870220 <col:12> 'unsigned long long' lvalue Var 0x7f9e8f86f9e0 'r_size' 'unsigned long long'
+    |-IfStmt 0x7f9e8f8704b8 <line:67:2, col:47>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f9e8f870400 <col:6, col:26> 'int' '>'
+    | | |-ImplicitCastExpr 0x7f9e8f8703b8 <col:6> 'unsigned long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f9e8f870368 <col:6> 'unsigned long long' lvalue Var 0x7f9e8f86e478 'children_add_size' 'unsigned long long'
+    | | `-ImplicitCastExpr 0x7f9e8f8703d0 <col:26> 'unsigned long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e8f870390 <col:26> 'unsigned long long' lvalue ParmVar 0x7f9e8f86db48 'add_size' 'unsigned long long'
+    | |-BinaryOperator 0x7f9e8f870490 <col:36, col:47> 'unsigned long long' '='
+    | | |-DeclRefExpr 0x7f9e8f870428 <col:36> 'unsigned long long' lvalue ParmVar 0x7f9e8f86db48 'add_size' 'unsigned long long'
+    | | `-ImplicitCastExpr 0x7f9e8f870478 <col:47> 'unsigned long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f9e8f870450 <col:47> 'unsigned long long' lvalue Var 0x7f9e8f86e478 'children_add_size' 'unsigned long long'
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7f9e8f870ae0 <line:68:2, col:153> 'unsigned long long' '='
+    | |-DeclRefExpr 0x7f9e8f8704f0 <col:2> 'unsigned long long' lvalue Var 0x7f9e8f86e120 'size1' 'unsigned long long'
+    | `-ConditionalOperator 0x7f9e8f870ab0 <col:10, col:153> 'unsigned long long'
+    |   |-ParenExpr 0x7f9e8f870688 <col:10, col:55> 'int'
+    |   | `-BinaryOperator 0x7f9e8f870660 <col:11, col:54> 'int' '||'
+    |   |   |-UnaryOperator 0x7f9e8f870558 <col:11, col:12> 'int' prefix '!'
+    |   |   | `-ImplicitCastExpr 0x7f9e8f870540 <col:12> 'void *' <LValueToRValue>
+    |   |   |   `-DeclRefExpr 0x7f9e8f870518 <col:12> 'void *' lvalue ParmVar 0x7f9e8f86dbc0 'realloc_head' 'void *'
+    |   |   `-ParenExpr 0x7f9e8f870640 <col:28, col:54> 'int'
+    |   |     `-BinaryOperator 0x7f9e8f870618 <col:29, col:46> 'int' '&&'
+    |   |       |-ImplicitCastExpr 0x7f9e8f870600 <col:29> 'void *' <LValueToRValue>
+    |   |       | `-DeclRefExpr 0x7f9e8f870578 <col:29> 'void *' lvalue ParmVar 0x7f9e8f86dbc0 'realloc_head' 'void *'
+    |   |       `-UnaryOperator 0x7f9e8f8705e0 <col:45, col:46> 'int' prefix '!'
+    |   |         `-ImplicitCastExpr 0x7f9e8f8705c8 <col:46> 'unsigned long long' <LValueToRValue>
+    |   |           `-DeclRefExpr 0x7f9e8f8705a0 <col:46> 'unsigned long long' lvalue ParmVar 0x7f9e8f86db48 'add_size' 'unsigned long long'
+    |   |-ImplicitCastExpr 0x7f9e8f870a98 <col:59> 'unsigned long long' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f9e8f8706a8 <col:59> 'unsigned long long' lvalue Var 0x7f9e8f86e0a8 'size0' 'unsigned long long'
+    |   `-CallExpr 0x7f9e8f870a00 <col:67, col:153> 'unsigned long long'
+    |     |-ImplicitCastExpr 0x7f9e8f8709e8 <col:67> 'unsigned long long (*)(unsigned long long, unsigned long long, unsigned long long, unsigned long long, unsigned long long)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7f9e8f8706d0 <col:67> 'unsigned long long (unsigned long long, unsigned long long, unsigned long long, unsigned long long, unsigned long long)' Function 0x7f9e8f86d528 'calculate_memsize' 'unsigned long long (unsigned long long, unsigned long long, unsigned long long, unsigned long long, unsigned long long)'
+    |     |-ImplicitCastExpr 0x7f9e8f870a50 <col:85> 'unsigned long long' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9e8f8706f8 <col:85> 'unsigned long long' lvalue Var 0x7f9e8f86e030 'size' 'unsigned long long'
+    |     |-BinaryOperator 0x7f9e8f8707a0 <col:91, col:100> 'unsigned long long' '+'
+    |     | |-ImplicitCastExpr 0x7f9e8f870770 <col:91> 'unsigned long long' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7f9e8f870720 <col:91> 'unsigned long long' lvalue ParmVar 0x7f9e8f86dad0 'min_size' 'unsigned long long'
+    |     | `-ImplicitCastExpr 0x7f9e8f870788 <col:100> 'unsigned long long' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7f9e8f870748 <col:100> 'unsigned long long' lvalue ParmVar 0x7f9e8f86db48 'add_size' 'unsigned long long'
+    |     |-ImplicitCastExpr 0x7f9e8f870a68 <col:110> 'unsigned long long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f9e8f8707c8 <col:110> 'int' 0
+    |     |-BinaryOperator 0x7f9e8f870968 <col:113, col:141> 'unsigned long long' '+'
+    |     | |-BinaryOperator 0x7f9e8f870908 <col:113, col:133> 'unsigned long long' '-'
+    |     | | |-ImplicitCastExpr 0x7f9e8f8708d8 <col:113, col:120> 'unsigned long long' <LValueToRValue>
+    |     | | | `-MemberExpr 0x7f9e8f870828 <col:113, col:120> 'unsigned long long' lvalue ->end 0x7f9e8f84fdf8
+    |     | | |   `-ImplicitCastExpr 0x7f9e8f870810 <col:113> 'struct resource *' <LValueToRValue>
+    |     | | |     `-DeclRefExpr 0x7f9e8f8707e8 <col:113> 'struct resource *' lvalue Var 0x7f9e8f86e280 'b_res' 'struct resource *'
+    |     | | `-ImplicitCastExpr 0x7f9e8f8708f0 <col:126, col:133> 'unsigned long long' <LValueToRValue>
+    |     | |   `-MemberExpr 0x7f9e8f8708a0 <col:126, col:133> 'unsigned long long' lvalue ->start 0x7f9e8f84fd98
+    |     | |     `-ImplicitCastExpr 0x7f9e8f870888 <col:126> 'struct resource *' <LValueToRValue>
+    |     | |       `-DeclRefExpr 0x7f9e8f870860 <col:126> 'struct resource *' lvalue Var 0x7f9e8f86e280 'b_res' 'struct resource *'
+    |     | `-ImplicitCastExpr 0x7f9e8f870950 <col:141> 'unsigned long long' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7f9e8f870930 <col:141> 'int' 1
+    |     `-ImplicitCastExpr 0x7f9e8f870a80 <col:144> 'unsigned long long' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9e8f870990 <col:144> 'unsigned long long' lvalue Var 0x7f9e8f86df40 'min_align' 'unsigned long long'
+    `-IfStmt 0x7f9e8f870e88 <line:69:2, line:71:2>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9e8f870bc8 <line:69:6, col:17> 'int' '&&'
+      | |-UnaryOperator 0x7f9e8f870b48 <col:6, col:7> 'int' prefix '!'
+      | | `-ImplicitCastExpr 0x7f9e8f870b30 <col:7> 'unsigned long long' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f9e8f870b08 <col:7> 'unsigned long long' lvalue Var 0x7f9e8f86e0a8 'size0' 'unsigned long long'
+      | `-UnaryOperator 0x7f9e8f870ba8 <col:16, col:17> 'int' prefix '!'
+      |   `-ImplicitCastExpr 0x7f9e8f870b90 <col:17> 'unsigned long long' <LValueToRValue>
+      |     `-DeclRefExpr 0x7f9e8f870b68 <col:17> 'unsigned long long' lvalue Var 0x7f9e8f86e120 'size1' 'unsigned long long'
+      |-CompoundStmt 0x7f9e8f870e70 <col:24, line:71:2>
+      | `-CallExpr 0x7f9e8f870d80 <line:70:3, col:68> 'int'
+      |   |-ImplicitCastExpr 0x7f9e8f870d68 <col:3> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+      |   | `-DeclRefExpr 0x7f9e8f870bf0 <col:3> 'int (const char *, ...)' Function 0x7f9e8f84f9c8 'printf' 'int (const char *, ...)'
+      |   |-ImplicitCastExpr 0x7f9e8f870de0 <col:10> 'const char *' <BitCast>
+      |   | `-ImplicitCastExpr 0x7f9e8f870dc8 <col:10> 'char *' <ArrayToPointerDecay>
+      |   |   `-StringLiteral 0x7f9e8f870c18 <col:10> 'char [15]' lvalue "%pR %02x-%02x\n"
+      |   |-ImplicitCastExpr 0x7f9e8f870df8 <col:29> 'struct resource *' <LValueToRValue>
+      |   | `-DeclRefExpr 0x7f9e8f870c50 <col:29> 'struct resource *' lvalue Var 0x7f9e8f86e280 'b_res' 'struct resource *'
+      |   |-ImplicitCastExpr 0x7f9e8f870e28 <col:36, col:41> 'int' <IntegralCast>
+      |   | `-ImplicitCastExpr 0x7f9e8f870e10 <col:36, col:41> 'unsigned char' <LValueToRValue>
+      |   |   `-MemberExpr 0x7f9e8f870cb8 <col:36, col:41> 'unsigned char' lvalue ->secondary 0x7f9e8f850490
+      |   |     `-ImplicitCastExpr 0x7f9e8f870ca0 <col:36> 'struct pci_bus *' <LValueToRValue>
+      |   |       `-DeclRefExpr 0x7f9e8f870c78 <col:36> 'struct pci_bus *' lvalue ParmVar 0x7f9e8f86d968 'bus' 'struct pci_bus *'
+      |   `-ImplicitCastExpr 0x7f9e8f870e58 <col:52, col:57> 'int' <IntegralCast>
+      |     `-ImplicitCastExpr 0x7f9e8f870e40 <col:52, col:57> 'unsigned char' <LValueToRValue>
+      |       `-MemberExpr 0x7f9e8f870d30 <col:52, col:57> 'unsigned char' lvalue ->subordinate 0x7f9e8f8504f0
+      |         `-ImplicitCastExpr 0x7f9e8f870d18 <col:52> 'struct pci_bus *' <LValueToRValue>
+      |           `-DeclRefExpr 0x7f9e8f870cf0 <col:52> 'struct pci_bus *' lvalue ParmVar 0x7f9e8f86d968 'bus' 'struct pci_bus *'
+      `-<<<NULL>>>

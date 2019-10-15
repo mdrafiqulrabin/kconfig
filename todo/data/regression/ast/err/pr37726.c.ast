@@ -1,0 +1,42 @@
+../Data/C2AST/pr37726.c:9:3: error: function definition is not allowed here
+  {
+  ^
+1 error generated.
+TranslationUnitDecl 0x7ff3508174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff350817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff350817780 '__int128'
+|-TypedefDecl 0x7ff350817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3508177a0 'unsigned __int128'
+|-TypedefDecl 0x7ff350817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff350817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff350817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff350817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff350817e00 'char *'
+|   `-BuiltinType 0x7ff350817580 'char'
+|-TypedefDecl 0x7ff350818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3508180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff350817f20 'struct __va_list_tag'
+|     `-Record 0x7ff350817e98 '__va_list_tag'
+|-FunctionDecl 0x7ff35100a068 <../Data/C2AST/pr37726.c:5:1, line:15:1> line:5:5 used foo 'int (int)'
+| |-ParmVarDecl 0x7ff350818178 <col:10, col:14> col:14 used parm 'int'
+| `-CompoundStmt 0x7ff35100a4b0 <line:6:1, line:15:1>
+|   |-DeclStmt 0x7ff35100a1e8 <line:7:3, col:14>
+|   | `-VarDecl 0x7ff35100a168 <col:3, col:13> col:7 used var 'int' cinit
+|   |   `-IntegerLiteral 0x7ff35100a1c8 <col:13> 'int' 0
+|   |-UnaryOperator 0x7ff35100a298 <line:12:3, col:7> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7ff35100a270 <col:3> 'int' lvalue ParmVar 0x7ff350818178 'parm' 'int'
+|   |-UnaryOperator 0x7ff35100a2e0 <line:13:3, col:6> 'int' postfix '++'
+|   | `-DeclRefExpr 0x7ff35100a2b8 <col:3> 'int' lvalue Var 0x7ff35100a168 'var' 'int'
+|   `-ReturnStmt 0x7ff35100a498 <line:14:3, col:15>
+|     `-CallExpr 0x7ff35100a470 <col:10, col:15> 'int'
+|       `-ImplicitCastExpr 0x7ff35100a458 <col:10> 'int (*)()' <FunctionToPointerDecay>
+|         `-DeclRefExpr 0x7ff35100a400 <col:10> 'int ()' Function 0x7ff35100a350 'bar' 'int ()'
+`-FunctionDecl 0x7ff35100a5a8 <line:17:1, line:21:1> line:18:1 main 'int (void)'
+  `-CompoundStmt 0x7ff35100a790 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7ff35100a778 <line:20:3, col:20>
+      `-BinaryOperator 0x7ff35100a750 <col:10, col:20> 'int' '-'
+        |-CallExpr 0x7ff35100a700 <col:10, col:16> 'int'
+        | |-ImplicitCastExpr 0x7ff35100a6e8 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+        | | `-DeclRefExpr 0x7ff35100a678 <col:10> 'int (int)' Function 0x7ff35100a068 'foo' 'int (int)'
+        | `-IntegerLiteral 0x7ff35100a6a0 <col:15> 'int' 4
+        `-IntegerLiteral 0x7ff35100a730 <col:20> 'int' 6

@@ -1,0 +1,29 @@
+../Data/C2AST/pr67432.c:4:7: error: use of empty enum
+enum {};  
+      ^
+../Data/C2AST/pr67432.c:5:9: error: use of empty enum
+enum E {};  
+        ^
+../Data/C2AST/pr67432.c:6:9: error: use of empty enum
+enum F {} e;  
+        ^
+3 errors generated.
+TranslationUnitDecl 0x7ffe508240e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffe50824660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffe50824380 '__int128'
+|-TypedefDecl 0x7ffe508246d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffe508243a0 'unsigned __int128'
+|-TypedefDecl 0x7ffe508249a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffe508247b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffe50824728 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffe50824a40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffe50824a00 'char *'
+|   `-BuiltinType 0x7ffe50824180 'char'
+|-TypedefDecl 0x7ffe50824d08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffe50824cb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffe50824b20 'struct __va_list_tag'
+|     `-Record 0x7ffe50824a98 '__va_list_tag'
+|-EnumDecl 0x7ffe50824d60 <../Data/C2AST/pr67432.c:4:1, col:7> col:1
+|-EnumDecl 0x7ffe50862c20 <line:5:1, col:9> col:6 E
+|-EnumDecl 0x7ffe50862ce0 <line:6:1, col:9> col:6 F
+`-VarDecl 0x7ffe50862df0 <col:1, col:11> col:11 e 'enum F':'enum F'

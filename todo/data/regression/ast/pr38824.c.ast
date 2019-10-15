@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f9ebd02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f9ebd815200 <../Data/C2AST/pr38824.c:4:1, col:15> col:15 referenced v4sf '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-VectorType 0x7f9ebd02c980 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+|   `-BuiltinType 0x7f9ebd02bee0 'float'
+`-FunctionDecl 0x7f9ebd815500 <line:6:1, line:19:1> line:6:6 bench_1 'void (float *, float *, float, unsigned int)'
+  |-ParmVarDecl 0x7f9ebd8152a0 <col:14, col:22> col:22 used out 'float *'
+  |-ParmVarDecl 0x7f9ebd815318 <col:27, col:35> col:35 used in 'float *'
+  |-ParmVarDecl 0x7f9ebd815390 <col:39, col:45> col:45 used f 'float'
+  |-ParmVarDecl 0x7f9ebd815408 <col:48, col:61> col:61 used n 'unsigned int'
+  `-CompoundStmt 0x7f9ebd815e68 <line:7:1, line:19:1>
+    |-CompoundAssignOperator 0x7f9ebd815660 <line:8:5, col:10> 'unsigned int' '/=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-DeclRefExpr 0x7f9ebd815600 <col:5> 'unsigned int' lvalue ParmVar 0x7f9ebd815408 'n' 'unsigned int'
+    | `-ImplicitCastExpr 0x7f9ebd815648 <col:10> 'unsigned int' <IntegralCast>
+    |   `-IntegerLiteral 0x7f9ebd815628 <col:10> 'int' 4
+    |-DeclStmt 0x7f9ebd8158f0 <line:9:5, col:33>
+    | `-VarDecl 0x7f9ebd8156d0 <col:5, col:32> col:10 used scalar 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+    |   `-InitListExpr 0x7f9ebd815830 <col:19, col:32> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+    |     |-ImplicitCastExpr 0x7f9ebd815890 <col:21> 'float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9ebd815730 <col:21> 'float' lvalue ParmVar 0x7f9ebd815390 'f' 'float'
+    |     |-ImplicitCastExpr 0x7f9ebd8158a8 <col:24> 'float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9ebd815758 <col:24> 'float' lvalue ParmVar 0x7f9ebd815390 'f' 'float'
+    |     |-ImplicitCastExpr 0x7f9ebd8158c0 <col:27> 'float' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7f9ebd815780 <col:27> 'float' lvalue ParmVar 0x7f9ebd815390 'f' 'float'
+    |     `-ImplicitCastExpr 0x7f9ebd8158d8 <col:30> 'float' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f9ebd8157a8 <col:30> 'float' lvalue ParmVar 0x7f9ebd815390 'f' 'float'
+    `-DoStmt 0x7f9ebd815e48 <line:10:5, line:18:15>
+      |-CompoundStmt 0x7f9ebd815dc8 <line:11:5, line:17:5>
+      | |-DeclStmt 0x7f9ebd815a80 <line:12:9, col:31>
+      | | `-VarDecl 0x7f9ebd815918 <col:9, col:29> col:14 used arg 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+      | |   `-ImplicitCastExpr 0x7f9ebd815a68 <col:20, col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |     `-UnaryOperator 0x7f9ebd815a48 <col:20, col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+      | |       `-CStyleCastExpr 0x7f9ebd815a20 <col:21, col:29> 'v4sf *' <BitCast>
+      | |         `-ImplicitCastExpr 0x7f9ebd815a08 <col:29> 'float *' <LValueToRValue>
+      | |           `-DeclRefExpr 0x7f9ebd815978 <col:29> 'float *' lvalue ParmVar 0x7f9ebd815318 'in' 'float *'
+      | |-DeclStmt 0x7f9ebd815bb0 <line:13:9, col:35>
+      | | `-VarDecl 0x7f9ebd815aa8 <col:9, col:29> col:14 used result 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' cinit
+      | |   `-BinaryOperator 0x7f9ebd815b88 <col:23, col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '+'
+      | |     |-ImplicitCastExpr 0x7f9ebd815b58 <col:23> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |     | `-DeclRefExpr 0x7f9ebd815b08 <col:23> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7f9ebd815918 'arg' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      | |     `-ImplicitCastExpr 0x7f9ebd815b70 <col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |       `-DeclRefExpr 0x7f9ebd815b30 <col:29> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7f9ebd8156d0 'scalar' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      | |-BinaryOperator 0x7f9ebd815ca0 <line:14:9, col:25> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' '='
+      | | |-UnaryOperator 0x7f9ebd815c40 <col:9, col:19> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue prefix '*'
+      | | | `-CStyleCastExpr 0x7f9ebd815c18 <col:10, col:19> 'v4sf *' <BitCast>
+      | | |   `-ImplicitCastExpr 0x7f9ebd815c00 <col:19> 'float *' <LValueToRValue>
+      | | |     `-DeclRefExpr 0x7f9ebd815bc8 <col:19> 'float *' lvalue ParmVar 0x7f9ebd8152a0 'out' 'float *'
+      | | `-ImplicitCastExpr 0x7f9ebd815c88 <col:25> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7f9ebd815c60 <col:25> 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue Var 0x7f9ebd815aa8 'result' 'v4sf':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+      | |-CompoundAssignOperator 0x7f9ebd815d10 <line:15:9, col:15> 'float *' '+=' ComputeLHSTy='float *' ComputeResultTy='float *'
+      | | |-DeclRefExpr 0x7f9ebd815cc8 <col:9> 'float *' lvalue ParmVar 0x7f9ebd815318 'in' 'float *'
+      | | `-IntegerLiteral 0x7f9ebd815cf0 <col:15> 'int' 4
+      | `-CompoundAssignOperator 0x7f9ebd815d90 <line:16:9, col:16> 'float *' '+=' ComputeLHSTy='float *' ComputeResultTy='float *'
+      |   |-DeclRefExpr 0x7f9ebd815d48 <col:9> 'float *' lvalue ParmVar 0x7f9ebd8152a0 'out' 'float *'
+      |   `-IntegerLiteral 0x7f9ebd815d70 <col:16> 'int' 4
+      `-UnaryOperator 0x7f9ebd815e28 <line:18:12, col:14> 'unsigned int' prefix '--'
+        `-DeclRefExpr 0x7f9ebd815e00 <col:14> 'unsigned int' lvalue ParmVar 0x7f9ebd815408 'n' 'unsigned int'

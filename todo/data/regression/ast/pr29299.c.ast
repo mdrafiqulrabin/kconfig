@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fafe802bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fafe802c978 <../Data/C2AST/pr29299.c:4:1, col:12> col:12 used bof 'int' static
+| `-UsedAttr 0x7fafe802c9d8 <col:31>
+|-FunctionDecl 0x7fafe806e8d0 <line:5:1, line:8:1> line:5:5 foo 'int ()'
+| `-CompoundStmt 0x7fafe806ea48 <line:6:1, line:8:1>
+|   `-DeclStmt 0x7fafe806ea30 <line:7:2, col:47>
+|     `-VarDecl 0x7fafe806e988 <col:2, col:13> col:13 used barbarbarbar 'int' static
+|       `-UsedAttr 0x7fafe806e9e8 <col:41>
+`-EmptyDecl 0x7fafe806ea60 <line:8:2> col:2

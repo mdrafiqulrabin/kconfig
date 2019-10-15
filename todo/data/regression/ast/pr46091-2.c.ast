@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f8a3b81b4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8a3b85d068 <../Data/C2AST/pr46091-2.c:4:1, line:7:1> line:4:20 test 'unsigned long long (unsigned long long)'
+| |-ParmVarDecl 0x7f8a3b81c178 <col:26, col:45> col:45 used a 'unsigned long long'
+| `-CompoundStmt 0x7f8a3b85d258 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f8a3b85d240 <line:6:3, col:25>
+|     `-BinaryOperator 0x7f8a3b85d218 <col:10, col:25> 'unsigned long long' '|'
+|       |-ImplicitCastExpr 0x7f8a3b85d200 <col:10> 'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8a3b85d150 <col:10> 'unsigned long long' lvalue ParmVar 0x7f8a3b81c178 'a' 'unsigned long long'
+|       `-ParenExpr 0x7f8a3b85d1e0 <col:14, col:25> 'unsigned long long'
+|         `-BinaryOperator 0x7f8a3b85d1b8 <col:15, col:23> 'unsigned long long' '<<'
+|           |-IntegerLiteral 0x7f8a3b85d178 <col:15> 'unsigned long long' 1
+|           `-IntegerLiteral 0x7f8a3b85d198 <col:23> 'int' 55
+|-VarDecl 0x7f8a3b85d288 <line:9:1, col:27> col:27 used m 'unsigned long long' extern
+`-FunctionDecl 0x7f8a3b85d3b0 <line:11:1, line:14:1> line:11:6 testm 'void (void)'
+  `-CompoundStmt 0x7f8a3b85d538 <line:12:1, line:14:1>
+    `-CompoundAssignOperator 0x7f8a3b85d500 <line:13:3, col:19> 'unsigned long long' '|=' ComputeLHSTy='unsigned long long' ComputeResultTy='unsigned long long'
+      |-DeclRefExpr 0x7f8a3b85d450 <col:3> 'unsigned long long' lvalue Var 0x7f8a3b85d288 'm' 'unsigned long long'
+      `-ParenExpr 0x7f8a3b85d4e0 <col:8, col:19> 'unsigned long long'
+        `-BinaryOperator 0x7f8a3b85d4b8 <col:9, col:17> 'unsigned long long' '<<'
+          |-IntegerLiteral 0x7f8a3b85d478 <col:9> 'unsigned long long' 1
+          `-IntegerLiteral 0x7f8a3b85d498 <col:17> 'int' 45

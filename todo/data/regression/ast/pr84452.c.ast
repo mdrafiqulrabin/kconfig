@@ -1,0 +1,50 @@
+TranslationUnitDecl 0x7f88480284e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f884806a0d8 <../Data/C2AST/pr84452.c:5:8> col:8 implicit used pow 'double (double, double)' extern
+| |-ParmVarDecl 0x7f884806a178 <<invalid sloc>> <invalid sloc> 'double'
+| |-ParmVarDecl 0x7f884806a1d8 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f884806a248 <col:8> Implicit
+| `-NoThrowAttr 0x7f884806a290 <col:8> Implicit
+|-FunctionDecl 0x7f884806a2a0 prev 0x7f884806a0d8 <col:1, col:49> col:8 used pow 'double (double, double)'
+| |-ParmVarDecl 0x7f8848029178 <col:13> col:19 'double'
+| |-ParmVarDecl 0x7f884806a000 <col:21> col:27 'double'
+| |-ConstAttr 0x7f884806a388 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7f884806a398 <col:8> Inherited Implicit
+|-FunctionDecl 0x7f884806a488 <line:6:8> col:8 implicit exp 'double (double)' extern
+| |-ParmVarDecl 0x7f884806a528 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f884806a590 <col:8> Implicit
+| `-NoThrowAttr 0x7f884806a5d8 <col:8> Implicit
+|-FunctionDecl 0x7f884806a5e8 prev 0x7f884806a488 <col:1, col:41> col:8 exp 'double (double)'
+| |-ParmVarDecl 0x7f884806a3c0 <col:13> col:19 'double'
+| |-ConstAttr 0x7f884806a6c8 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7f884806a6d8 <col:8> Inherited Implicit
+|-VarDecl 0x7f884806a770 <line:7:1, col:21> col:15 used a 'double [1024]' extern
+|-VarDecl 0x7f884806a858 <col:1, col:30> col:24 used b 'double [1024]' extern
+`-FunctionDecl 0x7f884806a990 <line:9:1, line:14:1> line:10:1 foo 'void (void)'
+  `-CompoundStmt 0x7f884806ae60 <line:11:1, line:14:1>
+    `-ForStmt 0x7f884806ae28 <line:12:3, line:13:26>
+      |-DeclStmt 0x7f884806aac8 <line:12:8, col:17>
+      | `-VarDecl 0x7f884806aa48 <col:8, col:16> col:12 used i 'int' cinit
+      |   `-IntegerLiteral 0x7f884806aaa8 <col:16> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f884806ab40 <col:19, col:23> 'int' '<'
+      | |-ImplicitCastExpr 0x7f884806ab28 <col:19> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f884806aae0 <col:19> 'int' lvalue Var 0x7f884806aa48 'i' 'int'
+      | `-IntegerLiteral 0x7f884806ab08 <col:23> 'int' 1024
+      |-UnaryOperator 0x7f884806ab90 <col:29, col:31> 'int' prefix '++'
+      | `-DeclRefExpr 0x7f884806ab68 <col:31> 'int' lvalue Var 0x7f884806aa48 'i' 'int'
+      `-BinaryOperator 0x7f884806ae00 <line:13:5, col:26> 'double' '='
+        |-ArraySubscriptExpr 0x7f884806ac58 <col:5, col:8> 'double' lvalue
+        | |-ImplicitCastExpr 0x7f884806ac28 <col:5> 'double *' <ArrayToPointerDecay>
+        | | `-DeclRefExpr 0x7f884806abb0 <col:5> 'double [1024]' lvalue Var 0x7f884806a770 'a' 'double [1024]'
+        | `-ImplicitCastExpr 0x7f884806ac40 <col:7> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f884806abd8 <col:7> 'int' lvalue Var 0x7f884806aa48 'i' 'int'
+        `-CallExpr 0x7f884806adb0 <col:12, col:26> 'double'
+          |-ImplicitCastExpr 0x7f884806ad98 <col:12> 'double (*)(double, double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f884806ac80 <col:12> 'double (double, double)' Function 0x7f884806a2a0 'pow' 'double (double, double)'
+          |-FloatingLiteral 0x7f884806aca8 <col:17> 'double' 2.000000e+00
+          `-ImplicitCastExpr 0x7f884806ade8 <col:22, col:25> 'double' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7f884806ad48 <col:22, col:25> 'double' lvalue
+              |-ImplicitCastExpr 0x7f884806ad18 <col:22> 'double *' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7f884806acc8 <col:22> 'double [1024]' lvalue Var 0x7f884806a858 'b' 'double [1024]'
+              `-ImplicitCastExpr 0x7f884806ad30 <col:24> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7f884806acf0 <col:24> 'int' lvalue Var 0x7f884806aa48 'i' 'int'

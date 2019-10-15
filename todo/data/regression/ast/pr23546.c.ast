@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fd13402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd13406e800 <../Data/C2AST/pr23546.c:3:1, col:13> col:13 referenced m64 '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fd13402c980 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fd13402bde0 'int'
+`-FunctionDecl 0x7fd13406ea70 <line:5:1, line:9:1> line:5:6 mmxCombineMaskU 'void (m64 *, int)'
+  |-ParmVarDecl 0x7fd13406e8e8 <col:23, col:29> col:29 used mask 'm64 *'
+  |-ParmVarDecl 0x7fd13406e960 <col:35, col:39> col:39 used width 'int'
+  `-CompoundStmt 0x7fd13406ecf8 <line:6:1, line:9:1>
+    `-WhileStmt 0x7fd13406ecd8 <line:7:3, line:8:21>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fd13406ebc8 <line:7:10, col:21> 'int' '>='
+      | |-UnaryOperator 0x7fd13406eb88 <col:10, col:12> 'int' prefix '--'
+      | | `-DeclRefExpr 0x7fd13406eb60 <col:12> 'int' lvalue ParmVar 0x7fd13406e960 'width' 'int'
+      | `-IntegerLiteral 0x7fd13406eba8 <col:21> 'int' 0
+      `-BinaryOperator 0x7fd13406ecb0 <line:8:5, col:21> 'm64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' '='
+        |-UnaryOperator 0x7fd13406ec38 <col:5, col:10> 'm64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue prefix '*'
+        | `-UnaryOperator 0x7fd13406ec18 <col:6, col:10> 'm64 *' postfix '++'
+        |   `-DeclRefExpr 0x7fd13406ebf0 <col:6> 'm64 *' lvalue ParmVar 0x7fd13406e8e8 'mask' 'm64 *'
+        `-CStyleCastExpr 0x7fd13406ec88 <col:15, col:21> 'm64':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <BitCast>
+          `-IntegerLiteral 0x7fd13406ec58 <col:21> 'long long' 0

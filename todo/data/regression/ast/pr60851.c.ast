@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7ffa3582bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffa36014268 <../Data/C2AST/pr60851.c:4:1, line:7:1> line:4:13 ld 'long double (char)'
+  |-ParmVarDecl 0x7ffa3582c970 <col:17, col:22> col:22 used c 'char'
+  `-CompoundStmt 0x7ffa360143c0 <line:5:1, line:7:1>
+    `-ReturnStmt 0x7ffa360143a8 <line:6:3, col:10>
+      `-ImplicitCastExpr 0x7ffa36014390 <col:10> 'long double' <IntegralToFloating>
+        `-ImplicitCastExpr 0x7ffa36014378 <col:10> 'char' <LValueToRValue>
+          `-DeclRefExpr 0x7ffa36014350 <col:10> 'char' lvalue ParmVar 0x7ffa3582c970 'c' 'char'

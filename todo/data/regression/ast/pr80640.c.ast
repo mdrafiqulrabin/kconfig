@@ -1,0 +1,104 @@
+TranslationUnitDecl 0x7f806b82bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f806b93c140 <../Data/C2AST/pr80640.c:7:1, col:21> col:21 used sem1 'volatile int' static
+|-VarDecl 0x7f806b93c1b8 <line:8:1, col:21> col:21 used sem2 'volatile int' static
+|-FunctionDecl 0x7f806b93c2c0 <line:10:1, line:19:1> line:10:14 used f 'void *(void *)' static
+| |-ParmVarDecl 0x7f806b93c230 <col:16, col:22> col:22 used va 'void *'
+| `-CompoundStmt 0x7f806b93c960 <line:11:1, line:19:1>
+|   |-DeclStmt 0x7f806b93c438 <line:12:3, col:16>
+|   | `-VarDecl 0x7f806b93c380 <col:3, col:14> col:10 used p 'void **' cinit
+|   |   `-ImplicitCastExpr 0x7f806b93c420 <col:14> 'void **' <BitCast>
+|   |     `-ImplicitCastExpr 0x7f806b93c408 <col:14> 'void *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f806b93c3e0 <col:14> 'void *' lvalue ParmVar 0x7f806b93c230 'va' 'void *'
+|   |-IfStmt 0x7f806b93c558 <line:13:3, col:19>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f806b93c4b0 <col:7, col:8> 'void *' <LValueToRValue>
+|   | | `-UnaryOperator 0x7f806b93c490 <col:7, col:8> 'void *' lvalue prefix '*'
+|   | |   `-ImplicitCastExpr 0x7f806b93c478 <col:8> 'void **' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x7f806b93c450 <col:8> 'void **' lvalue Var 0x7f806b93c380 'p' 'void **'
+|   | |-ReturnStmt 0x7f806b93c540 <col:11, col:19>
+|   | | `-ImplicitCastExpr 0x7f806b93c528 <col:18, col:19> 'void *' <LValueToRValue>
+|   | |   `-UnaryOperator 0x7f806b93c508 <col:18, col:19> 'void *' lvalue prefix '*'
+|   | |     `-ImplicitCastExpr 0x7f806b93c4f0 <col:19> 'void **' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x7f806b93c4c8 <col:19> 'void **' lvalue Var 0x7f806b93c380 'p' 'void **'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7f806b93c5d8 <line:14:3, col:10> 'int' '='
+|   | |-DeclRefExpr 0x7f806b93c590 <col:3> 'volatile int' lvalue Var 0x7f806b93c140 'sem1' 'volatile int'
+|   | `-IntegerLiteral 0x7f806b93c5b8 <col:10> 'int' 1
+|   |-WhileStmt 0x7f806b93c670 <line:15:3, col:16>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7f806b93c640 <col:10, col:11> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7f806b93c628 <col:11> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f806b93c600 <col:11> 'volatile int' lvalue Var 0x7f806b93c1b8 'sem2' 'volatile int'
+|   | `-NullStmt 0x7f806b93c660 <col:16>
+|   |-CallExpr 0x7f806b93c8a0 <line:16:3, col:41> 'void'
+|   | |-ImplicitCastExpr 0x7f806b93c888 <col:3> 'void (*)(int)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7f806b93c818 <col:3> '<builtin fn type>' Function 0x7f806b93c6c8 '__atomic_thread_fence' 'void (int)'
+|   | `-IntegerLiteral 0x7f806b93c840 <<built-in>:13:26> 'int' 2
+|   `-ReturnStmt 0x7f806b93c948 <../Data/C2AST/pr80640.c:18:3, col:11>
+|     `-ImplicitCastExpr 0x7f806b93c930 <col:10, col:11> 'void *' <LValueToRValue>
+|       `-UnaryOperator 0x7f806b93c910 <col:10, col:11> 'void *' lvalue prefix '*'
+|         `-ImplicitCastExpr 0x7f806b93c8f8 <col:11> 'void **' <LValueToRValue>
+|           `-DeclRefExpr 0x7f806b93c8d0 <col:11> 'void **' lvalue Var 0x7f806b93c380 'p' 'void **'
+|-FunctionDecl 0x7f806b93c6c8 <line:16:3> col:3 implicit used __atomic_thread_fence 'void (int)' extern
+| |-ParmVarDecl 0x7f806b93c768 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7f806b93c7d0 <col:3> Implicit
+`-FunctionDecl 0x7f806b93c9f0 <line:21:1, line:34:1> line:21:5 main 'int ()'
+  `-CompoundStmt 0x7f806b93d328 <line:22:1, line:34:1>
+    |-DeclStmt 0x7f806b93cb40 <line:23:3, col:14>
+    | `-VarDecl 0x7f806b93caa8 <col:3, col:13> col:9 used p 'void *' cinit
+    |   `-ImplicitCastExpr 0x7f806b93cb28 <col:13> 'void *' <NullToPointer>
+    |     `-IntegerLiteral 0x7f806b93cb08 <col:13> 'int' 0
+    |-DeclStmt 0x7f806b93cbc8 <line:24:3, col:16>
+    | `-VarDecl 0x7f806b93cb68 <col:3, col:13> col:13 used thr 'pthread_t':'struct _opaque_pthread_t *'
+    |-IfStmt 0x7f806b93ce50 <line:25:3, line:26:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7f806b93cd80 <line:25:7, col:36> 'int'
+    | | |-ImplicitCastExpr 0x7f806b93cd68 <col:7> 'int (*)(pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f806b93cbe0 <col:7> 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)' Function 0x7f806b94a6c8 'pthread_create' 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)'
+    | | |-UnaryOperator 0x7f806b93cc58 <col:22, col:23> 'pthread_t *' prefix '&'
+    | | | `-DeclRefExpr 0x7f806b93cc08 <col:23> 'pthread_t':'struct _opaque_pthread_t *' lvalue Var 0x7f806b93cb68 'thr' 'pthread_t':'struct _opaque_pthread_t *'
+    | | |-ImplicitCastExpr 0x7f806b93cdc8 <col:28> 'const pthread_attr_t *' <NullToPointer>
+    | | | `-IntegerLiteral 0x7f806b93cc78 <col:28> 'int' 0
+    | | |-ImplicitCastExpr 0x7f806b93cde0 <col:31> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7f806b93cc98 <col:31> 'void *(void *)' Function 0x7f806b93c2c0 'f' 'void *(void *)'
+    | | `-ImplicitCastExpr 0x7f806b93ce00 <col:34, col:35> 'void *' <BitCast>
+    | |   `-UnaryOperator 0x7f806b93cce8 <col:34, col:35> 'void **' prefix '&'
+    | |     `-DeclRefExpr 0x7f806b93ccc0 <col:35> 'void *' lvalue Var 0x7f806b93caa8 'p' 'void *'
+    | |-ReturnStmt 0x7f806b93ce38 <line:26:5, col:12>
+    | | `-IntegerLiteral 0x7f806b93ce18 <col:12> 'int' 2
+    | `-<<<NULL>>>
+    |-WhileStmt 0x7f806b93cef8 <line:27:3, col:16>
+    | |-<<<NULL>>>
+    | |-UnaryOperator 0x7f806b93cec8 <col:10, col:11> 'int' prefix '!'
+    | | `-ImplicitCastExpr 0x7f806b93ceb0 <col:11> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f806b93ce88 <col:11> 'volatile int' lvalue Var 0x7f806b93c140 'sem1' 'volatile int'
+    | `-NullStmt 0x7f806b93cee8 <col:16>
+    |-CallExpr 0x7f806b93cf78 <line:28:3, col:41> 'void'
+    | |-ImplicitCastExpr 0x7f806b93cf60 <col:3> 'void (*)(int)' <BuiltinFnToFnPtr>
+    | | `-DeclRefExpr 0x7f806b93cf18 <col:3> '<builtin fn type>' Function 0x7f806b93c6c8 '__atomic_thread_fence' 'void (int)'
+    | `-IntegerLiteral 0x7f806b93cf40 <<built-in>:13:26> 'int' 2
+    |-BinaryOperator 0x7f806b93d030 <../Data/C2AST/pr80640.c:29:3, col:8> 'void *' '='
+    | |-DeclRefExpr 0x7f806b93cfa8 <col:3> 'void *' lvalue Var 0x7f806b93caa8 'p' 'void *'
+    | `-ImplicitCastExpr 0x7f806b93d018 <col:7, col:8> 'void *' <BitCast>
+    |   `-UnaryOperator 0x7f806b93cff8 <col:7, col:8> 'void **' prefix '&'
+    |     `-DeclRefExpr 0x7f806b93cfd0 <col:8> 'void *' lvalue Var 0x7f806b93caa8 'p' 'void *'
+    |-CallExpr 0x7f806b93d0b8 <line:30:3, col:41> 'void'
+    | |-ImplicitCastExpr 0x7f806b93d0a0 <col:3> 'void (*)(int)' <BuiltinFnToFnPtr>
+    | | `-DeclRefExpr 0x7f806b93d058 <col:3> '<builtin fn type>' Function 0x7f806b93c6c8 '__atomic_thread_fence' 'void (int)'
+    | `-IntegerLiteral 0x7f806b93d080 <<built-in>:14:26> 'int' 3
+    |-BinaryOperator 0x7f806b93d130 <../Data/C2AST/pr80640.c:31:3, col:10> 'int' '='
+    | |-DeclRefExpr 0x7f806b93d0e8 <col:3> 'volatile int' lvalue Var 0x7f806b93c1b8 'sem2' 'volatile int'
+    | `-IntegerLiteral 0x7f806b93d110 <col:10> 'int' 1
+    |-CallExpr 0x7f806b93d260 <line:32:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7f806b93d248 <col:3> 'int (*)(pthread_t _Nonnull, void * _Nullable * _Nullable)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f806b93d158 <col:3> 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)' Function 0x7f806b94bf98 'pthread_join' 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)'
+    | |-ImplicitCastExpr 0x7f806b93d298 <col:16> 'pthread_t':'struct _opaque_pthread_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f806b93d180 <col:16> 'pthread_t':'struct _opaque_pthread_t *' lvalue Var 0x7f806b93cb68 'thr' 'pthread_t':'struct _opaque_pthread_t *'
+    | `-UnaryOperator 0x7f806b93d1d0 <col:21, col:22> 'void **' prefix '&'
+    |   `-DeclRefExpr 0x7f806b93d1a8 <col:22> 'void *' lvalue Var 0x7f806b93caa8 'p' 'void *'
+    `-ReturnStmt 0x7f806b93d310 <line:33:3, col:11>
+      `-UnaryOperator 0x7f806b93d2f0 <col:10, col:11> 'int' prefix '!'
+        `-ImplicitCastExpr 0x7f806b93d2d8 <col:11> 'void *' <LValueToRValue>
+          `-DeclRefExpr 0x7f806b93d2b0 <col:11> 'void *' lvalue Var 0x7f806b93caa8 'p' 'void *'

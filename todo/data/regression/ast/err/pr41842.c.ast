@@ -1,0 +1,23 @@
+../Data/C2AST/pr41842.c:7:13: error: use of undeclared identifier 'h'
+  char x[g (h)];         
+            ^
+1 error generated.
+TranslationUnitDecl 0x7fe860823ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe860824060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe860823d80 '__int128'
+|-TypedefDecl 0x7fe8608240d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe860823da0 'unsigned __int128'
+|-TypedefDecl 0x7fe8608243a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe8608241b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe860824128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe860824440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe860824400 'char *'
+|   `-BuiltinType 0x7fe860823b80 'char'
+|-TypedefDecl 0x7fe860824708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe8608246b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe860824520 'struct __va_list_tag'
+|     `-Record 0x7fe860824498 '__va_list_tag'
+`-FunctionDecl 0x7fe861005400 <../Data/C2AST/pr41842.c:4:1, line:9:1> line:5:1 f 'void ()'
+  `-CompoundStmt 0x7fe861005728 <line:6:1, line:9:1>
+    `-DeclStmt 0x7fe861005710 <line:7:3, col:16>
+      `-VarDecl 0x7fe8610056b0 <col:3, col:8> col:8 invalid x 'char'

@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fbbc68274e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fbbc6828160 <../Data/C2AST/pr68517.c:3:9, line:5:1> line:3:9 struct definition
+|-TypedefDecl 0x7fbbc5818e70 <col:1, line:5:3> col:3 referenced st1 'struct st1':'st1'
+| `-ElaboratedType 0x7fbbc5818e20 'struct st1' sugar
+|   `-RecordType 0x7fbbc5818e00 'st1'
+|     `-Record 0x7fbbc6828160 ''
+|-RecordDecl 0x7fbbc5818ee0 <line:7:9, line:10:1> line:7:9 struct definition
+| |-AlignedAttr 0x7fbbc5819010 <line:10:19, col:29> aligned
+| | `-IntegerLiteral 0x7fbbc5818ff0 <col:28> 'int' 4
+| `-FieldDecl 0x7fbbc5818fa8 <line:9:3, col:16> col:16 c 'volatile int'
+|-TypedefDecl 0x7fbbc58190b0 <line:7:1, line:10:33> col:33 referenced st2 'struct st2':'st2'
+| `-ElaboratedType 0x7fbbc5819060 'struct st2' sugar
+|   `-RecordType 0x7fbbc5818f70 'st2'
+|     `-Record 0x7fbbc5818ee0 ''
+|-RecordDecl 0x7fbbc5819120 <line:12:1, line:17:1> line:12:8 struct s4 definition
+| |-FieldDecl 0x7fbbc5819200 <line:14:3, col:7> col:7 referenced f1 'st1':'st1'
+| |-FieldDecl 0x7fbbc5819280 <line:15:3, col:7> col:7 f2 'st2':'st2'
+| `-FieldDecl 0x7fbbc58192d8 <line:16:3, col:7> col:7 referenced f3 'st1':'st1'
+|-RecordDecl 0x7fbbc58193a8 <line:19:1, col:8> col:8 struct s3
+`-FunctionDecl 0x7fbbc5819720 <line:21:1, line:26:1> line:22:1 foo 'void (struct s3 *, struct s4 *)'
+  |-ParmVarDecl 0x7fbbc5819500 <col:6, col:17> col:17 arg 'struct s3 *'
+  |-ParmVarDecl 0x7fbbc5819610 <col:22, col:33> col:33 used arg1 'struct s4 *'
+  `-CompoundStmt 0x7fbbc5819af0 <line:23:1, line:26:1>
+    |-BinaryOperator 0x7fbbc5819958 <line:24:3, col:22> 'st1':'st1' '='
+    | |-MemberExpr 0x7fbbc5819850 <col:3, col:9> 'st1':'st1' lvalue ->f1 0x7fbbc5819200
+    | | `-ImplicitCastExpr 0x7fbbc5819838 <col:3> 'struct s4 *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fbbc5819810 <col:3> 'struct s4 *' lvalue ParmVar 0x7fbbc5819610 'arg1' 'struct s4 *'
+    | `-ImplicitCastExpr 0x7fbbc5819940 <col:14, col:22> 'st1':'st1' <LValueToRValue>
+    |   `-CompoundLiteralExpr 0x7fbbc5819918 <col:14, col:22> 'st1':'st1' lvalue
+    |     `-InitListExpr 0x7fbbc58198d8 <col:20, col:22> 'st1':'st1'
+    `-BinaryOperator 0x7fbbc5819ac8 <line:25:3, col:22> 'st1':'st1' '='
+      |-MemberExpr 0x7fbbc58199c0 <col:3, col:9> 'st1':'st1' lvalue ->f3 0x7fbbc58192d8
+      | `-ImplicitCastExpr 0x7fbbc58199a8 <col:3> 'struct s4 *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fbbc5819980 <col:3> 'struct s4 *' lvalue ParmVar 0x7fbbc5819610 'arg1' 'struct s4 *'
+      `-ImplicitCastExpr 0x7fbbc5819ab0 <col:14, col:22> 'st1':'st1' <LValueToRValue>
+        `-CompoundLiteralExpr 0x7fbbc5819a88 <col:14, col:22> 'st1':'st1' lvalue
+          `-InitListExpr 0x7fbbc5819a48 <col:20, col:22> 'st1':'st1'

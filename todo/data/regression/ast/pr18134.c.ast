@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc7aa8240e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fc7aa84bc68 <../Data/C2AST/pr18134.c:4:1, line:16:1> line:4:6 foo 'int (int)'
+  |-ParmVarDecl 0x7fc7aa824d78 <col:11, col:15> col:15 used a 'int'
+  `-CompoundStmt 0x7fc7aa84c150 <line:5:1, line:16:1>
+    |-DeclStmt 0x7fc7aa84bdc8 <line:6:1, col:8>
+    | `-VarDecl 0x7fc7aa84bd68 <col:1, col:7> col:7 used p 'void *'
+    |-IfStmt 0x7fc7aa84bfd8 <line:7:1, line:10:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc7aa84be40 <line:7:5, col:8> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc7aa84be28 <col:5> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fc7aa84bde0 <col:5> 'int' lvalue ParmVar 0x7fc7aa824d78 'a' 'int'
+    | | `-IntegerLiteral 0x7fc7aa84be08 <col:8> 'int' 0
+    | |-BinaryOperator 0x7fc7aa84bef8 <line:8:3, col:9> 'void *' '='
+    | | |-DeclRefExpr 0x7fc7aa84be68 <col:3> 'void *' lvalue Var 0x7fc7aa84bd68 'p' 'void *'
+    | | `-AddrLabelExpr 0x7fc7aa84bed8 <col:7, col:9> 'void *' L0 0x7fc7aa84be90
+    | `-BinaryOperator 0x7fc7aa84bfb0 <line:10:3, col:9> 'void *' '='
+    |   |-DeclRefExpr 0x7fc7aa84bf20 <col:3> 'void *' lvalue Var 0x7fc7aa84bd68 'p' 'void *'
+    |   `-AddrLabelExpr 0x7fc7aa84bf90 <col:7, col:9> 'void *' L1 0x7fc7aa84bf48
+    |-IndirectGotoStmt 0x7fc7aa84c098 <line:11:1, col:7>
+    | `-ImplicitCastExpr 0x7fc7aa84c080 <col:7> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fc7aa84c068 <col:7> 'void *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fc7aa84c010 <col:7> 'void *' lvalue Var 0x7fc7aa84bd68 'p' 'void *'
+    |-LabelStmt 0x7fc7aa84c0e8 <line:12:1, line:13:8> 'L0'
+    | `-ReturnStmt 0x7fc7aa84c0d0 <col:1, col:8>
+    |   `-IntegerLiteral 0x7fc7aa84c0b0 <col:8> 'int' 1
+    `-LabelStmt 0x7fc7aa84c138 <line:14:1, line:15:8> 'L1'
+      `-ReturnStmt 0x7fc7aa84c120 <col:1, col:8>
+        `-IntegerLiteral 0x7fc7aa84c100 <col:8> 'int' 0

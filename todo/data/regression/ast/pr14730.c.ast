@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fbabc02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fbabc06d868 <../Data/C2AST/pr14730.c:3:1, line:16:1> line:3:5 t 'int (char)'
+  |-ParmVarDecl 0x7fbabc02c970 <col:8, col:13> col:13 used i 'char'
+  `-CompoundStmt 0x7fbabc06dc70 <line:4:1, line:16:1>
+    |-SwitchStmt 0x7fbabc06d9a8 <line:5:3, line:14:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fbabc06d990 <line:5:11> 'int' <IntegralCast>
+    | | `-ImplicitCastExpr 0x7fbabc06d978 <col:11> 'char' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fbabc06d950 <col:11> 'char' lvalue ParmVar 0x7fbabc02c970 'i' 'char'
+    | `-CompoundStmt 0x7fbabc06dc20 <line:6:5, line:14:5>
+    |   `-CaseStmt 0x7fbabc06d9f8 <line:7:5, line:13:14>
+    |     |-IntegerLiteral 0x7fbabc06d9d8 <line:7:10> 'int' 1
+    |     |-<<<NULL>>>
+    |     `-CaseStmt 0x7fbabc06da50 <line:8:5, line:13:14>
+    |       |-IntegerLiteral 0x7fbabc06da30 <line:8:10> 'int' 7
+    |       |-<<<NULL>>>
+    |       `-CaseStmt 0x7fbabc06daa8 <line:9:5, line:13:14>
+    |         |-IntegerLiteral 0x7fbabc06da88 <line:9:10> 'int' 10
+    |         |-<<<NULL>>>
+    |         `-CaseStmt 0x7fbabc06db00 <line:10:5, line:13:14>
+    |           |-IntegerLiteral 0x7fbabc06dae0 <line:10:10> 'int' 14
+    |           |-<<<NULL>>>
+    |           `-CaseStmt 0x7fbabc06db58 <line:11:5, line:13:14>
+    |             |-IntegerLiteral 0x7fbabc06db38 <line:11:10> 'int' 9
+    |             |-<<<NULL>>>
+    |             `-CaseStmt 0x7fbabc06dbb0 <line:12:5, line:13:14>
+    |               |-IntegerLiteral 0x7fbabc06db90 <line:12:10> 'int' 256
+    |               |-<<<NULL>>>
+    |               `-ReturnStmt 0x7fbabc06dc08 <line:13:7, col:14>
+    |                 `-IntegerLiteral 0x7fbabc06dbe8 <col:14> 'int' 0
+    `-ReturnStmt 0x7fbabc06dc58 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fbabc06dc38 <col:10> 'int' 1

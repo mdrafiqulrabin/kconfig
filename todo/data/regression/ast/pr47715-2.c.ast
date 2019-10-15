@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fe52b82b2e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe52b82bfa0 <../Data/C2AST/pr47715-2.c:6:1, col:22> col:22 used __libc_resp 'int *' extern tls
+`-FunctionDecl 0x7fe52b014d08 <line:7:1, line:10:1> line:8:1 __res_init 'int (void)'
+  `-CompoundStmt 0x7fe52b014e38 <col:18, line:10:1>
+    `-ReturnStmt 0x7fe52b014e20 <line:9:3, col:11>
+      `-ImplicitCastExpr 0x7fe52b014e08 <col:10, col:11> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7fe52b014de8 <col:10, col:11> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fe52b014dd0 <col:11> 'int *' <LValueToRValue>
+            `-DeclRefExpr 0x7fe52b014da8 <col:11> 'int *' lvalue Var 0x7fe52b82bfa0 '__libc_resp' 'int *'

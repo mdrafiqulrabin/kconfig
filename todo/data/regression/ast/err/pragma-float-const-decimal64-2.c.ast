@@ -1,0 +1,143 @@
+../Data/C2AST/pragma-float-const-decimal64-2.c:7:21: error: invalid suffix 'dd' on floating constant
+double a = 1.0 * 2.0dd;
+                    ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:13:23: error: invalid suffix 'd' on floating constant
+  double b = 2.0 * 3.0d;
+                      ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:16:25: error: invalid suffix 'd' on floating constant
+    double c = 3.0 * 4.0d;
+                        ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:22:25: error: invalid suffix 'dd' on floating constant
+    double d = 4.0 * 5.0dd;
+                        ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:30:26: error: invalid suffix 'd' on floating constant
+     double e = 5.0 * 6.0d;
+                         ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:41:23: error: invalid suffix 'dd' on floating constant
+  double b = 2.0 * 3.0dd;
+                      ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:45:25: error: invalid suffix 'd' on floating constant
+    double c = 3.0 * 4.0d;
+                        ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:49:27: error: invalid suffix 'dd' on floating constant
+      double d = 4.0 * 5.0dd;
+                          ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:53:22: error: invalid suffix 'd' on floating constant
+        double e = 5.0 * 6.0d;
+                            ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:57:24: error: invalid suffix 'dd' on floating constant
+          double f = 6.0 * 7.0dd;
+                              ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:68:21: error: invalid suffix 'dd' on floating constant
+double f = 6.0 * 7.0dd;
+                    ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:74:23: error: invalid suffix 'd' on floating constant
+  double b = 2.0 * 3.0d;
+                      ^
+../Data/C2AST/pragma-float-const-decimal64-2.c:80:21: error: invalid suffix 'dd' on floating constant
+double g = 7.0 + 8.0dd;
+                    ^
+TranslationUnitDecl 0x7f8e2f8200e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8e2f820660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f8e2f820380 '__int128'
+|-TypedefDecl 0x7f8e2f8206d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f8e2f8203a0 'unsigned __int128'
+|-TypedefDecl 0x7f8e2f8209a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f8e2f8207b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f8e2f820728 '__NSConstantString_tag'
+|-TypedefDecl 0x7f8e2f820a40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f8e2f820a00 'char *'
+|   `-BuiltinType 0x7f8e2f820180 'char'
+|-TypedefDecl 0x7f8e2f820d08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f8e2f820cb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f8e2f820b20 'struct __va_list_tag'
+|     `-Record 0x7f8e2f820a98 '__va_list_tag'
+|-VarDecl 0x7f8e2f820d78 <../Data/C2AST/pragma-float-const-decimal64-2.c:7:1, col:8> col:8 used a 'double'
+|-FunctionDecl 0x7f8e2f857728 <line:9:1, line:35:1> line:10:1 f1 'double (void)'
+| `-CompoundStmt 0x7f8e2f857e28 <line:11:1, line:35:1>
+|   |-DeclStmt 0x7f8e2f857860 <line:13:3, col:24>
+|   | `-VarDecl 0x7f8e2f8577e0 <col:3, col:10> col:10 used b 'double'
+|   |-CompoundStmt 0x7f8e2f857a20 <line:15:3, line:18:3>
+|   | |-DeclStmt 0x7f8e2f857910 <line:16:5, col:26>
+|   | | `-VarDecl 0x7f8e2f857890 <col:5, col:12> col:12 used c 'double'
+|   | `-BinaryOperator 0x7f8e2f8579f8 <line:17:5, col:13> 'double' '='
+|   |   |-DeclRefExpr 0x7f8e2f857928 <col:5> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|   |   `-BinaryOperator 0x7f8e2f8579d0 <col:9, col:13> 'double' '+'
+|   |     |-ImplicitCastExpr 0x7f8e2f8579a0 <col:9> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f8e2f857950 <col:9> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|   |     `-ImplicitCastExpr 0x7f8e2f8579b8 <col:13> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8e2f857978 <col:13> 'double' lvalue Var 0x7f8e2f857890 'c' 'double'
+|   |-CompoundStmt 0x7f8e2f857be8 <line:20:3, line:25:3>
+|   | |-DeclStmt 0x7f8e2f857ad8 <line:22:5, col:27>
+|   | | `-VarDecl 0x7f8e2f857a58 <col:5, col:12> col:12 used d 'double'
+|   | `-BinaryOperator 0x7f8e2f857bc0 <line:24:5, col:13> 'double' '='
+|   |   |-DeclRefExpr 0x7f8e2f857af0 <col:5> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|   |   `-BinaryOperator 0x7f8e2f857b98 <col:9, col:13> 'double' '+'
+|   |     |-ImplicitCastExpr 0x7f8e2f857b68 <col:9> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f8e2f857b18 <col:9> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|   |     `-ImplicitCastExpr 0x7f8e2f857b80 <col:13> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8e2f857b40 <col:13> 'double' lvalue Var 0x7f8e2f857a58 'd' 'double'
+|   |-CompoundStmt 0x7f8e2f857db0 <line:27:3, line:32:3>
+|   | |-DeclStmt 0x7f8e2f857ca0 <line:30:6, col:27>
+|   | | `-VarDecl 0x7f8e2f857c20 <col:6, col:13> col:13 used e 'double'
+|   | `-BinaryOperator 0x7f8e2f857d88 <line:31:6, col:14> 'double' '='
+|   |   |-DeclRefExpr 0x7f8e2f857cb8 <col:6> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|   |   `-BinaryOperator 0x7f8e2f857d60 <col:10, col:14> 'double' '+'
+|   |     |-ImplicitCastExpr 0x7f8e2f857d30 <col:10> 'double' <LValueToRValue>
+|   |     | `-DeclRefExpr 0x7f8e2f857ce0 <col:10> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|   |     `-ImplicitCastExpr 0x7f8e2f857d48 <col:14> 'double' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8e2f857d08 <col:14> 'double' lvalue Var 0x7f8e2f857c20 'e' 'double'
+|   `-ReturnStmt 0x7f8e2f857e10 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7f8e2f857df8 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8e2f857dd0 <col:10> 'double' lvalue Var 0x7f8e2f8577e0 'b' 'double'
+|-FunctionDecl 0x7f8e2f857ef8 <line:37:1, line:65:1> line:38:1 f2 'double (void)'
+| `-CompoundStmt 0x7f8e2f858678 <line:39:1, line:65:1>
+|   |-DeclStmt 0x7f8e13 errors generated.
+2f858030 <line:41:3, col:25>
+|   | `-VarDecl 0x7f8e2f857fb0 <col:3, col:10> col:10 used b 'double'
+|   |-CompoundStmt 0x7f8e2f858600 <line:43:3, line:63:3>
+|   | |-DeclStmt 0x7f8e2f8580e0 <line:45:5, col:26>
+|   | | `-VarDecl 0x7f8e2f858060 <col:5, col:12> col:12 used c 'double'
+|   | `-CompoundStmt 0x7f8e2f8585e0 <line:47:5, line:62:5>
+|   |   |-DeclStmt 0x7f8e2f858190 <line:49:7, col:29>
+|   |   | `-VarDecl 0x7f8e2f858110 <col:7, col:14> col:14 used d 'double'
+|   |   `-CompoundStmt 0x7f8e2f8585c0 <line:51:7, line:61:7>
+|   |     |-DeclStmt 0x7f8e2f858240 <line:53:2, col:23>
+|   |     | `-VarDecl 0x7f8e2f8581c0 <col:2, col:9> col:9 used e 'double'
+|   |     `-CompoundStmt 0x7f8e2f8585a0 <line:55:2, line:60:2>
+|   |       |-DeclStmt 0x7f8e2f8582f0 <line:57:4, col:26>
+|   |       | `-VarDecl 0x7f8e2f858270 <col:4, col:11> col:11 used f 'double'
+|   |       `-BinaryOperator 0x7f8e2f858578 <line:59:4, col:28> 'double' '='
+|   |         |-DeclRefExpr 0x7f8e2f858308 <col:4> 'double' lvalue Var 0x7f8e2f857fb0 'b' 'double'
+|   |         `-BinaryOperator 0x7f8e2f858550 <col:8, col:28> 'double' '+'
+|   |           |-BinaryOperator 0x7f8e2f8584e8 <col:8, col:24> 'double' '+'
+|   |           | |-BinaryOperator 0x7f8e2f858480 <col:8, col:20> 'double' '+'
+|   |           | | |-BinaryOperator 0x7f8e2f858418 <col:8, col:16> 'double' '+'
+|   |           | | | |-BinaryOperator 0x7f8e2f8583b0 <col:8, col:12> 'double' '+'
+|   |           | | | | |-ImplicitCastExpr 0x7f8e2f858380 <col:8> 'double' <LValueToRValue>
+|   |           | | | | | `-DeclRefExpr 0x7f8e2f858330 <col:8> 'double' lvalue Var 0x7f8e2f820d78 'a' 'double'
+|   |           | | | | `-ImplicitCastExpr 0x7f8e2f858398 <col:12> 'double' <LValueToRValue>
+|   |           | | | |   `-DeclRefExpr 0x7f8e2f858358 <col:12> 'double' lvalue Var 0x7f8e2f857fb0 'b' 'double'
+|   |           | | | `-ImplicitCastExpr 0x7f8e2f858400 <col:16> 'double' <LValueToRValue>
+|   |           | | |   `-DeclRefExpr 0x7f8e2f8583d8 <col:16> 'double' lvalue Var 0x7f8e2f858060 'c' 'double'
+|   |           | | `-ImplicitCastExpr 0x7f8e2f858468 <col:20> 'double' <LValueToRValue>
+|   |           | |   `-DeclRefExpr 0x7f8e2f858440 <col:20> 'double' lvalue Var 0x7f8e2f858110 'd' 'double'
+|   |           | `-ImplicitCastExpr 0x7f8e2f8584d0 <col:24> 'double' <LValueToRValue>
+|   |           |   `-DeclRefExpr 0x7f8e2f8584a8 <col:24> 'double' lvalue Var 0x7f8e2f8581c0 'e' 'double'
+|   |           `-ImplicitCastExpr 0x7f8e2f858538 <col:28> 'double' <LValueToRValue>
+|   |             `-DeclRefExpr 0x7f8e2f858510 <col:28> 'double' lvalue Var 0x7f8e2f858270 'f' 'double'
+|   `-ReturnStmt 0x7f8e2f858660 <line:64:3, col:10>
+|     `-ImplicitCastExpr 0x7f8e2f858648 <col:10> 'double' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8e2f858620 <col:10> 'double' lvalue Var 0x7f8e2f857fb0 'b' 'double'
+|-VarDecl 0x7f8e2f8586b8 <line:68:1, col:8> col:8 used f 'double'
+|-FunctionDecl 0x7f8e2f8587d0 <line:70:1, line:77:1> line:71:1 f3 'double (void)'
+| `-CompoundStmt 0x7f8e2f8589e0 <line:72:1, line:77:1>
+|   |-DeclStmt 0x7f8e2f858908 <line:74:3, col:24>
+|   | `-VarDecl 0x7f8e2f858888 <col:3, col:10> col:10 used b 'double'
+|   `-ReturnStmt 0x7f8e2f8589c8 <line:76:3, col:14>
+|     `-BinaryOperator 0x7f8e2f8589a0 <col:10, col:14> 'double' '+'
+|       |-ImplicitCastExpr 0x7f8e2f858970 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f8e2f858920 <col:10> 'double' lvalue Var 0x7f8e2f858888 'b' 'double'
+|       `-ImplicitCastExpr 0x7f8e2f858988 <col:14> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f8e2f858948 <col:14> 'double' lvalue Var 0x7f8e2f8586b8 'f' 'double'
+`-VarDecl 0x7f8e2f858a18 <line:80:1, col:8> col:8 g 'double'

@@ -1,0 +1,81 @@
+TranslationUnitDecl 0x7fba7282bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fba7282c960 <../Data/C2AST/pr66899.c:5:1, line:8:1> line:5:1 struct definition
+| `-FieldDecl 0x7fba73014238 <line:7:3, col:7> col:7 authority 'int'
+|-VarDecl 0x7fba73014330 <line:5:1, line:8:5> col:5 used a 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *'
+|-VarDecl 0x7fba730143f8 <line:5:1, line:8:9> col:9 used b 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *'
+|-VarDecl 0x7fba73014478 <line:5:1, line:8:12> col:12 used c 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)'
+|-VarDecl 0x7fba730144f8 <line:5:1, line:8:15> col:15 used d 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)'
+|-VarDecl 0x7fba730145a0 <line:9:1, col:5> col:5 used e 'int'
+|-VarDecl 0x7fba73014618 <col:1, col:8> col:8 used f 'int'
+|-FunctionDecl 0x7fba730146e0 <line:10:1, line:25:1> line:11:1 used fn1 'int ()' static
+| `-CompoundStmt 0x7fba73014c60 <line:12:1, line:25:1>
+|   |-IfStmt 0x7fba73014820 <line:13:3, line:14:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fba730147a8 <line:13:7> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fba73014780 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' lvalue Var 0x7fba73014330 'a' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *'
+|   | |-GotoStmt 0x7fba73014808 <line:14:5, col:10> 'verified' 0x7fba730147c0
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fba730148f8 <line:15:3, line:16:10>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fba73014880 <line:15:7> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fba73014858 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' lvalue Var 0x7fba730143f8 'b' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *'
+|   | |-GotoStmt 0x7fba730148e0 <line:16:5, col:10> 'matched' 0x7fba73014898
+|   | `-<<<NULL>>>
+|   |-ReturnStmt 0x7fba73014970 <line:17:3, col:11>
+|   | `-UnaryOperator 0x7fba73014950 <col:10, col:11> 'int' prefix '-'
+|   |   `-IntegerLiteral 0x7fba73014930 <col:11> 'int' 126
+|   |-LabelStmt 0x7fba730149f8 <line:18:1, line:19:7> 'matched'
+|   | `-BinaryOperator 0x7fba730149d0 <col:3, col:7> 'int' '='
+|   |   |-DeclRefExpr 0x7fba73014988 <col:3> 'int' lvalue Var 0x7fba730145a0 'e' 'int'
+|   |   `-IntegerLiteral 0x7fba730149b0 <col:7> 'int' 0
+|   |-LabelStmt 0x7fba73014c10 <line:20:1, line:23:7> 'verified'
+|   | `-IfStmt 0x7fba73014bd8 <line:21:3, line:23:7>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-ImplicitCastExpr 0x7fba73014a38 <line:21:7> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fba73014a10 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' lvalue Var 0x7fba730143f8 'b' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *'
+|   |   |-ForStmt 0x7fba73014ba0 <line:22:5, line:23:7>
+|   |   | |-<<<NULL>>>
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7fba73014ad8 <line:22:12, col:18> 'int' '!='
+|   |   | | |-UnaryOperator 0x7fba73014a78 <col:12, col:13> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' prefix '&'
+|   |   | | | `-DeclRefExpr 0x7fba73014a50 <col:13> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)' lvalue Var 0x7fba73014478 'c' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)'
+|   |   | | `-ImplicitCastExpr 0x7fba73014ac0 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fba73014a98 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *' lvalue Var 0x7fba730143f8 'b' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1) *'
+|   |   | |-BinaryOperator 0x7fba73014b68 <col:21, col:25> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)' '='
+|   |   | | |-DeclRefExpr 0x7fba73014b00 <col:21> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)' lvalue Var 0x7fba73014478 'c' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)'
+|   |   | | `-ImplicitCastExpr 0x7fba73014b50 <col:25> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fba73014b28 <col:25> 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)' lvalue Var 0x7fba730144f8 'd' 'struct (anonymous struct at ../Data/C2AST/pr66899.c:5:1)':'struct (anonymous at ../Data/C2AST/pr66899.c:5:1)'
+|   |   | `-NullStmt 0x7fba73014b90 <line:23:7>
+|   |   `-<<<NULL>>>
+|   `-ReturnStmt 0x7fba73014c48 <line:24:3, col:10>
+|     `-IntegerLiteral 0x7fba73014c28 <col:10> 'int' 0
+`-FunctionDecl 0x7fba73014cc8 <line:27:1, line:41:1> line:28:1 fn2 'int ()'
+  `-CompoundStmt 0x7fba73015010 <line:29:1, line:41:1>
+    `-ForStmt 0x7fba73014fd8 <line:30:3, line:40:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fba73014fb8 <line:31:5, line:40:5>
+        |-BinaryOperator 0x7fba73014e28 <line:32:7, col:16> 'int' '='
+        | |-DeclRefExpr 0x7fba73014d68 <col:7> 'int' lvalue Var 0x7fba73014618 'f' 'int'
+        | `-CallExpr 0x7fba73014e00 <col:11, col:16> 'int'
+        |   `-ImplicitCastExpr 0x7fba73014de8 <col:11> 'int (*)()' <FunctionToPointerDecay>
+        |     `-DeclRefExpr 0x7fba73014d90 <col:11> 'int ()' Function 0x7fba730146e0 'fn1' 'int ()'
+        `-SwitchStmt 0x7fba73014e90 <line:33:7, line:39:9>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7fba73014e78 <line:33:15> 'int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fba73014e50 <col:15> 'int' lvalue Var 0x7fba73014618 'f' 'int'
+          `-CompoundStmt 0x7fba73014f98 <line:34:9, line:39:9>
+            |-CaseStmt 0x7fba73014f00 <line:35:9, line:36:11>
+            | |-UnaryOperator 0x7fba73014ee0 <line:35:14, col:15> 'int' prefix '-'
+            | | `-IntegerLiteral 0x7fba73014ec0 <col:15> 'int' 126
+            | |-<<<NULL>>>
+            | `-ContinueStmt 0x7fba73014f38 <line:36:11>
+            `-DefaultStmt 0x7fba73014f78 <line:37:9, line:38:18>
+              `-ReturnStmt 0x7fba73014f60 <col:11, col:18>
+                `-IntegerLiteral 0x7fba73014f40 <col:18> 'int' 0

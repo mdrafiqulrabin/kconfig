@@ -1,0 +1,15 @@
+TranslationUnitDecl 0x7fdc7801a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fdc7801b560 <../Data/C2AST/pr57361.c:4:1, col:29> col:8 struct A definition
+| |-FieldDecl 0x7fdc77825c38 <col:12, col:16> col:16 x 'int'
+| `-FieldDecl 0x7fdc77825c98 <col:19, col:26> col:26 y 'double'
+`-FunctionDecl 0x7fdc77825e90 <line:5:1, line:7:1> line:5:6 f 'void (struct A *)'
+  |-ParmVarDecl 0x7fdc77825d90 <col:9, col:19> col:19 used a 'struct A *'
+  `-CompoundStmt 0x7fdc77826078 <col:22, line:7:1>
+    `-BinaryOperator 0x7fdc77826050 <line:6:3, col:9> 'struct A':'struct A' '='
+      |-UnaryOperator 0x7fdc77825fb8 <col:3, col:4> 'struct A':'struct A' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7fdc77825fa0 <col:4> 'struct A *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fdc77825f78 <col:4> 'struct A *' lvalue ParmVar 0x7fdc77825d90 'a' 'struct A *'
+      `-ImplicitCastExpr 0x7fdc77826038 <col:8, col:9> 'struct A':'struct A' <LValueToRValue>
+        `-UnaryOperator 0x7fdc77826018 <col:8, col:9> 'struct A':'struct A' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fdc77826000 <col:9> 'struct A *' <LValueToRValue>
+            `-DeclRefExpr 0x7fdc77825fd8 <col:9> 'struct A *' lvalue ParmVar 0x7fdc77825d90 'a' 'struct A *'

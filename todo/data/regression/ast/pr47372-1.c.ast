@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fd1af0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd1af018160 <../Data/C2AST/pr47372-1.c:5:9, col:16> col:16 struct FILE
+|-TypedefDecl 0x7fd1ae029270 <col:1, col:21> col:21 referenced FILE 'struct FILE':'struct FILE'
+| `-ElaboratedType 0x7fd1ae029220 'struct FILE' sugar
+|   `-RecordType 0x7fd1ae029200 'struct FILE'
+|     `-Record 0x7fd1af018160 'FILE'
+|-FunctionDecl 0x7fd1ae029628 <line:6:1, col:27> col:5 used _fwalk 'int (int (*)(FILE *))'
+| `-ParmVarDecl 0x7fd1ae029518 <col:12, col:26> col:18 'int (*)(FILE *)'
+|-FunctionDecl 0x7fd1ae0297b0 <line:7:1, col:20> col:5 used __sflush 'int (FILE *)'
+| `-ParmVarDecl 0x7fd1ae029720 <col:14, col:19> col:20 'FILE *'
+`-FunctionDecl 0x7fd1ae0298f8 <line:8:1, line:12:1> line:9:1 fflush 'int (FILE *)'
+  |-ParmVarDecl 0x7fd1ae029868 <col:8, col:14> col:14 fp 'FILE *'
+  `-CompoundStmt 0x7fd1ae029b08 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7fd1ae029af0 <line:11:3, col:27>
+      `-ParenExpr 0x7fd1ae029ad0 <col:10, col:27> 'int'
+        `-CallExpr 0x7fd1ae029a60 <col:11, col:26> 'int'
+          |-ImplicitCastExpr 0x7fd1ae029a48 <col:11> 'int (*)(int (*)(FILE *))' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fd1ae0299a0 <col:11> 'int (int (*)(FILE *))' Function 0x7fd1ae029628 '_fwalk' 'int (int (*)(FILE *))'
+          `-ImplicitCastExpr 0x7fd1ae029ab8 <col:18> 'int (*)(FILE *)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fd1ae0299c8 <col:18> 'int (FILE *)' Function 0x7fd1ae0297b0 '__sflush' 'int (FILE *)'

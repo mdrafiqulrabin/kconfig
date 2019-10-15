@@ -1,0 +1,69 @@
+TranslationUnitDecl 0x7fd0a88058e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd0a7009e50 <../Data/C2AST/pr66838.c:4:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fd0a7009ef0 prev 0x7fd0a7009e50 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+|-VarDecl 0x7fd0a7009fa0 <line:6:1, col:6> col:6 used global 'char'
+|-FunctionDecl 0x7fd0a700a1e8 <line:8:1, line:21:1> line:9:6 used sysv_abi_func 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)'
+| |-ParmVarDecl 0x7fd0a700a058 <col:20, col:32> col:32 desc 'const char *'
+| |-ParmVarDecl 0x7fd0a700a0d0 <col:38, col:44> col:44 used local 'void *'
+| |-CompoundStmt 0x7fd0a700a968 <line:10:1, line:21:1>
+| | |-DeclStmt 0x7fd0a700a418 <line:11:3, col:31>
+| | | `-VarDecl 0x7fd0a700a360 <col:3, col:16> col:16 used esi 'int' register
+| | |   `-AsmLabelAttr 0x7fd0a700a3c0 <col:25> "esi"
+| | |-DeclStmt 0x7fd0a700a530 <line:12:3, col:31>
+| | | `-VarDecl 0x7fd0a700a478 <col:3, col:16> col:16 used edi 'int' register
+| | |   `-AsmLabelAttr 0x7fd0a700a4d8 <col:25> "edi"
+| | |-IfStmt 0x7fd0a700a6a8 <line:14:3, line:15:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fd0a700a5e8 <line:14:7, col:17> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fd0a700a5b8 <col:7> 'void *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fd0a700a548 <col:7> 'void *' lvalue ParmVar 0x7fd0a700a0d0 'local' 'void *'
+| | | | `-ImplicitCastExpr 0x7fd0a700a5d0 <col:16, col:17> 'void *' <BitCast>
+| | | |   `-UnaryOperator 0x7fd0a700a598 <col:16, col:17> 'char *' prefix '&'
+| | | |     `-DeclRefExpr 0x7fd0a700a570 <col:17> 'char' lvalue Var 0x7fd0a7009fa0 'global' 'char'
+| | | |-CallExpr 0x7fd0a700a680 <line:15:5, col:12> 'void'
+| | | | `-ImplicitCastExpr 0x7fd0a700a668 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| | | |   `-DeclRefExpr 0x7fd0a700a610 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fd0a7009ef0 'abort' 'void (void) __attribute__((noreturn))'
+| | | `-<<<NULL>>>
+| | `-GCCAsmStmt 0x7fd0a700a8d8 <line:18:3, line:20:21>
+| |   |-DeclRefExpr 0x7fd0a700a7c8 <line:19:11> 'int' lvalue Var 0x7fd0a700a360 'esi' 'int'
+| |   |-DeclRefExpr 0x7fd0a700a820 <col:23> 'int' lvalue Var 0x7fd0a700a478 'edi' 'int'
+| |   `-IntegerLiteral 0x7fd0a700a8b8 <line:20:10> 'unsigned int' 3735928559
+| `-NoInlineAttr 0x7fd0a700a298 <line:8:26>
+|-FunctionDecl 0x7fd0a700aa38 <line:23:1, line:29:1> line:24:6 used ms_abi_func 'void () __attribute__((ms_abi))':'void () __attribute__((ms_abi))'
+| |-CompoundStmt 0x7fd0a800f568 <line:25:1, line:29:1>
+| | |-CallExpr 0x7fd0a700ac70 <line:26:3, col:37> 'void'
+| | | |-ImplicitCastExpr 0x7fd0a700ac58 <col:3> 'void (*)(const char *, void *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fd0a700ab20 <col:3> 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)' Function 0x7fd0a700a1e8 'sysv_abi_func' 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)'
+| | | |-ImplicitCastExpr 0x7fd0a700acc0 <col:18> 'const char *' <BitCast>
+| | | | `-ImplicitCastExpr 0x7fd0a700aca8 <col:18> 'char *' <ArrayToPointerDecay>
+| | | |   `-StringLiteral 0x7fd0a700ab88 <col:18> 'char [9]' lvalue "1st call"
+| | | `-ImplicitCastExpr 0x7fd0a700acd8 <col:30, col:31> 'void *' <BitCast>
+| | |   `-UnaryOperator 0x7fd0a700abe0 <col:30, col:31> 'char *' prefix '&'
+| | |     `-DeclRefExpr 0x7fd0a700abb8 <col:31> 'char' lvalue Var 0x7fd0a7009fa0 'global' 'char'
+| | |-CallExpr 0x7fd0a700ada8 <line:27:3, col:37> 'void'
+| | | |-ImplicitCastExpr 0x7fd0a700ad90 <col:3> 'void (*)(const char *, void *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+| | | | `-DeclRefExpr 0x7fd0a700acf0 <col:3> 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)' Function 0x7fd0a700a1e8 'sysv_abi_func' 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)'
+| | | |-ImplicitCastExpr 0x7fd0a800f400 <col:18> 'const char *' <BitCast>
+| | | | `-ImplicitCastExpr 0x7fd0a700ade0 <col:18> 'char *' <ArrayToPointerDecay>
+| | | |   `-StringLiteral 0x7fd0a700ad18 <col:18> 'char [9]' lvalue "2nd call"
+| | | `-ImplicitCastExpr 0x7fd0a800f418 <col:30, col:31> 'void *' <BitCast>
+| | |   `-UnaryOperator 0x7fd0a700ad70 <col:30, col:31> 'char *' prefix '&'
+| | |     `-DeclRefExpr 0x7fd0a700ad48 <col:31> 'char' lvalue Var 0x7fd0a7009fa0 'global' 'char'
+| | `-CallExpr 0x7fd0a800f4e8 <line:28:3, col:37> 'void'
+| |   |-ImplicitCastExpr 0x7fd0a800f4d0 <col:3> 'void (*)(const char *, void *) __attribute__((sysv_abi))' <FunctionToPointerDecay>
+| |   | `-DeclRefExpr 0x7fd0a800f430 <col:3> 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)' Function 0x7fd0a700a1e8 'sysv_abi_func' 'void (const char *, void *) __attribute__((sysv_abi))':'void (const char *, void *)'
+| |   |-ImplicitCastExpr 0x7fd0a800f538 <col:18> 'const char *' <BitCast>
+| |   | `-ImplicitCastExpr 0x7fd0a800f520 <col:18> 'char *' <ArrayToPointerDecay>
+| |   |   `-StringLiteral 0x7fd0a800f458 <col:18> 'char [9]' lvalue "3rd call"
+| |   `-ImplicitCastExpr 0x7fd0a800f550 <col:30, col:31> 'void *' <BitCast>
+| |     `-UnaryOperator 0x7fd0a800f4b0 <col:30, col:31> 'char *' prefix '&'
+| |       `-DeclRefExpr 0x7fd0a800f488 <col:31> 'char' lvalue Var 0x7fd0a7009fa0 'global' 'char'
+| `-NoInlineAttr 0x7fd0a700aad8 <line:23:24>
+`-FunctionDecl 0x7fd0a800f658 <line:31:1, line:36:1> line:32:1 main 'int (void)'
+  `-CompoundStmt 0x7fd0a800f820 <line:33:1, line:36:1>
+    |-CallExpr 0x7fd0a800f7c0 <line:34:3, col:15> 'void'
+    | `-ImplicitCastExpr 0x7fd0a800f7a8 <col:3> 'void (*)() __attribute__((ms_abi))' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fd0a800f728 <col:3> 'void () __attribute__((ms_abi))':'void () __attribute__((ms_abi))' Function 0x7fd0a700aa38 'ms_abi_func' 'void () __attribute__((ms_abi))':'void () __attribute__((ms_abi))'
+    `-ReturnStmt 0x7fd0a800f808 <line:35:3, col:10>
+      `-IntegerLiteral 0x7fd0a800f7e8 <col:10> 'int' 0

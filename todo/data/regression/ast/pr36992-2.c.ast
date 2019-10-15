@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7fe39380a6e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fe3928f6e68 <../Data/C2AST/pr36992-2.c:5:1, line:9:1> line:6:1 test '__m128i (__m128i)'
+  |-ParmVarDecl 0x7fe3928f6de0 <col:7, col:15> col:15 used b '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7fe3928f7030 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fe3928f7018 <line:8:3, col:27>
+      `-CallExpr 0x7fe3928f6fd0 <col:10, col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+        |-ImplicitCastExpr 0x7fe3928f6fb8 <col:10> '__m128i (*)(__m128i)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fe3928f6f10 <col:10> '__m128i (__m128i)' Function 0x7fe3928f4ac0 '_mm_move_epi64' '__m128i (__m128i)'
+        `-ImplicitCastExpr 0x7fe3928f7000 <col:26> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7fe3928f6f38 <col:26> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe3928f6de0 'b' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'

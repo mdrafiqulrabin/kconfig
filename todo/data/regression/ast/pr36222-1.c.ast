@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fc2e902bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc2e9815200 <../Data/C2AST/pr36222-1.c:4:1, col:19> col:19 referenced __m128i '__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |-VectorType 0x7fc2e902c980 '__attribute__((__vector_size__(2 * sizeof(long long)))) long long' 2
+| | `-BuiltinType 0x7fc2e902be20 'long long'
+| `-MayAliasAttr 0x7fc2e9815258 <col:65>
+|-TypedefDecl 0x7fc2e98152f8 <line:5:1, col:13> col:13 referenced __v4si '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fc2e98152c0 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fc2e902bde0 'int'
+`-FunctionDecl 0x7fc2e9815630 <line:7:1, line:10:1> line:7:9 _mm_set_epi32 '__m128i (int, int, int, int)'
+  |-ParmVarDecl 0x7fc2e9815388 <col:24, col:28> col:28 used __q3 'int'
+  |-ParmVarDecl 0x7fc2e9815400 <col:34, col:38> col:38 used __q2 'int'
+  |-ParmVarDecl 0x7fc2e9815478 <col:44, col:48> col:48 used __q1 'int'
+  |-ParmVarDecl 0x7fc2e98154f0 <col:54, col:58> col:58 used __q0 'int'
+  `-CompoundStmt 0x7fc2e98159b0 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fc2e9815998 <line:9:3, col:52>
+      `-CStyleCastExpr 0x7fc2e9815970 <col:10, col:52> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+        `-ImplicitCastExpr 0x7fc2e9815958 <col:19, col:52> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          `-CompoundLiteralExpr 0x7fc2e9815920 <col:19, col:52> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue
+            `-InitListExpr 0x7fc2e9815860 <col:27, col:52> '__v4si':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+              |-ImplicitCastExpr 0x7fc2e98158c0 <col:29> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fc2e9815760 <col:29> 'int' lvalue ParmVar 0x7fc2e98154f0 '__q0' 'int'
+              |-ImplicitCastExpr 0x7fc2e98158d8 <col:35> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fc2e9815788 <col:35> 'int' lvalue ParmVar 0x7fc2e9815478 '__q1' 'int'
+              |-ImplicitCastExpr 0x7fc2e98158f0 <col:41> 'int' <LValueToRValue>
+              | `-DeclRefExpr 0x7fc2e98157b0 <col:41> 'int' lvalue ParmVar 0x7fc2e9815400 '__q2' 'int'
+              `-ImplicitCastExpr 0x7fc2e9815908 <col:47> 'int' <LValueToRValue>
+                `-DeclRefExpr 0x7fc2e98157d8 <col:47> 'int' lvalue ParmVar 0x7fc2e9815388 '__q3' 'int'

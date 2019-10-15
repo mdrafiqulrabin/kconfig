@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fd23f02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd23f02c9a0 <../Data/C2AST/pr52177.c:5:1, col:6> col:6 used s 'int *'
+|-FunctionDecl 0x7fd23f814290 <line:7:1, line:11:1> line:8:1 used foo 'int ()' static inline
+| `-CompoundStmt 0x7fd23f814398 <line:9:1, line:11:1>
+|   `-ReturnStmt 0x7fd23f814380 <line:10:3, col:21>
+|     `-ImplicitCastExpr 0x7fd23f814368 <col:10, col:21> 'int' <IntegralCast>
+|       `-UnaryExprOrTypeTraitExpr 0x7fd23f814348 <col:10, col:21> 'unsigned long' sizeof 'int'
+|-FunctionDecl 0x7fd23f8143d8 <line:13:1, line:17:1> line:14:1 bar 'int ()'
+| `-CompoundStmt 0x7fd23f814888 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x7fd23f814870 <line:16:3, col:46>
+|     `-CallExpr 0x7fd23f8147f0 <col:10, col:46> 'int'
+|       |-ImplicitCastExpr 0x7fd23f8147d8 <col:10> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fd23f8146a8 <col:10> '<builtin fn type>' Function 0x7fd23f8144f0 '__atomic_always_lock_free' 'int (unsigned long, const volatile void *)'
+|       |-ImplicitCastExpr 0x7fd23f814828 <col:37, col:42> 'unsigned long' <IntegralCast>
+|       | `-CallExpr 0x7fd23f814740 <col:37, col:42> 'int'
+|       |   `-ImplicitCastExpr 0x7fd23f814728 <col:37> 'int (*)()' <FunctionToPointerDecay>
+|       |     `-DeclRefExpr 0x7fd23f8146d0 <col:37> 'int ()' Function 0x7fd23f814290 'foo' 'int ()'
+|       `-ImplicitCastExpr 0x7fd23f814858 <col:45> 'const volatile void *' <BitCast>
+|         `-ImplicitCastExpr 0x7fd23f814840 <col:45> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd23f814768 <col:45> 'int *' lvalue Var 0x7fd23f02c9a0 's' 'int *'
+|-FunctionDecl 0x7fd23f8144f0 <col:10> col:10 implicit used __atomic_always_lock_free 'int (unsigned long, const volatile void *)' extern
+| |-ParmVarDecl 0x7fd23f814590 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fd23f8145f0 <<invalid sloc>> <invalid sloc> 'const volatile void *'
+| `-NoThrowAttr 0x7fd23f814660 <col:10> Implicit
+|-FunctionDecl 0x7fd23f8148c8 <line:19:1, line:23:1> line:20:1 baz 'int ()'
+| `-CompoundStmt 0x7fd23f814ca0 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x7fd23f814c88 <line:22:3, col:42>
+|     `-CallExpr 0x7fd23f814c08 <col:10, col:42> 'int'
+|       |-ImplicitCastExpr 0x7fd23f814bf0 <col:10> 'int (*)(unsigned long, const volatile void *)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fd23f814b20 <col:10> '<builtin fn type>' Function 0x7fd23f814968 '__atomic_is_lock_free' 'int (unsigned long, const volatile void *)'
+|       |-ImplicitCastExpr 0x7fd23f814c40 <col:33, col:38> 'unsigned long' <IntegralCast>
+|       | `-CallExpr 0x7fd23f814b88 <col:33, col:38> 'int'
+|       |   `-ImplicitCastExpr 0x7fd23f814b70 <col:33> 'int (*)()' <FunctionToPointerDecay>
+|       |     `-DeclRefExpr 0x7fd23f814b48 <col:33> 'int ()' Function 0x7fd23f814290 'foo' 'int ()'
+|       `-ImplicitCastExpr 0x7fd23f814c70 <col:41> 'const volatile void *' <BitCast>
+|         `-ImplicitCastExpr 0x7fd23f814c58 <col:41> 'int *' <LValueToRValue>
+|           `-DeclRefExpr 0x7fd23f814bb0 <col:41> 'int *' lvalue Var 0x7fd23f02c9a0 's' 'int *'
+`-FunctionDecl 0x7fd23f814968 <col:10> col:10 implicit used __atomic_is_lock_free 'int (unsigned long, const volatile void *)' extern
+  |-ParmVarDecl 0x7fd23f814a08 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-ParmVarDecl 0x7fd23f814a68 <<invalid sloc>> <invalid sloc> 'const volatile void *'
+  `-NoThrowAttr 0x7fd23f814ad8 <col:10> Implicit

@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fbaea00f8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbaea010578 <../Data/C2AST/pr29801.c:6:1, col:22> col:18 used a 'const int' static cinit
+| `-IntegerLiteral 0x7fbae9802040 <col:22> 'int' 2
+`-FunctionDecl 0x7fbae9802148 <line:8:1, line:16:1> line:8:5 test 'int (int)'
+  |-ParmVarDecl 0x7fbae9802078 <col:11, col:15> col:15 used param 'int'
+  `-CompoundStmt 0x7fbae98024d0 <line:9:1, line:16:1>
+    |-DeclStmt 0x7fbae9802340 <line:10:3, col:22>
+    | `-VarDecl 0x7fbae9802230 <col:3, col:21> col:8 used p 'int *' cinit
+    |   `-CStyleCastExpr 0x7fbae9802318 <col:12, col:21> 'int *' <BitCast>
+    |     `-UnaryOperator 0x7fbae98022b8 <col:20, col:21> 'const int *' prefix '&'
+    |       `-DeclRefExpr 0x7fbae9802290 <col:21> 'const int' lvalue Var 0x7fbaea010578 'a' 'const int'
+    |-IfStmt 0x7fbae9802440 <line:12:3, line:13:10>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fbae9802380 <line:12:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fbae9802358 <col:7> 'int' lvalue ParmVar 0x7fbae9802078 'param' 'int'
+    | |-BinaryOperator 0x7fbae9802418 <line:13:5, col:10> 'int' '='
+    | | |-UnaryOperator 0x7fbae98023d8 <col:5, col:6> 'int' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7fbae98023c0 <col:6> 'int *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fbae9802398 <col:6> 'int *' lvalue Var 0x7fbae9802230 'p' 'int *'
+    | | `-IntegerLiteral 0x7fbae98023f8 <col:10> 'int' 5
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fbae98024b8 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fbae98024a0 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fbae9802478 <col:10> 'const int' lvalue Var 0x7fbaea010578 'a' 'const int'

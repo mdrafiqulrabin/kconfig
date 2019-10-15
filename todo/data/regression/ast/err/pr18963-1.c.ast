@@ -1,0 +1,60 @@
+../Data/C2AST/pr18963-1.c:8:3: error: illegal storage class on function
+  auto int barf ();
+  ^
+../Data/C2AST/pr18963-1.c:11:15: error: function definition is not allowed here
+  int barf () {
+              ^
+2 errors generated.
+TranslationUnitDecl 0x7f97a1826ee8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f97a1827460 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f97a1827180 '__int128'
+|-TypedefDecl 0x7f97a18274d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f97a18271a0 'unsigned __int128'
+|-TypedefDecl 0x7f97a18277a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f97a18275b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f97a1827528 '__NSConstantString_tag'
+|-TypedefDecl 0x7f97a1827840 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f97a1827800 'char *'
+|   `-BuiltinType 0x7f97a1826f80 'char'
+|-TypedefDecl 0x7f97a1827b08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f97a1827ab0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f97a1827920 'struct __va_list_tag'
+|     `-Record 0x7f97a1827898 '__va_list_tag'
+|-FunctionDecl 0x7f97a1868a00 <../Data/C2AST/pr18963-1.c:4:1, col:18> col:12 barf 'int ()' static
+|-FunctionDecl 0x7f97a1868b08 <line:6:1, line:16:1> line:6:5 used foo 'int ()'
+| `-CompoundStmt 0x7f97a1868d48 <line:7:1, line:16:1>
+|   |-DeclStmt 0x7f97a1868c80 <line:8:3, col:19>
+|   | `-FunctionDecl 0x7f97a1868bd0 parent 0x7f97a1826ee8 <col:3, col:18> col:12 invalid barf 'int ()'
+|   `-DeclStmt 0x7f97a1868d30 <line:9:3, col:12>
+|     `-VarDecl 0x7f97a1868cb0 <col:3, col:11> col:7 j 'int' cinit
+|       `-IntegerLiteral 0x7f97a1868d10 <col:11> 'int' 4
+|-FunctionDecl 0x7f97a1868d90 prev 0x7f97a1868a00 <line:18:1, line:20:1> line:18:12 barf 'int ()' static
+| `-CompoundStmt 0x7f97a1868e68 <col:20, line:20:1>
+|   `-ReturnStmt 0x7f97a1868e50 <line:19:3, col:10>
+|     `-IntegerLiteral 0x7f97a1868e30 <col:10> 'int' 3
+|-FunctionDecl 0x7f97a1868f98 <line:22:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f97a1869038 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7f97a18690a0 prev 0x7f97a1868f98 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7f97a1868e98 <col:19> col:22 'int'
+|-FunctionDecl 0x7f97a18691d0 <line:23:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f97a1869270 prev 0x7f97a18691d0 <col:1, col:20> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f97a1869578 <line:25:1, line:29:1> line:25:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7f97a1869350 <col:11, col:15> col:15 argc 'int'
+  |-ParmVarDecl 0x7f97a1869460 <col:21, col:32> col:27 argv 'char **':'char **'
+  `-CompoundStmt 0x7f97a1869890 <col:35, line:29:1>
+    |-IfStmt 0x7f97a1869798 <line:26:3, line:27:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f97a18696d8 <line:26:7, col:17> 'int' '!='
+    | | |-CallExpr 0x7f97a1869690 <col:7, col:12> 'int'
+    | | | `-ImplicitCastExpr 0x7f97a1869678 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7f97a1869628 <col:7> 'int ()' Function 0x7f97a1868b08 'foo' 'int ()'
+    | | `-IntegerLiteral 0x7f97a18696b8 <col:17> 'int' 4
+    | |-CallExpr 0x7f97a1869770 <line:27:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f97a1869758 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f97a1869700 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f97a1869270 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f97a1869860 <line:28:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7f97a1869848 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f97a18697d0 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7f97a18690a0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7f97a18697f8 <col:9> 'int' 0

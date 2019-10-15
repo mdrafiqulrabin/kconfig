@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fe0b302bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe0b302c960 <../Data/C2AST/pr39678.c:6:1, line:9:1> line:6:8 struct X definition
+| |-FieldDecl 0x7fe0b306d830 <line:7:3, col:8> col:8 referenced c 'char'
+| `-FieldDecl 0x7fe0b306d888 <line:8:3, col:21> col:21 referenced val '_Complex float'
+`-FunctionDecl 0x7fe0b306da50 <line:11:1, line:19:1> line:12:1 foo 'struct X (float *)'
+  |-ParmVarDecl 0x7fe0b306d910 <col:6, col:13> col:13 used p 'float *'
+  `-CompoundStmt 0x7fe0b306dfe8 <line:13:1, line:19:1>
+    |-DeclStmt 0x7fe0b306dbb8 <line:14:3, col:13>
+    | `-VarDecl 0x7fe0b306db58 <col:3, col:12> col:12 used x 'struct X':'struct X' nrvo
+    |-BinaryOperator 0x7fe0b306dc88 <line:15:3, col:10> 'char' '='
+    | |-MemberExpr 0x7fe0b306dbf8 <col:3, col:5> 'char' lvalue .c 0x7fe0b306d830
+    | | `-DeclRefExpr 0x7fe0b306dbd0 <col:3> 'struct X':'struct X' lvalue Var 0x7fe0b306db58 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe0b306dc70 <col:9, col:10> 'char' <IntegralCast>
+    |   `-UnaryOperator 0x7fe0b306dc50 <col:9, col:10> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe0b306dc30 <col:10> 'int' 3
+    |-BinaryOperator 0x7fe0b306de20 <line:16:3, col:21> 'float' '='
+    | |-UnaryOperator 0x7fe0b306dd60 <col:3, col:12> 'float' lvalue prefix '__real'
+    | | `-MemberExpr 0x7fe0b306dd28 <col:10, col:12> '_Complex float' lvalue .val 0x7fe0b306d888
+    | |   `-DeclRefExpr 0x7fe0b306dd00 <col:10> 'struct X':'struct X' lvalue Var 0x7fe0b306db58 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe0b306de08 <col:18, col:21> 'float' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fe0b306dde0 <col:18, col:21> 'float' lvalue
+    |     |-ImplicitCastExpr 0x7fe0b306ddc8 <col:18> 'float *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fe0b306dd80 <col:18> 'float *' lvalue ParmVar 0x7fe0b306d910 'p' 'float *'
+    |     `-IntegerLiteral 0x7fe0b306dda8 <col:20> 'int' 0
+    |-BinaryOperator 0x7fe0b306df68 <line:17:3, col:21> 'float' '='
+    | |-UnaryOperator 0x7fe0b306dea8 <col:3, col:12> 'float' lvalue prefix '__imag'
+    | | `-MemberExpr 0x7fe0b306de70 <col:10, col:12> '_Complex float' lvalue .val 0x7fe0b306d888
+    | |   `-DeclRefExpr 0x7fe0b306de48 <col:10> 'struct X':'struct X' lvalue Var 0x7fe0b306db58 'x' 'struct X':'struct X'
+    | `-ImplicitCastExpr 0x7fe0b306df50 <col:18, col:21> 'float' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x7fe0b306df28 <col:18, col:21> 'float' lvalue
+    |     |-ImplicitCastExpr 0x7fe0b306df10 <col:18> 'float *' <LValueToRValue>
+    |     | `-DeclRefExpr 0x7fe0b306dec8 <col:18> 'float *' lvalue ParmVar 0x7fe0b306d910 'p' 'float *'
+    |     `-IntegerLiteral 0x7fe0b306def0 <col:20> 'int' 1
+    `-ReturnStmt 0x7fe0b306dfd0 <line:18:3, col:10>
+      `-ImplicitCastExpr 0x7fe0b306dfb8 <col:10> 'struct X':'struct X' <LValueToRValue>
+        `-DeclRefExpr 0x7fe0b306df90 <col:10> 'struct X':'struct X' lvalue Var 0x7fe0b306db58 'x' 'struct X':'struct X'

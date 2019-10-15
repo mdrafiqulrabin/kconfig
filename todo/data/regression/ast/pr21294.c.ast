@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f85dd81b4e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f85dd81c160 <../Data/C2AST/pr21294.c:6:1, line:8:1> line:6:8 struct f definition
+| `-FieldDecl 0x7f85dd042038 <line:7:3, col:7> col:7 referenced i 'int'
+`-FunctionDecl 0x7f85dd042238 <line:10:1, line:17:1> line:11:1 foo 'int (struct f *)'
+  |-ParmVarDecl 0x7f85dd042130 <col:6, col:16> col:16 used p 'struct f *'
+  `-CompoundStmt 0x7f85dd0425c8 <line:12:1, line:17:1>
+    |-IfStmt 0x7f85dd042558 <line:13:3, line:15:14>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f85dd042398 <line:13:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f85dd042368 <col:7> 'struct f *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f85dd042320 <col:7> 'struct f *' lvalue ParmVar 0x7f85dd042130 'p' 'struct f *'
+    | | `-ImplicitCastExpr 0x7f85dd042380 <col:12> 'struct f *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7f85dd042348 <col:12> 'int' 0
+    | |-IfStmt 0x7f85dd042520 <line:14:5, line:15:14>
+    | | |-<<<NULL>>>
+    | | |-<<<NULL>>>
+    | | |-BinaryOperator 0x7f85dd0424c0 <line:14:9, col:18> 'int' '!='
+    | | | |-UnaryOperator 0x7f85dd042468 <col:9, col:13> 'int *' prefix '&'
+    | | | | `-MemberExpr 0x7f85dd042400 <col:10, col:13> 'int' lvalue ->i 0x7f85dd042038
+    | | | |   `-ImplicitCastExpr 0x7f85dd0423e8 <col:10> 'struct f *' <LValueToRValue>
+    | | | |     `-DeclRefExpr 0x7f85dd0423c0 <col:10> 'struct f *' lvalue ParmVar 0x7f85dd042130 'p' 'struct f *'
+    | | | `-ImplicitCastExpr 0x7f85dd0424a8 <col:18> 'int *' <NullToPointer>
+    | | |   `-IntegerLiteral 0x7f85dd042488 <col:18> 'int' 0
+    | | |-ReturnStmt 0x7f85dd042508 <line:15:7, col:14>
+    | | | `-IntegerLiteral 0x7f85dd0424e8 <col:14> 'int' 123
+    | | `-<<<NULL>>>
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f85dd0425b0 <line:16:3, col:10>
+      `-IntegerLiteral 0x7f85dd042590 <col:10> 'int' 0

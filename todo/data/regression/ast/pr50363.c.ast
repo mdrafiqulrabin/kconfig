@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x7fa9a50228e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa9a481d950 <../Data/C2AST/pr50363.c:4:1, line:10:1> line:5:1 foo 'void (int *restrict *, int)'
+  |-ParmVarDecl 0x7fa9a481d800 <col:6, col:26> col:26 used r 'int *restrict *'
+  |-ParmVarDecl 0x7fa9a481d878 <col:29, col:33> col:33 used n 'int'
+  `-CompoundStmt 0x7fa9a481dd70 <line:6:1, line:10:1>
+    |-DeclStmt 0x7fa9a481dab8 <line:7:3, col:9>
+    | `-VarDecl 0x7fa9a481da58 <col:3, col:8> col:8 used p 'int *'
+    `-ForStmt 0x7fa9a481dd38 <line:8:3, line:9:5>
+      |-BinaryOperator 0x7fa9a481db70 <line:8:8, col:13> 'int *' '='
+      | |-DeclRefExpr 0x7fa9a481dad0 <col:8> 'int *' lvalue Var 0x7fa9a481da58 'p' 'int *'
+      | `-ImplicitCastExpr 0x7fa9a481db58 <col:12, col:13> 'int *' <LValueToRValue>
+      |   `-UnaryOperator 0x7fa9a481db38 <col:12, col:13> 'int *restrict' lvalue prefix '*'
+      |     `-ImplicitCastExpr 0x7fa9a481db20 <col:13> 'int *restrict *' <LValueToRValue>
+      |       `-DeclRefExpr 0x7fa9a481daf8 <col:13> 'int *restrict *' lvalue ParmVar 0x7fa9a481d800 'r' 'int *restrict *'
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa9a481dcb8 <col:16, col:25> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa9a481dca0 <col:16> 'int *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa9a481db98 <col:16> 'int *' lvalue Var 0x7fa9a481da58 'p' 'int *'
+      | `-BinaryOperator 0x7fa9a481dc78 <col:20, col:25> 'int *' '+'
+      |   |-ImplicitCastExpr 0x7fa9a481dc48 <col:20, col:21> 'int *' <LValueToRValue>
+      |   | `-UnaryOperator 0x7fa9a481dc00 <col:20, col:21> 'int *restrict' lvalue prefix '*'
+      |   |   `-ImplicitCastExpr 0x7fa9a481dbe8 <col:21> 'int *restrict *' <LValueToRValue>
+      |   |     `-DeclRefExpr 0x7fa9a481dbc0 <col:21> 'int *restrict *' lvalue ParmVar 0x7fa9a481d800 'r' 'int *restrict *'
+      |   `-ImplicitCastExpr 0x7fa9a481dc60 <col:25> 'int' <LValueToRValue>
+      |     `-DeclRefExpr 0x7fa9a481dc20 <col:25> 'int' lvalue ParmVar 0x7fa9a481d878 'n' 'int'
+      |-UnaryOperator 0x7fa9a481dd08 <col:28, col:29> 'int *' postfix '++'
+      | `-DeclRefExpr 0x7fa9a481dce0 <col:28> 'int *' lvalue Var 0x7fa9a481da58 'p' 'int *'
+      `-NullStmt 0x7fa9a481dd28 <line:9:5>

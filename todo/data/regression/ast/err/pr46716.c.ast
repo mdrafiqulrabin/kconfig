@@ -1,0 +1,105 @@
+../Data/C2AST/pr46716.c:5:10: fatal error: 'sse-check.h' file not found
+#include "sse-check.h"
+         ^~~~~~~~~~~~~
+TranslationUnitDecl 0x7fb22f824ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb22f825060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb22f824d80 '__int128'
+|-TypedefDecl 0x7fb22f8250d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb22f824da0 'unsigned __int128'
+|-TypedefDecl 0x7fb22f8253a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb22f8251b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb22f825128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb22f825440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb22f825400 'char *'
+|   `-BuiltinType 0x7fb22f824b80 'char'
+|-TypedefDecl 0x7fb22f825708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb22f8256b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb22f825520 'struct __va_list_tag'
+|     `-Record 0x7fb22f825498 '__va_list_tag'
+|-TypedefDecl 0x7fb22f031000 <../Data/C2AST/pr46716.c:7:1, col:16> col:16 referenced V '__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-VectorType 0x7fb22f825780 '__attribute__((__vector_size__(2 * sizeof(double)))) double' 2
+| | `-BuiltinType 0x7fb22f824d00 'double'
+| `-MayAliasAttr 0x7fb22f031058 <col:56>
+|-RecordDecl 0x7fb22f0310a0 <line:8:9, line:12:1> line:8:9 union definition
+| |-FieldDecl 0x7fb22f031180 <line:10:3, col:5> col:5 referenced x 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| `-FieldDecl 0x7fb22f031250 <line:11:3, col:13> col:10 referenced a 'double [2]'
+|-TypedefDecl 0x7fb22f0312f0 <line:8:1, line:12:3> col:3 referenced u 'union u':'u'
+| `-ElaboratedType 0x7fb22f0312a0 'union u' sugar
+|   `-RecordType 0x7fb22f031130 'u'
+|     `-Record 0x7fb22f0310a0 ''
+|-FunctionDecl 0x7fb22f0314f0 <line:16:1, line:22:1> line:17:1 used test 'void (V, V)'
+| |-ParmVarDecl 0x7fb22f031370 <col:7, col:9> col:9 used s1 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-ParmVarDecl 0x7fb22f0313e0 <col:13, col:15> col:15 used s2 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |-CompoundStmt 0x7fb22f031d70 <line:18:1, line:22:1>
+| | `-IfStmt 0x7fb22f031d38 <line:19:3, line:21:12>
+| |   |-<<<NULL>>>
+| |   |-<<<NULL>>>
+| |   |-BinaryOperator 0x7fb22f031ba0 <line:14:21, line:20:43> 'int' '||'
+| |   | |-BinaryOperator 0x7fb22f031900 <line:14:21, line:19:40> 'int' '!='
+| |   | | |-ImplicitCastExpr 0x7fb22f0318d0 <line:14:21, line:19:21> 'double' <LValueToRValue>
+| |   | | | `-ArraySubscriptExpr 0x7fb22f031798 <line:14:21, line:19:21> 'double' lvalue
+| |   | | |   |-ParenExpr 0x7fb22f031758 <line:14:21, col:36> 'double *'
+| |   | | |   | `-CStyleCastExpr 0x7fb22f031730 <col:22, col:35> 'double *' <BitCast>
+| |   | | |   |   `-UnaryOperator 0x7fb22f0316c8 <col:32, col:35> 'V *' prefix '&'
+| |   | | |   |     `-ParenExpr 0x7fb22f031650 <col:33, col:35> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+| |   | | |   |       `-DeclRefExpr 0x7fb22f031628 <line:19:16> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fb22f031370 's1' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |   | | |   `-IntegerLiteral 0x7fb22f031778 <col:20> 'int' 0
+| |   | | `-ImplicitCastExpr 0x7fb22f0318e8 <line:14:21, line:19:40> 'double' <LValueToRValue>
+| |   | |   `-ArraySubscriptExpr 0x7fb22f0318a8 <line:14:21, line:19:40> 'double' lvalue
+| |   | |     |-ParenExpr 0x7fb22f031868 <line:14:21, col:36> 'double *'
+| |   | |     | `-CStyleCastExpr 0x7fb22f031840 <col:22, col:35> 'double *' <BitCast>
+| |   | |     |   `-UnaryOperator 0x7fb22f031808 <col:32, col:35> 'V *' prefix '&'
+| |   | |     |     `-ParenExpr 0x7fb22f0317e8 <col:33, col:35> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+| |   | |     |       `-DeclRefExpr 0x7fb22f0317c0 <line:19:35> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fb22f0313e0 's2' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |   | |     `-IntegerLiteral 0x7fb22f031888 <col:39> 'int' 0
+| |   | `-BinaryOperator 0x7fb22f031b78 <line:14:21, line:20:43> 'int' '!='
+| |   |   |-ImplicitCastExpr 0x7fb22f031b48 <line:14:21, line:20:24> 'double' <LValueToRValue>
+| |   |   | `-ArraySubscriptExpr 0x7fb22f031a10 <line:14:21, line:20:24> 'double' lvalue
+| |   |   |   |-ParenExpr 0x7fb22f0319d0 <line:14:21, col:36> 'double *'
+| |   |   |   | `-CStyleCastExpr 0x7fb22f0319a8 <col:22, col:35> 'double *' <BitCast>
+| |   |   |   |   `-UnaryOperator 0x7fb22f031970 <col:32, col:35> 'V *' prefix '&'
+| |   |   |   |     `-ParenExpr 0x7fb22f031950 <col:33, col:35> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+| |   |   |   |       `-DeclRefExpr 0x7fb22f031928 <line:20:19> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fb22f031370 's1' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |   |   |   `-IntegerLiteral 0x7fb22f0319f0 <col:23> 'int' 1
+| |   |   `-ImplicitCastExpr 0x7fb22f031b60 <line:14:21, line:20:43> 'double' <LValueToRValue>
+| |   |     `-ArraySubscriptExpr 0x7fb22f031b20 <line:14:21, line:20:43> 'double' lvalue
+| |   |       |-ParenExpr 0x7fb22f031ae0 <line:14:21, col:36> 'double *'
+| |   |       | `-CStyleCastExpr 0x7fb22f031ab8 <col:22, col:35> 'double *' <BitCast>
+| |   |       |   `-UnaryOperator 0x7fb22f031a80 <col:32, col:35> 'V *' prefix '&'
+| |   |       |     `-ParenExpr 0x7fb22f031a60 <col:33, col:35> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue
+| |   |       |       `-DeclRefExpr 0x7fb22f031a38 <line:20:38> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue ParmVar 0x7fb22f0313e0 's2' 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double'
+| |   |       `-IntegerLiteral 0x7fb22f031b00 <col:42> 'int' 1
+| |   |-CallExpr 0x7fb22f031d10 <line:21:5, col:12> 'void'
+| |   | `-ImplicitCastExpr 0x7fb22f031cf8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |   |   `-DeclRefExpr 0x7fb22f031ca0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fb22f031c00 'abort' 'void (void) __attribute__((noreturn))'
+| |   `-<<<NULL>>>
+| `-NoInlineAttr 0x7fb22f0315a0 <line:16:22>
+|-FunctionDecl 0x7fb22f031c00 <line:21:5> col:5 implicit used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fb22f031e50 <line:24:1, line:33:1> line:25:1 sse_test 'void (void)' static
+  `-CompoundStmt 0x7fb22f819778 <line:26:1, line:33:1>
+    |-DeclStmt 0x7fb22f031f80 <line:27:3, col:7>
+    | `-VarDecl 0x7fb22f031f20 <col:3, col:5> col:5 used s1 'u':'u'
+    |-BinaryOperator 0x7fb22f819480 <line:29:3, col:13> 'double' '='
+    | |-ArraySubscriptExpr 0x7fb22f819438 <col:3, col:9> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7fb22f819420 <col:3, col:6> 'double *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fb22f031fc0 <col:3, col:6> 'double [2]' lvalue .a 0x7fb22f031250
+    | | |   `-DeclRefExpr 0x7fb22f031f98 <col:3> 'u':'u' lvalue Var 0x7fb22f031f20 's1' 'u':'u'
+    | | `-IntegerLiteral 0x7fb22f819400 <col:8> 'int' 0
+    | `-FloatingLiteral 0x7fb22f819460 <col:13> 'double' 1.000000e+00
+    |-BinaryOperator 0x7fb22f819588 <line:30:3, col:13> 'double' '='
+    | |-ArraySubscriptExpr 0x7fb22f819540 <col:3, col:9> 'double' lvalue
+    | | |-ImplicitCastExpr 0x7fb22f819528 <col:3, col:6> 'double *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fb22f8194d0 <col:3, col:6> 'double [2]' lvalue .a 0x7fb22f031250
+    | | |   `-DeclRefExpr 0x7fb22f8194a8 <col:3> 'u':'u' lvalue Var 0x7fb22f031f20 's1' 'u':'u'
+    | | `-IntegerLiteral 0x7fb22f819508 <col:8> 'int' 1
+    | `-FloatingLiteral 0x7fb22f819568 <col:13> 'double' 2.000000e+00
+    `-CallExpr 0x7fb22f819710 <line:32:3, col:19> 'void'
+      |-ImplicitCastExpr 0x7fb22f8196f8 <col:3> 'void (*)(V, V)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb22f8195b0 <col:3> 'void (V, V)' Function 0x7fb22f0314f0 'test' 'void (V, V)'
+      |-ImplicitCastExpr 0x7fb22f819748 <col:9, col:12> '1 error generated.
+V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+      | `-MemberExpr 0x7fb22f819600 <col:9, col:12> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue .x 0x7fb22f031180
+      |   `-DeclRefExpr 0x7fb22f8195d8 <col:9> 'u':'u' lvalue Var 0x7fb22f031f20 's1' 'u':'u'
+      `-ImplicitCastExpr 0x7fb22f819760 <col:15, col:18> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' <LValueToRValue>
+        `-MemberExpr 0x7fb22f819660 <col:15, col:18> 'V':'__attribute__((__vector_size__(2 * sizeof(double)))) double' lvalue .x 0x7fb22f031180
+          `-DeclRefExpr 0x7fb22f819638 <col:15> 'u':'u' lvalue Var 0x7fb22f031f20 's1' 'u':'u'

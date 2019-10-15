@@ -1,0 +1,62 @@
+../Data/C2AST/pr78910.c:6:11: error: use of unknown builtin '__builtin_sprintf' [-Wimplicit-function-declaration]
+  int l = __builtin_sprintf (b, "%.2d", -1);
+          ^
+TranslationUnitDecl 0x7ff40b01e4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff40b01ea60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff40b01e780 '__int128'
+|-TypedefDecl 0x7ff40b01ead0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff40b01e7a0 'unsigned __int128'
+|-TypedefDecl 0x7ff40b01eda8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff40b01ebb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff40b01eb28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff40b01ee40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff40b01ee00 'char *'
+|   `-BuiltinType 0x7ff40b01e580 'char'
+|-TypedefDecl 0x7ff40b01f108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff40b01f0b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff40b01ef20 'struct __va_list_tag'
+|     `-Record 0x7ff40b01ee98 '__va_list_tag'
+|-FunctionDecl 0x7ff40c05a400 <../Data/C2AST/pr78910.c:3:1, line:11:1> line:3:5 main 'int ()'
+| `-CompoundStmt 0x7ff40c05af28 <line:4:1, line:11:1>
+|   |-DeclStmt 0x7ff40c05a5b8 <line:5:3, col:14>
+|   | `-VarDecl 0x7ff40c05a558 <col:3, col:13> col:8 used b 'char [128]'
+|   |-DeclStmt 0x7ff40c05a8f0 <line:6:3, col:44>
+|   | `-VarDecl 0x7ff40c05a5e8 <col:3, col:43> col:7 used l 'int' cinit
+|   |   `-CallExpr 0x7ff40c05a880 <col:11, col:43> 'int'
+|   |     |-ImplicitCastExpr 0x7ff40c05a868 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff40c05a738 <col:11> 'int ()' Function 0x7ff40c05a688 '__builtin_sprintf' 'int ()'
+|   |     |-ImplicitCastExpr 0x7ff40c05a8c0 <col:30> 'char *' <ArrayToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ff40c05a760 <col:30> 'char [128]' lvalue Var 0x7ff40c05a558 'b' 'char [128]'
+|   |     |-ImplicitCastExpr 0x7ff40c05a8d8 <col:33> 'char *' <ArrayToPointerDecay>
+|   |     | `-StringLiteral 0x7ff40c05a7c8 <col:33> 'char [5]' lvalue "%.2d"
+|   |     `-UnaryOperator 0x7ff40c05a818 <col:41, col:42> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x7ff40c05a7f8 <col:42> 'int' 1
+|   |-CallExpr 0x7ff40c05abe0 <line:7:3, col:50> 'int'
+|   | |-ImplicitCastExpr 0x7ff40c05abc8 <col:3> 'int (*)(const char *, ...)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7ff40c05aaa8 <col:3> '<builtin fn type>' Function 0x7ff40c05a948 '__builtin_printf' 'int (const char *, ...)'
+|   | |-ImplicitCastExpr 0x7ff40c05ac38 <col:21> 'const char *' <BitCast>
+|   | | `-ImplicitCastExpr 0x7ff40c05ac20 <col:21> 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x7ff40c05ab08 <col:21> 'char [21]' lvalue "b: '%s', length: %d\n"
+|   | |-ImplicitCastExpr 0x7ff40c05ac50 <col:46> 'char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x7ff40c05ab48 <col:46> 'char [128]' lvalue Var 0x7ff40c05a558 'b' 'char [128]'
+|   | `-ImplicitCastExpr 0x7ff40c05ac68 <col:49> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ff40c05ab70 <col:49> 'int' lvalue Var 0x7ff40c05a5e8 'l' 'int'
+|   |-IfStmt 0x7ff40c05aeb8 <line:8:3, line:9:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff40c05ace0 <line:8:7, col:12> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7ff40c05acc8 <col:7> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff40c05ac80 <col:7> 'int' lvalue Var 0x7ff40c05a5e8 'l' 'int'
+|   | | `-IntegerLiteral 0x7ff40c05aca8 <col:12> 'int' 3
+|   | |-CallExpr 0x7ff40c05ae90 <line:9:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7ff40c05ae78 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7ff40c05ae28 <col:5> '<builtin fn type>' Function 0x7ff40c05ad40 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7ff40c05af10 <line:10:3, col:10>
+|     `-IntegerLiteral 0x7ff40c05aef0 <col:10> 'int' 0
+|-FunctionDecl 0x7ff40c05a948 <line:7:3> col:3 implicit used __builtin_printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7ff40c05a9e8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7ff41 error generated.
+0c05aa50 <col:3> Implicit printf 1 2
+`-FunctionDecl 0x7ff40c05ad40 <line:9:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7ff40c05ade0 <col:5> Implicit

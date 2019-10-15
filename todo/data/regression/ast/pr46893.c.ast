@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fb2a88174e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb2a8859020 <../Data/C2AST/pr46893.c:5:1, line:13:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7fb2a88596f8 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fb2a88593e8 <line:8:3, col:74>
+    | |-RecordDecl 0x7fb2a8859100 <col:3, col:43> col:3 union definition
+    | | |-FieldDecl 0x7fb2a88591c8 <col:11, col:30> col:30 l 'unsigned long long'
+    | | `-FieldDecl 0x7fb2a8859228 <col:33, col:40> col:40 referenced d 'double'
+    | `-VarDecl 0x7fb2a88592c0 <col:3, col:73> col:45 used u 'union (anonymous union at ../Data/C2AST/pr46893.c:8:3)':'union (anonymous at ../Data/C2AST/pr46893.c:8:3)' cinit
+    |   `-InitListExpr 0x7fb2a8859388 <col:49, col:73> 'union (anonymous union at ../Data/C2AST/pr46893.c:8:3)':'union (anonymous at ../Data/C2AST/pr46893.c:8:3)' field Field 0x7fb2a88591c8 'l' 'unsigned long long'
+    |     `-IntegerLiteral 0x7fb2a8859320 <col:51> 'unsigned long long' 9218868437227405312
+    |-DeclStmt 0x7fb2a88595d8 <line:9:3, col:25>
+    | |-VarDecl 0x7fb2a8859418 <col:3, col:14> col:10 used v 'double' cinit
+    | | `-ImplicitCastExpr 0x7fb2a8859498 <col:14> 'double' <IntegralToFloating>
+    | |   `-IntegerLiteral 0x7fb2a8859478 <col:14> 'int' 0
+    | `-VarDecl 0x7fb2a88594c8 <col:3, col:24> col:17 used w 'double' cinit
+    |   `-UnaryOperator 0x7fb2a88595a0 <col:21, col:24> 'double' prefix '-'
+    |     `-ImplicitCastExpr 0x7fb2a8859588 <col:22, col:24> 'double' <LValueToRValue>
+    |       `-MemberExpr 0x7fb2a8859550 <col:22, col:24> 'double' lvalue .d 0x7fb2a8859228
+    |         `-DeclRefExpr 0x7fb2a8859528 <col:22> 'union (anonymous union at ../Data/C2AST/pr46893.c:8:3)':'union (anonymous at ../Data/C2AST/pr46893.c:8:3)' lvalue Var 0x7fb2a88592c0 'u' 'union (anonymous union at ../Data/C2AST/pr46893.c:8:3)':'union (anonymous at ../Data/C2AST/pr46893.c:8:3)'
+    `-IfStmt 0x7fb2a88596c0 <line:11:3, line:12:9>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fb2a8859618 <line:11:7> 'double' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb2a88595f0 <col:7> 'double' lvalue Var 0x7fb2a88594c8 'w' 'double'
+      |-BinaryOperator 0x7fb2a8859698 <line:12:5, col:9> 'double' '='
+      | |-DeclRefExpr 0x7fb2a8859630 <col:5> 'double' lvalue Var 0x7fb2a88594c8 'w' 'double'
+      | `-ImplicitCastExpr 0x7fb2a8859680 <col:9> 'double' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fb2a8859658 <col:9> 'double' lvalue Var 0x7fb2a8859418 'v' 'double'
+      `-<<<NULL>>>

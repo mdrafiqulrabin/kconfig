@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fc30881e4e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc30885e000 <../Data/C2AST/pr39928-1.c:2:1, col:15> col:15 referenced __m128 '__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| |-VectorType 0x7fc30881f180 '__attribute__((__vector_size__(4 * sizeof(float)))) float' 4
+| | `-BuiltinType 0x7fc30881e6e0 'float'
+| `-MayAliasAttr 0x7fc30885e058 <col:60>
+|-FunctionDecl 0x7fc30885e250 <line:3:1, col:49> col:15 used _mm_sub_ps '__m128 (__m128, __m128)' extern
+| |-ParmVarDecl 0x7fc30885e0d0 <col:27, col:34> col:34 __A '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-ParmVarDecl 0x7fc30885e140 <col:39, col:46> col:46 __B '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+|-FunctionDecl 0x7fc30885e450 <line:4:1, col:49> col:15 used _mm_mul_ps '__m128 (__m128, __m128)' extern
+| |-ParmVarDecl 0x7fc30885e350 <col:27, col:34> col:34 __A '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+| `-ParmVarDecl 0x7fc30885e3c0 <col:39, col:46> col:46 __B '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+`-FunctionDecl 0x7fc30885e780 <line:5:1, line:9:1> line:6:1 vq_nbest '__m128 (const __m128 *, __m128, __m128)'
+  |-ParmVarDecl 0x7fc30885e568 <col:10, col:24> col:24 used codebook 'const __m128 *'
+  |-ParmVarDecl 0x7fc30885e5d8 <col:34, col:41> col:41 used d '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  |-ParmVarDecl 0x7fc30885e648 <col:44, col:51> col:51 used in '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+  `-CompoundStmt 0x7fc30885ea98 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fc30885ea80 <line:8:3, col:51>
+      `-CallExpr 0x7fc30885ea30 <col:10, col:51> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |-ImplicitCastExpr 0x7fc30885ea18 <col:10> '__m128 (*)(__m128, __m128)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc30885e838 <col:10> '__m128 (__m128, __m128)' Function 0x7fc30885e250 '_mm_sub_ps' '__m128 (__m128, __m128)'
+        |-ImplicitCastExpr 0x7fc30885ea68 <col:21> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc30885e860 <col:21> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fc30885e5d8 'd' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        `-CallExpr 0x7fc30885e9b0 <col:24, col:50> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+          |-ImplicitCastExpr 0x7fc30885e998 <col:24> '__m128 (*)(__m128, __m128)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fc30885e888 <col:24> '__m128 (__m128, __m128)' Function 0x7fc30885e450 '_mm_mul_ps' '__m128 (__m128, __m128)'
+          |-ImplicitCastExpr 0x7fc30885e9e8 <col:35> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+          | `-DeclRefExpr 0x7fc30885e8b0 <col:35> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' lvalue ParmVar 0x7fc30885e648 'in' '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+          `-ImplicitCastExpr 0x7fc30885ea00 <col:39, col:48> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float' <LValueToRValue>
+            `-UnaryOperator 0x7fc30885e920 <col:39, col:48> 'const __m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float const' lvalue prefix '*'
+              `-UnaryOperator 0x7fc30885e900 <col:40, col:48> 'const __m128 *' postfix '++'
+                `-DeclRefExpr 0x7fc30885e8d8 <col:40> 'const __m128 *' lvalue ParmVar 0x7fc30885e568 'codebook' 'const __m128 *'

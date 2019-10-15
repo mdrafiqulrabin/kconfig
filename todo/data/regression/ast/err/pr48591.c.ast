@@ -1,0 +1,70 @@
+../Data/C2AST/pr48591.c:10:3: error: __float128 is not supported on this target
+  __float128 f = 0.0;
+  ^
+TranslationUnitDecl 0x7fa7950254e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa795025a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa795025780 '__int128'
+|-TypedefDecl 0x7fa795025ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa7950257a0 'unsigned __int128'
+|-TypedefDecl 0x7fa795025da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa795025bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa795025b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa795025e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa795025e00 'char *'
+|   `-BuiltinType 0x7fa795025580 'char'
+|-TypedefDecl 0x7fa795026108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa7950260b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa795025f20 'struct __va_list_tag'
+|     `-Record 0x7fa795025e98 '__va_list_tag'
+|-FunctionDecl 0x7fa794848a50 <../Data/C2AST/pr48591.c:5:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fa794848af0 prev 0x7fa794848a50 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fa794848be0 <line:7:1, line:22:1> line:8:1 main 'int ()'
+  `-CompoundStmt 0x7fa794849380 <line:9:1, line:22:1>
+    |-DeclStmt 0x7fa794848d70 <line:10:3, col:21>
+    | `-VarDecl 0x7fa794848cd8 <col:3, col:18> col:14 used f '__float128' cinit
+    |   `-ImplicitCastExpr 0x7fa794848d58 <col:18> '__float128' <FloatingCast>
+    |     `-FloatingLiteral 0x7fa794848d38 <col:18> 'double' 0.000000e+00
+    |-DeclStmt 0x7fa794848e00 <line:11:3, col:8>
+    | `-VarDecl 0x7fa794848da0 <col:3, col:7> col:7 used i 'int'
+    |-ForStmt 0x7fa794848fe8 <line:13:5, line:14:12>
+    | |-BinaryOperator 0x7fa794848e60 <line:13:10, col:14> 'int' '='
+    | | |-DeclRefExpr 0x7fa794848e18 <col:10> 'int' lvalue Var 0x7fa794848da0 'i' 'int'
+    | | `-IntegerLiteral 0x7fa794848e40 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa794848ee8 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fa794848ed0 <col:17> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa794848e88 <col:17> 'int' lvalue Var 0x7fa794848da0 'i' 'int'
+    | | `-IntegerLiteral 0x7fa794848eb0 <col:21> 'int' 128
+    | |-UnaryOperator 0x7fa794848f38 <col:26, col:27> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7fa794848f10 <col:26> 'int' lvalue Var 0x7fa794848da0 'i' 'int'
+    | `-CompoundAssignOperator 0x7fa794848fb0 <line:14:7, col:12> '__float128' '+=' ComputeLHSTy='__float128' ComputeResultTy='__float128'
+    |   |-DeclRefExpr 0x7fa794848f58 <col:7> '__float128' lvalue Var 0x7fa794848cd8 'f' '__float128'
+    |   `-FloatingLiteral 0x7fa794848f80 <col:12> '__float128' 5.000000e-01
+    |-IfStmt 0x7fa794849148 <line:15:3, line:16:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa794849090 <line:15:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa794849078 <col:7> '__float128' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa794849020 <col:7> '__float128' lvalue Var 0x7fa794848cd8 'f' '__float128'
+    | | `-FloatingLiteral 0x7fa794849048 <col:12> '__float128' 6.400000e+01
+    | |-CallExpr 0x7fa794849120 <line:16:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fa794849108 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa7948490b8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa794848af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    |-CompoundAssignOperator 0x7fa7948491d8 <line:18:5, col:10> '__float128' '+=' ComputeLHSTy='__float128' ComputeResultTy='__float128'
+    | |-DeclRefExpr 0x7fa794849180 <col:5> '__float128' lvalue Var 0x7fa794848cd8 'f' '__float128'
+    | `-FloatingLiteral 0x7fa7948491a8 <col:10> '__float128' 8.500000e+00
+    |-IfStmt 0x7fa794849310 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f1 error generated.
+a794849280 <line:19:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fa794849268 <col:7> '__float128' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fa794849210 <col:7> '__float128' lvalue Var 0x7fa794848cd8 'f' '__float128'
+    | | `-FloatingLiteral 0x7fa794849238 <col:12> '__float128' 7.250000e+01
+    | |-CallExpr 0x7fa7948492e8 <line:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fa7948492d0 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fa7948492a8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fa794848af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fa794849368 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fa794849348 <col:10> 'int' 0

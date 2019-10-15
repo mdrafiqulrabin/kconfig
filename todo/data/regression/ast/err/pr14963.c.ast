@@ -1,0 +1,23 @@
+../Data/C2AST/pr14963.c:1:1: error: unknown type name 'X'
+X Y(Z);  
+^
+../Data/C2AST/pr14963.c:1:5: error: a parameter list without types is only allowed in a function definition
+X Y(Z);  
+    ^
+2 errors generated.
+TranslationUnitDecl 0x7fdef982bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdef982c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdef982bf80 '__int128'
+|-TypedefDecl 0x7fdef982c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdef982bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fdef982c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdef982c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdef982c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdef982c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdef982c600 'char *'
+|   `-BuiltinType 0x7fdef982bd80 'char'
+|-TypedefDecl 0x7fdef982c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdef982c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdef982c720 'struct __va_list_tag'
+|     `-Record 0x7fdef982c698 '__va_list_tag'
+`-FunctionDecl 0x7fdefa000000 <../Data/C2AST/pr14963.c:1:1, col:6> col:3 invalid Y 'int ()'

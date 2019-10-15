@@ -1,0 +1,59 @@
+TranslationUnitDecl 0x7f99e50068e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f99e485b450 <../Data/C2AST/pr70809_1.c:7:1, line:16:1> line:8:1 foo 'void (float *restrict, float *restrict, float *restrict, float *restrict)'
+  |-ParmVarDecl 0x7f99e485b000 <col:6, col:57> col:57 used a 'float *restrict'
+  | `-AlignedAttr 0x7f99e485b060 <col:42, col:53> aligned
+  |   `-IntegerLiteral 0x7f99e5007560 <col:51> 'int' 16
+  |-ParmVarDecl 0x7f99e485b0e8 <line:9:6, col:57> col:57 used x 'float *restrict'
+  | `-AlignedAttr 0x7f99e485b148 <col:42, col:53> aligned
+  |   `-IntegerLiteral 0x7f99e485b0b0 <col:51> 'int' 16
+  |-ParmVarDecl 0x7f99e485b1d0 <line:10:6, col:57> col:57 used y 'float *restrict'
+  | `-AlignedAttr 0x7f99e485b230 <col:42, col:53> aligned
+  |   `-IntegerLiteral 0x7f99e485b198 <col:51> 'int' 16
+  |-ParmVarDecl 0x7f99e485b2b8 <line:11:6, col:57> col:57 used z 'float *restrict'
+  | `-AlignedAttr 0x7f99e485b318 <col:42, col:53> aligned
+  |   `-IntegerLiteral 0x7f99e485b280 <col:51> 'int' 16
+  `-CompoundStmt 0x7f99e485bb40 <line:12:1, line:16:1>
+    |-DeclStmt 0x7f99e485b600 <line:13:3, col:17>
+    | `-VarDecl 0x7f99e485b568 <col:3, col:16> col:12 used i 'unsigned int' cinit
+    |   `-ImplicitCastExpr 0x7f99e485b5e8 <col:16> 'unsigned int' <IntegralCast>
+    |     `-IntegerLiteral 0x7f99e485b5c8 <col:16> 'int' 0
+    `-ForStmt 0x7f99e485bb08 <line:14:3, line:15:31>
+      |-BinaryOperator 0x7f99e485b678 <line:14:8, col:12> 'unsigned int' '='
+      | |-DeclRefExpr 0x7f99e485b618 <col:8> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7f99e485b660 <col:12> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7f99e485b640 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f99e485b718 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f99e485b6e8 <col:15> 'unsigned int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f99e485b6a0 <col:15> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'
+      | `-ImplicitCastExpr 0x7f99e485b700 <col:19> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7f99e485b6c8 <col:19> 'int' 256
+      |-UnaryOperator 0x7f99e485b768 <col:24, col:25> 'unsigned int' postfix '++'
+      | `-DeclRefExpr 0x7f99e485b740 <col:24> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'
+      `-BinaryOperator 0x7f99e485bae0 <line:15:5, col:31> 'float' '='
+        |-ArraySubscriptExpr 0x7f99e485b808 <col:5, col:8> 'float' lvalue
+        | |-ImplicitCastExpr 0x7f99e485b7d8 <col:5> 'float *' <LValueToRValue>
+        | | `-DeclRefExpr 0x7f99e485b788 <col:5> 'float *restrict' lvalue ParmVar 0x7f99e485b000 'a' 'float *restrict'
+        | `-ImplicitCastExpr 0x7f99e485b7f0 <col:7> 'unsigned int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f99e485b7b0 <col:7> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'
+        `-BinaryOperator 0x7f99e485bab8 <col:12, col:31> 'float' '-'
+          |-ImplicitCastExpr 0x7f99e485baa0 <col:12, col:15> 'float' <LValueToRValue>
+          | `-ArraySubscriptExpr 0x7f99e485b8b0 <col:12, col:15> 'float' lvalue
+          |   |-ImplicitCastExpr 0x7f99e485b880 <col:12> 'float *' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7f99e485b830 <col:12> 'float *restrict' lvalue ParmVar 0x7f99e485b0e8 'x' 'float *restrict'
+          |   `-ImplicitCastExpr 0x7f99e485b898 <col:14> 'unsigned int' <LValueToRValue>
+          |     `-DeclRefExpr 0x7f99e485b858 <col:14> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'
+          `-ParenExpr 0x7f99e485ba80 <col:19, col:31> 'float'
+            `-BinaryOperator 0x7f99e485ba58 <col:20, col:30> 'float' '*'
+              |-ImplicitCastExpr 0x7f99e485ba28 <col:20, col:23> 'float' <LValueToRValue>
+              | `-ArraySubscriptExpr 0x7f99e485b958 <col:20, col:23> 'float' lvalue
+              |   |-ImplicitCastExpr 0x7f99e485b928 <col:20> 'float *' <LValueToRValue>
+              |   | `-DeclRefExpr 0x7f99e485b8d8 <col:20> 'float *restrict' lvalue ParmVar 0x7f99e485b1d0 'y' 'float *restrict'
+              |   `-ImplicitCastExpr 0x7f99e485b940 <col:22> 'unsigned int' <LValueToRValue>
+              |     `-DeclRefExpr 0x7f99e485b900 <col:22> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'
+              `-ImplicitCastExpr 0x7f99e485ba40 <col:27, col:30> 'float' <LValueToRValue>
+                `-ArraySubscriptExpr 0x7f99e485ba00 <col:27, col:30> 'float' lvalue
+                  |-ImplicitCastExpr 0x7f99e485b9d0 <col:27> 'float *' <LValueToRValue>
+                  | `-DeclRefExpr 0x7f99e485b980 <col:27> 'float *restrict' lvalue ParmVar 0x7f99e485b2b8 'z' 'float *restrict'
+                  `-ImplicitCastExpr 0x7f99e485b9e8 <col:29> 'unsigned int' <LValueToRValue>
+                    `-DeclRefExpr 0x7f99e485b9a8 <col:29> 'unsigned int' lvalue Var 0x7f99e485b568 'i' 'unsigned int'

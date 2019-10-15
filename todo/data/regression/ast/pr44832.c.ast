@@ -1,0 +1,546 @@
+TranslationUnitDecl 0x7f944b8226e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f944b823360 <../Data/C2AST/pr44832.c:7:1, col:8> col:8 struct rtx_def
+|-TypedefDecl 0x7f944c8142d0 <line:8:1, col:25> col:25 referenced rtx 'struct rtx_def *'
+| `-PointerType 0x7f944c814280 'struct rtx_def *'
+|   `-ElaboratedType 0x7f944c814220 'struct rtx_def' sugar
+|     `-RecordType 0x7f944c814200 'struct rtx_def'
+|       `-Record 0x7f944c814f88 'rtx_def'
+|-TypedefDecl 0x7f944c8143b0 <line:9:1, col:31> col:31 referenced const_rtx 'const struct rtx_def *'
+| `-PointerType 0x7f944c814360 'const struct rtx_def *'
+|   `-QualType 0x7f944c814221 'const struct rtx_def' const
+|     `-ElaboratedType 0x7f944c814220 'struct rtx_def' sugar
+|       `-RecordType 0x7f944c814200 'struct rtx_def'
+|         `-Record 0x7f944c814f88 'rtx_def'
+|-RecordDecl 0x7f944c814408 <line:10:1, col:8> col:8 struct rtvec_def
+|-TypedefDecl 0x7f944c814560 <line:11:1, col:27> col:27 referenced rtvec 'struct rtvec_def *'
+| `-PointerType 0x7f944c814510 'struct rtvec_def *'
+|   `-ElaboratedType 0x7f944c8144b0 'struct rtvec_def' sugar
+|     `-RecordType 0x7f944c814490 'struct rtvec_def'
+|       `-Record 0x7f944b8172c8 'rtvec_def'
+|-VarDecl 0x7f944c8145d0 <line:12:1, col:12> col:12 used ix86_isa_flags 'int' extern
+|-EnumDecl 0x7f944c814670 <line:14:1, line:25:1> line:14:6 machine_mode
+| |-EnumConstantDecl 0x7f944c814730 <line:16:3> col:3 referenced VOIDmode 'int'
+| |-EnumConstantDecl 0x7f944c814778 <line:17:3> col:3 referenced V8HImode 'int'
+| |-EnumConstantDecl 0x7f944c8147c0 <line:18:3> col:3 referenced V16QImode 'int'
+| |-EnumConstantDecl 0x7f944c814808 <line:19:3> col:3 referenced V4SImode 'int'
+| |-EnumConstantDecl 0x7f944c814850 <line:20:3> col:3 referenced V2DImode 'int'
+| |-EnumConstantDecl 0x7f944c814898 <line:21:3> col:3 referenced V32QImode 'int'
+| |-EnumConstantDecl 0x7f944c8148e0 <line:22:3> col:3 referenced MAX_MACHINE_MODE 'int'
+| `-EnumConstantDecl 0x7f944c814950 <line:24:3, col:23> col:3 referenced NUM_MACHINE_MODES 'int'
+|   `-DeclRefExpr 0x7f944c814928 <col:23> 'int' EnumConstant 0x7f944c8148e0 'MAX_MACHINE_MODE' 'int'
+|-VarDecl 0x7f944c814a20 <line:26:1, col:49> col:22 used mode_size 'unsigned char [6]' extern
+|-VarDecl 0x7f944c814b10 <line:27:1, col:56> col:28 used mode_inner 'const unsigned char [6]' extern
+|-VarDecl 0x7f944c814bc0 <line:28:1, col:57> col:28 used mode_nunits 'const unsigned char [6]' extern
+|-EnumDecl 0x7f944c814c20 <line:29:1, line:37:3> line:29:6 rtx_code
+| |-EnumConstantDecl 0x7f944c814ce0 <line:31:1> col:1 referenced CONST_INT 'int'
+| |-EnumConstantDecl 0x7f944c814d28 <line:33:1> col:1 referenced CONST_FIXED 'int'
+| `-EnumConstantDecl 0x7f944c814d70 <line:35:1> col:1 referenced CONST_DOUBLE 'int'
+|-RecordDecl 0x7f944c814db8 <line:38:1, line:41:1> line:38:7 union rtunion_def definition
+| `-FieldDecl 0x7f944c814e90 <line:40:3, col:9> col:9 referenced rt_rtvec 'rtvec':'struct rtvec_def *'
+|-TypedefDecl 0x7f944c814f30 <line:42:1, col:27> col:27 referenced rtunion 'union rtunion_def':'union rtunion_def'
+| `-ElaboratedType 0x7f944c814ee0 'union rtunion_def' sugar
+|   `-RecordType 0x7f944c814e40 'union rtunion_def'
+|     `-Record 0x7f944c814db8 'rtunion_def'
+|-RecordDecl 0x7f944c814f88 prev 0x7f944b823360 <line:43:1, line:52:1> line:43:8 struct rtx_def definition
+| |-FieldDecl 0x7f944c815080 <line:45:17, col:37> col:31 referenced code 'enum rtx_code':'enum rtx_code'
+| | `-IntegerLiteral 0x7f944c815010 <col:37> 'int' 16
+| |-FieldDecl 0x7f944c815140 <line:47:17, col:42> col:35 referenced mode 'enum machine_mode':'enum machine_mode'
+| | `-IntegerLiteral 0x7f944c8150c8 <col:42> 'int' 8
+| |-RecordDecl 0x7f944b817000 parent 0x7f944b8226e8 <line:49:3, line:51:3> line:49:9 union u definition
+| | `-FieldDecl 0x7f944b8171e8 <line:50:5, col:18> col:13 referenced fld 'rtunion [1]'
+| `-FieldDecl 0x7f944b817280 <line:49:3, line:51:5> col:5 referenced u 'union u':'union u'
+|-RecordDecl 0x7f944b8172c8 prev 0x7f944c814408 <line:53:1, line:55:1> line:53:8 struct rtvec_def definition
+| `-FieldDecl 0x7f944b817428 <line:54:3, col:13> col:7 referenced elem 'rtx [1]'
+|-FunctionDecl 0x7f944b817628 <line:56:1, col:45> col:12 used rtx_equal_p 'int (const_rtx, const_rtx)' extern
+| |-ParmVarDecl 0x7f944b8174a0 <col:25> col:34 'const_rtx':'const struct rtx_def *'
+| `-ParmVarDecl 0x7f944b817510 <col:36> col:45 'const_rtx':'const struct rtx_def *'
+|-FunctionDecl 0x7f944b817800 <line:57:1, col:42> col:12 used gen_reg_rtx 'rtx (enum machine_mode)' extern
+| `-ParmVarDecl 0x7f944b8176f8 <col:25, col:30> col:42 'enum machine_mode':'enum machine_mode'
+|-FunctionDecl 0x7f944b817bc0 <line:59:1, line:61:32> line:60:1 used ix86_expand_vector_init_concat 'void (enum machine_mode, rtx, rtx *, int)' extern
+| |-ParmVarDecl 0x7f944b8178c8 <col:33, col:51> col:51 mode 'enum machine_mode':'enum machine_mode'
+| |-ParmVarDecl 0x7f944b817938 <line:61:5, col:9> col:9 target 'rtx':'struct rtx_def *'
+| |-ParmVarDecl 0x7f944b817a08 <col:17, col:22> col:22 ops 'rtx *'
+| `-ParmVarDecl 0x7f944b817a80 <col:27, col:31> col:31 n 'int'
+|-FunctionDecl 0x7f944b817f40 <line:63:1, line:118:1> line:64:1 used ix86_expand_vector_init_general 'void (unsigned char, enum machine_mode, rtx, rtx)' static
+| |-ParmVarDecl 0x7f944b817c98 <col:34, col:48> col:48 mmx_ok 'unsigned char'
+| |-ParmVarDecl 0x7f944b817d18 <col:56, col:74> col:74 used mode 'enum machine_mode':'enum machine_mode'
+| |-ParmVarDecl 0x7f944b817d88 <line:65:6, col:10> col:10 used target 'rtx':'struct rtx_def *'
+| |-ParmVarDecl 0x7f944b817df8 <col:18, col:22> col:22 used vals 'rtx':'struct rtx_def *'
+| `-CompoundStmt 0x7f944d002e48 <line:66:1, line:118:1>
+|   |-DeclStmt 0x7f944d000618 <line:67:3, col:24>
+|   | |-VarDecl 0x7f944d0004b8 <col:3, col:13> col:7 used ops 'rtx [32]'
+|   | |-VarDecl 0x7f944d000528 <col:3, col:16> col:16 used op0 'rtx':'struct rtx_def *'
+|   | `-VarDecl 0x7f944d000598 <col:3, col:21> col:21 op1 'rtx':'struct rtx_def *'
+|   |-DeclStmt 0x7f944d0006f0 <line:68:3, col:41>
+|   | `-VarDecl 0x7f944d000650 <col:3, col:33> col:21 half_mode 'enum machine_mode':'enum machine_mode' cinit
+|   |   `-ImplicitCastExpr 0x7f944d0006d8 <col:33> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+|   |     `-DeclRefExpr 0x7f944d0006b0 <col:33> 'int' EnumConstant 0x7f944c814730 'VOIDmode' 'int'
+|   |-DeclStmt 0x7f944d000810 <line:69:3, col:11>
+|   | |-VarDecl 0x7f944d000720 <col:3, col:7> col:7 used n 'int'
+|   | `-VarDecl 0x7f944d000798 <col:3, col:10> col:10 used i 'int'
+|   |-SwitchStmt 0x7f944d000880 <line:71:3, line:108:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7f944d000868 <line:71:11> 'unsigned int' <IntegralCast>
+|   | | `-ImplicitCastExpr 0x7f944d000850 <col:11> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7f944d000828 <col:11> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|   | `-CompoundStmt 0x7f944d002800 <line:72:5, line:108:5>
+|   |   |-CaseStmt 0x7f944d0008d8 <line:73:5, line:75:27>
+|   |   | |-ImplicitCastExpr 0x7f944d0028e8 <line:73:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7f944d0008b0 <col:10> 'int' EnumConstant 0x7f944c814808 'V4SImode' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-CaseStmt 0x7f944d000938 <line:74:5, line:75:27>
+|   |   |   |-ImplicitCastExpr 0x7f944d0028d0 <line:74:10> 'unsigned int' <IntegralCast>
+|   |   |   | `-DeclRefExpr 0x7f944d000910 <col:10> 'int' EnumConstant 0x7f944c814850 'V2DImode' 'int'
+|   |   |   |-<<<NULL>>>
+|   |   |   `-BinaryOperator 0x7f944d000aa0 <line:75:7, col:27> 'int' '='
+|   |   |     |-DeclRefExpr 0x7f944d000970 <col:7> 'int' lvalue Var 0x7f944d000720 'n' 'int'
+|   |   |     `-ImplicitCastExpr 0x7f944d000a88 <col:11, col:27> 'int' <IntegralCast>
+|   |   |       `-ImplicitCastExpr 0x7f944d000a70 <col:11, col:27> 'unsigned char' <LValueToRValue>
+|   |   |         `-ArraySubscriptExpr 0x7f944d000a48 <col:11, col:27> 'const unsigned char' lvalue
+|   |   |           |-ImplicitCastExpr 0x7f944d000a18 <col:11> 'const unsigned char *' <ArrayToPointerDecay>
+|   |   |           | `-DeclRefExpr 0x7f944d000998 <col:11> 'const unsigned char [6]' lvalue Var 0x7f944c814bc0 'mode_nunits' 'const unsigned char [6]'
+|   |   |           `-ImplicitCastExpr 0x7f944d000a30 <col:23> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|   |   |             `-DeclRefExpr 0x7f944d0009c0 <col:23> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|   |   |-CallExpr 0x7f944d000c00 <line:76:7, col:59> 'void'
+|   |   | |-ImplicitCastExpr 0x7f944d000be8 <col:7> 'void (*)(enum machine_mode, rtx, rtx *, int)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f944d000ac8 <col:7> 'void (enum machine_mode, rtx, rtx *, int)' Function 0x7f944b817bc0 'ix86_expand_vector_init_concat' 'void (enum machine_mode, rtx, rtx *, int)'
+|   |   | |-ImplicitCastExpr 0x7f944d000c48 <col:39> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f944d000af0 <col:39> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|   |   | |-ImplicitCastExpr 0x7f944d000c60 <col:45> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |   | | `-DeclRefExpr 0x7f944d000b18 <col:45> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944b817d88 'target' 'rtx':'struct rtx_def *'
+|   |   | |-ImplicitCastExpr 0x7f944d000c78 <col:53> 'rtx *' <ArrayToPointerDecay>
+|   |   | | `-DeclRefExpr 0x7f944d000b40 <col:53> 'rtx [32]' lvalue Var 0x7f944d0004b8 'ops' 'rtx [32]'
+|   |   | `-ImplicitCastExpr 0x7f944d000c90 <col:58> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7f944d000b68 <col:58> 'int' lvalue Var 0x7f944d000720 'n' 'int'
+|   |   |-ReturnStmt 0x7f944d000ca8 <line:77:7>
+|   |   |-CaseStmt 0x7f944d000ce8 <line:79:5, line:80:12>
+|   |   | |-ImplicitCastExpr 0x7f944d0028b8 <line:79:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7f944d000cc0 <col:10> 'int' EnumConstant 0x7f944c814898 'V32QImode' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-GotoStmt 0x7f944d000d68 <line:80:7, col:12> 'half' 0x7f944d000d20
+|   |   |-LabelStmt 0x7f944d001008 <line:81:1, line:86:1> 'half'
+|   |   | `-CompoundStmt 0x7f944d000fe8 <line:82:1, line:86:1>
+|   |   |   |-DeclStmt 0x7f944d000df0 <line:83:3, col:19>
+|   |   |   | `-TypedefDecl 0x7f944d000d98 <col:3, col:15> col:15 eger 'int'
+|   |   |   |   `-BuiltinType 0x7f944b8227e0 'int'
+|   |   |   `-IfStmt 0x7f944d000fb0 <line:84:3, line:85:11>
+|   |   |     |-<<<NULL>>>
+|   |   |     |-<<<NULL>>>
+|   |   |     |-BinaryOperator 0x7f944d000ea0 <line:84:7, col:15> 'int' '!='
+|   |   |     | |-ImplicitCastExpr 0x7f944d000e70 <col:7> 'unsigned int' <IntegralCast>
+|   |   |     | | `-ImplicitCastExpr 0x7f944d000e58 <col:7> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|   |   |     | |   `-DeclRefExpr 0x7f944d000e08 <col:7> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|   |   |     | `-ImplicitCastExpr 0x7f944d000e88 <col:15> 'unsigned int' <IntegralCast>
+|   |   |     |   `-DeclRefExpr 0x7f944d000e30 <col:15> 'int' EnumConstant 0x7f944c814808 'V4SImode' 'int'
+|   |   |     |-BinaryOperator 0x7f944d000f88 <line:85:2, col:11> 'rtx':'struct rtx_def *' '='
+|   |   |     | |-ArraySubscriptExpr 0x7f944d000f28 <col:2, col:7> 'rtx':'struct rtx_def *' lvalue
+|   |   |     | | |-ImplicitCastExpr 0x7f944d000f10 <col:2> 'rtx *' <ArrayToPointerDecay>
+|   |   |     | | | `-DeclRefExpr 0x7f944d000ec8 <col:2> 'rtx [32]' lvalue Var 0x7f944d0004b8 'ops' 'rtx [32]'
+|   |   |     | | `-IntegerLiteral 0x7f944d000ef0 <col:6> 'int' 0
+|   |   |     | `-ImplicitCastExpr 0x7f944d000f70 <col:11> 'rtx':'struct rtx_def *' <NullToPointer>
+|   |   |     |   `-IntegerLiteral 0x7f944d000f50 <col:11> 'int' 0
+|   |   |     `-<<<NULL>>>
+|   |   |-BinaryOperator 0x7f944d001120 <line:87:7, col:27> 'int' '='
+|   |   | |-DeclRefExpr 0x7f944d001020 <col:7> 'int' lvalue Var 0x7f944d000720 'n' 'int'
+|   |   | `-ImplicitCastExpr 0x7f944d001108 <col:11, col:27> 'int' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7f944d0010f0 <col:11, col:27> 'unsigned char' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7f944d0010c8 <col:11, col:27> 'const unsigned char' lvalue
+|   |   |       |-ImplicitCastExpr 0x7f944d001098 <col:11> 'const unsigned char *' <ArrayToPointerDecay>
+|   |   |       | `-DeclRefExpr 0x7f944d001048 <col:11> 'const unsigned char [6]' lvalue Var 0x7f944c814bc0 'mode_nunits' 'const unsigned char [6]'
+|   |   |       `-ImplicitCastExpr 0x7f944d0010b0 <col:23> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7f944d001070 <col:23> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|   |   |-ForStmt 0x7f944d001ac0 <line:88:7, line:89:52>
+|   |   | |-BinaryOperator 0x7f944d001190 <line:88:12, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7f944d001148 <col:12> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7f944d001170 <col:16> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7f944d001238 <col:19, col:23> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7f944d001208 <col:19> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7f944d0011b8 <col:19> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   | | `-ImplicitCastExpr 0x7f944d001220 <col:23> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7f944d0011e0 <col:23> 'int' lvalue Var 0x7f944d000720 'n' 'int'
+|   |   | |-UnaryOperator 0x7f944d001288 <col:26, col:27> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7f944d001260 <col:26> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   | `-BinaryOperator 0x7f944d001a98 <line:89:2, col:52> 'rtx':'struct rtx_def *' '='
+|   |   |   |-ArraySubscriptExpr 0x7f944d001328 <col:2, col:7> 'rtx':'struct rtx_def *' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7f944d0012f8 <col:2> 'rtx *' <ArrayToPointerDecay>
+|   |   |   | | `-DeclRefExpr 0x7f944d0012a8 <col:2> 'rtx [32]' lvalue Var 0x7f944d0004b8 'ops' 'rtx [32]'
+|   |   |   | `-ImplicitCastExpr 0x7f944d001310 <col:6> 'int' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7f944d0012d0 <col:6> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   |   `-ImplicitCastExpr 0x7f944d001a80 <col:11, col:52> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |   |     `-ParenExpr 0x7f944d001a60 <col:11, col:52> 'rtx':'struct rtx_def *' lvalue
+|   |   |       `-ArraySubscriptExpr 0x7f944d001a38 <col:12, col:51> 'rtx':'struct rtx_def *' lvalue
+|   |   |         |-ImplicitCastExpr 0x7f944d001a08 <col:12, col:45> 'rtx *' <ArrayToPointerDecay>
+|   |   |         | `-MemberExpr 0x7f944d0019a8 <col:12, col:45> 'rtx [1]' lvalue ->elem 0x7f944b817428
+|   |   |         |   `-ImplicitCastExpr 0x7f944d001990 <col:12, col:42> 'rtvec':'struct rtvec_def *' <LValueToRValue>
+|   |   |         |     `-ParenExpr 0x7f944d001970 <col:12, col:42> 'rtvec':'struct rtvec_def *' lvalue
+|   |   |         |       `-ParenExpr 0x7f944d001950 <col:13, col:41> 'rtvec':'struct rtvec_def *' lvalue
+|   |   |         |         `-MemberExpr 0x7f944d001918 <col:14, col:33> 'rtvec':'struct rtvec_def *' lvalue .rt_rtvec 0x7f944c814e90
+|   |   |         |           `-ParenExpr 0x7f944d0018f8 <col:14, col:31> 'rtunion':'union rtunion_def' lvalue
+|   |   |         |             `-ArraySubscriptExpr 0x7f944d0018d0 <col:15, col:30> 'rtunion':'union rtunion_def' lvalue
+|   |   |         |               |-ImplicitCastExpr 0x7f944d0018b8 <col:15, col:25> 'rtunion *' <ArrayToPointerDecay>
+|   |   |         |               | `-MemberExpr 0x7f944d001800 <col:15, col:25> 'rtunion [1]' lvalue .fld 0x7f944b8171e8
+|   |   |         |               |   `-MemberExpr 0x7f944d0013b0 <col:15, col:23> 'union u':'union u' lvalue ->u 0x7f944b817280
+|   |   |         |               |     `-ImplicitCastExpr 0x7f944d001398 <col:15, col:20> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |   |         |               |       `-ParenExpr 0x7f944d001378 <col:15, col:20> 'rtx':'struct rtx_def *' lvalue
+|   |   |         |               |         `-DeclRefExpr 0x7f944d001350 <col:16> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944b817df8 'vals' 'rtx':'struct rtx_def *'
+|   |   |         |               `-IntegerLiteral 0x7f944d001838 <col:29> 'int' 0
+|   |   |         `-ImplicitCastExpr 0x7f944d001a20 <col:50> 'int' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x7f944d0019e0 <col:50> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   |-BinaryOperator 0x7f944d001c28 <line:90:7, col:34> 'rtx':'struct rtx_def *' '='
+|   |   | |-DeclRefExpr 0x7f944d001af8 <col:7> 'rtx':'struct rtx_def *' lvalue Var 0x7f944d000528 'op0' 'rtx':'struct rtx_def *'
+|   |   | `-CallExpr 0x7f944d001be0 <col:13, col:34> 'rtx':'struct rtx_def *'
+|   |   |   |-ImplicitCastExpr 0x7f944d001bc8 <col:13> 'rtx (*)(enum machine_mode)' <FunctionToPointerDecay>
+|   |   |   | `-DeclRefExpr 0x7f944d001b20 <col:13> 'rtx (enum machine_mode)' Function 0x7f944b817800 'gen_reg_rtx' 'rtx (enum machine_mode)'
+|   |   |   `-ImplicitCastExpr 0x7f944d001c10 <col:26> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+|   |   |     `-DeclRefExpr 0x7f944d001b48 <col:26> 'int' EnumConstant 0x7f944c814730 'VOIDmode' 'int'
+|   |   |-ReturnStmt 0x7f944d001c50 <line:91:7>
+|   |   |-CaseStmt 0x7f944d001c90 <line:93:5, line:95:2>
+|   |   | |-ImplicitCastExpr 0x7f944d0028a0 <line:93:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7f944d001c68 <col:10> 'int' EnumConstant 0x7f944c8147c0 'V16QImode' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-IfStmt 0x7f944d001e68 <line:94:7, line:95:2>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-UnaryOperator 0x7f944d001e40 <line:94:11, col:46> 'int' prefix '!'
+|   |   |   | `-ParenExpr 0x7f944d001e20 <col:12, col:46> 'int'
+|   |   |   |   `-BinaryOperator 0x7f944d001df8 <col:13, col:45> 'int' '!='
+|   |   |   |     |-ParenExpr 0x7f944d001db8 <col:13, col:40> 'int'
+|   |   |   |     | `-BinaryOperator 0x7f944d001d90 <col:14, col:39> 'int' '&'
+|   |   |   |     |   |-ImplicitCastExpr 0x7f944d001d78 <col:14> 'int' <LValueToRValue>
+|   |   |   |     |   | `-DeclRefExpr 0x7f944d001cc8 <col:14> 'int' lvalue Var 0x7f944c8145d0 'ix86_isa_flags' 'int'
+|   |   |   |     |   `-ParenExpr 0x7f944d001d58 <col:31, col:39> 'int'
+|   |   |   |     |     `-BinaryOperator 0x7f944d001d30 <col:32, col:37> 'int' '<<'
+|   |   |   |     |       |-IntegerLiteral 0x7f944d001cf0 <col:32> 'int' 1
+|   |   |   |     |       `-IntegerLiteral 0x7f944d001d10 <col:37> 'int' 19
+|   |   |   |     `-IntegerLiteral 0x7f944d001dd8 <col:45> 'int' 0
+|   |   |   |-BreakStmt 0x7f944d001e60 <line:95:2>
+|   |   |   `-<<<NULL>>>
+|   |   |-CaseStmt 0x7f944d001ec8 <line:97:5, line:99:2>
+|   |   | |-ImplicitCastExpr 0x7f944d002888 <line:97:10> 'unsigned int' <IntegralCast>
+|   |   | | `-DeclRefExpr 0x7f944d001ea0 <col:10> 'int' EnumConstant 0x7f944c814778 'V8HImode' 'int'
+|   |   | |-<<<NULL>>>
+|   |   | `-IfStmt 0x7f944d0020a0 <line:98:7, line:99:2>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-<<<NULL>>>
+|   |   |   |-UnaryOperator 0x7f944d002078 <line:98:11, col:46> 'int' prefix '!'
+|   |   |   | `-ParenExpr 0x7f944d002058 <col:12, col:46> 'int'
+|   |   |   |   `-BinaryOperator 0x7f944d002030 <col:13, col:45> 'int' '!='
+|   |   |   |     |-ParenExpr 0x7f944d001ff0 <col:13, col:40> 'int'
+|   |   |   |     | `-BinaryOperator 0x7f944d001fc8 <col:14, col:39> 'int' '&'
+|   |   |   |     |   |-ImplicitCastExpr 0x7f944d001fb0 <col:14> 'int' <LValueToRValue>
+|   |   |   |     |   | `-DeclRefExpr 0x7f944d001f00 <col:14> 'int' lvalue Var 0x7f944c8145d0 'ix86_isa_flags' 'int'
+|   |   |   |     |   `-ParenExpr 0x7f944d001f90 <col:31, col:39> 'int'
+|   |   |   |     |     `-BinaryOperator 0x7f944d001f68 <col:32, col:37> 'int' '<<'
+|   |   |   |     |       |-IntegerLiteral 0x7f944d001f28 <col:32> 'int' 1
+|   |   |   |     |       `-IntegerLiteral 0x7f944d001f48 <col:37> 'int' 17
+|   |   |   |     `-IntegerLiteral 0x7f944d002010 <col:45> 'int' 0
+|   |   |   |-BreakStmt 0x7f944d002098 <line:99:2>
+|   |   |   `-<<<NULL>>>
+|   |   |-BinaryOperator 0x7f944d0021d8 <line:101:7, col:27> 'int' '='
+|   |   | |-DeclRefExpr 0x7f944d0020d8 <col:7> 'int' lvalue Var 0x7f944d000720 'n' 'int'
+|   |   | `-ImplicitCastExpr 0x7f944d0021c0 <col:11, col:27> 'int' <IntegralCast>
+|   |   |   `-ImplicitCastExpr 0x7f944d0021a8 <col:11, col:27> 'unsigned char' <LValueToRValue>
+|   |   |     `-ArraySubscriptExpr 0x7f944d002180 <col:11, col:27> 'const unsigned char' lvalue
+|   |   |       |-ImplicitCastExpr 0x7f944d002150 <col:11> 'const unsigned char *' <ArrayToPointerDecay>
+|   |   |       | `-DeclRefExpr 0x7f944d002100 <col:11> 'const unsigned char [6]' lvalue Var 0x7f944c814bc0 'mode_nunits' 'const unsigned char [6]'
+|   |   |       `-ImplicitCastExpr 0x7f944d002168 <col:23> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|   |   |         `-DeclRefExpr 0x7f944d002128 <col:23> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|   |   |-ForStmt 0x7f944d002700 <line:102:7, line:103:52>
+|   |   | |-BinaryOperator 0x7f944d002248 <line:102:12, col:16> 'int' '='
+|   |   | | |-DeclRefExpr 0x7f944d002200 <col:12> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   | | `-IntegerLiteral 0x7f944d002228 <col:16> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | |-BinaryOperator 0x7f944d0022f0 <col:19, col:23> 'int' '<'
+|   |   | | |-ImplicitCastExpr 0x7f944d0022c0 <col:19> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7f944d002270 <col:19> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   | | `-ImplicitCastExpr 0x7f944d0022d8 <col:23> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7f944d002298 <col:23> 'int' lvalue Var 0x7f944d000720 'n' 'int'
+|   |   | |-UnaryOperator 0x7f944d002340 <col:26, col:27> 'int' postfix '++'
+|   |   | | `-DeclRefExpr 0x7f944d002318 <col:26> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   | `-BinaryOperator 0x7f944d0026d8 <line:103:2, col:52> 'rtx':'struct rtx_def *' '='
+|   |   |   |-ArraySubscriptExpr 0x7f944d0023e0 <col:2, col:7> 'rtx':'struct rtx_def *' lvalue
+|   |   |   | |-ImplicitCastExpr 0x7f944d0023b0 <col:2> 'rtx *' <ArrayToPointerDecay>
+|   |   |   | | `-DeclRefExpr 0x7f944d002360 <col:2> 'rtx [32]' lvalue Var 0x7f944d0004b8 'ops' 'rtx [32]'
+|   |   |   | `-ImplicitCastExpr 0x7f944d0023c8 <col:6> 'int' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x7f944d002388 <col:6> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   |   `-ImplicitCastExpr 0x7f944d0026c0 <col:11, col:52> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |   |     `-ParenExpr 0x7f944d0026a0 <col:11, col:52> 'rtx':'struct rtx_def *' lvalue
+|   |   |       `-ArraySubscriptExpr 0x7f944d002678 <col:12, col:51> 'rtx':'struct rtx_def *' lvalue
+|   |   |         |-ImplicitCastExpr 0x7f944d002648 <col:12, col:45> 'rtx *' <ArrayToPointerDecay>
+|   |   |         | `-MemberExpr 0x7f944d0025e8 <col:12, col:45> 'rtx [1]' lvalue ->elem 0x7f944b817428
+|   |   |         |   `-ImplicitCastExpr 0x7f944d0025d0 <col:12, col:42> 'rtvec':'struct rtvec_def *' <LValueToRValue>
+|   |   |         |     `-ParenExpr 0x7f944d0025b0 <col:12, col:42> 'rtvec':'struct rtvec_def *' lvalue
+|   |   |         |       `-ParenExpr 0x7f944d002590 <col:13, col:41> 'rtvec':'struct rtvec_def *' lvalue
+|   |   |         |         `-MemberExpr 0x7f944d002558 <col:14, col:33> 'rtvec':'struct rtvec_def *' lvalue .rt_rtvec 0x7f944c814e90
+|   |   |         |           `-ParenExpr 0x7f944d002538 <col:14, col:31> 'rtunion':'union rtunion_def' lvalue
+|   |   |         |             `-ArraySubscriptExpr 0x7f944d002510 <col:15, col:30> 'rtunion':'union rtunion_def' lvalue
+|   |   |         |               |-ImplicitCastExpr 0x7f944d0024f8 <col:15, col:25> 'rtunion *' <ArrayToPointerDecay>
+|   |   |         |               | `-MemberExpr 0x7f944d0024a0 <col:15, col:25> 'rtunion [1]' lvalue .fld 0x7f944b8171e8
+|   |   |         |               |   `-MemberExpr 0x7f944d002468 <col:15, col:23> 'union u':'union u' lvalue ->u 0x7f944b817280
+|   |   |         |               |     `-ImplicitCastExpr 0x7f944d002450 <col:15, col:20> 'rtx':'struct rtx_def *' <LValueToRValue>
+|   |   |         |               |       `-ParenExpr 0x7f944d002430 <col:15, col:20> 'rtx':'struct rtx_def *' lvalue
+|   |   |         |               |         `-DeclRefExpr 0x7f944d002408 <col:16> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944b817df8 'vals' 'rtx':'struct rtx_def *'
+|   |   |         |               `-IntegerLiteral 0x7f944d0024d8 <col:29> 'int' 0
+|   |   |         `-ImplicitCastExpr 0x7f944d002660 <col:50> 'int' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x7f944d002620 <col:50> 'int' lvalue Var 0x7f944d000798 'i' 'int'
+|   |   |-ReturnStmt 0x7f944d002738 <line:104:7>
+|   |   `-DefaultStmt 0x7f944d002760 <line:106:5, line:107:7>
+|   |     `-NullStmt 0x7f944d002750 <col:7>
+|   `-CompoundStmt 0x7f944d002e20 <line:110:5, line:117:5>
+|     |-DeclStmt 0x7f944d002978 <line:111:7, col:18>
+|     | `-VarDecl 0x7f944d002918 <col:7, col:11> col:11 used n_words 'int'
+|     |-BinaryOperator 0x7f944d002b68 <line:113:7, col:54> 'int' '='
+|     | |-DeclRefExpr 0x7f944d002990 <col:7> 'int' lvalue Var 0x7f944d002918 'n_words' 'int'
+|     | `-BinaryOperator 0x7f944d002b40 <col:17, col:54> 'int' '/'
+|     |   |-ImplicitCastExpr 0x7f944d002b28 <col:17, col:50> 'int' <IntegralCast>
+|     |   | `-ParenExpr 0x7f944d002ae8 <col:17, col:50> 'unsigned short'
+|     |   |   `-CStyleCastExpr 0x7f944d002ac0 <col:18, col:49> 'unsigned short' <IntegralCast>
+|     |   |     `-ImplicitCastExpr 0x7f944d002aa8 <col:35, col:49> 'unsigned char' <LValueToRValue>
+|     |   |       `-ArraySubscriptExpr 0x7f944d002a68 <col:35, col:49> 'unsigned char' lvalue
+|     |   |         |-ImplicitCastExpr 0x7f944d002a38 <col:35> 'unsigned char *' <ArrayToPointerDecay>
+|     |   |         | `-DeclRefExpr 0x7f944d0029b8 <col:35> 'unsigned char [6]' lvalue Var 0x7f944c814a20 'mode_size' 'unsigned char [6]'
+|     |   |         `-ImplicitCastExpr 0x7f944d002a50 <col:45> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+|     |   |           `-DeclRefExpr 0x7f944d0029e0 <col:45> 'enum machine_mode':'enum machine_mode' lvalue ParmVar 0x7f944b817d18 'mode' 'enum machine_mode':'enum machine_mode'
+|     |   `-IntegerLiteral 0x7f944d002b08 <col:54> 'int' 4
+|     `-IfStmt 0x7f944d002de8 <line:115:7, line:116:54>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x7f944d002bf0 <line:115:11, col:22> 'int' '=='
+|       | |-ImplicitCastExpr 0x7f944d002bd8 <col:11> 'int' <LValueToRValue>
+|       | | `-DeclRefExpr 0x7f944d002b90 <col:11> 'int' lvalue Var 0x7f944d002918 'n_words' 'int'
+|       | `-IntegerLiteral 0x7f944d002bb8 <col:22> 'int' 4
+|       |-CallExpr 0x7f944d002d40 <line:116:4, col:54> 'void'
+|       | |-ImplicitCastExpr 0x7f944d002d28 <col:4> 'void (*)(unsigned char, enum machine_mode, rtx, rtx)' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x7f944d002c18 <col:4> 'void (unsigned char, enum machine_mode, rtx, rtx)' Function 0x7f944b817f40 'ix86_expand_vector_init_general' 'void (unsigned char, enum machine_mode, rtx, rtx)'
+|       | |-ImplicitCastExpr 0x7f944d002d88 <col:37> 'unsigned char' <IntegralCast>
+|       | | `-IntegerLiteral 0x7f944d002c40 <col:37> 'int' 0
+|       | |-ImplicitCastExpr 0x7f944d002da0 <col:40> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+|       | | `-DeclRefExpr 0x7f944d002c60 <col:40> 'int' EnumConstant 0x7f944c814808 'V4SImode' 'int'
+|       | |-ImplicitCastExpr 0x7f944d002db8 <col:50> 'rtx':'struct rtx_def *' <NullToPointer>
+|       | | `-IntegerLiteral 0x7f944d002c88 <col:50> 'int' 0
+|       | `-ImplicitCastExpr 0x7f944d002dd0 <col:53> 'rtx':'struct rtx_def *' <NullToPointer>
+|       |   `-IntegerLiteral 0x7f944d002ca8 <col:53> 'int' 0
+|       `-<<<NULL>>>
+`-FunctionDecl 0x7f944d0030b0 <line:121:1, line:162:1> line:122:1 ix86_expand_vector_init 'void (unsigned char, rtx, rtx)'
+  |-ParmVarDecl 0x7f944d002e98 <col:26, col:40> col:40 used mmx_ok 'unsigned char'
+  |-ParmVarDecl 0x7f944d002f08 <col:48, col:52> col:52 used target 'rtx':'struct rtx_def *'
+  |-ParmVarDecl 0x7f944d002f78 <col:60, col:64> col:64 used vals 'rtx':'struct rtx_def *'
+  `-CompoundStmt 0x7f944d006550 <line:123:1, line:162:1>
+    |-DeclStmt 0x7f944d003330 <line:124:3, col:64>
+    | `-VarDecl 0x7f944d003188 <col:3, col:63> col:21 used mode 'enum machine_mode':'enum machine_mode' cinit
+    |   `-ParenExpr 0x7f944d003310 <col:28, col:63> 'enum machine_mode':'enum machine_mode'
+    |     `-CStyleCastExpr 0x7f944d0032e8 <col:29, col:59> 'enum machine_mode':'enum machine_mode' <NoOp>
+    |       `-ImplicitCastExpr 0x7f944d0032d0 <col:49, col:59> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+    |         `-MemberExpr 0x7f944d003278 <col:49, col:59> 'enum machine_mode':'enum machine_mode' lvalue bitfield ->mode 0x7f944c815140
+    |           `-ImplicitCastExpr 0x7f944d003260 <col:49, col:56> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |             `-ParenExpr 0x7f944d003240 <col:49, col:56> 'rtx':'struct rtx_def *' lvalue
+    |               `-DeclRefExpr 0x7f944d0031e8 <col:50> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944d002f08 'target' 'rtx':'struct rtx_def *'
+    |-DeclStmt 0x7f944d0034f0 <line:125:3, col:72>
+    | `-VarDecl 0x7f944d003368 <col:3, col:71> col:21 inner_mode 'enum machine_mode':'enum machine_mode' cinit
+    |   `-ParenExpr 0x7f944d0034d0 <col:34, col:71> 'enum machine_mode':'enum machine_mode'
+    |     `-CStyleCastExpr 0x7f944d0034a8 <col:35, col:70> 'enum machine_mode':'enum machine_mode' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7f944d003490 <col:55, col:70> 'unsigned char' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x7f944d003448 <col:55, col:70> 'const unsigned char' lvalue
+    |           |-ImplicitCastExpr 0x7f944d003418 <col:55> 'const unsigned char *' <ArrayToPointerDecay>
+    |           | `-DeclRefExpr 0x7f944d0033c8 <col:55> 'const unsigned char [6]' lvalue Var 0x7f944c814b10 'mode_inner' 'const unsigned char [6]'
+    |           `-ImplicitCastExpr 0x7f944d003430 <col:66> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+    |             `-DeclRefExpr 0x7f944d0033f0 <col:66> 'enum machine_mode':'enum machine_mode' lvalue Var 0x7f944d003188 'mode' 'enum machine_mode':'enum machine_mode'
+    |-DeclStmt 0x7f944d003658 <line:126:3, col:33>
+    | `-VarDecl 0x7f944d003520 <col:3, col:32> col:7 used n_elts 'int' cinit
+    |   `-ImplicitCastExpr 0x7f944d003640 <col:16, col:32> 'int' <IntegralCast>
+    |     `-ImplicitCastExpr 0x7f944d003628 <col:16, col:32> 'unsigned char' <LValueToRValue>
+    |       `-ArraySubscriptExpr 0x7f944d003600 <col:16, col:32> 'const unsigned char' lvalue
+    |         |-ImplicitCastExpr 0x7f944d0035d0 <col:16> 'const unsigned char *' <ArrayToPointerDecay>
+    |         | `-DeclRefExpr 0x7f944d003580 <col:16> 'const unsigned char [6]' lvalue Var 0x7f944c814bc0 'mode_nunits' 'const unsigned char [6]'
+    |         `-ImplicitCastExpr 0x7f944d0035e8 <col:28> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+    |           `-DeclRefExpr 0x7f944d0035a8 <col:28> 'enum machine_mode':'enum machine_mode' lvalue Var 0x7f944d003188 'mode' 'enum machine_mode':'enum machine_mode'
+    |-DeclStmt 0x7f944d0037d8 <line:127:3, col:30>
+    | |-VarDecl 0x7f944d003688 <col:3, col:15> col:7 used n_var 'int' cinit
+    | | `-IntegerLiteral 0x7f944d0036e8 <col:15> 'int' 0
+    | `-VarDecl 0x7f944d003720 <col:3, col:29> col:18 used one_var 'int' cinit
+    |   `-UnaryOperator 0x7f944d0037a0 <col:28, col:29> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7f944d003780 <col:29> 'int' 1
+    |-DeclStmt 0x7f944d004d78 <line:128:3, col:49>
+    | |-VarDecl 0x7f944d004c18 <col:3, col:28> col:17 used all_same 'unsigned char' cinit
+    | | `-ImplicitCastExpr 0x7f944d004c98 <col:28> 'unsigned char' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f944d004c78 <col:28> 'int' 1
+    | `-VarDecl 0x7f944d004cc8 <col:3, col:48> col:31 used all_const_zero 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7f944d004d48 <col:48> 'unsigned char' <IntegralCast>
+    |     `-IntegerLiteral 0x7f944d004d28 <col:48> 'int' 1
+    |-DeclStmt 0x7f944d004e08 <line:129:3, col:8>
+    | `-VarDecl 0x7f944d004da8 <col:3, col:7> col:7 used i 'int'
+    |-DeclStmt 0x7f944d004e90 <line:130:3, col:8>
+    | `-VarDecl 0x7f944d004e30 <col:3, col:7> col:7 used x 'rtx':'struct rtx_def *'
+    |-ForStmt 0x7f944d0060a8 <line:132:3, line:143:5>
+    | |-BinaryOperator 0x7f944d004ef0 <line:132:8, col:12> 'int' '='
+    | | |-DeclRefExpr 0x7f944d004ea8 <col:8> 'int' lvalue Var 0x7f944d004da8 'i' 'int'
+    | | `-IntegerLiteral 0x7f944d004ed0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f944d004f98 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f944d004f68 <col:15> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f944d004f18 <col:15> 'int' lvalue Var 0x7f944d004da8 'i' 'int'
+    | | `-ImplicitCastExpr 0x7f944d004f80 <col:19> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f944d004f40 <col:19> 'int' lvalue Var 0x7f944d003520 'n_elts' 'int'
+    | |-UnaryOperator 0x7f944d004fe8 <col:27, col:29> 'int' prefix '++'
+    | | `-DeclRefExpr 0x7f944d004fc0 <col:29> 'int' lvalue Var 0x7f944d004da8 'i' 'int'
+    | `-CompoundStmt 0x7f944d006080 <line:133:5, line:143:5>
+    |   |-BinaryOperator 0x7f944d005300 <line:134:7, col:52> 'rtx':'struct rtx_def *' '='
+    |   | |-DeclRefExpr 0x7f944d005008 <col:7> 'rtx':'struct rtx_def *' lvalue Var 0x7f944d004e30 'x' 'rtx':'struct rtx_def *'
+    |   | `-ImplicitCastExpr 0x7f944d0052e8 <col:11, col:52> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |   |   `-ParenExpr 0x7f944d0052c8 <col:11, col:52> 'rtx':'struct rtx_def *' lvalue
+    |   |     `-ArraySubscriptExpr 0x7f944d0052a0 <col:12, col:51> 'rtx':'struct rtx_def *' lvalue
+    |   |       |-ImplicitCastExpr 0x7f944d005270 <col:12, col:45> 'rtx *' <ArrayToPointerDecay>
+    |   |       | `-MemberExpr 0x7f944d005210 <col:12, col:45> 'rtx [1]' lvalue ->elem 0x7f944b817428
+    |   |       |   `-ImplicitCastExpr 0x7f944d0051f8 <col:12, col:42> 'rtvec':'struct rtvec_def *' <LValueToRValue>
+    |   |       |     `-ParenExpr 0x7f944d0051d8 <col:12, col:42> 'rtvec':'struct rtvec_def *' lvalue
+    |   |       |       `-ParenExpr 0x7f944d0051b8 <col:13, col:41> 'rtvec':'struct rtvec_def *' lvalue
+    |   |       |         `-MemberExpr 0x7f944d005180 <col:14, col:33> 'rtvec':'struct rtvec_def *' lvalue .rt_rtvec 0x7f944c814e90
+    |   |       |           `-ParenExpr 0x7f944d005160 <col:14, col:31> 'rtunion':'union rtunion_def' lvalue
+    |   |       |             `-ArraySubscriptExpr 0x7f944d005138 <col:15, col:30> 'rtunion':'union rtunion_def' lvalue
+    |   |       |               |-ImplicitCastExpr 0x7f944d005120 <col:15, col:25> 'rtunion *' <ArrayToPointerDecay>
+    |   |       |               | `-MemberExpr 0x7f944d0050c8 <col:15, col:25> 'rtunion [1]' lvalue .fld 0x7f944b8171e8
+    |   |       |               |   `-MemberExpr 0x7f944d005090 <col:15, col:23> 'union u':'union u' lvalue ->u 0x7f944b817280
+    |   |       |               |     `-ImplicitCastExpr 0x7f944d005078 <col:15, col:20> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |   |       |               |       `-ParenExpr 0x7f944d005058 <col:15, col:20> 'rtx':'struct rtx_def *' lvalue
+    |   |       |               |         `-DeclRefExpr 0x7f944d005030 <col:16> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944d002f78 'vals' 'rtx':'struct rtx_def *'
+    |   |       |               `-IntegerLiteral 0x7f944d005100 <col:29> 'int' 0
+    |   |       `-ImplicitCastExpr 0x7f944d005288 <col:50> 'int' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7f944d005248 <col:50> 'int' lvalue Var 0x7f944d004da8 'i' 'int'
+    |   |-IfStmt 0x7f944d005ab8 <line:135:7, line:140:19>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-UnaryOperator 0x7f944d005910 <line:135:11, line:137:51> 'int' prefix '!'
+    |   | | `-ParenExpr 0x7f944d0058f0 <line:135:12, line:137:51> 'int'
+    |   | |   `-BinaryOperator 0x7f944d0058c8 <line:135:13, line:137:40> 'int' '||'
+    |   | |     |-BinaryOperator 0x7f944d0056d8 <line:135:13, line:136:40> 'int' '||'
+    |   | |     | |-ParenExpr 0x7f944d0054f0 <line:135:13, col:54> 'int'
+    |   | |     | | `-BinaryOperator 0x7f944d0054c8 <col:14, col:45> 'int' '=='
+    |   | |     | |   |-ImplicitCastExpr 0x7f944d005498 <col:14, col:40> 'unsigned int' <IntegralCast>
+    |   | |     | |   | `-ParenExpr 0x7f944d005450 <col:14, col:40> 'enum rtx_code':'enum rtx_code'
+    |   | |     | |   |   `-CStyleCastExpr 0x7f944d005428 <col:15, col:36> 'enum rtx_code':'enum rtx_code' <NoOp>
+    |   | |     | |   |     `-ImplicitCastExpr 0x7f944d005410 <col:31, col:36> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+    |   | |     | |   |       `-MemberExpr 0x7f944d0053b8 <col:31, col:36> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7f944c815080
+    |   | |     | |   |         `-ImplicitCastExpr 0x7f944d0053a0 <col:31, col:33> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |   | |     | |   |           `-ParenExpr 0x7f944d005380 <col:31, col:33> 'rtx':'struct rtx_def *' lvalue
+    |   | |     | |   |             `-DeclRefExpr 0x7f944d005328 <col:32> 'rtx':'struct rtx_def *' lvalue Var 0x7f944d004e30 'x' 'rtx':'struct rtx_def *'
+    |   | |     | |   `-ImplicitCastExpr 0x7f944d0054b0 <col:45> 'unsigned int' <IntegralCast>
+    |   | |     | |     `-DeclRefExpr 0x7f944d005470 <col:45> 'int' EnumConstant 0x7f944c814ce0 'CONST_INT' 'int'
+    |   | |     | `-BinaryOperator 0x7f944d0056b0 <line:136:9, col:40> 'int' '=='
+    |   | |     |   |-ImplicitCastExpr 0x7f944d005680 <col:9, col:35> 'unsigned int' <IntegralCast>
+    |   | |     |   | `-ParenExpr 0x7f944d005638 <col:9, col:35> 'enum rtx_code':'enum rtx_code'
+    |   | |     |   |   `-CStyleCastExpr 0x7f944d005610 <col:10, col:31> 'enum rtx_code':'enum rtx_code' <NoOp>
+    |   | |     |   |     `-ImplicitCastExpr 0x7f944d0055f8 <col:26, col:31> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+    |   | |     |   |       `-MemberExpr 0x7f944d0055a0 <col:26, col:31> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7f944c815080
+    |   | |     |   |         `-ImplicitCastExpr 0x7f944d005588 <col:26, col:28> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |   | |     |   |           `-ParenExpr 0x7f944d005568 <col:26, col:28> 'rtx':'struct rtx_def *' lvalue
+    |   | |     |   |             `-DeclRefExpr 0x7f944d005510 <col:27> 'rtx':'struct rtx_def *' lvalue Var 0x7f944d004e30 'x' 'rtx':'struct rtx_def *'
+    |   | |     |   `-ImplicitCastExpr 0x7f944d005698 <col:40> 'unsigned int' <IntegralCast>
+    |   | |     |     `-DeclRefExpr 0x7f944d005658 <col:40> 'int' EnumConstant 0x7f944c814d70 'CONST_DOUBLE' 'int'
+    |   | |     `-BinaryOperator 0x7f944d0058a0 <line:137:9, col:40> 'int' '=='
+    |   | |       |-ImplicitCastExpr 0x7f944d005870 <col:9, col:35> 'unsigned int' <IntegralCast>
+    |   | |       | `-ParenExpr 0x7f944d005828 <col:9, col:35> 'enum rtx_code':'enum rtx_code'
+    |   | |       |   `-CStyleCastExpr 0x7f944d005800 <col:10, col:31> 'enum rtx_code':'enum rtx_code' <NoOp>
+    |   | |       |     `-ImplicitCastExpr 0x7f944d0057e8 <col:26, col:31> 'enum rtx_code':'enum rtx_code' <LValueToRValue>
+    |   | |       |       `-MemberExpr 0x7f944d005790 <col:26, col:31> 'enum rtx_code':'enum rtx_code' lvalue bitfield ->code 0x7f944c815080
+    |   | |       |         `-ImplicitCastExpr 0x7f944d005778 <col:26, col:28> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |   | |       |           `-ParenExpr 0x7f944d005758 <col:26, col:28> 'rtx':'struct rtx_def *' lvalue
+    |   | |       |             `-DeclRefExpr 0x7f944d005700 <col:27> 'rtx':'struct rtx_def *' lvalue Var 0x7f944d004e30 'x' 'rtx':'struct rtx_def *'
+    |   | |       `-ImplicitCastExpr 0x7f944d005888 <col:40> 'unsigned int' <IntegralCast>
+    |   | |         `-DeclRefExpr 0x7f944d005848 <col:40> 'int' EnumConstant 0x7f944c814d28 'CONST_FIXED' 'int'
+    |   | |-BinaryOperator 0x7f944d005a08 <line:138:2, col:21> 'int' ','
+    |   | | |-UnaryOperator 0x7f944d005958 <col:2, col:7> 'int' postfix '++'
+    |   | | | `-DeclRefExpr 0x7f944d005930 <col:2> 'int' lvalue Var 0x7f944d003688 'n_var' 'int'
+    |   | | `-BinaryOperator 0x7f944d0059e0 <col:11, col:21> 'int' '='
+    |   | |   |-DeclRefExpr 0x7f944d005978 <col:11> 'int' lvalue Var 0x7f944d003720 'one_var' 'int'
+    |   | |   `-ImplicitCastExpr 0x7f944d0059c8 <col:21> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7f944d0059a0 <col:21> 'int' lvalue Var 0x7f944d004da8 'i' 'int'
+    |   | `-BinaryOperator 0x7f944d005a90 <line:140:2, col:19> 'unsigned char' '='
+    |   |   |-DeclRefExpr 0x7f944d005a30 <col:2> 'unsigned char' lvalue Var 0x7f944d004cc8 'all_const_zero' 'unsigned char'
+    |   |   `-ImplicitCastExpr 0x7f944d005a78 <col:19> 'unsigned char' <IntegralCast>
+    |   |     `-IntegerLiteral 0x7f944d005a58 <col:19> 'int' 0
+    |   `-IfStmt 0x7f944d006048 <line:141:7, line:142:13>
+    |     |-<<<NULL>>>
+    |     |-<<<NULL>>>
+    |     |-BinaryOperator 0x7f944d005f98 <line:141:11, col:79> 'int' '&&'
+    |     | |-BinaryOperator 0x7f944d005b50 <col:11, col:15> 'int' '>'
+    |     | | |-ImplicitCastExpr 0x7f944d005b38 <col:11> 'int' <LValueToRValue>
+    |     | | | `-DeclRefExpr 0x7f944d005af0 <col:11> 'int' lvalue Var 0x7f944d004da8 'i' 'int'
+    |     | | `-IntegerLiteral 0x7f944d005b18 <col:15> 'int' 0
+    |     | `-UnaryOperator 0x7f944d005f78 <col:20, col:79> 'int' prefix '!'
+    |     |   `-CallExpr 0x7f944d005ee0 <col:21, col:79> 'int'
+    |     |     |-ImplicitCastExpr 0x7f944d005ec8 <col:21> 'int (*)(const_rtx, const_rtx)' <FunctionToPointerDecay>
+    |     |     | `-DeclRefExpr 0x7f944d005b78 <col:21> 'int (const_rtx, const_rtx)' Function 0x7f944b817628 'rtx_equal_p' 'int (const_rtx, const_rtx)'
+    |     |     |-ImplicitCastExpr 0x7f944d005f30 <col:34> 'const_rtx':'const struct rtx_def *' <BitCast>
+    |     |     | `-ImplicitCastExpr 0x7f944d005f18 <col:34> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |     |     |   `-DeclRefExpr 0x7f944d005ba0 <col:34> 'rtx':'struct rtx_def *' lvalue Var 0x7f944d004e30 'x' 'rtx':'struct rtx_def *'
+    |     |     `-ImplicitCastExpr 0x7f944d005f60 <col:37, col:78> 'const_rtx':'const struct rtx_def *' <BitCast>
+    |     |       `-ImplicitCastExpr 0x7f944d005f48 <col:37, col:78> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |     |         `-ParenExpr 0x7f944d005e50 <col:37, col:78> 'rtx':'struct rtx_def *' lvalue
+    |     |           `-ArraySubscriptExpr 0x7f944d005e28 <col:38, col:77> 'rtx':'struct rtx_def *' lvalue
+    |     |             |-ImplicitCastExpr 0x7f944d005e10 <col:38, col:71> 'rtx *' <ArrayToPointerDecay>
+    |     |             | `-MemberExpr 0x7f944d005db8 <col:38, col:71> 'rtx [1]' lvalue ->elem 0x7f944b817428
+    |     |             |   `-ImplicitCastExpr 0x7f944d005da0 <col:38, col:68> 'rtvec':'struct rtvec_def *' <LValueToRValue>
+    |     |             |     `-ParenExpr 0x7f944d005d80 <col:38, col:68> 'rtvec':'struct rtvec_def *' lvalue
+    |     |             |       `-ParenExpr 0x7f944d005d60 <col:39, col:67> 'rtvec':'struct rtvec_def *' lvalue
+    |     |             |         `-MemberExpr 0x7f944d005d28 <col:40, col:59> 'rtvec':'struct rtvec_def *' lvalue .rt_rtvec 0x7f944c814e90
+    |     |             |           `-ParenExpr 0x7f944d005d08 <col:40, col:57> 'rtunion':'union rtunion_def' lvalue
+    |     |             |             `-ArraySubscriptExpr 0x7f944d005ce0 <col:41, col:56> 'rtunion':'union rtunion_def' lvalue
+    |     |             |               |-ImplicitCastExpr 0x7f944d005cc8 <col:41, col:51> 'rtunion *' <ArrayToPointerDecay>
+    |     |             |               | `-MemberExpr 0x7f944d005c70 <col:41, col:51> 'rtunion [1]' lvalue .fld 0x7f944b8171e8
+    |     |             |               |   `-MemberExpr 0x7f944d005c38 <col:41, col:49> 'union u':'union u' lvalue ->u 0x7f944b817280
+    |     |             |               |     `-ImplicitCastExpr 0x7f944d005c20 <col:41, col:46> 'rtx':'struct rtx_def *' <LValueToRValue>
+    |     |             |               |       `-ParenExpr 0x7f944d005c00 <col:41, col:46> 'rtx':'struct rtx_def *' lvalue
+    |     |             |               |         `-DeclRefExpr 0x7f944d005bc8 <col:42> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944d002f78 'vals' 'rtx':'struct rtx_def *'
+    |     |             |               `-IntegerLiteral 0x7f944d005ca8 <col:55> 'int' 0
+    |     |             `-IntegerLiteral 0x7f944d005df0 <col:76> 'int' 0
+    |     |-BinaryOperator 0x7f944d006020 <line:142:2, col:13> 'unsigned char' '='
+    |     | |-DeclRefExpr 0x7f944d005fc0 <col:2> 'unsigned char' lvalue Var 0x7f944d004c18 'all_same' 'unsigned char'
+    |     | `-ImplicitCastExpr 0x7f944d006008 <col:13> 'unsigned char' <IntegralCast>
+    |     |   `-IntegerLiteral 0x7f944d005fe8 <col:13> 'int' 0
+    |     `-<<<NULL>>>
+    |-IfStmt 0x7f944d006198 <line:146:3, line:149:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f944d006140 <line:146:7, col:16> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f944d006128 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f944d0060e0 <col:7> 'int' lvalue Var 0x7f944d003688 'n_var' 'int'
+    | | `-IntegerLiteral 0x7f944d006108 <col:16> 'int' 0
+    | |-CompoundStmt 0x7f944d006180 <line:147:5, line:149:5>
+    | | `-ReturnStmt 0x7f944d006168 <line:148:7>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f944d006228 <line:151:3, line:152:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f944d0061f8 <line:151:7> 'unsigned char' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f944d0061d0 <col:7> 'unsigned char' lvalue Var 0x7f944d004c18 'all_same' 'unsigned char'
+    | |-ReturnStmt 0x7f944d006210 <line:152:5>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7f944d006390 <line:154:3, line:159:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f944d0062c0 <line:154:7, col:16> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f944d0062a8 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f944d006260 <col:7> 'int' lvalue Var 0x7f944d003688 'n_var' 'int'
+    | | `-IntegerLiteral 0x7f944d006288 <col:16> 'int' 1
+    | |-CompoundStmt 0x7f944d006378 <line:155:5, line:159:5>
+    | | `-IfStmt 0x7f944d006340 <line:156:7, line:157:2>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-ImplicitCastExpr 0x7f944d006310 <line:156:11> 'unsigned char' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7f944d0062e8 <col:11> 'unsigned char' lvalue Var 0x7f944d004cc8 'all_const_zero' 'unsigned char'
+    | |   |-ReturnStmt 0x7f944d006328 <line:157:2>
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    `-CallExpr 0x7f944d0064a8 <line:161:3, col:62> 'void'
+      |-ImplicitCastExpr 0x7f944d006490 <col:3> 'void (*)(unsigned char, enum machine_mode, rtx, rtx)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f944d0063c8 <col:3> 'void (unsigned char, enum machine_mode, rtx, rtx)' Function 0x7f944b817f40 'ix86_expand_vector_init_general' 'void (unsigned char, enum machine_mode, rtx, rtx)'
+      |-ImplicitCastExpr 0x7f944d0064f0 <col:36> 'unsigned char' <LValueToRValue>
+      | `-DeclRefExpr 0x7f944d0063f0 <col:36> 'unsigned char' lvalue ParmVar 0x7f944d002e98 'mmx_ok' 'unsigned char'
+      |-ImplicitCastExpr 0x7f944d006508 <col:44> 'enum machine_mode':'enum machine_mode' <LValueToRValue>
+      | `-DeclRefExpr 0x7f944d006418 <col:44> 'enum machine_mode':'enum machine_mode' lvalue Var 0x7f944d003188 'mode' 'enum machine_mode':'enum machine_mode'
+      |-ImplicitCastExpr 0x7f944d006520 <col:50> 'rtx':'struct rtx_def *' <LValueToRValue>
+      | `-DeclRefExpr 0x7f944d006440 <col:50> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944d002f08 'target' 'rtx':'struct rtx_def *'
+      `-ImplicitCastExpr 0x7f944d006538 <col:58> 'rtx':'struct rtx_def *' <LValueToRValue>
+        `-DeclRefExpr 0x7f944d006468 <col:58> 'rtx':'struct rtx_def *' lvalue ParmVar 0x7f944d002f78 'vals' 'rtx':'struct rtx_def *'

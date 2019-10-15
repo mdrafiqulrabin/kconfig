@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f90988058e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9099800a20 <../Data/C2AST/pragma-isr2.c:7:1, line:10:1> line:8:1 isr 'void (void)'
+| `-CompoundStmt 0x7f9099800b00 <line:9:1, line:10:1>
+|-FunctionDecl 0x7f9099800bf0 <line:12:1, line:15:1> line:13:1 delay 'void (int)'
+| |-ParmVarDecl 0x7f9099800b28 <col:8, col:12> col:12 a 'int'
+| `-CompoundStmt 0x7f9099800c98 <line:14:1, line:15:1>
+`-FunctionDecl 0x7f9099800d78 <line:17:1, line:21:1> line:18:1 main 'int (void)'
+  `-CompoundStmt 0x7f9099800e80 <line:19:1, line:21:1>
+    `-ReturnStmt 0x7f9099800e68 <line:20:3, col:10>
+      `-IntegerLiteral 0x7f9099800e48 <col:10> 'int' 0

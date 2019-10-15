@@ -1,0 +1,136 @@
+../Data/C2AST/pr51968.c:6:9: error: unknown type name '__builtin_neon_qi'
+typedef __builtin_neon_qi int8x8_t __attribute__ ((__vector_size__ (8)));
+        ^
+../Data/C2AST/pr51968.c:7:9: error: unknown type name '__builtin_neon_uqi'
+typedef __builtin_neon_uqi uint8x8_t __attribute__ ((__vector_size__ (8)));
+        ^
+../Data/C2AST/pr51968.c:8:9: error: unknown type name '__builtin_neon_qi'
+typedef __builtin_neon_qi int8x16_t __attribute__ ((__vector_size__ (16)));
+        ^
+../Data/C2AST/pr51968.c:9:9: error: unknown type name '__builtin_neon_hi'
+typedef __builtin_neon_hi int16x8_t __attribute__ ((__vector_size__ (16)));
+        ^
+../Data/C2AST/pr51968.c:10:9: error: unknown type name '__builtin_neon_si'
+typedef __builtin_neon_si int32x4_t __attribute__ ((__vector_size__ (16)));
+        ^
+../Data/C2AST/pr51968.c:20:7: error: use of unknown builtin '__builtin_neon_vuzpv8qi' [-Wimplicit-function-declaration]
+      __builtin_neon_vuzpv8qi (&m.val[0], z, x);
+      ^
+../Data/C2AST/pr51968.c:27:11: error: use of unknown builtin '__builtin_neon_vqmovunv8hi' [-Wimplicit-function-declaration]
+      j = __builtin_neon_vqmovunv8hi (b);
+          ^
+../Data/C2AST/pr51968.c:27:9: error: assigning to 'int8x8_t' (vector of 2 'int' values) from incompatible type 'int'
+      j = __builtin_neon_vqmovunv8hi (b);
+        ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr51968.c:28:11: error: use of unknown builtin '__builtin_neon_vcombinev8qi' [-Wimplicit-function-declaration]
+      g = __builtin_neon_vcombinev8qi (j, h);
+          ^
+../Data/C2AST/pr51968.c:28:11: note: did you mean '__builtin_neon_vqmovunv8hi'?
+../Data/C2AST/pr51968.c:27:11: note: '__builtin_neon_vqmovunv8hi' declared here
+      j = __builtin_neon_vqmovunv8hi (b);
+          ^
+../Data/C2AST/pr51968.c:28:9: error: assigning to 'int8x16_t' (vector of 4 'int' values) from incompatible type 'int'
+      g = __builtin_neon_vcombinev8qi (j, h);
+        ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr51968.c:29:11: error: use of unknown builtin '__builtin_neon_vget_lowv16qi' [-Wimplicit-function-declaration]
+      k = __builtin_neon_vget_lowv16qi (g);
+          ^
+../Data/C2AST/pr51968.c:29:11: note: did you mean '__builtin_neon_vcombinev8qi'?
+../Data/C2AST/pr51968.c:28:11: note: '__builtin_neon_vcombinev8qi' declared here
+      g = __builtin_neon_vcombinev8qi (j, h);
+          ^
+../Data/C2AST/pr51968.c:29:9: error: assigning to 'int8x8_t' (vector of 2 'int' values) from incompatible type 'int'
+      k = __builtin_neon_vget_lowv16qi (g);
+        ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Data/C2AST/pr51968.c:30:7: error: use of unknown builtin '__builtin_neon_vuzpv8qi' [-Wimplicit-function-declaration]
+      __builtin_neon_vuzpv8qi (&m.val[0], k, n);
+      ^
+TranslationUnitDecl 0x7fe9bb0050e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe9bb005660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe9bb005380 '__int128'
+|-TypedefDecl 0x7fe9bb0056d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe9bb0053a0 'unsigned __int128'
+|-TypedefDecl 0x7fe9bb0059a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe9bb0057b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe9bb005728 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe9bb005a40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe9bb005a00 'char *'
+|   `-BuiltinType 0x7fe9bb005180 'char'
+|-TypedefDecl 0x7fe9bb005d08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe9bb005cb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe9bb005b20 'struct __va_list_tag'
+|     `-Record 0x7fe9bb005a98 '__va_list_tag'
+|-TypedefDecl 0x7fe9ba014400 <../Data/C2AST/pr51968.c:6:1, col:27> col:27 referenced invalid int8x8_t '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fe9bb005da0 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fe9bb0051e0 'int'
+|-TypedefDecl 0x7fe9ba014488 <line:7:1, col:28> col:28 invalid uint8x8_t '__attribute__((__vector_size__(2 * sizeof(int)))) int'
+| `-VectorType 0x7fe9bb005da0 '__attribute__((__vector_size__(2 * sizeof(int)))) int' 2
+|   `-BuiltinType 0x7fe9bb0051e0 'int'
+|-TypedefDecl 0x7fe9ba014538 <line:8:1, col:27> col:27 referenced invalid int8x16_t '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fe9ba014500 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fe9bb0051e0 'int'
+|-TypedefDecl 0x7fe9ba0145c0 <line:9:1, col:27> col:27 referenced invalid int16x8_t '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fe9ba014500 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fe9bb0051e0 'int'
+|-TypedefDecl 0x7fe9ba014648 <line:10:1, col:27> col:27 invalid int32x4_t '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fe9ba014500 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fe9bb0051e0 'int'
+|-RecordDecl 0x7fe9ba0146a0 <line:11:1, col:29> col:8 struct T definition
+| `-FieldDecl 0x7fe9ba014828 <col:12, col:26> col:21 referenced val 'int8x8_t [2]'
+|-VarDecl 0x7fe9ba014888 <line:12:1, col:5> col:5 used y 'int'
+`-FunctionDecl 0x7fe9ba014bf0 <line:14:1, line:32:1> line:15:1 foo 'void (int8x8_t, int8x8_t, int16x8_t, int8x8_t)'
+  |-ParmVarDecl 0x7fe9ba014938 <col:6, col:15> col:15 used z 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fe9ba0149a8 <col:18, col:27> col:27 used x 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fe9ba014a40 <col:30, col:40> col:40 used b 'int16x8_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fe9ba014ab0 <col:43, col:52> col:52 used n 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fe9ba0165d0 <line:16:1, line:32:1>
+    |-IfStmt 0x7fe9ba015150 <line:17:3, line:21:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fe9ba014cd8 <line:17:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe9ba014cb0 <col:7> 'int' lvalue Var 0x7fe9ba014888 'y' 'int'
+    | |-CompoundStmt 0x7fe9ba015130 <line:18:5, line:21:5>
+    | | |-DeclStmt 0x7fe9ba014da0 <line:19:7, col:17>
+    | | | `-VarDecl 0x7fe9ba014d40 <col:7, col:16> col:16 used m 'struct T':'struct T'
+    | | `-CallExpr 0x7fe9ba0150c0 <line:20:7, col:47> 'int'
+    | |   |-ImplicitCastExpr 0x7fe9ba0150a8 <col:7> 'int (*)()' <FunctionToPointerDecay>
+    | |   | `-DeclRefExpr 0x7fe9ba014ec0 <col:7> 'int ()' Function 0x7fe9ba014e10 '__builtin_neon_vuzpv8qi' 'int ()'
+    | |   |-UnaryOperator 0x7fe9ba015008 <col:32, col:40> 'int8x8_t *' prefix '&'
+    |13 errors generated.
+ |   | `-ArraySubscriptExpr 0x7fe9ba014fe0 <col:33, col:40> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue
+    | |   |   |-ImplicitCastExpr 0x7fe9ba014fc8 <col:33, col:35> 'int8x8_t *' <ArrayToPointerDecay>
+    | |   |   | `-MemberExpr 0x7fe9ba014f10 <col:33, col:35> 'int8x8_t [2]' lvalue .val 0x7fe9ba014828
+    | |   |   |   `-DeclRefExpr 0x7fe9ba014ee8 <col:33> 'struct T':'struct T' lvalue Var 0x7fe9ba014d40 'm' 'struct T':'struct T'
+    | |   |   `-IntegerLiteral 0x7fe9ba014f48 <col:39> 'int' 0
+    | |   |-ImplicitCastExpr 0x7fe9ba015100 <col:43> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fe9ba015028 <col:43> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7fe9ba014938 'z' 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | |   `-ImplicitCastExpr 0x7fe9ba015118 <col:46> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fe9ba015050 <col:46> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7fe9ba0149a8 'x' 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+    | `-<<<NULL>>>
+    `-ForStmt 0x7fe9ba016598 <line:22:3, line:31:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7fe9ba016568 <line:23:5, line:31:5>
+        |-DeclStmt 0x7fe9ba015220 <line:24:7, col:18>
+        | `-VarDecl 0x7fe9ba0151c0 <col:7, col:17> col:17 used g 'int8x16_t':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        |-DeclStmt 0x7fe9ba0153a8 <line:25:7, col:23>
+        | |-VarDecl 0x7fe9ba015248 <col:7, col:16> col:16 used h 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        | |-VarDecl 0x7fe9ba0152b8 <col:7, col:19> col:19 used j 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        | `-VarDecl 0x7fe9ba015328 <col:7, col:22> col:22 used k 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+        |-DeclStmt 0x7fe9ba015a60 <line:26:7, col:17>
+        | `-VarDecl 0x7fe9ba015a00 <col:7, col:16> col:16 used m 'struct T':'struct T'
+        `-CallExpr 0x7fe9ba0164f8 <line:30:7, col:47> 'int'
+          |-ImplicitCastExpr 0x7fe9ba0164e0 <col:7> 'int (*)()' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe9ba016388 <col:7> 'int ()' Function 0x7fe9ba014e10 '__builtin_neon_vuzpv8qi' 'int ()'
+          |-UnaryOperator 0x7fe9ba016470 <col:32, col:40> 'int8x8_t *' prefix '&'
+          | `-ArraySubscriptExpr 0x7fe9ba016448 <col:33, col:40> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue
+          |   |-ImplicitCastExpr 0x7fe9ba016430 <col:33, col:35> 'int8x8_t *' <ArrayToPointerDecay>
+          |   | `-MemberExpr 0x7fe9ba0163d8 <col:33, col:35> 'int8x8_t [2]' lvalue .val 0x7fe9ba014828
+          |   |   `-DeclRefExpr 0x7fe9ba0163b0 <col:33> 'struct T':'struct T' lvalue Var 0x7fe9ba015a00 'm' 'struct T':'struct T'
+          |   `-IntegerLiteral 0x7fe9ba016410 <col:39> 'int' 0
+          |-ImplicitCastExpr 0x7fe9ba016538 <col:43> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fe9ba016490 <col:43> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue Var 0x7fe9ba015328 'k' 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7fe9ba016550 <col:46> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' <LValueToRValue>
+            `-DeclRefExpr 0x7fe9ba0164b8 <col:46> 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int' lvalue ParmVar 0x7fe9ba014ab0 'n' 'int8x8_t':'__attribute__((__vector_size__(2 * sizeof(int)))) int'

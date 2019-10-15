@@ -1,0 +1,7 @@
+TranslationUnitDecl 0x7ff96682b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff966014cd8 <../Data/C2AST/pr57848.c:4:21> col:21 implicit __builtin_ia32_crc32si 'unsigned int (unsigned int, unsigned int)' extern
+| |-ParmVarDecl 0x7ff966014d78 <<invalid sloc>> <invalid sloc> 'unsigned int'
+| `-ParmVarDecl 0x7ff966014dd8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+`-FunctionDecl 0x7ff966014e48 prev 0x7ff966014cd8 <col:1, col:71> col:21 __builtin_ia32_crc32si 'unsigned int (unsigned int, unsigned int)' extern
+  |-ParmVarDecl 0x7ff96682bf78 <col:45, col:54> col:57 'unsigned int'
+  `-ParmVarDecl 0x7ff966014c00 <col:59, col:68> col:71 'unsigned int'

@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f936b02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f936b814200 <../Data/C2AST/pr70878.c:5:1, line:9:1> line:5:8 sbrk 'void *()'
+| `-CompoundStmt 0x7f936b8147b0 <line:6:1, line:9:1>
+|   |-DeclStmt 0x7f936b814418 <line:7:2, col:54>
+|   | `-VarDecl 0x7f936b814360 <col:2, col:33> col:33 used sp_r1 'volatile unsigned int' register
+|   |   `-AsmLabelAttr 0x7f936b8143c0 <col:48> "ebx"
+|   `-ReturnStmt 0x7f936b814798 <line:8:2, col:42>
+|     `-ImplicitCastExpr 0x7f936b814780 <col:9, col:42> 'void *' <BitCast>
+|       `-CallExpr 0x7f936b814730 <col:9, col:42> 'char *'
+|         |-ImplicitCastExpr 0x7f936b814718 <col:9> 'char *(*)(char *, const char *)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7f936b814628 <col:9> '<builtin fn type>' Function 0x7f936b814470 '__builtin_strcat' 'char *(char *, const char *)'
+|         |-CStyleCastExpr 0x7f936b8146a8 <col:27, col:34> 'char *' <IntegralToPointer>
+|         | `-ImplicitCastExpr 0x7f936b814690 <col:34> 'unsigned int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7f936b814650 <col:34> 'volatile unsigned int' lvalue Var 0x7f936b814360 'sp_r1' 'volatile unsigned int'
+|         `-ImplicitCastExpr 0x7f936b814768 <col:41> 'const char *' <NullToPointer>
+|           `-IntegerLiteral 0x7f936b8146d0 <col:41> 'int' 0
+`-FunctionDecl 0x7f936b814470 <col:9> col:9 implicit used __builtin_strcat 'char *(char *, const char *)' extern
+  |-ParmVarDecl 0x7f936b814510 <<invalid sloc>> <invalid sloc> 'char *'
+  |-ParmVarDecl 0x7f936b814570 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7f936b8145e0 <col:9> Implicit

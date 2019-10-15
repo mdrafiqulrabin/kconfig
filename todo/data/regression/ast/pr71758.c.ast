@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fb90a82bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb90b014260 <../Data/C2AST/pr71758.c:3:1, line:10:1> line:4:1 foo 'void (int *)'
+  |-ParmVarDecl 0x7fb90a82c9a0 <col:6, col:11> col:11 p 'int *'
+  `-CompoundStmt 0x7fb90b014420 <line:5:1, line:10:1>
+    |-DeclStmt 0x7fb90b0143f8 <line:6:3, col:18>
+    | `-VarDecl 0x7fb90b014360 <col:3, col:17> col:13 i 'long long' cinit
+    |   `-ImplicitCastExpr 0x7fb90b0143e0 <col:17> 'long long' <IntegralCast>
+    |     `-IntegerLiteral 0x7fb90b0143c0 <col:17> 'int' 0
+    `-NullStmt 0x7fb90b014410 <line:8:3>

@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fa3a102bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa3a102c978 <../Data/C2AST/pr21255-2-mb.c:4:1, col:8> col:8 used d 'double'
+`-FunctionDecl 0x7fa3a106d908 <line:6:1, line:14:1> line:7:1 f 'double (void)'
+  `-CompoundStmt 0x7fa3a106dcb0 <line:8:1, line:14:1>
+    |-DeclStmt 0x7fa3a106da20 <line:9:3, col:11>
+    | `-VarDecl 0x7fa3a106d9c0 <col:3, col:10> col:10 used r 'double'
+    |-GCCAsmStmt 0x7fa3a106dbe0 <line:12:3, col:56>
+    | |-DeclRefExpr 0x7fa3a106db28 <col:44> 'double' lvalue Var 0x7fa3a106d9c0 'r' 'double'
+    | `-DeclRefExpr 0x7fa3a106dbb8 <col:54> 'double' lvalue Var 0x7fa3a102c978 'd' 'double'
+    `-ReturnStmt 0x7fa3a106dc98 <line:13:3, col:10>
+      `-ImplicitCastExpr 0x7fa3a106dc80 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7fa3a106dc58 <col:10> 'double' lvalue Var 0x7fa3a106d9c0 'r' 'double'

@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fac66012ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fac66827c28 <../Data/C2AST/pr51879-18.c:4:1, col:21> col:12 used foo 'int (void)' extern
+`-FunctionDecl 0x7fac66827e90 <line:6:1, line:14:1> line:6:6 bar 'void (int, int *)'
+  |-ParmVarDecl 0x7fac66827d20 <col:11, col:15> col:15 used c 'int'
+  |-ParmVarDecl 0x7fac66827dc0 <col:18, col:23> col:23 used p 'int *'
+  `-CompoundStmt 0x7fac66828298 <line:7:1, line:14:1>
+    |-DeclStmt 0x7fac66827ff8 <line:8:3, col:13>
+    | `-VarDecl 0x7fac66827f58 <col:3, col:12> col:8 used q 'int *' cinit
+    |   `-ImplicitCastExpr 0x7fac66827fe0 <col:12> 'int *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fac66827fb8 <col:12> 'int *' lvalue ParmVar 0x7fac66827dc0 'p' 'int *'
+    `-IfStmt 0x7fac66828260 <line:10:3, line:13:15>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fac66828038 <line:10:7> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fac66828010 <col:7> 'int' lvalue ParmVar 0x7fac66827d20 'c' 'int'
+      |-BinaryOperator 0x7fac66828148 <line:11:5, col:15> 'int' '='
+      | |-UnaryOperator 0x7fac66828090 <col:5, col:6> 'int' lvalue prefix '*'
+      | | `-ImplicitCastExpr 0x7fac66828078 <col:6> 'int *' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fac66828050 <col:6> 'int *' lvalue ParmVar 0x7fac66827dc0 'p' 'int *'
+      | `-CallExpr 0x7fac66828120 <col:10, col:15> 'int'
+      |   `-ImplicitCastExpr 0x7fac66828108 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+      |     `-DeclRefExpr 0x7fac668280b0 <col:10> 'int (void)' Function 0x7fac66827c28 'foo' 'int (void)'
+      `-BinaryOperator 0x7fac66828238 <line:13:5, col:15> 'int' '='
+        |-UnaryOperator 0x7fac668281b0 <col:5, col:6> 'int' lvalue prefix '*'
+        | `-ImplicitCastExpr 0x7fac66828198 <col:6> 'int *' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fac66828170 <col:6> 'int *' lvalue Var 0x7fac66827f58 'q' 'int *'
+        `-CallExpr 0x7fac66828210 <col:10, col:15> 'int'
+          `-ImplicitCastExpr 0x7fac668281f8 <col:10> 'int (*)(void)' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fac668281d0 <col:10> 'int (void)' Function 0x7fac66827c28 'foo' 'int (void)'

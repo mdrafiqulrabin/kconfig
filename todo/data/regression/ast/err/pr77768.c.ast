@@ -1,0 +1,70 @@
+../Data/C2AST/pr77768.c:9:13: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+  c == d ?: __builtin_exit(0); 
+            ^
+TranslationUnitDecl 0x7f933b02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f933b02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f933b02bf80 '__int128'
+|-TypedefDecl 0x7f933b02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f933b02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f933b02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f933b02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f933b02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f933b02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f933b02c600 'char *'
+|   `-BuiltinType 0x7f933b02bd80 'char'
+|-TypedefDecl 0x7f933b02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f933b02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f933b02c720 'struct __va_list_tag'
+|     `-Record 0x7f933b02c698 '__va_list_tag'
+|-VarDecl 0x7f933b02c978 <../Data/C2AST/pr77768.c:3:1, col:18> col:18 used a 'const int' static
+|-VarDecl 0x7f933b814258 <line:4:1, col:5> col:5 used b 'int'
+|-VarDecl 0x7f933b814300 <line:5:1, col:6> col:6 used c 'int *'
+|-VarDecl 0x7f933b814378 <col:1, col:10> col:10 used d 'int *'
+`-FunctionDecl 0x7f933b814440 <line:6:1, line:13:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7f933b814ab8 <line:7:1, line:13:1>
+    |-BinaryOperator 0x7f933b8145c0 <line:8:3, col:15> 'int *' '='
+    | |-DeclRefExpr 0x7f933b8144e0 <col:3> 'int *' lvalue Var 0x7f933b814300 'c' 'int *'
+    | `-CStyleCastExpr 0x7f933b814598 <col:7, col:15> 'int *' <BitCast>
+    |   `-UnaryOperator 0x7f933b814530 <col:14, col:15> 'const int *' prefix '&'
+    |     `-DeclRefExpr 0x7f933b814508 <col:15> 'const int' lvalue Var 0x7f933b02c978 'a' 'const int'
+    |-BinaryConditionalOperator 0x7f933b814860 <line:9:3, col:29> 'int'
+    | |-BinaryOperator 0x7f933b814668 <col:3, col:8> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f933b814638 <col:3> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f933b8145e8 <col:3> 'int *' lvalue Var 0x7f933b814300 'c' 'int *'
+    | | `-ImplicitCastExpr 0x7f933b814650 <col:8> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f933b814610 <col:8> 'int *' lvalue Var 0x7f933b814378 'd' 'int *'
+    | |-OpaqueValueExpr 0x7f933b814840 <col:3, col:8> 'int'
+    | | `-BinaryOperator 0x7f933b814668 <col:3, col:8> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7f933b814638 <col:3> 'int *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7f933b8145e8 <col:3> 'int *' lvalue Var 0x7f933b814300 'c' 'int *'
+    | |   `-ImplicitCastExpr 0x7f933b814650 <col:8> 'int *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f933b814610 <col:8> 'int *' lvalue Var 0x7f933b814378 'd' 'int *'
+    | |-OpaqueValueExpr 0x7f933b814840 <col:3, col:8> 'int'
+    | | `-BinaryOperator 0x7f933b814668 <col:3, col:8> 'int' '=='
+    | |   |-ImplicitCastExpr 0x7f933b814638 <col:3> 'int *' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7f933b8145e8 <col:3> 'int *' lvalue Var 0x7f933b814300 'c' 'int *'
+    | |   `-ImplicitCastExpr 0x7f933b814650 <col:8> 'int *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f933b814610 <col:8> 'int *' lvalue Var 0x7f933b814378 'd' 'int *'
+    | `-CallExpr 0x7f933b814810 <col:13, col:29> 'int'
+    |   |-ImplicitCastExpr 0x7f933b8147f8 <col:13> 'int (*)()' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f933b814780 <col:13> 'int ()' Function 0x7f933b8146d0 '__builtin_exit' 'int ()'
+    |   `-IntegerLiteral 0x7f933b8147a8 <col:28> 'int' 0
+    |-ForStmt 0x7f933b814a48 <line:10:3, line:11:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f933b8148c8 <line:10:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7f933b8148a0 <col:10> 'int' lvalue Var 0x7f933b814258 'b' 'int'
+    | |-BinaryOperator 0x7f933b814a10 <col:13, col:27> 'int' '>='
+    | | |-UnaryOperator 0x7f933b814908 <col:13, col:14> 'int' postfix '++'
+    | | | `-DeclRefExpr 0x7f933b8148e0 <col:13> 'int' lvalue Var 0x7f933b814258 'b' 'int'
+    | | `-Pare1 error generated.
+nExpr 0x7f933b8149f0 <col:20, col:27> 'int'
+    | |   `-BinaryOperator 0x7f933b8149c8 <col:21, col:26> 'int' '='
+    | |     |-UnaryOperator 0x7f933b814968 <col:21, col:22> 'int' lvalue prefix '*'
+    | |     | `-ImplicitCastExpr 0x7f933b814950 <col:22> 'int *' <LValueToRValue>
+    | |     |   `-DeclRefExpr 0x7f933b814928 <col:22> 'int *' lvalue Var 0x7f933b814378 'd' 'int *'
+    | |     `-ImplicitCastExpr 0x7f933b8149b0 <col:26> 'int' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7f933b814988 <col:26> 'const int' lvalue Var 0x7f933b02c978 'a' 'const int'
+    | `-NullStmt 0x7f933b814a38 <line:11:5>
+    `-ReturnStmt 0x7f933b814aa0 <line:12:3, col:10>
+      `-IntegerLiteral 0x7f933b814a80 <col:10> 'int' 0

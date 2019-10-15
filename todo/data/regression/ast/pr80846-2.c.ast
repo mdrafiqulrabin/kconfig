@@ -1,0 +1,45 @@
+TranslationUnitDecl 0x7ff1c8821ce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff1c801ab38 <../Data/C2AST/pr80846-2.c:4:1, line:10:1> line:4:5 sumint 'int (const int *)'
+| |-ParmVarDecl 0x7ff1c801aa30 <col:12, col:26> col:22 used arr 'const int *':'const int *'
+| `-CompoundStmt 0x7ff1c801b3e0 <col:29, line:10:1>
+|   |-BinaryOperator 0x7ff1c801afd8 <line:5:5, col:43> 'const int *':'const int *' '='
+|   | |-DeclRefExpr 0x7ff1c801ac20 <col:5> 'const int *':'const int *' lvalue ParmVar 0x7ff1c801aa30 'arr' 'const int *':'const int *'
+|   | `-ImplicitCastExpr 0x7ff1c801afc0 <col:11, col:43> 'const int *':'const int *' <BitCast>
+|   |   `-CallExpr 0x7ff1c801af40 <col:11, col:43> 'void *'
+|   |     |-ImplicitCastExpr 0x7ff1c801af28 <col:11> 'void *(*)(const void *, unsigned long, ...)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7ff1c801ae88 <col:11> '<builtin fn type>' Function 0x7ff1c801acc0 '__builtin_assume_aligned' 'void *(const void *, unsigned long, ...)'
+|   |     |-ImplicitCastExpr 0x7ff1c801af90 <col:36> 'const void *' <BitCast>
+|   |     | `-ImplicitCastExpr 0x7ff1c801af78 <col:36> 'const int *':'const int *' <LValueToRValue>
+|   |     |   `-DeclRefExpr 0x7ff1c801aeb0 <col:36> 'const int *':'const int *' lvalue ParmVar 0x7ff1c801aa30 'arr' 'const int *':'const int *'
+|   |     `-ImplicitCastExpr 0x7ff1c801afa8 <col:41> 'unsigned long' <IntegralCast>
+|   |       `-IntegerLiteral 0x7ff1c801aed8 <col:41> 'int' 64
+|   |-DeclStmt 0x7ff1c801b098 <line:6:5, col:14>
+|   | `-VarDecl 0x7ff1c801b018 <col:5, col:13> col:9 used sum 'int' cinit
+|   |   `-IntegerLiteral 0x7ff1c801b078 <col:13> 'int' 0
+|   |-ForStmt 0x7ff1c801b350 <line:7:5, line:8:17>
+|   | |-DeclStmt 0x7ff1c801b148 <line:7:10, col:18>
+|   | | `-VarDecl 0x7ff1c801b0c8 <col:10, col:16> col:14 used i 'int' cinit
+|   | |   `-IntegerLiteral 0x7ff1c801b128 <col:16> 'int' 0
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7ff1c801b1c0 <col:20, col:22> 'int' '<'
+|   | | |-ImplicitCastExpr 0x7ff1c801b1a8 <col:20> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x7ff1c801b160 <col:20> 'int' lvalue Var 0x7ff1c801b0c8 'i' 'int'
+|   | | `-IntegerLiteral 0x7ff1c801b188 <col:22> 'int' 1024
+|   | |-UnaryOperator 0x7ff1c801b210 <col:29, col:30> 'int' postfix '++'
+|   | | `-DeclRefExpr 0x7ff1c801b1e8 <col:29> 'int' lvalue Var 0x7ff1c801b0c8 'i' 'int'
+|   | `-CompoundAssignOperator 0x7ff1c801b318 <line:8:7, col:17> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+|   |   |-DeclRefExpr 0x7ff1c801b230 <col:7> 'int' lvalue Var 0x7ff1c801b018 'sum' 'int'
+|   |   `-ImplicitCastExpr 0x7ff1c801b300 <col:12, col:17> 'int' <LValueToRValue>
+|   |     `-ArraySubscriptExpr 0x7ff1c801b2d8 <col:12, col:17> 'const int' lvalue
+|   |       |-ImplicitCastExpr 0x7ff1c801b2a8 <col:12> 'const int *':'const int *' <LValueToRValue>
+|   |       | `-DeclRefExpr 0x7ff1c801b258 <col:12> 'const int *':'const int *' lvalue ParmVar 0x7ff1c801aa30 'arr' 'const int *':'const int *'
+|   |       `-ImplicitCastExpr 0x7ff1c801b2c0 <col:16> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7ff1c801b280 <col:16> 'int' lvalue Var 0x7ff1c801b0c8 'i' 'int'
+|   `-ReturnStmt 0x7ff1c801b3c8 <line:9:5, col:12>
+|     `-ImplicitCastExpr 0x7ff1c801b3b0 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ff1c801b388 <col:12> 'int' lvalue Var 0x7ff1c801b018 'sum' 'int'
+`-FunctionDecl 0x7ff1c801acc0 <line:5:11> col:11 implicit used __builtin_assume_aligned 'void *(const void *, unsigned long, ...)' extern
+  |-ParmVarDecl 0x7ff1c801ad60 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7ff1c801adc0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  |-NoThrowAttr 0x7ff1c801ae30 <col:11> Implicit
+  `-ConstAttr 0x7ff1c801ae78 <col:11> Implicit

@@ -1,0 +1,59 @@
+../Data/C2AST/pr44777.c:23:5: error: function definition is not allowed here
+    {
+    ^
+TranslationUnitDecl 0x7ffccf82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ffccf82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ffccf82bf80 '__int128'
+|-TypedefDecl 0x7ffccf82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ffccf82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ffccf82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ffccf82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ffccf82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ffccf82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ffccf82c600 'char *'
+|   `-BuiltinType 0x7ffccf82bd80 'char'
+|-TypedefDecl 0x7ffccf82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ffccf82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ffccf82c720 'struct __va_list_tag'
+|     `-Record 0x7ffccf82c698 '__va_list_tag'
+|-FunctionDecl 0x7ffccf86d850 <../Data/C2AST/pr44777.c:9:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffccf86d8f0 prev 0x7ffccf86d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7ffccf86daa8 <line:10:13> col:13 implicit used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffccf86db48 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x7ffccf86dbb0 prev 0x7ffccf86daa8 <col:1, col:22> col:13 used exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x7ffccf86d9a8 <col:19> col:22 'int'
+|-FunctionDecl 0x7ffccf86dd38 <line:18:1, line:35:1> line:19:1 used x 'int (int)'
+| |-ParmVarDecl 0x7ffccf86dc70 <col:4, col:8> col:8 used a 'int'
+| `-CompoundStmt 0x7ffccf86e158 <line:20:1, line:35:1>
+|   |-DeclStmt 0x7ffccf86de68 <line:21:3, col:17>
+|   | `-LabelDecl 0x7ffccf86de20 <col:3, col:13> col:13 xlab
+|   |-CallExpr 0x7ffccf86e090 <line:32:3, col:7> 'int'
+|   | |-ImplicitCastExpr 0x7ffccf86e078 <col:3> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7ffccf86e000 <col:3> 'int ()' Function 0x7ffccf86df50 'y' 'int ()'
+|   | `-ImplicitCastExpr 0x7ffccf86e0c0 <col:6> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7ffccf86e028 <col:6> 'int' lvalue ParmVar 0x7ffccf86dc70 'a' 'int'
+|   |-LabelStmt 0x7ffccf86e0e8 <line:33:2, col:7> 'xlab'
+|   | `-NullStmt 0x7ffccf86e0d8 <col:7>
+|   `-ReturnStmt 0x7ffccf86e140 <line:34:3, col:10>
+|     `-ImplicitCastExpr 0x7ffccf86e128 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7ffccf86e100 <col:10> 'int' lvalue ParmVar 0x7ffccf86dc70 'a' 'int'
+`-FunctionDecl 0x7ffccf86e1b0 <line:37:1, line:45:1> line:38:1 main 'int ()'
+  `-CompoundStmt 0x7ffccf86e4e0 <line:39:1, line:45:1>
+    |-IfStmt 0x7ffccf86e3e8 <line:41:3, line:42:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ffccf86e330 <line:41:7, line:15:15> 'int' '!='
+    | | |-CallExpr 0x7ffccf86e2e0 <line:41:7, col:15> 'int'
+    | | | |-ImplicitCastExpr 0x7ffccf86e2c8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x7ffccf86e250 <col:7> 'int (int)' Function 0x7ffccf86dd38 'x' 'int (int)'
+    | | | `-IntegerLiteral 0x7ffccf86e278 <line:15:15> 'int' 1000
+    | | `-IntegerLiteral 0x7ffccf86e310 <col:15> 'int' 1000
+    | |-CallExpr 0x7ffccf86e3c0 <line:42:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ffccf86e3a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ffccf86e358 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7ffccf86d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-CallExpr 0x7ffccf86e4b0 <line:44:3, col:10> 'void'
+      |-ImplicitCastExpr 0x7ffccf86e498 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffccf86e420 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7ffccf86dbb0 'exit' 'void (int) __attribute__((noreturn))'
+      `-IntegerLiteral 0x7ffccf86e4481 error generated.
+ <col:9> 'int' 0

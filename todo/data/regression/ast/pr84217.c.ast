@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fa01b02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fa01b06d820 <../Data/C2AST/pr84217.c:1:1, line:8:1> line:2:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa01b06dce0 <line:3:1, line:8:1>
+    `-ForStmt 0x7fa01b06dca8 <line:5:3, line:7:7>
+      |-DeclStmt 0x7fa01b06d9b0 <line:5:8, col:19>
+      | `-VarDecl 0x7fa01b06d918 <col:8, col:18> col:14 used i 'short' cinit
+      |   `-ImplicitCastExpr 0x7fa01b06d998 <col:18> 'short' <IntegralCast>
+      |     `-IntegerLiteral 0x7fa01b06d978 <col:18> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fa01b06da40 <col:21, col:25> 'int' '<'
+      | |-ImplicitCastExpr 0x7fa01b06da28 <col:21> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fa01b06da10 <col:21> 'short' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fa01b06d9c8 <col:21> 'short' lvalue Var 0x7fa01b06d918 'i' 'short'
+      | `-IntegerLiteral 0x7fa01b06d9f0 <col:25> 'int' 10
+      |-UnaryOperator 0x7fa01b06da90 <col:29, col:31> 'short' prefix '++'
+      | `-DeclRefExpr 0x7fa01b06da68 <col:31> 'short' lvalue Var 0x7fa01b06d918 'i' 'short'
+      `-ForStmt 0x7fa01b06dc70 <line:6:5, line:7:7>
+        |-DeclStmt 0x7fa01b06db60 <line:6:10, col:21>
+        | `-VarDecl 0x7fa01b06dac8 <col:10, col:20> col:16 used j 'short' cinit
+        |   `-ImplicitCastExpr 0x7fa01b06db48 <col:20> 'short' <IntegralCast>
+        |     `-IntegerLiteral 0x7fa01b06db28 <col:20> 'int' 0
+        |-<<<NULL>>>
+        |-BinaryOperator 0x7fa01b06dbf0 <col:23, col:27> 'int' '<'
+        | |-ImplicitCastExpr 0x7fa01b06dbd8 <col:23> 'int' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7fa01b06dbc0 <col:23> 'short' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7fa01b06db78 <col:23> 'short' lvalue Var 0x7fa01b06dac8 'j' 'short'
+        | `-IntegerLiteral 0x7fa01b06dba0 <col:27> 'int' 10
+        |-UnaryOperator 0x7fa01b06dc40 <col:31, col:33> 'short' prefix '++'
+        | `-DeclRefExpr 0x7fa01b06dc18 <col:33> 'short' lvalue Var 0x7fa01b06dac8 'j' 'short'
+        `-NullStmt 0x7fa01b06dc60 <line:7:7>

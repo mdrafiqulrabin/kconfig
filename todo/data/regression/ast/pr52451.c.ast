@@ -1,0 +1,832 @@
+TranslationUnitDecl 0x7fd96582bae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd965822c50 <../Data/C2AST/pr52451.c:43:1, line:58:1> line:44:1 main 'int (void)'
+| `-CompoundStmt 0x7fd96586cf48 <line:45:1, line:58:1>
+|   |-DeclStmt 0x7fd965822d90 <line:46:3, col:17>
+|   | `-VarDecl 0x7fd965822d30 <col:3, col:16> col:16 used r 'volatile int'
+|   |-CallExpr 0x7fd965822e30 <line:48:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965822e18 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965822da8 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965822dd0 </usr/include/fenv.h:206:29> 'int' 1
+|   |-DeclStmt 0x7fd9658231c0 <../Data/C2AST/pr52451.c:24:3, col:47>
+|   | `-VarDecl 0x7fd965822e78 <col:3, col:46> <scratch space>:2:1 used nanf 'volatile float' cinit
+|   |   `-CallExpr 0x7fd965823160 <line:3:1, ../Data/C2AST/pr52451.c:24:46> 'float'
+|   |     |-ImplicitCastExpr 0x7fd965823148 <<scratch space>:3:1> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fd965823078 <col:1> '<builtin fn type>' Function 0x7fd965822f18 '__builtin_nanf' 'float (const char *)'
+|   |     `-ImplicitCastExpr 0x7fd9658231a8 <../Data/C2AST/pr52451.c:24:44> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7fd965823190 <col:44> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7fd9658230d8 <col:44> 'char [1]' lvalue ""
+|   |-DeclStmt 0x7fd965823270 <line:25:3, col:32>
+|   | `-VarDecl 0x7fd9658231f0 <col:3, <scratch space>:5:1> line:4:1 used argf 'volatile float' cinit
+|   |   `-FloatingLiteral 0x7fd965823250 <line:5:1> 'float' 1.000000e+00
+|   |-BinaryOperator 0x7fd965823358 <../Data/C2AST/pr52451.c:8:3, <scratch space>:7:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd965823288 <../Data/C2AST/pr52451.c:8:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965823330 <<scratch space>:6:1, line:7:1> 'int' '=='
+|   |   |-ImplicitCastExpr 0x7fd965823300 <line:6:1> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658232b0 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965823318 <line:7:1> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658232d8 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd9658611b8 <../Data/C2AST/pr52451.c:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd9658233e0 <line:9:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658233c8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965823380 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd9658233a8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965861190 <../Data/C2AST/pr52451.c:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965861178 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965861128 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658612c0 <line:8:3, <scratch space>:9:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658611f0 <../Data/C2AST/pr52451.c:8:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965861298 <<scratch space>:8:1, line:9:1> 'int' '!='
+|   |   |-ImplicitCastExpr 0x7fd965861268 <line:8:1> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965861218 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965861280 <line:9:1> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965861240 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd9658613e0 <../Data/C2AST/pr52451.c:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965861348 <line:9:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965861330 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd9658612e8 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965861310 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658613b8 <../Data/C2AST/pr52451.c:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658613a0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965861378 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658616b8 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965861418 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965861620 <<scratch space>:10:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965861608 <<scratch space>:10:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965861560 <col:1> '<builtin fn type>' Function 0x7fd965861468 '__builtin_isgreater' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965861670 <line:11:1> 'double' <FloatingCast>
+|   |   | `-ImplicitCastExpr 0x7fd965861658 <col:1> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd965861588 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd9658616a0 <line:12:1> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7fd965861688 <col:1> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd9658615b0 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd9658617d8 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965861740 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965861728 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd9658616e0 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965861708 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658617b0 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965861798 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965861770 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965861a58 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965861810 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd9658619c0 <<scratch space>:13:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd9658619a8 <<scratch space>:13:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965861930 <col:1> '<builtin fn type>' Function 0x7fd965861838 '__builtin_isless' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965861a10 <line:14:1> 'double' <FloatingCast>
+|   |   | `-ImplicitCastExpr 0x7fd9658619f8 <col:1> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd965861958 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965861a40 <line:15:1> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7fd965861a28 <col:1> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd965861980 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965861b78 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965861ae0 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965861ac8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965861a80 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965861aa8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965861b50 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965861b38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965861b10 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965861df8 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965861bb0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965861d60 <<scratch space>:16:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965861d48 <<scratch space>:16:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965861cd0 <col:1> '<builtin fn type>' Function 0x7fd965861bd8 '__builtin_isgreaterequal' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965861db0 <line:17:1> 'double' <FloatingCast>
+|   |   | `-ImplicitCastExpr 0x7fd965861d98 <col:1> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd965861cf8 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965861de0 <line:18:1> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7fd965861dc8 <col:1> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd965861d20 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965861f18 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965861e80 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965861e68 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965861e20 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965861e48 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965861ef0 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965861ed8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965861eb0 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965862e20 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965861f50 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965862d88 <<scratch space>:19:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965862d70 <<scratch space>:19:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965862cf8 <col:1> '<builtin fn type>' Function 0x7fd965862c00 '__builtin_islessequal' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965862dd8 <line:20:1> 'double' <FloatingCast>
+|   |   | `-ImplicitCastExpr 0x7fd965862dc0 <col:1> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd965862d20 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965862e08 <line:21:1> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7fd965862df0 <col:1> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd965862d48 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965862f40 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965862ea8 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965862e90 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965862e48 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965862e70 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965862f18 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965862f00 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965862ed8 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658631c0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965862f78 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965863128 <<scratch space>:22:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965863110 <<scratch space>:22:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965863098 <col:1> '<builtin fn type>' Function 0x7fd965862fa0 '__builtin_islessgreater' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965863178 <line:23:1> 'double' <FloatingCast>
+|   |   | `-ImplicitCastExpr 0x7fd965863160 <col:1> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd9658630c0 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd9658631a8 <line:24:1> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7fd965863190 <col:1> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd9658630e8 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd9658632e0 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965863248 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965863230 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd9658631e8 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965863210 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658632b8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658632a0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965863278 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965863560 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965863318 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd9658634c8 <<scratch space>:25:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd9658634b0 <<scratch space>:25:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965863438 <col:1> '<builtin fn type>' Function 0x7fd965863340 '__builtin_isunordered' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965863518 <line:26:1> 'double' <FloatingCast>
+|   |   | `-ImplicitCastExpr 0x7fd965863500 <col:1> 'float' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fd965863460 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965863548 <line:27:1> 'double' <FloatingCast>
+|   |     `-ImplicitCastExpr 0x7fd965863530 <col:1> 'float' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fd965863488 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965863680 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd9658635e8 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658635d0 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965863588 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd9658635b0 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965863658 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965863640 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965863618 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965863788 <line:18:3, <scratch space>:29:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658636b8 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965863760 <<scratch space>:28:1, line:29:1> 'int' '>'
+|   |   |-ImplicitCastExpr 0x7fd965863730 <line:28:1> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658636e0 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965863748 <line:29:1> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965863708 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd9658638c8 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd965863840 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965863810 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd9658637f8 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd9658637b0 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd9658637d8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658638a0 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965863888 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965863860 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd965863960 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965863948 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965863900 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965863928 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd965863a60 <../Data/C2AST/pr52451.c:18:3, <scratch space>:31:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd965863990 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965863a38 <<scratch space>:30:1, line:31:1> 'int' '<'
+|   |   |-ImplicitCastExpr 0x7fd965863a08 <line:30:1> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658639b8 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965863a20 <line:31:1> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658639e0 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965863ba0 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd965863b18 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965863ae8 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965863ad0 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd965863a88 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd965863ab0 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965863b78 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965863b60 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965863b38 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd965863c38 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965863c20 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965863bd8 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965863c00 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd965863d38 <../Data/C2AST/pr52451.c:18:3, <scratch space>:33:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd965863c68 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965863d10 <<scratch space>:32:1, line:33:1> 'int' '>='
+|   |   |-ImplicitCastExpr 0x7fd965863ce0 <line:32:1> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965863c90 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965863cf8 <line:33:1> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965863cb8 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965863e78 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd965863df0 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965863dc0 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965863da8 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd965863d60 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd965863d88 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965863e50 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965863e38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965863e10 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd965863f10 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965863ef8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965863eb0 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965863ed8 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd965864010 <../Data/C2AST/pr52451.c:18:3, <scratch space>:35:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd965863f40 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965863fe8 <<scratch space>:34:1, line:35:1> 'int' '<='
+|   |   |-ImplicitCastExpr 0x7fd965863fb8 <line:34:1> 'float' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965863f68 <col:1> 'volatile float' lvalue Var 0x7fd965822e78 'nanf' 'volatile float'
+|   |   `-ImplicitCastExpr 0x7fd965863fd0 <line:35:1> 'float' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965863f90 <col:1> 'volatile float' lvalue Var 0x7fd9658231f0 'argf' 'volatile float'
+|   |-IfStmt 0x7fd965864150 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd9658640c8 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965864098 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965864080 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd965864038 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd965864060 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965864128 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965864110 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd9658640e8 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd9658641e8 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd9658641d0 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965864188 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd9658641b0 </usr/include/fenv.h:206:29> 'int' 1
+|   |-DeclStmt 0x7fd965864530 <../Data/C2AST/pr52451.c:24:3, col:47>
+|   | `-VarDecl 0x7fd965864230 <col:3, col:46> col:17 used nan 'volatile double' cinit
+|   |   `-CallExpr 0x7fd9658644d0 <col:26, col:46> 'double'
+|   |     |-ImplicitCastExpr 0x7fd9658644b8 <col:26> 'double (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fd965864428 <col:26> '<builtin fn type>' Function 0x7fd9658642c8 '__builtin_nan' 'double (const char *)'
+|   |     `-ImplicitCastExpr 0x7fd965864518 <col:44> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7fd965864500 <col:44> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7fd965864450 <col:44> 'char [1]' lvalue ""
+|   |-DeclStmt 0x7fd9658645e0 <line:25:3, col:32>
+|   | `-VarDecl 0x7fd965864560 <col:3, col:26> col:17 used arg 'volatile double' cinit
+|   |   `-FloatingLiteral 0x7fd9658645c0 <col:26> 'double' 1.000000e+00
+|   |-BinaryOperator 0x7fd9658646c8 <line:8:3, col:18> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658645f8 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd9658646a0 <col:7, col:18> 'int' '=='
+|   |   |-ImplicitCastExpr 0x7fd965864670 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965864620 <col:7> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965864688 <col:18> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965864648 <col:18> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd9658647e8 <line:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965864750 <line:9:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965864738 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd9658646f0 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965864718 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658647c0 <../Data/C2AST/pr52451.c:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658647a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965864780 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658648f0 <line:8:3, col:18> 'int' '='
+|   | |-DeclRefExpr 0x7fd965864820 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd9658648c8 <col:7, col:18> 'int' '!='
+|   |   |-ImplicitCastExpr 0x7fd965864898 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965864848 <col:7> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd9658648b0 <col:18> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965864870 <col:18> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965864a10 <line:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965864978 <line:9:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965864960 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965864918 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965864940 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658649e8 <../Data/C2AST/pr52451.c:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658649d0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd9658649a8 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965864b68 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965864a48 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965864b00 <<scratch space>:36:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965864ae8 <<scratch space>:36:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965864a70 <col:1> '<builtin fn type>' Function 0x7fd965861468 '__builtin_isgreater' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965864b38 <../Data/C2AST/pr52451.c:13:23> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965864a98 <col:23> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965864b50 <col:31> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965864ac0 <col:31> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965866498 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965866400 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965864bd8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965864b90 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965864bb8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965866470 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965866458 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965866430 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658665f0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658664d0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965866588 <<scratch space>:37:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965866570 <<scratch space>:37:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd9658664f8 <col:1> '<builtin fn type>' Function 0x7fd965861838 '__builtin_isless' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd9658665c0 <../Data/C2AST/pr52451.c:13:23> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965866520 <col:23> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd9658665d8 <col:31> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965866548 <col:31> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965866710 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965866678 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965866660 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965866618 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965866640 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658666e8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658666d0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd9658666a8 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965866868 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965866748 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965866800 <<scratch space>:38:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd9658667e8 <<scratch space>:38:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965866770 <col:1> '<builtin fn type>' Function 0x7fd965861bd8 '__builtin_isgreaterequal' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965866838 <../Data/C2AST/pr52451.c:13:23> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965866798 <col:23> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965866850 <col:31> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658667c0 <col:31> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965866988 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd9658668f0 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658668d8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965866890 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd9658668b8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965866960 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965866948 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965866920 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965866ae0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658669c0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965866a78 <<scratch space>:39:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965866a60 <<scratch space>:39:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd9658669e8 <col:1> '<builtin fn type>' Function 0x7fd965862c00 '__builtin_islessequal' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965866ab0 <../Data/C2AST/pr52451.c:13:23> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965866a10 <col:23> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965866ac8 <col:31> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965866a38 <col:31> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965866c00 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965866b68 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965866b50 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965866b08 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965866b30 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965866bd8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965866bc0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965866b98 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965866d58 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965866c38 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965866cf0 <<scratch space>:40:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965866cd8 <<scratch space>:40:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965866c60 <col:1> '<builtin fn type>' Function 0x7fd965862fa0 '__builtin_islessgreater' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965866d28 <../Data/C2AST/pr52451.c:13:23> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965866c88 <col:23> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965866d40 <col:31> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965866cb0 <col:31> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965866e78 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965866de0 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965866dc8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965866d80 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965866da8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965866e50 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965866e38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965866e10 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965866fd0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965866eb0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965866f68 <<scratch space>:41:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965866f50 <<scratch space>:41:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965866ed8 <col:1> '<builtin fn type>' Function 0x7fd965863340 '__builtin_isunordered' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965866fa0 <../Data/C2AST/pr52451.c:13:23> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965866f00 <col:23> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965866fb8 <col:31> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965866f28 <col:31> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd9658670f0 <line:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965867058 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965867040 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965866ff8 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965867020 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658670c8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658670b0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965867088 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658671f8 <line:18:3, col:18> 'int' '='
+|   | |-DeclRefExpr 0x7fd965867128 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd9658671d0 <col:7, col:18> 'int' '>'
+|   |   |-ImplicitCastExpr 0x7fd9658671a0 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965867150 <col:7> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd9658671b8 <col:18> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965867178 <col:18> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965867338 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd9658672b0 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965867280 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965867268 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd965867220 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd965867248 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965867310 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658672f8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd9658672d0 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd9658673d0 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd9658673b8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965867370 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965867398 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd9658674d0 <../Data/C2AST/pr52451.c:18:3, col:18> 'int' '='
+|   | |-DeclRefExpr 0x7fd965867400 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd9658674a8 <col:7, col:18> 'int' '<'
+|   |   |-ImplicitCastExpr 0x7fd965867478 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965867428 <col:7> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965867490 <col:18> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965867450 <col:18> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965867610 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd965867588 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965867558 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965867540 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd9658674f8 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd965867520 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658675e8 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658675d0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd9658675a8 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd9658676a8 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965867690 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965867648 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965867670 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd9658677a8 <../Data/C2AST/pr52451.c:18:3, col:18> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658676d8 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965867780 <col:7, col:18> 'int' '>='
+|   |   |-ImplicitCastExpr 0x7fd965867750 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965867700 <col:7> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965867768 <col:18> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965867728 <col:18> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd9658678e8 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd965867860 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965867830 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965867818 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd9658677d0 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd9658677f8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658678c0 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658678a8 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965867880 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd965867980 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965867968 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965867920 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965867948 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd965867a80 <../Data/C2AST/pr52451.c:18:3, col:18> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658679b0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965867a58 <col:7, col:18> 'int' '<='
+|   |   |-ImplicitCastExpr 0x7fd965867a28 <col:7> 'double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658679d8 <col:7> 'volatile double' lvalue Var 0x7fd965864230 'nan' 'volatile double'
+|   |   `-ImplicitCastExpr 0x7fd965867a40 <col:18> 'double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965867a00 <col:18> 'volatile double' lvalue Var 0x7fd965864560 'arg' 'volatile double'
+|   |-IfStmt 0x7fd965867bc0 <line:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd965867b38 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd965867b08 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd965867af0 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd965867aa8 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd965867ad0 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965867b98 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965867b80 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965867b58 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd965867c58 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd965867c40 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd965867bf8 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd965867c20 </usr/include/fenv.h:206:29> 'int' 1
+|   |-DeclStmt 0x7fd965867fa0 <../Data/C2AST/pr52451.c:24:3, col:47>
+|   | `-VarDecl 0x7fd965867ca0 <col:3, col:46> <scratch space>:42:1 used nanl 'volatile long double' cinit
+|   |   `-CallExpr 0x7fd965867f40 <line:43:1, ../Data/C2AST/pr52451.c:24:46> 'long double'
+|   |     |-ImplicitCastExpr 0x7fd965867f28 <<scratch space>:43:1> 'long double (*)(const char *)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fd965867e98 <col:1> '<builtin fn type>' Function 0x7fd965867d38 '__builtin_nanl' 'long double (const char *)'
+|   |     `-ImplicitCastExpr 0x7fd965867f88 <../Data/C2AST/pr52451.c:24:44> 'const char *' <BitCast>
+|   |       `-ImplicitCastExpr 0x7fd965867f70 <col:44> 'char *' <ArrayToPointerDecay>
+|   |         `-StringLiteral 0x7fd965867ec0 <col:44> 'char [1]' lvalue ""
+|   |-DeclStmt 0x7fd965868060 <line:25:3, col:32>
+|   | `-VarDecl 0x7fd965867fd0 <col:3, <scratch space>:45:1> line:44:1 used argl 'volatile long double' cinit
+|   |   `-FloatingLiteral 0x7fd965868030 <line:45:1> 'long double' 1.000000e+00
+|   |-BinaryOperator 0x7fd965868148 <../Data/C2AST/pr52451.c:8:3, <scratch space>:47:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd965868078 <../Data/C2AST/pr52451.c:8:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965868120 <<scratch space>:46:1, line:47:1> 'int' '=='
+|   |   |-ImplicitCastExpr 0x7fd9658680f0 <line:46:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658680a0 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965868108 <line:47:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658680c8 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965868268 <../Data/C2AST/pr52451.c:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd9658681d0 <line:9:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658681b8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868170 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965868198 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965868240 <../Data/C2AST/pr52451.c:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965868228 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965868200 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965868370 <line:8:3, <scratch space>:49:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658682a0 <../Data/C2AST/pr52451.c:8:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd965868348 <<scratch space>:48:1, line:49:1> 'int' '!='
+|   |   |-ImplicitCastExpr 0x7fd965868318 <line:48:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658682c8 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965868330 <line:49:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658682f0 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965868498 <../Data/C2AST/pr52451.c:9:3, line:10:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965868400 <line:9:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658683e0 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868398 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd9658683c0 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965868470 <../Data/C2AST/pr52451.c:10:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965868458 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965868430 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd9658685f0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658684d0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965868588 <<scratch space>:50:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965868570 <<scratch space>:50:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd9658684f8 <col:1> '<builtin fn type>' Function 0x7fd965861468 '__builtin_isgreater' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd9658685c0 <line:51:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965868520 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd9658685d8 <line:52:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965868548 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965868710 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965868678 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965868660 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868618 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965868640 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658686e8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658686d0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd9658686a8 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965868868 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965868748 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965868800 <<scratch space>:53:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd9658687e8 <<scratch space>:53:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965868770 <col:1> '<builtin fn type>' Function 0x7fd965861838 '__builtin_isless' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965868838 <line:54:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965868798 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965868850 <line:55:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658687c0 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965868988 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd9658688f0 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658688d8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868890 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd9658688b8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965868960 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965868948 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965868920 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965868ae0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658689c0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965868a78 <<scratch space>:56:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965868a60 <<scratch space>:56:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd9658689e8 <col:1> '<builtin fn type>' Function 0x7fd965861bd8 '__builtin_isgreaterequal' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965868ab0 <line:57:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965868a10 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965868ac8 <line:58:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965868a38 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965868c00 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965868b68 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965868b50 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868b08 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965868b30 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965868bd8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965868bc0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965868b98 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965868d58 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965868c38 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965868cf0 <<scratch space>:59:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965868cd8 <<scratch space>:59:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965868c60 <col:1> '<builtin fn type>' Function 0x7fd965862c00 '__builtin_islessequal' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965868d28 <line:60:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965868c88 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965868d40 <line:61:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965868cb0 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965868e78 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965868de0 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965868dc8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868d80 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965868da8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965868e50 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965868e38 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965868e10 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965868fd0 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965868eb0 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd965868f68 <<scratch space>:62:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd965868f50 <<scratch space>:62:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965868ed8 <col:1> '<builtin fn type>' Function 0x7fd965862fa0 '__builtin_islessgreater' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965868fa0 <line:63:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965868f00 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965868fb8 <line:64:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd965868f28 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd9658690f0 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd965869058 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd965869040 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965868ff8 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965869020 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd9658690c8 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd9658690b0 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965869088 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd965869248 <line:13:3, col:37> 'int' '='
+|   | |-DeclRefExpr 0x7fd965869128 <col:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-CallExpr 0x7fd9658691e0 <<scratch space>:65:1, ../Data/C2AST/pr52451.c:13:37> 'int'
+|   |   |-ImplicitCastExpr 0x7fd9658691c8 <<scratch space>:65:1> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fd965869150 <col:1> '<builtin fn type>' Function 0x7fd965863340 '__builtin_isunordered' 'int ()'
+|   |   |-ImplicitCastExpr 0x7fd965869218 <line:66:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd965869178 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd965869230 <line:67:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd9658691a0 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd965869368 <../Data/C2AST/pr52451.c:14:3, line:15:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd9658692d0 <line:14:7, col:31> 'int'
+|   | | |-ImplicitCastExpr 0x7fd9658692b8 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | | `-DeclRefExpr 0x7fd965869270 <col:7> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | | `-IntegerLiteral 0x7fd965869298 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd965869340 <../Data/C2AST/pr52451.c:15:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd965869328 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd965869300 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fd96586c480 <line:18:3, <scratch space>:69:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd9658693a0 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd96586c458 <<scratch space>:68:1, line:69:1> 'int' '>'
+|   |   |-ImplicitCastExpr 0x7fd96586c428 <line:68:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd9658693c8 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd96586c440 <line:69:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd96586c400 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd96586c5c0 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd96586c538 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd96586c508 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd96586c4f0 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd96586c4a8 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd96586c4d0 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd96586c598 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd96586c580 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd96586c558 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd96586c658 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd96586c640 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd96586c5f8 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd96586c620 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd96586c758 <../Data/C2AST/pr52451.c:18:3, <scratch space>:71:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd96586c688 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd96586c730 <<scratch space>:70:1, line:71:1> 'int' '<'
+|   |   |-ImplicitCastExpr 0x7fd96586c700 <line:70:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd96586c6b0 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd96586c718 <line:71:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd96586c6d8 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd96586c898 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd96586c810 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd96586c7e0 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd96586c7c8 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd96586c780 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd96586c7a8 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd96586c870 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd96586c858 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd96586c830 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd96586c930 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd96586c918 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd96586c8d0 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd96586c8f8 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd96586ca30 <../Data/C2AST/pr52451.c:18:3, <scratch space>:73:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd96586c960 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd96586ca08 <<scratch space>:72:1, line:73:1> 'int' '>='
+|   |   |-ImplicitCastExpr 0x7fd96586c9d8 <line:72:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd96586c988 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd96586c9f0 <line:73:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd96586c9b0 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd96586cb70 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd96586cae8 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd96586cab8 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd96586caa0 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd96586ca58 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd96586ca80 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd96586cb48 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd96586cb30 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd96586cb08 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd96586cc08 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd96586cbf0 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd96586cba8 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd96586cbd0 </usr/include/fenv.h:206:29> 'int' 1
+|   |-BinaryOperator 0x7fd96586cd08 <../Data/C2AST/pr52451.c:18:3, <scratch space>:75:1> 'int' '='
+|   | |-DeclRefExpr 0x7fd96586cc38 <../Data/C2AST/pr52451.c:18:3> 'volatile int' lvalue Var 0x7fd965822d30 'r' 'volatile int'
+|   | `-BinaryOperator 0x7fd96586cce0 <<scratch space>:74:1, line:75:1> 'int' '<='
+|   |   |-ImplicitCastExpr 0x7fd96586ccb0 <line:74:1> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fd96586cc60 <col:1> 'volatile long double' lvalue Var 0x7fd965867ca0 'nanl' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fd96586ccc8 <line:75:1> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fd96586cc88 <col:1> 'volatile long double' lvalue Var 0x7fd965867fd0 'argl' 'volatile long double'
+|   |-IfStmt 0x7fd96586ce48 <../Data/C2AST/pr52451.c:19:3, line:20:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fd96586cdc0 <line:19:7, col:32> 'int' prefix '!'
+|   | | `-CallExpr 0x7fd96586cd90 <col:8, col:32> 'int'
+|   | |   |-ImplicitCastExpr 0x7fd96586cd78 <col:8> 'int (*)(int)' <FunctionToPointerDecay>
+|   | |   | `-DeclRefExpr 0x7fd96586cd30 <col:8> 'int (int)' Function 0x7fd965821170 'fetestexcept' 'int (int)'
+|   | |   `-IntegerLiteral 0x7fd96586cd58 </usr/include/fenv.h:206:29> 'int' 1
+|   | |-CallExpr 0x7fd96586ce20 <../Data/C2AST/pr52451.c:20:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fd96586ce08 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fd96586cde0 <col:5> '<builtin fn type>' Function 0x7fd965861040 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   |-CallExpr 0x7fd96586cee0 <line:21:3, col:28> 'int'
+|   | |-ImplicitCastExpr 0x7fd96586cec8 <col:3> 'int (*)(int)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fd96586ce80 <col:3> 'int (int)' Function 0x7fd965820958 'feclearexcept' 'int (int)'
+|   | `-IntegerLiteral 0x7fd96586cea8 </usr/include/fenv.h:206:29> 'int' 1
+|   `-ReturnStmt 0x7fd96586cf30 <../Data/C2AST/pr52451.c:57:3, col:10>
+|     `-IntegerLiteral 0x7fd96586cf10 <col:10> 'int' 0
+|-FunctionDecl 0x7fd965822f18 <<scratch space>:3:1> col:1 implicit used __builtin_nanf 'float (const char *)' extern
+| |-ParmVarDecl 0x7fd965822fb8 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7fd965823020 <col:1> Implicit
+| `-ConstAttr 0x7fd965823068 <col:1> Implicit
+|-FunctionDecl 0x7fd965861040 <../Data/C2AST/pr52451.c:10:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7fd9658610e0 <col:5> Implicit
+|-FunctionDecl 0x7fd965861468 <<scratch space>:10:1> col:1 implicit used __builtin_isgreater 'int ()' extern
+| |-NoThrowAttr 0x7fd965861508 <col:1> Implicit
+| `-ConstAttr 0x7fd965861550 <col:1> Implicit
+|-FunctionDecl 0x7fd965861838 <line:13:1> col:1 implicit used __builtin_isless 'int ()' extern
+| |-NoThrowAttr 0x7fd9658618d8 <col:1> Implicit
+| `-ConstAttr 0x7fd965861920 <col:1> Implicit
+|-FunctionDecl 0x7fd965861bd8 <line:16:1> col:1 implicit used __builtin_isgreaterequal 'int ()' extern
+| |-NoThrowAttr 0x7fd965861c78 <col:1> Implicit
+| `-ConstAttr 0x7fd965861cc0 <col:1> Implicit
+|-FunctionDecl 0x7fd965862c00 <line:19:1> col:1 implicit used __builtin_islessequal 'int ()' extern
+| |-NoThrowAttr 0x7fd965862ca0 <col:1> Implicit
+| `-ConstAttr 0x7fd965862ce8 <col:1> Implicit
+|-FunctionDecl 0x7fd965862fa0 <line:22:1> col:1 implicit used __builtin_islessgreater 'int ()' extern
+| |-NoThrowAttr 0x7fd965863040 <col:1> Implicit
+| `-ConstAttr 0x7fd965863088 <col:1> Implicit
+|-FunctionDecl 0x7fd965863340 <line:25:1> col:1 implicit used __builtin_isunordered 'int ()' extern
+| |-NoThrowAttr 0x7fd9658633e0 <col:1> Implicit
+| `-ConstAttr 0x7fd965863428 <col:1> Implicit
+|-FunctionDecl 0x7fd9658642c8 <../Data/C2AST/pr52451.c:24:26> col:26 implicit used __builtin_nan 'double (const char *)' extern
+| |-ParmVarDecl 0x7fd965864368 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7fd9658643d0 <col:26> Implicit
+| `-ConstAttr 0x7fd965864418 <col:26> Implicit
+`-FunctionDecl 0x7fd965867d38 <<scratch space>:43:1> col:1 implicit used __builtin_nanl 'long double (const char *)' extern
+  |-ParmVarDecl 0x7fd965867dd8 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-NoThrowAttr 0x7fd965867e40 <col:1> Implicit
+  `-ConstAttr 0x7fd965867e88 <col:1> Implicit

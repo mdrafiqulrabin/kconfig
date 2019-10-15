@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7f922d02bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f922d814220 <../Data/C2AST/pr58048.c:5:1, line:11:1> line:6:1 div3 'void (void)'
+  `-CompoundStmt 0x7f922d8145f8 <line:7:1, line:11:1>
+    |-DeclStmt 0x7f922d814378 <line:8:5, col:16>
+    | `-VarDecl 0x7f922d814318 <col:5, col:12> col:12 used tmp1 'double'
+    `-GCCAsmStmt 0x7f922d814568 <line:10:5, col:56>
+      |-DeclRefExpr 0x7f922d814468 <col:34> 'double' lvalue Var 0x7f922d814318 'tmp1' 'double'
+      |-IntegerLiteral 0x7f922d8144f8 <col:45> 'int' 0
+      `-IntegerLiteral 0x7f922d814548 <col:54> 'int' 0

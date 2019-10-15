@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7f883602b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f883606cea8 <../Data/C2AST/pr57371-3.c:7:1, line:10:1> line:7:5 foo 'int (__int128_t)'
+  |-ParmVarDecl 0x7f883602bf90 <col:9, col:20> col:20 used x '__int128_t':'__int128'
+  `-CompoundStmt 0x7f883606d088 <col:23, line:10:1>
+    `-ReturnStmt 0x7f883606d070 <line:9:3, col:23>
+      `-BinaryOperator 0x7f883606d048 <col:10, col:23> 'int' '!='
+        |-CStyleCastExpr 0x7f883606cfe8 <col:10, col:18> 'float' <IntegralToFloating>
+        | `-ImplicitCastExpr 0x7f883606cfd0 <col:18> '__int128_t':'__int128' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f883606cf90 <col:18> '__int128_t':'__int128' lvalue ParmVar 0x7f883602bf90 'x' '__int128_t':'__int128'
+        `-ImplicitCastExpr 0x7f883606d030 <col:23> 'float' <IntegralToFloating>
+          `-IntegerLiteral 0x7f883606d010 <col:23> 'int' 0

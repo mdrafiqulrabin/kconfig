@@ -1,0 +1,34 @@
+../Data/C2AST/pr43690.c:8:20: error: invalid lvalue in asm input for constraint 'm'
+  asm ("" : : "m" (x++));        
+                   ^~~
+../Data/C2AST/pr43690.c:9:20: error: invalid lvalue in asm input for constraint 'm'
+  asm ("" : : "m" (++x));        
+                   ^~~
+../Data/C2AST/pr43690.c:10:20: error: invalid lvalue in asm input for constraint 'm'
+  asm ("" : : "m" (x--));        
+                   ^~~
+../Data/C2AST/pr43690.c:11:20: error: invalid lvalue in asm input for constraint 'm'
+  asm ("" : : "m" (--x));        
+                   ^~~
+../Data/C2AST/pr43690.c:12:20: error: invalid lvalue in asm input for constraint 'm'
+  asm ("" : : "m" (x + 1));      
+                   ^~~~~
+5 errors generated.
+TranslationUnitDecl 0x7fd5788268e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd578826e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd578826b80 '__int128'
+|-TypedefDecl 0x7fd578826ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd578826ba0 'unsigned __int128'
+|-TypedefDecl 0x7fd5788271a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd578826fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd578826f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd578827240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd578827200 'char *'
+|   `-BuiltinType 0x7fd578826980 'char'
+|-TypedefDecl 0x7fd578827508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd5788274b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd578827320 'struct __va_list_tag'
+|     `-Record 0x7fd578827298 '__va_list_tag'
+`-FunctionDecl 0x7fd579014260 <../Data/C2AST/pr43690.c:5:1, line:13:1> line:6:1 foo 'void (char *)'
+  |-ParmVarDecl 0x7fd578827578 <col:6, col:12> col:12 used x 'char *'
+  `-CompoundStmt 0x7fd579014720 <line:7:1, line:13:1>

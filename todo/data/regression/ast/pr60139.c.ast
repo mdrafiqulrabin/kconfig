@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f91f102b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f91f106ce68 <../Data/C2AST/pr60139.c:6:8> col:8 implicit used sin 'double (double)' extern
+| |-ParmVarDecl 0x7f91f106cf08 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7f91f106cf70 <col:8> Implicit
+| `-NoThrowAttr 0x7f91f106cfb8 <col:8> Implicit
+|-FunctionDecl 0x7f91f106cfc8 prev 0x7f91f106ce68 <col:1, col:19> col:8 used sin 'double (double)'
+| |-ParmVarDecl 0x7f91f102bf78 <col:13> col:19 'double'
+| |-ConstAttr 0x7f91f106d0a8 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7f91f106d0b8 <col:8> Inherited Implicit
+`-FunctionDecl 0x7f91f106d1d0 <line:7:1, line:14:1> line:8:1 fn 'void (int *)'
+  |-ParmVarDecl 0x7f91f106d110 <col:5, col:10> col:10 used p 'int *'
+  `-CompoundStmt 0x7f91f106d940 <line:9:1, line:14:1>
+    |-DeclStmt 0x7f91f106d5b8 <line:10:3, line:11:32>
+    | `-VarDecl 0x7f91f106d348 <line:10:3, line:11:31> line:10:9 a 'int **[3]' cinit
+    |   `-InitListExpr 0x7f91f106d4f0 <col:15, line:11:31> 'int **[3]'
+    |     |-UnaryOperator 0x7f91f106d3d0 <line:10:17, col:18> 'int **' prefix '&'
+    |     | `-DeclRefExpr 0x7f91f106d3a8 <col:18> 'int *' lvalue ParmVar 0x7f91f106d110 'p' 'int *'
+    |     |-ImplicitCastExpr 0x7f91f106d538 <line:11:16, col:25> 'int **' <NullToPointer>
+    |     | `-CStyleCastExpr 0x7f91f106d428 <col:16, col:25> 'void *' <NullToPointer>
+    |     |   `-IntegerLiteral 0x7f91f106d3f0 <col:25> 'int' 0
+    |     `-UnaryOperator 0x7f91f106d478 <col:28, col:29> 'int **' prefix '&'
+    |       `-DeclRefExpr 0x7f91f106d450 <col:29> 'int *' lvalue ParmVar 0x7f91f106d110 'p' 'int *'
+    `-DeclStmt 0x7f91f106d928 <line:12:3, line:13:39>
+      `-VarDecl 0x7f91f106d620 <line:12:3, line:13:38> line:12:10 d 'double [4]' cinit
+        `-InitListExpr 0x7f91f106d870 <col:16, line:13:38> 'double [4]'
+          |-CallExpr 0x7f91f106d710 <line:12:18, col:26> 'double'
+          | |-ImplicitCastExpr 0x7f91f106d6f8 <col:18> 'double (*)(double)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7f91f106d680 <col:18> 'double (double)' Function 0x7f91f106cfc8 'sin' 'double (double)'
+          | `-FloatingLiteral 0x7f91f106d6a8 <col:23> 'double' 1.000000e+00
+          |-FloatingLiteral 0x7f91f106d740 <line:13:18> 'double' 8.800000e+00
+          |-CallExpr 0x7f91f106d7c0 <col:23, col:31> 'double'
+          | |-ImplicitCastExpr 0x7f91f106d7a8 <col:23> 'double (*)(double)' <FunctionToPointerDecay>
+          | | `-DeclRefExpr 0x7f91f106d760 <col:23> 'double (double)' Function 0x7f91f106cfc8 'sin' 'double (double)'
+          | `-FloatingLiteral 0x7f91f106d788 <col:28> 'double' 1.000000e+00
+          `-FloatingLiteral 0x7f91f106d7f0 <col:34> 'double' 2.600000e+00

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fdda08172e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdda0850e20 <../Data/C2AST/pr42674.c:5:1, col:22> col:13 used bar 'void (void)' extern
+|-FunctionDecl 0x7fdda0850ff8 <line:6:1, col:62> col:12 used foo 'int (void) __attribute__((noreturn))' static
+| `-UsedAttr 0x7fdda0851098 <col:53>
+`-FunctionDecl 0x7fdda0851178 prev 0x7fdda0850ff8 <line:8:1, line:13:1> line:9:1 used foo 'int (void) __attribute__((noreturn))' static
+  |-CompoundStmt 0x7fdda0851338 <line:10:1, line:13:1>
+  | `-WhileStmt 0x7fdda0851318 <line:11:3, line:12:10>
+  |   |-<<<NULL>>>
+  |   |-IntegerLiteral 0x7fdda0851260 <line:11:10> 'int' 1
+  |   `-CallExpr 0x7fdda08512f0 <line:12:5, col:10> 'void'
+  |     `-ImplicitCastExpr 0x7fdda08512d8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+  |       `-DeclRefExpr 0x7fdda0851280 <col:5> 'void (void)' Function 0x7fdda0850e20 'bar' 'void (void)'
+  `-UsedAttr 0x7fdda0851218 <line:6:53> Inherited

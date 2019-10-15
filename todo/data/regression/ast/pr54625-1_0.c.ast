@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7ff59e80e8e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff59e80f578 <../Data/C2AST/pr54625-1_0.c:4:1, col:7> col:7 used a 'float'
+|-FunctionDecl 0x7ff59d80a0c8 <line:5:8> col:8 implicit used sin 'double (double)' extern
+| |-ParmVarDecl 0x7ff59d80a168 <<invalid sloc>> <invalid sloc> 'double'
+| |-ConstAttr 0x7ff59d80a1d0 <col:8> Implicit
+| `-NoThrowAttr 0x7ff59d80a218 <col:8> Implicit
+|-FunctionDecl 0x7ff59d80a228 prev 0x7ff59d80a0c8 <col:1, col:13> col:8 used sin 'double (double)'
+| |-ParmVarDecl 0x7ff59d80a2c8 <<invalid sloc>> <invalid sloc> implicit 'double'
+| |-ConstAttr 0x7ff59d80a368 <col:8> Inherited Implicit
+| `-NoThrowAttr 0x7ff59d80a378 <col:8> Inherited Implicit
+`-FunctionDecl 0x7ff59d80a3d8 <line:6:1, line:10:1> line:7:1 speex_resampler_init_frac 'void ()'
+  `-CompoundStmt 0x7ff59d80a5b8 <line:8:1, line:10:1>
+    `-BinaryOperator 0x7ff59d80a590 <line:9:3, col:13> 'float' '='
+      |-DeclRefExpr 0x7ff59d80a478 <col:3> 'float' lvalue Var 0x7ff59e80f578 'a' 'float'
+      `-ImplicitCastExpr 0x7ff59d80a578 <col:7, col:13> 'float' <FloatingCast>
+        `-CallExpr 0x7ff59d80a530 <col:7, col:13> 'double'
+          |-ImplicitCastExpr 0x7ff59d80a518 <col:7> 'double (*)(double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7ff59d80a4a0 <col:7> 'double (double)' Function 0x7ff59d80a228 'sin' 'double (double)'
+          `-ImplicitCastExpr 0x7ff59d80a560 <col:12> 'double' <IntegralToFloating>
+            `-IntegerLiteral 0x7ff59d80a4c8 <col:12> 'int' 0

@@ -1,0 +1,128 @@
+TranslationUnitDecl 0x7febb8018ae8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7febb8019760 <../Data/C2AST/pr84982.c:11:1, col:29> col:8 struct S definition
+| |-FieldDecl 0x7febb900ec30 <line:6:14, line:11:17> col:17 referenced a 'bool'
+| |-FieldDecl 0x7febb900ec88 <line:6:14, line:11:20> col:20 referenced b 'bool'
+| |-FieldDecl 0x7febb900ece0 <line:6:14, line:11:23> col:23 referenced c 'bool'
+| `-FieldDecl 0x7febb900ed38 <line:6:14, line:11:26> col:26 referenced d 'bool'
+|-FunctionDecl 0x7febb900ee80 <line:13:1, line:18:1> line:14:1 used bar 'void (bool *)'
+| |-ParmVarDecl 0x7febb900edc0 <line:6:14, line:14:12> col:12 used x 'bool *'
+| `-CompoundStmt 0x7febb900f4b0 <line:15:1, line:18:1>
+|   `-IfStmt 0x7febb900f478 <line:16:3, line:17:22>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7febb900f2a8 <line:16:7, col:36> 'int' '||'
+|     | |-BinaryOperator 0x7febb900f1c8 <col:7, col:28> 'int' '||'
+|     | | |-BinaryOperator 0x7febb900f0e0 <col:7, col:19> 'int' '||'
+|     | | | |-ImplicitCastExpr 0x7febb900f0c8 <col:7, col:10> 'int' <IntegralCast>
+|     | | | | `-ImplicitCastExpr 0x7febb900f0b0 <col:7, col:10> 'bool' <LValueToRValue>
+|     | | | |   `-ArraySubscriptExpr 0x7febb900efc8 <col:7, col:10> 'bool' lvalue
+|     | | | |     |-ImplicitCastExpr 0x7febb900efb0 <col:7> 'bool *' <LValueToRValue>
+|     | | | |     | `-DeclRefExpr 0x7febb900ef68 <col:7> 'bool *' lvalue ParmVar 0x7febb900edc0 'x' 'bool *'
+|     | | | |     `-IntegerLiteral 0x7febb900ef90 <col:9> 'int' 0
+|     | | | `-UnaryOperator 0x7febb900f090 <col:15, col:19> 'int' prefix '!'
+|     | | |   `-ImplicitCastExpr 0x7febb900f078 <col:16, col:19> 'bool' <LValueToRValue>
+|     | | |     `-ArraySubscriptExpr 0x7febb900f050 <col:16, col:19> 'bool' lvalue
+|     | | |       |-ImplicitCastExpr 0x7febb900f038 <col:16> 'bool *' <LValueToRValue>
+|     | | |       | `-DeclRefExpr 0x7febb900eff0 <col:16> 'bool *' lvalue ParmVar 0x7febb900edc0 'x' 'bool *'
+|     | | |       `-IntegerLiteral 0x7febb900f018 <col:18> 'int' 1
+|     | | `-UnaryOperator 0x7febb900f1a8 <col:24, col:28> 'int' prefix '!'
+|     | |   `-ImplicitCastExpr 0x7febb900f190 <col:25, col:28> 'bool' <LValueToRValue>
+|     | |     `-ArraySubscriptExpr 0x7febb900f168 <col:25, col:28> 'bool' lvalue
+|     | |       |-ImplicitCastExpr 0x7febb900f150 <col:25> 'bool *' <LValueToRValue>
+|     | |       | `-DeclRefExpr 0x7febb900f108 <col:25> 'bool *' lvalue ParmVar 0x7febb900edc0 'x' 'bool *'
+|     | |       `-IntegerLiteral 0x7febb900f130 <col:27> 'int' 2
+|     | `-ImplicitCastExpr 0x7febb900f290 <col:33, col:36> 'int' <IntegralCast>
+|     |   `-ImplicitCastExpr 0x7febb900f278 <col:33, col:36> 'bool' <LValueToRValue>
+|     |     `-ArraySubscriptExpr 0x7febb900f250 <col:33, col:36> 'bool' lvalue
+|     |       |-ImplicitCastExpr 0x7febb900f238 <col:33> 'bool *' <LValueToRValue>
+|     |       | `-DeclRefExpr 0x7febb900f1f0 <col:33> 'bool *' lvalue ParmVar 0x7febb900edc0 'x' 'bool *'
+|     |       `-IntegerLiteral 0x7febb900f218 <col:35> 'int' 3
+|     |-CallExpr 0x7febb900f450 <line:17:5, col:22> 'void'
+|     | `-ImplicitCastExpr 0x7febb900f438 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|     |   `-DeclRefExpr 0x7febb900f3e8 <col:5> '<builtin fn type>' Function 0x7febb900f300 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|     `-<<<NULL>>>
+|-FunctionDecl 0x7febb900f300 <col:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+| `-NoThrowAttr 0x7febb900f3a0 <col:5> Implicit
+|-FunctionDecl 0x7febb900f680 <line:20:1, line:29:1> line:21:1 used foo 'void (struct S *)'
+| |-ParmVarDecl 0x7febb900f580 <col:6, col:16> col:16 used x 'struct S *'
+| `-CompoundStmt 0x7febb98006c8 <line:22:1, line:29:1>
+|   |-DeclStmt 0x7febb900f808 <line:6:14, line:23:12>
+|   | `-VarDecl 0x7febb900f7a8 <line:6:14, line:23:11> col:8 used a 'bool [4]'
+|   |-BinaryOperator 0x7febb900f970 <line:24:3, col:14> 'bool' '='
+|   | |-ArraySubscriptExpr 0x7febb900f880 <col:3, col:6> 'bool' lvalue
+|   | | |-ImplicitCastExpr 0x7febb900f868 <col:3> 'bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7febb900f820 <col:3> 'bool [4]' lvalue Var 0x7febb900f7a8 'a' 'bool [4]'
+|   | | `-IntegerLiteral 0x7febb900f848 <col:5> 'int' 0
+|   | `-ImplicitCastExpr 0x7febb900f958 <col:10, col:14> 'bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7febb900f938 <col:10, col:14> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7febb900f920 <col:11, col:14> 'bool' <LValueToRValue>
+|   |       `-MemberExpr 0x7febb900f8e8 <col:11, col:14> 'bool' lvalue ->a 0x7febb900ec30
+|   |         `-ImplicitCastExpr 0x7febb900f8d0 <col:11> 'struct S *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7febb900f8a8 <col:11> 'struct S *' lvalue ParmVar 0x7febb900f580 'x' 'struct S *'
+|   |-BinaryOperator 0x7febb900fae8 <line:25:3, col:14> 'bool' '='
+|   | |-ArraySubscriptExpr 0x7febb900f9f8 <col:3, col:6> 'bool' lvalue
+|   | | |-ImplicitCastExpr 0x7febb900f9e0 <col:3> 'bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7febb900f998 <col:3> 'bool [4]' lvalue Var 0x7febb900f7a8 'a' 'bool [4]'
+|   | | `-IntegerLiteral 0x7febb900f9c0 <col:5> 'int' 1
+|   | `-ImplicitCastExpr 0x7febb900fad0 <col:10, col:14> 'bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7febb900fab0 <col:10, col:14> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7febb900fa98 <col:11, col:14> 'bool' <LValueToRValue>
+|   |       `-MemberExpr 0x7febb900fa60 <col:11, col:14> 'bool' lvalue ->b 0x7febb900ec88
+|   |         `-ImplicitCastExpr 0x7febb900fa48 <col:11> 'struct S *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7febb900fa20 <col:11> 'struct S *' lvalue ParmVar 0x7febb900f580 'x' 'struct S *'
+|   |-BinaryOperator 0x7febb9800450 <line:26:3, col:13> 'bool' '='
+|   | |-ArraySubscriptExpr 0x7febb900fb70 <col:3, col:6> 'bool' lvalue
+|   | | |-ImplicitCastExpr 0x7febb900fb58 <col:3> 'bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7febb900fb10 <col:3> 'bool [4]' lvalue Var 0x7febb900f7a8 'a' 'bool [4]'
+|   | | `-IntegerLiteral 0x7febb900fb38 <col:5> 'int' 2
+|   | `-ImplicitCastExpr 0x7febb9800438 <col:10, col:13> 'bool' <LValueToRValue>
+|   |   `-MemberExpr 0x7febb9800400 <col:10, col:13> 'bool' lvalue ->c 0x7febb900ece0
+|   |     `-ImplicitCastExpr 0x7febb900fbc0 <col:10> 'struct S *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7febb900fb98 <col:10> 'struct S *' lvalue ParmVar 0x7febb900f580 'x' 'struct S *'
+|   |-BinaryOperator 0x7febb98005c8 <line:27:3, col:14> 'bool' '='
+|   | |-ArraySubscriptExpr 0x7febb98004d8 <col:3, col:6> 'bool' lvalue
+|   | | |-ImplicitCastExpr 0x7febb98004c0 <col:3> 'bool *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x7febb9800478 <col:3> 'bool [4]' lvalue Var 0x7febb900f7a8 'a' 'bool [4]'
+|   | | `-IntegerLiteral 0x7febb98004a0 <col:5> 'int' 3
+|   | `-ImplicitCastExpr 0x7febb98005b0 <col:10, col:14> 'bool' <IntegralToBoolean>
+|   |   `-UnaryOperator 0x7febb9800590 <col:10, col:14> 'int' prefix '!'
+|   |     `-ImplicitCastExpr 0x7febb9800578 <col:11, col:14> 'bool' <LValueToRValue>
+|   |       `-MemberExpr 0x7febb9800540 <col:11, col:14> 'bool' lvalue ->d 0x7febb900ed38
+|   |         `-ImplicitCastExpr 0x7febb9800528 <col:11> 'struct S *' <LValueToRValue>
+|   |           `-DeclRefExpr 0x7febb9800500 <col:11> 'struct S *' lvalue ParmVar 0x7febb900f580 'x' 'struct S *'
+|   `-CallExpr 0x7febb9800680 <line:28:3, col:9> 'void'
+|     |-ImplicitCastExpr 0x7febb9800668 <col:3> 'void (*)(bool *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7febb98005f0 <col:3> 'void (bool *)' Function 0x7febb900ee80 'bar' 'void (bool *)'
+|     `-ImplicitCastExpr 0x7febb98006b0 <col:8> 'bool *' <ArrayToPointerDecay>
+|       `-DeclRefExpr 0x7febb9800618 <col:8> 'bool [4]' lvalue Var 0x7febb900f7a8 'a' 'bool [4]'
+`-FunctionDecl 0x7febb9800760 <line:31:1, line:38:1> line:32:1 main 'int ()'
+  `-CompoundStmt 0x7febb9800d48 <line:33:1, line:38:1>
+    |-DeclStmt 0x7febb9800880 <line:34:3, col:13>
+    | `-VarDecl 0x7febb9800820 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-BinaryOperator 0x7febb9800930 <line:35:3, line:7:14> 'bool' '='
+    | |-MemberExpr 0x7febb98008c0 <line:35:3, col:5> 'bool' lvalue .a 0x7febb900ec30
+    | | `-DeclRefExpr 0x7febb9800898 <col:3> 'struct S':'struct S' lvalue Var 0x7febb9800820 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7febb9800918 <line:7:14> 'bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7febb98008f8 <col:14> 'int' 1
+    |-BinaryOperator 0x7febb9800a50 <line:35:15, line:8:15> 'bool' '='
+    | |-MemberExpr 0x7febb98009e0 <line:35:15, col:17> 'bool' lvalue .b 0x7febb900ec88
+    | | `-DeclRefExpr 0x7febb98009b8 <col:15> 'struct S':'struct S' lvalue Var 0x7febb9800820 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7febb9800a38 <line:8:15> 'bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7febb9800a18 <col:15> 'int' 0
+    |-BinaryOperator 0x7febb9800b10 <line:35:28, line:7:14> 'bool' '='
+    | |-MemberExpr 0x7febb9800aa0 <line:35:28, col:30> 'bool' lvalue .c 0x7febb900ece0
+    | | `-DeclRefExpr 0x7febb9800a78 <col:28> 'struct S':'struct S' lvalue Var 0x7febb9800820 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7febb9800af8 <line:7:14> 'bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7febb9800ad8 <col:14> 'int' 1
+    |-BinaryOperator 0x7febb9800bd0 <line:35:40, line:7:14> 'bool' '='
+    | |-MemberExpr 0x7febb9800b60 <line:35:40, col:42> 'bool' lvalue .d 0x7febb900ed38
+    | | `-DeclRefExpr 0x7febb9800b38 <col:40> 'struct S':'struct S' lvalue Var 0x7febb9800820 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7febb9800bb8 <line:7:14> 'bool' <IntegralToBoolean>
+    |   `-IntegerLiteral 0x7febb9800b98 <col:14> 'int' 1
+    |-CallExpr 0x7febb9800ce0 <line:36:3, col:10> 'void'
+    | |-ImplicitCastExpr 0x7febb9800cc8 <col:3> 'void (*)(struct S *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7febb9800bf8 <col:3> 'void (struct S *)' Function 0x7febb900f680 'foo' 'void (struct S *)'
+    | `-UnaryOperator 0x7febb9800c48 <col:8, col:9> 'struct S *' prefix '&'
+    |   `-DeclRefExpr 0x7febb9800c20 <col:9> 'struct S':'struct S' lvalue Var 0x7febb9800820 's' 'struct S':'struct S'
+    `-ReturnStmt 0x7febb9800d30 <line:37:3, col:10>
+      `-IntegerLiteral 0x7febb9800d10 <col:10> 'int' 0

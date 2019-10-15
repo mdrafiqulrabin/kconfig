@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7f8dc28128e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8dc2c12898 <../Data/C2AST/pr49567.c:7:1, line:13:1> line:8:1 foo '__m128 (__m128i)'
+  |-ParmVarDecl 0x7f8dc2c12810 <col:6, col:14> col:14 used x '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+  `-CompoundStmt 0x7f8dc2c12bf0 <line:9:1, line:13:1>
+    |-DeclStmt 0x7f8dc2c129b0 <line:10:3, col:12>
+    | `-VarDecl 0x7f8dc2c12950 <col:3, col:11> col:11 used y '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    |-BinaryOperator 0x7f8dc2c12aa0 <line:11:3, col:28> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+    | |-DeclRefExpr 0x7f8dc2c129c8 <col:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7f8dc2c12950 'y' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    | `-CallExpr 0x7f8dc2c12a58 <col:7, col:28> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    |   |-ImplicitCastExpr 0x7f8dc2c12a40 <col:7> '__m128i (*)(__m128i)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7f8dc2c129f0 <col:7> '__m128i (__m128i)' Function 0x7f8dc1946800 '_mm_cvtepi16_epi32' '__m128i (__m128i)'
+    |   `-ImplicitCastExpr 0x7f8dc2c12a88 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f8dc2c12a18 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7f8dc2c12810 'x' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+    `-ReturnStmt 0x7f8dc2c12bd8 <line:12:3, col:28>
+      `-CallExpr 0x7f8dc2c12b90 <col:10, col:28> '__m128':'__attribute__((__vector_size__(4 * sizeof(float)))) float'
+        |-ImplicitCastExpr 0x7f8dc2c12b78 <col:10> '__m128 (*)(__m128i)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7f8dc2c12ac8 <col:10> '__m128 (__m128i)' Function 0x7f8dc10882c8 '_mm_cvtepi32_ps' '__m128 (__m128i)'
+        `-ImplicitCastExpr 0x7f8dc2c12bc0 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+          `-DeclRefExpr 0x7f8dc2c12af0 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7f8dc2c12950 'y' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'

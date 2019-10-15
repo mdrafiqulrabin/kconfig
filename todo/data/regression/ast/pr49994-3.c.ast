@@ -1,0 +1,61 @@
+TranslationUnitDecl 0x7fdbf28222e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fdbf3014268 <../Data/C2AST/pr49994-3.c:6:1, line:23:1> line:7:1 foo 'void *(int)'
+| |-ParmVarDecl 0x7fdbf2822f78 <col:6, col:10> col:10 used offset 'int'
+| `-CompoundStmt 0x7fdbf3014b78 <line:8:1, line:23:1>
+|   |-SwitchStmt 0x7fdbf3014390 <line:9:3, line:21:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fdbf3014378 <line:9:11> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fdbf3014350 <col:11> 'int' lvalue ParmVar 0x7fdbf2822f78 'offset' 'int'
+|   | `-CompoundStmt 0x7fdbf3014af0 <line:10:5, line:21:5>
+|   |   |-CaseStmt 0x7fdbf30143e0 <line:11:5, line:12:41>
+|   |   | |-IntegerLiteral 0x7fdbf30143c0 <line:11:10> 'int' 0
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fdbf3014678 <line:12:7, col:41>
+|   |   |   `-CallExpr 0x7fdbf3014630 <col:14, col:41> 'void *'
+|   |   |     |-ImplicitCastExpr 0x7fdbf3014618 <col:14> 'void *(*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |   |     | `-DeclRefExpr 0x7fdbf30145a8 <col:14> '<builtin fn type>' Function 0x7fdbf3014458 '__builtin_return_address' 'void *(unsigned int)'
+|   |   |     `-ImplicitCastExpr 0x7fdbf3014660 <col:40> 'unsigned int' <IntegralCast>
+|   |   |       `-IntegerLiteral 0x7fdbf30145d0 <col:40> 'int' 0
+|   |   |-CaseStmt 0x7fdbf30146b0 <line:13:5, line:14:41>
+|   |   | |-IntegerLiteral 0x7fdbf3014690 <line:13:10> 'int' 1
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fdbf3014790 <line:14:7, col:41>
+|   |   |   `-CallExpr 0x7fdbf3014748 <col:14, col:41> 'void *'
+|   |   |     |-ImplicitCastExpr 0x7fdbf3014730 <col:14> 'void *(*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |   |     | `-DeclRefExpr 0x7fdbf30146e8 <col:14> '<builtin fn type>' Function 0x7fdbf3014458 '__builtin_return_address' 'void *(unsigned int)'
+|   |   |     `-ImplicitCastExpr 0x7fdbf3014778 <col:40> 'unsigned int' <IntegralCast>
+|   |   |       `-IntegerLiteral 0x7fdbf3014710 <col:40> 'int' 1
+|   |   |-CaseStmt 0x7fdbf30147c8 <line:15:5, line:16:41>
+|   |   | |-IntegerLiteral 0x7fdbf30147a8 <line:15:10> 'int' 2
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fdbf30148a8 <line:16:7, col:41>
+|   |   |   `-CallExpr 0x7fdbf3014860 <col:14, col:41> 'void *'
+|   |   |     |-ImplicitCastExpr 0x7fdbf3014848 <col:14> 'void *(*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |   |     | `-DeclRefExpr 0x7fdbf3014800 <col:14> '<builtin fn type>' Function 0x7fdbf3014458 '__builtin_return_address' 'void *(unsigned int)'
+|   |   |     `-ImplicitCastExpr 0x7fdbf3014890 <col:40> 'unsigned int' <IntegralCast>
+|   |   |       `-IntegerLiteral 0x7fdbf3014828 <col:40> 'int' 2
+|   |   |-CaseStmt 0x7fdbf30148e0 <line:17:5, line:18:41>
+|   |   | |-IntegerLiteral 0x7fdbf30148c0 <line:17:10> 'int' 3
+|   |   | |-<<<NULL>>>
+|   |   | `-ReturnStmt 0x7fdbf30149c0 <line:18:7, col:41>
+|   |   |   `-CallExpr 0x7fdbf3014978 <col:14, col:41> 'void *'
+|   |   |     |-ImplicitCastExpr 0x7fdbf3014960 <col:14> 'void *(*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |   |     | `-DeclRefExpr 0x7fdbf3014918 <col:14> '<builtin fn type>' Function 0x7fdbf3014458 '__builtin_return_address' 'void *(unsigned int)'
+|   |   |     `-ImplicitCastExpr 0x7fdbf30149a8 <col:40> 'unsigned int' <IntegralCast>
+|   |   |       `-IntegerLiteral 0x7fdbf3014940 <col:40> 'int' 3
+|   |   `-CaseStmt 0x7fdbf30149f8 <line:19:5, line:20:41>
+|   |     |-IntegerLiteral 0x7fdbf30149d8 <line:19:10> 'int' 4
+|   |     |-<<<NULL>>>
+|   |     `-ReturnStmt 0x7fdbf3014ad8 <line:20:7, col:41>
+|   |       `-CallExpr 0x7fdbf3014a90 <col:14, col:41> 'void *'
+|   |         |-ImplicitCastExpr 0x7fdbf3014a78 <col:14> 'void *(*)(unsigned int)' <BuiltinFnToFnPtr>
+|   |         | `-DeclRefExpr 0x7fdbf3014a30 <col:14> '<builtin fn type>' Function 0x7fdbf3014458 '__builtin_return_address' 'void *(unsigned int)'
+|   |         `-ImplicitCastExpr 0x7fdbf3014ac0 <col:40> 'unsigned int' <IntegralCast>
+|   |           `-IntegerLiteral 0x7fdbf3014a58 <col:40> 'int' 4
+|   `-ReturnStmt 0x7fdbf3014b60 <line:22:3, col:10>
+|     `-ImplicitCastExpr 0x7fdbf3014b48 <col:10> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fdbf3014b28 <col:10> 'int' 0
+`-FunctionDecl 0x7fdbf3014458 <line:12:14> col:14 implicit used __builtin_return_address 'void *(unsigned int)' extern
+  |-ParmVarDecl 0x7fdbf30144f8 <<invalid sloc>> <invalid sloc> 'unsigned int'
+  `-NoThrowAttr 0x7fdbf3014560 <col:14> Implicit

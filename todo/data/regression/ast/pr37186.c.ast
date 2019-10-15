@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fc328817ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc329022668 <../Data/C2AST/pr37186.c:5:1, col:22> col:5 used foo 'int (signed char *)'
+| `-ParmVarDecl 0x7fc3288187a0 <col:9, col:21> col:22 'signed char *'
+`-FunctionDecl 0x7fc329022858 <line:6:1, line:9:1> line:6:5 bar 'int (unsigned char *)'
+  |-ParmVarDecl 0x7fc329022790 <col:9, col:24> col:24 used p 'unsigned char *'
+  `-CompoundStmt 0x7fc329022a08 <line:7:1, line:9:1>
+    `-ReturnStmt 0x7fc3290229f0 <line:8:3, col:15>
+      `-CallExpr 0x7fc329022990 <col:10, col:15> 'int'
+        |-ImplicitCastExpr 0x7fc329022978 <col:10> 'int (*)(signed char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc329022900 <col:10> 'int (signed char *)' Function 0x7fc329022668 'foo' 'int (signed char *)'
+        `-ImplicitCastExpr 0x7fc3290229d8 <col:14> 'signed char *' <BitCast>
+          `-ImplicitCastExpr 0x7fc3290229c0 <col:14> 'unsigned char *' <LValueToRValue>
+            `-DeclRefExpr 0x7fc329022928 <col:14> 'unsigned char *' lvalue ParmVar 0x7fc329022790 'p' 'unsigned char *'

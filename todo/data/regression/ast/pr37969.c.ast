@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7f977682bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f977686d860 <../Data/C2AST/pr37969.c:4:1, col:16> col:6 used foo 'void (double)'
+| `-ParmVarDecl 0x7f977682c978 <col:10> col:16 'double'
+`-FunctionDecl 0x7f977686db30 <line:5:1, line:19:1> line:5:6 CreateDefaultTexture 'void (double, double, unsigned short)'
+  |-ParmVarDecl 0x7f977686d960 <col:27, col:34> col:34 used mnMinimum 'double'
+  |-ParmVarDecl 0x7f977686d9d8 <col:45, col:52> col:52 used mnMaximum 'double'
+  |-ParmVarDecl 0x7f977686da50 <line:6:6, col:21> col:21 used nCreateWhat 'unsigned short'
+  `-CompoundStmt 0x7f977686e248 <line:7:1, line:19:1>
+    |-DeclStmt 0x7f977686dc80 <line:8:3, col:17>
+    | `-VarDecl 0x7f977686dc00 <col:3, col:14> col:10 used d 'double' cinit
+    |   `-FloatingLiteral 0x7f977686dc60 <col:14> 'double' 0.000000e+00
+    `-ForStmt 0x7f977686e210 <line:9:3, line:18:5>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      `-CompoundStmt 0x7f977686e1e8 <line:10:5, line:18:5>
+        |-IfStmt 0x7f977686de98 <line:11:7, line:13:6>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f977686dde0 <line:11:10, line:12:19> 'int' '&&'
+        | | |-BinaryOperator 0x7f977686dd30 <line:11:10, col:31> 'int' '&'
+        | | | |-ImplicitCastExpr 0x7f977686dd18 <col:10> 'int' <IntegralCast>
+        | | | | `-ImplicitCastExpr 0x7f977686dd00 <col:10> 'unsigned short' <LValueToRValue>
+        | | | |   `-DeclRefExpr 0x7f977686dc98 <col:10> 'unsigned short' lvalue ParmVar 0x7f977686da50 'nCreateWhat' 'unsigned short'
+        | | | `-ParenExpr 0x7f977686dce0 <col:24, col:31> 'int'
+        | | |   `-IntegerLiteral 0x7f977686dcc0 <col:25> 'int' 1
+        | | `-BinaryOperator 0x7f977686ddb8 <line:12:6, col:19> 'int' '!='
+        | |   |-ImplicitCastExpr 0x7f977686dda0 <col:6> 'double' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7f977686dd58 <col:6> 'double' lvalue ParmVar 0x7f977686d960 'mnMinimum' 'double'
+        | |   `-FloatingLiteral 0x7f977686dd80 <col:19> 'double' 0.000000e+00
+        | |-BinaryOperator 0x7f977686de70 <line:13:2, col:6> 'double' '='
+        | | |-DeclRefExpr 0x7f977686de08 <col:2> 'double' lvalue Var 0x7f977686dc00 'd' 'double'
+        | | `-ImplicitCastExpr 0x7f977686de58 <col:6> 'double' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f977686de30 <col:6> 'double' lvalue ParmVar 0x7f977686d960 'mnMinimum' 'double'
+        | `-<<<NULL>>>
+        |-IfStmt 0x7f977686e0d0 <line:14:7, line:16:6>
+        | |-<<<NULL>>>
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x7f977686e018 <line:14:10, line:15:19> 'int' '&&'
+        | | |-BinaryOperator 0x7f977686df68 <line:14:10, col:31> 'int' '&'
+        | | | |-ImplicitCastExpr 0x7f977686df50 <col:10> 'int' <IntegralCast>
+        | | | | `-ImplicitCastExpr 0x7f977686df38 <col:10> 'unsigned short' <LValueToRValue>
+        | | | |   `-DeclRefExpr 0x7f977686ded0 <col:10> 'unsigned short' lvalue ParmVar 0x7f977686da50 'nCreateWhat' 'unsigned short'
+        | | | `-ParenExpr 0x7f977686df18 <col:24, col:31> 'int'
+        | | |   `-IntegerLiteral 0x7f977686def8 <col:25> 'int' 2
+        | | `-BinaryOperator 0x7f977686dff0 <line:15:6, col:19> 'int' '!='
+        | |   |-ImplicitCastExpr 0x7f977686dfd8 <col:6> 'double' <LValueToRValue>
+        | |   | `-DeclRefExpr 0x7f977686df90 <col:6> 'double' lvalue ParmVar 0x7f977686d9d8 'mnMaximum' 'double'
+        | |   `-FloatingLiteral 0x7f977686dfb8 <col:19> 'double' 0.000000e+00
+        | |-BinaryOperator 0x7f977686e0a8 <line:16:2, col:6> 'double' '='
+        | | |-DeclRefExpr 0x7f977686e040 <col:2> 'double' lvalue Var 0x7f977686dc00 'd' 'double'
+        | | `-ImplicitCastExpr 0x7f977686e090 <col:6> 'double' <LValueToRValue>
+        | |   `-DeclRefExpr 0x7f977686e068 <col:6> 'double' lvalue ParmVar 0x7f977686d9d8 'mnMaximum' 'double'
+        | `-<<<NULL>>>
+        `-CallExpr 0x7f977686e1a0 <line:17:7, col:12> 'void'
+          |-ImplicitCastExpr 0x7f977686e188 <col:7> 'void (*)(double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7f977686e108 <col:7> 'void (double)' Function 0x7f977686d860 'foo' 'void (double)'
+          `-ImplicitCastExpr 0x7f977686e1d0 <col:11> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7f977686e130 <col:11> 'double' lvalue Var 0x7f977686dc00 'd' 'double'

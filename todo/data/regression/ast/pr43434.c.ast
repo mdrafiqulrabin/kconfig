@@ -1,0 +1,188 @@
+TranslationUnitDecl 0x7f81378174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f8137818178 <../Data/C2AST/pr43434.c:3:1, col:15> col:15 referenced DCTELEM 'short'
+| `-BuiltinType 0x7f81378175c0 'short'
+|-TypedefDecl 0x7f8137029200 <line:4:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7f8137817640 'unsigned char'
+`-FunctionDecl 0x7f8137029600 <line:6:1, line:25:1> line:6:6 diff_pixels_c 'void (DCTELEM *restrict, const uint8_t *, const uint8_t *, int)'
+  |-ParmVarDecl 0x7f81370292e8 <col:20, col:42> col:42 used block 'DCTELEM *restrict'
+  |-ParmVarDecl 0x7f81370293d8 <col:49, col:64> col:64 used s1 'const uint8_t *'
+  |-ParmVarDecl 0x7f8137029448 <line:7:6, col:21> col:21 used s2 'const uint8_t *'
+  |-ParmVarDecl 0x7f81370294c0 <col:25, col:29> col:29 used stride 'int'
+  `-CompoundStmt 0x7f813702ae48 <line:8:1, line:25:1>
+    |-DeclStmt 0x7f8137029778 <line:9:3, col:8>
+    | `-VarDecl 0x7f8137029718 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f813702ae10 <line:11:3, line:24:5>
+      |-BinaryOperator 0x7f81370297d8 <line:11:7, col:9> 'int' '='
+      | |-DeclRefExpr 0x7f8137029790 <col:7> 'int' lvalue Var 0x7f8137029718 'i' 'int'
+      | `-IntegerLiteral 0x7f81370297b8 <col:9> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8137029860 <col:11, col:13> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8137029848 <col:11> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8137029800 <col:11> 'int' lvalue Var 0x7f8137029718 'i' 'int'
+      | `-IntegerLiteral 0x7f8137029828 <col:13> 'int' 8
+      |-UnaryOperator 0x7f81370298b0 <col:15, col:16> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f8137029888 <col:15> 'int' lvalue Var 0x7f8137029718 'i' 'int'
+      `-CompoundStmt 0x7f813702ada8 <line:12:5, line:24:5>
+        |-BinaryOperator 0x7f8137029b08 <line:13:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f8137029930 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f8137029918 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f81370298d0 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f81370298f8 <col:13> 'int' 0
+        | `-ImplicitCastExpr 0x7f8137029af0 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f8137029ac8 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f8137029a80 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f8137029a68 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f81370299b8 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f81370299a0 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f8137029958 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f8137029980 <col:21> 'int' 0
+        |     `-ImplicitCastExpr 0x7f8137029ab0 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f8137029a98 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f8137029a40 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f8137029a28 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f81370299e0 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f8137029a08 <col:29> 'int' 0
+        |-BinaryOperator 0x7f8137029d68 <line:14:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f8137029b90 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f8137029b78 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f8137029b30 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f8137029b58 <col:13> 'int' 1
+        | `-ImplicitCastExpr 0x7f8137029d50 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f8137029d28 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f8137029ce0 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f8137029cc8 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f8137029c18 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f8137029c00 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f8137029bb8 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f8137029be0 <col:21> 'int' 1
+        |     `-ImplicitCastExpr 0x7f8137029d10 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f8137029cf8 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f8137029ca0 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f8137029c88 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f8137029c40 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f8137029c68 <col:29> 'int' 1
+        |-BinaryOperator 0x7f8137029fc8 <line:15:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f8137029df0 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f8137029dd8 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f8137029d90 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f8137029db8 <col:13> 'int' 2
+        | `-ImplicitCastExpr 0x7f8137029fb0 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f8137029f88 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f8137029f40 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f8137029f28 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f8137029e78 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f8137029e60 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f8137029e18 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f8137029e40 <col:21> 'int' 2
+        |     `-ImplicitCastExpr 0x7f8137029f70 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f8137029f58 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f8137029f00 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f8137029ee8 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f8137029ea0 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f8137029ec8 <col:29> 'int' 2
+        |-BinaryOperator 0x7f813702a240 <line:16:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f813702a050 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f813702a038 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f8137029ff0 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f813702a018 <col:13> 'int' 3
+        | `-ImplicitCastExpr 0x7f813702a228 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f813702a200 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f813702a1a0 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f813702a188 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f813702a0d8 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f813702a0c0 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f813702a078 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f813702a0a0 <col:21> 'int' 3
+        |     `-ImplicitCastExpr 0x7f813702a1d0 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f813702a1b8 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f813702a160 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f813702a148 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f813702a100 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f813702a128 <col:29> 'int' 3
+        |-BinaryOperator 0x7f813702a4a0 <line:17:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f813702a2c8 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f813702a2b0 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f813702a268 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f813702a290 <col:13> 'int' 4
+        | `-ImplicitCastExpr 0x7f813702a488 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f813702a460 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f813702a418 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f813702a400 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f813702a350 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f813702a338 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f813702a2f0 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f813702a318 <col:21> 'int' 4
+        |     `-ImplicitCastExpr 0x7f813702a448 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f813702a430 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f813702a3d8 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f813702a3c0 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f813702a378 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f813702a3a0 <col:29> 'int' 4
+        |-BinaryOperator 0x7f813702a700 <line:18:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f813702a528 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f813702a510 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f813702a4c8 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f813702a4f0 <col:13> 'int' 5
+        | `-ImplicitCastExpr 0x7f813702a6e8 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f813702a6c0 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f813702a678 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f813702a660 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f813702a5b0 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f813702a598 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f813702a550 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f813702a578 <col:21> 'int' 5
+        |     `-ImplicitCastExpr 0x7f813702a6a8 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f813702a690 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f813702a638 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f813702a620 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f813702a5d8 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f813702a600 <col:29> 'int' 5
+        |-BinaryOperator 0x7f813702a960 <line:19:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f813702a788 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f813702a770 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f813702a728 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f813702a750 <col:13> 'int' 6
+        | `-ImplicitCastExpr 0x7f813702a948 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f813702a920 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f813702a8d8 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f813702a8c0 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f813702a810 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f813702a7f8 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f813702a7b0 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f813702a7d8 <col:21> 'int' 6
+        |     `-ImplicitCastExpr 0x7f813702a908 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f813702a8f0 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f813702a898 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f813702a880 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f813702a838 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f813702a860 <col:29> 'int' 6
+        |-BinaryOperator 0x7f813702abc0 <line:20:7, col:30> 'DCTELEM':'short' '='
+        | |-ArraySubscriptExpr 0x7f813702a9e8 <col:7, col:14> 'DCTELEM':'short' lvalue
+        | | |-ImplicitCastExpr 0x7f813702a9d0 <col:7> 'DCTELEM *' <LValueToRValue>
+        | | | `-DeclRefExpr 0x7f813702a988 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+        | | `-IntegerLiteral 0x7f813702a9b0 <col:13> 'int' 7
+        | `-ImplicitCastExpr 0x7f813702aba8 <col:18, col:30> 'DCTELEM':'short' <IntegralCast>
+        |   `-BinaryOperator 0x7f813702ab80 <col:18, col:30> 'int' '-'
+        |     |-ImplicitCastExpr 0x7f813702ab38 <col:18, col:22> 'int' <IntegralCast>
+        |     | `-ImplicitCastExpr 0x7f813702ab20 <col:18, col:22> 'uint8_t':'unsigned char' <LValueToRValue>
+        |     |   `-ArraySubscriptExpr 0x7f813702aa70 <col:18, col:22> 'const uint8_t':'const unsigned char' lvalue
+        |     |     |-ImplicitCastExpr 0x7f813702aa58 <col:18> 'const uint8_t *' <LValueToRValue>
+        |     |     | `-DeclRefExpr 0x7f813702aa10 <col:18> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        |     |     `-IntegerLiteral 0x7f813702aa38 <col:21> 'int' 7
+        |     `-ImplicitCastExpr 0x7f813702ab68 <col:26, col:30> 'int' <IntegralCast>
+        |       `-ImplicitCastExpr 0x7f813702ab50 <col:26, col:30> 'uint8_t':'unsigned char' <LValueToRValue>
+        |         `-ArraySubscriptExpr 0x7f813702aaf8 <col:26, col:30> 'const uint8_t':'const unsigned char' lvalue
+        |           |-ImplicitCastExpr 0x7f813702aae0 <col:26> 'const uint8_t *' <LValueToRValue>
+        |           | `-DeclRefExpr 0x7f813702aa98 <col:26> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        |           `-IntegerLiteral 0x7f813702aac0 <col:29> 'int' 7
+        |-CompoundAssignOperator 0x7f813702ac50 <line:21:7, col:13> 'const uint8_t *' '+=' ComputeLHSTy='const uint8_t *' ComputeResultTy='const uint8_t *'
+        | |-DeclRefExpr 0x7f813702abe8 <col:7> 'const uint8_t *' lvalue ParmVar 0x7f81370293d8 's1' 'const uint8_t *'
+        | `-ImplicitCastExpr 0x7f813702ac38 <col:13> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f813702ac10 <col:13> 'int' lvalue ParmVar 0x7f81370294c0 'stride' 'int'
+        |-CompoundAssignOperator 0x7f813702acf0 <line:22:7, col:13> 'const uint8_t *' '+=' ComputeLHSTy='const uint8_t *' ComputeResultTy='const uint8_t *'
+        | |-DeclRefExpr 0x7f813702ac88 <col:7> 'const uint8_t *' lvalue ParmVar 0x7f8137029448 's2' 'const uint8_t *'
+        | `-ImplicitCastExpr 0x7f813702acd8 <col:13> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7f813702acb0 <col:13> 'int' lvalue ParmVar 0x7f81370294c0 'stride' 'int'
+        `-CompoundAssignOperator 0x7f813702ad70 <line:23:7, col:16> 'DCTELEM *' '+=' ComputeLHSTy='DCTELEM *restrict' ComputeResultTy='DCTELEM *restrict'
+          |-DeclRefExpr 0x7f813702ad28 <col:7> 'DCTELEM *restrict' lvalue ParmVar 0x7f81370292e8 'block' 'DCTELEM *restrict'
+          `-IntegerLiteral 0x7f813702ad50 <col:16> 'int' 8

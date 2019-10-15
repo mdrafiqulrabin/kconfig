@@ -1,0 +1,86 @@
+TranslationUnitDecl 0x7f8e5582bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8e5582c960 <../Data/C2AST/pr50017.c:6:1, col:22> col:8 struct S definition
+| |-FieldDecl 0x7f8e56811238 <col:12, col:16> col:16 referenced r 'int'
+| `-FieldDecl 0x7f8e56811298 <col:12, col:19> col:19 referenced i 'int'
+`-FunctionDecl 0x7f8e56811520 <line:8:1, line:21:1> line:9:1 foo 'void (struct S *, int)'
+  |-ParmVarDecl 0x7f8e56811390 <col:6, col:16> col:16 used x 'struct S *'
+  |-ParmVarDecl 0x7f8e56811408 <col:19, col:23> col:23 used y 'int'
+  `-CompoundStmt 0x7f8e56812360 <line:10:1, line:21:1>
+    |-DeclStmt 0x7f8e56811688 <line:11:3, col:8>
+    | `-VarDecl 0x7f8e56811628 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7f8e56812328 <line:12:3, line:20:5>
+      |-BinaryOperator 0x7f8e568116e8 <line:12:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7f8e568116a0 <col:8> 'int' lvalue Var 0x7f8e56811628 'i' 'int'
+      | `-IntegerLiteral 0x7f8e568116c8 <col:12> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8e56811790 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7f8e56811760 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f8e56811710 <col:15> 'int' lvalue Var 0x7f8e56811628 'i' 'int'
+      | `-ImplicitCastExpr 0x7f8e56811778 <col:19> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8e56811738 <col:19> 'int' lvalue ParmVar 0x7f8e56811408 'y' 'int'
+      |-UnaryOperator 0x7f8e568117e0 <col:22, col:23> 'int' postfix '++'
+      | `-DeclRefExpr 0x7f8e568117b8 <col:22> 'int' lvalue Var 0x7f8e56811628 'i' 'int'
+      `-CompoundStmt 0x7f8e568122e8 <line:13:5, line:20:5>
+        |-DeclStmt 0x7f8e568119a0 <line:14:7, col:23>
+        | |-VarDecl 0x7f8e56811820 <col:7, col:16> col:16 used a 'struct S':'struct S'
+        | |-VarDecl 0x7f8e568118a0 <col:7, col:19> col:19 used b 'struct S':'struct S'
+        | `-VarDecl 0x7f8e56811920 <col:7, col:22> col:22 used c 'struct S':'struct S'
+        |-BinaryOperator 0x7f8e56811a80 <line:15:7, col:14> 'struct S':'struct S' '='
+        | |-DeclRefExpr 0x7f8e568119b8 <col:7> 'struct S':'struct S' lvalue Var 0x7f8e56811820 'a' 'struct S':'struct S'
+        | `-ImplicitCastExpr 0x7f8e56811a68 <col:11, col:14> 'struct S':'struct S' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7f8e56811a40 <col:11, col:14> 'struct S':'struct S' lvalue
+        |     |-ImplicitCastExpr 0x7f8e56811a28 <col:11> 'struct S *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f8e568119e0 <col:11> 'struct S *' lvalue ParmVar 0x7f8e56811390 'x' 'struct S *'
+        |     `-IntegerLiteral 0x7f8e56811a08 <col:13> 'int' 0
+        |-BinaryOperator 0x7f8e56811b90 <line:16:7, col:14> 'struct S':'struct S' '='
+        | |-DeclRefExpr 0x7f8e56811aa8 <col:7> 'struct S':'struct S' lvalue Var 0x7f8e568118a0 'b' 'struct S':'struct S'
+        | `-ImplicitCastExpr 0x7f8e56811b78 <col:11, col:14> 'struct S':'struct S' <LValueToRValue>
+        |   `-ArraySubscriptExpr 0x7f8e56811b50 <col:11, col:14> 'struct S':'struct S' lvalue
+        |     |-ImplicitCastExpr 0x7f8e56811b20 <col:11> 'struct S *' <LValueToRValue>
+        |     | `-DeclRefExpr 0x7f8e56811ad0 <col:11> 'struct S *' lvalue ParmVar 0x7f8e56811390 'x' 'struct S *'
+        |     `-ImplicitCastExpr 0x7f8e56811b38 <col:13> 'int' <LValueToRValue>
+        |       `-DeclRefExpr 0x7f8e56811af8 <col:13> 'int' lvalue Var 0x7f8e56811628 'i' 'int'
+        |-BinaryOperator 0x7f8e56811e70 <line:17:7, col:33> 'int' '='
+        | |-MemberExpr 0x7f8e56811be0 <col:7, col:9> 'int' lvalue .r 0x7f8e56811238
+        | | `-DeclRefExpr 0x7f8e56811bb8 <col:7> 'struct S':'struct S' lvalue Var 0x7f8e56811920 'c' 'struct S':'struct S'
+        | `-BinaryOperator 0x7f8e56811e48 <col:13, col:33> 'int' '-'
+        |   |-BinaryOperator 0x7f8e56811d08 <col:13, col:21> 'int' '*'
+        |   | |-ImplicitCastExpr 0x7f8e56811cd8 <col:13, col:15> 'int' <LValueToRValue>
+        |   | | `-MemberExpr 0x7f8e56811c40 <col:13, col:15> 'int' lvalue .r 0x7f8e56811238
+        |   | |   `-DeclRefExpr 0x7f8e56811c18 <col:13> 'struct S':'struct S' lvalue Var 0x7f8e56811820 'a' 'struct S':'struct S'
+        |   | `-ImplicitCastExpr 0x7f8e56811cf0 <col:19, col:21> 'int' <LValueToRValue>
+        |   |   `-MemberExpr 0x7f8e56811ca0 <col:19, col:21> 'int' lvalue .r 0x7f8e56811238
+        |   |     `-DeclRefExpr 0x7f8e56811c78 <col:19> 'struct S':'struct S' lvalue Var 0x7f8e568118a0 'b' 'struct S':'struct S'
+        |   `-BinaryOperator 0x7f8e56811e20 <col:25, col:33> 'int' '*'
+        |     |-ImplicitCastExpr 0x7f8e56811df0 <col:25, col:27> 'int' <LValueToRValue>
+        |     | `-MemberExpr 0x7f8e56811d58 <col:25, col:27> 'int' lvalue .i 0x7f8e56811298
+        |     |   `-DeclRefExpr 0x7f8e56811d30 <col:25> 'struct S':'struct S' lvalue Var 0x7f8e56811820 'a' 'struct S':'struct S'
+        |     `-ImplicitCastExpr 0x7f8e56811e08 <col:31, col:33> 'int' <LValueToRValue>
+        |       `-MemberExpr 0x7f8e56811db8 <col:31, col:33> 'int' lvalue .i 0x7f8e56811298
+        |         `-DeclRefExpr 0x7f8e56811d90 <col:31> 'struct S':'struct S' lvalue Var 0x7f8e568118a0 'b' 'struct S':'struct S'
+        |-BinaryOperator 0x7f8e568121a0 <line:18:7, col:33> 'int' '='
+        | |-MemberExpr 0x7f8e56811f10 <col:7, col:9> 'int' lvalue .i 0x7f8e56811298
+        | | `-DeclRefExpr 0x7f8e56811ee8 <col:7> 'struct S':'struct S' lvalue Var 0x7f8e56811920 'c' 'struct S':'struct S'
+        | `-BinaryOperator 0x7f8e56812178 <col:13, col:33> 'int' '+'
+        |   |-BinaryOperator 0x7f8e56812038 <col:13, col:21> 'int' '*'
+        |   | |-ImplicitCastExpr 0x7f8e56812008 <col:13, col:15> 'int' <LValueToRValue>
+        |   | | `-MemberExpr 0x7f8e56811f70 <col:13, col:15> 'int' lvalue .r 0x7f8e56811238
+        |   | |   `-DeclRefExpr 0x7f8e56811f48 <col:13> 'struct S':'struct S' lvalue Var 0x7f8e56811820 'a' 'struct S':'struct S'
+        |   | `-ImplicitCastExpr 0x7f8e56812020 <col:19, col:21> 'int' <LValueToRValue>
+        |   |   `-MemberExpr 0x7f8e56811fd0 <col:19, col:21> 'int' lvalue .i 0x7f8e56811298
+        |   |     `-DeclRefExpr 0x7f8e56811fa8 <col:19> 'struct S':'struct S' lvalue Var 0x7f8e568118a0 'b' 'struct S':'struct S'
+        |   `-BinaryOperator 0x7f8e56812150 <col:25, col:33> 'int' '*'
+        |     |-ImplicitCastExpr 0x7f8e56812120 <col:25, col:27> 'int' <LValueToRValue>
+        |     | `-MemberExpr 0x7f8e56812088 <col:25, col:27> 'int' lvalue .i 0x7f8e56811298
+        |     |   `-DeclRefExpr 0x7f8e56812060 <col:25> 'struct S':'struct S' lvalue Var 0x7f8e56811820 'a' 'struct S':'struct S'
+        |     `-ImplicitCastExpr 0x7f8e56812138 <col:31, col:33> 'int' <LValueToRValue>
+        |       `-MemberExpr 0x7f8e568120e8 <col:31, col:33> 'int' lvalue .r 0x7f8e56811238
+        |         `-DeclRefExpr 0x7f8e568120c0 <col:31> 'struct S':'struct S' lvalue Var 0x7f8e568118a0 'b' 'struct S':'struct S'
+        `-BinaryOperator 0x7f8e568122c0 <line:19:7, col:14> 'struct S':'struct S' '='
+          |-ArraySubscriptExpr 0x7f8e56812258 <col:7, col:10> 'struct S':'struct S' lvalue
+          | |-ImplicitCastExpr 0x7f8e56812228 <col:7> 'struct S *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7f8e568121c8 <col:7> 'struct S *' lvalue ParmVar 0x7f8e56811390 'x' 'struct S *'
+          | `-ImplicitCastExpr 0x7f8e56812240 <col:9> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f8e56812200 <col:9> 'int' lvalue Var 0x7f8e56811628 'i' 'int'
+          `-ImplicitCastExpr 0x7f8e568122a8 <col:14> 'struct S':'struct S' <LValueToRValue>
+            `-DeclRefExpr 0x7f8e56812280 <col:14> 'struct S':'struct S' lvalue Var 0x7f8e56811920 'c' 'struct S':'struct S'

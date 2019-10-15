@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fe1e902bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fe1e902c978 <../Data/C2AST/pr32219-3.c:6:1, line:7:5> col:5 used xxx 'int'
+| `-WeakAttr 0x7fe1e902c9d8 <line:6:16>
+`-FunctionDecl 0x7fe1ea0010d0 <line:9:1, line:13:1> line:10:1 foo 'int ()'
+  `-CompoundStmt 0x7fe1ea0011c8 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7fe1ea0011b0 <line:12:3, col:10>
+      `-ImplicitCastExpr 0x7fe1ea001198 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fe1ea001170 <col:10> 'int' lvalue Var 0x7fe1e902c978 'xxx' 'int'

@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7fd32a826ee8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd32a066b38 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stdbool.h:31:14, ../Data/C2AST/pr68260.c:6:6> col:6 used lock 'bool'
+|-VarDecl 0x7fd32a066bb0 <line:7:1, col:5> col:5 used counter 'int'
+|-FunctionDecl 0x7fd32a066cb8 <line:9:1, line:18:1> line:10:1 used tf 'void *(void *)'
+| |-ParmVarDecl 0x7fd32a066c28 <col:5, col:11> col:11 used arg 'void *'
+| `-CompoundStmt 0x7fd32a067578 <line:11:1, line:18:1>
+|   |-CStyleCastExpr 0x7fd32a066db0 <line:12:3, col:10> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x7fd32a066d98 <col:10> 'void *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fd32a066d60 <col:10> 'void *' lvalue ParmVar 0x7fd32a066c28 'arg' 'void *'
+|   |-WhileStmt 0x7fd32a067170 <line:13:3, line:14:5>
+|   | |-<<<NULL>>>
+|   | |-CallExpr 0x7fd32a067110 <line:13:10, col:56> 'bool'
+|   | | |-ImplicitCastExpr 0x7fd32a0670f8 <col:10> 'bool (*)(volatile void *, int)' <BuiltinFnToFnPtr>
+|   | | | `-DeclRefExpr 0x7fd32a067008 <col:10> '<builtin fn type>' Function 0x7fd32a066e50 '__atomic_test_and_set' 'bool (volatile void *, int)'
+|   | | |-ImplicitCastExpr 0x7fd32a067148 <col:33, col:34> 'volatile void *' <BitCast>
+|   | | | `-UnaryOperator 0x7fd32a067088 <col:33, col:34> 'bool *' prefix '&'
+|   | | |   `-DeclRefExpr 0x7fd32a067030 <col:34> 'bool' lvalue Var 0x7fd32a066b38 'lock' 'bool'
+|   | | `-IntegerLiteral 0x7fd32a0670a8 <<built-in>:13:26> 'int' 2
+|   | `-NullStmt 0x7fd32a067160 <../Data/C2AST/pr68260.c:14:5>
+|   |-UnaryOperator 0x7fd32a0671b8 <line:15:3, col:5> 'int' prefix '++'
+|   | `-DeclRefExpr 0x7fd32a067190 <col:5> 'int' lvalue Var 0x7fd32a066bb0 'counter' 'int'
+|   |-CallExpr 0x7fd32a0674b0 <line:16:3, col:42> 'void'
+|   | |-ImplicitCastExpr 0x7fd32a067498 <col:3> 'void (*)(volatile void *, int)' <BuiltinFnToFnPtr>
+|   | | `-DeclRefExpr 0x7fd32a0673d8 <col:3> '<builtin fn type>' Function 0x7fd32a067220 '__atomic_clear' 'void (volatile void *, int)'
+|   | |-ImplicitCastExpr 0x7fd32a0674e8 <col:19, col:20> 'volatile void *' <BitCast>
+|   | | `-UnaryOperator 0x7fd32a067428 <col:19, col:20> 'bool *' prefix '&'
+|   | |   `-DeclRefExpr 0x7fd32a067400 <col:20> 'bool' lvalue Var 0x7fd32a066b38 'lock' 'bool'
+|   | `-IntegerLiteral 0x7fd32a067448 <<built-in>:14:26> 'int' 3
+|   `-ReturnStmt 0x7fd32a067560 <../Data/C2AST/pr68260.c:17:3, col:19>
+|     `-CStyleCastExpr 0x7fd32a067538 <col:10, col:19> 'void *' <NullToPointer>
+|       `-IntegerLiteral 0x7fd32a067500 <col:19> 'int' 0
+|-FunctionDecl 0x7fd32a066e50 <line:13:10> col:10 implicit used __atomic_test_and_set 'bool (volatile void *, int)' extern
+| |-ParmVarDecl 0x7fd32a066ef0 <<invalid sloc>> <invalid sloc> 'volatile void *'
+| |-ParmVarDecl 0x7fd32a066f50 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fd32a066fc0 <col:10> Implicit
+|-FunctionDecl 0x7fd32a067220 <line:16:3> col:3 implicit used __atomic_clear 'void (volatile void *, int)' extern
+| |-ParmVarDecl 0x7fd32a0672c0 <<invalid sloc>> <invalid sloc> 'volatile void *'
+| |-ParmVarDecl 0x7fd32a067320 <<invalid sloc>> <invalid sloc> 'int'
+| `-NoThrowAttr 0x7fd32a067390 <col:3> Implicit
+`-FunctionDecl 0x7fd32a067600 <line:20:1, line:28:1> line:21:1 main 'int ()'
+  `-CompoundStmt 0x7fd32a078ba0 <line:22:1, line:28:1>
+    |-DeclStmt 0x7fd32a067710 <line:23:3, col:16>
+    | `-VarDecl 0x7fd32a0676b0 <col:3, col:13> col:13 used thr 'pthread_t':'struct _opaque_pthread_t *'
+    |-CallExpr 0x7fd32a0788c0 <line:24:3, col:33> 'int'
+    | |-ImplicitCastExpr 0x7fd32a0788a8 <col:3> 'int (*)(pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd32a067728 <col:3> 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)' Function 0x7fd32a03d8c8 'pthread_create' 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)'
+    | |-UnaryOperator 0x7fd32a0677a8 <col:19, col:20> 'pthread_t *' prefix '&'
+    | | `-DeclRefExpr 0x7fd32a067750 <col:20> 'pthread_t':'struct _opaque_pthread_t *' lvalue Var 0x7fd32a0676b0 'thr' 'pthread_t':'struct _opaque_pthread_t *'
+    | |-ImplicitCastExpr 0x7fd32a078908 <col:25> 'const pthread_attr_t *' <NullToPointer>
+    | | `-IntegerLiteral 0x7fd32a0677c8 <col:25> 'int' 0
+    | |-ImplicitCastExpr 0x7fd32a078920 <col:28> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd32a078800 <col:28> 'void *(void *)' Function 0x7fd32a066cb8 'tf' 'void *(void *)'
+    | `-ImplicitCastExpr 0x7fd32a078938 <col:32> 'void *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fd32a078828 <col:32> 'int' 0
+    |-CallExpr 0x7fd32a0789f0 <line:25:3, col:17> 'void *'
+    | |-ImplicitCastExpr 0x7fd32a0789d8 <col:3> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd32a078950 <col:3> 'void *(void *)' Function 0x7fd32a066cb8 'tf' 'void *(void *)'
+    | `-CStyleCastExpr 0x7fd32a0789b0 <col:7, col:16> 'void *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fd32a078978 <col:16> 'int' 0
+    |-CallExpr 0x7fd32a078b00 <line:26:3, col:23> 'int'
+    | |-ImplicitCastExpr 0x7fd32a078ae8 <col:3> 'int (*)(pthread_t _Nonnull, void * _Nullable * _Nullable)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fd32a078a20 <col:3> 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)' Function 0x7fd32a03f198 'pthread_join' 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)'
+    | |-ImplicitCastExpr 0x7fd32a078b38 <col:17> 'pthread_t':'struct _opaque_pthread_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fd32a078a48 <col:17> 'pthread_t':'struct _opaque_pthread_t *' lvalue Var 0x7fd32a0676b0 'thr' 'pthread_t':'struct _opaque_pthread_t *'
+    | `-ImplicitCastExpr 0x7fd32a078b50 <col:22> 'void * _Nullable * _Nullable':'void * _Nullable *' <NullToPointer>
+    |   `-IntegerLiteral 0x7fd32a078a70 <col:22> 'int' 0
+    `-ReturnStmt 0x7fd32a078b88 <line:27:3, col:10>
+      `-IntegerLiteral 0x7fd32a078b68 <col:10> 'int' 0

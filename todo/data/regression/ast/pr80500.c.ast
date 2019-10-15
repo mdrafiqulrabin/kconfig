@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7f9c1302aae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9c1302b778 <../Data/C2AST/pr80500.c:5:1, col:13> col:13 used v 'signed char'
+`-FunctionDecl 0x7f9c12815320 <line:7:1, line:15:1> line:8:1 foo 'void (int)'
+  |-ParmVarDecl 0x7f9c12815258 <col:6, col:10> col:10 used x 'int'
+  `-CompoundStmt 0x7f9c12815630 <line:9:1, line:15:1>
+    `-WhileStmt 0x7f9c12815610 <line:10:3, line:14:5>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f9c12815428 <line:10:10, col:15> 'int' '!='
+      | |-ImplicitCastExpr 0x7f9c12815410 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7f9c128153c8 <col:10> 'int' lvalue ParmVar 0x7f9c12815258 'x' 'int'
+      | `-IntegerLiteral 0x7f9c128153f0 <col:15> 'int' 0
+      `-CompoundStmt 0x7f9c128155f0 <line:11:5, line:14:5>
+        |-BinaryOperator 0x7f9c12815580 <line:12:7, col:22> 'signed char' '='
+        | |-DeclRefExpr 0x7f9c12815450 <col:7> 'signed char' lvalue Var 0x7f9c1302b778 'v' 'signed char'
+        | `-ImplicitCastExpr 0x7f9c12815568 <col:11, col:22> 'signed char' <IntegralCast>
+        |   `-BinaryOperator 0x7f9c12815540 <col:11, col:22> 'int' '+'
+        |     |-ParenExpr 0x7f9c12815500 <col:11, col:18> 'int'
+        |     | `-BinaryOperator 0x7f9c128154d8 <col:12, col:17> 'int' '>='
+        |     |   |-ImplicitCastExpr 0x7f9c128154c0 <col:12> 'int' <LValueToRValue>
+        |     |   | `-DeclRefExpr 0x7f9c12815478 <col:12> 'int' lvalue ParmVar 0x7f9c12815258 'x' 'int'
+        |     |   `-IntegerLiteral 0x7f9c128154a0 <col:17> 'int' 0
+        |     `-IntegerLiteral 0x7f9c12815520 <col:22> 'int' 1
+        `-UnaryOperator 0x7f9c128155d0 <line:13:7, col:9> 'int' prefix '++'
+          `-DeclRefExpr 0x7f9c128155a8 <col:9> 'int' lvalue ParmVar 0x7f9c12815258 'x' 'int'

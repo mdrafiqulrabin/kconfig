@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7f8fe502b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8fe50694d8 <../Data/C2AST/pr46091-5a.c:4:1, line:11:1> line:4:6 test_1 'long (long, int)'
+| |-ParmVarDecl 0x7f8fe502bf78 <col:14, col:19> col:19 used x 'long'
+| |-ParmVarDecl 0x7f8fe5069400 <col:22, col:26> col:26 used n 'int'
+| `-CompoundStmt 0x7f8fe5069808 <line:5:1, line:11:1>
+|   |-CompoundAssignOperator 0x7f8fe5069610 <line:6:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8fe50695c8 <col:3> 'int' lvalue ParmVar 0x7f8fe5069400 'n' 'int'
+|   | `-IntegerLiteral 0x7f8fe50695f0 <col:8> 'int' 63
+|   |-CompoundAssignOperator 0x7f8fe5069778 <line:8:3, col:25> 'long' '&=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8fe5069648 <col:3> 'long' lvalue ParmVar 0x7f8fe502bf78 'x' 'long'
+|   | `-UnaryOperator 0x7f8fe5069758 <col:8, col:25> 'long' prefix '~'
+|   |   `-ParenExpr 0x7f8fe5069738 <col:9, col:25> 'long'
+|   |     `-BinaryOperator 0x7f8fe5069710 <col:10, col:24> 'long' '<<'
+|   |       |-CStyleCastExpr 0x7f8fe50696a8 <col:10, col:16> 'long' <IntegralCast>
+|   |       | `-IntegerLiteral 0x7f8fe5069670 <col:16> 'int' 1
+|   |       `-ImplicitCastExpr 0x7f8fe50696f8 <col:24> 'int' <LValueToRValue>
+|   |         `-DeclRefExpr 0x7f8fe50696d0 <col:24> 'int' lvalue ParmVar 0x7f8fe5069400 'n' 'int'
+|   `-ReturnStmt 0x7f8fe50697f0 <line:10:3, col:10>
+|     `-ImplicitCastExpr 0x7f8fe50697d8 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8fe50697b0 <col:10> 'long' lvalue ParmVar 0x7f8fe502bf78 'x' 'long'
+|-FunctionDecl 0x7f8fe5069958 <line:13:1, line:20:1> line:13:6 test_2 'long (long, int)'
+| |-ParmVarDecl 0x7f8fe5069848 <col:14, col:19> col:19 used x 'long'
+| |-ParmVarDecl 0x7f8fe50698c0 <col:22, col:26> col:26 used n 'int'
+| `-CompoundStmt 0x7f8fe5069c28 <line:14:1, line:20:1>
+|   |-CompoundAssignOperator 0x7f8fe5069a50 <line:15:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+|   | |-DeclRefExpr 0x7f8fe5069a08 <col:3> 'int' lvalue ParmVar 0x7f8fe50698c0 'n' 'int'
+|   | `-IntegerLiteral 0x7f8fe5069a30 <col:8> 'int' 63
+|   |-CompoundAssignOperator 0x7f8fe5069b98 <line:17:3, col:24> 'long' '|=' ComputeLHSTy='long' ComputeResultTy='long'
+|   | |-DeclRefExpr 0x7f8fe5069a88 <col:3> 'long' lvalue ParmVar 0x7f8fe5069848 'x' 'long'
+|   | `-ParenExpr 0x7f8fe5069b78 <col:8, col:24> 'long'
+|   |   `-BinaryOperator 0x7f8fe5069b50 <col:9, col:23> 'long' '<<'
+|   |     |-CStyleCastExpr 0x7f8fe5069ae8 <col:9, col:15> 'long' <IntegralCast>
+|   |     | `-IntegerLiteral 0x7f8fe5069ab0 <col:15> 'int' 1
+|   |     `-ImplicitCastExpr 0x7f8fe5069b38 <col:23> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7f8fe5069b10 <col:23> 'int' lvalue ParmVar 0x7f8fe50698c0 'n' 'int'
+|   `-ReturnStmt 0x7f8fe5069c10 <line:19:3, col:10>
+|     `-ImplicitCastExpr 0x7f8fe5069bf8 <col:10> 'long' <LValueToRValue>
+|       `-DeclRefExpr 0x7f8fe5069bd0 <col:10> 'long' lvalue ParmVar 0x7f8fe5069848 'x' 'long'
+`-FunctionDecl 0x7f8fe5069d78 <line:22:1, line:29:1> line:22:6 test_3 'long (long, int)'
+  |-ParmVarDecl 0x7f8fe5069c68 <col:14, col:19> col:19 used x 'long'
+  |-ParmVarDecl 0x7f8fe5069ce0 <col:22, col:26> col:26 used n 'int'
+  `-CompoundStmt 0x7f8fe506a048 <line:23:1, line:29:1>
+    |-CompoundAssignOperator 0x7f8fe5069e70 <line:24:3, col:8> 'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    | |-DeclRefExpr 0x7f8fe5069e28 <col:3> 'int' lvalue ParmVar 0x7f8fe5069ce0 'n' 'int'
+    | `-IntegerLiteral 0x7f8fe5069e50 <col:8> 'int' 63
+    |-CompoundAssignOperator 0x7f8fe5069fb8 <line:26:3, col:24> 'long' '^=' ComputeLHSTy='long' ComputeResultTy='long'
+    | |-DeclRefExpr 0x7f8fe5069ea8 <col:3> 'long' lvalue ParmVar 0x7f8fe5069c68 'x' 'long'
+    | `-ParenExpr 0x7f8fe5069f98 <col:8, col:24> 'long'
+    |   `-BinaryOperator 0x7f8fe5069f70 <col:9, col:23> 'long' '<<'
+    |     |-CStyleCastExpr 0x7f8fe5069f08 <col:9, col:15> 'long' <IntegralCast>
+    |     | `-IntegerLiteral 0x7f8fe5069ed0 <col:15> 'int' 1
+    |     `-ImplicitCastExpr 0x7f8fe5069f58 <col:23> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f8fe5069f30 <col:23> 'int' lvalue ParmVar 0x7f8fe5069ce0 'n' 'int'
+    `-ReturnStmt 0x7f8fe506a030 <line:28:3, col:10>
+      `-ImplicitCastExpr 0x7f8fe506a018 <col:10> 'long' <LValueToRValue>
+        `-DeclRefExpr 0x7f8fe5069ff0 <col:10> 'long' lvalue ParmVar 0x7f8fe5069c68 'x' 'long'

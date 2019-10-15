@@ -1,0 +1,37 @@
+TranslationUnitDecl 0x7fe8c082bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe8c082c960 <../Data/C2AST/pr19515.c:3:9, line:5:1> line:3:9 union definition
+| `-FieldDecl 0x7fe8c086d898 <line:4:7, col:16> col:12 referenced a2 'char [8]'
+|-TypedefDecl 0x7fe8c086d930 <line:3:1, line:5:2> col:2 referenced aun 'union aun':'aun'
+| `-ElaboratedType 0x7fe8c086d8e0 'union aun' sugar
+|   `-RecordType 0x7fe8c086d800 'aun'
+|     `-Record 0x7fe8c082c960 ''
+|-FunctionDecl 0x7fe8c086da90 <line:7:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe8c086db30 prev 0x7fe8c086da90 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fe8c086dc98 <line:9:1, line:16:1> line:9:5 main 'int (void)'
+  `-CompoundStmt 0x7fe8c086e248 <line:10:1, line:16:1>
+    |-DeclStmt 0x7fe8c086dfa8 <line:11:3, col:16>
+    | `-VarDecl 0x7fe8c086dde0 <col:3, col:15> col:7 used a 'aun':'aun' cinit
+    |   `-InitListExpr 0x7fe8c086def0 <col:11, col:15> 'aun':'aun' field Field 0x7fe8c086d898 'a2' 'char [8]'
+    |     `-InitListExpr 0x7fe8c086df38 <col:12, col:14> 'char [8]'
+    |       |-array filler
+    |       | `-ImplicitValueInitExpr 0x7fe8c086df98 <<invalid sloc>> 'char'
+    |       `-ImplicitCastExpr 0x7fe8c086df78 <col:13> 'char' <IntegralCast>
+    |         `-IntegerLiteral 0x7fe8c086de40 <col:13> 'int' 0
+    |-IfStmt 0x7fe8c086e1d8 <line:13:3, line:14:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe8c086e0d0 <line:13:7, col:18> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe8c086e0b8 <col:7, col:13> 'int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fe8c086e0a0 <col:7, col:13> 'char' <LValueToRValue>
+    | | |   `-ArraySubscriptExpr 0x7fe8c086e058 <col:7, col:13> 'char' lvalue
+    | | |     |-ImplicitCastExpr 0x7fe8c086e040 <col:7, col:9> 'char *' <ArrayToPointerDecay>
+    | | |     | `-MemberExpr 0x7fe8c086dfe8 <col:7, col:9> 'char [8]' lvalue .a2 0x7fe8c086d898
+    | | |     |   `-DeclRefExpr 0x7fe8c086dfc0 <col:7> 'aun':'aun' lvalue Var 0x7fe8c086dde0 'a' 'aun':'aun'
+    | | |     `-IntegerLiteral 0x7fe8c086e020 <col:12> 'int' 2
+    | | `-IntegerLiteral 0x7fe8c086e080 <col:18> 'int' 0
+    | |-CallExpr 0x7fe8c086e1b0 <line:14:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe8c086e198 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe8c086e140 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe8c086db30 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe8c086e230 <line:15:3, col:10>
+      `-IntegerLiteral 0x7fe8c086e210 <col:10> 'int' 0

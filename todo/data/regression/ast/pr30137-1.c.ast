@@ -1,0 +1,109 @@
+TranslationUnitDecl 0x7f98e8021ce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f98e8022960 <../Data/C2AST/pr30137-1.c:6:1, col:52> col:1 struct definition
+| |-FieldDecl 0x7f98e8063838 <col:10, col:15> col:15 base 'long'
+| |-FieldDecl 0x7f98e8063898 <col:21, col:25> col:25 tail 'int'
+| `-FieldDecl 0x7f98e80638f8 <col:31, col:47> col:47 referenced ptr 'void *volatile'
+|-VarDecl 0x7f98e80639f0 <col:1, col:55> col:55 used s 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *'
+|-FunctionDecl 0x7f98e8063b78 <line:7:1, col:35> col:5 foo3 'int (void)'
+| `-CompoundStmt 0x7f98e8063d58 <col:17, col:35>
+|   `-ReturnStmt 0x7f98e8063d40 <col:19, col:32>
+|     `-BinaryOperator 0x7f98e8063d18 <col:26, col:32> 'int' '=='
+|       |-ImplicitCastExpr 0x7f98e8063ce8 <col:26> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f98e8063c18 <col:26> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' lvalue Var 0x7f98e80639f0 's' 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *'
+|       `-ImplicitCastExpr 0x7f98e8063d00 <col:31, col:32> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' <BitCast>
+|         `-UnaryOperator 0x7f98e8063cc8 <col:31, col:32> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) **' prefix '&'
+|           `-DeclRefExpr 0x7f98e8063c40 <col:32> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' lvalue Var 0x7f98e80639f0 's' 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *'
+|-FunctionDecl 0x7f98e8063e08 <line:8:1, col:44> col:5 foo5 'int (void)'
+| `-CompoundStmt 0x7f98e8064008 <col:17, col:44>
+|   `-ReturnStmt 0x7f98e8063ff0 <col:19, col:39>
+|     `-BinaryOperator 0x7f98e8063fc8 <col:26, col:39> 'int' '=='
+|       |-ImplicitCastExpr 0x7f98e8063f98 <col:26, col:29> 'void *' <LValueToRValue>
+|       | `-MemberExpr 0x7f98e8063ee8 <col:26, col:29> 'void *volatile' lvalue ->ptr 0x7f98e80638f8
+|       |   `-ImplicitCastExpr 0x7f98e8063ed0 <col:26> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f98e8063ea8 <col:26> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' lvalue Var 0x7f98e80639f0 's' 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *'
+|       `-ImplicitCastExpr 0x7f98e8063fb0 <col:36, col:39> 'void *' <LValueToRValue>
+|         `-MemberExpr 0x7f98e8063f60 <col:36, col:39> 'void *volatile' lvalue ->ptr 0x7f98e80638f8
+|           `-ImplicitCastExpr 0x7f98e8063f48 <col:36> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' <LValueToRValue>
+|             `-DeclRefExpr 0x7f98e8063f20 <col:36> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *' lvalue Var 0x7f98e80639f0 's' 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:6:1) *'
+|-RecordDecl 0x7f98e8064020 <line:10:1, col:38> col:1 struct definition
+| |-RecordDecl 0x7f98e80640d0 <col:10, col:33> col:10 union definition
+| | |-FieldDecl 0x7f98e8064198 <col:18, col:22> col:22 referenced i 'int'
+| | `-FieldDecl 0x7f98e80641f8 <col:25, col:31> col:31 referenced s 'short'
+| `-FieldDecl 0x7f98e8064290 <col:10, col:35> col:35 referenced u 'union (anonymous union at ../Data/C2AST/pr30137-1.c:10:10)':'union (anonymous at ../Data/C2AST/pr30137-1.c:10:10)'
+|-VarDecl 0x7f98e8064380 <col:1, col:40> col:40 used x 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:10:1)':'struct (anonymous at ../Data/C2AST/pr30137-1.c:10:1)'
+|-FunctionDecl 0x7f98e8064490 <line:11:1, col:42> col:5 foo6 'int (void)'
+| `-CompoundStmt 0x7f98e8064730 <col:17, col:42>
+|   `-ReturnStmt 0x7f98e8064718 <col:19, col:39>
+|     `-BinaryOperator 0x7f98e80646a8 <col:26, col:39> 'int' '=='
+|       |-ImplicitCastExpr 0x7f98e8064660 <col:26, col:30> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x7f98e8064590 <col:26, col:30> 'int' lvalue .i 0x7f98e8064198
+|       |   `-MemberExpr 0x7f98e8064558 <col:26, col:28> 'union (anonymous union at ../Data/C2AST/pr30137-1.c:10:10)':'union (anonymous at ../Data/C2AST/pr30137-1.c:10:10)' lvalue .u 0x7f98e8064290
+|       |     `-DeclRefExpr 0x7f98e8064530 <col:26> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:10:1)':'struct (anonymous at ../Data/C2AST/pr30137-1.c:10:1)' lvalue Var 0x7f98e8064380 'x' 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:10:1)':'struct (anonymous at ../Data/C2AST/pr30137-1.c:10:1)'
+|       `-ImplicitCastExpr 0x7f98e8064690 <col:35, col:39> 'int' <IntegralCast>
+|         `-ImplicitCastExpr 0x7f98e8064678 <col:35, col:39> 'short' <LValueToRValue>
+|           `-MemberExpr 0x7f98e8064628 <col:35, col:39> 'short' lvalue .s 0x7f98e80641f8
+|             `-MemberExpr 0x7f98e80645f0 <col:35, col:37> 'union (anonymous union at ../Data/C2AST/pr30137-1.c:10:10)':'union (anonymous at ../Data/C2AST/pr30137-1.c:10:10)' lvalue .u 0x7f98e8064290
+|               `-DeclRefExpr 0x7f98e80645c8 <col:35> 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:10:1)':'struct (anonymous at ../Data/C2AST/pr30137-1.c:10:1)' lvalue Var 0x7f98e8064380 'x' 'struct (anonymous struct at ../Data/C2AST/pr30137-1.c:10:1)':'struct (anonymous at ../Data/C2AST/pr30137-1.c:10:1)'
+|-VarDecl 0x7f98e8064790 <line:13:1, col:8> col:8 used p 'void **'
+|-FunctionDecl 0x7f98e8064888 <line:14:1, col:35> col:5 foo8 'int (void)'
+| `-CompoundStmt 0x7f98e8064a38 <col:17, col:35>
+|   `-ReturnStmt 0x7f98e8064a20 <col:19, col:32>
+|     `-BinaryOperator 0x7f98e80649f8 <col:26, col:32> 'int' '=='
+|       |-ImplicitCastExpr 0x7f98e80649c8 <col:26> 'void **' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f98e8064928 <col:26> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|       `-ImplicitCastExpr 0x7f98e80649e0 <col:31, col:32> 'void **' <BitCast>
+|         `-UnaryOperator 0x7f98e80649a8 <col:31, col:32> 'void ***' prefix '&'
+|           `-DeclRefExpr 0x7f98e8064950 <col:32> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|-FunctionDecl 0x7f98e8064ae8 <line:15:1, col:35> col:5 foo9 'int (void)'
+| `-CompoundStmt 0x7f98e8064c98 <col:17, col:35>
+|   `-ReturnStmt 0x7f98e8064c80 <col:19, col:32>
+|     `-BinaryOperator 0x7f98e8064c58 <col:26, col:32> 'int' '=='
+|       |-ImplicitCastExpr 0x7f98e8064c10 <col:26, col:27> 'void *' <LValueToRValue>
+|       | `-UnaryOperator 0x7f98e8064bc8 <col:26, col:27> 'void *' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7f98e8064bb0 <col:27> 'void **' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f98e8064b88 <col:27> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|       `-ImplicitCastExpr 0x7f98e8064c40 <col:32> 'void *' <BitCast>
+|         `-ImplicitCastExpr 0x7f98e8064c28 <col:32> 'void **' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98e8064be8 <col:32> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|-FunctionDecl 0x7f98e8064d48 <line:16:1, col:37> col:5 foo10 'int (void)'
+| `-CompoundStmt 0x7f98e8064f00 <col:18, col:37>
+|   `-ReturnStmt 0x7f98e8064ee8 <col:20, col:34>
+|     `-BinaryOperator 0x7f98e8064ec0 <col:27, col:34> 'int' '=='
+|       |-ImplicitCastExpr 0x7f98e8064e90 <col:27, col:28> 'void *' <LValueToRValue>
+|       | `-UnaryOperator 0x7f98e8064e28 <col:27, col:28> 'void *' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7f98e8064e10 <col:28> 'void **' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f98e8064de8 <col:28> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|       `-ImplicitCastExpr 0x7f98e8064ea8 <col:33, col:34> 'void *' <BitCast>
+|         `-UnaryOperator 0x7f98e8064e70 <col:33, col:34> 'void ***' prefix '&'
+|           `-DeclRefExpr 0x7f98e8064e48 <col:34> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|-FunctionDecl 0x7f98e8064fb0 <line:17:1, col:36> col:5 foo11 'int (void)'
+| `-CompoundStmt 0x7f98e8065130 <col:18, col:36>
+|   `-ReturnStmt 0x7f98e8065118 <col:20, col:33>
+|     `-BinaryOperator 0x7f98e80650f0 <col:27, col:33> 'int' '!='
+|       |-ImplicitCastExpr 0x7f98e80650c0 <col:27> 'void **' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f98e8065050 <col:27> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|       `-ImplicitCastExpr 0x7f98e80650d8 <col:32, col:33> 'void **' <BitCast>
+|         `-UnaryOperator 0x7f98e80650a0 <col:32, col:33> 'void ***' prefix '&'
+|           `-DeclRefExpr 0x7f98e8065078 <col:33> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|-FunctionDecl 0x7f98e80651e0 <line:18:1, col:36> col:5 foo12 'int (void)'
+| `-CompoundStmt 0x7f98e8065390 <col:18, col:36>
+|   `-ReturnStmt 0x7f98e8065378 <col:20, col:33>
+|     `-BinaryOperator 0x7f98e8065350 <col:27, col:33> 'int' '!='
+|       |-ImplicitCastExpr 0x7f98e8065308 <col:27, col:28> 'void *' <LValueToRValue>
+|       | `-UnaryOperator 0x7f98e80652c0 <col:27, col:28> 'void *' lvalue prefix '*'
+|       |   `-ImplicitCastExpr 0x7f98e80652a8 <col:28> 'void **' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7f98e8065280 <col:28> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+|       `-ImplicitCastExpr 0x7f98e8065338 <col:33> 'void *' <BitCast>
+|         `-ImplicitCastExpr 0x7f98e8065320 <col:33> 'void **' <LValueToRValue>
+|           `-DeclRefExpr 0x7f98e80652e0 <col:33> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+`-FunctionDecl 0x7f98e8065440 <line:19:1, col:37> col:5 foo13 'int (void)'
+  `-CompoundStmt 0x7f98e80655f8 <col:18, col:37>
+    `-ReturnStmt 0x7f98e80655e0 <col:20, col:34>
+      `-BinaryOperator 0x7f98e80655b8 <col:27, col:34> 'int' '!='
+        |-ImplicitCastExpr 0x7f98e8065588 <col:27, col:28> 'void *' <LValueToRValue>
+        | `-UnaryOperator 0x7f98e8065520 <col:27, col:28> 'void *' lvalue prefix '*'
+        |   `-ImplicitCastExpr 0x7f98e8065508 <col:28> 'void **' <LValueToRValue>
+        |     `-DeclRefExpr 0x7f98e80654e0 <col:28> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'
+        `-ImplicitCastExpr 0x7f98e80655a0 <col:33, col:34> 'void *' <BitCast>
+          `-UnaryOperator 0x7f98e8065568 <col:33, col:34> 'void ***' prefix '&'
+            `-DeclRefExpr 0x7f98e8065540 <col:34> 'void **' lvalue Var 0x7f98e8064790 'p' 'void **'

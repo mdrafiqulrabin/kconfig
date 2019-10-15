@@ -1,0 +1,4 @@
+TranslationUnitDecl 0x7fb7d001a6e8 <<invalid sloc>> <invalid sloc>
+`-VarDecl 0x7fb7d001b378 <../Data/C2AST/pr48192.c:48:14, line:49:14> col:6 pixel 'long double' cinit
+  `-ImplicitCastExpr 0x7fb7d1014260 <col:14> 'long double' <IntegralToFloating>
+    `-IntegerLiteral 0x7fb7d1014240 <col:14> 'int' 0

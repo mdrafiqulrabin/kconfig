@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7ffcab02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ffcab0f5e38 <../Data/C2AST/pr59993.c:6:1, col:12> col:12 used optind 'int' extern
+|-VarDecl 0x7ffcab0f5ea8 <line:7:1, col:9> col:9 used jump_buf 'jmp_buf':'int [37]'
+|-FunctionDecl 0x7ffcab0f6020 <line:8:1, col:23> col:6 used foo 'void (int *, int)'
+| |-ParmVarDecl 0x7ffcab0f5f18 <col:11> col:18 'int *':'int *'
+| `-ParmVarDecl 0x7ffcab0f5f90 <col:20> col:23 'int'
+|-FunctionDecl 0x7ffcab0f6200 <line:9:1, col:17> col:6 used bar 'void (char *)'
+| `-ParmVarDecl 0x7ffcab0f60e8 <col:11, col:16> col:17 'char *'
+`-FunctionDecl 0x7ffcab0f6438 <line:10:1, line:16:1> line:11:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7ffcab0f62c0 <col:7, col:11> col:11 argc 'int'
+  |-ParmVarDecl 0x7ffcab0f6360 <col:17, col:24> col:24 used argv 'char **'
+  `-CompoundStmt 0x7ffcab0f68b8 <line:12:1, line:16:1>
+    |-CallExpr 0x7ffcab0f6690 <line:13:3, col:34> 'void'
+    | |-ImplicitCastExpr 0x7ffcab0f6678 <col:3> 'void (*)(int *, int)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7ffcab0f64e8 <col:3> 'void (int *, int)' Function 0x7ffcab0f6020 'foo' 'void (int *, int)'
+    | |-ImplicitCastExpr 0x7ffcab0f66c8 <col:8> 'int *' <ArrayToPointerDecay>
+    | | `-DeclRefExpr 0x7ffcab0f6510 <col:8> 'jmp_buf':'int [37]' lvalue Var 0x7ffcab0f5ea8 'jump_buf' 'jmp_buf':'int [37]'
+    | `-CallExpr 0x7ffcab0f65d0 <col:18, col:33> 'int'
+    |   |-ImplicitCastExpr 0x7ffcab0f65b8 <col:18> 'int (*)(int *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7ffcab0f6538 <col:18> 'int (int *)' Function 0x7ffcab0f3898 'setjmp' 'int (int *)'
+    |   `-ImplicitCastExpr 0x7ffcab0f6600 <col:25> 'int *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7ffcab0f6560 <col:25> 'jmp_buf':'int [37]' lvalue Var 0x7ffcab0f5ea8 'jump_buf' 'jmp_buf':'int [37]'
+    |-CompoundAssignOperator 0x7ffcab0f6748 <line:14:3, col:11> 'char **' '+=' ComputeLHSTy='char **' ComputeResultTy='char **'
+    | |-DeclRefExpr 0x7ffcab0f66e0 <col:3> 'char **' lvalue ParmVar 0x7ffcab0f6360 'argv' 'char **'
+    | `-ImplicitCastExpr 0x7ffcab0f6730 <col:11> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x7ffcab0f6708 <col:11> 'int' lvalue Var 0x7ffcab0f5e38 'optind' 'int'
+    `-CallExpr 0x7ffcab0f6870 <line:15:3, col:14> 'void'
+      |-ImplicitCastExpr 0x7ffcab0f6858 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffcab0f6780 <col:3> 'void (char *)' Function 0x7ffcab0f6200 'bar' 'void (char *)'
+      `-ImplicitCastExpr 0x7ffcab0f68a0 <col:7, col:13> 'char *' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7ffcab0f6808 <col:7, col:13> 'char *' lvalue
+          |-ImplicitCastExpr 0x7ffcab0f67f0 <col:7> 'char **' <LValueToRValue>
+          | `-DeclRefExpr 0x7ffcab0f67a8 <col:7> 'char **' lvalue ParmVar 0x7ffcab0f6360 'argv' 'char **'
+          `-IntegerLiteral 0x7ffcab0f67d0 <col:12> 'int' 1

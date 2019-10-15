@@ -1,0 +1,68 @@
+TranslationUnitDecl 0x7ffc3f0024e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffc40b7bee0 <../Data/C2AST/pr59839.c:7:1, line:12:1> line:8:1 test 'void (const float *)'
+| |-ParmVarDecl 0x7ffc40b7be18 <col:7, col:20> col:20 used x 'const float *'
+| `-CompoundStmt 0x7ffc40b7ce80 <line:9:1, line:12:1>
+|   |-DeclStmt 0x7ffc40b7c088 <line:10:3, col:36>
+|   | `-VarDecl 0x7ffc40b7bf98 <col:3, col:35> col:11 used i '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' cinit
+|   |   `-CallExpr 0x7ffc40b7c058 <col:15, col:35> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+|   |     |-ImplicitCastExpr 0x7ffc40b7c040 <col:15> '__m256i (*)(int)' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x7ffc40b7bff8 <col:15> '__m256i (int)' Function 0x7ffc3f066bd0 '_mm256_set1_epi32' '__m256i (int)'
+|   |     `-IntegerLiteral 0x7ffc40b7c020 <col:34> 'int' 1
+|   `-DeclStmt 0x7ffc40b7ce68 <line:11:3, col:43>
+|     `-VarDecl 0x7ffc40b7c0b0 <col:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1244:47> ../Data/C2AST/pr59839.c:11:10 d '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' cinit
+|       `-UnaryOperator 0x7ffc40b7ce48 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1237:38, line:1244:47> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' prefix '__extension__'
+|         `-StmtExpr 0x7ffc40b7ce28 <line:1237:52, line:1244:47> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|           `-CompoundStmt 0x7ffc40b7ce10 <line:1237:53, line:1244:46>
+|             `-CStyleCastExpr 0x7ffc40b7cde8 <line:1238:3, line:1244:43> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|               `-CallExpr 0x7ffc40b7cd70 <line:1238:11, line:1244:43> '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |-ImplicitCastExpr 0x7ffc40b7cd58 <line:1238:11> '__attribute__((__vector_size__(8 * sizeof(float)))) float (*)(__attribute__((__vector_size__(8 * sizeof(float)))) float, const float *, __attribute__((__vector_size__(8 * sizeof(int)))) int, __attribute__((__vector_size__(8 * sizeof(float)))) float, char)' <BuiltinFnToFnPtr>
+|                 | `-DeclRefExpr 0x7ffc40b7c410 <col:11> '<builtin fn type>' Function 0x7ffc40b7c168 '__builtin_ia32_gatherd_ps256' '__attribute__((__vector_size__(8 * sizeof(float)))) float (__attribute__((__vector_size__(8 * sizeof(float)))) float, const float *, __attribute__((__vector_size__(8 * sizeof(int)))) int, __attribute__((__vector_size__(8 * sizeof(float)))) float, char)'
+|                 |-CStyleCastExpr 0x7ffc40b7c4b0 <col:40, col:68> '__v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 | `-CallExpr 0x7ffc40b7c478 <col:48, col:68> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |   `-ImplicitCastExpr 0x7ffc40b7c460 <col:48> '__m256 (*)(void)' <FunctionToPointerDecay>
+|                 |     `-DeclRefExpr 0x7ffc40b7c438 <col:48> '__m256 (void)' Function 0x7ffc400d7140 '_mm256_undefined_ps' '__m256 (void)'
+|                 |-CStyleCastExpr 0x7ffc40b7c580 <line:1239:40, col:57> 'const float *' <NoOp>
+|                 | `-ImplicitCastExpr 0x7ffc40b7c568 <col:55, col:57> 'const float *' <LValueToRValue>
+|                 |   `-ParenExpr 0x7ffc40b7c548 <col:55, col:57> 'const float *' lvalue
+|                 |     `-DeclRefExpr 0x7ffc40b7c4d8 <../Data/C2AST/pr59839.c:11:35> 'const float *' lvalue ParmVar 0x7ffc40b7be18 'x' 'const float *'
+|                 |-CStyleCastExpr 0x7ffc40b7c680 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1240:40, col:59> '__v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <BitCast>
+|                 | `-CStyleCastExpr 0x7ffc40b7c648 <col:48, col:59> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <BitCast>
+|                 |   `-ImplicitCastExpr 0x7ffc40b7c630 <col:57, col:59> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' <LValueToRValue>
+|                 |     `-ParenExpr 0x7ffc40b7c610 <col:57, col:59> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue
+|                 |       `-DeclRefExpr 0x7ffc40b7c5a8 <../Data/C2AST/pr59839.c:11:38> '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long' lvalue Var 0x7ffc40b7bf98 'i' '__m256i':'__attribute__((__vector_size__(4 * sizeof(long long)))) long long'
+|                 |-CStyleCastExpr 0x7ffc40b7ccc8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1241:40, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:1883:63> '__v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 | `-UnaryOperator 0x7ffc40b7cc98 <line:1881:32, line:1883:63> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' prefix '__extension__'
+|                 |   `-StmtExpr 0x7ffc40b7cc78 <line:1881:46, line:1883:63> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |     `-CompoundStmt 0x7ffc40b7cc60 <line:1881:47, line:1883:62>
+|                 |       `-CStyleCastExpr 0x7ffc40b7cc38 <line:1882:3, line:1883:59> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 |         `-CallExpr 0x7ffc40b7cbd0 <line:1882:11, line:1883:59> '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |           |-ImplicitCastExpr 0x7ffc40b7cbb8 <line:1882:11> '__attribute__((__vector_size__(8 * sizeof(float)))) float (*)(__attribute__((__vector_size__(8 * sizeof(float)))) float, __attribute__((__vector_size__(8 * sizeof(float)))) float, char)' <BuiltinFnToFnPtr>
+|                 |           | `-DeclRefExpr 0x7ffc40b7c8d0 <col:11> '<builtin fn type>' Function 0x7ffc40b7c6f8 '__builtin_ia32_cmpps256' '__attribute__((__vector_size__(8 * sizeof(float)))) float (__attribute__((__vector_size__(8 * sizeof(float)))) float, __attribute__((__vector_size__(8 * sizeof(float)))) float, char)'
+|                 |           |-CStyleCastExpr 0x7ffc40b7c9f8 <col:35, col:53> '__v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 |           | `-CStyleCastExpr 0x7ffc40b7c9c0 <col:43, col:53> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 |           |   `-ParenExpr 0x7ffc40b7c9a0 <col:51, col:53> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |           |     `-CallExpr 0x7ffc40b7c938 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1241:62, col:80> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |           |       `-ImplicitCastExpr 0x7ffc40b7c920 <col:62> '__m256 (*)(void)' <FunctionToPointerDecay>
+|                 |           |         `-DeclRefExpr 0x7ffc40b7c8f8 <col:62> '__m256 (void)' Function 0x7ffc408c5290 '_mm256_setzero_ps' '__m256 (void)'
+|                 |           |-CStyleCastExpr 0x7ffc40b7cb20 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:1883:35, col:53> '__v8sf':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 |           | `-CStyleCastExpr 0x7ffc40b7cae8 <col:43, col:53> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float' <BitCast>
+|                 |           |   `-ParenExpr 0x7ffc40b7cac8 <col:51, col:53> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |           |     `-CallExpr 0x7ffc40b7ca60 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1242:62, col:80> '__m256':'__attribute__((__vector_size__(8 * sizeof(float)))) float'
+|                 |           |       `-ImplicitCastExpr 0x7ffc40b7ca48 <col:62> '__m256 (*)(void)' <FunctionToPointerDecay>
+|                 |           |         `-DeclRefExpr 0x7ffc40b7ca20 <col:62> '__m256 (void)' Function 0x7ffc408c5290 '_mm256_setzero_ps' '__m256 (void)'
+|                 |           `-ImplicitCastExpr 0x7ffc40b7cc10 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:1883:56, col:58> 'char' <IntegralCast>
+|                 |             `-ParenExpr 0x7ffc40b7cb68 <col:56, col:58> 'int'
+|                 |               `-IntegerLiteral 0x7ffc40b7cb48 <line:1612:23> 'int' 0
+|                 `-ImplicitCastExpr 0x7ffc40b7cdc0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1244:40, col:42> 'char' <IntegralCast>
+|                   `-ParenExpr 0x7ffc40b7cd10 <col:40, col:42> 'int'
+|                     `-IntegerLiteral 0x7ffc40b7ccf0 <../Data/C2AST/pr59839.c:11:41> 'int' 1
+|-FunctionDecl 0x7ffc40b7c168 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avx2intrin.h:1238:11> col:11 implicit used __builtin_ia32_gatherd_ps256 '__attribute__((__vector_size__(8 * sizeof(float)))) float (__attribute__((__vector_size__(8 * sizeof(float)))) float, const float *, __attribute__((__vector_size__(8 * sizeof(int)))) int, __attribute__((__vector_size__(8 * sizeof(float)))) float, char)' extern
+| |-ParmVarDecl 0x7ffc40b7c208 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| |-ParmVarDecl 0x7ffc40b7c268 <<invalid sloc>> <invalid sloc> 'const float *'
+| |-ParmVarDecl 0x7ffc40b7c2c8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| |-ParmVarDecl 0x7ffc40b7c328 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+| `-ParmVarDecl 0x7ffc40b7c388 <<invalid sloc>> <invalid sloc> 'char'
+`-FunctionDecl 0x7ffc40b7c6f8 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/avxintrin.h:1882:11> col:11 implicit used __builtin_ia32_cmpps256 '__attribute__((__vector_size__(8 * sizeof(float)))) float (__attribute__((__vector_size__(8 * sizeof(float)))) float, __attribute__((__vector_size__(8 * sizeof(float)))) float, char)' extern
+  |-ParmVarDecl 0x7ffc40b7c798 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+  |-ParmVarDecl 0x7ffc40b7c7f8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(8 * sizeof(float)))) float'
+  `-ParmVarDecl 0x7ffc40b7c858 <<invalid sloc>> <invalid sloc> 'char'

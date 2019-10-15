@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fedc7005ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fedc7817a28 <../Data/C2AST/pr43395.c:5:1, line:12:1> line:6:1 foo 'void *(void)'
+| `-CompoundStmt 0x7fedc7817ba0 <line:7:1, line:12:1>
+|   `-LabelStmt 0x7fedc7817b88 <line:8:2, line:9:12> 'lab'
+|     `-ReturnStmt 0x7fedc7817b70 <col:3, col:12>
+|       `-AddrLabelExpr 0x7fedc7817b50 <col:10, col:12> 'void *' lab 0x7fedc7817b08
+|-FunctionDecl 0x7fedc7817c50 <line:14:1, line:22:1> line:15:1 bar 'void *(void)'
+| `-CompoundStmt 0x7fedc7817da0 <line:16:1, line:22:1>
+|   |-DeclStmt 0x7fedc7817d38 <line:17:3, col:16>
+|   | `-LabelDecl 0x7fedc7817cf0 <col:3, col:13> col:13 used lab
+|   `-LabelStmt 0x7fedc7817d88 <line:18:2, line:19:12> 'lab'
+|     `-ReturnStmt 0x7fedc7817d70 <col:3, col:12>
+|       `-AddrLabelExpr 0x7fedc7817d50 <col:10, col:12> 'void *' lab 0x7fedc7817cf0
+`-FunctionDecl 0x7fedc7817e58 <line:24:1, line:31:1> line:25:1 baz 'void *(void)'
+  `-CompoundStmt 0x7fedc7818028 <line:26:1, line:31:1>
+    |-DeclStmt 0x7fedc7817f70 <line:27:3, col:8>
+    | `-VarDecl 0x7fedc7817f10 <col:3, col:7> col:7 used i 'int'
+    `-ReturnStmt 0x7fedc7818010 <line:28:3, col:11>
+      `-ImplicitCastExpr 0x7fedc7817ff8 <col:10, col:11> 'void *' <BitCast>
+        `-UnaryOperator 0x7fedc7817fd8 <col:10, col:11> 'int *' prefix '&'
+          `-DeclRefExpr 0x7fedc7817f88 <col:11> 'int' lvalue Var 0x7fedc7817f10 'i' 'int'

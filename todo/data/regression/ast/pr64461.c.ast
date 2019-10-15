@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7fef9f82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fef9f82c960 <../Data/C2AST/pr64461.c:4:9, line:7:1> line:4:16 struct rtems_rfs_block_map_s definition
+| `-FieldDecl 0x7fefa001c2c0 <line:6:3, col:31> col:21 referenced blocks 'unsigned long [5]'
+|-TypedefDecl 0x7fefa001c360 <line:4:1, line:7:3> col:3 referenced rtems_rfs_block_map 'struct rtems_rfs_block_map_s':'struct rtems_rfs_block_map_s'
+| `-ElaboratedType 0x7fefa001c310 'struct rtems_rfs_block_map_s' sugar
+|   `-RecordType 0x7fefa001c200 'struct rtems_rfs_block_map_s'
+|     `-Record 0x7fef9f82c960 'rtems_rfs_block_map_s'
+|-FunctionDecl 0x7fefa001c498 <line:9:1, col:21> col:12 foo 'int (void)' extern
+`-FunctionDecl 0x7fefa001c868 <line:11:1, line:16:1> line:12:1 rtems_rfs_block_map_indirect_alloc 'int (rtems_rfs_block_map *, unsigned char *, int)'
+  |-ParmVarDecl 0x7fefa001c608 <col:37, col:58> col:58 used map 'rtems_rfs_block_map *'
+  |-ParmVarDecl 0x7fefa001c6b0 <line:13:9, col:24> col:24 used buffer 'unsigned char *'
+  |-ParmVarDecl 0x7fefa001c728 <col:32, col:36> col:36 used b 'int'
+  `-CompoundStmt 0x7fefa001cc20 <line:14:1, line:16:1>
+    `-BinaryOperator 0x7fefa001cbf8 <line:15:3, col:54> 'unsigned char' '='
+      |-ArraySubscriptExpr 0x7fefa001ca50 <col:3, col:21> 'unsigned char' lvalue
+      | |-ParenExpr 0x7fefa001ca10 <col:3, col:18> 'unsigned char *'
+      | | `-BinaryOperator 0x7fefa001c9e8 <col:4, col:17> 'unsigned char *' '+'
+      | |   |-ImplicitCastExpr 0x7fefa001c9d0 <col:4> 'unsigned char *' <LValueToRValue>
+      | |   | `-DeclRefExpr 0x7fefa001c920 <col:4> 'unsigned char *' lvalue ParmVar 0x7fefa001c6b0 'buffer' 'unsigned char *'
+      | |   `-BinaryOperator 0x7fefa001c9a8 <col:13, col:17> 'int' '*'
+      | |     |-ImplicitCastExpr 0x7fefa001c990 <col:13> 'int' <LValueToRValue>
+      | |     | `-DeclRefExpr 0x7fefa001c948 <col:13> 'int' lvalue ParmVar 0x7fefa001c728 'b' 'int'
+      | |     `-IntegerLiteral 0x7fefa001c970 <col:17> 'int' 4
+      | `-IntegerLiteral 0x7fefa001ca30 <col:20> 'int' 3
+      `-CStyleCastExpr 0x7fefa001cbd0 <col:25, col:54> 'unsigned char' <IntegralCast>
+        `-ImplicitCastExpr 0x7fefa001cbb8 <col:41, col:54> 'unsigned long' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fefa001cb78 <col:41, col:54> 'unsigned long' lvalue
+            |-ImplicitCastExpr 0x7fefa001cb48 <col:41, col:46> 'unsigned long *' <ArrayToPointerDecay>
+            | `-MemberExpr 0x7fefa001cab8 <col:41, col:46> 'unsigned long [5]' lvalue ->blocks 0x7fefa001c2c0
+            |   `-ImplicitCastExpr 0x7fefa001caa0 <col:41> 'rtems_rfs_block_map *' <LValueToRValue>
+            |     `-DeclRefExpr 0x7fefa001ca78 <col:41> 'rtems_rfs_block_map *' lvalue ParmVar 0x7fefa001c608 'map' 'rtems_rfs_block_map *'
+            `-ImplicitCastExpr 0x7fefa001cb60 <col:53> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fefa001caf0 <col:53> 'int' lvalue ParmVar 0x7fefa001c728 'b' 'int'

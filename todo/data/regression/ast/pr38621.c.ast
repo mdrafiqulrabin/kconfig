@@ -1,0 +1,33 @@
+TranslationUnitDecl 0x7f8a670174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8a67018160 <../Data/C2AST/pr38621.c:2:1, line:7:1> line:2:8 struct s definition
+| |-FieldDecl 0x7f8a67059098 <line:4:3, col:13> col:8 a 'char [512]'
+| |-FieldDecl 0x7f8a670590f8 <line:5:3, col:7> col:7 referenced b 'int'
+| `-FieldDecl 0x7f8a67059158 <line:6:3, col:7> col:7 referenced c 'int'
+`-FunctionDecl 0x7f8a67059478 <line:9:1, line:16:1> line:10:1 foo 'long long (struct s *, int, int)'
+  |-ParmVarDecl 0x7f8a67059250 <col:6, col:16> col:16 used p 'struct s *'
+  |-ParmVarDecl 0x7f8a670592c8 <col:19, col:23> col:23 used m 'int'
+  |-ParmVarDecl 0x7f8a67059340 <col:26, col:30> col:30 used r 'int'
+  `-CompoundStmt 0x7f8a67059840 <line:11:1, line:16:1>
+    |-IfStmt 0x7f8a670596d8 <line:12:3, line:13:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8a670595f0 <line:12:7, col:12> 'int' '=='
+    | | |-ImplicitCastExpr 0x7f8a670595c0 <col:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8a67059570 <col:7> 'int' lvalue ParmVar 0x7f8a67059340 'r' 'int'
+    | | `-ImplicitCastExpr 0x7f8a670595d8 <col:12> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8a67059598 <col:12> 'int' lvalue ParmVar 0x7f8a670592c8 'm' 'int'
+    | |-BinaryOperator 0x7f8a670596b0 <line:13:5, col:12> 'int' '='
+    | | |-MemberExpr 0x7f8a67059658 <col:5, col:8> 'int' lvalue ->b 0x7f8a670590f8
+    | | | `-ImplicitCastExpr 0x7f8a67059640 <col:5> 'struct s *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7f8a67059618 <col:5> 'struct s *' lvalue ParmVar 0x7f8a67059250 'p' 'struct s *'
+    | | `-IntegerLiteral 0x7f8a67059690 <col:12> 'int' 3
+    | `-<<<NULL>>>
+    |-BinaryOperator 0x7f8a670597a8 <line:14:3, col:10> 'int' '='
+    | |-MemberExpr 0x7f8a67059750 <col:3, col:6> 'int' lvalue ->c 0x7f8a67059158
+    | | `-ImplicitCastExpr 0x7f8a67059738 <col:3> 'struct s *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8a67059710 <col:3> 'struct s *' lvalue ParmVar 0x7f8a67059250 'p' 'struct s *'
+    | `-IntegerLiteral 0x7f8a67059788 <col:10> 'int' 1
+    `-ReturnStmt 0x7f8a67059828 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7f8a67059810 <col:10> 'long long' <IntegralCast>
+        `-ImplicitCastExpr 0x7f8a670597f8 <col:10> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f8a670597d0 <col:10> 'int' lvalue ParmVar 0x7f8a670592c8 'm' 'int'

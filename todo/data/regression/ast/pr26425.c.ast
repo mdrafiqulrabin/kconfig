@@ -1,0 +1,36 @@
+TranslationUnitDecl 0x7fc03a82bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc03a82c960 <../Data/C2AST/pr26425.c:1:1, line:3:1> line:1:8 struct keyring_list definition
+| |-RecordDecl 0x7fc03a86d820 parent 0x7fc03a82bce8 <line:2:2, col:9> col:9 struct key
+| `-FieldDecl 0x7fc03a86da40 <col:2, col:20> col:14 referenced keys 'struct key *[0]'
+`-FunctionDecl 0x7fc03a86dcd0 <line:4:1, line:9:1> line:4:6 keyring_destroy 'void (struct keyring_list *, unsigned short)'
+  |-ParmVarDecl 0x7fc03a86db40 <col:22, col:43> col:43 used keyring 'struct keyring_list *'
+  |-ParmVarDecl 0x7fc03a86dbb8 <col:52, col:67> col:67 used a 'unsigned short'
+  `-CompoundStmt 0x7fc03a86e350 <line:5:1, line:9:1>
+    |-DeclStmt 0x7fc03a86de38 <line:6:2, col:10>
+    | `-VarDecl 0x7fc03a86ddd8 <col:2, col:6> col:6 used loop 'int'
+    `-ForStmt 0x7fc03a86e318 <line:7:3, line:8:31>
+      |-BinaryOperator 0x7fc03a86df18 <line:7:8, col:19> 'int' '='
+      | |-DeclRefExpr 0x7fc03a86de50 <col:8> 'int' lvalue Var 0x7fc03a86ddd8 'loop' 'int'
+      | `-BinaryOperator 0x7fc03a86def0 <col:15, col:19> 'int' '-'
+      |   |-ImplicitCastExpr 0x7fc03a86ded8 <col:15> 'int' <IntegralCast>
+      |   | `-ImplicitCastExpr 0x7fc03a86dec0 <col:15> 'unsigned short' <LValueToRValue>
+      |   |   `-DeclRefExpr 0x7fc03a86de78 <col:15> 'unsigned short' lvalue ParmVar 0x7fc03a86dbb8 'a' 'unsigned short'
+      |   `-IntegerLiteral 0x7fc03a86dea0 <col:19> 'int' 1
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc03a86dfa0 <col:22, col:30> 'int' '>='
+      | |-ImplicitCastExpr 0x7fc03a86df88 <col:22> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc03a86df40 <col:22> 'int' lvalue Var 0x7fc03a86ddd8 'loop' 'int'
+      | `-IntegerLiteral 0x7fc03a86df68 <col:30> 'int' 0
+      |-UnaryOperator 0x7fc03a86dff0 <col:33, col:37> 'int' postfix '--'
+      | `-DeclRefExpr 0x7fc03a86dfc8 <col:33> 'int' lvalue Var 0x7fc03a86ddd8 'loop' 'int'
+      `-CallExpr 0x7fc03a86e2d0 <line:8:4, col:31> 'int'
+        |-ImplicitCastExpr 0x7fc03a86e2b8 <col:4> 'int (*)()' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fc03a86e110 <col:4> 'int ()' Function 0x7fc03a86e060 'key_put' 'int ()'
+        `-ImplicitCastExpr 0x7fc03a86e300 <col:12, col:30> 'struct key *' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fc03a86e268 <col:12, col:30> 'struct key *' lvalue
+            |-ImplicitCastExpr 0x7fc03a86e238 <col:12, col:21> 'struct key **' <ArrayToPointerDecay>
+            | `-MemberExpr 0x7fc03a86e178 <col:12, col:21> 'struct key *[0]' lvalue ->keys 0x7fc03a86da40
+            |   `-ImplicitCastExpr 0x7fc03a86e160 <col:12> 'struct keyring_list *' <LValueToRValue>
+            |     `-DeclRefExpr 0x7fc03a86e138 <col:12> 'struct keyring_list *' lvalue ParmVar 0x7fc03a86db40 'keyring' 'struct keyring_list *'
+            `-ImplicitCastExpr 0x7fc03a86e250 <col:26> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fc03a86e1b0 <col:26> 'int' lvalue Var 0x7fc03a86ddd8 'loop' 'int'

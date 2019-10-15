@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7ff6618288e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff661829560 <../Data/C2AST/pr70174.c:5:1, col:23> col:8 struct S definition
+| `-FieldDecl 0x7ff66186a458 <col:12, col:20> col:16 referenced f 'int'
+|   `-IntegerLiteral 0x7ff66186a420 <col:20> 'int' 4
+|-VarDecl 0x7ff66186a4f0 <col:1, col:25> col:25 used a 'struct S':'struct S'
+`-FunctionDecl 0x7ff66186a670 <line:7:1, line:11:1> line:8:1 referenced foo 'void (void)'
+  `-CompoundStmt 0x7ff66186a868 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7ff66186a7f8 <line:10:3, col:9> 'int' '='
+      |-MemberExpr 0x7ff66186a738 <col:3, col:5> 'int' lvalue bitfield .f 0x7ff66186a458
+      | `-DeclRefExpr 0x7ff66186a710 <col:3> 'struct S':'struct S' lvalue Var 0x7ff66186a4f0 'a' 'struct S':'struct S'
+      `-ImplicitCastExpr 0x7ff66186a7e0 <col:9> 'int' <PointerToIntegral>
+        `-ImplicitCastExpr 0x7ff66186a7c8 <col:9> 'void (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ff66186a770 <col:9> 'void (void)' Function 0x7ff66186a670 'foo' 'void (void)'

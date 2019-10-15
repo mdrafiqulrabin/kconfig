@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7fc93a8068e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc93a84ca68 <../Data/C2AST/pr16461.c:3:1, col:22> col:5 used DVDinput_read 'int (int)'
+| `-ParmVarDecl 0x7fc93a807578 <col:19> col:22 'int'
+`-FunctionDecl 0x7fc93a84ccb8 <line:4:1, line:14:1> line:4:5 DVDReadBlocksPath 'int (int, int)'
+  |-ParmVarDecl 0x7fc93a84cb68 <col:23, col:27> col:27 used offset 'int'
+  |-ParmVarDecl 0x7fc93a84cbe0 <col:35, col:39> col:39 used block_count 'int'
+  `-CompoundStmt 0x7fc93a84d288 <col:52, line:14:1>
+    |-DeclStmt 0x7fc93a84ceb0 <line:5:5, col:26>
+    | |-VarDecl 0x7fc93a84cd80 <col:5, col:15> col:9 used ret 'int' cinit
+    | | `-IntegerLiteral 0x7fc93a84cde0 <col:15> 'int' 0
+    | `-VarDecl 0x7fc93a84ce18 <col:5, col:25> col:18 used ret2 'int' cinit
+    |   `-IntegerLiteral 0x7fc93a84ce78 <col:25> 'int' 0
+    |-ForStmt 0x7fc93a84d190 <line:6:5, line:12:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | `-CompoundStmt 0x7fc93a84d170 <line:6:14, line:12:5>
+    |   |-IfStmt 0x7fc93a84d130 <line:7:2, line:10:38>
+    |   | |-<<<NULL>>>
+    |   | |-<<<NULL>>>
+    |   | |-ImplicitCastExpr 0x7fc93a84cef0 <line:7:6> 'int' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7fc93a84cec8 <col:6> 'int' lvalue ParmVar 0x7fc93a84cb68 'offset' 'int'
+    |   | |-BinaryOperator 0x7fc93a84d008 <line:8:6, col:37> 'int' '='
+    |   | | |-DeclRefExpr 0x7fc93a84cf08 <col:6> 'int' lvalue Var 0x7fc93a84cd80 'ret' 'int'
+    |   | | `-CallExpr 0x7fc93a84cfc0 <col:12, col:37> 'int'
+    |   | |   |-ImplicitCastExpr 0x7fc93a84cfa8 <col:12> 'int (*)(int)' <FunctionToPointerDecay>
+    |   | |   | `-DeclRefExpr 0x7fc93a84cf30 <col:12> 'int (int)' Function 0x7fc93a84ca68 'DVDinput_read' 'int (int)'
+    |   | |   `-ImplicitCastExpr 0x7fc93a84cff0 <col:26> 'int' <LValueToRValue>
+    |   | |     `-DeclRefExpr 0x7fc93a84cf58 <col:26> 'int' lvalue ParmVar 0x7fc93a84cbe0 'block_count' 'int'
+    |   | `-BinaryOperator 0x7fc93a84d108 <line:10:6, col:38> 'int' '='
+    |   |   |-DeclRefExpr 0x7fc93a84d030 <col:6> 'int' lvalue Var 0x7fc93a84ce18 'ret2' 'int'
+    |   |   `-CallExpr 0x7fc93a84d0c0 <col:13, col:38> 'int'
+    |   |     |-ImplicitCastExpr 0x7fc93a84d0a8 <col:13> 'int (*)(int)' <FunctionToPointerDecay>
+    |   |     | `-DeclRefExpr 0x7fc93a84d058 <col:13> 'int (int)' Function 0x7fc93a84ca68 'DVDinput_read' 'int (int)'
+    |   |     `-ImplicitCastExpr 0x7fc93a84d0f0 <col:27> 'int' <LValueToRValue>
+    |   |       `-DeclRefExpr 0x7fc93a84d080 <col:27> 'int' lvalue ParmVar 0x7fc93a84cbe0 'block_count' 'int'
+    |   `-BreakStmt 0x7fc93a84d168 <line:11:2>
+    `-ReturnStmt 0x7fc93a84d270 <line:13:5, col:18>
+      `-BinaryOperator 0x7fc93a84d248 <col:12, col:18> 'int' '+'
+        |-ImplicitCastExpr 0x7fc93a84d218 <col:12> 'int' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc93a84d1c8 <col:12> 'int' lvalue Var 0x7fc93a84cd80 'ret' 'int'
+        `-ImplicitCastExpr 0x7fc93a84d230 <col:18> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7fc93a84d1f0 <col:18> 'int' lvalue Var 0x7fc93a84ce18 'ret2' 'int'

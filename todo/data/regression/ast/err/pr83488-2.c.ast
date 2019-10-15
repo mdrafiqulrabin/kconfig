@@ -1,0 +1,31 @@
+../Data/C2AST/pr83488-2.c:10:8: error: use of unknown builtin '__builtin_ia32_vpdpbusd_v16si' [-Wimplicit-function-declaration]
+  *a = __builtin_ia32_vpdpbusd_v16si (*b, *c, *d);
+       ^
+../Data/C2AST/pr83488-2.c:10:6: error: assigning to '__v16si' (vector of 16 'int' values) from incompatible type 'int'
+  *a = __builtin_ia32_vpdpbusd_v16si (*b, *c, *d);
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+TranslationUnitDecl 0x7fb6a102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb6a102c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb6a102bf80 '__int128'
+|-TypedefDecl 0x7fb6a102c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb6a102bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fb6a102c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb6a102c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb6a102c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb6a102c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb6a102c600 'char *'
+|   `-BuiltinType 0x7fb6a102bd80 'char'
+|-TypedefDecl 0x7fb6a102c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb6a102c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb6a102c720 'struct __va_list_tag'
+|     `-Record 0x7fb6a102c698 '__va_list_tag'
+|-TypedefDecl 0x7fb6a106e800 <../Data/C2AST/pr83488-2.c:5:1, col:13> col:13 referenced __v16si '__attribute__((__vector_size__(16 * sizeof(int)))) int'
+| `-VectorType 0x7fb6a102c980 '__attribute__((__vector_size__(16 * sizeof(int)))) int' 16
+|   `-BuiltinType 0x7fb6a102bde0 'int'
+`-FunctionDecl 0x7fb6a106eb80 <line:7:1, line:11:1> line:8:1 foo 'void (__v16si *, __v16si *, __v16si *, __v16si *)'
+  |-ParmVarDecl 0x7fb6a106e8e8 <col:6, col:15> col:15 used a '__v16si *'
+  |-ParmVarDecl 0x7fb6a106e958 <col:18, col:27> col:27 used b '__v16si *'
+  |-ParmVarDecl 0x7fb6a106e9c8 <col:30, col:39> col:39 used c '__v16si *'
+  |-ParmVarDecl 0x7fb6a106ea38 <col:42, col:51> col:51 used d '__v16si *'
+  `-CompoundStmt 0x7fb6a106f3d0 <line:9:1, line:11:1>

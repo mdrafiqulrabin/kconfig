@@ -1,0 +1,43 @@
+TranslationUnitDecl 0x7fce9202a4e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fce93817e20 <../Data/C2AST/pr24117.c:4:1, col:22> col:6 used link_error 'void (void)'
+|-RecordDecl 0x7fce93817f00 <line:6:9, line:9:1> line:6:9 struct definition
+| |-FieldDecl 0x7fce93817fc8 <line:7:3, col:7> col:7 referenced x 'int'
+| `-FieldDecl 0x7fce93818028 <line:8:3, col:7> col:7 referenced z 'int'
+|-TypedefDecl 0x7fce938180c0 <line:6:1, line:9:3> col:3 referenced Foo_t 'struct Foo_t':'Foo_t'
+| `-ElaboratedType 0x7fce93818070 'struct Foo_t' sugar
+|   `-RecordType 0x7fce93817f90 'Foo_t'
+|     `-Record 0x7fce93817f00 ''
+|-VarDecl 0x7fce93818148 <line:11:1, col:7> col:7 used xm 'char *'
+|-FunctionDecl 0x7fce93818238 <line:12:1, col:14> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7fce93818368 <line:14:1, line:24:1> line:14:6 foo 'void (void)'
+  `-CompoundStmt 0x7fce93818988 <line:15:1, line:24:1>
+    |-DeclStmt 0x7fce938184a0 <line:16:3, col:10>
+    | `-VarDecl 0x7fce93818440 <col:3, col:9> col:9 used x 'Foo_t':'Foo_t'
+    |-BinaryOperator 0x7fce93818538 <line:17:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fce938184e0 <col:3, col:5> 'int' lvalue .x 0x7fce93817fc8
+    | | `-DeclRefExpr 0x7fce938184b8 <col:3> 'Foo_t':'Foo_t' lvalue Var 0x7fce93818440 'x' 'Foo_t':'Foo_t'
+    | `-IntegerLiteral 0x7fce93818518 <col:9> 'int' 1
+    |-BinaryOperator 0x7fce93818630 <line:18:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fce938185d8 <col:3, col:5> 'int' lvalue .z 0x7fce93818028
+    | | `-DeclRefExpr 0x7fce938185b0 <col:3> 'Foo_t':'Foo_t' lvalue Var 0x7fce93818440 'x' 'Foo_t':'Foo_t'
+    | `-IntegerLiteral 0x7fce93818610 <col:9> 'int' 2
+    |-BinaryOperator 0x7fce93818768 <line:19:3, col:17> 'char *' '='
+    | |-DeclRefExpr 0x7fce93818658 <col:3> 'char *' lvalue Var 0x7fce93818148 'xm' 'char *'
+    | `-CStyleCastExpr 0x7fce93818740 <col:8, col:17> 'char *' <BitCast>
+    |   `-UnaryOperator 0x7fce93818708 <col:16, col:17> 'Foo_t *' prefix '&'
+    |     `-DeclRefExpr 0x7fce93818680 <col:17> 'Foo_t':'Foo_t' lvalue Var 0x7fce93818440 'x' 'Foo_t':'Foo_t'
+    |-CallExpr 0x7fce93818800 <line:20:3, col:7> 'void'
+    | `-ImplicitCastExpr 0x7fce938187e8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fce93818790 <col:3> 'void (void)' Function 0x7fce93818238 'bar' 'void (void)'
+    `-IfStmt 0x7fce93818950 <line:22:3, line:23:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fce938188c0 <line:22:7, col:14> 'int' '!='
+      | |-ImplicitCastExpr 0x7fce938188a8 <col:7, col:9> 'int' <LValueToRValue>
+      | | `-MemberExpr 0x7fce93818850 <col:7, col:9> 'int' lvalue .z 0x7fce93818028
+      | |   `-DeclRefExpr 0x7fce93818828 <col:7> 'Foo_t':'Foo_t' lvalue Var 0x7fce93818440 'x' 'Foo_t':'Foo_t'
+      | `-IntegerLiteral 0x7fce93818888 <col:14> 'int' 2
+      |-CallExpr 0x7fce93818928 <line:23:5, col:17> 'void'
+      | `-ImplicitCastExpr 0x7fce93818910 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fce938188e8 <col:5> 'void (void)' Function 0x7fce93817e20 'link_error' 'void (void)'
+      `-<<<NULL>>>

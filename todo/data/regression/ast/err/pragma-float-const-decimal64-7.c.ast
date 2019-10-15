@@ -1,0 +1,66 @@
+../Data/C2AST/pragma-float-const-decimal64-7.c:20:21: error: invalid suffix 'dd' on floating constant
+  double a = 0x1.0p1dd;          
+                    ^
+../Data/C2AST/pragma-float-const-decimal64-7.c:21:17: error: invalid suffix 'idd' on floating constant
+  double b = 1.0idd;             
+                ^
+TranslationUnitDecl 0x7fa5710122e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa571012860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa571012580 '__int128'
+|-TypedefDecl 0x7fa5710128d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa5710125a0 'unsigned __int128'
+|-TypedefDecl 0x7fa571012ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa5710129b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa571012928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa571012c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa571012c00 'char *'
+|   `-BuiltinType 0x7fa571012380 'char'
+|-TypedefDecl 0x7fa571012f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa571012eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa571012d20 'struct __va_list_tag'
+|     `-Record 0x7fa571012c98 '__va_list_tag'
+|-FunctionDecl 0x7fa570821028 <../Data/C2AST/pragma-float-const-decimal64-7.c:6:1, line:14:1> line:7:1 f1 'double (void)'
+| `-CompoundStmt 0x7fa570821358 <line:8:1, line:14:1>
+|   |-DeclStmt 0x7fa5708211a0 <line:10:3, col:21>
+|   | `-VarDecl 0x7fa570821120 <col:3, col:14> col:10 used a 'double' cinit
+|   |   `-FloatingLiteral 0x7fa570821180 <col:14> 'double' 2.000000e+00
+|   |-DeclStmt 0x7fa570821280 <line:11:3, col:18>
+|   | `-VarDecl 0x7fa5708211d0 <col:3, col:14> col:10 used b 'double' cinit
+|   |   `-ImplicitCastExpr 0x7fa570821268 <col:14> 'double' <FloatingComplexToReal>
+|   |     `-ImaginaryLiteral 0x7fa570821250 <col:14> '_Complex double'
+|   |       `-FloatingLiteral 0x7fa570821230 <col:14> 'double' 1.000000e+00
+|   `-ReturnStmt 0x7fa570821340 <line:13:3, col:14>
+|     `-BinaryOperator 0x7fa570821318 <col:10, col:14> 'double' '+'
+|       |-ImplicitCastExpr 0x7fa5708212e8 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa570821298 <col:10> 'double' lvalue Var 0x7fa570821120 'a' 'double'
+|       `-ImplicitCastExpr 0x7fa570821300 <col:14> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa5708212c0 <col:14> 'double' lvalue Var 0x7fa5708211d0 'b' 'double'
+|-FunctionDecl 0x7fa570821418 <line:16:1, line:24:1> line:17:1 f2 'double (void)'
+| `-CompoundStmt 0x7fa570821698 <line:18:1, line:24:1>
+|   |-DeclStmt 0x7fa570821530 <line:20:3, col:23>
+|   | `-VarDecl 0x7fa5708214d0 <col:3, col:10> col:10 used a 'double'
+|   |-DeclStmt 0x7fa5708215c0 <line:21:3, col:20>
+|   | `-VarDecl 0x7fa570821560 <col:3, col:10> col:10 used b 'double'
+|   `-ReturnStmt 0x7fa570821680 <line:23:3, col:14>
+|     `-BinaryOperator 0x7fa570821658 <col:10, col:14> 'double' '+'
+|       |-ImplicitCastExpr 0x7fa570821628 <col:10> 'double' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fa5708215d8 <col:10> 'double' lvalue Var 0x7fa5708214d0 'a' 'double'
+|       `-ImplicitCastExpr 0x7fa570821640 <col:14> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7fa570821600 <col:14> 'double' lvalue Var 0x7fa570821560 'b' 'double'
+`-FunctionDecl 0x7fa570821758 <line:26:1, line:34:1> line:27:1 f3 'double (void)'
+  `-CompoundStmt 0x7fa570821a48 <line:28:1, line:34:1>
+    |-DeclStmt 0x7fa570821890 <line:30:3, col:21>
+    | `-VarDecl 0x7fa570821810 <col:3, col:14> col:10 used a 'double' cinit
+    |   `-FloatingLiteral 0x7fa570821870 <col:14> 'double' 2.000000e+00
+    |-DeclStmt 0x7fa570821970 <line:31:3, col:18>
+    | `-VarDecl 0x7fa5708218c0 <col:3, col:14> col:10 used b 'double' cinit
+    |   `-ImplicitCastExpr 0x7fa570821958 <col:14> 'double' <FloatingComplexToReal>
+    |     `-ImaginaryLiteral 0x7fa570821940 <col:14> '_Complex double'
+    |       `-FloatingLiteral 0x7fa570821920 <col:14> 'double' 1.000000e+00
+    `-ReturnStmt 0x7fa570821a30 <line:33:3, col:14>
+      `-BinaryOperator 0x7fa570821a08 <col:10, col:14> 'double' '+'
+        |-ImplicitCastExpr 0x7fa5708219d8 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7fa570821988 <col:10> 'double' lvalue Var 0x7fa570821810 'a' 'double'
+        `-Implicit2 errors generated.
+CastExpr 0x7fa5708219f0 <col:14> 'double' <LValueToRValue>
+          `-DeclRefExpr 0x7fa5708219b0 <col:14> 'double' lvalue Var 0x7fa5708218c0 'b' 'double'

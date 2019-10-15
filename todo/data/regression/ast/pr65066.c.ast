@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fba1102bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fba1106d918 <../Data/C2AST/pr65066.c:5:12> col:12 implicit used sscanf 'int (const char *restrict, const char *restrict, ...)' extern
+| |-ParmVarDecl 0x7fba1106d9b8 <<invalid sloc>> <invalid sloc> 'const char *restrict'
+| |-ParmVarDecl 0x7fba1106da18 <<invalid sloc>> <invalid sloc> 'const char *restrict'
+| `-FormatAttr 0x7fba1106da88 <col:12> Implicit scanf 2 3
+|-FunctionDecl 0x7fba1106dae0 prev 0x7fba1106d918 <col:1, col:67> col:12 used sscanf 'int (const char *restrict, const char *restrict, ...)' extern
+| |-ParmVarDecl 0x7fba1102c978 <col:20, col:31> col:40 'const char *restrict'
+| |-ParmVarDecl 0x7fba1106d800 <col:42, col:53> col:62 'const char *restrict'
+| `-FormatAttr 0x7fba1106dbc8 <col:12> Inherited scanf 2 3
+|-VarDecl 0x7fba1106dc30 <line:6:1, col:6> col:6 used a 'int *'
+`-FunctionDecl 0x7fba1106dd18 <line:8:1, line:12:1> line:9:1 foo 'void ()'
+  `-CompoundStmt 0x7fba1106dfa0 <line:10:1, line:12:1>
+    `-CallExpr 0x7fba1106df00 <line:11:3, col:26> 'int'
+      |-ImplicitCastExpr 0x7fba1106dee8 <col:3> 'int (*)(const char *restrict, const char *restrict, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fba1106ddb8 <col:3> 'int (const char *restrict, const char *restrict, ...)' Function 0x7fba1106dae0 'sscanf' 'int (const char *restrict, const char *restrict, ...)'
+      |-ImplicitCastExpr 0x7fba1106df40 <col:11> 'const char *' <NullToPointer>
+      | `-IntegerLiteral 0x7fba1106dde0 <col:11> 'int' 0
+      |-ImplicitCastExpr 0x7fba1106df70 <col:14> 'const char *' <BitCast>
+      | `-ImplicitCastExpr 0x7fba1106df58 <col:14> 'char *' <ArrayToPointerDecay>
+      |   `-StringLiteral 0x7fba1106de38 <col:14> 'char [8]' lvalue "0x%x  #"
+      `-ImplicitCastExpr 0x7fba1106df88 <col:25> 'int *' <LValueToRValue>
+        `-DeclRefExpr 0x7fba1106de68 <col:25> 'int *' lvalue Var 0x7fba1106dc30 'a' 'int *'

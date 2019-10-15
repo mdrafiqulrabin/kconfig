@@ -1,0 +1,9 @@
+TranslationUnitDecl 0x7fa4248198e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fa42481a578 <../Data/C2AST/pr42894.c:5:1, col:21> col:21 used t 'int' extern tls
+`-FunctionDecl 0x7fa42501bb20 <line:7:1, line:11:1> line:8:1 foo 'void (int)'
+  |-ParmVarDecl 0x7fa42501ba58 <col:6, col:10> col:10 used a 'int'
+  `-CompoundStmt 0x7fa42501bc58 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7fa42501bc30 <line:10:3, col:7> 'int' '='
+      |-DeclRefExpr 0x7fa42501bbc8 <col:3> 'int' lvalue Var 0x7fa42481a578 't' 'int'
+      `-ImplicitCastExpr 0x7fa42501bc18 <col:7> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fa42501bbf0 <col:7> 'int' lvalue ParmVar 0x7fa42501ba58 'a' 'int'

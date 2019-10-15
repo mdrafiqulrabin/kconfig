@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fe17302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe174807e68 <../Data/C2AST/pr78738.c:5:8> col:8 implicit used round 'double (double)' extern
+| |-ParmVarDecl 0x7fe174807f08 <<invalid sloc>> <invalid sloc> 'double'
+| |-NoThrowAttr 0x7fe174807f70 <col:8> Implicit
+| `-ConstAttr 0x7fe174807fb8 <col:8> Implicit
+|-FunctionDecl 0x7fe174807fc8 prev 0x7fe174807e68 <col:1, col:21> col:8 used round 'double (double)'
+| |-ParmVarDecl 0x7fe17302c978 <col:15> col:21 'double'
+| |-NoThrowAttr 0x7fe1748080a8 <col:8> Inherited Implicit
+| `-ConstAttr 0x7fe1748080b8 <col:8> Inherited Implicit
+`-FunctionDecl 0x7fe1748081a8 <line:7:1, line:10:1> line:7:5 foo 'int (double)'
+  |-ParmVarDecl 0x7fe1748080e0 <col:10, col:17> col:17 used a 'double'
+  `-CompoundStmt 0x7fe174808398 <line:8:1, line:10:1>
+    `-ReturnStmt 0x7fe174808380 <line:9:3, col:18>
+      `-ImplicitCastExpr 0x7fe174808368 <col:10, col:18> 'int' <FloatingToIntegral>
+        `-CallExpr 0x7fe174808320 <col:10, col:18> 'double'
+          |-ImplicitCastExpr 0x7fe174808308 <col:10> 'double (*)(double)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x7fe174808290 <col:10> 'double (double)' Function 0x7fe174807fc8 'round' 'double (double)'
+          `-ImplicitCastExpr 0x7fe174808350 <col:17> 'double' <LValueToRValue>
+            `-DeclRefExpr 0x7fe1748082b8 <col:17> 'double' lvalue ParmVar 0x7fe1748080e0 'a' 'double'

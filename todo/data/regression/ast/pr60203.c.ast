@@ -1,0 +1,64 @@
+TranslationUnitDecl 0x7fe2828174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe282818160 <../Data/C2AST/pr60203.c:7:1, col:43> col:7 union u_ld definition
+| |-FieldDecl 0x7fe283029238 <col:14, col:26> col:26 referenced ld 'long double'
+| `-FieldDecl 0x7fe283029300 <col:30, col:40> col:37 referenced d 'double [2]'
+|-FunctionDecl 0x7fe2830294b8 <line:9:1, line:16:1> line:10:1 pack 'long double (double, double)'
+| |-ParmVarDecl 0x7fe283029360 <col:7, col:14> col:14 used a 'double'
+| |-ParmVarDecl 0x7fe2830293d8 <col:17, col:24> col:24 used aa 'double'
+| `-CompoundStmt 0x7fe283029988 <line:11:1, line:16:1>
+|   |-DeclStmt 0x7fe283029660 <line:12:3, col:15>
+|   | `-VarDecl 0x7fe283029600 <col:3, col:14> col:14 used u 'union u_ld':'union u_ld'
+|   |-BinaryOperator 0x7fe2830297a8 <line:13:3, col:12> 'double' '='
+|   | |-ArraySubscriptExpr 0x7fe283029740 <col:3, col:8> 'double' lvalue
+|   | | |-ImplicitCastExpr 0x7fe283029728 <col:3, col:5> 'double *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fe2830296a0 <col:3, col:5> 'double [2]' lvalue .d 0x7fe283029300
+|   | | |   `-DeclRefExpr 0x7fe283029678 <col:3> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029600 'u' 'union u_ld':'union u_ld'
+|   | | `-IntegerLiteral 0x7fe2830296d8 <col:7> 'int' 0
+|   | `-ImplicitCastExpr 0x7fe283029790 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fe283029768 <col:12> 'double' lvalue ParmVar 0x7fe283029360 'a' 'double'
+|   |-BinaryOperator 0x7fe2830298d0 <line:14:3, col:12> 'double' '='
+|   | |-ArraySubscriptExpr 0x7fe283029868 <col:3, col:8> 'double' lvalue
+|   | | |-ImplicitCastExpr 0x7fe283029850 <col:3, col:5> 'double *' <ArrayToPointerDecay>
+|   | | | `-MemberExpr 0x7fe2830297f8 <col:3, col:5> 'double [2]' lvalue .d 0x7fe283029300
+|   | | |   `-DeclRefExpr 0x7fe2830297d0 <col:3> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029600 'u' 'union u_ld':'union u_ld'
+|   | | `-IntegerLiteral 0x7fe283029830 <col:7> 'int' 1
+|   | `-ImplicitCastExpr 0x7fe2830298b8 <col:12> 'double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fe283029890 <col:12> 'double' lvalue ParmVar 0x7fe2830293d8 'aa' 'double'
+|   `-ReturnStmt 0x7fe283029970 <line:15:3, col:12>
+|     `-ImplicitCastExpr 0x7fe283029958 <col:10, col:12> 'long double' <LValueToRValue>
+|       `-MemberExpr 0x7fe283029920 <col:10, col:12> 'long double' lvalue .ld 0x7fe283029238
+|         `-DeclRefExpr 0x7fe2830298f8 <col:10> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029600 'u' 'union u_ld':'union u_ld'
+|-FunctionDecl 0x7fe283029a98 <line:18:1, line:24:1> line:19:1 unpack_0 'double (long double)'
+| |-ParmVarDecl 0x7fe2830299d0 <col:11, col:23> col:23 used x 'long double'
+| `-CompoundStmt 0x7fe283029d90 <line:20:1, line:24:1>
+|   |-DeclStmt 0x7fe283029bc0 <line:21:3, col:15>
+|   | `-VarDecl 0x7fe283029b60 <col:3, col:14> col:14 used u 'union u_ld':'union u_ld'
+|   |-BinaryOperator 0x7fe283029c78 <line:22:3, col:10> 'long double' '='
+|   | |-MemberExpr 0x7fe283029c00 <col:3, col:5> 'long double' lvalue .ld 0x7fe283029238
+|   | | `-DeclRefExpr 0x7fe283029bd8 <col:3> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029b60 'u' 'union u_ld':'union u_ld'
+|   | `-ImplicitCastExpr 0x7fe283029c60 <col:10> 'long double' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fe283029c38 <col:10> 'long double' lvalue ParmVar 0x7fe2830299d0 'x' 'long double'
+|   `-ReturnStmt 0x7fe283029d78 <line:23:3, col:15>
+|     `-ImplicitCastExpr 0x7fe283029d60 <col:10, col:15> 'double' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fe283029d38 <col:10, col:15> 'double' lvalue
+|         |-ImplicitCastExpr 0x7fe283029d20 <col:10, col:12> 'double *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7fe283029cc8 <col:10, col:12> 'double [2]' lvalue .d 0x7fe283029300
+|         |   `-DeclRefExpr 0x7fe283029ca0 <col:10> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029b60 'u' 'union u_ld':'union u_ld'
+|         `-IntegerLiteral 0x7fe283029d00 <col:14> 'int' 0
+`-FunctionDecl 0x7fe283029e60 <line:26:1, line:32:1> line:27:1 unpack_1 'double (long double)'
+  |-ParmVarDecl 0x7fe283029dd0 <col:11, col:23> col:23 used x 'long double'
+  `-CompoundStmt 0x7fe28302a158 <line:28:1, line:32:1>
+    |-DeclStmt 0x7fe283029f88 <line:29:3, col:15>
+    | `-VarDecl 0x7fe283029f28 <col:3, col:14> col:14 used u 'union u_ld':'union u_ld'
+    |-BinaryOperator 0x7fe28302a040 <line:30:3, col:10> 'long double' '='
+    | |-MemberExpr 0x7fe283029fc8 <col:3, col:5> 'long double' lvalue .ld 0x7fe283029238
+    | | `-DeclRefExpr 0x7fe283029fa0 <col:3> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029f28 'u' 'union u_ld':'union u_ld'
+    | `-ImplicitCastExpr 0x7fe28302a028 <col:10> 'long double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe28302a000 <col:10> 'long double' lvalue ParmVar 0x7fe283029dd0 'x' 'long double'
+    `-ReturnStmt 0x7fe28302a140 <line:31:3, col:15>
+      `-ImplicitCastExpr 0x7fe28302a128 <col:10, col:15> 'double' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fe28302a100 <col:10, col:15> 'double' lvalue
+          |-ImplicitCastExpr 0x7fe28302a0e8 <col:10, col:12> 'double *' <ArrayToPointerDecay>
+          | `-MemberExpr 0x7fe28302a090 <col:10, col:12> 'double [2]' lvalue .d 0x7fe283029300
+          |   `-DeclRefExpr 0x7fe28302a068 <col:10> 'union u_ld':'union u_ld' lvalue Var 0x7fe283029f28 'u' 'union u_ld':'union u_ld'
+          `-IntegerLiteral 0x7fe28302a0c8 <col:14> 'int' 1

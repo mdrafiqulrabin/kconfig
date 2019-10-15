@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7f844a02bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f844a02c978 <../Data/C2AST/pr70799-5.c:7:1, col:11> col:11 used a 'long long'
+|-VarDecl 0x7f844a06a458 <col:1, col:14> col:14 used b 'long long'
+|-FunctionDecl 0x7f844a06a5b0 <line:9:1, line:12:1> line:9:6 test1 'void (int)'
+| |-ParmVarDecl 0x7f844a06a4e8 <col:13, col:17> col:17 used c 'int'
+| `-CompoundStmt 0x7f844a06a750 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7f844a06a728 <line:11:3, col:12> 'long long' '='
+|     |-DeclRefExpr 0x7f844a06a658 <col:3> 'long long' lvalue Var 0x7f844a02c978 'a' 'long long'
+|     `-BinaryOperator 0x7f844a06a700 <col:7, col:12> 'long long' '<<'
+|       |-ImplicitCastExpr 0x7f844a06a6d0 <col:7> 'long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x7f844a06a680 <col:7> 'long long' lvalue Var 0x7f844a06a458 'b' 'long long'
+|       `-ImplicitCastExpr 0x7f844a06a6e8 <col:12> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7f844a06a6a8 <col:12> 'int' lvalue ParmVar 0x7f844a06a4e8 'c' 'int'
+`-FunctionDecl 0x7f844a06a808 <line:14:1, line:17:1> line:14:6 test2 'void (int)'
+  |-ParmVarDecl 0x7f844a06a780 <col:13, col:17> col:17 used c 'int'
+  `-CompoundStmt 0x7f844a06a9a8 <line:15:1, line:17:1>
+    `-BinaryOperator 0x7f844a06a980 <line:16:3, col:12> 'long long' '='
+      |-DeclRefExpr 0x7f844a06a8b0 <col:3> 'long long' lvalue Var 0x7f844a02c978 'a' 'long long'
+      `-BinaryOperator 0x7f844a06a958 <col:7, col:12> 'long long' '>>'
+        |-ImplicitCastExpr 0x7f844a06a928 <col:7> 'long long' <LValueToRValue>
+        | `-DeclRefExpr 0x7f844a06a8d8 <col:7> 'long long' lvalue Var 0x7f844a06a458 'b' 'long long'
+        `-ImplicitCastExpr 0x7f844a06a940 <col:12> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f844a06a900 <col:12> 'int' lvalue ParmVar 0x7f844a06a780 'c' 'int'

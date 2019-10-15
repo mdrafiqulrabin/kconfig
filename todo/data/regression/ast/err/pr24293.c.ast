@@ -1,0 +1,53 @@
+../Data/C2AST/pr24293.c:4:19: error: tentative definition has type 'struct foo' that is never completed
+static struct foo x;   
+                  ^
+../Data/C2AST/pr24293.c:4:15: note: forward declaration of 'struct foo'
+static struct foo x;   
+              ^
+../Data/C2AST/pr24293.c:5:18: error: tentative definition has type 'union bar' that is never completed
+static union bar y;   
+                 ^
+../Data/C2AST/pr24293.c:5:14: note: forward declaration of 'union bar'
+static union bar y;   
+             ^
+../Data/C2AST/pr24293.c:8:10: error: tentative definition has type 'p' (aka 'struct P') that is never completed
+static p p_obj;   
+         ^
+../Data/C2AST/pr24293.c:7:16: note: forward declaration of 'struct P'
+typedef struct P p;
+               ^
+../Data/C2AST/pr24293.c:10:15: error: tentative definition has type 'enum e' that is never completed
+static enum e e_var;  
+              ^
+../Data/C2AST/pr24293.c:10:13: note: forward declaration of 'enum e'
+static enum e e_var;  
+            ^
+4 errors generated.
+TranslationUnitDecl 0x7f84f381a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f84f381ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f84f381ab80 '__int128'
+|-TypedefDecl 0x7f84f381aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f84f381aba0 'unsigned __int128'
+|-TypedefDecl 0x7f84f381b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f84f381afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f84f381af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f84f381b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f84f381b200 'char *'
+|   `-BuiltinType 0x7f84f381a980 'char'
+|-TypedefDecl 0x7f84f381b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f84f381b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f84f381b320 'struct __va_list_tag'
+|     `-Record 0x7f84f381b298 '__va_list_tag'
+|-RecordDecl 0x7f84f381b560 <../Data/C2AST/pr24293.c:4:8, col:15> col:15 struct foo
+|-VarDecl 0x7f84f385c470 <col:1, col:19> col:19 invalid x 'struct foo':'struct foo' static
+|-RecordDecl 0x7f84f385c528 <line:5:8, col:14> col:14 union bar
+|-VarDecl 0x7f84f385c620 <col:1, col:18> col:18 invalid y 'union bar':'union bar' static
+|-RecordDecl 0x7f84f385c698 <line:7:9, col:16> col:16 struct P
+|-TypedefDecl 0x7f84f385c790 <col:1, col:18> col:18 referenced p 'struct P':'struct P'
+| `-ElaboratedType 0x7f84f385c740 'struct P' sugar
+|   `-RecordType 0x7f84f385c720 'struct P'
+|     `-Record 0x7f84f385c698 'P'
+|-VarDecl 0x7f84f385c830 <line:8:1, col:10> col:10 invalid p_obj 'p':'struct P' static
+|-VarDecl 0x7f84f385c9a0 <line:10:1, col:15> col:15 invalid e_var 'enum e':'enum e' static
+|-RecordDecl 0x7f84f385ca18 <line:12:8, col:15> col:15 struct undefined_object
+`-VarDecl 0x7f84f385cb10 <col:1, col:32> col:32 object 'struct undefined_object':'struct undefined_object' extern

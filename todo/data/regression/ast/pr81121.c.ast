@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7fd87282bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fd8730142f0 <../Data/C2AST/pr81121.c:5:1, line:10:1> line:6:1 foo 'void (short *, short *)'
+  |-ParmVarDecl 0x7fd87282c9a0 <col:6, col:13> col:13 used x 'short *'
+  |-ParmVarDecl 0x7fd873014218 <col:16, col:23> col:23 used y 'short *'
+  `-CompoundStmt 0x7fd8730146a8 <line:7:1, line:10:1>
+    |-DeclStmt 0x7fd873014490 <line:8:3, col:14>
+    | `-VarDecl 0x7fd8730143f8 <col:3, col:13> col:9 used a 'float' cinit
+    |   `-ImplicitCastExpr 0x7fd873014478 <col:13> 'float' <IntegralToFloating>
+    |     `-IntegerLiteral 0x7fd873014458 <col:13> 'int' 0
+    `-BinaryOperator 0x7fd873014680 <line:9:3, col:17> 'short' '='
+      |-ArraySubscriptExpr 0x7fd873014508 <col:3, col:6> 'short' lvalue
+      | |-ImplicitCastExpr 0x7fd8730144f0 <col:3> 'short *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fd8730144a8 <col:3> 'short *' lvalue ParmVar 0x7fd873014218 'y' 'short *'
+      | `-IntegerLiteral 0x7fd8730144d0 <col:5> 'int' 0
+      `-ImplicitCastExpr 0x7fd873014668 <col:10, col:17> 'short' <FloatingToIntegral>
+        `-BinaryOperator 0x7fd873014640 <col:10, col:17> 'float' '*'
+          |-ImplicitCastExpr 0x7fd873014628 <col:10, col:13> 'float' <IntegralToFloating>
+          | `-ImplicitCastExpr 0x7fd8730145f8 <col:10, col:13> 'int' <IntegralCast>
+          |   `-ImplicitCastExpr 0x7fd8730145e0 <col:10, col:13> 'short' <LValueToRValue>
+          |     `-ArraySubscriptExpr 0x7fd873014590 <col:10, col:13> 'short' lvalue
+          |       |-ImplicitCastExpr 0x7fd873014578 <col:10> 'short *' <LValueToRValue>
+          |       | `-DeclRefExpr 0x7fd873014530 <col:10> 'short *' lvalue ParmVar 0x7fd87282c9a0 'x' 'short *'
+          |       `-IntegerLiteral 0x7fd873014558 <col:12> 'int' 0
+          `-ImplicitCastExpr 0x7fd873014610 <col:17> 'float' <LValueToRValue>
+            `-DeclRefExpr 0x7fd8730145b8 <col:17> 'float' lvalue Var 0x7fd8730143f8 'a' 'float'

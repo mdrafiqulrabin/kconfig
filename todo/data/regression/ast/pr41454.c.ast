@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fcdee82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fcdef800050 <../Data/C2AST/pr41454.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcdef8000f0 prev 0x7fcdef800050 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fcdef8001e0 <line:6:1, line:22:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7fcdef800a88 <line:7:1, line:22:1>
+    |-DeclStmt 0x7fcdef8003a0 <line:8:3, col:20>
+    | `-VarDecl 0x7fcdef800340 <col:3, col:19> col:7 used BM_tab2 'int [256]'
+    |-DeclStmt 0x7fcdef8004a0 <line:9:3, col:24>
+    | `-VarDecl 0x7fcdef800400 <col:3, col:17> col:8 used BM_tab 'int *' cinit
+    |   `-ImplicitCastExpr 0x7fcdef800488 <col:17> 'int *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fcdef800460 <col:17> 'int [256]' lvalue Var 0x7fcdef800340 'BM_tab2' 'int [256]'
+    |-DeclStmt 0x7fcdef800530 <line:10:3, col:19>
+    | `-VarDecl 0x7fcdef8004d0 <col:3, col:8> col:8 used BM_tab_base 'int *'
+    |-BinaryOperator 0x7fcdef8005b0 <line:12:3, col:17> 'int *' '='
+    | |-DeclRefExpr 0x7fcdef800548 <col:3> 'int *' lvalue Var 0x7fcdef8004d0 'BM_tab_base' 'int *'
+    | `-ImplicitCastExpr 0x7fcdef800598 <col:17> 'int *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fcdef800570 <col:17> 'int *' lvalue Var 0x7fcdef800400 'BM_tab' 'int *'
+    |-CompoundAssignOperator 0x7fcdef800620 <line:13:3, col:13> 'int *' '+=' ComputeLHSTy='int *' ComputeResultTy='int *'
+    | |-DeclRefExpr 0x7fcdef8005d8 <col:3> 'int *' lvalue Var 0x7fcdef800400 'BM_tab' 'int *'
+    | `-IntegerLiteral 0x7fcdef800600 <col:13> 'int' 256
+    |-WhileStmt 0x7fcdef800880 <line:14:3, line:18:5>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcdef8006d8 <line:14:10, col:25> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcdef8006a8 <col:10> 'int *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fcdef800658 <col:10> 'int *' lvalue Var 0x7fcdef8004d0 'BM_tab_base' 'int *'
+    | | `-ImplicitCastExpr 0x7fcdef8006c0 <col:25> 'int *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fcdef800680 <col:25> 'int *' lvalue Var 0x7fcdef800400 'BM_tab' 'int *'
+    | `-CompoundStmt 0x7fcdef800860 <line:15:5, line:18:5>
+    |   |-BinaryOperator 0x7fcdef800788 <line:16:7, col:19> 'int' '='
+    |   | |-UnaryOperator 0x7fcdef800748 <col:7, col:10> 'int' lvalue prefix '*'
+    |   | | `-UnaryOperator 0x7fcdef800728 <col:8, col:10> 'int *' prefix '--'
+    |   | |   `-DeclRefExpr 0x7fcdef800700 <col:10> 'int *' lvalue Var 0x7fcdef800400 'BM_tab' 'int *'
+    |   | `-IntegerLiteral 0x7fcdef800768 <col:19> 'int' 6
+    |   `-BinaryOperator 0x7fcdef800838 <line:17:7, col:19> 'int' '='
+    |     |-UnaryOperator 0x7fcdef8007f8 <col:7, col:10> 'int' lvalue prefix '*'
+    |     | `-UnaryOperator 0x7fcdef8007d8 <col:8, col:10> 'int *' prefix '--'
+    |     |   `-DeclRefExpr 0x7fcdef8007b0 <col:10> 'int *' lvalue Var 0x7fcdef800400 'BM_tab' 'int *'
+    |     `-IntegerLiteral 0x7fcdef800818 <col:19> 'int' 6
+    |-IfStmt 0x7fcdef800a18 <line:19:3, line:20:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fcdef800960 <line:19:7, col:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fcdef800948 <col:7, col:16> 'int' <LValueToRValue>
+    | | | `-ArraySubscriptExpr 0x7fcdef800900 <col:7, col:16> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fcdef8008e8 <col:7> 'int *' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fcdef8008a0 <col:7> 'int [256]' lvalue Var 0x7fcdef800340 'BM_tab2' 'int [256]'
+    | | |   `-IntegerLiteral 0x7fcdef8008c8 <col:15> 'int' 0
+    | | `-IntegerLiteral 0x7fcdef800928 <col:21> 'int' 6
+    | |-CallExpr 0x7fcdef8009f0 <line:20:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fcdef8009d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fcdef800988 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcdef8000f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fcdef800a70 <line:21:3, col:10>
+      `-IntegerLiteral 0x7fcdef800a50 <col:10> 'int' 0

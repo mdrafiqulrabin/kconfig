@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ff78902bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff78906d800 <../Data/C2AST/pr46404.c:3:1, col:10> col:5 used l 'int [200]'
+`-FunctionDecl 0x7ff78906d960 <line:5:1, line:13:1> line:6:1 foo 'void (void)'
+  `-CompoundStmt 0x7ff78906dd70 <line:7:1, line:13:1>
+    |-DeclStmt 0x7ff78906da98 <line:8:3, col:12>
+    | `-VarDecl 0x7ff78906da18 <col:3, col:11> col:7 used i 'int' cinit
+    |   `-IntegerLiteral 0x7ff78906da78 <col:11> 'int' 0
+    |-ForStmt 0x7ff78906db90 <line:9:3, line:10:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7ff78906db10 <line:9:10, col:14> 'int' '<'
+    | | |-ImplicitCastExpr 0x7ff78906daf8 <col:10> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7ff78906dab0 <col:10> 'int' lvalue Var 0x7ff78906da18 'i' 'int'
+    | | `-IntegerLiteral 0x7ff78906dad8 <col:14> 'int' 100
+    | |-UnaryOperator 0x7ff78906db60 <col:19, col:20> 'int' postfix '++'
+    | | `-DeclRefExpr 0x7ff78906db38 <col:19> 'int' lvalue Var 0x7ff78906da18 'i' 'int'
+    | `-NullStmt 0x7ff78906db80 <line:10:5>
+    `-ForStmt 0x7ff78906dd38 <line:11:3, line:12:8>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7ff78906dbf0 <line:11:10> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7ff78906dbc8 <col:10> 'int' lvalue Var 0x7ff78906da18 'i' 'int'
+      |-UnaryOperator 0x7ff78906dc30 <col:13, col:14> 'int' postfix '--'
+      | `-DeclRefExpr 0x7ff78906dc08 <col:13> 'int' lvalue Var 0x7ff78906da18 'i' 'int'
+      `-ImplicitCastExpr 0x7ff78906dd20 <line:12:5, col:8> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7ff78906dcf8 <col:5, col:8> 'int' lvalue
+          |-ImplicitCastExpr 0x7ff78906dcc8 <col:5> 'int *' <ArrayToPointerDecay>
+          | `-DeclRefExpr 0x7ff78906dc50 <col:5> 'int [200]' lvalue Var 0x7ff78906d800 'l' 'int [200]'
+          `-ImplicitCastExpr 0x7ff78906dce0 <col:7> 'int' <LValueToRValue>
+            `-DeclRefExpr 0x7ff78906dc78 <col:7> 'int' lvalue Var 0x7ff78906da18 'i' 'int'

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7ffb448174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffb44818160 <../Data/C2AST/pr47369-1.c:5:1, line:8:1> line:5:8 struct FILE definition
+| `-FieldDecl 0x7ffb4502b438 <line:7:3, col:7> col:7 x 'int'
+|-VarDecl 0x7ffb4502b538 <line:9:1, col:25> col:20 used __sF 'struct FILE []' extern
+|-FunctionDecl 0x7ffb4502b760 <line:10:1, col:31> col:13 used bar 'void (struct FILE *)' extern
+| `-ParmVarDecl 0x7ffb4502b660 <col:18, col:30> col:31 'struct FILE *'
+`-FunctionDecl 0x7ffb4502b858 <line:11:1, line:13:1> line:11:6 dlmalloc_stats 'void ()'
+  `-CompoundStmt 0x7ffb4502ba90 <col:23, line:13:1>
+    `-CallExpr 0x7ffb4502ba60 <line:12:4, col:19> 'void'
+      |-ImplicitCastExpr 0x7ffb4502ba48 <col:4> 'void (*)(struct FILE *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffb4502b8f8 <col:4> 'void (struct FILE *)' Function 0x7ffb4502b760 'bar' 'void (struct FILE *)'
+      `-ParenExpr 0x7ffb4502b9c8 <col:9, col:18> 'struct FILE *'
+        `-UnaryOperator 0x7ffb4502b9a8 <col:10, col:17> 'struct FILE *' prefix '&'
+          `-ArraySubscriptExpr 0x7ffb4502b980 <col:11, col:17> 'struct FILE':'struct FILE' lvalue
+            |-ImplicitCastExpr 0x7ffb4502b968 <col:11> 'struct FILE *' <ArrayToPointerDecay>
+            | `-DeclRefExpr 0x7ffb4502b920 <col:11> 'struct FILE []' lvalue Var 0x7ffb4502b538 '__sF' 'struct FILE []'
+            `-IntegerLiteral 0x7ffb4502b948 <col:16> 'int' 2

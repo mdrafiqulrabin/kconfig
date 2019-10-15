@@ -1,0 +1,151 @@
+TranslationUnitDecl 0x7fa13982bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa13a014268 <../Data/C2AST/pr40238.c:3:1, col:41> col:12 used xdo_rb_ctr_row 'int (int *)' extern
+| `-ParmVarDecl 0x7fa13982c9a0 <col:28, col:33> col:33 pos_code 'int *'
+`-FunctionDecl 0x7fa13a014438 <line:5:1, line:32:1> line:5:5 xgp_ahd_interpolate 'int (int)'
+  |-ParmVarDecl 0x7fa13a014368 <col:26, col:30> col:30 used tile 'int'
+  `-CompoundStmt 0x7fa13a0158c0 <line:6:1, line:32:1>
+    |-DeclStmt 0x7fa13a0145c0 <line:7:2, col:10>
+    | `-VarDecl 0x7fa13a014560 <col:2, col:9> col:6 used p 'int [4]'
+    |-SwitchStmt 0x7fa13a014618 <line:9:2, line:27:2>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7fa13a014600 <line:9:10> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa13a0145d8 <col:10> 'int' lvalue ParmVar 0x7fa13a014368 'tile' 'int'
+    | `-CompoundStmt 0x7fa13a015648 <col:16, line:27:2>
+    |   |-DefaultStmt 0x7fa13a0147c8 <line:10:2, line:13:10>
+    |   | `-CaseStmt 0x7fa13a014668 <line:11:2, line:13:10>
+    |   |   |-IntegerLiteral 0x7fa13a014648 <line:11:7> 'int' 0
+    |   |   |-<<<NULL>>>
+    |   |   `-CaseStmt 0x7fa13a0146c0 <line:12:2, line:13:10>
+    |   |     |-IntegerLiteral 0x7fa13a0146a0 <line:12:7> 'int' 1
+    |   |     |-<<<NULL>>>
+    |   |     `-BinaryOperator 0x7fa13a0147a0 <line:13:3, col:10> 'int' '='
+    |   |       |-ArraySubscriptExpr 0x7fa13a014758 <col:3, col:6> 'int' lvalue
+    |   |       | |-ImplicitCastExpr 0x7fa13a014740 <col:3> 'int *' <ArrayToPointerDecay>
+    |   |       | | `-DeclRefExpr 0x7fa13a0146f8 <col:3> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   |       | `-IntegerLiteral 0x7fa13a014720 <col:5> 'int' 0
+    |   |       `-IntegerLiteral 0x7fa13a014780 <col:10> 'int' 0
+    |   |-BinaryOperator 0x7fa13a014890 <col:13, col:20> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a014848 <col:13, col:16> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a014830 <col:13> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a0147e8 <col:13> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a014810 <col:15> 'int' 1
+    |   | `-IntegerLiteral 0x7fa13a014870 <col:20> 'int' 1
+    |   |-BinaryOperator 0x7fa13a014960 <col:23, col:30> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a014918 <col:23, col:26> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a014900 <col:23> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a0148b8 <col:23> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a0148e0 <col:25> 'int' 2
+    |   | `-IntegerLiteral 0x7fa13a014940 <col:30> 'int' 2
+    |   |-BinaryOperator 0x7fa13a014a30 <col:33, col:40> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a0149e8 <col:33, col:36> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a0149d0 <col:33> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a014988 <col:33> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a0149b0 <col:35> 'int' 3
+    |   | `-IntegerLiteral 0x7fa13a014a10 <col:40> 'int' 3
+    |   |-BreakStmt 0x7fa13a014a58 <line:14:3>
+    |   |-CaseStmt 0x7fa13a014a80 <line:15:2, line:17:10>
+    |   | |-IntegerLiteral 0x7fa13a014a60 <line:15:7> 'int' 2
+    |   | |-<<<NULL>>>
+    |   | `-CaseStmt 0x7fa13a014ad8 <line:16:2, line:17:10>
+    |   |   |-IntegerLiteral 0x7fa13a014ab8 <line:16:7> 'int' 3
+    |   |   |-<<<NULL>>>
+    |   |   `-BinaryOperator 0x7fa13a014bb8 <line:17:3, col:10> 'int' '='
+    |   |     |-ArraySubscriptExpr 0x7fa13a014b70 <col:3, col:6> 'int' lvalue
+    |   |     | |-ImplicitCastExpr 0x7fa13a014b58 <col:3> 'int *' <ArrayToPointerDecay>
+    |   |     | | `-DeclRefExpr 0x7fa13a014b10 <col:3> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   |     | `-IntegerLiteral 0x7fa13a014b38 <col:5> 'int' 0
+    |   |     `-IntegerLiteral 0x7fa13a014b98 <col:10> 'int' 1
+    |   |-BinaryOperator 0x7fa13a014c88 <col:13, col:20> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a014c40 <col:13, col:16> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a014c28 <col:13> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a014be0 <col:13> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a014c08 <col:15> 'int' 1
+    |   | `-IntegerLiteral 0x7fa13a014c68 <col:20> 'int' 0
+    |   |-BinaryOperator 0x7fa13a014d58 <col:23, col:30> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a014d10 <col:23, col:26> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a014cf8 <col:23> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a014cb0 <col:23> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a014cd8 <col:25> 'int' 2
+    |   | `-IntegerLiteral 0x7fa13a014d38 <col:30> 'int' 3
+    |   |-BinaryOperator 0x7fa13a014e28 <col:33, col:40> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a014de0 <col:33, col:36> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a014dc8 <col:33> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a014d80 <col:33> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a014da8 <col:35> 'int' 3
+    |   | `-IntegerLiteral 0x7fa13a014e08 <col:40> 'int' 2
+    |   |-BreakStmt 0x7fa13a014e50 <line:18:3>
+    |   |-CaseStmt 0x7fa13a014e78 <line:19:2, line:21:10>
+    |   | |-IntegerLiteral 0x7fa13a014e58 <line:19:7> 'int' 4
+    |   | |-<<<NULL>>>
+    |   | `-CaseStmt 0x7fa13a014ed0 <line:20:2, line:21:10>
+    |   |   |-IntegerLiteral 0x7fa13a014eb0 <line:20:7> 'int' 5
+    |   |   |-<<<NULL>>>
+    |   |   `-BinaryOperator 0x7fa13a014fb0 <line:21:3, col:10> 'int' '='
+    |   |     |-ArraySubscriptExpr 0x7fa13a014f68 <col:3, col:6> 'int' lvalue
+    |   |     | |-ImplicitCastExpr 0x7fa13a014f50 <col:3> 'int *' <ArrayToPointerDecay>
+    |   |     | | `-DeclRefExpr 0x7fa13a014f08 <col:3> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   |     | `-IntegerLiteral 0x7fa13a014f30 <col:5> 'int' 0
+    |   |     `-IntegerLiteral 0x7fa13a014f90 <col:10> 'int' 3
+    |   |-BinaryOperator 0x7fa13a015080 <col:13, col:20> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a015038 <col:13, col:16> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a015020 <col:13> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a014fd8 <col:13> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a015000 <col:15> 'int' 1
+    |   | `-IntegerLiteral 0x7fa13a015060 <col:20> 'int' 2
+    |   |-BinaryOperator 0x7fa13a015150 <col:23, col:30> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a015108 <col:23, col:26> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a0150f0 <col:23> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a0150a8 <col:23> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a0150d0 <col:25> 'int' 2
+    |   | `-IntegerLiteral 0x7fa13a015130 <col:30> 'int' 1
+    |   |-BinaryOperator 0x7fa13a015220 <col:33, col:40> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a0151d8 <col:33, col:36> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a0151c0 <col:33> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a015178 <col:33> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a0151a0 <col:35> 'int' 3
+    |   | `-IntegerLiteral 0x7fa13a015200 <col:40> 'int' 0
+    |   |-BreakStmt 0x7fa13a015248 <line:22:3>
+    |   |-CaseStmt 0x7fa13a015270 <line:23:2, line:25:10>
+    |   | |-IntegerLiteral 0x7fa13a015250 <line:23:7> 'int' 6
+    |   | |-<<<NULL>>>
+    |   | `-CaseStmt 0x7fa13a0152c8 <line:24:2, line:25:10>
+    |   |   |-IntegerLiteral 0x7fa13a0152a8 <line:24:7> 'int' 7
+    |   |   |-<<<NULL>>>
+    |   |   `-BinaryOperator 0x7fa13a0153a8 <line:25:3, col:10> 'int' '='
+    |   |     |-ArraySubscriptExpr 0x7fa13a015360 <col:3, col:6> 'int' lvalue
+    |   |     | |-ImplicitCastExpr 0x7fa13a015348 <col:3> 'int *' <ArrayToPointerDecay>
+    |   |     | | `-DeclRefExpr 0x7fa13a015300 <col:3> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   |     | `-IntegerLiteral 0x7fa13a015328 <col:5> 'int' 0
+    |   |     `-IntegerLiteral 0x7fa13a015388 <col:10> 'int' 2
+    |   |-BinaryOperator 0x7fa13a015478 <col:13, col:20> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a015430 <col:13, col:16> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a015418 <col:13> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a0153d0 <col:13> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a0153f8 <col:15> 'int' 1
+    |   | `-IntegerLiteral 0x7fa13a015458 <col:20> 'int' 3
+    |   |-BinaryOperator 0x7fa13a015548 <col:23, col:30> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a015500 <col:23, col:26> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a0154e8 <col:23> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a0154a0 <col:23> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a0154c8 <col:25> 'int' 2
+    |   | `-IntegerLiteral 0x7fa13a015528 <col:30> 'int' 0
+    |   |-BinaryOperator 0x7fa13a015618 <col:33, col:40> 'int' '='
+    |   | |-ArraySubscriptExpr 0x7fa13a0155d0 <col:33, col:36> 'int' lvalue
+    |   | | |-ImplicitCastExpr 0x7fa13a0155b8 <col:33> 'int *' <ArrayToPointerDecay>
+    |   | | | `-DeclRefExpr 0x7fa13a015570 <col:33> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |   | | `-IntegerLiteral 0x7fa13a015598 <col:35> 'int' 3
+    |   | `-IntegerLiteral 0x7fa13a0155f8 <col:40> 'int' 1
+    |   `-BreakStmt 0x7fa13a015640 <line:26:3>
+    |-CallExpr 0x7fa13a015790 <line:29:2, col:18> 'int'
+    | |-ImplicitCastExpr 0x7fa13a015778 <col:2> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa13a0156f8 <col:2> 'int (int *)' Function 0x7fa13a014268 'xdo_rb_ctr_row' 'int (int *)'
+    | `-ImplicitCastExpr 0x7fa13a0157c0 <col:17> 'int *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fa13a015720 <col:17> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    |-CallExpr 0x7fa13a015840 <line:30:2, col:18> 'int'
+    | |-ImplicitCastExpr 0x7fa13a015828 <col:2> 'int (*)(int *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa13a0157d8 <col:2> 'int (int *)' Function 0x7fa13a014268 'xdo_rb_ctr_row' 'int (int *)'
+    | `-ImplicitCastExpr 0x7fa13a015870 <col:17> 'int *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fa13a015800 <col:17> 'int [4]' lvalue Var 0x7fa13a014560 'p' 'int [4]'
+    `-ReturnStmt 0x7fa13a0158a8 <line:31:2, col:9>
+      `-IntegerLiteral 0x7fa13a015888 <col:9> 'int' 0

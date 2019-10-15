@@ -1,0 +1,22 @@
+TranslationUnitDecl 0x7fa0ab8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa0ab85a0d8 <../Data/C2AST/pr59333.c:4:1, line:9:1> line:5:1 used foo 'long long (long long, long long)'
+| |-ParmVarDecl 0x7fa0ab818178 <col:6, col:20> col:20 used i 'long long'
+| |-ParmVarDecl 0x7fa0ab85a000 <col:23, col:37> col:37 used j 'long long'
+| |-CompoundStmt 0x7fa0ab85a378 <line:6:1, line:9:1>
+| | |-GCCAsmStmt 0x7fa0ab85a270 <line:7:3, col:10>
+| | `-ReturnStmt 0x7fa0ab85a360 <line:8:3, col:14>
+| |   `-BinaryOperator 0x7fa0ab85a338 <col:10, col:14> 'long long' '+'
+| |     |-ImplicitCastExpr 0x7fa0ab85a308 <col:10> 'long long' <LValueToRValue>
+| |     | `-DeclRefExpr 0x7fa0ab85a2b8 <col:10> 'long long' lvalue ParmVar 0x7fa0ab818178 'i' 'long long'
+| |     `-ImplicitCastExpr 0x7fa0ab85a320 <col:14> 'long long' <LValueToRValue>
+| |       `-DeclRefExpr 0x7fa0ab85a2e0 <col:14> 'long long' lvalue ParmVar 0x7fa0ab85a000 'j' 'long long'
+| `-NoInlineAttr 0x7fa0ab85a188 <line:4:31>
+`-FunctionDecl 0x7fa0ab85a468 <line:11:1, line:16:1> line:12:1 main 'int (void)'
+  `-CompoundStmt 0x7fa0ab85a650 <line:13:1, line:16:1>
+    |-CallExpr 0x7fa0ab85a5e0 <line:14:3, col:30> 'long long'
+    | |-ImplicitCastExpr 0x7fa0ab85a5c8 <col:3> 'long long (*)(long long, long long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa0ab85a538 <col:3> 'long long (long long, long long)' Function 0x7fa0ab85a0d8 'foo' 'long long (long long, long long)'
+    | |-IntegerLiteral 0x7fa0ab85a560 <col:8> 'long long' 2
+    | `-IntegerLiteral 0x7fa0ab85a580 <<built-in>:40:27> 'long long' 9223372036854775807
+    `-ReturnStmt 0x7fa0ab85a638 <../Data/C2AST/pr59333.c:15:3, col:10>
+      `-IntegerLiteral 0x7fa0ab85a618 <col:10> 'int' 0

@@ -1,0 +1,260 @@
+TranslationUnitDecl 0x7f87a98058e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f87a9806578 <../Data/C2AST/pr28489.c:4:1, col:13> col:13 referenced c_int 'int'
+| `-BuiltinType 0x7f87a98059e0 'int'
+|-RecordDecl 0x7f87aa02aa00 <line:5:1, line:10:1> line:5:7 union c_insn definition
+| |-FieldDecl 0x7f87aa02ab98 <line:7:3, col:15> col:10 referenced op 'void (*)()'
+| |-FieldDecl 0x7f87aa02ac68 <line:8:3, col:10> col:10 referenced mem 'c_int *'
+| `-FieldDecl 0x7f87aa02acc0 <line:9:3, col:9> col:9 referenced imm 'c_int':'int'
+|-VarDecl 0x7f87aa02af38 <line:11:1, col:46> col:21 used c_stack 'union c_insn [1040]' static
+|-RecordDecl 0x7f87aa02afd8 <line:12:8, col:15> col:15 struct c_ident
+|-VarDecl 0x7f87aa02b130 <col:1, col:24> col:24 c_funcs 'struct c_ident *' static
+|-VarDecl 0x7f87aa02b1d8 <line:13:1, col:25> col:15 used c_op_bz 'void (*)()' static
+|-FunctionDecl 0x7f87aa02b3c0 <line:14:1, col:41> col:13 used c_direct 'void (union c_insn *)' static
+| `-ParmVarDecl 0x7f87aa02b2c0 <col:23, col:37> col:37 addr 'union c_insn *'
+|-FunctionDecl 0x7f87aa02b7b8 <line:15:1, line:19:1> line:15:1 c_compile 'int (int (*)(), void (*)(), struct c_ident *)'
+| |-ParmVarDecl 0x7f87aa02b560 <col:12, col:32> col:18 ext_getchar 'int (*)()'
+| |-ParmVarDecl 0x7f87aa02b5f0 <col:35, col:55> col:42 ext_rewind 'void (*)()'
+| |-ParmVarDecl 0x7f87aa02b678 <line:16:5, col:21> col:21 externs 'struct c_ident *'
+| `-CompoundStmt 0x7f87aa02b9d8 <line:17:1, line:19:1>
+|   `-CallExpr 0x7f87aa02b990 <line:18:3, col:25> 'void'
+|     |-ImplicitCastExpr 0x7f87aa02b978 <col:3> 'void (*)(union c_insn *)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7f87aa02b870 <col:3> 'void (union c_insn *)' Function 0x7f87aa02b3c0 'c_direct' 'void (union c_insn *)'
+|     `-ImplicitCastExpr 0x7f87aa02b9c0 <col:13, col:24> 'union c_insn *' <NullToPointer>
+|       `-ParenExpr 0x7f87aa02b8f8 <col:13, col:24> 'void *'
+|         `-CStyleCastExpr 0x7f87aa02b8d0 <col:14, col:23> 'void *' <NullToPointer>
+|           `-IntegerLiteral 0x7f87aa02b898 <col:23> 'int' 0
+`-FunctionDecl 0x7f87aa0434b0 prev 0x7f87aa02b3c0 <line:20:1, line:51:1> line:21:1 used c_direct 'void (union c_insn *)' static
+  |-ParmVarDecl 0x7f87aa043428 <col:11, col:25> col:25 used addr 'union c_insn *'
+  `-CompoundStmt 0x7f87a98232a0 <line:22:1, line:51:1>
+    |-DeclStmt 0x7f87aa043620 <line:23:3, col:26>
+    | `-VarDecl 0x7f87aa043580 <col:3, col:22> col:17 used pc 'union c_insn *' cinit
+    |   `-ImplicitCastExpr 0x7f87aa043608 <col:22> 'union c_insn *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f87aa0435e0 <col:22> 'union c_insn *' lvalue ParmVar 0x7f87aa043428 'addr' 'union c_insn *'
+    |-DeclStmt 0x7f87aa043700 <line:24:3, col:29>
+    | `-VarDecl 0x7f87aa043660 <col:3, col:22> col:17 used sp 'union c_insn *' cinit
+    |   `-ImplicitCastExpr 0x7f87aa0436e8 <col:22> 'union c_insn *' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7f87aa0436c0 <col:22> 'union c_insn [1040]' lvalue Var 0x7f87aa02af38 'c_stack' 'union c_insn [1040]'
+    |-DeclStmt 0x7f87aa0437a8 <line:25:3, col:16>
+    | `-VarDecl 0x7f87aa043728 <col:3, col:15> col:9 used imm 'c_int':'int' cinit
+    |   `-IntegerLiteral 0x7f87aa043788 <col:15> 'int' 0
+    |-DeclStmt 0x7f87aa043f68 <line:26:3, line:29:4>
+    | `-VarDecl 0x7f87aa043810 <line:26:3, line:29:3> line:26:16 ops 'void *[12]' static cinit
+    |   `-InitListExpr 0x7f87aa043df0 <col:24, line:29:3> 'void *[12]'
+    |     |-AddrLabelExpr 0x7f87aa0438b8 <line:27:5, col:7> 'void *' op_index 0x7f87aa043870
+    |     |-AddrLabelExpr 0x7f87aa043920 <col:17, col:19> 'void *' op_assign 0x7f87aa0438d8
+    |     |-AddrLabelExpr 0x7f87aa043988 <col:30, col:32> 'void *' op_add_a 0x7f87aa043940
+    |     |-AddrLabelExpr 0x7f87aa0439f0 <col:42, col:44> 'void *' op_sub_a 0x7f87aa0439a8
+    |     |-AddrLabelExpr 0x7f87aa043a58 <col:54, col:56> 'void *' op_mul_a 0x7f87aa043a10
+    |     |-AddrLabelExpr 0x7f87aa043ac0 <col:66, col:68> 'void *' op_div_a 0x7f87aa043a78
+    |     |-AddrLabelExpr 0x7f87aa043b28 <line:28:7, col:9> 'void *' op_mod_a 0x7f87aa043ae0
+    |     |-AddrLabelExpr 0x7f87aa043b90 <col:19, col:21> 'void *' op_or_a 0x7f87aa043b48
+    |     |-AddrLabelExpr 0x7f87aa043bf8 <col:30, col:32> 'void *' op_xor_a 0x7f87aa043bb0
+    |     |-AddrLabelExpr 0x7f87aa043c60 <col:42, col:44> 'void *' op_and_a 0x7f87aa043c18
+    |     |-AddrLabelExpr 0x7f87aa043cc8 <col:54, col:56> 'void *' op_shl_a 0x7f87aa043c80
+    |     `-AddrLabelExpr 0x7f87aa043d30 <col:66, col:68> 'void *' op_shr_a 0x7f87aa043ce8
+    |-CompoundStmt 0x7f87aa044050 <line:30:5, line:32:5>
+    | `-BinaryOperator 0x7f87aa044028 <line:31:7, col:19> 'void (*)()' '='
+    |   |-DeclRefExpr 0x7f87aa043f80 <col:7> 'void (*)()' lvalue Var 0x7f87aa02b1d8 'c_op_bz' 'void (*)()'
+    |   `-ImplicitCastExpr 0x7f87aa044010 <col:17, col:19> 'void (*)()' <BitCast>
+    |     `-AddrLabelExpr 0x7f87aa043ff0 <col:17, col:19> 'void *' op_bz 0x7f87aa043fa8
+    |-IndirectGotoStmt 0x7f87aa044168 <line:33:3, col:17>
+    | `-ImplicitCastExpr 0x7f87aa044150 <col:9, col:17> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f87aa044138 <col:9, col:17> 'void (*)()' <LValueToRValue>
+    |     `-MemberExpr 0x7f87aa0440d0 <col:9, col:17> 'void (*)()' lvalue ->op 0x7f87aa02ab98
+    |       `-ParenExpr 0x7f87aa0440b0 <col:9, col:14> 'union c_insn *'
+    |         `-UnaryOperator 0x7f87aa044090 <col:10, col:12> 'union c_insn *' postfix '++'
+    |           `-DeclRefExpr 0x7f87aa044068 <col:10> 'union c_insn *' lvalue Var 0x7f87aa043580 'pc' 'union c_insn *'
+    |-LabelStmt 0x7f87aa044208 <line:34:1, line:36:5> 'op_bz'
+    | `-IfStmt 0x7f87aa0441d0 <line:34:7, line:36:5>
+    |   |-<<<NULL>>>
+    |   |-<<<NULL>>>
+    |   |-ImplicitCastExpr 0x7f87aa0441a8 <line:34:11> 'c_int':'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x7f87aa044180 <col:11> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   |-CompoundStmt 0x7f87aa0441c0 <line:35:5, line:36:5>
+    |   `-<<<NULL>>>
+    |-LabelStmt 0x7f87aa0443b0 <line:37:1, col:33> 'op_push_imm_imm'
+    | `-BinaryOperator 0x7f87aa044340 <col:17, col:33> 'c_int':'int' '='
+    |   |-MemberExpr 0x7f87aa0442c8 <col:17, col:27> 'c_int':'int' lvalue ->imm 0x7f87aa02acc0
+    |   | `-ParenExpr 0x7f87aa0442a8 <col:17, col:24> 'union c_insn *'
+    |   |   `-BinaryOperator 0x7f87aa044280 <col:18, col:23> 'union c_insn *' '-'
+    |   |     |-ImplicitCastExpr 0x7f87aa044268 <col:18> 'union c_insn *' <LValueToRValue>
+    |   |     | `-DeclRefExpr 0x7f87aa044220 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |   |     `-IntegerLiteral 0x7f87aa044248 <col:23> 'int' 2
+    |   `-ImplicitCastExpr 0x7f87aa044328 <col:33> 'c_int':'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f87aa044300 <col:33> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-IndirectGotoStmt 0x7f87a9821ae8 <line:38:3, col:19>
+    | `-ImplicitCastExpr 0x7f87a9821ad0 <col:9, col:19> 'const void *' <BitCast>
+    |   `-ImplicitCastExpr 0x7f87a9821ab8 <col:9, col:19> 'void (*)()' <LValueToRValue>
+    |     `-MemberExpr 0x7f87a9821a80 <col:9, col:19> 'void (*)()' lvalue ->op 0x7f87aa02ab98
+    |       `-ParenExpr 0x7f87a9821a60 <col:9, col:16> 'union c_insn *'
+    |         `-BinaryOperator 0x7f87a9821a38 <col:10, col:15> 'union c_insn *' '-'
+    |           |-ImplicitCastExpr 0x7f87a9821a20 <col:10> 'union c_insn *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x7f87aa0443c8 <col:10> 'union c_insn *' lvalue Var 0x7f87aa043580 'pc' 'union c_insn *'
+    |           `-IntegerLiteral 0x7f87a9821a00 <col:15> 'int' 1
+    |-LabelStmt 0x7f87a9821d00 <line:39:1, col:38> 'op_index'
+    | `-BinaryOperator 0x7f87a9821cd8 <col:10, col:38> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9821b00 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-ImplicitCastExpr 0x7f87a9821cc0 <col:16, col:38> 'c_int':'int' <LValueToRValue>
+    |     `-UnaryOperator 0x7f87a9821ca0 <col:16, col:38> 'c_int':'int' lvalue prefix '*'
+    |       `-ParenExpr 0x7f87a9821c80 <col:17, col:38> 'c_int *'
+    |         `-CompoundAssignOperator 0x7f87a9821c48 <col:18, col:35> 'c_int *' '+=' ComputeLHSTy='c_int *' ComputeResultTy='c_int *'
+    |           |-MemberExpr 0x7f87a9821bd0 <col:18, col:28> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |           | `-ParenExpr 0x7f87a9821bb0 <col:18, col:25> 'union c_insn *'
+    |           |   `-BinaryOperator 0x7f87a9821b88 <col:19, col:24> 'union c_insn *' '-'
+    |           |     |-ImplicitCastExpr 0x7f87a9821b70 <col:19> 'union c_insn *' <LValueToRValue>
+    |           |     | `-DeclRefExpr 0x7f87a9821b28 <col:19> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |           |     `-IntegerLiteral 0x7f87a9821b50 <col:24> 'int' 3
+    |           `-ImplicitCastExpr 0x7f87a9821c30 <col:35> 'c_int':'int' <LValueToRValue>
+    |             `-DeclRefExpr 0x7f87a9821c08 <col:35> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9821e98 <line:40:1, col:28> 'op_assign'
+    | `-BinaryOperator 0x7f87a9821e70 <col:11, col:28> 'c_int':'int' '='
+    |   |-UnaryOperator 0x7f87a9821e10 <col:11, col:22> 'c_int':'int' lvalue prefix '*'
+    |   | `-ImplicitCastExpr 0x7f87a9821df8 <col:12, col:22> 'c_int *' <LValueToRValue>
+    |   |   `-MemberExpr 0x7f87a9821dc0 <col:12, col:22> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |   |     `-ParenExpr 0x7f87a9821da0 <col:12, col:19> 'union c_insn *'
+    |   |       `-BinaryOperator 0x7f87a9821d78 <col:13, col:18> 'union c_insn *' '-'
+    |   |         |-ImplicitCastExpr 0x7f87a9821d60 <col:13> 'union c_insn *' <LValueToRValue>
+    |   |         | `-DeclRefExpr 0x7f87a9821d18 <col:13> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |   |         `-IntegerLiteral 0x7f87a9821d40 <col:18> 'int' 3
+    |   `-ImplicitCastExpr 0x7f87a9821e58 <col:28> 'c_int':'int' <LValueToRValue>
+    |     `-DeclRefExpr 0x7f87a9821e30 <col:28> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822090 <line:41:1, col:34> 'op_add_a'
+    | `-BinaryOperator 0x7f87a9822068 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9821eb0 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822030 <col:16, col:34> 'c_int':'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a9821fd0 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a9821fb8 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9821f80 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9821f60 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9821f38 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9821f20 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a9821ed8 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a9821f00 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822018 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a9821ff0 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822288 <line:42:1, col:34> 'op_sub_a'
+    | `-BinaryOperator 0x7f87a9822260 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a98220a8 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822228 <col:16, col:34> 'c_int':'int' '-=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a98221c8 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a98221b0 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822178 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822158 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822130 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822118 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a98220d0 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a98220f8 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822210 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a98221e8 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822480 <line:43:1, col:34> 'op_mul_a'
+    | `-BinaryOperator 0x7f87a9822458 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a98222a0 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822420 <col:16, col:34> 'c_int':'int' '*=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a98223c0 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a98223a8 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822370 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822350 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822328 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822310 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a98222c8 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a98222f0 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822408 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a98223e0 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822678 <line:44:1, col:34> 'op_div_a'
+    | `-BinaryOperator 0x7f87a9822650 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9822498 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822618 <col:16, col:34> 'c_int':'int' '/=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a98225b8 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a98225a0 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822568 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822548 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822520 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822508 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a98224c0 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a98224e8 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822600 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a98225d8 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822870 <line:45:1, col:34> 'op_mod_a'
+    | `-BinaryOperator 0x7f87a9822848 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9822690 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822810 <col:16, col:34> 'c_int':'int' '%=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a98227b0 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a9822798 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822760 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822740 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822718 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822700 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a98226b8 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a98226e0 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a98227f8 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a98227d0 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822a78 <line:46:1, col:33> 'op_or_a'
+    | `-BinaryOperator 0x7f87a9822a50 <col:9, col:33> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9822888 <col:9> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822a18 <col:15, col:33> 'c_int':'int' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a98229a8 <col:15, col:26> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a9822990 <col:16, col:26> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822958 <col:16, col:26> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822938 <col:16, col:23> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822910 <col:17, col:22> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a98228f8 <col:17> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a98228b0 <col:17> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a98228d8 <col:22> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822a00 <col:33> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a98229c8 <col:33> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822c70 <line:47:1, col:34> 'op_xor_a'
+    | `-BinaryOperator 0x7f87a9822c48 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9822a90 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822c10 <col:16, col:34> 'c_int':'int' '^=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a9822bb0 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a9822b98 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822b60 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822b40 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822b18 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822b00 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a9822ab8 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a9822ae0 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822bf8 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a9822bd0 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9822e68 <line:48:1, col:34> 'op_and_a'
+    | `-BinaryOperator 0x7f87a9822e40 <col:10, col:34> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9822c88 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9822e08 <col:16, col:34> 'c_int':'int' '&=' ComputeLHSTy='int' ComputeResultTy='int'
+    |     |-UnaryOperator 0x7f87a9822da8 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a9822d90 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822d58 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822d38 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822d10 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822cf8 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a9822cb0 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a9822cd8 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9822df0 <col:34> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a9822dc8 <col:34> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |-LabelStmt 0x7f87a9823078 <line:49:1, col:35> 'op_shl_a'
+    | `-BinaryOperator 0x7f87a9823050 <col:10, col:35> 'c_int':'int' '='
+    |   |-DeclRefExpr 0x7f87a9822e80 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    |   `-CompoundAssignOperator 0x7f87a9823018 <col:16, col:35> 'c_int':'int' '<<=' ComputeLHSTy='c_int':'int' ComputeResultTy='c_int':'int'
+    |     |-UnaryOperator 0x7f87a9822fa0 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+    |     | `-ImplicitCastExpr 0x7f87a9822f88 <col:17, col:27> 'c_int *' <LValueToRValue>
+    |     |   `-MemberExpr 0x7f87a9822f50 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+    |     |     `-ParenExpr 0x7f87a9822f30 <col:17, col:24> 'union c_insn *'
+    |     |       `-BinaryOperator 0x7f87a9822f08 <col:18, col:23> 'union c_insn *' '-'
+    |     |         |-ImplicitCastExpr 0x7f87a9822ef0 <col:18> 'union c_insn *' <LValueToRValue>
+    |     |         | `-DeclRefExpr 0x7f87a9822ea8 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+    |     |         `-IntegerLiteral 0x7f87a9822ed0 <col:23> 'int' 3
+    |     `-ImplicitCastExpr 0x7f87a9823000 <col:35> 'c_int':'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f87a9822fc0 <col:35> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+    `-LabelStmt 0x7f87a9823288 <line:50:1, col:35> 'op_shr_a'
+      `-BinaryOperator 0x7f87a9823260 <col:10, col:35> 'c_int':'int' '='
+        |-DeclRefExpr 0x7f87a9823090 <col:10> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'
+        `-CompoundAssignOperator 0x7f87a9823228 <col:16, col:35> 'c_int':'int' '>>=' ComputeLHSTy='c_int':'int' ComputeResultTy='c_int':'int'
+          |-UnaryOperator 0x7f87a98231b0 <col:16, col:27> 'c_int':'int' lvalue prefix '*'
+          | `-ImplicitCastExpr 0x7f87a9823198 <col:17, col:27> 'c_int *' <LValueToRValue>
+          |   `-MemberExpr 0x7f87a9823160 <col:17, col:27> 'c_int *' lvalue ->mem 0x7f87aa02ac68
+          |     `-ParenExpr 0x7f87a9823140 <col:17, col:24> 'union c_insn *'
+          |       `-BinaryOperator 0x7f87a9823118 <col:18, col:23> 'union c_insn *' '-'
+          |         |-ImplicitCastExpr 0x7f87a9823100 <col:18> 'union c_insn *' <LValueToRValue>
+          |         | `-DeclRefExpr 0x7f87a98230b8 <col:18> 'union c_insn *' lvalue Var 0x7f87aa043660 'sp' 'union c_insn *'
+          |         `-IntegerLiteral 0x7f87a98230e0 <col:23> 'int' 3
+          `-ImplicitCastExpr 0x7f87a9823210 <col:35> 'c_int':'int' <LValueToRValue>
+            `-DeclRefExpr 0x7f87a98231d0 <col:35> 'c_int':'int' lvalue Var 0x7f87aa043728 'imm' 'c_int':'int'

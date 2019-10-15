@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fec4582bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fec4582c978 <../Data/C2AST/pr83491.c:4:1, col:7> col:7 used a 'float'
+|-VarDecl 0x7fec4586d858 <line:5:1, col:7> col:7 used b 'float'
+|-FunctionDecl 0x7fec4586d908 <line:6:1, line:10:1> line:6:6 bar 'void ()'
+| `-CompoundStmt 0x7fec4586e038 <line:7:1, line:10:1>
+|   |-BinaryOperator 0x7fec4586dcb0 <line:8:3, col:25> 'float' '='
+|   | |-DeclRefExpr 0x7fec4586d9a8 <col:3> 'float' lvalue Var 0x7fec4582c978 'a' 'float'
+|   | `-CallExpr 0x7fec4586dc50 <col:7, col:25> 'float'
+|   |   |-ImplicitCastExpr 0x7fec4586dc38 <col:7> 'float (*)(const char *)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fec4586db68 <col:7> '<builtin fn type>' Function 0x7fec4586da08 '__builtin_nanf' 'float (const char *)'
+|   |   `-ImplicitCastExpr 0x7fec4586dc98 <col:23> 'const char *' <BitCast>
+|   |     `-ImplicitCastExpr 0x7fec4586dc80 <col:23> 'char *' <ArrayToPointerDecay>
+|   |       `-StringLiteral 0x7fec4586dbc8 <col:23> 'char [1]' lvalue ""
+|   `-BinaryOperator 0x7fec4586e010 <line:9:3, col:30> 'float' '='
+|     |-DeclRefExpr 0x7fec4586dcd8 <col:3> 'float' lvalue Var 0x7fec4586d858 'b' 'float'
+|     `-CallExpr 0x7fec4586dfc0 <col:7, col:30> 'float'
+|       |-ImplicitCastExpr 0x7fec4586dfa8 <col:7> 'float (*)(float, float)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fec4586df08 <col:7> '<builtin fn type>' Function 0x7fec4586dd40 '__builtin_powf' 'float (float, float)'
+|       |-ImplicitCastExpr 0x7fec4586dff8 <col:23> 'float' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fec4586df30 <col:23> 'float' lvalue Var 0x7fec4582c978 'a' 'float'
+|       `-FloatingLiteral 0x7fec4586df58 <col:26> 'float' 2.500000e+00
+|-FunctionDecl 0x7fec4586da08 <line:8:7> col:7 implicit used __builtin_nanf 'float (const char *)' extern
+| |-ParmVarDecl 0x7fec4586daa8 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-NoThrowAttr 0x7fec4586db10 <col:7> Implicit
+| `-ConstAttr 0x7fec4586db58 <col:7> Implicit
+`-FunctionDecl 0x7fec4586dd40 <line:9:7> col:7 implicit used __builtin_powf 'float (float, float)' extern
+  |-ParmVarDecl 0x7fec4586dde0 <<invalid sloc>> <invalid sloc> 'float'
+  |-ParmVarDecl 0x7fec4586de40 <<invalid sloc>> <invalid sloc> 'float'
+  |-ConstAttr 0x7fec4586deb0 <col:7> Implicit
+  `-NoThrowAttr 0x7fec4586def8 <col:7> Implicit

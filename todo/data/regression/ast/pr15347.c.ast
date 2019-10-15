@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f8f61025ee8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f8f61067a20 <../Data/C2AST/pr15347.c:4:1, col:29> col:13 used link_error 'void (void)' extern
+`-FunctionDecl 0x7f8f61067b50 <line:5:1, line:11:1> line:6:1 main 'int ()'
+  `-CompoundStmt 0x7f8f61067e18 <line:7:1, line:11:1>
+    |-IfStmt 0x7f8f61067da8 <line:8:3, line:9:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8f61067cf0 <line:8:7, col:23> 'int' '=='
+    | | |-BinaryOperator 0x7f8f61067c90 <col:7, col:18> 'char *' '+'
+    | | | |-ImplicitCastExpr 0x7f8f61067c78 <col:7> 'char *' <ArrayToPointerDecay>
+    | | | | `-StringLiteral 0x7f8f61067c28 <col:7> 'char [7]' lvalue "<12ers"
+    | | | `-IntegerLiteral 0x7f8f61067c58 <col:18> 'int' 1
+    | | `-ImplicitCastExpr 0x7f8f61067cd8 <col:23> 'char *' <NullToPointer>
+    | |   `-IntegerLiteral 0x7f8f61067cb8 <col:23> 'int' 0
+    | |-CallExpr 0x7f8f61067d80 <line:9:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7f8f61067d68 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f8f61067d18 <col:5> 'void (void)' Function 0x7f8f61067a20 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f8f61067e00 <line:10:3, col:10>
+      `-IntegerLiteral 0x7f8f61067de0 <col:10> 'int' 0

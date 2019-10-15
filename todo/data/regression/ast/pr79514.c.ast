@@ -1,0 +1,11 @@
+TranslationUnitDecl 0x7fe0d90258e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe0d9814260 <../Data/C2AST/pr79514.c:5:1, col:29> col:13 used bar 'void (long double)' extern
+| `-ParmVarDecl 0x7fe0d9026578 <col:18, col:23> col:29 'long double'
+|-VarDecl 0x7fe0d9814360 <line:7:1, col:20> col:20 used x 'long double' extern
+`-FunctionDecl 0x7fe0d9814480 <line:9:1, line:12:1> line:9:6 foo 'void (void)'
+  `-CompoundStmt 0x7fe0d98145f8 <line:10:1, line:12:1>
+    `-CallExpr 0x7fe0d98145b0 <line:11:3, col:9> 'void'
+      |-ImplicitCastExpr 0x7fe0d9814598 <col:3> 'void (*)(long double)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe0d9814520 <col:3> 'void (long double)' Function 0x7fe0d9814260 'bar' 'void (long double)'
+      `-ImplicitCastExpr 0x7fe0d98145e0 <col:8> 'long double' <LValueToRValue>
+        `-DeclRefExpr 0x7fe0d9814548 <col:8> 'long double' lvalue Var 0x7fe0d9814360 'x' 'long double'

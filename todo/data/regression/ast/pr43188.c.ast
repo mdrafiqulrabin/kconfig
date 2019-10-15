@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fde5882bce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fde59015200 <../Data/C2AST/pr43188.c:1:1, col:40> col:40 used p 'int **'
+| `-AlignedAttr 0x7fde59015260 <col:21, col:35> aligned
+|   `-IntegerLiteral 0x7fde5882c960 <col:33> 'int' 16
+`-FunctionDecl 0x7fde590153b8 <line:3:1, line:6:1> line:3:5 main 'int (void)'
+  `-CompoundStmt 0x7fde59015550 <line:4:1, line:6:1>
+    `-ReturnStmt 0x7fde59015538 <line:5:3, col:12>
+      `-ImplicitCastExpr 0x7fde59015520 <col:10, col:12> 'int' <LValueToRValue>
+        `-UnaryOperator 0x7fde59015500 <col:10, col:12> 'int' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7fde590154e8 <col:11, col:12> 'int *' <LValueToRValue>
+            `-UnaryOperator 0x7fde590154c8 <col:11, col:12> 'int *' lvalue prefix '*'
+              `-ImplicitCastExpr 0x7fde590154b0 <col:12> 'int **' <LValueToRValue>
+                `-DeclRefExpr 0x7fde59015488 <col:12> 'int **' lvalue Var 0x7fde59015200 'p' 'int **'

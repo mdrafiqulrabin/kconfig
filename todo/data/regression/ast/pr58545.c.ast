@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7fa1b98272e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa1b9827f78 <../Data/C2AST/pr58545.c:4:1, col:23> col:23 referenced uint8_t 'unsigned char'
+| `-BuiltinType 0x7fa1b9827440 'unsigned char'
+|-TypedefDecl 0x7fa1bb004000 <line:5:1, col:22> col:22 referenced uint16_t 'unsigned int'
+| `-BuiltinType 0x7fa1b9827480 'unsigned int'
+|-FunctionDecl 0x7fa1bb0041f0 <line:7:1, col:34> col:16 used f1 'uint8_t (const uint8_t *)' extern
+| `-ParmVarDecl 0x7fa1bb0040e8 <col:20, col:33> col:34 'const uint8_t *'
+|-FunctionDecl 0x7fa1bb0044d0 <line:8:1, col:34> col:13 used f2 'void (uint8_t *, uint8_t)' extern
+| |-ParmVarDecl 0x7fa1bb004348 <col:17, col:24> col:25 'uint8_t *'
+| `-ParmVarDecl 0x7fa1bb0043b8 <col:27> col:34 'uint8_t':'unsigned char'
+`-FunctionDecl 0x7fa1bb0047c0 <line:10:1, line:23:1> line:10:6 func 'void (uint16_t, uint8_t *, uint8_t)'
+  |-ParmVarDecl 0x7fa1bb0045b0 <col:12, col:21> col:21 used parameter 'uint16_t':'unsigned int'
+  |-ParmVarDecl 0x7fa1bb004620 <col:32, col:41> col:41 used addr 'uint8_t *'
+  |-ParmVarDecl 0x7fa1bb004690 <col:47, col:55> col:55 used data 'uint8_t':'unsigned char'
+  `-CompoundStmt 0x7fa1bb005090 <line:11:1, line:23:1>
+    |-DeclStmt 0x7fa1bb0048e8 <line:12:4, col:18>
+    | `-VarDecl 0x7fa1bb004888 <col:4, col:12> col:12 used status 'uint8_t':'unsigned char'
+    |-BinaryOperator 0x7fa1bb004a98 <line:14:4, col:25> 'uint8_t':'unsigned char' '='
+    | |-DeclRefExpr 0x7fa1bb004900 <col:4> 'uint8_t':'unsigned char' lvalue Var 0x7fa1bb004888 'status' 'uint8_t':'unsigned char'
+    | `-CallExpr 0x7fa1bb004a50 <col:13, col:25> 'uint8_t':'unsigned char'
+    |   |-ImplicitCastExpr 0x7fa1bb004a38 <col:13> 'uint8_t (*)(const uint8_t *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fa1bb004928 <col:13> 'uint8_t (const uint8_t *)' Function 0x7fa1bb0041f0 'f1' 'uint8_t (const uint8_t *)'
+    |   `-ImplicitCastExpr 0x7fa1bb004a80 <col:17, col:24> 'const uint8_t *' <BitCast>
+    |     `-BinaryOperator 0x7fa1bb0049b0 <col:17, col:24> 'uint8_t *' '+'
+    |       |-ImplicitCastExpr 0x7fa1bb004998 <col:17> 'uint8_t *' <LValueToRValue>
+    |       | `-DeclRefExpr 0x7fa1bb004950 <col:17> 'uint8_t *' lvalue ParmVar 0x7fa1bb004620 'addr' 'uint8_t *'
+    |       `-IntegerLiteral 0x7fa1bb004978 <col:24> 'int' 8
+    |-UnaryOperator 0x7fa1bb004ae8 <line:16:4, col:8> 'uint8_t *' postfix '++'
+    | `-DeclRefExpr 0x7fa1bb004ac0 <col:4> 'uint8_t *' lvalue ParmVar 0x7fa1bb004620 'addr' 'uint8_t *'
+    |-IfStmt 0x7fa1bb004d40 <line:18:4, line:19:15>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fa1bb004c38 <line:18:8, col:29> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fa1bb004c20 <col:8, col:9> 'unsigned int' <IntegralCast>
+    | | | `-ImplicitCastExpr 0x7fa1bb004c08 <col:8, col:9> 'uint8_t':'unsigned char' <LValueToRValue>
+    | | |   `-UnaryOperator 0x7fa1bb004b48 <col:8, col:9> 'uint8_t':'unsigned char' lvalue prefix '*'
+    | | |     `-ImplicitCastExpr 0x7fa1bb004b30 <col:9> 'uint8_t *' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fa1bb004b08 <col:9> 'uint8_t *' lvalue ParmVar 0x7fa1bb004620 'addr' 'uint8_t *'
+    | | `-BinaryOperator 0x7fa1bb004be0 <col:17, col:29> 'unsigned int' '+'
+    | |   |-ImplicitCastExpr 0x7fa1bb004bb0 <col:17> 'uint16_t':'unsigned int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7fa1bb004b68 <col:17> 'uint16_t':'unsigned int' lvalue ParmVar 0x7fa1bb0045b0 'parameter' 'uint16_t':'unsigned int'
+    | |   `-ImplicitCastExpr 0x7fa1bb004bc8 <col:29> 'unsigned int' <IntegralCast>
+    | |     `-IntegerLiteral 0x7fa1bb004b90 <col:29> 'int' 8
+    | |-BinaryOperator 0x7fa1bb004d18 <line:19:7, col:15> 'uint8_t':'unsigned char' '='
+    | | |-UnaryOperator 0x7fa1bb004ca0 <col:7, col:8> 'uint8_t':'unsigned char' lvalue prefix '*'
+    | | | `-ImplicitCastExpr 0x7fa1bb004c88 <col:8> 'uint8_t *' <LValueToRValue>
+    | | |   `-DeclRefExpr 0x7fa1bb004c60 <col:8> 'uint8_t *' lvalue ParmVar 0x7fa1bb004620 'addr' 'uint8_t *'
+    | | `-ImplicitCastExpr 0x7fa1bb004d00 <col:15> 'uint8_t':'unsigned char' <IntegralCast>
+    | |   `-ImplicitCastExpr 0x7fa1bb004ce8 <col:15> 'uint16_t':'unsigned int' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7fa1bb004cc0 <col:15> 'uint16_t':'unsigned int' lvalue ParmVar 0x7fa1bb0045b0 'parameter' 'uint16_t':'unsigned int'
+    | `-<<<NULL>>>
+    |-CallExpr 0x7fa1bb004e60 <line:21:4, col:18> 'void'
+    | |-ImplicitCastExpr 0x7fa1bb004e48 <col:4> 'void (*)(uint8_t *, uint8_t)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fa1bb004d78 <col:4> 'void (uint8_t *, uint8_t)' Function 0x7fa1bb0044d0 'f2' 'void (uint8_t *, uint8_t)'
+    | |-ImplicitCastExpr 0x7fa1bb004e98 <col:8> 'uint8_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fa1bb004da0 <col:8> 'uint8_t *' lvalue ParmVar 0x7fa1bb004620 'addr' 'uint8_t *'
+    | `-ImplicitCastExpr 0x7fa1bb004eb0 <col:14> 'uint8_t':'unsigned char' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fa1bb004dc8 <col:14> 'uint8_t':'unsigned char' lvalue ParmVar 0x7fa1bb004690 'data' 'uint8_t':'unsigned char'
+    `-CallExpr 0x7fa1bb005040 <line:22:4, col:28> 'void'
+      |-ImplicitCastExpr 0x7fa1bb005028 <col:4> 'void (*)(uint8_t *, uint8_t)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fa1bb004ec8 <col:4> 'void (uint8_t *, uint8_t)' Function 0x7fa1bb0044d0 'f2' 'void (uint8_t *, uint8_t)'
+      |-BinaryOperator 0x7fa1bb004f50 <col:8, col:15> 'uint8_t *' '+'
+      | |-ImplicitCastExpr 0x7fa1bb004f38 <col:8> 'uint8_t *' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fa1bb004ef0 <col:8> 'uint8_t *' lvalue ParmVar 0x7fa1bb004620 'addr' 'uint8_t *'
+      | `-IntegerLiteral 0x7fa1bb004f18 <col:15> 'int' 8
+      `-ImplicitCastExpr 0x7fa1bb005078 <col:18, col:27> 'uint8_t':'unsigned char' <IntegralCast>
+        `-BinaryOperator 0x7fa1bb005000 <col:18, col:27> 'int' '+'
+          |-ImplicitCastExpr 0x7fa1bb004fd8 <col:18> 'int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7fa1bb004fc0 <col:18> 'uint8_t':'unsigned char' <LValueToRValue>
+          |   `-DeclRefExpr 0x7fa1bb004f78 <col:18> 'uint8_t':'unsigned char' lvalue Var 0x7fa1bb004888 'status' 'uint8_t':'unsigned char'
+          `-IntegerLiteral 0x7fa1bb004fa0 <col:27> 'int' 1

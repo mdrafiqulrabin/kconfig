@@ -1,0 +1,72 @@
+../Data/C2AST/pr34457-1.c:18:26: error: fields must have a constant size: 'variable length array in structure' extension will never be supported
+  struct s { int a; char b[argc]; };
+                         ^
+../Data/C2AST/pr34457-1.c:19:27: error: function definition is not allowed here
+  int nested (struct s x) { return x.a + sizeof(x); }
+                          ^
+../Data/C2AST/pr34457-1.c:23:23: error: use of undeclared identifier 'nested'
+  printf("%d\n", bar (nested, argc, &t));
+                      ^
+TranslationUnitDecl 0x7fb4888114e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fb488811a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fb488811780 '__int128'
+|-TypedefDecl 0x7fb488811ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fb4888117a0 'unsigned __int128'
+|-TypedefDecl 0x7fb488811da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fb488811bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fb488811b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fb488811e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fb488811e00 'char *'
+|   `-BuiltinType 0x7fb488811580 'char'
+|-TypedefDecl 0x7fb488812108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fb4888120b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fb488811f20 'struct __va_list_tag'
+|     `-Record 0x7fb488811e98 '__va_list_tag'
+|-TypedefDecl 0x7fb488812178 <../Data/C2AST/pr34457-1.c:9:1, col:23> col:23 referenced size_t 'unsigned long'
+| `-BuiltinType 0x7fb4888116a0 'unsigned long'
+|-FunctionDecl 0x7fb4888530c8 <line:10:12> col:12 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb488853168 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x7fb4888531d0 <col:12> Implicit printf 1 2
+|-FunctionDecl 0x7fb488853228 prev 0x7fb4888530c8 <col:1, col:37> col:12 used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x7fb488853000 <col:20, col:31> col:32 'const char *'
+| `-FormatAttr 0x7fb488853308 <col:12> Inherited printf 1 2
+|-FunctionDecl 0x7fb488853588 <line:11:14> col:14 implicit used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fb488853628 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fb488853688 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x7fb4888536e8 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x7fb488853760 prev 0x7fb488853588 <col:1, col:41> col:14 used memset 'void *(void *, int, unsigned long)' extern
+| |-ParmVarDecl 0x7fb488853340 <col:22, col:27> col:28 'void *'
+| |-ParmVarDecl 0x7fb4888533b8 <col:30> col:33 'int'
+| `-ParmVarDecl 0x7fb488853450 <col:35> col:41 'size_t':'unsigned long'
+|-FunctionDecl 0x7fb488853b38 <line:13:1, col:39> col:5 used bar 'int (int (*)(), int, void *)'
+| |-ParmVarDecl 0x7fb488853910 <col:10, col:19> col:16 p 'int (*)()'
+| |-ParmVarDecl 0x7fb488853988 <col:22, col:26> col:26 q 'int'
+| |-ParmVarDecl 0x7fb488853a00 <col:29, col:35> col:35 r 'void *'
+| `-CompoundStmt 0x7fb488853c30 <col:38, col:39>
+`-FunctionDecl 0x7fb488853dd8 <line:15:1, line:25:1> line:16:1 main 'int (int, char **)'
+  |-ParmVarDecl 0x7fb488853c58 <col:6, col:10> col:10 used argc 'int'
+  |-ParmVarDecl 0x7fb488853d00 <col:16, col:23> col:23 argv 'char **'
+  `-CompoundStmt 0x7fb4888546e8 <line:17:1, line:25:1>
+    |-DeclStmt 0x7fb4888540a0 <line:18:3, col:36>
+    | `-RecordDecl 0x7fb488853e88 <col:3, col:35> col:10 invalid struct s definition
+    |   |-FieldDecl 0x7fb488853f48 <col:14, col:18> col:18 referenced a 'int'
+    |   `-FieldDecl 0x7fb488854058 <col:21, col:32> col:26 invalid b 'char [argc]'
+    |-DeclStmt 0x7fb4888541f0 <line:20:3, col:13>
+    | `-VarDecl 0x7fb488854190 <col:3, col:12> col:12 used t 'struct s':'struct s'
+    |-CallExpr 0x7fb4888543a0 <line:21:3, col:27> 'void *'
+    | |-ImplicitCastExpr 0x7fb488854388 <col:3> 'void *(*)(void *, int, unsigned long)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fb488854208 <col:3> 'void *(void *, int, unsigned long)' Function 0x7fb488853760 'memset' 'void *(void *, int, unsigned long)'
+    | |-ImplicitCastExpr 0x7fb4888543e0 <col:11, col:12> 'void *' <BitCast>
+    | | `-UnaryOperator 0x7fb4888542b8 <col:11, col:12> 'struct s *' prefix '&'
+    | |   `-DeclRefExpr 0x7fb488854230 <col:12> 'struct s':'struct s' lvalue Var 0x7fb488854190 't' 'struct s':'struct s'
+    | |-IntegerLiteral 0x7fb4888542d8 <col:15> 'int' 0
+    | `-UnaryExprOrTypeTraitExp3 errors generated.
+r 0x7fb488854340 <col:18, col:26> 'unsigned long' sizeof
+    |   `-ParenExpr 0x7fb488854320 <col:24, col:26> 'struct s':'struct s' lvalue
+    |     `-DeclRefExpr 0x7fb4888542f8 <col:25> 'struct s':'struct s' lvalue Var 0x7fb488854190 't' 'struct s':'struct s'
+    |-BinaryOperator 0x7fb488854478 <line:22:3, col:9> 'int' '='
+    | |-MemberExpr 0x7fb488854420 <col:3, col:5> 'int' lvalue .a 0x7fb488853f48
+    | | `-DeclRefExpr 0x7fb4888543f8 <col:3> 'struct s':'struct s' lvalue Var 0x7fb488854190 't' 'struct s':'struct s'
+    | `-IntegerLiteral 0x7fb488854458 <col:9> 'int' 123
+    `-ReturnStmt 0x7fb4888546d0 <line:24:3, col:10>
+      `-IntegerLiteral 0x7fb4888546b0 <col:10> 'int' 0

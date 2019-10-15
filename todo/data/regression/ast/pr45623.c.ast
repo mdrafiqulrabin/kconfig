@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x7fe35d8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe35e00c190 <../Data/C2AST/pr45623.c:6:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe35e00c230 prev 0x7fe35e00c190 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fe35e00c2e8 <line:8:1, col:12> col:7 used s1 'char *' cinit
+| `-ImplicitCastExpr 0x7fe35e00c3f8 <col:12> 'char *' <ArrayToPointerDecay>
+|   `-StringLiteral 0x7fe35e00c3c8 <col:12> 'char [4]' lvalue "foo"
+|-VarDecl 0x7fe35e00c428 <line:9:1, col:12> col:7 used s2 'char *' cinit
+| `-ImplicitCastExpr 0x7fe35e00c4b8 <col:12> 'char *' <ArrayToPointerDecay>
+|   `-StringLiteral 0x7fe35e00c488 <col:12> 'char [4]' lvalue "bar"
+|-VarDecl 0x7fe35e00c510 <line:11:1, col:15> col:8 used ss1 'char **' cinit
+| `-UnaryOperator 0x7fe35e00c598 <col:14, col:15> 'char **' prefix '&'
+|   `-DeclRefExpr 0x7fe35e00c570 <col:15> 'char *' lvalue Var 0x7fe35e00c2e8 's1' 'char *'
+|-RecordDecl 0x7fe35e00c5b8 <line:13:9, line:17:1> line:13:15 union jsval_layout definition
+| |-FieldDecl 0x7fe35e00c670 <line:15:5, col:14> col:14 referenced asBits 'uint64_t':'unsigned long long'
+| `-FieldDecl 0x7fe35e00c6d0 <line:16:5, col:12> col:12 referenced ptr 'char **'
+|-TypedefDecl 0x7fe35e00c770 <line:13:1, line:17:3> col:3 referenced jsval_layout 'union jsval_layout':'union jsval_layout'
+| `-ElaboratedType 0x7fe35e00c720 'union jsval_layout' sugar
+|   `-RecordType 0x7fe35e00c640 'union jsval_layout'
+|     `-Record 0x7fe35e00c5b8 'jsval_layout'
+`-FunctionDecl 0x7fe35e00c830 <line:19:1, line:29:1> line:19:5 main 'int ()'
+  `-CompoundStmt 0x7fe35e8037c8 <line:20:1, line:29:1>
+    |-DeclStmt 0x7fe35e00c9e8 <line:21:3, col:20>
+    | |-VarDecl 0x7fe35e00c900 <col:3, col:16> col:16 used l 'jsval_layout':'union jsval_layout'
+    | `-VarDecl 0x7fe35e00c970 <col:3, col:19> col:19 used m 'jsval_layout':'union jsval_layout'
+    |-BinaryOperator 0x7fe35e00caa0 <line:22:3, col:11> 'char **' '='
+    | |-MemberExpr 0x7fe35e00ca28 <col:3, col:5> 'char **' lvalue .ptr 0x7fe35e00c6d0
+    | | `-DeclRefExpr 0x7fe35e00ca00 <col:3> 'jsval_layout':'union jsval_layout' lvalue Var 0x7fe35e00c900 'l' 'jsval_layout':'union jsval_layout'
+    | `-ImplicitCastExpr 0x7fe35e00ca88 <col:11> 'char **' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe35e00ca60 <col:11> 'char **' lvalue Var 0x7fe35e00c510 'ss1' 'char **'
+    |-BinaryOperator 0x7fe35e00cba0 <line:23:3, col:16> 'uint64_t':'unsigned long long' '='
+    | |-MemberExpr 0x7fe35e00caf0 <col:3, col:5> 'uint64_t':'unsigned long long' lvalue .asBits 0x7fe35e00c670
+    | | `-DeclRefExpr 0x7fe35e00cac8 <col:3> 'jsval_layout':'union jsval_layout' lvalue Var 0x7fe35e00c970 'm' 'jsval_layout':'union jsval_layout'
+    | `-ImplicitCastExpr 0x7fe35e00cb88 <col:14, col:16> 'uint64_t':'unsigned long long' <LValueToRValue>
+    |   `-MemberExpr 0x7fe35e00cb50 <col:14, col:16> 'uint64_t':'unsigned long long' lvalue .asBits 0x7fe35e00c670
+    |     `-DeclRefExpr 0x7fe35e00cb28 <col:14> 'jsval_layout':'union jsval_layout' lvalue Var 0x7fe35e00c900 'l' 'jsval_layout':'union jsval_layout'
+    |-DeclStmt 0x7fe35e803540 <line:24:3, col:23>
+    | `-VarDecl 0x7fe35e803468 <col:3, col:20> col:11 used data 'char **' cinit
+    |   `-ImplicitCastExpr 0x7fe35e803528 <col:18, col:20> 'char **' <LValueToRValue>
+    |     `-MemberExpr 0x7fe35e8034f0 <col:18, col:20> 'char **' lvalue .ptr 0x7fe35e00c6d0
+    |       `-DeclRefExpr 0x7fe35e8034c8 <col:18> 'jsval_layout':'union jsval_layout' lvalue Var 0x7fe35e00c970 'm' 'jsval_layout':'union jsval_layout'
+    |-BinaryOperator 0x7fe35e8035f8 <line:25:3, col:11> 'char *' '='
+    | |-UnaryOperator 0x7fe35e803598 <col:3, col:4> 'char *' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fe35e803580 <col:4> 'char **' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe35e803558 <col:4> 'char **' lvalue Var 0x7fe35e803468 'data' 'char **'
+    | `-ImplicitCastExpr 0x7fe35e8035e0 <col:11> 'char *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fe35e8035b8 <col:11> 'char *' lvalue Var 0x7fe35e00c428 's2' 'char *'
+    |-IfStmt 0x7fe35e803758 <line:26:3, line:27:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe35e8036a0 <line:26:7, col:13> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe35e803670 <col:7> 'char *' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fe35e803620 <col:7> 'char *' lvalue Var 0x7fe35e00c2e8 's1' 'char *'
+    | | `-ImplicitCastExpr 0x7fe35e803688 <col:13> 'char *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fe35e803648 <col:13> 'char *' lvalue Var 0x7fe35e00c428 's2' 'char *'
+    | |-CallExpr 0x7fe35e803730 <line:27:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe35e803718 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe35e8036c8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe35e00c230 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe35e8037b0 <line:28:3, col:10>
+      `-IntegerLiteral 0x7fe35e803790 <col:10> 'int' 0

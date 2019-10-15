@@ -1,0 +1,6 @@
+TranslationUnitDecl 0x7fcec882ace8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fcec901b400 <../Data/C2AST/pr83594.c:1:1, line:5:1> line:2:6 referenced foo 'void ()'
+  `-CompoundStmt 0x7fcec901b578 <line:3:1, line:5:1>
+    `-CallExpr 0x7fcec901b550 <line:4:3, col:8> 'void'
+      `-ImplicitCastExpr 0x7fcec901b538 <col:3> 'void (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fcec901b4e0 <col:3> 'void ()' Function 0x7fcec901b400 'foo' 'void ()'

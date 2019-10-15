@@ -1,0 +1,52 @@
+../Data/C2AST/pr83370.c:9:24: error: unknown register name 'x16' in asm
+  register fun x2 asm ("x16");
+                       ^
+1 error generated.
+TranslationUnitDecl 0x7f991402bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f991402c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f991402bf80 '__int128'
+|-TypedefDecl 0x7f991402c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f991402bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f991402c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f991402c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f991402c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f991402c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f991402c600 'char *'
+|   `-BuiltinType 0x7f991402bd80 'char'
+|-TypedefDecl 0x7f991402c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f991402c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f991402c720 'struct __va_list_tag'
+|     `-Record 0x7f991402c698 '__va_list_tag'
+|-TypedefDecl 0x7f991406d8b8 <../Data/C2AST/pr83370.c:4:1, col:26> col:16 referenced fun 'void (*)(void)'
+| `-PointerType 0x7f991406d860 'void (*)(void)'
+|   `-ParenType 0x7f991406d800 'void (void)' sugar
+|     `-FunctionProtoType 0x7f991402c9d0 'void (void)' cdecl
+|       `-BuiltinType 0x7f991402bd40 'void'
+|-FunctionDecl 0x7f991406da40 <line:6:1, line:14:1> line:7:1 used f 'void (fun)'
+| |-ParmVarDecl 0x7f991406d940 <col:4, col:8> col:8 used x1 'fun':'void (*)(void)'
+| `-CompoundStmt 0x7f991406e108 <line:8:1, line:14:1>
+|   |-DeclStmt 0x7f991406dc60 <line:9:3, col:30>
+|   | `-VarDecl 0x7f991406dba8 <col:3, col:16> col:16 used x2 'fun':'void (*)(void)' register
+|   |   `-AsmLabelAttr 0x7f991406dc08 <col:24> "x16"
+|   |-DeclStmt 0x7f991406dd60 <line:10:3, col:16>
+|   | `-VarDecl 0x7f991406dd00 <col:3, col:15> col:7 used arr 'int [5000]'
+|   |-DeclStmt 0x7f991406de60 <line:11:3, col:26>
+|   | `-VarDecl 0x7f991406ddc0 <col:3, col:23> col:17 ptr 'int *volatile' cinit
+|   |   `-ImplicitCastExpr 0x7f991406de48 <col:23> 'int *' <ArrayToPointerDecay>
+|   |     `-DeclRefExpr 0x7f991406de20 <col:23> 'int [5000]' lvalue Var 0x7f991406dd00 'arr' 'int [5000]'
+|   |-GCCAsmStmt 0x7f991406e028 <line:12:3, col:43>
+|   | |-DeclRefExpr 0x7f991406df58 <col:29> 'fun':'void (*)(void)' lvalue Var 0x7f991406dba8 'x2' 'fun':'void (*)(void)'
+|   | `-ImplicitCastExpr 0x7f991406e010 <col:40> 'fun':'void (*)(void)' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7f991406dfe8 <col:40> 'fun':'void (*)(void)' lvalue ParmVar 0x7f991406d940 'x1' 'fun':'void (*)(void)'
+|   `-CallExpr 0x7f991406e0e0 <line:13:3, col:7> 'void'
+|     `-ImplicitCastExpr 0x7f991406e0c8 <col:3> 'fun':'void (*)(void)' <LValueToRValue>
+|       `-DeclRefExpr 0x7f991406e0a0 <col:3> 'fun':'void (*)(void)' lvalue Var 0x7f991406dba8 'x2' 'fun':'void (*)(void)'
+|-FunctionDecl 0x7f991406e1d0 <line:16:1, col:16> col:6 used g 'void (void)'
+| `-CompoundStmt 0x7f991406e270 <col:15, col:16>
+`-FunctionDecl 0x7f991406e348 <line:18:1, line:22:1> line:19:1 main 'int (void)'
+  `-CompoundStmt 0x7f991406e528 <line:20:1, line:22:1>
+    `-CallExpr 0x7f991406e4e0 <line:21:3, col:7> 'void'
+      |-ImplicitCastExpr 0x7f991406e4c8 <col:3> 'void (*)(fun)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f991406e418 <col:3> 'void (fun)' Function 0x7f991406da40 'f' 'void (fun)'
+      `-ImplicitCastExpr 0x7f991406e510 <col:6> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f991406e440 <col:6> 'void (void)' Function 0x7f991406e1d0 'g' 'void (void)'

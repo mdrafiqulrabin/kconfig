@@ -1,0 +1,41 @@
+TranslationUnitDecl 0x7fb2d782bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb2d782c960 <../Data/C2AST/pr59401-1.c:7:9, line:10:1> line:7:9 struct definition
+| |-FieldDecl 0x7fb2d8014238 <line:9:3, col:7> col:7 referenced x 'int'
+| |-FieldDecl 0x7fb2d8014298 <col:3, col:10> col:10 y 'int'
+| |-FieldDecl 0x7fb2d80142f8 <col:3, col:13> col:13 z 'int'
+| `-FieldDecl 0x7fb2d8014358 <col:3, col:16> col:16 referenced w 'int'
+|-TypedefDecl 0x7fb2d80143f0 <line:7:1, line:10:3> col:3 referenced tcb_t 'struct tcb_t':'tcb_t'
+| `-ElaboratedType 0x7fb2d80143a0 'struct tcb_t' sugar
+|   `-RecordType 0x7fb2d8014200 'tcb_t'
+|     `-Record 0x7fb2d782c960 ''
+|-FunctionDecl 0x7fb2d8014688 <line:12:1, line:17:1> line:13:1 test_00 'int (int, tcb_t *)'
+| |-ParmVarDecl 0x7fb2d8014478 <col:10, col:14> col:14 used a 'int'
+| |-ParmVarDecl 0x7fb2d8014568 <col:17, col:24> col:24 used b 'tcb_t *'
+| `-CompoundStmt 0x7fb2d8014d28 <line:14:1, line:17:1>
+|   |-DeclStmt 0x7fb2d8014bb0 <line:15:3, col:65>
+|   | `-VarDecl 0x7fb2d8014788 <col:3, col:64> col:10 used tcb 'tcb_t *' cinit
+|   |   `-ConditionalOperator 0x7fb2d8014b80 <col:16, col:64> 'tcb_t *'
+|   |     |-ParenExpr 0x7fb2d8014870 <col:16, col:22> 'int'
+|   |     | `-BinaryOperator 0x7fb2d8014848 <col:17, col:21> 'int' '&'
+|   |     |   |-ImplicitCastExpr 0x7fb2d8014830 <col:17> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fb2d80147e8 <col:17> 'int' lvalue ParmVar 0x7fb2d8014478 'a' 'int'
+|   |     |   `-IntegerLiteral 0x7fb2d8014810 <col:21> 'int' 5
+|   |     |-CStyleCastExpr 0x7fb2d8014a58 <col:26, col:60> 'tcb_t *' <BitCast>
+|   |     | `-CallExpr 0x7fb2d8014a20 <col:34, col:60> 'void *'
+|   |     |   `-ImplicitCastExpr 0x7fb2d8014a08 <col:34> 'void *(*)(void)' <BuiltinFnToFnPtr>
+|   |     |     `-DeclRefExpr 0x7fb2d80149b8 <col:34> '<builtin fn type>' Function 0x7fb2d80148c0 '__builtin_thread_pointer' 'void *(void)'
+|   |     `-ImplicitCastExpr 0x7fb2d8014aa8 <col:64> 'tcb_t *' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fb2d8014a80 <col:64> 'tcb_t *' lvalue ParmVar 0x7fb2d8014568 'b' 'tcb_t *'
+|   `-ReturnStmt 0x7fb2d8014d10 <line:16:3, col:24>
+|     `-BinaryOperator 0x7fb2d8014ce8 <col:10, col:24> 'int' '+'
+|       |-ImplicitCastExpr 0x7fb2d8014cb8 <col:10, col:15> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x7fb2d8014c08 <col:10, col:15> 'int' lvalue ->w 0x7fb2d8014358
+|       |   `-ImplicitCastExpr 0x7fb2d8014bf0 <col:10> 'tcb_t *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x7fb2d8014bc8 <col:10> 'tcb_t *' lvalue Var 0x7fb2d8014788 'tcb' 'tcb_t *'
+|       `-ImplicitCastExpr 0x7fb2d8014cd0 <col:19, col:24> 'int' <LValueToRValue>
+|         `-MemberExpr 0x7fb2d8014c80 <col:19, col:24> 'int' lvalue ->x 0x7fb2d8014238
+|           `-ImplicitCastExpr 0x7fb2d8014c68 <col:19> 'tcb_t *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fb2d8014c40 <col:19> 'tcb_t *' lvalue Var 0x7fb2d8014788 'tcb' 'tcb_t *'
+`-FunctionDecl 0x7fb2d80148c0 <line:15:34> col:34 implicit used __builtin_thread_pointer 'void *(void)' extern
+  |-NoThrowAttr 0x7fb2d8014960 <col:34> Implicit
+  `-ConstAttr 0x7fb2d80149a8 <col:34> Implicit

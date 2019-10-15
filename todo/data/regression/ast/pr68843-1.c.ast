@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f85ad8226e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f85ae814800 <../Data/C2AST/pr68843-1.c:4:1, line:12:1> line:5:1 test 'double ()'
+  `-CompoundStmt 0x7f85ae814c08 <line:6:1, line:12:1>
+    |-DeclStmt 0x7f85ae814978 <line:7:3, col:17>
+    | `-VarDecl 0x7f85ae8148f8 <col:3, col:14> col:10 used x 'double' cinit
+    |   `-FloatingLiteral 0x7f85ae814958 <col:14> 'double' 1.000000e+00
+    |-GCCAsmStmt 0x7f85ae814b38 <line:8:3, line:10:17>
+    | |-DeclRefExpr 0x7f85ae814a68 <line:9:17> 'double' lvalue Var 0x7f85ae8148f8 'x' 'double'
+    | `-ImplicitCastExpr 0x7f85ae814b20 <line:10:15> 'double' <LValueToRValue>
+    |   `-DeclRefExpr 0x7f85ae814af8 <col:15> 'double' lvalue Var 0x7f85ae8148f8 'x' 'double'
+    `-ReturnStmt 0x7f85ae814bf0 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f85ae814bd8 <col:10> 'double' <LValueToRValue>
+        `-DeclRefExpr 0x7f85ae814bb0 <col:10> 'double' lvalue Var 0x7f85ae8148f8 'x' 'double'

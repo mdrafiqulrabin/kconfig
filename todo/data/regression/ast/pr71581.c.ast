@@ -1,0 +1,25 @@
+TranslationUnitDecl 0x7f9ed98166e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9eda010220 <../Data/C2AST/pr71581.c:5:1, line:10:1> line:6:1 f1 '_Complex float (void)'
+| `-CompoundStmt 0x7f9eda010400 <line:7:1, line:10:1>
+|   |-DeclStmt 0x7f9eda010378 <line:8:3, col:10>
+|   | `-VarDecl 0x7f9eda010318 <col:3, col:9> col:9 used x 'float'
+|   `-ReturnStmt 0x7f9eda0103e8 <line:9:3, col:10>
+|     `-ImplicitCastExpr 0x7f9eda0103d0 <col:10> '_Complex float' <FloatingRealToComplex>
+|       `-ImplicitCastExpr 0x7f9eda0103b8 <col:10> 'float' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9eda010390 <col:10> 'float' lvalue Var 0x7f9eda010318 'x' 'float'
+|-FunctionDecl 0x7f9eda0104e0 <line:12:1, line:17:1> line:13:1 f2 '_Complex double (void)'
+| `-CompoundStmt 0x7f9eda010680 <line:14:1, line:17:1>
+|   |-DeclStmt 0x7f9eda0105f8 <line:15:3, col:11>
+|   | `-VarDecl 0x7f9eda010598 <col:3, col:10> col:10 used x 'double'
+|   `-ReturnStmt 0x7f9eda010668 <line:16:3, col:10>
+|     `-ImplicitCastExpr 0x7f9eda010650 <col:10> '_Complex double' <FloatingRealToComplex>
+|       `-ImplicitCastExpr 0x7f9eda010638 <col:10> 'double' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9eda010610 <col:10> 'double' lvalue Var 0x7f9eda010598 'x' 'double'
+`-FunctionDecl 0x7f9eda010790 <line:19:1, line:24:1> line:20:1 f3 '_Complex int (void)'
+  `-CompoundStmt 0x7f9eda010930 <line:21:1, line:24:1>
+    |-DeclStmt 0x7f9eda0108a8 <line:22:3, col:8>
+    | `-VarDecl 0x7f9eda010848 <col:3, col:7> col:7 used x 'int'
+    `-ReturnStmt 0x7f9eda010918 <line:23:3, col:10>
+      `-ImplicitCastExpr 0x7f9eda010900 <col:10> '_Complex int' <IntegralRealToComplex>
+        `-ImplicitCastExpr 0x7f9eda0108e8 <col:10> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f9eda0108c0 <col:10> 'int' lvalue Var 0x7f9eda010848 'x' 'int'

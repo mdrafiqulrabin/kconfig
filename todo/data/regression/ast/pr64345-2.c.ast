@@ -1,0 +1,582 @@
+TranslationUnitDecl 0x7fc4c50174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc4c5018160 <../Data/C2AST/pr64345-2.c:37:9, line:71:1> line:37:9 struct definition
+| |-FieldDecl 0x7fc4c4829258 <line:39:3, col:22> col:16 referenced b31 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829220 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48292d8 <line:40:3, col:22> col:16 referenced b30 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48292a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829358 <line:41:3, col:22> col:16 referenced b29 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829320 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48293d8 <line:42:3, col:22> col:16 referenced b28 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48293a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829458 <line:43:3, col:22> col:16 referenced b27 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829420 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48294d8 <line:44:3, col:22> col:16 referenced b26 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48294a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829558 <line:45:3, col:22> col:16 referenced b25 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829520 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48295d8 <line:46:3, col:22> col:16 referenced b24 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48295a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829658 <line:47:3, col:22> col:16 referenced b23 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829620 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48296d8 <line:48:3, col:22> col:16 referenced b22 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48296a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829758 <line:49:3, col:22> col:16 referenced b21 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829720 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48297d8 <line:50:3, col:22> col:16 referenced b20 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48297a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829858 <line:51:3, col:22> col:16 referenced b19 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829820 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48298d8 <line:52:3, col:22> col:16 referenced b18 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48298a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829958 <line:53:3, col:22> col:16 referenced b17 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829920 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c48299d8 <line:54:3, col:22> col:16 referenced b16 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c48299a0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829a58 <line:55:3, col:22> col:16 referenced b15 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829a20 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829ad8 <line:56:3, col:22> col:16 referenced b14 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829aa0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829b58 <line:57:3, col:22> col:16 referenced b13 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829b20 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829bd8 <line:58:3, col:22> col:16 referenced b12 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829ba0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829c58 <line:59:3, col:22> col:16 referenced b11 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829c20 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829cd8 <line:60:3, col:22> col:16 referenced b10 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829ca0 <col:22> 'int' 1
+| |-FieldDecl 0x7fc4c4829d58 <line:61:3, col:21> col:16 referenced b9 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829d20 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c4829dd8 <line:62:3, col:21> col:16 referenced b8 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829da0 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c4829e58 <line:63:3, col:21> col:16 referenced b7 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829e20 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c4829ed8 <line:64:3, col:21> col:16 referenced b6 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829ea0 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c4829f58 <line:65:3, col:21> col:16 referenced b5 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829f20 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c4829fd8 <line:66:3, col:21> col:16 referenced b4 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c4829fa0 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c482a058 <line:67:3, col:21> col:16 referenced b3 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c482a020 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c482a0d8 <line:68:3, col:21> col:16 referenced b2 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c482a0a0 <col:21> 'int' 1
+| |-FieldDecl 0x7fc4c482a158 <line:69:3, col:21> col:16 referenced b1 'unsigned int'
+| | `-IntegerLiteral 0x7fc4c482a120 <col:21> 'int' 1
+| `-FieldDecl 0x7fc4c482a200 <line:70:3, col:21> col:16 referenced b0 'unsigned int'
+|   `-IntegerLiteral 0x7fc4c482a1a0 <col:21> 'int' 1
+|-TypedefDecl 0x7fc4c482a2a0 <line:37:1, line:71:3> col:3 referenced S 'struct S':'S'
+| `-ElaboratedType 0x7fc4c482a250 'struct S' sugar
+|   `-RecordType 0x7fc4c4829200 'S'
+|     `-Record 0x7fc4c5018160 ''
+|-FunctionDecl 0x7fc4c482a448 <line:74:3, line:77:3> <scratch space>:3:1 test_b0_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482a340 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c482a5c0 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c482a5a8 <line:76:5, <scratch space>:4:1>
+|     `-ImplicitCastExpr 0x7fc4c482a590 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:4:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c482a558 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:4:1> 'unsigned int' lvalue bitfield .b0 0x7fc4c482a200
+|         `-DeclRefExpr 0x7fc4c482a530 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c482a340 's' 'S':'S'
+|-FunctionDecl 0x7fc4c482a678 <line:78:3, line:81:3> <scratch space>:6:1 test_b0_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482a5e8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c482a928 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c482a910 <line:80:5, <scratch space>:7:1>
+|     `-ImplicitCastExpr 0x7fc4c482a7b8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:7:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c482a798 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:7:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c482a780 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:7:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c482a748 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:7:1> 'unsigned int' lvalue bitfield .b0 0x7fc4c482a200
+|             `-DeclRefExpr 0x7fc4c482a720 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c482a5e8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c482a9e0 <line:74:3, line:77:3> <scratch space>:9:1 test_b1_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482a950 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c482ab18 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c482ab00 <line:76:5, <scratch space>:10:1>
+|     `-ImplicitCastExpr 0x7fc4c482aae8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:10:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c482aab0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:10:1> 'unsigned int' lvalue bitfield .b1 0x7fc4c482a158
+|         `-DeclRefExpr 0x7fc4c482aa88 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c482a950 's' 'S':'S'
+|-FunctionDecl 0x7fc4c482abd0 <line:78:3, line:81:3> <scratch space>:12:1 test_b1_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482ab40 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c482ad40 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c482ad28 <line:80:5, <scratch space>:13:1>
+|     `-ImplicitCastExpr 0x7fc4c482ad10 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:13:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c482acf0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:13:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c482acd8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:13:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c482aca0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:13:1> 'unsigned int' lvalue bitfield .b1 0x7fc4c482a158
+|             `-DeclRefExpr 0x7fc4c482ac78 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c482ab40 's' 'S':'S'
+|-FunctionDecl 0x7fc4c482adf8 <line:74:3, line:77:3> <scratch space>:15:1 test_b2_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482ad68 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c482af30 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c482af18 <line:76:5, <scratch space>:16:1>
+|     `-ImplicitCastExpr 0x7fc4c482af00 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:16:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c482aec8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:16:1> 'unsigned int' lvalue bitfield .b2 0x7fc4c482a0d8
+|         `-DeclRefExpr 0x7fc4c482aea0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c482ad68 's' 'S':'S'
+|-FunctionDecl 0x7fc4c482afe8 <line:78:3, line:81:3> <scratch space>:18:1 test_b2_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482af58 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c482b158 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c482b140 <line:80:5, <scratch space>:19:1>
+|     `-ImplicitCastExpr 0x7fc4c482b128 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:19:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c482b108 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:19:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c482b0f0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:19:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c482b0b8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:19:1> 'unsigned int' lvalue bitfield .b2 0x7fc4c482a0d8
+|             `-DeclRefExpr 0x7fc4c482b090 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c482af58 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4842830 <line:74:3, line:77:3> <scratch space>:21:1 test_b3_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c482b180 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4842968 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4842950 <line:76:5, <scratch space>:22:1>
+|     `-ImplicitCastExpr 0x7fc4c4842938 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:22:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4842900 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:22:1> 'unsigned int' lvalue bitfield .b3 0x7fc4c482a058
+|         `-DeclRefExpr 0x7fc4c48428d8 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c482b180 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4842a20 <line:78:3, line:81:3> <scratch space>:24:1 test_b3_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4842990 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4842b90 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4842b78 <line:80:5, <scratch space>:25:1>
+|     `-ImplicitCastExpr 0x7fc4c4842b60 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:25:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4842b40 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:25:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4842b28 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:25:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4842af0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:25:1> 'unsigned int' lvalue bitfield .b3 0x7fc4c482a058
+|             `-DeclRefExpr 0x7fc4c4842ac8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4842990 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4842c48 <line:74:3, line:77:3> <scratch space>:27:1 test_b4_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4842bb8 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4842d80 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4842d68 <line:76:5, <scratch space>:28:1>
+|     `-ImplicitCastExpr 0x7fc4c4842d50 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:28:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4842d18 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:28:1> 'unsigned int' lvalue bitfield .b4 0x7fc4c4829fd8
+|         `-DeclRefExpr 0x7fc4c4842cf0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4842bb8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4842e38 <line:78:3, line:81:3> <scratch space>:30:1 test_b4_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4842da8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4842fa8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4842f90 <line:80:5, <scratch space>:31:1>
+|     `-ImplicitCastExpr 0x7fc4c4842f78 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:31:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4842f58 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:31:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4842f40 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:31:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4842f08 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:31:1> 'unsigned int' lvalue bitfield .b4 0x7fc4c4829fd8
+|             `-DeclRefExpr 0x7fc4c4842ee0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4842da8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4843060 <line:74:3, line:77:3> <scratch space>:33:1 test_b5_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4842fd0 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4843198 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4843180 <line:76:5, <scratch space>:34:1>
+|     `-ImplicitCastExpr 0x7fc4c4843168 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:34:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4843130 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:34:1> 'unsigned int' lvalue bitfield .b5 0x7fc4c4829f58
+|         `-DeclRefExpr 0x7fc4c4843108 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4842fd0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4843250 <line:78:3, line:81:3> <scratch space>:36:1 test_b5_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48431c0 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48433c0 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c48433a8 <line:80:5, <scratch space>:37:1>
+|     `-ImplicitCastExpr 0x7fc4c4843390 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:37:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4843370 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:37:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4843358 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:37:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4843320 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:37:1> 'unsigned int' lvalue bitfield .b5 0x7fc4c4829f58
+|             `-DeclRefExpr 0x7fc4c48432f8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c48431c0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4843478 <line:74:3, line:77:3> <scratch space>:39:1 test_b6_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48433e8 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48435b0 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4843598 <line:76:5, <scratch space>:40:1>
+|     `-ImplicitCastExpr 0x7fc4c4843580 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:40:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4843548 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:40:1> 'unsigned int' lvalue bitfield .b6 0x7fc4c4829ed8
+|         `-DeclRefExpr 0x7fc4c4843520 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c48433e8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4843668 <line:78:3, line:81:3> <scratch space>:42:1 test_b6_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48435d8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48437d8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c48437c0 <line:80:5, <scratch space>:43:1>
+|     `-ImplicitCastExpr 0x7fc4c48437a8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:43:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4843788 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:43:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4843770 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:43:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4843738 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:43:1> 'unsigned int' lvalue bitfield .b6 0x7fc4c4829ed8
+|             `-DeclRefExpr 0x7fc4c4843710 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c48435d8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4844490 <line:74:3, line:77:3> <scratch space>:45:1 test_b7_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4844400 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48445c8 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c48445b0 <line:76:5, <scratch space>:46:1>
+|     `-ImplicitCastExpr 0x7fc4c4844598 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:46:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4844560 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:46:1> 'unsigned int' lvalue bitfield .b7 0x7fc4c4829e58
+|         `-DeclRefExpr 0x7fc4c4844538 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4844400 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4844680 <line:78:3, line:81:3> <scratch space>:48:1 test_b7_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48445f0 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48447f0 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c48447d8 <line:80:5, <scratch space>:49:1>
+|     `-ImplicitCastExpr 0x7fc4c48447c0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:49:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c48447a0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:49:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4844788 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:49:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4844750 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:49:1> 'unsigned int' lvalue bitfield .b7 0x7fc4c4829e58
+|             `-DeclRefExpr 0x7fc4c4844728 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c48445f0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48448a8 <line:74:3, line:77:3> <scratch space>:51:1 test_b8_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4844818 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48449e0 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c48449c8 <line:76:5, <scratch space>:52:1>
+|     `-ImplicitCastExpr 0x7fc4c48449b0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:52:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4844978 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:52:1> 'unsigned int' lvalue bitfield .b8 0x7fc4c4829dd8
+|         `-DeclRefExpr 0x7fc4c4844950 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4844818 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4844a98 <line:78:3, line:81:3> <scratch space>:54:1 test_b8_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4844a08 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4844c08 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4844bf0 <line:80:5, <scratch space>:55:1>
+|     `-ImplicitCastExpr 0x7fc4c4844bd8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:55:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4844bb8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:55:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4844ba0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:55:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4844b68 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:55:1> 'unsigned int' lvalue bitfield .b8 0x7fc4c4829dd8
+|             `-DeclRefExpr 0x7fc4c4844b40 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4844a08 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4844cc0 <line:74:3, line:77:3> <scratch space>:57:1 test_b9_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4844c30 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4844df8 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4844de0 <line:76:5, <scratch space>:58:1>
+|     `-ImplicitCastExpr 0x7fc4c4844dc8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:58:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4844d90 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:58:1> 'unsigned int' lvalue bitfield .b9 0x7fc4c4829d58
+|         `-DeclRefExpr 0x7fc4c4844d68 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4844c30 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4844eb0 <line:78:3, line:81:3> <scratch space>:60:1 test_b9_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4844e20 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845020 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4845008 <line:80:5, <scratch space>:61:1>
+|     `-ImplicitCastExpr 0x7fc4c4844ff0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:61:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4844fd0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:61:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4844fb8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:61:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4844f80 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:61:1> 'unsigned int' lvalue bitfield .b9 0x7fc4c4829d58
+|             `-DeclRefExpr 0x7fc4c4844f58 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4844e20 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48450d8 <line:74:3, line:77:3> <scratch space>:63:1 test_b10_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845048 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845210 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c48451f8 <line:76:5, <scratch space>:64:1>
+|     `-ImplicitCastExpr 0x7fc4c48451e0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:64:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c48451a8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:64:1> 'unsigned int' lvalue bitfield .b10 0x7fc4c4829cd8
+|         `-DeclRefExpr 0x7fc4c4845180 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4845048 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48452c8 <line:78:3, line:81:3> <scratch space>:66:1 test_b10_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845238 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845450 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4845438 <line:80:5, <scratch space>:67:1>
+|     `-ImplicitCastExpr 0x7fc4c4845420 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:67:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4845400 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:67:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c48453d0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:67:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4845398 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:67:1> 'unsigned int' lvalue bitfield .b10 0x7fc4c4829cd8
+|             `-DeclRefExpr 0x7fc4c4845370 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4845238 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4845508 <line:74:3, line:77:3> <scratch space>:69:1 test_b11_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845478 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845640 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4845628 <line:76:5, <scratch space>:70:1>
+|     `-ImplicitCastExpr 0x7fc4c4845610 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:70:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c48455d8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:70:1> 'unsigned int' lvalue bitfield .b11 0x7fc4c4829c58
+|         `-DeclRefExpr 0x7fc4c48455b0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4845478 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48456f8 <line:78:3, line:81:3> <scratch space>:72:1 test_b11_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845668 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845868 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4845850 <line:80:5, <scratch space>:73:1>
+|     `-ImplicitCastExpr 0x7fc4c4845838 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:73:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4845818 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:73:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4845800 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:73:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c48457c8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:73:1> 'unsigned int' lvalue bitfield .b11 0x7fc4c4829c58
+|             `-DeclRefExpr 0x7fc4c48457a0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4845668 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4845920 <line:74:3, line:77:3> <scratch space>:75:1 test_b12_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845890 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845a58 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4845a40 <line:76:5, <scratch space>:76:1>
+|     `-ImplicitCastExpr 0x7fc4c4845a28 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:76:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c48459f0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:76:1> 'unsigned int' lvalue bitfield .b12 0x7fc4c4829bd8
+|         `-DeclRefExpr 0x7fc4c48459c8 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4845890 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4845b10 <line:78:3, line:81:3> <scratch space>:78:1 test_b12_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845a80 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845c80 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4845c68 <line:80:5, <scratch space>:79:1>
+|     `-ImplicitCastExpr 0x7fc4c4845c50 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:79:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4845c30 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:79:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4845c18 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:79:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4845be0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:79:1> 'unsigned int' lvalue bitfield .b12 0x7fc4c4829bd8
+|             `-DeclRefExpr 0x7fc4c4845bb8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4845a80 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4845d38 <line:74:3, line:77:3> <scratch space>:81:1 test_b13_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845ca8 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4845e70 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4845e58 <line:76:5, <scratch space>:82:1>
+|     `-ImplicitCastExpr 0x7fc4c4845e40 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:82:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4845e08 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:82:1> 'unsigned int' lvalue bitfield .b13 0x7fc4c4829b58
+|         `-DeclRefExpr 0x7fc4c4845de0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4845ca8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4845f28 <line:78:3, line:81:3> <scratch space>:84:1 test_b13_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4845e98 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4846098 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4846080 <line:80:5, <scratch space>:85:1>
+|     `-ImplicitCastExpr 0x7fc4c4846068 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:85:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4846048 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:85:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4846030 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:85:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4845ff8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:85:1> 'unsigned int' lvalue bitfield .b13 0x7fc4c4829b58
+|             `-DeclRefExpr 0x7fc4c4845fd0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4845e98 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4846150 <line:74:3, line:77:3> <scratch space>:87:1 test_b14_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48460c0 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4846288 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4846270 <line:76:5, <scratch space>:88:1>
+|     `-ImplicitCastExpr 0x7fc4c4846258 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:88:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4846220 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:88:1> 'unsigned int' lvalue bitfield .b14 0x7fc4c4829ad8
+|         `-DeclRefExpr 0x7fc4c48461f8 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c48460c0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4846340 <line:78:3, line:81:3> <scratch space>:90:1 test_b14_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48462b0 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4847cc8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4847cb0 <line:80:5, <scratch space>:91:1>
+|     `-ImplicitCastExpr 0x7fc4c4847c98 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:91:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4847c78 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:91:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4847c60 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:91:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4847c28 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:91:1> 'unsigned int' lvalue bitfield .b14 0x7fc4c4829ad8
+|             `-DeclRefExpr 0x7fc4c4847c00 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c48462b0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4847d80 <line:74:3, line:77:3> <scratch space>:93:1 test_b15_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4847cf0 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4847eb8 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4847ea0 <line:76:5, <scratch space>:94:1>
+|     `-ImplicitCastExpr 0x7fc4c4847e88 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:94:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4847e50 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:94:1> 'unsigned int' lvalue bitfield .b15 0x7fc4c4829a58
+|         `-DeclRefExpr 0x7fc4c4847e28 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4847cf0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4847f70 <line:78:3, line:81:3> <scratch space>:96:1 test_b15_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4847ee0 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48480e0 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c48480c8 <line:80:5, <scratch space>:97:1>
+|     `-ImplicitCastExpr 0x7fc4c48480b0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:97:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4848090 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:97:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4848078 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:97:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4848040 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:97:1> 'unsigned int' lvalue bitfield .b15 0x7fc4c4829a58
+|             `-DeclRefExpr 0x7fc4c4848018 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4847ee0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4848198 <line:74:3, line:77:3> <scratch space>:99:1 test_b16_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4848108 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48482d0 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c48482b8 <line:76:5, <scratch space>:100:1>
+|     `-ImplicitCastExpr 0x7fc4c48482a0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:100:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4848268 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:100:1> 'unsigned int' lvalue bitfield .b16 0x7fc4c48299d8
+|         `-DeclRefExpr 0x7fc4c4848240 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4848108 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4848388 <line:78:3, line:81:3> <scratch space>:102:1 test_b16_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c48482f8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48484f8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c48484e0 <line:80:5, <scratch space>:103:1>
+|     `-ImplicitCastExpr 0x7fc4c48484c8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:103:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c48484a8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:103:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4848490 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:103:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4848458 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:103:1> 'unsigned int' lvalue bitfield .b16 0x7fc4c48299d8
+|             `-DeclRefExpr 0x7fc4c4848430 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c48482f8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48485b0 <line:74:3, line:77:3> <scratch space>:105:1 test_b17_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4848520 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c48486e8 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c48486d0 <line:76:5, <scratch space>:106:1>
+|     `-ImplicitCastExpr 0x7fc4c48486b8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:106:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4848680 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:106:1> 'unsigned int' lvalue bitfield .b17 0x7fc4c4829958
+|         `-DeclRefExpr 0x7fc4c4848658 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4848520 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48487a0 <line:78:3, line:81:3> <scratch space>:108:1 test_b17_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4848710 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4848910 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c48488f8 <line:80:5, <scratch space>:109:1>
+|     `-ImplicitCastExpr 0x7fc4c48488e0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:109:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c48488c0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:109:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c48488a8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:109:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4848870 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:109:1> 'unsigned int' lvalue bitfield .b17 0x7fc4c4829958
+|             `-DeclRefExpr 0x7fc4c4848848 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4848710 's' 'S':'S'
+|-FunctionDecl 0x7fc4c48489c8 <line:74:3, line:77:3> <scratch space>:111:1 test_b18_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4848938 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4848b00 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4848ae8 <line:76:5, <scratch space>:112:1>
+|     `-ImplicitCastExpr 0x7fc4c4848ad0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:112:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4848a98 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:112:1> 'unsigned int' lvalue bitfield .b18 0x7fc4c48298d8
+|         `-DeclRefExpr 0x7fc4c4848a70 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4848938 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4849c00 <line:78:3, line:81:3> <scratch space>:114:1 test_b18_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4848b28 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4849d70 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c4849d58 <line:80:5, <scratch space>:115:1>
+|     `-ImplicitCastExpr 0x7fc4c4849d40 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:115:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c4849d20 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:115:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c4849d08 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:115:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c4849cd0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:115:1> 'unsigned int' lvalue bitfield .b18 0x7fc4c48298d8
+|             `-DeclRefExpr 0x7fc4c4849ca8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4848b28 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4849e28 <line:74:3, line:77:3> <scratch space>:117:1 test_b19_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4849d98 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4849f60 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4849f48 <line:76:5, <scratch space>:118:1>
+|     `-ImplicitCastExpr 0x7fc4c4849f30 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:118:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c4849ef8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:118:1> 'unsigned int' lvalue bitfield .b19 0x7fc4c4829858
+|         `-DeclRefExpr 0x7fc4c4849ed0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c4849d98 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484a018 <line:78:3, line:81:3> <scratch space>:120:1 test_b19_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c4849f88 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484a188 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484a170 <line:80:5, <scratch space>:121:1>
+|     `-ImplicitCastExpr 0x7fc4c484a158 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:121:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484a138 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:121:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484a120 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:121:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484a0e8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:121:1> 'unsigned int' lvalue bitfield .b19 0x7fc4c4829858
+|             `-DeclRefExpr 0x7fc4c484a0c0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4849f88 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484a240 <line:74:3, line:77:3> <scratch space>:123:1 test_b20_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484a1b0 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484a378 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484a360 <line:76:5, <scratch space>:124:1>
+|     `-ImplicitCastExpr 0x7fc4c484a348 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:124:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484a310 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:124:1> 'unsigned int' lvalue bitfield .b20 0x7fc4c48297d8
+|         `-DeclRefExpr 0x7fc4c484a2e8 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484a1b0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484a430 <line:78:3, line:81:3> <scratch space>:126:1 test_b20_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484a3a0 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484a5a0 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484a588 <line:80:5, <scratch space>:127:1>
+|     `-ImplicitCastExpr 0x7fc4c484a570 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:127:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484a550 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:127:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484a538 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:127:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484a500 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:127:1> 'unsigned int' lvalue bitfield .b20 0x7fc4c48297d8
+|             `-DeclRefExpr 0x7fc4c484a4d8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484a3a0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484a658 <line:74:3, line:77:3> <scratch space>:129:1 test_b21_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484a5c8 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484a790 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484a778 <line:76:5, <scratch space>:130:1>
+|     `-ImplicitCastExpr 0x7fc4c484a760 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:130:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484a728 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:130:1> 'unsigned int' lvalue bitfield .b21 0x7fc4c4829758
+|         `-DeclRefExpr 0x7fc4c484a700 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484a5c8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484a848 <line:78:3, line:81:3> <scratch space>:132:1 test_b21_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484a7b8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484a9b8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484a9a0 <line:80:5, <scratch space>:133:1>
+|     `-ImplicitCastExpr 0x7fc4c484a988 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:133:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484a968 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:133:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484a950 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:133:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484a918 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:133:1> 'unsigned int' lvalue bitfield .b21 0x7fc4c4829758
+|             `-DeclRefExpr 0x7fc4c484a8f0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484a7b8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484aa70 <line:74:3, line:77:3> <scratch space>:135:1 test_b22_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484a9e0 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484aba8 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484ab90 <line:76:5, <scratch space>:136:1>
+|     `-ImplicitCastExpr 0x7fc4c484ab78 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:136:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484ab40 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:136:1> 'unsigned int' lvalue bitfield .b22 0x7fc4c48296d8
+|         `-DeclRefExpr 0x7fc4c484ab18 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484a9e0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484ac90 <line:78:3, line:81:3> <scratch space>:138:1 test_b22_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484ac00 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484ae00 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484ade8 <line:80:5, <scratch space>:139:1>
+|     `-ImplicitCastExpr 0x7fc4c484add0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:139:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484adb0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:139:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484ad98 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:139:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484ad60 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:139:1> 'unsigned int' lvalue bitfield .b22 0x7fc4c48296d8
+|             `-DeclRefExpr 0x7fc4c484ad38 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484ac00 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484aeb8 <line:74:3, line:77:3> <scratch space>:141:1 test_b23_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484ae28 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484aff0 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484afd8 <line:76:5, <scratch space>:142:1>
+|     `-ImplicitCastExpr 0x7fc4c484afc0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:142:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484af88 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:142:1> 'unsigned int' lvalue bitfield .b23 0x7fc4c4829658
+|         `-DeclRefExpr 0x7fc4c484af60 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484ae28 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484b0a8 <line:78:3, line:81:3> <scratch space>:144:1 test_b23_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484b018 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484b218 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484b200 <line:80:5, <scratch space>:145:1>
+|     `-ImplicitCastExpr 0x7fc4c484b1e8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:145:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484b1c8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:145:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484b1b0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:145:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484b178 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:145:1> 'unsigned int' lvalue bitfield .b23 0x7fc4c4829658
+|             `-DeclRefExpr 0x7fc4c484b150 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484b018 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484b2d0 <line:74:3, line:77:3> <scratch space>:147:1 test_b24_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484b240 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484b408 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484b3f0 <line:76:5, <scratch space>:148:1>
+|     `-ImplicitCastExpr 0x7fc4c484b3d8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:148:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484b3a0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:148:1> 'unsigned int' lvalue bitfield .b24 0x7fc4c48295d8
+|         `-DeclRefExpr 0x7fc4c484b378 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484b240 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484b4c0 <line:78:3, line:81:3> <scratch space>:150:1 test_b24_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484b430 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484b630 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484b618 <line:80:5, <scratch space>:151:1>
+|     `-ImplicitCastExpr 0x7fc4c484b600 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:151:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484b5e0 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:151:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484b5c8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:151:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484b590 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:151:1> 'unsigned int' lvalue bitfield .b24 0x7fc4c48295d8
+|             `-DeclRefExpr 0x7fc4c484b568 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484b430 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484b6e8 <line:74:3, line:77:3> <scratch space>:153:1 test_b25_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484b658 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484b820 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484b808 <line:76:5, <scratch space>:154:1>
+|     `-ImplicitCastExpr 0x7fc4c484b7f0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:154:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484b7b8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:154:1> 'unsigned int' lvalue bitfield .b25 0x7fc4c4829558
+|         `-DeclRefExpr 0x7fc4c484b790 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484b658 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484b8d8 <line:78:3, line:81:3> <scratch space>:156:1 test_b25_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484b848 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484ba48 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484ba30 <line:80:5, <scratch space>:157:1>
+|     `-ImplicitCastExpr 0x7fc4c484ba18 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:157:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484b9f8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:157:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484b9e0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:157:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484b9a8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:157:1> 'unsigned int' lvalue bitfield .b25 0x7fc4c4829558
+|             `-DeclRefExpr 0x7fc4c484b980 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484b848 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484bb00 <line:74:3, line:77:3> <scratch space>:159:1 test_b26_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484ba70 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484bc68 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484bc50 <line:76:5, <scratch space>:160:1>
+|     `-ImplicitCastExpr 0x7fc4c484bc38 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:160:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484bc00 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:160:1> 'unsigned int' lvalue bitfield .b26 0x7fc4c48294d8
+|         `-DeclRefExpr 0x7fc4c484bba8 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484ba70 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484bd20 <line:78:3, line:81:3> <scratch space>:162:1 test_b26_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484bc90 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484be90 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484be78 <line:80:5, <scratch space>:163:1>
+|     `-ImplicitCastExpr 0x7fc4c484be60 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:163:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484be40 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:163:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484be28 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:163:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484bdf0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:163:1> 'unsigned int' lvalue bitfield .b26 0x7fc4c48294d8
+|             `-DeclRefExpr 0x7fc4c484bdc8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484bc90 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484bf48 <line:74:3, line:77:3> <scratch space>:165:1 test_b27_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484beb8 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484c080 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484c068 <line:76:5, <scratch space>:166:1>
+|     `-ImplicitCastExpr 0x7fc4c484c050 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:166:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484c018 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:166:1> 'unsigned int' lvalue bitfield .b27 0x7fc4c4829458
+|         `-DeclRefExpr 0x7fc4c484bff0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484beb8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484c138 <line:78:3, line:81:3> <scratch space>:168:1 test_b27_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484c0a8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484c2a8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484c290 <line:80:5, <scratch space>:169:1>
+|     `-ImplicitCastExpr 0x7fc4c484c278 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:169:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484c258 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:169:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484c240 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:169:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484c208 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:169:1> 'unsigned int' lvalue bitfield .b27 0x7fc4c4829458
+|             `-DeclRefExpr 0x7fc4c484c1e0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484c0a8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484c360 <line:74:3, line:77:3> <scratch space>:171:1 test_b28_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484c2d0 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484c498 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484c480 <line:76:5, <scratch space>:172:1>
+|     `-ImplicitCastExpr 0x7fc4c484c468 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:172:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484c430 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:172:1> 'unsigned int' lvalue bitfield .b28 0x7fc4c48293d8
+|         `-DeclRefExpr 0x7fc4c484c408 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484c2d0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484c550 <line:78:3, line:81:3> <scratch space>:174:1 test_b28_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484c4c0 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484c6c0 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484c6a8 <line:80:5, <scratch space>:175:1>
+|     `-ImplicitCastExpr 0x7fc4c484c690 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:175:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484c670 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:175:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484c658 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:175:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484c620 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:175:1> 'unsigned int' lvalue bitfield .b28 0x7fc4c48293d8
+|             `-DeclRefExpr 0x7fc4c484c5f8 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484c4c0 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484c778 <line:74:3, line:77:3> <scratch space>:177:1 test_b29_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484c6e8 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484c8b0 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484c898 <line:76:5, <scratch space>:178:1>
+|     `-ImplicitCastExpr 0x7fc4c484c880 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:178:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484c848 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:178:1> 'unsigned int' lvalue bitfield .b29 0x7fc4c4829358
+|         `-DeclRefExpr 0x7fc4c484c820 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484c6e8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484c968 <line:78:3, line:81:3> <scratch space>:180:1 test_b29_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484c8d8 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484cad8 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484cac0 <line:80:5, <scratch space>:181:1>
+|     `-ImplicitCastExpr 0x7fc4c484caa8 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:181:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484ca88 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:181:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484ca70 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:181:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484ca38 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:181:1> 'unsigned int' lvalue bitfield .b29 0x7fc4c4829358
+|             `-DeclRefExpr 0x7fc4c484ca10 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484c8d8 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484fc00 <line:74:3, line:77:3> <scratch space>:183:1 test_b30_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484cb00 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484fd38 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c484fd20 <line:76:5, <scratch space>:184:1>
+|     `-ImplicitCastExpr 0x7fc4c484fd08 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:184:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c484fcd0 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:184:1> 'unsigned int' lvalue bitfield .b30 0x7fc4c48292d8
+|         `-DeclRefExpr 0x7fc4c484fca8 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484cb00 's' 'S':'S'
+|-FunctionDecl 0x7fc4c484fdf0 <line:78:3, line:81:3> <scratch space>:186:1 test_b30_1 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484fd60 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c484ff60 <line:79:3, line:81:3>
+|   `-ReturnStmt 0x7fc4c484ff48 <line:80:5, <scratch space>:187:1>
+|     `-ImplicitCastExpr 0x7fc4c484ff30 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:187:1> 'unsigned int' <IntegralCast>
+|       `-UnaryOperator 0x7fc4c484ff10 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:187:1> 'int' prefix '!'
+|         `-ImplicitCastExpr 0x7fc4c484fef8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:187:1> 'unsigned int' <LValueToRValue>
+|           `-MemberExpr 0x7fc4c484fec0 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:187:1> 'unsigned int' lvalue bitfield .b30 0x7fc4c48292d8
+|             `-DeclRefExpr 0x7fc4c484fe98 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c484fd60 's' 'S':'S'
+|-FunctionDecl 0x7fc4c4850018 <line:74:3, line:77:3> <scratch space>:189:1 test_b31_0 'unsigned int (S)'
+| |-ParmVarDecl 0x7fc4c484ff88 <../Data/C2AST/pr64345-2.c:74:36, col:38> col:38 used s 'S':'S'
+| `-CompoundStmt 0x7fc4c4850150 <line:75:3, line:77:3>
+|   `-ReturnStmt 0x7fc4c4850138 <line:76:5, <scratch space>:190:1>
+|     `-ImplicitCastExpr 0x7fc4c4850120 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:190:1> 'unsigned int' <LValueToRValue>
+|       `-MemberExpr 0x7fc4c48500e8 <../Data/C2AST/pr64345-2.c:76:12, <scratch space>:190:1> 'unsigned int' lvalue bitfield .b31 0x7fc4c4829258
+|         `-DeclRefExpr 0x7fc4c48500c0 <../Data/C2AST/pr64345-2.c:76:12> 'S':'S' lvalue ParmVar 0x7fc4c484ff88 's' 'S':'S'
+`-FunctionDecl 0x7fc4c4850208 <line:78:3, line:81:3> <scratch space>:192:1 test_b31_1 'unsigned int (S)'
+  |-ParmVarDecl 0x7fc4c4850178 <../Data/C2AST/pr64345-2.c:78:36, col:38> col:38 used s 'S':'S'
+  `-CompoundStmt 0x7fc4c4850378 <line:79:3, line:81:3>
+    `-ReturnStmt 0x7fc4c4850360 <line:80:5, <scratch space>:193:1>
+      `-ImplicitCastExpr 0x7fc4c4850348 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:193:1> 'unsigned int' <IntegralCast>
+        `-UnaryOperator 0x7fc4c4850328 <../Data/C2AST/pr64345-2.c:80:12, <scratch space>:193:1> 'int' prefix '!'
+          `-ImplicitCastExpr 0x7fc4c4850310 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:193:1> 'unsigned int' <LValueToRValue>
+            `-MemberExpr 0x7fc4c48502d8 <../Data/C2AST/pr64345-2.c:80:13, <scratch space>:193:1> 'unsigned int' lvalue bitfield .b31 0x7fc4c4829258
+              `-DeclRefExpr 0x7fc4c48502b0 <../Data/C2AST/pr64345-2.c:80:13> 'S':'S' lvalue ParmVar 0x7fc4c4850178 's' 'S':'S'

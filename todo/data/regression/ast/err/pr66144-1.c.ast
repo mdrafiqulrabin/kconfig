@@ -1,0 +1,22 @@
+../Data/C2AST/pr66144-1.c:8:1: error: unknown type name 'vector'
+vector int
+^
+../Data/C2AST/pr66144-1.c:8:8: error: expected identifier or '('
+vector int
+       ^
+2 errors generated.
+TranslationUnitDecl 0x7fc5ea01bae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc5ea01c060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fc5ea01bd80 '__int128'
+|-TypedefDecl 0x7fc5ea01c0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fc5ea01bda0 'unsigned __int128'
+|-TypedefDecl 0x7fc5ea01c3a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fc5ea01c1b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fc5ea01c128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fc5ea01c440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fc5ea01c400 'char *'
+|   `-BuiltinType 0x7fc5ea01bb80 'char'
+`-TypedefDecl 0x7fc5ea01c708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fc5ea01c6b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fc5ea01c520 'struct __va_list_tag'
+      `-Record 0x7fc5ea01c498 '__va_list_tag'

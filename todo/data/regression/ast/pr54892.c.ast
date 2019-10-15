@@ -1,0 +1,24 @@
+TranslationUnitDecl 0x7fd7a201a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd7a181dad8 <../Data/C2AST/pr54892.c:3:1, line:6:1> line:3:5 set_role 'int (unsigned char, short)'
+| |-ParmVarDecl 0x7fd7a201b578 <col:14, col:28> col:28 used role_id 'unsigned char'
+| |-ParmVarDecl 0x7fd7a181da00 <col:37, col:43> col:43 used m_role 'short'
+| `-CompoundStmt 0x7fd7a181e1a0 <line:4:1, line:6:1>
+|   `-ReturnStmt 0x7fd7a181e188 <line:5:3, col:59>
+|     `-ImplicitCastExpr 0x7fd7a181e170 <col:10, col:59> 'int' <IntegralCast>
+|       `-CallExpr 0x7fd7a181dde0 <col:10, col:59> '_Bool'
+|         |-ImplicitCastExpr 0x7fd7a181e158 <col:10> '_Bool (*)(volatile short *, short, short, ...)' <BuiltinFnToFnPtr>
+|         | `-DeclRefExpr 0x7fd7a181e100 <col:10> '<builtin fn type>' Function 0x7fd7a181de98 '__sync_bool_compare_and_swap_2' '_Bool (volatile short *, short, short, ...)'
+|         |-UnaryOperator 0x7fd7a181dd18 <col:39, col:40> 'short *' prefix '&'
+|         | `-DeclRefExpr 0x7fd7a181dcc0 <col:40> 'short' lvalue ParmVar 0x7fd7a181da00 'm_role' 'short'
+|         |-ImplicitCastExpr 0x7fd7a181e0b8 <col:48, col:49> 'short' <IntegralCast>
+|         | `-UnaryOperator 0x7fd7a181dd58 <col:48, col:49> 'int' prefix '-'
+|         |   `-IntegerLiteral 0x7fd7a181dd38 <col:49> 'int' 1
+|         `-ImplicitCastExpr 0x7fd7a181e0e8 <col:52> 'short' <IntegralCast>
+|           `-ImplicitCastExpr 0x7fd7a181e0d0 <col:52> 'unsigned char' <LValueToRValue>
+|             `-DeclRefExpr 0x7fd7a181dd78 <col:52> 'unsigned char' lvalue ParmVar 0x7fd7a201b578 'role_id' 'unsigned char'
+|-FunctionDecl 0x7fd7a181dbf8 <col:10> col:10 implicit used __sync_bool_compare_and_swap 'void ()' extern
+`-FunctionDecl 0x7fd7a181de98 <col:10> col:10 implicit __sync_bool_compare_and_swap_2 '_Bool (volatile short *, short, short, ...)' extern
+  |-ParmVarDecl 0x7fd7a181df38 <<invalid sloc>> <invalid sloc> 'volatile short *'
+  |-ParmVarDecl 0x7fd7a181df98 <<invalid sloc>> <invalid sloc> 'short'
+  |-ParmVarDecl 0x7fd7a181dff8 <<invalid sloc>> <invalid sloc> 'short'
+  `-NoThrowAttr 0x7fd7a181e070 <col:10> Implicit

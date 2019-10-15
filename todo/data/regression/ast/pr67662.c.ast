@@ -1,0 +1,34 @@
+TranslationUnitDecl 0x7f975082bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f975086d850 <../Data/C2AST/pr67662.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7f975086d8f0 prev 0x7f975086d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7f975086da58 <line:6:1, line:14:1> line:7:1 main 'int (void)'
+  `-CompoundStmt 0x7f975086dfb8 <line:8:1, line:14:1>
+    |-DeclStmt 0x7f975086dc90 <line:9:3, col:39>
+    | `-VarDecl 0x7f975086db80 <col:3, col:38> col:7 used halfmaxval 'int' cinit
+    |   `-BinaryOperator 0x7f975086dc68 <<built-in>:38:21, ../Data/C2AST/pr67662.c:9:38> 'int' '+'
+    |     |-BinaryOperator 0x7f975086dc20 <<built-in>:38:21, ../Data/C2AST/pr67662.c:9:34> 'int' '/'
+    |     | |-IntegerLiteral 0x7f975086dbe0 <<built-in>:38:21> 'int' 2147483647
+    |     | `-IntegerLiteral 0x7f975086dc00 <../Data/C2AST/pr67662.c:9:34> 'int' 2
+    |     `-IntegerLiteral 0x7f975086dc48 <col:38> 'int' 1
+    |-DeclStmt 0x7f975086de10 <line:10:3, col:43>
+    | `-VarDecl 0x7f975086dcc0 <col:3, col:33> col:7 used maxval 'int' cinit
+    |   `-BinaryOperator 0x7f975086dde8 <col:16, col:33> 'int' '+'
+    |     |-BinaryOperator 0x7f975086dd80 <col:16, col:29> 'int' '-'
+    |     | |-ImplicitCastExpr 0x7f975086dd68 <col:16> 'int' <LValueToRValue>
+    |     | | `-DeclRefExpr 0x7f975086dd20 <col:16> 'int' lvalue Var 0x7f975086db80 'halfmaxval' 'int'
+    |     | `-IntegerLiteral 0x7f975086dd48 <col:29> 'int' 1
+    |     `-ImplicitCastExpr 0x7f975086ddd0 <col:33> 'int' <LValueToRValue>
+    |       `-DeclRefExpr 0x7f975086dda8 <col:33> 'int' lvalue Var 0x7f975086db80 'halfmaxval' 'int'
+    |-IfStmt 0x7f975086df48 <line:11:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f975086de88 <line:11:7, <built-in>:38:21> 'int' '!='
+    | | |-ImplicitCastExpr 0x7f975086de70 <../Data/C2AST/pr67662.c:11:7> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f975086de28 <col:7> 'int' lvalue Var 0x7f975086dcc0 'maxval' 'int'
+    | | `-IntegerLiteral 0x7f975086de50 <<built-in>:38:21> 'int' 2147483647
+    | |-CallExpr 0x7f975086df20 <../Data/C2AST/pr67662.c:12:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7f975086df08 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7f975086deb0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7f975086d8f0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7f975086dfa0 <line:13:3, col:10>
+      `-IntegerLiteral 0x7f975086df80 <col:10> 'int' 0

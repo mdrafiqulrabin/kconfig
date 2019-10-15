@@ -1,0 +1,55 @@
+../Data/C2AST/pr31344.c:16:32: error: GNU decimal type extension not supported
+extern void __host_to_ieee_32 (_Decimal32, decimal32 *);
+                               ^
+../Data/C2AST/pr31344.c:19:6: error: GNU decimal type extension not supported
+foo (_Decimal32 arg)
+     ^
+2 errors generated.
+TranslationUnitDecl 0x7ff3ed82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff3ed82c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff3ed82bf80 '__int128'
+|-TypedefDecl 0x7ff3ed82c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff3ed82bfa0 'unsigned __int128'
+|-TypedefDecl 0x7ff3ed82c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff3ed82c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff3ed82c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff3ed82c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff3ed82c600 'char *'
+|   `-BuiltinType 0x7ff3ed82bd80 'char'
+|-TypedefDecl 0x7ff3ed82c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff3ed82c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff3ed82c720 'struct __va_list_tag'
+|     `-Record 0x7ff3ed82c698 '__va_list_tag'
+|-RecordDecl 0x7ff3ed82c960 <../Data/C2AST/pr31344.c:5:9, line:8:1> line:5:9 struct definition
+| `-FieldDecl 0x7ff3ed86d838 <line:7:3, col:17> col:17 bits 'unsigned char'
+|-TypedefDecl 0x7ff3ed86d8d0 <line:5:1, line:8:3> col:3 referenced decNumber 'struct decNumber':'decNumber'
+| `-ElaboratedType 0x7ff3ed86d880 'struct decNumber' sugar
+|   `-RecordType 0x7ff3ed86d800 'decNumber'
+|     `-Record 0x7ff3ed82c960 ''
+|-RecordDecl 0x7ff3ed86d940 <line:10:9, line:13:1> line:10:9 struct definition
+| `-FieldDecl 0x7ff3ed86da70 <line:12:3, col:24> col:17 bytes 'unsigned char [1]'
+|-TypedefDecl 0x7ff3ed86db10 <line:10:1, line:13:3> col:3 referenced decimal32 'struct decimal32':'decimal32'
+| `-ElaboratedType 0x7ff3ed86dac0 'struct decimal32' sugar
+|   `-RecordType 0x7ff3ed86d9d0 'decimal32'
+|     `-Record 0x7ff3ed86d940 ''
+|-FunctionDecl 0x7ff3ed86de10 <line:15:1, col:70> col:19 used __decimal32ToNumber 'decNumber *(const decimal32 *, decNumber *)' extern
+| |-ParmVarDecl 0x7ff3ed86dc28 <col:40, col:56> col:57 'const decimal32 *'
+| `-ParmVarDecl 0x7ff3ed86dcf8 <col:59, col:69> col:70 'decNumber *'
+|-FunctionDecl 0x7ff3ed86e100 <line:16:1, col:55> col:13 invalid __host_to_ieee_32 'void (int, decimal32 *)' extern
+| |-ParmVarDecl 0x7ff3ed86df18 <col:32, <invalid sloc>> col:42 invalid 'int'
+| `-ParmVarDecl 0x7ff3ed86dfe8 <col:44, col:54> col:55 'decimal32 *'
+`-FunctionDecl 0x7ff3ed86e290 <line:18:1, line:25:1> line:19:1 invalid foo 'void (int)'
+  |-ParmVarDecl 0x7ff3ed86e1c8 <col:6, col:17> col:17 invalid arg 'int'
+  `-CompoundStmt 0x7ff3ed86e610 <line:20:1, line:25:1>
+    |-DeclStmt 0x7ff3ed86e3a8 <line:21:3, col:15>
+    | `-VarDecl 0x7ff3ed86e348 <col:3, col:13> col:13 used dn 'decNumber':'decNumber'
+    |-DeclStmt 0x7ff3ed86e430 <line:22:3, col:16>
+    | `-VarDecl 0x7ff3ed86e3d0 <col:3, col:13> col:13 used d32 'decimal32':'decimal32'
+    `-CallExpr 0x7ff3ed86e5c0 <line:24:3, col:33> 'decNumber *'
+      |-ImplicitCastExpr 0x7ff3ed86e5a8 <col:3> 'decNumber *(*)(const decimal32 *, decNumber *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ff3ed86e490 <col:3> 'decNumber *(const decimal32 *, decNumber *)' Function 0x7ff3ed86de10 '__decimal32ToNumber' 'decNumber *(const decimal32 *, decNumber *)'
+      |-ImplicitCastExpr 0x7ff3ed86e5f8 <col:24, col:25> 'const decimal32 *' <BitCast>
+      | `-UnaryOperator 0x7ff3ed86e4e0 <col:24, col:25> 'decimal32 *' prefix '&'
+      |   `-DeclRefExpr 0x7ff3ed86e4b8 <col:25> 'decimal32':'decimal32' lvalue Var 0x7ff3ed86e3d0 'd32' 'decimal32':'decimal32'
+      `-UnaryOperator 0x7ff3ed86e528 <col:30, col:31> 'decNumber *' prefix '&'
+        `-DeclRefExpr 0x7ff3ed86e500 <col:31> 'decNumber':'decNumber' lvalue Var 0x7ff3ed86e348 'dn' 'decNumber':'decNumber'

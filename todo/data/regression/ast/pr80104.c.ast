@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7fd1260252e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd125814868 <../Data/C2AST/pr80104.c:5:1, line:9:1> line:6:1 a 'float (_Complex float)'
+| |-ParmVarDecl 0x7fd126025f70 <col:4, col:19> col:19 used b '_Complex float'
+| `-CompoundStmt 0x7fd125814a30 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fd125814a18 <line:8:3, col:12>
+|     `-ImplicitCastExpr 0x7fd125814a00 <col:10, col:12> 'float' <FloatingComplexToReal>
+|       `-ImplicitCastExpr 0x7fd1258149e8 <col:10, col:12> '_Complex float' <LValueToRValue>
+|         `-UnaryOperator 0x7fd1258149c8 <col:10, col:12> '_Complex float' lvalue prefix '*'
+|           `-UnaryOperator 0x7fd1258149a8 <col:11, col:12> '_Complex float *' prefix '&'
+|             `-DeclRefExpr 0x7fd125814950 <col:12> '_Complex float' lvalue ParmVar 0x7fd126025f70 'b' '_Complex float'
+`-FunctionDecl 0x7fd125814ae8 <line:11:1, line:15:1> line:12:1 c 'float (_Complex float)'
+  |-ParmVarDecl 0x7fd125814a58 <col:4, col:19> col:19 used b '_Complex float'
+  `-CompoundStmt 0x7fd125814c88 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fd125814c70 <line:14:3, col:16>
+      `-ImplicitCastExpr 0x7fd125814c58 <col:10, col:16> 'float' <FloatingComplexToReal>
+        `-ImplicitCastExpr 0x7fd125814c40 <col:10, col:16> '_Complex float' <LValueToRValue>
+          `-ArraySubscriptExpr 0x7fd125814c18 <col:10, col:16> '_Complex float' lvalue
+            |-ParenExpr 0x7fd125814bd8 <col:10, col:13> '_Complex float *'
+            | `-UnaryOperator 0x7fd125814bb8 <col:11, col:12> '_Complex float *' prefix '&'
+            |   `-DeclRefExpr 0x7fd125814b90 <col:12> '_Complex float' lvalue ParmVar 0x7fd125814a58 'b' '_Complex float'
+            `-IntegerLiteral 0x7fd125814bf8 <col:15> 'int' 0

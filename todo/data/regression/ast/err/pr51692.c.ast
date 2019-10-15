@@ -1,0 +1,50 @@
+../Data/C2AST/pr51692.c:7:15: error: use of unknown builtin '__builtin_calloc' [-Wimplicit-function-declaration]
+  double *p = __builtin_calloc (1, sizeof (double));
+              ^
+../Data/C2AST/pr51692.c:10:3: error: use of unknown builtin '__builtin_free' [-Wimplicit-function-declaration]
+  __builtin_free (p);
+  ^
+2 errors generated.
+TranslationUnitDecl 0x7fec0c0002e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fec0c000860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fec0c000580 '__int128'
+|-TypedefDecl 0x7fec0c0008d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fec0c0005a0 'unsigned __int128'
+|-TypedefDecl 0x7fec0c000ba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fec0c0009b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fec0c000928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fec0c000c40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fec0c000c00 'char *'
+|   `-BuiltinType 0x7fec0c000380 'char'
+|-TypedefDecl 0x7fec0c000f08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fec0c000eb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fec0c000d20 'struct __va_list_tag'
+|     `-Record 0x7fec0c000c98 '__va_list_tag'
+`-FunctionDecl 0x7fec0c046400 <../Data/C2AST/pr51692.c:3:1, line:12:1> line:4:1 main 'int ()'
+  `-CompoundStmt 0x7fec0c046b40 <line:5:1, line:12:1>
+    |-DeclStmt 0x7fec0c046578 <line:6:3, col:26>
+    | `-VarDecl 0x7fec0c0464f8 <col:3, col:23> col:19 used d 'volatile double' cinit
+    |   `-FloatingLiteral 0x7fec0c046558 <col:23> 'double' 0.000000e+00
+    |-DeclStmt 0x7fec0c046830 <line:7:3, col:52>
+    | `-VarDecl 0x7fec0c0465d0 <col:3, col:51> col:11 used p 'double *' cinit
+    |   `-ImplicitCastExpr 0x7fec0c046818 <col:15, col:51> 'double *' <IntegralToPointer>
+    |     `-CallExpr 0x7fec0c0467e0 <col:15, col:51> 'int'
+    |       |-ImplicitCastExpr 0x7fec0c0467c8 <col:15> 'int (*)()' <FunctionToPointerDecay>
+    |       | `-DeclRefExpr 0x7fec0c046720 <col:15> 'int ()' Function 0x7fec0c046670 '__builtin_calloc' 'int ()'
+    |       |-IntegerLiteral 0x7fec0c046748 <col:33> 'int' 1
+    |       `-UnaryExprOrTypeTraitExpr 0x7fec0c046780 <col:36, col:50> 'unsigned long' sizeof 'double'
+    |-CompoundAssignOperator 0x7fec0c046890 <line:8:3, col:8> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-DeclRefExpr 0x7fec0c046848 <col:3> 'volatile double' lvalue Var 0x7fec0c0464f8 'd' 'volatile double'
+    | `-FloatingLiteral 0x7fec0c046870 <col:8> 'double' 1.000000e+00
+    |-CompoundAssignOperator 0x7fec0c046948 <line:9:3, col:9> 'double' '+=' ComputeLHSTy='double' ComputeResultTy='double'
+    | |-UnaryOperator 0x7fec0c046908 <col:3, col:4> 'double' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7fec0c0468f0 <col:4> 'double *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fec0c0468c8 <col:4> 'double *' lvalue Var 0x7fec0c0465d0 'p' 'double *'
+    | `-FloatingLiteral 0x7fec0c046928 <col:9> 'double' 2.000000e+00
+    |-CallExpr 0x7fec0c046ac0 <line:10:3, col:20> 'int'
+    | |-ImplicitCastExpr 0x7fec0c046aa8 <col:3> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fec0c046a58 <col:3> 'int ()' Function 0x7fec0c0469a8 '__builtin_free' 'int ()'
+    | `-ImplicitCastExpr 0x7fec0c046af0 <col:19> 'double *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fec0c046a80 <col:19> 'double *' lvalue Var 0x7fec0c0465d0 'p' 'double *'
+    `-ReturnStmt 0x7fec0c046b28 <line:11:3, col:10>
+      `-IntegerLiteral 0x7fec0c046b08 <col:10> 'int' 0

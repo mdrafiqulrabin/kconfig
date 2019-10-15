@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7ffda182bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffda182c960 <../Data/C2AST/pr45991.c:4:1, line:7:1> line:4:8 struct S definition
+| `-FieldDecl 0x7ffda2014238 <line:6:3, col:7> col:7 referenced i 'int'
+|-VarDecl 0x7ffda20142f8 <line:9:1, col:10> col:6 used A 'char [64]'
+`-FunctionDecl 0x7ffda2014530 <line:11:1, line:20:1> line:11:6 foo 'void (char **, int)'
+  |-ParmVarDecl 0x7ffda20143e0 <col:11, col:18> col:18 used dst 'char **'
+  |-ParmVarDecl 0x7ffda2014458 <col:23, col:27> col:27 used i 'int'
+  `-CompoundStmt 0x7ffda2014e00 <line:12:1, line:20:1>
+    |-DeclStmt 0x7ffda20146e0 <line:13:3, col:19>
+    | `-VarDecl 0x7ffda20145f8 <col:3, col:17> col:9 used p 'char *' cinit
+    |   `-BinaryOperator 0x7ffda20146b8 <col:13, col:17> 'char *' '+'
+    |     |-ImplicitCastExpr 0x7ffda20146a0 <col:13> 'char *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x7ffda2014658 <col:13> 'char [64]' lvalue Var 0x7ffda20142f8 'A' 'char [64]'
+    |     `-IntegerLiteral 0x7ffda2014680 <col:17> 'int' 16
+    `-WhileStmt 0x7ffda2014de0 <line:14:3, line:19:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x7ffda2014720 <line:14:10, col:11> 'int' postfix '--'
+      | `-DeclRefExpr 0x7ffda20146f8 <col:10> 'int' lvalue ParmVar 0x7ffda2014458 'i' 'int'
+      `-CompoundStmt 0x7ffda2014db8 <line:15:5, line:19:5>
+        |-DeclStmt 0x7ffda2014aa8 <line:16:7, col:49>
+        | `-VarDecl 0x7ffda2014758 <col:7, col:48> col:11 used b 'int' cinit
+        |   `-ImplicitCastExpr 0x7ffda2014a90 <col:15, col:48> 'int' <LValueToRValue>
+        |     `-MemberExpr 0x7ffda2014a58 <col:15, col:48> 'int' lvalue ->i 0x7ffda2014238
+        |       `-ParenExpr 0x7ffda2014a38 <col:15, col:45> 'struct S *'
+        |         `-CStyleCastExpr 0x7ffda2014a10 <col:16, col:44> 'struct S *' <BitCast>
+        |           `-ParenExpr 0x7ffda20149f0 <col:29, col:44> 'char *'
+        |             `-UnaryOperator 0x7ffda20148f0 <col:30, col:43> 'char *' prefix '&'
+        |               `-ArraySubscriptExpr 0x7ffda20148c8 <col:31, col:43> 'char' lvalue
+        |                 |-ImplicitCastExpr 0x7ffda20148b0 <col:31> 'char *' <LValueToRValue>
+        |                 | `-DeclRefExpr 0x7ffda20147b8 <col:31> 'char *' lvalue Var 0x7ffda20145f8 'p' 'char *'
+        |                 `-BinaryOperator 0x7ffda2014888 <col:33, col:42> 'int' '+'
+        |                   |-BinaryOperator 0x7ffda2014840 <col:33, col:37> 'int' '*'
+        |                   | |-ImplicitCastExpr 0x7ffda2014828 <col:33> 'int' <LValueToRValue>
+        |                   | | `-DeclRefExpr 0x7ffda20147e0 <col:33> 'int' lvalue ParmVar 0x7ffda2014458 'i' 'int'
+        |                   | `-IntegerLiteral 0x7ffda2014808 <col:37> 'int' 16
+        |                   `-IntegerLiteral 0x7ffda2014868 <col:42> 'int' 4
+        |-DeclStmt 0x7ffda2014c28 <line:17:7, col:27>
+        | `-VarDecl 0x7ffda2014ad8 <col:7, col:25> col:13 used c 'char *' cinit
+        |   `-BinaryOperator 0x7ffda2014c00 <col:17, col:25> 'char *' '+'
+        |     |-ImplicitCastExpr 0x7ffda2014be8 <col:17> 'char *' <ArrayToPointerDecay>
+        |     | `-DeclRefExpr 0x7ffda2014b38 <col:17> 'char [64]' lvalue Var 0x7ffda20142f8 'A' 'char [64]'
+        |     `-BinaryOperator 0x7ffda2014bc0 <col:21, col:25> 'int' '*'
+        |       |-ImplicitCastExpr 0x7ffda2014ba8 <col:21> 'int' <LValueToRValue>
+        |       | `-DeclRefExpr 0x7ffda2014b60 <col:21> 'int' lvalue ParmVar 0x7ffda2014458 'i' 'int'
+        |       `-IntegerLiteral 0x7ffda2014b88 <col:25> 'int' 16
+        `-BinaryOperator 0x7ffda2014d90 <line:18:7, col:20> 'char *' '='
+          |-ArraySubscriptExpr 0x7ffda2014cc0 <col:7, col:12> 'char *' lvalue
+          | |-ImplicitCastExpr 0x7ffda2014c90 <col:7> 'char **' <LValueToRValue>
+          | | `-DeclRefExpr 0x7ffda2014c40 <col:7> 'char **' lvalue ParmVar 0x7ffda20143e0 'dst' 'char **'
+          | `-ImplicitCastExpr 0x7ffda2014ca8 <col:11> 'int' <LValueToRValue>
+          |   `-DeclRefExpr 0x7ffda2014c68 <col:11> 'int' lvalue ParmVar 0x7ffda2014458 'i' 'int'
+          `-BinaryOperator 0x7ffda2014d68 <col:16, col:20> 'char *' '+'
+            |-ImplicitCastExpr 0x7ffda2014d38 <col:16> 'char *' <LValueToRValue>
+            | `-DeclRefExpr 0x7ffda2014ce8 <col:16> 'char *' lvalue Var 0x7ffda2014ad8 'c' 'char *'
+            `-ImplicitCastExpr 0x7ffda2014d50 <col:20> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7ffda2014d10 <col:20> 'int' lvalue Var 0x7ffda2014758 'b' 'int'

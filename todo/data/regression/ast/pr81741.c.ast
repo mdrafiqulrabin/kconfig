@@ -1,0 +1,82 @@
+TranslationUnitDecl 0x7fcc1d0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fcc1c892000 <../Data/C2AST/pr81741.c:6:9, line:9:1> line:6:16 struct string_s definition
+| |-FieldDecl 0x7fcc1c8920c8 <line:7:3, col:17> col:17 referenced size 'unsigned long'
+| |-FieldDecl 0x7fcc1c892128 <col:3, col:23> col:23 alloc 'unsigned long'
+| `-FieldDecl 0x7fcc1c892188 <line:8:3, col:9> col:9 referenced ptr 'char *'
+|-TypedefDecl 0x7fcc1c892328 <line:6:1, line:9:13> col:3 referenced string_t 'struct string_s [1]'
+| `-ConstantArrayType 0x7fcc1c8922c0 'struct string_s [1]' 1 
+|   `-ElaboratedType 0x7fcc1c8921f0 'struct string_s' sugar
+|     `-RecordType 0x7fcc1c892090 'struct string_s'
+|       `-Record 0x7fcc1c892000 'string_s'
+|-FunctionDecl 0x7fcc1c892568 <line:15:1, line:19:1> line:15:5 f 'int (struct string_s *)'
+| |-ParmVarDecl 0x7fcc1c892460 <col:7, col:16> col:16 used s 'struct string_s *':'struct string_s *'
+| `-CompoundStmt 0x7fcc1c894688 <line:16:1, line:19:1>
+|   |-ParenExpr 0x7fcc1c8945a8 <line:12:3, line:13:38> 'void'
+|   | `-ConditionalOperator 0x7fcc1c894578 <line:12:4, line:13:37> 'void'
+|   |   |-BinaryOperator 0x7fcc1c892eb8 <line:12:4, col:48> 'int' '||'
+|   |   | |-UnaryOperator 0x7fcc1c892c90 <col:4, col:41> 'int' prefix '!'
+|   |   | | `-CallExpr 0x7fcc1c892c60 <col:6, col:41> 'int'
+|   |   | |   |-ImplicitCastExpr 0x7fcc1c892c48 <col:6> 'int (*)()' <BuiltinFnToFnPtr>
+|   |   | |   | `-DeclRefExpr 0x7fcc1c892730 <col:6> '<builtin fn type>' Function 0x7fcc1c892638 '__builtin_constant_p' 'int ()'
+|   |   | |   `-BinaryOperator 0x7fcc1c892bf0 <col:28, col:40> 'int' '||'
+|   |   | |     |-UnaryOperator 0x7fcc1c8929a8 <col:28, col:32> 'int' prefix '!'
+|   |   | |     | `-UnaryOperator 0x7fcc1c892988 <col:29, col:32> 'int' prefix '!'
+|   |   | |     |   `-ParenExpr 0x7fcc1c892968 <col:30, col:32> 'int'
+|   |   | |     |     `-BinaryOperator 0x7fcc1c892940 <line:17:12, col:33> 'int' '=='
+|   |   | |     |       |-CallExpr 0x7fcc1c892850 <col:12, col:25> 'unsigned long'
+|   |   | |     |       | |-ImplicitCastExpr 0x7fcc1c892838 <col:12> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   |   | |     |       | | `-DeclRefExpr 0x7fcc1c892758 <col:12> 'unsigned long (const char *)' Function 0x7fcc1c872778 'strlen' 'unsigned long (const char *)'
+|   |   | |     |       | `-ImplicitCastExpr 0x7fcc1c892898 <col:19, col:22> 'const char *' <BitCast>
+|   |   | |     |       |   `-ImplicitCastExpr 0x7fcc1c892880 <col:19, col:22> 'char *' <LValueToRValue>
+|   |   | |     |       |     `-MemberExpr 0x7fcc1c8927c0 <col:19, col:22> 'char *' lvalue ->ptr 0x7fcc1c892188
+|   |   | |     |       |       `-ImplicitCastExpr 0x7fcc1c8927a8 <col:19> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|   |   | |     |       |         `-DeclRefExpr 0x7fcc1c892780 <col:19> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|   |   | |     |       `-ImplicitCastExpr 0x7fcc1c892928 <col:30, col:33> 'unsigned long' <LValueToRValue>
+|   |   | |     |         `-MemberExpr 0x7fcc1c8928f0 <col:30, col:33> 'unsigned long' lvalue ->size 0x7fcc1c8920c8
+|   |   | |     |           `-ImplicitCastExpr 0x7fcc1c8928d8 <col:30> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|   |   | |     |             `-DeclRefExpr 0x7fcc1c8928b0 <col:30> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|   |   | |     `-UnaryOperator 0x7fcc1c892bd0 <line:12:37, col:40> 'int' prefix '!'
+|   |   | |       `-ParenExpr 0x7fcc1c892bb0 <col:38, col:40> 'int'
+|   |   | |         `-BinaryOperator 0x7fcc1c892b88 <line:17:12, col:33> 'int' '=='
+|   |   | |           |-CallExpr 0x7fcc1c892a98 <col:12, col:25> 'unsigned long'
+|   |   | |           | |-ImplicitCastExpr 0x7fcc1c892a80 <col:12> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   |   | |           | | `-DeclRefExpr 0x7fcc1c8929c8 <col:12> 'unsigned long (const char *)' Function 0x7fcc1c872778 'strlen' 'unsigned long (const char *)'
+|   |   | |           | `-ImplicitCastExpr 0x7fcc1c892ae0 <col:19, col:22> 'const char *' <BitCast>
+|   |   | |           |   `-ImplicitCastExpr 0x7fcc1c892ac8 <col:19, col:22> 'char *' <LValueToRValue>
+|   |   | |           |     `-MemberExpr 0x7fcc1c892a30 <col:19, col:22> 'char *' lvalue ->ptr 0x7fcc1c892188
+|   |   | |           |       `-ImplicitCastExpr 0x7fcc1c892a18 <col:19> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|   |   | |           |         `-DeclRefExpr 0x7fcc1c8929f0 <col:19> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|   |   | |           `-ImplicitCastExpr 0x7fcc1c892b70 <col:30, col:33> 'unsigned long' <LValueToRValue>
+|   |   | |             `-MemberExpr 0x7fcc1c892b38 <col:30, col:33> 'unsigned long' lvalue ->size 0x7fcc1c8920c8
+|   |   | |               `-ImplicitCastExpr 0x7fcc1c892b20 <col:30> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|   |   | |                 `-DeclRefExpr 0x7fcc1c892af8 <col:30> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|   |   | `-ParenExpr 0x7fcc1c892e98 <line:12:46, col:48> 'int'
+|   |   |   `-BinaryOperator 0x7fcc1c892e70 <line:17:12, col:33> 'int' '=='
+|   |   |     |-CallExpr 0x7fcc1c892d80 <col:12, col:25> 'unsigned long'
+|   |   |     | |-ImplicitCastExpr 0x7fcc1c892d68 <col:12> 'unsigned long (*)(const char *)' <FunctionToPointerDecay>
+|   |   |     | | `-DeclRefExpr 0x7fcc1c892cb0 <col:12> 'unsigned long (const char *)' Function 0x7fcc1c872778 'strlen' 'unsigned long (const char *)'
+|   |   |     | `-ImplicitCastExpr 0x7fcc1c892dc8 <col:19, col:22> 'const char *' <BitCast>
+|   |   |     |   `-ImplicitCastExpr 0x7fcc1c892db0 <col:19, col:22> 'char *' <LValueToRValue>
+|   |   |     |     `-MemberExpr 0x7fcc1c892d18 <col:19, col:22> 'char *' lvalue ->ptr 0x7fcc1c892188
+|   |   |     |       `-ImplicitCastExpr 0x7fcc1c892d00 <col:19> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|   |   |     |         `-DeclRefExpr 0x7fcc1c892cd8 <col:19> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|   |   |     `-ImplicitCastExpr 0x7fcc1c892e58 <col:30, col:33> 'unsigned long' <LValueToRValue>
+|   |   |       `-MemberExpr 0x7fcc1c892e20 <col:30, col:33> 'unsigned long' lvalue ->size 0x7fcc1c8920c8
+|   |   |         `-ImplicitCastExpr 0x7fcc1c892e08 <col:30> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x7fcc1c892de0 <col:30> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|   |   |-CStyleCastExpr 0x7fcc1c892f10 <line:13:4, col:11> 'void' <ToVoid>
+|   |   | `-IntegerLiteral 0x7fcc1c892ee0 <col:11> 'int' 0
+|   |   `-CallExpr 0x7fcc1c894550 <col:15, col:37> 'void'
+|   |     `-ImplicitCastExpr 0x7fcc1c894538 <col:15> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   |       `-DeclRefExpr 0x7fcc1c8944e8 <col:15> '<builtin fn type>' Function 0x7fcc1c894400 '__builtin_unreachable' 'void (void) __attribute__((noreturn))'
+|   `-ReturnStmt 0x7fcc1c894670 <line:18:3, col:13>
+|     `-ImplicitCastExpr 0x7fcc1c894658 <col:10, col:13> 'int' <IntegralCast>
+|       `-ImplicitCastExpr 0x7fcc1c894640 <col:10, col:13> 'unsigned long' <LValueToRValue>
+|         `-MemberExpr 0x7fcc1c894608 <col:10, col:13> 'unsigned long' lvalue ->size 0x7fcc1c8920c8
+|           `-ImplicitCastExpr 0x7fcc1c8945f0 <col:10> 'struct string_s *':'struct string_s *' <LValueToRValue>
+|             `-DeclRefExpr 0x7fcc1c8945c8 <col:10> 'struct string_s *':'struct string_s *' lvalue ParmVar 0x7fcc1c892460 's' 'struct string_s *':'struct string_s *'
+|-FunctionDecl 0x7fcc1c892638 <line:12:6> col:6 implicit used __builtin_constant_p 'int ()' extern
+| |-NoThrowAttr 0x7fcc1c8926d8 <col:6> Implicit
+| `-ConstAttr 0x7fcc1c892720 <col:6> Implicit
+`-FunctionDecl 0x7fcc1c894400 <line:13:15> col:15 implicit used __builtin_unreachable 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fcc1c8944a0 <col:15> Implicit

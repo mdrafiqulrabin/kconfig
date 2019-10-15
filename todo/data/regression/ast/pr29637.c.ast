@@ -1,0 +1,56 @@
+TranslationUnitDecl 0x7fe67682bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe677801000 <../Data/C2AST/pr29637.c:5:9, line:8:1> line:5:9 struct definition
+| |-AlignedAttr 0x7fe6778010b0 <col:32, col:42> aligned
+| | `-IntegerLiteral 0x7fe67682c960 <col:41> 'int' 8
+| |-FieldDecl 0x7fe677801118 <line:7:5, col:11> col:11 a 'short'
+| |-FieldDecl 0x7fe677801178 <col:5, col:14> col:14 b 'short'
+| |-FieldDecl 0x7fe6778011d8 <col:5, col:17> col:17 c 'short'
+| `-FieldDecl 0x7fe677801238 <col:5, col:20> col:20 d 'short'
+|-TypedefDecl 0x7fe6778012d0 <line:5:1, line:8:3> col:3 referenced A 'struct A':'A'
+| `-ElaboratedType 0x7fe677801280 'struct A' sugar
+|   `-RecordType 0x7fe677801090 'A'
+|     `-Record 0x7fe677801000 ''
+|-RecordDecl 0x7fe677801340 <line:10:9, line:13:1> line:10:9 struct definition
+| `-FieldDecl 0x7fe677801528 <line:12:3, col:9> col:5 referenced a 'A [24]'
+|-TypedefDecl 0x7fe6778015c0 <line:10:1, line:13:3> col:3 referenced B 'struct B':'B'
+| `-ElaboratedType 0x7fe677801570 'struct B' sugar
+|   `-RecordType 0x7fe6778013d0 'B'
+|     `-Record 0x7fe677801340 ''
+|-VarDecl 0x7fe677801640 <line:15:1, col:34> col:16 used b 'const A':'const A' static cinit
+| `-InitListExpr 0x7fe6778017e0 <col:20, col:34> 'A':'A'
+|   |-ImplicitCastExpr 0x7fe677801840 <col:22> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe6778016e0 <col:22> 'int' 0
+|   |-ImplicitCastExpr 0x7fe677801858 <col:25> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe677801700 <col:25> 'int' 0
+|   |-ImplicitCastExpr 0x7fe677801870 <col:28> 'short' <IntegralCast>
+|   | `-IntegerLiteral 0x7fe677801720 <col:28> 'int' 1
+|   `-ImplicitCastExpr 0x7fe677801888 <col:31, col:32> 'short' <IntegralCast>
+|     `-UnaryOperator 0x7fe677801760 <col:31, col:32> 'int' prefix '-'
+|       `-IntegerLiteral 0x7fe677801740 <col:32> 'int' 1
+`-FunctionDecl 0x7fe677801a30 <line:17:1, line:23:1> line:18:1 foo 'void (B *)'
+  |-ParmVarDecl 0x7fe677801928 <col:6, col:9> col:9 used x 'B *'
+  `-CompoundStmt 0x7fe677801ed0 <line:19:1, line:23:1>
+    |-DeclStmt 0x7fe677801b50 <line:20:3, col:8>
+    | `-VarDecl 0x7fe677801af0 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7fe677801e98 <line:21:3, line:22:15>
+      |-BinaryOperator 0x7fe677801bb0 <line:21:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7fe677801b68 <col:8> 'int' lvalue Var 0x7fe677801af0 'i' 'int'
+      | `-IntegerLiteral 0x7fe677801b90 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fe677801c38 <col:15, col:20> 'int' '<='
+      | |-ImplicitCastExpr 0x7fe677801c20 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fe677801bd8 <col:15> 'int' lvalue Var 0x7fe677801af0 'i' 'int'
+      | `-IntegerLiteral 0x7fe677801c00 <col:20> 'int' 20
+      |-CompoundAssignOperator 0x7fe677801ca8 <col:24, col:29> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+      | |-DeclRefExpr 0x7fe677801c60 <col:24> 'int' lvalue Var 0x7fe677801af0 'i' 'int'
+      | `-IntegerLiteral 0x7fe677801c88 <col:29> 'int' 4
+      `-BinaryOperator 0x7fe677801e70 <line:22:5, col:15> 'A':'A' '='
+        |-ArraySubscriptExpr 0x7fe677801e08 <col:5, col:11> 'A':'A' lvalue
+        | |-ImplicitCastExpr 0x7fe677801dd8 <col:5, col:8> 'A *' <ArrayToPointerDecay>
+        | | `-MemberExpr 0x7fe677801d20 <col:5, col:8> 'A [24]' lvalue ->a 0x7fe677801528
+        | |   `-ImplicitCastExpr 0x7fe677801d08 <col:5> 'B *' <LValueToRValue>
+        | |     `-DeclRefExpr 0x7fe677801ce0 <col:5> 'B *' lvalue ParmVar 0x7fe677801928 'x' 'B *'
+        | `-ImplicitCastExpr 0x7fe677801df0 <col:10> 'int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fe677801d58 <col:10> 'int' lvalue Var 0x7fe677801af0 'i' 'int'
+        `-ImplicitCastExpr 0x7fe677801e58 <col:15> 'A':'A' <LValueToRValue>
+          `-DeclRefExpr 0x7fe677801e30 <col:15> 'const A':'const A' lvalue Var 0x7fe677801640 'b' 'const A':'const A'

@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7f816601c6e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f8166805c00 <../Data/C2AST/pr42631.c:7:1, line:11:1> line:7:6 foo 'void ()'
+  `-CompoundStmt 0x7f8166805e48 <line:8:1, line:11:1>
+    |-DeclStmt 0x7f8166805d58 <line:9:3, col:13>
+    | `-VarDecl 0x7f8166805cf8 <col:3, col:12> col:12 used k 'unsigned int'
+    `-WhileStmt 0x7f8166805e28 <line:10:3, col:18>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f8166805df0 <col:10, col:16> 'int' '>'
+      | |-UnaryOperator 0x7f8166805d98 <col:10, col:12> 'unsigned int' prefix '--'
+      | | `-DeclRefExpr 0x7f8166805d70 <col:12> 'unsigned int' lvalue Var 0x7f8166805cf8 'k' 'unsigned int'
+      | `-ImplicitCastExpr 0x7f8166805dd8 <col:16> 'unsigned int' <IntegralCast>
+      |   `-IntegerLiteral 0x7f8166805db8 <col:16> 'int' 0
+      `-NullStmt 0x7f8166805e18 <col:18>

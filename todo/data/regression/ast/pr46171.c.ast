@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fb2598294e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fb259016800 <../Data/C2AST/pr46171.c:5:1, col:14> col:8 used bard 'double ()'
+|-FunctionDecl 0x7fb2590169c8 <line:6:1, col:18> col:7 used barf 'float (float)'
+| `-ParmVarDecl 0x7fb2590168f8 <col:13> col:18 'float'
+`-FunctionDecl 0x7fb259016b50 <line:8:1, line:13:1> line:9:1 foo 'void (float)'
+  |-ParmVarDecl 0x7fb259016a88 <col:6, col:12> col:12 used f 'float'
+  `-CompoundStmt 0x7fb259016e40 <line:10:1, line:13:1>
+    |-BinaryOperator 0x7fb259016cf8 <line:11:3, col:14> 'float' '='
+    | |-DeclRefExpr 0x7fb259016bf8 <col:3> 'float' lvalue ParmVar 0x7fb259016a88 'f' 'float'
+    | `-CallExpr 0x7fb259016cb0 <col:7, col:14> 'float'
+    |   |-ImplicitCastExpr 0x7fb259016c98 <col:7> 'float (*)(float)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fb259016c20 <col:7> 'float (float)' Function 0x7fb2590169c8 'barf' 'float (float)'
+    |   `-ImplicitCastExpr 0x7fb259016ce0 <col:13> 'float' <LValueToRValue>
+    |     `-DeclRefExpr 0x7fb259016c48 <col:13> 'float' lvalue ParmVar 0x7fb259016a88 'f' 'float'
+    `-DeclStmt 0x7fb259016e28 <line:12:3, col:21>
+      `-VarDecl 0x7fb259016d38 <col:3, col:20> col:10 d 'double' cinit
+        `-CallExpr 0x7fb259016e00 <col:14, col:20> 'double'
+          `-ImplicitCastExpr 0x7fb259016de8 <col:14> 'double (*)()' <FunctionToPointerDecay>
+            `-DeclRefExpr 0x7fb259016d98 <col:14> 'double ()' Function 0x7fb259016800 'bard' 'double ()'

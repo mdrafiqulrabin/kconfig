@@ -1,0 +1,71 @@
+TranslationUnitDecl 0x7f805202bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8053056e98 <../Data/C2AST/pr71873.c:6:9, line:9:1> line:6:9 struct definition
+| |-FieldDecl 0x7f8053056f50 <line:7:3, col:11> col:11 x 'uint8_t':'unsigned char'
+| `-FieldDecl 0x7f8053056fa8 <line:8:3, col:12> col:12 referenced y 'uint32_t':'unsigned int'
+|-TypedefDecl 0x7f8053057040 <line:6:1, line:9:3> col:3 referenced A 'struct A':'A'
+| `-ElaboratedType 0x7f8053056ff0 'struct A' sugar
+|   `-RecordType 0x7f8053056f20 'A'
+|     `-Record 0x7f8053056e98 ''
+|-VarDecl 0x7f80530570e0 <line:11:1, col:3> col:3 used a 'A':'A'
+|-FunctionDecl 0x7f8053057268 <line:13:1, col:19> col:12 used bar 'int (int)' extern
+| `-ParmVarDecl 0x7f8053057198 <col:16> col:19 'int'
+|-FunctionDecl 0x7f80530573f8 <line:14:1, col:29> col:12 used foo 'int (char *, ...)' extern
+| `-ParmVarDecl 0x7f8053057328 <col:17, col:23> col:23 s 'char *'
+|-VarDecl 0x7f80530574b0 <line:16:1, col:16> col:16 used param 'uint8_t':'unsigned char' extern
+|-VarDecl 0x7f8053057520 <line:17:1, col:16> col:16 used h 'uint8_t':'unsigned char' extern
+|-VarDecl 0x7f8053057590 <col:1, col:18> col:18 used m 'uint8_t':'unsigned char' extern
+|-VarDecl 0x7f8053057600 <col:1, col:20> col:20 used s 'uint8_t':'unsigned char' extern
+|-VarDecl 0x7f8053057670 <col:1, col:22> col:22 used ld 'uint8_t':'unsigned char' extern
+|-VarDecl 0x7f80530576e0 <col:1, col:25> col:25 used lm 'uint8_t':'unsigned char' extern
+|-VarDecl 0x7f8053057780 <line:18:1, col:17> col:17 used d 'uint16_t':'unsigned short' extern
+`-FunctionDecl 0x7f80530578c0 <line:20:1, line:30:1> line:20:6 gps_parse_string 'void (int)'
+  |-ParmVarDecl 0x7f80530577f8 <col:23, col:27> col:27 used z 'int'
+  `-CompoundStmt 0x7f805305f140 <line:21:1, line:30:1>
+    `-WhileStmt 0x7f805305f120 <line:22:3, line:29:3>
+      |-<<<NULL>>>
+      |-CallExpr 0x7f805305ea00 <line:22:10, col:15> 'int'
+      | |-ImplicitCastExpr 0x7f80530579e8 <col:10> 'int (*)(int)' <FunctionToPointerDecay>
+      | | `-DeclRefExpr 0x7f8053057968 <col:10> 'int (int)' Function 0x7f8053057268 'bar' 'int (int)'
+      | `-ImplicitCastExpr 0x7f805305ea30 <col:14> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8053057990 <col:14> 'int' lvalue ParmVar 0x7f80530577f8 'z' 'int'
+      `-CompoundStmt 0x7f805305f108 <line:23:3, line:29:3>
+        `-SwitchStmt 0x7f805305eaa0 <line:24:5, line:28:5>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-ImplicitCastExpr 0x7f805305ea88 <line:24:13> 'int' <IntegralCast>
+          | `-ImplicitCastExpr 0x7f805305ea70 <col:13> 'uint8_t':'unsigned char' <LValueToRValue>
+          |   `-DeclRefExpr 0x7f805305ea48 <col:13> 'uint8_t':'unsigned char' lvalue Var 0x7f80530574b0 'param' 'uint8_t':'unsigned char'
+          `-CompoundStmt 0x7f805305f0d8 <line:25:5, line:28:5>
+            |-CaseStmt 0x7f805305eaf0 <line:26:7, col:38>
+            | |-IntegerLiteral 0x7f805305ead0 <col:12> 'int' 0
+            | |-<<<NULL>>>
+            | `-CallExpr 0x7f805305edd0 <col:15, col:38> 'int'
+            |   |-ImplicitCastExpr 0x7f805305edb8 <col:15> 'int (*)(char *, ...)' <FunctionToPointerDecay>
+            |   | `-DeclRefExpr 0x7f805305eb28 <col:15> 'int (char *, ...)' Function 0x7f80530573f8 'foo' 'int (char *, ...)'
+            |   |-ImplicitCastExpr 0x7f805305ee20 <col:19> 'char *' <ArrayToPointerDecay>
+            |   | `-StringLiteral 0x7f805305eb88 <col:19> 'char [2]' lvalue "a"
+            |   |-UnaryOperator 0x7f805305ec38 <col:24, col:25> 'uint8_t *' prefix '&'
+            |   | `-DeclRefExpr 0x7f805305ebb8 <col:25> 'uint8_t':'unsigned char' lvalue Var 0x7f8053057520 'h' 'uint8_t':'unsigned char'
+            |   |-UnaryOperator 0x7f805305ec80 <col:28, col:29> 'uint8_t *' prefix '&'
+            |   | `-DeclRefExpr 0x7f805305ec58 <col:29> 'uint8_t':'unsigned char' lvalue Var 0x7f8053057590 'm' 'uint8_t':'unsigned char'
+            |   |-UnaryOperator 0x7f805305ecc8 <col:32, col:33> 'uint8_t *' prefix '&'
+            |   | `-DeclRefExpr 0x7f805305eca0 <col:33> 'uint8_t':'unsigned char' lvalue Var 0x7f8053057600 's' 'uint8_t':'unsigned char'
+            |   `-UnaryOperator 0x7f805305ed68 <col:36, col:37> 'uint16_t *' prefix '&'
+            |     `-DeclRefExpr 0x7f805305ece8 <col:37> 'uint16_t':'unsigned short' lvalue Var 0x7f8053057780 'd' 'uint16_t':'unsigned short'
+            |-BreakStmt 0x7f805305ee38 <col:41>
+            |-CaseStmt 0x7f805305ee60 <line:27:7, col:38>
+            | |-IntegerLiteral 0x7f805305ee40 <col:12> 'int' 1
+            | |-<<<NULL>>>
+            | `-CallExpr 0x7f805305f070 <col:15, col:38> 'int'
+            |   |-ImplicitCastExpr 0x7f805305f058 <col:15> 'int (*)(char *, ...)' <FunctionToPointerDecay>
+            |   | `-DeclRefExpr 0x7f805305ee98 <col:15> 'int (char *, ...)' Function 0x7f80530573f8 'foo' 'int (char *, ...)'
+            |   |-ImplicitCastExpr 0x7f805305f0b8 <col:19> 'char *' <ArrayToPointerDecay>
+            |   | `-StringLiteral 0x7f805305eec0 <col:19> 'char [2]' lvalue "d"
+            |   |-UnaryOperator 0x7f805305ef18 <col:24, col:25> 'uint8_t *' prefix '&'
+            |   | `-DeclRefExpr 0x7f805305eef0 <col:25> 'uint8_t':'unsigned char' lvalue Var 0x7f8053057670 'ld' 'uint8_t':'unsigned char'
+            |   |-UnaryOperator 0x7f805305ef60 <col:29, col:30> 'uint8_t *' prefix '&'
+            |   | `-DeclRefExpr 0x7f805305ef38 <col:30> 'uint8_t':'unsigned char' lvalue Var 0x7f80530576e0 'lm' 'uint8_t':'unsigned char'
+            |   `-UnaryOperator 0x7f805305f038 <col:34, col:37> 'uint32_t *' prefix '&'
+            |     `-MemberExpr 0x7f805305efa8 <col:35, col:37> 'uint32_t':'unsigned int' lvalue .y 0x7f8053056fa8
+            |       `-DeclRefExpr 0x7f805305ef80 <col:35> 'A':'A' lvalue Var 0x7f80530570e0 'a' 'A':'A'
+            `-BreakStmt 0x7f805305f0d0 <col:41>

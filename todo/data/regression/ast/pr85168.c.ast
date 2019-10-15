@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7ffd8c8174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ffd8c818160 <../Data/C2AST/pr85168.c:4:9, line:8:1> line:4:9 struct definition
+| |-RecordDecl 0x7ffd8d010020 <line:5:5, line:7:5> line:5:5 struct definition
+| | `-FieldDecl 0x7ffd8d0100e0 <line:6:2, col:7> col:7 referenced a 'char'
+| `-FieldDecl 0x7ffd8d010180 <line:5:5, line:7:7> col:7 referenced b 'struct (anonymous struct at ../Data/C2AST/pr85168.c:5:5)':'struct c::(anonymous at ../Data/C2AST/pr85168.c:5:5)'
+|-TypedefDecl 0x7ffd8d010260 <line:4:1, line:8:3> col:3 referenced c 'struct c':'c'
+| `-ElaboratedType 0x7ffd8d010210 'struct c' sugar
+|   `-RecordType 0x7ffd8d010000 'c'
+|     `-Record 0x7ffd8c818160 ''
+|-VarDecl 0x7ffd8d0102e8 <line:10:1, col:5> col:5 used d 'int'
+|-VarDecl 0x7ffd8d0103a0 <col:1, col:8> col:8 used f 'int'
+|-VarDecl 0x7ffd8d0104a8 <line:11:1, col:4> col:4 used e 'c *'
+|-FunctionDecl 0x7ffd8d0105d0 <line:13:1, col:19> col:13 used i 'void (void)' extern
+|-FunctionDecl 0x7ffd8d0106b8 <line:14:1, col:52> col:13 used sejtmp 'void ()' extern
+| `-ReturnsTwiceAttr 0x7ffd8d010758 <col:38>
+`-FunctionDecl 0x7ffd8d010830 <line:16:1, line:30:1> line:16:6 g 'void (void)'
+  `-CompoundStmt 0x7ffd8d010f10 <line:17:1, line:30:1>
+    |-DeclStmt 0x7ffd8d010980 <line:18:3, col:11>
+    | `-VarDecl 0x7ffd8d0108e0 <col:3, col:10> col:6 used h 'c *' cinit
+    |   `-ImplicitCastExpr 0x7ffd8d010968 <col:10> 'c *' <LValueToRValue>
+    |     `-DeclRefExpr 0x7ffd8d010940 <col:10> 'c *' lvalue Var 0x7ffd8d0104a8 'e' 'c *'
+    |-IfStmt 0x7ffd8d010cb8 <line:19:3, line:26:5>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffd8d0109c0 <line:19:7> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7ffd8d010998 <col:7> 'int' lvalue Var 0x7ffd8d0103a0 'f' 'int'
+    | |-CompoundStmt 0x7ffd8d010c90 <line:20:5, line:26:5>
+    | | |-CallExpr 0x7ffd8d010a40 <line:21:7, col:9> 'void'
+    | | | `-ImplicitCastExpr 0x7ffd8d010a28 <col:7> 'void (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x7ffd8d0109d8 <col:7> 'void (void)' Function 0x7ffd8d0105d0 'i' 'void (void)'
+    | | |-UnaryOperator 0x7ffd8d010a90 <line:22:7, col:8> 'c *' postfix '--'
+    | | | `-DeclRefExpr 0x7ffd8d010a68 <col:7> 'c *' lvalue Var 0x7ffd8d0108e0 'h' 'c *'
+    | | `-IfStmt 0x7ffd8d010c58 <line:23:7, line:25:6>
+    | |   |-<<<NULL>>>
+    | |   |-<<<NULL>>>
+    | |   |-ImplicitCastExpr 0x7ffd8d010ad8 <line:23:11> 'int' <LValueToRValue>
+    | |   | `-DeclRefExpr 0x7ffd8d010ab0 <col:11> 'int' lvalue Var 0x7ffd8d0102e8 'd' 'int'
+    | |   |-IfStmt 0x7ffd8d010c20 <line:24:2, line:25:6>
+    | |   | |-<<<NULL>>>
+    | |   | |-<<<NULL>>>
+    | |   | |-ImplicitCastExpr 0x7ffd8d010ba0 <line:24:6, col:11> 'char' <LValueToRValue>
+    | |   | | `-MemberExpr 0x7ffd8d010b68 <col:6, col:11> 'char' lvalue .a 0x7ffd8d0100e0
+    | |   | |   `-MemberExpr 0x7ffd8d010b30 <col:6, col:9> 'struct (anonymous struct at ../Data/C2AST/pr85168.c:5:5)':'struct c::(anonymous at ../Data/C2AST/pr85168.c:5:5)' lvalue ->b 0x7ffd8d010180
+    | |   | |     `-ImplicitCastExpr 0x7ffd8d010b18 <col:6> 'c *' <LValueToRValue>
+    | |   | |       `-DeclRefExpr 0x7ffd8d010af0 <col:6> 'c *' lvalue Var 0x7ffd8d0108e0 'h' 'c *'
+    | |   | |-CallExpr 0x7ffd8d010bf8 <line:25:4, col:6> 'void'
+    | |   | | `-ImplicitCastExpr 0x7ffd8d010be0 <col:4> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   | |   `-DeclRefExpr 0x7ffd8d010bb8 <col:4> 'void (void)' Function 0x7ffd8d0105d0 'i' 'void (void)'
+    | |   | `-<<<NULL>>>
+    | |   `-<<<NULL>>>
+    | `-<<<NULL>>>
+    |-IfStmt 0x7ffd8d010e48 <line:27:3, line:28:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7ffd8d010da0 <line:27:7, col:12> 'char' <LValueToRValue>
+    | | `-MemberExpr 0x7ffd8d010d68 <col:7, col:12> 'char' lvalue .a 0x7ffd8d0100e0
+    | |   `-MemberExpr 0x7ffd8d010d30 <col:7, col:10> 'struct (anonymous struct at ../Data/C2AST/pr85168.c:5:5)':'struct c::(anonymous at ../Data/C2AST/pr85168.c:5:5)' lvalue ->b 0x7ffd8d010180
+    | |     `-ImplicitCastExpr 0x7ffd8d010d18 <col:7> 'c *' <LValueToRValue>
+    | |       `-DeclRefExpr 0x7ffd8d010cf0 <col:7> 'c *' lvalue Var 0x7ffd8d0108e0 'h' 'c *'
+    | |-CallExpr 0x7ffd8d010e20 <line:28:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7ffd8d010e08 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7ffd8d010db8 <col:5> 'void ()' Function 0x7ffd8d0106b8 'sejtmp' 'void ()'
+    | `-<<<NULL>>>
+    `-BinaryOperator 0x7ffd8d010ee8 <line:29:3, col:7> 'c *' '='
+      |-DeclRefExpr 0x7ffd8d010e80 <col:3> 'c *' lvalue Var 0x7ffd8d0104a8 'e' 'c *'
+      `-ImplicitCastExpr 0x7ffd8d010ed0 <col:7> 'c *' <LValueToRValue>
+        `-DeclRefExpr 0x7ffd8d010ea8 <col:7> 'c *' lvalue Var 0x7ffd8d0108e0 'h' 'c *'

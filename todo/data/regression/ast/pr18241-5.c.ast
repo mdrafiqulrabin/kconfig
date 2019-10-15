@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fe99e02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe99e814a50 <../Data/C2AST/pr18241-5.c:4:6> col:6 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe99e814af0 prev 0x7fe99e814a50 <col:1, col:17> col:6 used abort 'void (void) __attribute__((noreturn))'
+`-FunctionDecl 0x7fe99e814be0 <line:6:1, line:14:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7fe99e8150c8 <line:7:1, line:14:1>
+    |-DeclStmt 0x7fe99e814d38 <line:8:3, col:8>
+    | `-VarDecl 0x7fe99e814cd8 <col:3, col:7> col:7 used a 'int'
+    |-DeclStmt 0x7fe99e814e80 <line:9:3, col:23>
+    | `-VarDecl 0x7fe99e814d90 <col:3, col:22> col:17 used b 'volatile int *' cinit
+    |   `-ImplicitCastExpr 0x7fe99e814e68 <col:21, col:22> 'volatile int *' <BitCast>
+    |     `-UnaryOperator 0x7fe99e814e48 <col:21, col:22> 'int *' prefix '&'
+    |       `-DeclRefExpr 0x7fe99e814df0 <col:22> 'int' lvalue Var 0x7fe99e814cd8 'a' 'int'
+    |-BinaryOperator 0x7fe99e814ee0 <line:10:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe99e814e98 <col:3> 'int' lvalue Var 0x7fe99e814cd8 'a' 'int'
+    | `-IntegerLiteral 0x7fe99e814ec0 <col:7> 'int' 1
+    |-IfStmt 0x7fe99e815058 <line:11:3, line:12:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe99e814fa0 <line:11:7, col:13> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fe99e814f88 <col:7, col:8> 'int' <LValueToRValue>
+    | | | `-UnaryOperator 0x7fe99e814f48 <col:7, col:8> 'volatile int' lvalue prefix '*'
+    | | |   `-ImplicitCastExpr 0x7fe99e814f30 <col:8> 'volatile int *' <LValueToRValue>
+    | | |     `-DeclRefExpr 0x7fe99e814f08 <col:8> 'volatile int *' lvalue Var 0x7fe99e814d90 'b' 'volatile int *'
+    | | `-IntegerLiteral 0x7fe99e814f68 <col:13> 'int' 1
+    | |-CallExpr 0x7fe99e815030 <line:12:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe99e815018 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe99e814fc8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe99e814af0 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe99e8150b0 <line:13:3, col:10>
+      `-IntegerLiteral 0x7fe99e815090 <col:10> 'int' 0

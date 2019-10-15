@@ -1,0 +1,59 @@
+../Data/C2AST/pr56154-3.c:6:10: fatal error: '../nop.h' file not found
+#include "../nop.h"
+         ^~~~~~~~~~
+TranslationUnitDecl 0x7fbbe58174e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbbe5817a60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbbe5817780 '__int128'
+|-TypedefDecl 0x7fbbe5817ad0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbbe58177a0 'unsigned __int128'
+|-TypedefDecl 0x7fbbe5817da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbbe5817bb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbbe5817b28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbbe5817e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbbe5817e00 'char *'
+|   `-BuiltinType 0x7fbbe5817580 'char'
+|-TypedefDecl 0x7fbbe5818108 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbbe58180b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbbe5817f20 'struct __va_list_tag'
+|     `-Record 0x7fbbe5817e98 '__va_list_tag'
+|-FunctionDecl 0x7fbbe402f450 <../Data/C2AST/pr56154-3.c:8:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbbe402f4f0 prev 0x7fbbe402f450 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbbe402f678 <line:10:1, line:24:1> line:11:1 used foo 'int (int)'
+| |-ParmVarDecl 0x7fbbe402f5a8 <col:6, col:10> col:10 used x 'int'
+| |-CompoundStmt 0x7fbbe402fa40 <line:12:1, line:24:1>
+| | |-UnaryOperator 0x7fbbe402f7d0 <line:13:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f7a8 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f818 <line:14:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f7f0 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f860 <line:15:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f838 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f8a8 <line:16:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f880 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f8f0 <line:17:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f8c8 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f938 <line:18:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f910 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f980 <line:19:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f958 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | |-UnaryOperator 0x7fbbe402f9c8 <line:20:3, col:4> 'int' postfix '++'
+| | | `-DeclRefExpr 0x7fbbe402f9a0 <col:3> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| | `-ReturnStmt 0x7fbbe402fa28 <line:23:3, col:10>
+| |   `-ImplicitCastExpr 0x7fbbe402fa10 <col:10> 'int' <LValueToRValue>
+| |     `-DeclRefExpr 0x7fbbe402f9e8 <col:10> 'int' lvalue ParmVar 0x7fbbe402f5a8 'x' 'int'
+| `-NoInlineAttr 0x7fbbe402f720 <line:10:16>
+`-FunctionDecl 0x7fbbe402fb28 <line:26:1, line:31:1> line:27:1 test_main 'void (void)'
+  `-CompoundStmt 0x7fbbe402fd90 <line:28:1, line:31:1>
+    `-IfStmt 0x7fbbe402fd58 <line:29:3, line:30:12>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fbbe402fca0 <line:29:7, col:19> 'int' '!='
+      | |-CallExpr 0x7fbbe402fc50 <col:7, col:14> 'int'
+      | | |-ImplicitCastExpr 0x7fbbe402fc38 <col:7> 'int (*)(int)' <FunctionToPointerDecay>
+      | | | `-DeclRefExpr 0x7fbbe402fbc8 <col:7> 'int (int)' Function 0x7fbbe402f678 'foo' 'int (int)'
+      | | `-IntegerLiteral 0x7fbbe402fbf0 <col:12> 'int' 20
+      | `-IntegerLiteral 0x7fbbe402fc80 <col:19> 'int' 28
+      |-CallExpr 0x7fbbe402fd30 <line:30:5, col:12> 'void'
+      | `-ImplicitCastExpr 0x7fbbe402fd18 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fbbe402fcc8 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbbe402f4f0 'abort' 'void (void) __attribute__((noreturn))'
+      1 error generated.
+`-<<<NULL>>>

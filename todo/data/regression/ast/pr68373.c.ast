@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7f870302bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7f87038142f8 <../Data/C2AST/pr68373.c:4:1, line:12:1> line:5:1 foo 'unsigned int (int *, unsigned int)'
+  |-ParmVarDecl 0x7f870302c9a0 <col:6, col:11> col:11 used a 'int *'
+  |-ParmVarDecl 0x7f8703814218 <col:14, col:27> col:27 used n 'unsigned int'
+  `-CompoundStmt 0x7f8703814770 <line:6:1, line:12:1>
+    |-DeclStmt 0x7f8703814460 <line:7:3, col:17>
+    | `-VarDecl 0x7f8703814400 <col:3, col:16> col:16 used i 'unsigned int'
+    |-ForStmt 0x7f87038146e0 <line:8:3, line:9:12>
+    | |-BinaryOperator 0x7f87038144d8 <line:8:8, col:12> 'unsigned int' '='
+    | | |-DeclRefExpr 0x7f8703814478 <col:8> 'unsigned int' lvalue Var 0x7f8703814400 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f87038144c0 <col:12> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7f87038144a0 <col:12> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7f8703814580 <col:15, col:19> 'int' '<'
+    | | |-ImplicitCastExpr 0x7f8703814550 <col:15> 'unsigned int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7f8703814500 <col:15> 'unsigned int' lvalue Var 0x7f8703814400 'i' 'unsigned int'
+    | | `-ImplicitCastExpr 0x7f8703814568 <col:19> 'unsigned int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7f8703814528 <col:19> 'unsigned int' lvalue ParmVar 0x7f8703814218 'n' 'unsigned int'
+    | |-UnaryOperator 0x7f87038145d0 <col:22, col:24> 'unsigned int' prefix '++'
+    | | `-DeclRefExpr 0x7f87038145a8 <col:24> 'unsigned int' lvalue Var 0x7f8703814400 'i' 'unsigned int'
+    | `-BinaryOperator 0x7f87038146b8 <line:9:5, col:12> 'int' '='
+    |   |-ArraySubscriptExpr 0x7f8703814670 <col:5, col:8> 'int' lvalue
+    |   | |-ImplicitCastExpr 0x7f8703814640 <col:5> 'int *' <LValueToRValue>
+    |   | | `-DeclRefExpr 0x7f87038145f0 <col:5> 'int *' lvalue ParmVar 0x7f870302c9a0 'a' 'int *'
+    |   | `-ImplicitCastExpr 0x7f8703814658 <col:7> 'unsigned int' <LValueToRValue>
+    |   |   `-DeclRefExpr 0x7f8703814618 <col:7> 'unsigned int' lvalue Var 0x7f8703814400 'i' 'unsigned int'
+    |   `-IntegerLiteral 0x7f8703814698 <col:12> 'int' 1
+    `-ReturnStmt 0x7f8703814758 <line:11:3, col:10>
+      `-ImplicitCastExpr 0x7f8703814740 <col:10> 'unsigned int' <LValueToRValue>
+        `-DeclRefExpr 0x7f8703814718 <col:10> 'unsigned int' lvalue Var 0x7f8703814400 'i' 'unsigned int'

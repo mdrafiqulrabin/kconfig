@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7feaf202bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7feaf202c960 <../Data/C2AST/pr40432.c:3:1, line:6:1> line:3:7 union U definition
+| |-RecordDecl 0x7feaf283b420 parent 0x7feaf202bce8 <line:4:3, col:10> col:10 struct something
+| |-FieldDecl 0x7feaf283b590 <col:3, col:21> col:21 sth 'struct something *'
+| `-FieldDecl 0x7feaf283b5f0 <line:5:3, col:9> col:9 referenced nothing 'void *'
+`-FunctionDecl 0x7feaf283b880 <line:8:1, line:16:1> line:9:1 foo 'void (union U *, void *)'
+  |-ParmVarDecl 0x7feaf283b6f0 <col:6, col:15> col:15 used target 'union U *'
+  |-ParmVarDecl 0x7feaf283b768 <col:23, col:29> col:29 used p 'void *'
+  `-CompoundStmt 0x7feaf283bbb0 <line:10:1, line:16:1>
+    |-DeclStmt 0x7feaf283b9f0 <line:11:3, col:12>
+    | `-VarDecl 0x7feaf283b990 <col:3, col:11> col:11 used u 'union U':'union U'
+    |-BinaryOperator 0x7feaf283baa8 <line:13:3, col:15> 'void *' '='
+    | |-MemberExpr 0x7feaf283ba30 <col:3, col:5> 'void *' lvalue .nothing 0x7feaf283b5f0
+    | | `-DeclRefExpr 0x7feaf283ba08 <col:3> 'union U':'union U' lvalue Var 0x7feaf283b990 'u' 'union U':'union U'
+    | `-ImplicitCastExpr 0x7feaf283ba90 <col:15> 'void *' <LValueToRValue>
+    |   `-DeclRefExpr 0x7feaf283ba68 <col:15> 'void *' lvalue ParmVar 0x7feaf283b768 'p' 'void *'
+    |-BinaryOperator 0x7feaf283bb70 <line:14:3, col:13> 'union U':'union U' '='
+    | |-UnaryOperator 0x7feaf283bb10 <col:3, col:4> 'union U':'union U' lvalue prefix '*'
+    | | `-ImplicitCastExpr 0x7feaf283baf8 <col:4> 'union U *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7feaf283bad0 <col:4> 'union U *' lvalue ParmVar 0x7feaf283b6f0 'target' 'union U *'
+    | `-ImplicitCastExpr 0x7feaf283bb58 <col:13> 'union U':'union U' <LValueToRValue>
+    |   `-DeclRefExpr 0x7feaf283bb30 <col:13> 'union U':'union U' lvalue Var 0x7feaf283b990 'u' 'union U':'union U'
+    `-ReturnStmt 0x7feaf283bb98 <line:15:3>

@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fc48e0186e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc48e0322a0 <../Data/C2AST/pr32280-1.c:5:1, line:9:1> line:6:1 t1 '__uint128_t (__uint128_t)'
+| |-ParmVarDecl 0x7fc48e019390 <col:5, col:17> col:17 used a '__uint128_t':'unsigned __int128'
+| `-CompoundStmt 0x7fc48e032428 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7fc48e032410 <line:8:3, col:15>
+|     `-BinaryOperator 0x7fc48e0323e8 <col:10, col:15> '__uint128_t':'unsigned __int128' '<<'
+|       |-ImplicitCastExpr 0x7fc48e0323d0 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fc48e032388 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7fc48e019390 'a' '__uint128_t':'unsigned __int128'
+|       `-IntegerLiteral 0x7fc48e0323b0 <col:15> 'int' 8
+`-FunctionDecl 0x7fc48e0324d8 <line:11:1, line:15:1> line:12:1 t2 '__uint128_t (__uint128_t)'
+  |-ParmVarDecl 0x7fc48e032450 <col:5, col:17> col:17 used a '__uint128_t':'unsigned __int128'
+  `-CompoundStmt 0x7fc48e032620 <line:13:1, line:15:1>
+    `-ReturnStmt 0x7fc48e032608 <line:14:3, col:15>
+      `-BinaryOperator 0x7fc48e0325e0 <col:10, col:15> '__uint128_t':'unsigned __int128' '>>'
+        |-ImplicitCastExpr 0x7fc48e0325c8 <col:10> '__uint128_t':'unsigned __int128' <LValueToRValue>
+        | `-DeclRefExpr 0x7fc48e032580 <col:10> '__uint128_t':'unsigned __int128' lvalue ParmVar 0x7fc48e032450 'a' '__uint128_t':'unsigned __int128'
+        `-IntegerLiteral 0x7fc48e0325a8 <col:15> 'int' 8

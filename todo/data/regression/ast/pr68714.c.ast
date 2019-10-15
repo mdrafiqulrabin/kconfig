@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7fc10e0064e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fc10e042600 <../Data/C2AST/pr68714.c:5:1, col:13> col:13 referenced vec '__attribute__((__vector_size__(4 * sizeof(int)))) int'
+| `-VectorType 0x7fc10e007180 '__attribute__((__vector_size__(4 * sizeof(int)))) int' 4
+|   `-BuiltinType 0x7fc10e0065e0 'int'
+`-FunctionDecl 0x7fc10e042810 <line:6:1, line:8:1> line:6:5 f 'vec (vec, vec)'
+  |-ParmVarDecl 0x7fc10e042690 <col:7, col:11> col:11 used x 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  |-ParmVarDecl 0x7fc10e042700 <col:13, col:17> col:17 used y 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+  `-CompoundStmt 0x7fc10e042a90 <col:19, line:8:1>
+    `-ReturnStmt 0x7fc10e042a78 <line:7:3, col:17>
+      `-BinaryOperator 0x7fc10e042a50 <col:10, col:17> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '|'
+        |-BinaryOperator 0x7fc10e042980 <col:10, col:12> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '<'
+        | |-ImplicitCastExpr 0x7fc10e042950 <col:10> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        | | `-DeclRefExpr 0x7fc10e042900 <col:10> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc10e042690 'x' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        | `-ImplicitCastExpr 0x7fc10e042968 <col:12> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+        |   `-DeclRefExpr 0x7fc10e042928 <col:12> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc10e042700 'y' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+        `-BinaryOperator 0x7fc10e042a28 <col:14, col:17> '__attribute__((__vector_size__(4 * sizeof(int)))) int' '=='
+          |-ImplicitCastExpr 0x7fc10e0429f8 <col:14> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+          | `-DeclRefExpr 0x7fc10e0429a8 <col:14> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc10e042690 'x' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'
+          `-ImplicitCastExpr 0x7fc10e042a10 <col:17> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' <LValueToRValue>
+            `-DeclRefExpr 0x7fc10e0429d0 <col:17> 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int' lvalue ParmVar 0x7fc10e042700 'y' 'vec':'__attribute__((__vector_size__(4 * sizeof(int)))) int'

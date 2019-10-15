@@ -1,0 +1,122 @@
+TranslationUnitDecl 0x7fe56f013ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe56f904500 <../Data/C2AST/pr40470-1.c:4:1, col:21> col:9 used load '__m128i (char *)'
+| `-ParmVarDecl 0x7fe56f904400 <col:15, col:20> col:21 'char *'
+|-FunctionDecl 0x7fe56f9048f8 <line:5:1, line:22:1> line:6:1 foo 'char *(char *, char *, int, __m128i, __m128i)'
+| |-ParmVarDecl 0x7fe56f9045c0 <col:6, col:12> col:12 used p1 'char *'
+| |-ParmVarDecl 0x7fe56f904638 <col:16, col:22> col:22 used p2 'char *'
+| |-ParmVarDecl 0x7fe56f9046b0 <line:7:6, col:10> col:10 used bmsk 'int'
+| |-ParmVarDecl 0x7fe56f904720 <col:16, col:24> col:24 used mask1 '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| |-ParmVarDecl 0x7fe56f904790 <col:31, col:39> col:39 used mask2 '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+| `-CompoundStmt 0x7fe56f905e78 <line:8:1, line:22:1>
+|   |-DeclStmt 0x7fe56f904a58 <line:9:3, col:14>
+|   | `-VarDecl 0x7fe56f9049d8 <col:3, col:13> col:7 used len 'int' cinit
+|   |   `-IntegerLiteral 0x7fe56f904a38 <col:13> 'int' 0
+|   |-DeclStmt 0x7fe56f904b68 <line:10:3, col:23>
+|   | |-VarDecl 0x7fe56f904a80 <col:3, col:11> col:11 used frag1 '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   | `-VarDecl 0x7fe56f904af0 <col:3, col:18> col:18 used frag2 '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |-DeclStmt 0x7fe56f904bf8 <line:11:3, col:13>
+|   | `-VarDecl 0x7fe56f904b98 <col:3, col:8> col:8 used cmp_s 'int'
+|   |-IfStmt 0x7fe56f904d28 <line:12:3, col:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fe56f904cb0 <col:7, col:12> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7fe56f904c98 <col:8, col:12> 'char' <LValueToRValue>
+|   | |   `-ArraySubscriptExpr 0x7fe56f904c70 <col:8, col:12> 'char' lvalue
+|   | |     |-ImplicitCastExpr 0x7fe56f904c58 <col:8> 'char *' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7fe56f904c10 <col:8> 'char *' lvalue ParmVar 0x7fe56f904638 'p2' 'char *'
+|   | |     `-IntegerLiteral 0x7fe56f904c38 <col:11> 'int' 0
+|   | |-ReturnStmt 0x7fe56f904d10 <col:15, col:22>
+|   | | `-ImplicitCastExpr 0x7fe56f904cf8 <col:22> 'char *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe56f904cd0 <col:22> 'char *' lvalue ParmVar 0x7fe56f9045c0 'p1' 'char *'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fe56f904ed0 <line:13:3, /usr/include/sys/_types.h:52:33>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-UnaryOperator 0x7fe56f904e00 <../Data/C2AST/pr40470-1.c:13:7, col:12> 'int' prefix '!'
+|   | | `-ImplicitCastExpr 0x7fe56f904de8 <col:8, col:12> 'char' <LValueToRValue>
+|   | |   `-ArraySubscriptExpr 0x7fe56f904dc0 <col:8, col:12> 'char' lvalue
+|   | |     |-ImplicitCastExpr 0x7fe56f904da8 <col:8> 'char *' <LValueToRValue>
+|   | |     | `-DeclRefExpr 0x7fe56f904d60 <col:8> 'char *' lvalue ParmVar 0x7fe56f9045c0 'p1' 'char *'
+|   | |     `-IntegerLiteral 0x7fe56f904d88 <col:11> 'int' 0
+|   | |-ReturnStmt 0x7fe56f904eb8 <col:16, /usr/include/sys/_types.h:52:33>
+|   | | `-ImplicitCastExpr 0x7fe56f904ea0 <col:23, col:33> 'char *' <NullToPointer>
+|   | |   `-ParenExpr 0x7fe56f904e80 <col:23, col:33> 'void *'
+|   | |     `-CStyleCastExpr 0x7fe56f904e58 <col:24, col:32> 'void *' <NullToPointer>
+|   | |       `-IntegerLiteral 0x7fe56f904e20 <col:32> 'int' 0
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x7fe56f905038 <../Data/C2AST/pr40470-1.c:14:3, col:19> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+|   | |-DeclRefExpr 0x7fe56f904f08 <col:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904af0 'frag2' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   | `-CallExpr 0x7fe56f904ff0 <col:11, col:19> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   |-ImplicitCastExpr 0x7fe56f904fd8 <col:11> '__m128i (*)(char *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fe56f904f30 <col:11> '__m128i (char *)' Function 0x7fe56f904500 'load' '__m128i (char *)'
+|   |   `-ImplicitCastExpr 0x7fe56f905020 <col:17> 'char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe56f904f58 <col:17> 'char *' lvalue ParmVar 0x7fe56f904638 'p2' 'char *'
+|   |-BinaryOperator 0x7fe56f905138 <line:15:3, col:19> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+|   | |-DeclRefExpr 0x7fe56f905060 <col:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904a80 'frag1' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   | `-CallExpr 0x7fe56f9050f0 <col:11, col:19> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   |-ImplicitCastExpr 0x7fe56f9050d8 <col:11> '__m128i (*)(char *)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fe56f905088 <col:11> '__m128i (char *)' Function 0x7fe56f904500 'load' '__m128i (char *)'
+|   |   `-ImplicitCastExpr 0x7fe56f905120 <col:17> 'char *' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe56f9050b0 <col:17> 'char *' lvalue ParmVar 0x7fe56f9045c0 'p1' 'char *'
+|   |-BinaryOperator 0x7fe56f905328 <line:16:3, col:46> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+|   | |-DeclRefExpr 0x7fe56f905160 <col:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904af0 'frag2' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   | `-CallExpr 0x7fe56f9052a0 <col:11, col:46> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   |-ImplicitCastExpr 0x7fe56f905288 <col:11> '__m128i (*)(__m128i, __m128i, __m128i)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fe56f905188 <col:11> '__m128i (__m128i, __m128i, __m128i)' Function 0x7fe56f8ec6b0 '_mm_blendv_epi8' '__m128i (__m128i, __m128i, __m128i)'
+|   |   |-ImplicitCastExpr 0x7fe56f9052e0 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fe56f9051b0 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904af0 'frag2' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   |-ImplicitCastExpr 0x7fe56f9052f8 <col:34> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fe56f9051d8 <col:34> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe56f904790 'mask2' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   `-ImplicitCastExpr 0x7fe56f905310 <col:41> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe56f905200 <col:41> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe56f904720 'mask1' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |-BinaryOperator 0x7fe56f9054b8 <line:17:3, col:46> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' '='
+|   | |-DeclRefExpr 0x7fe56f905350 <col:3> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904a80 'frag1' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   | `-CallExpr 0x7fe56f905430 <col:11, col:46> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   |-ImplicitCastExpr 0x7fe56f905418 <col:11> '__m128i (*)(__m128i, __m128i, __m128i)' <FunctionToPointerDecay>
+|   |   | `-DeclRefExpr 0x7fe56f905378 <col:11> '__m128i (__m128i, __m128i, __m128i)' Function 0x7fe56f8ec6b0 '_mm_blendv_epi8' '__m128i (__m128i, __m128i, __m128i)'
+|   |   |-ImplicitCastExpr 0x7fe56f905470 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fe56f9053a0 <col:27> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904a80 'frag1' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   |-ImplicitCastExpr 0x7fe56f905488 <col:34> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fe56f9053c8 <col:34> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe56f904790 'mask2' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |   `-ImplicitCastExpr 0x7fe56f9054a0 <col:41> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe56f9053f0 <col:41> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue ParmVar 0x7fe56f904720 'mask1' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |-BinaryOperator 0x7fe56f905ae8 <line:18:3, /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:2033:68> 'int' '='
+|   | |-DeclRefExpr 0x7fe56f9054e0 <../Data/C2AST/pr40470-1.c:18:3> 'int' lvalue Var 0x7fe56f904b98 'cmp_s' 'int'
+|   | `-CStyleCastExpr 0x7fe56f905ac0 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:2032:3, line:2033:68> 'int' <NoOp>
+|   |   `-CallExpr 0x7fe56f905a50 <line:2032:8, line:2033:68> 'int'
+|   |     |-ImplicitCastExpr 0x7fe56f905a38 <line:2032:8> 'int (*)(__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' <BuiltinFnToFnPtr>
+|   |     | `-DeclRefExpr 0x7fe56f905730 <col:8> '<builtin fn type>' Function 0x7fe56f905558 '__builtin_ia32_pcmpistris128' 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)'
+|   |     |-CStyleCastExpr 0x7fe56f905830 <col:37, col:57> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <BitCast>
+|   |     | `-CStyleCastExpr 0x7fe56f9057f8 <col:46, col:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+|   |     |   `-ImplicitCastExpr 0x7fe56f9057e0 <col:55, col:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |     |     `-ParenExpr 0x7fe56f9057c0 <col:55, col:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+|   |     |       `-DeclRefExpr 0x7fe56f905758 <../Data/C2AST/pr40470-1.c:18:24> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904af0 'frag2' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |     |-CStyleCastExpr 0x7fe56f905930 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:2033:37, col:57> '__v16qi':'__attribute__((__vector_size__(16 * sizeof(char)))) char' <BitCast>
+|   |     | `-CStyleCastExpr 0x7fe56f9058f8 <col:46, col:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <BitCast>
+|   |     |   `-ImplicitCastExpr 0x7fe56f9058e0 <col:55, col:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' <LValueToRValue>
+|   |     |     `-ParenExpr 0x7fe56f9058c0 <col:55, col:57> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue
+|   |     |       `-DeclRefExpr 0x7fe56f905858 <../Data/C2AST/pr40470-1.c:18:31> '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long' lvalue Var 0x7fe56f904a80 'frag1' '__m128i':'__attribute__((__vector_size__(2 * sizeof(long long)))) long long'
+|   |     `-ImplicitCastExpr 0x7fe56f905a90 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:2033:60, col:67> 'char' <IntegralCast>
+|   |       `-CStyleCastExpr 0x7fe56f9059e0 <col:60, col:67> 'int' <NoOp>
+|   |         `-ParenExpr 0x7fe56f9059c0 <col:65, col:67> 'int'
+|   |           `-IntegerLiteral 0x7fe56f905958 <../Data/C2AST/pr40470-1.c:18:38> 'int' 12
+|   |-IfStmt 0x7fe56f905d80 <line:19:3, line:20:73>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-ImplicitCastExpr 0x7fe56f905b38 <line:19:7> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fe56f905b10 <col:7> 'int' lvalue Var 0x7fe56f904b98 'cmp_s' 'int'
+|   | |-GCCAsmStmt 0x7fe56f905d08 <line:20:5, col:73>
+|   | | |-DeclRefExpr 0x7fe56f905c38 <col:48> 'int' lvalue Var 0x7fe56f9049d8 'len' 'int'
+|   | | `-ImplicitCastExpr 0x7fe56f905cf0 <col:67> 'int' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe56f905cc8 <col:67> 'int' lvalue ParmVar 0x7fe56f9046b0 'bmsk' 'int'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fe56f905e60 <line:21:3, col:15>
+|     `-BinaryOperator 0x7fe56f905e38 <col:10, col:15> 'char *' '+'
+|       |-ImplicitCastExpr 0x7fe56f905e08 <col:10> 'char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fe56f905db8 <col:10> 'char *' lvalue ParmVar 0x7fe56f9045c0 'p1' 'char *'
+|       `-ImplicitCastExpr 0x7fe56f905e20 <col:15> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x7fe56f905de0 <col:15> 'int' lvalue Var 0x7fe56f9049d8 'len' 'int'
+`-FunctionDecl 0x7fe56f905558 </Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/smmintrin.h:2032:8> col:8 implicit used __builtin_ia32_pcmpistris128 'int (__attribute__((__vector_size__(16 * sizeof(char)))) char, __attribute__((__vector_size__(16 * sizeof(char)))) char, char)' extern
+  |-ParmVarDecl 0x7fe56f9055f8 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  |-ParmVarDecl 0x7fe56f905658 <<invalid sloc>> <invalid sloc> '__attribute__((__vector_size__(16 * sizeof(char)))) char'
+  `-ParmVarDecl 0x7fe56f9056b8 <<invalid sloc>> <invalid sloc> 'char'

@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7f97318174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9731818178 <../Data/C2AST/pr41574.c:6:1, col:25> col:21 used one 'const double' static cinit
+| `-FloatingLiteral 0x7f9731859040 <col:25> 'double' 1.000000e+00
+`-FunctionDecl 0x7f9731859148 <line:8:1, line:12:1> line:9:1 f 'double (double)'
+  |-ParmVarDecl 0x7f9731859078 <col:3, col:10> col:10 used x 'double'
+  `-CompoundStmt 0x7f9731859390 <line:10:1, line:12:1>
+    `-ReturnStmt 0x7f9731859378 <line:11:3, col:18>
+      `-BinaryOperator 0x7f97318592f8 <col:10, col:18> 'double' '*'
+        |-ImplicitCastExpr 0x7f97318592e0 <col:10> 'double' <LValueToRValue>
+        | `-DeclRefExpr 0x7f97318591f0 <col:10> 'double' lvalue ParmVar 0x7f9731859078 'x' 'double'
+        `-ParenExpr 0x7f97318592c0 <col:12, col:18> 'double'
+          `-BinaryOperator 0x7f9731859298 <col:13, col:17> 'double' '+'
+            |-ImplicitCastExpr 0x7f9731859268 <col:13> 'double' <LValueToRValue>
+            | `-DeclRefExpr 0x7f9731859218 <col:13> 'const double' lvalue Var 0x7f9731818178 'one' 'const double'
+            `-ImplicitCastExpr 0x7f9731859280 <col:17> 'double' <LValueToRValue>
+              `-DeclRefExpr 0x7f9731859240 <col:17> 'double' lvalue ParmVar 0x7f9731859078 'x' 'double'

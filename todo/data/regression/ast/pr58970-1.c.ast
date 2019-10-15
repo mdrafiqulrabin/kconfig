@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7fc9eb0174e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc9eb018160 <../Data/C2AST/pr58970-1.c:3:1, col:23> col:8 struct T definition
+| `-FieldDecl 0x7fc9eb806258 <col:12, col:20> col:16 referenced b 'int'
+|   `-IntegerLiteral 0x7fc9eb806220 <col:20> 'int' 1
+|-RecordDecl 0x7fc9eb8062a0 <line:4:1, col:27> col:8 struct S definition
+| `-FieldDecl 0x7fc9eb806498 <col:12, col:24> col:21 referenced t 'struct T [1]'
+`-FunctionDecl 0x7fc9eb806720 <line:6:1, line:11:1> line:7:1 foo 'void (int, struct S *)'
+  |-ParmVarDecl 0x7fc9eb8064f8 <col:6, col:10> col:10 used x 'int'
+  |-ParmVarDecl 0x7fc9eb806610 <col:13, col:23> col:23 used s 'struct S *'
+  `-CompoundStmt 0x7fc9eb806ac8 <line:8:1, line:11:1>
+    `-IfStmt 0x7fc9eb806a90 <line:9:3, line:10:17>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fc9eb806890 <line:9:7, col:13> 'int' '=='
+      | |-ImplicitCastExpr 0x7fc9eb806878 <col:7> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fc9eb806810 <col:7> 'int' lvalue ParmVar 0x7fc9eb8064f8 'x' 'int'
+      | `-UnaryOperator 0x7fc9eb806858 <col:12, col:13> 'int' prefix '-'
+      |   `-IntegerLiteral 0x7fc9eb806838 <col:13> 'int' 1
+      |-BinaryOperator 0x7fc9eb806a68 <line:10:5, col:17> 'int' '='
+      | |-MemberExpr 0x7fc9eb806a10 <col:5, col:13> 'int' lvalue bitfield .b 0x7fc9eb806258
+      | | `-ArraySubscriptExpr 0x7fc9eb8069e8 <col:5, col:11> 'struct T':'struct T' lvalue
+      | |   |-ImplicitCastExpr 0x7fc9eb8069b8 <col:5, col:8> 'struct T *' <ArrayToPointerDecay>
+      | |   | `-MemberExpr 0x7fc9eb8068f8 <col:5, col:8> 'struct T [1]' lvalue ->t 0x7fc9eb806498
+      | |   |   `-ImplicitCastExpr 0x7fc9eb8068e0 <col:5> 'struct S *' <LValueToRValue>
+      | |   |     `-DeclRefExpr 0x7fc9eb8068b8 <col:5> 'struct S *' lvalue ParmVar 0x7fc9eb806610 's' 'struct S *'
+      | |   `-ImplicitCastExpr 0x7fc9eb8069d0 <col:10> 'int' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7fc9eb806930 <col:10> 'int' lvalue ParmVar 0x7fc9eb8064f8 'x' 'int'
+      | `-IntegerLiteral 0x7fc9eb806a48 <col:17> 'int' 0
+      `-<<<NULL>>>

@@ -1,0 +1,44 @@
+TranslationUnitDecl 0x7ff07702bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff07702c960 <../Data/C2AST/pr69148.c:3:1, col:27> col:7 union U definition
+| |-FieldDecl 0x7ff077808a38 <col:11, col:15> col:15 referenced r 'int'
+| `-FieldDecl 0x7ff077808a98 <col:18, col:24> col:24 referenced f 'float'
+|-RecordDecl 0x7ff077808ae0 <line:4:1, line:7:5> line:4:8 struct A definition
+| |-FieldDecl 0x7ff077808ba8 <line:5:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7ff077808d38 <line:6:5, col:17> col:13 referenced b 'union U [64]'
+|-FunctionDecl 0x7ff077808e68 <line:8:5, col:23> col:12 used foo 'double (double)'
+| `-ParmVarDecl 0x7ff077808d98 <col:17> col:23 'double'
+`-FunctionDecl 0x7ff077809190 <line:10:1, line:16:1> line:11:1 bar 'void (struct A *, int)'
+  |-ParmVarDecl 0x7ff077809000 <col:6, col:16> col:16 used z 'struct A *'
+  |-ParmVarDecl 0x7ff077809078 <col:19, col:23> col:23 used x 'int'
+  `-CompoundStmt 0x7ff0778097b0 <line:12:1, line:16:1>
+    |-DeclStmt 0x7ff0778092c0 <line:13:3, col:12>
+    | `-VarDecl 0x7ff077809260 <col:3, col:11> col:11 used y 'union U':'union U'
+    |-BinaryOperator 0x7ff0778095a8 <line:14:3, col:23> 'float' '='
+    | |-MemberExpr 0x7ff077809300 <col:3, col:5> 'float' lvalue .f 0x7ff077808a98
+    | | `-DeclRefExpr 0x7ff0778092d8 <col:3> 'union U':'union U' lvalue Var 0x7ff077809260 'y' 'union U':'union U'
+    | `-ImplicitCastExpr 0x7ff077809590 <col:9, col:23> 'float' <FloatingCast>
+    |   `-CallExpr 0x7ff077809530 <col:9, col:23> 'double'
+    |     |-ImplicitCastExpr 0x7ff077809518 <col:9> 'double (*)(double)' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x7ff077809338 <col:9> 'double (double)' Function 0x7ff077808e68 'foo' 'double (double)'
+    |     `-ImplicitCastExpr 0x7ff077809578 <col:14, col:22> 'double' <FloatingCast>
+    |       `-ImplicitCastExpr 0x7ff077809560 <col:14, col:22> 'float' <LValueToRValue>
+    |         `-MemberExpr 0x7ff0778094b0 <col:14, col:22> 'float' lvalue .f 0x7ff077808a98
+    |           `-ArraySubscriptExpr 0x7ff077809488 <col:14, col:20> 'union U':'union U' lvalue
+    |             |-ImplicitCastExpr 0x7ff077809458 <col:14, col:17> 'union U *' <ArrayToPointerDecay>
+    |             | `-MemberExpr 0x7ff0778093a0 <col:14, col:17> 'union U [64]' lvalue ->b 0x7ff077808d38
+    |             |   `-ImplicitCastExpr 0x7ff077809388 <col:14> 'struct A *' <LValueToRValue>
+    |             |     `-DeclRefExpr 0x7ff077809360 <col:14> 'struct A *' lvalue ParmVar 0x7ff077809000 'z' 'struct A *'
+    |             `-ImplicitCastExpr 0x7ff077809470 <col:19> 'int' <LValueToRValue>
+    |               `-DeclRefExpr 0x7ff0778093d8 <col:19> 'int' lvalue ParmVar 0x7ff077809078 'x' 'int'
+    `-BinaryOperator 0x7ff077809788 <line:15:3, col:22> 'int' '='
+      |-MemberExpr 0x7ff077809610 <col:3, col:6> 'int' lvalue ->a 0x7ff077808ba8
+      | `-ImplicitCastExpr 0x7ff0778095f8 <col:3> 'struct A *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff0778095d0 <col:3> 'struct A *' lvalue ParmVar 0x7ff077809000 'z' 'struct A *'
+      `-ConditionalOperator 0x7ff077809758 <col:10, col:22> 'int'
+        |-ImplicitCastExpr 0x7ff077809728 <col:10, col:12> 'int' <LValueToRValue>
+        | `-MemberExpr 0x7ff077809670 <col:10, col:12> 'int' lvalue .r 0x7ff077808a38
+        |   `-DeclRefExpr 0x7ff077809648 <col:10> 'union U':'union U' lvalue Var 0x7ff077809260 'y' 'union U':'union U'
+        |-IntegerLiteral 0x7ff0778096a8 <col:16> 'int' 4
+        `-ImplicitCastExpr 0x7ff077809740 <col:20, col:22> 'int' <LValueToRValue>
+          `-MemberExpr 0x7ff0778096f0 <col:20, col:22> 'int' lvalue .r 0x7ff077808a38
+            `-DeclRefExpr 0x7ff0778096c8 <col:20> 'union U':'union U' lvalue Var 0x7ff077809260 'y' 'union U':'union U'

@@ -1,0 +1,382 @@
+TranslationUnitDecl 0x7fcda182bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcda182c978 <../Data/C2AST/pr15296.c:3:1, col:25> col:25 referenced intptr_t 'long'
+| `-BuiltinType 0x7fcda182be00 'long'
+|-TypedefDecl 0x7fcda186de00 <line:4:1, col:18> col:18 referenced W 'intptr_t':'long'
+| `-TypedefType 0x7fcda182c9d0 'intptr_t' sugar
+|   |-Typedef 0x7fcda182c978 'intptr_t'
+|   `-BuiltinType 0x7fcda182be00 'long'
+|-RecordDecl 0x7fcda186de58 <line:5:1, line:9:1> line:5:7 union u0 definition
+| |-FieldDecl 0x7fcda186dfb0 <line:7:3, col:13> col:13 referenced r 'union u0 *'
+| `-FieldDecl 0x7fcda186e030 <line:8:3, col:5> col:5 referenced i 'W':'long'
+|-RecordDecl 0x7fcda186e078 <line:10:1, line:14:1> line:10:8 struct s1 definition
+| |-FieldDecl 0x7fcda186e1a0 <line:12:3, col:14> col:14 referenced m0 'union u0 **'
+| `-FieldDecl 0x7fcda186e308 <line:13:3, col:16> col:12 referenced m1 'union u0 [4]'
+|-FunctionDecl 0x7fcda186e820 <line:16:1, line:17:35> line:16:6 used f 'void (void *, struct s1 *, const union u0 *, W, W, W)'
+| |-ParmVarDecl 0x7fcda186e368 <col:9, col:14> col:15 'void *'
+| |-ParmVarDecl 0x7fcda186e480 <col:17, col:27> col:28 'struct s1 *'
+| |-ParmVarDecl 0x7fcda186e560 <col:30, col:45> col:46 'const union u0 *'
+| |-ParmVarDecl 0x7fcda186e5d0 <col:48> col:49 'W':'long'
+| |-ParmVarDecl 0x7fcda186e640 <col:51> col:52 'W':'long'
+| |-ParmVarDecl 0x7fcda186e6b0 <col:54> col:55 'W':'long'
+| `-NoInlineAttr 0x7fcda186e8f0 <line:17:22>
+|-FunctionDecl 0x7fcda186eae0 <line:18:1, col:54> col:6 used g 'void (void *, char *)'
+| |-ParmVarDecl 0x7fcda186e990 <col:9, col:14> col:15 'void *'
+| |-ParmVarDecl 0x7fcda186ea08 <col:17, col:22> col:23 'char *'
+| `-NoInlineAttr 0x7fcda186eb90 <col:41>
+|-FunctionDecl 0x7fcda1885920 prev 0x7fcda186e820 <line:20:1, line:55:1> line:21:1 used f 'void (void *, struct s1 *, const union u0 *, W, W, W)'
+| |-ParmVarDecl 0x7fcda186ebf0 <col:4, col:10> col:10 used a 'void *'
+| |-ParmVarDecl 0x7fcda186ec78 <col:13, col:24> col:24 used b 'struct s1 *'
+| |-ParmVarDecl 0x7fcda186ed00 <col:27, col:43> col:43 h 'const union u0 *'
+| |-ParmVarDecl 0x7fcda186ed70 <col:46, col:48> col:48 used v0 'W':'long'
+| |-ParmVarDecl 0x7fcda1885800 <col:52, col:54> col:54 used v1 'W':'long'
+| |-ParmVarDecl 0x7fcda1885870 <col:58, col:60> col:60 used v4 'W':'long'
+| |-CompoundStmt 0x7fcda1887510 <line:22:1, line:55:1>
+| | |-DeclStmt 0x7fcda1885af8 <line:23:3, col:18>
+| | | `-VarDecl 0x7fcda1885a60 <col:3, col:17> col:13 used e 'union u0 *' cinit
+| | |   `-ImplicitCastExpr 0x7fcda1885ae0 <col:17> 'union u0 *' <NullToPointer>
+| | |     `-IntegerLiteral 0x7fcda1885ac0 <col:17> 'int' 0
+| | |-DeclStmt 0x7fcda1885bd0 <line:24:3, col:18>
+| | | `-VarDecl 0x7fcda1885b38 <col:3, col:17> col:13 used k 'union u0 *' cinit
+| | |   `-ImplicitCastExpr 0x7fcda1885bb8 <col:17> 'union u0 *' <NullToPointer>
+| | |     `-IntegerLiteral 0x7fcda1885b98 <col:17> 'int' 0
+| | |-DeclStmt 0x7fcda1885d00 <line:25:3, col:24>
+| | | `-VarDecl 0x7fcda1885c10 <col:3, col:22> col:14 used v5 'union u0 **' cinit
+| | |   `-ImplicitCastExpr 0x7fcda1885ce8 <col:19, col:22> 'union u0 **' <LValueToRValue>
+| | |     `-MemberExpr 0x7fcda1885cb0 <col:19, col:22> 'union u0 **' lvalue ->m0 0x7fcda186e1a0
+| | |       `-ImplicitCastExpr 0x7fcda1885c98 <col:19> 'struct s1 *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fcda1885c70 <col:19> 'struct s1 *' lvalue ParmVar 0x7fcda186ec78 'b' 'struct s1 *'
+| | |-DeclStmt 0x7fcda1885e30 <line:26:3, col:22>
+| | | `-VarDecl 0x7fcda1885d40 <col:3, col:20> col:13 used c 'union u0 *' cinit
+| | |   `-ImplicitCastExpr 0x7fcda1885e18 <col:17, col:20> 'union u0 *' <ArrayToPointerDecay>
+| | |     `-MemberExpr 0x7fcda1885de0 <col:17, col:20> 'union u0 [4]' lvalue ->m1 0x7fcda186e308
+| | |       `-ImplicitCastExpr 0x7fcda1885dc8 <col:17> 'struct s1 *' <LValueToRValue>
+| | |         `-DeclRefExpr 0x7fcda1885da0 <col:17> 'struct s1 *' lvalue ParmVar 0x7fcda186ec78 'b' 'struct s1 *'
+| | |-DeclStmt 0x7fcda1885f78 <line:27:3, col:24>
+| | | `-VarDecl 0x7fcda1885e70 <col:3, col:23> col:14 used d 'union u0 **' cinit
+| | |   `-UnaryOperator 0x7fcda1885f58 <col:18, col:23> 'union u0 **' prefix '&'
+| | |     `-ArraySubscriptExpr 0x7fcda1885f30 <col:19, col:23> 'union u0 *' lvalue
+| | |       |-ImplicitCastExpr 0x7fcda1885f18 <col:19> 'union u0 **' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fcda1885ed0 <col:19> 'union u0 **' lvalue Var 0x7fcda1885c10 'v5' 'union u0 **'
+| | |       `-IntegerLiteral 0x7fcda1885ef8 <col:22> 'int' 0
+| | |-LabelStmt 0x7fcda1885fe8 <line:28:1, col:4> 'l0'
+| | | `-NullStmt 0x7fcda1885f90 <col:4>
+| | |-IfStmt 0x7fcda18860c0 <line:29:3, line:30:10>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcda1886080 <line:29:7, col:12> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fcda1886050 <col:7> 'W':'long' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda1886000 <col:7> 'W':'long' lvalue ParmVar 0x7fcda186ed70 'v0' 'W':'long'
+| | | | `-ImplicitCastExpr 0x7fcda1886068 <col:12> 'W':'long' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fcda1886028 <col:12> 'W':'long' lvalue ParmVar 0x7fcda1885800 'v1' 'W':'long'
+| | | |-GotoStmt 0x7fcda18860a8 <line:30:5, col:10> 'l0' 0x7fcda1885fa0
+| | | `-<<<NULL>>>
+| | |-IfStmt 0x7fcda18861f8 <line:31:3, line:32:10>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcda1886170 <line:31:7, col:13> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7fcda1886140 <col:7> 'W':'long' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda18860f8 <col:7> 'W':'long' lvalue ParmVar 0x7fcda186ed70 'v0' 'W':'long'
+| | | | `-ImplicitCastExpr 0x7fcda1886158 <col:13> 'long' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fcda1886120 <col:13> 'int' 0
+| | | |-GotoStmt 0x7fcda18861e0 <line:32:5, col:10> 'l3' 0x7fcda1886198
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fcda1886298 <line:33:3, col:8> 'W':'long' '='
+| | | |-DeclRefExpr 0x7fcda1886230 <col:3> 'W':'long' lvalue ParmVar 0x7fcda186ed70 'v0' 'W':'long'
+| | | `-ImplicitCastExpr 0x7fcda1886280 <col:8> 'W':'long' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fcda1886258 <col:8> 'W':'long' lvalue ParmVar 0x7fcda1885870 'v4' 'W':'long'
+| | |-IfStmt 0x7fcda1886378 <line:34:3, line:35:10>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcda1886338 <line:34:7, col:13> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcda1886308 <col:7> 'W':'long' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda18862c0 <col:7> 'W':'long' lvalue ParmVar 0x7fcda186ed70 'v0' 'W':'long'
+| | | | `-ImplicitCastExpr 0x7fcda1886320 <col:13> 'long' <IntegralCast>
+| | | |   `-IntegerLiteral 0x7fcda18862e8 <col:13> 'int' 0
+| | | |-GotoStmt 0x7fcda1886360 <line:35:5, col:10> 'l3' 0x7fcda1886198
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fcda18864e8 <line:36:3, col:13> 'union u0 *' '='
+| | | |-MemberExpr 0x7fcda1886438 <col:3, col:8> 'union u0 *' lvalue .r 0x7fcda186dfb0
+| | | | `-ArraySubscriptExpr 0x7fcda1886410 <col:3, col:6> 'union u0':'union u0' lvalue
+| | | |   |-ImplicitCastExpr 0x7fcda18863f8 <col:3> 'union u0 *' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7fcda18863b0 <col:3> 'union u0 *' lvalue Var 0x7fcda1885d40 'c' 'union u0 *'
+| | | |   `-IntegerLiteral 0x7fcda18863d8 <col:5> 'int' 0
+| | | `-ImplicitCastExpr 0x7fcda18864d0 <col:12, col:13> 'union u0 *' <LValueToRValue>
+| | |   `-UnaryOperator 0x7fcda18864b0 <col:12, col:13> 'union u0 *' lvalue prefix '*'
+| | |     `-ImplicitCastExpr 0x7fcda1886498 <col:13> 'union u0 **' <LValueToRValue>
+| | |       `-DeclRefExpr 0x7fcda1886470 <col:13> 'union u0 **' lvalue Var 0x7fcda1885e70 'd' 'union u0 **'
+| | |-BinaryOperator 0x7fcda1886590 <line:37:3, col:9> 'W':'long' '='
+| | | |-DeclRefExpr 0x7fcda1886510 <col:3> 'W':'long' lvalue ParmVar 0x7fcda1885800 'v1' 'W':'long'
+| | | `-ImplicitCastExpr 0x7fcda1886578 <col:8, col:9> 'W':'long' <IntegralCast>
+| | |   `-UnaryOperator 0x7fcda1886558 <col:8, col:9> 'int' prefix '-'
+| | |     `-IntegerLiteral 0x7fcda1886538 <col:9> 'int' 1
+| | |-BinaryOperator 0x7fcda18866b8 <line:38:3, col:12> 'union u0 *' '='
+| | | |-DeclRefExpr 0x7fcda18865b8 <col:3> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | | `-ImplicitCastExpr 0x7fcda18866a0 <col:7, col:12> 'union u0 *' <LValueToRValue>
+| | |   `-MemberExpr 0x7fcda1886668 <col:7, col:12> 'union u0 *' lvalue .r 0x7fcda186dfb0
+| | |     `-ArraySubscriptExpr 0x7fcda1886640 <col:7, col:10> 'union u0':'union u0' lvalue
+| | |       |-ImplicitCastExpr 0x7fcda1886628 <col:7> 'union u0 *' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fcda18865e0 <col:7> 'union u0 *' lvalue Var 0x7fcda1885d40 'c' 'union u0 *'
+| | |       `-IntegerLiteral 0x7fcda1886608 <col:9> 'int' 0
+| | |-IfStmt 0x7fcda1886908 <line:39:3, line:40:13>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcda1886758 <line:39:7, col:12> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcda1886728 <col:7> 'union u0 *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda18866e0 <col:7> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | | | `-ImplicitCastExpr 0x7fcda1886740 <col:12> 'union u0 *' <NullToPointer>
+| | | |   `-IntegerLiteral 0x7fcda1886708 <col:12> 'int' 0
+| | | |-CallExpr 0x7fcda18868a0 <line:40:5, col:13> 'void'
+| | | | |-ImplicitCastExpr 0x7fcda1886888 <col:5> 'void (*)(void *, char *)' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7fcda1886780 <col:5> 'void (void *, char *)' Function 0x7fcda186eae0 'g' 'void (void *, char *)'
+| | | | |-ImplicitCastExpr 0x7fcda18868d8 <col:8> 'void *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda18867a8 <col:8> 'void *' lvalue ParmVar 0x7fcda186ebf0 'a' 'void *'
+| | | | `-ImplicitCastExpr 0x7fcda18868f0 <col:11> 'char *' <ArrayToPointerDecay>
+| | | |   `-StringLiteral 0x7fcda1886838 <col:11> 'char [1]' lvalue ""
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fcda18869f0 <line:41:3, col:11> 'union u0 *' '='
+| | | |-DeclRefExpr 0x7fcda1886940 <col:3> 'union u0 *' lvalue Var 0x7fcda1885b38 'k' 'union u0 *'
+| | | `-BinaryOperator 0x7fcda18869c8 <col:7, col:11> 'union u0 *' '+'
+| | |   |-ImplicitCastExpr 0x7fcda18869b0 <col:7> 'union u0 *' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7fcda1886968 <col:7> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | |   `-IntegerLiteral 0x7fcda1886990 <col:11> 'int' 3
+| | |-BinaryOperator 0x7fcda1886ad0 <line:42:3, col:10> 'W':'long' '='
+| | | |-MemberExpr 0x7fcda1886a58 <col:3, col:6> 'W':'long' lvalue ->i 0x7fcda186e030
+| | | | `-ImplicitCastExpr 0x7fcda1886a40 <col:3> 'union u0 *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fcda1886a18 <col:3> 'union u0 *' lvalue Var 0x7fcda1885b38 'k' 'union u0 *'
+| | | `-ImplicitCastExpr 0x7fcda1886ab8 <col:10> 'W':'long' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fcda1886a90 <col:10> 'W':'long' lvalue ParmVar 0x7fcda1885800 'v1' 'W':'long'
+| | |-GotoStmt 0x7fcda1886b40 <line:43:3, col:8> 'l4' 0x7fcda1886af8
+| | |-LabelStmt 0x7fcda1886b68 <line:44:1, col:4> 'l3'
+| | | `-NullStmt 0x7fcda1886b58 <col:4>
+| | |-BinaryOperator 0x7fcda1886c80 <line:45:3, col:12> 'W':'long' '='
+| | | |-MemberExpr 0x7fcda1886c08 <col:3, col:8> 'W':'long' lvalue .i 0x7fcda186e030
+| | | | `-ArraySubscriptExpr 0x7fcda1886be0 <col:3, col:6> 'union u0':'union u0' lvalue
+| | | |   |-ImplicitCastExpr 0x7fcda1886bc8 <col:3> 'union u0 *' <LValueToRValue>
+| | | |   | `-DeclRefExpr 0x7fcda1886b80 <col:3> 'union u0 *' lvalue Var 0x7fcda1885d40 'c' 'union u0 *'
+| | | |   `-IntegerLiteral 0x7fcda1886ba8 <col:5> 'int' 0
+| | | `-ImplicitCastExpr 0x7fcda1886c68 <col:12> 'W':'long' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fcda1886c40 <col:12> 'W':'long' lvalue ParmVar 0x7fcda186ed70 'v0' 'W':'long'
+| | |-BinaryOperator 0x7fcda1886da8 <line:46:3, col:12> 'union u0 *' '='
+| | | |-DeclRefExpr 0x7fcda1886ca8 <col:3> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | | `-ImplicitCastExpr 0x7fcda1886d90 <col:7, col:12> 'union u0 *' <LValueToRValue>
+| | |   `-MemberExpr 0x7fcda1886d58 <col:7, col:12> 'union u0 *' lvalue .r 0x7fcda186dfb0
+| | |     `-ArraySubscriptExpr 0x7fcda1886d30 <col:7, col:10> 'union u0':'union u0' lvalue
+| | |       |-ImplicitCastExpr 0x7fcda1886d18 <col:7> 'union u0 *' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fcda1886cd0 <col:7> 'union u0 *' lvalue Var 0x7fcda1885d40 'c' 'union u0 *'
+| | |       `-IntegerLiteral 0x7fcda1886cf8 <col:9> 'int' 1
+| | |-IfStmt 0x7fcda1886f68 <line:47:3, line:48:13>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcda1886e48 <line:47:7, col:12> 'int' '!='
+| | | | |-ImplicitCastExpr 0x7fcda1886e18 <col:7> 'union u0 *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda1886dd0 <col:7> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | | | `-ImplicitCastExpr 0x7fcda1886e30 <col:12> 'union u0 *' <NullToPointer>
+| | | |   `-IntegerLiteral 0x7fcda1886df8 <col:12> 'int' 0
+| | | |-CallExpr 0x7fcda1886f00 <line:48:5, col:13> 'void'
+| | | | |-ImplicitCastExpr 0x7fcda1886ee8 <col:5> 'void (*)(void *, char *)' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7fcda1886e70 <col:5> 'void (void *, char *)' Function 0x7fcda186eae0 'g' 'void (void *, char *)'
+| | | | |-ImplicitCastExpr 0x7fcda1886f38 <col:8> 'void *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda1886e98 <col:8> 'void *' lvalue ParmVar 0x7fcda186ebf0 'a' 'void *'
+| | | | `-ImplicitCastExpr 0x7fcda1886f50 <col:11> 'char *' <ArrayToPointerDecay>
+| | | |   `-StringLiteral 0x7fcda1886ec0 <col:11> 'char [1]' lvalue ""
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fcda18870a0 <line:49:3, col:12> 'union u0 *' '='
+| | | |-DeclRefExpr 0x7fcda1886fa0 <col:3> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | | `-ImplicitCastExpr 0x7fcda1887088 <col:7, col:12> 'union u0 *' <LValueToRValue>
+| | |   `-MemberExpr 0x7fcda1887050 <col:7, col:12> 'union u0 *' lvalue .r 0x7fcda186dfb0
+| | |     `-ArraySubscriptExpr 0x7fcda1887028 <col:7, col:10> 'union u0':'union u0' lvalue
+| | |       |-ImplicitCastExpr 0x7fcda1887010 <col:7> 'union u0 *' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fcda1886fc8 <col:7> 'union u0 *' lvalue Var 0x7fcda1885d40 'c' 'union u0 *'
+| | |       `-IntegerLiteral 0x7fcda1886ff0 <col:9> 'int' 0
+| | |-IfStmt 0x7fcda1887260 <line:50:3, line:51:13>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fcda1887140 <line:50:7, col:12> 'int' '=='
+| | | | |-ImplicitCastExpr 0x7fcda1887110 <col:7> 'union u0 *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda18870c8 <col:7> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | | | `-ImplicitCastExpr 0x7fcda1887128 <col:12> 'union u0 *' <NullToPointer>
+| | | |   `-IntegerLiteral 0x7fcda18870f0 <col:12> 'int' 0
+| | | |-CallExpr 0x7fcda18871f8 <line:51:5, col:13> 'void'
+| | | | |-ImplicitCastExpr 0x7fcda18871e0 <col:5> 'void (*)(void *, char *)' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7fcda1887168 <col:5> 'void (void *, char *)' Function 0x7fcda186eae0 'g' 'void (void *, char *)'
+| | | | |-ImplicitCastExpr 0x7fcda1887230 <col:8> 'void *' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fcda1887190 <col:8> 'void *' lvalue ParmVar 0x7fcda186ebf0 'a' 'void *'
+| | | | `-ImplicitCastExpr 0x7fcda1887248 <col:11> 'char *' <ArrayToPointerDecay>
+| | | |   `-StringLiteral 0x7fcda18871b8 <col:11> 'char [1]' lvalue ""
+| | | `-<<<NULL>>>
+| | |-BinaryOperator 0x7fcda1887348 <line:52:3, col:11> 'union u0 *' '='
+| | | |-DeclRefExpr 0x7fcda1887298 <col:3> 'union u0 *' lvalue Var 0x7fcda1885b38 'k' 'union u0 *'
+| | | `-BinaryOperator 0x7fcda1887320 <col:7, col:11> 'union u0 *' '+'
+| | |   |-ImplicitCastExpr 0x7fcda1887308 <col:7> 'union u0 *' <LValueToRValue>
+| | |   | `-DeclRefExpr 0x7fcda18872c0 <col:7> 'union u0 *' lvalue Var 0x7fcda1885a60 'e' 'union u0 *'
+| | |   `-IntegerLiteral 0x7fcda18872e8 <col:11> 'int' 2
+| | |-BinaryOperator 0x7fcda18874c0 <line:53:3, col:15> 'union u0 *' '='
+| | | |-MemberExpr 0x7fcda18873b0 <col:3, col:6> 'union u0 *' lvalue ->r 0x7fcda186dfb0
+| | | | `-ImplicitCastExpr 0x7fcda1887398 <col:3> 'union u0 *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7fcda1887370 <col:3> 'union u0 *' lvalue Var 0x7fcda1885b38 'k' 'union u0 *'
+| | | `-ImplicitCastExpr 0x7fcda18874a8 <col:10, col:15> 'union u0 *' <LValueToRValue>
+| | |   `-MemberExpr 0x7fcda1887470 <col:10, col:15> 'union u0 *' lvalue .r 0x7fcda186dfb0
+| | |     `-ArraySubscriptExpr 0x7fcda1887448 <col:10, col:13> 'union u0':'union u0' lvalue
+| | |       |-ImplicitCastExpr 0x7fcda1887430 <col:10> 'union u0 *' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fcda18873e8 <col:10> 'union u0 *' lvalue Var 0x7fcda1885d40 'c' 'union u0 *'
+| | |       `-IntegerLiteral 0x7fcda1887410 <col:12> 'int' 1
+| | `-LabelStmt 0x7fcda18874f8 <line:54:1, col:4> 'l4'
+| |   `-NullStmt 0x7fcda18874e8 <col:4>
+| `-NoInlineAttr 0x7fcda1885a28 <line:17:22> Inherited
+|-FunctionDecl 0x7fcda1887710 prev 0x7fcda186eae0 <line:57:1, col:39> col:6 used g 'void (void *, char *)'
+| |-ParmVarDecl 0x7fcda1887608 <col:9, col:15> col:15 a 'void *'
+| |-ParmVarDecl 0x7fcda1887680 <col:18, col:24> col:24 b 'char *'
+| |-CompoundStmt 0x7fcda1887978 <col:27, col:39>
+| | `-CallExpr 0x7fcda1887950 <col:29, col:36> 'void'
+| |   `-ImplicitCastExpr 0x7fcda1887938 <col:29> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fcda18878e0 <col:29> 'void (void) __attribute__((noreturn))' Function 0x7fcda1887840 'abort' 'void (void) __attribute__((noreturn))'
+| `-NoInlineAttr 0x7fcda1887800 <line:18:41> Inherited
+|-FunctionDecl 0x7fcda1887840 <line:57:29> col:29 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fcda18879e0 <line:59:1, line:70:1> line:60:1 main 'int ()'
+| `-CompoundStmt 0x7fcda188a870 <line:61:1, line:70:1>
+|   |-DeclStmt 0x7fcda1888060 <line:62:3, col:75>
+|   | `-VarDecl 0x7fcda1887b08 <col:3, col:74> col:12 used uv 'union u0 [4]' cinit
+|   |   `-InitListExpr 0x7fcda1887e68 <col:19, col:74> 'union u0 [4]'
+|   |     |-InitListExpr 0x7fcda1887ea8 <col:20, col:31> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |     | `-ImplicitCastExpr 0x7fcda1887ef8 <col:27> 'W':'long' <IntegralCast>
+|   |     |   `-IntegerLiteral 0x7fcda1887b68 <col:27> 'int' 111
+|   |     |-InitListExpr 0x7fcda1887f10 <col:34, col:45> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |     | `-ImplicitCastExpr 0x7fcda1887f68 <col:41> 'W':'long' <IntegralCast>
+|   |     |   `-IntegerLiteral 0x7fcda1887c10 <col:41> 'int' 222
+|   |     |-InitListExpr 0x7fcda1887f80 <col:48, col:59> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |     | `-ImplicitCastExpr 0x7fcda1887fe8 <col:55> 'W':'long' <IntegralCast>
+|   |     |   `-IntegerLiteral 0x7fcda1887cb8 <col:55> 'int' 333
+|   |     `-InitListExpr 0x7fcda1888000 <col:62, col:73> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |       `-ImplicitCastExpr 0x7fcda1888048 <col:69> 'W':'long' <IntegralCast>
+|   |         `-IntegerLiteral 0x7fcda1887d60 <col:69> 'int' 444
+|   |-DeclStmt 0x7fcda18886b0 <line:63:3, col:77>
+|   | `-VarDecl 0x7fcda1888098 <col:3, col:76> col:13 used s 'struct s1':'struct s1' cinit
+|   |   `-InitListExpr 0x7fcda1888468 <col:17, col:76> 'struct s1':'struct s1'
+|   |     |-ImplicitCastExpr 0x7fcda18884b8 <col:19> 'union u0 **' <NullToPointer>
+|   |     | `-IntegerLiteral 0x7fcda18880f8 <col:19> 'int' 0
+|   |     `-InitListExpr 0x7fcda18884d0 <col:22, col:75> 'union u0 [4]'
+|   |       |-InitListExpr 0x7fcda1888530 <col:23, col:34> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |       | `-ImplicitCastExpr 0x7fcda1888578 <col:30> 'W':'long' <IntegralCast>
+|   |       |   `-IntegerLiteral 0x7fcda1888118 <col:30> 'int' 555
+|   |       |-InitListExpr 0x7fcda1888590 <col:37, col:46> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |       | `-ImplicitCastExpr 0x7fcda18885d8 <col:44> 'W':'long' <IntegralCast>
+|   |       |   `-IntegerLiteral 0x7fcda18881c0 <col:44> 'int' 0
+|   |       |-InitListExpr 0x7fcda18885f0 <col:49, col:60> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |       | `-ImplicitCastExpr 0x7fcda1888638 <col:56> 'W':'long' <IntegralCast>
+|   |       |   `-IntegerLiteral 0x7fcda1888268 <col:56> 'int' 999
+|   |       `-InitListExpr 0x7fcda1888650 <col:63, col:74> 'union u0':'union u0' field Field 0x7fcda186e030 'i' 'W':'long'
+|   |         `-ImplicitCastExpr 0x7fcda1888698 <col:70> 'W':'long' <IntegralCast>
+|   |           `-IntegerLiteral 0x7fcda1888310 <col:70> 'int' 777
+|   |-CallExpr 0x7fcda18898b0 <line:64:3, col:36> 'void'
+|   | |-ImplicitCastExpr 0x7fcda1889898 <col:3> 'void (*)(void *, struct s1 *, const union u0 *, W, W, W)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fcda18886c8 <col:3> 'void (void *, struct s1 *, const union u0 *, W, W, W)' Function 0x7fcda1885920 'f' 'void (void *, struct s1 *, const union u0 *, W, W, W)'
+|   | |-ImplicitCastExpr 0x7fcda1889908 <col:6> 'void *' <NullToPointer>
+|   | | `-IntegerLiteral 0x7fcda18886f0 <col:6> 'int' 0
+|   | |-UnaryOperator 0x7fcda1888738 <col:9, col:10> 'struct s1 *' prefix '&'
+|   | | `-DeclRefExpr 0x7fcda1888710 <col:10> 'struct s1':'struct s1' lvalue Var 0x7fcda1888098 's' 'struct s1':'struct s1'
+|   | |-ImplicitCastExpr 0x7fcda1889920 <col:13> 'const union u0 *' <NullToPointer>
+|   | | `-IntegerLiteral 0x7fcda1888758 <col:13> 'int' 0
+|   | |-ImplicitCastExpr 0x7fcda1889938 <col:16> 'W':'long' <IntegralCast>
+|   | | `-IntegerLiteral 0x7fcda1888778 <col:16> 'int' 20000
+|   | |-ImplicitCastExpr 0x7fcda1889950 <col:23> 'W':'long' <IntegralCast>
+|   | | `-IntegerLiteral 0x7fcda1888798 <col:23> 'int' 10000
+|   | `-CStyleCastExpr 0x7fcda1889818 <col:30, col:34> 'W':'long' <PointerToIntegral>
+|   |   `-ImplicitCastExpr 0x7fcda1889800 <col:34> 'union u0 *' <ArrayToPointerDecay>
+|   |     `-DeclRefExpr 0x7fcda18887b8 <col:34> 'union u0 [4]' lvalue Var 0x7fcda1887b08 'uv' 'union u0 [4]'
+|   |-IfStmt 0x7fcda188a618 <line:65:3, line:68:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fcda188a588 <line:65:7, line:67:37> 'int' '||'
+|   | | |-BinaryOperator 0x7fcda188a428 <line:65:7, line:67:21> 'int' '||'
+|   | | | |-BinaryOperator 0x7fcda188a2c8 <line:65:7, line:66:59> 'int' '||'
+|   | | | | |-BinaryOperator 0x7fcda188a168 <line:65:7, line:66:41> 'int' '||'
+|   | | | | | |-BinaryOperator 0x7fcda188a008 <line:65:7, line:66:23> 'int' '||'
+|   | | | | | | |-BinaryOperator 0x7fcda1889e70 <line:65:7, col:61> 'int' '||'
+|   | | | | | | | |-BinaryOperator 0x7fcda1889cd8 <col:7, col:43> 'int' '||'
+|   | | | | | | | | |-BinaryOperator 0x7fcda1889af0 <col:7, col:24> 'int' '!='
+|   | | | | | | | | | |-ImplicitCastExpr 0x7fcda1889ad8 <col:7, col:15> 'W':'long' <LValueToRValue>
+|   | | | | | | | | | | `-MemberExpr 0x7fcda1889a28 <col:7, col:15> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | | | | | | | | |   `-ArraySubscriptExpr 0x7fcda1889a00 <col:7, col:13> 'union u0':'union u0' lvalue
+|   | | | | | | | | | |     |-ImplicitCastExpr 0x7fcda18899e8 <col:7, col:9> 'union u0 *' <ArrayToPointerDecay>
+|   | | | | | | | | | |     | `-MemberExpr 0x7fcda1889990 <col:7, col:9> 'union u0 [4]' lvalue .m1 0x7fcda186e308
+|   | | | | | | | | | |     |   `-DeclRefExpr 0x7fcda1889968 <col:7> 'struct s1':'struct s1' lvalue Var 0x7fcda1888098 's' 'struct s1':'struct s1'
+|   | | | | | | | | | |     `-IntegerLiteral 0x7fcda18899c8 <col:12> 'int' 0
+|   | | | | | | | | | `-CStyleCastExpr 0x7fcda1889ab0 <col:20, col:24> 'W':'long' <PointerToIntegral>
+|   | | | | | | | | |   `-ImplicitCastExpr 0x7fcda1889a98 <col:24> 'union u0 *' <ArrayToPointerDecay>
+|   | | | | | | | | |     `-DeclRefExpr 0x7fcda1889a60 <col:24> 'union u0 [4]' lvalue Var 0x7fcda1887b08 'uv' 'union u0 [4]'
+|   | | | | | | | | `-BinaryOperator 0x7fcda1889c60 <col:30, col:43> 'int' '!='
+|   | | | | | | | |   |-ImplicitCastExpr 0x7fcda1889c30 <col:30, col:38> 'W':'long' <LValueToRValue>
+|   | | | | | | | |   | `-MemberExpr 0x7fcda1889bd8 <col:30, col:38> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | | | | | | |   |   `-ArraySubscriptExpr 0x7fcda1889bb0 <col:30, col:36> 'union u0':'union u0' lvalue
+|   | | | | | | | |   |     |-ImplicitCastExpr 0x7fcda1889b98 <col:30, col:32> 'union u0 *' <ArrayToPointerDecay>
+|   | | | | | | | |   |     | `-MemberExpr 0x7fcda1889b40 <col:30, col:32> 'union u0 [4]' lvalue .m1 0x7fcda186e308
+|   | | | | | | | |   |     |   `-DeclRefExpr 0x7fcda1889b18 <col:30> 'struct s1':'struct s1' lvalue Var 0x7fcda1888098 's' 'struct s1':'struct s1'
+|   | | | | | | | |   |     `-IntegerLiteral 0x7fcda1889b78 <col:35> 'int' 1
+|   | | | | | | | |   `-ImplicitCastExpr 0x7fcda1889c48 <col:43> 'long' <IntegralCast>
+|   | | | | | | | |     `-IntegerLiteral 0x7fcda1889c10 <col:43> 'int' 0
+|   | | | | | | | `-BinaryOperator 0x7fcda1889e48 <col:48, col:61> 'int' '!='
+|   | | | | | | |   |-ImplicitCastExpr 0x7fcda1889e18 <col:48, col:56> 'W':'long' <LValueToRValue>
+|   | | | | | | |   | `-MemberExpr 0x7fcda1889dc0 <col:48, col:56> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | | | | | |   |   `-ArraySubscriptExpr 0x7fcda1889d98 <col:48, col:54> 'union u0':'union u0' lvalue
+|   | | | | | | |   |     |-ImplicitCastExpr 0x7fcda1889d80 <col:48, col:50> 'union u0 *' <ArrayToPointerDecay>
+|   | | | | | | |   |     | `-MemberExpr 0x7fcda1889d28 <col:48, col:50> 'union u0 [4]' lvalue .m1 0x7fcda186e308
+|   | | | | | | |   |     |   `-DeclRefExpr 0x7fcda1889d00 <col:48> 'struct s1':'struct s1' lvalue Var 0x7fcda1888098 's' 'struct s1':'struct s1'
+|   | | | | | | |   |     `-IntegerLiteral 0x7fcda1889d60 <col:53> 'int' 2
+|   | | | | | | |   `-ImplicitCastExpr 0x7fcda1889e30 <col:61> 'long' <IntegralCast>
+|   | | | | | | |     `-IntegerLiteral 0x7fcda1889df8 <col:61> 'int' 999
+|   | | | | | | `-BinaryOperator 0x7fcda1889fe0 <line:66:10, col:23> 'int' '!='
+|   | | | | | |   |-ImplicitCastExpr 0x7fcda1889fb0 <col:10, col:18> 'W':'long' <LValueToRValue>
+|   | | | | | |   | `-MemberExpr 0x7fcda1889f58 <col:10, col:18> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | | | | |   |   `-ArraySubscriptExpr 0x7fcda1889f30 <col:10, col:16> 'union u0':'union u0' lvalue
+|   | | | | | |   |     |-ImplicitCastExpr 0x7fcda1889f18 <col:10, col:12> 'union u0 *' <ArrayToPointerDecay>
+|   | | | | | |   |     | `-MemberExpr 0x7fcda1889ec0 <col:10, col:12> 'union u0 [4]' lvalue .m1 0x7fcda186e308
+|   | | | | | |   |     |   `-DeclRefExpr 0x7fcda1889e98 <col:10> 'struct s1':'struct s1' lvalue Var 0x7fcda1888098 's' 'struct s1':'struct s1'
+|   | | | | | |   |     `-IntegerLiteral 0x7fcda1889ef8 <col:15> 'int' 3
+|   | | | | | |   `-ImplicitCastExpr 0x7fcda1889fc8 <col:23> 'long' <IntegralCast>
+|   | | | | | |     `-IntegerLiteral 0x7fcda1889f90 <col:23> 'int' 777
+|   | | | | | `-BinaryOperator 0x7fcda188a140 <col:30, col:41> 'int' '!='
+|   | | | | |   |-ImplicitCastExpr 0x7fcda188a110 <col:30, col:36> 'W':'long' <LValueToRValue>
+|   | | | | |   | `-MemberExpr 0x7fcda188a0b8 <col:30, col:36> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | | | |   |   `-ArraySubscriptExpr 0x7fcda188a090 <col:30, col:34> 'union u0':'union u0' lvalue
+|   | | | | |   |     |-ImplicitCastExpr 0x7fcda188a078 <col:30> 'union u0 *' <ArrayToPointerDecay>
+|   | | | | |   |     | `-DeclRefExpr 0x7fcda188a030 <col:30> 'union u0 [4]' lvalue Var 0x7fcda1887b08 'uv' 'union u0 [4]'
+|   | | | | |   |     `-IntegerLiteral 0x7fcda188a058 <col:33> 'int' 0
+|   | | | | |   `-ImplicitCastExpr 0x7fcda188a128 <col:41> 'long' <IntegralCast>
+|   | | | | |     `-IntegerLiteral 0x7fcda188a0f0 <col:41> 'int' 111
+|   | | | | `-BinaryOperator 0x7fcda188a2a0 <col:48, col:59> 'int' '!='
+|   | | | |   |-ImplicitCastExpr 0x7fcda188a270 <col:48, col:54> 'W':'long' <LValueToRValue>
+|   | | | |   | `-MemberExpr 0x7fcda188a218 <col:48, col:54> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | | |   |   `-ArraySubscriptExpr 0x7fcda188a1f0 <col:48, col:52> 'union u0':'union u0' lvalue
+|   | | | |   |     |-ImplicitCastExpr 0x7fcda188a1d8 <col:48> 'union u0 *' <ArrayToPointerDecay>
+|   | | | |   |     | `-DeclRefExpr 0x7fcda188a190 <col:48> 'union u0 [4]' lvalue Var 0x7fcda1887b08 'uv' 'union u0 [4]'
+|   | | | |   |     `-IntegerLiteral 0x7fcda188a1b8 <col:51> 'int' 1
+|   | | | |   `-ImplicitCastExpr 0x7fcda188a288 <col:59> 'long' <IntegralCast>
+|   | | | |     `-IntegerLiteral 0x7fcda188a250 <col:59> 'int' 222
+|   | | | `-BinaryOperator 0x7fcda188a400 <line:67:10, col:21> 'int' '!='
+|   | | |   |-ImplicitCastExpr 0x7fcda188a3d0 <col:10, col:16> 'W':'long' <LValueToRValue>
+|   | | |   | `-MemberExpr 0x7fcda188a378 <col:10, col:16> 'W':'long' lvalue .i 0x7fcda186e030
+|   | | |   |   `-ArraySubscriptExpr 0x7fcda188a350 <col:10, col:14> 'union u0':'union u0' lvalue
+|   | | |   |     |-ImplicitCastExpr 0x7fcda188a338 <col:10> 'union u0 *' <ArrayToPointerDecay>
+|   | | |   |     | `-DeclRefExpr 0x7fcda188a2f0 <col:10> 'union u0 [4]' lvalue Var 0x7fcda1887b08 'uv' 'union u0 [4]'
+|   | | |   |     `-IntegerLiteral 0x7fcda188a318 <col:13> 'int' 2
+|   | | |   `-ImplicitCastExpr 0x7fcda188a3e8 <col:21> 'long' <IntegralCast>
+|   | | |     `-IntegerLiteral 0x7fcda188a3b0 <col:21> 'int' 0
+|   | | `-BinaryOperator 0x7fcda188a560 <col:26, col:37> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x7fcda188a530 <col:26, col:32> 'W':'long' <LValueToRValue>
+|   | |   | `-MemberExpr 0x7fcda188a4d8 <col:26, col:32> 'W':'long' lvalue .i 0x7fcda186e030
+|   | |   |   `-ArraySubscriptExpr 0x7fcda188a4b0 <col:26, col:30> 'union u0':'union u0' lvalue
+|   | |   |     |-ImplicitCastExpr 0x7fcda188a498 <col:26> 'union u0 *' <ArrayToPointerDecay>
+|   | |   |     | `-DeclRefExpr 0x7fcda188a450 <col:26> 'union u0 [4]' lvalue Var 0x7fcda1887b08 'uv' 'union u0 [4]'
+|   | |   |     `-IntegerLiteral 0x7fcda188a478 <col:29> 'int' 3
+|   | |   `-ImplicitCastExpr 0x7fcda188a548 <col:37> 'long' <IntegralCast>
+|   | |     `-IntegerLiteral 0x7fcda188a510 <col:37> 'int' 444
+|   | |-CallExpr 0x7fcda188a5f0 <line:68:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fcda188a5d8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fcda188a5b0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fcda1887840 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-CallExpr 0x7fcda188a840 <line:69:3, col:10> 'void'
+|     |-ImplicitCastExpr 0x7fcda188a828 <col:3> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fcda188a790 <col:3> 'void (int) __attribute__((noreturn))' Function 0x7fcda188a688 'exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x7fcda188a7b8 <col:9> 'int' 0
+`-FunctionDecl 0x7fcda188a688 <col:3> col:3 implicit used exit 'void (int) __attribute__((noreturn))' extern
+  `-ParmVarDecl 0x7fcda188a728 <<invalid sloc>> <invalid sloc> 'int'

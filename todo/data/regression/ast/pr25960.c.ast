@@ -1,0 +1,53 @@
+TranslationUnitDecl 0x7fbe9282bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fbe9286d850 <../Data/C2AST/pr25960.c:4:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fbe9286d8f0 prev 0x7fbe9286d850 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+|-VarDecl 0x7fbe9286d9a8 <line:6:1, col:22> col:22 used l 'volatile long double'
+|-VarDecl 0x7fbe9286da60 <col:1, col:25> col:25 used m 'volatile long double'
+|-VarDecl 0x7fbe9286dad8 <col:1, col:28> col:28 used n 'volatile long double'
+|-FunctionDecl 0x7fbe9286dc28 <line:8:1, line:17:1> line:9:1 main 'int (void)'
+| `-CompoundStmt 0x7fbe9286e4f8 <line:10:1, line:17:1>
+|   |-BinaryOperator 0x7fbe9286e048 <line:11:3, col:39> 'long double' '='
+|   | |-DeclRefExpr 0x7fbe9286dcf8 <col:3> 'volatile long double' lvalue Var 0x7fbe9286d9a8 'l' 'volatile long double'
+|   | `-CallExpr 0x7fbe9286e010 <col:7, col:39> 'long double'
+|   |   |-ImplicitCastExpr 0x7fbe9286dff8 <col:7> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fbe9286df28 <col:7> '<builtin fn type>' Function 0x7fbe9286dd60 '__builtin_copysignl' 'long double (long double, long double)'
+|   |   |-FloatingLiteral 0x7fbe9286df50 <col:28> 'long double' 0.000000e+00
+|   |   `-UnaryOperator 0x7fbe9286dfb0 <col:34, col:35> 'long double' prefix '-'
+|   |     `-FloatingLiteral 0x7fbe9286df80 <col:35> 'long double' 1.000000e+00
+|   |-BinaryOperator 0x7fbe9286e190 <line:12:3, col:39> 'long double' '='
+|   | |-DeclRefExpr 0x7fbe9286e070 <col:3> 'volatile long double' lvalue Var 0x7fbe9286da60 'm' 'volatile long double'
+|   | `-CallExpr 0x7fbe9286e158 <col:7, col:39> 'long double'
+|   |   |-ImplicitCastExpr 0x7fbe9286e140 <col:7> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|   |   | `-DeclRefExpr 0x7fbe9286e098 <col:7> '<builtin fn type>' Function 0x7fbe9286dd60 '__builtin_copysignl' 'long double (long double, long double)'
+|   |   |-FloatingLiteral 0x7fbe9286e0c0 <col:28> 'long double' 0.000000e+00
+|   |   `-UnaryOperator 0x7fbe9286e120 <col:34, col:35> 'long double' prefix '-'
+|   |     `-FloatingLiteral 0x7fbe9286e0f0 <col:35> 'long double' 1.000000e+00
+|   |-BinaryOperator 0x7fbe9286e288 <line:13:3, col:11> 'long double' '='
+|   | |-DeclRefExpr 0x7fbe9286e1b8 <col:3> 'volatile long double' lvalue Var 0x7fbe9286dad8 'n' 'volatile long double'
+|   | `-BinaryOperator 0x7fbe9286e260 <col:7, col:11> 'long double' '+'
+|   |   |-ImplicitCastExpr 0x7fbe9286e230 <col:7> 'long double' <LValueToRValue>
+|   |   | `-DeclRefExpr 0x7fbe9286e1e0 <col:7> 'volatile long double' lvalue Var 0x7fbe9286d9a8 'l' 'volatile long double'
+|   |   `-ImplicitCastExpr 0x7fbe9286e248 <col:11> 'long double' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbe9286e208 <col:11> 'volatile long double' lvalue Var 0x7fbe9286da60 'm' 'volatile long double'
+|   |-IfStmt 0x7fbe9286e488 <line:14:3, line:15:12>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fbe9286e3c8 <line:14:7, col:40> 'int' '>='
+|   | | |-CallExpr 0x7fbe9286e348 <col:7, col:35> 'long double'
+|   | | | |-ImplicitCastExpr 0x7fbe9286e330 <col:7> 'long double (*)(long double, long double)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fbe9286e2b0 <col:7> '<builtin fn type>' Function 0x7fbe9286dd60 '__builtin_copysignl' 'long double (long double, long double)'
+|   | | | |-FloatingLiteral 0x7fbe9286e2d8 <col:28> 'long double' 1.000000e+00
+|   | | | `-ImplicitCastExpr 0x7fbe9286e380 <col:34> 'long double' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x7fbe9286e308 <col:34> 'volatile long double' lvalue Var 0x7fbe9286dad8 'n' 'volatile long double'
+|   | | `-FloatingLiteral 0x7fbe9286e398 <col:40> 'long double' 0.000000e+00
+|   | |-CallExpr 0x7fbe9286e460 <line:15:5, col:12> 'void'
+|   | | `-ImplicitCastExpr 0x7fbe9286e448 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fbe9286e3f0 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fbe9286d8f0 'abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fbe9286e4e0 <line:16:3, col:10>
+|     `-IntegerLiteral 0x7fbe9286e4c0 <col:10> 'int' 0
+`-FunctionDecl 0x7fbe9286dd60 <line:11:7> col:7 implicit used __builtin_copysignl 'long double (long double, long double)' extern
+  |-ParmVarDecl 0x7fbe9286de00 <<invalid sloc>> <invalid sloc> 'long double'
+  |-ParmVarDecl 0x7fbe9286de60 <<invalid sloc>> <invalid sloc> 'long double'
+  |-NoThrowAttr 0x7fbe9286ded0 <col:7> Implicit
+  `-ConstAttr 0x7fbe9286df18 <col:7> Implicit

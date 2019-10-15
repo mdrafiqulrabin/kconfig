@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f90c18002e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f90c1800f60 <../Data/C2AST/pr48213.c:6:1, col:29> col:8 struct S definition
+| `-FieldDecl 0x7f90c103b980 <col:12, col:26> col:18 referenced s 'int (*)(void)'
+|-FunctionDecl 0x7f90c103ba60 <line:7:1, col:14> col:5 used bar 'int (void)'
+`-FunctionDecl 0x7f90c103bcf0 <line:9:1, line:14:1> line:10:1 foo 'void (struct S *)'
+  |-ParmVarDecl 0x7f90c103bbf0 <col:6, col:16> col:16 used x 'struct S *'
+  `-CompoundStmt 0x7f90c103bf30 <line:11:1, line:14:1>
+    `-IfStmt 0x7f90c103bef8 <line:12:3, line:13:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7f90c103be68 <line:12:7, col:15> 'int' '!='
+      | |-ImplicitCastExpr 0x7f90c103be38 <col:7, col:10> 'int (*)(void)' <LValueToRValue>
+      | | `-MemberExpr 0x7f90c103bdd8 <col:7, col:10> 'int (*)(void)' lvalue ->s 0x7f90c103b980
+      | |   `-ImplicitCastExpr 0x7f90c103bdc0 <col:7> 'struct S *' <LValueToRValue>
+      | |     `-DeclRefExpr 0x7f90c103bd98 <col:7> 'struct S *' lvalue ParmVar 0x7f90c103bbf0 'x' 'struct S *'
+      | `-ImplicitCastExpr 0x7f90c103be50 <col:15> 'int (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f90c103be10 <col:15> 'int (void)' Function 0x7f90c103ba60 'bar' 'int (void)'
+      |-CallExpr 0x7f90c103bed0 <line:13:5, col:10> 'int'
+      | `-ImplicitCastExpr 0x7f90c103beb8 <col:5> 'int (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7f90c103be90 <col:5> 'int (void)' Function 0x7f90c103ba60 'bar' 'int (void)'
+      `-<<<NULL>>>

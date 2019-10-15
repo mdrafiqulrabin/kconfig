@@ -1,0 +1,21 @@
+TranslationUnitDecl 0x7f9fde02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7f9fdf000028 <../Data/C2AST/pr51012-2.c:4:1, line:7:1> line:4:7 used baz 'float (void)'
+| `-CompoundStmt 0x7f9fdf000158 <line:5:1, line:7:1>
+|   `-ReturnStmt 0x7f9fdf000140 <line:6:3, col:10>
+|     `-ImplicitCastExpr 0x7f9fdf000128 <col:10> 'float' <IntegralToFloating>
+|       `-IntegerLiteral 0x7f9fdf000108 <col:10> 'int' 0
+|-FunctionDecl 0x7f9fdf0003d8 <line:9:1, line:12:1> line:9:19 used bar 'int (int (*)(void))' static inline
+| |-ParmVarDecl 0x7f9fdf0002d0 <col:24, col:41> col:30 used ibaz 'int (*)(void)'
+| `-CompoundStmt 0x7f9fdf000500 <line:10:1, line:12:1>
+|   `-ReturnStmt 0x7f9fdf0004e8 <line:11:3, col:16>
+|     `-CallExpr 0x7f9fdf0004c0 <col:10, col:16> 'int'
+|       `-ImplicitCastExpr 0x7f9fdf0004a8 <col:10> 'int (*)(void)' <LValueToRValue>
+|         `-DeclRefExpr 0x7f9fdf000480 <col:10> 'int (*)(void)' lvalue ParmVar 0x7f9fdf0002d0 'ibaz' 'int (*)(void)'
+`-FunctionDecl 0x7f9fdf0005e0 <line:14:1, line:17:1> line:14:6 foo 'void (void)'
+  `-CompoundStmt 0x7f9fdf000890 <line:15:1, line:17:1>
+    `-CallExpr 0x7f9fdf000860 <line:16:3, col:25> 'int'
+      |-ImplicitCastExpr 0x7f9fdf000848 <col:3> 'int (*)(int (*)(void))' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7f9fdf000680 <col:3> 'int (int (*)(void))' Function 0x7f9fdf0003d8 'bar' 'int (int (*)(void))'
+      `-CStyleCastExpr 0x7f9fdf0007c0 <col:7, col:22> 'int (*)(void)' <BitCast>
+        `-ImplicitCastExpr 0x7f9fdf0007a8 <col:22> 'float (*)(void)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7f9fdf000718 <col:22> 'float (void)' Function 0x7f9fdf000028 'baz' 'float (void)'

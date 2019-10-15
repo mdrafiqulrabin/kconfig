@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fedaf82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fedb0015200 <../Data/C2AST/pr71991.c:3:1, col:74> col:55 used fn1 'int ()' static inline
+| |-CompoundStmt 0x7fedb0015360 <col:62, col:74>
+| | `-ReturnStmt 0x7fedb0015348 <col:64, col:71>
+| |   `-IntegerLiteral 0x7fedb0015328 <col:71> 'int' 0
+| `-AlwaysInlineAttr 0x7fedb00152a0 <col:31> always_inline
+|-FunctionDecl 0x7fedb0015420 <line:4:1, col:79> col:62 used fn2 'int ()' static
+| |-CompoundStmt 0x7fedb00155b8 <col:69, col:79>
+| | `-CallExpr 0x7fedb0015590 <col:71, col:76> 'int'
+| |   `-ImplicitCastExpr 0x7fedb0015578 <col:71> 'int (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fedb0015528 <col:71> 'int ()' Function 0x7fedb0015200 'fn1' 'int ()'
+| `-TargetAttr 0x7fedb00154c0 <col:24, col:54> "inline-all-stringops"
+`-FunctionDecl 0x7fedb00155f8 <line:6:1, line:9:1> line:6:5 main 'int ()'
+  `-CompoundStmt 0x7fedb0015700 <line:7:1, line:9:1>
+    `-CallExpr 0x7fedb00156d8 <line:8:3, col:7> 'int'
+      `-ImplicitCastExpr 0x7fedb00156c0 <col:3> 'int (*)()' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fedb0015698 <col:3> 'int ()' Function 0x7fedb0015420 'fn2' 'int ()'

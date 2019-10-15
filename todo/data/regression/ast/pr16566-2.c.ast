@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fa67d82b2e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa67d82bf60 <../Data/C2AST/pr16566-2.c:4:1, line:8:1> line:4:8 struct A definition
+| |-FieldDecl 0x7fa67d86ce38 <line:6:5, col:9> col:9 i 'int'
+| `-FieldDecl 0x7fa67d86ced0 <line:7:5, col:11> col:9 referenced x 'int []'
+`-FunctionDecl 0x7fa67d86d078 <line:10:1, line:13:1> line:10:5 foo 'int (struct A)'
+  |-ParmVarDecl 0x7fa67d86cf70 <col:9, col:18> col:18 used a 'struct A':'struct A'
+  `-CompoundStmt 0x7fa67d86d318 <line:11:1, line:13:1>
+    `-ReturnStmt 0x7fa67d86d300 <line:12:5, col:21>
+      `-ImplicitCastExpr 0x7fa67d86d2e8 <col:12, col:21> 'int' <LValueToRValue>
+        `-ArraySubscriptExpr 0x7fa67d86d2c0 <col:12, col:21> 'int' lvalue
+          |-ImplicitCastExpr 0x7fa67d86d2a8 <col:12, col:18> 'int *' <ArrayToPointerDecay>
+          | `-MemberExpr 0x7fa67d86d228 <col:12, col:18> 'int []' .x 0x7fa67d86ced0
+          |   `-ParenExpr 0x7fa67d86d208 <col:12, col:16> 'struct A':'struct A'
+          |     `-BinaryOperator 0x7fa67d86d1e0 <col:13, col:15> 'struct A':'struct A' ','
+          |       |-ImplicitCastExpr 0x7fa67d86d1b0 <col:13> 'struct A':'struct A' <LValueToRValue>
+          |       | `-DeclRefExpr 0x7fa67d86d160 <col:13> 'struct A':'struct A' lvalue ParmVar 0x7fa67d86cf70 'a' 'struct A':'struct A'
+          |       `-ImplicitCastExpr 0x7fa67d86d1c8 <col:15> 'struct A':'struct A' <LValueToRValue>
+          |         `-DeclRefExpr 0x7fa67d86d188 <col:15> 'struct A':'struct A' lvalue ParmVar 0x7fa67d86cf70 'a' 'struct A':'struct A'
+          `-IntegerLiteral 0x7fa67d86d260 <col:20> 'int' 0

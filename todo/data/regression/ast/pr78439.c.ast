@@ -1,0 +1,110 @@
+TranslationUnitDecl 0x7fe8ef02bce8 <<invalid sloc>> <invalid sloc>
+|-EnumDecl 0x7fe8ef02c960 <../Data/C2AST/pr78439.c:4:1, line:7:1> line:4:6 demangle_component_type
+| `-EnumConstantDecl 0x7fe8ef814220 <line:6:3> col:3 DEMANGLE_COMPONENT_THROW_SPEC 'int'
+|-RecordDecl 0x7fe8ef814268 <line:8:1, line:19:1> line:8:8 struct demangle_component definition
+| |-FieldDecl 0x7fe8ef814360 <line:10:3, col:32> col:32 type 'enum demangle_component_type':'enum demangle_component_type'
+| |-RecordDecl 0x7fe8ef8143a8 <line:11:3, line:18:3> line:11:3 struct definition
+| | |-RecordDecl 0x7fe8ef814450 <line:13:5, line:17:5> line:13:5 struct definition
+| | | |-FieldDecl 0x7fe8ef8145b0 <line:15:7, col:34> col:34 left 'struct demangle_component *'
+| | | `-FieldDecl 0x7fe8ef814620 <line:16:7, col:34> col:34 right 'struct demangle_component *'
+| | |-FieldDecl 0x7fe8ef8146c0 <line:13:5> col:5 implicit 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:13:5)'
+| | |-IndirectFieldDecl 0x7fe8ef814718 <line:15:34> col:34 implicit left 'struct demangle_component *'
+| | | |-Field 0x7fe8ef8146c0 '' 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:13:5)'
+| | | `-Field 0x7fe8ef8145b0 'left' 'struct demangle_component *'
+| | `-IndirectFieldDecl 0x7fe8ef814768 <line:16:34> col:34 implicit right 'struct demangle_component *'
+| |   |-Field 0x7fe8ef8146c0 '' 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:13:5)'
+| |   `-Field 0x7fe8ef814620 'right' 'struct demangle_component *'
+| |-FieldDecl 0x7fe8ef814850 <line:11:3> col:3 implicit 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:11:3)'
+| |-IndirectFieldDecl 0x7fe8ef8148b0 <line:15:34> col:34 implicit left 'struct demangle_component *'
+| | |-Field 0x7fe8ef814850 '' 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:11:3)'
+| | |-Field 0x7fe8ef8146c0 '' 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:13:5)'
+| | `-Field 0x7fe8ef8145b0 'left' 'struct demangle_component *'
+| `-IndirectFieldDecl 0x7fe8ef814908 <line:16:34> col:34 implicit right 'struct demangle_component *'
+|   |-Field 0x7fe8ef814850 '' 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:11:3)'
+|   |-Field 0x7fe8ef8146c0 '' 'struct demangle_component::(anonymous at ../Data/C2AST/pr78439.c:13:5)'
+|   `-Field 0x7fe8ef814620 'right' 'struct demangle_component *'
+|-VarDecl 0x7fe8ef814960 <line:21:1, col:5> col:5 used a 'int'
+|-VarDecl 0x7fe8ef814a18 <col:1, col:8> col:8 used b 'int'
+|-RecordDecl 0x7fe8ef814a90 <line:23:1, line:31:1> line:23:8 struct d_info definition
+| |-FieldDecl 0x7fe8ef814b68 <line:25:3, col:30> col:30 referenced comps 'struct demangle_component *'
+| |-FieldDecl 0x7fe8ef814bc8 <line:26:3, col:7> col:7 referenced next_comp 'int'
+| |-FieldDecl 0x7fe8ef814c28 <line:27:3, col:7> col:7 referenced num_comps 'int'
+| |-FieldDecl 0x7fe8ef814c98 <line:28:3, col:30> col:30 referenced subs 'struct demangle_component *'
+| |-FieldDecl 0x7fe8ef814cf8 <line:29:3, col:7> col:7 referenced num_subs 'int'
+| `-FieldDecl 0x7fe8ef814d58 <line:30:3, col:7> col:7 referenced is_conversion 'int'
+|-FunctionDecl 0x7fe8ef814fe0 <line:33:1, line:39:1> line:34:1 used fn1 'void (int, struct d_info *)'
+| |-ParmVarDecl 0x7fe8ef814db8 <col:6, col:10> col:10 used p1 'int'
+| |-ParmVarDecl 0x7fe8ef814ed0 <col:14, col:29> col:29 used p2 'struct d_info *'
+| `-CompoundStmt 0x7fe8ef815400 <line:35:1, line:39:1>
+|   |-BinaryOperator 0x7fe8ef815190 <line:36:3, col:23> 'int' '='
+|   | |-MemberExpr 0x7fe8ef8150d0 <col:3, col:7> 'int' lvalue ->num_comps 0x7fe8ef814c28
+|   | | `-ImplicitCastExpr 0x7fe8ef8150b8 <col:3> 'struct d_info *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe8ef815090 <col:3> 'struct d_info *' lvalue ParmVar 0x7fe8ef814ed0 'p2' 'struct d_info *'
+|   | `-BinaryOperator 0x7fe8ef815168 <col:19, col:23> 'int' '*'
+|   |   |-IntegerLiteral 0x7fe8ef815108 <col:19> 'int' 2
+|   |   `-ImplicitCastExpr 0x7fe8ef815150 <col:23> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe8ef815128 <col:23> 'int' lvalue ParmVar 0x7fe8ef814db8 'p1' 'int'
+|   |-BinaryOperator 0x7fe8ef815318 <line:37:3, col:34> 'int' '='
+|   | |-MemberExpr 0x7fe8ef815200 <col:3, col:7> 'int' lvalue ->next_comp 0x7fe8ef814bc8
+|   | | `-ImplicitCastExpr 0x7fe8ef8151e0 <col:3> 'struct d_info *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x7fe8ef8151b8 <col:3> 'struct d_info *' lvalue ParmVar 0x7fe8ef814ed0 'p2' 'struct d_info *'
+|   | `-BinaryOperator 0x7fe8ef8152f0 <col:19, col:34> 'int' '='
+|   |   |-MemberExpr 0x7fe8ef815278 <col:19, col:23> 'int' lvalue ->num_subs 0x7fe8ef814cf8
+|   |   | `-ImplicitCastExpr 0x7fe8ef815260 <col:19> 'struct d_info *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fe8ef815238 <col:19> 'struct d_info *' lvalue ParmVar 0x7fe8ef814ed0 'p2' 'struct d_info *'
+|   |   `-ImplicitCastExpr 0x7fe8ef8152d8 <col:34> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fe8ef8152b0 <col:34> 'int' lvalue ParmVar 0x7fe8ef814db8 'p1' 'int'
+|   `-BinaryOperator 0x7fe8ef8153d8 <line:38:3, col:23> 'int' '='
+|     |-MemberExpr 0x7fe8ef815380 <col:3, col:7> 'int' lvalue ->is_conversion 0x7fe8ef814d58
+|     | `-ImplicitCastExpr 0x7fe8ef815368 <col:3> 'struct d_info *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fe8ef815340 <col:3> 'struct d_info *' lvalue ParmVar 0x7fe8ef814ed0 'p2' 'struct d_info *'
+|     `-IntegerLiteral 0x7fe8ef8153b8 <col:23> 'int' 0
+|-FunctionDecl 0x7fe8ef815538 <line:41:1, col:15> col:5 used fn3 'int (int *)'
+| `-ParmVarDecl 0x7fe8ef815470 <col:10, col:14> col:15 'int *'
+|-FunctionDecl 0x7fe8ef815790 <line:42:1, col:31> col:6 used fn4 'void (struct d_info *, int)'
+| |-ParmVarDecl 0x7fe8ef815608 <col:11, col:25> col:26 'struct d_info *'
+| `-ParmVarDecl 0x7fe8ef815680 <col:28> col:31 'int'
+`-FunctionDecl 0x7fe8ef815888 <line:44:1, line:57:1> line:45:1 fn2 'void ()'
+  `-CompoundStmt 0x7fe8ef82c288 <line:46:1, line:57:1>
+    |-DeclStmt 0x7fe8ef8159a0 <line:47:3, col:8>
+    | `-VarDecl 0x7fe8ef815940 <col:3, col:7> col:7 used c 'int'
+    |-DeclStmt 0x7fe8ef815a38 <line:48:3, col:18>
+    | `-VarDecl 0x7fe8ef8159d8 <col:3, col:17> col:17 used d 'struct d_info':'struct d_info'
+    |-BinaryOperator 0x7fe8ef815a98 <line:49:3, col:7> 'int' '='
+    | |-DeclRefExpr 0x7fe8ef815a50 <col:3> 'int' lvalue Var 0x7fe8ef814a18 'b' 'int'
+    | `-IntegerLiteral 0x7fe8ef815a78 <col:7> 'int' 0
+    |-BinaryOperator 0x7fe8ef815bd0 <line:50:3, col:14> 'int' '='
+    | |-DeclRefExpr 0x7fe8ef815ac0 <col:3> 'int' lvalue Var 0x7fe8ef815940 'c' 'int'
+    | `-CallExpr 0x7fe8ef815ba0 <col:7, col:14> 'int'
+    |   |-ImplicitCastExpr 0x7fe8ef815b88 <col:7> 'int (*)(int *)' <FunctionToPointerDecay>
+    |   | `-DeclRefExpr 0x7fe8ef815ae8 <col:7> 'int (int *)' Function 0x7fe8ef815538 'fn3' 'int (int *)'
+    |   `-UnaryOperator 0x7fe8ef815b38 <col:12, col:13> 'int *' prefix '&'
+    |     `-DeclRefExpr 0x7fe8ef815b10 <col:13> 'int' lvalue Var 0x7fe8ef814960 'a' 'int'
+    |-CallExpr 0x7fe8ef815d00 <line:51:3, col:13> 'void'
+    | |-ImplicitCastExpr 0x7fe8ef815ce8 <col:3> 'void (*)(int, struct d_info *)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fe8ef815bf8 <col:3> 'void (int, struct d_info *)' Function 0x7fe8ef814fe0 'fn1' 'void (int, struct d_info *)'
+    | |-ImplicitCastExpr 0x7fe8ef815d38 <col:8> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fe8ef815c20 <col:8> 'int' lvalue Var 0x7fe8ef815940 'c' 'int'
+    | `-UnaryOperator 0x7fe8ef815c70 <col:11, col:12> 'struct d_info *' prefix '&'
+    |   `-DeclRefExpr 0x7fe8ef815c48 <col:12> 'struct d_info':'struct d_info' lvalue Var 0x7fe8ef8159d8 'd' 'struct d_info':'struct d_info'
+    |-DeclStmt 0x7fe8ef815f48 <line:52:3, col:43>
+    | `-VarDecl 0x7fe8ef815ee8 <col:3, col:42> col:29 used e 'struct demangle_component [d.num_comps]'
+    |-DeclStmt 0x7fe8ef8160f0 <line:53:3, col:43>
+    | `-VarDecl 0x7fe8ef816090 <col:3, col:42> col:30 used f 'struct demangle_component *[d.num_subs]'
+    |-BinaryOperator 0x7fe8ef8161a8 <line:54:3, col:13> 'struct demangle_component *' '='
+    | |-MemberExpr 0x7fe8ef816130 <col:3, col:5> 'struct demangle_component *' lvalue .comps 0x7fe8ef814b68
+    | | `-DeclRefExpr 0x7fe8ef816108 <col:3> 'struct d_info':'struct d_info' lvalue Var 0x7fe8ef8159d8 'd' 'struct d_info':'struct d_info'
+    | `-ImplicitCastExpr 0x7fe8ef816190 <col:13> 'struct demangle_component *' <ArrayToPointerDecay>
+    |   `-DeclRefExpr 0x7fe8ef816168 <col:13> 'struct demangle_component [d.num_comps]' lvalue Var 0x7fe8ef815ee8 'e' 'struct demangle_component [d.num_comps]'
+    |-BinaryOperator 0x7fe8ef82c128 <line:55:3, col:42> 'struct demangle_component *' '='
+    | |-MemberExpr 0x7fe8ef82c000 <col:3, col:5> 'struct demangle_component *' lvalue .subs 0x7fe8ef814c98
+    | | `-DeclRefExpr 0x7fe8ef8161d0 <col:3> 'struct d_info':'struct d_info' lvalue Var 0x7fe8ef8159d8 'd' 'struct d_info':'struct d_info'
+    | `-CStyleCastExpr 0x7fe8ef82c100 <col:12, col:42> 'struct demangle_component *' <BitCast>
+    |   `-ImplicitCastExpr 0x7fe8ef82c0e8 <col:42> 'struct demangle_component **' <ArrayToPointerDecay>
+    |     `-DeclRefExpr 0x7fe8ef82c038 <col:42> 'struct demangle_component *[d.num_subs]' lvalue Var 0x7fe8ef816090 'f' 'struct demangle_component *[d.num_subs]'
+    `-CallExpr 0x7fe8ef82c250 <line:56:3, col:13> 'void'
+      |-ImplicitCastExpr 0x7fe8ef82c238 <col:3> 'void (*)(struct d_info *, int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe8ef82c150 <col:3> 'void (struct d_info *, int)' Function 0x7fe8ef815790 'fn4' 'void (struct d_info *, int)'
+      |-UnaryOperator 0x7fe8ef82c1a0 <col:8, col:9> 'struct d_info *' prefix '&'
+      | `-DeclRefExpr 0x7fe8ef82c178 <col:9> 'struct d_info':'struct d_info' lvalue Var 0x7fe8ef8159d8 'd' 'struct d_info':'struct d_info'
+      `-IntegerLiteral 0x7fe8ef82c1c0 <col:12> 'int' 1

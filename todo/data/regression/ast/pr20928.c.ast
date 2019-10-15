@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7faa2702bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7faa2702c960 <../Data/C2AST/pr20928.c:1:8, col:15> col:15 struct bar_t
+|-VarDecl 0x7faa2706d870 <col:1, col:21> col:21 used bar 'struct bar_t':'struct bar_t' extern
+|-VarDecl 0x7faa2706d940 <line:2:1, col:7> col:7 used a 'void *'
+`-FunctionDecl 0x7faa2706da60 <line:3:1, line:10:1> line:4:1 foo 'void (void)'
+  `-CompoundStmt 0x7faa2706df50 <line:5:1, line:10:1>
+    |-DeclStmt 0x7faa2706dbf8 <line:6:3, col:15>
+    | `-VarDecl 0x7faa2706db40 <col:3, col:14> col:10 used p 'void **' cinit
+    |   `-ImplicitCastExpr 0x7faa2706dbe0 <col:14> 'void **' <BitCast>
+    |     `-ImplicitCastExpr 0x7faa2706dbc8 <col:14> 'void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7faa2706dba0 <col:14> 'void *' lvalue Var 0x7faa2706d940 'a' 'void *'
+    `-DoStmt 0x7faa2706df30 <line:7:3, line:9:13>
+      |-CompoundStmt 0x7faa2706ded8 <line:7:6, line:9:3>
+      | `-BinaryOperator 0x7faa2706deb0 <line:8:5, col:68> 'void *' '='
+      |   |-UnaryOperator 0x7faa2706dc58 <col:5, col:7> 'void *' lvalue prefix '*'
+      |   | `-UnaryOperator 0x7faa2706dc38 <col:6, col:7> 'void **' postfix '++'
+      |   |   `-DeclRefExpr 0x7faa2706dc10 <col:6> 'void **' lvalue Var 0x7faa2706db40 'p' 'void **'
+      |   `-ImplicitCastExpr 0x7faa2706de98 <col:12, col:68> 'void *' <BitCast>
+      |     `-ParenExpr 0x7faa2706de78 <col:12, col:68> 'unsigned char *'
+      |       `-BinaryOperator 0x7faa2706de50 <col:13, col:67> 'unsigned char *' '+'
+      |         |-CStyleCastExpr 0x7faa2706dd60 <col:13, col:32> 'unsigned char *' <BitCast>
+      |         | `-UnaryOperator 0x7faa2706dcf8 <col:31, col:32> 'struct bar_t *' prefix '&'
+      |         |   `-DeclRefExpr 0x7faa2706dc78 <col:32> 'struct bar_t':'struct bar_t' lvalue Var 0x7faa2706d870 'bar' 'struct bar_t':'struct bar_t'
+      |         `-ParenExpr 0x7faa2706de30 <col:38, col:67> 'unsigned long'
+      |           `-BinaryOperator 0x7faa2706de08 <col:39, col:65> 'unsigned long' '<<'
+      |             |-CStyleCastExpr 0x7faa2706ddc0 <col:39, col:59> 'unsigned long' <IntegralCast>
+      |             | `-IntegerLiteral 0x7faa2706dd88 <col:59> 'long' 1
+      |             `-IntegerLiteral 0x7faa2706dde8 <col:65> 'int' 31
+      `-ImplicitCastExpr 0x7faa2706df18 <line:9:12> 'void **' <LValueToRValue>
+        `-DeclRefExpr 0x7faa2706def0 <col:12> 'void **' lvalue Var 0x7faa2706db40 'p' 'void **'

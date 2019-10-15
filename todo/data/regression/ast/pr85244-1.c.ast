@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7fe37101a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fe37101b560 <../Data/C2AST/pr85244-1.c:4:1, line:8:1> line:4:8 struct s definition
+| |-FieldDecl 0x7fe371814238 <line:5:2, col:7> col:7 a 'long'
+| |-FieldDecl 0x7fe371814298 <line:6:2, col:6> col:6 b 'int'
+| `-FieldDecl 0x7fe371814330 <line:7:2, col:10> col:6 referenced tab 'int []'
+|-VarDecl 0x7fe3718143d0 <line:10:1, col:23> col:23 used val 'const struct s':'const struct s' extern
+|-VarDecl 0x7fe371814488 <line:11:1, col:12> col:12 used idx 'int' extern
+|-FunctionDecl 0x7fe3718145e0 <line:12:13> col:13 implicit used abort 'void (void) __attribute__((noreturn))' extern
+|-FunctionDecl 0x7fe371814680 prev 0x7fe3718145e0 <col:1, col:24> col:13 used abort 'void (void) __attribute__((noreturn))' extern
+`-FunctionDecl 0x7fe371814770 <line:14:1, line:19:1> line:14:5 main 'int ()'
+  `-CompoundStmt 0x7fe371814d68 <line:15:1, line:19:1>
+    |-IfStmt 0x7fe371814cf8 <line:16:3, line:17:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe371814c38 <line:16:7, col:65> 'int' '||'
+    | | |-BinaryOperator 0x7fe371814ad0 <col:7, col:41> 'int' '||'
+    | | | |-BinaryOperator 0x7fe371814930 <col:7, col:21> 'int' '!='
+    | | | | |-ImplicitCastExpr 0x7fe371814918 <col:7, col:16> 'int' <LValueToRValue>
+    | | | | | `-ArraySubscriptExpr 0x7fe3718148d0 <col:7, col:16> 'const int' lvalue
+    | | | | |   |-ImplicitCastExpr 0x7fe3718148b8 <col:7, col:11> 'const int *' <ArrayToPointerDecay>
+    | | | | |   | `-MemberExpr 0x7fe371814838 <col:7, col:11> 'int const[]' lvalue .tab 0x7fe371814330
+    | | | | |   |   `-DeclRefExpr 0x7fe371814810 <col:7> 'const struct s':'const struct s' lvalue Var 0x7fe3718143d0 'val' 'const struct s':'const struct s'
+    | | | | |   `-IntegerLiteral 0x7fe371814870 <col:15> 'int' 0
+    | | | | `-IntegerLiteral 0x7fe3718148f8 <col:21> 'int' 42
+    | | | `-BinaryOperator 0x7fe371814a50 <col:27, col:41> 'int' '!='
+    | | |   |-ImplicitCastExpr 0x7fe371814a38 <col:27, col:36> 'int' <LValueToRValue>
+    | | |   | `-ArraySubscriptExpr 0x7fe3718149f0 <col:27, col:36> 'const int' lvalue
+    | | |   |   |-ImplicitCastExpr 0x7fe3718149d8 <col:27, col:31> 'const int *' <ArrayToPointerDecay>
+    | | |   |   | `-MemberExpr 0x7fe371814980 <col:27, col:31> 'int const[]' lvalue .tab 0x7fe371814330
+    | | |   |   |   `-DeclRefExpr 0x7fe371814958 <col:27> 'const struct s':'const struct s' lvalue Var 0x7fe3718143d0 'val' 'const struct s':'const struct s'
+    | | |   |   `-IntegerLiteral 0x7fe3718149b8 <col:35> 'int' 1
+    | | |   `-IntegerLiteral 0x7fe371814a18 <col:41> 'int' 1337
+    | | `-BinaryOperator 0x7fe371814c10 <col:49, col:65> 'int' '!='
+    | |   |-ImplicitCastExpr 0x7fe371814bf8 <col:49, col:60> 'int' <LValueToRValue>
+    | |   | `-ArraySubscriptExpr 0x7fe371814bb0 <col:49, col:60> 'const int' lvalue
+    | |   |   |-ImplicitCastExpr 0x7fe371814b80 <col:49, col:53> 'const int *' <ArrayToPointerDecay>
+    | |   |   | `-MemberExpr 0x7fe371814b20 <col:49, col:53> 'int const[]' lvalue .tab 0x7fe371814330
+    | |   |   |   `-DeclRefExpr 0x7fe371814af8 <col:49> 'const struct s':'const struct s' lvalue Var 0x7fe3718143d0 'val' 'const struct s':'const struct s'
+    | |   |   `-ImplicitCastExpr 0x7fe371814b98 <col:57> 'int' <LValueToRValue>
+    | |   |     `-DeclRefExpr 0x7fe371814b58 <col:57> 'int' lvalue Var 0x7fe371814488 'idx' 'int'
+    | |   `-IntegerLiteral 0x7fe371814bd8 <col:65> 'int' 1337
+    | |-CallExpr 0x7fe371814cd0 <line:17:5, col:12> 'void'
+    | | `-ImplicitCastExpr 0x7fe371814cb8 <col:5> 'void (*)(void) __attribute__((noreturn))' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe371814c60 <col:5> 'void (void) __attribute__((noreturn))' Function 0x7fe371814680 'abort' 'void (void) __attribute__((noreturn))'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe371814d50 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fe371814d30 <col:10> 'int' 0

@@ -1,0 +1,65 @@
+../Data/C2AST/pr63909.c:9:5: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+    __builtin_exit (0);
+    ^
+../Data/C2AST/pr63909.c:17:5: error: use of unknown builtin '__builtin_exit' [-Wimplicit-function-declaration]
+    __builtin_exit (0);
+    ^
+2 errors generated.
+TranslationUnitDecl 0x7fdeac019ae8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdeac01a060 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdeac019d80 '__int128'
+|-TypedefDecl 0x7fdeac01a0d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdeac019da0 'unsigned __int128'
+|-TypedefDecl 0x7fdeac01a3a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdeac01a1b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdeac01a128 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdeac01a440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdeac01a400 'char *'
+|   `-BuiltinType 0x7fdeac019b80 'char'
+|-TypedefDecl 0x7fdeac01a708 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdeac01a6b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdeac01a520 'struct __va_list_tag'
+|     `-Record 0x7fdeac01a498 '__va_list_tag'
+|-VarDecl 0x7fdeac01a778 <../Data/C2AST/pr63909.c:3:1, col:5> col:5 used z 'int'
+|-FunctionDecl 0x7fdeac81ac88 <line:5:1, line:11:1> line:6:6 used g 'void ()'
+| |-CompoundStmt 0x7fdeac81b058 <line:7:1, line:11:1>
+| | |-IfStmt 0x7fdeac81af90 <line:8:3, line:9:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-UnaryOperator 0x7fdeac81ad98 <line:8:7, col:9> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7fdeac81ad70 <col:9> 'int' lvalue Var 0x7fdeac01a778 'z' 'int'
+| | | |-CallExpr 0x7fdeac81af60 <line:9:5, col:22> 'int'
+| | | | |-ImplicitCastExpr 0x7fdeac81af48 <col:5> 'int (*)()' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7fdeac81aed0 <col:5> 'int ()' Function 0x7fdeac81ae20 '__builtin_exit' 'int ()'
+| | | | `-IntegerLiteral 0x7fdeac81aef8 <col:21> 'int' 0
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7fdeac81b030 <line:10:3, col:6> 'void'
+| |   `-ImplicitCastExpr 0x7fdeac81b018 <col:3> 'void (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fdeac81afc8 <col:3> 'void ()' Function 0x7fdeac81ac88 'g' 'void ()'
+| `-NoInlineAttr 0x7fdeac81ad28 <line:5:16>
+|-FunctionDecl 0x7fdeac81b098 <line:13:1, line:19:1> line:14:6 used f 'void ()'
+| |-CompoundStmt 0x7fdeac81b2f8 <line:15:1, line:19:1>
+| | |-IfStmt 0x7fdeac81b258 <line:16:3, line:17:22>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-UnaryOperator 0x7fdeac81b1a8 <line:16:7, col:9> 'int' prefix '++'
+| | | | `-DeclRefExpr 0x7fdeac81b180 <col:9> 'int' lvalue Var 0x7fdeac01a778 'z' 'int'
+| | | |-CallExpr 0x7fdeac81b228 <line:17:5, col:22> 'int'
+| | | | |-ImplicitCastExpr 0x7fdeac81b210 <col:5> 'int (*)()' <FunctionToPointerDecay>
+| | | | | `-DeclRefExpr 0x7fdeac81b1c8 <col:5> 'int ()' Function 0x7fdeac81ae20 '__builtin_exit' 'int ()'
+| | | | `-IntegerLiteral 0x7fdeac81b1f0 <col:21> 'int' 0
+| | | `-<<<NULL>>>
+| | `-CallExpr 0x7fdeac81b2d0 <line:18:3, col:6> 'void'
+| |   `-ImplicitCastExpr 0x7fdeac81b2b8 <col:3> 'void (*)()' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fdeac81b290 <col:3> 'void ()' Function 0x7fdeac81b098 'f' 'void ()'
+| `-NoInlineAttr 0x7fdeac81b138 <line:13:16>
+`-FunctionDecl 0x7fdeac81b340 <line:21:1, line:27:1> line:21:5 main 'int ()'
+  `-CompoundStmt 0x7fdeac81b4e8 <line:22:1, line:27:1>
+    |-CallExpr 0x7fdeac81b420 <line:23:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7fdeac81b408 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fdeac81b3e0 <col:3> 'void ()' Function 0x7fdeac81b098 'f' 'void ()'
+    |-CallExpr 0x7fdeac81b488 <line:24:3, col:6> 'void'
+    | `-ImplicitCastExpr 0x7fdeac81b470 <col:3> 'void (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fdeac81b448 <col:3> 'void ()' Function 0x7fdeac81ac88 'g' 'void ()'
+    `-ReturnStmt 0x7fdeac81b4d0 <line:26:3, col:10>
+      `-IntegerLiteral 0x7fdeac81b4b0 <col:10> 'int' 0

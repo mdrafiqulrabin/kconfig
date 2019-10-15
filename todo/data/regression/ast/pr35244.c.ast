@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fd32101d6e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fd32101e378 <../Data/C2AST/pr35244.c:6:1, col:5> col:5 v1 'int'
+|-RecordDecl 0x7fd321059a40 <line:7:9, col:16> col:16 struct A
+|-TypedefDecl 0x7fd321059b40 <col:1, col:18> col:18 A 'struct A':'struct A'
+| `-ElaboratedType 0x7fd321059af0 'struct A' sugar
+|   `-RecordType 0x7fd321059ad0 'struct A'
+|     `-Record 0x7fd321059a40 'A'
+|-TypedefDecl 0x7fd321059bc8 <line:8:1, col:13> col:13 i 'int'
+| `-BuiltinType 0x7fd32101d7e0 'int'
+`-FunctionDecl 0x7fd321059c68 <line:13:1, line:20:1> line:13:6 foo 'void ()'
+  `-CompoundStmt 0x7fd321059e40 <line:14:1, line:20:1>
+    |-DeclStmt 0x7fd321059d80 <line:15:3, col:16>
+    | `-VarDecl 0x7fd321059d20 <col:3, col:14> col:14 v4 'int' static
+    `-CompoundStmt 0x7fd321059e28 <line:16:3, line:19:3>
+      `-DeclStmt 0x7fd321059e10 <line:17:5, col:18>
+        `-VarDecl 0x7fd321059db0 <col:5, col:16> col:16 v5 'int' static

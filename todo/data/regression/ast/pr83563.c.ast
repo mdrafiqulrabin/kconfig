@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fb78582b2e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7fb78586ce20 <../Data/C2AST/pr83563.c:4:1, line:15:1> line:5:1 sy 'void (void)'
+  `-CompoundStmt 0x7fb78586d260 <line:6:1, line:15:1>
+    |-DeclStmt 0x7fb78586cf78 <line:7:3, col:9>
+    | `-VarDecl 0x7fb78586cf18 <col:3, col:7> col:7 used hb 'int'
+    |-ForStmt 0x7fb78586d138 <line:9:3, line:11:5>
+    | |-BinaryOperator 0x7fb78586cfd8 <line:9:8, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fb78586cf90 <col:8> 'int' lvalue Var 0x7fb78586cf18 'hb' 'int'
+    | | `-IntegerLiteral 0x7fb78586cfb8 <col:13> 'int' 1
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fb78586d060 <col:16, col:22> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fb78586d048 <col:16> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fb78586d000 <col:16> 'int' lvalue Var 0x7fb78586cf18 'hb' 'int'
+    | | `-IntegerLiteral 0x7fb78586d028 <col:22> 'int' 0
+    | |-CompoundAssignOperator 0x7fb78586d0f0 <col:25, col:31> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fb78586d088 <col:25> 'int' lvalue Var 0x7fb78586cf18 'hb' 'int'
+    | | `-ImplicitCastExpr 0x7fb78586d0d8 <col:31> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fb78586d0b0 <col:31> 'int' lvalue Var 0x7fb78586cf18 'hb' 'int'
+    | `-CompoundStmt 0x7fb78586d128 <line:10:5, line:11:5>
+    `-WhileStmt 0x7fb78586d240 <line:13:3, line:14:7>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fb78586d1d0 <line:13:10, col:15> 'int' '<'
+      | |-ImplicitCastExpr 0x7fb78586d1b8 <col:10> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7fb78586d170 <col:10> 'int' lvalue Var 0x7fb78586cf18 'hb' 'int'
+      | `-IntegerLiteral 0x7fb78586d198 <col:15> 'int' 1
+      `-UnaryOperator 0x7fb78586d220 <line:14:5, col:7> 'int' prefix '++'
+        `-DeclRefExpr 0x7fb78586d1f8 <col:7> 'int' lvalue Var 0x7fb78586cf18 'hb' 'int'

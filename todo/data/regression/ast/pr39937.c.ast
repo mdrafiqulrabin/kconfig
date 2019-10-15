@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fe0de02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe0de06d8a8 <../Data/C2AST/pr39937.c:1:1, col:38> col:5 used foo 'int (const char *restrict)'
+| `-ParmVarDecl 0x7fe0de02c978 <col:10, col:35> col:35 __s 'const char *restrict'
+|-FunctionDecl 0x7fe0de06db10 <line:2:1, line:6:1> line:3:1 used read_anisou 'void (char *)' static
+| |-ParmVarDecl 0x7fe0de06da10 <col:13, col:23> col:18 used line 'char *':'char *'
+| `-CompoundStmt 0x7fe0de06dd28 <line:4:1, line:6:1>
+|   `-CallExpr 0x7fe0de06dce0 <line:5:3, col:14> 'int'
+|     |-ImplicitCastExpr 0x7fe0de06dcc8 <col:3> 'int (*)(const char *restrict)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x7fe0de06dbb8 <col:3> 'int (const char *restrict)' Function 0x7fe0de06d8a8 'foo' 'int (const char *restrict)'
+|     `-ImplicitCastExpr 0x7fe0de06dd10 <col:8, col:13> 'const char *' <BitCast>
+|       `-BinaryOperator 0x7fe0de06dc40 <col:8, col:13> 'char *':'char *' '+'
+|         |-ImplicitCastExpr 0x7fe0de06dc28 <col:8> 'char *':'char *' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fe0de06dbe0 <col:8> 'char *':'char *' lvalue ParmVar 0x7fe0de06da10 'line' 'char *':'char *'
+|         `-IntegerLiteral 0x7fe0de06dc08 <col:13> 'int' 1
+`-FunctionDecl 0x7fe0de06de00 <line:7:1, line:12:1> line:8:1 read_pdbfile 'void (void)'
+  `-CompoundStmt 0x7fe0de06e098 <line:9:1, line:12:1>
+    |-DeclStmt 0x7fe0de06df78 <line:10:3, col:18>
+    | `-VarDecl 0x7fe0de06df18 <col:3, col:17> col:8 used line 'char [4096]'
+    `-CallExpr 0x7fe0de06e050 <line:11:3, col:20> 'void'
+      |-ImplicitCastExpr 0x7fe0de06e038 <col:3> 'void (*)(char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fe0de06df90 <col:3> 'void (char *)' Function 0x7fe0de06db10 'read_anisou' 'void (char *)'
+      `-ImplicitCastExpr 0x7fe0de06e080 <col:16> 'char *' <ArrayToPointerDecay>
+        `-DeclRefExpr 0x7fe0de06dfb8 <col:16> 'char [4096]' lvalue Var 0x7fe0de06df18 'line' 'char [4096]'

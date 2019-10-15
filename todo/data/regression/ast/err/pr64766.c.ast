@@ -1,0 +1,22 @@
+../Data/C2AST/pr64766.c:9:6: error: illegal initializer (only variables can be initialized)
+void foo () = 0;  
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fe73c02b2e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe73c02b860 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe73c02b580 '__int128'
+|-TypedefDecl 0x7fe73c02b8d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe73c02b5a0 'unsigned __int128'
+|-TypedefDecl 0x7fe73c02bba8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe73c02b9b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe73c02b928 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe73c02bc40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe73c02bc00 'char *'
+|   `-BuiltinType 0x7fe73c02b380 'char'
+|-TypedefDecl 0x7fe73c02bf08 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fe73c02beb0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fe73c02bd20 'struct __va_list_tag'
+|     `-Record 0x7fe73c02bc98 '__va_list_tag'
+|-FunctionDecl 0x7fe73c814200 <../Data/C2AST/pr64766.c:4:1, line:7:1> line:5:1 foo 'void ()'
+| `-CompoundStmt 0x7fe73c8142e0 <line:6:1, line:7:1>
+`-FunctionDecl 0x7fe73c814310 prev 0x7fe73c814200 <line:9:1, col:11> col:6 invalid foo 'void ()'

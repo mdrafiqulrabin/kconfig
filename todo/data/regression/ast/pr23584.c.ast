@@ -1,0 +1,19 @@
+TranslationUnitDecl 0x7fd63482bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd63486d828 <../Data/C2AST/pr23584.c:7:1, line:10:1> line:7:5 test1 'int (void)'
+| `-CompoundStmt 0x7fd63486d9e8 <line:8:1, line:10:1>
+|   `-ReturnStmt 0x7fd63486d9d0 <line:9:3, col:29>
+|     `-ImplicitCastExpr 0x7fd63486d9b8 <col:10, col:29> 'int' <LValueToRValue>
+|       `-UnaryOperator 0x7fd63486d998 <col:10, col:29> 'volatile int' lvalue prefix '*'
+|         `-CStyleCastExpr 0x7fd63486d970 <col:12, col:29> 'volatile int *' <IntegralToPointer>
+|           `-IntegerLiteral 0x7fd63486d908 <col:29> 'int' 4660
+`-FunctionDecl 0x7fd63486da98 <line:12:1, line:16:1> line:12:5 test2 'int (void)'
+  `-CompoundStmt 0x7fd63486dcb8 <line:13:1, line:16:1>
+    |-DeclStmt 0x7fd63486dc48 <line:14:3, col:40>
+    | `-VarDecl 0x7fd63486db50 <col:3, col:34> col:7 used local 'int' cinit
+    |   `-ImplicitCastExpr 0x7fd63486dc30 <col:15, col:34> 'int' <LValueToRValue>
+    |     `-UnaryOperator 0x7fd63486dc10 <col:15, col:34> 'volatile int' lvalue prefix '*'
+    |       `-CStyleCastExpr 0x7fd63486dbe8 <col:17, col:34> 'volatile int *' <IntegralToPointer>
+    |         `-IntegerLiteral 0x7fd63486dbb0 <col:34> 'int' 4660
+    `-ReturnStmt 0x7fd63486dca0 <line:15:3, col:10>
+      `-ImplicitCastExpr 0x7fd63486dc88 <col:10> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x7fd63486dc60 <col:10> 'int' lvalue Var 0x7fd63486db50 'local' 'int'

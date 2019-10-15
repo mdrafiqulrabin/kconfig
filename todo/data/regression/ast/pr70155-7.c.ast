@@ -1,0 +1,12 @@
+TranslationUnitDecl 0x7fa68d80cce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fa68d80d960 <../Data/C2AST/pr70155-7.c:4:1, line:7:1> line:4:8 struct foo definition
+| |-PackedAttr 0x7fa68d851480 <line:7:18>
+| `-FieldDecl 0x7fa68d851438 <line:6:3, col:12> col:12 referenced i '__int128'
+|-VarDecl 0x7fa68d851520 <line:9:1, col:19> col:19 used x 'struct foo':'struct foo' extern
+`-FunctionDecl 0x7fa68d851680 <line:11:1, line:15:1> line:12:1 foo 'void (void)'
+  `-CompoundStmt 0x7fa68d851828 <line:13:1, line:15:1>
+    `-BinaryOperator 0x7fa68d8517b8 <line:14:3, col:9> '__int128' '='
+      |-MemberExpr 0x7fa68d851748 <col:3, col:5> '__int128' lvalue .i 0x7fa68d851438
+      | `-DeclRefExpr 0x7fa68d851720 <col:3> 'struct foo':'struct foo' lvalue Var 0x7fa68d851520 'x' 'struct foo':'struct foo'
+      `-ImplicitCastExpr 0x7fa68d8517a0 <col:9> '__int128' <IntegralCast>
+        `-IntegerLiteral 0x7fa68d851780 <col:9> 'int' 0

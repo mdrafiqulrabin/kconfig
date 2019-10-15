@@ -1,0 +1,31 @@
+TranslationUnitDecl 0x7fe0f981a8e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe0f985c4d8 <../Data/C2AST/pr79222.c:3:14> col:14 implicit used stpcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7fe0f985c578 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x7fe0f985c5d8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x7fe0f985c648 prev 0x7fe0f985c4d8 <col:1, col:40> col:14 used stpcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x7fe0f981b578 <col:22, col:26> col:27 'char *'
+| `-ParmVarDecl 0x7fe0f985c400 <col:29, col:39> col:40 'const char *'
+|-VarDecl 0x7fe0f985c778 <line:5:1, col:9> col:6 used d 'char [3]'
+`-FunctionDecl 0x7fe0f985c8f8 <line:7:1, line:11:1> line:7:7 f 'char *(int)'
+  |-ParmVarDecl 0x7fe0f985c830 <col:10, col:14> col:14 used i 'int'
+  `-CompoundStmt 0x7fe0f985ce40 <line:8:1, line:11:1>
+    |-DeclStmt 0x7fe0f985ccb8 <line:9:3, col:52>
+    | `-VarDecl 0x7fe0f985c9b8 <col:3, col:40> col:15 used s 'const char *' cinit
+    |   `-ImplicitCastExpr 0x7fe0f985cca0 <col:19, col:40> 'const char *' <BitCast>
+    |     `-ConditionalOperator 0x7fe0f985cc70 <col:19, col:40> 'char *'
+    |       |-BinaryOperator 0x7fe0f985ca78 <col:19, col:23> 'int' '<'
+    |       | |-ImplicitCastExpr 0x7fe0f985ca60 <col:19> 'int' <LValueToRValue>
+    |       | | `-DeclRefExpr 0x7fe0f985ca18 <col:19> 'int' lvalue ParmVar 0x7fe0f985c830 'i' 'int'
+    |       | `-IntegerLiteral 0x7fe0f985ca40 <col:23> 'int' 0
+    |       |-ImplicitCastExpr 0x7fe0f985cb80 <col:27> 'char *' <ArrayToPointerDecay>
+    |       | `-StringLiteral 0x7fe0f985cad8 <col:27> 'char [9]' lvalue "01234567"
+    |       `-ImplicitCastExpr 0x7fe0f985cb98 <col:40> 'char *' <ArrayToPointerDecay>
+    |         `-StringLiteral 0x7fe0f985cb48 <col:40> 'char [11]' lvalue "9876543210"
+    `-ReturnStmt 0x7fe0f985ce28 <line:10:3, col:22>
+      `-CallExpr 0x7fe0f985cdc0 <col:10, col:22> 'char *'
+        |-ImplicitCastExpr 0x7fe0f985cda8 <col:10> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7fe0f985ccd0 <col:10> 'char *(char *, const char *)' Function 0x7fe0f985c648 'stpcpy' 'char *(char *, const char *)'
+        |-ImplicitCastExpr 0x7fe0f985cdf8 <col:18> 'char *' <ArrayToPointerDecay>
+        | `-DeclRefExpr 0x7fe0f985ccf8 <col:18> 'char [3]' lvalue Var 0x7fe0f985c778 'd' 'char [3]'
+        `-ImplicitCastExpr 0x7fe0f985ce10 <col:21> 'const char *' <LValueToRValue>
+          `-DeclRefExpr 0x7fe0f985cd20 <col:21> 'const char *' lvalue Var 0x7fe0f985c9b8 's' 'const char *'

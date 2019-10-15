@@ -1,0 +1,39 @@
+../Data/C2AST/pr49168-1.c:9:23: error: __float128 is not supported on this target
+flt128_va (void *mem, __float128 d)
+                      ^
+1 error generated.
+TranslationUnitDecl 0x7fdcc40166e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdcc4016c60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fdcc4016980 '__int128'
+|-TypedefDecl 0x7fdcc4016cd0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fdcc40169a0 'unsigned __int128'
+|-TypedefDecl 0x7fdcc4016fa8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fdcc4016db0 'struct __NSConstantString_tag'
+|   `-Record 0x7fdcc4016d28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fdcc4017040 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fdcc4017000 'char *'
+|   `-BuiltinType 0x7fdcc4016780 'char'
+|-TypedefDecl 0x7fdcc4017308 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fdcc40172b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fdcc4017120 'struct __va_list_tag'
+|     `-Record 0x7fdcc4017098 '__va_list_tag'
+|-FunctionDecl 0x7fdcc38194d0 <../Data/C2AST/pr49168-1.c:8:1, line:12:1> line:9:1 flt128_va 'void (void *, __float128)'
+| |-ParmVarDecl 0x7fdcc4017378 <col:12, col:18> col:18 used mem 'void *'
+| |-ParmVarDecl 0x7fdcc3819400 <col:23, col:34> col:34 used d '__float128'
+| `-CompoundStmt 0x7fdcc3819a50 <line:10:1, line:12:1>
+|   `-CallExpr 0x7fdcc38199e0 <line:11:3, col:40> 'void *'
+|     |-ImplicitCastExpr 0x7fdcc38199c8 <col:3> 'void *(*)(void *, const void *, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fdcc3819858 <col:3> '<builtin fn type>' Function 0x7fdcc3819638 '__builtin_memcpy' 'void *(void *, const void *, unsigned long)'
+|     |-ImplicitCastExpr 0x7fdcc3819a20 <col:21> 'void *' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fdcc3819880 <col:21> 'void *' lvalue ParmVar 0x7fdcc4017378 'mem' 'void *'
+|     |-ImplicitCastExpr 0x7fdcc3819a38 <col:26, col:27> 'const void *' <BitCast>
+|     | `-UnaryOperator 0x7fdcc38198f8 <col:26, col:27> '__float128 *' prefix '&'
+|     |   `-DeclRefExpr 0x7fdcc38198a8 <col:27> '__float128' lvalue ParmVar 0x7fdcc3819400 'd' '__float128'
+|     `-UnaryExprOrTypeTraitExpr 0x7fdcc3819960 <col:30, col:39> 'unsigned long' sizeof
+|       `-ParenExpr 0x7fdcc3819940 <col:37, col:39> '__float128' lvalue
+|         `-DeclRefExpr 0x7fdcc3819918 <col:38> '__float128' lvalue ParmVar 0x7fdcc3819400 'd' '__float128'
+`-FunctionDecl 0x7fdcc3819638 <col:3> col:3 implicit used __builtin_memcpy 'void *(void *, const void *, unsigned long)' extern
+  |-ParmVarDecl 0x7fdcc38196d8 <<invalid sloc>> <invalid sloc> 'void *'
+  |-ParmVarDecl 0x7fdcc3819738 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fdcc3819798 <<invalid sloc>> <invalid sloc> 'unsigned long'
+  `-NoThrowAttr 0x7fdcc3819810 <col:3> Implicit

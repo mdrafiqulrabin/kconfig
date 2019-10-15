@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7f99840120e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f9985014228 <../Data/C2AST/prfm_imm_offset_1.c:7:1, col:22> col:6 used bad_addr 'int *[65]'
+|-FunctionDecl 0x7f9985014390 <line:9:1, line:15:1> line:10:1 prefetch_for_read 'void (void)'
+| `-CompoundStmt 0x7f9985014a30 <line:11:1, line:15:1>
+|   |-DeclStmt 0x7f99850144a8 <line:12:3, col:8>
+|   | `-VarDecl 0x7f9985014448 <col:3, col:7> col:7 used i 'int'
+|   `-ForStmt 0x7f99850149f8 <line:13:3, line:14:46>
+|     |-BinaryOperator 0x7f9985014508 <line:13:8, col:12> 'int' '='
+|     | |-DeclRefExpr 0x7f99850144c0 <col:8> 'int' lvalue Var 0x7f9985014448 'i' 'int'
+|     | `-IntegerLiteral 0x7f99850144e8 <col:12> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7f9985014590 <col:15, line:6:17> 'int' '<'
+|     | |-ImplicitCastExpr 0x7f9985014578 <line:13:15> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7f9985014530 <col:15> 'int' lvalue Var 0x7f9985014448 'i' 'int'
+|     | `-IntegerLiteral 0x7f9985014558 <line:6:17> 'int' 65
+|     |-UnaryOperator 0x7f99850145e0 <line:13:28, col:29> 'int' postfix '++'
+|     | `-DeclRefExpr 0x7f99850145b8 <col:28> 'int' lvalue Var 0x7f9985014448 'i' 'int'
+|     `-CallExpr 0x7f99850149a0 <line:14:5, col:46> 'void'
+|       |-ImplicitCastExpr 0x7f9985014988 <col:5> 'void (*)(const void *, ...)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7f99850147c8 <col:5> '<builtin fn type>' Function 0x7f9985014668 '__builtin_prefetch' 'void (const void *, ...)'
+|       |-ImplicitCastExpr 0x7f99850149e0 <col:25, col:39> 'const void *' <BitCast>
+|       | `-BinaryOperator 0x7f99850148f8 <col:25, col:39> 'int *' '+'
+|       |   |-ImplicitCastExpr 0x7f99850148e0 <col:25, col:35> 'int *' <LValueToRValue>
+|       |   | `-ArraySubscriptExpr 0x7f9985014898 <col:25, col:35> 'int *' lvalue
+|       |   |   |-ImplicitCastExpr 0x7f9985014868 <col:25> 'int **' <ArrayToPointerDecay>
+|       |   |   | `-DeclRefExpr 0x7f99850147f0 <col:25> 'int *[65]' lvalue Var 0x7f9985014228 'bad_addr' 'int *[65]'
+|       |   |   `-ImplicitCastExpr 0x7f9985014880 <col:34> 'int' <LValueToRValue>
+|       |   |     `-DeclRefExpr 0x7f9985014818 <col:34> 'int' lvalue Var 0x7f9985014448 'i' 'int'
+|       |   `-IntegerLiteral 0x7f99850148c0 <col:39> 'int' 2
+|       |-IntegerLiteral 0x7f9985014920 <col:42> 'int' 0
+|       `-IntegerLiteral 0x7f9985014940 <col:45> 'int' 0
+`-FunctionDecl 0x7f9985014668 <col:5> col:5 implicit used __builtin_prefetch 'void (const void *, ...)' extern
+  |-ParmVarDecl 0x7f9985014708 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-NoThrowAttr 0x7f9985014770 <col:5> Implicit
+  `-ConstAttr 0x7f99850147b8 <col:5> Implicit

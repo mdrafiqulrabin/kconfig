@@ -1,0 +1,39 @@
+TranslationUnitDecl 0x7ff1ed82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ff1ee815268 <../Data/C2AST/pr79196.c:4:1, line:12:1> line:6:1 used test 'int (char *)'
+| |-ParmVarDecl 0x7ff1ed82c978 <col:6, col:12> col:12 used a 'char *'
+| |-CompoundStmt 0x7ff1ee815878 <line:7:1, line:12:1>
+| | |-IfStmt 0x7ff1ee815808 <line:8:3, line:9:12>
+| | | |-<<<NULL>>>
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7ff1ee8157a8 <line:8:7, col:50> 'int' '=='
+| | | | |-CallExpr 0x7ff1ee8156d0 <col:7, col:45> 'char *'
+| | | | | |-ImplicitCastExpr 0x7ff1ee8156b8 <col:7> 'char *(*)(const char *, const char *)' <BuiltinFnToFnPtr>
+| | | | | | `-DeclRefExpr 0x7ff1ee815598 <col:7> '<builtin fn type>' Function 0x7ff1ee8153e0 '__builtin_strstr' 'char *(const char *, const char *)'
+| | | | | |-ImplicitCastExpr 0x7ff1ee815720 <col:25> 'const char *' <BitCast>
+| | | | | | `-ImplicitCastExpr 0x7ff1ee815708 <col:25> 'char *' <LValueToRValue>
+| | | | | |   `-DeclRefExpr 0x7ff1ee8155c0 <col:25> 'char *' lvalue ParmVar 0x7ff1ed82c978 'a' 'char *'
+| | | | | `-ImplicitCastExpr 0x7ff1ee815750 <col:28> 'const char *' <BitCast>
+| | | | |   `-ImplicitCastExpr 0x7ff1ee815738 <col:28> 'char *' <ArrayToPointerDecay>
+| | | | |     `-StringLiteral 0x7ff1ee815628 <col:28> 'char [16]' lvalue "DROP CONVERSION"
+| | | | `-ImplicitCastExpr 0x7ff1ee815790 <col:50> 'char *' <LValueToRValue>
+| | | |   `-DeclRefExpr 0x7ff1ee815768 <col:50> 'char *' lvalue ParmVar 0x7ff1ed82c978 'a' 'char *'
+| | | |-ReturnStmt 0x7ff1ee8157f0 <line:9:5, col:12>
+| | | | `-IntegerLiteral 0x7ff1ee8157d0 <col:12> 'int' 1
+| | | `-<<<NULL>>>
+| | `-ReturnStmt 0x7ff1ee815860 <line:11:3, col:10>
+| |   `-IntegerLiteral 0x7ff1ee815840 <col:10> 'int' 0
+| `-NoInlineAttr 0x7ff1ee815310 <line:5:16>
+|-FunctionDecl 0x7ff1ee8153e0 <line:8:7> col:7 implicit used __builtin_strstr 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x7ff1ee815480 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x7ff1ee8154e0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-NoThrowAttr 0x7ff1ee815550 <col:7> Implicit
+`-FunctionDecl 0x7ff1ee815a28 <line:14:1, line:17:1> line:14:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x7ff1ee8158b0 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x7ff1ee815950 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x7ff1ee815c10 <line:15:1, line:17:1>
+    `-ReturnStmt 0x7ff1ee815bf8 <line:16:3, col:19>
+      `-CallExpr 0x7ff1ee815bb0 <col:10, col:19> 'int'
+        |-ImplicitCastExpr 0x7ff1ee815b98 <col:10> 'int (*)(char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x7ff1ee815ad8 <col:10> 'int (char *)' Function 0x7ff1ee815268 'test' 'int (char *)'
+        `-ImplicitCastExpr 0x7ff1ee815be0 <col:16> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7ff1ee815b38 <col:16> 'char [2]' lvalue "x"

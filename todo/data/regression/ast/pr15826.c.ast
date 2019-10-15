@@ -1,0 +1,52 @@
+TranslationUnitDecl 0x7f8e9782bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8e9782c960 <../Data/C2AST/pr15826.c:5:1, line:7:1> line:5:8 struct s definition
+| `-FieldDecl 0x7f8e9786d858 <line:6:3, col:22> col:16 referenced bit 'unsigned int'
+|   `-IntegerLiteral 0x7f8e9786d820 <col:22> 'int' 1
+|-FunctionDecl 0x7f8e9786da58 <line:9:1, line:16:1> line:10:1 foo 'unsigned int (struct s *)'
+| |-ParmVarDecl 0x7f8e9786d950 <col:6, col:16> col:16 used p 'struct s *'
+| `-CompoundStmt 0x7f8e9786dca8 <line:11:1, line:16:1>
+|   `-IfStmt 0x7f8e9786dc70 <line:12:3, line:15:12>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7f8e9786dbb8 <line:12:7, col:10> 'unsigned int' <LValueToRValue>
+|     | `-MemberExpr 0x7f8e9786db80 <col:7, col:10> 'unsigned int' lvalue bitfield ->bit 0x7f8e9786d858
+|     |   `-ImplicitCastExpr 0x7f8e9786db68 <col:7> 'struct s *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x7f8e9786db40 <col:7> 'struct s *' lvalue ParmVar 0x7f8e9786d950 'p' 'struct s *'
+|     |-ReturnStmt 0x7f8e9786dc08 <line:13:5, col:12>
+|     | `-ImplicitCastExpr 0x7f8e9786dbf0 <col:12> 'unsigned int' <IntegralCast>
+|     |   `-IntegerLiteral 0x7f8e9786dbd0 <col:12> 'int' 1
+|     `-ReturnStmt 0x7f8e9786dc58 <line:15:5, col:12>
+|       `-ImplicitCastExpr 0x7f8e9786dc40 <col:12> 'unsigned int' <IntegralCast>
+|         `-IntegerLiteral 0x7f8e9786dc20 <col:12> 'int' 0
+|-FunctionDecl 0x7f8e9786dd78 <line:18:1, line:22:1> line:19:1 bar 'unsigned int (struct s *)'
+| |-ParmVarDecl 0x7f8e9786dce8 <col:6, col:16> col:16 used p 'struct s *'
+| `-CompoundStmt 0x7f8e9786df58 <line:20:1, line:22:1>
+|   `-ReturnStmt 0x7f8e9786df40 <line:21:3, col:32>
+|     `-CStyleCastExpr 0x7f8e9786df18 <col:10, col:32> 'unsigned int' <NoOp>
+|       `-ImplicitCastExpr 0x7f8e9786df00 <col:25, col:32> 'unsigned int' <LValueToRValue>
+|         `-ParenExpr 0x7f8e9786dee0 <col:25, col:32> 'unsigned int' lvalue bitfield
+|           `-MemberExpr 0x7f8e9786de60 <col:26, col:29> 'unsigned int' lvalue bitfield ->bit 0x7f8e9786d858
+|             `-ImplicitCastExpr 0x7f8e9786de48 <col:26> 'struct s *' <LValueToRValue>
+|               `-DeclRefExpr 0x7f8e9786de20 <col:26> 'struct s *' lvalue ParmVar 0x7f8e9786dce8 'p' 'struct s *'
+`-FunctionDecl 0x7f8e9786e028 <line:24:1, line:33:1> line:25:1 andrew 'unsigned int (struct s *)'
+  |-ParmVarDecl 0x7f8e9786df98 <col:9, col:19> col:19 used p 'struct s *'
+  `-CompoundStmt 0x7f8e9786e378 <line:26:1, line:33:1>
+    |-DeclStmt 0x7f8e9786e148 <line:27:3, col:8>
+    | `-VarDecl 0x7f8e9786e0e8 <col:3, col:7> col:7 used i 'int'
+    |-IfStmt 0x7f8e9786e2d0 <line:28:3, line:31:9>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-ImplicitCastExpr 0x7f8e9786e1d8 <line:28:7, col:10> 'unsigned int' <LValueToRValue>
+    | | `-MemberExpr 0x7f8e9786e1a0 <col:7, col:10> 'unsigned int' lvalue bitfield ->bit 0x7f8e9786d858
+    | |   `-ImplicitCastExpr 0x7f8e9786e188 <col:7> 'struct s *' <LValueToRValue>
+    | |     `-DeclRefExpr 0x7f8e9786e160 <col:7> 'struct s *' lvalue ParmVar 0x7f8e9786df98 'p' 'struct s *'
+    | |-BinaryOperator 0x7f8e9786e238 <line:29:5, col:9> 'int' '='
+    | | |-DeclRefExpr 0x7f8e9786e1f0 <col:5> 'int' lvalue Var 0x7f8e9786e0e8 'i' 'int'
+    | | `-IntegerLiteral 0x7f8e9786e218 <col:9> 'int' 1
+    | `-BinaryOperator 0x7f8e9786e2a8 <line:31:5, col:9> 'int' '='
+    |   |-DeclRefExpr 0x7f8e9786e260 <col:5> 'int' lvalue Var 0x7f8e9786e0e8 'i' 'int'
+    |   `-IntegerLiteral 0x7f8e9786e288 <col:9> 'int' 0
+    `-ReturnStmt 0x7f8e9786e360 <line:32:3, col:10>
+      `-ImplicitCastExpr 0x7f8e9786e348 <col:10> 'unsigned int' <IntegralCast>
+        `-ImplicitCastExpr 0x7f8e9786e330 <col:10> 'int' <LValueToRValue>
+          `-DeclRefExpr 0x7f8e9786e308 <col:10> 'int' lvalue Var 0x7f8e9786e0e8 'i' 'int'

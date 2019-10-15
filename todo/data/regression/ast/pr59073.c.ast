@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7faa8002bce8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7faa80814200 <../Data/C2AST/pr59073.c:5:1, line:12:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7faa808144f0 <line:7:1, line:12:1>
+    |-DeclStmt 0x7faa80814358 <line:8:3, col:8>
+    | `-VarDecl 0x7faa808142f8 <col:3, col:7> col:7 used i 'int'
+    `-ForStmt 0x7faa808144b8 <line:10:3, line:11:5>
+      |-BinaryOperator 0x7faa808143b8 <line:10:8, col:12> 'int' '='
+      | |-DeclRefExpr 0x7faa80814370 <col:8> 'int' lvalue Var 0x7faa808142f8 'i' 'int'
+      | `-IntegerLiteral 0x7faa80814398 <col:12> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7faa80814440 <col:15, col:19> 'int' '<'
+      | |-ImplicitCastExpr 0x7faa80814428 <col:15> 'int' <LValueToRValue>
+      | | `-DeclRefExpr 0x7faa808143e0 <col:15> 'int' lvalue Var 0x7faa808142f8 'i' 'int'
+      | `-IntegerLiteral 0x7faa80814408 <col:19> 'int' 10
+      |-ImplicitCastExpr 0x7faa80814490 <col:23> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7faa80814468 <col:23> 'int' lvalue Var 0x7faa808142f8 'i' 'int'
+      `-NullStmt 0x7faa808144a8 <line:11:5>

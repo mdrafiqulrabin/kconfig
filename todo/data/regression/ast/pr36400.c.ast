@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x7f969000a8e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f969000b560 <../Data/C2AST/pr36400.c:4:1, col:45> col:8 struct barstruct definition
+| `-FieldDecl 0x7f968f811238 <col:20, col:32> col:32 referenced some_string 'const char *'
+|-FunctionDecl 0x7f968f811500 <line:6:1, col:42> col:6 used changethepointer 'void (struct barstruct ***)'
+| `-ParmVarDecl 0x7f968f8113f8 <col:23, col:41> col:42 'struct barstruct ***'
+`-FunctionDecl 0x7f968f811638 <line:8:1, line:15:1> line:8:6 baz 'void ()'
+  `-CompoundStmt 0x7f968f811b98 <line:9:1, line:15:1>
+    |-DeclStmt 0x7f968f811758 <line:10:3, col:24>
+    | `-VarDecl 0x7f968f8116f8 <col:3, col:20> col:20 used bar1 'struct barstruct':'struct barstruct'
+    |-DeclStmt 0x7f968f811840 <line:11:3, col:35>
+    | `-VarDecl 0x7f968f811798 <col:3, col:31> col:21 used barptr 'struct barstruct *' cinit
+    |   `-UnaryOperator 0x7f968f811820 <col:30, col:31> 'struct barstruct *' prefix '&'
+    |     `-DeclRefExpr 0x7f968f8117f8 <col:31> 'struct barstruct':'struct barstruct' lvalue Var 0x7f968f8116f8 'bar1' 'struct barstruct':'struct barstruct'
+    |-DeclStmt 0x7f968f811928 <line:12:3, col:39>
+    | `-VarDecl 0x7f968f811880 <col:3, col:33> col:22 used barptr2 'struct barstruct **' cinit
+    |   `-UnaryOperator 0x7f968f811908 <col:32, col:33> 'struct barstruct **' prefix '&'
+    |     `-DeclRefExpr 0x7f968f8118e0 <col:33> 'struct barstruct *' lvalue Var 0x7f968f811798 'barptr' 'struct barstruct *'
+    |-CallExpr 0x7f968f811a20 <line:13:3, col:28> 'void'
+    | |-ImplicitCastExpr 0x7f968f811a08 <col:3> 'void (*)(struct barstruct ***)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7f968f811940 <col:3> 'void (struct barstruct ***)' Function 0x7f968f811500 'changethepointer' 'void (struct barstruct ***)'
+    | `-UnaryOperator 0x7f968f811990 <col:20, col:21> 'struct barstruct ***' prefix '&'
+    |   `-DeclRefExpr 0x7f968f811968 <col:21> 'struct barstruct **' lvalue Var 0x7f968f811880 'barptr2' 'struct barstruct **'
+    `-BinaryOperator 0x7f968f811b70 <line:14:3, col:25> 'const char *' '='
+      |-MemberExpr 0x7f968f811a90 <col:3, col:11> 'const char *' lvalue ->some_string 0x7f968f811238
+      | `-ImplicitCastExpr 0x7f968f811a78 <col:3> 'struct barstruct *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f968f811a50 <col:3> 'struct barstruct *' lvalue Var 0x7f968f811798 'barptr' 'struct barstruct *'
+      `-ImplicitCastExpr 0x7f968f811b58 <col:25> 'const char *' <BitCast>
+        `-ImplicitCastExpr 0x7f968f811b40 <col:25> 'char *' <ArrayToPointerDecay>
+          `-StringLiteral 0x7f968f811b08 <col:25> 'char [14]' lvalue "Everything OK"

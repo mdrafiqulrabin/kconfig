@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7fd6ef0174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd6ef81fc60 <../Data/C2AST/pr66208.c:4:1, col:52> col:6 used foox 'void (char *, ...)'
+| |-ParmVarDecl 0x7fd6ef018178 <col:12, col:16> col:17 'char *'
+| `-NonNullAttr 0x7fd6ef81fd08 <col:40, col:50> 0
+`-FunctionDecl 0x7fd6ef81fe60 <line:7:1, line:10:1> line:7:6 baz 'void (void)'
+  `-CompoundStmt 0x7fd6ef820068 <line:8:1, line:10:1>
+    `-CallExpr 0x7fd6ef820000 <line:5:16, col:36> 'void'
+      |-ImplicitCastExpr 0x7fd6ef81ffe8 <col:16> 'void (*)(char *, ...)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fd6ef81ff00 <col:16> 'void (char *, ...)' Function 0x7fd6ef81fc60 'foox' 'void (char *, ...)'
+      |-ImplicitCastExpr 0x7fd6ef820038 <line:9:8> 'char *' <NullToPointer>
+      | `-IntegerLiteral 0x7fd6ef81ff28 <col:8> 'int' 0
+      `-ImplicitCastExpr 0x7fd6ef820050 <line:5:25> 'char *' <ArrayToPointerDecay>
+        `-StringLiteral 0x7fd6ef81ff88 <col:25> 'char [10]' lvalue "p is null"

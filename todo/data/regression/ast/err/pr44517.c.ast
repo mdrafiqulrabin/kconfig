@@ -1,0 +1,89 @@
+../Data/C2AST/pr44517.c:2:15: error: unknown type name 'pid_t'
+int f1(int x, pid_t y, long z, in t) {
+              ^
+../Data/C2AST/pr44517.c:2:32: error: unknown type name 'in'
+int f1(int x, pid_t y, long z, in t) {
+                               ^
+../Data/C2AST/pr44517.c:8:15: error: unknown type name 'lon'; did you mean 'long'?
+int f2(int x, lon y, long z, ...){  
+              ^~~
+              long
+../Data/C2AST/pr44517.c:9:3: error: non-void function 'f2' should return a value [-Wreturn-type]
+  return;
+  ^
+../Data/C2AST/pr44517.c:12:26: error: unknown type name 'pid_t'
+void f3(int n, int a[n], pid_t x);  
+                         ^
+../Data/C2AST/pr44517.c:16:16: error: expected parameter declarator
+void f7(int a, goto b);  
+               ^
+../Data/C2AST/pr44517.c:16:16: error: expected ')'
+../Data/C2AST/pr44517.c:16:8: note: to match this '('
+void f7(int a, goto b);  
+       ^
+../Data/C2AST/pr44517.c:17:16: error: unknown type name 'in'
+void f8(int a, in goto);  
+               ^
+../Data/C2AST/pr44517.c:17:19: error: expected ')'
+void f8(int a, in goto);  
+                  ^
+../Data/C2AST/pr44517.c:17:8: note: to match this '('
+void f8(int a, in goto);  
+       ^
+../Data/C2AST/pr44517.c:18:16: error: unknown type name 'in'
+void f9(int a, in 1);  
+               ^
+../Data/C2AST/pr44517.c:18:19: error: expected ')'
+void f9(int a, in 1);  
+                  ^
+../Data/C2AST/pr44517.c:18:8: note: to match this '('
+void f9(int a, in 1);  
+       ^
+11 errors generated.
+TranslationUnitDecl 0x7fcae102bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fcae102c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fcae102bf80 '__int128'
+|-TypedefDecl 0x7fcae102c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fcae102bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fcae102c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fcae102c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fcae102c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fcae102c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fcae102c600 'char *'
+|   `-BuiltinType 0x7fcae102bd80 'char'
+|-TypedefDecl 0x7fcae102c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fcae102c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fcae102c720 'struct __va_list_tag'
+|     `-Record 0x7fcae102c698 '__va_list_tag'
+|-FunctionDecl 0x7fcae1815408 <../Data/C2AST/pr44517.c:2:1, line:6:1> line:2:5 invalid f1 'int (int, int, long, int)'
+| |-ParmVarDecl 0x7fcae102c978 <col:8, col:12> col:12 used x 'int'
+| |-ParmVarDecl 0x7fcae1815218 <col:15, col:21> col:21 invalid y 'int'
+| |-ParmVarDecl 0x7fcae1815290 <col:24, col:29> col:29 used z 'long'
+| |-ParmVarDecl 0x7fcae1815308 <col:32, col:35> col:35 invalid t 'int'
+| `-CompoundStmt 0x7fcae1815518 <col:38, line:6:1>
+|-FunctionDecl 0x7fcae1815718 <line:8:1, line:10:1> line:8:5 f2 'int (int, long, long, ...)'
+| |-ParmVarDecl 0x7fcae1815540 <col:8, col:12> col:12 x 'int'
+| |-ParmVarDecl 0x7fcae18155b8 <col:15, col:19> col:19 y 'long'
+| |-ParmVarDecl 0x7fcae1815630 <col:22, col:27> col:27 z 'long'
+| `-CompoundStmt 0x7fcae1815828 <col:34, line:10:1>
+|   `-ReturnStmt 0x7fcae1815810 <line:9:3>
+|-FunctionDecl 0x7fcae1815b70 <line:12:1, col:33> col:6 invalid f3 'void (int, int *, int)'
+| |-ParmVarDecl 0x7fcae1815858 <col:9, col:13> col:13 used n 'int'
+| |-ParmVarDecl 0x7fcae18159c0 <col:16, col:23> col:20 a 'int *':'int *'
+| `-ParmVarDecl 0x7fcae1815a38 <col:26, col:32> col:32 invalid x 'int'
+|-FunctionDecl 0x7fcae1815c78 <line:13:1, col:12> col:6 f4 'void ()'
+| `-CompoundStmt 0x7fcae1815d18 <col:11, col:12>
+|-FunctionDecl 0x7fcae1815e90 <line:14:1, col:18> col:6 f5 'void (int, int *)'
+| |-ParmVarDecl 0x7fcae1815d40 <col:9, col:13> col:13 a 'int'
+| `-ParmVarDecl 0x7fcae1815db8 <col:16, col:17> col:17 b 'int *'
+|-FunctionDecl 0x7fcae18160a0 <line:15:1, col:17> col:6 f6 'void (int, int)'
+| |-ParmVarDecl 0x7fcae1815f58 <col:9, col:13> col:13 a 'int'
+| `-ParmVarDecl 0x7fcae1815fd0 <col:16> col:16 b 'int'
+|-FunctionDecl 0x7fcae182b260 <line:16:1, col:22> col:6 f7 'void (int)'
+| `-ParmVarDecl 0x7fcae1816168 <col:9, col:13> col:13 a 'int'
+|-FunctionDecl 0x7fcae182b428 <line:17:1, col:23> col:6 invalid f8 'void (int, int)'
+| |-ParmVarDecl 0x7fcae182b320 <col:9, col:13> col:13 a 'int'
+| `-ParmVarDecl 0x7fcae182b398 <col:16, <invalid sloc>> col:19 invalid 'int'
+`-FunctionDecl 0x7fcae182b5f8 <line:18:1, col:20> col:6 invalid f9 'void (int, int)'
+  |-ParmVarDecl 0x7fcae182b4f0 <col:9, col:13> col:13 a 'int'
+  `-ParmVarDecl 0x7fcae182b568 <col:16, <invalid sloc>> col:19 invalid 'int'

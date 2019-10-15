@@ -1,0 +1,26 @@
+../Data/C2AST/pr44515.c:6:8: error: expected ';' after expression
+  bar()  
+       ^
+       ;
+1 error generated.
+TranslationUnitDecl 0x7f824680c8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f824680ce60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f824680cb80 '__int128'
+|-TypedefDecl 0x7f824680ced0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f824680cba0 'unsigned __int128'
+|-TypedefDecl 0x7f824680d1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f824680cfb0 'struct __NSConstantString_tag'
+|   `-Record 0x7f824680cf28 '__NSConstantString_tag'
+|-TypedefDecl 0x7f824680d240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f824680d200 'char *'
+|   `-BuiltinType 0x7f824680c980 'char'
+|-TypedefDecl 0x7f824680d508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f824680d4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f824680d320 'struct __va_list_tag'
+|     `-Record 0x7f824680d298 '__va_list_tag'
+|-FunctionDecl 0x7f8247825420 <../Data/C2AST/pr44515.c:3:1, col:14> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7f8247825590 <line:4:1, line:7:1> line:4:6 foo 'void (void)'
+  `-CompoundStmt 0x7f82478256c8 <line:5:1, line:7:1>
+    `-CallExpr 0x7f82478256a0 <line:6:3, col:7> 'void'
+      `-ImplicitCastExpr 0x7f8247825688 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7f8247825630 <col:3> 'void (void)' Function 0x7f8247825420 'bar' 'void (void)'

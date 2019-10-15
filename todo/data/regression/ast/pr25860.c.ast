@@ -1,0 +1,47 @@
+TranslationUnitDecl 0x7ff1c002bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7ff1c002c960 <../Data/C2AST/pr25860.c:3:1, line:6:1> line:3:8 struct g definition
+| `-FieldDecl 0x7ff1c006d838 <line:5:3, col:7> col:7 i 'int'
+|-RecordDecl 0x7ff1c006d880 <line:7:1, line:10:1> line:7:8 struct f definition
+| `-FieldDecl 0x7ff1c006d980 <line:9:3, col:12> col:12 referenced i 'struct g':'struct g'
+|-FunctionDecl 0x7ff1c006db38 <line:11:1, col:63> col:5 used GSM_RingNoteGetFullDuration 'int (struct g)'
+| |-ParmVarDecl 0x7ff1c006da30 <col:33, col:40> col:41 'struct g':'struct g'
+| `-ConstAttr 0x7ff1c006dbe0 <col:57>
+`-FunctionDecl 0x7ff1c006de20 <line:12:1, line:19:1> line:12:6 savewav 'void (struct f *)'
+  |-ParmVarDecl 0x7ff1c006dd20 <col:14, col:24> col:24 used gg 'struct f *'
+  `-CompoundStmt 0x7ff1c006e5a0 <line:13:1, line:19:1>
+    |-DeclStmt 0x7ff1c006dfb0 <line:14:3, col:17>
+    | `-VarDecl 0x7ff1c006df50 <col:3, col:13> col:13 used Note 'struct g *'
+    |-DeclStmt 0x7ff1c006e1c0 <line:15:3, col:24>
+    | |-VarDecl 0x7ff1c006dfe0 <col:3, col:12> col:8 i 'long' cinit
+    | | `-ImplicitCastExpr 0x7ff1c006e060 <col:12> 'long' <IntegralCast>
+    | |   `-IntegerLiteral 0x7ff1c006e040 <col:12> 'int' 0
+    | |-VarDecl 0x7ff1c006e090 <col:3, col:14> col:14 used j 'long'
+    | `-VarDecl 0x7ff1c006e108 <col:3, col:23> col:16 length 'long' cinit
+    |   `-ImplicitCastExpr 0x7ff1c006e188 <col:23> 'long' <IntegralCast>
+    |     `-IntegerLiteral 0x7ff1c006e168 <col:23> 'int' 0
+    |-BinaryOperator 0x7ff1c006e298 <line:16:3, col:15> 'struct g *' '='
+    | |-DeclRefExpr 0x7ff1c006e1d8 <col:3> 'struct g *' lvalue Var 0x7ff1c006df50 'Note' 'struct g *'
+    | `-UnaryOperator 0x7ff1c006e278 <col:10, col:15> 'struct g *' prefix '&'
+    |   `-MemberExpr 0x7ff1c006e240 <col:11, col:15> 'struct g':'struct g' lvalue ->i 0x7ff1c006d980
+    |     `-ImplicitCastExpr 0x7ff1c006e228 <col:11> 'struct f *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7ff1c006e200 <col:11> 'struct f *' lvalue ParmVar 0x7ff1c006dd20 'gg' 'struct f *'
+    `-ForStmt 0x7ff1c006e568 <line:17:3, line:18:5>
+      |-BinaryOperator 0x7ff1c006e320 <line:17:8, col:10> 'long' '='
+      | |-DeclRefExpr 0x7ff1c006e2c0 <col:8> 'long' lvalue Var 0x7ff1c006e090 'j' 'long'
+      | `-ImplicitCastExpr 0x7ff1c006e308 <col:10> 'long' <IntegralCast>
+      |   `-IntegerLiteral 0x7ff1c006e2e8 <col:10> 'int' 0
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7ff1c006e4e8 <col:12, col:47> 'int' '<'
+      | |-ImplicitCastExpr 0x7ff1c006e4b8 <col:12> 'long' <LValueToRValue>
+      | | `-DeclRefExpr 0x7ff1c006e348 <col:12> 'long' lvalue Var 0x7ff1c006e090 'j' 'long'
+      | `-ImplicitCastExpr 0x7ff1c006e4d0 <col:14, col:47> 'long' <IntegralCast>
+      |   `-CallExpr 0x7ff1c006e470 <col:14, col:47> 'int'
+      |     |-ImplicitCastExpr 0x7ff1c006e458 <col:14> 'int (*)(struct g)' <FunctionToPointerDecay>
+      |     | `-DeclRefExpr 0x7ff1c006e370 <col:14> 'int (struct g)' Function 0x7ff1c006db38 'GSM_RingNoteGetFullDuration' 'int (struct g)'
+      |     `-ImplicitCastExpr 0x7ff1c006e4a0 <col:42, col:43> 'struct g':'struct g' <LValueToRValue>
+      |       `-UnaryOperator 0x7ff1c006e3d8 <col:42, col:43> 'struct g':'struct g' lvalue prefix '*'
+      |         `-ImplicitCastExpr 0x7ff1c006e3c0 <col:43> 'struct g *' <LValueToRValue>
+      |           `-DeclRefExpr 0x7ff1c006e398 <col:43> 'struct g *' lvalue Var 0x7ff1c006df50 'Note' 'struct g *'
+      |-UnaryOperator 0x7ff1c006e538 <col:49, col:50> 'long' postfix '++'
+      | `-DeclRefExpr 0x7ff1c006e510 <col:49> 'long' lvalue Var 0x7ff1c006e090 'j' 'long'
+      `-NullStmt 0x7ff1c006e558 <line:18:5>

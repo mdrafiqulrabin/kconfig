@@ -1,0 +1,16 @@
+TranslationUnitDecl 0x7fc98502ace8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc985815220 <../Data/C2AST/pr43635.c:2:1, col:20> col:13 used d 'void (void)' extern
+`-FunctionDecl 0x7fc985815568 <line:4:1, line:8:1> line:4:8 foo 'void (*(void))(float)'
+  `-CompoundStmt 0x7fc9858159a8 <line:5:1, line:8:1>
+    |-DeclStmt 0x7fc9858158b8 <line:6:3, col:34>
+    | `-VarDecl 0x7fc9858157d0 <col:3, col:33> col:12 used x 'void (*(*)(void))(float)' cinit
+    |   `-ImplicitCastExpr 0x7fc9858158a0 <col:33> 'void (*(*)(void))(float)' <BitCast>
+    |     `-ImplicitCastExpr 0x7fc985815888 <col:33> 'void (*)(void)' <FunctionToPointerDecay>
+    |       `-DeclRefExpr 0x7fc985815830 <col:33> 'void (void)' Function 0x7fc985815220 'd' 'void (void)'
+    `-ReturnStmt 0x7fc985815990 <line:7:3, col:16>
+      `-CallExpr 0x7fc985815968 <col:10, col:16> 'void (*)(float)'
+        `-ImplicitCastExpr 0x7fc985815950 <col:10, col:13> 'void (*(*)(void))(float)' <FunctionToPointerDecay>
+          `-ParenExpr 0x7fc985815930 <col:10, col:13> 'void (*(void))(float)':'void (*(void))(float)'
+            `-UnaryOperator 0x7fc985815910 <col:11, col:12> 'void (*(void))(float)':'void (*(void))(float)' prefix '*'
+              `-ImplicitCastExpr 0x7fc9858158f8 <col:12> 'void (*(*)(void))(float)' <LValueToRValue>
+                `-DeclRefExpr 0x7fc9858158d0 <col:12> 'void (*(*)(void))(float)' lvalue Var 0x7fc9858157d0 'x' 'void (*(*)(void))(float)'

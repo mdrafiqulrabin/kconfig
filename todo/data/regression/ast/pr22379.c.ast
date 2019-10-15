@@ -1,0 +1,35 @@
+TranslationUnitDecl 0x7fd3cb82bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fd3cc000020 <../Data/C2AST/pr22379.c:1:1, col:30> col:6 __add_entropy_words 'void (void)'
+|-FunctionDecl 0x7fd3cc000190 <line:2:1, col:20> col:6 used __wake_up 'void (void)'
+|-FunctionDecl 0x7fd3cc0002c0 <line:3:1, col:23> col:6 SHATransform 'void (void)'
+|-FunctionDecl 0x7fd3cc0003f0 <line:4:1, col:75> col:51 used add_entropy_words 'void (void)' static inline
+| |-CompoundStmt 0x7fd3cc0004d8 <col:74, col:75>
+| `-AlwaysInlineAttr 0x7fd3cc000490 <col:30> always_inline
+|-FunctionDecl 0x7fd3cc000578 <line:5:1, col:26> col:6 used extract_entropy 'void (void)'
+|-FunctionDecl 0x7fd3cc0006a8 <line:6:1, line:10:1> line:6:51 used xfer_secondary_pool 'void (void)' static inline
+| |-CompoundStmt 0x7fd3cc000890 <line:7:1, line:10:1>
+| | |-CallExpr 0x7fd3cc000800 <line:8:1, col:17> 'void'
+| | | `-ImplicitCastExpr 0x7fd3cc0007e8 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fd3cc000790 <col:1> 'void (void)' Function 0x7fd3cc000578 'extract_entropy' 'void (void)'
+| | `-CallExpr 0x7fd3cc000868 <line:9:1, col:19> 'void'
+| |   `-ImplicitCastExpr 0x7fd3cc000850 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fd3cc000828 <col:1> 'void (void)' Function 0x7fd3cc0003f0 'add_entropy_words' 'void (void)'
+| `-AlwaysInlineAttr 0x7fd3cc000748 <line:6:30> always_inline
+|-FunctionDecl 0x7fd3cc000940 prev 0x7fd3cc000578 <line:11:1, line:15:1> line:11:6 used extract_entropy 'void (void)'
+| `-CompoundStmt 0x7fd3cc000ab0 <line:12:1, line:15:1>
+|   |-CallExpr 0x7fd3cc000a20 <line:13:1, col:21> 'void'
+|   | `-ImplicitCastExpr 0x7fd3cc000a08 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x7fd3cc0009e0 <col:1> 'void (void)' Function 0x7fd3cc0006a8 'xfer_secondary_pool' 'void (void)'
+|   `-CallExpr 0x7fd3cc000a88 <line:14:1, col:11> 'void'
+|     `-ImplicitCastExpr 0x7fd3cc000a70 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fd3cc000a48 <col:1> 'void (void)' Function 0x7fd3cc000190 '__wake_up' 'void (void)'
+|-FunctionDecl 0x7fd3cc000b60 <line:16:1, line:19:1> line:16:6 used init_std_data 'void (void)'
+| `-CompoundStmt 0x7fd3cc000c68 <line:17:1, line:19:1>
+|   `-CallExpr 0x7fd3cc000c40 <line:18:1, col:19> 'void'
+|     `-ImplicitCastExpr 0x7fd3cc000c28 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+|       `-DeclRefExpr 0x7fd3cc000c00 <col:1> 'void (void)' Function 0x7fd3cc0003f0 'add_entropy_words' 'void (void)'
+`-FunctionDecl 0x7fd3cc000d10 <line:20:1, line:23:1> line:20:6 rand_initialize 'void (void)'
+  `-CompoundStmt 0x7fd3cc000e18 <line:21:1, line:23:1>
+    `-CallExpr 0x7fd3cc000df0 <line:22:1, col:15> 'void'
+      `-ImplicitCastExpr 0x7fd3cc000dd8 <col:1> 'void (*)(void)' <FunctionToPointerDecay>
+        `-DeclRefExpr 0x7fd3cc000db0 <col:1> 'void (void)' Function 0x7fd3cc000b60 'init_std_data' 'void (void)'

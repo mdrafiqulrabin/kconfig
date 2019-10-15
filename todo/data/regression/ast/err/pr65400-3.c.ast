@@ -1,0 +1,1266 @@
+../Data/C2AST/pr65400-3.c:6:10: fatal error: 'tsan_barrier.h' file not found
+#include "tsan_barrier.h"
+         ^~~~~~~~~~~~~~~~
+TranslationUnitDecl 0x7fbf4d0058e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf4d005e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf4d005b80 '__int128'
+|-TypedefDecl 0x7fbf4d005ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf4d005ba0 'unsigned __int128'
+|-TypedefDecl 0x7fbf4d0061a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf4d005fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf4d005f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf4d006240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf4d006200 'char *'
+|   `-BuiltinType 0x7fbf4d005980 'char'
+|-TypedefDecl 0x7fbf4d006508 <<invalid sloc>> <invalid sloc> implicit referenced __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf4d0064b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf4d006320 'struct __va_list_tag'
+|     `-Record 0x7fbf4d006298 '__va_list_tag'
+|-TypedefDecl 0x7fbf4d006578 </usr/include/i386/_types.h:37:1, col:24> col:24 __int8_t 'signed char'
+| `-BuiltinType 0x7fbf4d0059a0 'signed char'
+|-TypedefDecl 0x7fbf4c863c00 <line:41:1, col:24> col:24 __uint8_t 'unsigned char'
+| `-BuiltinType 0x7fbf4d005a40 'unsigned char'
+|-TypedefDecl 0x7fbf4c863c70 <line:42:1, col:17> col:17 __int16_t 'short'
+| `-BuiltinType 0x7fbf4d0059c0 'short'
+|-TypedefDecl 0x7fbf4c863ce0 <line:43:1, col:25> col:25 referenced __uint16_t 'unsigned short'
+| `-BuiltinType 0x7fbf4d005a60 'unsigned short'
+|-TypedefDecl 0x7fbf4c863d50 <line:44:1, col:15> col:15 referenced __int32_t 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c863dc0 <line:45:1, col:23> col:23 referenced __uint32_t 'unsigned int'
+| `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c863e30 <line:46:1, col:20> col:20 referenced __int64_t 'long long'
+| `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4c863ea0 <line:47:1, col:28> col:28 referenced __uint64_t 'unsigned long long'
+| `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4c863f10 <line:49:1, col:16> col:16 referenced __darwin_intptr_t 'long'
+| `-BuiltinType 0x7fbf4d005a00 'long'
+|-TypedefDecl 0x7fbf4c863f80 <line:50:1, col:23> col:23 referenced __darwin_natural_t 'unsigned int'
+| `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c863ff0 <line:70:1, col:15> col:15 __darwin_ct_rune_t 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-RecordDecl 0x7fbf4c864048 <line:76:9, line:79:1> line:76:9 union definition
+| |-FieldDecl 0x7fbf4c864168 <line:77:2, col:22> col:8 __mbstate8 'char [128]'
+| `-FieldDecl 0x7fbf4c8641c8 <line:78:2, col:12> col:12 _mbstateL 'long long'
+|-TypedefDecl 0x7fbf4c864260 <line:76:1, line:79:3> col:3 referenced __mbstate_t 'union __mbstate_t':'__mbstate_t'
+| `-ElaboratedType 0x7fbf4c864210 'union __mbstate_t' sugar
+|   `-RecordType 0x7fbf4c8640d0 '__mbstate_t'
+|     `-Record 0x7fbf4c864048 ''
+|-TypedefDecl 0x7fbf4c864300 <line:81:1, col:22> col:22 __darwin_mbstate_t '__mbstate_t':'__mbstate_t'
+| `-TypedefType 0x7fbf4c8642d0 '__mbstate_t' sugar
+|   |-Typedef 0x7fbf4c864260 '__mbstate_t'
+|   `-ElaboratedType 0x7fbf4c864210 'union __mbstate_t' sugar
+|     `-RecordType 0x7fbf4c8640d0 '__mbstate_t'
+|       `-Record 0x7fbf4c864048 ''
+|-TypedefDecl 0x7fbf4c864370 <line:84:1, col:26> col:26 __darwin_ptrdiff_t 'long'
+| `-BuiltinType 0x7fbf4d005a00 'long'
+|-TypedefDecl 0x7fbf4c8643e0 <line:92:1, col:24> col:24 referenced __darwin_size_t 'unsigned long'
+| `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4c864470 <line:98:1, col:27> col:27 __darwin_va_list '__builtin_va_list':'struct __va_list_tag [1]'
+| `-TypedefType 0x7fbf4c864440 '__builtin_va_list' sugar
+|   |-Typedef 0x7fbf4d006508 '__builtin_va_list'
+|   `-ConstantArrayType 0x7fbf4d0064b0 'struct __va_list_tag [1]' 1 
+|     `-RecordType 0x7fbf4d006320 'struct __va_list_tag'
+|       `-Record 0x7fbf4d006298 '__va_list_tag'
+|-TypedefDecl 0x7fbf4c8644e0 <line:104:1, col:25> col:25 referenced __darwin_wchar_t 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c864570 <line:109:1, col:26> col:26 __darwin_rune_t '__darwin_wchar_t':'int'
+| `-TypedefType 0x7fbf4c864540 '__darwin_wchar_t' sugar
+|   |-Typedef 0x7fbf4c8644e0 '__darwin_wchar_t'
+|   `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c8645e0 <line:112:1, col:24> col:24 __darwin_wint_t 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c864650 <line:117:1, col:24> col:24 referenced __darwin_clock_t 'unsigned long'
+| `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4c8646e0 <line:118:1, col:21> col:21 __darwin_socklen_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864750 <line:119:1, col:16> col:16 __darwin_ssize_t 'long'
+| `-BuiltinType 0x7fbf4d005a00 'long'
+|-TypedefDecl 0x7fbf4c8647c0 <line:120:1, col:16> col:16 referenced __darwin_time_t 'long'
+| `-BuiltinType 0x7fbf4d005a00 'long'
+|-TypedefDecl 0x7fbf4c864850 </usr/include/sys/_types.h:55:1, col:19> col:19 __darwin_blkcnt_t '__int64_t':'long long'
+| `-TypedefType 0x7fbf4c864820 '__int64_t' sugar
+|   |-Typedef 0x7fbf4c863e30 '__int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4c8648e0 <line:56:1, col:19> col:19 __darwin_blksize_t '__int32_t':'int'
+| `-TypedefType 0x7fbf4c8648b0 '__int32_t' sugar
+|   |-Typedef 0x7fbf4c863d50 '__int32_t'
+|   `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c864948 <line:57:1, col:19> col:19 __darwin_dev_t '__int32_t':'int'
+| `-TypedefType 0x7fbf4c8648b0 '__int32_t' sugar
+|   |-Typedef 0x7fbf4c863d50 '__int32_t'
+|   `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c8649b8 <line:58:1, col:22> col:22 __darwin_fsblkcnt_t 'unsigned int'
+| `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864a28 <line:59:1, col:22> col:22 __darwin_fsfilcnt_t 'unsigned int'
+| `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864a90 <line:60:1, col:20> col:20 __darwin_gid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864af8 <line:61:1, col:20> col:20 __darwin_id_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864b80 <line:62:1, col:20> col:20 referenced __darwin_ino64_t '__uint64_t':'unsigned long long'
+| `-TypedefType 0x7fbf4c864b50 '__uint64_t' sugar
+|   |-Typedef 0x7fbf4c863ea0 '__uint64_t'
+|   `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4c864c10 <line:64:1, col:26> col:26 __darwin_ino_t '__darwin_ino64_t':'unsigned long long'
+| `-TypedefType 0x7fbf4c864be0 '__darwin_ino64_t' sugar
+|   |-Typedef 0x7fbf4c864b80 '__darwin_ino64_t'
+|   `-TypedefType 0x7fbf4c864b50 '__uint64_t' sugar
+|     |-Typedef 0x7fbf4c863ea0 '__uint64_t'
+|     `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4c864ca0 <line:68:1, col:28> col:28 referenced __darwin_mach_port_name_t '__darwin_natural_t':'unsigned int'
+| `-TypedefType 0x7fbf4c864c70 '__darwin_natural_t' sugar
+|   |-Typedef 0x7fbf4c863f80 '__darwin_natural_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864d30 <line:69:1, col:35> col:35 referenced __darwin_mach_port_t '__darwin_mach_port_name_t':'unsigned int'
+| `-TypedefType 0x7fbf4c864d00 '__darwin_mach_port_name_t' sugar
+|   |-Typedef 0x7fbf4c864ca0 '__darwin_mach_port_name_t'
+|   `-TypedefType 0x7fbf4c864c70 '__darwin_natural_t' sugar
+|     |-Typedef 0x7fbf4c863f80 '__darwin_natural_t'
+|     `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864dc0 <line:70:1, col:20> col:20 __darwin_mode_t '__uint16_t':'unsigned short'
+| `-TypedefType 0x7fbf4c864d90 '__uint16_t' sugar
+|   |-Typedef 0x7fbf4c863ce0 '__uint16_t'
+|   `-BuiltinType 0x7fbf4d005a60 'unsigned short'
+|-TypedefDecl 0x7fbf4c864e28 <line:71:1, col:19> col:19 __darwin_off_t '__int64_t':'long long'
+| `-TypedefType 0x7fbf4c864820 '__int64_t' sugar
+|   |-Typedef 0x7fbf4c863e30 '__int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4c864e90 <line:72:1, col:19> col:19 __darwin_pid_t '__int32_t':'int'
+| `-TypedefType 0x7fbf4c8648b0 '__int32_t' sugar
+|   |-Typedef 0x7fbf4c863d50 '__int32_t'
+|   `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c864ef8 <line:73:1, col:20> col:20 referenced __darwin_sigset_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c864f60 <line:74:1, col:19> col:19 __darwin_suseconds_t '__int32_t':'int'
+| `-TypedefType 0x7fbf4c8648b0 '__int32_t' sugar
+|   |-Typedef 0x7fbf4c863d50 '__int32_t'
+|   `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c864fc8 <line:75:1, col:20> col:20 __darwin_uid_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c865030 <line:76:1, col:20> col:20 __darwin_useconds_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c865110 <line:77:1, col:41> col:23 __darwin_uuid_t 'unsigned char [16]'
+| `-ConstantArrayType 0x7fbf4c8650b0 'unsigned char [16]' 16 
+|   `-BuiltinType 0x7fbf4d005a40 'unsigned char'
+|-TypedefDecl 0x7fbf4c8651e8 <line:78:1, col:39> col:14 __darwin_uuid_string_t 'char [37]'
+| `-ConstantArrayType 0x7fbf4c865190 'char [37]' 37 
+|   `-BuiltinType 0x7fbf4d005980 'char'
+|-RecordDecl 0x7fbf4c865240 </usr/include/sys/_pthread/_pthread_types.h:57:1, line:61:1> line:57:8 struct __darwin_pthread_handler_rec definition
+| |-FieldDecl 0x7fbf4c865470 <line:58:2, col:26> col:9 __routine 'void (*)(void *)'
+| |-FieldDecl 0x7fbf4c8654d0 <line:59:2, col:8> col:8 __arg 'void *'
+| `-FieldDecl 0x7fbf4c8655d0 <line:60:2, col:39> col:39 __next 'struct __darwin_pthread_handler_rec *'
+|-RecordDecl 0x7fbf4c865618 <line:63:1, line:66:1> line:63:8 struct _opaque_pthread_attr_t definition
+| |-FieldDecl 0x7fbf4c8656d8 <line:64:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c865798 <line:65:2, col:37> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7fbf4c8657e0 <line:68:1, line:71:1> line:68:8 struct _opaque_pthread_cond_t definition
+| |-FieldDecl 0x7fbf4c8658a8 <line:69:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c865968 <line:70:2, col:37> col:7 __opaque 'char [40]'
+|-RecordDecl 0x7fbf4c8659b0 <line:73:1, line:76:1> line:73:8 struct _opaque_pthread_condattr_t definition
+| |-FieldDecl 0x7fbf4c865a78 <line:74:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c865b38 <line:75:2, col:41> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7fbf4c869000 <line:78:1, line:81:1> line:78:8 struct _opaque_pthread_mutex_t definition
+| |-FieldDecl 0x7fbf4c8690c8 <line:79:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c869150 <line:80:2, col:38> col:7 __opaque 'char [56]'
+|-RecordDecl 0x7fbf4c869198 <line:83:1, line:86:1> line:83:8 struct _opaque_pthread_mutexattr_t definition
+| |-FieldDecl 0x7fbf4c869258 <line:84:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c8692e0 <line:85:2, col:42> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7fbf4c869328 <line:88:1, line:91:1> line:88:8 struct _opaque_pthread_once_t definition
+| |-FieldDecl 0x7fbf4c8693e8 <line:89:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c869470 <line:90:2, col:37> col:7 __opaque 'char [8]'
+|-RecordDecl 0x7fbf4c8694b8 <line:93:1, line:96:1> line:93:8 struct _opaque_pthread_rwlock_t definition
+| |-FieldDecl 0x7fbf4c869578 <line:94:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c869638 <line:95:2, col:39> col:7 __opaque 'char [192]'
+|-RecordDecl 0x7fbf4c869680 <line:98:1, line:101:1> line:98:8 struct _opaque_pthread_rwlockattr_t definition
+| |-FieldDecl 0x7fbf4c869748 <line:99:2, col:7> col:7 __sig 'long'
+| `-FieldDecl 0x7fbf4c869808 <line:100:2, col:43> col:7 __opaque 'char [16]'
+|-RecordDecl 0x7fbf4c869850 <line:103:1, line:107:1> line:103:8 struct _opaque_pthread_t definition
+| |-FieldDecl 0x7fbf4c869918 <line:104:2, col:7> col:7 __sig 'long'
+| |-FieldDecl 0x7fbf4c869988 <line:105:2, col:40> col:40 __cleanup_stack 'struct __darwin_pthread_handler_rec *'
+| `-FieldDecl 0x7fbf4c869a48 <line:106:2, col:32> col:7 __opaque 'char [8176]'
+|-TypedefDecl 0x7fbf4c869ae0 <line:109:1, col:39> col:39 referenced __darwin_pthread_attr_t 'struct _opaque_pthread_attr_t':'struct _opaque_pthread_attr_t'
+| `-ElaboratedType 0x7fbf4c869a90 'struct _opaque_pthread_attr_t' sugar
+|   `-RecordType 0x7fbf4c8656a0 'struct _opaque_pthread_attr_t'
+|     `-Record 0x7fbf4c865618 '_opaque_pthread_attr_t'
+|-TypedefDecl 0x7fbf4c869b90 <line:110:1, col:39> col:39 referenced __darwin_pthread_cond_t 'struct _opaque_pthread_cond_t':'struct _opaque_pthread_cond_t'
+| `-ElaboratedType 0x7fbf4c869b40 'struct _opaque_pthread_cond_t' sugar
+|   `-RecordType 0x7fbf4c865870 'struct _opaque_pthread_cond_t'
+|     `-Record 0x7fbf4c8657e0 '_opaque_pthread_cond_t'
+|-TypedefDecl 0x7fbf4c869c40 <line:111:1, col:43> col:43 referenced __darwin_pthread_condattr_t 'struct _opaque_pthread_condattr_t':'struct _opaque_pthread_condattr_t'
+| `-ElaboratedType 0x7fbf4c869bf0 'struct _opaque_pthread_condattr_t' sugar
+|   `-RecordType 0x7fbf4c865a40 'struct _opaque_pthread_condattr_t'
+|     `-Record 0x7fbf4c8659b0 '_opaque_pthread_condattr_t'
+|-TypedefDecl 0x7fbf4c869cb0 <line:112:1, col:23> col:23 referenced __darwin_pthread_key_t 'unsigned long'
+| `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4c869d60 <line:113:1, col:40> col:40 referenced __darwin_pthread_mutex_t 'struct _opaque_pthread_mutex_t':'struct _opaque_pthread_mutex_t'
+| `-ElaboratedType 0x7fbf4c869d10 'struct _opaque_pthread_mutex_t' sugar
+|   `-RecordType 0x7fbf4c869090 'struct _opaque_pthread_mutex_t'
+|     `-Record 0x7fbf4c869000 '_opaque_pthread_mutex_t'
+|-TypedefDecl 0x7fbf4c869e10 <line:114:1, col:44> col:44 referenced __darwin_pthread_mutexattr_t 'struct _opaque_pthread_mutexattr_t':'struct _opaque_pthread_mutexattr_t'
+| `-ElaboratedType 0x7fbf4c869dc0 'struct _opaque_pthread_mutexattr_t' sugar
+|   `-RecordType 0x7fbf4c869220 'struct _opaque_pthread_mutexattr_t'
+|     `-Record 0x7fbf4c869198 '_opaque_pthread_mutexattr_t'
+|-TypedefDecl 0x7fbf4c869ec0 <line:115:1, col:39> col:39 referenced __darwin_pthread_once_t 'struct _opaque_pthread_once_t':'struct _opaque_pthread_once_t'
+| `-ElaboratedType 0x7fbf4c869e70 'struct _opaque_pthread_once_t' sugar
+|   `-RecordType 0x7fbf4c8693b0 'struct _opaque_pthread_once_t'
+|     `-Record 0x7fbf4c869328 '_opaque_pthread_once_t'
+|-TypedefDecl 0x7fbf4c869f70 <line:116:1, col:41> col:41 referenced __darwin_pthread_rwlock_t 'struct _opaque_pthread_rwlock_t':'struct _opaque_pthread_rwlock_t'
+| `-ElaboratedType 0x7fbf4c869f20 'struct _opaque_pthread_rwlock_t' sugar
+|   `-RecordType 0x7fbf4c869540 'struct _opaque_pthread_rwlock_t'
+|     `-Record 0x7fbf4c8694b8 '_opaque_pthread_rwlock_t'
+|-TypedefDecl 0x7fbf4c86a020 <line:117:1, col:45> col:45 referenced __darwin_pthread_rwlockattr_t 'struct _opaque_pthread_rwlockattr_t':'struct _opaque_pthread_rwlockattr_t'
+| `-ElaboratedType 0x7fbf4c869fd0 'struct _opaque_pthread_rwlockattr_t' sugar
+|   `-RecordType 0x7fbf4c869710 'struct _opaque_pthread_rwlockattr_t'
+|     `-Record 0x7fbf4c869680 '_opaque_pthread_rwlockattr_t'
+|-TypedefDecl 0x7fbf4c86a130 <line:118:1, col:35> col:35 referenced __darwin_pthread_t 'struct _opaque_pthread_t *'
+| `-PointerType 0x7fbf4c86a0e0 'struct _opaque_pthread_t *'
+|   `-ElaboratedType 0x7fbf4c86a080 'struct _opaque_pthread_t' sugar
+|     `-RecordType 0x7fbf4c8698e0 'struct _opaque_pthread_t'
+|       `-Record 0x7fbf4c869850 '_opaque_pthread_t'
+|-TypedefDecl 0x7fbf4c86a1a0 </usr/include/_types.h:40:1, col:14> col:14 __darwin_nl_item 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c86a210 <line:41:1, col:14> col:14 __darwin_wctrans_t 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c86a278 <line:43:1, col:20> col:20 __darwin_wctype_t '__uint32_t':'unsigned int'
+| `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|   |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|   `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-RecordDecl 0x7fbf4c86a2d0 </usr/include/pthread/sched.h:35:1, col:80> col:8 struct sched_param definition
+| |-FieldDecl 0x7fbf4c86a398 <col:22, col:26> col:26 sched_priority 'int'
+| `-FieldDecl 0x7fbf4c86a458 <col:43, col:77> col:48 __opaque 'char [4]'
+|-FunctionDecl 0x7fbf4c86a568 <line:38:1, col:28> col:12 sched_yield 'int (void)' extern
+|-FunctionDecl 0x7fbf4c86a728 <line:39:1, col:38> col:12 sched_get_priority_min 'int (int)' extern
+| `-ParmVarDecl 0x7fbf4c86a660 <col:35> col:38 'int'
+|-FunctionDecl 0x7fbf4c86a878 <line:40:1, col:38> col:12 sched_get_priority_max 'int (int)' extern
+| `-ParmVarDecl 0x7fbf4c86a7e8 <col:35> col:38 'int'
+|-TypedefDecl 0x7fbf4c86a938 </usr/include/sys/_types/_int8_t.h:30:1, col:24> col:24 int8_t 'signed char'
+| `-BuiltinType 0x7fbf4d0059a0 'signed char'
+|-TypedefDecl 0x7fbf4c86a9a8 </usr/include/sys/_types/_int16_t.h:30:1, col:17> col:17 int16_t 'short'
+| `-BuiltinType 0x7fbf4d0059c0 'short'
+|-TypedefDecl 0x7fbf4c86aa18 </usr/include/sys/_types/_int32_t.h:30:1, col:15> col:15 int32_t 'int'
+| `-BuiltinType 0x7fbf4d0059e0 'int'
+|-TypedefDecl 0x7fbf4c86aa88 </usr/include/sys/_types/_int64_t.h:30:1, col:20> col:20 referenced int64_t 'long long'
+| `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4c86aaf8 </usr/include/sys/_types/_u_int8_t.h:30:1, col:24> col:24 u_int8_t 'unsigned char'
+| `-BuiltinType 0x7fbf4d005a40 'unsigned char'
+|-TypedefDecl 0x7fbf4c86ab68 </usr/include/sys/_types/_u_int16_t.h:30:1, col:26> col:26 u_int16_t 'unsigned short'
+| `-BuiltinType 0x7fbf4d005a60 'unsigned short'
+|-TypedefDecl 0x7fbf4c86abd8 </usr/include/sys/_types/_u_int32_t.h:30:1, col:23> col:23 u_int32_t 'unsigned int'
+| `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4c86ac48 </usr/include/sys/_types/_u_int64_t.h:30:1, col:28> col:28 referenced u_int64_t 'unsigned long long'
+| `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4c86acd0 </usr/include/i386/types.h:87:1, col:19> col:19 register_t 'int64_t':'long long'
+| `-TypedefType 0x7fbf4c86aca0 'int64_t' sugar
+|   |-Typedef 0x7fbf4c86aa88 'int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4c86ad60 </usr/include/sys/_types/_intptr_t.h:32:1, col:27> col:27 intptr_t '__darwin_intptr_t':'long'
+| `-TypedefType 0x7fbf4c86ad30 '__darwin_intptr_t' sugar
+|   |-Typedef 0x7fbf4c863f10 '__darwin_intptr_t'
+|   `-BuiltinType 0x7fbf4d005a00 'long'
+|-TypedefDecl 0x7fbf4c86add0 </usr/include/sys/_types/_uintptr_t.h:30:1, col:24> col:24 uintptr_t 'unsigned long'
+| `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4c86ae60 </usr/include/i386/types.h:97:1, col:20> col:20 user_addr_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7fbf4c86ae30 'u_int64_t' sugar
+|   |-Typedef 0x7fbf4c86ac48 'u_int64_t'
+|   `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4c86aec8 <line:98:1, col:20> col:20 user_size_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7fbf4c86ae30 'u_int64_t' sugar
+|   |-Typedef 0x7fbf4c86ac48 'u_int64_t'
+|   `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4c86af30 <line:99:1, col:19> col:19 user_ssize_t 'int64_t':'long long'
+| `-TypedefType 0x7fbf4c86aca0 'int64_t' sugar
+|   |-Typedef 0x7fbf4c86aa88 'int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4c86af98 <line:100:1, col:19> col:19 user_long_t 'int64_t':'long long'
+| `-TypedefType 0x7fbf4c86aca0 'int64_t' sugar
+|   |-Typedef 0x7fbf4c86aa88 'int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4d866200 <line:101:1, col:20> col:20 user_ulong_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7fbf4c86ae30 'u_int64_t' sugar
+|   |-Typedef 0x7fbf4c86ac48 'u_int64_t'
+|   `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4d866268 <line:102:1, col:19> col:19 user_time_t 'int64_t':'long long'
+| `-TypedefType 0x7fbf4c86aca0 'int64_t' sugar
+|   |-Typedef 0x7fbf4c86aa88 'int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4d8662d0 <line:103:1, col:19> col:19 user_off_t 'int64_t':'long long'
+| `-TypedefType 0x7fbf4c86aca0 'int64_t' sugar
+|   |-Typedef 0x7fbf4c86aa88 'int64_t'
+|   `-BuiltinType 0x7fbf4d005a20 'long long'
+|-TypedefDecl 0x7fbf4d866338 <line:111:1, col:20> col:20 syscall_arg_t 'u_int64_t':'unsigned long long'
+| `-TypedefType 0x7fbf4c86ae30 'u_int64_t' sugar
+|   |-Typedef 0x7fbf4c86ac48 'u_int64_t'
+|   `-BuiltinType 0x7fbf4d005ac0 'unsigned long long'
+|-TypedefDecl 0x7fbf4d8663c0 </usr/include/sys/_types/_clock_t.h:31:1, col:33> col:33 referenced clock_t '__darwin_clock_t':'unsigned long'
+| `-TypedefType 0x7fbf4d866390 '__darwin_clock_t' sugar
+|   |-Typedef 0x7fbf4c864650 '__darwin_clock_t'
+|   `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4d866450 </usr/include/sys/_types/_size_t.h:31:1, col:32> col:32 referenced size_t '__darwin_size_t':'unsigned long'
+| `-TypedefType 0x7fbf4d866420 '__darwin_size_t' sugar
+|   |-Typedef 0x7fbf4c8643e0 '__darwin_size_t'
+|   `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4d8664e0 </usr/include/sys/_types/_time_t.h:31:1, col:26> col:26 referenced time_t '__darwin_time_t':'long'
+| `-TypedefType 0x7fbf4d8664b0 '__darwin_time_t' sugar
+|   |-Typedef 0x7fbf4c8647c0 '__darwin_time_t'
+|   `-BuiltinType 0x7fbf4d005a00 'long'
+|-RecordDecl 0x7fbf4d866538 </usr/include/sys/_types/_timespec.h:29:26, line:37:1> line:29:33 struct timespec definition
+| |-FieldDecl 0x7fbf4d8665f0 <line:35:2, col:18> col:18 tv_sec '__darwin_time_t':'long'
+| `-FieldDecl 0x7fbf4d866650 <line:36:2, col:18> col:18 tv_nsec 'long'
+|-RecordDecl 0x7fbf4d866698 </usr/include/time.h:74:1, line:86:1> line:74:8 struct tm definition
+| |-FieldDecl 0x7fbf4d866758 <line:75:2, col:6> col:6 tm_sec 'int'
+| |-FieldDecl 0x7fbf4d8667b8 <line:76:2, col:6> col:6 tm_min 'int'
+| |-FieldDecl 0x7fbf4d866818 <line:77:2, col:6> col:6 tm_hour 'int'
+| |-FieldDecl 0x7fbf4d866878 <line:78:2, col:6> col:6 tm_mday 'int'
+| |-FieldDecl 0x7fbf4d8668d8 <line:79:2, col:6> col:6 tm_mon 'int'
+| |-FieldDecl 0x7fbf4d866938 <line:80:2, col:6> col:6 tm_year 'int'
+| |-FieldDecl 0x7fbf4d866998 <line:81:2, col:6> col:6 tm_wday 'int'
+| |-FieldDecl 0x7fbf4d8669f8 <line:82:2, col:6> col:6 tm_yday 'int'
+| |-FieldDecl 0x7fbf4d866a58 <line:83:2, col:6> col:6 tm_isdst 'int'
+| |-FieldDecl 0x7fbf4d866ab8 <line:84:2, col:7> col:7 tm_gmtoff 'long'
+| `-FieldDecl 0x7fbf4d866b18 <line:85:2, col:8> col:8 tm_zone 'char *'
+|-VarDecl 0x7fbf4d866bb0 <line:97:1, col:21> col:14 tzname 'char *[]' extern
+|-VarDecl 0x7fbf4d866c28 <line:100:1, col:12> col:12 getdate_err 'int' extern
+|-VarDecl 0x7fbf4d866d20 <line:102:1, col:13> col:13 timezone 'long' extern
+| `-AsmLabelAttr 0x7fbf4d866d80 </usr/include/sys/cdefs.h:569:36> "_timezone"
+|-VarDecl 0x7fbf4d866df8 </usr/include/time.h:104:1, col:12> col:12 daylight 'int' extern
+|-FunctionDecl 0x7fbf4d867018 <line:107:1, col:32> col:7 asctime 'char *(const struct tm *)'
+| `-ParmVarDecl 0x7fbf4d866f10 <col:15, col:31> col:32 'const struct tm *'
+|-FunctionDecl 0x7fbf4d86a650 <line:108:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:108:9 clock 'clock_t (void)'
+| `-AsmLabelAttr 0x7fbf4d86a6f0 </usr/include/sys/cdefs.h:569:36> "_clock"
+|-FunctionDecl 0x7fbf4d86a8e8 </usr/include/time.h:109:1, col:27> col:7 ctime 'char *(const time_t *)'
+| `-ParmVarDecl 0x7fbf4d86a7d8 <col:13, col:26> col:27 'const time_t *'
+|-FunctionDecl 0x7fbf4d86ab28 <line:110:1, col:31> col:8 difftime 'double (time_t, time_t)'
+| |-ParmVarDecl 0x7fbf4d86a9a0 <col:17> col:23 'time_t':'long'
+| `-ParmVarDecl 0x7fbf4d86aa10 <col:25> col:31 'time_t':'long'
+|-FunctionDecl 0x7fbf4d86ad68 <line:111:1, col:32> col:12 getdate 'struct tm *(const char *)'
+| `-ParmVarDecl 0x7fbf4d86abf0 <col:20, col:31> col:32 'const char *'
+|-FunctionDecl 0x7fbf4d86af38 <line:112:1, col:33> col:12 gmtime 'struct tm *(const time_t *)'
+| `-ParmVarDecl 0x7fbf4d86ae20 <col:19, col:32> col:33 'const time_t *'
+|-FunctionDecl 0x7fbf4d86b090 <line:113:1, col:36> col:12 localtime 'struct tm *(const time_t *)'
+| `-ParmVarDecl 0x7fbf4d86aff0 <col:22, col:35> col:36 'const time_t *'
+|-FunctionDecl 0x7fbf4d86b2a0 <line:114:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:114:8 mktime 'time_t (struct tm *)'
+| |-ParmVarDecl 0x7fbf4d86b160 <col:15, col:25> col:26 'struct tm *'
+| `-AsmLabelAttr 0x7fbf4d86b340 </usr/include/sys/cdefs.h:569:36> "_mktime"
+|-FunctionDecl 0x7fbf4d86bee0 </usr/include/time.h:115:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:115:8 strftime 'size_t (char *restrict, size_t, const char *restrict, const struct tm *restrict)'
+| |-ParmVarDecl 0x7fbf4d86b3d8 <col:17, col:22> col:34 'char *restrict'
+| |-ParmVarDecl 0x7fbf4d86b448 <col:36> col:42 'size_t':'unsigned long'
+| |-ParmVarDecl 0x7fbf4d86b4c0 <col:44, col:55> col:67 'const char *restrict'
+| |-ParmVarDecl 0x7fbf4d86b548 <col:69, col:85> col:97 'const struct tm *restrict'
+| `-AsmLabelAttr 0x7fbf4d86bf80 </usr/include/sys/cdefs.h:569:36> "_strftime"
+|-FunctionDecl 0x7fbf4d86c298 </usr/include/time.h:116:1, /usr/include/sys/cdefs.h:569:73> /usr/include/time.h:116:7 strptime 'char *(const char *restrict, const char *restrict, struct tm *restrict)'
+| |-ParmVarDecl 0x7fbf4d86c018 <col:16, col:27> col:39 'const char *restrict'
+| |-ParmVarDecl 0x7fbf4d86c090 <col:41, col:52> col:64 'const char *restrict'
+| |-ParmVarDecl 0x7fbf4d86c118 <col:66, col:76> col:88 'struct tm *restrict'
+| `-AsmLabelAttr 0x7fbf4d86c338 </usr/include/sys/cdefs.h:569:36> "_strptime"
+|-FunctionDecl 0x7fbf4d86c520 </usr/include/time.h:117:1, col:21> col:8 time 'time_t (time_t *)'
+| `-ParmVarDecl 0x7fbf4d86c418 <col:13, col:20> col:21 'time_t *'
+|-FunctionDecl 0x7fbf4d86c690 <line:120:1, col:16> col:6 tzset 'void (void)'
+|-FunctionDecl 0x7fbf4d86c8e8 <line:124:1, col:64> col:7 asctime_r 'char *(const struct tm *restrict, char *restrict)'
+| |-ParmVarDecl 0x7fbf4d86c758 <col:17, col:33> col:45 'const struct tm *restrict'
+| `-ParmVarDecl 0x7fbf4d86c7d0 <col:47, col:52> col:64 'char *restrict'
+|-FunctionDecl 0x7fbf4d86cb38 <line:125:1, col:37> col:7 ctime_r 'char *(const time_t *, char *)'
+| |-ParmVarDecl 0x7fbf4d86c9a8 <col:15, col:28> col:29 'const time_t *'
+| `-ParmVarDecl 0x7fbf4d86ca20 <col:31, col:36> col:37 'char *'
+|-FunctionDecl 0x7fbf4d86ce00 <line:126:1, col:70> col:12 gmtime_r 'struct tm *(const time_t *restrict, struct tm *restrict)'
+| |-ParmVarDecl 0x7fbf4d86cbf8 <col:21, col:34> col:46 'const time_t *restrict'
+| `-ParmVarDecl 0x7fbf4d86cc80 <col:48, col:58> col:70 'struct tm *restrict'
+|-FunctionDecl 0x7fbf4d86cff0 <line:127:1, col:73> col:12 localtime_r 'struct tm *(const time_t *restrict, struct tm *restrict)'
+| |-ParmVarDecl 0x7fbf4d86cec0 <col:24, col:37> col:49 'const time_t *restrict'
+| `-ParmVarDecl 0x7fbf4d86cf48 <col:51, col:61> col:73 'struct tm *restrict'
+|-FunctionDecl 0x7fbf4d86d1b0 <line:130:1, col:25> col:8 posix2time 'time_t (time_t)'
+| `-ParmVarDecl 0x7fbf4d86d0b0 <col:19> col:25 'time_t':'long'
+|-FunctionDecl 0x7fbf4d86d2e8 <line:134:1, col:20> col:6 tzsetwall 'void (void)'
+|-FunctionDecl 0x7fbf4d86d420 <line:135:1, col:25> col:8 time2posix 'time_t (time_t)'
+| `-ParmVarDecl 0x7fbf4d86d398 <col:19> col:25 'time_t':'long'
+|-FunctionDecl 0x7fbf4d86d5b0 <line:136:1, col:35> col:8 timelocal 'time_t (struct tm *const)'
+| `-ParmVarDecl 0x7fbf4d86d4f0 <col:18, col:28> col:35 'struct tm *const'
+|-FunctionDecl 0x7fbf4d86d708 <line:137:1, col:32> col:8 timegm 'time_t (struct tm *const)'
+| `-ParmVarDecl 0x7fbf4d86d680 <col:15, col:25> col:32 'struct tm *const'
+|-FunctionDecl 0x7fbf4d86dad8 <line:141:1, /usr/include/sys/cdefs.h:570:103> /usr/include/time.h:141:5 nanosleep 'int (const struct timespec *, struct timespec *)'
+| |-ParmVarDecl 0x7fbf4d86d860 <col:15, col:38> col:38 __rqtp 'const struct timespec *'
+| |-ParmVarDecl 0x7fbf4d86d940 <col:46, col:63> col:63 __rmtp 'struct timespec *'
+| `-AsmLabelAttr 0x7fbf4d86db78 </usr/include/sys/cdefs.h:570:38> "_nanosleep"
+|-EnumDecl 0x7fbf4d86dbe8 </usr/include/time.h:152:9, line:171:1> line:152:9
+| |-EnumConstantDecl 0x7fbf4d86dd00 <line:153:1, col:40> col:1 _CLOCK_REALTIME 'int'
+| | |-IntegerLiteral 0x7fbf4d86dce0 <col:40> 'int' 0
+| | |-AvailabilityAttr 0x7fbf4d86dd48 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d873e00 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d873e68 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d873ed0 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d873f98 </usr/include/time.h:155:1, col:41> col:1 _CLOCK_MONOTONIC 'int'
+| | |-IntegerLiteral 0x7fbf4d873f78 <col:41> 'int' 6
+| | |-AvailabilityAttr 0x7fbf4d873fe0 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874080 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d8740e8 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d874150 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d874218 </usr/include/time.h:158:1, col:45> col:1 _CLOCK_MONOTONIC_RAW 'int'
+| | |-IntegerLiteral 0x7fbf4d8741f8 <col:45> 'int' 4
+| | |-AvailabilityAttr 0x7fbf4d874260 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874300 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874368 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d8743d0 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d874498 </usr/include/time.h:160:1, col:52> col:1 _CLOCK_MONOTONIC_RAW_APPROX 'int'
+| | |-IntegerLiteral 0x7fbf4d874478 <col:52> 'int' 5
+| | |-AvailabilityAttr 0x7fbf4d8744e0 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874580 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d8745e8 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d874650 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d874718 </usr/include/time.h:162:1, col:42> col:1 _CLOCK_UPTIME_RAW 'int'
+| | |-IntegerLiteral 0x7fbf4d8746f8 <col:42> 'int' 8
+| | |-AvailabilityAttr 0x7fbf4d874760 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874800 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874868 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d8748d0 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d874998 </usr/include/time.h:164:1, col:49> col:1 _CLOCK_UPTIME_RAW_APPROX 'int'
+| | |-IntegerLiteral 0x7fbf4d874978 <col:49> 'int' 9
+| | |-AvailabilityAttr 0x7fbf4d8749e0 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874a80 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874ae8 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d874b50 <col:81, col:115> macos 10.12 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d874c18 </usr/include/time.h:167:1, col:50> col:1 _CLOCK_PROCESS_CPUTIME_ID 'int'
+| | |-IntegerLiteral 0x7fbf4d874bf8 <col:50> 'int' 12
+| | |-AvailabilityAttr 0x7fbf4d874c60 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874d00 <col:81, col:115> tvos 10.0 0 0 "" ""
+| | |-AvailabilityAttr 0x7fbf4d874d68 <col:81, col:115> ios 10.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d876e00 <col:81, col:115> macos 10.12 0 0 "" ""
+| `-EnumConstantDecl 0x7fbf4d876ec8 </usr/include/time.h:169:1, col:49> col:1 _CLOCK_THREAD_CPUTIME_ID 'int'
+|   |-IntegerLiteral 0x7fbf4d876ea8 <col:49> 'int' 16
+|   |-AvailabilityAttr 0x7fbf4d876f10 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+|   |-AvailabilityAttr 0x7fbf4d876fb0 <col:81, col:115> tvos 10.0 0 0 "" ""
+|   |-AvailabilityAttr 0x7fbf4d877018 <col:81, col:115> ios 10.0 0 0 "" ""
+|   `-AvailabilityAttr 0x7fbf4d877080 <col:81, col:115> macos 10.12 0 0 "" ""
+|-TypedefDecl 0x7fbf4d877140 </usr/include/time.h:152:1, line:171:3> col:3 referenced clockid_t 'enum clockid_t':'clockid_t'
+| `-ElaboratedType 0x7fbf4d8770f0 'enum clockid_t' sugar
+|   `-EnumType 0x7fbf4d86dc80 'clockid_t'
+|     `-Enum 0x7fbf4d86dbe8 ''
+|-FunctionDecl 0x7fbf4d8773c8 </usr/include/Availability.h:231:66, /usr/include/time.h:174:62> col:5 clock_getres 'int (clockid_t, struct timespec *)'
+| |-ParmVarDecl 0x7fbf4d877220 <col:18, col:28> col:28 __clock_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7fbf4d8772a8 <col:40, col:57> col:57 __res 'struct timespec *'
+| |-AvailabilityAttr 0x7fbf4d877478 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4d877518 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4d877580 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8775e8 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8777c0 <col:66, /usr/include/time.h:177:62> col:5 clock_gettime 'int (clockid_t, struct timespec *)'
+| |-ParmVarDecl 0x7fbf4d8776a0 <col:19, col:29> col:29 __clock_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7fbf4d877728 <col:41, col:58> col:58 __tp 'struct timespec *'
+| |-AvailabilityAttr 0x7fbf4d877870 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4d877910 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4d877978 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8779e0 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7fbf4d877ba0 <col:66, /usr/include/time.h:181:54> col:12 clock_gettime_nsec_np '__uint64_t (clockid_t)'
+| |-ParmVarDecl 0x7fbf4d877a98 <col:34, col:44> col:44 __clock_id 'clockid_t':'clockid_t'
+| |-AvailabilityAttr 0x7fbf4d877c48 </usr/include/Availability.h:231:81, col:115> watchos 3.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4d877ce8 <col:81, col:115> tvos 10.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4d877d50 <col:81, col:115> ios 10.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d877e00 <col:81, col:115> macos 10.12 0 0 "" ""
+|-FunctionDecl 0x7fbf4d878058 <col:66, /usr/include/time.h:186:68> col:5 clock_settime 'int (clockid_t, const struct timespec *)'
+| |-ParmVarDecl 0x7fbf4d877eb8 <col:19, col:29> col:29 __clock_id 'clockid_t':'clockid_t'
+| |-ParmVarDecl 0x7fbf4d877f40 <col:41, col:64> col:64 __tp 'const struct timespec *'
+| |-AvailabilityAttr 0x7fbf4d878108 </usr/include/Availability.h:231:81, col:115> watchos 0 0 0 Unavailable "" ""
+| |-AvailabilityAttr 0x7fbf4d8781a8 <col:81, col:115> tvos 0 0 0 Unavailable "" ""
+| |-AvailabilityAttr 0x7fbf4d878210 <col:81, col:115> ios 0 0 0 Unavailable "" ""
+| `-AvailabilityAttr 0x7fbf4d878278 <col:81, col:115> macos 10.12 0 0 "" ""
+|-TypedefDecl 0x7fbf4d878310 </usr/include/sys/_pthread/_pthread_attr_t.h:31:1, col:33> col:33 referenced pthread_attr_t '__darwin_pthread_attr_t':'struct _opaque_pthread_attr_t'
+| `-TypedefType 0x7fbf4d8782e0 '__darwin_pthread_attr_t' sugar
+|   |-Typedef 0x7fbf4c869ae0 '__darwin_pthread_attr_t'
+|   `-ElaboratedType 0x7fbf4c869a90 'struct _opaque_pthread_attr_t' sugar
+|     `-RecordType 0x7fbf4c8656a0 'struct _opaque_pthread_attr_t'
+|       `-Record 0x7fbf4c865618 '_opaque_pthread_attr_t'
+|-TypedefDecl 0x7fbf4d8783a0 </usr/include/sys/_pthread/_pthread_cond_t.h:31:1, col:33> col:33 referenced pthread_cond_t '__darwin_pthread_cond_t':'struct _opaque_pthread_cond_t'
+| `-TypedefType 0x7fbf4d878370 '__darwin_pthread_cond_t' sugar
+|   |-Typedef 0x7fbf4c869b90 '__darwin_pthread_cond_t'
+|   `-ElaboratedType 0x7fbf4c869b40 'struct _opaque_pthread_cond_t' sugar
+|     `-RecordType 0x7fbf4c865870 'struct _opaque_pthread_cond_t'
+|       `-Record 0x7fbf4c8657e0 '_opaque_pthread_cond_t'
+|-TypedefDecl 0x7fbf4d878430 </usr/include/sys/_pthread/_pthread_condattr_t.h:31:1, col:37> col:37 referenced pthread_condattr_t '__darwin_pthread_condattr_t':'struct _opaque_pthread_condattr_t'
+| `-TypedefType 0x7fbf4d878400 '__darwin_pthread_condattr_t' sugar
+|   |-Typedef 0x7fbf4c869c40 '__darwin_pthread_condattr_t'
+|   `-ElaboratedType 0x7fbf4c869bf0 'struct _opaque_pthread_condattr_t' sugar
+|     `-RecordType 0x7fbf4c865a40 'struct _opaque_pthread_condattr_t'
+|       `-Record 0x7fbf4c8659b0 '_opaque_pthread_condattr_t'
+|-TypedefDecl 0x7fbf4d8784c0 </usr/include/sys/_pthread/_pthread_key_t.h:31:1, col:32> col:32 referenced pthread_key_t '__darwin_pthread_key_t':'unsigned long'
+| `-TypedefType 0x7fbf4d878490 '__darwin_pthread_key_t' sugar
+|   |-Typedef 0x7fbf4c869cb0 '__darwin_pthread_key_t'
+|   `-BuiltinType 0x7fbf4d005aa0 'unsigned long'
+|-TypedefDecl 0x7fbf4d878550 </usr/include/sys/_pthread/_pthread_mutex_t.h:31:1, col:34> col:34 referenced pthread_mutex_t '__darwin_pthread_mutex_t':'struct _opaque_pthread_mutex_t'
+| `-TypedefType 0x7fbf4d878520 '__darwin_pthread_mutex_t' sugar
+|   |-Typedef 0x7fbf4c869d60 '__darwin_pthread_mutex_t'
+|   `-ElaboratedType 0x7fbf4c869d10 'struct _opaque_pthread_mutex_t' sugar
+|     `-RecordType 0x7fbf4c869090 'struct _opaque_pthread_mutex_t'
+|       `-Record 0x7fbf4c869000 '_opaque_pthread_mutex_t'
+|-TypedefDecl 0x7fbf4d8785e0 </usr/include/sys/_pthread/_pthread_mutexattr_t.h:31:1, col:38> col:38 referenced pthread_mutexattr_t '__darwin_pthread_mutexattr_t':'struct _opaque_pthread_mutexattr_t'
+| `-TypedefType 0x7fbf4d8785b0 '__darwin_pthread_mutexattr_t' sugar
+|   |-Typedef 0x7fbf4c869e10 '__darwin_pthread_mutexattr_t'
+|   `-ElaboratedType 0x7fbf4c869dc0 'struct _opaque_pthread_mutexattr_t' sugar
+|     `-RecordType 0x7fbf4c869220 'struct _opaque_pthread_mutexattr_t'
+|       `-Record 0x7fbf4c869198 '_opaque_pthread_mutexattr_t'
+|-TypedefDecl 0x7fbf4d878670 </usr/include/sys/_pthread/_pthread_once_t.h:31:1, col:33> col:33 referenced pthread_once_t '__darwin_pthread_once_t':'struct _opaque_pthread_once_t'
+| `-TypedefType 0x7fbf4d878640 '__darwin_pthread_once_t' sugar
+|   |-Typedef 0x7fbf4c869ec0 '__darwin_pthread_once_t'
+|   `-ElaboratedType 0x7fbf4c869e70 'struct _opaque_pthread_once_t' sugar
+|     `-RecordType 0x7fbf4c8693b0 'struct _opaque_pthread_once_t'
+|       `-Record 0x7fbf4c869328 '_opaque_pthread_once_t'
+|-TypedefDecl 0x7fbf4d878700 </usr/include/sys/_pthread/_pthread_rwlock_t.h:31:1, col:35> col:35 referenced pthread_rwlock_t '__darwin_pthread_rwlock_t':'struct _opaque_pthread_rwlock_t'
+| `-TypedefType 0x7fbf4d8786d0 '__darwin_pthread_rwlock_t' sugar
+|   |-Typedef 0x7fbf4c869f70 '__darwin_pthread_rwlock_t'
+|   `-ElaboratedType 0x7fbf4c869f20 'struct _opaque_pthread_rwlock_t' sugar
+|     `-RecordType 0x7fbf4c869540 'struct _opaque_pthread_rwlock_t'
+|       `-Record 0x7fbf4c8694b8 '_opaque_pthread_rwlock_t'
+|-TypedefDecl 0x7fbf4d878790 </usr/include/sys/_pthread/_pthread_rwlockattr_t.h:31:1, col:39> col:39 referenced pthread_rwlockattr_t '__darwin_pthread_rwlockattr_t':'struct _opaque_pthread_rwlockattr_t'
+| `-TypedefType 0x7fbf4d878760 '__darwin_pthread_rwlockattr_t' sugar
+|   |-Typedef 0x7fbf4c86a020 '__darwin_pthread_rwlockattr_t'
+|   `-ElaboratedType 0x7fbf4c869fd0 'struct _opaque_pthread_rwlockattr_t' sugar
+|     `-RecordType 0x7fbf4c869710 'struct _opaque_pthread_rwlockattr_t'
+|       `-Record 0x7fbf4c869680 '_opaque_pthread_rwlockattr_t'
+|-TypedefDecl 0x7fbf4d878820 </usr/include/sys/_pthread/_pthread_t.h:31:1, col:28> col:28 referenced pthread_t '__darwin_pthread_t':'struct _opaque_pthread_t *'
+| `-TypedefType 0x7fbf4d8787f0 '__darwin_pthread_t' sugar
+|   |-Typedef 0x7fbf4c86a130 '__darwin_pthread_t'
+|   `-PointerType 0x7fbf4c86a0e0 'struct _opaque_pthread_t *'
+|     `-ElaboratedType 0x7fbf4c86a080 'struct _opaque_pthread_t' sugar
+|       `-RecordType 0x7fbf4c8698e0 'struct _opaque_pthread_t'
+|         `-Record 0x7fbf4c869850 '_opaque_pthread_t'
+|-EnumDecl 0x7fbf4d878878 </usr/include/sys/qos.h:114:37, col:56> col:37
+| |-EnumConstantDecl 0x7fbf4d878970 <line:129:2, line:130:52> line:129:2 QOS_CLASS_USER_INTERACTIVE 'int'
+| | |-IntegerLiteral 0x7fbf4d878950 <line:130:52> 'int' 33
+| | |-AvailabilityAttr 0x7fbf4d8789b8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d878a58 <col:39, col:80> macos 10.10 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d878b00 </usr/include/sys/qos.h:131:2, line:132:52> line:131:2 QOS_CLASS_USER_INITIATED 'int'
+| | |-IntegerLiteral 0x7fbf4d878ae0 <line:132:52> 'int' 25
+| | |-AvailabilityAttr 0x7fbf4d878b48 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d878be8 <col:39, col:80> macos 10.10 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d878c90 </usr/include/sys/qos.h:133:2, line:134:52> line:133:2 QOS_CLASS_DEFAULT 'int'
+| | |-IntegerLiteral 0x7fbf4d878c70 <line:134:52> 'int' 21
+| | |-AvailabilityAttr 0x7fbf4d878cd8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d878d78 <col:39, col:80> macos 10.10 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d883820 </usr/include/sys/qos.h:135:2, line:136:52> line:135:2 QOS_CLASS_UTILITY 'int'
+| | |-IntegerLiteral 0x7fbf4d883800 <line:136:52> 'int' 17
+| | |-AvailabilityAttr 0x7fbf4d883868 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d883908 <col:39, col:80> macos 10.10 0 0 "" ""
+| |-EnumConstantDecl 0x7fbf4d8839b0 </usr/include/sys/qos.h:137:2, line:138:52> line:137:2 QOS_CLASS_BACKGROUND 'int'
+| | |-IntegerLiteral 0x7fbf4d883990 <line:138:52> 'int' 9
+| | |-AvailabilityAttr 0x7fbf4d8839f8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| | `-AvailabilityAttr 0x7fbf4d883a98 <col:39, col:80> macos 10.10 0 0 "" ""
+| `-EnumConstantDecl 0x7fbf4d883b40 </usr/include/sys/qos.h:139:2, line:140:52> line:139:2 QOS_CLASS_UNSPECIFIED 'int'
+|   |-IntegerLiteral 0x7fbf4d883b20 <line:140:52> 'int' 0
+|   |-AvailabilityAttr 0x7fbf4d883b88 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+|   `-AvailabilityAttr 0x7fbf4d883c28 <col:39, col:80> macos 10.10 0 0 "" ""
+|-TypedefDecl 0x7fbf4d883ca8 </usr/include/sys/qos.h:114:59, <scratch space>:374:1> col:1 referenced qos_class_t 'unsigned int'
+| `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-FunctionDecl 0x7fbf4d883e30 </usr/include/AvailabilityInternal.h:33235:24, /usr/include/sys/qos.h:170:20> col:1 qos_class_self 'qos_class_t (void)'
+| |-AvailabilityAttr 0x7fbf4d883ed0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d883f70 <col:39, col:80> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7fbf4d884088 <col:24, /usr/include/sys/qos.h:192:20> col:1 qos_class_main 'qos_class_t (void)'
+| |-AvailabilityAttr 0x7fbf4d884128 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8841c8 <col:39, col:80> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7fbf4d884548 <col:24, /usr/include/pthread/qos.h:84:51> line:83:1 pthread_attr_set_qos_class_np 'int (pthread_attr_t * _Nonnull, qos_class_t, int)'
+| |-ParmVarDecl 0x7fbf4d884328 <col:31, col:47> col:47 __attr 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4d884398 <line:84:3, col:15> col:15 __qos_class 'qos_class_t':'unsigned int'
+| |-ParmVarDecl 0x7fbf4d884410 <col:28, col:32> col:32 __relative_priority 'int'
+| |-AvailabilityAttr 0x7fbf4d884600 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8846a0 <col:39, col:80> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7fbf4d886ce8 <col:24, /usr/include/pthread/qos.h:116:49> line:114:1 pthread_attr_get_qos_class_np 'int (pthread_attr_t *restrict _Nonnull, qos_class_t *restrict _Nullable, int *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4d884788 <col:31, col:59> col:59 __attr 'pthread_attr_t *restrict _Nonnull':'pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d886ab8 <line:115:3, col:38> col:38 __qos_class 'qos_class_t *restrict _Nullable':'qos_class_t *restrict'
+| |-ParmVarDecl 0x7fbf4d886bb0 <line:116:3, col:30> col:30 __relative_priority 'int *restrict _Nullable':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4d886da0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d886e40 <col:39, col:80> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7fbf4d887068 <col:24, /usr/include/pthread/qos.h:156:26> line:155:1 pthread_set_qos_class_self_np 'int (qos_class_t, int)'
+| |-ParmVarDecl 0x7fbf4d886ed8 <col:31, col:43> col:43 __qos_class 'qos_class_t':'unsigned int'
+| |-ParmVarDecl 0x7fbf4d886f50 <line:156:3, col:7> col:7 __relative_priority 'int'
+| |-AvailabilityAttr 0x7fbf4d887118 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8871b8 <col:39, col:80> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7fbf4d887508 <col:24, /usr/include/pthread/qos.h:188:49> line:186:1 pthread_get_qos_class_np 'int (pthread_t _Nonnull, qos_class_t *restrict _Nullable, int *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4d8872b8 <col:26, col:36> col:36 __pthread 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4d887340 <line:187:3, col:38> col:38 __qos_class 'qos_class_t *restrict _Nullable':'qos_class_t *restrict'
+| |-ParmVarDecl 0x7fbf4d8873d0 <line:188:3, col:30> col:30 __relative_priority 'int *restrict _Nullable':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4d8875c0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d887660 <col:39, col:80> macos 10.10 0 0 "" ""
+|-RecordDecl 0x7fbf4d8876c8 </usr/include/pthread/qos.h:211:9, col:16> col:16 struct pthread_override_s
+|-TypedefDecl 0x7fbf4d887820 <col:1, col:36> col:36 referenced pthread_override_t 'struct pthread_override_s *'
+| `-PointerType 0x7fbf4d8877d0 'struct pthread_override_s *'
+|   `-ElaboratedType 0x7fbf4d887770 'struct pthread_override_s' sugar
+|     `-RecordType 0x7fbf4d887750 'struct pthread_override_s'
+|       `-Record 0x7fbf4d8876c8 'pthread_override_s'
+|-FunctionDecl 0x7fbf4d896778 </usr/include/AvailabilityInternal.h:33235:24, /usr/include/pthread/qos.h:266:51> line:265:1 pthread_override_qos_class_start_np 'pthread_override_t  _Nonnull (pthread_t _Nonnull, qos_class_t, int)'
+| |-ParmVarDecl 0x7fbf4d8878f8 <col:37, col:47> col:47 __pthread 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4d887968 <line:266:3, col:15> col:15 __qos_class 'qos_class_t':'unsigned int'
+| |-ParmVarDecl 0x7fbf4d896600 <col:28, col:32> col:32 __relative_priority 'int'
+| |-AvailabilityAttr 0x7fbf4d896830 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8968d0 <col:39, col:80> macos 10.10 0 0 "" ""
+|-FunctionDecl 0x7fbf4d896a88 <col:24, /usr/include/pthread/qos.h:293:64> col:1 pthread_override_qos_class_end_np 'int (pthread_override_t _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d896980 <col:35, col:54> col:54 __override 'pthread_override_t _Nonnull':'struct pthread_override_s *'
+| |-AvailabilityAttr 0x7fbf4d896b30 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 8.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d896bd0 <col:39, col:80> macos 10.10 0 0 "" ""
+|-TypedefDecl 0x7fbf4d896c70 </usr/include/sys/_types/_mach_port_t.h:50:1, col:30> col:30 referenced mach_port_t '__darwin_mach_port_t':'unsigned int'
+| `-TypedefType 0x7fbf4d896c40 '__darwin_mach_port_t' sugar
+|   |-Typedef 0x7fbf4c864d30 '__darwin_mach_port_t'
+|   `-TypedefType 0x7fbf4c864d00 '__darwin_mach_port_name_t' sugar
+|     |-Typedef 0x7fbf4c864ca0 '__darwin_mach_port_name_t'
+|     `-TypedefType 0x7fbf4c864c70 '__darwin_natural_t' sugar
+|       |-Typedef 0x7fbf4c863f80 '__darwin_natural_t'
+|       `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-TypedefDecl 0x7fbf4d896d00 </usr/include/sys/_types/_sigset_t.h:31:1, col:28> col:28 referenced sigset_t '__darwin_sigset_t':'unsigned int'
+| `-TypedefType 0x7fbf4d896cd0 '__darwin_sigset_t' sugar
+|   |-Typedef 0x7fbf4c864ef8 '__darwin_sigset_t'
+|   `-TypedefType 0x7fbf4c8646b0 '__uint32_t' sugar
+|     |-Typedef 0x7fbf4c863dc0 '__uint32_t'
+|     `-BuiltinType 0x7fbf4d005a80 'unsigned int'
+|-FunctionDecl 0x7fbf4d897268 </usr/include/AvailabilityInternal.h:33235:24, /usr/include/pthread.h:217:27> line:216:5 pthread_atfork 'int (void (* _Nullable)(void), void (* _Nullable)(void), void (* _Nullable)(void))'
+| |-ParmVarDecl 0x7fbf4d896ef8 <col:20, col:28> col:37 'void (* _Nullable)(void)':'void (*)(void)'
+| |-ParmVarDecl 0x7fbf4d897010 <col:46, col:54> col:63 'void (* _Nullable)(void)':'void (*)(void)'
+| |-ParmVarDecl 0x7fbf4d897128 <line:217:3, col:11> col:20 'void (* _Nullable)(void)':'void (*)(void)'
+| |-AvailabilityAttr 0x7fbf4d897320 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8973c0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d899600 <col:24, /usr/include/pthread.h:220:42> col:5 pthread_attr_destroy 'int (pthread_attr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d897470 <col:26, col:41> col:42 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-AvailabilityAttr 0x7fbf4d8996a8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d899748 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d899a68 <col:24, /usr/include/pthread.h:223:62> col:5 pthread_attr_getdetachstate 'int (const pthread_attr_t * _Nonnull, int * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d899888 <col:33, col:54> col:55 'const pthread_attr_t * _Nonnull':'const pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4d899950 <col:57, col:61> col:62 'int * _Nonnull':'int *'
+| |-AvailabilityAttr 0x7fbf4d899b18 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d899bb8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d899ed8 <col:24, /usr/include/pthread.h:226:85> col:5 pthread_attr_getguardsize 'int (const pthread_attr_t *restrict _Nonnull, size_t *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d899c98 <col:31, col:52> col:64 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d899db8 <col:66, col:73> col:85 'size_t *restrict _Nonnull':'size_t *restrict'
+| |-AvailabilityAttr 0x7fbf4d899f88 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d89a028 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d89a278 <col:24, /usr/include/pthread.h:229:85> col:5 pthread_attr_getinheritsched 'int (const pthread_attr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d89a0d8 <col:34, col:55> col:67 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d89a1a0 <col:69, col:73> col:85 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4d89a328 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d89a3c8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d89a718 <col:24, /usr/include/pthread.h:233:34> line:232:5 pthread_attr_getschedparam 'int (const pthread_attr_t *restrict _Nonnull, struct sched_param *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d89a478 <col:32, col:53> col:65 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d89a600 <line:233:3, col:22> col:34 'struct sched_param *restrict _Nonnull':'struct sched_param *restrict'
+| |-AvailabilityAttr 0x7fbf4d89a7c8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d89a868 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d89aa40 <col:24, /usr/include/pthread.h:236:84> col:5 pthread_attr_getschedpolicy 'int (const pthread_attr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d89a918 <col:33, col:54> col:66 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d89a9a8 <col:68, col:72> col:84 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4d89aaf0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d89ab90 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d89ad68 <col:24, /usr/include/pthread.h:239:78> col:5 pthread_attr_getscope 'int (const pthread_attr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d89ac40 <col:27, col:48> col:60 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d89acd0 <col:62, col:66> col:78 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4d89ae18 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d89aeb8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d89b2a8 <col:24, /usr/include/pthread.h:243:62> line:242:5 pthread_attr_getstack 'int (const pthread_attr_t *restrict _Nonnull, void * _Nullable *restrict _Nonnull, size_t *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d89af68 <col:27, col:48> col:60 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d89b0e0 <line:243:3, col:22> col:41 'void * _Nullable *restrict _Nonnull':'void * _Nullable *restrict'
+| |-ParmVarDecl 0x7fbf4d89b168 <col:43, col:50> col:62 'size_t *restrict _Nonnull':'size_t *restrict'
+| |-AvailabilityAttr 0x7fbf4d89b360 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d89b400 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c848078 <col:24, /usr/include/pthread.h:247:41> line:246:5 pthread_attr_getstackaddr 'int (const pthread_attr_t *restrict _Nonnull, void * _Nullable *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d89b4b0 <col:31, col:52> col:64 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4d89b560 <line:247:3, col:22> col:41 'void * _Nullable *restrict _Nonnull':'void * _Nullable *restrict'
+| |-AvailabilityAttr 0x7fbf4c848128 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c8481c8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c848398 <col:24, /usr/include/pthread.h:250:85> col:5 pthread_attr_getstacksize 'int (const pthread_attr_t *restrict _Nonnull, size_t *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c848278 <col:31, col:52> col:64 'const pthread_attr_t *restrict _Nonnull':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c848300 <col:66, col:73> col:85 'size_t *restrict _Nonnull':'size_t *restrict'
+| |-AvailabilityAttr 0x7fbf4c848448 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c8484e8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c848628 <col:24, /usr/include/pthread.h:253:39> col:5 pthread_attr_init 'int (pthread_attr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c848598 <col:23, col:38> col:39 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-AvailabilityAttr 0x7fbf4c8486d0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c848770 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c8489b8 <col:24, /usr/include/pthread.h:256:54> col:5 pthread_attr_setdetachstate 'int (pthread_attr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c848820 <col:33, col:48> col:49 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c848898 <col:51> col:54 'int'
+| |-AvailabilityAttr 0x7fbf4c848a68 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c848b08 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c848d48 <col:24, /usr/include/pthread.h:259:55> col:5 pthread_attr_setguardsize 'int (pthread_attr_t * _Nonnull, size_t)'
+| |-ParmVarDecl 0x7fbf4c848bb8 <col:31, col:46> col:47 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c848c28 <col:49> col:55 'size_t':'unsigned long'
+| |-AvailabilityAttr 0x7fbf4c848df8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c848e98 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c849098 <col:24, /usr/include/pthread.h:262:55> col:5 pthread_attr_setinheritsched 'int (pthread_attr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c848f48 <col:34, col:49> col:50 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c849000 <col:52> col:55 'int'
+| |-AvailabilityAttr 0x7fbf4c849148 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c8491e8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c8494e8 <col:24, /usr/include/pthread.h:266:40> line:265:5 pthread_attr_setschedparam 'int (pthread_attr_t *restrict _Nonnull, const struct sched_param *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c849298 <col:32, col:47> col:59 'pthread_attr_t *restrict _Nonnull':'pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c8493d0 <line:266:3, col:28> col:40 'const struct sched_param *restrict _Nonnull':'const struct sched_param *restrict'
+| |-AvailabilityAttr 0x7fbf4c849598 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c849638 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c8497f8 <col:24, /usr/include/pthread.h:269:54> col:5 pthread_attr_setschedpolicy 'int (pthread_attr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c8496e8 <col:33, col:48> col:49 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c849760 <col:51> col:54 'int'
+| |-AvailabilityAttr 0x7fbf4c8498a8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c849948 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c849b08 <col:24, /usr/include/pthread.h:272:48> col:5 pthread_attr_setscope 'int (pthread_attr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c8499f8 <col:27, col:42> col:43 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c849a70 <col:45> col:48 'int'
+| |-AvailabilityAttr 0x7fbf4c849bb8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c849c58 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c878800 <col:24, /usr/include/pthread.h:275:59> col:5 pthread_attr_setstack 'int (pthread_attr_t * _Nonnull, void * _Nonnull, size_t)'
+| |-ParmVarDecl 0x7fbf4c849d08 <col:27, col:42> col:43 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c849dd0 <col:45, col:50> col:51 'void * _Nonnull':'void *'
+| |-ParmVarDecl 0x7fbf4c849e40 <col:53> col:59 'size_t':'unsigned long'
+| |-AvailabilityAttr 0x7fbf4c8788b8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c878958 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c878bb8 <col:24, /usr/include/pthread.h:278:55> col:5 pthread_attr_setstackaddr 'int (pthread_attr_t * _Nonnull, void * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c878a08 <col:31, col:46> col:47 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c878a98 <col:49, col:54> col:55 'void * _Nonnull':'void *'
+| |-AvailabilityAttr 0x7fbf4c878c68 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c878d08 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c878ec0 <col:24, /usr/include/pthread.h:281:55> col:5 pthread_attr_setstacksize 'int (pthread_attr_t * _Nonnull, size_t)'
+| |-ParmVarDecl 0x7fbf4c878db8 <col:31, col:46> col:47 'pthread_attr_t * _Nonnull':'pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4c878e28 <col:49> col:55 'size_t':'unsigned long'
+| |-AvailabilityAttr 0x7fbf4c878f70 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c879010 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c879208 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:284:5 pthread_cancel 'int (pthread_t _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c8790c0 <col:20> col:29 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-AsmLabelAttr 0x7fbf4c8792a8 </usr/include/sys/cdefs.h:569:36> "_pthread_cancel"
+| |-AvailabilityAttr 0x7fbf4c879310 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c879378 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c8795e8 <col:24, /usr/include/pthread.h:287:44> col:5 pthread_cond_broadcast 'int (pthread_cond_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c8794d8 <col:28, col:43> col:44 'pthread_cond_t * _Nonnull':'pthread_cond_t *'
+| |-AvailabilityAttr 0x7fbf4c879690 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c879730 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c879890 <col:24, /usr/include/pthread.h:290:42> col:5 pthread_cond_destroy 'int (pthread_cond_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c879800 <col:26, col:41> col:42 'pthread_cond_t * _Nonnull':'pthread_cond_t *'
+| |-AvailabilityAttr 0x7fbf4c879938 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c8799d8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c879d98 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:293:5 pthread_cond_init 'int (pthread_cond_t *restrict _Nonnull, const pthread_condattr_t *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4c879ab8 <line:294:3, col:18> col:30 'pthread_cond_t *restrict _Nonnull':'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x7fbf4c879bf8 <line:295:3, col:30> col:50 'const pthread_condattr_t *restrict _Nullable':'const pthread_condattr_t *restrict'
+| |-AsmLabelAttr 0x7fbf4c879e38 </usr/include/sys/cdefs.h:569:36> "_pthread_cond_init"
+| |-AvailabilityAttr 0x7fbf4c879eb0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c879f18 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87a058 <col:24, /usr/include/pthread.h:299:41> col:5 pthread_cond_signal 'int (pthread_cond_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c879fc8 <col:25, col:40> col:41 'pthread_cond_t * _Nonnull':'pthread_cond_t *'
+| |-AvailabilityAttr 0x7fbf4c87a100 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87a1a0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87a618 <col:24, /usr/include/sys/cdefs.h:570:103> /usr/include/pthread.h:302:5 pthread_cond_timedwait 'int (pthread_cond_t *restrict _Nonnull, pthread_mutex_t *restrict _Nonnull, const struct timespec *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4c87a250 <line:303:3, col:18> col:30 'pthread_cond_t *restrict _Nonnull':'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x7fbf4c87a388 <col:32, col:48> col:60 'pthread_mutex_t *restrict _Nonnull':'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x7fbf4c87a460 <line:304:3, col:27> col:47 'const struct timespec *restrict _Nullable':'const struct timespec *restrict'
+| |-AsmLabelAttr 0x7fbf4c87a6b8 </usr/include/sys/cdefs.h:570:38> "_pthread_cond_timedwait"
+| |-AvailabilityAttr 0x7fbf4c87a738 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87b800 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87ba98 <col:24, /usr/include/sys/cdefs.h:570:103> /usr/include/pthread.h:308:5 pthread_cond_wait 'int (pthread_cond_t *restrict _Nonnull, pthread_mutex_t *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c87b8b0 <col:23, col:38> col:50 'pthread_cond_t *restrict _Nonnull':'pthread_cond_t *restrict'
+| |-ParmVarDecl 0x7fbf4c87b938 <line:309:3, col:19> col:31 'pthread_mutex_t *restrict _Nonnull':'pthread_mutex_t *restrict'
+| |-AsmLabelAttr 0x7fbf4c87bb38 </usr/include/sys/cdefs.h:570:38> "_pthread_cond_wait"
+| |-AvailabilityAttr 0x7fbf4c87bbb0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87bc18 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87be68 <col:24, /usr/include/pthread.h:312:50> col:5 pthread_condattr_destroy 'int (pthread_condattr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c87bd58 <col:30, col:49> col:50 'pthread_condattr_t * _Nonnull':'pthread_condattr_t *'
+| |-AvailabilityAttr 0x7fbf4c87bf10 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87bfb0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87c0f0 <col:24, /usr/include/pthread.h:315:47> col:5 pthread_condattr_init 'int (pthread_condattr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c87c060 <col:27, col:46> col:47 'pthread_condattr_t * _Nonnull':'pthread_condattr_t *'
+| |-AvailabilityAttr 0x7fbf4c87c198 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87c238 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87c4c8 <col:24, /usr/include/pthread.h:319:19> line:318:5 pthread_condattr_getpshared 'int (const pthread_condattr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c87c318 <col:33, col:58> col:70 'const pthread_condattr_t *restrict _Nonnull':'const pthread_condattr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c87c3a8 <line:319:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c87c578 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87c618 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87da78 <col:24, /usr/include/pthread.h:322:58> col:5 pthread_condattr_setpshared 'int (pthread_condattr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c87c6c8 <col:33, col:52> col:53 'pthread_condattr_t * _Nonnull':'pthread_condattr_t *'
+| |-ParmVarDecl 0x7fbf4c87c740 <col:55> col:58 'int'
+| |-AvailabilityAttr 0x7fbf4c87db28 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87dbc8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87e2c8 <col:24, /usr/include/pthread.h:329:30> line:326:5 used pthread_create 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4c87dd58 <col:20, col:42> col:61 'pthread_t  _Nullable *restrict _Nonnull':'pthread_t  _Nullable *restrict'
+| |-ParmVarDecl 0x7fbf4c87de18 <line:327:3, col:26> col:46 'const pthread_attr_t *restrict _Nullable':'const pthread_attr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c87e0c0 <line:328:3, col:23> col:31 'void * _Nullable (* _Nonnull)(void * _Nullable)':'void * _Nullable (*)(void * _Nullable)'
+| |-ParmVarDecl 0x7fbf4c87e180 <line:329:3, col:10> col:30 'void *restrict _Nullable':'void *restrict'
+| |-AvailabilityAttr 0x7fbf4c87e388 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87e428 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87e568 <col:24, /usr/include/pthread.h:337:29> col:5 pthread_detach 'int (pthread_t _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c87e4d8 <col:20> col:29 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-AvailabilityAttr 0x7fbf4c87e610 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87e6b0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87e908 <col:24, /usr/include/pthread.h:340:59> col:5 pthread_equal 'int (pthread_t _Nullable, pthread_t _Nullable)'
+| |-ParmVarDecl 0x7fbf4c87e760 <col:19, col:29> col:38 'pthread_t _Nullable':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4c87e7e8 <col:40, col:50> col:59 'pthread_t _Nullable':'struct _opaque_pthread_t *'
+| |-AvailabilityAttr 0x7fbf4c87ea00 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87eaa0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87eca0 <col:24, /usr/include/sys/cdefs.h:155:42> /usr/include/pthread.h:343:6 pthread_exit 'void (void * _Nullable) __attribute__((noreturn))'
+| |-ParmVarDecl 0x7fbf4c87eb58 <col:19, col:26> col:35 'void * _Nullable':'void *'
+| |-AvailabilityAttr 0x7fbf4c87ed48 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87ede8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87ef08 <col:24, /usr/include/pthread.h:346:32> col:5 pthread_getconcurrency 'int (void)'
+| |-AvailabilityAttr 0x7fbf4c87efa8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87f048 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87f398 <col:24, /usr/include/pthread.h:350:44> line:349:5 pthread_getschedparam 'int (pthread_t _Nonnull, int *restrict _Nullable, struct sched_param *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4c87f0f8 <col:27> col:37 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4c87f188 <col:39, col:45> col:65 'int *restrict _Nullable':'int *restrict'
+| |-ParmVarDecl 0x7fbf4c87f260 <line:350:3, col:24> col:44 'struct sched_param *restrict _Nullable':'struct sched_param *restrict'
+| |-AvailabilityAttr 0x7fbf4c87f450 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87f4f0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87f6d0 <col:24, /usr/include/pthread.h:353:50> col:17 pthread_getspecific 'void * _Nullable (pthread_key_t)'
+| |-ParmVarDecl 0x7fbf4c87f5b0 <col:37> col:50 'pthread_key_t':'unsigned long'
+| |-AvailabilityAttr 0x7fbf4c87f778 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87f818 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c87fb98 <col:24, /usr/include/sys/cdefs.h:570:103> /usr/include/pthread.h:356:5 used pthread_join 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)'
+| |-ParmVarDecl 0x7fbf4c87f8c8 <col:18> col:28 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4c87fa00 <col:30, col:49> col:58 'void * _Nullable * _Nullable':'void * _Nullable *'
+| |-AsmLabelAttr 0x7fbf4c87fc38 </usr/include/sys/cdefs.h:570:38> "_pthread_join"
+| |-AvailabilityAttr 0x7fbf4c87fca8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c87fd10 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c880158 <col:24, /usr/include/pthread.h:360:67> col:5 pthread_key_create 'int (pthread_key_t * _Nonnull, void (* _Nullable)(void * _Nonnull))'
+| |-ParmVarDecl 0x7fbf4c87fe28 <col:24, col:38> col:39 'pthread_key_t * _Nonnull':'pthread_key_t *'
+| |-ParmVarDecl 0x7fbf4c880040 <col:41, col:49> col:58 'void (* _Nullable)(void * _Nonnull)':'void (*)(void * _Nonnull)'
+| |-AvailabilityAttr 0x7fbf4c880208 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c8802a8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c880448 <col:24, /usr/include/pthread.h:363:37> col:5 pthread_key_delete 'int (pthread_key_t)'
+| |-ParmVarDecl 0x7fbf4c880340 <col:24> col:37 'pthread_key_t':'unsigned long'
+| |-AvailabilityAttr 0x7fbf4c8804f0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c880590 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c880788 <col:24, /usr/include/pthread.h:366:44> col:5 pthread_mutex_destroy 'int (pthread_mutex_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c880678 <col:27, col:43> col:44 'pthread_mutex_t * _Nonnull':'pthread_mutex_t *'
+| |-AvailabilityAttr 0x7fbf4c880830 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c8808d0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c880bd8 <col:24, /usr/include/pthread.h:370:19> line:369:5 pthread_mutex_getprioceiling 'int (const pthread_mutex_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c880a28 <col:34, col:56> col:68 'const pthread_mutex_t *restrict _Nonnull':'const pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x7fbf4c880ab8 <line:370:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c880c88 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c880d28 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c881038 <col:24, /usr/include/pthread.h:374:51> line:373:5 pthread_mutex_init 'int (pthread_mutex_t *restrict _Nonnull, const pthread_mutexattr_t *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4c880dd8 <col:24, col:40> col:52 'pthread_mutex_t *restrict _Nonnull':'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x7fbf4c880f18 <line:374:3, col:31> col:51 'const pthread_mutexattr_t *restrict _Nullable':'const pthread_mutexattr_t *restrict'
+| |-AvailabilityAttr 0x7fbf4c8810e8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c881188 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c8812c8 <col:24, /usr/include/pthread.h:377:41> col:5 pthread_mutex_lock 'int (pthread_mutex_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c881238 <col:24, col:40> col:41 'pthread_mutex_t * _Nonnull':'pthread_mutex_t *'
+| |-AvailabilityAttr 0x7fbf4c881370 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c881410 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c881708 <col:24, /usr/include/pthread.h:381:19> line:380:5 pthread_mutex_setprioceiling 'int (pthread_mutex_t *restrict _Nonnull, int, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c8814c0 <col:34, col:50> col:62 'pthread_mutex_t *restrict _Nonnull':'pthread_mutex_t *restrict'
+| |-ParmVarDecl 0x7fbf4c881538 <col:64> col:67 'int'
+| |-ParmVarDecl 0x7fbf4c8815c8 <line:381:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c8817c0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c881860 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c899a00 <col:24, /usr/include/pthread.h:384:44> col:5 pthread_mutex_trylock 'int (pthread_mutex_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c881910 <col:27, col:43> col:44 'pthread_mutex_t * _Nonnull':'pthread_mutex_t *'
+| |-AvailabilityAttr 0x7fbf4c899aa8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c899b48 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c899c88 <col:24, /usr/include/pthread.h:387:43> col:5 pthread_mutex_unlock 'int (pthread_mutex_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c899bf8 <col:26, col:42> col:43 'pthread_mutex_t * _Nonnull':'pthread_mutex_t *'
+| |-AvailabilityAttr 0x7fbf4c899d30 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c899dd0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89a0b8 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:390:5 pthread_mutexattr_destroy 'int (pthread_mutexattr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c899f18 <col:31, col:51> col:52 'pthread_mutexattr_t * _Nonnull':'pthread_mutexattr_t *'
+| |-AsmLabelAttr 0x7fbf4c89a158 </usr/include/sys/cdefs.h:569:36> "_pthread_mutexattr_destroy"
+| |-AvailabilityAttr 0x7fbf4c89a1d0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89a238 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89a4c8 <col:24, /usr/include/pthread.h:394:19> line:393:5 pthread_mutexattr_getprioceiling 'int (const pthread_mutexattr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c89a318 <col:38, col:64> col:76 'const pthread_mutexattr_t *restrict _Nonnull':'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c89a3a8 <line:394:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c89a578 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89a618 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89a7f0 <col:24, /usr/include/pthread.h:398:19> line:397:5 pthread_mutexattr_getprotocol 'int (const pthread_mutexattr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c89a6c8 <col:35, col:61> col:73 'const pthread_mutexattr_t *restrict _Nonnull':'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c89a758 <line:398:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c89a8a0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89a940 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89ab28 <col:24, /usr/include/pthread.h:402:19> line:401:5 pthread_mutexattr_getpshared 'int (const pthread_mutexattr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c89aa00 <col:34, col:60> col:72 'const pthread_mutexattr_t *restrict _Nonnull':'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c89aa90 <line:402:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c89abd8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89ac78 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89ae50 <col:24, /usr/include/pthread.h:406:19> line:405:5 pthread_mutexattr_gettype 'int (const pthread_mutexattr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c89ad28 <col:31, col:57> col:69 'const pthread_mutexattr_t *restrict _Nonnull':'const pthread_mutexattr_t *restrict'
+| |-ParmVarDecl 0x7fbf4c89adb8 <line:406:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4c89af00 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89afa0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89b0e0 <col:24, /usr/include/pthread.h:409:49> col:5 pthread_mutexattr_init 'int (pthread_mutexattr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4c89b050 <col:28, col:48> col:49 'pthread_mutexattr_t * _Nonnull':'pthread_mutexattr_t *'
+| |-AvailabilityAttr 0x7fbf4c89b188 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89b228 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89b468 <col:24, /usr/include/pthread.h:412:64> col:5 pthread_mutexattr_setprioceiling 'int (pthread_mutexattr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c89b2d8 <col:38, col:58> col:59 'pthread_mutexattr_t * _Nonnull':'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x7fbf4c89b350 <col:61> col:64 'int'
+| |-AvailabilityAttr 0x7fbf4c89b518 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89b5b8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4c89b778 <col:24, /usr/include/pthread.h:415:61> col:5 pthread_mutexattr_setprotocol 'int (pthread_mutexattr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c89b668 <col:35, col:55> col:56 'pthread_mutexattr_t * _Nonnull':'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x7fbf4c89b6e0 <col:58> col:61 'int'
+| |-AvailabilityAttr 0x7fbf4c89b828 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4c89b8c8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e000098 <col:24, /usr/include/pthread.h:418:60> col:5 pthread_mutexattr_setpshared 'int (pthread_mutexattr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4c89b978 <col:34, col:54> col:55 'pthread_mutexattr_t * _Nonnull':'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x7fbf4e000000 <col:57> col:60 'int'
+| |-AvailabilityAttr 0x7fbf4e000148 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e0001e8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e0003a8 <col:24, /usr/include/pthread.h:421:57> col:5 pthread_mutexattr_settype 'int (pthread_mutexattr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4e000298 <col:31, col:51> col:52 'pthread_mutexattr_t * _Nonnull':'pthread_mutexattr_t *'
+| |-ParmVarDecl 0x7fbf4e000310 <col:54> col:57 'int'
+| |-AvailabilityAttr 0x7fbf4e000458 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e0004f8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e000968 </usr/include/Availability.h:232:66, /usr/include/pthread.h:425:59> col:5 pthread_once 'int (pthread_once_t * _Nonnull, void (* _Nonnull)(void))'
+| |-ParmVarDecl 0x7fbf4e0006f8 <col:18, col:33> col:34 'pthread_once_t * _Nonnull':'pthread_once_t *'
+| |-ParmVarDecl 0x7fbf4e000848 <col:36, col:44> col:52 'void (* _Nonnull)(void)':'void (*)(void)'
+| |-AvailabilityAttr 0x7fbf4e000a18 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| |-AvailabilityAttr 0x7fbf4e000ab8 <col:39, col:80> macos 10.4 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e000b20 </usr/include/Availability.h:232:81, col:128> swift 0 0 0 Unavailable "Use lazily initialized globals instead" ""
+|-FunctionDecl 0x7fbf4e000df8 </usr/include/AvailabilityInternal.h:33235:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:428:5 pthread_rwlock_destroy 'int (pthread_rwlock_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e000ca8 <col:28, col:45> col:47 'pthread_rwlock_t * _Nonnull':'pthread_rwlock_t *'
+| |-AsmLabelAttr 0x7fbf4e000e98 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_destroy"
+| |-AvailabilityAttr 0x7fbf4e000f08 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e000f70 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e001338 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:431:5 pthread_rwlock_init 'int (pthread_rwlock_t *restrict _Nonnull, const pthread_rwlockattr_t *restrict _Nullable)'
+| |-ParmVarDecl 0x7fbf4e001058 <col:25, col:42> col:54 'pthread_rwlock_t *restrict _Nonnull':'pthread_rwlock_t *restrict'
+| |-ParmVarDecl 0x7fbf4e001198 <line:432:3, col:32> col:52 'const pthread_rwlockattr_t *restrict _Nullable':'const pthread_rwlockattr_t *restrict'
+| |-AsmLabelAttr 0x7fbf4e0013d8 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_init"
+| |-AvailabilityAttr 0x7fbf4e001450 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e0014b8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e001680 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:436:5 pthread_rwlock_rdlock 'int (pthread_rwlock_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e001568 <col:27, col:44> col:45 'pthread_rwlock_t * _Nonnull':'pthread_rwlock_t *'
+| |-AsmLabelAttr 0x7fbf4e001720 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_rdlock"
+| |-AvailabilityAttr 0x7fbf4e001790 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e0017f8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e0019c8 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:439:5 pthread_rwlock_tryrdlock 'int (pthread_rwlock_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e0018a8 <col:30, col:47> col:48 'pthread_rwlock_t * _Nonnull':'pthread_rwlock_t *'
+| |-AsmLabelAttr 0x7fbf4e001a68 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_tryrdlock"
+| |-AvailabilityAttr 0x7fbf4e001ae0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e001b48 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e001cd8 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:442:5 pthread_rwlock_trywrlock 'int (pthread_rwlock_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e001bf8 <col:30, col:47> col:48 'pthread_rwlock_t * _Nonnull':'pthread_rwlock_t *'
+| |-AsmLabelAttr 0x7fbf4e001d78 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_trywrlock"
+| |-AvailabilityAttr 0x7fbf4e001df0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e001e58 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e003000 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:445:5 pthread_rwlock_wrlock 'int (pthread_rwlock_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e001f08 <col:27, col:44> col:45 'pthread_rwlock_t * _Nonnull':'pthread_rwlock_t *'
+| |-AsmLabelAttr 0x7fbf4e0030a0 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_wrlock"
+| |-AvailabilityAttr 0x7fbf4e003110 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e003178 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e003300 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:448:5 pthread_rwlock_unlock 'int (pthread_rwlock_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e003228 <col:27, col:44> col:45 'pthread_rwlock_t * _Nonnull':'pthread_rwlock_t *'
+| |-AsmLabelAttr 0x7fbf4e0033a0 </usr/include/sys/cdefs.h:569:36> "_pthread_rwlock_unlock"
+| |-AvailabilityAttr 0x7fbf4e003410 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e003478 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e0036c8 <col:24, /usr/include/pthread.h:451:54> col:5 pthread_rwlockattr_destroy 'int (pthread_rwlockattr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e0035b8 <col:32, col:53> col:54 'pthread_rwlockattr_t * _Nonnull':'pthread_rwlockattr_t *'
+| |-AvailabilityAttr 0x7fbf4e003770 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e003810 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e003aa8 <col:24, /usr/include/pthread.h:455:19> line:454:5 pthread_rwlockattr_getpshared 'int (const pthread_rwlockattr_t *restrict _Nonnull, int *restrict _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e0038f8 <col:35, col:62> col:74 'const pthread_rwlockattr_t *restrict _Nonnull':'const pthread_rwlockattr_t *restrict'
+| |-ParmVarDecl 0x7fbf4e003988 <line:455:3, col:7> col:19 'int *restrict _Nonnull':'int *restrict'
+| |-AvailabilityAttr 0x7fbf4e003b58 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e003bf8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4e003d38 <col:24, /usr/include/pthread.h:458:51> col:5 pthread_rwlockattr_init 'int (pthread_rwlockattr_t * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4e003ca8 <col:29, col:50> col:51 'pthread_rwlockattr_t * _Nonnull':'pthread_rwlockattr_t *'
+| |-AvailabilityAttr 0x7fbf4e003de0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4e003e80 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d037f18 <col:24, /usr/include/pthread.h:461:62> col:5 pthread_rwlockattr_setpshared 'int (pthread_rwlockattr_t * _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4e003f30 <col:35, col:56> col:57 'pthread_rwlockattr_t * _Nonnull':'pthread_rwlockattr_t *'
+| |-ParmVarDecl 0x7fbf4d037e00 <col:59> col:62 'int'
+| |-AvailabilityAttr 0x7fbf4d037fc8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d038068 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d0381f8 <col:24, /usr/include/pthread.h:464:28> col:11 pthread_self 'pthread_t  _Nonnull (void)'
+| |-AvailabilityAttr 0x7fbf4d038298 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d038338 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d038608 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:467:5 pthread_setcancelstate 'int (int, int * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d0383d8 <col:28> col:32 'int'
+| |-ParmVarDecl 0x7fbf4d0384a0 <col:34, col:40> col:49 'int * _Nullable':'int *'
+| |-AsmLabelAttr 0x7fbf4d0386a8 </usr/include/sys/cdefs.h:569:36> "_pthread_setcancelstate"
+| |-AvailabilityAttr 0x7fbf4d038720 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d038788 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d038998 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:471:5 pthread_setcanceltype 'int (int, int * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d038828 <col:27> col:31 'int'
+| |-ParmVarDecl 0x7fbf4d0388b8 <col:33, col:39> col:48 'int * _Nullable':'int *'
+| |-AsmLabelAttr 0x7fbf4d038a38 </usr/include/sys/cdefs.h:569:36> "_pthread_setcanceltype"
+| |-AvailabilityAttr 0x7fbf4d038ab0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d038b18 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d038c48 <col:24, /usr/include/pthread.h:475:31> col:5 pthread_setconcurrency 'int (int)'
+| |-ParmVarDecl 0x7fbf4d038bb8 <col:28> col:31 'int'
+| |-AvailabilityAttr 0x7fbf4d038cf0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d038d90 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d86e0c8 <col:24, /usr/include/pthread.h:478:69> col:5 pthread_setschedparam 'int (pthread_t _Nonnull, int, const struct sched_param * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d86de48 <col:27> col:36 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4d86dec0 <col:38> col:41 'int'
+| |-ParmVarDecl 0x7fbf4d86df90 <col:43, col:68> col:69 'const struct sched_param * _Nonnull':'const struct sched_param *'
+| |-AvailabilityAttr 0x7fbf4d86e180 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d86e220 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d86e4c8 <col:24, /usr/include/pthread.h:481:63> col:5 pthread_setspecific 'int (pthread_key_t, const void * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d86e2b8 <col:25> col:39 'pthread_key_t':'unsigned long'
+| |-ParmVarDecl 0x7fbf4d86e3b0 <col:41, col:54> col:63 'const void * _Nullable':'const void *'
+| |-AvailabilityAttr 0x7fbf4d86e578 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d86e618 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d86e7b0 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:484:6 pthread_testcancel 'void (void)'
+| |-AsmLabelAttr 0x7fbf4d86e850 </usr/include/sys/cdefs.h:569:36> "_pthread_testcancel"
+| |-AvailabilityAttr 0x7fbf4d86e8b8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d86e920 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d86ea40 <col:24, /usr/include/pthread.h:490:32> col:5 pthread_is_threaded_np 'int (void)'
+| |-AvailabilityAttr 0x7fbf4d86eae0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d86eb80 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d86fe78 <col:24, /usr/include/pthread.h:493:66> col:5 pthread_threadid_np 'int (pthread_t _Nullable, __uint64_t * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d86ec30 <col:25, col:35> col:44 'pthread_t _Nullable':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4d86ed48 <col:45, col:57> col:66 '__uint64_t * _Nullable':'__uint64_t *'
+| |-AvailabilityAttr 0x7fbf4d86ff28 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 3.2 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d86ffc8 <col:39, col:80> macos 10.6 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8702e8 <col:24, /usr/include/pthread.h:497:46> col:5 pthread_getname_np 'int (pthread_t _Nonnull, char * _Nonnull, size_t)'
+| |-ParmVarDecl 0x7fbf4d870078 <col:24> col:33 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4d870140 <col:34, col:38> col:39 'char * _Nonnull':'char *'
+| |-ParmVarDecl 0x7fbf4d8701b0 <col:40> col:46 'size_t':'unsigned long'
+| |-AvailabilityAttr 0x7fbf4d8703a0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 3.2 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d870440 <col:39, col:80> macos 10.6 0 0 "" ""
+|-FunctionDecl 0x7fbf4d870638 <col:24, /usr/include/pthread.h:500:35> col:5 pthread_setname_np 'int (const char * _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d870530 <col:24, col:34> col:35 'const char * _Nonnull':'const char *'
+| |-AvailabilityAttr 0x7fbf4d8706e0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 3.2 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d870780 <col:39, col:80> macos 10.6 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8708a0 <col:24, /usr/include/pthread.h:504:25> col:5 pthread_main_np 'int (void)'
+| |-AvailabilityAttr 0x7fbf4d870940 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8709e0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d870bc0 <col:24, /usr/include/pthread.h:508:45> col:13 pthread_mach_thread_np 'mach_port_t (pthread_t _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d870ab8 <col:36> col:45 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-AvailabilityAttr 0x7fbf4d870c68 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d870d08 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d870f00 <col:24, /usr/include/pthread.h:511:42> col:8 pthread_get_stacksize_np 'size_t (pthread_t _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d870e00 <col:33> col:42 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-AvailabilityAttr 0x7fbf4d870fa8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d871048 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d871220 <col:24, /usr/include/pthread.h:514:41> col:7 pthread_get_stackaddr_np 'void * _Nonnull (pthread_t _Nonnull)'
+| |-ParmVarDecl 0x7fbf4d8710f8 <col:32> col:41 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-AvailabilityAttr 0x7fbf4d8712c8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d871368 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8715b8 <col:24, /usr/include/pthread.h:518:72> col:5 pthread_cond_signal_thread_np 'int (pthread_cond_t * _Nonnull, pthread_t _Nullable)'
+| |-ParmVarDecl 0x7fbf4d871418 <col:35, col:50> col:51 'pthread_cond_t * _Nonnull':'pthread_cond_t *'
+| |-ParmVarDecl 0x7fbf4d8714a0 <col:53, col:63> col:72 'pthread_t _Nullable':'struct _opaque_pthread_t *'
+| |-AvailabilityAttr 0x7fbf4d871668 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d871708 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8719f8 <col:24, /usr/include/pthread.h:523:36> line:522:5 pthread_cond_timedwait_relative_np 'int (pthread_cond_t * _Nonnull, pthread_mutex_t * _Nonnull, const struct timespec * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d8717b8 <col:40, col:55> col:56 'pthread_cond_t * _Nonnull':'pthread_cond_t *'
+| |-ParmVarDecl 0x7fbf4d871840 <col:58, col:74> col:75 'pthread_mutex_t * _Nonnull':'pthread_mutex_t *'
+| |-ParmVarDecl 0x7fbf4d871910 <line:523:3, col:27> col:36 'const struct timespec * _Nullable':'const struct timespec *'
+| |-AvailabilityAttr 0x7fbf4d871ab0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d871b50 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d872058 <col:24, /usr/include/pthread.h:530:68> line:528:5 pthread_create_suspended_np 'int (pthread_t  _Nullable * _Nonnull, const pthread_attr_t * _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d871c58 <line:529:3, col:25> col:33 'pthread_t  _Nullable * _Nonnull':'pthread_t  _Nullable *'
+| |-ParmVarDecl 0x7fbf4d871d18 <col:35, col:58> col:67 'const pthread_attr_t * _Nullable':'const pthread_attr_t *'
+| |-ParmVarDecl 0x7fbf4d871ed0 <line:530:3, col:23> col:31 'void * _Nullable (* _Nonnull)(void * _Nullable)':'void * _Nullable (*)(void * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d871f60 <col:52, col:59> col:68 'void * _Nullable':'void *'
+| |-AvailabilityAttr 0x7fbf4d872118 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8721b8 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8723f8 <col:24, /usr/include/pthread.h:537:32> col:5 pthread_kill 'int (pthread_t _Nonnull, int)'
+| |-ParmVarDecl 0x7fbf4d872268 <col:18> col:27 'pthread_t _Nonnull':'struct _opaque_pthread_t *'
+| |-ParmVarDecl 0x7fbf4d8722e0 <col:29> col:32 'int'
+| |-AvailabilityAttr 0x7fbf4d8724a8 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d872548 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d8726f8 <col:24, /usr/include/pthread.h:540:60> col:21 pthread_from_mach_thread_np 'pthread_t  _Nullable (mach_port_t)'
+| |-ParmVarDecl 0x7fbf4d8725e0 <col:49> col:60 'mach_port_t':'unsigned int'
+| |-AvailabilityAttr 0x7fbf4d8727a0 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d872840 <col:39, col:80> macos 10.5 0 0 "" ""
+|-FunctionDecl 0x7fbf4d872cc8 <col:24, /usr/include/sys/cdefs.h:569:73> /usr/include/pthread.h:543:5 pthread_sigmask 'int (int, const sigset_t * _Nullable, sigset_t * _Nullable)'
+| |-ParmVarDecl 0x7fbf4d8728e0 <col:21> col:24 'int'
+| |-ParmVarDecl 0x7fbf4d872a18 <col:26, col:43> col:52 'const sigset_t * _Nullable':'const sigset_t *'
+| |-ParmVarDecl 0x7fbf4d872b08 <col:54, col:65> col:74 'sigset_t * _Nullable':'sigset_t *'
+| |-AsmLabelAttr 0x7fbf4d872d68 </usr/include/sys/cdefs.h:569:36> "_pthread_sigmask"
+| |-AvailabilityAttr 0x7fbf4d872e00 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d872e68 <col:39, col:80> macos 10.4 0 0 "" ""
+|-FunctionDecl 0x7fbf4d872f80 <col:24, /usr/include/pthread.h:547:27> col:6 pthread_yield_np 'void (void)'
+| |-AvailabilityAttr 0x7fbf4d873020 </usr/include/AvailabilityInternal.h:33235:39, col:80> ios 2.0 0 0 "" ""
+| `-AvailabilityAttr 0x7fbf4d8730c0 <col:39, col:80> macos 10.4 0 0 "" ""
+|-VarDecl 0x7fbf4d873158 <../Data/C2AST/pr65400-3.c:8:1, col:26> col:26 invalid barrier 'int' static
+|-VarDecl 0x7fbf4d8731d0 <line:9:1, col:5> col:5 used v 'int'
+|-FunctionDecl 0x7fbf4d873428 <line:11:1, line:18:1> line:12:1 used fn1 'int (int, int, int)'
+| |-ParmVarDecl 0x7fbf4d873248 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7fbf4d8732c0 <col:13, col:17> col:17 used b 'int'
+| |-ParmVarDecl 0x7fbf4d873338 <col:20, col:24> col:24 used c 'int'
+| `-CompoundStmt 0x7fbf4d873a40 <line:13:1, line:18:1>
+|   |-DeclStmt 0x7fbf4d873688 <line:14:3, col:22>
+|   | `-VarDecl 0x7fbf4d8734f8 <col:3, col:21> col:7 used r 'int' cinit
+|   |   `-BinaryOperator 0x7fbf4d873660 <col:11, col:21> 'int' '%'
+|   |     |-ParenExpr 0x7fbf4d873600 <col:11, col:17> 'int'
+|   |     | `-BinaryOperator 0x7fbf4d8735d8 <col:12, col:16> 'int' '^'
+|   |     |   |-ImplicitCastExpr 0x7fbf4d8735a8 <col:12> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fbf4d873558 <col:12> 'int' lvalue ParmVar 0x7fbf4d873248 'a' 'int'
+|   |     |   `-ImplicitCastExpr 0x7fbf4d8735c0 <col:16> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fbf4d873580 <col:16> 'int' lvalue ParmVar 0x7fbf4d8732c0 'b' 'int'
+|   |     `-ImplicitCastExpr 0x7fbf4d873648 <col:21> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fbf4d873620 <col:21> 'int' lvalue ParmVar 0x7fbf4d873338 'c' 'int'
+|   |-BinaryOperator 0x7fbf4d873840 <line:15:3, col:19> 'int' '='
+|   | |-DeclRefExpr 0x7fbf4d8736a0 <col:3> 'int' lvalue Var 0x7fbf4d8734f8 'r' 'int'
+|   | `-BinaryOperator 0x7fbf4d873818 <col:7, col:19> 'int' '+'
+|   |   |-BinaryOperator 0x7fbf4d8737b0 <col:7, col:15> 'int' '*'
+|   |   | |-BinaryOperator 0x7fbf4d873748 <col:7, col:11> 'int' '*'
+|   |   | | |-ImplicitCastExpr 0x7fbf4d873718 <col:7> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fbf4d8736c8 <col:7> 'int' lvalue Var 0x7fbf4d8734f8 'r' 'int'
+|   |   | | `-ImplicitCastExpr 0x7fbf4d873730 <col:11> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fbf4d8736f0 <col:11> 'int' lvalue ParmVar 0x7fbf4d873248 'a' 'int'
+|   |   | `-ImplicitCastExpr 0x7fbf4d873798 <col:15> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fbf4d873770 <col:15> 'int' lvalue ParmVar 0x7fbf4d8732c0 'b' 'int'
+|   |   `-ImplicitCastExpr 0x7fbf4d873800 <col:19> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbf4d8737d8 <col:19> 'int' lvalue ParmVar 0x7fbf4d873338 'c' 'int'
+|   |-BinaryOperator 0x7fbf4d8739c0 <line:16:3, col:17> 'int' '='
+|   | |-DeclRefExpr 0x7fbf4d873868 <col:3> 'int' lvalue Var 0x7fbf4d8734f8 'r' 'int'
+|   | `-BinaryOperator 0x7fbf4d873998 <col:7, col:17> 'int' '%'
+|   |   |-ParenExpr 0x7fbf4d873938 <col:7, col:13> 'int'
+|   |   | `-BinaryOperator 0x7fbf4d873910 <col:8, col:12> 'int' '^'
+|   |   |   |-ImplicitCastExpr 0x7fbf4d8738e0 <col:8> 'int' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fbf4d873890 <col:8> 'int' lvalue Var 0x7fbf4d8734f8 'r' 'int'
+|   |   |   `-ImplicitCastExpr 0x7fbf4d8738f8 <col:12> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fbf4d8738b8 <col:12> 'int' lvalue ParmVar 0x7fbf4d8732c0 'b' 'int'
+|   |   `-ImplicitCastExpr 0x7fbf4d873980 <col:17> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbf4d873958 <col:17> 'int' lvalue ParmVar 0x7fbf4d873338 'c' 'int'
+|   `-ReturnStmt 0x7fbf4d873a28 <line:17:3, col:10>
+|     `-ImplicitCastExpr 0x7fbf4d873a10 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbf4d8739e8 <col:10> 'int' lvalue Var 0x7fbf4d8734f8 'r' 'int'
+|-FunctionDecl 0x7fbf4d873c18 <line:20:1, line:27:1> line:21:1 used fn2 'int (int, int, int)'
+| |-ParmVarDecl 0x7fbf4d873a88 <col:6, col:10> col:10 used a 'int'
+| |-ParmVarDecl 0x7fbf4d873b00 <col:13, col:17> col:17 used b 'int'
+| |-ParmVarDecl 0x7fbf4d873b78 <col:20, col:24> col:24 used c 'int'
+| `-CompoundStmt 0x7fbf4d039240 <line:22:1, line:27:1>
+|   |-DeclStmt 0x7fbf4d038e88 <line:23:3, col:22>
+|   | `-VarDecl 0x7fbf4d873ce8 <col:3, col:21> col:7 used r 'int' cinit
+|   |   `-BinaryOperator 0x7fbf4d038e60 <col:11, col:21> 'int' '%'
+|   |     |-ParenExpr 0x7fbf4d038e00 <col:11, col:17> 'int'
+|   |     | `-BinaryOperator 0x7fbf4d873dc8 <col:12, col:16> 'int' '^'
+|   |     |   |-ImplicitCastExpr 0x7fbf4d873d98 <col:12> 'int' <LValueToRValue>
+|   |     |   | `-DeclRefExpr 0x7fbf4d873d48 <col:12> 'int' lvalue ParmVar 0x7fbf4d873a88 'a' 'int'
+|   |     |   `-ImplicitCastExpr 0x7fbf4d873db0 <col:16> 'int' <LValueToRValue>
+|   |     |     `-DeclRefExpr 0x7fbf4d873d70 <col:16> 'int' lvalue ParmVar 0x7fbf4d873b00 'b' 'int'
+|   |     `-ImplicitCastExpr 0x7fbf4d038e48 <col:21> 'int' <LValueToRValue>
+|   |       `-DeclRefExpr 0x7fbf4d038e20 <col:21> 'int' lvalue ParmVar 0x7fbf4d873b78 'c' 'int'
+|   |-BinaryOperator 0x7fbf4d039040 <line:24:3, col:19> 'int' '='
+|   | |-DeclRefExpr 0x7fbf4d038ea0 <col:3> 'int' lvalue Var 0x7fbf4d873ce8 'r' 'int'
+|   | `-BinaryOperator 0x7fbf4d039018 <col:7, col:19> 'int' '+'
+|   |   |-BinaryOperator 0x7fbf4d038fb0 <col:7, col:15> 'int' '*'
+|   |   | |-BinaryOperator 0x7fbf4d038f48 <col:7, col:11> 'int' '*'
+|   |   | | |-ImplicitCastExpr 0x7fbf4d038f18 <col:7> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x7fbf4d038ec8 <col:7> 'int' lvalue Var 0x7fbf4d873ce8 'r' 'int'
+|   |   | | `-ImplicitCastExpr 0x7fbf4d038f30 <col:11> 'int' <LValueToRValue>
+|   |   | |   `-DeclRefExpr 0x7fbf4d038ef0 <col:11> 'int' lvalue ParmVar 0x7fbf4d873a88 'a' 'int'
+|   |   | `-ImplicitCastExpr 0x7fbf4d038f98 <col:15> 'int' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x7fbf4d038f70 <col:15> 'int' lvalue ParmVar 0x7fbf4d873b00 'b' 'int'
+|   |   `-ImplicitCastExpr 0x7fbf4d039000 <col:19> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbf4d038fd8 <col:19> 'int' lvalue ParmVar 0x7fbf4d873b78 'c' 'int'
+|   |-BinaryOperator 0x7fbf4d0391c0 <line:25:3, col:17> 'int' '='
+|   | |-DeclRefExpr 0x7fbf4d039068 <col:3> 'int' lvalue Var 0x7fbf4d873ce8 'r' 'int'
+|   | `-BinaryOperator 0x7fbf4d039198 <col:7, col:17> 'int' '%'
+|   |   |-ParenExpr 0x7fbf4d039138 <col:7, col:13> 'int'
+|   |   | `-BinaryOperator 0x7fbf4d039110 <col:8, col:12> 'int' '^'
+|   |   |   |-ImplicitCastExpr 0x7fbf4d0390e0 <col:8> 'int' <LValueToRValue>
+|   |   |   | `-DeclRefExpr 0x7fbf4d039090 <col:8> 'int' lvalue Var 0x7fbf4d873ce8 'r' 'int'
+|   |   |   `-ImplicitCastExpr 0x7fbf4d0390f8 <col:12> 'int' <LValueToRValue>
+|   |   |     `-DeclRefExpr 0x7fbf4d0390b8 <col:12> 'int' lvalue ParmVar 0x7fbf4d873b00 'b' 'int'
+|   |   `-ImplicitCastExpr 0x7fbf4d039180 <col:17> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x7fbf4d039158 <col:17> 'int' lvalue ParmVar 0x7fbf4d873b78 'c' 'int'
+|   `-ReturnStmt 0x7fbf4d039228 <line:26:3, col:10>
+|     `-ImplicitCastExpr 0x7fbf4d039210 <col:10> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fbf4d0391e8 <col:10> 'int' lvalue Var 0x7fbf4d873ce8 'r' 'int'
+|-FunctionDecl 0x7fbf4d039300 <line:29:1, line:35:1> line:30:1 used foo 'void (void)'
+| |-CompoundStmt 0x7fbf4d039588 <line:31:1, line:35:1>
+| | `-UnaryOperator 0x7fbf4d039568 <line:34:3, col:4> 'int' postfix '++'
+| |   `-DeclRefExpr 0x7fbf4d039540 <col:3> 'int' lvalue Var 0x7fbf4d8731d0 'v' 'int'
+| `-NoInlineAttr 0x7fbf4d0393a0 <line:29:16>
+|-FunctionDecl 0x7fbf4d039630 <line:37:1, line:51:1> line:38:1 used bar 'void (void)'
+| |-CompoundStmt 0x7fbf4d03a4b0 <line:39:1, line:51:1>
+| | |-DeclStmt 0x7fbf4d0399b8 <line:40:3, col:29>
+| | | `-VarDecl 0x7fbf4d039958 <col:3, col:28> col:9 used fna 'int (*)(int, int, int)'
+| | |-DeclStmt 0x7fbf4d039be8 <line:41:3, col:29>
+| | | `-VarDecl 0x7fbf4d039b88 <col:3, col:28> col:9 used fnb 'int (*)(int, int, int)'
+| | |-DeclStmt 0x7fbf4d039c78 <line:42:3, col:8>
+| | | `-VarDecl 0x7fbf4d039c18 <col:3, col:7> col:7 used i 'int'
+| | |-GCCAsmStmt 0x7fbf4d039e40 <line:43:3, col:35>
+| | | |-DeclRefExpr 0x7fbf4d039d58 <col:19> 'int (*)(int, int, int)' lvalue Var 0x7fbf4d039958 'fna' 'int (*)(int, int, int)'
+| | | `-ImplicitCastExpr 0x7fbf4d039e28 <col:31> 'int (*)(int, int, int)' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fbf4d039e00 <col:31> 'int (int, int, int)' Function 0x7fbf4d873428 'fn1' 'int (int, int, int)'
+| | |-GCCAsmStmt 0x7fbf4d039fa8 <line:44:3, col:35>
+| | | |-DeclRefExpr 0x7fbf4d039f10 <col:19> 'int (*)(int, int, int)' lvalue Var 0x7fbf4d039b88 'fnb' 'int (*)(int, int, int)'
+| | | `-ImplicitCastExpr 0x7fbf4d039f90 <col:31> 'int (*)(int, int, int)' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fbf4d039f68 <col:31> 'int (int, int, int)' Function 0x7fbf4d873c18 'fn2' 'int (int, int, int)'
+| | |-ForStmt 0x7fbf4d03a410 <line:45:3, line:49:5>
+| | | |-BinaryOperator 0x7fbf4d03a068 <line:45:8, col:12> 'int' '='
+| | | | |-DeclRefExpr 0x7fbf4d03a020 <col:8> 'int' lvalue Var 0x7fbf4d039c18 'i' 'int'
+| | | | `-IntegerLiteral 0x7fbf4d03a048 <col:12> 'int' 0
+| | | |-<<<NULL>>>
+| | | |-BinaryOperator 0x7fbf4d03a0f0 <col:15, col:19> 'int' '<'
+| | | | |-ImplicitCastExpr 0x7fbf4d03a0d8 <col:15> 'int' <LValueToRValue>
+| | | | | `-DeclRefExpr 0x7fbf4d03a090 <col:15> 'int' lvalue Var 0x7fbf4d039c18 'i' 'int'
+| | | | `-IntegerLiteral 0x7fbf4d03a0b8 <col:19> 'int' 128
+| | | |-UnaryOperator 0x7fbf4d03a140 <col:24, col:25> 'int' postfix '++'
+| | | | `-DeclRefExpr 0x7fbf4d03a118 <col:24> 'int' lvalue Var 0x7fbf4d039c18 'i' 'int'
+| | | `-CompoundStmt 0x7fbf4d03a3f0 <line:46:5, line:49:5>
+| | |   |-CallExpr 0x7fbf4d03a268 <line:47:7, col:23> 'int'
+| | |   | |-ImplicitCastExpr 0x7fbf4d03a250 <col:7> 'int (*)(int, int, int)' <LValueToRValue>
+| | |   | | `-DeclRefExpr 0x7fbf4d03a160 <col:7> 'int (*)(int, int, int)' lvalue Var 0x7fbf4d039958 'fna' 'int (*)(int, int, int)'
+| | |   | |-IntegerLiteral 0x7fbf4d03a188 <col:12> 'int' 0
+| | |   | |-IntegerLiteral 0x7fbf4d03a1a8 <col:15> 'int' 0
+| | |   | `-BinaryOperator 0x7fbf4d03a228 <col:18, col:22> 'int' '+'
+| | |   |   |-ImplicitCastExpr 0x7fbf4d03a210 <col:18> 'int' <LValueToRValue>
+| | |   |   | `-DeclRefExpr 0x7fbf4d03a1c8 <col:18> 'int' lvalue Var 0x7fbf4d039c18 'i' 'int'
+| | |   |   `-IntegerLiteral 0x7fbf4d03a1f0 <col:22> 'int' 1
+| | |   `-CallExpr 0x7fbf4d03a3b0 <line:48:7, col:23> 'int'
+| | |     |-ImplicitCastExpr 0x7fbf4d03a398 <col:7> 'int (*)(int, int, int)' <LValueToRValue>
+| | |     | `-DeclRefExpr 0x7fbf4d03a2a8 <col:7> 'int (*)(int, int, int)' lvalue Var 0x7fbf4d039b88 'fnb' 'int (*)(int, int, int)'
+| | |     |-IntegerLiteral 0x7fbf4d03a2d0 <col:12> 'int' 0
+| | |     |-IntegerLiteral 0x7fbf4d03a2f0 <col:15> 'int' 0
+| | |     `-BinaryOperator 0x7fbf4d03a370 <col:18, col:22> 'int' '+'
+| | |       |-ImplicitCastExpr 0x7fbf4d03a358 <col:18> 'int' <LValueToRValue>
+| | |       | `-DeclRefExpr 0x7fbf4d03a310 <col:18> 'int' lvalue Var 0x7fbf4d039c18 'i' 'int'
+| | |       `-IntegerLiteral 0x7fbf4d03a338 <col:22> 'int' 1
+| | `-CallExpr 0x7fbf4d03a488 <line:50:3, col:8> 'void'
+| |   `-ImplicitCastExpr 0x7fbf4d03a470 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| |     `-DeclRefExpr 0x7fbf4d03a448 <col:3> 'void (void)' Function 0x7fbf4d039300 'foo' 'void (void)'
+| `-NoInlineAttr 0x7fbf4d0396d0 <line:37:16>
+|-FunctionDecl 0x7fbf4d03a5a0 <line:53:1, line:59:1> line:54:1 used tf 'void *(void *)'
+| |-ParmVarDecl 0x7fbf4d03a510 <col:5, col:11> col:11 used arg 'void *'
+| |-CompoundStmt 0x7fbf4d03a808 <line:55:1, line:59:1>
+| | |-CStyleCastExpr 0x7fbf4d03a6e0 <line:56:3, col:10> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x7fbf4d03a6c8 <col:10> 'void *' <LValueToRValue>
+| | |   `-DeclRefExpr 0x7fbf4d03a690 <col:10> 'void *' lvalue ParmVar 0x7fbf4d03a510 'arg' 'void *'
+| | |-CallExpr 0x7fbf4d03a748 <line:57:3, col:8> 'void'
+| | | `-ImplicitCastExpr 0x7fbf4d03a730 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+| | |   `-DeclRefExpr 0x7fbf4d03a708 <col:3> 'void (void)' Function 0x7fbf4d039630 'bar' 'void (void)'
+| | `-ReturnStmt 0x7fbf4d03a7f0 <line:58:3, /usr/include/sys/_types.h:52:33>
+| |   `-ParenExpr 0x7fbf4d03a7d0 <col:23, col:33> 'void *'
+| |     `-CStyleCastExpr 0x7fbf4d03a7a8 <col:24, col:32> 'void *' <NullToPointer>
+| |       `-IntegerLiteral 0x7fbf4d03a770 <col:32> 'int' 0
+| `-NoInlineAttr 0x7fbf4d03a648 <../Data/C2AST/pr65400-3.c:53:16>
+`-FunctionDecl 0x7fbf4d03a858 <line:61:1, line:73:1> line:62:1 main 'int ()'
+  `-CompoundStmt 0x7fbf4d03c050 <line:63:1, line:73:1>
+    |-DeclStmt 0x7fbf4d03a968 <line:64:3, col:15>
+    | `-VarDecl 0x7fbf4d03a908 <col:3, col:13> col:13 used th 'pthread_t':'struct _opaque_pthread_t *'
+    |-IfStmt 0x7fbf4d03ad80 <line:66:3, line:67:12>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-CallExpr 0x7fbf4d03acd0 <line:66:7, col:42> 'int'
+    | | |-ImplicitCastExpr 0x7fbf4d03acb8 <col:7> 'int (*)(pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict1 error generated.
+ _Nullable)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbf4d03aaa0 <col:7> 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)' Function 0x7fbf4c87e2c8 'pthread_create' 'int (pthread_t  _Nullable *restrict _Nonnull, const pthread_attr_t *restrict _Nullable, void * _Nullable (* _Nonnull)(void * _Nullable), void *restrict _Nullable)'
+    | | |-UnaryOperator 0x7fbf4d03ab18 <col:23, col:24> 'pthread_t *' prefix '&'
+    | | | `-DeclRefExpr 0x7fbf4d03aac8 <col:24> 'pthread_t':'struct _opaque_pthread_t *' lvalue Var 0x7fbf4d03a908 'th' 'pthread_t':'struct _opaque_pthread_t *'
+    | | |-ImplicitCastExpr 0x7fbf4d03ad18 </usr/include/sys/_types.h:52:23, col:33> 'const pthread_attr_t *' <NullToPointer>
+    | | | `-ParenExpr 0x7fbf4d03ab98 <col:23, col:33> 'void *'
+    | | |   `-CStyleCastExpr 0x7fbf4d03ab70 <col:24, col:32> 'void *' <NullToPointer>
+    | | |     `-IntegerLiteral 0x7fbf4d03ab38 <col:32> 'int' 0
+    | | |-ImplicitCastExpr 0x7fbf4d03ad30 <../Data/C2AST/pr65400-3.c:66:34> 'void *(*)(void *)' <FunctionToPointerDecay>
+    | | | `-DeclRefExpr 0x7fbf4d03abb8 <col:34> 'void *(void *)' Function 0x7fbf4d03a5a0 'tf' 'void *(void *)'
+    | | `-ParenExpr 0x7fbf4d03ac40 </usr/include/sys/_types.h:52:23, col:33> 'void *'
+    | |   `-CStyleCastExpr 0x7fbf4d03ac18 <col:24, col:32> 'void *' <NullToPointer>
+    | |     `-IntegerLiteral 0x7fbf4d03abe0 <col:32> 'int' 0
+    | |-ReturnStmt 0x7fbf4d03ad68 <../Data/C2AST/pr65400-3.c:67:5, col:12>
+    | | `-IntegerLiteral 0x7fbf4d03ad48 <col:12> 'int' 0
+    | `-<<<NULL>>>
+    |-UnaryOperator 0x7fbf4d03be28 <line:69:3, col:4> 'int' postfix '++'
+    | `-DeclRefExpr 0x7fbf4d03be00 <col:3> 'int' lvalue Var 0x7fbf4d8731d0 'v' 'int'
+    |-CallExpr 0x7fbf4d03bfb0 <line:71:3, col:25> 'int'
+    | |-ImplicitCastExpr 0x7fbf4d03bf98 <col:3> 'int (*)(pthread_t _Nonnull, void * _Nullable * _Nullable)' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x7fbf4d03be70 <col:3> 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)' Function 0x7fbf4c87fb98 'pthread_join' 'int (pthread_t _Nonnull, void * _Nullable * _Nullable)'
+    | |-ImplicitCastExpr 0x7fbf4d03bfe8 <col:17> 'pthread_t':'struct _opaque_pthread_t *' <LValueToRValue>
+    | | `-DeclRefExpr 0x7fbf4d03be98 <col:17> 'pthread_t':'struct _opaque_pthread_t *' lvalue Var 0x7fbf4d03a908 'th' 'pthread_t':'struct _opaque_pthread_t *'
+    | `-ImplicitCastExpr 0x7fbf4d03c000 </usr/include/sys/_types.h:52:23, col:33> 'void * _Nullable * _Nullable':'void * _Nullable *' <NullToPointer>
+    |   `-ParenExpr 0x7fbf4d03bf20 <col:23, col:33> 'void *'
+    |     `-CStyleCastExpr 0x7fbf4d03bef8 <col:24, col:32> 'void *' <NullToPointer>
+    |       `-IntegerLiteral 0x7fbf4d03bec0 <col:32> 'int' 0
+    `-ReturnStmt 0x7fbf4d03c038 <../Data/C2AST/pr65400-3.c:72:3, col:10>
+      `-IntegerLiteral 0x7fbf4d03c018 <col:10> 'int' 0

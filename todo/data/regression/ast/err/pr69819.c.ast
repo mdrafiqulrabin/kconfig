@@ -1,0 +1,25 @@
+../Data/C2AST/pr69819.c:5:5: error: redefinition of 'foo' as different kind of symbol
+int foo[] = { 0 };  
+    ^
+../Data/C2AST/pr69819.c:4:6: note: previous definition is here
+void foo () { }
+     ^
+1 error generated.
+TranslationUnitDecl 0x7fd59f80a8e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd59f80ae60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd59f80ab80 '__int128'
+|-TypedefDecl 0x7fd59f80aed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd59f80aba0 'unsigned __int128'
+|-TypedefDecl 0x7fd59f80b1a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd59f80afb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd59f80af28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd59f80b240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd59f80b200 'char *'
+|   `-BuiltinType 0x7fd59f80a980 'char'
+|-TypedefDecl 0x7fd59f80b508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd59f80b4b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd59f80b320 'struct __va_list_tag'
+|     `-Record 0x7fd59f80b298 '__va_list_tag'
+|-FunctionDecl 0x7fd59f020a00 <../Data/C2AST/pr69819.c:4:1, col:15> col:6 foo 'void ()'
+| `-CompoundStmt 0x7fd59f020ae0 <col:13, col:15>
+`-VarDecl 0x7fd59f020b40 <line:5:1, col:9> col:5 invalid foo 'int []'

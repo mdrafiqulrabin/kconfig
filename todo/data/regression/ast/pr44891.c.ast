@@ -1,0 +1,54 @@
+TranslationUnitDecl 0x7fd69e8198e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fd69e81a560 <../Data/C2AST/pr44891.c:1:1, line:5:1> line:1:8 struct S definition
+| |-FieldDecl 0x7fd69f011238 <line:3:3, col:9> col:9 referenced f 'float'
+| `-FieldDecl 0x7fd69f011298 <line:4:3, col:8> col:8 referenced l 'long'
+|-VarDecl 0x7fd69f0112f8 <line:7:1, col:12> col:12 used gi 'int' extern
+|-VarDecl 0x7fd69f0113b0 <line:8:1, col:14> col:14 used gf 'float' extern
+`-FunctionDecl 0x7fd69f0114f8 <line:10:1, line:26:1> line:10:6 foo 'long (long)'
+  |-ParmVarDecl 0x7fd69f011428 <col:11, col:16> col:16 used p 'long'
+  `-CompoundStmt 0x7fd69f011d68 <line:11:1, line:26:1>
+    |-DeclStmt 0x7fd69f011650 <line:12:3, col:13>
+    | `-VarDecl 0x7fd69f0115f0 <col:3, col:12> col:12 used s 'struct S':'struct S'
+    |-DeclStmt 0x7fd69f011710 <line:13:3, col:12>
+    | `-VarDecl 0x7fd69f0116b0 <col:3, col:10> col:10 used pf 'float *'
+    |-BinaryOperator 0x7fd69f0117c8 <line:15:3, col:9> 'long' '='
+    | |-MemberExpr 0x7fd69f011750 <col:3, col:5> 'long' lvalue .l 0x7fd69f011298
+    | | `-DeclRefExpr 0x7fd69f011728 <col:3> 'struct S':'struct S' lvalue Var 0x7fd69f0115f0 's' 'struct S':'struct S'
+    | `-ImplicitCastExpr 0x7fd69f0117b0 <col:9> 'long' <LValueToRValue>
+    |   `-DeclRefExpr 0x7fd69f011788 <col:9> 'long' lvalue ParmVar 0x7fd69f011428 'p' 'long'
+    |-BinaryOperator 0x7fd69f0118e8 <line:17:3, col:11> 'float *' '='
+    | |-DeclRefExpr 0x7fd69f011840 <col:3> 'float *' lvalue Var 0x7fd69f0116b0 'pf' 'float *'
+    | `-UnaryOperator 0x7fd69f0118c8 <col:8, col:11> 'float *' prefix '&'
+    |   `-MemberExpr 0x7fd69f011890 <col:9, col:11> 'float' lvalue .f 0x7fd69f011238
+    |     `-DeclRefExpr 0x7fd69f011868 <col:9> 'struct S':'struct S' lvalue Var 0x7fd69f0115f0 's' 'struct S':'struct S'
+    |-UnaryOperator 0x7fd69f011938 <line:19:3, col:5> 'float *' postfix '++'
+    | `-DeclRefExpr 0x7fd69f011910 <col:3> 'float *' lvalue Var 0x7fd69f0116b0 'pf' 'float *'
+    |-UnaryOperator 0x7fd69f011980 <line:20:3, col:5> 'float *' postfix '--'
+    | `-DeclRefExpr 0x7fd69f011958 <col:3> 'float *' lvalue Var 0x7fd69f0116b0 'pf' 'float *'
+    |-BinaryOperator 0x7fd69f011ab8 <line:22:3, col:14> 'float' '='
+    | |-DeclRefExpr 0x7fd69f0119a0 <col:3> 'float' lvalue Var 0x7fd69f0113b0 'gf' 'float'
+    | `-ImplicitCastExpr 0x7fd69f011aa0 <col:8, col:14> 'float' <FloatingCast>
+    |   `-BinaryOperator 0x7fd69f011a78 <col:8, col:14> 'double' '+'
+    |     |-ImplicitCastExpr 0x7fd69f011a60 <col:8, col:9> 'double' <FloatingCast>
+    |     | `-ImplicitCastExpr 0x7fd69f011a48 <col:8, col:9> 'float' <LValueToRValue>
+    |     |   `-UnaryOperator 0x7fd69f011a08 <col:8, col:9> 'float' lvalue prefix '*'
+    |     |     `-ImplicitCastExpr 0x7fd69f0119f0 <col:9> 'float *' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x7fd69f0119c8 <col:9> 'float *' lvalue Var 0x7fd69f0116b0 'pf' 'float *'
+    |     `-FloatingLiteral 0x7fd69f011a28 <col:14> 'double' 3.300000e+00
+    |-BinaryOperator 0x7fd69f011c50 <line:23:3, col:23> 'int' '='
+    | |-DeclRefExpr 0x7fd69f011ae0 <col:3> 'int' lvalue Var 0x7fd69f0112f8 'gi' 'int'
+    | `-BinaryOperator 0x7fd69f011c28 <col:8, col:23> 'int' '+'
+    |   |-ImplicitCastExpr 0x7fd69f011c10 <col:8, col:19> 'int' <LValueToRValue>
+    |   | `-UnaryOperator 0x7fd69f011bd0 <col:8, col:19> 'int' lvalue prefix '*'
+    |   |   `-ParenExpr 0x7fd69f011bb0 <col:9, col:19> 'int *'
+    |   |     `-CStyleCastExpr 0x7fd69f011b88 <col:10, col:17> 'int *' <BitCast>
+    |   |       `-ImplicitCastExpr 0x7fd69f011b70 <col:17> 'float *' <LValueToRValue>
+    |   |         `-DeclRefExpr 0x7fd69f011b08 <col:17> 'float *' lvalue Var 0x7fd69f0116b0 'pf' 'float *'
+    |   `-IntegerLiteral 0x7fd69f011bf0 <col:23> 'int' 2
+    `-ReturnStmt 0x7fd69f011d50 <line:25:3, col:16>
+      `-BinaryOperator 0x7fd69f011d28 <col:10, col:16> 'long' '+'
+        |-ImplicitCastExpr 0x7fd69f011cf8 <col:10, col:12> 'long' <LValueToRValue>
+        | `-MemberExpr 0x7fd69f011ca0 <col:10, col:12> 'long' lvalue .l 0x7fd69f011298
+        |   `-DeclRefExpr 0x7fd69f011c78 <col:10> 'struct S':'struct S' lvalue Var 0x7fd69f0115f0 's' 'struct S':'struct S'
+        `-ImplicitCastExpr 0x7fd69f011d10 <col:16> 'long' <IntegralCast>
+          `-IntegerLiteral 0x7fd69f011cd8 <col:16> 'int' 6

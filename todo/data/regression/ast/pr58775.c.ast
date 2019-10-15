@@ -1,0 +1,142 @@
+TranslationUnitDecl 0x7fad9901bae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fad9981a420 <../Data/C2AST/pr58775.c:3:1, col:15> col:6 used bar 'void (void)'
+`-FunctionDecl 0x7fad9981a5e0 <line:5:1, line:26:1> line:6:1 foo 'void (char *)'
+  |-ParmVarDecl 0x7fad9981a518 <col:6, col:12> col:12 used x 'char *'
+  `-CompoundStmt 0x7fad9981bc40 <line:7:1, line:26:1>
+    |-DeclStmt 0x7fad9981a6f8 <line:8:3, col:9>
+    | `-VarDecl 0x7fad9981a698 <col:3, col:8> col:8 used a 'char'
+    |-DeclStmt 0x7fad9981acb8 <line:9:3, col:43>
+    | |-VarDecl 0x7fad9981a720 <col:3, col:9> col:9 used b '_Bool'
+    | |-VarDecl 0x7fad9981a790 <col:3, col:12> col:12 used c '_Bool'
+    | |-VarDecl 0x7fad9981a800 <col:3, col:15> col:15 used d '_Bool'
+    | |-VarDecl 0x7fad9981a870 <col:3, col:18> col:18 used e '_Bool'
+    | |-VarDecl 0x7fad9981a8e0 <col:3, col:21> col:21 used f '_Bool'
+    | |-VarDecl 0x7fad9981a950 <col:3, col:24> col:24 used g '_Bool'
+    | |-VarDecl 0x7fad9981a9c0 <col:3, col:27> col:27 used h '_Bool'
+    | |-VarDecl 0x7fad9981aa30 <col:3, col:30> col:30 used i '_Bool'
+    | |-VarDecl 0x7fad9981aaa0 <col:3, col:33> col:33 used j '_Bool'
+    | |-VarDecl 0x7fad9981ab10 <col:3, col:36> col:36 used k '_Bool'
+    | |-VarDecl 0x7fad9981ab80 <col:3, col:39> col:39 used l '_Bool'
+    | `-VarDecl 0x7fad9981abf0 <col:3, col:42> col:42 used m '_Bool'
+    |-BinaryOperator 0x7fad9981ad70 <line:11:3, col:8> 'char' '='
+    | |-DeclRefExpr 0x7fad9981acd0 <col:3> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    | `-ImplicitCastExpr 0x7fad9981ad58 <col:7, col:8> 'char' <LValueToRValue>
+    |   `-UnaryOperator 0x7fad9981ad38 <col:7, col:8> 'char' lvalue prefix '*'
+    |     `-ImplicitCastExpr 0x7fad9981ad20 <col:8> 'char *' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fad9981acf8 <col:8> 'char *' lvalue ParmVar 0x7fad9981a518 'x' 'char *'
+    |-BinaryOperator 0x7fad9981ae78 <line:12:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981ad98 <col:3> '_Bool' lvalue Var 0x7fad9981a720 'b' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981ae60 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981ae38 <col:7, col:12> 'int' '=='
+    |     |-ImplicitCastExpr 0x7fad9981ae20 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981ae08 <col:7> 'char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981adc0 <col:7> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    |     `-IntegerLiteral 0x7fad9981ade8 <col:12> 'int' 100
+    |-BinaryOperator 0x7fad9981af80 <line:13:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981aea0 <col:3> '_Bool' lvalue Var 0x7fad9981a790 'c' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981af68 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981af40 <col:7, col:12> 'int' '=='
+    |     |-ImplicitCastExpr 0x7fad9981af28 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981af10 <col:7> 'char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981aec8 <col:7> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    |     `-IntegerLiteral 0x7fad9981aef0 <col:12> 'int' 105
+    |-BinaryOperator 0x7fad9981b0c0 <line:14:3, col:11> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981afa8 <col:3> '_Bool' lvalue Var 0x7fad9981a800 'd' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b0a8 <col:7, col:11> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b080 <col:7, col:11> 'int' '|'
+    |     |-ImplicitCastExpr 0x7fad9981b038 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b020 <col:7> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981afd0 <col:7> '_Bool' lvalue Var 0x7fad9981a720 'b' '_Bool'
+    |     `-ImplicitCastExpr 0x7fad9981b068 <col:11> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fad9981b050 <col:11> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fad9981aff8 <col:11> '_Bool' lvalue Var 0x7fad9981a790 'c' '_Bool'
+    |-BinaryOperator 0x7fad9981b1c8 <line:15:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b0e8 <col:3> '_Bool' lvalue Var 0x7fad9981a870 'e' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b1b0 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b188 <col:7, col:12> 'int' '!='
+    |     |-ImplicitCastExpr 0x7fad9981b170 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b158 <col:7> 'char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b110 <col:7> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    |     `-IntegerLiteral 0x7fad9981b138 <col:12> 'int' 111
+    |-BinaryOperator 0x7fad9981b290 <line:16:3, col:8> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b1f0 <col:3> '_Bool' lvalue Var 0x7fad9981a8e0 'f' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b278 <col:7, col:8> '_Bool' <IntegralToBoolean>
+    |   `-UnaryOperator 0x7fad9981b258 <col:7, col:8> 'int' prefix '!'
+    |     `-ImplicitCastExpr 0x7fad9981b240 <col:8> '_Bool' <LValueToRValue>
+    |       `-DeclRefExpr 0x7fad9981b218 <col:8> '_Bool' lvalue Var 0x7fad9981a800 'd' '_Bool'
+    |-BinaryOperator 0x7fad9981b3d0 <line:17:3, col:11> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b2b8 <col:3> '_Bool' lvalue Var 0x7fad9981a950 'g' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b3b8 <col:7, col:11> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b390 <col:7, col:11> 'int' '&'
+    |     |-ImplicitCastExpr 0x7fad9981b348 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b330 <col:7> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b2e0 <col:7> '_Bool' lvalue Var 0x7fad9981a870 'e' '_Bool'
+    |     `-ImplicitCastExpr 0x7fad9981b378 <col:11> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fad9981b360 <col:11> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fad9981b308 <col:11> '_Bool' lvalue Var 0x7fad9981a8e0 'f' '_Bool'
+    |-BinaryOperator 0x7fad9981b4e0 <line:18:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b400 <col:3> '_Bool' lvalue Var 0x7fad9981a9c0 'h' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b4c8 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b4a0 <col:7, col:12> 'int' '!='
+    |     |-ImplicitCastExpr 0x7fad9981b488 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b470 <col:7> 'char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b428 <col:7> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    |     `-IntegerLiteral 0x7fad9981b450 <col:12> 'int' 117
+    |-BinaryOperator 0x7fad9981b620 <line:19:3, col:11> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b508 <col:3> '_Bool' lvalue Var 0x7fad9981aa30 'i' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b608 <col:7, col:11> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b5e0 <col:7, col:11> 'int' '&'
+    |     |-ImplicitCastExpr 0x7fad9981b598 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b580 <col:7> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b530 <col:7> '_Bool' lvalue Var 0x7fad9981a950 'g' '_Bool'
+    |     `-ImplicitCastExpr 0x7fad9981b5c8 <col:11> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fad9981b5b0 <col:11> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fad9981b558 <col:11> '_Bool' lvalue Var 0x7fad9981a9c0 'h' '_Bool'
+    |-BinaryOperator 0x7fad9981b728 <line:20:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b648 <col:3> '_Bool' lvalue Var 0x7fad9981aaa0 'j' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b710 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b6e8 <col:7, col:12> 'int' '!='
+    |     |-ImplicitCastExpr 0x7fad9981b6d0 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b6b8 <col:7> 'char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b670 <col:7> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    |     `-IntegerLiteral 0x7fad9981b698 <col:12> 'int' 120
+    |-BinaryOperator 0x7fad9981b868 <line:21:3, col:11> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b750 <col:3> '_Bool' lvalue Var 0x7fad9981ab10 'k' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b850 <col:7, col:11> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b828 <col:7, col:11> 'int' '&'
+    |     |-ImplicitCastExpr 0x7fad9981b7e0 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b7c8 <col:7> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b778 <col:7> '_Bool' lvalue Var 0x7fad9981aa30 'i' '_Bool'
+    |     `-ImplicitCastExpr 0x7fad9981b810 <col:11> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fad9981b7f8 <col:11> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fad9981b7a0 <col:11> '_Bool' lvalue Var 0x7fad9981aaa0 'j' '_Bool'
+    |-BinaryOperator 0x7fad9981b970 <line:22:3, col:12> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b890 <col:3> '_Bool' lvalue Var 0x7fad9981ab80 'l' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981b958 <col:7, col:12> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981b930 <col:7, col:12> 'int' '!='
+    |     |-ImplicitCastExpr 0x7fad9981b918 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981b900 <col:7> 'char' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b8b8 <col:7> 'char' lvalue Var 0x7fad9981a698 'a' 'char'
+    |     `-IntegerLiteral 0x7fad9981b8e0 <col:12> 'int' 88
+    |-BinaryOperator 0x7fad9981bab0 <line:23:3, col:11> '_Bool' '='
+    | |-DeclRefExpr 0x7fad9981b998 <col:3> '_Bool' lvalue Var 0x7fad9981abf0 'm' '_Bool'
+    | `-ImplicitCastExpr 0x7fad9981ba98 <col:7, col:11> '_Bool' <IntegralToBoolean>
+    |   `-BinaryOperator 0x7fad9981ba70 <col:7, col:11> 'int' '&'
+    |     |-ImplicitCastExpr 0x7fad9981ba28 <col:7> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x7fad9981ba10 <col:7> '_Bool' <LValueToRValue>
+    |     |   `-DeclRefExpr 0x7fad9981b9c0 <col:7> '_Bool' lvalue Var 0x7fad9981ab10 'k' '_Bool'
+    |     `-ImplicitCastExpr 0x7fad9981ba58 <col:11> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x7fad9981ba40 <col:11> '_Bool' <LValueToRValue>
+    |         `-DeclRefExpr 0x7fad9981b9e8 <col:11> '_Bool' lvalue Var 0x7fad9981ab80 'l' '_Bool'
+    `-IfStmt 0x7fad9981bc08 <line:24:3, line:25:10>
+      |-<<<NULL>>>
+      |-<<<NULL>>>
+      |-BinaryOperator 0x7fad9981bb50 <line:24:7, col:12> 'int' '=='
+      | |-ImplicitCastExpr 0x7fad9981bb38 <col:7> 'int' <IntegralCast>
+      | | `-ImplicitCastExpr 0x7fad9981bb20 <col:7> '_Bool' <LValueToRValue>
+      | |   `-DeclRefExpr 0x7fad9981bad8 <col:7> '_Bool' lvalue Var 0x7fad9981abf0 'm' '_Bool'
+      | `-IntegerLiteral 0x7fad9981bb00 <col:12> 'int' 0
+      |-CallExpr 0x7fad9981bbe0 <line:25:5, col:10> 'void'
+      | `-ImplicitCastExpr 0x7fad9981bbc8 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+      |   `-DeclRefExpr 0x7fad9981bb78 <col:5> 'void (void)' Function 0x7fad9981a420 'bar' 'void (void)'
+      `-<<<NULL>>>

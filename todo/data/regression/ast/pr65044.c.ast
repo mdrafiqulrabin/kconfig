@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7ff1f78174e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7ff1f7029200 <../Data/C2AST/pr65044.c:5:1, col:14> col:12 used x 'int []' extern
+`-FunctionDecl 0x7ff1f70292e8 <line:7:1, line:11:1> line:8:1 foo 'void ()'
+  `-CompoundStmt 0x7ff1f7029480 <line:9:1, line:11:1>
+    `-BinaryOperator 0x7ff1f7029458 <line:10:3, col:10> 'int' '='
+      |-ArraySubscriptExpr 0x7ff1f7029410 <col:3, col:6> 'int' lvalue
+      | |-ImplicitCastExpr 0x7ff1f70293f8 <col:3> 'int *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7ff1f7029388 <col:3> 'int []' lvalue Var 0x7ff1f7029200 'x' 'int []'
+      | `-IntegerLiteral 0x7ff1f70293b0 <col:5> 'int' 0
+      `-IntegerLiteral 0x7ff1f7029438 <col:10> 'int' 0

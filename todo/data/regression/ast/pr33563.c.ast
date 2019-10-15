@@ -1,0 +1,42 @@
+TranslationUnitDecl 0x7fc6858080e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fc685808d60 <../Data/C2AST/pr33563.c:3:1, line:6:1> line:3:8 struct T definition
+| |-FieldDecl 0x7fc68502be38 <line:5:3, col:7> col:7 referenced a 'int'
+| `-FieldDecl 0x7fc68502be98 <col:3, col:10> col:10 referenced b 'int'
+|-VarDecl 0x7fc68502bf30 <line:3:1, line:6:3> col:3 used t 'struct T':'struct T'
+|-VarDecl 0x7fc68502bff0 <line:3:1, line:6:6> col:6 used q 'struct T':'struct T'
+|-FunctionDecl 0x7fc68502c138 <line:8:1, line:21:1> line:8:5 main 'int (void)'
+| `-CompoundStmt 0x7fc68502c8b8 <line:9:1, line:21:1>
+|   |-DeclStmt 0x7fc68502c2f0 <line:10:3, col:14>
+|   | `-VarDecl 0x7fc68502c290 <col:3, col:13> col:13 p 'struct T *'
+|   |-BinaryOperator 0x7fc68502c388 <line:12:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fc68502c330 <col:3, col:5> 'int' lvalue .a 0x7fc68502be38
+|   | | `-DeclRefExpr 0x7fc68502c308 <col:3> 'struct T':'struct T' lvalue Var 0x7fc68502bf30 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fc68502c368 <col:9> 'int' 1
+|   |-BinaryOperator 0x7fc68502c480 <line:13:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fc68502c428 <col:3, col:5> 'int' lvalue .b 0x7fc68502be98
+|   | | `-DeclRefExpr 0x7fc68502c400 <col:3> 'struct T':'struct T' lvalue Var 0x7fc68502bf30 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fc68502c460 <col:9> 'int' 2
+|   |-BinaryOperator 0x7fc68502c510 <line:14:3, col:7> 'struct T':'struct T' '='
+|   | |-DeclRefExpr 0x7fc68502c4a8 <col:3> 'struct T':'struct T' lvalue Var 0x7fc68502bff0 'q' 'struct T':'struct T'
+|   | `-ImplicitCastExpr 0x7fc68502c4f8 <col:7> 'struct T':'struct T' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fc68502c4d0 <col:7> 'struct T':'struct T' lvalue Var 0x7fc68502bf30 't' 'struct T':'struct T'
+|   |-BinaryOperator 0x7fc68502c5b8 <line:15:3, col:9> 'int' '='
+|   | |-MemberExpr 0x7fc68502c560 <col:3, col:5> 'int' lvalue .a 0x7fc68502be38
+|   | | `-DeclRefExpr 0x7fc68502c538 <col:3> 'struct T':'struct T' lvalue Var 0x7fc68502bf30 't' 'struct T':'struct T'
+|   | `-IntegerLiteral 0x7fc68502c598 <col:9> 'int' 3
+|   |-IfStmt 0x7fc68502c848 <line:17:3, line:18:22>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fc68502c678 <line:17:7, col:14> 'int' '!='
+|   | | |-ImplicitCastExpr 0x7fc68502c660 <col:7, col:9> 'int' <LValueToRValue>
+|   | | | `-MemberExpr 0x7fc68502c608 <col:7, col:9> 'int' lvalue .a 0x7fc68502be38
+|   | | |   `-DeclRefExpr 0x7fc68502c5e0 <col:7> 'struct T':'struct T' lvalue Var 0x7fc68502bff0 'q' 'struct T':'struct T'
+|   | | `-IntegerLiteral 0x7fc68502c640 <col:14> 'int' 1
+|   | |-CallExpr 0x7fc68502c820 <line:18:5, col:22> 'void'
+|   | | `-ImplicitCastExpr 0x7fc68502c808 <col:5> 'void (*)(void) __attribute__((noreturn))' <BuiltinFnToFnPtr>
+|   | |   `-DeclRefExpr 0x7fc68502c7b8 <col:5> '<builtin fn type>' Function 0x7fc68502c6d0 '__builtin_abort' 'void (void) __attribute__((noreturn))'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fc68502c8a0 <line:20:3, col:10>
+|     `-IntegerLiteral 0x7fc68502c880 <col:10> 'int' 0
+`-FunctionDecl 0x7fc68502c6d0 <line:18:5> col:5 implicit used __builtin_abort 'void (void) __attribute__((noreturn))' extern
+  `-NoThrowAttr 0x7fc68502c770 <col:5> Implicit

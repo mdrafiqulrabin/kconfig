@@ -1,0 +1,17 @@
+TranslationUnitDecl 0x7fc69302bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc693067868 <../Data/C2AST/pr56355-1.c:4:1, line:8:1> line:5:1 f 'int (int)'
+| |-ParmVarDecl 0x7fc69302c978 <col:4, col:8> col:8 used i 'int'
+| `-CompoundStmt 0x7fc693067c08 <line:6:1, line:8:1>
+|   `-ReturnStmt 0x7fc693067bf0 <line:7:3, col:30>
+|     `-CallExpr 0x7fc693067bc0 <col:10, col:30> 'int'
+|       |-ImplicitCastExpr 0x7fc693067ba8 <col:10> 'int (*)(int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fc693067ab0 <col:10> '<builtin fn type>' Function 0x7fc693067950 '__builtin_abs' 'int (int)'
+|       `-BinaryOperator 0x7fc693067b58 <col:25, col:29> 'int' '*'
+|         |-ImplicitCastExpr 0x7fc693067b28 <col:25> 'int' <LValueToRValue>
+|         | `-DeclRefExpr 0x7fc693067ad8 <col:25> 'int' lvalue ParmVar 0x7fc69302c978 'i' 'int'
+|         `-ImplicitCastExpr 0x7fc693067b40 <col:29> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fc693067b00 <col:29> 'int' lvalue ParmVar 0x7fc69302c978 'i' 'int'
+`-FunctionDecl 0x7fc693067950 <col:10> col:10 implicit used __builtin_abs 'int (int)' extern
+  |-ParmVarDecl 0x7fc6930679f0 <<invalid sloc>> <invalid sloc> 'int'
+  |-NoThrowAttr 0x7fc693067a58 <col:10> Implicit
+  `-ConstAttr 0x7fc693067aa0 <col:10> Implicit

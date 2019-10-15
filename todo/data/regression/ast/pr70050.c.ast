@@ -1,0 +1,13 @@
+TranslationUnitDecl 0x7ff49e82bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff49f03e400 <../Data/C2AST/pr70050.c:5:1, col:13> col:13 referenced v8si '__attribute__((__vector_size__(8 * sizeof(int)))) int'
+| `-VectorType 0x7ff49e82c980 '__attribute__((__vector_size__(8 * sizeof(int)))) int' 8
+|   `-BuiltinType 0x7ff49e82bde0 'int'
+`-FunctionDecl 0x7ff49f03e590 <line:7:1, line:11:1> line:8:1 foo 'v8si (v8si)'
+  |-ParmVarDecl 0x7ff49f03e490 <col:6, col:11> col:11 used v 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+  `-CompoundStmt 0x7ff49f03e750 <line:9:1, line:11:1>
+    `-ReturnStmt 0x7ff49f03e738 <line:10:3, col:16>
+      `-CompoundAssignOperator 0x7ff49f03e700 <col:10, col:16> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' '%=' ComputeLHSTy='v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' ComputeResultTy='v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+        |-DeclRefExpr 0x7ff49f03e678 <col:10> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7ff49f03e490 'v' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'
+        `-UnaryOperator 0x7ff49f03e6e0 <col:15, col:16> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' prefix '-'
+          `-ImplicitCastExpr 0x7ff49f03e6c8 <col:16> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' <LValueToRValue>
+            `-DeclRefExpr 0x7ff49f03e6a0 <col:16> 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int' lvalue ParmVar 0x7ff49f03e490 'v' 'v8si':'__attribute__((__vector_size__(8 * sizeof(int)))) int'

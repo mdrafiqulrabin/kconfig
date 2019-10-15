@@ -1,0 +1,23 @@
+TranslationUnitDecl 0x7fdd98825ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fdd98826978 <../Data/C2AST/pr82618.c:6:1, col:27> col:27 referenced U 'unsigned __int128'
+| `-BuiltinType 0x7fdd98825fa0 'unsigned __int128'
+|-TypedefDecl 0x7fdd99014200 <line:7:1, col:28> col:28 referenced H 'unsigned long long'
+| `-BuiltinType 0x7fdd98825ec0 'unsigned long long'
+`-FunctionDecl 0x7fdd99014430 <line:13:1, line:16:1> line:13:3 f0 'H (U, U)'
+  |-ParmVarDecl 0x7fdd990142b0 <col:7, col:9> col:9 used x 'U':'unsigned __int128'
+  |-ParmVarDecl 0x7fdd99014320 <col:12, col:14> col:14 used y 'U':'unsigned __int128'
+  `-CompoundStmt 0x7fdd990146f0 <line:14:1, line:16:1>
+    `-ReturnStmt 0x7fdd990146d8 <line:15:3, col:47>
+      `-ImplicitCastExpr 0x7fdd990146c0 <col:10, col:47> 'H':'unsigned long long' <IntegralCast>
+        `-BinaryOperator 0x7fdd99014698 <col:10, col:47> 'unsigned __int128' '>>'
+          |-ParenExpr 0x7fdd990145c8 <col:10, col:16> 'unsigned __int128'
+          | `-BinaryOperator 0x7fdd990145a0 <col:11, col:15> 'unsigned __int128' '-'
+          |   |-ImplicitCastExpr 0x7fdd99014570 <col:11> 'U':'unsigned __int128' <LValueToRValue>
+          |   | `-DeclRefExpr 0x7fdd99014520 <col:11> 'U':'unsigned __int128' lvalue ParmVar 0x7fdd990142b0 'x' 'U':'unsigned __int128'
+          |   `-ImplicitCastExpr 0x7fdd99014588 <col:15> 'U':'unsigned __int128' <LValueToRValue>
+          |     `-DeclRefExpr 0x7fdd99014548 <col:15> 'U':'unsigned __int128' lvalue ParmVar 0x7fdd99014320 'y' 'U':'unsigned __int128'
+          `-ParenExpr 0x7fdd99014678 <col:21, col:47> 'unsigned long'
+            `-BinaryOperator 0x7fdd99014650 <<built-in>:35:22, ../Data/C2AST/pr82618.c:15:46> 'unsigned long' '*'
+              |-ImplicitCastExpr 0x7fdd99014638 <<built-in>:35:22> 'unsigned long' <IntegralCast>
+              | `-IntegerLiteral 0x7fdd990145e8 <col:22> 'int' 8
+              `-UnaryExprOrTypeTraitExpr 0x7fdd99014618 <../Data/C2AST/pr82618.c:15:37, col:46> 'unsigned long' sizeof 'H':'unsigned long long'

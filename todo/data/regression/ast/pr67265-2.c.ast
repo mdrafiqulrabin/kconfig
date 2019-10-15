@@ -1,0 +1,14 @@
+TranslationUnitDecl 0x7ffa1382b8e8 <<invalid sloc>> <invalid sloc>
+`-FunctionDecl 0x7ffa14014a60 <../Data/C2AST/pr67265-2.c:5:1, line:10:1> line:5:6 foo 'void (int)'
+  |-ParmVarDecl 0x7ffa1382c578 <col:11, col:15> col:15 used n 'int'
+  `-CompoundStmt 0x7ffa14014df0 <line:6:1, line:10:1>
+    |-DeclStmt 0x7ffa14014ca8 <line:7:3, col:31>
+    | `-VarDecl 0x7ffa14014c48 <col:3, col:30> col:17 used arr 'volatile char [65536]'
+    `-BinaryOperator 0x7ffa14014dc8 <line:9:3, col:12> 'char' '='
+      |-ArraySubscriptExpr 0x7ffa14014d68 <col:3, col:8> 'volatile char' lvalue
+      | |-ImplicitCastExpr 0x7ffa14014d38 <col:3> 'volatile char *' <ArrayToPointerDecay>
+      | | `-DeclRefExpr 0x7ffa14014cc0 <col:3> 'volatile char [65536]' lvalue Var 0x7ffa14014c48 'arr' 'volatile char [65536]'
+      | `-ImplicitCastExpr 0x7ffa14014d50 <col:7> 'int' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ffa14014ce8 <col:7> 'int' lvalue ParmVar 0x7ffa1382c578 'n' 'int'
+      `-ImplicitCastExpr 0x7ffa14014db0 <col:12> 'char' <IntegralCast>
+        `-IntegerLiteral 0x7ffa14014d90 <col:12> 'int' 1

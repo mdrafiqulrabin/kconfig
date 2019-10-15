@@ -1,0 +1,27 @@
+TranslationUnitDecl 0x7fbdb7827ae8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fbdb7004c00 <../Data/C2AST/pr61599-2.c:7:1, col:15> col:13 used a 'char []' extern
+|-VarDecl 0x7fbdb7004cc0 <line:8:1, col:15> col:13 used b 'char []' extern
+|-VarDecl 0x7fbdb7004d40 <line:9:1, col:15> col:13 used c 'char []' extern
+`-FunctionDecl 0x7fbdb7004df0 <line:11:1, line:14:1> line:11:5 bar 'int ()'
+  `-CompoundStmt 0x7fbdb7005120 <line:12:1, line:14:1>
+    `-ReturnStmt 0x7fbdb7005108 <line:13:3, col:30>
+      `-BinaryOperator 0x7fbdb70050e0 <col:10, col:30> 'int' '+'
+        |-BinaryOperator 0x7fbdb7005000 <col:10, col:21> 'int' '+'
+        | |-ImplicitCastExpr 0x7fbdb7004fb8 <col:10, col:13> 'int' <IntegralCast>
+        | | `-ImplicitCastExpr 0x7fbdb7004fa0 <col:10, col:13> 'char' <LValueToRValue>
+        | |   `-ArraySubscriptExpr 0x7fbdb7004ef0 <col:10, col:13> 'char' lvalue
+        | |     |-ImplicitCastExpr 0x7fbdb7004ed8 <col:10> 'char *' <ArrayToPointerDecay>
+        | |     | `-DeclRefExpr 0x7fbdb7004e90 <col:10> 'char []' lvalue Var 0x7fbdb7004c00 'a' 'char []'
+        | |     `-IntegerLiteral 0x7fbdb7004eb8 <col:12> 'int' 2
+        | `-ImplicitCastExpr 0x7fbdb7004fe8 <col:17, col:21> 'int' <IntegralCast>
+        |   `-ImplicitCastExpr 0x7fbdb7004fd0 <col:17, col:21> 'char' <LValueToRValue>
+        |     `-ArraySubscriptExpr 0x7fbdb7004f78 <col:17, col:21> 'char' lvalue
+        |       |-ImplicitCastExpr 0x7fbdb7004f60 <col:17> 'char *' <ArrayToPointerDecay>
+        |       | `-DeclRefExpr 0x7fbdb7004f18 <col:17> 'char []' lvalue Var 0x7fbdb7004cc0 'b' 'char []'
+        |       `-IntegerLiteral 0x7fbdb7004f40 <col:19> 'int' 16
+        `-ImplicitCastExpr 0x7fbdb70050c8 <col:25, col:30> 'int' <IntegralCast>
+          `-ImplicitCastExpr 0x7fbdb70050b0 <col:25, col:30> 'char' <LValueToRValue>
+            `-ArraySubscriptExpr 0x7fbdb7005088 <col:25, col:30> 'char' lvalue
+              |-ImplicitCastExpr 0x7fbdb7005070 <col:25> 'char *' <ArrayToPointerDecay>
+              | `-DeclRefExpr 0x7fbdb7005028 <col:25> 'char []' lvalue Var 0x7fbdb7004d40 'c' 'char []'
+              `-IntegerLiteral 0x7fbdb7005050 <col:27> 'int' 256

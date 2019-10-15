@@ -1,0 +1,18 @@
+TranslationUnitDecl 0x7fade28294e8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7fade282a178 <../Data/C2AST/pr47391.c:5:1, col:24> col:20 used v 'const volatile int' cinit
+| `-IntegerLiteral 0x7fade3814240 <col:24> 'int' 1
+|-VarDecl 0x7fade3814278 <line:6:1, col:9> col:5 used i 'int' cinit
+| `-IntegerLiteral 0x7fade38142d8 <col:9> 'int' 0
+|-FunctionDecl 0x7fade38143c0 <line:8:1, line:12:1> line:9:1 used foo 'void (void)'
+| `-CompoundStmt 0x7fade38144f0 <line:10:1, line:12:1>
+|   `-BinaryOperator 0x7fade38144c8 <line:11:3, col:7> 'int' '='
+|     |-DeclRefExpr 0x7fade3814460 <col:3> 'int' lvalue Var 0x7fade3814278 'i' 'int'
+|     `-ImplicitCastExpr 0x7fade38144b0 <col:7> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x7fade3814488 <col:7> 'const volatile int' lvalue Var 0x7fade282a178 'v' 'const volatile int'
+`-FunctionDecl 0x7fade38145d8 <line:14:1, line:19:1> line:15:1 main 'int (void)'
+  `-CompoundStmt 0x7fade3814770 <line:16:1, line:19:1>
+    |-CallExpr 0x7fade3814710 <line:17:3, col:8> 'void'
+    | `-ImplicitCastExpr 0x7fade38146f8 <col:3> 'void (*)(void)' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x7fade38146a8 <col:3> 'void (void)' Function 0x7fade38143c0 'foo' 'void (void)'
+    `-ReturnStmt 0x7fade3814758 <line:18:3, col:10>
+      `-IntegerLiteral 0x7fade3814738 <col:10> 'int' 0

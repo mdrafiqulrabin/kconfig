@@ -1,0 +1,63 @@
+TranslationUnitDecl 0x7fa5a702b2e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa5a7814200 <../Data/C2AST/pragma-push_macro-1.c:8:1, line:26:1> line:8:5 main 'int ()'
+| `-CompoundStmt 0x7fa5a7814d78 <line:9:1, line:26:1>
+|   |-IfStmt 0x7fa5a7814858 <line:10:3, line:11:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa5a78146c8 <line:10:7, col:51> 'int' '!='
+|   | | |-CallExpr 0x7fa5a7814610 <col:7, col:46> 'int'
+|   | | | |-ImplicitCastExpr 0x7fa5a78145f8 <col:7> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fa5a78144d8 <col:7> '<builtin fn type>' Function 0x7fa5a7814320 '__builtin_strcmp' 'int (const char *, const char *)'
+|   | | | |-ImplicitCastExpr 0x7fa5a7814660 <line:5:16, line:6:16> 'const char *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7fa5a7814648 <line:5:16, line:6:16> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7fa5a7814538 <line:5:16, line:6:16> 'char [7]' lvalue "ABCDEF"
+|   | | | `-ImplicitCastExpr 0x7fa5a7814690 <line:10:38> 'const char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fa5a7814678 <col:38> 'char *' <ArrayToPointerDecay>
+|   | | |     `-StringLiteral 0x7fa5a7814570 <col:38> 'char [7]' lvalue "ABCDEF"
+|   | | `-IntegerLiteral 0x7fa5a78146a8 <col:51> 'int' 0
+|   | |-CallExpr 0x7fa5a7814830 <line:11:5, col:17> 'int'
+|   | | `-ImplicitCastExpr 0x7fa5a7814818 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa5a78147c8 <col:5> 'int ()' Function 0x7fa5a7814718 'link_error' 'int ()'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fa5a7814ab0 <line:17:3, line:18:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa5a7814a20 <line:17:7, col:51> 'int' '!='
+|   | | |-CallExpr 0x7fa5a7814968 <col:7, col:46> 'int'
+|   | | | |-ImplicitCastExpr 0x7fa5a7814950 <col:7> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fa5a7814890 <col:7> '<builtin fn type>' Function 0x7fa5a7814320 '__builtin_strcmp' 'int (const char *, const char *)'
+|   | | | |-ImplicitCastExpr 0x7fa5a78149b8 <line:15:16, line:6:16> 'const char *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7fa5a78149a0 <line:15:16, line:6:16> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7fa5a78148b8 <line:15:16, line:6:16> 'char [7]' lvalue "XYZDEF"
+|   | | | `-ImplicitCastExpr 0x7fa5a78149e8 <line:17:38> 'const char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fa5a78149d0 <col:38> 'char *' <ArrayToPointerDecay>
+|   | | |     `-StringLiteral 0x7fa5a78148f0 <col:38> 'char [7]' lvalue "XYZDEF"
+|   | | `-IntegerLiteral 0x7fa5a7814a00 <col:51> 'int' 0
+|   | |-CallExpr 0x7fa5a7814a88 <line:18:5, col:17> 'int'
+|   | | `-ImplicitCastExpr 0x7fa5a7814a70 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa5a7814a48 <col:5> 'int ()' Function 0x7fa5a7814718 'link_error' 'int ()'
+|   | `-<<<NULL>>>
+|   |-IfStmt 0x7fa5a7814d08 <line:22:3, line:23:17>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x7fa5a7814c78 <line:22:7, col:51> 'int' '!='
+|   | | |-CallExpr 0x7fa5a7814bc0 <col:7, col:46> 'int'
+|   | | | |-ImplicitCastExpr 0x7fa5a7814ba8 <col:7> 'int (*)(const char *, const char *)' <BuiltinFnToFnPtr>
+|   | | | | `-DeclRefExpr 0x7fa5a7814ae8 <col:7> '<builtin fn type>' Function 0x7fa5a7814320 '__builtin_strcmp' 'int (const char *, const char *)'
+|   | | | |-ImplicitCastExpr 0x7fa5a7814c10 <line:5:16, line:6:16> 'const char *' <BitCast>
+|   | | | | `-ImplicitCastExpr 0x7fa5a7814bf8 <line:5:16, line:6:16> 'char *' <ArrayToPointerDecay>
+|   | | | |   `-StringLiteral 0x7fa5a7814b10 <line:5:16, line:6:16> 'char [7]' lvalue "ABCDEF"
+|   | | | `-ImplicitCastExpr 0x7fa5a7814c40 <line:22:38> 'const char *' <BitCast>
+|   | | |   `-ImplicitCastExpr 0x7fa5a7814c28 <col:38> 'char *' <ArrayToPointerDecay>
+|   | | |     `-StringLiteral 0x7fa5a7814b48 <col:38> 'char [7]' lvalue "ABCDEF"
+|   | | `-IntegerLiteral 0x7fa5a7814c58 <col:51> 'int' 0
+|   | |-CallExpr 0x7fa5a7814ce0 <line:23:5, col:17> 'int'
+|   | | `-ImplicitCastExpr 0x7fa5a7814cc8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | |   `-DeclRefExpr 0x7fa5a7814ca0 <col:5> 'int ()' Function 0x7fa5a7814718 'link_error' 'int ()'
+|   | `-<<<NULL>>>
+|   `-ReturnStmt 0x7fa5a7814d60 <line:25:3, col:10>
+|     `-IntegerLiteral 0x7fa5a7814d40 <col:10> 'int' 0
+`-FunctionDecl 0x7fa5a7814320 <line:10:7> col:7 implicit used __builtin_strcmp 'int (const char *, const char *)' extern
+  |-ParmVarDecl 0x7fa5a78143c0 <<invalid sloc>> <invalid sloc> 'const char *'
+  |-ParmVarDecl 0x7fa5a7814420 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-NoThrowAttr 0x7fa5a7814490 <col:7> Implicit

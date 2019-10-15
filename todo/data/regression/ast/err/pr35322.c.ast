@@ -1,0 +1,22 @@
+../Data/C2AST/pr35322.c:4:1: error: expected "FILENAME" or <FILENAME>
+_Pragma("GCC dependency")  
+^
+<scratch space>:2:16: note: expanded from here
+ GCC dependency
+               ^
+1 error generated.
+TranslationUnitDecl 0x7fe25a029ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fe25a02a260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fe25a029f80 '__int128'
+|-TypedefDecl 0x7fe25a02a2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fe25a029fa0 'unsigned __int128'
+|-TypedefDecl 0x7fe25a02a5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fe25a02a3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fe25a02a328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fe25a02a640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fe25a02a600 'char *'
+|   `-BuiltinType 0x7fe25a029d80 'char'
+`-TypedefDecl 0x7fe25a02a908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+  `-ConstantArrayType 0x7fe25a02a8b0 'struct __va_list_tag [1]' 1 
+    `-RecordType 0x7fe25a02a720 'struct __va_list_tag'
+      `-Record 0x7fe25a02a698 '__va_list_tag'

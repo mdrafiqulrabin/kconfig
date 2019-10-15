@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7ffe5b8174e8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7ffe5b859060 <../Data/C2AST/pr48742.c:3:1, col:14> col:6 used baz 'void (int)'
+| `-ParmVarDecl 0x7ffe5b818178 <col:11> col:14 'int'
+|-FunctionDecl 0x7ffe5b859218 <line:5:1, line:9:1> line:6:1 foo 'int (void)'
+| `-CompoundStmt 0x7ffe5b859380 <line:7:1, line:9:1>
+|   `-ReturnStmt 0x7ffe5b859368 <line:8:3, col:18>
+|     `-BinaryOperator 0x7ffe5b859340 <col:10, col:18> 'int' '>'
+|       |-BinaryOperator 0x7ffe5b8592f8 <col:10, col:14> 'int' '/'
+|       | |-IntegerLiteral 0x7ffe5b8592b8 <col:10> 'int' 1
+|       | `-IntegerLiteral 0x7ffe5b8592d8 <col:14> 'int' 0
+|       `-IntegerLiteral 0x7ffe5b859320 <col:18> 'int' 0
+`-FunctionDecl 0x7ffe5b859460 <line:11:1, line:15:1> line:12:1 bar 'void (void)'
+  `-CompoundStmt 0x7ffe5b859790 <line:13:1, line:15:1>
+    `-CallExpr 0x7ffe5b859760 <line:14:3, col:38> 'void'
+      |-ImplicitCastExpr 0x7ffe5b859748 <col:3> 'void (*)(int)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7ffe5b859500 <col:3> 'void (int)' Function 0x7ffe5b859060 'baz' 'void (int)'
+      `-BinaryOperator 0x7ffe5b8596f0 <col:8, col:37> 'int' '<='
+        |-IntegerLiteral 0x7ffe5b859528 <col:8> 'int' 1
+        `-BinaryOperator 0x7ffe5b8596c8 <col:13, col:37> 'int' '%'
+          |-IntegerLiteral 0x7ffe5b859548 <col:13> 'int' 2
+          `-ParenExpr 0x7ffe5b8596a8 <col:17, col:37> 'int'
+            `-BinaryOperator 0x7ffe5b859680 <col:18, col:36> 'int' '=='
+              |-BinaryOperator 0x7ffe5b859638 <col:18, col:31> 'int' '>'
+              | |-BinaryOperator 0x7ffe5b8595a8 <col:18, col:23> 'int' '>>'
+              | | |-IntegerLiteral 0x7ffe5b859568 <col:18> 'int' 3
+              | | `-IntegerLiteral 0x7ffe5b859588 <col:23> 'int' 1
+              | `-BinaryOperator 0x7ffe5b859610 <col:27, col:31> 'int' '/'
+              |   |-IntegerLiteral 0x7ffe5b8595d0 <col:27> 'int' 5
+              |   `-IntegerLiteral 0x7ffe5b8595f0 <col:31> 'int' 6
+              `-IntegerLiteral 0x7ffe5b859660 <col:36> 'int' 3

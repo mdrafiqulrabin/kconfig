@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x7fa29a02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fa29a0d9b50 <../Data/C2AST/pr84212_0.c:5:1, line:8:1> line:5:6 clear 'void (char *, unsigned int)'
+| |-ParmVarDecl 0x7fa29a0d9a00 <col:13, col:19> col:19 used p 'char *'
+| |-ParmVarDecl 0x7fa29a0d9a78 <col:22, col:31> col:31 used n 'unsigned int'
+| `-CompoundStmt 0x7fa29a0da3b8 <line:6:1, line:8:1>
+|   `-CallExpr 0x7fa29a0da310 </usr/include/secure/_string.h:76:3, col:67> 'void *'
+|     |-ImplicitCastExpr 0x7fa29a0da2f8 <col:3> 'void *(*)(void *, int, unsigned long, unsigned long)' <BuiltinFnToFnPtr>
+|     | `-DeclRefExpr 0x7fa29a0d9ed8 <col:3> '<builtin fn type>' Function 0x7fa29a0d9c50 '__builtin___memset_chk' 'void *(void *, int, unsigned long, unsigned long)'
+|     |-ImplicitCastExpr 0x7fa29a0da370 <../Data/C2AST/pr84212_0.c:7:11> 'void *' <BitCast>
+|     | `-ImplicitCastExpr 0x7fa29a0da358 <col:11> 'char *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa29a0d9f00 <col:11> 'char *' lvalue ParmVar 0x7fa29a0d9a00 'p' 'char *'
+|     |-IntegerLiteral 0x7fa29a0d9f28 <col:14> 'int' 0
+|     |-ImplicitCastExpr 0x7fa29a0da3a0 <col:17> 'unsigned long' <IntegralCast>
+|     | `-ImplicitCastExpr 0x7fa29a0da388 <col:17> 'unsigned int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fa29a0d9f48 <col:17> 'unsigned int' lvalue ParmVar 0x7fa29a0d9a78 'n' 'unsigned int'
+|     `-CallExpr 0x7fa29a0da230 </usr/include/secure/_common.h:38:32, col:64> 'unsigned long'
+|       |-ImplicitCastExpr 0x7fa29a0da218 <col:32> 'unsigned long (*)(const void *, int)' <BuiltinFnToFnPtr>
+|       | `-DeclRefExpr 0x7fa29a0da168 <col:32> '<builtin fn type>' Function 0x7fa29a0d9fb0 '__builtin_object_size' 'unsigned long (const void *, int)'
+|       |-ImplicitCastExpr 0x7fa29a0da280 <../Data/C2AST/pr84212_0.c:7:11> 'const void *' <BitCast>
+|       | `-ImplicitCastExpr 0x7fa29a0da268 <col:11> 'char *' <LValueToRValue>
+|       |   `-DeclRefExpr 0x7fa29a0da190 <col:11> 'char *' lvalue ParmVar 0x7fa29a0d9a00 'p' 'char *'
+|       `-IntegerLiteral 0x7fa29a0da1b8 </usr/include/secure/_common.h:38:63> 'int' 0
+|-FunctionDecl 0x7fa29a0d9c50 </usr/include/secure/_string.h:76:3> col:3 implicit used __builtin___memset_chk 'void *(void *, int, unsigned long, unsigned long)' extern
+| |-ParmVarDecl 0x7fa29a0d9cf0 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x7fa29a0d9d50 <<invalid sloc>> <invalid sloc> 'int'
+| |-ParmVarDecl 0x7fa29a0d9db0 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| |-ParmVarDecl 0x7fa29a0d9e10 <<invalid sloc>> <invalid sloc> 'unsigned long'
+| `-NoThrowAttr 0x7fa29a0d9e90 <col:3> Implicit
+`-FunctionDecl 0x7fa29a0d9fb0 </usr/include/secure/_common.h:38:32> col:32 implicit used __builtin_object_size 'unsigned long (const void *, int)' extern
+  |-ParmVarDecl 0x7fa29a0da050 <<invalid sloc>> <invalid sloc> 'const void *'
+  |-ParmVarDecl 0x7fa29a0da0b0 <<invalid sloc>> <invalid sloc> 'int'
+  `-NoThrowAttr 0x7fa29a0da120 <col:32> Implicit

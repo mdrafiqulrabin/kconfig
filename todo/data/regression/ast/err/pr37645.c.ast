@@ -1,0 +1,25 @@
+../Data/C2AST/pr37645.c:4:30: error: '__weakref__' attribute only applies to variables and functions
+typedef int T __attribute__((__weakref__ ("U")));        
+                             ^
+1 error generated.
+TranslationUnitDecl 0x7fd9470128e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd947012e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd947012b80 '__int128'
+|-TypedefDecl 0x7fd947012ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd947012ba0 'unsigned __int128'
+|-TypedefDecl 0x7fd9470131a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd947012fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd947012f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd947013240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd947013200 'char *'
+|   `-BuiltinType 0x7fd947012980 'char'
+|-TypedefDecl 0x7fd947013508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd9470134b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd947013320 'struct __va_list_tag'
+|     `-Record 0x7fd947013298 '__va_list_tag'
+|-TypedefDecl 0x7fd947055400 <../Data/C2AST/pr37645.c:4:1, col:13> col:13 T 'int'
+| `-BuiltinType 0x7fd9470129e0 'int'
+`-FunctionDecl 0x7fd9470555d0 <line:5:1, col:51> col:6 foo 'void (int)'
+  `-ParmVarDecl 0x7fd9470554a0 <col:11, col:15> col:15 i 'int'
+    |-AliasAttr 0x7fd947055500 <col:32, col:48> "j"
+    `-WeakRefAttr 0x7fd947055558 <col:32, col:48> ""

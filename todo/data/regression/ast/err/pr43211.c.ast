@@ -1,0 +1,38 @@
+../Data/C2AST/pr43211.c:9:19: error: variable has incomplete type 'struct T'
+void bar(struct T t) {}  
+                  ^
+../Data/C2AST/pr43211.c:3:8: note: forward declaration of 'struct T'
+struct T;
+       ^
+1 error generated.
+TranslationUnitDecl 0x7ff4608068e8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7ff460806e60 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7ff460806b80 '__int128'
+|-TypedefDecl 0x7ff460806ed0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7ff460806ba0 'unsigned __int128'
+|-TypedefDecl 0x7ff4608071a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7ff460806fb0 'struct __NSConstantString_tag'
+|   `-Record 0x7ff460806f28 '__NSConstantString_tag'
+|-TypedefDecl 0x7ff460807240 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7ff460807200 'char *'
+|   `-BuiltinType 0x7ff460806980 'char'
+|-TypedefDecl 0x7ff460807508 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7ff4608074b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7ff460807320 'struct __va_list_tag'
+|     `-Record 0x7ff460807298 '__va_list_tag'
+|-RecordDecl 0x7ff460807560 <../Data/C2AST/pr43211.c:3:1, col:8> col:8 struct T
+|-RecordDecl 0x7ff461850020 <line:5:1, line:7:1> line:5:8 struct S definition
+| `-FieldDecl 0x7ff4618502c0 <line:6:3, col:23> col:10 referenced bar 'void (*)(struct S)'
+|-FunctionDecl 0x7ff461850460 <line:9:1, col:23> col:6 used bar 'void (struct T)'
+| |-ParmVarDecl 0x7ff461850360 <col:10, col:19> col:19 invalid t 'struct T':'struct T'
+| `-CompoundStmt 0x7ff461850900 <col:22, col:23>
+`-FunctionDecl 0x7ff461850a90 <line:11:1, line:14:1> line:11:6 foo 'void (struct S *)'
+  |-ParmVarDecl 0x7ff461850990 <col:10, col:20> col:20 used s 'struct S *'
+  `-CompoundStmt 0x7ff461850c90 <line:12:1, line:14:1>
+    `-BinaryOperator 0x7ff461850c68 <line:13:3, col:12> 'void (*)(struct S)' '='
+      |-MemberExpr 0x7ff461850b78 <col:3, col:6> 'void (*)(struct S)' lvalue ->bar 0x7ff4618502c0
+      | `-ImplicitCastExpr 0x7ff461850b60 <col:3> 'struct S *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7ff461850b38 <col:3> 'struct S *' lvalue ParmVar 0x7ff461850990 's' 'struct S *'
+      `-ImplicitCastExpr 0x7ff461850c50 <col:12> 'void (*)(struct S)' <BitCast>
+        `-ImplicitCastExpr 0x7ff461850c38 <col:12> 'void (*)(struct T)' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7ff461850bb0 <col:12> 'void (struct T)' Function 0x7ff461850460 'bar' 'void (struct T)'

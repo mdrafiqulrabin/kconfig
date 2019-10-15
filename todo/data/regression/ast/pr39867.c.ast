@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x7fe82a820ae8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fe82a85f620 <../Data/C2AST/pr39867.c:4:1, col:29> col:13 used link_error 'void (void)' extern
+`-FunctionDecl 0x7fe82a85f7c8 <line:6:1, line:13:1> line:6:5 main 'int (void)'
+  `-CompoundStmt 0x7fe82a85fc48 <line:7:1, line:13:1>
+    |-DeclStmt 0x7fe82a85f950 <line:8:3, col:15>
+    | `-VarDecl 0x7fe82a85f8b0 <col:3, col:14> col:7 used exp 'int' cinit
+    |   `-UnaryOperator 0x7fe82a85f930 <col:13, col:14> 'int' prefix '-'
+    |     `-IntegerLiteral 0x7fe82a85f910 <col:14> 'int' 1
+    |-IfStmt 0x7fe82a85fbd8 <line:10:3, line:11:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fe82a85fb18 <line:10:7, col:46> 'int' '!='
+    | | |-ParenExpr 0x7fe82a85fac0 <col:7, col:41> 'unsigned int'
+    | | | `-ConditionalOperator 0x7fe82a85fa90 <col:8, col:38> 'unsigned int'
+    | | |   |-BinaryOperator 0x7fe82a85f9c8 <col:8, col:14> 'int' '<'
+    | | |   | |-ImplicitCastExpr 0x7fe82a85f9b0 <col:8> 'int' <LValueToRValue>
+    | | |   | | `-DeclRefExpr 0x7fe82a85f968 <col:8> 'int' lvalue Var 0x7fe82a85f8b0 'exp' 'int'
+    | | |   | `-IntegerLiteral 0x7fe82a85f990 <col:14> 'int' 2
+    | | |   |-IntegerLiteral 0x7fe82a85f9f0 <col:18> 'unsigned int' 2
+    | | |   `-CStyleCastExpr 0x7fe82a85fa68 <col:23, col:38> 'unsigned int' <IntegralCast>
+    | | |     `-ImplicitCastExpr 0x7fe82a85fa50 <col:38> 'int' <LValueToRValue>
+    | | |       `-DeclRefExpr 0x7fe82a85fa10 <col:38> 'int' lvalue Var 0x7fe82a85f8b0 'exp' 'int'
+    | | `-ImplicitCastExpr 0x7fe82a85fb00 <col:46> 'unsigned int' <IntegralCast>
+    | |   `-IntegerLiteral 0x7fe82a85fae0 <col:46> 'int' 2
+    | |-CallExpr 0x7fe82a85fbb0 <line:11:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fe82a85fb98 <col:5> 'void (*)(void)' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fe82a85fb40 <col:5> 'void (void)' Function 0x7fe82a85f620 'link_error' 'void (void)'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fe82a85fc30 <line:12:3, col:10>
+      `-IntegerLiteral 0x7fe82a85fc10 <col:10> 'int' 0

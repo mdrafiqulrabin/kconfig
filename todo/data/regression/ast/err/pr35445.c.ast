@@ -1,0 +1,25 @@
+../Data/C2AST/pr35445.c:6:5: error: redefinition of 'i' with a different type: 'int []' vs 'int'
+int i[] = { 0 };  
+    ^
+../Data/C2AST/pr35445.c:5:12: note: previous declaration is here
+extern int i;  
+           ^
+1 error generated.
+TranslationUnitDecl 0x7fbb89816ce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbb89817260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbb89816f80 '__int128'
+|-TypedefDecl 0x7fbb898172d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbb89816fa0 'unsigned __int128'
+|-TypedefDecl 0x7fbb898175a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbb898173b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbb89817328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbb89817640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbb89817600 'char *'
+|   `-BuiltinType 0x7fbb89816d80 'char'
+|-TypedefDecl 0x7fbb89817908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbb898178b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbb89817720 'struct __va_list_tag'
+|     `-Record 0x7fbb89817698 '__va_list_tag'
+|-VarDecl 0x7fbb89817978 <../Data/C2AST/pr35445.c:4:1, col:12> col:12 i 'int' extern
+|-VarDecl 0x7fbb8901c458 prev 0x7fbb89817978 <line:5:1, col:12> col:12 i 'int' extern
+`-VarDecl 0x7fbb8901c510 <line:6:1, col:7> col:5 invalid i 'int []'

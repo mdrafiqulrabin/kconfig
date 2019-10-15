@@ -1,0 +1,20 @@
+TranslationUnitDecl 0x7f8aba01c0e8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7f8aba01cd60 <../Data/C2AST/pr68805.c:5:9, line:8:1> line:5:16 struct bar definition
+| |-FieldDecl 0x7f8abb01c238 <line:6:3, col:9> col:9 a 'void *'
+| `-FieldDecl 0x7f8abb01c298 <line:7:3, col:9> col:9 b 'void *'
+|-TypedefDecl 0x7f8abb01c330 <line:5:1, line:8:3> col:3 referenced TYPE 'struct bar':'struct bar'
+| `-ElaboratedType 0x7f8abb01c2e0 'struct bar' sugar
+|   `-RecordType 0x7f8abb01c200 'struct bar'
+|     `-Record 0x7f8aba01cd60 'bar'
+`-FunctionDecl 0x7f8abb01c5b0 <line:10:1, col:40> col:6 foo 'void (TYPE *, TYPE *)'
+  |-ParmVarDecl 0x7f8abb01c428 <col:11, col:17> col:17 used p 'TYPE *'
+  |-ParmVarDecl 0x7f8abb01c498 <col:20, col:26> col:26 used q 'TYPE *'
+  `-CompoundStmt 0x7f8abb01c7a0 <col:29, col:40>
+    `-BinaryOperator 0x7f8abb01c778 <col:31, col:37> 'TYPE':'struct bar' '='
+      |-UnaryOperator 0x7f8abb01c6e0 <col:31, col:32> 'TYPE':'struct bar' lvalue prefix '*'
+      | `-ImplicitCastExpr 0x7f8abb01c6c8 <col:32> 'TYPE *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7f8abb01c6a0 <col:32> 'TYPE *' lvalue ParmVar 0x7f8abb01c428 'p' 'TYPE *'
+      `-ImplicitCastExpr 0x7f8abb01c760 <col:36, col:37> 'TYPE':'struct bar' <LValueToRValue>
+        `-UnaryOperator 0x7f8abb01c740 <col:36, col:37> 'TYPE':'struct bar' lvalue prefix '*'
+          `-ImplicitCastExpr 0x7f8abb01c728 <col:37> 'TYPE *' <LValueToRValue>
+            `-DeclRefExpr 0x7f8abb01c700 <col:37> 'TYPE *' lvalue ParmVar 0x7f8abb01c498 'q' 'TYPE *'

@@ -1,0 +1,94 @@
+TranslationUnitDecl 0x7fb49782bce8 <<invalid sloc>> <invalid sloc>
+|-RecordDecl 0x7fb49782c960 <../Data/C2AST/pr28776-2.c:1:9, line:4:1> line:1:16 struct RangeCoder definition
+| `-FieldDecl 0x7fb4980274a0 <line:3:5, col:32> col:19 referenced one_state 'unsigned char [256]'
+|-TypedefDecl 0x7fb498027540 <line:1:1, line:4:3> col:3 referenced RangeCoder 'struct RangeCoder':'struct RangeCoder'
+| `-ElaboratedType 0x7fb4980274f0 'struct RangeCoder' sugar
+|   `-RecordType 0x7fb498027400 'struct RangeCoder'
+|     `-Record 0x7fb49782c960 'RangeCoder'
+|-FunctionDecl 0x7fb4980277f0 <line:5:1, line:8:1> line:5:20 used put_rac 'void (RangeCoder *, unsigned char *const)' static inline
+| |-ParmVarDecl 0x7fb498027638 <col:28, col:40> col:40 used c 'RangeCoder *'
+| |-ParmVarDecl 0x7fb4980276e0 <col:43, col:64> col:64 used state 'unsigned char *const'
+| `-CompoundStmt 0x7fb498027ab0 <line:6:1, line:8:1>
+|   `-BinaryOperator 0x7fb498027a88 <line:7:3, col:30> 'unsigned char' '='
+|     |-UnaryOperator 0x7fb498027920 <col:3, col:4> 'unsigned char' lvalue prefix '*'
+|     | `-ImplicitCastExpr 0x7fb498027908 <col:4> 'unsigned char *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x7fb4980278e0 <col:4> 'unsigned char *const' lvalue ParmVar 0x7fb4980276e0 'state' 'unsigned char *const'
+|     `-ImplicitCastExpr 0x7fb498027a70 <col:11, col:30> 'unsigned char' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x7fb498027a48 <col:11, col:30> 'unsigned char' lvalue
+|         |-ImplicitCastExpr 0x7fb498027a18 <col:11, col:14> 'unsigned char *' <ArrayToPointerDecay>
+|         | `-MemberExpr 0x7fb498027980 <col:11, col:14> 'unsigned char [256]' lvalue ->one_state 0x7fb4980274a0
+|         |   `-ImplicitCastExpr 0x7fb498027968 <col:11> 'RangeCoder *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x7fb498027940 <col:11> 'RangeCoder *' lvalue ParmVar 0x7fb498027638 'c' 'RangeCoder *'
+|         `-ImplicitCastExpr 0x7fb498027a30 <col:24, col:25> 'unsigned char' <LValueToRValue>
+|           `-UnaryOperator 0x7fb4980279f8 <col:24, col:25> 'unsigned char' lvalue prefix '*'
+|             `-ImplicitCastExpr 0x7fb4980279e0 <col:25> 'unsigned char *' <LValueToRValue>
+|               `-DeclRefExpr 0x7fb4980279b8 <col:25> 'unsigned char *const' lvalue ParmVar 0x7fb4980276e0 'state' 'unsigned char *const'
+|-RecordDecl 0x7fb498027ac8 <line:9:9, line:11:1> line:9:16 struct PlaneContext definition
+| `-FieldDecl 0x7fb498027c90 <line:10:5, col:25> col:16 referenced state 'unsigned int (*)[32]'
+|-TypedefDecl 0x7fb498027d30 <line:9:1, line:11:3> col:3 referenced PlaneContext 'struct PlaneContext':'struct PlaneContext'
+| `-ElaboratedType 0x7fb498027ce0 'struct PlaneContext' sugar
+|   `-RecordType 0x7fb498027b50 'struct PlaneContext'
+|     `-Record 0x7fb498027ac8 'PlaneContext'
+|-FunctionDecl 0x7fb498027f00 <line:12:1, line:19:1> line:12:20 used put_symbol 'void (RangeCoder *, unsigned char *)' static inline
+| |-ParmVarDecl 0x7fb498027db0 <col:31, col:43> col:43 used c 'RangeCoder *'
+| |-ParmVarDecl 0x7fb498027e28 <col:46, col:61> col:61 used state 'unsigned char *'
+| `-CompoundStmt 0x7fb4990001b8 <line:13:1, line:19:1>
+|   |-DeclStmt 0x7fb498028028 <line:14:5, col:10>
+|   | `-VarDecl 0x7fb498027fc8 <col:5, col:9> col:9 used i 'int'
+|   |-DeclStmt 0x7fb4980280b8 <line:15:5, col:16>
+|   | `-VarDecl 0x7fb498028058 <col:5, col:15> col:15 used e 'const int'
+|   |-CallExpr 0x7fb4980281c0 <line:16:5, col:21> 'void'
+|   | |-ImplicitCastExpr 0x7fb4980281a8 <col:5> 'void (*)(RangeCoder *, unsigned char *const)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x7fb4980280d0 <col:5> 'void (RangeCoder *, unsigned char *const)' Function 0x7fb4980277f0 'put_rac' 'void (RangeCoder *, unsigned char *const)'
+|   | |-ImplicitCastExpr 0x7fb4980281f8 <col:13> 'RangeCoder *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x7fb4980280f8 <col:13> 'RangeCoder *' lvalue ParmVar 0x7fb498027db0 'c' 'RangeCoder *'
+|   | `-ImplicitCastExpr 0x7fb498028210 <col:16> 'unsigned char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x7fb498028120 <col:16> 'unsigned char *' lvalue ParmVar 0x7fb498027e28 'state' 'unsigned char *'
+|   `-ForStmt 0x7fb499000180 <line:17:5, line:18:28>
+|     |-BinaryOperator 0x7fb4980282d8 <line:17:9, col:13> 'int' '='
+|     | |-DeclRefExpr 0x7fb498028228 <col:9> 'int' lvalue Var 0x7fb498027fc8 'i' 'int'
+|     | `-BinaryOperator 0x7fb4980282b0 <col:11, col:13> 'int' '-'
+|     |   |-ImplicitCastExpr 0x7fb498028298 <col:11> 'int' <LValueToRValue>
+|     |   | `-DeclRefExpr 0x7fb498028250 <col:11> 'const int' lvalue Var 0x7fb498028058 'e' 'const int'
+|     |   `-IntegerLiteral 0x7fb498028278 <col:13> 'int' 1
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x7fb498028360 <col:16, col:19> 'int' '>='
+|     | |-ImplicitCastExpr 0x7fb498028348 <col:16> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x7fb498028300 <col:16> 'int' lvalue Var 0x7fb498027fc8 'i' 'int'
+|     | `-IntegerLiteral 0x7fb498028328 <col:19> 'int' 0
+|     |-UnaryOperator 0x7fb4980283b0 <col:22, col:23> 'int' postfix '--'
+|     | `-DeclRefExpr 0x7fb498028388 <col:22> 'int' lvalue Var 0x7fb498027fc8 'i' 'int'
+|     `-CallExpr 0x7fb499000130 <line:18:7, col:28> 'void'
+|       |-ImplicitCastExpr 0x7fb499000118 <col:7> 'void (*)(RangeCoder *, unsigned char *const)' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x7fb4980283d0 <col:7> 'void (RangeCoder *, unsigned char *const)' Function 0x7fb4980277f0 'put_rac' 'void (RangeCoder *, unsigned char *const)'
+|       |-ImplicitCastExpr 0x7fb499000168 <col:15> 'RangeCoder *' <LValueToRValue>
+|       | `-DeclRefExpr 0x7fb499000000 <col:15> 'RangeCoder *' lvalue ParmVar 0x7fb498027db0 'c' 'RangeCoder *'
+|       `-BinaryOperator 0x7fb4990000f0 <col:18, col:27> 'unsigned char *' '+'
+|         |-BinaryOperator 0x7fb499000088 <col:18, col:24> 'unsigned char *' '+'
+|         | |-ImplicitCastExpr 0x7fb499000070 <col:18> 'unsigned char *' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fb499000028 <col:18> 'unsigned char *' lvalue ParmVar 0x7fb498027e28 'state' 'unsigned char *'
+|         | `-IntegerLiteral 0x7fb499000050 <col:24> 'int' 22
+|         `-ImplicitCastExpr 0x7fb4990000d8 <col:27> 'int' <LValueToRValue>
+|           `-DeclRefExpr 0x7fb4990000b0 <col:27> 'int' lvalue Var 0x7fb498027fc8 'i' 'int'
+`-FunctionDecl 0x7fb4990002b8 <line:20:1, line:26:1> line:20:5 encode_line 'int (void)'
+  `-CompoundStmt 0x7fb4990007a8 <line:21:1, line:26:1>
+    |-DeclStmt 0x7fb499000448 <line:22:5, col:27>
+    | `-VarDecl 0x7fb4990003e8 <col:5, col:26> col:26 used p 'PlaneContext *const'
+    |-DeclStmt 0x7fb4990004d0 <line:23:5, col:25>
+    | `-VarDecl 0x7fb499000470 <col:5, col:24> col:24 used c 'RangeCoder *const'
+    |-DeclStmt 0x7fb499000560 <line:24:5, col:10>
+    | `-VarDecl 0x7fb499000500 <col:5, col:9> col:9 used a 'int'
+    `-CallExpr 0x7fb499000700 <line:25:5, col:30> 'void'
+      |-ImplicitCastExpr 0x7fb4990006e8 <col:5> 'void (*)(RangeCoder *, unsigned char *)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x7fb499000578 <col:5> 'void (RangeCoder *, unsigned char *)' Function 0x7fb498027f00 'put_symbol' 'void (RangeCoder *, unsigned char *)'
+      |-ImplicitCastExpr 0x7fb499000738 <col:16> 'RangeCoder *' <LValueToRValue>
+      | `-DeclRefExpr 0x7fb4990005a0 <col:16> 'RangeCoder *const' lvalue Var 0x7fb499000470 'c' 'RangeCoder *const'
+      `-ImplicitCastExpr 0x7fb499000790 <col:19, col:29> 'unsigned char *' <BitCast>
+        `-ImplicitCastExpr 0x7fb499000778 <col:19, col:29> 'unsigned int *' <ArrayToPointerDecay>
+          `-ArraySubscriptExpr 0x7fb499000698 <col:19, col:29> 'unsigned int [32]':'unsigned int [32]' lvalue
+            |-ImplicitCastExpr 0x7fb499000668 <col:19, col:22> 'unsigned int (*)[32]' <LValueToRValue>
+            | `-MemberExpr 0x7fb499000608 <col:19, col:22> 'unsigned int (*)[32]' lvalue ->state 0x7fb498027c90
+            |   `-ImplicitCastExpr 0x7fb4990005f0 <col:19> 'PlaneContext *' <LValueToRValue>
+            |     `-DeclRefExpr 0x7fb4990005c8 <col:19> 'PlaneContext *const' lvalue Var 0x7fb4990003e8 'p' 'PlaneContext *const'
+            `-ImplicitCastExpr 0x7fb499000680 <col:28> 'int' <LValueToRValue>
+              `-DeclRefExpr 0x7fb499000640 <col:28> 'int' lvalue Var 0x7fb499000500 'a' 'int'

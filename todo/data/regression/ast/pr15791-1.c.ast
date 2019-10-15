@@ -1,0 +1,126 @@
+TranslationUnitDecl 0x7fc28d02bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fc28d06d800 <../Data/C2AST/pr15791-1.c:3:1, col:18> col:6 used link_error 'void ()'
+`-FunctionDecl 0x7fc28d06d930 <line:5:1, line:24:1> line:5:5 main 'int ()'
+  `-CompoundStmt 0x7fc28d06eb58 <line:6:1, line:24:1>
+    |-DeclStmt 0x7fc28d06dc18 <line:7:3, col:25>
+    | |-RecordDecl 0x7fc28d06d9d0 <col:3, col:22> col:3 struct definition
+    | | `-FieldDecl 0x7fc28d06db00 <col:12, col:19> col:16 referenced b 'int [2]'
+    | `-VarDecl 0x7fc28d06dba0 <col:3, col:24> col:24 used x 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    |-DeclStmt 0x7fc28d06dcd8 <line:8:3, col:11>
+    | `-VarDecl 0x7fc28d06dc78 <col:3, col:10> col:7 used b 'int [2]'
+    |-IfStmt 0x7fc28d06df28 <line:9:3, line:10:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06de70 <line:9:7, col:20> 'int' '!='
+    | | |-UnaryOperator 0x7fc28d06dda8 <col:7, col:11> 'int *' prefix '&'
+    | | | `-ArraySubscriptExpr 0x7fc28d06dd80 <col:8, col:11> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fc28d06dd68 <col:8> 'int *' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fc28d06dcf0 <col:8> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | | |   `-IntegerLiteral 0x7fc28d06dd18 <col:10> 'int' 1
+    | | `-UnaryOperator 0x7fc28d06de50 <col:16, col:20> 'int *' prefix '&'
+    | |   `-ArraySubscriptExpr 0x7fc28d06de28 <col:17, col:20> 'int' lvalue
+    | |     |-ImplicitCastExpr 0x7fc28d06de10 <col:17> 'int *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fc28d06ddc8 <col:17> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | |     `-IntegerLiteral 0x7fc28d06ddf0 <col:19> 'int' 1
+    | |-CallExpr 0x7fc28d06df00 <line:10:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06dee8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06de98 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc28d06e0d8 <line:11:3, line:12:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06e048 <line:11:7, col:16> 'int' '!='
+    | | |-UnaryOperator 0x7fc28d06dfe8 <col:7, col:11> 'int *' prefix '&'
+    | | | `-ArraySubscriptExpr 0x7fc28d06dfc0 <col:8, col:11> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fc28d06dfa8 <col:8> 'int *' <ArrayToPointerDecay>
+    | | |   | `-DeclRefExpr 0x7fc28d06df60 <col:8> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | | |   `-IntegerLiteral 0x7fc28d06df88 <col:10> 'int' 0
+    | | `-ImplicitCastExpr 0x7fc28d06e030 <col:16> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e008 <col:16> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | |-CallExpr 0x7fc28d06e0b0 <line:12:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06e098 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e070 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc28d06e288 <line:13:3, line:14:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06e1f8 <line:13:7, col:16> 'int' '=='
+    | | |-ImplicitCastExpr 0x7fc28d06e1e0 <col:7> 'int *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fc28d06e110 <col:7> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | | `-UnaryOperator 0x7fc28d06e1c0 <col:12, col:16> 'int *' prefix '&'
+    | |   `-ArraySubscriptExpr 0x7fc28d06e198 <col:13, col:16> 'int' lvalue
+    | |     |-ImplicitCastExpr 0x7fc28d06e180 <col:13> 'int *' <ArrayToPointerDecay>
+    | |     | `-DeclRefExpr 0x7fc28d06e138 <col:13> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | |     `-IntegerLiteral 0x7fc28d06e160 <col:15> 'int' 2
+    | |-CallExpr 0x7fc28d06e260 <line:14:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06e248 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e220 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc28d06e3d0 <line:15:3, line:16:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06e340 <line:15:7, col:12> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc28d06e310 <col:7> 'int *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x7fc28d06e2c0 <col:7> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | | `-ImplicitCastExpr 0x7fc28d06e328 <col:12> 'int *' <ArrayToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e2e8 <col:12> 'int [2]' lvalue Var 0x7fc28d06dc78 'b' 'int [2]'
+    | |-CallExpr 0x7fc28d06e3a8 <line:16:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06e390 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e368 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc28d06e6a0 <line:17:3, line:18:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06e5c8 <line:17:7, col:24> 'int' '=='
+    | | |-UnaryOperator 0x7fc28d06e4c8 <col:7, col:13> 'int *' prefix '&'
+    | | | `-ArraySubscriptExpr 0x7fc28d06e4a0 <col:8, col:13> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fc28d06e488 <col:8, col:10> 'int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fc28d06e430 <col:8, col:10> 'int [2]' lvalue .b 0x7fc28d06db00
+    | | |   |   `-DeclRefExpr 0x7fc28d06e408 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)' lvalue Var 0x7fc28d06dba0 'x' 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    | | |   `-IntegerLiteral 0x7fc28d06e468 <col:12> 'int' 1
+    | | `-UnaryOperator 0x7fc28d06e5a8 <col:18, col:24> 'int *' prefix '&'
+    | |   `-ArraySubscriptExpr 0x7fc28d06e580 <col:19, col:24> 'int' lvalue
+    | |     |-ImplicitCastExpr 0x7fc28d06e568 <col:19, col:21> 'int *' <ArrayToPointerDecay>
+    | |     | `-MemberExpr 0x7fc28d06e510 <col:19, col:21> 'int [2]' lvalue .b 0x7fc28d06db00
+    | |     |   `-DeclRefExpr 0x7fc28d06e4e8 <col:19> 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)' lvalue Var 0x7fc28d06dba0 'x' 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    | |     `-IntegerLiteral 0x7fc28d06e548 <col:23> 'int' 0
+    | |-CallExpr 0x7fc28d06e678 <line:18:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06e660 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e638 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc28d06e8c8 <line:19:3, line:20:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06e838 <line:19:7, col:20> 'int' '!='
+    | | |-ImplicitCastExpr 0x7fc28d06e820 <col:7, col:9> 'int *' <ArrayToPointerDecay>
+    | | | `-MemberExpr 0x7fc28d06e700 <col:7, col:9> 'int [2]' lvalue .b 0x7fc28d06db00
+    | | |   `-DeclRefExpr 0x7fc28d06e6d8 <col:7> 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)' lvalue Var 0x7fc28d06dba0 'x' 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    | | `-UnaryOperator 0x7fc28d06e800 <col:14, col:20> 'int *' prefix '&'
+    | |   `-ArraySubscriptExpr 0x7fc28d06e7d0 <col:15, col:20> 'int' lvalue
+    | |     |-ImplicitCastExpr 0x7fc28d06e7b8 <col:15, col:17> 'int *' <ArrayToPointerDecay>
+    | |     | `-MemberExpr 0x7fc28d06e760 <col:15, col:17> 'int [2]' lvalue .b 0x7fc28d06db00
+    | |     |   `-DeclRefExpr 0x7fc28d06e738 <col:15> 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)' lvalue Var 0x7fc28d06dba0 'x' 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    | |     `-IntegerLiteral 0x7fc28d06e798 <col:19> 'int' 0
+    | |-CallExpr 0x7fc28d06e8a0 <line:20:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06e888 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06e860 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    |-IfStmt 0x7fc28d06eae8 <line:21:3, line:22:17>
+    | |-<<<NULL>>>
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fc28d06ea58 <line:21:7, col:20> 'int' '=='
+    | | |-UnaryOperator 0x7fc28d06e9c0 <col:7, col:13> 'int *' prefix '&'
+    | | | `-ArraySubscriptExpr 0x7fc28d06e998 <col:8, col:13> 'int' lvalue
+    | | |   |-ImplicitCastExpr 0x7fc28d06e980 <col:8, col:10> 'int *' <ArrayToPointerDecay>
+    | | |   | `-MemberExpr 0x7fc28d06e928 <col:8, col:10> 'int [2]' lvalue .b 0x7fc28d06db00
+    | | |   |   `-DeclRefExpr 0x7fc28d06e900 <col:8> 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)' lvalue Var 0x7fc28d06dba0 'x' 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    | | |   `-IntegerLiteral 0x7fc28d06e960 <col:12> 'int' 1
+    | | `-ImplicitCastExpr 0x7fc28d06ea40 <col:18, col:20> 'int *' <ArrayToPointerDecay>
+    | |   `-MemberExpr 0x7fc28d06ea08 <col:18, col:20> 'int [2]' lvalue .b 0x7fc28d06db00
+    | |     `-DeclRefExpr 0x7fc28d06e9e0 <col:18> 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)' lvalue Var 0x7fc28d06dba0 'x' 'struct (anonymous struct at ../Data/C2AST/pr15791-1.c:7:3)':'struct (anonymous at ../Data/C2AST/pr15791-1.c:7:3)'
+    | |-CallExpr 0x7fc28d06eac0 <line:22:5, col:17> 'void'
+    | | `-ImplicitCastExpr 0x7fc28d06eaa8 <col:5> 'void (*)()' <FunctionToPointerDecay>
+    | |   `-DeclRefExpr 0x7fc28d06ea80 <col:5> 'void ()' Function 0x7fc28d06d800 'link_error' 'void ()'
+    | `-<<<NULL>>>
+    `-ReturnStmt 0x7fc28d06eb40 <line:23:3, col:10>
+      `-IntegerLiteral 0x7fc28d06eb20 <col:10> 'int' 0

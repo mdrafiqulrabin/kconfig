@@ -1,0 +1,8 @@
+TranslationUnitDecl 0x7fee6202bce8 <<invalid sloc>> <invalid sloc>
+|-FunctionDecl 0x7fee62814200 <../Data/C2AST/pr40900.c:4:1, col:22> col:14 used shortv2 'short ()' extern
+`-FunctionDecl 0x7fee62814308 <line:5:1, line:8:1> line:5:7 shortv1 'short ()'
+  `-CompoundStmt 0x7fee62814450 <line:6:1, line:8:1>
+    `-ReturnStmt 0x7fee62814438 <line:7:3, col:18>
+      `-CallExpr 0x7fee62814410 <col:10, col:18> 'short'
+        `-ImplicitCastExpr 0x7fee628143f8 <col:10> 'short (*)()' <FunctionToPointerDecay>
+          `-DeclRefExpr 0x7fee628143a8 <col:10> 'short ()' Function 0x7fee62814200 'shortv2' 'short ()'

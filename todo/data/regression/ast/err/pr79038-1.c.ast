@@ -1,0 +1,76 @@
+../Data/C2AST/pr79038-1.c:10:1: error: unknown type name '_Float128'
+TYPE
+^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:13:11: error: use of undeclared identifier '_Float128'
+  return (TYPE) p_uc[10];
+          ^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:16:1: error: unknown type name '_Float128'
+TYPE
+^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:19:11: error: use of undeclared identifier '_Float128'
+  return (TYPE) p_sc[10];
+          ^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:22:1: error: unknown type name '_Float128'
+TYPE
+^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:25:11: error: use of undeclared identifier '_Float128'
+  return (TYPE) p_us[10];
+          ^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:28:1: error: unknown type name '_Float128'
+TYPE
+^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+../Data/C2AST/pr79038-1.c:31:11: error: use of undeclared identifier '_Float128'
+  return (TYPE) p_ss[10];
+          ^
+../Data/C2AST/pr79038-1.c:7:14: note: expanded from macro 'TYPE'
+#define TYPE _Float128
+             ^
+8 errors generated.
+TranslationUnitDecl 0x7f849c02bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7f849c02c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7f849c02bf80 '__int128'
+|-TypedefDecl 0x7f849c02c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7f849c02bfa0 'unsigned __int128'
+|-TypedefDecl 0x7f849c02c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7f849c02c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7f849c02c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7f849c02c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7f849c02c600 'char *'
+|   `-BuiltinType 0x7f849c02bd80 'char'
+|-TypedefDecl 0x7f849c02c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7f849c02c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7f849c02c720 'struct __va_list_tag'
+|     `-Record 0x7f849c02c698 '__va_list_tag'
+|-FunctionDecl 0x7f849c8152c8 <../Data/C2AST/pr79038-1.c:7:14, line:14:1> line:11:1 invalid return_convert_uchar_to_float128_mem 'int (unsigned char *)'
+| |-ParmVarDecl 0x7f849c815200 <col:39, col:54> col:54 p_uc 'unsigned char *'
+| `-CompoundStmt 0x7f849c815380 <line:12:1, line:14:1>
+|-FunctionDecl 0x7f849c815498 <line:7:14, line:20:1> line:17:1 invalid return_convert_schar_to_float128_mem 'int (signed char *)'
+| |-ParmVarDecl 0x7f849c8153d0 <col:39, col:52> col:52 p_sc 'signed char *'
+| `-CompoundStmt 0x7f849c815550 <line:18:1, line:20:1>
+|-FunctionDecl 0x7f849c815668 <line:7:14, line:26:1> line:23:1 invalid return_convert_ushort_to_float128_mem 'int (unsigned short *)'
+| |-ParmVarDecl 0x7f849c8155a0 <col:40, col:56> col:56 p_us 'unsigned short *'
+| `-CompoundStmt 0x7f849c815720 <line:24:1, line:26:1>
+`-FunctionDecl 0x7f849c815838 <line:7:14, line:32:1> line:29:1 invalid return_convert_sshort_to_float128_mem 'int (short *)'
+  |-ParmVarDecl 0x7f849c815770 <col:40, col:47> col:47 p_ss 'short *'
+  `-CompoundStmt 0x7f849c8158f0 <line:30:1, line:32:1>

@@ -1,0 +1,10 @@
+TranslationUnitDecl 0x7f8215821ce8 <<invalid sloc>> <invalid sloc>
+|-VarDecl 0x7f8215822978 <../Data/C2AST/pr79895.c:4:1, col:19> col:19 used g 'unsigned __int128'
+`-FunctionDecl 0x7f821501e488 <line:5:1, line:9:1> line:6:1 foo 'void ()'
+  `-CompoundStmt 0x7f821501e620 <line:7:1, line:9:1>
+    `-BinaryOperator 0x7f821501e5f8 <line:8:3, col:31> 'unsigned __int128' '='
+      |-DeclRefExpr 0x7f821501e528 <col:3> 'unsigned __int128' lvalue Var 0x7f8215822978 'g' 'unsigned __int128'
+      `-BinaryOperator 0x7f821501e5d0 <col:7, col:31> 'unsigned __int128' '<<'
+        |-CStyleCastExpr 0x7f821501e588 <col:7, col:26> 'unsigned __int128' <IntegralCast>
+        | `-IntegerLiteral 0x7f821501e550 <col:26> 'int' 1
+        `-IntegerLiteral 0x7f821501e5b0 <col:31> 'int' 127

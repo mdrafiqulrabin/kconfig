@@ -1,0 +1,24 @@
+../Data/C2AST/pr23576.c:1:27: error: array has incomplete element type 'struct ipr_path_entry'
+struct ipr_path_entry path[0];  
+                          ^
+../Data/C2AST/pr23576.c:1:8: note: forward declaration of 'struct ipr_path_entry'
+struct ipr_path_entry path[0];  
+       ^
+1 error generated.
+TranslationUnitDecl 0x7fbf9282bce8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fbf9282c260 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fbf9282bf80 '__int128'
+|-TypedefDecl 0x7fbf9282c2d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fbf9282bfa0 'unsigned __int128'
+|-TypedefDecl 0x7fbf9282c5a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fbf9282c3b0 'struct __NSConstantString_tag'
+|   `-Record 0x7fbf9282c328 '__NSConstantString_tag'
+|-TypedefDecl 0x7fbf9282c640 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fbf9282c600 'char *'
+|   `-BuiltinType 0x7fbf9282bd80 'char'
+|-TypedefDecl 0x7fbf9282c908 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fbf9282c8b0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fbf9282c720 'struct __va_list_tag'
+|     `-Record 0x7fbf9282c698 '__va_list_tag'
+|-RecordDecl 0x7fbf9282c960 <../Data/C2AST/pr23576.c:1:1, col:8> col:8 struct ipr_path_entry
+`-VarDecl 0x7fbf93022838 <col:1, col:23> col:23 invalid path 'int'
